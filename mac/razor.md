@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: F898CB6E-05ED-44CD-8DB6-427B2592CCC6
-ms.openlocfilehash: 791182255448db01a1c43796da72bedeec9f2f96
-ms.sourcegitcommit: 9a227faafdd0bad6f017ace607dc61eb56b32d72
+ms.openlocfilehash: d9a9df56074cde8735b54c12bbbf15a79e727497
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2019
-ms.locfileid: "71175439"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962920"
 ---
 # <a name="create-razor-web-apps"></a>Razor Web uygulamaları oluşturma
 
@@ -26,7 +26,7 @@ Mac için Visual Studio, IntelliSense ve *. cshtml* dosyalarında sözdizimi vur
 1. Yeni bir proje oluşturmak için hoş geldiniz ekranında **Yeni** ' yi seçin:
 
    ![Yeni Mac için Visual Studio proje](media/razor-new.png)
-1. **Yeni proje** iletişim kutusunda **.NET Core** > **uygulama** > **Web uygulaması** ' na gidin ve **İleri**' yi seçin:
+1. **Yeni proje** iletişim kutusunda **.NET Core** > **App** > **Web uygulaması** ' na gidin ve **İleri ' yi**seçin:
 
    ![Razor proje şablonu](media/razor-new-project1.png)
 1. .NET Core hedef çatısını seçin (sürüm 2,2 veya üzeri önerilir) ve ardından **İleri**' yi seçin. Projeniz için bir ad seçin ve gerekirse git desteği ekleyin. Projeyi oluşturmak için **Oluştur** ' u seçin.
@@ -36,7 +36,7 @@ Mac için Visual Studio, IntelliSense ve *. cshtml* dosyalarında sözdizimi vur
    Mac için Visual Studio, projenizi kod düzeni penceresinde açar.
 1. **Komut + Option + F5**kullanarak projeyi hata ayıklama olmadan çalıştırın.
 
-   Visual Studio, [Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)başlatır, için `https://localhost:5001`bir tarayıcı açar ve ilk Razor Web uygulamanızı görüntüler.
+   Visual Studio [Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)başlar, `https://localhost:5001` için bir tarayıcı açar ve ilk Razor Web uygulamanızı görüntüler.
 
    ![Safari 'de Razor Web uygulaması](media/razor-webapp.png)
 
@@ -47,8 +47,8 @@ Razor Web uygulamaları aşağıdaki bileşenleri içerir.
 ### <a name="pages-folder"></a>Sayfalar klasörü
 
 Bu klasör bir projenin Web sayfalarını, her biri için arka plan kodu içerir:
-* HTML biçimlendirme ve Razor söz dizimi için * *. cshtml* dosyası.
-* Arka plan C# kodu için sayfa olaylarını işlemek için bir * *. cshtml.cs* dosyası.
+   - HTML biçimlendirme ve Razor söz dizimi için *@no__t bir -1. cshtml* dosyası.
+   - Sayfa olaylarını işlemek için arka plan C# kodu için bir *\*.cshtml.cs* dosyası.
 
 Destekleyici dosyalar bir alt çizgiyle başlayan adlara sahiptir. Örneğin, _Layout. cshtml dosyası tüm sayfalarda ortak kullanıcı arabirimi öğelerini yapılandırır. Bu dosya, sayfanın üst kısmındaki gezinti menüsünü ve en alttaki telif hakkı bildirimini ayarlar. Daha fazla bilgi için [ASP.NET Core düzen](https://docs.microsoft.com/aspnet/core/mvc/views/layout)bölümüne bakın.
 

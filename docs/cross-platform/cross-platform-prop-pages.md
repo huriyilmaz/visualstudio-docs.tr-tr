@@ -1,29 +1,29 @@
 ---
-title: Android hata ayıklayıcıyı özellikleri (C++) | Microsoft Docs
+title: Android hata ayıklayıcı özellikleriC++() | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
 ms.technology: vs-ide-mobile
 ms.topic: reference
 ms.assetid: 3a7ba14f-a628-4c1b-bb89-73b9195769f1
-author: corob
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: cfe6ca9ad59ae6e4952f83e095c15dcc4427ca0f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 30b614a8845ebdc5e1460d1b330e2e74c0f6c843
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62819263"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950598"
 ---
-# <a name="c-cross-platform-property-page-reference"></a>C++ platformlar arası özellik Sayfa başvurusu
+# <a name="c-cross-platform-property-page-reference"></a>C++platformlar arası özellik sayfası başvurusu
 
-Bu bölüm, C++ platformlar arası projeler, proje özellikleri hakkında bilgi içerir.
+Bu bölüm, C++ platformlar arası projelerdeki proje özellikleri hakkında bilgi içerir.
 
-- [Genel proje özellikleri (Android C++)](general-android-prop-page.md)
-- [Android hata ayıklayıcıyı özellikleri](android-debugger-prop-page.md)
-- [Clang projesi özellikleri (Android C++)](clang-android-prop-page.md)
-- [Genel proje özellikleri (Android C++ derleme görevleri dosyası)](general-makefile-android-prop-page.md)
-- [Clang Bağlayıcısı Özellikleri (Android C++)](clanglink-prop-page.md)
+- [Genel Proje Özellikleri (Android C++)](general-android-prop-page.md)
+- [Android hata ayıklayıcı özellikleri](android-debugger-prop-page.md)
+- [Clang proje özellikleri (Android C++)](clang-android-prop-page.md)
+- [Genel Proje Özellikleri (Android C++ makefile)](general-makefile-android-prop-page.md)
+- [Clang bağlayıcı Özellikleri (Android C++)](clanglink-prop-page.md)
 - [NMake özellikleri (Android C++)](nmake-android-prop-page.md)

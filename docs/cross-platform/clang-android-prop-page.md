@@ -1,12 +1,12 @@
 ---
-title: Clang projesi özellikleri (Android C++) | Microsoft Docs
+title: Clang proje özellikleri (Android C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 ms.assetid: 663140ea-a568-472b-a79a-dfea8818e06a
-author: corob
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 f1_keywords:
 - VC.Project.VCClangCompilerTool.AdditionalIncludeDirectories
@@ -43,46 +43,46 @@ f1_keywords:
 - vc.project.AdditionalOptionsPage
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 055ec15deed2e5071c50d9903779d00030e07b02
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7c64ccedaeb8c13e353daaba0aeec0a388885bdf
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62819923"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950649"
 ---
-# <a name="clang-project-properties-android-c"></a>Clang projesi özellikleri (Android C++)
+# <a name="clang-project-properties-android-c"></a>Clang proje özellikleri (Android C++)
 
-Özellik | Açıklama | Seçenekleri
+Özellik | Açıklama | Yapabileceği
 --- | ---| ---
-Ek içeren dizinler | Ekleme yoluna eklenecek bir veya daha fazla dizin belirtir; birden fazla ise noktalı virgülle ayırın. (-I[Path]).
-Hata ayıklama bilgi biçimi | Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. | **Hiçbiri** -derleme daha hızlı olacak şekilde, hata ayıklama bilgisi üretir.<br>**Tam hata ayıklama bilgileri (DWARF2)** -Oluştur DWARF2 hata ayıklama bilgileri.<br>**Satır numarası bilgisi** -yalnızca oluşturmak satır numarası bilgisi.<br>
-Nesne dosyası adı | Varsayılan nesne dosyası adını geçersiz kılacak bir ad belirtir; Dosya veya dizin adı olabilir. (/ FO[ad]).
-Uyarı düzeyi | Nasıl katı derleyicinin kod hataları hakkında olmasını istediğinizi seçin.  Diğer bayraklar doğrudan ek seçenekler eklenmesi gerekir. (/ w, / weverything). | **Tüm uyarıları Kapat Kapat** -tüm Derleyici uyarılarını devre dışı bırakır.<br>**EnableAllWarnings** -varsayılan olarak devre dışı dahil olmak üzere tüm uyarıları etkinleştirir.<br>
-Uyarıları hata olarak değerlendir | Tüm Derleyici uyarılarını hata olarak değerlendirir. Yeni bir proje için tüm derlemelerde /WX kullanmak iyi bir çözüm olabilir; Tüm uyarıların çözümlenmesi, en az sayıda olası bulunur zor kod kusurlarını sağlayacaktır.
-Ayrıntılı modu etkinleştir | Ayrıntılı çıkış kullan ve çalıştırma komutları göster.
-İyileştirme | Uygulama için iyileştirme düzeyini belirtir. | **Özel** -özel iyileştirme.<br>**Devre dışı bırakılmış** -iyileştirme devre dışı bırakın.<br>**Boyutu en aza indir** -boyutu için İyileştir.<br>**Hızı en** -hız için İyileştir.<br>**Tam iyileştirme** -pahalı iyileştirmeler.<br>
-Katı örtüşme | En katı örtüşme kurallarını varsayın.  Bir türde bir nesne hiçbir zaman farklı türde bir nesne olarak aynı adreste bulunan olduğu kabul edilir.
-Çerçeve işaretçisini atlama | Çağrı yığınında çerçeve işaretçilerinin oluşturulmasını engeller.
-C++ özel durumlarını etkinleştir | Derleyici tarafından kullanılması için özel durum işleme modelini belirtir. | **Hayır** -özel durum işleme devre dışı bırakın.<br>**Evet** -özel durum işlemeyi etkinleştirin.<br>**Tabloları Aç** - gerekli tüm statik verileri oluşturur, ancak oluşturulan kodu etkilemez.<br>
-İşlev düzeyi bağlamayı etkinleştir | Derleyicinin ayrı ayrı işlevleri paketlenmiş işlevler (Comdat'lar) biçiminde sağlar. Düzenleme için gereken ve çalışmaya devam edin.     (ffunction-sections).
-Veri düzeyi bağlamayı etkinleştir | Kullanılmayan verileri her veri öğesini ayrı bir bölümde çıkarma yoluyla kaldırarak yapılan bağlayıcı iyileştirmelerine sağlar.
-Gelişmiş sımd'yi(neon) etkinleştir | NEON kayan nokta donanımı için kod oluşturmayı etkinleştirir. Bu, yalnızca arm mimarisi için geçerlidir.
-Kayan nokta ABI'si | Kayan nokta ABI'sini seçmek için seçenek. | **Yazılım** -'Soft' neden içeren kitaplık çağrıları kayan nokta işlemleri için çıktı üretmek derleyici.<br>**SoftFP** - 'SoftFP', donanım kayan nokta yönergeleri kullanan kod oluşturulmasını sağlar, ancak yine soft-float çağırma kurallarını kullanır.<br>**Sabit** - 'Hard' kayan nokta yönergeleri nesil verir ve FPU'ya özgü çağırma kurallarını kullanır.<br>
-Güvenlik denetimi | Güvenlik denetimi, yığın arabelleği üst çalışır, bir ortak bir saldırı denemesi bir programın güvenlik algılamaya yardımcı olur. (fstack-protector). | **Güvenlik denetimini devre dışı bırak** -güvenlik denetimini devre dışı bırakın.<br>**Güvenlik denetimini etkinleştir** -güvenlik denetimini etkinleştir. (fstack-protector)<br>
-Konumdan bağımsız kod | Paylaşılan bir kitaplık kullanmak için konum bağımsız kod (PIC) oluştur.
-Kısa sabit listeleri kullan | Sabit listesi türünü kullanan yalnızca giriş muhtemel değerler kümesini gerektirdiği sayıda bayt.
-Çalışma zamanı tür bilgisini etkinleştir | Çalışma zamanında (çalışma zamanı tür bilgisi) C++ nesne türlerini denetlemek için kod ekler.     (frtti, fno-rtti)
-C dil standardı | C dil standardını belirler. | **Default**<br>**C89** -C89 dil standardı.<br>**C99** -C99 dil standardı.<br>**C11** -C11 dil standardı.<br>**C99 (GNU diyalekti)** -C99 (GNU diyalekti) dil standardı.<br>**C11 (GNU diyalekti)** -C11 (GNU diyalekti) dil standardı.<br>
-C++ dil standardı | C++ dil standardını belirler. | **Default**<br>**C ++ 03** -C ++ 03 dil standardı.<br>**C ++ 11** -C ++ 11 dil standardı.<br>**C ++ 14** -C ++ 14 dil standardı.<br>**C ++ 03 (GNU diyalekti)** - C ++ 03 (GNU diyalekti) dil standardı.<br>**C ++ 11 (GNU diyalekti)** - C ++ 11 (GNU diyalekti) dil standardı.<br>**C ++ 14 (GNU diyalekti)** - C ++ 14 (GNU diyalekti) dil standardı.<br>
-Önişlemci tanımları | Kaynak dosyanız için ön işleme sembollerini tanımlar. (-D)
-Ön İşlemci tanımlarını Kaldır | Bir veya daha çok önişlemci tanımsızı belirtir.  (-U [macro])
-Tüm önişlemci tanımlarını Kaldır | Önceden tanımlanmış tüm önişlemci değerlerini Kaldır.  (-undef)
-Ekleme kodlarını Göster | Derleyici çıkışıyla ekleme kodu dosyalarının bir listesini oluşturur.  (-H)
-Önceden derlenmiş üst bilgi | Oluştur/Kullan önceden derlenmiş üst bilgi: oluşturmayı veya kullanmayı etkinleştirir, derleme sırasında önceden derlenmiş üstbilgi. | **Kullanım** -Ön derlenmiş üstbilgi kullanın.<br>**Önceden derlenmiş üst bilgiler kullanmayan** -önceden derlenmiş üst bilgi kullanılmıyor.<br>
-Önceden derlenmiş üst bilgi dosyası | Önceden derlenmiş üst bilgi dosyası için kullanılacak üst bilgi dosyası adını belirtir. Bu dosya aynı zamanda 'Zorunlu ekleme dosyaları için' yapı sırasında eklenecek
-Önceden derlenmiş üst bilgi çıkış dosyası dizini | Oluşturulan önceden derlenmiş üst bilgi dizinini belirtir. Bu dizin aynı zamanda 'Ek ekleme Dizinleri'ne' derleme sırasında eklenir
-Önceden derlenmiş üst bilgi olarak derleme | Derleme önceden derlenmiş üst bilgi dosyası için derleme dili tercihini seçin (- x c-header, - x c ++ - üst bilgisi). | **C kodu olarak derle** -C kodu olarak derle.<br>**C++ kodu olarak derle** -C++ kodu olarak derle.<br>
-Olarak derleme | .C ve .cpp dosyaları için derleme dili tercihini seçin.  'Default' göre .c veya .cpp uzantı algılar. (-x c, -x c++) | **Varsayılan** -varsayılan.<br>**C kodu olarak derle** -C kodu olarak derle.<br>**C++ kodu olarak derle** -C++ kodu olarak derle.<br>
-Zorlanmış dosyaları Ekle | bir veya daha çok zorunlu dosyaları içerir.     (-include [ad])
-Çok işlemci derlemesi | Çok işlemci derlemesi.
-Ek Seçenekler | Ek Seçenekler.
+Ek Içerme dizinleri | Ekleme yoluna eklenecek bir veya daha fazla dizin belirtir; birden fazlaysa noktalı virgülle ayırın. (-I [yol]).
+Hata ayıklama bilgi biçimi | Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. | **Hiçbiri** -hata ayıklama bilgisi üretmez, bu nedenle derleme daha hızlı olabilir.<br>**Tam hata ayıklama bilgileri (DWARF2)** -DWARF2 hata ayıklama bilgileri oluştur.<br>**Satır numarası bilgisi** -yalnızca satır numarası bilgisi oluştur.<br>
+Nesne dosyası adı | Varsayılan nesne dosyası adını geçersiz kılacak bir ad belirtir; dosya veya dizin adı olabilir. (/Fo [ad]).
+Uyarı düzeyi | Derleyicinin kod hataları hakkında ne kadar sıkı olmasını istediğinizi seçin.  Diğer bayraklar doğrudan ek seçeneklere eklenmelidir. (/w,/Weverything). | **Tüm uyarıları** kapat-tüm derleyici uyarılarını devre dışı bırakır.<br>**Enablealluyarılar** -varsayılan olarak devre dışı bırakılan tüm uyarıları etkin şekilde sunar.<br>
+Uyarıları hata olarak değerlendir | Tüm derleyici uyarılarını hata olarak değerlendirir. Yeni bir proje için tüm derlemelerde/WX kullanılması en iyi yöntem olabilir; Tüm uyarıların çözümlenmesi, en az olası bulma kod kusurlarını güvence altına alacak.
+Ayrıntılı modu etkinleştir | Çalıştırılacak komutları göster ve ayrıntılı çıkış kullan.
+İyileştirme | Uygulamanın en iyi duruma getirme düzeyini belirtir. | **Özel** -özel iyileştirme.<br>**Devre dışı** -iyileştirmeyi devre dışı bırak.<br>**Boyutu en aza indirir** -boyut için iyileştirin.<br>**En yüksek hız** -hız için iyileştirin.<br>**Tam iyileştirme** maliyetli iyileştirmeler.<br>
+Katı diğer ad | En katı diğer ad kurallarını varsayın.  Tek bir türdeki nesne, farklı türde bir nesneyle aynı adreste yer alacak şekilde hiçbir zaman kabul değildir.
+Çerçeve Işaretçisini atla | Çağrı yığınında çerçeve işaretçilerinin oluşturulmasını engeller.
+Özel C++ durumları etkinleştir | Derleyici tarafından kullanılacak özel durum işleme modelini belirtir. | **Hayır** -özel durum işlemeyi devre dışı bırak.<br>**Evet** -özel durum işlemeyi etkinleştir.<br>**Geriye doğru tablolar** -gereken statik verileri oluşturur, ancak oluşturulan kodu etkilemez.<br>
+Işlev düzeyinde bağlamayı etkinleştir | Derleyicinin paketlenmiş işlevler (Compts) biçiminde tek tek işlevleri paketetmesine olanak tanır. Düzenle ve çalışmaya devam etmek için gereklidir.     (ffunction-sections).
+Veri düzeyinde bağlamayı etkinleştir | Her veri öğesini ayrı bir bölümde yayarak kullanılmayan verileri kaldırmak için bağlayıcı iyileştirmelerini sağlar.
+Gelişmiş SıMD 'yi (neon) etkinleştir | NEON kayan nokta donanımı için kod oluşturmayı mümkün bir şekilde sunar. Bu yalnızca ARM mimarisi için geçerlidir.
+Kayan nokta ABı | Kayan nokta ABı seçmek için seçim seçeneği. | **Soft** -' Soft ', derleyicinin kayan nokta işlemleri için kitaplık çağrıları içeren çıkış oluşturmasına neden olur.<br>**Softfp** -' softfp ', donanım kayan nokta yönergeleri kullanılarak kod oluşturulmasına izin verir, ancak yine de yumuşak float çağırma kurallarını kullanır.<br>**Hard** -' Hard ', kayan nokta yönergelerinin oluşturulmasına izin verir ve FPU 'ya özgü çağırma kuralları kullanır.<br>
+Güvenlik denetimi | Güvenlik denetimi, bir programın güvenliği üzerinde yaygın olarak gerçekleştirilen bir saldırıya karşı yığın arabelleğinin çalıştırılmaların algılanmasına yardımcı olur. (fstack-Protector). | **Güvenlik denetimini devre** dışı bırak-güvenlik denetimini devre dışı bırak.<br>**Güvenlik denetimini etkinleştirin** -güvenlik denetimini etkinleştirin. (fstack-Protector)<br>
+Konumdan bağımsız kod | Paylaşılan bir kitaplıkta kullanılmak üzere konumdan bağımsız kod (PIC) üretin.
+Kısa sabit listeleri kullan | Sabit listesi türü, yalnızca olası değerlerin giriş kümesi için gereken sayıda bayt kullanır.
+Çalışma zamanı türü bilgilerini etkinleştir | Çalışma zamanında nesne türlerini C++ denetlemek için kod ekler (çalışma zamanı türü bilgileri).     (frtti, FNO-rtti)
+C dil standardı | C dil standardını belirler. | **Varsayılan**<br>**C89** -c89 dil standardı.<br>**C99** -C99 dil standardı.<br>**C11** -C11 dil standardı.<br>**C99 (GNU diyalekti)** -C99 (GNU diyalekti) dil standardı.<br>**C11 (GNU diyalekti)** -C11 (GNU diyalekti) dil standardı.<br>
+C++Dil standardı | C++ Dil standardını belirler. | **Varsayılan**<br>**C++ 03** -C++ 03 dil standardı.<br>**C++ 11** -C++ 11 dil standardı.<br>**C++ 14** -C++ 14 dil standardı.<br>**C++ 03 (GNU diyalekti)** -c++ 03 (GNU diyalekti) dil standardı.<br>**C++ 11 (GNU diyalekti)** -c++ 11 (GNU diyalekti) dil standardı.<br>**C++ 14 (GNU diyalekti)** -c++ 14 (GNU diyalekti) dil standardı.<br>
+Önişlemci tanımları | Kaynak dosyanız için bir ön işleme sembolleri tanımlar. (-D)
+Önişlemci tanımlarının tanımı kaldırılıyor | Bir veya daha fazla önişlemci tarafından tanımlanabileceğini belirtir.  (-U [makro])
+Tüm önişlemci tanımlarının tanımlanunlarını kaldır | Önceden tanımlanmış tüm Önişlemci değerlerini tanımlayın.  (-undef)
+Eklemeleri göster | Derleyici çıkışı içeren ekleme dosyalarının bir listesini oluşturur.  (-H)
+Ön derlenmiş üstbilgi | Önceden derlenmiş üst bilgi oluştur/kullan: derleme sırasında önceden derlenmiş üst bilgi oluşturmayı veya kullanmayı mümkün. | **Use** -önceden derlenmiş üst bilgi kullanın.<br>Önceden derlenmiş üst **bilgiler kullanılmıyor** -önceden derlenmiş üst bilgi kullanılmıyor.<br>
+Önceden derlenmiş üst bilgi dosyası | Önceden derlenmiş üstbilgi dosyası için kullanılacak üst bilgi dosyası adını belirtir. Bu dosya, derleme sırasında ' zorunlu Içerme dosyaları ' öğesine de eklenecektir
+Ön derlenmiş üst bilgi çıkış dosyası dizini | Oluşturulan ön derlenmiş üstbilgi için dizini belirtir. Bu dizin, derleme sırasında ' ek Içerme dizinleri 'ne de eklenecektir
+Ön derlenmiş üstbilgiyi şu şekilde derle | Önceden derlenmiş üstbilgi dosyası için derleme dil seçeneğini belirleyin (-x c-Header,-x c++-header). | **C** kodu olarak derle-c kodu olarak derleyin.<br>**Kod C++ olarak** C++ derle-kod olarak derle.<br>
+Farklı derle | . C ve. cpp dosyaları için derleme dil seçeneğini belirleyin.  ' Default ',. c veya. cpp uzantısı temelinde algılanacak. (-x c, -x c++) | **Varsayılan** -varsayılan.<br>**C** kodu olarak derle-c kodu olarak derleyin.<br>**Kod C++ olarak** C++ derle-kod olarak derle.<br>
+Zorunlu Içerme dosyaları | bir veya daha fazla zorunlu ekleme dosyası.     (-include [ad])
+Çok işlemcili derleme | Çok işlemcili derleme.
+Ek seçenekler | Ek seçenekler.

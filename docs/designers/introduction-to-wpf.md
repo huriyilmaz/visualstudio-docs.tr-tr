@@ -11,12 +11,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: f26558a8e8d7e8446e3a992b7555116b5712c364
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bb88c5b718c0f949825a2542b5a084d4e8ca15b9
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924451"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962958"
 ---
 # <a name="wpf-overview"></a>WPF’ye genel bakış
 
@@ -30,7 +30,7 @@ Bu genel bakış, Newcomers 'e yöneliktir ve WPF 'in temel yeteneklerini ve kav
 
 ## <a name="program-with-wpf"></a>WPF ile program
 
-WPF, <xref:System.Windows> ad alanında bulunan (en fazla bölüm için) .net türlerinin bir alt kümesi olarak mevcuttur. Daha önce ASP.NET ve Windows Forms gibi yönetilen teknolojiler kullanarak .NET ile uygulamalar oluşturduysanız, temel WPF programlama deneyimi tanıdık gelmelidir; , C# veya Visual Basic gibi en sevdiğiniz .NET programlama dilini kullanarak sınıfları örnekleyebilirsiniz, özellikleri ayarlar, yöntemleri çağırır ve olayları işleyebilirsiniz.
+WPF, <xref:System.Windows> ad alanında bulunan (en fazla bölüm için) .NET türlerinin bir alt kümesi olarak mevcuttur. Daha önce ASP.NET ve Windows Forms gibi yönetilen teknolojiler kullanarak .NET ile uygulamalar oluşturduysanız, temel WPF programlama deneyimi tanıdık gelmelidir; , C# veya Visual Basic gibi en sevdiğiniz .NET programlama dilini kullanarak sınıfları örnekleyebilirsiniz, özellikleri ayarlar, yöntemleri çağırır ve olayları işleyebilirsiniz.
 
 WPF, özellikleri ve olayları geliştiren ek programlama yapılarını içerir: [bağımlılık özellikleri](/dotnet/framework/wpf/advanced/dependency-properties-overview) ve [yönlendirilmiş olaylar](/dotnet/framework/wpf/advanced/routed-events-overview).
 
@@ -62,7 +62,7 @@ Aşağıdaki örnek, tek bir düğme içeren bir pencerenin görünümünü uygu
 </Window>
 ```
 
-Özellikle, bu xaml sırasıyla `Window` ve `Button` öğelerini kullanarak bir pencere ve bir düğme tanımlar. Her öğe, `Window` pencerenin başlık çubuğu metnini belirtmek için `Title` öğenin özniteliği gibi özniteliklerle yapılandırılır. Çalışma zamanında WPF, biçimlendirme içinde tanımlanan öğeleri ve öznitelikleri WPF sınıflarının örneklerine dönüştürür. Örneğin, `Window` öğesi özelliği <xref:System.Windows.Window> özniteliğin`Title` değeri olan <xref:System.Windows.Window.Title%2A> bir sınıfının örneğine dönüştürülür.
+Özellikle, bu XAML, sırasıyla `Window` ve `Button` öğelerini kullanarak bir pencere ve bir düğme tanımlar. Her öğe, pencerenin başlık çubuğu metnini belirtmek için `Window` öğesinin `Title` özniteliği gibi özniteliklerle yapılandırılır. Çalışma zamanında WPF, biçimlendirme içinde tanımlanan öğeleri ve öznitelikleri WPF sınıflarının örneklerine dönüştürür. Örneğin `Window` öğesi, <xref:System.Windows.Window.Title%2A> özelliği `Title` özniteliğinin değeri olan <xref:System.Windows.Window> sınıfının bir örneğine dönüştürülür.
 
 Aşağıdaki şekilde, önceki örnekte XAML tarafından tanımlanan Kullanıcı arabirimi (UI) gösterilmektedir.
 
@@ -139,7 +139,7 @@ Namespace SDKSample
 End Namespace
 ```
 
-Bu örnekte, arka plan kodu <xref:System.Windows.Window> sınıfından türetilen bir sınıf uygular. `x:Class` Özniteliği, biçimlendirmeyi arka plan kod sınıfıyla ilişkilendirmek için kullanılır. `InitializeComponent`arka plan kod sınıfı ile biçimlendirme içinde tanımlanan Kullanıcı arabirimini birleştirmek için, kod arkasındaki sınıfın oluşturucusundan çağrılır. (`InitializeComponent` uygulamanızın oluşturulduğu zaman sizin için oluşturulur, bu nedenle el ile uygulamanız gerekmez.) Birleşimi `x:Class` ve`InitializeComponent` uygulamanızın oluşturulduğu her seferinde doğru başlatıldığından emin olun. Arka plan kod sınıfı, düğmenin <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı için bir olay işleyicisi de uygular. Düğmeye tıklandığında, olay işleyicisi <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> yöntemini çağırarak bir ileti kutusu gösterir.
+Bu örnekte, arka plan kodu <xref:System.Windows.Window> sınıfından türetilen bir sınıf uygular. @No__t-0 özniteliği, biçimlendirmeyi arka plan kod sınıfıyla ilişkilendirmek için kullanılır. `InitializeComponent`, arka plan kod sınıfı ile biçimlendirme içinde tanımlanan Kullanıcı arabirimini birleştirmek için arka plan kod sınıfından çağırılır. (`InitializeComponent` uygulamanız oluşturulduğunda sizin için oluşturulur, bu nedenle el ile uygulamanız gerekmez.) @No__t-0 ve `InitializeComponent` birleşimi, uygulamanızın oluşturulduğu her seferinde doğru başlatıldığından emin olun. Arka plan kod sınıfı, düğmenin <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı için bir olay işleyicisi de uygular. Düğmeye tıklandığında, olay işleyicisi <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> yöntemini çağırarak bir ileti kutusu gösterir.
 
 Aşağıdaki şekilde, düğme tıklandığında sonuç gösterilmektedir.
 
@@ -157,29 +157,29 @@ Yerleşik WPF denetimleri burada listelenmiştir.
 
 - **Düğmeler**: <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.Primitives.RepeatButton>.
 
-- **Veri görüntüleme**: <xref:System.Windows.Controls.DataGrid>, <xref:System.Windows.Controls.ListView>, ve <xref:System.Windows.Controls.TreeView>.
+- **Veri görüntüleme**: <xref:System.Windows.Controls.DataGrid>, <xref:System.Windows.Controls.ListView> ve <xref:System.Windows.Controls.TreeView>.
 
 - **Tarih görüntüleme ve seçim**: <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker>.
 
-- **İletişim kutuları**: <xref:Microsoft.Win32.OpenFileDialog>, <xref:System.Windows.Controls.PrintDialog>, ve <xref:Microsoft.Win32.SaveFileDialog>.
+- **Iletişim kutuları**: <xref:Microsoft.Win32.OpenFileDialog>, <xref:System.Windows.Controls.PrintDialog> ve <xref:Microsoft.Win32.SaveFileDialog>.
 
 - **Dijital mürekkep**: <xref:System.Windows.Controls.InkCanvas> ve <xref:System.Windows.Controls.InkPresenter>.
 
-- **Belgeler**: <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.FlowDocumentReader> ,ve<xref:System.Windows.Controls.StickyNoteControl>. <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- **Belgeler**: <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer> ve <xref:System.Windows.Controls.StickyNoteControl>.
 
-- **Giriş**: <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, ve <xref:System.Windows.Controls.PasswordBox>.
+- **Giriş**: <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox> ve <xref:System.Windows.Controls.PasswordBox>.
 
-- **Düzen**: <xref:System.Windows.Controls.Border> ,<xref:System.Windows.Controls.Primitives.BulletDecorator>, ,,<xref:System.Windows.Controls.Separator>, ,<xref:System.Windows.Controls.Primitives.ScrollBar>,,,, ,<xref:System.Windows.Controls.Primitives.ResizeGrip>,, <xref:System.Windows.Controls.GroupBox> <xref:System.Windows.Controls.GridSplitter> <xref:System.Windows.Controls.Grid> <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.Controls.Canvas> <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.Panel>  <xref:System.Windows.Controls.ScrollViewer>, ,<xref:System.Windows.Controls.Primitives.Thumb>, ,<xref:System.Windows.Window>, ve<xref:System.Windows.Controls.WrapPanel>. <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.Controls.Viewbox> <xref:System.Windows.Controls.VirtualizingStackPanel>
+- **Düzen**: <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Primitives.BulletDecorator>, <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Expander>, <xref:System.Windows.Controls.Grid>, <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridSplitter>, <xref:System.Windows.Controls.GroupBox>, 0, 1, 2, 3, 4, 5 ve 6, 7, 8, 9 ve 0
 
-- **Medya**: <xref:System.Windows.Controls.Image>, <xref:System.Windows.Controls.MediaElement>, ve <xref:System.Windows.Controls.SoundPlayerAction>.
+- **Medya**: <xref:System.Windows.Controls.Image>, <xref:System.Windows.Controls.MediaElement> ve <xref:System.Windows.Controls.SoundPlayerAction>.
 
-- **Menüler**: <xref:System.Windows.Controls.ContextMenu>, <xref:System.Windows.Controls.Menu>, ve <xref:System.Windows.Controls.ToolBar>.
+- **Menüler**: <xref:System.Windows.Controls.ContextMenu>, <xref:System.Windows.Controls.Menu> ve <xref:System.Windows.Controls.ToolBar>.
 
-- **Gezinti**: <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Documents.Hyperlink> ,,<xref:System.Windows.Controls.TabControl>ve. <xref:System.Windows.Controls.Page> <xref:System.Windows.Navigation.NavigationWindow>
+- **Gezinti**: <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow> ve <xref:System.Windows.Controls.TabControl>.
 
-- **Seçim**: <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.ComboBox>, ,<xref:System.Windows.Controls.ListBox>, ve<xref:System.Windows.Controls.Slider>. <xref:System.Windows.Controls.RadioButton>
+- **Seçim**: <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.RadioButton> ve <xref:System.Windows.Controls.Slider>.
 
-- **Kullanıcı bilgileri**: <xref:System.Windows.Controls.AccessText>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Primitives.Popup>,, ,<xref:System.Windows.Controls.Primitives.StatusBar>, ve .<xref:System.Windows.Controls.ToolTip> <xref:System.Windows.Controls.ProgressBar> <xref:System.Windows.Controls.TextBlock>
+- **Kullanıcı bilgileri**: <xref:System.Windows.Controls.AccessText>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Primitives.Popup>, <xref:System.Windows.Controls.ProgressBar>, <xref:System.Windows.Controls.Primitives.StatusBar>, <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Controls.ToolTip>.
 
 ## <a name="input-and-commands"></a>Giriş ve komutlar
 
@@ -207,11 +207,11 @@ Düzen sistemi, temel WPF sınıfları aracılığıyla alt denetimlere açıkt�
 
 - <xref:System.Windows.Controls.WrapPanel>: Alt denetimler soldan sağa düzende konumlandırılır ve geçerli satırda alanın izin verdiğinden daha fazla denetim olduğunda sonraki satıra kaydırılır.
 
-Aşağıdaki örnek, çeşitli <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.Controls.TextBox> denetimleri düzenlemek için bir kullanır.
+Aşağıdaki örnek, birkaç <xref:System.Windows.Controls.TextBox> denetimini düzenlemek için <xref:System.Windows.Controls.DockPanel> kullanır.
 
 [!code-xaml[IntroToWPFSnippets#LayoutMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_1.xaml)]
 
-, <xref:System.Windows.Controls.DockPanel> Alt<xref:System.Windows.Controls.TextBox> denetimlerin nasıl düzenlendiğini anlatmasını sağlar. Bunu yapmak için, <xref:System.Windows.Controls.DockPanel> bir yuva stili belirtmesini sağlamak üzere alt denetimlere açık olan iliştirilmiş bir `Dock` özellik uygular.
+@No__t-0 alt <xref:System.Windows.Controls.TextBox> denetimlerinin nasıl düzenlendiğini anlatmasını sağlar. Bunu yapmak için <xref:System.Windows.Controls.DockPanel>, her birinin bir dock stili belirtmesini sağlamak üzere alt denetimlere açık olan `Dock` iliştirilmiş bir özellik uygular.
 
 > [!NOTE]
 > Alt denetimler tarafından kullanılmak üzere bir üst denetim tarafından uygulanan bir özellik, [iliştirilmiş özelliği](/dotnet/framework/wpf/advanced/attached-properties-overview)olarak ADLANDıRıLAN bir WPF yapısıdır.
@@ -228,16 +228,16 @@ Birçok uygulama, kullanıcılara verileri görüntüleme ve düzenleme araçlar
 
 2. Denetimler kullanılarak verilerde yapılan değişikliklerin, yönetilen nesnelere geri kopyalanmasını sağlamak.
 
-WPF, uygulama geliştirmeyi basitleştirmek için, bu adımları otomatik olarak gerçekleştirmek üzere bir veri bağlama altyapısı sağlar. Veri bağlama altyapısının <xref:System.Windows.Data.Binding> çekirdek birimi, işi bir denetimi (bağlama hedefi) bir veri nesnesine (bağlama kaynağı) bağlamak olan sınıftır. Bu ilişki aşağıdaki şekilde gösterilmiştir:
+WPF, uygulama geliştirmeyi basitleştirmek için, bu adımları otomatik olarak gerçekleştirmek üzere bir veri bağlama altyapısı sağlar. Veri bağlama altyapısının çekirdek birimi, işi bir denetimi (bağlama hedefi) bir veri nesnesine (bağlama kaynağı) bağlamak olan <xref:System.Windows.Data.Binding> sınıfıdır. Bu ilişki aşağıdaki şekilde gösterilmiştir:
 
 ![Temel veri bağlama diyagramı](../designers/media/databindingmostbasic.png)
 
-Sonraki örnekte, bir <xref:System.Windows.Controls.TextBox> özel `Person` nesne örneğine nasıl bağlanacağı gösterilmektedir. `Person` Uygulama aşağıdaki kodda gösterilmiştir:
+Sonraki örnekte, bir <xref:System.Windows.Controls.TextBox> ' i özel bir `Person` nesnesinin örneğine nasıl bağlayacağınız gösterilmektedir. @No__t 0 uygulama aşağıdaki kodda gösterilmiştir:
 
 [!code-vb[SimpleDataBindingSnippets#PersonClassCODE](../designers/codesnippet/VisualBasic/introduction-to-wpf_2.vb)]
 [!code-csharp[SimpleDataBindingSnippets#PersonClassCODE](../designers/codesnippet/CSharp/introduction-to-wpf_2.cs)]
 
-Aşağıdaki biçimlendirme, <xref:System.Windows.Controls.TextBox> öğesini bir özel `Person` nesne örneğine bağlar.
+Aşağıdaki biçimlendirme <xref:System.Windows.Controls.TextBox> ' i özel bir `Person` nesnesinin örneğine bağlar.
 
 ```xaml
  <Window
@@ -254,7 +254,7 @@ Aşağıdaki biçimlendirme, <xref:System.Windows.Controls.TextBox> öğesini bi
 [!code-vb[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../designers/codesnippet/VisualBasic/introduction-to-wpf_6.vb)]
 [!code-csharp[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../designers/codesnippet/CSharp/introduction-to-wpf_6.cs)]
 
-Bu örnekte, `Person` sınıfı arka plan kodunda oluşturulur ve `DataBindingWindow`için veri bağlamı olarak ayarlanır. Biçimlendirme <xref:System.Windows.Controls.TextBox.Text%2A> bölümünde `Person.Name` öğesinin özelliği özelliğine bağlanır ("`{Binding ... }`" xaml sözdizimi kullanılarak). <xref:System.Windows.Controls.TextBox> Bu XAML, <xref:System.Windows.Controls.TextBox> WPF 'in denetimi `Person` pencerenin <xref:System.Windows.FrameworkElement.DataContext%2A> özelliğinde depolanan nesneye bağlamasını söyler.
+Bu örnekte, `Person` sınıfı arka plan kod içinde oluşturulur ve `DataBindingWindow` için veri bağlamı olarak ayarlanır. Biçimlendirme ' de, <xref:System.Windows.Controls.TextBox> ' in <xref:System.Windows.Controls.TextBox.Text%2A> özelliği `Person.Name` özelliğine ("`{Binding ... }`" XAML sözdizimi kullanılarak) bağlanır. Bu XAML, WPF <xref:System.Windows.Controls.TextBox> denetimini, pencerenin <xref:System.Windows.FrameworkElement.DataContext%2A> özelliğinde depolanan `Person` nesnesine bağlamasını söyler.
 
 WPF veri bağlama altyapısı, doğrulama, sıralama, filtreleme ve gruplamayı içeren ek destek sağlar. Ayrıca, veri bağlama, standart WPF denetimleri tarafından görüntülenecek kullanıcı arabirimi uygun olmadığında, bağlantılı veriler için özel kullanıcı arabirimi oluşturmak üzere veri şablonlarının kullanımını destekler.
 
@@ -278,7 +278,7 @@ WPF, aşağıdaki çizimde gösterilen dikdörtgenler ve üç nokta gibi yaygın
 
 ![Üç nokta ve dikdörtgen](../designers/media/wpfintrofigure4.PNG)
 
-Şekillerin ilginç bir özelliği yalnızca görüntüleme için değildir; şekiller, klavye ve fare girişi dahil olmak üzere denetimlerden beklediğinizi birçok özelliği uygular. Aşağıdaki örnek, <xref:System.Windows.Shapes.Ellipse> işlenmekte <xref:System.Windows.UIElement.MouseUp> olan olayını gösterir.
+Şekillerin ilginç bir özelliği yalnızca görüntüleme için değildir; şekiller, klavye ve fare girişi dahil olmak üzere denetimlerden beklediğinizi birçok özelliği uygular. Aşağıdaki örnek, işlenen bir <xref:System.Windows.Shapes.Ellipse> <xref:System.Windows.UIElement.MouseUp> olayını gösterir.
 
 [!code-xaml[IntroToWPFSnippets#HandleEllipseMouseUpEventMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_7.xaml)]
 
@@ -295,9 +295,9 @@ Daha fazla bilgi için bkz. [WPF 'de şekillere ve temel çizime genel bakış](
 
 WPF tarafından sunulan 2B şekiller, temel şekillerin standart kümesini kapsar. Ancak, özelleştirilmiş bir kullanıcı arabiriminin tasarımını kolaylaştırmak için özel şekiller oluşturmanız gerekebilir. Bu amaçla WPF, geometriler sağlar. Aşağıdaki şekilde, doğrudan çizilemeyen, fırça olarak kullanılan veya diğer şekilleri ve denetimleri kırpmak için kullanılan özel bir şekil oluşturmak için geometriler kullanımı gösterilmektedir.
 
-<xref:System.Windows.Shapes.Path>nesneler, kapalı veya açık şekiller, birden çok şekil ve hatta eğri şekiller çizmek için kullanılabilir.
+<xref:System.Windows.Shapes.Path> nesneleri, kapalı veya açık şekiller, birden çok şekil ve hatta eğri şekiller çizmek için kullanılabilir.
 
-<xref:System.Windows.Media.Geometry>nesneler kırpma, isabet sınama ve 2B grafik verileri işleme için kullanılabilir.
+<xref:System.Windows.Media.Geometry> nesneleri kırpma, isabet testi ve 2B grafik verileri işleme için kullanılabilir.
 
 ![Yolun çeşitli kullanımları](../designers/media/wpfintrofigure5.png)
 
@@ -341,11 +341,11 @@ Daha fazla bilgi için bkz. [Imaging 'e genel bakış](/dotnet/framework/wpf/gra
 
 ### <a name="video-and-audio"></a>Video ve ses
 
-<xref:System.Windows.Controls.MediaElement> Denetim hem videoyu hem de sesi oynatabilen ve özel bir medya yürütücüsünün temeli olması yeterince esnektir. Aşağıdaki XAML biçimlendirmesi bir medya oynatıcı uygular.
+@No__t-0 denetimi hem videoyu hem de sesi oynatabilen ve özel bir medya yürütücüsünün temeli için yeterince esnektir. Aşağıdaki XAML biçimlendirmesi bir medya oynatıcı uygular.
 
 [!code-xaml[IntroToWPFSnippets#MediaElementMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_9.xaml)]
 
-Aşağıdaki şekilde gösterilen <xref:System.Windows.Controls.MediaElement> pencere, denetimin eylemde bulunduğu bir işlemdir.
+Aşağıdaki şekilde gösterilen pencerede <xref:System.Windows.Controls.MediaElement> denetimi işlem içinde gösterilmektedir.
 
 ![Ses ve video ile MediaElement denetimi](../designers/media/wpfintrofigure1.png)
 
@@ -381,7 +381,7 @@ Bu nedenle WPF, denetimler, Tetikleyiciler, denetim ve veri şablonları, stille
 
 ### <a name="content-model"></a>İçerik modeli
 
-WPF denetimlerinin çoğunluğunun ana amacı içeriği görüntülemektir. WPF içinde, bir denetimin içeriğini oluşturan öğelerin türü ve sayısı denetimin *içerik modeli*olarak adlandırılır. Bazı denetimler, tek bir öğe ve içerik türü içerebilir; Örneğin, öğesinin <xref:System.Windows.Controls.TextBox> içeriği <xref:System.Windows.Controls.TextBox.Text%2A> özelliğine atanan bir dize değeridir. Aşağıdaki örnek bir <xref:System.Windows.Controls.TextBox>öğesinin içeriğini ayarlar.
+WPF denetimlerinin çoğunluğunun ana amacı içeriği görüntülemektir. WPF içinde, bir denetimin içeriğini oluşturan öğelerin türü ve sayısı denetimin *içerik modeli*olarak adlandırılır. Bazı denetimler, tek bir öğe ve içerik türü içerebilir; Örneğin, <xref:System.Windows.Controls.TextBox> ' ın içeriği <xref:System.Windows.Controls.TextBox.Text%2A> özelliğine atanan bir dize değeridir. Aşağıdaki örnek bir @no__t içeriğini ayarlar-0.
 
 ```xaml
 <Window
@@ -398,7 +398,7 @@ Aşağıdaki şekilde sonuç gösterilmektedir.
 
 ![Metin içeren TextBox denetimi](../designers/media/wpfintrofigure21.png)
 
-Bununla birlikte, diğer denetimler farklı türde içeriklerde birden çok öğe içerebilir; özelliği tarafından belirtilen bir <xref:System.Windows.Controls.Button>öğesinin içeriği, düzen denetimleri, metin, Resimler ve şekiller gibi çeşitli öğeleri içerebilir. <xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.Button> Aşağıdaki örnek <xref:System.Windows.Controls.DockPanel>, bir,<xref:System.Windows.Controls.Border> ,<xref:System.Windows.Controls.MediaElement>, ve içeren içeriği içeren bir gösterir. <xref:System.Windows.Controls.Label>
+Bununla birlikte, diğer denetimler farklı türde içeriklerde birden çok öğe içerebilir; <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği tarafından belirtilen <xref:System.Windows.Controls.Button> içeriği, düzen denetimleri, metin, Resimler ve şekiller gibi çeşitli öğeleri içerebilir. Aşağıdaki örnekte, bir <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Border> ve <xref:System.Windows.Controls.MediaElement> içeren içeriğe sahip <xref:System.Windows.Controls.Button> gösterilmektedir.
 
 ```xaml
 <Window
@@ -428,32 +428,32 @@ Aşağıdaki şekilde bu düğmenin içeriği gösterilmektedir.
 
 ### <a name="triggers"></a>Tetikleyiciler
 
-XAML biçimlendirmesinin ana amacı uygulamanın görünümünü uygulamak olsa da, bir uygulamanın davranışının bazı yönlerini uygulamak için XAML de kullanabilirsiniz. Bir örnek, bir uygulamanın görünümünü kullanıcı etkileşimlerine göre değiştirmek için tetikleyicilerin kullanılması. Daha fazla bilgi için bkz. [Stil oluşturma ve şablon](/dotnet/framework/wpf/controls/styling-and-templating)oluşturma.
+XAML biçimlendirmesinin ana amacı uygulamanın görünümünü uygulamak olsa da, bir uygulamanın davranışının bazı yönlerini uygulamak için XAML de kullanabilirsiniz. Bir örnek, bir uygulamanın görünümünü kullanıcı etkileşimlerine göre değiştirmek için tetikleyicilerin kullanılması. Daha fazla bilgi için bkz. [Stiller ve şablonlar](/dotnet/desktop-wpf/fundamentals/styles-templates-overview).
 
 ### <a name="control-templates"></a>Denetim şablonları
 
-WPF denetimleri için varsayılan kullanıcı arabirimleri genellikle diğer denetimlerden ve şekillerden oluşturulur. Örneğin, bir <xref:System.Windows.Controls.Button> , <xref:Microsoft.Windows.Themes.ButtonChrome> ve <xref:System.Windows.Controls.ContentPresenter> denetimlerinden oluşur. , Standart düğme görünümünü <xref:System.Windows.Controls.ContentPresenter> <xref:System.Windows.Controls.ContentControl.Content%2A> sağlar, ancak düğme içeriğini özelliği tarafından belirtilen şekilde görüntüler. <xref:Microsoft.Windows.Themes.ButtonChrome>
+WPF denetimleri için varsayılan kullanıcı arabirimleri genellikle diğer denetimlerden ve şekillerden oluşturulur. Örneğin, <xref:System.Windows.Controls.Button> <xref:Microsoft.Windows.Themes.ButtonChrome> ve <xref:System.Windows.Controls.ContentPresenter> denetimlerinden oluşur. @No__t-0 standart düğme görünümünü sağlar, ancak <xref:System.Windows.Controls.ContentPresenter> düğme içeriğini <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği tarafından belirtilen şekilde görüntüler.
 
-Bazen bir denetimin varsayılan görünümü bir uygulamanın genel görünümüyle birlikte kullanılamaz. Bu durumda, içeriğini ve davranışını değiştirmeden denetimin <xref:System.Windows.Controls.ControlTemplate> Kullanıcı arabiriminin görünümünü değiştirmek için bir kullanabilirsiniz.
+Bazen bir denetimin varsayılan görünümü bir uygulamanın genel görünümüyle birlikte kullanılamaz. Bu durumda, içeriğini ve davranışını değiştirmeden denetimin kullanıcı arabiriminin görünümünü değiştirmek için bir <xref:System.Windows.Controls.ControlTemplate> kullanabilirsiniz.
 
-Örneğin, aşağıdaki örnek, öğesinin <xref:System.Windows.Controls.Button> görünümünü ' a <xref:System.Windows.Controls.ControlTemplate>kullanarak nasıl değiştirileceğini gösterir.
+Örneğin, aşağıdaki örnek, bir @no__t <xref:System.Windows.Controls.ControlTemplate> kullanarak görünümünün nasıl değiştirileceğini gösterir.
 
 [!code-xaml[IntroToWPFSnippets#ButtonControlTemplateWindowMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_16.xaml)]
 
 [!code-csharp[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](../designers/codesnippet/CSharp/introduction-to-wpf_17.cs)]
 [!code-vb[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](../designers/codesnippet/VisualBasic/introduction-to-wpf_17.vb)]
 
-Bu örnekte, varsayılan düğme Kullanıcı arabirimi koyu mavi kenarlığa sahip olan ve <xref:System.Windows.Shapes.Ellipse> <xref:System.Windows.Media.RadialGradientBrush>kullanılarak doldurulmuş bir ile değiştirilmiştir. Denetimde içeriğini görüntüleyen denetim, "bana tıklama!" <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ContentPresenter> Tıklandığında olay, <xref:System.Windows.Controls.Button> denetimin varsayılan davranışının bir parçası olarak yine de oluşturulur. <xref:System.Windows.Controls.Primitives.ButtonBase.Click> <xref:System.Windows.Controls.Button> Sonuç aşağıdaki şekilde gösterilmiştir:
+Bu örnekte, varsayılan düğme Kullanıcı arabirimi koyu mavi kenarlığa sahip bir <xref:System.Windows.Shapes.Ellipse> ile değiştirilmiştir ve <xref:System.Windows.Media.RadialGradientBrush> kullanılarak doldurulmuştur. @No__t-0 denetimi <xref:System.Windows.Controls.Button> ' in içeriğini görüntüler, "bana tıklayın!" @No__t-0 tıklandığında, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı <xref:System.Windows.Controls.Button> denetiminin varsayılan davranışının parçası olarak yine de oluşturulur. Sonuç aşağıdaki şekilde gösterilmiştir:
 
 ![Elips düğme ve ikinci bir pencere](../designers/media/wpfintrofigure2.png)
 
 ### <a name="data-templates"></a>Veri şablonları
 
-Bir denetim şablonu bir denetimin görünümünü belirtmenize izin verirken, bir veri şablonu bir denetimin içeriğinin görünümünü belirtmenize olanak tanır. Veri şablonları genellikle, bağlantılı verilerin nasıl görüntülendiğini iyileştirmek için kullanılır. Aşağıdaki şekilde, her görevin bir ad, açıklama <xref:System.Windows.Controls.ListBox> ve önceliğe sahip olduğu bir `Task` nesne koleksiyonuna bağlanan bir için varsayılan görünüm gösterilmektedir.
+Bir denetim şablonu bir denetimin görünümünü belirtmenize izin verirken, bir veri şablonu bir denetimin içeriğinin görünümünü belirtmenize olanak tanır. Veri şablonları genellikle, bağlantılı verilerin nasıl görüntülendiğini iyileştirmek için kullanılır. Aşağıdaki şekilde, her görevin bir ad, açıklama ve önceliğe sahip olduğu bir `Task` nesneleri koleksiyonuna bağlanan <xref:System.Windows.Controls.ListBox> ' ın varsayılan görünümü gösterilmektedir.
 
 ![Varsayılan görünümü içeren bir liste kutusu](../designers/media/wpfintrofigure18.png)
 
-Varsayılan görünüm, bir <xref:System.Windows.Controls.ListBox>' dan beklediğiniz şeydir. Ancak, her görevin varsayılan görünümü yalnızca görev adını içerir. Görev adını, açıklamasını ve önceliğini göstermek için, <xref:System.Windows.Controls.ListBox> denetimin bağlantılı liste öğelerinin varsayılan görünümünün bir <xref:System.Windows.DataTemplate>kullanılarak değiştirilmesi gerekir. Aşağıdaki XAML, <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özniteliği kullanılarak her <xref:System.Windows.DataTemplate>bir göreve uygulanan böyle bir tanımlar.
+Varsayılan görünüm <xref:System.Windows.Controls.ListBox> ' dan beklediğiniz şeydir. Ancak, her görevin varsayılan görünümü yalnızca görev adını içerir. Görev adını, açıklamasını ve önceliğini göstermek için, <xref:System.Windows.Controls.ListBox> denetiminin bağlantılı liste öğelerinin varsayılan görünümünün, bir <xref:System.Windows.DataTemplate> kullanılarak değiştirilmesi gerekir. Aşağıdaki XAML, <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özniteliği kullanılarak her göreve uygulanan <xref:System.Windows.DataTemplate> tanımlar.
 
 ```xaml
 <Window
@@ -508,13 +508,13 @@ Aşağıdaki şekilde bu kodun etkisi gösterilmektedir.
 
 ![Veri şablonu kullanan liste kutusu](../designers/media/wpfintrofigure19.png)
 
-<xref:System.Windows.Controls.ListBox> Öğesinin davranışını ve genel görünümünü beklediğine ve yalnızca liste kutusu tarafından görüntülenen içeriğin görünümü değiştiği unutulmamalıdır.
+@No__t-0 ' ın davranışını ve genel görünümünü korunduğunu unutmayın; yalnızca liste kutusu tarafından görüntülenmekte olan içeriğin görünümü değişmiştir.
 
 Daha fazla bilgi için bkz. [veri şablonu oluşturmaya genel bakış](/dotnet/framework/wpf/data/data-templating-overview).
 
-### <a name="styles"></a>Stiller
+### <a name="styles"></a>Stilleri
 
-Stiller, geliştiricilerin ve tasarımcıların ürünlerinin belirli bir görünümünü standartlaştırmasını sağlar. WPF, <xref:System.Windows.Style> öğesi olan bir güçlü stil modeli sunar. Aşağıdaki örnek, her <xref:System.Windows.Controls.Button> bir `Orange`pencerede için arka plan rengini ayarlayan bir stil oluşturur.
+Stiller, geliştiricilerin ve tasarımcıların ürünlerinin belirli bir görünümünü standartlaştırmasını sağlar. WPF, <xref:System.Windows.Style> öğesi olan bir güçlü stil modeli sunar. Aşağıdaki örnek, bir penceredeki her @no__t için arka plan rengini `Orange` ' e ayarlayan bir stil oluşturur.
 
 ```xaml
 <Window
@@ -541,17 +541,17 @@ Stiller, geliştiricilerin ve tasarımcıların ürünlerinin belirli bir görü
 </Window>
 ```
 
-Bu stil tüm <xref:System.Windows.Controls.Button> denetimleri hedeflediğinden, stil, aşağıdaki şekilde gösterildiği gibi penceredeki tüm düğmelere otomatik olarak uygulanır:
+Bu stil tüm <xref:System.Windows.Controls.Button> denetimlerini hedeflediğinden, stil aşağıdaki şekilde gösterildiği gibi penceredeki tüm düğmelere otomatik olarak uygulanır:
 
 ![İki turuncu düğme](../designers/media/wpfintrofigure20.png)
 
-Daha fazla bilgi için bkz. [Stil oluşturma ve şablon](/dotnet/framework/wpf/controls/styling-and-templating)oluşturma.
+Daha fazla bilgi için bkz. [Stiller ve şablonlar](/dotnet/desktop-wpf/fundamentals/styles-templates-overview).
 
 ### <a name="resources"></a>Kaynaklar
 
 Bir uygulamadaki denetimler aynı görünümü paylaşmalıdır. Bu, yazı tiplerinden ve arka plan renklerinden şablonları, veri şablonlarını ve stilleri denetleyebilen herhangi bir şeyi içerebilir. Bu kaynakları yeniden kullanım için tek bir konumda kapsüllemek üzere, WPF 'nin Kullanıcı arabirimi kaynakları desteğini kullanabilirsiniz.
 
-Aşağıdaki örnek, <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Label>ve tarafından paylaşılan ortak bir arka plan rengi tanımlar.
+Aşağıdaki örnek, <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.Label> tarafından paylaşılan ortak bir arka plan rengi tanımlar.
 
 ```xaml
 <Window
@@ -573,17 +573,17 @@ Aşağıdaki örnek, <xref:System.Windows.Controls.Button> <xref:System.Windows.
 </Window>
 ```
 
-Bu örnek, `Window.Resources` özellik öğesini kullanarak bir arka plan rengi kaynağı uygular. Bu kaynak, <xref:System.Windows.Window>öğesinin tüm alt öğeleri için kullanılabilir. Aşağıdakiler de dahil olmak üzere çeşitli kaynak kapsamları çözümlendikleri sırayla listelenmiştir:
+Bu örnek `Window.Resources` özellik öğesini kullanarak bir arka plan rengi kaynağı uygular. Bu kaynak <xref:System.Windows.Window> ' ın tüm alt öğeleri için kullanılabilir. Aşağıdakiler de dahil olmak üzere çeşitli kaynak kapsamları çözümlendikleri sırayla listelenmiştir:
 
-1. Tek bir denetim (devralınan <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> özelliği kullanarak).
+1. Tek bir denetim (devralınan <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> özelliğini kullanarak).
 
-2. A <xref:System.Windows.Window> veya a <xref:System.Windows.Controls.Page> (devralınan <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> özelliği de kullanılarak).
+2. @No__t-0 veya <xref:System.Windows.Controls.Page> (Ayrıca devralınan <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> özelliğini kullanarak).
 
-3. Bir <xref:System.Windows.Application> ( <xref:System.Windows.Application.Resources%2A?displayProperty=fullName> özelliğini kullanarak).
+3. @No__t-0 (<xref:System.Windows.Application.Resources%2A?displayProperty=fullName> özelliği kullanılarak).
 
 Çeşitli kapsamlar, kaynaklarınızı tanımladığınız ve paylaştığınız yönteme göre esneklik sağlar.
 
-Kaynaklarınızın belirli bir kapsamla doğrudan ilişkilendirilmesi için alternatif olarak, bir veya daha fazla kaynağı, uygulamanın diğer bölümlerinde başvurulabilen ayrı <xref:System.Windows.ResourceDictionary> bir kullanarak paketleyebilir. Örneğin, aşağıdaki örnekte kaynak sözlüğünde varsayılan bir arka plan rengi tanımlanmaktadır.
+Kaynaklarınızın belirli bir kapsamla doğrudan ilişkilendirilmesi için alternatif olarak, bir veya daha fazla kaynağı, bir uygulamanın diğer bölümlerinde başvurulabilen ayrı bir @no__t (0) kullanarak paketleyebilir. Örneğin, aşağıdaki örnekte kaynak sözlüğünde varsayılan bir arka plan rengi tanımlanmaktadır.
 
 ```xaml
 <ResourceDictionary
@@ -629,24 +629,24 @@ WPF, özelleştirme desteği sunan bir konak sağlasa da, mevcut WPF denetimleri
 
 Ancak, bu noktada, yeni bir denetim oluşturmak için üç WPF modelinden birini kullanabilirsiniz. Her model belirli bir senaryoyu hedefler ve özel denetiminizin belirli bir WPF Taban sınıfından türemesini gerektirir. Üç model burada listelenmiştir:
 
-- **Kullanıcı denetimi modeli**. Özel denetim, öğesinden <xref:System.Windows.Controls.UserControl> türetilir ve bir veya daha fazla denetimden oluşur.
+- **Kullanıcı denetimi modeli**. Özel denetim <xref:System.Windows.Controls.UserControl> ' dan türetilir ve bir veya daha fazla denetimden oluşur.
 
-- **Denetim modeli**. Özel bir denetim, ' <xref:System.Windows.Controls.Control> dan türetilir ve, WPF denetimlerinin çoğunluğunda olduğu gibi, davranışlarını, şablonlarının görünümlerini kullanarak ayıran uygulamalar oluşturmak için kullanılır. Öğesinden <xref:System.Windows.Controls.Control> türetme, Kullanıcı denetimlerinden özel bir kullanıcı arabirimi oluşturmak için daha fazla özgürlük sağlar, ancak daha fazla çaba gerektirebilir.
+- **Denetim modeli**. Özel bir denetim <xref:System.Windows.Controls.Control> ' dan türetilir ve davranışları, WPF denetimlerinin çoğunluğu gibi şablonlar kullanarak görünüşlerinden ayıran uygulamalar oluşturmak için kullanılır. @No__t 'ten türetme, Kullanıcı denetimlerinden özel bir kullanıcı arabirimi oluşturmak için daha fazla özgürlük sağlar, ancak daha fazla çaba gerektirebilir.
 
-- **Framework öğe modeli**. Özel denetim, görünümü özel <xref:System.Windows.FrameworkElement> işleme mantığı (şablon değil) tarafından tanımlandığında öğesinden türetilir.
+- **Framework öğe modeli**. Özel bir denetim, görünümü özel işleme mantığı (şablon değil) tarafından tanımlandığında <xref:System.Windows.FrameworkElement> ' dan türetilir.
 
-Aşağıdaki örnek, öğesinden <xref:System.Windows.Controls.UserControl>türetilen özel bir sayısal yukarı/aşağı denetimi gösterir.
+Aşağıdaki örnekte, <xref:System.Windows.Controls.UserControl> ' dan türetilen özel bir sayısal yukarı/aşağı denetimi gösterilmektedir.
 
 [!code-xaml[IntroToWPFSnippets#UserControlMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_33.xaml)]
 
 [!code-csharp[IntroToWPFSnippets#UserControlCODEBEHIND1](../designers/codesnippet/CSharp/introduction-to-wpf_34.cs)]
 [!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND1](../designers/codesnippet/VisualBasic/introduction-to-wpf_34.vb)]
 
-Sonraki örnekte, Kullanıcı denetimini bir <xref:System.Windows.Window>öğesine eklemek için gereken XAML gösterilmektedir.
+Sonraki örnekte, Kullanıcı denetimini <xref:System.Windows.Window> ' a eklemek için gereken XAML gösterilmektedir.
 
 [!code-xaml[IntroToWPFSnippets#UserControlWindowMARKUP1](../designers/codesnippet/Xaml/introduction-to-wpf_37.xaml)]
 
-Aşağıdaki şekilde, <xref:System.Windows.Window>içinde barındırılan `NumericUpDown` denetim gösterilmektedir.
+Aşağıdaki şekilde, <xref:System.Windows.Window> ' de barındırılan `NumericUpDown` denetimi gösterilmektedir.
 
 ![Özel bir UserControl](../designers/media/wpfintrofigure3.png)
 
@@ -654,7 +654,7 @@ Aşağıdaki şekilde, <xref:System.Windows.Window>içinde barındırılan `Nume
 
 ## <a name="wpf-best-practices"></a>WPF en iyi uygulamaları
 
-Her türlü geliştirme platformunda olduğu gibi, WPF istenen sonuca ulaşmak için çeşitli yollarla kullanılabilir. WPF uygulamalarınızın gerekli Kullanıcı deneyimini sağlayıp, genel olarak hedef kitle taleplerini karşıladığından emin olmanın bir yolu olarak erişilebilirlik, Genelleştirme ve yerelleştirme ve performans için önerilen en iyi uygulamalar vardır. Daha fazla bilgi için bkz.:
+Her türlü geliştirme platformunda olduğu gibi, WPF istenen sonuca ulaşmak için çeşitli yollarla kullanılabilir. WPF uygulamalarınızın gerekli Kullanıcı deneyimini sağlayıp, genel olarak hedef kitle taleplerini karşıladığından emin olmanın bir yolu olarak erişilebilirlik, Genelleştirme ve yerelleştirme ve performans için önerilen en iyi uygulamalar vardır. Daha fazla bilgi için bkz.
 
 - [Erişilebilirlik](/dotnet/framework/ui-automation/accessibility-best-practices)
 - [WPF Genelleştirme ve yerelleştirme](/dotnet/framework/wpf/advanced/wpf-globalization-and-localization-overview)
@@ -666,7 +666,7 @@ Her türlü geliştirme platformunda olduğu gibi, WPF istenen sonuca ulaşmak i
 WPF 'nin temel özelliklerine baktık. Şimdi ilk WPF uygulamanızı oluşturma zamanı.
 
 > [!div class="nextstepaction"]
-> [İzlenecek yol: İlk WPF Masaüstü Uygulamam](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)
+> [İzlenecek yol: İlk WPF Masaüstü Uygulamam @ no__t-0
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

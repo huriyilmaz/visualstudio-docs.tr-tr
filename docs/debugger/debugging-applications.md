@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63d393e5ab056f16e54382b2295a667f079ede95
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 9848b666df985ddc7c2c4d0cf56f9ae4cafcb347
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211158"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962895"
 ---
 # <a name="debugging-applications"></a>Uygulamalarda Hata Ayıklama
 Aşağıdaki bölümler, belirli türde uygulamalar için hata ayıklama ile ilgilenir. Farklı uygulama türleri ve farklı diller, farklı ayarlar ve teknikler gerektirir ve hataları ayıklanmanız gereken farklı sorunlar sunar.
@@ -34,6 +34,6 @@ Aşağıdaki bölümler, belirli türde uygulamalar için hata ayıklama ile ilg
 |[Grafik Tanılama (DirectX grafik hatalarını ayıklama)](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)|DirectX grafiklerinin nasıl ayıklanılacağını açıklar.|
 |[ASP.NET uygulamalarında hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|ASP.NET uygulamalarında hata ayıklamayı açıklar.|
 |[Python kodunda hata ayıklama](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)|Python kodu hata ayıklamanın nasıl yapılacağını açıklar|
-|[JavaScript ve TypeScript uygulamalarında hata ayıklama](/javascript/debug-nodejs.md)|JavaScript, TypeScript ve Node. js uygulamalarında hata ayıklamayı açıklar|
+|[JavaScript ve TypeScript uygulamalarında hata ayıklama](/javascript/debug-nodejs)|JavaScript, TypeScript ve Node. js uygulamalarında hata ayıklamayı açıklar|
 |[Web uygulamalarında hata ayıklama](../debugger/debugging-web-applications.md)|Web uygulamalarında ve betikte hata ayıklamanın nasıl yapılacağını açıklar.|
 |[WCF hizmetlerinde hata ayıklama](../debugger/debugging-wcf-services.md)|Windows Communication Foundation hizmetlerinde hata ayıklamanın nasıl yapılacağını açıklar.|

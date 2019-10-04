@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 06a1c5b637ca2ed9306162ee1960c60d103e5843
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 2178881c6ea0e597aef5e25074e3648162d3f6e9
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185973"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950645"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -19,7 +19,7 @@ ms.locfileid: "71185973"
 
 ## <a name="how-to-set-the-msbuild-properties"></a>MSBuild özelliklerini ayarlama
 
-Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Docker Compose özellikler için, bu proje dosyası bir sonraki bölümdeki tabloda aksi belirtilmedikçe. dcproj uzantılı bir uzantıdır. Örneğin, hata ayıklamaya başladığınızda tarayıcıyı başlatmak için belirtmek istediğinizi varsayalım. . Dcproj proje `DockerLaunchAction` dosyasındaki özelliğini aşağıdaki gibi ayarlayabilirsiniz.
+Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Docker Compose özellikler için, bu proje dosyası bir sonraki bölümdeki tabloda aksi belirtilmedikçe. dcproj uzantılı bir uzantıdır. Örneğin, hata ayıklamaya başladığınızda tarayıcıyı başlatmak için belirtmek istediğinizi varsayalım. . Dcproj proje dosyasında `DockerLaunchAction` özelliğini aşağıdaki gibi ayarlayabilirsiniz.
 
 ```xml
 <PropertyGroup>
@@ -27,18 +27,18 @@ Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Docker 
 </PropertyGroup>
 ```
 
-Özellik ayarını varolan `PropertyGroup` bir öğeye ekleyebilirsiniz, yoksa yeni `PropertyGroup` bir öğe oluşturun.
+Özellik ayarını mevcut bir `PropertyGroup` öğesine ekleyebilir veya bir tane yoksa, yeni bir `PropertyGroup` öğesi oluşturun.
 
 ## <a name="docker-compose-msbuild-properties"></a>MSBuild özelliklerini Docker Compose
 
 Aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild özellikleri gösterilmektedir.
 
-| Özellik adı | Konum | Açıklama | Varsayılan değer  |
+| Özellik adı | Location | Açıklama | Varsayılan değer  |
 |---------------|----------|-------------|----------------|
-|DockerComposeBuildArguments|dcproj|`docker-compose build` Komuta geçirilecek ek parametreleri belirtir. Örneğin, `--parallel --pull` |
-|DockerComposeDownArguments|dcproj|`docker-compose down` Komuta geçirilecek ek parametreleri belirtir. Örneğin, `--timeout 500`|-|  
+|DockerComposeBuildArguments|dcproj|@No__t-0 komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--parallel --pull` |
+|DockerComposeDownArguments|dcproj|@No__t-0 komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--timeout 500`|-|  
 |DockerComposeProjectPath|csproj veya vbproj|Docker-Compose projesi (dcproj) dosyasının göreli yolu. Docker-Compose. yıml dosyasında depolanan ilişkili görüntü derleme ayarlarını bulmak için hizmet projesini yayımlarken bu özelliği ayarlayın.|-|
-|DockerComposeUpArguments|dcproj|`docker-compose up` Komuta geçirilecek ek parametreleri belirtir. Örneğin, `--timeout 500`|-|
+|DockerComposeUpArguments|dcproj|@No__t-0 komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--timeout 500`|-|
 |DockerLaunchAction| dcproj | F5 veya CTRL + F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir.  İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur|Yok.|
 |DockerLaunchBrowser| dcproj | Tarayıcının başlatılıp başlatılmayacağını belirtir. DockerLaunchAction belirtilmişse yoksayıldı. | False |
 |DockerServiceName| dcproj|DockerLaunchAction veya DockerLaunchBrowser belirtilmişse DockerServiceName, başlatılacak hizmetin adıdır.  Bu özelliği kullanarak, bir Docker-Compose dosyasının başvurmasına yönelik olabilecek çok sayıda projeden hangisini başlatılacağı belirlenir.|-|
@@ -46,7 +46,7 @@ Aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild öze
 |DockerTargetOS| dcproj | Docker görüntüsü oluşturulurken kullanılan hedef işletim sistemi.|-|
 
 > [!NOTE]
-> DockerComposeBuildArguments, DockerComposeDownArguments ve DockerComposeUpArguments, Visual Studio 2019 sürüm 16,3 Preview 3 ' te yenidir.
+> DockerComposeBuildArguments, DockerComposeDownArguments ve DockerComposeUpArguments, Visual Studio 2019 sürüm 16,3 ' de yenidir.
 
 ## <a name="docker-compose-file-labels"></a>Docker Compose dosya etiketleri
 

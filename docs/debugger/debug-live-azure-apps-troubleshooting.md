@@ -11,16 +11,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ee8633a9ad58981297f00338cd6c375c5cf721e
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 27df4c097d829a4d28a77b9b1ad96eb389f4096c
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211244"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962941"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio'da anlık görüntü hata ayıklama için sorun giderme ve bilinen sorunlar
 
-Bu makalede açıklanan adımlar sorununuzu gidermezse, [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html) 'nda sorunu arayın veya Visual 'te**sorun bildir** **geri bildirim** > Gönder ' **i seçerek** > yeni bir sorun bildirin Stu.
+Bu makalede açıklanan adımlar sorununuzu gidermezse, [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html) 'nda sorunu arayın veya **Yardım** > **geri bildirim gönder** >  ' i Visual Studio 'da**sorun bildir** ' i seçerek yeni bir sorun bildirin.
 
 ## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Sorun: "Attach Snapshot Debugger" bir HTTP durum kodu hatası ile karşılaştı
 
@@ -34,7 +34,7 @@ Bu hata, Visual Studio tarafından Azure 'a verilen REST çağrısının geçers
 
 Aşağıdaki adımları gerçekleştirin:
 
-* Visual Studio kişiselleştirme hesabınızın, iliştirmekte olduğunuz Azure aboneliğine ve kaynağa yönelik izinlere sahip olduğundan emin olun. Bunu belirlemenin hızlı bir yolu, **hata ayıklama** > **iliştirme Snapshot Debugger** iletişim kutusunda kaynağın kullanılabilir olup olmadığını denetlemiyor... **Azure kaynağı**mevcut ' i veya bulut Gezgini ' ni seçin. >   > 
+* Visual Studio kişiselleştirme hesabınızın, iliştirmekte olduğunuz Azure aboneliğine ve kaynağa yönelik izinlere sahip olduğundan emin olun. Bunu belirlemenin hızlı bir yolu, **hata ayıklama** >  Attach Snapshot Debugger iletişim kutusunda kaynağın kullanılabilir olup olmadığını**denetlemiyor...**  > **Azure kaynak** > **mevcut**veya Cloud Explorer 'da seçin.
 * Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
 
 ### <a name="403-forbidden"></a>(403) yasak
@@ -54,7 +54,8 @@ Bu hata, Web sitesinin sunucuda bulunamadığını gösterir.
 Aşağıdaki adımları gerçekleştirin:
 
 * Bağladığınız App Service kaynağında dağıtılan ve çalışan bir Web sitenizin olduğunu doğrulayın.
-* Sitenin https://\<Resource\>. azurewebsites.net adresinde kullanılabilir olduğunu doğrulayın
+* Sitenin https://@no__t -0resource\>.azurewebsites.net adresinde kullanılabilir olduğunu doğrulayın
+* Özel Web uygulamasını çalıştırmanın, https://@no__t -0resource\>.azurewebsites.net adresinden erişildiğinde 404 durum kodunu döndürmediğinden emin olun.
 * Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
 
 ### <a name="406-not-acceptable"></a>(406) kabul edilemez
@@ -63,7 +64,7 @@ Bu hata, sunucunun isteğin Accept üst bilgisinde ayarlanan türe yanıt vereme
 
 Aşağıdaki adımları gerçekleştirin:
 
-* Sitenizin https://\<Resource\>. azurewebsites.net adresinde kullanılabilir olduğunu doğrulayın
+* Sitenizin https://adresinde kullanılabilir olduğunu doğrulayın @no__t -0resource\>.azurewebsites.net
 * Sitenizin yeni örneklere geçirilmediğinden emin olun. Snapshot Debugger, bu hatayı aralıklı olarak oluşturabilecek belirli örneklere yönlendirme istekleri için ARRAffinity kavramını kullanır.
 * Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
 
@@ -156,11 +157,11 @@ Aşağıdaki adımları gerçekleştirin:
 
 Visual Studio 2019, Azure App Service Snapshot Debugger site uzantısının daha yeni bir sürümünü gerektirir.  Bu sürüm, Visual Studio 2017 tarafından kullanılan Snapshot Debugger site uzantısının eski sürümüyle uyumlu değil.  Visual Studio 2019 ' deki Snapshot Debugger, daha önce Visual Studio 2017 ' de Snapshot Debugger tarafından hata ayıklaması yapılmış bir Azure App Service iliştirmeye çalışırsanız aşağıdaki hatayı alırsınız:
 
-![Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2019](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2019")
+![Uyumsuz Snapshot Debugger site uzantısı Visual studio 2019](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "uyumsuz Snapshot Debugger site uzantısı Visual Studio 2019")
 
 Buna karşılık, Snapshot Debugger iliştirmek için Visual Studio 2017 kullanıyorsanız, daha önce Visual Studio 2019 ' de Snapshot Debugger tarafından hata ayıklaması yapılmış bir Azure App Service eklemek için aşağıdaki hatayı alırsınız:
 
-![Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2017](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2017")
+![Uyumsuz Snapshot Debugger site uzantısı Visual studio 2017](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "uyumsuz Snapshot Debugger site uzantısı Visual Studio 2017")
 
 Bu hatayı onarmak için Azure portal aşağıdaki uygulama ayarlarını silin ve Snapshot Debugger yeniden ekleyin:
 
@@ -180,7 +181,7 @@ Aracı günlükleri aşağıdaki konumlarda bulunabilir:
   - App Service kudu sitenize (yani, yourappservice) gidin. **SCM**. azurewebsites.net) ve hata ayıklama konsolu 'na gidin.
   - Aracı günlükleri aşağıdaki dizinde depolanır:  D:\home\LogFiles\SiteExtensions\DiagnosticsAgentLogs\
 - VM/VMSS:
-  - SANAL makinenizde oturum açın, Aracı günlükleri şu şekilde depolanır:  C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\<Version > \snapshotdebuggeragent_ *. txt
+  - SANAL makinenizde oturum açın, Aracı günlükleri şu şekilde depolanır:  C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics @ no__t-0Sürüm > \SnapshotDebuggerAgent_ *. txt
 - AKS
   - Şu dizine gidin:/tmp/diag/AgentLogs/*
 
@@ -189,7 +190,7 @@ Aracı günlükleri aşağıdaki konumlarda bulunabilir:
 İzleme günlükleri aşağıdaki konumlarda bulunabilir:
 
 - Uygulama Hizmetleri:
-  - Hata günlüğü, d:\home\logfiles\eventlog.xml dosyasına otomatik olarak gönderilir, olaylar veya " `<Provider Name="Instrumentation Engine" />` üretim kesme noktaları" ile işaretlenir
+  - Hata günlüğü D:\Home\LogFiles\eventlog.xml dosyasına otomatik olarak gönderilir, olaylar `<Provider Name="Instrumentation Engine" />` veya "üretim kesme noktaları" ile işaretlenir
 - VM/VMSS:
   - SANAL makinenizde oturum açın ve Olay Görüntüleyicisi açın.
   - Aşağıdaki görünümü açın: *Windows günlük > uygulama*.

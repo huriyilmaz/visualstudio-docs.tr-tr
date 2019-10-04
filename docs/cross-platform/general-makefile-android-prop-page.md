@@ -1,12 +1,12 @@
 ---
-title: Genel proje özellikleri (Android C++ derleme görevleri dosyası) | Microsoft Docs
+title: Genel Proje Özellikleri (Android C++ makefile) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 ms.assetid: f76d717c-56ed-4373-8cf9-9bd1a053a4cd
-author: corob
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 f1_keywords:
 - VC.Project.VCConfiguration.OutputDirectory
@@ -15,18 +15,18 @@ f1_keywords:
 - VC.Project.VCConfiguration.ConfigurationType
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: ee398add6b0cca8288d82cd090e1abef07a40d23
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b7fa1b91951e7a3fb145cc26275016037d1b5f2b
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818979"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950574"
 ---
-# <a name="general-project-properties-android-c-makefile"></a>Genel proje özellikleri (Android C++ derleme görevleri dosyası)
+# <a name="general-project-properties-android-c-makefile"></a>Genel Proje Özellikleri (Android C++ makefile)
 
-Özellik | Açıklama | Seçenekleri
+Özellik | Açıklama | Yapabileceği
 --- | ---| ---
-Çıkış dizini | Çıkış dosyası dizinine göreli bir yol belirtir; ortam değişkenleri içerebilir.
-Ara dizin | Ara dosya dizinine göreli bir yol belirtir; ortam değişkenleri içerebilir.
-Derleme günlüğü dosyası | Günlük kaydı ne zaman oluşturulacağını yazılacak derleme günlüğü dosyasını belirtir.
-Yapılandırma türü | Bu yapılandırmanın oluşturduğu çıkışın türünü belirtir. | **Dinamik kitaplık (.so)** -dinamik kitaplık (*.so*)<br>**Statik kitaplık (.a)** -statik kitaplık (*.a*)<br>**Yardımcı program** - yardımcı programı<br>**Derleme görevleri dosyası** -derleme görevleri dosyası<br>
+Çıkış dizini | Çıkış dosyası dizinine göreli bir yol belirtir; ortam değişkenlerini içerebilir.
+Ara Dizin | Ara dosya dizinine göreli bir yol belirtir; ortam değişkenlerini içerebilir.
+Derleme günlüğü dosyası | Derleme günlüğü etkinken yazılacak olan derleme günlüğü dosyasını belirtir.
+Yapılandırma türü | Bu yapılandırmanın oluşturduğu çıkışın türünü belirtir. | **Dinamik kitaplık (. so)** -dinamik kitaplık ( *. so*)<br>**Statik kitaplık (. a)** -statik kitaplık ( *. a*)<br>**Yardımcı program** -yardımcı program<br>**Makefile** -makefile<br>
