@@ -11,21 +11,21 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3576e34b52e524b88300c089c2beda0be6ed0e28
-ms.sourcegitcommit: b56dc6fadc6c924beed36bb4c2ccc16cf6bcfa1c
+ms.openlocfilehash: 15e0b45fd77096ba2227391736aad5c895014d1c
+ms.sourcegitcommit: 0554b59a2a251661e56824fb9cd6e9b1f326cef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68740028"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71831865"
 ---
-# <a name="step-3-use-the-interactive-repl-window"></a>3\. Adım: Etkileşimli REPL penceresini kullanma
+# <a name="step-3-use-the-interactive-repl-window"></a>3\. adım: Etkileşimli REPL penceresini kullanma
 
-**Önceki adım: [Kodu yaz ve Çalıştır](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)**
+**Önceki adım: @No__t [kodu yazın ve çalıştırın](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)-1
 
 Visual Studio **etkileşimli** penceresi Python için normal düzenleme-oluşturma-hata ayıklama döngüsü önemli ölçüde kısaltır bir zengin okuma-değerlendirme-print-loop (REPL) deneyimi sağlar. **Etkileşimli** penceresinde Python komut satırı REPL deneyiminin tüm özellikleri sağlar. Ayrıca, çok kaynak dosyaları Visual Studio'da kod değişimi Düzenleyici, aksi takdirde komut satırından yavaşlatan bir yöntemdir kolaylaştırır.
 
 > [!NOTE]
-> REPL ile ilgili sorunlar için, `ipython` ve `ipykernel` paketlerinin yüklü olduğundan ve paketlerin yüklenmesiyle ilgili yardım için bkz. [Python ortamları paketleri sekmesi](https://docs.microsoft.com/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab).
+> REPL ile ilgili sorunlar için `ipython` ve `ipykernel` paketlerinin yüklü olduğundan emin olun ve paketlerin yüklenmesiyle ilgili yardım için bkz. [Python ortamları paketleri sekmesi](https://docs.microsoft.com/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab).
 
 1. Açık **etkileşimli** projenin Python ortamında sağ tıklanarak penceresi **Çözüm Gezgini** (gibi **Python 3.6 (32-bit)** bir önceki grafikte gösterilen) ve seçme **açık etkileşimli pencere**. Alternatif olarak seçebileceğiniz **görünümü** > **diğer Windows** > **Python etkileşimli Windows** ana Visual Studio menüsünde.
 
@@ -54,7 +54,7 @@ Visual Studio **etkileşimli** penceresi Python için normal düzenleme-oluştur
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
-1. Yalnızca belirli `import` ve `from` deyimlerinde *.py* dosyasını sağ tıklatın ve seçin **etkileşime Gönder** (veya basın **Ctrl** + **Girin**). Kod parçasını hemen yapıştırılır **etkileşimli** penceresi ve çalıştırın. Şimdi seçtiğiniz `make_dot_string` işlev ve söz konusu kod parçasını yeniden çalıştırır aynı komutu yineleyin. Kodu bir işlev tanımladığından hızlıca bu işlev birkaç kez çağırarak test edebilirsiniz:
+1. *. Kopyala* dosyasında `import`, `from` ve `make_dot_string` işlev deyimlerini seçin, sağ tıklayın ve **etkileşimli 'e gönder** ' i seçin (veya **CTRL**+**ENTER**tuşlarına basın). Kod parçasını hemen yapıştırılır **etkileşimli** penceresi ve çalıştırın. Şimdi seçtiğiniz `make_dot_string` işlev ve söz konusu kod parçasını yeniden çalıştırır aynı komutu yineleyin. Kodu bir işlev tanımladığından hızlıca bu işlev birkaç kez çağırarak test edebilirsiniz:
 
     ![Kod etkileşimli pencereye göndermek ve test](media/vs-getting-started-python-14-interactive4.png)
 
