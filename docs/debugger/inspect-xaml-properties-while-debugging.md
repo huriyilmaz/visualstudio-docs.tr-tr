@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 182c9e37764a247ec24b4b477975ccb7b8811c4b
-ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
+ms.openlocfilehash: e1d26886eecf09ff8195b7a38338fa62e7f1d0bf
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322541"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974958"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Hata ayıklama sırasında XAML özelliklerini denetleme
 **Canlı görsel ağaç** ve **canlı Özellik GEZGINI**ile çalışan xaml kodunuzun gerçek zamanlı bir görünümünü alabilirsiniz. Bu araçlar, çalışan XAML uygulamanızın kullanıcı arabirimi öğelerinin ağaç görünümünü sağlar ve seçtiğiniz herhangi bir kullanıcı arabirimi öğesinin çalışma zamanı özelliklerini gösterir.
@@ -71,20 +71,22 @@ private void button_Click(object sender, RoutedEventArgs e)
 
 Projeyi oluşturmak ve hata ayıklamaya başlayın. (Derleme yapılandırması, yayın değil, hata ayıklama olmalıdır. Derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).)
 
-Pencere geldiğinde, birkaç kez **öğe Ekle** düğmesine tıklayın. Şuna benzer bir şey görmeniz gerekir:
+Pencere geldiğinde, çalışan uygulamanız içinde uygulama içi araç çubuğunun göründüğünü görmeniz gerekir. 
 
-![Uygulamanın ana penceresi](../debugger/media/livevisualtree-app.png "Livevisualtree-uygulama")
+![Uygulamanın ana penceresi](../debugger/media/livevisualtree-app.png "livevisualtree-App")
 
-Şimdi **canlı görsel ağaç** penceresini açın (**Windows > canlı görsel ağaç > hata ayıklayın**veya IDE 'nin sol tarafında bulun). Bu pencereye ve **canlı Özellikler** penceresine yan yana bakabilmemiz için yerleştirme konumundan uzağa sürükleyin. **Canlı görsel ağaç** penceresinde, **ContentPresenter** düğümünü genişletin. Düğme ve liste kutusu için düğüm içermelidir. Liste kutusu öğelerini bulmak için liste kutusunu (ve ardından **ScrollContentPresenter** ve **ItemsPresenter**) genişletin. Pencere şuna benzemelidir:
+Şimdi listeye yeni öğeler eklemek için birkaç kez **öğe Ekle** düğmesine tıklayın.
 
-![Canlı görsel ağaçtaki ListBoxItems](../debugger/media/livevisualtree-listboxitems.png "Livevisualtree-ListBoxItems")
+Ardından, uygulama içi araç çubuğunun çok sol düğmesine tıklayarak (veya **> Windows > Live Visual Tree ' Hata Ayıkla**' ya giderek) **canlı görsel ağaç** penceresini açın. Açık olduktan sonra, bu pencereye ve **canlı Özellikler** penceresine yan yana bakabilmemiz için yerleştirme konumundan uzağa sürükleyin. **Canlı görsel ağaç** penceresinde, **ContentPresenter** düğümünü genişletin. Düğme ve liste kutusu için düğüm içermelidir. Liste kutusu öğelerini bulmak için liste kutusunu (ve ardından **ScrollContentPresenter** ve **ItemsPresenter**) genişletin. Pencere şuna benzemelidir:
+
+![Live Visual Tree](../debugger/media/livevisualtree-listboxitems.png "livevisualtree-ListBoxItems") içindeki ListBoxItems
 
 Uygulama penceresine dönüp birkaç öğe daha ekleyin. **Canlı görsel ağaçta**daha fazla liste kutusu öğesi göründüğünü görmeniz gerekir.
 
-Şimdi liste kutusu öğelerinden birinin özelliklerine göz atalım. **Canlı görsel ağaçtaki** ilk liste kutusu öğesini seçin ve araç çubuğundaki **özellikleri göster** simgesine tıklayın. **Canlı Özellik Gezgini** görünmelidir. **İçerik** alanının "Item1" olduğunu ve **arka plan** > **rengi** alanının **#FFFFFFE0**olduğunu unutmayın. **Canlı görsel ağaca** dönün ve ikinci liste kutusu öğesini seçin. **Canlı Özellik Gezgini** **içerik** alanının "Item2" olduğunu ve **arka plan** > **rengi** alanının **#FFD3D3D3**olduğunu göstermelidir.
+Şimdi liste kutusu öğelerinden birinin özelliklerine göz atalım. **Canlı görsel ağaçtaki** ilk liste kutusu öğesini seçin ve araç çubuğundaki **özellikleri göster** simgesine tıklayın. **Canlı Özellik Gezgini** görünmelidir. **İçerik** alanının "Item1" olduğunu ve **arka plan** > **renk** alanının **#FFFFFFE0**olduğunu unutmayın. **Canlı görsel ağaca** dönün ve ikinci liste kutusu öğesini seçin. **Canlı Özellik Gezgini** , **Içerik** alanının "Item2" olduğunu ve **arka plan** > **renk** alanının **#FFD3D3D3**göstermelidir.
 
 > [!NOTE]
-> **Canlı Özellik Gezgini** içindeki bir özelliğin etrafında sarı bir kenarlık, özellik değerinin gibi `Color = {BindingExpression}`bir bağlama üzerinden ayarlandığı anlamına gelir. Yeşil kenarlık, değerinin gibi bir kaynak `Color = {StaticResource MyBrush}`kullanılarak ayarlandığı anlamına gelir.
+> **Canlı Özellik Gezgini** içindeki bir özelliğin etrafında sarı bir kenarlık, özellik değerinin `Color = {BindingExpression}` gibi bir bağlama üzerinden ayarlandığı anlamına gelir. Yeşil kenarlık, değerin `Color = {StaticResource MyBrush}` gibi bir kaynak kullanılarak ayarlandığı anlamına gelir.
 
 XAML gerçek yapısı, muhtemelen doğrudan ilgilenmediğiniz çok sayıda öğeye sahiptir ve kodun iyi olduğunu bilmiyorsanız, aradığınız şeyi bulmak için ağaçta gezinmek için bir sabit zaman olabilir. Bu nedenle, **canlı görsel ağaç** , incelemek istediğiniz öğeyi bulmanıza yardımcı olmak için uygulamanın kullanıcı arabirimini kullanmanıza olanak sağlayan birkaç yol içerir.
 
@@ -92,7 +94,7 @@ XAML gerçek yapısı, muhtemelen doğrudan ilgilenmediğiniz çok sayıda öğe
 
 **Çalışan uygulamada düzen donatıcıları görüntüleyin**. Seçimi Etkinleştir düğmesinin hemen sağında bulunan düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. **Görüntüleme düzeni donatıcıları** açık olduğunda, uygulama penceresinin seçili nesnenin sınırları üzerinde yatay ve dikey çizgiler görüntülemesine neden olur, böylece neyin ne kadar hizalanacağını görebilir ve kenar boşluklarını gösteren dikdörtgenler de gösterilir. Örneğin, her ikisini de **seçimi** ve **görüntüleme yerleşimini** etkinleştirin ve uygulamada **öğe Ekle** metin bloğunu seçin. **Canlı görsel ağaçta** metin bloğu düğümünü ve **canlı Özellik görüntüleyicisinde**metin bloğu özelliklerinin yanı sıra metin bloğunun sınırları üzerindeki yatay ve dikey çizgileri görmeniz gerekir.
 
-![DisplayLayout Içinde Livepropertyviewer](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "Livevisualtreelivepropertyviewer-DisplayLayout")
+DisplayLayout(../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "livevisualtreelivepropertyviewer") !['Da livepropertyviewer]-displaylayout
 
 **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. Seçim ve **Önizleme seçimini** **Etkinleştir** ' i seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio 'da açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
 

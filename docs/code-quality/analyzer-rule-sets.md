@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da1567dd088ecc060f031e59827ff33024e9e955
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 313b578743fd734da3354989a8cee16022779242
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185957"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974701"
 ---
 # <a name="rule-sets-for-analyzer-packages"></a>Çözümleyici paketleri için kural kümeleri
 
@@ -36,7 +36,7 @@ Eski "FxCop" analizinden .NET Compiler Platform tabanlı kod çözümlemesine ge
 
 ## <a name="use-analyzer-package-rule-sets"></a>Çözümleyici paketi kural kümelerini kullanma
 
-[NuGet Çözümleyicisi paketini](install-roslyn-analyzers.md)yükledikten sonra, *RuleSets* dizininde önceden tanımlanmış kural kümesini bulun. Örneğin, `Microsoft.CodeAnalysis.FxCopAnalyzers` çözümleyici paketine başvuruluyorsa, *RuleSets* dizinini *% USERPROFILE\\%. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers\\\<sürümünde bulabilirsiniz \>\rulesets*. Buradan, bir veya daha fazla RuleSets 'i kopyalayın ve bunları Visual Studio projenizi içeren dizine yapıştırın veya doğrudan **Çözüm Gezgini**.
+[NuGet Çözümleyicisi paketini](install-roslyn-analyzers.md)yükledikten sonra, *RuleSets* dizininde önceden tanımlanmış kural kümesini bulun. Örneğin, `Microsoft.CodeAnalysis.FxCopAnalyzers` çözümleyici paketine başvurdıysanız, *RuleSets* dizinini *% USERPROFILE% \\. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers @ no__t-4 @ no__t-5version @ no__t-6\rulesets*adresinde bulabilirsiniz. Buradan, bir veya daha fazla RuleSets 'i kopyalayın ve bunları Visual Studio projenizi içeren dizine yapıştırın veya doğrudan **Çözüm Gezgini**.
 
 Ayrıca, [önceden tanımlanmış bir kural kümesini](how-to-create-a-custom-rule-set.md) tercih etmeniz için özelleştirebilirsiniz. Örneğin, bir veya daha fazla kuralın önem derecesini değiştirerek ihlallerin **hata listesi**hata veya uyarı olarak görünmesini sağlayabilirsiniz.
 
@@ -46,7 +46,7 @@ Etkin kural kümesini ayarlama işlemi, .NET Core/. NET Standard projeniz veya .
 
 ### <a name="net-core"></a>.NET Core
 
-Bir kuralı, .NET Core veya .NET Standard projelerinde analiz için etkin kural kümesini ayarlamak için, **CodeAnalysisRuleSet** özelliğini proje dosyanıza el ile ekleyin. Örneğin, aşağıdaki kod parçacığı etkin kural kümesi `HelloWorld.ruleset` olarak ayarlanır.
+Bir kuralı, .NET Core veya .NET Standard projelerinde analiz için etkin kural kümesini ayarlamak için, **CodeAnalysisRuleSet** özelliğini proje dosyanıza el ile ekleyin. Örneğin, aşağıdaki kod parçacığı etkin kural kümesi olarak `HelloWorld.ruleset` ' ı ayarlar.
 
 ```xml
 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -57,11 +57,29 @@ Bir kuralı, .NET Core veya .NET Standard projelerinde analiz için etkin kural 
 
 ### <a name="net-framework"></a>.NET Framework
 
-Bir kuralı .NET Framework projelerinde analiz için etkin kural kümesini ayarlamak için, **Çözüm Gezgini** içindeki projeye sağ tıklayın ve **Özellikler**' i seçin. Proje özelliği sayfalarında **Kod Analizi** sekmesini seçin. **Bu kural kümesini Çalıştır**' ın altında, **Araştır**' ı seçin ve ardından proje dizinine kopyaladığınız istenen kural kümesini seçin. Şimdi yalnızca seçili kural kümesinde etkinleştirilen kuralların kural ihlallerini görürsünüz.
+Bir kuralı .NET Framework projelerinde analiz için etkin kural kümesini ayarlamak için:
+
+- **Çözüm Gezgini** ' de projeye sağ tıklayın ve **Özellikler**' i seçin.
+
+- Proje özelliği sayfalarında **Kod Analizi** sekmesini seçin.
+
+::: moniker range="vs-2017"
+
+- **Bu kural kümesini Çalıştır**' ın altında, **Araştır**' ı seçin ve ardından proje dizinine kopyaladığınız istenen kural kümesini seçin.
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+- **Etkin kurallar**altında, **Araştır**' ı seçin ve ardından proje dizinine kopyaladığınız istenen kural kümesini seçin.
+
+::: moniker-end
+
+   Şimdi yalnızca seçili kural kümesinde etkinleştirilen kuralların kural ihlallerini görürsünüz.
 
 ## <a name="available-rule-sets"></a>Kullanılabilir kural kümeleri
 
-Önceden tanımlı çözümleyici kural kümeleri, paketteki&mdash;tüm kuralları etkileyen, bunların tümünü devre dışı bırakan ve her kuralın varsayılan önem derecesini ve etkinleştirme ayarlarını yapan bir tane olan üç RuleSet içerir:
+Önceden tanımlı çözümleyici kural kümeleri, @ no__t-0one paketindeki tüm kuralları etkileyen, bunların tümünü devre dışı bırakan ve her kuralın varsayılan önem derecesine ve etkinleştirme ayarlarına bir tane veren üç RuleSet içerir:
 
 - AllRulesEnabled. RuleSet
 - Allkuraldevre dışı. RuleSet

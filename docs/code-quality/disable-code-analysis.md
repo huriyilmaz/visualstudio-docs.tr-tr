@@ -8,14 +8,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: d769accce87b789b207d9cf337d5b9adc46e413e
-ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.openlocfilehash: 77c189e4a15f2ae4049c45d2c8463079895f5be2
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71963328"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975153"
 ---
-# <a name="how-to-disable-code-analysis-in-visual-studio"></a>Visual Studio 'da Kod analizini devre dışı bırakma
+# <a name="how-to-disable-source-code-analysis-for-managed-code"></a>Yönetilen kod için kaynak kodu analizini devre dışı bırakma
 
 ::: moniker range=">=vs-2019"
 

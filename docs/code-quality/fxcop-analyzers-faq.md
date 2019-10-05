@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 42581e632c08550fce3cd685949401a155a060f6
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 3dc304d8d6bf844fb9c23f0e92efc5250da91e4d
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253163"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975132"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>FxCop ve FxCop çözümleyicileri hakkında sık sorulan sorular
 
@@ -24,18 +24,18 @@ Eski FxCop ve FxCop çözümleyicileri arasındaki farkları anlamak biraz kafa 
 
 Eski FxCop derleme sonrası analizini derlenmiş bir derlemede çalıştırır. **FxCopCmd. exe**adlı ayrı bir yürütülebilir dosya olarak çalışır. FxCopCmd. exe derlenen derlemeyi yükler, Kod analizini çalıştırır ve sonuçları (veya *tanılamayı*) raporlar.
 
-FxCop çözümleyicileri .NET Compiler Platform ("Roslyn") temel alır. Bunları, proje veya çözüm tarafından başvurulan [bir NuGet paketi olarak yüklersiniz](install-fxcop-analyzers.md#to-install-fxcop-analyzers-as-a-nuget-package) . FxCop çözümleyicileri, derleyici yürütme sırasında kaynak kodu tabanlı analizler çalıştırır. FxCop çözümleyicileri, **CSC. exe** veya **Vbc. exe**derleyici işlemi içinde barındırılır ve proje oluşturulduğunda Analizi çalıştırır. Çözümleyici sonuçları derleyici sonuçlarıyla birlikte raporlanır.
+FxCop çözümleyicileri .NET Compiler Platform ("Roslyn") temel alır. Bunları, proje veya çözüm tarafından başvurulan [bir NuGet paketi olarak yüklersiniz](install-fxcop-analyzers.md#nuget-package) . FxCop çözümleyicileri, derleyici yürütme sırasında kaynak kodu tabanlı analizler çalıştırır. FxCop çözümleyicileri, **CSC. exe** veya **Vbc. exe**derleyici işlemi içinde barındırılır ve proje oluşturulduğunda Analizi çalıştırır. Çözümleyici sonuçları derleyici sonuçlarıyla birlikte raporlanır.
 
 > [!NOTE]
-> [Visual Studio uzantısı olarak FxCop çözümleyicileri de yükleyebilirsiniz](install-fxcop-analyzers.md#to-install-fxcop-analyzers-as-a-vsix). Bu durumda, çözümleyiciler kod düzenleyicisine yazarken yürütülür, ancak derleme zamanında yürütülmez. FxCop çözümleyicileri 'ni sürekli tümleştirme (CI) kapsamında çalıştırmak istiyorsanız, bunları bir NuGet paketi olarak yükleyebilirsiniz.
+> [Visual Studio uzantısı olarak FxCop çözümleyicileri de yükleyebilirsiniz](install-fxcop-analyzers.md#vsix). Bu durumda, çözümleyiciler kod düzenleyicisine yazarken yürütülür, ancak derleme zamanında yürütülmez. FxCop çözümleyicileri 'ni sürekli tümleştirme (CI) kapsamında çalıştırmak istiyorsanız, bunları bir NuGet paketi olarak yükleyebilirsiniz.
 
 ## <a name="does-the-run-code-analysis-command-run-fxcop-analyzers"></a>Kod analizini Çalıştır komutu FxCop çözümleyicileri çalıştırmalıdır mi?
 
-Hayır. **Çalıştırma kodu analizini** **Çözümle** > ' yi seçtiğinizde, eski analiz yürütülür. **Çalışma kodu analizinin** , Roslyn tabanlı FxCop çözümleyicileri dahil olmak üzere Roslyn tabanlı çözümleyiciler üzerinde hiçbir etkisi yoktur.
+Hayır. @No__t **analiz**' nı seçtiğinizde,**Kod analizini Çalıştır**' ı seçtiğinizde eski analiz yürütülür. **Çalışma kodu analizinin** , Roslyn tabanlı FxCop çözümleyicileri dahil olmak üzere Roslyn tabanlı çözümleyiciler üzerinde hiçbir etkisi yoktur.
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>RunCodeAnalysis MSBuild proje özelliği çözümleyiciler çalıştıranlar mı?
 
-Hayır. Bir proje dosyasındaki **RunCodeAnalysis** özelliği (örneğin, *. csproj*) yalnızca eski FxCop yürütmek için kullanılır. **FxCopCmd. exe**' yi çağıran bir oluşturma sonrası MSBuild görevi çalıştırır. Bu, Visual Studio 'da**çalıştırma kodu analizini** **Çözümle** > ' nin seçilmesiyle eşdeğerdir.
+Hayır. Bir proje dosyasındaki **RunCodeAnalysis** özelliği (örneğin, *. csproj*) yalnızca eski FxCop yürütmek için kullanılır. **FxCopCmd. exe**' yi çağıran bir oluşturma sonrası MSBuild görevi çalıştırır. Bu, Visual Studio 'da **analiz** > **çalıştırma kodu çözümlemesini** seçme ile eşdeğerdir.
 
 ## <a name="so-how-do-i-run-fxcop-analyzers-then"></a>Bu nedenle, FxCop çözümleyicileri nasıl çalıştırılır?
 

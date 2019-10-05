@@ -1,37 +1,45 @@
 ---
-title: Kod analizini etkinleştirme veya devre dışı bırakma
-ms.date: 10/25/2018
+title: Eski Kod analizini devre dışı bırak
+ms.date: 10/04/2019
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.workload:
-- dotnet
-ms.openlocfilehash: ec0a8a3f04830115d343fcef611cfbd338163395
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: c00a66a856dccb0ccb488937b935d9150ffc0266
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551040"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975069"
 ---
-# <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>Nasıl yapılır: Yönetilen kod için otomatik kod analizini etkinleştirme ve devre dışı bırakma
+# <a name="how-to-enable-and-disable-binary-code-analysis-for-managed-code"></a>Nasıl yapılır: Yönetilen kod için ikili kod analizini etkinleştirme ve devre dışı bırakma
 
-Her bir yönetilen kod projesi derlemeden sonra çalışacak şekilde (statik) Kod analizini yapılandırabilirsiniz. Her derleme yapılandırması için, hata ayıklama ve yayın gibi farklı kod analizi özellikleri ayarlayabilirsiniz.
+Bilinen kod analizini (ikili analiz), her bir yönetilen kod projesi derlemeden sonra çalışacak şekilde yapılandırabilirsiniz. Ayrıca, hata ayıklama ve yayın gibi her derleme yapılandırması için farklı ayarlara sahip olabilirsiniz.
 
-Bu makale, [kod Çözümleyicileri](roslyn-analyzers-overview.md)kullanılarak canlı kod analizi değil, yalnızca eski analizler için geçerlidir.
+> [!NOTE]
+> Eski analiz .NET Core ve .NET Standard uygulamaları gibi daha yeni proje türleri için kullanılamaz. Bu projeler, hem canlı hem de derleme zamanında kodu çözümlemek için [.net Compiler platform tabanlı kod Çözümleyicileri](roslyn-analyzers-overview.md) kullanır. Bu projelerde kaynak kodu analizini devre dışı bırakma hakkında daha fazla bilgi için bkz. [kaynak kodu analizini devre dışı bırakma](disable-code-analysis.md).
 
-## <a name="to-enable-or-disable-automatic-code-analysis"></a>Otomatik Kod analizini etkinleştirmek veya devre dışı bırakmak için
+Eski Kod analizini etkinleştirmek veya devre dışı bırakmak için:
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-1. Projenin Özellikler iletişim kutusunda **Kod Analizi** sekmesini seçin.
+2. Projenin Özellikler iletişim kutusunda **Kod Analizi** sekmesini seçin.
 
-   > [!TIP]
-   > .NET Core ve .NET Standard uygulamalarında daha yeni proje türleri **Kod Analizi** sekmesine sahip değildir. Bu proje türleri için eski analiz kullanılamaz, ancak [.net Compiler platform tabanlı kod Çözümleyicileri](roslyn-analyzers-overview.md)kullanarak canlı kod analizi edinebilirsiniz. Kod Çözümleyicileri uyarılarını gizlemek için, bu makalenin sonundaki nota bakın.
+3. **Yapılandırmada** derleme türünü ve hedef platformu **Platform**' da belirtin. (Yalnızca Non-.NET Core/. NET standart projeler.)
 
-1. **Yapılandırmada** derleme türünü ve hedef platformu **Platform**' da belirtin.
+::: moniker range="vs-2017"
 
-1. Otomatik Kod analizini etkinleştirmek veya devre dışı bırakmak için, **derlemede Kod analizini etkinleştir** onay kutusunu işaretleyin veya temizleyin.
+4. Otomatik Kod analizini etkinleştirmek veya devre dışı bırakmak için, **derlemede Kod analizini etkinleştir** onay kutusunu işaretleyin veya temizleyin.
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+4. Otomatik Kod analizini etkinleştirmek veya devre dışı bırakmak için, **ikili çözümleyiciler** bölümünde **derlemeyi Çalıştır** onay kutusunu işaretleyin veya temizleyin.
+
+   ![Visual Studio 'da derleme seçeneğinde ikili kod analizini Çalıştır](media/run-on-build-binary-analyzers.png)
+
+::: moniker-end
 
 > [!NOTE]
-> **Derlemede Kod analizini etkinleştir** onay kutusu yalnızca eski Analizi etkiler. Bu, her zaman derlemede yürütülen [.net Compiler platform tabanlı kod Çözümleyicileri](roslyn-analyzers-overview.md)etkilemez. Bu, bunları bir NuGet paketi olarak yüklediyseniz derleme sırasında yürütülür. **Hata listesi**çözümleyici hatalarını temizlemek istiyorsanız, tüm geçerli ihlallerin Kod analizini **Çözümle** > ve menü çubuğunda**etkin sorunları Gizle** ' yi seçerek gizleyebilirsiniz. Daha fazla bilgi için bkz. [Ihlalleri gösterme](use-roslyn-analyzers.md#suppress-violations).
+> Derlemede ikili kod analizini devre dışı bırakmak, her zaman derlemede yürütülen [.net Compiler platform tabanlı kod Çözümleyicileri](roslyn-analyzers-overview.md)etkilemez ve bu, bunları bir NuGet paketi olarak yüklediyseniz derleme sırasında yürütülür. Bu çözümleyicilerin analizini devre dışı bırakma hakkında daha fazla bilgi için bkz. [kaynak kodu analizini devre dışı bırakma](disable-code-analysis.md).

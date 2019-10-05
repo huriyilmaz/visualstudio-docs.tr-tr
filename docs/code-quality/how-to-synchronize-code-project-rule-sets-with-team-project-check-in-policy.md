@@ -1,5 +1,5 @@
 ---
-title: İade İlkesi ile eşitleme proje kural kümeleri
+title: İade ilkesiyle proje kural kümelerini eşitleme
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,57 +10,65 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80d13afe27eab28c88d2513b6c8be986ab1c960a
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 3a35ba1b9d54507883882fbe62c0533805882560
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260845"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975055"
 ---
-# <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Nasıl yapılır: Azure DevOps projesi iade ilkesiyle kod proje kural kümelerini eşitleme
+# <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Nasıl yapılır: Kod proje kural kümelerini bir Azure DevOps projesi Iade Ilkesiyle eşitler
 
-Azure DevOps projesi iade ilkesiyle kod proje için Kod Analizi ayarları, en az belirtilen kural kümesi için iade ilkesi kuralları içeren bir kural kümesi belirterek eşitleyin. Geliştirici sağlama, ad ve kural kümesi için iade ilkesi konumunu bildirebilirsiniz. Proje için Kod Analizi kuralları doğru kümesini kullandığından emin olmak için aşağıdaki seçeneklerden birini kullanabilirsiniz:
+Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kural kümesinde belirtilen kuralları içeren bir kural kümesi belirterek Azure DevOps projesi için iade etme ilkesiyle eşitlerseniz. Geliştirici liderinize, iade ilkesi için kural kümesinin adı ve konumu hakkında bilgi alabilirsiniz. Proje için kod analizinin doğru kural kümesini kullandığından emin olmak için aşağıdaki seçeneklerden birini kullanabilirsiniz:
 
-- İade İlkesi Microsoft yerleşik kural kümelerini kullanıyorsa, kod projesi için özellikleri iletişim kutusunu açın, Kod Analizi sayfayı görüntülemek ve kod projesi ayarları Kod Analizi sayfasında ayarlama kuralı seçin. Microsoft Standart kural kümelerinden Visual Studio ile otomatik olarak yüklenir, salt okunur olarak ayarlanır ve düzenlenmemelidir. Kural kümeleri düzenlenemez, yerel kural kümeleri ve ilke kuralları eşleştirmek için garanti edilir.
+- İade ilkesi Microsoft yerleşik kural kümelerinden birini kullanıyorsa, kod projesi için Özellikler iletişim kutusunu açın, kod analizi sayfasını görüntüleyin ve kural kümesini seçin. Microsoft standart kural kümeleri, Visual Studio ile otomatik olarak yüklenir, salt okunurdur ve düzenlenmemelidir. Kural kümeleri düzenlenmediği takdirde, ilke ve yerel kural kümelerindeki kuralların eşleşmesi garanti edilir.
 
-- İade İlkesi özel bir kural kümesini kullanıyorsa, yerel bir kopya oluşturmak için sürüm denetiminde kural kümesi dosyası üzerinde bir alma işlemi gerçekleştirin. Ardından, yerel bir konum kod projesi için Kod Analizi ayarları belirtin. Kuralları kural kümesi için iade ilkesi güncel değilse eşleştirilecek garanti edilir.
+- İade ilkesi özel bir kural kümesi kullanıyorsa, yerel bir kopya oluşturmak için sürüm denetimindeki kural kümesi dosyasında bir get işlemi gerçekleştirin. Ardından, kod projesi için kod analizi ayarlarında bu yerel konumu belirtin. İade ilkesi için kural kümesi güncel ise kuralların eşleşmesi garanti edilir.
 
-     Sürüm denetimi konumu Azure DevOps projesi kök kod projeniz gibi aynı ilişki içindeki yerel bir klasöre eşleyin, kural konumu göreli bir yol kullanılarak ayarlanır. Kod Analizi için kod proje ayarı diğer bilgisayarlara taşınabilir göreli bir yol sağlar.
+     Sürüm denetim konumunu, kod projeniz olarak Azure DevOps proje köküyle aynı ilişkide olan bir yerel klasörle eşleştirdiğinizde, kuralın konumu göreli bir yol kullanılarak ayarlanır. Göreli yol, kod analizi için kod projesi ayarının diğer bilgisayarlara taşınabilmesini sağlar.
 
-- Kural için bir kod projesi için iade ilke kümesi bir kopyasını özelleştirin. Yeni Kural kümesini iade ilkesi tüm kuralları ve dahil etmek istediğiniz diğer tüm kurallar içerdiğinden emin olun. Tüm kurallar kural kümesi, kural kümesi için iade ilkesi içerdiğinden emin olmanız gerekir.
+- Bir kod projesi için iade ilkesi için kural kümesinin bir kopyasını özelleştirin. Yeni kural kümesinin, iade ilkesindeki tüm kuralları ve dahil etmek istediğiniz diğer kuralları içerdiğinden emin olun. Kural kümesi 'nin, iade ilkesi için kural kümesindeki tüm kuralları içerdiğinden emin olmanız gerekir.
 
-## <a name="to-specify-a-microsoft-standard-rule-set"></a>Bir Microsoft Standart kural belirtmek için ayarlayın
+## <a name="to-specify-a-microsoft-standard-rule-set"></a>Bir Microsoft standart kural kümesi belirtmek için
 
 1. İçinde **Çözüm Gezgini**kod projesine sağ tıklayın ve ardından **özellikleri**.
 
-2. Tıklayın **Kod Analizi**.
+2. **Kod Analizi**' ne tıklayın.
 
-3. İçinde **bu kural kümesini Çalıştır** İade İlkesi kural kümesi'ni tıklatın.
+::: moniker range="vs-2017"
 
-## <a name="to-specify-a-custom-check-in-policy-rule-set"></a>Özel İade İlkesi kural kümesi belirtmek için
+3. **Bu kural kümesini Çalıştır** listesinde, iade ilkesi kural kümesini seçin.
 
-1. Gerekirse, iade ilkesi belirten kural kümesi dosyası üzerinde bir alma işlemi gerçekleştirin.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+3. **Etkin kurallar** listesinde, iade ilkesi kural kümesini seçin.
+
+::: moniker-end
+
+## <a name="to-specify-a-custom-check-in-policy-rule-set"></a>Özel bir iade ilkesi kural kümesi belirtmek için
+
+1. Gerekirse, iade ilkesini belirten kural kümesi dosyasında bir get işlemi gerçekleştirin.
 
 2. İçinde **Çözüm Gezgini**kod projesine sağ tıklayın ve ardından **özellikleri**.
 
-3. Tıklayın **Kod Analizi**.
+3. **Kod Analizi**' ne tıklayın.
 
-4. İçinde **bu kural kümesini Çalıştır** listesinde  **\<Gözat … >** .
+::: moniker range="vs-2017"
 
-5. İçinde **açık** iletişim kutusunda, İade İlkesi kural kümesi dosyası belirtin.
+4. **Bu kural kümesini Çalıştır** listesinde **\<zat >** ' a tıklayın.
 
-## <a name="to-create-a-custom-rule-set-for-a-code-project"></a>Özel bir kural oluşturmak için bir kod projesi için ayarlayın.
+::: moniker-end
 
-1. Proje Ayarları iletişim kutusu, Kod Analizi sayfasında Azure DevOps projesi iade ilkesi seçmek için daha önce bu konudaki yordamları izleyin.
+::: moniker range=">=vs-2019"
 
-2. Tıklayın **açık**.
+4. **Etkin kurallar** listesinde **\<zat >** ' a tıklayın.
 
-3. Ekleyip kuralları kullanarak [kural kümesi düzenleyici](../code-quality/working-in-the-code-analysis-rule-set-editor.md).
+::: moniker-end
 
-4. Yerel bilgisayardaki bir .ruleset dosyası veya bir UNC yolu olarak değiştirilmiş kuralı kaydedin.
+5. **Aç** iletişim kutusunda, iade ilkesi kural kümesi dosyasını belirtin.
 
-5. Kod projesi için özellikleri iletişim kutusunu açmak ve görüntülemek **Kod Analizi** sayfası.
+## <a name="to-create-a-custom-rule-set-for-a-code-project"></a>Bir kod projesi için özel bir kural kümesi oluşturmak için
 
-6. İçinde **bu kural kümesini Çalıştır** listesinde  **\<Gözat … >** .
-
-7. İçinde **açık** iletişim kutusunda, kural kümesi dosyası belirtin.
+Özel bir kural kümesi oluşturma hakkında daha fazla bilgi için bkz. [bir kural kümesini özelleştirme](how-to-create-a-custom-rule-set.md).

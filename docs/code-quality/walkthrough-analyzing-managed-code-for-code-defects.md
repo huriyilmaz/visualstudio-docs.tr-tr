@@ -10,12 +10,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4a00fdb2a41a03554113f2ecb626185aab2c74d5
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 74a772bbe915227bca001f9370980cbc7d3212a5
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69548004"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974883"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>İzlenecek yol: Kod kusurlarını bulmak için statik Kod analizini kullanın
 
@@ -25,15 +25,9 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 ## <a name="create-a-class-library"></a>Sınıf kitaplığı oluşturma
 
-### <a name="to-create-a-class-library"></a>Bir sınıf kitaplığı oluşturmak için
+1. Visual Studio 'Yu açın ve **sınıf kitaplığı (.NET Framework)** şablonundan yeni bir proje oluşturun.
 
-1. Üzerinde **dosya** menüsünde seçin **yeni** > **proje**.
-
-1. **Yeni proje** iletişim kutusunda, **yüklü** > **C#görsel**' i genişletin ve ardından **Windows Masaüstü**' ni seçin.
-
-1. **Sınıf kitaplığı (.NET Framework)** şablonunu seçin.
-
-1. **Ad** metin kutusuna **CodeAnalysisManagedDemo** yazın ve ardından **Tamam**' a tıklayın.
+1. Projeyi **CodeAnalysisManagedDemo**olarak adlandırın.
 
 1. Proje oluşturulduktan sonra, *Class1.cs* dosyasını açın.
 
@@ -55,31 +49,39 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 1. Class1.cs dosyasını kaydedin.
 
-## <a name="analyze-the-project"></a>Projeyi çözümle
-
-### <a name="to-analyze-a-managed-project-for-code-defects"></a>Kod kusurları için yönetilen bir projeyi analiz etmek için
+## <a name="analyze-the-project-for-code-defects"></a>Kod kusurları için projeyi analiz etme
 
 1. **Çözüm Gezgini**' de CodeAnalysisManagedDemo projesini seçin.
 
-1. **Proje** menüsünde **Özellikler**' e tıklayın.
+2. **Proje** menüsünde **Özellikler**' e tıklayın.
 
-     CodeAnalysisManagedDemo özellikleri sayfası görüntülenir.
+   CodeAnalysisManagedDemo özellikleri sayfası görüntülenir.
 
-1. **Kod Analizi** sekmesini seçin.
+3. **Kod Analizi** sekmesini seçin.
 
-1. **Derlemede Kod analizini etkinleştir '** in işaretli olduğundan emin olun.
+::: moniker range="vs-2017"
 
-1. **Bu kural kümesini Çalıştır** açılan listesinden **Microsoft tüm kurallar**' ı seçin.
+4. **Derlemede Kod analizini etkinleştir '** in seçildiğinden emin olun.
 
-1. **Dosya** menüsünde, **Seçili öğeleri kaydet**' e tıklayın ve ardından Özellikler sayfalarını kapatın.
+5. **Bu kural kümesini Çalıştır** açılan listesinden **Microsoft tüm kurallar**' ı seçin.
 
-1. **Build** menüsünde **CodeAnalysisManagedDemo oluştur**' a tıklayın.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+4. **İkili çözümleyiciler** bölümünde **derlemede Çalıştır** ' ın seçili olduğundan emin olun.
+
+5. **Etkin kurallar** açılan listesinden **Microsoft tüm kurallar**' ı seçin.
+
+::: moniker-end
+
+6. **Dosya** menüsünde, **Seçili öğeleri kaydet**' e tıklayın ve ardından Özellikler sayfalarını kapatın.
+
+7. **Build** menüsünde **CodeAnalysisManagedDemo oluştur**' a tıklayın.
 
     CodeAnalysisManagedDemo proje derleme uyarıları **hata listesi** ve **Çıkış** penceresinde gösterilir.
 
 ## <a name="correct-the-code-analysis-issues"></a>Kod Analizi sorunlarını düzeltin
-
-### <a name="to-correct-code-analysis-rule-violations"></a>Kod analizi kural ihlallerini düzeltmek için
 
 1. **Görünüm** menüsünde **hata listesi**' yi seçin.
 
@@ -91,47 +93,27 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 1. Uyarıları düzeltmek için aşağıdaki ipuçlarını kullanın:
 
-   [CA1014 Derlemeleri CLSCompliantAttribute](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md)ile işaretle: Microsoft. Design: ' demo ', CLSCompliantAttribute ile işaretlenmelidir ve değeri true olmalıdır.
+   [CA1014: Derlemeleri CLSCompliantAttribute @ no__t-0 ile işaretle: AssemblyInfo.cs dosyasının sonuna `[assembly: CLSCompliant(true)]` kodunu ekleyin.
 
-   1. Kodu `using System;` AssemblyInfo.cs dosyasına ekleyin.
+   [CA1032: Standart özel durum oluşturucularını Uygula @ no__t-0: @No__t-0 oluşturucusunu `demo` sınıfına ekleyin.
 
-   1. Sonra, kodu `[assembly: CLSCompliant(true)]` AssemblyInfo.cs dosyasının sonuna ekleyin.
+   [CA1032: Standart özel durum oluşturucularını Uygula @ no__t-0: @No__t-0 oluşturucusunu `demo` sınıfına ekleyin.
 
-   [CA1032 Standart özel durum oluşturucularını](../code-quality/ca1032-implement-standard-exception-constructors.md)Uygula: Microsoft. Design: Aşağıdaki oluşturucuyu bu sınıfa ekleyin: Genel Tanıtım (dize)
+   [CA1032: Standart özel durum oluşturucularını Uygula @ no__t-0: Sınıf tanıtımına `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` oluşturucusunu ekleyin. Ayrıca, <xref:System.Runtime.Serialization?displayProperty=fullName> için `using` bir ifade eklemeniz gerekir.
 
-   1. Oluşturucuyu `public demo (String s) : base(s) { }` sınıfına`demo`ekleyin.
+   [CA1032: Standart özel durum oluşturucularını Uygula @ no__t-0: @No__t-0 oluşturucusunu `demo` sınıfına ekleyin.
 
-   [CA1032 Standart özel durum oluşturucularını](../code-quality/ca1032-implement-standard-exception-constructors.md)Uygula: Microsoft. Design: Şu oluşturucuyu bu sınıfa ekleyin: public demo (dize, özel durum)
+   [CA1709: Tanımlayıcılar doğru olmalıdır @ no__t-0: Ad alanının büyük küçük harflerini `testCode` ' a `TestCode` ' e değiştirin.
 
-   1. Oluşturucuyu `public demo (String s, Exception e) : base(s, e) { }` sınıfına`demo`ekleyin.
+   [CA1709: Tanımlayıcılar doğru olmalıdır @ no__t-0: Üyenin adını `Demo` olarak değiştirin.
 
-   [CA1032 Standart özel durum oluşturucularını](../code-quality/ca1032-implement-standard-exception-constructors.md)Uygula: Microsoft. Design: Şu oluşturucuyu bu sınıfa ekleyin: protected demo (SerializationInfo, StreamingContext)
+   [CA1709: Tanımlayıcılar doğru olmalıdır @ no__t-0: Üyenin adını `Item` olarak değiştirin.
 
-   1. Kodu `using System.Runtime.Serialization;` Class1.cs dosyasının başına ekleyin.
+   [CA1710: Tanımlayıcılardan doğru önek olmalıdır @ no__t-0: Sınıfın ve oluşturucularının adını `DemoException` olarak değiştirin.
 
-   1. Sonra, oluşturucuyu ekleyin`protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`
+   [CA2237: ISerializable türlerini SerializableAttribute @ no__t-0 ile işaretleyin: @No__t-0 özniteliğini `demo` sınıfına ekleyin.
 
-   [CA1032 Standart özel durum oluşturucularını](../code-quality/ca1032-implement-standard-exception-constructors.md)Uygula: Microsoft. Design: Aşağıdaki oluşturucuyu bu sınıfa ekleyin: public demo ()
-
-   1. Oluşturucuyu `public demo () : base() { }` sınıfına `demo`ekleyin **.**
-
-   [CA1709 Tanımlayıcılar doğru](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)olmalıdır: Microsoft. Naming: ' TestCode ' ad alanı adının büyük küçük harflerini ' TestCode ' ile değiştirerek düzeltin.
-
-   1. Ad alanının `testCode` büyük küçük harflerini olarak `TestCode`değiştirin.
-
-   [CA1709 Tanımlayıcılar doğru](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)olmalıdır: Microsoft. Naming: ' Demo ' ad alanının büyük küçük harflerini ' demo ' ile değiştirerek düzeltin.
-
-   1. Üyenin adını olarak `Demo`değiştirin.
-
-   [CA1709 Tanımlayıcılar doğru](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)olmalıdır: Microsoft. Naming: ' İtem ' üye adının büyük küçük harflerini ' öğe ' ile değiştirerek düzeltin.
-
-   1. Üyenin adını olarak `Item`değiştirin.
-
-   [CA1710 Tanımlayıcılar doğru sonekine](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)sahip olmalıdır: Microsoft. Naming: ' TestCode. Demo ' öğesini ' Exception ' ile sona erdirmek için yeniden adlandırın.
-
-   1. Sınıfının ve oluşturucularının adını olarak `DemoException`değiştirin.
-
-   [CA2210 Derlemelerin geçerli tanımlayıcı adları](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md)olmalıdır: ' CodeAnalysisManagedDemo ' öğesini bir tanımlayıcı ad anahtarıyla imzalayın.
+   [CA2210: Derlemelerin geçerli tanımlayıcı adları olmalıdır @ no__t-0: ' CodeAnalysisManagedDemo ' öğesini bir tanımlayıcı ad anahtarıyla imzalayın:
 
    1. **Proje** menüsünde **CodeAnalysisManagedDemo özellikleri**' ni seçin.
 
@@ -141,21 +123,17 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
    1. **Derlemeyi imzala** onay kutusunu seçin.
 
-   1. **Bir dize adı seçin anahtar dosyası** listesinde  **\<yeni... öğesini seçin. >** .
+   1. **Dize adı seçin anahtar dosyası** listesinde **\<new >** ' ı seçin.
 
       **Tanımlayıcı ad anahtarı oluştur** iletişim kutusu görüntülenir.
 
-   1. **Anahtar dosya adı**' nda, TestKey yazın.
+   1. **Anahtar dosya adı**Için **TestKey**girin.
 
    1. Bir parola girin ve **Tamam**' ı seçin.
 
    1. **Dosya** menüsünde, **Seçili öğeleri kaydet**' i seçin ve sonra özellik sayfalarını kapatın.
 
-   [CA2237 ISerializable türlerini SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)ile işaretleyin: Microsoft. Usage: Bu tür ISerializable uyguladığından ' demo ' türüne [Serializable] özniteliği ekleyin.
-
-   1. `[Serializable ()]` Özniteliğini sınıfına`demo`ekleyin.
-
-   Değişiklikleri tamamladıktan sonra, Class1.cs dosyası aşağıdaki gibi görünmelidir:
+   Tüm değişiklikleri tamamladıktan sonra, Class1.cs dosyası aşağıdaki gibi görünmelidir:
 
    ```csharp
    using System;
@@ -186,7 +164,7 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
     1. **Hata listesi**uyarıyı seçin.
 
-    1. Sağ tıklama menüsünde (bağlam menüsü),**gizleme dosyasında** **Gizle** > ' yi seçin.
+    1. Sağ tıklama menüsünde (bağlam menüsü),**gizleme dosyasında** >  ' i **Gizle**' yi seçin.
 
 1. Projeyi yeniden derleyin.
 

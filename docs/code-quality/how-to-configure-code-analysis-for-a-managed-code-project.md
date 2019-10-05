@@ -13,21 +13,19 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a1b09b77eb051d32a3aabb929e9058786215cfb4
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 86aa308369ef93792126c7f8da5f59f94ef0c02a
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551055"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975111"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Nasıl yapılır: Yönetilen kod için eski Analizi yapılandırma
 
 Visual Studio 'da, yönetilen bir kod projesine uygulamak üzere kod analizi [kural kümeleri](../code-quality/rule-set-reference.md) listesinden seçim yapabilirsiniz. Varsayılan olarak, **Microsoft en az önerilen kurallar** kural kümesi işaretli, ancak isterseniz kümesi farklı bir kural uygulayabilirsiniz. Bir çözümde bir veya birden çok proje için kural kümeleri uygulanabilir.
 
-ASP.NET Web uygulamaları için bir kural kümesinin nasıl yapılandırılacağı hakkında bilgi için bkz [. nasıl yapılır: Bir ASP.NET Web uygulaması](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)için kod analizini yapılandırın.
-
 > [!NOTE]
-> Bu makale, derlemeden sonra kod analizini çalıştırmayan [.net Compiler platform tabanlı kod Çözümleyicileri](use-roslyn-analyzers.md)için değil, eski analizler için geçerlidir.
+> Bu makale, [.net Compiler platform tabanlı kod Çözümleyicileri](use-roslyn-analyzers.md)için değil, eski analizler için geçerlidir.
 
 ## <a name="configure-a-rule-set-for-a-net-framework-project"></a>.NET Framework projesi için bir kural kümesi yapılandırma
 
@@ -37,20 +35,40 @@ ASP.NET Web uygulamaları için bir kural kümesinin nasıl yapılandırılacağ
 
    - Projeye sağ **Çözüm Gezgini** seçip **özellikleri**ve ardından **Kod Analizi** sekmesi.
 
-1. İçinde **yapılandırma** ve **Platform** listeleri, derleme yapılandırması ve hedef platformu seçin.
+2. İçinde **yapılandırma** ve **Platform** listeleri, derleme yapılandırması ve hedef platformu seçin.
 
-1. Seçili yapılandırma kullanarak proje oluşturulan her zaman, Kod Analizi çalıştırmak için seçin **derlemede kod analizini etkinleştir** onay kutusu. Ayrıca kod analizini el ile seçerek çalıştırabilirsiniz **Çözümle** > **kod çözümlemeyi Çalıştır** > **kod çözümlemeyi Çalıştır \<projectname >** .
+::: moniker range="vs-2017"
 
-1. Varsayılan olarak, Kod Analizi uyarıları otomatik olarak dış araçları tarafından oluşturulan kodu raporlamaz. Üretilen koddan gelen uyarıları görüntülemek için temizleyin **üretilen koddan gelen sonuçları Gizle** onay kutusu.
+3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için **derlemede Kod analizini etkinleştir**' i seçin. Ayrıca kod analizini el ile seçerek çalıştırabilirsiniz **Çözümle** > **kod çözümlemeyi Çalıştır** > **kod çözümlemeyi Çalıştır \<projectname >** .
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için, **ikili çözümleyiciler** bölümündeki **derlemede Çalıştır** ' ı seçin. Ayrıca kod analizini el ile seçerek çalıştırabilirsiniz **Çözümle** > **kod çözümlemeyi Çalıştır** > **kod çözümlemeyi Çalıştır \<projectname >** .
+
+::: moniker-end
+
+4. Üretilen koddan gelen uyarıları görüntülemek için temizleyin **üretilen koddan gelen sonuçları Gizle** onay kutusu.
 
     > [!NOTE]
-    > Bu seçenek hataları ve Uyarıları formları ve şablonlar görüntülendiğinde kod çözümleme hataları ve Uyarıları üretilen koddan gelen engellemez. Hem görüntüleyebilir ve bir form veya şablon için kaynak kodu, üzerine zorunda kalmadan korumak.
+    > Bu seçenek hataları ve Uyarıları formları ve şablonlar görüntülendiğinde kod çözümleme hataları ve Uyarıları üretilen koddan gelen engellemez. Bir form veya şablon için kaynak kodu görüntüleyebilir ve bakımını yapabilir ve üzerine yazılmaz.
 
-1. İçinde **bu kural kümesini Çalıştır** listesinde, aşağıdakilerden birini yapın:
+::: moniker range="vs-2017"
+
+5. İçinde **bu kural kümesini Çalıştır** listesinde, aşağıdakilerden birini yapın:
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+5. **Etkin kurallar** listesinde aşağıdakilerden birini yapın:
+
+::: moniker-end
 
     - Kullanmak istediğiniz bir kural kümesi seçin.
 
-    - Seçin  **\<Gözat … >** var olan bir özel kural kümesi bulmak için listesinde değil.
+    - Listede olmayan var olan bir özel kural kümesini bulmak için **\<Taraya >** seçin.
 
     - Tanımlayan bir [özel kural kümesi](../code-quality/how-to-create-a-custom-rule-set.md).
 
@@ -77,4 +95,3 @@ Varsayılan olarak, bir çözümün tüm yönetilen projelere atanır *Microsoft
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod çözümleme kural kümesi başvurusu](../code-quality/rule-set-reference.md)
-- [Nasıl yapılır: Bir ASP.NET Web uygulaması için kod analizini yapılandırma](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)

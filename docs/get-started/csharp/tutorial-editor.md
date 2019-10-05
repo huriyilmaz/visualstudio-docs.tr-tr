@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 517437bb1042d052520019c10899173cbc0bf988
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 5bbca5e46ee83764a6a431ae13829a882b1d859f
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180257"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975168"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Kod Düzenleyicisi'ni kullanmayı öğrenin
 
@@ -58,7 +58,7 @@ Yeni bir dosya oluşturarak ve bazı kodlar eklemeden başlatın.
 
 ::: moniker-end
 
-2. Menü çubuğundaki **Dosya** menüsünde **Yeni** > **Dosya**' yı seçin.
+2. Menü çubuğundaki **Dosya** menüsünde **Yeni** > **dosyası**' nı seçin veya **CTRL**+**N**tuşlarına basın.
 
 3. İçinde **yeni dosya** iletişim kutusunun **genel** kategorisi seçin **Visual C# sınıfı**ve ardından **açık**.
 
@@ -80,7 +80,7 @@ Visual Studio sağlar yararlı *kod parçacıkları* kod bloklarında kullanıla
 
    Gördüğünüz `static void Main()` yöntem imzası dosyasına eklenir. [Main()](/dotnet/csharp/programming-guide/main-and-command-args/) C# uygulamaları için giriş noktası bir yöntemdir.
 
-Kullanılabilir kod parçacıkları farklı programlama dili için farklılık gösterir. Kullanılabilir kod parçacıkları seçerek dilinizi göz atabilirsiniz **Düzenle** > **IntelliSense** > **parçacık Ekle**ve ardından Dilinizin klasör seçme. C# ' ta listesi aşağıdaki gibi görünür:
+Kullanılabilir kod parçacıkları farklı programlama dili için farklılık gösterir. Dil için kullanılabilir kod parçacıklarına **bakabilirsiniz @no__t-** 1**IntelliSense**@no__t **-3 ' ü seçin** veya **ctrl**+**K**, **CTRL**+**X**tuşlarına basarak ve sonra da şunları seçebilirsiniz: Dilinizin klasörü. C# ' ta listesi aşağıdaki gibi görünür:
 
 ![C# kod parçacığı listesi](../media/tutorial-code-snippet-list.png)
 
