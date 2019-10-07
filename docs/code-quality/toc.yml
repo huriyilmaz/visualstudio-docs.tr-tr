@@ -4,7 +4,8 @@
   items:
     - name: Genel Bakış
       href: code-analysis-for-managed-code-overview.md
-    - name: Kod analizi
+    - name: Kaynak kodu analizi
+      expanded: true
       items:
         - name: Genel Bakış
           displayName: 'roslyn analyzers, source analysis'
@@ -13,10 +14,35 @@
           href: install-roslyn-analyzers.md
         - name: Yapılandırma
           href: use-roslyn-analyzers.md
+        - name: Kod analizini devre dışı bırakma
+          href: disable-code-analysis.md
         - name: Tam çözüm analizini etkinleştirme
           href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
         - name: SSS
           href: analyzers-faq.md
+        - name: FxCop çözümleyicileri
+          items:
+            - name: Genel Bakış
+              displayName: fxcop analyzers
+              href: fxcop-analyzers.yml
+            - name: Yükleme
+              href: install-fxcop-analyzers.md
+            - name: Yapılandırma
+              items:
+                - name: Genel Bakış
+                  href: configure-fxcop-analyzers.md
+                - name: Kapsam seçenekleri
+                  href: fxcop-analyzer-options.md
+                - name: Önceden tanımlanmış kural kümeleri
+                  href: analyzer-rule-sets.md
+            - name: SSS
+              href: fxcop-analyzers-faq.md
+        - name: Eski analizden FxCop çözümleyicilerine geçiş
+          items:
+            - name: Genel Bakış
+              href: fxcop-analyzers.yml
+            - name: Taşınan kurallar
+              href: fxcop-rule-port-status.md
     - name: Eski analiz
       items:
         - name: Genel Bakış
@@ -112,37 +138,12 @@
               href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
             - name: Sürüm uyumluluğu
               href: version-compatibility-for-code-analysis-check-in-policies.md
-    - name: FxCop çözümleyicileri
-      items:
-        - name: Genel Bakış
-          displayName: fxcop analyzers
-          href: fxcop-analyzers.yml
-        - name: Yükleme
-          href: install-fxcop-analyzers.md
-        - name: Yapılandırma
-          items:
-            - name: Genel Bakış
-              href: configure-fxcop-analyzers.md
-            - name: Kapsam seçenekleri
-              href: fxcop-analyzer-options.md
-            - name: Önceden tanımlanmış kural kümeleri
-              href: analyzer-rule-sets.md
-        - name: SSS
-          href: fxcop-analyzers-faq.md
-    - name: Eski analizden FxCop çözümleyicilerine geçiş
-      items:
-        - name: Genel Bakış
-          href: fxcop-analyzers.yml
-        - name: Taşınan kurallar
-          href: fxcop-rule-port-status.md
     - name: Kural kümeleri
       items:
         - name: Genel Bakış
           href: using-rule-sets-to-group-code-analysis-rules.md
         - name: Kural kümelerini yapılandırma
           href: how-to-configure-code-analysis-for-a-managed-code-project.md
-        - name: Bir ASP.NET web uygulaması için kod analizini yapılandırma
-          href: how-to-configure-code-analysis-for-an-aspnet-web-application.md
         - name: Özel kural kümesi oluşturma
           href: how-to-create-a-custom-rule-set.md
         - name: Kural kümesi düzenleyicisini kullanma
@@ -558,6 +559,7 @@
             - name: Güvenlik uyarıları
               items:
                 - name: Genel Bakış
+                  displayName: security warnings
                   href: security-warnings.md
                 - name: 'CA2100: SQL sorgularını güvenlik açıkları için inceleyin'
                   href: ca2100-review-sql-queries-for-security-vulnerabilities.md
