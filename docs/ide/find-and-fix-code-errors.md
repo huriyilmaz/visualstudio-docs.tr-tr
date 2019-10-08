@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30ee7364ba925eebb18d66fc8ede2b7983d46116
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 331c346e7322543bef0814818a776c705b773846
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211376"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000186"
 ---
 # <a name="make-code-work-in-visual-studio"></a>Visual Studio 'da kod çalışmasını sağlama
 
@@ -26,11 +26,11 @@ Düzenleyiciyi iletişime ve bazı kodlar oluşturdunuz. Artık kodun düzgün �
 
 İki temel tür derleme yapılandırması vardır: **Hata Ayıkla** ve **serbest bırak**. **Hata ayıklama** yapılandırması, daha zengin bir etkileşimli çalışma zamanı hata ayıklama deneyimine olanak sağlayan daha yavaş ve daha büyük bir yürütülebilir dosya üretir. **Hata ayıklama** yürütülebilir dosyası asla gönderilmemelidir. **Yayın** yapılandırması, sevk etmek için uygun olan daha hızlı, iyileştirilmiş bir yürütülebilir dosya oluşturur (en azından derleyicinin perspektifinden). Varsayılan yapı yapılandırma **hata ayıklama**.
 
-Projenizi oluşturmanın en kolay yolu **F7**tuşuna basmanız, ancak ana **menüden Build** > **Build çözümünü** seçerek derlemeyi de başlatabilirsiniz.
+Projenizi oluşturmanın en kolay yolu **f7'ye**basmanız, ancak ana menüden Build  > **Build Solution** öğesini **seçerek derlemeyi de**başlatabilirsiniz.
 
 ![Visual Studio derleme projesi menü seçimi](../ide/media/vs_ide_gs_debug_build_menu_item.png)
 
-Visual Studio Kullanıcı arabiriminin altındaki **Çıkış** penceresinde yapı sürecini gözlemleyebilirsiniz. Hataları, uyarıları ve yapı işlemleri burada görüntülenir. Hatalar varsa (veya yapılandırılmış bir düzeyin üzerinde uyarılarınız varsa), derlemeniz başarısız olur. Hataları ve Uyarıları nerede oluştuğunu satıra gitmek için tıklayabilirsiniz. Bir kez **F7** tuşuna basarak (yalnızca hataları olan dosyaları yeniden derlemek için) veya **CTRL**+**alt**+**F7** (temiz ve tamamen yeniden oluşturma için) ' ya tıklayarak projenizi yeniden derleyin.
+Visual Studio Kullanıcı arabiriminin altındaki **Çıkış** penceresinde yapı sürecini gözlemleyebilirsiniz. Hataları, uyarıları ve yapı işlemleri burada görüntülenir. Hatalar varsa (veya yapılandırılmış bir düzeyin üzerinde uyarılarınız varsa), derlemeniz başarısız olur. Hataları ve Uyarıları nerede oluştuğunu satıra gitmek için tıklayabilirsiniz. Bir kez **F7** tuşuna basarak (yalnızca hataları olan dosyaları yeniden derlemek için) veya **CTRL**+**alt**+**F7** (temiz ve tam yeniden oluşturma için), projenizi yeniden derleyin.
 
 Sonuç penceresinde düzenleyicinin altında iki sekmeli pencere vardır: ham derleyici çıkışını (hata iletileri dahil) içeren **Çıkış** penceresi; ve tüm hataların ve uyarıların sıralanabilir ve filtrelenebilir bir listesini sağlayan **hata listesi** pencere.
 
@@ -44,13 +44,13 @@ Daha önce ve başarıyla derlediğiniz kodda herhangi bir değişiklik yapmadı
 
 ![Visual Studio çıktısı ve Hata Listesi](../ide/media/vs_ide_gs_debug_bad_build_error_list.png)
 
-Hatanın oluştuğu satıra gitmek için **hata listesi** penceresindeki hata satırına tıklayın. (Veya **CTRL**+**Q**, **satır numaraları**yazarak satır numaralarını açın, sonra da sonuçlardan **satır numaralarını aç veya kapat** ' ı seçin. Bu, satır numaralarını açmak için kullanabileceğiniz **Seçenekler** iletişim kutusuna almanın en hızlı yoludur.)
+Hatanın oluştuğu satıra gitmek için **hata listesi** penceresindeki hata satırına tıklayın. (Veya **Ctrl**+**Q**tuşlarına basarak, **satır numaralarını**girerek ve sonra **satır numaralarını sonuçlarda aç veya kapat** ' ı seçerek satır numaralarını açın. Bu, satır numaralarını açmak için kullanabileceğiniz **Seçenekler** iletişim kutusuna almanın en hızlı yoludur.)
 
 ![Satır numaralarıyla Visual Studio Düzenleyicisi](../ide/media/vs_ide_gs_debug_line_numbers.png)
 
 ![Visual Studio satır numaraları seçeneği](../ide/media/vs_ide_gs_debug_options_line_numbers.png)
 
-Hatanın oluştuğu satır numarasına hızlıca gitmek için **CTRL**+**G** tuşuna basın.
+Hatanın oluştuğu satır numarasına hızlıca gitmek için **Ctrl**+**G** tuşlarına basın.
 
 Hata kırmızı bir "dalgalı çizgi" alt çizgi ile tanımlanır. Üzerinde ek detaylar için üzerine gelin. Düzeltme yapmak ve yeni bir hata düzeltmesi yükleyebilecek olsa da çalıştırmayı, geçer. (Bu, "gerileme" olarak adlandırılır.)
 
@@ -74,13 +74,13 @@ Kod Çözümleyicileri, kod yönetiminde çalışma zamanı hatalarına veya pro
 
 ### <a name="c-and-visual-basic-code-analysis"></a>C#ve Visual Basic kod analizi
 
-Visual Studio, yazarken kodu inceleyecek C# ve Visual Basic bir yerleşik [.net Compiler platform Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) kümesi içerir. Ek Çözümleyicileri bir Visual Studio uzantısı veya bir NuGet paketi olarak yükleyebilirsiniz. Kural ihlalleri bulunursa, bunlar hem kod düzenleyicisinde, hem de soruna neden olan kodun altında bir dalgalı olarak raporlanır ve **hata listesi**.
+Visual Studio, yazarken kodu inceleyecek C# ve Visual Basic bir yerleşik [.net Compiler platform Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) kümesi içerir. Ek Çözümleyicileri bir Visual Studio uzantısı veya bir NuGet paketi olarak yükleyebilirsiniz. Kural ihlalleri bulunursa, bunlar hem Hata Listesi hem de kod düzenleyicisinde, sorunlu kodun altında bir dalgalı çizgi olarak raporlanır.
 
 ### <a name="c-code-analysis"></a>C++Kod Analizi
 
 Kodu çözümlemek C++ için [Statik kod analizini](../code-quality/quick-start-code-analysis-for-c-cpp.md)çalıştırın. Başarılı bir derlemeyi önleyen açık hataları temizledikten sonra bu uygulamayı çalıştırmanın önleminizi alarak ' ine ulaşın ve üretebilen uyarıları ele almanız biraz zaman atalım. Yolculuğuna giden bir süre sonra tasarruf edersiniz ve birkaç kod stili tekniği öğrenebilirsiniz.
 
-Statik kod analizini başlatmak için **alt**+**F11** tuşuna basın (veya üst menüden**çözüm Çalıştır kod analizini** **Çözümle** > ' yi seçin).
+Statik kod analizini başlatmak için **Alt**+**F11** tuşuna basın (veya en üstteki menüden **Çözümle**@no__t**Kod analizini Çalıştır '** ı seçin).
 
 ![Visual Studio Code analiz menü öğesi](../ide/media/vs_ide_gs_debug_run_code_analysis.png)
 
@@ -90,7 +90,7 @@ Tüm yeni veya güncelleştirilmiş uyarılar, IDE 'nin altındaki **hata listes
 
 ## <a name="use-quick-actions-to-fix-or-refactor-code"></a>Kodu onarmak veya yeniden düzenleme için hızlı eylemleri kullanma
 
-Ampul veya screwsürücü simgesinde bulunan [hızlı eylemler](../ide/quick-actions.md), kodu satır içi olarak yeniden oluşturmanızı sağlar. Bunlar C#, C++ve Visual Basic kodda hızlı ve etkili bir şekilde yaygın uyarıları gidermenin kolay bir yoludur. Bunlara erişmek için, bir uyarı dalgalı çizgi ' ye sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler**' i seçin. Ya da imlecinizin renkli dalgalı çizgi üzerindeyken, **CTRL**+tuşuna basın **.** ya da kenar boşluğunda ampul, hata ampulü veya screwsürücü simgesini seçin. Bu kod satırına uygulayabileceğiniz olası düzeltmelerin veya yeniden düzenlemeler listesini görürsünüz.
+Ampul veya screwsürücü simgesinde bulunan [hızlı eylemler](../ide/quick-actions.md), kodu satır içi olarak yeniden oluşturmanızı sağlar. Bunlar C#, C++ve Visual Basic kodda hızlı ve etkili bir şekilde yaygın uyarıları gidermenin kolay bir yoludur. Bunlara erişmek için, bir uyarı dalgalı çizgi ' ye sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler**' i seçin. Ya da imlecinizin renkli dalgalı çizgi üzerindeyken **Ctrl**+ tuşlarına basın **.** ya da kenar boşluğunda ampul, hata ampulü veya screwsürücü simgesini seçin. Bu kod satırına uygulayabileceğiniz olası düzeltmelerin veya yeniden düzenlemeler listesini görürsünüz.
 
 ![Visual Studio ampul Önizleme](../ide/media/quick-actions-options.png)
 
@@ -98,7 +98,7 @@ Hızlı Eylemler, kod Çözümleyicileri kodunuzun düzeltilmesi, yeniden düzen
 
 ![Kullanılabilir hızlı eylem yok metin](../ide/media/vs_ide_gs_debug_light_bulb_no_options.png)
 
-Deneyim ile hızlı bir şekilde ok tuşlarını ve **CTRL tuşunu**+kullanabilirsiniz **.** kolay yeniden düzenleme fırsatlarını denetlemek ve kodunuzu temizlemek için!
+Deneyimle, ok tuşlarını ve **Ctrl**+ ' i hızlı bir şekilde kullanabilirsiniz **.** kolay yeniden düzenleme fırsatlarını denetlemek ve kodunuzu temizlemek için!
 
 ::: moniker range="vs-2019"
 
@@ -114,11 +114,11 @@ Dosyanızı boşluk, girintiler, et cetera için biçimlendirmeye ek olarak, **k
 
 ## <a name="debug-your-running-code"></a>Çalışan kodunuzda hata ayıklayın
 
-Kodunuzu başarıyla oluşturduğunuza ve küçük bir temizlik gerçekleştirdiniz, **F5** tuşuna basarak veya **hata** > ayıklama**başlatma hata ayıklamayı**seçerek çalıştırın. Bu, uygulamanızı ayrıntılı bir şekilde gözlemleyebileceğiniz bir hata ayıklama ortamında başlatır. Visual Studio IDE, uygulamanız çalışırken değişir: **Çıkış** penceresi iki yeni durumla değiştirilir (varsayılan pencere yapılandırmasında), **oto s/Yereller/izle** sekmeli penceresi ve **çağrı yığını/kesme noktaları/özel durum ayarları/çıkışı** sekmeli pencere. Bu pencerelerin, uygulamanın değişkenlerini, iş parçacıklarını, çağrı yığınlarını ve çalışırken çeşitli diğer davranışları incelemenizi ve değerlendirmenizi sağlayan birden çok sekme vardır.
+Kodunuzu başarıyla oluşturduğunuza ve küçük bir temizlik gerçekleştirdiniz, **F5** tuşuna basarak veya **Hata Ayıkla** > **hata ayıklamayı**seçerek çalıştırın. Bu, uygulamanızı ayrıntılı bir şekilde gözlemleyebileceğiniz bir hata ayıklama ortamında başlatır. Visual Studio IDE, uygulamanız çalışırken değişir: **Çıkış** penceresi iki yeni durumla değiştirilir (varsayılan pencere yapılandırmasında), **oto s/Yereller/izle** sekmeli penceresi ve **çağrı yığını/kesme noktaları/özel durum ayarları/çıkışı** sekmeli pencere. Bu pencerelerin, uygulamanın değişkenlerini, iş parçacıklarını, çağrı yığınlarını ve çalışırken çeşitli diğer davranışları incelemenizi ve değerlendirmenizi sağlayan birden çok sekme vardır.
 
 ![Visual Studio oto ve çağrı yığını pencereleri](../ide/media/vs_ide_gs_debug_autos_and_call_stack.png)
 
-**SHIFT**+**F5** tuşuna basarak veya **Durdur** düğmesine tıklayarak uygulamanızı durdurun. Ya da yalnızca uygulamanın ana penceresini (veya komut satırı iletişim kutusunu) kapatabilirsiniz.
+**Shıft**+**F5** tuşuna basarak veya **Durdur** düğmesine tıklayarak uygulamanızı durdurun. Ya da yalnızca uygulamanın ana penceresini (veya komut satırı iletişim kutusunu) kapatabilirsiniz.
 
 Kodunuzu mükemmel çalıştırdıysanız ve tam olarak bekleniyordu, Tebrikler! Ancak, askıda olursa veya kilitlenirse veya bazı garip sonuçlar verdiyse, bu sorunların kaynağını bulmanız ve hataları çözmeniz gerekir.
 
@@ -158,7 +158,7 @@ Geçerli değerini ve başvurularını görmek için bir değişkenin üzerine g
 
 Ayrıca, Visual Studio, uygulamanızın CPU ve bellek kullanımını zaman içinde gözlemleyebileceğiniz **Tanılama araçları** penceresini görüntüler. Uygulama geliştirmede daha sonra, bu araçları, beklenmeyen ağır CPU kullanımı veya bellek ayırmayı aramak için kullanabilirsiniz. Beklenmedik ağır kullanım veya yayınlanmamış kaynaklara neden olduğunu belirlemek için **izleme** penceresi ve kesme noktaları ile birlikte kullanın. Daha fazla bilgi için bkz. [profil oluşturma Özellik turu](../profiling/profiling-feature-tour.md).
 
-## <a name="run-unit-tests"></a>Birim testlerini çalıştırma
+## <a name="run-unit-tests"></a>Birim testleri çalıştırma
 
 Birim testleri, kod hatalarından kaynaklanan ilk savunma hattınızdır çünkü doğru şekilde tamamlandığında, tek bir "Unit" kodu ve genellikle tek bir işlevi test ederler ve tam programınızdaki hata ayıklamanın daha kolay olması gerekir. Visual Studio, hem yönetilen hem de yerel kod için Microsoft birim testi çerçeveleri 'ni kurar. Birim testleri oluşturun, bunları çalıştırmak ve bu testlerin sonuçları rapor için bir birim testi Çerçevesi'ni kullanın. Kodunuzun doğru şekilde çalışmaya devam ettiğinden emin olmak için, değişiklik yaptığınızda birim testlerini yeniden çalıştırın. Visual Studio Enterprise Edition ile, her derlemeden sonra testleri otomatik olarak çalıştırabilirsiniz.
 

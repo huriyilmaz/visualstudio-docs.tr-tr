@@ -14,16 +14,16 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 146d98701f144aacf0ff073c3099b2239ebd1872
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 9f121c4a95d719074e3004ee21e0d49d71e4c243
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461460"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000213"
 ---
 # <a name="build-page-project-designer-c"></a>Derleme Sayfası, Proje Tasarımcısı (C#)
 
-Projenin derleme yapılandırma özelliklerini belirtmek için **Proje Tasarımcısı** ' nın **Yapı** sayfasını kullanın. Bu sayfa yalnızca projeler [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] için geçerlidir.
+Projenin derleme yapılandırma özelliklerini belirtmek için **Proje Tasarımcısı** ' nın **Yapı** sayfasını kullanın. Bu sayfa yalnızca [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projeleri için geçerlidir.
 
 **Yapı** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Sonra menüdeki **Görünüm**, **Özellik sayfaları** ' nı seçin. Proje Tasarımcısı göründüğünde, **derleme** sekmesini seçin.
 
@@ -34,7 +34,7 @@ Projenin derleme yapılandırma özelliklerini belirtmek için **Proje Tasarımc
 Aşağıdaki seçenekler, görüntülenecek veya değiştirilecek olan yapılandırmayı ve platformu seçmenizi sağlar.
 
 > [!NOTE]
-> Basitleştirilmiş derleme yapılandırmalarında, proje sistemi bir hata ayıklama veya yayın sürümü oluşturulup oluşturulmayacağını belirler. Bu nedenle, bu seçenekler görüntülenmez. Daha fazla bilgi için [nasıl yapılır: Hata ayıklama ve yayın yapılandırmasını](../../debugger/how-to-set-debug-and-release-configurations.md)ayarlayın.
+> Basitleştirilmiş derleme yapılandırmalarında, proje sistemi bir hata ayıklama veya yayın sürümü oluşturulup oluşturulmayacağını belirler. Bu nedenle, bu seçenekler görüntülenmez. Daha fazla bilgi için [nasıl yapılır: Hata ayıklama ve yayın yapılandırmasını ayarlayın @ no__t-0.
 
 **Yapılandırma**
 
@@ -42,7 +42,7 @@ Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ay
 
 **Platformunun**
 
-Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Varsayılan ayar **etkindir (herhangi BIR CPU)** . Etkin platformu **Configuration Manager**kullanarak değiştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Yapılandırma](../../ide/how-to-create-and-edit-configurations.md)oluşturun ve düzenleyin.
+Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Varsayılan ayar **etkindir (herhangi BIR CPU)** . Etkin platformu **Configuration Manager**kullanarak değiştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Yapılandırma oluşturma ve düzenleme @ no__t-0.
 
 ## <a name="general"></a>Genel
 
@@ -104,25 +104,22 @@ Derleyicinin bir veya daha fazla uyarı oluşturma yeteneğini engeller. Birden 
 
 Hangi uyarıların hata olarak değerlendirilmediğini belirtmek için aşağıdaki ayarlar kullanılır. Derleme bir uyarıyla karşılaştığında bir hata döndürmek istediğiniz koşullar altında belirtmek için aşağıdaki seçeneklerden birini belirleyin. Daha fazla bilgi için bkz. [/warnaserrorC# (derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).
 
-**Yok.**
+**Hiçbiri** -hiçbir uyarı hata olarak kabul eder.
 
-Hata olarak uyarı vermez.
+**Tümü** -tüm uyarıları hata olarak değerlendirir.
 
-**Belirli uyarılar**
+**Belirli uyarılar** -belirtilen uyarıları hata olarak değerlendirir. Birden çok uyarı numarasını virgül veya noktalı virgülle ayırın.
 
-Belirtilen uyarıları hata olarak değerlendirir. Birden çok uyarı numarasını virgül veya noktalı virgülle ayırın.
+> [!TIP]
+> Kod Analizi uyarılarının hata olarak değerlendirilmesini istemiyorsanız, bkz. [kod ANALIZI SSS](../../code-quality/analyzers-faq.md#treat-warnings-as-errors).
 
-**Tümü**
-
-Tüm uyarıları hata olarak değerlendirir.
-
-## <a name="output"></a>Çıkış
+## <a name="output"></a>Output
 
 Aşağıdaki ayarlar, yapı işlemi için çıkış seçeneklerini yapılandırmak üzere kullanılır.
 
 **Çıkış yolu**
 
-Bu projenin yapılandırması için çıkış dosyalarının konumunu belirtir. Derleme çıktısının yolunu bu kutuya girin veya bir yol belirtmek için, **tarayıcı** düğmesini seçin. Yol görelidir; mutlak bir yol girerseniz, göreli olarak kaydedilir. Varsayılan yol bin\Debug veya bin\Release\\' dir.
+Bu projenin yapılandırması için çıkış dosyalarının konumunu belirtir. Derleme çıktısının yolunu bu kutuya girin veya bir yol belirtmek için, **tarayıcı** düğmesini seçin. Yol görelidir; mutlak bir yol girerseniz, göreli olarak kaydedilir. Varsayılan yol bin\Debug veya bin\Release @ no__t-0 ' dır.
 
 Basitleştirilmiş derleme yapılandırmalarında, proje sistemi bir hata ayıklama veya yayın sürümü oluşturulup oluşturulmayacağını belirler. **Hata ayıklama** menüsündeki **derleme** komutu (F5), belirttiğiniz **çıkış yolundan** bağımsız olarak derlemeyi hata ayıklama konumuna koyar. Ancak, **Yapı** menüsündeki **Build** komutu onu belirttiğiniz konuma koyar. Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../../ide/understanding-build-configurations.md).
 
@@ -132,11 +129,11 @@ Belge açıklamalarının işleneceği dosyanın adını belirtir. Daha fazla bi
 
 **COM birlikte çalışması için kaydolun**
 
-Yönetilen uygulamanızın bir com nesnesi (com çağrılabilir sarmalayıcı) sergilediğini, bu sayede bir COM nesnesinin yönetilen uygulamanızla etkileşime geçmesini sağlar. Bu uygulama için **Proje Tasarımcısı** 'nın [Uygulama sayfasındaki](../../ide/reference/application-page-project-designer-visual-basic.md) **Çıkış türü** özelliği, **com birlikte çalışma** özelliğinin kullanılabilir olmasını sağlamak için **sınıf kitaplığı** olarak ayarlanmalıdır. [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] Uygulamanıza dahil olabileceğiniz ve bir com nesnesi olarak kullanıma sunabileceğiniz örnek bir sınıf için bkz. [örnek com sınıfı](/dotnet/csharp/programming-guide/interop/example-com-class).
+Yönetilen uygulamanızın bir com nesnesi (com çağrılabilir sarmalayıcı) sergilediğini, bu sayede bir COM nesnesinin yönetilen uygulamanızla etkileşime geçmesini sağlar. Bu uygulama için **Proje Tasarımcısı** 'nın [Uygulama sayfasındaki](../../ide/reference/application-page-project-designer-visual-basic.md) **Çıkış türü** özelliği, **com birlikte çalışma** özelliğinin kullanılabilir olmasını sağlamak için **sınıf kitaplığı** olarak ayarlanmalıdır. @No__t-0 uygulamanıza dahil olabileceğiniz ve bir COM nesnesi olarak kullanıma sunabileceğiniz örnek bir sınıf için bkz. [örnek com sınıfı](/dotnet/csharp/programming-guide/interop/example-com-class).
 
 **Serileştirme bütünleştirilmiş kodu oluştur**
 
-Derleyicinin XML serileştirme derlemeleri oluşturmak için XML Serileştiricisi Oluşturma Aracı (SGen. exe) kullanıp kullanmayacağını belirtir. Kodunuzda türleri seri hale getirmek için bu sınıfı <xref:System.Xml.Serialization.XmlSerializer> kullandıysanız, serileştirme derlemeleri ' nin başlangıç performansını iyileştirebilir. Varsayılan olarak, bu seçenek **Auto**olarak ayarlanır, bu da serileştirme derlemelerinin yalnızca kodunuzda türleri XML olarak kodlamak için kullandıysanız <xref:System.Xml.Serialization.XmlSerializer> oluşturulacağını belirtir. **Kapalı** , kodunuzun kullanıp kullanmadığına <xref:System.Xml.Serialization.XmlSerializer>bakılmaksızın serileştirme derlemelerinin hiçbir şekilde üretilmediğini belirtir. **On** , serileştirme derlemelerinin her zaman oluşturulacağını belirtir. Serileştirme bütünleştirilmiş kodları adlandırılır `TypeName`. Xmlserileştiriciler. dll. Daha fazla bilgi için bkz. [XML serileştiricisi oluşturma aracı (SGen. exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
+Derleyicinin XML serileştirme derlemeleri oluşturmak için XML Serileştiricisi Oluşturma Aracı (SGen. exe) kullanıp kullanmayacağını belirtir. Kodunuzda türleri seri hale getirmek için bu sınıfı kullandıysanız, serileştirme derlemeleri <xref:System.Xml.Serialization.XmlSerializer> ' ın başlangıç performansını iyileştirebilir. Varsayılan olarak, bu seçenek **Auto**olarak ayarlanır, bu da serileştirme derlemelerinin yalnızca KODUNUZDA türleri XML olarak kodlamak için <xref:System.Xml.Serialization.XmlSerializer> kullandıysanız oluşturulmasını belirtir. **Kapalı** , kodunuzun <xref:System.Xml.Serialization.XmlSerializer> ' i kullanıp kullanmadığına bakılmaksızın serileştirme derlemelerinin hiçbir şekilde üretilmediğini belirtir. **On** , serileştirme derlemelerinin her zaman oluşturulacağını belirtir. Serileştirme bütünleştirilmiş kodları `TypeName` olarak adlandırılır. Xmlserileştiriciler. dll. Daha fazla bilgi için bkz. [XML serileştiricisi oluşturma aracı (SGen. exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
 
 **Gelişmiş**
 

@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26e48664c40db018df60f2b6d600fab0767a7b72
-ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.openlocfilehash: 5aec8c26a827a39abdfeacfc0e3d6dea4a62db43
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062172"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999983"
 ---
 # <a name="code-analysis-faq"></a>Kod Analizi hakkında SSS
 
@@ -55,7 +55,32 @@ Y: Visual Studio IDE, hem kod stili hem de kalite sorunlarına yönelik yerleşi
 
 **S**: Eski analiz ve .NET Compiler Platform tabanlı kod analizi arasındaki fark nedir?
 
-Y **: .net Compiler platform**tabanlı kod analizi, kaynak kodu gerçek zamanlı ve derleme sırasında analiz ederken, eski analiz derleme tamamlandıktan sonra ikili dosyaları analiz eder. Daha fazla bilgi için, bkz. [.net Compiler platform tabanlı analizler, eski analizler](roslyn-analyzers-overview.md#net-compiler-platform-based-analysis-versus-legacy-analysis) ve [FxCop çözümleyicileri hakkında SSS](fxcop-analyzers-faq.md).
+Y **: .net Compiler platform**tabanlı kod analizi, kaynak kodu gerçek zamanlı ve derleme sırasında analiz ederken, eski analiz derleme tamamlandıktan sonra ikili dosyaları analiz eder. Daha fazla bilgi için, bkz. [.net Compiler platform tabanlı analizler, eski analizler](roslyn-analyzers-overview.md#source-code-analysis-versus-legacy-analysis) ve [FxCop çözümleyicileri hakkında SSS](fxcop-analyzers-faq.md).
+
+## <a name="treat-warnings-as-errors"></a>Uyarıları hata olarak değerlendir
+
+**S**: Projem, uyarıları hata olarak değerlendirmek için Build seçeneğini kullanır. Eski analizden kaynak kodu çözümlemesine geçtikten sonra, tüm kod analizi uyarıları artık hata olarak görünür. Bunun nasıl önleyebilirim?
+
+Y: Kod Analizi uyarılarının hata olarak değerlendirilmesini engellemek için şu adımları izleyin:
+
+  1. Aşağıdaki içeriğe sahip bir. props dosyası oluşturun:
+
+     ```xml
+     <Project>
+        <PropertyGroup>
+           <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+        </PropertyGroup>
+     </Project>
+     ```
+
+  2. Önceki adımda oluşturduğunuz. props dosyasını içeri aktarmak için. csproj veya. vbproj proje dosyanıza bir satır ekleyin. Bu satır, FxCop Çözümleyicisi. props dosyalarını içeri aktararak herhangi bir satırdan önce yerleştirilmelidir. Örneğin,. props dosyanız CodeAnalysis. props olarak adlandırılmışsa:
+
+     ```xml
+     ...
+     <Import Project="..\..\codeanalysis.props" Condition="Exists('..\..\codeanalysis.props')" />
+     <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.5\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.5\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+     ...
+     ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

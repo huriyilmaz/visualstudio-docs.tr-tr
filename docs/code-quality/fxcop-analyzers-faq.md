@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3dc304d8d6bf844fb9c23f0e92efc5250da91e4d
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 277155bdab713ec12daa380fc2721a31b5d932a2
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975132"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000124"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>FxCop ve FxCop çözümleyicileri hakkında sık sorulan sorular
 
@@ -52,6 +52,10 @@ FxCop çözümleyicileri yüklemişseniz ancak uyarı almaya devam ederseniz **,
 ## <a name="which-rules-have-been-ported-to-fxcop-analyzers"></a>FxCop çözümleyicileri hangi kuralları kapsayan?
 
 [FxCop](install-fxcop-analyzers.md)analizler 'e hangi eski analiz kurallarının oluşturulduğu hakkında daha fazla bilgi için bkz. [FxCop kuralı bağlantı noktası durumu](fxcop-rule-port-status.md).
+
+## <a name="code-analysis-warnings-are-treated-as-errors"></a>Kod Analizi uyarıları hata olarak kabul edilir
+
+Projeniz uyarıları hata olarak değerlendirmek için Build seçeneğini kullanıyorsa, FxCop Çözümleyicisi uyarıları hata olarak görünebilir. Kod Analizi uyarılarının hata olarak işlenmesine engel olmak için, [kod analizi hakkında SSS bölümündeki](../code-quality/analyzers-faq.md#treat-warnings-as-errors)adımları izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklama teknikleri ve araçları
-description: Düzeltme özel durumları, hataları düzeltin ve kodunuzu geliştirmek için Visual Studio kullanarak daha az hata ile daha iyi kod yazın
+description: Özel durumları onarmak, hataları onarmak ve kodunuzu geliştirmek için Visual Studio 'Yu kullanarak daha az hata ile daha iyi kod yazın
 ms.custom:
 - debug-experiment
 - seodec18
@@ -13,43 +13,43 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b34e23b1bc7972563d6d8d014ba0728dc637b34
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: b1fe0a9bb1e966bd1451bb5d816eaab814071fb5
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66262139"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000169"
 ---
-# <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Hata ayıklama teknikleri ve daha iyi kod yazmanıza yardımcı olacak araçlar
+# <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Daha iyi kod yazmanıza yardımcı olacak hata ayıklama teknikleri ve araçları
 
-Kodunuzdaki hataları ve hata düzeltme zaman--olabilir ve bazen doðrulamayý--görev. Etkili bir şekilde hata ayıklama hakkında bilgi edinmek için zaman alır, ancak Visual Studio gibi güçlü bir IDE işinizi çok daha kolay hale getirebilirsiniz. Bir IDE hataları düzeltin ve kodunuzu daha hızlı hata ayıklama ve yalnızca, ancak daha az hata ile daha iyi kod yazma Yardım ayrıca yardımcı olabilir. Kod Çözümleyicisi kullanmanın ne zaman bilirsiniz için "hatayı düzeltme" işlem bütünsel bir görünümünü sağlamak için bu makalede, bir yandan olduğu zaman hata ayıklayıcı kullanmak nasıl özel durumları ve nasıl hedefi için kod. Hata ayıklayıcı kullanmak üzere ihtiyacınız zaten biliyorsanız [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
+Kodunuzda hataların ve hataların düzeltilmesi, zaman alan ve bazen sinir bozucu bir görev olabilir. Etkili bir şekilde hata ayıklama hakkında bilgi edinmek için zaman alır, ancak Visual Studio gibi güçlü bir IDE işinizi çok daha kolay hale getirebilirsiniz. IDE, hataları düzeltmenize ve kodunuzun hatalarını daha hızlı şekilde hata ayıklamanıza yardımcı olabilir, ancak aynı zamanda daha az hata ile daha fazla kod yazmanıza yardımcı olabilir. Bu makalede, size "hata düzeltme" işleminin bir bütünsel görünümünü sunmamız, bu nedenle Code Analyzer 'ın ne zaman hata ayıklayıcıyı kullanacağınızı, özel durumların nasıl düzeltileceğini ve amaç kodunun nasıl yapılacağını bilmeniz için size "hata düzeltme" sürecinin bir görünümünü sunmaktır. Hata ayıklayıcıyı kullanmanız gerektiğini zaten biliyorsanız bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
 
-Bu makalede, kodlama, oturumları daha üretken olmak için IDE yararlanarak hakkında konuşun. Biz gibi çeşitli görevler üzerinde dokunma:
+Bu makalede, kodlama oturumlarınızın daha üretken olmasını sağlamak için IDE 'yi kullanma hakkında konuşuyoruz. Biz gibi çeşitli görevler üzerinde dokunma:
 
 * Kodunuzu IDE'nin kod Çözümleyicisi yararlanarak hata ayıklama için hazırlama
 
 * Özel durumlar (çalışma zamanı hataları) nasıl
 
-* Nasıl hedefini (assert kullanma) kodlama yaparak hataları en aza indirmek için
+* Amacı kodlayarak hataları en aza indirme (onaylama kullanarak)
 
 * Hata ayıklayıcıyı kullanma zamanı
 
 Bu görevleri göstermek için sık karşılaşılan hatalar ve uygulamalarınızın hatalarını ayıklamak çalışırken karşılaşabileceğiniz hatalar birkaçını göstereceğiz. Örnek kod olmasına rağmen C#, kavramsal bilgiler için C++, Visual Basic JavaScript genel olarak geçerli olduğunu ve diğer diller (belirtilenler dışında) Visual Studio tarafından desteklenen. Ekran görüntüleri C# ' de var.
 
-## <a name="create-a-sample-app-with-some-bugs-and-errors-in-it"></a>Bazı hatalar ve hatalar da örnek bir uygulama oluşturun
+## <a name="create-a-sample-app-with-some-bugs-and-errors-in-it"></a>Bazı hatalar ve hatalarda bir örnek uygulama oluşturun
 
 Aşağıdaki kod, Visual Studio IDE kullanarak düzeltebilirsiniz bazı hatalar var. Buradan uygulama bazı işlemi, verileri bir nesne seri durumdan çıkarılırken ve yeni veriler ile basit bir liste güncelleştiriliyor alınırken JSON veri benzetimi gerçekleştiren basit bir uygulamadır.
 
-Uygulama oluşturmak için:
+Uygulamayı oluşturmak için:
 
-1. Visual Studio açıp seçin **dosya** > **yeni** > **proje**. Altında **Visual C#** , seçin **Windows Masaüstü** veya **.NET Core**seçip Ortadaki bölmeden bir **konsol uygulaması**.
+1. Visual Studio 'Yu açın ve **dosya** > **Yeni** > **Proje**' yi seçin. Altında **Visual C#** , seçin **Windows Masaüstü** veya **.NET Core**seçip Ortadaki bölmeden bir **konsol uygulaması**.
 
     > [!NOTE]
     > Görmüyorsanız **konsol uygulaması** proje şablonu, tıklayın **açık Visual Studio yükleyicisi** sol bölmesinde bağlantıyı **yeni proje** iletişim kutusu. Visual Studio Yükleyicisi'ni başlatır. Seçin **.NET masaüstü geliştirme** veya **.NET Core çoklu platform geliştirme** iş yükü, ardından **Değiştir**.
 
-2. İçinde **adı** alanına **Console_Parse_JSON** tıklatıp **Tamam**. Visual Studio projesi oluşturur.
+2. **Ad** alanına **Console_Parse_JSON** yazın ve **Tamam**' a tıklayın. Visual Studio projesi oluşturur.
 
-3. Projenin varsayılan değiştirin *Program.cs* aşağıdaki örnek kod dosyası.
+3. Projenin *program.cs* dosyasındaki varsayılan kodu aşağıdaki örnek kodla değiştirin.
 
 ```csharp
 using System;
@@ -192,9 +192,9 @@ Bu hata sol alt köşesinde bir ampul simgesini gösterdiğine dikkat edin. Torn
 
 Bu öğe tıkladığınızda, Visual Studio ekler `using System.Text` en üstündeki deyimi *Program.cs* dosya ve kırmızı dalgalı çizgi kaybolur. (Önerilen düzeltme ne yapacağını emin değilseniz, seçin **değişiklik önizlemesi** düzeltmeyi uygulamadan önce sağdaki bağlantıyı.)
 
-Önceki hatayı genellikle yeni bir ekleyerek düzeltmek ortak bir adrestir `using` kodunuzda deyimi. Birçok ortak, benzer hatalar var. Bu bir gibi ```The type or namespace `Name` cannot be found.``` eksik bir bütünleştirilmiş kod başvurusu bu tür hatalar gösterebilir (projeye sağ tıklayın, seçin **Ekle** > **başvurusu**), yazılan bir ad ya da eklemeniz gerekir. eksik bir kitaplık (için C#, projeye sağ tıklayıp seçin **NuGet paketlerini Yönet**).
+Önceki hatayı genellikle yeni bir ekleyerek düzeltmek ortak bir adrestir `using` kodunuzda deyimi. Bu tür yaygın, benzer hatalar vardır ```The type or namespace `Name` cannot be found.``` bu tür hatalar eksik bir derleme başvurusunu gösterebilir (projeye sağ tıklayın,  > **başvuru** **Ekle**), yanlış yazılmış bir ad veya ihtiyacınız olan bir kitaplık eklemek (için C#, projeye sağ tıklayıp **NuGet Paketlerini Yönet**' i seçin).
 
-## <a name="fix-the-remaining-errors-and-warnings"></a>Kalan hataları ve Uyarıları giderin
+## <a name="fix-the-remaining-errors-and-warnings"></a>Kalan hataları ve uyarıları çözme
 
 Bu kodda bakmak için birkaç daha fazla dalgalı çizgiler vardır. Burada, bir ortak tür dönüştürme hatası görürsünüz. Dalgalı çizgi geldiğinizde, kodun bir dize dönüştürme yapmak için açık kod eklemediğiniz sürece, desteklenmeyen bir int'e dönüştürme çalıştığını görürsünüz.
 
@@ -218,7 +218,7 @@ internal int points;
 
 Kod düzenleyicisinde kırmızı dalgalı çizgiler kaybolur.
 
-Ardından, yeşil dalgalı bildiriminde üzerine `points` veri üyesi. Kod Çözümleyicisi değişkeni hiçbir zaman bir değer atanır söyler.
+Sonra, `points` veri üyesinin bildiriminde yeşil dalgalı çizgi üzerine gelin. Kod Çözümleyicisi değişkeni hiçbir zaman bir değer atanır söyler.
 
 ![Atanmamış değişken için uyarı iletisi](../debugger/media/write-better-code-warning-message.png)
 
@@ -255,7 +255,7 @@ Bir özel durum ulaştığınızda birkaç soru sormak (ve yanıtlamak) gerekir:
 
 * Bu durum, kullanıcılarınızın karşılaşabileceği bir şey mi?
 
-Eski ise, hata düzeltildi. (Örnek uygulamada, bozuk veri düzeltme anlamına gelir.) İkincisi ise, kod kullanarak özel durumu işlemek üzere ihtiyacınız olabilecek bir `try/catch` blok (baktığımızda, sonraki bölümde olası diğer stratejiler). Örnek uygulamada, aşağıdaki kodu değiştirin:
+Eski ise, hata düzeltildi. (Örnek uygulamada, bozuk veri düzeltme anlamına gelir.) Bu ikinci ise, `try/catch` bloğu kullanarak kodunuzda özel durumu işlemeniz gerekebilir (bir sonraki bölümde olası diğer stratejileri inceleyeceğiz). Örnek uygulamada, aşağıdaki kodu değiştirin:
 
 ```csharp
 users = ser.ReadObject(ms) as User[];
@@ -294,7 +294,7 @@ Birkaç özel durum işleme için önemli ipuçları şunlardır:
     }
     ```
 
-* Uygulamanızda, özellikle de (örneğin, bir web isteği) dış verilerle etkileşim içeren tanınmayan işlevler için hangi özel durumları işlevi kaldırıldığında görmek için belgelere bakın. Bu kritik bilgilerini uygun hata işleme ve uygulamanızın hatalarını ayıklamak için olabilir.
+* Uygulamanıza dahil ettiğiniz, özellikle dış verilerle (örneğin, bir Web isteği) etkileşimde bulunan tanıdık işlevler için, işlevin hangi özel durumları oluşturacaklarına bakmak için belgelere bakın. Bu kritik bilgilerini uygun hata işleme ve uygulamanızın hatalarını ayıklamak için olabilir.
 
 Örnek uygulama için düzeltme `SerializationException` içinde `GetJsonData` değiştirerek yöntemi `4o` için `40`.
 
