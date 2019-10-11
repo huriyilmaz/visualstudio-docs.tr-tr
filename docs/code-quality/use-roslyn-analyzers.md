@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c50eadf9c26eaca4c5495dfbc55a1b266aecdb90
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: a4c7d0aa4da7e672db06675c65e008d1f71f8bc7
+ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72000007"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172813"
 ---
 # <a name="use-code-analyzers"></a>Kod Çözümleyicileri kullanma
 
@@ -138,7 +138,7 @@ Visual Studio, bir kuralın önem derecesini [hızlı eylemler](../ide/quick-act
 
 ![Çözüm Gezgini kural kümesi dosyası](media/ruleset-in-solution-explorer.png)
 
-1. Etkin [kural kümesi](analyzer-rule-sets.md) dosyasını, **Çözüm Gezgini** **@no__t-** 4**Çözümleyicileri** düğümünün sağ tıklama menüsünde **etkin kural kümesini aç** ' ı seçerek veya ' de **Aç** **' ı seçerek açın. Proje için kod analizi** Özellik sayfası.
+1. Etkin kural kümesi dosyasını, **Çözüm Gezgini** **@no__t-** 3**Çözümleyicileri** düğümünün sağ tıklama menüsünde **etkin kural kümesi aç** ' ı seçerek veya kodda **Aç** ' ı seçerek açın.  **Projenin analiz** özelliği sayfası.
 
    Kural kümesini ilk kez düzenliyorsanız, Visual Studio varsayılan kural kümesi dosyasının bir kopyasını oluşturur, *\<projectname >. RuleSet*olarak adlandırır ve bunu projenize ekler. Bu özel kural kümesi, projeniz için etkin kural kümesi de olur.
 

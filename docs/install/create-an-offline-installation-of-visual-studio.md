@@ -1,7 +1,7 @@
 ---
 title: Çevrimdışı yüklemesini oluşturma
 description: Visual Studio bir güvenilir bir internet bağlantısı veya düşük bant genişliğine sahip olduğunuzda çevrimdışı yüklemeyi öğrenin.
-ms.date: 07/24/2019
+ms.date: 10/07/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -16,18 +16,18 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1c210498b88ab1a4fd149870fc3528ddc869ecd6
-ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
+ms.openlocfilehash: 28351407e80c723c0b60640b7e56177c85c2a476
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322561"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018836"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun çevrimdışı yüklemesini oluşturma
 
 ::: moniker range="vs-2017"
 
-Biz, Visual Studio 2017'de ağ ve bilgisayar yapılandırmalarını çeşitli içinde çalışacak şekilde tasarlanmıştır. Denemenizi öneririz ancak [Visual Studio web yükleyicisini](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)&mdash;küçük bir dosyadır ve en son düzeltmeler ve özellikler ile güncel kalın sağlar&mdash;için aktarmanızı değil olduğunu biliyoruz.
+Biz, Visual Studio 2017'de ağ ve bilgisayar yapılandırmalarını çeşitli içinde çalışacak şekilde tasarlanmıştır. Denemenizi öneririz ancak [Visual Studio web yükleyicisini](https://visualstudio.microsoft.com/vs/older-downloads)&mdash;küçük bir dosyadır ve en son düzeltmeler ve özellikler ile güncel kalın sağlar&mdash;için aktarmanızı değil olduğunu biliyoruz.
 
 ::: moniker-end
 
@@ -75,20 +75,24 @@ Küçük bir önyükleyici indirdikten sonra komut satırında yerel önbellek o
 
 Bu adımı tamamlamak için bir internet bağlantısı olması gerekir.
 
-Seçtiğiniz Visual Studio sürümünüz için Visual Studio önyükleyicisi indirerek başlayın. Kurulum dosyanızı&mdash;veya önyükleyici&mdash;ile eşleşir veya şunlardan birini benzer.
-
 ::: moniker range="vs-2017"
 
-| Sürüm                    | Dosya                                                                    |
-|----------------------------|-------------------------------------------------------------------------|
-| Visual Studio Community    | [vs_community.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2017)       |
-| Visual Studio Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2017) |
-| Visual Studio Enterprise   | [vs_enterprise.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2017)     |
-| Visual Studio Derleme Araçları   | [vs_buildtools. exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2017)     |
+Visual Studio 2017 için bir önyükleyici almak üzere, bunun nasıl yapılacağı hakkında ayrıntılı bilgi için [Visual Studio önceki sürümler](https://visualstudio.microsoft.com/vs/older-downloads/) indirme sayfasına bakın.
+
+Kurulum çalıştırılabilir dosya @ no__t-0veya daha belirgin olacak şekilde, @ no__t-1önyükleyici dosyası aşağıdakilerden biriyle eşleşmelidir.
+
+| Sürüm | Kısaltın |
+|-------------|-----------------------|
+|Visual Studio Community | vs_community.exe |
+|Visual Studio Professional | vs_professional.exe |
+|Visual Studio Enterprise | vs_enterprise.exe |
+|Visual Studio Derleme Araçları   | vs_buildtools. exe |
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
+
+Seçtiğiniz Visual Studio sürümünüz için Visual Studio önyükleyicisi indirerek başlayın. Kurulum dosyanızı&mdash;veya önyükleyici&mdash;ile eşleşir veya şunlardan birini benzer.
 
 | Sürüm                    | Dosya                                                                    |
 |----------------------------|-------------------------------------------------------------------------|

@@ -9,25 +9,25 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7619b040343720198e190f551741f565e62fa145
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 62dd64dfe4e801f91731b1ed569e3a809156d0d1
+ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186405"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172798"
 ---
 # <a name="configure-fxcop-analyzers"></a>FxCop çözümleyicileri yapılandırma
 
 [FxCop çözümleyicileri paketi](install-fxcop-analyzers.md) , eski analizler tarafından .net Compiler platform tabanlı kod Çözümleyicileri ' ne dönüştürülmüş en önemli "FxCop" kurallarından oluşur. Belirli FxCop kuralları için, kod tabanınızın hangi bölümlerinin [yapılandırılabilir seçenekler](fxcop-analyzer-options.md)aracılığıyla uygulanmasını iyileştirebilirsiniz. Her seçenek, bir [Editorconfig](https://editorconfig.org) dosyasına anahtar-değer çifti eklenerek belirtilir. Bir yapılandırma dosyası [bir projeye özgü](#per-project-configuration) olabilir veya iki ya da daha fazla proje arasında [paylaşılabilir](#shared-configuration) .
 
 > [!TIP]
-> **Çözüm Gezgini** ' de projeye sağ tıklayıp**Yeni öğe** **Ekle** > ' yi seçerek projenize bir. editorconfig dosyası ekleyebilirsiniz. **Yeni öğe Ekle** penceresinde, arama kutusuna **editorconfig** yazın. **Editorconfig dosyası (varsayılan)** şablonunu seçin ve **Ekle**' yi seçin.
+> **Çözüm Gezgini** ' de projeye sağ tıklayıp  > **Yeni öğe** **Ekle**' yi seçerek projenize bir. editorconfig dosyası ekleyin. **Yeni öğe Ekle** penceresinde, arama kutusuna **editorconfig** yazın. **Editorconfig dosyası (varsayılan)** şablonunu seçin ve **Ekle**' yi seçin.
 >
 > ![Visual Studio 'daki projeye editorconfig dosyası Ekle](media/add-editorconfig-file.png)
 
 ::: moniker range=">=vs-2019"
 
-Bir kuralın önem derecesini yapılandırma hakkında bilgi için (örneğin, bir hata veya uyarı olup olmadığı), bkz. [bir EditorConfig dosyasında kural önem derecesini ayarlama](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file). Ya da bir kural kategorisini hızlı bir şekilde etkinleştirmek veya devre dışı bırakmak için yerleşik [kural kümelerinden](analyzer-rule-sets.md) birini seçebilirsiniz.
+Bir kuralın önem derecesini yapılandırma hakkında bilgi için (örneğin, bir hata veya uyarı olup olmadığı), bkz. [bir EditorConfig dosyasında kural önem derecesini ayarlama](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file). Ya da bir kural kategorisini hızlı bir şekilde etkinleştirmek veya devre dışı bırakmak için yerleşik [Editorconfig dosyalarından veya kural kümelerinden](analyzer-rule-sets.md) birini seçebilirsiniz.
 
 ::: moniker-end
 

@@ -11,12 +11,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14737c09cf7ff2b14eda1f61408b531b9c22c14
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
-ms.translationtype: HT
+ms.openlocfilehash: 2c68bb94a66be2c9fc1da4365cb77adf8d1330a1
+ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018374"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163016"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>Hızlı Başlangıç: C/C++ için kod analizi
 
@@ -26,24 +26,11 @@ Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanız
 
 1. **Çözüm Gezgini**, proje adı için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
-2. Aşağıdaki adımlar isteğe bağlıdır:
+2. İsteğe bağlı olarak, **yapılandırma** ve **Platform** listelerinde, yapı yapılandırması ve hedef platform ' u seçin.
 
-    1. **Yapılandırma** ve **Platform** listelerinde, derleme yapılandırması ve hedef platform ' u seçin.
+3. Seçili yapılandırma kullanarak proje oluşturulan her zaman, Kod Analizi çalıştırmak için seçin **derlemede kod analizini etkinleştir** onay kutusu. Ayrıca, **Çözümle** menüsünü açıp daha sonra *ProjectName* **üzerinde Kod analizini Çalıştır** ' ı seçip **dosya üzerinde Kod analizini**Çalıştır ' ı seçerek Kod analizini el ile de çalıştırabilirsiniz.
 
-    2. Varsayılan olarak, Kod Analizi uyarıları otomatik olarak dış araçları tarafından oluşturulan kodu raporlamaz. Üretilen koddan gelen uyarıları görüntülemek için temizleyin **üretilen koddan gelen sonuçları Gizle** onay kutusu.
-
-        > [!NOTE]
-        > Bu seçenek hataları ve Uyarıları formları ve şablonlar görüntülendiğinde kod çözümleme hataları ve Uyarıları üretilen koddan gelen engellemez. Bir form veya şablon için kaynak kodu görüntüleyebilir ve bakımını yapabilirsiniz.
-
-3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için, **derlemede C/C++ Için kod analizini etkinleştir** onay kutusunu seçin. Ayrıca, **Çözümle** menüsünü açıp *ProjectName* **üzerinde Kod analizini Çalıştır '** ı seçerek Kod analizini el ile de çalıştırabilirsiniz.
-
-4. İçinde **bu kural kümesini Çalıştır** listesinde, aşağıdakilerden birini yapın:
-
-    - Kullanmak istediğiniz kural kümesini seçin.
-
-    - Listede olmayan mevcut bir özel kural kümesini belirtmek için **\<Zat >** öğesini seçin.
-
-    - Tanımlayan bir [özel kural kümesi](../code-quality/how-to-create-a-custom-rule-set.md).
+4. Kullanmak istediğiniz [kural kümesini](../code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run.md) seçin veya [özel bir kural kümesi](../code-quality/how-to-create-a-custom-rule-set.md)oluşturun. LLVM/Clang-CL kullanılıyorsa bkz. Clang-Tidy analiz seçeneklerini yapılandırmak için [Visual Studio 'Da Clang-Tidy kullanma](../code-quality/clang-tidy.md) .
 
 ### <a name="standard-cc-rule-sets"></a>Standart C/C++ kural kümeleri
 
@@ -56,17 +43,23 @@ Visual Studio yerel kod için iki standart kural kümesi içerir:
 
 ## <a name="run-code-analysis"></a>Kod analizini Çalıştır
 
-Proje özellikleri sayfalarının kod analizi sayfasında, Kod analizini projenizi her oluşturduğunuzda çalışacak şekilde yapılandırabilirsiniz. Ayrıca, Kod analizini el ile de çalıştırabilirsiniz.
+Proje Özellikleri sayfasının kod analizi sayfasında, Kod analizini projenizi her oluşturduğunuzda çalışacak şekilde yapılandırabilirsiniz. Ayrıca, Kod analizini el ile de çalıştırabilirsiniz.
 
 Bir çözümde Kod Analizi çalıştırmak için:
 
-- Üzerinde **derleme** menüsünde seçin **çözüm üzerinde kod analizini Çalıştır**.
+- **Build** menüsünde, **çözüm üzerinde Kod analizini Çalıştır**' ı seçin.
 
 Bir projede kod analizini çalıştırmak için:
 
 1. Çözüm Gezgini, projenin adını seçin.
 
 2. **Yapı** menüsünde, *Proje adı* **üzerinde Kod analizini Çalıştır** ' ı seçin.
+
+Kod analizini bir dosyada çalıştırmak için:
+
+1. Çözüm Gezgini, dosyanın adını seçin.
+
+2. **Build** menüsünde, **dosya üzerinde Kod analizini Çalıştır** ' ı seçin veya **CTRL + SHIFT + ALT + F7**tuşlarına basın.
 
    Proje veya çözüm derlenir ve kod analizi çalışır. Sonuçlar Hata Listesi görüntülenir.
 
@@ -116,4 +109,4 @@ Uzun listesi uyarı iletilerini arayabilir ve çoklu proje çözümlerinde uyar�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[C/için kod analiziC++](../code-quality/code-analysis-for-c-cpp-overview.md)
+- [C/için kod analiziC++](../code-quality/code-analysis-for-c-cpp-overview.md)

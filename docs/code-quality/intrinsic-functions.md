@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: adf29f8c-89fd-4a5e-9804-35ac83e1c457
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 65a5272d74e1987cd7838932182e7e59c9c53f21
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e5b754f32edb86d10b4dd722ea7c6486f8179af6
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923943"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018741"
 ---
 # <a name="intrinsic-functions"></a>İç İşlevler
 SAL içindeki bir ifade, yan etkileri olmayan birC++ ifade olan bir C/ifadesi olabilir; Örneğin, + +,--, ve işlev çağrılarının hepsi bu bağlamda yan etkilere sahiptir.  Ancak, SAL ifadelerde kullanılabilecek bazı işlev benzeri nesneler ve bazı ayrılmış semboller sağlar. Bunlar *iç işlevler*olarak adlandırılır.
@@ -30,21 +30,21 @@ Aşağıdaki ınstrinsic işlev ek açıklamaları SAL için genel yardımcı pr
 
 |Ek Açıklama|Açıklama|
 |----------------|-----------------|
-|`_Curr_`|Şu anda açıklanmakta olan nesne için bir eş anlamlı.  Ek açıklama kullanımda olduğunda, `_Curr_` ilk parametresiyle `_At_`aynı olur. `_At_`  Aksi takdirde, ek açıklamanın sözcüksel olarak ilişkilendirildiği parametre veya tam işlev/dönüş değeridir.|
+|`_Curr_`|Şu anda açıklanmakta olan nesne için bir eş anlamlı.  @No__t-0 ek açıklaması kullanımda olduğunda, `_Curr_` `_At_` ' ye kadar olan ilk parametre ile aynıdır.  Aksi takdirde, ek açıklamanın sözcüksel olarak ilişkilendirildiği parametre veya tam işlev/dönüş değeridir.|
 |`_Inexpressible_(expr)`|Bir arabelleğin boyutunun, bir ek açıklama ifadesi kullanılarak temsil edilebilmesi için çok karmaşık olduğu, örneğin bir girdi veri kümesi tarayarak ve ardından seçilen Üyeler sayımının hesaplandığı bir durumu ifade eder.|
-|`_Nullterm_length_(param)`|`param`Arabellekteki öğelerin sayısı, bir null Sonlandırıcı dahil değildir. Toplama olmayan, void olmayan türdeki herhangi bir arabelleğe uygulanabilir.|
-|`_Old_(expr)`|Önkoşula göre değerlendirildiğinde, `_Old_` giriş değerini `expr`döndürür.  Koşul sonrası değerlendirildiğinde değeri `expr` , önkoşullardan değerlendirildiği gibi döndürür.|
-|`_Param_(n)`|1 ile arasında sayarak ve `n` sabit bir integral sabiti olan bir işleve olan THparametresi.`n` `n` Parametre adlandırılmışsa, bu ek açıklama parametreye adına göre erişmek için aynıdır. **Not:** `n` bir üç nokta tarafından tanımlanan konumsal parametrelere başvurabilir veya adların kullanıldığı işlev Prototiplerde kullanılabilir.|
-|`return`|C/C++ ayrılmış anahtar sözcüğü `return` , bir işlevin dönüş değerini göstermek için Sal ifadesinde kullanılabilir.  Değer yalnızca gönderi durumunda kullanılabilir; Bu, ön durumunda kullanmak için bir sözdizimi hatasıdır.|
+|`_Nullterm_length_(param)`|`param`, arabellekteki ve null Sonlandırıcı içermeyen öğelerin sayısıdır. Toplama olmayan, void olmayan türdeki herhangi bir arabelleğe uygulanabilir.|
+|`_Old_(expr)`|Önkoşula göre değerlendirildiğinde `_Old_`, `expr` giriş değerini döndürür.  Koşul sonrası değerlendirildiğinde, önkoşula göre değerlendirilen `expr` değerini döndürür.|
+|`_Param_(n)`|Bir işleve `n`TH parametresi, 1 ' den `n` ' e ve `n` sabit bir integral sabitidir. Parametre adlandırılmışsa, bu ek açıklama parametreye adına göre erişmek için aynıdır. **Not:**  `n`, üç nokta tarafından tanımlanan konumsal parametrelere başvurabilir veya adların kullanıldığı işlev Prototiplerde kullanılabilir.|
+|`return`|@No__t-1C++ ' i n/ayrılmış anahtar sözcüğü, bir işlevin dönüş değerini göstermek için Sal ifadesinde kullanılabilir.  Değer yalnızca gönderi durumunda kullanılabilir; Bu, ön durumunda kullanmak için bir sözdizimi hatasıdır.|
 
 ## <a name="string-specific"></a>Dizeye özgü
-Aşağıdaki iç işlev ek açıklamaları dizelerin düzenlenmesini etkinleştirir. Bu işlevlerin dört dördü de aynı amaca sahiptir: null Sonlandırıcı 'dan önce bulunan türdeki öğelerin sayısını döndürmek için. Farklılıklar, başvurulan öğelerdeki veri türleridir. Karakterlerden oluşan null ile sonlandırılmış bir arabelleğin uzunluğunu belirtmek isterseniz, önceki bölümde yer alan `_Nullterm_length_(param)` ek açıklamayı kullanın.
+Aşağıdaki iç işlev ek açıklamaları dizelerin düzenlenmesini etkinleştirir. Bu işlevlerin dört dördü de aynı amaca sahiptir: null Sonlandırıcı 'dan önce bulunan türdeki öğelerin sayısını döndürmek için. Farklılıklar, başvurulan öğelerdeki veri türleridir. Karakterlerden oluşan null ile sonlandırılmış bir arabelleğin uzunluğunu belirtmek istiyorsanız, önceki bölümde `_Nullterm_length_(param)` ek açıklamasını kullanın.
 
 |Ek Açıklama|Açıklama|
 |----------------|-----------------|
-|`_String_length_(param)`|`param`dizedeki öğe sayısı olan, ancak bir null Sonlandırıcı dahil değil. Bu ek açıklama, karakter dizesi türleri için ayrılmıştır.|
-|`strlen(param)`|`param`dizedeki öğe sayısı olan, ancak bir null Sonlandırıcı dahil değil. Bu ek açıklama, karakter dizileri üzerinde kullanılmak üzere ayrılmıştır ve C çalışma zamanı işlevine [strlen ()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)benzerdir.|
-|`wcslen(param)`|`param`, bir null Sonlandırıcı (dahil değil) olan dizedeki öğe sayısıdır. Bu ek açıklama geniş karakter dizileri üzerinde kullanılmak üzere ayrılmıştır ve C çalışma zamanı işlevine [wcslen ()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)benzerdir.|
+|`_String_length_(param)`|`param`, dizedeki, null Sonlandırıcı içermeyen öğelerin sayısıdır. Bu ek açıklama, karakter dizesi türleri için ayrılmıştır.|
+|`strlen(param)`|`param`, dizedeki, null Sonlandırıcı içermeyen öğelerin sayısıdır. Bu ek açıklama, karakter dizileri üzerinde kullanılmak üzere ayrılmıştır ve C çalışma zamanı işlevine [strlen ()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)benzerdir.|
+|`wcslen(param)`|`param`, bir null Sonlandırıcı (dahil değil) olan dizedeki öğelerin sayısıdır. Bu ek açıklama geniş karakter dizileri üzerinde kullanılmak üzere ayrılmıştır ve C çalışma zamanı işlevine [wcslen ()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)benzerdir.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

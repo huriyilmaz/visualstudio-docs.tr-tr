@@ -2,7 +2,7 @@
 title: Visual Studio'yu yükleme
 titleSuffix: ''
 description: Visual Studio, adım adım yüklemeyi öğrenin.
-ms.date: 04/16/2019
+ms.date: 10/07/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -20,14 +20,14 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 5d83086720a94c23d0ceb3f07d9398a7d5256f68
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: 6cd91fadea397955b756461383ed8e17030b4c3b
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095365"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018858"
 ---
-# <a name="install-visual-studio"></a>Visual Studio'yu yükleme
+# <a name="install-visual-studio"></a>Visual Studio yükleme
 
 ::: moniker range="vs-2019"
 
@@ -82,7 +82,7 @@ Visual Studio yükleme başlamadan önce:
 
 1. Yeniden başlatma. Yeniden başlatma bekleyen yükleme veya güncelleştirmelerin Visual Studio yüklemesini engellememesini sağlar.
 
-1. Alan boşaltın. Gereksiz dosyaları ve uygulamalar, % SYSTEMDRIVE %, örneğin, Disk Temizleme uygulamayı çalıştıran kaldırın. 
+1. Alan boşaltın. Gereksiz dosyaları ve uygulamalar, % SYSTEMDRIVE %, örneğin, Disk Temizleme uygulamayı çalıştıran kaldırın.
 
 ::: moniker-end
 
@@ -100,16 +100,17 @@ Visual Studio 'nun önceki sürümlerini Visual Studio 2019 ile yan yana çalı�
 
 ## <a name="step-2---download-visual-studio"></a>Adım 2 - Visual Studio indirme
 
-Ardından, Visual Studio önyükleyicisi dosyasını indirin. Bunu yapmak için, aşağıdaki düğmeyi seçin, istediğiniz Visual Studio sürümünü seçin, **Kaydet**' i seçin ve sonra **klasörü aç**' ı seçin.
+Ardından, Visual Studio önyükleyicisi dosyasını indirin.
 
 ::: moniker range="vs-2017"
 
- > [!div class="button"]
- > [Visual Studio 'Yu indirin](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
+Visual Studio 2017 için bir önyükleyici almak üzere, bunun nasıl yapılacağı hakkında ayrıntılı bilgi için [Visual Studio önceki sürümler](https://visualstudio.microsoft.com/vs/older-downloads/) indirme sayfasına bakın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
+
+Bunu yapmak için, aşağıdaki düğmeyi seçin, istediğiniz Visual Studio sürümünü seçin, **Kaydet**' i seçin ve sonra **klasörü aç**' ı seçin.
 
  > [!div class="button"]
  > [Visual Studio 'Yu indirin](https://visualstudio.microsoft.com/downloads)
@@ -179,7 +180,7 @@ Visual Studio yüklemenizi özelleştirmek için Iş yükleri özelliğini kulla
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019-ayrı bileşenleri yükler](media/vs-2019/vs-installer-individual-components.png "Visual Studio bireysel bileşenlerini yükler")
+  ![Visual studio 2019-tek tek bileşenleri yüklemeyi](media/vs-2019/vs-installer-individual-components.png "Visual Studio bireysel bileşenlerini yükler")
 
 ::: moniker-end
 
@@ -195,7 +196,7 @@ Varsayılan olarak, yükleyici programı ilk kez çalıştığında işletim sis
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019-dil paketlerini yükler](media/vs-2019/vs-installer-language-packs.png "Visual Studio dil paketlerini yükler")
+  ![Visual studio 2019-dil paketlerini yükler](media/vs-2019/vs-installer-language-packs.png "Visual Studio dil paketlerini yükler")
 
 ::: moniker-end
 
@@ -209,7 +210,7 @@ Varsayılan dilini değiştirme başka bir komut satırından yükleyiciyi çal�
 
 **15,7 sürümündeki yenilikler**: Artık, sistem sürücünüzdeki Visual Studio 'nun yükleme ayak izini azaltabilirsiniz. İndirme önbelleğini, paylaşılan bileşenler, SDK'ları ve araçları farklı sürücülere taşıma ve Visual Studio en hızlı çalışan sürücüde korumak seçebilirsiniz.
 
-  ![Visual Studio 2017-yükleme konumlarını değiştirme](media/installation-options-by-location.png "Yükleme konumunu değiştirme")
+  ![Visual Studio 2017-yükleme konumlarını değiştirme](media/installation-options-by-location.png "yükleme konumunu değiştirme")
 
 ::: moniker-end
 
@@ -217,7 +218,7 @@ Varsayılan dilini değiştirme başka bir komut satırından yükleyiciyi çal�
 
 Visual Studio 'nun yükleme ayak izini sistem sürücünüzde azaltabilirsiniz. İndirme önbelleğini, paylaşılan bileşenler, SDK'ları ve araçları farklı sürücülere taşıma ve Visual Studio en hızlı çalışan sürücüde korumak seçebilirsiniz.
 
-  ![Visual Studio 2019-yükleme konumlarını seçme](media/vs-2019/vs-installer-installation-locations.png "Yükleme konumunu seçin")
+  ![Visual Studio 2019-yükleme konumlarını Seç](media/vs-2019/vs-installer-installation-locations.png "yükleme konumunu seçin")
 
 ::: moniker-end
 
@@ -250,7 +251,7 @@ Daha fazla bilgi için bkz. [yükleme konumlarını seçme](change-installation-
 
 1. Arama kutusuna, kullanılabilir şablonların listesini görmek için oluşturmak istediğiniz uygulamanın türünü girin. Şablon listesi, yükleme sırasında seçtiğiniz iş yüküne bağlıdır. Farklı şablonları görmek için farklı iş yükleri seçin.
 
-   Ayrıca, **dil** açılan listesini kullanarak, aramanızı belirli bir programlama diline göre filtreleyebilirsiniz. **Platform** listesini ve **Proje türü** listesini kullanarak filtre uygulayabilirsiniz. 
+   Ayrıca, **dil** açılan listesini kullanarak, aramanızı belirli bir programlama diline göre filtreleyebilirsiniz. **Platform** listesini ve **Proje türü** listesini kullanarak filtre uygulayabilirsiniz.
 
 1. Visual Studio yeni projenizi açar ve kodlamaya hazırsınız!
 

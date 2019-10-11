@@ -2,7 +2,7 @@
 title: Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme
 titleSuffix: ''
 description: Komut satırı parametreleri denetlemek veya Visual Studio yüklemenizi özelleştirmek için kullanmayı öğrenin.
-ms.date: 09/11/2019
+ms.date: 10/07/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1f9e5d1dadd9caf95b8e6cb8e5fec70daf984ac9
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 306928b7a28465923ae0a5e2cc7773094458594e
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913239"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018805"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio"></a>Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme
 
@@ -32,17 +32,17 @@ Visual Studio 'Yu bir komut isteminden yüklediğinizde, yüklemeyi denetlemek v
 - Yükleme işlemini otomatik hale getirin.
 - Daha sonra kullanmak için yükleme dosyalarından oluşan bir önbellek (Düzen) oluşturun.
 
-Komut satırı seçenekleri, yükleme işlemini başlatan küçük (1 MB) dosya olan kurulum Önyükleyicisi ile birlikte kullanılır. Önyükleyici Visual Studio sitesinden indirdiğinizde başlatıldığında ilk yürütülebilir ' dir. Doğrudan bir bağlantı için en son sürüm önyükleyici için yüklemekte olduğunuz ürün sürümünü almak için aşağıdaki bağlantıları kullanın:
+Komut satırı seçenekleri, yükleme işlemini başlatan küçük (1 MB) dosya olan kurulum Önyükleyicisi ile birlikte kullanılır. Önyükleyici Visual Studio sitesinden indirdiğinizde başlatıldığında ilk yürütülebilir ' dir.
 
 ::: moniker range="vs-2017"
 
-- [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
-- [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
-- [Visual Studio 2017 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
+Visual Studio 2017 için bir önyükleyici almak üzere, bunun nasıl yapılacağı hakkında ayrıntılı bilgi için [**Visual Studio önceki sürümler**](https://visualstudio.microsoft.com/vs/older-downloads/) indirme sayfasına bakın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
+
+Doğrudan bir bağlantı için en son sürüm önyükleyici için yüklemekte olduğunuz ürün sürümünü almak için aşağıdaki bağlantıları kullanın:
 
 - [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2019+rc)
 - [Visual Studio 2019 Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2019+rc)
@@ -50,13 +50,20 @@ Komut satırı seçenekleri, yükleme işlemini başlatan küçük (1 MB) dosya 
 
 ::: moniker-end
 
+
+Önyükleyici dosyanız, aşağıdakilerden biriyle aynı olmalıdır veya buna benzer olmalıdır:
+
+* vs_enterprise.exe
+* vs_professional.exe
+* vs_community.exe
+
 ## <a name="command-line-parameters"></a>Komut satırı parametreleri
 
  Visual Studio komut satırı parametreleri büyük/küçük harfe duyarsızdır.
 
 > Sözdizimi: `vs_enterprise.exe [command] <options>...`
 
-Yüklemekte `vs_enterprise.exe` olduğunuz ürün sürümüne uygun şekilde değiştirin. (Alternatif olarak, kullanabilirsiniz `vs_installer.exe`.)
+@No__t-0 ' yı yüklemekte olduğunuz ürün sürümüne uygun şekilde değiştirin. (Alternatif olarak, `vs_installer.exe` ' ı kullanabilirsiniz.)
 
 >[!TIP]
 > Visual Studio 'Yu yüklemek için komut satırını kullanma hakkında daha fazla örnek için, [komut satırı parametre örnekleri](command-line-parameter-examples.md) sayfasına bakın.
@@ -86,7 +93,7 @@ Yüklemekte `vs_enterprise.exe` olduğunuz ürün sürümüne uygun şekilde de�
 | `--includeOptional` | **Isteğe bağlı**: Yüklü olan, ancak önerilen bileşenleri olmayan tüm iş yükleri için isteğe bağlı bileşenleri içerir. Belirtilen iş yükleri ile birlikte `--allWorkloads` veya `--add`.  |
 | `--quiet, -q` | **Isteğe bağlı**: Yüklemeyi gerçekleştirirken hiçbir Kullanıcı arabirimini görüntülememe. |
 | `--passive, -p` | **Isteğe bağlı**: Kullanıcı arabirimini görüntüleme, ancak kullanıcıdan herhangi bir etkileşim isteme. |
-| `--norestart` | **Isteğe bağlı**: Varsa, veya `--passive` `--quiet` olan komutları makineyi otomatik olarak yeniden başlatmaz (gerekliyse).  Bu ne sayılır `--passive` ya da `--quiet` belirtilir.  |
+| `--norestart` | **Isteğe bağlı**: Varsa, `--passive` veya `--quiet` olan komutlar makineyi otomatik olarak yeniden başlatmaz (gerekliyse).  Bu ne sayılır `--passive` ya da `--quiet` belirtilir.  |
 | `--nickname <name>` | **Isteğe bağlı**: Bu, yüklü bir ürüne atanacak takma adı tanımlar. Takma ad 10 karakterden uzun olamaz.  |
 | `--productKey` | **Isteğe bağlı**: Bu, yüklü bir ürün için kullanılacak ürün anahtarını tanımlar. Şunlardan oluşur 25 alfasayısal karakter ya da biçimi `xxxxx-xxxxx-xxxxx-xxxxx-xxxxx` veya `xxxxxxxxxxxxxxxxxxxxxxxxx`. |
 | `--help, --?, -h, -?` | Bu sayfanın çevrimdışı bir sürümünü görüntüler. |
@@ -100,8 +107,8 @@ Yüklemekte `vs_enterprise.exe` olduğunuz ürün sürümüne uygun şekilde de�
 | **Düzen Seçenekleri** | **Açıklama** |
 | ----------------------- | --------------- |
 | `--layout <dir>` | Yükleme önbelleği çevrimdışı oluşturmak için bir dizini belirtir. Daha fazla bilgi için [Visual Studio'nun ağ tabanlı yüklemesini oluşturma](create-a-network-installation-of-visual-studio.md).|
-| `--lang <one or more language-locales>` | **Isteğe bağlı**: Kaynak paketleriyle `--layout` , belirtilen dillere sahip çevrimdışı bir Install önbelleği hazırlamak için ile birlikte kullanılır. Daha fazla bilgi için [dil yerel ayarlar listesini](#list-of-language-locales) bu sayfadaki bölümü.|
-| `--add <one or more workload or component IDs>` | **Isteğe bağlı**: Eklenecek bir veya daha fazla iş yükü veya Bileşen kimliği. Yapıtın gerekli bileşenleri, değil önerilen veya isteğe bağlı bileşenler yüklenir. Genel olarak aracılığıyla ek bileşenler denetleyebilirsiniz `--includeRecommended` ve/veya `--includeOptional`. Daha ayrıntılı denetim için eklediğiniz `;includeRecommended` veya `;includeOptional` kimliği (örneğin, `--add Workload1;includeRecommended` veya `--add Workload2;includeOptional`). Daha fazla bilgi için [iş yükü ve Bileşen kimlikleri](workload-and-component-ids.md) sayfası. <br/>**Not**: `--add` Kullanılıyorsa, yalnızca belirtilen iş yükleri ve bileşenler ve bunların bağımlılıkları indirilir. Varsa `--add` belirtilmezse, tüm iş yüklerinin ve bileşenlerin düzene indirilir.|
+| `--lang <one or more language-locales>` | **Isteğe bağlı**: Kaynak paketleriyle, belirtilen dile sahip çevrimdışı bir yüklemeyi hazırlamak için `--layout` ile kullanılır. Daha fazla bilgi için [dil yerel ayarlar listesini](#list-of-language-locales) bu sayfadaki bölümü.|
+| `--add <one or more workload or component IDs>` | **Isteğe bağlı**: Eklenecek bir veya daha fazla iş yükü veya Bileşen kimliği. Yapıtın gerekli bileşenleri, değil önerilen veya isteğe bağlı bileşenler yüklenir. Genel olarak aracılığıyla ek bileşenler denetleyebilirsiniz `--includeRecommended` ve/veya `--includeOptional`. Daha ayrıntılı denetim için eklediğiniz `;includeRecommended` veya `;includeOptional` kimliği (örneğin, `--add Workload1;includeRecommended` veya `--add Workload2;includeOptional`). Daha fazla bilgi için [iş yükü ve Bileşen kimlikleri](workload-and-component-ids.md) sayfası. <br/>**Not**: @No__t-0 kullanılırsa, yalnızca belirtilen iş yükleri ve bileşenler ve bunların bağımlılıkları indirilir. Varsa `--add` belirtilmezse, tüm iş yüklerinin ve bileşenlerin düzene indirilir.|
 | `--includeRecommended` | **Isteğe bağlı**: , Yüklü olan, ancak isteğe bağlı bileşenleri olmayan tüm iş yükleri için önerilen bileşenleri içerir. Belirtilen iş yükleri ile birlikte `--allWorkloads` veya `--add`. |
 | `--includeOptional` | **Isteğe bağlı**: Mizanpaja dahil edilen tüm iş yükleri için önerilen *ve* isteğe bağlı bileşenleri içerir. İş yükleri ile belirtilen `--add`.  |
 | `--keepLayoutVersion` | **15,3 ' deki yenilikler, isteğe bağlı**: Düzen sürümünü güncelleştirmeden düzene değişiklikleri uygulayın. |
@@ -112,7 +119,7 @@ Yüklemekte `vs_enterprise.exe` olduğunuz ürün sürümüne uygun şekilde de�
 | **Gelişmiş yükleme seçenekleri** | **Açıklama** |
 | ----------------------- | --------------- |
 | `--channelId <id>` | **Isteğe bağlı**: Yüklenecek örnek için kanal KIMLIĞI. Diğer komutlar için gözardı yükleme komutu için gerekli olana `--installPath` belirtilir. |
-| `--channelUri <uri>` | **Isteğe bağlı**: Kanal bildiriminin URI 'SI. Güncelleştirmeler istenmiyorsa, `--channelUri` var olmayan bir dosyaya işaret edebilir (örneğin,--channeluri c:\atanntexist.chman). Bu yükleme komutu için kullanılabilir; diğer komutlar için göz ardı edilir. |
+| `--channelUri <uri>` | **Isteğe bağlı**: Kanal bildiriminin URI 'SI. Güncelleştirmeler istenmiyorsa, `--channelUri` var olmayan bir dosyaya işaret edebilir (örneğin,--channelUri C:\atanntexist.chman). Bu yükleme komutu için kullanılabilir; diğer komutlar için göz ardı edilir. |
 | `--installChannelUri <uri>` | **Isteğe bağlı**: Yükleme için kullanılacak kanal bildiriminin URI 'SI. URI tarafından belirtilen `--channelUri` (olması gereken belirtilen `--installChannelUri` belirtilir) güncelleştirmeleri algılamak için kullanılır. Bu yükleme komutu için kullanılabilir; diğer komutlar için göz ardı edilir. |
 | `--installCatalogUri <uri>` | **Isteğe bağlı**: Yükleme için kullanılacak Katalog bildiriminin URI 'SI. Belirtilmişse, kanal Yöneticisi, yükleme kanal bildiriminde URI'yi kullanmadan önce bu URI'den Kataloğu bildirimi indirmeyi dener. Bu parametre, daha önce indirilip ürün kataloğu ile Düzen önbelleği oluşturulacağı çevrimdışı yükleme desteği için kullanılır. Bu yükleme komutu için kullanılabilir; diğer komutlar için göz ardı edilir. |
 | `--productId <id>` | **İsteğe bağlı** yüklenecek örneği için ürün kimliği. Bu, normal yükleme koşullarında doldurulur. |
@@ -125,7 +132,7 @@ Yüklemekte `vs_enterprise.exe` olduğunuz ürün sürümüne uygun şekilde de�
 | `--path <name>=<path>` | **15,7 ' deki yenilikler, isteğe bağlı**: Yükleme için özel yükleme yollarını belirtmek için kullanılır. Adları paylaşılan desteklenen bir yolu, önbellek ve yükleyin. |
 | `--path cache=<path>` | **15,7 ' deki yenilikler, isteğe bağlı**: Yükleme dosyalarını indirmek için belirttiğiniz konumu kullanır. Bu konum yalnızca Visual Studio'nun yüklü olduğu ilk kez ayarlanabilir. Örnek: `--path cache="C:\VS\cache"` |
 | `--path shared=<path>` | **15,7 ' deki yenilikler, isteğe bağlı**: Yan yana Visual Studio yüklemeleri için paylaşılan dosyaları içerir. Bazıları bu ayarı geçersiz ve başka bir sürücüye yükleme sırasında bazı araçları ve SDK'lar bu sürücüdeki bir konuma yükleyin. Örnek: `--path shared="C:\VS\shared"` <br><br>Önemli: Bu, Visual Studio 'nun ilk kez yüklendiği anda yalnızca bir kez ayarlanabilir. |
-| `--path install=<path>` | **15,7 ' deki yenilikler, isteğe bağlı**: İle `–-installPath`eşdeğerdir. Özellikle, `--installPath "C:\VS"` ve `--path install="C:\VS"` eşdeğerdir. Aynı anda bunlardan yalnızca biri kullanılabilir. |
+| `--path install=<path>` | **15,7 ' deki yenilikler, isteğe bağlı**: @No__t-0 ile eşdeğerdir. Özellikle, `--installPath "C:\VS"` ve `--path install="C:\VS"` eşdeğerdir. Aynı anda bunlardan yalnızca biri kullanılabilir. |
 
 ## <a name="list-of-workload-ids-and-component-ids"></a>İş yükü kimlikleri ve bileşen listesi
 

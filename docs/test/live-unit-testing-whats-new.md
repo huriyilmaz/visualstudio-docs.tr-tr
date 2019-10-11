@@ -1,64 +1,64 @@
 ---
-title: Live Unit Testing Visual Studio 2017'deki yenilikler
+title: Visual Studio 2017 ' de Live Unit Testing yenilikler
 titleSuffix: ''
 ms.date: 10/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
 - Live Unit Testing What's New
-author: rpetrusha
-ms.author: ronpet
+author: gewarren
+ms.author: gewarren
 ms.workload:
 - dotnet
 monikerRange: vs-2017
-ms.openlocfilehash: 86ed90e6a4fe211d162f12785b0f3f555802ad17
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6a96089de8f9998c12cbc2e12765d128b1d2195b
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823764"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262275"
 ---
-# <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Live Unit Testing Visual Studio 2017'deki yenilikler
+# <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Visual Studio 2017 için Live Unit Testing yenilikler
 
-Bu konu Visual Studio 2017 sürüm 15.3 itibaren Visual Studio'nun her sürümü için Live Unit Testing eklenen yeni özellikleri listeler. Live Unit Testing kullanma genel bakış için bkz. [Visual Studio ile Live Unit Testing](live-unit-testing.md).
+Bu konuda, Visual Studio 2017 sürüm 15,3 ' den başlayarak her Visual Studio sürümünde Live Unit Testing eklenen yeni özellikler listelenmiştir. Live Unit Testing kullanma hakkında genel bir bakış için bkz. [Visual Studio ile Live Unit Testing](live-unit-testing.md).
 
-## <a name="version-154"></a>Sürüm 15.4
+## <a name="version-154"></a>Sürüm 15,4
 
-Visual Studio 2017 sürüm 15.4 ile başlayarak, Live Unit Testing iyileştirmeler ve geliştirmeler birtakım alanları içerir:
+Visual Studio 2017 sürüm 15,4 ' den başlayarak, Live Unit Testing çeşitli alanlarda iyileştirmeler ve iyileştirmeler içerir:
 
-- **Geliştirilmiş bulunabilirliği**. Bilmiyorsanız kullanıcılar için Live Unit Testing özelliği yoksa, Visual Studio IDE kullanıcı birim testleri içeren bir çözümü açar ancak Live Unit Testing etkin olduğunda Live Unit Testing bahsetmeleri sarı renkte bir çubuk gösterir. Live Unit Testing hakkında daha fazla bilgi edinmek ve etkinleştirmek için kullanıcı gold çubuğunda görüntülenen bilgileri sağlar. Live Unit Testing Önkoşullar karşılanmadı olduğunda sarı renkli çubuk bilgi de görüntüler. Bu güncelleştirmeler şunlardır:
+- **İyileştirilmiş bulunabilirliği**. Live Unit Testing özelliğinin mevcut olduğunu bilemeyen kullanıcılar için, Visual Studio IDE, Kullanıcı birim testlerini içeren bir çözümü her açtığında Live Unit Testing bahsetmeyen bir altın çubuk gösterir, ancak Live Unit Testing etkinleştirilmez. Altın renkli çubukta sunulan bilgiler, kullanıcının Live Unit Testing hakkında daha fazla bilgi almasına ve etkinleştirmesini sağlar. Altın renkli çubuk, Live Unit Testing önkoşulları karşılanmazsa bilgileri de görüntüler. Bunlar:
 
-  - Test bağdaştırıcısı yok.
-  - Eski test bağdaştırıcısı sürümleri yok.
-  - Çözüm tarafından başvurulan NuGet paketlerini geri yüklemeye gereklidir.
+  - Test bağdaştırıcıları eksik.
+  - Test bağdaştırıcılarının eski sürümleri mevcuttur.
+  - Çözüm tarafından başvurulan NuGet paketlerinin geri yüklenmesi gerekiyor.
 
-- **Görev merkezi bildirimleri ile tümleştirme**. Visual Studio IDE artık kullanıcıların kolayca Live Unit Testing etkinleştirildiğinde neler anlatabilmeniz görev merkezi bildiriminde bir Live Unit Testing arka plan işlemleri gösterir. Bu anahtar üzerinde büyük bir çözümde Live Unit Testing başlangıç sorununu giderir. Kapsamı simgeleri göründüğü kadar daha önce birkaç dakika kullanıcılar olup Live Unit Testing gerçekten etkinleştirildi ve olup çalıştığı belirlenemedi. Artık değil!
+- **Görev Merkezi bildirimleri Ile tümleştirme**. Visual Studio IDE artık, kullanıcıların Live Unit Testing etkinleştirildiğinde ne olduğunu kolayca anlayabilmesi için, görev merkezi 'nde Live Unit Testing bir arka plan işleme bildirimi gösterir. Bu, büyük bir çözümde Live Unit Testing başlatma ile ilgili önemli sorunu ele alır. Daha önce, kapsam simgeleri görünene kadar birkaç dakika boyunca, kullanıcılar Live Unit Testing gerçekten etkinleştirilip etkinleştirilmeyeceğini ve çalışıp çalışmadığını belirlemeiyordu. Artık değil!
 
-- **MSTest framework sürüm 1 için destek**: Live Unit Testing zaten üç popüler birim test çerçeveleri ile çalışır: xUnit, NUnit ve MSTest. MSTest birim testi projelerini MS Test version 2 kullanıldığında daha önce Live Unit Testing yalnızca çalışıyordu. Visual Studio 2017 sürüm 15.4 ile başlayarak, şimdi de MSTest sürüm 1 de destekler.
+- **MSTest Framework sürüm 1 desteği**: Live Unit Testing zaten üç popüler birim test çerçevesi ile çalışmaktadır: xUnit, NUnit ve MSTest. Daha önce Live Unit Testing yalnızca MSTest birim testi projeleri MS test sürüm 2 ' i kullanırken kullanılabilir. Visual Studio 2017 sürüm 15,4 ' den itibaren artık MSTest sürüm 1 de desteklenir.
 
-- **Güvenilirlik ve performansa**: Live Unit Testing artık sistem projeleri tam yükleme tamamlamadıysanız daha iyi algılayabilir ve Live Unit Testing kilitlenen önler sağlar. Derleme performansı iyileştirmeleri ayrıca kaçının sistem projede hiçbir şey Dosya değişmiş olduğunu bilir, MSBuild projelerinin reevaluating.
+- **Güvenilirlik & performansı**: Live Unit Testing artık, projenin tamamen yüklemeyi tamamlamadıklarında ve kilitlenen Live Unit Testing kaçınarak sistemin daha iyi algılayabilmesini sağlar. Yapı performansı geliştirmeleri Ayrıca, sistem proje dosyasındaki hiçbir şeyin değiştiğini bildiğinde MSBuild projelerinin yeniden değerlendirilmesinden kaçının.
 
-- **Çeşitli kullanıcı arabirimi iyileştirmelerini**:  Kafa karıştırıcı **Canlı Test kümesi – Ekle/Çıkar** sağ tıklama hareketi seçeneğinden adlandırıldı **Live Unit Testing ekleme/çıkarma**. **Temiz sıfırlama** seçeneğini **Test** > **Live Unit Testing** menü kaldırıldı. Artık seçerek erişilebilir durumda **Araçları** > **seçenekleri** > **Live Unit Testing** seçerek **kalıcı verileri Sil** .
+- **Çeşitli kullanıcı arabirimi işlevselliklerindeki**:  Sağ tıklama hareketinizden oluşan kafa karıştırıcı **canlı test kümesi – dahil etme/hariç tutma** seçeneği Live Unit Testing, **dahil etme/hariç tutma**olarak yeniden adlandırıldı. **Test** > **Live Unit Testing** menüsündeki **Temizleme sıfırlama** seçeneği kaldırılmıştır. Artık **araçlar** > **Live Unit Testing** @no__t ve **kalıcı verileri Sil** **' i seçerek**erişilebilir.
 
-## <a name="version-153"></a>Sürüm 15.3
+## <a name="version-153"></a>Sürüm 15,3
 
-Visual Studio 2017 sürüm 15.3, Live Unit Testing özellikleri iyileştirmeler ve geliştirmeler iki önemli alanda başlangıç:
+Visual Studio 2017 sürüm 15,3 ' den başlayarak, Özellikler ve iyileştirmeler iki ana alanda Live Unit Testing:
 
-- .NET Core ve .NET Standard desteği. C# veya Visual Basic içinde yazılan .NET Core ve .NET Standard çözümler üzerinde Live Unit Testing ' ı kullanabilirsiniz.
+- .NET Core ve .NET Standard için destek. .NET Core üzerinde Live Unit Testing, C# veya Visual Basic yazılmış .NET Standard çözümleri kullanabilirsiniz.
 
-- Performans geliştirmeleri. İlk tam derleme ve testleri Live Unit Testing altında çalıştırdıktan sonra performansı önemli ölçüde daha hızlı olduğunu fark edeceksiniz. Ayrıca, önemli bir performans geliştirmesi sonraki başlangıçlarda Live Unit Testing, aynı çözümdeki görürsünüz. Biz artık Live Unit Testing tarafından oluşturulan verileri kalıcı hale getirmek ve güncel denetimleri ile mümkün olduğunca yeniden.
+- Performans geliştirmeleri. Live Unit Testing altında testlerin ilk tam derlemeden ve çalıştırıldıktan sonra performansın önemli ölçüde daha hızlı olduğunu fark edeceksiniz. Ayrıca, aynı çözümde Live Unit Testing sonraki başlangıçlarda önemli performans iyileştirmesini de fark edeceksiniz. Artık Live Unit Testing tarafından oluşturulan verileri kalıcı hale getiriyoruz ve güncel denetimler sayesinde mümkün olduğunca yeniden kullanıma sunduk.
 
-Bu önemli eklemeler yanı sıra, Live Unit Testing, aşağıdaki geliştirmeleri içerir:
+Bu büyük eklemelere ek olarak, Live Unit Testing aşağıdaki geliştirmeleri içerir:
 
-- Yeni beaker simgesi artık bir test yöntemi, normal yöntemlerinden ayırt etmek için kullanılır. Live Unit Testing özel test dahil edilmeyen boş beaker simge belirtir.
+- Artık bir test yöntemini normal yöntemlerden ayırt etmek için yeni bir Beaker simgesi kullanılır. Boş bir Beaker simgesi, belirli bir testin Live Unit Testing dahil edilmediğini belirtir.
 
-- Kullanıcı Arabirimi pencere Live Unit Testing kapsamı simgesinin bir test metodu tıklayarak, artık UI penceresinde ve kod düzenleyicisinden çıkmak zorunda kalmadan bu bağlamı testinden doğru hata ayıklama seçeneği var. Bu, özellikle başarısız bir test sırasında ararken kullanışlıdır.
+- Bir Live Unit Testing kapsam simgesinin açılır Kullanıcı arabirimi penceresinde bir test yöntemine tıkladığınızda, artık Kullanıcı arabirimi penceresinde bu bağlamdan test etme ve kod düzenleyicisinden çıkmak zorunda kalmadan hata ayıklama seçeneğiniz vardır. Bu, özellikle başarısız bir teste baktığınızda yararlı olur.
 
-- Araçlar/Seçenekler/Live Unit Testing / genel birkaç ek yapılandırılabilir seçeneklerin eklenmiştir. Live Unit Testing için kullanılan bellek sınırı uygularız. Açık çözümünüz için Live Unit Testing kalıcı verileri için dosya yolunu da belirtebilirsiniz.
+- Araçlar/Seçenekler/Live Unit Testing/genel 'e birkaç ek yapılandırılabilir seçenek eklenmiştir. Live Unit Testing için kullanılan belleği büyük bir şekilde kullanabilirsiniz. Ayrıca, açık çözümünüz için kalıcı Live Unit Testing verilerinin dosya yolunu da belirtebilirsiniz.
 
-- Menü çubuğunda, Test/Live Unit Testing altında birkaç ek menü öğeleri eklendi. **Temiz sıfırlama** kalıcı verilerini siler ve yeniden oluşturur. **Seçenek** Araçlar/Seçenekler/Live Unit Testing / genel atlar.
+- Test/Live Unit Testing menü çubuğunun altına birkaç ek menü öğesi eklenmiştir. **Temiz sıfırlama** kalıcı verileri siler ve yeniden oluşturur. **Seçenek** , Araçlar/seçenekler/Live Unit Testing/genel ' i atlar.
 
-- Kaynak kodunda hedeflenen test yöntemleri Live Unit Testing hariç tutmak istediğinizi belirtmek için artık şu öznitelikleri kullanabilirsiniz:
+- Artık Live Unit Testing ' den hedeflenen test yöntemlerini dışlamak istediğiniz kaynak kodu belirtmek için aşağıdaki öznitelikleri kullanabilirsiniz:
 
   - XUnit için: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
   - NUnit için: `[Category("SkipWhenLiveUnitTesting")]`

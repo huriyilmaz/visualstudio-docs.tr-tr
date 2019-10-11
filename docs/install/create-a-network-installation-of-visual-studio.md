@@ -1,7 +1,7 @@
 ---
 title: Bir ağ tabanlı yüklemesini oluşturma
 description: Visual Studio içinde bir kuruluş dağıtımı için bir ağ yükleme noktasını oluşturmayı öğrenin.
-ms.date: 10/01/2019
+ms.date: 10/07/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0c6de85e6f2c5849567751b3232668ec2940cff9
-ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
+ms.openlocfilehash: b297e99c3fbaaabed178930dfad1ac13d5ab1cd8
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71950704"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018882"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Visual Studio 'nun ağ yüklemesi oluşturma
 
@@ -33,23 +33,27 @@ Böylece istemci iş istasyonları, aynı ağ konumunu en son hizmet güncelleş
 
 ## <a name="download-the-visual-studio-bootstrapper"></a>Visual Studio önyükleyicisini yükleyin
 
-İstediğiniz Visual Studio sürümünü indirin. Tıkladığınızdan emin olun **Kaydet**ve ardından **Klasör Aç**.
-
-Kurulumunuzu yürütülebilir&mdash;veya daha özel bir önyükleyici dosya&mdash;aşağıdakilerden biriyle eşleşmesi gerekir.
+İstediğiniz Visual Studio sürümü için bir önyükleyici dosyası indirin. **Kaydet**' i seçtiğinizden emin olun ve sonra **klasörü aç**' ı seçin.
 
 ::: moniker range="vs-2017"
 
-|Sürüm | İndir|
-|-------------|-----------------------|
-|Visual Studio Enterprise | [**vs_enterprise.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2017) |
-|Visual Studio Professional | [**vs_professional.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2017) |
-| Visual Studio Derleme Araçları   | [**vs_buildtools. exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2017) |
+Visual Studio 2017 için bir önyükleyici almak üzere, bunun nasıl yapılacağı hakkında ayrıntılı bilgi için [Visual Studio önceki sürümler](https://visualstudio.microsoft.com/vs/older-downloads/) indirme sayfasına bakın.
 
-Desteklenen diğer bootstrapdenetleyicileri, [vs_feedbackclient. exe](https://aka.ms/vs/15/release/vs_feedbackclient.exe), [vs_TeamExplorer. exe](https://aka.ms/vs/15/release/vs_teamexplorer.exe), [vs_testagent. exe](https://aka.ms/vs/15/release/vs_testagent.exe), [vs_testcontroller. exe](https://aka.ms/vs/15/release/vs_testcontroller.exe)ve [vs_testprofessional. exe](https://aka.ms/vs/15/release/vs_testprofessional.exe)' yi içerir.
+Kurulum çalıştırılabilir dosya @ no__t-0veya daha belirgin olacak şekilde, @ no__t-1önyükleyici dosyası aşağıdakilerden biriyle eşleşmelidir.
+
+| Sürüm | Kısaltın |
+|-------------|-----------------------|
+|Visual Studio Enterprise | **vs_enterprise.exe** |
+|Visual Studio Professional | **vs_professional.exe** |
+|Visual Studio Derleme Araçları   | **vs_buildtools. exe** |
+
+Desteklenen diğer bootstrapdenetleyicileri, **vs_feedbackclient. exe**, **vs_TeamExplorer. exe**, **vs_testagent. exe**, **vs_testcontroller. exe**ve **vs_testprofessional. exe**' yi içerir.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
+
+Kurulumunuzu yürütülebilir&mdash;veya daha özel bir önyükleyici dosya&mdash;aşağıdakilerden biriyle eşleşmesi gerekir.
 
 |Sürüm | İndir|
 |-------------|-----------------------|

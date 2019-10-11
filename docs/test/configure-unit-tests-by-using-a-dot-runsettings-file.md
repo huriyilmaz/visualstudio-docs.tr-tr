@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: bdf67f78d1a4cc7e2d17336a7272b919fcc6fba9
-ms.sourcegitcommit: d3e423a9a4ed773a54d14b247e1b5bfc95de8816
+ms.openlocfilehash: 4194a392eee1d5c9beaa0640f4006d1f01ebbace
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71693020"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262318"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma
 
@@ -28,7 +28,7 @@ Visual Studio 'daki birim testleri, bir *. runsettings* dosyası kullanılarak y
 
 ::: moniker range="vs-2017"
 
-IDE> 'de bir çalıştırma ayarları dosyası belirtmek için test **testi ayarları** > **Test ayarları dosyasını seçin**ve ardından *. runsettings* dosyasını seçin.
+IDE 'de bir çalıştırma ayarları dosyası belirtmek için test > **Test ayarları** > **Test ayarları dosyasını seçin**ve ardından *. runsettings* **dosyasını seçin.**
 
 ![Visual Studio 2017 'de test ayarları Dosya menüsünü seçin](media/select-test-settings-file.png)
 
@@ -91,7 +91,7 @@ Testlerinizi bir *. runsettings* dosyası kullanarak özelleştirmek için şu a
 
 ::: moniker range="vs-2017"
 
-3. **Test** menüsünde test **ayarları** > **Test ayarları dosyasını seçin**. Oluşturduğunuz *. runsettings* dosyasına gidin ve ardından **Tamam**' ı seçin.
+3. **Test menüsünde test** **ayarları** > **Test ayarları dosyasını seçin**. Oluşturduğunuz *. runsettings* dosyasına gidin ve ardından **Tamam**' ı seçin.
 
 ::: moniker-end
 
@@ -211,7 +211,7 @@ Aşağıdaki XML, tipik bir *. runsettings* dosyasının içeriğini gösterir. 
 |Düğüm|Varsayılan|Değerler|
 |-|-|-|
 |**ResultsDirectory**||Test sonuçlarının yerleştirildiği dizin.|
-|**TargetFrameworkVersion**|Framework40|`FrameworkCore10`.NET Core kaynakları için, `FrameworkUap10` UWP tabanlı `Framework45` kaynaklar için, .NET Framework 4,5 ve üzeri için, `Framework40` .NET Framework 4,0 ve `Framework35` .NET Framework 3,5 için.<br /><br />Bu ayar, testleri keşfetmek ve yürütmek için kullanılan birim test çerçevesinin sürümünü belirtir. Birim test projesinin yapı özelliklerinde belirttiğiniz .NET platformu sürümünden farklı olabilir.<br /><br />*. Runsettings* dosyasındaki `TargetFrameworkVersion` öğeyi atlarsanız, platform otomatik olarak oluşturulan ikili dosyaları temel alan çerçeve sürümünü belirler.|
+|**TargetFrameworkVersion**|Framework40|.NET Core kaynakları için `FrameworkCore10`, UWP tabanlı kaynaklar için `FrameworkUap10`, .NET Framework 4,5 ve üzeri için `Framework45`, @no__t 4,0 için .NET Framework-3 ve @no__t 3,5 için .NET Framework-4.<br /><br />Bu ayar, testleri keşfetmek ve yürütmek için kullanılan birim test çerçevesinin sürümünü belirtir. Birim test projesinin yapı özelliklerinde belirttiğiniz .NET platformu sürümünden farklı olabilir.<br /><br />*. Runsettings* dosyasından `TargetFrameworkVersion` öğesini atlarsanız, platform otomatik olarak oluşturulan ikili dosyaları temel alan çerçeve sürümünü belirler.|
 |**TargetPlatform**|x86|x86, x64|
 |**Treattestadaptererrorsasuyarılar**|false|yanlış, doğru|
 |**TestAdaptersPaths**||TestAdapters 'nin bulunduğu dizine ait bir veya daha fazla yol|
@@ -252,12 +252,11 @@ Diğer herhangi bir tanılama veri bağdaştırıcısı türünü özelleştirme
 ```xml
 <TestRunParameters>
     <Parameter name="webAppUrl" value="http://localhost" />
-    <Parameter name="webAppUserName" value="Admin" />
-    <Parameter name="webAppPassword" value="Password" />
+    <Parameter name="docsUrl" value="https://docs.microsoft.com" />
 </TestRunParameters>
 ```
 
-Test çalıştırması parametreleri, çalışma zamanında testlerin kullanabileceği değişkenleri ve değerleri tanımlamak için bir yol sağlar. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.Properties%2A?displayProperty=nameWithType> Özelliği kullanarak parametrelere erişin:
+Test çalıştırması parametreleri, çalışma zamanında testlerin kullanabileceği değişkenleri ve değerleri tanımlamak için bir yol sağlar. @No__t-0 özelliğini kullanarak parametrelere erişin:
 
 ```csharp
 [TestMethod]
@@ -267,7 +266,7 @@ public void HomePageTest()
 }
 ```
 
-Test çalıştırması parametrelerini kullanmak için, test sınıfınız için <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> bir özel alan ve <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> bir ortak özellik ekleyin.
+Test çalıştırması parametrelerini kullanmak için, test sınıfınıza bir Private <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> alanı ve Public <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> özelliği ekleyin.
 
 ### <a name="mstest-run-settings"></a>MSTest çalıştırma ayarları
 
@@ -292,7 +291,7 @@ Bu ayarlar, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribu
 |**SettingsFile**||Burada MSTest bağdaştırıcısıyla kullanılacak bir test ayarları dosyası belirtebilirsiniz. Ayrıca [, Ayarlar menüsünden](#ide)bir test ayarları dosyası belirtebilirsiniz.<br /><br />Bu değeri belirtirseniz, **Forcedlegacymode** öğesini de **true**olarak ayarlamanız gerekir.<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
 |**KeepExecutorAliveAfterLegacyRun**|false|Test çalıştırması tamamlandıktan sonra MSTest kapatılır. Testin bir parçası olarak başlatılan tüm işlemler de sonlandırıldı. Test yürütücüsünü canlı tutmak istiyorsanız, değeri **true**olarak ayarlayın. Örneğin, bu ayarı, tarayıcının kodlanmış UI testleri arasında çalışmasını sağlamak için kullanabilirsiniz.|
 |**DeploymentEnabled**|true|Değeri **false**olarak ayarlarsanız, test yöntetiniz içinde belirttiğiniz dağıtım öğeleri dağıtım dizinine kopyalanmaz.|
-|**CaptureTraceOutput**|true|Kullanarak <xref:System.Diagnostics.Trace.WriteLine%2A?displayProperty=nameWithType>test yönteminizin hata ayıklama izini yazabilirsiniz.|
+|**CaptureTraceOutput**|true|@No__t-0 kullanarak test yönteminizin hata ayıklama izlemeye yazabilirsiniz.|
 |**Deletedeploymentdirectoryaftertestrunistamamlanmıştır**|true|Bir test çalıştırdıktan sonra dağıtım dizinini sürdürmek için bu değeri **false**olarak ayarlayın.|
 |**MapInconclusiveToFailed**|false|Bir test, Sonuçlandırılamayan bir durumla tamamlanırsa **Test Gezgini**'nde atlanan duruma eşlenir. Sonuçlandırılamayan testlerin başarısız olarak görüntülenmesini istiyorsanız değeri **true**olarak ayarlayın.|
 |**Inprocmode**|false|Testlerinizin MSTest bağdaştırıcısıyla aynı işlemde çalıştırılmasını istiyorsanız, bu değeri **true**olarak ayarlayın. Bu ayar, küçük bir performans kazancı sağlar. Ancak bir test bir özel durumla çıkıldığında, kalan testler çalıştırılmaz.|

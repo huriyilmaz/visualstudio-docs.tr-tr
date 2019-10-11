@@ -5,19 +5,19 @@ ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 59c5dfa3d7e1e47fbcd2b0d11a0671b2594125c9
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 61a1f74d964c2d6f43608f23b9898054048bb86b
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923805"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018255"
 ---
 # <a name="understanding-sal"></a>SAL'ı Anlama
 
-Microsoft kaynak kodu ek açıklama dili (SAL), bir işlevin parametrelerini nasıl kullandığını, kendileri hakkında yaptığı varsayımları ve tamamlandığında yaptığı garanti sayısını betimleyen bir dizi ek açıklama sağlar. Ek açıklamalar başlık dosyasında `<sal.h>`tanımlanmıştır. İçin C++ Visual Studio kod analizi, işlevlerinin analizini DEğIşTIRMEk için sal ek açıklamalarını kullanır. Windows sürücü geliştirme için SAL 2,0 hakkında daha fazla bilgi için bkz. [Windows sürücüleri Için sal 2,0 ek açıklamaları](http://go.microsoft.com/fwlink/?LinkId=250979).
+Microsoft kaynak kodu ek açıklama dili (SAL), bir işlevin parametrelerini nasıl kullandığını, kendileri hakkında yaptığı varsayımları ve tamamlandığında yaptığı garanti sayısını betimleyen bir dizi ek açıklama sağlar. Ek açıklamalar `<sal.h>` üstbilgi dosyasında tanımlanmıştır. İçin C++ Visual Studio kod analizi, işlevlerinin analizini DEğIşTIRMEk için sal ek açıklamalarını kullanır. Windows sürücü geliştirme için SAL 2,0 hakkında daha fazla bilgi için bkz. [Windows sürücüleri Için sal 2,0 ek açıklamaları](http://go.microsoft.com/fwlink/?LinkId=250979).
 
 Yerel olarak, C C++ ve geliştiricilerin sürekli olarak hızlı bir şekilde ifade ve ınvaryans sağlaması için yalnızca sınırlı yollar sağlar. SAL ek açıklamalarını kullanarak, bunları kullanan geliştiricilerin bunları nasıl kullanacağınızı daha iyi anlayabilmesi için işlevlerinizi daha ayrıntılı bir şekilde tanımlayabilirsiniz.
 
@@ -27,7 +27,7 @@ Yalnızca belirtilen SAL, derleyicinin kodunuzu sizin yerinize denetlemesini sa�
 
 ### <a name="sal-makes-code-more-valuable"></a>SAL, kodu daha değerli hale getirir
 
-SAL, kod tasarımınızı hem insanlar hem de kod analizi araçları için daha anlaşılır hale getirmenize yardımcı olabilir. C çalışma zamanı işlevini `memcpy`gösteren bu örneği göz önünde bulundurun:
+SAL, kod tasarımınızı hem insanlar hem de kod analizi araçları için daha anlaşılır hale getirmenize yardımcı olabilir. C çalışma zamanı işlevini gösteren `memcpy` olan bu örneği göz önünde bulundurun:
 
 ```cpp
 
@@ -38,18 +38,18 @@ void * memcpy(
 );
 ```
 
-Bu işlevin ne yaptığını söyleyebilir misiniz? Bir işlev uygulandığında veya çağrıldığında, programın doğruluğunu sağlamak için bazı özellikler tutulması gerekir. Yalnızca örnekteki gibi bir bildirime bakarak ne olduğunu bilemezsiniz. SAL ek açıklamaları olmadan belgeleri veya kod açıklamalarını bilmeniz gerekir. İşte MSDN belgeleri `memcpy` şöyle:
+Bu işlevin ne yaptığını söyleyebilir misiniz? Bir işlev uygulandığında veya çağrıldığında, programın doğruluğunu sağlamak için bazı özellikler tutulması gerekir. Yalnızca örnekteki gibi bir bildirime bakarak ne olduğunu bilemezsiniz. SAL ek açıklamaları olmadan belgeleri veya kod açıklamalarını bilmeniz gerekir. @No__t için MSDN belgeleri: 0 şöyle diyor!
 
 > "Src 'nin Count baytlarını hedefe kopyalar. Kaynak ve hedef çakışırsa, memcservicebehavior davranışı tanımsızdır. Çakışan bölgeleri işlemek için memmove kullanın.
 > **Güvenlik Notno:** Hedef arabelleğinin boyut veya Kaynak arabelleğinden daha büyük olduğundan emin olun. Daha fazla bilgi için bkz. arabellek taşmalarını önleme. "
 
 Belgeler, kodunuzun, programın doğruluğunu sağlamak için belirli özellikleri sürdürmek için sahip olduğunu öneren birkaç bilgi içerir:
 
-- `memcpy``count` bayt sayısını Kaynak arabelleğinden hedef arabelleğe kopyalar.
+- `memcpy` bayt @no__t Kaynak arabelleğinden hedef arabelleğe kopyalar.
 
 - Hedef arabellek en az kaynak arabelleği kadar büyük olmalıdır.
 
-Ancak, derleyici belgeleri veya resmi olmayan açıklamaları okuyamaz. İki arabellek ile `count`arasında bir ilişki olduğunu ve aynı zamanda bir ilişki hakkında etkili bir şekilde tahmin edemediğini bilmez. SAL, burada gösterildiği gibi işlevin özellikleri ve uygulanması hakkında daha fazla açıklık sağlayabilir:
+Ancak, derleyici belgeleri veya resmi olmayan açıklamaları okuyamaz. İki arabellek ve `count` arasında bir ilişki olduğunu ve aynı zamanda bir ilişki hakkında etkili bir şekilde tahmin edemediğini bilmez. SAL, burada gösterildiği gibi işlevin özellikleri ve uygulanması hakkında daha fazla açıklık sağlayabilir:
 
 ```cpp
 
@@ -60,7 +60,7 @@ void * memcpy(
 );
 ```
 
-Bu ek açıklamaların MSDN belgelerindeki bilgilere benzediğine dikkat edin, ancak bunlar daha kısa ve anlamlı bir düzene uyar. Bu kodu okurken, bu işlevin özelliklerini hızlı bir şekilde anlayabilmeniz ve arabellek taşması güvenlik sorunlarından kaçının. Daha da iyisi, SAL 'un sağladığı anlam desenleri, olası hataların erken keşfinde otomatik kod çözümleme araçlarının verimliliğini ve verimliliğini artırır. Birisinin bu önemlidir uygulamasını `wmemcpy`yazabileceğini düşünün:
+Bu ek açıklamaların MSDN belgelerindeki bilgilere benzediğine dikkat edin, ancak bunlar daha kısa ve anlamlı bir düzene uyar. Bu kodu okurken, bu işlevin özelliklerini hızlı bir şekilde anlayabilmeniz ve arabellek taşması güvenlik sorunlarından kaçının. Daha da iyisi, SAL 'un sağladığı anlam desenleri, olası hataların erken keşfinde otomatik kod çözümleme araçlarının verimliliğini ve verimliliğini artırır. Birisinin bu @no__t önemlidir uygulamasını yazabileceğini düşünün-0:
 
 ```cpp
 
@@ -82,7 +82,7 @@ Bu uygulama, bir ortak-tek hatası içerir. Neyse ki, kod yazarı SAL arabellek 
 ### <a name="sal-basics"></a>SAL temel kavramları
 SAL, kullanım düzenine göre sınıflandırılan dört temel parametre türünü tanımlar.
 
-|Kategori|Parametre ek açıklaması|Açıklama|
+|Category|Parametre ek açıklaması|Açıklama|
 |--------------|--------------------------|-----------------|
 |**Çağrılan işleve giriş**|`_In_`|Veriler çağrılan işleve geçirilir ve salt okunurdur.|
 |**Çağrılan işleve giriş ve arayana çıkış**|`_Inout_`|Kullanılabilir veriler işleve geçirilir ve potansiyel olarak değiştirilebilir.|
@@ -114,13 +114,13 @@ Bu bölümde, temel SAL ek açıklamaları için kod örnekleri gösterilmektedi
 
 2. Menü çubuğunda **Oluştur**, **çözüm üzerinde Kod analizini Çalıştır**' ı seçin.
 
-     Bu bölümdeki örneği\_degöz önünde bulundurun. \_ Kod analizini üzerinde çalıştırırsanız, bu uyarı görüntülenir:
+     Bu bölümde @ no__t-1 ' de \_' i göz önünde bulundurun. Kod analizini üzerinde çalıştırırsanız, bu uyarı görüntülenir:
 
     > **C6387 geçersiz parametre değeri** ' pInt ', ' 0 ' olabilir: Bu, ' InCallee ' işlevinin belirtimine bağlı kalmıyor.
 
-### <a name="example-the-_in_-annotation"></a>Örnek: \_In\_ ek açıklaması
+### <a name="example-the-_in_-annotation"></a>Örnek: @No__t-0In @ no__t-1 ek açıklaması
 
-`_In_` Ek açıklama şunları gösterir:
+@No__t-0 ek açıklaması şunları belirtir:
 
 - Parametrenin geçerli olması ve değiştirilmeyecek olması gerekir.
 
@@ -128,9 +128,9 @@ Bu bölümde, temel SAL ek açıklamaları için kod örnekleri gösterilmektedi
 
 - Çağıranın arabelleği sağlaması ve başlatması gerekir.
 
-- `_In_`"salt okunurdur" belirtir. Yaygın bir hata, bunun yerine `_In_` `_Inout_` ek açıklamasına sahip olması gereken bir parametreye uygulanmalıdır.
+- `_In_` "salt okunurdur" öğesini belirtir. Yaygın bir hata, bunun yerine `_Inout_` ek açıklamasına sahip olması gereken bir parametreye `_In_` ' i uygulamak.
 
-- `_In_`işaretçiye izin verilir, ancak işaretçi olmayan bir şekilde çözümleyici tarafından yok sayılır.
+- `_In_` ' a izin verilir, ancak işaretçi olmayan yapı ve çözümleyici tarafından yok sayılır.
 
 ```cpp
 void InCallee(_In_ int *pInt)
@@ -154,11 +154,11 @@ void BadInCaller()
 }
 ```
 
-Bu örnekte Visual Studio Code analizini kullanıyorsanız, çağıranların için `pInt`başlatılmış bir arabelleğe null olmayan bir işaretçi iletkullandığını doğrular. Bu durumda, `pInt` işaretçi null olamaz.
+Bu örnekte Visual Studio Code analiz kullanıyorsanız, çağıranların `pInt` için başlatılmış bir arabelleğe null olmayan bir işaretçi iletkullandığını doğrular. Bu durumda, `pInt` işaretçisi NULL olamaz.
 
-### <a name="example-the-_in_opt_-annotation"></a>Örnek: Tercih edilenkabul\_ ek açıklaması \_\_
+### <a name="example-the-_in_opt_-annotation"></a>Örnek: @No__t-0In @ no__t-1opt @ no__t-2 ek açıklaması
 
-`_In_opt_`, ile aynıdır `_In_`, ancak giriş parametresinin null olmasına izin verilir ve bu nedenle işlevin bunu denetlemesi gerekir.
+`_In_opt_`, giriş parametresinin NULL olmasına izin verildiğinden ve bu nedenle işlevin bunu denetlemesi gereken `_In_` ile aynıdır.
 
 ```cpp
 
@@ -184,9 +184,9 @@ void InOptCaller()
 
 Visual Studio Code analizi, işlevin arabelleğe erişmeden önce NULL olduğunu kontrol ettiğini doğrular.
 
-### <a name="example-the-_out_-annotation"></a>Örnek: \_Out\_ ek açıklaması
+### <a name="example-the-_out_-annotation"></a>Örnek: @No__t-0Out @ no__t-1 ek açıklaması
 
-`_Out_`bir öğe arabelleğini işaret eden NULL olmayan bir işaretçinin geçirildiği ve işlevin öğeyi Başlatan ortak bir senaryoyu destekler. Çağıranın çağrıdan önce arabelleği başlatması gerekmez; çağrılan işlev, döndürülmadan önce başlatmayı taahhüt eder.
+`_Out_`, öğe arabelleğini işaret eden NULL olmayan bir işaretçinin geçirildiği ve işlevin öğeyi Başlatan ortak bir senaryoyu destekler. Çağıranın çağrıdan önce arabelleği başlatması gerekmez; çağrılan işlev, döndürülmadan önce başlatmayı taahhüt eder.
 
 ```cpp
 void GoodOutCallee(_Out_ int *pInt)
@@ -208,11 +208,11 @@ void OutCaller()
 }
 ```
 
-Visual Studio Code çözümleme aracı, çağıranın null olmayan bir işaretçiyi bir arabelleğe `pInt` geçirmediğini ve döndürülmeden önce arabelleğin işlev tarafından başlatıldığını doğrular.
+Visual Studio Code çözümleme aracı, çağıranın NULL olmayan bir işaretçiyi `pInt` için bir arabelleğe geçirdiğinden ve arabelleğin döndürülmeden önce işlevin tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_out_opt_-annotation"></a>Örnek: \_Out\_optek\_ açıklaması
+### <a name="example-the-_out_opt_-annotation"></a>Örnek: @No__t-0Out @ no__t-1opt @ no__t-2 ek açıklaması
 
-`_Out_opt_`, parametresinin null olmasına `_Out_`izin verildiğinden ve bu nedenle işlevin bunu denetlemesi gerektiği durumlar dışında, ile aynıdır.
+`_Out_opt_` `_Out_` ile aynıdır, ancak parametrenin NULL olmasına izin verilir ve bu nedenle işlevin bunu denetlemesi gerekir.
 
 ```cpp
 void GoodOutOptCallee(_Out_opt_ int *pInt)
@@ -235,14 +235,14 @@ void OutOptCaller()
 }
 ```
 
-Visual Studio Code analizi, bu işlevin, başvuru yapılmadan önce `pInt` null olduğunu denetlediğini `pInt` ve null olmadığını, arabelleğin döndürülmeden önce işlevin tarafından başlatıldığını doğrular.
+Visual Studio Code analizi, bu işlevin, `pInt` ' a başvurulmadan önce NULL olduğunu kontrol ettiğini ve `pInt` NULL değilse, arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_inout_-annotation"></a>Örnek: InOut\_ekaçıklaması \_
+### <a name="example-the-_inout_-annotation"></a>Örnek: @No__t-0Inout @ no__t-1 ek açıklaması
 
-`_Inout_`işlev tarafından değiştirilebilen bir işaretçi parametresine açıklama eklemek için kullanılır. İşaretçi, çağrıdan önce geçerli başlatılmış verileri göstermelidir ve değişse bile, yine de dönüş üzerinde geçerli bir değere sahip olmalıdır. Ek açıklama, işlevin tek öğeli arabelleğe serbestçe okunabilir ve yazılabilir olabileceğini belirtir. Çağıranın arabelleği sağlaması ve başlatması gerekir.
+`_Inout_`, işlev tarafından değiştirilebilen bir işaretçi parametresine açıklama eklemek için kullanılır. İşaretçi, çağrıdan önce geçerli başlatılmış verileri göstermelidir ve değişse bile, yine de dönüş üzerinde geçerli bir değere sahip olmalıdır. Ek açıklama, işlevin tek öğeli arabelleğe serbestçe okunabilir ve yazılabilir olabileceğini belirtir. Çağıranın arabelleği sağlaması ve başlatması gerekir.
 
 > [!NOTE]
-> Benzer `_Out_`şekilde `_Inout_` , değiştirilebilir bir değere uygulamanız gerekir.
+> @No__t-0 gibi `_Inout_` değiştirilebilir bir değer için geçerlidir.
 
 ```cpp
 void InOutCallee(_Inout_ int *pInt)
@@ -266,11 +266,11 @@ void BadInOutCaller()
 }
 ```
 
-Visual Studio Code analizi, çağıranların için `pInt`başlatılmış bir arabelleğe null olmayan bir işaretçi geçirmektedir ve bu, `pInt` döndürmeden önce, hala null olmayan ve arabelleğin başlatılmış olduğunu doğrular.
+Visual Studio Code analizi, çağıranların `pInt` için başlatılmış bir arabelleğe NULL olmayan bir işaretçi geçirmektedir ve döndürmeden önce, `pInt` ' in NULL olmadığı ve arabelleğin başlatıldığını doğrular.
 
-### <a name="example-the-_inout_opt_-annotation"></a>Örnek: InOut\_opt\_ ek açıklaması \_
+### <a name="example-the-_inout_opt_-annotation"></a>Örnek: @No__t-0ınout @ no__t-1opt @ no__t-2 ek açıklaması
 
-`_Inout_opt_`, ile aynıdır `_Inout_`, ancak giriş parametresinin null olmasına izin verilir ve bu nedenle işlevin bunu denetlemesi gerekir.
+`_Inout_opt_`, giriş parametresinin NULL olmasına izin verildiğinden ve bu nedenle işlevin bunu denetlemesi gereken `_Inout_` ile aynıdır.
 
 ```cpp
 void GoodInOutOptCallee(_Inout_opt_ int *pInt)
@@ -295,9 +295,9 @@ void InOutOptCaller()
 }
 ```
 
-Visual Studio Code analizi, bu işlevin arabelleğe erişmeden önce null olduğunu kontrol ettiğini ve null olmaması durumunda `pInt` , arabelleğin döndürülmeden önce işlev tarafından başlatılışını doğrular.
+Visual Studio Code analizi, bu işlevin arabelleğe erişmeden önce NULL olduğunu denetlediğini ve `pInt` ' ı NULL değilse, arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_outptr_-annotation"></a>Örnek: Outptr\_ekaçıklaması \_
+### <a name="example-the-_outptr_-annotation"></a>Örnek: @No__t-0Outptr @ no__t-1 ek açıklaması
 
 `_Outptr_`, bir işaretçiye dönmesi amaçlanan bir parametreye açıklama eklemek için kullanılır.  Parametrenin kendisi NULL olmamalı ve çağrılan işlev içinde NULL olmayan bir işaretçi döndürüyor ve işaretçi başlatılmış verileri işaret ediyor.
 
@@ -325,11 +325,11 @@ void OutPtrCaller()
 }
 ```
 
-Visual Studio Code Analizi `*pInt`, çağıranın null olmayan bir işaretçi geçirmediğini ve döndürülmeden önce arabelleğin işlev tarafından başlatıldığını doğrular.
+Visual Studio Code analizi, çağıranın `*pInt` için NULL olmayan bir işaretçi geçirdiğinden ve arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_outptr_opt_-annotation"></a>Örnek: Outptr\_opt\_ ek açıklaması \_
+### <a name="example-the-_outptr_opt_-annotation"></a>Örnek: @No__t-0Outptr @ no__t-1opt @ no__t-2 ek açıklaması
 
-`_Outptr_opt_``_Outptr_`, parametresinin isteğe bağlı olması dışında; çağıran, parametre için null bir işaretçiye geçebilirler.
+`_Outptr_opt_`, parametrenin isteğe bağlı olması dışında `_Outptr_` ile aynıdır; çağıran, parametre için NULL bir işaretçiye geçebilirler.
 
 ```cpp
 void GoodOutPtrOptCallee(_Outptr_opt_ int **pInt)
@@ -357,11 +357,11 @@ void OutPtrOptCaller()
 }
 ```
 
-Visual Studio Code analizi, bu işlevin, başvuru yapılmadan önce `*pInt` null olduğunu kontrol ettiğini ve arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
+Visual Studio Code analizi, bu işlevin, `*pInt` ' a başvurulmadan önce NULL olduğunu kontrol ettiğini ve arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Örnek: Birlikte \_\_gelenbaşarıekaçıklaması \_\_
+### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Örnek: @No__t-2Out @ no__t-3 ile birlikte \_Success @ no__t-1 ek açıklaması
 
-Ek açıklamalar, çoğu nesneye uygulanabilir.  Özellikle, bir işlevin tamamına açıklama ekleyebilirsiniz.  Bir işlevin en belirgin özelliklerinden biri, başarılı veya başarısız olmasına neden olabilir. Ancak, bir arabellek ve boyutu arasındaki ilişki gibi, C/C++ işlev başarısı veya başarısızlığı ifade edemez. `_Success_` Ek açıklamayı kullanarak bir işlevin başarısını nasıl göründüğünü söyleyebilirsiniz.  `_Success_` Ek açıklamanın parametresi, yalnızca true olduğunda işlevin başarılı olduğunu gösterir. İfade, ek açıklama ayrıştırıcısının işleyebileceği herhangi bir şey olabilir. İşlev döndürmede sonra ek açıklamaların etkileri yalnızca işlev başarılı olduğunda geçerlidir. Bu örnek, doğru `_Success_` şeyi yapmak `_Out_` için ile nasıl etkileşimde bulunacağını gösterir. Dönüş değerini göstermek için anahtar `return` sözcüğünü kullanabilirsiniz.
+Ek açıklamalar, çoğu nesneye uygulanabilir.  Özellikle, bir işlevin tamamına açıklama ekleyebilirsiniz.  Bir işlevin en belirgin özelliklerinden biri, başarılı veya başarısız olmasına neden olabilir. Ancak, bir arabellek ve boyutu arasındaki ilişki gibi, C/C++ işlev başarısı veya başarısızlığı ifade edemez. @No__t-0 ek açıklamasını kullanarak bir işlevin başarısını nasıl göründüğünü söyleyebilirsiniz.  @No__t-0 ek açıklamasına yönelik parametre, yalnızca true olduğunda işlevin başarılı olduğunu gösterir. İfade, ek açıklama ayrıştırıcısının işleyebileceği herhangi bir şey olabilir. İşlev döndürmede sonra ek açıklamaların etkileri yalnızca işlev başarılı olduğunda geçerlidir. Bu örnek, `_Success_` ' ın doğru şeyi yapmak için `_Out_` ile nasıl etkileşime gireceğini gösterir. Dönüş değerini göstermek için `return` anahtar sözcüğünü kullanabilirsiniz.
 
 ```cpp
 _Success_(return != false) // Can also be stated as _Success_(return)
@@ -376,7 +376,7 @@ bool GetValue(_Out_ int *pInt, bool flag)
 }
 ```
 
-Ek açıklama Visual Studio Code analizine, çağıranın null olmayan bir işaretçiyi `pInt`arabelleğe geçirdiğini ve arabelleğin döndürülmeden önce işlevin tarafından başlatıldığını doğrulamasına neden olur. `_Out_`
+@No__t-0 ek açıklaması Visual Studio Code analizinin, çağıran `pInt` için bir arabelleğe NULL olmayan bir işaretçi geçirdiğini ve arabelleğin döndürülmeden önce işlevin tarafından başlatıldığını doğrulamasına neden olur.
 
 ## <a name="sal-best-practice"></a>SAL En Iyi uygulama
 

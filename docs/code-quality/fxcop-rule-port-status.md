@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 07a5130edd534008b4343ab439bf20bf63bc3cde
-ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.openlocfilehash: 04a4738181c579617711150da4eb99e08aeb039c
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062407"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018427"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
@@ -27,7 +27,7 @@ Roslyn-çözümleyiciler depolarındaki otomatik olarak oluşturulan [Belgeler s
 
 Bu sayfadaki tarihin itibariyle, [FxCop çözümleyicileri](install-fxcop-analyzers.md) 'nin kapsamında yer alan FxCop kuralları listesi şunları içerir:
 
-Kural Kimliği | Başlık
+Kural Kimliği | Unvan
 --------|---------
 [CA1000](ca1000-do-not-declare-static-members-on-generic-types.md) | Genel türlerde statik üyeler belirtme
 [CA1001](ca1001-types-that-own-disposable-fields-should-be-disposable.md) | Atılabilen alanlara sahip türler atılabilir olmalıdır
@@ -67,8 +67,8 @@ Kural Kimliği | Başlık
 [CA1063](ca1063-implement-idisposable-correctly.md) | IDisposable 'ı doğru uygulayın
 [CA1064](ca1064-exceptions-should-be-public.md) | Özel durumlar genel olmalıdır
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | Beklenmeyen konumlarda özel durum harekete geçirmeyin
-CA1066 | Tür {0} , eşit olarak\<geçersiz kılındığından IEquatable T > uygulamalıdır
-CA1067 | IEquatable\<T > uygularken Object. Equals (nesne) öğesini geçersiz kıl
+CA1066 | @No__t-0, eşit olarak geçersiz kılındığından IEquatable @ no__t-1T > uygulamalıdır
+CA1067 | IEquatable @ no__t-0T > uygularken Object. Equals (nesne) öğesini geçersiz kıl
 [CA1068](ca1068.md) | CancellationToken parametreleri en sonda olmalıdır
 CA1200 | cref etiketlerini ön ek ile kullanmaktan kaçının
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | Harfleri yerelleştirilmiş parametreler olarak göndermeyin
@@ -149,28 +149,28 @@ CA2010 | PreserveSigAttribute ile işaretlenmiş yöntemlerin döndürdüğü de
 [CA2242](ca2242-test-for-nan-correctly.md) | NaN için doğru test edin
 [CA2243](ca2243-attribute-string-literals-should-parse-correctly.md) | Öznitelik dize harfleri doğru çözümlenmelidir
 CA2244 | Dizini oluşturulmuş öğe başlatmaları yinelenmeyin
-[CA2300](ca2300-do-not-use-insecure-deserializer-binaryformatter.md) | Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın
-[CA2301](ca2301-do-not-call-binaryformatter-deserialize-without-first-setting-binaryformatter-binder.md) | İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın
-[CA2302](ca2302-ensure-binaryformatter-binder-is-set-before-calling-binaryformatter-deserialize.md) | BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun
-[CA2305](ca2305-do-not-use-insecure-deserializer-losformatter.md) | Güvenli olmayan seri kaldırıcı LosFormatter kullanmayın
-[CA2310](ca2310-do-not-use-insecure-deserializer-netdatacontractserializer.md) | Güvenli olmayan seri kaldırıcı NetDataContractSerializer kullanmayın
-[CA2311](ca2311-do-not-deserialize-without-first-setting-netdatacontractserializer-binder.md) | İlk olarak NetDataContractSerializer.Binder öğesini ayarlamadan seri durumdan çıkarmayın
-[CA2312](ca2312-ensure-netdatacontractserializer-binder-is-set-before-deserializing.md) | Seri durumdan çıkarmadan önce NetDataContractSerializer.Binder öğesinin ayarlandığından emin olun
-[CA2315](ca2315-do-not-use-insecure-deserializer-objectstateformatter.md) | Güvenli olmayan seri kaldırıcı ObjectStateFormatter kullanmayın
+[CA2300](ca2300.md) | Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın
+[CA2301](ca2301.md) | İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın
+[CA2302](ca2302.md) | BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun
+[CA2305](ca2305.md) | Güvenli olmayan seri kaldırıcı LosFormatter kullanmayın
+[CA2310](ca2310.md) | Güvenli olmayan seri kaldırıcı NetDataContractSerializer kullanmayın
+[CA2311](ca2311.md) | İlk olarak NetDataContractSerializer.Binder öğesini ayarlamadan seri durumdan çıkarmayın
+[CA2312](ca2312.md) | Seri durumdan çıkarmadan önce NetDataContractSerializer.Binder öğesinin ayarlandığından emin olun
+[CA2315](ca2315.md) | Güvenli olmayan seri kaldırıcı ObjectStateFormatter kullanmayın
 [CA2321](ca2321.md) | SimpleTypeResolver kullanarak JavaScriptSerializer ile seri durumdan çıkarmayın
 [CA2322](ca2322.md) | Seri durumdan çıkarmadan önce SimpleTypeResolver ile JavaScriptSerializer’ın başlatılmadığından emin olun
-[CA3001](ca3001-review-code-for-sql-injection-vulnerabilities.md) | SQL ekleme güvenlik açıkları için inceleme kodu
-[CA3002](ca3002-review-code-for-xss-vulnerabilities.md) | XSS güvenlik açıkları için inceleme kodu
-[CA3003](ca3003-review-code-for-file-path-injection-vulnerabilities.md) | Dosya yolu ekleme güvenlik açıkları için inceleme kodu
-[CA3004](ca3004-review-code-for-information-disclosure-vulnerabilities.md) | Bilgilerin açığa çıkmasıyla ilgili güvenlik açıkları için inceleme kodu
-[CA3005](ca3005-review-code-for-ldap-injection-vulnerabilities.md) | LDAP ekleme güvenlik açıkları için inceleme kodu
-[CA3006](ca3006-review-code-for-process-command-injection-vulnerabilities.md) | İşlem komutu ekleme güvenlik açıkları için inceleme kodu
-[CA3007](ca3007-review-code-for-open-redirect-vulnerabilities.md) | Açık yeniden yönlendirme güvenlik açıkları için inceleme kodu
-[CA3008](ca3008-review-code-for-xpath-injection-vulnerabilities.md) | XPath ekleme güvenlik açıkları için inceleme kodu
-[CA3009](ca3009-review-code-for-xml-injection-vulnerabilities.md) | XML ekleme güvenlik açıkları için inceleme kodu
-[CA3010](ca3010-review-code-for-xaml-injection-vulnerabilities.md) | XAML ekleme güvenlik açıkları için inceleme kodu
-[CA3011](ca3011-review-code-for-dll-injection-vulnerabilities.md) | DLL ekleme güvenlik açıkları için inceleme kodu
-[CA3012](ca3012-review-code-for-regex-injection-vulnerabilities.md) | Normal ifade ekleme güvenlik açıkları için inceleme kodu
+[CA3001](ca3001.md) | SQL ekleme güvenlik açıkları için inceleme kodu
+[CA3002](ca3002.md) | XSS güvenlik açıkları için inceleme kodu
+[CA3003](ca3003.md) | Dosya yolu ekleme güvenlik açıkları için inceleme kodu
+[CA3004](ca3004.md) | Bilgilerin açığa çıkmasıyla ilgili güvenlik açıkları için inceleme kodu
+[CA3005](ca3005.md) | LDAP ekleme güvenlik açıkları için inceleme kodu
+[CA3006](ca3006.md) | İşlem komutu ekleme güvenlik açıkları için inceleme kodu
+[CA3007](ca3007.md) | Açık yeniden yönlendirme güvenlik açıkları için inceleme kodu
+[CA3008](ca3008.md) | XPath ekleme güvenlik açıkları için inceleme kodu
+[CA3009](ca3009.md) | XML ekleme güvenlik açıkları için inceleme kodu
+[CA3010](ca3010.md) | XAML ekleme güvenlik açıkları için inceleme kodu
+[CA3011](ca3011.md) | DLL ekleme güvenlik açıkları için inceleme kodu
+[CA3012](ca3012.md) | Normal ifade ekleme güvenlik açıkları için inceleme kodu
 CA3061 | URL 'ye göre şema eklemeyin
 [CA3075](ca3075-insecure-dtd-processing.md) | XML 'de güvenli olmayan DTD işleme
 [CA3076](ca3076-insecure-xslt-script-execution.md) | Güvenli olmayan XSLT betiği işleme.

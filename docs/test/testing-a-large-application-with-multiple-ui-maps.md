@@ -1,5 +1,5 @@
 ---
-title: Birden çok UI haritası olan büyük bir uygulama testi
+title: Birden Çok UI Haritası Bulunan Büyük Uygulamaları Test Etme
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4eb49e4e84f61e817e3df8bbbdd20c6922d180ee
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9cb534fc08706ef56ebbc85afe1500e4424196ad
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926737"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018898"
 ---
 # <a name="test-a-large-application-with-multiple-ui-maps"></a>Birden çok UI haritası ile büyük bir uygulamayı test etme
 
@@ -50,11 +50,11 @@ Bu tür durumların her birinde birden çok UI haritası oluşturun:
 
 ### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>Kodlanmış UI test projenize bir UI haritası eklemek için
 
-1. **Çözüm Gezgini**' de, tüm UI haritalarını depolamak IÇIN kodlanmış UI test projenizde bir klasör oluşturmak için, kodlanmış UI test projesi dosyasına sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' ü seçin. Örneğin, adını `UIMaps`yazabilirsiniz.
+1. **Çözüm Gezgini**' de, tüm UI haritalarını depolamak IÇIN kodlanmış UI test projenizde bir klasör oluşturmak için, kodlanmış UI test projesi dosyasına sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' ü seçin. Örneğin, `UIMaps` olarak adlandırın.
 
     Yeni klasör, kodlanmış UI test projesi altında görüntülenir.
 
-2. `UIMaps` Klasöre sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **Yeni öğe**' yi seçin.
+2. @No__t-0 klasörüne sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **Yeni öğe**' yi seçin.
 
     **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
 
@@ -77,13 +77,13 @@ Bu tür durumların her birinde birden çok UI haritası oluşturun:
 
    Çoğu durumda, uygulamanızın en üst düzey penceresi tüm sihirbazlar, formlar ve sayfalar için sabit kalır. Her kullanıcı arabirimi eşlemesi üst düzey pencere için bir sınıfa sahip olsa da, tüm haritalar muhtemelen uygulamanızın tüm bileşenlerinin çalıştırıldığı en üst düzey pencereye başvurıyordur. Kodlanmış UI testleri, üst düzey pencereden başlayarak yukarı doğru bir şekilde yukarıdan aşağı doğru olan denetimleri arar, bu nedenle karmaşık bir uygulamada, gerçek üst düzey pencere her kullanıcı arabirimi eşlemesinde yinelenebilir. Gerçek üst düzey pencere yinelendiyse, bu pencere değişirse birden çok değişiklik olur. Bu, UI haritaları arasında geçiş yaparken performans sorunlarına neden olabilir.
 
-   Bu etkiyi en aza indirmek için, bu kullanıcı `CopyFrom()` arabirimi eşlemesindeki yeni en üst düzey pencerenin ana en üst düzey pencereyle aynı olduğundan emin olmak için yöntemini kullanabilirsiniz.
+   Bu etkiyi en aza indirmek için, Kullanıcı arabirimi haritadaki yeni en üst düzey pencerenin ana en üst düzey pencereyle aynı olduğundan emin olmak için `CopyFrom()` yöntemini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
 Aşağıdaki örnek, çeşitli kullanıcı arabirimi haritalarında oluşturulan sınıflar tarafından temsil edilen her bileşene ve onların alt denetimlerine erişim sağlayan bir yardımcı program sınıfının parçasıdır.
 
-Bu örnekte, adlı `Contoso` bir Web uygulamasının bir giriş sayfası, bir ürün sayfası ve bir alışveriş sepeti sayfası vardır. Bu sayfaların her biri, tarayıcı penceresi olan ortak bir üst düzey pencereyi paylaşır. Her sayfa için bir kullanıcı arabirimi haritası vardır ve yardımcı program sınıfının aşağıdakine benzer bir kodu vardır:
+Bu örnekte, `Contoso` adlı bir Web uygulamasının bir giriş sayfası, bir ürün sayfası ve bir alışveriş sepeti sayfası vardır. Bu sayfaların her biri, tarayıcı penceresi olan ortak bir üst düzey pencereyi paylaşır. Her sayfa için bir kullanıcı arabirimi haritası vardır ve yardımcı program sınıfının aşağıdakine benzer bir kodu vardır:
 
 ```csharp
 using ContosoProject.UIMaps;

@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1131f9cf0e77fd4fe68e4bc5c033491aa6dd34e1
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 85bf4e140b3a379221c3b7e5a05428b29e3a985b
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585196"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018386"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>Yönetilen kod için Güvenlik Kuralları kural kümesi
 
@@ -64,25 +64,25 @@ Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarma
 |[CA2147](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md)|Saydam metotlar güvenlik onay deyimlerini kullanmamalıdır|
 |[CA2149](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|Saydam metotlar yerel kod içine çağırmamalıdır|
 |[CA2210](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md)|Derlemelerin geçerli tanımlayıcı adları olmalıdır|
-|[CA2300](ca2300-do-not-use-insecure-deserializer-binaryformatter.md)|Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın|
-|[CA2301](ca2301-do-not-call-binaryformatter-deserialize-without-first-setting-binaryformatter-binder.md)|İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın|
-|[CA2302](ca2302-ensure-binaryformatter-binder-is-set-before-calling-binaryformatter-deserialize.md)|BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun|
-|[CA2305](ca2305-do-not-use-insecure-deserializer-losformatter.md)|Güvenli olmayan seri kaldırıcı LosFormatter kullanmayın|
-|[CA2310](ca2310-do-not-use-insecure-deserializer-netdatacontractserializer.md)|Güvenli olmayan seri kaldırıcı NetDataContractSerializer kullanmayın|
-|[CA2311](ca2311-do-not-deserialize-without-first-setting-netdatacontractserializer-binder.md)|İlk olarak NetDataContractSerializer.Binder öğesini ayarlamadan seri durumdan çıkarmayın|
-|[CA2312](ca2312-ensure-netdatacontractserializer-binder-is-set-before-deserializing.md)|Seri durumdan çıkarmadan önce NetDataContractSerializer.Binder öğesinin ayarlandığından emin olun|
-|[CA2315](ca2315-do-not-use-insecure-deserializer-objectstateformatter.md)|Güvenli olmayan seri kaldırıcı ObjectStateFormatter kullanmayın|
+|[CA2300](ca2300.md)|Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın|
+|[CA2301](ca2301.md)|İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın|
+|[CA2302](ca2302.md)|BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun|
+|[CA2305](ca2305.md)|Güvenli olmayan seri kaldırıcı LosFormatter kullanmayın|
+|[CA2310](ca2310.md)|Güvenli olmayan seri kaldırıcı NetDataContractSerializer kullanmayın|
+|[CA2311](ca2311.md)|İlk olarak NetDataContractSerializer.Binder öğesini ayarlamadan seri durumdan çıkarmayın|
+|[CA2312](ca2312.md)|Seri durumdan çıkarmadan önce NetDataContractSerializer.Binder öğesinin ayarlandığından emin olun|
+|[CA2315](ca2315.md)|Güvenli olmayan seri kaldırıcı ObjectStateFormatter kullanmayın|
 |[CA2321](ca2321.md)|SimpleTypeResolver kullanarak JavaScriptSerializer ile seri durumdan çıkarmayın|
 |[CA2322](ca2322.md)|Seri durumdan çıkarmadan önce SimpleTypeResolver ile JavaScriptSerializer’ın başlatılmadığından emin olun|
-|[CA3001](../code-quality/ca3001-review-code-for-sql-injection-vulnerabilities.md)|SQL ekleme güvenlik açıkları için inceleme kodu|
-|[CA3002](../code-quality/ca3002-review-code-for-xss-vulnerabilities.md)|XSS güvenlik açıkları için inceleme kodu|
-|[CA3003](../code-quality/ca3003-review-code-for-file-path-injection-vulnerabilities.md)|Dosya yolu ekleme güvenlik açıkları için inceleme kodu|
-|[CA3004](../code-quality/ca3004-review-code-for-information-disclosure-vulnerabilities.md)|Bilgilerin açığa çıkmasıyla ilgili güvenlik açıkları için inceleme kodu|
-|[CA3005](../code-quality/ca3005-review-code-for-ldap-injection-vulnerabilities.md)|LDAP ekleme güvenlik açıkları için inceleme kodu|
-|[CA3006](../code-quality/ca3006-review-code-for-process-command-injection-vulnerabilities.md)|İşlem komutu ekleme güvenlik açıkları için inceleme kodu|
-|[CA3007](../code-quality/ca3007-review-code-for-open-redirect-vulnerabilities.md)|Açık yeniden yönlendirme güvenlik açıkları için inceleme kodu|
-|[CA3008](../code-quality/ca3008-review-code-for-xpath-injection-vulnerabilities.md)|XPath ekleme güvenlik açıkları için inceleme kodu|
-|[CA3009](../code-quality/ca3009-review-code-for-xml-injection-vulnerabilities.md)|XML ekleme güvenlik açıkları için inceleme kodu|
-|[CA3010](../code-quality/ca3010-review-code-for-xaml-injection-vulnerabilities.md)|XAML ekleme güvenlik açıkları için inceleme kodu|
-|[CA3011](../code-quality/ca3011-review-code-for-dll-injection-vulnerabilities.md)|DLL ekleme güvenlik açıkları için inceleme kodu|
-|[CA3012](../code-quality/ca3012-review-code-for-regex-injection-vulnerabilities.md)|Normal ifade ekleme güvenlik açıkları için inceleme kodu|
+|[CA3001](../code-quality/ca3001.md)|SQL ekleme güvenlik açıkları için inceleme kodu|
+|[CA3002](../code-quality/ca3002.md)|XSS güvenlik açıkları için inceleme kodu|
+|[CA3003](../code-quality/ca3003.md)|Dosya yolu ekleme güvenlik açıkları için inceleme kodu|
+|[CA3004](../code-quality/ca3004.md)|Bilgilerin açığa çıkmasıyla ilgili güvenlik açıkları için inceleme kodu|
+|[CA3005](../code-quality/ca3005.md)|LDAP ekleme güvenlik açıkları için inceleme kodu|
+|[CA3006](../code-quality/ca3006.md)|İşlem komutu ekleme güvenlik açıkları için inceleme kodu|
+|[CA3007](../code-quality/ca3007.md)|Açık yeniden yönlendirme güvenlik açıkları için inceleme kodu|
+|[CA3008](../code-quality/ca3008.md)|XPath ekleme güvenlik açıkları için inceleme kodu|
+|[CA3009](../code-quality/ca3009.md)|XML ekleme güvenlik açıkları için inceleme kodu|
+|[CA3010](../code-quality/ca3010.md)|XAML ekleme güvenlik açıkları için inceleme kodu|
+|[CA3011](../code-quality/ca3011.md)|DLL ekleme güvenlik açıkları için inceleme kodu|
+|[CA3012](../code-quality/ca3012.md)|Normal ifade ekleme güvenlik açıkları için inceleme kodu|

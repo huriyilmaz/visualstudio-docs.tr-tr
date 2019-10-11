@@ -3,30 +3,30 @@ title: Live Unit Testing
 ms.date: 03/07/2017
 ms.topic: conceptual
 helpviewer_keywords:
-- Visual Studio ALM
 - Live Unit Testing
-author: rpetrusha
-ms.author: ronpet
+author: gewarren
+ms.author: gewarren
 ms.workload:
 - dotnet
-ms.openlocfilehash: e4ace476a2454c7f6735f19cd07f222d6c06564e
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 646a8680211d7d79ea24a1b5b62d78eb6955b5f7
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913329"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262331"
 ---
-# <a name="live-unit-testing-with-visual-studio"></a>Visual Studio ile Live Unit Testing
+# <a name="how-to-configure-and-use-live-unit-testing"></a>Live Unit Testing yapılandırma ve kullanma
 
-Bir uygulama geliştiriyorsunuz gibi Live Unit Testing otomatik olarak tüm etkilenen birim testlerini arka planda çalıştırır ve sonuçları ve kod kapsamını Canlı gerçek zamanlı olarak Visual Studio IDE'de sunar. Kodunuzu değiştirmeniz gibi Live Unit Testing değişikliklerinizi mevcut testleri nasıl etkilenen geri bildirim sağlar ve bir veya daha fazla var olan testlerin kapsadığını olup yeni kod ekledik. Bu yavaşça, hata düzeltmeleri yapmak veya yeni özellikler eklenmesi gibi birim testleri yazma hatırlatır.
+Bir uygulama geliştirirken, Live Unit Testing etkilenen birim testlerini arka planda otomatik olarak çalıştırır ve sonuçları ve kod kapsamını gerçek zamanlı olarak gösterir. Kodunuzu değiştirmeniz gibi Live Unit Testing değişikliklerinizi mevcut testleri nasıl etkilenen geri bildirim sağlar ve bir veya daha fazla var olan testlerin kapsadığını olup yeni kod ekledik. Bu, hata düzeltmeleri yaparken veya yeni özellikler eklerken birim testlerini yazmanızı ister.
 
 > [!NOTE]
 > Live Unit Testing, Visual Studio C# Enterprise sürümünde .NET Core veya .NET Framework hedefleyen projeleri ve Visual Basic kullanılabilir.
 
-Testleriniz için Live Unit Testing kullandığınızda, Live Unit Testing testlerinizi durumu hakkında veriler devam ettirir. Live Unit Testing, sınamaları çalışırken dinamik olarak kod değişikliklere yanıt olarak üstün performans sunmak kalıcı verileri kullanma olanağı sağlar.
+Testleriniz için Live Unit Testing kullandığınızda, testlerin durumu hakkında verileri sürdürür. Kalıcı verilerin kullanılması, kod değişikliklerine yanıt olarak testlerinizi dinamik olarak çalıştırırken Live Unit Testing üstün performans sunmasına olanak tanır.
 
 ## <a name="supported-test-frameworks"></a>Desteklenen test çerçeveleri
-Live Unit Testing aşağıdaki tabloda listelenen üç popüler birim test çerçeveleri ile çalışır. Desteklenen en düşük sürüm bağdaştırıcılarının ve çerçeveleri de tabloda listelenir. Birim testi çerçevelerini NuGet.org adresinden tüm kullanılabilir.
+
+Live Unit Testing aşağıdaki tabloda listelenen üç popüler birim test çerçeveleri ile çalışır. Bağdaştırıcılarının en düşük desteklenen sürümü ve çerçeveleri de gösterilir. Birim testi çerçevelerini NuGet.org adresinden tüm kullanılabilir.
 
 |Test çerçevesi  |Visual Studio bağdaştırıcısı en düşük sürüm  |Framework en düşük sürüm  |
 |---------|---------|---------|
@@ -34,20 +34,20 @@ Live Unit Testing aşağıdaki tabloda listelenen üç popüler birim test çer�
 |NUnit |3\.5.1 NUnit3TestAdapter sürümü |NUnit 3.5.0 sürümü |
 |MSTest |MSTest.TestAdapter 1.1.4-preview |MSTest.TestFramework 1.0.5-preview |
 
-Başvuruda `Microsoft.VisualStudio.QualityTools.UnitTestFramework` bulunan ve daha yeni MSTest NuGet paketlerine geçmek istemediğiniz daha eski bir test projesi varsa, Visual Studio 2017 sürüm 15,4 veya sonraki bir sürüme yükseltin.
+Microsoft. VisualStudio. QualityTools. UnitTestFramework 'e başvuran daha önceden MSTest tabanlı test projelerine sahipseniz ve yeni MSTest NuGet paketlerine geçmek istemiyorsanız, Visual Studio 2019 veya Visual Studio 2017 sürümüne yükseltin.
 
-Bazı durumlarda, açıkça için Live Unit Testing çalışmaya sırayla çözümde proje tarafından başvurulan NuGet paketlerini geri yüklemek gerekebilir. Çözümün belirtik bir derleme yaparak ya da bunu yapabilirsiniz (seçin **derleme** > **çözümü yeniden derle** en üst düzey Visual Studio menüsünde) ya da çözüm (paketleri geri yükleniyor sağ tıklatın ve çözüm **NuGet paketlerini geri yükle**) Living birim testi etkinleştirmeden önce.
+Bazı durumlarda, Live Unit Testing çalışması için bir proje tarafından başvurulan NuGet paketlerini açıkça geri yüklemeniz gerekebilir. Bunu, çözümün açık bir derlemesini yaparak (en üst düzey Visual Studio menüsünden **derle** > **çözümü** seçin) veya çözümdeki paketleri geri yükleyerek yapabilirsiniz (çözüme sağ tıklayıp **NuGet 'i geri yükle ' yi seçin. Paketler**).
 
-## <a name="configure-live-unit-testing"></a>Live Unit Testing yapılandırın
+## <a name="configure"></a>Yapılandırma
 
-Live Unit Testing seçerek yapılandırabileceğiniz **Araçları** > **seçenekleri** en üst düzey Visual Studio menü çubuğunda, ve ardından seçerek **Live Unit Testing** sol bölmesinde **seçenekleri** iletişim.
+Üst düzey Visual Studio menü çubuğundan **araçlar** > **seçenekleri** belirleyip **seçenekler** iletişim kutusunun sol bölmesinde **Live Unit Testing** ' yı seçerek Live Unit Testing yapılandırın.
 
 > [!TIP]
-> Live Unit Testing etkinleştirildikten sonra (sonraki bölüme bakın [başlatmak, duraklatmak ve Live Unit Testing durdurmak](#start-pause-and-stop-live-unit-testing)), da açabilirsiniz **seçenekleri** seçerek iletişim **Test**  >  **Live Unit Testing** > **seçenekleri**.
+> Live Unit Testing etkinleştirildikten sonra (sonraki bölüme bakın, [başlatma, duraklatma ve durdurma Live Unit Testing](#start-pause-and-stop)), **Seçenekler** iletişim kutusunu da **Test** > **Live Unit Testing** > **seçeneklerini**belirleyerek açabilirsiniz.
 
-Live Unit Testing yapılandırma seçenekleri iletişim kutusunda aşağıdaki şekilde gösterilmiştir:
+Aşağıdaki görüntüde iletişim kutusunda kullanılabilen Live Unit Testing yapılandırma seçenekleri gösterilmektedir:
 
-  ![Görüntü](./media/lut-options.png)
+![Live Unit Testing yapılandırma seçenekleri](./media/lut-options.png)
 
 Yapılandırılabilir seçeneklerin şunlardır:
 
@@ -61,9 +61,9 @@ Yapılandırılabilir seçeneklerin şunlardır:
 
 - Kalıcı veri depolanacağı dizin.
 
-- Tüm kalıcı veri silme yeteneği. Live Unit Testing, kalıcı verileri bozulmuş önerir öngörülemeyen ya da beklenmeyen şekilde davrandığından istediğinizde yararlıdır.
+- Tüm kalıcı veri silme yeteneği. Live Unit Testing, kalıcı olmayan veya beklenmedik bir şekilde davranmışsa, kalıcı verilerin bozulmasından etkileneceği durumlarda faydalıdır.
 
-- Bir test çalışması sonra zaman aşımına Interval; Varsayılan değer 30 saniyedir.
+- Bir test çalışmasının zaman aşımına uğramadan zaman aralığı. Varsayılan değer 30 saniyedir.
 
 - Live Unit Testing oluşturan test işlemlerinin maksimum sayısı.
 
@@ -77,108 +77,121 @@ Yapılandırılabilir seçeneklerin şunlardır:
 
    Live Unit Testing dosyasındaki öğesinden ayrıntılı MSBuild günlük iletilerini yakalamak için `LiveUnitTesting_BuildLog` kullanıcı düzeyinde ortam değişkenine günlük içerecek dosyanın adı.
 
-## <a name="start-pause-and-stop-live-unit-testing"></a>Başlatma, duraklatma ve Live Unit Testing Durdur
+## <a name="start-pause-and-stop"></a>Başlat, Duraklat ve durdur
 
-Live Unit Testing seçerek etkinleştirmeniz **Test** > **Live Unit Testing** > **Başlat** en üst düzey Visual Studio menüsünde. Live Unit Testing etkinleştirildiğinde, bulunan Seçenekler **Live Unit Testing** tek bir öğe menüsü değişiklik **Başlat**, **duraklatma**, **Durdur**, ve **temiz sıfırlama**.
+Live Unit Testing etkinleştirmek için, **Test** > **Live Unit Testing** >  ' ü en üst düzey Visual Studio menüsünden**Başlat** ' ı seçin. Live Unit Testing etkinleştirildiğinde, **Live Unit Testing** menüdeki seçenekler tek bir öğeden değişir, **başlatılır** **,** **duraklatılır**ve temiz bir şekilde **sıfırlanır**:
+
+- **Duraklatma** Live Unit Testing geçici olarak askıya alır.
+
+  Live Unit Testing duraklatıldığında, kapsam görselleştirmesi düzenleyicide görünmez, ancak toplanan tüm veriler korunur. Live Unit Testing sürdürmek için seçin **devam** Live Unit Testing menüsünde. Live Unit Testing, duraklatıldığı sırada yapılan tüm düzenlemeleri yakalamak ve glifleri uygun şekilde güncelleştirirken gerekli işi yapar.
+
+- Live Unit Testing **tamamen durdurulur** . Live Unit Testing, toplanan tüm verileri atar.
+
+- **Temizleme Işlemini sıfırlayın** Live Unit Testing, kalıcı verileri siler ve sonra Live Unit Testing yeniden başlatır.
 
 > [!NOTE]
-> Bir birim test projesi içermeyen bir çözümde Live Unit Testing başlatırsanız **duraklatma**, **Durdur**, ve **temiz sıfırlama** seçenekleri görünmez **Canlı Birim test** menü ancak Live Unit Testing başlamıyor. **Çıkış** penceresi "desteklenen test bağdaştırıcısı yok... Bu çözüm tarafından başvurulan" başlayan bir ileti görüntüler
+> Bir birim test projesi içermeyen bir çözümde Live Unit Testing başlatırsanız **duraklatma**, **Durdur**, ve **temiz sıfırlama** seçenekleri görünmez **Canlı Birim test** menü ancak Live Unit Testing başlamıyor. **Çıkış** penceresinde, "Bu çözüm tarafından desteklenmeyen test bağdaştırıcılarına başvurulmuyor..." iletisi görüntülenir.
 
-Herhangi bir zamanda geçici olarak duraklatabilir veya tamamen Live Unit Testing durdurun. Bunu, örneğin, bir yeniden düzenleme ortasında olan ve testlerinizi bir süredir kesik sunulacağını bildiğiniz yapmak isteyebilirsiniz. Üç menü seçenekleri şunlardır:
+Herhangi bir zamanda geçici olarak duraklatabilir veya tamamen Live Unit Testing durdurun. Bunu yapmak isteyebilirsiniz, örneğin bir yeniden düzenleme ortasındaysa ve testlerinizin bir süre için bölüneceği hakkında bilgi sahibi olun.
 
-- **Duraklatma**, hangi geçici olarak askıya Live Unit Testing.
+## <a name="view-coverage-visualization"></a>Kapsam görselleştirmesini görüntüle
 
-    Live Unit Testing duraklatıldığında kapsamı görselleştirmeniz Düzenleyicisi'nde görünmez, ancak toplanan tüm veriler korunur. Live Unit Testing sürdürmek için seçin **devam** Live Unit Testing menüsünde. Live Unit Testing ile duraklatıldı ve karakterleri gerekli şekilde güncelleştirecek yapılmış tüm düzenlemeleri Kaçırdığınız gerekli çalışır.
+Etkinleştirildikten sonra, yazmakta olduğunuz kodun birim testlerin kapsamında olup olmadığını ve bunu kapsayan testlerin geçtiğini göstermek üzere Visual Studio Düzenleyicisi 'ndeki her kod satırını güncelleştirir Live Unit Testing. Aşağıdaki görüntüde hem geçen hem de başarısız testlerin bulunduğu kod satırları ve testlerin kapsamadığı kod satırları gösterilmektedir. Yeşil "✓" ile düzenlenmiş satırları yalnızca testleri geçirerek ele alınmaktadır satırları "x" kırmızı ile donatılmış bir veya birden çok başarısız olan testler tarafından ele alınmaktadır ve mavi "➖" tarafından düzenlenmiş satırları tarafından herhangi bir test kapsamında değildir.
 
-- **Durdur**, Live Unit Testing tamamen durdurmak için. Live Unit Testing, toplanan tüm verileri atar.
+![Visual Studio 'da kod kapsamı](./media/lut-codewindow.png)
 
-- **Temiz sıfırlama**, Live Unit Testing durdurur, siler, verilerin kalıcı ve Live Unit Testing yeniden başlatır.
+Live Unit Testing kapsam görselleştirmesi, kod düzenleyicisinde kodu değiştirirken hemen güncelleştirilir. Düzenleme işlemleri sırasında, aşağıdaki görüntüde gösterildiği gibi, yuvarlama, başarısız ve kapsanmayan sembollerin altına bir yuvarlak Zamanlayıcı görüntüsü ekleyerek, verilerin güncel olmadığını belirtmek için görselleştirme değişiklikleri.
 
-- **Seçenekleri**, açan **seçenekleri** iletişim açıklanan [yapılandırma Live Unit Testing](#configure-live-unit-testing) bölümü.
+![Zamanlayıcı simgesiyle Visual Studio 'da kod kapsamı](./media/lut-codeupdating.png)
 
-## <a name="view-coverage-visualization-in-the-editor-as-you-type"></a>Siz yazarken kapsamı görselleştirme Düzenleyicisi'nde görüntüleyemezsiniz.
+## <a name="get-information-about-test-status"></a>Test durumu hakkında bilgi al
 
-Etkinleştirildikten sonra Live Unit Testing güncelleştirmeler her kod yazdığınız olmadığını göstermek için Visual Studio düzenleyicisinde bir kod satırının, birim testleri ve yoksa onu kapsayan testleri geçiliyor mu tarafından ele alınmıştır.  Aşağıdaki şekilde, geçirme ve testleri gibi testler tarafından kapsanmaz kod satırlarını başarısız kod satırlarını gösterilmektedir. Yeşil "✓" ile düzenlenmiş satırları yalnızca testleri geçirerek ele alınmaktadır satırları "x" kırmızı ile donatılmış bir veya birden çok başarısız olan testler tarafından ele alınmaktadır ve mavi "➖" tarafından düzenlenmiş satırları tarafından herhangi bir test kapsamında değildir.
+Kod penceresinde başarılı veya başarısız simgenin üzerine gelerek, kaç tane test satırdaki karşılaştınız demektir görebilirsiniz. Bireysel testlerin durumunu görmek için, simgesini seçin:
 
-  ![Görüntü](./media/lut-codewindow.png)
+![Visual Studio 'da bir sembolün test durumu](./media/lut-failedinfo.png)
 
-Live Unit Testing Kod düzenleyicisinde kod değiştirirken kapsamı görselleştirme hemen güncelleştirilir. Düzenlemeleri işlenirken verileri yuvarlak bir zamanlayıcı ekleyerek güncel olmadığını göstermek için görselleştirme değişiklikler başarısız, geçirme Aşağıda, görüntü ve semboller, aşağıdaki şekilde gösterildiği gibi ele alınmamaktadır.
+Araç ipucu, testlerin adlarını ve sonuçlarını sağlamanın yanı sıra testlerin kümesini yeniden çalıştırmanıza veya hata ayıklamanıza olanak tanır. Araç çubuğuna bir veya daha fazla testin seçerseniz, çalıştırmak veya yalnızca bu Testlerde Hata Ayıkla. Bu kod penceresinde ayrılmak zorunda kalmadan testlerinizi ayıklamanızı sağlar. Hata ayıklarken, önceden ayarlamış olduğunuz kesme noktalarını gözlemlemenin yanı sıra, hata ayıklayıcı beklenmeyen bir sonuç döndüren <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> yöntemini yürüttüğünde program yürütme duraklatılır.
 
-  ![Görüntü](./media/lut-codeupdating.png)
+Başarısız bir test araç ipucunda üzerine geldiğinizde, bu hata hakkında ek bilgi sağlamak için aşağıdaki görüntüde gösterildiği gibi genişletir. Doğrudan başarısız teste gitmek için araç ipucunda çift tıklayın.
 
-## <a name="get-information-on-successful-or-failed-tests"></a>Başarılı ve başarısız testleri hakkında bilgi edinin
+![Visual Studio 'da başarısız test araç ipucu bilgileri](./media/lut-failedmsg.png)
 
-Kod penceresinde başarılı veya başarısız simgenin üzerine gelerek, kaç tane test satırdaki karşılaştınız demektir görebilirsiniz. Simgesine tıklayın, tek tek testlerin durumunu aşağıdaki şekilde gösterildiği gibi görebilirsiniz:
+Başarısız teste gittiğinizde, Live Unit Testing Yöntem imzasında görsel olarak belirtir:
 
-  ![Görüntü](./media/lut-failedinfo.png)
+- geçti (yeşil bir "✓" ile birlikte yarı dolu bir Beaker ile gösterilir)
+- başarısız oldu (kırmızı "🞩" ile birlikte yarı dolu bir Beaker)
+- Live Unit Testing (mavi bir "➖" ile birlikte yarı dolu bir Beaker) dahil değildir
 
-Sağlama adları ve test sonucu, araç ipucu sağlar ek olarak, yeniden test kümesini çalıştırın yanı hata ayıklayıcıyı kullanarak test kümesini çalıştırın. Araç çubuğuna bir veya daha fazla testin seçerseniz, çalıştırmak veya yalnızca bu Testlerde Hata Ayıkla. Bu kod penceresinde ayrılmak zorunda kalmadan testlerinizi ayıklamanızı sağlar. Hata ayıklayıcı yürütüldüğünde zaten ayarladığınız, herhangi bir kesme noktası gözleme yanı sıra hata ayıklama sırasında program yürütme duraklatır bir [ `Assert` ](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert) beklenmeyen bir sonuç döndüren yöntem.
+Olmayan test yöntemleri bir simge ile donatılmış değil. Aşağıdaki görüntüde dört tür yöntem gösterilmektedir.
 
-Başarısız bir test araç ipucunda üzerine geldiğinizde, bu hata hakkında ek bilgi sağlamak için aşağıdaki görüntüde gösterildiği gibi genişletir. Başarısız test araç ipucunda çift tıklarsanız, doğrudan gidebilirsiniz.
-
-  ![Görüntü](./media/lut-failedmsg.png)
-
-Başarısız test için gittiğinizde, Live Unit Testing da görsel olarak (yeşil "✓" ile birlikte bir Yarım tam beaker tarafından gösterilen), geçen testler başarısız oldu Yöntem imzasında belirtir (kırmızı ile birlikte bir Yarım tam beaker "🞩"), veya değil Live Unit Testing (mavi bir "➖" birlikte yarı tam beaker) katılan. Olmayan test yöntemleri bir simge ile donatılmış değil. Aşağıdaki şekilde, tüm dört tür yöntemleri gösterilmektedir.
-
-  ![Görüntü](media/lut-testsource.png)
+![Pass veya fail simgesiyle Visual Studio 'daki test yöntemleri](media/lut-testsource.png)
 
 ## <a name="diagnose-and-correct-test-failures"></a>Tanılama ve test hataları düzeltin
 
-Başarısız test çalıştırmasından kolayca ürün kodu için hata ayıklama, düzenlemeler ve uygulamanızı geliştirmeye devam edebilirsiniz. Live Unit Testing arka planda çalıştığından, durdurma ve yeniden başlatma sırasında hata ayıklama, Live Unit Testing gerekmez Düzenle ve devam etme döngüsüne devam.
+Başarısız testten, ürün kodunda kolayca hata ayıklayın, düzenleme yapabilir ve uygulamanızı geliştirmeye devam edebilirsiniz. Live Unit Testing arka planda çalıştığından, hata ayıklama, düzenleme ve devam etme sürecinde Live Unit Testing durdurup yeniden başlatmanız gerekmez.
 
-Örneğin, önceki şekilde gösterildiği test-alfabetik olmayan karakterler döndüren test yönteminde yanlış bir varsayım tarafından nedeniyle başarısız oldu `true` için geçirildiğinde <xref:System.Char.IsLower%2A?displayProperty=fullName> yöntemi. Şu test yönteminin düzeltin, sonra tüm testlerden geçtiğini bulun. Biz bunu yaparken, biz duraklatmak veya Live Unit Testing durdurmak zorunda değildir.
+Örneğin, önceki görüntüde gösterilen test hatası, <xref:System.Char.IsLower%2A?displayProperty=fullName> yöntemine geçirildiğinde alfabetik olmayan karakterlerin `true` ' ı döndürdüğü test yönteminde yanlış bir varsayım nedeniyle oluştu. Test yöntemini düzelttikten sonra, tüm testlerin geçmesi gerekir. Live Unit Testing duraklatıp durdurmanız gerekmez.
 
-## <a name="live-unit-testing-and-test-explorer"></a>Live Unit Testing ve Test Gezgini
+## <a name="test-explorer"></a>Test Gezgini
 
-Normalde, **Test Gezgini** çalıştırma, hata ayıklama ve test sonuçlarını çözümleme olanak sağlayan bir arabirim sağlar. Live Unit Testing ile tümleştirilir **Test Gezgini**. Live Unit Testing etkin değil ya da durdurulmuş, **Test Gezgini** birim testleri bir test çalıştırma son kez durumunu görüntüler. Testleri yeniden çalıştırın, kaynak kodu değişiklikleri gerektirir. Live Unit Testing etkin olduğunda, buna karşılık, birim durumu içinde testleri **Test Gezgini** hemen güncelleştirilir. Artık açıkça birim testlerinizi çalıştırmak gerekir.
+**Test Gezgini** , testleri çalıştırmanızı ve hatalarını ayıklamanızı ve test sonuçlarını çözümlemeyi sağlayan bir arabirim sağlar. Live Unit Testing ile tümleştirilir **Test Gezgini**. Live Unit Testing etkin değil ya da durdurulmuş, **Test Gezgini** birim testleri bir test çalıştırma son kez durumunu görüntüler. Testleri yeniden çalıştırın, kaynak kodu değişiklikleri gerektirir. Live Unit Testing etkin olduğunda, buna karşılık, birim durumu içinde testleri **Test Gezgini** hemen güncelleştirilir. Birim testlerini açıkça çalıştırmanız gerekmez.
 
-> [!NOTE]
-> Açabileceğiniz **Test Gezgini** seçerek **Test** > **Windows** > **Test Gezgini** gelen üst düzey Visual Studio menü.
+> [!TIP]
+> Üst düzey Visual Studio menüsünden **test @no__t-** 2**Windows** > **Test Gezgini** ' ni seçerek **Test Gezgini** 'ni açın.
 
-Fark edebilirsiniz **Test Gezgini** bazı testler soluk penceresi. Örneğin, etkinleştirdiğinizde Live Unit Testing önceden kaydedilmiş bir projeyi açtıktan sonra **Test Gezgini** penceresi soluk tüm başarısız test, aşağıdaki şekilde gösterildiği gibi. Bu durumda, Live Unit Testing başarısız testi yeniden ancak başarılı testlerin yeniden değil, Live Unit Testing 's kalıcı yaptığınızdan veri test son başarıyla çalıştırılamadı bu yana herhangi bir değişiklik olduğunu gösterir.
+Fark edebilirsiniz **Test Gezgini** bazı testler soluk penceresi. Örneğin, daha önce kaydedilen bir projeyi açtıktan sonra Live Unit Testing etkinleştirdiğinizde, **Test Gezgini** penceresi, aşağıdaki görüntüde gösterildiği gibi, başarısız olan teste göre daha fazla zaman aşımına uğrar. Bu durumda, Live Unit Testing başarısız testi yeniden çalıştırmıştır, ancak başarılı testleri yeniden çalıştırmaz. Bunun nedeni Live Unit Testing kalıcı verilerinin, testlerin son kez başarıyla çalıştırılmasından bu yana hiçbir değişiklik olmadığını gösterir.
 
-  ![Görüntü](media/lut-test-explorer.png)
+![Test Gezgininde başarısız test](media/lut-test-explorer.png)
 
-Seçerek soluk görünür tüm testleri yeniden **tümünü Çalıştır** veya **çalıştırın** gelen seçenekleri **Test Gezgini** menüsünden veya bir veya daha fazla test içinde seçerek**Test Gezgini** menüsünde sağ tıklatıp seçerek **seçili Testleri Çalıştır** veya **seçilen Testlerde Hata Ayıkla** açılan menüsünde. Testler çalışırken, Yukarı üst Kabarcık.
+**Test Gezgini** menüsünden **Tümünü Çalıştır** veya **Çalıştır** seçeneklerini belirleyerek, beliden görüntülenen tüm testleri yeniden çalıştırabilirsiniz. Ya da **Test Gezgini** menüsünde bir veya daha fazla test seçin, sağ tıklayın ve ardından **Seçilen Testleri Çalıştır** veya açılan menüden **Seçili testlerin hatalarını ayıkla** ' yı seçin. Testler çalışırken, Yukarı üst Kabarcık.
 
 Live Unit Testing otomatik olarak çalıştırarak test sonuçları güncelleştiriliyor ve açıkça çalışan test eder. arasında bazı farklar vardır **Test Gezgini**. Bu farklar şunlardır:
 
 - Live Unit Testing izleme eklenmiş ikili dosyalar çalıştırılır çalıştırma veya testleri Test Gezgini penceresinden hata ayıklama normal ikili dosyaları, çalışır.
 - Live Unit Testing testleri çalıştırmak için yeni bir uygulama etki alanı oluşturmaz, ancak bunun yerine varsayılan etki alanından testleri çalıştırır. Testleri çalıştırın **Test Gezgini** penceresi, yeni bir uygulama etki alanı oluşturun.
-- Live Unit Testing testler sırayla her bir test derlemesindeki çalıştırır. **Test Gezgini** penceresinde, paralel olarak birden çok testi çalıştırmak için bir seçenek belirleyebilirsiniz.
+- Live Unit Testing testler sırayla her bir test derlemesindeki çalıştırır. **Test Gezgini** penceresinde, paralel olarak birden çok test çalıştırmayı seçebilirsiniz.
 
-## <a name="live-unit-testing-and-large-solutions"></a>Live Unit Testing ve büyük çözümler
+## <a name="large-solutions"></a>Büyük çözümler
 
-Çözümünüzü 10 veya daha fazla proje, Live Unit Testing Başlat ve kalıcı veri sahip veya seçtiğinizde **Test** > **Live Unit Testing**  >  **Temiz sıfırlama** en üst düzey bir Visual Studio menüsünde, Visual Studio seçeneği büyük projeler testlerinde çok sayıda dinamik yürütme performansı ciddi bir şekilde etkileyebilir uyarmak için aşağıdaki iletişim kutusunu görüntüler. Seçerseniz **Tamam**, Live Unit Testing, Çözümdeki tüm testleri yürütür. Seçerseniz **iptal**, yürütülecek testleri seçebilirsiniz. Aşağıdaki bölümde, bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [dahil etme ve dışlama projelerin test ve test yöntemleri](#include-and-exclude-test-projects-and-test-methods).
+Çözümünüz 10 veya daha fazla proje içeriyorsa, Visual Studio şunları yaptığınızda aşağıdaki iletişim kutusunu görüntüler:
+
+- Live Unit Testing başlatın ve kalıcı veri yok
+- **Test**@no__t seçin-1**Live Unit Testing** > **sıfırlama temizle**
 
 ![Büyük projeleri için Live Unit Testing iletişim](media/lut-large-project.png)
 
+İletişim kutusu, büyük projelerdeki çok sayıda test için dinamik yürütmenin performansı ciddi ölçüde etkileyebileceğini uyarır. Seçerseniz **Tamam**, Live Unit Testing, Çözümdeki tüm testleri yürütür. Seçerseniz **iptal**, yürütülecek testleri seçebilirsiniz. Aşağıdaki bölümde bunun nasıl yapılacağı açıklanmaktadır.
+
 ## <a name="include-and-exclude-test-projects-and-test-methods"></a>Test projeleri hariç içerir ve test yöntemleri
 
-Birçok test projeleri içeren çözümler için hangi projelerin ve bir projedeki her hangi bir yöntem içinde Live Unit Testing katılmak denetleyebilirsiniz. Örneğin, test projeleri yüzlerce bir çözümünüz varsa, test projeleri Live Unit Testing katılmak için hedeflenen bir dizi seçebilirsiniz. Dahil edilecek veya hariç çoğu testleri isteyip istemediğinizi proje veya çözüm, tüm testler hariç tutmak isteyip istemediğinizi bağlı olarak bunu yapmak için çeşitli yollarla vardır veya hariç tutmak istediğiniz ayrı ayrı test eder. Live Unit Testing içerme/dışlama durumunu bir kullanıcı ayarı olarak kaydeder ve bir çözüm kapatılıp yeniden olduğunda bunu hatırlar.
+Birçok test projesi içeren çözümler için, bir projedeki hangi projelerin ve bireysel yöntemlerin Live Unit Testing katılmasını denetleyebilirsiniz. Örneğin, test projeleri yüzlerce bir çözümünüz varsa, test projeleri Live Unit Testing katılmak için hedeflenen bir dizi seçebilirsiniz. Proje veya Çözümdeki tüm testleri dışlamak, çoğu testi dahil etmek veya hariç tutmak veya tek testleri dışlamak istediğinize bağlı olarak bunu yapmanız için çeşitli yollar vardır. Live Unit Testing içerme/dışlama durumunu bir kullanıcı ayarı olarak kaydeder ve bir çözüm kapatılıp yeniden olduğunda bunu hatırlar.
 
-**Bir proje veya çözüm tüm testleri hariç**
+### <a name="exclude-all-tests-in-a-project-or-solution"></a>Bir proje veya Çözümdeki tüm testleri hariç tut
 
 Tek tek projeler birim testleri seçmek için Live Unit Testing başlatıldıktan sonra aşağıdakileri yapın:
 
 1. Çözüme sağ **Çözüm Gezgini** ve **Canlı testleri** > **hariç** çözümün tamamını dışlanacak.
 1. Sağ tıklayın ve testler eklemek istediğiniz her bir test projesi **Canlı testleri** > **Ekle**.
 
-**Bireysel testler kod düzenleyici penceresinde hariç**
+### <a name="exclude-individual-tests-from-the-code-editor-window"></a>Kod Düzenleyicisi penceresinden bireysel testleri hariç tut
 
-Kod Düzenleyicisi penceresi, dahil etmek veya bireysel test yöntemleri hariç tutmak için kullanabilirsiniz. Kod Düzenleyicisi penceresinde test metodunun İmzasındaki sağ tıklatın ve seçin **Canlı testleri** > **dahil [seçili yöntemi]** , **Canlı testleri**  >  **[Seçili yöntemi] hariç**, veya **Canlı testleri** > **hariç tüm ancak [seçili yöntemi]** , burada "Seçili yöntemi" adıdır Kod penceresinde seçtiğiniz yöntem.
+Kod Düzenleyicisi penceresi, dahil etmek veya bireysel test yöntemleri hariç tutmak için kullanabilirsiniz. Kod Düzenleyicisi penceresindeki test yönteminin imzasına sağ tıklayın ve sonra aşağıdaki seçeneklerden birini seçin:
 
-**Testleri programlı olarak hariç**
+- **Canlı testler** >  **\<Selected yöntemi içerir >**
+- **Canlı testler** >  **\<selected yöntemi >**
+- **Canlı testler** > ,**Tüm \<Işaretli yöntemi hariç tutar >**
+
+### <a name="exclude-tests-programmatically"></a>Testleri programlı olarak hariç tut
 
 Uygulayabileceğiniz <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> programlı olarak yöntemler, sınıflar veya yapılar kendi kapsamı içinde Live Unit Testing bildirimden hariç tutulacak özniteliği.
 
-Live Unit Testing her bir yöntem hariç tutmak için de aşağıdaki öznitelikleri kullanabilirsiniz:
+Live Unit Testing bireysel yöntemleri dışlamak için aşağıdaki öznitelikleri kullanın:
 
 - XUnit için: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
 - NUnit için: `[Category("SkipWhenLiveUnitTesting")]`
 - MSTest için: `[TestCategory("SkipWhenLiveUnitTesting")]`
 
-Ayrıca, Live Unit Testing bir test derlemesinin tamamını da dışlayabilirsiniz:
+Live Unit Testing tüm testlerin bir derlemesini dışlamak için aşağıdaki öznitelikleri kullanın:
 
 - XUnit için: `[assembly: AssemblyTrait("Category", "SkipWhenLiveUnitTesting")]`
 - NUnit için: `[assembly: Category("SkipWhenLiveUnitTesting")]`
@@ -189,4 +202,4 @@ Ayrıca, Live Unit Testing bir test derlemesinin tamamını da dışlayabilirsin
 - [Kod test araçları](https://visualstudio.microsoft.com/vs/testing-tools/)
 - [Live Unit Testing blogu](https://go.microsoft.com/fwlink/?linkid=842514)
 - [Live Unit Testing SSS](live-unit-testing-faq.md)
-- [Channel 9 videosu: Visual Studio 'da Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)
+- [Channel 9 videosu: Visual Studio @ no__t 'de Live Unit Testing-0

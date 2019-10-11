@@ -62,13 +62,14 @@
           href: using-the-assert-classes.md
         - name: Microsoft Fakes
           items:
-            - name: Microsoft Fakes ile test edilen kodu yalıtma
+            - name: Test edilen kodu yalıtma
+              displayName: 'shim, stub, fakes'
               href: isolating-code-under-test-with-microsoft-fakes.md
-            - name: Birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma
+            - name: Uygulamanızın parçalarını yalıtmak için saplamaları kullanma
               href: using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md
-            - name: Birim testi için uygulamanızı diğer derlemelerden yalıtmak üzere dolgular kullanma
+            - name: Diğer kod parçacıklarındaki uygulamanızı yalıtmak için dolguları kullanma
               href: using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md
-            - name: 'Microsoft Fakes''te kod oluşturma, derleme ve adlandırma kuralları'
+            - name: 'Kod oluşturma, derleme ve adlandırma kuralları'
               href: code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md
         - name: Veri temelli birim testleri
           items:

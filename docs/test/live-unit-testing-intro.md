@@ -1,46 +1,42 @@
 ---
-title: Live Unit Testing ile tanışın
-description: Live Unit Testing ve nasıl kullanılacağını avantajları hakkında bilgi edinin, birim testi projelerinizi.
+title: Giriş Live Unit Testing
+description: Live Unit Testing avantajları ve projelerinizi birim testi yaparken nasıl kullanacağınızı öğrenin.
 ms.date: 09/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
-- Visual Studio ALM
 - Live Unit Testing
-author: rpetrusha
-ms.author: ronpet
+author: gewarren
+ms.author: gewarren
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a5acf1857309236727cd0bab4d9d981d814292b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: 87242c99fe2692b799ff6a5d965249ad5d944cf9
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786087"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262309"
 ---
-# <a name="live-unit-testing-introduction"></a>Live Unit Testing giriş
+# <a name="live-unit-testing-overview"></a>Live Unit Testing genel bakış
 
-Live Unit Testing, Visual Studio 2017'de kullanılmaya başlanan bir teknolojidir. Kod değişiklikleri yapabilir, birim testleriniz otomatik olarak gerçek zamanlı olarak yürütür.
+Live Unit Testing, kod değişiklikleri yaptığınızda birim testlerinizi otomatik olarak ve gerçek zamanlı olarak yürütür. Bu, daha fazla güvenle yeniden düzenleme ve kod değiştirme olanağı sağlar. Live Unit Testing, değişikliklerinizin gerileme oluşturmadığından emin olmak için kodunuzu düzenlerken, etkilenen tüm testleri otomatik olarak yürütür.
 
-Live Unit Testing:
+Live Unit Testing, birim testlerinizin kodunuzu yeterince kapsamadığını gösterir. Kod kapsamını gerçek zamanlı olarak grafiksel olarak gösterir. Her bir kod satırını kapsayan ve hangi satırların herhangi bir birim testi kapsamında olmadığını bir bakışta görebilirsiniz.
 
-- Daha büyük bir güvenle yeniden düzenleme ve kod değişikliği olanak tanır. Değişikliklerinizi testleri kesintiye uğratmadığından emin olmak için kodunuzu düzenlediğiniz sırada Live Unit Testing tüm etkilenen testleri otomatik olarak yürütür.
-
-- Birim testleriniz yeterince kodunuzu kapsar ve birim testleri tarafından kapsanmayan kod gösterir olup olmadığını gösterir. Kaç tane testin her kod satırı ele hem hangi satırların herhangi bir birim testi tarafından kapsanmayan bir bakışta görebilmek Live Unit Testing gerçek zamanlı olarak kod kapsamı grafik olarak gösterir.
-
-Bir veya daha fazla birim testi projeleri içeren bir çözümü varsa, Live Unit Testing seçerek etkinleştirebilirsiniz **Test** > **Live Unit Testing** > **Başlat**  en üst düzey Visual Studio menüsünde.
+Bir veya daha fazla birim testi projesi içeren bir çözümünüz varsa, Visual Studio 'daki en üst düzey menü çubuğundan Live Unit Testing **test** > **Live Unit Testing**@no__t-**3 '** i seçerek etkinleştirebilirsiniz.
 
 > [!NOTE]
-> Live Unit Testing, yalnızca Visual Studio Enterprise Edition'da kullanılabilir.
+> Live Unit Testing yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
 
-Live Unit Testing hakkında daha fazla bilgi için:
+Live Unit Testing hakkında daha fazla bilgi edinmek için:
 
-- Giriş niteliğindeki öğreticinin deneyin [Live Unit Testing ile çalışmaya başlama](live-unit-testing-start.md).
+- Tanıtım öğreticisi deneyin: [Live Unit Testing kullanmaya başlayın](live-unit-testing-start.md).
 
-- Ayrıntılı belgelere okuma [kullanım Live Unit Testing ile Visual Studio Enterprise Edition](live-unit-testing.md).
+- Ayrıntılı belgeleri okuyun: [Visual Studio Enterprise Edition ile Live Unit Testing kullanın](live-unit-testing.md).
 
-- Okuma [Live Unit Testing SSS](live-unit-testing-faq.md) Live Unit Testing yenilikleri öğrenmek için hem de ipuçları ve teknikler hakkında bilgi edinin.
+- Live Unit Testing yenilikleri ve ipuçları ile teknikleri öğrenmek için [LIVE UNIT TESTING SSS](live-unit-testing-faq.md) makalesini okuyun.
 
-- Channel 9 Live Unit Testing ve özelliklerine genel bakış için videoyu izleyin. </p>
+- Live Unit Testing ve özelliklerine genel bir bakış için Channel 9 videosunu izleyin.</p>
 
    > [!VIDEO https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105/player]
 

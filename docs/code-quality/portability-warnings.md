@@ -14,20 +14,20 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6a3557cffec60de91da46f60040ec675c866cbf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 072858a9faafe312fd7c8314e7f25cf581c40844
+ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825331"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163067"
 ---
 # <a name="portability-warnings"></a>Taşınabilirlik Uyarıları
-Taşınabilirlik uyarıları, farklı işletim sistemleri arasında taşınabilirlik destekler.
+Taşınabilirlik uyarıları, farklı işletim sistemleri arasında taşınabilirliği destekler.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
 |Kural|Açıklama|
 |----------|-----------------|
-|[CA1900: Değer tür alanları taşınabilir olmalıdır](../code-quality/ca1900-value-type-fields-should-be-portable.md)|Bu kural açık düzene özniteliği kullanılarak bildirilen yapıları için 64-bit işletim sistemlerinde yönetilmeyen kod sıralandığı zaman doğru hizalamayı denetler.|
-|[CA1901: P/Invoke bildirimleri taşınabilir olmalıdır](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|Bu kural her parametresinin boyutu ve P/Invoke dönüş değeri değerlendirir ve bunların boyutu 32-bit ve 64-bit işletim sistemlerinde yönetilmeyen kodun başvuruya doğru olduğunu doğrular.|
-|[CA1903: Yalnızca hedeflenen çerçeveden API kullanın](../code-quality/ca1903-use-only-api-from-targeted-framework.md)|Bir üye veya tür, bir üye veya projedeki hedeflenen çerçeve ile birlikte dahil edilmemiş hizmet paketinde tanıtılmış türü kullanır.|
+|[CA1900: Değer türü alanları taşınabilir @ no__t-0 olmalıdır|Bu kural, 64 bit işletim sistemlerinde yönetilmeyen koda kopyalandıklarında açık bir düzen özniteliği kullanılarak belirtilen yapıların doğru şekilde hizalanmasını denetler.|
+|[CA1901: P/Invoke bildirimleri taşınabilir @ no__t-0 olmalıdır|Bu kural, her parametrenin boyutunu ve bir P/Invoke dönüş değerini değerlendirir ve 32-bit ve 64-bit işletim sistemlerinde yönetilmeyen koda sıralandığında boyutunun doğru olduğunu doğrular.|
+|[CA1903: Hedeflenen Framework @ no__t-0 ' dan yalnızca API kullan|Bir üye veya tür, bir üye veya projedeki hedeflenen çerçeve ile birlikte dahil edilmemiş hizmet paketinde tanıtılmış türü kullanır.|
