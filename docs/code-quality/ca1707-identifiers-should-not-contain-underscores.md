@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: adfa0ccd63d0433d367b0e7278693608bb83d685
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 5ba9e8dda927edca08565b088cbde90d63443908
+ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234265"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252578"
 ---
 # <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707: Tanımlayıcılar alt çizgi içermemelidir
 
@@ -27,12 +27,12 @@ ms.locfileid: "71234265"
 |-|-|
 |TypeName|IdentifiersShouldNotContainUnderscores|
 |CheckId|CA1707|
-|Kategori|Microsoft. Naming|
+|Category|Microsoft. Naming|
 |Son değişiklik|Parçalara ayırma-derlemeler üzerinde ne zaman tetiklenir<br /><br /> Tür parametrelerine ne zaman kabarık olmayan|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
 
-Tanımlayıcının adı alt çizgi (\_) karakterini içerir.
+Bir tanımlayıcının adı alt çizgi (\_) karakterini içerir.
 
 ## <a name="rule-description"></a>Kural açıklaması
 
@@ -46,9 +46,9 @@ Adın tüm alt çizgi karakterlerini kaldırır.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
-Bu kuraldan uyarıyı bastırmayın.
+Üretim koduna yönelik uyarıları göstermez. Ancak, bu uyarının test kodu için görüntülenmesini güvenlidir. [Önem derecesini](use-roslyn-analyzers.md#rule-severity) **none**olarak ayarlayarak bu kuraldan gelen uyarıları gizleyebilirsiniz. 
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1709 Tanımlayıcılar doğru şekilde yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708 Tanımlayıcılar, büyük/küçük harf bakımından farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1709: Tanımlayıcılar doğru olmalıdır @ no__t-0
+- [CA1708: Tanımlayıcılar, büyük/küçük harf bakımından farklı olmalıdır @ no__t-0

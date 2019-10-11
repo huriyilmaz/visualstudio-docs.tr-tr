@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b0e29f6a9a502054b59fc7313c3eff0565f938
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
-ms.translationtype: MT
+ms.openlocfilehash: 493db26aed1a4e5f41acdd054dba266577159809
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919893"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018495"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ Overview için kod analizi
 
@@ -50,7 +50,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>#pragma desteği
 
-Uyarıları hata olarak değerlendirmek `#pragma` , uyarıları etkinleştirmek veya devre dışı bırakmak ve tek kod satırları için uyarıları gizlemek için yönergesini kullanabilirsiniz. Daha fazla bilgi için bkz. [pragma yönergeleri ve __Pragma Anahtar sözcüğü](https://docs.microsoft.com/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
+Uyarıları hata olarak değerlendirmek için `#pragma` yönergesini kullanabilirsiniz; uyarıları etkinleştirin veya devre dışı bırakın ve tek satırlık kod satırları için uyarıları gizleyin. Daha fazla bilgi için bkz. [pragma yönergeleri ve __Pragma Anahtar sözcüğü](https://docs.microsoft.com/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
 
 ## <a name="annotation-support"></a>Ek açıklama desteği
 
@@ -62,12 +62,12 @@ Tüm kaynak kodu iadelerinin belirli ilkeleri karşıladıklarından emin olmak 
 
 ## <a name="team-build-integration"></a>Takım derlemesi tümleştirmesi
 
-Yapı işleminin bir adımı [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] olarak kod analizi aracını çalıştırmak için derleme sisteminin tümleşik özelliklerini kullanabilirsiniz. Daha fazla bilgi için [Azure işlem hatları](/azure/devops/pipelines/index?view=vsts).
+@No__t-0 derleme işleminin bir adımı olarak kod analizi aracını çalıştırmak için derleme sisteminin tümleşik özelliklerini kullanabilirsiniz. Daha fazla bilgi için [Azure işlem hatları](/azure/devops/pipelines/index?view=vsts).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı Başlangıç: C/için kod analiziC++](quick-start-code-analysis-for-c-cpp.md)
-- [İzlenecek yol: Hatalar için CC++ /kodu çözümle](walkthrough-analyzing-c-cpp-code-for-defects.md)
+- [Hızlı Başlangıç: C/C++@no__t için kod analizi-1
+- [İzlenecek yol: Hatalar için CC++ /kodu çözümle @ no__t-1
 - [C/C++ İçin Kod Analizi Uyarıları](code-analysis-for-c-cpp-warnings.md)
 - [C++ Temel Yönergeleri denetleyicilerini kullanma](using-the-cpp-core-guidelines-checkers.md)
 - [C++Temel kılavuz denetleyicisi başvurusu](code-analysis-for-cpp-corecheck.md)

@@ -1,7 +1,7 @@
 ---
-title: Bir ağ tabanlı yüklemesini güncelleştirme
+title: Ağ tabanlı yüklemeyi güncelleştirme
 description: Kullanarak ağ tabanlı bir Visual Studio yüklemesini güncelleştirme öğrenin Düzen komutu
-ms.date: 03/30/2019
+ms.date: 10/07/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fd7277c4c42856ceea5e4da0a45d54613bf66c74
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2157a6142f95b6ffe34503a8ee80419fcb9ca506
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971374"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018818"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme
 
@@ -28,11 +28,11 @@ Bunu mümkün olması için bir ağ yükleme düzeni, Visual Studio'nun en son �
 
 ## <a name="how-to-update-a-network-layout"></a>Bir ağ düzeni güncelleştirme
 
-Böylece en son güncelleştirmeleri içeren ağ yükleme paylaşımınızdan yenilemek için çalıştırma `--layout` güncelleştirilmiş paket artımlı olarak yüklemek için komutu.
+Ağ yükleme paylaşımınızı en son güncelleştirmeleri içerecek şekilde yenilemek için, güncelleştirilmiş paketleri artımlı olarak indirmek üzere `--layout` komutunu çalıştırın.
 
 ::: moniker range="vs-2017"
 
-**15.3 yeni**: İlk ağ düzeni oluşturduğunuz sırada kısmi bir düzen seçtiyseniz, bu ayarlar kaydedilir. Gelecekteki Düzen komutları, önceki seçeneklerinin yanı sıra, belirttiğiniz yeni seçenekleri kullanın. Ancak bir düzeni önceki bir sürümü kullanıyorsanız, içeriği güncelleştirmek için ağ yükleme düzeni (diğer bir deyişle, aynı iş yüklerini ve dilleri) oluştururken kullandığınız aynı komut satırı parametreleri kullanmanız gerekir.
+**15,3 sürümündeki yenilikler**: İlk ağ düzeni oluşturduğunuz sırada kısmi bir düzen seçtiyseniz, bu ayarlar kaydedilir. Gelecekteki Düzen komutları, önceki seçeneklerinin yanı sıra, belirttiğiniz yeni seçenekleri kullanın. Ancak önceki bir sürümün bir yerleşimini kullanıyorsanız, içeriğini güncelleştirmek için ağ yüklemesi yerleşimini (diğer bir deyişle, aynı iş yüklerini ve dilleri) ilk oluşturduğunuzda kullandığınız komut satırı parametrelerinin aynısını kullanmanız gerekir.
 
 ::: moniker-end
 
@@ -42,9 +42,9 @@ Böylece en son güncelleştirmeleri içeren ağ yükleme paylaşımınızdan ye
 
 ::: moniker-end
 
-Bir dosya paylaşımında bir düzen barındırıyorsanız, özel bir kopyasını (örneğin, c:\vsoffline) düzeni güncelleştirmek ve ardından, tüm güncelleştirilmiş içeriği karşıdan sonra dosya paylaşımınızı kopyalayın (örneğin, \\server\products\VS). Bunu yapmazsanız, Düzen güncelleştirildiği sırada Kurulum'u tüm kullanıcılar, henüz tamamen güncelleştirilmez tüm içeriğin elde düzenden mümkün olmayabilir, büyük bir olasılık yoktur.
+Bir dosya paylaşımında bir düzen barındırdıysanız, düzenin özel bir kopyasını (örneğin, c:\VSLayout) güncelleştirmeniz gerekir ve ardından tüm güncelleştirilmiş içerik indirildikten sonra dosyayı dosya paylaşımınıza kopyalayın (örneğin, \\Server \ Products \ VS). Bunu yapmazsanız, Düzen güncelleştirildiği sırada Kurulum'u tüm kullanıcılar, henüz tamamen güncelleştirilmez tüm içeriğin elde düzenden mümkün olmayabilir, büyük bir olasılık yoktur.
 
-Şimdi oluşturur ve ardından bir düzen ilişkin bazı örnekleri incelemenize:
+Bir düzeni oluşturma ve güncelleştirme hakkında birkaç örnek adım adım inceleyelim:
 
 * İlk olarak, yalnızca İngilizce için bir düzen ile bir iş yükü oluşturmak nasıl bir örnek aşağıdadır:
 
@@ -64,18 +64,18 @@ Bir dosya paylaşımında bir düzen barındırıyorsanız, özel bir kopyasın�
   vs_enterprise.exe --layout c:\VSLayout --passive
   ```
 
-* Bir ek iş yükü ve yerelleştirilmiş dilini nasıl ekleneceğini aşağıda verilmiştir.  (Bu komut ekler *Azure geliştirme* iş yükü.)  Artık hem yönetilen Masaüstü hem de Azure Bu düzende dahil edilir.  İngilizce ve Almanca dil kaynakları için bu iş yükleri de dahildir.  Ve düzeni, kullanılabilir en son sürüme güncelleştirilir.
+* Bir ek iş yükü ve yerelleştirilmiş dilini nasıl ekleneceğini aşağıda verilmiştir.  (Bu komut *Azure geliştirme* iş yükünü ekler.)  Artık hem yönetilen Masaüstü hem de Azure Bu düzende dahil edilir.  İngilizce ve Almanca dil kaynakları için bu iş yükleri de dahildir.  Ve düzeni, kullanılabilir en son sürüme güncelleştirilir.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
   ```
 
     > [!IMPORTANT]
-    > Bir "ekleme" bölümünde bu bileşenler dahil olsa bile bir güncelleştirme işlemi yeni eklenen isteğe bağlı bileşenler yüklemez bir [yanıt dosyası](automated-installation-with-response-file.md). Bu durum, ekleme işlemi sırasında bir güncelleştirme kullanılmayan kaynaklanır.
+    > Bir güncelleştirme işlemi, bir [yanıt dosyasının](automated-installation-with-response-file.md)"Ekle" bölümüne bu bileşenleri dahil etseniz bile yeni eklenen isteğe bağlı bileşenleri yüklemez. Bu durum, bir güncelleştirme sırasında ekleme işlemi kullanılmadığından oluşur.
     >
-    > **Geçici çözüm**: Ayrı bir çalıştırma işlemi eksik bileşenleri yüklemek için bir yükseltme sonrasında değiştirin.
+    > **Geçici çözüm**: Eksik bileşenleri yüklemek için yükseltmeden sonra ayrı bir değiştirme işlemi çalıştırın.
 
-* Son olarak, burada da bir ek iş yükü ve yerelleştirilmiş dil sürümü güncelleştirmeden ekleme. (Bu komut ekler *ASP.NET ve web geliştirme* iş yükü.)  Artık yönetilen Masaüstü, Azure'da ve ASP.NET ve Web geliştirme iş yükleri Bu düzende dahil edilir. İngilizce, Almanca ve Fransızca Dil kaynakları için bu iş yükleri de dahildir.  Ancak, bu komutu çalıştırdığınızda düzenini kullanılabilir en son sürüme güncelleştirilmedi. Bu, mevcut sürümde kalır.
+* Son olarak, burada da bir ek iş yükü ve yerelleştirilmiş dil sürümü güncelleştirmeden ekleme. (Bu komut *ASP.net ve Web geliştirme* iş yükünü ekler.)  Artık yönetilen Masaüstü, Azure ve ASP.NET & Web geliştirme iş yükleri bu düzene dahildir. İngilizce, Almanca ve Fransızca Dil kaynakları için bu iş yükleri de dahildir.  Ancak, bu komutu çalıştırdığınızda düzenini kullanılabilir en son sürüme güncelleştirilmedi. Bu, mevcut sürümde kalır.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
@@ -127,11 +127,11 @@ vs_enterprise.exe --layout <layoutDir> --verify
 Oluşturduğunuz yeni düzene ilk düzeni sürümünün aynı olmayabilir bu nedenle, Microsoft Visual Studio güncelleştirmeleri düzenli olarak gelir.
 
 > [!NOTE]
-> Doğrulama, yalnızca belirli bir alt sürümü Visual Studio'nun en son sürümü için çalışır. Yeni bir sürüm yayımlandıktan hemen sonra doğrulama önceki düzeltme eki düzeyi sürümlerinde aynı alt sürümü için çalışmaz.
+> Doğrulama yalnızca Visual Studio 'nun belirli bir ikincil sürümünün en son sürümü için geçerlidir. Yeni bir sürüm yayımlandığında, doğrulama işlemi, aynı ikincil sürümün önceki düzeltme eki düzeyi sürümleri için çalışmaz.
 
 ## <a name="how-to-fix-a-layout"></a>Bir düzen nasıl
 
-Kullanım `--fix` olarak aynı doğrulamanın `--verify` ve bilinen sorunları düzeltmek de deneyin. `--fix` İşlemi internet bağlantısı gerekir, bu nedenle, çağırma önce makinenizin internet'e bağlı olduğunuzdan emin olun `--fix`.
+Kullanım `--fix` olarak aynı doğrulamanın `--verify` ve bilinen sorunları düzeltmek de deneyin. @No__t-0 işlemi bir internet bağlantısına ihtiyaç duyuyor, bu nedenle `--fix` ' i çağırmadan önce makinenizin internet 'e bağlı olduğundan emin olun.
 
 ```cmd
 vs_enterprise.exe --layout <layoutDir> --fix
@@ -174,4 +174,4 @@ Kurulum, bu komutu yürüttükten sonra onu kaldırır dosyaların listesini bul
 * [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 * [Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar](tools-for-managing-visual-studio-instances.md)
 * [Ağ tabanlı Visual Studio dağıtımlarına yönelik güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
-* [Visual Studio ürün yaşam döngüsü ve Bakım](/visualstudio/releases/2019/servicing/)
+* [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)

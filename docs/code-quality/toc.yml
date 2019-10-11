@@ -33,7 +33,7 @@
                   href: configure-fxcop-analyzers.md
                 - name: Kapsam seçenekleri
                   href: fxcop-analyzer-options.md
-                - name: Önceden tanımlanmış kural kümeleri
+                - name: Kural kategorisini etkinleştirme
                   href: analyzer-rule-sets.md
             - name: SSS
               href: fxcop-analyzers-faq.md
@@ -532,30 +532,30 @@
                   displayName: portability warnings
                   href: portability-warnings.md
                 - name: 'CA1900: Değer tür alanları taşınabilir olmalıdır'
-                  href: ca1900-value-type-fields-should-be-portable.md
+                  href: ca1900.md
                 - name: 'CA1901: P-Invoke bildirimleri taşınabilir olmalıdır'
-                  href: ca1901-p-invoke-declarations-should-be-portable.md
+                  href: ca1901.md
                 - name: 'CA1903: Yalnızca hedeflenen çerçeveden API kullanın'
-                  href: ca1903-use-only-api-from-targeted-framework.md
+                  href: ca1903.md
             - name: Güvenilirlik uyarıları
               items:
                 - name: Genel Bakış
                   displayName: reliability warnings
                   href: reliability-warnings.md
                 - name: 'CA2000: Kapsamı kaybetmeden önce nesneleri bırakın'
-                  href: ca2000-dispose-objects-before-losing-scope.md
+                  href: ca2000.md
                 - name: 'CA2001: Sorunlu metotları çağırmaktan kaçının'
-                  href: ca2001-avoid-calling-problematic-methods.md
+                  href: ca2001.md
                 - name: 'CA2002: Zayıf kimliği olan nesneleri kilitlemeyin'
-                  href: ca2002-do-not-lock-on-objects-with-weak-identity.md
+                  href: ca2002.md
                 - name: 'CA2003: Fiberleri iş parçacığı olarak görmeyin'
-                  href: ca2003-do-not-treat-fibers-as-threads.md
+                  href: ca2003.md
                 - name: 'CA2004: GC.KeepAlive''a çağrıları kaldırın'
-                  href: ca2004-remove-calls-to-gc-keepalive.md
+                  href: ca2004.md
                 - name: 'CA2006: Yerel kaynakları kapsamak için SafeHandle kullanın'
-                  href: ca2006-use-safehandle-to-encapsulate-native-resources.md
+                  href: ca2006.md
                 - name: 'CA2007: Doğrudan bir Görevi beklemeyin'
-                  href: ca2007-do-not-directly-await-task.md
+                  href: ca2007.md
             - name: Güvenlik uyarıları
               items:
                 - name: Genel Bakış
@@ -652,21 +652,21 @@
                 - name: 'CA2153: Bozuk Durum Özel Durumlarını İşlemekten Kaçının'
                   href: ca2153-avoid-handling-corrupted-state-exceptions.md
                 - name: 'CA2300: Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın'
-                  href: ca2300-do-not-use-insecure-deserializer-binaryformatter.md
+                  href: ca2300.md
                 - name: 'CA2301: İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın'
-                  href: ca2301-do-not-call-binaryformatter-deserialize-without-first-setting-binaryformatter-binder.md
+                  href: ca2301.md
                 - name: 'CA2302: BinaryFormatter.Deserialize çağırmadan önce BinaryFormatter.Binder öğesinin ayarlandığından emin olun'
-                  href: ca2302-ensure-binaryformatter-binder-is-set-before-calling-binaryformatter-deserialize.md
+                  href: ca2302.md
                 - name: 'CA2305: Güvenli olmayan seri kaldırıcı LosFormatter kullanmayın'
-                  href: ca2305-do-not-use-insecure-deserializer-losformatter.md
+                  href: ca2305.md
                 - name: 'CA2310: Güvenli olmayan seri kaldırıcı NetDataContractSerializer kullanmayın'
-                  href: ca2310-do-not-use-insecure-deserializer-netdatacontractserializer.md
+                  href: ca2310.md
                 - name: 'CA2311: İlk olarak NetDataContractSerializer.Binder öğesini ayarlamadan seri durumdan çıkarmayın'
-                  href: ca2311-do-not-deserialize-without-first-setting-netdatacontractserializer-binder.md
+                  href: ca2311.md
                 - name: 'CA2312: Seri durumdan çıkarmadan önce NetDataContractSerializer.Binder öğesinin ayarlandığından emin olun'
-                  href: ca2312-ensure-netdatacontractserializer-binder-is-set-before-deserializing.md
+                  href: ca2312.md
                 - name: 'CA2315: Güvenli olmayan seri kaldırıcı ObjectStateFormatter kullanmayın'
-                  href: ca2315-do-not-use-insecure-deserializer-objectstateformatter.md
+                  href: ca2315.md
                 - name: 'CA2321: SimpleTypeResolver kullanarak JavaScriptSerializer ile seri durumdan çıkarmayın'
                   href: ca2321.md
                 - name: 'CA2322: Seri durumdan çıkarmadan önce SimpleTypeResolver ile JavaScriptSerializer’ın başlatılmadığından emin olun'
@@ -682,29 +682,29 @@
                 - name: 'CA2330: Seri durumdan çıkarılırken JsonSerializer’ın güvenli bir yapılandırmaya sahip olmasını sağlayın'
                   href: ca2330.md
                 - name: 'CA3001: SQL ekleme güvenlik açıkları için inceleme kodu'
-                  href: ca3001-review-code-for-sql-injection-vulnerabilities.md
+                  href: ca3001.md
                 - name: 'CA3002: XSS güvenlik açıkları için inceleme kodu'
-                  href: ca3002-review-code-for-xss-vulnerabilities.md
+                  href: ca3002.md
                 - name: 'CA3003: Dosya yolu ekleme güvenlik açıkları için inceleme kodu'
-                  href: ca3003-review-code-for-file-path-injection-vulnerabilities.md
+                  href: ca3003.md
                 - name: 'CA3004: Bilgilerin açığa çıkmasıyla ilgili güvenlik açıkları için inceleme kodu'
-                  href: ca3004-review-code-for-information-disclosure-vulnerabilities.md
+                  href: ca3004.md
                 - name: 'CA3005: LDAP ekleme güvenlik açıkları için inceleme kodu'
-                  href: ca3005-review-code-for-ldap-injection-vulnerabilities.md
+                  href: ca3005.md
                 - name: 'CA3006: İşlem komutu ekleme güvenlik açıkları için inceleme kodu'
-                  href: ca3006-review-code-for-process-command-injection-vulnerabilities.md
+                  href: ca3006.md
                 - name: 'CA3007: Açık yeniden yönlendirme güvenlik açıkları için inceleme kodu'
-                  href: ca3007-review-code-for-open-redirect-vulnerabilities.md
+                  href: ca3007.md
                 - name: 'CA3008: XPath ekleme güvenlik açıkları için inceleme kodu'
-                  href: ca3008-review-code-for-xpath-injection-vulnerabilities.md
+                  href: ca3008.md
                 - name: 'CA3009: XML ekleme güvenlik açıkları için inceleme kodu'
-                  href: ca3009-review-code-for-xml-injection-vulnerabilities.md
+                  href: ca3009.md
                 - name: 'CA3010: XAML ekleme güvenlik açıkları için inceleme kodu'
-                  href: ca3010-review-code-for-xaml-injection-vulnerabilities.md
+                  href: ca3010.md
                 - name: 'CA3011: DLL ekleme güvenlik açıkları için inceleme kodu'
-                  href: ca3011-review-code-for-dll-injection-vulnerabilities.md
+                  href: ca3011.md
                 - name: 'CA3012: Normal ifade ekleme güvenlik açıkları için inceleme kodu'
-                  href: ca3012-review-code-for-regex-injection-vulnerabilities.md
+                  href: ca3012.md
                 - name: 'CA3061: URL ile şema eklemeyin'
                   href: ca3061.md
                 - name: 'CA3075: Güvensiz DTD İşleme'
@@ -847,7 +847,7 @@
       href: quick-start-code-analysis-for-c-cpp.md
     - name: C/C++ kodunda hata olup olmadığını analiz etme
       href: walkthrough-analyzing-c-cpp-code-for-defects.md
-    - name: Gösterim örneği
+    - name: Örnek proje
       href: demo-sample.md
     - name: C++ Temel Yönergeleri denetleyicilerini kullanma
       href: using-the-cpp-core-guidelines-checkers.md
@@ -855,6 +855,8 @@
       href: how-to-set-code-analysis-properties-for-c-cpp-projects.md
     - name: C++ kodu için kural kümeleri
       href: using-rule-sets-to-specify-the-cpp-rules-to-run.md
+    - name: Clang-Tidy kullanma
+      href: clang-tidy.md
     - name: Kod hatalarını azaltmak için SAL ek açıklamalarını kullanma
       items:
         - name: Genel Bakış

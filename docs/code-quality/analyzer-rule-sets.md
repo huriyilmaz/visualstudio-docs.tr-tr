@@ -1,6 +1,6 @@
 ---
-title: FxCop Çözümleyicisi kural kümeleri
-ms.date: 09/23/2019
+title: FxCop Çözümleyicisi kural kümeleri ve editorconfig dosyaları
+ms.date: 10/08/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - analyzer packages, rule sets
@@ -10,41 +10,66 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 313b578743fd734da3354989a8cee16022779242
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: c8602483554ebd311ab6eebb13ff8d2de00d7e09
+ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974701"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172781"
 ---
-# <a name="rule-sets-for-analyzer-packages"></a>Çözümleyici paketleri için kural kümeleri
+# <a name="enable-a-category-of-rules"></a>Kuralların kategorisini etkinleştirme
 
-Önceden tanımlanmış kural kümeleri, bazı NuGet çözümleyici paketlerine dahildir. Örneğin, [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet çözümleyici paketine (sürüm 2.6.2 Critical ' den başlayarak) dahil edilen kural kümeleri, güvenlik, adlandırma veya performans gibi kategorilerine göre kuralları etkinleştirir veya devre dışı bırakır. Kural kümelerinin kullanılması, yalnızca belirli bir kural kategorisiyle ilgili olan kural ihlallerini hızlıca görmeyi kolaylaştırır.
+Çözümleyici paketleri, güvenlik veya tasarım kuralları gibi bir kural kategorisini etkinleştirmeyi hızlı ve kolay hale getirmek için önceden tanımlanmış [Editorconfig](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) ve [kural kümesi](using-rule-sets-to-group-code-analysis-rules.md) dosyalarını içerebilir. [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet çözümleyici paketi, her iki kural kümesini (sürüm 2.6.2 Critical 'den başlayarak) ve editorconfig dosyalarını (sürüm 'nın 2.9.5 sürümüyle ' den başlayarak) içerir. Belirli bir kural kategorisini etkinleştirerek, hedeflenen sorunları ve belirli koşulları belirleyebilirsiniz.
 
-Bir kural kümesi, hedeflenen sorunları ve belirli koşulları belirleyen kod analizi kurallarının bir gruplandırmasıdır. Kural kümeleri kuralları etkinleştirmenizi veya devre dışı bırakmanızı ve tek tek kural ihlalleri için önem derecesini ayarlamanıza olanak sağlar. FxCop Çözümleyicisi NuGet paketi aşağıdaki kural kategorileri için önceden tanımlanmış kural kümelerini içerir:
+> [!NOTE]
+> Visual Studio 2019 sürüm 16,3 ' den başlayarak, çözümleyici kurallarını etkinleştirmek ve bir EditorConfig dosyası kullanarak önem derecesi ayarlamak desteklenir.
 
-- tasarlama
-- belgeler
-- bakım
-- adlandırma
-- performans
-- güvenilirlik
-- güvenlik
-- kullanım
+FxCop Çözümleyicisi NuGet paketi aşağıdaki kural kategorileri için önceden tanımlanmış kural kümelerini ve EditorConfig dosyalarını içerir:
 
-Eski "FxCop" analizinden .NET Compiler Platform tabanlı kod çözümlemesine geçiş yapıyorsanız, bu kural kümeleri, [daha önce kullandığınız](rule-set-reference.md)şekilde benzer kural yapılandırmalarının kullanılmasına devam etmeyi sağlar.
+- Tüm kurallar
+- Veri akışı
+- Tasarlama
+- Belgeler
+- Genelleştirme
+- Birlikte çalışabilirlik
+- Bakım
+- Adlandırma
+- Performans
+- FxCop 'den
+- Güvenilirlik
+- Güvenlik
+- Kullanım
 
-## <a name="use-analyzer-package-rule-sets"></a>Çözümleyici paketi kural kümelerini kullanma
+Bu kural kategorilerinin her biri bir EditorConfig veya kural kümesi dosyasına sahiptir:
 
-[NuGet Çözümleyicisi paketini](install-roslyn-analyzers.md)yükledikten sonra, *RuleSets* dizininde önceden tanımlanmış kural kümesini bulun. Örneğin, `Microsoft.CodeAnalysis.FxCopAnalyzers` çözümleyici paketine başvurdıysanız, *RuleSets* dizinini *% USERPROFILE% \\. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers @ no__t-4 @ no__t-5version @ no__t-6\rulesets*adresinde bulabilirsiniz. Buradan, bir veya daha fazla RuleSets 'i kopyalayın ve bunları Visual Studio projenizi içeren dizine yapıştırın veya doğrudan **Çözüm Gezgini**.
+- Kategorideki tüm kuralları etkinleştir (ve diğer tüm kuralları devre dışı bırak)
+- Her kuralın varsayılan önem derecesini ve etkinleştirme ayarını kullanın (ve diğer tüm kuralları devre dışı bırakın)
+
+> [!TIP]
+> "Tüm kurallar" kategorisinin tüm kuralları devre dışı bırakmak için ek bir EditorConfig veya kural kümesi dosyası vardır. Bir projedeki hiçbir çözümleyici uyarılarından veya hatalarından kurtulmak için bu dosyayı kullanın.
+
+> [!TIP]
+> Eski "FxCop" analizinden .NET Compiler Platform tabanlı kod çözümlemesine geçiş yapıyorsanız, EditorConfig ve kural kümesi dosyaları, [daha önce kullandığınız](rule-set-reference.md)şekilde benzer kural yapılandırmalarını kullanmaya devam edebilmeniz için izin sağlar.
+
+## <a name="predefined-editorconfig-files"></a>Önceden tanımlanmış EditorConfig dosyaları
+
+Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketi için önceden tanımlanmış EditorConfig dosyaları *% USERPROFILE% \\. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\editorconfig içinde bulunur* dizin. Örneğin, tüm güvenlik kurallarını etkinleştirmek için EditorConfig dosyası *% USERPROFILE% \\ konumunda bulunuyor. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\editorconfig\SecurityRulesEnabled @ no__ t-5. editorconfig*.
+
+Seçilen. editorconfig dosyasını projenizin kök dizinine kopyalayın.
+
+## <a name="predefined-rule-sets"></a>Önceden tanımlanmış kural kümeleri
+
+Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketi için önceden tanımlanmış kural kümesi dosyaları *% USERPROFILE% \\. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\rulesets* içinde bulunur dizinden. Örneğin, tüm güvenlik kurallarını etkinleştirmek için kural kümesi dosyası *% USERPROFILE% \\. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\rulesets\SecurityRulesEnabled.RuleSet*konumunda bulunur.
+
+Bir veya daha fazla kural kümesini kopyalayın ve Visual Studio projenizi içeren dizine veya doğrudan **Çözüm Gezgini**yapıştırın.
 
 Ayrıca, [önceden tanımlanmış bir kural kümesini](how-to-create-a-custom-rule-set.md) tercih etmeniz için özelleştirebilirsiniz. Örneğin, bir veya daha fazla kuralın önem derecesini değiştirerek ihlallerin **hata listesi**hata veya uyarı olarak görünmesini sağlayabilirsiniz.
 
-## <a name="set-the-active-rule-set"></a>Etkin kural kümesini ayarla
+### <a name="set-the-active-rule-set"></a>Etkin kural kümesini ayarla
 
 Etkin kural kümesini ayarlama işlemi, .NET Core/. NET Standard projeniz veya .NET Framework projeniz olmasına bağlı olarak biraz farklıdır.
 
-### <a name="net-core"></a>.NET Core
+#### <a name="net-core"></a>.NET Core
 
 Bir kuralı, .NET Core veya .NET Standard projelerinde analiz için etkin kural kümesini ayarlamak için, **CodeAnalysisRuleSet** özelliğini proje dosyanıza el ile ekleyin. Örneğin, aşağıdaki kod parçacığı etkin kural kümesi olarak `HelloWorld.ruleset` ' ı ayarlar.
 
@@ -55,7 +80,7 @@ Bir kuralı, .NET Core veya .NET Standard projelerinde analiz için etkin kural 
 </PropertyGroup>
 ```
 
-### <a name="net-framework"></a>.NET Framework
+#### <a name="net-framework"></a>.NET Framework
 
 Bir kuralı .NET Framework projelerinde analiz için etkin kural kümesini ayarlamak için:
 
@@ -76,27 +101,6 @@ Bir kuralı .NET Framework projelerinde analiz için etkin kural kümesini ayarl
 ::: moniker-end
 
    Şimdi yalnızca seçili kural kümesinde etkinleştirilen kuralların kural ihlallerini görürsünüz.
-
-## <a name="available-rule-sets"></a>Kullanılabilir kural kümeleri
-
-Önceden tanımlı çözümleyici kural kümeleri, @ no__t-0one paketindeki tüm kuralları etkileyen, bunların tümünü devre dışı bırakan ve her kuralın varsayılan önem derecesine ve etkinleştirme ayarlarına bir tane veren üç RuleSet içerir:
-
-- AllRulesEnabled. RuleSet
-- Allkuraldevre dışı. RuleSet
-- Allkurallarını varsayılan. RuleSet
-
-Ayrıca, paketteki her bir kural kategorisi için performans veya güvenlik gibi iki kural kümesi vardır. Bir kural kümesi kategori için tüm kurallara izin verir ve bir kural kümesi, kategorideki her bir kural için varsayılan önem derecesini ve etkinleştirme ayarlarını kabul eder.
-
-[Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet Çözümleyicisi paketi aşağıdaki kategorilerin kural kümelerini içerir:
-
-- tasarlama
-- belgeler
-- bakım
-- adlandırma
-- performans
-- güvenilirlik
-- güvenlik
-- kullanım
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

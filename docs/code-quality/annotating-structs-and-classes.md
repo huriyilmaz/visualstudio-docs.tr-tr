@@ -21,45 +21,45 @@ f1_keywords:
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 35be465064c9524eb0e1339794b6a19b7a595da1
-ms.sourcegitcommit: d2b234e0a4a875c3cba09321cdf246842670d872
+ms.openlocfilehash: 1cff36760a84821a33dcdb1ee4cc6842cd40aee0
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493631"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72015971"
 ---
 # <a name="annotating-structs-and-classes"></a>Yapıları ve Sınıfları Yorumlama
 
-Yapı ve sınıf üyeleri okuduğunuzda gibi davranan ek açıklamalar kullanarak açıklama ekleyebilirsiniz; herhangi bir işlev çağrısı veya bir parametre veya bir sonuç değeri kapsayan yapısı gerektirir. işlev girişi/çıkışı en doğru olduğu varsayılmıştır.
+Struct ve Class üyelerine, ınvarıant gibi davranan ek açıklamaları kullanarak açıklama ekleyebilirsiniz — bir parametre çağrısı veya bir sonuç değeri olarak kapsayan yapıyı içeren herhangi bir işlev çağrısında ya da işlev girişinde/çıkışta doğru olarak kabul edilir.
 
-## <a name="struct-and-class-annotations"></a>Yapı ve sınıf ek açıklamaları
+## <a name="struct-and-class-annotations"></a>Struct ve sınıf ek açıklamaları
 
 - `_Field_range_(low, high)`
 
-     Aralık (dahil) gelen alanın bulunduğu `low` için `high`.  Eşdeğer `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` uygun önceki veya sonraki koşullarını kullanarak ek açıklamalı nesneye uygulanan.
+     Alan, `low` ile `high` arasında (dahil) aralığıdır.  İlgili ön veya gönderi koşulları kullanılarak açıklamalı nesneye uygulanan `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` ' a eşdeğerdir.
 
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
 
-     Öğeleri (veya bayt) belirtilen bir yazılabilir boyut sahip bir alan `size`.
+     @No__t-0 ile belirtilen öğeler (veya bayt) içinde yazılabilir boyutu olan bir alan.
 
 - `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
 
-     Öğeleri (veya bayt) belirtilen bir yazılabilir boyut sahip bir alan `size`ve `count` okunabilir bu öğelerin (bayt).
+     @No__t-0 tarafından belirtilen öğeler (veya bayt) ve okunabilir olan bu öğelerin (bayt) `count` ' de, yazılabilir boyutu olan bir alan.
 
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
 
-     Readable ve writable öğeleri (veya boyutunu bayt) tarafından belirtilen sahip bir alan `size`.
+     @No__t-0 tarafından belirtilen öğelerde (veya baytların) hem okunabilir hem de yazılabilir boyuta sahip bir alan.
 
 - `_Field_z_`
 
-     Null ile sonlandırılmış bir dize sahip bir alan.
+     Null ile sonlandırılmış bir dizeye sahip alan.
 
 - `_Struct_size_bytes_(size)`
 
-     Yapı ya da sınıf bildirimi için geçerlidir.  Geçerli bir nesne türü tarafından belirtilen bayt sayısı ile bildirilen türünden daha büyük olabileceğini gösterir `size`.  Örneğin:
+     Struct veya Class bildirimi için geçerlidir.  Bu türdeki geçerli bir nesnenin, `size` tarafından belirtilen bayt sayısıyla, belirtilen tür ile daha büyük olabileceğini gösterir.  Örneğin:
 
     ```cpp
 
@@ -71,7 +71,7 @@ Yapı ve sınıf üyeleri okuduğunuzda gibi davranan ek açıklamalar kullanara
 
     ```
 
-     Arabellek boyutu parametresinin bayt `pM` türü `MyStruct *` olmasını alınır:
+     @No__t-1 türündeki `pM` parametresinin bayt cinsinden arabellek boyutu şu şekilde yapılır:
 
     ```cpp
     min(pM->nSize, sizeof(MyStruct))
@@ -104,11 +104,11 @@ struct MyBuffer
 };
 ```
 
-Bu örnek için Notlar:
+Bu örneğe ilişkin notlar:
 
-- `_Field_z_` eşdeğerdir `_Null_terminated_`.  `_Field_z_` için ad alanı ad alanı null ile sonlandırılmış bir dize belirtir.
-- `_Field_range_` için `bufferSize` belirten değeri `bufferSize` içinde 1 olmalıdır ve `MaxBufferSize` (her ikisi de dahil).
-- Son sonuçları `_Struct_size_bytes_` ve `_Field_size_` ek açıklamaları eşdeğerdir. Yapılar veya benzer bir düzen sahip sınıflar için `_Field_size_` daha az başvurular ve eşdeğer hesaplamalar olduğundan okunması ve düzenlenmesi, daha kolay olan `_Struct_size_bytes_` ek açıklama. `_Field_size_` bayt boyutu dönüştürme gerektirmez. Bayt boyutu tek seçenek, örneğin, bir void işaretçisine alan için ise `_Field_size_bytes_` kullanılabilir. Her iki `_Struct_size_bytes_` ve `_Field_size_` var, her ikisi de araçlar kullanılabilir olur. Bu aracın en fazla iki ek açıklamalar katılmıyorum durumunda ne yapacaklarını nedir?
+- `_Field_z_` `_Null_terminated_` ' e eşdeğerdir.  ad alanı için `_Field_z_`, ad alanının null ile sonlandırılmış bir dize olduğunu belirtir.
+- `bufferSize` için `_Field_range_` `bufferSize` değerinin 1 ile `MaxBufferSize` (her ikisi de dahil) arasında olması gerektiğini belirtir.
+- @No__t-0 ve `_Field_size_` ek açıklamaların nihai sonuçları eşdeğerdir. Benzer düzeni olan yapılar veya sınıflar için `_Field_size_` ' ı okumak ve sürdürmek daha kolaydır, çünkü eşdeğer `_Struct_size_bytes_` ek açıklamasına göre daha az başvuru ve hesaplamalar vardır. `_Field_size_` ' ın bayt boyutuna dönüştürülmesi gerekmez. Bayt boyutu tek seçenektir, örneğin, void işaretçi alanı için `_Field_size_bytes_` kullanılabilir. Hem `_Struct_size_bytes_` hem de `_Field_size_` varsa, her ikisi de araçlar tarafından kullanılabilir. Bu, iki ek açıklama kabul eterif durumunda ne yapmanız gerektiğini araca kadar olur.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
