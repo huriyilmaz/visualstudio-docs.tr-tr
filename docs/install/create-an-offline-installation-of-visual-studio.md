@@ -1,7 +1,7 @@
 ---
 title: Çevrimdışı yüklemesini oluşturma
 description: Visual Studio bir güvenilir bir internet bağlantısı veya düşük bant genişliğine sahip olduğunuzda çevrimdışı yüklemeyi öğrenin.
-ms.date: 10/07/2019
+ms.date: 10/11/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 28351407e80c723c0b60640b7e56177c85c2a476
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 3a39f1b89cd8a0e0bbf27742688bcaec3da6f912
+ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018836"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289628"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun çevrimdışı yüklemesini oluşturma
 
@@ -79,7 +79,7 @@ Bu adımı tamamlamak için bir internet bağlantısı olması gerekir.
 
 Visual Studio 2017 için bir önyükleyici almak üzere, bunun nasıl yapılacağı hakkında ayrıntılı bilgi için [Visual Studio önceki sürümler](https://visualstudio.microsoft.com/vs/older-downloads/) indirme sayfasına bakın.
 
-Kurulum çalıştırılabilir dosya @ no__t-0veya daha belirgin olacak şekilde, @ no__t-1önyükleyici dosyası aşağıdakilerden biriyle eşleşmelidir.
+Kurulumlarınız @ no__t-0veya daha belirgin olacak şekilde çalıştırılabilir. önyükleyici dosyası @ no__t-1ile eşleşmelidir veya aşağıdakilerden birine benzer olmalıdır.
 
 | Sürüm | Kısaltın |
 |-------------|-----------------------|
@@ -102,6 +102,9 @@ Seçtiğiniz Visual Studio sürümünüz için Visual Studio önyükleyicisi ind
 | Visual Studio Derleme Araçları   | [vs_buildtools. exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
 
 ::: moniker-end
+
+>[!TIP]
+>Daha önce bir önyükleyici dosyası indirdiyseniz ve sürümünü doğrulamak istiyorsanız, bunun nasıl yapıldığını burada bulabilirsiniz. Windows 'ta dosya Gezgini 'ni açın, önyükleyici dosyasına sağ tıklayın, **Özellikler**' i seçin, **Ayrıntılar** sekmesini seçin ve ardından **ürün sürümü** numarasını görüntüleyin. Bu numarayı bir Visual Studio sürümüyle eşleştirmek için bkz. [Visual Studio derleme numaraları ve sürüm tarihleri](visual-studio-build-numbers-and-release-dates.md) sayfası.
 
 ### <a name="step-2---create-a-local-install-cache"></a>2\. adım - yerel yükleme önbelleği oluşturma
 

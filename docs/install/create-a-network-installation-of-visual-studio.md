@@ -1,7 +1,7 @@
 ---
 title: Bir ağ tabanlı yüklemesini oluşturma
 description: Visual Studio içinde bir kuruluş dağıtımı için bir ağ yükleme noktasını oluşturmayı öğrenin.
-ms.date: 10/07/2019
+ms.date: 10/11/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b297e99c3fbaaabed178930dfad1ac13d5ab1cd8
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 521b29f87db6379a011a0b46dfd1405b374ab9ba
+ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018882"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289648"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Visual Studio 'nun ağ yüklemesi oluşturma
 
@@ -39,7 +39,7 @@ Böylece istemci iş istasyonları, aynı ağ konumunu en son hizmet güncelleş
 
 Visual Studio 2017 için bir önyükleyici almak üzere, bunun nasıl yapılacağı hakkında ayrıntılı bilgi için [Visual Studio önceki sürümler](https://visualstudio.microsoft.com/vs/older-downloads/) indirme sayfasına bakın.
 
-Kurulum çalıştırılabilir dosya @ no__t-0veya daha belirgin olacak şekilde, @ no__t-1önyükleyici dosyası aşağıdakilerden biriyle eşleşmelidir.
+Kurulumlarınız @ no__t-0veya daha belirgin olacak şekilde çalıştırılabilir. önyükleyici dosyası @ no__t-1ile eşleşmelidir veya aşağıdakilerden birine benzer olmalıdır.
 
 | Sürüm | Kısaltın |
 |-------------|-----------------------|
@@ -53,7 +53,7 @@ Desteklenen diğer bootstrapdenetleyicileri, **vs_feedbackclient. exe**, **vs_Te
 
 ::: moniker range="vs-2019"
 
-Kurulumunuzu yürütülebilir&mdash;veya daha özel bir önyükleyici dosya&mdash;aşağıdakilerden biriyle eşleşmesi gerekir.
+Kurulum çalıştırılabilir dosya @ no__t-0veya daha belirgin olacak şekilde, @ no__t-1önyükleyici dosyası eşleşmelidir veya aşağıdakilerden birine benzer olmalıdır.
 
 |Sürüm | İndir|
 |-------------|-----------------------|
@@ -64,6 +64,9 @@ Kurulumunuzu yürütülebilir&mdash;veya daha özel bir önyükleyici dosya&mdas
 Desteklenen diğer bootstrapdenetleyicileri, [vs_TeamExplorer. exe](https://aka.ms/vs/16/release/vs_teamexplorer.exe), [vs_testagent. exe](https://aka.ms/vs/16/release/vs_testagent.exe)ve [vs_testcontroller. exe](https://aka.ms/vs/16/release/vs_testcontroller.exe)' yi içerir.
 
 ::: moniker-end
+
+>[!TIP]
+>Daha önce bir önyükleyici dosyası indirdiyseniz ve sürümünü doğrulamak istiyorsanız, bunun nasıl yapıldığını burada bulabilirsiniz. Windows 'ta dosya Gezgini 'ni açın, önyükleyici dosyasına sağ tıklayın, **Özellikler**' i seçin, **Ayrıntılar** sekmesini seçin ve ardından **ürün sürümü** numarasını görüntüleyin. Bu numarayı bir Visual Studio sürümüyle eşleştirmek için bkz. [Visual Studio derleme numaraları ve sürüm tarihleri](visual-studio-build-numbers-and-release-dates.md) sayfası.
 
 ## <a name="create-an-offline-installation-folder"></a>Bir çevrimdışı yükleme klasörü oluşturun
 
