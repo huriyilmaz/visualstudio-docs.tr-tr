@@ -13,16 +13,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ce9f55dd54dbe85f64226c1ca7f0b4f75b1cdfc
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 22bc479ccd29a9eaf76e50f630061699856502ea
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118693"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306225"
 ---
 # <a name="step-6-name-your-button-controls"></a>6\. Adım: Düğme denetimlerinizi adlandırma
 
-Formunuz üzerinde yalnızca bir <xref:System.Windows.Forms.PictureBox> tane vardır. Bunu eklediğinizde, IDE otomatik olarak **PictureBox1**olarak adlandırılır. Yalnızca **CheckBox1**adlı bir <xref:System.Windows.Forms.CheckBox>tane vardır. Yakında bazı kodlar yazacaksınız ve bu kod CheckBox ve PictureBox 'a başvuracaktır. Bu denetimlerden yalnızca biri olduğundan, kodunuzda **PictureBox1** veya **CheckBox1** gördüğünüz zaman ne anlama geldiğini bilirsiniz.
+Formunuzda yalnızca bir <xref:System.Windows.Forms.PictureBox> vardır. Bunu eklediğinizde, IDE otomatik olarak **PictureBox1**olarak adlandırılır. **CheckBox1**adlı yalnızca bir <xref:System.Windows.Forms.CheckBox> vardır. Yakında bazı kodlar yazacaksınız ve bu kod CheckBox ve PictureBox 'a başvuracaktır. Bu denetimlerden yalnızca biri olduğundan, kodunuzda **PictureBox1** veya **CheckBox1** gördüğünüz zaman ne anlama geldiğini bilirsiniz.
 
 > [!TIP]
 > Visual Basic, herhangi bir denetim adının varsayılan ilk harfi ilk tepdir, bu nedenle adlar **PictureBox1**, **CheckBox1**vb. olur.
@@ -33,7 +33,7 @@ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3
 
 1. Formda, **Kapat** düğmesini seçin. (Tüm düğmeler seçiliyse, seçimi iptal etmek için **ESC** tuşunu seçin.) **(Ad)** özelliğini görene kadar **Özellikler** penceresinde kaydırma yapın. ( **(Ad)** özelliği, Özellikler alfabetik olduğunda üst kısımdaki bir yakındır.) Aşağıdaki ekran görüntüsünde gösterildiği gibi, adı **CloseButton**olarak değiştirin.
 
-    ![CloseButton adıyla Özellikler penceresi](../ide/media/express_setnameproperty.png)<br>***Özellikler*** *içeren pencere* ***CloseButton*** *ad*
+    closeButton adı @ no__t-1 olan ![Properties penceresi<br>***CloseButton*** *adıyla* ***Özellikler*** *penceresi*
 
     > [!NOTE]
     > Düğme adını "Close" ve "Button" kelimeleri arasında bir boşluk olacak şekilde **Kapat düğmesine**değiştirmeyi deneyin. Bunu yaptığınızda, IDE bir hata iletisi görüntüler: "Özellik değeri geçerli değil." Denetim adlarında boşluklara (ve diğer birkaç karaktere) izin verilmez.
@@ -45,7 +45,7 @@ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3
 
    Bu sekme, aşağıdaki ekran görüntüsünde gösterildiği gibi, formun arkasındaki kod dosyasını görüntüler.
 
-    ![Visual C&#35; code ile Form1.cs sekmesi](../ide/media/express_showbuttoncode.png)<br>
+    ![Form1.cs Tab with Visual C&#35; Code @ no__t-2<br>
 ***Kodla Form1.cs*** sekmesi *C#*
 
     > [!NOTE]
@@ -65,17 +65,16 @@ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3
     End Sub
     ```
 
-   > [!IMPORTANT]
-   > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dili denetimi](../ide/media/docs-programming-language-control.png)
+   [!INCLUDE [devlang-control](./includes/devlang-control.md)]
 
-   Adlandırılan `showButton_Click()` koda bakıyorsunuz (alternatif olarak, `ShowButton_Click()`). IDE bunu, **showButton** düğmesi için kod dosyasını açtığınızda formun koduna eklemiştir. Tasarım zamanında, bir formdaki denetim için kod dosyasını açtığınızda, zaten mevcut değilse denetim için kod oluşturulur. *Yöntem*olarak bilinen bu kod, uygulamanızı çalıştırdığınızda çalışır ve bu durumda **bir resim göster** düğmesi.
+   @No__t-0 olarak adlandırılan koda bakıyorsunuz (alternatif olarak, `ShowButton_Click()`). IDE bunu, **showButton** düğmesi için kod dosyasını açtığınızda formun koduna eklemiştir. Tasarım zamanında, bir formdaki denetim için kod dosyasını açtığınızda, zaten mevcut değilse denetim için kod oluşturulur. *Yöntem*olarak bilinen bu kod, uygulamanızı çalıştırdığınızda çalışır ve bu durumda **bir resim göster** düğmesi.
 
 1. **Windows Form Tasarımcısı** sekmesini yeniden seçin (**Form1.cs [Design]** ) ve ardından formun kodunda bir yöntem oluşturmak için **Resmi Temizle** düğmesine ait kod dosyasını açın. Bunu kalan iki düğme için tekrarlayın. Her seferinde IDE, formun kod dosyasına yeni bir yöntem ekler.
 
-1. Bir yöntemi daha eklemek için, IDE 'nin bir `checkBox1_CheckedChanged()` Yöntem eklemesini sağlamak üzere **Windows Form Tasarımcısı** **onay kutusu** denetimi için kod dosyasını açın. Bu yöntem, Kullanıcı onay kutusunu seçtiğinde veya temizlediğinde çağrılır.
+1. Bir başka yöntem eklemek için, IDE 'nin bir `checkBox1_CheckedChanged()` yöntemi eklemesini sağlamak üzere **Windows form tasarımcısı** **onay kutusu** denetiminin kod dosyasını açın. Bu yöntem, Kullanıcı onay kutusunu seçtiğinde veya temizlediğinde çağrılır.
 
    > [!TIP]
-   > Uygulama üzerinde çalışırken genellikle kod Düzenleyicisi ve **Windows Form Tasarımcısı**arasında geçiş yapabilirsiniz. IDE, projenizde gezinmeyi kolaylaştırır. C# **Windows Form Tasarımcısı** açmak için **Çözüm Gezgini** kullanın *Visual Basic ya da* menü çubuğunda, **Görünüm** > **Tasarımcısı** *' nı seçin* .
+   > Uygulama üzerinde çalışırken genellikle kod Düzenleyicisi ve **Windows Form Tasarımcısı**arasında geçiş yapabilirsiniz. IDE, projenizde gezinmeyi kolaylaştırır. C# **Windows Form Tasarımcısı** açmak için **Çözüm Gezgini** kullanın *Visual Basic ya da* menü çubuğunda  > **tasarımcısını** **görüntüle** *' yi seçin* .
 
     Aşağıdaki kod düzenleyicisinde gördüğünüz yeni kodu gösterir.
 
@@ -88,23 +87,23 @@ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3
 
     Eklediğiniz beş yönteme olay *işleyicileri*denir, çünkü uygulamanız her bir olay (bir düğme seçme veya bir kutu seçtiğinizde) olur.
 
-    Tasarım zamanında IDE 'deki bir denetimin kodunu görüntülediğinizde, Visual Studio bir tane değilse denetim için bir olay işleyici yöntemi ekler. Örneğin, bir düğmeye çift tıkladığınızda IDE, <xref:System.Windows.Forms.Control.Click> olayı için bir olay işleyicisi ekler (Kullanıcı düğmeyi seçtiğinde çağrılır). Bir onay kutusunu çift tıklattığınızda, IDE, <xref:System.Windows.Forms.CheckBox.CheckedChanged> olayı için bir olay işleyicisi ekler (Kullanıcı kutuyu seçtiğinde veya temizlediğinde çağrılır).
+    Tasarım zamanında IDE 'deki bir denetimin kodunu görüntülediğinizde, Visual Studio bir tane değilse denetim için bir olay işleyici yöntemi ekler. Örneğin, bir düğmeye çift tıkladığınızda, IDE <xref:System.Windows.Forms.Control.Click> olayı (Kullanıcı düğmeyi seçtiğinde çağrılır) için bir olay işleyicisi ekler. Bir onay kutusuna çift tıkladığınızda, IDE <xref:System.Windows.Forms.CheckBox.CheckedChanged> olayı için bir olay işleyicisi ekler (Kullanıcı kutuyu seçtiğinde veya temizlediğinde çağrılır).
 
-    Bir denetim için bir olay işleyicisi ekledikten sonra, denetime çift tıklayarak veya menü çubuğunda**kodu** **görüntüle** > ' yi seçerek **Windows Form Tasarımcısı** istediğiniz zaman buna dönebilirsiniz.
+    Bir denetim için bir olay işleyicisi ekledikten sonra, denetime çift tıklayarak ya da menü çubuğunda,  > **kodunu** **görüntüle**' yi seçerek, bu nesneye dilediğiniz zaman **Windows Form Tasarımcısı** dönebilirsiniz.
 
     Programlar oluştururken adlar önemlidir ve Yöntemler (olay işleyicileri dahil) istediğiniz herhangi bir ada sahip olabilir. IDE ile bir olay işleyicisi eklediğinizde, denetimin adına ve işlenmekte olan olaya göre bir ad oluşturur.
 
-    Örneğin, **showButton** adlı bir düğmenin Click olayına `showButton_Click()` (alternatif `ShowButton_Click()`olarak) olay işleyicisi yöntemi denir. Ayrıca, yöntemlerin açıklanmakta olduğunu `()` göstermek için, açma ve kapatma parantezleri genellikle yöntem adından sonra eklenir.
+    Örneğin, **showButton** adlı bir düğmenin click olayına `showButton_Click()` (alternatif olarak, `ShowButton_Click()`) olay işleyicisi yöntemi denir. Ayrıca, `()` açılış ve kapanış parantezleri genellikle yöntemlerin açıklanmakta olduğunu belirtmek için yöntem adından sonra eklenir.
 
-    Kod değişkeni adını değiştirmek istediğinize karar verirseniz, koddaki değişkene sağ tıklayıp**yeniden** **Düzenle** > ' yi seçin. Koddaki bu değişkenin tüm örnekleri yeniden adlandırılır. Daha fazla bilgi için [yeniden düzenlemeyi yeniden adlandırma](../ide/reference/rename.md)bölümüne bakın.
+    Kod değişkeni adını değiştirmek istediğinize karar verirseniz, koddaki değişkenine sağ tıklayın ve sonra @no__t**yeniden** **Düzenle**' yi seçin. Koddaki bu değişkenin tüm örnekleri yeniden adlandırılır. Daha fazla bilgi için [yeniden düzenlemeyi yeniden adlandırma](../ide/reference/rename.md)bölümüne bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* Sonraki öğretici adımına gitmek için bkz  **[. 7. Adım: ](../ide/step-7-add-dialog-components-to-your-form.md)Formunuza**iletişim kutusu bileşenleri ekleyin.
+* Sonraki öğretici adımına gitmek için bkz. ** @ no__t-1Step 7: @ No__t-0 @ no__t-1 formunuza iletişim kutusu bileşenleri ekleyin.
 
-* Önceki öğretici adımına dönmek için bkz [. 5. Adım: Formunuza](../ide/step-5-add-controls-to-your-form.md)denetimler ekleyin.
+* Önceki öğretici adımına dönmek için bkz. [Adım 5: @ No__t-0 formunuza denetimler ekleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Öğretici 2: Süreli matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
-* [Öğretici 3: Eşleşen bir oyun oluşturun](tutorial-3-create-a-matching-game.md)
+* [Öğretici 2: Zamanlanmış matematik testi oluşturma @ no__t-0
+* [Öğretici 3: Eşleşen bir oyun oluşturma @ no__t-0

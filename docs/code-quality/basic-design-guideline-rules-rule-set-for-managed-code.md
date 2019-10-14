@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d51796f7575e3dd5766655661927dfd520935c02
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 90464052d0ba4f02b6b971adbacda8a29f3b0b2c
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585089"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305452"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>Yönetilen kod için Temel Tasarım Yönerge Kuralları kural kümesi
 
@@ -42,7 +42,7 @@ Aşağıdaki tabloda, Microsoft temel tasarım kılavuzu kuralları kural kümes
 |[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|COM görünebilir tür taban türler COM görünebilir olmalıdır|
 |[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|COM kayıt metotları eşleşmelidir|
 |[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|P/Invoke'ları doğru bildirin|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|Boş sonlandırıcıları kaldırın|
+|[CA1821](../code-quality/ca1821.md)|Boş sonlandırıcıları kaldırın|
 |[CA1900](../code-quality/ca1900-value-type-fields-should-be-portable.md)|Değer tür alanları taşınabilir olmalıdır|
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke bildirimleri taşınabilir olmalıdır|
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|Zayıf kimliği olan nesneleri kilitlemeyin|
@@ -138,19 +138,19 @@ Aşağıdaki tabloda, Microsoft temel tasarım kılavuzu kuralları kural kümes
 |[CA1502](../code-quality/ca1502-avoid-excessive-complexity.md)|Aşırı karmaşıklıktan kaçının|
 |[CA1708](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)|Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır|
 |[CA1716](../code-quality/ca1716-identifiers-should-not-match-keywords.md)|Tanımlayıcılar anahtar sözcükler ile eşleşmemelidir|
-|[CA1801](../code-quality/ca1801-review-unused-parameters.md)|Kullanılmayan parametreleri gözden geçirin|
-|[CA1804](../code-quality/ca1804-remove-unused-locals.md)|Kullanılmayan yerelleri kaldırın|
-|[CA1809](../code-quality/ca1809-avoid-excessive-locals.md)|Aşırı yerellerden kaçının|
-|[CA1810](../code-quality/ca1810-initialize-reference-type-static-fields-inline.md)|Başvuru türü statik alanları satır içinden başlatın|
-|[CA1811](../code-quality/ca1811-avoid-uncalled-private-code.md)|Çağırılmayan özel kodlardan kaçının|
-|[CA1812](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)|Örneklenmemiş iç sınıflardan kaçının|
-|[CA1813](../code-quality/ca1813-avoid-unsealed-attributes.md)|Mühürsüz özniteliklerden kaçının|
-|[CA1814](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md)|Çok boyutlu diziler yerine basit dizileri tercih edin|
-|[CA1815](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)|Değer türlerinde eşittir ve işleç eşittiri geçersiz kılın|
-|[CA1819](../code-quality/ca1819-properties-should-not-return-arrays.md)|Özellikler diziler döndürmemelidir|
-|[CA1820](../code-quality/ca1820-test-for-empty-strings-using-string-length.md)|Dize uzunluğunu kullanarak boş dizeleri test edin|
-|[CA1822](../code-quality/ca1822-mark-members-as-static.md)|Üyeleri static olarak işaretleyin|
-|[CA1823](../code-quality/ca1823-avoid-unused-private-fields.md)|Kullanılmayan özel alanlardan kaçının|
+|[CA1801](../code-quality/ca1801.md)|Kullanılmayan parametreleri gözden geçirin|
+|[CA1804](../code-quality/ca1804.md)|Kullanılmayan yerelleri kaldırın|
+|[CA1809](../code-quality/ca1809.md)|Aşırı yerellerden kaçının|
+|[CA1810](../code-quality/ca1810.md)|Başvuru türü statik alanları satır içinden başlatın|
+|[CA1811](../code-quality/ca1811.md)|Çağırılmayan özel kodlardan kaçının|
+|[CA1812](../code-quality/ca1812.md)|Örneklenmemiş iç sınıflardan kaçının|
+|[CA1813](../code-quality/ca1813.md)|Mühürsüz özniteliklerden kaçının|
+|[CA1814](../code-quality/ca1814.md)|Çok boyutlu diziler yerine basit dizileri tercih edin|
+|[CA1815](../code-quality/ca1815.md)|Değer türlerinde eşittir ve işleç eşittiri geçersiz kılın|
+|[CA1819](../code-quality/ca1819.md)|Özellikler diziler döndürmemelidir|
+|[CA1820](../code-quality/ca1820.md)|Dize uzunluğunu kullanarak boş dizeleri test edin|
+|[CA1822](../code-quality/ca1822.md)|Üyeleri static olarak işaretleyin|
+|[CA1823](../code-quality/ca1823.md)|Kullanılmayan özel alanlardan kaçının|
 |[CA2201](../code-quality/ca2201-do-not-raise-reserved-exception-types.md)|Ayrılmış özel durum türlerini harekete geçirmeyin|
 |[CA2205](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md)|Win32 API'sinin yönetilen eşdeğerlerini kullanın|
 |[CA2208](../code-quality/ca2208-instantiate-argument-exceptions-correctly.md)|Bağımsız değişken özel durumlarını doğru örnekleyin|

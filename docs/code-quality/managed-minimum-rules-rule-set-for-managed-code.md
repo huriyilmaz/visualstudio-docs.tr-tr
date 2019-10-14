@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 183923a764cc3462e799c8f67677aa564c5fe59d
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: bc3d0376e0f3af186802fa566e1618ae7ed89a78
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585120"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305611"
 ---
 # <a name="managed-minimum-rules-rule-set-for-managed-code"></a>Yönetilen kod için Yönetilen Minimum Kurallar kural kümesi
 
@@ -22,6 +22,6 @@ Yönetilen minimum kurallar, olası güvenlik delikleri, uygulama kilitlenmesi v
 |Kural|Açıklama|
 |----------|-----------------|
 |[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|Boş sonlandırıcıları kaldırın|
+|[CA1821](../code-quality/ca1821.md)|Boş sonlandırıcıları kaldırın|
 |[CA2213](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|Atılabilen alanlar atılmalıdır|
-|[CA2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|Geçersiz kılma için aşırı yükleme işleci eşittir`ValueType.Equals`|
+|[CA2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|Aşırı yükleme işlecinin eşittir geçersiz kılma `ValueType.Equals`|

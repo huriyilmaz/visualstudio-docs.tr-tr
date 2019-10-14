@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1616e889b3892aa656692a3e5b0895d4b131b7f1
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 3ac52bdb17aeb7d04e434d2b02ff9a905eab49a2
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71231250"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305922"
 ---
 # <a name="ca2216-disposable-types-should-declare-finalizer"></a>CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir
 
@@ -27,12 +27,12 @@ ms.locfileid: "71231250"
 |-|-|
 |TypeName|DisposableTypesShouldDeclareFinalizer|
 |CheckId|CA2216|
-|Kategori|Microsoft. Usage|
+|Category|Microsoft. Usage|
 |Son değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
 
-Uygulayan <xref:System.IDisposable?displayProperty=fullName>ve yönetilmeyen kaynakların kullanımını öneren alanlar içeren bir tür, tarafından <xref:System.Object.Finalize%2A?displayProperty=fullName>açıklandığı şekilde sonlandırıcıyı uygulamaz.
+@No__t-0 uygulayan ve yönetilmeyen kaynakların kullanımını öneren alanlar içeren bir tür, <xref:System.Object.Finalize%2A?displayProperty=fullName> ' i tarafından açıklandığı şekilde sonlandırıcıyı uygulamaz.
 
 ## <a name="rule-description"></a>Kural açıklaması
 
@@ -46,11 +46,11 @@ Bu kural ihlalin, atılabilir türü aşağıdaki türlerin alanlarını içeriy
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kuralın ihlalini onarmak için, <xref:System.IDisposable.Dispose%2A> yönteminizi çağıran bir Sonlandırıcı uygulayın.
+Bu kural ihlalini onarmak için <xref:System.IDisposable.Dispose%2A> yönteminizi çağıran bir Sonlandırıcı uygulayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
-Tür <xref:System.IDisposable> yönetilmeyen kaynakları serbest bırakma amacına uygun değilse, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
+Yönetilmeyen kaynakları serbest bırakmak amacıyla tür @no__t uygulamadığından, bu kuraldan gelen bir uyarının görüntülenmesini güvenli hale gelir.
 
 ## <a name="example"></a>Örnek
 
@@ -60,11 +60,11 @@ Aşağıdaki örnek, bu kuralı ihlal eden bir türü gösterir.
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-[CA2115 GC 'yi çağırın. Yerel kaynaklar kullanılırken KeepAlive](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
+[CA2115: GC 'yi çağırın. Yerel kaynaklar kullanılırken KeepAlive @ no__t-0
 
-[CA1816 GC 'yi çağırın. SuppressFinalize doğru](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)
+[CA1816: GC 'yi çağırın. SuppressFinalize doğru @ no__t-0
 
-[CA1049 Yerel kaynaklara sahip türler atılabilir olmalıdır](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
+[CA1049: Yerel kaynaklara sahip türler atılabilir @ no__t-0 olmalıdır
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

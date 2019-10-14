@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff5e70d4ec2831df18ce1b100e70730e2978201e
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 5e49049d05a285889c54906534200acadaf2397e
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186564"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306215"
 ---
 # <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Visual Studio 'da XAML etkin yeniden yüklemesine sahip XAML kodunu yazma ve hata ayıklama
 
@@ -49,11 +49,12 @@ XAML sık yeniden yükleme 'nin bilinen kısıtlamaları aşağıda verilmiştir
 
 |Sınırlama|WPF|UWP|Notlar|
 |-|-|-|-|
-|Uygulama çalışırken denetimlere yönelik bağlantı olayları|Desteklenmez|Desteklenmez|Bkz: hata: *Olay başarısız olduğundan emin olun*. WPF 'de, var olan bir olay işleyicisine başvurabilirsiniz. UWP uygulamalarında, var olan bir olay işleyicisine başvurulması desteklenmez.|
-|Uygulamanızın sayfa/pencere veya *app. xaml* gibi bir kaynak sözlüğünde kaynak nesneleri oluşturma|Visual Studio 2019 güncelleştirme 2 ' den itibaren desteklenir|Desteklenir|Örnek: `SolidColorBrush` `StaticResource`olarak kullanmak için bir kaynak sözlüğüne ekleme.</br>Not: Statik kaynaklar, stil dönüştürücüler ve bir kaynak sözlüğüne yazılan diğer öğeler, XAML etkin yeniden yükleme kullanılırken uygulanabilir/kullanılabilir. Yalnızca kaynağın oluşturulması desteklenmez.</br> Kaynak sözlüğü `Source` Özelliği değiştiriliyor.|
+|Uygulama çalışırken denetimlere yönelik bağlantı olayları|Desteklenmez|Desteklenmiyor|Bkz: hata: *Olay başarısız olduğundan emin olun*. WPF 'de, var olan bir olay işleyicisine başvurabilirsiniz. UWP uygulamalarında, var olan bir olay işleyicisine başvurulması desteklenmez.|
+|Uygulamanızın sayfa/pencere veya *app. xaml* gibi bir kaynak sözlüğünde kaynak nesneleri oluşturma|Visual Studio 2019 güncelleştirme 2 ' den itibaren desteklenir|Desteklenen|Örnek: `StaticResource` olarak kullanmak için bir kaynak sözlüğüne `SolidColorBrush` ekleme.</br>Not: Statik kaynaklar, stil dönüştürücüler ve bir kaynak sözlüğüne yazılan diğer öğeler, XAML etkin yeniden yükleme kullanılırken uygulanabilir/kullanılabilir. Yalnızca kaynağın oluşturulması desteklenmez.</br> Kaynak sözlüğünü değiştirme `Source` özelliği.|
 |Uygulama çalışırken projenize yeni denetimler, sınıflar, pencereler veya diğer dosyalar ekleme|Desteklenmez|Desteklenmez|Yok.|
 |NuGet paketlerini yönetme (paket ekleme/kaldırma/güncelleştirme)|Desteklenmez|Desteklenmez|Yok.|
 |{X:Bind} biçimlendirme uzantısını kullanan veri bağlamasını değiştirme|Yok|Visual Studio 2019 ' den itibaren desteklenir|Bu, Windows 10 sürüm 1809 (derleme 10.0.17763) gerektirir. Visual Studio 2017 veya önceki sürümlerde desteklenmez.|
+|X:Uid yönergelerinin değiştirilmesi desteklenmiyor|Yok|Desteklenmez|Yok.|
 
 ## <a name="error-messages"></a>Hata iletileri
 

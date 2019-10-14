@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04a4738181c579617711150da4eb99e08aeb039c
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: e784627f0c9c6aa865d53db49d6ea43c4e49d0eb
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018427"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305785"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
@@ -98,21 +98,21 @@ CA1509 | Kod ölçümleri kural belirtim dosyasında geçersiz giriş
 [CA1721](ca1721-property-names-should-not-match-get-methods.md) | Özellik adları get metotları ile eşleşmemelidir
 [CA1724](ca1724-type-names-should-not-match-namespaces.md) | Tür adları ad alanlarıyla eşleşmemelidir
 [CA1725](ca1725-parameter-names-should-match-base-declaration.md) | Parametre adları temel bildirimle eşleşmemelidir
-[CA1801](ca1801-review-unused-parameters.md) | Kullanılmayan parametreleri gözden geçirin
-[CA1802](ca1802-use-literals-where-appropriate.md) | Uygun yerlerde sabit değerler kullanın
-[CA1806](ca1806-do-not-ignore-method-results.md) | Metot sonuçlarını yoksaymayın
-[CA1810](ca1810-initialize-reference-type-static-fields-inline.md) | Başvuru türü statik alanları satır içinden başlatın
-[CA1812](ca1812-avoid-uninstantiated-internal-classes.md) | Örneklenmemiş iç sınıflardan kaçının
-[CA1813](ca1813-avoid-unsealed-attributes.md) | Mühürsüz özniteliklerden kaçının
-[CA1814](ca1814-prefer-jagged-arrays-over-multidimensional.md) | Çok boyutlu diziler yerine basit dizileri tercih edin
-[CA1815](ca1815-override-equals-and-operator-equals-on-value-types.md) | Değer türlerinde eşittir ve işleç eşittiri geçersiz kılın
-[CA1816](ca1816-call-gc-suppressfinalize-correctly.md) | Dispose metotları SuppressFinalize öğesini çağırmalıdır
-[CA1819](ca1819-properties-should-not-return-arrays.md) | Özellikler diziler döndürmemelidir
-[CA1820](ca1820-test-for-empty-strings-using-string-length.md) | Dize uzunluğunu kullanarak boş dizeleri test edin
-[CA1821](ca1821-remove-empty-finalizers.md) | Boş sonlandırıcıları kaldır
-[CA1822](ca1822-mark-members-as-static.md) | Üyeleri static olarak işaretleyin
-[CA1823](ca1823-avoid-unused-private-fields.md) | Kullanılmayan özel alanlardan kaçının
-[CA1824](ca1824-mark-assemblies-with-neutralresourceslanguageattribute.md) | Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin
+[CA1801](ca1801.md) | Kullanılmayan parametreleri gözden geçirin
+[CA1802](ca1802.md) | Uygun yerlerde sabit değerler kullanın
+[CA1806](ca1806.md) | Metot sonuçlarını yoksaymayın
+[CA1810](ca1810.md) | Başvuru türü statik alanları satır içinden başlatın
+[CA1812](ca1812.md) | Örneklenmemiş iç sınıflardan kaçının
+[CA1813](ca1813.md) | Mühürsüz özniteliklerden kaçının
+[CA1814](ca1814.md) | Çok boyutlu diziler yerine basit dizileri tercih edin
+[CA1815](ca1815.md) | Değer türlerinde eşittir ve işleç eşittiri geçersiz kılın
+[CA1816](ca1816.md) | Dispose metotları SuppressFinalize öğesini çağırmalıdır
+[CA1819](ca1819.md) | Özellikler diziler döndürmemelidir
+[CA1820](ca1820.md) | Dize uzunluğunu kullanarak boş dizeleri test edin
+[CA1821](ca1821.md) | Boş sonlandırıcıları kaldır
+[CA1822](ca1822.md) | Üyeleri static olarak işaretleyin
+[CA1823](ca1823.md) | Kullanılmayan özel alanlardan kaçının
+[CA1824](ca1824.md) | Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin
 CA1825 | Sıfır uzunluklu dizi ayırmaktan kaçının.
 CA1826 | Dizine eklenebilir koleksiyonlar üzerinde sıralanabilir Yöntemler kullanmayın. Bunun yerine toplamayı doğrudan kullanın
 [CA2000](ca2000-dispose-objects-before-losing-scope.md) | Kapsamı kaybetmeden önce nesneleri bırakın
@@ -252,8 +252,8 @@ Kural Kimliği | Sorun izleniyor
 [CA1719](ca1719-parameter-names-should-not-match-member-names.md) | [https://github.com/dotnet/roslyn-analyzers/issues/453](https://github.com/dotnet/roslyn-analyzers/issues/453)
 [CA1722](ca1722-identifiers-should-not-have-incorrect-prefix.md) | [https://github.com/dotnet/roslyn-analyzers/issues/455](https://github.com/dotnet/roslyn-analyzers/issues/455)
 [CA1726](ca1726-use-preferred-terms.md) | [https://github.com/dotnet/roslyn-analyzers/issues/458](https://github.com/dotnet/roslyn-analyzers/issues/458)
-[CA1804](ca1804-remove-unused-locals.md) | [https://github.com/dotnet/roslyn-analyzers/issues/461](https://github.com/dotnet/roslyn-analyzers/issues/461)
-[CA1811](ca1811-avoid-uncalled-private-code.md) | [https://github.com/dotnet/roslyn-analyzers/issues/464](https://github.com/dotnet/roslyn-analyzers/issues/464)
+[CA1804](ca1804.md) | [https://github.com/dotnet/roslyn-analyzers/issues/461](https://github.com/dotnet/roslyn-analyzers/issues/461)
+[CA1811](ca1811.md) | [https://github.com/dotnet/roslyn-analyzers/issues/464](https://github.com/dotnet/roslyn-analyzers/issues/464)
 [CA1900](ca1900-value-type-fields-should-be-portable.md) | [https://github.com/dotnet/roslyn-analyzers/issues/474](https://github.com/dotnet/roslyn-analyzers/issues/474)
 [CA2001](ca2001-avoid-calling-problematic-methods.md) | [https://github.com/dotnet/roslyn-analyzers/issues/477](https://github.com/dotnet/roslyn-analyzers/issues/477)
 [CA2004](ca2004-remove-calls-to-gc-keepalive.md) | [https://github.com/dotnet/roslyn-analyzers/issues/479](https://github.com/dotnet/roslyn-analyzers/issues/479)
@@ -288,8 +288,8 @@ Aşağıdaki FxCop eski analiz kuralları kullanım dışıdır ve çözümleyic
 - [CA1701](ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 - [CA1702](ca1702-compound-words-should-be-cased-correctly.md)
 - [CA1703](ca1703-resource-strings-should-be-spelled-correctly.md)
-- [CA1800](ca1800-do-not-cast-unnecessarily.md)
-- [CA1809](ca1809-avoid-excessive-locals.md)
+- [CA1800](ca1800.md)
+- [CA1809](ca1809.md)
 - [CA1901](ca1901-p-invoke-declarations-should-be-portable.md)
 - [CA1903](ca1903-use-only-api-from-targeted-framework.md)
 - [CA2003](ca2003-do-not-treat-fibers-as-threads.md)

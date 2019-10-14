@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cb5631da1bcf455874d459a69216b45062a5754
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: c53fe96163a3913c024eefeb5deb8a47df691e1f
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236214"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306139"
 ---
 # <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019: Öznitelik bağımsız değişkenleri için erişimciler tanımlayın
 
@@ -30,10 +30,10 @@ ms.locfileid: "71236214"
 |-|-|
 |TypeName|DefineAccessorsForAttributeArguments|
 |CheckId|CA1019|
-|Kategori|Microsoft.Design|
+|Category|Microsoft.Design|
 |Son değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
 Yapıcısında bir öznitelik, karşılık gelen özellikleri olmayan bağımsız değişkenleri tanımlar.
 
 ## <a name="rule-description"></a>Kural açıklaması
@@ -69,7 +69,7 @@ Aşağıdaki örnek, özel özniteliğin iki özelliğe nasıl uygulanacağını
 [!code-csharp[FxCop.Design.AttributeAccessorsNamedApplied#1](../code-quality/codesnippet/CSharp/ca1019-define-accessors-for-attribute-arguments_3.cs)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1813 Korumasız özniteliklerden kaçının](../code-quality/ca1813-avoid-unsealed-attributes.md)
+[CA1813: Korumasız özniteliklerden kaçının @ no__t-0
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [Öznitelikler](/dotnet/standard/design-guidelines/attributes)

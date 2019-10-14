@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef7b72eade7ea8e4486d5c317c06026bb4d0b95f
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 03b8d222fc2349022ef324c9905279677fc86849
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235738"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306124"
 ---
 # <a name="ca1049-types-that-own-native-resources-should-be-disposable"></a>CA1049: Yerel kaynaklara sahip türler atılabilir olmalıdır
 
@@ -30,24 +30,24 @@ ms.locfileid: "71235738"
 |-|-|
 |TypeName|TypesThatOwnNativeResourcesShouldBeDisposable|
 |CheckId|CA1049|
-|Kategori|Microsoft.Design|
+|Category|Microsoft.Design|
 |Son değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
 
-Bir tür bir <xref:System.IntPtr?displayProperty=fullName> alana <xref:System.UIntPtr?displayProperty=fullName> , alana veya <xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName> alana başvurur, ancak uygulamaz <xref:System.IDisposable?displayProperty=fullName>.
+Bir tür, <xref:System.IntPtr?displayProperty=fullName> alanı, <xref:System.UIntPtr?displayProperty=fullName> alanı veya <xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName> alanı referans, ancak <xref:System.IDisposable?displayProperty=fullName> uygulamaz.
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Bu kural <xref:System.IntPtr>, <xref:System.UIntPtr>ve <xref:System.Runtime.InteropServices.HandleRef> alanlarının yönetilmeyen kaynaklara işaretçiler depodığını varsayar. Yönetilmeyen kaynakları ayıran türler, arayanların <xref:System.IDisposable> bu kaynakları talep üzerine serbest bırakmasına ve kaynakları tutan nesnelerin yaşam sürelerini kısaltmasına imkan sağlamak için uygulamalıdır.
+Bu kural <xref:System.IntPtr>, <xref:System.UIntPtr> ve <xref:System.Runtime.InteropServices.HandleRef> alanlarının yönetilmeyen kaynaklara işaretçiler depodığını varsayar. Yönetilmeyen kaynakları ayıran türler, arayanların bu kaynakları talep üzerine serbest bırakmasına ve kaynakları tutan nesnelerin ömrünü kısaltmasına izin vermek için <xref:System.IDisposable> ' i uygulamalıdır.
 
-Yönetilmeyen kaynakları temizlemek için önerilen tasarım deseninin, sırasıyla <xref:System.Object.Finalize%2A?displayProperty=fullName> yöntemi <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> ve yöntemi kullanılarak bu kaynakları serbest bırakmak için hem örtük hem de açık bir yol sağlamaktır. Çöp toplayıcı, nesnenin artık <xref:System.Object.Finalize%2A> erişilebilir olmadığı belirlendikten sonra bir nesnenin yöntemini belirsiz bir zamanda çağırır. Çağrıldıktan <xref:System.Object.Finalize%2A> sonra, nesneyi serbest bırakmak için ek bir atık toplama gerekir. <xref:System.IDisposable.Dispose%2A> Yöntemi, çağıranın kaynak atık toplayıcıya ayrıldıysa, kaynakların önceden açık şekilde kaynak serbest bırakıldığını sağlar. Yönetilmeyen kaynakları <xref:System.IDisposable.Dispose%2A> temizledikten sonra çöp toplayıcısının <xref:System.Object.Finalize%2A> artık çağrılmamasına izin vermek için <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> yöntemini çağırmalıdır; bu, ek çöp toplama gereksinimini ortadan kaldırır ve nesnenin yaşam süresi.
+Yönetilmeyen kaynakları temizlemek için önerilen tasarım deseninin, sırasıyla <xref:System.Object.Finalize%2A?displayProperty=fullName> yöntemini ve <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> yöntemini kullanarak bu kaynakları serbest bırakmak için hem örtük hem de açık bir yol sağlamaktır. Çöp toplayıcı, nesnenin artık erişilebilir olmadığı belirlendikten sonra bir nesnenin <xref:System.Object.Finalize%2A> yöntemini çağırır. @No__t-0 çağrıldıktan sonra, nesneyi serbest bırakmak için ek bir atık toplama gerekir. @No__t-0 yöntemi, çağıranın, atık toplayıcıya ayrılmışsa kaynakların serbest bırakılması durumunda, kaynakların isteğe bağlı olarak açıkça serbest bırakılacağını sağlar. Yönetilmeyen kaynakları temizledikten sonra, Atık toplayıcısının <xref:System.Object.Finalize%2A> ' nin artık çağrılması gerektiğini bilmesini sağlamak için <xref:System.IDisposable.Dispose%2A> <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> metodunu çağırmalıdır. Bu, ek çöp toplama gereksinimini ortadan kaldırır ve nesnenin yaşam süresini kısaltır.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Bu kural ihlalini onarmak için uygulamasını uygulayın <xref:System.IDisposable>.
+Bu kural ihlalini onarmak için <xref:System.IDisposable> ' ı uygulayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
-Tür yönetilmeyen bir kaynağa başvurmadığından, bu kuraldan bir uyarının bastırmasının güvenli hale gelir. Aksi takdirde, uygulama <xref:System.IDisposable> hatası yönetilmeyen kaynakların kullanılamaz hale gelmesine veya az kullanılmamasına neden olabileceğinden, bu kuraldan bir uyarıyı bastırmayın.
+Tür yönetilmeyen bir kaynağa başvurmadığından, bu kuraldan bir uyarının bastırmasının güvenli hale gelir. Aksi takdirde, bu kuraldan bir uyarıyı bastırmayın çünkü @no__t uygulama hatası, yönetilmeyen kaynakların kullanılamaz hale gelmesine veya az kullanılmamasına neden olabilir.
 
 ## <a name="example"></a>Örnek
 Aşağıdaki örnek, yönetilmeyen bir kaynağı temizlemek için <xref:System.IDisposable> uygulayan bir türü gösterir.
@@ -56,13 +56,13 @@ Aşağıdaki örnek, yönetilmeyen bir kaynağı temizlemek için <xref:System.I
 [!code-vb[FxCop.Design.UnmanagedResources#1](../code-quality/codesnippet/VisualBasic/ca1049-types-that-own-native-resources-should-be-disposable_1.vb)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA2115 GC 'yi çağırın. Yerel kaynaklar kullanılırken KeepAlive](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
+[CA2115: GC 'yi çağırın. Yerel kaynaklar kullanılırken KeepAlive @ no__t-0
 
-[CA1816 GC 'yi çağırın. SuppressFinalize doğru](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)
+[CA1816: GC 'yi çağırın. SuppressFinalize doğru @ no__t-0
 
-[CA2216 Atılabilir türler sonlandırıcıyı bildirmelidir](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)
+[CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir @ no__t-0
 
-[CA1001 Atılabilir alanlarının sahibi olan türler atılabilir olmalıdır](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)
+[CA1001: Atılabilir alanlara sahip olan türler atılabilir @ no__t-0 olmalıdır
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

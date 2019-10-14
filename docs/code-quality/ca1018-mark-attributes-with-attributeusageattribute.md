@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 82a1ed8610ce84279f5fde3b802d976a3e766d99
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 133ee073398817c037af95e2009c5acc98e1e5a2
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236247"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306126"
 ---
 # <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: Öznitelikleri AttributeUsageAttribute ile işaretle
 
@@ -30,33 +30,33 @@ ms.locfileid: "71236247"
 |-|-|
 |TypeName|MarkAttributesWithAttributeUsage|
 |CheckId|CA1018|
-|Kategori|Microsoft.Design|
+|Category|Microsoft.Design|
 |Son değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
-<xref:System.AttributeUsageAttribute?displayProperty=fullName> Özniteliği özel öznitelikte yok.
+## <a name="cause"></a>Nedeni
+@No__t-0 özniteliği özel öznitelikte yok.
 
 ## <a name="rule-description"></a>Kural açıklaması
-Özel bir öznitelik tanımladığınızda, kaynak kodda özel özniteliğin nerede uygulanabileceğini belirtmek için öğesini kullanarak <xref:System.AttributeUsageAttribute> işaretleyin. Bir özniteliğin anlamı ve amaçlanan kullanımı, kodun içinde onun varolan konumunu tanımlar. Örneğin, bir kitaplıktaki her bir türü korumadan ve artırmaktan sorumlu kişiyi tanımlayan bir öznitelik tanımlayabilir ve bu sorumluluk her zaman tür düzeyinde atanır. Bu durumda, derleyiciler sınıflarda, numaralandırmalar ve arabirimlerde özniteliği etkinleştirmeli, ancak Yöntemler, olaylar veya özelliklerde etkinleştirilmemelidir. Kuruluş ilkeleri ve yordamları, özniteliğin derlemelerde etkinleştirilmesi gerekip gerekmediğini de belirler.
+Özel bir öznitelik tanımladığınızda, kaynak kodda özel özniteliğin nerede uygulanabileceğini göstermek için <xref:System.AttributeUsageAttribute> kullanarak işaretleyin. Bir özniteliğin anlamı ve amaçlanan kullanımı, kodun içinde onun varolan konumunu tanımlar. Örneğin, bir kitaplıktaki her bir türü korumadan ve artırmaktan sorumlu kişiyi tanımlayan bir öznitelik tanımlayabilir ve bu sorumluluk her zaman tür düzeyinde atanır. Bu durumda, derleyiciler sınıflarda, numaralandırmalar ve arabirimlerde özniteliği etkinleştirmeli, ancak Yöntemler, olaylar veya özelliklerde etkinleştirilmemelidir. Kuruluş ilkeleri ve yordamları, özniteliğin derlemelerde etkinleştirilmesi gerekip gerekmediğini de belirler.
 
-Sabit <xref:System.AttributeTargets?displayProperty=fullName> listesi, özel bir öznitelik için belirtebileceğiniz hedefleri tanımlar. Atlanırsa <xref:System.AttributeUsageAttribute>, özel özniteleme, <xref:System.AttributeTargets> numaralandırma `All` değeri tarafından tanımlanan tüm hedefler için geçerli olacaktır.
+@No__t-0 numaralandırması, özel bir öznitelik için belirtebileceğiniz hedefleri tanımlar. @No__t-0 ' ı atlarsanız, özel özniteetu <xref:System.AttributeTargets> sabit listesinin `All` değeri tarafından tanımlanan tüm hedefler için geçerli olacaktır.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Bu kuralın ihlalini onarmak için, kullanarak <xref:System.AttributeUsageAttribute>özniteliği için hedefleri belirtin. Aşağıdaki örnekte bakın.
+Bu kural ihlalini onarmak için <xref:System.AttributeUsageAttribute> kullanarak öznitelik için hedefleri belirtin. Aşağıdaki örneğe bakın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
-İletiyi dışlamak yerine bu kuralın ihlal edildiğini düzeltmelisiniz. Özniteliği devralsa <xref:System.AttributeUsageAttribute>bile, kod bakımını basitleştirmek için özniteliği bulunmalıdır.
+İletiyi dışlamak yerine bu kuralın ihlal edildiğini düzeltmelisiniz. Öznitelik @no__t devralsa bile, kod bakımını basitleştirmek için özniteliği bulunmalıdır.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek iki özniteliği tanımlar. `BadCodeMaintainerAttribute`<xref:System.AttributeUsageAttribute> ifadeyi yanlış bir şekilde atlar ve `GoodCodeMaintainerAttribute` bu bölümde daha önce açıklanan özniteliği doğru şekilde uygular. CA1019 tasarım kuralına [yönelik `DeveloperName` özelliğin gerekli olduğunu unutmayın: Öznitelik bağımsız değişkenleri](../code-quality/ca1019-define-accessors-for-attribute-arguments.md) için erişimcileri tanımlayın ve tamamlana için dahil edilmiştir.
+Aşağıdaki örnek iki özniteliği tanımlar. `BadCodeMaintainerAttribute` yanlış <xref:System.AttributeUsageAttribute> ifadesini atlar ve bu bölümde daha önce açıklanan özniteliği `GoodCodeMaintainerAttribute` doğru şekilde uygular. Tasarım kuralı için `DeveloperName` özelliğinin gerekli olduğunu unutmayın [CA1019: @ No__t-0 öznitelik bağımsız değişkenleri için erişimcileri tanımlayın ve tamamlana için dahil edilmiştir.
 
 [!code-csharp[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/CSharp/ca1018-mark-attributes-with-attributeusageattribute_1.cs)]
 [!code-vb[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/VisualBasic/ca1018-mark-attributes-with-attributeusageattribute_1.vb)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1019 Öznitelik bağımsız değişkenleri için erişimcileri tanımlayın](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
+[CA1019: Öznitelik bağımsız değişkenleri için erişimcileri tanımlayın @ no__t-0
 
-[CA1813 Korumasız özniteliklerden kaçının](../code-quality/ca1813-avoid-unsealed-attributes.md)
+[CA1813: Korumasız özniteliklerden kaçının @ no__t-0
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

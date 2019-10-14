@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a83a9619084feb3346f5fe421530227a2cca7f9
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: ed996aa19f9fda1310dccc117f8abfb6efa29e1f
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585301"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305538"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>Karışık Minimum Kurallar kural kümesi
 
@@ -86,13 +86,13 @@ Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için o
 |[C28182](../code-quality/c28182.md)|NULL işaretçisinin başvurusunun kaldırılması. Başka bir işaretçi yaptığınız gibi işaretçi aynı NULL değerini içeriyor.|
 |[C28202](../code-quality/c28202.md)|Statik olmayan üyeye geçersiz başvuru|
 |[C28203](../code-quality/c28203.md)|Sınıf üyesine belirsiz başvuru.|
-|[C28205](../code-quality/c28205.md)|\_Hatalı\_ bir bağlamda\_kullanılan\_ başarılı veya \_hatalı|
+|[C28205](../code-quality/c28205.md)|\_Success @ no__t-1 veya \_On @ no__t-3failure @ no__t-4 geçersiz bir bağlamda kullanıldı|
 |[C28206](../code-quality/c28206.md)|İşlenen noktaları sol, '->' kullanın|
 |[C28207](../code-quality/c28207.md)|Sol işlenen bir struct, Kullan '.'|
 |[C28210](../code-quality/c28210.md)|Ek açıklamalar __on_failure bağlamının açık bağlam içinde olmamalıdır|
 |[C28211](../code-quality/c28211.md)|Statik bağlam adı SAL_context için bekleniyor|
 |[C28212](../code-quality/c28212.md)|Ek açıklaması için beklenen işaretçi ifadesi|
-|[C28213](../code-quality/c28213.md)|Decl \_\_ekaçıklamalarını\_ kullan ek açıklaması, önceki bir bildirime göre başvurulmadan başvurmak için kullanılmalıdır.\_|
+|[C28213](../code-quality/c28213.md)|@No__t-0Use @ no__t-1decl @ no__t-2annotation @ no__t-3 ek açıklaması, önceki bir bildirime göre başvurulmadan önce kullanılmalıdır.|
 |[C28214](../code-quality/c28214.md)|Öznitelik parametre adları p1... olmalıdır p9|
 |[C28215](../code-quality/c28215.md)|Typefix zaten typefix'e sahip bir parametreye uygulanamaz|
 |[C28216](../code-quality/c28216.md)|CheckReturn ek açıklaması yalnızca belirli işlev parametresi için koşul sonralarına uygulanır.|
@@ -134,7 +134,7 @@ Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için o
 |[C28267](../code-quality/c28267.md)|Açıklamalarda bir söz dizimi hatası, ek açıklama işlevi bulunamadı.|
 |[C28272](../code-quality/c28272.md)|İşlev için ek açıklama, incelerken parametresi işlev bildirimiyle tutarsız|
 |[C28273](../code-quality/c28273.md)|İşlev için ipuçları işlev bildirimiyle tutarsız|
-|[C28275](../code-quality/c28275.md)|\_Makro\_değeriparametresi\_ null|
+|[C28275](../code-quality/c28275.md)|@No__t-0Macro @ no__t-1value @ no__t-2 parametresi null|
 |[C28279](../code-quality/c28279.md)|Simge için bir 'begin' bir 'end'olmadan ' bulundu|
 |[C28280](../code-quality/c28280.md)|Sembol için bir 'end' eşleşmeyen bir 'begin' bulundu|
 |[C28282](../code-quality/c28282.md)|Biçim dizeleri önkoşullarda olmalıdır|
@@ -154,6 +154,6 @@ Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için o
 |[C28350](../code-quality/c28350.md)|Ek açıklama koşullu olarak uygun olmayan bir durumu betimliyor.|
 |[C28351](../code-quality/c28351.md)|Ek açıklama bir dinamik değerin (değişkenin) koşulda burada kullanılamaz açıklar.|
 |[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|Boş sonlandırıcıları kaldırın|
+|[CA1821](../code-quality/ca1821.md)|Boş sonlandırıcıları kaldırın|
 |[CA2213](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|Atılabilen alanlar atılmalıdır|
 |[CA2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|Eşittir işlecini ValueType.Equals'ı geçersiz kılarak aşırı yükleyin|
