@@ -120,13 +120,13 @@
     - name: Giriş
       displayName: Live Unit Testing introduction
       href: live-unit-testing-intro.md
-    - name: Live Unit Testing’deki Yenilikler
+    - name: Yenilikler
       href: live-unit-testing-whats-new.md
-    - name: Live Unit Testing kullanmaya başlama
+    - name: Kullanmaya başlayın
       href: live-unit-testing-start.md
-    - name: Enterprise sürümünde Live Unit Testing kullanma
+    - name: Yapılandırma ve kullanma
       href: live-unit-testing.md
-    - name: Live Unit Testing SSS
+    - name: SSS
       href: live-unit-testing-faq.md
 - name: Web performans ve yük testi
   items:
