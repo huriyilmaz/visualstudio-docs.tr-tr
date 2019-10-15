@@ -336,7 +336,7 @@
                 - name: 'CA1068: CancellationToken parametreleri en sonda olmalıdır'
                   href: ca1068.md
                 - name: 'CA2210: Derlemelerin geçerli tanımlayıcı adları olmalıdır'
-                  href: ca2210-assemblies-should-have-valid-strong-names.md
+                  href: ca2210.md
             - name: Belge uyarıları
               items:
                 - name: Genel Bakış
@@ -763,85 +763,85 @@
                 - name: 'CA1816: GC.SuppressFinalize''ı doğru çağırın'
                   href: ca1816.md
                 - name: 'CA2200: Yığın ayrıntılarını korumak için yeniden fırlatın'
-                  href: ca2200-rethrow-to-preserve-stack-details.md
+                  href: ca2200.md
                 - name: 'CA2201: Ayrılmış özel durum türlerini harekete geçirmeyin'
-                  href: ca2201-do-not-raise-reserved-exception-types.md
+                  href: ca2201.md
                 - name: 'CA2202: Nesneleri birden çok kez atmayın'
-                  href: ca2202-do-not-dispose-objects-multiple-times.md
+                  href: ca2202.md
                 - name: 'CA2204: Harfler doğru yazılmalıdır'
-                  href: ca2204-literals-should-be-spelled-correctly.md
+                  href: ca2204.md
                 - name: 'CA2205: Win32 API''sinin yönetilen eşdeğerlerini kullanın'
-                  href: ca2205-use-managed-equivalents-of-win32-api.md
+                  href: ca2205.md
                 - name: 'CA2207: Değer türü statik alanları satır içi başlatın'
-                  href: ca2207-initialize-value-type-static-fields-inline.md
+                  href: ca2207.md
                 - name: 'CA2208: Bağımsız değişken özel durumlarını doğru örnekleyin'
-                  href: ca2208-instantiate-argument-exceptions-correctly.md
+                  href: ca2208.md
                 - name: 'CA2211: Sabit olmayan alanlar görünür olmamalıdır'
-                  href: ca2211-non-constant-fields-should-not-be-visible.md
+                  href: ca2211.md
                 - name: 'CA2212: Servis verilen bileşenleri WebMethod ile işaretlemeyin'
-                  href: ca2212-do-not-mark-serviced-components-with-webmethod.md
+                  href: ca2212.md
                 - name: 'CA2213: Atılabilen alanlar atılmalıdır'
-                  href: ca2213-disposable-fields-should-be-disposed.md
+                  href: ca2213.md
                 - name: 'CA2214: Geçersiz kılınabilir metotları oluşturucular içinde çağırmayın'
-                  href: ca2214-do-not-call-overridable-methods-in-constructors.md
+                  href: ca2214.md
                 - name: 'CA2215: Atma metotları taban sınıf atmayı çağırmalıdır'
-                  href: ca2215-dispose-methods-should-call-base-class-dispose.md
+                  href: ca2215.md
                 - name: 'CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir'
-                  href: ca2216-disposable-types-should-declare-finalizer.md
+                  href: ca2216.md
                 - name: 'CA2217: Sabit listelerini FlagsAttribute ile işaretlemeyin'
-                  href: ca2217-do-not-mark-enums-with-flagsattribute.md
+                  href: ca2217.md
                 - name: 'CA2218: GetHashCode''u Eşittir''i geçersiz kılarak geçersiz kılın'
-                  href: ca2218-override-gethashcode-on-overriding-equals.md
+                  href: ca2218.md
                 - name: 'CA2219: Özel durum yan tümceleri içinde özel durum harekete geçirmeyin'
-                  href: ca2219-do-not-raise-exceptions-in-exception-clauses.md
+                  href: ca2219.md
                 - name: 'CA2220: Sonlandırıcılar taban tür sonlandırıcıları çağırmalıdır'
-                  href: ca2220-finalizers-should-call-base-class-finalizer.md
+                  href: ca2220.md
                 - name: 'CA2221: Sonlandırıcılar korunmalıdır'
-                  href: ca2221-finalizers-should-be-protected.md
+                  href: ca2221.md
                 - name: 'CA2222: Devralınan üye görünürlüğünü azaltmayın'
-                  href: ca2222-do-not-decrease-inherited-member-visibility.md
+                  href: ca2222.md
                 - name: 'CA2223: Üyeler dönüş türünden daha fazla farklı olmalıdır'
-                  href: ca2223-members-should-differ-by-more-than-return-type.md
+                  href: ca2223.md
                 - name: 'CA2224: Eşittir işlecini aşırı yüklerken Equals''ı geçersiz kılın'
-                  href: ca2224-override-equals-on-overloading-operator-equals.md
+                  href: ca2224.md
                 - name: 'CA2225: İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir'
-                  href: ca2225-operator-overloads-have-named-alternates.md
+                  href: ca2225.md
                 - name: 'CA2226: İşleçler simetrik aşırı yüklemelere sahip olmalıdır'
-                  href: ca2226-operators-should-have-symmetrical-overloads.md
+                  href: ca2226.md
                 - name: 'CA2227: Koleksiyon özellikleri salt okunur olmalıdır'
-                  href: ca2227-collection-properties-should-be-read-only.md
+                  href: ca2227.md
                 - name: 'CA2228: Yayımlanmamış kaynak biçimlerini yollamayın'
-                  href: ca2228-do-not-ship-unreleased-resource-formats.md
+                  href: ca2228.md
                 - name: 'CA2229: Serileştirme oluşturucularını uygulayın'
-                  href: ca2229-implement-serialization-constructors.md
+                  href: ca2229.md
                 - name: 'CA2230: Değişken bağımsız değişkenler için params kullanın'
-                  href: ca2230-use-params-for-variable-arguments.md
+                  href: ca2230.md
                 - name: 'CA2231: Eşittir işlecini ValueType.Equals''ı geçersiz kılarak aşırı yükleyin'
-                  href: ca2231-overload-operator-equals-on-overriding-valuetype-equals.md
+                  href: ca2231.md
                 - name: 'CA2232: Windows Forms giriş noktalarını STAThread ile işaretleyin'
-                  href: ca2232-mark-windows-forms-entry-points-with-stathread.md
+                  href: ca2232.md
                 - name: 'CA2233: İşleçler taşmamalıdır'
-                  href: ca2233-operations-should-not-overflow.md
+                  href: ca2233.md
                 - name: 'CA2234: Dizeler yerine System.Uri nesneleri gönderin'
-                  href: ca2234-pass-system-uri-objects-instead-of-strings.md
+                  href: ca2234.md
                 - name: 'CA2235: Tüm serileştirilebilir olmayan alanları işaretleyin'
-                  href: ca2235-mark-all-non-serializable-fields.md
+                  href: ca2235.md
                 - name: 'CA2236: ISerializable türler üzerinde taban sınıf metotlarını çağırın'
-                  href: ca2236-call-base-class-methods-on-iserializable-types.md
+                  href: ca2236.md
                 - name: 'CA2237: ISerializable türleri SerializableAttribute ile işaretleyin'
-                  href: ca2237-mark-iserializable-types-with-serializableattribute.md
+                  href: ca2237.md
                 - name: 'CA2238: Serileştirme metotlarını doğru uygulayın'
-                  href: ca2238-implement-serialization-methods-correctly.md
+                  href: ca2238.md
                 - name: 'CA2239: İsteğe bağlı metotlar için serileştirme kaldırma metotları sağlayın'
-                  href: ca2239-provide-deserialization-methods-for-optional-fields.md
+                  href: ca2239.md
                 - name: 'CA2240: ISerializable''ı doğru uygulayın'
-                  href: ca2240-implement-iserializable-correctly.md
+                  href: ca2240.md
                 - name: 'CA2241: Biçimlendirme metotlarına doğru bağımsız değişkenleri sağlayın'
-                  href: ca2241-provide-correct-arguments-to-formatting-methods.md
+                  href: ca2241.md
                 - name: 'CA2242: NaN için doğru test edin'
-                  href: ca2242-test-for-nan-correctly.md
+                  href: ca2242.md
                 - name: 'CA2243: Öznitelik dize harfleri doğru çözümlenmelidir'
-                  href: ca2243-attribute-string-literals-should-parse-correctly.md
+                  href: ca2243.md
             - name: Otomatik özelliği askıya alma
               href: automatic-feature-suspension.md
 - name: C/C++ kodunu analiz etme
