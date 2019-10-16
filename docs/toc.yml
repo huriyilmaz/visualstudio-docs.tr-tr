@@ -170,8 +170,8 @@
   items:
     - name: Geliştirme
       items:
-        - name: 'Dizin: Kod yazmak için IDE’yi kullanma'
-          href: ide/index-writing-code.md
+        - name: Kullanmaya başlayın
+          href: ide/index-writing-code.yml
         - name: IDE’de gezinme
           href: ide/how-to-move-around-in-the-visual-studio-ide.md
         - name: Çözümler ve projeler
