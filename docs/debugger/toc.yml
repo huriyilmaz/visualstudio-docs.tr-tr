@@ -44,8 +44,6 @@
       items:
         - name: Kesme noktalarını kullanma
           href: using-breakpoints.md
-        - name: İzleme noktalarını kullanma
-          href: using-tracepoints.md
         - name: Kesme noktalarıyla ilgili sorun giderme
           href: troubleshooting-breakpoints.md
     - name: Veri inceleme
@@ -138,6 +136,8 @@
               href: xaml-hot-reload-troubleshooting.md
         - name: 'F# için Düzenle ve Devam Et desteklenmez'
           href: edit-and-continue-not-supported-for-f-hash.md
+    - name: Çıkış penceresine kaydetme
+      href: using-tracepoints.md
     - name: Hata ayıklayıcısı verilerini görüntüleme
       items:
         - name: Modüller
@@ -238,7 +238,7 @@
                   href: visual-cpp-custom-visualizer-compatibility.md
             - name: Özel görünümler (yönetilen)
               items:
-                - name: Nesnelerin özel görünümlerini oluşturma
+                - name: Yönetilen nesnelerin özel görünümlerini oluşturma
                   href: create-custom-views-of-dot-managed-objects.md
                 - name: Hata ayıklayıcıya ne göstereceğini söyleme
                   href: using-the-debuggerdisplay-attribute.md
