@@ -1,7 +1,7 @@
 ---
-title: Python 3. adımda Visual Studio öğretici etkileşimli REPL
+title: Visual Studio 'da Python öğretici adım 3, etkileşimli REPL
 titleSuffix: ''
-description: Adım 3 / Çekirdek izlenecek Python etkileşimli REPL penceresini kapsayan Visual Studio'da Python özellikleri.
+description: Python etkileşimli REPL penceresini kapsayan, Visual Studio 'da Python özelliklerine yönelik temel bir izlenecek adım 3.
 ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -11,42 +11,42 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 15e0b45fd77096ba2227391736aad5c895014d1c
-ms.sourcegitcommit: 0554b59a2a251661e56824fb9cd6e9b1f326cef1
+ms.openlocfilehash: 7b2de511b0d24df9c4e156ccef37ff053005af98
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71831865"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72450438"
 ---
-# <a name="step-3-use-the-interactive-repl-window"></a>3\. adım: Etkileşimli REPL penceresini kullanma
+# <a name="step-3-use-the-interactive-repl-window"></a>3\. Adım: etkileşimli REPL penceresini kullanma
 
-**Önceki adım: @No__t [kodu yazın ve çalıştırın](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)-1
+**Önceki adım: [kodu yazma ve çalıştırma](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)**
 
-Visual Studio **etkileşimli** penceresi Python için normal düzenleme-oluşturma-hata ayıklama döngüsü önemli ölçüde kısaltır bir zengin okuma-değerlendirme-print-loop (REPL) deneyimi sağlar. **Etkileşimli** penceresinde Python komut satırı REPL deneyiminin tüm özellikleri sağlar. Ayrıca, çok kaynak dosyaları Visual Studio'da kod değişimi Düzenleyici, aksi takdirde komut satırından yavaşlatan bir yöntemdir kolaylaştırır.
+Python için Visual Studio **etkileşimli** penceresi, olağan düzenleme-oluşturma-hata ayıklama döngüsünü büyük ölçüde kısaltan bir zengin okuma-değerlendirme-yazdırma döngüsü (REPL) deneyimi sağlar. **Etkileşimli** pencere, Python komut satırının REPL deneyiminin tüm yeteneklerini sağlar. Ayrıca, Visual Studio düzenleyicisinde kaynak dosyalarla birlikte kod alışverişi yapmak çok kolay hale gelir. Bu, başka bir deyişle, komut satırı ile biraz daha fazla.
 
 > [!NOTE]
 > REPL ile ilgili sorunlar için `ipython` ve `ipykernel` paketlerinin yüklü olduğundan emin olun ve paketlerin yüklenmesiyle ilgili yardım için bkz. [Python ortamları paketleri sekmesi](https://docs.microsoft.com/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab).
 
-1. Açık **etkileşimli** projenin Python ortamında sağ tıklanarak penceresi **Çözüm Gezgini** (gibi **Python 3.6 (32-bit)** bir önceki grafikte gösterilen) ve seçme **açık etkileşimli pencere**. Alternatif olarak seçebileceğiniz **görünümü** > **diğer Windows** > **Python etkileşimli Windows** ana Visual Studio menüsünde.
+1. **Çözüm Gezgini** (önceki bir grafikte gösterilen **python 3,6 (32-bit)** gibi) ve **etkileşimli pencereyi aç**seçeneğini belirleyerek, projenin Python ortamına sağ tıklayıp **etkileşimli** pencereyi açın. Ana Visual Studio menüsünden **@no__t-** 1**diğer Windows** > **Python etkileşimli pencerelerini** alternatif olarak seçebilirsiniz.
 
-1. **Etkileşimli** penceresi açılır standart düzenleyiciyle aşağıda **>>>** Python REPL istemi. **Ortam** aşağı açılan listesi ile çalışmak için belirli bir yorumlayıcıyı seçme olanak tanır. Önerilmesine de yapmak istediğiniz **etkileşimli** iki pencere ayırıcının sürükleyerek yapabileceğiniz daha büyük penceresi:
+1. **Etkileşimli** pencere, standart **>>>** Python REPL istemiyle birlikte düzenleyicinin altında açılır. **Ortam** açılan listesi, ile çalışmak için belirli bir yorumlayıcı seçmenize olanak sağlar. Ayrıca, iki pencere arasında ayırıcıyı sürükleyerek yapabileceğiniz **etkileşimli** pencereyi daha büyük hale getirmek isteyebilirsiniz:
 
-    ![Python etkileşimli penceresinde ve yeniden boyutlandırmak için sürükleme](media/vs-getting-started-python-11-interactive1b.png)
+    ![Python etkileşimli penceresi ve yeniden boyutlandırmak için sürükleme](media/vs-getting-started-python-11-interactive1b.png)
 
     > [!Tip]
-    > Tüm Visual Studio windows bordering ayırıcılar sürükleyerek boyutlandırabilirsiniz. Bağımsız olarak Visual Studio çerçeve pencereleri Taşı ve çerçevesinde istiyor ancak bunları yeniden düzenleyebilir. Tüm Ayrıntılar için bkz. [pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md).
+    > Bordering ayırıcılarını sürükleyerek Visual Studio 'daki tüm pencereleri yeniden boyutlandırabilirsiniz. Ayrıca, Windows 'u Visual Studio çerçevesindeki bağımsız olarak sürükleyebilir ve çerçeve içinde istediğiniz gibi yeniden düzenleyebilirsiniz. Tüm ayrıntılar için bkz. [pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md).
 
-1. Gibi birkaç deyim girin `print("Hello, Visual Studio")` ifadeler gibi `123/456` sonuçlarını hemen görmek için:
+1. Hemen sonuçları görmek için `print("Hello, Visual Studio")` ve `123/456` gibi ifadeler gibi birkaç deyim girin:
 
-    ![Python etkileşimli penceresinde sonuçlarını hemen](media/vs-getting-started-python-12-interactive2.png)
+    ![Python etkileşimli penceresi anlık sonuçları](media/vs-getting-started-python-12-interactive2.png)
 
-1. Bir işlev tanımı gibi çok satırlı bir deyim yazmaya başladığınızda **etkileşimli** penceresi gösterir Python'un **...**  satırları sağlayan, komut satırı REPL otomatik girintili yazma devam etmesini istemi:
+1. Bir işlev tanımı gibi çok satırlı bir ifade yazmaya başladığınızda **etkileşimli** pencere, Python 'un **..** . satırına devam etmek için komut satırı REPL 'un aksine otomatik girintileme sağlar:
 
-    ![Python etkileşimli penceresinde deyimi devamlılık ile](media/vs-getting-started-python-13-interactive3.png)
+    ![Deyimle devam eden Python etkileşimli penceresi](media/vs-getting-started-python-13-interactive3.png)
 
-1. **Etkileşimli** penceresi girdiğinizden ve çok satırlı geçmişi maddeler ile komut satırı REPL üzerine artırır her şeyin tam geçmişini sağlar. Örneğin, kolayca tüm tanımını çağırabilirsiniz `f` işlev tek bir birim olarak ve kolayca adla değiştirin `make_double`, yerine ' % s'işlevi satır yeniden oluşturuluyor.
+1. **Etkileşimli** pencere, girdiğiniz her şeyin tam bir geçmişini sağlar ve çok satırlı geçmiş öğeleriyle komut satırı REPL üzerinde geliştirilir. Örneğin, `f` işlevinin tamamının tanımını tek bir birim olarak kolayca hatırlayabilmeniz ve işlev satırını satıra göre yeniden oluşturmak yerine adı `make_double` olarak kolayca değiştirebilirsiniz.
 
-1. Visual Studio için bir düzenleyici penceresinde birden çok kod satırlarını gönderebilir **etkileşimli** penceresi. Bu özellik, kaynak dosyada kod bakımı ve select bölümleri için kolayca gönderir tanır **etkileşimli** penceresi. Bu tür kod parçalarını bütün program çalıştırmak zorunda yerine hızlı REPL ortamı ile çalışabilirsiniz. Bu özelliği görmek için önce değiştirin `for` içinde döngü *PythonApplication1.py* aşağıdaki dosya:
+1. Visual Studio, bir düzenleyici penceresinden **etkileşimli** pencereye birden çok satır kodu gönderebilir. Bu özellik, kodu kaynak dosyada korumanıza ve **etkileşimli** pencereye kolayca seçim parçalarını gönderemenize olanak tanır. Daha sonra, tüm programı çalıştırmak yerine hızlı REPL ortamında bu kod parçaları ile çalışabilirsiniz. Bu özelliği görmek için önce *PythonApplication1.py* dosyasındaki `for` döngüsünü aşağıdakiler ile değiştirin:
 
     ```python
     # Create a string with spaces proportional to a cosine of x in degrees
@@ -54,14 +54,14 @@ Visual Studio **etkileşimli** penceresi Python için normal düzenleme-oluştur
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
-1. *. Kopyala* dosyasında `import`, `from` ve `make_dot_string` işlev deyimlerini seçin, sağ tıklayın ve **etkileşimli 'e gönder** ' i seçin (veya **CTRL**+**ENTER**tuşlarına basın). Kod parçasını hemen yapıştırılır **etkileşimli** penceresi ve çalıştırın. Şimdi seçtiğiniz `make_dot_string` işlev ve söz konusu kod parçasını yeniden çalıştırır aynı komutu yineleyin. Kodu bir işlev tanımladığından hızlıca bu işlev birkaç kez çağırarak test edebilirsiniz:
+1. *. Kopyala* dosyasında `import`, `from` ve `make_dot_string` işlev deyimlerini seçin, sağ tıklayın ve **etkileşimli 'e gönder** ' i seçin (veya **CTRL**+**ENTER**tuşlarına basın). Kod parçası hemen **etkileşimli** pencereye yapıştırılır ve çalışır. Kod bir işlevi tanımladığından, bu işlevi birkaç kez çağırarak hızlıca test edebilirsiniz:
 
-    ![Kod etkileşimli pencereye göndermek ve test](media/vs-getting-started-python-14-interactive4.png)
+    ![Etkileşimli pencereye kod gönderme ve test etme](media/vs-getting-started-python-14-interactive4.png)
 
     > [!Tip]
-    > Kullanarak **Ctrl**+**Enter** Düzenleyicisi'nde *olmadan* seçimi satıra kod çalıştıran **etkileşimli** Pencere ve giriş işaretini bir sonraki satırında otomatik olarak geçirir. Bu özellik ile tuşuna basarak **Ctrl**+**Enter** art arda yalnızca Python komut satırı ile mümkün olmayan kod adım adım için kullanışlı bir yol sağlar. Ayrıca sağlar hata ayıklayıcıyı çalıştıran ve mutlaka programınızı en baştan başlatmayı olmadan kodunuzda adım adım.
+    > Bir seçim *olmadan* düzenleyicide **CTRL**@no__t ' in kullanılması, **etkileşimli** penceredeki geçerli kod satırını çalıştırır ve**giriş** işaretini bir sonraki satıra otomatik olarak koyar. Bu özellik ile, **Ctrl**+ ' e**basmak sürekli olarak** yalnızca Python komut satırı ile mümkün olmayan kodunuzda adım adım ilerlemek için kullanışlı bir yol sağlar. Ayrıca, hata ayıklayıcıyı çalıştırmadan ve programınızı baştan başlatmaya gerek kalmadan kodunuzda ilerlemenizi sağlar.
 
-1. Ayrıca kopyalayın ve çok satırlı kod içine yapıştırabilirsiniz **etkileşimli** ile Python komut satırı REPL. yapmak zor olan penceresi aşağıdaki kod parçacığı gibi herhangi bir kaynaktan Yapıştırıldığında, **etkileşimli** penceresi içinde yazmış olarak varsa bu kod çalışır:
+1. Ayrıca, Python komut satırı REPL ile yapılması zor olan, aşağıdaki kod parçacığı gibi herhangi bir kaynaktaki **etkileşimli** pencereye birden çok satır kodu kopyalayabilir ve yapıştırabilirsiniz. Yapıştırıldığında, **etkileşimli** pencere bu kodu içine yazmış gibi çalıştırır:
 
     ```python
     for i in range(360):
@@ -69,19 +69,19 @@ Visual Studio **etkileşimli** penceresi Python için normal düzenleme-oluştur
         print(s)
     ```
 
-    ![Birden çok gönderme etkileşimli kullanarak kod satırlarını yapıştırma](media/vs-getting-started-python-15-interactive5.png)
+    ![Etkileşimli gönderme kullanarak birden çok satırı kodla yapıştırma](media/vs-getting-started-python-15-interactive5.png)
 
-1. Gördüğünüz gibi bu kodu düzgün çalışır ancak çıktısını çok liderlerini değil. Farklı adım değerinde `for` döngü cosine wave birkaçını göstermek. Neyse ki, çünkü tüm `for` döngü olduğu tek bir birim olarak REPL geçmişi, geri dönmek kolaydır ve hangi değişiklikler yapın, istediğiniz ve ardından test işlevi yeniden. İlk geri çağırma için yukarı ok tuşlarına basın `for` döngü. (Bunu yukarı yapmak ve okları geçmişinde döngüsü devam kadar) kodda gezinme başlatmak için sol veya sağ ok tuşuna basın. Gidin ve değiştirme `range` belirtimine `range(0, 360, 12)`. Tuşuna basarak **Ctrl**+**Enter** (kodda herhangi bir yere) tüm deyimi yeniden çalıştırmak için:
+1. Görebileceğiniz gibi, bu kod sorunsuz bir şekilde çalışıyor ancak çıktısı çok büyük değildir. @No__t-0 döngüsünde farklı bir adım değeri, kosinüs dalgasının daha fazlasını gösterir. Neyse ki, tüm `for` döngüsü tek bir birim olarak REPL geçmişinde yer aldığı için, geri dönüp istediğiniz değişiklikleri yapmak kolaydır ve sonra işlevi tekrar test edebilirsiniz. Önce `for` döngüsünü geri çekmek için yukarı oka basın. Ardından, kodda gezinmeye başlamak için sol veya sağ ok tuşlarına basın (böylece, yukarı ve aşağı okları geçmiş boyunca geçiş yapmaya devam eder). ' A gidin ve `range` belirtimini `range(0, 360, 12)` olarak değiştirin. Sonra tüm ifadeyi yeniden çalıştırmak için **Ctrl**+**ENTER** (kodun herhangi bir yerinde) tuşuna basın:
 
-    ![Etkileşimli pencerede önceki bir deyim düzenleme](media/vs-getting-started-python-16-interactive6.png)
+    ![Etkileşimli pencerede önceki bir ifadeyi Düzenle](media/vs-getting-started-python-16-interactive6.png)
 
-1. En iyi gibi bir değer bulana kadar farklı adım ayarları ile denemeler için işlemi tekrarlayın. Ayrıca wave aralığı, örneğin, uzatma tarafından tekrar yapabileceğiniz `range(0, 1800, 12)`.
+1. En iyi şekilde istediğiniz değeri bulana kadar, farklı adım ayarlarıyla denemeler yapmak için işlemi tekrarlayın. Ayrıca, aralığı uzaleyerek (örneğin, `range(0, 1800, 12)`) bir dalga yineleme yapabilirsiniz.
 
-1. Yazılmış kod memnun olduğunuzda **etkileşimli** penceresinde, sağ tıklatın ve seçin seçin **kopyalama kod** (**Ctrl** + **Shift**+**C**) ve ardından düzenleyiciye yapıştırın. Bu özelliği, Visual Studio'nun herhangi bir çıktı otomatik olarak atlar nasıl fark yanı sıra `>>>` ve `...` ister. Örneğin, kullanarak aşağıdaki resimde gösterilmektedir **kopyalama kod** komut istemleri ve çıkış içeren Seçimi:
+1. **Etkileşimli** pencerede yazdığınız koddan memnun kaldığınızda, seçin, sağ tıklayın ve **kodu kopyala** (**Ctrl**+**SHIFT**+**C**) seçeneğini belirleyin ve ardından düzenleyiciye yapıştırın. Visual Studio 'nun bu özel özelliğinin, `>>>` ve `...` istemlerinin yanı sıra herhangi bir çıktıyı otomatik olarak nasıl atladığına dikkat edin. Örneğin, aşağıdaki görüntüde, komut istemlerini ve çıktıyı içeren bir seçimde **kodu kopyala** komutunun kullanımı gösterilmektedir:
 
-    ![Etkileşimli pencere kopyalama kod komut istemleri ve çıkış seçimi](media/vs-getting-started-python-17-interactive7.png)
+    ![Etkileşimli pencere bir seçime komut istemi ve çıkış ile kod Kopyala](media/vs-getting-started-python-17-interactive7.png)
 
-    Düzenleyiciye yapıştırın, yalnızca kod alın:
+    Düzenleyiciye yapıştırdığınızda yalnızca kod alırsınız:
 
     ```python
     for i in range(0, 1800, 12):
@@ -89,16 +89,16 @@ Visual Studio **etkileşimli** penceresi Python için normal düzenleme-oluştur
         print(s)
     ```
 
-    Tam içeriğini kopyalamak istiyorsanız **etkileşimli** pencere, çıktıyı ve istekleri dahil olmak üzere standart kullanmanız yeterlidir **kopyalama** komutu.
+    **Etkileşimli** pencerenin tam içeriğini, istemler ve çıkış dahil olmak üzere kopyalamak istiyorsanız, yalnızca standart **kopyalama** komutunu kullanın.
 
-1. Hızlı REPL ortamı kullanmak olan ne yalnızca yaptığınızı **etkileşimli** rahatça projenizin kaynak dosyaya kod eklemek için küçük bir parça kodu, ayrıntılara çalışmak için penceresi. Artık çalıştırdığınızda, kod ile yeniden **Ctrl**+**F5** (veya **hata ayıklama** > **hata ayıklama olmadan Başlat**), siz istediğiniz tam sonuçları bakın.
+1. Az önce yaptığınız şey, küçük bir kod parçasının ayrıntılarını denemek için **etkileşimli** PENCERENIN hızlı çoğaltma ortamını kullanın, daha sonra bu kodu projenizin kaynak dosyasına kolayca eklediniz. Artık kodu **Ctrl**+**F5** **(veya hata ayıklama @no__t**-4**hata ayıklama olmadan Başlat**) ile yeniden çalıştırdığınızda, istediğiniz sonuçları tam olarak görürsünüz.
 
 ## <a name="next-step"></a>Sonraki adım
 
 > [!div class="nextstepaction"]
-> [Hata ayıklayıcıda kod çalıştırma](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
+> [Hata ayıklayıcıda kodu çalıştırma](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 
-## <a name="go-deeper"></a>Daha ayrıntılı şekilde inceleyin
+## <a name="go-deeper"></a>Daha derin git
 
-- [Etkileşimli penceresini kullanma](python-interactive-repl-in-visual-studio.md)
-- [Ipython REPL kullanma](interactive-repl-ipython.md)
+- [Etkileşimli pencereyi kullanma](python-interactive-repl-in-visual-studio.md)
+- [IPython REPL kullanma](interactive-repl-ipython.md)

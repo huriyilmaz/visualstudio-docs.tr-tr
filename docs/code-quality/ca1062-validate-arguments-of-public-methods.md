@@ -1,5 +1,5 @@
 ---
-title: 'CA1062: Genel metotların bağımsız değişkenlerini doğrulayın'
+title: 'CA1062: Genel yöntemlerin bağımsız değişkenlerini doğrulayın'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,35 +17,35 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8106a4c0244cbd79e88a2bdc50e04ea74627dab4
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 6019956d37d420b72275223148c2a3468a820884
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235333"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440711"
 ---
-# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: Genel metotların bağımsız değişkenlerini doğrulayın
+# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: Genel yöntemlerin bağımsız değişkenlerini doğrulayın
 
 |||
 |-|-|
 |TypeName|ValidateArgumentsOfPublicMethods|
 |CheckId|CA1062|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
 
-Dışarıdan görünen bir yöntem, `null` bağımsız değişkenin (`Nothing` Visual Basic) olup olmadığını doğrulamadan başvuru bağımsız değişkenlerinden birine başvurur.
+Dışarıdan görülebilen bir yöntem, bağımsız değişkenin `null` (Visual Basic `Nothing`) olup olmadığını doğrulamadan başvuru bağımsız değişkenlerinden birine başvurur.
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Dışarıdan görünen yöntemlere geçirilen tüm başvuru bağımsız değişkenleri için gözden `null`geçirilmesi gerekir. Uygunsa, <xref:System.ArgumentNullException> `null`bağımsız değişken olduğunda bir oluşturun.
+Dışarıdan görünen yöntemlere geçirilen tüm başvuru bağımsız değişkenleri `null` ' a karşı denetlenmelidir. Uygunsa, bağımsız değişken `null` olduğunda <xref:System.ArgumentNullException> oluşturun.
 
-Ortak veya korumalı olarak bildirildiği için bir yöntem bilinmeyen bir derlemeden çağrılabilecek ise, yöntemin tüm parametrelerini doğrulamanız gerekir. Yöntemi yalnızca bilinen derlemeler tarafından çağrılabilir şekilde tasarlanmışsa, yöntemi iç yapmanız ve <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini, yöntemi içeren derlemeye uygulamanız gerekir.
+Ortak veya korumalı olarak bildirildiği için bir yöntem bilinmeyen bir derlemeden çağrılabilecek ise, yöntemin tüm parametrelerini doğrulamanız gerekir. Yöntem yalnızca bilinen derlemeler tarafından çağrılabilir şekilde tasarlanmışsa, yöntemi iç yapmanız ve <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini yöntemi içeren derlemeye uygulamanız gerekir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kural ihlalini onarmak için her başvuru bağımsız değişkenini ile karşılaştırarak `null`doğrulayın.
+Bu kural ihlalini onarmak için her başvuru bağımsız değişkenini `null` ' a karşı doğrulayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -76,7 +76,7 @@ namespace DesignLibrary
         {
             if (input == null)
             {
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
             }
             if (input.Length != 0)
             {
@@ -107,7 +107,7 @@ Namespace DesignLibrary
         Sub Validate(ByVal input As String)
 
             If input Is Nothing Then
-                Throw New ArgumentNullException("input")
+                Throw New ArgumentNullException(NameOf(input))
             End If
 
             If input.Length <> 0 Then
@@ -123,9 +123,9 @@ End Namespace
 
 ## <a name="example"></a>Örnek
 
-Başvuru nesneleri olan alan veya özellikleri dolduran kopya oluşturucular, CA1062 kuralını da ihlal edebilir. Bu ihlal, kopya oluşturucusuna `null` geçirilen kopyalanmış nesne (`Nothing` Visual Basic) olabileceğinden meydana gelir. İhlalin çözülmesi için, kopyalanmış nesnenin null olup olmadığını denetlemek üzere statik (Visual Basic ile paylaşılan) metodunu kullanın.
+Başvuru nesneleri olan alan veya özellikleri dolduran kopya oluşturucular, CA1062 kuralını da ihlal edebilir. Bu ihlal, kopya oluşturucusuna geçirilen kopyalanmış nesne `null` (Visual Basic `Nothing`) olabileceğinden meydana gelir. İhlalin çözülmesi için, kopyalanmış nesnenin null olup olmadığını denetlemek üzere statik (Visual Basic ile paylaşılan) metodunu kullanın.
 
-Aşağıdaki `Person` sınıf örneğinde `other` , `Person` kopya oluşturucuya `null`geçirilen nesne olabilir.
+Aşağıdaki `Person` sınıfı örneğinde, `Person` kopya oluşturucusuna geçirilen `other` nesnesi `null` olabilir.
 
 ```csharp
 public class Person
@@ -150,7 +150,7 @@ public class Person
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki düzeltilen `Person` örnekte `other` , Copy oluşturucusuna geçirilen nesne, öncelikle `PassThroughNonNull` yönteminde null değeri denetlenir.
+Aşağıdaki düzeltilen `Person` örneğinde, kopyalama oluşturucusuna geçirilen `other` nesnesi, önce `PassThroughNonNull` yönteminde null değeri denetlenir.
 
 ```csharp
 public class Person
@@ -175,7 +175,7 @@ public class Person
     private static Person PassThroughNonNull(Person person)
     {
         if (person == null)
-            throw new ArgumentNullException("person");
+            throw new ArgumentNullException(nameof(person));
         return person;
     }
 }

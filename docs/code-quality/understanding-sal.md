@@ -8,12 +8,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 61a1f74d964c2d6f43608f23b9898054048bb86b
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: e3740b9a7544d6cc6d5b9eceb548ae66e7d3f474
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018255"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445600"
 ---
 # <a name="understanding-sal"></a>SAL'ı Anlama
 
@@ -41,7 +41,7 @@ void * memcpy(
 Bu işlevin ne yaptığını söyleyebilir misiniz? Bir işlev uygulandığında veya çağrıldığında, programın doğruluğunu sağlamak için bazı özellikler tutulması gerekir. Yalnızca örnekteki gibi bir bildirime bakarak ne olduğunu bilemezsiniz. SAL ek açıklamaları olmadan belgeleri veya kod açıklamalarını bilmeniz gerekir. @No__t için MSDN belgeleri: 0 şöyle diyor!
 
 > "Src 'nin Count baytlarını hedefe kopyalar. Kaynak ve hedef çakışırsa, memcservicebehavior davranışı tanımsızdır. Çakışan bölgeleri işlemek için memmove kullanın.
-> **Güvenlik Notno:** Hedef arabelleğinin boyut veya Kaynak arabelleğinden daha büyük olduğundan emin olun. Daha fazla bilgi için bkz. arabellek taşmalarını önleme. "
+> **Güvenlik notno:** Hedef arabelleğinin boyut veya Kaynak arabelleğinden daha büyük olduğundan emin olun. Daha fazla bilgi için bkz. arabellek taşmalarını önleme. "
 
 Belgeler, kodunuzun, programın doğruluğunu sağlamak için belirli özellikleri sürdürmek için sahip olduğunu öneren birkaç bilgi içerir:
 
@@ -82,7 +82,7 @@ Bu uygulama, bir ortak-tek hatası içerir. Neyse ki, kod yazarı SAL arabellek 
 ### <a name="sal-basics"></a>SAL temel kavramları
 SAL, kullanım düzenine göre sınıflandırılan dört temel parametre türünü tanımlar.
 
-|Category|Parametre ek açıklaması|Açıklama|
+|Kategori|Parametre ek açıklaması|Açıklama|
 |--------------|--------------------------|-----------------|
 |**Çağrılan işleve giriş**|`_In_`|Veriler çağrılan işleve geçirilir ve salt okunurdur.|
 |**Çağrılan işleve giriş ve arayana çıkış**|`_Inout_`|Kullanılabilir veriler işleve geçirilir ve potansiyel olarak değiştirilebilir.|
@@ -118,7 +118,7 @@ Bu bölümde, temel SAL ek açıklamaları için kod örnekleri gösterilmektedi
 
     > **C6387 geçersiz parametre değeri** ' pInt ', ' 0 ' olabilir: Bu, ' InCallee ' işlevinin belirtimine bağlı kalmıyor.
 
-### <a name="example-the-_in_-annotation"></a>Örnek: @No__t-0In @ no__t-1 ek açıklaması
+### <a name="example-the-_in_-annotation"></a>Örnek: \_In @ no__t-1 ek açıklaması
 
 @No__t-0 ek açıklaması şunları belirtir:
 
@@ -156,7 +156,7 @@ void BadInCaller()
 
 Bu örnekte Visual Studio Code analiz kullanıyorsanız, çağıranların `pInt` için başlatılmış bir arabelleğe null olmayan bir işaretçi iletkullandığını doğrular. Bu durumda, `pInt` işaretçisi NULL olamaz.
 
-### <a name="example-the-_in_opt_-annotation"></a>Örnek: @No__t-0In @ no__t-1opt @ no__t-2 ek açıklaması
+### <a name="example-the-_in_opt_-annotation"></a>Örnek: \_In @ no__t-1opt @ no__t-2 ek açıklaması
 
 `_In_opt_`, giriş parametresinin NULL olmasına izin verildiğinden ve bu nedenle işlevin bunu denetlemesi gereken `_In_` ile aynıdır.
 
@@ -184,7 +184,7 @@ void InOptCaller()
 
 Visual Studio Code analizi, işlevin arabelleğe erişmeden önce NULL olduğunu kontrol ettiğini doğrular.
 
-### <a name="example-the-_out_-annotation"></a>Örnek: @No__t-0Out @ no__t-1 ek açıklaması
+### <a name="example-the-_out_-annotation"></a>Örnek: \_Out @ no__t-1 ek açıklaması
 
 `_Out_`, öğe arabelleğini işaret eden NULL olmayan bir işaretçinin geçirildiği ve işlevin öğeyi Başlatan ortak bir senaryoyu destekler. Çağıranın çağrıdan önce arabelleği başlatması gerekmez; çağrılan işlev, döndürülmadan önce başlatmayı taahhüt eder.
 
@@ -210,7 +210,7 @@ void OutCaller()
 
 Visual Studio Code çözümleme aracı, çağıranın NULL olmayan bir işaretçiyi `pInt` için bir arabelleğe geçirdiğinden ve arabelleğin döndürülmeden önce işlevin tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_out_opt_-annotation"></a>Örnek: @No__t-0Out @ no__t-1opt @ no__t-2 ek açıklaması
+### <a name="example-the-_out_opt_-annotation"></a>Örnek: \_Out @ no__t-1opt @ no__t-2 ek açıklaması
 
 `_Out_opt_` `_Out_` ile aynıdır, ancak parametrenin NULL olmasına izin verilir ve bu nedenle işlevin bunu denetlemesi gerekir.
 
@@ -237,7 +237,7 @@ void OutOptCaller()
 
 Visual Studio Code analizi, bu işlevin, `pInt` ' a başvurulmadan önce NULL olduğunu kontrol ettiğini ve `pInt` NULL değilse, arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_inout_-annotation"></a>Örnek: @No__t-0Inout @ no__t-1 ek açıklaması
+### <a name="example-the-_inout_-annotation"></a>Örnek: \_Inout @ no__t-1 ek açıklaması
 
 `_Inout_`, işlev tarafından değiştirilebilen bir işaretçi parametresine açıklama eklemek için kullanılır. İşaretçi, çağrıdan önce geçerli başlatılmış verileri göstermelidir ve değişse bile, yine de dönüş üzerinde geçerli bir değere sahip olmalıdır. Ek açıklama, işlevin tek öğeli arabelleğe serbestçe okunabilir ve yazılabilir olabileceğini belirtir. Çağıranın arabelleği sağlaması ve başlatması gerekir.
 
@@ -268,7 +268,7 @@ void BadInOutCaller()
 
 Visual Studio Code analizi, çağıranların `pInt` için başlatılmış bir arabelleğe NULL olmayan bir işaretçi geçirmektedir ve döndürmeden önce, `pInt` ' in NULL olmadığı ve arabelleğin başlatıldığını doğrular.
 
-### <a name="example-the-_inout_opt_-annotation"></a>Örnek: @No__t-0ınout @ no__t-1opt @ no__t-2 ek açıklaması
+### <a name="example-the-_inout_opt_-annotation"></a>Örnek: \_Inout @ no__t-1opt @ no__t-2 ek açıklaması
 
 `_Inout_opt_`, giriş parametresinin NULL olmasına izin verildiğinden ve bu nedenle işlevin bunu denetlemesi gereken `_Inout_` ile aynıdır.
 
@@ -297,7 +297,7 @@ void InOutOptCaller()
 
 Visual Studio Code analizi, bu işlevin arabelleğe erişmeden önce NULL olduğunu denetlediğini ve `pInt` ' ı NULL değilse, arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_outptr_-annotation"></a>Örnek: @No__t-0Outptr @ no__t-1 ek açıklaması
+### <a name="example-the-_outptr_-annotation"></a>Örnek: \_Outptr @ no__t-1 ek açıklaması
 
 `_Outptr_`, bir işaretçiye dönmesi amaçlanan bir parametreye açıklama eklemek için kullanılır.  Parametrenin kendisi NULL olmamalı ve çağrılan işlev içinde NULL olmayan bir işaretçi döndürüyor ve işaretçi başlatılmış verileri işaret ediyor.
 
@@ -327,7 +327,7 @@ void OutPtrCaller()
 
 Visual Studio Code analizi, çağıranın `*pInt` için NULL olmayan bir işaretçi geçirdiğinden ve arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_outptr_opt_-annotation"></a>Örnek: @No__t-0Outptr @ no__t-1opt @ no__t-2 ek açıklaması
+### <a name="example-the-_outptr_opt_-annotation"></a>Örnek: \_Outptr @ no__t-1opt @ no__t-2 ek açıklaması
 
 `_Outptr_opt_`, parametrenin isteğe bağlı olması dışında `_Outptr_` ile aynıdır; çağıran, parametre için NULL bir işaretçiye geçebilirler.
 
@@ -359,7 +359,7 @@ void OutPtrOptCaller()
 
 Visual Studio Code analizi, bu işlevin, `*pInt` ' a başvurulmadan önce NULL olduğunu kontrol ettiğini ve arabelleğin döndürülmeden önce işlev tarafından başlatıldığını doğrular.
 
-### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Örnek: @No__t-2Out @ no__t-3 ile birlikte \_Success @ no__t-1 ek açıklaması
+### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Örnek: \_Out @ no__t-3 ile birlikte \_Success @ no__t-1 ek açıklaması
 
 Ek açıklamalar, çoğu nesneye uygulanabilir.  Özellikle, bir işlevin tamamına açıklama ekleyebilirsiniz.  Bir işlevin en belirgin özelliklerinden biri, başarılı veya başarısız olmasına neden olabilir. Ancak, bir arabellek ve boyutu arasındaki ilişki gibi, C/C++ işlev başarısı veya başarısızlığı ifade edemez. @No__t-0 ek açıklamasını kullanarak bir işlevin başarısını nasıl göründüğünü söyleyebilirsiniz.  @No__t-0 ek açıklamasına yönelik parametre, yalnızca true olduğunda işlevin başarılı olduğunu gösterir. İfade, ek açıklama ayrıştırıcısının işleyebileceği herhangi bir şey olabilir. İşlev döndürmede sonra ek açıklamaların etkileri yalnızca işlev başarılı olduğunda geçerlidir. Bu örnek, `_Success_` ' ın doğru şeyi yapmak için `_Out_` ile nasıl etkileşime gireceğini gösterir. Dönüş değerini göstermek için `return` anahtar sözcüğünü kullanabilirsiniz.
 

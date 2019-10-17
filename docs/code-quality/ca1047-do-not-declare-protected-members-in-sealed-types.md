@@ -1,5 +1,5 @@
 ---
-title: 'CA1047: Sealed türlerde protected üyeler bildirmeyin'
+title: 'CA1047: Korumalı türlerde korunan üyeleri bildirmeyin'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,24 +17,24 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3114ea004c425567ae479343e0449d2cbc3aa669
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: b55da06cdaee07e0d5c30dc6c5220ef2d50f8d0b
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235698"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449110"
 ---
-# <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047: Sealed türlerde protected üyeler bildirmeyin
+# <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047: Korumalı türlerde korunan üyeleri bildirmeyin
 
 |||
 |-|-|
 |TypeName|DoNotDeclareProtectedMembersInSealedTypes|
 |CheckId|CA1047|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
-Ortak bir tür `sealed` (`NotInheritable` Visual Basic 'te) ve korumalı bir üye ya da korumalı bir iç içe tür bildirir. Bu kural yöntemler için <xref:System.Object.Finalize%2A> ihlalleri raporlamaz, bu da bu düzene uymalıdır.
+Ortak tür `sealed` ' dır (Visual Basic 'te `NotInheritable`) ve korumalı bir üye veya korumalı iç içe geçmiş bir tür bildirir. Bu kural, bu düzene uymalıdır <xref:System.Object.Finalize%2A> yöntemleri için ihlaller raporlamaz.
 
 ## <a name="rule-description"></a>Kural açıklaması
 Türler, devralmasına erişebileceğiniz veya üyeyi geçersiz kılmak için korunan üyelerin türlerini bildirir. Tanım olarak, korumalı türler üzerinde korunan yöntemlerin çağrılabilmesi için korumalı bir türden devralma yapılamaz.

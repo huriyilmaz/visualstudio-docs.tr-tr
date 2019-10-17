@@ -1,5 +1,5 @@
 ---
-title: 'CA1300: MessageBoxOptions belirt'
+title: 'CA1300: MessageBoxOptions belirtme'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 746475e60bbe72c4ebfc51f13d0b2d4d0552ff62
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 4403b1f565698ae170bbccf152d5866250c0f114
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235191"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444449"
 ---
-# <a name="ca1300-specify-messageboxoptions"></a>CA1300: MessageBoxOptions belirt
+# <a name="ca1300-specify-messageboxoptions"></a>CA1300: MessageBoxOptions belirtme
 
 |||
 |-|-|
@@ -35,15 +35,15 @@ ms.locfileid: "71235191"
 
 ## <a name="cause"></a>Sebep
 
-Yöntemi, <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> <xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName> bağımsız değişken olmayan yöntemin aşırı yüklemesini çağırır.
+Bir yöntem, <xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName> bağımsız değişkeni olmayan <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> yönteminin aşırı yüklemesini çağırır.
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Sağdan sola okuma düzeni kullanan kültürler için bir ileti kutusunu doğru bir şekilde göstermek için, [MessageBoxOptions. soltalign](<xref:System.Windows.Forms.MessageBoxOptions.RightAlign>) ve [MessageBoxOptions. rtlokuyor](<xref:System.Windows.Forms.MessageBoxOptions.RtlReading>) <xref:System.Windows.Forms.MessageBox.Show%2A> alanlarını metoduna geçirin. Sağdan sola okuma düzeni kullanılıp kullanılmayacağını öğrenmek için içeren denetimin özelliğiniinceleyin.<xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName>
+Sağdan sola okuma düzeni kullanan kültürler için bir ileti kutusunu doğru bir şekilde göstermek için, [MessageBoxOptions. Soltalign](<xref:System.Windows.Forms.MessageBoxOptions.RightAlign>) ve [MessageBoxOptions. rtlokuyor](<xref:System.Windows.Forms.MessageBoxOptions.RtlReading>) alanlarını <xref:System.Windows.Forms.MessageBox.Show%2A> yöntemine geçirin. Sağdan sola okuma düzeni kullanılıp kullanılmayacağını öğrenmek için içeren denetimin <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName> özelliğini inceleyin.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kuralın ihlalini onarmak için, bir <xref:System.Windows.Forms.MessageBox.Show%2A> <xref:System.Windows.Forms.MessageBoxOptions> bağımsız değişken alan metodun aşırı yüklemesini çağırın.
+Bu kural ihlalini onarmak için, <xref:System.Windows.Forms.MessageBoxOptions> bağımsız değişkeni alan <xref:System.Windows.Forms.MessageBox.Show%2A> yönteminin bir aşırı yüklemesini çağırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 

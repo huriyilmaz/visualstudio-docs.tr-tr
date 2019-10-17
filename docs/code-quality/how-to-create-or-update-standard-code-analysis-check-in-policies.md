@@ -11,62 +11,62 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 768efb3e874f6427cd23f63f14671aa2db1bea71
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 738bb1bcf14d5b3459f325fe13eb3c4b0119e562
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62816363"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448971"
 ---
-# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Nasıl yapılır: Standart Kod Analizi İade İlkeleri Oluşturma veya Güncelleştirme
+# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Nasıl yapılır: Standart Kod Çözümleme İade İlkeleri Oluşturma veya Güncelleme
 
-Kod çözümleme İade İlkesi'ni kullanarak kod analizi tüm kod projesinde bir Azure DevOps projesi üzerinde çalıştırılması gerektirebilir. Kod Analizi gerektiren kod tabanında denetlenen kodun kalitesini artırabilir.
+Kod Analizi iade etme ilkesini kullanarak bir Azure DevOps projesindeki tüm kod projelerinde kod analizinin çalıştırılmasını zorunlu kılabilirsiniz. Kod analizini zorunlu kılmak, kod tabanına işaretlenmiş kodun kalitesini iyileştirebilir.
 
 > [!NOTE]
 > Bu özellik yalnızca Team Foundation Server kullanıyorsanız kullanılabilir.
 
-Kod çözümleme iade ilkeleri proje ayarlarında belirlenir ve her kod projesi için geçerli. Kod Analizi yürütmeleri kod projesi için proje (.xxproj) dosyasında kod projeleri için yapılandırılır. Kod Analizi yürütmeleri yerel bilgisayarda gerçekleştirilir. Proje ayarlarını kurallarında çevrili Kod Analizi ilkesini etkinleştirmek, son kullanıcıların düzenlemeden sonra iade edilmesi için bir kod projesi dosyalarda derlenmiş ve en az bir kod analizini çalıştırdığınızda, içeren bilgisayarda gerçekleştirilmelidir burada Değiştir s yapıldı.
+Kod Analizi iade ilkeleri proje ayarlarında ayarlanır ve her bir kod projesi için geçerlidir. Kod Analizi çalıştırmaları, kod projesi için proje (. xxproj) dosyasındaki kod projeleri için yapılandırılır. Kod Analizi çalıştırmaları yerel bilgisayarda gerçekleştirilir. Bir kod analizi iade ilkesini etkinleştirdiğinizde, iade edilecek bir kod projesindeki dosyaların son Düzenlemeden sonra derlenmesi gerekir ve en azından içeren bir kod analizi çalıştıraldıktan sonra, proje ayarlarındaki kuralların değişikliğin bulunduğu bilgisayarda gerçekleştirilmesi gerekir yapıldı.
 
-- Yönetilen kod için iade ilkesi belirterek ayarladığınız bir *kural kümesi* , bir alt kod analizi kuralları içerir.
+- Yönetilen kod için, kod analizi kurallarının bir alt kümesini içeren bir *kural kümesi* belirterek iade ilkesini ayarlarsınız.
 
-- Visual Studio 2017 sürüm 15.6 ve önceki sürümlerde, C/C++ kodu için tüm kod analizi kuralları çalıştırılır iade ilkesi gerektirir. Ön İşlemci yönergeleri, Azure DevOps projesi bireysel kod projeleri için belirli kuralları devre dışı bırakmak için ekleyebilirsiniz. 15.7 ve daha sonra kullanabileceğiniz **/ analyze: ruleset** çalıştırmak için hangi kuralları belirtmek için. Daha fazla bilgi için [çalıştırılacak C++ kurallarını belirtmek için kural kümeleri kullanma](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+- C/C++ Code Için, Visual Studio 2017 sürüm 15,6 ve önceki sürümlerde, iade ilkesi tüm kod analizi kurallarının çalıştırılmasını gerektirir. Azure DevOps projenizdeki bireysel kod projeleri için belirli kuralları devre dışı bırakmak üzere ön işlemci yönergeleri ekleyebilirsiniz. 15,7 ve sonraki sürümlerde, çalıştırılacak kuralları belirtmek için **/Analyze: RuleSet** komutunu kullanabilirsiniz. Daha fazla bilgi için bkz. [çalıştırılacak C++ kuralları belirtmek Için kural kümelerini kullanma](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
-İade İlkesi yönetilen kod için belirttikten sonra ekip üyeleri kendi Azure DevOps projesi ilke ayarlarında kod projeleri için Kod Analizi ayarları eşitleyebilirsiniz.
+Yönetilen kod için bir iade ilkesi belirttikten sonra, ekip üyeleri kod projeleri için kod analizi ayarlarını Azure DevOps proje ilkesi ayarlarına eşitleyebilir.
 
-## <a name="to-open-the-check-in-policy-editor"></a>İade İlkesi Düzenleyicisi'ni açmak için
+## <a name="to-open-the-check-in-policy-editor"></a>İade İlkesi düzenleyicisini açmak için
 
-1. Takım Gezgini'nde proje adına sağ tıklayın, fareyle **proje ayarları**ve ardından **kaynak denetimi**.
+1. Takım Gezgini, proje adına sağ tıklayın, **proje ayarları**' nın üzerine gelin ve **kaynak denetimi**' ne tıklayın.
 
-1. İçinde **kaynak denetimi** iletişim kutusunda **iade ilkesi** sekmesi.
+1. **Kaynak denetimi** iletişim kutusunda, **iade ilkesi** sekmesini seçin.
 
 1. Aşağıdakilerden birini yapın:
 
-    - Tıklayın **Ekle** yeni bir iade ilkesi oluşturulacak.
+    - Yeni bir iade ilkesi oluşturmak için **Ekle** ' ye tıklayın.
 
-    - Var olan çift **Kod Analizi** öğesi **ilke türü** ilkeyi değiştirmek için liste.
+    - İlkeyi değiştirmek için **Ilke türü** listesindeki mevcut **Kod Analizi** öğesine çift tıklayın.
 
 ## <a name="to-set-policy-options"></a>İlke seçeneklerini ayarlamak için
 
-Seçin veya aşağıdaki seçenekleri temizleyin:
+Aşağıdaki seçenekleri seçin veya temizleyin:
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|**Yalnızca geçerli çözümün bir parçası olan dosyaları içerecek şekilde iade uygular.**|Kod Analizi, çözüm ve proje yapılandırma dosyalarında belirtilen dosyalar üzerinde çalıştırabilirsiniz. Bu ilke, bir çözümün parçası olan tüm kod analiz edilen garanti eder.|
-|**C/C++ kod analizini zorla (/ analyze)**|Tüm C veya C++ projeleri ile oluşturulması gerekir / analyze derleyici seçeneği, Kod Analizi iade edilmeden önce çalıştırılacak.|
-|**Yönetilen kod için kod analizini zorla**|Tüm yönetilen projeleri için kod analizini Çalıştır ve iade edilmeden önce yapı gerektirir.|
+|**İade etme yalnızca geçerli çözümün parçası olan dosyaları içerecek şekilde zorla.**|Kod Analizi, yalnızca çözüm ve proje yapılandırma dosyalarında belirtilen dosyalarda çalıştırılabilir. Bu ilke, bir çözümün parçası olan tüm kodların çözümlenme garantisi sağlar.|
+|**C/C++ Code analizini zorla (/Analyze)**|Tüm C veya C++ projelerin, iade etmeden önce kod analizini çalıştırmak için/analyze derleyici seçeneğiyle oluşturulması gerekir.|
+|**Yönetilen kod için kod analizini zorla**|Tüm yönetilen projelerin, iade etmeden önce kod analizini ve derlemeyi çalıştırmasını gerektirir.|
 
-## <a name="to-specify-a-managed-rule-set"></a>Bir yönetilen kural kümesi belirtmek için
+## <a name="to-specify-a-managed-rule-set"></a>Yönetilen bir kural kümesi belirtmek için
 
-Gelen **bu kural kümesini Çalıştır** listesinde, aşağıdaki yöntemlerden birini kullanın:
+**Bu kural kümesini Çalıştır** listesinde, aşağıdaki yöntemlerden birini kullanın:
 
-- Bir Microsoft Standart kural kümesi seçin.
+- Bir Microsoft standart kural kümesi seçin.
 
-- Tıklayarak özel bir kural seçin  **\<kaynak denetiminden kural kümesi seçin >** . Ardından, kural kümesi kaynak denetimi tarayıcıda sürüm denetim yolunu yazın. Bir sürüm denetim yolu sözdizimi aşağıdaki gibidir:
+- @No__t-1' a tıklayarak bir özel kural seçin, **kaynak denetiminden kural kümesi seçin... >** . Sonra, kaynak denetim tarayıcısında kural kümesinin sürüm denetim yolunu yazın. Sürüm denetimi yolunun sözdizimi şöyledir:
 
    **$/** `TeamProjectName` **/** `VersionControlPath`
 
-Oluşturma ve bir özel iade ilkesi kuralı uygulamak hakkında daha fazla bilgi için bkz: [yönetilen kod için uygulayan özel iade ilkeleri](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md).
+Özel bir iade ilkesi kural kümesi oluşturma ve uygulama hakkında daha fazla bilgi için bkz. [yönetilen kod Için özel Iade Ilkeleri uygulama](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Oluşturma ve kod çözümleme iade ilkelerini kullanma](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)
+- [Kod Analizi iade ilkeleri oluşturma ve kullanma](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)

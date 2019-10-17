@@ -1,5 +1,5 @@
 ---
-title: 'CA1012: Soyut türlerin oluşturucuları olmamalıdır'
+title: 'CA1012: Soyut türlerde oluşturucular bulunmamalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -16,20 +16,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ef4bff83b1921b3cf15b25aaf225645379478f38
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 6ba7a88e2167f5e67eb5cefe706bfc2cf1abfccd
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236346"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441658"
 ---
-# <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012: Soyut türlerin oluşturucuları olmamalıdır
+# <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012: Soyut türlerde oluşturucular bulunmamalıdır
 
 |||
 |-|-|
 |TypeName|Soyut Cttypesshouldnothaveoluşturucular|
 |CheckId|CA1012|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
@@ -67,7 +67,7 @@ Aşağıdaki kod parçacığı, bu kuralı ihlal eden soyut bir tür içeriyor.
 [!code-vb[FxCop.Design.AbstractTypeBad#1](../code-quality/codesnippet/VisualBasic/ca1012-abstract-types-should-not-have-constructors_1.vb)]
 [!code-csharp[FxCop.Design.AbstractTypeBad#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_1.cs)]
 
-Aşağıdaki kod parçacığı, oluşturucusunun `public` erişilebilirliğini ile `protected`değiştirerek önceki ihlalin konumunu düzeltir.
+Aşağıdaki kod parçacığı, oluşturucunun erişilebilirliğini `public` ' dan `protected` ' e değiştirerek önceki ihlalin düzeltir.
 
 [!code-csharp[FxCop.Design.AbstractTypeGood#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_2.cs)]
 [!code-vb[FxCop.Design.AbstractTypeGood#1](../code-quality/codesnippet/VisualBasic/ca1012-abstract-types-should-not-have-constructors_2.vb)]

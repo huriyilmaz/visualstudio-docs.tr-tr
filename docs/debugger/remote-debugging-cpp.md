@@ -1,5 +1,5 @@
 ---
-title: Visual C++ projesinde uzaktan hata ayıklama | Microsoft Docs
+title: Bir C++ projede uzaktan hata ayıklama | Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 08/14/2018
 ms.topic: conceptual
@@ -17,47 +17,47 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81a5ebba2d14a0e091b3b0bcd78a066ef50ed759
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 2b9cd6f120d5699464c9e7311721898a727bf47e
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211117"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72450430"
 ---
-# <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>Visual Studio 'da bir C++ Visual projesinde uzaktan hata ayıklama
+# <a name="remote-debugging-a-c-project-in-visual-studio"></a>Visual Studio 'da C++ bir projede uzaktan hata ayıklama
 Farklı bir bilgisayardaki Visual Studio uygulamasında hata ayıklamak için, uygulamanızı dağıtacağınız bilgisayara Uzak araçları yükleyip çalıştırın, projenizi Visual Studio 'dan uzak bilgisayara bağlanacak şekilde yapılandırın ve ardından uygulamanızı dağıtıp çalıştırın.
 
 ![Uzaktan hata ayıklayıcı bileşenleri](../debugger/media/remote-debugger-client-apps.png "Remote_debugger_components")
 
-Uzaktan hata ayıklama Evrensel Windows uygulamaları (UWP) hakkında daha fazla bilgi için bkz. [bir yüklenen uygulama paketinin hatalarını ayıklama](debug-installed-app-package.md).
+Evrensel Windows uygulamaları (UWP) ile ilgili uzaktan hata ayıklama hakkında bilgi için bkz. [yüklü uygulama paketinin hatalarını ayıklama](debug-installed-app-package.md).
 
 ## <a name="requirements"></a>Gereksinimler
 
-Desteklenen Windows 7 ve daha yeni uzaktan hata ayıklayıcı (telefon değil) ve Windows Server 2008 Service Pack 2'ile başlayan Windows Server sürümleri. Gereksinimlerinin tam listesi için bkz. [gereksinimleri](../debugger/remote-debugging.md#requirements_msvsmon).
+Uzaktan hata ayıklayıcı, Windows 7 ve Windows Server 2008 Service Pack 2 ' den başlayarak daha yeni (telefon değil) ve Windows Server sürümlerinde desteklenir. Gereksinimlerin tüm listesi için bkz. [gereksinimler](../debugger/remote-debugging.md#requirements_msvsmon).
 
 > [!NOTE]
-> Bir proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmiyor. Ülkeler yüksek gecikme süresi veya çevirmeli, Internet gibi düşük bant genişliği bağlantı üzerinden veya Internet üzerinden hata ayıklama önerilmez ve başarısız olabilir veya edilemeyecek kadar yavaş.
+> Proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmez. Yüksek gecikme veya düşük bant genişliğine sahip bir bağlantı (örneğin, Internet veya ülkeler arasında Internet üzerinden) için hata ayıklama önerilmez ve başarısız olabilir veya aşırı derecede yavaş olabilir.
 
 ## <a name="download-and-install-the-remote-tools"></a>Uzak araçları indirme ve yükleme
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
 > [!TIP]
-> Bazı senaryolarda, uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırma en verimli olabilir. Daha fazla bilgi için [uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırma](../debugger/remote-debugging.md#fileshare_msvsmon).
+> Bazı senaryolarda, uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırmak en etkili olabilir. Daha fazla bilgi için bkz. [Uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırma](../debugger/remote-debugging.md#fileshare_msvsmon).
 
-## <a name="BKMK_setup"></a> Uzaktan hata ayıklayıcı ayarlayın
+## <a name="BKMK_setup"></a>Uzaktan hata ayıklayıcıyı ayarlama
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
-> Gerektiğinde ek kullanıcılar için izinler eklemek için kimlik doğrulama modunu değiştirmek veya bağlantı noktası numarası için uzaktan hata ayıklayıcı değilse [uzaktan hata ayıklayıcı yapılandırma](../debugger/remote-debugging.md#configure_msvsmon).
+> Ek kullanıcılar için izinler eklemeniz gerekiyorsa, kimlik doğrulama modunu veya uzaktan hata ayıklayıcı bağlantı noktası numarasını değiştirin, bkz. [Uzaktan hata ayıklayıcıyı yapılandırma](../debugger/remote-debugging.md#configure_msvsmon).
 
-## <a name="remote_cplusplus"></a>Visual C++ projesinde uzaktan hata ayıklama
+## <a name="remote_cplusplus"></a>Bir C++ projede uzaktan hata ayıklama
  Aşağıdaki yordamda, projenin adı ve yolu C:\remotetemp\MyMfc olur ve uzak bilgisayarın adı **Mjo-DL**' dir.
 
 1. **Mymfc** ADLı bir MFC uygulaması oluşturun.
 
-2. Uygulamasının başlangıcında, **MainFrm. cpp**gibi `CMainFrame::OnCreate`kolayca ulaşılan uygulamada herhangi bir yere bir kesme noktası ayarlayın.
+2. @No__t-1 ' in başında, örneğin **MainFrm. cpp**içinde, kolayca ulaşılan uygulamada bir kesme noktası ayarlayın.
 
 3. Çözüm Gezgini, projeye sağ tıklayın ve **Özellikler**' i seçin. **Hata ayıklama** sekmesini açın.
 
@@ -72,7 +72,7 @@ Desteklenen Windows 7 ve daha yeni uzaktan hata ayıklayıcı (telefon değil) v
    |Uzak komut|C:\remotetemp\mymfc.exe|
    |Çalışma dizini|C:\remotetemp|
    |Uzak sunucu adı|MJO-DL:*BağlantıNoktasıNumarası*|
-   |Bağlantı|Windows kimlik doğrulaması ile uzaktan|
+   |Bağlanma|Windows kimlik doğrulaması ile uzaktan|
    |Hata ayıklayıcı türü|Yalnızca yerel|
    |Dağıtım dizini|Ni c:\remotetemp|
    |Dağıtılacak ek dosyalar|C:\data\mymfcdata.exe.|
@@ -83,7 +83,7 @@ Desteklenen Windows 7 ve daha yeni uzaktan hata ayıklayıcı (telefon değil) v
 
 7. **Hata ayıklama** yapılandırması için **Dağıt** onay kutusunu seçin.
 
-    ![Remotedebugcplusdeploy](../debugger/media/remotedebugcplusdeploy.png "Remotedebugcplusdeploy")
+    ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")
 
 8. Hata ayıklamayı Başlat (hata ayıklama **> başlatın**veya **F5**).
 
@@ -91,7 +91,7 @@ Desteklenen Windows 7 ve daha yeni uzaktan hata ayıklayıcı (telefon değil) v
 
 10. İstenirse, uzak makineye bağlanmak için ağ kimlik bilgilerini girin.
 
-     Gerekli kimlik bilgileri ağınızın güvenlik yapılandırmasına özgüdür. Örneğin, bir etki alanı bilgisayarında bir güvenlik sertifikası seçebilir veya etki alanı adınızı ve parolanızı girebilirsiniz. Bir etki alanı olmayan makinede, makine adı ve geçerli kullanıcı hesabı adı gibi girebilirsiniz <strong>MJO-DL\name@something.com</strong>, doğru parola ile birlikte.
+     Gerekli kimlik bilgileri ağınızın güvenlik yapılandırmasına özgüdür. Örneğin, bir etki alanı bilgisayarında bir güvenlik sertifikası seçebilir veya etki alanı adınızı ve parolanızı girebilirsiniz. Etki alanı olmayan bir makinede, makine adı ve <strong>MJO-DL\name@something.com</strong>gibi geçerli bir kullanıcı hesabı adı doğru parolayla birlikte girebilirsiniz.
 
 11. Visual Studio bilgisayarında yürütmenin kesme noktasında durdurulduğunu görmeniz gerekir.
 
@@ -102,7 +102,7 @@ Desteklenen Windows 7 ve daha yeni uzaktan hata ayıklayıcı (telefon değil) v
 
     Alternatif olarak, dosyaları projenize dahil edebilir ve her bir dosyanın **Özellikler** sayfasında **içerik** özelliğini **Evet** olarak ayarlayabilirsiniz. Bu dosyalar, **uzak Windows hata ayıklayıcı** sayfasında belirtilen **dağıtım dizinine** kopyalanır. Ayrıca, **dosya kopyalamak** Için **öğe türünü** değiştirebilir ve dosyaların **dağıtım dizininin**bir alt klasörüne kopyalanması gerekiyorsa ek özellikler belirtebilirsiniz.
 
-## <a name="set-up-debugging-with-remote-symbols"></a>Uzak simgeleri ile hata ayıklamayı kurma
+## <a name="set-up-debugging-with-remote-symbols"></a>Uzak simgelerle hata ayıklamayı ayarlama
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
 

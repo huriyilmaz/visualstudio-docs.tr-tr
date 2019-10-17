@@ -1,5 +1,5 @@
 ---
-title: 'CA1714: Bayrak sabit listeleri çoğul adlara sahip olmalıdır'
+title: 'CA1714: Bayrak numaralandırmalarında çoğul adlar olmalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79585cd9cae31f46a9506085c9c8faf5b5844d44
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 865ed4feb0e95d7fbe1f2d7894a1c6bb3bcb8c6f
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234083"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72439241"
 ---
-# <a name="ca1714-flags-enums-should-have-plural-names"></a>CA1714: Bayrak sabit listeleri çoğul adlara sahip olmalıdır
+# <a name="ca1714-flags-enums-should-have-plural-names"></a>CA1714: Bayrak numaralandırmalarında çoğul adlar olmalıdır
 
 |||
 |-|-|
@@ -32,19 +32,19 @@ ms.locfileid: "71234083"
 
 ## <a name="cause"></a>Sebep
 
-Bir numaralandırma öğesine sahiptir <xref:System.FlagsAttribute?displayProperty=fullName> ve adı ' de bitmez.
+Sabit Listesi <xref:System.FlagsAttribute?displayProperty=fullName> ' dır ve adı ' ın ' de bitmez.
 
 Bu kural varsayılan olarak yalnızca dışarıdan görünür numaralandırmalara bakar, ancak bu [yapılandırılabilir](#configurability).
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Özniteliği birden fazla değerin belirtidiğini gösterdiği için, ile <xref:System.FlagsAttribute> işaretlenen türler plural olan adlara sahiptir. Örneğin, haftanın günlerini tanımlayan bir numaralandırma, birden çok gün belirtebileceğiniz bir uygulamada kullanılmak üzere tasarlanmış olabilir. Bu numaralandırma, <xref:System.FlagsAttribute> ve ' Days ' olarak çağrılabilir. Yalnızca tek bir günün belirtilmesini sağlayan benzer bir numaralandırma özniteliğe sahip değildir ve ' Day ' olarak çağrılabilir.
+@No__t-0 ile işaretlenen türler, öznitelik birden fazla değerin belirtidiğini gösterdiği için çoğul olan adlara sahiptir. Örneğin, haftanın günlerini tanımlayan bir numaralandırma, birden çok gün belirtebileceğiniz bir uygulamada kullanılmak üzere tasarlanmış olabilir. Bu numaralandırma <xref:System.FlagsAttribute> olmalıdır ve ' Days ' olarak çağrılabilir. Yalnızca tek bir günün belirtilmesini sağlayan benzer bir numaralandırma özniteliğe sahip değildir ve ' Day ' olarak çağrılabilir.
 
 Adlandırma kuralları, ortak dil çalışma zamanını hedefleyen kitaplıklar için ortak bir görünüm sağlar. Bu, yeni yazılım kitaplıkları için gerekli olan öğrenme eğrisini azaltır ve müşterinin, kitaplığın yönetilen kod geliştirme konusunda uzmanlığa sahip olan birisi tarafından geliştirildiğini arttırır.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Sabit listesinin adını çoğul kelime yapın veya birden çok numaralandırma değeri aynı anda <xref:System.FlagsAttribute> belirtilmemelidir özniteliği kaldırın.
+Sabit listesinin bir çoğul kelime olmasını veya birden çok numaralandırma değerinin aynı anda belirtilmemelidir <xref:System.FlagsAttribute> özniteliğini kaldırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -62,8 +62,8 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1027 Numaralandırmaları FlagsAttribute ile işaretle](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
-- [CA2217 Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+- [CA1027: Numaralandırmaları FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+- [CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

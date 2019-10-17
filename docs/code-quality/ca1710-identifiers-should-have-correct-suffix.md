@@ -1,5 +1,5 @@
 ---
-title: 'CA1710: Tanımlayıcılar doğru soneke sahip olmalıdır'
+title: 'CA1710: Tanımlayıcıların sonekleri doğru olmalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50c67c614c4ece8f1925f4133f749a1c5747fe31
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: d52b9dd3eaf6312ece4939d3bdf1b64574bc21da
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234166"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72439833"
 ---
-# <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710: Tanımlayıcılar doğru soneke sahip olmalıdır
+# <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710: Tanımlayıcıların sonekleri doğru olmalıdır
 
 |||
 |-|-|
@@ -63,11 +63,11 @@ Aşağıdaki tabloda, ilişkili sonekleri olan temel türler ve arabirimler list
 |<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|Koşul|
 |Bir olay işleyicisi temsilcisi.|Çalışılıyor|
 
-Bir sözlük, yığın veya kuyruk gibi Genelleştirilmiş bir veri yapısı türü veolantürler,türünamaçlanankullanımıhakkındaanlamlıbilgilersağlayanadlaraizinverilir.<xref:System.Collections.ICollection>
+@No__t-0 uygulayan ve sözlük, yığın veya kuyruk gibi Genelleştirilmiş bir veri yapısı türü olan türler, türün amaçlanan kullanımı hakkında anlamlı bilgiler sağlayan adlara sahiptir.
 
-Ve belirli öğelerin <xref:System.Collections.ICollection> bir koleksiyonunu uygulayan türler, ' Collection ' kelimesiyle biten adlara sahiptir. Örneğin, bir <xref:System.Collections.Queue> nesne koleksiyonu ' QueueCollection ' adına sahip olur. ' Collection ' soneki, koleksiyon üyelerinin `foreach` (`For Each` ın [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) ifadesinde numaralandırılacağını belirtir.
+@No__t-0 uygulayan ve belirli öğelerin bir koleksiyonu olan türler, ' Collection ' sözcüğüyle biten adlara sahip. Örneğin, <xref:System.Collections.Queue> nesnelerinin bir koleksiyonu ' QueueCollection ' adına sahip olabilir. ' Collection ' soneki, koleksiyonun üyelerinin `foreach` ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) ifadesinde @no__t kullanılarak numaralandırılacağını belirtir.
 
-Uygulayan <xref:System.Collections.IDictionary> türler, türü de veya <xref:System.Collections.ICollection>uyguluyor <xref:System.Collections.IEnumerable> olsa da, ' Dictionary ' kelimesiyle biten adlara sahiptir. ' Collection ' ve ' Dictionary ' sonek adlandırma kuralları, kullanıcıların aşağıdaki iki numaralandırma deseni arasında ayrım kurmasını sağlar.
+@No__t ' i uygulayan türler, <xref:System.Collections.IEnumerable> ' i veya <xref:System.Collections.ICollection> ' i de uygular, "Sözlük" kelimesiyle biten adlara sahiptir. ' Collection ' ve ' Dictionary ' sonek adlandırma kuralları, kullanıcıların aşağıdaki iki numaralandırma deseni arasında ayrım kurmasını sağlar.
 
 ' Collection ' sonekine sahip türler bu numaralandırma düzenlerini izler.
 
@@ -81,7 +81,7 @@ foreach(SomeType x in SomeCollection) { }
 foreach(SomeType x in SomeDictionary.Values) { }
 ```
 
-Bir <xref:System.Data.DataSet> nesnesi, <xref:System.Data.DataColumn?displayProperty=fullName> ve <xref:System.Data.DataTable> nesneleri<xref:System.Data.DataRow?displayProperty=fullName> koleksiyonlarından oluşan nesneler koleksiyonundan oluşur. Bu koleksiyonlar, <xref:System.Collections.ICollection> temel <xref:System.Data.InternalDataCollectionBase?displayProperty=fullName> sınıf aracılığıyla uygulanır.
+@No__t-0 nesnesi, diğerleri arasında <xref:System.Data.DataColumn?displayProperty=fullName> ve <xref:System.Data.DataRow?displayProperty=fullName> nesnelerinden oluşan koleksiyonlardan oluşan bir <xref:System.Data.DataTable> nesneleri koleksiyonundan oluşur. Bu koleksiyonlar, temel <xref:System.Data.InternalDataCollectionBase?displayProperty=fullName> sınıfı aracılığıyla <xref:System.Collections.ICollection> uygular.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
@@ -89,7 +89,7 @@ Doğru terimle soncak olması için türü yeniden adlandırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
-Tür genişletilebilen veya rastgele bir dizi farklı öğeyi tutan genelleştirilmiş bir veri yapısı ise, ' koleksiyon ' sonekini kullanmak için bir uyarının görüntülenmesini güvenlidir. Bu durumda, uygulama, performans veya veri yapısının diğer özellikleri hakkında anlamlı bilgiler sağlayan bir ad (örneğin, BinaryTree) oluşabilir. Türün belirli bir türün (örneğin, StringCollection) bir koleksiyonunu temsil ettiği durumlarda, sonek türün bir `foreach` bildirim kullanılarak numaralandırılacağını gösterdiği için bu kuraldan bir uyarıyı bastırmayın.
+Tür genişletilebilen veya rastgele bir dizi farklı öğeyi tutan genelleştirilmiş bir veri yapısı ise, ' koleksiyon ' sonekini kullanmak için bir uyarının görüntülenmesini güvenlidir. Bu durumda, uygulama, performans veya veri yapısının diğer özellikleri hakkında anlamlı bilgiler sağlayan bir ad (örneğin, BinaryTree) oluşabilir. Türün belirli bir türün (örneğin, StringCollection) bir koleksiyonunu temsil ettiği durumlarda, sonek türün bir `foreach` ifadesiyle numaralandırılacağını gösterdiği için bu kuraldan bir uyarıyı bastırmayın.
 
 Diğer sonekler için, bu kuraldan bir uyarıyı bastırmayın. Son ek, hedeflenen kullanımın tür adından önlenebilir olmasını sağlar.
 
@@ -105,7 +105,7 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-[CA1711 Tanımlayıcılar yanlış sonek içermemelidir](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
+[CA1711: Tanımlayıcıların sonekleri yanlış olmamalıdır](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

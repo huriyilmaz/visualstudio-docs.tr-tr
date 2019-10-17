@@ -10,18 +10,18 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 753172144647fcbf699ddc85328dd5e2a94ae87b
-  ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
+  ms.openlocfilehash: 16566f855e2e7504616da3d4196440facf145e6b
+  ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/12/2019
-  ms.locfileid: "72289590"
+  ms.lasthandoff: 10/16/2019
+  ms.locfileid: "72380962"
 highlightedContent:
   items:
   - title: Kurulum ve yükleme
     itemType: download
     url: /visualstudio/install/install-visual-studio
-  - title: Visual Studio IDE Hoş Geldiniz
+  - title: Visual Studio IDE 'ye hoş geldiniz
     itemType: overview
     url: /visualstudio/ide/visual-studio-ide
   - title: Visual Studio 2019’daki yenilikler
@@ -31,9 +31,9 @@ highlightedContent:
     itemType: learn
     url: /learn/
 conceptualContent:
-  title: başlarken
+  title: Kullanmaya başlayın
   items:
-  - title: Visual Studio kullanmayı öğrenin
+  - title: Visual Studio 'Yu nasıl kullanacağınızı öğrenin
     links:
     - text: Kılavuzlu tura başla
       url: ide/visual-studio-ide.md
@@ -42,7 +42,7 @@ conceptualContent:
       url: get-started/tutorial-open-project-from-repo.md
       itemType: tutorial
     - text: Kodu yazma ve düzenleme
-      url: ide/index-writing-code.md
+      url: ide/index-writing-code.yml
       itemType: tutorial
     - text: Kodunuzu oluşturma
       url: ide/compiling-and-building-in-visual-studio.md
@@ -76,7 +76,7 @@ conceptualContent:
     - text: JavaScript
       url: /visualstudio/javascript
       itemType: get-started
-  - title: Uygulama oluşturma
+  - title: Uygulama oluşturun
     links:
     - text: Windows masaüstü uygulaması
       itemType: tutorial
@@ -94,7 +94,7 @@ conceptualContent:
       itemType: quickstart
       url: /aspnet/core/tutorials/razor-pages/razor-pages-start
 tools:
-  title: Languages
+  title: Diller
   items:
   - title: C++
     imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
@@ -125,40 +125,40 @@ additionalContent:
   - title: Görevler
     items:
     - title: Geliştirme
-      summary: Yazma ve Kod Düzenleyicisi'ni kullanarak kodunuzu yönetin.
-      url: ide/index-writing-code.md
-    - title: Derleme
-      summary: Derleme ve kaynak kodu oluşturun.
+      summary: Kod düzenleyicisini kullanarak kodunuzu yazın ve yönetin.
+      url: ide/index-writing-code.yml
+    - title: Yapı
+      summary: Kaynak kodunuzu derleyin ve oluşturun.
       url: ide/compiling-and-building-in-visual-studio.md
     - title: Hata ayıklama
-      summary: Araştırma ve kodunuzda hataları düzeltin.
+      summary: Kodunuzda hataları araştırın ve onarın.
       url: debugger/index.yml
-    - title: Test etme
+    - title: Test
       summary: Projeleriniz üzerinde testler çalıştırın.
       url: test/improve-code-quality.md
-    - title: Dağıtma
+    - title: Dağıt
       summary: Web Dağıtımı, InstallShield, NuGet, sürekli tümleştirme ve daha fazlasını kullanarak uygulamalarınızı ve kodunuzu paylaşabilirsiniz.
       url: deployment/index.yml
     - title: Sürüm Denetimi
-      summary: Gibi Git ve TFVC sürüm denetim teknolojilerini kullanarak kod paylaşın.
+      summary: Git ve TFVC gibi sürüm denetimi teknolojilerini kullanarak kod paylaşın.
       url: /azure/devops/repos/index
     - title: DevOps
-      summary: Sürekli olarak Derle ve uygulamalarınızı bulutta bırakın ve Çevik uygulamak Azure DevOps hizmetleriyle yöntemler.
+      summary: Uygulamalarınızı bulutta sürekli olarak derleyin ve serbest bırakın ve Azure DevOps Services çevik uygulamalar uygulayın.
       url: /azure/devops
     - title: Ölçüm performansı
-      summary: Performans sorunlarını belirleme ve tanılama araçları ile kod performansını iyileştirin.
+      summary: Tanılama araçlarını kullanarak performans sorunlarını belirleyin ve kod performansını iyileştirin.
       url: profiling/index.yml
-    - title: Genişletme
-      summary: Geliştirme deneyiminizi iyileştirmek için Visual Studio IDE kendi işlevselliği ekleyin.
+    - title: Genişletmeyi
+      summary: Geliştirme deneyiminizi geliştirmek için Visual Studio IDE 'ye kendi işlevselliklerinizi ekleyin.
       url: extensibility/index.md
-    - title: Data
+    - title: Veri
       summary: Herhangi bir veritabanına veya hizmete ve herhangi bir yere (yerel veya bulut) bağlanan veri uygulamaları oluşturun.
       url: data-tools/accessing-data-in-visual-studio.md
-    - title: İşbirliği yapın
-      summary: Paylaşma, düzenleme ve işbirliğine dayalı, gerçek zamanlı bir ortamda kodunda hata ayıklayın.
+    - title: İşbirliği
+      summary: Ortak ve gerçek zamanlı bir ortamda paylaşma, düzenleme ve hata ayıklama kodu.
       url: /visualstudio/liveshare/
     - title: Kapsayıcılarla geliştirme
-      summary: Kapsayıcılar, modüler bileşenleri yalıtmak ve ölçeklenebilirliği artırmak için kullanın.
+      summary: Modüler bileşenleri yalıtmak ve ölçeklenebilirliği geliştirmek için kapsayıcıları kullanın.
       url: containers/index.yml
   - title: İş yükleri
     items:
@@ -166,7 +166,7 @@ additionalContent:
       links:
       - text: Web geliştirme
         url: /aspnet/
-      - text: Azure geliştirme ve yönetim
+      - text: Azure geliştirme ve yönetimi
         url: /visualstudio/azure
       - text: Python
         url: /visualstudio/python
@@ -184,7 +184,7 @@ additionalContent:
         url: /dotnet/framework/develop-client-apps
       - text: Evrensel Windows platformu geliştirme
         url: cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md
-      - text: C++ ile Windows geliştirme
+      - text: İle Windows geliştirmeC++
         url: /cpp/windows/desktop-applications-visual-cpp
     - title: Mobil ve oyun
       links:
@@ -192,19 +192,19 @@ additionalContent:
         url: /xamarin/
       - text: Unity ile oyun geliştirme
         url: cross-platform/visual-studio-tools-for-unity.md
-      - text: JavaScript ile Mobil Geliştirme
+      - text: JavaScript ile mobil geliştirme
         url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
         note: (Yalnızca Visual Studio 2017 ve 2015)
-      - text: C++ ile Mobil Geliştirme
+      - text: İle mobil geliştirmeC++
         url: /visualstudio/cross-platform/
-      - text: C++ ile oyun geliştirme
+      - text: İle oyun geliştirmeC++
         url: /windows/uwp/gaming/e2e
     - title: Diğer araç kümeleri
       links:
       - text: Visual Studio uzantısı geliştirme
         url: extensibility/index.md
-      - text: C++ ile Linux geliştirme
+      - text: İle Linux geliştirmeC++
         url: /cpp/linux/
-      - text: .NET core platformlar arası geliştirme
+      - text: .NET Core platformlar arası geliştirme
         url: /dotnet/core/
   footer: '[Bloglar](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [sorun raporlama](ide/talk-to-us.md) - [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html)'

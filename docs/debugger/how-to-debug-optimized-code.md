@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İyileştirilmiş kodda hata ayıklama | Microsoft Docs'
+title: 'Nasıl yapılır: Iyileştirilmiş kodda hata ayıklama | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,73 +21,73 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b498bdb491e3a15dddf005d43435d84b837fcd0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 590925a894f1bf9bfe70d9dd1bf6142fcb6a2e34
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387755"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430668"
 ---
-# <a name="how-to-debug-optimized-code"></a>Nasıl yapılır: En iyi duruma getirilmiş kodda hata ayıklama
+# <a name="how-to-debug-optimized-code"></a>Nasıl Yapılır: İyileştirilmiş Kodda Hata Ayıklama
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden içeri ve dışarı aktarma ayarları seçin. Daha fazla bilgi için [ayarlarına](../ide/environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden Içeri ve dışarı aktarma ayarları ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
 
 > [!NOTE]
-> [/Zo (geliştirmek için iyileştirilmiş hata ayıklama)](/cpp/build/reference/zo-enhance-optimized-debugging)derleyici seçeneği (Visual Studio güncelleştirme 3'te sunulmuştur) en iyi duruma getirilmiş kodu için daha zengin hata ayıklama bilgileri oluşturur (ile oluşturulmamış projeleri **/Od** derleyici seçeneği. Bkz: [/O seçenekler (kodu İyileştir)](/cpp/build/reference/o-options-optimize-code)). Bu yerel değişkenleri ve satır içine alınmış işlevlerin hata ayıklama için gelişmiş destek içerir.
+> [/Zo (](/cpp/build/reference/zo-enhance-optimized-debugging)Visual Studio güncelleştirme 3 ' te sunulan) derleyici seçeneği (Visual Studio Update 3 ' te tanıtılan), iyileştirilmiş kod için daha zengin hata ayıklama bilgileri oluşturur ( **/od** derleyici seçeneği ile derlenmeyen projeler). Bkz. [/O Seçenekler (kodu iyileştirme)](/cpp/build/reference/o-options-optimize-code)). Bu, yerel değişkenleri ve satır içi işlevleri hata ayıklama için geliştirilmiş destek içerir.
 >
-> [Düzenle ve devam et](../debugger/edit-and-continue-visual-csharp.md) ne zaman devre dışı **/Zo** ocompiler seçeneği kullanılır.
+> **/Zo** ocompiler seçeneği kullanıldığında [Düzenle ve devam et](../debugger/edit-and-continue-visual-csharp.md) devre dışı bırakıldı.
 
- Kod derleyici en iyi duruma getirir, yeniden konumlandırır ve yönergeleri yeniden düzenler. Bu, daha verimli derlenmiş kodda sonuçlanır. Bu yeniden nedeniyle hata ayıklayıcı her zaman yönergeleri için karşılık gelen kaynak kodunu tanımlanamıyor.
+ Derleyici kodu en iyi duruma getirirken, yönergeleri yeniden konumlandırır ve yeniden düzenler. Bu, daha verimli derlenmiş koda neden olur. Bu yeniden düzenleme nedeniyle, hata ayıklayıcı her zaman bir yönergeler kümesine karşılık gelen kaynak kodunu tanımlayamıyor.
 
- En iyi duruma getirme etkileyebilir:
+ İyileştirme şunları etkileyebilir:
 
-- İyileştirici tarafından kaldırılmış veya hata ayıklayıcı anlamadığı konumlara taşınmış yerel değişkenler.
+- İyileştiricinin kaldırılabileceği veya hata ayıklayıcının anlayamadığı konumlara taşınan yerel değişkenler.
 
-- İyileştirici kod bloklarını birleştirir, değiştirilen konumları bir işlev içinde.
+- Bir işlevin içindeki konumlar, iyileştiricinin kod bloklarını birleştirdiğinde değişir.
 
-- İyileştirici iki işlev birleştirir, yanlış olabilir çağrı yığınında çerçeve için işlev adlarını.
+- Çağrı yığınında çerçeveler için işlev adları; iyileştiricinin iki işlevi birleştirmesi durumunda yanlış olabilir.
 
-  Çağrı yığınındaki gördüğünüz çerçeveleri neredeyse her zaman Bununla birlikte, semboller için tüm çerçeveleri olduğunu varsayarsak doğrudur. Çağrı yığınında çerçeve derleme dilinde yazılı işlev varsa yığın bozulması varsa veya işletim sistemi çerçeve çağrı yığınında eşleştirme sembolleri olmayan ise yanlış olur.
+  Çağrı yığınında gördüğünüz çerçeveler neredeyse her zaman doğrudur, ancak tüm çerçeveler için simgelere sahip olduğunuz varsayılır. Yığın bozulmadıysanız, derleme dilinde yazılmış işlevleriniz varsa veya çağrı yığınında sembolleri eşleşmeyen işletim sistemi çerçeveleri varsa, çağrı yığınında çerçeveler yanlış olur.
 
-  Genel ve statik değişkenleri her zaman doğru bir şekilde gösterilir. Bu nedenle yapısı düzendir. Bir yapıya bir işaretçi olması ve işaretçi değerini doğru ise, her üye değişkeni yapısının doğru değeri gösterilir.
+  Genel ve statik değişkenler her zaman doğru şekilde gösterilir. Yapı düzeni. Bir yapıya işaretçiniz varsa ve işaretçinin değeri doğruysa, yapının her üye değişkeni doğru değeri gösterir.
 
-  Bu sınırlamalar nedeniyle bu tamamen Mümkünse, programınızın iyileştirilmemiş bir sürümünü kullanarak hata ayıklama. Varsayılan olarak, en iyi duruma getirme Visual C++ programı hata ayıklama yapılandırmasında devre dışı bırakılmış ve yayın yapılandırmasında açık.
+  Bu sınırlamalar nedeniyle, mümkün olduğunda programınızın iyileştirilmemiş bir sürümünü kullanarak hata ayıklaması yapmalısınız. Varsayılan olarak, bir C++ programın hata ayıklama yapılandırmasında iyileştirme kapalıdır ve yayın yapılandırmasında açıktır.
 
-  Ancak, bir hatayı yalnızca bir programın en iyi duruma getirilmiş bir sürümünü görünebilir. Bu durumda, siz en iyi duruma getirilmiş kodda hata ayıklama gerekir.
+  Ancak, bir hata yalnızca bir programın en iyi duruma getirilmiş bir sürümünde görünebilir. Bu durumda, iyileştirilmiş kodda hata ayıklaması yapmanız gerekir.
 
-## <a name="to-turn-on-optimization-in-a-debug-build-configuration"></a>Bir hata ayıklama iyileştirme etkinleştirmek için yapılandırma derleme
+## <a name="to-turn-on-optimization-in-a-debug-build-configuration"></a>Hata ayıklama yapı yapılandırmasında iyileştirmeyi açmak için
 
-1. Yeni bir proje oluşturduğunuzda, `Win32 Debug` hedef. Kullanım `Win32``Debug` programınızı tam hata ayıklama ve derlemek için hazır kadar hedef bir `Win32 Release` hedef. Derleyicinin `Win32 Debug` hedef.
+1. Yeni bir proje oluşturduğunuzda, `Win32 Debug` hedefini seçin. Programınızın tamamen ayıklanana kadar `Win32``Debug` hedefini kullanın ve bir `Win32 Release` hedefi oluşturmaya hazırlanın. Derleyici `Win32 Debug` hedefini iyileştirmez.
 
-2. Çözüm Gezgini'nde projeyi seçin.
+2. Çözüm Gezgini içinde projeyi seçin.
 
-3. Üzerinde **görünümü** menüsünü tıklatın **özellik sayfaları**.
+3. **Görünüm** menüsünde, **Özellik sayfaları**' na tıklayın.
 
-4. İçinde **özellik sayfaları** iletişim kutusunda, emin `Debug` seçili **yapılandırma** açılır listede.
+4. **Özellik sayfaları** iletişim kutusunda, **yapılandırma** açılan listesinde `Debug` ' in seçildiğinden emin olun.
 
-5. Klasör Görünümü'nde sol taraftaki seçin **C/C++** klasör.
+5. Soldaki klasör görünümünde **C/C++**  klasörü seçin.
 
-6. Altında **C++** klasörüne `Optimization`.
+6. **C++** Klasör altında `Optimization` ' yi seçin.
 
-7. Sağ taraftaki özellikler listesinde, bulma `Optimization`. Bir ayarın yanındaki, büyük olasılıkla diyor `Disabled (` [/Od](/cpp/build/reference/od-disable-debug)`)`. Diğer seçeneklerden birini seçin (`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Maximum Speed``(` [/O2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Full Optimization``(` [/Ox](/cpp/build/reference/ox-full-optimization) `)`, veya `Custom`).
+7. Sağdaki Özellikler listesinde `Optimization` ' ı bulun. Bunun yanındaki ayar büyük olasılıkla `Disabled (`[/od](/cpp/build/reference/od-disable-debug)`)` ' ye diyor. Diğer seçeneklerden birini (`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Maximum Speed``(`[/o2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Full Optimization``(`[/Ox](/cpp/build/reference/ox-full-optimization)`)` veya `Custom`) seçin.
 
-8. Seçerseniz, `Custom` seçeneğini `Optimization`, artık gösterilen özellikler listesinde bulunan diğer özelliklerden herhangi biri için seçenekleri ayarlayabilirsiniz.
+8. @No__t-1 için `Custom` seçeneğini belirlediyseniz, artık Özellikler listesinde gösterilen diğer özelliklerden herhangi biri için seçenekleri ayarlayabilirsiniz.
 
-9. Yapılandırma özellikleri, C/C++, proje özellikleri sayfasında, komut satırı düğümünü seçin ve ekleyin `(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)` için **ek seçenekler** metin kutusu.
+9. Proje Özellikleri sayfasının yapılandırma özellikleri, CC++/, komut satırı düğümünü seçin ve **ek seçenekler** metin kutusuna `(`[/zo](/cpp/build/reference/zo-enhance-optimized-debugging)`)` ekleyin.
 
     > [!WARNING]
-    > `/Zo` Visual Studio 2013 güncelleştirme 3 veya sonraki bir sürümü gerektirir.
+    > `/Zo` Visual Studio 2013 güncelleştirme 3 veya sonraki bir sürümünü gerektirir.
     >
-    >  Ekleme `/Zo` devre dışı bırakacak [Düzenle ve devam et](../debugger/edit-and-continue-visual-csharp.md).
+    >  @No__t ekleme-0, [Düzenle ve devam et](../debugger/edit-and-continue-visual-csharp.md)özelliğini devre dışı bırakır.
 
-   En iyi duruma getirilmiş kod hata ayıklaması yaparken kullanın **ayrıştırılmış kodu** penceresini hangi yönergeleri gerçekten oluşturulduğunu ve yürütüldü. Kesme noktası ayarlarsanız, kesme noktası ile birlikte bir yönerge taşınmasını gerektirecek bilmeniz gerekir. Örneğin, aşağıdaki kodu düşünün:
+   İyileştirilmiş kodda hata ayıklarken, hangi yönergelerin gerçekten oluşturulup yürütüleceğini görmek için **ayrıştırma** penceresini kullanın. Kesme noktaları ayarladığınızda, kesme noktasının bir yönergeyle birlikte hareket edebileceğini bilmeniz gerekir. Örneğin, aşağıdaki kodu göz önünde bulundurun:
 
 ```cpp
 for (x=0; x<10; x++)
 ```
 
- Bu satırında bir kesme noktası ayarlamak varsayalım. Kesme noktası 10 kez ulaşılmasına beklediğiniz ancak kodun en iyilenmesi, yalnızca bir kez kesme noktasına erişildiğinde. İlk yönerge değerini ayarlar çünkü `x` 0. Derleyici, bu yalnızca bir kez gerçekleştirilmesi gerekir ve döngü dışında hareket olduğunu algılar. Kesme noktası ile taşır. Karşılaştırın ve Artır yönergeleri `x` döngünün içinde kalır. Görüntülediğinizde **ayrıştırılmış kodu** penceresinde [adım birim](/previous-versions/visualstudio/visual-studio-2010/ek13f001(v=vs.100)) yönerge için en iyi duruma getirilmiş kodda adım adım bağlandığınızda yararlıdır daha fazla denetim için otomatik olarak ayarlanır.
+ Bu satırda bir kesme noktası ayarladığınızı varsayalım. Kesme noktasının 10 kez beklemeniz istenebilir, ancak kod iyileştirildiğinde, kesme noktası yalnızca bir kez vuruş yapılır. Yani, ilk yönerge `x` değerini 0 olarak ayarlarsa. Derleyici bunun yalnızca bir kez yapılması gerektiğini ve döngünün dışına taşındığını algılar. Kesme noktası onunla birlikte gider. @No__t-0 değerini karşılaştıran ve artıran yönergeler döngünün içinde kalır. **Ayrıştırma** penceresini görüntülediğinizde, [adım birimi](/previous-versions/visualstudio/visual-studio-2010/ek13f001(v=vs.100)) , daha fazla denetim için otomatik olarak yönerge olarak ayarlanır ve bu, iyileştirilmiş kodla adım adım yararlı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,18 +9,18 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b4677413fd06176136935e583073f611d1a127a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 3e3295476b9a9d35768963baa05829a560fc9291
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445182"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381493"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>Nasıl yapılır: Şekil veya Dekoratörde bir Click için Araya Girme
-Aşağıdaki yordamlar bir şekil veya bir simge dekoratörde bir click için araya girme nasıl ekleyebileceğiniz gösterilmektedir. Tıklama kesebilir, çift tıkladığında, sürüklediğinde, ve diğer hareketlerine yanıt öğesi.
+Aşağıdaki yordamlarda, bir şekle veya bir simge dekoratmasına tıklamanın nasıl ele alınacağını gösterilmektedir. Tıklama, Çift tıklama, sürükme ve diğer hareketleri yakalayabilir ve öğenin yanıt vermesini sağlayabilirsiniz.
 
-## <a name="to-intercept-clicks-on-shapes"></a>Şekilleri tıklama ele alınması için
- Dsl projesinde, oluşturulan kod dosyalarından ayrı bir kod dosyasında şekli sınıfı için bir parçalı sınıf tanımı yazın. Geçersiz kılma `OnDoubleClick()` veya ile başlayan bir ada sahip diğer yöntemlerden birini `On...`. Örneğin:
+## <a name="to-intercept-clicks-on-shapes"></a>Şekillerdeki tıklamaları kesme
+ DSL projesinde, oluşturulan kod dosyalarından ayrı bir kod dosyasında, şekil sınıfı için kısmi bir sınıf tanımı yazın. @No__t-0 veya `On...` ile başlayan bir ada sahip diğer yöntemlerden birini geçersiz kılın. Örneğin:
 
 ```csharp
 public partial class MyShape // change
@@ -34,20 +34,20 @@ public partial class MyShape // change
 ```
 
 > [!NOTE]
-> Ayarlama `e.Handled` için `true`, olayın kapsayan Şekil veya diyagram geçirilecek istemediğiniz sürece.
+> Olayın, kapsayan şekle veya diyagrama geçirilmesini istemediğiniz müddetçe `e.Handled` ' ı `true` olarak ayarlayın.
 
-## <a name="to-intercept-clicks-on-decorators"></a>Dekoratörler tıklar ele alınması için
- Görüntü dekoratörler OnDoubleClick yöntemi olan ImageField sınıfının bir örneği taşınır. ImageField alt yazarsanız tıklama yakalayabilirsiniz. Alanlar InitializeShapeFields yönteminde ayarlanır. Bu nedenle, normal ImageField yerine, alt sınıfı örneğini oluşturmak için bu yöntemi değiştirmeniz gerekir. Shape sınıfının üretilen kodda InitializeShapeFields yöntemidir. Ayarlarsanız shape sınıfı geçersiz kılabilirsiniz, `Generates Double Derived` aşağıdaki yordamda açıklandığı gibi özellik.
+## <a name="to-intercept-clicks-on-decorators"></a>Dekoratörler üzerinde tıklama tıklamalarını kesme
+ Görüntü Dekoratörleri bir OnDoubleClick yöntemine sahip olan ImageField sınıfının bir örneğine taşınır. Bir ImageField alt sınıfı yazarsanız tıklama işlemlerini izleyebilirsiniz. Alanlar ınitialeshapefields yönteminde ayarlanır. Bu nedenle, normal ImageField yerine alt sınıflarınızın örneğini oluşturmak için bu yöntemi değiştirmeniz gerekir. Initialeshapefields yöntemi şekil sınıfının oluşturulan kodunda bulunur. Aşağıdaki yordamda açıklandığı gibi `Generates Double Derived` özelliğini ayarlarsanız şekil sınıfını geçersiz kılabilirsiniz.
 
- Bir örnek yöntemi InitializeShapeFields olsa da, her sınıf için yalnızca bir kez çağrılır. Bu nedenle, her sınıf olmayan bir örnek diyagramdaki her bir şeklin içindeki her alan için yalnızca bir örneğini ClickableImageField bulunmaktadır. Kullanıcı örneği çift tıkladığında, kod örneğinde gösterildiği gibi hangi örneğinin erişti,'belirlemeniz gerekir.
+ Initialeshapefields bir örnek yöntemi olsa da, her bir sınıf için yalnızca bir kez çağırılır. Bu nedenle, diyagramdaki her bir şekil için değil her bir sınıftaki her bir alan için yalnızca bir Click ' in bir örneği bulunur. Kullanıcı bir örneğe çift tıkladığında, örnekteki kodun gösterdiği gibi, hangi örneğin isabet olduğunu belirlemeniz gerekir.
 
-#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>İçin bir simge dekoratörde bir click için araya girme
+#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>Bir simge dekoratörü ' ne tıklamasına izin vermek için
 
-1. Bir DSL çözüm oluşturun veya açın.
+1. Bir DSL çözümü açın veya oluşturun.
 
-2. Seçin veya bir simge dekoratör olan şekil oluşturma ve bir etki alanı sınıfı eşleyin.
+2. Simge dekoratörü olan bir şekil seçin veya oluşturun ve bunu bir etki alanı sınıfıyla eşleyin.
 
-3. Dosyalarından ayrı bir kod dosyasında `GeneratedCode` klasöründe ImageField yeni alt sınıfını oluşturun:
+3. @No__t-0 klasöründeki dosyalardan ayrı bir kod dosyasında, ImageField öğesinin yeni alt sınıfını oluşturun:
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -83,9 +83,9 @@ public partial class MyShape // change
     }
     ```
 
-     İşlenmiş olay içeren şekle geçirilmesi istemezseniz true olarak ayarlamanız gerekir.
+     Olayın, kapsayan şekle geçirilmesini istemiyorsanız, Işlenmiş olarak ayarlamanız gerekir.
 
-4. Aşağıdaki kısmi sınıf tanımını ekleyerek, Şekil classs InitializeShapeFields yöntemi geçersiz.
+4. Aşağıdaki kısmi sınıf tanımını ekleyerek şekil sınıfınızdaki ınitialeshapefields metodunu geçersiz kılın.
 
     ```csharp
     public partial class MyShape // change
@@ -112,38 +112,38 @@ public partial class MyShape // change
     }
     ```
 
-1. Derleme ve çözümü çalıştırın.
+1. Çözümü derleyin ve çalıştırın.
 
-2. Şekil örneği simgeye çift tıklayın. Sınama iletisi görüntülenmelidir.
+2. Şeklin bir örneğindeki simgeye çift tıklayın. Sınama iletiniz görünmelidir.
 
-## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>Kesintiye tıklar ve CompartmentShape listelerde sürüklediğinde
- Aşağıdaki örnek, kullanıcıların sürükleyerek bir bölme şeklindeki öğeleri yeniden sıralamak sağlar. Bu kodu çalıştırmak için:
+## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>CompartmentShape listelerinde tıklama ve sürükme
+ Aşağıdaki örnek, kullanıcıların bir bölme şeklinin içindeki öğeleri sürükleyerek yeniden sıralamasını sağlar. Bu kodu çalıştırmak için:
 
-1. Kullanarak yeni bir DSL çözüm oluşturma **sınıf diyagramları** çözüm şablonu.
+1. **Sınıf diyagramları** çözüm şablonunu kullanarak yenı bir DSL çözümü oluşturun.
 
-    Ayrıca, bölme şekilleri içeren bir çözüm kendi ile de çalışabilir. Bu kod, Şekil tarafından temsil edilen modeli ve bölme listesi öğelerinde gösterilen öğeler arasındaki gömme ilişkisi olduğunu varsayar.
+    Ayrıca, bölme şekillerini içeren bir çözümle birlikte çalışabilirsiniz. Bu kod, şekil tarafından temsil edilen model öğeleri ve bölme listesi öğelerinde temsil edilen öğeler arasında bir katıştırma ilişkisi olduğunu varsayar.
 
-2. Ayarlama **Generates Double Derived** özelliği bölme şekli.
+2. Bölme şeklinin **Double Ile türetilmiş özelliğini oluşturur** .
 
-3. Bu kod bir dosyaya eklemek **Dsl** proje.
+3. Bu kodu **DSL** projesindeki bir dosyaya ekleyin.
 
-4. Etki alanı sınıfı ve şekli adlarını bu kodda, kendi DSL eşleşecek şekilde ayarlayın.
+4. Bu koddaki etki alanı sınıfı ve şekil adlarını kendi DSL 'ınızla eşleşecek şekilde ayarlayın.
 
-   Özet olarak, kod aşağıdaki gibi çalışır. Bu örnekte, `ClassShape` bölme şekli adıdır.
+   Özet olarak, kod aşağıdaki gibi çalışmaktadır. Bu örnekte, `ClassShape`, bölme şeklinin adıdır.
 
-- Oluşturulduğunda bir dizi fare olay işleyicileri her bölme örneğine eklenir.
+- Bir dizi fare olay işleyicisi oluşturulduğunda her bir bölme örneğine eklenir.
 
-- `ClassShape.MouseDown` Olay, geçerli öğenin depolar.
+- @No__t-0 olayı geçerli öğeyi depolar.
 
-- Ne zaman fareyi hareket geçerli öğenin dışında imleç ayarlar ve serbest bırakılıncaya kadar fare yakalar MouseAction örneği oluşturulur.
+- Fare geçerli öğeden dışarı taştığında, imleci ayarlayan ve serbest bırakılana kadar fare yakalayan bir MouseAction örneği oluşturulur.
 
-     Bir öğenin metin seçme gibi fare Eylemler ile karışmasından kaçınmak için özgün öğe fareyi ayrıldı kadar MouseAction oluşturulmaz.
+     Bir öğenin metnini seçme gibi diğer fare eylemleriyle karışmasını önlemek için, fare orijinal öğeyi kapatıncaya kadar MouseAction oluşturulmaz.
 
-     Alternatif bir MouseAction oluşturmak için MouseUp dinlemek için yalnızca olacaktır. Kullanıcı fare bölme sürükleyip ardından yayımlarsa ancak, bu düzgün çalışmaz. MouseAction fare serbest nerede olursa olsun uygun eylemi gerçekleştirebilir.
+     Yalnızca bir MouseAction oluşturmaya alternatif olarak, MouseUp için dinlemek yeterlidir. Ancak, Kullanıcı fare bölmesini bölme dışına sürükledikten sonra yeniden yayımlarsa bu düzgün çalışmaz. MouseAction, farenin nerede yayımlanmadığına bakılmaksızın uygun eylemi gerçekleştirebilir.
 
-- Fare serbest bırakıldığında MouseAction.MouseUp model öğeleri arasında bağlantılar sırasını yeniden düzenler.
+- Fare bırakıldığında, MouseAction. MouseUp model öğeleri arasındaki bağlantıların sırasını yeniden düzenler.
 
-- Rol sırası değişikliği görünen güncelleştiren bir kural tetikler. Bu davranış zaten tanımlanmış olan ve hiçbir ek kod gerekmez.
+- Rol sırası değişikliği, görüntüyü güncelleştiren bir kural tetikler. Bu davranış zaten tanımlanmış ve ek kod gerekmez.
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;

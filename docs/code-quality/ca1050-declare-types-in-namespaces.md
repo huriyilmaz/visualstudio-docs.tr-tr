@@ -1,5 +1,5 @@
 ---
-title: 'CA1050: Ad alanlarında türler bildirin'
+title: 'CA1050: Ad alanlarında türleri bildirin'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,20 +17,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8127c68cfe7eb541b8adea8affad99027e0c1fe7
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 4d7b132a2840afcc581dda8d341f0193c27f0ef2
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235746"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449190"
 ---
-# <a name="ca1050-declare-types-in-namespaces"></a>CA1050: Ad alanlarında türler bildirin
+# <a name="ca1050-declare-types-in-namespaces"></a>CA1050: Ad alanlarında türleri bildirin
 
 |||
 |-|-|
 |TypeName|DeclareTypesInNamespaces|
 |CheckId|CA1050|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
@@ -52,7 +52,7 @@ Aşağıdaki örnek, bir ad alanı dışında yanlış bir şekilde bildirilmeli
 [!code-vb[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_1.vb)]
 
 ## <a name="example"></a>Örnek
-Aşağıdaki uygulama daha önce tanımlanan kitaplığı kullanır. Ad alanı tarafından nitelendirilmediği zaman `Test` , bir ad alanı dışında belirtilen türün oluşturulduğunu unutmayın. Ayrıca, içindeki `Test` `Goodspace`türüne erişmek için, ad alanı adının gerekli olduğunu unutmayın.
+Aşağıdaki uygulama daha önce tanımlanan kitaplığı kullanır. Ad alanı dışında belirtilen türün `Test` adı bir ad alanı tarafından nitelendirilmediği zaman oluşturulduğunu unutmayın. Ayrıca, `Goodspace` ' deki `Test` türüne erişmek için ad alanı adının gerekli olduğunu unutmayın.
 
 [!code-csharp[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_2.cs)]
 [!code-vb[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_2.vb)]

@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: cd5e07f1e9ce83f36e6ecfbae148c84d18f40ff1
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: ccb18a704c2e8a2c185d3751483736631b0bba68
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72015942"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448638"
 ---
 # <a name="best-practices-and-examples-sal"></a>En İyi Yöntemler ve Örnekler (SAL)
 Kaynak kodu ek açıklama dilinden (SAL) en iyi şekilde yararlanmak ve bazı yaygın sorunlardan kaçınmak için bazı yollar aşağıda verilmiştir.
@@ -245,4 +245,4 @@ Bu örnekte, `_Out_opt_`, işaretçinin önkoşul kapsamında NULL olabileceğin
 [Yapıları ve Sınıfları Yorumlama](../code-quality/annotating-structs-and-classes.md)  
 [Kilitlenme Davranışını Yorumlama](../code-quality/annotating-locking-behavior.md)  
 [Açıklamanın Ne Zaman ve Nereye Uygulanacağını Belirtme](../code-quality/specifying-when-and-where-an-annotation-applies.md)  
-[İç İşlevler](../code-quality/intrinsic-functions.md)  
+[İç İşlevler](../code-quality/intrinsic-functions.md)

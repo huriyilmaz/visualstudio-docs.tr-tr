@@ -1,5 +1,5 @@
 ---
-title: DLL projelerinde hata ayıklama | Microsoft Docs
+title: DLL projelerinde hata ayıkla | Microsoft Docs
 ms.date: 11/06/2018
 ms.topic: conceptual
 dev_langs:
@@ -18,153 +18,153 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ec10f226ad139ffbeb46badc6ef3dd6c384af91
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 898eb0eb1489d83e97ec9f0a5b38b475bda0199d
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714947"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72450417"
 ---
-# <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio DLL'lerde hata ayıklama (C#, C++, Visual Basic F#)
+# <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio 'da dll 'leri hataC#ayıklama C++(,, F#Visual Basic,)
 
-Bir DLL (dinamik bağlantı kitaplık) kodu ve birden fazla uygulama tarafından kullanılan verileri içeren bir kitaplıktır. Visual Studio kullanan oluşturabilir, oluşturmak, yapılandırmak ve DLL'lerin hata ayıklama.
+DLL (dinamik bağlantı kitaplığı), birden fazla uygulama tarafından kullanılabilen kod ve verileri içeren bir kitaplıktır. Dll 'Leri oluşturmak, derlemek, yapılandırmak ve hatalarını ayıklamak için Visual Studio 'Yu kullanabilirsiniz.
 
-## <a name="create-a-dll"></a>Bir DLL oluşturma
+## <a name="create-a-dll"></a>DLL oluşturma
 
-Aşağıdaki Visual Studio Proje şablonları, DLL'leri oluşturabilirsiniz:
+Aşağıdaki Visual Studio proje şablonları dll 'Ler oluşturabilir:
 
 - C#, Visual Basic veya F# sınıf kitaplığı
-- C#veya Visual Basic Windows Forms Denetim (WCF) kitaplığı
-- C++ dinamik bağlantı kitaplığı (DLL)
+- C#veya Visual Basic Windows Forms Control (WCF) kitaplığı
+- C++Dinamik bağlantı kitaplığı (DLL)
 
-Daha fazla bilgi için [MFC hata ayıklama tekniklerine](../debugger/mfc-debugging-techniques.md).
+Daha fazla bilgi için bkz. [MFC hata ayıklama teknikleri](../debugger/mfc-debugging-techniques.md).
 
-Bir WCF kitaplık hata ayıklama bir sınıf kitaplığı hatalarının ayıklanmasına benzer. Ayrıntılar için bkz [Windows Forms denetimleri](/dotnet/framework/winforms/controls/index).
+WCF kitaplığı hata ayıklaması, bir sınıf kitaplığında hata ayıklamaya benzer. Ayrıntılar için bkz. [Windows Forms denetimleri](/dotnet/framework/winforms/controls/index).
 
-Genellikle başka bir projeden bir DLL çağırın. DLL yapılandırmasına bağlı olarak, arama projede hata ayıklaması yaparken adımlama ve hata ayıklama DLL kodu.
+Genellikle başka bir projeden DLL çağırırın. Çağıran projede hata ayıkladığınızda, DLL yapılandırmasına bağlı olarak, DLL kodunda bir adım adım ve hata ayıklama yapabilirsiniz.
 
-## <a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a> DLL hata ayıklama yapılandırması
+## <a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a>DLL hata ayıklama yapılandırması
 
-Bir uygulama oluşturmak için Visual Studio Proje şablonu kullandığınızda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklama ve yayın derleme yapılandırmaları için gereken ayarları otomatik olarak oluşturur. Gerekirse, bu ayarları değiştirebilirsiniz. Daha fazla bilgi için aşağıdaki makalelere bakın:
+Bir uygulama oluşturmak için Visual Studio proje şablonu kullandığınızda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], hata ayıklama ve yayın derleme yapılandırmalarına yönelik gerekli ayarları otomatik olarak oluşturur. Gerekirse bu ayarları değiştirebilirsiniz. Daha fazla bilgi için aşağıdaki makalelere bakın:
 
 - [C++ hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
-- [Proje ayarlarını C# hata ayıklama yapılandırmaları](../debugger/project-settings-for-csharp-debug-configurations.md)
+- [C# Hata ayıklama yapılandırmalarının proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)
 - [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
-- [Nasıl yapılır: Küme hata ayıklama ve yayın yapılandırmaları](../debugger/how-to-set-debug-and-release-configurations.md)
+- [Nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md)
 
-### <a name="set-c-debuggableattribute"></a>C++ DebuggableAttribute ayarlayın
+### <a name="set-c-debuggableattribute"></a>Hata C++ ayıklama ggableattribute ayarla
 
-C++ DLL'ye iliştirmek hata ayıklayıcının C++ kodu yaymalıdır `DebuggableAttribute`.
+Hata ayıklayıcının bir C++ dll 'ye eklemesi için C++ kodun `DebuggableAttribute` ' yi yaymalıdır.
 
-**Ayarlanacak `DebuggableAttribute`:**
+**@No__t-1 ' i ayarlamak için:**
 
-1. C++ DLL projesinde seçin **Çözüm Gezgini** seçip **özellikleri** simgesini veya projeye sağ tıklayıp seçin **özellikleri**.
+1. Çözüm Gezgini ' C++ de DLL projesini seçin ve **Özellikler** simgesini seçin ya da projeye sağ tıklayıp **Özellikler**' i seçin.
 
-1. İçinde **özellikleri** bölmesi altında **bağlayıcı** > **hata ayıklama**seçin **Evet (/ ASSEMBLYDEBUG)** için  **Hatası ayıklanabilir bütünleşmiş kod**.
+1. **Özellikler** bölmesinde, **bağlayıcı** > **hata ayıklama**altında, **hata ayıklanabilir derlemesi**için **Evet (/ASSEMBLYDEBUG)** öğesini seçin.
 
-Daha fazla bilgi için [assemblydebug](/cpp/build/reference/assemblydebug-add-debuggableattribute).
+Daha fazla bilgi için bkz. [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute).
 
-### <a name="vxtskdebuggingdllprojectsexternal"></a> C/C++ DLL dosyası konumlarını ayarlama
+### <a name="vxtskdebuggingdllprojectsexternal"></a>C/C++ dll dosya konumlarını ayarla
 
-Dış bir DLL'de hata ayıklamak için bir arama proje DLL bulmak için olmalıdır, [.pdb dosyasını](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)ve diğer dosyaları DLL gerektirir. Bu dosyaları kopyalamak için bir özel yapı görev oluşturabilir,  *\<proje klasörü > \Debug* çıktı klasörü veya kopyalayabilir dosyaların el ile.
+Bir dış DLL 'de hata ayıklamak için, çağıran bir proje DLL 'yi, [. pdb dosyasını](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)ve DLL 'in gerektirdiği diğer dosyaları bulabilmelidir. Bu dosyaları *\<proje klasörünüze* kopyalamak için özel bir yapı görevi oluşturabilirsiniz > \hata ayıklama çıktı klasörü veya dosyaları el ile kopyalayabilirsiniz.
 
-C/C++ projeleri için çıktı klasörüne kopyalamak yerine projenin özellik sayfalarındaki üstbilgi ve LIB dosya konumları ayarlayabilirsiniz.
+C/C++ projeler için, çıktı klasörüne kopyalamak yerine, proje özellik sayfalarında üst BILGI ve LIB dosya konumlarını ayarlayabilirsiniz.
 
-**C/C++ ayarlanacak üstbilgi ve LIB dosya konumları:**
+**C/C++ Header ve LIB dosya konumlarını ayarlamak için:**
 
-1. C/C++ DLL projesinde seçin **Çözüm Gezgini** seçip **özellikleri** simgesini veya projeye sağ tıklayıp seçin **özellikleri**.
+1. Çözüm Gezgini ' de CC++ /DLL projesini seçin ve **Özellikler** simgesini seçin ya da projeye sağ tıklayıp **Özellikler**' i seçin.
 
-1. Üst kısmındaki **özellikleri** bölmesi altında **yapılandırma**seçin **yapılandırmalarında**.
+1. **Özellikler** bölmesinin üst kısmında, **yapılandırma**altında **tüm yapılandırmalar**' ı seçin.
 
-1. Altında **C/C++**  > **genel** > **ek içerik dizinleri**, üst bilgi dosyalarını içeren klasörü belirtin.
+1. **C/C++**  > **genel** > **ek içerme dizinleri**altında, üst bilgi dosyaları içeren klasörü belirtin.
 
-1. Altında **bağlayıcı** > **genel** > **ek kitaplıklar dizinleri**, LIB dosyalarını içeren klasörü belirtin.
+1. **Bağlayıcı** > **genel** > **Ek kitaplık dizinleri**altında LIB dosyaları olan klasörü belirtin.
 
-1. Altında **bağlayıcı** > **giriş** > **ek bağımlılıklar**, LIB dosyalar için dosya adı ve tam yolunu belirtin.
+1. **Bağlayıcı** > **giriş** > **ek bağımlılıklar**' ın altında LIB dosyaları için tam yolu ve dosya adını belirtin.
 
-1. **Tamam**’ı seçin.
+1. **Tamam ' ı**seçin.
 
-C++ proje ayarları hakkında daha fazla bilgi için bkz. [özellik sayfaları (Visual C++)](/cpp/build/reference/property-pages-visual-cpp).
+Proje ayarları hakkında C++ daha fazla bilgi için bkz. [Windows C++ Özellik sayfası başvurusu](/cpp/build/reference/property-pages-visual-cpp).
 
-## <a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a> Hata ayıklama sürümü oluşturma
+## <a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a>Hata ayıklama sürümü oluşturma
 
-DLL hata ayıklama sürümünü hata ayıklamaya başlamadan önce oluşturduğunuzdan emin olun. Bir DLL'de hata ayıklamak için bir arama uygulaması bulamadı olmalıdır, [.pdb dosyasını](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) ve diğer dosyaları DLL gerektirir.
+Hata ayıklamaya başlamadan önce DLL 'nin hata ayıklama sürümünü ayarladığınızdan emin olun. Bir DLL dosyasında hata ayıklamak için, çağıran bir uygulama [. pdb dosyasını](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) ve DLL 'nin gerektirdiği diğer dosyaları bulabilmelidir.
 
-DLL dosyaları kopyalamak için bir özel yapı görev oluşturabilir,  *\<proje klasörü çağırma > \Debug* çıktı klasörü veya kopyalayabilir dosyaların el ile.
+DLL dosyalarını, *\<çağıran proje klasörünüze > \debug* çıktı klasörüne kopyalamak için özel bir yapı görevi oluşturabilir veya dosyaları el ile kopyalayabilirsiniz.
 
-DLL, doğru konumda çağırdığınızdan emin olun. Bu belirgin görünebilir, ancak bir arama uygulaması bulur ve DLL farklı bir kopyasını yükler, hata ayıklayıcı hiç ayarladığınız kesme noktaları isabet.
+DLL dosyasını doğru konumunda çağırdığınızdan emin olun. Bu açık görünebilir, ancak çağıran bir uygulama DLL 'nin farklı bir kopyasını bulup yüklerse, hata ayıklayıcı sizin ayarladığınız kesme noktalarına hiçbir şekilde ulaşmayacaktır.
 
-## <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> Bir DLL'nin hatasını ayıklayın
+## <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a>DLL hatalarını ayıklama
 
-Bir DLL'yi doğrudan çalıştıramazsınız. Bu genellikle bir uygulama tarafından çağrılmalıdır bir *.exe* dosya. Daha fazla bilgi için [oluşturun ve Visual C++ projeleri yönetme](/cpp/ide/creating-and-managing-visual-cpp-projects).
+Bir DLL dosyasını doğrudan çalıştıramazsınız. Genellikle bir *. exe* dosyası olan bir uygulama tarafından çağrılmalıdır. Daha fazla bilgi için bkz. [Visual Studio projeleri C++- ](/cpp/ide/creating-and-managing-visual-cpp-projects).
 
-Bir DLL'de hata ayıklamak için [çağıran uygulamadan hata ayıklamayı Başlat](#vxtskdebuggingdllprojectsthecallingapplication), veya [DLL projesinde hata ayıklama](how-to-debug-from-a-dll-project.md) , çağıran uygulama belirterek. Hata ayıklayıcı ayrıca kullanabileceğiniz [komut penceresi](#vxtskdebuggingdllprojectstheimmediatewindow) DLL işlevleri veya yöntemleri çağıran bir uygulama kullanmadan tasarım zamanında değerlendirilemiyor.
+Bir DLL dosyasında hata ayıklamak için, [çağıran uygulamadan hata ayıklamayı başlatabilir](#vxtskdebuggingdllprojectsthecallingapplication)veya çağıran uygulamayı belirterek [DLL projesinden hata ayıklaması](how-to-debug-from-a-dll-project.md) yapabilirsiniz. Ayrıca, çağıran bir uygulama kullanmadan, tasarım zamanında DLL işlevleri veya yöntemleri değerlendirmek için hata ayıklayıcı [anında penceresini](#vxtskdebuggingdllprojectstheimmediatewindow) de kullanabilirsiniz.
 
-Daha fazla bilgi için [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
+Daha fazla bilgi için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
 
-### <a name="vxtskdebuggingdllprojectsthecallingapplication"></a> Çağıran uygulamadan gelen hata ayıklamayı Başlat
+### <a name="vxtskdebuggingdllprojectsthecallingapplication"></a>Çağıran uygulamadan hata ayıklamayı Başlat
 
-Bir DLL çağıran uygulama aşağıdakilerden biri olabilir:
+DLL 'yi çağıran uygulama şunları yapabilir:
 
-- Bir uygulamadan bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] aynı veya farklı bir DLL çözümden bir proje.
-- Zaten dağıtılmış mevcut bir uygulama ve bir test veya üretim bilgisayarda çalışıyor.
-- Web'de bulundu ve bir URL yoluyla erişildi.
-- Bir web uygulaması bir web sayfasıyla DLL katıştırır.
+- Aynı veya DLL 'den farklı bir çözümde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projesinden bir uygulama.
+- Zaten dağıtılan ve bir test ya da üretim bilgisayarında çalışan mevcut bir uygulama.
+- Web üzerinde bulunur ve bir URL üzerinden erişilir.
+- DLL 'yi katıştıran bir Web sayfasına sahip bir Web uygulaması.
 
-Çağıran bir uygulamadan bir DLL'de hata ayıklamak için şunları yapabilirsiniz:
+Çağıran bir uygulamadaki DLL hatalarını ayıklamak için şunları yapabilirsiniz:
 
-- Arama uygulaması için projeyi açmak ve seçerek hata ayıklamayı Başlat **hata ayıklama** > **hata ayıklamayı Başlat** ya basarak **F5**.
+- Çağıran uygulama için projeyi açın ve **Hata Ayıkla**' yı seçerek hata ayıklamayı başlatın  > **hata ayıklamayı başlatın** veya **F5**tuşuna basın.
 
   veya
 
-- Dağıtılan ve çalışan bir test veya üretim bilgisayarda zaten olan bir uygulama ekleyin. Bu yöntem, Web sitelerinde veya web apps'te DLL'leri için kullanın. Daha fazla bilgi için [nasıl yapılır: Çalışan bir işleme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
+- Zaten dağıtılan ve test ya da üretim bilgisayarında çalışan bir uygulamaya iliştirme. Web sitelerindeki veya Web Apps 'teki dll 'Ler için bu yöntemi kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: çalışan bir Işleme iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
 
-Çağıran uygulamada hata ayıklamaya başlamadan önce DLL'de bir kesme noktası ayarlayın. Bkz: [kesme noktalarını kullanma](../debugger/using-breakpoints.md). DLL kesme noktası isabet edildiğinde, her bir satırdaki eylemi gözleme kodda adım adım. Daha fazla bilgi için [hata ayıklayıcısı koda gitmek](../debugger/navigating-through-code-with-the-debugger.md).
+Çağıran uygulamada hata ayıklamaya başlamadan önce, DLL 'de bir kesme noktası ayarlayın. Bkz. [kesme noktaları kullanma](../debugger/using-breakpoints.md). DLL kesme noktası isabet edildiğinde, kodu adım adım ilerleyerek her satırdaki eylemi gözlemleyerek yapabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcıdaki koda gitme](../debugger/navigating-through-code-with-the-debugger.md).
 
-Hata ayıklama sırasında kullanabilirsiniz **modülleri** DLL'leri doğrulamak için penceresi ve *.exe* uygulama yükleri dosyaları. Açmak için **modülleri** hata ayıklarken, penceresinde **hata ayıklama** > **Windows** > **modülleri**. Daha fazla bilgi için [nasıl yapılır: Modüller penceresini kullanma](../debugger/how-to-use-the-modules-window.md).
+Hata ayıklama sırasında, uygulamanın yüklediği dll ve *. exe* dosyalarını doğrulamak için **modüller** penceresini kullanabilirsiniz. **Modüller** penceresini açmak için hata ayıklama sırasında **Hata Ayıkla** > **Windows** > **modüller**' i seçin. Daha fazla bilgi için bkz. [nasıl yapılır: modüller penceresini kullanma](../debugger/how-to-use-the-modules-window.md).
 
-### <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> Komut penceresi kullanın
+### <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a>Hemen penceresini kullanma
 
-Kullanabileceğiniz **hemen** penceresi DLL işlevleri veya yöntemleri, tasarım zamanında değerlendirilemiyor. **Hemen** penceresi çağıran bir uygulama rolü oynar.
+Tasarım zamanında DLL işlevlerini veya yöntemlerini değerlendirmek için **hemen** penceresini kullanabilirsiniz. **Komut** penceresi, çağıran bir uygulamanın rolünü yürütür.
 
 >[!NOTE]
->Kullanabileceğiniz **hemen** penceresi ile çoğu proje türü tasarım zamanında. SQL, web projeleri veya komut dosyası için desteklenmiyor.
+>En çok proje türüyle tasarım zamanında **hemen** penceresini kullanabilirsiniz. SQL, Web projeleri veya betik için desteklenmez.
 
-Örneğin, bir yöntem test etmek için adlı `Test` sınıfında `Class1`:
+Örneğin, `Class1` sınıfında `Test` adlı bir yöntemi test etmek için:
 
-1. DLL projesi açık açın **hemen** penceresini seçerek **hata ayıklama** > **Windows** > **hemen**ya basarak **Ctrl**+**Alt**+**miyim**.
+1. DLL projesi açıkken, **hata ayıkla** > **Windows**@no__t **-4 '** i seçerek veya **CTRL**+**alt**+**ı**tuşlarına basarak **hemen** pencereyi açın.
 
-1. Türünde bir nesne örneği `Class1` aşağıdakileri yazarak C# kod **hemen** penceresi ve tuşlarına basarak **Enter**. Bu yönetilen kod için çalışır C# ve uygun sözdizimini değişikliklerle birlikte, Visual Basic:
+1. Aşağıdaki C# kodu **komut** penceresine yazıp **ENTER**tuşuna basarak `Class1` türünde bir nesne oluşturun. Bu yönetilen kod, uygun C# sözdizimi değişikliklerinde ve Visual Basic için geçerlidir:
 
    ```csharp
    Class1 obj = new Class1();
    ```
 
-   C# seçeneğinde tüm adlar tam olarak nitelenmiş olmalıdır. İfadeyi değerlendirmek dil hizmeti çalıştığında, yöntemlerin veya değişkenlerin geçerli kapsamda ve bağlam içinde olmalıdır.
+   ' C#De, tüm adların tam olarak nitelenmiş olması gerekir. Dil hizmeti ifadeyi değerlendirmeye çalıştığında, herhangi bir yöntem veya değişken geçerli kapsamda ve bağlamda olmalıdır.
 
-1. Varsayarak `Test` alır `int` parametresi değerlendirmek `Test` kullanarak **hemen** penceresi:
+1. @No__t-0 ' ın bir `int` parametresi aldığını varsayarak, **hemen** penceresini kullanarak `Test` ' yi değerlendirin:
 
    ```csharp
    ?obj.Test(10);
    ```
 
-   İçinde sonucu yazdırmaya **hemen** penceresi.
+   Sonuç, **hemen** penceresinde yazdırılır.
 
-1. Hata ayıklamaya devam edebilirsiniz `Test` içine bir kesme noktası yerleştirerek ve sonra işlevi yeniden değerlendirerek.
+1. @No__t-0 ' a bir kesme noktası yerleştirerek ve sonra işlevi yeniden değerlendirerek hata ayıklaması yapmaya devam edebilirsiniz.
 
-   Kesme noktasına isabet edilir ve adım adım `Test`. Yürütme ayrıldıktan sonra `Test`, hata ayıklayıcı, Tasarım modunda olur.
+   Kesme noktası isabet eder ve `Test` ' a kadar ilerlenebilir. Yürütmenin `Test` ' dan ayrıldıktan sonra, hata ayıklayıcı Tasarım modunda geri alınacaktır.
 
-## <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a> Karışık mod hata ayıklama
+## <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a>Karışık modda hata ayıklama
 
-Yönetilen veya yerel kodda bir DLL için çağıran bir uygulama yazabilirsiniz. Yönetilen bir DLL'yi yerel uygulamanızı çağırır ve her ikisi de hata ayıklamak istediğiniz, hem yönetilen hem de yerel hata ayıklayıcıları Proje Özellikleri'nde etkinleştirebilirsiniz. Tam geçiş işlemi, DLL projesi veya arama uygulama projesinde hata ayıklamayı başlatmak istediğinize bağlıdır. Daha fazla bilgi için [nasıl yapılır: Karışık modda hata ayıklama](../debugger/how-to-debug-in-mixed-mode.md).
+Yönetilen veya yerel koddaki DLL için bir çağıran uygulama yazabilirsiniz. Yerel uygulamanız yönetilen bir DLL 'yi çağırırsa ve her ikisinde de hata ayıklamak istiyorsanız, proje özelliklerinde hem yönetilen hem de yerel hata ayıklayıcıları etkinleştirebilirsiniz. Tam işlem, DLL projesinden veya çağıran uygulama projesinde hata ayıklamayı başlatmak isteyip istemediğinize bağlıdır. Daha fazla bilgi için bkz. [nasıl yapılır: karışık modda hata ayıklama](../debugger/how-to-debug-in-mixed-mode.md).
 
-Ayrıca yerel bir DLL yönetilen arama projesinden ayıklayabilirsiniz. Daha fazla bilgi için [yönetilen ve yerel kodda hata ayıklamak nasıl](how-to-debug-managed-and-native-code.md).
+Ayrıca, yönetilen bir çağıran projeden yerel bir DLL dosyasında hata ayıklayabilirsiniz. Daha fazla bilgi için bkz. [yönetilen ve yerel kodda hata ayıklama](how-to-debug-managed-and-native-code.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md)
-- [Visual C++ proje türleri](../debugger/debugging-preparation-visual-cpp-project-types.md)
+- [Projelerde hata ayıklama C++ hazırlığı](../debugger/debugging-preparation-visual-cpp-project-types.md)
 - [C#, F#ve Visual Basic proje türleri](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
-- [C++ hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
-- [Proje ayarlarını C# hata ayıklama yapılandırmaları](../debugger/project-settings-for-csharp-debug-configurations.md)
+- [C++ Hata ayıklama yapılandırması için proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
+- [C# Hata ayıklama yapılandırmalarının proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)
 - [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
 - [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)

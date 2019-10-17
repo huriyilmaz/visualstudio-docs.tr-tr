@@ -1,0 +1,55 @@
+### YamlMime:Landing
+title: XAML araçları belgeleri
+summary: Visual Studio, XAML tabanlı uygulamalar oluşturmanıza yardımcı olmak için birden çok araç sağlar. Bunlara XAML Düzenleyicisi ve tasarımcı ve hata ayıklama özellikleri de dahildir.
+metadata:
+  title: XAML araçları belgeleri
+  description: Visual Studio 'da XAML araçlarını nasıl kullanacağınızı öğrenmenize yardımcı olan farklı sayfalara gidin.
+  ms.prod: visual-studio-windows
+  ms.technology: vs-ide-designers
+  ms.topic: landing-page
+  author: gewarren
+  ms.author: gewarren
+  ms.date: 10/10/2019
+  ms.openlocfilehash: fe889d55ac2b2a6eab99b8d6abdc5193c981725d
+  ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/16/2019
+  ms.locfileid: "72450743"
+landingContent:
+- title: XAML hakkında bilgi edinin
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: XAML'ye genel bakış
+      url: xaml-overview.md
+- title: XAML Tasarımcısı kullan
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visual Studio ve Blend’de XAML tasarlama
+      url: designing-xaml-in-visual-studio.md
+    - text: XAML Tasarımcısı hakkında
+      url: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
+- title: XAML hatalarını ayıklama
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: XAML kodu çalıştırarak yazma ve hata ayıklama
+      url: xaml-hot-reload.md
+    - text: Blend'de XAML hatalarını ayıklama
+      url: debug-xaml-in-blend.md
+    - text: WPF uygulamalarında hata ayıklama
+      url: ../debugger/debugging-wpf.md?toc=/visualstudio/debugger/toc.json&bc=/visualstudio/debugger/breadcrumb/toc.json
+    - text: UWP uygulamalarında hata ayıklama
+      url: ../debugger/debugging-windows-store-and-windows-universal-apps.md
+- title: WPF uygulamaları geliştirme
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: WPF’ye genel bakış
+      url: ../designers/introduction-to-wpf.md
+  - linkListType: get-started
+    links:
+    - text: Visual Studio 'da WPF ile çalışmaya başlama
+      url: ../designers/getting-started-with-wpf.md

@@ -1,5 +1,5 @@
 ---
-title: 'CA1051: Görünür örnek alanlarını bildirmeyin'
+title: 'CA1051: Görünür örnek alanlarını bildirme'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,20 +14,20 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 296e8cb4753d487573957de1108a8cb27778ef4c
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 69fb85c396da1acde40cd9bc46150ca5f1386c17
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235785"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449133"
 ---
-# <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Görünür örnek alanlarını bildirmeyin
+# <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Görünür örnek alanlarını bildirme
 
 |||
 |-|-|
 |TypeName|DoNotDeclareVisibleInstanceFields|
 |CheckId|CA1051|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
@@ -38,15 +38,15 @@ Bu kural varsayılan olarak yalnızca dışarıdan görünür türlere bakar, an
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Bir alanın birincil kullanım alanının uygulama ayrıntısı olması gerekir. Alanlar, `internal` veya özellikleri kullanılarak sunulmalıdır. `private` Bir alana erişmek için bir özelliğe erişmek kolaydır ve bir özelliğin erişimcilerinin kodu, önemli değişikliklere bildirmeden tür özellikleri genişleyebilir.
+Bir alanın birincil kullanım alanının uygulama ayrıntısı olması gerekir. Alanlar `private` veya `internal` olmalı ve özellikler kullanılarak gösterilmelidir. Bir alana erişmek için bir özelliğe erişmek kolaydır ve bir özelliğin erişimcilerinin kodu, önemli değişikliklere bildirmeden tür özellikleri genişleyebilir.
 
-Yalnızca bir özel veya iç alanın değerini döndüren Özellikler bir alana erişim için en iyi duruma getirilir; Özellikler yerine dışarıdan görünür alanları kullanmanın performans artışı en az düzeydedir. *Dışarıdan görünür* `public`, ,,`protected internal` ve(`Public`VisualBasic)erişilebilirlik düzeylerine başvurur. `Protected` `protected` `Protected Friend`
+Yalnızca bir özel veya iç alanın değerini döndüren Özellikler bir alana erişim için en iyi duruma getirilir; Özellikler yerine dışarıdan görünür alanları kullanmanın performans artışı en az düzeydedir. *Dışarıdan görünür* , `public`, `protected` ve `protected internal` (`Public`, `Protected` ve `Protected Friend`) erişilebilirlik düzeylerine başvurur.
 
-Ayrıca, ortak alanlar [bağlantı taleplerine](/dotnet/framework/misc/link-demands)karşı korunamaz. Daha fazla bilgi için bkz [. CA2112: Güvenli türler alanları](../code-quality/ca2112-secured-types-should-not-expose-fields.md)kullanıma sunmamalıdır. (Bağlantı talepleri .NET Core uygulamaları için geçerli değildir.)
+Ayrıca, ortak alanlar [bağlantı taleplerine](/dotnet/framework/misc/link-demands)karşı korunamaz. Daha fazla bilgi için bkz. [CA2112: güvenli türler alanları kullanıma sunmamalıdır](../code-quality/ca2112.md). (Bağlantı talepleri .NET Core uygulamaları için geçerli değildir.)
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kural ihlalini onarmak için, alanı `private` oluşturun veya `internal` dışarıdan görünebilir bir özellik kullanarak sunun.
+Bu kural ihlalini onarmak için, alanı `private` veya `internal` yapın ve dışarıdan görünür bir özellik kullanarak sunun.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -55,7 +55,7 @@ Yalnızca tüketicilerin alana doğrudan erişim ihtiyacı olduğundan eminseniz
 Tüketicilerin aşağıdaki durumlarda alan erişimine ihtiyacı olabilir:
 
 - ASP.NET Web Forms içerik denetimleri
-- Hedef platform, WPF ve UWP için `ref` Model-View-ViewModel (MVVM) çerçeveleri gibi alanları değiştirmek için ' ı kullanyaptığında
+- Hedef platform, WPF ve UWP için Model-View-ViewModel (MVVM) çerçeveleri gibi alanları değiştirmek için `ref` ' ı kullanyaptığında
 
 ## <a name="configurability"></a>Yapılandırılabilirlik
 
@@ -69,13 +69,13 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bu kuralı ihlal eden`BadPublicInstanceFields`bir türü () gösterir. `GoodPublicInstanceFields`düzeltilen kodu gösterir.
+Aşağıdaki örnek, bu kuralı ihlal eden bir türü (`BadPublicInstanceFields`) gösterir. `GoodPublicInstanceFields` düzeltilen kodu gösterir.
 
 [!code-csharp[FxCop.Design.TypesPublicInstanceFields#1](../code-quality/codesnippet/CSharp/ca1051-do-not-declare-visible-instance-fields_1.cs)]
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA2112 Güvenli türler alanları kullanıma sunmamalıdır](../code-quality/ca2112-secured-types-should-not-expose-fields.md)
+- [CA2112: Güvenli türler alanları açığa çıkarmamalıdır](../code-quality/ca2112.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
