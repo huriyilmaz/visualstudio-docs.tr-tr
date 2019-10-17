@@ -11,33 +11,33 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fc164dea10a74bbff725ee153f298c820f1c203
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c233d174922c0853d771356e0b68185c51c368ea
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825196"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448728"
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>Kod Analizi İade İlkeleri için Sürüm Uyumluluğu
 
-Değerlendirmek ve kod çözümleme iade ilkeleri farklı sürümlerini kullanan Yazar [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)], nasıl farkları bilmeniz gerekir [!INCLUDE[vstsTfsOrcasLong](../code-quality/includes/vststfsorcaslong_md.md)] ve [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] iade ilkelerini değerlendirme.
+@No__t-0 ' nın farklı sürümlerini kullanarak kod analizi iade ilkelerini değerlendirmeli ve yazarsa, [!INCLUDE[vstsTfsOrcasLong](../code-quality/includes/vststfsorcaslong_md.md)] ve [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ' nin iade ilkelerini değerlendirme ile arasındaki farkları bilmeniz gerekir.
 
-## <a name="version-compatibility-for-evaluating-check-in-policies"></a>İade ilkelerini değerlendirme için sürüm uyumluluğu
+## <a name="version-compatibility-for-evaluating-check-in-policies"></a>Iade Ilkelerini değerlendirmek için sürüm uyumluluğu
 
-- Ne zaman kod çözümleme iade ilkeleri değerlendirilir [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)], varolan herhangi bir kuralın [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ancak içinde yok [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] göz ardı edilir.
+- Kod Analizi iade ilkeleri [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ' da değerlendirildiğinde, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ' de bulunan ancak [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ' de bulunmayan tüm kurallar yok sayılır.
 
-- Ne zaman kod çözümleme iade ilkeleri değerlendirilir [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)], özel olan tüm yeni kuralları [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] göz ardı edilir.
+- @No__t-0 ' da kod analizi iade ilkeleri değerlendirildiğinde, [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ' e özel olan tüm yeni kurallar yok sayılır.
 
-- Kod çözümleme iade ilkesi kuralları derlemeleri belirtiyorsa [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] tarafından tanınmayan derlemeler tarafından belirtilen tüm kuralları yok sayar.
+- Kod Analizi İade İlkesi kural derlemelerini belirtiyorsa, [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)], tanımadığı derlemeler tarafından belirtilen tüm kuralları yoksayar.
 
-- Kod çözümleme iade ilkesi kuralları derlemeleri belirtirse, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] tanımıyor, bir ileti görüntülenir.
+- Kod Analizi iade ilkesi [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ' ı tanımayan kural derlemelerini belirtiyorsa, bir ileti görüntülenir.
 
-## <a name="version-compatibility-for-authoring-check-in-policies"></a>İade ilkeleri yazmak için sürüm uyumluluğu
+## <a name="version-compatibility-for-authoring-check-in-policies"></a>Iade Ilkelerini yazmak için sürüm uyumluluğu
 
-- İade Kod Analizi İlkesi kullanarak oluşturduysanız [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] sürümünü [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)], kullanamazsınız [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] sürümünü [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] değiştirmek için. Ayrıca, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ilke değerlendirilemiyor.
+- @No__t-1 ' in [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] sürümünü kullanarak bir kod analizi iade ilkesi oluşturduysanız, bunu değiştirmek için [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] ' ün [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] sürümünü kullanamazsınız. Ayrıca, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ilkeyi değerlendiremez.
 
-- İade Kod Analizi İlkesi kullanarak oluşturduysanız [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] içinde [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)], kullanabileceğiniz [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] içinde [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ve ilkeyi değiştirmek için de göre değerlendirilebilir [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]. İlkeyi kullanarak değiştirdikten sonra [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] içinde [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)], ilkeyi kullanarak artık düzenleyemezsiniz [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] içinde [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]. [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] eşleşmeyen tanımlayıcı adlarla sorunsuz ilkeleri değerlendirebilirsiniz.
+- @No__t-1 ' de [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] ' ı kullanarak bir kod analizi iade etme ilkesi oluşturduysanız, bunu değiştirmek için [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ' de [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] ' yi kullanabilirsiniz ve ilke ayrıca [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] tarafından değerlendirilebilirler. İlkeyi [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ' de [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] ' ı kullanarak değiştirdikten sonra, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ' te [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] ' yi kullanarak ilkeyi artık düzenleyemezsiniz. [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)], eşleşmeyen kesin adlarla sorunlar olmadan ilkeleri değerlendirebilir.
 
-- Kod Analizi İlkesi iade için her ikisinin de geçerli kural ayarları oluşturmak için [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ve [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)], ilke oluşturmalıdır [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)], gerekli tüm değişiklikleri yapın ve ilkeyi kaydedin. Kuralları yapılan değişiklikler yalnızca varsa [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)], değiştirebilir ve ilke kaydetme [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)].
+- @No__t-0 ve [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] için uygulanan kural ayarlarıyla bir kod analizi iade etme ilkesi oluşturmak için, ilkeyi [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ' de oluşturmanız, gerekli tüm değişiklikleri yapmanız ve ilkeyi kaydetmeniz gerekir. Kurallardaki değişiklikler yalnızca [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ' da mevcutsa, ilkeyi [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ' de değiştirin ve kaydedin.
 
-   İlkeyi kaydettikten sonra [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)], artık mevcut kurallarına yönelik ayarları değiştirebilirsiniz [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] yalnızca.
+   İlkeyi [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ' a kaydettikten sonra, yalnızca [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ' de var olan kuralların ayarlarını değiştiremezsiniz.

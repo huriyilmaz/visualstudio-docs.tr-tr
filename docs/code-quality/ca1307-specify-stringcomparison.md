@@ -1,5 +1,5 @@
 ---
-title: 'CA1307: StringComparison belirt'
+title: 'CA1307: StringComparison belirtme'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e352eea1b7fcf82cb948315affeae6e30690a4aa
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: e3b3d979910883f6be9f542ec581ecbda0f91deb
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234969"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444378"
 ---
-# <a name="ca1307-specify-stringcomparison"></a>CA1307: StringComparison belirt
+# <a name="ca1307-specify-stringcomparison"></a>CA1307: StringComparison belirtme
 
 |||
 |-|-|
@@ -31,15 +31,15 @@ ms.locfileid: "71234969"
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
-Dize karşılaştırma işlemi, <xref:System.StringComparison> parametre ayarlanmamış bir yöntem aşırı yüklemesi kullanır.
+Dize karşılaştırma işlemi, <xref:System.StringComparison> parametresi ayarlanmamış bir yöntem aşırı yüklemesi kullanır.
 
 ## <a name="rule-description"></a>Kural açıklaması
-Çoğu <xref:System.String.Compare%2A> dize işlemi, ve <xref:System.String.Equals%2A> yöntemleri, bir <xref:System.StringComparison> sabit listesi değerini parametre olarak kabul eden bir aşırı yükleme sağlar.
+@No__t-0 ve <xref:System.String.Equals%2A> yöntemlerinin çoğu önemli olan çok sayıda dize işlemi, bir parametre olarak @no__t 2 numaralandırma değeri kabul eden bir aşırı yükleme sağlar.
 
-Bir <xref:System.StringComparison> parametre alan aşırı yükleme olduğunda, bu parametreyi almayan aşırı yükleme yerine kullanılmalıdır. Bu parametreyi açıkça ayarlayarak, kodunuz genellikle daha net ve bakım daha kolay hale getirilir.
+@No__t-0 parametresini alan aşırı yükleme yapıldığında, bu parametreyi almayan aşırı yükleme yerine kullanılmalıdır. Bu parametreyi açıkça ayarlayarak, kodunuz genellikle daha net ve bakım daha kolay hale getirilir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Bu kural ihlalini onarmak için dize karşılaştırma yöntemlerini bir parametre olarak <xref:System.StringComparison> numaralandırmayı kabul eden aşırı yüklemeleri değiştirin. Örneğin: olarak `String.Compare(str1, str2, StringComparison.Ordinal)`değiştirin `String.Compare(str1, str2)` .
+Bu kural ihlalini onarmak için, dize karşılaştırma yöntemlerini parametre olarak <xref:System.StringComparison> numaralandırmayı kabul eden aşırı yüklerden değiştirin. Örneğin: `String.Compare(str1, str2)` ' i `String.Compare(str1, str2, StringComparison.Ordinal)` ' e değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 Kitaplık veya uygulama sınırlı bir yerel hedef kitle için tasarlanıyorsa ve bu nedenle yerelleştirilmez, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.

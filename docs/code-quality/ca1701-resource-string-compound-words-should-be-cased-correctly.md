@@ -1,5 +1,5 @@
 ---
-title: 'CA1701: Kaynak dizesi bileşik sözcüklerin büyük küçük harfleri doğru olmalıdır'
+title: 'CA1701: Kaynak dize bileşik sözcüklerinin küçük/büyük harfleri doğru yazılmalıdır'
 ms.date: 03/28/2018
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed5ae8c0845755fe626e7e801f500389f9263cf5
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: c5d7aa3c29ca8ba82f6c50b070c5210cf10d1884
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234357"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443935"
 ---
-# <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701: Kaynak dizesi bileşik sözcüklerin büyük küçük harfleri doğru olmalıdır
+# <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701: Kaynak dize bileşik sözcüklerinin küçük/büyük harfleri doğru yazılmalıdır
 
 |||
 |-|-|
@@ -48,8 +48,8 @@ Kelimeyi doğru bir şekilde olacak şekilde değiştirin.
 
 Varsayılan olarak, yazım denetleyicisinin Ingilizce (en) sürümü kullanılır. Yazım denetleyicisinin dilini değiştirmek istiyorsanız, *AssemblyInfo.cs* veya *AssemblyInfo. vb* dosyanıza aşağıdaki özniteliklerden birini ekleyerek bunu yapabilirsiniz:
 
-- Kaynaklarınızın <xref:System.Reflection.AssemblyCultureAttribute> uydu derlemesinde olması durumunda kültürü belirtmek için kullanın.
-- Kaynaklarınızın <xref:System.Resources.NeutralResourcesLanguageAttribute> kodunuzla aynı derlemede olması halinde derlemelerinizin *bağımsız kültürünü* belirtmek için kullanın.
+- Kaynaklarınızın uydu derlemesinde olması durumunda kültürü belirtmek için <xref:System.Reflection.AssemblyCultureAttribute> kullanın.
+- Kaynaklarınızın kodunuzla aynı derlemede olması halinde, derlemelerinizin *bağımsız kültürünü* belirtmek için <xref:System.Resources.NeutralResourcesLanguageAttribute> kullanın.
 
 > [!IMPORTANT]
 > Kültürü, Ingilizce tabanlı kültür dışında bir şeye ayarlarsanız, bu kod analizi kuralı sessizce devre dışıdır.
@@ -58,13 +58,13 @@ Varsayılan olarak, yazım denetleyicisinin Ingilizce (en) sürümü kullanılı
 
 Bileşik sözcüğün her iki bölümü de yazım sözlüğü tarafından tanınıyorsa ve amaç iki sözcükten birini kullanıyorsa, bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
-Ayrıca, yazım denetleyicisi için özel bir sözlüğe bileşik sözcükler ekleyebilirsiniz. Özel Sözlükteki sözcükler ihlallere neden olmaz. Daha fazla bilgi için [nasıl yapılır: Kod Analizi sözlüğünü](../code-quality/how-to-customize-the-code-analysis-dictionary.md)özelleştirin.
+Ayrıca, yazım denetleyicisi için özel bir sözlüğe bileşik sözcükler ekleyebilirsiniz. Özel Sözlükteki sözcükler ihlallere neden olmaz. Daha fazla bilgi için bkz. [nasıl yapılır: kod analizi sözlüğünü özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md).
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1702 Bileşik sözcüklerin doğru şekilde küçük harf olması gerekir](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
-- [CA1709 Tanımlayıcılar doğru şekilde yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708 Tanımlayıcılar, büyük/küçük harf bakımından farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1702: Bileşik sözcüklerin küçük/büyük harfleri doğru yazılmalıdır](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

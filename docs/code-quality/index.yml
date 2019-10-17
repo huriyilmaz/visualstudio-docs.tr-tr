@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: Visual Studio 'da kod analizi
+summary: Visual Studio, kod kalitesini çözümlemek ve geliştirmek için birkaç farklı araç sağlar.
+metadata:
+  title: Kod Çözümleyicileri
+  description: Visual Studio 'Nun kod kalitesini analiz etmenize nasıl yardımcı olabileceğini öğrenin.
+  ms.prod: visual-studio-windows
+  ms.technology: vs-ide-general
+  ms.topic: landing-page
+  author: gewarren
+  ms.author: gewarren
+  ms.date: 10/15/2019
+  ms.openlocfilehash: eb7be803a8c9751550f46880cfd485dac2850527
+  ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/16/2019
+  ms.locfileid: "72450723"
+landingContent:
+- title: C ve C++ kodu çözümle
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C ve C++ kodu çözümle
+      url: code-analysis-for-c-cpp-overview.md
+  - linkListType: reference
+    links:
+    - text: C++Kod Analizi uyarıları
+      url: code-analysis-for-c-cpp-warnings.md
+- title: Yönetilen kod kalitesini analiz etme
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Kaynak Analizi
+      url: roslyn-analyzers-overview.md
+    - text: Eski analiz
+      url: static-code-analysis-for-managed-code-overview.md
+  - linkListType: concept
+    links:
+    - text: SSS
+      url: analyzers-faq.md
+  - linkListType: how-to-guide
+    links:
+    - text: FxCop çözümleyicilerini yükleme
+      url: install-fxcop-analyzers.md
+  - linkListType: reference
+    links:
+    - text: Yönetilen kod analizi uyarıları
+      url: code-analysis-for-managed-code-warnings.md
+- title: Yönetilen kod stilini çözümle
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kod stilini çözümle
+      url: ../ide/create-portable-custom-editor-options.md
+- title: Ölçüm kodu karmaşıklığı
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Kod ölçümleri
+      url: code-metrics-values.md

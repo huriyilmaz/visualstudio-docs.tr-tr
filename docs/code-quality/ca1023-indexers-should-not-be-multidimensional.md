@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: f788ded21ef5dd9c84d218cedb55ec8dcf7eff2d
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 9b9488d3f28567e3e39f86355b353f6d1d9d84d9
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236171"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441426"
 ---
 # <a name="ca1023-indexers-should-not-be-multidimensional"></a>CA1023: Dizin oluşturucular çok boyutlu olmamalıdır
 
@@ -31,7 +31,7 @@ ms.locfileid: "71236171"
 |-|-|
 |TypeName|IndexersShouldNotBeMultidimensional|
 |CheckId|CA1023|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
@@ -47,13 +47,13 @@ Bu kural ihlalini onarmak için, tasarımı bir tek tamsayı veya dize dizini ku
 Bu kuraldan bir uyarıyı yalnızca standart olmayan Dizin Oluşturucu gereksinimini dikkatle ele aldıktan sonra gizleyin.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, kuralını ihlal eden çok `DayOfWeek03`boyutlu bir Dizin Oluşturucu ile bir türü gösterir. Dizin Oluşturucu bir dönüştürme türü olarak görülebilir ve bu nedenle bir yöntem olarak daha uygun şekilde kullanıma sunulabilir. Türü, kuralı karşılamak için `RedesignedDayOfWeek03` ' de yeniden tasarlanmıştır.
+Aşağıdaki örnek, kuralı ihlal eden çok boyutlu bir Dizin Oluşturucu ile `DayOfWeek03` türünü gösterir. Dizin Oluşturucu bir dönüştürme türü olarak görülebilir ve bu nedenle bir yöntem olarak daha uygun şekilde kullanıma sunulabilir. Tür, kuralı karşılamak için `RedesignedDayOfWeek03` ' da yeniden tasarlanmıştır.
 
 [!code-vb[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/VisualBasic/ca1023-indexers-should-not-be-multidimensional_1.vb)]
 [!code-cpp[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/CPP/ca1023-indexers-should-not-be-multidimensional_1.cpp)]
 [!code-csharp[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/CSharp/ca1023-indexers-should-not-be-multidimensional_1.cs)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1043 Dizin oluşturucular için integral veya dize bağımsız değişkeni kullanın](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)
+[CA1043: Dizin oluşturucular için tamsayı veya dize bağımsız değişkeni kullanın](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)
 
-[CA1024 Uygun yerlerde özellikleri kullanın](../code-quality/ca1024-use-properties-where-appropriate.md)
+[CA1024: Uygun yerlerde özellikler kullanın](../code-quality/ca1024-use-properties-where-appropriate.md)

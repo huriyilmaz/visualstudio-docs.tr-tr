@@ -1,5 +1,5 @@
 ---
-title: 'CA1700: Ayrılmış Enum değerlerini &#39;adlandırma&#39;'
+title: 'CA1700: ayrılmış Enum değerlerini &#39;adlandırma&#39;'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5171123827481c99bbc35c10b04aaf942a15fabb
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 7642885a953f4974a9440acced027552bd64f72e
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234384"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440000"
 ---
-# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: Ayrılmış Enum değerlerini &#39;adlandırma&#39;
+# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: ayrılmış Enum değerlerini &#39;adlandırma&#39;
 
 |||
 |-|-|
@@ -40,7 +40,7 @@ Bu kural, "ayrılmış" içeren bir ada sahip numaralandırma üyesi şu anda ku
 
 Ayrılmış bir üye kullanmak yerine gelecekteki sürümde numaralandırmaya yeni bir üye ekleyin. Çoğu durumda, ek olarak özgün üyelerin değerlerinin değişmesine neden olmadığı sürece yeni üyenin eklenmesi bir son değişiklik değildir.
 
-Sınırlı sayıda durumda, özgün Üyeler orijinal değerlerini korusa bile bir üyenin eklenmesi Son değişiklik olur. Birincil olarak, yeni üye, tüm üye listesini kapsayan ve içinde bir özel durum oluşturan dönüş değerindeki `switch` bir`Select` ( [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]ın) bildiriminde bir (ın) ifadesini kullanan mevcut kod yollarından geri döndürülemez. Varsayılan durum. İkincil bir sorun, istemci kodunun gibi <xref:System.Enum.IsDefined%2A?displayProperty=fullName>yansıma yöntemlerinden davranış değişikliğini işleyemeyebilir. Buna uygun olarak, yeni üyenin mevcut metotlardan döndürülmesi gerekiyorsa veya kötü yansıma kullanımı nedeniyle bilinen bir uygulama uyumsuzluğu oluşursa, tek bölünemez çözüm şu şekilde olur:
+Sınırlı sayıda durumda, özgün Üyeler orijinal değerlerini korusa bile bir üyenin eklenmesi Son değişiklik olur. Birincil olarak, yeni üye, tüm üye listesini kapsayan ve varsayılan durumda özel durum oluşturan dönüş değerindeki bir `switch` (@no__t-@no__t 1) bildiriminde olmayan çağıranlar olmadan mevcut kod yollarından geri döndürülemez. İkincil bir sorun, istemci kodunun <xref:System.Enum.IsDefined%2A?displayProperty=fullName> gibi yansıma yöntemlerinden davranış değişikliğini işleyemeyebilir. Buna uygun olarak, yeni üyenin mevcut metotlardan döndürülmesi gerekiyorsa veya kötü yansıma kullanımı nedeniyle bilinen bir uygulama uyumsuzluğu oluşursa, tek bölünemez çözüm şu şekilde olur:
 
 1. Özgün ve yeni üyeleri içeren yeni bir sabit listesi ekleyin.
 
@@ -58,12 +58,12 @@ Bu kural ihlalini onarmak için üyeyi kaldırın veya yeniden adlandırın.
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-[CA2217 Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+[CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217.md)
 
-[CA1712 Tür adı ile Enum değerlerini önek olarak kullanmayın](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
+[CA1712: Numaralandırma değerleri için tür adıyla önek kullanmayın](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
 
-[CA1028 Sabit Listesi depolaması Int32 olmalıdır](../code-quality/ca1028-enum-storage-should-be-int32.md)
+[CA1028: Numaralandırma depolaması Int32 olmalıdır](../code-quality/ca1028-enum-storage-should-be-int32.md)
 
-[CA1008 Numaralandırmalar sıfır değerine sahip olmalıdır](../code-quality/ca1008-enums-should-have-zero-value.md)
+[CA1008: Numaralandırmalar sıfır değerine sahip olmalıdır](../code-quality/ca1008-enums-should-have-zero-value.md)
 
-[CA1027 Numaralandırmaları FlagsAttribute ile işaretle](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+[CA1027: Numaralandırmaları FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)

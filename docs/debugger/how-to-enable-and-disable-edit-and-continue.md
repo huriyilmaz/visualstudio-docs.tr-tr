@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Düzenle ve Devam Et'i devre dışı bırakma ve etkinleştirme | Microsoft Docs"
+title: "Nasıl yapılır: Düzenle ve devam et 'i etkinleştirme ve devre dışı bırakma | Microsoft Docs"
 ms.custom: seodec18
 ms.date: 10/04/2018
 ms.topic: conceptual
@@ -26,35 +26,35 @@ manager: jillfra
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 3bee60a54576ab816c63cf60f2226ebbbaf50c44
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2c8486bdcd7bc737d3851eabd88734df4efd80b7
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388481"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430527"
 ---
-# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>Nasıl yapılır: Düzenle ve Devam Et'i devre dışı bırakma ve etkinleştirme (C#, VB, C++)
+# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>Nasıl yapılır: Düzenle ve devam et 'i etkinleştirme veC#devre dışı bırakma C++(, vb,)
 
-Devre dışı bırakma veya etkinleştirme **Düzenle ve devam et** Visual Studio'daki **seçenekleri** tasarım zamanında iletişim kutusu. **Düzenle ve devam et** yalnızca hata ayıklama çalışır oluşturur. Daha fazla bilgi için [Düzenle ve devam et](../debugger/edit-and-continue.md).
+Tasarım zamanında Visual Studio **seçenekleri** Iletişim kutusunda **Düzenle ve devam et ' i** etkinleştirebilir veya devre dışı bırakabilirsiniz. **Düzenle ve devam et** yalnızca hata ayıklama yapılarında geçerlidir. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
 
-Yerel c++ **Düzenle ve devam et** kullanılması `/INCREMENTAL` seçeneği. C++'ta özellik gereksinimleri hakkında daha fazla bilgi için bkz. Bu [blog gönderisi](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/) ve [Düzenle ve devam et (Visual C++)](../debugger/edit-and-continue-visual-cpp.md).
+Yerel C++, **Düzenle ve devam et** için `/INCREMENTAL` seçeneğini kullanmanız gerekir. İçindeki C++özellik gereksinimleri hakkında daha fazla bilgi için bu [blog gönderisi](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/) ve [Düzenle ve devam et (C++)](../debugger/edit-and-continue-visual-cpp.md)bölümüne bakın.
 
-**Düzenle ve Devam Et'i devre dışı bırakmak veya etkinleştirmek için:**
+**Düzenle ve devam et 'i etkinleştirmek veya devre dışı bırakmak için:**
 
-1. Hata ayıklama oturumunda kullanıyorsanız, hata ayıklamayı Durdur (**hata ayıklama** > **hata ayıklamayı Durdur** veya **Shift**+**F5**) .
+1. Hata ayıklama oturumundaysanız, hata ayıklamayı durdurun (**hata ayıkla** > **hata ayıklamayı durdur** veya **SHIFT**+**F5**).
 
-1. İçinde **Araçları** > **seçenekleri** > (veya **hata ayıklama** > **seçenekleri**) > **hataayıklama**  >  **Genel**seçin **Düzenle ve devam et** sağ bölmede.
+1. **Araçlar** > **seçenekleri** > (veya **hata ayıklama** > **seçenekleri**) > **hata**ayıklama  > **genel**, sağ bölmedeki **Düzenle ve devam et** ' i seçin.
 
     > [!NOTE]
-    > Etkin IntelliTrace ve hem IntelliTrace olayları ve çağrı bilgilerini toplamak, Düzenle ve Devam Et'i devre dışı bırakılmıştır. Daha fazla bilgi için [IntelliTrace](../debugger/intellitrace.md).
+    > IntelliTrace etkinleştirilmişse ve hem IntelliTrace olaylarını hem de çağrı bilgilerini toplayıp, Düzenle ve devam et devre dışı bırakıldı. Daha fazla bilgi için bkz. [IntelliTrace](../debugger/intellitrace.md).
 
-1. C++ kodu için emin **etkinleştirme yerel Düzenle ve devam et** seçilir ve diğer seçenekleri ayarlayın:
-    - **Değişiklikleri Uygula (yalnızca yerel) üzerinde devam**
+1. Kod C++ Için **Yerel Düzenle ve devam et 'i etkinleştir** ' in seçili olduğundan emin olun ve ek seçenekleri ayarlayın:
+    - **Değişiklikleri devam ederken Uygula (yalnızca yerel)**
 
-      Seçili olduğunda, Visual Studio otomatik olarak derler ve kod değişikliklerini sonu durumundan hata ayıklama devam ederken geçerlidir. Aksi takdirde kullanarak değişiklikleri uygulamak seçebilirsiniz **hata ayıklama** > **kod değişikliklerini uygulama**.
+      Seçilirse, bir kesme durumundan hata ayıklamaya devam ettiğinizde, Visual Studio otomatik olarak kod değişikliklerini derler ve uygular. Aksi takdirde, **hata ayıkla** > **kod değişikliklerini Uygula**' yı kullanarak değişiklikleri uygulamayı seçebilirsiniz.
 
-    - **(Yalnızca yerel) eski kod hakkında uyar**
+    - **Eski kod hakkında uyar (yalnızca yerel)**
 
-      Seçtiyseniz, eski kod hakkında uyarılar sağlar.
+      Seçilirse, eski kod hakkında uyarı verir.
 
-1. **Tamam**'ı tıklatın.
+1. **Tamam**'a tıklayın.

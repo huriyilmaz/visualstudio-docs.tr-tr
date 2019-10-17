@@ -1,6 +1,6 @@
 ---
 title: İşlev Parametrelerini ve Dönüş Değerlerini Açıklama
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.topic: conceptual
 f1_keywords:
 - _Outptr_opt_result_bytebuffer_to_
@@ -128,12 +128,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 1001b37509432a7ae95a565d90d972d2043fdeab
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: ca1e66defbce50a9119e817155bcc2a98d01af9d
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72016012"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72442403"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>İşlev Parametrelerini ve Dönüş Değerlerini Açıklama
 Bu makalede basit işlev parametreleri için ek açıklamaların tipik kullanımları ve yapı ve sınıf işaretçileri ve birçok arabellek türü açıklanmaktadır.  Bu makalede ayrıca ek açıklamalar için ortak kullanım desenleri gösterilmektedir. İşlevlerle ilgili ek ek açıklamalar için bkz. [Işlev davranışına açıklama ekleme](../code-quality/annotating-function-behavior.md).
@@ -200,34 +200,6 @@ Aşağıdaki tablodaki ek açıklamalar için, işaretçi parametresine açıkla
      `_Inout_updates_bytes_(s)`
 
      Bir dizi için, hem okunan hem de işlevine yazılan bir işaretçi.  @No__t-0 öğelerinin boyutudur ve ön durum ve sonrası durumunda geçerli olur.
-
-     @No__t-0 değişkeni, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeleri yalnızca `wchar_t` kullanan benzer bir işlev olduğunda `_bytes_` türevini kullanır.
-
-- `_Inout_updates_z_(s)`
-
-     Null sonlandırılmış ve bilinen bir boyuta sahip dizi için bir işaretçi. Mevcut olması gereken null Sonlandırıcı aracılığıyla bulunan öğeler, hem ön durum hem de durum sonrası için geçerli olmalıdır.  Durum sonrası değeri, ön durumundaki değerden farklı olacak şekilde belirlenir; Bu, null Sonlandırıcı konumunu içerir. Boyut bayt olarak bilindiğinde, öğe boyutuna göre `s` ' ı ölçeklendirin.
-
-- `_Out_writes_to_(s,c)`
-
-     `_Out_writes_bytes_to_(s,c)`
-
-     `_Out_writes_all_(s)`
-
-     `_Out_writes_bytes_all_(s)`
-
-     @No__t-0 öğelerinin dizisine yönelik bir işaretçi.  Öğelerin ön durumunda geçerli olması gerekmez.  Durum sonrası, @no__t -0-TH öğesine kadar olan öğelerin geçerli olması gerekir.  Boyut bayt olarak bilindiğinde, `s` ve `c` ' i öğe boyutuna göre ölçeklendirin ve şu şekilde tanımlanan `_bytes_` türevini kullanın:
-
-     `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`
-
-     Diğer bir deyişle, ön durumunda `s` ' a kadar olan arabellekte bulunan her öğe, son durum durumunda geçerlidir.  Örneğin:
-
-     `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`
-
-- `_Inout_updates_to_(s,c)`
-
-     `_Inout_updates_bytes_to_(s,c)`
-
-     İşlev tarafından hem okunan hem yazılan dizi için bir işaretçi.  Bu, tümünün ön durumunda geçerli olması gereken `s` öğelerinin boyutudur ve `c` öğelerinin durum sonrası geçerli olması gerekir.
 
      @No__t-0 değişkeni, boyutu öğeler yerine bayt olarak verir. Bunu yalnızca boyut öğe olarak ifade edilemez ' i kullanın.  Örneğin, `char` dizeleri yalnızca `wchar_t` kullanan benzer bir işlev olduğunda `_bytes_` türevini kullanır.
 

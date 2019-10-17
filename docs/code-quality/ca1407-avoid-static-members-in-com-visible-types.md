@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57450f80a8c630e2186de8804f8bb88974564e46
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 2ea59bee887948fcb9fe293af338f49bfb9f8dfc
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234876"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444214"
 ---
 # <a name="ca1407-avoid-static-members-in-com-visible-types"></a>CA1407: COM görünebilir türler içinde statik üyelerden kaçının
 
@@ -31,16 +31,16 @@ ms.locfileid: "71234876"
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
-Özellikle bileşen nesne modeli (com) tarafından görünür olarak işaretlenen bir tür, bir `public``static` yöntemi içerir.
+Özellikle bileşen nesne modeli (COM) tarafından görünür olarak işaretlenen bir tür, `public``static` yöntemi içerir.
 
 ## <a name="rule-description"></a>Kural açıklaması
-COM, yöntemleri desteklemez `static` .
+COM `static` yöntemlerini desteklemez.
 
-Bu kural, özellik ve olay erişimcileri, işleç aşırı yükleme yöntemleri veya <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> özniteliği <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> ya da özniteliği kullanılarak işaretlenen yöntemleri yoksayar.
+Bu kural, <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> özniteliği veya <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> özniteliği kullanılarak işaretlenen özellik ve olay erişimcileri, işleç aşırı yükleme yöntemleri veya yöntemleri yoksayar.
 
 Varsayılan olarak, aşağıdakiler COM 'a görünür: derlemeler, ortak türler, ortak türlerdeki ortak örnek üyeleri ve tüm ortak değer türleri üyeleri.
 
-Bu kuralın gerçekleşmesi için, aşağıdaki kodun gösterdiği gibi, <xref:System.Runtime.InteropServices.ComVisibleAttribute> derleme düzeyi olarak `false` ayarlanmalıdır ve sınıfı <xref:System.Runtime.InteropServices.ComVisibleAttribute> olarak ayarlanmalıdır `true`.
+Bu kuralın gerçekleşmesi için, derleme düzeyi <xref:System.Runtime.InteropServices.ComVisibleAttribute> ' ı `false` olarak ayarlanması gerekir ve aşağıdaki kodun gösterdiği gibi-<xref:System.Runtime.InteropServices.ComVisibleAttribute> sınıfı `true` olarak ayarlanmalıdır.
 
 ```csharp
 using System;
@@ -63,12 +63,12 @@ namespace Samples
 Bu kural ihlalini onarmak için tasarımı, `static` yöntemiyle aynı işlevselliği sağlayan bir örnek yöntemi kullanacak şekilde değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
-Bir com istemcisi, `static` yöntemi tarafından belirtilen işlevlere erişim gerektirmiyorsa, bu kuraldan bir uyarıyı gizlemek güvenlidir.
+Bir COM istemcisi `static` yöntemiyle belirtilen işlevlere erişim gerektirmiyorsa, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
 
 ## <a name="example-violation"></a>Örnek Ihlali
 
 ### <a name="description"></a>Açıklama
-Aşağıdaki örnek, bu kuralı `static` ihlal eden bir yöntemi gösterir.
+Aşağıdaki örnekte, bu kuralı ihlal eden bir `static` yöntemi gösterilmektedir.
 
 ### <a name="code"></a>Kod
 [!code-csharp[FxCop.Interoperability.ComVisibleStaticMembersViolation#1](../code-quality/codesnippet/CSharp/ca1407-avoid-static-members-in-com-visible-types_1.cs)]
@@ -79,19 +79,19 @@ Bu örnekte, **Book. FromPages** yöntemi com 'dan çağrılamaz.
 ## <a name="example-fix"></a>Örnek onarma
 
 ### <a name="description"></a>Açıklama
-Önceki örnekteki ihlalin giderilmesi için, yöntemini bir örnek yöntemi olarak değiştirebilirsiniz, ancak bu örnekte bu anlamlı değildir. Daha iyi bir çözüm, yöntemin com `ComVisible(false)` 'dan görülemeyeceğini diğer geliştiricilere açık hale getirmek üzere yöntemine açıkça uygulanmasıdır.
+Önceki örnekteki ihlalin giderilmesi için, yöntemini bir örnek yöntemi olarak değiştirebilirsiniz, ancak bu örnekte bu anlamlı değildir. Daha iyi bir çözüm, yöntemin COM 'dan görülemeyeceğini diğer geliştiricilere açık hale getirmek için yöntemine `ComVisible(false)` ' A uygulanmasını sağlar.
 
-Aşağıdaki örnek yöntemi için <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> geçerlidir.
+Aşağıdaki örnek yöntemine <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> uygular.
 
 ### <a name="code"></a>Kod
 [!code-csharp[FxCop.Interoperability.ComVisibleStaticMembersFixed#1](../code-quality/codesnippet/CSharp/ca1407-avoid-static-members-in-com-visible-types_2.cs)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1017 Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+[CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
-[CA1406 Visual Basic 6 istemcileri için Int64 bağımsız değişkenlerinden kaçının](../code-quality/ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md)
+[CA1406: Visual Basic 6 istemcileri için Int64 bağımsız değişkenlerinden kaçının](../code-quality/ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md)
 
-[CA1413 COM görünebilir değer türlerinde genel olmayan alanlardan kaçının](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
+[CA1413: COM görünebilir değer türleri içinde genel olmayan alanlardan kaçının](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [Yönetilmeyen Kod ile Birlikte Çalışma](/dotnet/framework/interop/index)

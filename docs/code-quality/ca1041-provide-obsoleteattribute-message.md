@@ -1,5 +1,5 @@
 ---
-title: 'CA1041: ObsoleteAttribute iletisi sağla'
+title: 'CA1041: ObsoleteAttribute iletisi sağlayın'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -18,39 +18,39 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6620ac646c7fe20de856185708effc9e1a331e57
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 51427ec499c223c50fbe72523a3be44ed0ce9094
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235861"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449222"
 ---
-# <a name="ca1041-provide-obsoleteattribute-message"></a>CA1041: ObsoleteAttribute iletisi sağla
+# <a name="ca1041-provide-obsoleteattribute-message"></a>CA1041: ObsoleteAttribute iletisi sağlayın
 
 |||
 |-|-|
 |TypeName|ProvideObsoleteAttributeMessage|
 |CheckId|CA1041|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
 
-Bir tür veya üye, <xref:System.ObsoleteAttribute?displayProperty=fullName> <xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName> özelliği belirtilen bir özniteliği kullanılarak işaretlenir.
+Bir tür veya üye, <xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName> özelliği belirtilen bir <xref:System.ObsoleteAttribute?displayProperty=fullName> özniteliği kullanılarak işaretlenir.
 
 Bu kural varsayılan olarak yalnızca dışarıdan görünen türler ve üyelere bakar, ancak bu [yapılandırılabilir](#configurability).
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-<xref:System.ObsoleteAttribute>kullanım dışı kitaplık türlerini ve üyelerini işaretlemek için kullanılır. Kitaplık tüketicileri, kullanılmıyor olarak işaretlenmiş herhangi bir tür veya üyenin kullanılmasını önlemelidir. Bunun nedeni, desteklenmeyebilir ve sonunda kitaplığın daha sonraki sürümlerinden kaldırılacaktır. Kullanılarak <xref:System.ObsoleteAttribute> işaretlenen bir tür veya üye derlendiğinde <xref:System.ObsoleteAttribute.Message%2A> , özniteliğinin özelliği görüntülenir. Bu eski türü veya üye kullanıcı bilgilerini sağlar. Bu bilgiler genellikle, kitaplık tasarımcıları ve tercih edilen değiştirme için eski tür veya üyenin ne kadar süreyle desteklenecek olduğunu içerir.
+<xref:System.ObsoleteAttribute>, kullanım dışı kitaplık türlerini ve üyelerini işaretlemek için kullanılır. Kitaplık tüketicileri, kullanılmıyor olarak işaretlenmiş herhangi bir tür veya üyenin kullanılmasını önlemelidir. Bunun nedeni, desteklenmeyebilir ve sonunda kitaplığın daha sonraki sürümlerinden kaldırılacaktır. @No__t-0 kullanılarak işaretlenen bir tür veya üye derlendiğinde, özniteliğinin <xref:System.ObsoleteAttribute.Message%2A> özelliği görüntülenir. Bu eski türü veya üye kullanıcı bilgilerini sağlar. Bu bilgiler genellikle, kitaplık tasarımcıları ve tercih edilen değiştirme için eski tür veya üyenin ne kadar süreyle desteklenecek olduğunu içerir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kural ihlalini onarmak için, `message` <xref:System.ObsoleteAttribute> oluşturucuya parametresini ekleyin.
+Bu kural ihlalini onarmak için `message` parametresini <xref:System.ObsoleteAttribute> oluşturucusuna ekleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
-Özelliği, <xref:System.ObsoleteAttribute.Message%2A> eski tür veya üye hakkında kritik bilgiler sağladığından bu kuraldan bir uyarıyı bastırmayın.
+@No__t-0 özelliği, eski tür veya üye hakkında kritik bilgiler sağladığından bu kuraldan bir uyarıyı bastırmayın.
 
 ## <a name="configurability"></a>Yapılandırılabilirlik
 
@@ -64,7 +64,7 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, doğru bir şekilde bildirilenler <xref:System.ObsoleteAttribute>olan eski bir üyeyi gösterir.
+Aşağıdaki örnek, doğru şekilde <xref:System.ObsoleteAttribute> olarak bildirildiği bir eski üyeyi gösterir.
 
 [!code-cpp[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/CPP/ca1041-provide-obsoleteattribute-message_1.cpp)]
 [!code-csharp[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/CSharp/ca1041-provide-obsoleteattribute-message_1.cs)]

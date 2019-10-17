@@ -1,5 +1,5 @@
 ---
-title: 'CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır'
+title: 'CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7203f7f287ebb5b71ecad6e6ad4a861d63e5cf08
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 8110533573aaeb9b8c32d224cc03d6ca238e0e8e
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234223"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72439856"
 ---
-# <a name="ca1708-identifiers-should-differ-by-more-than-case"></a>CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır
+# <a name="ca1708-identifiers-should-differ-by-more-than-case"></a>CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır
 
 |||
 |-|-|
@@ -38,7 +38,7 @@ Bu kural varsayılan olarak yalnızca dışarıdan görünen türler, Üyeler ve
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Ortak dil çalışma zamanı hedef dilleri büyük/küçük harf duyarlı olması gerekmediğinden ad alanları, türler, üyeler ve parametreler için tanımlayıcılar yalnızca büyük/küçük harfe göre farklılık göstermeyebilir. Örneğin, yaygın [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] olarak kullanılan büyük/küçük harf duyarsız bir dildir.
+Ortak dil çalışma zamanı hedef dilleri büyük/küçük harf duyarlı olması gerekmediğinden ad alanları, türler, üyeler ve parametreler için tanımlayıcılar yalnızca büyük/küçük harfe göre farklılık göstermeyebilir. Örneğin, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], yaygın olarak kullanılan büyük/küçük harf duyarsız bir dildir.
 
 Bu kural yalnızca herkes tarafından görülebilir Üyeler üzerinde ateşlenir.
 
@@ -68,4 +68,4 @@ Aşağıdaki örnek, bu kuralın ihlaline neden olduğunu gösterir.
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1709 Tanımlayıcılar doğru şekilde yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)

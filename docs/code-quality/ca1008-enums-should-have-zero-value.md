@@ -1,5 +1,5 @@
 ---
-title: 'CA1008: Sabit listelerinin sıfır değeri olmalıdır'
+title: 'CA1008: Numaralandırmalar sıfır değerine sahip olmalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -18,25 +18,25 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: c9b6e48fb82be5a41c420827a32926630bb725ed
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: f981d7ec12d49acc0e3d33ded5b27e855d9f0923
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236496"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441687"
 ---
-# <a name="ca1008-enums-should-have-zero-value"></a>CA1008: Sabit listelerinin sıfır değeri olmalıdır
+# <a name="ca1008-enums-should-have-zero-value"></a>CA1008: Numaralandırmalar sıfır değerine sahip olmalıdır
 
 |||
 |-|-|
 |TypeName|EnumsShouldHaveZeroValue|
 |CheckId|CA1008|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Bölünmez olmayan bir numaralandırmaya bir değer eklemeniz istendiğinde, uyarı **yok** . Parçalama-herhangi bir numaralandırma değerini yeniden adlandırmanız veya kaldırmanız istenir.|
 
 ## <a name="cause"></a>Sebep
 
-Uygulanamayan <xref:System.FlagsAttribute?displayProperty=fullName> bir numaralandırma, sıfır değerine sahip bir üye tanımlamaz. Veya uygulanmış <xref:System.FlagsAttribute> bir numaralandırma, sıfır değerine sahip bir üyeyi tanımlar, ancak adı ' none ' değil. Ya da, sabit listesi birden çok, sıfır değerli üye tanımlıyor.
+@No__t-0 uygulanmamış bir numaralandırma, sıfır değerine sahip bir üye tanımlamaz. Veya, uygulanmış bir sabit listesi olan <xref:System.FlagsAttribute> değeri sıfır olan bir üyeyi tanımlar, ancak adı ' none ' değil. Ya da, sabit listesi birden çok, sıfır değerli üye tanımlıyor.
 
 Bu kural varsayılan olarak yalnızca dışarıdan görünür numaralandırmalara bakar, ancak bu [yapılandırılabilir](#configurability).
 
@@ -44,7 +44,7 @@ Bu kural varsayılan olarak yalnızca dışarıdan görünür numaralandırmalar
 
 Yalnızca diğer değer türleri gibi başlatılmamış bir numaralandırmanın varsayılan değeri sıfırdır. Bayraksız olmayan bir numaralandırma, varsayılan değer sabit listesinin geçerli bir değeri olacak şekilde sıfır değerine sahip bir üye tanımlamalıdır. Uygunsa, üyeyi ' none ' olarak adlandırın. Aksi takdirde, en sık kullanılan üyeye sıfır atayın. Varsayılan olarak, ilk numaralandırma üyesinin değeri bildirimde ayarlanmamışsa, değeri sıfırdır.
 
-<xref:System.FlagsAttribute> Uygulanmış bir sabit listesi sıfır değerli bir üyeyi tanımlıyorsa, numaralandırmada hiçbir değer ayarlanamadığını göstermek için adı ' none ' olmalıdır. Başka herhangi bir amaçla sıfır değerli bir üyenin kullanılması, ve ' nin, <xref:System.FlagsAttribute> ve ve bit düzeyinde operatörlerin üye ile kullanılamaz durumda olduğu ' ın kullanımını tersine kullanır. Bu, yalnızca bir üyenin sıfır değerine atanması gerektiğini gösterir. Sıfır değerine sahip birden çok üye Flags ile Öznitelikli bir numaralandırmada gerçekleşirse, `Enum.ToString()` sıfır olmayan üyeler için hatalı sonuçlar döndürür.
+@No__t-0 uygulanmış bir sabit listesi sıfır değerli bir üyeyi tanımlıyorsa, numaralandırmada hiçbir değer ayarlanamadığını göstermek için adının ' none ' olması gerekir. Başka herhangi bir amaçla sıfır değerli bir üyenin kullanılması, ve ve veya bit düzeyinde operatörlerin üye ile kullanılamaz olması için <xref:System.FlagsAttribute> ' ı n kullanımını tersine kullanır. Bu, yalnızca bir üyenin sıfır değerine atanması gerektiğini gösterir. Sıfır değerine sahip birden çok üye Flags ile Öznitelikli bir numaralandırmada gerçekleşirse, `Enum.ToString()`, sıfır olmayan üyeler için hatalı sonuçlar döndürür.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
@@ -66,7 +66,7 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, kuralı ve bir numaralandırmayı karşılayan, kuralı ihlal eden iki sabit `BadTraceOptions`listesini gösterir.
+Aşağıdaki örnek, kuralını ve kuralı ihlal eden `BadTraceOptions` ' ı karşılayan iki sabit listesini gösterir.
 
 [!code-cpp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CPP/ca1008-enums-should-have-zero-value_1.cpp)]
 [!code-csharp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CSharp/ca1008-enums-should-have-zero-value_1.cs)]
@@ -74,11 +74,11 @@ Aşağıdaki örnek, kuralı ve bir numaralandırmayı karşılayan, kuralı ihl
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA2217 Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
-- [CA1700 ' Ayrılmış ' Enum değerlerini adlandırma](../code-quality/ca1700-do-not-name-enum-values-reserved.md)
-- [CA1712 Tür adı ile Enum değerlerini önek olarak kullanmayın](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
-- [CA1028 Sabit Listesi depolaması Int32 olmalıdır](../code-quality/ca1028-enum-storage-should-be-int32.md)
-- [CA1027 Numaralandırmaları FlagsAttribute ile işaretle](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+- [CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217.md)
+- [CA1700: Numaralandırma değerlerini 'Ayrılmış' olarak adlandırmayın](../code-quality/ca1700-do-not-name-enum-values-reserved.md)
+- [CA1712: Numaralandırma değerleri için tür adıyla önek kullanmayın](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
+- [CA1028: Numaralandırma depolaması Int32 olmalıdır](../code-quality/ca1028-enum-storage-should-be-int32.md)
+- [CA1027: Numaralandırmaları FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

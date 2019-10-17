@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c33f4b0b55728d659c34e0ffc8723f555a6d074d
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: a217e3882cbf90365f507623347a3846ed30187a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234922"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444312"
 ---
 # <a name="ca1308-normalize-strings-to-uppercase"></a>CA1308: Dizeleri büyük harfe normalleştirin
 
@@ -37,7 +37,7 @@ Bir işlem, dizeyi küçük harfe normalleştirir.
 Dizeler büyük harfe normalleştirilmeli. Küçük bir karakter grubu, küçük harfe dönüştürüldüğünde, gidiş dönüş yapamaz. Gidiş dönüş yapmak için, karakterleri farklı bir yerel ayara dönüştürmek için karakter verilerinin farklı bir yerel ayara dönüştürülmesi ve sonra özgün karakterlerin dönüştürülmüş karakterlerden doğru şekilde alınması anlamına gelir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Dizelerin büyük harfe dönüştürülmesi için dizeleri küçük harfe dönüştüren işlemleri değiştirin. Örneğin, olarak `String.ToUpper(CultureInfo.InvariantCulture)`değiştirin `String.ToLower(CultureInfo.InvariantCulture)` .
+Dizelerin büyük harfe dönüştürülmesi için dizeleri küçük harfe dönüştüren işlemleri değiştirin. Örneğin, `String.ToLower(CultureInfo.InvariantCulture)` ' ı `String.ToUpper(CultureInfo.InvariantCulture)` ' e değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 Sonuca göre güvenlik kararı verirken (örneğin, Kullanıcı arabiriminde görüntülerken) bir uyarı iletisini gizlemek güvenlidir.

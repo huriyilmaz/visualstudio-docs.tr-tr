@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 82a8b1ea389c37dc63a9fe7366208a2a3028efb8
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 7ebf218b15dcb4048129e308822042efa5f6b0c9
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234808"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440518"
 ---
 # <a name="ca1406-avoid-int64-arguments-for-visual-basic-6-clients"></a>CA1406: Visual Basic 6 istemcileri için Int64 bağımsız değişkenlerinden kaçının
 
@@ -34,15 +34,15 @@ ms.locfileid: "71234808"
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
-Özellikle bileşen nesne modeli (com) tarafından görünür olarak işaretlenen bir tür, <xref:System.Int64?displayProperty=fullName> bağımsız değişken alan bir üye bildirir.
+Özellikle bileşen nesne modeli (COM) tarafından görünür olarak işaretlenen bir tür, <xref:System.Int64?displayProperty=fullName> bağımsız değişkeni alan bir üye bildirir.
 
 ## <a name="rule-description"></a>Kural açıklaması
-Visual Basic 6 COM istemcileri, 64-bit tamsayıya erişemiyor.
+Visual Basic 6 COM istemcisi 64-bit tamsayıya erişemez.
 
-Varsayılan olarak, aşağıdakiler COM 'a görünür: derlemeler, ortak türler, ortak türlerdeki ortak örnek üyeleri ve tüm ortak değer türleri üyeleri. Ancak, hatalı pozitif sonuçları azaltmak için bu kural, türün COM görünürlüğünü açık bir şekilde ifade etmek için gereklidir; kapsayan bütünleştirilmiş kod <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> , olarak `false` ayarlanmış olarak işaretlenmelidir ve türü olarak <xref:System.Runtime.InteropServices.ComVisibleAttribute> `true`kümesiyle işaretlenmelidir.
+Varsayılan olarak, aşağıdakiler COM 'a görünür: derlemeler, ortak türler, ortak türlerdeki ortak örnek üyeleri ve tüm ortak değer türleri üyeleri. Ancak, hatalı pozitif sonuçları azaltmak için bu kural, türün COM görünürlüğünü açık bir şekilde ifade etmek için gereklidir; içeren derleme <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> ' ı `false` ' e ayarlanmış olarak işaretlenmelidir ve tür `true` ' e ayarlanmış @no__t şekilde işaretlenmelidir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Değeri her zaman 32 bitlik bir integral olarak ifade edilebilir bir parametre için bu kural ihlalini onarmak için, parametre türünü olarak <xref:System.Int32?displayProperty=fullName>değiştirin. Parametrenin değeri 32 bitlik bir integral olarak ifade edilebileceğinden daha büyük olabilir, parametre türünü olarak <xref:System.Decimal?displayProperty=fullName>değiştirin. Hem hem de <xref:System.Single?displayProperty=fullName> <xref:System.Double?displayProperty=fullName> <xref:System.Int64> veri türünün üst aralıklarında duyarlık kaybı olduğunu unutmayın. Üyenin com 'a görünür olması belirtilmemişse, <xref:System.Runtime.InteropServices.ComVisibleAttribute> kümesini olarak `false`işaretleyin.
+Değeri her zaman 32 bitlik bir integral olarak ifade edilebilir bir parametre için bu kural ihlalini onarmak için, parametre türünü <xref:System.Int32?displayProperty=fullName> olarak değiştirin. Parametrenin değeri 32 bitlik bir integral olarak ifade edilebileceğinden daha büyük olabilir, parametre türünü <xref:System.Decimal?displayProperty=fullName> olarak değiştirin. @No__t-0 ve <xref:System.Double?displayProperty=fullName> ' in hem <xref:System.Int64> veri türünün üst aralıklarında duyarlık olduğunu unutmayın. Üyenin COM tarafından görülebilmesi amaçlıyoksa, <xref:System.Runtime.InteropServices.ComVisibleAttribute> ' ı `false` olarak ayarlayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 Visual Basic 6 COM istemcilerinin türe erişememesi durumunda, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
@@ -54,11 +54,11 @@ Aşağıdaki örnek, kuralı ihlal eden bir türü gösterir.
 [!code-vb[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/VisualBasic/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.vb)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1413 COM görünebilir değer türlerinde genel olmayan alanlardan kaçının](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
+[CA1413: COM görünebilir değer türleri içinde genel olmayan alanlardan kaçının](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
 
-[CA1407 COM görünebilir türler içinde statik üyelerden kaçının](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
+[CA1407: COM görünebilir türler içinde statik üyelerden kaçının](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
 
-[CA1017 Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+[CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

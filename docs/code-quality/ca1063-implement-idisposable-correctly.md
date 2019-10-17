@@ -16,12 +16,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b29c9ed644c223488261333e79f17229bd4b7a3
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 0fd4ba8d5dd5568dc7fca50ed61739b490bdcba7
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235294"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440605"
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063: IDisposable'ı doğru uygulayın
 
@@ -29,42 +29,42 @@ ms.locfileid: "71235294"
 |-|-|
 |TypeName|ImplementIDisposableCorrectly|
 |CheckId|CA1063|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
 
-<xref:System.IDisposable?displayProperty=nameWithType> Arabirim doğru bir şekilde uygulanmadı. Bunun olası nedenleri şunlardır:
+@No__t-0 arabirimi doğru bir şekilde uygulanmadı. Bunun olası nedenleri şunlardır:
 
 - <xref:System.IDisposable>, sınıfında yeniden uygulanır.
 
-- `Finalize`yeniden geçersiz kılındı.
+- `Finalize` yeniden geçersiz kılındı.
 
-- `Dispose()`geçersiz kılındı.
+- `Dispose()` geçersiz kılındı.
 
-- Yöntem ortak, korumalı veya adlandırılmış **Dispose**değil. [](/dotnet/csharp/language-reference/keywords/sealed) `Dispose()`
+- @No__t-0 yöntemi genel, [korumalı](/dotnet/csharp/language-reference/keywords/sealed)veya adlandırılmış **Dispose**değildir.
 
-- `Dispose(bool)`korunmaz, sanal veya korumasız değildir.
+- `Dispose(bool)` korumalı, sanal veya korumasız değildir.
 
-- Korumasız türlerde, `Dispose()` `Dispose(true)`çağrılmalıdır.
+- Korumasız türlerde `Dispose()` `Dispose(true)` ' i çağırmalıdır.
 
-- Korumasız türler için, `Finalize` uygulama ya da her ikisini `Dispose(bool)` veya temel sınıf sonlandırıcısını çağırmaz.
+- Korumasız türler için `Finalize` uygulama `Dispose(bool)` ya da temel sınıf sonlandırıcısını çağırmaz.
 
 Bu desenlerden herhangi birinin ihlali, uyarı CA1063 tetikler.
 
-<xref:System.IDisposable> Arabirimini bildiren ve uygulayan her korumasız tür kendi `protected virtual void Dispose(bool)` metodunu sağlamalıdır. `Dispose()`çağrılmalıdır ve sonlandırıcının çağırmalıdır `Dispose(false)`. `Dispose(true)` <xref:System.IDisposable> Arabirimini bildiren ve uygulayan korumasız bir tür oluşturursanız, onu tanımlamanız `Dispose(bool)` ve çağırmanız gerekir. Daha fazla bilgi için bkz. [yönetilmeyen kaynakları temizleme (.net Kılavuzu)](/dotnet/standard/garbage-collection/unmanaged) ve [Dispose model](/dotnet/standard/design-guidelines/dispose-pattern).
+@No__t-0 arabirimini bildiren ve uygulayan her korumasız tür, kendi `protected virtual void Dispose(bool)` metodunu sağlamalıdır. `Dispose()` `Dispose(true)` ' i çağırmalıdır ve Sonlandırıcı `Dispose(false)` ' i çağırmalıdır. @No__t-0 arabirimini bildiren ve uygulayan korumasız bir tür oluşturursanız, `Dispose(bool)` tanımlamanız ve bunu çağırmanız gerekir. Daha fazla bilgi için bkz. [yönetilmeyen kaynakları temizleme (.net Kılavuzu)](/dotnet/standard/garbage-collection/unmanaged) ve [Dispose model](/dotnet/standard/design-guidelines/dispose-pattern).
 
 Bu kural varsayılan olarak yalnızca dışarıdan görünür türlere bakar, ancak bu [yapılandırılabilir](#configurability).
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Tüm <xref:System.IDisposable> türler [Dispose modelini](/dotnet/standard/design-guidelines/dispose-pattern) doğru uygulamalıdır.
+Tüm <xref:System.IDisposable> türleri [Dispose modelini](/dotnet/standard/design-guidelines/dispose-pattern) doğru uygulamalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
 Kodunuzu inceleyin ve aşağıdaki çözümlerden hangisinin bu ihlalin düzelceğini saptayın:
 
-- Türü <xref:System.IDisposable> tarafından uygulanan arabirimlerin listesinden kaldırın ve bunun yerine temel sınıf Dispose uygulamasını geçersiz kılın.
+- Türü tarafından uygulanan arabirimlerin listesinden <xref:System.IDisposable> ' ı kaldırın ve bunun yerine temel sınıf Dispose uygulamasını geçersiz kılın.
 
 - Bu sonlandırıcıyı türden kaldırın, Dispose (bool disposing) öğesini geçersiz kılın ve sonlandırma mantığını ' disposing ' değeri false olan kod yoluna koyun.
 
@@ -76,11 +76,11 @@ Kodunuzu inceleyin ve aşağıdaki çözümlerden hangisinin bu ihlalin düzelce
 
 - Dispose (bool) korumalı, sanal ve korumasız olarak bildirildiği için emin olun.
 
-- Dispose () öğesini, Dispose (true) yöntemini çağıracak şekilde değiştirin, sonra <xref:System.GC.SuppressFinalize%2A> geçerli nesne örneğinde (`this`veya `Me` Visual Basic) çağırır ve sonra döndürür.
+- Dispose () öğesini Dispose (true) yöntemini çağıracak şekilde değiştirin, sonra geçerli nesne örneğinde (`this` veya `Me` Visual Basic) <xref:System.GC.SuppressFinalize%2A> ' ı çağırır ve sonra döndürür.
 
 - Sonlandırıcıyı, Dispose (false) yöntemini çağıracak ve ardından döndüren bir şekilde değiştirin.
 
-- <xref:System.IDisposable> Arabirimini bildiren ve uygulayan korumasız bir tür oluşturursanız, uygulamasının <xref:System.IDisposable> uygulamanın bu bölümde daha önce açıklanan modele uyduğundan emin olun.
+- @No__t-0 arabirimini bildiren ve uygulayan korumasız bir tür oluşturursanız, <xref:System.IDisposable> uygulamasının bu bölümde daha önce açıklanan düzene uyduğundan emin olun.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 

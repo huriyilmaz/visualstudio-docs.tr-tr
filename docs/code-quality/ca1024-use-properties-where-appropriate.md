@@ -1,5 +1,5 @@
 ---
-title: 'CA1024: Uygun yerlerde özellikleri kullanın'
+title: 'CA1024: Uygun yerlerde özellikler kullan'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -17,25 +17,25 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: d312618c80abb6a4ce6e1a2676903d85867f4989
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 2ba4a7a16675bf6da0aa465a515b73c907aa80ac
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236153"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449303"
 ---
-# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Uygun yerlerde özellikleri kullanın
+# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Uygun yerlerde özellikler kullan
 
 |||
 |-|-|
 |TypeName|UsePropertiesWhereAppropriate|
 |CheckId|CA1024|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
 
-Bir yöntemin ile `Get`başlayan bir adı vardır, hiçbir parametre kullanmaz ve dizi olmayan bir değer döndürür.
+Bir yöntem `Get` ile başlayan bir ada sahiptir, hiçbir parametre alır ve dizi olmayan bir değer döndürür.
 
 Varsayılan olarak, bu kural yalnızca ortak ve korumalı yöntemlere bakar, ancak bu [yapılandırılabilir](#configurability).
 
@@ -85,7 +85,7 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 Programcıların bir özelliği kullanmaktan kaçınmasının nedeni, hata ayıklayıcının onu denklemeyi istememesinden kaynaklanır. Örneğin, özelliği büyük bir nesne ayırmayı veya bir P/Invoke çağırmayı içerebilir, ancak aslında herhangi bir observable yan etkisi olmayabilir.
 
-Hata ayıklayıcının, özellikleri uygulayarak <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>, özellikleri genişletmeyi önleyebilirsiniz. Aşağıdaki örnek, bir örnek özelliğine uygulanan bu özniteliği gösterir.
+@No__t-0 uygulayarak hata ayıklayıcının özellikleri genişletmeyi engelleyebilirsiniz. Aşağıdaki örnek, bir örnek özelliğine uygulanan bu özniteliği gösterir.
 
 ```vb
 Imports System

@@ -13,100 +13,100 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbe2c216a9293ddc8c5c1212957c2987924d14e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 126360a5cbc39653405d83362ae150edba401fb8
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825077"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448699"
 ---
-# <a name="use-the-code-metrics-results-window"></a>Kod ölçümleri sonuçları penceresini kullanma
+# <a name="use-the-code-metrics-results-window"></a>Kod ölçümleri sonuçları penceresini kullanın
 
-**Kod ölçümleri sonuçları** penceresi kod ölçümleri analiz tarafından oluşturulan verileri görüntüler. Kod ölçüm verileri değerleri hakkında daha fazla bilgi için bkz: [kod ölçüm değerleri](../code-quality/code-metrics-values.md).
+**Kod ölçümleri sonuçları** penceresinde, kod ölçüm Analizi tarafından oluşturulan veriler görüntülenir. Kod ölçümleri veri değerleri hakkında daha fazla bilgi için bkz. [kod ölçüm değerleri](../code-quality/code-metrics-values.md).
 
-## <a name="display-code-metrics-results"></a>Kod ölçümleri sonuçları görüntüleme
+## <a name="display-code-metrics-results"></a>Kod ölçümleri sonuçlarını görüntüle
 
-**Kod ölçümleri sonuçları** penceresinde kod ölçümleri sonuçları oluşturduğunuzda otomatik olarak görüntülenir. Ayrıca, herhangi bir zamanda penceresinde görüntüleyebilirsiniz.
+Kod **ölçümleri sonuçları penceresi,** kod ölçümleri sonuçları oluştururken otomatik olarak görüntülenir. Ayrıca, pencereyi istediğiniz zaman da görüntüleyebilirsiniz.
 
-Kod ölçümleri sonuçları penceresi şu menü sıraları birini kullanarak görüntüleyebilirsiniz:
+Aşağıdaki menü dizilerinden birini kullanarak kod ölçümleri sonuçları penceresini görüntüleyebilirsiniz:
 
-- Üzerinde **Çözümle** menüsünde seçin **Windows** > **kod ölçümleri sonuçları**.
+- **Çözümle** menüsünde **Windows** > **Kod ölçümleri sonuçları**' nı seçin.
 
-- Üzerinde **görünümü** menüsünde seçin **diğer Windows** > **kod ölçümleri sonuçları**.
+- **Görünüm** menüsünde **diğer Windows** > **Kod ölçümleri sonuçları**' nı seçin.
 
-**Kod ölçümleri sonuçları** sonuç içerse bile penceresi açılır.
+**Kod ölçümleri sonuçları** penceresi, hiçbir sonuç içermediğinden bile açılır.
 
-### <a name="to-view-code-metrics-details"></a>Kod ölçümleri görüntülemek için ayrıntıları
+### <a name="to-view-code-metrics-details"></a>Kod ölçümleri ayrıntılarını görüntülemek için
 
-Kod ölçümleri sonuçları oluşturulduysa ağacında genişletin **hiyerarşi** sütun.
+Kod ölçümleri sonuçları oluşturulduysa, **hiyerarşi** sütunundaki ağacı genişletin.
 
-## <a name="filter-code-metrics-results"></a>Kod ölçümleri sonuçları filtresi
+## <a name="filter-code-metrics-results"></a>Kod ölçümleri sonuçlarını filtrele
 
-Görüntülenen sonuçlarını filtreleyebilirsiniz **kod ölçümleri sonuçları** üstündeki araç çubuğunu kullanarak pencere. Örneğin, bir bakım dizini 65 aşağıda olan sonuçları görmek isteyebilirsiniz.
+Üstteki araç çubuğunu kullanarak, **Kod ölçümleri sonuçları** penceresinde görüntülenen sonuçlara filtre uygulayabilirsiniz. Örneğin, yalnızca 65 altındaki bakım dizinine sahip sonuçları görmek isteyebilirsiniz.
 
-**Filtre** açılan kutusu sonuçları sütun adlarını içerir. Bir filtre tanımlandığında, listenin bir girinti birlikte eklenir. Liste, tanımlanan son 10 filtreler içerebilir.
+**Filtre** açılan kutusu, sonuçlar sütunlarının adlarını içerir. Bir filtre tanımlandığında, listenin sonuna girintileme ile birlikte eklenir. Listede, tanımlanan son 10 filtre bulunabilir.
 
-### <a name="to-filter-the-code-metrics-results"></a>Kod ölçümleri sonuçları filtrelemek için
+### <a name="to-filter-the-code-metrics-results"></a>Kod ölçümleri sonuçlarını filtrelemek için
 
-1. Gelen **filtre** listesinde, sütun adı seçin.
+1. **Filtre** listesinden sütun adını seçin.
 
-2. İçinde **Min**, görüntülenecek en düşük değerini yazın.
+2. **En**az, görüntülenecek en düşük değeri yazın.
 
-3. İçinde **Max**, görüntülenecek maksimum değeri yazın.
+3. **En**fazla, görüntülenecek en büyük değeri yazın.
 
-4. Tıklayın **Filtre Uygula** düğmesi.
+4. **Filtre Uygula** düğmesine tıklayın.
 
-5. Sonuç ayrıntıları görmek için hiyerarşi ağacı genişletin.
+5. Sonuç ayrıntılarını görmek için hiyerarşi ağacını genişletin.
 
-## <a name="add-remove-and-rearrange-data-columns"></a>Eklemek, kaldırmak ve veri sütunları yeniden düzenleme
+## <a name="add-remove-and-rearrange-data-columns"></a>Veri sütunları ekleme, kaldırma ve yeniden düzenleme
 
-Ekleyebilir ve sütunları Kaldır sonuçları **kod ölçümleri sonuçları** penceresi. Ayrıca, istediğiniz sırayla görünecekleri sonuçları sütunları yeniden düzenleyebilirsiniz.
+**Kod ölçümleri sonuçları** penceresinden sonuç sütunları ekleyebilir veya kaldırabilirsiniz. Ayrıca, sonuçlar sütunlarını istediğiniz sırada görünecek şekilde yeniden düzenleyebilirsiniz.
 
-### <a name="add-or-remove-a-column"></a>Bir sütun ekleyip
+### <a name="add-or-remove-a-column"></a>Sütun ekleme veya kaldırma
 
-1. Tıklayın **sütunları Ekle/Kaldır** düğmesini veya herhangi bir sütunun başlığına sağ tıklayın ve ardından **sütunları Ekle/Kaldır**.
+1. Sütun **Ekle/Kaldır** düğmesine tıklayın veya herhangi bir sütun başlığına sağ tıklayıp **sütun Ekle/Kaldır**' a tıklayın.
 
-1. İçinde **sütunları Ekle/Kaldır** iletişim kutusu, seçin veya temizleyin ekleyin veya kaldırın ve ardından istediğiniz sütun için onay kutusunu **Tamam**.
+1. **Sütun Ekle/Kaldır** iletişim kutusunda, eklemek veya kaldırmak istediğiniz sütunun onay kutusunu seçin veya temizleyin ve ardından **Tamam**' ı seçin.
 
-### <a name="rearrange-columns"></a>Sütunları yeniden düzenleme
+### <a name="rearrange-columns"></a>Sütunları yeniden Düzenle
 
-1. Tıklayın **sütunları Ekle/Kaldır** düğmesi.
+1. **Sütun Ekle/Kaldır** düğmesine tıklayın.
 
-1. İçinde **sütunları Ekle/Kaldır** iletişim kutusunda, yukarı veya aşağı oku seçin ve taşımak istediğiniz sütunu seçin.
+1. **Sütun Ekle/Kaldır** iletişim kutusunda, taşımak istediğiniz sütunu seçin ve ardından yukarı oku veya aşağı oku seçin.
 
-1. Sütun, istediğiniz yerde konumlandırıldığında seçin **Tamam**.
+1. Sütun istediğiniz yere konumlandırıldığında **Tamam**' ı seçin.
 
-## <a name="copy-data-to-the-clipboard-or-excel"></a>Pano veya Excel veri kopyalama
+## <a name="copy-data-to-the-clipboard-or-excel"></a>Verileri panoya veya Excel 'e kopyalama
 
-Seçin ve seçili bir satır kod ölçümleri verileri, adı ve her veri sütununun değeri için bir satır içeren bir metin dizesi olarak panoya kopyalayın. Ayrıca **Microsoft Excel'de Seçimi Aç** tüm kod ölçümleri sonuçları bir Excel elektronik tablosuna dışarı aktarmak için.
+Seçilen bir kod Ölçüm verisi satırını, her bir veri sütununun adı ve değeri için bir satır içeren bir metin dizesi olarak Pano 'ya seçip kopyalayabilirsiniz. Ayrıca, tüm kod ölçümleri sonuçlarının bir Excel elektronik tablosuna aktarılması için **Microsoft Excel 'de seçimi aç** ' a tıklayabilirsiniz.
 
-## <a name="create-a-work-item-based-on-code-metric-results"></a>Kod ölçüm sonuçlarına göre iş öğesi oluşturma
+## <a name="create-a-work-item-based-on-code-metric-results"></a>Kod ölçümü sonuçlarına göre iş öğesi oluşturma
 
-Oluşturabileceğiniz bir [Azure panoları](/azure/devops/boards/index?view=vsts) temel alan iş öğesi sonuçlanıyor **kod ölçüm sonuçlarını** penceresi. İş öğesi oluşturulduğunda, Visual Studio otomatik olarak bir başlık girer **başlık** alan ve kod ölçümleri verileri altında **geçmişi** sekmesi.
+**Kod ölçümü sonuçları** penceresindeki sonuçlara dayalı bir [Azure boards](/azure/devops/boards/index?view=vsts) iş öğesi oluşturabilirsiniz. İş öğesi oluşturulduğunda, Visual Studio otomatik olarak **başlık** alanına bir başlık girer ve **geçmiş** sekmesinin altındaki kod ölçüm verilerini otomatik olarak girer.
 
-Azure panoları hakkında daha fazla bilgi için iş öğeleri, bkz: [iş öğelerini](/azure/devops/boards/work-items/index?view=vsts).
+Azure Boards iş öğeleri hakkında daha fazla bilgi için bkz. [iş öğeleri](/azure/devops/boards/work-items/index?view=vsts).
 
-### <a name="to-create-a-work-item-based-on-a-result"></a>Bir sonuca bağlı bir iş öğesi oluşturmak için
+### <a name="to-create-a-work-item-based-on-a-result"></a>Bir sonuca göre iş öğesi oluşturmak için
 
-1. Bir sonuca sağ tıklayın.
+1. Sonuca sağ tıklayın.
 
-2. İşaret **iş öğesi oluştur**ve ardından oluşturmak istediğiniz iş öğesinin türüne tıklayın (**hata**, **görev**, vb.).
+2. **Iş öğesi oluştur**' un üzerine gelin ve sonra oluşturmak istediğiniz iş öğesi türüne (**hata**, **görev**vb.) tıklayın.
 
-3. Tüm gerekli alanları doldurarak iş öğesi formu tamamlayın.
+3. Tüm gerekli alanları doldurarak iş öğesi formunu doldurun.
 
-4. Üzerinde **dosya** menüsünde tıklatın **Tümünü Kaydet** iş öğesini kaydetmek için.
+4. **Dosya** menüsünde **Tümünü Kaydet** ' e tıklayarak iş öğesini kaydedin.
 
-### <a name="to-create-a-bug-based-on-a-result"></a>Bir sonuca bağlı bir hata oluşturmak için
+### <a name="to-create-a-bug-based-on-a-result"></a>Bir sonuca dayalı bir hata oluşturmak için
 
 1. Seçmek için sonuca tıklayın.
 
-2. Tıklayın **iş öğesi oluşturma** düğmesi.
+2. **Iş öğesi oluştur** düğmesine tıklayın.
 
-3. Tüm gerekli alanları doldurarak iş öğesi formu tamamlayın.
+3. Tüm gerekli alanları doldurarak iş öğesi formunu doldurun.
 
-4. Üzerinde **dosya** menüsünde tıklatın **Tümünü Kaydet** iş öğesini kaydetmek için.
+4. **Dosya** menüsünde **Tümünü Kaydet** ' e tıklayarak iş öğesini kaydedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod ölçüm değerleri](../code-quality/code-metrics-values.md)
-- [Nasıl yapılır: Kod ölçümleri verileri üretme](../code-quality/how-to-generate-code-metrics-data.md)
+- [Nasıl yapılır: kod ölçümleri verileri oluşturma](../code-quality/how-to-generate-code-metrics-data.md)

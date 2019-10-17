@@ -1,5 +1,5 @@
 ---
-title: 'CA1500: Değişken adları alan adları ile eşleşmemelidir'
+title: 'CA1500: Değişken adları alan adlarıyla eşleşmemelidir'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: fbc3fbeac6d01b718af2022a09bddb92e9c7c2c6
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 3f7e8b0021fc3c318389aa3d6d3f53391b71351f
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234565"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443973"
 ---
-# <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500: Değişken adları alan adları ile eşleşmemelidir
+# <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500: Değişken adları alan adlarıyla eşleşmemelidir
 
 |||
 |-|-|
@@ -39,7 +39,7 @@ ms.locfileid: "71234565"
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Bir örnek alanının adı bir parametre veya yerel değişken adıyla eşleştiğinde, örnek alana Yöntem gövdesinin içindeyken `this` (`Me` ın [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) anahtar sözcüğü kullanılarak erişilir. Kodu koruma sırasında, bu farkı unutmak kolaydır ve parametre/yerel değişkenin, hatalara yol eden örnek alana başvurduğunu varsayın. Bu, özellikle uzun yöntem gövdeleri için geçerlidir.
+Bir örnek alanının adı bir parametre veya yerel değişken adıyla eşleştiğinde, örnek alana Yöntem gövdesinin içindeyken `this` @no__t ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) anahtar sözcüğü kullanılarak erişilir. Kodu koruma sırasında, bu farkı unutmak kolaydır ve parametre/yerel değişkenin, hatalara yol eden örnek alana başvurduğunu varsayın. Bu, özellikle uzun yöntem gövdeleri için geçerlidir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 

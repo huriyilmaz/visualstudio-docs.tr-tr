@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 dev_langs:
 - CPP
-ms.openlocfilehash: 57c8d6daf75987bfb5c6a6642b89f198693a5dce
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: fee4478f52cd107d2173919617aca8acd07234eb
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018408"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445648"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>C++ Temel Yönergeleri denetleyicilerini kullanma
 
@@ -55,11 +55,11 @@ int main()
 
 Bu örnek, C++ çekirdek denetim kurallarının bulabileceği bazı uyarıları gösterir:
 
-- C26494, kural türü. 5: Bir nesneyi her zaman başlatın.
+- C26494, kural türü. 5: her zaman bir nesne başlatın.
 
-- C26485 kural sınırları. 3: Dizi işaretçiden işaretçiye hiç bir noktalama işareti yok.
+- C26485, kural sınırlardır. 3: bir dizi işaretçiden işaretçiye sınır yok.
 
-- C26481 kural sınırları. 1: İşaretçi aritmetiği kullanmayın. Bunun yerine `span` kullanın.
+- C26481 kural sınırları. 1: işaretçi aritmetiği kullanmayın. Bunun yerine `span` kullanın.
 
 Bu kodu C++ derlerken çekirdek denetim kodu analizi RuleSets 'ler yüklenip etkinleştirildiyse, ilk iki uyarı çıkışlardır, ancak üçüncüsü bastırılır. Örnek koddan derleme çıktısı aşağıda verilmiştir:
 

@@ -1,5 +1,5 @@
 ---
-title: 'CA1036: Karşılaştırılabilir türlerde metotları geçersiz kıl'
+title: 'CA1036: Karşılaştırılabilir türlerde geçersiz kılma yöntemleri'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,35 +14,35 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be340314afe36f3a930474f345715965f566b2d4
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: cf0fe86332093c9ac760418f311f16f090db5c9a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235998"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449276"
 ---
-# <a name="ca1036-override-methods-on-comparable-types"></a>CA1036: Karşılaştırılabilir türlerde metotları geçersiz kıl
+# <a name="ca1036-override-methods-on-comparable-types"></a>CA1036: Karşılaştırılabilir türlerde geçersiz kılma yöntemleri
 
 |||
 |-|-|
 |TypeName|OverrideMethodsOnComparableTypes|
 |CheckId|CA1036|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
 
-Bir tür, <xref:System.IComparable?displayProperty=fullName> arabirimini uygular ve <xref:System.Object.Equals%2A?displayProperty=fullName> eşitlik, eşitsizlik, küçüktür veya büyüktür için dile özgü işleci aşırı yüklemez veya aşırı yüklemez. Tür, arabirimin yalnızca bir uygulamasını devralırsa kural bir ihlal raporlamaz.
+Bir tür <xref:System.IComparable?displayProperty=fullName> arabirimini uygular ve <xref:System.Object.Equals%2A?displayProperty=fullName> ' i geçersiz kılmaz ya da eşitlik, eşitsizlik, küçüktür veya büyüktür için dile özgü işleci aşırı yüklemez. Tür, arabirimin yalnızca bir uygulamasını devralırsa kural bir ihlal raporlamaz.
 
 Varsayılan olarak, bu kural yalnızca ortak ve korumalı türlere bakar, ancak bu [yapılandırılabilir](#configurability).
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Özel bir sıralama düzeni tanımlayan türler <xref:System.IComparable> arabirimini uygular. <xref:System.IComparable.CompareTo%2A> Yöntemi, türün iki örneği için doğru sıralama düzenini gösteren bir tamsayı değeri döndürür. Bu kural bir sıralama düzeni belirleyen türleri tanımlar. Bir sıralama düzeni ayarlamak, eşitlik, eşitsizlik, daha az ve daha büyük bir deyişle bunun uygulanmayacağı anlamına gelir. Uygulamasının bir uygulamasını <xref:System.IComparable>sağladığınızda, ile <xref:System.IComparable.CompareTo%2A>tutarlı değerler döndürmesi için genellikle geçersiz <xref:System.Object.Equals%2A> kılmanız gerekir. ' İ geçersiz <xref:System.Object.Equals%2A> kılar ve işleç aşırı yüklerini destekleyen bir dilde kodlama yapıyorsanız, ile <xref:System.Object.Equals%2A>tutarlı işleçler sağlamanız gerekir.
+Özel bir sıralama düzeni tanımlayan türler <xref:System.IComparable> arabirimini uygular. @No__t-0 yöntemi, türün iki örneği için doğru sıralama düzenini gösteren bir tamsayı değeri döndürür. Bu kural bir sıralama düzeni belirleyen türleri tanımlar. Bir sıralama düzeni ayarlamak, eşitlik, eşitsizlik, daha az ve daha büyük bir deyişle bunun uygulanmayacağı anlamına gelir. @No__t-0 ' ı bir uygulama sağladığınızda, genellikle <xref:System.IComparable.CompareTo%2A> ile tutarlı değerler döndüren <xref:System.Object.Equals%2A> ' i geçersiz kılmanız gerekir. @No__t-0 ' y i geçersiz kılarsınız ve işleç aşırı yüklerini destekleyen bir dilde kodlıysa, <xref:System.Object.Equals%2A> ile tutarlı işleçler sağlamanız gerekir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kural ihlalini onarmak için geçersiz kılın <xref:System.Object.Equals%2A>. Programlama diliniz işleç aşırı yüklemesini destekliyorsa, aşağıdaki işleçleri sağlayın:
+Bu kural ihlalini onarmak için <xref:System.Object.Equals%2A> ' y i geçersiz kılın. Programlama diliniz işleç aşırı yüklemesini destekliyorsa, aşağıdaki işleçleri sağlayın:
 
 - op_Equality
 - op_Inequality
@@ -60,7 +60,7 @@ Bu kural ihlalini onarmak için geçersiz kılın <xref:System.Object.Equals%2A>
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
-İhlalin eksik işleçlerden kaynaklanmış olması ve programlama diliniz, Visual Basic olduğu gibi, işleç aşırı yüklemesini desteklemediğine ilişkin bir uyarı CA1036. İşleçleri uygulamanın uygulama içeriğiniz üzerinde anlamlı olmadığını belirlerseniz, op_Equality dışındaki eşitlik işleçlerinde tetiklendiğinde bu kuraldan bir uyarının görüntülenmesini de güvenlidir. Ancak, geçersiz kıldıysanız <xref:System.Object.Equals%2A?displayProperty=nameWithType>op_Equality ve = = işlecini her zaman geçersiz kılmanız gerekir.
+İhlalin eksik işleçlerden kaynaklanmış olması ve programlama diliniz, Visual Basic olduğu gibi, işleç aşırı yüklemesini desteklemediğine ilişkin bir uyarı CA1036. İşleçleri uygulamanın uygulama içeriğiniz üzerinde anlamlı olmadığını belirlerseniz, op_Equality dışındaki eşitlik işleçlerinde tetiklendiğinde bu kuraldan bir uyarının görüntülenmesini de güvenlidir. Ancak, <xref:System.Object.Equals%2A?displayProperty=nameWithType> ' ı geçersiz kılarsınız, op_Equality ve = = işlecini her zaman geçersiz kılmanız gerekir.
 
 ## <a name="configurability"></a>Yapılandırılabilirlik
 
@@ -74,11 +74,11 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki kod doğru şekilde uygulayan <xref:System.IComparable>bir tür içerir. Kod açıklamaları, <xref:System.Object.Equals%2A> <xref:System.IComparable> ve arabirimiyle ilgili çeşitli kuralları karşılayan yöntemleri belirler.
+Aşağıdaki kod <xref:System.IComparable> ' y i doğru şekilde uygulayan bir tür içerir. Kod açıklamaları <xref:System.Object.Equals%2A> ve <xref:System.IComparable> arabirimiyle ilgili çeşitli kurallara uyan yöntemleri belirler.
 
 [!code-csharp[FxCop.Design.IComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_1.cs)]
 
-Aşağıdaki uygulama kodu, daha önce gösterilen uygulamanın davranışını <xref:System.IComparable> sınar.
+Aşağıdaki uygulama kodu, daha önce gösterilen <xref:System.IComparable> uygulamasının davranışını sınar.
 
 [!code-csharp[FxCop.Design.TestIComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_2.cs)]
 

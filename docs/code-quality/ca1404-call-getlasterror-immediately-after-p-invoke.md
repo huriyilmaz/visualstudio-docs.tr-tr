@@ -1,5 +1,5 @@
 ---
-title: "CA1404: P-Invoke'un ardından hemen GetLastError çağırın"
+title: 'CA1404: P-Invoke ardından hemen GetLastError çağırın'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ab789e578dd8603f604cdb00aa5d236250d13670
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: a6876d9e9326d67d781f49e69a65d41284f54da8
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235049"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444277"
 ---
-# <a name="ca1404-call-getlasterror-immediately-after-pinvoke"></a>CA1404: P/Invoke ardından hemen GetLastError çağırın
+# <a name="ca1404-call-getlasterror-immediately-after-pinvoke"></a>CA1404: P/Invoke ardından hemen GetLastError çağır
 
 |||
 |-|-|
@@ -35,12 +35,12 @@ ms.locfileid: "71235049"
 
 ## <a name="cause"></a>Sebep
 
-<xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A?displayProperty=fullName> Yöntemine veya eşdeğer Win32 `GetLastError` işlevine çağrı yapılır ve hemen önce gelen çağrı bir platform çağırma yöntemine değildir.
+@No__t-0 yöntemine veya eşdeğer Win32 `GetLastError` işlevine çağrı yapılır ve hemen önce gelen çağrı bir platform çağırma yöntemine değildir.
 
 ## <a name="rule-description"></a>Kural açıklaması
-Platform çağırma yöntemi yönetilmeyen koda erişir ve içinde `Declare` [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] veya <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliğinde anahtar sözcüğü kullanılarak tanımlanır. Genellikle, hata durumunda yönetilmeyen işlevler, hata ile ilişkili `SetLastError` bir hata kodu ayarlamak için Win32 işlevini çağırır. Başarısız işlevi çağıran, hata kodunu almak ve hatanın `GetLastError` nedenini öğrenmek için Win32 işlevini çağırır. Hata kodu iş parçacığı başına temelinde tutulur ve sonraki çağrısıyla `SetLastError`üzerine yazılır. Başarısız platform çağırma yöntemine yapılan çağrıdan sonra, yönetilen kod <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntemini çağırarak hata kodunu alabilir. Hata kodu diğer yönetilen sınıf kitaplığı metotlarından gelen iç çağrılar tarafından üzerine yazılabildiğinden, `GetLastError` veya <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntemi platform çağırma yöntemi çağrısından hemen sonra çağrılmalıdır.
+Platform çağırma yöntemi yönetilmeyen koda erişir ve [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] veya <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliğinde `Declare` anahtar sözcüğü kullanılarak tanımlanır. Genellikle, hata durumunda yönetilmeyen işlevler, hata ile ilişkili bir hata kodu ayarlamak için Win32 `SetLastError` işlevini çağırır. Başarısız işlevi çağıran, hata kodunu almak ve hatanın nedenini öğrenmek için Win32 `GetLastError` işlevini çağırır. Hata kodu iş parçacığı başına temelinde tutulur ve `SetLastError` ' a bir sonraki çağrıya göre üzerine yazılır. Başarısız platform çağırma yöntemine yapılan çağrıdan sonra, yönetilen kod <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntemini çağırarak hata kodunu alabilir. Hata kodu diğer yönetilen sınıf kitaplığı metotlarından gelen iç çağrılar tarafından üzerine yazılabildiğinden, `GetLastError` veya <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntemi platform çağırma yöntemi çağrısından hemen sonra çağrılmalıdır.
 
-Kural, platform çağırma yöntemine yapılan çağrı ve çağrısı <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A>arasında gerçekleştiklerinde, aşağıdaki yönetilen üyelere yapılan çağrıları yoksayar. Bu Üyeler hata kodunu değiştirmez ve bazı platform çağırma yöntemi çağrılarının başarısını belirlemek için faydalıdır.
+Kural, platform çağırma yöntemine yapılan çağrı ve <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> çağrısı arasında meydana geldiğinde, aşağıdaki yönetilen üyelere yapılan çağrıları yok sayar. Bu Üyeler hata kodunu değiştirmez ve bazı platform çağırma yöntemi çağrılarının başarısını belirlemek için faydalıdır.
 
 - <xref:System.IntPtr.Zero?displayProperty=fullName>
 
@@ -51,10 +51,10 @@ Kural, platform çağırma yöntemine yapılan çağrı ve çağrısı <xref:Sys
 - <xref:System.Runtime.InteropServices.SafeHandle.IsInvalid%2A?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Bu kuralın ihlalini onarmak için çağrıyı, platform çağırma yöntemine yapılan <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> çağrıyı hemen takip eden öğesine taşıyın.
+Bu kural ihlalini onarmak için, çağrıyı <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> ' a taşıyarak platform çağırma yöntemine yapılan çağrıyı hemen takip eder.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
-Platform çağırma yöntemi çağrısı ve <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> Yöntem çağrısı arasındaki kod, açıkça veya örtük olarak hata kodunun değişmesine neden değilse, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
+Platform çağırma yöntemi çağrısı ve <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> Yöntem çağrısı arasındaki kod, açıkça veya örtük olarak hata kodunun değişmesine neden değilse, bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
 ## <a name="example"></a>Örnek
 Aşağıdaki örnek, kuralı ve kuralını karşılayan bir yöntemi ihlal eden bir yöntemi gösterir.
@@ -63,12 +63,12 @@ Aşağıdaki örnek, kuralı ve kuralını karşılayan bir yöntemi ihlal eden 
 [!code-csharp[FxCop.Interoperability.LastErrorPInvoke#1](../code-quality/codesnippet/CSharp/ca1404-call-getlasterror-immediately-after-p-invoke_1.cs)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1060 P/Invoke öğesini NativeMethods sınıfına taşı](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)
+[CA1060: P/Invokes öğesini NativeMethods sınıfına taşıyın](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)
 
-[CA1400 P/Invoke giriş noktaları bulunmalıdır](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)
+[CA1400: P/Invoke giriş noktaları bulunmalıdır](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)
 
-[CA1401 P/Invoke görünür olmamalıdır](../code-quality/ca1401-p-invokes-should-not-be-visible.md)
+[CA1401: P/Invoke'lar görünür olmamalıdır](../code-quality/ca1401-p-invokes-should-not-be-visible.md)
 
-[CA2101 P/Invoke dize bağımsız değişkenleri için sıralama belirtin](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)
+[CA2101: P/Invoke dize bağımsız değişkenleri için hazırlama belirtin](../code-quality/ca2101.md)
 
-[CA2205 Win32 API yönetilen eşdeğerlerini kullanın](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md)
+[CA2205: Win32 API'sının yönetilen eşdeğerlerini kullanın](../code-quality/ca2205.md)

@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f26faf16cc8a9a8235596aef68e5af5c3b4401e
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 8eaaaa8b810e79b2bd1a4da0ab1d9887c8a46380
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253297"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440118"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Aşırı karmaşıklıktan kaçının
 
@@ -56,15 +56,15 @@ Bu kural ihlalini onarmak için, döngüsel karmaşıklığını azaltmak üzere
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
-Karmaşıklığın kolayca azaltılamamasının ve yöntemin anlaşılması, test edilmesi ve bakımının kolay olması durumunda bu kuraldan bir uyarının gösterilmesinin güvenli olması güvenlidir. Özellikle, büyük `switch` (`Select` ın [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) ifadesini içeren bir yöntem, dışlama için bir adaydır. Kod tabanını geliştirme döngüsündeki geç hale getirme veya daha önce sevk edilen koddaki çalışma zamanı davranışında beklenmedik bir değişikliği tanıtma riski, kodu yeniden düzenlemenin bakımlık avantajlarından yararlanabilir.
+Karmaşıklığın kolayca azaltılamamasının ve yöntemin anlaşılması, test edilmesi ve bakımının kolay olması durumunda bu kuraldan bir uyarının gösterilmesinin güvenli olması güvenlidir. Özellikle, büyük bir `switch` @no__t ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) ifadesinde içeren bir yöntem, hariç tutma için bir adaydır. Kod tabanını geliştirme döngüsündeki geç hale getirme veya daha önce sevk edilen koddaki çalışma zamanı davranışında beklenmedik bir değişikliği tanıtma riski, kodu yeniden düzenlemenin bakımlık avantajlarından yararlanabilir.
 
 ## <a name="how-cyclomatic-complexity-is-calculated"></a>Döngüsel karmaşıklığı nasıl hesaplanır
 
 Döngüsel karmaşıklığı aşağıdaki 1 eklenerek hesaplanır:
 
-- Dal sayısı ( `if`, `while`ve `do`gibi)
+- Dal sayısı (`if`, `while` ve `do`)
 
-- `case` İçindeki deyim sayısı`switch`
+- Bir `switch` `case` deyim sayısı
 
 ## <a name="example"></a>Örnek
 
@@ -102,7 +102,7 @@ Aşağıdaki örneklerde, değişen döngüsel karmaşıklıkları olan Yönteml
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-[CA1501 Aşırı devralmadan kaçının](../code-quality/ca1501-avoid-excessive-inheritance.md)
+[CA1501: Aşırı devralmadan kaçının](../code-quality/ca1501-avoid-excessive-inheritance.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: 'CA1032: Standart özel durum oluşturucularını uygulayın'
+title: 'CA1032: Standart özel durum oluşturucuları uygulayın'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,25 +14,25 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06fdc566abd9bd16758f224f8a9fe805cddb2c61
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: a73a615c08b538f4580a8d40765dcd7603722aa1
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236055"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446713"
 ---
-# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032: Standart özel durum oluşturucularını uygulayın
+# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032: Standart özel durum oluşturucuları uygulayın
 
 |||
 |-|-|
 |TypeName|ImplementStandardExceptionConstructors|
 |CheckId|CA1032|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
 
-Bir tür, <xref:System.Exception?displayProperty=fullName> gerekli oluşturucuların tümünü genişletir ancak bildirmiyor.
+Bir tür <xref:System.Exception?displayProperty=fullName> ' i uzatır, ancak gereken tüm oluşturucuları bildirmiyor.
 
 ## <a name="rule-description"></a>Kural açıklaması
 
@@ -48,9 +48,9 @@ Ayrıca, [.net Compiler platform tabanlı FxCop çözümleyicileri](../code-qual
 
 - korumalı veya özel NewException (SerializationInfo, StreamingContext)
 
-Yapıcıların tüm ayarlamasını sağlamaktaki başarısızlık, istisnalarla başa çıkmayı zorlaştırabilir. Örneğin, imzaya `NewException(string, Exception)` sahip Oluşturucu diğer özel durumların neden olduğu özel durumlar oluşturmak için kullanılır. Bu Oluşturucu olmadan, bu tür bir durumda hangi yönetilen kodun yapması gerektiği bir iç (iç içe) özel durumu içeren özel özel durumunuzun bir örneğini oluşturamaz ve oluşturamıyoruz.
+Yapıcıların tüm ayarlamasını sağlamaktaki başarısızlık, istisnalarla başa çıkmayı zorlaştırabilir. Örneğin, `NewException(string, Exception)` imzasına sahip Oluşturucu, diğer özel durumların neden olduğu özel durumlar oluşturmak için kullanılır. Bu Oluşturucu olmadan, bu tür bir durumda hangi yönetilen kodun yapması gerektiği bir iç (iç içe) özel durumu içeren özel özel durumunuzun bir örneğini oluşturamaz ve oluşturamıyoruz.
 
-İlk üç özel durum Oluşturucusu kurala göre ortaktır. Dördüncü Oluşturucu korumasız sınıflarda korunur ve korumalı sınıflarda özeldir. Daha fazla bilgi için bkz [. CA2229: Serileştirme oluşturucularını](../code-quality/ca2229-implement-serialization-constructors.md)uygulayın.
+İlk üç özel durum Oluşturucusu kurala göre ortaktır. Dördüncü Oluşturucu korumasız sınıflarda korunur ve korumalı sınıflarda özeldir. Daha fazla bilgi için bkz. [CA2229: serileştirme oluşturucuları uygulama](../code-quality/ca2229.md).
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
@@ -58,7 +58,7 @@ Bu kural ihlalini düzeltmek için, eksik oluşturucuları özel duruma ekleyin 
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
-İhlalin genel oluşturucular için farklı bir erişim düzeyi kullanmasından kaynaklanan bu kuraldan bir uyarıyı bastırmak güvenlidir. Ayrıca, taşınabilir bir sınıf kitaplığı (PCL) oluşturuyorsanız, `NewException(SerializationInfo, StreamingContext)` oluşturucunun uyarısını da bastırmak normaldir.
+İhlalin genel oluşturucular için farklı bir erişim düzeyi kullanmasından kaynaklanan bu kuraldan bir uyarıyı bastırmak güvenlidir. Ayrıca, taşınabilir bir sınıf kitaplığı (PCL) oluşturuyorsanız `NewException(SerializationInfo, StreamingContext)` oluşturucusuna yönelik uyarıyı bastırmaya de devam edebilirsiniz.
 
 ## <a name="example"></a>Örnek
 
@@ -68,4 +68,4 @@ Aşağıdaki örnek, bu kuralı ihlal eden bir özel durum türü ve doğru şek
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[CA2229 Serileştirme oluşturucularını Uygula](../code-quality/ca2229-implement-serialization-constructors.md)
+[CA2229: Serileştirme oluşturucularını uygulayın](../code-quality/ca2229.md)

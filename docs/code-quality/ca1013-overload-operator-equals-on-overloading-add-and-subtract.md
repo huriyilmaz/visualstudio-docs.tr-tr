@@ -1,5 +1,5 @@
 ---
-title: 'CA1013: Toplama ve çıkarmayı aşırı yüklediğinizde eşittir işlecini aşırı yükleyin'
+title: 'CA1013: Eşittir işlecini ekleme ve çıkarmayı aşırı yükleyerek aşırı yükleyin'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,27 +21,27 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bb5fd5c0e68b5dcffc212af03294d94d04d2abe
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 575afd3609da0e8f362408f8a1550303ec03cf3f
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236343"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446722"
 ---
-# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: Toplama ve çıkarmayı aşırı yüklediğinizde eşittir işlecini aşırı yükleyin
+# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: Eşittir işlecini ekleme ve çıkarmayı aşırı yükleyerek aşırı yükleyin
 
 |||
 |-|-|
 |TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|
 |CheckId|CA1013|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
 Bir genel ya da korumalı tür eşitlik imlecini uygulamadan ekleme ya da çıkarma işleçlerini uygular.
 
 ## <a name="rule-description"></a>Kural açıklaması
-Bir türün örnekleri toplama ve çıkarma gibi işlemler kullanılarak birleştirilebilmesi için `true` , aynı yapısal değerlere sahip olan her iki örnek için her zaman eşitlik tanımlamanız gerekir.
+Bir türün örnekleri toplama ve çıkarma gibi işlemler kullanılarak birleştirilebilmesi için, aynı bileşen değerlerine sahip olan her iki örnek için `true` döndürmek üzere her zaman eşitlik tanımlamanız gerekir.
 
 Eşitlik işlecinin aşırı yüklenmiş bir uygulamasında varsayılan eşitlik işlecini kullanamazsınız. Bunun yapılması, yığın taşmasına neden olur. Eşitlik işlecini uygulamak için uygulamanızdaki Object. Equals yöntemini kullanın. Aşağıdaki örnekte bakın.
 
@@ -66,7 +66,7 @@ Bu kural ihlalini onarmak için eşitlik işlecini, toplama ve çıkarma işleç
 Eşitlik işlecinin varsayılan uygulanması tür için doğru davranışı sağlıyorsa, bu kuraldan bir uyarının görüntülenmesini güvenli hale getirir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bu kuralı ihlal eden`BadAddableType`bir türü () tanımlar. Bu tür, eşitlik için aynı alan değerleri test `true` eden iki örnek oluşturmak için eşitlik işlecini uygulamalıdır. Tür `GoodAddableType` , düzeltilen uygulamayı gösterir. Bu türün aynı zamanda eşitsizlik işlecini ve diğer kuralları karşılamak için <xref:System.Object.Equals%2A> geçersiz kılmaları uyguladığını unutmayın. Ayrıca, uygulamanın tamamı de uygulanır <xref:System.Object.GetHashCode%2A>.
+Aşağıdaki örnek, bu kuralı ihlal eden bir türü (`BadAddableType`) tanımlar. Bu tür, eşitlik için aynı alan değerlerinin test `true` ' a sahip iki örnek oluşturmak için eşitlik işlecini uygulamalıdır. @No__t-0 türü, düzeltilen uygulamayı gösterir. Bu türün aynı zamanda eşitsizlik işlecini uyguladığını ve diğer kuralları karşılamak için <xref:System.Object.Equals%2A> ' nın geçersiz kılındığını unutmayın. Tam bir uygulama @no__t de uygular-0.
 
 [!code-csharp[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]
 

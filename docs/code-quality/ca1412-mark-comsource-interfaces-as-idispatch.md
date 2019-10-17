@@ -1,5 +1,5 @@
 ---
-title: 'CA1412: ComSource arabirimlerini IDispatch olarak işaretleyin'
+title: 'CA1412: ComSource Arabirimlerini IDispatch olarak işaretleyin'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: caaae787d5e4801f3fc3b8d881b386595fb2eca4
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 227cc5c47a2001cd6c3b71718ae2a29032bed71c
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234683"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444202"
 ---
-# <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: ComSource arabirimlerini IDispatch olarak işaretleyin
+# <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: ComSource Arabirimlerini IDispatch olarak işaretleyin
 
 |||
 |-|-|
@@ -35,15 +35,15 @@ ms.locfileid: "71234683"
 
 ## <a name="cause"></a>Sebep
 
-Bir tür, <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> özniteliğiyle işaretlenmiş ve en az bir belirtilen arabirim, `InterfaceIsDispatch` değer olarak ayarlanan <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> öznitelik ile işaretlenmemiş.
+Bir tür <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> özniteliğiyle işaretlenir ve en az bir belirtilen arabirim, `InterfaceIsDispatch` değerine ayarlanmış <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğiyle işaretlenmez.
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>, bir sınıfın bileşen nesne modeli (COM) istemcilerine sunduğu olay arabirimlerini belirlemek için kullanılır. Bu arabirimler, Visual Basic 6 com `InterfaceIsIDispatch` istemcilerinin olay bildirimleri almasını sağlamak için olarak sunulmalıdır. Varsayılan olarak, bir arabirim <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğiyle işaretlenmemişse, Çift arabirim olarak sunulur.
+<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>, bir sınıfın bileşen nesne modeli (COM) istemcilerine sunduğu olay arabirimlerini belirlemek için kullanılır. Visual Basic 6 COM istemcilerinin olay bildirimleri almasını sağlamak için bu arabirimlerin `InterfaceIsIDispatch` olarak sunulmalıdır. Varsayılan olarak, bir arabirim <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğiyle işaretlenmemişse, Çift arabirim olarak sunulur.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kural ihlalini onarmak için <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliği, özniteliği <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> ile belirtilen tüm arabirimler için değeri ınterfaceisidispatch olarak ayarlanacak şekilde ekleyin veya değiştirin.
+Bu kural ihlalini onarmak için <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğini ekleyin veya değiştirin. bu sayede değeri, <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> özniteliğiyle belirtilen tüm arabirimler için ınterfaceisidispatch olarak ayarlanır.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -58,7 +58,7 @@ Aşağıdaki örnek, arayüzlerden birinin kuralı ihlal ettiğini gösteren bir
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-[CA1408 Oto Dual ClassInterfaceType kullanmayın](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
+[CA1408: AutoDual ClassInterfaceType kullanma](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

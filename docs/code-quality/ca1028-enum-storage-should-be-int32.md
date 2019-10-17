@@ -1,5 +1,5 @@
 ---
-title: 'CA1028: Sabit listesi depolaması Int32 olmalıdır'
+title: 'CA1028: Numaralandırma depolaması Int32 olmalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -17,35 +17,35 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 47a934a6e35296927eea64465ff8e7007219bec5
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 0ece210d20a675cf2f55b5b619a1c1b526638582
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236092"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449242"
 ---
-# <a name="ca1028-enum-storage-should-be-int32"></a>CA1028: Sabit listesi depolaması Int32 olmalıdır
+# <a name="ca1028-enum-storage-should-be-int32"></a>CA1028: Numaralandırma depolaması Int32 olmalıdır
 
 |||
 |-|-|
 |TypeName|EnumStorageShouldBeInt32|
 |CheckId|CA1028|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
 
-Bir numaralandırmanın temel alınan türü değil <xref:System.Int32?displayProperty=fullName>.
+Sabit listesinin temel alınan türü <xref:System.Int32?displayProperty=fullName> değildir.
 
 Varsayılan olarak, bu kural yalnızca genel numaralandırmalara bakar, ancak bu [yapılandırılabilir](#configurability).
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Bir numaralandırma ilişkili adlandırılmış sabitler kümesini tanımlayan değer türüdür. Varsayılan olarak, <xref:System.Int32?displayProperty=fullName> veri türü sabit değeri depolamak için kullanılır. Bu temel türü değiştirebilse de, çoğu senaryo için gerekli değildir veya önerilmez. ' Den <xref:System.Int32>küçük bir veri türü kullanılarak önemli bir performans kazancı elde değildir. Varsayılan veri türünü kullanamadığı takdirde, numaralandırmanın tüm değerlerinin temsil edilebilmesi için ortak dil sistemi <xref:System.Byte>(CLS) uyumlu integral türlerinden <xref:System.Int16> <xref:System.Int32>birini,,, veya <xref:System.Int64> ' i kullanmanız gerekir. CLS uyumlu programlama dilleri.
+Bir numaralandırma ilişkili adlandırılmış sabitler kümesini tanımlayan değer türüdür. Varsayılan olarak, <xref:System.Int32?displayProperty=fullName> veri türü sabit değeri depolamak için kullanılır. Bu temel türü değiştirebilse de, çoğu senaryo için gerekli değildir veya önerilmez. @No__t-0 ' dan küçük bir veri türü kullanılarak önemli bir performans kazancı elde değildir. Varsayılan veri türünü kullanamadığı takdirde, sabit listesinin tüm değerlerinin CLS uyumlu programlamada gösterilebilmelidir olduğundan emin olmak için ortak dil sistemi (CLS) uyumlu integral türlerinden birini, <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> veya <xref:System.Int64> ' ü kullanmanız gerekir Diller.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Boyut veya uyumluluk sorunları mevcut olmadığı takdirde bu kuralın ihlal edildiğini gidermek için kullanın <xref:System.Int32>. Değerleri tutmak için <xref:System.Int32> yeterince büyük olmayan durumlar için, kullanın. <xref:System.Int64> Geriye dönük uyumluluk için daha küçük bir veri türü gerekiyorsa <xref:System.Byte> , <xref:System.Int16>veya kullanın.
+Boyut veya uyumluluk sorunları yoksa, bu kural ihlalini onarmak için <xref:System.Int32> kullanın. @No__t-0 değeri tutmak için yeterince büyük olmayan durumlar için, <xref:System.Int64> kullanın. Geriye dönük uyumluluk için daha küçük bir veri türü gerekiyorsa <xref:System.Byte> veya <xref:System.Int16> ' i kullanın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -70,18 +70,18 @@ Aşağıdaki örnek, önerilen temel veri türünü kullanmayan iki sabit listes
 
 ## <a name="example-of-how-to-fix"></a>Nasıl düzeltileceğini gösteren örnek
 
-Aşağıdaki örnek, temel alınan veri türünü olarak <xref:System.Int32>değiştirerek önceki ihlalin düzeltir.
+Aşağıdaki örnek, temel alınan veri türünü <xref:System.Int32> olarak değiştirerek önceki ihlalin düzeltir.
 
 [!code-csharp[FxCop.Design.EnumIntegralTypeFixed#1](../code-quality/codesnippet/CSharp/ca1028-enum-storage-should-be-int32_2.cs)]
 [!code-vb[FxCop.Design.EnumIntegralTypeFixed#1](../code-quality/codesnippet/VisualBasic/ca1028-enum-storage-should-be-int32_2.vb)]
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1008 Numaralandırmalar sıfır değerine sahip olmalıdır](../code-quality/ca1008-enums-should-have-zero-value.md)
-- [CA1027 Numaralandırmaları FlagsAttribute ile işaretle](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
-- [CA2217 Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
-- [CA1700 ' Ayrılmış ' Enum değerlerini adlandırma](../code-quality/ca1700-do-not-name-enum-values-reserved.md)
-- [CA1712 Tür adı ile Enum değerlerini önek olarak kullanmayın](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
+- [CA1008: Numaralandırmalar sıfır değerine sahip olmalıdır](../code-quality/ca1008-enums-should-have-zero-value.md)
+- [CA1027: Numaralandırmaları FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+- [CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217.md)
+- [CA1700: Numaralandırma değerlerini 'Ayrılmış' olarak adlandırmayın](../code-quality/ca1700-do-not-name-enum-values-reserved.md)
+- [CA1712: Numaralandırma değerleri için tür adıyla önek kullanmayın](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

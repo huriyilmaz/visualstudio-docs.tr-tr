@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yönetilen kod için kod analizini El Ile çalıştırma'
+title: 'Nasıl yapılır: Yönetilen Kod İçin Kod Analizini Elle Çalıştırma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +10,15 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 588f78c600aa7c78894a2e0bdc7f4443f4e86b31
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 6d755f1ce9edc2c699592e4c0c1396be719c4fc9
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923976"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448957"
 ---
-# <a name="how-to-run-code-analysis-manually-for-managed-code"></a>Nasıl yapılır: Yönetilen kod için kod analizini El Ile çalıştırma
-Kod Analizi Aracı, kaynak kodunuzda olası hatalar hakkında bilgi sağlar. Kod analizini her bir kod projesi derlemesi ile otomatik olarak çalıştırabilirsiniz ve Kod analizini el ile de çalıştırabilirsiniz. Kod Analizi çalıştırıldığında işaretlenen kurallar, proje özelliği sayfalarının kod analizi sayfasında belirtilir. Daha fazla bilgi için [nasıl yapılır: Yönetilen kod projesi](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)için kod analizini yapılandırın.
+# <a name="how-to-run-code-analysis-manually-for-managed-code"></a>Nasıl yapılır: Yönetilen Kod İçin Kod Analizini Elle Çalıştırma
+Kod Analizi Aracı, kaynak kodunuzda olası hatalar hakkında bilgi sağlar. Kod analizini her bir kod projesi derlemesi ile otomatik olarak çalıştırabilirsiniz ve Kod analizini el ile de çalıştırabilirsiniz. Kod Analizi çalıştırıldığında işaretlenen kurallar, proje özelliği sayfalarının kod analizi sayfasında belirtilir. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen kod projesi Için kod analizini yapılandırma](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md).
 
 ### <a name="to-run-code-analysis-manually"></a>Kod analizini el ile çalıştırmak için
 

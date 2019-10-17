@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e784627f0c9c6aa865d53db49d6ea43c4e49d0eb
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: 7dec16291758b330614d8a522aaf3825ae461047
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305785"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449054"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
@@ -27,7 +27,7 @@ Roslyn-çözümleyiciler depolarındaki otomatik olarak oluşturulan [Belgeler s
 
 Bu sayfadaki tarihin itibariyle, [FxCop çözümleyicileri](install-fxcop-analyzers.md) 'nin kapsamında yer alan FxCop kuralları listesi şunları içerir:
 
-Kural Kimliği | Unvan
+Kural KIMLIĞI | Başlık
 --------|---------
 [CA1000](ca1000-do-not-declare-static-members-on-generic-types.md) | Genel türlerde statik üyeler belirtme
 [CA1001](ca1001-types-that-own-disposable-fields-should-be-disposable.md) | Atılabilen alanlara sahip türler atılabilir olmalıdır
@@ -115,39 +115,39 @@ CA1509 | Kod ölçümleri kural belirtim dosyasında geçersiz giriş
 [CA1824](ca1824.md) | Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin
 CA1825 | Sıfır uzunluklu dizi ayırmaktan kaçının.
 CA1826 | Dizine eklenebilir koleksiyonlar üzerinde sıralanabilir Yöntemler kullanmayın. Bunun yerine toplamayı doğrudan kullanın
-[CA2000](ca2000-dispose-objects-before-losing-scope.md) | Kapsamı kaybetmeden önce nesneleri bırakın
-[CA2002](ca2002-do-not-lock-on-objects-with-weak-identity.md) | Zayıf kimliği olan nesneleri kilitlemeyin
-[CA2007](ca2007-do-not-directly-await-task.md) | Beklenen görevde ConfigureAwait yöntemini çağırmayı düşünün
+[CA2000](ca2000.md) | Kapsamı kaybetmeden önce nesneleri bırakın
+[CA2002](ca2002.md) | Zayıf kimliği olan nesneleri kilitlemeyin
+[CA2007](ca2007.md) | Beklenen görevde ConfigureAwait yöntemini çağırmayı düşünün
 CA2008 | TaskScheduler geçirmeden görev oluşturmayın
 CA2009 | IBir ımmutablecollection değerinde ToImmutableCollection çağırmayın
 CA2010 | PreserveSigAttribute ile işaretlenmiş yöntemlerin döndürdüğü değeri her zaman kullanın
-[CA2100](ca2100-review-sql-queries-for-security-vulnerabilities.md) | SQL sorgularını güvenlik açıkları için inceleyin
-[CA2101](ca2101-specify-marshaling-for-p-invoke-string-arguments.md) | P/Invoke dize bağımsız değişkenleri için sıralama belirtin
-[CA2119](ca2119-seal-methods-that-satisfy-private-interfaces.md) | Özel arabirimleri karşılayan metotları mühürleyin
-[CA2153](ca2153-avoid-handling-corrupted-state-exceptions.md) | Bozuk durum özel durumlarını yakalamayın
-[CA2200](ca2200-rethrow-to-preserve-stack-details.md) | Yığın ayrıntılarını korumak için yeniden throw.
-[CA2201](ca2201-do-not-raise-reserved-exception-types.md) | Ayrılmış özel durum türlerini harekete geçirmeyin
-[CA2207](ca2207-initialize-value-type-static-fields-inline.md) | Değer türü statik alanları satır içi başlatın
-[CA2208](ca2208-instantiate-argument-exceptions-correctly.md) | Bağımsız değişken özel durumlarını doğru örnekleyin
-[CA2211](ca2211-non-constant-fields-should-not-be-visible.md) | Sabit olmayan alanlar görünür olmamalıdır
-[CA2213](ca2213-disposable-fields-should-be-disposed.md) | Atılabilen alanlar atılmalıdır
-[CA2214](ca2214-do-not-call-overridable-methods-in-constructors.md) | Geçersiz kılınabilir metotları oluşturucular içinde çağırmayın
-[CA2216](ca2216-disposable-types-should-declare-finalizer.md) | Atılabilir türler sonlandırıcıyı bildirmelidir
-[CA2217](ca2217-do-not-mark-enums-with-flagsattribute.md) | Sabit listelerini FlagsAttribute ile işaretlemeyin
-[CA2218](ca2218-override-gethashcode-on-overriding-equals.md) | GetHashCode'u Eşittir'i geçersiz kılarak geçersiz kılın
-[CA2219](ca2219-do-not-raise-exceptions-in-exception-clauses.md) | Finally yan tümcelerinde özel durum yükseltmeyin
-[CA2224](ca2224-override-equals-on-overloading-operator-equals.md) | Aşırı yükleme işlecinin eşittir ile eşittir geçersiz kıl
-[CA2225](ca2225-operator-overloads-have-named-alternates.md) | İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir
-[CA2226](ca2226-operators-should-have-symmetrical-overloads.md) | İşleçler simetrik aşırı yüklemelere sahip olmalıdır
-[CA2227](ca2227-collection-properties-should-be-read-only.md) | Koleksiyon özellikleri salt okunur olmalıdır
-[CA2229](ca2229-implement-serialization-constructors.md) | Serileştirme oluşturucularını uygulayın
-[CA2231](ca2231-overload-operator-equals-on-overriding-valuetype-equals.md) | Eşittir değer türü geçersiz kılan aşırı yükleme işleci eşittir
-[CA2234](ca2234-pass-system-uri-objects-instead-of-strings.md) | Dizeler yerine sistem URI nesnelerini geçirme
-[CA2235](ca2235-mark-all-non-serializable-fields.md) | Tüm serileştirilebilir olmayan alanları işaretleyin
-[CA2237](ca2237-mark-iserializable-types-with-serializableattribute.md) | ISerializable türlerini seri hale getirilebilir ile işaretle
-[CA2241](ca2241-provide-correct-arguments-to-formatting-methods.md) | Biçimlendirme metotlarına doğru bağımsız değişkenleri sağlayın
-[CA2242](ca2242-test-for-nan-correctly.md) | NaN için doğru test edin
-[CA2243](ca2243-attribute-string-literals-should-parse-correctly.md) | Öznitelik dize harfleri doğru çözümlenmelidir
+[CA2100](ca2100.md) | SQL sorgularını güvenlik açıkları için inceleyin
+[CA2101](ca2101.md) | P/Invoke dize bağımsız değişkenleri için sıralama belirtin
+[CA2119](ca2119.md) | Özel arabirimleri karşılayan metotları mühürleyin
+[CA2153](ca2153.md) | Bozuk durum özel durumlarını yakalamayın
+[CA2200](ca2200.md) | Yığın ayrıntılarını korumak için yeniden throw.
+[CA2201](ca2201.md) | Ayrılmış özel durum türlerini harekete geçirmeyin
+[CA2207](ca2207.md) | Değer türü statik alanları satır içi başlatın
+[CA2208](ca2208.md) | Bağımsız değişken özel durumlarını doğru örnekleyin
+[CA2211](ca2211.md) | Sabit olmayan alanlar görünür olmamalıdır
+[CA2213](ca2213.md) | Atılabilen alanlar atılmalıdır
+[CA2214](ca2214.md) | Geçersiz kılınabilir metotları oluşturucular içinde çağırmayın
+[CA2216](ca2216.md) | Atılabilir türler sonlandırıcıyı bildirmelidir
+[CA2217](ca2217.md) | Sabit listelerini FlagsAttribute ile işaretlemeyin
+[CA2218](ca2218.md) | GetHashCode'u Eşittir'i geçersiz kılarak geçersiz kılın
+[CA2219](ca2219.md) | Finally yan tümcelerinde özel durum yükseltmeyin
+[CA2224](ca2224.md) | Aşırı yükleme işlecinin eşittir ile eşittir geçersiz kıl
+[CA2225](ca2225.md) | İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir
+[CA2226](ca2226.md) | İşleçler simetrik aşırı yüklemelere sahip olmalıdır
+[CA2227](ca2227.md) | Koleksiyon özellikleri salt okunur olmalıdır
+[CA2229](ca2229.md) | Serileştirme oluşturucularını uygulayın
+[CA2231](ca2231.md) | Eşittir değer türü geçersiz kılan aşırı yükleme işleci eşittir
+[CA2234](ca2234.md) | Dizeler yerine sistem URI nesnelerini geçirme
+[CA2235](ca2235.md) | Tüm serileştirilebilir olmayan alanları işaretleyin
+[CA2237](ca2237.md) | ISerializable türlerini seri hale getirilebilir ile işaretle
+[CA2241](ca2241.md) | Biçimlendirme metotlarına doğru bağımsız değişkenleri sağlayın
+[CA2242](ca2242.md) | NaN için doğru test edin
+[CA2243](ca2243.md) | Öznitelik dize harfleri doğru çözümlenmelidir
 CA2244 | Dizini oluşturulmuş öğe başlatmaları yinelenmeyin
 [CA2300](ca2300.md) | Güvenli olmayan seri durumdan çıkarıcı BinaryFormatter kullanmayın
 [CA2301](ca2301.md) | İlk olarak BinaryFormatter.Binder öğesini ayarlamadan önce BinaryFormatter.Deserialize çağırmayın
@@ -172,12 +172,12 @@ CA2244 | Dizini oluşturulmuş öğe başlatmaları yinelenmeyin
 [CA3011](ca3011.md) | DLL ekleme güvenlik açıkları için inceleme kodu
 [CA3012](ca3012.md) | Normal ifade ekleme güvenlik açıkları için inceleme kodu
 CA3061 | URL 'ye göre şema eklemeyin
-[CA3075](ca3075-insecure-dtd-processing.md) | XML 'de güvenli olmayan DTD işleme
-[CA3076](ca3076-insecure-xslt-script-execution.md) | Güvenli olmayan XSLT betiği işleme.
-[CA3077](ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader.md) | API tasarımında, XmlDocument 'da ve XmlTextReader 'da güvenli olmayan Işlem
-[CA3147](ca3147-mark-verb-handlers-with-validateantiforgerytoken.md) | Fiil Işleyicilerini Validate Antiforgery belirteci Ile işaretle
-[CA5350](ca5350-do-not-use-weak-cryptographic-algorithms.md) | Zayıf Şifreleme Algoritmaları Kullanmayın
-[CA5351](ca5351-do-not-use-broken-cryptographic-algorithms.md) | Bozuk şifreleme algoritmaları kullanmayın
+[CA3075](ca3075.md) | XML 'de güvenli olmayan DTD işleme
+[CA3076](ca3076.md) | Güvenli olmayan XSLT betiği işleme.
+[CA3077](ca3077.md) | API tasarımında, XmlDocument 'da ve XmlTextReader 'da güvenli olmayan Işlem
+[CA3147](ca3147.md) | Fiil Işleyicilerini Validate Antiforgery belirteci Ile işaretle
+[CA5350](ca5350.md) | Zayıf Şifreleme Algoritmaları Kullanmayın
+[CA5351](ca5351.md) | Bozuk şifreleme algoritmaları kullanmayın
 CA5358 | Güvenli olmayan şifre modlarını kullanma
 CA5359 | Sertifika doğrulamasını devre dışı bırakma
 CA5360 | Seri durumdan çıkarma sırasında tehlikeli yöntemleri çağırmayın
@@ -210,7 +210,7 @@ CA9999 | Çözümleyici sürümü uyumsuzluğu
 
 Aşağıdaki FxCop eski analiz kuralları henüz çözümleyiciler olarak uygulanmadı, ancak yine de olabilir. Bunun nedeni, bir engelleme teknik nedeni veya kuralın daha düşük öncelikli olması olabilir. Her kuralın taşıma durumu hakkında daha fazla bilgi için, **izleme sorunu** sütunundaki bağlantıya tıklayın.
 
-Kural Kimliği | Sorun izleniyor
+Kural KIMLIĞI | Sorun izleniyor
 --- | ---
 [CA1002](ca1002-do-not-expose-generic-lists.md) | [https://github.com/dotnet/roslyn-analyzers/issues/369](https://github.com/dotnet/roslyn-analyzers/issues/369)
 [CA1004](ca1004-generic-methods-should-provide-type-parameter.md) | [https://github.com/dotnet/roslyn-analyzers/issues/370](https://github.com/dotnet/roslyn-analyzers/issues/370)
@@ -254,20 +254,20 @@ Kural Kimliği | Sorun izleniyor
 [CA1726](ca1726-use-preferred-terms.md) | [https://github.com/dotnet/roslyn-analyzers/issues/458](https://github.com/dotnet/roslyn-analyzers/issues/458)
 [CA1804](ca1804.md) | [https://github.com/dotnet/roslyn-analyzers/issues/461](https://github.com/dotnet/roslyn-analyzers/issues/461)
 [CA1811](ca1811.md) | [https://github.com/dotnet/roslyn-analyzers/issues/464](https://github.com/dotnet/roslyn-analyzers/issues/464)
-[CA1900](ca1900-value-type-fields-should-be-portable.md) | [https://github.com/dotnet/roslyn-analyzers/issues/474](https://github.com/dotnet/roslyn-analyzers/issues/474)
-[CA2001](ca2001-avoid-calling-problematic-methods.md) | [https://github.com/dotnet/roslyn-analyzers/issues/477](https://github.com/dotnet/roslyn-analyzers/issues/477)
-[CA2004](ca2004-remove-calls-to-gc-keepalive.md) | [https://github.com/dotnet/roslyn-analyzers/issues/479](https://github.com/dotnet/roslyn-analyzers/issues/479)
-[CA2006](ca2006-use-safehandle-to-encapsulate-native-resources.md) | [https://github.com/dotnet/roslyn-analyzers/issues/480](https://github.com/dotnet/roslyn-analyzers/issues/480)
-[CA2109](ca2109-review-visible-event-handlers.md) | [https://github.com/dotnet/roslyn-analyzers/issues/488](https://github.com/dotnet/roslyn-analyzers/issues/488)
-[CA2204](ca2204-literals-should-be-spelled-correctly.md) | [https://github.com/dotnet/roslyn-analyzers/issues/529](https://github.com/dotnet/roslyn-analyzers/issues/529)
-[CA2205](ca2205-use-managed-equivalents-of-win32-api.md) | [https://github.com/dotnet/roslyn-analyzers/issues/530](https://github.com/dotnet/roslyn-analyzers/issues/530)
-[CA2212](ca2212-do-not-mark-serviced-components-with-webmethod.md) | [https://github.com/dotnet/roslyn-analyzers/issues/534](https://github.com/dotnet/roslyn-analyzers/issues/534)
-[CA2215](ca2215-dispose-methods-should-call-base-class-dispose.md) | [https://github.com/dotnet/roslyn-analyzers/issues/535](https://github.com/dotnet/roslyn-analyzers/issues/535)
-[CA2232](ca2232-mark-windows-forms-entry-points-with-stathread.md) | [https://github.com/dotnet/roslyn-analyzers/issues/545](https://github.com/dotnet/roslyn-analyzers/issues/545)
-[CA2236](ca2236-call-base-class-methods-on-iserializable-types.md) | [https://github.com/dotnet/roslyn-analyzers/issues/548](https://github.com/dotnet/roslyn-analyzers/issues/548)
-[CA2238](ca2238-implement-serialization-methods-correctly.md) | [https://github.com/dotnet/roslyn-analyzers/issues/549](https://github.com/dotnet/roslyn-analyzers/issues/549)
-[CA2239](ca2239-provide-deserialization-methods-for-optional-fields.md) | [https://github.com/dotnet/roslyn-analyzers/issues/550](https://github.com/dotnet/roslyn-analyzers/issues/550)
-[CA2240](ca2240-implement-iserializable-correctly.md) | [https://github.com/dotnet/roslyn-analyzers/issues/551](https://github.com/dotnet/roslyn-analyzers/issues/551)
+[CA1900](ca1900.md) | [https://github.com/dotnet/roslyn-analyzers/issues/474](https://github.com/dotnet/roslyn-analyzers/issues/474)
+[CA2001](ca2001.md) | [https://github.com/dotnet/roslyn-analyzers/issues/477](https://github.com/dotnet/roslyn-analyzers/issues/477)
+[CA2004](ca2004.md) | [https://github.com/dotnet/roslyn-analyzers/issues/479](https://github.com/dotnet/roslyn-analyzers/issues/479)
+[CA2006](ca2006.md) | [https://github.com/dotnet/roslyn-analyzers/issues/480](https://github.com/dotnet/roslyn-analyzers/issues/480)
+[CA2109](ca2109.md) | [https://github.com/dotnet/roslyn-analyzers/issues/488](https://github.com/dotnet/roslyn-analyzers/issues/488)
+[CA2204](ca2204.md) | [https://github.com/dotnet/roslyn-analyzers/issues/529](https://github.com/dotnet/roslyn-analyzers/issues/529)
+[CA2205](ca2205.md) | [https://github.com/dotnet/roslyn-analyzers/issues/530](https://github.com/dotnet/roslyn-analyzers/issues/530)
+[CA2212](ca2212.md) | [https://github.com/dotnet/roslyn-analyzers/issues/534](https://github.com/dotnet/roslyn-analyzers/issues/534)
+[CA2215](ca2215.md) | [https://github.com/dotnet/roslyn-analyzers/issues/535](https://github.com/dotnet/roslyn-analyzers/issues/535)
+[CA2232](ca2232.md) | [https://github.com/dotnet/roslyn-analyzers/issues/545](https://github.com/dotnet/roslyn-analyzers/issues/545)
+[CA2236](ca2236.md) | [https://github.com/dotnet/roslyn-analyzers/issues/548](https://github.com/dotnet/roslyn-analyzers/issues/548)
+[CA2238](ca2238.md) | [https://github.com/dotnet/roslyn-analyzers/issues/549](https://github.com/dotnet/roslyn-analyzers/issues/549)
+[CA2239](ca2239.md) | [https://github.com/dotnet/roslyn-analyzers/issues/550](https://github.com/dotnet/roslyn-analyzers/issues/550)
+[CA2240](ca2240.md) | [https://github.com/dotnet/roslyn-analyzers/issues/551](https://github.com/dotnet/roslyn-analyzers/issues/551)
 
 ### <a name="deprecated-rules"></a>Kullanım dışı kurallar
 
@@ -290,59 +290,59 @@ Aşağıdaki FxCop eski analiz kuralları kullanım dışıdır ve çözümleyic
 - [CA1703](ca1703-resource-strings-should-be-spelled-correctly.md)
 - [CA1800](ca1800.md)
 - [CA1809](ca1809.md)
-- [CA1901](ca1901-p-invoke-declarations-should-be-portable.md)
-- [CA1903](ca1903-use-only-api-from-targeted-framework.md)
-- [CA2003](ca2003-do-not-treat-fibers-as-threads.md)
-- [CA2102](ca2102-catch-non-clscompliant-exceptions-in-general-handlers.md)
-- [CA2103](ca2103-review-imperative-security.md)
-- [CA2104](ca2104-do-not-declare-read-only-mutable-reference-types.md)
-- [CA2105](ca2105-array-fields-should-not-be-read-only.md)
-- [CA2106](ca2106-secure-asserts.md)
-- [CA2107](ca2107-review-deny-and-permit-only-usage.md)
-- [CA2108](ca2108-review-declarative-security-on-value-types.md)
-- [CA2111](ca2111-pointers-should-not-be-visible.md)
-- [CA2112](ca2112-secured-types-should-not-expose-fields.md)
-- [CA2114](ca2114-method-security-should-be-a-superset-of-type.md)
-- [CA2115](ca2115-call-gc-keepalive-when-using-native-resources.md)
-- [CA2116Ç](ca2116-aptca-methods-should-only-call-aptca-methods.md)
-- [CA2117](ca2117-aptca-types-should-only-extend-aptca-base-types.md)
-- [CA2118](ca2118-review-suppressunmanagedcodesecurityattribute-usage.md)
-- [CA2120](ca2120-secure-serialization-constructors.md)
-- [CA2121](ca2121-static-constructors-should-be-private.md)
-- [CA2122](ca2122-do-not-indirectly-expose-methods-with-link-demands.md)
-- [CA2123](ca2123-override-link-demands-should-be-identical-to-base.md)
-- [CA2124](ca2124-wrap-vulnerable-finally-clauses-in-outer-try.md)
-- [CA2126](ca2126-type-link-demands-require-inheritance-demands.md)
-- [CA2130](ca2130-security-critical-constants-should-be-transparent.md)
-- [CA2131](ca2131-security-critical-types-may-not-participate-in-type-equivalence.md)
-- [CA2132](ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors.md)
-- [CA2133](ca2133-delegates-must-bind-to-methods-with-consistent-transparency.md)
-- [CA2134](ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods.md)
-- [CA2135](ca2135-level-2-assemblies-should-not-contain-linkdemands.md)
-- [CA2136](ca2136-members-should-not-have-conflicting-transparency-annotations.md)
-- [CA2137](ca2137-transparent-methods-must-contain-only-verifiable-il.md)
-- [CA2138](ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute.md)
-- [CA2139](ca2139-transparent-methods-may-not-use-the-handleprocesscorruptingexceptions-attribute.md)
-- [CA2140](ca2140-transparent-code-must-not-reference-security-critical-items.md)
-- [CA2141](ca2141-transparent-methods-must-not-satisfy-linkdemands.md)
-- [CA2142](ca2142-transparent-code-should-not-be-protected-with-linkdemands.md)
-- [CA2143](ca2143-transparent-methods-should-not-use-security-demands.md)
-- [CA2144](ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays.md)
-- [CA2145](ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute.md)
-- [CA2146](ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces.md)
-- [CA2147](ca2147-transparent-methods-may-not-use-security-asserts.md)
-- [CA2149](ca2149-transparent-methods-must-not-call-into-native-code.md)
-- [CA2151](ca2151-fields-with-critical-types-should-be-security-critical.md)
-- [CA2202](ca2202-do-not-dispose-objects-multiple-times.md)
-- [CA2210](ca2210-assemblies-should-have-valid-strong-names.md)
-- [CA2220](ca2220-finalizers-should-call-base-class-finalizer.md)
-- [CA2221](ca2221-finalizers-should-be-protected.md)
-- [CA2222](ca2222-do-not-decrease-inherited-member-visibility.md) ([gerekçe](https://github.com/dotnet/roslyn-analyzers/issues/1378))
-- [CA2223](ca2223-members-should-differ-by-more-than-return-type.md)
-- [CA2228](ca2228-do-not-ship-unreleased-resource-formats.md)
-- [CA2230](ca2230-use-params-for-variable-arguments.md)
-- [CA2233](ca2233-operations-should-not-overflow.md)
-- [CA5122](ca5122-p-invoke-declarations-should-not-be-safe-critical.md)
+- [CA1901](ca1901.md)
+- [CA1903](ca1903.md)
+- [CA2003](ca2003.md)
+- [CA2102](ca2102.md)
+- [CA2103](ca2103.md)
+- [CA2104](ca2104.md)
+- [CA2105](ca2105.md)
+- [CA2106](ca2106.md)
+- [CA2107](ca2107.md)
+- [CA2108](ca2108.md)
+- [CA2111](ca2111.md)
+- [CA2112](ca2112.md)
+- [CA2114](ca2114.md)
+- [CA2115](ca2115.md)
+- [CA2116Ç](ca2116.md)
+- [CA2117](ca2117.md)
+- [CA2118](ca2118.md)
+- [CA2120](ca2120.md)
+- [CA2121](ca2121.md)
+- [CA2122](ca2122.md)
+- [CA2123](ca2123.md)
+- [CA2124](ca2124.md)
+- [CA2126](ca2126.md)
+- [CA2130](ca2130.md)
+- [CA2131](ca2131.md)
+- [CA2132](ca2132.md)
+- [CA2133](ca2133.md)
+- [CA2134](ca2134.md)
+- [CA2135](ca2135.md)
+- [CA2136](ca2136.md)
+- [CA2137](ca2137.md)
+- [CA2138](ca2138.md)
+- [CA2139](ca2139.md)
+- [CA2140](ca2140.md)
+- [CA2141](ca2141.md)
+- [CA2142](ca2142.md)
+- [CA2143](ca2143.md)
+- [CA2144](ca2144.md)
+- [CA2145](ca2145.md)
+- [CA2146](ca2146.md)
+- [CA2147](ca2147.md)
+- [CA2149](ca2149.md)
+- [CA2151](ca2151.md)
+- [CA2202](ca2202.md)
+- [CA2210](ca2210.md)
+- [CA2220](ca2220.md)
+- [CA2221](ca2221.md)
+- [CA2222](ca2222.md) ([gerekçe](https://github.com/dotnet/roslyn-analyzers/issues/1378))
+- [CA2223](ca2223.md)
+- [CA2228](ca2228.md)
+- [CA2230](ca2230.md)
+- [CA2233](ca2233.md)
+- [CA5122](ca5122.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

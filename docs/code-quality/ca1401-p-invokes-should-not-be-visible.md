@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: d4a0a1c001407d947988497c422fdb8e88dd7c83
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: b06aa26b046743b06f8fdd274da7a804a5ec06f6
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234891"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440728"
 ---
 # <a name="ca1401-pinvokes-should-not-be-visible"></a>CA1401: P/Invoke'lar görünür olmamalıdır
 
@@ -34,10 +34,10 @@ ms.locfileid: "71234891"
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
-Ortak bir türdeki ortak veya korumalı yöntemin <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliği vardır (Ayrıca içindeki `Declare` [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]anahtar sözcüğü tarafından da uygulanır).
+Ortak bir türdeki ortak veya korumalı yöntemin <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliği vardır (Ayrıca [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ' deki `Declare` anahtar sözcüğü tarafından da uygulanır).
 
 ## <a name="rule-description"></a>Kural açıklaması
-Öznitelik (veya içindeki <xref:System.Runtime.InteropServices.DllImportAttribute> `Declare` [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]anahtar sözcüğü kullanılarak tanımlanan Yöntemler) ile işaretlenen Yöntemler, yönetilmeyen koda erişmek için platform çağırma hizmetleri 'ni kullanır. Bu tür yöntemler açıkta kalmamalıdır. Bu yöntemleri özel veya dahili tutarak, kayıt yapanların yönetilmeyen API 'lere, aksi takdirde çağıramazlar.
+@No__t-0 özniteliğiyle işaretlenen Yöntemler (veya [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ' deki `Declare` anahtar sözcüğü kullanılarak tanımlanan Yöntemler), yönetilmeyen koda erişmek için platform çağırma hizmetleri 'ni kullanır. Bu tür yöntemler açıkta kalmamalıdır. Bu yöntemleri özel veya dahili tutarak, kayıt yapanların yönetilmeyen API 'lere, aksi takdirde çağıramazlar.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 Bu kuralın ihlalini onarmak için yöntemin erişim düzeyini değiştirin.

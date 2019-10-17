@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: fdbb6012fb1252c90014ba91caf8ad7dacf901c2
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 1617ad2d5132f22da3c25565e6310977b286eaef
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234856"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444330"
 ---
 # <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402: COM görünebilir arabirimler içinde aşırı yüklemelerden kaçının
 
@@ -56,7 +56,7 @@ void SomeMethod_3(int valueOne, int valueTwo);
 Visual Basic 6 COM istemcileri, ad içinde bir alt çizgi kullanarak arabirim yöntemleri uygulayamaz.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Bu kuralın ihlalini onarmak için, aşırı yüklenmiş yöntemleri adların benzersiz olması için yeniden adlandırın. Alternatif olarak, `internal` erişilebilirliği (`Friend` ın [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) olarak değiştirerek veya <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> özniteliğini olarak `false`ayarlayarak, arabirimi com 'a görünmez hale getirin.
+Bu kuralın ihlalini onarmak için, aşırı yüklenmiş yöntemleri adların benzersiz olması için yeniden adlandırın. Alternatif olarak, erişilebilirliği `internal` ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ' de `Friend`) veya `false` ' e ayarlı <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> özniteliğini uygulayarak, arabirimi COM 'a görünmez hale getirebilirsiniz.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 Bu kuraldan uyarıyı bastırmayın.
@@ -68,11 +68,11 @@ Aşağıdaki örnekte, kuralı ve kuralı karşılayan bir arabirimi ihlal eden 
 [!code-csharp[FxCop.Interoperability.OverloadsInterface#1](../code-quality/codesnippet/CSharp/ca1402-avoid-overloads-in-com-visible-interfaces_1.cs)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1413 COM görünebilir değer türlerinde genel olmayan alanlardan kaçının](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
+[CA1413: COM görünebilir değer türleri içinde genel olmayan alanlardan kaçının](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
 
-[CA1407 COM görünebilir türler içinde statik üyelerden kaçının](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
+[CA1407: COM görünebilir türler içinde statik üyelerden kaçının](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
 
-[CA1017 Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+[CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,12 +9,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64421350f74a2fadcb8a4d4845d8aa00a5f5813b
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 8e25e28c2ff20a628058d5dfa71de0368fbe9249
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163095"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445615"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Çalıştırılacak C++ kuralları belirtmek Için kural kümelerini kullanma
 
@@ -36,7 +36,7 @@ Yeni bir özel kural kümesi oluşturmak için yeni bir dosya adı kullanarak bu
 
    - Özelleştirmek istediğiniz kural kümesini seçin.
 
-     \- veya -
+     \- veya-
 
    - **@No__t-1Zat seç...** listede olmayan var olan bir kural kümesini belirtmek için >.
 

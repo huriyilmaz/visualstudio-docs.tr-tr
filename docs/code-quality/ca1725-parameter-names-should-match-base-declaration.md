@@ -1,5 +1,5 @@
 ---
-title: 'CA1725: Parametre adları temel bildirimle eşleşmemelidir'
+title: 'CA1725: Parametre adları taban yöntem ile eşleşmelidir'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75f214809d5bfab660b1d559e21d3de3c5ea75fa
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 417e03f5d682ad448372d74fa8c9a5c31b798ccc
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71233873"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72438921"
 ---
-# <a name="ca1725-parameter-names-should-match-base-declaration"></a>CA1725: Parametre adları temel bildirimle eşleşmemelidir
+# <a name="ca1725-parameter-names-should-match-base-declaration"></a>CA1725: Parametre adları taban yöntem ile eşleşmelidir
 
 |||
 |-|-|

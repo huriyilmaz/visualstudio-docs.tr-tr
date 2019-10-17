@@ -1,5 +1,5 @@
 ---
-title: Kodu düzenleme ve hata ayıklamaya devam et | Microsoft Docs
+title: Kodu Düzenle ve hata ayıklamaya devam et | Microsoft Docs
 ms.custom: seodec18
 ms.date: 05/31/2018
 ms.topic: conceptual
@@ -21,23 +21,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 008dde8239c2b4b70220159275b12066b8cf70bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f11a170878e3efefc123ad7d61d0889f5bd95c12
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851066"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72435735"
 ---
-# <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Kodu düzenleme ve hata ayıklama devam Visual Studio'da (C#, VB, C++)
-Düzenle ve devam programınız kesme modundayken, kaynak kodunuzda değişiklikler yapmanızı sağlayan bir zamandan tasarruf özelliktir. Ne zaman, sürdürme programın yürütülmesini gibi bir yürütme komutu seçerek **devam** veya **adım**, Düzenle ve devam otomatik olarak kod değişiklikleri ile ilgili bazı sınırlamalar uygular. Bu, durdurmak, tüm programınızı yeniden derleyin ve hata ayıklama oturumunu yeniden zorunda kalmak yerine bir hata ayıklama oturumu sırasında kodunuzda değişiklikler yapmanızı sağlar.
+# <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Visual Studio 'da kod Düzenle ve hata ayıklamaya devamC#et (, C++vb,)
+Düzenle ve devam et, programınız kesme modundayken kaynak kodunuzda değişiklik yapmanızı sağlayan bir zaman tasarrufu özelliğidir. **Devam et** veya **adım**gibi bir yürütme komutu seçerek program yürütmeye devam ettiğinizde, Düzenle ve devam et, kod değişikliklerini bazı sınırlamalara göre otomatik olarak uygular. Bu, hata ayıklama oturumu sırasında kodunuzda değişiklik yapmanıza, tüm programınızı yeniden derlemenize ve hata ayıklama oturumunu yeniden başlatmanıza olanak tanır.
 
  Bu bölüm şu konuları içerir:
 
- [Nasıl yapılır: Düzenle ve Devam Et'i Etkinleştirme veya Devre Dışı Bırakma](../debugger/how-to-enable-and-disable-edit-and-continue.md)
+ [Nasıl Yapılır: Düzenle ve Devam Et'i Etkinleştirme veya Devre Dışı Bırakma](../debugger/how-to-enable-and-disable-edit-and-continue.md)
 
- [Nasıl yapılır: Kod Değişikliklerini Durdurma](../debugger/how-to-stop-code-changes.md)
+ [Nasıl Yapılır: Kod Değişikliklerini Durdurma](../debugger/how-to-stop-code-changes.md)
 
- [Düzenle ve Devam Et (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)
+ [Düzenle ve devam etC++()](../debugger/edit-and-continue-visual-cpp.md)
 
  [Düzenle ve Devam Et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)
 
@@ -47,5 +47,5 @@ Düzenle ve devam programınız kesme modundayken, kaynak kodunuzda değişiklik
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
-- [Düzenle ve devam et, hata ayıklama, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)
+- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

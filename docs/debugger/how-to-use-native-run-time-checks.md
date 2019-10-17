@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yerel çalışma zamanı denetimlerini kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: yerel çalışma zamanı denetimlerini kullanma | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -37,15 +37,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeebdd8a86cb8ca6ffc1358a8558654d1e4d0b92
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 3cef755721a9c5b917b080fa10f1819055a18ed7
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211028"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430562"
 ---
-# <a name="how-to-use-native-run-time-checks"></a>Nasıl yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma
-Visual C++'te, yerel [runtime_checks](/cpp/preprocessor/runtime-checks) kullanarak şu yaygın çalışma zamanı hatalarını yakalayabilirsiniz:
+# <a name="how-to-use-native-run-time-checks"></a>Nasıl Yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma
+Visual Studio C++ projesinde, yerel [runtime_checks](/cpp/preprocessor/runtime-checks) kullanarak şu yaygın çalışma zamanı hatalarını yakalayabilirsiniz:
 
 - Yığın işaretçisi bozulması.
 
@@ -57,7 +57,7 @@ Visual C++'te, yerel [runtime_checks](/cpp/preprocessor/runtime-checks) kullanar
 
 - Bir atamadaki daha kısa bir değişkene veri kaybı.
 
-  En iyileştirilmiş ( **/o**) derleme ile **/RTC** kullanırsanız, bir derleyici hatası oluşur. İyileştirilmiş bir derlemede `runtime_checks` pragma kullanırsanız, pragma üzerinde hiçbir etkisi olmaz.
+  En iyileştirilmiş ( **/o**) derleme ile **/RTC** kullanırsanız, bir derleyici hatası oluşur. İyileştirilmiş bir derlemede `runtime_checks` pragma kullanırsanız, pragma 'ın hiçbir etkisi yoktur.
 
   Çalışma zamanı denetimleri etkin olan bir programda hata ayıklarken, bir çalışma zamanı hatası oluştuğunda programın durdurulması ve hata ayıklayıcıya kesmesine yönelik varsayılan eylem. Herhangi bir çalışma zamanı denetimi için bu varsayılan davranışı değiştirebilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı Ile özel durumları yönetme](../debugger/managing-exceptions-with-the-debugger.md).
 
@@ -75,7 +75,7 @@ Visual C++'te, yerel [runtime_checks](/cpp/preprocessor/runtime-checks) kullanar
 
 ### <a name="to-modify-native-run-time-check-behavior"></a>Yerel çalışma zamanı denetimi davranışını değiştirmek için
 
-- `runtime_checks` Pragma kullanın.
+- @No__t-0 pragma kullanın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Visual Studio’da hata ayıklama](../debugger/index.yml)

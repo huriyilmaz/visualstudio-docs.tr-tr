@@ -1,5 +1,5 @@
 ---
-title: 'CA1016: Derlemeleri AssemblyVersionAttribute ile işaretleyin'
+title: 'CA1016: Derlemeleri AssemblyVersionAttribute ile işaretleme'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,20 +18,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 140037b025db88230762bc0d540d933cec7a5119
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 85a8d2d9efe83f62bd0bd40021ffe0e752cf4666
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236308"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441610"
 ---
-# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Derlemeleri AssemblyVersionAttribute ile işaretleyin
+# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Derlemeleri AssemblyVersionAttribute ile işaretleme
 
 |||
 |-|-|
 |TypeName|MarkAssembliesWithAssemblyVersion|
 |CheckId|CA1016|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
@@ -46,7 +46,7 @@ Bir derlemenin kimliği aşağıdaki bilgilerden oluşur:
 
 - Sürüm numarası
 
-- Kültür
+- ayarı
 
 - Ortak anahtar (kesin adlandırılmış derlemeler için).
 
@@ -54,7 +54,7 @@ Bir derlemenin kimliği aşağıdaki bilgilerden oluşur:
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kural ihlalini onarmak için, <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> özniteliğini kullanarak derlemeye bir sürüm numarası ekleyin.
+Bu kural ihlalini onarmak için <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> özniteliğini kullanarak derlemeye bir sürüm numarası ekleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 

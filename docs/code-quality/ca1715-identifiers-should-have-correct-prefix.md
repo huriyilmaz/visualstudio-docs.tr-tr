@@ -1,5 +1,5 @@
 ---
-title: 'CA1715: Tanımlayıcılar doğru ön eke sahip olmalıdır'
+title: 'CA1715: Tanımlayıcıların önekleri doğru olmalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 7323fd044675eda2f528788ffc40943d071bf12b
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 875e0b4052cdc7287b264899620d4e083ac6b153
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234073"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443878"
 ---
-# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Tanımlayıcılar doğru ön eke sahip olmalıdır
+# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Tanımlayıcıların önekleri doğru olmalıdır
 
 |||
 |-|-|
@@ -71,7 +71,7 @@ dotnet_code_quality.CA2007.allow_single_letter_type_parameters = true
 ```
 
 > [!NOTE]
-> Bu kural, örneğin, `T` `Collection<T>`adlı bir tür parametresi için hiçbir şekilde tetiklenmez.
+> Bu kural `T` adlı bir tür parametresi için hiçbir şekilde tetik, örneğin `Collection<T>`.
 
 ### <a name="api-surface"></a>API yüzeyi
 
@@ -121,4 +121,4 @@ Aşağıdaki kod parçacığı, genel tür parametresine 'T ' i önek olarak ekl
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1722 Tanımlayıcılar yanlış önek içermemelidir](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)
+- [CA1722: Tanımlayıcıların önekleri yanlış olmamalıdır](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)

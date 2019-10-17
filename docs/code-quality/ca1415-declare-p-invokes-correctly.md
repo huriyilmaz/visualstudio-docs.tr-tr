@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99274abee2c05a1bd33e34c9eb02cc928c1b54b0
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 8ee4c74fa57811a7f5484dba4b2c3fa27a74437f
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234620"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443976"
 ---
 # <a name="ca1415-declare-pinvokes-correctly"></a>CA1415: P/Invoke'ları doğru bildirin
 
@@ -34,7 +34,7 @@ ms.locfileid: "71234620"
 Platform çağırma yöntemi yanlış bir şekilde bildirilmiştir.
 
 ## <a name="rule-description"></a>Kural açıklaması
-Platform çağırma yöntemi yönetilmeyen koda erişir ve içindeki veya `Declare` <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>içinde [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] anahtar sözcüğü kullanılarak tanımlanır. Şu anda, bu kural çakışan bir yapı parametresine işaretçi olan Win32 işlevlerini hedefleyen platform çağırma yöntemi bildirimlerini arar ve karşılık gelen yönetilen parametre bir <xref:System.Threading.NativeOverlapped?displayProperty=fullName> yapıya işaretçi değildir.
+Platform çağırma yöntemi, yönetilmeyen koda erişir ve [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] veya <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> ' de `Declare` anahtar sözcüğü kullanılarak tanımlanır. Şu anda, bu kural ÇAKıŞAN bir yapı parametresine işaretçi olan Win32 işlevlerini hedefleyen platform çağırma yöntemi bildirimlerini arar ve karşılık gelen yönetilen parametre <xref:System.Threading.NativeOverlapped?displayProperty=fullName> yapısına yönelik bir işaretçi değildir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 Bu kuralın ihlalini onarmak için platform çağırma yöntemini doğru bir şekilde bildirin.

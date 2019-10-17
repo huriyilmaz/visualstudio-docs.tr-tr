@@ -1,5 +1,5 @@
 ---
-title: 'CA1055: URI dönüş değerleri dize olmamalıdır'
+title: 'CA1055: URI dönüş değerleri dizeler olmamalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -18,20 +18,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c0a03f68ed15e790ea8a43a9ae2b476dd2f6f5d
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 41099f0803d6432736e051a1a6ef61c7a6e85160
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235543"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446588"
 ---
-# <a name="ca1055-uri-return-values-should-not-be-strings"></a>CA1055: URI dönüş değerleri dize olmamalıdır
+# <a name="ca1055-uri-return-values-should-not-be-strings"></a>CA1055: URI dönüş değerleri dizeler olmamalıdır
 
 |||
 |-|-|
 |TypeName|UriReturnValuesShouldNotBeStrings|
 |CheckId|CA1055|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
@@ -42,11 +42,11 @@ Varsayılan olarak, bu kural yalnızca ortak yöntemlere bakar, ancak bu [yapıl
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Bu kural, yöntem adını, Pascal büyük harf kuralına göre belirteçlere böler ve her belirtecin "Uri", "Uri", "urn", "urn", "URL" veya "URL" olarak eşit olup olmadığını denetler. Bir eşleşme varsa kural, yöntemin bir Tekdüzen Kaynak tanımlayıcısı (URI) döndürdüğünü varsayar. Bir URI'nın dize sunumu ayrıştırma ve hataları kodlama eğilimindedir ve güvenlik açıklarına yol açabilir. <xref:System.Uri?displayProperty=fullName> Sınıfı bu hizmetleri güvenli ve güvenli bir şekilde sağlar.
+Bu kural, yöntem adını, Pascal büyük harf kuralına göre belirteçlere böler ve her belirtecin "Uri", "Uri", "urn", "urn", "URL" veya "URL" olarak eşit olup olmadığını denetler. Bir eşleşme varsa kural, yöntemin bir Tekdüzen Kaynak tanımlayıcısı (URI) döndürdüğünü varsayar. Bir URI'nın dize sunumu ayrıştırma ve hataları kodlama eğilimindedir ve güvenlik açıklarına yol açabilir. @No__t-0 sınıfı bu hizmetleri güvenli ve güvenli bir şekilde sağlar.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kuralın ihlalini onarmak için, dönüş türünü bir <xref:System.Uri>olarak değiştirin.
+Bu kural ihlalini onarmak için, dönüş türünü <xref:System.Uri> olarak değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -64,7 +64,7 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bu kuralı ihlal eden `ErrorProne`bir türü ve kuralını karşılayan bir `SaferWay`türü gösterir.
+Aşağıdaki örnek, bu kuralı ihlal eden bir tür, `ErrorProne`, ve kuralı karşılayan `SaferWay` ' i gösterir.
 
 [!code-csharp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1055-uri-return-values-should-not-be-strings_1.cs)]
 [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1055-uri-return-values-should-not-be-strings_1.vb)]
@@ -72,7 +72,7 @@ Aşağıdaki örnek, bu kuralı ihlal eden `ErrorProne`bir türü ve kuralını 
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1056 URI özellikleri dize olmamalıdır](../code-quality/ca1056-uri-properties-should-not-be-strings.md)
-- [CA1054 URI parametreleri dize olmamalıdır](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
-- [CA2234 Dizeler yerine System. Uri nesnelerini geçirme](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)
-- [CA1057 String URI aşırı yüklerini çağırır System. Uri aşırı yüklemeleri](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)
+- [CA1056: URI özellikleri dize olmamalıdır](../code-quality/ca1056-uri-properties-should-not-be-strings.md)
+- [CA1054: URI parametreleri dizeler olmamalıdır](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
+- [CA2234: Dizeler yerine System.Uri nesneleri gönderin](../code-quality/ca2234.md)
+- [CA1057: Dize URI aşırı yüklemeleri System.Uri aşırı yüklemelerini çağırır](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)

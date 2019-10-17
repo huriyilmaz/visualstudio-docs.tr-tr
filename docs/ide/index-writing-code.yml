@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: Visual Studio 'da kod düzenleme
+summary: Proje açma, kod Düzenleyicisi özelliklerini kullanma ve tutarlı kod stili koruma gibi görevleri düzenleme hakkında bilgi edinin.
+metadata:
+  title: Kod Düzenleyicisi özellikleri
+  description: Visual Studio 'da kod düzenlemesi özellikleri hakkında bilgi edinin.
+  ms.prod: visual-studio-windows
+  ms.technology: vs-ide-general
+  ms.topic: landing-page
+  author: gewarren
+  ms.author: gewarren
+  ms.date: 10/15/2019
+  ms.openlocfilehash: 275ac40ff1c2edf70a8388b09e50fc3d496e8050
+  ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+  ms.translationtype: HT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/16/2019
+  ms.locfileid: "72391465"
+landingContent:
+- title: Proje açın veya oluşturun
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Yeni bir proje oluşturma
+      url: create-new-project.md
+    - text: Bir depodan proje açma
+      url: ../get-started/tutorial-open-project-from-repo.md
+  - linkListType: how-to-guide
+    links:
+    - text: Projeler veya çözümler olmadan Visual Studio 'Yu kullanma
+      url: develop-code-in-visual-studio-without-projects-or-solutions.md
+- title: Özellikleri Düzenle özelliğini kullanma
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Kod düzenleyicisini kullanma
+      url: writing-code-in-the-code-and-text-editor.md
+    - text: Koda git
+      url: navigating-code.md
+    - text: Kod oluşturma ve düzeltme
+      url: code-generation-in-visual-studio.md
+    - text: Kod tamamlama için IntelliSense 'i kullanma
+      url: using-intellisense.md
+    - text: Kod stili tercihlerini yönetme
+      url: code-styles-and-code-cleanup.md
+    - text: Kod analizi
+      url: ../code-quality/roslyn-analyzers-overview.md
+- title: Programlama dilleri ile çalışmaya başlama
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Visual Studio 'da C# ve ASP.NET Core kullanmaya başlayın
+      url: tutorial-csharp-aspnet-core.md
+    - text: Visual Studio C++ 'da konsol uygulaması oluşturma
+      url: /cpp/get-started/tutorial-console-cpp
+    - text: Visual Studio 'da Python ile çalışmaya başlama
+      url: quickstart-python.md
+    - text: Visual Basic bir konsol uygulaması oluşturma
+      url: quickstart-visual-basic-console.md
+    - text: Node. js ile bir Web uygulaması oluşturma
+      url: quickstart-nodejs.md

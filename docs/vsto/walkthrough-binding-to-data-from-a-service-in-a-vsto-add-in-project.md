@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 74a43a0c601fa8a96c8737644bf5bd0261f59796
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 75d984617b56525e640a74aa4badd6f520c0b892
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254052"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381314"
 ---
 # <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>İzlenecek yol: VSTO eklenti projesindeki bir hizmetten veriye bağlama
   VSTO eklenti projelerinde verileri konak denetimlerine bağlayabilirsiniz. Bu izlenecek yol, Microsoft Office bir Word belgesine nasıl denetim ekleneceğini, denetimlerin MSDN Içerik hizmetinden alınan verilere nasıl bağlanacağını ve çalışma zamanında olaylara nasıl yanıt verileceğini gösterir.
@@ -28,20 +28,20 @@ ms.locfileid: "71254052"
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Çalışma zamanında belgeye denetim ekleme. <xref:Microsoft.Office.Tools.Word.RichTextContentControl>
+- Çalışma zamanında belgeye <xref:Microsoft.Office.Tools.Word.RichTextContentControl> denetimi ekleme.
 
-- <xref:Microsoft.Office.Tools.Word.RichTextContentControl> Denetimi bir Web hizmetinden veriye bağlama.
+- @No__t-0 denetimini bir Web hizmetinden veriye bağlama.
 
-- <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> Bir<xref:Microsoft.Office.Tools.Word.RichTextContentControl> denetimin olayına yanıt verme.
+- Bir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> denetiminin <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> olayına yanıt verme.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
+- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
 
 ## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
  İlk adım, bir Word VSTO eklenti projesi oluşturmaktır.
@@ -50,9 +50,9 @@ ms.locfileid: "71254052"
 
 1. Visual Basic veya C#kullanarak **MTPS içerik hizmeti**adlı bir Word VSTO eklentisi projesi oluşturun.
 
-     Daha fazla bilgi için [nasıl yapılır: Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)'da Office projeleri oluşturun.
+     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio, `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve projeyi **Çözüm Gezgini**ekler.
+     Visual Studio `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve projeyi **Çözüm Gezgini**ekler.
 
 ## <a name="add-a-web-service"></a>Web hizmeti Ekle
  Bu izlenecek yol için, MTPS Içerik hizmeti adlı bir Web hizmeti kullanın. Bu Web hizmeti, bir XML dizesi veya düz metin biçiminde belirtilen bir MSDN makalesindeki bilgileri döndürür. Daha sonraki bir adımda, döndürülen bilgilerin bir içerik denetiminde nasıl görüntüleneceği gösterilmektedir.
@@ -65,9 +65,9 @@ ms.locfileid: "71254052"
 
 3. **Adres** alanına aşağıdaki URL 'yi yazın:
 
-     **http:\//Services.msdn.Microsoft.com/ContentServices/contentservice.asmx**
+   `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 
-4. Tıklayın **Git**.
+4. **Git**' e tıklayın.
 
 5. **Ad alanı** alanında **contentservice**yazın ve **Tamam**' a tıklayın.
 
@@ -78,17 +78,17 @@ ms.locfileid: "71254052"
 
 ### <a name="to-add-a-content-control-and-bind-to-data"></a>İçerik denetimi eklemek ve verilere bağlamak için
 
-1. `ThisAddIn` Sınıfında, MTPS içerik hizmeti, içerik denetimi ve veri bağlama için değişkenleri bildirin.
+1. @No__t-0 sınıfında, MTPS Içerik hizmeti, içerik denetimi ve veri bağlama için değişkenleri bildirin.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#2](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#2)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#2)]
 
-2. `ThisAddIn` Sınıfına aşağıdaki yöntemi ekleyin. Bu yöntem, etkin belgenin başlangıcında bir içerik denetimi oluşturur.
+2. Aşağıdaki yöntemi `ThisAddIn` sınıfına ekleyin. Bu yöntem, etkin belgenin başlangıcında bir içerik denetimi oluşturur.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#4)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#4)]
 
-3. `ThisAddIn` Sınıfına aşağıdaki yöntemi ekleyin. Bu yöntem, Web hizmetine bir istek oluşturmak ve göndermek için gereken nesneleri başlatır.
+3. Aşağıdaki yöntemi `ThisAddIn` sınıfına ekleyin. Bu yöntem, Web hizmetine bir istek oluşturmak ve göndermek için gereken nesneleri başlatır.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#6)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#6)]
@@ -98,13 +98,13 @@ ms.locfileid: "71254052"
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#5](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#5)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#5](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#5)]
 
-5. `AddRichTextControlAtRange` `InitializeServiceObjects` Yönteminden ve`ThisAddIn_Startup` yöntemlerini çağırın. Programcılar C# için bir olay işleyicisi ekleyin.
+5. @No__t-2 yönteminden `AddRichTextControlAtRange` ve `InitializeServiceObjects` yöntemlerini çağırın. Programcılar C# için bir olay işleyicisi ekleyin.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#3)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#3)]
 
 ## <a name="test-the-add-in"></a>Eklentiyi test etme
- Word 'ü <xref:Microsoft.Office.Tools.Word.RichTextContentControl> açtığınızda denetim görüntülenir. Denetimdeki metin, içinde tıkladığınızda değişir.
+ Word 'Ü açtığınızda <xref:Microsoft.Office.Tools.Word.RichTextContentControl> denetimi görünür. Denetimdeki metin, içinde tıkladığınızda değişir.
 
 ### <a name="to-test-the-vsto-add-in"></a>VSTO eklentisini test etmek için
 

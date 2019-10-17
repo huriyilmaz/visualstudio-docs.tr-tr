@@ -19,12 +19,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2700dc2ade7ba901f15f67045e3170e2bbb40ff8
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 443fec0c9f20148d775a734137941cd7c78da889
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235110"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444401"
 ---
 # <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: Harfleri yerelleştirilmiş parametreler olarak göndermeyin
 
@@ -41,7 +41,7 @@ Bir yöntem, bir dize sabit değerini bir .NET oluşturucusuna veya yöntemine p
 
 Bu uyarı, bir sabit dize bir parametre veya özelliğe değer olarak geçirildiğinde ve aşağıdaki durumlardan biri veya daha fazlası doğru olduğunda tetiklenir:
 
-- Parametrenin veya özelliğin özniteliği true olarak ayarlandı. <xref:System.ComponentModel.LocalizableAttribute>
+- Parametrenin veya özelliğin <xref:System.ComponentModel.LocalizableAttribute> özniteliği true olarak ayarlandı.
 
 - Parametre veya özellik adı "metin", "Ileti" veya "başlık" içerir.
 
@@ -53,7 +53,7 @@ Kaynak koda gömülü olan dize sabit değerleri yerelleşebilir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kuralın ihlalini onarmak için, dize sabit değerini <xref:System.Resources.ResourceManager> , sınıfının bir örneği aracılığıyla alınan bir dizeyle değiştirin.
+Bu kural ihlalini onarmak için, dize sabit değerini <xref:System.Resources.ResourceManager> sınıfının bir örneği aracılığıyla alınan bir dizeyle değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -63,7 +63,7 @@ Kullanıcılar, yerelleştirilmiş dizeleri bir parametre ya da özelliği yenid
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, iki bağımsız değişkeni aralık dışında bir özel durum oluşturan bir yöntemi gösterir. İlk bağımsız değişken için, özel durum Oluşturucusu bu kuralı ihlal eden bir sabit dize aktardı. İkinci bağımsız değişken için, Oluşturucu bir <xref:System.Resources.ResourceManager>ile alınan bir dizeyi doğru şekilde geçirdi.
+Aşağıdaki örnek, iki bağımsız değişkeni aralık dışında bir özel durum oluşturan bir yöntemi gösterir. İlk bağımsız değişken için, özel durum Oluşturucusu bu kuralı ihlal eden bir sabit dize aktardı. İkinci bağımsız değişken için, Oluşturucu <xref:System.Resources.ResourceManager> ile alınan bir dizeyi doğru şekilde geçirdi.
 
 [!code-cpp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CPP/ca1303-do-not-pass-literals-as-localized-parameters_1.cpp)]
 [!code-vb[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/VisualBasic/ca1303-do-not-pass-literals-as-localized-parameters_1.vb)]

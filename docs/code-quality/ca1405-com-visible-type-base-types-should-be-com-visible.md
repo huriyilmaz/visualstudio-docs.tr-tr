@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e4e5c4ed258bcc88fedbb6d015fed576d326a0f
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 7faa295f4aba9e547254eb9c554d113e0aed084d
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234962"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444261"
 ---
 # <a name="ca1405-com-visible-type-base-types-should-be-com-visible"></a>CA1405: COM görünebilir tür taban türler COM görünebilir olmalıdır
 
@@ -37,7 +37,7 @@ ms.locfileid: "71234962"
 Bileşen nesne modeli (COM) görünür türü, COM görünebilir olmayan bir türden türetilir.
 
 ## <a name="rule-description"></a>Kural açıklaması
-COM görünebilir bir tür üyeleri yeni bir sürüme eklediğinde, geçerli sürüme bağlanan COM istemcilerinin kesilmesini önlemek için katı kılavuzlara uymalıdır. COM tarafından görünmeyen bir tür, yeni üyeler eklendiğinde bu COM sürümü oluşturma kurallarını izlemek zorunda değildir. Ancak, com görünebilir bir tür, com görünmeyen türden türetiliyor ve <xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName> ya <xref:System.Runtime.InteropServices.ClassInterfaceType> da (varsayılan) bir sınıf arabirimini, temel türün tüm genel üyelerini (özellikle de com görünmez olarak işaretlenmedikleri sürece) COM 'a sunulur. Temel tür sonraki bir sürüme yeni üyeler eklerse, türetilmiş türün sınıf arabirimine bağlanan tüm COM istemcileri kesilebilir. Com tarafından görülebilen türler, com istemcilerinin bölünmesi olasılığını azaltmak için yalnızca COM görünebilir türlerden türetilmelidir.
+COM görünebilir bir tür üyeleri yeni bir sürüme eklediğinde, geçerli sürüme bağlanan COM istemcilerinin kesilmesini önlemek için katı kılavuzlara uymalıdır. COM tarafından görünmeyen bir tür, yeni üyeler eklendiğinde bu COM sürümü oluşturma kurallarını izlemek zorunda değildir. Ancak, com görünebilir bir tür COM görünmeyen türden türetildiyse ve <xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName> ya da <xref:System.Runtime.InteropServices.ClassInterfaceType> (varsayılan) bir sınıf arabirimini ortaya çıkararsa, temel türün tüm genel üyeleri (gereksiz olarak bir COM görünmez olarak işaretlenmedikleri sürece) E. Temel tür sonraki bir sürüme yeni üyeler eklerse, türetilmiş türün sınıf arabirimine bağlanan tüm COM istemcileri kesilebilir. Com tarafından görülebilen türler, com istemcilerinin bölünmesi olasılığını azaltmak için yalnızca COM görünebilir türlerden türetilmelidir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 Bu kural ihlalini onarmak için, temel türlerin COM görünebilir veya türetilmiş türü COM görünmez hale gelir.

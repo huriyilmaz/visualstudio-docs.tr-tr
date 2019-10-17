@@ -1,5 +1,5 @@
 ---
-title: 'CA1048: Sealed türlerde virtual üyeler bildirmeyin'
+title: 'CA1048: Korumalı türlerde sanal üyeleri bildirme'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,24 +14,24 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be0e1b4865b19930f8ddf7163a36b71123bb3a55
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: d0b4e930af332c5486bca5ef6b93cef8e2376f31
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235705"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446607"
 ---
-# <a name="ca1048-do-not-declare-virtual-members-in-sealed-types"></a>CA1048: Sealed türlerde virtual üyeler bildirmeyin
+# <a name="ca1048-do-not-declare-virtual-members-in-sealed-types"></a>CA1048: Korumalı türlerde sanal üyeleri bildirme
 
 |||
 |-|-|
 |TypeName|DoNotDeclareVirtualMembersInSealedTypes|
 |CheckId|CA1048|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
-Ortak bir tür Sealed olur ve her ikisi de `virtual` (`Overridable` Visual Basic) ve son olmayan bir yöntem bildirir. Bu kural, bu düzene uymalıdır olması gereken temsilci türleri için ihlalleri raporlamaz.
+Ortak tür korumalıdır ve `virtual` (Visual Basic `Overridable`) ve son değil bir yöntem bildirir. Bu kural, bu düzene uymalıdır olması gereken temsilci türleri için ihlalleri raporlamaz.
 
 ## <a name="rule-description"></a>Kural açıklaması
 Türler yöntemi sanal olarak bildirir, böylece devralan türler sanal yöntemin uygulanmasını geçersiz kılabilir. Tanım olarak, korumalı bir türden bir sanal yöntem anlamsız bir şekilde bir korumalı türden devralma yapılamaz.

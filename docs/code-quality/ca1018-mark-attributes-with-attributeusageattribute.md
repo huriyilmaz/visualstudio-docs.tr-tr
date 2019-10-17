@@ -1,5 +1,5 @@
 ---
-title: 'CA1018: Öznitelikleri AttributeUsageAttribute ile işaretle'
+title: 'CA1018: Öznitelikleri AttributeUsageAttribute ile işaretleyin'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,23 +17,23 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 133ee073398817c037af95e2009c5acc98e1e5a2
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: 041555ed8036c145963f00295365fb204f1879dd
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306126"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446758"
 ---
-# <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: Öznitelikleri AttributeUsageAttribute ile işaretle
+# <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: Öznitelikleri AttributeUsageAttribute ile işaretleyin
 
 |||
 |-|-|
 |TypeName|MarkAttributesWithAttributeUsage|
 |CheckId|CA1018|
-|Category|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
-## <a name="cause"></a>Nedeni
+## <a name="cause"></a>Sebep
 @No__t-0 özniteliği özel öznitelikte yok.
 
 ## <a name="rule-description"></a>Kural açıklaması
@@ -42,21 +42,21 @@ ms.locfileid: "72306126"
 @No__t-0 numaralandırması, özel bir öznitelik için belirtebileceğiniz hedefleri tanımlar. @No__t-0 ' ı atlarsanız, özel özniteetu <xref:System.AttributeTargets> sabit listesinin `All` değeri tarafından tanımlanan tüm hedefler için geçerli olacaktır.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Bu kural ihlalini onarmak için <xref:System.AttributeUsageAttribute> kullanarak öznitelik için hedefleri belirtin. Aşağıdaki örneğe bakın.
+Bu kural ihlalini onarmak için <xref:System.AttributeUsageAttribute> kullanarak öznitelik için hedefleri belirtin. Aşağıdaki örnekte bakın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 İletiyi dışlamak yerine bu kuralın ihlal edildiğini düzeltmelisiniz. Öznitelik @no__t devralsa bile, kod bakımını basitleştirmek için özniteliği bulunmalıdır.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek iki özniteliği tanımlar. `BadCodeMaintainerAttribute` yanlış <xref:System.AttributeUsageAttribute> ifadesini atlar ve bu bölümde daha önce açıklanan özniteliği `GoodCodeMaintainerAttribute` doğru şekilde uygular. Tasarım kuralı için `DeveloperName` özelliğinin gerekli olduğunu unutmayın [CA1019: @ No__t-0 öznitelik bağımsız değişkenleri için erişimcileri tanımlayın ve tamamlana için dahil edilmiştir.
+Aşağıdaki örnek iki özniteliği tanımlar. `BadCodeMaintainerAttribute` yanlış <xref:System.AttributeUsageAttribute> ifadesini atlar ve bu bölümde daha önce açıklanan özniteliği `GoodCodeMaintainerAttribute` doğru şekilde uygular. @No__t-0 özelliğinin tasarım kuralı [için gerektiğini CA1019: öznitelik bağımsız değişkenleri için erişimcileri tanımlayın](../code-quality/ca1019-define-accessors-for-attribute-arguments.md) ve tamamlanmaların dahil edildiğini unutmayın.
 
 [!code-csharp[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/CSharp/ca1018-mark-attributes-with-attributeusageattribute_1.cs)]
 [!code-vb[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/VisualBasic/ca1018-mark-attributes-with-attributeusageattribute_1.vb)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1019: Öznitelik bağımsız değişkenleri için erişimcileri tanımlayın @ no__t-0
+[CA1019: Öznitelik bağımsız değişkenleri için erişimcileri tanımlayın](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
 
-[CA1813: Korumasız özniteliklerden kaçının @ no__t-0
+[CA1813: Korumasız özniteliklerden kaçının](../code-quality/ca1813.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

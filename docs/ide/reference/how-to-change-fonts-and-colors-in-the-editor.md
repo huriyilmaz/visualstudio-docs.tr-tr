@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b1eb807143e7ee5c3283a88cff12f13515486fb
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: ee1fced0b04ae058f05dc46e4414b76b0f506213
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605408"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72380996"
 ---
 # <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da düzenleyici için yazı tiplerini ve renkleri değiştirme
 
@@ -33,22 +33,20 @@ Varsayılan yazı tipi yüzünü değiştirebilir, yazı tipi boyutunu ayarlayab
 
 ## <a name="change-the-default-font-face-size-and-colors"></a>Varsayılan yazı tipini, boyutunu ve renklerini değiştirme
 
-1. **Araçlar** menüsünde **Seçenekler** ' i seçin ve **ortam** klasöründe, **yazı tipleri ve renkler**' i seçin.
-
-     [Yazı tipleri ve renkler, ortam, Seçenekler Iletişim kutusu](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md) açılır.
+1. **Araçlar** menüsünde **Seçenekler** ' i seçin. **Ortam**altında [yazı tipi ve renkler](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)' i seçin.
 
 2. **Ayarları göster**bölümünde **metin düzenleyici**' yi seçin.
 
-3. Yazı tipi **ve** **Boyut** seçeneklerini değiştirerek tüm düzenleyicilerde tüm metin öğelerinin yazı tipi yüzünüzü ve boyutunu değiştirin.
+3. **Yazı tipi ve** **Boyut** seçeneklerini değiştirerek tüm düzenleyicilerde tüm metin öğelerinin yazı tipi yüzünüzü ve boyutunu değiştirin.
 
 4. **Görüntüleme öğelerinde**uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
 
     > [!TIP]
     > Varsayılan ayarları sıfırlamak için **Varsayılanları Kullan** ' a tıklayın.
 
-5. **Tamam**'ı tıklatın.
+5. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
 - [Nasıl yapılır: Visual Studio 'da yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)

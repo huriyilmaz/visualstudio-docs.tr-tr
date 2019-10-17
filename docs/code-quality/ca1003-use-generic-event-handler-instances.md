@@ -1,5 +1,5 @@
 ---
-title: 'CA1003: Genel olay işleyicisi örnekleri kullan'
+title: 'CA1003: Genel olay işleyici örnekleri kullan'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -17,20 +17,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: c654da177e4a9cf820887cf74977a4c3da5a57b6
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 42e40acfc8034f27c8b9131b6d5c8f8bb2f95dcb
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236655"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441724"
 ---
-# <a name="ca1003-use-generic-event-handler-instances"></a>CA1003: Genel olay işleyicisi örnekleri kullan
+# <a name="ca1003-use-generic-event-handler-instances"></a>CA1003: Genel olay işleyici örnekleri kullan
 
 |||
 |-|-|
 |TypeName|UseGenericEventHandlerInstances|
 |CheckId|CA1003|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
@@ -41,13 +41,13 @@ Bu kural varsayılan olarak yalnızca dışarıdan görünür türlere bakar, an
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-.NET öncesinde, özel bilgileri olay işleyicisine geçirmek için, <xref:System.EventArgs?displayProperty=fullName> sınıftan türetilmiş bir sınıf belirtilmiş yeni bir temsilcinin bildirilmesini gerekiyordu. .Net ' te, genel <xref:System.EventHandler%601?displayProperty=fullName> temsilci, ' den <xref:System.EventArgs> türetilmiş tüm sınıfın olay işleyicisiyle birlikte kullanılmasına izin verir.
+.NET öncesinde, özel bilgileri olay işleyicisine geçirmek için, <xref:System.EventArgs?displayProperty=fullName> sınıfından türetilen bir sınıf tarafından belirtilen yeni bir temsilcinin bildirilmesini gerekiyordu. .NET ' te, genel <xref:System.EventHandler%601?displayProperty=fullName> temsilcisi, <xref:System.EventArgs> ' den türetilen tüm sınıfın olay işleyicisiyle birlikte kullanılmasını sağlar.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kural ihlalini onarmak için temsilciyi kaldırın ve <xref:System.EventHandler%601?displayProperty=fullName> temsilciyi kullanarak kullanımını değiştirin.
+Bu kural ihlalini onarmak için temsilciyi kaldırın ve <xref:System.EventHandler%601?displayProperty=fullName> temsilcisini kullanarak kullanımını değiştirin.
 
-Temsilci Visual Basic Derleyicisi tarafından otomatik olarak oluşturulduğunda, <xref:System.EventHandler%601?displayProperty=fullName> temsilciyi kullanmak için olay bildiriminin sözdizimini değiştirin.
+Temsilci Visual Basic Derleyicisi tarafından otomatik olarak oluşturulduğunda, olay bildiriminin söz dizimini <xref:System.EventHandler%601?displayProperty=fullName> temsilcisini kullanacak şekilde değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -70,19 +70,19 @@ Aşağıdaki örnek, kuralı ihlal eden bir temsilciyi gösterir. Visual Basic �
 [!code-vb[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/VisualBasic/ca1003-use-generic-event-handler-instances_1.vb)]
 [!code-csharp[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_1.cs)]
 
-Aşağıdaki kod parçacığı, kuralını karşılayan önceki örnekteki temsilci bildirimini kaldırır. Bu, `ClassThatRaisesEvent` ve `ClassThatHandlesEvent` yöntemlerinde kullanımını <xref:System.EventHandler%601?displayProperty=fullName> temsilciyi kullanarak değiştirir.
+Aşağıdaki kod parçacığı, kuralını karşılayan önceki örnekteki temsilci bildirimini kaldırır. @No__t-0 ve `ClassThatHandlesEvent` yöntemlerindeki kullanımını <xref:System.EventHandler%601?displayProperty=fullName> temsilcisini kullanarak değiştirir.
 
 [!code-csharp[FxCop.Design.GenericEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_2.cs)]
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1005 Genel türlerde aşırı parametrelerden kaçının](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
-- [CA1010 Koleksiyonlar genel arabirimi uygulamalıdır](../code-quality/ca1010-collections-should-implement-generic-interface.md)
-- [CA1000 Genel türlerde statik üye bildirme](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
-- [CA1002 Genel listeleri gösterme](../code-quality/ca1002-do-not-expose-generic-lists.md)
-- [CA1006 Üye imzalarında genel türleri iç içe kullanmayın](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
-- [CA1004 Genel metotlar tür parametresi sağlamalıdır](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
-- [CA1007 Uygun yerlerde genel türleri kullanın](../code-quality/ca1007-use-generics-where-appropriate.md)
+- [CA1005: Genel türlerde aşırı parametrelerden kaçının](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+- [CA1010: Koleksiyonlar genel arabirim uygulamalıdır](../code-quality/ca1010-collections-should-implement-generic-interface.md)
+- [CA1000: Genel türlerde statik üyeleri belirtme](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
+- [CA1002: Genel listeleri gösterme](../code-quality/ca1002-do-not-expose-generic-lists.md)
+- [CA1006: Üye imzalarında genel türleri iç içe kullanmayın](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+- [CA1004: Genel metotlar tür parametresi sağlamalıdır](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
+- [CA1007: Uygun yerlerde genel türler kullanın](../code-quality/ca1007-use-generics-where-appropriate.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

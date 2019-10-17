@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f50be12f4d601161ec20659bbb6b710e5a7cf24
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 1970eefee70fa14179c77566f23f213f09026646
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235171"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444386"
 ---
 # <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: Yinelenen hızlandırıcılardan kaçının
 
@@ -31,7 +31,7 @@ ms.locfileid: "71235171"
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
-Bir tür, <xref:System.Windows.Forms.Control?displayProperty=fullName> bir kaynak dosyasında depolanan özdeş erişim anahtarlarına sahip iki veya daha fazla üst düzey denetimi genişletir ve içerir.
+Bir tür <xref:System.Windows.Forms.Control?displayProperty=fullName> ' i genişletir ve bir kaynak dosyasında depolanan aynı erişim anahtarlarına sahip iki veya daha fazla üst düzey denetim içerir.
 
 ## <a name="rule-description"></a>Kural açıklaması
 
@@ -46,7 +46,7 @@ Bu kuralın ihlalini onarmak için, tüm denetimler için benzersiz erişim anah
 Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnekte, aynı erişim anahtarlarına sahip iki denetim içeren en az bir form gösterilmektedir. Anahtarlar, gösterilmemiş bir kaynak dosyasında depolanır. Ancak, değerleri, açıklamalı `checkBox.Text` satırlarda görüntülenir. Yinelenen hızlandırıcıların davranışı, `checkBox.Text` satırları açıklamalı çıkış karşılıklarıyla birlikte değiş tokuşu yaparak incelenebilir. Ancak, bu durumda, örnek kuraldan bir uyarı oluşturmaz.
+Aşağıdaki örnekte, aynı erişim anahtarlarına sahip iki denetim içeren en az bir form gösterilmektedir. Anahtarlar, gösterilmemiş bir kaynak dosyasında depolanır. Ancak, değerleri, açıklama `checkBox.Text` satırlarında görüntülenir. Yinelenen hızlandırıcıların davranışı, `checkBox.Text` satırları, yorumlanma karşılıkları ile değiştirerek incelenebilir. Ancak, bu durumda, örnek kuraldan bir uyarı oluşturmaz.
 
 [!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../code-quality/codesnippet/CSharp/ca1301-avoid-duplicate-accelerators_1.cs)]
 

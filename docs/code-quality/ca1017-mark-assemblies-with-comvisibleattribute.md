@@ -1,5 +1,5 @@
 ---
-title: 'CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin'
+title: 'CA1017: Derlemeleri ComVisibleAttribute ile işaretleme'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,36 +18,36 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 073332738a01cb299b2b185c6fca20131222f981
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: daf9da821178e9e17ed5f0693d4d268b04ca337c
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236263"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441614"
 ---
-# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin
+# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Derlemeleri ComVisibleAttribute ile işaretleme
 
 |||
 |-|-|
 |TypeName|MarkAssembliesWithComVisible|
 |CheckId|CA1017|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
-Bir bütünleştirilmiş koda <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> uygulanmış özniteliği yok.
+Bir derlemeye <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> özniteliği uygulanmaz.
 
 ## <a name="rule-description"></a>Kural açıklaması
-Özniteliği <xref:System.Runtime.InteropServices.ComVisibleAttribute> , com istemcilerinin yönetilen koda nasıl erişebileceğini belirler. İyi tasarım derlemelerin açıkça COM görünürlüğünde gösterildiğini belirler. Tüm derleme için COM görünürlüğü ayarlanabilir ve sonra bağımsız türler ve tür üyeleri için geçersiz kılınabilir. Özniteliği yoksa, derlemenin içerikleri COM istemcileri tarafından görülebilir.
+@No__t-0 özniteliği, COM istemcilerinin yönetilen koda nasıl erişebileceğini belirler. İyi tasarım derlemelerin açıkça COM görünürlüğünde gösterildiğini belirler. Tüm derleme için COM görünürlüğü ayarlanabilir ve sonra bağımsız türler ve tür üyeleri için geçersiz kılınabilir. Özniteliği yoksa, derlemenin içerikleri COM istemcileri tarafından görülebilir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Bu kural ihlalini onarmak için, derlemeye özniteliğini ekleyin. Derlemenin COM istemcilerine görünür olmasını istemiyorsanız, özniteliğini uygulayın ve değerini olarak `false`ayarlayın.
+Bu kural ihlalini onarmak için, derlemeye özniteliğini ekleyin. Derlemenin COM istemcilerine görünür olmasını istemiyorsanız, özniteliğini uygulayın ve değerini `false` olarak ayarlayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
-Bu kuraldan uyarıyı bastırmayın. Derlemenin görünür olmasını istiyorsanız, özniteliğini uygulayın ve değerini olarak `true`ayarlayın.
+Bu kuraldan uyarıyı bastırmayın. Derlemenin görünür olmasını istiyorsanız, özniteliğini uygulayın ve değerini `true` olarak ayarlayın.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, com istemcilerine görünür olmasını engellemek için <xref:System.Runtime.InteropServices.ComVisibleAttribute> özniteliği uygulanmış bir derlemeyi gösterir.
+Aşağıdaki örnek, COM istemcilerine görünür olmasını engellemek için <xref:System.Runtime.InteropServices.ComVisibleAttribute> özniteliği uygulanmış bir derlemeyi gösterir.
 
 [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)]
 [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)]

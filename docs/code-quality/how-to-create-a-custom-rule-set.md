@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b52bb573b9a98c5a797f67cdbd4608f8b8636da
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 33d8d97a5d036a2bd931bfa951fea2715569830a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975096"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448990"
 ---
 # <a name="customize-a-rule-set"></a>Bir kural kümesini özelleştirme
 
@@ -44,14 +44,14 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
    - Özelleştirmek istediğiniz kural kümesini seçin.
 
-     \- veya -
+     \- veya-
 
    - Listede olmayan var olan bir kural kümesini belirtmek için **\<Zat >** öğesini seçin.
 
 4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' ı seçin.
 
 > [!NOTE]
-> .NET Core veya .NET Standard projeniz varsa, **Kod Analizi** Özellik sekmesi olmadığından işlem biraz farklıdır. [Önceden tanımlanmış bir kural kümesini projenize kopyalamak ve etkin kural kümesi olarak ayarlamak](analyzer-rule-sets.md)için adımları izleyin. Bir kural kümesi üzerinden kopyaladıktan sonra, [bunu Visual Studio kural kümesi düzenleyicisinde](working-in-the-code-analysis-rule-set-editor.md) **Çözüm Gezgini**açarak düzenleyebilirsiniz.
+> .NET Core veya .NET Standard projeniz varsa, **Kod Analizi** özelliği sekmesi bulunmadığından işlem biraz farklıdır. [önceden tanımlanmış bir kural kümesini projenize kopyalamak ve etkin kural kümesi olarak ayarlamak](analyzer-rule-sets.md)için adımları izleyin. Bir kural kümesi üzerinden kopyaladıktan sonra, [bunu Visual Studio kural kümesi düzenleyicisinde](working-in-the-code-analysis-rule-set-editor.md) **Çözüm Gezgini**açarak düzenleyebilirsiniz.
 
 ## <a name="create-a-new-rule-set"></a>Yeni bir kural kümesi oluştur
 
@@ -111,7 +111,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 - *Aynı önem derecesine* sahip bir kural kümesinde aynı kural iki veya daha fazla kez listeleniyorsa, **hata listesi**aşağıdaki uyarıyı görebilirsiniz:
 
-   **CA0063: ' @No__t-0sizin]. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
+   **CA0063: ' \['niz]. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
 
 - Kural kümesi bir **içerme** etiketi kullanarak ayarlanmış bir alt kural içeriyorsa ve alt ve üst kural her ikisi de aynı kuralı, ancak farklı önem derecelerine sahip olarak ayarlarsa, üst kural kümesindeki önem derecesi önceliklidir. Örneğin:
 
@@ -147,5 +147,5 @@ Artık bir kural ayarlamış olduğunuza göre, bir sonraki adım kuralları ekl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yönetilen kod projesi için kod analizini yapılandırma @ no__t-0
+- [Nasıl yapılır: Yönetilen Kod Projesi İçin Kod Çözümlemesini Yapılandırma](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
 - [Kod çözümleme kural kümesi başvurusu](../code-quality/rule-set-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'CA1712: Sabit listesi değerlerine tür adını önek olarak eklemeyin'
+title: 'CA1712: Numaralandırma değerleri için tür adıyla önek kullanmayın'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b5966c9685bc4bbc5ba997f8acf47abbbfca1a2
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 9bf4d7d2ee0df2a6c5330fcfb8fe6bd168e318c9
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234118"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72439399"
 ---
-# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712: Sabit listesi değerlerine tür adını önek olarak eklemeyin
+# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712: Numaralandırma değerleri için tür adıyla önek kullanmayın
 
 |||
 |-|-|
@@ -56,11 +56,11 @@ Aşağıdaki örnek, düzeltilmiş sürüm tarafından izlenen yanlış adlandı
 [!code-vb[FxCop.Naming.EnumValues#1](../code-quality/codesnippet/VisualBasic/ca1712-do-not-prefix-enum-values-with-type-name_1.vb)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1711 Tanımlayıcılar yanlış sonek içermemelidir](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
+[CA1711: Tanımlayıcıların sonekleri yanlış olmamalıdır](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
 
-[CA1027 Numaralandırmaları FlagsAttribute ile işaretle](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+[CA1027: Numaralandırmaları FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
 
-[CA2217 Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+[CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

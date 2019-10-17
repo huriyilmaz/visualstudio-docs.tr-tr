@@ -1,5 +1,5 @@
 ---
-title: 'CA1054: URI parametreleri dize olmamalıdır'
+title: 'CA1054: URI parametreleri dizeler olmamalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -18,25 +18,25 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 49788b900eb8aed9fac6e4da4844377bae67efbf
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 79ab405e6019dd93fdb9ffa89b5274f6f3d679e8
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235553"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446570"
 ---
-# <a name="ca1054-uri-parameters-should-not-be-strings"></a>CA1054: URI parametreleri dize olmamalıdır
+# <a name="ca1054-uri-parameters-should-not-be-strings"></a>CA1054: URI parametreleri dizeler olmamalıdır
 
 |||
 |-|-|
 |TypeName|UriParametersShouldNotBeStrings|
 |CheckId|CA1054|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
 
-Bir tür, adı "Uri", "Uri", "urn", "urn", "URL" veya "URL" içeren bir dize parametresine sahip bir yöntem bildirir ve tür, bir <xref:System.Uri?displayProperty=fullName> parametreyi alan karşılık gelen bir aşırı yükleme bildirmiyor.
+Bir tür, adı "Uri", "Uri", "urn", "urn", "URL" veya "URL" içeren bir dize parametresine sahip bir yöntem bildirir ve tür, <xref:System.Uri?displayProperty=fullName> parametresini alan karşılık gelen bir aşırı yükleme bildirmiyor.
 
 Bu kural varsayılan olarak yalnızca dışarıdan görünür türlere bakar, ancak bu [yapılandırılabilir](#configurability).
 
@@ -46,7 +46,7 @@ Bu kural, parametre adını ortası kuralı kuralına göre belirteçlere böler
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kural ihlalini onarmak için parametreyi bir <xref:System.Uri> tür olarak değiştirin; bu bir son değişiklik değildir. Alternatif olarak, bir <xref:System.Uri> parametre alan yöntemin aşırı yüklemesini sağlar; Bu, kırılmamış bir değişiklik değildir.
+Bu kural ihlalini onarmak için parametreyi <xref:System.Uri> türü; olarak değiştirin. Bu, bir son değişiklik. Alternatif olarak, <xref:System.Uri> parametresini alan metodun aşırı yüklemesini sağlar; Bu bir kırılmamış değişiklik değildir.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -64,7 +64,7 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bu kuralı ihlal eden `ErrorProne`bir türü ve kuralını karşılayan bir `SaferWay`türü gösterir.
+Aşağıdaki örnek, bu kuralı ihlal eden bir tür, `ErrorProne`, ve kuralı karşılayan `SaferWay` ' i gösterir.
 
 [!code-csharp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1054-uri-parameters-should-not-be-strings_1.cs)]
 [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1054-uri-parameters-should-not-be-strings_1.vb)]
@@ -72,7 +72,7 @@ Aşağıdaki örnek, bu kuralı ihlal eden `ErrorProne`bir türü ve kuralını 
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1056 URI özellikleri dize olmamalıdır](../code-quality/ca1056-uri-properties-should-not-be-strings.md)
-- [CA1055 URI dönüş değerleri dize olmamalıdır](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)
-- [CA2234 Dizeler yerine System. Uri nesnelerini geçirme](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)
-- [CA1057 String URI aşırı yüklerini çağırır System. Uri aşırı yüklemeleri](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)
+- [CA1056: URI özellikleri dize olmamalıdır](../code-quality/ca1056-uri-properties-should-not-be-strings.md)
+- [CA1055: URI dönüş değerleri dizeler olmamalıdır](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)
+- [CA2234: Dizeler yerine System.Uri nesneleri gönderin](../code-quality/ca2234.md)
+- [CA1057: Dize URI aşırı yüklemeleri System.Uri aşırı yüklemelerini çağırır](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)

@@ -1,5 +1,5 @@
 ---
-title: 'CA1711: Tanımlayıcılar yanlış sonek içermemelidir'
+title: 'CA1711: Tanımlayıcıların sonekleri yanlış olmamalıdır'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e04487a9bfcd8ef9a0e9a15bc76a93b221f9ce1
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 1a2ae438091c55c9e0e6b14350ca2527907ab33c
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234139"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443912"
 ---
-# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711: Tanımlayıcılar yanlış sonek içermemelidir
+# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711: Tanımlayıcıların sonekleri yanlış olmamalıdır
 
 |||
 |-|-|
@@ -61,9 +61,9 @@ Ayrıca, aşağıdaki **sonekler kullanılmamalıdır:**
 
 - `Enum`
 
-- `Impl`(bunun `Core` yerine kullanın)
+- `Impl` (Bunun yerine `Core` kullanın)
 
-- `Ex`ya da benzer sonekin aynı türden önceki bir sürümden ayırt edilebilmesi için
+- aynı türdeki önceki bir sürümden ayırt etmek için `Ex` veya benzer sonek
 
 Adlandırma kuralları, ortak dil çalışma zamanını hedefleyen kitaplıklar için ortak bir görünüm sağlar. Bu, yeni yazılım kitaplıkları için gerekli olan öğrenme eğrisini azaltır ve müşterinin, kitaplığın yönetilen kod geliştirme konusunda uzmanlığa sahip olan birisi tarafından geliştirildiğini arttırır.
 
@@ -87,7 +87,7 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1710 Tanımlayıcılar doğru sonekine sahip olmalıdır](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
+- [CA1710: Tanımlayıcıların sonekleri doğru olmalıdır](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

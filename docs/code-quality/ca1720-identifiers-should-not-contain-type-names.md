@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2677c2ef5342b795bb684f3ab06bc7cf5195cf7
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 64fd1aee2a778c72a81f82a0d435ce37d408c9a5
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71233890"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443794"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: Tanımlayıcılar tür adları içermemelidir
 
@@ -42,7 +42,7 @@ Bu kural varsayılan olarak yalnızca dışarıdan görünür üyelere bakar, an
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Parametrelerin ve üyelerin adları, geliştirme araçları tarafından sağlanması beklenen, kendi türlerini tanımlamaya kıyasla anlamını iletmek için daha iyi kullanılır. Üye adları için, bir veri türü adı kullanılması gerekiyorsa dile özgü bir ad kullanın. Örneğin, C# tür adı `int`yerine dilden bağımsız veri türü adı ' nı `Int32`kullanın.
+Parametrelerin ve üyelerin adları, geliştirme araçları tarafından sağlanması beklenen, kendi türlerini tanımlamaya kıyasla anlamını iletmek için daha iyi kullanılır. Üye adları için, bir veri türü adı kullanılması gerekiyorsa dile özgü bir ad kullanın. Örneğin `int` C# tür adı yerine, dilden bağımsız veri türü adı `Int32` ' yi kullanın.
 
 Parametre veya üyenin adındaki her bir ayrık belirteç, büyük/küçük harfe duyarsız bir şekilde aşağıdaki dile özgü veri türü adlarına göre denetlenir:
 
@@ -50,13 +50,13 @@ Parametre veya üyenin adındaki her bir ayrık belirteç, büyük/küçük harf
 - WChar
 - Int8
 - UInt8
-- Kısa
+- Kısadır
 - UShort
 - int
 - U
 - Tamsayı
 - UInteger
-- Uzun
+- Kalacağını
 - 'Tur
 - İşaretlenmemiş
 - İmza
@@ -80,8 +80,8 @@ Ayrıca, bir parametrenin adları, büyük/küçük harf duyarsız bir şekilde 
 - UInt32
 - Int64
 - UInt64
-- IntPtr
-- kaydetmeye
+- Serisi
+- Kaydetmeye
 - Çağrısı
 - Uıınptr
 - UPtr
@@ -117,7 +117,7 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1709 Tanımlayıcılar doğru şekilde yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708 Tanımlayıcılar, büyük/küçük harf bakımından farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
-- [CA1707 Tanımlayıcılar alt çizgi içermemelidir](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
-- [CA1719 Parametre adları üye adlarıyla eşleşmemelidir](../code-quality/ca1719-parameter-names-should-not-match-member-names.md)
+- [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1707: Tanımlayıcılar alt çizgi içermemelidir](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
+- [CA1719: Parametre adları üye adlarıyla eşleşmemelidir](../code-quality/ca1719-parameter-names-should-not-match-member-names.md)

@@ -1,5 +1,5 @@
 ---
-title: Nasıl IDE'de gezinme
+title: IDE 'de gezinme
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,80 +17,80 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5933d89e38d040b088879f10911f2f1fff049aab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8764ccc5a662a40559b6b7ab4f19cdff0e2d555e
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62547689"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381325"
 ---
-# <a name="how-to-move-around-in-the-visual-studio-ide"></a>Nasıl yapılır: Visual Studio IDE'de gezinme
+# <a name="how-to-move-around-in-the-visual-studio-ide"></a>Nasıl yapılır: Visual Studio IDE 'de gezinme
 
-Tümleşik geliştirme ortamı (IDE) penceresi penceresinin hareket etmenize izin vermek için tasarlanmış ve dosyaya tercih ya da proje gereksinimlerinize bağlı olarak birkaç farklı yolla olmuştur. Düzenleyicide açık dosyalar arasında geçiş yapmak veya tüm etkin araç pencerelerini IDE içinde dolaşma seçebilirsiniz. Herhangi bir dosya Aç bakılmaksızın, son erişilme sırası düzenleyicisinde için doğrudan geçiş yapabilirsiniz. Bu özellikler, IDE içinde çalışırken üretkenliğinizi artırmaya yardımcı olabilir.
+Tümleşik geliştirme ortamı (IDE), tercihlerinize veya proje gereksinimlerinize bağlı olarak, pencereden pencereye ve dosyaya farklı yollarla dosya taşımanıza olanak tanımak üzere tasarlanmıştır. Düzenleyicideki açık dosyalar arasında dolaşmayı veya IDE 'deki tüm etkin araç pencerelerini kullanarak geçiş yapabilirsiniz. Ayrıca, son erişildiği sırada ne olursa olsun, düzenleyicide açık olan herhangi bir dosyaya doğrudan geçiş yapabilirsiniz. Bu özellikler, IDE 'de çalışırken üretkenliğinizi artırmaya yardımcı olabilir.
 
 > [!NOTE]
-> İletişim kutularında seçenekleri ve adları ve konumları gördüğünüz gibi menü komutları, etkin ayarlarınıza ve sürüm bağlı olarak bu makaledeki açıklanana öğesinden farklı olabilir. Bu makale ile yazılmış **genel** ayarları unutmayın. Ayarlarınızı, örneğin değiştirileceğini **genel** veya **Visual C++** ayarları seçebilirsiniz **Araçları** > **içeri ve dışarı aktarma ayarları**ve ardından **tüm ayarları Sıfırla**.
+> İletişim kutularında kullanılabilen seçenekler ve gördüğünüz menü komutlarının adları ve konumları, etkin ayarlarınıza veya sürümüne bağlı olarak bu makalede açıklananlar arasından farklılık gösterebilir. Bu makale, **genel** ayarlar göz önünde bulundurularak yazılmıştır. Ayarlarınızı değiştirmek için (örneğin, **genel** veya  **C++ görsel** ayarları), **Araçlar** > **içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
 
 ## <a name="keyboard-shortcuts"></a>Klavye kısayolları
 
-Visual Studio neredeyse tüm menü komutu bir klavye kısayolu vardır. Ayrıca, kendi özel kısayolları da oluşturabilirsiniz. Daha fazla bilgi için [tanımlayın ve klavye kısayollarını özelleştirme](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+Visual Studio 'daki neredeyse her menü komutunun bir klavye kısayolu vardır. Kendi özel kısayollarınızı da oluşturabilirsiniz. Daha fazla bilgi için bkz. [klavye kısayollarını tanımlamak ve özelleştirmek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
-## <a name="navigate-among-files-in-the-editor"></a>Düzenleyicideki dosyalar gezinme
+## <a name="navigate-among-files-in-the-editor"></a>Düzenleyicideki dosyalar arasında gezinme
 
-Düzenleyicide açık dosyaları arasında gezinmek için çeşitli yöntemler kullanabilirsiniz. Hangi erişim, şu anda açık olan herhangi bir dosya veya sık kullanılan dosyaları için sekmesinde de bunlar her zaman görünür, böylece hızla bulmak için haldeyken IDE Gezgini'ni kullanın sıraya göre dosyalar arasında taşıyabilirsiniz.
+Düzenleyicide açık olan dosyalar arasında gezinmek için çeşitli yöntemler kullanabilirsiniz. Dosyalara erişmek istediğiniz sıraya göre dosyalar arasında geçiş yapabilirsiniz, daha önce açık olan herhangi bir dosyayı hızlı bir şekilde bulmak için IDE gezginini kullanın veya her zaman görünür olmaları için sık kullanılan dosyaları sekmeye uygun olarak sabitleyin.
 
-Geriye doğru gidin ve erişimin sağlandığı ölçütüne göre düzenleyicide açık olan dosyaları ileriye doğru döngü gezinin, çok arka ve gibi Microsoft Internet Explorer geçmişinizi görüntülerken İleri yapın.
+Geriye doğru ilerleyin ve Microsoft Internet Explorer 'da görüntüleme geçmişiniz için, geri ve ileri ' ye benzer şekilde, düzenleyicide bulunan açık dosyalar üzerinden ileri döngülerine gidin.
 
-### <a name="to-move-through-open-files-in-order-of-use"></a>Kullanım sırasına göre açık dosyalar arasında taşımak için
+### <a name="to-move-through-open-files-in-order-of-use"></a>Açık dosyalar aracılığıyla kullanım sırasıyla geçiş yapmak için
 
-- Açık belgeler kullanıcılar en son dokunulan sırada etkinleştirmek için basın **Ctrl**+**-**.
+- Açık belgeleri en son dokundukları sırada etkinleştirmek için **Ctrl**+ **-** (kısa çizgi) tuşlarına basın.
 
-- Ters sırada açık belgeler etkinleştirmek için basın **Ctrl**+**Shift**+**-**.
+- Açık belgeleri ters sırada etkinleştirmek için **Ctrl**+**SHIFT**+ **-** (kısa çizgi) tuşlarına basın.
 
     > [!NOTE]
-    > **Geriye doğru gidin** ve **Navigate Forward** üzerinde bulunabilir **görünümü** menüsü.
+    > **Geriye giderek** **İleri** git **Görünüm** menüsünde de bulunabilir.
 
-Belirli bir dosyayı dosya son erişildiği zaman bağımsız olarak düzenleyicide açık geçebilirsiniz kullanarak **haldeyken IDE Gezgini'ni**, **etkin dosyaların** düzenleyicisinde, liste veya **Windows** iletişim kutusu.
+Ayrıca, dosyaya son erişiminizden bağımsız olarak, **IDE Gezginini**, düzenleyicide **etkin dosyalar** listesini veya **Windows** iletişim kutusunu kullanarak, düzenleyicide açık olan belirli bir dosyaya geçiş yapabilirsiniz.
 
-**Haldeyken IDE Gezgini'ni** Windows uygulama değiştirici gibi çalışır. Menüleri kullanılamaz ve yalnızca kısayol tuşu kullanılarak erişilebilir. İki komutlardan birini erişmek için kullanabileceğiniz **haldeyken IDE Gezgini'ni** (arasında geçiş yapmak istediğiniz düzene bağlı olarak, dosyalar arasında geçiş yapmak için aşağıda).
+**IDE Gezgini** , Windows uygulama değiştiricisinden çok benzer şekilde çalışmaktadır. Menülerden kullanılamaz ve yalnızca kısayol tuşları kullanılarak erişilebilir. **IDE Gezginine** erişmek için iki komuttan birini kullanabilirsiniz (aşağıda gösterildiği gibi), üzerinde geçiş yapmak istediğiniz sıraya bağlı olarak dosyalar arasında geçiş yapmak için iki komuttan yararlanabilirsiniz.
 
 ![Visual Studio IDE Gezgini](../ide/media/vs2015_ide_navigator.png)
 
-`Window.PreviousDocumentWindowNav` en son erişilen dosyanın taşımanızı sağlar ve `Window.NextDocumentWindowNav` ters sırada taşımanızı sağlar. **Genel Geliştirme Ayarları** atar **Shift**+**Alt**+**F7** için `Window.PreviousDocumentWindowNav` ve **Alt**  + **F7** için `Window.NextDocumentWindowNav`.
+`Window.PreviousDocumentWindowNav`, en son erişilen dosyaya taşımanızı sağlar ve `Window.NextDocumentWindowNav` ' i ters sırada taşımanızı sağlar. **Genel geliştirme ayarları** **SHIFT**+**alt**+**F7** `Window.PreviousDocumentWindowNav` ve **alt**+**F7** 0 ' a atar.
 
 > [!NOTE]
-> Kullanmakta olduğunuz bir ayarlar bileşimi bu komutuna atanmış kısayol tuş bileşimi zaten yoksa, kendi özel komut kullanarak atayabilirsiniz **klavye** sayfasının **seçenekleri** iletişim bir kutu. Daha fazla bilgi için [tanımlayın ve klavye kısayollarını özelleştirme](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+> Kullandığınız ayarlar birleşimine bu komuta atanmış kısayol tuşu birleşimi zaten yoksa, **Seçenekler** Iletişim kutusunun **klavye** sayfasını kullanarak kendi özel komutunuzu atayabilirsiniz. Daha fazla bilgi için bkz. [klavye kısayollarını tanımlamak ve özelleştirmek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
-### <a name="to-switch-to-specific-files-in-the-editor"></a>Düzenleyicideki belirli dosyalar geçmek için
+### <a name="to-switch-to-specific-files-in-the-editor"></a>Düzenleyicideki belirli dosyalara geçiş yapmak için
 
-- Tuşuna **Ctrl**+**sekmesini** görüntülenecek **haldeyken IDE Gezgini'ni**. Basılı **Ctrl** anahtarı ve ENTER tuşuna **sekmesini** kadar art arda, geçiş yapmak istediğiniz dosyayı seçin.
+- **IDE Gezginini**göstermek için **CTRL**+**Tab** tuşlarına basın. **CTRL** tuşunu basılı tutun ve geçiş yapmak istediğiniz dosyayı seçene kadar **sekme** tuşuna basın.
 
     > [!TIP]
-    > Hangi geçtiğiniz sırasını tersine çevirmek için **etkin dosyaların** listesinde, basılı **Ctrl**+**Shift** anahtarları ve ENTER tuşuna **sekmesini**.
+    > **Etkin dosyalar** listesinden gittiğiniz sırayı tersine çevirmek için **CTRL**+**Shift** tuşlarını basılı tutup **Tab**tuşuna basın.
 
-    \- veya -
+    \- veya-
 
-- Düzenleyici sağ alt köşesinde, seçin **etkin dosyaların** düğmesini ve ardından geçmek için listeden bir dosya seçin.
+- Düzenleyicinin sağ üst köşesinde **etkin dosyalar** düğmesini seçin ve ardından listeden bir dosyayı seçerek geçiş yapın.
 
-    \- veya -
+    \- veya-
 
-- Menü çubuğunda, **penceresi** > **Windows**.
+- Menü çubuğunda **, @no__t-** 1**Windows**' u seçin.
 
-- Listesinde, görüntülemek ve ardından istediğiniz dosyayı seçin **etkinleştirme**.
+- Listede, görüntülemek istediğiniz dosyayı seçin ve ardından **Etkinleştir**' i seçin.
 
-## <a name="navigate-among-tool-windows-in-the-ide"></a>Araç Pencereleri IDE içinde gezinme
+## <a name="navigate-among-tool-windows-in-the-ide"></a>IDE 'deki araç pencereleri arasında gezinme
 
-**Haldeyken IDE Gezgini'ni** de sahip olduğunuz aracı windows döngüsü sağlar IDE'de açın. İki komutlardan birini erişmek için kullanabileceğiniz **haldeyken IDE Gezgini'ni** arasında geçiş yapmak istediğiniz düzene bağlı olarak, araç pencereleri arasında geçiş yapmak için. `Window.PreviousToolWindowNav` en son erişilen dosyanın taşımanızı sağlar ve `Window.NextToolWindowNav` ters sırada taşımanızı sağlar. **Genel Geliştirme Ayarları** atar **Shift**+**Alt**+**F7** için `Window.PreviousDocumentWindowNav` ve **Alt**  + **F7** için `Window.NextDocumentWindowNav`.
+**IDE Gezgini** , IDE 'de açtığınız araç pencereleri arasında geçiş yapmanızı de sağlar. **IDE Gezginine** erişmek için iki komuttan birini kullanarak, geçiş yapmak istediğiniz sıraya bağlı olarak araç pencereleri arasında geçiş yapabilirsiniz. `Window.PreviousToolWindowNav`, en son erişilen dosyaya taşımanızı sağlar ve `Window.NextToolWindowNav` ' i ters sırada taşımanızı sağlar. **Genel geliştirme ayarları** **SHIFT**+**alt**+**F7** `Window.PreviousDocumentWindowNav` ve **alt**+**F7** 0 ' a atar.
 
 > [!NOTE]
-> Kullanmakta olduğunuz bir ayarlar bileşimi bu komutuna atanmış kısayol tuş bileşimi zaten yoksa, kendi özel komut kullanarak atayabilirsiniz **klavye** sayfasının **seçenekleri** iletişim bir kutu. Daha fazla bilgi için [tanımlayın ve klavye kısayollarını özelleştirme](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+> Kullandığınız ayarlar birleşimine bu komuta atanmış kısayol tuşu birleşimi zaten yoksa, **Seçenekler** Iletişim kutusunun **klavye** sayfasını kullanarak kendi özel komutunuzu atayabilirsiniz. Daha fazla bilgi için bkz. [klavye kısayollarını tanımlamak ve özelleştirmek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
-### <a name="to-switch-to-a-specific-tool-window-in-the-ide"></a>IDE'nin belirli araç penceresine geçin
+### <a name="to-switch-to-a-specific-tool-window-in-the-ide"></a>IDE 'de belirli bir araç penceresine geçiş yapmak için
 
-- Tuşuna **Alt**+**F7** görüntülenecek **haldeyken IDE Gezgini'ni**. Basılı **Alt** anahtarı ve ENTER tuşuna **F7** geçmek için istediğinize penceresi tekrar tekrar seçtiğiniz kadar.
+- **IDE Gezginini**göstermek için **alt**+**F7** tuşuna basın. Geçiş yapmak istediğiniz pencereyi seçene kadar **alt** tuşunu basılı tutun ve **F7** tuşuna basın.
 
     > [!TIP]
-    > Hangi geçtiğiniz sırasını tersine çevirmek için **etkin aracı Windows** listesinde, basılı **Shift**+**Alt** anahtarları ve ENTER tuşuna **F7**.
+    > **Etkin araç pencereleri** listesinden gittiğiniz sırayı tersine çevirmek için **SHIFT**+**alt** tuşlarını basılı tutun ve **F7**tuşuna basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

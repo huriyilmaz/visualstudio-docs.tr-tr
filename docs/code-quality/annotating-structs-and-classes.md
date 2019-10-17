@@ -24,12 +24,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cff36760a84821a33dcdb1ee4cc6842cd40aee0
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: ac3d6225bc765ec404784589d2faa06f155265ab
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72015971"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446290"
 ---
 # <a name="annotating-structs-and-classes"></a>Yapıları ve Sınıfları Yorumlama
 
@@ -45,7 +45,7 @@ Struct ve Class üyelerine, ınvarıant gibi davranan ek açıklamaları kullana
 
      @No__t-0 ile belirtilen öğeler (veya bayt) içinde yazılabilir boyutu olan bir alan.
 
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`, `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
 
      @No__t-0 tarafından belirtilen öğeler (veya bayt) ve okunabilir olan bu öğelerin (bayt) `count` ' de, yazılabilir boyutu olan bir alan.
 

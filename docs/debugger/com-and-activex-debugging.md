@@ -21,25 +21,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b37522fec0438278f8cf063637132b146b3d3748
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 701a0096e89123fc9c5445805bb43777735c0924
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563913"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72435921"
 ---
 # <a name="com-and-activex-debugging"></a>COM ve ActiveX Hata Ayıklaması
-Bu bölümde, hata ayıklama COM uygulamaları ve ActiveX denetimleri hakkında ipuçları sağlar.
+Bu bölümde, COM uygulamalarında ve ActiveX denetimlerinde hata ayıklama hakkında ipuçları verilmektedir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [COM sunucusunda ve kapsayıcısında hata ayıklama](../debugger/com-server-and-container-debugging.md) COM uygulamalarında hata ayıklaması yaparken dair özel hususlar değinmektedir. Sorunlar şunlardır: COM sunucusunda ve aynı çözüm içinde iki proje kullanarak, işlem sınırları arasında Git çağrıları oturum izleme, geri çağırma işlevlerde kesme noktalarını ayarlamadan ve arasında ve kapsayıcılar ve sunucular içine Adımlama kapsayıcı hata ayıklama.
+ [Com sunucusu ve kapsayıcı hata ayıklaması](../debugger/com-server-and-container-debugging.md) COM uygulamalarında hata ayıklarken özel önemli noktalara değinin. Sorunlar şunlardır: aynı çözüm içinde iki proje kullanarak bir COM sunucusunda ve kapsayıcıda hata ayıklama, işlem sınırları arasında gidip gelen aramalara izleme, geri çağırma işlevlerinde kesme noktaları ayarlama ve kapsayıcılara ve sunuculara atlama.
 
- [Nasıl yapılır: Bir ActiveX denetiminde hata ayıklama](../debugger/how-to-debug-an-activex-control.md) ActiveX denetimlerinde hata ayıklama hakkında bilgi içerir. Bu içerir: belirli bir kapsayıcıda benzetimi ve kapsayıcının kodun içine Adımlama bir veri bağımlı ActiveX denetiminde hata ayıklama nasıl ActiveX denetiminizin kodu yürütür, görmek hata ayıklama oturumu için bir kapsayıcı belirtme.
+ [Nasıl yapılır: ActiveX denetiminde hata ayıklama](../debugger/how-to-debug-an-activex-control.md) ActiveX denetimlerinde hata ayıklama hakkında bilgi içerir. Buna şunlar dahildir: ActiveX denetiinizdeki kodun nasıl yürütüldüğü, veri bağlantılı ActiveX denetiminde hata ayıklama, belirli bir kapsayıcının benzetimini yapma ve kapsayıcının koduna atlama gibi bir kapsayıcı belirtme.
 
- [COM hata ayıklama araçları](../debugger/com-debugging-tools.md) görüntüleyiciler ve COM uygulamanızı hata ayıklama faydalı olabilecek örnek uygulamaları listeler.
+ [Com hata ayıklama araçları](../debugger/com-debugging-tools.md) COM uygulamanızda hata ayıklama yararlı olabilecek görüntüleyicilerin ve örnek uygulamaların listesini görüntüler.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md) hata ayıklama belgesinin en geniş bölümlerine bağlantılar sağlar. Bilgileri içerir: hata ayıklayıcı, ayarları ve hazırlığı yeni nedir, özel durumları, kesme noktaları, Düzenle ve devam et, hata ayıklama yönetilen kodu, Visual C++ projelerinde hata ayıklama, hata ayıklama COM ve ActiveX, DLL'lerinde hata ayıklama, SQL ve kullanıcı hata ayıklama arabirimi başvuruları.
+ [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md) Hata ayıklama belgelerinin daha büyük bölümlerine bağlantılar sağlar. Bilgiler şunları içerir: hata ayıklayıcıdaki yenilikler, ayarlar ve hazırlık, kesme noktaları, özel durumları işleme, düzenleme ve devam etme, yönetilen kodda C++ hata ayıklama, hata ayıklama, hata ayıklama, SQL ve ActiveX, hata ayıklama dll 'leri ve Kullanıcı arabirim başvuruları.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

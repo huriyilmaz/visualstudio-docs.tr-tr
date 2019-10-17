@@ -1,5 +1,5 @@
 ---
-title: Kod çözümleme kural kümesi başvurusu
+title: Kod analizi kural kümesi başvurusu
 ms.date: 04/04/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0222dab568ce421c3bd87474b956c82aab4d2683
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: da0d70af989d759df94eb2d22606ad90373936ad
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585245"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448838"
 ---
 # <a name="code-analysis-rule-set-reference"></a>Kod analizi kural kümesi başvurusu
 
@@ -23,9 +23,9 @@ Visual Studio 'da yönetilen kod projeleri için eski analizler yapılandırdı�
 > [!NOTE]
 > Bu bölümdeki kural kümeleri eski Analize aittir. Kod Çözümleyicisi paketleri için kullanılabilen kural kümeleri hakkında daha fazla bilgi için bkz. [kural kümelerini kod Çözümleyicileri Ile kullanma](analyzer-rule-sets.md).
 
-Ya da bu yerleşik kural kümelerinden birini kullanabilir veya yapabilecekleriniz [bir kural kümesi özelleştirme](../code-quality/how-to-create-a-custom-rule-set.md) proje gereksinimlerinizi karşılayacak şekilde. Özel bir kural kümesinde aynı kuralı içeren birden çok kural kümesi eklerseniz, bu kural özel kural kümesinde yalnızca bir kez görünür.
+Bu yerleşik kural kümelerinden birini kullanabilir ya da [bir kural kümesini](../code-quality/how-to-create-a-custom-rule-set.md) proje gereksinimlerinize uyacak şekilde özelleştirebilirsiniz. Özel bir kural kümesinde aynı kuralı içeren birden çok kural kümesi eklerseniz, bu kural özel kural kümesinde yalnızca bir kez görünür.
 
-Bu bölümdeki konular, yerleşik kuralı açıklayın kümeleri ve kurallar (veya uyarılar) içerirler.
+Bu bölümdeki konular, yerleşik kural kümelerini ve içerdikleri kuralları (veya uyarıları) anlatmaktadır.
 
 | Kural kümesi | Dahil edilen kurallar |
 | - | - |

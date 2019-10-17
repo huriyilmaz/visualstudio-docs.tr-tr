@@ -11,16 +11,16 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c68bb94a66be2c9fc1da4365cb77adf8d1330a1
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 4beaff14e896eae15d4ce68acf35331d03203246
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163016"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445640"
 ---
-# <a name="quickstart-code-analysis-for-cc"></a>Hızlı Başlangıç: C/C++ için kod analizi
+# <a name="quickstart-code-analysis-for-cc"></a>Hızlı başlangıç: C/C++ için kod analizi
 
-Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanızın kalitesini artırabilirsiniz. Bu, yaygın sorunları, iyi programlama uygulaması ihlallerini veya test aracılığıyla bulmanın zor olduğu kusurları bulmanıza yardımcı olabilir. Geçerli olan, ancak yine de siz veya kodunuzu kullanan diğer kişilerin sorunlarına neden olabilir, belirli bir kod desenleri için Kod Analizi arar çünkü kod çözümleme uyarıları derleyici hataları ve Uyarıları farklılık gösterir.
+Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanızın kalitesini artırabilirsiniz. Bu, yaygın sorunları, iyi programlama uygulaması ihlallerini veya test aracılığıyla bulmanın zor olduğu kusurları bulmanıza yardımcı olabilir. Kod Analizi, derleyici hatalarından ve uyarılarından farklıdır, ancak sizin için veya kodunuzu kullanan diğer kişiler için hala sorun oluşturabilir.
 
 ## <a name="configure-rule-sets-for-a-project"></a>Bir proje için kural kümelerini yapılandırma
 
@@ -28,7 +28,7 @@ Kod analizini, C veya C++ Code 'da düzenli olarak çalıştırarak uygulamanız
 
 2. İsteğe bağlı olarak, **yapılandırma** ve **Platform** listelerinde, yapı yapılandırması ve hedef platform ' u seçin.
 
-3. Seçili yapılandırma kullanarak proje oluşturulan her zaman, Kod Analizi çalıştırmak için seçin **derlemede kod analizini etkinleştir** onay kutusu. Ayrıca, **Çözümle** menüsünü açıp daha sonra *ProjectName* **üzerinde Kod analizini Çalıştır** ' ı seçip **dosya üzerinde Kod analizini**Çalıştır ' ı seçerek Kod analizini el ile de çalıştırabilirsiniz.
+3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için, **derlemede Kod analizini etkinleştir** onay kutusunu seçin. Ayrıca, **Çözümle** menüsünü açıp daha sonra *ProjectName* **üzerinde Kod analizini Çalıştır** ' ı seçip **dosya üzerinde Kod analizini**Çalıştır ' ı seçerek Kod analizini el ile de çalıştırabilirsiniz.
 
 4. Kullanmak istediğiniz [kural kümesini](../code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run.md) seçin veya [özel bir kural kümesi](../code-quality/how-to-create-a-custom-rule-set.md)oluşturun. LLVM/Clang-CL kullanılıyorsa bkz. Clang-Tidy analiz seçeneklerini yapılandırmak için [Visual Studio 'Da Clang-Tidy kullanma](../code-quality/clang-tidy.md) .
 
@@ -69,17 +69,17 @@ Belirli bir uyarıyı çözümlemek için Hata Listesi uyarının başlığını
 
 Bir uyarı seçtiğinizde, uyarıya neden olan kod satırı, Visual Studio kod Düzenleyicisi 'nde vurgulanır.
 
-Sorun anladıktan sonra kodunuzu çözebilirsiniz. Ardından, uyarının artık Hata Listesi göründüğünden ve Düzeltmelerinizin yeni bir uyarı gerçekleştirmediğinden emin olmak için kod analizini yeniden çalıştırın.
+Sorunu anladıktan sonra kodunuzda çözebilirsiniz. Ardından, uyarının artık Hata Listesi göründüğünden ve Düzeltmelerinizin yeni bir uyarı gerçekleştirmediğinden emin olmak için kod analizini yeniden çalıştırın.
 
 ## <a name="suppress-code-analysis-warnings"></a>Kod Analizi uyarılarını gösterme
 
-Kod Analizi uyarısı düzeltmemeyi ne zaman karar verebilirsiniz zamanlar vardır. Uyarı çözümleme sorunu kodunuzun tüm gerçek uygulamasında ortaya çıkacağını olasılık ile ilgili çok fazla değiştirilemeyen gerektirir karar verebilirsiniz. Veya uyarıda kullanılan analiz belirli bir içerik için uygun olduğunu düşündüğünüz. Uyarıları artık Hata Listesi görünmeyecek şekilde tek tek izleyebilirsiniz.
+Kod Analizi uyarısının düzeltilmeyeceğine karar verirken zamanlar olabilir. Uyarı çözmenin, kodunuzun gerçek hayatta herhangi bir uygulamada ortaya çıkması olasılığa göre çok fazla kaynak gerektirir. Ya da uyarıda kullanılan çözümlemenin belirli bir bağlam için uygun olmadığından emin olabilirsiniz. Uyarıları artık Hata Listesi görünmeyecek şekilde tek tek izleyebilirsiniz.
 
 Bir uyarıyı bastırmak için:
 
 1. Ayrıntılı bilgiler görüntülenmiyorsa, genişletilecek uyarının başlığını seçin.
 
-2. Seçin **eylemleri** Uyarı alt kısmındaki bağlantı.
+2. Uyarının altındaki **Eylemler** bağlantısını seçin.
 
 3. **Iletiyi Gizle** ' yi ve ardından **kaynak '** ı seçin.
 
@@ -101,11 +101,11 @@ Visual Studio içinden hataları günlüğe kaydetmek için çalışma öğesi i
 
 ## <a name="search-and-filter-code-analysis-results"></a>Kod analizi sonuçlarını arama ve filtreleme
 
-Uzun listesi uyarı iletilerini arayabilir ve çoklu proje çözümlerinde uyarıları filtreleyebilirsiniz.
+Uyarı iletilerinin uzun listelerinde arama yapabilir ve çok projeli çözümlerde uyarıları filtreleyebilirsiniz.
 
-- **Uyarıları başlığa veya uyarı kimliğine göre filtrelemek için**: Arama kutusuna anahtar sözcüğü girin.
+- **Uyarıları başlığa veya uyarı kimliğine göre filtrelemek için**: arama kutusuna anahtar sözcüğü girin.
 
-- **Uyarıları önem derecesine göre filtrelemek için**: Varsayılan olarak, kod analizi iletilerine bir **Uyarı**önem derecesi atanır. Bir veya daha fazla iletinin önem derecesini özel bir kural kümesinde **hata** olarak atayabilirsiniz. **Hata listesi** **önem derecesi** sütununda, açılan oku ve ardından filtre simgesini seçin. Yalnızca ilgili önem derecesine atanmış iletileri göstermek için **Uyarı** veya **hata** ' ı seçin. Tüm iletileri göstermek için **Tümünü Seç ' i** seçin.
+- **Uyarıları önem derecesine göre filtrelemek için**: varsayılan olarak, kod analizi Iletilerine bir **Uyarı**önem derecesi atanır. Bir veya daha fazla iletinin önem derecesini özel bir kural kümesinde **hata** olarak atayabilirsiniz. **Hata listesi** **önem derecesi** sütununda, açılan oku ve ardından filtre simgesini seçin. Yalnızca ilgili önem derecesine atanmış iletileri göstermek için **Uyarı** veya **hata** ' ı seçin. Tüm iletileri göstermek için **Tümünü Seç ' i** seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

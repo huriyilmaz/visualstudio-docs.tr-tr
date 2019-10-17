@@ -9,14 +9,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0b192b29190d530d22943e8ba2a396ae1fe9ad87
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 26cd267f80f8c7c220771a5c2220d22b66929051
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975120"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448932"
 ---
-# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Nasıl yapılır: Yönetilen kod için tam çözüm analizini etkinleştirme ve devre dışı bırakma
+# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Nasıl yapılır: yönetilen kod için tam çözüm analizini etkinleştirme ve devre dışı bırakma
 
 *Tam çözüm Analizi* , kod analizinin, düzenleyicide açık C# olup olmamasından bağımsız olarak, Çözümdeki tüm veya Visual Basic dosyaları incelediği anlamına gelir. Varsayılan olarak, tam çözüm Analizi Visual Basic için *etkinleştirilmiştir* ve için C# *devre dışı bırakılır* .
 
@@ -44,4 +44,4 @@ Aşağıdaki görüntüde, tam çözüm analizini devre dışı bıraktıktan so
 
 Visual Studio, 200 MB veya daha az sistem belleği olduğunu algılarsa, etkinleştirilirse tam çözüm analizini (ve diğer diğer özellikleri) otomatik olarak devre dışı bırakır. Bu gerçekleşirse, Visual Studio 'Nun bazı özellikleri devre dışı bırakıldığını bildiren bir uyarı görüntülenir. Bir düğme, isterseniz tam çözüm analizini yeniden yapılandırmanızı sağlar.
 
-![Tam çözüm analizini askıya uyarı metni](../code-quality/media/fsa_alert.png)
+![Tam çözüm analizini askıya alarak uyarı metni](../code-quality/media/fsa_alert.png)

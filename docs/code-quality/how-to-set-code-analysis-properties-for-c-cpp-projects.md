@@ -18,12 +18,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c27300244998765d13d485d617c17c5032bad7b
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 27f3d68d28b8d1799c52fcf83c6a00dc5f81f48a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163044"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448910"
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>Nasıl yapılır: C/C++ Projeleri için Kod Analizi Özelliklerini Ayarlama
 

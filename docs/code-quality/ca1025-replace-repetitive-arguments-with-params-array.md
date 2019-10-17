@@ -1,5 +1,5 @@
 ---
-title: 'CA1025: Yinelenen bağımsız değişkenleri params dizisiyle değiştirin'
+title: 'CA1025: Tekrarlanan bağımsız değişkenleri params dizisi ile değiştirin'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,27 +14,27 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f65d64dd4e881c41b17cd7cb9dc072a6fe800766
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: a6b6c45a8a56cab3927355fc4f03c541bcffc1cf
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236142"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446678"
 ---
-# <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: Yinelenen bağımsız değişkenleri params dizisiyle değiştirin
+# <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: Tekrarlanan bağımsız değişkenleri params dizisi ile değiştirin
 
 |||
 |-|-|
 |TypeName|ReplaceRepetitiveArgumentsWithParamsArray|
 |CheckId|CA1025|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
 Ortak bir türdeki ortak veya korumalı yöntemin üçten fazla parametresi vardır ve son üç parametresi aynı türde.
 
 ## <a name="rule-description"></a>Kural açıklaması
-Bağımsız değişkenlerin tam sayısı bilindiğinde ve değişken bağımsız değişkenleri aynı türde olduğunda veya aynı türde bir değer geçirirse tekrarlanabilir bağımsız değişkenler yerine bir parametre dizisi kullanın. Örneğin, <xref:System.Console.WriteLine%2A> yöntemi herhangi bir <xref:System.Object> sayıda bağımsız değişken kabul etmek için bir parametre dizisi kullanan genel amaçlı bir aşırı yükleme sağlar.
+Bağımsız değişkenlerin tam sayısı bilindiğinde ve değişken bağımsız değişkenleri aynı türde olduğunda veya aynı türde bir değer geçirirse tekrarlanabilir bağımsız değişkenler yerine bir parametre dizisi kullanın. Örneğin <xref:System.Console.WriteLine%2A> yöntemi, herhangi bir sayıda <xref:System.Object> bağımsız değişkeni kabul etmek için bir parametre dizisi kullanan genel amaçlı bir aşırı yükleme sağlar.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 Bu kuralın ihlalini onarmak için yinelenen bağımsız değişkenleri bir parametre dizisi ile değiştirin.

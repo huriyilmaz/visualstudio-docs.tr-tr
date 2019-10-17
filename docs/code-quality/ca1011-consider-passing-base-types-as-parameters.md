@@ -1,5 +1,5 @@
 ---
-title: 'CA1011: Parametre olarak temel türleri geçmeyi düşünün'
+title: 'CA1011: Temel türleri parametre olarak geçirmeyi düşünün'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,20 +18,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: dcb5937f58088684e7bfc204ab4143434b0684ae
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: fbb807f7146c781d2b97cf80f2e78c8beb5c38b4
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236403"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441674"
 ---
-# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Parametre olarak temel türleri geçmeyi düşünün
+# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Temel türleri parametre olarak geçirmeyi düşünün
 
 |||
 |-|-|
 |TypeName|ConsiderPassingBaseTypesAsParameters|
 |CheckId|CA1011|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
@@ -52,7 +52,7 @@ Bu kuraldan bir uyarıyı gizlemek güvenlidir
 
 - yöntemi, türetilmiş tür tarafından belirtilen belirli işlevselliği gerektiriyorsa
 
-     \- veya -
+     \- veya-
 
 - yalnızca türetilmiş tür veya daha türetilmiş bir tür metoduna zorlamak için yöntemine geçirilir.
 
@@ -60,7 +60,7 @@ Bu durumlarda, derleyici ve çalışma zamanı tarafından belirtilen güçlü t
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, yalnızca bir `ManipulateFileStream` <xref:System.IO.FileStream> nesnesi ile kullanılabilen ve bu kuralı ihlal eden bir yöntemi gösterir. İkinci bir yöntem `ManipulateAnyStream`, <xref:System.IO.FileStream> parametresini bir <xref:System.IO.Stream>kullanarak değiştirerek kuralını karşılar.
+Aşağıdaki örnek, yalnızca bir <xref:System.IO.FileStream> nesnesi ile kullanılabilen ve bu kuralı ihlal eden `ManipulateFileStream` yöntemini gösterir. İkinci bir yöntem olan `ManipulateAnyStream`, <xref:System.IO.FileStream> parametresini <xref:System.IO.Stream> kullanarak değiştirerek kuralı karşılar.
 
 [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]
 [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)]
@@ -68,4 +68,4 @@ Aşağıdaki örnek, yalnızca bir `ManipulateFileStream` <xref:System.IO.FileSt
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-[CA1059 Üyeler belirli somut türleri kullanıma sunmamalıdır](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+[CA1059: Üyeler belli somut türleri göstermemelidir](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

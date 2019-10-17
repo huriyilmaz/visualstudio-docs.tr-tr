@@ -1,5 +1,5 @@
 ---
-title: "CA1060: P-Invokes'u NativeMethods sınıfına taşıyın"
+title: 'CA1060: P-Invokes öğesini NativeMethods sınıfına taşıyın'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,20 +17,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: cfa705654a5cc4122e5ee554fe050722d7883970
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: da4713c32e4e9313a55ea2944bf4990a0b9c29c3
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235477"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440816"
 ---
-# <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060: P/Invokes'u NativeMethods sınıfına taşıyın
+# <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060: P/Invokes öğesini NativeMethods sınıfına taşıyın
 
 |||
 |-|-|
 |TypeName|MovePInvokesToNativeMethodsClass|
 |CheckId|CA1060|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
@@ -39,7 +39,7 @@ Bir yöntem, yönetilmeyen koda erişmek için platform çağırma hizmetleri 'n
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-<xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> Özniteliği kullanılarak işaretlenenler veya içindeki `Declare` [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]anahtar sözcüğü kullanılarak tanımlanan Yöntemler gibi platform çağırma yöntemleri, yönetilmeyen koda erişin. Bu yöntemler aşağıdaki sınıflardan birinde olmalıdır:
+@No__t-0 özniteliği kullanılarak işaretlenenler veya [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ' deki `Declare` anahtar sözcüğü kullanılarak tanımlanan Yöntemler gibi platform çağırma yöntemleri, yönetilmeyen koda erişim. Bu yöntemler aşağıdaki sınıflardan birinde olmalıdır:
 
 - **NativeMethods** -Bu sınıf, yönetilmeyen kod izni için yığın izlenecek yol göster ' i göstermez. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> bu sınıfa uygulanmamalıdır.) Bu sınıf, bir yığın yürüme gerçekleştirileceği için her yerde kullanılabilecek yöntemler içindir.
 
@@ -47,7 +47,7 @@ Bir yöntem, yönetilmeyen koda erişmek için platform çağırma hizmetleri 'n
 
 - **UnsafeNativeMethods** -Bu sınıf, yönetilmeyen kod izni için yığın izlenecek yol gösterir. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> bu sınıfa uygulanır.) Bu sınıf potansiyel olarak tehlikeli Yöntemler içindir. Bu yöntemlerin herhangi bir çağırıcısı, kullanımın güvenli olduğundan emin olmak için, yığın ilerlemesinin gerçekleştirilmediğinden emin olmak için tam bir güvenlik incelemesi gerçekleştirmelidir.
 
-Bu sınıflar (`Friend`Visual Basic) `internal` olarak tanımlanır ve yeni örneklerin oluşturulmasını engellemek için özel bir Oluşturucu bildirir. Bu sınıflardaki Yöntemler ve `static` `internal` (`Shared` ve `Friend` Visual Basic) olmalıdır.
+Bu sınıflar `internal` (`Friend`, Visual Basic) olarak tanımlanır ve yeni örneklerin oluşturulmasını engellemek için özel bir Oluşturucu bildirir. Bu sınıflardaki Yöntemler `static` ve `internal` (`Shared` ve `Friend` Visual Basic) olmalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 Bu kural ihlalini onarmak için yöntemini uygun **NativeMethods** sınıfına taşıyın. Çoğu uygulama için, P/Invoke 'u **NativeMethods** adlı yeni bir sınıfa taşımak yeterlidir.
@@ -92,7 +92,7 @@ Aşağıdaki örnek, Kernel32. dll ' den **GetTickCount** işlevini sarmalayan b
 ## <a name="unsafenativemethods-example"></a>UnsafeNativeMethods örneği
 
 ### <a name="description"></a>Açıklama
-Güvenli bir şekilde çağrılamayan ve yan etkileri **UnsafeNativeMethods**adlı bir sınıfa yerleştirilecek olan P/Invoke yöntemleri. Bu yöntemlerin kullanıcıya istem dışı olarak gösterilmediğinden emin olmak için dikkatli bir şekilde denetlenmesi gerekir. Kural [CA2118: SuppressUnmanagedCodeSecurityAttribute kullanımını](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md) gözden geçirin bu konuda yardımcı olabilir. Alternatif olarak, yöntemler onları kullandıklarında **UnmanagedCode** yerine talep edilen başka bir izne sahip olmalıdır.
+Güvenli bir şekilde çağrılamayan ve yan etkileri **UnsafeNativeMethods**adlı bir sınıfa yerleştirilecek olan P/Invoke yöntemleri. Bu yöntemlerin kullanıcıya istem dışı olarak gösterilmediğinden emin olmak için dikkatli bir şekilde denetlenmesi gerekir. Rule [CA2118: SuppressUnmanagedCodeSecurityAttribute kullanımını gözden geçirin](../code-quality/ca2118.md) bu konuda yardımcı olabilir. Alternatif olarak, yöntemler onları kullandıklarında **UnmanagedCode** yerine talep edilen başka bir izne sahip olmalıdır.
 
 Aşağıdaki örnekte, User32. dll ' den **ShowCursor** işlevini sarmalayan bir **Cursor. Hide** yöntemi gösterilmektedir.
 

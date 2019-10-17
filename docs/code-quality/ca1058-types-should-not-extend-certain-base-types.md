@@ -1,5 +1,5 @@
 ---
-title: 'CA1058: Türler belirli temel türleri aşmamalıdır'
+title: 'CA1058: Türler belli temel türleri genişletmemelidir'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,20 +14,20 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa1ffbb393700647f12c455c8d1307a77548f2d1
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 8bec913e5352c0028859f03ebda7c5f112db654f
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235487"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446551"
 ---
-# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Türler belirli temel türleri aşmamalıdır
+# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Türler belli temel türleri genişletmemelidir
 
 |||
 |-|-|
 |TypeName|TypesShouldNotExtendCertainBaseTypes|
 |CheckId|CA1058|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
@@ -47,9 +47,9 @@ Bu kural varsayılan olarak yalnızca dışarıdan görünür türlere bakar, an
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Özel durumlar, <xref:System> ad <xref:System.Exception?displayProperty=fullName> alanındaki alt sınıflarından veya birini türetmelidir.
+Özel durumlar <xref:System.Exception?displayProperty=fullName> ' dan veya <xref:System> ad alanındaki alt sınıflarından türetmelidir.
 
-Temel alınan nesne modeli veya veri <xref:System.Xml.XmlDocument> kaynağı için bir xml görünümü oluşturmak istiyorsanız, alt sınıfını oluşturmayın.
+Temel alınan nesne modelinin veya veri kaynağının XML görünümünü oluşturmak istiyorsanız <xref:System.Xml.XmlDocument> alt sınıfını oluşturmayın.
 
 ### <a name="non-generic-collections"></a>Genel olmayan Koleksiyonlar
 
@@ -85,7 +85,7 @@ Bu kural ihlalini onarmak için, türü farklı bir temel türden veya genel bir
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
-Bu kuraldan ilgili ihlalleri öğrenmek <xref:System.ApplicationException>için bir uyarı göstermez. Bu kuraldan ilgili ihlalleri öğrenmek <xref:System.Xml.XmlDocument>için bir uyarı görüntülenmesini güvenlidir. Kod daha önce yayınlanmışsa, genel olmayan bir koleksiyon hakkında uyarı bastırmak güvenlidir.
+@No__t-0 hakkında ihlaller için bu kuraldan bir uyarıyı bastırmayın. @No__t-0 hakkında ihlaller için bu kuraldan bir uyarının görüntülenmesini güvenlidir. Kod daha önce yayınlanmışsa, genel olmayan bir koleksiyon hakkında uyarı bastırmak güvenlidir.
 
 ## <a name="configurability"></a>Yapılandırılabilirlik
 

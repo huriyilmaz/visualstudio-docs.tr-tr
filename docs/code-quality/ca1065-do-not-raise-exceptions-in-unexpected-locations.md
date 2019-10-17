@@ -1,5 +1,5 @@
 ---
-title: 'CA1065: Beklenmeyen konumlarda özel durum harekete geçirmeyin'
+title: 'CA1065: Beklenmedik konumlarda özel durumlar harekete geçirmeyin'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,20 +14,20 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 257100be0eb2766ef413854795c934b230e29370
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 93233f4c4fe7d718b128d569ae2fa55858f2453b
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235239"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440588"
 ---
-# <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Beklenmeyen konumlarda özel durum harekete geçirmeyin
+# <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Beklenmedik konumlarda özel durumlar harekete geçirmeyin
 
 |||
 |-|-|
 |TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
 |CheckId|CA1065|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
@@ -66,13 +66,13 @@ Aşağıdaki bölümler bu yöntem türlerini tartışır.
 
 Bir özellik Get yönteminden aşağıdaki özel durumlar oluşturulabilir:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>ve tüm türetme (dahil <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName> ve tüm türetler (<xref:System.ObjectDisposedException?displayProperty=fullName> dahil)
 
-- <xref:System.NotSupportedException?displayProperty=fullName>ve tüm türetme
+- <xref:System.NotSupportedException?displayProperty=fullName> ve tüm türetme işlemleri
 
-- <xref:System.ArgumentException?displayProperty=fullName>(yalnızca dizinli Get 'ten)
+- <xref:System.ArgumentException?displayProperty=fullName> (yalnızca dizinli Get 'ten)
 
-- <xref:System.Collections.Generic.KeyNotFoundException>(yalnızca dizinli Get 'ten)
+- <xref:System.Collections.Generic.KeyNotFoundException> (yalnızca dizinli Get 'ten)
 
 ### <a name="event-accessor-methods"></a>Olay erişimci yöntemleri
 
@@ -80,11 +80,11 @@ Olay erişimcileri özel durum oluşturmayan basit işlemler olmalıdır. Olay i
 
 Aşağıdaki özel durumlar bir olay erişimcisinde oluşturulabilir:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>ve tüm türetme (dahil <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName> ve tüm türetler (<xref:System.ObjectDisposedException?displayProperty=fullName> dahil)
 
-- <xref:System.NotSupportedException?displayProperty=fullName>ve tüm türetme
+- <xref:System.NotSupportedException?displayProperty=fullName> ve tüm türetme işlemleri
 
-- <xref:System.ArgumentException>ve türetme
+- <xref:System.ArgumentException> ve türetme işlemleri
 
 ### <a name="equals-methods"></a>Eşittir yöntemleri
 
@@ -94,7 +94,7 @@ Aşağıdaki **eşittir** yöntemleri özel durum oluşturmaz:
 
 - <xref:System.IEquatable%601.Equals%2A>
 
-Bir **Equals** yöntemi, özel `true` durum `false` oluşturmak yerine veya döndürmelidir. Örneğin, eşittir iki eşleşmeyen tür geçirtiyse, oluşturmak yerine `false` <xref:System.ArgumentException>yalnızca döndürmelidir.
+Bir **Equals** yöntemi, özel durum oluşturmak yerine `true` veya `false` döndürmelidir. Örneğin, eşittir iki eşleşmeyen tür geçirtiyse, <xref:System.ArgumentException> oluşturmak yerine yalnızca `false` döndürmelidir.
 
 ### <a name="gethashcode-methods"></a>GetHashCode yöntemleri
 
@@ -106,11 +106,11 @@ Aşağıdaki **GetHashCode** yöntemleri genellikle özel durum oluşturmaz:
 
 **GetHashCode** her zaman bir değer döndürmelidir. Aksi takdirde, karma tablodaki öğeleri kaybedebilirsiniz.
 
-Bağımsız değişken alan **GetHashCode** sürümleri bir <xref:System.ArgumentException>oluşturabilir. Ancak **Object. GetHashCode** asla bir özel durum oluşturmaz.
+Bir bağımsız değişken alan **GetHashCode** sürümleri, <xref:System.ArgumentException> oluşturabilir. Ancak **Object. GetHashCode** asla bir özel durum oluşturmaz.
 
 ### <a name="tostring-methods"></a>ToString yöntemleri
 
-Hata ayıklayıcı, <xref:System.Object.ToString%2A?displayProperty=fullName> dize biçimindeki nesneler hakkında bilgi görüntülemeye yardımcı olmak için kullanır. Bu nedenle, **ToString** bir nesnenin durumunu değiştirmemelidir ve özel durum oluşturmaz.
+Hata ayıklayıcı, dize biçimindeki nesneler hakkında bilgi görüntülemeye yardımcı olması için <xref:System.Object.ToString%2A?displayProperty=fullName> kullanır. Bu nedenle, **ToString** bir nesnenin durumunu değiştirmemelidir ve özel durum oluşturmaz.
 
 ### <a name="static-constructors"></a>Statik Oluşturucular
 
@@ -122,13 +122,13 @@ Sonlandırıcının bir özel durum oluşturmak, CLR 'nin hızlı bir şekilde b
 
 ### <a name="dispose-methods"></a>Dispose yöntemleri
 
-Bir <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> Yöntem özel durum oluşturmaz. Dispose, genellikle bir yan tümcedeki Temizleme mantığının bir `finally` parçası olarak çağırılır. Bu nedenle, Dispose 'ten özel bir durum açıkça oluşturmak, kullanıcının `finally` yan tümce içinde özel durum işleme eklemesini zorlar.
+@No__t-0 yöntemi özel durum oluşturmaz. Dispose genellikle `finally` yan tümcesindeki Temizleme mantığının bir parçası olarak çağrılır. Bu nedenle, Dispose 'ten özel bir durum açıkça oluşturmak, kullanıcıyı `finally` yan tümcesinin içinde özel durum işleme eklemeye zorlar.
 
 Dispose **(false)** kod yolu hiçbir zaman özel durum oluşturmaz, çünkü Dispose bir sonlandırıcının neredeyse her zaman çağrılır.
 
 ### <a name="equality-operators--"></a>Eşitlik Işleçleri (= =,! =)
 
-Eşittir yöntemlerine benzer şekilde, eşitlik işleçleri `true` veya `false`döndürmelidir ve özel durumlar oluşturmamalıdır.
+Eşittir yöntemlerine benzer şekilde, eşitlik işleçleri `true` veya `false` döndürmelidir ve özel durumlar oluşturmaz.
 
 ### <a name="implicit-cast-operators"></a>Örtük atama Işleçleri
 
@@ -146,7 +146,7 @@ Daha önce listelenen diğer tüm yöntem türleri için mantığı, artık öze
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA2219 Özel durum yan tümcelerinde özel durum yükseltmeyin](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
+- [CA2219: Özel durum yan tümceleri içinde özel durum harekete geçirmeyin](../code-quality/ca2219.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

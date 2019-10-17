@@ -1,5 +1,5 @@
 ---
-title: 'CA1027: Sabit listelerini FlagsAttribute ile işaretleyin'
+title: 'CA1027: Numaralandırmaları FlagsAttribute ile işaretle'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,37 +14,37 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8375d2096417948b19a228d8a4f02accac7c0b5f
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 9fc9dde4aeb3363e542e475c253b292047f5c1c2
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236122"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441369"
 ---
-# <a name="ca1027-mark-enums-with-flagsattribute"></a>CA1027: Sabit listelerini FlagsAttribute ile işaretleyin
+# <a name="ca1027-mark-enums-with-flagsattribute"></a>CA1027: Numaralandırmaları FlagsAttribute ile işaretle
 
 |||
 |-|-|
 |TypeName|MarkEnumsWithFlags|
 |CheckId|CA1027|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Son değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
 
-Bir numaralandırmanın değerleri ikinin üsleridir ve numaralandırmada tanımlanan diğer değerlerin birleşimleridir ve <xref:System.FlagsAttribute?displayProperty=fullName> öznitelik mevcut değildir. Hatalı pozitif sonuçları azaltmak için, bu kural bitişik değerleri olan Numaralandırmalar için bir ihlal raporlamaz.
+Bir numaralandırmanın değerleri iki veya sabit listesi içinde tanımlanan diğer değerlerin birleşimleridir ve <xref:System.FlagsAttribute?displayProperty=fullName> özniteliği mevcut değildir. Hatalı pozitif sonuçları azaltmak için, bu kural bitişik değerleri olan Numaralandırmalar için bir ihlal raporlamaz.
 
 Varsayılan olarak, bu kural yalnızca genel numaralandırmalara bakar, ancak bu [yapılandırılabilir](#configurability).
 
 ## <a name="rule-description"></a>Kural açıklaması
 
-Bir numaralandırma ilişkili adlandırılmış sabitler kümesini tanımlayan değer türüdür. Adlandırılmış <xref:System.FlagsAttribute> sabitleri anlamlı bir şekilde birleştirilebilecek bir numaralandırmaya Uygula. Örneğin, bir uygulamadaki haftanın günleri, hangi gün kaynakların kullanılabilir olduğunu izleyen bir sabit listesini göz önünde bulundurun. Her bir kaynağın kullanılabilirliği, <xref:System.FlagsAttribute> mevcut olan numaralandırma kullanılarak kodlanmışsa, tüm gün bileşimleri temsil edilebilir. Özniteliği olmadan haftanın yalnızca bir günü temsil edilebilir.
+Bir numaralandırma ilişkili adlandırılmış sabitler kümesini tanımlayan değer türüdür. Adlandırılmış sabitleri anlamlı bir şekilde birleştirilebilecek bir numaralandırmaya <xref:System.FlagsAttribute> uygulayın. Örneğin, bir uygulamadaki haftanın günleri, hangi gün kaynakların kullanılabilir olduğunu izleyen bir sabit listesini göz önünde bulundurun. Her bir kaynağın kullanılabilirliği, <xref:System.FlagsAttribute> olan sabit listesi kullanılarak kodlanmışsa, tüm gün bileşimleri temsil edilebilir. Özniteliği olmadan haftanın yalnızca bir günü temsil edilebilir.
 
 Combinable numaralandırmaları depolayan alanlar için, tek tek numaralandırma değerleri alanındaki bit grupları olarak değerlendirilir. Bu nedenle, bu tür alanlar bazen *bit alanları*olarak adlandırılır. Bir bit alanındaki depolama için numaralandırma değerlerini birleştirmek için, Boole koşullu işleçlerini kullanın. Belirli bir numaralandırma değerinin var olup olmadığını anlamak üzere bir bit alanını test etmek için, Boole mantıksal işleçlerini kullanın. Bir bit alanının birleştirilmiş numaralandırma değerlerini doğru bir şekilde depolaması ve alması için, numaralandırmada tanımlanan her bir değer ikisinin bir üssü olmalıdır. Bu nedenle, Boolean mantıksal işleçler alanda depolanan bireysel numaralandırma değerlerini ayıklayamayacak.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
 
-Bu kuralın ihlalini onarmak için, numaralandırmaya ekleyin <xref:System.FlagsAttribute> .
+Bu kural ihlalini onarmak için, numaralandırmaya <xref:System.FlagsAttribute> ekleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 
@@ -62,13 +62,13 @@ Bu seçeneği yalnızca bu kural için, tüm kurallar için veya bu kategorideki
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `DaysEnumNeedsFlags` kullanma <xref:System.FlagsAttribute> gereksinimlerini karşılayan ancak içermeyen bir numaralandırmadır. Numaralandırmada iki üsleri olan ancak yanlış bir şekilde belirten <xref:System.FlagsAttribute>değer yok. `ColorEnumShouldNotHaveFlag` Bu, CA2217 [kuralını ihlal ediyor: Numaralandırmaları FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)ile işaretlemeyin.
+Aşağıdaki örnekte, `DaysEnumNeedsFlags`, <xref:System.FlagsAttribute> ' i kullanma gereksinimlerini karşılayan ancak sahip olmadığı bir numaralandırmadır. @No__t-0 numaralandırması ikinin üsleri olan, ancak yanlış <xref:System.FlagsAttribute> belirtiyor. Bu kural CA2217 ihlal ediyor [: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217.md).
 
 [!code-csharp[FxCop.Design.EnumFlags#1](../code-quality/codesnippet/CSharp/ca1027-mark-enums-with-flagsattribute_1.cs)]
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA2217 Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+- [CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

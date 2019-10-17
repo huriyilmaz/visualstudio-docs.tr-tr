@@ -1,5 +1,5 @@
 ---
-title: 'CA1409: COM görünebilir türler oluşturulabilir olmalıdır'
+title: 'CA1409: Com görünebilir türler oluşturulabilmelidir'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54630b7fba69ef96a2c08486e535ae45d8e614b8
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 402ce13b55921045f8e06d99bbe6b1e3918e457a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234758"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440286"
 ---
-# <a name="ca1409-com-visible-types-should-be-creatable"></a>CA1409: COM görünebilir türler oluşturulabilir olmalıdır
+# <a name="ca1409-com-visible-types-should-be-creatable"></a>CA1409: Com görünebilir türler oluşturulabilmelidir
 
 |||
 |-|-|
@@ -36,18 +36,18 @@ ms.locfileid: "71234758"
 ## <a name="rule-description"></a>Kural açıklaması
 Ortak varsayılan oluşturucusu olmayan bir tür COM istemcileri tarafından oluşturulamaz. Ancak, tür oluşturmak ve istemciye geçirmek (örneğin, bir yöntem çağrısının dönüş değeri aracılığıyla) için başka bir anlamı varsa, bu tür COM istemcileri tarafından yine de erişilebilir.
 
-Kural öğesinden <xref:System.Delegate?displayProperty=fullName>türetilmiş türleri yoksayar.
+Kural <xref:System.Delegate?displayProperty=fullName> ' dan türetilmiş türleri yoksayar.
 
 Varsayılan olarak, aşağıdakiler COM 'a görünür: derlemeler, ortak türler, ortak türlerdeki ortak örnek üyeleri ve tüm ortak değer türleri üyeleri.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Bu kural ihlalini onarmak için, genel bir varsayılan oluşturucu ekleyin veya türünden kaldırın <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> .
+Bu kural ihlalini onarmak için genel bir varsayılan oluşturucu ekleyin veya <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> ' ı türden kaldırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 Nesneyi oluşturmak ve COM istemcisine geçirmek için başka yollar sağlanmışsa, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1017 Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+[CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

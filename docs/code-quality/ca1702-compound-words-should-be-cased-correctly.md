@@ -1,5 +1,5 @@
 ---
-title: 'CA1702: Bileşik sözcüklerin büyük küçük harfleri doğru olmalıdır'
+title: 'CA1702: Bileşik sözcüklerin küçük/büyük harfleri doğru yazılmalıdır'
 ms.date: 03/28/2018
 ms.topic: reference
 f1_keywords:
@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5480d3dde926dfe31b018a5cd0b1ea6a5813063b
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: ea3285bfd5769a2bd37363d5a9eb6179b9cef563
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234329"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72439905"
 ---
-# <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702: Bileşik sözcüklerin büyük küçük harfleri doğru olmalıdır
+# <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702: Bileşik sözcüklerin küçük/büyük harfleri doğru yazılmalıdır
 
 |||
 |-|-|
@@ -65,9 +65,9 @@ Bileşik sözcüğün her iki bölümü de yazım sözlüğü tarafından tanın
 
 ## <a name="related-rules"></a>İlgili kurallar
 
-- [CA1701 Kaynak dizesi bileşik sözcüklerin doğru şekilde küçük harf oluşturulması gerekir](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
-- [CA1709 Tanımlayıcılar doğru şekilde yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708 Tanımlayıcılar, büyük/küçük harf bakımından farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1701: Kaynak dize bileşik sözcüklerinin küçük/büyük harfleri doğru yazılmalıdır](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

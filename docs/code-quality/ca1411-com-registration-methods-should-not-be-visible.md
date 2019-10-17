@@ -1,5 +1,5 @@
 ---
-title: 'CA1411: COM kayıt metotları görünebilir olmamalıdır'
+title: 'CA1411: COM kayıt yöntemleri görünebilir olmamalıdır'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e9582fb6bbdbda8aefbb60e2c69d16380eec3dff
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: b39e16b2a94a22582b9f369e647676541fa4220d
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234750"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440178"
 ---
-# <a name="ca1411-com-registration-methods-should-not-be-visible"></a>CA1411: COM kayıt metotları görünebilir olmamalıdır
+# <a name="ca1411-com-registration-methods-should-not-be-visible"></a>CA1411: COM kayıt yöntemleri görünebilir olmamalıdır
 
 |||
 |-|-|
@@ -35,13 +35,13 @@ ms.locfileid: "71234750"
 
 ## <a name="cause"></a>Sebep
 
-Ya da <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName>özniteliğiyleişaretlenmişbiryöntem dışarıdangörünür.<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName>
+@No__t-0 veya <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> özniteliğiyle işaretlenmiş bir yöntem dışarıdan görünür.
 
 ## <a name="rule-description"></a>Kural açıklaması
-Bir derleme bileşen nesne modeli (COM) ile kaydettirilirse, derleme içindeki her bir COM görünebilir türü için kayıt defterine giriş eklenir. <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> Ve<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> öznitelikleri ile işaretlenen Yöntemler, sırasıyla kayıt/kayıt silme işlemlerine özgü Kullanıcı kodunu çalıştırmak için, kayıt ve kayıt silme işlemi sırasında çağrılır. Bu kod bu işlemlerin dışında çağrılmamalıdır.
+Bir derleme bileşen nesne modeli (COM) ile kaydettirilirse, derleme içindeki her bir COM görünebilir türü için kayıt defterine giriş eklenir. @No__t-0 ve <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> öznitelikleri ile işaretlenen Yöntemler sırasıyla, bu türlerin kaydına/kaydının kaydedilmesine özgü Kullanıcı kodu çalıştırmak için, kayıt ve kayıt silme işlemlerinde çağrılır. Bu kod bu işlemlerin dışında çağrılmamalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri çözme
-Bu kural `private` ihlalini onarmak için, yönteminin erişilebilirliğini veya `internal` (`Friend` içinde [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) olarak değiştirin.
+Bu kural ihlalini onarmak için, yönteminin erişilebilirliğini `private` veya `internal` (`Friend` [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) olarak değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarıların ne zaman bastırılamıyor
 Bu kuraldan uyarıyı bastırmayın.
@@ -53,7 +53,7 @@ Aşağıdaki örnek, kuralı ihlal eden iki yöntemi gösterir.
 [!code-vb[FxCop.Interoperability.ComRegistration2#1](../code-quality/codesnippet/VisualBasic/ca1411-com-registration-methods-should-not-be-visible_1.vb)]
 
 ## <a name="related-rules"></a>İlgili kurallar
-[CA1410 COM kayıt yöntemlerinin eşleşmesi gerekir](../code-quality/ca1410-com-registration-methods-should-be-matched.md)
+[CA1410: COM kayıt yöntemleri eşleşmelidir](../code-quality/ca1410-com-registration-methods-should-be-matched.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
