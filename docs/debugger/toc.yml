@@ -91,7 +91,7 @@
         - name: Değişkenler için belleği görüntüleme
           href: memory-windows.md
         - name: Hata ayıklama sırasında XAML özelliklerini denetleme
-          href: inspect-xaml-properties-while-debugging.md
+          href: ../xaml-tools/inspect-xaml-properties-while-debugging.md?toc=/visualstudio/debugger/toc.json
     - name: Çağrı yığını
       items:
         - name: Çağrı yığınını görüntüleme
@@ -108,9 +108,9 @@
           href: how-to-enable-and-disable-edit-and-continue.md
         - name: Kod değişikliklerini durdurma
           href: how-to-stop-code-changes.md
-        - name: Düzenle ve Devam Et (Visual C++)
+        - name: Düzenle ve Devam Et (C++)
           items:
-            - name: Visual C++ için Düzenle ve Devam Et
+            - name: C++ için Düzenle ve Devam Et
               href: edit-and-continue-visual-cpp.md
             - name: Desteklenen Kod Değişiklikleri (C++)
               href: supported-code-changes-cpp.md
@@ -131,9 +131,9 @@
         - name: XAML Çalışırken Yeniden Yükleme
           items:
             - name: XAML kodu çalıştırarak yazma ve hata ayıklama
-              href: xaml-hot-reload.md
+              href: ../xaml-tools/xaml-hot-reload.md?toc=/visualstudio/debugger/toc.json
             - name: XAML Çalışırken Yeniden Yükleme ile ilgili sorunları giderme
-              href: xaml-hot-reload-troubleshooting.md
+              href: ../xaml-tools/xaml-hot-reload-troubleshooting.md?toc=/visualstudio/debugger/toc.json
         - name: 'F# için Düzenle ve Devam Et desteklenmez'
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: Çıkış penceresine kaydetme
@@ -202,7 +202,7 @@
                   items:
                     - name: C++ hata ayıklama yapılandırması proje ayarları
                       href: project-settings-for-a-cpp-debug-configuration.md
-                    - name: Visual C++'de hata ayıklama özelliklerini etkinleştirme (-D_DEBUG)
+                    - name: C++'de hata ayıklama özelliklerini etkinleştirme (-D_DEBUG)
                       href: enabling-debug-features-in-visual-cpp-d-debug.md
                 - name: Web projeleri özellik sayfası ayarları
                   href: property-pages-settings-for-web-projects.md
@@ -234,7 +234,7 @@
               items:
                 - name: C++ nesnelerinin özel görünümlerini oluşturma
                   href: create-custom-views-of-native-objects.md
-                - name: Visual C++ özel görselleştirici uyumluluğu
+                - name: C++ özel görselleştirici uyumluluğu
                   href: visual-cpp-custom-visualizer-compatibility.md
             - name: Özel görünümler (yönetilen)
               items:
@@ -435,7 +435,7 @@
             - name: Yüklü uygulama paketinin hatalarını ayıklama
               href: debug-installed-app-package.md
             - name: Blend'de XAML hatalarını ayıklama
-              href: debug-xaml-in-blend.md
+              href: ../xaml-tools/debug-xaml-in-blend.md?toc=/visualstudio/debugger/toc.json
             - name: HTML ve CSS
               items:
                 - name: HTML ve CSS hatalarını ayıklama
@@ -500,7 +500,7 @@
           items:
             - name: Yerel kodda hata ayıklama
               href: debugging-native-code.md
-            - name: 'Hata ayıklama hazırlığı: Visual C++ proje türleri'
+            - name: 'Hata ayıklama hazırlığı: C++ proje türleri'
               href: debugging-preparation-visual-cpp-project-types.md
             - name: İyileştirilmiş kodda hata ayıklama
               href: how-to-debug-optimized-code.md

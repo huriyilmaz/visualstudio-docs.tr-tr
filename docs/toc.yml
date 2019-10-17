@@ -563,6 +563,97 @@
               href: ide/class-designer/additional-information-about-errors.md
         - name: Kodunuzu geliştirme
           href: ide/find-and-fix-code-errors.md
+        - name: Windows Forms geliştirme
+          items:
+            - name: Windows Form Tasarımcısı’na genel bakış
+              href: designers/windows-forms-designer-overview.md
+            - name: Windows Form Tasarımcısı’nı kullanmaya başlama
+              href: designers/walkthrough-windows-forms-designer.md
+            - name: Denetimleri düzenleme >>
+              href: /dotnet/framework/winforms/controls/arranging-controls-on-windows-forms
+            - name: Verilere bağlı denetimler oluşturma >>
+              href: /dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form
+            - name: Özel denetimler oluşturma >>
+              href: /dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time
+            - name: Windows Form Tasarımcısı’nda DPI tanımayı devre dışı bırakma
+              href: designers/disable-dpi-awareness.md
+            - name: Başvuru
+              items:
+                - name: System.Windows.Forms API >>
+                  href: /dotnet/api/system.windows.forms
+            - name: Öğreticiler
+              items:
+                - name: 'Öğretici 1: Resim görüntüleyici oluşturma (C#)'
+                  items:
+                    - name: Genel Bakış
+                      displayName: Tutorial 1 Picture viewer
+                      href: ide/tutorial-1-create-a-picture-viewer.md
+                    - name: '1. Adım: Windows Forms Uygulaması projesi oluşturma'
+                      href: ide/step-1-create-a-windows-forms-application-project.md
+                    - name: '2. Adım: Uygulamanızı çalıştırma'
+                      href: ide/step-2-run-your-program.md
+                    - name: '3. Adım: Form özelliklerinizi ayarlama'
+                      href: ide/step-3-set-your-form-properties.md
+                    - name: '4. Adım: TableLayoutPanel denetimi ile formunuzu düzenleme'
+                      href: ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md
+                    - name: '5. Adım: Formunuza denetimler ekleme'
+                      href: ide/step-5-add-controls-to-your-form.md
+                    - name: '6. Adım: Düğme denetimlerinizi adlandırma'
+                      href: ide/step-6-name-your-button-controls.md
+                    - name: '7. Adım: Formunuza iletişim kutusu bileşenleri ekleme'
+                      href: ide/step-7-add-dialog-components-to-your-form.md
+                    - name: '8. Adım: Resim Göster düğmesi olay işleyicisi için kod yazma'
+                      href: ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md
+                    - name: '9. Adım: Kodunuzu gözden geçirme, açıklama ve test etme'
+                      href: ide/step-9-review-comment-and-test-your-code.md
+                    - name: '10. Adım: Ek düğmeler ve onay kutusu için kod yazma'
+                      href: ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
+                    - name: '11. Adım: Uygulamanızı çalıştırma ve diğer özellikleri deneme'
+                      href: ide/step-11-run-your-program-and-try-other-features.md
+                - name: 'Öğretici 2: Zamanlı matematik testi oluşturma (C#)'
+                  items:
+                    - name: Genel Bakış
+                      displayName: Tutorial 2 Timed math quiz
+                      href: ide/tutorial-2-create-a-timed-math-quiz.md
+                    - name: '1. Adım: Proje oluşturma ve formunuza etiketler ekleme'
+                      href: ide/step-1-create-a-project-and-add-labels-to-your-form.md
+                    - name: '2. Adım: Rastgele bir toplama problemi oluşturma'
+                      href: ide/step-2-create-a-random-addition-problem.md
+                    - name: '3. Adım: Geri sayım zamanlayıcısı ekleme'
+                      href: ide/step-3-add-a-countdown-timer.md
+                    - name: '4. Adım: CheckTheAnswer() yöntemi ekleme'
+                      href: ide/step-4-add-the-checktheanswer-parens-method.md
+                    - name: '5. Adım: NumericUpDown denetimleri için Giriş olay işleyicileri ekleme'
+                      href: ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md
+                    - name: '6. Adım: Çıkarma problemi ekleme'
+                      href: ide/step-6-add-a-subtraction-problem.md
+                    - name: '7. Adım: Çarpma ve bölme problemleri ekleme'
+                      href: ide/step-7-add-multiplication-and-division-problems.md
+                    - name: '8. Adım: Testi özelleştirme'
+                      href: ide/step-8-customize-the-quiz.md
+                - name: 'Öğretici 3: Eşleştirme oyunu oluşturma (C#)'
+                  items:
+                    - name: Genel Bakış
+                      displayName: Tutorial 3 Matching game
+                      href: ide/tutorial-3-create-a-matching-game.md
+                    - name: '1. Adım: Proje oluşturma ve formunuza tablo ekleme'
+                      href: ide/step-1-create-a-project-and-add-a-table-to-your-form.md
+                    - name: '2. Adım: Rastgele nesne ve simge listesi ekleme'
+                      href: ide/step-2-add-a-random-object-and-a-list-of-icons.md
+                    - name: '3. Adım: Her etikete rastgele bir simge atama'
+                      href: ide/step-3-assign-a-random-icon-to-each-label.md
+                    - name: '4. Adım: Her etikete bir tıklama olayı işleyicisi ekleme'
+                      href: ide/step-4-add-a-click-event-handler-to-each-label.md
+                    - name: '5. Adım: Etiket başvuruları ekleme'
+                      href: ide/step-5-add-label-references.md
+                    - name: '6. Adım: Süreölçer ekleme'
+                      href: ide/step-6-add-a-timer.md
+                    - name: '7. Adım: Çiftleri görünür durumda tutma'
+                      href: ide/step-7-keep-pairs-visible.md
+                    - name: '8. Adım: Oyuncunun kazanıp kazanmadığını doğrulamak için yöntem ekleme'
+                      href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
+                    - name: '9. Adım: Diğer özellikleri deneme'
+                      href: ide/step-9-try-other-features.md
         - name: Platformlar arası mobil geliştirme
           href: cross-platform/cross-platform-mobile-development-in-visual-studio.md
         - name: 'Visual Studio’da F#'
@@ -584,12 +675,11 @@
             - name: Uluslararası uygulamalar tasarlama
               displayName: Globalization localization world-ready
               href: ide/globalizing-and-localizing-applications.md
+    - name: XAML araçlarını kullanma >>
+      href: xaml-tools/index.yml
     - name: Verilere erişme >>
       displayName: Data connections
       href: data-tools/accessing-data-in-visual-studio.md
-    - name: Kullanıcı arabirimleri tasarlama >>
-      displayName: XAML designer
-      href: designers/designing-user-interfaces.md
     - name: İş Akışı Tasarımcısı ile uygulamaları geliştirme >>
       href: workflow-designer/developing-applications-with-the-workflow-designer.md
     - name: Derleme ve oluşturma
@@ -663,7 +753,7 @@
       href: profiling/index.yml
     - name: Kod kalitesini analiz etme >>
       displayName: Code analysis FxCop Analyzers
-      href: code-quality/index.md
+      href: code-quality/index.yml
     - name: Dağıtım yapma >>
       href: deployment/index.yml
     - name: Visual Studio’yu genişletme >>
@@ -671,6 +761,90 @@
       href: extensibility/visual-studio-sdk.md
     - name: Mimariyi Analiz Etme ve Mimari Modelini Oluşturma >>
       href: modeling/analyze-and-model-your-architecture.md
+    - name: 3B varlıklar
+      items:
+        - name: Oyunlar ve uygulamalar için 3B varlıklarla çalışma
+          href: designers/working-with-3-d-assets-for-games-and-apps.md
+        - name: 'Nasıl yapılır: Oyununuzda veya uygulamanızda 3B varlıklar kullanma'
+          href: designers/using-3-d-assets-in-your-game-or-app.md
+        - name: Dokular ve görüntüler
+          items:
+            - name: Dokularla ve görüntülerle çalışma
+              href: designers/working-with-textures-and-images.md
+            - name: Görüntü düzenleyicisi
+              href: designers/image-editor.md
+            - name: Görüntü düzenleyicisi örnekleri
+              items:
+                - name: Temel doku oluşturma
+                  href: designers/how-to-create-a-basic-texture.md
+                - name: MIP düzeyleri oluşturma ve değiştirme
+                  href: designers/how-to-create-and-modify-mip-levels.md
+        - name: 3B Modeller
+          items:
+            - name: 3B modeller ile çalışma
+              href: designers/working-with-3-d-models.md
+            - name: Model düzenleyicisi
+              href: designers/model-editor.md
+            - name: Model düzenleyicisi örnekleri
+              items:
+                - name: Temel 3B model oluşturma
+                  href: designers/how-to-create-a-basic-3-d-model.md
+                - name: 3B modelin pivot noktasını değiştirme
+                  href: designers/how-to-modify-the-pivot-point-of-a-3-d-model.md
+                - name: 3B arazi modeli oluşturma
+                  href: designers/how-to-model-3-d-terrain.md
+                - name: 3B modele gölgelendirici uygulama
+                  href: designers/how-to-apply-a-shader-to-a-3-d-model.md
+        - name: Gölgelendiriciler
+          items:
+            - name: Gölgelendiricilerle çalışma
+              href: designers/working-with-shaders.md
+            - name: Gölgelendirici tasarımcısı
+              href: designers/shader-designer.md
+            - name: Gölgelendirici tasarımcısı düğümleri
+              items:
+                - name: Genel Bakış
+                  displayName: Shader designer nodes
+                  href: designers/shader-designer-nodes.md
+                - name: Sabit düğümler
+                  href: designers/constant-nodes.md
+                - name: Parametre düğümleri
+                  href: designers/parameter-nodes.md
+                - name: Doku düğümleri
+                  href: designers/texture-nodes.md
+                - name: Matematik düğümleri
+                  href: designers/math-nodes.md
+                - name: Yardımcı program düğümleri
+                  href: designers/utility-nodes.md
+                - name: Filtre düğümleri
+                  href: designers/filter-nodes.md
+            - name: Gölgelendirici tasarımcısı örnekleri
+              items:
+                - name: Temel renk gölgelendiricisi oluşturma
+                  displayName: Shader designer example
+                  href: designers/how-to-create-a-basic-color-shader.md
+                - name: Temel Lambert gölgelendiricisi oluşturma
+                  href: designers/how-to-create-a-basic-lambert-shader.md
+                - name: Temel Phong gölgelendiricisi oluşturma
+                  href: designers/how-to-create-a-basic-phong-shader.md
+                - name: Temel doku gölgelendiricisi oluşturma
+                  href: designers/how-to-create-a-basic-texture-shader.md
+                - name: Gri tonlamalı doku gölgelendiricisi oluşturma
+                  href: designers/how-to-create-a-grayscale-texture-shader.md
+                - name: Geometri tabanlı gradyan gölgelendirici oluşturma
+                  href: designers/how-to-create-a-geometry-based-gradient-shader.md
+                - name: 'İzlenecek yol: Gerçekçi bir 3B bilardo topu oluşturma'
+                  href: designers/walkthrough-creating-a-realistic-3-d-billiard-ball.md
+                - name: Gölgelendiriciyi dışarı aktarma
+                  href: designers/how-to-export-a-shader.md
+        - name: Dokuları dışarı aktarma
+          items:
+            - name: Mipmap'leri içeren dokuyu dışarı aktarma
+              href: designers/how-to-export-a-texture-that-contains-mipmaps.md
+            - name: Ön çarpımlı alfa kullanan dokuyu dışarı aktarma
+              href: designers/how-to-export-a-texture-that-has-premultiplied-alpha.md
+            - name: Direct2D veya JavaScript uygulamaları ile kullanmak İçin dokuyu dışarı aktarma
+              href: designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md
     - name: İpuçları ve püf noktaları
       items:
         - name: Üretkenlik özellikleri
@@ -1173,6 +1347,8 @@
           href: help-viewer/accessibility-features.md
         - name: Kısayol Tuşları
           href: help-viewer/shortcut-keys.md
+    - name: Visual Studio görüntü kitaplığı
+      href: designers/the-visual-studio-image-library.md
     - name: Dotfuscator Community
       items:
         - name: Genel Bakış

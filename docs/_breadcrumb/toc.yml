@@ -28,9 +28,6 @@
         - name: Dağıtım
           tocHref: /visualstudio/deployment/
           topicHref: /visualstudio/deployment/deploying-applications-services-and-components
-        - name: Tasarımcılar
-          tocHref: /visualstudio/designers/
-          topicHref: /visualstudio/designers/designing-user-interfaces
         - name: Genişletilebilirlik
           tocHref: /visualstudio/extensibility/
           topicHref: /visualstudio/extensibility/index
@@ -85,6 +82,9 @@
         - name: İş Akışı Tasarımcısı
           tocHref: /visualstudio/workflow-designer/
           topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
+        - name: XAML Araçları
+          tocHref: /visualstudio/xaml-tools/
+          topicHref: /visualstudio/xaml-tools/
         - name: XML Araçları
           tocHref: /visualstudio/xml-tools/
           topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio

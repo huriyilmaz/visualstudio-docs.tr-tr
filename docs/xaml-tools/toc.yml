@@ -1,0 +1,114 @@
+- name: Visual Studio’da XAML araçları
+  href: index.yml
+- name: XAML'ye genel bakış
+  href: xaml-overview.md
+- name: XAML Tasarımcısı
+  items:
+    - name: Visual Studio ve Blend’de XAML tasarlama
+      href: designing-xaml-in-visual-studio.md
+    - name: XAML Tasarımcısı’na genel bakış
+      href: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
+    - name: Öğelerle çalışma
+      href: working-with-elements-in-xaml-designer.md
+    - name: Nesneleri düzen kapsayıcılarına yerleştirme
+      href: organize-objects-into-layout-containers-in-xaml-designer.md
+    - name: Kaynak oluşturma ve uygulama
+      href: how-to-create-and-apply-a-resource.md
+    - name: 'İzlenecek yol: Verilere bağlama'
+      href: walkthrough-binding-to-data-in-xaml-designer.md
+    - name: Proje kodunda hata ayıklama veya kodu devre dışı bırakma
+      href: debugging-or-disabling-project-code-in-xaml-designer.md
+    - name: Visual Studio için Blend
+      items:
+        - name: Genel Bakış
+          href: creating-a-ui-by-using-blend-for-visual-studio.md
+        - name: Şekiller ve yollar çizin
+          href: draw-shapes-and-paths.md
+        - name: Nesnelerin stilini değiştirme
+          href: modify-the-style-of-objects-in-blend.md
+        - name: Nesnelere animasyon ekleme
+          href: animate-objects-in-xaml-designer.md
+        - name: Verileri görüntüleme
+          href: display-data-in-blend.md
+    - name: Başvuru
+      items:
+        - name: XAML hataları ve uyarıları
+          href: xaml-errors-warnings.md
+        - name: XAML Tasarımcısı için klavye kısayolları
+          href: keyboard-shortcuts-for-xaml-designer.md
+        - name: Blend için klavye kısayolları
+          href: keyboard-shortcuts-in-blend.md
+        - name: Çalışma yüzeyi değiştirici tuşları (Blend)
+          href: artboard-modifier-keys-in-blend.md
+        - name: Kalem aracı değiştirici tuşları (Blend)
+          href: pen-tool-modifier-keys-in-blend.md
+        - name: Doğrudan seçim aracı değiştirici tuşları (Blend)
+          href: direct-selection-tool-modifier-keys-in-blend.md
+- name: XAML hatalarını ayıklama
+  items:
+    - name: Hata ayıklama sırasında XAML özelliklerini denetleme
+      href: inspect-xaml-properties-while-debugging.md
+    - name: XAML Çalışırken Yeniden Yükleme
+      items:
+        - name: XAML kodu çalıştırarak yazma ve hata ayıklama
+          href: xaml-hot-reload.md
+        - name: Sorun giderme
+          href: xaml-hot-reload-troubleshooting.md
+    - name: Blend'de XAML hatalarını ayıklama
+      href: debug-xaml-in-blend.md
+    - name: UWP uygulamalarında hata ayıklama >>
+      href: ../debugger/debugging-windows-store-and-windows-universal-apps.md
+- name: Windows Presentation Foundation (WPF)
+  items:
+    - name: Kullanmaya başlayın
+      displayName: Windows Presentation Foundation (WPF)
+      href: ../designers/getting-started-with-wpf.md
+    - name: WPF’ye genel bakış
+      href: ../designers/introduction-to-wpf.md
+    - name: Veri bağlama
+      items:
+        - name: LINQ to XML ile WPF verilerini bağlama
+          href: ../designers/wpf-data-binding-with-linq-to-xml-overview.md
+        - name: LINQ to XML dinamik özellikleri
+          items:
+            - name: Genel Bakış
+              displayName: LINQ to XML dynamic properties
+              href: ../designers/linq-to-xml-dynamic-properties.md
+            - name: XAttribute sınıfı dinamik özellikleri
+              items:
+                - name: Değer (XAttribute dinamik özelliği)
+                  href: ../designers/value-xattribute-dynamic-property.md
+            - name: XElement sınıfı dinamik özellikleri
+              items:
+                - name: Öznitelik (XElement dinamik özelliği)
+                  href: ../designers/attribute-xelement-dynamic-property.md
+                - name: Öğe (XElement dinamik özelliği)
+                  href: ../designers/element-xelement-dynamic-property.md
+                - name: Öğeler (XElement dinamik özelliği)
+                  href: ../designers/elements-xelement-dynamic-property.md
+                - name: Alt Öğeler (XElement dinamik özelliği)
+                  href: ../designers/descendants-xelement-dynamic-property.md
+                - name: Değer (XElement dinamik özelliği)
+                  href: ../designers/value-xelement-dynamic-property.md
+                - name: Xml (XElement dinamik özelliği)
+                  href: ../designers/xml-xelement-dynamic-property.md
+            - name: Örnekler
+              items:
+                - name: LINQ to XML Kullanarak WPF verilerini bağlama
+                  href: ../designers/wpf-data-binding-using-linq-to-xml-example.md
+                - name: LinqToXmlDataBinding oluşturma ve çalıştırma örneği
+                  href: ../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md
+                - name: 'İzlenecek yol: LINQ to XML verilerini bağlama'
+                  href: ../designers/walkthrough-linqtoxmldatabinding-example.md
+                - name: L2DBForm.xaml kaynak kodu
+                  href: ../designers/l2dbform-xaml-source-code.md
+                - name: L2DBForm.xaml.cs kaynak kodu
+                  href: ../designers/l2dbform-xaml-cs-source-code.md
+    - name: WPF uygulamalarında hata ayıklama
+      items:
+        - name: WPF hatalarını ayıklama
+          href: ../debugger/debugging-wpf.md?toc=/visualstudio/xaml-tools/toc.json
+        - name: WPF Ağacı Görselleştiricisini kullanma
+          href: ../debugger/how-to-use-the-wpf-tree-visualizer.md?toc=/visualstudio/xaml-tools/toc.json
+        - name: WPF izleme bilgilerini görüntüleme
+          href: ../debugger/how-to-display-wpf-trace-information.md?toc=/visualstudio/xaml-tools/toc.json
