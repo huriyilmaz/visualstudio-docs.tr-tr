@@ -1,5 +1,5 @@
 - name: Kod analizi belgeleri
-  href: index.md
+  href: index.yml
 - name: Yönetilen kodu analiz etme
   items:
     - name: Genel Bakış
@@ -203,9 +203,9 @@
                   displayName: cryptography warnings
                   href: cryptography-warnings.md
                 - name: 'CA5350: Zayıf Şifreleme Algoritmaları Kullanmayın'
-                  href: ca5350-do-not-use-weak-cryptographic-algorithms.md
+                  href: ca5350.md
                 - name: 'CA5351: Bozuk Şifreleme Algoritmaları Kullanmayın'
-                  href: ca5351-do-not-use-broken-cryptographic-algorithms.md
+                  href: ca5351.md
             - name: Tasarım uyarıları
               items:
                 - name: Genel Bakış
@@ -370,7 +370,7 @@
                 - name: 'CA1309: Sıralı StringComparison kullanın'
                   href: ca1309-use-ordinal-stringcomparison.md
                 - name: 'CA2101: P-Invoke dize bağımsız değişkenleri için sıralama belirtin'
-                  href: ca2101-specify-marshaling-for-p-invoke-string-arguments.md
+                  href: ca2101.md
             - name: Birlikte çalışabilirlik uyarıları
               items:
                 - name: Genel Bakış
