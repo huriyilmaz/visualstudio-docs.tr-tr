@@ -3,8 +3,6 @@
 - name: Xamarin için Visual Studio Araçları
   displayName: .NET Mobile Developer Tools (Android & iOS)
   href: /xamarin/
-- name: Apache Cordova için Visual Studio Araçları
-  href: /visualstudio/cross-platform/tools-for-cordova/
 - name: Unity için Visual Studio Araçları
   items:
     - name: Unity için Visual Studio Araçları
