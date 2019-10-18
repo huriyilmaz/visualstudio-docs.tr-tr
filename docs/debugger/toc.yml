@@ -239,7 +239,7 @@
             - name: Özel görünümler (yönetilen)
               items:
                 - name: Yönetilen nesnelerin özel görünümlerini oluşturma
-                  href: create-custom-views-of-dot-managed-objects.md
+                  href: create-custom-views-of-managed-objects.md
                 - name: Hata ayıklayıcıya ne göstereceğini söyleme
                   href: using-the-debuggerdisplay-attribute.md
                 - name: Hata ayıklayıcıya hangi türü göstereceğini söyleme
