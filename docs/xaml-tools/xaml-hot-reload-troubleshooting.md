@@ -12,12 +12,12 @@ manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 020577cfe692d5d306a555e763d08807ab191074
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 40be42871bac0a138d15b11b86f34419f2a6c67d
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450942"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535296"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>XAML Çalışırken Yeniden Yükleme ile ilgili sorunları giderme
 
@@ -45,7 +45,10 @@ Bu seçenekler işaretliyse, canlı görsel ağaç 'a gidin (**hata ayıkla** > 
 
 ## <a name="verify-that-you-use-start-debugging-rather-than-attach-to-process"></a>Işleme eklemek yerine başlatma hata ayıklamayı kullandığınızı doğrulayın
 
-XAML Hot reload, uygulamanın başladığı zaman `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ortam değişkeninin 1 olarak ayarlanmasını gerektirir. Visual Studio bunu **hata ayıklama** > **hata ayıklamayı Başlat** (veya **F5**) komutunun bir parçası olarak otomatik olarak ayarlar. **Hata ayıkla** > **Işleme Ekle** komutuyla xaml etkin yeniden yükleme kullanmak istiyorsanız, ortam değişkenini kendiniz ayarlayın.
+XAML etkin yeniden yükleme, uygulamanın başladığı zaman `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ortam değişkeninin 1 olarak ayarlanmasını gerektirir. Visual Studio bunu **hata ayıklama** > **hata ayıklamayı Başlat** (veya **F5**) komutunun bir parçası olarak otomatik olarak ayarlar. **Hata ayıkla** > **Işleme Ekle** komutuyla xaml etkin yeniden yükleme kullanmak istiyorsanız, ortam değişkenini kendiniz ayarlayın.
+
+> [!NOTE]
+> Bir ortam değişkeni ayarlamak için, "ortam değişkeni" araması yapın ve **sistem ortam değişkenlerini Düzenle**' yi seçin. Açılan iletişim kutusunda, **ortam değişkenleri**' ni seçin, sonra bir kullanıcı değişkeni olarak ekleyin ve değeri `1` olarak ayarlayın. Temizlemek için, hata ayıklamayı bitirdiğinizde değişkeni kaldırın.
 
 ## <a name="verify-that-your-msbuild-properties-are-correct"></a>MSBuild özelliklerinin doğru olduğundan emin olun
 

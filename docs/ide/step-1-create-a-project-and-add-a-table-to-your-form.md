@@ -1,6 +1,6 @@
 ---
-title: '1\. Adım: Proje oluşturma ve formunuza tablo ekleme'
-ms.date: 05/31/2019
+title: '1\. Adım: proje oluşturma ve formunuza tablo ekleme'
+ms.date: 10/15/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0562588fe81780b7bb5787c4ec0b9861fd4c9408
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: b63a0b1801b0a3b559281959975a1faaa5bb99a5
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119057"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516774"
 ---
-# <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>1\. Adım: Proje oluşturma ve formunuza tablo ekleme
+# <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>1\. Adım: proje oluşturma ve formunuza tablo ekleme
 
 Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir tablo eklemektir. Tablo, simgeleri 4x4'lük muntazam bir kılavuza hizalamaya yardımcı olur. Ayrıca, oyun tahtasının görünüşünü iyileştirmek için çeşitli özellikleri ayarlarsınız.
 
@@ -25,7 +25,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
 ::: moniker range="vs-2017"
 
-1. Menü çubuğunda **Dosya** > **Yeni** > **Proje**' yi seçin.
+1. Menü çubuğunda **dosya** > **Yeni** > **Proje**' yi seçin.
 
 1. **Yeni proje** iletişim kutusunun sol tarafındaki **görsel C#**  veya **Visual Basic** seçin ve ardından **Windows Masaüstü**' nu seçin.
 
@@ -34,7 +34,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
     Seçtiğiniz programlama diline bağlı olarak, *Form1.cs* veya *Form1. vb* adlı bir form görüntülenir.
 
    > [!NOTE]
-   > **Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>![Visual Studio Yükleyicisi .NET masaüstü geliştirme iş yükü](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
+   > **Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>Visual Studio Yükleyicisi ](../ide/media/dot-net-desktop-dev-workload.png) .NET masaüstü geliştirme iş yükünü ![<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
 
 ::: moniker-end
 
@@ -44,11 +44,11 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
    ![' Yeni proje oluştur ' penceresini görüntüleyin](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. **Yeni proje oluştur** penceresinde, arama kutusuna *Windows Forms* girin veya yazın.
+1. **Yeni proje oluştur** penceresinde, arama kutusuna *Windows Forms* girin veya yazın. Ardından, **Proje türü** listesinden **Masaüstü** ' ni seçin.
 
-1. **Windows Forms App (.NET Framework)** şablonunu seçin ve ardından **İleri**' yi seçin.
+   **Proje türü** filtresini uyguladıktan sonra, C# veya Visual Basic için **Windows Forms App (.NET Framework)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-   ![Windows Forms uygulaması için Visual Basic şablonu seçin (.NET Framework)](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-winforms-filtered.png)
+   ![Windows Forms uygulama (.NET Framework C# ) için ya da Visual Basic şablonunu seçin](./media/create-new-project-search-winforms-filtered.png)
 
    > [!NOTE]
    > **Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın.
@@ -57,7 +57,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
    >
    > Sonra, Visual Studio Yükleyicisi **.net masaüstü geliştirme** Iş yükünü seçin.
    >
-   > ![Visual Studio Yükleyicisi'nde .NET core iş yükü](../ide/media/install-dot-net-desktop-env.png)
+   > ![Visual Studio Yükleyicisi .NET Core iş yükü](../ide/media/install-dot-net-desktop-env.png)
    >
    > Bundan sonra Visual Studio Yükleyicisi **Değiştir** düğmesini seçin. İşinizi kaydetmeniz istenebilir; Öyleyse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin.
 
@@ -75,7 +75,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
 2. IDE 'nin sol tarafındaki **araç kutusu** sekmesini seçerek araç kutusunu görüntüleyin.
 
-3. Araç kutusundaki <xref:System.Windows.Forms.TableLayoutPanel> **kapsayıcılar** kategorisinden bir denetim sürükleyin ve sonra bunun için aşağıdaki özellikleri ayarlayın.
+3. Araç kutusundaki **kapsayıcılar** kategorisinden bir <xref:System.Windows.Forms.TableLayoutPanel> denetimini sürükleyin ve sonra bunun için aşağıdaki özellikleri ayarlayın.
 
    1. **BackColor** özelliğini **CornflowerBlue**olarak ayarlayın. Bunu yapmak için, **Özellikler** penceresinde **BackColor** özelliğinin yanındaki açılan oku seçerek **BackColor** iletişim kutusunu açın.  Ardından, kullanılabilir renk adlarının listesini görüntülemek için **BackColor** Iletişim kutusundaki **Web** sekmesini seçin.
 
@@ -96,7 +96,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
 4. Form düzenleyicisinde TableLayoutPanel seçildiğinden emin olun. Bunu doğrulamak için, **Özellikler** penceresinin en üstünde **tableLayoutPanel1** görmeniz gerekir. Seçili değilse, formda TableLayoutPanel öğesini seçin veya **Özellikler** penceresinin en üstündeki açılan denetimde seçin.
 
-    TableLayoutPanel seçiliyken, araç kutusunu açın ve TableLayoutPanel 'in sol üst hücresine <xref:System.Windows.Forms.Label> bir denetim ( **ortak denetimler** kategorisinde bulunur) ekleyin. Etiket denetimi artık IDE 'de seçilmelidir. Bu öğe için aşağıdaki özellikleri ayarlayın.
+    TableLayoutPanel seçiliyken, araç kutusunu açın ve TableLayoutPanel 'in sol üst hücresine bir <xref:System.Windows.Forms.Label> denetimi ( **ortak denetimler** kategorisinde bulunur) ekleyin. Etiket denetimi artık IDE 'de seçilmelidir. Bu öğe için aşağıdaki özellikleri ayarlayın.
 
    1. Etiketin **BackColor** özelliğinin **CornflowerBlue**olarak ayarlandığından emin olun.
 
@@ -117,17 +117,17 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
        > [!NOTE]
        > Webdings yazı tipi, simgelerden oluşan bir yazı tipi olup Windows işletim sistemiyle birlikte gelir. Eşleştirme oyununuzda oyuncunun simge çiftlerini eşleştirmesi gerektiğinden, eşleştirilecek simgeleri göstermek için bu yazı tipini kullanıyorsunuz. **Metin** özelliğine **c** koymak yerine, hangi simgelerin görüntülendiğini görmek için farklı harfler girmeyi deneyin. Ünlem işareti bir örümcek, büyük N harfi bir göz ve virgül ise kırmızı biberdir.
 
-5. Etiket denetiminizi seçin ve TableLayoutPanel içindeki bir sonraki hücreye kopyalayın. ( **CTRL**+**C** tuşlarını seçin veya menü çubuğunda**kopyayı** **Düzenle** > ' yi seçin.) Sonra da yapıştırın. ( **CTRL**+**V** tuşlarını seçin veya menü çubuğunda**yapıştırmayı** **Düzenle** > ' yi seçin.) İlk etiketin bir kopyası TableLayoutPanel 'in ikinci hücresinde görüntülenir. Tekrar yapıştırın ve üçüncü hücrede başka bir etiket görüntülenir. Tüm hücreler dolduruluncaya kadar etiket denetimlerini yapıştırmayı sürdürün.
+5. Etiket denetiminizi seçin ve TableLayoutPanel içindeki bir sonraki hücreye kopyalayın. ( **Ctrl** +**C** tuşlarını seçin veya menü çubuğunda **Düzenle**  > **Kopyala**' yı seçin.) Ardından yapıştırın. ( **Ctrl** +**V** tuşlarını seçin veya menü çubuğunda **Düzenle**  > **Yapıştır**' ı seçin.) İlk etiketin bir kopyası TableLayoutPanel 'in ikinci hücresinde görüntülenir. Tekrar yapıştırın ve üçüncü hücrede başka bir etiket görüntülenir. Tüm hücreler dolduruluncaya kadar etiket denetimlerini yapıştırmayı sürdürün.
 
    > [!NOTE]
-   > Çok sayıda yapıştırırsanız, IDE, yeni etiket denetiminizi eklemek için bir yer olmasını sağlamak üzere TableLayoutPanel 'e yeni bir satır ekler. Bunu geri alabilirsiniz. Yeni hücreyi kaldırmak için **CTRL**+**Z** tuşlarını seçin veya menü çubuğunda**geri al**'ı **Düzenle** > ' yi seçin.
+   > Çok sayıda yapıştırırsanız, IDE, yeni etiket denetiminizi eklemek için bir yer olmasını sağlamak üzere TableLayoutPanel 'e yeni bir satır ekler. Bunu geri alabilirsiniz. Yeni hücreyi kaldırmak için **Ctrl** +**Z** tuşlarını seçin veya menü çubuğunda **Düzenle**  > **geri al**' ı seçin.
 
-    Artık formunuz hazırdır. Aşağıdaki resme benzer görünmelidir.
+    Artık formunuz düzenlenmiştir. Aşağıdaki resme benzer görünmelidir.
 
-    ![İlk eşleşen oyun formu](../ide/media/express_tut4step1.png)<br/>*İlk eşleşen oyun formu*
+    ![Initial eşleşen oyun formu ](../ide/media/express_tut4step1.png)<br/>*İlk eşleşen oyun formu*
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için bkz [. 2. Adım: Rastgele bir nesne ve simge](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)listesi ekleyin.
+- Sonraki öğretici adımına geçmek için, bkz. [2. Adım: rastgele bir nesne ve simge listesi ekleme](../ide/step-2-add-a-random-object-and-a-list-of-icons.md).
 
-- Genel bakış konusuna dönmek için bkz [. öğretici 3: Eşleşen bir oyun](../ide/tutorial-3-create-a-matching-game.md)oluşturun.
+- Genel bakış konusuna dönmek için bkz. [öğretici 3: eşleşen oyun oluşturma](../ide/tutorial-3-create-a-matching-game.md).

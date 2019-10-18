@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: da4da0a106d37b081e0a7c57fe905048f3314174
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
-ms.translationtype: HT
+ms.openlocfilehash: fcc4a3d3d99deab62971c40b26c9a4252367438f
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381085"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516326"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Visual Studio 'nun ağ yüklemesi oluşturma
 
@@ -39,7 +39,7 @@ Genellikle, bir kuruluş Yöneticisi istemci iş istasyonlarına dağıtmak içi
 
 Visual Studio 2017 için bir önyükleyici almak üzere, bunun nasıl yapılacağı hakkında ayrıntılı bilgi için [Visual Studio önceki sürümler](https://visualstudio.microsoft.com/vs/older-downloads/) indirme sayfasına bakın.
 
-Kurulumlarınız @ no__t-0veya daha belirgin olacak şekilde çalıştırılabilir. önyükleyici dosyası @ no__t-1ile eşleşmelidir veya aşağıdakilerden birine benzer olmalıdır.
+Kurulum çalıştırılabilir dosyanız daha belirli bir şekilde &mdash;or, önyükleyici dosyası &mdash;should eşleşiyor veya aşağıdakilerden birine benzer.
 
 | Sürüm | Kısaltın |
 |-------------|-----------------------|
@@ -53,7 +53,7 @@ Desteklenen diğer bootstrapdenetleyicileri, **vs_feedbackclient. exe**, **vs_Te
 
 ::: moniker range="vs-2019"
 
-Kurulum çalıştırılabilir dosya @ no__t-0veya daha belirgin olacak şekilde, @ no__t-1önyükleyici dosyası eşleşmelidir veya aşağıdakilerden birine benzer olmalıdır.
+Kurulum çalıştırılabilir dosyanız daha belirli bir şekilde &mdash;or, bir önyükleyici dosyası eşleşme &mdash;should veya aşağıdakilerden birine benzer.
 
 |Sürüm | İndir|
 |-------------|-----------------------|
@@ -122,10 +122,10 @@ xcopy /e c:\VSLayout \\server\products\VS2019
 
 Ağ düzeninizi özelleştirmek için kullanabileceğiniz çeşitli seçenekler vardır. Yalnızca belirli bir [dil yerel](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)ayarı, [iş yükleri, bileşenler ve önerilen ya da isteğe bağlı bağımlılıklarını](workload-and-component-ids.md)içeren kısmi bir düzen oluşturabilirsiniz. Bu, istemci iş istasyonlarına yalnızca bir iş yükü alt kümesini dağıtacağınızı biliyorsanız yararlı olabilir. Düzeni özelleştirmeye yönelik tipik komut satırı parametreleri şunları içerir:
 
-* @no__t- [iş yükünü veya bileşen kimliklerini](workload-and-component-ids.md)belirtmek için 0. <br>@No__t-0 kullanılırsa, yalnızca `--add` ile belirtilen iş yükleri ve bileşenler indirilir.  @No__t-0 kullanılmazsa, tüm iş yükü ve bileşenler indirilir.
+* [iş yükünü veya bileşen kimliklerini](workload-and-component-ids.md)belirtmek için `--add`. <br>@No__t_0 kullanılırsa, yalnızca `--add` ile belirtilen iş yükleri ve bileşenler indirilir.  @No__t_0 kullanılmazsa, tüm iş yükü ve bileşenler indirilir.
 * Belirtilen iş yükü kimlikleri için önerilen tüm bileşenleri dahil etmek için `--includeRecommended`
 * `--includeOptional`, belirtilen iş yükü kimlikleri için tüm önerilen ve isteğe bağlı bileşenleri içerir.
-* [dil yerel ayarlarını](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)belirtmek için-0 @no__t.
+* [dil yerel ayarlarını](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)belirtmek için `--lang`.
 
 Özel kısmi düzenin nasıl oluşturulacağı hakkında birkaç örnek aşağıda verilmiştir.
 
@@ -221,27 +221,27 @@ Yöneticiler, Visual Studio 'Yu bir yükleme betiğinin parçası olarak istemci
 > Bir hatayı engellemek için, tam düzen yolunuz 80 karakterden az olduğundan emin olun.
 >
 > [!TIP]
-> Bir toplu iş dosyasının parçası olarak yürütüldüğünde `--wait` seçeneği, `vs_enterprise.exe` işleminin, yükleme tamamlanmadan önce, bir çıkış kodu döndürdüğü şekilde bekleyip beklememesini sağlar.
+> Bir toplu iş dosyasının parçası olarak yürütüldüğünde `--wait` seçeneği, `vs_enterprise.exe` işleminin, yükleme tamamlanmadan önce, bir çıkış kodu döndürene kadar bekleyip beklememesini sağlar.
 >
 > Bu, bir Kurumsal Yönetici tamamlanmış bir yüklemede daha fazla eylem gerçekleştirmek isterse (örneğin, [başarılı bir yüklemeye bir ürün anahtarı uygulamak](automatically-apply-product-keys-when-deploying-visual-studio.md)için), ancak yüklemenin tamamlanması için işlemin tamamlanmasını beklemesi gereken yüklemesinden.
 >
-> @No__t-0 ' ı kullanmıyorsanız, yükleme tamamlanmadan önce `vs_enterprise.exe` işlemi çıkar ve yükleme işleminin durumunu temsil etmediği yanlış bir çıkış kodu döndürüyor.
+> @No__t_0 kullanmıyorsanız, yükleme tamamlanmadan önce `vs_enterprise.exe` işlemi çıkar ve yükleme işleminin durumunu temsil etmeyen yanlış bir çıkış kodu döndürür.
 >
 
 ::: moniker range="vs-2019"
-
-> Çevrimdışı yüklemeler için, "aşağıdaki parametrelerle eşleşen bir proje bulunamadığını" belirten bir hata iletisi alırsanız,--NoWeb anahtarını 16.3.5 veya sonraki bir sürümüyle kullandığınızdan emin olun.
-
+> [!IMPORTANT]
+> Çevrimdışı yüklemeler için, "aşağıdaki parametrelerle eşleşen bir ürün bulunamıyor" adlı bir hata mesajı alırsanız, 16.3.5 veya sonraki bir sürümüyle `--noweb` anahtarını kullandığınızdan emin olun.
+>
 ::: moniker-end
 
-Bir düzenden yüklerken, yüklenen içerik düzenden alınır. Ancak, düzende olmayan bir bileşeni seçerseniz, internet 'ten elde edilir.  Visual Studio kurulumunun düzeninizde eksik olan içeriği indirmasını engellemek istiyorsanız `--noWeb` seçeneğini kullanın. @No__t-0 kullanılırsa ve mizanpajda yüklenmek üzere seçilen içerik eksikse, kurulum başarısız olur.
+Bir düzenden yüklerken, yüklenen içerik düzenden alınır. Ancak, düzende olmayan bir bileşeni seçerseniz, internet 'ten elde edilir.  Visual Studio kurulumunun düzeninizde eksik olan içeriği indirmasını engellemek istiyorsanız `--noWeb` seçeneğini kullanın. @No__t_0 kullanılıyorsa ve mizanpajda yüklenmek üzere seçilen içerik eksikse, kurulum başarısız olur.
 
 > [!IMPORTANT]
-> @No__t-0 seçeneği, Visual Studio kurulumunun güncelleştirmeleri denetlemesini durdurmaz. Daha fazla bilgi için bkz. [ağ tabanlı Visual Studio dağıtımlarının güncelleştirmelerini denetleme](controlling-updates-to-visual-studio-deployments.md) sayfası.
+> @No__t_0 seçeneği, Visual Studio kurulumunun güncelleştirmeleri denetlemesini durdurmaz. Daha fazla bilgi için bkz. [ağ tabanlı Visual Studio dağıtımlarının güncelleştirmelerini denetleme](controlling-updates-to-visual-studio-deployments.md) sayfası.
 
 ### <a name="error-codes"></a>Hata kodları
 
-@No__t-0 parametresini kullandıysanız, işlem sonucuna bağlı olarak, `%ERRORLEVEL%` ortam değişkeni aşağıdaki değerlerden birine ayarlanır:
+@No__t_0 parametresini kullandıysanız, işlem sonucuna bağlı olarak, `%ERRORLEVEL%` ortam değişkeni aşağıdaki değerlerden birine ayarlanır:
 
 [!INCLUDE[install-error-codes-md](includes/install-error-codes-md.md)]
 

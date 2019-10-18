@@ -1,5 +1,5 @@
 ---
-title: '1\. Adım: Windows Forms Uygulaması projesi oluşturma'
+title: '1\. Adım: Windows Forms uygulama projesi oluşturma'
 ms.date: 08/30/2019
 ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be7b9bd67ed88b9f59ed279211bf15c96ae59569
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 897c4ba0bfa46e73115f8288770d088346498dee
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119015"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516701"
 ---
-# <a name="step-1-create-a-windows-forms-app-project"></a>1\. Adım: Windows Forms Uygulaması projesi oluşturma
+# <a name="step-1-create-a-windows-forms-app-project"></a>1\. Adım: Windows Forms uygulama projesi oluşturma
 
 Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygulama projesi oluşturmaktır.
 
@@ -25,16 +25,16 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
 
 ## <a name="open-visual-studio-2017"></a>Visual Studio 2017 'yi açın
 
-1. Menü çubuğunda, **dosya** > **yeni** > **proje**. İletişim kutusu aşağıdaki ekran görüntüsüne benzer görünmelidir.
+1. Menü çubuğunda **dosya**  > **Yeni**  > **Proje**' yi seçin. İletişim kutusu aşağıdaki ekran görüntüsüne benzer görünmelidir.
 
-     ![Yeni proje iletişim kutusu](../ide/media/newprojectdialogcallouts.png)<br/>***Yeni proje*** *iletişim kutusu*
+     ![New proje iletişim ](../ide/media/newprojectdialogcallouts.png)<br/>***Yeni proje*** *iletişim kutusu*
 
 2. **Yeni proje** iletişim kutusunun sol tarafında, **görsel C#**  veya **Visual Basic**' yi seçin ve ardından **Windows Masaüstü**' nu seçin.
 
 3. Proje şablonları listesinde **Windows Forms uygulama (.NET Framework)** öğesini seçin. Yeni formu *PictureViewer olarak adlandırın*olarak adlandırın ve ardından **Tamam** düğmesini seçin.
 
     >[!NOTE]
-    >**Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>![Visual Studio Yükleyicisi .NET masaüstü geliştirme iş yükü](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
+    >**Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>Visual Studio Yükleyicisi ](../ide/media/dot-net-desktop-dev-workload.png) .NET masaüstü geliştirme iş yükünü ![<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
 
 ::: moniker-end
 
@@ -50,7 +50,7 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
 
    **Proje türü** filtresini uyguladıktan sonra, C# veya Visual Basic için **Windows Forms App (.NET Framework)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-   ![Windows Forms uygulaması C# için şablonu seçin (.NET Framework)](./media/create-new-project-search-winforms-filtered.png)
+   ![Windows Forms uygulama (.NET Framework C# ) için ya da Visual Basic şablonunu seçin](./media/create-new-project-search-winforms-filtered.png)
 
    > [!NOTE]
    > **Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın.
@@ -59,7 +59,7 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
    >
    > Sonra, Visual Studio Yükleyicisi **.net masaüstü geliştirme** Iş yükünü seçin.
    >
-   > ![Visual Studio Yükleyicisi'nde .NET core iş yükü](../ide/media/install-dot-net-desktop-env.png)
+   > ![Visual Studio Yükleyicisi .NET Core iş yükü](../ide/media/install-dot-net-desktop-env.png)
    >
    > Bundan sonra Visual Studio Yükleyicisi **Değiştir** düğmesini seçin. İşinizi kaydetmeniz istenebilir; Öyleyse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin.
 
@@ -73,9 +73,9 @@ Visual Studio, uygulamanız için bir çözüm oluşturur. Bir çözüm, uygulam
 
 1. Geliştirme ortamı üç pencere içerir: Ana pencere, **Çözüm Gezgini**ve **Özellikler** penceresi.
 
-     Bu pencerelerin herhangi biri eksikse, varsayılan pencere yerleşimini geri yükleyebilirsiniz. Menü çubuğunda **pencere** > **sıfırlama pencere düzeni**' ni seçin.
+     Bu pencerelerin herhangi biri eksikse, varsayılan pencere yerleşimini geri yükleyebilirsiniz. Menü çubuğunda **pencere**  > **pencere yerleşimini Sıfırla**' yı seçin.
 
-     Ayrıca, menü komutlarını kullanarak da Windows görüntüleyebilirsiniz. Menü çubuğunda, **Görünüm** > **Özellikleri penceresi** ' ni veya **Çözüm Gezgini**' ı seçin.
+     Ayrıca, menü komutlarını kullanarak da Windows görüntüleyebilirsiniz. Menü çubuğunda, **görünüm**  > **Özellikler penceresi** ' ni veya **Çözüm Gezgini**' ı seçin.
 
      Başka herhangi bir pencere açıksa, sağ üst köşelerindeki **Kapat** (x) düğmesini seçerek onları kapatın.
 
@@ -100,22 +100,22 @@ Visual Studio, uygulamanız için bir çözüm oluşturur. Bir çözüm, uygulam
       > [!NOTE]
       > **Çözüm Gezgini** en üstteki satır, Visual Studio 'nun sizin için bir çözüm oluşturduğu anlamına gelen **' PictureViewer olarak adlandırın ' (1 proje) çözümünü**gösterir. Bir çözüm birden fazla proje içerebilir, ancak şimdilik yalnızca bir proje içeren çözümlerle çalışırsınız.
 
-1. Menü çubuğunda **Dosya** > **Tümünü Kaydet**' i seçin.
+1. Menü çubuğunda **dosya**  > **Tümünü Kaydet**' i seçin.
 
      Alternatif olarak, aşağıdaki görüntüde gösterildiği gibi, araç çubuğunda **Tümünü Kaydet** düğmesini seçin.
 
-     ![Tümünü Kaydet araç çubuğu düğmesi](../ide/media/express_iconsaveall.png)<br/>
+     Tüm araç çubuğu düğmesini ![Save ](../ide/media/express_iconsaveall.png)<br/>
      ***Tümünü Kaydet*** *araç çubuğu düğmesi*
 
      Visual Studio, klasör adı ve proje adını otomatik olarak doldurur ve projeyi projeler klasörünüze kaydeder.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* Sonraki öğretici adımına gitmek için bkz  **[. 2. Adım: ](../ide/step-2-run-your-program.md)Uygulamanızı**çalıştırın.
+* Sonraki öğretici adımına gitmek için bkz. 2. **[Adım: uygulamanızı çalıştırma](../ide/step-2-run-your-program.md)** .
 
-* Genel bakış konusuna dönmek için bkz [. öğretici 1: Bir resim görüntüleyici](../ide/tutorial-1-create-a-picture-viewer.md)oluşturun.
+* Genel bakış konusuna dönmek için bkz. [öğretici 1: resim görüntüleyici oluşturma](../ide/tutorial-1-create-a-picture-viewer.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Öğretici 2: Süreli matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
-* [Öğretici 3: Eşleşen bir oyun oluşturun](tutorial-3-create-a-matching-game.md)
+* [Öğretici 2: süreli bir matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
+* [Öğretici 3: eşleşen oyun oluşturma](tutorial-3-create-a-matching-game.md)

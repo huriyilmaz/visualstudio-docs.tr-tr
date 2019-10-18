@@ -1,6 +1,6 @@
 ---
-title: 'Öğretici 2: Süreli matematik testi oluşturma'
-ms.date: 11/04/2016
+title: 'Öğretici 2: süreli bir matematik testi oluşturma'
+ms.date: 10/16/2019
 ms.assetid: d7165d08-ace3-457d-b57d-fb8f80760a6f
 ms.topic: tutorial
 ms.technology: vs-ide-general
@@ -9,22 +9,27 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39550eb3e2d5fe78e50257b51b52642740781600
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: e092e11474aa872903977e1b07c699b160bef8a2
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118857"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516591"
 ---
-# <a name="tutorial-2-create-a-timed-math-quiz"></a>Öğretici 2: Süreli matematik testi oluşturma
+# <a name="tutorial-2-create-a-timed-math-quiz"></a>Öğretici 2: süreli bir matematik testi oluşturma
 
-Bu öğreticide, bir sınavın belirli bir süre içinde dört rastgele aritmetik sorunu yanıtlaması gereken bir test oluşturacaksınız. Aşağıdakilerin nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide, bir sınavın belirli bir süre içinde dört rastgele aritmetik sorunu yanıtlaması gereken bir test oluşturacaksınız.
 
-- <xref:System.Random> Sınıfını kullanarak rastgele sayılar üretin.
+> [!NOTE]
+> Bu öğretici hem hem C# de Visual Basic, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanırsınız.
 
-- Olayları bir <xref:System.Windows.Forms.Timer> denetim kullanarak belirli bir zamanda gerçekleşecek şekilde tetikleyin.
+Bu öğretici aşağıdaki görevlerde size kılavuzluk eder:
 
-- Deyimlerini kullanarak `if else` program akışını denetleme.
+- @No__t_0 sınıfını kullanarak rastgele sayılar üretin.
+
+- @No__t_0 denetimi kullanarak olayları belirli bir zamanda gerçekleşecek şekilde tetikleyin.
+
+- @No__t_0 deyimlerini kullanarak program akışını denetleme.
 
 - Kodda temel aritmetik işlemler gerçekleştirin.
 
@@ -34,20 +39,25 @@ Bitirdiğinizde, test, farklı sayılar dışında aşağıdaki ekran görüntü
 
 ## <a name="tutorial-links"></a>Öğretici bağlantıları
 
-Sınavın tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
-
-> [!NOTE]
-> Bu öğretici hem hem C# de Visual Basic, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanırsınız.
-
-## <a name="related-topics"></a>İlgili konular
-
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[1. Adım: Formunuza bir proje oluşturun ve Etiketler ekleyin](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)|Projeyi oluşturarak, özellikleri değiştirerek ve denetimler ekleyerek `Label` başlayın.|
-|[2. Adım: Rastgele bir ek sorun oluşturma](../ide/step-2-create-a-random-addition-problem.md)|Ek bir sorun oluşturun ve rastgele sayılar oluşturmak `Random` için sınıfını kullanın.|
-|[3. Adım: Geri sayım ekleme süreölçeri](../ide/step-3-add-a-countdown-timer.md)|Sınavın zaman aşımına uğraabilmesi için bir geri sayım Zamanlayıcısı ekleyin.|
-|[4. Adım: CheckTheAnswer () yöntemini ekleyin](../ide/step-4-add-the-checktheanswer-parens-method.md)|Sınavın sorun için doğru bir yanıt girmediğini denetlemek için bir yöntem ekleyin.|
-|[5. Adım: NumericUpDown denetimleri için Enter Olay işleyicileri ekleme](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)|Sınavını daha kolay hale getirmek için olay işleyicileri ekleyin.|
-|[6. Adım: Çıkarma sorunu ekleme](../ide/step-6-add-a-subtraction-problem.md)|Rastgele sayılar üreten, Zamanlayıcı kullanan ve doğru yanıtları denetleyen bir çıkarma sorunu ekleyin.|
-|[7. Adım: Çarpma ve bölme sorunları ekleme](../ide/step-7-add-multiplication-and-division-problems.md)|Rastgele sayılar üreten çarpma ve bölme sorunları ekleyin, zamanlayıcıyı kullanın ve doğru yanıtları denetleyin.|
-|[8. Adım: Testi özelleştirme](../ide/step-8-customize-the-quiz.md)|Renkleri değiştirme ve ipucu ekleme gibi diğer özellikleri deneyin.|
+|[1. Adım: proje oluşturma ve formunuza etiketler ekleme](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)|Projeyi oluşturarak, özellikleri değiştirerek ve `Label` denetimleri ekleyerek başlayın.|
+|[2. Adım: rastgele bir ek sorun oluşturma](../ide/step-2-create-a-random-addition-problem.md)|Ek bir sorun oluşturun ve rastgele sayılar oluşturmak için `Random` sınıfını kullanın.|
+|[3. Adım: geri sayım Zamanlayıcısı ekleme](../ide/step-3-add-a-countdown-timer.md)|Sınavın zaman aşımına uğraabilmesi için bir geri sayım Zamanlayıcısı ekleyin.|
+|[4. Adım: CheckTheAnswer () metodunu ekleme](../ide/step-4-add-the-checktheanswer-parens-method.md)|Sınavın sorun için doğru bir yanıt girmediğini denetlemek için bir yöntem ekleyin.|
+|[5. Adım: NumericUpDown denetimleri için giriş olay işleyicileri ekleme](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)|Sınavını daha kolay hale getirmek için olay işleyicileri ekleyin.|
+|[6. Adım: çıkarma sorunu ekleme](../ide/step-6-add-a-subtraction-problem.md)|Rastgele sayılar üreten, Zamanlayıcı kullanan ve doğru yanıtları denetleyen bir çıkarma sorunu ekleyin.|
+|[7. Adım: çarpma ve bölme sorunları ekleme](../ide/step-7-add-multiplication-and-division-problems.md)|Rastgele sayılar üreten çarpma ve bölme sorunları ekleyin, zamanlayıcıyı kullanın ve doğru yanıtları denetleyin.|
+|[8. Adım: testi özelleştirme](../ide/step-8-customize-the-quiz.md)|Renkleri değiştirme ve ipucu ekleme gibi diğer özellikleri deneyin.|
+
+Ayrıca harika, ücretsiz video öğrenimi kaynakları da mevcuttur. İçinde C#programlama hakkında daha fazla bilgi edinmek için bkz [ C# . temel bilgiler: mutlak yeni başlayanlar için geliştirme](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners). Visual Basic 'da programlama hakkında daha fazla bilgi için bkz. [Visual Basic temelleri: mutlak yeni başlayanlar Için geliştirme](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners).
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Öğreticiye başlamak için, 1. **[Adım: proje oluşturma ve formunuza etiketler ekleme](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)** ile başlayın.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+* [Diğer C# öğreticiler](/visualstudio/get-started/csharp/)
+* [Visual Basic öğreticileri](/visualstudio/get-started/visual-basic/)
+* [C++izleyin](/cpp/get-started/tutorial-console-cpp)

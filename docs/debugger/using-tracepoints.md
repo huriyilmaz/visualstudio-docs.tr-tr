@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 7680b305fad6f8ea1d7961ec5a70ddafd578c77d
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 263657213f1720eaca7a0462bb31585adaacf9bb
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71095259"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516397"
 ---
 # <a name="use-tracepoints-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında izlenesel noktaları kullanma
 
@@ -22,7 +22,7 @@ ms.locfileid: "71095259"
 
 ## <a name="let39s-take-an-example"></a>&#39;Bir örnek alalım
 
-Aşağıdaki örnek program, bir sayaç değişkeni `for` olan ve döngünün başka bir yinelemeyi her çalıştırdığında arttığı basit bir döngüdür.
+Aşağıdaki örnek program, döngünün başka bir yinelemeyi her çalıştırdığında artan bir sayaç değişkeni olan basit bir `for` döngüdür.
 
 ![Sayaç örneği](../debugger/media/counterexample.png "Sayaç örneği")
 
@@ -47,29 +47,29 @@ Aşağıdaki örnek program, bir sayaç değişkeni `for` olan ve döngünün ba
 
 5. Çıkış Penceresi metin kutusunda **Ileti göster** ' e oturum açmak istediğiniz iletiyi girin (Ayrıntılar için, bu makaledeki sonraki bölümlere bakın).
 
-   İzleme noktanız artık ayarlandı. Her şey için&quot; çıkış penceresi bazı bilgileri günlüğe kaydetmek istiyorsanız Kapatdüğmesinebasın.&quot;
+   İzleme noktanız artık ayarlandı. Yapmak istediğiniz tüm bilgileri Çıkış Penceresi günlüğe kaydetmek istiyorsanız &quot;Close &quot; düğmesine basın.
 
 6. İletinizin görüntülenip görüntülenmediğini belirten koşullar eklemek istiyorsanız, **koşullar** onay kutusunu seçin.
 
    ![Denetlenen koşullar kutusu](../debugger/media/checkedconditionsbox.png "Denetlenen koşullar kutusu")
 
-   Koşullar için üç seçeneğiniz vardır: **Koşullu ifade**, **filtre**ve **isabet sayısı**.
+   Koşullar için üç seçeneğiniz vardır: **koşullu ifade**, **filtre**ve **isabet sayısı**.
 
 ## <a name="actions-menu"></a>Eylemler menüsü
 
 Bu menü, çıkış penceresine bir ileti kaydetmenize izin verir. İleti kutusuna çıktısını almak istediğiniz dizeleri yazın (tırnak işareti gerekmez). Değişkenlerin değerlerini göstermek istiyorsanız, küme ayraçları içine aldığınızdan emin olun.
 
-Örneğin, çıkış konsolundaki `counter` değişkenin değerini göstermek istiyorsanız, ileti metin kutusuna {Counter} yazın.
+Örneğin, çıkış konsolundaki `counter` değişkeninin değerini göstermek istiyorsanız, ileti metin kutusuna {Counter} yazın.
 
-![Sayaç çıkış iletisi](../debugger/media/counteroutputmessage.png "Sayaç çıkış iletisi")
+![Sayaç çıkış Iletisi](../debugger/media/counteroutputmessage.png "Sayaç çıkış Iletisi")
 
 **Kapat** ' a tıklayıp programda hata ayıklaması yaparsanız (**F5**) çıkış penceresinde aşağıdaki çıktıyı görürsünüz.
 
-![Çıkış penceresi eylemler iletisi](../debugger/media/actionsmessageinoutputwindow.png "Çıkış penceresi eylemler iletisi")
+![Çıkış Penceresi eylemler Iletisi](../debugger/media/actionsmessageinoutputwindow.png "Çıkış Penceresi eylemler Iletisi")
 
 Daha belirli bilgileri göstermek için özel anahtar sözcükler de kullanabilirsiniz. Anahtar sözcüğünü aşağıda gösterildiği gibi tam olarak girin (her anahtar sözcüğünün önünde bir "$" kullanın ve anahtar sözcüğünün kendisi için tüm Cap 'ler).
 
-| Anahtar sözcüğü | Ne görüntülenir |
+| Sözcükle | Ne görüntülenir |
 | --- | --- |
 | $ADDRESS | Geçerli yönerge |
 | $CALLER | İşlev adı çağırma |
@@ -88,20 +88,20 @@ Koşullar, çıkış iletilerinizi filtrelemenizi sağlar, böylece yalnızca be
 ### <a name="conditional-expression"></a>Koşullu ifade
 Koşullu bir ifade için, yalnızca belirli koşullar karşılandığında bir çıkış iletisi görüntülenir.
 
-Koşullu ifadeler için, izleme noktasını, belirli bir koşul doğru olduğunda ya da değiştirildiğinde bir iletiyi çıktı olarak ayarlayabilirsiniz. Örneğin, yalnızca `for` döngünün çift yinelemeleri sırasında sayacın değerini göstermek istiyorsanız, **true** seçeneğini seçip ileti metin kutusuna yazabilirsiniz `i%2 == 0` .
+Koşullu ifadeler için, izleme noktasını, belirli bir koşul doğru olduğunda ya da değiştirildiğinde bir iletiyi çıktı olarak ayarlayabilirsiniz. Örneğin, yalnızca `for` döngüsünün çift yinelemeleri sırasında sayacın değerini göstermek istiyorsanız, **true** seçeneğini seçip ileti metin kutusuna `i%2 == 0` yazabilirsiniz.
 
 ![Koşullu Ifade doğru](../debugger/media/conditionalexpressionistrue.png "Koşullu Ifade doğru")
 
-`for` Döngü yinelemesi değiştiğinde sayacın değerini yazdırmak istiyorsanız, **ne zaman değiştirildi** seçeneğini belirleyin ve ileti metin kutusuna yazın `i` .
+@No__t_0 döngüsünün yinelemesi değiştiğinde sayacın değerini yazdırmak isterseniz, ileti metin kutusuna **ne zaman değiştirildi** seçeneğini belirleyin ve `i` yazın.
 
-![Değiştirildiğinde koşullu ifade](../debugger/media/conditionalexpressionwhenchanged.png "Değiştirildiğinde koşullu ifade")
+![Değiştirildiğinde koşullu Ifade](../debugger/media/conditionalexpressionwhenchanged.png "Değiştirildiğinde koşullu Ifade")
 
 Farklı programlama dilleri için **ne zaman değiştirildi** seçeneğinin davranışı farklıdır.
 
 - Yerel kod için, hata ayıklayıcı koşulun ilk değerlendirmesini bir değişiklik olacak şekilde düşünmez, bu nedenle ilk değerlendirmede izleme noktasına ulaşmaz.
 - Yönetilen kod için, hata ayıklayıcı, **değişiklik** seçildikten sonra ilk değerlendirmede izleme noktasını alır.
 
-Koşulları ayarlarken kullanabileceğiniz geçerli ifadelere daha kapsamlı bir bakış için bkz [. Hata Ayıklayıcıdaki İfadeler](expressions-in-the-debugger.md)
+Koşulları ayarlarken kullanabileceğiniz geçerli ifadelere daha kapsamlı bir bakış için bkz. [Hata Ayıklayıcıdaki İfadeler](expressions-in-the-debugger.md).
 
 ### <a name="hit-count"></a>İsabet sayısı
 İsabet sayısı koşulu yalnızca izleme noktasının ayarlandığı kod satırıyla belirtilen sayıda yürütülene kadar çıkış göndermenizi sağlar.
@@ -117,13 +117,13 @@ Filtre koşulu için, hangi cihazların, işlemlerin veya iş parçacıklarını
 
 Filtre ifadeleri listesi:
 
-- MachineName = "name"
-- ProcessID = değer
-- ProcessName "name" =
+- MachineName = "ad"
+- Işlemkimliği = değer
+- ProcessName = "ad"
 - ThreadID = değer
-- ThreadName = "name"
+- ThreadName = "ad"
 
-Dizeleri (adlar gibi) çift tırnak içine alın. Değerler tırnak işareti olmadan girilebilir. `&` Yan tümceleri (`AND` `||` ),(`NOT`), ()veparantezlerikullanarakbirleştirebilirsiniz.`!` `OR`
+Dizeleri (adlar gibi) çift tırnak içine alın. Değerler tırnak işareti olmadan girilebilir. @No__t_0 (`AND`), `||` (`OR`), `!` (`NOT`) ve parantezleri kullanarak yan tümceleri birleştirebilirsiniz.
 
 ## <a name="considerations"></a>Dikkat Edilecekler
 
@@ -131,12 +131,15 @@ Dizeleri (adlar gibi) çift tırnak içine alın. Değerler tırnak işareti olm
 
 Bazen bir nesnenin bir özelliğini veya özniteliğini incelemenize sonra değeri değişebilir. Bu, izleme noktası özelliğinin kendisinden kaynaklanan bir hata değildir, ancak nesneleri incelemek için izleme noktaları kullanmanın bu yanlışlıkla yapılan değişikliklerden kaçının.
 
-Deyim **eylem** ileti kutusunda değerlendirilme yöntemi, geliştirme için kullanmakta olduğunuz dilden farklı olabilir. Örneğin, bir dizeyi çıkarmak için, normalde veya `Debug.WriteLine()` `console.log()`kullanırken bile bir iletiyi tırnak içine almanız gerekmez. Ayrıca, çıkış ifadelerine küme ayracı sözdizimi`{ }`(), geliştirme dilinizde değer çıktısı için olan kurala göre de farklı olabilir. (Ancak, küme ayraçları (`{ }`) içindeki içerikler hala geliştirme dili sözdizimi kullanılarak yazılmalıdır.
+Deyim **eylem** ileti kutusunda değerlendirilme yöntemi, geliştirme için kullanmakta olduğunuz dilden farklı olabilir. Örneğin, bir dizeyi çıkarmak için normalde `Debug.WriteLine()` veya `console.log()` kullanırken bile bir iletiyi tırnak içine almanız gerekmez. Ayrıca, çıkış ifadelerine küme ayracı sözdizimi (`{ }`), geliştirme dilinizde değer çıktısı için olan kurala göre de farklı olabilir. (Ancak, küme ayraçları içindeki içerikler (`{ }`), hala geliştirme dili sözdizimi kullanılarak yazılmalıdır.
+
+Canlı bir uygulamada hata ayıklamaya ve benzer bir özelliği aramaya çalışıyorsanız, Snapshot Debugger günlüğe kaydetme noktası özelliğimize göz atın. Anlık görüntü hata ayıklayıcısı, üretim uygulamalarındaki sorunları araştırmak için kullanılan bir araçtır. Günlüğe kaydetme noktaları, kaynak kodu değiştirmek zorunda kalmadan Çıkış Penceresi iletileri göndermenizi ve çalışan uygulamanızı etkilememek için de sağlar. Daha fazla bilgi için bkz. [canlı Azure uygulamasında hata ayıklama](../debugger/debug-live-azure-applications.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklıyor?](../debugger/what-is-debugging.md)
-- [Daha iyi yazma C# kullanarak Visual Studio code](../debugger/write-better-code-with-visual-studio.md)
-- [Hata ayıklama ilk bakış](../debugger/debugger-feature-tour.md)
+- [Hata ayıklama nedir?](../debugger/what-is-debugging.md)
+- [Visual Studio C# kullanarak daha iyi kod yazın](../debugger/write-better-code-with-visual-studio.md)
+- [Hata ayıklama bölümüne ilk bakış](../debugger/debugger-feature-tour.md)
 - [Hata ayıklayıcısındaki ifadeler](expressions-in-the-debugger.md)
 - [Kesme noktalarınıullanma](../debugger/using-breakpoints.md)
+- [Canlı Azure uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md)

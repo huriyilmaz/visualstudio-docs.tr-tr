@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: bc279f0ae9e0420810e12c21f5f7cf29de0d15e7
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 636443a65922e72bfcede09d5692e441c6c2cb36
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449162"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535906"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>Yönetilen kod için Genişletilmiş Doğruluk Kuralları kural kümesi
 
@@ -25,23 +25,23 @@ Aşağıdaki tabloda, Microsoft genişletilmiş doğruluk kuralları kural küme
 
 |Kural|Açıklama|
 |----------|-----------------|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
-|[CA1009](../code-quality/ca1009-declare-event-handlers-correctly.md)|Olay işleyicileri doğru olarak bildirin|
-|[CA1016](../code-quality/ca1016-mark-assemblies-with-assemblyversionattribute.md)|Derlemeleri AssemblyVersionAttribute ile işaretleyin|
-|[CA1033](../code-quality/ca1033-interface-methods-should-be-callable-by-child-types.md)|Arabirim metotları alt türler tarafından çağrılabilmelidir|
-|[CA1049](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)|Yerel kaynaklara sahip türler atılabilir olmalıdır|
-|[CA1060](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)|P/Invokes'u NativeMethods sınıfına taşıyın|
-|[CA1061](../code-quality/ca1061-do-not-hide-base-class-methods.md)|Temel sınıf metotlarını gizlemeyin|
-|[CA1063](../code-quality/ca1063-implement-idisposable-correctly.md)|IDisposable'ı doğru uygulayın|
-|[CA1065](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)|Beklenmeyen konumlarda özel durum harekete geçirmeyin|
-|[CA1301](../code-quality/ca1301-avoid-duplicate-accelerators.md)|Yinelenen hızlandırıcılardan kaçının|
-|[CA1400](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)|P/Invoke giriş noktaları bulunmalıdır|
-|[CA1401](../code-quality/ca1401-p-invokes-should-not-be-visible.md)|P/Invoke'lar görünür olmamalıdır|
-|[CA1403](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)|Otomatik yerleşim türleri COM görünebilir olmamalıdır|
-|[CA1404](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)|P/Invoke ardından hemen GetLastError çağırın|
-|[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|COM görünebilir tür taban türler COM görünebilir olmalıdır|
-|[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|COM kayıt metotları eşleşmelidir|
-|[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|P/Invoke'ları doğru bildirin|
+|[CA1001](../code-quality/ca1001.md)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
+|[CA1009](../code-quality/ca1009.md)|Olay işleyicileri doğru olarak bildirin|
+|[CA1016](../code-quality/ca1016.md)|Derlemeleri AssemblyVersionAttribute ile işaretleyin|
+|[CA1033](../code-quality/ca1033.md)|Arabirim metotları alt türler tarafından çağrılabilmelidir|
+|[CA1049](../code-quality/ca1049.md)|Yerel kaynaklara sahip türler atılabilir olmalıdır|
+|[CA1060](../code-quality/ca1060.md)|P/Invokes'u NativeMethods sınıfına taşıyın|
+|[CA1061](../code-quality/ca1061.md)|Temel sınıf metotlarını gizlemeyin|
+|[CA1063](../code-quality/ca1063.md)|IDisposable'ı doğru uygulayın|
+|[CA1065](../code-quality/ca1065.md)|Beklenmeyen konumlarda özel durum harekete geçirmeyin|
+|[CA1301](../code-quality/ca1301.md)|Yinelenen hızlandırıcılardan kaçının|
+|[CA1400](../code-quality/ca1400.md)|P/Invoke giriş noktaları bulunmalıdır|
+|[CA1401](../code-quality/ca1401.md)|P/Invoke'lar görünür olmamalıdır|
+|[CA1403](../code-quality/ca1403.md)|Otomatik yerleşim türleri COM görünebilir olmamalıdır|
+|[CA1404](../code-quality/ca1404.md)|P/Invoke ardından hemen GetLastError çağırın|
+|[CA1405](../code-quality/ca1405.md)|COM görünebilir tür taban türler COM görünebilir olmalıdır|
+|[CA1410](../code-quality/ca1410.md)|COM kayıt metotları eşleşmelidir|
+|[CA1415](../code-quality/ca1415.md)|P/Invoke'ları doğru bildirin|
 |[CA1821](../code-quality/ca1821.md)|Boş sonlandırıcıları kaldırın|
 |[CA1900](../code-quality/ca1900.md)|Değer tür alanları taşınabilir olmalıdır|
 |[CA1901](../code-quality/ca1901.md)|P/Invoke bildirimleri taşınabilir olmalıdır|
@@ -87,10 +87,10 @@ Aşağıdaki tabloda, Microsoft genişletilmiş doğruluk kuralları kural küme
 |[CA2240](../code-quality/ca2240.md)|ISerializable'ı doğru uygulayın|
 |[CA2241](../code-quality/ca2241.md)|Biçimlendirme metotlarına doğru bağımsız değişkenleri sağlayın|
 |[CA2242](../code-quality/ca2242.md)|NaN için doğru test edin|
-|[CA1008](../code-quality/ca1008-enums-should-have-zero-value.md)|Sabit listelerinin sıfır değeri olmalıdır|
-|[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|Toplama ve çıkarmayı aşırı yüklediğinizde eşittir işlecini aşırı yükleyin|
-|[CA1303](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)|Harfleri yerelleştirilmiş parametreler olarak göndermeyin|
-|[CA1308](../code-quality/ca1308-normalize-strings-to-uppercase.md)|Dizeleri büyük harfe normalleştirin|
+|[CA1008](../code-quality/ca1008.md)|Sabit listelerinin sıfır değeri olmalıdır|
+|[CA1013](../code-quality/ca1013.md)|Toplama ve çıkarmayı aşırı yüklediğinizde eşittir işlecini aşırı yükleyin|
+|[CA1303](../code-quality/ca1303.md)|Harfleri yerelleştirilmiş parametreler olarak göndermeyin|
+|[CA1308](../code-quality/ca1308.md)|Dizeleri büyük harfe normalleştirin|
 |[CA1806](../code-quality/ca1806.md)|Metot sonuçlarını yoksaymayın|
 |[CA1816](../code-quality/ca1816.md)|GC.SuppressFinalize'ı doğru çağırın|
 |[CA1819](../code-quality/ca1819.md)|Özellikler diziler döndürmemelidir|
@@ -116,22 +116,22 @@ Aşağıdaki tabloda, Microsoft genişletilmiş doğruluk kuralları kural küme
 |[CA2226](../code-quality/ca2226.md)|İşleçler simetrik aşırı yüklemelere sahip olmalıdır|
 |[CA2227](../code-quality/ca2227.md)|Koleksiyon özellikleri salt okunur olmalıdır|
 |[CA2239](../code-quality/ca2239.md)|İsteğe bağlı metotlar için serileştirme kaldırma metotları sağlayın|
-|[CA1032](../code-quality/ca1032-implement-standard-exception-constructors.md)|Standart özel durum oluşturucularını uygulayın|
-|[CA1054](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)|URI parametreleri dize olmamalıdır|
-|[CA1055](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)|URI dönüş değerleri dize olmamalıdır|
-|[CA1056](../code-quality/ca1056-uri-properties-should-not-be-strings.md)|URI özellikleri dize olmamalıdır|
-|[CA1057](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)|String URI aşırı yüklemeleri System.Uri aşırı yüklemelerini çağırır|
-|[CA1402](../code-quality/ca1402-avoid-overloads-in-com-visible-interfaces.md)|COM görünebilir arabirimler içinde aşırı yüklemelerden kaçının|
-|[CA1406](../code-quality/ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md)|Visual Basic 6 istemcileri için Int64 bağımsız değişkenlerinden kaçının|
-|[CA1407](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)|COM görünebilir türler içinde statik üyelerden kaçının|
-|[CA1408](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)|AutoDual ClassInterFaceType kullanmayın|
-|[CA1409](../code-quality/ca1409-com-visible-types-should-be-creatable.md)|COM görünebilir türler oluşturulabilir olmalıdır|
-|[CA1411](../code-quality/ca1411-com-registration-methods-should-not-be-visible.md)|COM kayıt metotları görünebilir olmamalıdır|
-|[CA1412](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)|ComSource arabirimlerini IDispatch olarak işaretleyin|
-|[CA1413](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)|COM görünebilir değer türleri içinde genel olmayan alanlardan kaçının|
-|[CA1414](../code-quality/ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md)|Boolean P/Invoke bağımsız değişkenlerini MarshalAs ile işaretleyin|
-|[CA1600](../code-quality/ca1600-do-not-use-idle-process-priority.md)|Boş işlem önceliğini kullanmayın|
-|[CA1601](../code-quality/ca1601-do-not-use-timers-that-prevent-power-state-changes.md)|Güç durumu değişikliklerini önleyen zamanlayıcılar kullanmayın|
+|[CA1032](../code-quality/ca1032.md)|Standart özel durum oluşturucularını uygulayın|
+|[CA1054](../code-quality/ca1054.md)|URI parametreleri dize olmamalıdır|
+|[CA1055](../code-quality/ca1055.md)|URI dönüş değerleri dize olmamalıdır|
+|[CA1056](../code-quality/ca1056.md)|URI özellikleri dize olmamalıdır|
+|[CA1057](../code-quality/ca1057.md)|String URI aşırı yüklemeleri System.Uri aşırı yüklemelerini çağırır|
+|[CA1402](../code-quality/ca1402.md)|COM görünebilir arabirimler içinde aşırı yüklemelerden kaçının|
+|[CA1406](../code-quality/ca1406.md)|Visual Basic 6 istemcileri için Int64 bağımsız değişkenlerinden kaçının|
+|[CA1407](../code-quality/ca1407.md)|COM görünebilir türler içinde statik üyelerden kaçının|
+|[CA1408](../code-quality/ca1408.md)|AutoDual ClassInterFaceType kullanmayın|
+|[CA1409](../code-quality/ca1409.md)|COM görünebilir türler oluşturulabilir olmalıdır|
+|[CA1411](../code-quality/ca1411.md)|COM kayıt metotları görünebilir olmamalıdır|
+|[CA1412](../code-quality/ca1412.md)|ComSource arabirimlerini IDispatch olarak işaretleyin|
+|[CA1413](../code-quality/ca1413.md)|COM görünebilir değer türleri içinde genel olmayan alanlardan kaçının|
+|[CA1414](../code-quality/ca1414.md)|Boolean P/Invoke bağımsız değişkenlerini MarshalAs ile işaretleyin|
+|[CA1600](../code-quality/ca1600.md)|Boş işlem önceliğini kullanmayın|
+|[CA1601](../code-quality/ca1601.md)|Güç durumu değişikliklerini önleyen zamanlayıcılar kullanmayın|
 |[CA1824](../code-quality/ca1824.md)|Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin|
 |[CA2001](../code-quality/ca2001.md)|Sorunlu metotları çağırmaktan kaçının|
 |[CA2003](../code-quality/ca2003.md)|Fiberleri iş parçacığı olarak görmeyin|

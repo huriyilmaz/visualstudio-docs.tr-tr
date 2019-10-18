@@ -14,20 +14,20 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 670150053053a2e556e0f111312247f243c2a8c0
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 2e4a71acfc9872c1709dcfe5abf062a95cb3e89d
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975045"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535828"
 ---
 # <a name="suppress-code-analysis-warnings"></a>Kod Analizi uyarılarını gösterme
 
 Bir uyarının geçerli olmadığını göstermek için genellikle yararlı olur. Bu, takım üyelerinin kodun gözden geçirdiğini ve uyarının bastırılamayacağını gösterir. Kaynak içi gizleme (ISS), bir uyarıyı bastırmak için <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> özniteliğini kullanır. Özniteliği, uyarıyı oluşturan kod kesimine yakın şekilde yerleştirilebilir. Kaynak dosyaya yazarak <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> özniteliğini ekleyebilir veya otomatik olarak eklemek için **hata listesi** bir uyarı üzerinde kısayol menüsünü kullanabilirsiniz.
 
-@No__t-0 özniteliği, yönetilen kod derlemelerinizin Il meta verilerine dahil olan ve yalnızca derleme zamanında CODE_ANALYSIS derleme simgesi tanımlanmışsa koşullu bir özniteliktir.
+@No__t_0 özniteliği, yönetilen kod derlemelerinizin Il meta verilerine dahil olan ve yalnızca derleme zamanında CODE_ANALYSIS derleme simgesi tanımlanmışsa koşullu bir özniteliktir.
 
-C++/CLI ' da özniteliği eklemek için, üstbilgi dosyasındaki makrolar CA 'sı @ NO__T-1önle @ NO__T-2message veya CA @ NO__T-3global @ NO__T-4SUPPRESS_MESSAGE ' ı kullanın.
+C++/CLI ' da, özniteliği eklemek için \_MESSAGE veya ca \_SUPPRESS_MESSAGE \_GLOBAL \_SUPPRESS makrolar CA 'sını kullanın.
 
 > [!NOTE]
 > Kaynak gizleme verilerinin yanlışlıkla serbest bırakılmasını engellemek için sürüm yapılarında kaynak üzerinde gizlemeleri kullanmamalısınız. Ayrıca, kaynak içi göstermeme işleminin işlem maliyeti nedeniyle uygulamanızın performansı düşebilir.
@@ -35,7 +35,7 @@ C++/CLI ' da özniteliği eklemek için, üstbilgi dosyasındaki makrolar CA 's�
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> Bir projeyi Visual Studio 2017 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, @no__t **analiz et**' i seçerek (1.**Kod analizini Çalıştır ve etkin sorunları Gizle**) tümünü gizleyebilirsiniz.
+> Bir projeyi Visual Studio 2017 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız,**Kod analizini çalıştır  >  Çalıştır ' ı ve etkin sorunları Gizle**' yi seçerek bunların hepsini gizleyebilirsiniz.
 >
 > ![Visual Studio 'da Kod analizini çalıştırma ve sorunları gösterme](media/suppress-active-issues.png)
 
@@ -44,7 +44,7 @@ C++/CLI ' da özniteliği eklemek için, üstbilgi dosyasındaki makrolar CA 's�
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> Bir projeyi Visual Studio 2019 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız,  >  oluşturmayı **Çözümle**' yi**ve etkin sorunları Gizle**' yi seçerek bunların hepsini gizleyebilirsiniz.
+> Bir projeyi Visual Studio 2019 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız,  >  derlemeyi **Çözümle** **ve etkin sorunları Gizle**' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
 
 ::: moniker-end
 
@@ -52,7 +52,7 @@ C++/CLI ' da özniteliği eklemek için, üstbilgi dosyasındaki makrolar CA 's�
 
 **Hata listesi**bir kod analizi uyarısında bağlam veya sağ tıklama menüsünden **Gizle** ' yi seçtiğinizde, kodunuzda veya projenin global gizleme dosyasına bir <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> özniteliği eklenir.
 
-@No__t-0 özniteliği aşağıdaki biçimdedir:
+@No__t_0 özniteliği aşağıdaki biçimdedir:
 
 ```vb
 <Scope:SuppressMessage("Rule Category", "Rule Id", Justification = "Justification", MessageId = "MessageId", Scope = "Scope", Target = "Target")>
@@ -88,7 +88,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
   - `namespace`-bu kapsam, ad alanının kendisiyle karşı uyarıları göstermez. Ad uzayı içindeki türlere karşı uyarıları göstermez.
 
-  - `namespaceanddescendants`-(Visual Studio 2019 için yeni) bu kapsam, bir ad alanındaki uyarıları ve tüm alt sembolleri bastırır. @No__t-0 değeri eski analiz tarafından yok sayılır.
+  - `namespaceanddescendants`-(Visual Studio 2019 için yeni) bu kapsam, bir ad alanındaki uyarıları ve tüm alt sembolleri bastırır. @No__t_0 değeri eski analiz tarafından yok sayılır.
 
 - **Target** -uyarının bastırılmakta olduğu hedefi belirtmek için kullanılan bir tanımlayıcı. Tam nitelikli bir öğe adı içermelidir.
 
@@ -110,9 +110,9 @@ Bakım nedenleriyle, kural adının atlanması önerilmez.
 
 Gizleme öznitelikleri bir yönteme uygulanabilir, ancak bir yöntem gövdesi içine Katıştırılamaz. Bu, yöntemine <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> özniteliğini eklediğinizde belirli bir kuralın tüm ihlallerinin gizlenme anlamına gelir.
 
-Bazı durumlarda, örneğin, gelecekteki kodun kod analizi kuralından otomatik olarak muaf olmaması gibi, ihlalin belirli bir örneğini bastırmak isteyebilirsiniz. Belirli kod analizi kuralları, bunu <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> özniteliğinin `MessageId` özelliğini kullanarak yapmanıza olanak sağlar. Genel olarak, belirli bir sembolde (yerel bir değişken veya parametre) ihlallerin bilinen kuralları `MessageId` özelliğine göre yapılır. [CA1500: VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md) , böyle bir kurala bir örnektir. Ancak, yürütülebilir koddaki (simge dışı) ihlaller için eski kurallar `MessageId` özelliğine uymaz. Ayrıca, .NET Compiler Platform ("Roslyn") Çözümleyicileri `MessageId` özelliğine uymaz.
+Bazı durumlarda, örneğin, gelecekteki kodun kod analizi kuralından otomatik olarak muaf olmaması gibi, ihlalin belirli bir örneğini bastırmak isteyebilirsiniz. Belirli kod analizi kuralları, bunu <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> özniteliğinin `MessageId` özelliğini kullanarak yapmanıza olanak sağlar. Genel olarak, belirli bir sembolde (yerel bir değişken veya parametre) ihlallerin bilinen kuralları `MessageId` özelliğine göre yapılır. [CA1500: VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500.md) , böyle bir kurala bir örnektir. Ancak, yürütülebilir koddaki (simge dışı) ihlallerin eski kuralları `MessageId` özelliğine uymaz. Ayrıca, .NET Compiler Platform ("Roslyn") Çözümleyicileri, `MessageId` özelliğine uymaz.
 
-Bir kuralın belirli bir sembol ihlalini engellemek için, <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> özniteliğinin `MessageId` özelliğinin sembol adını belirtin. Aşağıdaki örnek, `name` değişkeni ve bir `age` değişkeni için [CA1500: VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md)&mdash;one olan kodu gösterir. Yalnızca `age` simgesi için ihlal bastırılır.
+Bir kuralın belirli bir sembol ihlalini engellemek için, <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> özniteliğinin `MessageId` özelliğinin sembol adını belirtin. Aşağıdaki örnek, `name` değişkeni ve bir `age` değişkeni için &mdash;one [CA1500: VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500.md) için iki ihlal içeren kodu gösterir. Yalnızca `age` sembolü için ihlal bastırılır.
 
 ```vb
 Public Class Animal
@@ -151,10 +151,10 @@ public class Animal
 
 Yönetilen kod derleyicileri ve bazı üçüncü taraf araçları, hızlı kod geliştirmeyi kolaylaştırmak için kod üretir. Kaynak dosyalarda görünen derleyici tarafından oluşturulan kod genellikle `GeneratedCodeAttribute` özniteliğiyle işaretlenir.
 
-Kod Analizi uyarılarını ve oluşturulan kod için hataları bastırıp bastırmayacağını seçebilirsiniz. Bu tür uyarıları ve hataları gösterme hakkında daha fazla bilgi için bkz. [Nasıl yapılır: Oluşturulan kod için uyarıları bastır @ no__t-0.
+Kod Analizi uyarılarını ve oluşturulan kod için hataları bastırıp bastırmayacağını seçebilirsiniz. Bu tür uyarıları ve hataları gösterme hakkında daha fazla bilgi için bkz. [nasıl yapılır: üretilen kod uyarılarını gösterme](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).
 
 > [!NOTE]
-> Kod Analizi, tüm derlemeye veya tek bir parametreye uygulandığında, `GeneratedCodeAttribute` olduğunu yoksayar.
+> Kod Analizi, tüm derlemeye veya tek bir parametreye uygulandığında `GeneratedCodeAttribute` yoksayar.
 
 ## <a name="global-level-suppressions"></a>Küresel düzeyde gizlemeler
 
@@ -163,7 +163,7 @@ Yönetilen Kod Analizi Aracı, derleme, modül, tür, üye veya parametre düzey
 `[module: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "MyNamespace")]`
 
 > [!NOTE]
-> @No__t-0 kapsamıyla bir uyarıyı bastırdığınızda, bu uyarı ad alanının kendisine karşı bastırır. Ad uzayı içindeki türlere karşı uyarıyı göstermez.
+> @No__t_0 kapsama sahip bir uyarıyı bastırdığınızda, bu uyarı ad alanının kendisine karşı bastırır. Ad uzayı içindeki türlere karşı uyarıyı göstermez.
 
 Herhangi bir gizleme açık bir kapsam belirtilerek ifade edilebilir. Bu gizlemeler küresel düzeyde canlı olmalıdır. Bir tür dekorasyon yaparak üye düzeyinde gizleme belirtemezsiniz.
 

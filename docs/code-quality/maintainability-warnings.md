@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79e9e24e7769cf4c632faab7795fe2f67844fe7d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 37b971be5a784c5cfd3cddc3d0af246850cd1f7d
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445673"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535796"
 ---
 # <a name="maintainability-warnings"></a>Bakım uyarıları
 
@@ -29,12 +29,12 @@ Bakımsız uyarılar kitaplığı ve uygulama bakımını destekler.
 
 | Kural | Açıklama |
 |-----------|-----------------------------------|
-| [CA1500: Değişken adları alan adlarıyla eşleşmemelidir](../code-quality/ca1500-variable-names-should-not-match-field-names.md) | Bir örnek yöntemi, bir parametre ya da adı bildirim türünün bir örnek alanıyla eşleşen bir yerel değişken bildirir ve bu da hatalara yol açar. |
-| [CA1501: Aşırı devralmadan kaçının](../code-quality/ca1501-avoid-excessive-inheritance.md) | Devralma hiyerarşisinde düzeyleri dörtten fazla olan türdür. İç içe yuvalanmış hiyerarşileri izlemek, anlamak ve muhafaza etmek zor olabilir. |
-| [CA1502: Aşırı karmaşıklıktan kaçının](../code-quality/ca1502-avoid-excessive-complexity.md) | Bu kural, sayılarla ve şartlı şubelerle tanımlanan, yönteme giden doğrusal bağımsız yolların sayısını ölçer. |
-| [CA1504: Yanlış alan adlarını gözden geçirin](../code-quality/ca1504-review-misleading-field-names.md) | Bir örnek alanının adı "s_" ile başlar veya statik ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) alanının adı "m_" ile başlar. |
-| [CA1505: Bakımı yapılamayan kodlardan kaçının](../code-quality/ca1505-avoid-unmaintainable-code.md) | Bir tür veya yöntemin düşük bakım dizin değeri vardır. Düşük bakım dizini muhtemelen koruması zor olan ve yeniden tasarım için iyi bir aday olan tür veya yöntemi içerir. |
-| [CA1506: Aşırı sınıf bağlantısından kaçının](../code-quality/ca1506-avoid-excessive-class-coupling.md) | Bu kural türü veya yöntemini içeren benzersiz türde başvuru sayısı belirlenerek eşlenmesiyle sınıfı ölçer. |
+| [CA1500: Değişken adları alan adlarıyla eşleşmemelidir](../code-quality/ca1500.md) | Bir örnek yöntemi, bir parametre ya da adı bildirim türünün bir örnek alanıyla eşleşen bir yerel değişken bildirir ve bu da hatalara yol açar. |
+| [CA1501: Aşırı devralmadan kaçının](../code-quality/ca1501.md) | Devralma hiyerarşisinde düzeyleri dörtten fazla olan türdür. İç içe yuvalanmış hiyerarşileri izlemek, anlamak ve muhafaza etmek zor olabilir. |
+| [CA1502: Aşırı karmaşıklıktan kaçının](../code-quality/ca1502.md) | Bu kural, sayılarla ve şartlı şubelerle tanımlanan, yönteme giden doğrusal bağımsız yolların sayısını ölçer. |
+| [CA1504: Yanlış alan adlarını gözden geçirin](../code-quality/ca1504.md) | Bir örnek alanının adı "s_" ile başlar veya statik ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] paylaşılan) alanının adı "m_" ile başlar. |
+| [CA1505: Bakımı yapılamayan kodlardan kaçının](../code-quality/ca1505.md) | Bir tür veya yöntemin düşük bakım dizin değeri vardır. Düşük bakım dizini muhtemelen koruması zor olan ve yeniden tasarım için iyi bir aday olan tür veya yöntemi içerir. |
+| [CA1506: Aşırı sınıf bağlantısından kaçının](../code-quality/ca1506.md) | Bu kural türü veya yöntemini içeren benzersiz türde başvuru sayısı belirlenerek eşlenmesiyle sınıfı ölçer. |
 | [CA1507: dize yerine NameOf kullanın](../code-quality/ca1507.md) | Bir dize sabit değeri, `nameof` ifadesinin kullanılabileceği bir bağımsız değişken olarak kullanılır. |
 
 ## <a name="see-also"></a>Ayrıca bkz.

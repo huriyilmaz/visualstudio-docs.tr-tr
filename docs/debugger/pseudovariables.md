@@ -1,5 +1,5 @@
 ---
-title: Sözde değişken | Microsoft Docs
+title: Sözde değişkenler | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,56 +17,56 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbfd275625e949e87e2b4109e1d56eaeaf9d7e3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6b6856517a680809ccc802c02dc880b6349eadc5
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62903652"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535954"
 ---
-# <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio Hata Ayıklayıcısı'sözde değişken
-Sözde değişkenler, bir değişken penceresinde belirli bilgileri görüntülemek için kullanılan terimler veya **QuickWatch** iletişim kutusu. Normal bir değişken girebilirsiniz aynı şekilde sahte girebilirsiniz. Sözde değişken değil değişkenler, ancak ve programınızdaki değişken adlarına karşılık gelmez.
+# <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında sahte değişkenler
+Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **QuickWatch** iletişim kutusunda göstermek için kullanılan terimlerdir. Bir sözde değişkeni, normal bir değişkene girebileceğiniz şekilde girebilirsiniz. Ancak sözde değişkenler, değişken değildir ve programınızdaki değişken adlarına karşılık gelmez.
 
 ## <a name="example"></a>Örnek
- Yerel kod uygulaması yazdığınızı ve uygulamanızda ayrılan işleyicilerin sayısını görmek istediğinizi varsayalım. İçinde **Watch** penceresinde, aşağıdaki sözde değişkeni girebilirsiniz **adı** sütun sonra onu değerlendirmek için Return tuşuna basın:
+ Bir yerel kod uygulaması yazdığınızı ve uygulamanızda ayrılan tanıtıcı sayısını görmek istediğinizi varsayalım. **Gözcü** penceresinde, **ad** sütununa aşağıdaki sözde değişkeni girebilir ve sonra değerlendirmek için Return tuşuna basabilirsiniz:
 
 `$handles`
 
- Yerel kodda aşağıdaki tabloda gösterilen pseudovariables'ı kullanabilirsiniz:
+ Yerel kodda, aşağıdaki tabloda gösterilen sözde değişkenleri kullanabilirsiniz:
 
-|Sözde değişkeni|İşlev|
+|Sözde değişken|İşlev|
 |--------------------|--------------|
-|`$err`|Ayarlama SetLastError işleviyle son hata değeri görüntüler. Görüntülenen değer GetLastError işlevi tarafından döndürülecek temsil eder.<br /><br /> Kullanım `$err,hr` bu değerin kodu çözülmüş biçimini görmek için. Örneğin, son hata 3 ise `$err,hr` görüntüler `ERROR_PATH_NOT_FOUND : The system cannot find the path specified.`|
-|`$handles`|Uygulamanızda ayrılan işleyicilerin sayısını görüntüler.|
-|`$vframe`|Geçerli yığın çerçevesi adresini görüntüler.|
-|`$tid`|Geçerli iş parçacığı için iş parçacığı Kimliğini görüntüler.|
-|`$env`|Dize Görüntüleyicisindeki ortam bloğunu görüntüler.|
+|`$err`|SetLastError işleviyle birlikte ayarlanan son hata değerini görüntüler. Görüntülenen değer, GetLastError işlevinin ne döndürüleceğini gösterir.<br /><br /> Bu değerin kodu çözülmüş biçimini görmek için `$err,hr` kullanın. Örneğin, son hata 3 ise `$err,hr` görüntülenir `ERROR_PATH_NOT_FOUND : The system cannot find the path specified.`|
+|`$handles`|Uygulamanızda ayrılan tanıtıcı sayısını görüntüler.|
+|`$vframe`|Geçerli yığın çerçevesinin adresini görüntüler.|
+|`$tid`|Geçerli iş parçacığının iş parçacığı KIMLIĞINI görüntüler.|
+|`$env`|Dize görüntüleyicisinde ortam bloğunu görüntüler.|
 |`$cmdline`|Programı başlatan komut satırı dizesini görüntüler.|
-|`$pid`|İşlem kimliğini görüntüler.|
-|`$` *RegisterName*<br /><br /> veya<br /><br /> `@` *RegisterName*|Kaydının içeriğini görüntüler *registername*.<br /><br /> Normalde, sadece kayıt adı girerek kayıt içeriğini görüntüleyebilirsiniz. Bu sözdizimini kullanmanız gereken yalnızca bir kez, kayıt adı bir değişken adını tekrar yüklediği zamandır. Kayıt adı geçerli kapsamdaki bir değişken adı ile aynı olduğunda, hata ayıklayıcı adı bir değişken adı olarak yorumlar. Bu durumda `$` *registername* veya `@` *registername* faydalı olur.|
-|`$clk`|Saat döngüsünde zamanı görüntüler.|
-|`$user`|Uygulamayı çalıştıran hesap için hesap bilgileriyle bir yapıyı görüntüler. Güvenlik nedeniyle parola bilgisi görüntülenmez.|
-|`$exceptionstack`|Geçerli Windows çalışma zamanı özel durum yığın izleme görüntüler. `$ exceptionstack` UWP uygulamalarında çalışır. `$ exceptionstack` C++ ve SEH özel durumları için desteklenmiyor|
-|`$returnvalue`|.NET Framework yöntemi dönüş değerini görüntüler.|
+|`$pid`|İşlem KIMLIĞINI görüntüler.|
+|`$` *RegisterName*<br /><br /> veya<br /><br /> `@` *RegisterName*|Kayıt *RegisterName*'in içeriğini görüntüler.<br /><br /> Normalde kayıt adını girerek kayıt içeriğini görüntüleyebilirsiniz. Bu söz dizimini kullanmanız gereken tek zaman, YAZMAÇ adının bir değişken adını aşırı yükleyidir. Kayıt adı, geçerli kapsamdaki bir değişken adıyla aynıysa, hata ayıklayıcı adı değişken adı olarak yorumlar. Bu, `$`*RegisterName* veya `@`*RegisterName* 'in yararlı olduğu durumlarda vardır.|
+|`$clk`|Saat döngülerinde saati görüntüler.|
+|`$user`|Uygulamayı çalıştıran hesap için hesap bilgilerine sahip bir yapı görüntüler. Güvenlik nedenleriyle parola bilgileri gösterilmez.|
+|`$exceptionstack`|Geçerli Windows Çalışma Zamanı özel durumunun yığın izlemesini görüntüler. `$ exceptionstack` yalnızca UWP uygulamalarında kullanılabilir. `$ exceptionstack`, ve SEH özel C++ durumları için desteklenmez|
+|`$returnvalue`|Bir .NET yönteminin dönüş değerini görüntüler.|
 
- İçinde C# aşağıdaki tabloda gösterilen pseudovariables'ı kullanabilirsiniz:
+ ' C# De, aşağıdaki tabloda gösterilen sözde değişkenleri kullanabilirsiniz:
 
-|Sözde değişkeni|İşlev|
+|Sözde değişken|İşlev|
 |--------------------|--------------|
-|`$exception`|Son özel durum bilgilerini görüntüler. Hiçbir özel durum oluştuysa, değerlendirme `$exception` bir hata iletisi görüntüler.<br /><br /> Özel durum Yardımcısı'nı devre dışı bırakıldığında `$exception` otomatik olarak eklenir **Yereller** bir özel durum oluştuğunda penceresi.|
-|`$user`|Uygulamayı çalıştıran hesap için hesap bilgileriyle bir yapıyı görüntüler. Güvenlik nedeniyle parola bilgisi görüntülenmez.|
-|`$returnvalue`|.NET Framework yöntemi dönüş değerini görüntüler.|
+|`$exception`|Son özel durum hakkındaki bilgileri görüntüler. Hiçbir özel durum oluştuysa, değerlendirme `$exception` bir hata mesajı görüntüler.<br /><br /> Özel durum Yardımcısı devre dışı bırakıldığında, bir özel durum oluştuğunda `$exception` **Yereller** penceresine otomatik olarak eklenir.|
+|`$user`|Uygulamayı çalıştıran hesap için hesap bilgilerine sahip bir yapı görüntüler. Güvenlik nedenleriyle parola bilgileri gösterilmez.|
+|`$returnvalue`|Bir .NET yönteminin dönüş değerini görüntüler.|
 
- Visual Basic'te, aşağıdaki tabloda gösterilen pseudovariables'ı kullanabilirsiniz:
+ Visual Basic, aşağıdaki tabloda gösterilen sözde değişkenleri kullanabilirsiniz:
 
-|Sözde değişkeni|İşlev|
+|Sözde değişken|İşlev|
 |--------------------|--------------|
-|`$exception`|Son özel durum bilgilerini görüntüler. Hiçbir özel durum oluştuysa, değerlendirme `$exception` bir hata iletisi görüntüler.|
-|`$delete` veya `$$delete`|Oluşturulan örtük değişkeni siler **hemen** penceresi. Söz dizimi `$delete,` *değişkeni* veya`$delete,` *değişkeni*`.`|
-|`$objectids` veya `$listobjectids`|Tüm etkin nesne Kimlikleri'ni belirtilen ifadenin alt öğesi olarak görüntüler. Söz dizimi `$objectid,` *ifade* veya`$listobjectids,` *ifadesi*`.`|
-|`$` *N* `#`|Eşit nesne Kimliğine sahip nesneyi görüntüler *N*.|
-|`$dynamic`|Özel görüntüler **dinamik Görünüm** uygulayan bir nesne düğümü `IDynamicMetaObjectProvider`. Arabirim. Söz dizimi `$dynamic,` *nesne*. Bu özellik yalnızca .NET Framework sürüm 4 kullanan kod için geçerlidir.|
+|`$exception`|Son özel durum hakkındaki bilgileri görüntüler. Hiçbir özel durum oluştuysa, değerlendirme `$exception` bir hata mesajı görüntüler.|
+|`$delete` veya `$$delete`|**Komut** penceresinde oluşturulan örtük bir değişkeni siler. Söz dizimi `$delete,` *değişken* veya `$delete,` *değişkenidir* `.`|
+|`$objectids` veya `$listobjectids`|Tüm etkin nesne kimliklerini belirtilen ifadenin alt öğesi olarak görüntüler. Söz dizimi `$objectid,` *ifade* veya `$listobjectids,` *ifade* `.`|
+|`$` *N* `#`|Nesne KIMLIĞIYLE birlikte *N*değerine eşit olan nesneyi görüntüler.|
+|`$dynamic`|@No__t_1 uygulayan bir nesne için özel **Dinamik görünüm** düğümünü görüntüler. Arayüz. Söz dizimi `$dynamic,` *nesnesidir*. Bu özellik yalnızca .NET Framework sürüm 4 veya üstünü kullanan kod için geçerlidir.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)
-- [Değişken Windows](../debugger/debugger-windows.md)
+- [Değişken pencereleri](../debugger/debugger-windows.md)

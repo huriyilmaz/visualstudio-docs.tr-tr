@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklayıcı kesme noktaları sorunlarını giderme | Microsoft Docs
+title: Hata ayıklayıcıda kesme noktaları sorunlarını giderme | Microsoft Docs
 ms.custom: seodec18
 ms.date: 01/23/2018
 ms.topic: troubleshooting
@@ -8,54 +8,54 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbcda5eef8ac6ac6aa20c6f487dfc94beb10866c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7c11741cb9bb9a0b0c64b9452b54daa6ac226b92
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929658"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535932"
 ---
 # <a name="troubleshoot-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında kesme noktaları sorunlarını giderme
 
 ## <a name="breakpoint-warnings"></a>Kesme noktası uyarıları
 
-Hata ayıklarken bir kesme noktası iki olası görsel durumlar vardır: kırmızı bir daire ve (beyaz doldurulmuş) bir boş daire. Hata ayıklayıcı başarıyla hedef işlemde bir kesme noktası ayarlamak için kırmızı bir daire kalır. Kesme noktası bir daireye ise, kesme noktasını devre dışı bırakıldı veya kesme noktası ayarlanmaya çalışılırken uyarı oluştu. Farkı belirlemek için kesme noktası gelin ve bir uyarı olup olmadığına bakın.
+Hata ayıklarken, kesme noktasında iki olası görsel durum vardır: düz kırmızı daire ve boş (beyaz doldurulmuş) Daire. Hata ayıklayıcı hedef işlemde başarıyla bir kesme noktası ayarlayabiliyor ise, düz bir kırmızı daire kalır. Kesme noktası boş bir daire ise kesme noktası devre dışı bırakılır ya da kesme noktası ayarlanmaya çalışılırken uyarı oluşmuştur. Farkı öğrenmek için kesme noktasının üzerine gelin ve bir uyarı olup olmadığını görün.
 
-Aşağıdaki iki bölümü tanınmış uyarıları ve nasıl düzeltileceğini açıklar.
+Aşağıdaki iki bölümde belirgin uyarılar ve bunların nasıl düzeltileceğini açıklamaktadır.
 
-### <a name="no-symbols-have-been-loaded-for-this-document"></a>"Sembol, bu belge için yüklenmiş"
+### <a name="no-symbols-have-been-loaded-for-this-document"></a>"Bu belge için sembol yüklenmedi"
 
-Git **modülleri** penceresi (**hata ayıklama** > **Windows** > **modülleri**) ve modülünüzde olup olmadığını denetleyin yüklendi.
-* Modülünüzün yüklenirse, kontrol **sembol durumu** sembolleri yüklenmiş olup olmadığını görmek için sütun.
-  * Semboller yüklenmedi, sorunu tanılamak için Sembol durumunu denetleyin. Bir modülde bağlam menüsünden **modülleri** penceresinde tıklayın **sembol yükleme bilgisi...**  nerede deneyin ve simgeleri yüklemek için hata ayıklayıcı baktığı görmek için. Sembolleri yükleme hakkında daha fazla bilgi için bkz. [belirtin sembol (.pdb) ve kaynak dosyaları](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
-  * Sembol yüklenmedi, PDB, kaynak dosyaları hakkındaki bilgileri içermiyor. Birkaç olası nedenleri şunlardır:
-    * Kaynak dosyalarını yakın zamanda eklenmişse, güncel sürümü modülün yüklendiği onaylayın.
-    * Kesilmiş Pdb'lerin kullanarak oluşturmak mümkündür **/pdbstrıpped** bağlayıcı seçeneği. Kesilmiş Pdb'lerin kaynak dosya bilgileri içermez. Tam PDB ve kesilmiş bir PDB çalışıyor onaylayın.
-    * PDB dosyası kısmen bozuk. Dosyayı silin ve sorunu çözmeye modülün bir temiz yapı gerçekleştirin.
+**Modüller** penceresine gidin (**hata ayıklama**  > **Windows**  > **modülleri**) ve modülünüzün yüklenip yüklenmediğini denetleyin.
+* Modülünüz yüklüyse, simgelerin yüklenip yüklenmediğini görmek için **sembol durumu** sütununu kontrol edin.
+  * Semboller yüklü değilse, sorunu tanılamak için sembol durumunu kontrol edin. **Modüller** penceresindeki bir modülün bağlam menüsünde **sembol yükleme bilgileri...** ' ya tıklayarak hata ayıklayıcının sembolleri denemek ve yüklemek için baktığı yeri görüntüleyin. Sembolleri yükleme hakkında daha fazla bilgi için bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+  * Semboller yüklüyse PDB, kaynak dosyalarınız hakkında bilgi içermez. Bunlar olası nedenleri şunlardır:
+    * Kaynak dosyalarınız son zamanlarda eklendiyse, modülün güncel sürümünün yüklenmekte olduğunu onaylayın.
+    * **/Pdbçıkarıldı** bağlayıcı seçeneği kullanılarak, pdb 'leri oluşturulabilir. Pdb 'leri, kaynak dosya bilgilerini içermez. Bir tam PDB ile çalıştığınızı ve bir kesilmiş PDB değil olduğunu onaylayın.
+    * PDB dosyası kısmen bozuk. Dosyayı silin ve sorunu çözmeye çalışmak için modülün temiz bir derlemesini gerçekleştirin.
 
-* Modülünüzün yüklü değilse, nedenini bulmak için şunları denetleyin:
-  * Doğru işlem hata ayıklaması yaptığınız onaylayın.
-  * Doğru türde bir kod hata ayıklaması yaptığınız denetleyin. Hata ayıklayıcının hata ayıklamak üzere yapılandırılmış kod türünü bulabilirsiniz **işlemleri** penceresi (**hata ayıklama** > **Windows**  >  **İşlemleri**). C# kodu hatalarını ayıklama çalışıyorsanız, örneğin, .NET Framework'ün uygun bir tür için hata ayıklayıcı yapılandırıldığından emin olun (örneğin, yönetilen (v4\*) yönetilen karşılaştırması (v2\*/v3\*) yönetilen (CoreCLR) yerine).
+* Modülünüzün yüklü olmaması durumunda nedenini bulmak için aşağıdakileri denetleyin:
+  * Doğru işlemde hata ayıklatığınızdan emin olun.
+  * Doğru kod türünde hata ayıklamanın olup olmadığını kontrol edin. Hata ayıklayıcının, **işlem** penceresinde hata ayıklamak için ne tür bir kod ile yapılandırıldığını öğrenebilirsiniz (**hata ayıklama**  > **Windows**  > **işlemlerinde**). Örneğin, kodda hata ayıklamaya C# çalışıyorsanız, hata ayıklayıcının .net 'in uygun türü ve sürümü (örneğin, yönetilen (v4 \*) ile yönetilen (v2 \*/v3 \*) ile yönetilen (CoreCLR)) için yapılandırıldığını doğrulayın.
 
-### <a name="-the-current-source-code-is-different-from-the-version-built-into"></a>"… Geçerli kaynak kodunu yerleşik... sürümünden farklı."
+### <a name="-the-current-source-code-is-different-from-the-version-built-into"></a>"... geçerli kaynak kodu, yerleşik sürümünden farklı... "
 
-Bir kaynak dosyası değiştirilirse ve kaynak artık ayıkladığınız kod ile eşlenmiyorsa, hata ayıklayıcı kesme noktaları kodda varsayılan olarak ayarlamaz. Normalde, bu sorun, bir kaynak dosyası değiştirildi, ancak kaynak kodunu yeniden değildi gerçekleşir. Bu sorunu gidermek için projeyi yeniden derleyin. Aksi halde proje zaten güncel olduğundan derleme sistemi gördüğü, kaynak dosyasını yeniden kaydederek ya da yeniden oluşturmanız veya projenin temizleyerek derleme çıkışı derlemeden önce proje sisteminin zorlayabilirsiniz.
+Bir kaynak dosya değiştiyse ve kaynak artık hata ayıkladığınız kodla eşleşmez, hata ayıklayıcı varsayılan olarak kodda kesme noktaları ayarlanmayacaktır. Normalde, bu sorun bir kaynak dosya değiştirildiğinde, ancak kaynak kodu yeniden oluşturulmadığında oluşur. Bu sorunu onarmak için projeyi yeniden derleyin. Yapı sistemi projenin zaten güncel olup olmadığını düşündüğü halde, kaynak dosyayı yeniden kaydederek ya da derlemeden önce projenin derleme çıkışını kaldırarak proje sistemini yeniden oluşturmaya zorlayabilirsiniz.
 
-Nadir senaryolarda, eşleşen kaynak koduna gerekmeden hata ayıklamak isteyebilirsiniz. Kaynak kodu ile eşleşen hata ayıklama kafa karıştırıcı bir adayı hata ayıklama deneyimi, bu nedenle olduğundan bu nasıl devam etmek istediğinizden emin yapabilirsiniz.
+Nadir senaryolarda, eşleşen kaynak kodu olmadan hata ayıklaması yapmak isteyebilirsiniz. Eşleşen kaynak kodu olmadan hata ayıklama, kafa karıştırıcı bir hata ayıklama deneyimine yol açabilir, bu nedenle bunun nasıl devam etmek istediğinize emin olun.
 
-Bu güvenlik denetimleri devre dışı bırakmak için aşağıdakilerden birini yapın:
-* Tek bir kesme noktası değiştirmek için düzenleyicide kesme noktası simgesinin üzerine gelin ve ayarları (dişli) simgesini tıklatın. Bir Özet penceresi Düzenleyicisi'ne eklenir. Göz atma penceresinin en üstünde bir kesme noktası konumunu belirten bir köprü yoktur. Kesme noktası konumu değiştirilmesine izin verir ve denetlemek için köprüyü tıklatarak **kaynak kodun özgün sürümden farklı olmasına izin ver**.
-* Tüm kesme noktalarını için bu ayarı değiştirmek için Git **hata ayıklama** > **seçenekler ve ayarlar**. Üzerinde **hata ayıklama/genel** sayfasında, NET **özgün sürümle tam eşleşen kaynak dosyaları gerekiyor** seçeneği. İşiniz bittiğinde bu seçenek yeniden etkinleştirmek emin hata ayıklama.
+Bu güvenlik denetimlerini devre dışı bırakmak için aşağıdakilerden birini yapın:
+* Tek bir kesme noktasını değiştirmek için, düzenleyicide kesme noktası simgesinin üzerine gelin ve ayarlar (dişli) simgesine tıklayın. Düzenleyiciye bir göz atma penceresi eklenir. Göz atma penceresinin üst kısmında, kesme noktasının konumunu gösteren bir köprü bulunur. Kesme noktası konumunun değiştirilmesine izin vermek için köprüye tıklayın ve **kaynak kodun orijinalden farklı olmasını**sağlar.
+* Tüm kesme noktaları için bu ayarı değiştirmek için, **hata ayıklama**  > **Seçenekler ve ayarlar**'a gidin. **Hata ayıklama/genel** sayfasında, **özgün sürümle tam olarak eşleşen kaynak dosyalarını gerektir** seçeneğini temizleyin. Hata ayıklamayı bitirdiğinizde bu seçeneği yeniden etkinleştirdiğinizden emin olun.
 
-## <a name="the-breakpoint-was-successfully-set-no-warning-but-didnt-hit"></a>Kesme noktası (uyarı yok) başarıyla ayarlandı, ancak isabet gelmedi
+## <a name="the-breakpoint-was-successfully-set-no-warning-but-didnt-hit"></a>Kesme noktası başarıyla ayarlandı (uyarı yok), ancak isabet etmedi
 
-Bu bölümde, tüm uyarıların hata ayıklayıcı görüntülenmiyor – etkin bir şekilde hata ayıklarken kesme noktası kırmızı bir daire olduğundan henüz kesme noktasına isabet değil karşılaşılan sorunları gidermek için bilgi sağlar.
+Bu bölüm, hata ayıklayıcı herhangi bir uyarı görüntülemediğinde oluşan sorunları gidermek için bilgiler sağlar. kesme noktası etkin bir şekilde hata ayıklaırken düz kırmızı bir daire, ancak kesme noktası isabet etmemektedir.
 
-Denetlenecek bazı işlemler aşağıda verilmiştir:
-1. Kodunuzu birden fazla işlem veya birden fazla bilgisayarda çalışıyorsa, doğru işlem ya da bilgisayar ayıkladığınız emin olun.
-2. Kodunuzun çalıştığını onaylayın. Kodunuzun çalıştığı test etmek için bir çağrı ekleyin `System.Diagnostics.Debugger.Break` (C# /VB) veya `__debugbreak` (C++) nerede kesme noktası ayarlayın ve ardından projenizi yeniden derleyin aktarmaya çalıştığınız kod satırına.
-3. En iyi duruma getirilmiş kod hata ayıklaması yapıyorsanız emin olun, Kesme noktasının ayarlandığı işlevi olan olmayan başka bir işleve satır içine alınmış. `Debugger.Break` Önceki iade etme açıklanan test, test bu sorunu de çalışabilir.
+Şunları denetlemeniz gereken birkaç nokta vardır:
+1. Kodunuz birden fazla işlemde veya birden çok bilgisayarda çalışıyorsa, doğru işlem veya bilgisayarda hata ayıkladığınızdan emin olun.
+2. Kodunuzun çalıştığını doğrulayın. Kodunuzun çalıştığını test etmek için, kesme noktasını ayarlamaya çalıştığınız kod satırına `System.Diagnostics.Debugger.Break` (C#/vb) veya `__debugbreak` (C++) çağrısı ekleyin ve ardından projenizi yeniden derleyin.
+3. İyileştirilmiş kodda hata ayıklaması yapıyorsanız, kesme noktasının ayarlandığı işlevin başka bir işleve satır içine alınmayacak olduğundan emin olun. Önceki denetim bölümünde açıklanan `Debugger.Break` testi, bu sorunu da test etmek için çalışabilir.
 
-## <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>Bir kesme noktası sildim ama hata ayıklamayı yeniden başlattığınızda, isabet devam
+## <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>Bir kesme noktasını sildim, ancak hata ayıklamayı yeniden başlattığımda bu kez vurmaya devam ediyorum
 
-Hata ayıklarken bir kesme noktası sildiyseniz, hata ayıklama yeniden başlattığınızda kesme noktasına isabet. Bu kesme noktasına ulaşma durdurmak için kesme noktası örneklerini kaldırılma tüm emin **kesme noktaları** penceresi.
+Hata ayıklarken bir kesme noktasını sildiyseniz, hata ayıklamayı bir sonraki başlatmanızda kesme noktasına bir daha basabilirsiniz. Bu kesme noktasına vurmak **için kesme noktası penceresinin tüm** örneklerinin kaldırıldığından emin olun.
