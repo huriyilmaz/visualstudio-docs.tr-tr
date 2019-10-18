@@ -18,30 +18,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e922be19db0128f515b63157be32cec84d81313d
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: d6603ca7ffc39ecc819fb2e54024776760ccfa60
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211195"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72536056"
 ---
 # <a name="debugger-settings-and-preparation"></a>Hata Ayıklayıcısı Ayarları ve Hazırlığı
-Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklayıcıyla programınızın hatalarını ayıklamak için gereken hazırlık açıklanmaktadır. Programınızı proje şablonlarını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kullanarak oluşturursanız, bu ayarlar hata ayıklama yapılandırmasında sizin için doğru şekilde ayarlanır.
+Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı ile programınızda hata ayıklaması yapmak için gereken hazırlık açıklanmaktadır. Programınızı proje şablonlarını kullanarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturursanız, bu ayarlar hata ayıklama yapılandırmasında sizin için doğru şekilde ayarlanır.
 
- Daha fazla bilgi için [nasıl yapılır: Hata ayıklama ve yayın yapılandırmasını](../debugger/how-to-set-debug-and-release-configurations.md)ayarlayın.
+ Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md).
 
 ## <a name="in-this-section"></a>Bu Bölümde
+
+ [Nasıl yapılır: hata ayıklayıcı ayarlarını belirtme](../debugger/how-to-specify-debugger-settings.md) **Seçenekler** iletişim kutusunda hata ayıklayıcı ayarlarını açıklar.
+ 
  [Hata ayıklayıcı proje ayarları](../debugger/debugger-project-settings.md) Hata ayıklayıcı ayarlarını belirtme, hata ayıklama ve sürüm yapılandırmalarının nasıl ayarlanacağı ve sembolleri ve kaynak kodunun nasıl yönetileceği açıklanmaktadır. Ayrıca C++, C# F#,, ve Visual Basic hata ayıklama yapılandırmalarının yanı sıra web projelerinin uygun proje ayarlarını da açıklar.
 
  [DLL projelerinde hata ayıklama](../debugger/debugging-dll-projects.md) DLL projelerinde hata ayıklama, DLL projesinden hata ayıklama, karışık modda hata ayıklama ve yönetilen kod Web denetim kitaplığında hata ayıklama için önerilen proje ayarlarını açıklar.
 
  [Konsol projeleri](../debugger/debugging-preparation-console-projects.md) Konsol projelerinin hata ayıklama için nasıl yapılandırılacağı hakkında yönergeler sağlar.
 
- [Nasıl yapılır: Visual Studio çözümünün](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md) bir parçası olmayan yürütülebilir dosyada hata ayıklamak, Visual Studio projesinin bir parçası olarak oluşturulmamış bir çalıştırılabilirin nasıl ayıklandığını açıklar.
+ [Nasıl yapılır: Visual Studio çözümünün bir parçası değil yürütülebilir dosya hatalarını ayıklama](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md) Visual Studio projesinin bir parçası olarak oluşturulmamış bir çalıştırılabilirin nasıl hata ayıklaması yapılacağını açıklar.
 
  [Hata ayıklama 64-bit uygulamalar](../debugger/debug-64-bit-applications.md) 64 bitlik uygulamalarda hata ayıklamayı açıklar.
 
- [Nasıl yapılır: Hata ayıklama](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md) için bir .NET Framework sürümü belirtin bir kayıt defteri anahtarının hangi sürümü kullanacağınızı hata ayıklayıcıya göstermek için nasıl ayarlanacağını açıklar.
+ [Nasıl yapılır: hata ayıklama için eski bir .NET Framework sürümünü belirtme](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md) Hangi sürümün kullanılacağını hata ayıklayıcı olarak göstermek için bir kayıt defteri anahtarının nasıl ayarlanacağını açıklar.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)

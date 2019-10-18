@@ -1,90 +1,58 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Visual Studio | JavaScript ve TypeScript
+### YamlMime:Landing
+title: Visual Studio öğreticileri | JavaScript ve TypeScript
+summary: Visual Studio ile JavaScript ve TypeScript uygulamaları oluşturma
 metadata:
-  title: JavaScript ve TypeScript Visual Studio ile geliştirme | Microsoft Docs
-  meta.description: Tutorials and conceptual articles about developing JavaScript and TypeScript apps with Visual Studio.
-  author: mikejo5000
-  manager: jillfra
-  ms.prod: visual-studio-windows
-  ms.technology: vs-javascript
+  title: Visual Studio 'da JavaScript ve TypeScript
+  description: JavaScript ve TypeScript uygulamaları oluşturmak için Visual Studio 'Yu nasıl kullanacağınızı öğrenin.
   ms.topic: landing-page
-  ms.date: 01/15/2019
+  author: mikejo5000
   ms.author: mikejo
-  dev_langs:
-    - JavaScript
-    - TypeScript
-sections:
-  - title: Visual Studio ile çalışmaya başlama
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ../install/install-visual-studio.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: Visual Studio'yu yükleme
-          - href: ../javascript/quickstart-ide-orientation-js.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_visual-studio.svg'
-            title: Visual Studio IDE'de gezinme
-  - title: Öğreticiler
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: tutorial-nodejs.md
-            html: <p>Node.js ve Express ile web uygulaması oluşturma</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_nodejs.svg'
-          - href: tutorial-nodejs-with-react-and-jsx.md
-            html: <p>Node.js ve React ile bir web uygulaması oluşturma</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_React.svg'
-          - href: quickstart-vuejs-with-nodejs.md
-            html: <p>Node.js ve Vue.js ile bir web uygulaması oluşturma</p>
-            image:
-              src: ../javascript/media/logo-vuejs.png
-          - href: publish-nodejs-app-azure.md
-            html: <p>Linux App Service’e bir Node.js uygulaması yayımlama</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_linux-color.svg'
-  - title: Uygulamalar geliştirin
-    items:
-      - type: paragraph
-        text: Visual Studio geliştirme görevleriniz için kullanmayı öğrenin.
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: write-and-edit-code.md
-            html: <p>Kodu yazma ve düzenleme</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-          - href: nodejs-interactive-repl.md
-            html: <p>Node.js etkileşimli REPL kullanma</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_cligeneric.svg'
-          - href: npm-package-management.md
-            html: <p>npm paketlerini yönetme</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_npm.svg'
-          - href: debug-nodejs.md
-            html: <p>Kodunuzda hata ayıklama</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-          - href: develop-javascript-code-without-solutions-projects.md
-            html: <p>Projeler veya çözümler olmadan kod geliştirme</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-          - href: unit-testing-javascript-with-visual-studio.md
-            html: <p>Yazma ve birim testleri çalıştırma</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_unit-testing.svg'
+  manager: jillfra
+  ms.date: 10/15/2019
+  ms.openlocfilehash: 1bdf2530d8e6513f57b515680410b9111cec87c6
+  ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/17/2019
+  ms.locfileid: "72517107"
+landingContent:
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visual Studio 'da JavaScript ve TypeScript
+      url: javascript-in-vs-2019.md
+  - linkListType: how-to-guide
+    links:
+    - text: Visual Studio'yu yükleme
+      url: ../install/install-visual-studio.md
+  - linkListType: get-started
+    links:
+    - text: Kılavuzlu tura başla
+      url: quickstart-ide-orientation-js.md
+- title: JavaScript ve TypeScript uygulamaları oluşturma
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Node. js ve Express ile Web uygulaması oluşturma
+      url: tutorial-nodejs.md
+    - text: Node. js ile bir Web uygulaması oluşturma ve tepki verme
+      url: tutorial-nodejs-with-react-and-jsx.md
+    - text: Node. js ve Vue. js ile bir Web uygulaması oluşturma
+      url: quickstart-vuejs-with-nodejs.md
+- title: Visual Studio'yu öğrenin
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kodu yazma ve düzenleme
+      url: write-and-edit-code.md
+    - text: npm paketlerini yönetme
+      url: npm-package-management.md
+    - text: Node.js etkileşimli REPL kullanma
+      url: nodejs-interactive-repl.md
+    - text: Kodunuzda hata ayıklama
+      url: debug-nodejs.md
+    - text: Proje veya çözüm olmadan kod geliştirme
+      url: develop-javascript-code-without-solutions-projects.md
+    - text: Birim testlerini yazma ve çalıştırma
+      url: unit-testing-javascript-with-visual-studio.md

@@ -16,24 +16,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2268d71f9119cc36bdb18161a62fbe930a37b2ff
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
-ms.translationtype: HT
+ms.openlocfilehash: b9c8b60914e814ab6957ee9ec9307b12d9c3d1ba
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381089"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516889"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun çevrimdışı yüklemesini oluşturma
 
 ::: moniker range="vs-2017"
 
-Visual Studio 2017 ' i çeşitli ağ ve bilgisayar yapılandırmalarında iyi bir şekilde çalışacak şekilde tasarlıyoruz. [Visual Studio web yükleyicisini](https://visualstudio.microsoft.com/vs/older-downloads)&mdash; ' i küçük bir dosya olan ve en son düzeltmeler ve özelliklerle güncel kalacağınızı (@ no__t-2) denemenize olanak tanırken, yapaabilebileceğinizi anladık.
+Visual Studio 2017 ' i çeşitli ağ ve bilgisayar yapılandırmalarında iyi bir şekilde çalışacak şekilde tasarlıyoruz. [Visual Studio web yükleyicisini](https://visualstudio.microsoft.com/vs/older-downloads) &mdash;which küçük bir dosya olduğundan, en son düzeltmeler ve özelliklerle güncel kalacağınızı ve &mdash;we anlayacağınızı anlamanız önerilir.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 ' i çeşitli ağ ve bilgisayar yapılandırmalarında iyi bir şekilde çalışacak şekilde tasarlıyoruz. [Visual Studio web yükleyicisini](https://visualstudio.microsoft.com/downloads)&mdash; ' i küçük bir dosya olan ve en son düzeltmeler ve özelliklerle güncel kalacağınızı (@ no__t-2) denemenize olanak tanırken, yapaabilebileceğinizi anladık.
+Visual Studio 2019 ' i çeşitli ağ ve bilgisayar yapılandırmalarında iyi bir şekilde çalışacak şekilde tasarlıyoruz. [Visual Studio web yükleyicisini](https://visualstudio.microsoft.com/downloads) &mdash;which küçük bir dosya olduğundan, en son düzeltmeler ve özelliklerle güncel kalacağınızı ve &mdash;we anlayacağınızı anlamanız önerilir.
 
 ::: moniker-end
 
@@ -79,7 +79,7 @@ Bu adımı tamamlayabilmeniz için bir internet bağlantınızın olması gereki
 
 Visual Studio 2017 için bir önyükleyici almak üzere, bunun nasıl yapılacağı hakkında ayrıntılı bilgi için [Visual Studio önceki sürümler](https://visualstudio.microsoft.com/vs/older-downloads/) indirme sayfasına bakın.
 
-Kurulumlarınız @ no__t-0veya daha belirgin olacak şekilde çalıştırılabilir. önyükleyici dosyası @ no__t-1ile eşleşmelidir veya aşağıdakilerden birine benzer olmalıdır.
+Kurulum çalıştırılabilir dosyanız daha belirli bir şekilde &mdash;or, önyükleyici dosyası &mdash;should eşleşiyor veya aşağıdakilerden birine benzer.
 
 | Sürüm | Kısaltın |
 |-------------|-----------------------|
@@ -92,7 +92,7 @@ Kurulumlarınız @ no__t-0veya daha belirgin olacak şekilde çalıştırılabil
 
 ::: moniker range="vs-2019"
 
-Visual Studio 'nun seçili sürümü için Visual Studio önyükleyici indirerek başlayın. @ No__t-0veya Bootstrapper @ no__t-1Kurulum dosyanız, aşağıdakilerden biriyle aynı olacak veya buna benzer.
+Visual Studio 'nun seçili sürümü için Visual Studio önyükleyici indirerek başlayın. Kurulum dosyanız &mdash;or önyükleyici &mdash;will eşleşiyor veya aşağıdakilerden birine benzer.
 
 | Sürüm                    | Dosya                                                                    |
 |----------------------------|-------------------------------------------------------------------------|
@@ -136,7 +136,7 @@ Bir komut istemi açın ve aşağıdaki örneklerde komutlardan birini kullanın
     vs_community.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
     ```
 
-- Tüm özelliklerle tam bir yerel düzen oluşturmak için (Bu uzun zaman alır @ no__t- _0Çok fazla_ özellik sunuyoruz!), şunu çalıştırın:
+- Tüm özelliklerle tam bir yerel düzen oluşturmak için (&mdash;we _çok_ sayıda özelliği olması uzun zaman alır!), şunu çalıştırın:
 
    ```cmd
     vs_community.exe --layout c:\vslayout --lang en-US
@@ -164,9 +164,9 @@ Ingilizce dışında bir dil yüklemek isterseniz, [dil yerel ayarları listesin
 > Yerel yükleme önbelleğinden çalıştırdığınızda, kurulum bu dosyaların her birinin yerel sürümlerini kullanır. Ancak, yükleme sırasında önbellekte olmayan bileşenler ' i seçerseniz, kurulum bunları internet 'ten indirmeyi dener.
 
 ::: moniker range="vs-2019"
-
-> 16,1 ve üzeri sürümlerde yüklemeler ve güncelleştirmeler için, "aşağıdaki parametrelerle eşleşen bir ürün bulunamıyor" hatasıyla karşılaşırsanız, 16.3.5 veya üzeri ile--NoWeb anahtarını kullanın.
-
+> [!IMPORTANT]
+> Çevrimdışı yüklemeler için, "aşağıdaki parametrelerle eşleşen bir ürün bulunamıyor" adlı bir hata mesajı alırsanız, 16.3.5 veya sonraki bir sürümüyle `--noweb` anahtarını kullandığınızdan emin olun.
+>
 ::: moniker-end
 
 Yalnızca daha önce indirdiğiniz dosyaları yüklediğinizden emin olmak için, düzen önbelleğini oluşturmak için kullandığınız komut satırı seçeneklerini kullanın. Örneğin, aşağıdaki komutla bir düzen önbelleği oluşturduysanız:

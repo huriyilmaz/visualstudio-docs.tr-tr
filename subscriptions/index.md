@@ -7,12 +7,12 @@ layout: LandingPage
 ms.date: 06/25/2018
 ms.topic: landing-page
 description: Visual Studio abonelikleri 'ne hoş geldiniz
-ms.openlocfilehash: 9c2981ddf109a253f55e4c72dd4e88ceb2c820ff
-ms.sourcegitcommit: 9f11537a721e69879a612979a1aca98f40bb4d4d
+ms.openlocfilehash: 5848ccca0468b6293f7e31785944f5cb8b14a17c
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383709"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516848"
 ---
 # <a name="visual-studio-subscriptions"></a>Visual Studio Abonelikleri
 
@@ -20,8 +20,8 @@ Visual Studio abonelikleri, Windows, iOS, Android ve Linux gibi tercih ettiğini
 
 ## <a name="get-started"></a>Başlarken
 
-Yöneticiler ekibine abonelik atamak [https://manage.visualstudio.com](https://manage.visualstudio.com) için oturum açın.<br>
-Aboneler abonelik avantajlarınıza [https://my.visualstudio.com](https://my.visualstudio.com) erişmek için oturum açın.
+Yöneticiler takımınıza abonelik atamak için [https://manage.visualstudio.com](https://manage.visualstudio.com) oturum açın.<br>
+Aboneler abonelik avantajlarınıza erişmek için [https://my.visualstudio.com](https://my.visualstudio.com) oturum açın.
 
 <!-- markdownlint-disable MD033 -->
 <ul class="panelContent cardsFTitle">
@@ -191,10 +191,9 @@ Aboneliğinizi daha da yararlı hale getirmek için abonelik avantajlarını sı
                         <p>Visual Studio abonelikleri, Microsoft ve iş ortaklarımız aracılığıyla teknik ve profesyonel eğitim avantajları içerir. Eğitim içeriği, devam eden kariyer geliştirmeye yönelik teknoloji konuları ve profesyonel eğitim yazılımı hakkındaki en son kursları içerir. Sorunları çözmek ve soruları yanıtlamak için uzman yardımı alın. Aboneliğiniz şunlar olabilir:</p>
                         <ul>
                             <li><a href="/visualstudio/subscriptions/vs-linkedin-learning">LinkedIn Premium</a> (iş, teknoloji ve yaratıcı)</li>
-                            <li><a href="/visualstudio/subscriptions/vs-pluralsight">Pluralaltim</a> (bulut, tasarım, mobil ve veri)</li>
-                            <li><a href="/visualstudio/subscriptions/vs-datacamp">Veri kampı</a> (veri bilimi ve AI)</li>
+                            <li><a href="/visualstudio/subscriptions/vs-pluralsight">Pluraltim</a> (bulut, tasarım, mobil ve veriler)</li>
+                            <li><a href="/visualstudio/subscriptions/vs-datacamp">Veri Camp</a> (veri bilimi ve AI)</li>
                             <li><a href="/visualstudio/subscriptions/vs-tech-support">Microsoft profesyonel teknik destek olayları</a></li>
-                            <li><a href="/visualstudio/subscriptions/vs-azure-advisory-chat">Azure Danışmanı Sohbeti</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-azure-community">Azure Topluluğu</a></li>
                         </ul>
                     </div>

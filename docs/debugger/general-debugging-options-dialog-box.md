@@ -21,16 +21,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3fa7ae62c19a7af45188bab08ce9b3144032b7d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
-ms.translationtype: MT
+ms.openlocfilehash: cd90cb5eb55143a4a1916dfcee3f108ba7afb759
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435712"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72536036"
 ---
 # <a name="general-debugging-options"></a>Genel hata ayıklama seçenekleri
 
-Visual Studio hata ayıklayıcısı seçeneklerini ayarlamak için **araçlar** > **Seçenekler**' i seçin ve **hata ayıklama** altında **genel** Seçenekler ' in yanındaki kutuları seçin veya seçimi kaldırın. Tüm varsayılan ayarları, **araçlar**@no__t**Içeri ve dışarı aktarma ayarları** > **tüm ayarları Sıfırla**geri yükleyebilirsiniz. Bir ayar alt kümesini sıfırlamak için, test etmek istediğiniz değişiklikleri yapmadan önce ayarlarınızı **içeri ve dışarı aktarma Sihirbazı** ile kaydedin, sonra kaydedilen ayarlarınızı daha sonra içeri aktarın.
+Visual Studio hata ayıklayıcısı seçeneklerini ayarlamak için **araçlar** > **Seçenekler**' i seçin ve **hata ayıklama** altında **genel** Seçenekler ' in yanındaki kutuları seçin veya seçimi kaldırın. Tüm varsayılan **ayarları,** **ayarları Içeri ve dışarı aktarma**  > **tüm ayarları Sıfırla** >  geri yükleyebilirsiniz. Bir ayar alt kümesini sıfırlamak için, test etmek istediğiniz değişiklikleri yapmadan önce ayarlarınızı **içeri ve dışarı aktarma Sihirbazı** ile kaydedin, sonra kaydedilen ayarlarınızı daha sonra içeri aktarın.
 
 Aşağıdaki **genel** seçenekleri belirleyebilirsiniz:
 
@@ -99,7 +99,7 @@ Aşağıdaki **genel** seçenekleri belirleyebilirsiniz:
 
 **Modül YÜKLEMESINDE JIT Iyileştirmesini bastır (yalnızca yönetilen)** : bir modül yüklendiğinde YÖNETILEN kodun JIT iyileştirmesini devre dışı bırakır ve hata AYıKLAYıCı eklendiğinde JIT derlenir. İyileştirmenin devre dışı bırakılması, performans masrafına karşın bazı sorunların hatalarını ayıklamanızı kolaylaştırabilir. Yalnızca kendi kodum kullanıyorsanız, JıT iyileştirmesini gizleme Kullanıcı dışı kodun kullanıcı kodu ("My Code") olarak görünmesine neden olabilir. Daha fazla bilgi için bkz. [JIT İyileştirmesi ve hata ayıklama](../debugger/jit-optimization-and-debugging.md).
 
-**ASP.net Için JavaScript hata ayıklamasını etkinleştir (Chrome, Edge ve IE)** : ASP.NET uygulamaları için betik hata ayıklayıcısını etkinleştirir. Chrome 'da ilk kez kullanırken, yüklemiş olduğunuz Chrome uzantılarını etkinleştirmek için tarayıcıda oturum açmanız gerekebilir. Eski davranışa dönmek için bu seçeneği devre dışı bırakın.
+**ASP.net Için JavaScript hata ayıklamasını etkinleştir (Chrome, Microsoft Edge ve IE)** : ASP.NET uygulamaları için betik hata ayıklayıcısını etkinleştirir. Chrome 'da ilk kez kullanırken, yüklemiş olduğunuz Chrome uzantılarını etkinleştirmek için tarayıcıda oturum açmanız gerekebilir. Eski davranışa dönmek için bu seçeneği devre dışı bırakın.
 
 **UWP JavaScript uygulamaları (deneysel) Için Edge geliştirici araçları etkinleştirme**: Microsoft Edge 'de UWP JavaScript uygulamaları için geliştirici araçları sağlar.
 
@@ -109,7 +109,7 @@ Aşağıdaki **genel** seçenekleri belirleyebilirsiniz:
 
 **DLL dışarı aktarmaları yükle (yalnızca yerel)** : dll dışa aktarma tablolarını yükler. DLL dışarı aktarma tablolarından sembol bilgileri, Windows iletileri, Windows yordamları (WindowProcs), COM nesneleri veya sıralama ya da sembolleri olmayan herhangi bir dll ile çalışıyorsanız yararlı olabilir. Dll dışa aktarma bilgilerini okuma bazı ek yük içerir. Bu nedenle, bu özellik varsayılan olarak kapalıdır.
 
-Dll 'nin dışarı aktarma tablosunda hangi simgelerin kullanılabildiğini görmek için `dumpbin /exports` kullanın. Semboller, 32 bit sistem dll 'si için kullanılabilir. @No__t-0 çıktısını okuyarak, alfasayısal olmayan karakterler de dahil olmak üzere tam işlev adını görebilirsiniz. Bu, bir işlev bir kesme noktası ayarlamak için yararlıdır. DLL dışarı aktarma tablolarındaki işlev adları, hata ayıklayıcının başka bir yerinde kesilmiş görünebilir. Aramalar geçerli işlev en üstte (en yoğun şekilde iç içe geçmiş) olacak şekilde arama sırasıyla listelenir. Daha fazla bilgi için bkz. [dumpbin/dışarı aktarmalar](/cpp/build/reference/dash-exports).
+Dll 'nin dışarı aktarma tablosunda hangi simgelerin kullanılabildiğini görmek için `dumpbin /exports` kullanın. Semboller, 32 bit sistem dll 'si için kullanılabilir. @No__t_0 çıktısını okuyarak, alfasayısal olmayan karakterler de dahil olmak üzere tam işlev adını görebilirsiniz. Bu, bir işlev bir kesme noktası ayarlamak için yararlıdır. DLL dışarı aktarma tablolarındaki işlev adları, hata ayıklayıcının başka bir yerinde kesilmiş görünebilir. Aramalar geçerli işlev en üstte (en yoğun şekilde iç içe geçmiş) olacak şekilde arama sırasıyla listelenir. Daha fazla bilgi için bkz. [dumpbin/dışarı aktarmalar](/cpp/build/reference/dash-exports).
 
 **Paralel Yığınlar diyagramını aşağıdan yukarı göster**: yığınların **Paralel Yığınlar** penceresinde gösterileceği yönü denetler.
 
@@ -117,7 +117,7 @@ Dll 'nin dışarı aktarma tablosunda hangi simgelerin kullanılabildiğini gör
 
 **Yönetilen uyumluluk modunu kullan**: Bu senaryoları etkinleştirmek için varsayılan hata ayıklama altyapısını eski bir sürümle değiştirir:
 
-- Kendi Ifade değerlendiricisi (Bu/CLI dahil C# F# C++) sağlayan, Visual Basic veya dışında .NET Framework bir dil kullanıyorsunuz.
+- Kendi Ifade değerlendiricisi (Bu/CLI dahil C# F# C++) sağlayan, Visual Basic veya dışında bir .net dili kullanıyorsunuz.
 
 - Karışık modda hata ayıklama sırasında projeler için C++ Düzenle ve devam et 'i etkinleştirmek istiyorsunuz.
 

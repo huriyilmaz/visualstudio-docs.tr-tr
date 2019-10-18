@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: MSDN Magazine kullanımdan kaldırılıyor
-ms.openlocfilehash: 8addfcf6c32b8c7d01223ff1ae6bb4cc4b32562c
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: de9d81369d1a616b2511ec553d41a077b2edb359
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891250"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516840"
 ---
 # <a name="the-msdn-magazine-benefit-in-visual-studio-subscriptions-has-been-discontinued"></a>Visual Studio aboneliklerinde MSDN Magazine avantajı kullanımdan kaldırılmıştır
 
@@ -29,8 +29,8 @@ Msdn.microsoft.com üzerindeki duyurunun bir alıntısı aşağıda verilmiştir
     Subscribers of MSDN Magazine who have paid for their subscriptions will receive a pro-rated refund, based on time remaining on their subscription. The refund checks will be mailed out to those subscribers after the November issue has published."
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="q-how-does-the-refund-process-work"></a>Ç İadesi işlemi nasıl çalışır?
-Y: Para iadesi, aboneliğiniz için dosyadaki adrese postalanacak. Para iadesi hakkında başka sorularınız varsa, lütfen **1105 medyasına**başvurun.  1105 medyası için tüm iletişim bilgilerini, msdn.microsoft.com adresindeki [blog postasında](https://msdn.microsoft.com/magazine/mt833502.aspx?) bulabilirsiniz.  
+### <a name="q-how-does-the-refund-process-work"></a>S: geri ödeme işlemi nasıl çalışır?
+Y: para Iadesi, aboneliğinizin dosyadaki adresine postalanacak. Para iadesi hakkında başka sorularınız varsa, lütfen **1105 medyasına**başvurun.  1105 medyası için tüm iletişim bilgilerini, msdn.microsoft.com adresindeki [blog postasında](https://msdn.microsoft.com/magazine/mt833502.aspx?) bulabilirsiniz.  
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
@@ -38,6 +38,7 @@ Y: Para iadesi, aboneliğiniz için dosyadaki adrese postalanacak. Para iadesi h
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Aboneliğinizde daha fazla profesyonel geliştirme fırsatına göz atın:
+- [CODE Magazine](vs-code-magazine.md)
 - [Pluralsight](vs-pluralsight.md)
 - [LinkedIn Learning](vs-linkedin-learning.md)
 - [DataCamp](vs-datacamp.md)
