@@ -12,36 +12,37 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fbe3ff31d00945ef462c5c20eb1c4b33c250f97
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
-ms.translationtype: MT
+ms.openlocfilehash: 866ad705f16e9eabb097e9c0c9064d2c379ebf9f
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887756"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349632"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Hata ayıklayıcıya DebuggerDisplay özniteliği kullanarak neyin gösterileceğini söyleyin (C#, Visual Basic, F#, C++/CLI)
-Bir nesne, özellik veya alanın hata ayıklayıcı değişkeni penceresinde nasıl görüntülendiğini denetler.<xref:System.Diagnostics.DebuggerDisplayAttribute> Bu öznitelik türler, temsilciler, özellikler, alanlar ve derlemelere uygulanabilir. Bir temel türe uygulanmışsa öznitelik bir alt sınıf için de geçerli olur.
 
-`DebuggerDisplay` Özniteliğin tek bir bağımsız değişkeni vardır ve bu, türü örneklerin değer sütununda görüntülenecek bir dizedir. Bu dize, küme ayraçları (`{` ve `}`) içerebilir. Bir küme ayraçları içindeki metin, alan, özellik veya yöntem olarak değerlendirilir.
+@No__t_0, bir nesne, özellik veya alanın hata ayıklayıcı değişkeni penceresinde nasıl görüntülendiğini denetler. Bu öznitelik türler, temsilciler, özellikler, alanlar ve derlemelere uygulanabilir. Bir temel türe uygulanmışsa öznitelik bir alt sınıf için de geçerli olur.
 
-Bir sınıfta geçersiz kılınan `ToString()` bir yöntem varsa, hata ayıklayıcı varsayılan `{<typeName>}`yerine geçersiz kılınan yöntemi kullanır. Bu nedenle, `ToString()` yöntemi geçersiz kıldıysanız, hata ayıklayıcı varsayılan`{<typeName>}`yerine geçersiz kılınan yöntemi kullanır ve kullanmak `DebuggerDisplay`zorunda değilsiniz. Her ikisini de kullanırsanız, `DebuggerDisplay` öznitelik geçersiz kılınan `ToString()` yönteme göre önceliklidir. Öznitelik `DebuggerDisplay` , bir alt sınıfta geçersiz kılınan `ToString()` yöntemden de önceliklidir.
+@No__t_0 özniteliğin tek bir bağımsız değişkeni vardır ve bu, türü örneklerin değer sütununda görüntülenecek bir dizedir. Bu dize, küme ayracı (`{` ve `}`) içerebilir. Bir küme ayraçları içindeki metin, alan, özellik veya yöntem olarak değerlendirilir.
 
-Hata ayıklayıcının bu örtük `ToString()` çağrıyı değerlendirip, **Araçlar/Seçenekler/hata ayıklama** iletişim kutusunda bir Kullanıcı ayarına bağlıdır. Visual Basic bu örtük `ToString()` değerlendirmeyi uygulamaz.
+Bir sınıfta geçersiz kılınan bir `ToString()` yöntemi varsa, hata ayıklayıcı varsayılan `{<typeName>}` yerine geçersiz kılınan yöntemi kullanır. Bu nedenle, `ToString()` yöntemini geçersiz kıldıysanız, hata ayıklayıcı varsayılan `{<typeName>}` yerine geçersiz kılınan yöntemi kullanır ve `DebuggerDisplay` kullanmanız gerekmez. Her ikisini de kullanıyorsanız, `DebuggerDisplay` özniteliği geçersiz kılınan `ToString()` yöntemine göre önceliklidir. @No__t_0 özniteliği Ayrıca bir alt sınıfta geçersiz kılınan `ToString()` yönteminden önceliklidir.
+
+Hata ayıklayıcının bu örtük `ToString()` çağrısını değerlendirip, **Araçlar/Seçenekler/hata ayıklama** iletişim kutusunda bir Kullanıcı ayarına bağlıdır. Visual Basic bu örtük `ToString()` değerlendirmeyi uygulamaz.
 
 > [!IMPORTANT]
-> **Araçlar/Seçenekler/hata ayıklama** iletişim kutusunda `DebuggerDisplay` **değişkenlerin ham yapısını göster Windows** onay kutusu işaretliyse, öznitelik yok sayılır.
+> **Araçlar/Seçenekler/hata ayıklama** iletişim kutusunda **değişkenlerin ham yapısını göster Windows** onay kutusu işaretliyse, `DebuggerDisplay` özniteliği yoksayılır.
 
 > [!NOTE]
 > Yerel kod için bu öznitelik yalnızca C++/CLI kodunda desteklenir.
 
-Aşağıdaki tabloda, `DebuggerDisplay` özniteliğin bazı olası kullanımları ve örnek çıktıları gösterilmektedir.
+Aşağıdaki tabloda `DebuggerDisplay` özniteliği ve örnek çıktılarının bazı olası kullanımları gösterilmektedir.
 
 |Öznitelik|Değer sütununda görünen çıkış|
 |---------------| - |
-|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> Alanlar `x` ve`y`içeren bir tür üzerinde kullanılır.|`x = 5 y = 18`|
-|`[DebuggerDisplay("String value is {getString()}")]`Parametre sözdizimi diller arasında farklılık gösterebilir. Bu nedenle, dikkatli bir şekilde kullanın.|`String value is [5, 6, 6]`|
+|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> @No__t_0 ve `y` alan bir tür üzerinde kullanılır.|`x = 5 y = 18`|
+|`[DebuggerDisplay("String value is {getString()}")]`Parameter söz dizimi diller arasında farklılık gösterebilir. Bu nedenle, dikkatli bir şekilde kullanın.|`String value is [5, 6, 6]`|
 
-`DebuggerDisplay`adlandırılmış parametreleri de kabul edebilir.
+`DebuggerDisplay`, adlandırılmış parametreleri de kabul edebilir.
 
 |Parametreler|Amaç|
 |----------------|-------------|
@@ -62,7 +63,7 @@ Sonraki hata ayıklama oturumunda, oto exp. dll ' ye yapılan değişiklikler al
 ## <a name="using-expressions-in-debuggerdisplay"></a>DebuggerDisplay içinde Ifadeleri kullanma
 DebuggerDisplay özniteliğinde küme ayraçları arasında genel bir ifade kullanabilseniz de, bu uygulama önerilmez.
 
-DebuggerDisplay içindeki genel bir ifade, yalnızca hedef türün geçerli `this` örneği için işaretçiye örtülü erişime sahiptir. İfadenin diğer adlar, Yereller veya işaretçiler erişimi yok. İfade özelliklere başvuruyorsa, bu özelliklerdeki öznitelikler işlenmez. Örneğin, alan C# `[DebuggerDisplay("Object {count - 2}")]` `Object 6` 8ise`count` , kod görüntülenir.
+DebuggerDisplay içindeki genel bir ifade, yalnızca hedef türün geçerli örneği için `this` işaretçisine örtülü erişime sahiptir. İfadenin diğer adlar, Yereller veya işaretçiler erişimi yok. İfade özelliklere başvuruyorsa, bu özelliklerdeki öznitelikler işlenmez. Örneğin, alan `count` C# 8 ise, kod `[DebuggerDisplay("Object {count - 2}")]` `Object 6` görüntülenir.
 
 DebuggerDisplay içinde ifadelerin kullanılması aşağıdaki sorunlara yol açabilir:
 
@@ -93,9 +94,9 @@ public sealed class MyClass
 ", NQ" soneki, ifade değerlendiricisi 'nin son değeri (nq = tırnak yok) görüntülerken teklifleri kaldırmasını söyler.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki kod örneği, ve `DebuggerDisplay` `DebuggerTypeProxy`ile `DebuggerBrowseable` birlikte nasıl kullanılacağını göstermektedir. **İzleme** penceresi gibi bir hata ayıklayıcı değişkenleri penceresinde görüntülendiğinde şuna benzer bir genişletme oluşturur:
+Aşağıdaki kod örneği, `DebuggerBrowseable` ve `DebuggerTypeProxy` birlikte `DebuggerDisplay` nasıl kullanacağınızı gösterir. **İzleme** penceresi gibi bir hata ayıklayıcı değişkenleri penceresinde görüntülendiğinde şuna benzer bir genişletme oluşturur:
 
-|**Ad**|**Değer**|**Tür**|
+|**Ad**|**Değer**|**Türüyle**|
 |--------------|---------------|--------------|
 |Anahtar|ünden|nesne {String}|
 |Değer|3|nesne {int}|

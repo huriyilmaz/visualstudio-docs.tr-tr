@@ -28,7 +28,7 @@
           href: deploy-app-service.md
         - name: Docker Hub’a dağıtma
           href: deploy-docker-hub.md
-        - name: Kapsayıcıları görüntüleme ve tanılama
+        - name: Kapsayıcı ve resimleri görüntüleyip tanılama
           href: view-and-diagnose-containers.md
         - name: Kapsayıcı Araçları’nı yapılandırma
           href: container-tools-configure.md

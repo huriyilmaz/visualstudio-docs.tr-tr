@@ -1,6 +1,6 @@
 ---
 title: C++ nesnelerinin özel görünümlerini oluşturma
-description: Visual Studio hata ayıklayıcıda yerel türleri görüntüleme biçimini özelleştirmek için Natvis çerçevesini kullanın
+description: Visual Studio 'Nun hata ayıklayıcıda yerel türleri görüntüleme biçimini özelleştirmek için Natvis çerçevesini kullanın
 ms.date: 10/31/2018
 ms.topic: conceptual
 f1_keywords:
@@ -13,38 +13,38 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ef28b453ba6c754c337c5d42581bd658be5f04
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cb2f9d9319a943182c8256256ca6ea7334c532d1
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564478"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349479"
 ---
-# <a name="create-custom-views-of-c-objects-in-the-debugger"></a>Özel görünümlerini oluşturma C++ Hata Ayıklayıcı'daki nesneleri
+# <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Natvis çerçevesini kullanarak hata C++ ayıklayıcıda nesnelerin özel görünümlerini oluşturma
 
-Visual Studio *Natvis* framework özelleştirir yerel türler hata ayıklayıcı değişken pencerelerinde gibi görünecek şekilde **Yereller** ve **Watch** windows ve **DataTips**. Natvis görselleştirmeler, hata ayıklama sırasında daha görünür oluşturma türleri yararlanmanıza yardımcı olabilir.
+Visual Studio *Natvis* çerçevesi yerel türlerin hata ayıklayıcı değişken pencerelerinde görünme şeklini özelleştirir, örneğin **Yereller** ve **İzle** pencereleri ve **veri ipuçları**. Natvis görselleştirmeleri, oluşturduğunuz türlerin hata ayıklama sırasında daha görünür olmasına yardımcı olabilir.
 
-Natvis değiştirir *autoexp.dat* dosya Visual Studio'nun önceki sürümlerinde XML sözdizimi, daha iyi tanılama, sürüm oluşturma ve birden çok dosya desteği.
+Natvis, Visual Studio 'nun önceki sürümlerinde bulunan, XML sözdizimi, daha iyi tanılama, sürüm oluşturma ve birden çok dosya desteğiyle birlikte bulunan *oto. dat* dosyasını değiştirir.
 
-## <a name="BKMK_Why_create_visualizations_"></a>Natvis görselleştirmeler
+## <a name="BKMK_Why_create_visualizations_"></a>Natvis görselleştirmeleri
 
-Böylece geliştiriciler daha kolay hata ayıklama sırasında görebileceği türleri için görselleştirme kuralları oluşturduğunuz oluşturmak için Natvis çerçevesini kullanın.
+Geliştiricilerin hata ayıklama sırasında daha kolay görebilmesi için, oluşturduğunuz türler için görselleştirme kuralları oluşturmak üzere Natvis çerçevesini kullanın.
 
-Örneğin, aşağıdaki çizimde türünde bir değişken gösterir [Windows::UI::Xaml::Controls::TextBox](http://go.microsoft.com/fwlink/?LinkId=258422) herhangi bir özel görselleştirme olmadan hata ayıklayıcı penceresindeki.
+Örneğin, aşağıdaki çizimde özel görselleştirmeler uygulanmamış bir hata ayıklayıcı penceresinde [Windows:: UI:: XAML:: Controls:: TextBox](http://go.microsoft.com/fwlink/?LinkId=258422) türünde bir değişken gösterilmektedir.
 
-![TextBox varsayılan görselleştirme](../debugger/media/dbg_natvis_textbox_default.png "TextBox varsayılan Görselleştirme")
+![TextBox varsayılan görselleştirme](../debugger/media/dbg_natvis_textbox_default.png "TextBox varsayılan görselleştirme")
 
-Vurgulanmış satıra gösterir `Text` özelliği `TextBox` sınıfı. Karmaşık sınıf hiyerarşisi bu özelliği bulunamadı zorlaştırır. Hata ayıklayıcı textbox içinde tutulan dizeyi görememiz özel bir dize türünü, nasıl yorumlayacağını bilmez.
+Vurgulanan satır, `TextBox` sınıfının `Text` özelliğini gösterir. Karmaşık sınıf hiyerarşisi bu özelliği bulmayı zorlaştırır. Hata ayıklayıcı özel dize türünü nasıl yorumlayacağını bilmez, bu nedenle TextBox içinde tutulan dizeyi göremezsiniz.
 
-Aynı `TextBox` Natvis özel Görselleştirici kuralları uygulandığında değişken penceresinde çok daha kolay görünüyor. Sınıfın önemli üyeleri birlikte görünür ve hata ayıklayıcı özel dize türünün temel dize değerini gösterir.
+Aynı `TextBox` Natvis özel görselleştiricisi kuralları uygulandığında değişken penceresinde çok daha basit bir şekilde görünür. Sınıfının önemli üyeleri birlikte görünür ve hata ayıklayıcı özel dize türünün temel alınan dize değerini gösterir.
 
-![Metin veri Görselleştirici kullanarak](../debugger/media/dbg_natvis_textbox_visualizer.png "metin veri Görselleştirici kullanma")
+(../debugger/media/dbg_natvis_textbox_visualizer.png "Görselleştirici kullanarak") Görselleştirici metin kutusu verilerini ![kullanarak metin kutusu verileri]
 
-## <a name="BKMK_Using_Natvis_files"></a>C++ projelerinde .natvis dosyaları kullan
+## <a name="BKMK_Using_Natvis_files"></a>C++ Projelerde. Natvis dosyalarını kullanma
 
-Natvis kullanan *.natvis* görselleştirme kuralları belirtmek için dosyaları. A *.natvis* dosyasıdır içeren bir XML dosyası bir *.natvis* uzantısı. Natvis şema tanımlanan *%VSINSTALLDIR%\Xml\Schemas\natvis.xsd*.
+Natvis, görselleştirme kurallarını belirtmek için *. natvis* dosyalarını kullanır. *. Natvis* dosyası. *NATVIS* uzantılı bir XML dosyasıdır. Natvis şeması *%VSInstallDir%\Xml\Schemas\natvis.exe*içinde tanımlanmıştır.
 
-Temel yapısı bir *.natvis* dosyasıdır bir veya daha fazla `Type` görselleştirme girişleri temsil eden öğe. Her tam adına `Type` öğesi belirtilen kendi `Name` özniteliği.
+Bir *. natvis* dosyasının temel yapısı, görselleştirme girdilerini temsil eden bir veya daha fazla `Type` öğesi. Her bir `Type` öğesinin tam adı `Name` özniteliğinde belirtilir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -61,84 +61,84 @@ Temel yapısı bir *.natvis* dosyasıdır bir veya daha fazla `Type` görselleş
 </AutoVisualizer>
 ```
 
-Visual Studio bazı sağlar *.natvis* dosyalar *%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers* klasör. Bu dosyalar birçok ortak tür için görselleştirme kuralları olan ve yeni türler için görselleştirmeler yazmak için örnek olarak hizmet verebilen.
+Visual Studio, *%VSInstallDir%\common7\packages\debugger\visualıcılar* klasöründe bazı *. natvis* dosyaları sağlar. Bu dosyalar birçok ortak tür için görselleştirme kurallarına sahiptir ve yeni türler için görselleştirmeler yazmak üzere örnek olarak işlev görebilir.
 
-### <a name="add-a-natvis-file-to-a-c-project"></a>Bir C++ projesine bir .natvis dosyası ekleme
+### <a name="add-a-natvis-file-to-a-c-project"></a>C++ Projeye bir. natvis dosyası ekleyin
 
-Ekleyebileceğiniz bir *.natvis* herhangi bir C++ projesine dosya.
+Herhangi C++ bir projeye bir *. natvis* dosyası ekleyebilirsiniz.
 
-**Yeni bir *.natvis* dosyası:**
+**Yeni bir *. natvis* dosyası eklemek için:**
 
-1. C++ proje düğümünde seçin **Çözüm Gezgini**seçip **proje** > **Yeni Öğe Ekle**, veya projeye sağ tıklayıp seçin **Ekle**   >  **Yeni öğe**.
+1. Çözüm Gezgini ' C++ de proje düğümünüseçin ve **Proje**  > **Yeni öğe Ekle**' yi seçin veya projeye sağ tıklayıp  > **Yeni öğe** **Ekle** ' yi seçin.
 
-1. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Visual C++** > **yardımcı programı** > **hata ayıklayıcı görselleştirme dosyası (.natvis)**.
+1. **Yeni öğe Ekle** iletişim kutusunda,**hata ayıklayıcı görselleştirme dosyası (. natvis)**  >  **Visual C++**   > **yardımcı programı** ' nı seçin.
 
-1. Dosya adı ve seçin **Ekle**.
+1. Dosyayı adlandırın ve **Ekle**' yi seçin.
 
-   Yeni dosya eklenir **Çözüm Gezgini**ve Visual Studio belge Bölmesi'nde açılır.
+   Yeni dosya **Çözüm Gezgini**eklenir ve Visual Studio belge bölmesinde açılır.
 
-Visual Studio hata ayıklayıcısını yükler *.natvis* C++ projelerinde dosyaları otomatik olarak ve varsayılan olarak, aynı zamanda içerir bunları *.pdb* dosya projeyi oluşturduğunda. Yerleşik uygulama hatalarını ayıklıyorsanız, hata ayıklayıcısını yükler *.natvis* dosya *.pdb* Proje Aç olmasa bile, dosya. İstemiyorsanız *.natvis* dahil dosya *.pdb*, yerleşik hariç tutabilirsiniz *.pdb* dosya.
+Visual Studio hata ayıklayıcı, *. natvis* dosyalarını C++ projelere otomatik olarak yükler ve varsayılan olarak, proje oluştururken *. pdb* dosyasında da içerir. Oluşturulan uygulamada hata ayıklaması yaparsanız, proje açık olmasa bile, hata ayıklayıcı. *pdb* dosyasından *. natvis* dosyasını yükler. .,. *Natvis* dosyasını *. pdb*dosyasına dahil etmek istemiyorsanız, bunu yerleşik *. pdb* dosyasından hariç bırakabilirsiniz.
 
-**Dışlanacak bir *.natvis* dosyasını bir *.pdb*:**
+**. *Natvis* dosyasını bir *. pdb*dosyasından dışlamak için:**
 
-1. Seçin *.natvis* dosyası **Çözüm Gezgini**seçip **özellikleri** simgesini veya dosyaya sağ tıklayın ve seçin **özellikleri**.
+1. **Çözüm Gezgini** *. natvis* dosyasını seçin ve **Özellikler** simgesini seçin ya da dosyaya sağ tıklayıp **Özellikler**' i seçin.
 
-1. Aşağı ok yanındaki açılan **yapıdan hariç** seçip **Evet**ve ardından **Tamam**.
-
->[!NOTE]
->Yürütülebilir projelerinde hata ayıklarken, tüm eklemek için çözüm öğeleri kullanın *.natvis* içinde olmayan dosyalar *.pdb*, kullanılabilir hiç C++ projesi olduğundan.
+1. **Derlemeden çıkarılan** ' ın yanındaki oku ve **Evet**' i seçin ve ardından **Tamam**' ı seçin.
 
 >[!NOTE]
->Natvis kuralları yüklendi gelen bir *.pdb* modülleri türlerinde yalnızca uygulamak, *.pdb* ifade eder. Örneğin, varsa *Module1.pdb* sahip adlı bir tür için bir Natvis girişi `Test`, yalnızca geçerli `Test` sınıfını *Module1.dll*. Başka bir modül adlı bir sınıf tanımlıyorsa `Test`, *Module1.pdb* Natvis girişi için uygulanmaz.
+>Yürütülebilir projelerde hata ayıklama için, kullanılabilir proje bulunmadığından C++ , *. pdb*içinde olmayan *. natvis* dosyalarını eklemek için çözüm öğelerini kullanın.
 
-### <a name="BKMK_natvis_location"></a> Natvis dosyası konumları
+>[!NOTE]
+>Bir *. pdb* 'den yüklenen Natvis kuralları yalnızca *. pdb* 'nin başvurduğu modüllerde bulunan türlere uygulanır. Örneğin, *Module1. pdb* `Test` adlı bir tür için Natvis girişi varsa, bu yalnızca *Module1. dll*içindeki `Test` sınıfı için geçerlidir. Başka bir modül de `Test` adlı bir sınıfı tanımlıyorsa, *Module1. pdb* Natvis girdisi buna uygulanmaz.
 
-Ekleyebileceğiniz *.natvis* dosyaları kullanıcı dizininize veya bir sistem dizini için birden çok projeye uygulamak istiyorsanız.
+### <a name="BKMK_natvis_location"></a>Natvis dosya konumları
 
-*.Natvis* dosyalarını aşağıdaki sırayla değerlendirilir:
+Birden çok projeye uygulanmasını istiyorsanız, *. natvis* dosyalarını Kullanıcı dizininize veya bir sistem dizinine ekleyebilirsiniz.
 
-1. Tüm *.natvis* gömülü dosyaları bir *.pdb* yüklenen projede aynı adda bir dosya mevcut değilse, hata ayıklama.
+*. Natvis* dosyaları aşağıdaki sırayla değerlendirilir:
 
-2. Tüm *.natvis* yüklenmiş C++ proje veya üst düzey çözüm dosyaları. Bu grup, diğer dillerde sınıf kitaplıkları, ancak değil projeleri dahil olmak üzere tüm yüklenmiş C++ projeleri içerir.
+1. Yüklü projede aynı ada sahip bir dosya mevcut değilse, bir *. pdb* dosyasına gömülü tüm *. natvis* dosyaları hata ayıklaması yapılır.
+
+2. Yüklü C++ bir proje veya üst düzey çözümdeki *. natvis* dosyaları. Bu grup, sınıf kitaplıkları C++ da dahil olmak üzere tüm yüklü projeleri içerir, ancak diğer dillerdeki projeler içermez.
 
 ::: moniker range="vs-2017"
 
-3. Kullanıcıya özgü Natvis dizin (örneğin, *%USERPROFILE%\Documents\Visual Studio 2017\Visualizers*).
+3. Kullanıcıya özgü Natvis dizini (örneğin, *%userprofile%\, Visual Studio 2017 \ Görselleştiriciler*).
 
 ::: moniker-end
 
 ::: moniker range=">= vs-2019"
 
-3. Kullanıcıya özgü Natvis dizin (örneğin, *%USERPROFILE%\Documents\Visual Studio 2019\Visualizers*).
+3. Kullanıcıya özgü Natvis dizini (örneğin, *%userprofile%\, Studio 2019 \ Görselleştiriciler*).
 
 ::: moniker-end
 
-4. Sistem genelinde Natvis dizini (*%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers*). Bu dizine sahip *.natvis* Visual Studio ile yüklenen dosyalar. Yönetici izinleriniz varsa, bu dizine dosyaları ekleyebilirsiniz.
+4. Sistem genelindeki Natvis dizini ( *%VSInstallDir%\common7\packages\debugger\görselleştiriciler*). Bu dizin, Visual Studio ile yüklenen *. natvis* dosyalarını içerir. Yönetici izinleriniz varsa, bu dizine dosyalar ekleyebilirsiniz.
 
-## <a name="modify-natvis-files-while-debugging"></a>.Natvis dosyalarında hata ayıklama sırasında değişiklik
+## <a name="modify-natvis-files-while-debugging"></a>Hata ayıklarken. Natvis dosyalarını değiştirme
 
-Değiştirebileceğiniz bir *.natvis* IDE, proje hata ayıklama sırasında dosya. Visual Studio ile hata ayıklama aynı örneğinde dosyasını açın, değiştirin ve dosyayı kaydedin. Dosyanın kaydedilmiş hemen sonra **Watch** ve **Yereller** windows update değişimi yansıtmak için.
+Projesinde hata ayıklarken IDE 'deki bir *. natvis* dosyasını değiştirebilirsiniz. Dosyayı hata ayıklaması yaptığınız aynı Visual Studio örneğinde açın, değiştirin ve kaydedin. Dosya kaydedildiği anda, değişikliği yansıtmak için **Watch** ve **Locals** Windows Update.
 
-Siz de ekleyebilir veya silebilirsiniz *.natvis* dosyalarında hata ayıklama ve Visual Studio ekler veya kaldırır ve ilgili görselleştirmeleri bir çözüm.
+Ayrıca, hata ayıklaması yaptığınız bir çözüme *. natvis* dosyaları ekleyebilir veya silebilirsiniz ve Visual Studio ilgili görselleştirmeleri ekler veya kaldırır.
 
-Update yapılamıyor *.natvis* gömülü dosyaları *.pdb* hata ayıklarken dosyaları.
+Hata ayıklarken *. pdb* dosyalarına katıştırılmış *. natvis* dosyalarını güncelleştiremezsiniz.
 
-Değiştirirseniz *.natvis* dosyasını Visual Studio'nun dışında değişikliklerin otomatik olarak etkili değildir. Hata ayıklayıcı pencereleri güncelleştirilecek, değerlendirene **.natvisreload** komutunu **Watch** penceresi. Hata ayıklama oturumunu yeniden başlatmadan sonra değişiklikler geçerli olacaktır.
+*. Natvis* dosyasını Visual Studio dışında değiştirirseniz, değişiklikler otomatik olarak geçerli olmaz. Hata ayıklayıcı pencerelerini güncelleştirmek için, **izleme** penceresindeki **. natvisreload komutunu yeniden** değerlendirmeye alabilirsiniz. Ardından, değişiklikler hata ayıklama oturumunu yeniden başlatmadan geçerli olur.
 
-Ayrıca **.natvisreload** yükseltmek için komut *.natvis* dosya daha yeni bir sürüme. Örneğin, *.natvis* dosya kaynak denetimine iade ve son değişikliklerini başka yapılan yazdıramadığının çekmek istediğiniz.
+. *Natvis* dosyasını daha yeni bir sürüme yükseltmek için **. natvisreload** komutunu da kullanabilirsiniz. Örneğin, *. natvis* dosyası kaynak denetimine iade edilebilir ve başka birisinin yaptığı son değişiklikleri almak istiyorsunuz.
 
-## <a name="BKMK_Expressions_and_formatting"></a> İfadeler ve biçimlendirmeler
-Natvis görselleştirmeler, görüntülenecek veri öğelerini belirtmek için C++ ifadeler kullanın. Geliştirmeleri ve hata ayıklayıcısındaki C++ ifadelerinin sınırlamalarına ek olarak, hangi açıklanmıştır [bağlam işleci (C++)](../debugger/context-operator-cpp.md), şunlara dikkat edin:
+## <a name="BKMK_Expressions_and_formatting"></a>İfadeler ve biçimlendirme
+Natvis görselleştirmeleri C++ görüntülenecek veri öğelerini belirtmek için ifadeleri kullanır. [Bağlam operatörü (C++)](../debugger/context-operator-cpp.md)bölümünde açıklanan, hata C++ Ayıklayıcıdaki ifadelerin geliştirmelere ve kısıtlamalarına ek olarak, aşağıdakilere dikkat edin:
 
-- Natvis ifadeler, görselleştirilmekte olan nesnedeki değil geçerli yığın çerçevesi bağlamında değerlendirilir. Örneğin, `x` adlı alanı ifade içinde bir Natvis başvuruyor **x** adlı değil yerel bir değişkene görselleştirilen nesne içinde **x** geçerli işlev. Genel değişkenlere erişebilirsiniz ancak Natvis ifadeleri içindeki yerel değişkenler erişemez.
+- Natvis ifadeleri, geçerli yığın çerçevesini değil görselleştirilen nesne bağlamında değerlendirilir. Örneğin, bir Natvis ifadesindeki `x`, geçerli işlevde **x** adlı yerel bir değişkene değil, görselleştirilen nesnede **x** adlı alana başvurur. Küresel değişkenlere erişebilseniz de, Natvis ifadelerinde yerel değişkenlere erişemezsiniz.
 
-- Natvis ifadeler İşlev değerlendirmesi veya yan efektlere izin vermez. İşlev çağrılarının ve atama işleçleri göz ardı edilir. Çünkü [hata ayıklayıcı iç işlevleri](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state) ücretsiz, bunlar serbestçe çağrılabilir herhangi bir Natvis ifadesinden diğer işlev çağrılarına izin verilmese yan etkisi olan.
+- Natvis ifadeleri işlev değerlendirmesi veya yan etkilere izin vermez. İşlev çağrıları ve atama işleçleri yok sayılır. [Hata ayıklayıcı iç işlevleri](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state) yan etkilerden farklı olduğundan, diğer işlev çağrılarına izin verilmese de, her bir natvis ifadesinden serbestçe çağrılabilir.
 
-- Bir ifade nasıl görüntülediğini denetlemek için açıklanan biçim belirleyicilerinin herhangi kullanabilirsiniz [biçim belirleyiciler c++](format-specifiers-in-cpp.md#BKMK_Visual_Studio_2012_format_specifiers). Giriş dahili olarak Natvis tarafından gibi kullanıldığında biçim belirticileri göz ardı `Size` ifadesinde bir [Arrayıtems genişletme](../debugger/create-custom-views-of-native-objects.md#BKMK_ArrayItems_expansion).
+- Bir ifadenin nasıl görüntüleneceğini denetlemek için, [Içinde C++biçim tanımlayıcıda ](format-specifiers-in-cpp.md#BKMK_Visual_Studio_2012_format_specifiers)açıklanan biçim belirticilerini kullanabilirsiniz. Bir dizi [öğe genişletmesinde](../debugger/create-custom-views-of-native-objects.md#BKMK_ArrayItems_expansion)`Size` ifadesi gibi, giriş Natvis tarafından dahili olarak kullanıldığında biçim belirticileri yok sayılır.
 
 ## <a name="natvis-views"></a>Natvis görünümleri
 
-Türleri farklı şekillerde göstermek için farklı Natvis görünümleri tanımlayabilirsiniz. Örneğin, bir görselleştirme işte `std::vector` adlı basitleştirilmiş bir görünümü tanımlayan `simple`. `DisplayString` Ve `ArrayItems` öğeleri göster varsayılan görünümü'nde ve `simple` görünümü sırada `[size]` ve `[capacity]` öğeleri gösterme `simple` görünümü.
+Farklı yollarla türleri göstermek için farklı Natvis görünümleri tanımlayabilirsiniz. Örneğin, `simple` adlı basitleştirilmiş bir görünümü tanımlayan `std::vector` görselleştirmesi aşağıda verilmiştir. @No__t_0 ve `ArrayItems` öğeleri varsayılan görünümde ve `simple` görünümünde gösterilir, ancak `[size]` ve `[capacity]` öğeleri `simple` görünümünde gösterilmez.
 
 ```xml
 <Type Name="std::vector&lt;*&gt;">
@@ -154,24 +154,24 @@ Türleri farklı şekillerde göstermek için farklı Natvis görünümleri tan�
 </Type>
 ```
 
-İçinde **Watch** penceresinde kullanım **, Görünüm** biçim belirticisi diğer bir görünümünü belirtmek için. Basit Görünüm olarak görünür **vec,view(simple)**:
+**İzleme** penceresinde, alternatif bir görünüm belirtmek için **, görünüm** biçim belirticisini kullanın. Basit görünüm VEC olarak görünür **, görünüm (basit)** :
 
-![Basit Görünüm ile İzleme penceresi](../debugger/media/watch-simpleview.png "basit görünümü ile İzleme penceresi")
+Basit görünüm ile ![basit görünüm](../debugger/media/watch-simpleview.png "İzleme penceresi") izleme penceresi
 
-## <a name="BKMK_Diagnosing_Natvis_errors"></a> Natvis hataları
+## <a name="BKMK_Diagnosing_Natvis_errors"></a>Natvis hataları
 
-Hata ayıklayıcısı bir görselleştirme girişinde hatalarla karşılaştığında, bunları yoksayar. Bu türü ham biçimiyle görüntüler veya başka bir uygun görselleştirme seçer. Natvis Tanılama, hata ayıklayıcısı bir görselleştirme girişinin neden göz ardı anlamak ve alttaki sözdizimini görebilir ve ayrıştırma hataları için kullanabilirsiniz.
+Hata ayıklayıcı bir görselleştirme girişinde hatalarla karşılaştığında onları yoksayar. Bu, türü ham biçiminde görüntüler ya da uygun bir görselleştirme seçer. Hata ayıklayıcının bir görselleştirme girişini neden yoksaydığını anlamak ve temeldeki sözdizimi ve ayrıştırma hatalarını görmek için Natvis tanılamayı kullanabilirsiniz.
 
-**Natvis tanılama üzerinde etkinleştirmek için:**
+**Natvis tanılamayı açmak için:**
 
-- Altında **Araçları** > **seçenekleri** (veya **hata ayıklama** > **seçenekleri**) > **hataayıklama**  >  **Çıkış penceresine**ayarlayın **Natvis tanılama iletileri (C++ yalnızca)** için **hata**, **uyarı** , veya **ayrıntılı**ve ardından **Tamam**.
+- **Araçlar**  > **Seçenekler** (veya **hata ayıklama**  > **seçenekleri**) > hata **ayıklama**  > **Çıkış penceresi**, **Natvis tanılama iletileri (C++ yalnızca)** **hata**olarak ayarla, **uyarı** veya **ayrıntılı**olarak belirleyin ve ardından **Tamam**' ı seçin.
 
-Hataları görünür **çıkış** penceresi.
+Hatalar **Çıkış** penceresinde görüntülenir.
 
-## <a name="BKMK_Syntax_reference"></a> Natvis söz dizimi başvurusu
+## <a name="BKMK_Syntax_reference"></a>Natvis sözdizimi başvurusu
 
-### <a name="BKMK_AutoVisualizer"></a> AutoVisualizer öğesi
-`AutoVisualizer` Öğedir kök düğümü *.natvis* dosya ve ad alanını içeren `xmlns:` özniteliği.
+### <a name="BKMK_AutoVisualizer"></a>Oto görselleştiricisi öğesi
+@No__t_0 öğesi *. natvis* dosyasının kök düğümüdür ve ad alanı `xmlns:` özniteliğini içerir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -181,11 +181,11 @@ Hataları görünür **çıkış** penceresi.
 </AutoVisualizer>
 ```
 
-`AutoVisualizer` Öğesi olabilir [türü](#BKMK_Type), [HResult](#BKMK_HResult), [Uıvisualizer'a](#BKMK_UIVisualizer), ve [CustomVisualizer](#BKMK_CustomVisualizer) alt öğeleri.
+@No__t_0 öğesi [Type](#BKMK_Type), [HRESULT](#BKMK_HResult), [UIVisualizer](#BKMK_UIVisualizer)ve [CustomVisualizer](#BKMK_CustomVisualizer) alt öğelerine sahip olabilir.
 
-### <a name="BKMK_Type"></a> Type öğesi
+### <a name="BKMK_Type"></a>Type öğesi
 
-Temel bir `Type` Bu örnek gibi görünür:
+Temel `Type` aşağıdaki örnekteki gibi görünür:
 
 ```xml
 <Type Name="[fully qualified type name]">
@@ -196,18 +196,18 @@ Temel bir `Type` Bu örnek gibi görünür:
 </Type>
 ```
 
- `Type` Öğesi belirtir:
+ @No__t_0 öğesi şunları belirtir:
 
-1. Ne tür bir görselleştirme için kullanılmalıdır ( `Name` özniteliği).
+1. Görselleştirmenin kullanılması gereken tür (`Name` özniteliği).
 
-2. Bu türdeki bir nesnenin değeri aşağıdaki gibi görünmelidir ( `DisplayString` öğesi).
+2. Bu türdeki bir nesnenin değeri şöyle görünmelidir (`DisplayString` öğesi).
 
-3. Türün üyeleri kullanıcı türü bir değişken penceresinde zaman genişletir gibi görünmelidir ( `Expand` düğümü).
+3. Kullanıcı türü bir değişken penceresinde (`Expand` düğümü) genişlediğinde, türün üyeleri şöyle görünmelidir.
 
 #### <a name="templated-classes"></a>Şablonlu sınıflar
-`Name` Özniteliği `Type` öğe kabul ettiği bir yıldız işareti `*` şablonlu sınıf adları için kullanılabilecek bir joker karakter olarak.
+@No__t_1 öğesinin `Name` özniteliği, şablonlu sınıf adları için kullanılabilen bir joker karakter olarak bir yıldız işareti `*` kabul eder.
 
-Aşağıdaki örnekte, aynı görselleştirme kullanılır, bu nesnenin olup bir `CAtlArray<int>` veya `CAtlArray<float>`. İçin bir özel görselleştirme girdisi varsa bir `CAtlArray<float>`, genel olana kıyasla öncelik kazanır.
+Aşağıdaki örnekte, nesnenin `CAtlArray<int>` mı yoksa `CAtlArray<float>` mi olduğunu aynı görselleştirme kullanılır. Bir `CAtlArray<float>` için belirli bir görselleştirme girişi varsa, genel bir tane üzerinden önceliklidir.
 
 ```xml
 <Type Name="ATL::CAtlArray&lt;*&gt;">
@@ -215,15 +215,15 @@ Aşağıdaki örnekte, aynı görselleştirme kullanılır, bu nesnenin olup bir
 </Type>
 ```
 
-Şablon parametreleri görselleştirme girişinde makroları $t1, $t2, kullanarak başvuru ve VS. Bu makroların örneklerini bulmak için bkz: *.natvis* dosyaları, Visual Studio ile birlikte gönderilir.
+$T 1, $T 2 vb. makroları kullanarak görselleştirme girişinde şablon parametrelerine başvurabilirsiniz. Bu makroların örneklerini bulmak için bkz. Visual Studio ile birlikte gelen *. natvis* dosyaları.
 
-#### <a name="BKMK_Visualizer_type_matching"></a> Görselleştirici türü eşleşmesi
-Doğrulamak bir görselleştirme girdisi başarısız olursa, bir sonraki kullanılabilir görselleştirme kullanılır.
+#### <a name="BKMK_Visualizer_type_matching"></a>Görselleştiricisi türü eşleşiyor
+Bir görselleştirme girişi doğrulanamazsa, bir sonraki kullanılabilir görselleştirme kullanılır.
 
-#### <a name="inheritable-attribute"></a>Devralınabilir özniteliği
-İsteğe bağlı `Inheritable` öznitelik, bir görselleştirme yalnızca bir temel türü için geçerlidir veya bir taban türü ve tüm türetilmiş türleri olup olmadığını belirtir. Varsayılan değer olan `Inheritable` olduğu `true`.
+#### <a name="inheritable-attribute"></a>Inheritable özniteliği
+İsteğe bağlı `Inheritable` özniteliği, bir görselleştirmenin yalnızca bir temel türe mi yoksa bir temel türe ve tüm türetilmiş türlere mi uygulanacağını belirtir. @No__t_0 varsayılan değeri `true`.
 
-Aşağıdaki örnekte, görselleştirme yalnızca geçerli `BaseClass` türü:
+Aşağıdaki örnekte, görselleştirme yalnızca `BaseClass` türü için geçerlidir:
 
 ```xml
 <Type Name="Namespace::BaseClass" Inheritable="false">
@@ -231,11 +231,11 @@ Aşağıdaki örnekte, görselleştirme yalnızca geçerli `BaseClass` türü:
 </Type>
 ```
 
-#### <a name="priority-attribute"></a>Öznitelik önceliği
+#### <a name="priority-attribute"></a>Priority özniteliği
 
-İsteğe bağlı `Priority` özniteliği ayrıştırmak bir tanımı başarısız olursa alternatif tanımları kullanılacak sırayı belirtir. Olası değerleri `Priority` şunlardır: `Low`, `MediumLow`,`Medium`, `MediumHigh`, ve `High`. Varsayılan değer `Medium` şeklindedir. `Priority` Özniteliği ayıran yalnızca aynı içindeki öncelikler arasında *.natvis* dosya.
+İsteğe bağlı `Priority` özniteliği, tanım ayrıştıramazsa alternatif tanımların kullanılacağı sırayı belirtir. @No__t_0 olası değerleri şunlardır: `Low`, `MediumLow`, `Medium`, `MediumHigh` ve `High`. Varsayılan değer `Medium` şeklindedir. @No__t_0 özniteliği yalnızca aynı *. natvis* dosyasındaki öncelikler arasında ayrım yapar.
 
-Aşağıdaki örnekte, önce bir 2015 STL eşleşen girdiyi ayrıştırır. Ayrıştırılacak başarısız olursa, diğer giriş STL 2013 sürümü için kullanır:
+Aşağıdaki örnek öncelikle 2015 STL ile eşleşen girişi ayrıştırır. Bu, ayrıştıramazsa, STL 'nin 2013 sürümü için alternatif girişi kullanır:
 
 ```xml
 <!-- VC 2013 -->
@@ -256,7 +256,7 @@ Aşağıdaki örnekte, önce bir 2015 STL eşleşen girdiyi ayrıştırır. Ayr�
 ```
 
 ### <a name="optional-attribute"></a>İsteğe bağlı öznitelik
-Koyabilirsiniz bir `Optional` herhangi bir düğümde öznitelik. Ayrıştırmak bir alt ifade isteğe bağlı bir düğüm içindeki başarısız olursa, hata ayıklayıcı düğüm yok sayar, ancak kalan geçerlidir `Type` kuralları. Aşağıdaki türde `[State]` olmayan-isteğe bağlıdır, ancak `[Exception]` isteğe bağlıdır.  Varsa `MyNamespace::MyClass` _ adında bir alana sahiptir`M_exceptionHolder`hem `[State]` düğüm ve `[Exception]` olup olmadığını ancak düğümünün görünen hiçbir `_M_exceptionHolder` alan, yalnızca `[State]` düğümü görüntülenir.
+Herhangi bir düğüme bir `Optional` özniteliği yerleştirebilirsiniz. İsteğe bağlı bir düğümün içindeki bir alt ifade ayrıştıramazsa, hata ayıklayıcı bu düğümü yoksayar, ancak `Type` kuralların geri kalanını uygular. Aşağıdaki türde `[State]` isteğe bağlı değildir, ancak `[Exception]` isteğe bağlıdır.  @No__t_0 _ `M_exceptionHolder` adlı bir alana sahipse, hem `[State]` düğümü hem de `[Exception]` düğümü görüntülenir, ancak `_M_exceptionHolder` alanı yoksa yalnızca `[State]` düğümü görüntülenir.
 
 ```xml
 <Type Name="MyNamespace::MyClass">
@@ -267,11 +267,11 @@ Koyabilirsiniz bir `Optional` herhangi bir düğümde öznitelik. Ayrıştırmak
 </Type>
 ```
 
-### <a name="BKMK_Condition_attribute"></a> Koşul özniteliği
+### <a name="BKMK_Condition_attribute"></a>Condition özniteliği
 
-İsteğe bağlı `Condition` özniteliği birçok görsel öğeler için kullanılabilir ve görselleştirme kuralının ne zaman kullanılacağı belirtir. Koşul özniteliği içindeki ifade halinde `false`, görselleştirme kuralı uygulanmaz. Değerlendirilirse `true`, ya da hiçbir `Condition` görselleştirmeyi özniteliğini uygular. Görselleştirme girişlerinde if-else mantığı için bu özniteliği kullanabilirsiniz.
+İsteğe bağlı `Condition` özniteliği birçok görselleştirme öğesi için kullanılabilir ve bir görselleştirme kuralının ne zaman kullanılacağını belirtir. Koşul özniteliği içindeki ifade `false` olarak çözümlenirse görselleştirme kuralı uygulanmaz. @No__t_0 olarak değerlendirilirse veya `Condition` özniteliği yoksa görselleştirme uygulanır. Görselleştirme girişlerinde If-Else mantığı için bu özniteliği kullanabilirsiniz.
 
-Örneğin, aşağıdaki görselleştirme iki içeren `DisplayString` akıllı işaretçi türünüz için öğeleri. Zaman `_Myptr` üye boş olduğundan, ilk koşul `DisplayString` öğesi çözümler için `true`, bu form görüntüler. Zaman `_Myptr` üye boş değil, bir koşul olmaması `false`ve ikinci `DisplayString` öğesi görüntüler.
+Örneğin, aşağıdaki görselleştirmede akıllı işaretçi türü için iki `DisplayString` öğesi vardır. @No__t_0 üyesi boş olduğunda, ilk `DisplayString` öğenin koşulu `true` olarak çözümlenir, böylece form görüntülenir. @No__t_0 üyesi boş olmadığında, koşul `false` olarak değerlendirilir ve ikinci `DisplayString` öğesi görüntülenir.
 
 ```xml
 <Type Name="std::auto_ptr&lt;*&gt;">
@@ -285,7 +285,7 @@ Koyabilirsiniz bir `Optional` herhangi bir düğümde öznitelik. Ayrıştırmak
 
 ### <a name="includeview-and-excludeview-attributes"></a>IncludeView ve ExcludeView öznitelikleri
 
-`IncludeView` Ve `ExcludeView` özniteliklerini görüntülemek veya belirli görünümlerinde görüntülenmemesi için öğelerin belirtin. Örneğin, aşağıdaki Natvis belirtimi içinde `std::vector`, `simple` değil Görünüm `[size]` ve `[capacity]` öğeleri.
+@No__t_0 ve `ExcludeView` öznitelikleri, belirli görünümlerde görüntülenecek veya görüntülenecek öğeleri belirtir. Örneğin, aşağıdaki Natvis `std::vector` belirtiminde, `simple` görünümü `[size]` ve `[capacity]` öğelerini görüntülemez.
 
 ```xml
 <Type Name="std::vector&lt;*&gt;">
@@ -301,14 +301,14 @@ Koyabilirsiniz bir `Optional` herhangi bir düğümde öznitelik. Ayrıştırmak
 </Type>
 ```
 
-Kullanabileceğiniz `IncludeView` ve `ExcludeView` türleri ve üyeleri tek tek öznitelikler.
+@No__t_0 ve `ExcludeView` özniteliklerini türler üzerinde ve ayrı Üyeler üzerinde kullanabilirsiniz.
 
-### <a name="BKMK_Versioning"></a> Sürüm öğesi
-`Version` Öğesi, bir görselleştirme girişini belirli modülü ve sürüme kapsamlar. `Version` Öğe ad çakışmalarını önlemeye yardımcı olur, yanlışlıkla uyuşmazlıkları azaltır ve farklı tür sürümleri için farklı görsel öğeler sağlar.
+### <a name="BKMK_Versioning"></a>Sürüm öğesi
+@No__t_0 öğesi, bir görselleştirme girişini belirli bir modüle ve sürüme kapsamlar. @No__t_0 öğesi ad çakışmalarını önlemeye yardımcı olur, yanlışlıkla uyuşmazlıkları azaltır ve farklı tür sürümleri için farklı görselleştirmelere izin verir.
 
-Bir tür farklı modüller tarafından kullanılan ortak bir üstbilgi dosyasında tanımlıyorsa, yalnızca türü belirtilen Modül sürümü olduğunda sürümü tutulan görselleştirmenin görünür.
+Farklı modüller tarafından kullanılan ortak bir üst bilgi dosyası bir türü tanımlıyorsa, sürümlü görselleştirme yalnızca tür belirtilen modül sürümünde olduğunda görünür.
 
-Aşağıdaki örnekte, görselleştirme için yalnızca geçerli `DirectUI::Border` türü bulundu `Windows.UI.Xaml.dll` sürüm 1.5 1.0.
+Aşağıdaki örnekte, görselleştirme yalnızca 1,0 sürümünden 1,5 sürümüne `Windows.UI.Xaml.dll` bulunan `DirectUI::Border` türü için geçerlidir.
 
 ```xml
 <Type Name="DirectUI::Border">
@@ -320,8 +320,8 @@ Aşağıdaki örnekte, görselleştirme için yalnızca geçerli `DirectUI::Bord
 </Type>
 ```
 
-### <a name="BKMK_DisplayString"></a> DisplayString öğesi
-`DisplayString` Öğesi bir değişkenin değeri gösterilecek bir dize belirtir. Bu ifadelerle karışan rasgele dizeleri kabul eder. Küme ayracı içindeki her şey bir ifade olarak yorumlanır. Örneğin, aşağıdaki `DisplayString` girişi:
+### <a name="BKMK_DisplayString"></a>DisplayString öğesi
+@No__t_0 öğesi, bir değişkenin değeri olarak göstermek için bir dize belirtir. İfadelerle karışık rastgele dizeler kabul eder. Küme ayraçları içindeki her şey bir ifade olarak yorumlanır. Örneğin, aşağıdaki `DisplayString` girdisi:
 
 ```xml
 <Type Name="CPoint">
@@ -329,18 +329,18 @@ Aşağıdaki örnekte, görselleştirme için yalnızca geçerli `DirectUI::Bord
 </Type>
 ```
 
-Anlamına gelir, türü değişkenlerindeki `CPoint` Bu resimde olduğu gibi görüntüleyin:
+Türündeki değişkenlerin Bu çizimde gösterildiği gibi `CPoint` gösterir:
 
- ![DisplayString bir öğesinin kullanımına](../debugger/media/dbg_natvis_cpoint_displaystring.png "DisplayString öğesi kullanma")
+ ![Bir DisplayString öğesi kullanın](../debugger/media/dbg_natvis_cpoint_displaystring.png "bir DisplayString öğesi kullanın")
 
-İçinde `DisplayString` ifade `x` ve `y`, üyeleri `CPoint`, kaşlı ayraçlar içinde olduğundan değerleri değerlendirilir. Örnek ayrıca çift kaşlı ayraçlar kullanarak bir küme ayracından nasıl kaçış gösterir ( `{{` veya `}}` ).
+@No__t_0 ifadesinde, `CPoint` üyeleri olan `x` ve `y` küme ayraçları içindedir, bu nedenle değerleri değerlendirilir. Örnek ayrıca çift küme ayraçları (`{{` veya `}}`) kullanarak bir küme ayracını nasıl atkullanabileceğinizi gösterir.
 
 > [!NOTE]
-> `DisplayString` Rastgele dize ve küme ayracı sözdizimi kabul eden tek öğe bir öğedir. Diğer tüm görselleştirme öğeleri yalnızca hata ayıklayıcı değerlendirebilirsiniz ifadeleri kabul edin.
+> @No__t_0 öğesi, rastgele dizeleri ve küme ayracı sözdizimini kabul eden tek öğedir. Diğer tüm Görselleştirme öğeleri yalnızca hata ayıklayıcının değerlendirebilmesi için ifadeleri kabul eder.
 
-### <a name="BKMK_StringView"></a> StringView öğesi
+### <a name="BKMK_StringView"></a>StringView öğesi
 
-`StringView` Öğesi, hata ayıklayıcı yerleşik metin görselleştiriciye göndermek için bir değer tanımlar. Örneğin, aşağıdaki görselleştirme için verilen `ATL::CStringT` türü:
+@No__t_0 öğesi, hata ayıklayıcının yerleşik metin Görselleştirici öğesine gönderebileceğini bir değer tanımlar. Örneğin, `ATL::CStringT` türü için aşağıdaki görselleştirme verildiğinde:
 
 ```xml
 <Type Name="ATL::CStringT&lt;wchar_t,*&gt;">
@@ -348,11 +348,11 @@ Anlamına gelir, türü değişkenlerindeki `CPoint` Bu resimde olduğu gibi gö
 </Type>
 ```
 
-`CStringT` Nesne görüntüler şu örnekteki gibi bir değişken penceresinde:
+@No__t_0 nesnesi aşağıdaki örnekteki gibi bir değişken penceresinde görüntülenir:
 
 ![CStringT DisplayString öğesi](../debugger/media/dbg_natvis_displaystring_cstringt.png "CStringT DisplayString öğesi")
 
-Ekleme bir `StringView` öğe değeri bir metin görselleştirmesi görüntüleyebilir hata ayıklayıcı söyler.
+@No__t_0 bir öğesi eklemek, hata ayıklayıcıya bir metin görselleştirmesi olarak değeri göstermesini söyler.
 
 ```xml
 <Type Name="ATL::CStringT&lt;wchar_t,*&gt;">
@@ -361,23 +361,23 @@ Ekleme bir `StringView` öğe değeri bir metin görselleştirmesi görüntüley
 </Type>
 ```
 
-Hata ayıklama sırasında Büyüteç simgesinin yanındaki değişken seçebilir ve ardından **metin görselleştiricisi** dizesini görüntülemek için **m_pszData** işaret eder.
+Hata ayıklama sırasında, değişkenin yanındaki büyüteç simgesini seçebilir ve sonra **m_pszData** ' nin işaret ettiği dizeyi göstermek Için **metin görselleştiricisi** ' ı seçebilirsiniz.
 
- ![CStringT verilerle StringView Görselleştirici](../debugger/media/dbg_natvis_stringview_cstringt.png "CStringT verilerle StringView görselleştiricisi")
+ Stringview görselleştiricisi ile StringView görselleştiricisi(../debugger/media/dbg_natvis_stringview_cstringt.png "CStringT") verileriyle ![CStringT verileri]
 
-İfade `{m_pszData,su}` C++ biçim belirticisini içerir **su**değeri bir Unicode dize olarak görüntülemek için. Daha fazla bilgi için [biçim belirleyiciler c++](../debugger/format-specifiers-in-cpp.md).
+@No__t_0 ifade, değeri bir C++ Unicode dize olarak göstermek için bir Biçim belirleyicisi **su**içerir. Daha fazla bilgi için bkz. [ C++içindeki biçim belirticileri ](../debugger/format-specifiers-in-cpp.md).
 
-### <a name="BKMK_Expand"></a> Öğe genişletme
+### <a name="BKMK_Expand"></a>Öğeyi Genişlet
 
-İsteğe bağlı `Expand` düğüm türü bir değişken penceresinde genişlettiğinizde bir görselleştirilen türün alt özelleştirir. `Expand` Düğümünün alt öğeleri tanımlayan alt düğümlerin listesini kabul eder.
+İsteğe bağlı `Expand` düğümü, türü bir değişken penceresinde genişlettiğinizde görselleştirilen bir türün alt öğelerini özelleştirir. @No__t_0 düğümü, alt öğeleri tanımlayan alt düğümlerin listesini kabul eder.
 
-- Varsa bir `Expand` düğüm, alt varsayılan genişletme kuralları kullanan bir görselleştirme girişinde belirtilmediyse.
+- Bir görselleştirme girişinde `Expand` bir düğüm belirtilmemişse, alt öğeler varsayılan genişletme kurallarını kullanır.
 
-- Varsa bir `Expand` düğümü türü değil Genişletilebilir hata ayıklayıcı pencerelerinde, altında alt düğümler olmadan belirtilirse.
+- Bir `Expand` düğümü altında alt düğüm olmadan belirtilirse, tür hata ayıklayıcı penceresinde genişletilebilir değildir.
 
-#### <a name="BKMK_Item_expansion"></a> Öğe genişletme
+#### <a name="BKMK_Item_expansion"></a>Öğe genişletmesi
 
- `Item` En temel ve ortak öğesinde öğedir bir `Expand` düğümü. `Item` tek bir alt öğe tanımlar. Örneğin, bir `CRect` alan sınıfıyla `top`, `left`, `right`, ve `bottom` aşağıdaki görselleştirme girişinin vardır:
+ @No__t_0 öğesi, bir `Expand` düğümündeki en temel ve ortak öğedir. `Item` tek bir alt öğe tanımlıyor. Örneğin, `top`, `left`, `right` ve `bottom` alanları olan bir `CRect` sınıfı aşağıdaki görselleştirme girişine sahiptir:
 
 ```xml
 <Type Name="CRect">
@@ -389,19 +389,19 @@ Hata ayıklama sırasında Büyüteç simgesinin yanındaki değişken seçebili
 </Type>
 ```
 
-Hata ayıklayıcı penceresinde `CRect` türü şu örnekteki gibi görünür:
+Hata ayıklayıcı penceresinde `CRect` türü şu örneğe benzer şekilde görünür:
 
-![CRect öğesi öğesi genişletmesi ile](../debugger/media/dbg_natvis_expand_item_crect1.png "CRect ile öğesi öğesi genişletmesi")
+Öğe öğesi(../debugger/media/dbg_natvis_expand_item_crect1.png "genişlemesiyle") ![birlikte, öğe öğesi genişletme ekibi ile CRect]
 
-Hata ayıklayıcı belirtilen ifadeler değerlendirilir `Width` ve `Height` öğeleri ve değerleri gösteriyor **değer** değişken penceresinde sütunu.
+Hata ayıklayıcı `Width` ve `Height` öğelerinde belirtilen ifadeleri değerlendirir ve değişken penceresinin **değer** sütunundaki değerleri gösterir.
 
-Hata ayıklayıcıyı otomatik olarak oluşturur **[ham görüntü]** her özel genişletme için düğüm. Önceki ekran görüntüler **[ham görüntü]** genişletilmiş düğüm varsayılan nesnenin ham görünümünün kendi Natvis görselleştirmeden farkı göstermek için. Varsayılan genişletmesi, temel sınıfın bir alt ağacını oluşturur ve tüm veri üyeleri temel sınıfın alt öğeleri olarak listeler.
+Hata ayıklayıcı her özel genişletme için **[ham Görünüm]** düğümünü otomatik olarak oluşturur. Önceki ekran görüntüsünde, nesnenin varsayılan ham görünümünün Natvis görselleştirmesinden nasıl farklı olduğunu göstermek için genişletilmiş **[ham Görünüm]** düğümü görüntülenir. Varsayılan genişletme, temel sınıf için bir alt ağaç oluşturur ve temel sınıfın tüm veri üyelerini alt öğe olarak listeler.
 
 > [!NOTE]
-> Öğenin ifadesi karmaşık bir türü işaret ediyorsa **öğesi** düğümü genişletilebilir.
+> Öğe öğesinin ifadesi karmaşık bir türe işaret ediyorsa, **öğe** düğümünün kendisi Genişletilebilir olur.
 
-#### <a name="BKMK_ArrayItems_expansion"></a> Arrayıtems genişletme
-Kullanım `ArrayItems` düğümünü türü bir dizi olarak yorumlamasını ve tek tek öğelerini görüntülemek ve Visual Studio hata. Görselliğini `std::vector` iyi bir örnektir:
+#### <a name="BKMK_ArrayItems_expansion"></a>ArrayItems genişletmesi
+Visual Studio hata ayıklayıcının türü bir dizi olarak yorumlamasını ve bireysel öğelerini görüntülemesini sağlamak için `ArrayItems` düğümünü kullanın. @No__t_0 görselleştirmesi iyi bir örnektir:
 
 ```xml
 <Type Name="std::vector&lt;*&gt;">
@@ -417,21 +417,21 @@ Kullanım `ArrayItems` düğümünü türü bir dizi olarak yorumlamasını ve t
 </Type>
 ```
 
-A `std::vector` değişken penceresinde genişletildiğinde bireysel öğelerini gösterir:
+@No__t_0, bağımsız öğelerini değişken penceresinde genişletildiğinde gösterir:
 
-![Arrayıtems genişletme kullanarak std::vector](../debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "std::vector Arrayıtems genişletme kullanma")
+![std::]ArrayItems genişletme(../debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "std:: vektör") kullanan
 
-`ArrayItems` Düğümünde şunun olması gerekir:
+@No__t_0 düğüm şunları içermelidir:
 
-- A `Size` (bir tamsayı olarak değerlendirilmelidir) ifadesi hata ayıklayıcının dizinin uzunluğunun anlamak.
-- A `ValuePointer` ilk öğesine işaret eden bir ifade (olmayan bir öğe türünün işaretçisi olmalıdır `void*`).
+- Hata ayıklayıcının dizi uzunluğunu anlaması için bir `Size` ifadesi (bir tamsayı olarak değerlendirilmesi gerekir).
+- İlk öğeyi işaret eden bir `ValuePointer` ifadesi (`void*` olmayan bir öğe türünün işaretçisi olması gerekir).
 
-Dizi alt sınırı varsayılan değeri 0'dır. Geçersiz kılma değeri için kullanmak bir `LowerBound` öğesi. *.Natvis* dosyalarının Visual Studio ile birlikte gelen örnekler vardır.
+Dizi alt sınırının varsayılan değeri 0 ' dır. Değeri geçersiz kılmak için bir `LowerBound` öğesi kullanın. Visual Studio ile birlikte gelen *. natvis* dosyalarında örneklere sahip.
 
 >[!NOTE]
->Kullanabileceğiniz `[]` işleci, örneğin `vector[i]`, kullanan herhangi bir tek boyutlu dizi görselleştirme ile `ArrayItems`bile türü (örneğin `CATLArray`) bu işleci izin vermiyor.
+>Türün kendisi (örneğin, `CATLArray`) bu işlece izin vermediği halde, `ArrayItems` kullanan tek boyutlu dizi görselleştirmelere sahip `vector[i]` gibi `[]` işlecini kullanabilirsiniz.
 
-Çok boyutlu diziler de belirtebilirsiniz. Bu durumda, hata ayıklayıcı, alt öğelerin düzgün görüntülenmesi için biraz daha fazla bilgi gerekiyor:
+Çok boyutlu diziler de belirtebilirsiniz. Bu durumda, hata ayıklayıcının alt öğeleri düzgün şekilde görüntülemesi için biraz daha fazla bilgi gerekir:
 
 ```xml
 <Type Name="Concurrency::array&lt;*,*&gt;">
@@ -448,17 +448,17 @@ Dizi alt sınırı varsayılan değeri 0'dır. Geçersiz kılma değeri için ku
 </Type>
 ```
 
-- `Direction` Dizinin satır ağırlıklı mı sütun ağırlıklı sırayla olup olmadığını belirtir.
-- `Rank` dizi boyut sayısını belirtir.
-- `Size` Öğe kabul ettiği örtük `$i` parametresini bu boyuttaki dizinin uzunluğunu bulmak için boyut dizini ile değiştirir. Önceki örnekte, ifade `_M_extent.M_base[0]` sondan 0 boyutun uzunluğunu vermelidir `_M_extent._M_base[1]` 1 ve benzeri.
+- `Direction` dizinin satır içi mi yoksa sütun birincil sırada mı olduğunu belirtir.
+- `Rank` dizinin derecesini belirtir.
+- @No__t_0 öğesi, bu boyuttaki dizinin uzunluğunu bulmak için boyut diziniyle birlikte bulunan örtük `$i` parametresini kabul eder. Önceki örnekte, `_M_extent.M_base[0]` ifadesi 0. boyutun uzunluğuna, 1 ' i `_M_extent._M_base[1]` ve bu şekilde devam eder.
 
-Bir iki boyutlu nasıl işte `Concurrency::array` nesne hata ayıklayıcı penceresinde görünür:
+İki boyutlu bir `Concurrency::array` nesnesinin hata ayıklayıcı penceresinde nasıl göründüğünü aşağıda görebilirsiniz:
 
-![Arrayıtems genişletme ile iki boyutlu dizi](../debugger/media/dbg_natvis_expand_arrayitems_2d.png "Arrayıtems genişletme ile iki boyutlu dizi")
+ArrayItems(../debugger/media/dbg_natvis_expand_arrayitems_2d.png "genişlemesiyle iki boyutlu diziyi") ![genişletmenin bulunduğu iki boyutlu dizi]
 
-#### <a name="BKMK_IndexListItems_expansion"></a> Indexlistıtems genişletme
+#### <a name="BKMK_IndexListItems_expansion"></a>IndexListItems genişletmesi
 
-Kullanabileceğiniz `ArrayItems` yalnızca dizi öğelerinin bellekte bitişik, genişletme. Hata ayıklayıcı, işaretçisini artırılarak sonraki öğeye alır. Dizini değer düğümüne yönetmek ihtiyacınız varsa `IndexListItems` düğümleri. Bir görselleştirme ile İşte bir `IndexListItems` düğüm:
+@No__t_0 genişletmeyi yalnızca dizi öğeleri bellekte bitişik olarak olarak düzenlense kullanabilirsiniz. Hata ayıklayıcı, işaretçisini arttırarak bir sonraki öğeye alır. Dizini değer düğümüne göre değiştirmeniz gerekiyorsa `IndexListItems` düğümlerini kullanın. @No__t_0 düğümü olan bir görselleştirme aşağıda verilmiştir:
 
 ```xml
 <Type Name="Concurrency::multi_link_registry&lt;*&gt;">
@@ -473,14 +473,14 @@ Kullanabileceğiniz `ArrayItems` yalnızca dizi öğelerinin bellekte bitişik, 
 </Type>
 ```
 
-Arasındaki tek fark `ArrayItems` ve `IndexListItems` olduğu `ValueNode`, tam ifadeyi bekliyor<sup>th</sup> örtük öğeyle `$i` parametresi.
+@No__t_0 ve `IndexListItems` arasındaki tek fark, örtük `$i` parametresiyle i<sup>. öğesi için</sup> tam ifadeyi bekleyen `ValueNode`.
 
 >[!NOTE]
->Kullanabileceğiniz `[]` işleci, örneğin `vector[i]`, kullanan herhangi bir tek boyutlu dizi görselleştirme ile `IndexListItems`bile türü (örneğin `CATLArray`) bu işleci izin vermiyor.
+>Türün kendisi (örneğin, `CATLArray`) bu işlece izin vermediği halde, `IndexListItems` kullanan tek boyutlu dizi görselleştirmelere sahip `vector[i]` gibi `[]` işlecini kullanabilirsiniz.
 
-#### <a name="BKMK_LinkedListItems_expansion"></a> Linkedlistıtems genişletme
+#### <a name="BKMK_LinkedListItems_expansion"></a>LinkedListItems genişletmesi
 
-Görselleştirilmiş tür bağlı bir listeyi temsil ediyorsa, hata ayıklayıcı alt öğelerini kullanarak görüntüleyebilirsiniz bir `LinkedListItems` düğümü. İçin aşağıdaki görselleştirme `CAtlList` yazın kullandığı `LinkedListItems`:
+Görselleştirilmiş tür bağlantılı bir listeyi temsil ediyorsa, hata ayıklayıcı alt öğelerini bir `LinkedListItems` düğümü kullanarak görüntüleyebilir. @No__t_0 türü için aşağıdaki görselleştirme `LinkedListItems` kullanır:
 
 ```xml
 <Type Name="ATL::CAtlList&lt;*,*&gt;">
@@ -497,16 +497,16 @@ Görselleştirilmiş tür bağlı bir listeyi temsil ediyorsa, hata ayıklayıc�
 </Type>
 ```
 
-`Size` Öğesi listenin uzunluğunu gösterir. `HeadPointer` ilk öğesine işaret `NextPointer` sonraki öğeye başvuruyor ve `ValueNode` öğesinin değerine başvurur.
+@No__t_0 öğesi, listenin uzunluğunu ifade eder. `HeadPointer` ilk öğeye işaret eder, `NextPointer` bir sonraki öğeye başvurur ve `ValueNode` öğenin değerini gösterir.
 
-Hata ayıklayıcı değerlendirir `NextPointer` ve `ValueNode` bağlamında ifadeleri `LinkedListItems` düğüm öğesi, üst liste türü değil. Önceki örnekte `CAtlList` sahip bir `CNode` sınıfı (bulunan `atlcoll.h`) diğer bir deyişle bir bağlantılı liste düğümü. `m_pNext` ve `m_element` alanları `CNode` sınıfı değil `CAtlList` sınıfı.
+Hata ayıklayıcı, `NextPointer` ve `ValueNode` ifadelerini, üst liste türü değil `LinkedListItems` node öğesi bağlamında değerlendirir. Yukarıdaki örnekte `CAtlList`, bağlantılı listenin bir düğümü olan `CNode` bir sınıfa (`atlcoll.h` bulunur) sahiptir. `m_pNext` ve `m_element`, `CAtlList` sınıfının değil, `CNode` sınıfının alanlarıdır.
 
-`ValueNode` boş bırakılabilir veya kullanın `this` başvurmak için `LinkedListItems` düğümünün kendisini.
+`ValueNode` boş bırakılabilir veya `LinkedListItems` düğümüne başvurmak için `this` kullanabilirsiniz.
 
-#### <a name="customlistitems-expansion"></a>CustomListItems genişletme
-`CustomListItems` Genişletme, bir karma tablo gibi bir veri yapısına geçmek için özel mantığı yazmak olanak sağlar. Kullanma `CustomListItems` kalıbına için C++ ifadeler Değerlendirmeli ancak henüz yoksa için gereksinim duyduğunuz her şey için kullanabileceğiniz veri yapılarını görselleştirmek için uygun `ArrayItems`, `IndexListItems`, veya `LinkedListItems`.
+#### <a name="customlistitems-expansion"></a>CustomListItems genişletmesi
+@No__t_0 genişletmesi, Hashtable gibi bir veri yapısına geçiş yapmak için özel mantık yazmanızı sağlar. Değerlendirmek için gereken her şeye yönelik ifadeleri kullanan C++ veri yapılarını görselleştirmek için `CustomListItems` kullanın, ancak `ArrayItems`, `IndexListItems` veya `LinkedListItems` için Mold 'ı tam olarak uydurmayın.
 
-İçin aşağıdaki Görselleştirici `CAtlMap` mükemmel bir örnek burada `CustomListItems` uygundur.
+@No__t_0 için aşağıdaki Görselleştirici, `CustomListItems` uygun olan harika bir örnektir.
 
 ```xml
 <Type Name="ATL::CAtlMap&lt;*,*,*,*&gt;">
@@ -537,12 +537,12 @@ Hata ayıklayıcı değerlendirir `NextPointer` ve `ValueNode` bağlamında ifad
 </Type>
 ```
 
-Kullanabileceğiniz `Exec` içine kod yürütmek için bir `CustomListItems` genişletme, genişletme içinde tanımlanan nesneler ve değişkenler kullanarak. Mantıksal işleçler, aritmetik işleçler ve atama işleçleri ile kullanabileceğiniz `Exec`. Kullanamazsınız `Exec` işlevleri değerlendirilecek.
+@No__t_0, genişletmeyle tanımlanan değişkenleri ve nesneleri kullanarak `CustomListItems` genişletmenin içinde kod yürütmek için kullanabilirsiniz. @No__t_0 ile mantıksal işleçler, aritmetik işleçler ve atama işleçlerini kullanabilirsiniz. İşlevleri değerlendirmek için `Exec` kullanamazsınız.
 
 `CustomListItems` aşağıdaki iç işlevleri destekler:
 
-- `strlen`, `wcslen`, `strnlen`, `wcsnlen`, `strcmp`, `wcscmp`, `_stricmp`, `_strcmpi`, `_wcsicmp`, `strncmp`, `wcsncmp`, `_strnicmp`, `_wcsnicmp`, `memcmp`, `memicmp`, `wmemcmp`, `strchr`, `wcschr`, `memchr`, `wmemchr`, `strstr`, `wcsstr`, `__log2`, `__findNonNull`
-- `GetLastError`, `TlsGetValue`, `DecodeHString`, `WindowsGetStringLen`, `WindowsGetStringRawBuffer`, `WindowsCompareStringOrdinal`, `RoInspectCapturedStackBackTrace`, `CoDecodeProxy`, `GetEnvBlockLength`, `DecodeWinRTRestrictedException`, `DynamicMemberLookup`, `DecodePointer`, `DynamicCast`
+- `strlen`, `wcslen`, `strnlen`, `wcsnlen`, `strcmp`, `wcscmp`, `_stricmp`, `_strcmpi`, `_wcsicmp`, `strncmp`, 0, 1, 2, 3, 4, 5 , 6, 7, 8, 9, 0, 1, 2, 3
+- `GetLastError`, `TlsGetValue`, `DecodeHString`, `WindowsGetStringLen`, `WindowsGetStringRawBuffer`, `WindowsCompareStringOrdinal`, `RoInspectCapturedStackBackTrace`, `CoDecodeProxy`, `GetEnvBlockLength`, `DecodeWinRTRestrictedException`, 0, 1, 2
 - `ConcurrencyArray_OperatorBracket_idx // Concurrency::array<>::operator[index<>] and operator(index<>)`
 - `ConcurrencyArray_OperatorBracket_int // Concurrency::array<>::operator(int, int, ...)`
 - `ConcurrencyArray_OperatorBracket_tidx // Concurrency::array<>::operator[tiled_index<>] and operator(tiled_index<>)`
@@ -555,8 +555,8 @@ Kullanabileceğiniz `Exec` içine kod yürütmek için bir `CustomListItems` gen
 - `TreeTraverse_Next // Returns nodes in a tree`
 - `TreeTraverse_Skip // Skips nodes in a pending tree traversal`
 
-#### <a name="BKMK_TreeItems_expansion"></a> Treeıtems genişletme
- Görselleştirilmiş tür bir ağacı temsil ediyorsa, hata ayıklayıcı ağaçta yürüyebilir ve kullanabilirsiniz kullanarak kendi alt öğelerini görüntüleyebilir bir `TreeItems` düğümü. Görselleştirme için `std::map` kullanarak yazın bir `TreeItems` düğüm:
+#### <a name="BKMK_TreeItems_expansion"></a>Ağaç öğeleri genişletmesi
+ Görselleştirilmiş tür bir ağacı temsil ediyorsa, hata ayıklayıcı ağaca yol açabilir ve bir `TreeItems` düğümü kullanarak alt öğelerini görüntüleyebilir. Bir `TreeItems` düğümü kullanarak `std::map` türünün görselleştirmesi aşağıda verilmiştir:
 
 ```xml
 <Type Name="std::map&lt;*&gt;">
@@ -575,16 +575,16 @@ Kullanabileceğiniz `Exec` içine kod yürütmek için bir `CustomListItems` gen
 </Type>
 ```
 
-Sözdizimi benzer `LinkedListItems` düğümü. `LeftPointer`, `RightPointer`, ve `ValueNode` ağaç düğümü sınıfı bağlamında değerlendirilir. `ValueNode` boş bırakılabilir veya kullanın `this` başvurmak için `TreeItems` düğümünün kendisini.
+Söz dizimi `LinkedListItems` düğümüne benzerdir. `LeftPointer`, `RightPointer` ve `ValueNode`, ağaç düğümü sınıfının bağlamı altında değerlendirilir. `ValueNode` boş bırakılabilir veya `TreeItems` düğümüne başvurmak için `this` kullanabilirsiniz.
 
-#### <a name="BKMK_ExpandedItem_expansion"></a> Expandedıtem genişletme
- `ExpandedItem` Öğesi temel sınıflar veya veri üyelerinin özelliklerini görselleştirilen türün alt değilmiş gibi görüntüleyerek toplanmış alt görünüm oluşturur. Hata ayıklayıcı belirtilen ifadeyi değerlendirir ve sonucun alt düğümleri görselleştirilen türün alt öğe listesine ekler.
+#### <a name="BKMK_ExpandedItem_expansion"></a>ExpandedItem genişletmesi
+ @No__t_0 öğesi, temel sınıfların veya veri üyelerinin özelliklerini görselleştirilen türün alt öğeleri gibi görüntüleyerek toplanmış bir alt görünüm oluşturur. Hata ayıklayıcı belirtilen ifadeyi değerlendirir ve sonucun alt düğümlerini görselleştirilen türün alt listesine ekler.
 
-Örneğin, akıllı işaretçi türü `auto_ptr<vector<int>>` genellikle görüntüler:
+Örneğin, akıllı işaretçi türü `auto_ptr<vector<int>>` genellikle şöyle görünür:
 
- ![Otomatik&#95;ptr&#60;vektör&#60;int&#62; &#62; varsayılan genişletme](../debugger/media/dbg_natvis_expand_expandeditem_default.png "varsayılan genişletme")
+ ![Otomatik&#95;PTR&#60;vektör&#60;&#62; int&#62; varsayılan genişletme](../debugger/media/dbg_natvis_expand_expandeditem_default.png "varsayılan genişletme")
 
- Vektörün değerlerini görmek için üzerinden geçen değişken penceresinde iki düzey detaya sahip `_Myptr` üyesi. Ekleyerek bir `ExpandedItem` öğesini ortadan kaldırabilir `_Myptr` değişkeni bu hiyerarşisinden ve doğrudan vektör öğelerini görüntüleyebilirsiniz:
+ Vector öğesinin değerlerini görmek için, değişken penceresinde iki düzeyin detayına geçerek `_Myptr` üye aracılığıyla geçiş yapmanız gerekir. @No__t_0 bir öğesi ekleyerek `_Myptr` değişkenini hiyerarşisinden ortadan kaldırabilir ve vektör öğelerini doğrudan görüntüleyebilirsiniz:
 
 ```xml
 <Type Name="std::auto_ptr&lt;*&gt;">
@@ -595,9 +595,9 @@ Sözdizimi benzer `LinkedListItems` düğümü. `LeftPointer`, `RightPointer`, v
 </Type>
 ```
 
- ![Otomatik&#95;ptr&#60;vektör&#60;int&#62; &#62; Expandedıtem genişletme](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "Expandedıtem genişletme")
+ ![Otomatik&#95;PTR&#60;vektör&#60;int&#62; &#62; ExpandedItem genişletme](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "ExpandedItem genişletmesi")
 
-Aşağıdaki örnek, türetilen bir sınıfta temel sınıftan özellikleri toplama gösterilmektedir. Varsayalım `CPanel` sınıf türetilir `CFrameworkElement`. Temel gelen özelliklerin yinelenmesi yerine `CFrameworkElement` sınıfı `ExpandedItem` düğüm görselleştirme özelliklere alt listesine ekler `CPanel` sınıfı.
+Aşağıdaki örnek, türetilmiş bir sınıftaki temel sınıftan özelliklerin nasıl toplanacağını gösterir. @No__t_0 sınıfın `CFrameworkElement` türediğini varsayalım. Temel `CFrameworkElement` sınıfından gelen özellikleri yinelemek yerine, `ExpandedItem` düğümü görselleştirmesi bu özellikleri `CPanel` sınıfının alt listesine ekler.
 
 ```xml
 <Type Name="CPanel">
@@ -609,10 +609,10 @@ Aşağıdaki örnek, türetilen bir sınıfta temel sınıftan özellikleri topl
 </Type>
 ```
 
-**Nd** türetilmiş sınıf için görselleştirme kapatır, biçim belirticisi, gerekli burada. Aksi takdirde, ifade `*(CFrameworkElement*)this` neden `CPanel` çünkü varsayılan görselleştirme türü eşleştirme kuralları yeniden uygulanması için görselleştirme, en uygun olanı düşünün. Kullanma **nd** biçim belirticisi, hata ayıklayıcının hiçbir görselleştirme temel sınıf varsa temel sınıf görselleştirmesini veya sınıf varsayılan genişletmesini kullanmasını istemek için.
+Türetilmiş sınıf için görselleştirme eşleştirmeyi kapatan **ND** Biçim belirleyicisi burada gereklidir. Aksi takdirde `*(CFrameworkElement*)this` ifade, varsayılan görselleştirme türü eşleştirme kuralları en uygun olanı düşüntiğinden, `CPanel` görselleştirmesinin yeniden uygulanmasına neden olur. Hata ayıklayıcıya temel sınıf görselleştirmesini kullanmasını söylemek için **ND** biçim belirticisini veya temel sınıfın görselleştirmesi yoksa varsayılan genişletmeyi kullanın.
 
-#### <a name="BKMK_Synthetic_Item_expansion"></a> Sentetik öğesi genişletmesi
- Sırada `ExpandedItem` öğesi hiyerarşileri ortadan kaldırarak verilerin daha düz bir görünümünü sağlar `Synthetic` düğüm yapar. Bir ifadenin sonucu olmayan bir yapay alt öğe oluşturmanızı sağlar. Yapay öğesi, kendi alt öğeleri olabilir. Aşağıdaki örnekte, görselleştirme için `Concurrency::array` türü kullanan bir `Synthetic` tanılama iletisini kullanıcıya göstermek için düğüm:
+#### <a name="BKMK_Synthetic_Item_expansion"></a>Yapay öğe genişletmesi
+ @No__t_0 öğesi hiyerarşileri ortadan kaldırarak verilerin düzbir görünümünü sağladığından, `Synthetic` düğümü tersini yapar. Bir ifadenin sonucu olmayan yapay bir alt öğe oluşturmanıza olanak sağlar. Yapay öğe kendi alt öğelerine sahip olabilir. Aşağıdaki örnekte, `Concurrency::array` türü için görselleştirme, kullanıcıya bir tanılama iletisi göstermek için bir `Synthetic` düğümü kullanır:
 
 ```xml
 <Type Name="Concurrency::array&lt;*,*&gt;">
@@ -631,10 +631,10 @@ Aşağıdaki örnek, türetilen bir sınıfta temel sınıftan özellikleri topl
 </Type>
 ```
 
- ![Sentetik öğesi genişletmesi ile CONCURRENCY::Array](../debugger/media/dbg_natvis_expand_synthetic.png "Concurrency::Array ile Sentetik öğesi genişletmesi")
+ ![Concurrency:: yapay öğe genişletme](../debugger/media/dbg_natvis_expand_synthetic.png "concurrency:: Array ile dizi yapay öğe genişletme")
 
-### <a name="BKMK_HResult"></a> HResult öğesi
- `HResult` Öğe için gösterilen bilgileri özelleştirmenize olanak sağlar bir **HRESULT** hata ayıklayıcı pencerelerinde. `HRValue` Öğesi, 32-bit değeri içermelidir **HRESULT** özelleştirilecek olmasıdır. `HRDescription` Öğesi hata ayıklayıcı penceresinde göstermek için bilgileri içerir.
+### <a name="BKMK_HResult"></a>HResult öğesi
+ @No__t_0 öğesi, hata ayıklayıcı penceresinde bir **HRESULT** için gösterilen bilgileri özelleştirmenize olanak sağlar. @No__t_0 öğesi, özelleştirilecek olan **HRESULT** 'nin 32 bitlik değerini içermelidir. @No__t_0 öğesi, hata ayıklayıcı penceresinde gösterilecek bilgileri içerir.
 
 ```xml
 
@@ -644,10 +644,10 @@ Aşağıdaki örnek, türetilen bir sınıfta temel sınıftan özellikleri topl
 </HResult>
 ```
 
-### <a name="BKMK_UIVisualizer"></a> Uıvisualizer öğesi
-A `UIVisualizer` öğesi, hata ayıklayıcı ile grafiksel Görselleştirici eklentisini kaydeder. Bir grafik Görselleştirici iletişim kutusu veya bir değişkeni veya nesneyi bir biçimde kendi veri türü ile tutarlı gösteren diğer arabirim oluşturur. Görselleştirici eklentisinin olarak yazılması bir [VSPackage](../extensibility/internals/vspackages.md)ve hata ayıklayıcı tüketebileceği bir hizmeti göstermesi gerekir. *.Natvis* dosyası gibi eklenti için adını, kullanıma sunulan hizmet ve görselleştirme türlerini GUID kayıt bilgileri içerir.
+### <a name="BKMK_UIVisualizer"></a>UIVisualizer öğesi
+@No__t_0 öğesi bir grafik görselleştiricisi eklentisini hata ayıklayıcıyla kaydeder. Grafik görselleştiricisi bir iletişim kutusu veya bir değişken ya da nesneyi veri türüyle tutarlı bir şekilde gösteren başka bir arabirim oluşturur. Görselleştiricisi eklentisi [VSPackage](../extensibility/internals/vspackages.md)olarak yazılmalıdır ve hata ayıklayıcının tüketebileceği bir hizmeti kullanıma sunmalıdır. *. Natvis* dosyası, eklentinin adı, GÖSTERILEN hizmetin GUID 'i ve görselleştirilecek türler gibi, eklenti için kayıt bilgilerini içerir.
 
-Uıvisualizer öğesinin bir örnek aşağıda verilmiştir:
+UIVisualizer öğesine bir örnek aşağıda verilmiştir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -661,13 +661,13 @@ Uıvisualizer öğesinin bir örnek aşağıda verilmiştir:
 </AutoVisualizer>
 ```
 
-- A `ServiceId`  -  `Id` öznitelik çifti tanımlayan bir `UIVisualizer`. `ServiceId` Görselleştirici hizmeti paketi kullanıma sunan GUID'idir. `Id` bir hizmet birden fazla sağlıyorsa, görselleştiriciler, ayırır bir benzersiz tanımlayıcısıdır. Önceki örnekte, aynı Görselleştirici hizmeti iki Görselleştirici sağlıyor.
+- Bir `ServiceId`  -  `Id` öznitelik çifti bir `UIVisualizer` tanımlar. @No__t_0, görselleştiricisi paketinin sunduğu hizmetin GUID 'sidir. `Id`, bir hizmet birden fazla sağlıyorsa görselleştiricilerin farklılaştırır. Yukarıdaki örnekte, aynı görselleştiricisi hizmeti iki Görselleştiriciler sağlar.
 
-- `MenuName` Özniteliği, hata ayıklayıcı Büyüteç simgesinin yanındaki açılır görüntülenecek Görselleştirici adı tanımlar. Örneğin:
+- @No__t_0 özniteliği, hata ayıklayıcıdaki büyüteç simgesinin yanında açılan kutuda görüntülenecek Görselleştirici adını tanımlar. Örneğin:
 
-  ![Uıvisualizer menü kısayol menüsünü](../debugger/media/dbg_natvis_vectorvisualizer.png "Uıvisualizer'a menü kısayol menüsü")
+  ![UIVisualizer menü kısayol menüsü](../debugger/media/dbg_natvis_vectorvisualizer.png "UIVisualizer menü kısayol menüsü")
 
-Tanımlanan her tür *.natvis* dosyayı görüntülemek için herhangi bir UI görselleştiricilerini açıkça listelemek gerekir. Hata ayıklayıcı kayıtlı görselleştiricilerle tür girişlerindeki Görselleştirici başvurularını eşleştirir. Örneğin, şu tür girdisi `std::vector` başvuruları `UIVisualizer` önceki örnekte.
+*. Natvis* dosyasında tanımlanan her tür, kendisini görüntüleyebilen HERHANGI bir UI görselleştiricilerini açıkça listemelidir. Hata ayıklayıcı, kayıtlı görselleştiricilerde tür girişlerinde Görselleştirici başvurularıyla eşleşir. Örneğin, `std::vector` için aşağıdaki tür girdisi, önceki örnekteki `UIVisualizer` başvurur.
 
 ```xml
 <Type Name="std::vector&lt;int,*&gt;">
@@ -675,11 +675,11 @@ Tanımlanan her tür *.natvis* dosyayı görüntülemek için herhangi bir UI g�
 </Type>
 ```
 
- Bir örneğini görmek bir `UIVisualizer` içinde [görüntü Watch](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.ImageWatch2017) bellek içi bit eşlemler görüntülemek için kullanılan bir uzantı.
+ Bellek içi bit eşlemler görüntülemek için kullanılan [görüntü izleme](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.ImageWatch2017) uzantısında bir `UIVisualizer` örneğini görebilirsiniz.
 
 ### <a name="BKMK_CustomVisualizer"></a>CustomVisualizer öğesi
- `CustomVisualizer` Visual Studio code'da görselleştirmeler denetlemek için yazdığınız bir VSIX uzantısı belirten bir genişletilebilirlik noktası niteliğindedir. VSIX uzantılarını yazma hakkında daha fazla bilgi için bkz. [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+ `CustomVisualizer`, Visual Studio Code 'da görselleştirmeleri denetlemek için yazdığınız VSıX uzantısını belirten bir genişletilebilirlik noktasıdır. VSıX uzantıları yazma hakkında daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
-Natvis XML tanımını daha özel Görselleştirici yazma için çok daha fazla iş olduğunu, ancak ücretsiz kısıtlamalardan hakkında ne Natvis vermez veya desteklemiyor. Özel görselleştiriciler hata ayıklayıcı genişletilebilirliği sorgulayabilir ve hata ayıklanan işlemin değiştirmek veya Visual Studio'nun diğer bölümleriyle iletişim kurmak, API kümesini erişebilir.
+XML Natvis tanımından özel bir Görselleştirici yazmak çok daha fazla çalışmadır, ancak Natvis 'ın ne yaptığını veya desteklemediği hakkında kısıtlamalardan ücretsiz olursunuz. Özel Görselleştiriciler hata ayıklama genişletilebilirlik API 'Lerinin tamamına erişebilir, bu da hata ayıklanan işlemi sorgulayabilir ve değiştirebilir veya Visual Studio 'nun diğer bölümleriyle iletişim kurabilir.
 
- Kullanabileceğiniz `Condition`, `IncludeView`, ve `ExcludeView` üzerinde öznitelikleri `CustomVisualizer` öğeleri.
+ @No__t_3 öğelerinde `Condition`, `IncludeView` ve `ExcludeView` özniteliklerini kullanabilirsiniz.

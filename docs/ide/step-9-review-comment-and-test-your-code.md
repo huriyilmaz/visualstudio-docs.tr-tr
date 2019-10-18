@@ -1,5 +1,5 @@
 ---
-title: '9\. Adım: Kodunuzu gözden geçirme, açıklama ve test etme'
+title: '9\. Adım: kodunuzu gözden geçirme, açıklama ve test etme'
 ms.date: 08/30/2019
 ms.assetid: f26f79ba-c91b-4164-b87f-679a1b231c09
 ms.topic: tutorial
@@ -13,14 +13,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d0504f994c05ed9c924b3758a7f83838c67df44
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
-ms.translationtype: MT
+ms.openlocfilehash: 31a66556e9476631fa0372b14e73eb8c6241fc63
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118714"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314194"
 ---
-# <a name="step-9-review-comment-and-test-your-code"></a>9\. Adım: Kodunuzu gözden geçirme, açıklama ve test etme
+# <a name="step-9-review-comment-and-test-your-code"></a>9\. Adım: kodunuzu gözden geçirme, açıklama ve test etme
 
 Daha sonra kodunuza bir açıklama eklersiniz. Yorum, uygulamanın davranış biçimini değiştirmeyen bir notdur. Kodunuzu okuyan birisinin ne yaptığını öğrenmesini kolaylaştırır. Kodunuza açıklama eklemek için iyi bir önleminizi alarak vardır.
 
@@ -30,9 +30,9 @@ Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi
 
 - **Windows form tasarımcısı** **resim göster** DÜĞMESINE çift tıkladığınızda, IDE programınızın koduna otomatik olarak bir *Yöntem* ekledi.
 
-- Yöntemler, kodunuzu nasıl düzenleirsiniz: Kodunuz birlikte gruplandırılır.
+- Yöntemler, kodunuzun nasıl düzenlenme yöntemleridir: kodunuz birlikte gruplandırılır.
 
-- Çoğu zaman, `showButton_Click()` (veya `ShowButton_Click()`) yönteminizin bir iletişim kutusu gösterdiği ve sonra bir resmi yükleyen gibi belirli bir sırada çok sayıda şey yapmaz.
+- Çoğu zaman, `showButton_Click()` (veya `ShowButton_Click()`) yönteminizin bir iletişim kutusunu nasıl gösterdiği ve sonra bir resmi yükleyen gibi belirli bir sırada çok sayıda şey yapar.
 
 - Yöntem kod *deyimlerinden*veya kod satırlarından oluşur. Bir yöntemi kod deyimlerini birlikte paketetmenin bir yolu olarak düşünün.
 
@@ -48,38 +48,37 @@ Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi
   pictureBox1.Load(openFileDialog1.FileName)
   ```
 
-   Deyimler, programlarınızın şeyleri yapabilecekleri şeydir. İçinde C#, bir ifade her zaman noktalı virgül ile biter. Visual Basic, satırın sonu deyimin sonu olur. (Visual Basic noktalı virgül gerekmez.) Yukarıdaki ifade, denetiinizde <xref:System.Windows.Forms.PictureBox> **OpenFileDialog** bileşeni ile kullanıcının seçtiği dosyayı yüklemesini söyler.
+   Deyimler, programlarınızın şeyleri yapabilecekleri şeydir. İçinde C#, bir ifade her zaman noktalı virgül ile biter. Visual Basic, satırın sonu deyimin sonu olur. (Visual Basic noktalı virgül gerekmez.) Yukarıdaki ifade, <xref:System.Windows.Forms.PictureBox> denetimine kullanıcının seçtiği dosyayı **OpenFileDialog** bileşeniyle yüklemesini söyler.
 
 ## <a name="to-add-comments"></a>Açıklama eklemek için
 
 1. Aşağıdaki yorumu kodunuza ekleyin.
 
-    > [!IMPORTANT]
-    > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dili denetimi](../ide/media/docs-programming-language-control.png)
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      [!code-csharp[VbExpressTutorial1Step9_10#1](../ide/codesnippet/CSharp/step-9-review-comment-and-test-your-code_1.cs)]
 
      [!code-vb[VbExpressTutorial1Step9_10#1](../ide/codesnippet/VisualBasic/step-9-review-comment-and-test-your-code_1.vb)]
 
-    **ShowButton** düğinizin <xref:System.Windows.Forms.Control.Click> olay işleyicisi artık tamamlandı ve çalışıyor. Bir `if` deyimden başlayarak kod yazmaya başladıysanız. Bir `if` ifade, uygulamanıza "Bunu nasıl denetleyeceğinizi, ister doğru olursa, bu eylemleri gerçekleştirirsiniz." Bu durumda, uygulamanıza **Dosya Aç** iletişim kutusunu açmasını söylersiniz ve Kullanıcı bir dosya seçip **Tamam** düğmesini seçerse, bu dosyayı **PictureBox**'a yükleyin.
+    **ShowButton** düğinizin <xref:System.Windows.Forms.Control.Click> olay işleyicisi artık tamamlanmıştır ve işe yarar. Bir `if` ifadesiyle başlayarak kod yazmaya başladıysanız. @No__t_0 bir ifade, uygulamanıza "Bunu nasıl denetleyeceğinizi, ister doğru olursa, bu eylemleri gerçekleştirirsiniz." Bu durumda, uygulamanıza **Dosya Aç** iletişim kutusunu açmasını söylersiniz ve Kullanıcı bir dosya seçip **Tamam** düğmesini seçerse, bu dosyayı **PictureBox**'a yükleyin.
 
     > [!TIP]
     > IDE, kod yazmanızı kolaylaştıracak şekilde oluşturulmuştur ve *kod parçacıkları* bunu yapmanın bir yoludur. Kod parçacığı, küçük bir kod bloğuna genişletilmiş bir kısayoldur.
     >
-    >  Kullanılabilir tüm parçacıkları görebilirsiniz. Menü çubuğunda **Araçlar** > **kod parçacıkları Yöneticisi**' ni seçin. İçin C#, `if` kod parçacığı **görseldir C#**  . Visual Basic için, `if` kod parçacıkları **conditionals ve döngü** > **kodu desenlerinde**yer alır. Bu yöneticiyi, mevcut parçacıkları taramak veya kendi kod parçacıklarınızı eklemek için kullanabilirsiniz.
+    >  Kullanılabilir tüm parçacıkları görebilirsiniz. Menü çubuğunda **araçlar**  > **kod parçacıkları Yöneticisi**' ni seçin. İçin C#`if` parçacığı **görseldir C#**  . Visual Basic için `if` parçacıkları,**kod desenleri** >  koşullardır **ve Döngülerde** yer alır. Bu yöneticiyi, mevcut parçacıkları taramak veya kendi kod parçacıklarınızı eklemek için kullanabilirsiniz.
     >
-    >  Kodu yazarken bir kod parçacığını etkinleştirmek için yazın ve **sekme** tuşunu seçin. Birçok parçacık, **IntelliSense** penceresinde görünür. bu **nedenle,** **IntelliSense** PENCERESINDE kod parçacığını seçmek ve sonra IDE 'nin kod parçacığını kullanmasını söylemek için. (IntelliSense parçacığı destekler `if` , ancak `ifelse` kod parçacığını destekler.)
+    >  Kodu yazarken bir kod parçacığını etkinleştirmek için yazın ve **sekme** tuşunu seçin. Birçok parçacık, **IntelliSense** penceresinde görünür. bu **nedenle,** **IntelliSense** PENCERESINDE kod parçacığını seçmek ve sonra IDE 'nin kod parçacığını kullanmasını söylemek için. (IntelliSense, `if` parçacığı destekler, ancak `ifelse` parçacığı değil.)
 
 1. Uygulamanızı çalıştırmadan önce, aşağıdaki ekran görüntüsüne benzer şekilde görünmesi gereken **Tümünü Kaydet** araç çubuğu düğmesini seçerek uygulamanızı kaydedin.
 
-     ![Tümünü Kaydet araç çubuğu düğmesi](../ide/media/express_iconsaveall.png)<br>
-***Tümünü Kaydet*** *düğme*
+     Tüm araç çubuğu düğmesini ![Save ](../ide/media/express_iconsaveall.png)<br>
+***Tümünü Kaydet*** *düğmesi*
 
-     Alternatif olarak, uygulamanızı kaydetmek için, **Dosya** > **Tümünü** menü çubuğundan Kaydet ' i seçin (veya **CTRL**+ **+ Shift**+**S**tuşlarına basın). Bu, erken ve sık tasarrufu sağlamak için en iyi uygulamadır.
+     Alternatif olarak, uygulamanızı kaydetmek için, **dosya**  > **Tümünü** menü çubuğundan Kaydet ' i seçin (veya **CTRL** +**SHIFT** +**S**' e basın). Bu, erken ve sık tasarrufu sağlamak için en iyi uygulamadır.
 
      Çalıştığında, programınız aşağıdaki görüntüye benzer şekilde görünmelidir.
 
-     ![Resim görüntüleyici](../ide/media/express_pictureviewerdonerun.png)<br>***Resim görüntüleyici***
+     ![Picture Görüntüleyici ](../ide/media/express_pictureviewerdonerun.png)<br>***Resim görüntüleyici***
 
 ## <a name="to-test-your-app"></a>Uygulamanızı test etmek için
 
@@ -88,19 +87,19 @@ Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi
 1. Yeni yazdığınız kodu çalıştırmak için **bir resim göster** düğmesini seçin. Uygulama ilk olarak bir **Dosya Aç** iletişim kutusu açar. Filtrelerinizin, iletişim kutusunun alt kısmındaki **dosya türü** açılan listesinde göründüğünü doğrulayın. Ardından bir resme gidin ve açın. Genellikle *Belgelerim klasörünüzdeki Windows* işletim sistemiyle birlikte gelen örnek resimleri, *Resimlerim \ örnek resimler* klasörü içinde bulabilirsiniz.
 
     > [!TIP]
-    > **Resim dosyası seç** iletişim kutusunda herhangi bir görüntü görmüyorsanız, iletişim kutusunun sağ alt tarafındaki aşağı açılan listede **tüm dosyalar (\**.)** filtresinin seçili olduğundan emin olun.
+    > **Resim dosyası seç** iletişim kutusunda herhangi bir görüntü görmüyorsanız, iletişim kutusunun sağ alt tarafındaki aşağı açılan listede **tüm dosyalar (*. \*)** filtresinin seçili olduğundan emin olun.
 
-1. Bir resim yükleyin ve PictureBox 'da görünür. Ardından, kenarlıklarını sürükleyerek formunuzu yeniden boyutlandırmayı deneyin. PictureBox 'ın, kendisini formun içine yerleştirilmiş bir TableLayoutPanel içinde yerleştiğinden, resim alanı kendini form kadar geniş olacak şekilde yeniden boyutlandırır ve formun en üstteki% 90 ' unu dolduracaktır. <xref:System.Windows.Forms.TableLayoutPanel> Ve<xref:System.Windows.Forms.FlowLayoutPanel> kapsayıcılarını şu şekilde kullandınız: Kullanıcı onu yeniden boyutlandırdığında formunuzu doğru boyutlandırırlar.
+1. Bir resim yükleyin ve PictureBox 'da görünür. Ardından, kenarlıklarını sürükleyerek formunuzu yeniden boyutlandırmayı deneyin. PictureBox 'ın, kendisini formun içine yerleştirilmiş bir TableLayoutPanel içinde yerleştiğinden, resim alanı kendini form kadar geniş olacak şekilde yeniden boyutlandırır ve formun en üstteki %90 ' unu dolduracaktır. Bu nedenle <xref:System.Windows.Forms.TableLayoutPanel> ve <xref:System.Windows.Forms.FlowLayoutPanel> kapsayıcıları kullandınız: Kullanıcı yeniden boyutlandırdığında formunuzu doğru boyutlandırırlar.
 
      Şimdi, daha büyük resimler resim görüntüleyicinizin kenarlıklarının ötesine geçer. Sonraki adımda, resimlerin pencereye sığması için kod ekleyeceksiniz.
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için bkz  **[. adım 10: Ek düğmeler ve onay kutusu](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)** için kod yazın.
+- Sonraki öğretici adımına gitmek için bkz. **[adım 10: ek düğmeler ve onay kutusu için kod yazma](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)** .
 
-- Önceki öğretici adımına dönmek için bkz [. 8. Adım: Resim göster düğmesi olay işleyicisi](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)için kod yazın.
+- Önceki öğretici adımına dönmek için bkz. [8. Adım: resim göster düğmesi olay işleyicisi için kod yazma](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Öğretici 2: Süreli matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
-* [Öğretici 3: Eşleşen bir oyun oluşturun](tutorial-3-create-a-matching-game.md)
+* [Öğretici 2: süreli bir matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
+* [Öğretici 3: eşleşen oyun oluşturma](tutorial-3-create-a-matching-game.md)

@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21ce539296f02599a1f8afa0344413fb556eea45
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: a4667fc630d86691d95e9dc9cd205b29f7b0f525
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018772"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349701"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>Visual Studio 'da hata ayıklama görevinizi bulma
 
@@ -65,6 +65,12 @@ Yürütme akışını incelerken veya **çağrı yığını** pencerelerinin iş
 
 Bunu, [ayrıştırma penceresinden bir kesme noktası ayarlayarak](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)yapabilirsiniz.
 
+## <a name="execute-code"></a>Kodu Yürüt
+
+### <a name="learn-the-commands-to-step-through-your-code-while-debugging"></a>Hata ayıklarken kodunuzda adım adım ilerme komutlarını öğrenin
+
+Daha fazla bilgi için bkz. [hata ayıklayıcıyla koda gitme](navigating-through-code-with-the-debugger.md).
+
 ## <a name="inspect-data"></a>Verileri inceleme
 
 ### <a name="check-the-value-of-variables-while-running-your-app"></a>Uygulamanızı çalıştırırken değişkenlerin değerini denetleyin
@@ -79,19 +85,7 @@ Değişkende bir izleme ayarlayın. Daha fazla bilgi için bkz. [değişkenlerde
 
 Hata ayıklama sırasında yerleşik [dize görselleştiricisi](view-strings-visualizer.md) ' i açın.
 
-## <a name="additional-tasks"></a>Ek görevler
-
-### <a name="learn-the-commands-to-step-through-your-code-while-debugging"></a>Hata ayıklarken kodunuzda adım adım ilerme komutlarını öğrenin
-
-Daha fazla bilgi için bkz. [hata ayıklayıcıyla koda gitme](navigating-through-code-with-the-debugger.md).
-
-### <a name="edit-code-during-a-debugging-session"></a>Hata ayıklama oturumu sırasında kodu düzenleme
-
-[Düzenle ve devam et ' i](edit-and-continue.md)kullanın. XAML için [xaml etkin yeniden yükleme](xaml-hot-reload.md)kullanın.
-
-### <a name="send-messages-to-the-output-window-without-modifying-code"></a>Kod değiştirmeden çıkış penceresine ileti gönderme
-
-İzleme noktası ayarlayın. Daha fazla bilgi için bkz. [izleme noktalarını kullanma](using-tracepoints.md).
+## <a name="configure-debugging"></a>Hata ayıklamayı yapılandırma
 
 ### <a name="customize-information-shown-in-the-debugger"></a>Hata ayıklayıcıda gösterilen bilgileri özelleştirme
 
@@ -103,9 +97,19 @@ Yerel C++için [Natvis çerçevesini](create-custom-views-of-native-objects.md)k
 
 Hata ayıklayıcı seçeneklerini ve hata ayıklayıcı proje ayarlarını yapılandırmak için bkz. [hata ayıklayıcı ayarları ve hazırlığı](debugger-settings-and-preparation.md).
 
+## <a name="additional-tasks"></a>Ek görevler
+
+### <a name="edit-code-during-a-debugging-session"></a>Hata ayıklama oturumu sırasında kodu düzenleme
+
+[Düzenle ve devam et ' i](edit-and-continue.md)kullanın. XAML için [xaml etkin yeniden yükleme](xaml-hot-reload.md)kullanın.
+
+### <a name="send-messages-to-the-output-window-without-modifying-code"></a>Kod değiştirmeden çıkış penceresine ileti gönderme
+
+İzleme noktası ayarlayın. Daha fazla bilgi için bkz. [izleme noktalarını kullanma](using-tracepoints.md).
+
 ### <a name="debug-on-remote-machines"></a>Uzak makinelerde hata ayıkla
 
-Bkz: [uzaktan hata ayıklama](remote-debugging.md).
+Bkz. [Uzaktan hata ayıklama](remote-debugging.md).
 
 ### <a name="debug-an-app-that-is-already-running"></a>Zaten çalışan bir uygulamada hata ayıklama
 

@@ -13,20 +13,20 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8edebff5af7affebf166ea07ca7aa813037c13c2
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 7de9fafa32922792e21eb672df0aa9128c25dbe2
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118741"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314123"
 ---
-# <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>5\. Adım: NumericUpDown denetimleri için Giriş olay işleyicileri ekleme
+# <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>5\. Adım: NumericUpDown denetimleri için giriş olay işleyicileri ekleme
 
-Bu öğreticinin beşinci kısmında, test sorunlarına yönelik yanıtları biraz <xref:System.Windows.Forms.Control.Enter> daha kolay bir şekilde girmeye yönelik olay işleyicileri ekleyeceksiniz. Bu kod, test taki seçtiği ve farklı bir değer <xref:System.Windows.Forms.NumericUpDown> girmeye başladığı anda her denetimdeki geçerli değeri seçer ve temizler.
+Bu öğreticinin beşinci kısmında, test sorunlarının yanıtlarını biraz daha kolay bir şekilde girmek için <xref:System.Windows.Forms.Control.Enter> olay işleyicileri ekleyeceksiniz. Bu kod, test takı seçtiği ve farklı bir değer girmeye başladığı anda her bir <xref:System.Windows.Forms.NumericUpDown> denetimindeki geçerli değeri seçer ve temizler.
 
 > [!NOTE]
 > Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır.
-> - Öğreticiye genel bakış için bkz [. öğretici 2: Süreli bir matematik testi](../ide/tutorial-2-create-a-timed-math-quiz.md)oluşturun.
+> - Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 > - Kodun tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-verify-the-default-behavior"></a>Varsayılan davranışı doğrulamak için
@@ -51,7 +51,7 @@ Bu öğreticinin beşinci kısmında, test sorunlarına yönelik yanıtları bir
 
    **Özellikler** Iletişim kutusundaki **Olaylar** sekmesi, formda seçtiğiniz öğe için yanıt verebildiği tüm olayları (tanıtıcı) görüntüler. NumericUpDown denetimini seçtiğinizden, listelenen tüm olaylar buna aittir.
 
-2. **ENTER** olayını seçin, yazın `answer_Enter` **ve ENTER tuşuna** basın.
+2. **ENTER** olayını seçin, `answer_Enter` yazın ve **ENTER** tuşuna basın.
 
    ![Olay işleyicisi yöntem adını girin](media/enter-event.png)
 
@@ -62,16 +62,15 @@ Bu öğreticinin beşinci kısmında, test sorunlarına yönelik yanıtları bir
      [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]
 
-     > [!IMPORTANT]
-     > C# Kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dili denetimi](../ide/media/docs-programming-language-control.png)
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
-     Bu kod karmaşık görünebilir, ancak adım adım ' a baktığınızda bunu anlayabilirsiniz. İlk olarak, yönteminin en üstüne bakın: `object sender` içinde C# veya `sender As System.Object` Visual Basic. Bu parametre, gönderen olarak bilinen, olayı oluşturan nesnesine başvurur. Bu durumda, Gönderen nesnesi NumericUpDown denetimidir. Bu nedenle, yönteminin ilk satırında, gönderenin yalnızca herhangi bir genel nesne değil, özellikle bir NumericUpDown denetimi belirtmektir. (Her NumericUpDown denetimi bir nesnedir, ancak her nesne bir NumericUpDown denetimidir.) Yalnızca Sum NumericUpDown denetimini değil, formdaki NumericUpDown denetimleri için kullanılacak olan NumericUpDown denetimi bu yöntemde **doğrulamaktadır** olarak adlandırılır. Bu yöntemde doğrulamaktadır değişkenini bildirdiğiniz için, kapsamı yalnızca bu yöntem için geçerlidir. Diğer bir deyişle, değişken yalnızca bu yöntem içinde kullanılabilir.
+     Bu kod karmaşık görünebilir, ancak adım adım ' a baktığınızda bunu anlayabilirsiniz. İlk olarak, yöntemin en üstüne bakın: `object sender` C# veya `sender As System.Object` Visual Basic. Bu parametre, gönderen olarak bilinen, olayı oluşturan nesnesine başvurur. Bu durumda, Gönderen nesnesi NumericUpDown denetimidir. Bu nedenle, yönteminin ilk satırında, gönderenin yalnızca herhangi bir genel nesne değil, özellikle bir NumericUpDown denetimi belirtmektir. (Her NumericUpDown denetimi bir nesnedir, ancak her nesne bir NumericUpDown denetimidir.) Yalnızca Sum NumericUpDown denetimini değil, formdaki NumericUpDown denetimleri için kullanılacak olan NumericUpDown denetimi bu yöntemde **doğrulamaktadır** olarak adlandırılır. Bu yöntemde doğrulamaktadır değişkenini bildirdiğiniz için, kapsamı yalnızca bu yöntem için geçerlidir. Diğer bir deyişle, değişken yalnızca bu yöntem içinde kullanılabilir.
 
-     Sonraki satır, doğrulamaktadır başarıyla bir nesnesinden bir NumericUpDown denetimine dönüştürülüp dönüştürülmeyeceğini doğrular. Dönüştürme başarısız olduysa, değişkenin değeri `null` (C#) veya `Nothing` (Visual Basic) olur. Üçüncü satır, NumericUpDown denetiminde görünen yanıtın uzunluğunu alır ve dördüncü satır denetimdeki geçerli değeri bu uzunluğa göre seçer. Şimdi, test takici denetimi seçtiğinde, Visual Studio bu olayı harekete geçirilir ve bu da geçerli yanıtın seçilmesine neden olur. Test takici, farklı bir yanıt girmeye başladıktan sonra, önceki yanıt temizlenir ve yeni Yanıtla değiştirilmiştir.
+     Sonraki satır, doğrulamaktadır başarıyla bir nesnesinden bir NumericUpDown denetimine dönüştürülüp dönüştürülmeyeceğini doğrular. Dönüştürme başarısız olduysa, değişken `null` (C#) veya `Nothing` (Visual Basic) değerine sahip olur. Üçüncü satır, NumericUpDown denetiminde görünen yanıtın uzunluğunu alır ve dördüncü satır denetimdeki geçerli değeri bu uzunluğa göre seçer. Şimdi, test takici denetimi seçtiğinde, Visual Studio bu olayı harekete geçirilir ve bu da geçerli yanıtın seçilmesine neden olur. Test takici, farklı bir yanıt girmeye başladıktan sonra, önceki yanıt temizlenir ve yeni Yanıtla değiştirilmiştir.
 
 4. **Windows Form Tasarımcısı**, fark **NumericUpDown** denetimini seçin.
 
-5. **Özellikler** iletişim kutusunun **Olaylar** sayfasında, **ENTER** olayına ilerleyin, satırın sonundaki açılan oku seçin ve ardından yeni eklediğiniz `answer_Enter` olay işleyicisini seçin.
+5. **Özellikler** Iletişim kutusunun **Olaylar** sayfasında, **ENTER** olayına ilerleyin, satırın sonundaki açılan oku seçin ve ardından yeni eklediğiniz `answer_Enter` olay işleyicisini seçin.
 
 6. Ürün ve bölüm NumericUpDown denetimleri için önceki adımı yineleyin.
 
@@ -81,6 +80,6 @@ Bu öğreticinin beşinci kısmında, test sorunlarına yönelik yanıtları bir
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için bkz  **[. 6. Adım: Çıkarma sorunu](../ide/step-6-add-a-subtraction-problem.md)** ekleyin.
+- Sonraki öğretici adımına gitmek için bkz. 6. **[Adım: çıkarma sorunu ekleme](../ide/step-6-add-a-subtraction-problem.md)** .
 
-- Önceki öğretici adımına dönmek için bkz [. 4. Adım: CheckTheAnswer () yöntemini](../ide/step-4-add-the-checktheanswer-parens-method.md)ekleyin.
+- Önceki öğretici adımına dönmek için bkz. 4. [Adım: CheckTheAnswer () metodunu ekleme](../ide/step-4-add-the-checktheanswer-parens-method.md).
