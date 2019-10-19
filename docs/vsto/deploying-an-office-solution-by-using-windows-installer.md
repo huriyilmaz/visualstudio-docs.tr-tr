@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 20df85952b4e76e60d6e93067c1f1e7838b692cd
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69551721"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Windows Installer kullanarak bir Office çözümünü dağıtma
 
-Kullanarak [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]Office çözümünüz için Windows Installer oluşturma hakkında bilgi edinin.
+@No__t_0 kullanarak Office çözümünüz için Windows Installer oluşturma hakkında bilgi edinin.
 
 Windows Installer oluşturmak için Visual Studio 'yu kullanarak, son kullanıcının bilgisayarında yönetici erişimi gerektiren bir Office çözümünü dağıtabilirsiniz. Örneğin, bir bilgisayarın tüm kullanıcıları için bir çözümü yalnızca bir kez yüklemek üzere bu tür bir dosyayı kullanabilirsiniz. ClickOnce kullanarak bir Office çözümü de dağıtabilirsiniz, ancak bu çözümün bilgisayarın her kullanıcısı için ayrı olarak yüklenmesi gerekir.
 
@@ -59,7 +59,7 @@ Windows Installer oluşturmak için Visual Studio 'yu kullanarak, son kullanıc�
 
 ClickOnce kullanarak bir Office çözümünü dağıtma hakkında daha fazla bilgi için bkz. [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md).
 
-Kullanarak [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]bir Windows Installer dosyası oluşturma hakkında daha fazla bilgi için, bkz. [Windows Installer kullanarak Office için Visual Studio 2010 araçlarını dağıtma](http://go.microsoft.com/fwlink/?LinkId=201807).
+@No__t_0 kullanarak Windows Installer dosyası oluşturma hakkında daha fazla bilgi için, bkz. [Windows Installer kullanarak Office Için Visual Studio 2010 araçları 'Nı dağıtma](http://go.microsoft.com/fwlink/?LinkId=201807).
 
 ## <a name="Download"></a>Örnekleri indir
 Bu konu, aşağıdaki indirilebilir örneklere başvurur.
@@ -85,7 +85,7 @@ Visual Studio 'Yu yükledikten sonra ücretsiz olan InstallShield Limited Editio
 
 ### <a name="to-get-installshield-limited-edition"></a>InstallShield Limited Edition 'ı almak için
 
-1. Menü çubuğunda, **dosya** > **yeni** > **proje**.
+1. Menü çubuğunda **dosya**  > **Yeni**  > **Proje**' yi seçin.
 
    **Yeni proje** iletişim kutusu açılır.
 
@@ -103,11 +103,11 @@ Visual Studio 'Yu yükledikten sonra ücretsiz olan InstallShield Limited Editio
 
 ## <a name="Create"></a>Kurulum projesi oluşturma
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], dağıtmak istediğiniz Office projesini açın.
+1. @No__t_0, dağıtmak istediğiniz Office projesini açın.
 
    Bu konuyla ilişkili VSTO eklenti örnekleri, **ExcelAddIn**adlı bir proje içerir. Belge düzeyi özelleştirme örnekleri, **ExcelWorkbook**adlı bir proje içerir. Bu konu, bu iki adlardan birini kullanarak çözümünüzdeki Office projesine başvuracaktır.
 
-2. Menü çubuğunda **Dosya** > **Ekle** > **Yeni proje**' yi seçin.
+2. Menü çubuğunda **dosya**  >   > **Yeni proje** **Ekle** ' yi seçin.
 
    **Yeni Proje Ekle** iletişim kutusu açılır.
 
@@ -127,9 +127,9 @@ Office projenizin çıkışını dahil etmek için **OfficeAddInSetup** projesin
 
 1. **Çözüm Gezgini**, **OfficeAddInSetup** proje düğümünü genişletin ve ardından aşağıdaki çizimin gösterdiği **Proje Yardımcısı** dosyasını seçin.
 
-   ![Çözüm Gezgini Içindeki Proje Yardımcısı dosyası](../vsto/media/installshield-projectassistant.png "Çözüm Gezgini Içindeki Proje Yardımcısı dosyası")
+   ![Çözüm Gezgini içindeki proje Yardımcısı dosyası](../vsto/media/installshield-projectassistant.png "Çözüm Gezgini içindeki proje Yardımcısı dosyası")
 
-2. Menü çubuğunda**Açık** **görüntüle** > ' yi seçin.
+2. Menü çubuğunda **görüntüle**  > **Aç**' ı seçin.
 
 3. **Proje Yardımcısı** sayfasının en altında, aşağıdaki çizimin gösterdiği **uygulama dosyaları** düğmesini seçin.
 
@@ -165,15 +165,15 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 1. **Çözüm Gezgini**, **OfficeAddInSetup** proje düğümünü genişletin, **uygulama verilerini belirt** düğümünü genişletin ve ardından aşağıdaki çizimin gösterdiği **yeniden dağıtılabilir** dosyasını seçin.
 
-   ![Çözüm Gezgini Içindeki yeniden dağıtılabilir dosyası](../vsto/media/installshield-redistributablesfile.png "Çözüm Gezgini Içindeki yeniden dağıtılabilir dosyası")
+   ![Çözüm Gezgini içindeki yeniden dağıtılabilir dosyası](../vsto/media/installshield-redistributablesfile.png "Çözüm Gezgini içindeki yeniden dağıtılabilir dosyası")
 
-2. Menü çubuğunda**Açık** **görüntüle** > ' yi seçin.
+2. Menü çubuğunda **görüntüle**  > **Aç**' ı seçin.
 
    **Yeniden dağıtılabilir** sayfası açılır.
 
 3. Yeniden dağıtılabilir bileşenler listesinde, çözümünüzün hedeflediği .NET Framework sürümü için uygun onay kutusunu seçin.
 
-   Örneğin, çözümünüz [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]öğesini hedefliyorsa, **Microsoft .NET Framework 4,5 Full** onay kutusunu seçin. Bir önkoşul olarak bileşen ekleyebilmeniz için önce InstallShield 'un gerektirdiği yeniden dağıtılabilir bileşeni yüklemek isteyip istemediğinizi soran bir iletişim kutusu görünür. Bu iletişim kutusu görüntülenmezse, bileşen bilgisayarınızda zaten bulunur.
+   Örneğin, çözümünüz [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] hedefliyorsa, **Microsoft .NET Framework 4,5 Full** onay kutusunu seçin. Bir önkoşul olarak bileşen ekleyebilmeniz için önce InstallShield 'un gerektirdiği yeniden dağıtılabilir bileşeni yüklemek isteyip istemediğinizi soran bir iletişim kutusu görünür. Bu iletişim kutusu görüntülenmezse, bileşen bilgisayarınızda zaten bulunur.
 
 4. Bu iletişim kutusu görüntülenirse **Hayır** düğmesini seçin.
 
@@ -209,14 +209,14 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 4. Not defteri 'nde, GUID **'nizin** yerine bu metni yazın.
 
-   Dosyanızın **Özellikler&gt;öğesi aşağıdakilere benzer. &lt;**
+   Dosyanızın **&lt;properties &gt;** öğesi aşağıdakilere benzer.
 
    ```xml
    <properties Id="{87989B73-21DC-4403-8FD1-0C68A41A6D8C}" Description="This prerequisite installs the most recent version of the Microsoft Visual Studio 2010 Tools for Office Runtime." >
    </properties>
    ```
 
-5. Not defteri 'ndeki menü çubuğunda **Dosya** > **Kaydet**' i seçin.
+5. Not defteri 'ndeki menü çubuğunda **dosya**  > **Kaydet**' i seçin.
 
 6. **Farklı kaydet** Iletişim kutusunda **Masaüstü** klasörünüze gidin.
 
@@ -231,9 +231,9 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 10. **Masaüstü** klasörünüzden, *Office Runtime. prq dosyasını Visual Studio 2010 araçları* 'nı bilgisayarınızdaki aşağıdaki dizinlerden birine kopyalayın.
 
-   32 bit işletim sistemleri için: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites\\*
+   32 bit işletim sistemleri için: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\*
 
-   64 bit işletim sistemleri için: *% ProgramFiles (x86)% \ 2013LE \ Setupönkoşullarını\\*
+   64 bit işletim sistemleri için: *% ProgramFiles (x86)% \ 2013LE \ Setupönkoşullarını \\*
 
 11. InstallShield projesinin **yeniden dağıtılabilir** sayfasında, aşağıdaki çizimde gösterildiği gibi yeniden dağıtılabilir bileşenlerin listesini yenilemek için **Yenile** düğmesini seçin.
 
@@ -249,7 +249,7 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 1. **Çözüm Gezgini**, **OfficeAddInSetup** düğümünü genişletin, **kurulumunuzu düzenleyin** düğümünü genişletin ve ardından **genel bilgi** dosyasını seçin.
 
-2. Menü çubuğunda**Açık** **görüntüle** > ' yi seçin.
+2. Menü çubuğunda **görüntüle**  > **Aç**' ı seçin.
 
 3. Özellikler listesinde, **InstallDir** özelliğinin yanındaki git **düğmesini seçin** .
 
@@ -273,7 +273,7 @@ Kullanıcı başına Yüklemeler Office veya Windows sürümünden bağımsız o
 
 1. **Çözüm Gezgini**, **OfficeAddInSetup** proje düğümünü genişletin, **kurulumunuzu düzenleyin** düğümünü genişletin ve ardından **genel bilgi** dosyasını seçin.
 
-2. Menü çubuğunda**Açık** **görüntüle** > ' yi seçin.
+2. Menü çubuğunda **görüntüle**  > **Aç**' ı seçin.
 
    Kurulum projesinin özellikleri görüntülenir.
 
@@ -287,7 +287,7 @@ Kullanıcı başına Yüklemeler Office veya Windows sürümünden bağımsız o
 
 1. **Çözüm Gezgini**, **Proje Yardımcısı** düğümünü seçin.
 
-   Menü çubuğunda**Açık** **görüntüle** > ' yi seçin.
+   Menü çubuğunda **görüntüle**  > **Aç**' ı seçin.
 
 2. **Proje Yardımcısı** sayfasının en altında, aşağıdaki çizimin gösterdiği **uygulama kayıt defteri** düğmesini seçin.
 
@@ -333,11 +333,11 @@ Kullanıcı başına Yüklemeler Office veya Windows sürümünden bağımsız o
 
 7. Aşağıdaki değerleri oluşturmak için bu işlemi tekrarlayın.
 
-|Değer türü<br /><br />|Ad<br /><br />|
+|Değer türü<br /><br />|Name<br /><br />|
 |--------------|--------|
 |Dize değeri<br /><br />|**FriendlyName**<br /><br />|
 |DWORD değeri<br /><br />|**LoadBehavior**<br /><br />|
-|Dize değeri<br /><br />|**Bildirimi**<br /><br />|
+|Dize değeri<br /><br />|**Bildirim**<br /><br />|
 
 8. **Açıklama** değeri için kısayol menüsünü açın ve ardından **Değiştir**' i seçin.
 
@@ -384,7 +384,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 ### <a name="to-create-a-program-that-modifies-document-properties"></a>Belge özelliklerini değiştiren bir program oluşturmak için
 
-1. Menü çubuğunda **Dosya** > **Ekle** > **Yeni proje**' yi seçin.
+1. Menü çubuğunda **dosya**  >   > **Yeni proje** **Ekle** ' yi seçin.
 
    **Yeni Proje Ekle** iletişim kutusu görüntülenir.
 
@@ -404,7 +404,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 7. **Çözüm Gezgini**' de, **program.cs** dosyasını (uygulamalar için C# ) veya **Module1. vb** dosyasını (Visual Basic uygulamalar için) seçin.
 
-8. Menü çubuğunda**Açık** **görüntüle** > ' yi seçin.
+8. Menü çubuğunda **görüntüle**  > **Aç**' ı seçin.
 
 9. Tüm dosyanın içeriğini aşağıdaki kodla değiştirin.
 
@@ -417,9 +417,9 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 1. **Çözüm Gezgini**, **OfficeAddInSetup** proje düğümünü genişletin ve ardından aşağıdaki çizimin gösterdiği **Proje Yardımcısı** dosyasını seçin.
 
-   ![Çözüm Gezgini Içindeki Proje Yardımcısı dosyası](../vsto/media/installshield-projectassistant.png "Çözüm Gezgini Içindeki Proje Yardımcısı dosyası")
+   ![Çözüm Gezgini içindeki proje Yardımcısı dosyası](../vsto/media/installshield-projectassistant.png "Çözüm Gezgini içindeki proje Yardımcısı dosyası")
 
-2. Menü çubuğunda**Açık** **görüntüle** > ' yi seçin.
+2. Menü çubuğunda **görüntüle**  > **Aç**' ı seçin.
 
 3. **Proje Yardımcısı** sayfasının en altında, aşağıdaki çizimin gösterdiği **uygulama dosyaları** düğmesini seçin.
 
@@ -433,7 +433,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 6. **Çözüm Gezgini**, **OfficeAddInSetup** düğümü altında, **kurulum gereksinimlerini ve eylemleri tanımla** düğümünü genişletin ve ardından **özel eylemler** klasörünü seçin.
 
-7. Menü çubuğunda**Açık** **görüntüle** > ' yi seçin.
+7. Menü çubuğunda **görüntüle**  > **Aç**' ı seçin.
 
    Olay listesi, ekranın yanındaki bir bölmede görüntülenir.
 
@@ -463,7 +463,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 13. Çözümünüzün proje dosyasını Not defteri 'nde açın. Visual Basic projeleri için dosyanın adı *ExcelWorkbook. vbproj*olur. Projeler C# için dosyanın adı *ExcelWorkbook. csproj*olur.
 
-14. Proje dosyasında, **&lt;SolutionId&gt;** öğesini arayın, değerini panoya kopyalayın ve Not defteri 'ni kapatın.
+14. Proje dosyasında **&lt;SolutionID &gt;** öğesini arayın, değerini panoya kopyalayın ve Not defteri 'ni kapatın.
 
     Bu değeri konsol uygulamasına parametre olarak geçirirsiniz.
 
@@ -482,7 +482,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 1. **Çözüm Gezgini**, **yayın için hazırla** düğümünü genişletin ve ardından **yayınlar** dosyasını seçin.
 
-2. Menü çubuğunda**Açık** **görüntüle** > ' yi seçin.
+2. Menü çubuğunda **görüntüle**  > **Aç**' ı seçin.
 
    **Yapı** Gezgini, oluşturmak istediğiniz yayın türünü seçebilmeniz için yan bölmede açılır.
 
@@ -492,15 +492,15 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 5. **Setup. exe** Özellik sayfasında, **InstallShield önkoşulları konum** listesinden **Web 'den indir**' i seçin.
 
-6. Menü çubuğunda**Configuration Manager** **Oluştur** > ' u seçin.
+6. Menü çubuğunda  > **Configuration Manager** **Oluştur** ' u seçin.
 
 7. **Etkin çözüm yapılandırması** listesinde **SingleImage**öğesini seçin.
 
 8. **Proje bağlamları** tablosunda, **OfficeAddInSetup** projesinin **yapılandırma** sütununda **SingleImage**' i seçin ve sonra **Kapat** düğmesini seçin.
 
-9. Menü çubuğunda **Build** > **Build OfficeAddInSetup**öğesini seçin.
+9. Menü çubuğunda **build**  > **Build OfficeAddInSetup**öğesini seçin.
 
-   Oluşturma işlemi tamamlandıktan sonra, **OfficeAddInSetup** projesinin *Setup. exe* dosyasını aşağıdaki konumda bulabilirsiniz: <em>Officeaddınsetupprojectroot</em> **\Officeaddınsetup\express\singleımage\diskımages\disk1\\**
+   Oluşturma işlemi tamamlandıktan sonra, **OfficeAddInSetup** projesinin *Setup. exe* dosyasını şu konumda bulabilirsiniz: <em>Officeaddınsetupprojectroot</em> **\Officeaddınsetup\express\singleımage\diskımages\disk1 \\**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

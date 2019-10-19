@@ -12,12 +12,12 @@ manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 40be42871bac0a138d15b11b86f34419f2a6c67d
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 33ac236c9f9dd91bc0eef34e7ff9f3aa658cb4be
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535296"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589131"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>XAML Çalışırken Yeniden Yükleme ile ilgili sorunları giderme
 
@@ -48,7 +48,7 @@ Bu seçenekler işaretliyse, canlı görsel ağaç 'a gidin (**hata ayıkla** > 
 XAML etkin yeniden yükleme, uygulamanın başladığı zaman `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ortam değişkeninin 1 olarak ayarlanmasını gerektirir. Visual Studio bunu **hata ayıklama** > **hata ayıklamayı Başlat** (veya **F5**) komutunun bir parçası olarak otomatik olarak ayarlar. **Hata ayıkla** > **Işleme Ekle** komutuyla xaml etkin yeniden yükleme kullanmak istiyorsanız, ortam değişkenini kendiniz ayarlayın.
 
 > [!NOTE]
-> Bir ortam değişkeni ayarlamak için, "ortam değişkeni" araması yapın ve **sistem ortam değişkenlerini Düzenle**' yi seçin. Açılan iletişim kutusunda, **ortam değişkenleri**' ni seçin, sonra bir kullanıcı değişkeni olarak ekleyin ve değeri `1` olarak ayarlayın. Temizlemek için, hata ayıklamayı bitirdiğinizde değişkeni kaldırın.
+> Bir ortam değişkeni ayarlamak için, Başlat düğmesini kullanarak "ortam değişkeni" araması yapın ve **sistem ortam değişkenlerini Düzenle**' yi seçin. Açılan iletişim kutusunda, **ortam değişkenleri**' ni seçin, sonra bir kullanıcı değişkeni olarak ekleyin ve değeri `1` olarak ayarlayın. Temizlemek için, hata ayıklamayı bitirdiğinizde değişkeni kaldırın.
 
 ## <a name="verify-that-your-msbuild-properties-are-correct"></a>MSBuild özelliklerinin doğru olduğundan emin olun
 

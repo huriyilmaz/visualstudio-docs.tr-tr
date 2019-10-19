@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 'da platformlar arası mobil geliştirme | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 10/17/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 ms.assetid: 8202717a-e990-45cf-b092-438651ccb38a
@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: eea38f8109069f6d6526b2ccb920565f09b98043
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 5e82828296234b13e36b7d3eabf071071ebb708d
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535667"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589011"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 'da platformlar arası mobil geliştirme
 
@@ -42,9 +42,9 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
 ### <a name="AndroidHTML"></a>Tek bir kod tabanında Android, iOS ve Windows 'u hedefleyin
 
- Veya C# F# kullanarak Android, iOS ve Windows için yerel uygulamalar oluşturabilirsiniz (Şu anda Visual Basic desteklenmez).  Başlamak için Visual Studio 2017 ' i yükledikten sonra yükleyicideki **.net Ile mobil geliştirme** seçeneğini belirleyin.
+ Veya C# F# kullanarak Android, iOS ve Windows için yerel uygulamalar oluşturabilirsiniz (Şu anda Visual Basic desteklenmez).  Başlamak için Visual Studio 'yu yükledikten sonra yükleyicideki **.net Ile mobil geliştirme** seçeneğini belirleyin.
 
- Visual Studio 2017 zaten yüklüyse, **Visual Studio yükleyicisi** yeniden çalıştırın ve Xamarin için .net seçeneğiyle aynı **Mobil geliştirmeyi** (yukarıdaki gibi) seçin.
+ Visual Studio zaten yüklüyse, **Visual Studio yükleyicisi** yeniden çalıştırın ve Xamarin için .net seçeneğiyle aynı **Mobil geliştirmeyi** (yukarıdaki gibi) seçin.
 
  İşiniz bittiğinde, proje şablonları **Yeni proje** iletişim kutusunda görünür. Xamarin şablonlarını bulmanın en kolay yolu yalnızca "Xamarin" üzerinde arama yapmak için kullanılır.
 
@@ -116,10 +116,11 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
 <a name="CPP"></a>
 
-## <a name="build-an-app-for-android-and-windows-c"></a>Android ve Windows için uygulama oluşturma (C++)
- ![Android,&#43; &#43; iOS ve Windows için derlemek için C kullanın](../cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
+## <a name="build-an-app-for-android-ios-and-windows-c"></a>Android, iOS ve Windows (C++) için uygulama oluşturma
 
- İlk olarak, iş yüküyle Visual Studio 2017 ve **Mobil C++ geliştirme** 'yı yüklemeniz gerekir. Daha sonra, Android için yerel bir etkinlik uygulaması veya Windows 'u hedefleyen bir uygulama oluşturabilirsiniz. C++iOS 'ı hedefleyen şablonlar henüz kullanılamıyor. İsterseniz Android ve Windows 'u aynı çözümde hedefleyebilir ve sonra platformlar arası statik veya dinamik Paylaşılan kitaplık kullanarak kod paylaşabilirsiniz.
+![Android,&#43; &#43; iOS ve Windows için derlemek için C kullanın](../cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
+
+ İlk olarak, iş yüküyle Visual Studio ve **Mobil C++ geliştirme** 'yı yüklemeniz gerekir. Daha sonra, Android için yerel bir etkinlik uygulaması veya Windows ya da iOS 'u hedefleyen bir uygulama oluşturabilirsiniz. İsterseniz Android, iOS ve Windows 'u aynı çözümde hedefleyebilir ve sonra platformlar arası statik veya dinamik Paylaşılan kitaplık kullanarak kod paylaşabilirsiniz.
 
  Bir oyun gibi gelişmiş grafik düzenlemesi gerektiren Android için bir uygulama derlemeniz gerekiyorsa, bunu yapmak için kullanabilirsiniz C++ . **Yerel etkinlik uygulaması (Android)** projesi ile başlayın. Bu proje, Clang toolzincirine yönelik tam desteğe sahiptir.
 
@@ -129,23 +130,22 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
  Ayrıca, ve bir Evrensel Windows Platformu (UWP) uygulama projesi şablonu kullanarak C++ Windows 10 cihazlarının tam kapsamını hedefleyen bir uygulama da oluşturabilirsiniz. Bu konuda daha önce görünen [hedef Windows 10 cihazları](#WindowsHTML) bölümünde bunun hakkında daha fazla bilgi edinin.
 
- Statik veya dinamik C++ bir paylaşılan kitaplık oluşturarak Android ve Windows arasında kod paylaşabilirsiniz.
+ Statik veya dinamik C++ bir paylaşılan kitaplık oluşturarak Android, IOS ve Windows arasında kod paylaşabilirsiniz.
 
  ![Statik ve dinamik paylaşılan kitaplıklar](../cross-platform/media/cross_plat_cpp_libraries.png "Statik ve dinamik paylaşılan kitaplıklar")
 
- Söz konusu kitaplığı, bu bölümde daha önce açıklananlar gibi bir Windows veya Android projesinde kullanabilirsiniz. Bunu, Xamarin, Java veya yönetilmeyen bir DLL içindeki işlevleri çağırmanızı sağlayan herhangi bir dili kullanarak oluşturduğunuz bir uygulamada da kullanabilirsiniz.
+ Söz konusu kitaplığı, bu bölümde daha önce açıklananlar gibi bir Windows, iOS veya Android projesinde kullanabilirsiniz. Bunu, Xamarin, Java veya yönetilmeyen bir DLL içindeki işlevleri çağırmanızı sağlayan herhangi bir dili kullanarak oluşturduğunuz bir uygulamada da kullanabilirsiniz.
 
  Bu kitaplıklara kod yazarken, Android ve Windows platformlarının yerel API 'Lerini araştırmak için IntelliSense 'i kullanabilirsiniz. Bu kitaplık projeleri Visual Studio hata ayıklayıcıyla tamamen tümleşiktir; böylece kesme noktaları ayarlayabilir, kod içinde adım adım ilerleyerek ve hata ayıklayıcının tüm gelişmiş özelliklerini kullanarak sorunları bulabilir ve giderebilmenizi sağlayabilirsiniz.
 
 |**Daha fazla bilgi edinin**|
 |--------------------|
-|[Visual Studio 'Yu indirin.](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com)|
-|[Platformlar arası mobil C++ geliştirme araçları için görseli yükler.](https://msdn.microsoft.com/library/dn707591.aspx) (MSDN Kitaplığı)|
-|[Birden çok platformu hedeflemek C++ için kullanımı hakkında daha fazla bilgi edinin.](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
-|[İhtiyaç duyduğunuz şeyi yükleyip Android için yerel bir etkinlik uygulaması oluşturun](https://msdn.microsoft.com/library/dn707595.aspx) (MSDN Kitaplığı)|
+|[Visual Studio 'Yu indirin](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com)|
+|[İle platformlar arası mobil geliştirmeC++](install-visual-cpp-for-cross-platform-mobile-development.md)|
+|[Birden çok platformu hedeflemek C++ için kullanma hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
+|[İhtiyaç duyduğunuz şeyi yükler ve ardından Android için yerel bir etkinlik uygulaması oluşturun](create-an-android-native-activity-app.md)|
 |[Android ve Windows uygulamalarıyla C++ kod paylaşma hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
-|[Platformlar arası mobil geliştirme örnekleri C++ ](https://msdn.microsoft.com/library/dn707596.aspx) (MSDN Kitaplığı)|
-|[İçin C++ ek platformlar arası mobil geliştirme örnekleri](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=android&f%5B1%5D.Type=ProgrammingLanguage&f%5B1%5D.Value=C%2B%2B&f%5B1%5D.Text=C%2B%2B) (Code. MSDN)|
+|[Platformlar arası mobil geliştirme örnekleriC++](cross-platform-mobile-development-examples.md)|
 
 <a name="Unity"></a>
 

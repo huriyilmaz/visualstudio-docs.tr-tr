@@ -1,7 +1,7 @@
 ---
-title: Visual C++ platformlar arası Mobil Geliştirme için yükleme | Microsoft Docs
+title: Platformlar arası mobil geliştirme 'yi C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 05/21/2018
+ms.date: 10/17/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,122 +12,109 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 261d26307a212fa44506b21caadf4b7351453e06
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 25bd88886b6bed447ec7d091543fccdb478db9c5
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66261089"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588879"
 ---
-# <a name="install-cross-platform-mobile-development-with-c"></a>C++ ile platformlar arası mobil geliştirme yükleyin
+# <a name="install-cross-platform-mobile-development-with-c"></a>İle platformlar arası mobil geliştirmeC++
 
-Android ve iOS için Windows Masaüstü uygulamaları, Evrensel Windows Platformu (UWP) uygulamaları, Linux uygulamaları ve artık, uygulamaları oluşturmak için Visual Studio'da C++ kullanabilirsiniz. **C++ ile Mobil Geliştirme** bileşenleri Visual Studio'da platformlar arası iOS, Android ve UWP için Visual Studio içeren yüklenebilir bir dizi iş yüküdür şablonları. Platformlar arası Araçlar ve SDK'lar bulun, indirmek ve bunları kendiniz yapılandırmak zorunda kalmadan hızla kullanmaya başlamak için ihtiyacınız yükler. Bu araçlar Visual Studio'da kullanmak kolayca oluşturma, düzenleme, hata ayıklama ve test, platformlar arası projeleri. Bu konuda, Araçlar ve üçüncü taraf yazılım kullanarak Visual Studio c++ platformlar arası uygulamalar geliştirmek için gereken yüklemeyi açıklar. Genel bakış için bkz. [Visual C++ platformlar arası mobil](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)
+Visual Studio 'da C++ , Windows Masaüstü uygulamaları, evrensel WINDOWS platformu (UWP) uygulamaları, Linux uygulamaları ve artık Android ve iOS uygulamaları oluşturmak için kullanabilirsiniz. İş yüküyle **Mobil C++ geliştirme** , Visual Studio 'da platformlar arası iOS, Android ve UWP Visual Studio şablonlarını içeren, yüklenebilir bir bileşen kümesidir. Hızlı bir şekilde kullanmaya başlamak için ihtiyacınız olan platformlar arası araçları ve SDK 'Ları yükler. Bu araçları, Visual Studio 'da, platformlar arası projelerinizi kolayca oluşturmak, düzenlemek, hatalarını ayıklamak ve test etmek için kullanabilirsiniz. Bu makalede, Visual Studio 'Yu C++ kullanarak platformlar arası uygulamalar geliştirmek için gereken araçların ve üçüncü taraf yazılımların nasıl yükleneceği açıklanır. Genel bakış için bkz. [Visual C++ platformlar arası mobil](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)
 
 ## <a name="requirements"></a>Gereksinimler
 
-- Yükleme gereksinimleri için bkz [Visual Studio ürün ailesi sistem gereksinimleri](/visualstudio/productinfo/vs2017-system-requirements-vs).
+::: moniker range="vs-2017"
+
+- Yükleme gereksinimleri için bkz. [Visual Studio ürün ailesi sistem gereksinimleri](/visualstudio/productinfo/vs2017-system-requirements-vs).
 
    > [!IMPORTANT]
-   > Windows 7 veya Windows Server 2008 R2 kullanıyorsanız, Windows Masaüstü uygulamaları, Android yerel etkinlik uygulamaları ve kitaplıkları ve uygulamaları için kodu ve kod kitaplıkları için iOS ve Windows Phone değil veya UWP uygulamaları geliştirebilirsiniz.
+   > Windows 7 veya Windows Server 2008 R2 kullanıyorsanız, Windows Masaüstü uygulamaları, Android yerel etkinlik uygulamaları ve kitaplıkları ve iOS için uygulamalar ve kod kitaplıkları için kod geliştirebilirsiniz, ancak Windows Mağazası veya UWP uygulamaları kullanamazsınız.
 
-Belirli cihaz platformları için uygulamalar oluşturmak için bazı ek gereksinimleri vardır:
+::: moniker-end
+::: moniker range=">=vs-2019"
 
-- Windows Phone öykünücüleri ve Android için Microsoft Visual Studio öykünücüsü, Hyper-V çalıştıran bir bilgisayar gerektirir. Windows Hyper-V özelliği yükleyip öykünücü çalıştırması önce etkinleştirilmesi gerekir. Öykünücü'nın daha fazla bilgi için bkz. [sistem gereksinimleri](system-requirements-for-the-visual-studio-emulator-for-android.md).
+- Yükleme gereksinimleri için bkz. [Visual Studio ürün ailesi sistem gereksinimleri](/visualstudio/releases/2019/system-requirements).
 
-- X86 Android SDK'sı ile gelen Android öykünücüleri Intel HAXM sürücüsü çalıştıran bilgisayarlarda en iyi şekilde çalışır. Bu sürücü bir Intel x64 işlemci ile birlikte VT-x ve devre dışı Bit yürütme desteği gerektirir. Daha fazla bilgi için [Intel® donanım hızlandırılmış yürütme Yöneticisi (Intel® HAXM)](https://go.microsoft.com/fwlink/p/?LinkId=536385).
+   > [!IMPORTANT]
+   > Windows 7 veya Windows Server 2008 R2 kullanıyorsanız, Windows Masaüstü uygulamaları, Android yerel etkinlik uygulamaları ve kitaplıkları ve iOS için uygulamalar ve kod kitaplıkları için kod geliştirebilirsiniz, ancak Windows Phone veya UWP uygulamaları kullanamazsınız.
 
-- İOS için kod oluşturma gerektiren bir Apple kimliği, bir iOS Developer Program hesap ve çalıştırabileceğiniz bir Mac bilgisayara [Xcode](https://go.microsoft.com/fwlink/p/?LinkId=536387) sürüm 6 veya daha sonra OS X Mavericks (sürüm 10.9) veya sonraki sürümler. Yükleme adımları bir bağlantı için bkz: [yüklemek için iOS Araçları](#install-tools-for-ios).
+::: moniker-end
 
-## <a name="get-the-tools"></a>Araçları edinin
+Belirli cihaz platformları için uygulamalar oluşturmak üzere bazı ek gereksinimler vardır:
 
-C++ ile mobil geliştirme, Visual Studio Community, Professional ve Enterprise sürümlerinde kullanılabilir. Visual Studio almak için Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfası. Platformlar arası mobil geliştirme araçları, Visual Studio 2015'ten başlayarak kullanılabilir.
+- Android SDK ile birlikte gelen x86 Android öykünücüleri, Intel Hardware Accelerated Execution Manager (HAXM) gibi donanım hızlandırmasını kullanan bilgisayarlarda en iyi şekilde çalışır. Daha fazla bilgi için bkz. [öykünücü performansı Için donanım hızlandırma (Hyper-V & HAXM)](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin&pivots=windows).
 
-## <a name="install-the-tools"></a>Araçları yükleme
+- İOS için kod oluşturma, bir Apple KIMLIĞI, bir iOS Geliştirici Programı hesabı ve [Xcode](https://developer.apple.com/xcode/) sürüm 10,2 veya sonrakı sürümlerini OS X Mavericks (sürüm 10,9) veya sonraki sürümlerde çalıştıran bir Mac bilgisayar gerektirir. Yükleme adımlarının bağlantısı için bkz. [iOS Için yükleme araçları](#install-tools-for-ios).
 
-Visual Studio 2017 için Visual Studio Yükleyicisi'ni içeren bir **C++ ile Mobil Geliştirme** iş yükü C++ dil araçları, şablonları ve Visual Studio'da Android ve iOS geliştirme için gerekli bileşenleri yükler. Android derleme ve hata ayıklama ve için iOS geliştirme için bir Mac ile iletişim kurmak için gereken bileşenleri GCC ve Clang araç kümeleri yükler. Ayrıca, tüm iOS ve Android uygulaması geliştirme desteği için gerekli yazılım geliştirme setleri ve üçüncü taraf araçları yükler. Bu üçüncü taraf araçların çoğu Android platformu desteği için gerekli olan açık kaynaklı yazılımlardır.
+- Windows Phone Öykünücüler, Hyper-V ' y i çalıştıran bir bilgisayar gerektirir. Öykünücüleri yüklemeden ve çalıştırmadan önce Windows 'daki Hyper-V özelliğinin etkinleştirilmesi gerekir. Daha fazla bilgi için öykünücü [sistem gereksinimlerine](system-requirements-for-the-visual-studio-emulator-for-android.md)bakın.
 
-- Android yerel Geliştirme Seti (NDK) Android platformunu hedefleyen C++ kod oluşturmak için gereklidir.
+## <a name="get-the-tools"></a>Araçları edinme
 
-- Android SDK'sı, Apache Ant ve Java SE Development Kit Android yapı işlemi için gereklidir.
+İle C++ mobil geliştirme, Visual Studio Community, Professional ve Enterprise sürümlerinde kullanılabilir. Visual Studio 'yu almak için [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin. Platformlar arası mobil geliştirme araçları, Visual Studio 2015 ' den itibaren kullanılabilir.
 
-- Intel donanım hızlandırılmış yürütme Yöneticisi ve Google Android öykünücüsü isteğe bağlıdır, ancak önerilen bileşenleri. Geliştirme ve doğrudan bir Android cihazında hata ayıklama, ancak genellikle hata ayıklama için bir öykünücü masaüstünüzde kullanımı daha kolay olur. Microsoft, ayrı olarak yüklenebilir ve Android için bir Visual Studio öykünücüsü'nü de sağlar.
+## <a name="install-the-tools"></a>Araçları yükler
 
-### <a name="install-the-mobile-development-with-c-workload"></a>Mobil geliştirme ile C++ iş yükünü yükleyin.
+Visual Studio yükleyicisi iş yüküne  **C++ sahip bir mobil geliştirme** içerir. Bu iş yükü, C++ Visual Studio 'da Android ve iOS geliştirmesi için gereken dil araçlarını, şablonları ve bileşenleri yüklüyor. Android derlemeleri ve hata ayıklama için gereken GCC ve Clang aracı kümelerini, Android SDK ve bileşenlerini iOS geliştirmesi için bir Mac ile iletişim kuracak şekilde içerir. Ayrıca iOS ve Android uygulama geliştirmeyi desteklemek için gereken diğer tüm üçüncü taraf araçları ve yazılım geliştirme setleri de yüklenir. Bu üçüncü taraf araçların çoğu, Android Platform desteği için gereken açık kaynaklı yazılımdır.
 
-1. Çalıştırma **Visual Studio yükleyicisi** gelen **Başlat** menüsü.
+- Android platformunu hedefleyen kod derlemek C++ C++ Için Android yerel geliştirme seti (NDK), Apache Ant ve Android geliştirme araçları gerekir.
 
-1. Visual Studio'yu önceden yüklediyseniz, seçin **Değiştir** düğmesi için değiştirmek istediğiniz Visual Studio'nın yüklü sürümü. Aksi takdirde seçin **yükleme** Visual Studio'yu yüklemek için.
+- Google Android Emulator ve Intel Hardware Accelerated Execution Manager (HAXM) isteğe bağlıdır, ancak önerilir. (Intel HAXM sürücüleri yalnızca Intel işlemcilerde çalışır ve Hyper-V dahil bazı VM 'lerle uyumsuzdur.) Doğrudan bir Android cihazında geliştirme ve hata ayıklama yapabilirsiniz, ancak hata ayıklama için masaüstünüzde bir öykünücü kullanmak genellikle daha kolay olur.
 
-1. İle **iş yükleri** sekmesi seçili, aşağı kaydırın ve select **C++ ile Mobil Geliştirme** Visual Studio Yükleyicisi'nde iş yükü. Bu iş yükü seçildiğinde, C++ geliştirme için gereken diğer bileşenleri de seçilir. Ayrıca, diğer iş yükleri ve aynı anda yüklemek için tek tek bileşenleri de seçebilirsiniz. UWP hedefleyen platformlar arası kod oluşturmak için Seç **Evrensel Windows platformu geliştirme** iş yükü.
+- C++iOS platformunu hedefleyen kodu derlemek C++ için iOS geliştirme araçları gerekir.
 
-1. İçinde **Yükleme ayrıntıları** bölmesini genişletin **C++ ile Mobil Geliştirme**. İçinde **isteğe bağlı** bölümünde ek sürümleri NDK, Google Android öykünücüsü, Intel donanım hızlandırılmış yürütme Yöneticisi'ni seçebilirsiniz ve IncrediBuild derleme hızlandırma aracı.
+> [!NOTE]
+> Visual Studio 2015 kullanıyorsanız bkz. [platformlar arası mobil geliştirme Için C++ Visual Install (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015)
 
-1. Varsayılan olarak, bir veya daha fazla Android SDK Kurulumu bileşenleri iş yükü dahil edilir. Android SDK'sı ek sürümlerinde kullanılabilir. Yüklemenizi birine eklemek için **tek tek bileşenler** sekmesine ve ardından ekranı aşağı kaydırarak **SDK'lar, kitaplıklar ve çerçeveler** bölümü seçiminizi yapın.
+### <a name="install-the-mobile-development-with-c-workload"></a>C++ İş yüküyle mobil geliştirme 'yi yükler
 
-1. Seçin **Değiştir** veya **yükleme** yüklemek için düğmesine **C++ ile Mobil Geliştirme** iş yükü ve diğer iş yükleri ve isteğe bağlı bileşenler seçildi.
+1. **Başlangıç** menüsünden **Visual Studio yükleyicisi** çalıştırın.
 
-   Yükleme tamamlandığında yükleyiciyi kapatın ve bilgisayarınızı yeniden başlatın. Bazı kurulum eylemleri üçüncü taraf bileşenleri için bilgisayar yeniden başlatılana kadar etkili olmaz.
+1. Visual Studio 'Yu zaten yüklediyseniz, değiştirmek istediğiniz Visual Studio 'nun yüklü sürümü için **Değiştir** düğmesini seçin. Aksi halde, Visual Studio 'Yu yüklemek için **Install** ' ı seçin.
+
+1. **İş yükleri** sekmesi seçili olduğunda aşağı kaydırın ve Visual Studio yükleyicisi iş yüküyle **Mobil geliştirmeyi C++**  seçin. Bu iş yükü seçildiğinde, geliştirme için C++ gereken diğer bileşenler de seçilidir. Aynı anda yüklemek için diğer iş yüklerini ve ayrı bileşenleri de seçebilirsiniz. UWP 'yi de hedefleyen platformlar arası kod oluşturmak için **Evrensel Windows platformu geliştirme** iş yükünü seçin.
+
+1. **Yükleme ayrıntıları** bölmesinde, **C++ile mobil geliştirme**' ı genişletin. **Isteğe bağlı** bölümünde, NDK, Google Android Emulator, Intel Hardware Accelerated Execution Manager ve IncrediBuild Build Acceleration aracının ek sürümlerini seçebilirsiniz.
+
+1. Varsayılan olarak, bir veya daha fazla Android SDK Kurulum bileşeni iş yüküne dahildir. Android SDK ek sürümleri mevcuttur. Yüklemenize bir tane eklemek için, **tek tek bileşenler** sekmesini seçin, sonra seçiminizi yapmak için SDK 'lar **, kitaplıklar ve çerçeveler** bölümüne gidin.
+
+1. İş yüküne ve seçtiğiniz diğer iş yüklerinize ve isteğe bağlı bileşenlere **sahip C++ mobil geliştirmeyi** yüklemek için **Değiştir** veya **yüklensin** düğmesini seçin.
+
+   Yükleme tamamlandığında, yükleyiciyi kapatın ve bilgisayarınızı yeniden başlatın. Üçüncü taraf bileşenleri için bazı kurulum eylemleri, bilgisayar yeniden başlatılana kadar etkili olmayacaktır.
 
    > [!IMPORTANT]
    > Her şeyin doğru şekilde yüklendiğinden emin olmak için yeniden başlatmanız gerekir.
 
 1. Visual Studio'yu açın.
 
-> [!NOTE]
-> Visual Studio 2015 kullanıyorsanız, bkz. [Visual C++ platformlar arası mobil geliştirme (Visual Studio 2015) için yükleme](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015)
+## <a name="install-tools-for-ios"></a>İOS için araçları yükler
 
-## <a name="install-tools-for-ios"></a>İOS için araçları yükleme
+İOS kodu düzenlemek, hatalarını ayıklamak ve iOS simülatörü veya bir iOS cihazına dağıtmak için Visual Studio 'Yu kullanabilirsiniz. Ancak lisanslama kısıtlamaları nedeniyle, kod bir Mac üzerinde uzaktan oluşturulmalıdır. Visual Studio kullanarak iOS uygulamaları derlemek ve çalıştırmak için, Mac 'inizde uzak aracıyı ayarlamanız ve yapılandırmanız gerekir. Ayrıntılı yükleme yönergeleri, Önkoşullar ve yapılandırma seçenekleri için bkz. [iOS kullanarak derlemek için araçları yükleme ve yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md). İOS için derleme yapıyorsanız, bu adımı atlayabilirsiniz.
 
-Platformlar arası Mobil Geliştirme için Visual C++, düzenleme, hata ayıklama ve iOS Simulator'a veya bir iOS cihazının iOS kod dağıtmak için kullanabilirsiniz, ancak lisans kısıtlamaları nedeniyle, kodu uzaktan Mac üzerinde oluşturulmalıdır Yapı ve Visual Studio kullanarak iOS uygulamaları çalıştırmak için ayarlayabilir ve Mac'inizde uzak Aracısı'nı yapılandırma Ayrıntılı yükleme yönergeleri, Önkoşullar ve yapılandırma seçenekleri için bkz: [yükleme ve yapılandırma araçları kullanarak iOS derleme](../cross-platform/install-and-configure-tools-to-build-using-ios.md). İOS için oluştururken değil, bu adımı atlayabilirsiniz.
+## <a name="install-or-update-dependencies-manually"></a>Bağımlılıkları el ile yükler veya güncelleştirir
 
-## <a name="install-or-update-dependencies-manually"></a>Yükleme veya bağımlılıkları el ile güncelleştirme
+Visual Studio yükleyicisini kullanarak bir veya daha fazla üçüncü taraf bağımlılığı yüklememeyi seçerseniz, iş yüküyle (veya Visual Studio 2015, görsel C++ mobil geliştirme seçeneği) **mobil geliştirme C++**  'yı yüklediğinizde, şunları yapabilirsiniz [Araçları yükledikten](#install-the-tools)sonra bu adımları kullanarak bunları daha sonra yükleyemezsiniz. Visual Studio Yükleyicisi, en son üçüncü taraf bileşenlerini yüklemek için düzenli olarak güncelleştirilir. Bu uygulamayı, güncelleştirilmiş SDK 'Ları ve NDKs 'leri yüklemek için kullanabilirsiniz. Ayrıca, bunları Visual Studio 'dan bağımsız olarak yükleyebilir veya güncelleştirebilirsiniz.
 
-Bir yüklemeyi karar verirseniz veya yüklediğinizde Visual Studio Yükleyicisi'ni kullanarak daha fazla üçüncü taraf bağımlılıkları **C++ ile Mobil Geliştirme** iş yükü (veya Visual Studio 2015, Visual C++ mobil geliştirme seçeneği), bunları adımları kullanarak daha sonra yükleyebilirsiniz [Araçları'nı yükleme](#install-the-tools). Visual Studio Yükleyicisi'nin en son üçüncü taraf bileşenlerini yüklemek için düzenli olarak güncelleştirilir. Güncelleştirilmiş SDK'ları ve NDKs yüklemek için kullanabilirsiniz. Ayrıca, yükleme veya bunları bağımsız olarak Visual Studio güncelleştirme.
+SDK 'yı güncelleştirmek ve isteğe bağlı araçları ve ek API düzeylerini yüklemek için Android SDK dizininde SDK Manager uygulamasını çalıştırabilirsiniz. SDK Yöneticisi uygulamasını çalıştırmak için **yönetici olarak çalıştır** kullanmadığınız sürece güncelleştirmeler yüklenemeyebilir. Android uygulaması oluşturma sorunları yaşıyorsanız, yüklü SDK 'larınıza yönelik güncelleştirmeler için SDK Yöneticisi ' ne bakın.
 
-> [!CAUTION]
-> Java dışındaki herhangi bir sırada bağımlılıklarını yükleyebilirsiniz. Yükleme ve Android SDK'yı yüklemeden önce JDK yapılandırmanız gerekir.
+Android SDK gelen bazı Android öykünücülerini kullanmak için donanım hızlandırmayı ayarlamanız gerekebilir. Daha fazla bilgi için bkz. [öykünücü performansı Için donanım hızlandırma (Hyper-V & HAXM)](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin).
 
-Aşağıdaki bilgileri okuyun ve bağımlılıkları el ile yüklemek için aşağıdaki bağlantıları kullanın.
+Çoğu durumda, Visual Studio yüklediğiniz üçüncü taraf yazılım için konfigürasyonları algılayabilir ve yükleme yollarını iç ortam değişkenlerine karşı korur. Visual Studio IDE 'de bu platformlar arası geliştirme araçlarının varsayılan yollarını geçersiz kılabilirsiniz.
 
-- [Java SE Geliştirme Seti](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+#### <a name="to-set-the-paths-for-third-party-tools"></a>Üçüncü taraf araçların yollarını ayarlamak için
 
-   Varsayılan olarak, yükleyici Java araçları geçirir *C:\Program Files (x86) \Java*.
+1. Visual Studio menü çubuğunda **araçlar**  > **Seçenekler**' i seçin.
 
-- [Android SDK'sı](https://developer.android.com/sdk/index.html#command-tools)
+1. **Seçenekler** iletişim kutusunda,**Android** >  **platformlar arası**  > **C++** seçin.
 
-   Yükleme sırasında API'leri önerildiği şekilde güncelleştirin. En az olduğundan emin olun Android 5.0 Lollipop (API düzey 21) için SDK'sı yüklü. Varsayılan olarak, yükleyici Android SDK'sı geçirir *C:\Program Files (x86) \Android\android-sdk*.
+   ![Android araç yolu seçenekleri](../cross-platform/media/cppmdd_options_android.PNG "CPPMDD_Options_Android")
 
-   SDK Yöneticisi uygulama yeniden SDK'yi güncelleştirmek ve isteğe bağlı araçları ve ek API düzeylerini yüklemek için Android SDK dizininde çalıştırabilirsiniz. Güncelleştirmeleri kullanılmadıkça yükleme başarısız olabilir **yönetici olarak çalıştır** SDK Manager uygulamasını çalıştırmak için. Bir Android uygulaması oluşturma sorunları varsa, güncelleştirmeler, yüklü bir SDK'ları için SDK Yöneticisi'ni denetleyin.
+1. Bir araç tarafından kullanılan yolu değiştirmek için yolun yanındaki onay kutusunu işaretleyin ve metin kutusunda klasör yolunu düzenleyin. Klasörü seçmek için bir **Konum Seç** iletişim kutusunu açmak için de ( **...** ) düğmesini kullanabilirsiniz.
 
-   Android SDK'sı ile gelen Android öykünücüleri bazılarını kullanmak için isteğe bağlı Intel HAXM sürücüleri yüklemeniz gerekir. Hyper-V özelliği başarıyla Intel HAXM sürücüleri yüklemek için Windows kaldırmak zorunda kalabilirsiniz. Android için Windows Phone öykünücüleri ve Microsoft Visual Studio öykünücü kullanmak için Hyper-V özelliğini geri yüklemeniz gerekir. Daha fazla bilgi için [Android öykünücüsü donanım hızlandırma](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin).
-
-- [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
-
-   Varsayılan olarak, yükleyici Android NDK geçirir *C:\ProgramData\Microsoft\AndroidNDK*. Android NDK yüklemenize güncelleştirmeyi yeniden NDK yükleyip.
-
-- [Apache Ant](https://ant.apache.org/bindownload.cgi)
-
-   Varsayılan olarak, yükleyici Apache Ant geçirir *C:\Program Files (x86) \Microsoft Visual Studio 14.0\Apps*.
-
-- [Android için Microsoft Visual Studio öykünücüsü](https://aka.ms/vscomemudownload)
-
-   Android için Microsoft Visual Studio öykünücüsü, test ve kod hatalarını ayıklamak için yararlı bir isteğe bağlı öykünücü ' dir. Sonra Android için sürüm Visual Studio öykünücüsü, Google Android öykünücüsünü güncelleştirdi Intel'in HAXM'si aracılığıyla donanım hızlandırmasını kullanmak için. Mümkün olduğunda, erişim için en son Android işletim sistemi görüntülerine ve Google Play hizmetleri sunar, hızlandırılmış Google'nın öykünücüsünü kullanmanızı öneririz.
-
-Çoğu durumda, Visual Studio üçüncü taraf yazılım yükledikten ve iç ortam değişkenleri içindeki yükleme yolları tutar yapılandırmalarını algılayabilir. Platformlar arası geliştirme araçlarının Visual Studio IDE içindeki varsayılan yolları geçersiz kılabilirsiniz.
-
-#### <a name="to-set-the-paths-for-third-party-tools"></a>Üçüncü taraf araçları yollarını ayarlamak için
-
-1. Visual Studio menü çubuğunda, seçin **Araçları** > **seçenekleri**.
-
-1. İçinde **seçenekleri** iletişim kutusunda **Çoklu Platform** > **C++**  > **Android**.
-
-   ![Android aracı yolu seçeneklerinin](../cross-platform/media/cppmdd_options_android.PNG "CPPMDD_Options_Android")
-
-1. Bir araç tarafından kullanılan yolu değiştirmek için yolun yanındaki onay kutusunu işaretleyin ve klasör yolu metin kutusuna düzenleyin. Gözat düğmesini de kullanabilirsiniz ( **...** ) açmak için bir **konumu seçin** iletişim klasörünü seçin.
-
-1. Seçin **Tamam** klasör konumlarını özel aracı kaydetmek için.
+1. Özel araç klasörü konumlarını kaydetmek için **Tamam ' ı** seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yükleme ve yapılandırma araçları kullanarak iOS oluşturmak için](install-and-configure-tools-to-build-using-ios.md)
+- [İOS kullanarak derlemek için Araçlar yükleyip yapılandırma](install-and-configure-tools-to-build-using-ios.md)
 - [Visual C++ platformlar arası mobil](https://go.microsoft.com/fwlink/p/?LinkId=536383)

@@ -1,5 +1,5 @@
 ---
-title: Konsolu kullanarak JavaScript hata ayıklama | Microsoft Docs
+title: Konsolunu kullanarak JavaScript hatalarını ayıklama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,51 +16,51 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 521092c26ba585381aa094f6b1b348365300bc10
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7b61147467ff27ec8b69e1a2fddfcd00138065fa
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62907177"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589052"
 ---
-# <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio'da Konsolu kullanarak JavaScript hata ayıklama
+# <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio 'da Konsolu kullanarak JavaScript hata ayıklama
 
-JavaScript Konsolu penceresi, JavaScript kullanılarak oluşturulan UWP uygulamalarının hatalarını ayıklama ve etkileşim için kullanabilirsiniz. Bu özellikler, UWP uygulamaları ve Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan uygulamalar için desteklenir. Konsolu komut başvurusu için bkz. [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md).
+JavaScript kullanılarak oluşturulan UWP uygulamalarıyla etkileşim kurmak ve hata ayıklamak için JavaScript Konsol penceresini kullanabilirsiniz. Bu özellikler, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan UWP uygulamaları ve uygulamaları için desteklenir. Konsol komut başvurusu için bkz. [JavaScript konsol komutları](../debugger/javascript-console-commands.md?view=vs-2017).
 
-JavaScript Konsolu penceresi sağlar:
+JavaScript Konsolu penceresi şunları yapmanıza olanak sağlar:
 
-- Nesneleri, değer ve iletileri uygulamanızdan konsol penceresine Gönder.
+- Uygulamanızdaki nesneleri, değerleri ve iletileri konsol penceresine gönderin.
 
-- Görüntüleyebilir ve çalışan uygulamada yerel ve genel değişkenlerin değerlerini değiştirebilirsiniz.
+- Çalışan uygulamadaki yerel ve genel değişkenlerin değerlerini görüntüleyin ve değiştirin.
 
-- Görünüm nesnesi görselleştiriciler.
+- Nesne görselleştiricilerini görüntüleyin.
 
-- Geçerli betik bağlamı içinde yürütülen bir JavaScript kodu çalıştırın.
+- Geçerli betik bağlamı içinde yürütülen JavaScript kodunu çalıştırın.
 
-- JavaScript hataları ve belge nesne modeli (DOM) ve Windows çalışma zamanı özel durumlarının yanı sıra özel durumları görüntüleyin.
+- Belge Nesne Modeli (DOM) ve Windows Çalışma Zamanı özel durumlara ek olarak JavaScript hatalarını ve özel durumlarını görüntüleyin.
 
-- Ekranı temizleme gibi diğer görevleri gerçekleştirin. Bkz: [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md) komutların tam listesi için.
+- Ekranı temizleme gibi diğer görevleri gerçekleştirin. Komutların tam listesi için bkz. [JavaScript konsol komutları](../debugger/javascript-console-commands.md?view=vs-2017) .
 
 > [!TIP]
-> JavaScript Konsolu penceresi kapatılırsa seçin **hata ayıklama**> **Windows** > **JavaScript Konsolu** yeniden açın. Betik hata ayıklama oturumu yalnızca sırasında penceresi görünür.
+> JavaScript Konsolu penceresi kapalıysa, yeniden açmak için > **Windows**  > **JavaScript konsolundaki** **Hata Ayıkla** ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
 
-JavaScript Konsolu penceresi kullanarak, hata ayıklayıcıyı durdurup yeniden olmadan uygulamanız ile etkileşebilirsiniz. Daha fazla bilgi için bkz. [uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md). Diğer JavaScript DOM Gezgini'ni kullanarak ve kesme noktaları, ayarlama gibi özellikler, hata ayıklama hakkında bilgi için bkz: [hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md) ve [uygulamaları Visual Studio'da hata ayıklama](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps).
+JavaScript Konsol penceresini kullanarak, hata ayıklayıcıyı durdurup yeniden başlatmadan uygulamanız ile etkileşime geçebilirsiniz. Daha fazla bilgi için bkz. [uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md). DOM Gezginini kullanma ve kesme noktaları ayarlama gibi diğer JavaScript hata ayıklama özellikleri hakkında bilgi için bkz. [hızlı başlangıç: Visual Studio 'DA HTML ve CSS](../debugger/quickstart-debug-html-and-css.md) ve [hata ayıklama uygulamalarında](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)hata ayıklama.
 
-## <a name="InteractiveConsole"></a> JavaScript Konsolu penceresi kullanarak hata ayıklama
-Aşağıdaki adımlar oluşturur bir `FlipView` uygulama ve etkileşimli bir şekilde kodlama hatası JavaScript hata ayıklama işlemini göstermektedir.
+## <a name="InteractiveConsole"></a>JavaScript Konsol penceresini kullanarak hata ayıklama
+Aşağıdaki adımlar bir `FlipView` uygulaması oluşturur ve bir JavaScript kodlama hatasının etkileşimli olarak nasıl ayıklanalınacağını gösterir.
 
 > [!NOTE]
-> Burada örnek uygulaması, bir UWP uygulaması gereklidir. Bununla birlikte, burada açıklanan konsol özellikleri, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan uygulamalar için de geçerlidir.
+> Örnek uygulama, UWP uygulaması. Bununla birlikte, burada açıklanan konsol özellikleri, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan uygulamalar için de geçerlidir.
 
-#### <a name="to-debug-javascript-code-in-the-flipview-app"></a>FlipView uygulamanın JavaScript kodunda hata ayıklamak için
+#### <a name="to-debug-javascript-code-in-the-flipview-app"></a>FlipView uygulamasındaki JavaScript kodunda hata ayıklamak için
 
-1. Seçerek Visual Studio'da yeni bir çözüm oluşturma **dosya** > **yeni proje**.
+1. **Yeni proje** >  **Dosya** ' yı seçerek Visual Studio 'da yeni bir çözüm oluşturun.
 
-2. Seçin **JavaScript** > **Windows Evrensel**ve ardından **WinJS uygulaması**.
+2. **Windows evrensel** >  **JavaScript** ' i seçin ve ardından **WinJS uygulaması**' nı seçin.
 
-3. Proje için bir ad yazın `FlipViewApp`ve **Tamam** uygulamayı oluşturmak için.
+3. Proje için `FlipViewApp` gibi bir ad yazın ve uygulamayı oluşturmak için **Tamam** ' ı seçin.
 
-4. İndex.html gövde öğesi içinde mevcut HTML kodu şu kodla değiştirin:
+4. İndex. html ' nin BODY öğesinde, var olan HTML kodunu şu kodla değiştirin:
 
     ```html
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -74,7 +74,7 @@ Aşağıdaki adımlar oluşturur bir `FlipView` uygulama ve etkileşimli bir şe
     </div>
     ```
 
-5. Default.css açın ve eklemek için CSS `#fView` Seçici:
+5. Default. css ' i açın ve `#fView` seçici için CSS ekleyin:
 
     ```css
     #fView {
@@ -84,7 +84,7 @@ Aşağıdaki adımlar oluşturur bir `FlipView` uygulama ve etkileşimli bir şe
     }
     ```
 
-6. Default.js açın ve aşağıdaki JavaScript kodunu ile kodu değiştirin:
+6. Default. js dosyasını açın ve kodu aşağıdaki JavaScript koduyla değiştirin:
 
     ```javascript
     (function () {
@@ -136,25 +136,25 @@ Aşağıdaki adımlar oluşturur bir `FlipView` uygulama ve etkileşimli bir şe
     })();
     ```
 
-7. Hata ayıklama hedefi zaten seçili değilse, seçin **yerel makine** listesinde yanındaki açılan listeden **cihaz** düğmesini **hata ayıklama** araç çubuğu:
+7. Bir hata ayıklama hedefi zaten seçili değilse, **hata ayıklama** araç çubuğundaki **cihaz** düğmesinin yanındaki açılan listeden **yerel makine** ' yi seçin:
 
-    ![Select hata ayıklama hedef liste](../debugger/media/js_select_target.png "JS_Select_Target")
+    ![Hata ayıklama hedef listesini seçin](../debugger/media/js_select_target.png "JS_Select_Target")
 
 8. Hata ayıklayıcıyı başlatmak için F5 tuşuna basın.
 
-    Uygulama çalışır ancak görüntüleri eksik. JavaScript Konsolu penceresi APPHOST hataları görüntüleri eksik olduğunu gösterir.
+    Uygulama çalışıyor ancak resimler eksik. JavaScript Konsol penceresinde APPHOST hataları görüntülerin eksik olduğunu gösterir.
 
-9. İle `FlipView` çalışan, uygulama türü `Data.items` giriş penceresi istemi konsolunda (yanındaki ">>" simgesi) ve Enter tuşuna basın.
+9. @No__t_0 uygulama çalışırken, konsol penceresi giriş istemine `Data.items` yazın ("> >" simgesinin yanına) ve ENTER tuşuna basın.
 
-    Görselleştirici için `items` nesne konsol penceresinde görünür. Gösterir `items` nesne örneği ve betik bağlamda kullanılabilir. Konsol penceresinde, bir nesnenin özellik değerlerini görüntülemek (veya ok tuşlarını kullanmak için) düğümleri arasında tıklayabilirsiniz. Aşağı uygulamasına tıklarsanız `items._data` nesne, bu resimde gördüğünüz gibi görüntü başvuruları beklendiği gibi yanlış olduğunu göreceksiniz. Varsayılan görüntülerini (logo.png), nesnenin hala mevcut ve beklenen görüntülerle interspersed eksik görüntüleri vardır.
+    @No__t_0 nesnesi için Görselleştirici konsol penceresinde görüntülenir. Bu, `items` nesnesinin örneği oluşturulan ve geçerli betik bağlamında kullanılabilir olduğunu gösterir. Konsol penceresinde, özellik değerlerini görüntülemek için bir nesnenin düğümlerine tıklayabilirsiniz (veya ok tuşlarını kullanabilirsiniz). @No__t_0 nesnesine tıklarsanız, bu çizimde gördüğünüz gibi, görüntü kaynağı başvurularının beklendiği gibi yanlış olduğunu fark edeceksiniz. Varsayılan görüntüler (logo. png) hala nesnede mevcuttur ve beklenen görüntülerle birlikte eksik görüntüler vardır.
 
-    ![JavaScript Konsolu penceresi](../debugger/media/js_console_window.png "JS_Console_Window")
+    ![JavaScript konsol penceresi](../debugger/media/js_console_window.png "JS_Console_Window")
 
-    Ayrıca çok daha fazla öğe olduğunu unutmayın. `items._data` beklediğiniz daha nesne.
+    Ayrıca `items._data` nesnesinde daha fazla öğe olduğunu beklediğinizi unutmayın.
 
-10. İsteminde `Data.items.push` ve Enter tuşuna basın. Görselleştirici için konsol penceresinde gösterir `push` uygulanan işlevi, bir [!INCLUDE[winjs_long](../debugger/includes/winjs_long_md.md)] proje dosyası. Bu uygulamada kullanıyoruz `push` doğru öğeleri eklenecek. Biraz araştırma IntelliSense kullanarak, biz size kullanması gereken, öğrenmek `setAt` varsayılan görüntüleri değiştirilecek.
+10. İsteminde `Data.items.push` yazın ve ENTER tuşuna basın. Konsol penceresi, bir [!INCLUDE[winjs_long](../debugger/includes/winjs_long_md.md)] proje dosyasında uygulanan `push` işlevi için Görselleştirici gösterir. Bu uygulamada, doğru öğeleri eklemek için `push` kullandık. IntelliSense kullanarak biraz araştırma yaparken, varsayılan görüntüleri değiştirmek için `setAt` kullanmanız gerektiğini öğreniyoruz.
 
-11. Hata ayıklama oturumunu durdurmadan etkileşimli olarak bu sorunu gidermek için default.js açıp bu koddan seçin `updateImages` işlevi:
+11. Hata ayıklama oturumunu durdurmadan bu sorunu etkileşimli olarak gidermek için, default. js ' yi açın ve `updateImages` işlevinden bu kodu seçin:
 
     ```javascript
     pages.push(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });
@@ -162,12 +162,12 @@ Aşağıdaki adımlar oluşturur bir `FlipView` uygulama ve etkileşimli bir şe
     pages.push(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });
     ```
 
-     Bu kodu kopyalayıp giriş JavaScript Konsolu komut isteminden yapıştırın.
+     Bu kodu kopyalayıp JavaScript Konsolu giriş istemine yapıştırın.
 
     > [!TIP]
-    > Çok satırlı kod yapıştırdığınızda JavaScript Konsolu'nu istemi giriş, giriş Konsolu komut isteminde, otomatik olarak çok satırlı moda geçer. Çok satırlı modunu açıp kapatmak için Ctrl + Alt + M tuşlarına basabilirsiniz. Çok satırlı modunda bir komut çalıştırmak için Ctrl + Enter tuşlarına basın veya pencerenin sağ alt köşesindeki ok simgesini seçin. Daha fazla bilgi için bkz. [tek satır modu ve çok satırlı modu JavaScript konsol penceresinde](#SinglelineMultilineMode).
+    > JavaScript Konsolu giriş istemine birden fazla kod satırı yapıştırdığınızda, konsol giriş istemi otomatik olarak çok satırlı moda geçer. Çoklu satır modunu açmak ve kapatmak için Ctrl + Alt + e tuşlarına basabilirsiniz. Bir betiği çok satırlı modda çalıştırmak için CTRL + ENTER tuşlarına basın veya pencerenin sağ alt köşesinde bulunan ok simgesini seçin. Daha fazla bilgi için bkz. [JavaScript Konsol penceresinde tek satırlık mod ve çok satırlı mod](#SinglelineMultilineMode).
 
-12. Düzeltme `push` işlevi çağırır isteminde değiştirerek `pages.push` ile `Data.items.setAt`. Düzeltilen kod gibi görünmelidir:
+12. İstem içindeki `push` işlev çağrılarını düzeltin ve `pages.push` `Data.items.setAt` ile değiştirin. Düzeltilen kod şöyle görünmelidir:
 
     ```javascript
     Data.items.setAt(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });
@@ -176,85 +176,85 @@ Aşağıdaki adımlar oluşturur bir `FlipView` uygulama ve etkileşimli bir şe
     ```
 
     > [!TIP]
-    > Kullanmak istiyorsanız `pages` yerine nesne `Data.items`, tutmak için kodunuzda bir kesme noktasını ayarlamanız gerekir `pages` kapsam nesnesi.
+    > @No__t_1 yerine `pages` nesnesini kullanmak istiyorsanız, `pages` nesnesini kapsamda tutmak için kodunuzda bir kesme noktası ayarlamanız gerekir.
 
 13. Betiği çalıştırmak için yeşil ok simgesini seçin.
 
-14. Tek satırlı moda giriş Konsolu komut isteminde, ve ardından Ctrl + Alt + M tuşlarına basın **Temizle giriş** (giriş isteminden kodu silmek için red "X").
+14. Ctrl + Alt + e tuşlarına basarak konsol giriş istemi 'ni tek satır moduna geçirin ve ardından giriş isteminden kodu silmek için **girişi temizle** (kırmızı "X") seçeneğini belirleyin.
 
-15. Tür `Data.items.length = 3` istemi ve Enter tuşuna basın. Bu verilerden fazlalık öğeleri kaldırır.
+15. İstemine `Data.items.length = 3` yazın ve ardından ENTER tuşuna basın. Bu, gereksiz öğeleri verilerden kaldırır.
 
-16. Uygulamayı yeniden denetleyin ve doğru görüntüleri doğru olduğunu göreceksiniz `FlipView` sayfaları.
+16. Uygulamayı yeniden kontrol edin ve doğru görüntülerin doğru `FlipView` sayfalarında olduğunu görürsünüz.
 
-17. DOM Gezgini'nde, güncelleştirilmiş DIV öğesinin görebilirsiniz ve beklenen IMG öğeleri bulmak için alt ağacı içinde gezinebilirsiniz.
+17. DOM Gezgini 'nde, güncelleştirilmiş DIV öğesini görebilir ve beklenen IMG öğelerini bulmak için alt ağaca gidebilirsiniz.
 
-18. Seçim yaparak hata ayıklamayı durdurmak **hata ayıklama** > **hata ayıklamayı Durdur** veya göre Shift + F5 tuşuna basarak ve kaynak kodu düzeltin.
+18. **Hata ayıklamayı durdur  >  hata** **ayıklamayı Durdur** ' u seçerek veya SHIFT + F5 tuşlarına basarak ve ardından kaynak kodunu düzelttikten sonra hata ayıklamayı durdurun.
 
-    Örnek kodu içeren tam default.html sayfa düzeltildi için bkz: [hata ayıklama HTML, CSS ve JavaScript örnek kodu](../debugger/debug-html-css-and-javascript-sample-code.md).
+    Varsayılan olarak düzeltilen örnek kodu içeren HTML sayfası için bkz. [hata ayıklama HTML, CSS ve JavaScript örnek kodu](../debugger/debug-html-css-and-javascript-sample-code.md).
 
-## <a name="InteractiveDebuggingBreakMode"></a> Etkileşimli hata ayıklama ve kesme modu
-Kesme noktaları ve JavaScript hata ayıklama araçları gibi JavaScript Konsolu penceresi kullanırken, kodda ilerleyebilmeniz kullanabilirsiniz. Hata ayıklayıcıda çalışan bir programın bir kesme noktası karşılaştığında, hata ayıklayıcı programın yürütülmesini geçici olarak askıya alır. Yürütme askıya alındığında, programınız kesme modu için çalışma modundan geçer. Yürütme herhangi bir zamanda sürdürebilirsiniz.
+## <a name="InteractiveDebuggingBreakMode"></a>Etkileşimli hata ayıklama ve kesme modu
+JavaScript konsol penceresi gibi JavaScript hata ayıklama araçlarını kullanırken kesme noktaları ve kod içine adımla ' yı kullanabilirsiniz. Hata ayıklayıcıda çalışan bir program bir kesme noktasıyla karşılaştığında, hata ayıklayıcı programın yürütülmesini geçici olarak askıya alır. Yürütme askıya alındığında, programınız çalışma modundan kesme moduna geçer. Yürütmeyi dilediğiniz zaman sürdürebilirsiniz.
 
-Bir program kesme modundayken, JavaScript Konsolu penceresi betikleri ve geçerli betik yürütme bağlamında geçerli olmayan komutları çalıştırmak için kullanabilirsiniz. Bu yordamda, sabit sürümünü kullanacağınız `FlipView` Kesme moduna kullanımını göstermek için daha önce oluşturduğunuz uygulama.
+Bir program kesme modundayken JavaScript Konsol penceresini kullanarak geçerli betik yürütme bağlamında geçerli olan betikleri ve komutları çalıştırabilirsiniz. Bu yordamda, kesme modunun kullanımını göstermek için daha önce oluşturduğunuz `FlipView` uygulamasının sabit sürümünü kullanacaksınız.
 
-#### <a name="to-set-a-breakpoint-and-debug-the-app"></a>Bir kesme noktası ayarlayın ve uygulama hatalarını ayıklamak için
+#### <a name="to-set-a-breakpoint-and-debug-the-app"></a>Bir kesme noktası ayarlamak ve uygulamada hata ayıklamak için
 
-1. Default.html dosyasındaki `FlipView` , daha önce oluşturulan, kısayol menüsünü açın, uygulama `updateImages()` işlevi ve ardından **kesme noktası** > **kesme noktası Ekle**.
+1. Daha önce oluşturduğunuz `FlipView` uygulamasının default. HTML dosyasında, `updateImages()` işlevinin kısayol menüsünü açın **ve kesme noktası** **Ekle** >  kesme noktası ' nı seçin.
 
-2. Seçin **yerel makine** yanındaki açılan liste **hata ayıklamayı Başlat** düğmesini **hata ayıklama** araç çubuğu.
+2. **Hata ayıklama** araç çubuğundaki **hata ayıklamayı Başlat** düğmesinin yanındaki açılan listede **yerel makine** ' yi seçin.
 
-3. Seçin **hata ayıklama** > **hata ayıklamayı Başlat**, veya F5 tuşuna basın.
+3. Hata**ayıklamayı başlatmak** >  **Hata Ayıkla** ' yı seçin veya F5 tuşuna basın.
 
-    Yürütme ulaştığında uygulama Kesme moduna girer `updateImages()` işlevi ve program yürütme geçerli satırı sarı renkle vurgulanır.
+    Uygulama, yürütme `updateImages()` işleve ulaştığında kesme moduna girer ve geçerli program yürütme satırı sarı renkle vurgulanır.
 
-    ![Kesme modu ile JavaScript Konsolu'nu kullanarak](../debugger/media/js_breakmode.png "JS_BreakMode")
+    ![JavaScript Konsolu ile kesme modunu kullanma](../debugger/media/js_breakmode.png "JS_BreakMode")
 
-    Hemen geçerli hata ayıklama oturumunu sona erdirmeden program durumunu etkileyen değişkenlerin değerlerini değiştirebilirsiniz.
+    Geçerli hata ayıklama oturumunu sona erdirmeden program durumunu hemen etkilemek için değişkenlerin değerlerini değiştirebilirsiniz.
 
-4. Tür `updateImages` istemine yazıp Enter tuşuna basın. Görselleştirici işlevi için konsol penceresinde görünür.
+4. İstemine `updateImages` yazın ve ENTER tuşuna basın. İşlev için bir Görselleştirici konsol penceresinde görünür.
 
-5. İşlev uygulaması göstermek için konsol penceresinde işlevi seçin.
+5. İşlev uygulamasını göstermek için konsol penceresinde işlevi seçin.
 
-    Aşağıdaki çizimde, bu noktada konsol penceresinde gösterir.
+    Aşağıdaki çizimde bu noktada konsol penceresi gösterilmektedir.
 
-    ![JavaScript Konsolu penceresi Görselleştirici gösteren](../debugger/media/js_console_function_visualizer.png "JS_Console_Function_Visualizer")
+    ![Görselleştirici gösteren JavaScript konsol penceresi](../debugger/media/js_console_function_visualizer.png "JS_Console_Function_Visualizer")
 
-6. Tek satırlık bir işlev, giriş sorusu çıktı penceresinden kopyalayın ve 3 dizin değeri değiştirin:
+6. Çıkış penceresindeki işlevin bir satırını giriş istemine kopyalayın ve dizin değerini 3 olarak değiştirin:
 
     ```javascript
     pages.setAt(3, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });
     ```
 
-7. Kod satırının çalıştırmak için Enter tuşuna basın.
+7. Kod satırını çalıştırmak için ENTER tuşuna basın.
 
-    Satır satır kodda adım adım istiyorsanız F11 tuşuna basın veya program yürütme devam etmek için F5 tuşuna basın.
+    Kod satırını satıra göre ilerlemek istiyorsanız, F11 tuşuna basın veya program yürütmeye devam etmek için F5 tuşuna basın.
 
-8. Program yürütme devam etmek için F5 tuşuna basın. `FlipView` Uygulama görünür ve artık tüm dört sayfalar varsayılan olmayan görüntülerden birini gösterir.
+8. Program yürütmeye devam etmek için F5 tuşuna basın. @No__t_0 uygulama görüntülenir ve bundan böyle dört sayfa varsayılan olmayan görüntülerden birini gösterir.
 
-    Visual Studio'ya geçmek için F12 ya da Alt + Tab tuşuna basın.
+    Visual Studio 'ya geri dönmek için F12 veya Alt + Tab tuşlarına basın.
 
-## <a name="SinglelineMultilineMode"></a> Tek satır modu ve JavaScript Konsolu penceresi çok satırlı modu
-JavaScript Konsolu penceresi için giriş istemi tek satır modu hem de çok satırlı modunu destekler. Bu konuda etkileşimli hata ayıklama yordamda her iki modu kullanarak bir örnek sağlar. Modlar arasında geçiş yapmak için Ctrl + Alt + M tuşlarına basabilirsiniz.
+## <a name="SinglelineMultilineMode"></a>JavaScript Konsol penceresinde tek satırlık mod ve çok satırlı mod
+JavaScript konsol penceresi için giriş istemi hem tek satırlık modu hem de çok satırlı modunu destekler. Bu konudaki etkileşimli hata ayıklama yordamı her iki modun kullanılmasına bir örnek sağlar. Modlar arasında geçiş yapmak için Ctrl + Alt + e tuşlarına basabilirsiniz.
 
-Tek satır modu giriş geçmişi sağlar. Yukarı Ok ve aşağı ok tuşlarını kullanarak giriş geçmişinde gidebilirsiniz. Komut dosyalarını çalıştırdığınızda giriş istemi tek satır modu temizler. Tek satırlı modunda bir komut çalıştırmak için Enter tuşuna basın.
+Tek satırlık mod giriş geçmişi sağlar. Yukarı ok ve aşağı ok tuşlarını kullanarak giriş geçmişine gidebilirsiniz. Betikleri çalıştırdığınızda tek satırlık mod giriş isteğini temizler. Komut dosyasını tek satırlık modda çalıştırmak için ENTER tuşuna basın.
 
-Komut dosyalarını çalıştırdığınızda, çok satırlı modunu giriş istemi temizlemez. Çok satırlı modunu tek satır modu arasında geçiş yaptığınızda tuşlarına basarak giriş satırının temizleyebilirsiniz **Temizle giriş** (kırmızı "X"). Çok satırlı modunda bir komut çalıştırmak için Ctrl + Enter tuşlarına basın veya pencerenin sağ alt köşesindeki ok simgesini seçin.
+Betikler çalıştırdığınızda çok satırlı mod giriş isteğini temizlemez. Çok satırlı moddan tek satırlık moda geçtiğinizde giriş satırını **clear Input** (kırmızı "X") tuşuna basarak temizleyebilirsiniz. Bir betiği çok satırlı modda çalıştırmak için CTRL + ENTER tuşlarına basın veya pencerenin sağ alt köşesinde bulunan ok simgesini seçin.
 
-## <a name="Switching"></a> Betik yürütme bağlamını değiştirme
-JavaScript Konsolu penceresi bir kerede web platformu ana bilgisayarı (WWAHost.exe) tek bir örneğini temsil eder, tek bir yürütme bağlamı ile etkileşim sağlar. Bazı senaryolarda, uygulamanız başka bir örnek kullandığınızda, konağının başlatılabilir bir `iframe`, bir paylaşım sözleşmesi, bir web çalışanı veya `WebView` denetimi. Ana bilgisayar başka bir örneğini çalıştırıyorsa, yürütme bağlamındaki seçerek uygulama çalıştırılırken farklı yürütme bağlamı seçebilirsiniz **hedef** listesi.
+## <a name="Switching"></a>Betik Yürütme bağlamını değiştirme
+JavaScript konsol penceresi, aynı anda web platformu ana bilgisayarının (WWAHost. exe) tek bir örneğini temsil eden tek bir yürütme bağlamıyla etkileşim kurmanıza olanak tanır. Bazı senaryolarda, uygulamanız bir `iframe`, bir paylaşma sözleşmesi, Web çalışanı veya bir `WebView` denetimi kullanırken olduğu gibi, konağın başka bir örneğini başlatabilir. Konağın başka bir örneği çalıştırıyorsa, **hedef** listede Yürütme bağlamını seçerek uygulamayı çalıştırırken farklı bir yürütme bağlamı seçebilirsiniz.
 
-Aşağıdaki çizimde, hedef liste JavaScript konsol penceresinde gösterir.
+Aşağıdaki çizimde JavaScript Konsol penceresinde hedef liste gösterilmektedir.
 
-![Hedef seçimi JavaScript konsol penceresinde](../debugger/media/js_console_target.png "JS_Console_Target")
+![JavaScript Konsol penceresinde hedef seçimi](../debugger/media/js_console_target.png "JS_Console_Target")
 
-Yürütme bağlamı kullanarak da geçebilirsiniz `cd` komutu, ancak bir yürütme bağlamı adını bilmeniz gerekir ve kullandığınız başvuru kapsamda olmalıdır. **Hedef** listesi diğer yürütme bağlamları daha iyi erişim sağlar.
+Ayrıca, `cd` komutunu kullanarak yürütme bağlamını geçirebilirsiniz, ancak diğer yürütme bağlamının adını bilmeniz ve kullandığınız başvurunun kapsamda olması gerekir. **Hedef** liste, diğer yürütme bağlamlarına daha iyi erişim sağlar.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Visual Studio’da uygulamaların hatalarını ayıklama](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
-- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md)
+- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017)
 - [Uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md)
-- [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md)
+- [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)
 - [HTML, CSS ve JavaScript'te hata ayıklama örnek kodu](../debugger/debug-html-css-and-javascript-sample-code.md)
-- [Hızlı Başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)
+- [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)
 - [WebView denetiminde hata ayıklama](../debugger/debug-a-webview-control.md)
 - [Ürün desteği ve erişilebilirlik](https://visualstudio.microsoft.com/vs/support/)

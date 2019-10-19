@@ -1,7 +1,7 @@
 ---
-title: XCode ve Visual Studio arasındaki eşitleme | Microsoft Docs
+title: Xcode ve Visual Studio arasındaki değişiklikleri eşitleyin | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.assetid: c71a4d7c-120e-4559-a114-3a99c4b860a9
 ms.technology: vs-ide-mobile
@@ -10,43 +10,49 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xamarin
-ms.openlocfilehash: 665eafb9a564ffc140e2784665b5f872eaf0eec9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5d7d7fab8080028da0ca906b0e75ddf2bf0f1f8c
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818273"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589118"
 ---
-# <a name="sync-changes-between-xcode-and-visual-studio"></a>XCode ve Visual Studio arasındaki eşitleme değişiklikleri
-Microsoft Visual C++ mobil geliştirme bileşeni için PC ve Mac arasındaki iş eşitlenmesi uzak yetenekleri içerir Visual Studio ve Mac makinelerinizin birlikte kullanıldığında, iOS projenizi XCode içinde açmak için kullanabileceğiniz Visual Studio'da Uygulama projeleri için yeni seçenekler kullanılabilir kodunuzu XCode ile Visual Studio arasında taşıma ve geçici XCode proje dizinini Temizle.
+# <a name="sync-changes-between-xcode-and-visual-studio"></a>Xcode ve Visual Studio arasında eşitleme değişiklikleri
 
- Uzak makine seçenekleri kullanmak için projenizin bir iOS uygulaması projesinin olmalıdır ve Visual Studio Mac ile eşleştirilmek Önkoşullar ve Mac ile eşleştirme hakkında yönergeler için bkz [yükleme ve yapılandırma araçları kullanarak iOS derleme](../cross-platform/install-and-configure-tools-to-build-using-ios.md).
+Visual Studio 'da C++ bileşenlerle mobil geliştirme, bilgisayarınızı bilgisayarınız ile Mac arasında eşitlemek için uzak özellikleri içerir. Visual Studio ve Mac makineleriniz eşlendiğinde, Visual Studio 'da projenizi Xcode 'da açmak, kodunuzu Xcode ve Visual Studio arasında taşımak ve geçici Xcode proje dizinini temizlemek için kullanabileceğiniz yeni seçenekler vardır.
+
+Uzak makine seçeneklerini kullanmak için projenizin bir iOS uygulama projesi olması ve Visual Studio 'Nun Mac ile eşleştirilmelidir. Bir Mac 'i eşleştirmeye ilişkin Önkoşullar ve yönergeler için bkz. [iOS kullanarak derlemek için araçları yükleyip yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md).
 
 ## <a name="the-remote-machine-menu"></a>Uzak makine menüsü
- İçinde **Çözüm Gezgini**, bağlam menüsünü görüntülemek için bir iOS uygulaması projesine sağ tıklayın. Seçin **uzak makine** uzak seçeneklerini göstermek için öğesi.
 
- ![Çözüm Gezgini'nde uzak makine menü öğesi](../cross-platform/media/cppmdd_u2_remotemachine_menu.jpg "CPPMDD_U2_RemoteMachine_Menu")
+**Çözüm Gezgini**, bağlam menüsünü göstermek Için bir iOS uygulama projesine sağ tıklayın. Kullanılabilir uzak seçenekleri göstermek için **uzak makine** öğesini seçin.
 
- Bu komutlar, projenizi, Xcode'da açın yerel değişiklikleri veya projenin bütünü Visual Studio ile XCode arasında taşıma ve geçici dosyalar uzak makinede temiz olanak tanır.
+![Çözüm Gezgini uzak makine menü öğesi](../cross-platform/media/cppmdd_u2_remotemachine_menu.jpg "CPPMDD_U2_RemoteMachine_Menu")
 
-### <a name="open-in-xcode"></a>Xcode'da Aç
- Visual Studio, XCode projesinde açmak için **uzak makine** alt seçin **Xcode'da açın** eşleştirilmiş uzak makinede Seçili projeyi açmak için. Vcremote sunucunun, Mac'te XCode açmak ve projenin bir kopyasını içeren, Mac'te oluşturulan geçici bir dizine gitmek için kullanılır. Visual Studio projesi için kullanılan geçici dizini gösteren bir iletişim kutusu görüntüler. Uzak makinede gerçekleştirilen eylemleri de gösterilir **çıkış** Visual Studio'daki. Bunları görmek için seçmeniz gerekebilir **Visual C++ uzak makine** içinde **çıktıyı Göster** en üstündeki açılan **çıkış** penceresi.
+Bu komutlar, projenizi Xcode 'da açmanıza, yerel değişiklikleri veya tüm projeyi Visual Studio ile Xcode arasında taşımanıza ve uzak makinedeki geçici dosyaları temizleyebilmesine olanak sağlar.
 
- ![Çıkış penceresi, uzak makine eylemleri gösterir. ](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")
+## <a name="open-in-xcode"></a>Xcode 'da aç
 
- Mac'inizde, kod ve kaynakları, film şeritleri ve eylemleri düzenlemek için XCode araçları kullanabilirsiniz. Visual Studio'da iOS uygulaması projenizin "Açılan içindeki değişiklikleri uzak makinede yapılabilir göstermek için XCode ile" açıklanıyor. Düzenlemeleriniz tamamlandıktan sonra uzak konumdan çekme veya artımlı çekme uzak komutlarının değişiklikleri geri Visual Studio projenize kopyalamak için kullanabilirsiniz.
+Projeyi Xcode 'da Visual Studio 'dan açmak için, **uzak makine** alt menüsünde, eşlenen uzak makinede seçili projeyi açmak Için **Xcode 'da aç** ' ı seçin. @No__t_0 sunucusu Mac 'inizde Xcode 'u açmak için kullanılır ve Mac 'inizde projenin bir kopyasını içeren geçici bir dizine gidin. Visual Studio, proje için kullanılan geçici dizini gösteren bir iletişim kutusu açılır. Uzak makinede gerçekleştirilen eylemler, Visual Studio 'daki **Çıkış** penceresinde de gösterilir. Bunları görmek için **Çıkış** penceresinin en üstündeki açılan **menüden çıktıyı göster** açılan menüsünde  **C++ Visual uzak makine** ' yi seçmeniz gerekebilir.
 
-### <a name="push-to-remote-and-incremental-push-to-remote"></a>Uzak ve artımlı anında iletme uzaktan gönderin
- Visual Studio'da iOS uygulaması projeniz değişiklikler yaptıysanız anında iletme uzaktan ve uzak komutları için artımlı gönderin eşleştirilmiş uzak makineye değiştirilen proje dosyalarını taşımak için kullanılabilir. Uzak komut gönderme tüm proje dosyaları uzak makineye kopyalar. Artımlı anında uzaktan komut için yalnızca değiştirilen dosyalar uzak makineye kopyalar. Küçük değişiklikler ile büyük projeleri için artımlı komut süreyi ve bant genişliği kaydedebilirsiniz.
+![Çıkış penceresi, uzak makine eylemlerini gösterir.](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")
 
- Mac bilgisayarınızda, Visual Studio'daki proje dosyaları kopyalamak için **Çözüm Gezgini**, bağlam menüsünü açmak için iOS uygulama projesine sağ tıklayın. Seçin **uzak makine** ve seçmeniz **uzak konuma itme** veya **uzaktan için artımlı gönderin** Mac için Visual Studio'dan proje dosyalarını kopyalamak
+Mac 'inizde, kodunuzu ve kaynaklarınızı, film şeritlerinizi ve eylemlerinizi düzenlemek için tüm Xcode araçlarını kullanabilirsiniz. Visual Studio 'da, uzak makinede değişikliklerin yapıldığını belirtmek için iOS uygulama projenize "Xcode içinde açılan" ile açıklama eklenir. Düzenlemeleriniz tamamlandıktan sonra, değişiklikleri Visual Studio projenize geri kopyalamak için uzak veya artımlı çekme aracılığıyla uzak komutlardan çekme seçeneğini kullanabilirsiniz.
 
-### <a name="pull-from-remote-and-incremental-pull-from-remote"></a>Uzak konumdan artımlı ve uzakta çekme isteneceğini
- Xcode'da projenize herhangi bir değişiklik yaptıktan sonra değişiklikleri geri projeleri eşitlenmiş şekilde tutmanızı sağlayacak Visual Studio'ya taşıyın.
+## <a name="push-to-remote-and-incremental-push-to-remote"></a>Uzak ve artımlı gönderimi uzak 'a gönder
 
- Mac bilgisayarınızda, Visual Studio'daki proje dosyaları kopyalamak için **Çözüm Gezgini**, bağlam menüsünü açmak için iOS uygulama projesine sağ tıklayın. Seçin **uzak makine** ve seçmeniz **çekme uzaktan** veya **uzak konumdan artımlı çekme** proje dosyaları, Mac için Visual Studio kopyalamak için.
+Visual Studio 'da iOS uygulama projenizde değişiklik yaptıysanız, değiştirilen proje dosyalarını eşleştirilmiş uzak makineye taşımak için uzak ve artımlı gönderimi uzak komutlara Gönder ' i kullanabilirsiniz. Uzak komuta gönderim, tüm proje dosyalarını uzak makineye kopyalar. Uzak komuta artımlı gönderimi yalnızca değiştirilen dosyaları uzak makineye kopyalar. Küçük değişikliklerle büyük projeler için, artımlı komut zaman ve bant genişliği tasarrufu sağlayabilir.
 
-### <a name="clean-remote"></a>Uzak öğeyi Temizle
- Uzaktan temizleme komutu, uzak makinedeki geçici proje dizininde bulunan dosyaları silmek için kullanabilirsiniz. Herhangi bir kaynak dosyaları veya derleme ürünler dahil olmak üzere, dizinin içeriklerini Mac'inizde kaldırılır Geri çekme uzaktan veya artımlı çekme uzaktan kullanarak uzaktan temizleme komutu kullanmadan önce Visual Studio için tutmak istediğiniz herhangi bir değişiklik eşitlendiğinden emin olun.
+Proje dosyalarını Mac 'nize kopyalamak için, Visual Studio 'da **Çözüm Gezgini**' de, içerik menüsünü açmak Için iOS uygulama projesine sağ tıklayın. **Uzak makine** ' yi seçin ve proje dosyalarını Visual Studio 'dan **Mac 'e kopyalamak için uzak ya da** **artımlı gönder** ' i seçin.
 
- Uzak makinede Visual Studio'da geçici proje dizini temizlemek için **Çözüm Gezgini**, bağlam menüsünü açmak için iOS uygulama projesine sağ tıklayın. Seçin **uzak makine** ve **temiz uzak** Mac'inizdeki proje dizini dosyaların kaldırmak için
+## <a name="pull-from-remote-and-incremental-pull-from-remote"></a>Uzak ve artımlı alma 'dan uzaktan çekin
+
+Xcode 'da projenizde değişiklik yaptıktan sonra, projeleri eşitlenmiş halde tutmak için değişiklikleri Visual Studio 'ya geri taşıyın.
+
+Proje dosyalarını Mac 'Inizden kopyalamak için, Visual Studio 'da **Çözüm Gezgini**' de, içerik menüsünü açmak Için iOS uygulama projesine sağ tıklayın. **Uzak makineyi** seçin ve proje dosyalarını Mac 'Inizden Visual Studio 'ya kopyalamak için **uzak veya** **artımlı** alma seçeneklerinden birini belirleyin.
+
+## <a name="clean-remote"></a>Uzak öğeyi temizle
+
+Uzak makinedeki geçici proje dizinindeki dosyaları silmek için temizle uzak komutunu kullanabilirsiniz. Kaynak dosya veya derleme ürünleri dahil olmak üzere dizin içeriği Mac 'inizde kaldırılır. Temiz uzak komutunu kullanmadan önce uzak veya artımlı çekme 'yi kullanarak Visual Studio 'ya geri dönmek istediğiniz değişiklikleri eşitlediğinizden emin olun.
+
+Uzak makinedeki geçici proje dizinini temizlemek için, Visual Studio 'da **Çözüm Gezgini**'de, içerik menüsünü açmak Için iOS uygulama projesine sağ tıklayın. Mac 'Inizden proje dizin dosyalarını kaldırmak için **uzak makine** ' yi seçin ve **Uzaktan temizle** ' yi seçin.

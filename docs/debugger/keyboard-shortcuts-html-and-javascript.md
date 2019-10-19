@@ -1,69 +1,64 @@
 ---
 title: Klavye kısayolları (HTML ve JavaScript) | Microsoft Docs
-ms.date: 03/28/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-ms.assetid: 8d44425a-6584-477d-932e-4e10d5e79511
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af3ddb3d04b3a864a26149f88fa15960d2c2b2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e7f800a74fb1cb9d0909bd1f95571eb7a3c27b06
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905597"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588961"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>Klavye kısayolları (HTML ve JavaScript)
 
-::: moniker range=">=vs-2019"
- Klavye kısayolları Visual Studio'da Node.js uygulamaları ile Visual Studio'da hata ayıklama için **Node.js geliştirme** iş yükü yüklenmiş.
-::: moniker-end
-::: moniker range="vs-2017"
- HTML ve JavaScript kullanarak UWP uygulamalarında hata ayıklamaya yönelik Visual Studio'daki klavye kısayollarını.
-::: moniker-end
+HTML ve JavaScript kullanarak UWP uygulamalarında hata ayıklamak için Visual Studio 'da klavye kısayolları.
 
-## <a name="general-shortcuts"></a>Genel kısayolları
+## <a name="general-shortcuts"></a>Genel kısayollar
 
- Bu kısayollar, HTML ve JavaScript kullanarak UWP uygulamaları için tüm araçlar arasında çalışır.
+ Bu kısayollar, HTML ve JavaScript kullanarak UWP uygulamalarına yönelik tüm araçların tamamında çalışır.
 
 |Eylem|Kısayol|
 |------------|--------------|
 |Windows uygulamasını Yenile|Ctrl+Shift+R|
-|Windows uygulamasını yeniden başlatın|Ctrl+Shift+F5|
+|Windows uygulamasını yeniden Başlat|Ctrl+Shift+F5|
 |Hata ayıklamayı Durdur|Shift+F5|
-|Performans ve tanılama hub'ı açın|Alt+F2|
+|Performans ve tanılama hub 'ını aç|Alt+F2|
 
-## <a name="javascript-console-shortcuts"></a>JavaScript Konsolu kısayollarını
+## <a name="javascript-console-shortcuts"></a>JavaScript Konsol kısayolları
 
- Bu kısayollar, JavaScript konsol penceresinde kullanın.
+ JavaScript Konsol penceresinde bu kısayolları kullanın.
 
 |Eylem|Kısayol|
 |------------|--------------|
-|Bir konsol komutunu çalıştırın|Enter|
-|Konsolu Temizle|Esc|
-|Tek satır ve çok satırlı modu arasında geçiş|Ctrl+Alt+M|
+|Konsol komutu çalıştırma|Enter|
+|Konsolu temizle|Esc|
+|Tek satırlı ve çok satırlı mod arasında geçiş yap|Ctrl + alt + a|
 
 ## <a name="dom-explorer-shortcuts"></a>DOM Gezgini kısayolları
 
- Bu kısayollar DOM Gezgini'nde kullanın.
+ Bu kısayolları DOM Gezgini 'nde kullanın.
 
 |Eylem|Kısayol|
 |------------|--------------|
-|Öğe Seç|Ctrl+B|
-|Görüntüleme ve Web sayfası vurgulama kutularını kullanırken gizleme arasında geçiş **öğe seçin**|Ctrl+Shift+I|
-|Kullanarak değişiklikleri **HTML olarak Düzenle**|Ctrl+Enter|
-|Kullanarak değişiklikleri atmak **HTML olarak Düzenle**|Esc|
-|1 seçili CSS değerini artırın|Yukarı Ok|
-|1 seçili CSS değeri Azalt|Aşağı Ok|
+|Öğe seçin|Ctrl+B|
+|**Select öğesi** kullanılırken Web sayfası vurgulama kutularını görüntüleme ve gizleme arasında geçiş yap|Ctrl+Shift+I|
+|**HTML olarak Düzenle** kullanarak değişiklikleri Yürüt|Ctrl+Enter|
+|**HTML olarak Düzenle** 'yi kullanarak değişiklikleri at|Esc|
+|Seçili CSS değerini 1 artır|Yukarı Ok|
+|Seçili CSS değerini 1 azalt|Aşağı Ok|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md)
-- [Hızlı Başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)
-- [Hızlı Başlangıç: JavaScript hatalarını ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)
+- [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017)
+- [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)
+- [Hızlı Başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)

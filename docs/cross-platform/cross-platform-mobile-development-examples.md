@@ -1,7 +1,7 @@
 ---
 title: Platformlar arası mobil geliştirme örnekleri | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,44 +12,45 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: b3980273e746b5f6dacd2d8d612a5e5e7dfe2a8e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 31619757684811fb5090e6edb05c464be59fa4dd
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62819425"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589008"
 ---
 # <a name="cross-platform-mobile-development-examples"></a>Platformlar arası mobil geliştirme örnekleri
-Çeşitli platformlar arası Mobil Geliştirme için Visual C++ tarafından yüklenmiş şablonlar uzmanlardan için kullanabileceğiniz tam örnekler oluşturur. Ayrıca, Windows Geliştirme Merkezi indirip Visual Studio'da denemenin birkaç örnek uygulamaları vardır.
 
-- [Merhaba-JNI Android uygulama örneği](https://code.msdn.microsoft.com/hello-jni-Android-790ab73d)
+**Mobil geliştirme C++**  tarafından iş yükü ile yüklenen şablonların birkaçı, bilgi almak için kullanabileceğiniz tüm örnekleri üretir. Ayrıca, Windows Geliştirme Merkezi 'nde, Visual Studio 'da indirebileceğiniz ve deneyebileceğiniz birkaç örnek uygulama vardır.
 
-   Bu örnek, Android NDK hello JNI uygulamanızın bir bağlantı noktasıdır. Örnek bir uçtan uca Java yerel arabirim "Hello World" uygulaması gösterir. Paylaşılan bir kitaplıkta uygulanan yerel bir yöntem bir dize yükler ve sonra da uygulamayı görüntüler.
+- [Merhaba-JNI Android uygulaması örneği](https://code.msdn.microsoft.com/hello-jni-Android-790ab73d)
 
-- [Merhaba-gl2 Android uygulama örneği](https://code.msdn.microsoft.com/hello-gl2-Android-3b61896c)
+   Bu örnek, Android NDK Hello-JNI uygulamasının bir bağlantı noktasıdır. Örnek, uçtan uca bir Java Native Interface "Merhaba Dünya" uygulamasını gösterir. Paylaşılan bir kitaplıkta uygulanan yerel bir yöntemden bir dize yükler ve ardından uygulamada görüntüler.
 
-   Bu örnek, Android NDK hello gl2 uygulamanın bir bağlantı noktasıdır. Örnek bir uçtan uca Java yerel arabirimi Android OpenGL uygulaması gösterir. Bu, OpenGL ES 2.0 gölgelendirici API'leri kullanarak bir üçgen çizer.
+- [Merhaba-GL2 Android uygulama örneği](https://code.msdn.microsoft.com/hello-gl2-Android-3b61896c)
 
-- [Bit eşlem plazma Android uygulaması örneği](https://code.msdn.microsoft.com/Bitmap-Plasma-Android-77ae296a)
+   Bu örnek, Android NDK Hello-GL2 uygulamasının bir bağlantı noktasıdır. Örnek, uçtan uca bir Java Native Interface Android OpenGL uygulamasını gösterir. OpenGL ES 2,0 gölgelendirici API 'Lerini kullanarak bir üçgen çizer.
 
-   Bu örnek, Android NDK bit eşlem plazma uygulamanın bir bağlantı noktasıdır. Örnek bir uçtan uca Java yerel arabirimi Android OpenGL ES 2.0 uygulamasını gösterir. Bu, doğrudan işlenmesini plazma efektini oluşturmak için Android bit eşlem piksel arabellekler gösterir.
+- [Bit eşlem plama Android uygulaması örneği](https://code.msdn.microsoft.com/Bitmap-Plasma-Android-77ae296a)
 
-- [TwoLibs Android kitaplığı örneği](https://code.msdn.microsoft.com/TwoLibs-Android-Library-6396e5c4)
+   Bu örnek, Android NDK bit eşlem plama uygulamasının bir bağlantı noktasıdır. Örnek, uçtan uca bir Java Native Interface Android OpenGL ES 2,0 uygulamasını gösterir. Bir plama efekti oluşturmak için Android bit eşlem piksel arabelleklerinin doğrudan işlemesini gösterir.
 
-   Bu örnek, Android NDK TwoLibs örnek bir bağlantı noktasıdır. Dinamik olarak yüklenen bir paylaşılan kitaplık hem bir Java yerel arabirimi uygulamasından adlı bir yöntem uygulayan bir statik C++ Android yerel kitaplığı kullanır. Bu örnek statik/dinamik paylaşılan kitaplıklar Visual Studio 2015 ile bir uçtan uca JNI Android uygulaması oluşturmak için nasıl kullanılacağını anlamak, geliştiriciler için iyi bir başlangıç noktasıdır.
+- [Twkaybs Android kitaplığı örneği](https://code.msdn.microsoft.com/TwoLibs-Android-Library-6396e5c4)
 
-- [Çay Pot Android uygulama örneği](https://code.msdn.microsoft.com/Tea-Pot-Android-Application-e7c05d73)
+   Bu örnek, Android NDK Twkaybs örneğinin bir bağlantı noktasıdır. Bu, hem dinamik olarak yüklenen paylaşılan bir kitaplığı hem de Java C++ yerel arabirim uygulamasından çağrılan bir yöntemi uygulayan statik bir Android yerel kitaplığını kullanır. Bu örnek, geliştiricilerin, Visual Studio ile uçtan uca bir JNı Android uygulaması oluşturmak için statik/dinamik paylaşılan kitaplıkları nasıl kullanacağınızı anlayabilmesi için iyi bir başlangıç noktasıdır.
 
-   Bu örnek, Android NDK çaydanlık uygulamanın bir bağlantı noktasıdır. Örnek bir uçtan uca Java yerel arabirimi Android OpenGL ES 2.0 uygulamasını gösterir.
+- [Tea Pot Android uygulaması örneği](https://code.msdn.microsoft.com/Tea-Pot-Android-Application-e7c05d73)
 
-- [MoreTeaPots Android uygulama örneği](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549)
+   Bu örnek, Android NDK Teade uygulamasının bir bağlantı noktasıdır. Örnek, uçtan uca bir Java Native Interface Android OpenGL ES 2,0 uygulamasını gösterir.
 
-   Bu örnek, Android NDK MoreTeaPots uygulamanın bir bağlantı noktasıdır. Örnek bir uçtan uca Java yerel arabirimi Android OpenGL uygulaması gösterir.
+- [Fazla Ekippots Android uygulaması örneği](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549)
 
-- [Test-libstdcpp Android kitaplığı örneği](https://code.msdn.microsoft.com/test-libstdcpp-Android-00b548f5)
+   Bu örnek, Android NDK. Teapots uygulamasının bir bağlantı noktasıdır. Örnek, uçtan uca bir Java Native Interface Android OpenGL uygulamasını gösterir.
 
-   Bu örnek Android NDK test bir bağlantı noktasıdır-libstdc ++ örnek, Visual Studio 2015 ile kullanılmak üzere özel olarak. Bu örnek standart kitaplığını nasıl kullanabileceğinizi anlamak, geliştiriciler için iyi bir başlangıç noktasıdır.
+- [test-libstdcpp Android kitaplığı örneği](https://code.msdn.microsoft.com/test-libstdcpp-Android-00b548f5)
 
-  Örneklerden birini Visual Studio'da açmak için zip dosyasını indirin ve açın **özellikleri** Gezgini'nde indirilen dosyanın sayfa. Seçin **Engellemeyi Kaldır** seçin sonra düğme **Tamam**. Uygun bir konuma ZIP dosyasının içeriğini ayıklayın, ardından ayıklanan örnek C++ klasörü açın ve çözüm dosyasını açın.
+   Bu örnek, özellikle Visual Studio ile birlikte kullanılmak üzere Android NDK test-libstdc + + örneğinin bir bağlantı noktasıdır. Bu örnek, geliştiricilerin standart kitaplığı kullanmayı anlayabilmesi için iyi bir başlangıç noktasıdır.
 
-  Örneği oluşturmak için basın **F7**, veya menü çubuğunda, **derleme**, **Çözümü Derle**.
+  Visual Studio 'daki örneklerden birini açmak için zip dosyasını indirin ve indirilen dosyanın **Özellikler** sayfasını Gezgin içinde açın. **Engellemeyi kaldır** düğmesini seçin ve ardından **Tamam**' ı seçin. ZIP dosyasının içeriğini uygun bir konuma ayıklayın, sonra ayıklanan örnekteki C++ klasörü açın ve çözüm dosyasını açın.
+
+  Örneği oluşturmak için **F7**tuşuna basın veya menü çubuğunda **Oluştur**, **çözüm oluştur**' u seçin.

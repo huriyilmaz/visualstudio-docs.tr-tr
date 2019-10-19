@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yerel kodda iş parçacığı adı ayarlama | Microsoft Docs'
+title: 'Nasıl yapılır: yerel kodda Iş parçacığı adı ayarlama | Microsoft Docs'
 ms.date: 12/17/2018
 ms.topic: conceptual
 dev_langs:
@@ -16,34 +16,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37a028fb5af099484d81374e52cfd12af727f94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a89dce28f33bef0ffdb13d6254b2ac6b86ac25db
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847544"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589031"
 ---
-# <a name="how-to-set-a-thread-name-in-native-code"></a>Nasıl yapılır: Yerel kodda iş parçacığı adı ayarlama
-İş parçacığı adlandırma herhangi bir sürümünü Visual Studio mümkündür. İş parçacığı adlandırma, ilgilendiğiniz iş parçacıkları tanımlamak için yararlıdır **iş parçacıkları** çalışan bir işleme hata ayıklama sırasında penceresi. İş parçacığı recognizably adlı sahip ayrıca kilitlenme dökümü İnceleme aracılığıyla ve performansını analiz etme çeşitli araçları kullanarak yakaladığında son İnceleme hata ayıklama gerçekleştirirken yararlı olabilir.
+# <a name="how-to-set-a-thread-name-in-native-code"></a>Nasıl Yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama
+Visual Studio 'nun herhangi bir sürümünde iş parçacığı adlandırması mümkündür. İş parçacığı adlandırması, çalışan bir işlemde hata ayıklarken **iş** parçacıkları penceresinde ilgilendiğiniz iş parçacıklarını tanımlamak için faydalıdır. Zaman uyumlu olarak adlandırılmış iş parçacıkları, kilitlenme bilgi döküm denetimi aracılığıyla ve çeşitli araçlar kullanılarak performans yakalamaları çözümlenirken de yararlı olabilir.
 
-## <a name="ways-to-set-a-thread-name"></a>Bir iş parçacığı adı ayarlama yolları
+## <a name="ways-to-set-a-thread-name"></a>İş parçacığı adı ayarlama yolları
 
-İş parçacığı adı ayarlamak için iki yolu vardır. İlk aracılığıyla olduğu [SetThreadDescription](https://docs.microsoft.com/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreaddescription) işlevi. Visual Studio hata ayıklayıcı işleme vm'sine bağlıyken belirli bir özel durum tarafından saniyedir. Her yaklaşımın avantajları ve uyarılar vardır.
+Bir iş parçacığı adı ayarlamak için iki yol vardır. İlki [Setthreaddescription](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreaddescription) işlevi aracılığıyla yapılır. İkincisi, Visual Studio hata ayıklayıcısı işleme iliştirirken belirli bir özel durum oluşturulur. Her yaklaşımın avantajları ve uyarıları vardır. @No__t_0 kullanımı, Windows 10, sürüm 1607 veya Windows Server 2016 ' den başlayarak desteklenir.
 
-Hatalarının ayıklanabileceğini belirtmekte yarar _hem_ yaklaşımları birlikte kullanılabilir, birbirinden bağımsız olarak çalışırlar mekanizmaları olduğundan, isterseniz.
+_Her iki yaklaşımın de_ , çalıştıkları mekanizmaların birbirinden bağımsız olduğu mekanizmalar tarafından birlikte kullanılabileceğini belirtmekte de dikkat edin.
 
-### <a name="set-a-thread-name-by-using-setthreaddescription"></a>Kullanarak bir iş parçacığı adı ayarlama `SetThreadDescription`
+### <a name="set-a-thread-name-by-using-setthreaddescription"></a>@No__t_0 kullanarak bir iş parçacığı adı ayarlama
 
-Avantajlar:
-* İş parçacığı adları olup olmadığını veya hata ayıklayıcı işleme SetThreadDescription çağrılan zaman bağlanmamış bağımsız olarak Visual Studio'da hata ayıklama sırasında görülebilir.
-* Visual Studio'da kilitlenme bilgi dökümü yükleyerek son İnceleme hata ayıklama yapılırken iş parçacığı adları görülebilir.
-* İş parçacığı adları da görünür gibi diğer araçları kullanarak [WinDbg](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools) hata ayıklayıcı ve [Windows Performans Çözümleyicisi](https://docs.microsoft.com/windows-hardware/test/wpt/windows-performance-analyzer) Performans Çözümleyicisi.
+Larından
+* Hata ayıklayıcının, SetThreadDescription çağrıldığında işleme bağlı olup olmadığına bakılmaksızın, Visual Studio 'da hata ayıklarken iş parçacığı adları görünür.
+* İş parçacığı adları, Visual Studio 'da bir kilitlenme dökümü yüklenirken, post-mordıtem hata ayıklama işlemi gerçekleştirilirken görülebilir.
+* Ayrıca, [WinDbg](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools) hata ayıklayıcısı ve [Windows Performans Çözümleyicisi](https://docs.microsoft.com/windows-hardware/test/wpt/windows-performance-analyzer) Performans Çözümleyicisi gibi diğer araçlar kullanılırken iş parçacığı adları da görünür.
 
-Uyarılar:
-* İş parçacığı adları, yalnızca Visual Studio 2017 sürüm 15.6 ve sonraki sürümlerinde görülebilir.
-* Bir kilitlenme hatalarını ayıklama son İnceleme döküm dosyası, iş parçacığı adları yalnızca kilitlenme Windows 10 sürüm 1607'ye, Windows Server 2016 veya sonraki Windows sürümlerinde oluşturulmuş olsa bile görülebilir.
+Uyarılar
+* İş parçacığı adları yalnızca Visual Studio 2017 sürüm 15,6 ve sonraki sürümlerinde görülebilir.
+* Post-mordıtem bir kilitlenme bilgi döküm dosyasında hata ayıklaması yaparken, iş parçacığı adları yalnızca kilitlenme Windows 10 sürüm 1607, Windows Server 2016 veya Windows 'un sonraki sürümlerinde oluşturulduysa görülebilir.
 
-*Örnek:*
+*Örneğinde*
 
 ```C++
 #include <windows.h>
@@ -61,20 +61,20 @@ int main()
 }
 ```
 
-### <a name="set-a-thread-name-by-throwing-an-exception"></a>Bir özel durum tarafından bir iş parçacığı adı ayarlama
+### <a name="set-a-thread-name-by-throwing-an-exception"></a>Özel durum oluşturarak iş parçacığı adı ayarlama
 
-Programınızda bir iş parçacığı adı ayarlama başka bir özel olarak yapılandırılmış bir özel durum atma tarafından istenen iş parçacığı adı Visual Studio hata ayıklayıcıya iletişim kurmak için yoludur.
+Programınızda bir iş parçacığı adı ayarlamaya yönelik başka bir yol da, özel olarak yapılandırılmış bir özel durum oluşturarak istenen iş parçacığı adını Visual Studio hata ayıklayıcısıyla iletmenin bir yoludur.
 
-Avantajlar:
-* Visual Studio'nun tüm sürümlerinde çalışır.
+Larından
+* Tüm Visual Studio sürümlerinde çalışmaktadır.
 
-Uyarılar:
-* Hata ayıklayıcı özel durum tabanlı yöntemi kullanıldığında bağlıysa, yalnızca çalışır.
-* Bu yöntemi kullanarak iş parçacığı adları dökümleri ya da Performans analiz araçlarını kullanılamaz.
+Uyarılar
+* Yalnızca hata ayıklayıcı özel durum tabanlı yöntemin kullanıldığı sırada eklenmişse işe yarar.
+* Bu yöntem kullanılarak ayarlanan iş parçacığı adları, dökümler veya performans analizi araçlarında kullanılamayacak.
 
-*Örnek:*
+*Örneğinde*
 
-`SetThreadName` İşlevi aşağıda gösterilen özel durum tabanlı bu yaklaşımı gösterir. İş parçacığı adı iş parçacığı için otomatik olarak kopyalanacaktır Not böylece belleği `threadName` parametresi serbest bırakılabilir sonra `SetThreadName` çağrısı tamamlandı.
+Aşağıda gösterilen `SetThreadName` işlevi bu özel durum tabanlı yaklaşımı gösterir. İş parçacığı adının, `SetThreadName` çağrısı tamamlandıktan sonra `threadName` parametresi için belleğin yayınlanabilmesi için iş parçacığına otomatik olarak kopyalanacağını unutmayın.
 
 ```C++
 //
@@ -111,4 +111,4 @@ void SetThreadName(DWORD dwThreadID, const char* threadName) {
 ## <a name="see-also"></a>Ayrıca Bkz.
 - [Çok İş Parçacıklı Uygulamaların Hatalarını Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Hata Ayıklayıcıda Verileri Görüntüleme](../debugger/viewing-data-in-the-debugger.md)
-- [Nasıl yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama](../debugger/how-to-set-a-thread-name-in-managed-code.md)
+- [Nasıl Yapılır: Yönetilen Kodda İş Parçacığı Adı Ayarlama](../debugger/how-to-set-a-thread-name-in-managed-code.md)
