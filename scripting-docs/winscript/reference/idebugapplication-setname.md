@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::SetName | Microsoft Docs
+title: 'IDebugApplication:: SetName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4ac0b253d5193fc507e2d74a2d9dbcdd893e9fdb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6a3e5115d4adc3fc3dfa93f10c90cb0d2b36f0e4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990758"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571109"
 ---
 # <a name="idebugapplicationsetname"></a>IDebugApplication::SetName
-Uygulama adını ayarlar.  
+Uygulamanın adını ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,20 +37,20 @@ HRESULT SetName(
   
 #### <a name="parameters"></a>Parametreler  
  `pstrName`  
- [in] Uygulamanın adı.  
+ 'ndaki Uygulamanın adı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem için sağlanan adı yapılan sonraki çağrılar döndürülür `IRemoteDebugApplication::GetName` yöntemi.  
+ Bu yönteme verilen ad, `IRemoteDebugApplication::GetName` metoduna sonraki çağrılarda döndürülür.  
   
- Bu yöntemi çağırmadan önce çağrılmalıdır `IProcessDebugManager::AddApplication` yöntemi.  
+ Bu yöntem, `IProcessDebugManager::AddApplication` yöntemi çağrılmadan önce çağrılmalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

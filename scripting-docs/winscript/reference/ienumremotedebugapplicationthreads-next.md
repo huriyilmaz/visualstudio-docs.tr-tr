@@ -1,5 +1,5 @@
 ---
-title: IEnumRemoteDebugApplicationThreads::Next | Microsoft Docs
+title: 'Ienumremotedebugapplicationthreads:: Next | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0bde09e2c8372e0bb7e73fabfbd1ad4d9aa6467e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 36d24ffaca05b64c05815124358024d3b88b0d74
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807205"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575172"
 ---
 # <a name="ienumremotedebugapplicationthreadsnext"></a>IEnumRemoteDebugApplicationThreads::Next
-`Next` Yöntemi sabit listesi sırası kesimleri belirtilen bir sayı alır.  
+@No__t_0 yöntemi, numaralandırma dizisinde belirtilen sayıda segment alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ HRESULT Next(
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Alınacak Segment sayısı.  
+ 'ndaki Alınacak segment sayısı.  
   
  `pprdat`  
- [out] Bir dizi döndürür `IRemoteDebugApplicationThread` alınmasını segmentleri temsil eden arabirim.  
+ dışı Alınmakta olan kesimleri temsil eden `IRemoteDebugApplicationThread` arabirimlerinden oluşan bir dizi döndürür.  
   
  `pceltFetched`  
- [out] Numaralandırıcı tarafından alınan parçaları gerçek sayısı.  
+ dışı Numaralandırıcı tarafından getirilen parçaların gerçek sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, belirtilen sayıda sabit listesi sırası segmentler alır.  
+ Bu yöntem, numaralandırma dizisinde belirtilen sayıda segment alır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IEnumRemoteDebugApplicationThreads Arabirimi](../../winscript/reference/ienumremotedebugapplicationthreads-interface.md)
