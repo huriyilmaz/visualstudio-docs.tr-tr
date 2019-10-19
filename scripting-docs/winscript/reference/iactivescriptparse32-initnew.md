@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParse32::InitNew | Microsoft Docs
+title: 'IActiveScriptParse32:: InitNew | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: 7c77aa16-f391-4c93-9f1a-4e529a9930b2
 caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 685c596caa61a5cbd5042fad3a1bfb39c349c1b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8b5304d60aed8145e7a68d89b2c6d4386db0d745
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009430"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561654"
 ---
-# <a name="iactivescriptparse32initnew"></a>IActiveScriptParse32::InitNew
-Komut dosyası altyapısı başlatır.  
+# <a name="iactivescriptparse32initnew"></a>IActiveScriptParse32:: InitNew
+Komut dosyası altyapısını başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,10 +27,10 @@ HRESULT InitNew(void);
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa veya `E_FAIL` , başlatma sırasında bir hata oluştu.  
+ Başarılı olursa `S_OK` döndürür veya başlatma sırasında bir hata oluştuysa `E_FAIL`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Komut dosyası altyapısı kullanılmadan önce aşağıdaki yöntemlerden birini çağrılmalıdır: `IPersist*::Load`, `IPersist*::InitNew`, veya `IActiveScriptParse32::InitNew`. Bu yöntem semantiği özdeş `IPersistStreamInit::InitNew`bu yöntem kendisine başlatmak için komut dosyası altyapısı söyler. Bu. Her ikisi de çağırmak için geçerli olmadığını göz önünde bulundurun `IPersist*::InitNew` veya `IActiveScriptParse32::InitNew` ve `IPersist*::Load`, veya çağırmak için geçerli değil `IPersist*::InitNew`, `IActiveScriptParse32::InitNew`, veya `IPersist*::Load` birden çok kez.  
+ Betik altyapısının kullanılabilmesi için aşağıdaki yöntemlerden biri çağrılmalıdır: `IPersist*::Load`, `IPersist*::InitNew` veya `IActiveScriptParse32::InitNew`. Bu yöntemin semantiği `IPersistStreamInit::InitNew` aynıdır, bu yöntem komut dosyası altyapısından kendisini başlatmasını söyler. @No__t_0 veya `IActiveScriptParse32::InitNew` ve `IPersist*::Load` çağırmak için geçerli değildir, ne de `IPersist*::InitNew`, `IActiveScriptParse32::InitNew` veya `IPersist*::Load` birden çok kez çağırmak için geçerli değildir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptParse32](../../winscript/reference/iactivescriptparse32.md)

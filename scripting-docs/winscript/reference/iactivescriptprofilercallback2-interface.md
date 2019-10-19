@@ -13,33 +13,33 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b0a0df287db477c5bf768798f200ea0d97de6d1e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 25f9616497192659df67feedfe16bd9ea0c5e3b1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63385936"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577308"
 ---
 # <a name="iactivescriptprofilercallback2-interface"></a>IActiveScriptProfilerCallback2 Arabirimi
-Belge nesne modeli (DOM) olaylar meydana geldiğinde bir profil oluşturucu nesnesini bildirmek için komut dosyası altyapısı tarafından kullanılan yöntemleri sağlar. Bu arabirim, profil oluşturucu nesne tarafından uygulanır.  
+Belge Nesne Modeli (DOM) olayları gerçekleştiğinde bir profil oluşturucu nesnesine bildirimde bulunan komut dosyası altyapısı tarafından kullanılan yöntemleri sağlar. Bu arabirim, profil oluşturucu nesnesi tarafından uygulanır.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)|DOM işlev çağrısı çalıştırmak için komut dosyası altyapısı gidip profil oluşturucu nesne bildirir.|  
-|[IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)|Profil oluşturucu komut dosyası motoru nesne çalıştıran bir DOM işlev çağrısı tamamlandı bildirir.|  
+|[IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)|Profil Oluşturucu nesnesine betik altyapısının bir DOM işlev çağrısı çalıştıracağınızı bildirir.|  
+|[IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)|Profil Oluşturucu nesnesine betik altyapısının bir DOM işlev çağrısını çalıştırmayı tamamladığını bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IActiveScriptProfilerCallback2` İlk Internet Explorer 9 ile yayımlanan arabirimi.  
+ @No__t_0 arabirimi ilk olarak Internet Explorer 9 ' da kullanıma sunuldu.  
   
- DOM çağırıyor olmayan işlev çağrılarının bildirimi tarafından sağlanır [Iactivescriptprofilercallback arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md).  
+ DOM 'a çağrı olmayan işlev çağrılarının bildirimi [ıactivescriptprofilercallback arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)tarafından sağlanır.  
   
 > [!NOTE]
-> Bir komut dosyası çalıştırılırken profil oluşturmayı durdurmak ve başlatmak özelliği eklemek için aşağıdaki yöntemleri çağırın. Bu yöntemleri kullanarak, tam çağrı yığınını edinebilirsiniz [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] başlattığınızda veya profil oluşturmayı durdurmak çalışıyor.  
+> Bir betik çalışırken profil oluşturmayı başlatma ve durdurma özelliğini eklemek için aşağıdaki yöntemleri çağırın. Bu yöntemleri kullanarak, profil oluşturmayı başlattığınızda veya durdurduğunuzda [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] çalışıyorsa, tüm çağrı yığınını elde edebilirsiniz.  
 > 
-> - Çağrı [IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md) profil oluşturma başlatıldı profil oluşturucu bildirir.  
->   - Çağrı [IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md) , kısa süre içinde profil oluşturmayı durdurur, profil oluşturucu bildirir.  
+> - Profil oluşturmayı başlattığınız profil oluşturucuyu bildirmek için [ıactivescriptprofilercontrol2:: CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md) çağırın.  
+>   - Profil oluşturucuyu yakında durdurulacağı profil oluşturucuya bildirmek için [ıactivescriptprofilercontrol2::P repareprofilerstop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md) çağırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Profil Oluşturucu Arabirimleri](../../winscript/reference/active-script-profiler-interfaces.md)

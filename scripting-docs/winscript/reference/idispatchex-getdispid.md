@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::GetDispID | Microsoft Docs
+title: 'IDispatchEx:: Getdıspıd | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95ab1d72e5b2f608c51ac6e56be1986df8945ec2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 57f0faf6004e2219600f0dbd63749a7e65ca438c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000866"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576599"
 ---
 # <a name="idispatchexgetdispid"></a>IDispatchEx::GetDispID
-Arka arkaya çağrı kullanılabilir, karşılık gelen DISPID tek üye adı eşlendiği `IDispatchEx::InvokeEx`.  
+Tek bir üye adını karşılık gelen bir DISPID ile eşleştirir, bu daha sonra `IDispatchEx::InvokeEx` sonraki çağrılarında kullanılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,20 +39,20 @@ HRESULT GetDispID(
   
 #### <a name="parameters"></a>Parametreler  
  `bstrName`  
- Eşleştirilecek adı geçirildi.  
+ Eşlenen ad geçirildi.  
   
  `grfdex`  
- Üye tanımlayıcısını almak için seçenekleri belirler. Bu, aşağıdaki değerleri birleşimi olabilir:  
+ Üye tanımlayıcısını alma seçeneklerini belirler. Bu, aşağıdaki değerlerin bir birleşimi olabilir:  
   
 |Değer|Açıklama|  
 |-----------|-------------|  
-|fdexNameCaseSensitive|Ad arama, büyük küçük harfe duyarlı bir şekilde yapılması istekler. Büyük küçük harfe duyarlı arama desteklemeyen nesnesiyle yoksayılabilir.|  
-|fdexNameEnsure|Üye zaten yoksa, oluşturulmuş olmasını ister. Yeni üye değeri ile oluşturulması gereken `VT_EMPTY`.|  
-|fdexNameImplicit|Çağıranın temel nesne açıkça belirtilmediğinde belirli bir adı bir üyesi için nesneleri arıyor gösterir.|  
-|fdexNameCaseInsensitive|Ad arama, büyük küçük harf duyarsız bir şekilde yapılması istekler. Büyük küçük harf duyarsız arama desteklemeyen nesnesiyle yoksayılabilir.|  
+|fdexNameCaseSensitive|Ad aramasının, büyük/küçük harfe duyarlı bir şekilde yapılmasını ister. , Büyük/küçük harfe duyarlı aramayı desteklemeyen nesne tarafından yoksayılabilir.|  
+|Fdexnamegarantilemek|Zaten mevcut değilse, üyenin oluşturulmasını ister. Yeni üyenin `VT_EMPTY` değer ile oluşturulması gerekir.|  
+|Fdexnameörtük|Temel nesne açıkça belirtilmediği zaman çağıranın belirli bir ada üye için nesne (ler) aradığını gösterir.|  
+|Fdexnamecaseduyarsız|Ad aramasının, büyük/küçük harfe duyarsız bir şekilde yapılmasını ister. , Büyük/küçük harfe duyarsız aramayı desteklemeyen nesne tarafından yoksayılabilir.|  
   
  `pid`  
- DISPID sonucu almak için çağırıcı tarafından ayrılan konuma işaretçisi. Bir hata oluşursa `pid` DISPID_UNKNOWN içerir.  
+ DISPID sonucu almak için çağıran tarafından ayrılan konuma yönelik işaretçi. Bir hata oluşursa, `pid` DISPID_UNKNOWN içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -61,14 +61,14 @@ HRESULT GetDispID(
 |-|-|  
 |`S_OK`|Başarılı.|  
 |`E_OUTOFMEMORY`|Bellek yetersiz.|  
-|`DISP_E_UNKNOWNNAME`|Adı bilinmiyor.|  
+|`DISP_E_UNKNOWNNAME`|Ad bilinmiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetDispID` yerine kullanılan `GetIDsOfNames` DISPID için belirtilen bir üyenin elde edilir.  
+ `GetDispID`, belirli bir üyenin DISPID 'sini almak için `GetIDsOfNames` yerine kullanılabilir.  
   
- Çünkü `IDispatchEx` eklenmesini ve üyelerinin DISPID değeri kümesini silme değil kalan sabit bir nesne ömrü boyunca sağlar.  
+ @No__t_0 üyelerin eklenmesi ve silinmesine izin verdiğinden, dispIDs kümesi bir nesnenin ömrü boyunca sabit kalmaz.  
   
- Kullanılmayan `riid` parametresinde `IDispatch::GetIDsOfNames` kaldırıldı.  
+ @No__t_1 kullanılmayan `riid` parametresi kaldırıldı.  
   
 ## <a name="example"></a>Örnek  
   
@@ -82,5 +82,5 @@ BSTR bstrName;
    // Use dispid  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDispatchEx Arabirimi](../../winscript/reference/idispatchex-interface.md)

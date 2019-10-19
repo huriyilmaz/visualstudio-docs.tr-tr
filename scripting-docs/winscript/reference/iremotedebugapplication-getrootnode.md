@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::GetRootNode | Microsoft Docs
+title: 'IRemoteDebugApplication:: GetRootNode | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ef8337e27bb5a666e8d5d8d38abcafb044da02ba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2a9d2579c15c2b986b3b7f6921ed0abc40cbf4f7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944218"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577486"
 ---
 # <a name="iremotedebugapplicationgetrootnode"></a>IRemoteDebugApplication::GetRootNode
-Uygulamayla ilişkili tüm düğümleri eklendiği uygulama düğümü döndürür.  
+Uygulama ile ilişkili tüm düğümlerin eklendiği uygulama düğümünü döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetRootNode(
   
 #### <a name="parameters"></a>Parametreler  
  `ppdanRoot`  
- [out] Hata ayıklama uygulama düğümü altında uygulamayla ilişkili tüm düğümleri eklenir.  
+ dışı Uygulama ile ilişkili tüm düğümlerin eklendiği hata ayıklama uygulaması düğümü.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem uygulama ile ilişkili olan tüm düğümleri eklendiği uygulama düğümü döndürür.  
+ Bu yöntem, altında uygulamayla ilişkili tüm düğümlerin eklendiği uygulama düğümünü döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplication Arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)

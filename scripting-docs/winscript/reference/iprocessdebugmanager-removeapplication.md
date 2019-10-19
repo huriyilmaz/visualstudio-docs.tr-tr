@@ -1,5 +1,5 @@
 ---
-title: IProcessDebugManager::RemoveApplication | Microsoft Docs
+title: 'Iprocessdebugmanager:: RemoveApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5c357fa5587d4fc5bf8c1752e20e7e0aa9df9835
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d079d9089dbc47ac272388c680fa585a3532eea8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944784"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576532"
 ---
 # <a name="iprocessdebugmanagerremoveapplication"></a>IProcessDebugManager::RemoveApplication
-Bir uygulamanın çalışmasını kaldırır uygulama listesi.  
+Çalışan uygulama listesinden bir uygulamayı kaldırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT RemoveApplication(
   
 #### <a name="parameters"></a>Parametreler  
  `dwAppCookie`  
- [in] Tarafından sağlanan tanımlama bilgisi `IProcessDebugManager::AddApplication` uygulama uygulama listesine eklenen zaman.  
+ 'ndaki Uygulama, uygulama listesine eklendiğinde `IProcessDebugManager::AddApplication` tarafından belirtilen tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir uygulamanın çalışmasını kaldırır. uygulama listesi.  
+ Bu yöntem, çalışan uygulama listesinden bir uygulamayı kaldırır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iprocessdebugmanager:: Addadpplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)    
  [IProcessDebugManager Arabirimi](../../winscript/reference/iprocessdebugmanager-interface.md)

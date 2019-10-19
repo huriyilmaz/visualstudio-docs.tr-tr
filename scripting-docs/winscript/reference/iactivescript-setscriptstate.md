@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::SetScriptState | Microsoft Docs
+title: 'IActiveScript:: SetScriptState | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 16a13b545ddd482f8aa143d289d46447370e23ac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ea947e00ffd5a3498261f4a3a8acd4791e8ace60
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935537"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577998"
 ---
 # <a name="iactivescriptsetscriptstate"></a>IActiveScript::SetScriptState
-Komut dosyası altyapısı belirli bir duruma koyar. Temel olmayan belirtme ana bilgisayar nesneleri veya çok kaynaklanan olmadan, bu yöntem temel olmayan iş parçacığından çağrılabilir [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md) arabirimi.  
+Komut dosyası altyapısını verilen duruma getirir. Bu yöntem, temel olmayan iş parçacıklarından, nesneleri barındırmak için temel olmayan bir belirtme çizgisine veya [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) arabirimine yol açmadan çağrılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT SetScriptState(
   
 #### <a name="parameters"></a>Parametreler  
  `ss`  
- [in] Komut dosyası altyapısı verilen durumuna ayarlar. İçinde tanımlanan değerlerden biri olabilir [SCRIPTSTATE numaralandırması](../../winscript/reference/scriptstate-enumeration.md) sabit listesi.  
+ 'ndaki Komut dosyası altyapısını belirtilen duruma ayarlar. [Scriptstate sabit](../../winscript/reference/scriptstate-enumeration.md) listesi numaralandırmasında tanımlanan değerlerden biri olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -45,17 +45,17 @@ HRESULT SetScriptState(
 |Dönüş Değeri|Açıklama|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
-|`E_FAIL`|Komut dosyası altyapısı başlatılmış durumuna geçişi desteklemez. Konak gerekir bu komut dosyası altyapısı AT oluşturmak, başlatmak ve aynı etkiyi elde etmek için yeni bir komut dosyası altyapısı yüklenemiyor.|  
-|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenen başlatıldı veya) ve bu nedenle başarısız oldu.|  
-|`OLESCRIPT_S_PENDING`|Yöntemi başarıyla kuyruğa alındı, ancak durumu henüz değişmedi. Durum değişikliklerini site çağrılacağı geri aracılığıyla [IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md) yöntemi.|  
-|`S_FALSE`|Yöntem başarılı oldu, ancak komut zaten belirtilen durumda olan.|  
+|`E_FAIL`|Betik altyapısı, başlatılmış duruma geri geçişi desteklemez. Konağın bu komut dosyası altyapısını atıp aynı etkiyi elde etmek için yeni bir betik altyapısı oluşturması, başlatması ve yüklemesi gerekir.|  
+|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenmemiş veya başlatılmamış) ve bu nedenle başarısız oldu.|  
+|`OLESCRIPT_S_PENDING`|Yöntem başarıyla sıraya alındı, ancak durum henüz değiştirilmedi. Durum değiştiğinde, site [IActiveScriptSite:: OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md) yöntemi aracılığıyla geri çağırılır.|  
+|`S_FALSE`|Yöntem başarılı oldu, ancak betik zaten verilen durumda.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Komut dosyası motoru durumu bölümü, komut dosyası motoru durumu hakkında daha fazla bilgi için bkz. [Windows betik motorları](../../winscript/windows-script-engines.md) .  
+ Scripting Engine durumları hakkında daha fazla bilgi için [Windows komut dosyası altyapılarının](../../winscript/windows-script-engines.md) komut dosyası altyapısı durumları bölümüne bakın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IActiveScript::Clone](../../winscript/reference/iactivescript-clone.md)   
- [IActiveScript::GetScriptDispatch](../../winscript/reference/iactivescript-getscriptdispatch.md)   
- [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)   
- [IActiveScriptParse::ParseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IActiveScript:: Clone](../../winscript/reference/iactivescript-clone.md)    
+ [IActiveScript:: GetScriptDispatch](../../winscript/reference/iactivescript-getscriptdispatch.md)    
+ [IActiveScript:: InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)    
+ [IActiveScriptParse::P arseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md)    
  [IActiveScriptSite::GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md)

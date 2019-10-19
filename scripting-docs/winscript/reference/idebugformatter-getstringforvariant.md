@@ -1,5 +1,5 @@
 ---
-title: IDebugFormatter::GetStringForVariant | Microsoft Docs
+title: 'Idebugformatter:: GetStringForVariant | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 901bf9648d4d16faf7386b528cc3fd877070a5b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5f703396190f1fb7791306ee9e389b676e749f8f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996849"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576365"
 ---
 # <a name="idebugformattergetstringforvariant"></a>IDebugFormatter::GetStringForVariant
-Belirtilen değişken değerini temsil eden bir dize döndürür.  
+Verilen varyant değerini temsil eden bir dize döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ HRESULT GetStringForVariant(
   
 #### <a name="parameters"></a>Parametreler  
  `pvar`  
- [in] Bir dize olarak temsil etmek için değişken.  
+ 'ndaki Dize olarak temsil edilecek DEĞIŞKEN.  
   
  `nRadix`  
- [in] Sayısal değerler için kullanılacak sayı tabanı.  
+ 'ndaki Sayısal değerler için kullanılacak taban tabanı.  
   
  `pbstrValue`  
- [out] Temsil eden dize `pvar`.  
+ dışı @No__t_0 temsil eden dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, belirtilen değişken değeri temsil eden bir dize döndürür.  
+ Bu yöntem verilen varyant değerini temsil eden bir dize döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugFormatter Arabirimi](../../winscript/reference/idebugformatter-interface.md)

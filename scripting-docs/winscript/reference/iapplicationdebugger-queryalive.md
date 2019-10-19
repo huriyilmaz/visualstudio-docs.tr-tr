@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::QueryAlive | Microsoft Docs
+title: 'Iapplicationdebugger:: QueryAlive | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6b4c455305116863a4a8ad16ff21cd7554a36239
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 867d00a4ef42aa8759496540edc1937fc6f2a0a6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991188"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577821"
 ---
 # <a name="iapplicationdebuggerqueryalive"></a>IApplicationDebugger::QueryAlive
-Hata ayıklayıcı duyarlı olup olmadığını gösterir.  
+Hata ayıklayıcının yanıt verdiğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,19 +34,19 @@ HRESULT QueryAlive();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, hata ayıklayıcı duyarlı olup olmadığını gösterir. Bu yönteme ait her zaman döndürmelidir `S_OK`.  
+ Bu yöntem, hata ayıklayıcının yanıt verdiğini gösterir. Bu yöntemin uygulamaları her zaman `S_OK` döndürmelidir.  
   
- Hata ayıklayıcı işlemi beklenmedik şekilde sonlandırılırsa, COM düzenleme proxy bu yöntem çağrıları için bir hata döndürür.  
+ Hata ayıklayıcı işlemi beklenmedik şekilde sonlandırılırsa, COM Bu metoda yapılan çağrılar için sıralama proxy 'sinden bir hata döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IApplicationDebugger Arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)

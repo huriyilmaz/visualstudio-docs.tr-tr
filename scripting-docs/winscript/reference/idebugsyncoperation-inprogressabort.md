@@ -1,5 +1,5 @@
 ---
-title: IDebugSyncOperation::InProgressAbort | Microsoft Docs
+title: 'Idebugsyncoperation:: InProgressAbort | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a794ea70d6d2fe937afb311e6961d53f22bd7ac2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 40974c738c071e52648297ac90a0ab89d9681435
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004839"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576664"
 ---
 # <a name="idebugsyncoperationinprogressabort"></a>IDebugSyncOperation::InProgressAbort
-Bir başka bir iş parçacığı üzerinde devam eden işlemi iptal eder.  
+Başka bir iş parçacığında sürmekte olan bir işlemi iptal eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,21 +34,21 @@ HRESULT InProgressAbort();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_NOTIMPL`|İşlem iptal edilemez.|  
+|`E_NOTIMPL`|İşlem iptal edilemiyor.|  
 |`E_ABORT`|İşlem tamamlanamadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklama işlem yöneticisi, hata ayıklayıcı iş parçacığı başka bir iş parçacığı sürmekte olan bir işlemi iptal etmek için bu yöntemi çağırır.  
+ Işlem hata ayıklama Yöneticisi, başka bir iş parçacığında sürmekte olan bir işlemi iptal etmek için bu yöntemi hata ayıklayıcı iş parçacığı içinden çağırır.  
   
- Varsa `InProgressAbort` yöntemi işlemini tamamlayamıyor döndürür `E_ABORT` olabildiğince çabuk. Bu yöntem döndürebilir `E_NOTIMPL` , işlem iptal edilemez.  
+ @No__t_0 yöntemi işlemi tamamlayamadıysanız, mümkün olan en kısa sürede `E_ABORT` döndürür. İşlem iptal edilemezse, bu yöntem `E_NOTIMPL` döndürebilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugSyncOperation Arabirimi](../../winscript/reference/idebugsyncoperation-interface.md)

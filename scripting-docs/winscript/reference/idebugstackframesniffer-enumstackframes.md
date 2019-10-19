@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrameSniffer::EnumStackFrames | Microsoft Docs
+title: 'Idebugstackframesniffer:: EnumStackFrames | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da0d6d46a3bbc508308c689b4e10bea15501fad3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 01a2eab1698cd98130b496e58a74cdfdd091efd3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63005738"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576715"
 ---
 # <a name="idebugstackframesnifferenumstackframes"></a>IDebugStackFrameSniffer::EnumStackFrames
-Geçerli iş parçacığı için yığın çerçevelerinin bir numaralandırıcı döndürür.  
+Geçerli iş parçacığı için yığın çerçevelerinin bir Numaralandırıcı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT EnumStackFrames(
   
 #### <a name="parameters"></a>Parametreler  
  `ppedsf`  
- [out] Geçerli iş parçacığı için yığın çerçevesi için Numaralandırıcı.  
+ dışı Geçerli iş parçacığı için yığın çerçevelerinin numaralandırıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın çerçeve Numaralandırıcı en yakın zamanda gönderilen çerçeve ile başlayarak yığının üstten başlayarak çerçeveleri döndürür.  
+ Yığın çerçeve numaralandırıcısı, en son gönderilen çerçeveden başlayarak yığının en üstünde başlayan çerçeveleri döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugStackFrameSniffer Arabirimi](../../winscript/reference/idebugstackframesniffer-interface.md)

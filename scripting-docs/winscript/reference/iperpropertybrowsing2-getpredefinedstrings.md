@@ -1,5 +1,5 @@
 ---
-title: IPerPropertyBrowsing2::GetPredefinedStrings | Microsoft Docs
+title: 'IPerPropertyBrowsing2:: GetPredefinedStrings | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5a5f71ba91c65a8d99d831c777fc47fe9233fc18
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 55ade724dd9ee5d59feb9d04c5b525ca839a9cec
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944864"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576769"
 ---
 # <a name="iperpropertybrowsing2getpredefinedstrings"></a>IPerPropertyBrowsing2::GetPredefinedStrings
-Bu özellik için olası değeri temsil eden dize işaretçilerini sayılan bir dizi liste kutusunu doldurmak çağıranın izin verir.  
+Çağıranın, bu özellik için olası değerleri temsil eden, sayılı bir dizi dize işaretçileriyle bir liste kutusu doldurmasına izin verir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,16 +39,16 @@ HRESULT GetPredefinedStrings(
   
 #### <a name="parameters"></a>Parametreler  
  `dispid`  
- [in] Çağıranın dize listesi isteyen özellik tanımlayıcısı gönderme.  
+ 'ndaki Çağıranın dize listesi istediği özelliğin dağıtım tanıtıcısı.  
   
  `pCaStrings`  
- [out] Öğe sayısı ve dize işaretçilerini yöntemi olarak ayrılan dizi adresini içeren sayılan, arayana ayrılan dizi yapısı işaretçisi. Yöntem başarısız olursa, bellek tahsis edilir ve yapısı içeriğini tanımsızdır.  
+ dışı Bir dizi dize işaretçisi dizisinin öğe sayısını ve adresini içeren, çağıran ayrılmış, sayılan dizi yapısına yönelik işaretçi. Yöntem başarısız olursa, bellek ayrılmazsa ve yapının içeriği tanımsızdır.  
   
  `pCaCookies`  
- [out] Öğe sayısı ve DWORD yöntemi olarak ayrılan dizi adresini içeren sayılan, arayana ayrılan dizi yapısı işaretçisi. Yöntem başarısız olursa, bellek tahsis edilir ve yapısı içeriğini tanımsızdır.  
+ dışı Bir DWORD 'in yöntem tarafından ayrılan dizisinin öğe sayısını ve adresini içeren, çağıran, sayılan dizi yapısına yönelik işaretçi. Yöntem başarısız olursa, bellek ayrılmazsa ve yapının içeriği tanımsızdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir döndürür `HRESULT`, genellikle `S_OK`.  
+ Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IPerPropertyBrowsing2 Arabirimi 1](../../winscript/reference/iperpropertybrowsing2-interface-1.md)

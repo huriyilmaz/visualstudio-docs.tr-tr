@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::CreateDebugDocumentContext | Microsoft Docs
+title: 'Idebugbelgethelper:: CreateDebugDocumentContext | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8b2dddfc76f2bbc3e629b2d48febb6b582a3a779
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24a039b5c4de410e67dc2dfb2859e1f4cc8b1739
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62783177"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576996"
 ---
 # <a name="idebugdocumenthelpercreatedebugdocumentcontext"></a>IDebugDocumentHelper::CreateDebugDocumentContext
-Yeni bir hata ayıklama belge bağlam oluşturur.  
+Yeni bir hata ayıklama belgesi bağlamı oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ HRESULT CreateDebugDocumentContext(
   
 #### <a name="parameters"></a>Parametreler  
  `iCharPos`  
- [in] Hata ayıklama belgesinin içeriği başlangıç konumu.  
+ 'ndaki Hata ayıklama belgesi içeriğinin başlangıç konumu.  
   
  `cChars`  
- [in] Bağlam karakter sayısı.  
+ 'ndaki Bağlamdaki karakter sayısı.  
   
  `ppddc`  
- [out] Yeni hata ayıklama belge bağlamı.  
+ dışı Yeni hata ayıklama belgesi bağlamı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, yeni bir hata ayıklama belge içeriği oluşturmak konak sağlar.  
+ Bu yöntem, konağın yeni bir hata ayıklama belgesi bağlamı oluşturmasına izin verir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentHelper Arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)

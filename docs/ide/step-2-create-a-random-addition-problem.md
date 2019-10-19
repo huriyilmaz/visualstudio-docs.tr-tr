@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 460eb832b94a1826d2d8f990b76a2afe90f992c8
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
-ms.translationtype: HT
+ms.openlocfilehash: bb6f0600d8bdfe8c736305ffd31788edb9d817a6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314091"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576286"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>2\. Adım: rastgele bir ek sorun oluşturma
 
@@ -73,7 +73,7 @@ Bu öğreticinin ikinci bölümünde, rastgele sayıları temel alan matematik s
      Bir nesneden sonra bir nokta girdiğinizde, IntelliSense, nesne üyelerinin bir listesini (özellikler, Yöntemler ve olaylar gibi) gösterir.
 
     > [!NOTE]
-    > @No__t_0 yöntemini `Random` nesnesiyle kullandığınızda (örneğin, `randomizer.Next(50)` çağırdığınızda) 50 ' den küçük bir rastgele sayı alırsınız (0 ile 49 arasında). Bu örnekte `randomizer.Next(51)` çağırılır. İki rastgele sayının, 0 ile 100 arasında bir yanıt ekleyecek şekilde 50 değil 51 ' i kullandınız. @No__t_0 yöntemine 50 geçirirseniz, 0 ile 49 arasında bir sayı seçer. bu nedenle, olası en yüksek yanıt 100 değil 98. Yöntemdeki ilk iki deyim çalıştıktan sonra, **addend1** ve **addend2**iki tamsayı değişkeninin her biri, 0 ile 50 arasında rastgele bir sayı tutar. Bu ekran görüntüsünde görsel C# kod gösterilir, ancak IntelliSense Visual Basic için aynı şekilde çalışmaktadır.
+    > @No__t_0 yöntemini `Random` nesnesiyle kullandığınızda (örneğin, `randomizer.Next(50)` çağırdığınızda) 50 ' den küçük bir rastgele sayı alırsınız (0 ile 49 arasında). Bu örnekte `randomizer.Next(51)` çağırılır. İki rastgele sayının, 0 ile 100 arasında bir yanıt ekleyecek şekilde 50 değil 51 ' i kullandınız. @No__t_0 yöntemine 50 geçirirseniz, 0 ile 49 arasında bir sayı seçer. bu nedenle, olası en yüksek yanıt 100 değil 98. Yöntemdeki ilk iki deyim çalıştıktan sonra, **addend1** ve **addend2**iki tamsayı değişkeninin her biri, 0 ile 50 arasında rastgele bir sayı tutar. Bu ekran görüntüsü C# kodu gösterir, ancak IntelliSense Visual Basic için de aynı şekilde çalışmaktadır.
 
      Bu deyimlere daha yakından göz atın.
 

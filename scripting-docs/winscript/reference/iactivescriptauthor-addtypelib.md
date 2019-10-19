@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::AddTypeLib | Microsoft Docs
+title: 'Iactivescriptauthor:: AddTypeLib | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b5967438c620a89df98c74c8824809b8fdaf739a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5bd96732a905d3fc0732ccfeaf2b65ada82957f4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935490"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577226"
 ---
 # <a name="iactivescriptauthoraddtypelib"></a>IActiveScriptAuthor::AddTypeLib
-Komut dosyası için ad alanı için bir tür kitaplığı ekler.  
+Betik için ad alanına bir tür kitaplığı ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,16 +40,16 @@ HRESULT AddTypeLib(
   
 #### <a name="parameters"></a>Parametreler  
  `rguidTypeLib`  
- [in] Eklenecek CLSID (sınıfı tanımlayıcısı) tür kitaplığının.  
+ 'ndaki Eklenecek tür kitaplığının CLSID (sınıf tanımlayıcısı).  
   
  `dwMajor`  
- [in] Ana sürüm numarası.  
+ 'ndaki Ana sürüm numarası.  
   
  `dwMinor`  
- [in] İkincil sürüm numarası.  
+ 'ndaki İkincil sürüm numarası.  
   
  `dwFlags`  
- [in] Kullanılmıyor.  
+ 'ndaki Kullanılmıyor.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -59,9 +59,9 @@ HRESULT AddTypeLib(
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemin çağırdığı `LoadTypeLib` tür kitaplığı yüklenemiyor. Başarılı olduktan sonra bu yöntemin çağırdığı `IActiveScriptAuthor::AddNamedItem` tür bilgisi eklemek için.  
+ Bu yöntem, tür kitaplığını yüklemek için `LoadTypeLib` çağırır. Başarılı olduğunda, bu yöntem tür bilgilerini eklemek için `IActiveScriptAuthor::AddNamedItem` çağırır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
- [IActiveScriptAuthor::AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
+ [Iactivescriptauthor:: Addnamedidıtem](../../winscript/reference/iactivescriptauthor-addnameditem.md)    
  [LoadTypeLib](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelib)

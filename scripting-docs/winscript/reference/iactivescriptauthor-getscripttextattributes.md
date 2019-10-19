@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetScriptTextAttributes | Microsoft Docs
+title: 'Iactivescriptauthor:: GetScriptTextAttributes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 75e0d5edf7cf2f83e814036cec56a1b19a89813e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f89c7b654cc2ac7248598ee6498a3a290d17e2ef
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955126"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72563141"
 ---
 # <a name="iactivescriptauthorgetscripttextattributes"></a>IActiveScriptAuthor::GetScriptTextAttributes
-Bir betik bloğu için metin öznitelikleri döndürür.  
+Bir betik bloğunun metin özniteliklerini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +41,25 @@ HRESULT GetScriptTextAttributes(
   
 #### <a name="parameters"></a>Parametreler  
  `pszCode`  
- ['de size_is (`cch`)] komut dosyası bloğu metni. Bu dize null sonlandırılmış olmak zorunda değil.  
+ [in, size_is (`cch`)] Betik bloğunun metni. Bu dize, null olarak sonlandırılmış olması gerekmez.  
   
  `cch`  
- [in] İçin kullanılan boyutu `pszCode` ve `pattr` parametreleri.  
+ 'ndaki @No__t_0 ve `pattr` parametreleri için kullanılan boyut.  
   
  `pszDelimiter`  
- [in] Komut bitiş sınırlayıcısı adresi. Zaman `pszCode` ayrıştırılır metin akışından ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) ayrıldığında son algılamak için kullanır. Betik bloğunun sonu tanımlamak için sınırlayıcı varsa bu parametre NULL olarak ayarlayın.  
+ 'ndaki Komut dosyası sınırlayıcısından oluşan adres. @No__t_0 metin akışından ayrıştırıldığında, ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) kullanır ve bu kod oluşturma yöntemi sonunu algılar. Betik bloğunun sonunu tanımlamak için sınırlayıcı yoksa bu parametreyi NULL olarak ayarlayın.  
   
  `dwFlags`  
- [in] Betik bloğundaki metin özniteliklerle ilişkili bayraklar. Aşağıdaki değerlerin bir birleşimi olabilir:  
+ 'ndaki Betik bloğunun metin öznitelikleriyle ilişkili bayraklar. Aşağıdaki değerlerin bir birleşimi olabilir:  
   
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|SOURCETEXT_ATTR_IDENTIFIER özniteliğine sahip tanımlayıcılar tanımlamak ve SOURCETEXT_ATTR_MEMBERLOOKUP özniteliğine sahip bir nokta işleçleri tanımlayın.|  
-|GETATTRFLAG_THIS|0x0100|SOURCETEXT_ATTR_THIS özniteliğine sahip geçerli bir nesneyi tanımlar.|  
-|GETATTRFLAG_HUMANTEXT|0x8000|SOURCETEXT_ATTR_HUMANTEXT özniteliğine sahip dizesi içerik ve yorum metnini tanımlayın.|  
+|GETATTRTYPE_DEPSCAN|0x0001|SOURCETEXT_ATTR_IDENTIFIER özniteliğine sahip tanımlayıcıları ve SOURCETEXT_ATTR_MEMBERLOOKUP özniteliğine sahip nokta işleçlerini belirler.|  
+|GETATTRFLAG_THIS|0x0100|SOURCETEXT_ATTR_THIS özniteliğine sahip geçerli nesneyi belirler.|  
+|GETATTRFLAG_HUMANTEXT|0x8000|SOURCETEXT_ATTR_HUMANTEXT özniteliğine sahip dize içeriğini ve açıklama metnini belirler.|  
   
  `pattr`  
- [out içinde size_is (`cch`)] komut dosyası bloğu kod için renk bilgisi.  
+ [in, Out, size_is (`cch`)] Betik blok kodu için renk bilgileri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -70,6 +70,6 @@ HRESULT GetScriptTextAttributes(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

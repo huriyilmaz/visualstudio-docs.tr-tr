@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptError::GetSourceLineText | Microsoft Docs
+title: 'Iactivescripterror:: GetSourceLineText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 702f1655b244116e1bb7dca3d5fc90de3d1f5bdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ded57f97ec40167bac34bf0f288c2e3d15a5c4b7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955012"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576912"
 ---
 # <a name="iactivescripterrorgetsourcelinetext"></a>IActiveScriptError::GetSourceLineText
-Bir komut dosyası altyapısı bir betik çalıştırılırken bir hata oluştuğu kaynak dosyadaki bir satır alır.  
+Komut dosyası altyapısı bir betik çalıştırırken bir hata oluştuğu kaynak dosyasındaki satırı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ HRESULT GetSourceLineText(
   
 ## <a name="parameter"></a>Parametre  
  `pbstrSourceLine`  
- [out] Hatanın gerçekleştiği kaynak kod satırının alan arabellek adresi.  
+ dışı Hatanın gerçekleştiği kaynak kodu satırını alan bir arabelleğin adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa veya `E_FAIL` , kaynak dosyadaki satır alınamıyor.  
+ Başarılı olursa `S_OK` döndürür veya kaynak dosyadaki satır alındıysa `E_FAIL`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptError](../../winscript/reference/iactivescripterror.md)

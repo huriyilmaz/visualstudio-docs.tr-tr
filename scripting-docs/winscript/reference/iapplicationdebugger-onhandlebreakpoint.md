@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::onHandleBreakPoint | Microsoft Docs
+title: 'Iapplicationdebugger:: onHandleBreakPoint | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: edf8816cd646596ce1f897dfd9d949790d52b7b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3796ea1f50f0c4bcf945dbc10592c048db22757b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991340"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577838"
 ---
 # <a name="iapplicationdebuggeronhandlebreakpoint"></a>IApplicationDebugger::onHandleBreakPoint
-Bir kesme noktası olayını işler.  
+Kesme noktası olayını işler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +39,28 @@ HRESULT onHandleBreakPoint(
   
 #### <a name="parameters"></a>Parametreler  
  `prpt`  
- [in] Kesme noktası oluştuğu iş parçacığı.  
+ 'ndaki Kesme noktasının gerçekleştiği iş parçacığı.  
   
  `br`  
- [in] Kesme noktası nedeni.  
+ 'ndaki Kesme noktasının nedeni.  
   
  `pError`  
- [in] Çalışma zamanı hata bilgisi, sağlanan değerini `br` BREAKREASON_ERROR olduğu.  
+ 'ndaki @No__t_0 değeri BREAKREASON_ERROR olduğunda, çalışma zamanı hata bilgileri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir kesme noktası isabet edildiğinde çağrılır ve `IDebugApplication::HandleBreakPoint` çağrılır.  
+ Bu yöntem, bir kesme noktası isabet edildiğinde ve `IDebugApplication::HandleBreakPoint` çağrıldığında çağrılır.  
   
- IDE hata ayıklayıcı çağırır kadar uygulama askıda kalacak `IRemoteDebugApplication::ResumeFromBreakPoint`.  
+ Hata ayıklayıcı IDE `IRemoteDebugApplication::ResumeFromBreakPoint` çağırana kadar uygulama askıya alınır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)   
- [IDebugApplication::HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)   
- [IRemoteDebugApplication::ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)    
+ [IDebugApplication:: HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)    
+ [IRemoteDebugApplication:: ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)    
  [BREAKREASON Sabit Listesi](../../winscript/reference/breakreason-enumeration.md)

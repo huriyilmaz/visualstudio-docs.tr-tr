@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptErrorDebug::GetStackFrame | Microsoft Docs
+title: 'Iactivescripterrordebug:: GetStackFrame | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: aecda7be418f2a89fb39bc1d754c8e94cf1130bd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8542f83f926ba1a993527baecd6d5b667671b041
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954949"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576315"
 ---
 # <a name="iactivescripterrordebuggetstackframe"></a>IActiveScriptErrorDebug::GetStackFrame
-Çalışma zamanı hataları için geçerli olan yığın çerçevesi sağlar.  
+Çalışma zamanı hataları için geçerli olan yığın çerçevesini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetStackFrame(
   
 #### <a name="parameters"></a>Parametreler  
  `ppdsf`  
- [out] Hata için yığın çerçevesi.  
+ dışı Hata için yığın çerçevesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, geçerli çalışma zamanı hataları için yığın çerçevesi sağlar.  
+ Bu yöntem, çalışma zamanı hataları için geçerli olan yığın çerçevesini sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptErrorDebug Arabirimi](../../winscript/reference/iactivescripterrordebug-interface.md)

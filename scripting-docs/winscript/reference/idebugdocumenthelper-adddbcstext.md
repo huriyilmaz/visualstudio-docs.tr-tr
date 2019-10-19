@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::AddDBCSText | Microsoft Docs
+title: 'Idebugbelgethelper:: AddDBCSText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2d346f3877574c45aaff6dcef8ca99f699a42552
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 71d0b7816a0b8801c5fb4eaab9cf7808a3f3bbfe
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446657"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577067"
 ---
 # <a name="idebugdocumenthelperadddbcstext"></a>IDebugDocumentHelper::AddDBCSText
-Bir DBCS dize bu belgenin sonuna ekler.  
+Bu belgenin sonuna bir DBCS dizesi ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ HRESULT AddDBCSText(
   
 #### <a name="parameters"></a>Parametreler  
  `pszText`  
- [in] Metni içeren null ile sonlandırılmış bir dize işaretçisi.  
+ 'ndaki Metni içeren, null ile sonlandırılmış bir dize işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -48,12 +48,12 @@ HRESULT AddDBCSText(
 |`E_FAIL`|Yöntem karakterleri ekleyemedi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem oluşturur `IDebugDocumentTextEvents` bildirimleri.  
+ Bu yöntem `IDebugDocumentTextEvents` bildirimleri oluşturur.  
   
 > [!NOTE]
-> Sonra bu yöntemi çağrılırsa `IDebugDocumentHelper::AddDeferredText` çağrıldı, `E_FAIL` döndürülür.  
+> @No__t_0 çağrıldıktan sonra bu yöntem çağrılırsa, `E_FAIL` döndürülür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugdocumenthelper arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
+ [Idebugbelgethelper:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
  [IDebugDocumentTextEvents Arabirimi](../../winscript/reference/idebugdocumenttextevents-interface.md)

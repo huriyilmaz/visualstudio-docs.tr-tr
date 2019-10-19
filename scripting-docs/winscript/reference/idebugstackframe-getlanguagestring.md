@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame::GetLanguageString | Microsoft Docs
+title: 'Idebugstackframe:: GetLanguageString | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cab0c0ab317754305ca2440748dd680e31750d8a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 83abb038cd8bc018d84cd0c5ddd2a413f8a02248
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934661"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576752"
 ---
 # <a name="idebugstackframegetlanguagestring"></a>IDebugStackFrame::GetLanguageString
-Bu dil kısa veya uzun metin açıklamasını döndürür.  
+Dilin kısa veya uzun metinsel açıklamasını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT GetLanguageString(
   
 #### <a name="parameters"></a>Parametreler  
  `fLong`  
- [in] Bayrağı, burada `TRUE` uzun açıklamasını döndürür ve `FALSE` kısa açıklamasını döndürür.  
+ 'ndaki Bayrak, `TRUE` uzun bir açıklama döndüren ve `FALSE` kısa bir açıklama döndüren bayrak.  
   
  `pbstrLanguage`  
- [out] Dil açıklaması.  
+ dışı Dilin açıklaması.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genellikle, `fLong` olduğu `FALSE`, bu yöntem yalnızca yığın çerçevesiyle ilgili dil adını sağlar. Zaman `fLong` olduğu `TRUE`, bu yöntem, tam ürün açıklamasını sağlayabilir.  
+ Genellikle, `fLong` `FALSE` ise, bu yöntem yalnızca yığın çerçevesiyle ilişkili dilin adını sağlar. @No__t_0 `TRUE` olduğunda, bu yöntem tam ürün açıklaması sağlayabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugStackFrame Arabirimi](../../winscript/reference/idebugstackframe-interface.md)

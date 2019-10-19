@@ -1,5 +1,5 @@
 ---
-title: IDebugSyncOperation::GetTargetThread | Microsoft Docs
+title: 'Idebugsyncoperation:: GetTargetThread | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e270757ba26d61288a897bee4128317e6f4499cb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d6675356439d60e5c204760e69640a0f50bf40fc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004906"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576679"
 ---
 # <a name="idebugsyncoperationgettargetthread"></a>IDebugSyncOperation::GetTargetThread
-Bu eşzamanlı bir işlem için hedef uygulama iş parçacığı döndürür.  
+Bu zaman uyumlu işlem için hedef uygulama iş parçacığını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetTargetThread(
   
 #### <a name="parameters"></a>Parametreler  
  `ppatTarget`  
- [out] Hedef uygulama için iş parçacığı bu eşzamanlı bir işlem.  
+ dışı Bu zaman uyumlu işlem için hedef uygulama iş parçacığı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hedef uygulama iş parçacığı bu eşzamanlı bir işlem için bu yöntemi döndürür.  
+ Bu yöntem, bu zaman uyumlu işlem için hedef uygulama iş parçacığını döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugSyncOperation Arabirimi](../../winscript/reference/idebugsyncoperation-interface.md)

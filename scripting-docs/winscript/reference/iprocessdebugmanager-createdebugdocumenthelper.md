@@ -1,5 +1,5 @@
 ---
-title: IProcessDebugManager::CreateDebugDocumentHelper | Microsoft Docs
+title: 'Iprocessdebugmanager:: Createdebugbelgeadı | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 38de1e828ccd1715fb83cc76c06ba837818d2af0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a009fa5174ab897116c02b91e376e2dc41d67600
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002353"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577101"
 ---
 # <a name="iprocessdebugmanagercreatedebugdocumenthelper"></a>IProcessDebugManager::CreateDebugDocumentHelper
-Bu uygulama için yeni bir hata ayıklama belge Yardımcısı oluşturur.  
+Bu uygulama için yeni bir hata ayıklama belgesi Yardımcısı oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT CreateDebugDocumentHelper(
   
 #### <a name="parameters"></a>Parametreler  
  `punkOuter`  
- [in] Döndürülen nesne toplanması için ise `punkOuter` denetlemek için bir arabirim işaretçisi `IUnknown`. Aksi takdirde, bir null işaretçidir.  
+ 'ndaki Döndürülen nesne toplanırsa, `punkOuter` denetim `IUnknown` bir arabirim işaretçisidir. Aksi halde, null bir işaretçisidir.  
   
  `pddh`  
- [out] Bu uygulama için hata ayıklama belge yardımcı nesnesi.  
+ dışı Bu uygulama için hata ayıklama belgesi yardımcı nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu uygulama için yeni bir hata ayıklama belge Yardımcısı oluşturur.  
+ Bu yöntem, bu uygulama için yeni bir hata ayıklama belgesi Yardımcısı oluşturur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IProcessDebugManager Arabirimi](../../winscript/reference/iprocessdebugmanager-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetNumberOfChildren | Microsoft Docs
+title: 'Icriptnode:: GetNumberOfChildren | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bdf35c82193ce3d9beb3c6d55e5ba850a0417874
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 67912194b051574d4b4a37e897ec7cac14b02ae2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786918"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577522"
 ---
 # <a name="iscriptnodegetnumberofchildren"></a>IScriptNode::GetNumberOfChildren
-Alt düğümleri sayısını döndürür `IScriptNode` nesne.  
+@No__t_0 nesnesinin alt düğümlerinin sayısını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT GetNumberOfChildren(
   
 #### <a name="parameters"></a>Parametreler  
  `pcsn`  
- [out] Alt düğüm sayısını, `IScriptNode` nesnesi vardır.  
+ dışı @No__t_0 nesnenin sahip olduğu alt düğüm sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -48,5 +48,5 @@ HRESULT GetNumberOfChildren(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptNode Arabirimi](../../winscript/reference/iscriptnode-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugExtendedProperty::GetExtendedPropertyInfo | Microsoft Docs
+title: 'Idebugextendedproperty:: Gebir Dedpropertyınfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 89067720b6643c8c187e6340fb529989f2439933
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 77167c46e02bcf2bf5d3ce5836ad5de103176e93
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946108"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576386"
 ---
 # <a name="idebugextendedpropertygetextendedpropertyinfo"></a>IDebugExtendedProperty::GetExtendedPropertyInfo
-Daha fazla bilgiyi daha basit bir genişletilmiş özelliği için genişletilmiş bilgileri getirir `IDebugProperty`.  
+Daha basit `IDebugProperty` daha fazla bilgi olan genişletilmiş bir özellik için genişletilmiş bilgileri getirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,18 +39,18 @@ HRESULT GetExtendedPropertyInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `dwFieldSpec`  
- [in] İçinde doldurulması için alanları belirlemek EX_DBGPROP_INFO_FLAGS sabitlerini belirtir `ExtendedDebugPropertyInfo` yapısı.  
+ 'ndaki @No__t_0 yapısında doldurulacak alanları belirleyen EX_DBGPROP_INFO_FLAGS sabitlerini belirtir.  
   
  `nRadix`  
- [in] Sayısal yedeklenmesine yorumlama içinde kullanılacak sayı tabanı.  
+ 'ndaki Herhangi bir sayısal bilgiyi yorumlamak için kullanılan Radix.  
   
  `pExtendedPropertyInfo`  
- [out] Döndürür `ExtendedDebugPropertyInfo` yapı özelliği tanımlar.  
+ dışı Özelliği tanımlayan `ExtendedDebugPropertyInfo` yapısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir döndürür `HRESULT`, genellikle `S_OK`.  
+ Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)   
- [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)    
+ [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)    
  [ExtendedDebugPropertyInfo Yapısı](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

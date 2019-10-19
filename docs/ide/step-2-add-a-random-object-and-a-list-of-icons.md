@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 71941b545a1059024ee6812ae64a15b08b8c4198
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
-ms.translationtype: HT
+ms.openlocfilehash: 97352f60bfc40df28876731ec1e8aee1bff1773c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516645"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576273"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>2\. Adım: rastgele bir nesne ve simge listesi ekleme
 
@@ -40,7 +40,7 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
       Kullanıyorsanız C#, kodu açılış küme ayracından sonra ve Sınıf bildiriminden hemen sonra (`public partial class Form1 : Form`) yerleştirdiğinizden emin olun. Visual Basic kullanıyorsanız, kodu Sınıf bildiriminden hemen sonra koyun (`Public Class Form1`).
 
-3. Liste nesnesi eklenirken, açılan **IntelliSense** penceresine dikkat edin. Aşağıdaki bir Visual C# örneği olmakla birlikte, Visual Basic'te liste eklediğinizde de benzer bir metin görüntülenir.
+3. Liste nesnesi eklenirken, açılan **IntelliSense** penceresine dikkat edin. Aşağıda bir örnek verilmiştir C# ancak Visual Basic bir liste eklediğinizde benzer bir metin görüntülenir.
 
      Tıklama olayını gösteren ![Properties pencere ](../ide/media/express_listintellisense.png)<br/>***IntelliSense** penceresi*
 
@@ -49,9 +49,9 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
      Kodu (ve açıklamaları) küçük bölümler halinde incelerseniz anlaması daha kolay olur. Programlarınız, birçok farklı öğe türünü izlemek için liste nesnelerini kullanabilir. Bir liste; sayıları, doğru/yanlış değerlerini, metinleri veya diğer nesneleri barındırabilir. Diğer Liste nesnelerini tutan bir liste nesneniz bile olabilir. Bir listedeki öğelere öğeler denir ve her liste yalnızca bir öğe türü tutar. Öyleyse, bir sayı listesi yalnızca sayıları tutabilir; bu listeye metin ekleyemezsiniz. Benzer şekilde, doğru/yanlış değerlerini içeren bir listeye sayı ekleyemezsiniz.
 
-     Bir `new` ifadesini kullanarak bir `List` nesnesi oluşturduğunuzda, içinde depolamak istediğiniz veri türünü belirtmeniz gerekir. **IntelliSense** penceresinin en üstündeki araç ipucu, listedeki öğe türlerini gösterir. Ayrıca, bu `List<string>` (görselde C#) ve `List(Of String)` (Visual Basic) anlamına gelir: bu, `string` veri türündeki öğeleri tutan bir `List` nesnesidir. Bir dize, programınızın metin depolamak için kullandığı şeydir. Bu, **IntelliSense** penceresinin sağındaki araç ipucu sizi size söylemiş olur.
+     Bir `new` ifadesini kullanarak bir `List` nesnesi oluşturduğunuzda, içinde depolamak istediğiniz veri türünü belirtmeniz gerekir. **IntelliSense** penceresinin en üstündeki araç ipucu, listedeki öğe türlerini gösterir. Ayrıca, bu `List<string>` (içinde C#) ve `List(Of String)` (Visual Basic) anlamına gelir: bu, `string` veri türündeki öğeleri tutan bir `List` nesnesidir. Bir dize, programınızın metin depolamak için kullandığı şeydir. Bu, **IntelliSense** penceresinin sağındaki araç ipucu sizi size söylemiş olur.
 
-4. Visual Basic'te önce geçici bir dizin oluşturulması gerekmesine karşın, Visual C# ortamında listenin tek bir deyimle oluşturulabilmesinin nedenini bir düşünün. Bunun nedeni, görsel C# dilin *koleksiyon başlatıcıları*olduğundan, listeyi değerleri kabul edecek şekilde hazırlar. Visual Basic'te bir koleksiyon başlatıcısı kullanabilirsiniz. Ancak, önceki Visual Basic sürümü ile uyumluluk açısından önceki kodu kullanmanızı öneririz.
+4. Visual Basic neden geçici bir dizi oluşturulmalıdır, ancak içinde C#listenin tek bir deyimle oluşturulması gerekir. Bunun nedeni, C# dilin *koleksiyon başlatıcıları*olduğundan, listeyi değerleri kabul edecek şekilde hazırlar. Visual Basic'te bir koleksiyon başlatıcısı kullanabilirsiniz. Ancak, önceki Visual Basic sürümü ile uyumluluk açısından önceki kodu kullanmanızı öneririz.
 
      Bir `new` ifadesiyle bir koleksiyon başlatıcısı kullandığınızda, yeni liste nesnesi oluşturulduktan sonra program bunu küme ayraçları içinde verdiğiniz verilerle doldurur. Bu durumda, simgeler adlı dizelerin bir listesini alırsınız ve bu liste altı harfli dizeler içerecek şekilde başlatılır. Bu dizelerin her biri tek bir harftir ve bunların tümü etiketlerde yer alacak simgelere karşılık gelir. Dolayısıyla, oyunda bir çift ünlem işareti, bir çift büyük N harfi, bir çift virgül vs. olacaktır. (Bu karakterler, Web 'e ait yazı tipine ayarlandığında, bir veri yolu, Bisiklet, Spider vb. gibi simgeler olarak görünürler.) Liste nesneniz, TableLayoutPanel panelindeki her hücre için bir tane olmak üzere on altı dizeye sahip olacaktır.
 

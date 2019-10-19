@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression::Start | Microsoft Docs
+title: 'Idebugexpression:: Start | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e80f3fb8087d39c76f59cf5c6bc8719c1cbaf5e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1c8c3666adfc83f3ad60b942cd3f7fe9eedfccba
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978529"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576438"
 ---
 # <a name="idebugexpressionstart"></a>IDebugExpression::Start
-İfadenin değerlendirilmesi başlar.  
+İfadenin değerlendirmesini başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT Start(
   
 #### <a name="parameters"></a>Parametreler  
  `pdecb`  
- [in] İfade değerlendirme ne zaman tamamlandığını belirten geri çağırma. Bu parametre `NULL`, olay tetiklenir ve kullanarak, istemci ifade durum yoklaması gerekir `QueryIsComplete`.  
+ 'ndaki İfade değerlendirmesinin ne zaman tamamlandığını belirten geri çağırma. Bu parametre `NULL`, hiçbir olay tetiklenerek istemci, `QueryIsComplete` kullanarak ifade durumunu yoklamalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem ifadesi değerlendirmesi başlar.  
+ Bu yöntem, ifadenin değerlendirmesini başlatır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IDebugExpression::Abort](../../winscript/reference/idebugexpression-abort.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugexpression:: Abort](../../winscript/reference/idebugexpression-abort.md)    
  [IDebugExpression Arabirimi](../../winscript/reference/idebugexpression-interface.md)

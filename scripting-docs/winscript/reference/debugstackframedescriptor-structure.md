@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fddae48178ec6c56ce647f5c4f3a1bff3d81a980
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 910e08ec6d9982354eb71b50d5e916917808f140
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955200"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576547"
 ---
 # <a name="debugstackframedescriptor-structure"></a>DebugStackFrameDescriptor Yapısı
 Yığın çerçevelerini listeler ve aynı iş parçacığındaki çeşitli listeleyicilerden alınan çıktıyı birleştirir.  
@@ -44,19 +44,19 @@ typedef struct tagDebugStackFrameDescriptor {
  Yığın çerçeve nesnesi.  
   
  `dwMin`  
- Bu yığın çerçevesiyle ilişkili fiziksel adreslerini alt aralığı makine bağımlı gösterimi.  
+ Bu yığın çerçevesiyle ilişkili olan alt fiziksel adres aralığının makineye bağlı bir gösterimi.  
   
  `dwLim`  
- Bu yığın çerçevesiyle ilişkili fiziksel adreslerini üst aralığının makine bağımlı gösterimi.  
+ Bu yığın çerçevesiyle ilişkili olan üst düzey fiziksel adres aralığının makineye bağlı bir gösterimi.  
   
  `fFinal`  
- Çerçeve işlenmekte olduğunu gösteren bayrak.  
+ Çerçevenin işlendiğini belirten bayrak.  
   
  `punkFinal`  
- Bu parametre değilse `NULL`, birleştirme geçerli Numaralandırıcı durdurmanız gerekir ve yeni bir tane başlatılmış olması. Nesnesine yeni bir sabit listesini Başlat nasıl gösterir.  
+ Bu parametre `NULL` değilse, geçerli numaralandırıcı birleştirme durdurulur ve yeni bir tane başlatılmalıdır. Nesnesi, yeni numaralandırmanın nasıl başlatılacağını gösterir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlem Hata Ayıklama Yöneticisi, birden çok komut dosyası motorları yığın çerçevelerini sıralamak için bu yapıyı kullanır. Kural gereği, aşağı yığınları büyütün. Sonuç olarak, burada yığınları büyütün mimarilerde yuvarlandığında tamamlanan adresleri olmalıdır.  
+ İşlem hata ayıklama Yöneticisi, yığın çerçevelerini birden çok betik altyapılarından sıralamak için bu yapıyı kullanır. Kurala göre, yığınlar aşağı doğru artar. Sonuç olarak, yığınların büyümesi durumunda adresler Twos-tamamlanmalı olmalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

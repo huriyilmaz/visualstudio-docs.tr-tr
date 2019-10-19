@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetEventHandler | Microsoft Docs
+title: 'Iactivescriptauthor:: GetEventHandler | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7bba60df6485ddaac0363a3416739efd7be69389
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c69b32f0040ea6d52e0712b8e1813cc5a0b40c58
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935639"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576225"
 ---
 # <a name="iactivescriptauthorgeteventhandler"></a>IActiveScriptAuthor::GetEventHandler
-Belirtilen öznitelikleri scriptlet döndürür.  
+Belirtilen özniteliklere sahip olan kod oluşturma yöntemi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +41,19 @@ HRESULT GetEventHandler(
   
 #### <a name="parameters"></a>Parametreler  
  `pdisp`  
- [in] `IDispatch` Karşılık gelen nesne `NamedItem` scriptlet ekli olduğu için.  
+ 'ndaki Kod oluşturma yöntemi eklendiği `NamedItem` karşılık gelen `IDispatch` nesnesi.  
   
  `pszItem`  
- [in] Üst düzey konak tam kod oluşturma adı tanıtıcısı arabellek adresi.  
+ 'ndaki Konaktaki tam kod oluşturma yöntemi adının üst düzey tanımlayıcısının arabellek adresi.  
   
  `pszSubItem`  
- [in] Ana bilgisayarın tam kod oluşturma adı ikinci düzey tanıtıcısı arabellek adresi. Tek düzey adı varsa, NULL olarak ayarlayın.  
+ 'ndaki Konaktaki tam kod oluşturma yöntemi adının ikinci düzey tanımlayıcısının arabellek adresi. Ad yalnızca bir düzey içeriyorsa NULL olarak ayarlanır.  
   
  `pszEvent`  
- [in] Olay adını içeren bir arabellek adresi. Kod oluşturma, bu olay için olay işleyicisidir.  
+ 'ndaki Olay adını içeren bir arabelleğin adresi. Kod oluşturma yöntemi bu olay için bir olay işleyicisidir.  
   
  `ppse`  
- [out] Bir işaretçiye alan değişkenin adresini `IScriptEntry` belirtilen öznitelikleri ayrıldığında arabirimi.  
+ dışı Belirtilen özniteliklere sahip olan kod oluşturma yöntemi `IScriptEntry` arabirimine bir işaretçi alan bir değişkenin adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -64,6 +64,6 @@ HRESULT GetEventHandler(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
  [IScriptEntry Arabirimi](../../winscript/reference/iscriptentry-interface.md)

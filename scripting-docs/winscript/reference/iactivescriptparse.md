@@ -1,5 +1,5 @@
 ---
-title: Iactivescriptparse | Microsoft Docs
+title: IActiveScriptParse | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,23 +13,23 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a987b4be3430f2ed8b0562f41b51a94797f96dc4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 81f64352c15dce233058d49b70e35da7e2238688
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009344"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561645"
 ---
 # <a name="iactivescriptparse"></a>IActiveScriptParse
-Windows altyapısı komut dosyasına eklenecek kod kod parçacıklarını ham metni sağlar veya çalışma zamanında değerlendirilecek ifade metin sağlayan komut bunu uygulayan olup `IActiveScriptParse` arabirimi. VBScript gibi hiçbir bağımsız geliştirme ortamına sahip yorumlanan komut dosyası dilleri için bu alternatif bir mekanizma sağlar (dışında `IPersist*`) komut dosyası altyapısı kod almak ve kod parçacıkları için çeşitli nesne iliştirmek için olaylar.  
+Windows komut dosyası altyapısı betiğe ham metin kodu betiküne izin veriyorsa veya çalışma zamanında ifade metninin değerlendirilmesini sağlar, `IActiveScriptParse` arabirimini uygular. VBScript gibi bağımsız yazma ortamına sahip olmayan yorumlanan betik dilleri için bu, betik oluşturma altyapısına betik kodu almak ve çeşitli nesne olaylarına betik parçaları eklemek için alternatif bir mekanizma (`IPersist*` dışında) sağlar .  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IActiveScriptParse::InitNew](../../winscript/reference/iactivescriptparse-initnew.md)|Komut dosyası altyapısı başlatır.|  
-|[IActiveScriptParse::AddScriptlet](../../winscript/reference/iactivescriptparse-addscriptlet.md)|Kod oluşturma yöntemini komut dosyasına ekler.|  
-|[IActiveScriptParse::ParseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md)|Ad alanına bildirimler ekleyerek ve kodu uygun şekilde değerlendirerek verilen kod oluşturma yöntemini ayrıştırır.|  
+|[IActiveScriptParse::InitNew](../../winscript/reference/iactivescriptparse-initnew.md)|Komut dosyası altyapısını başlatır.|  
+|[IActiveScriptParse::AddScriptlet](../../winscript/reference/iactivescriptparse-addscriptlet.md)|Betiğe bir kod oluşturma yöntemi kodu ekler.|  
+|[IActiveScriptParse::ParseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md)|Verilen kod kod oluşturma yöntemi ayrıştırır, ad alanına bildirim ekliyor ve kodu uygun şekilde değerlendiriyor.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Arabirimleri](../../winscript/reference/active-script-interfaces.md)

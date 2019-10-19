@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptDebug::GetScriptTextAttributes | Microsoft Docs
+title: 'Iactivescriptdebug:: GetScriptTextAttributes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: faec7cf65bed39a038c5ab7cc09d9908063a2c63
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 57bd466965f6431a1418df1aa56cf6a7bbbc78cc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009551"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576925"
 ---
 # <a name="iactivescriptdebuggetscripttextattributes"></a>IActiveScriptDebug::GetScriptTextAttributes
-Rastgele bir betik metin bloğu için metin öznitelikleri döndürür.  
+Rastgele bir betik metni bloğunun metin özniteliklerini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,41 +41,41 @@ HRESULT GetScriptTextAttributes(
   
 #### <a name="parameters"></a>Parametreler  
  `pstrCode`  
- [in] Betik bloğu metin. Bu dize null sonlandırılmış olması gerekmez.  
+ 'ndaki Betik bloğu metni. Bu dize null olarak sonlandırılmamalıdır.  
   
  `uNumCodeChars`  
- [in] Betik bloğu metnindeki karakter sayısı.  
+ 'ndaki Betik bloğu metnindeki karakterlerin sayısı.  
   
  `pstrDelimiter`  
- [in] Sonlandırma, betik bloğu sınırlayıcısı adresi. Zaman `pstrCode` ayrıştırılır metin akışından gibi iki betik bloğunun sonu algılamak için tırnak işaretleri ("), tek bir ana bilgisayar genellikle bir ayırıcı kullanır. Bu parametre, bazı koşullu ilkel bir ön işleme sağlamak komut dosyası altyapısı verme konak kullanılan sınırlayıcıyı belirtir (örneğin, tek tırnak işaretini ['] ayırıcı olarak kullanılacak iki tek tırnak işaretleri yerine). Tam olarak nasıl (ve ise) bu bilgileri komut dosyası altyapısına bağlıdır komut dosyası altyapısı kullanır. Konak, betik bloğunun sonu işaretlemek için sınırlayıcı kullanmadıysanız, bu parametre NULL olarak ayarlayın.  
+ 'ndaki Son betik blok sınırlayıcısı adresi. @No__t_0 metin akışından ayrıştırıldığında, ana bilgisayar genellikle iki tek tırnak işareti (' ') gibi bir sınırlayıcı kullanır ve komut dosyası bloğunun sonunu algılar. Bu parametre, ana bilgisayarın kullandığı sınırlayıcıyı belirtir ve betik altyapısının bazı koşullu temel bir ön işleme sağlamasına izin verir (örneğin, tek tırnak işaretini ['] sınırlayıcı olarak kullanılmak üzere iki tek tırnak işaretiyle değiştirme). Betik altyapısının bu bilgileri kullanması tam olarak nasıl (ve ne olursa) komut dosyası altyapısına bağlıdır. Konak, betik bloğunun sonunu işaretlemek için bir sınırlayıcı kullanmadığından bu parametreyi NULL olarak ayarlayın.  
   
  `dwFlags`  
- [in] Betik bloğu ile ilişkili bayraklar. Bu değerleri bir birleşimi olabilir:  
+ 'ndaki Betik bloğu ile ilişkili bayraklar. Şu değerlerin bir birleşimi olabilir:  
   
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|Tanımlayıcıları ve nokta işleçleri SOURCETEXT_ATTR_IDENTIFIER ve SOURCETEXT_ATTR_MEMBERLOOKUP bayraklarıyla sırasıyla tanımlanacağını belirtir.|  
-|GETATTRFLAG_THIS|0x0100|Geçerli nesne tanımlayıcısı SOURCETEXT_ATTR_THIS bayrağıyla tanımlanması gerektiğini gösterir.|  
-|GETATTRFLAG_HUMANTEXT|0x8000|Dize içerik ve açıklama metni SOURCETEXT_ATTR_HUMANTEXT bayrağıyla tanımlanması gerektiğini gösterir.|  
+|GETATTRTYPE_DEPSCAN|0x0001|Tanımlayıcıların ve nokta işleçlerinin sırasıyla SOURCETEXT_ATTR_IDENTIFIER ve SOURCETEXT_ATTR_MEMBERLOOKUP bayraklarıyla tanımlanması gerektiğini gösterir.|  
+|GETATTRFLAG_THIS|0x0100|Geçerli nesne tanımlayıcısının SOURCETEXT_ATTR_THIS bayrağıyla tanımlanması gerektiğini gösterir.|  
+|GETATTRFLAG_HUMANTEXT|0x8000|Dize içeriği ve Açıklama metninin SOURCETEXT_ATTR_HUMANTEXT bayrağıyla tanımlanması gerektiğini gösterir.|  
   
  `pattr`  
- [out içinde] Döndürülen öznitelikleri içeren arabellek.  
+ [in, out] Döndürülen öznitelikleri içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uygulayan bir akıllı ana bilgisayar `IDebugDocumentText` arabirimi çağrıları için temsilci seçmek için bu yöntemi kullanabilirsiniz `IDebugDocumentText::GetText` yöntemi.  
+ @No__t_0 arabirimini uygulayan bir akıllı ana bilgisayar, `IDebugDocumentText::GetText` yöntemine yapılan çağrıları devretmek için bu yöntemi kullanabilir.  
   
- Bu yöntem için komut dosyası blokları; `GetScriptletTextAttributes` için kod parçacıklarını yöntemidir.  
+ Betik blokları için bu yöntem; `GetScriptletTextAttributes` yöntemi scriptizin verir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iactivescriptdebug arabirimi](../../winscript/reference/iactivescriptdebug-interface.md)   
- [IActiveScriptDebug::GetScriptletTextAttributes](../../winscript/reference/iactivescriptdebug-getscriptlettextattributes.md)   
- [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)   
- [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptdebug arabirimi](../../winscript/reference/iactivescriptdebug-interface.md)    
+ [Iactivescriptdebug:: GetScriptletTextAttributes](../../winscript/reference/iactivescriptdebug-getscriptlettextattributes.md)    
+ [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)    
+ [Idebugdocumenttext:: GetText](../../winscript/reference/idebugdocumenttext-gettext.md)    
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

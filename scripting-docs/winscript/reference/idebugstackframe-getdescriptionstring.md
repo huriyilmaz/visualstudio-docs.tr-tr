@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame::GetDescriptionString | Microsoft Docs
+title: 'Idebugstackframe:: GetDescriptionString | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f870c6dbc654f8465d201c53443228153ce4a68b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7eb29574d240a02073721046cec65bdf483b3eb0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934604"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576741"
 ---
 # <a name="idebugstackframegetdescriptionstring"></a>IDebugStackFrame::GetDescriptionString
-Yığın çerçevesinin kısa veya uzun metin açıklamasını döndürür.  
+Yığın çerçevesinin kısa veya uzun metinsel açıklamasını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT GetDescriptionString(
   
 #### <a name="parameters"></a>Parametreler  
  `fLong`  
- [in] Bayrağı, burada `TRUE` uzun açıklamasını döndürür ve `FALSE` kısa açıklamasını döndürür.  
+ 'ndaki Bayrak, `TRUE` uzun bir açıklama döndüren ve `FALSE` kısa bir açıklama döndüren bayrak.  
   
  `pbstrDescription`  
- [out] Yığın çerçevesinin açıklaması.  
+ dışı Yığın çerçevesinin açıklaması.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genellikle, `fLong` olduğu `FALSE`, bu yöntem yalnızca yığın çerçevesiyle ilgili işlevin adını sağlar. Zaman `fLong` olduğu `TRUE`, bu yöntem işlev parametrelerini ve diğer ilgili bilgileri de sağlayabilir.  
+ Genellikle, `fLong` `FALSE` ise, bu yöntem yalnızca yığın çerçevesiyle ilişkili işlevin adını sağlar. @No__t_0 `TRUE` olduğunda, bu yöntem işlev parametreleri ve diğer ilgili bilgileri de sağlayabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugStackFrame Arabirimi](../../winscript/reference/idebugstackframe-interface.md)

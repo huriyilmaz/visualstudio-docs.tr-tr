@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::QueryCurrentThreadIsDebuggerThread | Microsoft Docs
+title: 'IDebugApplication:: Querycurrentthreadıdebuggerthread | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2ed53bcdb5e0d613a757c0c60f4791b0c59e3476
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0f70cde752506919d90bf963d010ebfc7abf5e88
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990812"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577213"
 ---
 # <a name="idebugapplicationquerycurrentthreadisdebuggerthread"></a>IDebugApplication::QueryCurrentThreadIsDebuggerThread
-Geçerli çalışan iş parçacığı hata ayıklayıcı iş parçacığı olup olmadığını belirler.  
+Geçerli çalışan iş parçacığının hata ayıklayıcı iş parçacığı olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,18 +34,18 @@ HRESULT QueryCurrentThreadIsDebuggerThread();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Yöntem başarılı oldu ve geçerli çalışan iş parçacığı hata ayıklayıcı iş parçacığıdır.|  
+|`S_OK`|Yöntem başarılı oldu ve geçerli çalışan iş parçacığı hata ayıklayıcı iş parçacığı.|  
 |`S_FALSE`|Geçerli çalışan iş parçacığı hata ayıklayıcı iş parçacığı değil.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, geçerli çalışan iş parçacığı hata ayıklayıcı iş parçacığı olup olmadığını belirler.  
+ Bu yöntem, çalışan geçerli iş parçacığının hata ayıklayıcı iş parçacığı olup olmadığını belirler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplication Arabirimi](../../winscript/reference/idebugapplication-interface.md)

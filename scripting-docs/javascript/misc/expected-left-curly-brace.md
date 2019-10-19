@@ -14,19 +14,19 @@ ms.assetid: ffdb55c0-e361-4bcd-b1a6-6158e7d9b557
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6fac3676c96e3f9ebc69b34f688ad52efd1e7248
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fa40c31a3be47c085e176889b4a7ec72d74e37b7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934866"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577571"
 ---
 # <a name="expected-"></a>'{' bekleniyor
-İşlev gövdesi başlangıcını işaretleyen sol ayraç içermiyordu. Tek bir satır, olsa bile, bir işlev gövdesini oluşturan yapan kod sol ve sağ küme ayraçları içinde yer almalıdır. Küme ayraçları içine işlev gövdeleri kullanımını Döngülerde katı olduğuna dikkat edin.  
+İşlev gövdesinin başlangıcını işaretleyen sol küme ayracı eklemeyin. Tek bir satır olsa bile bir işlevin gövdesini oluşturan kod, sol ve sağ küme ayraçları içinde yer almalıdır. İşlev gövdelerinde küme ayraçları kullanmanın döngüden daha sıkı olduğunu unutmayın.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- İşlev gövdesi başlangıcını işaretleyen sol ayraç ekleyin.  
+- İşlev gövdesinin başlangıcını işaretleyen sol küme ayracı ekleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [İşlev Nesnesi](../../javascript/reference/function-object-javascript.md)

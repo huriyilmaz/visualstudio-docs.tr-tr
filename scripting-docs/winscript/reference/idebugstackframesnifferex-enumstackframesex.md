@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrameSnifferEx::EnumStackFramesEx | Microsoft Docs
+title: 'Idebugstackframesnifferex:: EnumStackFramesEx | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8969c279e4eb2c2966e297317a25a60f12be68a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6a4062e7c0a9b3a82578daffa2ab7ef7e9ba614d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63005725"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576702"
 ---
 # <a name="idebugstackframesnifferexenumstackframesex"></a>IDebugStackFrameSnifferEx::EnumStackFramesEx
-Geçerli iş parçacığı için yığın çerçevelerinin bir numaralandırıcı döndürür.  
+Geçerli iş parçacığı için yığın çerçevelerinin bir Numaralandırıcı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT EnumStackFramesEx(
   
 #### <a name="parameters"></a>Parametreler  
  `dwSpMin`  
- [in] Yığın çerçevelerini numaralandırma alt adresi sınırı.  
+ 'ndaki Yığın çerçevelerini listelemek için daha düşük adres sınırı.  
   
  `ppedsf`  
- [out] Geçerli iş parçacığı için yığın çerçevesi için Numaralandırıcı.  
+ dışı Geçerli iş parçacığı için yığın çerçevelerinin numaralandırıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın çerçeve Numaralandırıcı çerçeveleri ile en son gönderilen çerçevenin yığın üstüne başlayarak döndürür. Numaralandırıcı yalnızca büyük veya eşittir adresleriyle yığın çerçeveleri içeriyor `dwSpMin`.  
+ Yığın çerçeve numaralandırıcısı, en son gönderilen kareyle birlikte yığının en üstünde başlayan kareleri döndürür. Numaralandırıcı yalnızca `dwSpMin` eşit veya daha büyük adreslere sahip yığın çerçeveleri içeriyor.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugStackFrameSnifferEx Arabirimi](../../winscript/reference/idebugstackframesnifferex-interface.md)

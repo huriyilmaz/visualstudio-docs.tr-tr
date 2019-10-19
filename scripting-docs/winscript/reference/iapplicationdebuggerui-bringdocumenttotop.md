@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebuggerUI::BringDocumentToTop | Microsoft Docs
+title: 'Iapplicationdebuggeruı:: BringDocumentToTop | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a8a88b44f609113670259492eb82491b16004d29
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b51e7b588750fc72e61840c4748c006eea732c22
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991116"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577803"
 ---
 # <a name="iapplicationdebuggeruibringdocumenttotop"></a>IApplicationDebuggerUI::BringDocumentToTop
-Pencerenin üst hata ayıklayıcı belirtilen hata ayıklama belge içeren kullanıcı arabirimi sunar.  
+Belirtilen hata ayıklama belgesini içeren pencereyi hata ayıklayıcı Kullanıcı arabirimindeki en üst tarafına taşır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ HRESULT BringDocumentToTop(
   
 #### <a name="parameters"></a>Parametreler  
  `pddt`  
- [in] Belgenin en üstüne hata ayıklayıcı kullanıcı arabirimi Getir hata ayıklayın.  
+ 'ndaki Hata ayıklayıcı Kullanıcı arabirimindeki en üste getirmek için belgede hata ayıklayın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -48,7 +48,7 @@ HRESULT BringDocumentToTop(
 |`E_INVALIDARG`|Belge bilinmiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, kullanıcı arabirimi içeren belirtilen hata ayıklama belgenin en üstüne hata ayıklayıcı penceresini getirir.  
+ Bu yöntem, belirtilen hata ayıklama belgesini içeren pencereyi hata ayıklayıcı Kullanıcı arabirimindeki en üst tarafına taşır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IApplicationDebuggerUI Arabirimi](../../winscript/reference/iapplicationdebuggerui-interface.md)

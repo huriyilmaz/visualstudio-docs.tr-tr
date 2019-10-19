@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty::GetPropertyInfo | Microsoft Docs
+title: 'Idebugproperty:: GetPropertyInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 51cf7fae597d95b0d9098d6b2dc6950c2d06bfa0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e0698e09cd9643322a237a81d971248577fd97e0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979155"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562329"
 ---
 # <a name="idebugpropertygetpropertyinfo"></a>IDebugProperty::GetPropertyInfo
-Değerini alır bir `IDebugProperty` bir yöntem veya dizini oluşturulmuş özelliğe açıklar.  
+Bir yöntemi veya dizini oluşturulmuş özelliği açıklayan `IDebugProperty` değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,18 +39,18 @@ HRESULT GetPropertyInfo (
   
 #### <a name="parameters"></a>Parametreler  
  `dwFields`  
- [in] Belirtir `DBGPROP_INFO_FLAGS` olarak doldurulması için alanları belirlemek sabitleri `DebugPropertyInfo` yapısı.  
+ 'ndaki @No__t_1 yapısında doldurulacak alanları belirleyen `DBGPROP_INFO_FLAGS` sabitlerini belirtir.  
   
  `nRadix`  
- [in] Sayısal yedeklenmesine biçimlendirmede kullanılacak sayı tabanı.  
+ 'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak Radix.  
   
  `pPropertyInfo`  
- [out] Döndürür `DebugPropertyInfo` yapı özelliği tanımlar.  
+ dışı Özelliği tanımlayan `DebugPropertyInfo` yapısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir döndürür `HRESULT`, genellikle `S_OK`.  
+ Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)    
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)    
  [DebugPropertyInfo Yapısı](../../winscript/reference/debugpropertyinfo-structure.md)

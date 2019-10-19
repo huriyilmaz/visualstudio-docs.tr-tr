@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e767c260dcdda2d92a7d90f7fd12af6918ac16d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 51b8d3b31c92006c4f5b91a874bbb9d66ffa0b1b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786895"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561503"
 ---
-# <a name="iscriptscriptlet-getsimpleeventname"></a>Iscriptscriptlet:: GetSimpleEventName
-Kod oluşturma yöntemiyle ilişkili basit olay adını döndürür. Bu, herhangi bir boşluk içermeyen Tek sözcüklü adıdır.  
+# <a name="iscriptscriptlet-getsimpleeventname"></a>IScriptScriptlet:: GetSimpleEventName
+Bir kod oluşturma yöntemi ile ilişkili basit olay adını döndürür. Bu, hiç boşluk içermeyen tek sözcüklü bir addır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT GetSimpleEventName(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstr`  
- [out] İlişkili olduğu basit olay adını içeren bir arabellek `IScriptScriptlet` nesne.  
+ dışı @No__t_0 nesnesiyle ilişkili basit olay adını içeren bir arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -48,5 +48,5 @@ HRESULT GetSimpleEventName(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptScriptlet Arabirimi](../../winscript/reference/iscriptscriptlet-interface.md)

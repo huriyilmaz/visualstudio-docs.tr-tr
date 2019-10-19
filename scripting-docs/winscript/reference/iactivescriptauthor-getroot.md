@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetRoot | Microsoft Docs
+title: 'Iactivescriptauthor:: GetRoot | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6cdb3246ccae2eabb34696162f67e82a60374550
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ca2aab154d56cd98c3c2acede61f86f725ce9c1b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955113"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576183"
 ---
 # <a name="iactivescriptauthorgetroot"></a>IActiveScriptAuthor::GetRoot
-Döndürür `IScriptNode` yazarın betiği ağacının kökü.  
+Yazarın betik ağacının `IScriptNode` kökünü döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT GetRoot(
   
 #### <a name="parameters"></a>Parametreler  
  `ppsp`  
- [out] Bir işaretçiye alan değişkenin adresini `IScriptNode` arabirimi kök düğüm.  
+ dışı Kök düğümün `IScriptNode` arabirimine bir işaretçi alan bir değişkenin adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -48,6 +48,6 @@ HRESULT GetRoot(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
  [IScriptNode Arabirimi](../../winscript/reference/iscriptnode-interface.md)

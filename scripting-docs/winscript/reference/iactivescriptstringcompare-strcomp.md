@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptStringCompare::StrComp | Microsoft Docs
+title: 'Iactivescriptstringcompare:: StrComp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 66cccb4281e19aebb25b3b4cde06705b500f53a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 233c427b634306527b0b0d496397e82f889560e2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991428"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577945"
 ---
 # <a name="iactivescriptstringcomparestrcomp"></a>IActiveScriptStringCompare::StrComp
-Komut dosyası altyapısı için dize karşılaştırma yöntemini tanımlar.  
+Betik altyapısı için dize karşılaştırma yöntemini tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,7 +48,7 @@ HRESULT StrComp(
  İkinci dize.  
   
  `iRet`  
- Karşılaştırmanın sonucu. 0 ise `bszStr1` ve `bszStr2`özdeş; -1 ise `bszStr1`  <  `bszStr2`; Eğer 1 `bszStr1`  >  `bszStr2`.  
+ Karşılaştırmanın sonucu. `bszStr1` ve `bszStr2`are özdeş ise 0; -1 `bszStr1`  <  `bszStr2`; `bszStr1`  >  `bszStr2`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -57,13 +57,13 @@ HRESULT StrComp(
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
 |`E_INVALIDARG`|Bağımsız değişken geçerli değil.|  
-|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenen başlatıldı veya).|  
+|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenmemiş veya başlatılmamış).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem bir dize karşılaştırmasının yürütülen her zaman çağrılır.  
+ Bu yöntem, bir dize karşılaştırması her yürütüldüğünde çağrılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, dize karşılaştırma işlev aşırı yükleme gösterilmektedir. Aşırı yüklemeye izin verilen kullandığınızda [IActiveScriptProperty::SetProperty](../../winscript/reference/iactivescriptproperty-setproperty.md) SCRIPTPROP_STRINGCOMPAREINSTANCE ayarlamak için.  
+ Aşağıdaki örnek, dize karşılaştırma işlevinin nasıl aşırı yükleneceğini gösterir. SCRIPTPROP_STRINGCOMPAREINSTANCE ayarlamak için [ıactivescriptproperty:: SetProperty](../../winscript/reference/iactivescriptproperty-setproperty.md) kullandığınızda aşırı yüklemeye izin verilir.  
   
 ```cpp#  
 cpp_quote("// {58562769-ED52-42f7-8403-4963514E1F11}")  
@@ -100,5 +100,5 @@ interface IActiveScriptStringCompare : IUnknown
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptStringCompare Arabirimi](../../winscript/reference/iactivescriptstringcompare-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::ResumeFromBreakPoint | Microsoft Docs
+title: 'IRemoteDebugApplication:: ResumeFromBreakPoint | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5844381188cb03c99ab0a44ed9b9e0fdbab67e6e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7fead9c14efbe73bd006a5ff3e1cfb10ad40404b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944165"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577454"
 ---
 # <a name="iremotedebugapplicationresumefrombreakpoint"></a>IRemoteDebugApplication::ResumeFromBreakPoint
-Bir kesme noktasına şu anda bir uygulama devam eder.  
+Şu anda bir kesme noktasında olan bir uygulamaya devam eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT ResumeFromBreakPoint(
   
 #### <a name="parameters"></a>Parametreler  
  `prptFocus`  
- [in] Atlama modu tarafından etkilendiği için olan iş parçacığı modları, atlamak için.  
+ 'ndaki Adımlama modlarında, Adımlama modundan etkilenecek iş parçacığı.  
   
  `bra`  
- [in] Uygulama sürdürdükten gerçekleştirilecek eylem.  
+ 'ndaki Uygulama sürdürülmeden gerçekleştirilecek eylem.  
   
  `era`  
- [in] Uygulama bir hata nedeniyle durduruldu durumunda gerçekleştirilecek eylem.  
+ 'ndaki Bir hata nedeniyle uygulamanın durdurulduğu durumda gerçekleştirilecek eylem.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir kesme noktasına şu anda bir uygulama devam eder.  
+ Bu yöntem, şu anda bir kesme noktasında olan bir uygulamayı devam ettirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iremotedebugapplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)   
- [BREAKRESUMEACTION numaralandırması](../../winscript/reference/breakresumeaction-enumeration.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)    
+ [Breakresumeaction numaralandırması](../../winscript/reference/breakresumeaction-enumeration.md)    
  [ERRORRESUMEACTION Sabit Listesi](../../winscript/reference/errorresumeaction-enumeration.md)

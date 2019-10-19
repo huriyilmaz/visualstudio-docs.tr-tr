@@ -13,36 +13,36 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6b3d9725d72f5213aadc3d9400bef87cecb20ba0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ed0734fa48d58a5eae779c75c838c09215ed60a0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009735"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576164"
 ---
 # <a name="iactivescriptauthor-interface"></a>IActiveScriptAuthor Arabirimi
-IntelliSense ve harmanlama bilgileri gibi hizmetler yazma temsil eder.  
+IntelliSense ve bilgi harmanlama dahil olmak üzere yazma hizmetlerini temsil eder.  
   
- Devralınan yöntemleri yanı sıra `IUnknown`, `IActiveScriptAuthor` arabirimi aşağıdaki yöntemleri sunar.  
+ @No__t_0 devralınan yöntemlere ek olarak, `IActiveScriptAuthor` arabirimi aşağıdaki yöntemleri sunar.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IActiveScriptAuthor::AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)|Komut dosyası altyapısının ad alanı yazma kök düzeyinde öğe adını ekler. A *kök düzeyinde öğe* özellikleri ve yöntemleri içerebilir ve bu de içerebilir bir olay kaynağı bir nesnedir.|  
-|[IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)|Kök düzeyinde alt sitesi olarak kod oluşturma yöntemini ekler `IScriptNode` nesne. Konak, yalnızca iki düzeyi ayrıldığında tam adı olabilir.|  
-|[IActiveScriptAuthor::AddTypeLib](../../winscript/reference/iactivescriptauthor-addtypelib.md)|Komut dosyası için ad alanı için bir tür kitaplığı ekler.|  
-|[IActiveScriptAuthor::GetChars](../../winscript/reference/iactivescriptauthor-getchars.md)|İstenen tamamlama bağlamı için tamamlama karakter kümesini döndürür.|  
-|[IActiveScriptAuthor::GetEventHandler](../../winscript/reference/iactivescriptauthor-geteventhandler.md)|Belirtilen öznitelikleri scriptlet döndürür.|  
-|[IActiveScriptAuthor::GetInfoFromContext](../../winscript/reference/iactivescriptauthor-getinfofromcontext.md)|Döndürür bir kod bloğu içinde bilgi ve belirli bir karakter için yer işareti konumlarını yazın. Bu üye için bilgi IntelliSense, genel listeler ve parametre ipuçları sağlar.|  
-|[IActiveScriptAuthor::GetLanguageFlags](../../winscript/reference/iactivescriptauthor-getlanguageflags.md)|Dil bilgileri döndürür.|  
-|[IActiveScriptAuthor::GetRoot](../../winscript/reference/iactivescriptauthor-getroot.md)|Döndürür `IScriptNode` yazarın betiği ağacının kökü.|  
-|[IActiveScriptAuthor::GetScriptletTextAttributes](../../winscript/reference/iactivescriptauthor-getscriptlettextattributes.md)|Bir kod oluşturma metni özniteliklerini döndürür.|  
-|[IActiveScriptAuthor::GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)|Bir betik bloğu metin özniteliklerini döndürür.|  
-|[IActiveScriptAuthor::IsCommitChar](../../winscript/reference/iactivescriptauthor-iscommitchar.md)|Belirli bir karakterin bir deyim tamamlama uygulama tarafından işleme olup olmadığını gösteren bir değer döndürür.|  
-|[IActiveScriptAuthor::ParseScriptText](../../winscript/reference/iactivescriptauthor-parsescripttext.md)|Betik metin ayrıştırır, geliştirme komut dosyası altyapısı yazma metin ekler ve oluşturur bir `IScriptEntry` betik bloğu için karşılık gelen nesne.|  
-|[IActiveScriptAuthor::RemoveNamedItem](../../winscript/reference/iactivescriptauthor-removenameditem.md)|Kaldırır bir `NamedItem` altyapısı yazma betiğin ad alanından nesne.|  
-|[IActiveScriptAuthor::RemoveTypeLib](../../winscript/reference/iactivescriptauthor-removetypelib.md)|Bir tür kitaplığı altyapısı ad alanı yazma komut dosyasından kaldırır.|  
+|[IActiveScriptAuthor::AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)|Kök düzeyindeki bir öğenin adını betik yazma altyapısının ad alanına ekler. *Kök düzeyindeki öğe* , Özellikler ve Yöntemler içerebilen ve bir olay kaynağı içerebilen bir nesnedir.|  
+|[IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)|Kök düzeyi `IScriptNode` nesnenin alt öğesi olarak bir kod kod oluşturma yöntemi ekler. Konakta, kod oluşturma yöntemi tam adı yalnızca iki düzeye sahip olabilir.|  
+|[IActiveScriptAuthor::AddTypeLib](../../winscript/reference/iactivescriptauthor-addtypelib.md)|Betik için ad alanına bir tür kitaplığı ekler.|  
+|[IActiveScriptAuthor::GetChars](../../winscript/reference/iactivescriptauthor-getchars.md)|İstenen tamamlama bağlamının tamamlanma karakter kümesini döndürür.|  
+|[IActiveScriptAuthor::GetEventHandler](../../winscript/reference/iactivescriptauthor-geteventhandler.md)|Belirtilen özniteliklere sahip olan kod oluşturma yöntemi döndürür.|  
+|[IActiveScriptAuthor::GetInfoFromContext](../../winscript/reference/iactivescriptauthor-getinfofromcontext.md)|Kod bloğundaki belirli bir karakter için tür bilgilerini ve yer işareti konumlarını döndürür. Bu, üye IntelliSense, genel listeler ve parametre ipuçları hakkında bilgiler sağlar.|  
+|[IActiveScriptAuthor::GetLanguageFlags](../../winscript/reference/iactivescriptauthor-getlanguageflags.md)|Dil bilgisini döndürür.|  
+|[IActiveScriptAuthor::GetRoot](../../winscript/reference/iactivescriptauthor-getroot.md)|Yazarın betik ağacının `IScriptNode` kökünü döndürür.|  
+|[IActiveScriptAuthor::GetScriptletTextAttributes](../../winscript/reference/iactivescriptauthor-getscriptlettextattributes.md)|Bir kod oluşturma yöntemi öğesinin metin özniteliklerini döndürür.|  
+|[IActiveScriptAuthor::GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)|Bir betik bloğunun metin özniteliklerini döndürür.|  
+|[IActiveScriptAuthor::IsCommitChar](../../winscript/reference/iactivescriptauthor-iscommitchar.md)|Verilen bir karakterin uygulama tarafından bir deyimin tamamlanmasını yürütmesi gerekip gerekmediğini belirten bir değer döndürür.|  
+|[IActiveScriptAuthor::ParseScriptText](../../winscript/reference/iactivescriptauthor-parsescripttext.md)|Betik metnini ayrıştırır, metni yazma betiği yazma altyapısına ekler ve betik bloğuna karşılık gelen bir `IScriptEntry` nesnesi oluşturur.|  
+|[IActiveScriptAuthor::RemoveNamedItem](../../winscript/reference/iactivescriptauthor-removenameditem.md)|Betik yazma altyapısının ad alanından bir `NamedItem` nesnesini kaldırır.|  
+|[IActiveScriptAuthor::RemoveTypeLib](../../winscript/reference/iactivescriptauthor-removetypelib.md)|Betik yazma altyapısı ad alanından bir tür kitaplığını kaldırır.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Yazma Arabirimleri](../../winscript/reference/active-script-authoring-interfaces.md)

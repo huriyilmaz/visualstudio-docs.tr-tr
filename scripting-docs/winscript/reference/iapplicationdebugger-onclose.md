@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::onClose | Microsoft Docs
+title: 'Iapplicationdebugger:: onClose | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5e749c51769bd3344e144836937492fbb0a8fb58
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1e31b2a77effc729f0e7df1e36116ee554446093
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991219"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577881"
 ---
 # <a name="iapplicationdebuggeronclose"></a>IApplicationDebugger::onClose
-Hata ayıklama uygulama Kapat olayını işler.  
+Bir hata ayıklama uygulaması kapatma olayını işler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,18 +34,18 @@ HRESULT onClose();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem olduğunda çağrılır `IDebugApplication::Close` çağrılır.  
+ @No__t_0 çağrıldığında bu yöntem çağrılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)    
  [IDebugApplication::Close](../../winscript/reference/idebugapplication-close.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::AddDeferredText | Microsoft Docs
+title: 'Idebugbelgethelper:: AddDeferredText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b2f2a7c134142668613cc38cee9357e42cb95096
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1aae73e44059b1f07fa4cb54f40cdcd12e564a8f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433937"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577047"
 ---
 # <a name="idebugdocumenthelperadddeferredtext"></a>IDebugDocumentHelper::AddDeferredText
-Verilen metni kullanılabilir, ancak karakterleri sağlamaz yardımcı bildirir.  
+Yardım 'a verilen metnin kullanılabilir olduğunu ancak karakterleri sağlamadığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,13 +38,13 @@ HRESULT AddDeferredText(
   
 #### <a name="parameters"></a>Parametreler  
  `cChars`  
- [in] Eklenecek karakter (Unicode) sayısı.  
+ 'ndaki Eklenecek karakter sayısı (Unicode).  
   
  `dwTextStartCookie`  
- [in] Metnin başlangıç konumunu temsil eden ana bilgisayar tanımlı tanımlama bilgisi.  
+ 'ndaki Metnin başlangıç konumunu temsil eden ana bilgisayar tanımlı tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,15 +52,15 @@ HRESULT AddDeferredText(
 |`E_FAIL`|Yöntem başarısız oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, doğru bildirimleri ve boyut bilgileri oluşturmak yardımcıyı verirken gerekene kadar eklemek için karakter sağlama erteleneceği konak sağlar. `dwTextStartCookie` Metnin başlangıç konumunu temsil eden konak tarafından tanımlanan bir tanımlama bilgisi parametredir. Yapılan sonraki çağrılar `IDebugDocumentText::GetText` bu tanımlama bilgisini belirtmeniz gerekir. Örneğin, DBCS içinde metin temsil eden bir ana bilgisayar, bir bayt uzaklığı tanımlama bilgisi olabilir.  
+ Bu yöntem, ana bilgisayarın, gerek duyuluncaya kadar eklenecek karakterleri sağlamayı erteetmesine izin verir. böylece, yardım 'ın doğru bildirimler ve boyut bilgileri oluşturmasına izin verir. @No__t_0 parametresi, ana bilgisayar tarafından tanımlanan ve metnin başlangıç konumunu temsil eden bir tanımlama bilgisidir. @No__t_0 sonraki çağrıların bu tanımlama bilgisini sağlaması gerekir. Örneğin, DBCS 'deki metni temsil eden bir konakta, tanımlama bilgisi bir bayt kayması olabilir.  
   
- Varsayılır tek bir çağrı `IDebugDocumentText::GetText` karakter birden çok çağrı alabilirsiniz `AddDeferredText`. Yardımcı sınıfları da birden çok kez aynı ertelenmiş karakter aralığının isteyebilir.  
+ @No__t_0 tek bir çağrının, `AddDeferredText` birden çok çağrıdan karakter alabilirim olduğu varsayılır. Yardımcı sınıflar aynı zamanda aynı gecikmeli karakter aralığını birden çok kez sorabilir.  
   
 > [!NOTE]
-> Çağrılar `AddDeferredText` çağrılarıyla karma olmayan `AddUnicodeText` veya `AddDBCSText`. Bu meydana gelirse, `E_FAIL` döndürülür.  
+> @No__t_0 çağrıları, `AddUnicodeText` veya `AddDBCSText` çağrılarında karışık olmamalıdır. Bu durumda `E_FAIL` döndürülür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugdocumenthelper arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
- [IDebugDocumentHelper::AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
+ [Idebugbelgethelper:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)    
+ [Idebugbelgethelper:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
  [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)

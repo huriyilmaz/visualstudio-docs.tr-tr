@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptWinRTErrorDebug::GetRestrictedErrorReference | Microsoft Docs
+title: 'IActiveScriptWinRTErrorDebug:: Getkısıtlayıcı Tederrorreference | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d4696c66ec331c08f3419d79f0f48feb3bf9d80f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4665071fe26ed3dadbaadbcbaa79217562d311c6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432967"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577910"
 ---
 # <a name="iactivescriptwinrterrordebuggetrestrictederrorreference"></a>IActiveScriptWinRTErrorDebug::GetRestrictedErrorReference
-Windows çalışma zamanı döndürür, varsa başvuru hatası kısıtlı.  
+Varsa, kısıtlanmış başvuru hatası Windows Çalışma Zamanı döndürür.  
   
 > [!IMPORTANT]
-> [Iactivescriptwinrterrordebug arabirimi](../../winscript/reference/iactivescriptwinrterrordebug-interface.md) PDM v11.0 tarafından uygulanan ve büyük. activdbg100.h içinde bulunur.  
+> [IActiveScriptWinRTErrorDebug ARABIRIMI](../../winscript/reference/iactivescriptwinrterrordebug-interface.md) PDM v 11.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ HRESULT GetRestrictedErrorReference([out] BSTR * referenceString);
   
 #### <a name="parameters"></a>Parametreler  
  `referenceString`  
- [out] Başvuru hata dizesi.  
+ dışı Başvuru hata dizesi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptWinRTErrorDebug Arabirimi](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)

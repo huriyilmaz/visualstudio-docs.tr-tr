@@ -1,5 +1,5 @@
 ---
-title: IDebugSyncOperation::Execute | Microsoft Docs
+title: 'Idebugsyncoperation:: Execute | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2bc204169ff94a240e363eb8caa35ec8c7de9be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 25da02e6736cc2f8ac27c82f922bd515e791bef1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004870"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576689"
 ---
 # <a name="idebugsyncoperationexecute"></a>IDebugSyncOperation::Execute
-Zaman uyumlu işlem gerçekleştirir ve döndürür.  
+Zaman uyumlu olarak işlemi gerçekleştirir ve döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT Execute(
   
 #### <a name="parameters"></a>Parametreler  
  `ppunkResult`  
- [out] İşlem tarafından döndürülen nesne parametresi.  
+ dışı İşlem tarafından döndürülen nesne parametresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_ABORT`|Çağırarak işlemi iptal edildi `IDebugSyncOperation::InProgressAbort` yöntemi.|  
+|`E_ABORT`|@No__t_0 yöntemi çağrılırken işlem iptal edildi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlem Hata Ayıklama Yöneticisi'nde hedef iş parçacığı çağrı `Execute` yöntem zaman uyumlu olarak.  
+ Hedef iş parçacığında Işlem hata ayıklama Yöneticisi `Execute` yöntemini eşzamanlı olarak çağırır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugSyncOperation Arabirimi](../../winscript/reference/idebugsyncoperation-interface.md)

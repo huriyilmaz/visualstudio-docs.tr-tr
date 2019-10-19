@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::FCanJitDebug | Microsoft Docs
+title: 'IDebugApplication:: Fcanjdebug | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2d5dc03d7d2511f5b50969c062104759e78fcf03
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d68240ffd86935e9936642c09d5131f70b46e9ab
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990942"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576871"
 ---
 # <a name="idebugapplicationfcanjitdebug"></a>IDebugApplication::FCanJitDebug
-Just-ın-time (JIT) hata ayıklayıcı kayıtlı olup olmadığını belirler.  
+Tam zamanında (JıT) hata ayıklayıcı kaydedilip kaydedilmeyeceğini belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,13 +34,13 @@ BOOL FCanJitDebug();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa ve JIT hata ayıklayıcı kaydedilir, yöntem döndürür `TRUE`. Aksi halde `FALSE`.  
+ Yöntem başarılı olursa ve bir JıT hata ayıklayıcısı kayıtlıysa, yöntem `TRUE` döndürür. Aksi takdirde, `FALSE` döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, JIT hata ayıklayıcı kayıtlı olup olmadığını belirler.  
+ Bu yöntem, bir JıT hata ayıklayıcısı kaydedilip kaydedilmeyeceğini belirler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplication Arabirimi](../../winscript/reference/idebugapplication-interface.md)

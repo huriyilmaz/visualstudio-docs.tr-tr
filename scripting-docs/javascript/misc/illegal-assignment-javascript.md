@@ -14,19 +14,19 @@ ms.assetid: abebe518-07d7-42cd-af50-00bfda17da08
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3fff0639659f7470b5f4baa69e4038b3544036c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 128eda12f555b4811b814801066bbb3effc4e374
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007472"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576566"
 ---
 # <a name="illegal-assignment-javascript"></a>Geçersiz atama (JavaScript)
-Bir değer atamak için bir salt okunur tanımlayıcı çalışıldı. Bir salt okunur tanımlayıcı için bir değer atanamaz. Örneğin, ana bilgisayar nesneleri ve COM nesneleri dış tanımlı.  
+Salt okunurdur bir tanımlayıcıya değer atamaya çalıştınız. Salt okunurdur bir tanımlayıcıya değer atayamazsınız. Örneğin, tanımlı nesneleri ve dış COM nesnelerini barındırın.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Değerleri için salt okunur tanımlayıcıları atamayın.  
+- Salt okuma tanımlayıcılarına değer atamayın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Atama İşleci (=)](../../javascript/reference/assignment-operator-decrement-equal-javascript.md)

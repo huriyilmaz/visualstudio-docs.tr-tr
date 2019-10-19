@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptErrorDebug::GetDocumentContext | Microsoft Docs
+title: 'Iactivescripterrordebug:: GetDocumentContext | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 380ee3b993408c21119da1494f4a0e005b994399
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9e1a6e2502e9329a7a56a7359e11a934f0ae5985
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009722"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576326"
 ---
 # <a name="iactivescripterrordebuggetdocumentcontext"></a>IActiveScriptErrorDebug::GetDocumentContext
-Bu hata için belge bağlamı sağlar.  
+Bu hata için belge bağlamını sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetDocumentContext(
   
 #### <a name="parameters"></a>Parametreler  
  `ppssc`  
- [out] Bu hata belge bağlamı.  
+ dışı Bu hata için belge bağlamı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belge bağlamı karakter konumu aralık ilgili hataya karşılık gelen tüm karakterleri içermelidir.  
+ Belge bağlamı karakter konumu aralığı, hataya karşılık gelen tüm karakterleri içermelidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptErrorDebug Arabirimi](../../winscript/reference/iactivescripterrordebug-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::Attach | Microsoft Docs
+title: 'Idebugbelgethelper:: Attach | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8f4fbd1686d27e594b748ca97c82c645de1b93de
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3400a5bf6cd3e4a9726fdf4b2f20bbf43b9fc989
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62783141"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577027"
 ---
 # <a name="idebugdocumenthelperattach"></a>IDebugDocumentHelper::Attach
-Bu belge için belge ağacı ekler.  
+Belge ağacına bu belgeyi ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT Attach(
   
 #### <a name="parameters"></a>Parametreler  
  `pddhParent`  
- [in] Bu belge ekleneceği belge ağacı. NULL olabilir.  
+ 'ndaki Bu belgenin ekleneceği belge ağacı. NULL olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu belgede belgeye ekler. ağaç, kullanarak `pddhParent` üst öğe olarak. Varsa `pddhParent` olduğu `NULL`, bu belge üst düzey belge olur.  
+ Bu yöntem, bu belgeyi üst öğe olarak `pddhParent` kullanarak belge ağacına ekler. @No__t_0 `NULL`, bu belge üst düzey belge olacaktır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IDebugDocumentHelper::Detach](../../winscript/reference/idebugdocumenthelper-detach.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugbelgethelper::D etach](../../winscript/reference/idebugdocumenthelper-detach.md)    
  [IDebugDocumentHelper Arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)

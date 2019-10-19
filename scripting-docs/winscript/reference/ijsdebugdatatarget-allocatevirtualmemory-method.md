@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::allocatevirtualmemory yöntemi | Microsoft Docs
+title: 'IJsDebugDataTarget:: AllocateVirtualMemory yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c04bf21882ec39054c74f060eaa2c6f65ac0b4d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 30ad8a3eb277823271fbfb4c2e10364b8602775c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583073"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577637"
 ---
 # <a name="ijsdebugdatatargetallocatevirtualmemory-method"></a>IJsDebugDataTarget::AllocateVirtualMemory Yöntemi
-Ayırır ve/veya hedef işlemin sanal adres alanı içindeki bellek bölgesini kaydeder.  
+Hedef işlemin sanal adres alanı içindeki bir bellek bölgesini ayırır ve/veya kaydeder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,27 +39,27 @@ HRESULT AllocateVirtualMemory(
   
 #### <a name="parameters"></a>Parametreler  
  `address`  
- [in] Burada bellek veya saklandığı hedef işlem dahilindeki adres. Bu değer genellikle hangi durumda sistem bir adres seçer, sıfırdır.  
+ 'ndaki Belleğin yürütülmesi veya ayrılması gereken hedef işlem içindeki adres. Bu değer genellikle sıfırdır ve bu durumda sistem bir adres seçer.  
   
  `size`  
- [in] Ayrılacak bayt cinsinden bellek bölgesini boyutu. Sistem otomatik olarak sonraki sayfa sınırına yukarı yuvarlar.  
+ 'ndaki Ayrılacak bellek bölgesinin bayt cinsinden boyutu. Sistem otomatik olarak sonraki sayfa sınırına yuvarlar.  
   
  `allocationType`  
- [in] Gerçekleştirilecek ayırma türünü gösterir. Bu genellikle mem_commıt &#124; ayırır ve bir ayırmayı tek bir adımda işlemeler MEM_RESERVE (0x3000 öğesidir).  
+ 'ndaki Gerçekleştirilecek ayırma türünü gösterir. Bu genellikle bir adımda &#124; ayırmayı ayrılmış ve KAYDEDEN bir MEM_COMMIT MEM_RESERVE (0x3000).  
   
  `pageProtection`  
- [in] Sayfaların ayrılacak bellek koruması bölge için. Sayfalar, bellek koruma sabitlerinden (örneğin, page_readwrıte, PAGE_EXECUTE) herhangi birini belirtebilirsiniz.  
+ 'ndaki Ayrılacak sayfa bölgesi için bellek koruması. Sayfalar yürütüliyorsa, bellek koruma sabitlerinden birini belirtebilirsiniz (örneğin, PAGE_READWRITE, PAGE_EXECUTE).  
   
  `pAllocatedAddress`  
- [out] Sayfalar ve ayrılan bölgenin taban adresidir.  
+ dışı Sayfaların ayrılmış bölgesinin temel adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- MEM_RESET kullanılmadığı sürece, işlev sıfır olarak ayırdığı belleği başlatır. Ek bilgi için bkz. VirtualAlloc Win32 API.  
+ İşlevi, MEM_RESET kullanılmadığı takdirde sıfıra ayrılan belleği başlatır. Daha fazla bilgi için bkz. VirtualAlloc Win32 API.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugDataTarget Arabirimi](../../winscript/reference/ijsdebugdatatarget-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IProcessDebugManager::CreateApplication | Microsoft Docs
+title: 'Iprocessdebugmanager:: CreateApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 10d7f2246b327393a810170f5b133f2885186c3a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5be4c67168a43ec405a6d4ed857b9772fdddd1e9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944803"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577106"
 ---
 # <a name="iprocessdebugmanagercreateapplication"></a>IProcessDebugManager::CreateApplication
-Bu uygulama için yeni bir hata ayıklama uygulama nesnesi oluşturur.  
+Bu uygulama için yeni bir hata ayıklama uygulaması nesnesi oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT CreateApplication(
   
 #### <a name="parameters"></a>Parametreler  
  `ppda`  
- [out] Bu uygulama için hata ayıklama uygulama nesnesi.  
+ dışı Bu uygulama için hata ayıklama uygulaması nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem tarafından oluşturulan nesne adı yok ve değişen eklenmez uygulama listesi. Kullanım `IProcessDebugManager::AddApplication` uygulama listesini hata ayıklama uygulama eklemek için.  
+ Bu yöntem tarafından oluşturulan nesne bir ada sahip değil ve çalışan uygulama listesine eklenmedi. Hata ayıklama uygulamasını uygulama listesine eklemek için `IProcessDebugManager::AddApplication` kullanın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iprocessdebugmanager arabirimi](../../winscript/reference/iprocessdebugmanager-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iprocessdebugmanager arabirimi](../../winscript/reference/iprocessdebugmanager-interface.md)    
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::getthreadcontext metodu | Microsoft Docs
+title: 'IJsDebugDataTarget:: GetThreadContext Yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d7904ef81eb900c6466069267101f30d89e362a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da5722553b448605129adcf32cfaa52e2dc76352
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582839"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577652"
 ---
 # <a name="ijsdebugdatatargetgetthreadcontext-method"></a>IJsDebugDataTarget::GetThreadContext Yöntemi
-Verilen iş parçacığı için bağlamı alır.  
+Verilen iş parçacığının bağlamını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,21 +38,21 @@ HRESULT GetThreadContext(
   
 #### <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] Hedef işlemde çalışan iş parçacığı.  
+ 'ndaki Hedef işlemde çalışan iş parçacığı.  
   
  `contextFlags`  
- [in] Bağlam bayraklarını belirtir. Bu, Context'in ContextFlags alanıyla aynıdır (daha fazla bilgi için bkz. winnt.h, context_all öğesini arayın) olarak aynıdır.  
+ 'ndaki Bağlam bayraklarını belirtir. Bu, BAĞLAMı 'nın ContextFlags alanıyla aynı (daha fazla bilgi için bkz. Winnt. h, CONTEXT_ALL araması).  
   
  `contextSize`  
- [in] PContext tarafından belirlenen arabellek boyutu.  
+ 'ndaki PContext tarafından belirtilen arabelleğin boyutu.  
   
  `pContext`  
- [out] Platforma özgü CONTEXT yapısını pContext tarafından belirlenen arabelleğine alır.  
+ dışı Platforma özgü bağlam yapısını pContext tarafından belirtilen arabelleğe alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugDataTarget Arabirimi](../../winscript/reference/ijsdebugdatatarget-interface.md)

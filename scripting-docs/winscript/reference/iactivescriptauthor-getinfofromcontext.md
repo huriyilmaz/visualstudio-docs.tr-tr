@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetInfoFromContext | Microsoft Docs
+title: 'Iactivescriptauthor:: GetInfoFromContext | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e4fe885e116019608dd8d748c3cbdaff5d31dd2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 457b2ad1bda3226caf3604e3ccd6b976f01bca83
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935392"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576208"
 ---
 # <a name="iactivescriptauthorgetinfofromcontext"></a>IActiveScriptAuthor::GetInfoFromContext
-Döndürür bir kod bloğu içinde bilgi ve belirli bir karakter için yer işareti konumlarını yazın. Bu üye için bilgi IntelliSense, genel listeler ve parametre ipuçları sağlar.  
+Kod bloğundaki belirli bir karakter için tür bilgilerini ve yer işareti konumlarını döndürür. Bu, üye IntelliSense, genel listeler ve parametre ipuçları hakkında bilgiler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,52 +46,52 @@ HRESULT GetInfoFromContext(
   
 #### <a name="parameters"></a>Parametreler  
  `pszCode`  
- [in] Bilgi sonuçları oluşturmak için kullanılan kod bloğu dizesi adresi.  
+ 'ndaki Bilgi sonuçlarını oluşturmak için kullanılan kod bloğu dizesinin adresi.  
   
  `cchCode`  
- [in] Kod bloğunun uzunluğu.  
+ 'ndaki Kod bloğunun uzunluğu.  
   
  `ichCurrentPosition`  
- [in] Bloğun başlangıç göre karakterin konumu.  
+ 'ndaki Bloğunun başlangıcına göre karakterin konumu.  
   
  `dwListTypesRequested`  
- [in] İstenen liste türleri. Aşağıdaki değerlerin bir birleşimi olabilir:  
+ 'ndaki İstenen liste türleri. Aşağıdaki değerlerin bir birleşimi olabilir:  
   
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-----------------|  
 |SCRIPT_CMPL_NOLIST|0x0000|Liste yok.|  
 |SCRIPT_CMPL_MEMBERLIST|0x0001|Üye listesi.|  
 |SCRIPT_CMPL_ENUMLIST|0x0002|Numaralandırma listesi.|  
-|SCRIPT_CMPL_PARAMLIST|0x0004|Yöntem parametresi listesinden çağırın.|  
+|SCRIPT_CMPL_PARAMLIST|0x0004|Yöntem parametre listesini çağırın.|  
 |SCRIPT_CMPL_GLOBALLIST|0x0008|Genel liste.|  
   
- SCRIPT_CMPL_GLOBALLIST türü ile diğer tamamlama öğeleri OR işlecini kullanarak birleştirilebilir varsayılan bir tamamlanma öğesi olarak kabul edilir. Diğer tamamlanma listesi öğeleri için tür bilgilerini doldurmak betik altyapısı ilk yazma çalışır. Bu başarısız olursa altyapısı için SCRIPT_CMPL_GLOBALLIST doldurur.  
+ SCRIPT_CMPL_GLOBALLIST türü, diğer tamamlama öğeleriyle OR işleci kullanılarak birleştirilebilecek bir varsayılan tamamlama öğesi olarak değerlendirilir. Betik yazma altyapısı öncelikle diğer tamamlanma listesi öğeleri için tür bilgilerini doldurmayı dener. Bu başarısız olursa, motor SCRIPT_CMPL_GLOBALLIST için de doldurulur.  
   
  `pdwListTypesProvided`  
- [out] Sağlanan liste türü.  
+ dışı Belirtilen liste türü.  
   
  `pichListAnchorPosition`  
- [out] Geçerli konumu içeren bağlamı başlangıç dizini. Bloğun başlangıcını göreli Başlangıç dizinidir.  
+ dışı Geçerli konumu içeren bağlamın başlangıç dizini. Başlangıç dizini bloğunun başlangıcına göre belirlenir.  
   
- Bu doldurulur yalnızca `dwListTypesRequested` SCRIPT_CMPL_MEMBERLIST, SCRIPT_CMPL_ENUMLIST veya SCRIPT_CMPL_GLOBALLIST içerir. Diğer istenen liste türleri için sonuç tanımsızdır.  
+ Bu yalnızca `dwListTypesRequested` SCRIPT_CMPL_MEMBERLIST, SCRIPT_CMPL_ENUMLIST veya SCRIPT_CMPL_GLOBALLIST içerdiğinde doldurulur. İstenen diğer liste türleri için sonuç tanımsızdır.  
   
  `pichFuncAnchorPosition`  
- [out] Geçerli konumu içeren işlev çağrısı başlangıç dizini. Bloğun başlangıcını göreli Başlangıç dizinidir.  
+ dışı Geçerli konumu içeren işlev çağrısının başlangıç dizini. Başlangıç dizini bloğunun başlangıcına göre belirlenir.  
   
- Bu yalnızca geçerli konumunu içeren bir işlev çağrısı bağlamımızdır ve zamanı doldurulur `dwListTypesRequested` SCRIPT_CMPL_PARAMLIST içerir. Aksi halde sonuç tanımsızdır.  
+ Bu, yalnızca geçerli konumu içeren bağlam bir işlev çağrısı olduğunda ve `dwListTypesRequested` SCRIPT_CMPL_PARAMLIST içerdiğinde doldurulur. Aksi takdirde, sonuç tanımsızdır.  
   
  `pmemid`  
- [out] Bir türü tarafından tanımlandığı gibi işlevinin MEMBERID `IProvideMultipleClassInfo``ppunk` çıkış parametresi.  
+ dışı @No__t_0 Out parametresindeki bir tür tarafından tanımlanan şekilde işlevin ÜYEKODU 'ı.  
   
- Bu doldurulur yalnızca `dwListTypesRequested` SCRIPT_CMPL_PARAMLIST içerir.  
+ Bu yalnızca `dwListTypesRequested` SCRIPT_CMPL_PARAMLIST içerdiğinde doldurulur.  
   
  `piCurrentParameter`  
- [out] Geçerli konumu içeren parametrenin dizini. Geçerli konum işlev adına, -1 döndürülür.  
+ dışı Geçerli konumu içeren parametrenin dizini. Geçerli konum işlev adı üzerinde ise-1 döndürülür.  
   
- `piCurrentParameter` Değeri doldurulur yalnızca `dwListTypesRequested` SCRIPT_CMPL_PARAMLIST içerir.  
+ @No__t_0 değeri yalnızca `dwListTypesRequested` SCRIPT_CMPL_PARAMLIST içerdiğinde doldurulur.  
   
  `ppunk`  
- Biçiminde sağlanan tür bilgilerini bir `IProvideMultipleClassInfo` nesne.  
+ @No__t_0 nesne biçiminde belirtilen tür bilgileri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -102,6 +102,6 @@ HRESULT GetInfoFromContext(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IProvideMultipleClassInfo arabirimi](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IProvideMultipleClassInfo arabirimi](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)    
  [IActiveScriptAuthor Arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)

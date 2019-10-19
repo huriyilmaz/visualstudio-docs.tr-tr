@@ -1,5 +1,5 @@
 ---
-title: Beklenen ']' (JavaScript) normal ifadede | Microsoft Docs
+title: Normal ifadede '] ' bekleniyor (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,23 +14,23 @@ ms.assetid: 1ca2079a-44dd-479f-a1e3-e04a14d0739e
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 66fa8ba2396185bd402e4bc31a3da6b1f8bf95ab
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9af38a5fa754a811416f1a998b90946345f3e4a2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446489"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576491"
 ---
 # <a name="expected--in-regular-expression-javascript"></a>Normal ifadede ']' bekleniyor (JavaScript)
-Bir karakter sınıfı için bir normal ifade eşleştirmesi oluşturulmaya çalışıldı, ancak sağ köşeli ayraç içermiyordu. Köşeli ayraçlar yerleştirerek tek değişmez bir karakter birleşimleri karakter sınıflara birleştirilebilecek. Bir karakter sınıfı, içerdiği herhangi bir karakterle eşleşir. Örneğin, / [abc] / "a", "b", herhangi bir harf ile eşleşir veya "c".  
+Normal ifade eşleşmesi için bir karakter sınıfı oluşturmaya çalıştınız, ancak sağ köşeli ayracı içermiyordu. Tek sabit karakter birleşimleri, köşeli ayraçlar içine yerleştirerek karakter sınıflarında birleştirilebilir. Bir karakter sınıfı, içerdiği bir karakterle eşleşir. Örneğin/[abc]/, "a", "b" veya "c" harflerinden herhangi biriyle eşleşir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Normal ifade sağ köşeli ayraç ekleyin.  
+- Sağ köşeli ayracı normal ifadeye ekleyin.  
   
     > [!NOTE]
-    > Ters eğik çizgi ile - tek bir köşeli ayraç eşleştirmek istiyorsanız, atlatmak \\[- özel bir karakter olarak yorumlanmaz şekilde [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
+    > Tek bir köşeli ayracı eşleştirmek istiyorsanız, bir ters eğik çizgi ile kaçış-\\ [-Bu nedenle [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] tarafından özel bir karakter olarak yorumlanmaz.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)   
- [Normal ifade söz dizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Normal Ifade nesnesi](../../javascript/reference/regular-expression-object-javascript.md)    
+ [Normal Ifade sözdizimi (JavaScript)](https://msdn.microsoft.com/library/1400241x)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptError::GetSourcePosition | Microsoft Docs
+title: 'Iactivescripterror:: GetSourcePosition | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4446235a9584bc45fad84b6f92ecc02592e554f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 76ed307f988a3e5bf77ff978c466eda6e5dfee18
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009630"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576891"
 ---
 # <a name="iactivescripterrorgetsourceposition"></a>IActiveScriptError::GetSourcePosition
-Komut dosyası altyapısı bir betik çalıştırılırken bir hata oluştuğu konum kaynak kodundaki alır.  
+Komut dosyası altyapısı bir betik çalıştırırken bir hata oluştuğunda kaynak kodundaki konumu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,16 +39,16 @@ HRESULT GetSourcePosition(
   
 #### <a name="parameters"></a>Parametreler  
  `pdwSourceContext`  
- [out] Bağlam tanımlayan bir çerez alan değişkenin adresi. Bu parametrenin yorumu konak uygulamaya bağlıdır.  
+ dışı Bağlamı tanımlayan bir tanımlama bilgisi alan bir değişkenin adresi. Bu parametrenin yorumu, konak uygulamasına bağlıdır.  
   
  `pulLineNumber`  
- [out] Hatanın oluştuğu kaynak dosyadaki satır numarası alan değişkenin adresi.  
+ dışı Hatanın gerçekleştiği kaynak dosyadaki satır numarasını alan bir değişkenin adresi.  
   
  `pichCharPosition`  
- [out] Hatanın oluştuğu satırın içinde karakterin konumu alan değişkenin adresi.  
+ dışı Hatanın gerçekleştiği satırdaki karakter konumunu alan bir değişkenin adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa veya `E_FAIL` konumu değil almışsa.  
+ Başarılı olursa `S_OK` döndürür veya konum alınalındıysa `E_FAIL`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptError](../../winscript/reference/iactivescripterror.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetScriptletTextAttributes | Microsoft Docs
+title: 'Iactivescriptauthor:: GetScriptletTextAttributes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb8f1b5aac6df8d8659fa323f3f1efcb7721d97f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4cd0090b9ade47ad37acf6d285ec7f072f1ea5af
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955068"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576176"
 ---
 # <a name="iactivescriptauthorgetscriptlettextattributes"></a>IActiveScriptAuthor::GetScriptletTextAttributes
-Bir kod oluşturma metni özniteliklerini döndürür.  
+Bir kod oluşturma yöntemi öğesinin metin özniteliklerini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +41,25 @@ HRESULT GetScriptletTextAttributes(
   
 #### <a name="parameters"></a>Parametreler  
  `pszCode`  
- ['de size_is (`cch`)] kod oluşturma yöntemi metni. Bu dize null sonlandırılmış olmak zorunda değil.  
+ [in, size_is (`cch`)] Kod oluşturma yöntemi metni. Bu dize, null olarak sonlandırılmış olması gerekmez.  
   
  `cch`  
- [in] İçin kullanılan boyutu `pszCode` ve `pattr` parametreleri.  
+ 'ndaki @No__t_0 ve `pattr` parametreleri için kullanılan boyut.  
   
  `pszDelimiter`  
- [in] Resimli bitiş sınırlayıcısı adresi. Zaman `pszCode` ayrıştırılır metin akışından ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) ayrıldığında son algılamak için kullanır. Sınırlayıcı scriptlet sonuna tanımlamak için kullanılıyorsa, bu parametre NULL olarak ayarlayın.  
+ 'ndaki Son kod oluşturma yöntemi sınırlayıcısı adresi. @No__t_0 metin akışından ayrıştırıldığında, ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) kullanır ve bu kod oluşturma yöntemi sonunu algılar. Kod oluşturma yöntemi sonunu tanımlamak için hiçbir sınırlayıcı kullanılmazsa bu parametreyi NULL olarak ayarlayın.  
   
  `dwFlags`  
- [in] Kod oluşturma metni özniteliklerle ilişkili bayraklar. Aşağıdaki değerlerin bir birleşimi olabilir.  
+ 'ndaki Kod oluşturma yöntemi 'ın metin öznitelikleriyle ilişkili bayraklar. Aşağıdaki değerlerin bir birleşimi olabilir.  
   
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|SOURCETEXT_ATTR_IDENTIFIER özniteliğine sahip tanımlayıcılar tanımlamak ve SOURCETEXT_ATTR_MEMBERLOOKUP özniteliğine sahip bir nokta işleçleri tanımlayın.|  
-|GETATTRFLAG_THIS|0x0100|SOURCETEXT_ATTR_THIS özniteliğine sahip geçerli bir nesneyi tanımlar.|  
-|GETATTRFLAG_HUMANTEXT|0x8000|SOURCETEXT_ATTR_HUMANTEXT özniteliğine sahip dizesi içerik ve yorum metnini tanımlayın.|  
+|GETATTRTYPE_DEPSCAN|0x0001|SOURCETEXT_ATTR_IDENTIFIER özniteliğine sahip tanımlayıcıları ve SOURCETEXT_ATTR_MEMBERLOOKUP özniteliğine sahip nokta işleçlerini belirler.|  
+|GETATTRFLAG_THIS|0x0100|SOURCETEXT_ATTR_THIS özniteliğine sahip geçerli nesneyi belirler.|  
+|GETATTRFLAG_HUMANTEXT|0x8000|SOURCETEXT_ATTR_HUMANTEXT özniteliğine sahip dize içeriğini ve açıklama metnini belirler.|  
   
  `pattr`  
- [out içinde size_is (`cch`)] kod oluşturma kodu için renk bilgisi.  
+ [in, Out, size_is (`cch`)] Kod oluşturma yöntemi kodu için renk bilgileri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -70,7 +70,7 @@ HRESULT GetScriptletTextAttributes(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)   
- [IActiveScriptAuthor::GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptauthor arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)    
+ [Iactivescriptauthor:: GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)    
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

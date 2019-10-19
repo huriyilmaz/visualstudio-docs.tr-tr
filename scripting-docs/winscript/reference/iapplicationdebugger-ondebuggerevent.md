@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::onDebuggerEvent | Microsoft Docs
+title: 'Iapplicationdebugger:: onDebuggerEvent | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b78bb3345463dfd682534dc60a216f3e0e8fdf2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0f8edb2a3c39d639b5b6722707d7b6c0b57a5c19
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991369"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577861"
 ---
 # <a name="iapplicationdebuggerondebuggerevent"></a>IApplicationDebugger::onDebuggerEvent
-Özel uygulama olayını işler.  
+Özel bir uygulama olayını işler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,26 +38,26 @@ HRESULT onDebuggerEvent(
   
 #### <a name="parameters"></a>Parametreler  
  `riid`  
- [in] Nesne için arabirim tanımlayıcısı.  
+ 'ndaki Nesne için arabirim tanımlayıcısı.  
   
  `punk`  
- [in] Tarafından tanımlanan arabirimi uygulayan olay nesnesiyle `riid`.  
+ 'ndaki @No__t_0 tarafından tanımlanan arabirimi uygulayan olay nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_NOTIMPL`|Yöntem henüz uygulanmadı.|  
+|`E_NOTIMPL`|Yöntem şu anda uygulanmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Semantiği `IUnknown` olan tamamen uygulama/hata ayıklayıcı tanımlanmış.  
+ @No__t_0 semantiği tamamen uygulama/hata ayıklayıcı tanımlı değildir.  
   
- Bu yöntem, hata ayıklayıcı modelinin özel uzantıları sağlar; şu anda uygulanmamaktadır.  
+ Bu yöntem, hata ayıklayıcı modelinin özel uzantılarına izin verir; Şu anda uygulanmadı.  
   
- Bu yöntem olduğunda çağrılır `IDebugApplication::FireDebuggerEvent` çağrılır.  
+ @No__t_0 çağrıldığında bu yöntem çağrılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iapplicationdebugger arabirimi](../../winscript/reference/iapplicationdebugger-interface.md)    
  [IDebugApplication::FireDebuggerEvent](../../winscript/reference/idebugapplication-firedebuggerevent.md)

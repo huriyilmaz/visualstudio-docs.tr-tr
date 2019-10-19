@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptWinRTErrorDebug::GetRestrictedErrorString | Microsoft Docs
+title: 'IActiveScriptWinRTErrorDebug:: Getkısıttederrorstring | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 154909183e044267053a04ebc489de6dddd55788
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 498d929fb06eea1d6717bfdecb09107bbdaafd98
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63425868"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577900"
 ---
 # <a name="iactivescriptwinrterrordebuggetrestrictederrorstring"></a>IActiveScriptWinRTErrorDebug::GetRestrictedErrorString
-Varsa, döndürür Windows çalışma zamanı hata dizesi kısıtlı.  
+Varsa, Windows Çalışma Zamanı kısıtlanmış hata dizesi döndürür.  
   
 > [!IMPORTANT]
-> [Iactivescriptwinrterrordebug arabirimi](../../winscript/reference/iactivescriptwinrterrordebug-interface.md) PDM v11.0 tarafından uygulanan ve büyük. activdbg100.h içinde bulunur.  
+> [IActiveScriptWinRTErrorDebug ARABIRIMI](../../winscript/reference/iactivescriptwinrterrordebug-interface.md) PDM v 11.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ HRESULT GetRestrictedErrorString([out] BSTR * errorString);
   
 #### <a name="parameters"></a>Parametreler  
  `errorString`  
- [out] Yasak hata dizesi.  
+ dışı Kısıtlanmış hata dizesi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptWinRTErrorDebug Arabirimi](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)

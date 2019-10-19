@@ -1,5 +1,5 @@
 ---
-title: IDebugHelper::CreateSimpleConnectionPoint | Microsoft Docs
+title: 'Ihata ayıklama Ghelper:: CreateSimpleConnectionPoint | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f909a63f0f7ba70fca3c5e30e32a2d64c0147e9c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 06324b0d10eb6d0d69b6426276d5df7f382d2abe
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979181"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562460"
 ---
 # <a name="idebughelpercreatesimpleconnectionpoint"></a>IDebugHelper::CreateSimpleConnectionPoint
-Sarmalayan bir olay arabirimi döndüren bir verilen `IDispatch` nesne.  
+Verilen bir `IDispatch` nesnesini sarmalayan bir olay arabirimi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,21 +38,21 @@ HRESULT CreateSimpleConnectionPoint(
   
 #### <a name="parameters"></a>Parametreler  
  `pdisp`  
- [in] `IDispatch` Kaydırılacak nesne.  
+ 'ndaki Sarılacağı `IDispatch` nesnesi.  
   
  `ppscp`  
- [out] Olay arabirimini sarmalayan `pdisp`.  
+ dışı @No__t_0 sarmalayan olay arabirimi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sarmalayan bir olay arabirimi döndürür. verilen `IDispatch` (bkz [Isimpleconnectionpoint arabirimi](../../winscript/reference/isimpleconnectionpoint-interface.md)).  
+ Verilen `IDispatch` sarmalayan bir olay arabirimini döndürür (bkz. [ıempınconnectionpoint arabirimi](../../winscript/reference/isimpleconnectionpoint-interface.md)).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebughelper arabirimi](../../winscript/reference/idebughelper-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Ihata ayıklama Ghelper arabirimi](../../winscript/reference/idebughelper-interface.md)    
  [ISimpleConnectionPoint Arabirimi](../../winscript/reference/isimpleconnectionpoint-interface.md)

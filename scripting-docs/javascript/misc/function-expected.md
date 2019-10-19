@@ -14,15 +14,15 @@ ms.assetid: f62ade94-9f6f-4832-9b9b-49a06a385bbe
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4442143b2766ed3608a852d0f811a6b943fd19df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 988ca00613d3dec4c55309fd77bc43705a6038ae
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007112"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576587"
 ---
 # <a name="function-expected"></a>İşlev bekleniyor
-Ya da birini çağırmaya çalıştığınız **işlev prototipi** yöntemleri olmayan bir nesne üzerinde bir `Function` nesne veya işlev çağrı bağlamındaki nesne kullanılan. Örneğin, aşağıdaki kod çünkü bu hatayı üretir **örnek** bir işlev değil.  
+@No__t_1 nesnesi olmayan bir nesne üzerindeki **işlev prototipi** yöntemlerinden birini çağırmaya çalıştınız ya da bir işlev çağrısı bağlamında bir nesne kullandınız. Örneğin, aşağıdaki kod bu hatayı üretir çünkü **örnek** bir işlev değildir.  
   
 ```JavaScript  
 var example = new Object();  // Create a new object called "example".  
@@ -31,10 +31,10 @@ var x = example();           // Try and call example as if it were a function.
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yalnızca çağrı **işlev prototipi** yöntemlerde `Function` nesneleri.  
+- Yalnızca `Function` nesnelerinde **işlev prototip** yöntemlerini çağırın.  
   
-- İşlev çağrısı işleci kullandığınızdan emin olun `()` yalnızca işlevleri çağırmak için.  
+- Yalnızca işlevleri çağırmak için `()` işlev çağrısı işlecini kullandığınızdan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlev nesnesi](../../javascript/reference/function-object-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)    
  [prototype Özelliği (Nesne)](../../javascript/reference/prototype-property-object-javascript.md)

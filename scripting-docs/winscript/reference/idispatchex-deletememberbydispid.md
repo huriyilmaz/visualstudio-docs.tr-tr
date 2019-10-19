@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::DeleteMemberByDispID | Microsoft Docs
+title: IDispatchEx::D eleteMemberByDispID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36eeeb4c28286bb5712be3908b47a5145e460597
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 38ead33fb51caff1103ca9abe6bc01f3e0aa6aa3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000944"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576646"
 ---
 # <a name="idispatchexdeletememberbydispid"></a>IDispatchEx::DeleteMemberByDispID
-DISPID bir üyesine siler.  
+Bir üyeyi DISPID tarafından siler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT DeleteMemberByDispID(
   
 #### <a name="parameters"></a>Parametreler  
  `id`  
- Üye tanımlayıcısı. Kullanan `GetDispID` veya `GetNextDispID` gönderme tanımlayıcısının elde edilir.  
+ Üye tanımlayıcısı. Dağıtım tanımlayıcısını almak için `GetDispID` veya `GetNextDispID` kullanır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -48,9 +48,9 @@ HRESULT DeleteMemberByDispID(
 |`S_FALSE`|Üye var, ancak silinemez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- DISPID üye silinirse, için geçerli kalır gerekiyor `GetNextDispID`.  
+ Üye silinirse, DISPID 'nin `GetNextDispID` için geçerli kalması gerekir.  
   
- Belirli bir ada sahip bir üye silinir ve aynı ada sahip bir üye daha sonra yeniden oluşturulur, DISPID aynı olmalıdır. (Yalnızca harfe göre farklılık üye adları "aynı" olup olmadığını nesne bağlıdır.)  
+ Verilen ada sahip bir üye silinirse ve daha sonra aynı ada sahip bir üye yeniden oluşturulduğunda, DISPID aynı olmalıdır. (Yalnızca büyük/küçük harfe göre farklılık gösteren üye adları, nesneye bağımlıdır.)  
   
 ## <a name="example"></a>Örnek  
   
@@ -64,7 +64,7 @@ if (SUCCEEDED(pdex->GetDispID(bstrName, fdexNameCaseSensitive, &dispid)))
     pdex->DeleteMemberByDispID(dispid);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idispatchex arabirimi](../../winscript/reference/idispatchex-interface.md)   
- [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDispatchEx arabirimi](../../winscript/reference/idispatchex-interface.md)    
+ [IDispatchEx:: Getdıspıd](../../winscript/reference/idispatchex-getdispid.md)    
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

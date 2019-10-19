@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::QueryAlive | Microsoft Docs
+title: 'IRemoteDebugApplication:: QueryAlive | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: db17bd017b2fc1e1ca52ba8801eb1d197c4b3de7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3edc4fc007a2372c429b0bbece394cb1c30a2770
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944189"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577471"
 ---
 # <a name="iremotedebugapplicationqueryalive"></a>IRemoteDebugApplication::QueryAlive
-Uygulama duyarlı olup olmadığını gösterir.  
+Uygulamanın yanıt verdiğini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,19 +34,19 @@ HRESULT QueryAlive();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, uygulama duyarlı olup olmadığını gösterir. Bu yönteme ait her zaman döndürmelidir `S_OK`.  
+ Bu yöntem, uygulamanın yanıt verdiğini gösterir. Bu yöntemin uygulamaları her zaman `S_OK` döndürmelidir.  
   
- Uygulama işlemi beklenmedik şekilde sonlandırılırsa, COM düzenleme proxy bu yöntem çağrıları için bir hata döndürür.  
+ Uygulama işlemi beklenmedik şekilde sonlandırılırsa, COM Bu metoda yapılan çağrılar için sıralama proxy 'sinden bir hata döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplication Arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::createstackframeenumerator yöntemi | Microsoft Docs
+title: 'IJsDebugDataTarget:: CreateStackFrameEnumerator yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b8103ac689ac812aee2037f0f2e89f1d3a7448c6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 59d58f0256a326d3922e280818176a43ef4aa5ae
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583086"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577626"
 ---
 # <a name="ijsdebugdatatargetcreatestackframeenumerator-method"></a>IJsDebugDataTarget::CreateStackFrameEnumerator Yöntemi
-Bir yığın çerçevesi için Numaralandırıcı oluşturur.  
+Yığın çerçeveleri için bir Numaralandırıcı oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,15 +36,15 @@ HRESULT CreateStackFrameEnumerator(
   
 #### <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] Hedef işlemde çalışan iş parçacığı.  
+ 'ndaki Hedef işlemde çalışan iş parçacığı.  
   
  `ppEnumerator`  
- [out] Yığın çerçevesi için Numaralandırıcı.  
+ dışı Yığın çerçeveleri için Numaralandırıcı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugDataTarget Arabirimi](../../winscript/reference/ijsdebugdatatarget-interface.md)

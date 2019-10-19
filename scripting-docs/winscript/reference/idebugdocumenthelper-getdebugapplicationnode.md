@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::GetDebugApplicationNode | Microsoft Docs
+title: 'Idebugbelgethelper:: GetDebugApplicationNode | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 10740c3489b617b1685ad222cac7c158e0196c4d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1b0fc05b73ffd9880b1dec366cabd4b3cc316b80
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62783097"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576948"
 ---
 # <a name="idebugdocumenthelpergetdebugapplicationnode"></a>IDebugDocumentHelper::GetDebugApplicationNode
-Bu belgeye karşılık gelen hata ayıklama uygulama düğümü döndürür.  
+Bu belgeye karşılık gelen hata ayıklama uygulama düğümünü döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetDebugApplicationNode(
   
 #### <a name="parameters"></a>Parametreler  
  `ppdan`  
- [out] Bu belgeye karşılık gelen hata ayıklama uygulama düğümü.  
+ dışı Bu belgeye karşılık gelen hata ayıklama uygulama düğümü.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu belgeye karşılık gelen hata ayıklama uygulama düğümü döndürür.  
+ Bu belgeye karşılık gelen hata ayıklama uygulaması düğümünü döndürün.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentHelper Arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Ijsdebug::openvirtualprocess yöntemi | Microsoft Docs
+title: 'Ijsdebug:: OpenVirtualProcess yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 97a055bf1550d74dc6b86d93ffdb9ca406afb43d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3de39beb28a68ec3b8e0d76b17a7e914a464ecfe
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583600"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577740"
 ---
 # <a name="ijsdebugopenvirtualprocess-method"></a>IJsDebug::OpenVirtualProcess Yöntemi
-Yeni bir sanal işlem nesnesi oluşturmak için kullanılan fabrika yöntemi.  
+Yeni bir sanal işlem nesnesi oluşturmak için kullanılan Factory yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,24 +38,24 @@ HRESULT OpenVirtualProcess(
   
 #### <a name="parameters"></a>Parametreler  
  `processId`  
- [in] Hata ayıklayıcıyı iliştirmek için işlem kimliği'ni kullanın.  
+ 'ndaki Hata ayıklayıcıyı iliştirilecek işlem kimliği.  
   
  `runtimeJsBaseAddress`  
- [in] Başlangıçtan JavaScript çalışma zamanı hedef işleme yüklendiği temel adres.  
+ 'ndaki JavaScript çalışma zamanının hedef işleme yüklendiği temel adres.  
   
  `pDataTarget`  
- [in] Hata ayıklayıcı, işlemin durumunu sorgulamak için sağlanan arabirim.  
+ 'ndaki Hata ayıklayıcı işlemin durumunu sorgulamak için arabirim sağlandı.  
   
  `ppProcess`  
- [out] Yeni hata ayıklama işlemi nesnesi  
+ dışı Yeni hata ayıklama işlemi nesnesi  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- Jscript9diag ve Jscript9 eşleşmiyorsa, e_jsdebug_mısmatched_runtıme döndürür.  
+ Jscript9diag ve JScript9 eşleşmezse E_JsDEBUG_MISMATCHED_RUNTIME döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebug Arabirimi](../../winscript/reference/ijsdebug-interface.md)

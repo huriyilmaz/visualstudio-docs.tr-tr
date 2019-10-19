@@ -1,5 +1,5 @@
 ---
-title: Beklenen ';' | Microsoft Docs
+title: Beklenen '; ' | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,23 +14,23 @@ ms.assetid: 3070cc6c-1138-4655-a7ac-723379f48f94
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9e5d0418f09d208d8919a2c431c818e236b62b29
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 27d9a36a36c3783048cdb7afb6c06da09bd21456
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62433727"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576457"
 ---
 # <a name="expected-"></a>';' bekleniyor
-Birden fazla deyimi bir satıra Yerleştir erişmeyi denedi, ancak noktalı virgül ile ayırarak değil. Noktalı virgül deyimleri sonlandırmak için kullanılır. Birkaç ifadeleri tek bir satıra koyabilirsiniz ancak her bir sonraki noktalı virgül ile sınırlanması gerekir.  
+Bir satıra birden fazla ifade yerleştirçalıştınız, ancak bunları noktalı virgülle ayırmadınız. Deyimleri sonlandırmak için noktalı virgül kullanılır. Tek bir satıra birkaç deyim yerleştirebilirsiniz, ancak her biri bir sonraki noktalı virgülle ayrılmalıdır.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Noktalı virgül ile her deyim sonu işareti.  
+- Her deyimin sonunu noktalı virgülle işaretleyin.  
   
-- İşlev çağrıları düzgün parantezler kullandığınızdan emin olun.  
+- İşlev çağrılarının ayraçları doğru şekilde kullanmasını sağlayın.  
   
-- Değil unutursanız noktalı üstbilgisi içinde olduğundan emin olun bir **için** döngü.  
+- **For** döngüsünün üst bilgisinin içindeki noktalı virgül unutduğunuzdan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [JavaScript Kodu Yazma](../../javascript/writing-javascript-code.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugHelper::CreatePropertyBrowserEx | Microsoft Docs
+title: 'Ihata ayıklama Ghelper:: CreatePropertyBrowserEx | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 01e63d1588fd1e25f3415f22450ed5145752d711
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4d64d9dad54e029dc4c76e8b7e6c7a3f0299b0cb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979207"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576495"
 ---
 # <a name="idebughelpercreatepropertybrowserex"></a>IDebugHelper::CreatePropertyBrowserEx
-Bir değişken sarmalar ve değişken değerlerini VARTYPE türleri veya özel dönüştürme dizeleri için sağlayan bir özellik tarayıcısı döndürür.  
+Bir VARYANTı sarmalayan ve DEĞIŞKEN değerlerinin veya VARTYPE türlerinin dizelere özel dönüştürülmesine izin veren bir özellik tarayıcısı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +41,31 @@ HRESULT CreatePropertyBrowserEx(
   
 #### <a name="parameters"></a>Parametreler  
  `pvar`  
- [in] Göz atmak için kök değişken.  
+ 'ndaki Gezinmek için kök değişken.  
   
  `bstrName`  
- [in] Kök vermek adı.  
+ 'ndaki Köke verilecek ad.  
   
  `pdat`  
- [in] Hangi özellikleri istemek iş parçacığı. Bu parametre NULL ise, hiçbir taşıma gerçekleştirilir.  
+ 'ndaki Üzerinde Özellik istemek için iş parçacığı. Bu parametre NULL ise, sıralama yapılmaz.  
   
  `pdf`  
- [in] Çeşitleri için özel biçimlendirme sağlayan nesne.  
+ 'ndaki Çeşitler için özel biçimlendirme sağlayan nesne.  
   
  `ppdob`  
- [out] Özellik tarayıcısı.  
+ dışı Özellik tarayıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir değişken sarmalar ve değişken değerlerini VARTYPE türleri veya özel dönüştürme dizeleri için sağlayan bir özellik tarayıcısı döndürür.  
+ Bu yöntem, bir DEĞIŞKEN sarmalayan ve DEĞIŞKEN değerlerinin veya VARTYPE türlerinin dizelere özel dönüştürülmesine izin veren bir özellik tarayıcısı döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IDebugHelper::CreatePropertyBrowser](../../winscript/reference/idebughelper-createpropertybrowser.md)   
- [Idebughelper arabirimi](../../winscript/reference/idebughelper-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Ihata ayıklama Ghelper:: CreatePropertyBrowser](../../winscript/reference/idebughelper-createpropertybrowser.md)    
+ [Ihata ayıklama Ghelper arabirimi](../../winscript/reference/idebughelper-interface.md)    
  [IDebugProperty Arabirimi](../../winscript/reference/idebugproperty-interface.md)

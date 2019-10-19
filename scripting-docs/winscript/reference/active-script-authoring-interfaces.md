@@ -1,5 +1,5 @@
 ---
-title: Etkin komut dosyası yazma arabirimleri | Microsoft Docs
+title: Etkin betik yazma arabirimleri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -14,18 +14,18 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 00b041b4cb2009d247572d1e47dfff40d8548927
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 22e06b9723100141a0e3679e401d1bc339dddad5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003616"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562217"
 ---
 # <a name="active-script-authoring-interfaces"></a>Etkin Komut Dosyası Yazma Arabirimleri
-Bu bölümde listelenen arabirimler ActivAut.h üstbilgi dosyasını sağlar.  
+ActivAut. h üstbilgi dosyası bu bölümde listelenen arabirimleri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- Web sayfası yazma aşağıdaki arabirimlerinden etkinleştir:  
+ Aşağıdaki arabirimler Web sayfası yazmayı etkinleştirir:  
   
 - [IActiveScriptAuthor Arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)  
   
@@ -37,5 +37,5 @@ Bu bölümde listelenen arabirimler ActivAut.h üstbilgi dosyasını sağlar.
   
 - [IScriptScriptlet Arabirimi](../../winscript/reference/iscriptscriptlet-interface.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

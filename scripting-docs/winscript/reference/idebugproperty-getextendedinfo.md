@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty::GetExtendedInfo | Microsoft Docs
+title: 'Idebugproperty:: Geiddeınfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 707474f786a8f88c0e08d887f2c2b09c8aaedc8e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 130d11c8ed6bb21210d129bb9aace779db3bd54b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979129"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562397"
 ---
 # <a name="idebugpropertygetextendedinfo"></a>IDebugProperty::GetExtendedInfo
-Genişletilmiş özelliği bilgilerini.  
+Özelliği için genişletilmiş bilgileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +39,19 @@ HRESULT GetExtendedInfo (
   
 #### <a name="parameters"></a>Parametreler  
  `cInfos`  
- [in] Genişletilmiş bilgi nesnelerinin sayısı.  
+ 'ndaki Genişletilmiş bilgi nesnelerinin sayısı.  
   
  `rgguidExtendedInfo`  
- [in] Bir dizi `GUID`s, böylece aynı anda birden çok öğe genişletilmiş bilgisi alınabilir geçirilir.  
+ 'ndaki Aynı anda birden fazla genişletilmiş bilgi öğesinin alınabilmesi için bir dizi `GUID`s geçirilir.  
   
  `pExtendedInfo`  
- [out] Bir dizi döndürür `VARIANT`genişletilmiş özellik bilgileri almak için kullanılan s.  
+ dışı Genişletilmiş özellik bilgilerini almak için kullanılabilecek `VARIANT`s dizisini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir döndürür `HRESULT`, genellikle `S_OK`.  
+ Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu arabirim genişletilmiş bu nesne için bilgileri. API var. yalnızca kendisi tarafından kullanımını alınan için uygun olmayan bilgi almak amacıyla `IDebugProperty::GetPropertyInfo`).  
+ Bu arabirim, bu nesne için genişletilmiş bilgileri alır. API yalnızca, `IDebugProperty::GetPropertyInfo` kullanımı tarafından alınmayan bilgileri alma amacıyla mevcuttur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugProperty Arabirimi](../../winscript/reference/idebugproperty-interface.md)

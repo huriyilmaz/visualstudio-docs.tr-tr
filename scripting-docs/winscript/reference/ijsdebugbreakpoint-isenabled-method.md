@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugbreakpoint::IsEnabled yöntemi | Microsoft Docs
+title: 'IJsDebugBreakPoint:: IsEnabled Yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b99df17f73896b4dd04481315b04e1672a56285a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 25d66b7f8691a74eac77e9a90ec610fa21ec688e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583099"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577666"
 ---
 # <a name="ijsdebugbreakpointisenabled-method"></a>IJsDebugBreakPoint::IsEnabled Yöntemi
-Kesme noktasının etkinleştirilip etkinleştirilmeyeceğini belirler.  
+Kesme noktasının etkinleştirilip etkinleştirilmediğini belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,15 +35,15 @@ HRESULT IsEnabled(
   
 #### <a name="parameters"></a>Parametreler  
  `pIsEnabled`  
- [out] Kesme noktası etkinleştirildiğinde true döndürür; Aksi takdirde false döndürür.  
+ dışı Kesme noktası etkinse doğru döndürür; Aksi takdirde, false döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- Silinen bir kesme noktasına çağrılırsa E_UNEXPECTED döndürür.  
+ Silinen bir kesme noktasında çağrılırsa E_UNEXPECTED döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugBreakPoint Arabirimi](../../winscript/reference/ijsdebugbreakpoint-interface.md)

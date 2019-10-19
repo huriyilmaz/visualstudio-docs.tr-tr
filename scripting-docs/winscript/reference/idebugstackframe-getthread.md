@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame::GetThread | Microsoft Docs
+title: 'Idebugstackframe:: GetThread | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6926347c67895b3860964a559898691dd3e61e6f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 51cb000ef20877f4f3f6536cc9a01ae44c2810c8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935066"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576733"
 ---
 # <a name="idebugstackframegetthread"></a>IDebugStackFrame::GetThread
-Bu yığın çerçevesiyle ilgili iş parçacığı döndürür.  
+Bu yığın çerçevesiyle ilişkili iş parçacığını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetThread(
   
 #### <a name="parameters"></a>Parametreler  
  `ppat`  
- [out] Bu yığın çerçevesiyle ilgili iş parçacığı.  
+ dışı Bu yığın çerçevesiyle ilişkili iş parçacığı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu yığın çerçevesiyle ilgili iş parçacığı döndürür.  
+ Bu yöntem, bu yığın çerçevesiyle ilişkili iş parçacığını döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugStackFrame Arabirimi](../../winscript/reference/idebugstackframe-interface.md)

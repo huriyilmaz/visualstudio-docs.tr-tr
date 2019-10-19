@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::InterruptScriptThread | Microsoft Docs
+title: 'IActiveScript:: InterruptScriptThread | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: aa46bc95087b3defaf739cc3473c58e29a93071c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a436f973df05b945c0939f3a593640f567774277
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935514"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577260"
 ---
 # <a name="iactivescriptinterruptscriptthread"></a>IActiveScript::InterruptScriptThread
-(Bir olay havuzu, hemen bir yürütme veya bir makro çağrısı) çalışan bir betik iş yürütülmesini keser. Bu yöntem (örneğin, sonsuz bir döngüde) takılmış bir betik sonlandırmak için kullanılabilir. Temel olmayan iş parçacığından da çağrılabilir temel olmayan belirtme ana bilgisayar nesneleri veya çok kaynaklanan olmadan [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md) yöntemi.  
+Çalışan bir betik iş parçacığının yürütülmesini keser (olay havuzu, anlık yürütme veya makro çağırma). Bu yöntem, takılmış bir betiği sonlandırmak için kullanılabilir (örneğin, sonsuz bir döngüde). Temel olmayan iş parçacıklarından, nesneleri barındırmak için temel olmayan bir belirtme çizgisine veya [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) yöntemine yol açmadan çağrılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,24 +39,24 @@ HRESULT InterruptScriptThread(
   
 #### <a name="parameters"></a>Parametreler  
  `stidThread`  
- [in] Kesme ya da aşağıdaki özel iş parçacığı tanımlayıcısı değerlerden biri iş parçacığı tanıtıcısı:  
+ 'ndaki Kesintiye uğratmak için iş parçacığının tanımlayıcısı veya aşağıdaki özel iş parçacığı tanımlayıcı değerlerinden biri:  
   
 |Değer|Açıklama|  
 |-----------|-------------|  
-|SCRIPTTHREADID_ALL|Tüm iş parçacıkları. Kesme, devam eden tüm betik yöntemleri için uygulanır. Çağıran kodun kesilmesi istedi sürece sonraki betikleştirilmiş olayı çağırarak yeniden çalıştırmak betik kodu neden olacağını unutmayın [IActiveScript::SetScriptState](../../winscript/reference/iactivescript-setscriptstate.md) SCRIPTSTATE_DISCONNECTED yöntemiyle veya SCRIPTSTATE_INITIALIZED bayrağını ayarlayın.|  
-|SCRIPTTHREADID_BASE|Temel; iş parçacığı diğer bir deyişle, iş parçacığı, komut dosyası altyapısı örneği.|  
-|SCRIPTTHREADID_CURRENT|Şu anda yürütülen iş parçacığı.|  
+|SCRIPTTHREADID_ALL|Tüm iş parçacıkları. Kesme, şu anda sürmekte olan tüm betik yöntemlerine uygulanır. Çağıran betiğin bağlantısının kesileceğini istemediği takdirde, sonraki betikleştirilmiş olay, SCRIPTSTATE_DISCONNECTED veya SCRIPTSTATE_INITIALIZED bayrağıyla [IActiveScript:: SetScriptState](../../winscript/reference/iactivescript-setscriptstate.md) metodunu çağırarak betik kodunun yeniden çalışmasına neden olur. kurmak.|  
+|SCRIPTTHREADID_BASE|Temel iş parçacığı; diğer bir deyişle, komut dosyası altyapısının örneklendiği iş parçacığı.|  
+|SCRIPTTHREADID_CURRENT|Yürütülmekte olan iş parçacığı.|  
   
  `pexcepinfo`  
- [in] Adresi bir `EXCEPINFO` durdurulan betiğe bildirilen hata bilgilerini içeren yapısı.  
+ 'ndaki Durdurulan betiğe bildirilmesi gereken hata bilgilerini içeren `EXCEPINFO` yapısının adresi.  
   
  `dwFlags`  
- [in] Kesinti ile ilişkili bayraklar seçeneği. Şu değerlerden biri olabilir:  
+ 'ndaki Kesintiyle ilişkili seçenek bayrakları. Şu değerlerden biri olabilir:  
   
 |Değer|Açıklama|  
 |-----------|-------------|  
-|SCRIPTINTERRUPT_DEBUG|Destekleniyorsa, geçerli komut dosyası yürütme noktasını hata ayıklayıcı komut dosyası altyapısının girin.|  
-|SCRIPTINTERRUPT_RAISEEXCEPTION|Komut dosyası altyapısının dil tarafından destekleniyorsa, özel durum işleme komut dosyası sağlar. Aksi takdirde, komut dosyası yöntemi iptal edilir ve çağırana döndürülen hata kodu; diğer bir deyişle, olay kaynağı veya makro çağırıcı.|  
+|SCRIPTINTERRUPT_DEBUG|Destekleniyorsa, komut dosyası altyapısının hata ayıklayıcıyı geçerli betik yürütme noktasına girin.|  
+|SCRIPTINTERRUPT_RAISEEXCEPTION|Komut dosyası altyapısının dili tarafından destekleniyorsa betiğin özel durumu işlemesini sağlar. Aksi takdirde, betik yöntemi iptal edilir ve hata kodu çağırana döndürülür; diğer bir deyişle, olay kaynağı veya makro Invoker.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -64,9 +64,9 @@ HRESULT InterruptScriptThread(
 |Dönüş Değeri|Açıklama|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
-|`E_INVALIDARG`|Bir bağımsız değişken geçersiz.|  
-|`E_POINTER`|Geçersiz işaretçi belirtildi.|  
-|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenen başlatıldı veya).|  
+|`E_INVALIDARG`|Bağımsız değişken geçersizdi.|  
+|`E_POINTER`|Geçersiz bir işaretçi belirtildi.|  
+|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenmemiş veya başlatılmamış).|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScript](../../winscript/reference/iactivescript.md)

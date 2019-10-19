@@ -1,5 +1,5 @@
 ---
-title: IDebugThreadCall::ThreadCallHandler | Microsoft Docs
+title: 'Idebugthreadcall:: ThreadCallHandler | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d1802cdcdabe2ae462960378d0e869838cdaa6e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 58e7d3facbd5a59bf7b81e3257c6daea7874141a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000911"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576651"
 ---
 # <a name="idebugthreadcallthreadcallhandler"></a>IDebugThreadCall::ThreadCallHandler
-Başka bir iş parçacığında kod çalıştırmak için çağrılar işler.  
+Başka bir iş parçacığında kod çalıştırmak için çağrıları işler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT ThreadCallHandler(
   
 #### <a name="parameters"></a>Parametreler  
  `dwParam1`  
- [in] İlk parametre.  
+ 'ndaki İlk parametre.  
   
  `dwParam2`  
- [in] İkinci parametre.  
+ 'ndaki İkinci parametre.  
   
  `dwParam3`  
- [in] Üçüncü parametre.  
+ 'ndaki Üçüncü parametre.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem hata ayıklayıcı iş parçacığında kodu çalıştırmak için çağrıları işler.  
+ Bu yöntem, hata ayıklayıcı iş parçacığında kod çalıştırma çağrılarını işler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugthreadcall arabirimi](../../winscript/reference/idebugthreadcall-interface.md)   
- [IDebugApplication::SynchronousCallInDebuggerThread](../../winscript/reference/idebugapplication-synchronouscallindebuggerthread.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugthreadcall arabirimi](../../winscript/reference/idebugthreadcall-interface.md)    
+ [IDebugApplication:: SynchronousCallInDebuggerThread](../../winscript/reference/idebugapplication-synchronouscallindebuggerthread.md)    
  [IDebugApplicationThread::SynchronousCallIntoThread](../../winscript/reference/idebugapplicationthread-synchronouscallintothread.md)
