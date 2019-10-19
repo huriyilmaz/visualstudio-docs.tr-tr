@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetText | Microsoft Docs
+title: 'Icriptentry:: GetText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 24b314443644558b9900fc7d702dcd1b96a7cea4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2b25c1667f1df7e0394dd2ebfb0fea452da1b47d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787717"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575411"
 ---
 # <a name="iscriptentrygettext"></a>IScriptEntry::GetText
-Karşılık gelen metni döndürür `IScriptEntry` betik bloğu ya da yer alan kaynak kodu `IScriptScriptlet` olay işleyicisi.  
+@No__t_0 betik bloğuna veya `IScriptScriptlet` olay işleyicisinde bulunan kaynak koduna karşılık gelen metni döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT GetText(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstr`  
- [out] Metinde `IScriptEntry` betik bloğu ya da yer alan kaynak kodu `IScriptScriptlet` olay işleyicisi.  
+ dışı @No__t_0 betik bloğundaki metin veya `IScriptScriptlet` olay işleyicisinde bulunan kaynak kodu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -48,5 +48,5 @@ HRESULT GetText(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptEntry Arabirimi](../../winscript/reference/iscriptentry-interface.md)

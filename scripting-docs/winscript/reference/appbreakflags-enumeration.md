@@ -17,12 +17,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0862e6fc670be6cd3d3ca9fbf67f453aa0772a90
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: de6efbc20843fcaa73965334c18cf0e5c2a0abab
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009779"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572667"
 ---
 # <a name="appbreakflags-enumeration"></a>APPBREAKFLAGS Numaralandırması
 Uygulamalar ve iş parçacıkları için geçerli hata ayıklama durumunu gösterir.  
@@ -37,19 +37,19 @@ enum enum_APPBREAKFLAGS{APPBREAKFLAG_DEBUGGER_BLOCK= 0x00000001,APPBREAKFLAG_DEB
   
 |Üye|Değer|Açıklama|  
 |------------|-----------|-----------------|  
-|APPBREAKFLAG_DEBUGGER_BLOCK|0x00000001|Dil altyapısı ile BREAKREASON_DEBUGGER_BLOCK tüm iş parçacıkları üzerinde kesme hemen.|  
-|APPBREAKFLAG_DEBUGGER_HALT|0x00000002|Dil altyapısı ile BREAKREASON_DEBUGGER_HALT hemen kesilmesine.|  
-|APPBREAKFLAG_STEP|0x00010000|Dil altyapısı hemen BREAKREASON_STEP ile Adımlama iş parçacığında Kes.|  
-|APPBREAKFLAG_NESTED|0x00020000|Bir kesme noktasında iç içe geçmiş yürütmesinde uygulamasıdır.|  
-|APPBREAKFLAG_STEPTYPE_SOURCE|0x00000000|Hata ayıklayıcı kaynak düzeyinde Adımlama.|  
-|APPBREAKFLAG_STEPTYPE_BYTECODE|0x00100000|Hata ayıklayıcı bayt kod düzeyinde Adımlama.|  
-|APPBREAKFLAG_STEPTYPE_MACHINE|0x00200000|Hata ayıklayıcı, makine düzeyinde Adımlama.|  
-|APPBREAKFLAG_STEPTYPE_MASK|0x00F00000|Hesaba katacak şekilde adım türleri için maske.|  
-|APPBREAKFLAG_IN_BREAKPOINT|0x80000000|Bir kesme noktası işlemi devam ediyor.|  
+|APPBREAKFLAG_DEBUGGER_BLOCK|0x00000001|Dil altyapısı, BREAKREASON_DEBUGGER_BLOCK ile tüm iş parçacıkları üzerinde hemen kesintiye uğramalıdır.|  
+|APPBREAKFLAG_DEBUGGER_HALT|0x00000002|Dil altyapısının doğrudan BREAKREASON_DEBUGGER_HALT ile kesintiye uğramalıdır.|  
+|APPBREAKFLAG_STEP|0x00010000|Dil altyapısının, BREAKREASON_STEP ile Adımlama iş parçacığında hemen kesintiye uğramalıdır.|  
+|APPBREAKFLAG_NESTED|0x00020000|Uygulama, bir kesme noktasında iç içe Yürütmeyle yapılır.|  
+|APPBREAKFLAG_STEPTYPE_SOURCE|0x00000000|Hata ayıklayıcı kaynak düzeyinde adımlanıyor.|  
+|APPBREAKFLAG_STEPTYPE_BYTECODE|0x00100000|Hata ayıklayıcı, bayt kodu düzeyinde adımlanıyor.|  
+|APPBREAKFLAG_STEPTYPE_MACHINE|0x00200000|Hata ayıklayıcı makine düzeyinde adımlanıyor.|  
+|APPBREAKFLAG_STEPTYPE_MASK|0x00F00000|Adım türlerini düzenleme için maske.|  
+|APPBREAKFLAG_IN_BREAKPOINT|0x80000000|Bir kesme noktası devam ediyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bazı bayrakları diğer bayraklar atlama modu hata ayıklayıcının belirtirken dil altyapıları ilk fırsatta sonu belirtin.  
+ Bazı bayraklar, dil altyapılarının bir sonraki fırsatta kesilmesini gerektiğini belirtir, ancak diğer bayraklar hata ayıklayıcının atlama modunu belirtir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Etkin komut dosyası hata ayıklayıcı sabitleri, numaralandırmaları ve yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Etkin betik hata ayıklayıcısı sabitleri, numaralandırmalar ve yapılar](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)    
  [BREAKREASON Sabit Listesi](../../winscript/reference/breakreason-enumeration.md)

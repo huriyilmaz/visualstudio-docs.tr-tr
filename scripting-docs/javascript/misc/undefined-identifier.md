@@ -1,5 +1,5 @@
 ---
-title: Tanımlanmamış tanımlayıcı | Microsoft Docs
+title: Tanımsız tanımlayıcı | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,26 +14,26 @@ ms.assetid: 8c8000d9-dd14-487e-922d-98430024a0f6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ee928a945081d1ac1369a71d11f74f2c5db2b365
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b55b6d695cded9b7effac664dfca6ca9904e9d84
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63005920"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572546"
 ---
 # <a name="undefined-identifier"></a>Tanımlanmamış tanımlayıcı
-Bir tanımlayıcı kullanma girişiminde bulunuldu, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] derleyici tanımıyor. Her kullandığınızda da tanımlanmamış değer döndürülür:  
+@No__t_0 derleyicisinin tanımadığı tanımlayıcıyı kullanmaya çalıştınız. Tanımsız değer, her kullandığınızda döndürülür:  
   
-- var olmayan bir değişken  
+- var olmayan bir değişken,  
   
-- bildirilmiş, ancak hiçbir zaman sahip bir değişken bir değer atanabilir  
+- tanımlanmış bir değişken, ancak hiçbir değere atanmamış bir değer yoktu,  
   
-- var olmayan bir nesne özelliği.  
+- varolmayan bir nesne özelliği.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Değişkenle bildirmek bir **var** deyimi (olarak `var` x;).  
+- Değişkeni bir **var** ifadesiyle bildirin (`var` x içinde olduğu gibi).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Değişkenleri](../../javascript/variables-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Değişkenler](../../javascript/variables-javascript.md)    
  [Değişken Kapsam](../../javascript/advanced/variable-scope-javascript.md)

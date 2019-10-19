@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::OnScriptError | Microsoft Docs
+title: 'IActiveScriptSite:: OnScriptError | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d76aa46cbbcdab9a3c5c7b561b91ee58cfcac4ac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f0078b53515a881d7f2ac1475cf5565fa22a025
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992603"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570276"
 ---
 # <a name="iactivescriptsiteonscripterror"></a>IActiveScriptSite::OnScriptError
-Ana bilgisayara altyapısı betik çalıştırılırken bir yürütme hatası oluştu bildirir.  
+Altyapı betiği çalıştırırken bir yürütme hatası oluştuğunu konağa bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ HRESULT OnScriptError(
   
 #### <a name="parameters"></a>Parametreler  
  `pase`  
- [in] Hata nesnenin adresini [Iactivescripterror](../../winscript/reference/iactivescripterror.md) arabirimi. Bir konak, yürütme hatası hakkında bilgi edinmek için bu arabirimi kullanabilirsiniz.  
+ 'ndaki Hata nesnesinin [ıactivescripterror](../../winscript/reference/iactivescripterror.md) arabiriminin adresi. Bir konak, yürütme hatası hakkında bilgi edinmek için bu arabirimi kullanabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` hata doğru işlenmiş ya da OLE tanımlı hata kodu Aksi takdirde.  
+ Hata doğru şekilde işlenirse `S_OK`, aksi takdirde bir OLE tanımlı hata kodu döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

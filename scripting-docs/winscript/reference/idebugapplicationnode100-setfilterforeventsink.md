@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNode100::SetFilterForEventSink | Microsoft Docs
+title: 'IDebugApplicationNode100:: SetFilterForEventSink | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 662c433134bc278f343381edcb4aedf383af6078
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4f85241bee7b35d40bf193a613a6fefda4265be6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446680"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574731"
 ---
 # <a name="idebugapplicationnode100setfilterforeventsink"></a>IDebugApplicationNode100::SetFilterForEventSink
-Belirli bir filtre ayarlar [Idebugapplicationnodeevents arabirimi](../../winscript/reference/idebugapplicationnodeevents-interface.md) uygulaması. PDM artık oluşturduğunuz veya kaldırıldığında bu olayları gönderir, böylece alt derleyici tarafından oluşturulan uygulama düğümlerini filtrelemek betik hata ayıklayıcıları sağlar. Varsayılan olarak tüm düğümleri gönderilir.  
+Belirli bir [ıdebugapplicationnodeevents arabirim](../../winscript/reference/idebugapplicationnodeevents-interface.md) uygulamasındaki filtreyi ayarlar. Betik hata ayıklayıcıların derleyici tarafından oluşturulan alt uygulama düğümlerini filtrelemesine olanak tanır; böylece PDM, bunlar oluşturulduğunda veya kaldırıldığında olayları artık gönderemeyecektir. Varsayılan olarak, tüm düğümler gönderilir.  
   
 > [!IMPORTANT]
-> [Idebugapplicationnode100 arabirimi](../../winscript/reference/idebugapplicationnode100-interface.md) PDM v10.0 tarafından uygulanan ve büyük. activdbg100.h içinde bulunur.  
+> [IDebugApplicationNode100 ARABIRIMI](../../winscript/reference/idebugapplicationnode100-interface.md) PDM v 10.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,5 +39,5 @@ HRESULT SetFilterForEventSink(        [in] DWORD dwCookie,        [in] APPLICATI
  `filter`  
  Filtre.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplicationNode100 Arabirimi](../../winscript/reference/idebugapplicationnode100-interface.md)

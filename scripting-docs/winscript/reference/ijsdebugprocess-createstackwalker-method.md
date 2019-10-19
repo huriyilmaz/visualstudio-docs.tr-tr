@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugprocess::createstackwalker yöntemi | Microsoft Docs
+title: 'Ijsdebugprocess:: Createstackdenetçisi yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb084b665467ae023bb885ee0de221f0409a0160
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 70f5d4885abba3d891526723d3ca1f174549c348
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62557739"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573832"
 ---
 # <a name="ijsdebugprocesscreatestackwalker-method"></a>IJsDebugProcess::CreateStackWalker Yöntemi
-Yığın değişkeni için fabrika yöntemi.  
+Yığın denetçisi için fabrika yöntemi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,18 +36,18 @@ HRESULT CreateStackWalker(
   
 #### <a name="parameters"></a>Parametreler  
  `threadId`  
- [in] İş parçacığı kimliği.  
+ 'ndaki İş parçacığı KIMLIĞI.  
   
  `ppStackWalker`  
- [out] Yeni yığın değişkeni nesnesi.  
+ dışı Yeni yığın denetçisi nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- İş parçacığı üzerinde JavaScript yoksa, E_JsDEBUG_UNKNOWN_THREAD döndürür. Bu yöntem, yalnızca hedef işlem durdurulurken çağrılabilir.  
+ İş parçacığında JavaScript yoksa, E_JsDEBUG_UNKNOWN_THREAD döndürür. Bu yöntem yalnızca hedef işlem durdurulduğunda çağrılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugProcess Arabirimi](../../winscript/reference/ijsdebugprocess-interface.md)

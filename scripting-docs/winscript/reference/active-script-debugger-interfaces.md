@@ -1,5 +1,5 @@
 ---
-title: Etkin betik hata ayıklayıcı arabirimleri | Microsoft Docs
+title: Etkin betik hata ayıklayıcısı arabirimleri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -14,21 +14,21 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ed8ff0361396deaaffd46f14ca1fc38869988593
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 477374d93e4d8d5139197dcd49fef0e930e5ff32
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422455"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572706"
 ---
 # <a name="active-script-debugger-interfaces"></a>Etkin Komut Dosyası Hata Ayıklayıcı Arabirimleri
-Activdbg.h ve activdbg100.h üst bilgi dosyaları, arabirimler, numaralandırmaları ve yapıları Bu bölümde listelenen sağlar. Betik hata ayıklama için değildirler.  
+Activdbg. h ve activdbg100. h üstbilgi dosyaları, bu bölümde listelenen arabirimleri, numaralandırmalar ve yapıları sağlar. Bunlar hata ayıklama komut dosyası içindir.  
   
 > [!NOTE]
-> `IJSDebug*` Arabirimleri ve `IEnumJsStackFrames` arabirimi ilk kez kullanıma sunulan Internet Explorer 11'de betik ile yerel kod hata ayıklama için. Bu arabirimler için üst bilgi jscript9diag.h dosyasıdır.  
+> @No__t_0 arabirimleri ve `IEnumJsStackFrames` arabirimi ilk olarak, komut dosyası ile yerel kodun hatalarını ayıklamak için Internet Explorer 11 ' de yayımlanmıştır. Bu arabirimlerin üstbilgi dosyası jscript9diag. h ' dir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- Aşağıdaki arabirimlerinden dilden, konak nötr hata ayıklama izin ver:  
+ Aşağıdaki arabirimler dilden bağımsız, ana bilgisayar bağımsız hata ayıklamasına izin verir:  
   
 - [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
   
@@ -178,9 +178,9 @@ Activdbg.h ve activdbg100.h üst bilgi dosyaları, arabirimler, numaralandırmal
   
 - [IWebAppDiagnosticsObjectInitialization Arabirimi](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md)  
   
-  Aşağıdaki bölümde, sabitleri, numaralandırmaları ve hata ayıklama için kullanılan yapıları listelenmektedir:  
+  Aşağıdaki bölümde hata ayıklama için kullanılan sabitler, numaralandırmalar ve yapılar listelenmektedir:  
   
 - [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklamaya Genel Bakış](../../winscript/active-script-debugging-overview.md)

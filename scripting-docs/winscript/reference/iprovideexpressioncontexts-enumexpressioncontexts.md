@@ -1,5 +1,5 @@
 ---
-title: IProvideExpressionContexts::EnumExpressionContexts | Microsoft Docs
+title: 'Iprovideexpressionbağlamları:: Trmexpressionbağlamları | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 965147083bdc11a3544561fdd96cd85221ccd443
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f161c1591267af1398d5c04d00623381cfae2ad4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63410144"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572393"
 ---
 # <a name="iprovideexpressioncontextsenumexpressioncontexts"></a>IProvideExpressionContexts::EnumExpressionContexts
-Bu bileşen tarafından bilinen ifade bağlamları bir numaralandırıcı döndürür.  
+Bu bileşen tarafından bilinen ifade bağlamlarının bir listeleyici döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,20 +37,20 @@ HRESULT EnumExpressionContexts(
   
 #### <a name="parameters"></a>Parametreler  
  `ppedec`  
- [out] Bu bileşen tarafından bilinen ifade bağlamları bir numaralandırıcı.  
+ dışı Bu bileşen tarafından bilinen ifade bağlamlarının numaralandırıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlem Hata Ayıklama Yöneticisi, belirli bir iş parçacığıyla ilişkilendirilmiş tüm genel ifade içerikleri bulmak için bu yöntemi kullanır.  
+ İşlem hata ayıklama Yöneticisi, belirli bir iş parçacığı ile ilişkili tüm genel ifade bağlamlarını bulmak için bu yöntemi kullanır.  
   
 > [!NOTE]
-> Bu yöntem ilgilendiğiniz iş parçacığı içinde çağrılır. Bu, geçerli iş parçacığı tanımlamak ve uygun bir numaralandırıcıyı döndürmek için en fazla uygulayan olur.  
+> Bu yöntem, ilgilendiğiniz iş parçacığı içinden çağrılır. Bu, geçerli iş parçacığını tanımlamak ve uygun bir Numaralandırıcı döndürmek için uygulayıcıya sahiptir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IProvideExpressionContexts Arabirimi](../../winscript/reference/iprovideexpressioncontexts-interface.md)

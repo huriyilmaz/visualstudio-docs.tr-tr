@@ -1,5 +1,5 @@
 ---
-title: IScriptScriptlet::GetSubItemName | Microsoft Docs
+title: 'Iscriptscriptlet:: Getsubıtemname | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0c48517b7f9f5fab3250b8cff68ad288525145b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b36f6dd98534b8122a6814f1fd154eca7882251a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786803"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571922"
 ---
 # <a name="iscriptscriptletgetsubitemname"></a>IScriptScriptlet::GetSubItemName
-Son tanımlayıcı scriptlet'ın nesne konağının tam adını döndürür.  
+Bir kod oluşturma yöntemi nesnesinin nesne konağının tam adı içindeki son tanımlayıcıyı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,9 +37,9 @@ HRESULT GetSubItemName(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstr`  
- [out] Kod oluşturma adı konak tam birden fazla düzeyde sahipse `pbstr` ikinci düzeyde tanımlayıcısının arabellek adresi döndürür.  
+ dışı Konağın tam kod oluşturma yöntemi adında birden fazla düzey varsa `pbstr`, tanımlayıcının arabellek adresini ikinci düzeyde döndürür.  
   
- Kod oluşturma adı konağı tam olarak bir düzey sahipse `pbstr` ilk düzeydeki tanımlayıcısının arabellek adresi döndürür.  
+ Konağın tam kod oluşturma yöntemi adının bir düzeyi varsa `pbstr`, ilk düzeydeki tanımlayıcının arabellek adresini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -50,5 +50,5 @@ HRESULT GetSubItemName(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptScriptlet Arabirimi](../../winscript/reference/iscriptscriptlet-interface.md)

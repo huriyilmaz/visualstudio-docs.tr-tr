@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThread110::GetActiveThreadRequestCount | Microsoft Docs
+title: 'Idebugapplicationthread110:: GetActiveThreadRequestCount | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3df2f0c44e42cf9e2c2aa846db4b88821fd73996
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: e7f038c1d0958701a14899825a2adb0a11cf604d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440564"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574484"
 ---
 # <a name="idebugapplicationthread110getactivethreadrequestcount"></a>IDebugApplicationThread110::GetActiveThreadRequestCount
-İş parçacığı istek sayısı, şu anda işlenmekte olan mekanizmaları geçiş PDM'ın iş parçacığından döndürür. Bu sayı genellikle 0 veya 1 olur. Bir iş parçacığı çağrı işlemeye başlıyor ancak iş parçacığı dışında bir zaman uyumlu çağrıyı tetikler veya aksi halde iş parçacığını askıya alır ve yeniden işlenmek üzere gelen çağrıları sağlar ancak sayı daha yüksek olabilir (örneğin, tetikleme tarafından bir [ Iremotedebugapplicationevents arabirimi](../../winscript/reference/iremotedebugapplicationevents-interface.md) hata ayıklayıcı iş parçacığı üzerinde veren olay).  
+PDM 'in Şu anda işlenmekte olan iş parçacığı geçiş mekanizmalarından iş parçacığı isteklerinin sayısını döndürür. Bu sayı genellikle 0 veya 1 ' dir. Ancak, bir iş parçacığı çağrısının işleme başlaması, ancak iş parçacığından zaman uyumlu bir çağrı tetiklenmesi veya iş parçacığını askıya almasına izin vermek için (örneğin, bir ıremotedebugapplicationevents tetiklenerek) numara daha yüksek olabilir. [ ](../../winscript/reference/iremotedebugapplicationevents-interface.md)Hata ayıklayıcı iş parçacığı üzerinde verilen arabirim olayı.  
   
 > [!IMPORTANT]
-> [Idebugapplicationthread110 arabirimi](../../winscript/reference/idebugapplicationthread110-interface.md) PDM v11.0 tarafından uygulanan ve büyük. activdbg100.h içinde bulunur.  
+> [Idebugapplicationthread110 ARABIRIMI](../../winscript/reference/idebugapplicationthread110-interface.md) PDM v 11.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ HRESULT GetActiveThreadRequestCount([out, annotation("_Out_")] UINT * puiThreadR
   
 #### <a name="parameters"></a>Parametreler  
  `puiThreadRequests`  
- [out] İş parçacığı isteklerinin sayısı.  
+ dışı İş parçacığı isteklerinin sayısı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplicationThread110 Arabirimi](../../winscript/reference/idebugapplicationthread110-interface.md)

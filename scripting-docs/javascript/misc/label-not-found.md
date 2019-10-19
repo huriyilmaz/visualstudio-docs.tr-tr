@@ -14,24 +14,24 @@ ms.assetid: 79e32926-b03f-457b-997c-2bb2ec8a1ec5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 72b63c699b09081e843f36daeec3fcc556ebaf4a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4acfb93808a588ed7efb4e256627f816e26a0137
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007379"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573775"
 ---
 # <a name="label-not-found"></a>Etiket bulunamadı
-Var olmayan bir etiket için bir başvuru yapılan. Etiketleri kodun, ancak belirtilen kapsam içinde blokları işaretlemek için kullanılan, benzersiz olması gerekir.  
+Varolmayan bir etikete başvuru yaptınız. Etiketler kod bloklarını işaretlemek için kullanılabilir, ancak belirtilen kapsam içinde benzersiz olmalıdır.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Etiket adı yazsanız değil emin olmak için kontrol edin.  
+- Etiket adını yanlış yazdığınızdan emin olun.  
   
-- (İlet tanımları içerir) geçerli kapsamda tanımlanan etiketler için tüm etiket başvuruları yapıldığından emin olun.  
+- Geçerli kapsamda tanımlanmış olan etiketlere tüm etiket başvurularının yapıldığından emin olun (buna ileri tanımları dahildir).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Etiketli deyim](../../javascript/reference/labeled-statement-javascript.md)   
- [switch deyimi](../../javascript/reference/switch-statement-javascript.md)   
- [break deyimi](../../javascript/reference/break-statement-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Etiketli ifade](../../javascript/reference/labeled-statement-javascript.md)    
+ [Switch deyimleri](../../javascript/reference/switch-statement-javascript.md)    
+ [Break ekstresi](../../javascript/reference/break-statement-javascript.md)    
  [continue Deyimi](../../javascript/reference/continue-statement-javascript.md)

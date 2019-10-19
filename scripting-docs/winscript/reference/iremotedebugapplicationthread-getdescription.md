@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::GetDescription | Microsoft Docs
+title: 'Iremotedebugapplicationthread:: GetDescription | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c60e12eef269da46aea317611cb06223d0811ddc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5e49b9fd65d87bebb32764202efffcaec467eb2d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788202"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575265"
 ---
 # <a name="iremotedebugapplicationthreadgetdescription"></a>IRemoteDebugApplicationThread::GetDescription
-Açıklama ve bu iş parçacığı durumunu alır.  
+Bu iş parçacığının açıklamasını ve durumunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT GetDescription(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstrDescription`  
- [out] Bu iş parçacığının açıklaması.  
+ dışı Bu iş parçacığının açıklaması.  
   
  `pbstrState`  
- [out] İş parçacığı durumu açıklaması.  
+ dışı İş parçacığı durumunun açıklaması.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, açıklama ve bu iş parçacığı durumunu alır.  
+ Bu yöntem, bu iş parçacığının açıklamasını ve durumunu alır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplicationThread Arabirimi](../../winscript/reference/iremotedebugapplicationthread-interface.md)

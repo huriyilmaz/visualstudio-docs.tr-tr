@@ -1,5 +1,5 @@
 ---
-title: DebuggerTypeProxy kullanarak özel bir tür görüntüleme | Microsoft Docs
+title: DebuggerTypeProxy kullanarak özel tür görüntüle | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,56 +17,56 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c379fbeb9d17f92dcc7067424ea06bb1a2805ed1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 091619353adacaeb9c6996653ac64a0bcd84bb5c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929633"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72568960"
 ---
-# <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>DebuggerTypeProxy özniteliğini kullanma göstermek için ne tür hata ayıklayıcının işlemi durdurmasını (C#, Visual Basic C++/CLI)
+# <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>Hata ayıklayıcıya DebuggerTypeProxy özniteliği (C#, Visual Basic, C++/CLI) kullanarak ne tür gösterileceğini söyleyin
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute> bir proxy ya da bir tür ve tür şeklini hata ayıklayıcı pencerelerinde görüntülenen değişiklikler için stand-in belirtir. Bir proxy sahip bir değişken görüntülediğinizde, proxy özgün türü için anlamına gelir **görüntüleme**. Proxy türü yalnızca genel üyeleri hata ayıklayıcı değişken penceresinde görüntüler. Özel üyeler görüntülenmez.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute>, bir ara sunucu veya bir tür için bağımsız olduğunu belirtir ve türün hata ayıklayıcı penceresinde görüntülenme şeklini değiştirir. Proxy 'si olan bir değişkeni görüntülediğinizde, proxy, **ekranda**orijinal tür için temsil eder. Hata ayıklayıcı değişkeni penceresi yalnızca proxy türünün ortak üyelerini görüntüler. Özel Üyeler gösterilmez.
 
-Bu öznitelik için uygulanabilir:
+Bu öznitelik, öğesine uygulanabilir:
 
 - Yapılar
 - Sınıflar
 - Bütünleştirilmiş kodlar
 
 > [!NOTE]
-> Yerel kod için bu öznitelik yalnızca C + desteklenir +/ CLI kodu.
+> Yerel kod için bu öznitelik yalnızca C++/CLI kodunda desteklenir.
 
-Proxy yerini alacak türünde bir bağımsız değişken alan bir oluşturucu türü proxy sınıfı olmalıdır. Hedef türünde bir değişken görüntülemek ihtiyaç duyduğu her seferinde hata ayıklayıcı türü proxy sınıfının yeni bir örneğini oluşturur. Bu performans etkileri olabilir. Sonuç olarak, tüm kıyasla daha fazla oluşturucuda kesin olarak gerekmedikçe yapmamanız gerekir.
+Bir tür proxy sınıfı, proxy 'nin yerini alacak türün bağımsız değişkenini alan bir oluşturucuya sahip olmalıdır. Hata ayıklayıcı, hedef türün bir değişkenini görüntülemesi gereken her seferinde tür proxy sınıfının yeni bir örneğini oluşturur. Bu performans açısından olumsuz etkileri olabilir. Sonuç olarak, Kurucuda kesinlikle gerekli olandan daha fazla iş yapmanız gerekmez.
 
-Türü kullanıcı tıklayarak genişletilir sürece performans cezaları en aza indirmek için ifade değerlendirici türündeki görüntü proxy özniteliklerinde incelemez + simgesi hata ayıklayıcı penceresinde veya kullanımını <xref:System.Diagnostics.DebuggerBrowsableAttribute>. Bu nedenle, öznitelikler görünen türün kendisine girmemelisiniz. Öznitelikleri olabilir ve görünen yöntemin gövdesinde kullanılmalıdır.
+Performans cezalarını en aza indirmek için, ifade değerlendirici, tür Kullanıcı tarafından genişletilmediği takdirde, hata ayıklayıcı penceresinde + simgesine tıklanmadığı veya <xref:System.Diagnostics.DebuggerBrowsableAttribute> kullanımı dışında, türün görüntüleme proxy 'si üzerindeki öznitelikleri incelemez. Bu nedenle, öznitelikleri görüntüleme türüne yerleştirmemelisiniz. Öznitelikleri, görüntüleme türünün gövdesinde kullanılmalıdır ve kullanılması gerekir.
 
-Özel bir iç içe geçmiş sınıf sınıf içinde olacak şekilde proxy türü için iyi bir fikir olduğunu, öznitelik hedefleri. Bu durum iç üyeleri bir kolayca erişmenizi sağlar.
+Tür proxy 'sinin, özniteliğin hedeflediği sınıf içinde özel bir iç içe sınıf olması iyi bir fikirdir. Bu, iç üyelere kolayca erişmesini sağlar.
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute> proxy türü üzerinde bir temel sınıf belirtilmişse bu türetilmiş sınıfların kendi proxy türü belirtmediğiniz sürece, türetilmiş bir sınıfa uygulanır, devralınabilir.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> devralınabilir, bu nedenle bir temel sınıfta bir tür ara sunucusu belirtilmişse, bu türetilmiş sınıflar kendi tür ara sunucusunu belirtmedikleri takdirde, türetilmiş sınıflar için de geçerlidir.
 
-Varsa <xref:System.Diagnostics.DebuggerTypeProxyAttribute> derleme düzeyinde kullanılan `Target` parametresi proxy değiştirilecek olan türünü belirtir.
+Derleme düzeyinde <xref:System.Diagnostics.DebuggerTypeProxyAttribute> kullanılırsa, `Target` parametresi proxy 'nin yerine geçecek türü belirtir.
 
-Bu öznitelik ile birlikte kullanma örneği için <xref:System.Diagnostics.DebuggerDisplayAttribute> ve <xref:System.Diagnostics.DebuggerTypeProxyAttribute>, bkz:[DebuggerDisplay özniteliğini kullanma](../debugger/using-the-debuggerdisplay-attribute.md).
+Bu özniteliğin <xref:System.Diagnostics.DebuggerDisplayAttribute> ve <xref:System.Diagnostics.DebuggerTypeProxyAttribute> birlikte nasıl kullanılacağına ilişkin bir örnek için, bkz.[DebuggerDisplay özniteliğini kullanma](../debugger/using-the-debuggerdisplay-attribute.md).
 
-## <a name="using-generics-with-debuggertypeproxy"></a>DebuggerTypeProxy ile Genellemeleri kullanma
+## <a name="using-generics-with-debuggertypeproxy"></a>DebuggerTypeProxy ile genel türler kullanma
 
-Genel türler için destek sınırlıdır. C# ' ta, `DebuggerTypeProxy` yalnızca açık türlerini destekler. Unconstructed bir tür olarak da bilinir, açık bir tür bağımsız değişkenleri için tür parametrelerinden biri ile oluşturulmadı genel bir türdür. Oluşturulan türler olarak da bilinir, kapalı türleri desteklenmez.
+Genel türler için destek sınırlıdır. İçin C#`DebuggerTypeProxy` yalnızca açık türleri destekler. Oluşturulmamış tür olarak da bilinen açık bir tür, tür parametrelerinin bağımsız değişkenleriyle örneklenmiş genel bir tür. Oluşturulan türler de denilen kapalı türler desteklenmez.
 
-Açık bir tür için söz dizimi şu şekilde görünür:
+Açık bir tür için sözdizimi şöyle görünür:
 
 `Namespace.TypeName<,>`
 
-Bir hedef olarak bir genel tür kullanıyorsanız `DebuggerTypeProxy`, bu sözdizimini kullanmanız gerekir. `DebuggerTypeProxy` Mekanizması, tür parametreleri algılar.
+@No__t_0 bir hedef olarak genel bir tür kullanırsanız, bu söz dizimini kullanmanız gerekir. @No__t_0 mekanizması sizin için tür parametrelerini haller.
 
-C# açık ve kapalı türleri hakkında daha fazla bilgi için bkz. [C# dil belirtimi](/dotnet/csharp/language-reference/language-specification), 20.5.2 bölümünü açın ve türleri.
+İçindeki C# açık ve kapalı türler hakkında daha fazla bilgi için, bkz. [ C# dil belirtimi](/dotnet/csharp/language-reference/language-specification), Bölüm 20.5.2 açık ve kapalı türler.
 
-Visual Basic açık tür sözdizimi olmadığından, Visual Basic'te de aynı bunu yapamazsınız. Bunun yerine açık tür adı bir dize gösterimini kullanmanız gerekir.
+Visual Basic açık tür sözdizimine sahip olmadığından, Visual Basic aynı şeyi yapamayacağınız. Bunun yerine, açık tür adının bir dize gösterimini kullanmanız gerekir.
 
 `"Namespace.TypeName'2"`
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [DebuggerDisplay Özniteliğini Kullanma](../debugger/using-the-debuggerdisplay-attribute.md)
-- [.Managed nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-dot-managed-objects.md)
+- [Yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-managed-objects.md)
 - [Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

@@ -1,5 +1,5 @@
 ---
-title: IDebugCookie::SetDebugCookie | Microsoft Docs
+title: 'Idebugcookie:: SetDebugCookie | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c83c1331a95e48afa02b0b37557ca5bd042261d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 664939d0b91b8dbbf87dbff2978064811ffee486
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974481"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573177"
 ---
 # <a name="idebugcookiesetdebugcookie"></a>IDebugCookie::SetDebugCookie
-Hata ayıklama uygulama tanımlama bilgisi ayarlar.  
+Hata ayıklama uygulaması tanımlama bilgisini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT SetDebugCookie(
   
 #### <a name="parameters"></a>Parametreler  
  `dwDebugAppCookie`  
- [in] Hata ayıklama uygulamayı tanımlayan bir çerez.  
+ 'ndaki Hata ayıklama uygulamasını tanımlayan bir tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem sağlayan bir işleme birden fazla hata ayıklayıcı hata ayıklama uygulama tanımlama bilgisi ayarlar.  
+ Bu yöntem, bir işleme eklemek için birden fazla hata ayıklayıcıya izin veren hata ayıklama uygulaması tanımlama bilgisini ayarlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugCookie Arabirimi](../../winscript/reference/idebugcookie-interface.md)

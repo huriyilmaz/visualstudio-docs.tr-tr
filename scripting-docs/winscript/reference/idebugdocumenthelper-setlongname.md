@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::SetLongName | Microsoft Docs
+title: 'Idebugbelgethelper:: SetLongName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e10542b5e792f01c50d57bc3a7481d6b8c01090d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 312e60b7024cc2b93e0087c86fe78738c74df8c1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949012"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570039"
 ---
 # <a name="idebugdocumenthelpersetlongname"></a>IDebugDocumentHelper::SetLongName
-Belge için uzun adını ayarlar.  
+Belge için uzun adı ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT SetLongName(
   
 #### <a name="parameters"></a>Parametreler  
  `pszLongName`  
- [in] Belge uzun adını içeren null ile sonlandırılmış bir dize.  
+ 'ndaki Belgenin uzun adını içeren null ile sonlandırılmış bir dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, yeni bir uzun ad belge için ayarlar.  
+ Bu yöntem, belge için yeni bir uzun ad ayarlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentHelper Arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)

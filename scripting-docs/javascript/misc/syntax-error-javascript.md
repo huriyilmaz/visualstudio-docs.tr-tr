@@ -14,21 +14,21 @@ ms.assetid: e4a9d980-f3ef-4092-b192-bf4a45981d30
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f924dc1745dfe17265a750d4159f52643eb5c5ef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 39a1d803229dd614d0022ca14eb79b39f27f88b8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006450"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575642"
 ---
 # <a name="syntax-error-javascript"></a>Sözdizimi hatası (JavaScript)
-Bir veya daha fazla dilbilgisi kuralları ihlal eden bir deyim oluşturduğunuz [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
+@No__t_0 dilbilgisi kurallarından birini veya daha fazlasını ihlal eden bir ifade oluşturdunuz.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Programınız belirtilen satır numarasında sözdizimini denetleyin.  
+- Belirtilen satır numarasında programınızın söz dizimini iki kez kontrol edin.  
   
-- Yanlış yönlendirilen ayraçlar veya küme ayraçları arayın.  
+- Hatalı yönlendirilmiş parantezler veya küme ayraçları bulun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Hata Nesnesi](../../javascript/reference/error-object-javascript.md)

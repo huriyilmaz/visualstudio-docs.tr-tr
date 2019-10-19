@@ -11,15 +11,15 @@ caps.latest.revision: 2
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: be963a21cd95a2ae0b6fbe2cebb57292df846cf0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e3cf523425b11fcbe60f397f878cd9b68b08768e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993312"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571614"
 ---
 # <a name="iactivescriptprofilercallback3-interface"></a>IActiveScriptProfilerCallback3 Arabirimi
-Profili oluşturulan yürütmeleri bir web çalışanı bağlamında olay meydana gelir profil oluşturucu bildirmek için bir yöntem sağlar.  
+Profil oluşturucuyu, profili oluşturulmuş yürütmelerin bir Web çalışanı bağlamında meydana gelmekte olduğunu bildirmek için bir yöntem sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,8 +31,8 @@ interface IActiveScriptProfilerCallback3 : IActiveScriptProfilerCallback2
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IActiveScriptProfilerCallback3::SetWebWorkerId Metodu](../../winscript/reference/iactivescriptprofilercallback3-setwebworkerid-method.md)|Profil Oluşturucu bu profil oluşturma oturumu için kullanılacak alt kimliği hakkında bilgilendirir.|  
+|[IActiveScriptProfilerCallback3::SetWebWorkerId Metodu](../../winscript/reference/iactivescriptprofilercallback3-setwebworkerid-method.md)|Profil oluşturucuyu, bu profil oluşturma oturumunda kullanılacak çalışan KIMLIĞI hakkında bilgilendirir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iactivescriptprofilercallback arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptprofilercallback arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)    
  [IActiveScriptProfilerCallback2 Arabirimi](../../winscript/reference/iactivescriptprofilercallback2-interface.md)

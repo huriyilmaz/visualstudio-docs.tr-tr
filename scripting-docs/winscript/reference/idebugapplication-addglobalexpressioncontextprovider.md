@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::AddGlobalExpressionContextProvider | Microsoft Docs
+title: 'IDebugApplication:: AddGlobalExpressionContextProvider | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 278811ae7c7f853396efb5f41a92a5350176943a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 429e87def1e17a6abac92ce2d3538960659cfaeb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991101"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573469"
 ---
 # <a name="idebugapplicationaddglobalexpressioncontextprovider"></a>IDebugApplication::AddGlobalExpressionContextProvider
-Bu uygulama için bir genel ifade içeriği sağlayıcısı ekler.  
+Bu uygulamaya bir genel ifade bağlam sağlayıcısı ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,21 +38,21 @@ HRESULT AddGlobalExpressionContextProvider(
   
 #### <a name="parameters"></a>Parametreler  
  `pdsfs`  
- [in] Bu uygulama eklemek için genel içeriği sağlayıcısı.  
+ 'ndaki Bu uygulamaya eklenecek genel bağlam sağlayıcısı.  
   
  `pdwCookie`  
- [out] Uygulamadan bu genel ifade bağlam sağlayıcıyı kaldırmak için kullanılan tanımlama bilgisi.  
+ dışı Uygulamadan bu genel ifade bağlamı sağlayıcısını kaldırmak için kullanılan tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu uygulama için bir genel ifade bağlam sağlayıcısı ekler.  
+ Bu yöntem, bu uygulamaya bir genel ifade bağlam sağlayıcısı ekler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
  [IDebugApplication::RemoveGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-removeglobalexpressioncontextprovider.md)

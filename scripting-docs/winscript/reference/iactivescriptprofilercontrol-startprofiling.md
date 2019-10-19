@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl::StartProfiling | Microsoft Docs
+title: 'Iactivescriptprofilercontrol:: Startprofilleme | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 780886e4ca21abbe11580992244cee0d6a28b134
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cfc59dd43ac3eed433f92af2cdd0aefe40392c4a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993143"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571572"
 ---
 # <a name="iactivescriptprofilercontrolstartprofiling"></a>IActiveScriptProfilerControl::StartProfiling
-Komut dosyası altyapısına'profil oluşturmaya başlar. Komut dosyası altyapısı bir çağrı yaparak profil oluşturucu nesnesinin örneğini oluşturur. [CoCreateInstance](https://docs.microsoft.com/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
+Komut dosyası altyapısında profil oluşturmayı başlatır. Betik altyapısı, bir [Cocreateınstance](https://docs.microsoft.com/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)çağrısı yaparak Profiler nesnesinin bir örneğini oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,13 +36,13 @@ HRESULT StartProfiling(
   
 #### <a name="parameters"></a>Parametreler  
  `clsidProfilerObject`  
- [in] Oluşturulacak profil oluşturucu nesne tanımlayıcısı (CLSID) sınıfı.  
+ 'ndaki Oluşturulacak profil oluşturucu nesnesinin sınıf tanımlayıcısı (CLSID).  
   
  `dwEventMask`  
- [in] Olay türlerini belirten bir 4 baytlık bit maskesi. BITS tanımlanan [profıler_event_mask numaralandırması](../../winscript/reference/profiler-event-mask-enumeration.md).  
+ 'ndaki Olay türlerini belirten 4 baytlık bir bit maskesi. Bitleri [PROFILER_EVENT_MASK numaralandırması](../../winscript/reference/profiler-event-mask-enumeration.md)içinde tanımlanmıştır.  
   
  `dwContext`  
- [in] Profil Oluşturucu nesnesine geçirilen bir 4 baytlık değer.  
+ 'ndaki Profiler nesnesine geçirilen 4 baytlık bir değer.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  HRESULT döndürür. Olası değerler aşağıdaki gibidir:  
@@ -52,5 +52,5 @@ HRESULT StartProfiling(
 |`S_OK`|Yöntem başarılı oldu.|  
 |`ACTIVPROF_E_PROFILER_PRESENT`|Profil oluşturma zaten etkin.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptProfilerControl Arabirimi](../../winscript/reference/iactivescriptprofilercontrol-interface.md)

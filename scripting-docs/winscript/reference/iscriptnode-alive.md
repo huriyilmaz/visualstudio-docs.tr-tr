@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::Alive | Microsoft Docs
+title: 'Icriptnode:: canlı | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da0a55d26b5ab643670ba7ed51e576eeb89d8b98
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b7e0216824506ee942b42a42d5c3c4475f63f9e2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787179"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573623"
 ---
 # <a name="iscriptnodealive"></a>IScriptNode::Alive
-Bir nesne hala etkin olup olmadığını belirtir.  
+Bir nesnenin hala etkin olup olmadığını gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,17 +34,17 @@ HRESULT Alive();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Yöntem parametre almaz.  
+ Yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Betik olarak hala etkin düğümüdür.|  
+|`S_OK`|Betik düğümü hala etkin.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Nesne etkin değilse, Bileşen Nesne Modeli (COM) sıralama proxy bu yöntem çağrıları için bir hata döndürür.  
+ Nesne etkin değilse, bileşen nesne modeli (COM) Bu metoda yapılan çağrılar için sıralama proxy 'sinden bir hata döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptNode Arabirimi](../../winscript/reference/iscriptnode-interface.md)

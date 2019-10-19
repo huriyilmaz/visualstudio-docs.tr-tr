@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31a66556e9476631fa0372b14e73eb8c6241fc63
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
-ms.translationtype: HT
+ms.openlocfilehash: 39be6feffb70dd43823af2af0fce719daafc6f78
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314194"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572477"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>9\. Adım: kodunuzu gözden geçirme, açıklama ve test etme
 
@@ -65,7 +65,7 @@ Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi
     > [!TIP]
     > IDE, kod yazmanızı kolaylaştıracak şekilde oluşturulmuştur ve *kod parçacıkları* bunu yapmanın bir yoludur. Kod parçacığı, küçük bir kod bloğuna genişletilmiş bir kısayoldur.
     >
-    >  Kullanılabilir tüm parçacıkları görebilirsiniz. Menü çubuğunda **araçlar**  > **kod parçacıkları Yöneticisi**' ni seçin. İçin C#`if` parçacığı **görseldir C#**  . Visual Basic için `if` parçacıkları,**kod desenleri** >  koşullardır **ve Döngülerde** yer alır. Bu yöneticiyi, mevcut parçacıkları taramak veya kendi kod parçacıklarınızı eklemek için kullanabilirsiniz.
+    >  Kullanılabilir tüm parçacıkları görebilirsiniz. Menü çubuğunda **araçlar**  > **kod parçacıkları Yöneticisi**' ni seçin. İçin C#`if` parçacığı **görseldir C#**  . Visual Basic için, `if` parçacıkları  > **conditionals ve Döngülerde** **kod desenlerinde** bulunur. Bu yöneticiyi, mevcut parçacıkları taramak veya kendi kod parçacıklarınızı eklemek için kullanabilirsiniz.
     >
     >  Kodu yazarken bir kod parçacığını etkinleştirmek için yazın ve **sekme** tuşunu seçin. Birçok parçacık, **IntelliSense** penceresinde görünür. bu **nedenle,** **IntelliSense** PENCERESINDE kod parçacığını seçmek ve sonra IDE 'nin kod parçacığını kullanmasını söylemek için. (IntelliSense, `if` parçacığı destekler, ancak `ifelse` parçacığı değil.)
 

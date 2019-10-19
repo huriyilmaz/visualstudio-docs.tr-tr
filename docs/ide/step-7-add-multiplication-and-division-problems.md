@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f02827ebd5617485f180f4a16652b1cc841c41f4
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 342a27571c9ad7b6ed1586fc762b2952ba86c3db
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314224"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575155"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>7\. Adım: çarpma ve bölme sorunları ekleme
 
@@ -48,7 +48,7 @@ Bu öğreticinin yedinci kısmında çarpma ve bölme sorunları ekleyeceksiniz,
      [!code-vb[VbExpressTutorial3Step7#17](../ide/codesnippet/VisualBasic/step-7-add-multiplication-and-division-problems_3.vb)]
      [!code-csharp[VbExpressTutorial3Step7#17](../ide/codesnippet/CSharp/step-7-add-multiplication-and-division-problems_3.cs)]
 
-     Klavye kullanarak çarpma işaretini (×) ve bölme işaretini (÷) kolayca giremezsiniz, böylece görsel C# ve Visual Basic bölme için bir yıldız işareti (*) ve bölme için bir eğik çizgi (/) kabul eder.
+     Klavyeyi kullanarak çarpma işaretini (×) ve bölme işaretini (÷) kolayca giremezsiniz, bu nedenle C# Visual Basic çarpma için bir yıldız işareti (*) ve bölme için bir eğik çizgi (/) kabul edin.
 
 4. Zamanlayıcının <xref:System.Windows.Forms.Timer.Tick> olay işleyicisinin son kısmını, zaman dolduğunda doğru yanıtı dolduracak şekilde değiştirin.
 

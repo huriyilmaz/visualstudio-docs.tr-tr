@@ -13,26 +13,26 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c1e042f75cf0ab0d8c4807c0c0db6ce04e8423f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24a93cb3bd230e2489b58d78f6d414ba1df006ed
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945880"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572499"
 ---
 # <a name="idebugextendedproperty-interface"></a>IDebugExtendedProperty Arabirimi
-Genişletir `IDebugProperty` arabirimi.  
+@No__t_0 arabirimini genişletir.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Devralınan yöntemleri yanı sıra `IDebugProperty`, bu arabirimi aşağıdaki yöntemleri sunar.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Bu arabirim, `IDebugProperty` devralınan yöntemlere ek olarak aşağıdaki yöntemleri sunar.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IDebugExtendedProperty::GetExtendedPropertyInfo](../../winscript/reference/idebugextendedproperty-getextendedpropertyinfo.md)|Alır `ExtendedDebugPropertyInfo` bu açıklar `IDebugExtendedProperty``.`|  
-|[IDebugExtendedProperty::EnumExtendedMembers](../../winscript/reference/idebugextendedproperty-enumextendedmembers.md)|Genişletilmiş bir özellik üyesi numaralandırır.|  
+|[IDebugExtendedProperty::GetExtendedPropertyInfo](../../winscript/reference/idebugextendedproperty-getextendedpropertyinfo.md)|Bu `IDebugExtendedProperty``.` açıklayan `ExtendedDebugPropertyInfo` alır|  
+|[IDebugExtendedProperty::EnumExtendedMembers](../../winscript/reference/idebugextendedproperty-enumextendedmembers.md)|Genişletilmiş bir özelliğin üyelerini numaralandırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: dbgprop.h  
+ Üstbilgi: dbgprop. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugProperty Arabirimi](../../winscript/reference/idebugproperty-interface.md)

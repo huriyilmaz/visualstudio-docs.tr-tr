@@ -13,30 +13,30 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fdc02498360f2e3900012166474c5d1e35abd6ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6b39c286f389c99187b0f3250fc68af92ff5dcc8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977695"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573879"
 ---
 # <a name="imachinedebugmanagercookie-interface"></a>IMachineDebugManagerCookie Arabirimi
-Benzer şekilde `IMachineDebugManager` arabirimi `IMachineDebugManagerCookie` arabirimi hata ayıklama tanımlama bilgilerini destekler.  
+@No__t_0 arabirimine benzer şekilde, `IMachineDebugManagerCookie` arabirimi hata ayıklama tanımlama bilgilerini destekler.  
   
- Bu arabirim (ile birlikte `IDebugCookie` arabirimi) hata ayıklayıcı bu komut dosyalarını izlemek, gerek kalmadan bir komut dosyası hata ayıklayıcı işlemi çalıştırmaya betiklere izin vermek.  
+ Bu arabirim (`IDebugCookie` arabirimi ile birlikte), komut dosyalarının hata ayıklayıcının Bu betiklerin izlenmesini gerektirmeksizin bir betik hata ayıklayıcısı işleminde çalışmasına izin verir.  
   
- Bir komut dosyası hata ayıklayıcı çağırır `IDebugCookie::SetDebugCookie` yöntemi üzerinde işlem hata ayıklama Yöneticisi (PDM). Ardından, PDM yöntemlerini kullanarak bu tanımlama bilgisi eklemek veya kaldırmak için veya gelen Makine Hata Ayıklama Yöneticisi'ni (MDM), bir betik uygulaması için herhangi bir istekle birlikte gönderir `IMachineDebugManagerCookie` arabirimi. MDM sonra her hata ayıklayıcı konusu tanımlama bilgisine sahip dışındaki bir değişikliği bildirir.  
+ Betik hata ayıklayıcısı Işlem hata ayıklama yöneticisinde `IDebugCookie::SetDebugCookie` yöntemini çağırır (PDM). Daha sonra, PDM bu tanımlama bilgisini, `IMachineDebugManagerCookie` arabiriminin yöntemlerini kullanarak makine hata ayıklama Yöneticisi 'ne (MDM) veya makineye bir betik uygulaması ekleme veya kaldırma isteği ile birlikte gönderir. MDM daha sonra değişikliğin her hata ayıklayıcısını, bu tanımlama bilgisine sahip olanlar hariç bilgilendirir.  
   
- Devralınan yöntemleri yanı sıra `IUnknown`, `IMachineDebugManagerCookie` arabirimi aşağıdaki yöntemleri sunar.  
+ @No__t_0 devralınan yöntemlere ek olarak, `IMachineDebugManagerCookie` arabirimi aşağıdaki yöntemleri sunar.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IMachineDebugManagerCookie::AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)|Çalışan bir uygulama ekler uygulama listesi.|  
-|[IMachineDebugManagerCookie::EnumApplications](../../winscript/reference/imachinedebugmanagercookie-enumapplications.md)|Çalışan uygulamalar geçerli listenin bir numaralandırıcı döndürür.|  
-|[IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)|Bir uygulamanın çalışmasını kaldırır uygulama listesi.|  
+|[IMachineDebugManagerCookie::AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)|Çalışan uygulama listesine bir uygulama ekler.|  
+|[IMachineDebugManagerCookie::EnumApplications](../../winscript/reference/imachinedebugmanagercookie-enumapplications.md)|Çalışan uygulamaların geçerli listesinin bir Numaralandırıcı döndürür.|  
+|[IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)|Çalışan uygulama listesinden bir uygulamayı kaldırır.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Imachinedebugmanager arabirimi](../../winscript/reference/imachinedebugmanager-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Imachinedebugmanager arabirimi](../../winscript/reference/imachinedebugmanager-interface.md)    
  [IDebugCookie Arabirimi](../../winscript/reference/idebugcookie-interface.md)

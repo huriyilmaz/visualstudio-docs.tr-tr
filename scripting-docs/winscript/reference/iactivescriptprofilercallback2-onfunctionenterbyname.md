@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback2::OnFunctionEnterByName | Microsoft Docs
+title: 'Iactivescriptprofilercallback2:: OnFunctionEnterByName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,15 +13,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f6fdb4addace1b0bbabdd4303c3943b976763514
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0407441c77250b2cc27e9fee09c5039bb8e44ab
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993273"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571632"
 ---
 # <a name="iactivescriptprofilercallback2onfunctionenterbyname"></a>IActiveScriptProfilerCallback2::OnFunctionEnterByName
-Belge nesne modeli (DOM) işlev çağrısı yürütmek için komut dosyası altyapısı gidip profil oluşturucu nesne bildirir.  
+Profil Oluşturucu nesnesine, betik altyapısının bir Belge Nesne Modeli (DOM) işlev çağrısını yürütemeyeceğini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,17 +33,17 @@ HRESULT OnFunctionEnterByName(
   
 #### <a name="parameters"></a>Parametreler  
  `pwszFunctionName`  
- [in] Yürütülecek komut dosyası altyapısı geçiyor işlevi adı.  
+ 'ndaki Betik altyapısının yürütecağı işlevin adı.  
   
  `scriptType`  
- [in] İşlev türü. Geçerli değerler açıklamaları için bkz. [profıler_scrıpt_type numaralandırması](../../winscript/reference/profiler-script-type-enumeration.md).  
+ 'ndaki İşlevin türü. Geçerli değerlerin açıklamaları için bkz. [PROFILER_SCRIPT_TYPE Enumeration](../../winscript/reference/profiler-script-type-enumeration.md).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntemin dönüş değerini komut dosyası altyapısı tarafından göz ardı edilir.  
+ Bu yöntemin dönüş değeri, betik altyapısı tarafından yok sayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- DOM için komut dosyası altyapısının bu yöntemi çağırmak yerine aramaları [IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md). Bu çok sayıda benzersiz yöntemleri ve özellikleri sayısında kaynaklanır  
+ DOM çağrıları için, betik altyapısı [ıactivescriptprofilercallback:: OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)' ı çağırmak yerine bu yöntemi çağırır. Bunun nedeni, DOM 'daki çok sayıda benzersiz Yöntem ve özelliklerdir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptprofilercallback2:: OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)    
  [IActiveScriptProfilerCallback2 Arabirimi](../../winscript/reference/iactivescriptprofilercallback2-interface.md)

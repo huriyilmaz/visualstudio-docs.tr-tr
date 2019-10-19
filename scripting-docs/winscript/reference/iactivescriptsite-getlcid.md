@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::GetLCID | Microsoft Docs
+title: 'IActiveScriptSite:: Getlcıd | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c6ebcfec9764aae98f7d74ac98e0c88ecec7c4da
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 913ca23ac687fdd080a778afb1dcba2e4dcdd6b8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992762"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570744"
 ---
 # <a name="iactivescriptsitegetlcid"></a>IActiveScriptSite::GetLCID
-Ana bilgisayarın kullanıcı arabirimi ile ilişkilendirilmiş yerel ayar tanımlayıcısını alır. Komut dosyası altyapısı tanımlayıcı hata dizelerini ve altyapı tarafından oluşturulan diğer kullanıcı arabirimi öğeleri uygun dilde göründüğünden emin olmak için kullanır.  
+Konağın Kullanıcı arabirimiyle ilişkili yerel ayar tanımlayıcısını alır. Betik altyapısı, altyapı tarafından oluşturulan hata dizelerinin ve diğer kullanıcı arabirimi öğelerinin uygun dilde göründüğünden emin olmak için tanımlayıcıyı kullanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT GetLCID(
   
 #### <a name="parameters"></a>Parametreler  
  `plcid`  
- [out] Komut dosyası altyapısı tarafından görüntülenen kullanıcı arabirimi öğeleri için yerel ayar tanıtıcısını alan bir değişkenin adresidir.  
+ dışı Betik altyapısı tarafından görüntülenen kullanıcı arabirimi öğeleri için yerel ayar tanıtıcısını alan bir değişkenin adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -45,11 +45,11 @@ HRESULT GetLCID(
 |Dönüş Değeri|Açıklama|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
-|`E_NOTIMPL`|Bu yöntem uygulanmadı. Sistem tarafından tanımlanan yerel ayarı kullanın.|  
-|`E_POINTER`|Geçersiz işaretçi belirtildi.|  
+|`E_NOTIMPL`|Bu yöntem uygulanmadı. Sistem tanımlı yerel ayarı kullanın.|  
+|`E_POINTER`|Geçersiz bir işaretçi belirtildi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem döndürürse `E_NOTIMPL`, sistem tarafından tanımlanan bir yerel ayar tanımlayıcısı kullanılmalıdır.  
+ Bu yöntem `E_NOTIMPL` döndürürse, sistem tanımlı yerel ayar tanımlayıcısı kullanılmalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

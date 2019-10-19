@@ -13,15 +13,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9d188729b68f8086da62d40ca28fc29945c8be7f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b52b382aa1e91e509672728a3c8f931bfeae27a9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840063"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572979"
 ---
-# <a name="textdocumentarray-structure"></a>TEXT_DOCUMENT_ARRAY Yapısı
-Bir dizi [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md) nesneleri. Üyeleri CoTaskMemAlloc ile ayrılır.  
+# <a name="text_document_array-structure"></a>TEXT_DOCUMENT_ARRAY Yapısı
+[Idebugdocumenttext arabirim](../../winscript/reference/idebugdocumenttext-interface.md) nesneleri dizisi. Üyeler CoTaskMemAlloc ile ayrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ typedef struct tagTEXT_DOCUMENT_ARRAY{    DWORD dwCount;    [size_is(dwCount)] I
  Belge sayısı.  
   
  `Members`  
- Belge kümesini.  
+ Belge kümesi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

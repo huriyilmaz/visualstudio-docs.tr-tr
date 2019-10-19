@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptGarbageCollector::CollectGarbage | Microsoft Docs
+title: 'Iactivescriptgarbagecollector:: Collectçöp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: db8683534e449b2cdd8fcdb344c245d93da8fafc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0539ed2cb3540cf33ceaaa15827c3ca08c156698
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954986"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573592"
 ---
 # <a name="iactivescriptgarbagecollectorcollectgarbage"></a>IActiveScriptGarbageCollector::CollectGarbage
-Etkin komut dosyası ana atık toplama başlatmak için bu yöntemi çağırır.  
+Etkin betik Konağı çöp toplamayı başlatmak için bu yöntemi çağırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,10 +29,10 @@ HRESULT CollectGarbage(        SCRIPTGCTYPE scriptgctype    );
   
 #### <a name="parameters"></a>Parametreler  
  `scriptgctype`  
- [in] [SCRIPTGCTYPE numaralandırması](../../winscript/reference/scriptgctype-enumeration.md) normal veya ayrıntılı atık toplama etkinleştirilip etkinleştirilmeyeceğini belirtir.  
+ 'ndaki Normal veya ayrıntılı atık toplama yapılıp yapılmayacağını belirten [Scrıptgctype numaralandırması](../../winscript/reference/scriptgctype-enumeration.md) .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  HRESULT döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptGarbageCollector Arabirimi](../../winscript/reference/iactivescriptgarbagecollector-interface.md)

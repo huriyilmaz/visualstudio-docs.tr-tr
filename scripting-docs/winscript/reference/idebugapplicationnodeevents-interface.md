@@ -13,26 +13,26 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7412e258c7f67f44bde6f69b593a1eecb1d84e07
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a2f72290e331a51f1b33746b22a6526c9bfbac7b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822281"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574713"
 ---
 # <a name="idebugapplicationnodeevents-interface"></a>IDebugApplicationNodeEvents Arabirimi
-Olay arabirimi sağlayan `IDebugApplicationNode` arabirimi.  
+@No__t_0 arabirimi için olay arabirimini sağlar.  
   
- Devralınan yöntemleri yanı sıra `IUnknown`, `IDebugApplicationNodeEvents` arabirimi aşağıdaki yöntemleri sunar.  
+ @No__t_0 devralınan yöntemlere ek olarak, `IDebugApplicationNodeEvents` arabirimi aşağıdaki yöntemleri sunar.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IDebugApplicationNodeEvents::onAddChild](../../winscript/reference/idebugapplicationnodeevents-onaddchild.md)|Bir hata ayıklama uygulama düğüm nesnesi için bir alt düğüm eklendiğinde olayını işler.|  
-|[IDebugApplicationNodeEvents::onRemoveChild](../../winscript/reference/idebugapplicationnodeevents-onremovechild.md)|Hata ayıklama uygulama düğüm nesnesinden bir alt düğüm kaldırıldığında olayını işler.|  
-|[IDebugApplicationNodeEvents::onDetach](../../winscript/reference/idebugapplicationnodeevents-ondetach.md)|Hata ayıklama uygulama düğüm nesnesi bir üst düğümden kullanımdan çıkarılmamış gösteren bir olayını işler.|  
-|[IDebugApplicationNodeEvents::onAttach](../../winscript/reference/idebugapplicationnodeevents-onattach.md)|Hata ayıklama uygulama düğüm nesnesi bir üst düğüme iliştirildiği gösteren bir olayını işler.|  
+|[IDebugApplicationNodeEvents::onAddChild](../../winscript/reference/idebugapplicationnodeevents-onaddchild.md)|Bir alt düğüm bir hata ayıklama uygulama düğümü nesnesine eklendiğinde olayı işler.|  
+|[IDebugApplicationNodeEvents::onRemoveChild](../../winscript/reference/idebugapplicationnodeevents-onremovechild.md)|Bir alt düğüm bir hata ayıklama uygulama düğümü nesnesinden kaldırıldığında olayı işler.|  
+|[IDebugApplicationNodeEvents::onDetach](../../winscript/reference/idebugapplicationnodeevents-ondetach.md)|Hata ayıklama uygulama düğümü nesnesinin bir üst düğümden ayrılmıştı belirten bir olayı işler.|  
+|[IDebugApplicationNodeEvents::onAttach](../../winscript/reference/idebugapplicationnodeevents-onattach.md)|Hata ayıklama uygulama düğümü nesnesinin bir üst düğüme iliştirilmesiyle ilgili bir olayı işler.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplicationNode Arabirimi](../../winscript/reference/idebugapplicationnode-interface.md)

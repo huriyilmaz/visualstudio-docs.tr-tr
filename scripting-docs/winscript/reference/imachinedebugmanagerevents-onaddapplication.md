@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManagerEvents::onAddApplication | Microsoft Docs
+title: 'Imachinedebugmanagerevents:: Onaddadpplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f063e36296d6a5a77208bac2fe533274a6f9c07f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fe710ce9a126e344fc88024b7bf5fd2b993e31b3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965810"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576113"
 ---
 # <a name="imachinedebugmanagereventsonaddapplication"></a>IMachineDebugManagerEvents::onAddApplication
-Çalışan bir uygulama eklendiğinde, olayı işleyen uygulama listesi.  
+Çalışan uygulama listesine bir uygulama eklendiğinde olayı işler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,21 +38,21 @@ HRESULT onAddApplication(
   
 #### <a name="parameters"></a>Parametreler  
  `pda`  
- [in] Değişen eklenmiş olan uygulamayı uygulama listesi.  
+ 'ndaki Çalışan uygulama listesine eklenen uygulama.  
   
  `dwAppCookie`  
- [in] Uygulama uygulama listesine eklendiğinde sağlanan tanımlama bilgisi.  
+ 'ndaki Uygulama uygulama listesine eklendiğinde belirtilen tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem bir uygulama için çalıştırma eklendiğini gösterir. uygulama listesi.  
+ Bu yöntem, çalışan uygulama listesine bir uygulamanın eklendiğini gösterir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Imachinedebugmanagerevents arabirimi](../../winscript/reference/imachinedebugmanagerevents-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Imachinedebugmanagerevents arabirimi](../../winscript/reference/imachinedebugmanagerevents-interface.md)    
  [IMachineDebugManagerEvents::onRemoveApplication](../../winscript/reference/imachinedebugmanagerevents-onremoveapplication.md)

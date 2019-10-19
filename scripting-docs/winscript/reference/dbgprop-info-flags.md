@@ -19,15 +19,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c63cf941bca1965fc4a2e3997f0c0b50ebc44035
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5b8131531292e0f88108942648073883050dd609
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955308"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572585"
 ---
-# <a name="dbgpropinfoflags"></a>DBGPROP_INFO_FLAGS
-Belirtmek için kullanılan `DebugPropertyInfo` alanları  
+# <a name="dbgprop_info_flags"></a>DBGPROP_INFO_FLAGS
+@No__t_0 alanlarını belirtmek için kullanılır  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,26 +45,26 @@ enum {
   
 ## <a name="members"></a>Üyeler  
  DBGPROP_INFO_NAME  
- Başlatır `bstrName` alan.  
+ @No__t_0 alanını başlatır.  
   
  DBGPROP_INFO_TYPE  
- Başlatır `bstrType` alan.  
+ @No__t_0 alanını başlatır.  
   
  DBGPROP_INFO_VALUE  
- Başlatır `bstrValue` alan.  
+ @No__t_0 alanını başlatır.  
   
  DBGPROP_INFO_FULLNAME  
- Başlatır `bstrFullName` alan.  
+ @No__t_0 alanını başlatır.  
   
  DBGPROP_INFO_ATTRIBUTES  
- Başlatır `dwAttrib` alan.  
+ @No__t_0 alanını başlatır.  
   
  DBGPROP_INFO_DEBUGPROP  
- Başlatır `pDebugProp` içeren alan bir `IDebugProperty` arabirimi.  
+ @No__t_1 arabirimi içeren `pDebugProp` alanını başlatır.  
   
  DBGPROP_INFO_AUTOEXPAND  
- Varsa, bu nesne türü için değer alanını otomatik olarak genişletilmiş değeri içermesi gerektiğini belirtir.  
+ Değer alanının, varsa, bu nesne türü için otomatik genişletilmiş değeri içermesi gerektiğini belirtir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Debugpropertyınfo yapısı](../../winscript/reference/debugpropertyinfo-structure.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Debugpropertyınfo yapısı](../../winscript/reference/debugpropertyinfo-structure.md)    
  [IDebugProperty Arabirimi](../../winscript/reference/idebugproperty-interface.md)

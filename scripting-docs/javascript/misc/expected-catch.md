@@ -1,5 +1,5 @@
 ---
-title: "'Catch' bekleniyor. | Microsoft Docs"
+title: "' Catch ' bekleniyor | Microsoft Docs"
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,22 +14,22 @@ ms.assetid: f1cd947f-eba2-411e-8e84-8ca86f608643
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 941d49a530b14e2af64ddcb599dd775feb347de0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8cad981e4ba469f67645aca601e6b58c18e1fab6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935405"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573433"
 ---
 # <a name="expected-catch"></a>'catch' bekleniyor.
-Özel durum işleme kullanılan **deneyin** engellemek, ancak ilişkili yazmadı **catch** deyimi. Özel durum işleme mekanizmasını, bir özel durum oluşursa, yürütülecek değil kod ile birlikte başarısız olabilir kodu içinde sarmalamak gerektiren bir **deneyin** blok. Özel durumlar içinden **deneyin** kullanarak block **throw** deyimi ve yakalanan dışında **deneyin** bir veya daha fazla blok **catch**deyimleri.  
+Özel durum işleme **TRY** bloğunu kullandınız, ancak ilişkili **catch** ifadesini yazmadınız. Özel durum işleme mekanizması, başarısız olabilecek kodun yanı ve bir özel durum oluşursa, bir **TRY** bloğunun içine sarmalanması gereken kodu gerektirir. Özel durumlar **throw** deyimi kullanılarak **TRY** bloğunun içinden oluşturulur ve bir veya daha fazla **catch** deyimi ile **TRY** bloğunun dışında yakalanır.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- İlişkili ekleme **catch** blok.  
+- İlişkili **catch** bloğunu ekleyin.  
   
-- Kullanmayı deneyin bir **son** bloğu yerine bir **catch** blok.  
+- **Catch** bloğu yerine **finally** bloğu kullanmayı deneyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [try... catch... finally deyimi](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [deneyin... yakala... finally ekstresi](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)    
  [Hata Nesnesi](../../javascript/reference/error-object-javascript.md)

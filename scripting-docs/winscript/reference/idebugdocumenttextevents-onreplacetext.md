@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents::onReplaceText | Microsoft Docs
+title: 'Idebugdocumenttextevents:: onReplaceText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b65496f3bf64dfaf1a4fc1f1180dd6715277cd59
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d037d45f1232ec8e70f7602df33532624fd0aa3b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946706"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576001"
 ---
 # <a name="idebugdocumenttexteventsonreplacetext"></a>IDebugDocumentTextEvents::onReplaceText
-Metin değiştirildiğini gösterir.  
+Metnin değiştirildiğini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT onReplaceText(
   
 #### <a name="parameters"></a>Parametreler  
  `cCharacterPosition`  
- [in] İlk karakterin karakter konumu değiştirildi.  
+ 'ndaki İlk karakterin karakter konumu değişti.  
   
  `cNumToReplace`  
- [in] Değiştirilen karakter sayısı.  
+ 'ndaki Değişen karakterlerin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, metin değiştirildiğini gösterir.  
+ Bu yöntem, metnin değiştirildiğini gösterir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentTextEvents Arabirimi](../../winscript/reference/idebugdocumenttextevents-interface.md)

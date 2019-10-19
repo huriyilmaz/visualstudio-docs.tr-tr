@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthorProcedure::ParseProcedureText | Microsoft Docs
+title: Iactivescriptauthorprocedure::P arseProcedureText | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c513b105a483d0f80510dff9c91fa2c3f09e0523
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 11a34843f30274ec78f1652c5ed5cd4dbcf2884a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955165"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572823"
 ---
 # <a name="iactivescriptauthorprocedureparseproceduretext"></a>IActiveScriptAuthorProcedure::ParseProcedureText
-Bir kod yordam ayrıştırır, komut dosyası altyapısı yazma kod yordam metin ekler ve oluşturur bir `IScriptEntry` kod yordama karşılık gelen nesne.  
+Kod yordamını ayrıştırır, kod yordamının metnini betik yazma altyapısına ekler ve kod yordamına karşılık gelen bir `IScriptEntry` nesnesi oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,28 +44,28 @@ HRESULT ParseProcedureText(
   
 #### <a name="parameters"></a>Parametreler  
  `pszCode`  
- [in] Ayrıştırılacak komut metni.  
+ 'ndaki Ayrıştırılacak betik metni.  
   
  `pszFormalParams`  
- [in] Yordam için biçimsel parametre adları adresi. Parametre adları, komut dosyası altyapısı geliştirme için uygun sınırlayıcılar tarafından ayrılmalıdır. Adlar parantez içine alınmalıdır değil.  
+ 'ndaki Yordamın biçimsel parametre adlarının adresi. Parametre adları, betik yazma altyapısı için uygun sınırlayıcılarla ayrılmalıdır. Adlar parantez içine alınmalıdır.  
   
  `pszProcedureName`  
- [in] Ayrıştırılacak yordam adı adresi.  
+ 'ndaki Ayrıştırılacak yordam adının adresi.  
   
  `pszItemName`  
- [in] Öğe adı içeren arabellek adresi ile ilişkili `IScriptEntry` nesne.  
+ 'ndaki @No__t_0 nesnesiyle ilişkili öğe adını içeren arabellek adresi.  
   
  `pszDelimiter`  
- [in] Sonlandırma, betik bloğu sınırlayıcısı adresi. Zaman `pszCode` ayrıştırılır metin akışından ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) betik bloğunun sonu algılamak için kullanır. Betik bloğunun sonunu işaretlemek için sınırlayıcı varsa bu parametre NULL olarak ayarlayın.  
+ 'ndaki Son betik blok sınırlayıcısı adresi. @No__t_0 metin akışından ayrıştırıldığında, ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) kullanır ve komut dosyası bloğunun sonunu algılar. Betik bloğunun sonunu işaretlemek için sınırlayıcı yoksa bu parametreyi NULL olarak ayarlayın.  
   
  `dwCookie`  
- [in] Yeni ile ilişkili uygulama tanımlı bir değer `IScriptEntry` nesne.  
+ 'ndaki Yeni `IScriptEntry` nesnesiyle ilişkili uygulama tanımlı bir değer.  
   
  `dwFlags`  
- [in] Kullanılmıyor.  
+ 'ndaki Kullanılmıyor.  
   
  `pdispFor`  
- [in] Kullanılmıyor.  
+ 'ndaki Kullanılmıyor.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -75,7 +75,7 @@ HRESULT ParseProcedureText(
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Geçerli [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] altyapısı, bu yöntem uygulamıyor.  
+ Geçerli [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] altyapısı bu yöntemi uygulamıyor.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptAuthorProcedure Arabirimi](../../winscript/reference/iactivescriptauthorprocedure-interface.md)

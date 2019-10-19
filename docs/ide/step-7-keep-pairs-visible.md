@@ -1,5 +1,5 @@
 ---
-title: '7\. Adım: Çiftleri görünür durumda tutma'
+title: '7\. Adım: çiftleri görünür tutma'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,15 +13,15 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 025e388185651e6b2effb0f53345f2e145e101b3
-ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
-ms.translationtype: MT
+ms.openlocfilehash: 4d0cab30734aa5411f759e85ef555ecb36f3f0cf
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289598"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575143"
 ---
-# <a name="step-7-keep-pairs-visible"></a>7\. Adım: Çiftleri görünür durumda tutma
-Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Zamanlayıcıyı etkinleştirerek (<xref:System.Windows.Forms.Timer.Start> yöntemini kullanarak) simgeleri ortadan kaldırmamak yerine, oyunun kendisini sıfırlaması gerekir; böylece, iki için renkleri sıfırlamadan, `firstClicked` ve `secondClicked` başvuru değişkenlerini kullanarak hiçbir etiketi takip etmeden önce Seçilen Etiketler.
+# <a name="step-7-keep-pairs-visible"></a>7\. Adım: çiftleri görünür tutma
+Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Zamanlayıcıyı etkinleştirerek (<xref:System.Windows.Forms.Timer.Start> yöntemi kullanılarak) simgeleri ortadan kaldırmamak yerine, oyunun kendisini sıfırlamasına gerek kalmadan, `firstClicked` ve `secondClicked` başvuru değişkenlerini kullanarak hiçbir etiketi takip etmeden önce Seçilen Etiketler.
 
 ## <a name="to-keep-pairs-visible"></a>Çiftleri görünür durumda tutmak için
 
@@ -33,11 +33,11 @@ Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün 
        > [!IMPORTANT]
        > Use the programming language control at the top right of this page to view either the C# code snippet or the Visual Basic code snippet.<br><br>![Programming language control for Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
-     Yeni eklediğiniz `if` ifadesinin ilk satırı, Player 'ın seçtiği ilk etiketteki simgenin ikinci etiketteki simgeyle aynı olup olmadığını denetler. Simgeler aynıysa program, içindeki C# küme ayraçları arasında üç deyimi veya Visual Basic `if` deyimi içindeki üç deyimi yürütür. İlk iki deyim `firstClicked` ve `secondClicked` başvuru değişkenlerini sıfırlayın, böylece artık etiketlerden herhangi birini takip etmezsiniz. (Bu iki deyimi zamanlayıcının <xref:System.Windows.Forms.Timer.Tick> olay işleyicisinden ayırt edebilirsiniz.) Üçüncü deyim bir `return` deyimidir, bu da programa çalıştırmadan deyimlerin geri kalanını atlamasını söyler.
+     Yeni eklediğiniz `if` deyimin ilk satırı, Player 'ın seçtiği ilk etiketteki simgenin ikinci etiketteki simgeyle aynı olup olmadığını denetler. Simgeler aynıysa, program içindeki C# küme ayraçları veya Visual Basic içindeki `if` deyimi arasındaki üç deyimi yürütür. İlk iki deyim `firstClicked` ve `secondClicked` başvuru değişkenlerini sıfırlayın ve bu sayede etiketlerin hiçbirini izlememek üzere. (Bu iki deyimi zamanlayıcının <xref:System.Windows.Forms.Timer.Tick> olay işleyicisinden ayırt edebilirsiniz.) Üçüncü deyim bir `return` deyimidir, bu da programa çalıştırmadan deyimlerin geri kalanını atlamasını söyler.
 
-     Görselde C#programlamada, bazı kodların tek bir eşittir işareti (`=`) kullandığını fark etmiş olabilirsiniz; diğer deyimler ise iki eşittir işareti (`==`) kullanır. @No__t-0 ' ın bazı konumlarda kullanıldığını, ancak `==` ' in diğer yerlerde kullanıldığını göz önünde bulundurun.
+     İçinde C#Programlama yapıyorsanız, bazı kodların tek bir eşittir işareti (`=`) kullandığını fark etmiş olabilirsiniz, ancak diğer deyimler iki eşittir işareti (`==`) kullanır. @No__t_0 neden bazı yerlerde kullanıldığını, ancak `==` başka yerlerde kullanıldığını göz önünde bulundurun.
 
-     Bu örnek, aradaki farkı gösteren güzel bir örnektir. @No__t-0 deyimindeki parantezler arasındaki koda dikkatli bir göz atın.
+     Bu örnek, aradaki farkı gösteren güzel bir örnektir. @No__t_0 deyimindeki parantezler arasındaki koda dikkatli bir göz atın.
 
     ```vb
     firstClicked.Text = secondClicked.Text
@@ -47,7 +47,7 @@ Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün 
     firstClicked.Text == secondClicked.Text
     ```
 
-     Ardından `if` ifadesinden sonra kod bloğundaki ilk ifadeye yakından bakın.
+     Ardından `if` deyimden sonra kod bloğundaki ilk ifadeye yakından bakın.
 
     ```vb
     firstClicked = Nothing
@@ -57,15 +57,15 @@ Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün 
     firstClicked = null;
     ```
 
-     Bu deyimlerden birincisi iki simgenin aynı olup olmadığını denetler. İki değer karşılaştırıldığından, görsel C# program `==` eşitlik işlecini kullanır. İkinci ifade gerçekten değeri değiştirir ( *atama*olarak adlandırılır), `firstClicked` başvuru değişkeni, `null` ' ye eşit olarak ayarlanır. Bunun yerine `=` atama işlecini kullanmasının nedeni budur. Visual C# , değerleri ayarlamak için `=` kullanır ve karşılaştırmak için 2 @no__t. Visual Basic, hem değişken atama hem de karşılaştırma için `=` kullanır.
+     Bu deyimlerden birincisi iki simgenin aynı olup olmadığını denetler. İki değer karşılaştırıldığından, C# program `==` eşitlik işlecini kullanır. İkinci ifade gerçekten değeri değiştirir ( *atama*olarak adlandırılır), `firstClicked` başvuru değişkenini sıfırlamak için `null` eşittir. Bunun yerine `=` atama işlecini kullanmasıdır. C#değerleri ayarlamak için `=` kullanır ve bunları karşılaştırmak için `==`. Visual Basic, hem değişken atama hem de karşılaştırma için `=` kullanır.
 
-2. Programı kaydedip çalıştırın ve sonra formdaki simgeleri seçmeye başlayın. Eşleşmeyen bir çift seçerseniz, zamanlayıcının Tick olayı tetiklenir ve iki simge de kaybolur. Eşleşen bir çift seçerseniz, yeni `if` deyimleri yürütülür ve Return yöntemi yöntemin zamanlayıcıyı başlatan kodu atlamasına neden olur, böylece aşağıdaki resimde gösterildiği gibi simgeler görünür kalır.
+2. Programı kaydedip çalıştırın ve sonra formdaki simgeleri seçmeye başlayın. Eşleşmeyen bir çift seçerseniz, zamanlayıcının Tick olayı tetiklenir ve iki simge de kaybolur. Eşleşen bir çift seçerseniz, yeni `if` deyimleri yürütülür ve Return deyimleri, aşağıdaki resimde gösterildiği gibi, simgenin görünür kalması için, metodun zamanlayıcıyı başlatan kodu atlamasına neden olur.
 
-     Bu öğreticide oluşturduğunuz ![Game @ no__t-1<br/>
+     Bu öğreticide oluşturduğunuz ![Game ](../ide/media/express_finishedgame.png)<br/>
 Görünür simge çiftleri ile **eşleşen oyun**
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için bkz. [Adım 8: Oynatıcının @ no__t-0 olarak kazanıldığını doğrulamak için bir yöntem ekleyin.
+- Sonraki öğretici adımına gitmek için bkz. 8. [Adım: oyuncunun kazandığını doğrulamak için yöntem ekleme](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md).
 
-- Önceki öğretici adımına dönmek için bkz. [Step 6: Bir süreölçer ekleyin @ no__t-0.
+- Önceki öğretici adımına dönmek için bkz. 6. [Adım: Zamanlayıcı ekleme](../ide/step-6-add-a-timer.md).

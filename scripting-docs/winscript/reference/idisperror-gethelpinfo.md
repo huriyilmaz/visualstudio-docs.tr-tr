@@ -1,5 +1,5 @@
 ---
-title: IDispError::GetHelpInfo | Microsoft Docs
+title: 'Idağılım ROR:: GetHelpInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fa831ff511ea507e03ca858b93383ff38ead9039
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a84e57e97bb781ad3ea0be1ac6766fd94f6f5c30
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446915"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573127"
 ---
 # <a name="idisperrorgethelpinfo"></a>IDispError::GetHelpInfo
-Yardım dosyasının yolu ve mümkünse, hatayı açıklayan bir konu bağlam Kimliğini döndürür.  
+Mümkünse, hatayı açıklayan konunun yardım dosyasının yolunu ve bağlam KIMLIĞINI döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,26 +38,26 @@ HRESULT GetHelpInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstrFileName`  
- [out] Yardım dosyasının tam yolu içeren dize. Yardım dosyası yok veya bir hata oluşursa, döndürülen değer NULL olur.  
+ dışı Yardım dosyasının tam yolunu içeren dize. Yardım dosyası yoksa veya bir hata oluşursa, dönüş değeri NULL olur.  
   
  `pdwContext`  
- [out] Hata için Yardım içeriği kimliği. Yardım dosyası yoksa (varsa `pbstrFileName` null), bu parametre bir anlamı yoktur.  
+ dışı Hatanın yardım bağlamı KIMLIĞI. Yardım dosyası yoksa (`pbstrFileName` NULL ise), bu parametrenin bir anlamı yoktur.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
 |`E_FAIL`|Sağlayıcıya özgü bir hata oluştu.|  
-|`E_INVALIDARG`|`pbstrFileName` veya `pdwContext` NULL idi.|  
-|`E_OUTOFMEMORY`|Sağlayıcı, Yardım dosyası yol döndürmek yeterli bellek ayıramadı.|  
+|`E_INVALIDARG`|`pbstrFileName` veya `pdwContext` NULL.|  
+|`E_OUTOFMEMORY`|Sağlayıcı, yardım dosyası yolunun döndürüleceği yeterli bellek ayıramadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, Yardım dosyasının yolu ve mümkünse, hatayı açıklayan bir konu bağlam Kimliğini döndürür.  
+ Bu yöntem, mümkünse hatayı açıklayan konunun yardım dosyasının yolunu ve bağlam KIMLIĞINI döndürür.  
   
 > [!NOTE]
 > Bu yöntem uygulanmadı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDispError Arabirimi](../../winscript/reference/idisperror-interface.md)

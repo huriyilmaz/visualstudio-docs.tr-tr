@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl2::PrepareProfilerStop | Microsoft Docs
+title: Iactivescriptprofilercontrol2::P repareProfilerStop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,15 +13,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 11a32f36ec6eddcc06faa77e093f19e8df503fa4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24d4d73e0263882ad028ea66d3fac5e24f3af9ba
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968769"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571436"
 ---
 # <a name="iactivescriptprofilercontrol2prepareprofilerstop"></a>IActiveScriptProfilerControl2::PrepareProfilerStop
-Profil Oluşturucu, tüm geçerli komut dosyası motorlarına profil oluşturmayı durdurmak için önerilere şu bildirir. Bu yöntemi kullanarak, tam çağrı yığınını edinebilirsiniz [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] profil oluşturma durdurduğunuzda çalışıyor.  
+Profil oluşturucuyu, tüm uygulanabilir komut dosyası altyapılarında profil oluşturmayı durduramayacağız bildirir. Bu yöntemi kullanarak, profil oluşturmayı durdurduğunuzda [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] çalışıyorsa, tüm çağrı yığınını elde edebilirsiniz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,13 +38,13 @@ HRESULT PrepareProfilerStop();
 |Dönüş değeri|Açıklama|  
 |------------------|-------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_FAIL`|Profil oluşturma başlatılamıyor.|  
-|`S_FALSE`|Profil oluşturma, bir komut dosyası değil çalıştırılırken durduruldu.|  
+|`E_FAIL`|Profil oluşturma başlatılamadı.|  
+|`S_FALSE`|Bir betik çalışmadığı zaman profil oluşturma işlemi durduruldu.|  
 |`ACTIVPROF_E_PROFILER_ABSENT`|Profil oluşturma etkin değil.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağırma `IActiveScriptProfilerControl2::PrepareProfilerStop` çağrı yığınındaki işlevler için olayları gönderilmesini sağlar. Bu yöntem, geçerli sekmesinde herhangi bir komut dosyası altyapısını profil oluşturmayı durdurmak önce çağrılacak sahiptir. Yöntem herhangi bir komut dosyası altyapısı için çağrılabilir.  
+ @No__t_0 çağırmak, Çağrı yığınındaki işlevler için olayların gönderilmesini sağlar. Bu yöntem, geçerli sekmede bulunan herhangi bir betik altyapısında profil oluşturmayı durdurmadan önce çağrılmalıdır. Yöntemi herhangi bir betik altyapısı için çağrılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptprofilercontrol2:: CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)    
  [IActiveScriptProfilerControl2 Arabirimi](../../winscript/reference/iactivescriptprofilercontrol2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: ISimpleConnectionPoint::DescribeEvents | Microsoft Docs
+title: Iımpliconnectionpoint::D escribeEvents | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1b5824f945ad25f177fc169b58157377bf53bcce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b5000689d588fe3f63ec5408893187bba8d13d63
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786425"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571813"
 ---
 # <a name="isimpleconnectionpointdescribeevents"></a>ISimpleConnectionPoint::DescribeEvents
-Olaylar belirtilen bir aralıktaki DISPID ve her olay için adı döndürür.  
+Belirtilen olay aralığındaki her olay için DISPID ve adı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +41,31 @@ HRESULT DescribeEvents(
   
 #### <a name="parameters"></a>Parametreler  
  `iEvent`  
- [in] Alınacak ilk olay dizini.  
+ 'ndaki Alınacak ilk olayın dizini.  
   
  `cEvents`  
- [in] Alınacak olay sayısı.  
+ 'ndaki Alınacak olay sayısı.  
   
  `prgid`  
- [out] Olay DISPID değerleri dizisi.  
+ dışı Olay PID değerleri dizisi.  
   
  `prgbstr`  
- [out] Olay adları dizisi.  
+ dışı Olay adları dizisi.  
   
  `pcEventsFetched`  
- [out] Alınan olayları gerçek sayısı.  
+ dışı Getirilen gerçek olay sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`S_FALSE`|Daha fazla olay, kullanılabilir olan çok istendi. Kullanılabilir olaylar DISPID_NULL ve null BSTR ile temsil edilir.|  
-|`E_INVALIDARG`|Hiçbir öğe getirilmeden.|  
+|`S_FALSE`|Kullanılabilir olandan daha fazla olay istendi. Kullanılamayan olaylar DISPID_NULL ve null BSTR ile temsil edilir.|  
+|`E_INVALIDARG`|Hiçbir öğe getirilemedi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, olayları belirtilen bir aralıktaki her olay için adı ve DISPID döndürür.  
+ Bu yöntem, belirtilen olay aralığındaki her bir olay için DISPID ve adı döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [ISimpleConnectionPoint Arabirimi](../../winscript/reference/isimpleconnectionpoint-interface.md)

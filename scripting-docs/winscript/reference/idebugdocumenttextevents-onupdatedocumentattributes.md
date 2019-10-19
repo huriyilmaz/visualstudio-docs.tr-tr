@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents::onUpdateDocumentAttributes | Microsoft Docs
+title: 'Idebugdocumenttextevents:: Onupdatebelgetattributes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ef8791a68086c02b7e1cc8d0a603deba63943af4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c256d2cc6d826a72eb369cda0ad1e5f108e909bc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946683"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576041"
 ---
 # <a name="idebugdocumenttexteventsonupdatedocumentattributes"></a>IDebugDocumentTextEvents::onUpdateDocumentAttributes
-Belgenin özniteliklerini değiştiğini gösterir.  
+Belge özniteliklerinin değiştiğini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT onUpdateDocumentAttributes(
   
 #### <a name="parameters"></a>Parametreler  
  `textdocattr`  
- [in] Yeni belge öznitelikler.  
+ 'ndaki Yeni belge öznitelikleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, belge öznitelikleri değiştirildi gösterir.  
+ Bu yöntem, belge özniteliklerinin değiştiğini gösterir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugdocumenttextevents arabirimi](../../winscript/reference/idebugdocumenttextevents-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugdocumenttextevents arabirimi](../../winscript/reference/idebugdocumenttextevents-interface.md)    
  [TEXT_DOC_ATTR Sabitleri](../../winscript/reference/text-doc-attr-constants.md)

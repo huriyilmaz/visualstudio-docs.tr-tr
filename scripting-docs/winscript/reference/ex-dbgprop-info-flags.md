@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 086a2b7544a95a302219ddc62c15c5b31dd1d9b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0094d49a7e528d312dc8206b02599651f192c6fb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955243"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575847"
 ---
-# <a name="exdbgpropinfoflags"></a>EX_DBGPROP_INFO_FLAGS
-Belirtmek için kullanılan `ExtendedDebugPropertyInfo` alanları.  
+# <a name="ex_dbgprop_info_flags"></a>EX_DBGPROP_INFO_FLAGS
+@No__t_0 alanlarını belirtmek için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,20 +41,20 @@ enum {
   
 ## <a name="members"></a>Üyeler  
  EX_DBGPROP_INFO_ID  
- Bir özellik için tanımlayıcı başlatır.  
+ Özelliği için tanımlayıcıyı başlatır.  
   
  EX_DBGPROP_INFO_NTYPE  
- Özelliğin türü başlatır.  
+ Özelliğin türünü başlatır.  
   
  EX_DBGPROP_INFO_NVALUE  
  Özelliğin değerini başlatır.  
   
  EX_DBGPROP_INFO_LOCKBYTES  
- Başlatır `plb` alan.  
+ @No__t_0 alanını başlatır.  
   
  EX_DBGPROP_INFO_DEBUGEXTPROP  
- Başlatır `pDebugExtProp` içeren alan bir `IDebugExtendedProperty` arabirimi.  
+ @No__t_1 arabirimi içeren `pDebugExtProp` alanını başlatır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Extendeddebugpropertyınfo yapısı](../../winscript/reference/extendeddebugpropertyinfo-structure.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Extendeddebugpropertyınfo yapısı](../../winscript/reference/extendeddebugpropertyinfo-structure.md)    
  [IDebugExtendedProperty Arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)

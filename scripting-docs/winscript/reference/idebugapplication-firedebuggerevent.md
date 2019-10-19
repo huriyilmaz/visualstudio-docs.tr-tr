@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::FireDebuggerEvent | Microsoft Docs
+title: 'IDebugApplication:: FireDebuggerEvent | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ad865f05cc70f462d65d6fbead4143b82a9fa489
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00d895ed484e37f0ba38636a409876156ed97287
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990910"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575005"
 ---
 # <a name="idebugapplicationfiredebuggerevent"></a>IDebugApplication::FireDebuggerEvent
-Hata Ayıklayıcı'nın için genel bir olay harekete `IApplicationDebugger` arabirimi.  
+Hata ayıklayıcının `IApplicationDebugger` arabirimine genel bir olay harekete geçirilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,26 +38,26 @@ HRESULT FireDebuggerEvent(
   
 #### <a name="parameters"></a>Parametreler  
  `riid`  
- [in] Nesne için bir GUID.  
+ 'ndaki Nesne için bir GUID.  
   
  `punk`  
- [in] Hata ayıklayıcıyı geçirmek için bir olay nesne.  
+ 'ndaki Hata ayıklayıcıya geçirilecek bir olay nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_NOTIMPL`|Yöntem henüz uygulanmadı.|  
+|`E_NOTIMPL`|Yöntem şu anda uygulanmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- GUID semantiği ve `IUnknown` tamamen uygulama/hata ayıklayıcı tanımlı olan.  
+ GUID ve `IUnknown` semantiği, tamamen uygulama/hata ayıklayıcı tanımlı bir uygulamadır.  
   
- Bu yöntem, hata ayıklayıcı modelinin özel uzantıları sağlar; şu anda uygulanmamaktadır.  
+ Bu yöntem, hata ayıklayıcı modelinin özel uzantılarına izin verir; Şu anda uygulanmadı.  
   
- Bu yöntem neden `IApplicationDebugger::onDebuggerEvent` çağrılabilir.  
+ Bu yöntem `IApplicationDebugger::onDebuggerEvent` çağırmasına neden olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
  [IApplicationDebugger::onDebuggerEvent](../../winscript/reference/iapplicationdebugger-ondebuggerevent.md)

@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManagerCookie::AddApplication | Microsoft Docs
+title: 'Imachinedebugmanagercookie:: Addadpplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c71983dd5f1273679351bc45c1db2df62757d153
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da436308c71a66d3070d42128d8da03ae88d2935
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977662"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573909"
 ---
 # <a name="imachinedebugmanagercookieaddapplication"></a>IMachineDebugManagerCookie::AddApplication
-Çalışan bir uygulama ekler uygulama listesi.  
+Çalışan uygulama listesine bir uygulama ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT AddApplication(
   
 #### <a name="parameters"></a>Parametreler  
  `pda`  
- [in] Çalışan uygulamayı uygulama listesi.  
+ 'ndaki Uygulama, çalışan uygulama listesine.  
   
  `dwDebugAppCookie`  
- [in] Hata ayıklama uygulamayı tanımlayan bir çerez.  
+ 'ndaki Hata ayıklama uygulamasını tanımlayan bir tanımlama bilgisi.  
   
  `pdwAppCookie`  
- [out] Uygulamayı hata ayıklama Makine Yöneticisi'nden kaldırmak için kullanılan tanımlama bilgisi.  
+ dışı Machine Debug Manager 'dan uygulamayı kaldırmak için kullanılan tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem işlem hata ayıklama Yöneticisi tarafından çağrılır her `IProcessDebugManager::AddApplication` çağrılır.  
+ Bu yöntem, `IProcessDebugManager::AddApplication` her çağrıldığında işlem hata ayıklama Yöneticisi tarafından çağırılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Imachinedebugmanagercookie arabirimi](../../winscript/reference/imachinedebugmanagercookie-interface.md)   
- [IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Imachinedebugmanagercookie arabirimi](../../winscript/reference/imachinedebugmanagercookie-interface.md)    
+ [Imachinedebugmanagercookie:: RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)    
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

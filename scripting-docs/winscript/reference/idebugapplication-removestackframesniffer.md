@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::RemoveStackFrameSniffer | Microsoft Docs
+title: 'IDebugApplication:: RemoveStackFrameSniffer | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1462ff1382f3ccb844ccc98c6e6eec676a86c669
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 605daf51214ba5af9d6010b28be9569453ca7962
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990780"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571118"
 ---
 # <a name="idebugapplicationremovestackframesniffer"></a>IDebugApplication::RemoveStackFrameSniffer
-Bir yığın çerçevesi Numaralandırıcı sağlayıcısı bu uygulamadan kaldırır.  
+Bu uygulamadan bir yığın çerçevesi Numaralandırıcı sağlayıcısını kaldırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT RemoveStackFrameSniffer(
   
 #### <a name="parameters"></a>Parametreler  
  `dwCookie`  
- [in] Tarafından döndürülen tanımlama bilgisi `AddStackFrameSniffer` yığın çerçeve Numaralandırıcı sağlayıcısı eklendiğinde yöntemi.  
+ 'ndaki Yığın çerçevesi Numaralandırıcı sağlayıcısı eklendiğinde `AddStackFrameSniffer` yöntemi tarafından döndürülen tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `RemoveStackFrameSniffer` Yöntemi, bir yığın çerçevesi Numaralandırıcı sağlayıcısı bu uygulamadan kaldırır.  
+ @No__t_0 yöntemi bu uygulamadan bir yığın çerçeve Numaralandırıcı sağlayıcısını kaldırır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IDebugApplication::AddStackFrameSniffer](../../winscript/reference/idebugapplication-addstackframesniffer.md)   
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication:: AddStackFrameSniffer](../../winscript/reference/idebugapplication-addstackframesniffer.md)    
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
  [IDebugStackFrameSniffer Arabirimi](../../winscript/reference/idebugstackframesniffer-interface.md)

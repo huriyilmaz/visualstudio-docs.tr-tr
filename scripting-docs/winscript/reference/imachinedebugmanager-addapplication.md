@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManager::AddApplication | Microsoft Docs
+title: 'Imachinedebugmanager:: Addadpplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 96c1b865c722a3cceab331b81b1204ee682b911f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 54ff617ac96c0eb3498b796d4f7fe49f95e1cc96
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977854"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573963"
 ---
 # <a name="imachinedebugmanageraddapplication"></a>IMachineDebugManager::AddApplication
-Çalışan bir uygulama ekler uygulama listesi.  
+Çalışan uygulama listesine bir uygulama ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT AddApplication(
   
 #### <a name="parameters"></a>Parametreler  
  `pda`  
- [in] Çalışan uygulamayı uygulama listesi.  
+ 'ndaki Uygulama, çalışan uygulama listesine.  
   
  `pdwAppCookie`  
- [out] Uygulamayı hata ayıklama Makine Yöneticisi'nden kaldırmak için kullanılan tanımlama bilgisi.  
+ dışı Machine Debug Manager 'dan uygulamayı kaldırmak için kullanılan tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem işlem hata ayıklama Yöneticisi tarafından çağrılır her `IProcessDebugManager::AddApplication` çağrılır.  
+ Bu yöntem, `IProcessDebugManager::AddApplication` her çağrıldığında işlem hata ayıklama Yöneticisi tarafından çağırılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Imachinedebugmanager arabirimi](../../winscript/reference/imachinedebugmanager-interface.md)   
- [IMachineDebugManager::RemoveApplication](../../winscript/reference/imachinedebugmanager-removeapplication.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Imachinedebugmanager arabirimi](../../winscript/reference/imachinedebugmanager-interface.md)    
+ [Imachinedebugmanager:: RemoveApplication](../../winscript/reference/imachinedebugmanager-removeapplication.md)    
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

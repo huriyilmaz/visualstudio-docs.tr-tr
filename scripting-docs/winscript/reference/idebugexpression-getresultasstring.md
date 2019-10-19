@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression::GetResultAsString | Microsoft Docs
+title: 'Idebugexpression:: Getresultasstrıng | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 84255e364630245564a0cbab5d38c6dff38df0a8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56b8f637744227763f55b7c024745d7ae4448b40
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978478"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573522"
 ---
 # <a name="idebugexpressiongetresultasstring"></a>IDebugExpression::GetResultAsString
-Dize ve işlemin dönüş değeri olarak ifade değerlendirmesinin sonucu döndürür.  
+İfade değerlendirmesinin sonucunu bir dize ve işlemin dönüş değeri olarak döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,23 +38,23 @@ HRESULT GetResultAsString(
   
 #### <a name="parameters"></a>Parametreler  
  `phrResult`  
- [out] İşlemin dönüş değeri.  
+ dışı İşlemin dönüş değeri.  
   
  `pbstrResult`  
- [out] İfade değerlendirmesinin sonucu.  
+ dışı İfade değerlendirmesinin sonucu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_PENDING`|İşlemi hala geçerli olduğunu bekleniyor.|  
+|`E_PENDING`|İşlem hala beklemede.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem bir dize ve işlem olarak ifade değerlendirmesinin sonucu döndürür `HRESULT`.  
+ Bu yöntem, ifade değerlendirmesinin sonucunu bir dize ve işlemin `HRESULT` döndürür.  
   
- Bu yöntem döndürür `S_OK` ve `phrResult` döndürür `E_ABORT` varsa `Abort` işlemi durdurur.  
+ Bu yöntem `S_OK` döndürür ve `Abort` işlemi iptal ettiğinde `E_ABORT` `phrResult` döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugExpression Arabirimi](../../winscript/reference/idebugexpression-interface.md)

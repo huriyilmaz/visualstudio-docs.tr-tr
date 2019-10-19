@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::StartDebugSession | Microsoft Docs
+title: 'IDebugApplication:: StartDebugSession | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a42fe61d67eedbe6f69350c7b5ec17726f43486e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a7fd27ec86485d39ee9f13997c1a2db7175afcde
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990688"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570989"
 ---
 # <a name="idebugapplicationstartdebugsession"></a>IDebugApplication::StartDebugSession
-Varsayılan hata ayıklayıcı tümleşik geliştirme ortamı (IDE) başlar ve değil bir zaten bağlıysa, bu uygulama için bir hata ayıklama oturumu ekler.  
+Varsayılan hata ayıklayıcı tümleşik geliştirme ortamı 'nı (IDE) başlatır ve henüz ekli değilse bu uygulamaya bir hata ayıklama oturumu ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,17 +34,17 @@ HRESULT StartDebugSession();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, just-ın-time hata ayıklama uygulamak için kullanılır.  
+ Bu yöntem, tam zamanında hata ayıklamayı uygulamak için kullanılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplication Arabirimi](../../winscript/reference/idebugapplication-interface.md)

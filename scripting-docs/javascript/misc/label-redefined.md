@@ -14,22 +14,22 @@ ms.assetid: 7fba49c9-9c95-4f46-b778-9c6ab33ab944
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a5c6f44124ff49982d3821b1441eacf8dec7a666
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f8a22768367963f283f32a5d898cb3db3d1c7f9e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007004"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573763"
 ---
 # <a name="label-redefined"></a>Etiket yeniden tanımlandı
-Yeni bir etiket oluşturuldu, ancak varolan bir etiketin adını verdiğiniz. Kod bloğu işaretlemek için etiketleri kullanılabilir, ancak bir belirtilen kapsamında benzersiz olmaları gerekir.  
+Yeni bir etiket oluşturdunuz, ancak var olan bir etiketin adı verdi. Etiketler kod bloklarını işaretlemek için kullanılabilir, ancak belirtilen kapsam içinde benzersiz olmalıdır.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Programlarınızda kullandığınız tüm etiketleri, ilgili kapsam içinde benzersiz olduğundan emin olun.  
+- Programlarınızda kullandığınız tüm etiketlerin kendi kapsamları dahilinde benzersiz olduğundan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Etiketli deyim](../../javascript/reference/labeled-statement-javascript.md)   
- [switch deyimi](../../javascript/reference/switch-statement-javascript.md)   
- [break deyimi](../../javascript/reference/break-statement-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Etiketli ifade](../../javascript/reference/labeled-statement-javascript.md)    
+ [Switch deyimleri](../../javascript/reference/switch-statement-javascript.md)    
+ [Break ekstresi](../../javascript/reference/break-statement-javascript.md)    
  [continue Deyimi](../../javascript/reference/continue-statement-javascript.md)

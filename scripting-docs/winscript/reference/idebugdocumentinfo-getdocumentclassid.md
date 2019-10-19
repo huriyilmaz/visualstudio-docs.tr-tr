@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentInfo::GetDocumentClassId | Microsoft Docs
+title: 'Idebugdocumentınfo:: GetDocumentClassId | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9e86c42954fafd4135956845f9465629cde9990
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 996e6d751807bba1e1a74cbb7e579db25193c32b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971088"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569088"
 ---
 # <a name="idebugdocumentinfogetdocumentclassid"></a>IDebugDocumentInfo::GetDocumentClassId
-Döndürür bir `CLSID` belge türü tanımlayan.  
+Belge türünü tanımlayan `CLSID` döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT GetDocumentClassId(
   
 #### <a name="parameters"></a>Parametreler  
  `pclsidDocument`  
- [out] A `CLSID` belge türü tanımlayan.  
+ dışı Belge türünü tanımlayan bir `CLSID`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu belge için konak özel görüntüleyiciler hata ayıklayıcıya IDE sağlar.  
+ Bu yöntem, hata ayıklayıcı IDE 'nin bu belge için özel görüntüleyiciler barındıralmasına izin verir.  
   
- Belge görüntülenebilir veri, dönüş değeri yoksa `pclsidDocument` olduğu `CLSID_NULL`.  
+ Belge, görüntülenebilecek verileri içermiyorsa, `pclsidDocument` dönüş değeri `CLSID_NULL`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentInfo Arabirimi](../../winscript/reference/idebugdocumentinfo-interface.md)

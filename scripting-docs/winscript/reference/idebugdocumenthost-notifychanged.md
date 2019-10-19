@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHost::NotifyChanged | Microsoft Docs
+title: 'Idebugbelgethost:: NotifyChanged | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6e65383bcfe875f0e38fffc870d5176d86433d8f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a4fc0c744887eb3592c4d94c520f33da86812bfc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939189"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569178"
 ---
 # <a name="idebugdocumenthostnotifychanged"></a>IDebugDocumentHost::NotifyChanged
-Konak, belgenin kaynak dosya kaydedildi ve içeriğini yenileneceğini bildirir.  
+Ana bilgisayara belgenin kaynak dosyasının kaydedildiğini ve içeriğinin yenilenmesi gerektiğini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,17 +34,17 @@ HRESULT NotifyChanged();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, belgenin kaynak dosya kaydedildi ve içeriğini yenilenmesi gereken ana bildirir.  
+ Bu yöntem, ana bilgisayara belgenin kaynak dosyasının kaydedildiğini ve içeriğinin yenilenmesi gerektiğini bildirir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentHost Arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)

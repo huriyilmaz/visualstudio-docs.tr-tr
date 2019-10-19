@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::readmemory yöntemi | Microsoft Docs
+title: 'IJsDebugDataTarget:: ReadMemory yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 705fff3bf2d4be78897c18c5a4c61bd74a8c2230
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 84da36433cf3546b34d3e044bb113916c9798117
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582369"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572424"
 ---
 # <a name="ijsdebugdatatargetreadmemory-method"></a>IJsDebugDataTarget::ReadMemory Yöntemi
 Hedef işlemin belleğini okur.  
@@ -39,27 +39,27 @@ HRESULT ReadMemory(
   
 #### <a name="parameters"></a>Parametreler  
  `address`  
- [in] Hedef işlemin belleğinin okunacağı temel adres.  
+ 'ndaki Hedef işlemin belleğinin okunacağı temel adres.  
   
  `flags`  
- [in] ReadMemory davranışını denetleyen bayraklar.  
+ 'ndaki ReadMemory davranışını denetleyen bayraklar.  
   
  `pBuffer`  
- [out] Hedef işlemin adres alanından içerikleri alan arabellek. Hata olduğunda, bu arabelleğin içeriği belirtilmez.  
+ dışı Hedef işlemin adres alanından içeriği alan bir arabellek. Hatada Bu arabelleğin içeriği belirtilmemiş olur.  
   
  `size`  
- [in] İşlemden okunacak bayt sayısı.  
+ 'ndaki İşlemden okunacak bayt sayısı.  
   
  `pBytesRead`  
- [out] Hedef işlemden okunan bayt sayısını gösterir. Başarı JsDebugAllowPartialRead açık ise, bu değer her zaman tam olarak girdi boyutuna eşit olur. JsDebugAllowPartialRead belirtilirse, başarı durumunda bu değer sıfırdan büyük olacaktır.  
+ dışı Hedef işlemden okunan bayt sayısını gösterir. JsDebugAllowPartialRead açık ise, başarı durumunda bu değer her zaman giriş boyutuna eşit olur. JsDebugAllowPartialRead belirtilirse, başarı durumunda bu değer sıfırdan büyük olur.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- Başarılıysa S_OK döndürür başarı ve hata kodları herhangi bir hata için kullanılır. Adres geçerli değilse, e_jsdebug_ınvalıd_memory_address döndürür. Daha fazla bilgi için bkz. JsDebugAllowPartialRead.  
+ Başarılı durumunda S_OK döndürür ve hata kodları herhangi bir hata için kullanılır. Adres geçerli değilse, E_JsDEBUG_INVALID_MEMORY_ADDRESS döndürür. Daha fazla bilgi için bkz. JsDebugAllowPartialRead.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugDataTarget Arabirimi](../../winscript/reference/ijsdebugdatatarget-interface.md)

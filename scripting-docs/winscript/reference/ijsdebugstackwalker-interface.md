@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugstackwalker arabirimi | Microsoft Docs
+title: IJsDebugStackWalker arabirimi | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d06af2c509339d9499f66e1f267c54c69951e225
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b06b8c1f9282c42599c798030440c30450ef6dd
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977818"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574011"
 ---
 # <a name="ijsdebugstackwalker-interface"></a>IJsDebugStackWalker Arabirimi
-Belirtilen iş parçacığı için yığın değişkenini temsil eder.  
+Belirtilen iş parçacığı için bir yığın denetçisi temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,15 +31,15 @@ IJsDebugStackWalker : public IUnknown;
   
 ### <a name="public-methods"></a>Ortak Yöntemler  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
-|[IJsDebugStackWalker::GetNext Metodu](../../winscript/reference/ijsdebugstackwalker-getnext-method.md)|Sonraki çerçeveyi alır.|  
+|[IJsDebugStackWalker::GetNext Metodu](../../winscript/reference/ijsdebugstackwalker-getnext-method.md)|Sonraki kareyi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın yürüyüşçüleri, yalnızca hedef durdurulursa ve hedef işlem yeniden devam sonra geçersiz sırasında oluşturulabilir.  
+ Stack walseçiciler yalnızca hedef durdurulduğunda oluşturulabilir ve hedef işlem yeniden çalışmaya devam edildikten sonra geçersiz olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

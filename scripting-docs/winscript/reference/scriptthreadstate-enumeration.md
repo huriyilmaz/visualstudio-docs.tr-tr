@@ -1,5 +1,5 @@
 ---
-title: SCRIPTTHREADSTATE sabit listesi | Microsoft Docs
+title: SCRIPTTHREADSTATE numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 906a309b25a1fe606fb37f8cbab70040e5a4c46f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc4ef840310c27ccbadce2ed4f632514b555ef98
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840193"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575651"
 ---
 # <a name="scriptthreadstate-enumeration"></a>SCRIPTTHREADSTATE Numaralandırması
-Bir komut dosyası altyapısı bir iş parçacığı durumunu belirtir. Bu sabit listesi tarafından kullanılan [IActiveScript::GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md) yöntemi.  
+Bir komut dosyası altyapısındaki iş parçacığının durumunu belirtir. Bu numaralandırma, [IActiveScript:: GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md) yöntemi tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,8 +40,8 @@ typedef enum tagSCRIPTTHREADSTATE {
   
 |||  
 |-|-|  
-|SCRIPTTHREADSTATE_NOTINSCRIPT|Belirtilen iş parçacığı henüz hemen yürütülen işlem komut metni komut dosyalı bir olay hizmet veya çalışan bir betik makrosu.|  
-|SCRIPTTHREADSTATE_RUNNING|Belirtilen iş parçacığı etkin olarak komut dosyalı bir olay işleme hemen yürütülen betik metin Bakım veya çalışan bir betik makrosu.|  
+|SCRIPTTHREADSTATE_NOTINSCRIPT|Belirtilen iş parçacığı şu anda betikleştirilmiş bir olaya hizmet vermiyor, hemen yürütülen betik metnini işliyor veya bir betik makrosu çalıştırmıyor.|  
+|SCRIPTTHREADSTATE_RUNNING|Belirtilen iş parçacığı, komut dosyalı bir olaya etkin bir şekilde hizmet veriyor, hemen yürütülen betik metnini işliyor veya bir betik makrosu çalıştırmakta.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Sabitleri, Sabit Listeleri ve Hata Kodları](../../winscript/reference/active-script-constants-enumerations-and-error-codes.md)

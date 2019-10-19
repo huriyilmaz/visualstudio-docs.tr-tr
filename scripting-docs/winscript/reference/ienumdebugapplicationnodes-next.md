@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugApplicationNodes::Next | Microsoft Docs
+title: 'Ienumdebugapplicationnodes:: Next | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f826ce91ba99c5bb697a346b40a6b7f97b6f5914
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f4ad47c0119eb46c05368fa40ba3a5965fecce0b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951625"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573056"
 ---
 # <a name="ienumdebugapplicationnodesnext"></a>IEnumDebugApplicationNodes::Next
-Belirtilen bir numaralandırma sıralı segmentleri sayısını alır.  
+Sabit Listesi dizisinde belirtilen sayıda segment alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ HRESULT Next(
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Alınacak Segment sayısı.  
+ 'ndaki Alınacak segment sayısı.  
   
  `pprddp`  
- [out] Bir dizi döndürür `IDebugApplicationNode` alınmasını segmentleri temsil eden arabirim.  
+ dışı Alınmakta olan kesimleri temsil eden `IDebugApplicationNode` arabirimlerinden oluşan bir dizi döndürür.  
   
  `pceltFetched`  
- [out] Numaralandırıcı tarafından alınan parçaları gerçek sayısı.  
+ dışı Numaralandırıcı tarafından getirilen parçaların gerçek sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, belirtilen sayıda sabit listesi sırası segmentler alır.  
+ Bu yöntem, numaralandırma dizisinde belirtilen sayıda segment alır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IEnumDebugApplicationNodes Arabirimi](../../winscript/reference/ienumdebugapplicationnodes-interface.md)

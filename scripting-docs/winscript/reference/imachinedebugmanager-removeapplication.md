@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManager::RemoveApplication | Microsoft Docs
+title: 'Imachinedebugmanager:: RemoveApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0ee70097ab87406d6ad39b244bdec61a72aea836
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87951e55a7cfcfef1a366f79c380948c7651ed12
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977558"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573934"
 ---
 # <a name="imachinedebugmanagerremoveapplication"></a>IMachineDebugManager::RemoveApplication
-Bir uygulamanın çalışmasını kaldırır uygulama listesi.  
+Çalışan uygulama listesinden bir uygulamayı kaldırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT RemoveApplication(
   
 #### <a name="parameters"></a>Parametreler  
  `dwAppCookie`  
- [in] Uygulama uygulama listesine eklendiğinde sağlanan tanımlama bilgisi.  
+ 'ndaki Uygulama uygulama listesine eklendiğinde belirtilen tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem işlem hata ayıklama Yöneticisi tarafından çağrılır her `IProcessDebugManager::RemoveApplication` çağrılır.  
+ Bu yöntem, `IProcessDebugManager::RemoveApplication` her çağrıldığında işlem hata ayıklama Yöneticisi tarafından çağırılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IMachineDebugManager::AddApplication](../../winscript/reference/imachinedebugmanager-addapplication.md)   
- [Imachinedebugmanager arabirimi](../../winscript/reference/imachinedebugmanager-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Imachinedebugmanager:: Addadpplication](../../winscript/reference/imachinedebugmanager-addapplication.md)    
+ [Imachinedebugmanager arabirimi](../../winscript/reference/imachinedebugmanager-interface.md)    
  [IProcessDebugManager::RemoveApplication](../../winscript/reference/iprocessdebugmanager-removeapplication.md)

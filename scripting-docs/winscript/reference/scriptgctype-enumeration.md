@@ -1,5 +1,5 @@
 ---
-title: SCRIPTGCTYPE sabit listesi | Microsoft Docs
+title: SCRıPTGCTYPE numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0a5de3ea949203ad7a6dca0ea777fdbc9514ba6d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7fce16c756cf06c8cf01937114402832570a0cd3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840245"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574389"
 ---
 # <a name="scriptgctype-enumeration"></a>SCRIPTGCTYPE Numaralandırması
-Gerçekleştirilecek çöp toplama türü. Kullanılan [IActiveScriptGarbageCollector::CollectGarbage](../../winscript/reference/iactivescriptgarbagecollector-collectgarbage.md) yöntemi.  
+Gerçekleştirilecek çöp toplamanın türü. [Iactivescriptgarbagecollector:: Collectçöp](../../winscript/reference/iactivescriptgarbagecollector-collectgarbage.md) yönteminde kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,8 +31,8 @@ typedef enum tagSCRIPTGCTYPE {    SCRIPTGCTYPE_NORMAL           = 0,    SCRIPTGC
   
 |||  
 |-|-|  
-|SCRIPTGCTYPE_NORMAL|Normal çöp toplama işlemi. Tamsayı değeri 0'dır.|  
-|SCRIPTGCTYPE_EXHAUSTIVE|Ayrıntılı atık toplama işlemi. Tamsayı değeri 1'dir.|  
+|SCRIPTGCTYPE_NORMAL|Normal çöp toplama işlemi yapın. Tamsayı değeri 0 ' dır.|  
+|SCRIPTGCTYPE_EXHAUSTIVE|Ayrıntılı atık toplama işlemi yapın. Tamsayı değeri 1 ' dir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Sabitleri, Sabit Listeleri ve Hata Kodları](../../winscript/reference/active-script-constants-enumerations-and-error-codes.md)

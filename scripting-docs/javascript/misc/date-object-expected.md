@@ -14,15 +14,15 @@ ms.assetid: d6ab82e6-ca64-46b4-a06c-5c6b0aa057cb
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2767ffc16b637c6b1e7bdf51cb0815d71f58edac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 10af48c4804df3b5513df71578b948abe73ff8c2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946387"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572892"
 ---
 # <a name="date-object-expected"></a>Tarih nesnesi bekleniyor
-Çağırmaya çalıştığınız **Date.prototype.toString** veya **Date.prototype.valueOf** yöntemi dışında bir türde bir nesne üzerinde `Date`. Bu tür çağrısının nesne türünde olmalıdır `Date`. Örneğin:  
+@No__t_2 dışında bir türün nesnesi üzerinde **date. prototype. ToString** veya **date. prototype.** bir yöntemini çağırmaya çalıştınız. Bu tür çağrının nesnesinin `Date` türünde olması gerekir. Örneğin:  
   
 ```JavaScript  
 var o = new Object;  
@@ -32,9 +32,9 @@ o.f();
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yalnızca çağırma **Date.prototype.toString** veya **Date.prototype.valueOf** türünden nesnelerin yöntemleri `Date`.  
+- @No__t_2 türündeki nesnelerde yalnızca **date. prototype. ToString** veya **date. prototype.** bir yöntemi çağırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tarih nesnesi](../../javascript/reference/date-object-javascript.md)   
- [getDate metodu (tarih)](../../javascript/reference/getdate-method-date-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Tarih nesnesi](../../javascript/reference/date-object-javascript.md)    
+ [getdate metodu (Tarih)](../../javascript/reference/getdate-method-date-javascript.md)    
  [İç Nesneler](../../javascript/intrinsic-objects-javascript.md)

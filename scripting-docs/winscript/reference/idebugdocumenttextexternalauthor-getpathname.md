@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextExternalAuthor::GetPathName | Microsoft Docs
+title: 'Idebugdocumenttextexternalauthor:: GetPathName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5739e7cb0cb12661ee5683051fb7b687e62dfde4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e876b41ce1bde4defffd11267c6665f9d57da077
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978760"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575961"
 ---
 # <a name="idebugdocumenttextexternalauthorgetpathname"></a>IDebugDocumentTextExternalAuthor::GetPathName
-Belgenin tam yolu ve dosya adını döndürür.  
+Belgenin tam yolunu ve dosya adını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,23 +38,23 @@ HRESULT GetPathName(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstrLongName`  
- [out] Tam yol ve dosya adını içeren dize.  
+ dışı Tam yolu ve dosya adını içeren dize.  
   
  `pfIsOriginalFile`  
- [out] Yol ve dosya adı başvuruyorsa, gösteren Boole değeri için özgün belgeye.  
+ dışı Yolun ve dosya adının özgün belgeye başvurmasını belirten Boole değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_FAIL`|Kaynak dosya oluşturulduğunda veya belirler.|  
+|`E_FAIL`|Kaynak dosya oluşturulamıyor veya belirlenemiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, belgenin tam yolu ve dosya adını döndürür.  
+ Bu yöntem, belgenin tam yolunu ve dosya adını döndürür.  
   
- Varsa `pfIsOriginalFile` FALSE, yol ve dosya adında `pbstrLongName` yeni oluşturulan geçici dosyasına bakın.  
+ @No__t_0 FALSE ise, `pbstrLongName` yol ve dosya adı yeni oluşturulan geçici bir dosyaya başvurur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentTextExternalAuthor Arabirimi](../../winscript/reference/idebugdocumenttextexternalauthor-interface.md)

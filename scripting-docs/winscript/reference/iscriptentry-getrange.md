@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetRange | Microsoft Docs
+title: 'Icriptentry:: GetRange | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7baa284be4fa7f45f247df7f4b3d140869f254b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a6e1b1600c93aa05bbe9669fb57a23a8c9344a1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787743"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575429"
 ---
 # <a name="iscriptentrygetrange"></a>IScriptEntry::GetRange
-Başlangıç konumu ve bir giriş uzunluğunu döndürür.  
+Bir girdinin başlangıç konumunu ve uzunluğunu döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,18 +38,18 @@ HRESULT GetRange(
   
 #### <a name="parameters"></a>Parametreler  
  `pichMin`  
- [out] İçin `IScriptEntry` belirten bir betik bloğu nesneleri 0 döndürür.  
+ dışı Bir betik bloğunu belirten `IScriptEntry` nesneler için 0 döndürür.  
   
- İçin `IScriptEntry` bir işlev nesnesi belirtin nesneleri geçerli betik bloğu içinde işlev başlangıç konumunu döndürür.  
+ Bir işlev nesnesi belirten `IScriptEntry` nesneler için, geçerli betik bloğundaki işlevin başlangıç konumunu döndürür.  
   
- İçin `IScriptScriptlet` nesneleri, 0 döndürür.  
+ @No__t_0 nesneler için 0 döndürür.  
   
  `pcch`  
- [out] İçin `IScriptEntry` belirten bir betik bloğu nesneleri metnin uzunluğunu döndürür.  
+ dışı Bir betik bloğunu belirten `IScriptEntry` nesneler için, metnin uzunluğunu döndürür.  
   
- İçin `IScriptEntry` bir işlev nesnesi belirtin nesneleri işlev tanımı uzunluğunu döndürür.  
+ Bir işlev nesnesi belirten `IScriptEntry` nesneler için, işlev tanımının uzunluğunu döndürür.  
   
- İçin `IScriptScriptlet` nesneleri, giriş uzunluğunu döndürür.  
+ @No__t_0 nesneler için girdinin uzunluğunu döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -60,5 +60,5 @@ HRESULT GetRange(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptEntry Arabirimi](../../winscript/reference/iscriptentry-interface.md)

@@ -14,15 +14,15 @@ ms.assetid: ee8ffb3a-1451-4cb3-99bf-5e9cf8b77d79
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 226056f139e45f432d757aff8f8774b013742de3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aca09fe3b516fbb8f27def982bf34a22d33d4ada
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946608"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572364"
 ---
 # <a name="cannot-assign-to-a-function-result"></a>İşlev sonucuna atanamaz
-İşlev sonucuna bir değer atamak çalışıldı. Bir işlevin sonucu bir değişkene atanabilir, ancak bir değişken olarak kullanılamaz. İşlev için yeni bir değer atamak istiyorsanız, parantezler (işlev çağrısı işleci) atlayın. Aşağıdaki örnek bu hata oluşturulduğu bir durumu gösterir.  
+İşlev sonucuna bir değer atamaya çalıştınız. Bir işlevin sonucu bir değişkene atanabilir, ancak değişken olarak kullanılamaz. İşleve yeni bir değer atamak istiyorsanız ayraçları (işlev çağrısı işleci) atlayın. Aşağıdaki örnek, bu hatanın oluşturulduğu bir durumu gösterir.  
   
 ```js
 myFunction() = 42;  // Attempting to assign the value 42 to the result of the function call.  
@@ -30,19 +30,19 @@ myFunction() = 42;  // Attempting to assign the value 42 to the result of the fu
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Bir işlev çağrısı sonucunu değerini yapabilecekleriniz bir şey kullanmayın *atama*. İşlev çağrısı sonucunu atayabilirsiniz *bir değişkene* rağmen.  
+- Bir işlev çağrısı sonucunun değerini, *atayabileceği*bir şey olarak kullanmayın. İşlev çağrısının sonucunu *bir değişkenine* atayabilirsiniz, ancak.  
   
     ```JavaScript  
     myVar = myFunction(42);  
     ```  
   
-- Alternatif olarak, işlev kendisi (ve dönüş değeri) bir değişkene atayabilirsiniz.  
+- Alternatif olarak, işlevin kendisini (dönüş değerini değil) bir değişkene atayabilirsiniz.  
   
     ```JavaScript  
     myFunction = new Function("return 42;");  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlev nesnesi](../../javascript/reference/function-object-javascript.md)   
- [JavaScript kodu yazma](../../javascript/writing-javascript-code.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Işlev nesnesi](../../javascript/reference/function-object-javascript.md)    
+ [JavaScript kod   yazma](../../javascript/writing-javascript-code.md)  
  [İşlevler](../../javascript/functions-javascript.md)

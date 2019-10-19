@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl::StopProfiling | Microsoft Docs
+title: 'Iactivescriptprofilercontrol:: Stopprofilleme | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 750693db9aa809e6b3521f0312cebcf45d8d720d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da5900678093d57b3c995ac3bca8464ccd612fb2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993014"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571543"
 ---
 # <a name="iactivescriptprofilercontrolstopprofiling"></a>IActiveScriptProfilerControl::StopProfiling
-Komut dosyası altyapısına profil oluşturmayı durdurur. Bu yöntemin çağırdığı [IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md) profil oluşturucu nesnesindeki ve ardından serbest bırakır.  
+Komut dosyası altyapısında profil oluşturmayı durduruyor. Bu yöntem, profil oluşturucu nesnesinde [ıactivescriptprofilercallback:: kapatılmasını](../../winscript/reference/iactivescriptprofilercallback-shutdown.md) çağırır ve sonra bırakır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ HRESULT StopProfiling(
   
 #### <a name="parameters"></a>Parametreler  
  `hrShutdownReason`  
- [in] Bir parametre olarak geçirilecek HRESULT [IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md) profil oluşturucu nesnesini yöntemi.  
+ 'ndaki Profil Oluşturucu nesnesinin [ıactivescriptprofilercallback:: kapanıyor](../../winscript/reference/iactivescriptprofilercallback-shutdown.md) metoduna parametre olarak geçirilecek HRESULT.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  HRESULT döndürür. Olası değerler aşağıdaki gibidir:  
@@ -44,5 +44,5 @@ HRESULT StopProfiling(
 |`S_OK`|Yöntem başarılı oldu.|  
 |`ACTIVPROF_E_PROFILER_ABSENT`|Profil oluşturma etkin değil.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptProfilerControl Arabirimi](../../winscript/reference/iactivescriptprofilercontrol-interface.md)

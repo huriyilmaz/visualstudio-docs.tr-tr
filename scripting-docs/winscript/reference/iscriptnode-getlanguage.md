@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetLanguage | Microsoft Docs
+title: 'Icriptnode:: GetLanguage | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36b7076bf7f261e462802174c6f9014403606ac8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 26fd5db22346292585be3cea751eaa8be1c284a9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786965"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575688"
 ---
 # <a name="iscriptnodegetlanguage"></a>IScriptNode::GetLanguage
-Geçerli betik düğümü tarafından kullanılan kodlama dilini döndürür.  
+Geçerli betik düğümü tarafından kullanılan komut dosyası dilini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT GetLanguage(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstr`  
- [out] Visual Basic Scripting Edition (VBScript) komut dosyası düğümü kullanıyorsa, betik düğüm JScript ya da "VBScript" kullanıyorsa, "JScript" döndürür.  
+ dışı Betik düğümü JScript kullanıyorsa "JScript" veya betik düğümü Visual Basic Scripting Edition (VBScript) kullanıyorsa "VBScript" döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -48,5 +48,5 @@ HRESULT GetLanguage(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptNode Arabirimi](../../winscript/reference/iscriptnode-interface.md)

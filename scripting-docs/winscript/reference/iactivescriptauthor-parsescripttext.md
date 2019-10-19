@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::ParseScriptText | Microsoft Docs
+title: Iactivescriptauthor::P arseScriptText | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fe6870f3b19c5727fdbea0418b8373b990cb671a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 90d5ab0fa700ed29b5fb37b1c48617cedec871b9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955100"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576145"
 ---
 # <a name="iactivescriptauthorparsescripttext"></a>IActiveScriptAuthor::ParseScriptText
-Betik metin ayrıştırır, komut dosyası altyapısı yazma metin ekler ve oluşturur bir `IScriptEntry` betik bloğu için karşılık gelen nesne.  
+Betik metnini ayrıştırır, metni betik yazma altyapısına ekler ve betik bloğuna karşılık gelen bir `IScriptEntry` nesnesi oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +41,19 @@ HRESULT ParseScriptText(
   
 #### <a name="parameters"></a>Parametreler  
  `pszCode`  
- [in] Ayrıştırılacak komut metni.  
+ 'ndaki Ayrıştırılacak betik metni.  
   
  `pszItemName`  
- [in] Betik bloğu ile ilişkili öğe adı içeren arabellek adresi.  
+ 'ndaki Betik bloğuyla ilişkili öğe adını içeren arabellek adresi.  
   
  `pszDelimiter`  
- [in] Sonlandırma, betik bloğu sınırlayıcısı adresi. Zaman `pszCode` ayrıştırılır metin akışından ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) betik bloğunun sonu algılamak için kullanır. Betik bloğunun sonu tanımlamak için sınırlayıcı varsa bu parametre NULL olarak ayarlayın.  
+ 'ndaki Son betik blok sınırlayıcısı adresi. @No__t_0 metin akışından ayrıştırıldığında, ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) kullanır ve komut dosyası bloğunun sonunu algılar. Betik bloğunun sonunu tanımlamak için sınırlayıcı yoksa bu parametreyi NULL olarak ayarlayın.  
   
  `dwCookie`  
- [in] Yeni ile ilişkili uygulama tanımlı bir değer `IScriptEntry` nesne.  
+ 'ndaki Yeni `IScriptEntry` nesnesiyle ilişkili uygulama tanımlı bir değer.  
   
  `dwFlags`  
- [in] Kullanılmıyor.  
+ 'ndaki Kullanılmıyor.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -64,5 +64,5 @@ HRESULT ParseScriptText(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptAuthor Arabirimi](../../winscript/reference/iactivescriptauthor-interface.md)

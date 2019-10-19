@@ -1,5 +1,5 @@
 ---
-title: IDebugAsyncOperation::GetResult | Microsoft Docs
+title: 'Ihata ayıklama Gasyncoperation:: GetResult | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 49cf761c85fce3f8fc2f6705d114ab042e0c2ecd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 55c51649a5bc3094dd306166e013a892ce67e236
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822051"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573289"
 ---
 # <a name="idebugasyncoperationgetresult"></a>IDebugAsyncOperation::GetResult
-Zaman uyumlu hata ayıklama işlemi dönüş nesne parametresi ve dönüş değeri sağlar.  
+Zaman uyumlu hata ayıklama işleminden dönüş değeri ve dönüş nesnesi parametresi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,13 +38,13 @@ HRESULT GetResult(
   
 #### <a name="parameters"></a>Parametreler  
  `phrResult`  
- [out] İşlem tamamlandığında `phrResult` dönüş değeri `IDebugSyncOperation::Execute`.  
+ dışı İşlem tamamlandıysanız, `phrResult` `IDebugSyncOperation::Execute` dönüş değeridir.  
   
  `ppunkResult`  
- [out] İşlem tamamlandığında `ppunkResult` işlem tarafından döndürülen nesne parametresi.  
+ dışı İşlem tamamlandıysanız, `ppunkResult` işlem tarafından döndürülen nesne parametresidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -52,8 +52,8 @@ HRESULT GetResult(
 |`E_PENDING`|İşlem tamamlanmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlem, tamamlandı, bu yöntemi döndürür `HRESULT` parametresinden nesneyi `IDebugSyncOperation::Execute`.  
+ İşlem tamamlanırsa, bu yöntem `IDebugSyncOperation::Execute` `HRESULT` ve nesne parametresini döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Ihata ayıklama Gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)    
  [IDebugSyncOperation::Execute](../../winscript/reference/idebugsyncoperation-execute.md)

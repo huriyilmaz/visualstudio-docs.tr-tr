@@ -1,5 +1,5 @@
 ---
-title: SCRIPTSTATE sabit listesi | Microsoft Docs
+title: SCRIPTSTATE numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fe6a05c5e73d26a8daa9e46c317422d85d1c40be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 10dd6366e2d0783ec2e9d6bdadc001e9f999901e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840167"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575676"
 ---
 # <a name="scriptstate-enumeration"></a>SCRIPTSTATE Numaralandırması
-Bir komut dosyası altyapısı durumunu belirtir. Bu sabit listesi tarafından kullanılan [IActiveScript::GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md) , [IActiveScript::SetScriptState](../../winscript/reference/iactivescript-setscriptstate.md) , ve [IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md) yöntemleri.  
+Bir betik altyapısının durumunu belirtir. Bu numaralandırma, [IActiveScript:: GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md) , [IActiveScript:: Setscriptstate](../../winscript/reference/iactivescript-setscriptstate.md) ve [IActiveScriptSite:: OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md) yöntemleri tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,12 +44,12 @@ typedef enum tagSCRIPTSTATE {
   
 |||  
 |-|-|  
-|SCRIPTSTATE_UNINITIALIZED|Betik, yeni oluşturduğunuz ancak henüz kullanarak başlatılmamış bir `IPersist*` arabirimi ve [IActiveScript::SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md) .|  
-|SCRIPTSTATE_INITIALIZED|Betik başlatıldı, ancak değil (diğer nesnelere bağlanma veya olayları indirme) çalıştıran veya herhangi bir kod yürütme. Kod sorgulanabilen yürütme için çağırarak [IActiveScriptParse::ParseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md) yöntemi.|  
-|SCRIPTSTATE_STARTED|Betik kodu yürütebilir henüz tarafından eklenen nesneleri olaylarını indirme değil ancak [IActiveScript::AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md) yöntemi.|  
-|SCRIPTSTATE_CONNECTED|Betik yüklenir ve olayları indirme için bağlı.|  
-|SCRIPTSTATE_DISCONNECTED|Betik yüklenir ve bir çalışma zamanı yürütme durumu vardır, ancak geçici olarak olayları batmasını bağlantısı kesildi.|  
-|SCRIPTSTATE_CLOSED|Betik kapatıldı. Komut dosyası altyapısı artık çalışır ve çoğu yöntemleri için hataları döndürür.|  
+|SCRIPTSTATE_UNINITIALIZED|Betik yeni oluşturuldu, ancak henüz bir `IPersist*` Interface ve [IActiveScript:: SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md) kullanılarak başlatılmamış.|  
+|SCRIPTSTATE_INITIALIZED|Betik başlatılmış, ancak çalışmıyor (diğer nesnelere bağlanma veya olayları başlatma) veya herhangi bir kod yürütme. Kod, [IActiveScriptParse::P arseScriptText](../../winscript/reference/iactivescriptparse-parsescripttext.md) yöntemi çağırarak yürütme için sorgulanabilir.|  
+|SCRIPTSTATE_STARTED|Betik kodu yürütebilir, ancak [IActiveScript:: Addnamedidıtem](../../winscript/reference/iactivescript-addnameditem.md) yöntemi tarafından eklenen nesnelerin olaylarını henüz bir daha etkilemez.|  
+|SCRIPTSTATE_CONNECTED|Komut dosyası yüklendi ve olaylar için bağlandı.|  
+|SCRIPTSTATE_DISCONNECTED|Betik yüklendi ve çalışma zamanı yürütme durumuna sahip, ancak bu olaylar için geçici olarak bağlantısı kesildi.|  
+|SCRIPTSTATE_CLOSED|Betik kapatıldı. Betik altyapısı artık çalışmaz ve çoğu Yöntem için hataları döndürür.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Sabitleri, Sabit Listeleri ve Hata Kodları](../../winscript/reference/active-script-constants-enumerations-and-error-codes.md)

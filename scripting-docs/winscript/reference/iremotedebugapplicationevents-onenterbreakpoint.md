@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEvents::OnEnterBreakPoint | Microsoft Docs
+title: 'Iremotedebugapplicationevents:: OnEnterBreakPoint | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 123476100076811534343763f0e9675a90fdea16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad7b0dc3e4b6cd7e8779208121d7464e83e7bb3f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934654"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571991"
 ---
 # <a name="iremotedebugapplicationeventsonenterbreakpoint"></a>IRemoteDebugApplicationEvents::OnEnterBreakPoint
-Bir kesme noktası girmek için bir olayını işler.  
+Kesme noktası girmek için bir olay işler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT OnEnterBreakPoint(
   
 #### <a name="parameters"></a>Parametreler  
  `prdat`  
- [in] Kesme noktası girilen uygulama iş parçacığı.  
+ 'ndaki Kesme noktasına girilen uygulama iş parçacığı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir kesme noktası girmek için bir olayını işler.  
+ Bu yöntem, kesme noktası girmek için bir olayı işler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplicationEvents Arabirimi](../../winscript/reference/iremotedebugapplicationevents-interface.md)

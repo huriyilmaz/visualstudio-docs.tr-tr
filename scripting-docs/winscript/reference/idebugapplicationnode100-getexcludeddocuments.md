@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNode100::GetExcludedDocuments | Microsoft Docs
+title: 'IDebugApplicationNode100:: GetExcludedDocuments | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b8b1793fc1a3aacb27cc612bb5212dc33e7ab7dc
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: c135aa85ca65a44f6f970e83d7975bb441ff56f5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436037"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574752"
 ---
 # <a name="idebugapplicationnode100getexcludeddocuments"></a>IDebugApplicationNode100::GetExcludedDocuments
-Belirtilen filtre tarafından gizlenen metin belgeleri alır.  
+Belirtilen filtreyle gizlenen metin belgelerini alır.  
   
 > [!IMPORTANT]
-> [Idebugapplicationnode100 arabirimi](../../winscript/reference/idebugapplicationnode100-interface.md) PDM v10.0 tarafından uygulanan ve büyük. activdbg100.h içinde bulunur.  
+> [IDebugApplicationNode100 ARABIRIMI](../../winscript/reference/idebugapplicationnode100-interface.md) PDM v 10.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT GetExcludedDocuments(        [in] APPLICATION_NODE_EVENT_FILTER filter, 
  Filtre.  
   
  `pDocuments`  
- Belge kümesini.  
+ Belge kümesi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplicationNode100 Arabirimi](../../winscript/reference/idebugapplicationnode100-interface.md)

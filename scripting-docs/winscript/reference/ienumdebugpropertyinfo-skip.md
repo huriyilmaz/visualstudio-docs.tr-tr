@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPropertyInfo::Skip | Microsoft Docs
+title: 'Ienumdebugpropertyınfo:: Skip | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3e7544b8ea54fabc53e6c8476648e339c53da94d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ba634409fb051c37534c824efb20e33eda245e8a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963396"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574163"
 ---
 # <a name="ienumdebugpropertyinfoskip"></a>IEnumDebugPropertyInfo::Skip
-Belirtilen sayıda atlar `DebugPropertyInfo` yapıları, bir sabit listesi sırası.  
+Sabit Listesi dizisinde belirtilen sayıda `DebugPropertyInfo` yapısını atlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,11 +37,11 @@ HRESULT Skip(
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Sayısını `DebugPropertyInfo` yapılarını atlamak için sabit listesi sırası.  
+ 'ndaki Atlanacak numaralandırma dizisindeki `DebugPropertyInfo` yapılarının sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir döndürür `HRESULT`, genellikle `S_OK`. Döndürür `S_FALSE` ve geçerli öğe işaretçisi sabit listesinin sonuna ayarlar `celt` bir numaralandırıcı öğeleri sola sayısından büyüktür.  
+ Geçerli bir `HRESULT` döndürür, genellikle `S_OK`. @No__t_0 döndürür ve `celt`, Numaralandırıcının sonundaki öğe sayısından büyükse, geçerli öğe işaretçisini numaralandırmanın sonuna ayarlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ienumdebugpropertyınfo arabirimi](../../winscript/reference/ienumdebugpropertyinfo-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Ienumdebugpropertyınfo arabirimi](../../winscript/reference/ienumdebugpropertyinfo-interface.md)    
  [DebugPropertyInfo Yapısı](../../winscript/reference/debugpropertyinfo-structure.md)

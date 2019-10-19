@@ -1,5 +1,5 @@
 ---
-title: IVariantChangeType::ChangeType | Microsoft Docs
+title: 'Ivariantchangetype:: ChangeType | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 81ed0a8502e9b0cfc53725621d477d34ee5010ea
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 406d5d8486b3016f0105b7bd8bf231db0e1e9613
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945640"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571775"
 ---
 # <a name="ivariantchangetypechangetype"></a>IVariantChangeType::ChangeType
-Değişken bir değer alır ve belirtilen bir türü ile yeni bir değişken oluşturur.  
+Bir değişken değeri alır ve belirtilen türe sahip yeni bir değişken oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,26 +40,26 @@ HRESULT ChangeType(
   
 #### <a name="parameters"></a>Parametreler  
  `pvarDst`  
- [out içinde] Tarafından temsil edilen değeri içeren bir değişken `pvarSrc`, ancak tarafından belirtilen tür `vtNew`.  
+ [in, out] @No__t_0 tarafından temsil edilen değeri içeren, ancak `vtNew` tarafından belirtilen türde bir değişken.  
   
  `pvarSrc`  
- [in] Yeni bir türü değiştirmek için değişken bir değer.  
+ 'ndaki Yeni bir türe değiştirilecek bir Varyant değeri.  
   
  `lcid`  
- [in] Bağımsız değişkenler için ya da dize dönüştürme işleminde kullanılacak yerel ayar bağlamı.  
+ 'ndaki Bağımsız değişkenler dizeden veya dizeden dönüştürülürken kullanılacak yerel ayar bağlamı.  
   
  `vtNew`  
- [in] Türünü belirtir `pvarDst` olacak.  
+ 'ndaki Yapılacak `pvarDst` türünü belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pvarDst` Ve `pvarSrc` bağımsız değişkenleri olabilir eşit, bu durumda, özgün değerin üzerine yazılır. Bu yöntem geçirir `pvarDst` için `VariantClear` işlevi, dolayısıyla `pvarDst` için geçerli bir değer başlatılması.  
+ @No__t_0 ve `pvarSrc` bağımsız değişkenleri eşit olabilir, bu durumda orijinal değerin üzerine yazılır. Bu yöntem, `VariantClear` işlevine `pvarDst` geçirir ve sonuç olarak `pvarDst` geçerli bir değere başlatılmalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IVariantChangeType Arabirimi](../../winscript/reference/ivariantchangetype-interface.md)

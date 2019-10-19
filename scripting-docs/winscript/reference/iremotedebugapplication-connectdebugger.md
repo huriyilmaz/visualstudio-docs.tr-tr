@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::ConnectDebugger | Microsoft Docs
+title: 'IRemoteDebugApplication:: ConnectDebugger | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 189f0bcbcb5b45e1da477fa18b131aecc913a4c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7ed0ddeffd55475e1be4c9fab1e567d61a4b6654
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944301"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572327"
 ---
 # <a name="iremotedebugapplicationconnectdebugger"></a>IRemoteDebugApplication::ConnectDebugger
-Bir hata ayıklayıcı bu uygulamaya bağlanır.  
+Bir hata ayıklayıcıyı bu uygulamaya bağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +37,19 @@ HRESULT ConnectDebugger(
   
 #### <a name="parameters"></a>Parametreler  
  `pad`  
- [in] Bu uygulamaya iliştirmek için hata ayıklayıcı.  
+ 'ndaki Bu uygulamaya iliştirilecek hata ayıklayıcı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_FAIL`|Bu uygulama için bir hata ayıklayıcı zaten bağlı.|  
+|`E_FAIL`|Bir hata ayıklayıcı zaten bu uygulamaya bağlı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir uygulamanın yalnızca bir hata ayıklayıcı bir anda bağlı olabilir. Bir hata ayıklayıcı zaten bağlıysa, bu yöntem başarısız olur.  
+ Bir uygulama aynı anda yalnızca bir hata ayıklayıcı bağlı olabilir. Bir hata ayıklayıcı zaten bağlıysa, bu yöntem başarısız olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IRemoteDebugApplication::GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IRemoteDebugApplication:: GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)    
  [IRemoteDebugApplication Arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)

@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 99208626b41f2463178bccecf73c21a1d15fa765
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 793c83b467460f0744abffe3f161f7510f56257a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955269"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575064"
 ---
 # <a name="debugpropertyinfo-structure"></a>DebugPropertyInfo Yapısı
-Bir nesnenin adı, türü ve değeri içeren bir hiyerarşik yapısını açıklar. Yerel değişkenler, Parametreler, izleme değişkenleri ve ifadeleri hata ayıklama özelliklerini tanımlamak için kullanılır ve kaydeder.  
+Ad, tür ve değer içeren hiyerarşik bir yapıdaki nesneyi tanımlar. Yerel değişkenlerin hata ayıklama özelliklerini, parametreleri, izleme değişkenlerini ve ifadeleri ve kayıtları anlatmak için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,27 +43,27 @@ typedef struct DebugPropertyInfo{
   
 ## <a name="members"></a>Üyeler  
  dwValidFields  
- Hangi alanların başlatılır belirtmek için kullanılan bir listelenmiş veri türü.  
+ Hangi alanların başlatıldığını belirtmek için kullanılan bir numaralandırılmış veri türü.  
   
  bstrName  
- Bir bağlam içinde özellik adı.  
+ Bağlam içindeki Özellik adı.  
   
  bstrType  
- Biçimlendirilmiş dize olarak özellik türü.  
+ Biçimli dize olarak özellik türü.  
   
  bstrValue  
- Biçimlendirilmiş dize olarak özellik değeri.  
+ Biçimli dize olarak özellik değeri.  
   
  bstrFullName  
  Özelliğin tam adı.  
   
  dwAttrib  
- Hata ayıklama özellik öznitelikleri için bayrakları belirtir bir sabit listesi.  
+ Hata ayıklama özelliği özniteliklerinin bayraklarını belirten bir sabit listesi.  
   
  pDebugProp  
- `IDebugProperty` Bu bilgileri tarafından açıklanan `DebugPropertyInfo` yapısı.  
+ Bu `DebugPropertyInfo` yapısındaki bilgiler tarafından açıklanan `IDebugProperty`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)    
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

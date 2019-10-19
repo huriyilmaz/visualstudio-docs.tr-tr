@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::EnumStackFrames | Microsoft Docs
+title: 'Iremotedebugapplicationthread:: Enumstackframe | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 96ca35779ea9f113fc96e485f028f1e74058990a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7dc4c6798d006679ac93250175e9ca4d69683f0c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788454"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575287"
 ---
 # <a name="iremotedebugapplicationthreadenumstackframes"></a>IRemoteDebugApplicationThread::EnumStackFrames
-Bu iş parçacığıyla ilişkilendirilmiş yığın çerçevesi için bir numaralandırıcı döndürür.  
+Bu iş parçacığıyla ilişkili yığın çerçeveleri için bir Numaralandırıcı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT EnumStackFrames(
   
 #### <a name="parameters"></a>Parametreler  
  `ppedsf`  
- [out] Bu iş parçacığıyla ilişkilendirilmiş yığın çerçevesi için bir numaralandırıcı.  
+ dışı Bu iş parçacığıyla ilişkili yığın çerçeveleri için Numaralandırıcı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem içinde bir kesme noktası çağrılmalıdır. Yığın çerçeve Numaralandırıcı, en yakın zamanda gönderilen çerçeve ile başlayan yığınının üstten başlayarak çerçeveleri döndürmelidir.  
+ Bu yöntem, bir kesme noktası içinden çağrılmalıdır. Yığın çerçeve numaralandırıcısı, en son gönderilen çerçeveden başlayarak yığının en üstünde başlayan çerçeveleri döndürmelidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplicationThread Arabirimi](../../winscript/reference/iremotedebugapplicationthread-interface.md)

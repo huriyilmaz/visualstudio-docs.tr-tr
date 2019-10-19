@@ -14,23 +14,23 @@ ms.assetid: 5083809e-9828-4aea-b9b0-80f46d6f3812
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c3c5f38ba41e2cadfd0a8234413c63cc96b6744a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a140c7587d4ca00c66590a471cfb32827cf5f780
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435640"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575887"
 ---
 # <a name="unterminated-string-constant-javascript"></a>Sonlandırılmamış dize sabiti (JavaScript)
-Dize sabit kapanış tırnak işareti ile bitmez. Dize sabitleri bir çift tırnak işaretleri alınmalıdır.  
+Bir kapanış tırnak işareti ile dize sabitinizi sonlandırmadınız. Dize sabitleri çift tırnak işareti içine alınmalıdır.  
   
 > [!NOTE]
-> Tek veya çift tırnak işaretleri eşleşen çiftlerini kullanabilirsiniz. Çift tırnak işareti içinde tek tırnak işareti içine alınmış dizeler içinde bulunabilir ve tek tırnak işaretleri çift tırnak işaretleri içine alınmış dizeler içinde bulunabilir.  
+> Eşleşen çiftleri tek veya çift tırnak işareti içinde kullanabilirsiniz. Çift tırnak işaretleri, tek tırnak işareti içine alınmış dizeler içinde bulunabilir ve tek tırnak işaretleri çift tırnak işaretleriyle çevrelenmiş dizeler içinde bulunabilir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Kapanış tırnak işareti, dizenin sonuna ekleyin.  
+- Dizenin sonuna kapanış tırnak işaretini ekleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dize nesnesi](../../javascript/reference/string-object-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Dize nesnesi](../../javascript/reference/string-object-javascript.md)    
  [toString Metodu (Nesne)](../../javascript/reference/tostring-method-object-javascript.md)

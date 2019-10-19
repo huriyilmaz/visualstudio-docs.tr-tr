@@ -14,24 +14,24 @@ ms.assetid: 35f7a9b4-74fa-4ddb-b9f2-1a92345cb2ff
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 433972790310559b19ca5bc2c982c32e699e0e60
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad324af24b7a5555803e8b897343030d8bf210bf
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007449"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573740"
 ---
 # <a name="object-doesnt-support-this-property-or-method"></a>Nesne bu özelliği veya yöntemi desteklemiyor
-Bir özellik veya yok yöntemi bu nesne için belirttiğiniz. Tüm nesneler, tüm özellikleri ve yöntemleri destekler.  
+Bu nesne için mevcut olmayan bir özellik veya yöntem belirttiniz. Tüm nesneler tüm özellikleri ve yöntemleri desteklemez.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Özellikleri ve yöntemleri hiçbir yazım hatalar emin olmak için kontrol edin.  
+- Yazma hatası olmadığından emin olmak için özellikleri ve yöntemleri denetleyin.  
   
-- Nesnenin çalışma zamanı türü beklenen nesne türü olduğundan emin olun.  
+- Nesnenin çalışma zamanı türünün beklenen nesne türü olduğunu doğrulayın.  
   
 - Daha fazla bilgi için nesnenin belgelerine bakın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)    
  [JavaScript Nesneleri](../../javascript/reference/javascript-objects.md)

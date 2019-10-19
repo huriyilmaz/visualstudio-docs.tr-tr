@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetSignature | Microsoft Docs
+title: 'Icriptentry:: GetSignature | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 70cc1939ae4eb1e3c58d31b3d42b7f1b4603ce9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e7b07ac64ce7e427a793f0af0db9a7905441d39b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787799"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575414"
 ---
 # <a name="iscriptentrygetsignature"></a>IScriptEntry::GetSignature
-Döndürür tür bilgilerini için bir `IScriptEntry` işlev nesnesi.  
+@No__t_0 Function nesnesinin tür bilgilerini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,10 +38,10 @@ HRESULT GetSignature(
   
 #### <a name="parameters"></a>Parametreler  
  `ppti`  
- [out] Tür bilgilerini bununla ilişkili `IScriptEntry` işlev nesnesi.  
+ dışı Bu `IScriptEntry` Function nesnesiyle ilişkili bilgileri yazın.  
   
  `piMethod`  
- [out] Yöntemi dizin `ITypeInfo` nesne.  
+ dışı @No__t_0 nesnesindeki Yöntem dizini.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -51,7 +51,7 @@ HRESULT GetSignature(
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tür bilgilerini kullanarak ayarlamak [IScriptEntry::SetSignature](../../winscript/reference/iscriptentry-setsignature.md) veya [IScriptNode::CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md). Tür bilgileri, iç işlev gösterimi göre giriş tarafından da oluşturulabilir.  
+ [Icriptentry:: SetSignature](../../winscript/reference/iscriptentry-setsignature.md) veya [ıcriptnode:: CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md)kullanarak tür bilgilerini ayarlarsınız. Tür bilgileri, iç işlev gösterimine göre giriş tarafından da oluşturulabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptEntry Arabirimi](../../winscript/reference/iscriptentry-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Akıllı konak yardımcı arabirimleri uygulama | Microsoft Docs
+title: Akıllı ana bilgisayar yardımcı arabirimlerini uygulama | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,44 +13,44 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a9a5b94a25a838845acab2ce1c49295b0b28d425
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9b387999d71690deaf5bea30a07439677065d63d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976190"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574380"
 ---
 # <a name="implementing-smart-host-helper-interfaces"></a>Akıllı Konak Yardımcı Arabirimleri Uygulama
-[Idebugdocumenthelper arabirimi](../winscript/reference/idebugdocumenthelper-interface.md) arabirimi akıllı barındırmak için gereken birçok arabirimler için uygulamaları sağladığından etkin hata ayıklama için bir akıllı ana bilgisayar oluşturma görevini büyük ölçüde basitleştirir.  
+[Idebugbelge\arabirim](../winscript/reference/idebugdocumenthelper-interface.md) arabirimi, akıllı barındırma için gereken birçok arabirime yönelik uygulamalar sağladığından, etkin hata ayıklama için akıllı ana bilgisayar oluşturma görevini büyük ölçüde basitleştirir.  
   
- Kullanarak akıllı bir konak olacak şekilde `IDebugDocumentHelper`, bir ana bilgisayar uygulaması yalnızca üç şey yapmanız gerekir:  
+ @No__t_0 kullanarak bir akıllı ana bilgisayar olması için, bir ana bilgisayar uygulamasının yalnızca üç şey yapması gerekir:  
   
-1. `CoCreate` İşlem Hata Ayıklama Yöneticisi ve kullanım [Iprocessdebugmanager arabirimi](../winscript/reference/iprocessdebugmanager-interface.md) hata ayıklanabilir uygulamaların listesi uygulamanıza eklemek için arabirim.  
+1. Işlem hata ayıklama yöneticisini `CoCreate` ve uygulamanızı hata ayıklanabilir uygulamalar listesine eklemek için [ıprocessdebugmanager arabirimi](../winscript/reference/iprocessdebugmanager-interface.md) arabirimini kullanın.  
   
-2. Her komut dosyası için bir hata ayıklama belge Yardımcısı oluşturma kullanarak nesne [IProcessDebugManager::CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md) yöntemi. Belge adı, ana belge, metin ve komut dosyası blokları tanımlandığından emin olun.  
+2. [Iprocessdebugmanager:: Createdebugbelgethelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md) metodunu kullanarak her betik nesnesi için bir hata ayıklama belgesi Yardımcısı oluşturun. Belge adı, üst belge, metin ve betik bloklarının tanımlandığından emin olun.  
   
-3. Uygulama [Iactivescriptsitedebug arabirimi](../winscript/reference/iactivescriptsitedebug-interface.md) arabirimi uygulayan nesneniz üzerinde [Iactivescriptsite](../winscript/reference/iactivescriptsite.md) (Bu, etkin komut dosyası için gerekli olan) arabirimi. Önemsiz yalnızca metottaki `IActiveScriptSiteDebug` arabirimi yalnızca yardımcıya atar.  
+3. [Iactivescriptsitedebug Interface](../winscript/reference/iactivescriptsitedebug-interface.md) arabirimini, [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) arabirimini (etkin komut dosyası için gereklidir) uygulayan nesneniz üzerinde uygulayın. @No__t_0 arabirimindeki basit olmayan tek yöntem, yardımcıya temsilci atamak için yeterlidir.  
   
-   İsteğe bağlı olarak, konak uygulayabilirsiniz [Idebugdocumenthost arabirimi](../winscript/reference/idebugdocumenthost-interface.md) söz dizimi renk, belge bağlam oluşturma ve genişletilmiş diğer işlevleri üzerinde ek denetim gerekiyorsa arabirim.  
+   İsteğe bağlı olarak, ana bilgisayar, sözdizimi rengi, belge bağlamı oluşturma ve diğer genişletilmiş işlevler üzerinde ek denetime ihtiyaç duyuyorsa [ıdebugbelgesiyle Thost arabirimi](../winscript/reference/idebugdocumenthost-interface.md) arabirimini uygulayabilir.  
   
-   Akıllı konak yardımcı ana sınırlamasını içerikleri değiştirin veya (belgeler genişletebilirsiniz rağmen) eklendikten sonraki küçültme belge yalnızca işleyebilir ' dir. Birçok akıllı konakları için ancak sağladığı işlevsellik tam olarak ihtiyacınız olan şey olabilir.  
+   Akıllı ana bilgisayar Yardımcısı üzerindeki ana sınırlama, yalnızca içeriği eklendikten sonra değişiklik veya küçültme sonrasında (belgeler genişlebilse de) yalnızca içeriğini işleyebilmelerdir. Ancak birçok akıllı ana bilgisayar için, sağladığı işlevsellik tam olarak gerekli değildir.  
   
-   Aşağıdaki bölümlerde, her adımda daha ayrıntılı açıklanmaktadır.  
+   Aşağıdaki bölümlerde her bir adım daha ayrıntılı açıklanmaktadır.  
   
-## <a name="create-an-application-object"></a>Uygulama nesnesi oluşturun  
- Akıllı konak yardımcı kullanılmadan önce oluşturmak için gerekli bir [Idebugapplication arabirimi](../winscript/reference/idebugapplication-interface.md) uygulamanızı hata ayıklayıcısı temsil eden nesne.  
+## <a name="create-an-application-object"></a>Uygulama nesnesi oluşturma  
+ Akıllı ana bilgisayar Yardımcısı kullanılmadan önce, hata ayıklayıcıda uygulamanızı temsil etmek için bir [IDebugApplication Interface](../winscript/reference/idebugapplication-interface.md) nesnesi oluşturulması gerekir.  
   
-#### <a name="to-create-an-application-object"></a>Bir uygulama nesnesi oluşturmak için  
+#### <a name="to-create-an-application-object"></a>Uygulama nesnesi oluşturmak için  
   
-1. İşlem hata ayıklama örneği Yöneticisi'ni kullanarak oluşturun `CoCreateInstance`.  
+1. @No__t_0 kullanarak işlem hata ayıklama Yöneticisi 'nin bir örneğini oluşturun.  
   
-2. Çağrı [IProcessDebugManager::CreateApplication](../winscript/reference/iprocessdebugmanager-createapplication.md).  
+2. [Iprocessdebugmanager:: CreateApplication](../winscript/reference/iprocessdebugmanager-createapplication.md)öğesini çağırın.  
   
-3. Kullanarak uygulamayı kümesinin adı [IDebugApplication::SetName](../winscript/reference/idebugapplication-setname.md).  
+3. [IDebugApplication:: SetName](../winscript/reference/idebugapplication-setname.md)kullanarak uygulamada adı ayarlayın.  
   
-4. Uygulama nesnesi kullanarak hata ayıklanabilir uygulamalar listesine eklemek [IProcessDebugManager::AddApplication](../winscript/reference/iprocessdebugmanager-addapplication.md).  
+4. [Iprocessdebugmanager:: Addadpplication](../winscript/reference/iprocessdebugmanager-addapplication.md)kullanarak uygulama nesnesini hata ayıklanabilir uygulamalar listesine ekleyin.  
   
-     Aşağıdaki kod işlem özetlenmektedir, ancak hata denetimi veya sağlam diğer programlama teknikleri içermez.  
+     Aşağıdaki kod süreci özetler, ancak hata denetimini veya diğer güçlü programlama tekniklerini içermez.  
   
     ```cpp
     CoCreateInstance(CLSID_ProcessDebugManager, NULL,  
@@ -62,47 +62,47 @@ ms.locfileid: "62976190"
     g_ppdm->AddApplication(g_pda, &g_dwAppCookie);  
     ```  
   
-## <a name="using-idebugdocumenthelper"></a>Idebugdocumenthelper kullanma  
+## <a name="using-idebugdocumenthelper"></a>Idebugbelgethelper 'ı kullanma  
   
-#### <a name="to-use-the-helper-minimal-sequence-of-steps"></a>' % S'Yardımcısı (en az bir dizi adımdan) kullanmak için  
+#### <a name="to-use-the-helper-minimal-sequence-of-steps"></a>Yardımcıyı kullanmak için (en az adım dizisi)  
   
-1. Her ana belge için bir yardımcı kullanarak oluşturma [IProcessDebugManager::CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md).  
+1. Her ana bilgisayar belgesi için [ıprocessdebugmanager:: Createdebugbelgeadı](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md)' nı kullanarak bir yardımcı oluşturun.  
   
-2. Çağrı [IDebugDocumentHelper::Init](../winscript/reference/idebugdocumenthelper-init.md) Yardımcısı adı, belge öznitelikleri ve benzeri verir.  
+2. Yardımcı üzerinde [ıdebugbelgesiyle thelper:: Init](../winscript/reference/idebugdocumenthelper-init.md) çağırın, bu adı, belge özniteliklerini ve benzerlerini yapın.  
   
-3. Çağrı [IDebugDocumentHelper::Attach](../winscript/reference/idebugdocumenthelper-attach.md) belge (veya belge kökü ise NULL) için üst Yardımcısı ile ağacında belgenin konumunu tanımlamak ve hata ayıklayıcı görünür hale getirmek için.  
+3. Belgenin ağaç içinde konumunu tanımlamak ve hata ayıklayıcıya görünür hale getirmek için [ıdebugbelgethelper::](../winscript/reference/idebugdocumenthelper-attach.md) belge için üst yardımcı ile (veya belge kök ise null) Attach ' i çağırın.  
   
-4. Çağrı [IDebugDocumentHelper::AddDBCSText](../winscript/reference/idebugdocumenthelper-adddbcstext.md) veya [IDebugDocumentHelper::AddUnicodeText](../winscript/reference/idebugdocumenthelper-addunicodetext.md) belgenin metni tanımlamak için. (Bir tarayıcı durumunda olduğu gibi belge kademeli olarak yüklediyseniz bu birden çok kez çağrılabilir.)  
+4. Belgenin metnini tanımlamak için [ıdebugbelgethelper:: AddDBCSText](../winscript/reference/idebugdocumenthelper-adddbcstext.md) veya [ıdebugbelgesiyle Thelper:: addunicodetext](../winscript/reference/idebugdocumenthelper-addunicodetext.md) öğesini çağırın. (Tarayıcı söz konusu olduğunda olduğu gibi, belge artımlı olarak indirildiyse bunlar birden çok kez çağrılabilir.)  
   
-5. Çağrı [IDebugDocumentHelper::DefineScriptBlock](../winscript/reference/idebugdocumenthelper-definescriptblock.md) her betik bloğu hem de ilişkili komut dosyası motorları aralıklarını tanımlamak için.  
+5. Her bir betik bloğu ve ilişkili betik altyapısı için aralıkları tanımlamak üzere [ıdebugbelgethelper::D efineScriptBlock](../winscript/reference/idebugdocumenthelper-definescriptblock.md) ' i çağırın.  
   
 ## <a name="implementing-iactivescriptsitedebug"></a>Iactivescriptsitedebug uygulama  
- Uygulamak için [IActiveScriptSiteDebug::GetDocumentContextFromPosition](../winscript/reference/iactivescriptsitedebug-getdocumentcontextfromposition.md)belirtilen siteye karşılık gelen Yardımcısı alın ve sonra belirtilen kaynak bağlamı, aşağıdaki gibi kaydırın Başlangıç belgesini alın:  
+ [Iactivescriptsitedebug:: GetDocumentContextFromPosition](../winscript/reference/iactivescriptsitedebug-getdocumentcontextfromposition.md)uygulamak için, belirtilen siteye karşılık gelen yardımcıyı alın ve ardından belirtilen kaynak bağlamı için başlangıç belgesi sapmasını aşağıdaki gibi alın:  
   
 ```cpp
 pddh->GetScriptBlockInfo(dwSourceContext, NULL, &ulStartPos, NULL);  
 ```  
   
- Ardından, belirli karakter kaydırma için yeni bir belge içeriği oluşturmak için yardımcıyı kullanın:  
+ Ardından, verilen karakter boşluğu için yeni bir belge bağlamı oluşturmak için yardımcı 'yı kullanın:  
   
 ```cpp
 pddh->CreateDebugDocumentContext(ulStartPos + uCharacterOffset, cChars, &pddcNew);  
 ```  
   
- Uygulamak için [IActiveScriptSiteDebug::GetRootApplicationNode](../winscript/reference/iactivescriptsitedebug-getrootapplicationnode.md), yalnızca çağrı `IDebugApplication::GetRootNode` (devralınan [IRemoteDebugApplication::GetRootNode](../winscript/reference/iremotedebugapplication-getrootnode.md)).  
+ [Iactivescriptsitedebug:: GetRootApplicationNode](../winscript/reference/iactivescriptsitedebug-getrootapplicationnode.md)öğesini uygulamak için yalnızca `IDebugApplication::GetRootNode` ( [IRemoteDebugApplication:: GetRootNode](../winscript/reference/iremotedebugapplication-getrootnode.md)öğesinden devralınmış) öğesini çağırın.  
   
- Uygulamak için [IDebugDocumentHelper::GetDebugApplicationNode](../winscript/reference/idebugdocumenthelper-getdebugapplicationnode.md), sadece dönüş `IDebugApplication` başlangıçta işlem hata ayıklama Yöneticisi'ni kullanarak oluşturduğunuz.  
+ [Idebugbelgethelper:: GetDebugApplicationNode](../winscript/reference/idebugdocumenthelper-getdebugapplicationnode.md)uygulamak için, işlem hata ayıklama Yöneticisi ' ni kullanarak başlangıçta oluşturduğunuz `IDebugApplication` döndürün.  
   
-## <a name="the-optional-idebugdocumenthost-interface"></a>İsteğe bağlı Idebugdocumenthost arabirimi  
- Ana bilgisayar uygulaması sağlayabilir [Idebugdocumenthost arabirimi](../winscript/reference/idebugdocumenthost-interface.md) kullanarak [IDebugDocumentHelper::SetDebugDocumentHost](../winscript/reference/idebugdocumenthelper-setdebugdocumenthost.md) yardımcı ek denetiminin kendilerinde olmasına. Konak arabirimi gerçekleştirmenize izin verir gereken önemli noktalar bazıları şunlardır:  
+## <a name="the-optional-idebugdocumenthost-interface"></a>İsteğe bağlı ıdebugbelgethost arabirimi  
+ Ana bilgisayar, yardımcı üzerinde ek denetim sağlamak için [ıdebugbelgethelper:: Setdebugbelgethost](../winscript/reference/idebugdocumenthelper-setdebugdocumenthost.md) ' nı kullanarak [ıdebugbelgethost arabiriminin](../winscript/reference/idebugdocumenthost-interface.md) bir uygulamasını sağlayabilir. Konak arabiriminin şunları yapmasına izin verdiği bazı önemli noktalar şunlardır:  
   
-- Metin ekleme [IDebugDocumentHelper::AddDeferredText](../winscript/reference/idebugdocumenthelper-adddeferredtext.md) böylece ana karakterlerini hemen sağlamanız gerekmez. Karakterleri gerçekten gerektiğinde, yardımcı çağıracak [IDebugDocumentHost::GetDeferredText](../winscript/reference/idebugdocumenthost-getdeferredtext.md) konaktaki.  
+- Ana bilgisayarın gerçek karakterleri hemen sağlaması gerekmiyorsa [ıdebugbelgethelper:: AddDeferredText](../winscript/reference/idebugdocumenthelper-adddeferredtext.md) kullanarak metin ekleyin. Karakterler gerçekten gerektiğinde, yardımcı, konakta [ıdebugbelgethost:: GetDeferredText](../winscript/reference/idebugdocumenthost-getdeferredtext.md) öğesini çağırır.  
   
-- Yardımcısı tarafından sağlanan varsayılan söz dizimi renklendirmesi geçersiz kılar. Yardımcısı çağrıları [IDebugDocumentHost::GetScriptTextAttributes](../winscript/reference/idebugdocumenthost-getscripttextattributes.md) konak dönerseniz varsayılan uygulanması dönülüyor karakter, bir dizi renklendirme belirlemek için `E_NOTIMPL`.  
+- Yardımcı tarafından sunulan varsayılan sözdizimi renklendirmesini geçersiz kılın. Yardımcı, bir karakter aralığının renklendirmesini anlamak için [ıdebugbelgethost:: GetScriptTextAttributes](../winscript/reference/idebugdocumenthost-getscripttextattributes.md) çağırır, ana bilgisayar `E_NOTIMPL` döndürmesi durumunda varsayılan uygulamasına geri döner.  
   
-- Belge bağlamı uygulama tarafından Yardımcısı tarafından oluşturulan bir kontrol eden bilinmeyen sağlayın [IDebugDocumentHost::OnCreateDocumentContext](../winscript/reference/idebugdocumenthost-oncreatedocumentcontext.md). Bu, varsayılan belge bağlamı uygulama işlevselliğini geçersiz kılmak konak sağlar.  
+- [Idebugdocumentthost:: OnCreateDocumentContext](../winscript/reference/idebugdocumenthost-oncreatedocumentcontext.md)uygulayarak yardımcı tarafından oluşturulan belge bağlamları için bilinmeyen bir denetim sağlayın. Bu, konağın varsayılan belge bağlamı uygulamasının işlevselliğini geçersiz kılmasına izin verir.  
   
-- Bir yol adı dosya sistemindeki belge için sağlar. Bazı hata ayıklama kullanıcı arabirimleri düzenlemek ve değişiklikleri belgeye kaydetmek için kullanıcının izin vermek için bunu kullanın. [IDebugDocumentHost::NotifyChanged](../winscript/reference/idebugdocumenthost-notifychanged.md) Belge kaydedildikten sonra ana bilgisayara bildirmek için çağırılır.  
+- Belge için dosya sisteminde bir yol adı girin. Bazı hata ayıklama Işlemi, kullanıcının belgedeki değişiklikleri düzenlemesine ve kaydetmesine izin vermek için bunu kullanır. Bir belge kaydedildikten sonra konağa bildirimde bulunan [ıdebugbelgethost:: NotifyChanged](../winscript/reference/idebugdocumenthost-notifychanged.md) çağrıldı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklamaya Genel Bakış](../winscript/active-script-debugging-overview.md)

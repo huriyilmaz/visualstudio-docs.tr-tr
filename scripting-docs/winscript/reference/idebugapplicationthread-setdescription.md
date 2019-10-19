@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThread::SetDescription | Microsoft Docs
+title: 'Idebugapplicationthread:: SetDescription | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a81c2062e002d85002b991969c4b8ccd64a82aab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 794459f720a24cbcb7fbdda1a006f0825f5ff083
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945701"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574520"
 ---
 # <a name="idebugapplicationthreadsetdescription"></a>IDebugApplicationThread::SetDescription
-Bu iş parçacığının açıklaması ayarlar.  
+Bu iş parçacığının açıklamasını ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT SetDescription(
   
 #### <a name="parameters"></a>Parametreler  
  `pstrDescription`  
- [in] Bu iş parçacığının açıklaması.  
+ 'ndaki Bu iş parçacığının açıklaması.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu iş parçacığının açıklaması ayarlar.  
+ Bu yöntem, bu iş parçacığının açıklamasını ayarlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplicationThread Arabirimi](../../winscript/reference/idebugapplicationthread-interface.md)

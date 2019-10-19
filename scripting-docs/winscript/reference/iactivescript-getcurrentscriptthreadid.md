@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::GetCurrentScriptThreadID | Microsoft Docs
+title: 'IActiveScript:: GetCurrentScriptThreadID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9e1b6e7bae7d78c18e11cd1aac8d0844fb9e90a5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dedb16e0c007ed05370fb54835f84f00784c1ae4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935662"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575774"
 ---
 # <a name="iactivescriptgetcurrentscriptthreadid"></a>IActiveScript::GetCurrentScriptThreadID
-Şu anda çalışan bir iş parçacığı için bir komut dosyası altyapısı-tanımlı tanımlayıcı alır. Tanımlayıcı betik iş parçacığı yürütme denetimi yöntemleri yapılan sonraki çağrılar gibi kullanılabilir [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) yöntemi.  
+Şu anda yürütülmekte olan iş parçacığı için bir komut dosyası motoru tanımlı tanımlayıcı alır. Tanımlayıcı, [IActiveScript:: InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) yöntemi gibi betik iş parçacığı yürütme denetimi yöntemlerine yapılan sonraki çağrılarda kullanılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,13 +37,13 @@ HRESULT GetCurrentScriptThreadID(
   
 #### <a name="parameters"></a>Parametreler  
  `pstidThread`  
- [out] Geçerli iş parçacığıyla ilişkilendirilmiş komut iş parçacığı tanıtıcısını alan bir değişkenin adresidir. Bu tanımlayıcının yorumu komut dosyası altyapısı için kalır, ancak Windows iş parçacığı tanıtıcısını yalnızca bir kopyasını olabilir. Win32 iş parçacığı sonlanır, bu tanımlayıcıyı atanmamış olur ve daha sonra başka bir iş parçacığına atanabilir.  
+ dışı Geçerli iş parçacığıyla ilişkili betik iş parçacığı tanımlayıcısını alan bir değişkenin adresi. Bu tanımlayıcının yorumu, komut dosyası motoruna bırakılır, ancak yalnızca Windows iş parçacığı tanımlayıcısının bir kopyası olabilir. Win32 iş parçacığı sonlandığında, bu tanımlayıcı atanmamış olur ve daha sonra başka bir iş parçacığına atanabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa veya `E_POINTER` durumunda geçersiz işaretçi belirtildi.  
+ Başarılı olursa `S_OK` döndürür ya da geçersiz bir işaretçi belirtilmişse `E_POINTER`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Temel olmayan belirtme ana bilgisayar nesneleri veya çok kaynaklanan olmadan, bu yöntem temel olmayan iş parçacığından çağrılabilir [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md) arabirimi.  
+ Bu yöntem, temel olmayan iş parçacıklarından, nesneleri barındırmak için temel olmayan bir belirtme çizgisine veya [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) arabirimine yol açmadan çağrılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScript](../../winscript/reference/iactivescript.md)

@@ -1,5 +1,5 @@
 ---
-title: Iscriptentry arabirimi | Microsoft Docs
+title: Icriptentry arabirimi | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,33 +13,33 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0dc50a6aa5cf032827feac6b483b141b79f60e77
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 868322358908a32c8f14b56846cf3237f8531b4c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787730"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575391"
 ---
 # <a name="iscriptentry-interface"></a>IScriptEntry Arabirimi
-Uygulayan bir nesne `IScriptEntry` bir betik bloğu ya da bir işlev nesnesi arabirimi temsil eder.  
+@No__t_0 arabirimini uygulayan bir nesne, bir betik bloğunu veya bir işlev nesnesini temsil eder.  
   
- Devralınan yöntemleri yanı sıra `IScriptNode`, `IScriptEntry` arabirimi aşağıdaki yöntemleri sunar.  
+ @No__t_0 devralınan yöntemlere ek olarak, `IScriptEntry` arabirimi aşağıdaki yöntemleri sunar.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IScriptEntry::GetBody](../../winscript/reference/iscriptentry-getbody.md)|Gövdesi için karşılık gelen metni döndüren bir `IScriptEntry` betik bloğu, işlev bloğu veya kod oluşturma.|  
-|[IScriptEntry::GetItemName](../../winscript/reference/iscriptentry-getitemname.md)|Tanımlayan bir öğe adı döndürür bir `IScriptEntry` nesne.|  
-|[IScriptEntry::GetName](../../winscript/reference/iscriptentry-getname.md)|Tek bir nesne (örneğin, bir işlev) temsil eden girdi, nesnenin adını döndürür.|  
-|[IScriptEntry::GetRange](../../winscript/reference/iscriptentry-getrange.md)|Başlangıç konumu ve bir giriş uzunluğunu döndürür.|  
-|[IScriptEntry::GetSignature](../../winscript/reference/iscriptentry-getsignature.md)|Döndürür tür bilgilerini için bir `IScriptEntry` işlev nesnesi.|  
-|[IScriptEntry::GetText](../../winscript/reference/iscriptentry-gettext.md)|Karşılık gelen metni döndüren bir `IScriptEntry` betik bloğu ya da yer alan kaynak kodu bir `IScriptScriptlet` olay işleyicisi.|  
-|[IScriptEntry::SetBody](../../winscript/reference/iscriptentry-setbody.md)|Gövdesinde metin ayarlar bir `IScriptEntry` betik bloğu ya da bir `IScriptScriptlet` kod oluşturma.|  
-|[IScriptEntry::SetItemName](../../winscript/reference/iscriptentry-setitemname.md)|Tanımlayan öğesi adını ayarlar bir `IScriptEntry` nesne.|  
-|[IScriptEntry::SetName](../../winscript/reference/iscriptentry-setname.md)|Tek bir nesne (örneğin, bir işlev) temsil eden girdi, nesnenin adını ayarlar.|  
-|[IScriptEntry::SetSignature](../../winscript/reference/iscriptentry-setsignature.md)|Kümeleri tür bilgilerini için bir `IScriptEntry` işlev nesnesi.|  
-|[IScriptEntry::SetText](../../winscript/reference/iscriptentry-settext.md)|Karşılık gelen metin ayarlar bir `IScriptEntry` betik bloğu ya da yer alan kaynak kodu bir `IScriptScriptlet` olay işleyicisi.|  
+|[IScriptEntry::GetBody](../../winscript/reference/iscriptentry-getbody.md)|Bir `IScriptEntry` betik bloğunun, işlev bloğunun veya kod oluşturma yöntemi gövdesine karşılık gelen metni döndürür.|  
+|[IScriptEntry::GetItemName](../../winscript/reference/iscriptentry-getitemname.md)|Bir `IScriptEntry` nesnesini tanımlayan öğe adını döndürür.|  
+|[IScriptEntry::GetName](../../winscript/reference/iscriptentry-getname.md)|Tek bir nesneyi temsil eden girişler (örneğin, bir işlev) için, nesnenin adını döndürür.|  
+|[IScriptEntry::GetRange](../../winscript/reference/iscriptentry-getrange.md)|Bir girdinin başlangıç konumunu ve uzunluğunu döndürür.|  
+|[IScriptEntry::GetSignature](../../winscript/reference/iscriptentry-getsignature.md)|@No__t_0 Function nesnesinin tür bilgilerini döndürür.|  
+|[IScriptEntry::GetText](../../winscript/reference/iscriptentry-gettext.md)|Bir `IScriptEntry` betik bloğuna veya bir `IScriptScriptlet` olay işleyicisinde bulunan kaynak koduna karşılık gelen metni döndürür.|  
+|[IScriptEntry::SetBody](../../winscript/reference/iscriptentry-setbody.md)|@No__t_0 betik bloğunun gövdesinde bulunan metni veya bir `IScriptScriptlet` kod oluşturma yöntemi belirler.|  
+|[IScriptEntry::SetItemName](../../winscript/reference/iscriptentry-setitemname.md)|@No__t_0 nesnesini tanımlayan öğe adını ayarlar.|  
+|[IScriptEntry::SetName](../../winscript/reference/iscriptentry-setname.md)|Tek bir nesneyi temsil eden girişler (örneğin, bir işlev) için, nesnenin adını ayarlar.|  
+|[IScriptEntry::SetSignature](../../winscript/reference/iscriptentry-setsignature.md)|@No__t_0 Function nesnesinin tür bilgilerini ayarlar.|  
+|[IScriptEntry::SetText](../../winscript/reference/iscriptentry-settext.md)|Bir `IScriptEntry` betik bloğuna veya bir `IScriptScriptlet` olay işleyicisinde bulunan kaynak koduna karşılık gelen metni ayarlar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Yazma Arabirimleri](../../winscript/reference/active-script-authoring-interfaces.md)

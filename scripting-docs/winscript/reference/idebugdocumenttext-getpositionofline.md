@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetPositionOfLine | Microsoft Docs
+title: 'Idebugdocumenttext:: GetPositionOfLine | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4cfcfc771c49abbf837f4db898936e478cda2194
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: adf4add99ac41440e6f4daa491b72166e97b5ba5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970854"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572107"
 ---
 # <a name="idebugdocumenttextgetpositionofline"></a>IDebugDocumentText::GetPositionOfLine
-Bir satırın ilk karaktere karşılık gelen karakter konumunu döndürür.  
+Satırın ilk karakterine karşılık gelen karakter konumunu döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT GetPositionOfLine(
   
 #### <a name="parameters"></a>Parametreler  
  `cLineNumber`  
- [in] Satır numarası.  
+ 'ndaki Satır numarası.  
   
  `pcCharacterPosition`  
- [out] Belge içindeki satırın karakter konumu `cLineNumber`.  
+ dışı Satır başı `cLineNumber` belge içindeki karakter konumu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir satırın ilk karaktere karşılık gelen karakter konumunu döndürür.  
+ Bu yöntem, bir satırın ilk karakterine karşılık gelen karakter konumunu döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentText Arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)

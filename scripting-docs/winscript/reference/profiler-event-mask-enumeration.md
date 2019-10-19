@@ -1,5 +1,5 @@
 ---
-title: Profıler_event_mask sabit listesi | Microsoft Docs
+title: PROFILER_EVENT_MASK numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f7230e65e5559d53e56cf6424a34dd44aa4edda7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c1e1e7f3b604832014cb23245b105756d1126c5b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831648"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572286"
 ---
-# <a name="profilereventmask-enumeration"></a>PROFILER_EVENT_MASK Numaralandırması
-Profili oluşturulması olay türlerini belirtir.  
+# <a name="profiler_event_mask-enumeration"></a>PROFILER_EVENT_MASK Numaralandırması
+Profili oluşturulacak olay türlerini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,13 +44,13 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|PROFILER_EVENT_MASK_TRACE_SCRIPT_FUNCTION_CALL|Kullanıcı tarafından yazılan betik ve dinamik kod tanımlanmış profilleri işlevleri.|  
-|PROFILER_EVENT_MASK_TRACE_NATIVE_FUNCTION_CALL|Komut dosyası altyapısı tarafından tanımlanmış profilleri yerel işlevleri.|  
-|PROFILER_EVENT_MASK_TRACE_ALL|Belge nesne modeli (DOM) içine çağrıları hariç tüm kullanıcı tanımlı ve komut dosyası altyapısı işlevler profiller.|  
-|PROFILER_EVENT_MASK_TRACE_DOM_FUNCTION_CALL|DOM'a çağrı profilleri işlevleri|  
-|PROFILER_EVENT_MASK_TRACE_ALL_WITH_DOM|DOM çağrılar dahil olmak üzere tüm işlevleri profilleri|  
+|PROFILER_EVENT_MASK_TRACE_SCRIPT_FUNCTION_CALL|Kullanıcı tarafından yazılan betikte ve dinamik kodda tanımlanan profiller işlevleri.|  
+|PROFILER_EVENT_MASK_TRACE_NATIVE_FUNCTION_CALL|Komut dosyası altyapısı tarafından tanımlanan profiller yerel işlevleri.|  
+|PROFILER_EVENT_MASK_TRACE_ALL|Tüm Kullanıcı tanımlı ve betik altyapısı işlevleri, Belge Nesne Modeli çağrılar hariç (DOM).|  
+|PROFILER_EVENT_MASK_TRACE_DOM_FUNCTION_CALL|DOM 'a çağıran profiller işlevleri.|  
+|PROFILER_EVENT_MASK_TRACE_ALL_WITH_DOM|DOM 'a çağrılar da dahil olmak üzere tüm işlevleri profiller.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Etkin komut dosyası Profiler sabitleri, numaralandırmaları ve yapıları](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
- [IActiveScriptProfilerControl::SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Etkin komut dosyası profil oluşturucu sabitleri, numaralandırmalar ve yapılar](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)    
+ [Iactivescriptprofilercontrol:: SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)    
  [IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)

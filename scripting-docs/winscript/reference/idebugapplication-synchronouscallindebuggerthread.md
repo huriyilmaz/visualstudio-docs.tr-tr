@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::SynchronousCallInDebuggerThread | Microsoft Docs
+title: 'IDebugApplication:: SynchronousCallInDebuggerThread | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d5460efaa3448c7812707e0baa7b2f5afe1d27a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 134717b6ce30c87ccfb4bbb50ffe958717ae757f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990563"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574584"
 ---
 # <a name="idebugapplicationsynchronouscallindebuggerthread"></a>IDebugApplication::SynchronousCallInDebuggerThread
-Çağıran kod hata ayıklayıcı iş parçacığında çalıştırmak bir mekanizma sağlar.  
+Çağıranın hata ayıklayıcı iş parçacığında kod çalıştırmasına yönelik bir mekanizma sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,27 +40,27 @@ HRESULT SynchronousCallInDebuggerThread(
   
 #### <a name="parameters"></a>Parametreler  
  `pptc`  
- [in] Aranacak nesne.  
+ 'ndaki Çağrılacak nesne.  
   
  `dwParam1`  
- [in] Geçirmek için ilk parametre `IDebugThreadCall::ThreadCallHandler` yöntemi.  
+ 'ndaki @No__t_0 metoduna geçirilecek ilk parametre.  
   
  `dwParam2`  
- [in] Geçirmek için ikinci parametresinin `IDebugThreadCall::ThreadCallHandler` yöntemi.  
+ 'ndaki @No__t_0 metoduna geçirilecek ikinci parametre.  
   
  `dwParam3`  
- [in] Geçirmek için üçüncü parametresinin `IDebugThreadCall::ThreadCallHandler` yöntemi.  
+ 'ndaki @No__t_0 metoduna geçirilecek üçüncü parametre.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genellikle dil altyapıları ve konakları ücretsiz iş parçacıklı nesneleri, tek iş parçacıklı uygulamalar üzerinde uygulamak için bu yöntemi kullanın.  
+ Dil motorları ve konaklar, genellikle bu yöntemi tek iş parçacıklı uygulamalarının üzerine serbest iş parçacıklı nesneler uygulamak için kullanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
  [IDebugThreadCall Arabirimi](../../winscript/reference/idebugthreadcall-interface.md)

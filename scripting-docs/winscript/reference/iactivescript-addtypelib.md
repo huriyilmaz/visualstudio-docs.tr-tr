@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::AddTypeLib | Microsoft Docs
+title: 'IActiveScript:: AddTypeLib | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c4943d1305c2f25de4eec9e782949a66827de879
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 254a5133d42689020eaaae290a1016de4b848100
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955097"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575803"
 ---
 # <a name="iactivescriptaddtypelib"></a>IActiveScript::AddTypeLib
-Komut dosyası için ad alanı için bir tür kitaplığı ekler. Bu benzer `#include` C/C++'ta yönergesi. Sınıf tanımları gibi önceden tanımlanmış öğelerin kümesi sağlayan `typedefs`ve komut dosyası çalışma zamanı ortamına eklenecek sabitleri adlı.  
+Betik için ad alanına bir tür kitaplığı ekler. Bu, C/C++içindeki `#include` yönergesine benzerdir. Sınıf tanımları, `typedefs` ve adlandırılmış sabitler gibi bir dizi önceden tanımlanmış öğenin, komut dosyasının kullanabileceği çalışma zamanı ortamına eklenmesine izin verir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,20 +40,20 @@ HRESULT AddTypeLib(
   
 #### <a name="parameters"></a>Parametreler  
  `guidTypeLib`  
- [in] Eklenecek CLSID tür kitaplığının.  
+ 'ndaki Eklenecek tür kitaplığının CLSID değeri.  
   
  `dwMaj`  
- [in] Ana sürüm numarası.  
+ 'ndaki Ana sürüm numarası.  
   
  `dwMin`  
- [in] İkincil sürüm numarası.  
+ 'ndaki İkincil sürüm numarası.  
   
  `dwFlags`  
- [in] Seçeneğini işaretler. Aşağıdakiler olabilir:  
+ 'ndaki Seçenek bayrakları. Şunlar olabilir:  
   
 |Değer|Açıklama|  
 |-----------|-------------|  
-|SCRIPTTYPELIB_ISCONTROL|Ana bilgisayar tarafından kullanılan bir ActiveX denetimi tür kitaplığını açıklar.|  
+|SCRIPTTYPELIB_ISCONTROL|Tür kitaplığı, ana bilgisayar tarafından kullanılan bir ActiveX denetimini tanımlar.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -61,9 +61,9 @@ HRESULT AddTypeLib(
 |Dönüş Değeri|Açıklama|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
-|`E_INVALIDARG`|Bir bağımsız değişken geçersiz.|  
-|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenen başlatıldı veya).|  
+|`E_INVALIDARG`|Bağımsız değişken geçersizdi.|  
+|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenmemiş veya başlatılmamış).|  
 |`TYPE_E_CANTLOADLIBRARY`|Belirtilen tür kitaplığı yüklenemedi.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScript](../../winscript/reference/iactivescript.md)

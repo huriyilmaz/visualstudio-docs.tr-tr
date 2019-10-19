@@ -1,5 +1,5 @@
 ---
-title: BREAKREASON listelemesi | Microsoft Docs
+title: BREAKREASON numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 939d9f36c9838f02e58bc433d1a7bb9bef43c28d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6f656bdf4e3bc85a014ff8d3011708799aa44bcd
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955414"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572627"
 ---
 # <a name="breakreason-enumeration"></a>BREAKREASON Listelemesi
 Kesilmenin nedenini gösterir.  
@@ -46,14 +46,14 @@ typedef enum tagBREAKREASON {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|BREAKREASON_STEP|Dil altyapısı Adımlama modundadır.|  
-|BREAKREASON_BREAKPOINT|Dil altyapısı, açık bir kesme noktası karşılaştı.|  
-|BREAKREASON_DEBUGGER_BLOCK|Dil altyapısı, başka bir iş parçacığında bir hata ayıklayıcı blok karşılaştı.|  
-|BREAKREASON_HOST_INITIATED|Konak, bir kesme istedi.|  
-|BREAKREASON_LANGUAGE_INITIATED|Dil altyapısı, bir kesme istedi.|  
-|BREAKREASON_DEBUGGER_HALT|IDE hata ayıklayıcı bir kesme istedi.|  
-|BREAKREASON_ERROR|Bir yürütme hatası kesilmenin nedenini.|  
-|BREAKREASON_JIT|JIT hata ayıklama başlatma işlemi tarafından neden oldu.|  
+|BREAKREASON_STEP|Dil altyapısı atlama modundadır.|  
+|BREAKREASON_BREAKPOINT|Dil altyapısı açık bir kesme noktasıyla karşılaştı.|  
+|BREAKREASON_DEBUGGER_BLOCK|Dil altyapısı, başka bir iş parçacığında bir hata ayıklayıcı bloğuna rastladı.|  
+|BREAKREASON_HOST_INITIATED|Ana bilgisayar bir kesme istedi.|  
+|BREAKREASON_LANGUAGE_INITIATED|Dil altyapısı bir kesme istedi.|  
+|BREAKREASON_DEBUGGER_HALT|Hata ayıklayıcı IDE bir kesme istedi.|  
+|BREAKREASON_ERROR|Bir yürütme hatası, kesintiye neden oldu.|  
+|BREAKREASON_JIT|JıT hata ayıklama başlatması neden oldu.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

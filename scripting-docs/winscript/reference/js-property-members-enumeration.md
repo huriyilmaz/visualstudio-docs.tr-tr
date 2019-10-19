@@ -1,5 +1,5 @@
 ---
-title: JS_PROPERTY_MEMBERS listelemesi | Microsoft Docs
+title: JS_PROPERTY_MEMBERS numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,14 +15,14 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 597764d1e55b895c30e2b00981a7a1be53e16022
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3645e95859e2c2b785e01c7ee9a3cbee8155138d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968665"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571723"
 ---
-# <a name="jspropertymembers-enumeration"></a>JS_PROPERTY_MEMBERS Listelemesi
+# <a name="js_property_members-enumeration"></a>JS_PROPERTY_MEMBERS Listelemesi
 Bir nesnenin üyeleri için bir istekte dönmek amacıyla bilgi türünü belirten bayraklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,13 +35,13 @@ enum JS_PROPERTY_MEMBERS{   JS_PROPERTY_MEMBERS_ALL = 0,   JS_PROPERTY_MEMBERS_A
   
 ### <a name="values"></a>Değerler  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
-|`JS_PROPERTY_MEMBERS_ALL`|Tüm üyeleri listeleme isteği temsil eder.|  
-|`JS_PROPERTY_MEMBERS_ARGUMENTS`|Bağımsız değişkenler yalnızca listeleme isteği temsil eder.|  
+|`JS_PROPERTY_MEMBERS_ALL`|Tüm üyeleri numaralandırma isteğini temsil eder.|  
+|`JS_PROPERTY_MEMBERS_ARGUMENTS`|Yalnızca bağımsız değişkenleri numaralandırma isteğini temsil eder.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

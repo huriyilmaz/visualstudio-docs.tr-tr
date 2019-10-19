@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::ScriptCompiled | Microsoft Docs
+title: 'Iactivescriptprofilercallback:: Scriptderlenen | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a198667e7dc30969c32b556620b139d52f833543
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7252134fc86bfd63b74a181b18327212a1b2dc1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993241"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571668"
 ---
 # <a name="iactivescriptprofilercallbackscriptcompiled"></a>IActiveScriptProfilerCallback::ScriptCompiled
-Komut dosyası motoru nesne derlenmiş bir komut dosyası profil oluşturucu bildirir. Bu yöntem derlendiğinde her komut için çağrılır.  
+Profil Oluşturucu nesnesine komut dosyası altyapısının bir betik derlediğini bildirir. Bu yöntem, derlenen her komut dosyası için çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT ScriptCompiled(
   
 #### <a name="parameters"></a>Parametreler  
  `scriptId`  
- [in] Derlenen kodun benzersiz kimliği. Bu kimlik, komut dosyası altyapısı tarafından atanır.  
+ 'ndaki Derlenen betiğin benzersiz KIMLIĞI. Bu KIMLIK, komut dosyası altyapısı tarafından atanır.  
   
  `type`  
- [in] Derlenen kodun türü. Değerleri tanımlanan [profıler_scrıpt_type numaralandırması](../../winscript/reference/profiler-script-type-enumeration.md).  
+ 'ndaki Derlenen betiğin türü. Değerler [PROFILER_SCRIPT_TYPE numaralandırması](../../winscript/reference/profiler-script-type-enumeration.md)içinde tanımlanır.  
   
  `pIDebugDocumentContext`  
- [in] Mevcut ise, işaretçi bir `IUnknown` profil oluşturucu için faydalanacaksa arabirimi bir [Idebugdocumentcontext arabirimi](../../winscript/reference/idebugdocumentcontext-interface.md) işaretçi. Aksi takdirde, bu null olacaktır.  
+ 'ndaki Varsa, profil oluşturucunun bir [ıdebugdocumentcontext arabirimi](../../winscript/reference/idebugdocumentcontext-interface.md) işaretçisi için sorgulaması gereken `IUnknown` arabirimine yönelik bir işaretçi. Aksi takdirde, bu null olacaktır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntemin dönüş değerini komut dosyası altyapısı tarafından göz ardı edilir.  
+ Bu yöntemin dönüş değeri, betik altyapısı tarafından yok sayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca bu ana bilgisayar tarafından destekleniyorsa komut dosyası altyapısı belge bağlamı sağlar.  
+ Betik altyapısı, yalnızca konak tarafından destekleniyorsa belge bağlamını sağlayabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptProfilerCallback Arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)

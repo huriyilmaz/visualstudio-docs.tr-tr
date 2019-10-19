@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::GetScriptThreadID | Microsoft Docs
+title: 'IActiveScript:: Getscriptthreadıd | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d329e08e6a17d9edcdf26e14b468c3c56f036c00
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2a0fb1eebfcb6ed100056289fab6bce662f86a7b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935698"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575699"
 ---
 # <a name="iactivescriptgetscriptthreadid"></a>IActiveScript::GetScriptThreadID
-Belirli Win32 iş parçacığı ile ilişkili iş parçacığı için bir komut dosyası altyapısı-tanımlı tanımlayıcı alır.  
+Verilen Win32 iş parçacığıyla ilişkili iş parçacığı için bir komut dosyası motoru tanımlı tanımlayıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,11 +37,11 @@ HRESULT GetScriptThreadID(
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- `dwWin32ThreadID` ,  
- [in] Geçerli işlemde çalışan bir Win32 iş parçacığı tanıtıcısı iş parçacığı. Kullanım [IActiveScript::GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md) şu anda yürütülen iş parçacığının iş parçacığı tanıtıcısını almak için işlevi.  
+ `dwWin32ThreadID`,  
+ 'ndaki Geçerli işlemde çalışan bir Win32 iş parçacığının iş parçacığı tanımlayıcısı. Şu anda yürütülmekte olan iş parçacığının iş parçacığı tanımlayıcısını almak için [IActiveScript:: GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md) işlevini kullanın.  
   
- `pstidThread` ,  
- [out] Belirli Win32 iş parçacığı ile ilişkili komut dosyası iş parçacığı tanıtıcısını alan bir değişkenin adresidir. Bu tanımlayıcının yorumu komut dosyası altyapısı için kalır, ancak Windows iş parçacığı tanıtıcısını yalnızca bir kopyasını olabilir. Win32 iş parçacığı sona ererse, bu tanımlayıcıyı atanmamış haline gelir ve bundan sonra başka bir iş parçacığına atanabilir unutmayın.  
+ `pstidThread`,  
+ dışı Verilen Win32 iş parçacığı ile ilişkili betik iş parçacığı tanımlayıcısını alan bir değişkenin adresi. Bu tanımlayıcının yorumu, komut dosyası motoruna bırakılır, ancak yalnızca Windows iş parçacığı tanımlayıcısının bir kopyası olabilir. Win32 iş parçacığı sonlandırıldığında, bu tanımlayıcı atanmamış olur ve daha sonra başka bir iş parçacığına atanabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -49,13 +49,13 @@ HRESULT GetScriptThreadID(
 |Dönüş Değeri|Açıklama|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
-|`E_POINTER`|Geçersiz işaretçi belirtildi.|  
-|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenen başlatıldı veya) ve bu nedenle başarısız oldu.|  
+|`E_POINTER`|Geçersiz bir işaretçi belirtildi.|  
+|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenmemiş veya başlatılmamış) ve bu nedenle başarısız oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Alınan tanımlayıcı komut iş parçacığı yürütme denetimi yöntemlerine yapılan sonraki çağrılar gibi kullanılabilir [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) yöntemi.  
+ Alınan tanımlayıcı, [IActiveScript:: InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) yöntemi gibi betik iş parçacığı yürütme denetimi yöntemlerine sonraki çağrılarında kullanılabilir.  
   
- Temel olmayan belirtme ana bilgisayar nesneleri veya çok kaynaklanan olmadan, bu yöntem temel olmayan iş parçacığından çağrılabilir [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) arabirimi.  
+ Bu yöntem, temel olmayan iş parçacıklarından, nesneleri barındırmak için temel olmayan bir belirtme çizgisine veya [IActiveScript:: InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md) arabirimine neden olmadan çağrılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScript](../../winscript/reference/iactivescript.md)

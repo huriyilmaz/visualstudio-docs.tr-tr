@@ -13,15 +13,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 777d20ecb51b09b282f88dc08464727b9ff2a945
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2ce6f7fe29fca2cd17c3dfcce76dac40e422aba4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432969"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572725"
 ---
 # <a name="active-script-profiling-overview"></a>Etkin Komut Dosyası Profil Oluşturmaya Genel Bakış
-[Etkin komut dosyası Profiler arabirimleri](../winscript/reference/active-script-profiler-interfaces.md) bir komut dosyası altyapısı profil oluşturmayı etkinleştirin. Etkin betik profil oluşturma, aşağıdaki bölümden oluşur:  
+[Etkin komut dosyası profil oluşturucu arabirimleri](../winscript/reference/active-script-profiler-interfaces.md) , bir betik altyapısının profilini oluşturmayı etkinleştirir. Etkin komut dosyası profil oluşturma aşağıdaki bölümlerden oluşur:  
   
 - Dil altyapısı  
   
@@ -30,18 +30,18 @@ ms.locfileid: "63432969"
 - Profil Oluşturucu  
   
 ## <a name="language-engine"></a>Dil altyapısı  
- Dil altyapısı betiğini yürütür. Bunu, betik kodunu yürütülür gibi profil oluşturma olanak tanıyan yöntemler sağlar. Profil oluşturma etkin olduğunda, dil altyapısı bağımsız değişken olarak COM nesnesi profil oluşturucu sınıfı tanımlayıcısı (CLSID) alır. Profil Oluşturucu COM nesnesinin bir örneğini oluşturur ve sonra çeşitli olaylar meydana geldiğinde profil oluşturucuyu çağırır.  
+ Dil altyapısı betiği yürütür. Yürütüldüğü için betik kodunun profilini oluşturmayı etkinleştiren yöntemler sağlar. Profil oluşturma etkinken, dil altyapısı profil oluşturucu COM nesnesinin sınıf tanımlayıcısını (CLSID) bağımsız değişken olarak alır. Profil Oluşturucu COM nesnesinin bir örneğini oluşturur ve çeşitli olaylar gerçekleştiğinde profil oluşturucuya çağırır.  
   
- Dil altyapısı uygulayan [Iactivescriptprofilercontrol arabirimi](../winscript/reference/iactivescriptprofilercontrol-interface.md).  
+ Dil altyapısı [ıactivescriptprofilercontrol arabirimini](../winscript/reference/iactivescriptprofilercontrol-interface.md)uygular.  
   
 > [!NOTE]
-> [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] Dil çalışma zamanı JS_PROFILER ortam değişkeni oluşturulurken, profil oluşturma etkinleştirilmesi gerekip gerekmediğini belirlemek için denetler. Bu değişken için profil oluşturucu CLSID değeri ayarlarsanız, dil çalışma zamanı oluşturmak için hangi profil oluşturucu belirlemek için değişkenin değerini kullanarak profil oluşturucu COM nesnesinin örneği oluşturur.  
+> @No__t_0 dil çalışma zamanı, profil oluşturmanın etkinleştirilip etkinleştirilmeyeceğini belirlemede, oluşturma sırasında JS_PROFILER ortam değişkenini denetler. Bu değişken, profil oluşturucunun CLSID 'sine ayarlandıysa, dil çalışma zamanı, oluşturulacak profil oluşturucuyu belirleyen değişkenin değerini kullanarak profil oluşturucu COM nesnesinin bir örneğini oluşturur.  
   
 ## <a name="host"></a>Ana bilgisayar  
- Konağın dil altyapısı oluşturur ve yürütülecek komut dosyaları ile dil altyapısı sağlar. Bir akıllı ana bilgisayar ayrıca, hata ayıklama veya profil oluşturma daha iyi bilgi sağlamak için hata ayıklayıcı veya profil oluşturucu tarafından kullanılabilir belge bağlamı sağlar.  
+ Konak, dil altyapısını oluşturur ve dil altyapısını yürütülecek betiklerle sağlar. Akıllı ana bilgisayar, hata ayıklama veya profil oluşturma sırasında daha iyi bilgi sağlamak için bir hata ayıklayıcı veya profil oluşturucu tarafından kullanılabilen belge bağlamını de sağlar.  
   
 ## <a name="profiler"></a>Profil Oluşturucu  
- Çeşitli olaylar meydana geldiğinde profil oluşturucu çağrılarını dil altyapısı alır. Profil Oluşturucu bir COM nesnesi olarak kayıtlı olması gerekir ve uygulamalıdır [Iactivescriptprofilercallback arabirimi](../winscript/reference/iactivescriptprofilercallback-interface.md) arabirimi.  
+ Profil Oluşturucu, çeşitli olaylar gerçekleştiğinde dil altyapısından gelen çağrıları alır. Profil Oluşturucu bir COM nesnesi olarak kaydettirilmeli ve [ıactivescriptprofilercallback Interface](../winscript/reference/iactivescriptprofilercallback-interface.md) arabirimini gerçekleştirmelidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Profil Oluşturucu Arabirimleri](../winscript/reference/active-script-profiler-interfaces.md)

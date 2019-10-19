@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::GetMemberProperties | Microsoft Docs
+title: 'IDispatchEx:: GetMemberProperties | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f607e06fe3c898a6839c0bbd2d51edee1f0ffb2c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8016eef7b6e0da9b9fc88695db845cba7f608ff3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000809"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574094"
 ---
 # <a name="idispatchexgetmemberproperties"></a>IDispatchEx::GetMemberProperties
-Bir üyenin özellikleri alır.  
+Üyenin özelliklerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,37 +39,37 @@ HRESULT GetMemberProperties(
   
 #### <a name="parameters"></a>Parametreler  
  `id`  
- Üyeyi tanımlar. Kullanan `GetDispID` veya `GetNextDispID` gönderme tanımlayıcısının elde edilir.  
+ Üyeyi tanımlar. Dağıtım tanımlayıcısını almak için `GetDispID` veya `GetNextDispID` kullanır.  
   
  `grfdexFetch`  
- Almak için hangi özellikleri belirler. Bunun altında listelenen değerleri bir birleşimi olabilir `pgrfdex` ve/veya aşağıdaki değerleri birleşimi:  
+ Alınacak özellikleri belirler. Bu, `pgrfdex` ve/veya aşağıdaki değerlerin bir birleşimi olarak listelenen değerlerin bir birleşimi olabilir:  
   
 |Değer|Açıklama|  
 |-----------|-------------|  
-|grfdexPropCanAll|FdexPropCanGet, fdexPropCanPut, fdexPropCanPutRef, fdexPropCanCall, fdexPropCanConstruct ve fdexPropCanSourceEvents birleştirir.|  
-|grfdexPropCannotAll|FdexPropCannotGet, fdexPropCannotPut, fdexPropCannotPutRef, fdexPropCannotCall, fdexPropCannotConstruct ve fdexPropCannotSourceEvents birleştirir.|  
-|grfdexPropExtraAll|FdexPropNoSideEffects ve fdexPropDynamicType birleştirir.|  
-|grfdexPropAll|GrfdexPropCanAll ve grfdexPropCannotAll grfdexPropExtraAll birleştirir.|  
+|grfdexPropCanAll|FdexPropCanGet, fdexPropCanPut, fdexPropCanPutRef, fdexPropCanCall, Fdexpropcanyapýve fdexPropCanSourceEvents ' i birleştirir.|  
+|grfdexPropCannotAll|FdexPropCannotGet, fdexPropCannotPut, fdexPropCannotPutRef, fdexPropCannotCall, Fdexpropcannotyapýsý ve fdexPropCannotSourceEvents ' i birleştirir.|  
+|grfdexPropExtraAll|FdexPropNoSideEffects ve fdexPropDynamicType 'yi birleştirir.|  
+|grfdexPropAll|GrfdexPropCanAll, grfdexPropCannotAll ve grfdexPropExtraAll birleştirir.|  
   
  `pgrfdex`  
- Adresi bir `DWORD` , istenen özellikleri alır. Bu, aşağıdaki değerleri birleşimi olabilir:  
+ İstenen özellikleri alan `DWORD` adresi. Bu, aşağıdaki değerlerin bir birleşimi olabilir:  
   
 |Değer|Açıklama|  
 |-----------|-------------|  
-|fdexPropCanGet|Üye DISPATCH_PROPERTYGET kullanılarak edinilebilir.|  
-|fdexPropCannotGet|Üye DISPATCH_PROPERTYGET kullanarak elde edilemiyor.|  
-|fdexPropCanPut|Üye DISPATCH_PROPERTYPUT kullanarak ayarlayabilirsiniz.|  
-|fdexPropCannotPut|Üye DISPATCH_PROPERTYPUT kullanarak ayarlanamaz.|  
-|fdexPropCanPutRef|Üye DISPATCH_PROPERTYPUTREF kullanarak ayarlayabilirsiniz.|  
-|fdexPropCannotPutRef|Üye DISPATCH_PROPERTYPUTREF kullanarak ayarlanamaz.|  
-|fdexPropNoSideEffects|Yan etkileri üye yok. Örneğin, bir hata ayıklayıcı güvenli bir şekilde alma/ayarlama/çağrısı olabilir ayıklanan betik durumunu değiştirmeden bu üye.|  
-|fdexPropDynamicType|Üye dinamiktir ve nesne yaşam süresi boyunca değiştirebilirsiniz.|  
-|fdexPropCanCall|Üye DISPATCH_METHOD'ı kullanarak bir yöntem çağrılabilir.|  
-|fdexPropCannotCall|Üye DISPATCH_METHOD'ı kullanarak bir yöntem çağrılamaz.|  
-|fdexPropCanConstruct|Üye DISPATCH_CONSTRUCT kullanarak bir oluşturucu olarak çağrılabilir.|  
-|fdexPropCannotConstruct|Üye DISPATCH_CONSTRUCT kullanarak bir oluşturucu olarak çağrılamaz.|  
-|fdexPropCanSourceEvents|Üyeye olayları tetikleyebilir.|  
-|fdexPropCannotSourceEvents|Üye olay başlatamaz.|  
+|fdexPropCanGet|Üye DISPATCH_PROPERTYGET kullanılarak elde edilebilir.|  
+|fdexPropCannotGet|Üye DISPATCH_PROPERTYGET kullanılarak elde edilemez.|  
+|fdexPropCanPut|Üye DISPATCH_PROPERTYPUT kullanılarak ayarlanabilir.|  
+|fdexPropCannotPut|Üye DISPATCH_PROPERTYPUT kullanılarak ayarlanamaz.|  
+|fdexPropCanPutRef|Üye DISPATCH_PROPERTYPUTREF kullanılarak ayarlanabilir.|  
+|fdexPropCannotPutRef|Üye DISPATCH_PROPERTYPUTREF kullanılarak ayarlanamaz.|  
+|fdexPropNoSideEffects|Üyenin yan etkileri yok. Örneğin, hata ayıklayıcı hata ayıklamakta olan betiğin durumunu değiştirmeden bu üyeyi güvenle alabilir/ayarlayabilir/çağırabilir.|  
+|fdexPropDynamicType|Üye dinamiktir ve nesnenin ömrü boyunca değişebilir.|  
+|fdexPropCanCall|Üye, DISPATCH_METHOD kullanarak bir yöntem olarak çağrılabilir.|  
+|fdexPropCannotCall|Üye, DISPATCH_METHOD kullanarak bir yöntem olarak çağrılamaz.|  
+|Fdexpropcanyapı|Üye, DISPATCH_CONSTRUCT kullanarak bir Oluşturucu olarak çağrılabilir.|  
+|Fdexpropcannotyapýsý|Üye, DISPATCH_CONSTRUCT kullanan bir Oluşturucu olarak çağrılamaz.|  
+|fdexPropCanSourceEvents|Üye etkinlikleri tetikedebilir.|  
+|fdexPropCannotSourceEvents|Üye olayları tetiklemez.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -77,7 +77,7 @@ HRESULT GetMemberProperties(
 |||  
 |-|-|  
 |`S_OK`|Başarılı.|  
-|`DISP_E_UNKNOWNNAME`|Adı bilinmiyor.|  
+|`DISP_E_UNKNOWNNAME`|Ad bilinmiyor.|  
   
 ## <a name="example"></a>Örnek  
   
@@ -96,7 +96,7 @@ BSTR bstrName;
    }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idispatchex arabirimi](../../winscript/reference/idispatchex-interface.md)   
- [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDispatchEx arabirimi](../../winscript/reference/idispatchex-interface.md)    
+ [IDispatchEx:: Getdıspıd](../../winscript/reference/idispatchex-getdispid.md)    
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

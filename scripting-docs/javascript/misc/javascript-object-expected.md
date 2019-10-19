@@ -14,20 +14,20 @@ ms.assetid: cc7cc32b-e444-4afa-9be1-802c83fdf5ae
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ceaae323c974a1f41b6f5bd2a3ca093ef7c0b2d9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 20b9b6b17ac0e0aeeeeae99c39954bfd6b283fe2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007516"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573800"
 ---
 # <a name="javascript-object-expected"></a>JavaScript nesne bekleniyor
-Olmayan bir geçirmeye çalıştığınız[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] bekliyor yerleşik bir işlev nesnesi bir [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] nesne. Çeşitli yerleşik işlevleri içinde tanımlanan nesneler gerektirir [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] (aksine konak veya denetimi gibi bir dış bileşen tarafından tanımlanan nesneler).  
+@No__t_0 olmayan bir nesneyi, bir [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] nesnesi bekleyen yerleşik bir işleve geçirmeye çalıştınız. Çeşitli yerleşik işlevler, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] tanımlanmış nesneleri (konak tarafından tanımlanan nesnelerle veya bir denetim gibi harici bir bileşen) gerektirir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Nesne doğru türde bir parametre olduğu gibi geçirdiğinizden emin olun.  
+- Parametre olarak geçirdiğiniz nesnenin doğru türde olduğundan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesneler ve diziler](../../javascript/objects-and-arrays-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Nesneler ve diziler](../../javascript/objects-and-arrays-javascript.md)    
  [Dizileri Kullanma](../../javascript/advanced/using-arrays-javascript.md)

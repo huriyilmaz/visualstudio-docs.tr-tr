@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::GetScriptSite | Microsoft Docs
+title: 'IActiveScript:: GetScriptSite | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b57c4282b7ec77eb4af2ffa983479ae77388e1c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 567c7b5c1ead5388e6ec9c67d6ab6f9f580adf20
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935777"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575740"
 ---
 # <a name="iactivescriptgetscriptsite"></a>IActiveScript::GetScriptSite
-Windows komut dosyası motoruyla ilişkili site nesnesi alır.  
+Windows komut dosyası altyapısı ile ilişkili site nesnesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,10 +38,10 @@ HRESULT GetScriptSite(
   
 #### <a name="parameters"></a>Parametreler  
  `iid`  
- [in] İstenen arabirim tanımlayıcısı.  
+ 'ndaki İstenen arabirimin tanımlayıcısı.  
   
  `ppvSiteObject`  
- [out] Ana bilgisayarın site nesnesi arabirim işaretçisi alır konumu adresi.  
+ dışı Konağın site nesnesine arabirim işaretçisini alan konumun adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -49,10 +49,10 @@ HRESULT GetScriptSite(
 |Dönüş Değeri|Açıklama|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
-|`E_INVALIDARG`|Bir bağımsız değişken geçersiz.|  
-|`E_NOINTERFACE`|Belirtilen bir arabirim desteklenmiyor.|  
-|`E_POINTER`|Geçersiz işaretçi belirtildi.|  
-|`S_FALSE`|Site ayarlandı; `ppvSiteObject` parametrenin ayarlanmış `NULL`.|  
+|`E_INVALIDARG`|Bağımsız değişken geçersizdi.|  
+|`E_NOINTERFACE`|Belirtilen arabirim desteklenmiyor.|  
+|`E_POINTER`|Geçersiz bir işaretçi belirtildi.|  
+|`S_FALSE`|Hiçbir site ayarlanmadı; `ppvSiteObject` parametresi `NULL` olarak ayarlanır.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScript](../../winscript/reference/iactivescript.md)

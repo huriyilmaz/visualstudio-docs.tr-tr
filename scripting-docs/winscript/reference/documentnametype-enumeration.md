@@ -1,5 +1,5 @@
 ---
-title: DOCUMENTNAMETYPE listelemesi | Microsoft Docs
+title: DOCUMENTNAMETYPE numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5ee258602c47951f4731dc1378542cc83d57d72b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 401eb759523ed1a33d24c3a298db0b3de2b7d5a7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955230"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575869"
 ---
 # <a name="documentnametype-enumeration"></a>DOCUMENTNAMETYPE Listelemesi
 Bir belge için hangi türün alınacağını açıklar.  
@@ -42,11 +42,11 @@ DOCUMENTNAMETYPE_UNIQUE_TITLE,} DOCUMENTNAMETYPE;
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|DOCUMENTNAMETYPE_APPNODE|Uygulama ağaçta görünen adını alır.|  
-|DOCUMENTNAMETYPE_TITLE|Görüntüleyici başlık çubuğunda görünen adını alır.|  
-|DOCUMENTNAMETYPE_FILE_TAIL|Bir yol olmadan dosya adını alır.|  
-|DOCUMENTNAMETYPE_URL|Belge URL'sini alır.|  
-|DOCUMENTNAMETYPE_UNIQUE_TITLE|Tanımlama için numaralandırma protokolün başlığını alır.|  
+|DOCUMENTNAMETYPE_APPNODE|Adı uygulama ağacında göründüğü şekilde alır.|  
+|DOCUMENTNAMETYPE_TITLE|Görüntüleyici başlık çubuğunda görünen adı alır.|  
+|DOCUMENTNAMETYPE_FILE_TAIL|Dosya adını yol olmadan alır.|  
+|DOCUMENTNAMETYPE_URL|Belgenin URL 'sini alır.|  
+|DOCUMENTNAMETYPE_UNIQUE_TITLE|Tanımlama için sabit listesi eklenmiş başlığı alır.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

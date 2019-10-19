@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetChild | Microsoft Docs
+title: 'Icriptnode:: GetChild | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 78b5c84c6ed9b3de9593f0d6ff02df93a0e9ba77
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 27ddde527be1ea4148e4166581ab2cb1a71d15f7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787136"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573562"
 ---
 # <a name="iscriptnodegetchild"></a>IScriptNode::GetChild
-Belirtilen dizin düğümünde en alt öğesini döndürür.  
+Düğümde belirtilen dizinde olan alt öğesini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,14 +38,14 @@ HRESULT GetChild(
   
 #### <a name="parameters"></a>Parametreler  
  `isn`  
- [in] Üst alt dizini.  
+ 'ndaki Üst öğe içindeki alt öğenin dizini.  
   
  `ppsn`  
- [out] Bir işaretçiye alan değişkenin adresini `IScriptNode` alt örneğinin arabirimi.  
+ dışı Alt örneğin `IScriptNode` arabirimine bir işaretçi alan bir değişkenin adresi.  
   
- İçin `IScriptNode` bir Web sayfasını temsil eden nesneleri, bu parametre bir betik bloğu içeren bir nesne döndürür.  
+ Bir Web sayfasını temsil eden `IScriptNode` nesneler için, bu parametre betik bloğu içeren bir nesne döndürür.  
   
- İçin `IScriptEntry` belirten bir betik bloğu nesneler bu parametre, bir işlevi belirtir bir nesne döndürür.  
+ Bir betik bloğunu belirten `IScriptEntry` nesneler için, bu parametre bir işlevi belirten bir nesne döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -55,7 +55,7 @@ HRESULT GetChild(
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçin `IScriptEntry` bir işlev nesnesi belirtin nesneleri ve `IScriptScriptlet` nesneler, bu yöntem başarısız olmadığı için alt giriş yok.  
+ Bir işlev nesnesi ve `IScriptScriptlet` nesneleri belirten `IScriptEntry` nesneler için, alt girdi bulunmadığından bu yöntem başarısız olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptNode Arabirimi](../../winscript/reference/iscriptnode-interface.md)

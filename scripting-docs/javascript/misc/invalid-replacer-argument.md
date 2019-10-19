@@ -1,5 +1,5 @@
 ---
-title: Geçersiz değiştirici bağımsız değişken | Microsoft Docs
+title: Geçersiz yeniden değiştirici bağımsız değişkeni | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -15,22 +15,22 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 46e01a4e6bb989fad2da6f979c79b7aba13df63a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9ba76a2121dfb3853e38bacbdf49c985103c2a35
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007320"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573804"
 ---
 # <a name="invalid-replacer-argument"></a>Geçersiz değiştirici bağımsız değişken
-Çağırmak için bir girişimde bulunuldu `JSON.stringify` bağımsız değişkeni geçerli değil. `replacer` Bağımsız değişkeni bir işlev veya dizi olması gerekir.  
+Geçerli olmayan bir bağımsız değişkenle `JSON.stringify` çağırma girişiminde bulunuldu. @No__t_0 bağımsız değişkeni bir işlev veya dizi olmalıdır.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Değişiklik `replacer` bağımsız değişkeni bir işlev veya dizi.  
+- @No__t_0 bağımsız değişkenini bir işlev veya dizi olarak değiştirin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekteki kod bir çalışma zamanı hatasına neden olur `memberfilter` bir işlev veya dizi yerine bir nesnedir.  
+ Bu örnekteki kod, `memberfilter` bir işlev veya dizi yerine bir nesne olduğundan, bir çalışma zamanı hatasına neden olur.  
   
 ```JavaScript  
 var contact = new Object();  
@@ -44,7 +44,7 @@ var memberfilter = new Object();
 var jsontext = JSON.stringify(contact, memberfilter, "\t");  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [JSON nesnesi](../../javascript/reference/json-object-javascript.md)   
- [JSON.parse işlevi](../../javascript/reference/json-parse-function-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [JSON nesnesi](../../javascript/reference/json-object-javascript.md)    
+ [JSON. Parse işlevi](../../javascript/reference/json-parse-function-javascript.md)    
  [JavaScript Çalışma zamanı Hataları](../../javascript/reference/javascript-run-time-errors.md)

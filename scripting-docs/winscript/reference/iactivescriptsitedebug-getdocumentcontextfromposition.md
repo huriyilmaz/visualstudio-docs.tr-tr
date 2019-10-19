@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug::GetDocumentContextFromPosition | Microsoft Docs
+title: 'Iactivescriptsitedebug:: GetDocumentContextFromPosition | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: df6c59fea5cfd60b6ae9a1b34e7000bd38dd9920
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 61bc36b98fee31ced1f3e8e00d084b5dabcd2124
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992547"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570165"
 ---
 # <a name="iactivescriptsitedebuggetdocumentcontextfromposition"></a>IActiveScriptSiteDebug::GetDocumentContextFromPosition
-Temsilci seçme için dil altyapısı tarafından kullanılan `IDebugCodeContext::GetSourceContext`.  
+@No__t_0 temsilci seçmek için dil altyapısı tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,26 +40,26 @@ HRESULT GetDocumentContextFromPosition(
   
 #### <a name="parameters"></a>Parametreler  
  `dwSourceContext`  
- [in] Sağlanan kaynak içeriği `ParseScriptText` veya `AddScriptlet`.  
+ 'ndaki @No__t_0 veya `AddScriptlet` için belirtilen kaynak içerik.  
   
  `uCharacterOffset`  
- [in] Karakter göre betik bloğu ya da kod oluşturma başlangıç uzaklığı.  
+ 'ndaki Betik bloğunun veya kod oluşturma yöntemi başlangıcına göre karakter boşluğu.  
   
  `uNumChars`  
- [in] Bu bağlamda karakter sayısı.  
+ 'ndaki Bu bağlamdaki karakterlerin sayısı.  
   
  `ppsc`  
- [out] Bu karakter konumu aralığına karşılık gelen belge bağlamı.  
+ dışı Bu karakter konumu aralığına karşılık gelen belge bağlamı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dil altyapıları temsilci seçmek için bu yöntemi kullanın `IDebugCodeContext::GetSourceContext`.  
+ Dil motorları `IDebugCodeContext::GetSourceContext` atamak için bu yöntemi kullanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSiteDebug Arabirimi](../../winscript/reference/iactivescriptsitedebug-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::GetBreakFlags | Microsoft Docs
+title: 'IDebugApplication:: GetBreakFlags | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 389f50cf6883cd59cd540ef278aa1b4f69a6a629
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a614429ebb8cc9271a0444536d14c45b69a9588f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990906"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574982"
 ---
 # <a name="idebugapplicationgetbreakflags"></a>IDebugApplication::GetBreakFlags
-Uygulama için geçerli kesme bayrakları döndürür.  
+Uygulamanın geçerli kesme bayraklarını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,21 +38,21 @@ HRESULT GetBreakFlags(
   
 #### <a name="parameters"></a>Parametreler  
  `pabf`  
- [out] Uygulama için geçerli kesme bayraklar.  
+ dışı Uygulamanın geçerli kesme bayrakları.  
   
  `pprdatSteppingThread`  
- [out] Şu anda çalışan iş parçacığı.  
+ dışı Çalışmakta olan iş parçacığı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, uygulama için geçerli kesme bayrakları döndürür.  
+ Bu yöntem, uygulamanın geçerli kesme bayraklarını döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
  [APPBREAKFLAGS Sabit Listesi](../../winscript/reference/appbreakflags-enumeration.md)

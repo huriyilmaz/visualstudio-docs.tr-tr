@@ -1,5 +1,5 @@
 ---
-title: ICanHandleException::CanHandleException | Microsoft Docs
+title: 'Itiphandleexception:: CanHandleException | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 406787d5ee6811b80f9e6831e5a67cab8367e7d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c536d35dcb9f0faca8b033ecd39aec520a2e260a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991393"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575716"
 ---
 # <a name="icanhandleexceptioncanhandleexception"></a>ICanHandleException::CanHandleException
-Komut dosyası altyapısı çağıran bir belirtilen bir özel durumu işleyebilir belirler.  
+Betik altyapısının çağıranın belirtilen özel durumu işleyemeyeceğini belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT CanHandleException(
   
 #### <a name="parameters"></a>Parametreler  
  `pExcepInfo`  
- [in] İşaretçi bir `EXCEPINFO` hiçbir özel durum işleyicisi bulunursa bildirilir bilgileri içeren yapısı.  
+ 'ndaki Özel durum işleyici bulunmazsa bildirilecek bilgileri içeren `EXCEPINFO` yapısına yönelik işaretçi.  
   
  `pvar`  
- [in] Tarafından oluşturulan değeri gibi bir özel durumla ilişkili bir değer bir `throw` deyimi. Bu parametre olabilir `NULL`.  
+ 'ndaki Bir `throw` ifadesiyle oluşturulan değer gibi özel durumla ilişkili bir değer. Bu parametre `NULL` olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Çağıran özel durumu işleyebilecek|  
-|`E_FAIL`|Çağıran özel durum işleyemiyor.|  
+|`S_OK`|Çağıran özel durumu işleyebilir|  
+|`E_FAIL`|Çağıran özel durumu işleyemez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir çağrı, `IDispatchEx::InvokeEx`, veya benzer bir yöntem, bir özel durum, bir çağıranın destekleyen betiğin arayan zincirindeki betik altyapısı denetler sonuçlanıyor `ICanHandleException` arabirim ve özel durum işleyebileceğini belirtir. Hiçbir çağıran özel durumu işleyebilecek, komut dosyası altyapısı durdurur.  
+ @No__t_0 çağrısı veya benzer bir yöntem, bir özel durumla sonuçlandığında, komut dosyası altyapısı komut dosyasının çağrı zincirinde `ICanHandleException` arabirimini destekleyen ve özel durumu işleyebileceğini belirten bir arayan arar. Hiçbir çağıran özel durumu işleyememesi durumunda, komut dosyası motoru durur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Icanhandleexception arabirimi](../../winscript/reference/icanhandleexception-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Itiphandleexception arabirimi](../../winscript/reference/icanhandleexception-interface.md)    
  [IDispatchEx::InvokeEx](../../winscript/reference/idispatchex-invokeex.md)

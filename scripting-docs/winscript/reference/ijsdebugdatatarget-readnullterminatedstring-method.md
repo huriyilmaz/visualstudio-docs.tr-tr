@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::readnullterminatedstring yöntemi | Microsoft Docs
+title: "IJsDebugDataTarget:: Readnullsonlandır' dize yöntemi | Microsoft Docs"
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 178a2d3705e4904de9253c02319f6ba94e567d76
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 67d6ee6c8dad81865767b0b944ef311fc0de0063
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582374"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572406"
 ---
 # <a name="ijsdebugdatatargetreadnullterminatedstring-method"></a>IJsDebugDataTarget::ReadNullTerminatedString Yöntemi
 Hedeften belirtilen sayıda karakteri okur.  
@@ -38,16 +38,16 @@ HRESULT ReadNullTerminatedString(
   
 #### <a name="parameters"></a>Parametreler  
  `address`  
- [in] Okunacak adresi.  
+ 'ndaki Okunacak adres.  
   
  `characterSize`  
  [in] dizedeki her karakterin boyutu  
   
  `maxCharacters`  
- [in] Okunacak karakter sayısı. maxCharacters makul olmalıdır. 128 MB'den fazla bellek isteği başarısız olur.  Dize maxcharacters'ten ise, sonuç dizesi yine maxCharacters ardından kesilecektir.  
+ 'ndaki Okunacak maksimum karakter sayısı. maxCharacters makul olmalıdır. 128 MB 'tan fazla bellek için herhangi bir istek başarısız olur.  Dize maxCharacters 'den büyükse, sonuç dizesi maxCharacters sonra kesilir.  
   
  `pString`  
- [out] BSTR hedeften okuyun.  
+ dışı Hedeften okunan BSTR.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -55,7 +55,7 @@ HRESULT ReadNullTerminatedString(
  Kesilmişse S_FALSE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugDataTarget Arabirimi](../../winscript/reference/ijsdebugdatatarget-interface.md)

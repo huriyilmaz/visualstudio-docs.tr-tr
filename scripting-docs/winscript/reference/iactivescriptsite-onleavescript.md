@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::OnLeaveScript | Microsoft Docs
+title: 'IActiveScriptSite:: OnLeaveScript | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da39058a8f069c4799835108372d11849d86444e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9d872948fea14998f9c6f8140467d6e4c83d056
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992674"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570324"
 ---
 # <a name="iactivescriptsiteonleavescript"></a>IActiveScriptSite::OnLeaveScript
-Konak, komut dosyası altyapısı betik kodu yürütülmesini döndürdüğünü bildirir.  
+Betik altyapısının yürütülen komut dosyası kodundan döndürdüğü konağa bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,10 +34,10 @@ HRESULT OnLeaveScript(void);
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa.  
+ Başarılı olursa `S_OK` döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Komut dosyası altyapısı, komut dosyası altyapısı girilen çağıran bir uygulama denetimi döndürmeden önce bu yöntemi çağırmanız gerekir. Örneğin, betik, bir nesne çağırır, ardından komut dosyası altyapısı tarafından işlenen bir olayı tetikler, komut dosyası altyapısı çağırmalıdır [IActiveScriptSite::OnEnterScript](../../winscript/reference/iactivescriptsite-onenterscript.md) olay yürütmeden önce yöntemi ve çağırmalıdır`IActiveScriptSite::OnLeaveScript`sonra olay, olayı tetikleyen nesne döndürmeden önce yürütülüyor. Bu yönteme çağrıları yuvalanabilir. Yapılan her çağrı `IActiveScriptSite::OnEnterScript` bu yönteme yapılan çağrı gerektirir.  
+ Betik altyapısı, komut dosyası motoruna girilen bir çağıran uygulamaya denetim döndürmeden önce bu yöntemi çağırmalıdır. Örneğin, komut dosyası, daha sonra betik altyapısı tarafından işlenen bir olayı harekete geçirdikten sonra betik altyapısı, olayı yürütmeden önce [IActiveScriptSite:: OnEnterScript](../../winscript/reference/iactivescriptsite-onenterscript.md) metodunu çağırmalıdır ve olayı yürüttükten sonra `IActiveScriptSite::OnLeaveScript` çağırmalıdır olayı tetikleyen nesneye döndürmeden önce. Bu yönteme yapılan çağrılar iç içe olabilir. @No__t_0 yapılan her çağrıya, bu yönteme karşılık gelen bir çağrı gerekir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

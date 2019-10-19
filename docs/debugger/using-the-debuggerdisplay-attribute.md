@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 866ad705f16e9eabb097e9c0c9064d2c379ebf9f
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
-ms.translationtype: HT
+ms.openlocfilehash: f16040408def290536ac5dadfec77ade9577c821
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349632"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72568915"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Hata ayıklayıcıya DebuggerDisplay özniteliği kullanarak neyin gösterileceğini söyleyin (C#, Visual Basic, F#, C++/CLI)
 
@@ -182,6 +182,6 @@ class MyHashtable
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [DebuggerTypeProxy Özniteliğini Kullanma](../debugger/using-debuggertypeproxy-attribute.md)
-- [Yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-dot-managed-objects.md)
+- [Yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-managed-objects.md)
 - [C# dilinde biçim belirticileri](../debugger/format-specifiers-in-csharp.md)
 - [Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

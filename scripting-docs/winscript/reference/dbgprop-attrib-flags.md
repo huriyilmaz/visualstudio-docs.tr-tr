@@ -19,15 +19,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0324353d716430148b4b3c7b8adf9262e0dc3b7b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3170e310aa3177e2ca7a1dd81ead02bcc4050114
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955282"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572602"
 ---
-# <a name="dbgpropattribflags"></a>DBGPROP_ATTRIB_FLAGS
-Çeşitli özniteliklerini açıklayan bir `IDebugProperty`. Üyesi `DebugPropertyInfo` yapısı.  
+# <a name="dbgprop_attrib_flags"></a>DBGPROP_ATTRIB_FLAGS
+@No__t_0 için çeşitli öznitelikleri açıklar. @No__t_0 yapısının üyesi.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -56,59 +56,59 @@ DBGPROP_ATTRIB_NO_ATTRIB  =0x00000000,
   
 ## <a name="members"></a>Üyeler  
  DBGPROP_ATTRIB_NO_ATTRIB  
- Öznitelikleri gösterir.  
+ Öznitelik olmadığını gösterir.  
   
  DBGPROP_ATTRIB_VALUE_IS_INVALID  
- Belirten değer `DebugPropertyInfo::bstrValue` geçerli değil.  
+ @No__t_0 değerinin geçerli olmadığını gösterir.  
   
  DBGPROP_ATTRIB_VALUE_IS_EXPANDABLE  
- Başvuru veya özelliğin alt sahip olduğunu gösterir.  
+ Başvurunun veya özelliğin alt öğe olduğunu gösterir.  
   
  DBGPROP_ATTRIB_VALUE_READONLY  
- Değer salt okunur olduğunu gösterir.  
+ Değerin salt okunurdur olduğunu gösterir.  
   
  DBGPROP_ATTRIB_ACCESS_PUBLIC  
- Genel erişimi olan bir nesne belirtir.  
+ Ortak erişime sahip bir nesneyi gösterir.  
   
  DBGPROP_ATTRIB_ACCESS_PRIVATE  
- Özel erişimi olan bir nesne belirtir.  
+ Özel erişimi olan bir nesneyi gösterir.  
   
  DBGPROP_ATTRIB_ACCESS_PROTECTED  
- Korumalı Erişim bir nesne belirtir.  
+ Korumalı erişimi olan bir nesneyi gösterir.  
   
  DBGPROP_ATTRIB_ACCESS_FINAL  
- Son erişimi olan bir nesne belirtir.  
+ Son erişimi olan bir nesneyi gösterir.  
   
  DBGPROP_ATTRIB_STORAGE_GLOBAL  
- Genel depolama gösterir.  
+ Genel depolamayı gösterir.  
   
  DBGPROP_ATTRIB_STORAGE_STATIC  
- Statik depolama gösterir.  
+ Statik depolamayı gösterir.  
   
  DBGPROP_ATTRIB_STORAGE_FIELD  
- Bir özelliği olan nesneyi belirtir.  
+ Özelliği olan bir nesneyi gösterir.  
   
  DBGPROP_ATTRIB_STORAGE_VIRTUAL  
- Sanal depolama gösterir.  
+ Sanal depolamayı gösterir.  
   
  DBGPROP_ATTRIB_TYPE_IS_CONSTANT  
- Nesne türü sabit olduğunu gösterir.  
+ Nesne türünün sabit olduğunu gösterir.  
   
  DBGPROP_ATTRIB_TYPE_IS_SYNCHRONIZED  
- Bu yuva eşzamanlı iş parçacığı olduğunu gösterir.  
+ Bu yuvanın iş parçacığı eşitlenmiş olduğunu gösterir.  
   
  DBGPROP_ATTRIB_TYPE_IS_VOLATILE  
- Bu yuva göre kalıcı depolama geçici olduğunu gösterir.  
+ Bu yuvanın kalıcı depolamaya göre geçici olduğunu gösterir.  
   
  DBGPROP_ATTRIB_HAS_EXTENDED_ATTRIBS  
- Bu yuva öznitelikleri önceden tanımlanmış bu BITS sunmayan sahip olduğunu gösterir.  
+ Bu yuvanın yukarıda ve bu önceden tanımlanmış bitlerin ötesinde özniteliklerin olduğunu gösterir.  
   
  DBGPROP_ATTRIB_VALUE_IS_RETURN_VALUE  
- Değer bir işlevden dönüş değeri olduğunu gösterir.  
+ Değerin bir işlevden döndürülen değer olduğunu gösterir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu bayrak, bir nesnenin alt öğelerini filtrelemek için de kullanılır. Değerleri bir bit düzeyinde OR ile birleştirilebilir.  
+ Bu bayraklar bir nesnenin alt öğelerini filtrelemek için de kullanılır. Değerler bit düzeyinde OR ile birleştirilebilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)    
  [DebugPropertyInfo Yapısı](../../winscript/reference/debugpropertyinfo-structure.md)

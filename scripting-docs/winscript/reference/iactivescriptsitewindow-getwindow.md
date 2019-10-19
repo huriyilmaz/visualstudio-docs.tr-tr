@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteWindow::GetWindow | Microsoft Docs
+title: 'Iactivescriptsitewindow:: GetWindow | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7b6efa066765339375a8315695aa9c1de2f9c46b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d8263db447c7692ec7b0982127d63b4bea588a4b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992063"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574351"
 ---
 # <a name="iactivescriptsitewindowgetwindow"></a>IActiveScriptSiteWindow::GetWindow
-Komut dosyası altyapısı görüntülemelidir bir açılır pencere sahibi olarak davranıp bir pencere için işleme alır.  
+Komut dosyası altyapısının görüntülemesi gereken bir açılır pencerenin sahibi görevi gören bir pencereye tutamacı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,13 +37,13 @@ HRESULT GetWindow(
   
 #### <a name="parameters"></a>Parametreler  
  `phwnd`  
- [out] Pencere tanıtıcısı alan değişkenin adresi.  
+ dışı Pencere tanıtıcısını alan bir değişkenin adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa veya `E_FAIL` varsa bir hata oluştu.  
+ Başarılı olursa `S_OK` döndürür veya bir hata oluştuysa `E_FAIL`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem benzer `IOleWindow::GetWindow` yöntemi.  
+ Bu yöntem `IOleWindow::GetWindow` metoduna benzerdir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSiteWindow](../../winscript/reference/iactivescriptsitewindow.md)

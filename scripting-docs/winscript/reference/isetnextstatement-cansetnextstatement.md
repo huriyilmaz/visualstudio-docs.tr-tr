@@ -1,5 +1,5 @@
 ---
-title: ISetNextStatement::CanSetNextStatement | Microsoft Docs
+title: 'Isetnextdeyimin:: Cansetnextdeyimizi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eb65faaf107c42b44201ea18c1150f8093b1654c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56cf0b2e4afd7a86a087b37be4b23758a5b59720
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786621"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571846"
 ---
 # <a name="isetnextstatementcansetnextstatement"></a>ISetNextStatement::CanSetNextStatement
-Bu yöntem, belirtilen konuma belirleyen kodda yürütülecek sonraki deyimin yürütme noktasını ayarlayıp ayarlayamayacağını belirler.  
+Bu yöntem, çalıştırılacak bir sonraki kod ifadesini belirleyen yürütme noktasının belirtilen konuma ayarlanamayacağını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,20 +36,20 @@ HRESULT CanSetNextStatement(
   
 #### <a name="parameters"></a>Parametreler  
  `pStackFrame`  
- [in] Bir yığın çerçevesi nesne işaretçisi.  
+ 'ndaki Yığın çerçevesi nesnesine yönelik işaretçi.  
   
  `pCodeContext`  
- [in] Kod kapsamı nesnesine işaretçi.  
+ 'ndaki Kod bağlamı nesnesine yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Sonraki deyim, belirtilen kod bağlamı için güncelleştirilebilir.|  
-|`S_FALSE`|Sonraki deyimi için belirtilen kod bağlamı güncelleştirilemiyor.|  
+|`S_OK`|Sonraki ifade belirtilen kod bağlamına güncelleştirilebilen olabilir.|  
+|`S_FALSE`|Sonraki ifade belirtilen kod bağlamına güncelleştirilemez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [ISetNextStatement Arabirimi](../../winscript/reference/isetnextstatement-interface.md)

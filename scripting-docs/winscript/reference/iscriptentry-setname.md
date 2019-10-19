@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetName | Microsoft Docs
+title: 'Icriptentry:: SetName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f6476869a54921cfdac34e9f1ed202adef909ddf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d9dfa27c6c8c58c0ee1599e17e1da5b5f424e416
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787607"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575348"
 ---
 # <a name="iscriptentrysetname"></a>IScriptEntry::SetName
-Tek bir nesne (örneğin, bir işlev) temsil eden girdi, nesnenin adını ayarlar.  
+Tek bir nesneyi temsil eden girişler (örneğin, bir işlev) için, nesnenin adını ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT SetName(
   
 #### <a name="parameters"></a>Parametreler  
  `psz`  
- [in] Sunucunun yeni adını `IScriptEntry` nesne.  
+ 'ndaki @No__t_0 nesnesinin yeni adı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -48,6 +48,6 @@ HRESULT SetName(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iscriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)    
  [IScriptEntry::GetName](../../winscript/reference/iscriptentry-getname.md)

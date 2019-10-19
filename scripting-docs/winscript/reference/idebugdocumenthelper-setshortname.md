@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::SetShortName | Microsoft Docs
+title: 'Idebugbelgethelper:: SetShortName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 84cab7872272b08e12c532e6c07b4afb741a53c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 40716b65c863106b6964a65efcf47dcdcdd6bfc5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963552"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569942"
 ---
 # <a name="idebugdocumenthelpersetshortname"></a>IDebugDocumentHelper::SetShortName
-Kısa ad belge için ayarlar.  
+Belge için kısa adı ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT SetShortName(
   
 #### <a name="parameters"></a>Parametreler  
  `pszShortName`  
- [in] Belge kısa adını içeren null ile sonlandırılmış bir dize.  
+ 'ndaki Belgenin kısa adını içeren null ile sonlandırılmış bir dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, yeni bir kısa ad belge için ayarlar.  
+ Bu yöntem, belge için yeni bir kısa ad ayarlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentHelper Arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)

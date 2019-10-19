@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::HandleRuntimeError | Microsoft Docs
+title: 'IDebugApplication:: HandleRuntimeError | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c2c9a8b15b5095ac346ba047d6668aada7647a31
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2fd4ba2b811cd6c4e38c10a0c68c5808f2c0870a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63412431"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574327"
 ---
 # <a name="idebugapplicationhandleruntimeerror"></a>IDebugApplication::HandleRuntimeError
-Geçerli iş parçacığını engellemek neden olur ve hata ayıklayıcıya IDE hatanın bir bildirim gönderir.  
+Geçerli iş parçacığının, hata ayıklayıcı IDE 'sine hata bildirimini ve hata bildirimini göndereceğini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,36 +41,36 @@ HRESULT HandleRuntimeError(
   
 #### <a name="parameters"></a>Parametreler  
  `pErrorDebug`  
- [in] Gerçekleşen hata.  
+ 'ndaki Oluşan hata.  
   
  `pScriptSite`  
- [in] İş parçacığının betik sitesi.  
+ 'ndaki İş parçacığının betik sitesi.  
   
  `pbra`  
- [out] Hata ayıklayıcı uygulama devam ettiğinde gerçekleştirilecek eylem.  
+ dışı Hata ayıklayıcı uygulamayı sürdürür gerçekleştirilecek eylem.  
   
  `perra`  
- [out] Bir hata varsa hata ayıklayıcı uygulama devam ettiğinde gerçekleştirilecek eylem.  
+ dışı Hata ayıklayıcı hata oluşursa uygulamayı sürdürür gerçekleştirilecek eylem.  
   
  `pfCallOnScriptError`  
- [out] Olan bayrağı `TRUE` altyapısı çağırırsanız `IActiveScriptSite::OnScriptError` yöntemi.  
+ dışı Altyapının `IActiveScriptSite::OnScriptError` yöntemini çağırması gerekiyorsa `TRUE` bayrak.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir dil altyapısı, bir çalışma zamanı hatası neden olan bir iş parçacığının bağlamında bu yöntemi çağırır. Bu yöntem geçerli iş parçacığını engelleme neden olur ve IDE hata ayıklayıcı için gönderilecek bir hata bildirimi gönderir. IDE hata ayıklayıcı uygulama devam ettiğinde, bu yöntem gerçekleştirilecek eylem döndürür.  
+ Bir dil altyapısı, çalışma zamanı hatasına neden olan bir iş parçacığının bağlamında bu yöntemi çağırır. Bu yöntem, geçerli iş parçacığının, hata ayıklayıcı IDE 'sine gönderilmek üzere bir hata bildirimi engellemesini ve göndereceğini sağlar. Hata ayıklayıcı IDE uygulamayı devam ettirir, bu yöntem gerçekleştirilecek eylem ile birlikte döndürür.  
   
 > [!NOTE]
-> Çalışma zamanı hata, dil altyapısı yığın çerçevelerini numaralandırma veya nevyhodnocovat gibi görevleri gerçekleştirmek için iş parçacığı tarafından çağrılabilir.  
+> Çalışma zamanı hatasında, dil motoru, yığın çerçevelerini numaralandırma veya ifadeleri değerlendirme gibi görevleri yapmak için iş parçacığı tarafından çağrılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
- [Iactivescripterrordebug arabirimi](../../winscript/reference/iactivescripterrordebug-interface.md)   
- [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md)   
- [BREAKRESUMEACTION numaralandırması](../../winscript/reference/breakresumeaction-enumeration.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
+ [Iactivescripterrordebug arabirimi](../../winscript/reference/iactivescripterrordebug-interface.md)    
+ [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md)    
+ [Breakresumeaction numaralandırması](../../winscript/reference/breakresumeaction-enumeration.md)    
  [ERRORRESUMEACTION Sabit Listesi](../../winscript/reference/errorresumeaction-enumeration.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::SetTextAttributes | Microsoft Docs
+title: 'Idebugbelgethelper:: SetTextAttributes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5d6ef4130cd9383cf4f59c2e3f5407bdb7780a0e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7cc5e5955652fd8b59d4c502e68d97a729ded141
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949025"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569465"
 ---
 # <a name="idebugdocumenthelpersettextattributes"></a>IDebugDocumentHelper::SetTextAttributes
-Metin, o metin üzerinde diğer öznitelikleri geçersiz kılma bir dizi öznitelikleri ayarlar.  
+Metin aralığındaki öznitelikleri ayarlar ve bu metindeki diğer öznitelikleri geçersiz kılar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,27 +39,27 @@ HRESULT SetTextAttributes(
   
 #### <a name="parameters"></a>Parametreler  
  `ulCharOffset`  
- [in] Metin aralığı başlangıç konumu.  
+ 'ndaki Metin aralığının başlangıç konumu.  
   
  `cChars`  
- [in] Aralığın karakter sayısı.  
+ 'ndaki Aralıktaki karakterlerin sayısı.  
   
  `pstaTextAttr`  
- [in] Metin aralığı için kaynak metin öznitelikleri.  
+ 'ndaki Metin aralığı için kaynak metin öznitelikleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağırmak için bir hata olduğunu `SetTextAttributes` metni belgeye eklenmeden önce bir metin aralığı. Çağrı `AddDBCSText`, `AddUnicodeText`, veya `AddDeferredText` belgeye metin ekleme yöntemleri.  
+ Metin belgeye eklenmeden önce metin aralığında `SetTextAttributes` çağırmak hatadır. Belgeye metin eklemek için `AddDBCSText`, `AddUnicodeText` veya `AddDeferredText` yöntemlerini çağırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugdocumenthelper arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
- [IDebugDocumentHelper::AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
- [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
+ [Idebugbelgethelper:: AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)    
+ [Idebugbelgethelper:: AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
+ [Idebugbelgethelper:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

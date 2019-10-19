@@ -1,5 +1,5 @@
 ---
-title: Oluşturulan özel durum yakalanmadı | Microsoft Docs
+title: Özel durum oluştu ve yakalanmadı | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,25 +14,25 @@ ms.assetid: b5235490-a8e7-42e3-804e-d85235bc6f05
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bae4ed0a335a9c12d16cb46208f77c4b66f12547
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 05a9e4f51d5daf7a9e1b1153acbbe8b76b539b72
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946335"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572860"
 ---
 # <a name="exception-thrown-and-not-caught"></a>Oluşan özel durum yakalanmadı
-Dahil edilen bir `throw` kodunuzu, ancak deyiminde çevrilmeyen içinde bir **deneyin** bloğu veya oluştu Hayır ilişkili **catch** bloğunun Hata. Özel durumlar içinden **deneyin** kullanarak block **throw** deyimi ve yakalanan dışında **deneyin** ile engelleyecek bir **catch** deyimi.  
+Kodunuzda bir `throw` ifadesini eklemiş olursunuz, ancak bir **TRY** bloğu içine alınmıştı veya hatayı yakalamak için ilişkili bir **catch** bloğu yoktu. Özel durumlar **throw** ifadesiyle **TRY** bloğunun içinden oluşturulur ve **catch** ifadesiyle **TRY** bloğunun dışında yakalanır.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Bir özel durum oluşturabilecek kod içine bir **deneyin** engellemek ve buna karşılık gelen bulunduğundan emin olun **catch** blok.  
+- Bir **TRY** bloğunda özel durum oluşturabilecek kodu tırnak içine alın ve buna karşılık gelen bir **catch** bloğu olduğundan emin olun.  
   
-- Catch deyimi özel durumu doğru biçimde bekliyor emin olun.  
+- Catch deyiminizde özel durum biçiminin doğru olduğundan emin olun.  
   
-- Özel durum yeniden oluşur, ilgili başka bir catch deyimi olduğundan emin olun.  
+- Özel durum yeniden oluşturulursa, başka bir karşılık gelen catch ifadesinin bulunduğundan emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata nesnesi](../../javascript/reference/error-object-javascript.md)   
- [Throw deyimi](../../javascript/reference/throw-statement-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Hata nesnesi](../../javascript/reference/error-object-javascript.md)    
+ [throw deyimleri](../../javascript/reference/throw-statement-javascript.md)    
  [try...catch...finally Deyimi](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

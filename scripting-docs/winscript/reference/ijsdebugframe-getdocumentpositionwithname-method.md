@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugframe::getdocumentpositionwithname metodu | Microsoft Docs
+title: 'IJsDebugFrame:: GetDocumentPositionWithName yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4d3b909f3a3ebc672bf6d0a014b519de685b1677
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b818ca4dc1ec4402973026668972507861c86f22
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558169"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575119"
 ---
 # <a name="ijsdebugframegetdocumentpositionwithname-method"></a>IJsDebugFrame::GetDocumentPositionWithName Yöntemi
-Bu yığın çerçevesinin kullanıcı düzeyi belge içindeki konumunu döndürür.  
+Bu yığın çerçevesinin Kullanıcı düzeyi belge içindeki geçerli konumunu döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT GetDocumentPositionWithName(
   
 #### <a name="parameters"></a>Parametreler  
  `pDocumentName`  
- [out] Statik betikler için belge URL'si. Dinamik komut dosyaları için bir ad (örneğin değerlendirme kodu, işlev kodu vb.) komut dosyası türünü içeren döndürülür.  
+ dışı Statik betikler için, belge URL 'SI. Dinamik betikler için, betik türünü (örneğin, eval kodu, işlev kodu vs.) içeren bir ad döndürülür.  
   
  `pLine`  
- Belge içinde 1 tabanlı satır konumu [out].  
+ [out] belge içinde 1 tabanlı satır konumu.  
   
  `pColumn`  
- Belge içinde 1 tabanlı satır konumu [out].  
+ [out] belge içinde 1 tabanlı satır konumu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugFrame Arabirimi](../../winscript/reference/ijsdebugframe-interface.md)

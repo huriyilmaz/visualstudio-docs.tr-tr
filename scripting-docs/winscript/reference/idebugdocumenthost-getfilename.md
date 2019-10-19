@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHost::GetFileName | Microsoft Docs
+title: 'Idebugbelgethost:: GetFileName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 511cdb40a5bb0f885fed8b811a095e7a53a8bb6f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0ff2ad2e4ab419f1e503da072aaa550f3cb7cf0e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971114"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569396"
 ---
 # <a name="idebugdocumenthostgetfilename"></a>IDebugDocumentHost::GetFileName
-Yol bilgisi olmadan belgenin adını döndürür.  
+Yol bilgisi olmayan belgenin adını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetFileName(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstrShortName`  
- [out] Belge kısa adını içeren bir dize.  
+ dışı Belgenin kısa adını içeren bir dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, kısa yol bilgisi olmadan belgenin adını döndürür. Kısa ad genellikle durumlarda gibi kullanılan **Farklı Kaydet...**  iletişim kutusu.  
+ Bu yöntem, yol bilgisi olmadan belgenin kısa adını döndürür. Kısa ad genellikle farklı **Kaydet...** iletişim kutusu gibi durumlarda kullanılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentHost Arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)

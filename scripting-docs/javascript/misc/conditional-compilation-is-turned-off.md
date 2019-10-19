@@ -14,15 +14,15 @@ ms.assetid: 59a030b0-a6c6-47f2-b90e-c0ed204d5116
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8317121b840d82ab12d4a9e1ca50f6680eb1e21d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56621d6f7fcc195a4ece7654adeafd1096c37e8b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946582"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572931"
 ---
 # <a name="conditional-compilation-is-turned-off"></a>Koşullu derleme kapalı
-Üzerinde koşullu derleme değişken ilk açma koşullu derleme olmadan kullanma girişimi. Üzerinde koşullu derleme bildirir [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] derleyici ile @ koşullu derleme değişkenleri olarak başlayan tanımlayıcılar yorumlamak için. Koşullu kodunuzu ifadesiyle başlayarak yapın:  
+Koşullu derleme değişkenini, önce koşullu derlemeyi açmadan kullanmaya çalıştınız. Koşullu derlemeyi açmak, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] derleyiciye koşullu derleme değişkenleri olarak @ ile başlayan tanımlayıcıları yorumlamasını söyler. Bunu, koşullu kodunuzu ifadesiyle başlayarak yapabilirsiniz:  
   
 ```js
 /*@cc_on @*/  
@@ -30,15 +30,15 @@ ms.locfileid: "62946582"
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Aşağıdaki deyim, koşullu kodunuzu başlangıcına ekleyin:  
+- Aşağıdaki ifadeyi, koşullu kodunuzun başlangıcına ekleyin:  
   
     ```JavaScript  
     /*@cc_on @*/  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)   
- [Koşullu derleme değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)   
- [@cc_on Deyimi](../../javascript/reference/at-cc-on-statement-javascript.md)   
- [@if Deyimi](../../javascript/reference/at-if-statement-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)    
+ [Koşullu derleme değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)    
+ [@cc_on deyimin](../../javascript/reference/at-cc-on-statement-javascript.md)    
+ [@if deyimin](../../javascript/reference/at-if-statement-javascript.md)    
  [@set Deyimi](../../javascript/reference/at-set-statement-javascript.md)

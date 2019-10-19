@@ -13,22 +13,22 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8ee129526113a1c8af8f918de81c1f286d5cb703
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 47b48b917ee3376c417beffd9972d76a444513ef
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974520"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573198"
 ---
 # <a name="idebugcookie-interface"></a>IDebugCookie Arabirimi
-İle kullanılmak üzere ayarlanması hata ayıklama tanımlama bilgisini sağlayan `IMachineDebugManagerCookie` arabirimi. Daha fazla bilgi için [Imachinedebugmanagercookie arabirimi](../../winscript/reference/imachinedebugmanagercookie-interface.md). Bu arabirim işlem hata ayıklama Yöneticisi (PDM) tarafından uygulanan ve komut dosyası hata ayıklayıcıları tarafından tüketilen.  
+@No__t_0 arabirimiyle kullanılmak üzere hata ayıklama tanımlama bilgisinin ayarlamaya izin verir. Daha fazla bilgi için bkz. [ımachinedebugmanagercookie arabirimi](../../winscript/reference/imachinedebugmanagercookie-interface.md). Bu arabirim Işlem hata ayıklama Yöneticisi (PDM) tarafından uygulanır ve betik hata ayıklayıcıları tarafından kullanılır.  
   
 ## <a name="methods"></a>Yöntemler  
- Devralınan yöntemleri yanı sıra `IUnknown`, `IDebugCookie` arabirimi aşağıdaki yöntemleri sunar.  
+ @No__t_0 devralınan yöntemlere ek olarak, `IDebugCookie` arabirimi aşağıdaki yöntemleri sunar.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IDebugCookie::SetDebugCookie](../../winscript/reference/idebugcookie-setdebugcookie.md)|Hata ayıklama uygulama tanımlama bilgisi ayarlar.|  
+|[IDebugCookie::SetDebugCookie](../../winscript/reference/idebugcookie-setdebugcookie.md)|Hata ayıklama uygulaması tanımlama bilgisini ayarlar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IMachineDebugManagerCookie Arabirimi](../../winscript/reference/imachinedebugmanagercookie-interface.md)

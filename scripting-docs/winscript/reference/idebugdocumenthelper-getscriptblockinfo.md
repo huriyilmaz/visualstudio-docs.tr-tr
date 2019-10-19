@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::GetScriptBlockInfo | Microsoft Docs
+title: 'Idebugbelgethelper:: Getscriptblockınfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d1984cdc19beb883dd7ee82f58497b11a8d781b0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5a92aa00d7997ceccc583c88a070f6fbc7d4359d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62549721"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576095"
 ---
 # <a name="idebugdocumenthelpergetscriptblockinfo"></a>IDebugDocumentHelper::GetScriptBlockInfo
-Bir dizi karakter ve karşılık gelen bir betik bloğu için komut dosyası altyapısı alır.  
+Bir betik bloğuna karşılık gelen karakter aralığını ve betik altyapısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,26 +40,26 @@ HRESULT GetScriptBlockInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `dwSourceContext`  
- [in] Betik bloğundaki kaynak bağlamı.  
+ 'ndaki Betik bloğunun kaynak bağlamı.  
   
  `ppasd`  
- [out] Bu betik bloğu için komut dosyası motoru.  
+ dışı Bu betik bloğunun betik altyapısı.  
   
  `piCharPos`  
- [out] Betik bloğundaki başlangıç konumu.  
+ dışı Betik bloğunun başlangıç konumu.  
   
  `cChars`  
- [out] Betik bloğundaki karakter sayısı.  
+ dışı Betik bloğundaki karakter sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir dizi karakter ve karşılık gelen bir betik bloğu için komut dosyası altyapısı alır.  
+ Bu yöntem, bir betik bloğuna karşılık gelen karakter aralığını ve betik altyapısını alır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentHelper Arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)

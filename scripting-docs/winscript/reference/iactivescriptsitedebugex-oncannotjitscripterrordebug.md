@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebugEx::OnCanNotJITScriptErrorDebug | Microsoft Docs
+title: 'Iactivescriptsitedebugex:: Oncannotjscripterrordebug | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,17 +17,17 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4c643478da37b5a66c22b201ef8f8248df02e4ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7358d2b372f0801b8c45816e1fc36018b37799b2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992337"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572188"
 ---
 # <a name="iactivescriptsitedebugexoncannotjitscripterrordebug"></a>IActiveScriptSiteDebugEx::OnCanNotJITScriptErrorDebug
-Konak işlemde hata ayıklamak, Yöneticisi bir komut dosyası çalışma zamanı hatası hakkında tam zamanında betik hata ayıklayıcısı bulamazsa bildirir.  
+Işlem hata ayıklama Yöneticisi bir tam zamanında betik hata ayıklayıcısı bulamazsa ana bilgisayarı bir betik çalışma zamanı hatası hakkında bilgilendirir.  
   
- Bir hata ayıklayıcı, ana bilgisayar uygulamak için işleyeceğini [IActiveScriptSiteDebug::OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md). Bir kullanıcı eylemine bağlı olarak, konak ya da debugger iliştirebilmek için dönün ve OnScriptErrorDebug hata ayıklayıcıda başlangıç dönüş `pfEnterDebugger` parametresi. Ayrıca, hata ayıklama işlemi Yöneticisi tarafından yorumlanan dış hiçbir hata ayıklayıcıları olsa bile, çalışma zamanı hatası hakkında bildirim almak için bu arabirimi uygulamalıdır.  
+ Ana bilgisayarınızda bir hata ayıklayıcı uygulamak için [ıactivescriptsitedebug:: OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md)öğesini işlemeniz gerekir. Ana bilgisayar, bir kullanıcı eylemine bağlı olarak, hata ayıklayıcıyı ekleyebilir ve döndürebilir ya da OnScriptErrorDebug `pfEnterDebugger` parametresinde hata ayıklayıcının başlangıcını döndürebilir. Işlem hata ayıklama Yöneticisi tarafından yorumlanabilecek dış hata ayıklayıcıları olmasa bile, çalışma zamanı hatası hakkında bildirim almak için bu arabirimi de uygulamalısınız.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,20 +40,20 @@ HRESULT OnCanNotJITScriptErrorDebug(
   
 #### <a name="parameters"></a>Parametreler  
  `pErrorDebug`  
- [in] Çalışma zamanı hata oluştu.  
+ 'ndaki Oluşan çalışma zamanı hatası.  
   
  `pfCallOnScriptErrorWhenContinuingt`  
- [out] Çağrılıp çağrılmayacağını [IActiveScriptSiteDebug::OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md) hata ayıklama olmadan devam etmek kullanıcı karar verirse.  
+ dışı Kullanıcı hata ayıklamadan devam etmeye karar verirse [ıactivescriptsitedebug:: OnScriptErrorDebug](../../winscript/reference/iactivescriptsitedebug-onscripterrordebug.md) çağrısı yapılıp yapılmayacağını belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ayrıca, bir bildirim almak için bu arabirimi uygulamalıdır.  
+ Bir bildirim almak için bu arabirimi de uygulamalısınız.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSiteDebugEx Arabirimi](../../winscript/reference/iactivescriptsitedebugex-interface.md)

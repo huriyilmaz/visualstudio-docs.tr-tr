@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::writememory yöntemi | Microsoft Docs
+title: 'IJsDebugDataTarget:: WriteMemory yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 622de16cc5f755c5d69059a0e0f28d881121861c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 33cd23ad784e222f770dfd5c0e7c2d775aa55e42
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558183"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572418"
 ---
 # <a name="ijsdebugdatatargetwritememory-method"></a>IJsDebugDataTarget::WriteMemory Yöntemi
 Hedef işlemin belleğini okur.  
@@ -37,21 +37,21 @@ HRESULT WriteMemory(
   
 #### <a name="parameters"></a>Parametreler  
  `address`  
- [in] Hedef işlemin belleğinin yazılacağı temel adres.  
+ 'ndaki Hedef işlemin belleğinin yazılacağı temel adres.  
   
  `pMemory`  
- [in] Belirli bir işlemin adres alanında yazılacak veriler.  
+ 'ndaki Belirtilen işlemin adres alanına yazılacak veriler.  
   
  `size`  
- [in] İşleme yazdırılacak bayt sayısı.  
+ 'ndaki İşleme yazılacak bayt sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- Veri aktarımı gerçekleşmeden önce sistem temel adreste ve belirtilen boyut, bellek, tüm verilerin yazma erişimi için erişilebilir olduğundan ve erişilebilir değilse işlev e_jsdebug_ınvalıd_memory_address hatası verir. doğrular.  
+ Veri aktarımı gerçekleşmeden önce, sistem, temel adresteki tüm verilere ve belirtilen boyuttaki belleğe yazma erişimi için erişilebildiğini doğrular ve erişilebilir değilse, işlev bir E_JsDEBUG_INVALID_MEMORY_ADDRESS hatası oluşturur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugDataTarget Arabirimi](../../winscript/reference/ijsdebugdatatarget-interface.md)

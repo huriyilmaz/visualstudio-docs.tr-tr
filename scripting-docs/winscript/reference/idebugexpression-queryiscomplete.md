@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression::QueryIsComplete | Microsoft Docs
+title: 'Idebugexpression:: Queryıstamam| Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0c74ff962585d4295ea4c2d21a1ee31fdfc817af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c260ac5c02052f11f70e479588d65b71b4971267
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946322"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571968"
 ---
 # <a name="idebugexpressionqueryiscomplete"></a>IDebugExpression::QueryIsComplete
-İşlemi tam olup olmadığını belirler.  
+İşlemin tamamlanıp tamamlanamayacağını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,18 +34,18 @@ HRESULT QueryIsComplete();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Yöntem başarılı oldu ve işlem tamamlandığında.|  
-|`S_FALSE`|İşlemi hala geçerli olduğunu bekleniyor.|  
+|`S_OK`|Yöntem başarılı oldu ve işlem tamamlandı.|  
+|`S_FALSE`|İşlem hala beklemede.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, işlem tamamlandığında, belirler.  
+ Bu yöntem işlemin tamamlanıp tamamlanamayacağını belirler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugExpression Arabirimi](../../winscript/reference/idebugexpression-interface.md)

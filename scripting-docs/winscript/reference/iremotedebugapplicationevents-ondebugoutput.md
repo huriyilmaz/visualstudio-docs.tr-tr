@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEvents::OnDebugOutput | Microsoft Docs
+title: 'Iremotedebugapplicationevents:: OnDebugOutput | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2c7f4c6572a7b06a8ab0ca78419b0bd6518f0e55
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 34b03f65dd25afdab5f438bcddb6dd0b7711644f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974468"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572743"
 ---
 # <a name="iremotedebugapplicationeventsondebugoutput"></a>IRemoteDebugApplicationEvents::OnDebugOutput
-Hata ayıklayıcı çıkış olayını işler.  
+Bir hata ayıklayıcı çıktı olayını işler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT OnDebugOutput(
   
 #### <a name="parameters"></a>Parametreler  
  `pstr`  
- [in] Hata ayıklama çıkış dizesi.  
+ 'ndaki Hata ayıklama çıkış dizesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, hata ayıklayıcı çıkış olayını işler.  
+ Bu yöntem, hata ayıklayıcı çıktı olayını işler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplicationEvents Arabirimi](../../winscript/reference/iremotedebugapplicationevents-interface.md)

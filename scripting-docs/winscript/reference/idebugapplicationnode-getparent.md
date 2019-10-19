@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNode::GetParent | Microsoft Docs
+title: 'IDebugApplicationNode:: GetParent | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: daefe6883c4248f6122c1056f416b6399be4ae7d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c887e61652da8780012d98354f028f3e5cb005c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822480"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574767"
 ---
 # <a name="idebugapplicationnodegetparent"></a>IDebugApplicationNode::GetParent
-Bu uygulama düğümü üst düğümünün döndürür.  
+Bu uygulama düğümünün üst düğümünü döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetParent(
   
 #### <a name="parameters"></a>Parametreler  
  `pprddp`  
- [out] Bu uygulama düğümü üst uygulama düğümü.  
+ dışı Bu uygulama düğümünün üst uygulama düğümü.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu uygulama düğümü üst düğümünün döndürür.  
+ Bu yöntem, bu uygulama düğümünün üst düğümünü döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplicationNode Arabirimi](../../winscript/reference/idebugapplicationnode-interface.md)

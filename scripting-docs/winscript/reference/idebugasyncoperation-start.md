@@ -1,5 +1,5 @@
 ---
-title: IDebugAsyncOperation::Start | Microsoft Docs
+title: 'Ihata ayıklama Gasyncoperation:: Start | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3e02869abab65878412f96b77d5782b9717a1b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 485eb34ebe200e7f7898d9338effed37cbf2aa10
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821934"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573252"
 ---
 # <a name="idebugasyncoperationstart"></a>IDebugAsyncOperation::Start
-Başlamak zaman uyumsuz işlem neden olur.  
+Zaman uyumsuz işlemin başlamasını sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,21 +37,21 @@ HRESULT Start(
   
 #### <a name="parameters"></a>Parametreler  
  `padocb`  
- Bu işlemden durumu olaylarını alır geri çağırma arabirimi.  
+ Bu işlemden durum olaylarını alan geri çağırma arabirimi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_UNEXPECTED`|Bir işlem zaten beklemede.|  
+|`E_UNEXPECTED`|Bir işlem zaten bekliyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem neden `IDebugSyncOperation::Execute` alınan iş parçacığında zaman uyumsuz olarak çağrılan `IDebugSyncOperation::GetTargetThread`. Bu yöntem yalnızca hata ayıklayıcı iş parçacığının içinden çağrılmalıdır; Aksi takdirde işlemi tamamlanana kadar bu döndürmez.  
+ Bu yöntem, `IDebugSyncOperation::GetTargetThread` alınan iş parçacığında `IDebugSyncOperation::Execute` zaman uyumsuz olarak çağrılmasına neden olur. Bu yöntem yalnızca hata ayıklayıcı iş parçacığı içinden çağrılmalıdır; Aksi takdirde, işlem tamamlanana kadar dönemeyecektir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IDebugAsyncOperation::Abort](../../winscript/reference/idebugasyncoperation-abort.md)   
- [Idebugasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)   
- [IDebugSyncOperation::Execute](../../winscript/reference/idebugsyncoperation-execute.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Ihata ayıklama Gasyncoperation:: Abort](../../winscript/reference/idebugasyncoperation-abort.md)    
+ [Ihata ayıklama Gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)    
+ [Idebugsyncoperation:: Execute](../../winscript/reference/idebugsyncoperation-execute.md)    
  [IDebugSyncOperation::GetTargetThread](../../winscript/reference/idebugsyncoperation-gettargetthread.md)

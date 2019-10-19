@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1fe0eef00d2bf064a8a002925f4ba5607d36f31c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 09f3c5a219fca9ec9b881e2ae8363aae4d48e03f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955204"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575830"
 ---
 # <a name="extendeddebugpropertyinfo-structure"></a>ExtendedDebugPropertyInfo Yapısı
-Genişletir `DebugPropertyInfo` yapısı ile genişletilmiş özelliği nitelemek için ek üyeler.  
+Genişletilmiş özelliği niteleyen `DebugPropertyInfo` yapısını ek üyelerle genişletir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,25 +48,25 @@ typedef struct ExtendedDebugPropertyInfo{
   
 ## <a name="members"></a>Üyeler  
  `dwValidFields`  
- Hangi alanların başlatılır belirtmek için kullanılan bir listelenmiş veri türü.  
+ Hangi alanların başlatıldığını belirtmek için kullanılan bir numaralandırılmış veri türü.  
   
  `bstrName`  
- Bir bağlam içinde özellik adı.  
+ Bağlam içindeki Özellik adı.  
   
  `bstrType`  
- Özelliği, biçimlendirilmiş dize olarak yazın.  
+ Özellik türü, biçimli dize olarak.  
   
  `bstrValue`  
- Özellik değeri olarak biçimlendirilmiş bir dize.  
+ Biçimli bir dize olarak özellik değeri.  
   
  `bstrFullName`  
  Özelliğin tam adı.  
   
  `dwAttrib`  
- Hata ayıklama özellik öznitelikleri için bayrakları belirtir bir sabit listesi.  
+ Hata ayıklama özelliği özniteliklerinin bayraklarını belirten bir sabit listesi.  
   
  `pDebugProp`  
- `IDebugProperty` Bunun için karşılık gelen nesne `ExtendedDebugPropertyInfo`.  
+ Bu `ExtendedDebugPropertyInfo` karşılık gelen nesne `IDebugProperty`.  
   
  `nDISPID`  
  Dağıtım kimliği.  
@@ -75,17 +75,17 @@ typedef struct ExtendedDebugPropertyInfo{
  Genişletilmiş özellik türü.  
   
  `varValue`  
- VARIANT sığabilen, genişletilmiş özellik değeri.  
+ DEĞIŞKENLE uyum için genişletilmiş özellik değeri.  
   
  `plbValue`  
- Özellik değerinin gerçek veri baytı.  
+ Özellik değerinin gerçek veri baytları.  
   
  `pDebugExtProp`  
- `IDebugExtendedProperty` Bunun için karşılık gelen nesne `ExtendedDebugPropertyInfo`.  
+ Bu `ExtendedDebugPropertyInfo` karşılık gelen nesne `IDebugExtendedProperty`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Debugpropertyınfo yapısı](../../winscript/reference/debugpropertyinfo-structure.md)   
- [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)   
- [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)   
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Debugpropertyınfo yapısı](../../winscript/reference/debugpropertyinfo-structure.md)    
+ [Idebugproperty arabirimi](../../winscript/reference/idebugproperty-interface.md)    
+ [Idebugextendedproperty arabirimi](../../winscript/reference/idebugextendedproperty-interface.md)    
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

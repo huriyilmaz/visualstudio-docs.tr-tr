@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::GetScriptState | Microsoft Docs
+title: 'IActiveScript:: GetScriptState | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0f9f3bedee9af9ae3cb145108d801f252267d5d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d266e713879aafe1c5ca271d46b3030f3275460f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935754"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575733"
 ---
 # <a name="iactivescriptgetscriptstate"></a>IActiveScript::GetScriptState
-Komut dosyası altyapısının geçerli durumunu alır. Temel olmayan belirtme ana bilgisayar nesneleri veya çok kaynaklanan olmadan, bu yöntem temel olmayan iş parçacığından çağrılabilir [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md) arabirimi.  
+Komut dosyası altyapısının geçerli durumunu alır. Bu yöntem, temel olmayan iş parçacıklarından, nesneleri barındırmak için temel olmayan bir belirtme çizgisine veya [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) arabirimine yol açmadan çağrılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ HRESULT GetScriptState(
   
 #### <a name="parameters"></a>Parametreler  
  `pss`  
- [out] Tanımlanan bir değeri alan değişkenin adresini [SCRIPTSTATE numaralandırması](../../winscript/reference/scriptstate-enumeration.md) sabit listesi. Değeri, çağıran iş parçacığı ile ilişkili komut dosyası altyapısının geçerli durumunu gösterir.  
+ dışı [Scriptstate sabit](../../winscript/reference/scriptstate-enumeration.md) listesi numaralandırmasında tanımlanan bir değeri alan bir değişkenin adresi. Değer, çağıran iş parçacığıyla ilişkili komut dosyası altyapısının geçerli durumunu gösterir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa veya `E_POINTER` durumunda geçersiz işaretçi belirtildi.  
+ Başarılı olursa `S_OK` döndürür ya da geçersiz bir işaretçi belirtilmişse `E_POINTER`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScript](../../winscript/reference/iactivescript.md)

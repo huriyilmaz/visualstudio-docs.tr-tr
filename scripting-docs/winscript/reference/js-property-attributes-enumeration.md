@@ -1,5 +1,5 @@
 ---
-title: Js_property_attrıbutes listelemesi | Microsoft Docs
+title: JS_PROPERTY_ATTRIBUTES numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,14 +15,14 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 27aaadfd1d3ff38e9a0382ff1863b73d2bccc325
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 94a72228e1ad6ab49568f3291ad9add7209ef3da
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62539449"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571739"
 ---
-# <a name="jspropertyattributes-enumeration"></a>JS_PROPERTY_ATTRIBUTES Listelemesi
+# <a name="js_property_attributes-enumeration"></a>JS_PROPERTY_ATTRIBUTES Listelemesi
 Bir özelliğin özniteliklerini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -33,17 +33,17 @@ enum JS_PROPERTY_ATTRIBUTES{   JS_PROPERTY_ATTRIBUTE_NONE = 0,   JS_PROPERTY_HAS
   
 ## <a name="members"></a>Üyeler  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
-|`JS_PROPERTY_ATTRIBUTE_NONE`|Özellik öznitelikleri yok.|  
-|`JS_PROPERTY_HAS_CHILDREN`|Özellik alt öğesi yok.|  
-|`JS_PROPERTY_FAKE`|Özelliği, "[yöntemleri]" gibi sahte bir düğümü temsil eder.|  
+|`JS_PROPERTY_ATTRIBUTE_NONE`|Özelliğin öznitelikleri yok.|  
+|`JS_PROPERTY_HAS_CHILDREN`|Özelliğin alt öğesi vardır.|  
+|`JS_PROPERTY_FAKE`|Özelliği, "[Methods]" gibi sahte bir düğümü temsil eder.|  
 |`JS_PROPERTY_METHOD`|Özelliği bir yöntemdir.|  
 |`JS_PROPERTY_READONLY`|Özellik salt okunurdur.|  
-|`JS_PROPERTY_NATIVE_WINRT_POINTER`|Özelliği yerel bir WinRT nesnesi bir işaretçisidir.|  
+|`JS_PROPERTY_NATIVE_WINRT_POINTER`|Özelliği, yerel bir WinRT nesnesine yönelik bir işaretçidir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

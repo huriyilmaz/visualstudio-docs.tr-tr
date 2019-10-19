@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication110::GetMainThread | Microsoft Docs
+title: 'Iremotedebugapplication110:: GetMainThread | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8a4b51d87f89d77bebf065ce5f52a297ada333d3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: ff99c43f633da8454eb5fa32463886877e06ed72
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63383513"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574113"
 ---
 # <a name="iremotedebugapplication110getmainthread"></a>IRemoteDebugApplication110::GetMainThread
-Ana iş parçacığı çağrı konakları için döndürür [SetSite](http://go.microsoft.com/fwlink/?LinkId=232439), aksi takdirde E_FAIL döndürür.  
+[SetSite](http://go.microsoft.com/fwlink/?LinkId=232439)çağıran konaklar için ana iş parçacığını döndürür, aksı takdirde E_FAIL döndürür.  
   
 > [!IMPORTANT]
-> [Iremotedebugapplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md) PDM v11.0 tarafından uygulanan ve büyük. activdbg100.h içinde bulunur.  
+> [IRemoteDebugApplication ARABIRIMI](../../winscript/reference/iremotedebugapplication-interface.md) PDM v 11.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,8 +34,8 @@ HRESULT GetMainThread([out] IRemoteDebugApplicationThread **ppThread);
   
 #### <a name="parameters"></a>Parametreler  
  `ppThread`  
- [out] Ana [Iremotedebugapplicationthread arabirimi](../../winscript/reference/iremotedebugapplicationthread-interface.md).  
+ dışı Ana [ıremotedebugapplicationthread arabirimi](../../winscript/reference/iremotedebugapplicationthread-interface.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iremotedebugapplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IRemoteDebugApplication arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)    
  [IRemoteDebugApplication110 Arabirimi](../../winscript/reference/iremotedebugapplication110-interface.md)

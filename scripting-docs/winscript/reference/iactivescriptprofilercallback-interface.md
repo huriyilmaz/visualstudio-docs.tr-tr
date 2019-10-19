@@ -11,35 +11,35 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e8f64f187638af7f9ab4bf6b80e88fe6992c78e6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9ae520dcb36e00dfaba8702db6294a5a47484b0a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386081"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571720"
 ---
 # <a name="iactivescriptprofilercallback-interface"></a>IActiveScriptProfilerCallback Arabirimi
-Komut dosyası altyapısı tarafından olaylar meydana geldiğinde bir profil oluşturucu nesnesini bildirmek için kullanılan yöntemleri sağlar. Bu arabirim, profil oluşturucu nesne tarafından uygulanır.  
+Olaylar gerçekleştiğinde bir profil oluşturucu nesnesine bildirimde bulunan betik altyapısı tarafından kullanılan yöntemleri sağlar. Bu arabirim, profil oluşturucu nesnesi tarafından uygulanır.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IActiveScriptProfilerCallback::Initialize](../../winscript/reference/iactivescriptprofilercallback-initialize.md)|Bir komut dosyası altyapısına profil oluşturma başlatıldığında, profil oluşturucu nesnesini başlatmak üzere çağrılır.|  
-|[IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)|Ücretsiz ve profil oluşturma, bir komut dosyası altyapısına durdurulur zaman profil oluşturucu nesnesini serbest bırakmak için çağrılır.|  
-|[IActiveScriptProfilerCallback::ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)|Komut dosyası motoru nesne derlenmiş komut dosyası profil oluşturucu bildirir.|  
-|[IActiveScriptProfilerCallback::FunctionCompiled](../../winscript/reference/iactivescriptprofilercallback-functioncompiled.md)|Profil oluşturucu komut dosyası motoru nesne bir komut dosyası derlenirken bir işlevle karşılaştığında bildirir.|  
-|[IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)|Komut dosyası altyapısı hakkında belge nesne modeli (DOM) içine çağrı değil bir işlev çağrısı yürütmek için profil oluşturucu nesnesini bildirir.|  
-|[IActiveScriptProfilerCallback::OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)|Profil Oluşturucu bir işlev yürütülürken tamamlanmış komut dosyası altyapısı çağrı, nesne yerli çağrısını değil bildirir.|  
+|[IActiveScriptProfilerCallback::Initialize](../../winscript/reference/iactivescriptprofilercallback-initialize.md)|Bir betik altyapısında profil oluşturma her başlatıldığında profil oluşturucu nesnesini başlatmak için çağırılır.|  
+|[IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)|Bir betik altyapısında profil oluşturma durdurulduğunda profil oluşturucu nesnesini serbest bırakmak ve serbest bırakmak için çağırılır.|  
+|[IActiveScriptProfilerCallback::ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)|Betik altyapısının betiği derlediğini profil oluşturucu nesnesine bildirir.|  
+|[IActiveScriptProfilerCallback::FunctionCompiled](../../winscript/reference/iactivescriptprofilercallback-functioncompiled.md)|Profil Oluşturucu nesnesine betik derlenirken komut dosyası altyapısının bir işlevle karşılaştığı bildirir.|  
+|[IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)|Betik altyapısının Belge Nesne Modeli (DOM) çağrısı olmayan bir işlev çağrısını yürütmek üzere olduğunu profil oluşturucu nesnesine bildirir.|  
+|[IActiveScriptProfilerCallback::OnFunctionExit](../../winscript/reference/iactivescriptprofilercallback-onfunctionexit.md)|Profil Oluşturucu nesnesine, betik altyapısının DOM 'a çağrı olmayan bir işlev çağrısını yürütmeyi bitirmekte olduğunu bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belge nesne modeli (DOM) içine işlev çağrılarının bildirimi tarafından sağlanır [Iactivescriptprofilercallback2 arabirimi](../../winscript/reference/iactivescriptprofilercallback2-interface.md).  
+ Belge Nesne Modeli (DOM) içindeki işlev çağrılarının bildirimi [ıactivescriptprofilercallback2 arabirimi](../../winscript/reference/iactivescriptprofilercallback2-interface.md)tarafından sağlanmaktadır.  
   
 > [!NOTE]
-> Bir komut dosyası çalıştırılırken profil oluşturmayı durdurmak ve başlatmak özelliği eklemek için aşağıdaki yöntemleri çağırın. Bu yöntemleri kullanarak, tam çağrı yığınını edinebilirsiniz [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] başlattığınızda veya profil oluşturmayı durdurmak çalışıyor.  
+> Bir betik çalışırken profil oluşturmayı başlatma ve durdurma özelliğini eklemek için aşağıdaki yöntemleri çağırın. Bu yöntemleri kullanarak, profil oluşturmayı başlattığınızda veya durdurduğunuzda [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] çalışıyorsa, tüm çağrı yığınını elde edebilirsiniz.  
 > 
-> - Çağrı [IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md) profil oluşturma başlatıldı profil oluşturucu bildirir.  
->   - Çağrı [IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md) , kısa süre içinde profil oluşturmayı durdurur, profil oluşturucu bildirir.  
+> - Profil oluşturmayı başlattığınız profil oluşturucuyu bildirmek için [ıactivescriptprofilercontrol2:: CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md) çağırın.  
+>   - Profil oluşturucuyu yakında durdurulacağı profil oluşturucuya bildirmek için [ıactivescriptprofilercontrol2::P repareprofilerstop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md) çağırın.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Profil Oluşturucu Arabirimleri](../../winscript/reference/active-script-profiler-interfaces.md)

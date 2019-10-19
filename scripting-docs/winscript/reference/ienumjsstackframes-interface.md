@@ -11,15 +11,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e8302737fb4abf96c55d3ae70424cc03579b270
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b4a635a802ae84b8e839159f5e2f1c4c461e05ae
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963331"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572022"
 ---
 # <a name="ienumjsstackframes-interface"></a>IEnumJsStackFrames Arabirimi
-Yığın sağlamak için hata ayıklayıcı tarafından uygulanır için JavaScript jscript9diag.DLL'si için geriye doğru izleme.  
+JavaScript için jscript9diag. dll ' ye yığın geri bırakma sağlamak için hata ayıklayıcı tarafından uygulanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,13 +31,13 @@ IEnumJsStackFrames : public IUnknown;
   
 ### <a name="public-methods"></a>Ortak Yöntemler  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
 |[IEnumJsStackFrames::Next Metodu](../../winscript/reference/ienumjsstackframes-next-method.md)|Belirtilen kare sayısını alır.|  
 |[IEnumJsStackFrames::Reset Metodu](../../winscript/reference/ienumjsstackframes-reset-method.md)|Yığın çerçevesini ilk öğeden önceki konuma sıfırlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

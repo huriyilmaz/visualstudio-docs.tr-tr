@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetItemName | Microsoft Docs
+title: 'Icriptentry:: GetItemName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9d8abc6d1264ce532adcbc59c262510a39ea7a91
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dcd1b83fa6d22fafc2123645f1f252fa1325f7f1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787862"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575457"
 ---
 # <a name="iscriptentrygetitemname"></a>IScriptEntry::GetItemName
-Tanımlayan bir öğe adı döndürür bir `IScriptEntry` nesne.  
+Bir `IScriptEntry` nesnesini tanımlayan öğe adını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT GetItemName(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstr`  
- [out] Öğe adı içeren bir arabellek adresi. Öğe adı, ana bilgisayar tarafından girişi tanımlamak için kullanılır.  
+ dışı Öğe adını içeren bir arabelleğin adresi. Öğe adı, ana bilgisayar tarafından girişi tanımlamak için kullanılır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -47,7 +47,7 @@ HRESULT GetItemName(
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçin `IScriptScriptlet` nesnelerini kullanarak öğe adı ayarlayın [IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md). Diğer arabirimler için öğe adını kullanarak ayarladığınız [IScriptEntry::SetItemName](../../winscript/reference/iscriptentry-setitemname.md).  
+ @No__t_0 nesneler için, [ıactivescriptauthor:: AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)kullanarak öğe adını ayarlarsınız. Diğer arabirimler için, [ıcriptentry:: setItemName](../../winscript/reference/iscriptentry-setitemname.md)kullanarak öğe adını ayarlarsınız.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptEntry Arabirimi](../../winscript/reference/iscriptentry-interface.md)

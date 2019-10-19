@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::SetDebugDocumentHost | Microsoft Docs
+title: 'Idebugbelgethelper:: Setdebugbelgethost | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 47c003657518edae0e8ffed13ffef9f6f072d296
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b32d14f3a7d65bee7bdb587a35dfe05bb06f5e1e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62948999"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574651"
 ---
 # <a name="idebugdocumenthelpersetdebugdocumenthost"></a>IDebugDocumentHelper::SetDebugDocumentHost
-Kümeleri `IDebugDocumentHost` bu belge için.  
+Bu belge için `IDebugDocumentHost` ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT SetDebugDocumentHost(
   
 #### <a name="parameters"></a>Parametreler  
  `pddh`  
- [in] Hata ayıklama belge ana bilgisayar.  
+ 'ndaki Hata ayıklama belgesi Konağı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IDebugDocumentHost` Arabirimi akıllı ana bilgisayar söz dizimi renklendirmesi için kullanılır, ertelenmiş metin getiriliyor ve yeni oluşturulan için kontrol eden nesneleri döndüren belge bağlamı.  
+ @No__t_0 arabirimi akıllı ana bilgisayar söz dizimi renklendirme, ertelenmiş metin getirme ve yeni oluşturulan belge bağlamları için nesneleri denetlemeye döndürme için kullanılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugdocumenthelper arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
  [IDebugDocumentHost Arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)

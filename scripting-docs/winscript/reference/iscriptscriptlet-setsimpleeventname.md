@@ -1,5 +1,5 @@
 ---
-title: IScriptScriptlet::SetSimpleEventName | Microsoft Docs
+title: 'Iscriptscriptlet:: SetSimpleEventName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 63e6d05066d59e14a7036fb8f371c9c20b886df7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 47039be628e803b5b5c164b765b0cdf6778621bc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786634"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571873"
 ---
 # <a name="iscriptscriptletsetsimpleeventname"></a>IScriptScriptlet::SetSimpleEventName
-Kod oluşturma yöntemiyle ilişkili basit olay adını ayarlar. Bu, herhangi bir boşluk içermeyen Tek sözcüklü adıdır.  
+Bir kod oluşturma yöntemi ile ilişkili basit olay adını ayarlar. Bu, hiç boşluk içermeyen tek sözcüklü bir addır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT SetSimpleEventName(
   
 #### <a name="parameters"></a>Parametreler  
  `psz`  
- [in] İlişkili olduğu basit olay adını içeren bir arabellek `IScriptScriptlet` nesne.  
+ 'ndaki @No__t_0 nesnesiyle ilişkili basit olay adını içeren bir arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -48,5 +48,5 @@ HRESULT SetSimpleEventName(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptScriptlet Arabirimi](../../winscript/reference/iscriptscriptlet-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Iscriptnode:: CreateChildEntry | Microsoft Docs'
+title: 'Icriptnode:: CreateChildEntry | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 75369df719b0cd140ce621e916215eb18cf30a9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c58ff83c43a1418e6fb7bd8945afa181af60c68a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787625"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573612"
 ---
-# <a name="iscriptnode-createchildentry"></a>Iscriptnode:: CreateChildEntry
-Bir alt örneğini ekler `IScriptEntry`.  
+# <a name="iscriptnode-createchildentry"></a>IScriptNode:: CreateChildEntry
+Bir `IScriptEntry` alt örneği ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +40,28 @@ HRESULT CreateChildEntry(
   
 #### <a name="parameters"></a>Parametreler  
  `isn`  
- [in] Üst alt dizini.  
+ 'ndaki Üst öğe içindeki alt öğenin dizini.  
   
  `dwCookie`  
- [in] Alt giriş konak nesnesiyle ilişkilendirmek için kullanılan bir uygulama tanımlı bir değer.  
+ 'ndaki Alt girişi ana bilgisayar nesnesiyle ilişkilendirmek için kullanılan uygulama tanımlı bir değer.  
   
  `pszDelimiter`  
- [in] Sonlandırma, betik bloğu sınırlayıcısı adresi. Ayrıştırma için konak betik bloğunun sonu algılamak için bir sınırlayıcı (örneğin, iki tek tırnak), genellikle kullanır.  
+ 'ndaki Son betik blok sınırlayıcısı adresi. Ayrıştırma için, ana bilgisayar genellikle bir sınırlayıcı (örneğin, iki tek tırnak işareti) kullanır ve komut dosyası bloğunun sonunu algılar.  
   
- Sınırlayıcı betik yazma altyapısı ön işleme sağlamasına olanak sağlar. Örneğin, altyapı, tek tırnak işareti ayırıcı olarak kullanılacak iki tek tırnak işaretleri ile değiştirebilir. Altyapısı sınırlayıcı nasıl kullanıldığını belirler.  
+ Sınırlayıcı, betik yazma altyapısının ön işleme sağlamasına olanak sağlar. Örneğin, altyapı tek tırnak işaretini sınırlayıcı olarak kullanılmak üzere iki tek tırnak işaretiyle değiştirebilir. Motor, sınırlandırıcının nasıl kullanıldığını belirler.  
   
- Bir sınırlayıcıdan betik bloğunun sonu işaretlemez NULL olarak ayarlayın.  
+ Bir sınırlayıcı betik bloğunun sonunu işaretlemez ise NULL olarak ayarlayın.  
   
  `ppse`  
- [out] Bir işaretçiye alan değişkenin adresini `IScriptEntry` alt örneğinin arabirimi.  
+ dışı Alt örneğin `IScriptEntry` arabirimine bir işaretçi alan bir değişkenin adresi.  
   
- İçin `IScriptNode` Bu parametre bir Web sayfasını temsil eden nesneleri döndüren bir `IScriptEntry` belirten bir betik bloğu örneği.  
+ Bir Web sayfasını temsil eden `IScriptNode` nesneler için, bu parametre bir betik bloğunu belirten bir `IScriptEntry` örneği döndürür.  
   
- İçin `IScriptEntry` Bu parametre bir betik bloğu temsil eden nesneleri döndüren bir `IScriptEntry` belirten bir işlev nesnesi örneği.  
+ Bir betik bloğunu temsil eden `IScriptEntry` nesneler için, bu parametre bir işlev nesnesini belirten bir `IScriptEntry` örneği döndürür.  
   
- İçin `IScriptEntry` bir işlevi temsil eden nesneleri nesnesi, bu yöntem başarısız olur.  
+ Bir işlev nesnesini temsil eden `IScriptEntry` nesneler için, bu yöntem başarısız olur.  
   
- İçin `IScriptScriptlet` nesneler, bu yöntem başarısız olur.  
+ @No__t_0 nesneler için bu yöntem başarısız olur.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -71,8 +71,8 @@ HRESULT CreateChildEntry(
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IScriptNode` Arabirimi bir Web sayfası veya öğelerini temsil eder. `IScriptEntry` Arabirimi (türetilen `IScriptNode`) bir betik bloğu ya da bir işlev nesnesi temsil eder. `IScriptScriptlet` Arabirimi (türetilen `IScriptEntry`) bir olay işleyicisini temsil eder.  
+ @No__t_0 arabirimi bir Web sayfasını veya öğelerini temsil eder. @No__t_0 arabirimi (`IScriptNode` türetilen), bir betik bloğunu veya bir işlev nesnesini temsil eder. @No__t_0 arabirimi (`IScriptEntry` türetilen) bir olay işleyicisini temsil eder.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iscriptnode arabirimi](../../winscript/reference/iscriptnode-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Icriptnode arabirimi](../../winscript/reference/iscriptnode-interface.md)    
  [IScriptEntry Arabirimi](../../winscript/reference/iscriptentry-interface.md)

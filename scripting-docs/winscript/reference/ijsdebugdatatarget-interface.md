@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget arabirimi | Microsoft Docs
+title: IJsDebugDataTarget arabirimi | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3cbb4b0b54fb9a3821d3033ef0e65fd0bafbc246
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 85c77209230abfe261c9ec0b884ad0a677cfbf07
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582504"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572456"
 ---
 # <a name="ijsdebugdatatarget-interface"></a>IJsDebugDataTarget Arabirimi
-Erişim ve hedef hata ayıklayıcı işleme durumunu değiştirme işlevselliği sağlamak için hata ayıklayıcı tarafından uygulanır.  
+Hata ayıklayıcı tarafından, hedef hata ayıklayıcı işleminin durumunu erişim ve değiştirme işlevlerini sağlamak için uygulanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,20 +31,20 @@ IJsDebugDataTarget : public IUnknown;
   
 ### <a name="public-methods"></a>Ortak Yöntemler  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
-|[IJsDebugDataTarget::AllocateVirtualMemory Metodu](../../winscript/reference/ijsdebugdatatarget-allocatevirtualmemory-method.md)|Ayırır ve/veya hedef işlemin sanal adres alanı içindeki bellek bölgesini kaydeder.|  
-|[IJsDebugDataTarget::CreateStackFrameEnumerator Metodu](../../winscript/reference/ijsdebugdatatarget-createstackframeenumerator-method.md)|Bir yığın çerçevesi için Numaralandırıcı oluşturur.|  
-|[IJsDebugDataTarget::FreeVirtualMemory Metodu](../../winscript/reference/ijsdebugdatatarget-freevirtualmemory-method.md)|Serbest bırakır ve/veya hedef işlemin sanal adres alanı içindeki bellek bölgesini kaydeder.|  
-|[IJsDebugDataTarget::GetThreadContext Metodu](../../winscript/reference/ijsdebugdatatarget-getthreadcontext-method.md)|Verilen iş parçacığı için bağlamı alır.|  
-|[IJsDebugDataTarget::GetTlsValue Metodu](../../winscript/reference/ijsdebugdatatarget-gettlsvalue-method.md)|Hatası ayıklanmakta olan iş parçacığı, belirli TLS dizini için iş parçacığı yerel depolama (TLS) yuvasındaki değeri alır.|  
+|[IJsDebugDataTarget::AllocateVirtualMemory Metodu](../../winscript/reference/ijsdebugdatatarget-allocatevirtualmemory-method.md)|Hedef işlemin sanal adres alanı içindeki bir bellek bölgesini ayırır ve/veya kaydeder.|  
+|[IJsDebugDataTarget::CreateStackFrameEnumerator Metodu](../../winscript/reference/ijsdebugdatatarget-createstackframeenumerator-method.md)|Yığın çerçeveleri için bir Numaralandırıcı oluşturur.|  
+|[IJsDebugDataTarget::FreeVirtualMemory Metodu](../../winscript/reference/ijsdebugdatatarget-freevirtualmemory-method.md)|Hedef işlemin sanal adres alanı içindeki bir bellek bölgesini serbest bırakır ve/veya kaydeder.|  
+|[IJsDebugDataTarget::GetThreadContext Metodu](../../winscript/reference/ijsdebugdatatarget-getthreadcontext-method.md)|Verilen iş parçacığının bağlamını alır.|  
+|[IJsDebugDataTarget::GetTlsValue Metodu](../../winscript/reference/ijsdebugdatatarget-gettlsvalue-method.md)|Hata ayıklanan iş parçacığı için, belirtilen TLS dizini için iş parçacığı yerel depolaması (TLS) yuvasındaki değeri alır.|  
 |[IJsDebugDataTarget::ReadBSTR Metodu](../../winscript/reference/ijsdebugdatatarget-readbstr-method.md)|Hata ayıklama hedefinden bir BSTR okur.|  
 |[IJsDebugDataTarget::ReadMemory Metodu](../../winscript/reference/ijsdebugdatatarget-readmemory-method.md)|Hedef işlemin belleğini okur.|  
 |[IJsDebugDataTarget::ReadNullTerminatedString Metodu](../../winscript/reference/ijsdebugdatatarget-readnullterminatedstring-method.md)|Hedeften belirtilen sayıda karakteri okur.|  
 |[IJsDebugDataTarget::WriteMemory Metodu](../../winscript/reference/ijsdebugdatatarget-writememory-method.md)|Hedef işlemin belleğini okur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

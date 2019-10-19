@@ -1,5 +1,5 @@
 ---
-title: Döngü dışında 'continue' olamaz | Microsoft Docs
+title: Döngü dışında ' Continue ' olamaz | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,37 +14,37 @@ ms.assetid: d2d95259-b2bc-4069-9876-60c30ad600a3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 804c23c45379a10d91c2888ac321c18f2067a1e4
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e19c85baf8576d1c1db411146c80a53c6a819cdb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825699"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572373"
 ---
 # <a name="cant-have-continue-outside-of-loop"></a>Döngü dışında 'continue' olamaz
-Kullanmaya çalıştığınız **devam** dışında bir döngü deyimi. **Devam** deyimi yalnızca y: gövdesi içinde kullanılabilir  
+**Continue** ifadesini bir döngünün dışında kullanmaya çalıştınız. **Continue** deyimleri yalnızca a gövdesi içinde kullanılabilir:  
   
-- `do-while` döngü,  
+- `do-while` döngüsü,  
   
-- `while` döngü,  
+- `while` döngüsü,  
   
-- **için** döngüsü  
+- **for** döngüsü,  
   
-- **için/** döngü.  
+- **for/in** döngüsü.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Emin **devam** y: gövdesi içinde deyim görünür  
+- **Continue** ifadesinin gövdesi içinde göründüğünden emin olun:  
   
-  - `do-while` döngü,  
+  - `do-while` döngüsü,  
 
-  - `while` döngü,  
+  - `while` döngüsü,  
 
-  - **için** döngüsü  
+  - **for** döngüsü,  
 
-  - **için/** döngü.  
+  - **for/in** döngüsü.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [continue deyimi](../../javascript/reference/continue-statement-javascript.md)   
- [Program akışı denetimi](../../javascript/controlling-program-flow-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Continue ifadesine devam et](../../javascript/reference/continue-statement-javascript.md)    
+ [Program Flow   denetleniyor](../../javascript/controlling-program-flow-javascript.md)  
  [Komut Dosyalarınızda Sorun Giderme](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

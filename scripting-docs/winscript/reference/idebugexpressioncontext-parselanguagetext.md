@@ -1,5 +1,5 @@
 ---
-title: Idebugexpressioncontext::parselanguagetext | Microsoft Docs
+title: Idebugexpressioncontext::P arseLanguageText | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 50f9f398b9193c776f8e2a823b78ce7b8da438b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0493adde76e029088b637be3c6aaf02c55caaace
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946283"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573160"
 ---
 # <a name="idebugexpressioncontextparselanguagetext"></a>IDebugExpressionContext::ParseLanguageText
-Belirtilen metni için bir hata ayıklama ifadesi oluşturur.  
+Belirtilen metin için bir hata ayıklama ifadesi oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,38 +41,38 @@ HRESULT ParseLanguageText(
   
 #### <a name="parameters"></a>Parametreler  
  `pstrCode`  
- [in] İfadeyi veya deyim metni sağlar.  
+ 'ndaki İfade veya deyimler için metin sağlar.  
   
  `nRadix`  
- [in] Kullanılacak sayı tabanı.  
+ 'ndaki Kullanılacak Radix.  
   
  `pstrDelimiter`  
- [in] Sonlandırma, betik bloğu sınırlayıcı. Zaman `pstrCode` ayrıştırılır metin akışından gibi iki betik bloğunun sonu algılamak için tırnak işaretleri ("), tek bir ana bilgisayar genellikle bir ayırıcı kullanır. Bu parametre, bazı koşullu ilkel bir ön işleme sağlamak komut dosyası altyapısı verme konak kullanılan sınırlayıcıyı belirtir (örneğin, tek tırnak işaretini ['] ayırıcı olarak kullanılacak iki tek tırnak işaretleri yerine). Tam olarak nasıl (ve ise) bu bilgileri komut dosyası altyapısına bağlıdır komut dosyası altyapısı kullanır. Bu parametre kümesine `NULL` konak betik bloğunun sonu işaretlemek için sınırlayıcı kullanmadıysanız.  
+ 'ndaki Komut dosyası blok sınırlayıcısı. @No__t_0 metin akışından ayrıştırıldığında, ana bilgisayar genellikle iki tek tırnak işareti (' ') gibi bir sınırlayıcı kullanır ve komut dosyası bloğunun sonunu algılar. Bu parametre, ana bilgisayarın kullandığı sınırlayıcıyı belirtir ve betik altyapısının bazı koşullu temel bir ön işleme sağlamasına izin verir (örneğin, tek tırnak işaretini ['] sınırlayıcı olarak kullanılmak üzere iki tek tırnak işaretiyle değiştirme). Betik altyapısının bu bilgileri kullanması tam olarak nasıl (ve ne olursa) komut dosyası altyapısına bağlıdır. Ana bilgisayar betik bloğunun sonunu işaretlemek için bir sınırlayıcı kullanmadığından bu parametreyi `NULL` olarak ayarlayın.  
   
  `dwFlags`  
- [in] Aşağıdaki hata ayıklama metin bayrakların birleşimi:  
+ 'ndaki Aşağıdaki hata ayıklama metin bayraklarının birleşimi:  
   
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-----------------|  
-|DEBUG_TEXT_ISEXPRESSION|0x00000001|Metin bir ifadenin bir deyim aksine olduğunu gösterir. Bu bayrak, metin bazı diller tarafından ayrıştırılır şekilde etkileyebilir.|  
-|DEBUG_TEXT_RETURNVALUE|0x00000002|Dönüş değeri varsa, çağıran tarafından kullanılır.|  
-|DEBUG_TEXT_NOSIDEEFFECTS|0x00000004|Yan etkileri izin vermez. İfadenin değerlendirilmesi, bu bayrağı ayarlarsanız, hiçbir çalışma zamanı durumu değiştirmeniz gerekir.|  
-|DEBUG_TEXT_ALLOWBREAKPOINTS|0x00000008|Metin değerlendirmesi sırasında kesme noktaları sağlar. Bu bayrak ayarlanmazsa kesme noktaları metin değerlendirmesi sırasında dikkate alınmaz.|  
-|DEBUG_TEXT_ALLOWERRORREPORT|0x00000010|Hata raporlarını metin değerlendirmesi sırasında sağlar. Ardından bu bayrağı ayarlanmamışsa hata konağa değerlendirmesi sırasında raporlanmaz.|  
-|DEBUG_TEXT_EVALUATETOCODECONTEXT|0x00000020|Deyimi çalıştırmak yerine bir kod içeriği için değerlendirilecek ifade olduğunu gösterir|  
+|DEBUG_TEXT_ISEXPRESSION|0x00000001|Metnin bir deyimin aksine bir ifade olduğunu gösterir. Bu bayrak, metnin bazı diller tarafından ayrıştırılma şeklini etkileyebilir.|  
+|DEBUG_TEXT_RETURNVALUE|0x00000002|Bir dönüş değeri varsa, bu, çağıran tarafından kullanılır.|  
+|DEBUG_TEXT_NOSIDEEFFECTS|0x00000004|Yan etkilere izin vermeyin. Bu bayrak ayarlandıysa, ifadenin değerlendirmesi çalışma zamanı durumunu değiştirmez.|  
+|DEBUG_TEXT_ALLOWBREAKPOINTS|0x00000008|Metnin değerlendirmesi sırasında kesme noktalarına izin verir. Bu bayrak ayarlanmamışsa, metnin değerlendirmesi sırasında kesme noktaları yok sayılır.|  
+|DEBUG_TEXT_ALLOWERRORREPORT|0x00000010|Metnin değerlendirmesi sırasında hata raporlarına izin verir. Bu bayrak ayarlanmamışsa, değerlendirme sırasında hatalar konağa bildirilmez.|  
+|DEBUG_TEXT_EVALUATETOCODECONTEXT|0x00000020|İfadenin kendisini çalıştırmak yerine bir kod bağlamı olarak değerlendirilip değerlendirilmeyeceğini belirtir|  
   
  `ppe`  
- [out] Belirtilen metin için hata ayıklama ifade döndürür.  
+ dışı Belirtilen metin için hata ayıklama ifadesini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, belirtilen metnin bir hata ayıklama ifadesi oluşturur.  
+ Bu yöntem, belirtilen metin için bir hata ayıklama ifadesi oluşturur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugExpressionContext Arabirimi](../../winscript/reference/idebugexpressioncontext-interface.md)

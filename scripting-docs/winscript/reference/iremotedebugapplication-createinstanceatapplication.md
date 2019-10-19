@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::CreateInstanceAtApplication | Microsoft Docs
+title: 'IRemoteDebugApplication:: Createınstanceatapplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6e17c5abcb21bfaad6de948c3676d29232da66cf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 285e5df6960e3188ffe1ce17b1fc4f43626a3d74
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944311"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572314"
 ---
 # <a name="iremotedebugapplicationcreateinstanceatapplication"></a>IRemoteDebugApplication::CreateInstanceAtApplication
-Nesnelerinin oluşturulması uygulama işleminde kodla sağlar. diğer bir deyişle,-işlem dışı uygulama.  
+Uygulamanın işlem dışı olan koda göre uygulama işlemindeki nesnelerin oluşturulmasına izin verir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,29 +41,29 @@ HRESULT CreateInstanceAtApplication(
   
 #### <a name="parameters"></a>Parametreler  
  `rclsid`  
- [in] Oluşturulacak nesne tanımlayıcısı (CLSID) sınıfı.  
+ 'ndaki Oluşturulacak nesnenin sınıf tanımlayıcısı (CLSID).  
   
  `pUnkOuter`  
- [in] Varsa `NULL`, nesne bir toplamanın parçası oluşturuluyor değil. Aksi takdirde, `pUnkOuter` toplama nesnesinin işaretçisidir `IUnknown` arabirimi (denetleme `IUnknown`).  
+ 'ndaki @No__t_0, nesne bir toplamanın parçası olarak oluşturulmaz. Aksi takdirde, `pUnkOuter` toplama nesnesinin `IUnknown` arabirimine yönelik bir işaretçidir (denetim `IUnknown`).  
   
  `dwClsContext`  
- [in] Yürütülebilir kodu çalıştırmak için bağlam. Değerleri, sabit listesinden alınmış alınır `CLSCTX`.  
+ 'ndaki Çalıştırılabilir kodu çalıştırmak için bağlam. Değerler `CLSCTX` numaralandırmasından alınır.  
   
  `riid`  
- [in] Nesne ile iletişim kurmak için kullanılan arabirim tanımlayıcısı.  
+ 'ndaki Nesneyle iletişim kurmak için kullanılan arabirim tanımlayıcısı.  
   
  `ppvObject`  
- [out] İçinde istenen arabirim işaretçisi alır, işaretçi değişkeninin adresi `riid`. Başarılı bir geri döndürme üzerine *`ppvObject` istenen arabirim işaretçisi içerir. Başarısızlık durumunda, \* `ppvObject` içeren `NULL`.  
+ dışı @No__t_0 istenen arabirim işaretçisini alan işaretçi değişkeninin adresi. Başarılı döndürmeden sonra, istenen arabirim işaretçisini içeren * `ppvObject`. Hata sonrasında, \* `ppvObject` `NULL` içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem için temsilci `CoCreateInstance`.  
+ Bu yöntem `CoCreateInstance` devreder.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplication Arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)

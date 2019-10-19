@@ -13,18 +13,18 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cd18e6db3e1dc050ffd4da6f2991889f28355192
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8ee22f21b4e72f1018c4e11d23c355bfc682a8cb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440488"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573367"
 ---
 # <a name="idebugapplicationthreadevents110-onbeginthreadrequest"></a>IDebugApplicationThreadEvents110 ::OnBeginThreadRequest
-Çağrı akışına PDM'ın iş parçacığı kullanarak geçiş başladı.  
+PDM 'in iş parçacığı geçişini kullanarak iş parçacığına çağrı başladı.  
   
 > [!IMPORTANT]
-> [Idebugapplicationthreadevents110 arabirimi](../../winscript/reference/idebugapplicationthreadevents110-interface.md) PDM v11.0 tarafından uygulanan ve büyük. activdbg100.h içinde bulunur.  
+> [Idebugapplicationthreadevents110 ARABIRIMI](../../winscript/reference/idebugapplicationthreadevents110-interface.md) PDM v 11.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,7 +33,7 @@ HRESULT OnBeginThreadRequest( void );
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem, hiç parametre yok.  
+ Bu yöntemin parametresi yok.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplicationThreadEvents110 Arabirimi](../../winscript/reference/idebugapplicationthreadevents110-interface.md)

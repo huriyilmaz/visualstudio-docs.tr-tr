@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::SetScriptSite | Microsoft Docs
+title: 'IActiveScript:: SetScriptSite | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3fdf5f3ae84d1a991d67170b5f2b02114b91ee05
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 063dcc7b580334bff9780e9c209b621ef7e25656
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935560"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575324"
 ---
 # <a name="iactivescriptsetscriptsite"></a>IActiveScript::SetScriptSite
-Komut dosyası altyapısı, bildirir [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md) ana bilgisayar tarafından sağlanan arabirim site. Diğer önce bu yöntemi çağıran [IActiveScript](../../winscript/reference/iactivescript.md) arabirim yöntemleri kullanılır.  
+Konak tarafından sunulan [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) Interface sitesinin betik motoruna bilgilendirir. Diğer herhangi bir [IActiveScript](../../winscript/reference/iactivescript.md) arabirimi yöntemi kullanılmadan önce bu yöntemi çağırın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT SetScriptSite(
   
 #### <a name="parameters"></a>Parametreler  
  `pScriptSite`  
- [in] Komut dosyası altyapısının Bu örnekle ilişkilendirilecek komut dosyası ana bilgisayarı tarafından sağlanan site adresi. Site, bu komut dosyası altyapısı örneği için benzersiz olarak atanmalıdır; diğer komut dosyası altyapıları ile paylaşılamaz.  
+ 'ndaki Betik altyapısının bu örneğiyle ilişkilendirilecek konak tarafından sağlanan betik sitesinin adresi. Site, bu komut dosyası altyapısı örneğine benzersiz olarak atanmalıdır; diğer betik altyapılarıyla paylaştırılamaz.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -45,10 +45,10 @@ HRESULT SetScriptSite(
 |Dönüş Değeri|Açıklama|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
-|`E_FAIL`|Belirtilmeyen bir hata oluştu; komut dosyası altyapısı sitesi başlatılıyor tamamlayamadı.|  
-|`E_INVALIDARG`|Bir bağımsız değişken geçersiz.|  
-|`E_POINTER`|Geçersiz işaretçi belirtildi.|  
+|`E_FAIL`|Belirtilmeyen bir hata oluştu; betik altyapısı, siteyi başlatmayı tamamlayamadı.|  
+|`E_INVALIDARG`|Bağımsız değişken geçersizdi.|  
+|`E_POINTER`|Geçersiz bir işaretçi belirtildi.|  
 |`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, bir site zaten ayarlanmış).|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScript](../../winscript/reference/iactivescript.md)

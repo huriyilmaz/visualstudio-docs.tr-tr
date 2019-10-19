@@ -1,5 +1,5 @@
 ---
-title: BREAKRESUMEACTION listelemesi | Microsoft Docs
+title: BREAKRESUMEACTION numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e5c79aacc64eb57282bf09f7e4673980396b37ea
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d2db56b66a544a31df3ac3a622568ecd29a33d12
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955295"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572615"
 ---
 # <a name="breakresumeaction-enumeration"></a>BREAKRESUMEACTION Listelemesi
-Bir kesme noktasından devam etmek için yöntemleri açıklar.  
+Kesme noktasından devam etmenin yollarını açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,13 +45,13 @@ typedef enum tagBREAKRESUME_ACTION {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|BREAKRESUMEACTION_ABORT|Uygulamayı durdurur.|  
+|BREAKRESUMEACTION_ABORT|Uygulamayı iptal eder.|  
 |BREAKRESUMEACTION_CONTINUE|Çalışmaya devam eder.|  
-|BREAKRESUMEACTION_STEP_INTO|Bir yordam adımlamayla girin.|  
-|BREAKRESUMEACTION_STEP_OVER|Adım bir yordam boyunca.|  
-|BREAKRESUMEACTION_STEP_OUT|Adımları güncel süreçte dışında.|  
-|BREAKRESUMEACTION_IGNORE|Durumuna sahip çalışmaya devam eder.|  
-|BREAKRESUMEACTION_STEP_DOCUMENT|Sonraki belge için adımlar.|  
+|BREAKRESUMEACTION_STEP_INTO|Bir yordamın adımları.|  
+|BREAKRESUMEACTION_STEP_OVER|Yordam üzerindeki adımlar.|  
+|BREAKRESUMEACTION_STEP_OUT|Geçerli yordamın adımları.|  
+|BREAKRESUMEACTION_IGNORE|Durumla çalışmaya devam eder.|  
+|BREAKRESUMEACTION_STEP_DOCUMENT|Sonraki belgeye adımlar.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

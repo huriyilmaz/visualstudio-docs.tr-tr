@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::SetDocumentAttr | Microsoft Docs
+title: 'Idebugbelgethelper:: Setbelgetattr | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3c19e5b2091bf9dd30359f30e27019fa778b675
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e2210557a1ca2b23d19d151d6fe6f3b5d25e7082
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62948973"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574615"
 ---
 # <a name="idebugdocumenthelpersetdocumentattr"></a>IDebugDocumentHelper::SetDocumentAttr
-Bu belge için öznitelikleri ayarlar.  
+Bu belgenin özniteliklerini ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT SetDocumentAttr(
   
 #### <a name="parameters"></a>Parametreler  
  `pszAttributes`  
- [in] Belgeye uygulamak için öznitelikler.  
+ 'ndaki Belgeye uygulanacak Öznitelikler.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu belge için öznitelikleri ayarlar.  
+ Bu yöntem, bu belgenin özniteliklerini ayarlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugdocumenthelper arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
  [TEXT_DOC_ATTR Sabitleri](../../winscript/reference/text-doc-attr-constants.md)

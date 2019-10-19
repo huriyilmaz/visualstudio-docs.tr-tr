@@ -1,5 +1,5 @@
 ---
-title: IDebugAsyncOperationCallBack::onComplete | Microsoft Docs
+title: 'Icodegasyncoperationcallback:: Ontamamlan| Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f9e5532a55901d8e29addfee58594645440991f6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a15ae57d64d2b1e7be867c20e9683e4aaa415974
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821879"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573237"
 ---
 # <a name="idebugasyncoperationcallbackoncomplete"></a>IDebugAsyncOperationCallBack::onComplete
-Bir zaman uyumsuz hata ayıklama işleminin bir sonucu olduğunu bildirir.  
+Zaman uyumsuz bir hata ayıklama işleminden elde edilen bir sonuç olduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,18 +34,18 @@ HRESULT onComplete();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem bir sonuç kullanılabilir olduğundan emin sinyalleri bir `IDebugAsyncOperation` nesne. Hata ayıklayıcı iş parçacığında olay harekete geçirilir.  
+ Bu yöntem bir `IDebugAsyncOperation` nesnesinden kullanılabilir bir sonuç olduğunu bildirir. Olay, hata ayıklayıcı iş parçacığında ateşlenir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugasyncoperationcallback arabirimi](../../winscript/reference/idebugasyncoperationcallback-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Ihata ayıklama Gasyncoperationcallback arabirimi](../../winscript/reference/idebugasyncoperationcallback-interface.md)    
  [IDebugAsyncOperation Arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugprocess::createbreakpoint yöntemi | Microsoft Docs
+title: 'Ijsdebugprocess:: CreateBreakPoint yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b398b93c2e7b5ad43abd35d385407b39c0c980f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2b0a4d595a11dc54829c467a0aace9601042fa08
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62557978"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575098"
 ---
 # <a name="ijsdebugprocesscreatebreakpoint-method"></a>IJsDebugProcess::CreateBreakPoint Yöntemi
-Belge belirtilen konumda bir kesme noktası ayarlar.  
+Kesme noktasını belirtilen belge konumunda ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,24 +39,24 @@ HRESULT CreateBreakPoint(
   
 #### <a name="parameters"></a>Parametreler  
  `documentId`  
- [in] Idebugdocumenttext öğesine işaretçi.  
+ 'ndaki Idebugdocumenttext işaretçisi.  
   
  `characterOffset`  
- [in] Dosyanın başından itibaren karakter uzaklığı.  
+ 'ndaki Dosyanın başından itibaren karakter boşluğu.  
   
  `characterCount`  
- [in] İçinde kesme noktasının ekleneceği belge metninin uzunluğu.  
+ 'ndaki Kesme noktasının ekleneceği belge metninin uzunluğu.  
   
  `isEnabled`  
- [in] Kesme noktasının etkinleştirilip etkinleştirilmeyeceğini belirtir.  
+ 'ndaki Kesme noktasının etkinleştirilip etkinleştirilmeyeceğini belirtir.  
   
  `ppDebugBreakPoint`  
- [out] Oluşturulan kesme noktasını temsil eden nesne.  
+ dışı Oluşturulan kesme noktasını temsil eden nesne.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugProcess Arabirimi](../../winscript/reference/ijsdebugprocess-interface.md)

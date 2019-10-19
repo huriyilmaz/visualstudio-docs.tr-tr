@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::CreateAsyncDebugOperation | Microsoft Docs
+title: 'IDebugApplication:: CreateAsyncDebugOperation | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c60c84dbd3be9248e2bd075e65d53f7f9361d0b5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1feb8207fb7e7a7faf4427be189c4952139ef32c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991012"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575566"
 ---
 # <a name="idebugapplicationcreateasyncdebugoperation"></a>IDebugApplication::CreateAsyncDebugOperation
-Belirli bir zaman uyumlu hata ayıklama işlemi zaman uyumsuz erişim sağlar.  
+Belirli bir zaman uyumlu hata ayıklama işlemine zaman uyumsuz erişim sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT CreateAsyncDebugOperation(
   
 #### <a name="parameters"></a>Parametreler  
  `psdo`  
- [in] Zaman uyumlu hata ayıklama işlemi nesnesi.  
+ 'ndaki Zaman uyumlu hata ayıklama işlemi nesnesi.  
   
  `ppado`  
- [out] Zaman uyumsuz hata ayıklama işlemi nesnesi.  
+ dışı Zaman uyumsuz hata ayıklama işlemi nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemi açıkça hata ayıklayıcı iş parçacığıyla eşitleme olmadan ifadeleri zaman uyumsuz olarak değerlendirilecek dil altyapısı sağlar. Daha fazla bilgi için [Idebugsyncoperation arabirimi](../../winscript/reference/idebugsyncoperation-interface.md) ve [Idebugasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md).  
+ Bu yöntem, dil altyapılarının, hata ayıklayıcı iş parçacığı ile açıkça eşitlemeden ifadeleri zaman uyumsuz olarak değerlendirmesini sağlar. Daha fazla bilgi için bkz. [ıdebugsyncoperation arabirimi](../../winscript/reference/idebugsyncoperation-interface.md) ve [ıdebugger gasyncoperation arabirimi](../../winscript/reference/idebugasyncoperation-interface.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
- [Idebugsyncoperation arabirimi](../../winscript/reference/idebugsyncoperation-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
+ [Idebugsyncoperation arabirimi](../../winscript/reference/idebugsyncoperation-interface.md)    
  [IDebugAsyncOperation Arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)

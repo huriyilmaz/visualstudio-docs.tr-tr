@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetBody | Microsoft Docs
+title: 'Icriptentry:: SetBody | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 46ebccb57885480d34d79cbd27e99dc6a35b343d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1af865c8366481204ee413377a083b09d8c97383
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787651"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575375"
 ---
 # <a name="iscriptentrysetbody"></a>IScriptEntry::SetBody
-Gövdesinde metin ayarlar bir `IScriptEntry` betik bloğu ya da bir `IScriptScriptlet` kod oluşturma.  
+@No__t_0 betik bloğunun gövdesinde bulunan metni veya bir `IScriptScriptlet` kod oluşturma yöntemi belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,11 +37,11 @@ HRESULT SetBody(
   
 #### <a name="parameters"></a>Parametreler  
  `psz`  
- [in] İçin bir `IScriptEntry` betik bloğu `psz` komut dosyası etiketleri arasına metin.  
+ 'ndaki Bir `IScriptEntry` betik bloğunda, `psz` komut dosyası etiketlerinin içine alınmış metindir.  
   
- İçin bir `IScriptEntry` işlev bloğu `psz` işlev gövdesidir.  
+ @No__t_0 işlev bloğu için, `psz` işlev gövdesidir.  
   
- İçin bir `IScriptScriptlet` nesne (öğesinden türetildiğini `IScriptEntry`), `psz` ayrıldığında betik metindir.  
+ @No__t_0 nesnesi (`IScriptEntry` türeten türetilmiş) için, `psz`, kod oluşturma yöntemi 'in betik metintir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -52,6 +52,6 @@ HRESULT SetBody(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iscriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)    
  [IScriptEntry::GetBody](../../winscript/reference/iscriptentry-getbody.md)

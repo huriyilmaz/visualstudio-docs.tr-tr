@@ -1,5 +1,5 @@
 ---
-title: IObjectIdentity::IsEqualObject | Microsoft Docs
+title: 'Iobjectıdentity:: ısequalobject | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c215a15a1239f07272079783366a1617c3a626e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 636dfa07b1fc94dfec2273220aa4101f5cd085b1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944883"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571469"
 ---
 # <a name="iobjectidentityisequalobject"></a>IObjectIdentity::IsEqualObject
-Bir nesne geçerli nesneye eşit olup olmadığını belirler.  
+Nesnenin geçerli nesneye eşit olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT IsEqualObject(
   
 #### <a name="parameters"></a>Parametreler  
  `punk`  
- [in] Adresi geçerli nesneyle Karşılaştırılacak nesne.  
+ 'ndaki Geçerli nesneyle Karşılaştırılacak nesnenin adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Nesneler eşit olur.|  
-|`S_FALSE`|Nesneler eşit değildir.|  
+|`S_OK`|Nesneler eşittir.|  
+|`S_FALSE`|Nesneler eşit değil.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uygulanışı `IsEqualObject` yöntemi döndürmelidir `S_OK` yalnızca nesnenin aynı olup olmadığını.  
+ @No__t_0 yönteminin uygulanması, yalnızca nesneler aynıysa `S_OK` döndürmelidir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IObjectIdentity Arabirimi](../../winscript/reference/iobjectidentity-interface.md)

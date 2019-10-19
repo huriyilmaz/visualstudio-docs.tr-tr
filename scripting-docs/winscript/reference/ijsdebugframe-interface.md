@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugframe arabirimi | Microsoft Docs
+title: IJsDebugFrame arabirimi | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 57f5a848967148705a2b8dcd3f6b75dcb3a5db26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 91fe8cdf91b0c2121f4a1a7f111794b0fbe36669
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558009"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575111"
 ---
 # <a name="ijsdebugframe-interface"></a>IJsDebugFrame Arabirimi
 Bir yığın çerçevesini temsil eder.  
@@ -31,18 +31,18 @@ IJsDebugFrame : public IUnknown;
   
 ### <a name="public-methods"></a>Ortak Yöntemler  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
-|[IJsDebugFrame::Evaluate Metodu](../../winscript/reference/ijsdebugframe-evaluate-method.md)|Bu yığın çerçevesi bağlamında bir ifade değerlendirin.|  
+|[IJsDebugFrame::Evaluate Metodu](../../winscript/reference/ijsdebugframe-evaluate-method.md)|Bu yığın çerçevesinin bağlamında bir ifadeyi değerlendirin.|  
 |[IJsDebugFrame::GetDebugProperty Metodu](../../winscript/reference/ijsdebugframe-getdebugproperty-method.md)|Bu yığın çerçevesi için bir özellik tarayıcısı döndürür.|  
-|[IJsDebugFrame::GetDocumentPositionWithId Metodu](../../winscript/reference/ijsdebugframe-getdocumentpositionwithid-method.md)|Bu yığın çerçevesinin kullanıcı düzeyi belge içindeki konumunu döndürür.|  
-|[IJsDebugFrame::GetDocumentPositionWithName Metodu](../../winscript/reference/ijsdebugframe-getdocumentpositionwithname-method.md)|Bu yığın çerçevesinin kullanıcı düzeyi belge içindeki konumunu döndürür.|  
-|[IJsDebugFrame::GetName Metodu](../../winscript/reference/ijsdebugframe-getname-method.md)|Yığın çerçevesinin kullanıcı dostu adını alır.|  
-|[IJsDebugFrame::GetReturnAddress Metodu](../../winscript/reference/ijsdebugframe-getreturnaddress-method.md)|'Başında' itilmiş dönüş adresi alır (bkz: GetStackRange) çerçevesi.|  
+|[IJsDebugFrame::GetDocumentPositionWithId Metodu](../../winscript/reference/ijsdebugframe-getdocumentpositionwithid-method.md)|Bu yığın çerçevesinin Kullanıcı düzeyi belge içindeki geçerli konumunu döndürür.|  
+|[IJsDebugFrame::GetDocumentPositionWithName Metodu](../../winscript/reference/ijsdebugframe-getdocumentpositionwithname-method.md)|Bu yığın çerçevesinin Kullanıcı düzeyi belge içindeki geçerli konumunu döndürür.|  
+|[IJsDebugFrame::GetName Metodu](../../winscript/reference/ijsdebugframe-getname-method.md)|Yığın çerçevesinin Kullanıcı dostu adını alır.|  
+|[IJsDebugFrame::GetReturnAddress Metodu](../../winscript/reference/ijsdebugframe-getreturnaddress-method.md)|Çerçevenin ' Start ' (bkz. GetStackRange) adresine gönderilen dönüş adresini alır.|  
 |[IJsDebugFrame::GetStackRange Metodu](../../winscript/reference/ijsdebugframe-getstackrange-method.md)|Mantıksal JavaScript yığın çerçevesinin mutlak adres aralığını döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

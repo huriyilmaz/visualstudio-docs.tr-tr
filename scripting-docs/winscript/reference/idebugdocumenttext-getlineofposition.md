@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetLineOfPosition | Microsoft Docs
+title: 'Idebugdocumenttext:: GetLineOfPosition | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4d5d33a68b4bc87307281e37ff96f84834257a22
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e8ce32e46c42ee864a88e169a79539efb8b05633
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970880"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572117"
 ---
 # <a name="idebugdocumenttextgetlineofposition"></a>IDebugDocumentText::GetLineOfPosition
-Satır numarası ve isteğe bağlı olarak, karşılık gelen satır karakter kaydırma için belirli karakter konumunu döndürür.  
+Satır numarasını ve isteğe bağlı olarak, verilen karakter konumuna karşılık gelen satır içindeki karakter sapmasını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ HRESULT GetLineOfPosition(
   
 #### <a name="parameters"></a>Parametreler  
  `cCharacterPosition`  
- [in] Karakter konumu aralığı konumunu başlatın.  
+ 'ndaki Karakter konumu aralığının başlangıç konumu.  
   
  `pcLineNumber`  
- [out] Satır numarası aralığı.  
+ dışı Aralığın satır numarası.  
   
  `pcCharacterOffsetInLine`  
- [out içinde] Satır aralığında karakter uzaklığı `pcLineNumber`. Bu parametre `NULL`, yöntem bir değer döndürmez.  
+ [in, out] Aralığın satır `pcLineNumber` içindeki karakter boşluğu. Bu parametre `NULL`, yöntem bir değer döndürmez.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, satır numarası ve isteğe bağlı olarak, karşılık gelen satır karakter kaydırma için belirli karakter konumunu döndürür.  
+ Bu yöntem, satır numarasını ve isteğe bağlı olarak, verilen karakter konumuna karşılık gelen satır içindeki karakter sapmasını döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentText Arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)

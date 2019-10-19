@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetIndexInParent | Microsoft Docs
+title: 'Icriptnode:: Getındexınparent | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 92f5ae074d65d2360bcfb3dda03903aa3c59209e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9251f65414a5ebd48ce56dae6a7dbfeec4e514e3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786983"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575039"
 ---
 # <a name="iscriptnodegetindexinparent"></a>IScriptNode::GetIndexInParent
-Üst öğenin alt listedeki bir nesnenin dizinini döndürür.  
+Üst öğenin alt öğe listesindeki bir nesnenin dizinini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,9 +37,9 @@ HRESULT GetIndexInParent(
   
 #### <a name="parameters"></a>Parametreler  
  `pisn`  
- [out] Üst öğenin alt listedeki bir nesnenin dizinini döndürür.  
+ dışı Üst öğenin alt öğe listesindeki bir nesnenin dizinini döndürür.  
   
- Bu yöntem çağrılırsa bir `IScriptNode` nesne Web sayfasını temsil eder, bu parametre 0 döndürür.  
+ Bu yöntem bir Web sayfasını temsil eden bir `IScriptNode` nesnesi tarafından çağrılırsa, bu parametre 0 döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -50,5 +50,5 @@ HRESULT GetIndexInParent(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IScriptNode Arabirimi](../../winscript/reference/iscriptnode-interface.md)

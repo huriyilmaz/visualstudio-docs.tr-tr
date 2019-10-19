@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProperty::SetProperty | Microsoft Docs
+title: 'Iactivescriptproperty:: SetProperty | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d689b7b2a252b208ae578f9bfd95ab93777f7cc5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 0f8307a82f181be20205c7bfcc47e881b0fa1e90
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63385966"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571312"
 ---
 # <a name="iactivescriptpropertysetproperty"></a>IActiveScriptProperty::SetProperty
-Parametresiyle belirtilen özelliği ayarlar.  
+Parametresi tarafından belirtilen özelliği ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,14 +50,14 @@ HRESULT SetProperty(
  `pvarValue`  
  Özelliğin değeri.  
   
- İçin izin verilen değerler `dwProperty` aşağıdaki tabloda açıklanmıştır.  
+ @No__t_0 için izin verilen değerler aşağıdaki tabloda açıklanmıştır.  
   
 |Sabit|Değer|Açıklama|  
 |--------------|-----------|-------------|  
-|SCRIPTPROP_INTEGERMODE|0x00003000|Kayan nokta modu yerine tamsayı modunda bölmek için komut dosyası altyapısı zorlar. Varsayılan değer `False` şeklindedir.|  
-|SCRIPTPROP_STRINGCOMPAREINSTANCE|0x00003001|Komut dosyası altyapısı değiştirilecek dize karşılaştırma işlevine izin verir.|  
-|SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION|0x70000002|Küresel nesneye katkıda bulunmak için herhangi bir komut dosyası motorları mevcut komut dosyası altyapısı bildirir.|  
-|SCRIPTPROP_INVOKEVERSIONING|0x00004000|Zorlar [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] dil özelliklerinin desteklenmesi için bir grubu seçmek için komut dosyası altyapısı. Tarafından desteklenen dil özellikleri varsayılan kümesini [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] sürümünü 5.7 görünen dil özelliği ayarlamak için komut dosyası altyapısı eşdeğerdir [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] komut dosyası altyapısı.|  
+|SCRIPTPROP_INTEGERMODE|0x00003000|Betik altyapısını kayan nokta modu yerine tamsayı modunda bölmeye zorlar. Varsayılan değer `False` şeklindedir.|  
+|SCRIPTPROP_STRINGCOMPAREINSTANCE|0x00003001|Betik altyapısının dize karşılaştırma işlevinin değiştirilmesine izin verir.|  
+|SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION|0x70000002|Betik motoruna genel nesneye katkıda bulunmak için başka bir betik altyapısı bulunmadığını bildirir.|  
+|SCRIPTPROP_INVOKEVERSIONING|0x00004000|@No__t_0 betik altyapısını desteklenecek bir dil özellikleri kümesi seçmesini zorlar. @No__t_0 Scripting Engine tarafından desteklenen varsayılan dil özellikleri kümesi, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betik altyapısının 5,7 sürümünde görünen dil özelliği kümesiyle eşdeğerdir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -66,20 +66,20 @@ HRESULT SetProperty(
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
 |`E_INVALIDARG`|Bağımsız değişken geçerli değil.|  
-|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenen başlatıldı veya).|  
+|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenmemiş veya başlatılmamış).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Etkinleştirmek ya da tamsayı bölme devre dışı bırakmak için çağırma `SetProperty` ve dönüştürme bir `Boolean` için bir `Object`. Varsayılan olarak, özellik değeri olan `False`. Ayarlarsanız `True`, bölme işlemlerini yalnızca tamsayı döndürür.  
+ Tamsayı bölümünü etkinleştirmek veya devre dışı bırakmak için `SetProperty` çağırın ve bir `Boolean` `Object` dönüştürün. Varsayılan olarak, özellik değeri `False`. @No__t_0 olarak ayarlarsanız, bölüm işlemleri yalnızca tamsayılar döndürür.  
   
- Etkinleştirmek veya devre dışı özel dize karşılaştırması için çağırma `SetProperty` ve geçirin bir `Object` değeri. Geçirdiğiniz nesne arabirimi uygulamalıdır [Iactivescriptstringcompare arabirimi](../../winscript/reference/iactivescriptstringcompare-interface.md). [StrComp](../../winscript/reference/iactivescriptstringcompare-strcomp.md) yöntemi [Iactivescriptstringcompare arabirimi](../../winscript/reference/iactivescriptstringcompare-interface.md) arabirimi, bir dize karşılaştırma işlevi yürütülen her zaman çağrılır.  
+ Özel dize karşılaştırmayı etkinleştirmek veya devre dışı bırakmak için `SetProperty` çağırın ve bir `Object` değeri geçirin. Geçirdiğiniz nesnenin Interface [ıactivescriptstringcompare arabirimini](../../winscript/reference/iactivescriptstringcompare-interface.md)uygulaması gerekir. [Iactivescriptstringcompare Interface](../../winscript/reference/iactivescriptstringcompare-interface.md) arabiriminin [StrComp](../../winscript/reference/iactivescriptstringcompare-strcomp.md) yöntemi, bir dize karşılaştırma işlevi her yürütüldüğünde çağrılır.  
   
- Ne zaman desteklenecek dil özellikleri kümesi seçmek için [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] komut dosyası altyapısı başlatılır, çağırma `SetProperty` SCRIPTPROP_INVOKEVERSIONING için etkinleştirilmesi için dil özelliği için karşılık gelen bir değer geçirirsiniz. Bu özellik (SCRIPTLANGUAGEVERSION_5_7) 1 olarak ayarlarsanız, kullanılabilir dil özellikleri sürümünü 5.7 görünen aynıdır [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] komut dosyası altyapısı. 2 (SCRIPTLANGUAGEVERSION_5_8)'ye ayarlanmışsa kullanılabilir dil özellikleri 5.7 Sürüm 5.8 sürümünde eklenen yeni özellikler ek olarak görünen olanlardır. Varsayılan olarak, bu özellik, konak farklı varsayılan davranışını desteklemediği sürece, 5.7 sürümünde görünen dil özellik kümesine eşdeğer olan (SCRIPTLANGUAGEVERSION_DEFAULT) 0 olarak ayarlanır. Örneğin, Internet Explorer 8 olarak kabul eder [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 5.8 sürümü tarafından desteklenen dil özellikleri [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] Internet Explorer 8 varsayılan belge modu "Internet Explorer 8 standartları" modunda olduğunda varsayılan komut dosyası altyapısı. Internet Explorer 8 belge modu, Internet Explorer 7 standartları için veya süslemeler moduna geçiş sıfırlar [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 5.7 sürümde var olan dil özellik kümesini desteklemek için komut dosyası altyapısı [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] komut dosyası altyapısı.  
+ @No__t_0 betik altyapısı başlatıldığında desteklenecek dil özellikleri kümesini seçmek için, `SetProperty` çağırın ve SCRIPTPROP_INVOKEVERSIONING için etkinleştirilecek dil özelliğine karşılık gelen bir değer geçirin. Bu özellik 1 (SCRIPTLANGUAGEVERSION_5_7) olarak ayarlandıysa, kullanılabilir dil özellikleri [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betik altyapısının sürüm 5,7 ' de gösterilenler ile aynıdır. 2 (SCRIPTLANGUAGEVERSION_5_8) olarak ayarlandıysa, sürüm 5,8 ' de eklenen yeni özelliklerin yanı sıra, sürüm 5,7 ' de görünen özellikler de mevcuttur. Varsayılan olarak, bu özellik 0 (SCRIPTLANGUAGEVERSION_DEFAULT) olarak ayarlanır ve ana bilgisayar farklı bir varsayılan davranışı desteklemediği takdirde sürüm 5,7 ' de görünen dil özelliği kümesine eşdeğerdir. Örneğin Internet Explorer 8, Internet Explorer 8 için varsayılan belge modu "Internet Explorer 8 Standartları" modundayken varsayılan olarak sürüm 5,8 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] komut dosyası altyapısı tarafından desteklenen [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] dil özelliklerine sahiptir. Internet Explorer 8 belge modunu Internet Explorer 7 standartlarına veya olağandışı moda geçirmek, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betik altyapısını yalnızca sürüm 5,7 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] komut dosyası altyapısında bulunan dil özelliği kümesini destekleyecek şekilde sıfırlar.  
   
 > [!NOTE]
-> Yalnızca SCRIPTPROP_INVOKEVERSIONING ayarlanmalıdır [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] komut dosyası altyapısı başlatılan.  
+> SCRIPTPROP_INVOKEVERSIONING yalnızca [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] betik altyapısı başlatılırken ayarlanmalıdır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Tamsayı bölme kullanmak için komut dosyası altyapısı zorlanması ve karşılaştırma işlev aşırı yüklemesi kullanmasının nasıl sağlanacağını gösterir.  
+ Aşağıdaki örnek, komut dosyası altyapısının tamsayı bölümünü kullanma ve karşılaştırma işlevinin aşırı yüklenmesine nasıl izin vereceğini gösterir.  
   
 ```c#  
 BMLScriptEngine bmlScriptEngine = new BMLScriptEngine();  
@@ -100,7 +100,7 @@ scriptProperties.SetProperty(SCRIPTPROP_STRCOMPINST,
     System.IntPtr.Zero, ref vtStrCmpInstance);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Belge uyumluluğunu tanımlama](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/cc288325(v=vs.85))   
- [Iactivescriptproperty](../../winscript/reference/iactivescriptproperty.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Belge uyumluluğunu tanımlama](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/cc288325(v=vs.85))    
+ [Iactivescriptproperty](../../winscript/reference/iactivescriptproperty.md)    
  [Sürüm Bilgileri](../../javascript/reference/javascript-version-information.md)

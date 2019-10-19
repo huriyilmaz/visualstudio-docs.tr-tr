@@ -1,5 +1,5 @@
 ---
-title: JsDebugReadMemoryFlags listelemesi | Microsoft Docs
+title: JsDebugReadMemoryFlags numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c908fdbf17b13b84355dff208b7f3106bfc72087
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a1757678f20a01221ae46e1535d3190cd463d724
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830468"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571703"
 ---
 # <a name="jsdebugreadmemoryflags-enumeration"></a>JsDebugReadMemoryFlags Listelemesi
 Bellek okunduğu sıradaki davranışı belirten bayraklar.  
@@ -35,13 +35,13 @@ enum JsDebugReadMemoryFlags{   None = 0,   JsDebugAllowPartialRead= 0x1} JsDebug
   
 ### <a name="values"></a>Değerler  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
-|`JsDebugAllowPartialRead`|Arayanın bellek parçası başarılı okuma yalnızca başarılı olması için okuma işlemi istediğini gösterir. Bu ayarlanırsa 'Adres' geçersiz ise bir e_jsdebug_ınvalıd_memory_address hatası yalnızca gerçekleştirilecektir. Bu bayrağı açık ise, istenen belleğin herhangi bir kısmı okunamaz ise bir e_jsdebug_ınvalıd_memory_address hatası oluşur.|  
-|`None`|Arayanın ReadMemory için varsayılan davranışı istediğini gösterir.|  
+|`JsDebugAllowPartialRead`|Yalnızca bellek okuma işleminin başarılı olması durumunda çağıranın okuma işleminin başarılı olmasını istediğini belirtir. Bu ayarlandıysa, yalnızca ' Address ' geçersizse bir E_JsDEBUG_INVALID_MEMORY_ADDRESS hatası çıkarılır. Bu bayrak açık ise, istenen belleğin herhangi bir bölümü okunamaz olursa bir E_JsDEBUG_INVALID_MEMORY_ADDRESS hatası oluşur.|  
+|`None`|Çağıranın ReadMemory için varsayılan davranışı istediğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

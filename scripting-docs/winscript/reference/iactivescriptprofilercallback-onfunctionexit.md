@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::OnFunctionExit | Microsoft Docs
+title: 'Iactivescriptprofilercallback:: OnFunctionExit | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9c84b64a12b1a6b61399f70b7209c86dd8d2a9a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87801b7873e43498031264ff4719fb47eca99f40
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993338"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571674"
 ---
 # <a name="iactivescriptprofilercallbackonfunctionexit"></a>IActiveScriptProfilerCallback::OnFunctionExit
-Profil Oluşturucu bir işlev yürütülürken tamamlanmış komut dosyası altyapısı çağrı, nesne bir çağrı belge nesne modeli (DOM) içine değil bildirir.  
+Profil Oluşturucu nesnesine, betik altyapısının Belge Nesne Modeli (DOM) çağrısı olmayan bir işlev çağrısını yürütmeyi tamamladığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT OnFunctionExit(
   
 #### <a name="parameters"></a>Parametreler  
  `scriptId`  
- [in] İşlev parçasıdır betik benzersiz kimliği. Bu kimlik, komut dosyası altyapısı tarafından atanır.  
+ 'ndaki İşlevin parçası olduğu betiğin benzersiz KIMLIĞI. Bu KIMLIK, komut dosyası altyapısı tarafından atanır.  
   
  `functionId`  
- [in] İşlev benzersiz kimliği. Bu kimlik, komut dosyası altyapısı tarafından atanır.  
+ 'ndaki İşlevin benzersiz KIMLIĞI. Bu KIMLIK, komut dosyası altyapısı tarafından atanır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntemin dönüş değerini komut dosyası altyapısı tarafından göz ardı edilir.  
+ Bu yöntemin dönüş değeri, betik altyapısı tarafından yok sayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- DOM için komut dosyası altyapısı aramaları [IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md) yerine `IActiveScriptProfilerCallback::OnFunctionExit`. Bu çok sayıda benzersiz yöntemleri ve özellikleri sayısında kaynaklanır  
+ DOM çağrıları için, komut dosyası altyapısı `IActiveScriptProfilerCallback::OnFunctionExit` yerine [ıactivescriptprofilercallback2:: OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md) öğesini çağırır. Bunun nedeni, DOM 'daki çok sayıda benzersiz Yöntem ve özelliklerdir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Iactivescriptprofilercallback:: OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)    
  [IActiveScriptProfilerCallback Arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)

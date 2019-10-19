@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::SetDefaultTextAttr | Microsoft Docs
+title: 'Idebugbelgethelper:: SetDefaultTextAttr | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 09f75e6f09639520462d5ef3983d67333097f76e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ea63f028497f1eb90803f59423f608d0a42960cf
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62948961"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574643"
 ---
 # <a name="idebugdocumenthelpersetdefaulttextattr"></a>IDebugDocumentHelper::SetDefaultTextAttr
-Bir betik bloğu içinde olmayan metin için kullanılacak varsayılan öznitelikleri ayarlar.  
+Komut dosyası bloğunda olmayan metin için kullanılacak varsayılan öznitelikleri ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,15 +40,15 @@ HRESULT SetDefaultTextAttr(
  Varsayılan kaynak metin öznitelikleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan öznitelikler bu yöntem tarafından değiştirmediyseniz, varsayılan öznitelikler için bir betik bloğu dışında metin SOURCETEXT_ATTR_NONSOURCE olur. Kullanıcı arabirimini, komut dosyası blokları salt okunur olarak dışında metin işaretlemek için bu bilgileri kullanabilirsiniz.  
+ Varsayılan öznitelikler bu yöntem tarafından değiştirilmediği takdirde, bir betik bloğu dışındaki metnin varsayılan öznitelikleri SOURCETEXT_ATTR_NONSOURCE ' dir. Kullanıcı arabirimi bu bilgileri betik blokları dışındaki metni salt okunurdur olarak işaretlemek için kullanabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugdocumenthelper arabirimi](../../winscript/reference/idebugdocumenthelper-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugbelgethelper arabirimini](../../winscript/reference/idebugdocumenthelper-interface.md)    
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

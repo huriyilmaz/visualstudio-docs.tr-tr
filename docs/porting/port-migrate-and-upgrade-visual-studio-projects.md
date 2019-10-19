@@ -1,7 +1,7 @@
 ---
 title: Projeleri taşıma, geçirme ve yükseltme
-description: Visual Studio 'nun önceki sürümlerinde oluşturulmuş projeler için Visual Studio 2017 desteği ve Visual Studio 'nun bir projeyi geçirmeye ihtiyacı olduğunda nasıl karar verdiği.
-ms.date: 04/16/2019
+description: Visual Studio 'nun geçerli ve önceki sürümlerinde oluşturulan projelerin desteklenmesi için bir başvuru.
+ms.date: 10/17/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 97eaada072a4ff0038ae7b57810b0d3318df1035
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
-ms.translationtype: HT
+ms.openlocfilehash: 7a348693dcae89c7d27b12f80dd4e21534a7bdec
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314165"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574143"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Visual Studio için proje geçiş ve yükseltme başvurusu
 
 ::: moniker range="vs-2017"
 
-Visual Studio 'nun her yeni sürümü genellikle önceki proje, dosya ve diğer varlıklar türlerini destekler. [Her zaman sahip olduğunuz şekilde](../ide/solutions-and-projects-in-visual-studio.md)bunlarla çalışabilirsiniz ve daha yeni özelliklere bağlı kalmazsınız, Visual Studio genellikle visual Studio 2015, Visual Studio 2013 ve visual Studio 2012 gibi önceki sürümlerle geriye dönük uyumluluğu korumaya çalışır. (Özelliklerin hangi sürümlere özgü olduğu [sürüm notlarına](/visualstudio/releasenotes/vs2017-relnotes/) bakın.)
+Visual Studio 'nun her sürümü genellikle önceki proje, dosya ve diğer varlıkları türlerini destekler. [Her zaman sahip olduğunuz şekilde](../ide/solutions-and-projects-in-visual-studio.md)bunlarla çalışabilirsiniz ve daha yeni özelliklere bağlı kalmazsınız; Visual Studio, visual Studio 2015, Visual Studio 2013 ve visual Studio 2012 gibi önceki sürümlerle geriye dönük uyumluluğu korumaya çalışır. (Özelliklerin hangi sürümlere özgü olduğu [sürüm notlarına](/visualstudio/releasenotes/vs2017-relnotes/) bakın.)
 
 Bazı proje türleri için destek zaman içinde de değişir. Visual Studio 'nun daha yeni bir sürümü artık bazı projeleri desteklemez ya da artık geriye doğru uyumlu olmayacak şekilde projenin güncelleştirilmesini gerektirir. Geçiş sorunlarında geçerli durum için [Visual Studio Geliştirici topluluğu sitesine](https://developercommunity.visualstudio.com)bakın.
 
@@ -72,7 +72,7 @@ Burada listelenen bir proje veya dosya türü görmüyorsanız, bu [makalenin Vi
 | Apache Cordova için Visual Studio Araçları | Projeler Visual Studio 2017 ' de açılabilir, ancak geriye doğru uyumlu değildir. Visual Studio 2015 ' den bir proje açtıktan sonra, projenizde değişikliklere izin vermeniz istenir. Bu değişiklik, Cordova kitaplığı, platformları, eklentileri ve onun düğüm/NPM bağımlılıklarını yönetmek için bir `taco.json` dosyası yerine projeyi araç kümelerini kullanacak şekilde yükseltir. Daha fazla bilgi için [geçiş kılavuzuna](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/first-steps/migrate-from-visual-studio-2015) bakın. |
 | Web dağıtımı (WDPROJ) | Web dağıtımı projeleri için destek, yayımlama profili desteğinin eklenmesiyle Visual Studio 2012 ' de kaldırılmıştır. Visual Studio 2017 ' de eşdeğer olmadığından, bu tür projeler için otomatik geçiş yolu yoktur. Bunun yerine, WDPROJ dosyasını bir metin düzenleyicisinde açın ve [StackOverflow](https://stackoverflow.com/a/12061065/1203388)' de açıklandığı gibi, özelleştirmeleri kopyalayın ve pubxml (Yayımlama profili) dosyasına yapıştırın. |
 | Windows Communication Foundation, Windows Workflow Foundation | Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 ve Visual Studio 2012 ' de bu projeyi açabilirsiniz |
-| Windows Presentation Foundation | Bu projeyi Visual Studio 2013, Visual Studio 2012 ve Visual Studio 2010 SP1 içinde açabilirsiniz. |
+| Windows Presentation Foundation | Bu projeyi Visual Studio 2017, Visual Studio 2013, Visual Studio 2012 ve Visual Studio 2010 SP1 'de açabilirsiniz. |
 | Windows Mağazası/Phone uygulamaları | Windows Mağazası 8,1 ve 8,0 için projeler ve Windows Phone 8,1 ve 8,0, Visual Studio 2017 ' de desteklenmez. Bu uygulamaları korumak için Visual Studio 2015 kullanmaya devam edin. Windows Phone 7.x projelerini korumak için Visual Studio 2012 kullanın. |
 
 ## <a name="how-visual-studio-decides-when-to-migrate-a-project"></a>Visual Studio 'Nun bir projeyi ne zaman geçireceğine karar verdiği
@@ -112,11 +112,11 @@ Daha fazla tartışma için aşağıdaki makalelere bakın:
 
 ::: moniker range="vs-2019"
 
-Visual Studio 'nun her yeni sürümü genellikle önceki proje, dosya ve diğer varlıklar türlerini destekler. [Her zaman sahip olduğunuz şekilde](../ide/solutions-and-projects-in-visual-studio.md)bunlarla çalışabilirsiniz ve daha yeni özelliklere bağlı kalmazsınız, Visual Studio genellikle visual Studio 2017, visual Studio 2015, Visual Studio 2013 ve gibi önceki sürümlerle geriye dönük uyumluluğu korumaya çalışır. Visual Studio 2012. (Özelliklerin hangi sürümlere özgü olduğu [sürüm notlarına](/visualstudio/releases/2019/release-notes/) bakın.)
+Visual Studio 'nun her yeni sürümü genellikle önceki proje, dosya ve diğer varlıklar türlerini destekler. [Her zaman sahip olduğunuz şekilde](../ide/solutions-and-projects-in-visual-studio.md)bunlarla çalışabilirsiniz ve daha yeni özelliklere bağlı kalmazsınız; Visual Studio, visual Studio 2017, visual Studio 2015, Visual Studio 2013 ve Visual gibi önceki sürümlerle geriye dönük uyumluluğu korumaya çalışır. Studio 2012. (Özelliklerin hangi sürümlere özgü olduğu [sürüm notlarına](/visualstudio/releases/2019/release-notes/) bakın.)
 
-Bazı proje türleri için destek zaman içinde de değişir. Visual Studio 'nun daha yeni bir sürümü artık bazı projeleri desteklemez ya da artık geriye doğru uyumlu olmaması için bir projeyi güncelleştirmeyi gerektirebilir. Geçiş sorunlarında geçerli durum için [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com)' na bakın.
+Bazı proje türleri için destek zaman içinde değişir. Visual Studio 'nun daha yeni bir sürümü artık bazı projeleri desteklemez ya da artık geriye doğru uyumlu olmaması için bir projeyi güncelleştirmeyi gerektirebilir. Geçiş sorunlarında geçerli durum için [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com)' na bakın.
 
-Bu makalede, Visual Studio 2019 ' nin geçirebileceğiniz proje türleri için ayrıntılar sağlanmaktadır. Ayrıca, Visual Studio 2019 ' de kullanımdan kaldırılmakta olan veya yakında kullanım dışı bırakılan proje türleri hakkında ayrıntılar sağlar. Makale, Visual Studio 2019 ' de artık desteklenmeyen proje türlerini dışlar ve bu nedenle geçirilemez. Makale, geçiş sorunları olmayan desteklenen proje türlerini de dışlar; Bu liste [Platform hedefleme ve uyumluluk](/visualstudio/releases/2019/compatibility)üzerinde bulunur.
+Bu makalede, Visual Studio 2019 ' nin geçirebileceğiniz proje türleri için ayrıntılar sağlanmaktadır. Ayrıca, Visual Studio 2019 ' de kullanım dışı olan veya yakında kullanım dışı bırakılan proje türleri hakkında bilgiler içerir. Makale, Visual Studio 2019 ' de artık desteklenmeyen proje türlerini dışlar ve bu nedenle geçirilemez. Makale, geçiş sorunları olmayan desteklenen proje türlerini de dışlar; Bu liste [Platform hedefleme ve uyumluluk](/visualstudio/releases/2019/compatibility)üzerinde bulunur.
 
 > [!IMPORTANT]
 > Belirli proje türleri Visual Studio Yükleyicisi aracılığıyla belirli iş yüklerini yüklemenizi gerektirir. İş yükünüz yüklü değilse, Visual Studio bilinmeyen veya uyumsuz bir proje türü bildirir. Bu durumda, yükleme seçeneklerinizi denetleyip yeniden deneyin. Visual Studio 2019 ' de proje desteğiyle ilgili ayrıntılar için bkz. [Platform hedefleme ve uyumluluk](/visualstudio/releases/2019/compatibility) makalesi.
@@ -162,7 +162,7 @@ Burada listelenen bir proje veya dosya türü görmüyorsanız, [Bu makalenin Vi
 | Apache Cordova için Visual Studio Araçları | Apache Cordova desteği Visual Studio 2019 ' de kaldırılmıştır. Visual Studio 2019 ' de eşdeğer olmadığından, bu tür projeler için otomatik geçiş yolu yoktur.<br/><br/>Visual Studio Code uzantısı için Cordova araçları 'nı (en son Cordova sürümü için destek sağlayan) kullanabilir veya Visual Studio 2017 ' i kullanmaya devam edebilirsiniz. |
 | Web dağıtımı (WDPROJ) | Web dağıtımı projeleri için destek, yayımlama profili desteğinin eklenmesiyle Visual Studio 2012 ' de kaldırılmıştır. Visual Studio 2019 ' de eşdeğer olmadığından, bu tür projeler için otomatik geçiş yolu yoktur. Bunun yerine, WDPROJ dosyasını bir metin düzenleyicisinde açın ve [StackOverflow](https://stackoverflow.com/a/12061065/1203388)' de açıklandığı gibi, özelleştirmeleri kopyalayın ve pubxml (Yayımlama profili) dosyasına yapıştırın. |
 | Windows Communication Foundation, Windows Workflow Foundation | Bu projeyi Visual Studio 2019, Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 ve Visual Studio 2012 ' te açabilirsiniz. |
-| Windows Presentation Foundation | Bu projeyi Visual Studio 2017, Visual Studio 2013, Visual Studio 2012 ve Visual Studio 2010 SP1 'de açabilirsiniz. |
+| Windows Presentation Foundation | Bu projeyi Visual Studio 2019, Visual Studio 2017, Visual Studio 2013, Visual Studio 2012 ve Visual Studio 2010 SP1 içinde açabilirsiniz. |
 | Windows Phone Uygulamalar | Windows Phone projeleri Visual Studio 2019 ' de desteklenmez. <br/><br/>Windows Phone 8. x uygulamalarını korumak için Visual Studio 2015 kullanın. Windows Phone 7.x projelerini korumak için Visual Studio 2012 kullanın. |
 | Windows Mağazası uygulamaları | JavaScript Universal Windows projeleri Visual Studio 2019 ' de desteklenmez. Bu projeleri korumak için Visual Studio 2017 kullanın. <br/><br/>Windows 10 Fall Creators Update (derleme 16299), Visual Studio 2019 yükleyicisinden kaldırılmadan önce Windows 10 SDK 'Ları. Daha yeni SDK 'ları kullanmak için eski SDK 'Ları el ile indirebilir veya projelerinizi yeniden hedefleyebilirsiniz.<br/><br/>Project. JSON kullanan Evrensel Windows projeleri desteklenmez. Paket başvurularını kullanmak için bu projeleri yükseltmeniz önerilir. Alternatif olarak, Project. JSON dosyasındaki Microsoft. NET. test. SDK sürüm 16.0.0.0 için bir başvuru ekleyin.<br/><br/>Windows Mağazası 8,1 ve 8,0 projeleri Visual Studio 2019 ' de desteklenmez. Bu uygulamaları korumak için Visual Studio 2015 kullanmaya devam edin. |
 | Xamarin | Visual Studio ve Mac için Visual Studio için Xamarin Live Player uzantısı kaldırılmıştır. Bu, eşleştirme ekranını ve tüm tümleştirmeyi kaldırır. Bunun yerine, yerleşik Xamarin. Forms önizleyicisi kullanın.<br/><br/>Android için Visual Studio öykünücüsü Visual Studio Yükleyicisi kaldırılmıştır. Bunun yerine, Google Android öykünücüsü ' nde yeni Hyper-V desteğini kullanın. |

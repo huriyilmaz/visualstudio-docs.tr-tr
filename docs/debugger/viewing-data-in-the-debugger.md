@@ -19,24 +19,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32b3fddd13bd16ac2c846f02f54596ec846374b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 63dc11736e92013719fcda2bae0ba9599a8835aa
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930000"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72568994"
 ---
-# <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>Visual Studio hata ayıklayıcıda verilerin özel görünümlerini oluşturma (C#, Visual Basic, C++)
+# <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>Visual Studio hata ayıklayıcısında verilerin özel görünümlerini oluşturma (C#, Visual Basic,) C++
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] İncelemek ve programınızın durumunu değiştirmek için hata ayıklayıcı birçok araç sağlar. Bu araçlar işlevi yalnızca kesme modunda çoğunu.
+@No__t_0 hata ayıklayıcı programınızın durumunu incelemek ve değiştirmek için birçok araç sağlar. Bu araçların çoğu yalnızca kesme modunda çalışır.
 
-## <a name="create-custom-views-of-data-in-variable-windows-and-datatips"></a>Değişken pencereler ve DataTips verilerin özel görünümlerini oluşturma
+## <a name="create-custom-views-of-data-in-variable-windows-and-datatips"></a>Değişken Windows ve veri Ipuçlarında verilerin özel görünümlerini oluşturma
 
- Çoğu [windows hata ayıklayıcı](../debugger/debugger-windows.md), gibi **Otolar** ve **izleme** windows, değişkenleri inceleyebilir izin verir. Özelleştirebileceğiniz nasıl C++ türleri, yönetilen nesneleri ve kendi türlerinizi gösterilen hata ayıklayıcı değişken pencerelerinde ve [DataTips](../debugger/view-data-values-in-data-tips-in-the-code-editor.md). Daha fazla bilgi için [özel görünümlerini oluşturma C++ nesneleri](../debugger/create-custom-views-of-native-objects.md) ve [nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-dot-managed-objects.md).
+ **Oto** ve **Gözcü** pencereleri gibi [hata ayıklayıcı pencerelerinin](../debugger/debugger-windows.md)birçoğu, değişkenleri incelemenizi sağlar. Türlerin, yönetilen nesnelerin C++ ve kendi türlerinizin hata ayıklayıcı değişkeni penceresinde ve [veri ipuçlarında](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)nasıl gösterildiğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [ C++ nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-native-objects.md) ve [yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-managed-objects.md).
 
-## <a name="create-custom-visualizers"></a>Özel görselleştiriciler oluşturma
+## <a name="create-custom-visualizers"></a>Özel Görselleştiriciler oluşturma
 
- Görselleştiriciler, bir nesnenin veya değişkenin içeriklerini anlamlı bir şekilde görüntülemek etkinleştirin. Visual Studio hata ayıklayıcısının Görselleştirici Büyüteç'i kullanarak açabilirsiniz farklı windows başvuruyor ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi") simgesi. Örneğin, nasıl bir HTML dizesi yorumlanır ve bir tarayıcıda görüntülenen HTML görselleştiriciyi gösterir. Görselleştiriciler ipuçlarından erişebileceğiniz **izleme** penceresinde **Otolar** penceresinde ve **Yereller** penceresi. **QuickWatch** iletişim kutusu Görselleştirici de sağlar. Daha fazla bilgi için [özel görselleştiriciler oluşturma](../debugger/create-custom-visualizers-of-data.md).
+ Görselleştiriciler bir nesne veya değişkenin içeriğini anlamlı bir şekilde görüntülemenizi sağlar. Visual Studio hata ayıklayıcısında bir Görselleştirici, Büyüteç ![Visualizersimgesi](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi") simgesini kullanarak açabileceğiniz farklı pencereler anlamına gelir. Örneğin, HTML Görselleştirici bir HTML dizesinin bir tarayıcıda nasıl yorumlanıp görüntüleneceğini gösterir. Görsel öğelere veri Ipuçları, **Gözcü** penceresi, **oto** penceresi ve **Yerel öğeler** penceresi aracılığıyla erişebilirsiniz. **QuickWatch** iletişim kutusu ayrıca bir Görselleştirici sağlar. Daha fazla bilgi için bkz. [özel Görselleştiriciler oluşturma](../debugger/create-custom-visualizers-of-data.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

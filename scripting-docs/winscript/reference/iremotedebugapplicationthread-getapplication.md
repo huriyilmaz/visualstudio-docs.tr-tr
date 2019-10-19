@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::GetApplication | Microsoft Docs
+title: 'Iremotedebugapplicationthread:: GetApplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: abe33d75f7e03944eb0a6f533f2955871ddee342
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b21715345d698e6bd42c1946e06002da2b97d5b3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788238"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575280"
 ---
 # <a name="iremotedebugapplicationthreadgetapplication"></a>IRemoteDebugApplicationThread::GetApplication
-Bu iş parçacığıyla ilişkilendirilmiş uygulama nesnesi döndürür.  
+Bu iş parçacığıyla ilişkili uygulama nesnesini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetApplication(
   
 #### <a name="parameters"></a>Parametreler  
  `pprda`  
- [out] Bu iş parçacığıyla ilişkilendirilmiş uygulama nesnesi.  
+ dışı Bu iş parçacığıyla ilişkili uygulama nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu iş parçacığıyla ilişkilendirilmiş uygulama nesnesi döndürür.  
+ Bu yöntem, bu iş parçacığıyla ilişkili uygulama nesnesini döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplicationThread Arabirimi](../../winscript/reference/iremotedebugapplicationthread-interface.md)

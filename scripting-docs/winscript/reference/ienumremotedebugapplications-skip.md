@@ -1,5 +1,5 @@
 ---
-title: IEnumRemoteDebugApplications::Skip | Microsoft Docs
+title: 'Ienumremotedebugapplications:: Skip | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d5ed991b02394e12f2e3e789b673149c9de18949
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0d1b4d183d3a4009302f207f530ce9b2391e2037
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62962354"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575196"
 ---
 # <a name="ienumremotedebugapplicationsskip"></a>IEnumRemoteDebugApplications::Skip
-Bir numaralandırma sıralı segmentleri belirtilen sayıda atlar.  
+Bir numaralandırma dizisinde belirtilen sayıda parçayı atlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT Skip(
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Atlamak için numaralandırma sıralı Segment sayısı.  
+ 'ndaki Atlanacak numaralandırma dizisindeki segmentlerin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir numaralandırma sıralı segmentleri belirtilen sayıda atlar.  
+ Bu yöntem, bir numaralandırma dizisinde belirtilen sayıda parçayı atlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IEnumRemoteDebugApplications Arabirimi](../../winscript/reference/ienumremotedebugapplications-interface.md)

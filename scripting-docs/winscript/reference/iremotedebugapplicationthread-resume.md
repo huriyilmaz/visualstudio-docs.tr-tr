@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::Resume | Microsoft Docs
+title: 'Iremotedebugapplicationthread:: özgeçmişi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5b1a40d16cf017215de42e6a83312d5b756f2081
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dc9ccb28604d3a185a1919eb8dc288df711630b6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788057"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571967"
 ---
 # <a name="iremotedebugapplicationthreadresume"></a>IRemoteDebugApplicationThread::Resume
 İş parçacığını sürdürür.  
@@ -37,17 +37,17 @@ HRESULT Resume(
   
 #### <a name="parameters"></a>Parametreler  
  `pdwCount`  
- [out] İş parçacığı için askıya alma sayımı.  
+ dışı İş parçacığı için askıya alma sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem iş parçacığı devam ettiğinde, askıya alma sayısını azaltır.  
+ Bu yöntem iş parçacığını yeniden sürdürürse, askıya alma sayısını azaltır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplicationThread Arabirimi](../../winscript/reference/iremotedebugapplicationthread-interface.md)

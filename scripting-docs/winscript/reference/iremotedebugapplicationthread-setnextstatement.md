@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::SetNextStatement | Microsoft Docs
+title: 'Iremotedebugapplicationthread:: Setnextdeyimin | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0c4b19322a15e92adcf2609c479af6b21e2078bd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 71e690d0e5b7567aabc88aabde907b67517f12aa
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788152"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575516"
 ---
 # <a name="iremotedebugapplicationthreadsetnextstatement"></a>IRemoteDebugApplicationThread::SetNextStatement
-Verilen kod bağlamı için mümkün olduğunca yakın verilen çerçevesi bağlamında devam etmek için yürütme zorlar.  
+Verilen çerçeve bağlamında, belirtilen kod bağlamına olabildiğince yakın devam etmek için yürütmeyi zorlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,20 +38,20 @@ HRESULT SetNextStatement(
   
 #### <a name="parameters"></a>Parametreler  
  `pStackFrame`  
- [in] Yığın çerçeve nesnesi. Bu bağımsız değişken, geçerli yığın çerçevesi kullanılmalıdır gelir NULL olabilir.  
+ 'ndaki Yığın çerçeve nesnesi. Bu bağımsız değişken NULL olabilir, bu da geçerli yığın çerçevesinin kullanılması gerektiğini gösterir.  
   
  `pCodeContext`  
- [in] Kod bağlamı. Bu bağımsız değişken, geçerli kod bağlamı kullanılmalıdır gelir NULL olabilir.  
+ 'ndaki Kod bağlamı. Bu bağımsız değişken NULL olabilir, bu, geçerli kod bağlamını kullanılması gerektiğini gösterir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem tarafından belirtilen kod bağlamı için mümkün olduğunca yakın devam etmek için yürütme zorlar `pCodeContext`, çerçeve tarafından belirtilen bağlamında `pStackFrame`. Bu bağımsız değişken olabilir `NULL`, geçerli çerçeve veya bağlamını temsil eder.  
+ Bu yöntem, `pStackFrame` tarafından belirtilen çerçeve bağlamında `pCodeContext` tarafından belirtilen kod bağlamına olabildiğince yakın şekilde devam etmek için yürütmeyi zorlar. Bu bağımsız değişkenlerden herhangi biri, geçerli çerçeveyi veya bağlamı temsil eden `NULL` olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplicationThread Arabirimi](../../winscript/reference/iremotedebugapplicationthread-interface.md)

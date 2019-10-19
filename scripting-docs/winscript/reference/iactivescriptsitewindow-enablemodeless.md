@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteWindow::EnableModeless | Microsoft Docs
+title: 'Iactivescriptsitewindow:: Enablemodsuz | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4f15135273b98a65903a5d03de87c541fc032cce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 756bda6209b6209ff14f6d67fef18faaed0b5618
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992932"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574135"
 ---
 # <a name="iactivescriptsitewindowenablemodeless"></a>IActiveScriptSiteWindow::EnableModeless
-Etkinleştirmek veya kalıcı olmayan iletişim kutuları yanı sıra ana penceresi devre dışı bırakmak için ana neden olur.  
+Konağın ana penceresini etkinleştirmesine ya da devre dışı bırakmasına ve kalıcı olmayan iletişim kutularına neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,15 +37,15 @@ HRESULT EnableModeless(
   
 #### <a name="parameters"></a>Parametreler  
  `fEnable`  
- [in] Bayrak `TRUE`, kalıcı olmayan iletişim kutuları ve ana pencereyi etkinleştirir veya `FALSE`, bunları devre dışı bırakır.  
+ 'ndaki @No__t_0, ana pencereyi ve modsuz iletişimleri etkinleştirmelerini veya `FALSE` varsa bunları devre dışı bırakır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa veya `E_FAIL` varsa bir hata oluştu.  
+ Başarılı olursa `S_OK` döndürür veya bir hata oluştuysa `E_FAIL`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem `IOleInPlaceFrame::EnableModeless` yöntemi.  
+ Bu yöntem `IOleInPlaceFrame::EnableModeless` yöntemiyle aynıdır.  
   
- Bu yönteme çağrıları yuvalanabilir.  
+ Bu yönteme yapılan çağrılar iç içe olabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSiteWindow](../../winscript/reference/iactivescriptsitewindow.md)

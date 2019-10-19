@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd90cb5eb55143a4a1916dfcee3f108ba7afb759
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
-ms.translationtype: HT
+ms.openlocfilehash: bbd99d260ba61d9e3ae9e877ecc1cefb1a22892e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536036"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569071"
 ---
 # <a name="general-debugging-options"></a>Genel hata ayıklama seçenekleri
 
@@ -95,7 +95,7 @@ Aşağıdaki **genel** seçenekleri belirleyebilirsiniz:
 
 **Tüm çıkış penceresi metnini komut penceresine yeniden yönlendir**: normalde **Çıkış** penceresinde görüntülenen tüm hata ayıklayıcı iletilerini **hemen** bir pencereye gönderir.
 
-**Değişkenler penceresinde nesnelerin ham yapısını göster Windows**: tüm nesne yapısı görünümü özelleştirmelerini kapatır. Özelleştirmeleri görüntüle hakkında daha fazla bilgi için bkz [. yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-dot-managed-objects.md).
+**Değişkenler penceresinde nesnelerin ham yapısını göster Windows**: tüm nesne yapısı görünümü özelleştirmelerini kapatır. Özelleştirmeleri görüntüle hakkında daha fazla bilgi için bkz. [yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-managed-objects.md).
 
 **Modül YÜKLEMESINDE JIT Iyileştirmesini bastır (yalnızca yönetilen)** : bir modül yüklendiğinde YÖNETILEN kodun JIT iyileştirmesini devre dışı bırakır ve hata AYıKLAYıCı eklendiğinde JIT derlenir. İyileştirmenin devre dışı bırakılması, performans masrafına karşın bazı sorunların hatalarını ayıklamanızı kolaylaştırabilir. Yalnızca kendi kodum kullanıyorsanız, JıT iyileştirmesini gizleme Kullanıcı dışı kodun kullanıcı kodu ("My Code") olarak görünmesine neden olabilir. Daha fazla bilgi için bkz. [JIT İyileştirmesi ve hata ayıklama](../debugger/jit-optimization-and-debugging.md).
 

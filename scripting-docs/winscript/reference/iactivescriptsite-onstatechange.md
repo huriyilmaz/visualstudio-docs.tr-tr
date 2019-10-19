@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::OnStateChange | Microsoft Docs
+title: 'IActiveScriptSite:: OnStateChange | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ad5719a93aec2940f1180a6ff45a028b937b0dfe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ba8441d36f193f287dfec7406d5f136280c5a42e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992530"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570156"
 ---
 # <a name="iactivescriptsiteonstatechange"></a>IActiveScriptSite::OnStateChange
-Konak, komut dosyası altyapısı durumları değiştiğini bildirir.  
+Ana bilgisayara, komut dosyası altyapısının durum değiştirmediğini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ HRESULT OnStateChange(
   
 #### <a name="parameters"></a>Parametreler  
  `ssScriptState`  
- [in] Yeni betik durumu gösteren değer. Bkz: [IActiveScript::GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md) durumları açıklaması için yöntemi.  
+ 'ndaki Yeni komut dosyası durumunu gösteren değer. Durumların açıklaması için [IActiveScript:: GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md) yöntemine bakın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa.  
+ Başarılı olursa `S_OK` döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

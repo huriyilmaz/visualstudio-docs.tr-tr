@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext::GetDocumentContext | Microsoft Docs
+title: 'Idebugcodecontext:: GetDocumentContext | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 48c707432ddb94fae111c971b89c8ff74f34ac21
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9dc1cda6164375f3434ee562b540e85268fe4c68
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974547"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573217"
 ---
 # <a name="idebugcodecontextgetdocumentcontext"></a>IDebugCodeContext::GetDocumentContext
-Bu kod bağlamı ile ilişkili belge bağlamını döndürür.  
+Bu kod içeriğiyle ilişkili belge bağlamını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetDocumentContext(
   
 #### <a name="parameters"></a>Parametreler  
  `ppsc`  
- [out] Bu kod bağlamı ile ilişkili belge bağlamı.  
+ dışı Bu kod içeriğiyle ilişkili belge bağlamı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Metin belgeleri için metnin tamamını deyimi için karakter konumu aralık içermelidir. Bu, hata ayıklayıcı geçerli kaynak bildirimi vurgulamak için IDE sağlar.  
+ Metin belgeleri için, karakter konumu aralığı tüm deyimin metnini içermelidir. Bu, hata ayıklayıcı IDE 'nin geçerli kaynak ifadesini vurgulamasını sağlar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugCodeContext Arabirimi](../../winscript/reference/idebugcodecontext-interface.md)

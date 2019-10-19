@@ -1,5 +1,5 @@
 ---
-title: Etkin betik sabitleri, numaralandırmaları ve hata kodları | Microsoft Docs
+title: Etkin komut dosyası sabitleri, numaralandırmalar ve hata kodları | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 090b494e904fbef1c0d3d8b380f7a184a6042788
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e03bef99c2297d517aa5234db49820a2b9600ce7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954004"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572716"
 ---
 # <a name="active-script-constants-enumerations-and-error-codes"></a>Etkin Komut Dosyası Sabitleri, Numaralandırmaları ve Hata Kodları
-Bu bölümde, numaralandırmalar ve Windows komut dosyası altyapısına kullanılan hata kodları açıklanmaktadır.  
+Bu bölümde, Windows komut dosyası altyapılarında kullanılan numaralandırmalar ve hata kodları açıklanmaktadır.  
   
 ## <a name="constants"></a>Sabitler  
   
@@ -31,28 +31,28 @@ Bu bölümde, numaralandırmalar ve Windows komut dosyası altyapısına kullan�
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|[SCRIPTPROP_HOSTKEEPALIVE Özelliği](../../winscript/reference/scriptprop-hostkeepalive-property.md)|Komut dosyası altyapısı bekleyen başvuru olduğunda tam işlevsel tutulması gereken olup olmadığını belirtmek için kullanılır.|  
+|[SCRIPTPROP_HOSTKEEPALIVE Özelliği](../../winscript/reference/scriptprop-hostkeepalive-property.md)|Bekleyen başvurular varsa, betik altyapısının tam olarak işlevsel tutulması gerekip gerekmediğini belirtmek için kullanılır.|  
   
 ## <a name="enumerations"></a>Numaralandırmalar  
   
 |Sabit Listesi|Açıklama|  
 |-----------------|-----------------|  
-|[SCRIPTGCTYPE Sabit Listesi](../../winscript/reference/scriptgctype-enumeration.md)|Gerçekleştirilecek çöp toplama türü.|  
-|[SCRIPTLANGUAGEVERSION Sabit Listesi](../../winscript/reference/scriptlanguageversion-enumeration.md)|Sürümleri betik olası belirtir.|  
-|[SCRIPTSTATE Sabit Listesi](../../winscript/reference/scriptstate-enumeration.md)|Bir komut dosyası altyapısı durumunu belirtir.|  
+|[SCRIPTGCTYPE Sabit Listesi](../../winscript/reference/scriptgctype-enumeration.md)|Gerçekleştirilecek çöp toplamanın türü.|  
+|[SCRIPTLANGUAGEVERSION Sabit Listesi](../../winscript/reference/scriptlanguageversion-enumeration.md)|Olası betik sürümlerini belirtir.|  
+|[SCRIPTSTATE Sabit Listesi](../../winscript/reference/scriptstate-enumeration.md)|Bir betik altyapısının durumunu belirtir.|  
 |||  
-|[SCRIPTTHREADSTATE Sabit Listesi](../../winscript/reference/scriptthreadstate-enumeration.md)|Bir komut dosyası altyapısı bir iş parçacığı durumunu belirtir.|  
-|[SCRIPTTRACEINFO Sabit Listesi](../../winscript/reference/scripttraceinfo-enumeration.md)|İzlenen betik olayı temsil eder. Kullanılan [Iactivescriptsitetraceınfo::sendscripttraceınfo yöntemi](../../winscript/reference/iactivescriptsitetraceinfo-sendscripttraceinfo-method.md).|  
-|[SCRIPTUICHANDLING Sabit Listesi](../../winscript/reference/scriptuichandling-enumeration.md)|UI denetimi işleneceğini yolunu temsil eder.|  
-|[SCRIPTUICITEM Sabit Listesi](../../winscript/reference/scriptuicitem-enumeration.md)|Kullanıcı Arabirimi öğesi türünü temsil eder. Kullanılan [Iactivescriptsiteuıcontrol::getuıbehavior metodu](../../winscript/reference/iactivescriptsiteuicontrol-getuibehavior-method.md).|  
+|[SCRIPTTHREADSTATE Sabit Listesi](../../winscript/reference/scriptthreadstate-enumeration.md)|Bir komut dosyası altyapısındaki iş parçacığının durumunu belirtir.|  
+|[SCRIPTTRACEINFO Sabit Listesi](../../winscript/reference/scripttraceinfo-enumeration.md)|İzlenen betik olayını temsil eder. [IActiveScriptSiteTraceInfo:: SendScriptTraceInfo yönteminde](../../winscript/reference/iactivescriptsitetraceinfo-sendscripttraceinfo-method.md)kullanılır.|  
+|[SCRIPTUICHANDLING Sabit Listesi](../../winscript/reference/scriptuichandling-enumeration.md)|UI denetiminin işlenme şeklini temsil eder.|  
+|[SCRIPTUICITEM Sabit Listesi](../../winscript/reference/scriptuicitem-enumeration.md)|UI öğesinin türünü temsil eder. [IActiveScriptSiteUIControl:: GetUIBehavior yönteminde](../../winscript/reference/iactivescriptsiteuicontrol-getuibehavior-method.md)kullanılır.|  
   
 ## <a name="error-codes"></a>Hata Kodları  
   
 |Hata Kodu|Açıklama|  
 |----------------|-----------------|  
-|[SCRIPT_E_PROPAGATE Hata Kodu](../../winscript/reference/script-e-propagate-error-code.md)|Bir betik hatası farklı bir iş parçacığında olabilir çağırana yayılır.|  
-|[SCRIPT_E_RECORDED Hata Kodu](../../winscript/reference/script-e-recorded-error-code.md)|Bir hata, komut dosyası altyapısı ile konak geçirildi.|  
-|[SCRIPT_E_REPORTED Hata Kodu](../../winscript/reference/script-e-reported-error-code.md)|Komut dosyası altyapısı konağa işlenmeyen bir özel durum bildirdi.|  
+|[SCRIPT_E_PROPAGATE Hata Kodu](../../winscript/reference/script-e-propagate-error-code.md)|Bir betik hatası, arayana yayılmakta ve bu, farklı bir iş parçacığında olabilir.|  
+|[SCRIPT_E_RECORDED Hata Kodu](../../winscript/reference/script-e-recorded-error-code.md)|Betik altyapısı ve konak arasında bir hata geçirildi.|  
+|[SCRIPT_E_REPORTED Hata Kodu](../../winscript/reference/script-e-reported-error-code.md)|Betik altyapısı, konağa işlenmeyen bir özel durum bildirdi.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Arabirimleri](../../winscript/reference/active-script-interfaces.md)

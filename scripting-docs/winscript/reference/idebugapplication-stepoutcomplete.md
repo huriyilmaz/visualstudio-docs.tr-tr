@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::StepOutComplete | Microsoft Docs
+title: 'IDebugApplication:: Stepouttamamlanmıştır | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 04f8ecfb835199afa0a60f3fde3c8fbdc8812240
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f50d7e8a8936e52f4177450e7d163c4cfeaa55df
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990611"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571044"
 ---
 # <a name="idebugapplicationstepoutcomplete"></a>IDebugApplication::StepOutComplete
-İşlem Hata Ayıklama Yöneticisi tek adımlı modda bir dil altyapısı hakkında arayanına döndürülecek olduğunu bildirir.  
+İşlem hata ayıklama yöneticisine, tek adımlı moddaki bir dil altyapısının çağırana dönmek üzere olduğunu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,17 +34,17 @@ HRESULT StepOutComplete();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kendi çağırana döndürmeleri önce dil altyapıları tek adımlı modda bu yöntemi çağırın. İşlem Hata Ayıklama Yöneticisi bu fırsattan ilk fırsatta sonu diğer tüm komut dosyası motorları bildirmek için kullanır. Bu teknik, modları uygulanır nasıl diller arası adımdır.  
+ Dil motorları, bu yöntemi çağıranlarına geri dönmeden hemen önce tek adımlı modda çağırır. İşlem hata ayıklama Yöneticisi, ilk fırsatta kesintiye uğramaları gereken diğer tüm betik altyapılarını bilgilendirmek için bu fırsatı kullanır. Bu teknik, çapraz dil adım modlarının uygulanma şekli olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugApplication Arabirimi](../../winscript/reference/idebugapplication-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::Close | Microsoft Docs
+title: 'IDebugApplication:: Close | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8d93262e5875d5b51f7cf306409609671e8157cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0445e9aed990da684efac6675e05183fd939973f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991035"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575573"
 ---
 # <a name="idebugapplicationclose"></a>IDebugApplication::Close
-Tüm başvuruları bırakın ve etkin olmayan bir duruma girmek bu uygulamanın neden olur.  
+Bu uygulamanın tüm başvuruları serbest bırakmaya ve etkin olmayan bir durum girmesine neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,20 +34,20 @@ HRESULT Close();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genellikle, uygulama olduğunda uygulama sahibi bu yöntemi çağırır.  
+ Genellikle, uygulama çıktığında uygulamanın sahibi bu yöntemi çağırır.  
   
- Bu yöntem neden `IApplicationDebugger::onClose` çağrılabilir.  
+ Bu yöntem `IApplicationDebugger::onClose` çağırmasına neden olur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
  [IApplicationDebugger::onClose](../../winscript/reference/iapplicationdebugger-onclose.md)

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::GetDocVersionString | Microsoft Docs
+title: 'IActiveScriptSite:: GetDocVersionString | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7327b71329c1f476eab9c27d5e0d5a047664abfa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8ecc592b6b7fcae5f516a3c1dd111c027e67b6dc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992736"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571124"
 ---
 # <a name="iactivescriptsitegetdocversionstring"></a>IActiveScriptSite::GetDocVersionString
-Geçerli belge sürümü benzersiz olarak tanımlayan ve ana bilgisayar tanımlı bir dize alır. Komut dosyası altyapısı ilgili bir belge, Windows komut dosyası (Not Defteri ile düzenlenmekte olan bir HTML sayfası olduğu gibi) kapsamı dışında değiştiyse, bu betik bir sonraki yüklendiğinde çalışabilmeleri zorlama kalıcı durumunu birlikte kaydedebilirsiniz.  
+Geçerli belge sürümünü benzersiz bir şekilde tanımlayan, ana bilgisayar tanımlı bir dize alır. İlgili belge Windows betiği kapsamı dışında değiştiyse (bir HTML sayfasında Notepad ile düzenlenmekte olduğu gibi), betik altyapısı bunu kalıcı durumuyla birlikte kaydedebilir ve komut dosyasının bir sonraki yüklenilişinde yeniden derlemeyi zorunlu hale getirebilirsiniz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,13 +37,13 @@ HRESULT GetDocVersionString(
   
 #### <a name="parameters"></a>Parametreler  
  `pstrVersionString`  
- [out] Konak tarafından tanımlanan belge sürüm dizesi adresi.  
+ dışı Ana bilgisayar tanımlı belge sürümü dizesinin adresi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK` başarılı olursa veya `E_NOTIMPL` varsa, bu yöntem desteklenmiyor.  
+ Başarılı olursa `S_OK` döndürür veya bu yöntem desteklenmiyorsa `E_NOTIMPL`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `E_NOTIMPL` döndürülür, komut dosyası altyapısı betik belge ile eşitlenmiş olduğunu varsayın.  
+ @No__t_0 döndürülürse, komut dosyası altyapısı, betiğin belgeyle eşitlenmiş olduğunu varsaymalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

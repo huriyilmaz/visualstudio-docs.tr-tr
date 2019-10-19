@@ -1,5 +1,5 @@
 ---
-title: IDebugAsyncOperation::GetSyncDebugOperation | Microsoft Docs
+title: 'Idebuggasyncoperation:: GetSyncDebugOperation | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a1226187aceba84b2086723f2d2c76c5c76f73d3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d732b732681216c0e9eecec7f448bf263376d8c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821844"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573276"
 ---
 # <a name="idebugasyncoperationgetsyncdebugoperation"></a>IDebugAsyncOperation::GetSyncDebugOperation
-Bu nesneyle ilişkili zaman uyumlu hata ayıklama işlemi döndürür.  
+Bu nesneyle ilişkili zaman uyumlu hata ayıklama işlemini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetSyncDebugOperation(
   
 #### <a name="parameters"></a>Parametreler  
  `ppsdo`  
- [out] Bu nesneyle ilişkili zaman uyumlu hata ayıklama işlemi.  
+ dışı Bu nesneyle ilişkili zaman uyumlu hata ayıklama işlemi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu nesneyle ilişkili zaman uyumlu hata ayıklama işlemi döndürür.  
+ Bu yöntem, bu nesneyle ilişkili zaman uyumlu hata ayıklama işlemini döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugAsyncOperation Arabirimi](../../winscript/reference/idebugasyncoperation-interface.md)

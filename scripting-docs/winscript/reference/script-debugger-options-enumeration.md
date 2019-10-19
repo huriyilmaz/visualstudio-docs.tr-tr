@@ -1,5 +1,5 @@
 ---
-title: Scrıpt_debugger_optıons listelemesi | Microsoft Docs
+title: SCRIPT_DEBUGGER_OPTIONS numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 404d3939e0a328beb5e2413d25885fddf8478ead
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: c69d419732786442cda275bf85c74ab2b9d3e870
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443638"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574561"
 ---
-# <a name="scriptdebuggeroptions-enumeration"></a>SCRIPT_DEBUGGER_OPTIONS Listelemesi
-Bir dizi seçenekleri ve/veya iliştirilen hata ayıklayıcı için geçerli olan özellikleri gösterir. Kullanılan [IDebugApplicationNode100::GetExcludedDocuments](../../winscript/reference/idebugapplicationnode100-getexcludeddocuments.md) ve [IDebugApplicationNode100::SetFilterForEventSink](../../winscript/reference/idebugapplicationnode100-setfilterforeventsink.md)  
+# <a name="script_debugger_options-enumeration"></a>SCRIPT_DEBUGGER_OPTIONS Listelemesi
+Ekli hata ayıklayıcı için uygulanan bir dizi seçenek ve/veya özelliği gösterir. [IDebugApplicationNode100:: GetExcludedDocuments](../../winscript/reference/idebugapplicationnode100-getexcludeddocuments.md) ve [IDebugApplicationNode100:: SetFilterForEventSink](../../winscript/reference/idebugapplicationnode100-setfilterforeventsink.md) içinde kullanılır  
   
 > [!IMPORTANT]
-> Bu sabitler PDM v10.0 ve büyük uygulanır. activdbg100.h içinde bulunur.  
+> Bu sabitler, PDM v 10.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,9 +36,9 @@ typedef SCRIPT_DEBUGGER_OPTIONS
   
 |Üye|Değer|Açıklama|  
 |------------|-----------|-----------------|  
-|SDO_NONE|0x00000000|Hiçbir seçenek ayarlanır.|  
-|SDO_ENABLE_FIRST_CHANCE_EXCEPTIONS|0x00000001|Betik çalışma zamanı bir özel durum oluştuğunda BREAKREASON_ERROR olayları oluşturması gerektiğini belirtir. Bu seçenek hata ayıklayıcı tarafından ayarlayın, veya olabilir kullanıcı kodu tarafından ayarlanan `Debug.enableFirstChanceExceptions(<true&#124;false>)`.|  
-|SDO_ENABLE_WEB_WORKER_SUPPORT|0x00000002|İliştirilen hata ayıklayıcı web çalışanları desteklediğini belirtir.|  
+|SDO_NONE|0x00000000|Hiçbir seçenek ayarlanmadı.|  
+|SDO_ENABLE_FIRST_CHANCE_EXCEPTIONS|0x00000001|Bir özel durum oluştuğunda betik çalışma zamanının BREAKREASON_ERROR olaylarını oluşturması gerektiğini gösterir. Bu seçenek, hata ayıklayıcı tarafından ayarlanabilir veya `Debug.enableFirstChanceExceptions(<true&#124;false>)` aracılığıyla Kullanıcı kodu tarafından ayarlanabilir.|  
+|SDO_ENABLE_WEB_WORKER_SUPPORT|0x00000002|Ekli hata ayıklayıcının Web çalışanlarını desteklediğini gösterir.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

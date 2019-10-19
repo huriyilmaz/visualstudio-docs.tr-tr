@@ -1,5 +1,5 @@
 ---
-title: Breakpoınt_state listelemesi | Microsoft Docs
+title: BREAKPOINT_STATE numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,14 +17,14 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: faca5ef7bc89bc16d646f66fb897f1dc44eb831a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8c56a8b135a0aa9a4f8ddf91e146d4d64367bb2b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955366"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572639"
 ---
-# <a name="breakpointstate-enumeration"></a>BREAKPOINT_STATE Listelemesi
+# <a name="breakpoint_state-enumeration"></a>BREAKPOINT_STATE Listelemesi
 Bir kesme noktasının durumunu gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -41,9 +41,9 @@ typedef enum tagBREAKPOINT_STATE {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|BREAKPOINT_DELETED|Kesme noktası artık yok, ancak yine de başvuruları vardır.|  
+|BREAKPOINT_DELETED|Kesme noktası artık yok, ancak hala buna başvurular var.|  
 |BREAKPOINT_DISABLED|Kesme noktası var, ancak devre dışı bırakıldı.|  
-|BREAKPOINT_ENABLED|Kesme noktası mevcut ve etkin olduğunu.|  
+|BREAKPOINT_ENABLED|Kesme noktası var ve etkin.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

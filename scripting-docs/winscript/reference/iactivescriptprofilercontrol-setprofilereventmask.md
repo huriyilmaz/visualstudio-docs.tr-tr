@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl::SetProfilerEventMask | Microsoft Docs
+title: 'Iactivescriptprofilercontrol:: SetProfilerEventMask | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 01e55d793d174f550e33e18558eccc19d417c80b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a4162cf2e5325bfb41bce9c3a47a52b1b36d74f2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993096"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571585"
 ---
 # <a name="iactivescriptprofilercontrolsetprofilereventmask"></a>IActiveScriptProfilerControl::SetProfilerEventMask
-Komut dosyası altyapısı tetiklemelidir olay türlerini belirten bir 4 baytlık bit maskesi ayarlar.  
+Betik altyapısının yükseltecağı olay türlerini belirten 4 baytlık bir bit maskesi ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ HRESULT SetProfilerEventMask(
   
 #### <a name="parameters"></a>Parametreler  
  `dwEventMask`  
- [in] Olay türlerini belirten bir 4 baytlık bit maskesi. BITS tanımlanan [profıler_event_mask numaralandırması](../../winscript/reference/profiler-event-mask-enumeration.md).  
+ 'ndaki Olay türlerini belirten 4 baytlık bir bit maskesi. Bitleri [PROFILER_EVENT_MASK numaralandırması](../../winscript/reference/profiler-event-mask-enumeration.md)içinde tanımlanmıştır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  HRESULT döndürür. Olası değerler aşağıdaki gibidir:  
@@ -44,5 +44,5 @@ HRESULT SetProfilerEventMask(
 |`S_OK`|Yöntem başarılı oldu.|  
 |`ACTIVPROF_E_PROFILER_ABSENT`|Profil oluşturma etkin değil.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptProfilerControl Arabirimi](../../winscript/reference/iactivescriptprofilercontrol-interface.md)

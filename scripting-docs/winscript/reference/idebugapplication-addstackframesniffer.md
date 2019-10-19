@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::AddStackFrameSniffer | Microsoft Docs
+title: 'IDebugApplication:: AddStackFrameSniffer | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 16fb941a91482c548284dc3d4317a472fd9be641
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a461c24b6f62f1e0ece88915e097faf0c59f15e7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991056"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575027"
 ---
 # <a name="idebugapplicationaddstackframesniffer"></a>IDebugApplication::AddStackFrameSniffer
-Bu uygulama için bir yığın çerçevesi Numaralandırıcı sağlayıcısı ekler.  
+Bu uygulamaya bir yığın çerçeve Numaralandırıcı sağlayıcısı ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT AddStackFrameSniffer(
   
 #### <a name="parameters"></a>Parametreler  
  `pdsfs`  
- [in] Bu uygulama eklemek için yığın çerçeve Numaralandırıcı sağlayıcısı.  
+ 'ndaki Bu uygulamaya eklenecek yığın çerçevesi Numaralandırıcı sağlayıcısı.  
   
  `pdwCookie`  
- [out] Bu yığın çerçevesi Numaralandırıcı sağlayıcı uygulamayı kaldırmak için kullanılan tanımlama bilgisi.  
+ dışı Uygulamadan bu yığın çerçeve Numaralandırıcı sağlayıcısını kaldırmak için kullanılan tanımlama bilgisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dil altyapıları genellikle yığın çerçevelerine hata ayıklayıcı kullanıma sunmak için bu yöntemi çağırın, bu yığın çerçevesi ortaya çıkarmak diğer varlıklar için mümkündür.  
+ Dil motorları, yığın çerçevelerini hata ayıklayıcıya göstermek için genellikle bu yöntemi çağırmakla birlikte, diğer varlıkların yığın çerçevelerini kullanıma sunmasına olanak tanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplication arabirimi](../../winscript/reference/idebugapplication-interface.md)   
- [IDebugApplication::RemoveStackFrameSniffer](../../winscript/reference/idebugapplication-removestackframesniffer.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [IDebugApplication arabirimi](../../winscript/reference/idebugapplication-interface.md)    
+ [IDebugApplication:: RemoveStackFrameSniffer](../../winscript/reference/idebugapplication-removestackframesniffer.md)    
  [IDebugStackFrameSniffer Arabirimi](../../winscript/reference/idebugstackframesniffer-interface.md)

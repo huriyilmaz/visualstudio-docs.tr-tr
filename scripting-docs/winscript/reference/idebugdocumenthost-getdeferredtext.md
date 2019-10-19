@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHost::GetDeferredText | Microsoft Docs
+title: 'Idebugbelgethost:: GetDeferredText | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3e5800a6de15d2d59208022fa44d3c2f4c931e14
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 273b4eb52b7263d34c347dff3a00479945b809df
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446575"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569430"
 ---
 # <a name="idebugdocumenthostgetdeferredtext"></a>IDebugDocumentHost::GetDeferredText
-Kullanılarak eklenmiş olan karakter aralığı döndürür `IDebugDocumentHelper::AddDeferredText` özgün ana bilgisayar belgedeki yöntemi.  
+Özgün ana bilgisayar belgesinde `IDebugDocumentHelper::AddDeferredText` yöntemi kullanılarak eklenen bir karakter aralığı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,22 +41,22 @@ HRESULT GetDeferredText(
   
 #### <a name="parameters"></a>Parametreler  
  `dwTextStartCookie`  
- [in] Metnin başlangıç konumunu temsil eden ana bilgisayar tanımlı tanımlama bilgisi.  
+ 'ndaki Metnin başlangıç konumunu temsil eden ana bilgisayar tanımlı tanımlama bilgisi.  
   
  `pcharText`  
- [out içinde] Bir karakterin metin arabelleği. Bu parametre ise bu yöntem karakterleri döndürmedi `NULL`.  
+ [in, out] Bir karakter metin arabelleği. Bu parametre `NULL`, bu yöntem karakter döndürmez.  
   
  `pstaTextAttr`  
- [out içinde] Bir karakter özniteliğini arabelleği. Bu parametre ise bu yöntem öznitelikleri döndürmeyen `NULL`.  
+ [in, out] Bir karakter özniteliği arabelleği. Bu parametre `NULL`, bu yöntem öznitelik döndürmez.  
   
  `pcNumChars`  
- [out içinde] Döndürülen karakter/özniteliklerinin gerçek sayısını gösterir. Bu parametre, bu yöntemi çağırmadan önce sıfır olarak ayarlanmalıdır.  
+ [in, out] Döndürülen karakterlerin/özniteliklerin gerçek sayısını gösterir. Bu metot çağrılmadan önce bu parametrenin sıfır olarak ayarlanması gerekir.  
   
  `cMaxChars`  
- [in] Döndürülecek karakterlerin sayısı.  
+ 'ndaki Döndürülecek en fazla karakter sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -64,12 +64,12 @@ HRESULT GetDeferredText(
 |`E_NOTIMPL`|Yöntem uygulanmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem döndürebilir `E_NOTIMPL`, ana bilgisayar arama `IDebugDocumentHelper::AddDeferredText`.  
+ Bu yöntem, ana bilgisayar `IDebugDocumentHelper::AddDeferredText` çağırmadığından `E_NOTIMPL` döndürebilir.  
   
 > [!NOTE]
-> Bu yöntem, özgün belgesinden metin döndürür. Konak düzenlemeler veya belge başka değişiklikler izlemek değildir.  
+> Bu yöntem, özgün belgedeki metni döndürür. Ana bilgisayar, belgedeki düzenlemeleri veya diğer değişiklikleri takip etmez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugdocumenthost arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)   
- [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugbelgethost arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)    
+ [Idebugbelgethelper:: AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
  [SOURCE_TEXT_ATTR Sabit Listesi](../../winscript/reference/source-text-attr-enumeration.md)

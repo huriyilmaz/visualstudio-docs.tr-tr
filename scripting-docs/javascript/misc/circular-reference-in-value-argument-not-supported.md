@@ -1,5 +1,5 @@
 ---
-title: Desteklenmeyen değer bağımsız değişkeninde döngüsel başvuru | Microsoft Docs
+title: Değer bağımsız değişkeninde döngüsel başvuru desteklenmiyor | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -15,22 +15,22 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a31b56b4b2d568b3bc3fd59f876f5052b9f6faff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 542fca58778a7b85b3044ce984b6ea049db12509
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946374"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572342"
 ---
 # <a name="circular-reference-in-value-argument-not-supported"></a>Değer bağımsız değişkeninde döngüsel başvuru desteklenmez
-Çağırmak için bir girişimde bulunuldu `JSON.stringify` , geçerli olmayan bir değere sahip. `value` Bağımsız değişkeni, bir dizi veya nesne, döngüsel başvuru içeriyor.  
+Geçerli olmayan bir değerle `JSON.stringify` çağırma girişiminde bulunuldu. @No__t_0 bağımsız değişkeni, bir dizi veya nesne, döngüsel bir başvuru içerir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Döngüsel başvuru bağımsız değişkende kaldırın.  
+- Bağımsız değişkenden döngüsel başvuruyu kaldırın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekteki kod bir çalışma zamanı hatasına neden olur `john` bir başvuru içeriyor `mary` ve `mary` bir başvuru içeriyor `john`. Döngüsel başvuru kaldırmak için ya da kaldırın veya ayarlama özelliği `brother` gelen `mary` nesne veya `sister` özelliğinden `john` nesne.  
+ Bu örnekteki kod bir çalışma zamanı hatasına neden olur çünkü `john` `mary` bir başvuruya sahiptir ve `mary` `john` bir başvuruya sahiptir. döngüsel başvuruyu kaldırmak için, `brother` özelliği `mary` nesnesinden veya `john` nesnesinden `sister` özelliğinden kaldırın ya da ayarını kaldırın.  
   
 ```JavaScript  
 var john = new Object();  
@@ -42,7 +42,7 @@ mary.brother = john;
 var error = JSON.stringify(john);  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [JSON nesnesi](../../javascript/reference/json-object-javascript.md)   
- [JSON.parse işlevi](../../javascript/reference/json-parse-function-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [JSON nesnesi](../../javascript/reference/json-object-javascript.md)    
+ [JSON. Parse işlevi](../../javascript/reference/json-parse-function-javascript.md)    
  [JavaScript Çalışma zamanı Hataları](../../javascript/reference/javascript-run-time-errors.md)

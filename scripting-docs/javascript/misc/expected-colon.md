@@ -1,5 +1,5 @@
 ---
-title: Beklenen ':' | Microsoft Docs
+title: "Beklenen ': ' | Microsoft Docs"
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,20 +14,20 @@ ms.assetid: cbb1bb65-59e4-47e0-834d-8f514cfda0f6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ec862ccee47772fc9fc5b4794b88212ff8781d44
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 65c0a645a565400b870a435c6125416fc85a473c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935295"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573411"
 ---
 # <a name="expected-"></a>':' bekleniyor
-Üçlü koşullu işleç kullanarak bir ifade oluşturulmaya çalışıldı, ancak ikinci ve üçüncü işlenenleri arasında iki nokta üst üste içermiyordu. Üçlü (üç işlenen) koşullu işlecin ikinci (true) ve üçüncü (false) arasında iki nokta üst üste gerektirir işlenen.  
+Üçlü koşullu işleci kullanarak bir ifade oluşturmaya çalıştınız, ancak ikinci ve üçüncü işlenenlerle iki nokta üst üste içermiyordu. Üçlü (üç işlenen) koşullu işleç, ikinci (true) ve üçüncü (false) işlenenler arasında bir iki nokta üst üste gerektirir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- İkinci ve üçüncü işlenenleri arasında iki nokta üst üste yerleştirin.  
+- İkinci ve üçüncü işlenenler arasına bir iki nokta üst üste ekleyin.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Koşullu (üçlü) işleç (?:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)   
- [İşleçler](../../javascript/operators-javascript.md)
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Koşullu (Üçlü) işleç (?:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)    
+ [işleçler](../../javascript/operators-javascript.md)

@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetItemName | Microsoft Docs
+title: 'Icriptentry:: setItemName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d25ac4977f1fca44d63767c372db169f8cb61ea6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7ba226704f5b064c86b52c1b349650d509b2b549
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787664"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575365"
 ---
 # <a name="iscriptentrysetitemname"></a>IScriptEntry::SetItemName
-Tanımlayan öğesi adını ayarlar bir `IScriptEntry` nesne.  
+@No__t_0 nesnesini tanımlayan öğe adını ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT SetItemName(
   
 #### <a name="parameters"></a>Parametreler  
  `psz`  
- [in] Öğe adı içeren bir arabellek adresi. Öğe adı, ana bilgisayar tarafından girişi tanımlamak için kullanılır.  
+ 'ndaki Öğe adını içeren bir arabelleğin adresi. Öğe adı, ana bilgisayar tarafından girişi tanımlamak için kullanılır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -48,10 +48,10 @@ HRESULT SetItemName(
 |`E_FAIL`|Yöntem başarılı olmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçin `IScriptEntry` nesneleri, bu yöntemi döndürür `S_OK`.  
+ @No__t_0 nesneler için, bu yöntem `S_OK` döndürür.  
   
- İçin `IScriptScriptlet` nesneleri (hangi türetilen `IScriptEntry`), bu yöntemi döndürür `E_FAIL`. İçin `IScriptScriptlet` nesneler, öğe adı tarafından belirlenir [IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md) ve değiştirilemez.  
+ @No__t_0 nesneler için (`IScriptEntry` türeten), bu yöntem `E_FAIL` döndürür. @No__t_0 nesneler için, öğe adı [ıactivescriptauthor:: AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md) tarafından ayarlanır ve değiştirilemez.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iscriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)    
  [IScriptEntry::GetItemName](../../winscript/reference/iscriptentry-getitemname.md)

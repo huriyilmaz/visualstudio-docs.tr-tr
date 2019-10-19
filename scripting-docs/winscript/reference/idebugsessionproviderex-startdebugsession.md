@@ -1,5 +1,5 @@
 ---
-title: IDebugSessionProviderEx:StartDebugSession | Microsoft Docs
+title: 'Idebugsessionproviderex: StartDebugSession | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb120a9acca91014d7b8213a3ed0bd1ab575e118
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cfe26265d56b2179feeac2a9802940258074b1c7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934692"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574304"
 ---
 # <a name="idebugsessionproviderexstartdebugsession"></a>IDebugSessionProviderEx:StartDebugSession
-Belirtilen uygulama ile bir hata ayıklama oturumu başlatır.  
+Belirtilen uygulamayla bir hata ayıklama oturumu başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,21 +36,21 @@ HRESULT StartDebugSession(
   
 #### <a name="parameters"></a>Parametreler  
  `pda`  
- [in] Hata ayıklama uygulamayı belirtir.  
+ 'ndaki Hata ayıklama uygulamasını belirtir.  
   
  `fQuery`  
- [in] TRUE, sorgu gösterir.  
+ 'ndaki True, bir sorguyu gösterir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, belirtilen uygulama ile bir hata ayıklama oturumu başlatır. Hata ayıklayıcı çağırmalıdır `IRemoteDebugApplication::ConnectDebugger` bu çağrısından önce.  
+ Bu yöntem, belirtilen uygulamayla bir hata ayıklama oturumu başlatır. Hata ayıklayıcı, bu çağrıdan döndürmeden önce `IRemoteDebugApplication::ConnectDebugger` çağırmalıdır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugsessionproviderex arabirimi](../../winscript/reference/idebugsessionproviderex-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugsessionproviderex arabirimi](../../winscript/reference/idebugsessionproviderex-interface.md)    
  [IRemoteDebugApplication::ConnectDebugger](../../winscript/reference/iremotedebugapplication-connectdebugger.md)

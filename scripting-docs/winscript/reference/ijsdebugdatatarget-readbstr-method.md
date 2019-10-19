@@ -1,5 +1,5 @@
 ---
-title: Ijsdebugdatatarget::readbstr yöntemi | Microsoft Docs
+title: 'IJsDebugDataTarget:: ReadBSTR yöntemi | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e821893318cfe1d8f0b4239a077fc91c26be47f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b125f58b4be279eac167b803ed6a683c1fb04ddf
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582348"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572446"
 ---
 # <a name="ijsdebugdatatargetreadbstr-method"></a>IJsDebugDataTarget::ReadBSTR Yöntemi
 Hata ayıklama hedefinden bir BSTR okur.  
@@ -36,18 +36,18 @@ HRESULT ReadBSTR(
   
 #### <a name="parameters"></a>Parametreler  
  `address`  
- [in] Okunacak adresi.  
+ 'ndaki Okunacak adres.  
   
  `pString`  
- [out] Hata ayıklama hedefinden bir BSTR okur.  
+ dışı Hata ayıklama hedefinden okunan BSTR.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- Adres geçerli değilse, e_jsdebug_ınvalıd_memory_address döndürür.  
+ Adres geçerli değilse, E_JsDEBUG_INVALID_MEMORY_ADDRESS döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IJsDebugDataTarget Arabirimi](../../winscript/reference/ijsdebugdatatarget-interface.md)

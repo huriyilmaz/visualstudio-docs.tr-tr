@@ -17,25 +17,25 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 520d3f1414447abfc7c018d36853b72aefbbf15f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4558a0cab2aea9b56db2759bb80b1287cd33ce87
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386166"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571432"
 ---
 # <a name="iactivescriptparseprocedureold-interface"></a>IActiveScriptParseProcedureOld Arabirimi
-Kaynak kod metni komut dosyasına eklenecek yordamlar sağlar. VBScript gibi bağımsız bir geliştirme ortamı olmayan yorumlanan komut dosyası dilleri için bu alternatif bir mekanizma sağlar (dışında `IActiveScriptParse` veya `IPersist*`) betik yordamları ad alanına eklemek için.  
+Komut dosyasına, yordamlara yönelik kaynak kodu metninin eklenmesine izin verir. VBScript gibi bağımsız bir yazma ortamına sahip olmayan yorumlanan betik dilleri için bu, ad alanına betik yordamları eklemek için alternatif bir mekanizma (`IActiveScriptParse` veya `IPersist*` dışında) sağlar.  
   
 > [!NOTE]
-> Bu arabirim sunulmasıyla kullanım dışı `IActiveScriptParseProcedure` arabirimi.  
+> Bu arabirim, `IActiveScriptParseProcedure` arabiriminin yararına kullanım dışıdır.  
   
 ## <a name="methods"></a>Yöntemler  
- Devralınan yöntemleri yanı sıra `IUnknown`, `IActiveScriptParseProcedureOld` arabirimi aşağıdaki yöntemleri sunar.  
+ @No__t_0 devralınan yöntemlere ek olarak, `IActiveScriptParseProcedureOld` arabirimi aşağıdaki yöntemleri sunar.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|Verilen kod yordamı ayrıştırır ve yordamı ad alanına ekler.|  
+|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|Verilen kod yordamını ayrıştırır ve yordamı ad alanına ekler.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptParseProcedure](../../winscript/reference/iactivescriptparseprocedure.md)

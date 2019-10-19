@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetDocumentAttributes | Microsoft Docs
+title: 'Idebugdocumenttext:: Getdocumenttattributes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c8f545d9a8208440299d0dccb16145c6ef0c8731
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f3a97c42037e5f7439692e3c3185b4194e63dc2a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63008669"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572161"
 ---
 # <a name="idebugdocumenttextgetdocumentattributes"></a>IDebugDocumentText::GetDocumentAttributes
 Belgenin özniteliklerini döndürür.  
@@ -37,10 +37,10 @@ HRESULT GetDocumentAttributes(
   
 #### <a name="parameters"></a>Parametreler  
  `ptextdocattr`  
- [out] Belge metin öznitelikleri.  
+ dışı Belgenin metin öznitelikleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -49,6 +49,6 @@ HRESULT GetDocumentAttributes(
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, belgenin özniteliklerini döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugdocumenttext arabirimi](../../winscript/reference/idebugdocumenttext-interface.md)    
  [TEXT_DOC_ATTR Sabitleri](../../winscript/reference/text-doc-attr-constants.md)

@@ -14,31 +14,31 @@ ms.assetid: 5d88c93d-e5b5-4b11-9bb5-bf1a5e41ccc3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 501496c4f1bb929308ffbb75c6572de3d3f5b33b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1611596d844d43ef72663154dc48791830dfe29f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006372"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573730"
 ---
 # <a name="object-expected"></a>Nesne bekleniyor
-Dışında bir yöntem veya özellik türü bir nesne üzerinde çağırma girişiminde `Object`, veya başka bir türde bir bağımsız değişken geçirilen `Object` olduğunda bir `Object` gerekiyordu.  
+@No__t_0 dışında bir türün nesnesi üzerinde bir yöntemi veya özelliği çağırmaya çalıştınız ya da bir `Object` gerektiğinde `Object` dışında bir türün bağımsız değişkenini geçirtiniz.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yalnızca nesne türü özelliği ve yöntemi Çağır `Object`.  
+- Yalnızca `Object` türündeki nesnelerde yöntemi veya özelliği çağırın.  
   
-- Türünde bir nesne için bir nesne olmayan bağımsız değişken hatası meydana gelirse, geçmesi `Object`.  
+- Nesne olmayan bir bağımsız değişken için hata oluşursa, `Object` türünde bir nesne geçirin.  
   
-- Tanımlanmamışsa veya null bir başvuru türünde bir nesne yerine çağrılan olup olmadığını denetleyin `Object`.  
+- @No__t_0 türünde bir nesne yerine tanımsız veya null başvurusunun döndürülüp çağrılmadığını denetleyin.  
   
-     Örneğin, aşağıdaki kodda myVar bu hatayı alırsanız:  
+     Örneğin, aşağıdaki kodda myVar öğesinde bu hatayı alırsanız:  
   
     ```JavaScript  
     var str = myVar.toString();  
     ```  
   
-     Bunun yerine bu kodu kullanabilirsiniz:  
+     Bunun yerine, bu kodu kullanabilirsiniz:  
   
     ```JavaScript  
     if (myVar) {  
@@ -46,6 +46,6 @@ Dışında bir yöntem veya özellik türü bir nesne üzerinde çağırma giri�
     }  
     ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Nesne nesnesi](../../javascript/reference/object-object-javascript.md)    
  [Nesneler ve Diziler](../../javascript/objects-and-arrays-javascript.md)

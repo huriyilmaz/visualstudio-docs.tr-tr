@@ -1,5 +1,5 @@
 ---
-title: Etkin betik Profiler arabirimleri | Microsoft Docs
+title: Etkin betik profil oluşturucu arabirimleri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,20 +11,20 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eeadf0de5563a4882c067960559414167e729173
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1e9395c392051e184bf61bea65e7ef7ac3c3fe2c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422242"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572673"
 ---
 # <a name="active-script-profiler-interfaces"></a>Etkin Komut Dosyası Profil Oluşturucu Arabirimleri
-Etkin komut dosyası Profiler arabirimleri etkinleştirmek, profil oluşturma olayları almaya [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] altyapısı.  
+Etkin komut dosyası profil oluşturucu arabirimleri, [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] altyapısından profil oluşturma olaylarını almanızı sağlar.  
   
- Bu bölümde listelenen arabirimler activprof.h üstbilgi dosyasını sağlar.  
+ Activprof. h üstbilgi dosyası, bu bölümde listelenen arabirimleri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- Aşağıdaki arabirimlerinden profil oluşturmayı etkinleştir:  
+ Aşağıdaki arabirimler profil oluşturmayı etkinleştirir:  
   
 - [IActiveScriptProfilerControl Arabirimi](../../winscript/reference/iactivescriptprofilercontrol-interface.md)  
   
@@ -42,14 +42,14 @@ Etkin komut dosyası Profiler arabirimleri etkinleştirmek, profil oluşturma ol
   
 - [IActiveScriptProfilerHeapEnum Arabirimi](../../winscript/reference/iactivescriptprofilerheapenum-interface.md)  
   
-  Aşağıdaki bölümde, profil oluşturma için kullanılan sabit listeleri listelenmektedir:  
+  Aşağıdaki bölümde profil oluşturma için kullanılan numaralandırmalar listelenmektedir:  
   
 - [Etkin Betik Profil Oluşturucu Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)  
   
 > [!NOTE]
-> Etkin komut dosyası Profiler arabirimleri, Internet Explorer 8 ile ilk yayımlanmıştır. `IActiveScriptProfilerControl2` Ve `IActiveScriptProfilerCallback2` arabirimleri önce Internet Explorer 9 ile kullanıma sunuldu. [Iactivescriptprofilercontrol3 arabirimi](../../winscript/reference/iactivescriptprofilercontrol3-interface.md), [Iactivescriptprofilercallback3 arabirimi](../../winscript/reference/iactivescriptprofilercallback3-interface.md), ve [Iactivescriptprofilerheapenum arabirimi](../../winscript/reference/iactivescriptprofilerheapenum-interface.md) olan arabirimler Internet Explorer 10 ile ilk yayımladı. [Iactivescriptprofilercontrol5 arabirimi](../../winscript/reference/iactivescriptprofilercontrol5-interface.md) Internet Explorer 11 ile ilk yayınlanmıştır.  
+> Etkin komut dosyası profil oluşturucu arabirimleri ilk olarak Internet Explorer 8 ile yayımlanmıştır. @No__t_0 ve `IActiveScriptProfilerCallback2` arabirimleri ilk olarak Internet Explorer 9 ' da yayımlanmıştır. [Iactivescriptprofilercontrol3 Interface](../../winscript/reference/iactivescriptprofilercontrol3-interface.md), [ıactivescriptprofilercallback3 Interface](../../winscript/reference/iactivescriptprofilercallback3-interface.md)ve [IActiveScriptProfilerHeapEnum Interface](../../winscript/reference/iactivescriptprofilerheapenum-interface.md) arabirimleri ilk olarak Internet Explorer 10 ile yayımlanmıştır. [IActiveScriptProfilerControl5 arabirimi](../../winscript/reference/iactivescriptprofilercontrol5-interface.md) Ilk olarak Internet Explorer 11 ile yayımlanmıştır.  
 >   
-> Internet Explorer 8 ve Internet Explorer 9, yalnızca [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] dil komut dosyası profil oluşturma desteklemek için bu arabirimleri kullanır.  
+> Internet Explorer 8 ve Internet Explorer 9 ' da, yalnızca [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] dili bu arabirimleri kullanarak betik profilini oluşturmayı destekler.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

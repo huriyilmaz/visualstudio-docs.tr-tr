@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugExtendedPropertyInfo::Clone | Microsoft Docs
+title: 'Ienumdebugextendedpropertyınfo:: Clone | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ce36c1f419a2cc89a733538444e3468d4c2a5193
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d11aa307342fbb6029f3bc2aed6b652417f4f52d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62989886"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72568911"
 ---
 # <a name="ienumdebugextendedpropertyinfoclone"></a>IEnumDebugExtendedPropertyInfo::Clone
-Geçerli Numaralandırıcı aynı numaralandırma duruma içeren bir numaralandırıcı oluşturur.  
+Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ HRESULT Clone (
   
 #### <a name="parameters"></a>Parametreler  
  `ppEnum`  
- [out] Kopyalanan döndürür `IEnumDebugExtendedPropertyInfo` arabirimi.  
+ dışı Kopyalanmış `IEnumDebugExtendedPropertyInfo` arabirimini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Geçerli bir döndürür `HRESULT`, genellikle `S_OK`.  
+ Geçerli bir `HRESULT` döndürür, genellikle `S_OK`.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IEnumDebugExtendedPropertyInfo Arabirimi](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Throw ardından aynı kaynak satırdaki bir ifade tarafından gerekir | Microsoft Docs
+title: Throw sonrasında aynı kaynak satırındaki bir ifade gelmelidir | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,15 +14,15 @@ ms.assetid: b03b7747-01a1-40c6-af80-a1dd70bc5781
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4c8ed951fb30b84f114f8f44a60e94b88f0f1d0f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8854acb3d1992283899c4ff095f5d754c05f55a1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63005947"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572756"
 ---
 # <a name="throw-must-be-followed-by-an-expression-on-the-same-source-line"></a>Throw ardından aynı kaynak satırdaki bir ifade gelmelidir
-Kullanılan `throw` anahtar sözcüğü, bir ifade ile aynı kaynak satırdaki celbi değil ancak. A `throw` deyim iki bölümden oluşur: `throw` oluşturulmasına ifadeyle anahtar sözcüğü. Örneğin:  
+@No__t_0 anahtar sözcüğünü kullandınız, ancak aynı kaynak satırdaki bir ifadeyle izmedi. @No__t_0 deyimi iki bölümden oluşur: `throw` anahtar sözcüğü ve sonra oluşturulacak ifade. Örneğin:  
   
 ```JavaScript  
 if (denominator == 0) {  
@@ -30,13 +30,13 @@ if (denominator == 0) {
 }  
 ```  
   
- Bu iki bileşenin bölünemiyor.  
+ Bu iki bileşeni bölebilir.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Emin olun `throw` anahtar sözcüğü ve durum ifade aynı satırda görünür.  
+- @No__t_0 anahtar sözcüğünün ve oluşturulacak ifadenin aynı satırda göründüğünden emin olun.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata nesnesi](../../javascript/reference/error-object-javascript.md)   
- [Throw deyimi](../../javascript/reference/throw-statement-javascript.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Hata nesnesi](../../javascript/reference/error-object-javascript.md)    
+ [throw deyimleri](../../javascript/reference/throw-statement-javascript.md)    
  [try...catch...finally Deyimi](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

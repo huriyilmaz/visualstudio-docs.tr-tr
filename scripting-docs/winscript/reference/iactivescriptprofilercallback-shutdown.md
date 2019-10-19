@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::Shutdown | Microsoft Docs
+title: 'Iactivescriptprofilercallback:: kapanıyor | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 091ccc30f16081fdca8f10778efec208ef5ccb16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: deecfe4134a4b0e18591823f194ceaf6d1eb0a14
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993429"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571650"
 ---
 # <a name="iactivescriptprofilercallbackshutdown"></a>IActiveScriptProfilerCallback::Shutdown
-Profil oluşturma, bir komut dosyası altyapısına durdurulur zaman profil oluşturucu nesnesini bildirmek için çağırılır. Bu şekilde profil oluşturucu nesnesini gerekirse, temizleme yordamları çağırabilirsiniz. Komut dosyası altyapısı kapatılıyor veya çağrı zaman bu yöntem ayrıca komut dosyası altyapısı tarafından çağrılır [IActiveScriptProfilerCallback::Initialize](../../winscript/reference/iactivescriptprofilercallback-initialize.md) başarısız olur.  
+Bir betik altyapısında profil oluşturma durdurulduğunda profil oluşturucu nesnesine bildirmek için çağırılır. Bu şekilde, profil oluşturucu nesnesi gerekirse Temizleme yordamlarını çağırabilir. Bu yöntem, komut dosyası altyapısı kapatılırken veya [ıactivescriptprofilercallback:: Initialize](../../winscript/reference/iactivescriptprofilercallback-initialize.md) öğesine yapılan bir çağrı başarısız olduğunda betik altyapısı tarafından da çağrılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,10 +34,10 @@ HRESULT Shutdown(
   
 #### <a name="parameters"></a>Parametreler  
  `hrReason`  
- [in] Kapatma açıklaması. Komut dosyası altyapısı kapatma olmadığını `S_OK` geçirilir. Çağrı [IActiveScriptProfilerCallback::Initialize](../../winscript/reference/iactivescriptprofilercallback-initialize.md) hata HRESULT döndürür, HRESULT geçirilir. Aksi takdirde, bu değer hizmetinden alınan [IActiveScriptProfilerControl::StopProfiling](../../winscript/reference/iactivescriptprofilercontrol-stopprofiling.md).  
+ 'ndaki Kapatma nedeni. Betik altyapısı kapanmakta ise `S_OK` geçirilir. [Iactivescriptprofilercallback:: Initialize](../../winscript/reference/iactivescriptprofilercallback-initialize.md) çağrısı HRESULT bir hata döndürürse HRESULT geçirilir. Aksi takdirde, bu değer [ıactivescriptprofilercontrol:: Stopprofilleme](../../winscript/reference/iactivescriptprofilercontrol-stopprofiling.md)öğesinden alınır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntemin dönüş değerini komut dosyası altyapısı tarafından göz ardı edilir.  
+ Bu yöntemin dönüş değeri, betik altyapısı tarafından yok sayılır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptProfilerCallback Arabirimi](../../winscript/reference/iactivescriptprofilercallback-interface.md)

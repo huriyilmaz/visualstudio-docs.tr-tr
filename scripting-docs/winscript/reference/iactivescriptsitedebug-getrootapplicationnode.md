@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug::GetRootApplicationNode | Microsoft Docs
+title: 'Iactivescriptsitedebug:: GetRootApplicationNode | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 18e603289931115bcaac4d6bb7707b7886f506d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b19ed10178d03be0b96393ad08f1eab88ce40329
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992472"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570065"
 ---
 # <a name="iactivescriptsitedebuggetrootapplicationnode"></a>IActiveScriptSiteDebug::GetRootApplicationNode
-Altında hangi betiği belgelerin eklenmesi gereken uygulama düğümünü alır.  
+Betik belgelerinin eklenmesi gereken uygulama düğümünü alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetRootApplicationNode(
   
 #### <a name="parameters"></a>Parametreler  
  `ppdanRoot`  
- [out] Betik belgelerini tutan hata ayıklama uygulama düğümü. Olabilir `NULL`.  
+ dışı Betik belgelerini tutan hata ayıklama uygulama düğümü. @No__t_0 olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, betik belgelerini altında eklenmesi gereken uygulama düğümü döndürür. Yöntem döndürebilir `NULL` için `ppdanRoot` betik belgelerini en üst düzey gerekiyorsa.  
+ Bu yöntem, komut dosyası belgelerinin eklenmesi gereken uygulama düğümünü döndürür. Betik belgelerinin en üst düzey olması gerekiyorsa, yöntemi `ppdanRoot` için `NULL` döndürebilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptSiteDebug Arabirimi](../../winscript/reference/iactivescriptsitedebug-interface.md)

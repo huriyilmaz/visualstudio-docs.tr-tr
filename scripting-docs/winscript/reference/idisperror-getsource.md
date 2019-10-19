@@ -1,5 +1,5 @@
 ---
-title: IDispError::GetSource | Microsoft Docs
+title: 'Idağılım ROR:: GetSource | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8a84640f020a1ff255b8c7e5dd753752e0d310a7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 07c87585a92415f0b910210a56efa47e6f91417b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446888"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573095"
 ---
 # <a name="idisperrorgetsource"></a>IDispError::GetSource
-Sınıf veya hataya neden olan uygulama için dile bağlı programlı tanımlayıcı döndürür.  
+Hatayı oluşturan sınıf veya uygulama için dile bağlı programlı tanımlayıcıyı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,20 +37,20 @@ HRESULT GetSource(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstrSource`  
- [out] Biçiminde bir programlı tanımlayıcı içeren dize `progname.objectname`.  
+ dışı Bir programlı tanımlayıcı içeren dize, form `progname.objectname`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, özel durumun oluştuğu sınıf veya uygulamayı belirlemek için kullanılır. Program tanımlayıcısı çağırma sırasındaki sağlanan yerel ayar tanıtıcısı (LCID) tarafından belirtilen dilde döndürülebilir.  
+ Bu yöntem, özel durumun gerçekleştiği sınıfı veya uygulamayı belirlemede kullanılır. Programlı tanımlayıcı, çağırma sırasında sağlanan yerel ayar tanıtıcısı (LCıD) tarafından belirtilen dilde döndürülebilecek.  
   
 > [!NOTE]
 > Bu yöntem uygulanmadı.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDispError Arabirimi](../../winscript/reference/idisperror-interface.md)

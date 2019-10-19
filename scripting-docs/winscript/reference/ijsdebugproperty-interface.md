@@ -11,15 +11,15 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e17bff10e2b876e4db2b9f3b55df29c2e87989ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 990ae0b874042501b64f4e2e2b39874c25c9dc9c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977796"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574073"
 ---
 # <a name="ijsdebugproperty-interface"></a>IJsDebugProperty Arabirimi
-Özellik tarayıcısını temsil eder.  
+Bir özellik tarayıcısını temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,13 +31,13 @@ IJsDebugProperty : public IUnknown;
   
 ### <a name="public-methods"></a>Ortak Yöntemler  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
 |[IJsDebugProperty::GetMembers Metodu](../../winscript/reference/ijsdebugproperty-getmembers-method.md)|Bu nesnenin üyelerini alır.|  
-|[IJsDebugProperty::GetPropertyInfo Metodu](../../winscript/reference/ijsdebugproperty-getpropertyinfo-method.md)|Bu nesne için bilgi alır.|  
+|[IJsDebugProperty::GetPropertyInfo Metodu](../../winscript/reference/ijsdebugproperty-getpropertyinfo-method.md)|Bu nesneyle ilgili bilgileri alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

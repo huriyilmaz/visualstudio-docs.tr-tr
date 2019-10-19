@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::Clone | Microsoft Docs
+title: 'IActiveScript:: Clone | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bec912596c792a67f65434062bc0d0ed11bd3fb9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fbaad29cb31af26a0f26a1c679a900192fc77041
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935711"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575794"
 ---
 # <a name="iactivescriptclone"></a>IActiveScript::Clone
-Geçerli iş parçacığındaki hiçbir sitede yüklü bir komut dosyası altyapısı döndüren geçerli komut dosyası altyapısı (tüm geçerli yürütme durumu), eksi kopyalar. Bu yeni bir komut dosyası altyapısı özelliklerini özgün komut dosyası altyapısı, geçti, başlatılmamış duruma geri olması özellikleri aynı olacaktır.  
+Geçerli komut dosyası altyapısını (yani geçerli yürütme durumu) klonlar, geçerli iş parçacığında hiç sitesi olmayan yüklü bir betik altyapısı döndürüyor. Bu yeni betik altyapısının özellikleri, başlangıç durumuna geri geçirilse de orijinal komut dosyası altyapısının bulunduğu özelliklerle aynı olacaktır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ HRESULT Clone(
   
 #### <a name="parameters"></a>Parametreler  
  `ppscript`  
- [out] Bir işaretçiye alan değişkenin adresini [IActiveScript](../../winscript/reference/iactivescript.md) kopyalanan komut dosyası altyapısı arabirimi. Ana bilgisayar bir site ve çağrı oluşturmalısınız [IActiveScript::SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md) başlatılan durumda kullanılabilmesi yeni komut dosyası altyapısı yöntemi ve bu nedenle, kullanılabilir.  
+ dışı Kopyalanmış betik altyapısının [IActiveScript](../../winscript/reference/iactivescript.md) arabirimine bir işaretçi alan bir değişkenin adresi. Konak, başlatılmış durumda ve bu nedenle kullanılabilir olacak şekilde, yeni komut dosyası altyapısında bir site oluşturmalı ve [IActiveScript:: SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md) yöntemini çağırmalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
@@ -46,15 +46,15 @@ HRESULT Clone(
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
 |`E_NOTIMPL`|Bu yöntem desteklenmiyor.|  
-|`E_POINTER`|Geçersiz işaretçi belirtildi.|  
-|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenen başlatıldı veya).|  
+|`E_POINTER`|Geçersiz bir işaretçi belirtildi.|  
+|`E_UNEXPECTED`|Çağrı beklenmiyordu (örneğin, komut dosyası altyapısı henüz yüklenmemiş veya başlatılmamış).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IActiveScript::Clone` Yöntemdir bir en iyi duruma getirilmesi `IPersist*::Save`, `CoCreateInstance`, ve `IPersist*::Load`, özgün komut dosyası motoru durumu kaydedildi ve yeni bir komut dosyası altyapısı yüklenmiş gibi yeni komut dosyası motoru durumu aynı olmalıdır. Adlandırılmış öğeleri kopyalanan komut dosyası altyapısı içinde yinelenen, ancak her öğe için belirli nesne işaretçileri unutulur ve elde edilen [IActiveScriptSite::GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md) yöntemi. Bu, kullanılacak iş parçacığı başına giriş noktaları (apartman modeli) ile aynı nesne modeli sağlar.  
+ @No__t_0 yöntemi `IPersist*::Save`, `CoCreateInstance` ve `IPersist*::Load` en iyi duruma getirmedir. bu nedenle, yeni betik altyapısının durumu özgün komut dosyası altyapısının durumu kaydedilip yeni bir komut dosyası altyapısına yüklenip yüklenilmiş gibi olmalıdır. Adlandırılmış öğeler kopyalanmış betik altyapısında yinelenir, ancak her öğe için belirli nesne işaretçileri unutulur ve [IActiveScriptSite:: GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md) yöntemiyle elde edilir. Bu, iş parçacığı başına giriş noktaları (bir Grup modeli) ile aynı nesne modelinin kullanılmasını sağlar.  
   
- Bu yöntem, aynı betiği birden çok örneğini çalıştırabilirsiniz birden çok iş parçacıklı server konakları için kullanılır. Komut dosyası altyapısı döndürebilir `E_NOTIMPL`, konak durumunu sürekli çoğaltma ve komut dosyası altyapısı ile yeni bir örneğini oluşturarak bu durumda aynı sonucu ulaşabileceği bir `IPersist*` arabirimi.  
+ Bu yöntem, aynı betiğin birden fazla örneğini çalıştırabilirler çok iş parçacıklı sunucu konakları için kullanılır. Betik altyapısı `E_NOTIMPL` döndürebilir, bu durumda ana bilgisayar kalıcı durumu çoğaltıp ve bir `IPersist*` arabirimiyle bir komut dosyası altyapısının yeni bir örneğini oluşturarak aynı sonucu elde edebilir.  
   
- Temel olmayan belirtme ana bilgisayar nesneleri veya çok kaynaklanan olmadan, bu yöntem temel olmayan iş parçacığından çağrılabilir [Iactivescriptsite](../../winscript/reference/iactivescriptsite.md) arabirimi.  
+ Bu yöntem, temel olmayan iş parçacıklarından, nesneleri barındırmak için temel olmayan bir belirtme çizgisine veya [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) arabirimine yol açmadan çağrılabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScript](../../winscript/reference/iactivescript.md)

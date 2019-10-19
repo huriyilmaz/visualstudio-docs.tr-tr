@@ -1,5 +1,5 @@
 ---
-title: '9\. Adım: Diğer özellikleri deneme'
+title: '9\. Adım: diğer özellikleri deneme'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aff87247afb79d62867da9e55f7a059192789d79
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: e5af132efde0c1a49e5404fa602363aab0554e6f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118847"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572470"
 ---
-# <a name="step-9-try-other-features"></a>9\. Adım: Diğer özellikleri deneme
+# <a name="step-9-try-other-features"></a>9\. Adım: diğer özellikleri deneme
 Daha fazla bilgi edinmek için simgeleri ve renkleri değiştirmeyi, oyun zamanlayıcısı ve sesler eklemeyi deneyin. Oyunu daha zorlu hale getirmek için tahtayı büyütmeyi ve zamanlayıcıyı ayarlamayı deneyin.
 
 Örneğin tamamlanmış bir sürümünü indirmek için, bkz. [tüm eşleşen oyun öğreticisi örneği](https://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba).
@@ -32,7 +32,7 @@ Daha fazla bilgi edinmek için simgeleri ve renkleri değiştirmeyi, oyun zamanl
 - Oyuncunun oyunu kazanmasının ne kadar sürdüğünü izleyen bir oyun zamanlayıcısı ekleyin.
 
     > [!TIP]
-    > Bunu yapmak için, yukarıdaki <xref:System.Windows.Forms.TableLayoutPanel>formda geçen süreyi görüntüleyecek bir etiket ekleyebilirsiniz ve saati izlemek için forma başka bir zamanlayıcı ekleyebilirsiniz. Oyuncu oyuna başladığında zamanlayıcıyı başlatmak ve son iki simgeyi eşleştirdikten sonra zamanlayıcıyı durdurmak için kod kullanın.
+    > Bunu yapmak için, <xref:System.Windows.Forms.TableLayoutPanel> üzerindeki formda geçen süreyi görüntüleyecek bir etiket ekleyebilirsiniz ve süreyi izlemek için forma başka bir zamanlayıcı ekleyebilirsiniz. Oyuncu oyuna başladığında zamanlayıcıyı başlatmak ve son iki simgeyi eşleştirdikten sonra zamanlayıcıyı durdurmak için kod kullanın.
 
 - Oyuncu bir eşleşme bulduğunda çalacak bir ses, eşleşmeyen iki simgeyi açtığında çalacak başka bir ses ve program simgeleri yeniden gizlediğinde çalacak üçüncü bir ses ekleyin.
 
@@ -48,8 +48,6 @@ Daha fazla bilgi edinmek için simgeleri ve renkleri değiştirmeyi, oyun zamanl
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Bir yerde tıkanıp kalırsanız veya programlamayla ilgili sorularınız olursa, MSDN forumlarından birinde sorunuzu göndermeyi deneyin. Bkz. forum ve [görsel C# forumuna](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral) [Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral) .
+- Yararlanabileceğiniz harika ve ücretsiz video öğrenme kaynakları vardır. Visual Basic 'da programlama hakkında daha fazla bilgi için bkz. [Visual Basic temelleri: mutlak yeni başlayanlar Için geliştirme](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners). İçinde C#programlama hakkında daha fazla bilgi edinmek için bkz [ C# . temel bilgiler: mutlak yeni başlayanlar için geliştirme](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners).
 
-- Yararlanabileceğiniz harika ve ücretsiz video öğrenme kaynakları vardır. Visual Basic programlama hakkında daha fazla bilgi için bkz [. Visual Basic temelleri: Mutlak yeni başlayanlar](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)için geliştirme. Görselde C#programlama hakkında daha fazla bilgi edinmek için [ bkz C# . temel bilgiler: Mutlak yeni başlayanlar](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)için geliştirme.
-
-- Önceki öğretici adımına dönmek için bkz [. 8. Adım: Oyuncunun kazanıp kazanılmadığını](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)doğrulamak için bir yöntem ekleyin.
+- Önceki öğretici adımına dönmek için bkz. 8. [Adım: oyuncunun kazandığını doğrulamak için yöntem ekleme](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md).

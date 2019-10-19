@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHost::OnCreateDocumentContext | Microsoft Docs
+title: 'Idebugbelgethost:: OnCreateDocumentContext | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a3b614cdc6aad17ab3a4f6e83927b59390005ac2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3fdfa64f66288cba47dec7c498db15238e55f954
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971101"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569115"
 ---
 # <a name="idebugdocumenthostoncreatedocumentcontext"></a>IDebugDocumentHost::OnCreateDocumentContext
-Konağın, yeni bir belge bağlamına oluşturulmakta olduğundan ve isteğe bağlı olarak yeni bağlam için bilinmeyen denetleme döndürmek konak sağlar bildirir.  
+Ana bilgisayara yeni bir belge bağlamının oluşturulduğunu bildirir ve konağın isteğe bağlı olarak yeni bağlam için bilinmeyen bir denetim döndürmesini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +37,18 @@ HRESULT OnCreateDocumentContext(
   
 #### <a name="parameters"></a>Parametreler  
  `ppunkOuter`  
- [out] Yeni bağlam denetleyen bir nesne.  
+ dışı Yeni bağlamı denetleyen nesne.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
-|`E_NOTIMPL`|Konak, bir denetim nesnesi sağlamaz.|  
+|`E_NOTIMPL`|Konak bir denetim nesnesi sağlamıyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem Yardımcısı tarafından sağlanan belge bağlamı için yeni işlevler eklenecek konak sağlar. Bu yöntem döndürebilir **E_NOTIMPL** veya çalışması çağıran olduğu bağlamı oluşturmaktan sorumlu bir null bir dış nesne.  
+ Bu yöntem, ana bilgisayarın yardımcı tarafından sunulan belge bağlamlarına yeni işlevsellik eklemesine olanak tanır. Bu yöntem, **E_NOTIMPL** veya null bir dış nesne döndürebilir, bu durumda çağıranın bağlamı oluşturmasından sorumludur.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IDebugDocumentHost Arabirimi](../../winscript/reference/idebugdocumenthost-interface.md)

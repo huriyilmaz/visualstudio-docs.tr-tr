@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThread::SynchronousCallIntoThread | Microsoft Docs
+title: 'Idebugapplicationthread:: SynchronousCallIntoThread | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f0c9b89332b55a180220820e8ffe1e030d37a848
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d545782f8103d10b38f3eb0d2f149c4ef3b9dc95
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822092"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574493"
 ---
 # <a name="idebugapplicationthreadsynchronouscallintothread"></a>IDebugApplicationThread::SynchronousCallIntoThread
-Çağıran uygulama iş parçacığında kodu çalıştırmak bir mekanizma sağlar.  
+Çağıranın uygulama iş parçacığında kod çalıştırmasına yönelik bir mekanizma sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,27 +40,27 @@ HRESULT SynchronousCallIntoThread(
   
 #### <a name="parameters"></a>Parametreler  
  `pstcb`  
- [in] Aranacak nesne.  
+ 'ndaki Çağrılacak nesne.  
   
  `dwParam1`  
- [in] Geçirmek için ilk parametre `IDebugThreadCall::ThreadCallHandler` yöntemi.  
+ 'ndaki @No__t_0 metoduna geçirilecek ilk parametre.  
   
  `dwParam2`  
- [in] Geçirmek için ikinci parametresinin `IDebugThreadCall::ThreadCallHandler` yöntemi.  
+ 'ndaki @No__t_0 metoduna geçirilecek ikinci parametre.  
   
  `dwParam3`  
- [in] Geçirmek için üçüncü parametresinin `IDebugThreadCall::ThreadCallHandler` yöntemi.  
+ 'ndaki @No__t_0 metoduna geçirilecek üçüncü parametre.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemi çağıran kod hata ayıklayıcı iş parçacığında çalıştırmak bir mekanizma sağlar. Genellikle dil altyapıları ve konakları ücretsiz iş parçacıklı nesneleri, tek iş parçacıklı uygulamalar üzerinde uygulamak için bu yöntemi kullanın.  
+ Bu yöntem, çağıranın hata ayıklayıcı iş parçacığında kod çalıştırmasına yönelik bir mekanizma sağlar. Dil motorları ve konaklar, genellikle bu yöntemi tek iş parçacıklı uygulamalarının üzerine serbest iş parçacıklı nesneler uygulamak için kullanır.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Idebugapplicationthread arabirimi](../../winscript/reference/idebugapplicationthread-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Idebugapplicationthread arabirimi](../../winscript/reference/idebugapplicationthread-interface.md)    
  [IDebugThreadCall Arabirimi](../../winscript/reference/idebugthreadcall-interface.md)

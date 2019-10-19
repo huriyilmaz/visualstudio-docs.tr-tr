@@ -11,15 +11,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ec7bb508101f6de20bf979653a01b735b3cbf61e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1cb284b9fb1519b53efb7585559ec10f2f8b9e8e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977584"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573979"
 ---
 # <a name="ijsenumdebugproperty-interface"></a>IJsEnumDebugProperty Arabirimi
-İşlemlere gözatma özelliği sağlar.  
+Özellik gözatma işlemlerini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,13 +31,13 @@ IJsEnumDebugProperty : public IUnknown;
   
 ### <a name="public-methods"></a>Ortak Yöntemler  
   
-|Ad|Açıklama|  
+|Name|Açıklama|  
 |----------|-----------------|  
-|[IJsEnumDebugProperty::GetCount Metodu](../../winscript/reference/ijsenumdebugproperty-getcount-method.md)|Nesnenin özelliklerini sayısını alır.|  
+|[IJsEnumDebugProperty::GetCount Metodu](../../winscript/reference/ijsenumdebugproperty-getcount-method.md)|Nesnenin özelliklerinin sayısını alır.|  
 |[IJsEnumDebugProperty::Next Metodu](../../winscript/reference/ijsenumdebugproperty-next-method.md)|Bu nesnenin özelliklerini okur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** jscript9diag.h  
+ **Üstbilgi:** jscript9diag. h  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Windows Betik Arabirimleri Başvurusu](../../winscript/reference/windows-script-interfaces-reference.md)

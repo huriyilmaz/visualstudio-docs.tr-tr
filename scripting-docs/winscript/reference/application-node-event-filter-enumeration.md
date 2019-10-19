@@ -1,5 +1,5 @@
 ---
-title: Applıcatıon_node_event_fılter numaralandırması | Microsoft Docs
+title: APPLICATION_NODE_EVENT_FILTER numaralandırması | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3c1727c8d1526199d179fe137c9bf899959bc2ba
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 481e015ec84d833f52220276bffa4ce0163f98ff
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422212"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572652"
 ---
-# <a name="applicationnodeeventfilter-enumeration"></a>APPLICATION_NODE_EVENT_FILTER Numaralandırması
-Kod belgeleri filtrelerken dışlanacak düğümleri türlerini belirtir. Kullanılan [IDebugApplicationNode100::GetExcludedDocuments](../../winscript/reference/idebugapplicationnode100-getexcludeddocuments.md) ve [IDebugApplicationNode100::SetFilterForEventSink](../../winscript/reference/idebugapplicationnode100-setfilterforeventsink.md)  
+# <a name="application_node_event_filter-enumeration"></a>APPLICATION_NODE_EVENT_FILTER Numaralandırması
+Kod belgelerini filtrelerken dışlanacak düğüm türlerini belirtir. [IDebugApplicationNode100:: GetExcludedDocuments](../../winscript/reference/idebugapplicationnode100-getexcludeddocuments.md) ve [IDebugApplicationNode100:: SetFilterForEventSink](../../winscript/reference/idebugapplicationnode100-setfilterforeventsink.md) içinde kullanılır  
   
 > [!IMPORTANT]
-> Bu sabitler PDM v10.0 ve büyük uygulanır. activdbg100.h içinde bulunur.  
+> Bu sabitler, PDM v 10.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,9 +36,9 @@ typedef enum tagAPPLICATION_NODE_EVENT_FILTER {    FILTER_EXCLUDE_NOTHING = 0,  
   
 |Üye|Değer|Açıklama|  
 |------------|-----------|-----------------|  
-|FILTER_EXCLUDE_NOTHING|0x00000000|Tüm olaylar gönderin.|  
-|FILTER_EXCLUDE_ANONYMOUS_CODE|0x00000001|Anonim kod düğümleri hariç tutun. Bu düğümler için JScript çalışma zamanı tarafından kullanılan `new Function([args,] <code>)'`.|  
-|FILTER_EXCLUDE_EVAL_CODE|0x00000002|Değerlendirme kodu düğümleri hariç tutun. Bu düğümler eval desteği JScript çalışma zamanı tarafından kullanılır.|  
+|FILTER_EXCLUDE_NOTHING|0x00000000|Tüm olayları gönder.|  
+|FILTER_EXCLUDE_ANONYMOUS_CODE|0x00000001|Anonim kod düğümlerini hariç tutun. Bu düğümler `new Function([args,] <code>)'` için JScript çalışma zamanı tarafından kullanılır.|  
+|FILTER_EXCLUDE_EVAL_CODE|0x00000002|Değerlendirme kodu düğümlerini hariç tutun. Bu düğümler, eval desteği için JScript çalışma zamanı tarafından kullanılır.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Etkin Betik Hata Ayıklayıcı Sabitleri, Sabit Listeleri ve Yapıları](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

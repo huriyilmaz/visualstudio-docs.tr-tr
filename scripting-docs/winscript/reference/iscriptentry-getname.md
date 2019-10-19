@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetName | Microsoft Docs
+title: 'Icriptentry:: GetName | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d23843aa72ce5cf79f6442048b6493d17eb6ef64
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c99cda48a20efb41b2535645ccdb50be8bb6d6bc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787776"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575446"
 ---
 # <a name="iscriptentrygetname"></a>IScriptEntry::GetName
-Tek bir nesne (örneğin, bir işlev) temsil eden girdi, nesnenin adını döndürür.  
+Tek bir nesneyi temsil eden girişler (örneğin, bir işlev) için, nesnenin adını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,9 +37,9 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>Parametreler  
  `pbstr`  
- [out] Tarafından temsil edilen nesnenin adını `IScriptEntry` betik bloğu. Bir giriş tek bir nesneyi temsil etmiyor, NULL döndürülür.  
+ dışı @No__t_0 betik bloğu tarafından temsil edilen nesnenin adı. Bir girdi tek bir nesneyi temsil ediyorsa NULL döndürülür.  
   
- Alt girişleri tek işlev nesnesini temsil eder.  
+ Alt girişler tek bir işlev nesnesini temsil eder.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
@@ -50,6 +50,6 @@ HRESULT GetName(
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Iscriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)   
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Icriptentry arabirimi](../../winscript/reference/iscriptentry-interface.md)    
  [IScriptNode:: CreateChildEntry](../../winscript/reference/iscriptnode-createchildentry.md)

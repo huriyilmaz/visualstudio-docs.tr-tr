@@ -1,5 +1,5 @@
 ---
-title: ISimpleConnectionPoint::GetEventCount | Microsoft Docs
+title: 'Iımpliconnectionpoint:: GetEventCount | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 34796765ba15589c031e780df5f2507e6938a858
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3cfa392a052d415cef4c19f07c6c8e73704dfa45
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786255"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571809"
 ---
 # <a name="isimpleconnectionpointgeteventcount"></a>ISimpleConnectionPoint::GetEventCount
-Bu arabirimde kullanıma sunulan olay sayısını döndürür.  
+Bu arabirimde sunulan olay sayısını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,17 +37,17 @@ HRESULT GetEventCount(
   
 #### <a name="parameters"></a>Parametreler  
  `pulCount`  
- [out] Bu arabirim sayısına kullanıma sunulan bir olay sayısı.  
+ dışı Bu arabirim sayısında sunulan olay sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bu arabirimdeki gösterilen olay sayısını döndürür.  
+ Bu yöntem, bu arabirimde sunulan olay sayısını döndürür.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [ISimpleConnectionPoint Arabirimi](../../winscript/reference/isimpleconnectionpoint-interface.md)

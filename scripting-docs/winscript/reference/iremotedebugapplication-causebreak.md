@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::CauseBreak | Microsoft Docs
+title: 'IRemoteDebugApplication:: CauseBreak | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ce0ebe3b32b11bdd79884504233b3f4e09a035f8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8107d7f8450df759b53175505c8d7fc2b6bde641
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944335"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571487"
 ---
 # <a name="iremotedebugapplicationcausebreak"></a>IRemoteDebugApplication::CauseBreak
-Uygulamanın ilk fırsatta hata ayıklayıcısına çalışmamasına neden olur.  
+Uygulamanın ilk fırsatta hata ayıklayıcıya kesilmesine neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,17 +34,17 @@ HRESULT CauseBreak();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Bu yöntem parametre almaz.  
+ Bu yöntem hiçbir parametre alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür bir `HRESULT`. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
+ Yöntemi bir `HRESULT` döndürür. Olası değerler aşağıdaki tablodakileri içerir, ancak bunlarla da sınırlı değildir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`S_OK`|Yöntem başarılı oldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemin çağrılması, bir uygulama hemen kesilmesine neden olmaz. Uygulama şu anda bir kod yürütülmüyor, uygulamanın gerçekten keser önce uzun geçmesini.  
+ Bu yöntemin çağrılması uygulamanın hemen kesilmesine neden olmaz. Uygulama Şu anda betik kodu yürütümse, uygulama gerçekten kesilmeden önce uzun bir süre çıkabilir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [IRemoteDebugApplication Arabirimi](../../winscript/reference/iremotedebugapplication-interface.md)
