@@ -1,5 +1,5 @@
 ---
-title: Kod çözümleme araçları ile uygulama kalitesini analiz etme | Microsoft Docs
+title: Kod analizi araçlarını kullanarak uygulama kalitesini analiz etme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,47 +12,37 @@ helpviewer_keywords:
 - team-based development, analyzing application quality
 ms.assetid: 21680516-ddb5-446d-90d4-19d94f6ec699
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 83fbe8b372d021e0cec4faccfd0b22fcaa8af30d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0b46c8efb681a067d5a9e74369ed73c43f1568f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157095"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671101"
 ---
 # <a name="analyzing-application-quality-by-using-code-analysis-tools"></a>Kod Analiz Araçları ile Uygulama Kalitesini Analiz Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu Bölümde  
- [Yönetilen Kod Kalitesini Analiz Etme](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)  
- Microsoft .NET Framework tasarım yönergeleri ile ortaya konan programlama ve tasarım kuralları ihlalleri gibi visual Studio Kod Analizi yönetilen kod için Yönetilen derlemeler hakkında bilgi sağlar. Uyarı iletileri ilgili programlama ve tasarım sorunlarını belirleyin ve mümkünse sorunu gidermek nasıl bilgi olduğunda.  
-  
- [Kod Çözümlemesi ile C/C++ Kod Kalitesini Çözümleme](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)  
- C/C++ kod çözümleme aracı, geliştiricilere, C/C++ kaynak kodunda olası hatalar hakkında bilgi sağlar. Bellek ve kaynak sızıntıları ve null işaretçiye veya araç tarafından bildirilen genel kodlama hatalarını arabellek taşmaları, başlatılmamış bellek içerir.  
-  
- [Kod Analizi Kurallarını Gruplandırmak için Kural Kümeleri Kullanma](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)  
- Seçin ve oluşturma *kural kümeleri* projenize uygulanacak.  
-  
- [Kod Çözümleme Uygulama Hataları](../code-quality/code-analysis-application-errors.md)  
- Kod Analizi işlevlerini hataları düzeltin.  
-  
- [Takım Projesi İade İlkeleriyle Kod Kalitesini Arttırma](../code-quality/enhancing-code-quality-with-team-project-check-in-policies.md)  
- Team Foundation sürüm denetimi (TFVC) kullandığınızda, takım projeleriniz daha iyi kod ve daha verimli Grup gelişimi için müşteri adayı yöntemler zorlamak için iade ilkeleri oluşturabilirsiniz. İade ilkeleri takım projesi düzeyinde ayarlanan ve kod iade edilmesine izin verilmesinden önce Geliştirici bilgisayarlarında mecburi olan kurallardır.  
-  
-### <a name="code-analysis-for-drivers"></a>Sürücüleri için Kod Analizi  
- Kod çözümleme araçları, sürücü kaynak kodu sistematik olarak analiz ederek kararlılığını ve sürücünüzü güvenilirliğini artırmaya yardımcı olabilir.  
-  
- [Kod çözümleme araçları ile sürücü kalitesini çözümleme](/windows-hardware/drivers/devtest/tools-for-verifying-drivers)  
- Sürücüleri için Kod Analizi algılayan bir derleme zamanı statik doğrulama kodlama hataları C ve C++ programlarında temel araçtır ve (birincil) çekirdek modu sürücüsü kod hataları algılamak için tasarlanan özel bir modülü içerir. Statik Sürücü Doğrulayıcı (SDV) sistematik olarak Windows çekirdek modu sürücüleri kaynak kodunu analiz eden bir statik doğrulama aracıdır. SDV sürücü Windows işletim sistemi çekirdeği ile doğru şekilde etkileşim olup olmadığını belirler.  
-  
- [Sürücüleri uyarılar için Kod Analizi](http://go.microsoft.com/fwlink/?LinkId=225920)  
- Sürücü kodda olası bir hata algıladığında sürücüleri için kod analizi raporları uyarılar açıklar.  
-  
-## <a name="related-tasks"></a>İlişkili görevler  
- [Yönetilen Kodun Ölçüm Karmaşıklığı ve Bakımı](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)  
- Açıklamayı buraya ekleyin.  
-  
- [Kodunuza Birim Testi Uygulama](../test/unit-test-your-code.md)  
- Açıklamayı buraya ekleyin.
+Bu bölümde, yönetilen [kod kalitesini analiz etme](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) yönetilen kod Için Visual Studio kod analizi, Microsoft .NET Framework tasarımında ayarlanan programlama ve tasarım kurallarının ihlalleri gibi yönetilen derlemeler hakkında bilgi sağlar Giderme. Uyarı iletileri ilgili programlama ve tasarım sorunlarını belirler ve mümkünse sorunun nasıl düzeltileceğini gösteren bilgileri sağlar.
+
+ [Kod analizini kullanarakC++ c/Code kalitesini analiz etme](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md) c/C++ Code Analysis Tool, geliştiriciler c/C++ kaynak kodundaki olası hatalar hakkında bilgi sağlar. Araç tarafından bildirilen yaygın kodlama hataları, arabellek taşmaları, Başlatılmamış bellek, null işaretçi başvurusu ve bellek ve kaynak sızıntılarını içerir.
+
+ [Kod analizi kurallarını gruplandırmak Için kural kümeleri kullanma](../code-quality/using-rule-sets-to-group-code-analysis-rules.md) Projenize uygulanacak *kural kümelerini* seçin ve oluşturun.
+
+ [Kod Analizi uygulama hataları](../code-quality/code-analysis-application-errors.md) Kod Analizi işlevindeki hataları düzeltir.
+
+ [Takım projesi Iade Ilkeleriyle kod kalitesini geliştirme](../code-quality/enhancing-code-quality-with-team-project-check-in-policies.md) Team Foundation Sürüm Denetimi (TFVC) kullandığınızda, takım projeleriniz için daha iyi kod ve daha verimli grup geliştirmeye yol açabilecek uygulamalar uygulayan iade ilkeleri oluşturabilirsiniz. İade ilkeleri, kodun iade edilene izin verilmesi için takım projesi düzeyinde ayarlanan ve Geliştirici bilgisayarlarında uygulanan kurallardır.
+
+### <a name="code-analysis-for-drivers"></a>Sürücüler için kod analizi
+ Kod analizi araçları, sürücü kaynak kodunu sistematik olarak çözümleyerek sürücünüzün kararlılığını ve güvenilirliğini artırmaya yardımcı olabilir.
+
+ [Kod analizi araçlarını kullanarak sürücü kalitesini analiz etme](/windows-hardware/drivers/devtest/tools-for-verifying-drivers) Sürücüler için kod analizi, C ve C++ programlarındaki temel kodlama hatalarını algılayan derleme zamanı statik doğrulama aracıdır ve (birincil) çekirdek modu sürücü kodundaki hataları algılamak için tasarlanan özel bir modül içerir. Statik Sürücü Doğrulayıcısı (SDV), Windows çekirdek modu sürücülerinin kaynak kodunu sistematik olarak analiz eden bir statik doğrulama aracıdır. SDV, sürücünün Windows işletim sistemi çekirdekle doğru şekilde etkileşime sahip olup olmadığını belirler.
+
+ [Sürücüler Için kod analizi uyarıları](http://go.microsoft.com/fwlink/?LinkId=225920) Sürücü kodunda olası bir hata algılandığında, sürücüler için kod analizinin rapor veren uyarıları açıklar.
+
+## <a name="related-tasks"></a>İlgili görevler
+ [Yönetilen kodun ölçüm karmaşıklığı ve Bakımma](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md) Açıklamayı buraya ekleyin.
+
+ [Kodunuzun birim testi](../test/unit-test-your-code.md) Açıklamayı buraya ekleyin.

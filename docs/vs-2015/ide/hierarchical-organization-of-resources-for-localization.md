@@ -16,43 +16,38 @@ helpviewer_keywords:
 - resource files, fallback processes
 ms.assetid: dadf8f2c-f74c-44d7-bec0-a1e956d8d38d
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 02f136fa0daa23484e31deab8f138a02b8a0b592
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 0a79caca18c7813605ff851eea6bda642e6300a0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704341"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645608"
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>Yerelleştirme için Kaynakların Hiyerarşik Organizasyonu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio'da yerelleştirilmiş kaynaklar (dizeler ve her bir kültür için uygun görüntü gibi veri) ayrı dosyalarında depolanan ve UI kültürü ayarına göre yüklenir. Anlamak için yerelleştirilmiş kaynaklar yüklenen nasıl hiyerarşik olarak düzenlenmiş olarak bunları düşünmek yararlı olur.  
-  
-## <a name="kinds-of-resources-in-the-hierarchy"></a>Kaynak hiyerarşideki türleri  
-  
-- Örneğin İngilizce ("tr"), varsayılan kültür için geri dönüş kaynak hiyerarşisinin en üstünde bulunur. Bunları kendi dosyalarına sahip olmayan tek kaynaklardır; Bunlar, ana derlemesinde depolanır.  
-  
-- Geri dönüş kaynakları nötr kültürler için kaynaklardır. Bağımsız kültür, bir dil ancak değil bir ülke/bölge ile ilişkilidir. Örneğin, Fransızca ("fr"), bağımsız kültür olur. (Geri dönüş kaynakları da bağımsız bir kültür, ancak bir özel olduğunu unutmayın.)  
-  
-- Kaynaklarını belirli kültürler için olanlardır. Belirli bir kültür, bir dil ve ülke/bölge ile ilişkilidir. Örneğin, Kanada Fransızcası ("fr-CA") belirli bir kültür olur.  
-  
-  Bir uygulama gibi bir dize, yerelleştirilmiş tüm kaynak yüklemeye çalışır ve bunu bulamaz, istenen kaynak içeren bir kaynak dosyayı bulana kadar hiyerarşisinde yukarı taşınır.  
-  
-  Kaynaklarınızı depolamak için en iyi yolu bunları mümkün olduğunca generalize sağlamaktır. Bu, kaynak dosyalarında özel kültürler mümkün olduğunda yerine nötr kültürler için yerelleştirilmiş dizeler, görüntüler vb. depolamak anlamına gelir. Örneğin, Fransızca Belçika için kaynaklarınız varsa ("fr-olabilir") kültürü ve hemen yukarıdaki kaynakları geri dönüş kaynakları İngilizce, biri Fransızcası kültürü için yapılandırılmış bir sistemde, uygulamanızın kullandığında bir sorun meydana gelebilir. Sistem "fr-CA" için bir uydu derleme aramak değil bulmak ve İngilizce, Fransızca kaynakları yüklemek yerine geri dönüş kaynağı içeren ana derlemesi yüklenemiyor. Aşağıdaki resimde, bu istenmeyen bir senaryo gösterir.  
-  
-  ![Yalnızca belirli kaynakları](../ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
-  
-  Önerilen uygulama "fr" kültür için bir bağımsız kaynak dosyasında mümkün olduğunca fazla kaynak yerleştirme izlerseniz, Fransızca Kanada kullanıcı için işaretlenen kaynakları görmek "fr-olması" kültür, ancak kendisine getirirseniz dizeleri Fransızca. Aşağıdaki durum bu tercih edilen bir senaryo gösterir.  
-  
-  ![NeutralSpecificResources grafiği](../ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yerelleştirme için bağımsız kaynak dilleri](../ide/neutral-resources-languages-for-localization.md)   
- [Güvenlik ve yerelleştirilmiş yardımcı derlemeler](../ide/security-and-localized-satellite-assemblies.md)   
- [Uygulamaları yerelleştirme](../ide/localizing-applications.md)   
- [Uygulamaları Genelleştirme ve yerelleştirme](../ide/globalizing-and-localizing-applications.md)   
- [Nasıl yapılır: Windows Forms Genelleştirme için kültürü ve kullanıcı Arabirimi kültürünü ayarlama](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0)   
- [Nasıl yapılır: ASP.NET Web sayfası Genelleştirme için kültürü ve kullanıcı Arabirimi kültürünü ayarlama](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0)
+Visual Studio 'da yerelleştirilmiş kaynaklar (her kültüre uygun dizeler ve görüntüler gibi veriler) ayrı dosyalarda depolanır ve Kullanıcı arabirimi kültürü ayarına göre yüklenir. Yerelleştirilmiş kaynakların nasıl yüklendiğini anlamak için, bunları hiyerarşik bir şekilde düzenlenmiş şekilde düşünmek yararlı olur.
+
+## <a name="kinds-of-resources-in-the-hierarchy"></a>Hiyerarşideki kaynak türleri
+
+- Hiyerarşinin en üstünde, varsayılan kültüre yönelik geri dönüş kaynakları (örneğin, Ingilizce ("en")). Bunlar, kendi dosyası olmayan tek kaynaklardır; Bunlar ana derlemede depolanırlar.
+
+- Geri dönüş kaynaklarının altında, tüm nötr kültürler için kaynaklar bulunur. Nötr kültür bir dille ilişkilendirilir ancak ülke/bölge değildir. Örneğin, Fransızca ("fr") nötr bir kültür. (Geri dönüş kaynaklarının da bağımsız bir kültür için ve özel bir kültür için olduğunu unutmayın.)
+
+- Belirli kültürlerin kaynakları aşağıda verilmiştir. Belirli bir kültür bir dil ve ülke/bölge ile ilişkilendirilir. Örneğin, Kanada Fransızcası ("fr-CA") belirli bir kültürdür.
+
+  Bir uygulama, bir dize gibi yerelleştirilmiş bir kaynağı yüklemeye çalışırsa ve bunu bulamazsa, istenen kaynağı içeren bir kaynak dosyası bulana kadar hiyerarşiyi gezir.
+
+  Kaynaklarınızı depolamanın en iyi yolu, bunları mümkün olduğunca genelleştirmenizi sağlar. Bu, mümkün olduğunda belirli kültürler yerine bağımsız kültürler için yerelleştirilmiş dizeleri, resimleri ve benzeri öğeleri depolar anlamına gelir. Örneğin, Fransızca Belçika ("fr-ın") kültürü için kaynaklarınız varsa ve yukarıdaki kaynaklar Ingilizce olarak geri dönüş kaynaklarındayken, birisi uygulamanızı Kanada Fransızcası için yapılandırılmış bir sistemde kullandığında bir sorun ortaya çıkabilir. Sistem, "fr-CA" için bir uydu derlemesini arar, bulamaz ve geri dönüş kaynağını içeren ana derlemeyi (Fransızca kaynakları yüklemek yerine Ingilizce) yükler. Aşağıdaki resimde bu istenmeyen senaryo gösterilmektedir.
+
+  ![Yalnızca belirli kaynaklar](../ide/media/vbspecificresourcesonly.gif "yalnızca vbspecificresources")
+
+  "Fr" kültürü için bağımsız bir kaynak dosyasında mümkün olduğunca çok kaynak yerleştirmeye yönelik önerilen uygulamayı izlerseniz, Kanada Fransızcası, "fr-to" kültürü için işaretlenmiş kaynakları görmez, ancak bu dize Fransızca olarak gösteriliyor. Aşağıdaki durum, tercih edilen bu senaryoyu göstermektedir.
+
+  ![NeutralSpecificResources grafiği](../ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Yerelleştirme [güvenliği ve yerelleştirilmiş uydu derlemelerinin](../ide/security-and-localized-satellite-assemblies.md) [bağımsız kaynak dilleri](../ide/neutral-resources-languages-for-localization.md) [, uygulamaları](../ide/localizing-applications.md) [Genelleştirme ve yerelleştirme uygulamaları](../ide/globalizing-and-localizing-applications.md) Için [nasıl yapılır: Kültür ve Kullanıcı Arabirimi kültürünü Windows Forms ayarlama Genelleştirme](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0) [nasıl yapılır: ASP.NET Web sayfası Genelleştirme için kültürü ve Kullanıcı Arabirimi kültürünü ayarlama](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0)

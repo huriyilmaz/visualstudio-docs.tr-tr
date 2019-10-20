@@ -1,51 +1,51 @@
 ---
-title: İş Akışı Tasarımcısı - AddToCollection<T> etkinlik Tasarımcısı
+title: İş Akışı Tasarımcısı AddToCollection <T> etkinlik Tasarımcısı
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.AddToCollection`1.UI
 ms.assetid: f7fc0702-164e-4370-8946-bb2f9f9384b7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e339e2639d85f89d4110c36710ab9c19e0fe333
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e8aa11f93b702f48d93710b9993769289ebc8ffa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62842091"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650740"
 ---
-# <a name="addtocollectiont-activity-designer"></a>AddToCollection\<T > etkinlik Tasarımcısı
+# <a name="addtocollectiont-activity-designer"></a>AddToCollection \<T > etkinlik Tasarımcısı
 
-**AddToCollection\<T >** etkinlik Tasarımcısı oluşturmak ve yapılandırmak için kullanılan bir <xref:System.Activities.Statements.AddToCollection%601> etkinlik.
+**AddToCollection \<T >** etkinlik tasarımcısı bir <xref:System.Activities.Statements.AddToCollection%601> etkinliği oluşturmak ve yapılandırmak için kullanılır.
 
-## <a name="the-addtocollectiont-activity"></a>AddToCollection\<T > etkinliği
+## <a name="the-addtocollectiont-activity"></a>AddToCollection \<T > etkinliği
 
-<xref:System.Activities.Statements.AddToCollection%601> Etkinlik bir koleksiyon için bir öğe ekler.
+@No__t_0 etkinliği bir koleksiyona bir öğe ekler.
 
-### <a name="using-the-addtocollectiont-activity-designer"></a>AddToCollection kullanarak\<T > etkinlik Tasarımcısı
+### <a name="using-the-addtocollectiont-activity-designer"></a>AddToCollection \<T > etkinlik tasarımcısını kullanma
 
-**AddToCollection\<T >** etkinlik Tasarımcısı bulunabilir **koleksiyon** kategorisi **araç kutusu**, hangi erişilen tıklayarak **Araç kutusu** iş akışı Tasarımcısı için sekmesinde. Alternatif olarak, seçin **araç kutusu** gelen **görünümü** tuşuna basın veya menü **Ctrl**+**Alt** + **X**.
+**AddToCollection \<T >** etkinlik tasarımcısı, iş akışı Tasarımcısı **araç kutusu** sekmesine tıklanarak erişilen **araç kutusu** **koleksiyon** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** +**alt** +**X**tuşuna basın.
 
-**AddToCollection\<T >** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve etkinlikleri yerleştirilir her yerde, böyle bir gibiiçindeişakışıTasarımcısıyüzeyineaçın<xref:System.Activities.Statements.Sequence>. Bırakarak **AddToCollection\<T >** etkinlik Tasarımcısı oluşturur bir <xref:System.Activities.Statements.AddToCollection%601> etkinliği ile bir varsayılan <xref:System.Activities.Activity.DisplayName%2A> AddToCollection, < Int32\>. (Varsayılan olarak, *TypeArgument* olduğu **Int32**. TypeArgument özellik kılavuzunda değiştirilebilir.) <xref:System.Activities.Activity.DisplayName%2A> Değeri üst bilgisinde düzenlenebilir **AddToCollection < T\>**  etkinlik Tasarımcısı veya **DisplayName** özellik kılavuzunda kutusu. Özellik Kılavuzu'nun diğer özellikleri düzenlenmesi gerekir.
+**AddToCollection \<T >** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, <xref:System.Activities.Statements.Sequence> içinde olduğu gibi etkinliklerin yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir. **Addtocollection \<T >** etkinlik Tasarımcısı, AddToCollection < Int32 \> varsayılan <xref:System.Activities.Activity.DisplayName%2A> sahip bir <xref:System.Activities.Statements.AddToCollection%601> etkinliği oluşturur. (Varsayılan olarak, *TypeArgument* **Int32**' dir. TypeArgument özellik kılavuzunda değiştirilebilir.) @No__t_0 değeri, **AddToCollection < t \>** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenmelidir.
 
-### <a name="the-addtocollectiont-properties"></a>AddToCollection\<T > Özellikleri
+### <a name="the-addtocollectiont-properties"></a>AddToCollection \<T > Özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.AddToCollection%601> özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır.
+Aşağıdaki tabloda <xref:System.Activities.Statements.AddToCollection%601> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
 
-|Özellik Adı|Gerekli|Kullanım|
+|Özellik adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Kolay adı <xref:System.Activities.Statements.AddToCollection%601> etkinlik. AddToCollection varsayılandır < Int32\>. Ancak <xref:System.Activities.Activity.DisplayName%2A> değeri kesinlikle gerekli değil, kullanmak için en iyi bir uygulamadır.|
-|<xref:System.Activities.Statements.AddToCollection%601.Item%2A>|Doğru|Koleksiyona eklenecek öğe\<T >. Bu öğe türünde *T*, türünde *TypeArgument*. Öğesini belirtmek için bir Visual Basic ifadesinin özellik kılavuzunda yazın.|
-|<xref:System.Activities.Statements.AddToCollection%601.Collection%2A>|Doğru|Öğesi eklenmesi gereken koleksiyon. Bu koleksiyonu türünde **ICollection < TypeArgument\>**. Koleksiyon belirtmek için bir Visual Basic ifadesinin özellik kılavuzunda yazın.|
-|*TypeArgument*|Doğru|İçindeki öğe türü T <xref:System.Collections.Generic.ICollection%601>. Varsayılan olarak, bu *TypeArgument* türü ayarlandığında **Int32**. Türü değiştirmek için değerini değiştirmek *TypeArgument* birleşik giriş kutusundaki özellik kılavuzunda.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin kolay adı. Varsayılan değer AddToCollection < Int32 \> ' dir. @No__t_0 değeri kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.AddToCollection%601.Item%2A>|Doğru|Koleksiyona eklenecek öğe \<T >. Bu öğe, *TypeArgument*türünde *T*türünde. Öğeyi belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Statements.AddToCollection%601.Collection%2A>|Doğru|Öğenin eklenmesi gereken koleksiyon. Bu koleksiyon **ıcollection < TypeArgument \>** türünde. Koleksiyonu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
+|*TypeArgument*|Doğru|@No__t_0 bulunan öğelerin T türü. Varsayılan olarak, bu *TypeArgument* türü **Int32**olarak ayarlanır. Türü değiştirmek için, özellik kılavuzundaki Birleşik giriş kutusunda *TypeArgument* değerini değiştirin.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Koleksiyon](../workflow-designer/collection-activity-designers.md)
-- [AddToCollection\<T > etkinlik Tasarımcısı](../workflow-designer/addtocollection-t-activity-designer.md)
+- [AddToCollection \<T > etkinlik Tasarımcısı](../workflow-designer/addtocollection-t-activity-designer.md)
 - [ClearCollection\<T>](../workflow-designer/clearcollection-t-activity-designer.md)
 - [ExistsInCollection\<T>](../workflow-designer/existsincollection-t-activity-designer.md)
 - [RemoveFromCollection\<T>](../workflow-designer/removefromcollection-t-activity-designer.md)

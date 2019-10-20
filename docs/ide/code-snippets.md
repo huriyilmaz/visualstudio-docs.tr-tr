@@ -8,8 +8,8 @@ f1_keywords:
 helpviewer_keywords:
 - surround with
 - code snippets
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
@@ -17,31 +17,31 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 89de993337ecd214c7771faf17b24f90fa5e0110
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: fa42d9c404aaf75fda03731183abf3d585869b07
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766251"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647560"
 ---
 # <a name="code-snippets"></a>Kod parçacıkları
 
-Kod parçacıkları, sağ tıklama menüsü (bağlam menüsü) komutu veya kısayol tuşlarının birleşimini kullanarak bir kod dosyasına eklenebilen yeniden kullanılabilir kod bloklarında yer alabilir. Genellikle, `try-finally` veya `if-else` blokları gibi yaygın olarak kullanılan kod blokları içerirler, ancak tüm sınıfları veya yöntemleri eklemek için kullanılabilirler.
+Kod parçacıkları, sağ tıklama menüsü (bağlam menüsü) komutu veya kısayol tuşlarının birleşimini kullanarak bir kod dosyasına eklenebilen yeniden kullanılabilir kod bloklarında yer alabilir. Genellikle `try-finally` veya `if-else` blokları gibi yaygın olarak kullanılan kod blokları içerirler, ancak tüm sınıfları veya yöntemleri eklemek için kullanılabilirler.
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [kod parçacıkları (Mac için Visual Studio)](/visualstudio/mac/snippets).
 
-Kod parçacıkları,, Visual Basic, XML ve T-SQL dahil C#olmak C++üzere çok sayıda dilde kullanılabilir ve birkaç kez ad verebilir. Bir dile ait kullanılabilir tüm yüklü parçacıkları görüntülemek için, **Araçlar** menüsünden **kod parçacıkları Yöneticisi 'ni** açın (veya **CTRL**+**K**, **CTRL**+**B**tuşlarına basın) ve şu dil arasından En üstteki açılan menü.
+Kod parçacıkları,, Visual Basic, XML ve T-SQL dahil C#olmak C++üzere çok sayıda dilde kullanılabilir ve birkaç kez ad verebilir. Bir dile ait kullanılabilir tüm yüklü parçacıkları görüntülemek için, **Araçlar** menüsünden **kod parçacıkları Yöneticisi 'ni** açın (veya **ctrl** +**K**, **CTRL** +**B**) tuşlarına basın ve açılır menüden dili seçin en üstte.
 
 ![Kod parçacıkları Yöneticisi iletişim kutusu](media/code-snippets-manager.png)
 
 Kod parçacıklarına aşağıdaki genel yollarla erişilebilir:
 
-- Menü çubuğunda, > **IntelliSense** > Düzenle**kod parçacığı Ekle** ' yi seçin.
+- Menü çubuğunda **düzenle**  > **IntelliSense** ' i seçin  > **kod parçacığı Ekle**
 
-- Kod düzenleyicisindeki sağ tıklama veya bağlam menüsünde kod **parçacığı** > **ekleme kod parçacığı** ' ni seçin.
+- Kod düzenleyicisindeki sağ tıklama veya bağlam menüsünde kod **parçacığı**  >  kod**parçacığı Ekle** ' yi seçin.
 
-- Klavyeden **CTRL**+**K**,**CTRL**+**X** tuşlarına basın
+- Klavyeden **ctrl** +**K**,**CTRL** +**X** tuşlarına basın
 
 ## <a name="expansion-snippets-and-surround-with-snippets"></a>Genişleme parçacıkları ve surround-kod parçacıkları
 
@@ -60,9 +60,9 @@ finally
 }
 ```
 
-Kod penceresinin sağ tıklama menüsünde (bağlam menüsü) kod **parçacığı Ekle** ' `tryf` **C#** ye tıklayıp, ardından yazarak ve ardından ENTER tuşuna basarak bu kod parçacığını ekleyebilirsiniz. İsterseniz Tab tuşuna iki kez `tryf` yazabilir ve basabilirsiniz.
+Kod penceresinin sağ tıklama menüsünde (bağlam menüsü) kod **parçacığı Ekle** ' **C#** ye tıklayıp, ardından `tryf` yazıp **Tab**tuşuna basarak bu kod parçacığını ekleyebilirsiniz. Ya da `tryf` yazabilir ve **Tab** tuşuna iki kez basabilirsiniz.
 
-C++ ,`if` Bir ekleme kod parçacığı ya da bir surround, kod parçacığı olarak birlikte kullanılabilir. Bir kod `return FALSE;`satırı seçer (örneğin) ve ardından **birlikte** > Çevrele seçeneğini belirlerseniz, kod parçacığı satır etrafında genişletilir:
+Kısayol `if` C++ , bir ekleme kod parçacığı ya da surround olarak kod parçacığı olarak kullanılabilir. Bir kod satırı seçerseniz (örneğin `return FALSE;`) ve sonra  >  **Ile çevrelemeyi** **seçerseniz, kod**parçacığı satır etrafında genişletilir:
 
 ```cpp
 if (true)
@@ -73,9 +73,9 @@ if (true)
 
 ## <a name="snippet-replacement-parameters"></a>Kod parçacığı değiştirme parametreleri
 
-Kod parçacıkları, yazmakta olduğunuz kesin kodu sığdırmak için değiştirmeniz gereken yer tutucuları olan değiştirme parametrelerini içerebilir. Önceki örnekte `true` , uygun koşulla değiştireceğiniz bir değiştirme parametresidir. Yaptığınız değişiklik, kod parçacığında aynı değiştirme parametresinin her örneği için yinelenir.
+Kod parçacıkları, yazmakta olduğunuz kesin kodu sığdırmak için değiştirmeniz gereken yer tutucuları olan değiştirme parametrelerini içerebilir. Önceki örnekte `true`, uygun koşulla değiştireceğiniz bir değiştirme parametresidir. Yaptığınız değişiklik, kod parçacığında aynı değiştirme parametresinin her örneği için yinelenir.
 
-Örneğin, Visual Basic bir özelliği ekleyen bir kod parçacığı vardır. Kod parçacığını eklemek için, bir Visual Basic kod dosyasındaki sağ tıklama veya bağlam menüsünden **kod parçacığı** > **Ekle kod parçacığını** seçin. Ardından, **kod desenleri** > **özelliklerini, yordamları, olayları** > **bir özelliği tanımlar**.
+Örneğin, Visual Basic bir özelliği ekleyen bir kod parçacığı vardır. Kod parçacığını eklemek için, Visual Basic kod dosyasındaki sağ tıklama veya bağlam menüsünden kod parçacığı**ekle** ** >  kod parçacığı öğesini** seçin. Ardından,**Özellikler, yordamlar, olaylar**  > **bir özellik tanımlamak** >  **kod düzenlerini** seçin.
 
 ![Özellik tanımlamak için kod parçacığı menüsü](media/code-snippets-vb-property.png)
 
@@ -93,12 +93,12 @@ Public Property NewProperty() As String
 End Property
 ```
 
-' A geçiş `newPropertyValue` yaparsanız,herörneğideğiştirilir.`newPropertyValue` `m_property` Özelliğini özellik bildiriminde `String` olarak `Int` değiştirirseniz, set yöntemindeki değer de olarak `Int`değiştirilir.
+@No__t_0 `m_property` olarak değiştirirseniz `newPropertyValue` her örneği değiştirilir. Özellik bildiriminde `Int` `String` değiştirirseniz, set yöntemindeki değer de `Int` olarak değiştirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)
-- [Nasıl yapılır: Kod parçacıklarını dağıtma](../ide/how-to-distribute-code-snippets.md)
+- [İzlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)
+- [Nasıl yapılır: kod parçacıklarını dağıtma](../ide/how-to-distribute-code-snippets.md)
 - [Kod parçacıkları kullanmak için en iyi uygulamalar](../ide/best-practices-for-using-code-snippets.md)
 - [Sorun giderme parçacıkları](../ide/troubleshooting-snippets.md)
 - [C#kod parçacıkları](../ide/visual-csharp-code-snippets.md)

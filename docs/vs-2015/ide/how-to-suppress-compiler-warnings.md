@@ -1,70 +1,70 @@
 ---
-title: 'Nasıl yapılır: Derleyici uyarılarını gizleme | Microsoft Docs'
+title: 'Nasıl yapılır: derleyici uyarılarını gizleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 31827b17-f933-413d-b28a-b19f903b64ca
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 994b29fb4592d55a04389896ee9db8848dceda67
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: aeb404c479edec5dec89f28e80584d435f5c370a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65695391"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670652"
 ---
-# <a name="how-to-suppress-compiler-warnings"></a>Nasıl yapılır: Derleyici Uyarılarını Engelleme
+# <a name="how-to-suppress-compiler-warnings"></a>Nasıl yapılır: Derleyici Uyarılarını Gizleme
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Derleyici uyarılarını içerecek şekilde istemediğiniz bir veya daha fazla tür belirterek bir yapı günlüğüne declutter. Örneğin, bazı gözden geçirmek için bu teknik, ancak Normal, ayrıntılı ya da tanılama günlük derleme ayrıntı ayarladığınızda, otomatik olarak oluşturulan bilgilerin tümünü kullanabilirsiniz. Ayrıntı düzeyi hakkında daha fazla bilgi için bkz. [nasıl yapılır: Görüntüleme, kaydetme ve yapılandırma derleme günlüğü dosyalarını](../ide/how-to-view-save-and-configure-build-log-files.md).
+Bir yapı günlüğünü, içermesini istemediğiniz bir veya daha fazla derleyici uyarısı türü belirterek declutter yapabilirsiniz. Örneğin, derleme günlüğü ayrıntı düzeyini normal, ayrıntılı veya tanılama olarak ayarladığınızda otomatik olarak oluşturulan bilgilerin tümünü gözden geçirmek için bu tekniği kullanabilirsiniz. Ayrıntı düzeyi hakkında daha fazla bilgi için bkz. [nasıl yapılır: görüntüleme, kaydetme ve derleme günlüğü dosyalarını yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>Görsel için belirli uyarıları bastırmak için C# veya F\#
+### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>Visual C# veya F \# için belirli uyarıları gizlemek için
 
-1. İçinde **Çözüm Gezgini**, uyarıları bastırmak istediğiniz projeyi seçin.
+1. **Çözüm Gezgini**içinde, uyarılarını bastırmak istediğiniz projeyi seçin.
 
-2. Menü çubuğunda, **görünümü**, **özellik sayfaları**.
+2. Menü çubuğunda **Görünüm**, **Özellik sayfaları**' nı seçin.
 
-3. Seçin **derleme** sayfası.
+3. **Yapı** sayfasını seçin.
 
-4. İçinde **uyarıları bastırma** kutusunda gizlemek istediğiniz uyarıların hata kodlarını noktalı virgülle ayırarak belirtin ve ardından çözümü yeniden oluşturun.
+4. **Uyarıları bastır** kutusunda, gizlemek istediğiniz uyarıların hata kodlarını noktalı virgülle ayırarak belirtin ve sonra çözümü yeniden derleyin.
 
-### <a name="to-suppress-specific-warnings-for-visual-c"></a>Visual C++ için belirli uyarıları bastırmak için
+### <a name="to-suppress-specific-warnings-for-visual-c"></a>Görsel için belirli uyarıları gizlemek içinC++
 
-1. İçinde **Çözüm Gezgini**, projeyi seçin veya uyarıları bastırmak istediğiniz dosya kaynağı.
+1. **Çözüm Gezgini**, içinde uyarıları bastırmak istediğiniz proje veya kaynak dosyasını seçin.
 
-2. Menü çubuğunda, **görünümü**, **özellik sayfaları**.
+2. Menü çubuğunda **Görünüm**, **Özellik sayfaları**' nı seçin.
 
-3. Seçin **yapılandırma özellikleri** kategorisi seçin **C/C++** kategori seçip **Gelişmiş** sayfası.
+3. **Yapılandırma özellikleri** kategorisini seçin, **C/C++**  kategorisini seçin ve ardından **Gelişmiş** sayfasını seçin.
 
 4. Aşağıdaki adımlardan birini uygulayın:
 
-    - İçinde **belirli uyarıları devre dışı** kutusunda, gizlemek istediğiniz uyarıları hata kodlarının noktalı virgülle ayrılmış belirtin.
+    - **Belirli uyarıları devre dışı bırak** kutusunda, gizlemek istediğiniz uyarıların hata kodlarını noktalı virgülle ayırarak belirtin.
 
-    - İçinde **belirli uyarıları devre dışı** kutusunda **Düzenle** daha fazla seçenek görüntülenecek.
+    - **Belirli uyarıları devre dışı bırak** kutusunda, daha fazla seçenek göstermek için **Düzenle** ' yi seçin.
 
-5. Seçin **Tamam** düğmesini ve ardından çözümü yeniden oluşturun.
+5. **Tamam** düğmesini seçin ve çözümü yeniden derleyin.
 
-## <a name="suppressing-warnings-for-visual-basic"></a>Visual Basic için uyarıları gizleme
+## <a name="suppressing-warnings-for-visual-basic"></a>Visual Basic uyarılarını gizleme
 
-Belirli bir derleyici uyarılarını Visual Basic projesi için .vbproj dosyasını düzenleyerek gizleyebilirsiniz. Ayrıca [derleme sayfası, Proje Tasarımcısı](../ide/reference/compile-page-project-designer-visual-basic.md) kategoriye göre uyarıları bastırmak için. Daha fazla bilgi için [Visual Basic'teki uyarıları yapılandırma](../ide/configuring-warnings-in-visual-basic.md).
+Projenin. vbproj dosyasını düzenleyerek Visual Basic için belirli derleyici uyarılarını gizleyebilirsiniz. Ayrıca, uyarıları kategoriye göre gizlemek için [derleme sayfası, proje Tasarımcısı ' nı](../ide/reference/compile-page-project-designer-visual-basic.md) da kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](../ide/configuring-warnings-in-visual-basic.md).
 
-#### <a name="to-suppress-specific-warnings-for-visual-basic"></a>Visual Basic için belirli uyarıları bastırmak için
+#### <a name="to-suppress-specific-warnings-for-visual-basic"></a>Visual Basic için belirli uyarıları gizlemek için
 
-1. İçinde **Çözüm Gezgini**, uyarıları bastırmak istediğiniz projeyi seçin.
+1. **Çözüm Gezgini**içinde, uyarılarını bastırmak istediğiniz projeyi seçin.
 
-2. Menü çubuğunda, **proje**, **projeyi**.
+2. Menü çubuğunda **Proje**, **Projeyi Kaldır**' ı seçin.
 
-3. İçinde **Çözüm Gezgini**, proje için kısayol menüsünü açın ve ardından **Düzenle**_ProjectName_**.vbproj**.
+3. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından_ProjectName_ **. vbproj**öğesini **Düzenle**' yi seçin.
 
-    Proje dosyası Kod Düzenleyicisi'nde açılır.
+    Proje dosyası kod düzenleyicisinde açılır.
 
-4. Bulun `<NoWarn></NoWarn>` ile oluşturmakta olduğunuza yapı yapılandırma öğesi.
+4. Oluşturmakta olduğunuz yapı yapılandırmasındaki `<NoWarn></NoWarn>` öğesini bulun.
 
-    Aşağıdaki örnekte gösterildiği `<NoWarn></NoWarn>` kalın metin için hata ayıklama derleme yapılandırmasını x x86 öğesinde platformu:
+    Aşağıdaki örnek, bir x86 platformunda hata ayıklama derleme yapılandırması için `<NoWarn></NoWarn>` öğesini kalın metin olarak gösterir:
 
    ```xml
    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -81,7 +81,7 @@ Belirli bir derleyici uyarılarını Visual Basic projesi için .vbproj dosyası
      </PropertyGroup>
    ```
 
-5. Bir veya daha fazla uyarı numaralarını değeri olarak Ekle `<NoWarn>` öğesi. Birden çok uyarı numaralarını belirtirseniz, aşağıdaki örnekte gösterildiği gibi bir virgül ile ayırın.
+5. @No__t_0 öğesinin değeri olarak bir veya daha fazla uyarı numarası ekleyin. Birden çok uyarı numarası belirtirseniz, aşağıdaki örnekte gösterildiği gibi bunları virgülle ayırın.
 
    ```xml
    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -98,15 +98,15 @@ Belirli bir derleyici uyarılarını Visual Basic projesi için .vbproj dosyası
      </PropertyGroup>
    ```
 
-6. .vbproj dosyasındaki değişiklikleri kaydedin.
+6. Değişiklikleri. vbproj dosyasına kaydedin.
 
-7. Menü çubuğunda, **proje**, **projeyi**.
+7. Menü çubuğunda **Proje**, **projeyi yeniden yükle**' yi seçin.
 
-8. Menü çubuğunda, **derleme**, **çözümü yeniden derle**.
+8. Menü çubuğunda **Oluştur**, **çözümü yeniden derle**öğesini seçin.
 
-    **Çıkış** penceresi artık belirtilen uyarıları gösterir.
+    **Çıktı** penceresi artık belirttiğiniz uyarıları göstermez.
 
-   Daha fazla bilgi için [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83).
+   Daha fazla bilgi için bkz. [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

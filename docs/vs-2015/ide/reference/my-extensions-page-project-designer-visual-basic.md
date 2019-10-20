@@ -1,5 +1,5 @@
 ---
-title: My Extensions sayfası, Proje Tasarımcısı (Visual Basic) | Microsoft Docs
+title: Uzantılarım sayfası, proje Tasarımcısı (Visual Basic) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,37 +11,31 @@ helpviewer_keywords:
 - My Extensions page in Project Designer
 ms.assetid: 2f08494e-84c1-444b-872b-900fbbcf0364
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1f59c6706a66596c3899de87a2c8142d71bcc4bf
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ada9e1f9eaa63e2158bd3d6a117946e90924461d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679770"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671993"
 ---
 # <a name="my-extensions-page-project-designer-visual-basic"></a>My Extensions Sayfası, Proje Tasarımcısı (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kullanım **My uzantılarını** sayfasının **Proje Tasarımcısı** yönetmek için `My` projenizdeki ad alanı uzantıları. `My` ad alanı uzantılarını etkinleştirme özelleştirmenizi `My` kendi özel üye eklemek için ad alanı. Özel oluşturma hakkında daha fazla bilgi için `My` ad alanı uzantılarını görmek [Visual Basic'te My Namespace genişletme](https://msdn.microsoft.com/library/808e8617-b01c-4135-8b21-babe87389e8e).  
-  
- Erişim için **My uzantılarını** sayfasında, çift **Projem** proje düğümü için **Çözüm Gezgini**. Zaman **Proje Tasarımcısı** görünen tıklayın **My uzantılarını** sekmesi.  
-  
-## <a name="uielement-list"></a>UIElement Listesi  
- Eklemek veya kaldırmak aşağıdaki seçenekleri etkinleştirmeniz `My` projenizdeki ad alanı uzantıları. A `My` ad alanı uzantısı eklenecek kullanılabilir olması için Visual Studio öğesi şablon olarak önce yüklenmelidir. Yayımlama ve yükleme hakkında bilgi için `My` ad alanı uzantılarını görmek [paketleme ve dağıtma özel My uzantılarını](https://msdn.microsoft.com/library/fd89c54b-0290-4c50-95a3-ff17d4487a21).  
-  
- **My ad alanı uzantıları**  
- Bu liste tüm gösterir `My` projede yüklü ad alanı uzantıları.  
-  
- **Uzantı Ekle**  
- Yüklü bir eklemek için bu düğmeye tıklayın `My` projenize ad alanı uzantısı. Tüm olası listesini `My` ad alanı uzantıları görünür. Seçin `My` tıklatıp projenize eklemek istediğiniz ad alanı uzantısı **Tamam** ekleyin.  
-  
- **Uzantısını kaldırma**  
- Bir veya daha fazla başvurularını seçin **My ad alanı uzantılarını** listeleyin ve ardından kaldırmak için bu düğmeye tıkladığınızda `My` projesinden ad alanı uzantısı.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genişletme Visual Basic'te My Namespace](https://msdn.microsoft.com/library/808e8617-b01c-4135-8b21-babe87389e8e)   
- [Paketleme ve My uzantılarını dağıtma](https://msdn.microsoft.com/library/fd89c54b-0290-4c50-95a3-ff17d4487a21)   
- [Visual Basic uygulama modelini genişletme](https://msdn.microsoft.com/library/e91d3bed-4c27-40e3-871d-2be17467c72c)   
- [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](https://msdn.microsoft.com/library/4e8279c2-ed5b-4681-8903-8a6671874000)
+Projenizde `My` ad alanı uzantılarını yönetmek için **Proje Tasarımcısı** ' nın **uzantılarım** sayfasını kullanın. `My` ad alanı uzantıları, kendi özel üyelerinizi eklemek için `My` ad alanını özelleştirmenizi sağlar. Özel `My` ad alanı uzantıları oluşturma hakkında daha fazla bilgi için, bkz. [Visual Basic ad alanını genişletme](https://msdn.microsoft.com/library/808e8617-b01c-4135-8b21-babe87389e8e).
+
+ **Uzantılarım** sayfasına erişmek için, **Çözüm Gezgini**içindeki proje düğümünüz için **projem** ' e çift tıklayın. **Proje Tasarımcısı** göründüğünde **uzantılarım** sekmesine tıklayın.
+
+## <a name="uielement-list"></a>UIElement Listesi
+ Aşağıdaki seçenekler, projenize `My` ad alanı uzantıları eklemenize veya kaldırmanıza olanak sağlar. Bir `My` ad alanı uzantısının eklenebilmesi için önce bir Visual Studio öğe şablonu olarak yüklenmesi gerekir. @No__t_0 ad alanı uzantılarını yayımlama ve yükleme hakkında daha fazla bilgi için bkz. [özel uzantılarımı paketleme ve dağıtma](https://msdn.microsoft.com/library/fd89c54b-0290-4c50-95a3-ff17d4487a21).
+
+ **My Namespace uzantıları** Bu liste, projede yüklü olan tüm `My` ad alanı uzantılarını gösterir.
+
+ **Uzantı Ekle** Projenize yüklü bir `My` ad alanı uzantısı eklemek için bu düğmeye tıklayın. Tüm olası `My` ad alanı uzantılarının listesi görüntülenir. Projenize eklemek istediğiniz `My` ad alanı uzantısını seçip eklemek için **Tamam** ' a tıklayın.
+
+ **Uzantıyı kaldır** **My Namespace Extensions** listesindeki bir veya daha fazla başvuruyu seçin ve ardından bu düğmeye tıklayarak `My` ad alanı uzantısını projeden kaldırın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [My Namespace in Visual Basic](https://msdn.microsoft.com/library/808e8617-b01c-4135-8b21-babe87389e8e) [paketleme ve özel uzantılarımı dağıtma](https://msdn.microsoft.com/library/fd89c54b-0290-4c50-95a3-ff17d4487a21) [Visual Basic uygulama modeli uzatılıyor](https://msdn.microsoft.com/library/e91d3bed-4c27-40e3-871d-2be17467c72c) ve [hangi nesnelerin kullanılabilir olduğunu özelleştirme](https://msdn.microsoft.com/library/4e8279c2-ed5b-4681-8903-8a6671874000)

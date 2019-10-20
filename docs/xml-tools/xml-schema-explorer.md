@@ -3,21 +3,21 @@ title: XML Şema Gezgini
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2fc39e98-b194-456b-a452-cfafb0a52d66
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 717a5d85a9d3a3251739b62728be572bee1487f6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9350e4ca41661e6bc9613d036ad4dd2a978a706d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926775"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72608089"
 ---
 # <a name="xml-schema-explorer"></a>XML Şema Gezgini
 
-XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışmanıza olanak tanımak için MICROSOFT VISUAL STUDIO ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü **XML şema Gezgini**'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir `include` veya `import` ifadesiyle başvurulan tüm dosyalar da **XML şema Gezgini**'nde görünür.
+XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışmanıza olanak tanımak için MICROSOFT VISUAL STUDIO ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü **XML şema Gezgini**'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir `include` veya `import` bildirimiyle başvurulan tüm dosyalar da **XML şema Gezgini**'nde görünür.
 
 **XML şeması Gezgini** şunları yapmanızı sağlar:
 
@@ -54,7 +54,7 @@ XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışma
 
 - Üçüncü düzey dosyaları içerir.
 
-- Dördüncü düzey genel düğümleri içerir. Bu öğe, gruplar, karmaşık türler, basit türler, öznitelikler, öznitelik grupları, ve `include`, `import`ve `redefine` deyimleri içerebilir.
+- Dördüncü düzey genel düğümleri içerir. Bu öğe, gruplar, karmaşık türler, basit türler, öznitelikler, öznitelik grupları ve `include`, `import` ve `redefine` deyimlerini içerebilir.
 
 Aşağıda bir ağaç yapısına örnek verilmiştir:
 
@@ -67,7 +67,7 @@ Bir düğümü etkinleştirmek için çift tıklayın veya düğüm seçildiğin
 
 - Bir düğümü etkinleştirmek, bu düğümün tanımlandığı dosyayı açar (dosya zaten açık değilse) ve dosyadaki düğümü seçer.
 
-- Bir dosya düğümünü etkinleştirmek seçili dosyayı açar (zaten açık değilse) ve `<schema>` düğümü vurgular.
+- Bir dosya düğümünü etkinleştirmek seçili dosyayı açar (zaten açık değilse) ve `<schema>` düğümünü vurgular.
 
 - Bir SchemaSet veya Namespace düğümünü etkinleştirmek hiçbir şey yapmaz.
 

@@ -4,23 +4,23 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e3295476b9a9d35768963baa05829a560fc9291
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.openlocfilehash: f372d42869bf533b598f3e2aba9e60e34e47144d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381493"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605285"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>Nasıl yapılır: Şekil veya Dekoratörde bir Click için Araya Girme
 Aşağıdaki yordamlarda, bir şekle veya bir simge dekoratmasına tıklamanın nasıl ele alınacağını gösterilmektedir. Tıklama, Çift tıklama, sürükme ve diğer hareketleri yakalayabilir ve öğenin yanıt vermesini sağlayabilirsiniz.
 
 ## <a name="to-intercept-clicks-on-shapes"></a>Şekillerdeki tıklamaları kesme
- DSL projesinde, oluşturulan kod dosyalarından ayrı bir kod dosyasında, şekil sınıfı için kısmi bir sınıf tanımı yazın. @No__t-0 veya `On...` ile başlayan bir ada sahip diğer yöntemlerden birini geçersiz kılın. Örneğin:
+ DSL projesinde, oluşturulan kod dosyalarından ayrı bir kod dosyasında, şekil sınıfı için kısmi bir sınıf tanımı yazın. @No__t_0 veya `On...` başlayan bir ada sahip diğer yöntemlerden birini geçersiz kılın. Örneğin:
 
 ```csharp
 public partial class MyShape // change
@@ -47,7 +47,7 @@ public partial class MyShape // change
 
 2. Simge dekoratörü olan bir şekil seçin veya oluşturun ve bunu bir etki alanı sınıfıyla eşleyin.
 
-3. @No__t-0 klasöründeki dosyalardan ayrı bir kod dosyasında, ImageField öğesinin yeni alt sınıfını oluşturun:
+3. @No__t_0 klasöründeki dosyalardan ayrı bir kod dosyasında, ImageField öğesinin yeni alt sınıfını oluşturun:
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -133,7 +133,7 @@ public partial class MyShape // change
 
 - Bir dizi fare olay işleyicisi oluşturulduğunda her bir bölme örneğine eklenir.
 
-- @No__t-0 olayı geçerli öğeyi depolar.
+- @No__t_0 olay geçerli öğeyi depolar.
 
 - Fare geçerli öğeden dışarı taştığında, imleci ayarlayan ve serbest bırakılana kadar fare yakalayan bir MouseAction örneği oluşturulur.
 

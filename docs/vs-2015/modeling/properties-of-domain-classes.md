@@ -8,35 +8,35 @@ helpviewer_keywords:
 - Domain-Specific Language, domain class
 ms.assetid: a3993995-19e7-4761-a972-b1de89131a1b
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c668317fba69100701fac95bfa333ed7b3446488
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 91599e17fc132001de9fbb1a62a62918321a2dea
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701962"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652002"
 ---
 # <a name="properties-of-domain-classes"></a>Etki Alanı Sınıflarının Özellikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Etki alanı sınıfları aşağıdaki tabloda özelliklere sahiptir. Etki alanı sınıfları hakkında daha fazla bilgi için bkz: [anlama modelleri, sınıfları ve ilişkileri](../modeling/understanding-models-classes-and-relationships.md). Bu özellikler kullanma hakkında daha fazla bilgi için bkz. [bir etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).  
-  
-|Özellik|Açıklama|Varsayılan|  
-|--------------|-----------------|-------------|  
-|Erişim değiştiricisi|Etki alanı sınıfı, erişim düzeyi (`public` veya `internal`).|`public`|  
-|Özel Öznitelikler|Bu alan sınıfından oluşturulan kaynak kod sınıfı öznitelikler eklemek için kullanılır.|\<yok >|  
-|Çift oluşturur türetilmiş|Varsa `True`, hem temel sınıf hem de (geçersiz kılmalar aracılığıyla özelleştirmeyi desteklemek için) bir kısmi sınıf oluşturulur. Daha fazla bilgi için [geçersiz kılma ve oluşturulan sınıflar genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|  
-|Özel oluşturucu vardır.|Varsa `True`, kaynak kodunda özel bir oluşturucu sağlanacaktır. Daha fazla bilgi için [geçersiz kılma ve oluşturulan sınıflar genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|  
-|Devralma değiştiricisi|Alan sınıfından oluşturulan kaynak kodu sınıf devralma türü açıklar (`none`, `abstract` veya `sealed`).|`none`|  
-|Temel sınıf|Bu etki alanı sınıfı türetiliyorsa temel sınıfın adı.|\<yok >|  
-|Ad|Bu alan sınıfının adı.|Geçerli ad|  
-|Ad Alanı|Bu alan sınıfının ad alanı.|Geçerli ad alanı|  
-|Notlar|Bu alan sınıfıyla ilişkili resmi olmayan notlar.|\<yok >|  
-|Açıklama|Belge oluşturulan tasarımcının kullanıcı Arabirimi için kullanılan bir açıklaması.|\<yok >|  
-|Görünen Ad|Bu etki alanı sınıfı için oluşturulan tasarımcıda görüntülenecek ad.|\<yok >|  
-|Yardım anahtar sözcüğü|Bu etki alanı sınıfı için F1 Yardımı dizini oluşturmak için kullanılan isteğe bağlı anahtar sözcük.|\<yok >|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+Etki alanı sınıfları aşağıdaki tabloda yer alan özelliklere sahiptir. Etki alanı sınıfları hakkında daha fazla bilgi için bkz. [modelleri, sınıfları ve Ilişkileri anlama](../modeling/understanding-models-classes-and-relationships.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+
+|Özellik|Açıklama|Varsayılan|
+|--------------|-----------------|-------------|
+|Erişim değiştiricisi|Etki alanı sınıfına erişim düzeyi (`public` veya `internal`).|`public`|
+|Özel Öznitelikler|Bu etki alanı sınıfından oluşturulan kaynak kodu sınıfına öznitelikler eklemek için kullanılır.|\<none >|
+|Double türevi üretir|@No__t_0, hem temel sınıf hem de kısmi bir sınıf (geçersiz kılmaları kullanarak özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|
+|Özel Oluşturucusu vardır|@No__t_0, kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|
+|Devralma değiştiricisi|Etki alanı sınıfından oluşturulan kaynak kodu sınıfının devralım türünü açıklar (`none`, `abstract` veya `sealed`).|`none`|
+|Temel sınıf|Bu alan sınıfı türetildiyse, taban sınıfın adı.|\<none >|
+|Name|Bu alan sınıfının adı.|Geçerli ad|
+|Ad Alanı|Bu alan sınıfının ad alanı.|Geçerli ad alanı|
+|Notlar|Bu alan sınıfıyla ilişkili resmi olmayan notlar.|\<none >|
+|Açıklama|Oluşturulan tasarımcının Kullanıcı arabirimini belgelemek için kullanılan açıklama.|\<none >|
+|Görünen ad|Bu alan sınıfı için oluşturulan tasarımcıda görüntülenecek ad.|\<none >|
+|Help anahtar sözcüğü|Bu etki alanı sınıfına yönelik F1 yardımını indekslemek için kullanılan isteğe bağlı anahtar sözcük.|\<none >|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

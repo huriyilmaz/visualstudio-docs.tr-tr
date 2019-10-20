@@ -1,77 +1,76 @@
 ---
-title: '5. Adım: Ekleme NumericUpDown denetimleri için giriş olay işleyicileri girin | Microsoft Docs'
+title: '5\. Adım: NumericUpDown denetimleri için Enter Olay Işleyicileri ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 45a99a5d-c881-4298-b74d-adb481dec5ee
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 970f0d592eca22b6f07bc4f938edcd0370ecf9d5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 566bcf10d681b9ea81ee78601bf8536e9e6d9985
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434032"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671757"
 ---
-# <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>5. Adım: NumericUpDown Denetimleri için Giriş Olay İşleyicileri Ekleme
+# <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>5\. Adım: NumericUpDown Denetimleri için Giriş Olay İşleyicileri Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu Eğitimin beşinci kısmında girme sınav sorularının yanıtlarını biraz daha kolay hale getirmek için gir olayı işleyicilerini ekleyeceksiniz. Bu kodu seçin ve her NumericUpDown denetimindeki geçerli değeri sınava seçer ve farklı bir değer girmeye başladığında sürede temizleyin.  
-  
+Bu öğreticinin beşinci kısmında, test sorunlarının yanıtlarını biraz daha kolay bir şekilde girmek için Enter Olay işleyicileri ekleyeceksiniz. Bu kod, test taki seçtiği ve farklı bir değer girmeye başladığı anda her NumericUpDown denetimindeki geçerli değeri seçer ve temizler.
+
 > [!NOTE]
-> Bu konu, temel kodlama kavramları hakkındaki bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: Zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).  
-  
-### <a name="to-verify-the-default-behavior"></a>Varsayılan davranışı doğrulama  
-  
-1. Programınızı çalıştırın ve sınavı başlatın.  
-  
-     Ek sorunun NumericUpDown denetiminde imleç yanında yanıp söner **0** (sıfır).  
-  
-2. Girin `3`, Denetim gösterir Not **30**.  
-  
-3. Girin `5`yani **350** görünür ancak değişikliklerini **100** bir saniye sonra.  
-  
-     Bu sorunu gidermeden önce neler olduğu hakkında düşünün. Neden göz önünde bulundurun **0** girdiğiniz kaybolmadığını `3` ve neden **350** değiştirilecek **100** ancak hemen.  
-  
-     Bu davranış garip görünebilir ancak kodun mantığı verilen mantıklıdır. Seçeneğini belirlediğinizde **Başlat** düğmesi, kendi **etkin** özelliği **False**, ve düğme soluklaşır ve kullanılamaz. Programınız geçerli seçimi (odağı), ek sorunun NumericUpDown denetimi sonraki en düşük TabIndex değerine sahip denetime değiştirir. Bir NumericUpDown denetimine gitmek için SEKME tuşunu kullandığınızda, imleç otomatik olarak girdiğiniz sayılar sol tarafındaki ve sağ tarafında görünür neden olan denetim başlangıcına yerleştirilir. Bir sayı belirtirseniz değerinden daha yüksek olan **MaximumValue** girdiğiniz sayı 100 olarak ayarlanmışsa özelliği, özelliğin değeriyle değiştirilir.  
-  
-### <a name="to-add-an-enter-event-handler-for-a-numericupdown-control"></a>NumericUpDown denetimi için bir Enter olay işleyicisi eklemek için  
-  
-1. ("Sum" adında) ilk NumericUpDown denetimi form üzerinde ve ardından seçin **özellikleri** iletişim kutusunda **olayları** araç çubuğundaki simgeye.  
-  
-     **Olayları** sekmesinde **özellikleri** iletişim kutusu (işleyebileceğiniz) formda seçtiğiniz öğenin yanıt verin olayların tümünü görüntüler. NumericUpDown denetimini seçtiğinizden, tüm etkinlikler buna ilişkindir.  
-  
-2. Seçin **Enter** olay girin `answer_Enter`ve ardından Enter tuşuna basın.  
-  
-     ![Özellikleri iletişim kutusu](../ide/media/express-answerenter.png "Express_AnswerEnter")  
-Özellikleri iletişim kutusu  
-  
-     Toplama NumericUpDown denetimi için az önce bir Enter olay işleyicisini eklediniz ve işleyiciyi adlı **answer_Enter**.  
-  
-3. Yöntem için **answer_Enter** olay işleyicisine aşağıdaki kodu ekleyin.  
-  
+> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
+
+### <a name="to-verify-the-default-behavior"></a>Varsayılan davranışı doğrulamak için
+
+1. Programınızı çalıştırın ve testi başlatın.
+
+     Ek sorun için NumericUpDown denetiminde, imleç **0** (sıfır) seçeneğinin yanında yanıp sönmesini sağlar.
+
+2. @No__t_0 girin ve denetimin **30**gösterdiğini unutmayın.
+
+3. @No__t_0 girin ve **350** göründüğünü unutmayın, ancak saniyenin sonunda **100** olarak değişir.
+
+     Bu sorunu giderdikten sonra, neler olduğunu düşünün. @No__t_1 girdiğinizde **0** ' ın neden kaybolmaması gerektiğini ve **350** neden **100** olarak değiştirildiğini düşünün.
+
+     Bu davranış tek görünebilir, ancak kodun mantığına göre daha anlamlı hale gelir. **Başlat** düğmesini seçtiğinizde, **etkin** özelliği **false**olarak ayarlanır ve Düğme soluk görünür ve kullanılamaz olur. Programınız, geçerli seçimi (odağı), ek sorun için NumericUpDown denetimi olan bir sonraki en düşük TabIndex değerine sahip olan denetim olarak değiştirir. Bir NumericUpDown denetimine gitmek için Tab tuşunu kullandığınızda, imleç denetimin başlangıcında otomatik olarak konumlandırılır. Bu, girdiğiniz sayıların sağ taraftan değil, sol taraftan görünmemesinin neden olduğu. 100 olarak ayarlanan **MaximumValue** özelliğinin değerinden daha yüksek bir sayı belirttiğinizde, girdiğiniz sayı bu özelliğin değeri ile değiştirilmiştir.
+
+### <a name="to-add-an-enter-event-handler-for-a-numericupdown-control"></a>NumericUpDown denetimine bir Enter Olay işleyicisi eklemek için
+
+1. Form üzerinde ilk NumericUpDown denetimini ("Sum" adlı) seçin ve ardından **Özellikler** iletişim kutusunda, araç çubuğundaki **Olaylar** simgesini seçin.
+
+     **Özellikler** Iletişim kutusundaki **Olaylar** sekmesi, formda seçtiğiniz öğe için yanıt verebildiği tüm olayları (tanıtıcı) görüntüler. NumericUpDown denetimini seçtiğinizden, listelenen tüm olaylar buna aittir.
+
+2. **ENTER** olayını seçin, `answer_Enter` girin ve Enter tuşunu seçin.
+
+     ![Özellikler iletişim kutusu](../ide/media/express-answerenter.png "Express_AnswerEnter") Özellikler iletişim kutusu
+
+     Sum NumericUpDown denetimi için bir Enter Olay işleyicisi eklediniz ve Handler **answer_Enter**olarak adlandırdınız.
+
+3. **Answer_Enter** olay işleyicisi yönteminde aşağıdaki kodu ekleyin.
+
      [!code-csharp[VbExpressTutorial3Step5_6#11](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step5_6/cs/form1.cs#11)]
-     [!code-vb[VbExpressTutorial3Step5_6#11](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step5_6/vb/form1.vb#11)]  
-  
-     Bu kod karmaşık görünebilir, ancak şimdi adım adım bakarsanız anlayabilirsiniz. Önce yöntemin üstüne bakın: `object sender` C# veya `sender As System.Object` Visual Basic'te. Bu parametre gönderen olarak bilinen, olayı tetiklenmekte olan nesneye başvurur. Bu durumda gönderen nesnesi NumericUpDown denetimidir. Bu nedenle, yöntemin ilk satırında gönderenin herhangi genel amaçlı nesne olmadığının olarak NumericUpDown denetimi değildir belirtin. (Her NumericUpDown denetimi bir nesnedir ancak her nesne bir NumericUpDown denetimidir.) NumericUpDown denetimine **answerBox** Bu yöntemde tüm formunda NumericUpDown denetimleri için kullanılacağından yalnızca toplama NumericUpDown denetimi. Bu yöntemde answerBox değişkeni bildirdiğinizden, kapsamı yalnızca bu yönteme uygulanır. Diğer bir deyişle, değişken, yalnızca bu yöntem içinde kullanılabilir.  
-  
-     Sonraki satır answerBox başarıyla dönüştürülüp dönüştürülmediğini doğrular (bir nesneden bir NumericUpDown denetimine atama). Dönüştürme başarısız oldu, değişkenin değerini gerekir `null` (C#) veya `Nothing` (Visual Basic). Üçüncü satır NumericUpDown denetiminde görünen yanıt uzunluğu alır ve geçerli değeri bu uzunluğa göre denetim dördüncü satırı seçer. Artık, sınava giren denetimi seçtiğinde, Visual Studio bu da geçerli yanıtın seçilmesine neden olur. Bu olay tetiklenir. Sınava giren farklı bir yanıt girmeye başladıktan hemen sonra önceki yanıt temizlenir ve yeni yanıt ile değiştirilir.  
-  
-4. Windows Form Tasarımcısı'nda, farklılık NumericUpDown denetimini seçin.  
-  
-5. İçinde **olayları** sayfasının **özellikleri** iletişim kutusu, aşağı kaydırın **Enter** olay satırın sonundaki aşağı açılır oku seçin ve ardından `answer_Enter`eklediğiniz olay işleyicisi.  
-  
-6. Ürün ve bölüm NumericUpDown denetimleri için önceki adımı yineleyin.  
-  
-7. Programınızı kaydedin ve ardından çalıştırın.  
-  
-     Bir NumericUpDown denetimini seçtiğinizde, mevcut değer otomatik olarak seçilir ve farklı bir değer girmeye başladığınızda seçilip silinir.  
-  
-### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için  
-  
-- Sonraki öğretici adımına gitmek için bkz: [adım 6: Çıkarma problemi ekleme](../ide/step-6-add-a-subtraction-problem.md).  
-  
-- Önceki öğretici adımına dönmek için bkz: [4. adım: CheckTheAnswer() yöntemi ekleme](../ide/step-4-add-the-checktheanswer-parens-method.md).
+     [!code-vb[VbExpressTutorial3Step5_6#11](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step5_6/vb/form1.vb#11)]
+
+     Bu kod karmaşık görünebilir, ancak adım adım ' a baktığınızda bunu anlayabilirsiniz. İlk olarak, yöntemin en üstüne bakın: `object sender` C# veya `sender As System.Object` Visual Basic. Bu parametre, gönderen olarak bilinen, olayı oluşturan nesnesine başvurur. Bu durumda, Gönderen nesnesi NumericUpDown denetimidir. Bu nedenle, yönteminin ilk satırında, gönderenin yalnızca herhangi bir genel nesne değil, özellikle bir NumericUpDown denetimi belirtmektir. (Her NumericUpDown denetimi bir nesnedir, ancak her nesne bir NumericUpDown denetimidir.) Yalnızca Sum NumericUpDown denetimini değil, formdaki NumericUpDown denetimleri için kullanılacak olan NumericUpDown denetimi bu yöntemde **doğrulamaktadır** olarak adlandırılır. Bu yöntemde doğrulamaktadır değişkenini bildirdiğiniz için, kapsamı yalnızca bu yöntem için geçerlidir. Diğer bir deyişle, değişken yalnızca bu yöntem içinde kullanılabilir.
+
+     Sonraki satır, doğrulamaktadır başarıyla bir nesnesinden bir NumericUpDown denetimine dönüştürülüp dönüştürülmeyeceğini doğrular. Dönüştürme başarısız olduysa, değişken `null` (C#) veya `Nothing` (Visual Basic) değerine sahip olur. Üçüncü satır, NumericUpDown denetiminde görünen yanıtın uzunluğunu alır ve dördüncü satır denetimdeki geçerli değeri bu uzunluğa göre seçer. Şimdi, test takici denetimi seçtiğinde, Visual Studio bu olayı harekete geçirilir ve bu da geçerli yanıtın seçilmesine neden olur. Test takici, farklı bir yanıt girmeye başladıktan sonra, önceki yanıt temizlenir ve yeni Yanıtla değiştirilmiştir.
+
+4. Windows Form Tasarımcısı, fark NumericUpDown denetimini seçin.
+
+5. **Özellikler** Iletişim kutusunun **Olaylar** sayfasında, **ENTER** olayına ilerleyin, satırın sonundaki açılan oku seçin ve ardından yeni eklediğiniz `answer_Enter` olay işleyicisini seçin.
+
+6. Ürün ve bölüm NumericUpDown denetimleri için önceki adımı yineleyin.
+
+7. Programınızı kaydedin ve çalıştırın.
+
+     Bir NumericUpDown denetimi seçtiğinizde, var olan değer otomatik olarak seçilir ve sonra farklı bir değer girmeye başladığınızda temizlenir.
+
+### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
+
+- Sonraki öğretici adımına gitmek için bkz. 6. [Adım: çıkarma sorunu ekleme](../ide/step-6-add-a-subtraction-problem.md).
+
+- Önceki öğretici adımına dönmek için bkz. 4. [Adım: CheckTheAnswer () metodunu ekleme](../ide/step-4-add-the-checktheanswer-parens-method.md).

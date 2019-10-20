@@ -1,50 +1,50 @@
 ---
-title: İş Akışı Tasarımcısı - TryCatch etkinlik Tasarımcısı
+title: İş Akışı Tasarımcısı-TryCatch etkinlik Tasarımcısı
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.TryCatch.UI
 - System.Activities.Statements.Catch`1.UI
 ms.assetid: 02a326c2-4009-442f-b7cb-e42121fd2992
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 079c25b2bbaa37432009f0eeade9673f8d0afd28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 76a7600cdab94499e13592924efabba2fb4c2faf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62433961"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649803"
 ---
 # <a name="trycatch-activity-designer"></a>TryCatch Etkinlik Tasarımcısı
 
-**TryCatch** etkinlik Tasarımcısı oluşturmak ve yapılandırmak için kullanılan bir <xref:System.Activities.Statements.TryCatch> etkinlik.
+**TryCatch** etkinlik Tasarımcısı <xref:System.Activities.Statements.TryCatch> etkinlik oluşturmak ve yapılandırmak için kullanılır.
 
-## <a name="the-trycatch-activity"></a>TryCatch etkinlik
- <xref:System.Activities.Statements.TryCatch> Etkinliği içeren bir <xref:System.Activities.Statements.TryCatch.Try%2A> etkinliği, koleksiyonu **Catch\<TException >** ve <xref:System.Activities.Statements.TryCatch.Finally%2A> etkinlik. A <xref:System.Activities.Statements.Catch%601> türü **TException** içeren bir <xref:System.Activities.Statements.Catch%601.ExceptionType%2A> ve <xref:System.Activities.Statements.Catch%601.Action%2A>. Birlikte işleme mekanizması tipik bir özel durum tabanlı hata uygulamak için kullanılırlar. A <xref:System.Activities.Statements.TryCatch> etkinlik çalıştığında yürütmek onun <xref:System.Activities.Statements.TryCatch.Try%2A> etkinlik. Varsa <xref:System.Activities.Statements.TryCatch.Try%2A> etkinlik hiçbir özel durum oluşturursa <xref:System.Activities.Statements.TryCatch> etkinliği kullanır, **Catch < TException\>**  özel durum eşleşmesi için koleksiyonu. Bir eşleşme varsa sonra <xref:System.Activities.Statements.Catch%601.Action%2A> karşılık gelen **Catch\<TException >** , hata işleme mantığı için özel olarak yürütülür. Etkinlikler, <xref:System.Activities.Statements.TryCatch.Try%2A> bölümü başarıyla tamamlanması veya etkinliklerinin <xref:System.Activities.Statements.TryCatch.Catches%2A> başarıyla tamamlanması <xref:System.Activities.Statements.TryCatch> etkinliği yürütür, <xref:System.Activities.Statements.TryCatch.Finally%2A> etkinlik. Daha fazla bilgi için [Windows iş akışı özel durumları](/dotnet/framework/windows-workflow-foundation/exceptions).
+## <a name="the-trycatch-activity"></a>TryCatch etkinliği
+ @No__t_0 etkinliği <xref:System.Activities.Statements.TryCatch.Try%2A> etkinlik, bir **Catch \<TException >** ve <xref:System.Activities.Statements.TryCatch.Finally%2A> etkinliği içerir. **TException** türünde bir <xref:System.Activities.Statements.Catch%601>, bir <xref:System.Activities.Statements.Catch%601.ExceptionType%2A> ve <xref:System.Activities.Statements.Catch%601.Action%2A> içerir. Bunlar birlikte, tipik bir özel durum tabanlı hata işleme mekanizması uygulamak için kullanılır. Bir <xref:System.Activities.Statements.TryCatch> etkinlik <xref:System.Activities.Statements.TryCatch.Try%2A> etkinliğini yürütmeye çalışır. @No__t_0 etkinliği herhangi bir özel durum oluşturursa, <xref:System.Activities.Statements.TryCatch> etkinliği özel durumu eşleştirmek için **Catch < TException \>** koleksiyonunu kullanır. Bir eşleşme varsa, karşılık gelen **Catch \<TException >** <xref:System.Activities.Statements.Catch%601.Action%2A> yürütülür ve özel durum için hata işleme mantığı görevi görür. @No__t_0 bölümündeki etkinlikler başarıyla tamamlanmalı veya <xref:System.Activities.Statements.TryCatch.Catches%2A> etkinlikler başarıyla tamamlandıysanız <xref:System.Activities.Statements.TryCatch> etkinliği <xref:System.Activities.Statements.TryCatch.Finally%2A> etkinliğini yürütür. Daha fazla bilgi için bkz. [Windows iş akışı özel durumları](/dotnet/framework/windows-workflow-foundation/exceptions).
 
-### <a name="using-the-trycatch-activity-designer"></a>TryCatch etkinlik Tasarımcısı kullanma
+### <a name="using-the-trycatch-activity-designer"></a>TryCatch etkinlik tasarımcısını kullanma
 
-Erişim **TryCatch** etkinlik Tasarımcısı'nda **hata işleme** kategorisi **araç kutusu**.
+**Araç kutusunun** **hata işleme** kategorisindeki **TryCatch** etkinlik tasarımcısına erişin.
 
-**TryCatch** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve etkinlikleri genellikle yerleştirilen her yerde, gibi olarak içinde iş akışı Tasarımcısı yüzeyine açın bırakılan bir <xref:System.Activities.Statements.Sequence>. Bu, oluşturur bir <xref:System.Activities.Statements.TryCatch> etkinliği ile bir varsayılan <xref:System.Activities.Activity.DisplayName%2A> TryCatch biri. <xref:System.Activities.Activity.DisplayName%2A> Değeri üst bilgisinde düzenlenebilir **TryCatch** etkinlik Tasarımcısı veya **DisplayName** özellik kılavuzunda kutusu. Diğer özellikler yüzeyine düzenlenmelidir **TryCatch** etkinlik Tasarımcısı.
+**TryCatch** etkinlik Tasarımcısı **araç kutusundan** sürüklenip İş Akışı Tasarımcısı yüzeyine, örneğin <xref:System.Activities.Statements.Sequence> içinde olduğu gibi, her yerde bırakılmış olarak bırakılabilir. Bu, TryCatch 'in varsayılan <xref:System.Activities.Activity.DisplayName%2A> bir <xref:System.Activities.Statements.TryCatch> etkinlik oluşturur. @No__t_0 değeri, **TryCatch** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, **TryCatch** etkinlik tasarımcısının yüzeyinde düzenlenmelidir.
 
-Sağ üst köşesindeki genişletme düğmesine **TryCatch** görmek için tasarımcı **deneyin**, **yakalar**, ve **son** kutusu Genişletilmiş Görünüm. Bir catch eklemek için tıklatın **yeni catch ekleme** düğmesini **TryCatch** Tasarımcısı. Düğme türü açılan kutuya değiştirir. Bir özel durum türü seçin ve yakalama eklemek için ENTER tuşuna basın. Ekledikten sonra bir **Catch**, catch alanı genişler ve bir etkinlik yakalama yürütme mantığı tanımlamak için yakalama uygulamasına bırakılabilir. Genişletilmiş catch alanının sağ tarafında bir metin kutusu olduğuna dikkat edin. Bu metin kutusunu kullanarak özel durum değişkeninin adı verebilirsiniz. Özel durum değişkeni yalnızca aynı içindeki etkinlikler için kullanılabilir **Catch**.
+Genişletilmiş görünümdeki **TRY**, **catch**ve **finally** kutularını görmek için, **TryCatch** Tasarımcısı ' nın sağ üst köşesindeki Genişlet düğmesine tıklayın. Bir catch eklemek için, **TryCatch** tasarımcısında **Yeni catch Ekle** düğmesine tıklayın. Düğme, bir tür açılan kutusu olarak değişir. Catch eklemek için bir özel durum türü seçin ve ENTER tuşuna basın. **Catch eklendikten sonra, catch**alanı genişler ve bir etkinlik, catch için yürütme mantığını tanımlamak üzere catch 'e bırakılabilir. Genişletilmiş catch alanının sağ tarafında bir metin kutusu olduğunu unutmayın. Bu metin kutusunu kullanarak özel durum değişkenine ad verebilirsiniz. Özel durum değişkeni yalnızca aynı **catch**içindeki etkinlikler için kullanılabilir.
 
-**TryCatch** Tasarımcısı düzenlemeyi desteklemiyor **Catch**. Özel durum türü değiştirmek istiyorsanız, silmek sahip **Catch** ve yeni bir tane ekleyin. A **Catch** seçip silerek veya seçerek silinebilir **Sil** tıklanarak erişilen bağlam menüsünde.
+**TryCatch** Tasarımcısı, **catch**düzenlemesini desteklemiyor. Özel durum türünü değiştirmek isterseniz, **catch** 'i silip yeni bir tane eklemeniz gerekir. Bir **catch** , seçilip silinerek veya sağ tıklanarak erişilen bağlam menüsünde **Sil** ' i seçerek silinebilir.
 
 ### <a name="the-trycatch-properties"></a>TryCatch özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.TryCatch>özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır.
+Aşağıdaki tabloda <xref:System.Activities.Statements.TryCatch>properties gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
 
-|Özellik Adı|Gerekli|Kullanım|
+|Özellik adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|İsteğe bağlı kolay adı belirtir <xref:System.Activities.Statements.TryCatch> etkinlik. TryCatch varsayılandır.|
-|<xref:System.Activities.Statements.TryCatch.Try%2A>|False|Etkinlik yürütülmesi ilk <xref:System.Activities.Statements.TryCatch> yürütür.|
-|<xref:System.Activities.Statements.TryCatch.Catches%2A>|False|Koleksiyonu **Catch** , denetlenecek öğelerin <xref:System.Activities.Statements.TryCatch.Try%2A> etkinlik bir özel durum oluşturur.<br /><br /> En az bir etkinlik ekleyin <xref:System.Activities.Statements.TryCatch.Catches%2A> veya bir etkinlikte <xref:System.Activities.Statements.TryCatch.Finally%2A> blok.|
-|<xref:System.Activities.Statements.TryCatch.Finally%2A>|False|Etkinlik zaman yürütülecek <xref:System.Activities.Statements.TryCatch.Try%2A> ve gerekli tüm etkinlikleri <xref:System.Activities.Statements.TryCatch.Catches%2A> koleksiyonu tam yürütme.<br /><br /> En az bir etkinlik ekleyin <xref:System.Activities.Statements.TryCatch.Catches%2A> veya bir etkinlikte <xref:System.Activities.Statements.TryCatch.Finally%2A> blok.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin isteğe bağlı kolay adını belirtir. Varsayılan değer TryCatch ' dir.|
+|<xref:System.Activities.Statements.TryCatch.Try%2A>|False|Etkinlik <xref:System.Activities.Statements.TryCatch> yürütüldüğünde ilk yürütülür.|
+|<xref:System.Activities.Statements.TryCatch.Catches%2A>|False|@No__t_1 etkinliği bir özel durum oluşturduğunda denetlenecek **catch** öğelerinin koleksiyonu.<br /><br /> @No__t_0 veya <xref:System.Activities.Statements.TryCatch.Finally%2A> bloğunda bir etkinlikte en az bir etkinlik eklemeniz gerekiyor.|
+|<xref:System.Activities.Statements.TryCatch.Finally%2A>|False|@No__t_0 ve <xref:System.Activities.Statements.TryCatch.Catches%2A> koleksiyonundaki gerekli etkinliklerin yürütülmesi tamamlandığında yürütülecek etkinlik.<br /><br /> @No__t_0 veya <xref:System.Activities.Statements.TryCatch.Finally%2A> bloğunda bir etkinlikte en az bir etkinlik eklemeniz gerekiyor.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

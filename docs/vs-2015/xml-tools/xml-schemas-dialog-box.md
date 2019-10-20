@@ -1,51 +1,44 @@
 ---
-title: XML şemaları iletişim kutusu | Microsoft Docs
+title: XML şemaları Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 0271fa26-2205-49bd-96e0-ae1441571808
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 82247c2510d64f712cc4b703154ea16a4bb7e7e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d637cb3c25772685d5a782eb74bf94878ded36c2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68150662"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669430"
 ---
 # <a name="xml-schemas-dialog-box"></a>XML Şemaları İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**XML şemaları** iletişim kutusu, bir XML belgesi ile ilişkilendirmek için hangi XML Şeması Tanım Dili (XSD) şeması/şemaları seçmek için kullanılır. Şema önbelleğinden bir şema seçin veya önbelleğinde bulunmayan bir şema belirtin. Seçili şemaları şema kümesinin bir parçası olarak kabul edilir. Şema kümesi, IntelliSense ve ayrıca XML belgesi doğrulama için kullanılır.  
-  
- Erişebildiğiniz **XML şemaları** ya tıklayarak iletişim kutusunu **şemaları** düğmesini seçerek veya belge Özellikler penceresinde **şemaları** gelen**XML** menüsü.  
-  
-## <a name="uielement-list"></a>UIElement Listesi  
- **Kullanma**  
- XML Şeması nasıl kullanıldığının seçin.  
-  
-- **Otomatik**. Bu şema geçerli belgede tarafından'kullanımda değildir, ancak otomatik ilişkilendirmesi için kullanılabilir. XML belgesi eşleşen bir ad alanı bildirirse `targetNamespace` bu şema şema otomatik olarak ilişkilendirilir ve şema kümesindeki dahil edilir.  
-  
-- **Bu şemayı kullan**. Bu şemayı geçerli belgede tarafından kullanılıyor. Açıkça ya da kullanıcının sahip olduğu bu sütuna tıklayarak bu şema kullanılması istenen veya şema eşleşmesi temeline göre otomatik olarak ilişkili `targetNamespace`.  
-  
-- **Seçili şemaları kullanma**. Eşleşen bir şemaya sahip olsa bile bu şemayı geçerli belgede tarafından kullanılmaz `targetNamespace`. Bu ayar şema önbelleği veya çözüm aynı şemaya yönelik birden fazla sürümü olduğunda çakışmaları çözümlemek için yararlı olabilir.  
-  
-  **Target Namespace**  
-  XML şeması ile ilişkili hedef ad alanı görüntüler.  
-  
-  **Dosya adı**  
-  XML Şeması dosya adını görüntüler.  
-  
-  **Add**  
-  Açılır **açık XSD şeması** form veya iletişim şema kümesine eklenecek ek şemaları seçmenize olanak sağlar. Şema için bir şema eklediğinizde ayarlayın, **kullanım** sütun değeri ayarı **Bu şemayı kullan**.  
-  
-  **Kaldır**  
-  Şu anda seçili şeması, şema kümeden kaldırır. Bu, bellek içi şema önbelleğinden ancak dosya sisteminden şemayı kaldırır.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Düzenleyicisi bileşenleri](../xml-tools/xml-editor-components.md)   
- [Nasıl yapılır: XML şemalarını seçme](../xml-tools/how-to-select-the-xml-schemas-to-use.md)   
- [Şema Önbelleği](../xml-tools/schema-cache.md)
+XML **şemaları** iletişim kutusu, bir XML BELGESIYLE ilişkilendirilecek XML şeması tanım DILI (xsd) şemalarını seçmek için kullanılır. Şema önbelleğinden bir şema seçebilir veya önbellekte bulunmayan bir şema belirtebilirsiniz. Seçili şemalar bir şema kümesinin parçası olarak kabul edilir. Şema kümesi IntelliSense ve ayrıca XML belge doğrulaması için kullanılır.
+
+ Belge Özellikleri penceresinde **şemalar** düğmesine tıklayarak veya **XML** menüsünden **şemalar** ' ı seçerek **XML şemaları** iletişim kutusuna erişebilirsiniz.
+
+## <a name="uielement-list"></a>UIElement Listesi
+ **Kullanım** XML şemasının nasıl kullanılacağını seçin.
+
+- **Otomatik**. Bu şema geçerli belge tarafından kullanımda değil, ancak otomatik ilişkilendirme için kullanılabilir. XML belgesi, bu şemanın `targetNamespace` eşleşen bir ad alanı bildiriyorsa, şema otomatik olarak ilişkilendirilir ve şema kümesine dahil edilir.
+
+- **Bu şemayı kullanın**. Bu şema geçerli belge tarafından kullanılıyor. Kullanıcı, bu şemanın bu sütuna tıklanarak kullanılmasını açıkça istedi, ya da şema eşleşen bir `targetNamespace` göre otomatik olarak ilişkilendirildi.
+
+- **Seçili şemaları kullanmayın**. Şema eşleşen bir `targetNamespace` olsa bile, bu şema geçerli belge tarafından kullanılmaz. Bu ayar, şema önbelleğinde veya çözümünde aynı şemanın birden fazla sürümü olduğunda çakışmaları çözümlemek için yararlı olabilir.
+
+  **Hedef ad alanı** XML şemasıyla ilişkili hedef ad alanını görüntüler.
+
+  **Dosya adı** XML şeması dosya adını görüntüler.
+
+  **Ekle** Şema kümesine eklemek üzere ek şemalar seçmenize olanak sağlayan, **Açık xsd şeması** iletişim kutusunu açar. Şema kümesine bir şema eklediğinizde, **Use** sütun değeri **Bu şemayı kullanacak**şekilde ayarlanır.
+
+  **Kaldır** Seçili olan şemayı şema kümesinden kaldırır. Bu, şemayı bellek içi şema önbelleğinden kaldırır, ancak dosya sisteminden kaldırır.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [XML Düzenleyicisi bileşenleri](../xml-tools/xml-editor-components.md) [nasıl yapılır: şema ÖNBELLEĞI kullanmak Için XML şemaları seçme](../xml-tools/how-to-select-the-xml-schemas-to-use.md) [](../xml-tools/schema-cache.md)

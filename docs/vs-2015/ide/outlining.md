@@ -1,5 +1,5 @@
 ---
-title: Anahat oluşturma | Microsoft Docs
+title: Ana hat | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,41 +14,41 @@ helpviewer_keywords:
 - outlining code
 ms.assetid: d1476758-9d35-4d74-b63c-310661932ecd
 caps.latest.revision: 38
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: db33392deb16664e48c3b2d90df883294d5cfbaa
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: db619767725159900adf9b18075c45c020df888d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441159"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670370"
 ---
 # <a name="outlining"></a>Anahat Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Artı işareti (+) altında görünmesi bir bölge kodu daraltarak bazı kod görünümden gizlemek seçebilirsiniz. Daraltılmış bölgeye, artı işaretine tıklayarak genişletin. (Veya basabilirsiniz için CTRL + M + M bir bölge daraltmak için ve CTRL + M + M yeniden genişletin.) Ayrıca, herhangi bir satırda bölge kodu yalnızca solunda görünür anahat Kenar çubuğunda çift tıklayarak bir anahat oluşturma bölgesi daraltabilirsiniz. Daraltılmış bölgeye geldiğinizde, araç ipucu olarak daraltılmış bölgeye içeriğini görebilirsiniz.  
-  
- Kenar boşlukları fare ile üzerine geldiğinizde anahat kenar bölgelerde ayrıca vurgulanır. Varsayılan renk vurgulama renk bazı yapılandırmalarda yerine soluk görünebilir. İçinde değiştirebilirsiniz **Araçlar/Seçenekler/ortam/yazı tipi ve renkler/Collapsible bölge**.  
-  
- Anahatları belirlenmiş kodunda çalışırken, üzerinde çalışma, yapılması ve sonra diğer bölümleri için taşıma bunları Daralt istediğiniz bölümleri genişletebilirsiniz. Olmasını istemediğiniz anahat oluşturma görüntülenen, kullanabileceğiniz **Durdur anahat oluşturma** , temel kodu etkilemeden anahat bilgileri kaldırmak için komutu.  
-  
- **Geri** ve **Yinele** komutlarını **Düzenle** bu Eylemler menüsü etkiler. **Kopyalama**, **Kes**, **Yapıştır**, ve sürükle ve bırak işlemleri korumak anahat oluşturma bilgileri, ancak Genişletilebilir durumunda. Örneğin, daraltılmış durumda bir bölge kopyaladığınızda **yapıştırın** işlem bir genişletilmiş bölge olarak kopyalanan metni yapıştırın.  
-  
+Bir kod bölgesini daraltarak bir, bir artı işareti (+) altında görünmesi için, bazı kodları görünümden gizlemeyi seçebilirsiniz. Daraltılmış bir bölgeyi, artı işaretine tıklayarak genişletebilirsiniz. (Ya da bir bölgeyi daraltmak için CTRL + e + e tuşlarına basabilir, sonra da bunu yeniden genişletmek için CTRL + e + e tuşlarına basabilirsiniz.) Ayrıca, yalnızca kodun solunda görüntülenen ana hat kenar boşluğunda yer alan bölgedeki herhangi bir satırı çift tıklayarak bir anahat bölgesini daraltabilirsiniz. Daraltılan bölgenin üzerine geldiğinizde, Daraltılan bir bölgenin içeriğini araç ipucu olarak görebilirsiniz.
+
+ Ana hat kenar boşluğundaki bölgeler, fare ile kenar boşluğunun üzerine geldiğinizde de vurgulanır. Varsayılan vurgulama rengi bazı renk yapılandırmalarında soluk görünebilir. Bunu, **Araçlar/Seçenekler/ortam/yazı tipleri ve renkler/daraltılabilir bölgede**değiştirebilirsiniz.
+
+ Anahatları belirlenmiş kodda çalışırken, üzerinde çalışmak istediğiniz bölümleri genişletebilir, işiniz bittiğinde bunları daraltabilir ve sonra diğer bölümlere geçebilirsiniz. Ana hattını görüntülenmesini istemediğiniz zaman, temel kodunuzla ilgili kodu etkilemeden anahat bilgilerini kaldırmak için Seviyelendirmeyi **Durdur** komutunu kullanabilirsiniz.
+
+ **Düzenle** menüsündeki **geri al** ve **Yinele** komutları bu eylemleri etkiler. **Kopyala**, **Kes**, **Yapıştır**ve sürükle bırak işlemleri, ana hat bilgilerini tutar, ancak daraltılabilir bölgenin durumunu içermez. Örneğin, Daraltılan bir bölgeyi kopyaladığınızda, **Yapıştır** işlemi kopyalanmış metni genişletilmiş bölge olarak yapıştırır.
+
 > [!CAUTION]
-> Anahatları belirlenmiş bir bölge değiştirdiğinizde, anahat oluşturma kaybolabilir. Örneğin, silme veya bulma ve değiştirme işlemlerini bölge sonuna silme.  
-  
- Aşağıdaki komutları bulunabilir **düzenleme/anahat** alt.  
-  
-|||  
-|-|-|  
-|Seçimi Gizle|(CTRL + M, CTRL + H) - bir seçili normalde örneğin anahat oluşturma için kullanılabilir olmayacaktır kod bloğu daraltır bir `if` blok. Özel bölge kaldırmak için **geçerli gizlemeyi Durdur** (veya CTRL + M, CTRL + U). Visual Basic'te kullanılabilir değil.|  
-|Anahat genişlemesini Değiştir|-Bölüm içinde iç içe geçmiş bir daraltılmış bölümü imleç gerektiği zaman Anahat en içteki geçerli gizli veya genişletilmiş durumunu tersine çevirir.|  
-|Tüm ana hattı Değiştir|(CTRL + M, CTRL + L) - tüm bölgeler için aynı durum genişletilmiş veya daraltılmış ayarlar. Bazı bölgelerde genişletilir ve bazı daraltılmış, ardından daraltılmış genişletilmiş bölge.|  
-|Ana Hat Oluşturmayı Durdur|(CTRL + M, CTRL + P) - tüm belgeyi tüm ana hat oluşturma bilgilerini kaldırır.|  
-|Geçerliyi gizlemeyi Durdur|(CTRL + M, CTRL + U) - şu anda seçili kullanıcı tanımlı bölge için ana hat oluşturma bilgilerini kaldırır. Visual Basic'te kullanılabilir değil.|  
-|Tanımlara Daralt|(CTRL + M, CTRL + O) - tüm türlerin üyelerini daraltır.|  
-|Bloğu Daralt:\<mantıksal sınır >|(Visual C++) Ekleme noktasını içeren işlevi bir bölgede daraltır. Örneğin, ekleme noktasını bir döngü içinde yer alıyorsa, döngü gizlenir.|  
-|Tümünü Daralt: \<mantıksal yapıları >|(Visual C++) İşlevin içindeki tüm yapıları daraltır.|  
-  
- Visual Studio SDK'sı, genişletmek veya daraltmak için istediğiniz metin bölgeleri tanımlamak için de kullanabilirsiniz. Bkz: [izlenecek yol: Anahat oluşturma](../extensibility/walkthrough-outlining.md).
+> Anahatları belirlenmiş bir bölgeyi değiştirdiğinizde, ana hat kaybolmuş olabilir. Örneğin, silme veya bulma ve değiştirme işlemleri bölgenin sonunu silebilir.
+
+ Aşağıdaki komutlar **düzenleme/anahat** alt menüsünde bulunabilir.
+
+|||
+|-|-|
+|Seçimi Gizle|(CTRL + M, CTRL + H)-ana hat için, örneğin `if` bir blok için kullanılamayan seçili bir kod bloğunu daraltır. Özel bölgeyi kaldırmak için, **geçerli gizlemeyi durdur** (veya CTRL + M, CTRL + U) kullanın. Visual Basic ' de kullanılamaz.|
+|Anahat genişletmeyi değiştirme|-İmleç, iç içe daraltılmış bir bölümde yer aldığı zaman, en içteki ana hat bölümünün geçerli gizli veya genişletilmiş durumunu tersine çevirir.|
+|Tüm Anahatlamayı aç|(CTRL + M, CTRL + L)-tüm bölgeleri aynı daraltılmış veya genişletilmiş duruma ayarlar. Bazı bölgeler genişletilir ve bazıları daraltıldı, daraltılan bölgeler genişletilir.|
+|Anahat oluşturmayı durdur|(CTRL + M, CTRL + P)-tüm belgeye ilişkin tüm ana hat bilgilerini kaldırır.|
+|Geçerli gizlemeyi durdur|(CTRL + M, CTRL + U)-Şu anda seçili olan Kullanıcı tanımlı bölgenin ana hat bilgilerini kaldırır. Visual Basic ' de kullanılamaz.|
+|Tanımlara Daralt|(CTRL + M, CTRL + O)-tüm türlerin üyelerini daraltır.|
+|Engellemeyi daralt: \<logical sınır >|(Görsel C++) İşlevde ekleme noktasını içeren bir bölgeyi daraltır. Örneğin, ekleme noktası bir döngü içinde yer alıyorsa, döngü gizlenir.|
+|Tüm içinde daralt: \<logical yapıları >|(Görsel C++) İşlev içindeki tüm yapıları daraltır.|
+
+ Genişletmek veya daraltmak istediğiniz metin bölgelerini tanımlamak için Visual Studio SDK 'sını de kullanabilirsiniz. Bkz. [Izlenecek yol: Ana hat](../extensibility/walkthrough-outlining.md).

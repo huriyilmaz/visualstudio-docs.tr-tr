@@ -20,24 +20,24 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 243338ef-41af-4cc5-aff7-1e830236f0ec
 caps.latest.revision: 40
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 07c5853b673657c3ce8e90467a13bbac3f430b6e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 8a03f4df57b216fa68e5ac24df80b67917aa3e3f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65698983"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672983"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere Windows Forms denetimleri bağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows Forms veri bağlama ile uygulamanızın kullanıcılarına verileri görüntüleyebilirsiniz. Bu verilere bağlı denetimler oluşturmak için öğeleri sürükleyebilirsiniz **veri kaynakları** penceresinden Windows Form Tasarımcısı'nda Visual Studio. Bu konuda en yaygın görevleri, araçları ve veri bağlantılı Windows Forms uygulamaları oluşturmak için gerekli sınıfların bazılarını açıklar.
+Verileri Windows Forms 'e bağlayarak uygulamanızın kullanıcılarına verileri görüntüleyebilirsiniz. Bu verilere dayalı denetimleri oluşturmak için, **veri kaynakları** penceresinden öğeleri Visual Studio 'daki Windows Form Tasarımcısı sürükleyebilirsiniz. Bu konuda, veri bağlantılı Windows Forms uygulamaları oluşturma ile ilgili en yaygın görevlerden, araçların ve sınıfların bazıları açıklanmaktadır.
 
- ![Veri kaynağı işlemi sürükleyin](../data-tools/media/raddata-data-source-drag-operation.png "raddata veri kaynağı işlemi sürükleyin")
+ ![Veri kaynağı sürükleme işlemi](../data-tools/media/raddata-data-source-drag-operation.png "radveri veri kaynağı sürükleme işlemi")
 
- Visual Studio'da verilere bağlı denetimler oluşturma hakkında genel bilgi için bkz. [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md). Windows Forms veri bağlama hakkında daha fazla bilgi için bkz: [Windows Forms veri bağlama](https://msdn.microsoft.com/library/c3826d8e-ea25-4ad4-a669-45bfb19192aa).
+ Visual Studio 'da verilere bağlı denetimler oluşturma hakkında genel bilgi için bkz. [Visual Studio 'da denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md). Windows Forms veri bağlama hakkında daha fazla bilgi için bkz. [Windows Forms veri bağlama](https://msdn.microsoft.com/library/c3826d8e-ea25-4ad4-a669-45bfb19192aa).
 
 ## <a name="in-this-section"></a>Bu bölümde
 
@@ -58,11 +58,11 @@ Windows Forms veri bağlama ile uygulamanızın kullanıcılarına verileri gör
 - [Formlar arasında veri geçirme](../data-tools/pass-data-between-forms.md)
 
 ## <a name="bindingsource-component"></a>BindingSource bileşeni
- <xref:System.Windows.Forms.BindingSource> Bileşen iki amaca hizmet eder. İlk olarak, form üzerindeki denetimleri için veri bağlama sırasında bir soyutlama katmanı sağlar. Form üzerinde denetimleri için ilişkili <xref:System.Windows.Forms.BindingSource> bileşen (yerine doğrudan bir veri kaynağına bağlanan).
+ @No__t_0 bileşeni iki amaca hizmet eder. İlk olarak, formunuzdaki denetimleri verilerle bağlarken bir soyutlama katmanı sağlar. Formdaki denetimler <xref:System.Windows.Forms.BindingSource> bileşene bağlıdır (doğrudan bir veri kaynağına bağlı olmak yerine).
 
- İkinci olarak, bu nesnelerin bir koleksiyonunu yönetebilirsiniz. Bir türe eklemek <xref:System.Windows.Forms.BindingSource> o türün bir liste oluşturur.
+ İkincisi, bir nesne koleksiyonunu yönetebilir. @No__t_0 bir türü eklemek, bu türün bir listesini oluşturur.
 
- Hakkında daha fazla bilgi için <xref:System.Windows.Forms.BindingSource> bileşeni için bkz:
+ @No__t_0 bileşeni hakkında daha fazla bilgi için bkz.:
 
 - [BindingSource Bileşeni](https://msdn.microsoft.com/library/3e2faf4c-f5b8-4fa6-9fbc-f59c37ec2fb9)
 
@@ -71,10 +71,10 @@ Windows Forms veri bağlama ile uygulamanızın kullanıcılarına verileri gör
 - [BindingSource Bileşeni Mimarisi](https://msdn.microsoft.com/library/7bc69c90-8a11-48b1-9336-3adab5b41591)
 
 ## <a name="bindingnavigator-control"></a>BindingNavigator denetimi
- Bu bileşen, bir Windows uygulaması tarafından görüntülenen veriler aracılığıyla gezinmek için bir kullanıcı arabirimi sağlar. Daha fazla bilgi için [BindingNavigator denetimine](https://msdn.microsoft.com/library/18c1e2a5-9834-40d3-9b2e-2b545e4e769e).
+ Bu bileşen, bir Windows uygulaması tarafından gösterilecek veriler arasında gezinmek için bir kullanıcı arabirimi sağlar. Daha fazla bilgi için bkz. [BindingNavigator denetimi](https://msdn.microsoft.com/library/18c1e2a5-9834-40d3-9b2e-2b545e4e769e).
 
 ## <a name="datagridview-control"></a>DataGridView denetimi
- Birçok farklı türde veri kaynaklarını gelen tablosal verileri görüntülemek ve düzenlemek için kullanın <xref:System.Windows.Forms.DataGridView> denetimi. Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.DataGridView> kullanarak <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliği. Daha fazla bilgi için [DataGridView denetimine genel bakış](https://msdn.microsoft.com/library/0a45c661-89dc-4390-9cc6-c47eee501488).
+ Birçok farklı türde veri kaynağından tablo verilerini göstermek ve düzenlemek için <xref:System.Windows.Forms.DataGridView> denetimini kullanın. @No__t_1 özelliğini kullanarak verileri <xref:System.Windows.Forms.DataGridView> bağlayabilirsiniz. Daha fazla bilgi için bkz. [DataGridView denetimine genel bakış](https://msdn.microsoft.com/library/0a45c661-89dc-4390-9cc6-c47eee501488).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md)

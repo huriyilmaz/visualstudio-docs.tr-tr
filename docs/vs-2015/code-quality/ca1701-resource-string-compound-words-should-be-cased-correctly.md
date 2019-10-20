@@ -1,5 +1,5 @@
 ---
-title: 'CA1701: Kaynak dize bileşik sözcüklerinin büyük/küçük harfleri doğru | Microsoft Docs'
+title: 'CA1701: kaynak dizesi bileşik sözcüklerin doğru şekilde kullanılması gerekir | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,48 +12,48 @@ helpviewer_keywords:
 - ResourceStringCompoundWordsShouldBeCasedCorrectly
 ms.assetid: 4ddbe09f-24b8-4c47-9373-a06f4487ca0d
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 38d8195baa540c2c212c71938b6266e28df49101
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7610852f6d9fbea2fbd2dd10d478ad2d1a0da899
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65683059"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669264"
 ---
-# <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701: Kaynak dizesi bileşik sözcüklerin büyük küçük harfleri doğru olmalıdır
+# <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701: Kaynak dize bileşik sözcüklerinin küçük/büyük harfleri doğru yazılmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|ResourceStringCompoundWordsShouldBeCasedCorrectly|
 |CheckId|CA1701|
-|Kategori|Microsoft.Naming|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Naming|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Kaynak dizesi, büyük küçük harfleri doğru için görünmeyen bir bileşik sözcük içerir.
+ Kaynak dizesi, doğru şekilde görünmeyen bir bileşik sözcük içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Kaynak dizedeki her sözcüğün büyük/küçük harf üzerinde temel belirteçler içinde bölünür. Her bir bitişik ikili-işaret kombinasyonu Microsoft yazım kitaplığı tarafından denetlenir. Tanınırsa, kelime kural ihlali üretir. "CheckSum" ve "Checksum" ve "Multipart" sırasıyla yazılmalıdır "MultiPart" bir ihlaline neden bileşik sözcüklerin örnekleridir. Önceki ortak kullanımı nedeniyle kurala birkaç özel durum oluşturulur ve "Araç çubuğu" ve "iki ayrı sözcükleri yazılmalıdır Filename" gibi birden fazla tek sözcük işaretlenir. Bu örnekte, "Araç çubuğu" ve "Dosya adı" bayrak eklenmiş.
+ Kaynak dizesindeki her sözcük büyük küçük harfe dayalı belirteçlere bölünür. Her bir bitişik ikili-işaret kombinasyonu Microsoft yazım kitaplığı tarafından denetlenir. Tanınırsa, kelime kural ihlali üretir. İhlalin oluşmasına neden olan Birleşik kelimelerin örnekleri, sırasıyla "Checksum" ve "multipart" olarak, "Checksum" ve "multipart" şeklinde olmalıdır. Önceki yaygın kullanım nedeniyle, birkaç özel durum kuralda yerleşik olarak bulunur ve "araç çubuğu" ve "dosya adı" gibi birkaç tek sözcük işaretlenir, bu da iki ayrı sözcük olarak kullanılabilir. Bu örnekte, "araç çubuğu" ve "dosya adı" işaretlenir.
 
- Adlandırma kuralları, ortak dil çalışma zamanını hedefleyen kitaplıkları için genel bir bakış sağlar. Bu, yeni yazılım kitaplıkları için gereklidir ve kitaplık geliştirme yönetilen kodda uzmanlığına sahip olan kişi tarafından geliştirilmiştir müşterilerinizin size olan güvenini artırır öğrenme eğrisini azaltır.
+ Adlandırma kuralları, ortak dil çalışma zamanını hedefleyen kitaplıklar için ortak bir görünüm sağlar. Bu, yeni yazılım kitaplıkları için gerekli olan öğrenme eğrisini azaltır ve müşterinin, kitaplığın yönetilen kod geliştirme konusunda uzmanlığa sahip olan birisi tarafından geliştirildiğini arttırır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Word'ün bu sözcüklerden şekilde değiştirin.
+ Kelimeyi doğru bir şekilde olacak şekilde değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bileşik sözcük kısımlarını yazım sözlüğüyle tanınır ve amacı iki kelimeye kullanmaktır. Bu kuraldan bir uyarıyı bastırmak güvenlidir.
+ Bileşik sözcüğün her iki bölümü de yazım sözlüğü tarafından tanınıyorsa ve amaç iki sözcükten birini kullanıyorsa, bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
- Özel sözlük yazım denetimi için bileşik sözcüklerin ekleyebilirsiniz. Özel sözlük sözcükleri ihlallerine neden olmaz. Daha fazla bilgi için [nasıl yapılır: Kod çözümleme dizinini özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md).
+ Ayrıca, yazım denetleyicisi için özel bir sözlüğe bileşik sözcükler ekleyebilirsiniz. Özel Sözlükteki sözcükler ihlallere neden olmaz. Daha fazla bilgi için bkz. [nasıl yapılır: kod analizi sözlüğünü özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md).
 
-## <a name="related-rules"></a>İlgili kuralları
- [CA1702: Bileşik sözcüklerin doğru yazılmalıdır](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+## <a name="related-rules"></a>İlgili kurallar
+ [CA1702: Bileşik sözcüklerin küçük/büyük harfleri doğru yazılmalıdır](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
 
- [CA1709: Tanımlayıcılar doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
  [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Büyük/küçük harf kuralları](https://msdn.microsoft.com/library/4c4ea526-9203-486f-b72d-29d61c5b3c6d) [adlandırma kuralları](https://msdn.microsoft.com/library/fc076d66-9b5f-42d3-aa65-61d970c794a3)
+ [Büyük harfe çevirme kuralları](https://msdn.microsoft.com/library/4c4ea526-9203-486f-b72d-29d61c5b3c6d) [Adlandırma yönergeleri](https://msdn.microsoft.com/library/fc076d66-9b5f-42d3-aa65-61d970c794a3)

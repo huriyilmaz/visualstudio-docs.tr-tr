@@ -6,20 +6,20 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 63bc6328-e0df-4655-9ce3-5ff74dbf69a4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 157309d49fd46c4ecdd92236188a6739a3e9c2ad
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 7ab33c2e77de183b5c916fbcfe60843c47c4f83f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925395"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648051"
 ---
-# <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>İzlenecek yol: Tek tablo devralma (O/R Designer) kullanarak LINQ to SQL sınıfları oluşturma
-[Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , genellikle ilişkisel sistemlerde uygulanan tek tablo devralmayı destekler. Bu izlenecek yol, [nasıl yapılır: O/R Tasarımcısı](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) konusunu kullanarak devralmayı yapılandırın ve [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]' de devralmanın kullanımını göstermek için bazı gerçek veriler sağlar.
+# <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>İzlenecek yol: tek tablo devralma (O/R Designer) kullanarak LINQ to SQL sınıfları oluşturma
+[Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , genellikle ilişkisel sistemlerde uygulanan tek tablo devralmayı destekler. Bu izlenecek yol, [nasıl yapılır: u/R tasarımcısını kullanarak devralmayı yapılandırma](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) konusuna sağlanan genel adımlara ve [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] devralma kullanımını göstermek için bazı gerçek veriler sağlar.
 
 Bu izlenecek yol sırasında aşağıdaki görevleri gerçekleştirirsiniz:
 
@@ -27,7 +27,7 @@ Bu izlenecek yol sırasında aşağıdaki görevleri gerçekleştirirsiniz:
 
 - Windows Forms uygulaması oluşturun.
 
-- Bir projeye [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] dosya ekleyin.
+- Bir projeye [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] dosyası ekleyin.
 
 - Yeni varlık sınıfları oluşturun.
 
@@ -38,7 +38,7 @@ Bu izlenecek yol sırasında aşağıdaki görevleri gerçekleştirirsiniz:
 - Verileri bir Windows formunda görüntüleyin.
 
 ## <a name="create-a-table-to-inherit-from"></a>Devralması için bir tablo oluşturun
-Kalıtımın nasıl çalıştığını görmek için küçük `Person` bir tablo oluşturun, bunu temel sınıf olarak kullanın ve bundan devralan bir `Employee` nesne oluşturun.
+Kalıtımın nasıl çalıştığını görmek için küçük bir `Person` tablosu oluşturun, bunu temel sınıf olarak kullanın ve bundan devralan bir `Employee` nesnesi oluşturun.
 
 ### <a name="to-create-a-base-table-to-demonstrate-inheritance"></a>Devralmayı göstermek üzere bir temel tablo oluşturmak için
 
@@ -51,8 +51,8 @@ Kalıtımın nasıl çalıştığını görmek için küçük `Person` bir tablo
 
     |Sütun adı|Veri Türü|Null değerlere izin ver|
     |-----------------|---------------|-----------------|
-    |**ID**|**int**|**Yanlýþ**|
-    |**Tür**|**int**|**Değeri**|
+    |**NUMARASıNı**|**int**|**Yanlýþ**|
+    |**Türüyle**|**int**|**Değeri**|
     |**FirstName**|**nvarchar (200)**|**Yanlýþ**|
     |**Soyadı**|**nvarchar (200)**|**Yanlýþ**|
     |**Manager**|**int**|**Değeri**|
@@ -72,26 +72,26 @@ Kalıtımın doğru yapılandırıldığını doğrulayabilmeniz için tablonun 
 
     ||||||
     |-|-|-|-|-|
-    |**ID**|**Tür**|**FirstName**|**Soyadı**|**Manager**|
+    |**NUMARASıNı**|**Türüyle**|**FirstName**|**Soyadı**|**Manager**|
     |**1**|**1**|**Gamze**|**Wallace**|**DEĞER**|
-    |**2**|**1**|**Carlos**|**Grilo dili**|**DEĞER**|
-    |**3**|**1**|**Yael**|**Peled**|**DEĞER**|
-    |**4**|**2**|**Gaz**|**Ozolins**|**1**|
-    |**5**|**2**|**Andreas**|**Hauser**|**1**|
-    |**6**|**2**|**Tiffany**|**Phuvasate**|**1**|
-    |**7**|**2**|**Alexey**|**Orekhov**|**2**|
-    |**8**|**2**|**Michał**|**Poliszkiewicz**|**2**|
-    |**9**|**2**|**Tay**|**Yee**|**2**|
-    |**10**|**2**|**Fabricıo**|**Noriega dili**|**3**|
-    |**11**|**2**|**Mindy**|**Martin**|**3**|
-    |**12**|**2**|**UK**|**Kwok**|**3**|
+    |**iki**|**1**|**Carlos**|**Grilo dili**|**DEĞER**|
+    |**03**|**1**|**Yael**|**Peled**|**DEĞER**|
+    |**4**|**iki**|**Gaz**|**Ozolins**|**1**|
+    |**e**|**iki**|**Andreas**|**Hauser**|**1**|
+    |**inç**|**iki**|**Tiffany**|**Phuvasate**|**1**|
+    |**7@@**|**iki**|**Alexey**|**Orekhov**|**iki**|
+    |**240**|**iki**|**Michał**|**Poliszkiewicz**|**iki**|
+    |**tuşlarına**|**iki**|**Tay**|**Yee**|**iki**|
+    |**(**|**iki**|**Fabricıo**|**Noriega dili**|**03**|
+    |**üst**|**iki**|**Mindy**|**Martin**|**03**|
+    |**+**|**iki**|**UK**|**Kwok**|**03**|
 
 ## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
 Artık tabloyu oluşturduğunuza göre, devralmayı yapılandırmayı göstermek için yeni bir proje oluşturun.
 
 ### <a name="to-create-the-new-windows-forms-application"></a>Yeni Windows Forms uygulamasını oluşturmak için
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **Proje**' yi seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
 
 2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
@@ -112,7 +112,7 @@ Artık tabloyu oluşturduğunuza göre, devralmayı yapılandırmayı göstermek
      *. Dbml* dosyası projeye eklenir ve **O/R Tasarımcısı** açılır.
 
 ## <a name="create-the-inheritance-by-using-the-or-designer"></a>O/R tasarımcısını kullanarak devralmayı oluşturma
-Devralma nesnesini **araç kutusundan** tasarım yüzeyine sürükleyerek devralmayı yapılandırın.
+**Devralma nesnesini** **araç kutusundan** tasarım yüzeyine sürükleyerek devralmayı yapılandırın.
 
 ### <a name="to-create-the-inheritance"></a>Devralmayı oluşturmak için
 
@@ -147,9 +147,9 @@ Artık, nesne modelinde belirli bir sınıf için sorgular oluşturacak biçimde
 
 1. Bir **liste kutusunu** **Form1**üzerine sürükleyin.
 
-2. `Form1_Load` Olay işleyicisi oluşturmak için forma çift tıklayın.
+2. @No__t_0 olay işleyicisi oluşturmak için forma çift tıklayın.
 
-3. Aşağıdaki kodu `Form1_Load` olay işleyicisine ekleyin:
+3. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin:
 
     ```vb
     Dim dc As New DataClasses1DataContext

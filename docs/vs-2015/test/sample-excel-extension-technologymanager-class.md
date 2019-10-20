@@ -1,69 +1,68 @@
 ---
-title: 'Örnek Excel uzantısı: TechnologyManager Sınıfı | Microsoft Docs'
+title: 'Örnek Excel uzantısı: TechnologyManager sınıfı | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: 8a7b760d-b5ac-4451-9593-6ac1a0b95cdb
 caps.latest.revision: 11
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64632c175b44a370d7dcaf48e7c0a8cee766a4ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ac9a4517fcf13dbb0e1d7a6f994092168723e660
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68192501"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672160"
 ---
-# <a name="sample-excel-extension-technologymanager-class"></a>Örnek Excel uzantısı: TechnologyManager Sınıfı
+# <a name="sample-excel-extension-technologymanager-class"></a>Örnek Excel Uzantısı: TechnologyManager Sınıfı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu sınıf genişletir <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> sınıfı ve temel Hizmetleri için sağlamaktan sorumluysa [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] uzantısı. Temel sınıf birçok yöntem olsa da, bu örnekte yalnızca bir alt kümesini kullanılır.  
-  
- Bazı yöntemler, yalnızca bir özellik değeri döndürür. Birçok yöntem, kodlanmış UI test motoruna algoritmaları yapı varsayılan geçersiz kılmak Geliştirici izin vermek için tasarlanmıştır. Bu yöntemler throw bir <xref:System.NotSupportedException> veya dönüş `null`, varsayılan algoritmasını kullanabilmesi için framework söyler.  
-  
- Temel alınan teknoloji karmaşıklığına bağlı olarak, teknoloji Yöneticisi kodunuzu geliştirmek için birkaç ay birkaç hafta arasında bir seçim ele geçirebilir. Excel, potansiyel olarak çok geniş bir teknoloji Yöneticisi oluşturma fırsatı sağlar. Bu örnek, Excel çalışma sayfaları ve hücreler için kasıtlı olarak sınırlıdır ve sınırlı biçimlendirme kullanır.  
-  
- Mümkün olduğunda, .NET uzaktan iletişim kanalı tarafından açıldı teknoloji Yöneticisi kodu kullanan `Communicator` bilgiler Excel işlemde çalışan içinde ayıklamak için sınıf.  
-  
-## <a name="com-visibility"></a>COM görünürlüğü  
- Bu sınıf ve her öğenin olduğuna dikkat edin genişletmek <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> tüm sınıf <xref:System.Runtime.InteropServices.ComVisibleAttribute> değeriyle `true` sınıfları için COM görünür olduğundan emin olmak için  
-  
-## <a name="technologyname-property"></a>TechnologyName özelliğini  
- Bu geçersiz kılma <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.TechnologyName%2A?displayProperty=fullName> özelliği, her bir bileşeni uzantısı için temel alınan teknoloji tanımlayan benzersiz ve anlamlı bir ad sağlamalısınız. Bu uzantı için "Excel" değeridir.  
-  
-## <a name="getcontrolsupportlevel-method"></a>GetControlSupportLevel yöntemi  
- Bu geçersiz kılma <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetControlSupportLevel%2A?displayProperty=fullName> yöntemi teknoloji Yöneticisi sağlanan tanıtıcı tarafından temsil edilen denetim için sunduğu destek düzeyini gösteren bir sayı döndürür. Döndürülen değer, daha fazla teknoloji Yöneticisi denetimini destekler. Bu durumda, yöntem denetimi içeren bir pencere denetler ve Excel çalışma ise, yöntem en yüksek değeri döndürür; Aksi takdirde, hiçbir destek sağlandığını belirtir, sıfır döndürür.  
-  
-## <a name="methods-to-get-an-element"></a>Bir öğe almak için yöntemleri  
- Kodlanmış UI test çerçevesi tarafından bir tanıtıcı, bir ekran veya farklı bir teknoloji öğeden noktasında sağlayarak bir öğe teknolojiye özgü almak için kullanılan çeşitli önemli yöntemler vardır. Bu yöntemleri için kod değerleridir. Temel yöntemler aşağıdaki gibidir:  
-  
-- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetFocusedElement%2A?displayProperty=fullName>  
-  
-- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromPoint%2A?displayProperty=fullName>  
-  
-- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromWindowHandle%2A?displayProperty=fullName>  
-  
-- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromNativeElement%2A?displayProperty=fullName>  
-  
-- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.ConvertToThisTechnology%2A?displayProperty=fullName>  
-  
-## <a name="parsequeryid-method"></a>ParseQueryId yöntemi  
- Kodlanmış UI testi oluşturulduğunda kullanıcı testteki bazı veya tüm denetimler için özellik değerlerini belirtebilirsiniz. Bu özellik değerleri, test çerçevesi tarafından belirli kullanıcı Arabirimi denetimleri, test sırasında bulmak için kullanılan arama özellikleri olarak adlandırılan ad-değer çiftleri oluşturmak için kullanılır. Tüm arama özellikleri birlikte değerini temsil eden <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A?displayProperty=fullName> teknolojisinde her denetimi içeren her bir öğenin özellik. Bir denetim, test sırasında birkaç kez bulunacak olabileceğinden, bu yöntem bir teknoloji Yöneticisi belirli bir denetim için arama özelliklerinin ayrıştırma iyileştirmeye yönelik bir yol sağlar. Bu yöntem ayrıca framework sonraki aramalar için bu denetim için kullanabileceğiniz bir tanımlama bilgisi döndürür. Bu yöntemi uygulaması kullanan <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> arama özellikleri ayrıştırmak için yöntemi.  
-  
-## <a name="matchelement-method"></a>MatchElement yöntemi  
- Bir teknoloji Yöneticisi tarafından denetim araması gerçekleştirmek için uygulayabileceğiniz <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.Search%2A?displayProperty=fullName> olası eşleşmeler bir dizi döndürür veya throw yöntemi <xref:System.NotSupportedException>, kendi arama algoritması kullanmak için framework söyler. Her iki durumda da, uygulamanız gereken <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.MatchElement%2A> yöntemi burada bu uygulamayı tekrar kullandığını <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> yöntemi.  
-  
-## <a name="navigation-methods"></a>Gezinti yöntemi  
- Bu yöntemler, üst, alt ve eşdüzey belirtilen öğe kullanıcı Arabirimi hiyerarşisinden alın. , Basit ve açıklamalı açıkça kodudur.  
-  
-## <a name="getexcelelement-internal-method"></a>GetExcelElement iç yöntemi  
- Bu iç yöntem bir pencere tutucu ve bir Excel öğe hakkında bilgi alır ve istenen Excel öğeyi döndürür.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager>   
- <xref:System.NotSupportedException>   
- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>   
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>   
+Bu sınıf, <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> sınıfını genişletir ve [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] uzantısı için çekirdek hizmetler sağlamaktan sorumludur. Temel sınıfın birçok yöntemi olsa da, bu örnekte yalnızca bir alt kümesi kullanılır.
+
+ Bazı yöntemler yalnızca bir özellik değeri döndürür. Yöntemlerin birçoğu, geliştiricinin kodlanmış UI test altyapısına varsayılan algoritma derlemesini geçersiz kılmasını sağlamak için tasarlanmıştır. Bu yöntemler, çerçeveye varsayılan algoritmayı kullanmasını söyleyen bir <xref:System.NotSupportedException> veya dönüş `null` oluşturur.
+
+ Temel teknolojinin karmaşıklığına bağlı olarak, teknoloji yöneticisi kodunun geliştirilmesi birkaç haftadan birkaç aya kadar sürebilir. Excel potansiyel olarak çok kapsamlı teknoloji Yöneticisi oluşturma fırsatı sağlar. Bu örnek, özellikle Excel çalışma sayfaları ve hücreleri ile sınırlı biçimlendirme kullanır.
+
+ Mümkün olduğunda, teknoloji Yöneticisi kodu, Excel işleminde çalışan eklentiden bilgi ayıklamak için `Communicator` sınıfı tarafından açılan .NET Remoting kanalını kullanır.
+
+## <a name="com-visibility"></a>COM görünürlüğü
+ Bu sınıfın ve <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> sınıfını genişleten her bir öğe sınıfının, sınıfların COM 'a görünür olduğundan emin olmak için `true` değeri olan <xref:System.Runtime.InteropServices.ComVisibleAttribute> sahip olduğuna dikkat edin.
+
+## <a name="technologyname-property"></a>TechnologyName özelliği
+ @No__t_0 özelliğinin bu geçersiz kılması, uzantının diğer her bileşeni için temeldeki teknolojiyi tanımlayan benzersiz ve anlamlı bir ad sağlamalıdır. Bu uzantı için, değer "Excel" dir.
+
+## <a name="getcontrolsupportlevel-method"></a>GetControlSupportLevel yöntemi
+ @No__t_0 yönteminin bu geçersiz kılması, teknoloji yöneticisinin belirtilen tanıtıcı tarafından temsil edilen denetim için sunabileceği desteğin düzeyini gösteren bir sayı döndürür. Döndürülen değer arttıkça, teknoloji Yöneticisi denetimi destekleyebilirler. Bu durumda, yöntemi denetimi içeren pencereyi denetler ve bir Excel çalışma sayfası ise, yöntem en yüksek değeri döndürür; Aksi halde, hiçbir desteğin sağlanmadığını belirten sıfır döndürür.
+
+## <a name="methods-to-get-an-element"></a>Öğe almak için Yöntemler
+ Kodlanmış UI test çerçevesi tarafından bir tanıtıcı, ekranda bir nokta veya farklı bir teknolojiden bir öğe sağlayarak teknolojiye özgü bir öğe almak için kullanılan çeşitli önemli yöntemler vardır. Bu yöntemlerin kodu kendi kendine açıklayıcıdır. Temel yöntemler aşağıdaki gibidir:
+
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetFocusedElement%2A?displayProperty=fullName>
+
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromPoint%2A?displayProperty=fullName>
+
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromWindowHandle%2A?displayProperty=fullName>
+
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromNativeElement%2A?displayProperty=fullName>
+
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.ConvertToThisTechnology%2A?displayProperty=fullName>
+
+## <a name="parsequeryid-method"></a>ParseQueryId yöntemi
+ Kodlanmış bir UI testi oluşturulduğunda, Kullanıcı testteki bazı veya tüm denetimlerin özellik değerlerini belirtebilir. Bu özellik değerleri test çerçevesi tarafından, test sırasında belirli kullanıcı arabirimi denetimlerini bulmak için kullanılan arama özellikleri adlı ad-değer çiftleri oluşturmak için kullanılır. Tüm arama özellikleri, her denetimi içeren teknolojideki her öğenin <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A?displayProperty=fullName> özelliğinin değerini temsil eder. Bir denetimin bir test sırasında birkaç kez bulunması gerektiğinden, bu yöntem teknoloji yöneticisine verilen denetimin arama özelliklerini ayrıştırmayı iyileştirmek için bir yol sağlar. Bu yöntem ayrıca Framework 'ün bu denetimin sonraki aramalarında kullanabileceği bir tanımlama bilgisi döndürür. Bu yöntemin uygulanması, arama özelliklerini ayrıştırmak için <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> yöntemini kullanır.
+
+## <a name="matchelement-method"></a>MatchElement yöntemi
+ Teknoloji Yöneticisi tarafından bir denetim araması gerçekleştirmek için, olası eşleşmelerin dizisini döndürmek üzere <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.Search%2A?displayProperty=fullName> metodunu uygulayabilir veya <xref:System.NotSupportedException> oluşturarak çerçeveye kendi arama algoritmasını kullanmasını söyler. Her iki durumda da, bu uygulamanın yeniden <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> yöntemini kullandığı <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.MatchElement%2A> yöntemini uygulamanız gerekir.
+
+## <a name="navigation-methods"></a>Gezinti yöntemleri
+ Bu yöntemler, UI hiyerarşisinden belirtilen öğenin üst, alt veya Eşdüzey öğelerini alır. Kod basittir ve açıkça açıklama eklenir.
+
+## <a name="getexcelelement-internal-method"></a>Getexcele, Iç yöntemi
+ Bu iç yöntem bir pencere tutamacı ve bir Excel öğesi hakkında bilgi alır ve istenen Excel öğesini döndürür.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager><xref:System.NotSupportedException>
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute>
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>
  [Kodlanmış Kullanıcı Arabirimi Testlerini ve Eylem Kayıtlarını Microsoft Excel'i Desteklemek için Genişletme](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)

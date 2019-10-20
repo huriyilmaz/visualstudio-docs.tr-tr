@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Temel Lambert Gölgelendiricisi Oluşturma'
+title: 'Nasıl Yapılır: Temel Lambert Gölgelendiricisi Oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ec5c10fb-9600-4240-8280-d59451ea1d68
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 662409f3655e23589a2416bb15572eb3df41bcb6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: c2034c09098aeded57671186731729a5928be8e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924434"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72636196"
 ---
-# <a name="how-to-create-a-basic-lambert-shader"></a>Nasıl yapılır: Temel Lambert gölgelendiricisi oluşturma
+# <a name="how-to-create-a-basic-lambert-shader"></a>Nasıl yapılır: temel Lambert gölgelendiricisi oluşturma
 
 Bu makalede, klasik Lambert aydınlatma modelini uygulayan bir aydınlatma gölgelendiricisi oluşturmak için Gölgelendirici Tasarımcısının ve yönlendirilmiş Graf gölgelendirici dilinin (DGSL) nasıl kullanılacağı gösterilmektedir.
 
@@ -48,12 +48,12 @@ Aşağıdaki çizimde, bu belgede bir 3B modele uygulanan gölgelendirici göste
 
 ![Bir modele uygulanan Lambert aydınlatma.](../designers/media/digit-lambert-effect-result.png)
 
-Bir 3B modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz [. nasıl yapılır: 3B modele](../designers/how-to-apply-a-shader-to-a-3-d-model.md)gölgelendirici uygulayın.
+3D modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir gölgelendiriciyi bir gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [Nasıl yapılır: Gölgelendiriciyi Dışarı Aktarma](../designers/how-to-export-a-shader.md)
-- [Nasıl yapılır: Temel Phong Gölgelendiricisi Oluşturma](../designers/how-to-create-a-basic-phong-shader.md)
+- [Nasıl Yapılır: Gölgelendiriciyi Dışarı Aktarma](../designers/how-to-export-a-shader.md)
+- [Nasıl Yapılır: Temel Phong Gölgelendiricisi Oluşturma](../designers/how-to-create-a-basic-phong-shader.md)
 - [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)
 - [Gölgelendirici Tasarımcısı Düğümleri](../designers/shader-designer-nodes.md)

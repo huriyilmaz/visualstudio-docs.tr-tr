@@ -1,64 +1,63 @@
 ---
-title: '4. Adım: Her etikete Click olay işleyicisi ekleme | Microsoft Docs'
+title: '4\. Adım: Her Etikete Click olay Işleyicisi ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 16bdbc7c-4129-411d-bace-f4a3e5375975
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 763aa2c73effdb1f7daf86c18e6033f03bef5108
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 0b78a1757586dfaf6087711eaf1ed6001155a3b7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434046"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671797"
 ---
-# <a name="step-4-add-a-click-event-handler-to-each-label"></a>4. Adım: Her Etikete Bir Tıklama Olayı İşleyicisi Ekleme
+# <a name="step-4-add-a-click-event-handler-to-each-label"></a>4\. Adım: Her Etikete Click Olay İşleyicisi Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Eşleştirme oyunu aşağıdaki gibi çalışır:  
-  
-1. Oyuncu gizli simge içeren karelerden birini seçtiğinde, program simge rengini siyaha dönüştürerek bu simgeyi oyuncuya gösterir.  
-  
-2. Oyuncu daha sonra başka bir gizli simge seçer.  
-  
-3. Simgeler eşleşirse görünür olarak kalırlar. Aksi takdirde iki simge de tekrar gizlenir.  
-  
-   Programınızın bu şekilde çalışmasını sağlamak için, seçilen etiketin rengini değiştiren bir Tıklama olayı işleyicisi eklersiniz.  
-  
-### <a name="to-add-a-click-event-handler-to-each-label"></a>Her etikete bir Tıklama olayı işleyicisi eklemek için  
-  
-1. Formu Windows Form Tasarımcısı'nda açın. Çözüm Gezgini'nde Form1.cs veya Form1.vb öğesini seçin. Menü çubuğunda, **görünümü**, **Tasarımcısı**.  
-  
-2. İlk etiket denetimini belirleyip seçin. Ardından CTRL tuşunu basılı tutarken diğer etiketleri tek tek belirleyip seçin. Her etiketin seçildiğinden emin olun.  
-  
-3. Seçin **olayları** araç çubuğunda düğme **özellikleri** penceresini görüntülemek için **olayları** sayfasını **özellikleri** penceresi. Ekranı aşağı kaydırarak **tıklayın** olay girin **label_Click** kutusunda, aşağıdaki resimde gösterildiği gibi.  
-  
-     ![Click gösteren Özellikler penceresi olay](../ide/media/express-labelclick.png "Express_labelClick")  
-Tıklama olayını gösteren Özellikler penceresi  
-  
-4. ENTER tuşunu seçin. IDE adında bir tıklama olayı işleyicisi ekler `label_Click()` koda ve bunu formdaki etiketlerin her kancaları.  
-  
-5. Kodun geri kalanını aşağıdaki gibi doldurun:  
-  
+Eşleştirme oyunu aşağıdaki gibi çalışır:
+
+1. Oyuncu gizli simge içeren karelerden birini seçtiğinde, program simge rengini siyaha dönüştürerek bu simgeyi oyuncuya gösterir.
+
+2. Oyuncu daha sonra başka bir gizli simge seçer.
+
+3. Simgeler eşleşirse görünür olarak kalırlar. Aksi takdirde iki simge de tekrar gizlenir.
+
+   Programınızın bu şekilde çalışmasını sağlamak için, seçilen etiketin rengini değiştiren bir Tıklama olayı işleyicisi eklersiniz.
+
+### <a name="to-add-a-click-event-handler-to-each-label"></a>Her etikete bir Tıklama olayı işleyicisi eklemek için
+
+1. Formu Windows Form Tasarımcısı'nda açın. Çözüm Gezgini'nde Form1.cs veya Form1.vb öğesini seçin. Menü çubuğunda **Görünüm**, **Tasarımcı**' yı seçin.
+
+2. İlk etiket denetimini belirleyip seçin. Ardından CTRL tuşunu basılı tutarken diğer etiketleri tek tek belirleyip seçin. Her etiketin seçildiğinden emin olun.
+
+3. Özellikler **penceresinde** **Olaylar** sayfasını görüntülemek için **Özellikler** penceresindeki araç çubuğundan **Olaylar** düğmesini seçin. **Click** olayına aşağı kaydırın ve aşağıdaki resimde gösterildiği gibi kutuya **label_Click** girin.
+
+     ![Click olayını gösteren Özellikler penceresi](../ide/media/express-labelclick.png "Express_labelClick") Click olayını gösteren Özellikler penceresi
+
+4. ENTER tuşunu seçin. IDE, koda `label_Click()` adlı bir tıklama olayı işleyicisi ekler ve formdaki her etikete takar.
+
+5. Kodun geri kalanını aşağıdaki gibi doldurun:
+
      [!code-csharp[VbExpressTutorial4Step2_3_4#4](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs#4)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#4](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb#4)]  
-  
+     [!code-vb[VbExpressTutorial4Step2_3_4#4](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb#4)]
+
     > [!NOTE]
-    > Kopyalar ve yapıştırırsanız `label_Click()` varolan değiştirdiğinizden emin kodu el ile girmek yerine kod bloğunu `label_Click()` kod. Aksi takdirde, yinelenen bir kod bloğu ile karşı karşıya kalırsınız.  
-  
+    > Kodu el ile girmek yerine `label_Click()` kod bloğunu kopyalayıp yapıştırırsanız, mevcut `label_Click()` kodunu değiştirdiğinizden emin olun. Aksi takdirde, yinelenen bir kod bloğu ile karşı karşıya kalırsınız.
+
     > [!NOTE]
-    > Size tanıdık gelebilir `object sender` olarak kullanılan hizmet örneğiyle aynı olay işleyicisinin üst [öğretici 2: Bir zaman aşımına matematik sınavı oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md) öğretici. Tek bir olay işleyicisi yöntemine farklı etiket denetimi Tıklama olayı tutturduğunuzdan, kullanıcının seçtiği etiket hangisi olursa olsun aynı yöntem çağrılır. Olay işleyicisi yöntemi adı kullanması için hangi etiketin seçildiğini bilmesi gerekir **gönderen** etiket denetimini tanımlamak için. Yöntemin ilk satırında program, olmayan genel bir nesne, ancak özellikle bir etiket denetimi olduğunu ve adını kullandığını söyler **clickedLabel** etiketin özelliklerine ve yöntemlere erişmek için.  
-  
-     Bu yöntem ilk denetler olmadığını **clickedLabel** başarıyla dönüştürüldü (bir nesneden bir etiket kontrolüne atama). Başarısız bir değeri olup olmadığını `null` (C#) veya `Nothing` (Visual Basic) ve yöntemde kodun geri kalanını yürütmek istemiyorsanız. Ardından, yöntem etiketin kullanarak seçilen etiketin metin rengini denetler **ForeColor** özelliği. Etiketin metin rengi siyah ise, simge zaten seçilmiş ve yöntem bitmiş demektir. (Budur `return` deyiminin yaptığı: Bu programa yöntemi yürütmeyi durdurmasını söyler.) Aksi takdirde simge seçilmemiş demektir ve dolayısıyla program etiketin metin rengini siyah olarak değiştirir.  
-  
-6. Menü çubuğunda, **dosya**, **Tümünü Kaydet** ilerlemenizi kaydedin ve ardından menü çubuğunda, **hata ayıklama**, **hata ayıklamayı Başlat** çalıştırmak için programınızı. Mavi arka planlı boş bir form görmeniz gerekir. Formdaki hücrelerden herhangi birini seçtiğinizde, simgelerden birinin görünür hale gelmesi gerekir. Formda farklı yerler seçmeye devam edin. Siz simgeleri seçtikçe görünmeleri gerekir.  
-  
-### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için  
-  
-- Sonraki öğretici adımına gitmek için bkz: [5. adım: Etiket başvuruları ekleme](../ide/step-5-add-label-references.md).  
-  
-- Önceki öğretici adımına dönmek için bkz: [3. adım: Her etikete rasgele simge atama](../ide/step-3-assign-a-random-icon-to-each-label.md).
+    > Olay işleyicisinin üst kısmında `object sender` [öğretici 2: süreli bir matematik test öğreticisi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md) öğreticisinde kullanılan aynı şekilde tanınabiliriz. Tek bir olay işleyicisi yöntemine farklı etiket denetimi Tıklama olayı tutturduğunuzdan, kullanıcının seçtiği etiket hangisi olursa olsun aynı yöntem çağrılır. Olay işleyicisi yönteminin hangi etiketin seçili olduğunu bilmesi gerekir, bu nedenle etiket denetimini tanımlamak için **Gönderen** adını kullanır. Yöntemin ilk satırı programa yalnızca genel bir nesne değil, özel olarak bir etiket denetimi olduğunu ve etiketin özelliklerine ve yöntemlerine erişmek için **Click adlı Click** adını kullandığını söyler.
+
+     Bu yöntem ilk önce, **Click** nesnesinin bir nesneden bir etiket denetimine başarıyla dönüştürülüp dönüştürülmediğini denetler. Başarısız olursa, `null` (C#) veya `Nothing` (Visual Basic) değerine sahiptir ve yöntemdeki kodun geri kalanını yürütmek istemezsiniz. Sonra, yöntemi etiketin **ForeColor** özelliğini kullanarak seçilen etiketin metin rengini denetler. Etiketin metin rengi siyah ise, simge zaten seçilmiş ve yöntem bitmiş demektir. (@No__t_0 deyimleri şu şekilde yapar: programın yöntemi yürütmeyi durdurmasını söyler.) Aksi halde, simge seçilmemiş, bu nedenle program etiketin metin rengini siyah olarak değiştiriyor.
+
+6. Menü çubuğunda **Dosya**, **Tümünü Kaydet** ' i seçerek ilerlemenizi kaydedin, sonra da menü çubuğunda **Hata Ayıkla**, **hata ayıklamayı Başlat** ' ı seçerek programınızı çalıştırın. Mavi arka planlı boş bir form görmeniz gerekir. Formdaki hücrelerden herhangi birini seçtiğinizde, simgelerden birinin görünür hale gelmesi gerekir. Formda farklı yerler seçmeye devam edin. Siz simgeleri seçtikçe görünmeleri gerekir.
+
+### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
+
+- Sonraki öğretici adımına gitmek için bkz. [5. Adım: etiket başvuruları ekleme](../ide/step-5-add-label-references.md).
+
+- Önceki öğretici adımına dönmek için bkz. 3. [Adım: her etikete rastgele bir simge atama](../ide/step-3-assign-a-random-icon-to-each-label.md).

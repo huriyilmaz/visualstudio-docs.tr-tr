@@ -1,50 +1,50 @@
 ---
-title: 'CA3076: Güvensiz XSLT betiği yürütme | Microsoft Docs'
+title: 'CA3076: güvensiz XSLT betiği yürütme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 53cb7a46-c564-488f-bc51-0e210a7853c9
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0a6b1efa5b5ee84092531a67421d03583afc3578
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 558e205fa37569bfa12d7b93f989d0f8ebabab43
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65680728"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669056"
 ---
 # <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: Güvensiz XSLT Betiği Yürütme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
-|TypeName|InsecureXSLTScriptExecution|
+|TypeName|Insecurexsltscriptexecution|
 |CheckId|CA3076|
 |Kategori|Microsoft.Security|
-|Yeni Değişiklik|Bozucu olmayan|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Yürütüyorsa [Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT)](https://support.microsoft.com/kb/313997) .NET uygulamalarında endpoınt, işlemci olabilir [güvenilmeyen URI başvuruları çözümlemek](https://msdn.microsoft.com/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a) , ifşa hassas saldırganlar, hizmet reddi ve siteler arası saldırıları için önde gelen bilgileri.
+ .NET uygulamalarında [Genişletilebilir Stil sayfaları Dil Dönüşümleri (XSLT)](https://support.microsoft.com/kb/313997) çalıştırıyorsanız, işlemci [güvenilir olmayan URI başvurularını](https://msdn.microsoft.com/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a) , saldırganlar için duyarlı bilgileri açığa çıkartabilir ve bunların reddedilmesine karşı önde bir şekilde çözümleyebilir Hizmet ve çapraz site saldırıları.
 
 ## <a name="rule-description"></a>Kural Tanımı
- [XSLT](https://msdn.microsoft.com/6377ce5f-3c45-42a6-b7a9-ec8da588b60c) XML verileri dönüştürmeye ilişkin bir World Wide Web Consortium (W3C) standart'tır. XSLT genellikle diğer biçimlere HTML, metin uzunluğu, virgülle ayrılmış metin veya farklı bir XML biçimi sabit gibi XML verileri dönüştürmek için stil sayfaları yazmak için kullanılır. Varsayılan olarak yasaklanmış olsa da, projeniz için etkinleştirmeyi tercih edebilirsiniz.
+ [XSLT](https://msdn.microsoft.com/6377ce5f-3c45-42a6-b7a9-ec8da588b60c) , XML verilerini dönüştürmek için bir World WIDE Web KONSORSIYUMU (W3C) standardıdır. XSLT genellikle, XML verilerini HTML, sabit uzunlukta metin, virgülle ayrılmış metin veya farklı bir XML biçimi gibi diğer biçimlere dönüştürmek üzere stil sayfaları yazmak için kullanılır. Varsayılan olarak yasaklanmış olmasına karşın, bunu projeniz için etkinleştirmeyi tercih edebilirsiniz.
 
- Tetikleyiciler olduğunda bu kural, değil ifşa eden bir saldırı yüzeyini emin olmak için XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> güvenli olmayan birleşim örneğini alır <xref:System.Xml.Xsl.XsltSettings> ve <xref:System.Xml.XmlResolver>, kötü amaçlı betik işlemesini sağlar.
+ Bir saldırı yüzeyi açığa çıkarmadığından emin olmak için, bu kural XslCompiledTransform her seferinde tetiklenir. <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> kötü amaçlı betik işlemeye izin veren <xref:System.Xml.Xsl.XsltSettings> ve <xref:System.Xml.XmlResolver> ' in güvensiz birleşim örneklerini alır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
 
-- Güvenli olmayan XsltSettings bağımsız değişken XsltSettings ile değiştirin.<xref:System.Xml.Xsl.XsltSettings.Default%2A> veya bir örnekle, belge işlev ve betik yürütme devre dışı bıraktı.
+- Güvenli olmayan XsltSettings bağımsız değişkenini XsltSettings ile değiştirin. <xref:System.Xml.Xsl.XsltSettings.Default%2A> ya da belge işlev ve betik yürütmeyi devre dışı bırakmış bir örnekle.
 
-- Değiştirin <xref:System.Xml.XmlResolver> bağımsız değişkeni null ile veya bir <xref:System.Xml.XmlSecureResolver> örneği.
+- @No__t_0 bağımsız değişkenini null ya da bir <xref:System.Xml.XmlSecureResolver> örneğiyle değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Giriş güvenilir bir kaynaktan olduğu biliniyorsa emin olmadığınız sürece, bir kuraldan bu uyarıyı bastırmayın.
+ Girişin güvenilen bir kaynaktan geldiğinden emin olmadığınız için, bu uyarıdan bir kuralı engellemez.
 
 ## <a name="pseudo-code-examples"></a>Sözde kod örnekleri
 
-### <a name="violation"></a>İhlali
+### <a name="violation"></a>Edildiği
 
 ```csharp
 using System.Xml;
@@ -86,7 +86,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="violation"></a>İhlali
+### <a name="violation"></a>Edildiği
 
 ```csharp
 using System.Xml;

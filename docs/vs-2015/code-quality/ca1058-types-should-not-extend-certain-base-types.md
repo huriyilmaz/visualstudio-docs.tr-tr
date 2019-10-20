@@ -1,5 +1,5 @@
 ---
-title: 'CA1058: Türler belirli temel türleri değil genişletin | Microsoft Docs'
+title: 'CA1058: türler belirli temel türleri genişlememelidir | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - TypesShouldNotExtendCertainBaseTypes
 ms.assetid: 8446ee40-beb1-49fa-8733-4d8e813471c0
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1ce67a70b6cbe955ef13bf6475a672bcbb687d95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9a4663fe3bc09b27bad9eeec05e325f07a3de6f3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68200457"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603060"
 ---
-# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Türler belirli temel türleri aşmamalıdır
+# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Türler belli temel türleri genişletmemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|TypesShouldNotExtendCertainBaseTypes|
 |CheckId|CA1058|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Dışarıdan görünen tür belirli temel türleri genişletir. Şu anda, bu kural aşağıdaki türlerden türetilen türler raporları:
+ Dışarıdan görünen tür belirli temel türleri genişletir. Şu anda, bu kural aşağıdaki türlerden türetilen türleri raporlar:
 
 - <xref:System.ApplicationException?displayProperty=fullName>
 
@@ -52,14 +52,14 @@ ms.locfileid: "68200457"
 - <xref:System.Collections.Stack?displayProperty=fullName>
 
 ## <a name="rule-description"></a>Kural Tanımı
- İçin [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürüm 1 tavsiye yeni özel durumlar türetmek için <xref:System.ApplicationException>. Öneri değiştirildi ve yeni özel durumlar türetilmelidir <xref:System.Exception?displayProperty=fullName> veya içinde alt sınıflarından birini <xref:System> ad alanı.
+ @No__t_0 sürüm 1 ' de, <xref:System.ApplicationException> yeni özel durumlar türetmeniz önerilir. Öneri değişmiştir ve yeni özel durumlar, <xref:System> ad alanındaki <xref:System.Exception?displayProperty=fullName> veya alt sınıflarından türetilmelidir.
 
- Öğesinin oluşturmayın <xref:System.Xml.XmlDocument> , temel alınan bir nesne modeli veya veri kaynağı, bir XML görünümünü oluşturmak istiyorsanız.
+ Temel alınan nesne modelinin veya veri kaynağının XML görünümünü oluşturmak istiyorsanız <xref:System.Xml.XmlDocument> alt sınıfını oluşturmayın.
 
-### <a name="non-generic-collections"></a>Genel olmayan koleksiyon
- Kullanın ve/veya mümkün olduğunda genel koleksiyonları genişletin. Daha önce sevk sürece genel olmayan koleksiyon kodunuzda genişletmez.
+### <a name="non-generic-collections"></a>Genel olmayan Koleksiyonlar
+ Mümkün olan her durumda genel koleksiyonları kullanın ve/veya genişletin. Daha önce sevk etmediğiniz takdirde, kodunuzda genel olmayan koleksiyonları genişletmeyin.
 
- **Yanlış kullanım örnekleri**
+ **Hatalı kullanım örnekleri**
 
 ```csharp
 public class MyCollection : CollectionBase
@@ -84,7 +84,7 @@ public class MyReadOnlyCollection : ReadOnlyCollection<T>
 ```
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için farklı bir temel tür ya da bir genel koleksiyon tür türetilir.
+ Bu kural ihlalini onarmak için, türü farklı bir temel türden veya genel bir koleksiyondan türetebilirsiniz.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Hakkında ihlalleri bu kuraldan bir uyarıyı bastırmayın <xref:System.ApplicationException>. Hakkında ihlalleri bu kuraldan bir uyarıyı bastırmak güvenlidir <xref:System.Xml.XmlDocument>. Kodu önceden yayımlanan, genel olmayan koleksiyonu hakkında bir uyarı bastırmak güvenlidir.
+ @No__t_0 ilgili ihlaller için bu kuraldan bir uyarıyı bastırmayın. @No__t_0 ilgili ihlaller için bu kuraldan bir uyarıyı gizlemek güvenlidir. Kod daha önce yayınlanmışsa, genel olmayan bir koleksiyon hakkında uyarı bastırmak güvenlidir.

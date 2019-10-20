@@ -1,49 +1,49 @@
 ---
-title: 'Nasıl yapılır: XML Şema Tasarımcısını XML Değişmez Değerleri ile Kullanma'
+title: 'Nasıl yapılır: XML şema tasarımcısını XML değişmez değerleri ile kullanma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d11803e7-f81a-41a2-a145-ba494a45cc93
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e92cbdca3ac2c5c366ec054ba79f2e7324986c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ed987a54004004fe8c4fbfba686ae1a35d12bb06
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001812"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601845"
 ---
-# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Nasıl yapılır: XML Şema Tasarımcısını XML değişmez değerleri ile kullanma
+# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Nasıl yapılır: XML şema tasarımcısını XML değişmez değerleri ile kullanma
 
-Bu konuda, bir Visual Basic projesinde sabit değeri bir XML ile ilişkili bir şeması görüntülemeyi açıklar.
+Bu konu, bir Visual Basic projesindeki bir XML sabit değeri ile ilişkili bir şemanın nasıl görüntüleneceğini açıklamaktadır.
 
-## <a name="create-a-new-visual-basic-project"></a>Yeni bir Visual Basic projesi oluşturma
+## <a name="create-a-new-visual-basic-project"></a>Yeni bir Visual Basic projesi oluştur
 
 1. Visual Studio'yu açın.
 
-2. Yeni bir Visual Basic Oluştur **konsol uygulaması** adlı proje **XMLLiterals**.
+2. **Xmldeğişmezleri**adlı yeni bir Visual Basic **konsol uygulaması** projesi oluşturun.
 
-     Yeni Proje bir Visual Basic kaynak dosyası içeren *Module1.vb*.
+     Yeni proje bir Visual Basic kaynak dosyası ( *Module1. vb*) içerir.
 
-## <a name="add-an-existing-xsd-file"></a>Mevcut bir XSD dosyası ekleme
+## <a name="add-an-existing-xsd-file"></a>Mevcut bir XSD dosyası Ekle
 
-1. Yeni bir metin dosyasını Not Defteri'nde açın. XML şema örnek koddan kopyalama [satın alma siparişi şeması](../xml-tools/sample-xsd-file-simple-schema.md) dosyasına yapıştırın.
+1. Not defteri 'nde yeni bir metin dosyası açın. XML şeması örnek kodunu, [satın alma siparişi şemasından](../xml-tools/sample-xsd-file-simple-schema.md) kopyalayın ve dosyasına yapıştırın.
 
-2. Dosya adı ile bir konuma kaydedin *PurchaseOrderSchema.xsd*.
+2. Dosyayı *PurchaseOrderSchema. xsd*adlı bir konuma kaydedin.
 
-3. İçinde **Çözüm Gezgini**, projenin adını sağ tıklayın, **Ekle**ve ardından **var olan öğe**. **AddExisting öğesi** iletişim kutusu görüntülenir. Gözat *PurchaseOrderSchema.xsd* dosya seçin ve ardından **Ekle**.
+3. **Çözüm Gezgini**, projenin adına sağ tıklayın, **Ekle**' yi seçin ve ardından **Varolan öğe**' yi seçin. **Addexıting öğesi** iletişim kutusu görüntülenir. *PurchaseOrderSchema. xsd* dosyasına gidin, seçin ve ardından **Ekle**' ye tıklayın.
 
-     XMLLiterals proje artık iki dosya içerir: *Module1.vb* ve *PurchaseOrderSchema.xsd*.
+     Xmlharfler projesi artık iki dosya içerir: *Module1. vb* ve *PurchaseOrderSchema. xsd*.
 
-## <a name="add-code"></a>Kod ekleme
+## <a name="add-code"></a>Kod Ekle
 
-XML değişmez değer, Visual Basic kodunu eklemek için XSD dosyası projeye dahil temel:
+Projeye dahil olan XSD dosyasını temel alan bir XML sabit değeri ile Visual Basic kodu eklemek için:
 
-1. Değiştirin *Module1.vb* dosyasındaki kodu aşağıdaki kodla:
+1. *Module1. vb* dosyasındaki kodu aşağıdaki kodla değiştirin:
 
    ```vb
    Imports <xmlns:ns="http://tempuri.org/PurchaseOrderSchema.xsd">
@@ -72,6 +72,6 @@ XML değişmez değer, Visual Basic kodunu eklemek için XSD dosyası projeye da
    End Module
    ```
 
-2. Herhangi bir XML değişmez değeri ya da bir XML ad alanı alma XML düğümünü sağ tıklatın ve seçin **şema Gezgini'nde Göster**.
+2. XML sabit değerinde bir xml düğümüne veya XML ad alanı içeri aktarma öğesine sağ tıklayın ve **şema Gezgininde göster**' i seçin.
 
-   **XML Şeması Gezgini** XML şema kümesi ile ilişkili XML değişmez değeri olan bir Visual Basic dosyası ile yan yana görüntülenir.
+   XML **şema Gezgini** , XML şema KÜMESIYLE ilişkili XML sabit değeri olan bir Visual Basic dosyası ile yan yana görüntülenir.

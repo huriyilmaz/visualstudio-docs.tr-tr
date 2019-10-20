@@ -1,5 +1,5 @@
 ---
-title: Eski iş akışı etkinlikleri | Microsoft Docs
+title: Eski Iş akışı etkinlikleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -10,83 +10,75 @@ helpviewer_keywords:
 - workflow activities
 ms.assetid: 4af7a06b-1e82-43c8-aec8-0dc5fb63d08a
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fa5a6da8d45435fc7c755905a19e95e90a98ad57
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f4f1110424aefc1771c0dc7600fb9996bff0e892
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000154"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658948"
 ---
 # <a name="legacy-workflow-activities"></a>Eski İş Akışı Etkinlikleri
-[!INCLUDE[wf](../includes/wf-md.md)] Varsayılan işlevler sağlayan denetim akışı koşulları, olay işleme, durum yönetimi ve iletişim için uygulamalar ve hizmetler ile etkinlik kümesini içerir. İş akışları tasarlarken tarafından sağlanan sistem tarafından sağlanan etkinlikler kullanabileceğiniz [!INCLUDE[wfd1](../includes/wfd1-md.md)], veya özel etkinliklerinizi oluşturabilirsiniz.  
-  
- Aşağıdaki tabloda [!INCLUDE[wf2](../includes/wf2-md.md)] framework kullanıma hazır etkinlik kümesi. Çok sayıda, ancak tüm, bu etkinlikler erişilebilir etkinlik tasarımcıları tarafından temsil edilen **araç kutusu** , [!INCLUDE[wfd2](../includes/wfd2-md.md)]. Bir etkinlik oluşturmak için kendi Tasarımcısından sürükleyin **araç kutusu** ve tasarım yüzeyine bırakın.  
-  
-|Etkinlik|Açıklama|  
-|--------------|-----------------|  
-|[Parametr CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65025)|İle kullanılan **HandleExternalEventActivity** etkinliği için girdi ve çıktı iletişim ile yerel bir hizmet. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Parametr CallExternalMethodActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65060).|  
-|[Aktivity Typu](http://go.microsoft.com/fwlink?LinkID=65050)|Tüm bileşik etkinliğin alt işiniz önce iptal bileşik bir etkinlik için temizleme mantığı içeren kullanılacak yürütülüyor. [!INCLUDE[crdefault](../includes/crdefault-md.md)][CancellationHandlerActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65061).|  
-|[CodeActivity](http://go.microsoft.com/fwlink?LinkID=65026)|Akışınız için Visual Basic veya C# kod eklemenize olanak tanır. [!INCLUDE[crdefault](../includes/crdefault-md.md)][CodeActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65062).|  
-|[CompensatableSequenceActivity](http://go.microsoft.com/fwlink?LinkID=65027)|Bir üst öğesi dengelenebilir sürümünü [öğeler SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020). [!INCLUDE[crdefault](../includes/crdefault-md.md)][CompensatableSequenceActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65002).|  
-|[CompensatableTransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65051)|Bir üst öğesi dengelenebilir sürümünü **TransactionScopeActivity**. [!INCLUDE[crdefault](../includes/crdefault-md.md)][CompensatableTransactionScopeActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65063).|  
-|[CompensateActivity](http://go.microsoft.com/fwlink?LinkID=65052)|Geri almak için veya bir hata oluştuğunda zaten iş akışı tarafından gerçekleştirilen işlemleri için dengelemek için kodunu çağırmasını sağlar. [!INCLUDE[crdefault](../includes/crdefault-md.md)][CompensateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65064).|  
-|[CompensationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65053)|Tamamlanan TransactionScopeActivity etkinliğe yönelik maaş gerçekleştiren bir veya daha fazla etkinlikler için sarmalayıcı [!INCLUDE[crdefault](../includes/crdefault-md.md)] [CompensationHandlerActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65065).|  
-|[ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)|Geçerli bir koşula göre alt etkinlikleri yürütür [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017) etkinlik kendisini ve her alt için ayrı ayrı uygular koşullara bağlı. [!INCLUDE[crdefault](../includes/crdefault-md.md)][ConditionedActivityGroup etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65066).|  
-|[EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65028)|İş akışınızı bir zaman aşımı aralığına dayalı gecikme oluşturmanıza olanak sağlar. [!INCLUDE[crdefault](../includes/crdefault-md.md)][EventDrivenActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65067).|  
-|[EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029)|Belirtilen bir olay meydana geldiğinde yürütülen bir veya daha fazla etkinlikleri sarmalar. [!INCLUDE[crdefault](../includes/crdefault-md.md)][EventDrivenActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65068).|  
-|[EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018)|Bir etkinlik olayları ilişkilendirmek için bir çerçeve sunar. [!INCLUDE[crdefault](../includes/crdefault-md.md)][EventHandlersActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65069).|  
-|[EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65030)|Kendi ana alt etkinlik ile concurrently yürütür bir [EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018). [!INCLUDE[crdefault](../includes/crdefault-md.md)][EventHandlingScopeActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65070).|  
-|[FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65054)|Belirttiğiniz türü özel bir durumu işlemek için kullanılır. [!INCLUDE[crdefault](../includes/crdefault-md.md)][FaultHandlerActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65071).|  
-|[FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65055)|Alt etkinlik türünün sıralı bir listesi olan birleşik bir etkinlik temsil [FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65054). [!INCLUDE[crdefault](../includes/crdefault-md.md)][FaultHandlersActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65072).|  
-|[HandleExternalEventActivity](http://go.microsoft.com/fwlink?LinkID=65031)|İle birlikte kullanılan [parametr CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65025) etkinliği için girdi ve çıktı iletişim ile yerel bir hizmet. [!INCLUDE[crdefault](../includes/crdefault-md.md)][HandleExternalEventActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65073).|  
-|[IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033)|Her dala koşul test eder ve ilk dal için eşittir koşulu üzerinde etkinlikleri gerçekleştiren **true**. [!INCLUDE[crdefault](../includes/crdefault-md.md)][IfElseActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65074).|  
-|[IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)|Bir dalı temsil eden bir [IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033). [!INCLUDE[crdefault](../includes/crdefault-md.md)][Öğeye etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65075).|  
-|[InvokeWebServiceActivity](http://go.microsoft.com/fwlink?LinkID=65035)|Bir Web hizmetini çağırmak, iş akışını etkinleştirir. [!INCLUDE[crdefault](../includes/crdefault-md.md)][InvokeWebServiceActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65076).|  
-|[InvokeWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65036)|Başka bir iş akışı çağırmak, iş akışını etkinleştirir. [!INCLUDE[crdefault](../includes/crdefault-md.md)][InvokeWorkflowActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65077).|  
-|[ListenActivity](http://go.microsoft.com/fwlink?LinkID=65037)|Yalnızca içeren bir birleşik etkinlik [EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029) alt etkinlikler. [!INCLUDE[crdefault](../includes/crdefault-md.md)][ListenActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65078).|  
-|[ParallelActivity](http://go.microsoft.com/fwlink?LinkID=65038)|İki veya daha fazla alt zamanlamak için bir yol sağlar **öğeler SequenceActivity** aynı anda işleme için etkinlik dalları. [!INCLUDE[crdefault](../includes/crdefault-md.md)][ParallelActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65079).|  
-|[PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)|Kural koleksiyonunu temsil etmek için bu seçeneği kullanın. Bir kural koşulları ve sonuçta elde edilen Eylemler oluşur. [!INCLUDE[crdefault](../includes/crdefault-md.md)][PolicyActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65004).|  
-|[ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)|Birden çok örneğini tek bir alt etkinlik oluşturur. [!INCLUDE[crdefault](../includes/crdefault-md.md)][ReplicatorActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65080).|  
-|[Öğeler SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020)|Birden çok etkinlik sıralı yürütme için bir arada bağlamak için basit bir yol sağlar. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Öğeler SequenceActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65081).|  
-|[SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65041)|Yeni bir durum geçiş belirtir. [!INCLUDE[crdefault](../includes/crdefault-md.md)][SetStateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65082).|  
-|[Buraya StateActivity](http://go.microsoft.com/fwlink?LinkID=65042)|Bir Durum makinesi iş akışı bir durumda temsil eder. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Buraya StateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65083).|  
-|[StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65043)|Kullanılan bir [buraya StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) ayrılırken yürütülen alt etkinlikler için kapsayıcı olarak etkinlik **buraya StateActivity** etkinlik. [!INCLUDE[crdefault](../includes/crdefault-md.md)][StateFinalizationActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65008).|  
-|[StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65044)|Kullanılan bir [buraya StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) girerken yürütülen alt etkinlikler için kapsayıcı olarak etkinlik **buraya StateActivity** etkinlik. [!INCLUDE[crdefault](../includes/crdefault-md.md)][StateInitializationActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65006).|  
-|[SuspendActivity](http://go.microsoft.com/fwlink?LinkID=65056)|Özel dikkat gerektiren bazı hata koşulu durumunda müdahale etkinleştirmek için iş akışı işlemini askıya alır. [!INCLUDE[crdefault](../includes/crdefault-md.md)][SuspendActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65084).|  
-|[SynchronizationScopeActivity](http://go.microsoft.com/fwlink?LinkID=65057)|İçerilen etkinlikleri eşitlenmiş bir etki alanında sıralı olarak yürütür. [!INCLUDE[crdefault](../includes/crdefault-md.md)][SynchronizationScopeActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65085).|  
-|[TerminateActivity](http://go.microsoft.com/fwlink?LinkID=65058)|Hemen bir hata koşulu olması durumunda iş akışınızın işlemi sona olanak tanır. [!INCLUDE[crdefault](../includes/crdefault-md.md)][TerminateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65086).|  
-|[ThrowActivity](http://go.microsoft.com/fwlink?LinkID=65059)|İşlem meta verileri için bir iş akışı kapsamında oluşturulan iş özel durumu yakalamanızı sağlar. [!INCLUDE[crdefault](../includes/crdefault-md.md)][ThrowActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65087).|  
-|[TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65093)|İşlemler ve özel durum işleme için bir çerçeve sunar. Daha fazla bilgi için [TransactionScopeActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65088).|  
-|[WebServiceFaultActivity](http://go.microsoft.com/fwlink?LinkID=65046)|Bir Web hizmeti hata oluşumunu modeli sağlar. [!INCLUDE[crdefault](../includes/crdefault-md.md)][WebServiceFaultActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65089).|  
-|[WebServiceInputActivity](http://go.microsoft.com/fwlink?LinkID=65047)|Bir Web hizmetinden veri alır. [!INCLUDE[crdefault](../includes/crdefault-md.md)][WebServiceInputActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65090).|  
-|[WebServiceOutputActivity](http://go.microsoft.com/fwlink?LinkID=65048)|Bir iş akışı için yapılan bir Web hizmeti isteğine yanıt verir. [!INCLUDE[crdefault](../includes/crdefault-md.md)][WebServiceOutputActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65092).|  
-|[WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)|Bir koşul yerine getirilene kadar döngü, iş akışını etkinleştirir. [!INCLUDE[crdefault](../includes/crdefault-md.md)][WhileActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65091).|  
-  
- [!INCLUDE[crabout](../includes/crabout-md.md)] özel etkinlikler oluşturmak nasıl [özel etkinlikler geliştirmeyi](http://go.microsoft.com/fwlink?LinkID=65023) ve [eski etkinlik Tasarımcısını kullanarak](../workflow-designer/using-the-legacy-activity-designer.md).  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Etkinlik Görünümleri (Eski)](../workflow-designer/activity-views-legacy.md)  
- Etkinliklerin farklı tasarım görünümler açıklanır.  
-  
- [Nasıl yapılır: Araç Kutusuna Etkinlik Ekleme (Eski)](../workflow-designer/how-to-add-activities-to-the-toolbox-legacy.md)  
- Araç kutusuna etkinlik ekleme işlemi gösterilmektedir.  
-  
- [Nasıl yapılır: Bildirime Dayanan Kural Koşulu Oluşturma (Eski)](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md)  
- Bildirime dayanan Kural koşulu oluşturma adımları gösterilmektedir.  
-  
- [Nasıl yapılır: PolicyActivity Kural Kümesi Oluşturma (Eski)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)  
- PolicyActivity kural kümesi oluşturma adımları gösterilmektedir.  
-  
- [Nasıl yapılır: WCF Bütünleştirme İşlemi Gerçekleştirme (Eski)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md)  
- Uygulamak için bu adımları gösteren bir [!INCLUDE[indigo2](../includes/indigo2-md.md)] sözleşme işlemi.  
-  
- [Nasıl yapılır: WCF Bütünleştirme İşlemi Çağırma (Eski)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)  
- Çağrılacak adımları gösteren bir [!INCLUDE[indigo2](../includes/indigo2-md.md)] sözleşme işlemi.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Workflow Foundation etkinlikleri](http://go.microsoft.com/fwlink?LinkID=65005)   
- [İş akışları geliştirme](http://go.microsoft.com/fwlink?LinkID=65010)   
- [Geliştirme iş akışı etkinlikleri](http://go.microsoft.com/fwlink?LinkID=65023)
+[!INCLUDE[wf](../includes/wf-md.md)], denetim akışı, koşullar, olay işleme, durum yönetimi ve uygulama ve hizmetlerle iletişim kurma için işlevsellik sağlayan varsayılan etkinlik kümesini içerir. İş akışlarını tasarlarken, [!INCLUDE[wfd1](../includes/wfd1-md.md)] tarafından sunulan sistem tarafından sağlanmış etkinlikleri kullanabilir veya kendi özel etkinliklerinizi oluşturabilirsiniz.
+
+ Aşağıdaki tabloda [!INCLUDE[wf2](../includes/wf2-md.md)] Framework hazır olmayan etkinlik kümesi listelenmektedir. Bu etkinliklerin hepsi olmasa da çoğu, [!INCLUDE[wfd2](../includes/wfd2-md.md)] **araç kutusundan** erişilebilen etkinlik tasarımcıları tarafından temsil edilir. Etkinlik oluşturmak için **araç kutusu** ' ndan tasarımcısını sürükleyin ve tasarım yüzeyine bırakın.
+
+|Etkinlik|Açıklama|
+|--------------|-----------------|
+|[CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65025)|Yerel bir hizmetle giriş ve çıkış iletişimleri için **Handleexternaliventactivity** etkinliğiyle birlikte kullanılır. [CallExternalMethodActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65060)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[CancellationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65050)|Tüm bileşik etkinliğin alt öğelerinin yürütülmesi tamamlanmadan önce bileşik bir etkinliğin Temizleme mantığını içermesi için kullanılır. [CancellationHandlerActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65061)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[CodeActivity](http://go.microsoft.com/fwlink?LinkID=65026)|İş akışınıza Visual Basic veya C# kod eklemenize olanak sağlar. [CodeActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65062)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[CompensatableSequenceActivity](http://go.microsoft.com/fwlink?LinkID=65027)|[SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020)'nin Dengeleme sürümü. [CompensatableSequenceActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65002)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[CompensatableTransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65051)|**TransactionScopeActivity**'in telafi tablosu sürümü. [CompensatableTransactionScopeActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65063)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[CompensateActivity](http://go.microsoft.com/fwlink?LinkID=65052)|Bir hata oluştuğunda iş akışı tarafından zaten gerçekleştirilen işlemleri dengelemek veya geri almak için kodu çağırmanızı sağlar. [telafi Teactivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65064)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[CompensationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65053)|[CompensationHandlerActivity etkinliği kullanılarak](http://go.microsoft.com/fwlink?LinkID=65065)[!INCLUDE[crdefault](../includes/crdefault-md.md)] tamamlanmış bir TransactionScopeActivity etkinliği için tazminat gerçekleştiren bir veya daha fazla etkinlik için sarmalayıcı.|
+|[ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)|, [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017) etkinliğinin kendisi için geçerli olan ve her bir alt öğeye ayrı uygulanan koşullara bağlı olarak alt etkinlikleri yürütür. [ConditionedActivityGroup etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65066)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[DelayActivity](http://go.microsoft.com/fwlink?LinkID=65028)|, Zaman aşımı aralığına göre iş akışınızda gecikme oluşturmanıza olanak sağlar. [DelayActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65067)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029)|Belirtilen bir olay gerçekleştiğinde yürütülen bir veya daha fazla etkinliği kaydırır. [EventDrivenActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65068)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018)|Etkinlikleri etkinliklerle ilişkilendirmek için bir çerçeve sağlar. [EventHandlersActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65069)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65030)|Ana alt etkinliğini bir [EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018)eşzamanlı olarak yürütür. [EventHandlingScopeActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65070)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65054)|Belirttiğiniz bir türün özel durumunu işlemek için kullanılır. [FaultHandlerActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65071)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65055)|[FaultHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65054)türünde alt etkinliklerin sıralı listesine sahip olan bileşik bir etkinliği temsil eder. [FaultHandlersActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65072)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[Atanan](http://go.microsoft.com/fwlink?LinkID=65031)|Yerel bir hizmetle giriş ve çıkış iletişimleri için [CallExternalMethodActivity](http://go.microsoft.com/fwlink?LinkID=65025) etkinliğiyle birlikte kullanılır. [Handleexternaliventactivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65073)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033)|Her dalda bir koşulu sınar ve koşulun **true**değerine eşit olduğu ilk dalda etkinlikleri gerçekleştirir. [IfElseActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65074)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)|Bir [IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033)'nin dalını temsil eder. [IfElseBranchActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65075)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[InvokeWebServiceActivity](http://go.microsoft.com/fwlink?LinkID=65035)|Bir Web hizmetini çağırmak için iş akışınızı etkinleştirir. [InvokeWebServiceActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65076)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[InvokeWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65036)|İş akışınızın başka bir iş akışını çağırmasına olanak sağlar. [InvokeWorkflowActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65077)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[ListenActivity](http://go.microsoft.com/fwlink?LinkID=65037)|Yalnızca [EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029) alt etkinliklerini içeren bir bileşik etkinlik. [ListenActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65078)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[ParallelActivity](http://go.microsoft.com/fwlink?LinkID=65038)|Aynı anda işlenmek üzere iki veya daha fazla alt **SequenceActivity** etkinlik dalı zamanlamak için bir yol sağlar. [ParallelActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65079)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)|Kuralların koleksiyonunu temsil etmek için kullanın. Bir kural koşullardan ve sonuçta ortaya çıkan eylemlerden oluşur. [PolicyActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65004)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)|Tek bir alt etkinliğin birden fazla örneğini oluşturur. [ReplicatorActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65080)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020)|Sıralı yürütme için birden çok etkinliği birbirine bağlamak için basit bir yol sağlar. [SequenceActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65081)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65041)|Yeni bir duruma geçiş belirtir. [SetStateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65082)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[StateActivity](http://go.microsoft.com/fwlink?LinkID=65042)|Durum makinesi iş akışındaki bir durumu temsil eder. [StateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65083)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65043)|StateActivity **etkinliğinden** çıkılırken yürütülen alt etkinlikler için bir kapsayıcı olarak [StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) etkinliğinde kullanılır. [StateFinalizationActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65008)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65044)|**StateActivity** etkinliği girilirken yürütülen alt etkinlikler için bir kapsayıcı olarak [StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) etkinliğinde kullanılır. [StateInitializationActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65006)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[SuspendActivity](http://go.microsoft.com/fwlink?LinkID=65056)|Özel dikkat gerektiren bazı hata koşullarınız durumunda müdahalesini etkinleştirmek için iş akışınızın işlemini askıya alır. [SuspendActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65084)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[SynchronizationScopeActivity](http://go.microsoft.com/fwlink?LinkID=65057)|İçerilen etkinlikleri eşitlenmiş bir etki alanında sırayla yürütür. [SynchronizationScopeActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65085)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[TerminateActivity](http://go.microsoft.com/fwlink?LinkID=65058)|Bir hata koşulu durumunda iş akışınızın işlemini hemen sonlandırmanızı sağlar. [TerminateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65086)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[ThrowActivity](http://go.microsoft.com/fwlink?LinkID=65059)|Bir iş akışı için işlem meta verilerinin bir parçası olarak oluşturulan iş özel durumlarını yakalamanızı sağlar. [ThrowActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65087)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65093)|İşlemler ve özel durum işleme için bir çerçeve sağlar. Daha fazla bilgi için bkz. [TransactionScopeActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65088).|
+|[WebServiceFaultActivity](http://go.microsoft.com/fwlink?LinkID=65046)|Bir Web hizmeti hatasının oluşumunu modellemenize olanak sağlar. [WebServiceFaultActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65089)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[WebServiceInputActivity](http://go.microsoft.com/fwlink?LinkID=65047)|Bir Web hizmetinden veri alır. [WebServiceInputActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65090)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[Yanıt](http://go.microsoft.com/fwlink?LinkID=65048)|Bir iş akışına yapılan bir Web hizmeti isteğine yanıt verir. [WebServiceOutputActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65092)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+|[WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)|Bir koşul karşılanana kadar iş akışınızın döngüye girmesine olanak sağlar. [WhileActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65091)[!INCLUDE[crdefault](../includes/crdefault-md.md)].|
+
+ özel etkinlikler oluşturmayı [!INCLUDE[crabout](../includes/crabout-md.md)], bkz. [özel etkinlikler geliştirme](http://go.microsoft.com/fwlink?LinkID=65023) ve [eski etkinlik tasarımcısını kullanma](../workflow-designer/using-the-legacy-activity-designer.md).
+
+## <a name="in-this-section"></a>Bu Bölümde
+ [Etkinlik görünümleri (eski)](../workflow-designer/activity-views-legacy.md) Etkinliklerin farklı tasarım görünümlerini açıklar.
+
+ [Nasıl yapılır: araç kutusuna etkinlik ekleme (eski)](../workflow-designer/how-to-add-activities-to-the-toolbox-legacy.md) Araç kutusuna etkinliklerin nasıl ekleneceğini gösterir.
+
+ [Nasıl yapılır: bildirime dayalı bir kural koşulu oluşturma (eski)](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md) Bildirim temelli bir kural koşulu oluşturma adımlarını gösterir.
+
+ [Nasıl yapılır: PolicyActivity kural kümesi oluşturma (eski)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md) Bir PolicyActivity kural kümesi oluşturma adımlarını gösterir.
+
+ [Nasıl yapılır: WCF sözleşme Işlemi uygulama (eski)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md) @No__t_1 bir sözleşme işlemi uygulamak için gereken adımları gösterir.
+
+ [Nasıl yapılır: WCF sözleşme Işlemini çağırma (eski)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md) @No__t_1 sözleşmesi işlemini çağırma adımlarını gösterir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Iş akışı etkinlikleri](http://go.microsoft.com/fwlink?LinkID=65023) geliştiren [iş akışları geliştiren](http://go.microsoft.com/fwlink?LinkID=65010) [Windows Workflow Foundation etkinlikleri](http://go.microsoft.com/fwlink?LinkID=65005)

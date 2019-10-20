@@ -1,5 +1,5 @@
 ---
-title: .NET Framework tabanlı Uluslararası uygulamalara giriş | Microsoft Docs
+title: .NET Framework göre uluslararası uygulamalara giriş | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -23,33 +23,31 @@ helpviewer_keywords:
 - user interface, culture setting
 ms.assetid: b0788993-e62d-4f68-8235-5f87b1d48525
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e56c48468b6890f9c51e3ac79ac6167fd8647903
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 8243b2f735fb15f5c4e2fe841721696b87590997
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65675144"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670443"
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>.NET Framework Tabanlı Uluslararası Uygulamalara Giriş
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İçinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], dünya çapında kullanılmaya hazır uygulama oluşturmak için iki bölümden oluşur: genelleştirme, farklı kültürleri için uyarlayabilirsiniz uygulamalar tasarlama işlemi ve yerelleştirme, kaynakların belirli bir kültür için çevirme işlemi. Uluslararası bir hedef kitle için uygulama tasarlama hakkında genel bilgi için bkz. [dünya çapında kullanılmaya hazır uygulama geliştirmek için en iyi](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c).  
-  
- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Yerelleştirme modeli, hem uygulama kodunda hem de geri dönüş kaynakları içeren bir ana derlemenin oluşur; dizeler, görüntüler ve diğer nesneler için hangi uygulama ilk olarak geliştirilen dili. Yerelleştirilmiş her uygulama, uydu derlemeleri veya yalnızca yerelleştirilmiş kaynakları içeren derlemeler olacaktır. Her zaman ana derleme yerelleştirilmiş uydu derlemede bir kaynak bulunamıyorsa, geri dönüş kaynakları içerdiğinden <xref:System.Resources.ResourceManager> sonunda ana kaynağa dönülüyor, hiyerarşik bir şekilde yüklemeyi deneyecek. Kaynak geri dönüş sistemi daha ayrıntılı olarak açıklanan [kaynakların hiyerarşik organizasyonu yerelleştirme için](../ide/hierarchical-organization-of-resources-for-localization.md).  
-  
- Tüm Microsoft sözlüğü kullanmaktır dikkate almanız gereken bir yerelleştirme kaynağı ürünleri yerelleştirilmiş. Bu CSV dosyası üzerinde 12.000 İngilizce koşulları 59 farklı dilde terimlerin çevirileri içerir. Sözlüğü, ücretsiz olarak kullanılabilir [Microsoft terminoloji çevirileri](http://go.microsoft.com/fwlink/?LinkId=128146) Web sayfası.  
-  
- Windows Forms uygulamaları için proje sistemi her iki geri dönüş için kaynak dosyaları oluşturabilir ve her ek kullanıcı Arabirimi kültürünü istenen. Geri dönüş kaynak dosyası ana derlemeye oluşturulmuştur ve kültüre özgü kaynak dosyaları, her UI kültürü için bir uydu derlemeler içinde yerleşik olan. Bir proje oluşturduğunuzda, kaynak dosyalarını Visual Studio XML biçimi (.resx) Ara bir ikili biçimine (.resources), ardından uydu derlemeleri içinde gömülü derlenir.  
-  
- Hem Windows Formları ve Web formları için proje sistemi projenizi bir bütünleştirilmiş kod kaynak dosyası şablonu kullanarak kaynak dosyaları derleme ve kaynaklara erişim sağlar. Uydu derlemeleri ana derlemenin birlikte oluşturulur.  
-  
- Yerelleştirilmiş bir uygulama yürütüldüğünde, görünümünü iki kültüre değerlerine göre belirlenir. (A *kültür* kullanıcının dil, ortam ve kültürel ilgili kullanıcı tercihi bilgileri kümesidir.) UI kültür ayarı, hangi kaynakların yükleneceğini belirler. UI kültürü olarak ayarlandığından `UICulture` Web.config dosyaları ve sayfa yönergeleri ve <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> Visual Basic veya Visual C# kod. Tarih, sayı, para birimi ve benzeri gibi değerler biçimlendirmesini kültür ayarı belirler. Kültür olarak ayarlanır `Culture` Web.config dosyaları ve sayfa yönergelerinde <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Visual Basic veya Visual C# kod.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Globalization>   
- <xref:System.Resources>   
- [Uygulamaları Genelleştirme ve yerelleştirme](../ide/globalizing-and-localizing-applications.md)   
- [Güvenlik ve Yerelleştirilmiş Yardımcı Derlemeler](../ide/security-and-localized-satellite-assemblies.md)
+@No__t_0, dünya çapında kullanılabilir bir uygulama oluşturmak için iki bölüm vardır: Genelleştirme, farklı kültürlere uyarlanabilen uygulamaları tasarlama işlemi ve yerelleştirme, belirli bir kültürün kaynaklarını çevirme işlemi. Uluslararası bir hedef kitle için uygulama tasarlama hakkında genel bilgi için bkz. [Dünya çapında kullanılabilecek uygulamalar geliştirmek Için En Iyi uygulamalar](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c).
+
+ @No__t_0 yerelleştirme modeli, hem uygulama kodunu hem de geri dönüş kaynaklarını içeren bir ana derlemeden oluşur: uygulamanın ilk geliştirildiği dile yönelik dizeler, görüntüler ve diğer nesneler. Her yerelleştirilmiş uygulamanın uydu derlemeleri veya yalnızca yerelleştirilmiş kaynakları içeren derlemeler olacaktır. Ana derleme her zaman geri dönüş kaynaklarını içerdiğinden, bir kaynak yerelleştirilmiş uydu derlemesinde bulunmazsa <xref:System.Resources.ResourceManager>, bu dosyayı hiyerarşik bir şekilde yüklemeye çalışır ve sonuçta ana derlemede kaynağa geri düşerler. Kaynak geri dönüş sistemi, [Yerelleştirme Için kaynakların hiyerarşik kuruluşunda](../ide/hierarchical-organization-of-resources-for-localization.md)daha ayrıntılı olarak açıklanmıştır.
+
+ Kullanarak göz önünde bulundurmanız gereken bir yerelleştirme kaynağı, tüm Microsoft yerelleştirilmiş ürünlerin sözlüğbir biridir. Bu CSV dosyasında 12.000 ' den fazla Ingilizce terim ve bu koşulların en fazla 59 farklı dilde olan çevirileri bulunur. Sözlük, [Microsoft terminoloji çevirileri](http://go.microsoft.com/fwlink/?LinkId=128146) Web sayfasında indirilebilir.
+
+ Windows Forms uygulamalar için proje sistemi hem geri dönüş hem de istediğiniz her ek kullanıcı arabirimi kültürü için kaynak dosyaları oluşturabilir. Geri dönüş kaynak dosyası ana derlemede yerleşik olarak bulunur ve kültüre özgü kaynak dosyaları her bir kullanıcı arabirimi kültürü için bir tane olmak üzere uydu Derlemeleriyle yerleşik olarak bulunur. Bir proje oluşturduğunuzda, kaynak dosyaları Visual Studio XML biçiminden (. resx), daha sonra uydu derlemelerine gömülü bir ara ikili biçime (. resources) derlenir.
+
+ Hem Windows Forms hem de Web Forms için proje sistemi, bir derleme kaynak dosyası şablonu kullanarak kaynak dosyaları oluşturmanızı, kaynaklara erişmeyi ve projenizi oluşturmanızı sağlar. Uydu derlemeleri ana derlemeyle birlikte oluşturulacaktır.
+
+ Yerelleştirilmiş bir uygulama yürütüldüğünde, görünümü iki kültür değeri tarafından belirlenir. ( *Kültür* , kullanıcının dili, ortamı ve kültürel kuralları ile ilgili Kullanıcı tercihi bilgileri kümesidir.) UI kültürü ayarı hangi kaynakların yükleneceğini belirler. UI kültürü, Web. config dosyaları ve sayfa yönergeleri içinde `UICulture` olarak ve Visual Basic ya da görsel C# kodda <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> olarak ayarlanır. Kültür ayarı Tarih, sayı, para birimi vb. gibi değerlerin biçimlendirilmesini belirler. Kültür, Web. config dosyaları ve sayfa yönergeleri içinde `Culture` olarak ayarlanır, Visual Basic veya görsel C# kodda <xref:System.Globalization.CultureInfo.CurrentCulture%2A>.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ <xref:System.Globalization><xref:System.Resources>
+ Uygulamalar [güvenlik ve yerelleştirilmiş uydu derlemelerini](../ide/security-and-localized-satellite-assemblies.md) [Genelleştirme ve yerelleştirme](../ide/globalizing-and-localizing-applications.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Geometri Tabanlı Gradyan Gölgelendirici Oluşturma'
+title: 'Nasıl Yapılır: Geometri Tabanlı Gradyan Gölgelendirici Oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e138f253a734608140533de8019d2e5fb7577a7
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 3b34d51177e392b46c655c857b7015011818a888
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924354"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635634"
 ---
-# <a name="how-to-create-a-geometry-based-gradient-shader"></a>Nasıl yapılır: Geometri tabanlı gradyan gölgelendirici oluşturma
+# <a name="how-to-create-a-geometry-based-gradient-shader"></a>Nasıl yapılır: geometri tabanlı Gradyan Gölgelendirici Oluşturma
 
 Bu makalede, geometri tabanlı bir gradyan gölgelendirici oluşturmak için Gölgelendirici Tasarımcısının ve yönlendirilmiş Graf gölgelendirici dilinin nasıl kullanılacağı gösterilmektedir. Bu gölgelendirici, bir sabit RGB renk değerini, dünya alanındaki bir nesne noktasının yüksekliğine göre ölçeklendirir.
 
@@ -52,17 +52,17 @@ Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir sphere öğ
 
 Bazı biçimler bazı gölgelendiriciler için daha iyi önizleme sağlayabilir. Gölgelendirici tasarımcısında gölgelendiricilerin önizlemesi hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md) **gölgelendiricilerin** önizlemesi.
 
-Aşağıdaki çizimde, bu belgede açıklanan gölgelendirici gösterilmektedir ve bu belgede [, nasıl yapılır: 3B terbotları](../designers/how-to-model-3-d-terrain.md)modelleyin. Rengin yoğunluğu, dünyanın içindeki noktanın yüksekliğiyle artar.
+Aşağıdaki çizim, bu belgede açıklanan gölgelendiriciyi, [nasıl yapılır: modellemenin nasıl yapıldığını](../designers/how-to-model-3-d-terrain.md)gösteren 3B sahneye uygulanacağını gösterir. Rengin yoğunluğu, dünyanın içindeki noktanın yüksekliğiyle artar.
 
 ![3&#45;D teryağma modeline uygulanan gradyan efekti](../designers/media/digit-gradient-effect-result.png)
 
-Bir 3B modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz [. nasıl yapılır: 3B modele](../designers/how-to-apply-a-shader-to-a-3-d-model.md)gölgelendirici uygulayın.
+3D modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir gölgelendiriciyi bir gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Nasıl yapılır. 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [Nasıl yapılır: Gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md)
-- [Nasıl yapılır: Model 3B teryağmur](../designers/how-to-model-3-d-terrain.md)
+- [Nasıl yapılır: 3B arazi modeli oluşturma](../designers/how-to-model-3-d-terrain.md)
 - [Nasıl yapılır: Gri tonlamalı doku gölgelendiricisi oluşturma](../designers/how-to-create-a-grayscale-texture-shader.md)
 - [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)
 - [Gölgelendirici Tasarımcısı düğümleri](../designers/shader-designer-nodes.md)

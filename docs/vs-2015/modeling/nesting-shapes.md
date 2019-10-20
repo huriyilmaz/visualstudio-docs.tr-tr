@@ -6,17 +6,17 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 53066a5d-5b0c-4f60-adf1-60ac81cb9ab1
 caps.latest.revision: 4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d955f5df46b93c3d0bbd407424bdfd3e9d633d6b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9cf0f911531c145369319a0e983c49525421c7b6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158904"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668495"
 ---
 # <a name="nesting-shapes"></a>Şekilleri İç İçe Geçirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bkz: [Jean Marc Prieur'ın blogu](http://blogs.msdn.com/b/jmprieur/archive/2008/09/03/dsl-tools-support-of-nested-shapes-in-visual-studio-2008-sp1.aspx)
+Bkz. [Jean-Marc Prieur 'nin blogu](http://blogs.msdn.com/b/jmprieur/archive/2008/09/03/dsl-tools-support-of-nested-shapes-in-visual-studio-2008-sp1.aspx)

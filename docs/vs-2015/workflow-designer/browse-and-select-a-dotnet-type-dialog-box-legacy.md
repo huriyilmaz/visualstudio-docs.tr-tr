@@ -1,5 +1,5 @@
 ---
-title: Göz atın ve bir .NET türünü seç iletişim kutusu (eski) | Microsoft Docs
+title: Bir .NET türü Iletişim kutusu (eski) olarak görüntüle ve Seç | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - Browse and Select a .NET Type dialog box
 ms.assetid: 1e66c9bc-94b2-46e2-bedf-871752e5f917
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d1ba2a1276ba5c752b712c6131048546ca8f69ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1e5045a62d0a654af968d50e0c309bcf8104b5cc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977468"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668983"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box-legacy"></a>.NET Türüne Gözat ve Seç İletişim Kutusu (Eski)
-Bu konu açıklar nasıl **göz atın ve bir .NET türü seçin** eski iletişim kutusunda [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- İçinde **özellikleri** penceresini bir .NET Framework tür başvurulan bir derlemede, noktayla yararlanan Özellikler'i seçin, **[...]**  özelliğinin metin kutusunun sonunda görünür. Tıklayarak **[...]**  açılır **göz atın ve bir .NET türü seçin** iletişim kutusu. Bu iletişim kutusunda, başvurulan derlemeleri ağaç görünümünden bir türü seçebilirsiniz. Örneğin, kullanırken etkinlik Tasarımcısı içinde **özellikleri** penceresinde tıklayın **temel sınıf** üç nokta **[...]**  başvurulan derlemeleri ağacından bir etkinlik için başka bir temel sınıf seçin.  
-  
- Aşağıdaki tabloda kullanıcı arabirimi (UI) öğelerini açıklar **göz atın ve bir .NET türü seçin** iletişim kutusu.  
-  
-|Arabirim Öğesi|Açıklama|  
-|----------------|-----------------|  
-|**Tür adı:**|Şu anda seçili türün adı.|  
-|**Tür**|Sol bölmede, başvurulan derlemeler ağaç görünümünü görüntüler. Sağ bölmede, sol bölmede seçili başvurulan bütünleştirilmiş koddan seçim için kullanılabilir türleri görüntüler.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] **.NET türünü görüntüle ve Seç** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+
+ **Özellikler** penceresinde, başvurulan bir derlemede .NET Framework türü alan Özellikler ' i seçtiğinizde, özelliğin metin kutusunun sonunda bir üç nokta **[...]** belirir. **[...]** Tıklandığında, **bir .NET türü görüntüle ve Seç** iletişim kutusu açılır. Bu iletişim kutusunda, başvurulan derlemelerin ağaç görünümünden bir tür seçebilirsiniz. Örneğin, etkinlik tasarımcısını kullanırken, **Özellikler** penceresinde, başvurulan derlemeler ağacından bir etkinlik için başka bir temel sınıf seçmek üzere **temel sınıf** üç nokta ( **...]** simgesini tıklatın.
+
+ Aşağıdaki tabloda, **bir .NET türü görüntüle ve Seç** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
+
+|Arabirim Öğesi|Açıklama|
+|----------------|-----------------|
+|**Tür adı:**|Şu anda seçili olan türün adı.|
+|**Türüyle**|Sol bölmede başvurulan derlemelerin ağaç görünümü görüntülenir. Sağ bölmede, sol bölmede seçilen başvurulan derlemeden seçim için kullanılabilen türler görüntülenir.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Eski Etkinlik Tasarımcısını Kullanma](../workflow-designer/using-the-legacy-activity-designer.md)

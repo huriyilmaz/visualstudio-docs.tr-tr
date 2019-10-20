@@ -1,62 +1,62 @@
 ---
-title: Dışarı aktarma ve kod haritaları kaydedin
+title: Kod eşlemelerini dışarı ve Kaydet
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70c4cd238b6e5d31eced6a35ff0c7d24ab85a280
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 991773953338e38331bad45bfa1149aeb27c748b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003119"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670798"
 ---
 # <a name="share-code-maps"></a>Kod haritalarını paylaşma
 
-Kod Haritaları, Visual Studio projesinin bir parçası olarak, görüntü veya XPS dosyası olarak kaydedebilirsiniz.
+Kod haritalarını bir Visual Studio projesinin parçası olarak, görüntü olarak veya XPS dosyası olarak kaydedebilirsiniz.
 
-## <a name="share-a-code-map-with-other-visual-studio-users"></a>Bir kod Haritası diğer Visual Studio kullanıcılarıyla paylaşma
+## <a name="share-a-code-map-with-other-visual-studio-users"></a>Bir kod haritasını diğer Visual Studio kullanıcılarıyla paylaşma
 
-Kullanım **dosya** harita kaydetmek için menü.
+Haritayı kaydetmek için **Dosya** menüsünü kullanın.
 
--veya-
+veya
 
-Haritanın harita araç çubuğunda belirli projenin bir parçası kaydetmek için seçin **paylaşımı** > **taşıma \<CodeMapName > içine .dgml**ve ardından, kaydetmek istediğiniz projeyi seçin eşleyin.
+Haritayı belirli projenin bir parçası olarak kaydetmek için harita araç çubuğunda, **paylaşma**  >  **\<CodeMapName >. dgml**' i seçin ve ardından Haritayı kaydetmek istediğiniz projeyi seçin.
 
-![Başka bir projeye bir harita Taşı](../modeling/media/codemapsmovemapmenu.png)
+![Haritayı başka bir projeye taşıma](../modeling/media/codemapsmovemapmenu.png)
 
-Visual Studio kaydeder Haritası olarak bir *.dgml* diğer Visual Studio Enterprise ve Visual Studio Professional kullanıcılarıyla paylaşmadan dosya.
+Visual Studio, Haritayı Visual Studio Enterprise ve Visual Studio Professional diğer kullanıcılarıyla paylaşabileceğiniz bir *. dgml* dosyası olarak kaydeder.
 
 > [!NOTE]
-> Bir harita Visual Studio Professional kullanıcılarıyla paylaşmadan önce grupları genişlettiğinizden, gizli düğümleri göstermek ve çapraz grup bağlantılarını ve başkalarının haritanızda görmesini istediğiniz silinmiş düğümleri aldığınızdan emin olun. Aksi takdirde, diğer kullanıcıların bu öğeleri görmesi mümkün olmayacaktır.
+> Visual Studio Professional kullananlarla bir Haritayı paylaşmadan önce, herhangi bir grubu genişlettikten, gizli düğümleri ve çapraz grup bağlantılarını gösterdiğinizden ve başkalarının haritada görmesini istediğiniz silinmiş düğümleri aldığınızdan emin olun. Aksi takdirde, diğer kullanıcıların bu öğeleri görmesi mümkün olmayacaktır.
 >
-> Bir modelleme projesinde olan ya da bir modelleme projesinden başka bir konuma kopyalanan bir harita kaydettiğinizde aşağıdaki hata oluşabilir:
+> Modelleme projesinde olan veya bir modelleme projesinden başka bir konuma kopyalanmış olan bir Haritayı kaydettiğinizde aşağıdaki hata ortaya çıkabilir:
 >
-> "Kaydedilemiyor *fileName* proje dizininin dışına. Bağlantılı öğeler desteklenmez."
+> " *Dosya adı* proje dizininin dışına kaydedilemez. Bağlantılı öğeler desteklenmez."
 >
-> Visual Studio hatayı gösterir, ancak kaydedilen sürümü de oluşturur. Hatayı önlemek için harita modelleme projesinin dışında oluşturun. Ardından istediğiniz konuma kaydedebilirsiniz. Yalnızca çözümdeki başka bir konuma dosya kopyalama ve onu kaydetmeye çalışmak başarısızlıkla sonuçlanacaktır.
+> Visual Studio hatayı gösterir, ancak kaydedilen sürümü de oluşturur. Hatayı önlemek için Haritayı modelleme projesinin dışında oluşturun. Ardından istediğiniz konuma kaydedebilirsiniz. Yalnızca çözümdeki başka bir konuma dosya kopyalama ve onu kaydetmeye çalışmak başarısızlıkla sonuçlanacaktır.
 
-## <a name="export-a-code-map-as-an-image"></a>Bir kod Haritası bir görüntü olarak dışarı aktar
+## <a name="export-a-code-map-as-an-image"></a>Kod haritasını görüntü olarak dışarı aktarma
 
-Bir kod Haritası bir görüntü olarak dışarı aktardığınızda, Microsoft Word veya PowerPoint gibi diğer uygulamalara kopyalayabilirsiniz.
+Bir kod haritasını görüntü olarak dışarı aktardığınızda, Microsoft Word veya PowerPoint gibi diğer uygulamalara kopyalayabilirsiniz.
 
-1. Kod Haritası araç çubuğunda **paylaşımı** > **görüntü olarak e-posta** veya **görüntüsünü kopyalama**.
+1. Kod Haritası araç çubuğunda  > **e-postayı görüntü olarak** **paylaşma** veya **görüntü kopyalama**' yı seçin.
 
 2. Görüntüyü başka bir uygulamaya yapıştırın.
 
-## <a name="export-the-map-as-an-xps-file"></a>Harita XPS dosyası olarak dışarı aktarma
+## <a name="export-the-map-as-an-xps-file"></a>Haritayı XPS dosyası olarak dışarı aktarma
 
-Bir kod Haritası XPS dosyası olarak dışarı aktardığınızda, Internet Explorer gibi XML veya XAML görüntüleyicilerde görebilirsiniz.
+Bir kod haritasını XPS dosyası olarak dışa aktardığınızda, bu dosyayı Internet Explorer gibi XML veya XAML görüntüleyicilerinde görebilirsiniz.
 
-1. Kod Haritası araç çubuğunda **paylaşımı** > **taşınabilir XPS olarak e-posta** veya **taşınabilir XPS olarak Kaydet**.
+1. Kod Haritası araç çubuğunda,  > **e-postayı TAŞINABILIR XPS olarak** **paylaşma** veya **Taşınabilir XPS olarak kaydetme**' yi seçin.
 
-2. Dosyayı kaydetmek istediğiniz yere göz atın.
+2. Dosyayı kaydetmek istediğiniz yere gidin.
 
-3. Kod Haritası adı. Emin olun **farklı kaydetme türü** kutusu ayarlandığında **XPS dosyaları (\*.xps)**. **Kaydet**’i seçin.
+3. Kod eşlemesini adlandırın. **Farklı kaydet türü** kutusunun **XPS dosyaları (\*. XPS)** olarak ayarlandığından emin olun. **Kaydet**' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod haritaları ile bağımlılıkları eşleştirme](../modeling/map-dependencies-across-your-solutions.md)
+- [Bağımlılıkları kod eşlemeleriyle eşleyin](../modeling/map-dependencies-across-your-solutions.md)

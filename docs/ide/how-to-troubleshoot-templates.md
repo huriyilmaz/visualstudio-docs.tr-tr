@@ -1,67 +1,67 @@
 ---
-title: Proje şablonu ve öğe şablonu yüklenirken sorun giderme
+title: Proje şablonu ve öğe şablonu yükleme sorunlarını giderme
 ms.date: 01/02/2018
 ms.topic: troubleshooting
 helpviewer_keywords:
 - templates [Visual Studio], troubleshooting
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 70782646a52a5bca5741a864eee1f965941bb34b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0dbdb2854833f7c28866aa3d6ec0a685803adb3d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62547599"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656546"
 ---
-# <a name="how-to-troubleshoot-templates"></a>Nasıl yapılır: Şablon sorunlarını giderme
+# <a name="how-to-troubleshoot-templates"></a>Nasıl yapılır: şablonlarda sorun giderme
 
-Geliştirme ortamında yüklemek bir şablon başarısız olursa, sorunu bulmak için birkaç yolu vardır.
+Bir şablon geliştirme ortamında yüklenemezse, sorunu bulmanın birkaç yolu vardır.
 
-## <a name="validate-the-vstemplate-file"></a>Vstemplate dosyası doğrula
+## <a name="validate-the-vstemplate-file"></a>Vstemplate dosyasını doğrulama
 
 ::: moniker range="vs-2017"
 
-Varsa *vstemplate* şablon dosyasında için Visual Studio şablon şeması uyması değil, şablon görüntülenmeyebilir **yeni proje** iletişim kutusu.
+Şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı değilse, şablon **Yeni proje** iletişim kutusunda görünmeyebilir.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Varsa *vstemplate* şablon dosyasında için Visual Studio şablon şeması uyması değil, şablon oluşturduğunuz yeni proje iletişim kutusunda yer alamaz.
+Bir şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı değilse, şablon yeni projeler oluşturduğunuz iletişim kutusunda görünmeyebilir.
 
 ::: moniker-end
 
-### <a name="to-validate-the-vstemplate-file"></a>Vstemplate dosyası doğrulamak için
+### <a name="to-validate-the-vstemplate-file"></a>Vstemplate dosyasını doğrulamak için
 
-1. Bulun *.zip* şablonu içeren dosya.
+1. Şablonu içeren *. zip* dosyasını bulun.
 
-1. Ayıklama *.zip* dosya.
+1. *. Zip* dosyasını ayıklayın.
 
-1. Üzerinde **dosya** Visual Studio menüsünde **açık** > **dosya**.
+1. Visual Studio 'daki **Dosya** menüsünde  > **dosyayı** **Aç** ' ı seçin.
 
-1. Seçin *vstemplate* dosya şablonu ve seçin **açık**.
+1. Şablon için *vstemplate* dosyasını seçin ve **Aç**' ı seçin.
 
-1. Doğrulayın, XML *vstemplate* dosyası için şablon şeması uyar. Daha fazla bilgi için *vstemplate* şema bakın [şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md).
+1. *Vstemplate* dosyasının XML dosyasının şablon şemasına bağlı olduğunu doğrulayın. *Vstemplate* şeması hakkında daha fazla bilgi için bkz. [Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md).
 
     > [!NOTE]
-    > Geliştirme sırasında IntelliSense desteği almak için *vstemplate* ekleyin bir `xmlns` özniteliğini `VSTemplate` öğesini ve değerini atayın http://schemas.microsoft.com/developer/vstemplate/2005.
+    > *Vstemplate* dosyasını yazarken IntelliSense desteği almak için, `VSTemplate` öğesine bir `xmlns` özniteliği ekleyin ve bu değere http://schemas.microsoft.com/developer/vstemplate/2005 değerini atayın.
 
-1. Kaydet ve Kapat *vstemplate* dosya.
+1. *Vstemplate* dosyasını kaydedin ve kapatın.
 
-1. Şablonunuzda, içerdiği dosyaları seçin, sağ tıklatın ve seçin **göndermek** > **sıkıştırılmış (daraltılmış) klasör**. Seçtiğiniz dosyalar sıkıştırılmadan bir *.zip* dosya.
+1. Şablonunuza dahil olan dosyaları seçin, sağ tıklayın ve  > **Sıkıştırılmış (daraltılmış) klasöre** **Gönder** ' i seçin. Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 
-1. Yeni yerleştirin *.zip* eski ile aynı dizinde dosya *.zip* dosya.
+1. Yeni *. zip* dosyasını eski *. zip* dosyası ile aynı dizine yerleştirin.
 
-1. Ayıklanan şablon dosyalarını ve eski şablonu silmek *.zip* dosya.
+1. Ayıklanan şablon dosyalarını ve eski şablon *. zip* dosyasını silin.
 
 ## <a name="enable-diagnostic-logging"></a>Tanılama günlüğünü etkinleştirme
 
-İçindeki adımları izleyerek, şablon keşfi için tanılama günlük kaydını etkinleştirebilirsiniz [sorun giderme şablon bulma (genişletilebilirlik)](../extensibility/troubleshooting-template-discovery.md).
+Şablon [bulma sorunlarını giderme (genişletilebilirlik)](../extensibility/troubleshooting-template-discovery.md)bölümündeki adımları izleyerek şablon bulma için tanılama günlüğünü etkinleştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Şablon bulma (genişletilebilirlik) sorunlarını giderme](../extensibility/troubleshooting-template-discovery.md)
+- [Şablon bulma sorunlarını giderme (genişletilebilirlik)](../extensibility/troubleshooting-template-discovery.md)
 - [Şablonları özelleştirme](../ide/customizing-project-and-item-templates.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
 - [Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)

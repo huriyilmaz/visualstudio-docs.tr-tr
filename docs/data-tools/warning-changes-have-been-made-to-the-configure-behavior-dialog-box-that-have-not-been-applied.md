@@ -1,32 +1,32 @@
 ---
-title: Uyarı - uygulanmamış davranışı Yapılandır iletişim kutusunda değişiklik yapıldı
+title: Uyarı-uygulanmamış davranışı Yapılandır iletişim kutusunda değişiklikler yapıldı
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ce5822dd-4f10-4c86-b707-7766837be216
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ae3b86be9ec26f9bb8c9b8978a6276169262933d
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: ad2a108c0ce4162beecd77ac0a761d4950904156
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65457886"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648037"
 ---
-# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>Uyarı: Davranışı Yapılandır iletişim kutusunda, uygulanmamış değişiklikler gerçekleştirildi
+# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>Uyarı: uygulanmamış davranışı Yapılandır iletişim kutusunda değişiklikler yapıldı
 
-Uyarı. Henüz uygulanmamış davranışı Yapılandır iletişim kutusu için değişiklikler yapılmıştır. Yaptığınız değişiklikleri uygulamak istiyor musunuz?
+Uyarı. Uygulanan davranış yapılandırma iletişim kutusunda değişiklikler yapıldı. Değişikliklerinizi uygulamak istiyor musunuz?
 
-**Davranışı Yapılandır** iletişim kutusu yapılandırmanıza olanak sağlar `Insert`, `Update`, ve `Delete` kullanılabilir tüm sınıflar için davranış. Bu ileti, yeni bir seçtiğinizde görünür **sınıfı** ve **davranışı** birleşimi ve önceki değişikliği değil henüz uygulandı.
+**Davranışı Yapılandır** iletişim kutusu, kullanılabilir tüm sınıflar için `Insert`, `Update` ve `Delete` davranışını yapılandırmanızı sağlar. Bu ileti, yeni bir **sınıf** ve **davranış** birleşimi seçtiğinizde ve önceki değişiklik henüz uygulanmadıysa görüntülenir.
 
-## <a name="change-options"></a>Seçeneklerini değiştir
+## <a name="change-options"></a>Seçenekleri Değiştir
 
-- Değişikliği uygulamak ve devam etmek için tıklatın **Evet**. Değişiklik uygulanır seçili **sınıfı** ve **davranışı**.
+- Değişikliği uygulamak ve devam etmek için **Evet**' e tıklayın. Değişiklik, seçilen **sınıfa** ve **davranışa**uygulanır.
 
-- Önceki değişikliğinizi ve devam etmek için tıklatın **Hayır**.
+- Önceki değişikliği iptal etmek ve devam etmek için **Hayır**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

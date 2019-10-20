@@ -1,5 +1,5 @@
 ---
-title: Bir veritabanından resimlere denetim bağlama | Microsoft Docs
+title: Denetimleri bir veritabanından resimlere bağlama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -20,38 +20,38 @@ helpviewer_keywords:
 - images [Visual Basic], dragging from Data Sources window
 ms.assetid: 9748815e-3556-49e8-86b1-c6aa593c6163
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a01220c1c8dc21bc770c509aacfe345fd3107ae5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0b8f6ee192399c8af8a508b2f9c2817db954bb36
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62556529"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72673009"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>Bir veritabanından resimlere denetim bağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanabileceğiniz **veri kaynakları** görüntü uygulamanızda bir denetimin bir veritabanına bağlamak için penceresi. Örneğin, bir görüntüye bağlayabilirsiniz bir <xref:System.Windows.Controls.Image> WPF uygulamasında veya çok denetleyen bir <xref:System.Windows.Forms.PictureBox> denetimini Windows Forms uygulamasında.  
-  
- Bir veritabanı resimleri genellikle bayt dizisi depolanır. Öğeler **veri kaynakları** bayt dizileri türü denetimi gibi depolanmış penceresini ayarlamak **hiçbiri** varsayılan olarak, her şey basit bir yürütülebilir dosyanın bir bayt dizisi bayt dizileri içerebileceğinden büyük bir uygulama. Bir bayt dizisi öğesinde veriye bağlı denetim oluşturmak için **veri kaynakları** bir resmi temsil eden pencere oluşturmak için denetimi seçmesi gerekir.  
-  
- Aşağıdaki yordam olduğunu varsayar **veri kaynakları** penceresi görüntüye bağlı bir öğe ile önceden doldurulur.
-  
-## <a name="bind-a-picture-in-a-database-to-a-control"></a>Bir resmi bir veritabanında bir denetime bağlama  
-  
-1. Tasarım yüzeyinde denetime eklemek istediğiniz WPF Tasarımcısı veya Windows Forms Tasarımcısı'nda açık olduğundan emin olun.  
-  
-2. İçinde **veri kaynakları** penceresinde istediğiniz tabloyu genişletin veya kendi sütunları veya özelliklerini görüntülemek için nesne.  
-  
-3. Sütun veya görüntü verilerinizi içeren bir özellik seçin ve kendi denetimi aşağı açılan listeden aşağıdaki denetimlerden birini seçin:  
-  
-    - WPF Tasarımcısı açıksa seçin **görüntü**.  
-  
-    - Windows Forms Tasarımcısı açıksa seçin **PictureBox**.  
-  
-    - Alternatif olarak, veri bağlamayı destekleyen ve resimleri görüntülemek farklı bir denetimi seçebilirsiniz. Kullanmak istediğiniz denetim kullanılabilir denetimleri listesinde değilse, listeye ekleyin ve ardından bu seçeneği belirleyin. Daha fazla bilgi için [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+**Veri kaynakları** penceresini, bir veritabanındaki bir görüntüyü uygulamanızdaki bir denetime bağlamak için kullanabilirsiniz. Örneğin, bir görüntüyü WPF uygulamasında bir <xref:System.Windows.Controls.Image> denetimine veya Windows Forms uygulamasındaki bir <xref:System.Windows.Forms.PictureBox> denetimine bağlayabilirsiniz.
+
+ Veritabanındaki resimler genellikle bayt dizileri olarak depolanır. Byte dizileri olarak depolanan **veri kaynakları** penceresindeki öğelerin denetim türü varsayılan olarak **none** olarak ayarlanmış, çünkü byte dizileri, basit bir bayt dizisinden büyük bir uygulamanın yürütülebilir dosyasına herhangi bir şey içerebildiğinden. Bir görüntüyü temsil eden **veri kaynakları** penceresinde bir bayt dizisi öğesi için veri bağlantılı bir denetim oluşturmak için, oluşturulacak denetimi seçmeniz gerekir.
+
+ Aşağıdaki yordamda, **veri kaynakları** penceresinin görüntenize bağlanan bir öğeyle zaten doldurulmuş olduğu varsayılır.
+
+## <a name="bind-a-picture-in-a-database-to-a-control"></a>Veritabanında bir resmi bir denetime bağlama
+
+1. Denetimi eklemek istediğiniz tasarım yüzeyinin WPF Tasarımcısında veya Windows Form Tasarımcısı açık olduğundan emin olun.
+
+2. **Veri kaynakları** penceresinde, sütun veya özelliklerini göstermek için istenen tabloyu veya nesneyi genişletin.
+
+3. Görüntü verilerinizi içeren sütunu veya özelliği seçin ve açılan denetim listesinden aşağıdaki denetimlerden birini seçin:
+
+    - WPF Tasarımcısı açıksa **görüntü**' i seçin.
+
+    - Windows Forms Tasarımcısı açıksa, **PictureBox**' ı seçin.
+
+    - Alternatif olarak, veri bağlamayı destekleyen ve görüntü görüntüleyebilen farklı bir denetim seçebilirsiniz. Kullanmak istediğiniz denetim kullanılabilir denetimler listesinde değilse, listeye ekleyebilir ve sonra bunu seçebilirsiniz. Daha fazla bilgi için bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio'da verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)

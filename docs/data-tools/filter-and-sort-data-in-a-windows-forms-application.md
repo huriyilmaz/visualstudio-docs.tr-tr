@@ -14,37 +14,37 @@ helpviewer_keywords:
 - sorting datasets, using data views
 - dataset filtering, using data views
 ms.assetid: f4f100f1-776d-46dc-b2fd-5b35b98d9561
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 17416a3b64d6cbb5f01192440a9df735f0b9fb94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 68adaf6df9f97bee94e7cb393fa01ee133444c80
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62566735"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648466"
 ---
 # <a name="filter-and-sort-data-in-a-windows-forms-application"></a>Bir Windows Forms uygulamasındaki verileri filtreleme ve sıralama
 
-Ayarlayarak verileri filtreleme <xref:System.Windows.Forms.BindingSource.Filter%2A> özelliğini istenen kayıtlar döndüren bir dize ifadesi.
+@No__t_0 özelliğini, istenen kayıtları döndüren bir dize ifadesi olarak ayarlayarak verileri filtreleyebilirsiniz.
 
-Ayarlayarak verileri sıralamak <xref:System.Windows.Forms.BindingSource.Sort%2A> özelliğini sütun adına göre sıralamak isteyebilirsiniz; ekleme `DESC` azalan düzende sıralamak veya ekleme için `ASC` artan düzende sıralamak için.
+@No__t_0 özelliğini, sıralamak istediğiniz sütun adına ayarlayarak verileri sıralarsınız; azalan düzende sıralamak için `DESC` ekleyin veya artan düzende sıralamak için `ASC` ekleyin.
 
 > [!NOTE]
-> Uygulamanızı kullanmıyorsa <xref:System.Windows.Forms.BindingSource> bileşenleri filtreleyebilirsiniz ve kullanarak verileri sıralama <xref:System.Data.DataView> nesneleri. Daha fazla bilgi için [DataViews](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews).
+> Uygulamanız <xref:System.Windows.Forms.BindingSource> bileşenleri kullanmıyorsa, <xref:System.Data.DataView> nesneleri kullanarak verileri filtreleyebilir ve sıralayabilirsiniz. Daha fazla bilgi için bkz. [DataView](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews).
 
-## <a name="to-filter-data-by-using-a-bindingsource-component"></a>BindingSource bileşenini kullanarak verilere filtre uygulamak için
+## <a name="to-filter-data-by-using-a-bindingsource-component"></a>BindingSource bileşeni kullanarak verileri filtrelemek için
 
-- Ayarlama <xref:System.Windows.Forms.BindingSource.Filter%2A> özelliğini döndürmek istediğiniz ifade. Örneğin, aşağıdaki kod ile müşteriler döndürür bir `CompanyName` "B" ile başlar:
+- @No__t_0 özelliğini döndürmek istediğiniz ifadeye ayarlayın. Örneğin, aşağıdaki kod, müşterileri "B" ile başlayan bir `CompanyName` döndürür:
 
      [!code-csharp[VbRaddataDisplaying#6](../data-tools/codesnippet/CSharp/filter-and-sort-data-in-a-windows-forms-application_1.cs)]
      [!code-vb[VbRaddataDisplaying#6](../data-tools/codesnippet/VisualBasic/filter-and-sort-data-in-a-windows-forms-application_1.vb)]
 
-## <a name="to-sort-data-by-using-a-bindingsource-component"></a>BindingSource bileşenini kullanarak verileri sıralama
+## <a name="to-sort-data-by-using-a-bindingsource-component"></a>BindingSource bileşeni kullanarak verileri sıralamak için
 
-- Ayarlama <xref:System.Windows.Forms.BindingSource.Sort%2A> özelliğini sıralamak istediğiniz sütunu. Örneğin, aşağıdaki kod üzerinde müşterileri sıralar `CompanyName` azalan düzende sütun:
+- @No__t_0 özelliğini, sıralamak istediğiniz sütuna ayarlayın. Örneğin, aşağıdaki kod müşterileri `CompanyName` sütununda azalan düzende sıralar:
 
      [!code-csharp[VbRaddataDisplaying#7](../data-tools/codesnippet/CSharp/filter-and-sort-data-in-a-windows-forms-application_2.cs)]
      [!code-vb[VbRaddataDisplaying#7](../data-tools/codesnippet/VisualBasic/filter-and-sort-data-in-a-windows-forms-application_2.vb)]

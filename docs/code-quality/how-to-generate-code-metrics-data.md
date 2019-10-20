@@ -6,25 +6,25 @@ helpviewer_keywords:
 - code metrics data
 - code metrics results
 - code metrics [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbe82fc213937b7e494afd27bfd964347c17e2b8
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 3c4cc5b43880df06752cbce79d58ec71921817a4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179982"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649403"
 ---
-# <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: Kod ölçümü verileri üretme
+# <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: kod ölçümleri verileri oluşturma
 
 Kod ölçümleri verilerini üç şekilde oluşturabilirsiniz:
 
 - [FxCop çözümleyicileri](#fxcop-analyzers-code-metrics-rules) yükleyerek ve içerdiği dört kod ölçümü (bakım) kurallarını etkinleştirerek.
 
-- Visual Studio içindeki [ > **kod ölçümlerini hesapla** ](#calculate-code-metrics-menu-command) menü komutunu seçerek.
+- Visual Studio içindeki [ **kod ölçümlerini  >  hesapla** ](#calculate-code-metrics-menu-command) menü komutunu seçerek.
 
 - Ve Visual Basic projeler için C# [komut satırından](#command-line-code-metrics) .
 
@@ -72,13 +72,13 @@ FxCop çözümleyicileri paketindeki kod ölçümü kurallarının tetikleneceğ
 
 ## <a name="calculate-code-metrics-menu-command"></a>Kod ölçümlerini hesapla menü komutu
 
-**Kod ölçümlerini hesapla** menüsünü **analiz** > ederek IDE 'deki açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
+**Kod ölçümlerini hesapla** menüsünü **Çözümle**  > , IDE 'deki açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>Tüm çözüm için kod ölçümleri sonuçları oluşturma
 
 Tüm çözüm için aşağıdaki yollarla kod ölçümleri sonuçları oluşturabilirsiniz:
 
-- Menü çubuğundan**çözüm için** **kod ölçümlerini** > hesapla **Çözümle** > ' yi seçin.
+- Menü çubuğundan **çözümle**  > **kod ölçümlerini  >  hesapla** ' yı seçin.
 
 - **Çözüm Gezgini**, çözüme sağ tıklayın ve ardından **kod ölçümlerini hesapla**' yı seçin.
 
@@ -90,7 +90,7 @@ Sonuçlar oluşturulur ve **Kod ölçümleri sonuçları** penceresi görüntül
 
 1. **Çözüm Gezgini**, bir veya daha fazla proje seçin.
 
-1. Menü çubuğundan,**Seçili proje (ler) için** **kod ölçümlerini** > hesapla **analiz** > ' i seçin.
+1. **Seçili proje (ler) için**, menü çubuğundan **analiz**  > **kod ölçümlerini hesapla  >  hesapla** ' yı seçin.
 
 Sonuçlar oluşturulur ve **Kod ölçümleri sonuçları** penceresi görüntülenir. Sonuç ayrıntılarını görüntülemek için **hiyerarşideki**ağacı genişletin.
 
@@ -111,7 +111,7 @@ Sonuçlar oluşturulur ve **Kod ölçümleri sonuçları** penceresi görüntül
 
 ### <a name="microsoftcodeanalysismetrics-nuget-package"></a>Microsoft. CodeAnalysis. ölçümler NuGet paketi
 
-Komut satırından kod ölçüm verileri oluşturmanın en kolay yolu, [Microsoft. CodeAnalysis. ölçümler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) NuGet paketini yüklemesidir. Paketini yükledikten sonra, proje dosyanızı içeren dizininden `msbuild /t:Metrics` çalıştırın. Örneğin:
+Komut satırından kod ölçüm verileri oluşturmanın en kolay yolu, [Microsoft. CodeAnalysis. ölçümler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) NuGet paketini yüklemesidir. Paketi yükledikten sonra, proje dosyanızı içeren dizinden `msbuild /t:Metrics` çalıştırın. Örneğin:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics
@@ -134,7 +134,7 @@ Build succeeded.
     0 Error(s)
 ```
 
-Öğesini belirterek `/p:MetricsOutputFile=<filename>`çıkış dosyası adını geçersiz kılabilirsiniz. Ayrıca, ' i belirterek `/p:LEGACY_CODE_METRICS_MODE=true` [eski stil](#previous-versions) kod ölçümleri verilerini de alabilirsiniz. Örneğin:
+@No__t_0 belirterek çıkış dosyası adını geçersiz kılabilirsiniz. Ayrıca, `/p:LEGACY_CODE_METRICS_MODE=true` belirterek [eski stil](#previous-versions) kod ölçümleri verilerini de alabilirsiniz. Örneğin:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics /p:LEGACY_CODE_METRICS_MODE=true /p:MetricsOutputFile="Legacy.xml"
@@ -219,7 +219,7 @@ NuGet paketini yüklemek istemiyorsanız, *ölçümler. exe* yürütülebilir do
 
 1. [DotNet/Roslyn-çözümleyiciler](https://github.com/dotnet/roslyn-analyzers) deposunu kopyalayın.
 2. Visual Studio için Geliştirici Komut İstemi yönetici olarak açın.
-3. **Roslyn-çözümleyiciler** deposunun kökünden aşağıdaki komutu yürütün:`Restore.cmd`
+3. **Roslyn-çözümleyiciler** deposunun kökünden şu komutu yürütün: `Restore.cmd`
 4. Dizini *Src\tools*olarak değiştirin.
 5. **Ölçümler. csproj** projesi oluşturmak için aşağıdaki komutu yürütün:
 
@@ -259,11 +259,11 @@ Yeni komut satırı kod ölçümleri Aracı, çözüm ve proje yüklenebilse de,
 
 #### <a name="metric-value-differences"></a>Ölçüm değeri farkları
 
-Ölçüm `LinesOfCode` , yeni komut satırı kod ölçümleri aracında daha doğru ve güvenilirdir. Bu, herhangi bir codegen farkından bağımsızdır ve araç takımı veya çalışma zamanı değiştiğinde değişmez. Yeni araç, boş satırlar ve açıklamalar dahil olmak üzere gerçek kod satırlarını sayar.
+@No__t_0 ölçümü yeni komut satırı kod ölçümleri aracında daha doğru ve güvenilir. Bu, herhangi bir codegen farkından bağımsızdır ve araç takımı veya çalışma zamanı değiştiğinde değişmez. Yeni araç, boş satırlar ve açıklamalar dahil olmak üzere gerçek kod satırlarını sayar.
 
-`CyclomaticComplexity` `IOperations` Ve gibi`MaintainabilityIndex` diğer ölçümler, *ölçüm. exe*' nin önceki sürümleriyle aynı formülleri kullanır, ancak yeni araç ara dil (IL) yönergeleri yerine (mantıksal kaynak yönergeleri) sayısını sayar. Sayılar, Visual Studio IDE tarafından oluşturulan ve *ölçüm. exe*' nin önceki sürümleri tarafından oluşturulanlar için biraz farklı olacaktır.
+@No__t_0 ve `MaintainabilityIndex` gibi diğer ölçümler, *ölçüm. exe*' nin önceki sürümleriyle aynı formülleri kullanır, ancak yeni araç ara DIL (IL) yönergeleri yerine `IOperations` (mantıksal kaynak yönergeleri) sayısını sayar. Sayılar, Visual Studio IDE tarafından oluşturulan ve *ölçüm. exe*' nin önceki sürümleri tarafından oluşturulanlar için biraz farklı olacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod ölçümleri sonuçları penceresini kullanma](../code-quality/working-with-code-metrics-data.md)
+- [Kod ölçümleri sonuçları penceresini kullanın](../code-quality/working-with-code-metrics-data.md)
 - [Kod ölçüm değerleri](../code-quality/code-metrics-values.md)

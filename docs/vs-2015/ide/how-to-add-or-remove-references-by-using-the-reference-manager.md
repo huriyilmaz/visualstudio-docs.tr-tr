@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Başvurular ekleme veya kaldırma başvuru Yöneticisi'ni kullanarak | Microsoft Docs"
+title: "Nasıl yapılır: başvuru Yöneticisi 'ni kullanarak başvuru ekleme veya kaldırma | Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -20,201 +20,200 @@ helpviewer_keywords:
 - referencing components, assemblies not listed
 ms.assetid: 1aabb520-99b0-46c6-9368-21b4d84793eb
 caps.latest.revision: 48
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 54d64fd59e71b582548aa5efade8d45a24ddb560
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 04b6573b6cd04b5a061a40025a9872d9972e35cb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701162"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645477"
 ---
-# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Nasıl yapılır: Başvuru Yöneticisi'ni kullanarak başvuruları kaldırın veya ekleyin
+# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Nasıl Yapılır: Başvuru Yöneticisi'ni Kullanarak Başvuru Ekleme veya Kaldırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanabileceğiniz **başvuru Yöneticisi** veya başka bir şirketin geliştirdiği eklemek ve yönetmek için iletişim kutusu sizin Microsoft, bileşenine başvuruyor. Bir evrensel Windows uygulaması geliştiriyorsanız, projeniz otomatik olarak tüm doğru Windows SDK'sı DLL'lerin başvuruyor. Bir .NET uygulaması geliştiriyorsanız projeniz otomatik olarak mscorlib.dll başvuruyor. Bazı .NET API'ları el ile eklemek zorunda bileşenlerde sunulur. COM bileşenleri veya özel bileşenler başvuruları el ile eklenmesi gerekir.  
-  
-## <a name="adding-and-removing-a-reference"></a>Başvuru Ekleme ve Kaldırma  
-  
-#### <a name="to-add-a-reference"></a>Bir başvuru eklemek için  
-  
-1. İçinde **Çözüm Gezgini**başvurular düğümüne sağ tıklayın ve seçin **Başvuru Ekle**.  
-  
-2. Başvuruları ekleyin ve ardından belirtin **Tamam** düğmesi.  
-  
-   **Başvuru Yöneticisi** açılır ve kullanılabilir başvuruları gruba göre listeler. Aşağıdaki grupların hangilerinin görüneceğini proje türü belirler:  
-  
-- Derlemeler; Çerçeve ve Uzantılar alt grupları ile.  
-  
-- Çözüm; Projeler alt grubu ile.  
-  
-- Windows; Çekirdek ve Uzantılar alt grupları ile. Windows SDK veya uzantı SDK'sındaki başvuruları kullanarak keşfedebilirsiniz **Nesne Tarayıcısı**.  
-  
-- Gözat; En Son alt grubu ile.  
-  
-## <a name="assemblies-tab"></a>Derlemeler sekmesi  
- **Derlemeleri** sekmesi, başvuru için kullanılabilen tüm .NET Framework derlemelerini listeler. **Derlemeleri** GAC içindeki derlemeler çalışma zamanı ortamının bir parçası olduğu için sekmesinde herhangi bir derleme genel derleme önbelleğinden (GAC) listelenmiyorsa. GAC'de kayıtlı bir derlemeye başvuru içeren bir uygulamayı dağıtır ya da kopyalarsanız, derleme 'Yereli Kopyala' ayarına bakılmaksızın uygulama ile birlikte dağıtılmaz veya kopyalanmaz. Daha fazla bilgi için [proje başvuruları](http://go.microsoft.com/fwlink/?LinkId=238512).  
-  
- EnvDTE ad alanlarının herhangi birine (EnvDTE, EnvDTE80, EnvDTE90, EnvDTE90a veya EnvDTE100) el ile bir başvuru eklediğinizde, Özellikler penceresinde başvurunun 'Birlikte Çalışma Türlerini Katıştır' özelliğini False olarak ayarlayın. Bu özelliğin True olarak ayarlanması, katıştırılamayan belirli EnvDTE özellikleri nedeniyle derleme sorunlarına yol açabilir.  
-  
- Tüm masaüstü projeleri, mscorlib öğesine örtük bir başvuru içerir. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projeleri Microsoft.VisualBasic örtük bir başvuru içerir. İçinde [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)], başvurular listesinden kaldırılsa bile tüm projeler System.Core, örtük bir başvuru içerir.  
-  
- Bir proje türü Derlemeler'i desteklemiyorsa sekmesinde görünmez **başvuru Yöneticisi** iletişim kutusu.  
-  
- Derlemeler sekmesi iki alt sekmeden oluşur:  
-  
-1. Çerçeve, hedef alınan Çerçeveyi oluşturan tüm derlemeleri listeler.  
-  
-   - Projeniz hedeflenen Çerçevenin bir Profilini hedef aldığında, tanıtılan derlemeler Tam Çerçeve içindedir ve Çerçeve listesinde numaralandırılır. Tanıtılan derlemeler, projenin hedeflenen Çerçeve profilindeki mevcut derlemelerden ayırt edilmelerini sağlamak için gri renktedir. Örneğin, bir proje .NET Framework 4 İstemcisi'ni hedef alıyorsa, Çerçeve listesi .NET Framework 4 kaynaklı tanıtılan derlemeleri gösterir. Bir kullanıcı tanıtılan derleme eklediğinde, kullanıcının olduğu, sonra bildirim **başvuru Yöneticisi** iletişim kutusu kapatıldığında, proje .NET Framework 4'e yeniden hedefleneceği ve tanıtılan derlemenin eklenir.  
-  
-   - Projeler için [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamaları hedeflenen içindeki derlemelerin tümüne başvurular içerir [!INCLUDE[net_win8_profile](../includes/net-win8-profile-md.md)] varsayılan olarak proje oluşturma. Yönetilen projelerde nde başvurular klasörünün altındaki bir salt okunur düğüm **Çözüm Gezgini** çerçeve'nin tümüne yönelik başvuruyu belirtir. Buna göre çerçeve sekmesi, tüm Framework derlemelerine listeleme yüklemeyecekseniz ve bunun yerine şu iletiyi görüntüler: "Tüm Framework derlemelerine zaten başvurulmuş. Lütfen Nesne Tarayıcısı Framework'deki başvuruları araştırmak için kullanın." Masaüstü projeleri, çerçeve sekmesi, hedeflenen çerçeveden derlemeleri numaralandırır ve kullanıcı uygulamanın gerek duyduğu başvuruları eklemelidir.  
-  
-2. Uzantılar, harici bileşen ve denetim satıcılarının hedeflenen Çerçeveyi genişletmek için geliştirdiği tüm derlemeleri listeler. Kullanıcı uygulamasının amacına bağlı olarak, bu derlemelere gerek duyulabilir.  
-  
-   - Uzantılar, aşağıdaki konumlarda kayıtlı derlemeleri numaralandırmak suretiyle doldurulur:  
-  
-       ```  
-       32-bit machine:  
-       HKEY_CURRENT_USER\SOFTWARE\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
-       HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
-       64-bit machine:  
-       HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
-       HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]  
-       And older versions of the [Target Framework Identifier]  
-       ```  
-  
-        Örneğin, bir proje 32-bit makinede .NET Framework 4 hedefliyse, uzantıları \Microsoft altında kayıtlı derlemeleri numaralandıracaktır\\. NETFramework\v4.0\AssemblyFoldersEx\\, \Microsoft\\. NETFramework\v3.5\AssemblyFoldersEx\\, \Microsoft\\. NETFramework\v3.0\AssemblyFoldersEx\\ve \Microsoft\\. NETFramework\v2.0\AssemblyFoldersEx\\.  
-  
-   Listedeki bazı bileşenler, bağlı olarak gösterilmeyebilir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] projenizin sürüm. Bu, aşağıdaki koşullarda oluşabilir:  
-  
-- .NET Framework'ün yeni bir sürümünü kullanan bileşen, .NET Framework'ün önceki bir sürümünü hedefleyen bir proje ile uyumlu değil.  
-  
-     Bir proje için hedef .NET Framework sürümünü değiştirme hakkında daha fazla bilgi için bkz: [nasıl yapılır: .NET Framework sürümü hedefleme](../ide/how-to-target-a-version-of-the-dotnet-framework.md).  
-  
-- Kullanan bileşen [!INCLUDE[net_v40_short](../includes/net-v40-short-md.md)] hedefleyen bir projeyle uyumsuzdur [!INCLUDE[net_v45](../includes/net-v45-md.md)].  
-  
-     Bazı projeler hedef yeni bir uygulama oluşturduğunuzda [!INCLUDE[net_v45](../includes/net-v45-md.md)] varsayılan olarak. Daha fazla bilgi için [.NET Framework istemci profili](https://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1).  
-  
-- Bunun yapılması, derleme hatalarına neden olabilir, başka bir projenin çıktılarına dosya başvuruları aynı çözümde eklemekten kaçının. Bunun yerine, **projeleri** sekmesinde **Başvuru Ekle** projeden projeye başvuru oluşturmak için iletişim kutusu. Bu takım geliştirme projelerinizde oluşturduğunuz sınıf kitaplıklarının daha iyi yönetimine etkinleştirerek kolaylaştırır. Daha fazla bilgi için [bozuk başvuruları sorun giderme](../ide/troubleshooting-broken-references.md).  
-  
+Sizin, Microsoft veya başka bir şirketinizin geliştirdiği bileşenlere başvurular eklemek ve bunları yönetmek için **başvuru Yöneticisi** iletişim kutusunu kullanabilirsiniz. Bir Evrensel Windows uygulaması geliştiriyorsanız, projeniz otomatik olarak doğru Windows SDK dll 'Lerine başvurur. Bir .NET uygulaması geliştiriyorsanız, projeniz mscorlib. dll dosyasına otomatik olarak başvurur. Bazı .NET API 'Leri, el ile eklemeniz gereken bileşenlerde kullanıma sunulur. COM bileşenlerine veya özel bileşenlere yapılan başvuruların el ile eklenmesi gerekir.
+
+## <a name="adding-and-removing-a-reference"></a>Başvuru Ekleme ve Kaldırma
+
+#### <a name="to-add-a-reference"></a>Başvuru eklemek için
+
+1. **Çözüm Gezgini**, Başvurular düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
+
+2. Eklenecek başvuruları belirtin ve sonra **Tamam** düğmesini seçin.
+
+   **Başvuru Yöneticisi** açılır ve gruba göre kullanılabilir başvuruları listeler. Aşağıdaki grupların hangilerinin görüneceğini proje türü belirler:
+
+- Derlemeler; Çerçeve ve Uzantılar alt grupları ile.
+
+- Çözüm; Projeler alt grubu ile.
+
+- Windows; Çekirdek ve Uzantılar alt grupları ile. **Nesne tarayıcısı**kullanarak Windows SDK veya uzantı SDK 'lerinde başvuruları inceleyebilirsiniz.
+
+- Gözat; En Son alt grubu ile.
+
+## <a name="assemblies-tab"></a>Derlemeler sekmesi
+ **Derlemeler** sekmesi, başvuru için kullanılabilen tüm .NET Framework derlemeleri listeler. GAC içindeki derlemeler çalışma zamanı ortamının bir parçası olduğundan, **derlemeler** sekmesi genel derleme ÖNBELLEĞINDEN (GAC) herhangi bir derlemeyi listeetmez. GAC'de kayıtlı bir derlemeye başvuru içeren bir uygulamayı dağıtır ya da kopyalarsanız, derleme 'Yereli Kopyala' ayarına bakılmaksızın uygulama ile birlikte dağıtılmaz veya kopyalanmaz. Daha fazla bilgi için bkz. [Proje başvuruları](http://go.microsoft.com/fwlink/?LinkId=238512).
+
+ EnvDTE ad alanlarının herhangi birine (EnvDTE, EnvDTE80, EnvDTE90, EnvDTE90a veya EnvDTE100) el ile bir başvuru eklediğinizde, Özellikler penceresinde başvurunun 'Birlikte Çalışma Türlerini Katıştır' özelliğini False olarak ayarlayın. Bu özelliğin True olarak ayarlanması, katıştırılamayan belirli EnvDTE özellikleri nedeniyle derleme sorunlarına yol açabilir.
+
+ Tüm masaüstü projeleri, mscorlib öğesine örtük bir başvuru içerir. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projeler Microsoft. VisualBasic 'e örtülü bir başvuru içerir. @No__t_0, tüm projeler, başvurular listesinden kaldırılsa bile, System. Core 'a örtük bir başvuru içerir.
+
+ Bir proje türü derlemeleri desteklemiyorsa, sekme **başvuru Yöneticisi** iletişim kutusunda görünmez.
+
+ Derlemeler sekmesi iki alt sekmeden oluşur:
+
+1. Çerçeve, hedef alınan Çerçeveyi oluşturan tüm derlemeleri listeler.
+
+   - Projeniz hedeflenen Çerçevenin bir Profilini hedef aldığında, tanıtılan derlemeler Tam Çerçeve içindedir ve Çerçeve listesinde numaralandırılır. Tanıtılan derlemeler, projenin hedeflenen Çerçeve profilindeki mevcut derlemelerden ayırt edilmelerini sağlamak için gri renktedir. Örneğin, bir proje .NET Framework 4 İstemcisi'ni hedef alıyorsa, Çerçeve listesi .NET Framework 4 kaynaklı tanıtılan derlemeleri gösterir. Kullanıcı tanıtılan bir derlemeyi eklediğinde, **başvuru Yöneticisi** iletişim kutusu kapatıldıktan sonra, proje .NET Framework 4 ' e yeniden hedeflenecek ve tanıtılan derleme eklenecek şekilde bildirilir.
+
+   - @No__t_0 uygulamalar için projeler, proje oluşturma sırasında hedeflenen [!INCLUDE[net_win8_profile](../includes/net-win8-profile-md.md)] tüm derlemelere yönelik başvuruları içerir. Yönetilen projelerde, **Çözüm Gezgini** ' deki başvurular klasörü altındaki salt okunurdur bir düğüm, tüm Framework başvurusunu gösterir. Buna göre, Çerçeve sekmesi, Çerçeve kaynaklı derlemelerin hiçbirini numaralandırmaz ve bunun yerine şu iletiyi görüntüler: "Tüm Framework derlemelerine zaten başvurulmuş. Lütfen Framework içindeki başvuruları araştırmak için Nesne Tarayıcısı kullanın. " Masaüstü projeleri için, Framework sekmesi hedeflenen çerçeveden derlemeleri sıralar ve kullanıcının, uygulamanın gerektirdiği başvuruları eklemesi gerekir.
+
+2. Uzantılar, harici bileşen ve denetim satıcılarının hedeflenen Çerçeveyi genişletmek için geliştirdiği tüm derlemeleri listeler. Kullanıcı uygulamasının amacına bağlı olarak, bu derlemelere gerek duyulabilir.
+
+   - Uzantılar, aşağıdaki konumlarda kayıtlı derlemeleri numaralandırmak suretiyle doldurulur:
+
+       ```
+       32-bit machine:
+       HKEY_CURRENT_USER\SOFTWARE\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]
+       HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]
+       64-bit machine:
+       HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]
+       HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\[Target Framework Identifier]\v[Target Framework Version]\AssemblyFoldersEx\[UserComponentName]\@default=[Disk location of assemblies]
+       And older versions of the [Target Framework Identifier]
+       ```
+
+        Örneğin, bir proje 32 bitlik bir makinede .NET Framework 4 ' ü hedefliyorsa, uzantılar \Microsoft \\. NETFramework\v4.0\AssemblyFoldersEx \\, \Microsoft \\. NETFramework\v3.5\ altında kayıtlı derlemeleri numaralandırır. AssemblyFoldersEx \\, \Microsoft \\. Netframework\v3,\assemblyfoldersex \\ ve \Microsoft \\. NETFramework\v2.0\AssemblyFoldersEx \\.
+
+   Listedeki bazı bileşenler, projenizin [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümüne bağlı olarak gösterilmeyebilir. Bu durum aşağıdaki koşullarda oluşabilir:
+
+- .NET Framework son sürümünü kullanan bir bileşen, .NET Framework önceki bir sürümünü hedefleyen bir proje ile uyumsuzdur.
+
+     Bir proje için hedef .NET Framework sürümünün nasıl değiştirileceği hakkında bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/how-to-target-a-version-of-the-dotnet-framework.md).
+
+- @No__t_0 kullanan bir bileşen, [!INCLUDE[net_v45](../includes/net-v45-md.md)] hedefleyen bir projeyle uyumsuzdur.
+
+     Yeni bir uygulama oluşturduğunuzda, bazı projeler varsayılan olarak [!INCLUDE[net_v45](../includes/net-v45-md.md)] hedefleyin. Daha fazla bilgi için bkz. [.NET Framework Istemci profili](https://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1).
+
+- Aynı çözümdeki başka bir projenin çıktılarına dosya başvuruları eklemekten kaçının, çünkü bunu yapmak derleme hatalarına neden olabilir. Bunun yerine, projeden projeye başvurular oluşturmak için **Başvuru Ekle** Iletişim kutusunun **Projeler** sekmesini kullanın. Bu, projelerinizde oluşturduğunuz sınıf kitaplıklarının daha iyi yönetimini etkinleştirerek takım geliştirmeyi kolaylaştırır. Daha fazla bilgi için bkz. [Hatalı başvuruların sorunlarını giderme](../ide/troubleshooting-broken-references.md).
+
 - > [!NOTE]
-    > Visual Studio 2015'te, bir projenin .NET Framework hedef sürümü sürüm 4.5 ise ve diğer projenin hedef sürümü sürüm 2, 3, 3.5 veya 4.0 ise bir proje başvurusu yerine dosya başvurusu oluşturulur.  
-  
-#### <a name="to-display-an-assembly-in-the-add-reference-dialog-box"></a>Bir derlemeyi Başvuru Ekle iletişim kutusunda görüntülemek için  
-  
-- Taşıma veya derlemeyi aşağıdaki konumlardan birine kopyalayın:  
-  
-  - Geçerli proje dizini. (Kullanarak bu derlemeleri bulabilirsiniz **Gözat** sekmesini.)  
-  
-  - Aynı çözüm içindeki diğer proje dizinleri. (Kullanarak bu derlemeleri bulabilirsiniz **projeleri** sekmesini.)  
-  
-    \- veya -  
-  
-- Görüntülenecek derlemelerin konumunu belirten bir kayıt defteri anahtarını ayarlayın:  
-  
-   Bir 32-bit işletim sistemi için aşağıdaki kayıt defteri anahtarlarından birini ekleyin.  
-  
-  - [HKEY_CURRENT_USER\SOFTWARE\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
-  
-  - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@= "*AssemblyLocation*"  
-  
-    Bir 64-bit işletim sistemi için bir 32-bit kayıt defteri kovanında bulunan aşağıdaki kayıt defteri anahtarlarından birini ekleyin.  
-  
-  - [HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
-  
-  - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies]@="*AssemblyLocation*"  
-  
-    *VersionMinimum* geçerli en düşük .NET Framework sürümü. Varsa *VersionMinimum* v3.0, AssemblyFoldersEx içinde belirtilen klasörler uygulamadığınız projeleri için .NET Framework 3.0 ve üstünü hedefleyen.  
-  
-    *AssemblyLocation* görünmesini istediğiniz derlemelerin dizinidir **Başvuru Ekle** iletişim kutusunda, örneğin, C:\MyAssemblies\\.  
-  
-    HKEY_LOCAL_MACHINE düğümü altında kayıt defteri anahtarı oluşturma sağlayan tüm kullanıcıların belirtilen konumda derlemelerde **Başvuru Ekle** iletişim kutusu. HKEY_CURRENT_USER düğümü altında kayıt defteri anahtarı oluşturma yalnızca geçerli kullanıcı ayarını etkiler.  
-  
-    Açık **Başvuru Ekle** iletişim kutusunu bir daha. Derlemeleri görünmelidir **.NET** sekmesi. Aksi takdirde, derlemelerin yer olduğundan emin olun belirtilen *AssemblyLocation* dizin, Visual Studio'yu yeniden başlatın ve yeniden deneyin.  
-  
-## <a name="com-tab"></a>COM sekmesi  
- COM sekmesi, başvuru için kullanılabilen tüm COM bileşenlerini listeler. Dahili bildirim içeren kayıtlı bir COM DLL öğesine başvuru eklemek isterseniz, önce DLL kaydını silin. Aksi takdirde, Visual Studio, derleme başvurusunu yerel bir DLL olarak değil, bir ActiveX Denetimi olarak ekler.  
-  
- Bir proje türü COM'u desteklemiyorsa sekmesinde görünmez **başvuru Yöneticisi** iletişim kutusu.  
-  
-## <a name="solution-tab"></a>Çözüm sekmesi  
- Çözüm sekmesi, geçerli çözüm içindeki tüm uyumlu projeleri Projeler alt sekmesinde listeler.  
-  
- Bir proje, farklı bir .NET Framework sürümünü hedef alan başka bir projeye başvuruda bulunabilir. Örneğin, hedefleyen bir proje oluşturabilirsiniz [!INCLUDE[net_v40_short](../includes/net-v40-short-md.md)] ancak .NET Framework 2 için oluşturulmuş bir derlemeyi başvuruyor. Ancak, .NET Framework 2 projesi başvuramaz bir [!INCLUDE[net_v40_short](../includes/net-v40-short-md.md)] proje. Daha fazla bilgi için [belirli bir .NET Framework sürümünü hedefleme](../ide/targeting-a-specific-dotnet-framework-version.md).  
-  
- Hedefleyen bir projeye [!INCLUDE[net_v40_short](../includes/net-v40-short-md.md)] hedefleyen bir projeyle uyumsuzdur [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)].  
-  
- İçinde [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)], bir proje .NET Framework 4 hedefliyor ve başka bir proje daha önceki bir sürümünü hedefleyen bir proje başvurusu yerine dosya başvurusu oluşturulur.  
-  
- Hedefleyen bir projeye [!INCLUDE[net_win8_profile](../includes/net-win8-profile-md.md)] .NET Framework geçme veya tam tersi hedefleyen bir projeye bir proje başvurusu eklenemiyor.  
-  
-## <a name="windows-tab"></a>Windows sekmesi  
- Windows sekmesi, Windows işletim sisteminin çalıştığı platformlara özgü tüm SDK'ları listeler.  
-  
- Visual Studio'da bir WinMD dosyasını iki şekilde oluşturabilirsiniz:  
-  
-- **[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulaması yönetilen projeleri**: [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulaması projeleri WinMD ikili dosyalarını çıktı proje özelliklerini ayarlayarak &#124; Output Type = WinMD dosyası. WinMD dosya adı, içinde varolan tüm alan adlarının üst küme alan adı olmalıdır. Örneğin, bir proje A.B ve A.B.C ad alanlarından oluşuyorsa, çıktısı verilen WinMD için olası adlar A.winmd ve A.B.winmd olur. Bir kullanıcı bir Project Properties girerse &#124; derleme adı veya proje özellikleri &#124; projedeki ad alanları kümesinden kopuk Namespace değeri veya bir proje içinde hiçbir üst küme ad alanı, bir derleme uyarısı oluşturulur: 'A.winmd' Bu derleme için geçerli bir .winmd bir dosya adı değil. Bir Windows Meta Veri dosyası içindeki tüm türler, dosya adının bir alt ad alanında mevcut olmalıdır. Dosya adının alt ad alanında mevcut olmayan türler çalışma zamanında bulunamaz. Bu derlemede, en küçük ortak ad alanı 'CSWSClassLibrary1'dir. Bir masaüstü Visual Basic veya Visual C# projesi yalnızca kullanılarak oluşturulmuş winmd'leri [!INCLUDE[win8](../includes/win8-md.md)] birinci Winmd'ler bilinir ve winmd oluşturamaz, SDK.  
-  
-- **[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulaması yerel projeleri**: Yerel bir WinMD dosyası yalnızca meta verilerden oluşur. Uygulaması ayrı bir DLL dosyası içinde var olur. Bir üretebilir yerel ikili dosyaları Windows çalışma zamanı bileşeni proje şablonu seçilerek **yeni proje** iletişim kutusu ya da boş bir projeden başlatarak ve bir WinMD dosyası oluşturmak için proje özelliklerini değiştirme. Proje kopuk ad alanlarından oluşuyorsa, bir yapı hatası kullanıcıya ad alanlarını birleştirmesi veya MSMerge aracını çalıştırması gerektiğini söyler.  
-  
-  Windows sekmesi iki alt gruptan oluşur.  
-  
-### <a name="core-subgroup"></a>Çekirdek Alt Grubu  
- Çekirdek alt grubu, hedeflenen Windows sürümü için SDK içindeki tüm WinMD'leri (Windows Çalışma Zaman öğeleri için) listeler.  
-  
- [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] Uygulama projeleri içindeki winmd'lerin tümüne başvurular içerir [!INCLUDE[win8](../includes/win8-md.md)] SDK'sı varsayılan olarak proje oluşturma. Yönetilen projelerde nde başvurular klasörünün altındaki bir salt okunur düğüm **Çözüm Gezgini** nin tamamına yönelik başvuruyu belirtir [!INCLUDE[win8](../includes/win8-md.md)] SDK. Buna göre başvuru Yöneticisi'nde Çekirdek alt grubu derlemelerin hiçbirini numaralandırmaz [!INCLUDE[win8](../includes/win8-md.md)] SDK ve bunun yerine bir ileti görüntüler: "Windows SDK'sı zaten başvuruldu. Lütfen Windows SDK'sındaki başvuruları araştırmak için Nesne Gezgini'ni kullanın.”  
-  
- Masaüstü projelerinde, varsayılan olarak çekirdek alt grubu görünmez. Windows çalışma zamanı proje düğümü için kısayol menüsünü açarak ekleyebilirsiniz seçme **projeyi**, aşağıdaki kod parçacığını ekleyerek ve projeyi yeniden açarak (proje düğümünü seçin **projeyiyenidenyükle**). Çağırdığınızda **başvuru Yöneticisi** iletişim kutusu çekirdek alt grubu görünür.  
-  
-```  
-<PropertyGroup>  
-  <TargetPlatformVersion>8.0</TargetPlatformVersion>  
-</PropertyGroup>  
-```  
-  
- Seçtiğinizden emin olun **Windows** bu alt grupta onay kutusu. Bundan sonra Windows Çalışma Zamanı öğelerini kullanabilmeniz gerekir. Bununla birlikte, Windows Çalışma Zamanı'nın IEnumerable gibi bazı standart sınıfları ve arabirimleri (Windows Çalışma Zamanı kitaplıklarının her yerinde kullanılan) tanımladığı System.Runtime öğesini de eklemek isteyeceksiniz. System.Runtime öğesini ekleme hakkında daha fazla bilgi için bkz: [yönetilen Masaüstü uygulamaları ve Windows çalışma zamanı](https://msdn.microsoft.com/library/windows/apps/jj856306.aspx#consuming_standard_windows_runtime_types).  
-  
-### <a name="extensions-subgroup"></a>Uzantılar Alt Grubu  
- Uzantılar, hedeflenen Windows platformunu genişleten kullanıcı SDK'larını listeler. Bu sekme görünür [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulaması projeleri yalnızca. Masaüstü projeleri yalnızca birinci taraf .winmd dosyalarını kullanabildiğinden, bu sekmeyi göstermezler.  
-  
- SDK, Visual Studio'nun tek bir bileşen olarak kabul ettiği dosyalar topluluğudur. Uzantılar sekmesinde, proje için geçerli bir SDK'ları **başvuru Yöneticisi** iletişim kutusunun çağrıldığı tek varlıklar halinde listelenir. Bir projeye eklendiğinde, SDK içeriğinin tümü Visual Studio tarafından kullanılır; öyle ki kullanıcının IntelliSense, araç kutusu, tasarımcılar, Nesne Tarayıcısı, yapı, dağıtım, hata ayıklama ve paketleme içinde SDK içeriğinden faydalanmak için başka hiçbir işlem yapmasına gerek kalmaz. Uzantılar sekmesinde SDK'nızı görüntüleme hakkında daha fazla bilgi için bkz: [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md).  
-  
+    > Visual Studio 2015 ' de, bir projenin .NET Framework hedef sürümü 4,5 ise ve diğer projenin hedef sürümü sürüm 2, 3, 3,5 veya 4,0 ise, proje başvurusu yerine bir dosya başvurusu oluşturulur.
+
+#### <a name="to-display-an-assembly-in-the-add-reference-dialog-box"></a>Başvuru Ekle iletişim kutusunda bir derlemeyi göstermek için
+
+- Derlemeyi aşağıdaki konumlardan birine taşıyın veya kopyalayın:
+
+  - Geçerli proje dizini. (Bu derlemeleri, **tarayıcı** sekmesini kullanarak bulabilirsiniz.)
+
+  - Aynı çözümdeki diğer proje dizinleri. ( **Projeler** sekmesini kullanarak bu derlemeleri bulabilirsiniz.)
+
+    \- veya-
+
+- Görüntülenecek derlemelerin konumunu belirten bir kayıt defteri anahtarı ayarlayın:
+
+   32 bitlik bir işletim sistemi için aşağıdaki kayıt defteri anahtarlarından birini ekleyin.
+
+  - [HKEY_CURRENT_USER\SOFTWARE\Microsoft \\. NETFramework \\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+
+  - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft \\. NETFramework \\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+
+    64 bitlik bir işletim sistemi için, 32 bit kayıt defteri kovanında aşağıdaki kayıt defteri anahtarlarından birini ekleyin.
+
+  - [HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft \\. NETFramework \\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+
+  - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft \\. NETFramework \\*VersionMinimum*\AssemblyFoldersEx\MyAssemblies] @ = "*AssemblyLocation*"
+
+    *VersionMinimum* , uygulanan en düşük .NET Framework sürümüdür. *VersionMinimum* değeri v 3.0 Ise, AssemblyFoldersEx içinde belirtilen klasörler, .NET Framework 3,0 ve üstünü hedefleyen projeler için geçerlidir.
+
+    *AssemblyLocation* , **Başvuru Ekle** iletişim kutusunda görünmesini istediğiniz derlemelerin dizinidir, örneğin, C:\MyAssemblies \\.
+
+    HKEY_LOCAL_MACHINE düğümü altında kayıt defteri anahtarı oluşturmak, tüm kullanıcıların **Başvuru Ekle** iletişim kutusunda belirtilen konumdaki derlemeleri görmesini sağlar. HKEY_CURRENT_USER düğümü altında kayıt defteri anahtarı oluşturulması yalnızca geçerli kullanıcının ayarını etkiler.
+
+    **Başvuru Ekle** iletişim kutusunu tekrar açın. Derlemeler **.net** sekmesinde görünmelidir. Aksi takdirde, derlemelerin belirtilen *AssemblyLocation* dizininde bulunduğundan emin olun, Visual Studio 'yu yeniden başlatın ve yeniden deneyin.
+
+## <a name="com-tab"></a>COM sekmesi
+ COM sekmesi, başvuru için kullanılabilen tüm COM bileşenlerini listeler. Dahili bildirim içeren kayıtlı bir COM DLL öğesine başvuru eklemek isterseniz, önce DLL kaydını silin. Aksi takdirde, Visual Studio, derleme başvurusunu yerel bir DLL olarak değil, bir ActiveX Denetimi olarak ekler.
+
+ Bir proje türü COM 'u desteklemiyorsa, sekme **başvuru Yöneticisi** iletişim kutusunda görünmez.
+
+## <a name="solution-tab"></a>Çözüm sekmesi
+ Çözüm sekmesi, geçerli çözüm içindeki tüm uyumlu projeleri Projeler alt sekmesinde listeler.
+
+ Bir proje, farklı bir .NET Framework sürümünü hedef alan başka bir projeye başvuruda bulunabilir. Örneğin, [!INCLUDE[net_v40_short](../includes/net-v40-short-md.md)] hedefleyen, ancak .NET Framework 2 için oluşturulmuş bir derlemeye başvuran bir proje oluşturabilirsiniz. Ancak, .NET Framework 2 projesi bir [!INCLUDE[net_v40_short](../includes/net-v40-short-md.md)] projesine başvuramaz. Daha fazla bilgi için bkz. [belirli bir .NET Framework sürümünü hedefleme](../ide/targeting-a-specific-dotnet-framework-version.md).
+
+ @No__t_0 hedefleyen bir proje, [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)] hedefleyen bir proje ile uyumsuzdur.
+
+ @No__t_0, bir proje .NET Framework 4 ' ü hedefliyorsa ve başka bir proje daha önceki bir sürümü hedefliyorsa, proje başvurusu yerine bir dosya başvurusu oluşturulur.
+
+ @No__t_0 hedefleyen bir proje, .NET Framework hedefleyen bir projeye bir proje başvurusu ekleyemez ve tam tersi de geçerlidir.
+
+## <a name="windows-tab"></a>Windows sekmesi
+ Windows sekmesi, Windows işletim sisteminin çalıştığı platformlara özgü tüm SDK'ları listeler.
+
+ Visual Studio'da bir WinMD dosyasını iki şekilde oluşturabilirsiniz:
+
+- **uygulama tarafından yönetilen projeler [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]** : [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulama projeleri, proje özellikleri &#124; çıkış türü = winmd dosyası ayarlayarak winmd ikililerini çıktısını alabilir. WinMD dosya adı, içinde varolan tüm alan adlarının üst küme alan adı olmalıdır. Örneğin, bir proje A.B ve A.B.C ad alanlarından oluşuyorsa, çıktısı verilen WinMD için olası adlar A.winmd ve A.B.winmd olur. Bir Kullanıcı projedeki ad alanları kümesinden birleştirilmemiş &#124; bir proje özellikleri derleme adı &#124; veya proje özellikleri ad alanı değeri girerse veya bir proje içinde bir üst küme ad alanı yoksa, bir derleme uyarısı oluşturulur: ' a. winmd ' bir Bu derleme için geçerli. winmd dosya adı. Bir Windows Meta Veri dosyası içindeki tüm türler, dosya adının bir alt ad alanında mevcut olmalıdır. Dosya adının alt ad alanında mevcut olmayan türler çalışma zamanında bulunamaz. Bu derlemede, en küçük ortak ad alanı 'CSWSClassLibrary1'dir. Masaüstü Visual Basic veya görsel C# proje yalnızca birinci taraf wınmds olarak bilinen [!INCLUDE[win8](../includes/win8-md.md)] SDK 'ları kullanılarak oluşturulan wınmds 'yi kullanabilir ve WinMDs oluşturmazlar.
+
+- **uygulama yerel projelerini [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]** : yerel bir WinMD dosyası yalnızca meta verilerden oluşur. Uygulaması ayrı bir DLL dosyası içinde var olur. **Yeni proje** iletişim kutusunda Windows çalışma zamanı bileşen proje şablonunu seçerek veya boş bir projeden başlayıp ve proje özelliklerini bir WinMD dosyası oluşturacak şekilde değiştirerek, yerel ikili dosyalar üretebilir. Proje kopuk ad alanlarından oluşuyorsa, bir yapı hatası kullanıcıya ad alanlarını birleştirmesi veya MSMerge aracını çalıştırması gerektiğini söyler.
+
+  Windows sekmesi iki alt gruptan oluşur.
+
+### <a name="core-subgroup"></a>Çekirdek Alt Grubu
+ Çekirdek alt grubu, hedeflenen Windows sürümü için SDK içindeki tüm WinMD'leri (Windows Çalışma Zaman öğeleri için) listeler.
+
+ [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulama projeleri, proje oluşturma sırasında varsayılan olarak [!INCLUDE[win8](../includes/win8-md.md)] SDK 'sında tüm Wınmds başvuruları içerir. Yönetilen projelerde, **Çözüm Gezgini** ' deki başvurular klasörü altındaki salt okunurdur bir düğüm, tüm [!INCLUDE[win8](../includes/win8-md.md)] SDK 'nın başvurusunu gösterir. Buna uygun olarak, başvuru yöneticisindeki çekirdek alt grubu [!INCLUDE[win8](../includes/win8-md.md)] SDK 'daki derlemelerin hiçbirini numaralandırmaz ve bunun yerine bir ileti görüntüler: "Windows SDK zaten Başvurulmuş. Lütfen Windows SDK'sındaki başvuruları araştırmak için Nesne Gezgini'ni kullanın.”
+
+ Masaüstü projelerinde, varsayılan olarak çekirdek alt grubu görünmez. Proje düğümü için kısayol menüsünü açıp, **Projeyi Kaldır**' ı seçip, aşağıdaki kod parçacığını ekleyerek ve projeyi yeniden açarak Windows çalışma zamanı ekleyebilirsiniz (proje düğümünde projeyi **yeniden yükle**' yi seçin). **Başvuru Yöneticisi** iletişim kutusunu çağırdığınızda, çekirdek alt grubu görünür.
+
+```
+<PropertyGroup>
+  <TargetPlatformVersion>8.0</TargetPlatformVersion>
+</PropertyGroup>
+```
+
+ Bu alt grup üzerinde **Windows** onay kutusunu seçtiğinizden emin olun. Bundan sonra Windows Çalışma Zamanı öğelerini kullanabilmeniz gerekir. Bununla birlikte, Windows Çalışma Zamanı'nın IEnumerable gibi bazı standart sınıfları ve arabirimleri (Windows Çalışma Zamanı kitaplıklarının her yerinde kullanılan) tanımladığı System.Runtime öğesini de eklemek isteyeceksiniz. System. Runtime ekleme hakkında daha fazla bilgi için bkz. [yönetilen masaüstü uygulamaları ve Windows çalışma zamanı](https://msdn.microsoft.com/library/windows/apps/jj856306.aspx#consuming_standard_windows_runtime_types).
+
+### <a name="extensions-subgroup"></a>Uzantılar Alt Grubu
+ Uzantılar, hedeflenen Windows platformunu genişleten kullanıcı SDK'larını listeler. Bu sekme yalnızca [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulama projeleri için görüntülenir. Masaüstü projeleri yalnızca birinci taraf .winmd dosyalarını kullanabildiğinden, bu sekmeyi göstermezler.
+
+ SDK, Visual Studio'nun tek bir bileşen olarak kabul ettiği dosyalar topluluğudur. Uzantılar sekmesinde, **başvuru Yöneticisi** iletişim kutusunun çağrıldığı proje Için uygulanan SDK 'lar tek girdi olarak listelenir. Bir projeye eklendiğinde, SDK içeriğinin tümü Visual Studio tarafından kullanılır; öyle ki kullanıcının IntelliSense, araç kutusu, tasarımcılar, Nesne Tarayıcısı, yapı, dağıtım, hata ayıklama ve paketleme içinde SDK içeriğinden faydalanmak için başka hiçbir işlem yapmasına gerek kalmaz. SDK 'larınızı Uzantılar sekmesinde görüntüleme hakkında daha fazla bilgi için bkz. [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md).
+
 > [!NOTE]
-> Proje başka bir SDK'ya bağımlı olan bir SDK'ya başvuruda bulunursa, kullanıcı ikinci SDK için el ile bir başvuru eklemediği sürece Visual Studio ikinci SDK'yı kullanmaz. Ne zaman bir kullanıcının seçtiği bir SDK'sı üzerinde **uzantıları** sekmesinde **başvuru Yöneticisi** iletişim kutusu yalnızca adı ve SDK sürüm aynı zamanda tüm SDK adı listeleyerek SDK bağımlılıklarını tanımlamak kullanıcı yardımcı olur Ayrıntılar bölmesinde bağımlılıkları. Kullanıcı bağımlılıkları fark etmez ve yalnızca SDK'yı eklerse, MSBuild kullanıcıdan bağımlılıkları eklemesini ister.  
-  
- Bir proje türü desteklemiyorsa **uzantıları**, sekmesinde görünmez **başvuru Yöneticisi** iletişim kutusu.  
-  
-## <a name="browse-button"></a>Gözat düğmesi  
- Kullanabileceğiniz **Gözat** düğmesini dosya sistemindeki bir bileşen için göz atın.  
-  
- Bir proje, farklı bir .NET Framework sürümünü hedef alan başka bir bileşene başvuruda bulunabilir. Örneğin, .NET Framework 2'yi hedefleyen bir bileşene başvuruda bulunan .NET Framework 4 İstemci Profili'ni hedef alan bir uygulama oluşturabilirsiniz. Daha fazla bilgi için [belirli bir .NET Framework sürümünü hedefleme](../ide/targeting-a-specific-dotnet-framework-version.md).  
-  
- Aynı çözümdeki başka bir projenin çıktılarına dosya başvuruları eklemekten kaçınmalısınız; bu taktik derleme hatalarına neden olabilir. Bunun yerine, **çözüm** sekmesinde **başvuru Yöneticisi** projeden projeye başvuru oluşturmak için iletişim kutusu. Bu taktik, projelerinizde oluşturduğunuz sınıf kitaplıklarının daha iyi yönetimine olanak tanıyarak takım geliştirmeyi kolaylaştırır. Daha fazla bilgi için [bozuk başvuruları sorun giderme](../ide/troubleshooting-broken-references.md).  
-  
- Bir SDK'ye göz atamaz ve projenize ekleyemezsiniz. Yalnızca bir dosyaya (örneğin, bir derleme veya .winmd) göz atabilir ve bu dosyayı projenize ekleyebilirsiniz.  
-  
- Bir Winmd'ye dosya başvurusu yaparken olan beklenen Düzen *FileName*.winmd, *FileName*, .dll ve *FileName*.pri dosyaları tüm yanı sıra yerleştirilmesidir. Aşağıdaki senaryolarda bir WinMD'ye başvuruda bulunursanız, proje çıkış dizinine eksik bir dosya kümesi kopyalanır ve sonuç olarak, derleme ve çalışma zamanı hataları meydana gelir.  
-  
-- **Yerel bileşen**: yerel bir proje her kopuk ad alanları kümesi için tek bir WinMD ve uygulamayı içeren bir DLL oluşturur. WinMD'ler ayrı adlara sahip olur. MSBuild bu yerel bileşen dosyasına başvururken, benzemeyecek şekilde adlandırılmış WinMD'lerin tek bir bileşen oluşturduğunu algılamaz. Sonuç olarak, yalnızca aynı adlı *FileName*.dll ve *FileName*.winmd kopyalanır ve çalışma zamanı hataları oluşur. Bu sorunu geçici bir çözümle aşmak için bir Uzantı SDK oluşturun. Daha fazla bilgi için [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md).  
-  
-- **Denetimleri kullanma**: en az bir XAML denetimi oluşan bir *FileName*.winmd, *FileName*.dll, *FileName*.pri, *XamlName* , .xaml ve bir *IMAGENAME*.jpg. Proje oluşturulduğunda, dosya başvurusu ile ilişkili kaynak dosyalar projenin çıkış dizinine kopyalanmaz ve yalnızca vermeyeceğiz *FileName*.winmd, *FileName*.dll ve *FileName*.pri kopyalanır. Bir yapı hatası kullanıcıya bildirmek için oturum açmış olan kaynakları *XamlName*.xaml ve *IMAGENAME*.jpg eksik. Başarılı olması için, kullanıcının bu kaynak dosyaları oluşturma ve hata ayıklama/çalışma zamanı için proje çıkış dizinine el ile kopyalaması gerekir. Bu sorunu geçici olarak çözmek için ya da bir uzantı SDK'sı içindeki adımları izleyerek oluşturun [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md) veya aşağıdaki özellik eklemek için proje dosyasını düzenleyin:  
-  
-    ```  
-    <PropertyGroup>  
-    <GenerateLibraryOutput>True</GenerateLibraryOutput>  
-    </PropertyGroup>  
-    ```  
-  
+> Proje başka bir SDK'ya bağımlı olan bir SDK'ya başvuruda bulunursa, kullanıcı ikinci SDK için el ile bir başvuru eklemediği sürece Visual Studio ikinci SDK'yı kullanmaz. Bir Kullanıcı **Uzantılar** SEKMESINDE bir SDK seçtiğinde, **başvuru Yöneticisi** iletişim kutusu kullanıcının SDK 'nın adını ve sürümünü değil ayrıntı bölmesinde SDK BAĞıMLıLıKLARıNıN adını değil, SDK bağımlılıklarını belirlemesine yardımcı olur. Kullanıcı bağımlılıkları fark etmez ve yalnızca SDK'yı eklerse, MSBuild kullanıcıdan bağımlılıkları eklemesini ister.
+
+ Bir proje türü **uzantıları**desteklemiyorsa, sekme **başvuru Yöneticisi** iletişim kutusunda görünmez.
+
+## <a name="browse-button"></a>Gözat düğmesi
+ Dosya sistemindeki bir bileşene gitmek için, **Araştır** düğmesini kullanabilirsiniz.
+
+ Bir proje, farklı bir .NET Framework sürümünü hedef alan başka bir bileşene başvuruda bulunabilir. Örneğin, .NET Framework 2'yi hedefleyen bir bileşene başvuruda bulunan .NET Framework 4 İstemci Profili'ni hedef alan bir uygulama oluşturabilirsiniz. Daha fazla bilgi için bkz. [belirli bir .NET Framework sürümünü hedefleme](../ide/targeting-a-specific-dotnet-framework-version.md).
+
+ Aynı çözümdeki başka bir projenin çıktılarına dosya başvuruları eklemekten kaçınmalısınız; bu taktik derleme hatalarına neden olabilir. Bunun yerine, projeden projeye başvurular oluşturmak için **başvuru Yöneticisi** Iletişim kutusunun **çözüm** sekmesini kullanın. Bu taktik, projelerinizde oluşturduğunuz sınıf kitaplıklarının daha iyi yönetimine olanak tanıyarak takım geliştirmeyi kolaylaştırır. Daha fazla bilgi için bkz. [Hatalı başvuruların sorunlarını giderme](../ide/troubleshooting-broken-references.md).
+
+ Bir SDK'ye göz atamaz ve projenize ekleyemezsiniz. Yalnızca bir dosyaya (örneğin, bir derleme veya .winmd) göz atabilir ve bu dosyayı projenize ekleyebilirsiniz.
+
+ Bir WinMD 'ye dosya başvurusu yaparken, beklenen Düzen *filename*. winmd, *filename*. dll ve *filename*. pri dosyalarının tümünün birbirlerine yerleştirilme halidir. Aşağıdaki senaryolarda bir WinMD'ye başvuruda bulunursanız, proje çıkış dizinine eksik bir dosya kümesi kopyalanır ve sonuç olarak, derleme ve çalışma zamanı hataları meydana gelir.
+
+- **Yerel bileşen**: yerel bir proje, her ayrık ad alanı kümesi ve uygulamadan oluşan bir dll Için bir WinMD oluşturur. WinMD'ler ayrı adlara sahip olur. MSBuild bu yerel bileşen dosyasına başvururken, benzemeyecek şekilde adlandırılmış WinMD'lerin tek bir bileşen oluşturduğunu algılamaz. Sonuç olarak, yalnızca aynı *filename*. dll ve *filename*. winmd adlı bir ad gönderilir ve çalışma zamanı hataları oluşur. Bu sorunu geçici bir çözümle aşmak için bir Uzantı SDK oluşturun. Daha fazla bilgi için bkz. [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md).
+
+- **Denetimleri**kullanma: en azından bir XAML denetimi *dosya adı*. winmd, *filename*. dll, *filename*. pri, *XamlName*. xaml ve bir *ImageName*. jpg bilgisinden oluşur. Proje oluşturulduğunda, dosya başvurusuyla ilişkili kaynak dosyaları projenin çıkış dizinine kopyalanmaz ve yalnızca *filename*. winmd, *filename*. dll ve *filename*. pri kopyalanır. Kullanıcıya *XamlName*. xaml ve *ImageName*. jpg kaynaklarının eksik olduğunu bildirmek için bir yapı hatası kaydedilir. Başarılı olması için, kullanıcının bu kaynak dosyaları oluşturma ve hata ayıklama/çalışma zamanı için proje çıkış dizinine el ile kopyalaması gerekir. Bu sorunu geçici olarak çözmek için, [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md) veya proje dosyasını düzenleme bölümündeki adımları Izleyerek bir uzantı SDK 'sı oluşturun ve aşağıdaki özelliği ekleyin:
+
+    ```
+    <PropertyGroup>
+    <GenerateLibraryOutput>True</GenerateLibraryOutput>
+    </PropertyGroup>
+    ```
+
     > [!NOTE]
-    > Özelliği eklerseniz, yapı daha yavaş çalışabilir.  
-  
-## <a name="recent"></a>En Son  
- Derlemeler, COM, Windows ve Gözat'ın her biri, bir En Son sekmesini destekler ve bu sekme projelere yakın zamanda eklenmiş bileşenlerin listesini numaralandırır.  
-  
-## <a name="search"></a>Ara  
- Arama çubuğuna **başvuru Yöneticisi** iletişim kutusu'nın, odakta olan sekme üzerinde çalışır. Örneğin, bir kullanıcı sırasında arama çubuğuna "Sistem" yazarsa **çözüm** sekme odağı, arama Çözüm "Sistem" içeren bir proje adından oluşmadığı sürece herhangi bir sonuç döndürmek olmaz.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [NIB nasıl yapılır: Başvuru Ekle iletişim kutusunu kullanarak başvuruları kaldırın veya ekleyin](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
- [Bir projedeki başvuruları yönetme](../ide/managing-references-in-a-project.md)
+    > Özelliği eklerseniz, yapı daha yavaş çalışabilir.
+
+## <a name="recent"></a>En Son
+ Derlemeler, COM, Windows ve Gözat'ın her biri, bir En Son sekmesini destekler ve bu sekme projelere yakın zamanda eklenmiş bileşenlerin listesini numaralandırır.
+
+## <a name="search"></a>Ara
+ **Başvuru Yöneticisi** iletişim kutusundaki arama çubuğu, odağa sahip olan sekmenin üzerinde çalışır. Örneğin, **çözüm** sekmesi odağa karşın bir Kullanıcı arama çubuğuna "sistem" yazdığında, çözüm "sistem" içeren bir proje adından oluşmadığı sürece arama hiçbir sonuç döndürmez.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Nib nasıl yapılır: [bir projedeki başvuruları yöneten](../ide/managing-references-in-a-project.md) [Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)

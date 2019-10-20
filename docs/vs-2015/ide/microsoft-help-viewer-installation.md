@@ -1,5 +1,5 @@
 ---
-title: Microsoft Yardım Görüntüleyicisi Kurulumu | Microsoft Docs
+title: Yükleme Microsoft Yardım Görüntüleyicisi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-help-viewer
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Help Viewer 2.0, installing
 ms.assetid: 51e72eac-d5d7-45e6-8899-04935499d1a6
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d8e3b53cbe31971ddcdc8e349133f52634e03e88
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 83ee97ea6b8b8f0f4026becd53413a17053cd1b8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68197740"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670420"
 ---
 # <a name="microsoft-help-viewer-installation"></a>Microsoft Yardım Görüntüleyicisi Kurulumu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bazı ürünler, Microsoft Yardım Görüntüleyicisi'nde Yardımı görüntüler. Yükleme yönergeleri, Yardım Görüntüleyici ürün yüklü göre değişir.  
-  
-## <a name="locating-setup-information"></a>Kurulum bilgilerini bulma  
- Ürününüze ilişkin bilgi için kendi Benioku dosyasına bakın.
+Birçok ürün Microsoft Yardım Görüntüleyicisi yardım 'ı görüntüler. Yükleme yönergeleri, Yardım Görüntüleyicisi 'nin hangi ürüne yüklendiğini temel alarak farklılık gösterir.
+
+## <a name="locating-setup-information"></a>Kurulum bilgilerini bulma
+ Ürününüze özgü bilgiler için, Benioku dosyasına bakın.

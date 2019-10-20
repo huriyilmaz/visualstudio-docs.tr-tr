@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fbe9b0005ce190eda6a88dea2f6b5f80890743c
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
-ms.translationtype: HT
+ms.openlocfilehash: 9a1fe8f4e8003da2db0e8a599c3eca504945f3e4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72562937"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647516"
 ---
 # <a name="step-5-add-label-references"></a>5\. Adım: etiket başvuruları ekleme
 Programın, Player 'ın seçtiği etiket denetimlerini izlemesi gerekir. Şu anda program oyuncunun seçtiği tüm etiketleri göstermektedir. Ancak bunun değişmesini sağlayacağız. İlk etiket seçildikten sonra program etiketin simgesini göstermelidir. İkinci etiket seçildikten sonra iki simgeyi de kısa bir süre göstermeli ve ardından iki simgeyi de tekrar gizlemelidir. Programınız artık ilk olarak hangi etiket denetiminin seçili olduğunu ve *başvuru değişkenlerini*kullanarak ikinci seçili olduğunu izler.
@@ -44,15 +44,15 @@ Programın, Player 'ın seçtiği etiket denetimlerini izlemesi gerekir. Şu and
 
 3. Programınızı kaydedin ve çalıştırın. Etiket denetimlerinden birini seçtiğinizde ilgili denetimin simgesi görünür.
 
-4. Bir sonraki etiket denetimini seçin ve hiçbir olay gerçekleşmediğine dikkat edin. Program, Player 'ın seçtiği ilk etiketi zaten takip ediyor, bu nedenle `firstClicked` `null` veya `Nothing` ' C# de Visual Basic eşit değil. @No__t_0 deyiminiz, `null` veya `Nothing` eşit olup olmadığını anlamak için `firstClicked` denetlediğinde, olmadığını bulur ve `if` deyimindeki deyimleri yürütmez. Bu nedenle, aşağıdaki resimde gösterildiği gibi, yalnızca seçilen ilk simgenin rengi siyah olur ve diğer simgeler görünmez.
+4. Bir sonraki etiket denetimini seçin ve hiçbir olay gerçekleşmediğine dikkat edin. Program, Player 'ın seçtiği ilk etiketi zaten takip ediyor, bu nedenle `firstClicked` `null` veya `Nothing` ' C# de Visual Basic eşit değil. @No__t_0 deyiminiz, `null` veya `Nothing` eşit olup olmadığını anlamak için `firstClicked` denetlediğinde, olmadığını bulur ve `if` deyimindeki deyimleri yürütmez. Bu nedenle, aşağıdaki görüntüde gösterildiği gibi, yalnızca seçilen ilk simge siyah ' ü etkinleştirir ve diğer simgeler görünmez hale gelir.
 
      bir simgeyi gösteren ![Matching oyunu ](../ide/media/express_tut4step5.png)<br/>
-**Eşleşen oyun** bir simge gösteriyor
+***Eşleşen oyun*** *bir simge gösteriyor*
 
      Bu durumu, bir **Zamanlayıcı** denetimi ekleyerek öğreticinin bir sonraki adımında düzeltireceksiniz.
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için bkz. 6. [Adım: Zamanlayıcı ekleme](../ide/step-6-add-a-timer.md).
+- Sonraki öğretici adımına gitmek için bkz. 6. **[Adım: Zamanlayıcı ekleme](../ide/step-6-add-a-timer.md)** .
 
 - Önceki öğretici adımına dönmek için, bkz. [Adım 4: Her Etikete Click olay Işleyicisi ekleme](../ide/step-4-add-a-click-event-handler-to-each-label.md).

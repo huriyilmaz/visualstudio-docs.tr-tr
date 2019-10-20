@@ -1,5 +1,5 @@
 ---
-title: 'CA1823: Kullanılmayan özel alanlardan kaçının | Microsoft Docs'
+title: 'CA1823: kullanılmayan özel alanlardan kaçının | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA1823
 ms.assetid: 614f94f6-0dc7-430f-8124-cb889a4a720f
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 32bf1596e4994f3cfdb2df179bb5d7f1a743f289
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d7ccfbe863e010b4dcf8a9d1b442c9bcdba6822e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201650"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661121"
 ---
 # <a name="ca1823-avoid-unused-private-fields"></a>CA1823: Kullanılmayan özel alanlardan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "68201650"
 |-|-|
 |TypeName|AvoidUnusedPrivateFields|
 |CheckId|CA1823|
-|Kategori|Microsoft.Performance|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Performance|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bu kural, kodunuzda bir özel alan var ancak herhangi bir kod yolu tarafından kullanılmayan bildirilir.
+ Bu kural, kodunuzdaki bir özel alan olduğunda ve herhangi bir kod yolu tarafından kullanılmazsa raporlanır.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Derlemede erişimi görülmeyen özel alanlar algılandı.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için alanı kaldırın veya onu kullanan kodu ekleyin.
+ Bu kural ihlalini onarmak için alanı kaldırın veya onu kullanan kodu ekleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan bir uyarıyı bastırmak güvenlidir.
+ Bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
-## <a name="related-rules"></a>İlgili kuralları
- [CA1812: Örneklenmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+## <a name="related-rules"></a>İlgili kurallar
+ [CA1812: Örneklendirilmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
  [CA1801: Kullanılmayan parametreleri gözden geçir](../code-quality/ca1801-review-unused-parameters.md)
 

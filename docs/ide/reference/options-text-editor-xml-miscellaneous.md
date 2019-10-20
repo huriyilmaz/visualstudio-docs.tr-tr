@@ -1,61 +1,61 @@
 ---
-title: Seçenekler, metin düzenleyici, çeşitli XML
+title: Seçenekler, metin düzenleyici, XML, çeşitli
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: b6538cbe-badd-4313-a1fb-39e906736bbe
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3421580251a6a871adba311fd609e881e088ebd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 58de904e1697a820a2f4bc6f88fbff5237cabc30
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969221"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666586"
 ---
-# <a name="options-text-editor-xml-miscellaneous"></a>Seçenekler, metin düzenleyici, çeşitli XML
+# <a name="options-text-editor-xml-miscellaneous"></a>Seçenekler, metin düzenleyici, XML, çeşitli
 
-Kullanım **çeşitli** otomatik tamamlama ve şema XML Düzenleyicisi ayarları değiştirmek için seçenekler sayfası. Diğer XML Seçenekleri erişmek için kendi seçtikleri **Araçları** > **seçenekleri** > **metin düzenleyici** > **XML**ve ardından **çeşitli**.
+XML Düzenleyicisi için otomatik tamamlama ve şema ayarlarını değiştirmek üzere **çeşitli** Seçenekler sayfasını kullanın. Çeşitli XML seçeneklerine erişmek için **araçlar**  > **Seçenekler**  > **metin Düzenleyicisi**  > **XML**' i seçin ve ardından **çeşitli**' ı seçin.
 
 ## <a name="auto-insert"></a>Otomatik Ekle
 
-**Kapatma etiketleri**
+**Etiketleri kapat**
 
-Metin düzenleyici, XML öğeleri yazarken kapatma etiketleri ekler. Bir öğenin başlangıç etiketinde seçtiyseniz, düzenleyici eşleşen bir ad alanı öneki de dahil olmak üzere eşleşen bir kapatma etiketi ekler. Bu onay kutusu varsayılan olarak seçilidir.
+Metin düzenleyici XML öğeleri yazarken kapanış etiketleri ekler. Bir öğe başlangıcı etiketi seçilirse, düzenleyici eşleşen bir ad alanı öneki dahil olmak üzere eşleşen kapatma etiketini ekler. Bu onay kutusu varsayılan olarak seçilidir.
 
-**Öznitelik tırnak işaretleri**
+**Öznitelik teklifleri**
 
-XML öznitelikleri yazarken, düzenleyici ekler `="` ve `"` giriş işaretini yerleştirir ve karakter (**^**) tırnak işaretleri. Bu onay kutusu varsayılan olarak seçilidir.
+XML öznitelikleri yazarken, düzenleyici `="` ve `"` karakterlerini ekler ve giriş işaretini ( **^** ) tırnak işaretleri içinde konumlandırır. Bu onay kutusu varsayılan olarak seçilidir.
 
-**Namespace bildirimi**
+**Ad alanı bildirimleri**
 
-Gerekli olurlarsa olsunlar Düzenleyicisi ad alanı bildirimi otomatik olarak ekler. Bu onay kutusu varsayılan olarak seçilidir.
+Düzenleyici, gereksinim duydukları her yerde ad alanı bildirimlerini otomatik olarak ekler. Bu onay kutusu varsayılan olarak seçilidir.
 
-**Diğer işaretlemeler (açıklamalar, CDATA)**
+**Diğer biçimlendirme (açıklamalar, CDATA)**
 
-Açıklamalar, CDATA, DOCTYPE, işleme yönergeleri ve diğer biçimlendirme, otomatik tamamlanan içindir. Bu onay kutusu varsayılan olarak seçilidir.
+Açıklamalar, CDATA, DOCTYPE, işleme yönergeleri ve diğer biçimlendirme işlemleri yeniden tamamlandı. Bu onay kutusu varsayılan olarak seçilidir.
 
 ## <a name="network"></a>Ağ
 
-**Otomatik olarak indirilen DTD'ler ve şemalar indir**
+**DTD 'Leri ve şemaları otomatik olarak indir**
 
-Şemaları ve belge türü tanımları (DTD'ler), HTTP konumlardan otomatik olarak yüklenir. Bu özellik etkin autoproxy sunucu algılaması System.Net kullanır. Bu onay kutusu varsayılan olarak seçilidir.
+Şemalar ve belge türü tanımları (DTD 'Ler), HTTP konumlarından otomatik olarak indirilir. Bu özellik otomatik ara sunucu algılaması etkinleştirilmiş System.Net kullanır. Bu onay kutusu varsayılan olarak seçilidir.
 
 ## <a name="outlining"></a>Anahat Oluşturma
 
-**Dosyalar açıldığında anahat moduna gir**
+**Dosyalar açıkken anahat oluşturma moduna gir**
 
-Bir dosya açıldığında anahat oluşturma özelliğini etkinleştirir. Bu onay kutusu varsayılan olarak seçilidir.
+Bir dosya açıldığında ana hat özelliğini etkinleştirir. Bu onay kutusu varsayılan olarak seçilidir.
 
 ## <a name="caching"></a>Önbelleğe Alma
 
 **Şemaları**
 
-Şema önbelleği konumunu belirtir. **Gözat** düğmesi geçerli şema önbellek konumunda yeni bir pencerede açar. Varsayılan konum *%VsInstallDir%\xml\Schemas*.
+Şema önbelleğinin konumunu belirtir. **Gözden** geçirme düğmesi geçerli şema önbelleği konumunu yeni bir pencerede açar. Varsayılan konum *%VSInstallDir%\Xml\Schemas*şeklindedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Seçenekleri - biçimlendirme](options-text-editor-xml-formatting.md)
-- [Visual Studio'daki XML araçları](../../xml-tools/xml-tools-in-visual-studio.md)
+- [XML seçenekleri-biçimlendirme](options-text-editor-xml-formatting.md)
+- [Visual Studio 'da XML araçları](../../xml-tools/xml-tools-in-visual-studio.md)

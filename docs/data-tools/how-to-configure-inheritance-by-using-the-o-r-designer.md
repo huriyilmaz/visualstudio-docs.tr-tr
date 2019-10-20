@@ -1,61 +1,61 @@
 ---
-title: 'Nasıl yapılır: O R Tasarımcısı kullanarak devralmayı yapılandırma'
+title: 'Nasıl yapılır: O-R tasarımcısını kullanarak devralmayı yapılandırma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e594af12-e777-434a-bc08-7dd2dac84cdc
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8927e6140792c12f42f1822afd0e715881384f1c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: ddd3d8b25c6e215302af8e0b40b5a971f5f4aa39
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63402786"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72641925"
 ---
-# <a name="how-to-configure-inheritance-by-using-the-or-designer"></a>Nasıl yapılır: O/R Tasarımcısı kullanarak devralmayı yapılandırma
-**Object Relational Designer** (**O/R Tasarımcısı**) ilişkisel sistemlerde sık uygulandığı şekilde tek tablolu devralma kavramını destekler. Tek tablo devralma işleminde üst bilgi hem de alt bilgi için alanları içeren bir tek veritabanı tablosu yok. İlişkisel verilerle bir ayrıştırıcı sütunu her kaydın ait olduğu sınıfı belirleyen bir değer içerir.
+# <a name="how-to-configure-inheritance-by-using-the-or-designer"></a>Nasıl yapılır: O/R tasarımcısını kullanarak devralmayı yapılandırma
+**Nesne ilişkisel Tasarımcısı** (**O/R Designer**), genellikle ilişkisel sistemlerde uygulanan tek tablo devralma kavramını destekler. Tek tablo Devralmada, hem üst bilgiler hem de alt bilgi için alanlar içeren tek bir veritabanı tablosu vardır. İlişkisel veriler ile, bir Ayrıştırıcı sütunu herhangi bir kaydın hangi sınıfa ait olduğunu belirleyen değeri içerir.
 
-Örneğin, bir `Persons` herkesin şirket tarafından kullanılan içeren tablo. Bazı kişiler çalışanlar ve bazı kişiler yöneticileri. `Persons` Tablo adlı bir sütun içeren `EmployeeType` 1 değeri, yöneticileri ve 2 değerini çalışanlar için sahip; bu ayrıştırıcı sütunu. Bu senaryoda, çalışanların öğesinin oluşturabilir ve sınıf olan kayıtlar ile doldurmak bir `EmployeeType` değeri 2'dir. Ayrıca her sınıfların geçerli olmayan sütunları kaldırabilirsiniz.
+Örneğin, bir şirket tarafından görevli herkesi içeren bir `Persons` tablosu düşünün. Bazı kişiler çalışanlar ve bazı kişiler yöneticilerdir. @No__t_0 tablosu, Yöneticiler için 1 değeri ve çalışanlar için 2 değeri olan `EmployeeType` adlı bir sütun içerir; Bu, ayrıştırıcı sütunudur. Bu senaryoda, çalışanların bir alt sınıfını oluşturabilir ve sınıfı yalnızca 2 `EmployeeType` değerine sahip kayıtlarla doldurabilirsiniz. Ayrıca sınıfların her birinden uygulanmayan sütunları da kaldırabilirsiniz.
 
-Devralma kullanır (ve ilişkisel verilere karşılık gelir) nesne modeli oluşturma biraz kafa karıştırıcı olabilir. Aşağıdaki yordam kalıtım yapılandırmak için gereken adımları özetler **O/R Tasarımcısı**. Verileri kullanan bir kılavuz sağlanır için var olan bir tablo ve sütunlara başvuruda bulunmadan aşağıdaki genel adımları zor olabilir. Devralma kullanarak yapılandırmaya yönelik ayrıntılı adım adım yönergeler için **O/R Tasarımcısı**, bkz: [izlenecek yol: Tek tablo devralma (O/R Tasarımcısı) kullanarak SQL sınıflarına LINQ oluşturma](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md).
+Devralmayı kullanan (ve ilişkisel verilere karşılık gelen) bir nesne modeli oluşturmak biraz kafa karıştırıcı olabilir. Aşağıdaki yordamda, **O/R Tasarımcısı**ile devralmayı yapılandırmak için gereken adımlar özetlenmektedir. Mevcut bir tabloya ve sütunlara başvurulmadan aşağıdaki genel adımlar zor olabilir, bu nedenle veri kullanan bir anlatım sağlanır. **O/r tasarımcısını**kullanarak devralmayı yapılandırmaya yönelik ayrıntılı adım adım yönergeler için bkz. [Walkthrough: tek tablo devralma (O/r designer) kullanarak LINQ to SQL sınıfları oluşturma](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md).
 
 ## <a name="to-create-inherited-data-classes"></a>Devralınan veri sınıfları oluşturmak için
 
-1. Açık **O/R Tasarımcısı** ekleyerek bir **LINQ to SQL sınıfları** varolan bir Visual Basic öğesine veya C# proje.
+1. Mevcut bir Visual Basic veya C# projeye **LINQ to SQL sınıfları** öğesi ekleyerek **O/R tasarımcısını** açın.
 
-2. Temel sınıf olarak kullanmak istediğiniz tabloyu sürükleyin **O/R Tasarımcısı**.
+2. Temel sınıf olarak kullanmak istediğiniz tabloyu **O/R tasarımcısına**sürükleyin.
 
-3. İkinci bir kopyası tablosunu sürükleyin **O/R Tasarımcısı** ve yeniden adlandırın. Türetilmiş bir sınıf ya da alt budur.
+3. Tablonun ikinci bir kopyasını **O/R tasarımcısına** sürükleyin ve yeniden adlandırın. Bu, türetilmiş sınıf veya alt sınıfıdır.
 
-4. Tıklayın **devralma** içinde **Object Relational Designer** sekmesinde **araç kutusu**, alt (adlandırdığınız tablosu) tıklayın ve ardından temel sınıfa bağlanın.
-
-    > [!NOTE]
-    > Tıklayın **devralma** öğesi **araç kutusu** ve fare düğmesini bırakın, 3. adımda oluşturulan sınıf ikinci bir kopyası tıklatın ve 2. adımda oluşturduğunuz ilk sınıf'ye tıklayın. Devralım çizgisi üzerindeki oku ilk sınıfa işaret eder.
-
-5. Her sınıfta görünmesini istemiyorsanız ve ilişkileri için kullanılmayan tüm nesne özellikleri silin. Nesne özellikleri ilişkilendirmeler için kullanılan silmeye çalışıyorsanız, bir hata alırsınız: [Özellik \<özellik adı > ilişkilendirmesine katıldığından silinemiyor \<ilişkilendirme adı >](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md).
+4. **Araç kutusunun** **nesne ilişkisel Tasarımcısı** sekmesinde **Devralma** ' a tıklayın ve ardından alt sınıfa (yeniden adlandırdığınız tablo) tıklayın ve temel sınıfa bağlayın.
 
     > [!NOTE]
-    > Türetilmiş bir sınıf kendi temel sınıfta tanımlanan özellikleri devraldığından, aynı sütunlara her sınıfında tanımlanamaz. (Sütunları özellikleri olarak uygulanır.) Temel sınıf özelliğini temel alan ait devralma değiştiricisinin ayarlayarak türetilmiş sınıftaki sütunları oluşturulmasını etkinleştirebilirsiniz. Daha fazla bilgi için [devralma temelleri (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics).
+    > **Araç kutusu** ' nda **Devralma** öğesine tıklayın ve fare düğmesini bırakın, adım 3 ' te oluşturduğunuz sınıfın ikinci kopyasına tıklayın ve ardından 2. adımda oluşturduğunuz ilk sınıfa tıklayın. Devralma satırındaki ok ilk sınıfa işaret eder.
 
-6. İçinde devralım çizgisini seçin **O/R Tasarımcısı**.
+5. Her sınıfta, görünmesini istemediğiniz ve ilişkilendirmeler için kullanılmayan herhangi bir nesne özelliğini silin. İlişkilendirmeler için kullanılan nesne özelliklerini silmeye çalıştığınızda bir hata alıyorsunuz: [> \<property Name özelliği, association \<association name > katıldığı için silinemez](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md).
 
-7. İçinde **özellikleri** penceresinde **ayrıştırıcı özelliği** sınıflarınızı kayıtlara ayıran sütun adı.
+    > [!NOTE]
+    > Türetilmiş bir sınıf kendi temel sınıfında tanımlanan özellikleri devraldığından, her sınıfta aynı sütunlar tanımlanamaz. (Sütunlar özellikler olarak uygulanır.) Temel sınıftaki özellikte devralma değiştiricisini ayarlayarak türetilmiş sınıfta sütun oluşturmayı etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [Devralma Temelleri (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics).
 
-8. Ayarlama **türetilen sınıf ayrıştırıcısı değerinin** kaydı devralınan türü olarak atar veritabanındaki değerle özelliği. (Devralınan sınıf belirtmek için kullanılır ve ayrıştırıcı sütunda depolanan değer budur.)
+6. **O/R tasarımcısında**devralma satırını seçin.
 
-9. Ayarlama **temel sınıf ayrıştırıcı değeri** özelliğini kaydı temel tür olarak belirten değer. (Ayrıştırıcı sütunu depolanır ve temel sınıf belirtmek için kullanılır değer budur.)
+7. **Özellikler** penceresinde, **ayrıştırıcı özelliğini** sınıflarınızda kayıtları ayıran sütun adı olarak ayarlayın.
 
-10. İsteğe bağlı olarak da ayarlayabilirsiniz **devralma varsayılan** devralma kod tanımlanan eşleşmeyen satırlar yüklenirken kullanılan bir devralma hiyerarşisi içindeki bir tür belirtmek için özellik. Kayıt, kendi ayrıştırıcı sütunu bir değere sahipse, diğer bir deyişle, ya da değer eşleşmiyor **türetilen sınıf ayrıştırıcısı değerinin** veya **temel sınıf ayrıştırıcı değeri** özellikleri, kayıt yükler olarak atanan türü **devralma varsayılan**.
+8. **Türetilmiş sınıf ayrıştırıcı değeri** özelliğini, veritabanındaki değeri devralınan tür olarak atayan değere ayarlayın. (Bu, ayrıştırıcı sütununda saklanan ve devralınmış sınıfı belirlemek için kullanılan değerdir.)
+
+9. **Temel sınıf ayrıştırıcı değeri** özelliğini, kaydı temel tür olarak atayan değere ayarlayın. (Bu, ayrıştırıcı sütununda depolanan ve temel sınıfı belirlemek için kullanılan değerdir.)
+
+10. İsteğe bağlı olarak, devralma **varsayılan** özelliğini, tanımlı devralma kodu ile eşleşmeyen satırlar yüklenirken kullanılan bir devralma hiyerarşisinde bir tür belirlemek için de ayarlayabilirsiniz. Diğer bir deyişle, bir kayıt, ayrıştırıcı sütununda, **türetilmiş sınıf ayrıştırıcı değeri** veya **temel sınıf ayrıştırıcı değeri** özelliklerindeki değerle eşleşmeyen bir değere sahipse, kayıt  **Devralma varsayılanı**.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
-- [İzlenecek yol: (O R Designer) SQL sınıflarına LINQ oluşturma](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
+- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [İzlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
 - [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
-- [İzlenecek yol: Tek tablo devralma (O/R Tasarımcısı) kullanarak SQL sınıflarına LINQ oluşturma](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)
-- [Devralma temelleri (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics)
+- [İzlenecek yol: tek tablo devralma (O/R Designer) kullanarak LINQ to SQL sınıfları oluşturma](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)
+- [Devralma Temelleri (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics)
 - [Devralma](/dotnet/csharp/programming-guide/classes-and-structs/inheritance)

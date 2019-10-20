@@ -9,21 +9,20 @@ f1_keywords:
 - vs.addexistingproject
 ms.assetid: 4b6db52f-4352-4313-8f4f-50a451fd12f7
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 503f099de3dda673c4df352d8bfa871d20d51f2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 073e8186040f920426b3e9aa96879afac923c19c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68148263"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72620953"
 ---
 # <a name="adding-and-removing-project-items"></a>Proje öğeleri ekleme ve kaldırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ekleyebilir veya alan proje veya çözüm düğümüne sağ tıklayarak projelerini ve proje öğelerini Kaldır **Çözüm Gezgini**seçip **Ekle** veya **Kaldır**. Kalıcı olarak silme seçeneği seçmediğiniz sürece bir proje bir çözüm ya da bir projeden bir öğe kaldırma, disk veya kaynak denetiminden silmez.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Projeler ve çözümler](../ide/solutions-and-projects-in-visual-studio.md)   
- [Proje ve Çözüm Özelliklerini Yönetme](../ide/managing-project-and-solution-properties.md)
+**Çözüm Gezgini**' de proje veya çözüm düğümüne sağ tıklayıp **Ekle** veya **Kaldır**' ı seçerek projeleri ve proje öğelerini ekleyebilir veya kaldırabilirsiniz. Projeyi bir çözümden veya bir projeden kaldırmak, kalıcı olarak silme seçeneğini seçmediğiniz takdirde onu diskten veya kaynak denetiminden silmez.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Proje ve çözüm özelliklerini yöneten](../ide/managing-project-and-solution-properties.md) [çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md)

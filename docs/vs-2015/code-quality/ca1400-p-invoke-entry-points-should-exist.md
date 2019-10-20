@@ -1,5 +1,5 @@
 ---
-title: 'CA1400: P-Invoke giriş noktaları bulunmalıdır | Microsoft Docs'
+title: 'CA1400: P-Invoke giriş noktaları var olmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA1400
 ms.assetid: 1d64e470-7b2f-4cca-8fb0-ac92829e6332
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0e5696689d0aa40f4af2e11970c81b47737a3d80
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1083f7bbdf3b3af78b83aed293b31d898ae7522
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68200379"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661370"
 ---
 # <a name="ca1400-pinvoke-entry-points-should-exist"></a>CA1400: P/Invoke giriş noktaları bulunmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "68200379"
 |-|-|
 |TypeName|PInvokeEntryPointsShouldExist|
 |CheckId|CA1400|
-|Kategori|Microsoft.Interoperability|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. çalışabilirliği|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Ortak veya korumalı yöntem ile işaretlenmiş <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>. Yönetilmeyen kitaplık bulunamadı ya da yöntem için bir işlev kitaplığında eşleştirilemedi. Kural gibi tam olarak belirtilen yöntem adı bulamazsanız, ANSI veya geniş karakter sürümleri yöntemi için yöntem adı '' veya 'G' ekleyerek görünüyor. Eşleşme bulunursa, kural __stdcall adı biçimini kullanarak bir işlev bulmaya çalışır (_MyMethod@12, burada bağımsız değişkenlerinin uzunluğu 12 temsil eder). Eşleşme ve yöntem adı '#' ile başlar, kural işlevi için bir ad başvurusu yerine sıralı bir başvuru olarak arar.
+ Ortak veya korumalı bir yöntem <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> ile işaretlenir. Yönetilmeyen kitaplık bulunamadı ya da yöntem için bir işlev kitaplığında eşleştirilemedi. Kural, yöntem adını tam olarak belirtilen şekilde bulamazsa, yöntem adını ' A ' veya ' W ' ile birlikte düzelterek metodun ANSI veya geniş karakterli sürümlerini arar. Eşleşme bulunmazsa, kural __stdcall ad biçimini kullanarak bir işlevi bulmaya çalışır (_MyMethod@12, burada 12 bağımsız değişkenlerin uzunluğunu temsil eder). Eşleşme bulunmazsa ve Yöntem adı ' # ' ile başlıyorsa, kural, işlevi bir ad başvurusu yerine bir sıralı başvuru olarak arar.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Hiçbir derleme zamanı denetlemesi emin olmak kullanılabilir ile işaretlenmiş yöntemler <xref:System.Runtime.InteropServices.DllImportAttribute> başvurulan yönetilmeyen DLL içinde yer alır. Belirtilen ada sahip bir işlev kitaplığında yok veya yöntem bağımsız değişkenleri işlev bağımsız değişkenleri eşleşmiyor, ortak dil çalışma zamanı bir özel durum oluşturur.
+ @No__t_0 ile işaretlenmiş yöntemlerin başvurulan yönetilmeyen DLL 'de bulunduğundan emin olmak için derleme zamanı denetimi yoktur. Kitaplıkta belirtilen ada sahip hiçbir işlev yoksa veya metodun bağımsız değişkenleri işlev bağımsız değişkenleriyle eşleşmezse, ortak dil çalışma zamanı bir özel durum oluşturur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için yöntemin düzeltmek <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliği. Yönetilmeyen kitaplık varolduğundan ve yöntemi içeren derlemenin ile aynı dizinde olduğundan emin olun. Kitaplık bulunduğundan ve doğru şekilde başvurulan ise, yöntem adı, dönüş türü ve bağımsız değişken imza kitaplığı işlevi eşleştiğini doğrulayın.
+ Bu kural ihlalini düzeltmek için <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliğine sahip olan yöntemi düzeltin. Yönetilmeyen kitaplığın var olduğundan ve yöntemi içeren derlemeyle aynı dizinde olduğundan emin olun. Kitaplık varsa ve doğru şekilde başvuruluyorsa, yöntem adı, dönüş türü ve bağımsız değişken imzasının kitaplık işleviyle eşleştiğinden emin olun.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Yönetilmeyen kitaplık başvurduğu yönetilen bütünleştirilmiş kod ile aynı dizinde olduğunda bu kuraldan bir uyarıyı bastırmayın. Burada yönetilmeyen kitaplık bulunamadı durumda bu kuraldan bir uyarıyı bastırmak güvenli olabilir.
+ Yönetilmeyen kitaplık, kendisine başvuran yönetilen derlemeyle aynı dizinde olduğunda, bu kuraldan bir uyarıyı bastırmayın. Yönetilmeyen kitaplığın yer aldığı durumlarda bu kuraldan bir uyarıyı gizlemek güvenli olabilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek kuralını ihlal eden bir tür gösterir. Adında hiçbir işlev `DoSomethingUnmanaged` kernel32.dll içinde gerçekleşir.
+ Aşağıdaki örnek, kuralı ihlal eden bir türü gösterir. Kernel32. dll içinde `DoSomethingUnmanaged` adlı bir işlev oluşur.
 
  [!code-csharp[FxCop.Interoperability.DLLExists#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.DLLExists/cs/FxCop.Interoperability.DLLExists.cs#1)]
 

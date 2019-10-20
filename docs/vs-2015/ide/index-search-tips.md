@@ -1,5 +1,5 @@
 ---
-title: Dizin arama ipuçları | Microsoft Docs
+title: Dizin arama Ipuçları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,55 +11,54 @@ helpviewer_keywords:
 - Help Viewer 2.0, index search tips
 ms.assetid: f9ffa8e9-3ece-419d-a465-f9c2c21fd4ba
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1072d38adac020a1b9976d17f98ddf8882d7cb22
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7994f1c0c7281fc9902e15a3fd60293905abc4f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68178811"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670451"
 ---
 # <a name="index-search-tips"></a>Dizin Arama İpuçları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Anahtar sözcükleri girerek dizin bilgileri bulabilirsiniz. Bu konuda Yardım dizini kullanarak aramak için kullanışlı yöntemler önerir.  
-  
-## <a name="index-search-tips"></a>Dizin Arama İpuçları  
- Dizini kullanarak basit bir işlemdir; ancak nasıl en iyi anahtar sözcükleri girin anlama dizin aramalarınızı daha verimli hale getirebilir.  
-  
-### <a name="general-guidelines"></a>Genel Yönergeler  
-  
-- Dizin girişlerini gözden geçirdiğiniz. Tüm konuları aynı şekilde dizine eklenir ve en çok yardımcı olabilecek bir liste beklediğinizden daha düşük veya yüksek olabilir.  
-  
-- Dizin yok saymasıdır çünkü makaleleri gibi "bir" veya "" atlayın.  
-  
-- Beklediğiniz girişleri bulamazsanız, girdiğiniz sözcük tersine çevirir.  
-  
-     Örneğin, "satır içi derleme kodunda hata ayıklama" tüm ilgili girişler görüntülenmiyorsa, yazmak, "hata ayıklama satır içi bütünleştirilmiş kodu" deneyin.  
-  
-- Filtreleri ile **dizin** sonuçları sayısını azaltmak için sekmesinde.  
-  
-### <a name="syntax-tips"></a>Söz dizimi ipuçları  
- Bir giriş için bir sözcük veya tümcecik girdiğiniz bulamazsanız, aşağıdakileri deneyin:  
-  
-- İlk birkaç harfini veya sözcük kökü yazın. Kısmi bir dize girerek, tekil veya çoğul sözcüklerle dizine konulara alabilirsiniz.  
-  
-     Örneğin, özellikler ve özellik yukarıda aramayı başlatmak için "Özellikleri" girin.  
-  
-- Gerund girin (-ing) tamamlamak için istediğiniz görev için fiili biçimleri. Daha özel dizin girdileri bulmak için tam olarak aradığınız şeyi açıklayan bir sözcük ekleyin.  
-  
-     Örneğin, daha fazla girişleri veya "çalışan programlar" almak için "çalışıyor" yazın. daha az alınamıyor.  
-  
-- Tek başına sıfat girin. Sonuçları daraltmak için tam olarak aradığınız şeyi açıklayan bir sözcük ekleyin.  
-  
-     Örneğin, "Veya"COM + bileşenleri"girişleri geniş kapsamlı almak için com" girin daha az alınamıyor.  
-  
-- Bir eş anlamlı sözcük veya aradığınız fiili girin.  
-  
-     Girdiğiniz, örneğin, "building" gerund "oluşturma" Bunun yerine deneyin.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tam metin arama ipuçları](../ide/full-text-search-tips.md)   
- [Bilgilerin Konumunu Bulma](../ide/locate-information.md)
+Anahtar sözcükler girerek dizindeki bilgileri bulabilirsiniz. Bu konu, dizin kullanarak yardım aramak için yararlı yollar önerir.
+
+## <a name="index-search-tips"></a>Dizin Arama İpuçları
+ Dizinin kullanılması, normal ileri sarma işlemidir; Ancak, anahtar sözcüklerin en iyi şekilde nasıl kullanılacağını anlamak, Dizin aramalarını daha üretken hale getirir.
+
+### <a name="general-guidelines"></a>Genel Yönergeler
+
+- Dizin girişlerinde ilerleyin. Tüm konuların hepsi aynı şekilde dizinlenmez ve en çok yardımcı olabilecek bir liste, beklediğinizden daha yüksek veya daha düşük olabilir.
+
+- "A" veya "The" gibi makaleleri atlayın, çünkü dizin onları yoksayar.
+
+- İstediğiniz girdileri bulamazsanız, girdiğiniz sözcükleri ters çevirin.
+
+     Örneğin, "satır içi derleme kodu" hata ayıklaması ", herhangi bir ilgili girişi görüntülemedığında," derleme kodu, hata ayıklama satır içi "yazarak yazmayı deneyin.
+
+- Sonuçların sayısını azaltmak için **Dizin** sekmesi ile filtreler kullanın.
+
+### <a name="syntax-tips"></a>Söz dizimi Ipuçları
+ Girdiğiniz sözcük veya tümcecik için bir giriş bulamazsanız, aşağıdakileri deneyin:
+
+- Sözcüğün ilk birkaç harfini veya kökünü yazın. Kısmi bir dize girerek, tekil veya plural olan anahtar sözcüklerle dizine alınmış konulara gidebilirsiniz.
+
+     Örneğin, aramanızı Özellikler ve özellik üzerinde başlatmak için "propert" yazın.
+
+- Tamamlanmasını istediğiniz görevin fiili (-İng) biçimlerini girin. Daha belirli dizin girdilerini bulmak için tam olarak istediğiniz şeyi açıklayan bir sözcük ekleyin.
+
+     Örneğin, daha az sayıda giriş yapmak için "çalışıyor" yazın veya daha az bilgi almak için "çalışan programlar" yazın.
+
+- Tek başına sıfatlar girin. Sonuçları daraltmak için tam olarak istediğiniz şeyi açıklayan bir sözcük ekleyin.
+
+     Örneğin, çok daha az sayıda giriş veya "COM+ bileşeni" almak için "COM+" yazın.
+
+- Aradığınız sözcüğün veya fiilin eşanlamlısını girin.
+
+     Örneğin, "derleme" yanıtını girdiyseniz, bunun yerine "oluşturma" seçeneğini kullanın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Tam metin arama Ipuçları](../ide/full-text-search-tips.md) [bilgileri bulma](../ide/locate-information.md)

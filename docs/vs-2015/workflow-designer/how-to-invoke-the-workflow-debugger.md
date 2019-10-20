@@ -1,45 +1,44 @@
 ---
-title: 'Nasıl yapılır: İş akışı hata ayıklayıcısını çağırma | Microsoft Docs'
+title: 'Nasıl yapılır: Iş akışı hata ayıklayıcısını çağırma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: 34c592af-f4f6-4d02-99f6-63a94698e48b
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a3d5033bc9953aa00efb950eabce5e7346952f9d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 34c5cdae4b8730c9058a87061456d5ab6d186c53
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444158"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603664"
 ---
-# <a name="how-to-invoke-the-workflow-debugger"></a>Nasıl yapılır: İş Akışı Hata Ayıklayıcısını Çağırma
-Genellikle, diğer Visual Studio programlama dillerinde yazılan programlar yalnızca hata ayıklama gibi iş akışı hata ayıklama. İş akışı hata ayıklayıcısını aşağıdaki şekillerde başlayabilirsiniz:  
-  
-- Seçin **iliştirme** üzerinde **hata ayıklama** menüsünde, iş akışı örneği için çalışan ana bilgisayar işlemi seçin. Bu yordam, yönetilen kod içinde bir ana bilgisayar işlemi ekleme olarak aynıdır.  
-  
-- Tuşuna **F5** iş akışı örneği çalıştırmaya başlayın ya da bir kesme noktasına isabet sonra çalışmaya devam eder.  
-  
-- Uzaktan hata ayıklamayı kullanın. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Uzaktan hata ayıklamayı etkinleştirme](http://go.microsoft.com/fwlink/?LinkId=196257).  
-  
+# <a name="how-to-invoke-the-workflow-debugger"></a>Nasıl yapılır: Iş akışı hata ayıklayıcısını çağırma
+Genellikle, diğer Visual Studio programlama dillerinde yazılmış programlarda hata ayıkladığınızda olduğu gibi iş akışlarında hata ayıklaması yapabilirsiniz. İş akışı hata ayıklayıcısını aşağıdaki yollarla başlatabilirsiniz:
+
+- İş akışı örneğiniz için çalışan konak işlemini seçmek üzere **hata ayıklama** menüsünde **İşleme İliştir** ' i seçin. Bu yordam, Yönetilen koddaki bir ana bilgisayar işlemine iliştirme ile aynıdır.
+
+- İş akışının bir örneğini çalıştırmaya başlamak veya bir kesme noktası isabet ettikten sonra çalışmaya devam etmek için **F5** tuşuna basın.
+
+- Uzaktan hata ayıklamayı kullan. Uzaktan hata ayıklamayı kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: uzaktan hata ayıklamayı etkinleştirme](http://go.microsoft.com/fwlink/?LinkId=196257).
+
     > [!NOTE]
-    > İş akışı uygulaması x86 hedefliyorsa mimarisi ve uzaktan hata ayıklama sürece çalışmaz sonra bir 64 bit işletim sistemi çalıştıran bir makinede barındırıldığı [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzak makine veya hedef iş akışı uygulaması değiştirildiğinde yüklenir **Herhangi bir CPU**.  
-  
-### <a name="stepping-through-code"></a>Kod boyunca ilerleme  
-  
-- **Adımı**: Bir etkinlik kullanarak adım **F11**. Hata ayıklama adımlarında içinde tanımlanan herhangi bir işleyici. Hiçbir tutucusu tanımlanmazsa, etkinliğin adım veya diğer etkinlikler içeren bileşik etkinliklerle ilk yürütme etkinliğini adım.  
-  
-- **Dışına adımla:** Bir etkinlik kullanıldığında dışında adım **Shift-F11**. Bir etkinlik dışına Adımlama geçerli etkinliği ve tüm eşdüzey tamamlanana kadar etkinlikleri çalıştırır. Hata ayıklayıcı, ardından geçerli etkinliğin üst öğede keser. Bir kod işleyicisinden Adımlama, hata ayıklayıcı işleyici ilişkilendirildiği faaliyete keser.  
-  
-- **Üzerinden adımla**: Bir etkinlik kullanıldığında üzerinden adım **F10**. Bileşik bir etkinlik Adımlama olduğunda hata ayıklayıcı birleşik etkinlik ilk yürütülebilir alt keser. Gibi bir olmayan-bileşik Adımlama olduğunda bir <xref:System.Activities.Statements.Assign> etkinliği, hata ayıklayıcı, üzerinde bir sonraki etkinliğe etkinlik ve ilişkili işleyiciler ve sonları yürütür. Ardından, çalıştırılan etkinlik son alt etkinliğin bileşik bir etkinlik ise, yürütme sonrasında hata ayıklayıcı üst etkinlik keser.  
-  
-### <a name="debugging-with-f5"></a>F5 tuşuna basarak hata ayıklama  
-  
-- Bir iş akışı konsol uygulaması projesi oluşturuyorsanız tuşuna basmanız yeterlidir **F5** uygulama ve iş akışı hata ayıklamayı başlatmak için. Etkinlik kitaplığı, kendi oluşturuyorsanız, bir yürütülebilir ana bilgisayar uygulaması bir başlangıç projesi olarak olmalıdır. Başlangıç projesi ayarlama **Çözüm Gezgini**, ana proje adını sağ tıklatın ve seçin **başlangıç projesi olarak ayarla**.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: İş akışlarında kesme noktaları ayarlama](../workflow-designer/how-to-set-breakpoints-in-workflows.md)   
- [İş Akışı Tasarımcısı ile İş Akışlarında Hata Ayıklama](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)
+    > İş akışı uygulaması x86 mimarisini hedefliyorsa ve 64 bitlik bir işletim sistemi çalıştıran bir makinede barındırılıyorsa, uzak makineye [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] yüklenmedikçe veya iş akışı uygulamasının hedefi olarak **değiştirilirse uzaktan hata ayıklama çalışmaz. Herhangi bir CPU**.
+
+### <a name="stepping-through-code"></a>Kod üzerinden adımla
+
+- **Adım adım**: **F11**kullanarak bir etkinliğe adım adım ekleyebilirsiniz. Hata ayıklayıcı, tanımlı herhangi bir işleyicide adımları. Hiçbir işleyici tanımlanmamışsa, etkinliğin üzerinde veya diğer etkinlikleri içeren bileşik etkinliklerle ilk yürütme etkinliğinin içine adımlayın.
+
+- **Dışarı adımla:** **SHIFT-F11**kullanarak bir etkinliğin dışına ilerliğinizi sağlayabilirsiniz. Bir etkinliğin dışına geçmek, geçerli etkinliği ve tüm eşdüzey etkinliklerini tamamlamaya kadar çalıştırır. Hata ayıklayıcı daha sonra geçerli etkinliğin üst öğesiyle kesilir. Kod işleyiciden atlama yaparken, hata ayıklayıcı işleyicinin ilişkilendirildiği etkinliği keser.
+
+- **Adımlama**: **F10**kullanarak bir etkinliğin üzerinde ilerliğinizi yapabilirsiniz. Bileşik bir etkinliğin üzerine adımlarken, hata ayıklayıcı bileşik etkinliğin ilk yürütülebilir alt öğesi üzerinde kesilir. @No__t_0 etkinlik gibi bir bileşik olmayan üzerinde Adımlama yaparken, hata ayıklayıcı aktiviteyi ve ilgili işleyicileri ve bir sonraki etkinliğin üzerinde kesintiler yürütür. Yürütülen etkinlik bileşik bir etkinlikte son alt etkinlikse, yürütmeden sonra hata ayıklayıcı üst etkinliği keser.
+
+### <a name="debugging-with-f5"></a>F5 ile hata ayıklama
+
+- Bir Iş akışı konsol uygulaması projesi oluşturuyorsanız, uygulamanızda ve iş akışınızda hata ayıklamaya başlamak için **F5** tuşuna basın. Kendi başına bir etkinlik kitaplığı oluşturuyorsanız, başlangıç projesi olarak bir çalıştırılabilir konak uygulamanız olması gerekir. **Çözüm Gezgini**bir başlangıç projesi ayarlamak için konağın proje adına sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl yapılır:](../workflow-designer/how-to-set-breakpoints-in-workflows.md) [iş akışı Tasarımcısı iş akışlarında hata ayıklama Iş](../workflow-designer/debugging-workflows-with-the-workflow-designer.md) akışlarında kesme noktaları ayarlama

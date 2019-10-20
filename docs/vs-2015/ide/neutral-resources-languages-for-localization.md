@@ -13,37 +13,33 @@ helpviewer_keywords:
 - neutral resources
 ms.assetid: ef064995-3b84-4698-a708-9689b7723533
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: da39ed9373daaa1dbef21ad36931ce97ea1f1e1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 85e0be0172f27732f8efeb882cbcde5b9c6aef3d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558274"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670385"
 ---
 # <a name="neutral-resources-languages-for-localization"></a>Yerelleştirme İçin Bağımsız Kaynak Dilleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:System.Resources.NeutralResourcesLanguageAttribute> Sınıfı ana derlemede bulunan kaynakların kültürü belirtir. Bu öznitelik bir performans geliştirmesi kullanılır. böylece <xref:System.Resources.ResourceManager> nesne ana derlemede bulunan kaynaklar için arama yapmaz.  
-  
- Aşağıdaki kod bağımsız kaynaklar dilinin nasıl ayarlanacağını gösterir. Kod, derleme betiğindeki veya AssemblyInfo.vb veya AssemblyInfo.cs dosyasında yerleştirilebilir.  
-  
-```vb  
-' Set neutral resources language for assembly.  
-<Assembly: NeutralResourcesLanguageAttribute("en")>  
-  
-```  
-  
-```csharp  
-// Set neutral resources language for assembly.  
-[assembly: NeutralResourcesLanguageAttribute("en")]  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Resources.ResourceManager>   
- [.NET Framework tabanlı Uluslararası uygulamalara giriş](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)   
- [Yerelleştirme için kaynakların hiyerarşik organizasyonu](../ide/hierarchical-organization-of-resources-for-localization.md)   
- [Uygulamaları yerelleştirme](../ide/localizing-applications.md)   
- [Uygulamaları Genelleştirme ve Yerelleştirme](../ide/globalizing-and-localizing-applications.md)
+@No__t_0 sınıfı, ana derlemede yer alan kaynakların kültürünü belirtir. Bu öznitelik, <xref:System.Resources.ResourceManager> nesnesinin ana derlemede yer alan kaynakları araymaması için performans geliştirmesi olarak kullanılır.
+
+ Aşağıdaki kod, nötr kaynaklar dilinin nasıl ayarlanacağını gösterir. Kod, derleme betiğine veya AssemblyInfo. vb ya da AssemblyInfo.cs dosyasına yerleştirilebilir.
+
+```vb
+' Set neutral resources language for assembly.
+<Assembly: NeutralResourcesLanguageAttribute("en")>
+
+```
+
+```csharp
+// Set neutral resources language for assembly.
+[assembly: NeutralResourcesLanguageAttribute("en")]
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ <xref:System.Resources.ResourceManager>, [Yerelleştirme yerelleştirmesini sağlamak Için kaynak .NET Framework hiyerarşik kuruluşa](../ide/hierarchical-organization-of-resources-for-localization.md) [](../ide/localizing-applications.md) [göre uluslararası uygulamalara giriş,](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) [uygulamaları Genelleştirme ve yerelleştirme](../ide/globalizing-and-localizing-applications.md)

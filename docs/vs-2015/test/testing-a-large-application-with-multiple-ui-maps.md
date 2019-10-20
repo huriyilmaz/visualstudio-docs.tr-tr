@@ -9,21 +9,21 @@ helpviewer_keywords:
 - coded UI tests, for large applications
 ms.assetid: 6e1ae9ec-e9b1-458a-bd96-0eb15e46f1d5
 caps.latest.revision: 24
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 016417ec05149da52af78e2b41e0fff4af6c3e5b
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 2f6936811ea753d66d212facdda627930fb1ab10
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871577"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672133"
 ---
 # <a name="testing-a-large-application-with-multiple-ui-maps"></a>Birden Çok UI Eşlemesi Bulunan Büyük Uygulamaları Sınama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu konu, birden çok UI haritası kullanarak büyük bir uygulamayı test ederken kodlanmış UI testlerinin nasıl kullanılacağını anlatmaktadır.
 
- **Gereksinimler**
+ **Requirements**
 
 - Visual Studio Enterprise
 
@@ -50,24 +50,24 @@ Bu konu, birden çok UI haritası kullanarak büyük bir uygulamayı test ederke
 
 #### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>Kodlanmış UI test projenize bir UI haritası eklemek için
 
-1. **Çözüm Gezgini**' de, tüm UI haritalarını depolamak IÇIN kodlanmış UI test projenizde bir klasör oluşturmak için, kodlanmış UI test projesi dosyasına sağ tıklayın, **Ekle** ' nin üzerine gelin ve **Yeni klasör**' ü seçin. Örneğin, adını `UIMaps`yazabilirsiniz.
+1. **Çözüm Gezgini**' de, tüm UI haritalarını depolamak IÇIN kodlanmış UI test projenizde bir klasör oluşturmak için, kodlanmış UI test projesi dosyasına sağ tıklayın, **Ekle** ' nin üzerine gelin ve **Yeni klasör**' ü seçin. Örneğin, `UIMaps` adını yazabilirsiniz.
 
     Yeni klasör, kodlanmış UI test projesi altında görüntülenir.
 
-2. `UIMaps` Klasöre sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **Yeni öğe**' yi seçin.
+2. @No__t_0 klasöre sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **Yeni öğe**' yi seçin.
 
-    **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
+    **Yeni öğe Ekle** iletişim kutusu görüntülenir.
 
    > [!NOTE]
    > Yeni bir kodlanmış UI test eşlemesi eklemek için kodlanmış UI test projesi içinde olmanız gerekir.
 
 3. Listeden **KODLANMıŞ UI test Haritası** ' nı seçin.
 
-    **Ad** kutusuna yeni kullanıcı arabirimi eşlemesi için bir ad girin. Haritanın temsil ettiği bileşen veya sayfanın adını kullanın, örneğin, `HomePageMap`.
+    **Ad** kutusuna yeni kullanıcı arabirimi eşlemesi için bir ad girin. Haritanın temsil ettiği bileşen veya sayfanın adını kullanın, örneğin `HomePageMap`.
 
-4. Seçin **ekleme**.
+4. **Ekle**' yi seçin.
 
-    Pencereyi en aza indirir ve **kodlanmış UI Test Oluşturucusu** iletişim kutusu görüntülenir. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
+    @No__t_0 penceresi en aza indirir ve **KODLANMıŞ UI Test Oluşturucusu** iletişim kutusu görüntülenir.
 
 5. İlk yöntem için eylemleri kaydedin ve **kod üret**' i seçin.
 
@@ -77,12 +77,12 @@ Bu konu, birden çok UI haritası kullanarak büyük bir uygulamayı test ederke
 
    Çoğu durumda, uygulamanızın en üst düzey penceresi tüm sihirbazlar, formlar ve sayfalar için sabit kalmaya devam eder. Her kullanıcı arabirimi eşlemesinin en üst düzey pencere için bir sınıfı olsa da, tüm haritalar muhtemelen uygulamanızın tüm bileşenlerinin çalıştırıldığı en üst düzey pencereye başvurıyordur. Kodlanmış UI testleri, en üst düzey pencereden başlayarak hiyerarşik olarak yukarıdan aşağı doğru olan denetimleri arar, bu nedenle karmaşık bir uygulamada gerçek üst düzey pencere her kullanıcı arabirimi eşlemesinde yinelenebilir. Gerçek üst düzey pencere yinelendiyse, bu pencere değişirse birden çok değişiklik olur. Bu, UI haritaları arasında geçiş yaparken performans sorunlarına neden olabilir.
 
-   Bu etkiyi en aza indirmek için, bu kullanıcı `CopyFrom()` arabirimi eşlemesindeki yeni üst düzey pencerenin ana en üst düzey pencere ile aynı olduğundan emin olmak için yöntemini kullanabilirsiniz.
+   Bu etkiyi en aza indirmek için, bu kullanıcı arabirimi eşlemesindeki yeni üst düzey pencerenin ana en üst düzey pencere ile aynı olduğundan emin olmak için `CopyFrom()` yöntemini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, çeşitli kullanıcı arabirimi haritalarında oluşturulan sınıflar tarafından temsil edilen her bileşene ve alt denetimlerine erişim sağlayan bir yardımcı program sınıfının bir parçasıdır.
 
- Bu örnekte, adlı `Contoso` bir Web uygulamasının bir giriş sayfası, bir ürün sayfası ve bir alışveriş sepeti sayfası vardır. Bu sayfaların her biri tarayıcı penceresi olan ortak bir üst düzey pencereyi paylaşır. Her sayfa için bir kullanıcı arabirimi haritası vardır ve yardımcı program sınıfının aşağıdakine benzer bir kodu vardır:
+ Bu örnekte, `Contoso` adlı bir Web uygulamasının bir giriş sayfası, bir ürün sayfası ve bir alışveriş sepeti sayfası vardır. Bu sayfaların her biri tarayıcı penceresi olan ortak bir üst düzey pencereyi paylaşır. Her sayfa için bir kullanıcı arabirimi haritası vardır ve yardımcı program sınıfının aşağıdakine benzer bir kodu vardır:
 
 ```csharp
 using ContosoProject.UIMaps;

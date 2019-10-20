@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Bir XSD Şemasını Temel Alan XML Belgesi Oluşturma'
+title: 'Nasıl yapılır: XSD şemasını temel alan XML belgesi oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 193b195f-e918-4c79-a1a1-8096a1433bde
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7739f33bad62667fdc7be8704237ebdd3932739c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 1f423af7dc4fae7a116acbaf8497c5ee4268653e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918560"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645972"
 ---
 # <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Nasıl yapılır: XSD şemasını temel alan XML belgesi oluşturma
 
@@ -29,19 +29,19 @@ Bu seçeneği aşağıdaki senaryolar için kullanabilirsiniz:
 
 Bu özellik genellikle geçerli XML belgeleri oluşturur. Ancak, şema aşağıdakilerden birini veya birkaçını içeriyorsa, örnek geçerli olmayabilir:
 
-- `xs:key` ,`xs:keyref`Ve kimlik`xs:unique` kısıtlamaları.
+- @No__t_0, `xs:keyref` ve `xs:unique` kimlik kısıtlamaları.
 
-- `xs:pattern`lerle.
+- `xs:pattern` modelleri.
 
-- `xs:QName` Türün Numaralandırmalar.
+- @No__t_0 türünün Numaralandırmalar.
 
-- `xs:ENTITY`, `xs:ENTITIES` ve`xs:NOTATION` türleri.
+- `xs:ENTITY`, `xs:ENTITIES` ve `xs:NOTATION` türleri.
 
-Ayrıca, içeriğin yalnızca `xs:base64Binary` bu tür için şemada numaralandırmalar oluşması durumunda üretilecek olduğunu unutmayın.
+Ayrıca, yalnızca bu tür için şemada numaralandırmalar oluşursa `xs:base64Binary` içeriğin üretileceğini aklınızda bulabilirsiniz.
 
 ## <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>XSD dosyasını temel alan bir XML örnek belgesi oluşturmak için
 
-1. Şu adımları [izleyin: XSD şema dosyası](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)oluşturun ve düzenleyin.
+1. [Nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
 
 2. [XML şeması Gezgini](../xml-tools/xml-schema-explorer.md)' nde, `PurchaseOrder` Genel öğesine sağ tıklayın. **Örnek XML oluştur**' u seçin.
 

@@ -1,5 +1,5 @@
 ---
-title: 'CA1811: Çağrılmayan özel kodlardan kaçının | Microsoft Docs'
+title: 'CA1811: çağrılmadı özel koddan kaçının | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,50 +12,50 @@ helpviewer_keywords:
 - AvoidUncalledPrivateCode
 ms.assetid: aadbba74-7821-475f-8980-34d17c0a0a8b
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 373ccaa6552079a8995d61ef09bf6e0845c299d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ccc439e0d84d1fced4ba0359385a6964356d5df6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157976"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668456"
 ---
-# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811: Çağırılmayan özel kodlardan kaçının
+# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811: Çağrılmayan özel kodlardan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|AvoidUncalledPrivateCode|
 |CheckId|CA1811|
-|Kategori|Microsoft.Performance|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Performance|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Özel veya iç (derleme düzeyi) üye Arayanların derlemede çağırıcısı değil, ortak dil çalışma zamanı tarafından çağrılan değildir ve temsilci tarafından çağrılan da değildir. Aşağıdaki üyeleri bu kural tarafından denetlenmez:
+ Özel veya iç (derleme düzeyi) bir üyenin derlemede çağıranları yok, ortak dil çalışma zamanı tarafından Çağrılmıyor ve bir temsilci tarafından çağrılmıyor. Aşağıdaki Üyeler bu kural tarafından denetlenmiyor:
 
 - Açık arabirim üyeleri.
 
 - Statik oluşturucular.
 
-- Serileştirme oluşturucularını uygulayın.
+- Serileştirme oluşturucuları.
 
-- İle işaretlenmiş yöntemler <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> veya <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName>.
+- @No__t_0 veya <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> ile işaretlenen Yöntemler.
 
-- Geçersiz kılmalar olan üyeleri.
+- Geçersiz kılan Üyeler.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, giriş noktaları, gerçekleşirse, hatalı pozitif sonuçları kural mantığı tarafından şu anda belirtilmemiş bildirebilirsiniz. Ayrıca, derleyici bir derlemeye noncallable kod yayabilir.
+ Bu kural, kural mantığı tarafından şu anda tanımlı olmayan giriş noktaları oluşursa, yanlış pozitif durumları bildirebilir. Ayrıca, bir derleyici, çağrılabilir olmayan kodu bir derlemeye yayabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için noncallable kodunu kaldırmak veya onu çağıran kodu ekleyin.
+ Bu kural ihlalini onarmak için, çağrılabilir olmayan kodu kaldırın veya onu çağıran kodu ekleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan bir uyarıyı bastırmak güvenlidir.
+ Bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
-## <a name="related-rules"></a>İlgili kuralları
- [CA1812: Örneklenmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+## <a name="related-rules"></a>İlgili kurallar
+ [CA1812: Örneklendirilmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
  [CA1801: Kullanılmayan parametreleri gözden geçir](../code-quality/ca1801-review-unused-parameters.md)
 

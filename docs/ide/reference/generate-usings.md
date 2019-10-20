@@ -11,28 +11,28 @@ ms.workload:
 - dotnet
 helpviewer_keywords:
 - add missing usings
-ms.openlocfilehash: d971bcdaca4efdf587c7e441f1b0b28d21388dee
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 78786e6e6e7a8e5d8a8766138cb1a54a49416f9a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416471"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610884"
 ---
 # <a name="add-missing-usings-in-visual-studio"></a>Visual Studio 'da eksik using 'leri ekleme
 
-Bu kod oluşturma için geçerlidir:
+Bu kod üretimi için geçerlidir:
 
 - C#
 
-**Yazdırılacak** Kopya ve yapıştırılan kod için gerekli içeri aktarmaları veya [using deyimlerini](/dotnet/csharp/language-reference/keywords/using-statement) hemen eklemenizi sağlar.
+**Ne:** , Kopya ve yapıştırılan kod için gerekli içeri aktarmaları veya [kullanım yönergelerini](/dotnet/csharp/language-reference/keywords/using-directive) hemen eklemenizi sağlar.
 
-**Oluşturulurken** Projenizde veya diğer kaynaklardaki farklı yerlerden kod kopyalamak ve yeni koda yapıştırmak yaygın bir uygulamadır. Bu hızlı eylem, kopya ve yapıştırılan kod için eksik Imports deyimlerini bulur ve sonra bunları eklemenizi ister.
+**Ne zaman:** Projenizde veya diğer kaynaklardaki farklı yerlerden kod kopyalamak ve yeni koda yapıştırmak yaygın bir uygulamadır. Bu hızlı eylem, kopya ve yapıştırılan kod için eksik içeri aktarmalar yönergelerini bulur ve sonra bunları eklemenizi ister.
 
-**Kaydol** Hızlı eylem gerekli içeri aktarmaları otomatik olarak eklediğinden, kodunuzun ihtiyaç duyduğu `using` deyimleri el ile kopyalamanız gerekmez.
+**Neden:** Hızlı eylem gerekli içeri aktarmaları otomatik olarak eklediğinden, kodunuzun ihtiyaç duyduğu `using` yönergelerini el ile kopyalamanız gerekmez.
 
 ## <a name="add-missing-usings-refactoring"></a>Eksik using 'leri yeniden düzenleme Ekle
 
-1. Kodu bir dosyadan kopyalayın ve gerekli `using` deyimleri dahil etmeden yeni bir dosyaya yapıştırın. Ortaya çıkan hata, eksik `using` deyimleri ekleyen bir kod düzeltmesine eşlik eder.
+1. Kodu bir dosyadan kopyalayın ve gerekli `using` yönergeleri dahil etmeden yeni bir dosyaya yapıştırın. Ortaya çıkan hata, eksik `using` yönergelerini ekleyen bir kod düzeltmesine eşlik eder.
 
     > [!NOTE]
     > **Araçlar > seçenekler > metin düzenleyicisi > C# yönergeleri kullanarak Gelişmiş > >** bu öneriyi etkinleştirmeniz gerekir.
@@ -41,7 +41,7 @@ Bu kod oluşturma için geçerlidir:
 
     ![Using deyimleri oluşturma](media/generate-using-codefix.png)
 
-3. Eksik başvuruyu eklemek için **başvurunuz \<\>** ' ı kullanmayı seçin.
+3. Eksik başvuruyu eklemek için **\> \<your başvurusunu kullanmayı** seçin.
 
     ![Kullanımlar sonucu oluştur](media/generate-using-result.png)
 

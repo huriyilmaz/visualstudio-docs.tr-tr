@@ -6,15 +6,15 @@ ms.technology: vs-ide-test
 ms.topic: troubleshooting
 ms.assetid: f2fdb995-4888-4246-85dc-7bacadd45968
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5a02dbc4840729d5004b0815175f626fc8760711
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 3eda4127e046c7676525f1755f148663f58ec9b4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416971"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672074"
 ---
 # <a name="troubleshooting-code-metrics-issues"></a>Kod Ölçümleri Sorunlarını Giderme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,11 +25,11 @@ Kod ölçümleri topladığınızda aşağıdaki sorunlardan bazılarını yaşa
 
 ## <a name="Changes_in_Visual_Studio_2010_code_complexity_calculations"></a>Visual Studio 2010 kod karmaşıklığı hesaplamalarında yapılan değişiklikler
 
-Aynı işlev için, içinde [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] hesaplanan kod karmaşıklığı ölçümü aşağıdaki durumlar [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] için önceki sürümleri tarafından hesaplanan ölçüden farklı olabilir:
+Aynı işlev için, [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] içinde hesaplanan kod karmaşıklığı ölçümü aşağıdaki durumlar için önceki [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] sürümleriyle hesaplanan ölçüden farklı olabilir:
 
-- İşlev bir veya daha fazla catch bloğu içeriyor. Önceki sürümlerinde [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], catch blokları hesaplamaya eklenmedi. ' [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]De, her bir catch bloğunun karmaşıklığı işlevin karmaşıklığına eklenir.
+- İşlev bir veya daha fazla catch bloğu içeriyor. @No__t_0 önceki sürümlerinde, catch blokları hesaplamaya eklenmedi. @No__t_0, her bir catch bloğunun karmaşıklığı işlevin karmaşıklığına eklenir.
 
-- İşlev, bir anahtar (VB 'de Case, Select Case) ifadesini içerir. Ve önceki sürümler [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] arasındaki derleyici farklılıkları, daha fazla dönüş durumu içeren bazı Switch deyimleri için farklı MSIL kodu oluşturabilir.
+- İşlev, bir anahtar (VB 'de Case, Select Case) ifadesini içerir. @No__t_0 ve önceki sürümler arasındaki derleyici farklılıkları, dönüş durumları içeren bazı Switch deyimleri için farklı MSIL kodu oluşturabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

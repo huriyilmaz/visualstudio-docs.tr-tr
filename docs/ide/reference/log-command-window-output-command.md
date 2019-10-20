@@ -8,21 +8,21 @@ helpviewer_keywords:
 - log Command window output command
 - View.LogCommandWindowOutput command
 ms.assetid: d4ecec35-5af4-4954-8d60-2cd24583fbb4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ab2dfea4c51ee33407088c208aea351732b8a4a
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: 2056cf335f2cf6024e6ebb4b5daff72e54dd9d50
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043526"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610438"
 ---
-# <a name="log-command-window-output-command"></a>Komut penceresi çıktısı günlüğü tut komutu
+# <a name="log-command-window-output-command"></a>Komut Penceresi Çıkışını Günlüğe Kaydet komutu
 
-Tüm giriş ve çıkış kopyaları **komut** penceresine bir dosya.
+**Komut** penceresinden tüm giriş ve çıkışları bir dosyaya kopyalar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,41 +33,41 @@ Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ## <a name="arguments"></a>Arguments
 
 `filename`\
-İsteğe bağlı. Günlük dosyasının adı. Varsayılan olarak, kullanıcı profili klasöründe bir dosya oluşturulur. Dosya adı zaten varsa, günlük varolan dosyanın sonuna eklenir. Dosya yok belirtilirse, belirtilen son dosya kullanılır. Önceki dosya varsa, cmdline.log adlı varsayılan günlük dosyası oluşturulur.
+İsteğe bağlı. Günlük dosyasının adı. Varsayılan olarak, dosya kullanıcının profil klasöründe oluşturulur. Dosya adı zaten varsa, günlük varolan dosyanın sonuna eklenir. Dosya belirtilmemişse, belirtilen son dosya kullanılır. Önceki bir dosya mevcut değilse, komut satırı. log adlı varsayılan bir günlük dosyası oluşturulur.
 
 > [!TIP]
-> Günlük dosyasına kaydedildiği konumu değiştirmek için yol boşluk içeriyorsa tırnak işareti içine alınmış dosyanın tam yolunu girin.
+> Günlük dosyasının kaydedildiği konumu değiştirmek için, yolun herhangi bir boşluk içermesi durumunda tırnak işaretleriyle çevrelenen dosyanın tam yolunu girin.
 
 ## <a name="switches"></a>Anahtarlar
 
-/on\
-İsteğe bağlı. Günlüğü başlar **komut** belirtilen dosya penceresinde ve yeni bilgiler ile dosya ekler.
+/on
+İsteğe bağlı. Belirtilen dosyadaki **komut** penceresi için günlüğü başlatır ve dosyayı yeni bilgilerle ekler.
 
-/off\
-İsteğe bağlı. Günlüğü durdurur **komut** penceresi.
+/off
+İsteğe bağlı. **Komut** penceresi için günlüğü sonlandırır.
 
-/overwrite\
-İsteğe bağlı. Dosyanın içinde belirtilen `filename` bağımsız değişken var olan bir dosya ile eşleşen, dosyanın üzerine yazılır.
+/overwrite
+İsteğe bağlı. @No__t_0 bağımsız değişkeninde belirtilen dosya varolan bir dosyayla eşleşiyorsa, dosyanın üzerine yazılır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Dosya yok belirtilirse, dosya cmdline.log varsayılan olarak oluşturulur. Varsayılan olarak, bu komut için diğer ad günlüktür.
+Dosya belirtilmemişse, komut satırı. log dosyası varsayılan olarak oluşturulur. Varsayılan olarak, bu komutun diğer adı günlüğe kaydedilir.
 
 ## <a name="examples"></a>Örnekler
 
-Bu örnek, yeni bir günlük dosyası cmdlog, oluşturur ve komut günlük başlatır.
+Bu örnek, yeni bir günlük dosyası oluşturur, cmdlog ve komut günlüğünü başlatır.
 
 ```cmd
 >Tools.LogCommandWindowOutput cmdlog
 ```
 
-Bu örnek, oturum açma komutları durdurur.
+Bu örnek günlüğe kaydetme komutlarını durduruyor.
 
 ```cmd
 >Tools.LogCommandWindowOutput /off
 ```
 
-Bu örnek komut daha önce kullanılan günlük dosyasında günlük sürdürür.
+Bu örnek, daha önce kullanılan günlük dosyasındaki komutların günlüğe kaydedilmesini sürdürür.
 
 ```cmd
 >Tools.LogCommandWindowOutput /on

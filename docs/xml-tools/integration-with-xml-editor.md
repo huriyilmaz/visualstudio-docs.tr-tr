@@ -1,35 +1,35 @@
 ---
-title: XML şema tasarımcısını XML Düzenleyicisi ile tümleştirme
+title: XML şema Tasarımcısı XML Düzenleyicisi ile tümleştirme
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 43d7a8e6-bd94-4407-a800-15a145c74223
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8a233c0a1bbd456e08fe5343adae8328c5cb774
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b9df2d97a6ff68299ab70545683970188eb1bfea
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001854"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601779"
 ---
 # <a name="integration-with-xml-editor"></a>XML düzenleyicisi ile tümleştirme
 
-XML şema tasarımcısını XML Düzenleyicisi ile tümleşiktir. XSD dosyası XML düzenleyicisinde değiştirirseniz, değişikliğin yansıtılır [XML Şeması Gezgini](../xml-tools/xml-schema-explorer.md). Varsa [graf görünümünü](../xml-tools/graph-view.md) veya [içerik modeli görünümünü](../xml-tools/content-model-view.md) açık değişiklik de var. yansıtılır. XML şema tasarımcısını XML Düzenleyicisi arasında aşağıdaki yollarla gidebilirsiniz:
+XML şema Tasarımcısı XML Düzenleyicisi ile tümleşiktir. XML düzenleyicisinde bir XSD dosyasını değiştirirseniz, değişiklik [XML şema Gezgini](../xml-tools/xml-schema-explorer.md)' nde yansıtılır. [Grafik görünümü](../xml-tools/graph-view.md) veya [içerik modeli görünümü](../xml-tools/content-model-view.md) açık ise, değişiklik de yansıtılır. XML şema Tasarımcısı ve XML Düzenleyicisi arasında aşağıdaki yollarla gezinebilirsiniz:
 
-- XML Düzenleyicisi'nde bir düğümü sağ tıklayıp **XML Şeması Gezgini gösterme**.
+- XML düzenleyicisinde, bir düğüme sağ tıklayın ve **XML şema Gezgini 'Nde göster**' i seçin.
 
-- Graf Görünümü'nde ve **XML Şeması Gezgini**, bir düğüme çift tıklayın veya bir düğümünü sağ tıklatın ve seçin **kodu görüntüle**. İçerik modeli görünümünü bir düğümünü sağ tıklatın ve seçin **kodu görüntüle**.
+- Graph görünümünde ve **XML şema Gezgini**' nde bir düğüme çift tıklayın veya bir düğüme sağ tıklayıp **kodu görüntüle**' yi seçin. Içerik modeli görünümünde, bir düğüme sağ tıklayın ve **kodu görüntüle**' yi seçin.
 
-Açılan bir XML Şeması aşağıdaki ekran görüntüsünde gösterilmektedir **XML Şeması Gezgini**. **XML Şeması Gezgini** ağaç görünümünde kümesi şemasını görüntüler. XML Düzenleyicisi'ni şu anda etkin olan düğümün metin görünümünü görüntüler **XML Şeması Gezgini**.
+Aşağıdaki ekran görüntüsünde **XML şema Gezgininde**AÇıLAN bir XML şeması gösterilmektedir. **XML şeması Gezgini** , şema kümesini bir ağaç görünümünde görüntüler. XML Düzenleyicisi, şu anda **XML şema Gezgini**'nde etkin olan düğümün metin görünümünü görüntüler.
 
-![XSDDesignerWithXMLEditor](../xml-tools/media/xsddesignerwithxmleditor.gif)
+![Xsddesignerwithxmtaditor](../xml-tools/media/xsddesignerwithxmleditor.gif)
 
-Bazen kodu XML Düzenleyicisi'ni ve yan yana grafik Tasarımcı görmek yararlıdır. Aynı anda hem dosyalarını görüntülemek için herhangi bir XML Düzenleyicisi'nde sağ tıklayıp **Görünüm Tasarımcısı**. Visual Studio Windows menüde **yeni yatay (veya dikey) sekme grubu**.
+Bazen kodu XML düzenleyicisinde ve grafik tasarımcısında yan yana görmek faydalı olur. Her iki dosyayı aynı anda görüntülemek için, XML düzenleyicisinde herhangi bir yere sağ tıklayın ve **Görünüm Tasarımcısı**' nı seçin. Visual Studio Windows menüsünde **Yeni yatay (veya dikey) sekme grubu**' nu seçin.
 
-![XSDDesignerWithXMLEditorAndCMV](../xml-tools/media/xsddesignerwithxmleditorandcmv.gif)
+![Xsddesignerwithxmtaditorandcmv](../xml-tools/media/xsddesignerwithxmleditorandcmv.gif)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

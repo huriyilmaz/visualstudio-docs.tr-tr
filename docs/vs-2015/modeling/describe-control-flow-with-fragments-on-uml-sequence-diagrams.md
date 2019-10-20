@@ -1,5 +1,5 @@
 ---
-title: Denetim akışını UML sıralı diyagramlar üzerinde açıklayan | Microsoft Docs
+title: UML sıralı diyagramlarındaki parçalar ile denetim akışını açıklama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -14,123 +14,121 @@ helpviewer_keywords:
 - sequence diagrams, control flow
 ms.assetid: efcc0949-be7e-4cf4-99ef-47c36b3803ae
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c296be2e3a00efcdf48bdd6e4442e88fc32b3695
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 40f48891107c2eb3250b6b050e00c3650812d386
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422533"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669810"
 ---
 # <a name="describe-control-flow-with-fragments-on-uml-sequence-diagrams"></a>Denetim akışını UML sıralı diyagramlarında parçalarla açıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir UML sıralı diyagramda *Birleşik Parçalar* döngüleri, dalları ve başka alternatifler sağlar.  
-  
- Bir veya daha fazla birleştirilmiş parça oluşur *etkileşim işlenenleri*, ve bunların her biri bir veya daha fazla iletiler, etkileşim kullanımları veya birleştirilmiş parçaları barındırır.  
-  
+UML sıralı diyagramında, *Birleşik parçalar* döngüleri, dalları ve diğer alternatifleri göstermenizi sağlar.
+
+ Birleşik bir parça bir veya daha fazla *etkileşim işleneninden*oluşur ve bunların her biri bir veya daha fazla ileti, etkileşim kullanımı veya Birleşik parçalar barındırır.
+
 > [!NOTE]
-> Bu konu, sıralı diyagramlar parçalarında hakkındadır. UML sıralı diyagramlar okuma hakkında daha fazla bilgi için bkz. [UML Sequence Diagrams: Başvuru](../modeling/uml-sequence-diagrams-reference.md). UML sıralı diyagramlar çizin hakkında daha fazla bilgi için bkz. [UML Sequence Diagrams: Yönergeleri](../modeling/uml-sequence-diagrams-guidelines.md).  
-  
- ![Birleşik iki Etkileşim İşleneniyle parça](../modeling/media/uml-seqfragments.png "UML_SeqFragments")  
-  
- Aşağıdaki şekilde gösterilen öğeler aşağıdaki gibidir.  
-  
-1. Birleştirilmiş parça. Birleştirilmiş parçaları birkaç türü vardır. Bu örnekte, bir Alt iletileri alternatif dizileri oluşabilir göstermek için kullanabileceğiniz birleştirilmiş parça.  
-  
-2. Etkileşim işlenenleri. Her bir birleştirilmiş parça iletiler, etkileşim kullanımları ve birleştirilmiş parçaları daha küçük içerebilir en az bir etkileşim işleneni içerir. Bu örnekte, Alt birleştirilmiş parça iletilerin iki alternatif dizileri gösteren iki etkileşimi işlem vardır.  
-  
-3. İçinde tıklayarak her etkileşim işlenen ayrı ayrı seçebilirsiniz. Alt sınır görülebilir böylece bu örnekte, üst etkileşim işlenen seçilir. Genellikle, yalnızca arasındaki çizgi etkileşim işlenenleri görülebilir.  
-  
+> Bu konu, sıralı diyagramlarda parçalar hakkındadır. UML sıralı diyagramlarını okuma hakkında daha fazla bilgi için bkz. [UML sıralı diyagramlar: başvuru](../modeling/uml-sequence-diagrams-reference.md). UML sıralı diyagramları çizme hakkında daha fazla bilgi için bkz. [UML sıralı diyagramlar: yönergeler](../modeling/uml-sequence-diagrams-guidelines.md).
+
+ ![İki etkileşim Işleneniyle Birleşik parça](../modeling/media/uml-seqfragments.png "UML_SeqFragments")
+
+ Şekilde gösterilen öğeler aşağıdaki gibidir.
+
+1. Birleşik parça. Birçok Birleşik parça türü vardır. Bu örnek, diğer ileti sıralarının gerçekleşebileceğini göstermek için kullanabileceğiniz alt Birleşik bir parçadır.
+
+2. Etkileşim işlenenleri. Her Birleşik parça, iletiler, etkileşim kullanımları ve daha küçük Birleşik parçalar içerebilen en az bir etkileşim işleneni içerir. Bu örnekte, alt Birleşik parçanın iki farklı ileti dizisini gösteren iki etkileşim işlemi vardır.
+
+3. Her etkileşim işlenenini, içine tıklayarak ayrı olarak seçebilirsiniz. Bu örnekte, üst etkileşim işleneni seçilir, böylece sınırının görünebilmesini sağlayabilirsiniz. Genellikle, yalnızca etkileşim işlenenleri arasındaki ayırma satırı görünür.
+
     > [!NOTE]
-    > Üst etkileşim işlenen seçmek için çok yakın birleştirilmiş parça üst kısmına tıklamanız gerekir değil.  
-  
-4. Cf. Bir koruma her etkileşim işlenen verebilirsiniz. Bu, altında etkileşim işleneni içinde iletileri gerçekleştirilecek koşul açıklar.  
-  
-## <a name="creating-combined-fragments"></a>Birleşik parçaları oluşturma  
- Oluşturabileceğiniz parça türlerinin bir listesi için bkz. [oluşturabileceğiniz](#KindsOfFragment).  
-  
-#### <a name="to-create-a-combined-fragment"></a>Birleştirilmiş parça oluşturmak için  
-  
-1. Bir iletiyi veya iletileri tümü aynı yaşam çizgisinin veya yürütme oluşması başlatmak, bir dizi seçin.  
-  
+    > En iyi etkileşim işlenenini seçmek için, Birleşik parçanın üst kısmına çok yakın tıklamamalıdır.
+
+4. Koruma. Her etkileşim işlenenini bir Guard 'a verebilirsiniz. Bu, etkileşim işleneni içindeki iletilerin gerçekleştirileceği koşulu açıklar.
+
+## <a name="creating-combined-fragments"></a>Birleşik parçalar oluşturma
+ Oluşturabileceğiniz parça türlerinin listesi için bkz. [birleşik parça türleri](#KindsOfFragment).
+
+#### <a name="to-create-a-combined-fragment"></a>Birleşik bir parça oluşturmak için
+
+1. Tek bir ileti veya bir dizi ileti seçin, hepsi aynı yaşam çizgisinde veya yürütme oluşumunda başlar.
+
    > [!NOTE]
-   > Birden fazla ileti seçerseniz, kesintisiz bir dizi oluşturması gerekir.  
-  
-2. İletileri birine sağ tıklayın, fareyle **Surround With**ve gibi istediğiniz birleştirilmiş parça türü ardından **Alt birleştirilmiş parça**.  
-  
-    Yeni bir birleştirilmiş parça görünür. Başlık gibi seçtiğiniz birleştirilmiş parça türü belirtir **Alt**.  
-  
-    Birleştirilmiş parça seçtiğiniz iletileri içeren bir parça yoktur.  
-  
-   Daha fazla etkileşim işlenenleri birleştirilmiş parça için bazı türleri ekleyebilirsiniz.  
-  
-   İletileri birleştirilmiş parça içinde yeniden sonra seçin **düzeni yeniden Düzenle** birleştirilmiş parça çerçeve yeniden boyutlandırmak için kısayol menüsünde.  
-  
-#### <a name="to-add-a-new-interaction-operand-to-a-combined-fragment"></a>Yeni bir etkileşim işleneni için birleştirilmiş bir parça eklemek için  
-  
-1. Etkileşim işleneni (2) dışında herhangi bir kapsanan parça ve birleştirilmiş parça başlığının altına içinde boş bir alana sağ tıklayın.  
-  
-2. İşaret **ekleme**.  
-  
-3. Tıklayın **önce etkileşim işleneni**, veya **sonra etkileşim işleneni**.  
-  
-4. İleti araçları kullanarak yeni etkileşim işleneni içinde veya var olan iletileri yapıştırarak iletileri ekleyebilirsiniz.  
-  
-   Ayarlayabileceğiniz **Guard** iletilerin içinde gerçekleştirilir koşulları tanımlamak için etkileşim işleneninin özelliği. Örneğin, bir **döngü** birleştirilmiş parça, bu sırada döngünün devam koşulu belirtmek için koruma kullanabilirsiniz. İçinde bir **Alt** birleşik parça, her etkileşimi işlenen için ayrı bir koşul belirtebilirsiniz.  
-  
-#### <a name="to-set-the-guard-of-an-interaction-operand"></a>Etkileşim işleneninin ayarlamak için  
-  
-1. Etkileşim işleneni (2) dışında herhangi bir kapsanan parça içinde boş bir alana tıklayın.  
-  
-    Etkileşim işleneni ve koruma koşulu etrafında bir seçim kenarlığı görüntülenir.  
-  
-    Başlıkta **özellikleri** penceresi şunu gösterir **etkileşim işleneni**.  
-  
-2. Koruma koşulunu yazın.  
-  
-    Koşul, parça (4) en görünür.  
-  
-   Birleştirilmiş parçaları bazı tür özelliklerini ayarlayabilirsiniz.  
-  
-#### <a name="to-set-or-view-the-properties-of-a-combined-fragment"></a>Ayarlamak veya birleştirilmiş parça özelliklerini görüntülemek için  
-  
-- Birleştirilmiş parça başlığında sağ tıklayın ve ardından **özellikleri**.  
-  
+   > Birden fazla ileti seçerseniz, kesintisiz bir sıra oluşturmaları gerekir.
+
+2. İletilerden birine sağ tıklayın, şununla **çevreye**gelin ve ardından istediğiniz Birleşik parça türüne tıklayın, örneğin **alt Birleşik parça**gibi.
+
+    Yeni bir Birleşik parça görüntülenir. Başlık, **alt**gibi seçtiğiniz Birleştirilmiş parçanın türünü gösterir.
+
+    Birleşik parçanın içinde, seçtiğiniz iletileri içeren bir parça vardır.
+
+   Bazı Birleşik parça türlerine daha fazla etkileşim işlenenleri ekleyebilirsiniz.
+
+   Birleşik bir parçanın içindeki iletileri yeniden düzenledikten sonra, Birleşik parça çerçevesini yeniden boyutlandırmak için kısayol menüsünde **düzeni yeniden Düzenle** ' yi seçin.
+
+#### <a name="to-add-a-new-interaction-operand-to-a-combined-fragment"></a>Birleşik parçaya yeni bir etkileşim işleneni eklemek için
+
+1. Etkileşim işleneni içindeki boş bir alana (2), içerilen parçaların dışında ve Birleşik parçaların başlığının altına sağ tıklayın.
+
+2. **Ekle**' ye gelin.
+
+3. Daha **önce etkileşim işleneni**veya **sonrasında etkileşim işleneni**' ne tıklayın.
+
+4. İleti araçlarını kullanarak veya mevcut iletileri kopyalayıp yapıştırarak yeni etkileşim işleneninin içine iletiler ekleyebilirsiniz.
+
+   Bir etkileşim işleneninin **Guard** özelliğini, içindeki iletilerin gerçekleştirildiği koşulları açıklayan şekilde ayarlayabilirsiniz. Örneğin, bir **döngü** Birleşik parçasında, döngünün devam ettiği koşulu belirtmek için Guard 'ı kullanabilirsiniz. **Alt** Birleşik bir parçada, her etkileşim işleneni için ayrı bir koşul belirtebilirsiniz.
+
+#### <a name="to-set-the-guard-of-an-interaction-operand"></a>Bir etkileşim işleneninin korumasını ayarlamak için
+
+1. Tüm içerilen parçaların dışında, etkileşim işleneni içindeki boş bir alana tıklayın (2).
+
+    Etkileşim işleneni ve koruma koşulunun çevresinde bir seçim kenarlığı görünür.
+
+    **Özellikler** penceresindeki başlık, **etkileşim işlenenini**gösterir.
+
+2. Koruma koşulunu yazın.
+
+    Koşul, parçanın üst kısmında görünür (4).
+
+   Bazı birleştirilmiş parça türlerinin özelliklerini ayarlayabilirsiniz.
+
+#### <a name="to-set-or-view-the-properties-of-a-combined-fragment"></a>Birleşik parçanın özelliklerini ayarlamak veya görüntülemek için
+
+- Birleşik parçanın başlığına sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+
     > [!NOTE]
-    > Birleştirilmiş parça farklı türlerde farklı özelliklere sahiptir.  
-  
-## <a name="KindsOfFragment"></a> Birleştirilmiş parça türü  
-  
-### <a name="fragments-describing-control-flow"></a>Denetim akışı açıklayan parçaları  
- Basit sıralı diyagram, tek bir genel sıra gösterir. Birleştirilmiş parçaları aşağıdaki türde farklı anlarda da oluşabilir farklılıkları açıklamak için kullanabilirsiniz.  
-  
-|Parça türü|Açıklama|  
-|-------------------|-----------------|  
-|**iyileştirilmiş**|İsteğe bağlı. Olabilir veya olmayacak bir dizisini alır. Korumada altında oluştuğu koşul belirtebilirsiniz.|  
-|**Alt**|İletilerin alternatif dizileri içeren parçaları listesini içerir. Herhangi bir anda yalnızca bir sıralı gerçekleşir.<br /><br /> Bir koruma hangi koşullar altında çalıştığını göstermek için her parça koyabilirsiniz. İn **başka** başka bir koruma doğru ise bir parça çalışması gerektiğini belirtir. Tüm cf false ve yoksa hiçbir **başka**, parçalar hiçbiri yürütülmez.|  
-|**döngü**|Parça bazı sayıda yineler. Korumada koşul yinelenmesi gerektiğini belirtebilirsiniz.<br /><br /> Döngü birleştirilmiş parçaları özelliklerine sahip **Min** ve **Max**, parça yinelenebilen bir kez minimum ve maksimum sayısını belirtin. Varsayılan değer kısıtlaması yoktur.|  
-|**sonu**|Bu parçasını yürütülürse, dizinin kalan terk edilir. Koruma, kesme oluşur koşulu belirtmek için kullanabilirsiniz.|  
-|**Par**|Paralel. Olaylar aralıklı olabilir.|  
-|**Kritik**|Par veya Seq parçası içinde kullanılır. Bu parçadaki iletileri diğer iletilerle aralıklı olabilir gerekir değil olduğunu gösterir.|  
-|**Seq**|İki veya daha fazla işlenen parçası vardır. Aynı yaşam çizgisini içeren iletileri sırasına göre parçaları gerçekleşmelidir. Aynı yaşam çizgilerini içermeyen yerlerde, iletileri farklı parçaları paralel olarak aralıklı olabilir.|  
-|**Katı**|İki veya daha fazla işlenen parçası vardır. Parçalar, verilen sırada olmalıdır.|  
-  
-### <a name="fragments-about-how-to-interpret-the-sequence"></a>Parçaları dizisi yorumlama hakkında  
- Varsayılan olarak, sıralı diyagram oluşabilir ileti serilerinden birini belirtir. Çalışan sistemindeki diğer iletiler, diyagram üzerinde gösterilecek seçmediniz oluşabilir.  
-  
- Bu yorumu değiştirmek için aşağıdaki parça türleri kullanılabilir.  
-  
-|Parça türü|Açıklama|  
-|-------------------|-----------------|  
-|**Göz önünde bulundurun**|Bu parçaların açıkladığı iletilerinin listesini belirtir. Diğer iletiler çalışan sistemde ortaya çıkabilir, ancak bu açıklama amaçları doğrultusunda önemli değildir.<br /><br /> Listedeki **iletileri** özelliği.|  
-|**Yoksay**|Bu parça açıklanmayan iletilerin listesi. Çalışan sistemindeki oluşabilir, ancak bu açıklama amaçları doğrultusunda önemli değildir.<br /><br /> Listedeki **iletileri** özelliği.|  
-|**Assert**|İşlenen parça yalnızca geçerli dizileri belirtir. Genellikle, bir veya Ignore parça içinde kullanılır.|  
-|**Neg**|Bu parçasında gösterilen dizisi olmaması gerekir. Genellikle, bir veya Ignore parça içinde kullanılır.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UML Sıralı Diyagramları: Yönergeleri](../modeling/uml-sequence-diagrams-guidelines.md)   
- [UML Sıralı Diyagramları: Başvuru](../modeling/uml-sequence-diagrams-reference.md)   
- [UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md)
+    > Farklı türlerde Birleşik parçaların farklı özellikleri vardır.
+
+## <a name="KindsOfFragment"></a>Birleşik parça türleri
+
+### <a name="fragments-describing-control-flow"></a>Denetim akışını açıklayan parçalar
+ Basit bir sıra diyagramı yalnızca bir adet tipik sırayı gösterir. Farklı durumlarda gerçekleşebileceği çeşitlemeleri anlatmak için aşağıdaki Birleşik parça türlerini kullanabilirsiniz.
+
+|Parça türü|Açıklama|
+|-------------------|-----------------|
+|**Et**|İsteğe bağlı. Gerçekleşebilen veya gerçekleşmeyecek bir diziyi barındırır. Koruma, altında gerçekleştiği koşulu belirtebilirsiniz.|
+|**Alternatif**|Alternatif ileti dizilerini içeren parçaların bir listesini içerir. Her gün yalnızca bir sıra oluşur.<br /><br /> Her parçaya, hangi koşulun çalıştırılacağını göstermek için bir koruyucu koyabilirsiniz. Diğer bir koruyucu **, başka bir** koruyucu doğru değilse çalışması gereken bir parçayı gösterir. Tüm korumalara yanlışı varsa ve **başka**bir yoksa, parçaların hiçbiri yürütülür.|
+|**Gerçekleştirmek**|Parça birkaç kez yinelenir. Koruma sırasında tekrarlanacak koşulu belirtebilirsiniz.<br /><br /> Döngü Birleşik parçaları **Min** ve **Max**özelliklerine sahiptir; bu, parçanın tekrarlanma sürebileceği en düşük ve en yüksek sayıyı gösterir. Varsayılan değer kısıtlama değildir.|
+|**Sonundan**|Bu parça yürütülürse, sıranın geri kalanı terk edilir. Break 'in gerçekleşeceği koşulu belirtmek için Guard 'ı kullanabilirsiniz.|
+|**İ**|Dir. Parçalardaki olaylar araya eklenebilir.|
+|**Başlatma**|Bir par veya Seq parçası içinde kullanılır. Bu parçadaki iletilerin diğer iletilerle birlikte aralanmamış olması gerektiğini gösterir.|
+|**Sıra**|İki veya daha fazla işlenen parçası var. Aynı yaşam çizgisini içeren iletiler parçalar sırasıyla gerçekleşmelidir. Aynı yaşam çizgilerini içermeyen, farklı parçalardan iletiler paralel olarak eklenebilir.|
+|**Sert**|İki veya daha fazla işlenen parçası var. Parçalar verilen sırada gerçekleşmelidir.|
+
+### <a name="fragments-about-how-to-interpret-the-sequence"></a>Sıranın nasıl yorumlanacağı hakkında parçalar
+ Varsayılan olarak, sıralı diyagram, gerçekleşebileceğini bir dizi mesaj bildirir. Çalışan sistemde, diyagramda göstermeyi seçmediğiniz başka iletiler olabilir.
+
+ Bu yorumu değiştirmek için aşağıdaki parça türleri kullanılabilir.
+
+|Parça türü|Açıklama|
+|-------------------|-----------------|
+|**Seçmeyi**|Bu parçanın açıkladığı iletilerin bir listesini belirtir. Diğer iletiler çalışan sistemde gerçekleşebilir, ancak bu açıklamanın amaçları için önemli değildir.<br /><br /> **Iletileri messages** özelliğine yazın.|
+|**Yoksay**|Bu parçanın betimleyen iletilerinin listesi. Bunlar çalışan sistemde gerçekleşebilir, ancak bu açıklamanın amaçları için önemli değildir.<br /><br /> **Iletileri messages** özelliğine yazın.|
+|**Vermediğini**|İşlenen parçası yalnızca geçerli dizileri belirtir. Genellikle bir dikkate alma veya yoksayma parçası içinde kullanılır.|
+|**Neg**|Bu parçada gösterilen sıra gerçekleşmemelidir. Genellikle bir dikkate alma veya yoksayma parçası içinde kullanılır.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [UML sıralı diyagramlar: yönergeler](../modeling/uml-sequence-diagrams-guidelines.md) [UML sıralı DIYAGRAMLAR: başvuru](../modeling/uml-sequence-diagrams-reference.md) [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md)

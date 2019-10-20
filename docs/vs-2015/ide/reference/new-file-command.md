@@ -11,66 +11,59 @@ helpviewer_keywords:
 - New File command
 ms.assetid: 767868d6-a525-425b-a43b-2198f636ab6b
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bb86a15e73ac2410ad763acd3b361e4a82bc44f1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8e0d25d585f518c854ad6176ae4ae7a5f27b22ad
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68199071"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671956"
 ---
 # <a name="new-file-command"></a>Yeni Dosya Komutu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yeni bir dosya oluşturur ve onu açar. Dosyanın çeşitli dosyalar klasörü altında görünür.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-File.NewFile [filename] [/t:templatename] [/editor:editorname]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `filename`  
- İsteğe bağlı. Dosyanın adı. Adı sağlanmazsa, varsayılan adı sağlanır. Hiçbir şablon adı listede yoksa, bir metin dosyası oluşturulur.  
-  
-## <a name="switches"></a>Anahtarlar  
- / t:`templatename`  
- İsteğe bağlı. Oluşturulacak dosya türünü belirtir.  
-  
- / T:`templatename` bağımsız değişkeni sözdizimini yeni dosya iletişim kutusunda bulunan bilgileri yansıtır. Ardından bir eğik kategori adı girin (`\`) ve şablon adı ve tüm dizeyi tırnak içine alın.  
-  
- Örneğin, yeni bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] kaynak dosyası, / t: şunları girersiniz`templatename` bağımsız değişken.  
-  
-```  
-/t:"Visual C++\C++ File (.cpp)"  
-```  
-  
- Yukarıdaki örnekte C++ dosyası şablonu Visual C++ kategorisi altında bulunduğunu gösterir **yeni dosya** iletişim kutusu.  
-  
- / e:`editorname`  
- İsteğe bağlı. Dosyanın açılmasını düzenleyicinin adı. Bağımsız değişken belirtildi, ancak hiçbir Düzenleyici adı verilmesi, **birlikte Aç** iletişim kutusu görüntülenir.  
-  
- / E:`editorname` bağımsız değişkeni sözdizimini açık ile iletişim kutusunda tırnak işaretleri arasına göründükleri gibi Düzenleyicisi adları kullanır.  
-  
- Örneğin, bir dosya kaynak kod Düzenleyicisi'nde açmak için / e: şunları girersiniz`editorname` bağımsız değişken.  
-  
-```  
-/e:"Source Code (text) Editor"  
-```  
-  
-## <a name="example"></a>Örnek  
- Bu örnek, yeni bir Web sayfası "test1.htm" oluşturur ve Kaynak Kod Düzenleyicisi'nde açılır.  
-  
-```  
->File.NewFile test1 /t:"General\HTML Page" /e:"Source Code (text) Editor"  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)   
- [Komut penceresi](../../ide/reference/command-window.md)   
- [Komut penceresi](../../ide/reference/immediate-window.md)   
- [Bul/komut kutusu](../../ide/find-command-box.md)   
- [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)
+Yeni bir dosya oluşturur ve açar. Dosya, Miscellaneous Files klasörünün altında görünür.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+File.NewFile [filename] [/t:templatename] [/editor:editorname]
+```
+
+## <a name="arguments"></a>Arguments
+ Isteğe bağlı `filename`. Dosyanın adı. Ad sağlanmazsa, varsayılan bir ad verilir. Şablon adı listelenmiyorsa, bir metin dosyası oluşturulur.
+
+## <a name="switches"></a>Anahtarlar
+ /t: `templatename` Isteğe bağlı. Oluşturulacak dosyanın türünü belirtir.
+
+ /T: `templatename` bağımsız değişkeni sözdizimi, yeni dosya Iletişim kutusunda bulunan bilgileri yansıtır. Kategori adını, ardından ters eğik çizgi (`\`) ve şablon adını girip, tüm dizeyi tırnak işaretleri içine alın.
+
+ Örneğin, yeni bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] kaynak dosyası oluşturmak için/t: `templatename` bağımsız değişkeni için şunu girersiniz.
+
+```
+/t:"Visual C++\C++ File (.cpp)"
+```
+
+ Yukarıdaki örnek, C++ dosya şablonunun C++ **yeni dosya** iletişim kutusundaki görsel kategori altında bulunduğunu gösterir.
+
+ /e: Isteğe bağlı `editorname`. Dosyanın açıldığı düzenleyicinin adı. Bağımsız değişken belirtilmişse ancak düzenleyici adı sağlanmadığında, **birlikte Aç** iletişim kutusu görüntülenir.
+
+ /E: `editorname` bağımsız değişkeni sözdizimi, birlikte Aç Iletişim kutusunda göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır.
+
+ Örneğin, kaynak kodu düzenleyicisinde bir dosyayı açmak için,/e: `editorname` bağımsız değişkeni olarak aşağıdakileri girersiniz.
+
+```
+/e:"Source Code (text) Editor"
+```
+
+## <a name="example"></a>Örnek
+ Bu örnekte, "test1. htm" yeni bir Web sayfası oluşturulur ve kaynak kodu düzenleyicisinde açılır.
+
+```
+>File.NewFile test1 /t:"General\HTML Page" /e:"Source Code (text) Editor"
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Visual Studio komutları](../../ide/reference/visual-studio-commands.md) [komut penceresi](../../ide/reference/command-window.md) [hemen penceresi](../../ide/reference/immediate-window.md) [Bul/komut kutusu](../../ide/find-command-box.md) [Visual Studio komut diğer adları](../../ide/reference/visual-studio-command-aliases.md)

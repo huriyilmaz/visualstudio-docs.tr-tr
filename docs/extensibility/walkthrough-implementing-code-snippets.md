@@ -1,52 +1,55 @@
 ---
-title: 'İzlenecek yol: Kod parçacıkları uygulama | Microsoft Docs'
+title: 'İzlenecek yol: kod parçacıklarını uygulama | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: adbc5382-d170-441c-9fd0-80faa1816478
 author: madskristensen
 ms.author: madsk
 manager: jillfra
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e4b6d0346ce10c780254b26a4f2c710ed171ef5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 84674a12165a3c5cd47c9004274669d377d330c5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320731"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72632503"
 ---
-# <a name="walkthrough-implement-code-snippets"></a>İzlenecek yol: Kod parçacıkları uygulama
-Kod parçacıklarınızı oluşturmak ve uzantının kullanıcılar için kendi kod ekleyebilmeniz bunları bir düzenleyici uzantısına dahil etme.
+# <a name="walkthrough-implement-code-snippets"></a>İzlenecek yol: kod parçacıklarını uygulama
+Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekleyerek uzantı kullanıcılarının bunları kendi koduna ekleyebilmesini sağlayabilirsiniz.
 
- Kod parçacığı, kod veya bir dosyada edilebilecek diğer metin bir parçası olan. Üzerinde belirli programlama dilleri için kaydedilen tüm parçacıkları görüntülemek için **Araçları** menüsünü tıklatın **kod parçacığı Yöneticisi**. Sağ tıklatın, kod parçacığı, istediğiniz bir dosyada bir kod parçacığını eklemek için kod parçacığı Ekle,'a tıklayın veya **Surround With**, istediğiniz kod parçacığı bulun ve çift tıklatın. Basın **sekmesini** veya **Shift**+**sekmesini** parçacığının ilgili bölümlerin değiştirin ve ENTER tuşuna basın **Enter** veya **Esc** kabul etmek. Daha fazla bilgi için [kod parçacıkları](../ide/code-snippets.md).
+ Kod parçacığı, bir kod parçası veya bir dosyaya dahil edilebilir başka bir metindir. Belirli programlama dilleri için kaydedilmiş tüm kod parçacıklarını görüntülemek için, **Araçlar** menüsünde **kod parçacığı Yöneticisi**' ne tıklayın. Bir dosyaya kod parçacığı eklemek için, kod parçacığını istediğiniz yere sağ tıklayın, kod parçacığı Ekle ' ye tıklayın veya **Ile çevreleyin**, istediğiniz kod parçacığını bulun ve ardından çift tıklayın. Kod parçacığının ilgili bölümlerini **değiştirmek Için** **tab** veya **SHIFT** +**Tab** tuşlarına basın ve ardından **ENTER** tuşuna basın ve kabul edin. Daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
 
- Kod parçacığı .snippet * dosya adı uzantısına sahip bir XML dosyasında yer alır. Bir kod parçacığı, kullanıcı bulabilir ve bunları değiştirmek için kod parçacığı eklendikten sonra vurgulanır alanlar içerebilir. Bir kod parçacığı dosyası için bilgi de sağlar **kod parçacığı Yöneticisi** kod parçacığı adı doğru kategorisinde görüntüleyebilmesi. Kod parçacığı şeması hakkında daha fazla bilgi için bkz: [kod parçacıkları şema başvurusu](../ide/code-snippets-schema-reference.md).
+ Kod parçacığı,. parçacığının * dosya adı uzantısına sahip bir XML dosyasında bulunur. Bir kod parçacığı, kullanıcının onları bulabileceği ve değiştirebilmeleri için kod parçacığı eklendikten sonra vurgulanan alanları içerebilir. Kod parçacığı oluşturma dosyası aynı zamanda **kod parçacığı Yöneticisi** için bilgi sağlar, böylece kod parçacığı adı doğru kategoride de görüntülenebilir. Kod parçacığı şeması hakkında daha fazla bilgi için bkz. [kod parçacıkları şema başvurusu](../ide/code-snippets-schema-reference.md).
 
- Bu izlenecek yol aşağıdaki görevlerin nasıl yerine getirileceğini öğretir:
+ Bu izlenecek yol, şu görevleri nasıl gerçekleştireceğinizi öğretir:
 
-1. Oluşturun ve belirli bir dil için kod parçacıkları kaydedin.
+1. Belirli bir dil için kod parçacıkları oluşturun ve kaydedin.
 
-2. Ekleme **parçacık Ekle** kısayol menüsüne komut.
+2. Bir kısayol menüsüne **kod parçacığı Ekle** komutunu ekleyin.
 
-3. Kod parçacığı genişletme uygulayın.
+3. Kod parçacığı genişletmeyi Uygula.
 
-   Bu izlenecek yolda dayanır [izlenecek yol: Deyim tamamlama görüntüleme](../extensibility/walkthrough-displaying-statement-completion.md).
+   Bu izlenecek yol, [Izlenecek yol: görüntüleme ifadesinin tamamlanmasını](../extensibility/walkthrough-displaying-statement-completion.md)temel alır.
 
-## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015'ten başlayarak, Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik eklemiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+## <a name="prerequisites"></a>Prerequisites
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-and-register-code-snippets"></a>Oluşturma ve kod parçacıkları kaydetme
- Genellikle, kod parçacıkları kayıtlı dil hizmeti ile ilişkilidir. Ancak, uygulamanız gerekmez bir <xref:Microsoft.VisualStudio.Package.LanguageService> kod parçacıkları kaydedilecek. Bunun yerine, yalnızca kod parçacığı dizin dosyasında bir GUID belirtin ve ardından aynı GUID <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> , projenize ekleyin.
+## <a name="create-and-register-code-snippets"></a>Kod parçacıkları oluşturma ve kaydetme
+ Genellikle, kod parçacıkları kayıtlı bir dil hizmeti ile ilişkilendirilir. Ancak, kod parçacıklarını kaydetmek için bir <xref:Microsoft.VisualStudio.Package.LanguageService> uygulamanız gerekmez. Bunun yerine, kod parçacığı dizini dosyasında bir GUID belirtmeniz ve ardından projenize eklediğiniz <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> aynı GUID 'yi kullanmanız yeterlidir.
 
- Aşağıdaki adımlar, kod parçacıkları oluşturmak ve bunları belirli bir GUID ile ilişkilendirmek nasıl ekleyebileceğiniz gösterilmektedir.
+ Aşağıdaki adımlarda, kod parçacıklarının nasıl oluşturulacağı ve belirli bir GUID ile nasıl ilişkilendirileceğini gösterilmektedir.
 
 1. Aşağıdaki dizin yapısını oluşturun:
 
-    **%InstallDir%\TestSnippets\Snippets\1033\\**
+    **%InstallDir%\TestSnippets\Snippets\1033 \\**
 
-    Burada *Installdır %* Visual Studio yükleme klasörüdür. (Bu yol genellikle kod parçacıkları yüklemek için kullanılsa da, herhangi bir yolu belirtebilirsiniz.)
+    Burada *% InstallDir%* , Visual Studio yükleme klasörüdür. (Bu yol genellikle kod parçacıklarını yüklemek için kullanılsa da, herhangi bir yol belirtebilirsiniz.)
 
-2. \1033\ klasöründe, oluşturun bir *.xml* adlandırın ve dosya **TestSnippets.xml**. (Bu adı genellikle bir kod parçacığı dizin dosyası için kullanılsa da, sahip olduğu sürece herhangi bir ad belirtebilirsiniz bir *.xml* dosya adı uzantısı.) Aşağıdaki metni ekleyin ve yer tutucu GUID silin ve kendi uygulamanızı ekleyin.
+2. \ 1033 \ klasöründe bir *. xml* dosyası oluşturun ve **testparçacıklar. xml**olarak adlandırın. (Bu ad genellikle bir kod parçacığı Dizin dosyası için kullanılsa da, bir *. xml* dosya adı uzantısına sahip olduğu sürece herhangi bir ad belirtebilirsiniz.) Aşağıdaki metni ekleyin ve ardından yer tutucu GUID 'INI silin ve kendinizinkini ekleyin.
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -63,7 +66,7 @@ Kod parçacıklarınızı oluşturmak ve uzantının kullanıcılar için kendi 
    </SnippetCollection>
    ```
 
-3. Kod parçacığı klasörüne bir dosya oluşturun, adlandırın **test**`.snippet`ve ardından aşağıdaki metni ekleyin:
+3. Kod parçacığı klasöründe bir dosya oluşturun, **test** `.snippet` adlandırın ve ardından aşağıdaki metni ekleyin:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -105,131 +108,131 @@ Kod parçacıklarınızı oluşturmak ve uzantının kullanıcılar için kendi 
    </CodeSnippets>
    ```
 
-   Aşağıdaki adımlarda, kod parçacıkları kaydettirmek gösterilmektedir.
+   Aşağıdaki adımlarda kod parçacıklarının nasıl kaydedileceği gösterilmektedir.
 
-### <a name="to-register-code-snippets-for-a-specific-guid"></a>Kod parçacıkları için belirli bir GUID kaydetmek için
+### <a name="to-register-code-snippets-for-a-specific-guid"></a>Belirli bir GUID için kod parçacıklarını kaydetmek için
 
-1. Açık **CompletionTest** proje. Bu proje oluşturma hakkında daha fazla bilgi için bkz: [izlenecek yol: Deyim tamamlama görüntüleme](../extensibility/walkthrough-displaying-statement-completion.md).
+1. **CompletionTest** projesini açın. Bu projenin nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [Izlenecek yol: görüntüleme ifadesinin tamamlanması](../extensibility/walkthrough-displaying-statement-completion.md).
 
-2. Projede aşağıdaki derlemelere başvurular ekleyin:
+2. Projede, aşağıdaki derlemelere başvurular ekleyin:
 
-    - Microsoft.VisualStudio.TextManager.Interop
+    - Microsoft. VisualStudio. TextManager. Interop
 
-    - Microsoft.VisualStudio.TextManager.Interop.8.0
+    - Microsoft. VisualStudio. TextManager. Interop. 8.0
 
-    - microsoft.msxml
+    - Microsoft. MSXML
 
-3. Project'te Aç **source.extension.vsixmanifest** dosya.
+3. Projesinde, **kaynak. Extension. valtmanifest** dosyasını açın.
 
-4. Emin olun **varlıklar** sekmesini içeren bir **VsPackage** içerik türü ve, **proje** proje adına ayarlanır.
+4. **Varlıklar** sekmesinin **VSPackage** içerik türünü içerdiğinden ve bu **projenin** projenin adına ayarlandığından emin olun.
 
-5. CompletionTest projeyi seçin ve Özellikler penceresinde ayarlayın **Pkgdef dosyası oluştur** için **true**. Projeyi kaydedin.
+5. CompletionTest projesini seçin Özellikler penceresi set **Generate pkgdef dosyasını** **true**olarak ayarlayın. Projeyi kaydedin.
 
-6. Statik bir ekleme `SnippetUtilities` projeye sınıfı.
+6. Projeye statik bir `SnippetUtilities` sınıfı ekleyin.
 
      [!code-csharp[VSSDKCompletionTest#22](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_1.cs)]
      [!code-vb[VSSDKCompletionTest#22](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_1.vb)]
 
-7. SnippetUtilities sınıfı tanımlayan bir GUID ve içinde kullanılan değeri vermek *SnippetsIndex.xml* dosya.
+7. SnippetUtilities sınıfında bir GUID tanımlayın ve *SnippetsIndex. xml* dosyasında kullandığınız değeri verin.
 
      [!code-csharp[VSSDKCompletionTest#23](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_2.cs)]
      [!code-vb[VSSDKCompletionTest#23](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_2.vb)]
 
-8. Ekleme <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> için `TestCompletionHandler` sınıfı. Bu öznitelik, projedeki tüm public veya internal (statik olmayan) sınıfı için eklenebilir. (Eklemek zorunda bir `using` Microsoft.VisualStudio.Shell ad alanı bildirimi.)
+8. @No__t_0 `TestCompletionHandler` sınıfına ekleyin. Bu öznitelik, projedeki herhangi bir genel veya iç (statik olmayan) sınıfa eklenebilir. (Microsoft. VisualStudio. Shell ad alanı için bir `using` yönergesi eklemeniz gerekebilir.)
 
      [!code-csharp[VSSDKCompletionTest#24](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_3.cs)]
      [!code-vb[VSSDKCompletionTest#24](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_3.vb)]
 
-9. Derleme ve projeyi çalıştırın. Projeyi çalıştırdığınızda başlatan Visual Studio deneysel örneğinde yeni kaydettiğiniz kod parçacığı görüntüleneceğini **kod parçacıkları Yöneticisi** altında **TestSnippets** dili.
+9. Projeyi derleyin ve çalıştırın. Projeyi çalıştırdığınızda, Visual Studio 'nun deneysel örneğinde, yeni kaydettiğiniz kod parçacığı, **Test parçacıkları** dili altındaki **kod parçacıkları yöneticisinde** görüntülenmelidir.
 
-## <a name="add-the-insert-snippet-command-to-the-shortcut-menu"></a>Kod parçacığı Ekle komutu kısayol menüsüne ekleyin
- **Parçacık Ekle** komutunu bir metin dosyası için kısayol menüsündeki dahil değildir. Bu nedenle, komut etkinleştirmeniz gerekir.
+## <a name="add-the-insert-snippet-command-to-the-shortcut-menu"></a>Kısayol menüsüne kod parçacığı Ekle komutunu ekleyin
+ **Kod parçacığı Ekle** komutu, bir metin dosyasının kısayol menüsüne dahil değildir. Bu nedenle, komutunu etkinleştirmeniz gerekir.
 
-#### <a name="to-add-the-insert-snippet-command-to-the-shortcut-menu"></a>Kod parçacığı Ekle komutu kısayol menüsüne eklemek için
+#### <a name="to-add-the-insert-snippet-command-to-the-shortcut-menu"></a>Kısayol menüsüne kod parçacığı Ekle komutu eklemek için
 
-1. Açık `TestCompletionCommandHandler` sınıf dosyası.
+1. @No__t_0 sınıf dosyasını açın.
 
-     Bu sınıf uyguladığından <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>, etkinleştirebilir **parçacık Ekle** komutunu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi. Bu yöntem bir Otomasyon işlevinin içinde olduğundan çağrıldığından değildir komut etkinleştirmeden önce denetleyin, **parçacık Ekle** komutu tıklandığında, kod parçacığı Seçici kullanıcı arabirimi (UI) görüntüler.
+     Bu sınıf <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> uyguladığından, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yönteminde **kod parçacığı Ekle** komutunu etkinleştirebilirsiniz. Komutu etkinleştirmeden önce, **kod parçacığı Ekle** komutuna tıklandığında bu yöntemin bir Otomasyon işlevi içinde çağrılmadığından emin olun, kod parçacığı seçici Kullanıcı ARABIRIMINI (UI) görüntüler.
 
      [!code-csharp[VSSDKCompletionTest#25](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_4.cs)]
      [!code-vb[VSSDKCompletionTest#25](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_4.vb)]
 
-2. Derleme ve projeyi çalıştırın. Deneysel örneğinde sahip bir dosyayı açan *.zzz* dosya adı uzantısı ve herhangi bir projeyi sağ tıklatın. **Parçacık Ekle** komutu kısayol menüsünde görüntülenmelidir.
+2. Projeyi derleyin ve çalıştırın. Deneysel örnekte, *. zzz* dosya adı uzantısına sahip bir dosya açın ve ardından içinde herhangi bir yere sağ tıklayın. **Kod parçacığı Ekle** komutu, kısayol menüsünde görünmelidir.
 
-## <a name="implement-snippet-expansion-in-the-snippet-picker-ui"></a>Kod parçacığı genişletme kod parçacığı Seçici Arabiriminde uygulayın
- Bu bölümde, böylece kod parçacığı Seçici UI kod parçacığı genişletme uygulamak gösterilmektedir olduğunda görüntülenen **parçacık Ekle** kısayol menüsünde tıkladı. Bir kullanıcı kod parçacığı kısayol türleri ve ardından bastığında bir kod parçacığı da Genişletilmiş **sekmesini**.
+## <a name="implement-snippet-expansion-in-the-snippet-picker-ui"></a>Kod parçacığı seçici Kullanıcı arabiriminde kod parçacığı genişletmeyi Uygula
+ Bu bölümde, kısayol menüsünde kod **parçacığı Ekle** tıklandığında Parçacık Seçici Kullanıcı arabiriminin görüntülenmesi için kod parçacığı genişletmesinin nasıl uygulanacağı gösterilmektedir. Bir Kullanıcı kod parçacığı kısayolunu yazdığında ve sonra **sekme**tuşuna bastığında bir kod parçacığı de genişletilir.
 
- Kod parçacığı Seçici'yi kullanıcı arabirimini görüntüleyin ve gezinti ve sonrası ekleme parçacığı kabul etkinleştirmek için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemi. Ekleme tarafından işlenen <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> yöntemi.
+ Kod parçacığı seçici Kullanıcı arabirimini göstermek ve gezinti ve ekleme sonrası kod parçacığı kabulünü etkinleştirmek için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemini kullanın. Ekleme işlemi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> yöntemi tarafından işlenir.
 
- Eski kod parçacığı genişletme uyarlamasını kullanır <xref:Microsoft.VisualStudio.TextManager.Interop> arabirimleri. Eski kod için geçerli Düzenleyici sınıflardan Çevir metin arabelleğinde konumları belirtmek için satır numaralarını ve sütun numaralarının eski arabirimleri kullanır, ancak bir dizini geçerli sınıfları kullanması unutmayın. Bu nedenle, her biri 10 karakter sahip üç satır (artı bir karakter sayılır bir yeni satır) bir arabellek sahip, üçüncü satır dördüncü karakteri geçerli uygulama 27 konumunda, ancak satır 2, 3 eski uygulama getirin.
+ Kod parçacığı genişletmesinin uygulanması eski <xref:Microsoft.VisualStudio.TextManager.Interop> arabirimlerini kullanır. Geçerli düzenleyici sınıflarından eski koda çevirinizde, eski arabirimlerin bir metin arabelleğindeki konumları belirtmek için satır numaralarının ve sütun sayılarının bir bileşimini kullanmasını unutmayın, ancak geçerli sınıflar bir dizin kullanır. Bu nedenle, bir arabellekte her biri 10 karakter (artı bir karakter olarak sayan bir yeni satır) varsa, üçüncü satırdaki dördüncü karakter geçerli uygulamada 27 konumunda, ancak 2. satır, eski uygulamada 3. konumda yer alır.
 
-#### <a name="to-implement-snippet-expansion"></a>Kod parçacığı genişletme uygulamak için
+#### <a name="to-implement-snippet-expansion"></a>Kod parçacığı genişletmeyi uygulamak için
 
-1. İçeren dosyaya `TestCompletionCommandHandler` sınıfında, aşağıdaki `using` deyimleri.
+1. @No__t_0 sınıfını içeren dosyaya aşağıdaki `using` yönergelerini ekleyin.
 
      [!code-csharp[VSSDKCompletionTest#26](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_5.cs)]
      [!code-vb[VSSDKCompletionTest#26](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_5.vb)]
 
-2. Olun `TestCompletionCommandHandler` sınıfı uygulama <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient> arabirimi.
+2. @No__t_0 sınıfının <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient> arabirimini uygulamasını sağlayın.
 
      [!code-csharp[VSSDKCompletionTest#27](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_6.cs)]
      [!code-vb[VSSDKCompletionTest#27](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_6.vb)]
 
-3. İçinde `TestCompletionCommandHandlerProvider` sınıfı, içeri aktarma <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>.
+3. @No__t_0 sınıfında <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> içeri aktarın.
 
      [!code-csharp[VSSDKCompletionTest#28](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_7.cs)]
      [!code-vb[VSSDKCompletionTest#28](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_7.vb)]
 
-4. Kod genişletmesi arabirimleri için bazı özel alanlar ekleyin ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.
+4. Kod genişletme arabirimleri ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> için bazı özel alanlar ekleyin.
 
      [!code-csharp[VSSDKCompletionTest#29](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_8.cs)]
      [!code-vb[VSSDKCompletionTest#29](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_8.vb)]
 
-5. Oluşturucusunun içinde `TestCompletionCommandHandler` sınıfında, aşağıdaki alanları ayarlayın.
+5. @No__t_0 sınıfının oluşturucusunda aşağıdaki alanları ayarlayın.
 
      [!code-csharp[VSSDKCompletionTest#30](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_9.cs)]
      [!code-vb[VSSDKCompletionTest#30](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_9.vb)]
 
-6. Kod parçacığı Seçici kullanıcı tıkladığında görüntülenecek **parçacık Ekle** komutu, aşağıdaki kodu ekleyin <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemi. (Bu açıklama daha okunaklı hale getirmek için `Exec()`deyim tamamlama için kullanılan kod gösterilmez; bunun yerine, kod blokları için varolan bir yöntem eklenir.) Aşağıdaki kod bloğunu karakteri denetleyen koddan sonra ekleyin.
+6. Kullanıcı **kod parçacığı Ekle** komutuna tıkladığında kod parçacığı seçiciyi göstermek için, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemine aşağıdaki kodu ekleyin. (Bu açıklamayı daha okunabilir hale getirmek için, deyimin tamamlanması için kullanılan `Exec()`code gösterilmez; bunun yerine, kod blokları var olan yönteme eklenir.) Bir karakteri denetleyen koddan sonra aşağıdaki kod bloğunu ekleyin.
 
      [!code-csharp[VSSDKCompletionTest#31](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_10.cs)]
      [!code-vb[VSSDKCompletionTest#31](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_10.vb)]
 
-7. Bir kod parçacığı geçtiğiniz alanlar varsa, genişletme açıkça kabul edilinceye kadar genişletme oturumu açık tutulur; kod parçacığı, hiçbir alan varsa, oturumu kapatılır ve olarak döndürülen `null` tarafından <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A> yöntemi. İçinde <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemi, önceki adımda eklediğiniz bir kullanıcı Arabirimi kod parçacığı Seçici sonra kod parçacığı Gezinti işlemek için aşağıdaki kodu ekleyin (kullanıcının bastığında **sekmesini** veya **Shift** + **Sekmesini** kod parçacığı ekleme sonra).
+7. Bir kod parçacığında gezinilebilirler alanları varsa, genişletme açık olarak kabul edilene kadar genişletme oturumu açık tutulur; kod parçacığında alan yoksa, oturum kapatılır ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A> yöntemi tarafından `null` olarak döndürülür. @No__t_0 yönteminde, önceki adımda eklediğiniz kod parçacığı seçicisinin kullanıcı ARABIRIMI kodundan sonra, kod parçacığı gezintisini işlemek için aşağıdaki kodu ekleyin (Kullanıcı, kod parçacığı eklendikten sonra **sekme** veya **SHIFT** +**sekmesine** bastığında).
 
      [!code-csharp[VSSDKCompletionTest#32](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_11.cs)]
      [!code-vb[VSSDKCompletionTest#32](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_11.vb)]
 
-8. Kullanıcı karşılık gelen kısayol türleri ve ardından bastığında kod parçacığını eklemek için **sekmesini**, kodu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemi. Kod parçacığı ekler özel yöntem daha sonraki bir adımda gösterilir. Önceki adımda eklediğiniz Gezinti koddan sonra aşağıdaki kodu ekleyin.
+8. Kullanıcı ilgili kısayolu yazdığında ve sonra **sekme**tuşuna bastığında kod parçacığını eklemek için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemine kod ekleyin. Parçacığı ekleyen özel yöntem sonraki bir adımda gösterilir. Önceki adımda eklediğiniz gezinti kodundan sonra aşağıdaki kodu ekleyin.
 
      [!code-csharp[VSSDKCompletionTest#33](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_12.cs)]
      [!code-vb[VSSDKCompletionTest#33](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_12.vb)]
 
-9. Yöntemlerini uygulayan <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient> arabirimi. Bu uygulama, ilgilenilen yalnızca yöntemlerdir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.EndExpansion%2A> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A>. Diğer yöntemler yalnızca döndürmelidir <xref:Microsoft.VisualStudio.VSConstants.S_OK>.
+9. @No__t_0 arabiriminin yöntemlerini uygulayın. Bu uygulamada, yalnızca <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.EndExpansion%2A> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> ilgilendiğiniz yöntemler vardır. Diğer yöntemler yalnızca <xref:Microsoft.VisualStudio.VSConstants.S_OK> döndürmelidir.
 
      [!code-csharp[VSSDKCompletionTest#34](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_13.cs)]
      [!code-vb[VSSDKCompletionTest#34](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_13.vb)]
 
-10. Uygulama <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> yöntemi. Genişletmeler eklediği yardımcı yöntemi, bir sonraki adımda ele alınmıştır. <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> Sayfasından edinebilirsiniz, satır ve sütun bilgisi sağlar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.
+10. @No__t_0 yöntemini uygulayın. Aslında genişletmeleri ekleyen yardımcı yöntemi sonraki bir adımda ele alınmıştır. @No__t_0, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> alabileceğiniz satır ve sütun bilgilerini sağlar.
 
      [!code-csharp[VSSDKCompletionTest#35](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_14.cs)]
      [!code-vb[VSSDKCompletionTest#35](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_14.vb)]
 
-11. Aşağıdaki gizli yöntemi kısayol veya başlık ve yol tabanlı bir kod parçacığı ekler. Ardından <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansion.InsertNamedExpansion%2A> parçacığıyla yöntemi.
+11. Aşağıdaki özel yöntem, kısayolu ya da başlık ve yol üzerine bağlı olarak bir kod parçacığı ekler. Ardından, kod parçacığında <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansion.InsertNamedExpansion%2A> yöntemini çağırır.
 
      [!code-csharp[VSSDKCompletionTest#36](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_15.cs)]
      [!code-vb[VSSDKCompletionTest#36](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_15.vb)]
 
-## <a name="build-and-test-code-snippet-expansion"></a>Yapı ve test kod parçacığı genişletme
- Kod parçacığı genişletme projenizde çalışıp çalışmadığını test edebilirsiniz.
+## <a name="build-and-test-code-snippet-expansion"></a>Kod parçacığı genişletmeyi derleme ve test etme
+ Kod parçacığının genişletmesinin projenizde çalışıp çalışmadığını test edebilirsiniz.
 
-1. Çözümü oluşturun. Bu projede hata ayıklayıcıda çalıştırdığınızda, Visual Studio'nun ikinci bir örneğini başlatılır.
+1. Çözümü oluşturun. Bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği başlatılır.
 
-2. Bir metin dosyasını açın ve bir metin yazın.
+2. Bir metin dosyası açın ve metin yazın.
 
-3. Metni bir yere sağ tıklayın ve ardından **parçacık Ekle**.
+3. Metinde bir yere sağ tıklayın ve **kod parçacığı Ekle**' ye tıklayın.
 
-4. UI bildiren bir açılır pencere ile görünmelidir kod parçacığı Seçici **Test değiştirilen alanları**. Açılır pencere çift tıklayın.
+4. Kod parçacığı seçici Kullanıcı arabirimi, **Test değiştirme alanlarını**belirten bir açılır pencere ile görüntülenmelidir. Açılır pencerede çift tıklayın.
 
      Aşağıdaki kod parçacığı eklenmelidir.
 
@@ -238,12 +241,12 @@ Kod parçacıklarınızı oluşturmak ve uzantının kullanıcılar için kendi 
     MessageBox.Show("second");
     ```
 
-     Basın yoksa **Enter** veya **Esc**.
+     **ENTER** veya **ESC**tuşuna basmayın.
 
-5. Tuşuna **sekmesini** ve **Shift**+**sekmesini** "first" ve "saniye" arasında geçiş için.
+5. "First" ve "Second" arasında geçiş yapmak için **Tab** ve **SHIFT** +**Tab** tuşlarına basın.
 
-6. Ekleme ya da tuşlarına basarak kabul **Enter** veya **Esc**.
+6. **ENTER** veya **ESC**tuşuna basarak ekleme işlemini kabul edin.
 
-7. Metni farklı bir parçası, "test" yazın ve sonra basın **sekmesini**. "Test" kod parçacığı kısayol olduğundan, kod parçacığı yeniden eklenmelidir.
+7. Metnin farklı bir bölümünde "test" yazın ve ardından **sekme**tuşuna basın. "Test" kod parçacığı kısayolu olduğundan, kod parçacığı yeniden eklenmelidir.
 
 ## <a name="next-steps"></a>Sonraki adımlar

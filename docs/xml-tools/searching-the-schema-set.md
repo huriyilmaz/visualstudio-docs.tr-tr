@@ -3,17 +3,17 @@ title: XML şema Gezgini-şema kümesini arama
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ec1395e0-d03c-4130-810d-f2db656937bd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 898b79e53773c09d60e32a3ef262346b0371d2af
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: ff7684c56a22ef760655563d1d9f58e2ff01b0c9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926809"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604649"
 ---
 # <a name="search-the-schema-set"></a>Şema kümesini arama
 
@@ -31,11 +31,11 @@ ms.locfileid: "68926809"
 
 **XML şeması Gezgini** şema kümesini Aşağıdaki öznitelikler için arar:
 
-- Belirtilen `name` anahtar `ref` sözcükle eşleşen any veya öznitelikler. Adına göre öğeleri, öznitelikleri, türleri ve benzerlerini bulabilirsiniz.
+- Belirtilen anahtar sözcükle eşleşen herhangi bir `name` veya `ref` özniteliği. Adına göre öğeleri, öznitelikleri, türleri ve benzerlerini bulabilirsiniz.
 
-- Include `schemaLocation` deyimlerinin öznitelikleri.
+- Include deyimlerinin `schemaLocation` öznitelikleri.
 
-- İmport `namespace` deyimlerinin öznitelikleri.
+- İmport deyimlerinin `namespace` öznitelikleri.
 
 ## <a name="schema-specific-search"></a>Şemaya özgü arama
 
@@ -43,7 +43,7 @@ ms.locfileid: "68926809"
 
 ## <a name="display-and-navigate-search-results"></a>Arama sonuçlarını görüntüle ve gezin
 
-Arama tamamlandıktan sonra, özet sonuçları bölmesi, arama sonuçlarıyla birlikte araç çubuğuna eklenir. Arama sonuçları ayrıca **XML şema Gezgini** 'nde vurgulanır ve dikey kaydırma çubuğundaki Tick 'ler tarafından işaretlenir. Arama sonuçlarında, **sonraki arama sonuçlarına git** ' i kullanarak ve **XML şeması Gezgini** araç çubuğunun özet sonuçları bölmesinde **önceki arama sonucu düğmesine gidebilirsiniz** ; **F3** ve **SHIFT**+tuşlarını kullanarak ya da kaydırma çubuğundaki onay işaretlerine tıklayarak.
+Arama tamamlandıktan sonra, özet sonuçları bölmesi, arama sonuçlarıyla birlikte araç çubuğuna eklenir. Arama sonuçları ayrıca **XML şema Gezgini** 'nde vurgulanır ve dikey kaydırma çubuğundaki Tick 'ler tarafından işaretlenir. Arama sonuçlarında, **sonraki arama sonuçlarına git** ' i kullanarak ve **XML şeması Gezgini** araç çubuğunun özet sonuçları bölmesinde **önceki arama sonucu düğmesine gidebilirsiniz** ; **F3** tuşu ve **SHIFT** +**F3**tuşlarını kullanarak ya da kaydırma çubuğundaki onay işaretlerine tıklayarak.
 
 Özet sonuçlar bölmesinde, **çalışma alanına vurgulanan düğümleri Ekle** düğmesine tıklayarak arama sonuçlarını çalışma alanına ekleyebilirsiniz.
 

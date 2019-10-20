@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Temel 3B model oluşturma'
+title: 'Nasıl yapılır: temel 3B model oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a0d97966-2df8-449b-a8cf-5a19684dc773
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5f4bb3c6d429fb40d97e748798610e4e46262eb
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 604847e5f9bf6111d548b9d3bbdc0a0e10301784
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924504"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72636727"
 ---
-# <a name="how-to-create-a-basic-3d-model"></a>Nasıl yapılır: Temel 3B model oluşturma
+# <a name="how-to-create-a-basic-3d-model"></a>Nasıl yapılır: temel 3B model oluşturma
 
 Bu makalede, temel bir 3B model oluşturmak için Model Düzenleyicisi 'nin nasıl kullanılacağı gösterilmektedir. Aşağıdaki etkinlikler ele alınmıştır:
 
@@ -58,22 +58,22 @@ Başlamadan önce, **Özellikler** penceresi ve **araç kutusunun** görüntüle
 
     ![Küpün bir tarafı daha fazla yükseltilmiş.](../designers/media/gfx_model_demo_house_extend.png)
 
-7. Model üçgenlere ayır. Model Düzenleyicisi araç çubuğunda **Gelişmiş** > **Araçlar** > **üçgenlere ayır**' ı seçin.
+7. Model üçgenlere ayır. Model Düzenleyicisi araç çubuğunda **gelişmiş**  > **Araçlar**  > **üçgenlere ayır**' ı seçin.
 
 8. Evin çatı ' ini oluşturun. Model Düzenleyicisi araç çubuğunda **kenar Seç** ' i seçerek kenar seçimi moduna geçin ve sonra etkinleştirmek için küpü seçin. Burada gösterilen kenarları seçerken **CTRL** tuşuna basın ve basılı tutun:
 
     ![Tavan tepe düzeyini oluşturacak kenarlar](../designers/media/gfx_model_demo_house_edges.png)
 
-    Kenarlar seçildiğinde, Model Düzenleyicisi araç çubuğunda çeviri aracını seçin ve ardından evin çatı evini oluşturmak için çeviriyi yukarı doğru taşıyın.
+    Kenarlar seçildiğinde, model **Düzenleyicisi araç çubuğunda çeviri aracını seçin** ve ardından evin çatı evini oluşturmak için çeviriyi yukarı doğru taşıyın.
 
    Basitleştirilmiş ev modeli tamamlanmıştır. Aşağıda, düz gölgeleme uygulanmış son model tekrar verilmiştir:
 
    ![Basitleştirilmiş evin tamamlanmış modeli](../designers/media/gfx_model_demo_house_final.png)
 
-   Bir sonraki adım olarak, bu 3B modele bir gölgelendirici uygulayabilirsiniz. Bilgi için bkz [. nasıl yapılır: 3B modele](../designers/how-to-apply-a-shader-to-a-3-d-model.md)gölgelendirici uygulayın.
+   Bir sonraki adım olarak, bu 3B modele bir gölgelendirici uygulayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Model 3B teryağmur](../designers/how-to-model-3-d-terrain.md)
+- [Nasıl yapılır: 3B arazi modeli oluşturma](../designers/how-to-model-3-d-terrain.md)
 - [Model düzenleyicisi](../designers/model-editor.md)
 - [Gölgelendirici tasarımcısı](../designers/shader-designer.md)

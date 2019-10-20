@@ -6,38 +6,34 @@ ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: ffdf63ee-faa6-45b7-bbf9-a5644dc8aca2
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 72d5defa8a9cef04a4564d8974859de024c97dea
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9c2b72683f37e454ed157fdc26b40da499b91697
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158527"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669412"
 ---
 # <a name="xml-schema-designer"></a>XML Şema Tasarımcısı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML şema Tasarımcısı'nı (XSD Tasarımcısı) soyutlama farklı düzeyde ayarlanmış bir şema görselleştirmenize olanak tanıyan bir grafik aracıdır. XSD Tasarımcısı'nın ana bileşenleri şunlardır:    
-  
-- [XML Şeması Gezgini](../xml-tools/xml-schema-explorer.md) göz atın ve XML Şeması ağaç gidin ve aramalar gerçekleştirmek olanak tanır.  
-  
-- [Başlangıç görünümündeki](../xml-tools/start-view.md) başlatma noktası XSD Tasarımcısı; başlangıç görünümünden XSD Tasarımcısı'nın diğer görünümlerle gidin ve şema kümenize ayrıntılarına bakın.  
-  
-- [Graf görünümünü](../xml-tools/graph-view.md) bakış şema kümesine ve şema düğümler arasındaki ilişkileri görmenize olanak sağlar.  
-  
-- [İçerik modeli görünümünü](../xml-tools/content-model-view.md) basit ve karmaşık türler, öğeleri, grupları, öznitelikleri ve öznitelik grupları dahil olmak üzere, yerel ve genel şema düğümlerinin ayrıntılarını grafik gösterimi sağlar.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [XML Şema Gezgini](../xml-tools/xml-schema-explorer.md)  
- XML Şeması Gezgini ve nasıl XML Şeması Tanım Dili (XSD) şemaları ile çalışmanıza olanak sağlayan bir genel bakış sağlar.  
-  
- [XML Şema Tasarımcısı Çalışma Alanı](../xml-tools/xml-schema-designer-workspace.md)  
- XSD şema Tasarımcısı çalışma genel bir bakış sağlar.  
-  
- [XML Düzenleyicisi ile Tümleştirme](../xml-tools/integration-with-xml-editor.md)  
- XML şema tasarımcısını XML Düzenleyicisi ile nasıl tümleştirildiği açıklanır.  
-  
- [;XML Şema Tasarımcısı Görevleri](../xml-tools/xml-schema-designer-tasks.md)  
- XML şema Tasarımcısı Araçları ile ortak görevleri tamamlamak açıklar.
+XML şema Tasarımcısı (XSD Designer), farklı soyutlama düzeylerinde bir şema kümesini görselleştirmenize olanak tanıyan bir grafik aracıdır. Aşağıda, XSD tasarımcısının ana bileşenleri verilmiştir:
+
+- [XML şeması Gezgini](../xml-tools/xml-schema-explorer.md) , XML şema ağacına gözatmanıza ve aramaları gerçekleştirmenize olanak sağlar.
+
+- [Başlangıç görünümü](../xml-tools/start-view.md) XSD Designer için başlatma noktasıdır; Başlangıç görünümünden, XSD Designer 'ın diğer görünümlerine gidebilir ve şema kümesi 'nin ayrıntılarına bakabilirsiniz.
+
+- [Grafik görünümü](../xml-tools/graph-view.md) , şema kümesi ve şema düğümleri arasındaki ilişkilerin bir özetini görmenizi sağlar.
+
+- [Içerik modeli görünümü](../xml-tools/content-model-view.md) basit ve karmaşık türler, öğeler, gruplar, öznitelikler ve öznitelik grupları da dahil olmak üzere yerel ve genel şema düğümlerinin ayrıntılarının grafik gösterimini sağlar.
+
+## <a name="in-this-section"></a>Bu Bölümde
+ [XML şema Gezgini](../xml-tools/xml-schema-explorer.md) XML şema Gezgini ile ilgili genel bakış ve XML şeması tanım dili (XSD) şemaları ile çalışmanıza nasıl olanak sağlar.
+
+ [XML şema Tasarımcısı çalışma alanı](../xml-tools/xml-schema-designer-workspace.md) XSD şema Tasarımcısı çalışma alanına genel bir bakış sağlar.
+
+ [XML Düzenleyicisi Ile tümleştirme](../xml-tools/integration-with-xml-editor.md) XML şeması tasarımcısının XML Düzenleyicisi ile nasıl tümleştirildiği açıklanmaktadır.
+
+ [XML şema Tasarımcısı görevleri](../xml-tools/xml-schema-designer-tasks.md) XML şema Tasarımcısı araçlarıyla ortak görevlerin nasıl tamamlandığını açıklar.

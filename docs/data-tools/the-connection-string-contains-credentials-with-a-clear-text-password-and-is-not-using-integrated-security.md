@@ -3,37 +3,37 @@ title: Bağlantı dizesi şifresiz parola içeren kimlik bilgileri içeriyor ve 
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 501d85af-92e0-4471-b280-8a59c0688575
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b270290c948807ff0f66d3d142312245475cd33c
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 0a8cb18e84263d7b7144764d007a2928956fc77b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65460602"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72641019"
 ---
 # <a name="the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security"></a>Bağlantı dizesi şifresiz parola içeren kimlik bilgileri içeriyor ve tümleşik güvenliği kullanmıyor
 
-Bağlantı dizesini geçerli DBML dosyasının ve uygulama yapılandırma dosyaları ile bu hassas bilgileri kaydetmek istiyor musunuz?  Tıklayın **Hayır** bağlantı dizesini hassas bilgiler olmadan kaydetmek için.
+Bağlantı dizesini geçerli DBML dosyasına ve uygulama yapılandırma dosyalarına bu hassas bilgilerle kaydetmek istiyor musunuz?  Bağlantı dizesini hassas bilgiler olmadan kaydetmek için **Hayır** ' a tıklayın.
 
-Hassas bilgileri (bağlantı dizesine dahil parolalar) dahil veri bağlantıları ile çalışırken, bir projenin DBML dosyasının ve uygulama yapılandırma dosyası ile veya olmadan bağlantı dizesini kaydetme seçeneği sunulur. hassas bilgileri.
+Gizli bilgiler (bağlantı dizesinde bulunan parolalar) içeren veri bağlantılarıyla çalışırken, bağlantı dizesini bir projenin DBML dosyasına ve uygulama yapılandırma dosyasına şu şekilde kaydetme seçeneği sunulur hassas bilgiler.
 
 > [!WARNING]
-> Açık olarak ayarlama **bağlantı** özellikleri **uygulama ayarları** özelliğini **False** DBML dosyasına parola ekleyeceksiniz.
+> **Bağlantı** özellikleri **uygulama ayarları** özelliğinin **false** olarak ayarlanması, parolayı dbml dosyasına ekleyecek.
 
-## <a name="save-options"></a>Kaydetme seçenekleri
+## <a name="save-options"></a>Kayıt seçenekleri
 
-- Bağlantı dizesini hassas bilgilerle birlikte kaydetmek için seçin **Evet**.
+- Bağlantı dizesini hassas bilgilerle kaydetmek için **Evet**' i seçin.
 
-   Bağlantı dizesi, bir uygulama ayarı olarak depolanır. Bağlantı dizesi düz metin olarak hassas bilgiler içerir. DBML dosyasının, hassas bilgileri içermiyor.
+   Bağlantı dizesi bir uygulama ayarı olarak depolanır. Bağlantı dizesi, gizli bilgileri düz metin olarak içerir. DBML dosyası gizli bilgileri içermez.
 
-- Bağlantı dizesini hassas bilgiler olmadan kaydetmek için seçin **Hayır**.
+- Bağlantı dizesini hassas bilgiler olmadan kaydetmek için **Hayır**' ı seçin.
 
-   Bağlantı dizesi, bir uygulama ayarı olarak depolanır, ancak parola dahil değildir.
+   Bağlantı dizesi bir uygulama ayarı olarak depolanır, ancak parola dahil edilmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

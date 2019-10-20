@@ -11,68 +11,68 @@ helpviewer_keywords:
 - Domain-Specific Language, image shape
 ms.assetid: 9ce00ccd-07f2-4640-ac96-2a60481d0d72
 caps.latest.revision: 27
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d51801c1be56504fa4bf4ed2046d463db0e99aae
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 79ec5470a8bac83d8e60454c984739f1e520b634
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701499"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671384"
 ---
 # <a name="properties-of-image-shapes"></a>Görüntü Şekillerinin Özellikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Resim şekilleri, etki alanı sınıfları oluşturulan tasarımcıda nasıl göründüğünü belirlemek için kullanabilirsiniz. Bir resim şekli ayarlayarak tanımlarsanız `Image` önceden tanımlanmış bir görüntü dosyasına sınıfın özelliği. Aşağıdaki biçimleri desteklenir:  
-  
-- .gif  
-  
-- .jpg  
-  
-- .jpeg  
-  
-- .bmp  
-  
-- .wmf  
-  
-- .emf  
-  
-- .png  
-  
-  Görüntü dosyaları gibi tasarımcı kaynak dosyaları bulunan varsayılan olarak, **kaynakları** klasöründe **Dsl** proje.  
-  
-  Daha fazla bilgi için [etki alanına özgü bir dili tanımlama nasıl](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikler kullanma hakkında daha fazla bilgi için bkz. [bir etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).  
-  
-  Resim şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.  
-  
-|Özellik|Açıklama|Varsayılan|  
-|--------------|-----------------|-------------|  
-|Dolgu rengi|Bu şeklin dolgu rengi.|Beyaz|  
-|Dolgu gradyanı modu|Bu şeklin dolgu gradyanı modu.|Yatay|  
-|Varsayılan bağlantı noktalarını içerir|Varsa `True`şeklin üst, alt, sol kullanır ve doğru bağlantı noktaları oluşturulan tasarımcıdaki.|False|  
-|Anahat rengi|Bu şeklin ana hat rengi.|Siyah|  
-|Ana hat kesik çizgi stili|(Düz, kesik çizgi, nokta, çizgi nokta, çizgi nokta nokta veya özel), bu şeklin ana hat kesik çizgi stilinin.|Düz|  
-|Anahat kalınlığı|Bu şeklin ana hat kalınlığı.|0.03125|  
-|Metin rengi|Bu şeklin ile ilişkili metin dekoratörleri için kullanılan renk.|Siyah|  
-|Erişim değiştiricisi|Geometri şekli (public veya internal) erişim değiştiricisi.|Ortak|  
-|Özel Öznitelikler|Bu şekle oluşturulan kaynak kod sınıfı öznitelikler eklemek için kullanılır.|\<yok >|  
-|Çift oluşturur türetilmiş|Varsa `True`, hem temel sınıf hem de (geçersiz kılmalar aracılığıyla özelleştirmeyi desteklemek için) bir kısmi sınıf oluşturulur. Daha fazla bilgi için [geçersiz kılma ve oluşturulan sınıflar genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|  
-|Özel oluşturucu vardır.|Varsa `True`, kaynak kodunda özel bir oluşturucu sağlanacaktır. Daha fazla bilgi için [geçersiz kılma ve oluşturulan sınıflar genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|  
-|Devralma değiştiricisi|Görüntü şekilden oluşturulan kaynak kodu sınıf devralma türü açıklar (`none`, `abstract` veya `sealed`).|yok|  
-|Temel resim şekli|Bu şeklin temel sınıf.|(hiçbiri)|  
-|Ad|Bu şeklin adı.|Geçerli ad|  
-|Ad Alanı|Bu şeklin ile bağlantılı olan ad alanı.|Geçerli ad alanı|  
-|Araç İpucu türü|(Sabit, değişken veya hiçbiri) araç ipucu tanımlandığı yerde. Fixed ise ardından değerini `Fixed Tooltip Text` özelliği, araç ipucu olarak kullanılır; ardından değişken durumunda, araç ipucu özel kodda tanımlanır.|yok|  
-|Notlar|Bu şekille ilişkilendirilmiş resmi olmayan notlar.|\<yok >|  
-|İlk yükseklik|Bu şeklin inç cinsinden başlangıç yüksekliği.|1.|  
-|Başlangıç genişliği|Bu şeklin inç cinsinden başlangıç genişliği.|1,5|  
-|Özellik olarak kullanıma sunulan dolgu rengi<br /><br /> İfşa edilen dolgu gradyanı modu<br /><br /> Ana hat rengi özellik olarak kullanıma sunulan<br /><br /> Ana hat kesik çizgi stilinin özellik olarak kullanıma sunulan<br /><br /> Anahat kalınlığı özellik olarak kullanıma sunulan<br /><br /> Kullanıma sunan metin rengi|Varsa `True`, kullanıcının belirtilen özelliği bir şeklin ayarlayabilirsiniz. Bunu ayarlamak için Şekil tanımı sağ tıklatıp **ekleme kullanıma sunulan**.|False|  
-|Açıklama|Oluşturulan tasarımcının belge için kullanılır.|\<yok >|  
-|Görünen Ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<yok >|  
-|Sabit araç ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<yok >|  
-|Yardım anahtar sözcüğü|Bu öğe için F1 Yardımı dizini oluşturmak için kullanılan anahtar sözcüğü.|\<yok >|  
-|Görüntü|Bu şeklin için kullanılan görüntü dosyasının yolu.|\<yok >|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+Görüntü şekillerini, etki alanı sınıflarının oluşturulmuş bir tasarımcıda nasıl göründüğünü belirtmek için kullanabilirsiniz. Sınıfın `Image` özelliğini önceden tanımlanmış bir görüntü dosyasına ayarlayarak bir resim şekli tanımlayın. Aşağıdaki biçimler desteklenir:
+
+- Resimler
+
+- . jpg
+
+- . jpeg
+
+- . bmp
+
+- . wmf
+
+- . EMF
+
+- . png
+
+  Varsayılan olarak, görüntü dosyaları gibi tasarımcı kaynak dosyaları **DSL** projesindeki **kaynaklar** klasöründe bulunur.
+
+  Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+
+  Resim şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
+
+|Özellik|Açıklama|Varsayılan|
+|--------------|-----------------|-------------|
+|Rengi doldur|Bu şeklin dolgusu rengi.|be|
+|Doldur gradyanı modu|Bu şeklin doldur gradyanı modu.|Yatay|
+|Varsayılan bağlantı noktalarına sahiptir|@No__t_0, şekil oluşturulan tasarımcıda üst, alt, sol ve sağ bağlantı noktalarını kullanır.|False|
+|Ana hat rengi|Bu şeklin ana hat rengi.|siyah|
+|Ana hat kesik çizgi stili|Bu şeklin ana hat kesik çizgi stili (düz, kesik çizgi, nokta, çizgi nokta, çizgi dotdot veya özel).|Sağlam|
+|Ana hat kalınlığı|Bu şeklin ana hat kalınlığı.|0,03125|
+|Metin rengi|Bu şekille ilişkilendirilen metin Dekoratörleri için kullanılan renk.|siyah|
+|Erişim değiştiricisi|Geometri şeklinin (public veya internal) erişim değiştiricisi.|Ortak|
+|Özel Öznitelikler|Bu şekilden oluşturulan kaynak kodu sınıfına öznitelikler eklemek için kullanılır.|\<none >|
+|Double türevi üretir|@No__t_0, hem temel sınıf hem de kısmi bir sınıf (geçersiz kılmaları kullanarak özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Özel Oluşturucusu vardır|@No__t_0, kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Devralma değiştiricisi|Görüntü şeklinden oluşturulan kaynak kodu sınıfının devralım türünü açıklar (`none`, `abstract` veya `sealed`).|yok|
+|Temel resim şekli|Bu şeklin temel sınıfı.|seçim|
+|Name|Bu şeklin adı.|Geçerli ad|
+|Ad Alanı|Bu şekille ilişkili ad alanı.|Geçerli ad alanı|
+|Araç ipucu türü|ToolTip 'in tanımlandığı yer (sabit, değişken veya yok). Düzeltildiğinde, `Fixed Tooltip Text` özelliğinin değeri araç ipucu olarak kullanılır; değişken ise, araç ipucu özel kodda tanımlanır.|yok|
+|Notlar|Bu şekille ilişkili resmi olmayan notlar.|\<none >|
+|Başlangıç yüksekliği|Bu şeklin inç cinsinden başlangıç yüksekliği.|1\.|
+|Başlangıç genişliği|Bu şeklin inç cinsinden başlangıç genişliği.|1,5|
+|Özellik olarak gösterilen Fill Color<br /><br /> Sunulma dolgusu gradyan modu<br /><br /> Özellik olarak gösterilen ana hat rengi<br /><br /> Özellik olarak sunulan ana hat kesik çizgi stili<br /><br /> Sunulan ana hat kalınlığı özellik olarak<br /><br /> Metin rengini gösterir|@No__t_0, Kullanıcı bir şeklin belirtilen özelliğini ayarlayabilir. Bunu ayarlamak için, şekil tanımına sağ tıklayıp **gösterilen Ekle**' ye tıklayın.|False|
+|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none >|
+|Görünen ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<none >|
+|Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<none >|
+|Help anahtar sözcüğü|Bu öğe için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<none >|
+|Görüntü|Bu şekil için kullanılan resim dosyasının yolu.|\<none >|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

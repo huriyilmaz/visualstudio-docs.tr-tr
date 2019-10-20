@@ -1,22 +1,22 @@
 ---
-title: İş Akışı Tasarımcısı - çalışma zamanı etkinlik tasarımcıları
+title: İş Akışı Tasarımcısı-çalışma zamanı etkinlik tasarımcıları
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: be18aa36-7909-4dd6-a786-b46959675a58
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54c24949c2f7046eade040498fbbd53962f12440
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fb62644b362a7630d454db2740b354c546b0155b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63008709"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649981"
 ---
 # <a name="runtime-activity-designers"></a>Çalışma Zamanı Etkinlik Tasarımcıları
-Çalışma zamanı etkinlik tasarımcıları, kalıcı hale getirmek ve iş akışı etkinlikleri sonlandırmak için kullanılır. Bu bölümdeki konular, iş akışı Tasarımcısı etkinlik tasarımcılarını kullanma hakkında rehberlik sağlar.
+Çalışma zamanı etkinlik tasarımcıları iş akışı etkinliklerini kalıcı hale getirmek ve sonlandırmak için kullanılır. Bu bölümde yer alan konular İş Akışı Tasarımcısı etkinlik tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
  [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)

@@ -3,31 +3,31 @@ title: Desteklenmeyen bir veritabanı sağlayıcısından bir veritabanı nesnes
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: c0f1298e-31aa-471e-ae19-1bafffd2ae40
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: dae92f404bb9ecb23b77dbda33c329994b9ed15b
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: b1dd14c428b90b87e665aa41681b5a9e68eb00e5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65457873"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648014"
 ---
 # <a name="you-have-selected-a-database-object-from-an-unsupported-database-provider"></a>Desteklenmeyen bir veritabanı sağlayıcısından bir veritabanı nesnesi seçtiniz
 
-**O/R Tasarımcısı** yalnızca .NET Framework veri sağlayıcısı için SQL Server destekler (<xref:System.Data.SqlClient>). Tıklayabilirsiniz ancak **Tamam** ve desteklenmeyen bir veritabanı sağlayıcısından nesnelerle çalışmaya devam etmek için çalışma zamanında beklenmeyen davranışlarla karşılaşabilirsiniz.
+**O/R Tasarımcısı** yalnızca SQL Server (<xref:System.Data.SqlClient>) için .NET Framework veri sağlayıcısı destekler. **Tamam** ' a tıklayıp desteklenmeyen veritabanı sağlayıcılarından nesnelerle çalışmaya devam edebilseniz de çalışma zamanında beklenmeyen davranışlarla karşılaşabilirsiniz.
 
 > [!NOTE]
-> SQL Server için .NET Framework veri sağlayıcısı kullanan veri bağlantıları desteklenir.
+> Yalnızca SQL Server için .NET Framework Veri Sağlayıcısı kullanan veri bağlantıları desteklenir.
 
 ## <a name="options"></a>Seçenekler
 
-- Tıklayın **Tamam** desteklenmeyen bir veritabanı sağlayıcısı kullanan bağlantı harita varlık sınıfları tasarlama devam etmek için. Desteklenmeyen veritabanı sağlayıcıları kullandığınızda beklenmeyen davranışlarla karşılaşabilirsiniz.
+- Desteklenmeyen veritabanı sağlayıcısını kullanan bağlantıyla eşlenen varlık sınıflarını tasarlamaya devam etmek için **Tamam** ' a tıklayın. Desteklenmeyen veritabanı sağlayıcıları kullandığınızda beklenmeyen davranışlarla karşılaşabilirsiniz.
 
-- Tıklayın **iptal** eylemi durdurmak için. Oluşturun veya SQL Server için .NET Framework sağlayıcısı kullanan farklı bir veri bağlantısı kullanın.
+- Eylemi durdurmak için **iptal** ' e tıklayın. SQL Server için .NET Framework sağlayıcısını kullanan farklı bir veri bağlantısı oluşturun veya kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

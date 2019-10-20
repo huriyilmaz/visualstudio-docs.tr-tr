@@ -1,30 +1,30 @@
 ---
-title: Workflow Foundation proje oluşturma
+title: Workflow Foundation projesi oluşturma
 ms.date: 06/25/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - Workflow Designer, creating a workflow project
 - creating a workflow project
 ms.assetid: 235a125e-ebe7-4a98-bf77-86c8558728fb
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e19ec88a4dec7a13ecc3d77e5d4fc1f04bb114bd
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: f793e6ff468bdec6df499c5e5eb6b8524e9e4d5a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747795"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650570"
 ---
-# <a name="workflow-project-templates"></a>İş akışı projesi şablonları
+# <a name="workflow-project-templates"></a>İş akışı proje şablonları
 
-Visual Studio Proje şablonları kullanarak iş akışları, Windows Communication Foundation (WCF) iş akışı Hizmetleri, özel etkinlikler ve özel etkinlik tasarımcıları oluşturabilirsiniz. Bu makalede, kitaplıkları ve uygulamaları ile Visual Studio Proje şablonları oluşturma işlemini açıklar.
+Visual Studio proje şablonlarını kullanarak Iş akışları, Windows Communication Foundation (WCF) iş akışı hizmetleri, özel etkinlikler ve özel etkinlik tasarımcıları oluşturabilirsiniz. Bu makalede, Visual Studio 'da kullanılabilir proje şablonlarıyla kitaplıkların ve uygulamaların nasıl oluşturulacağı açıklanır.
 
 ## <a name="create-a-workflow-project"></a>İş Akışı projesi Oluşturma
 
-Visual Studio, dört farklı iş akışı proje şablonlarını sunar:
+Visual Studio dört farklı Iş akışı proje şablonu sağlar:
 
 - İş akışı konsol uygulaması
 
@@ -34,42 +34,42 @@ Visual Studio, dört farklı iş akışı proje şablonlarını sunar:
 
 - Etkinlik Tasarımcısı kitaplığı
 
-Bu şablonlar erişmek için ilk yükleme **Windows Workflow Foundation** Visual Studio bileşen. Ayrıntılı yönergeler için bkz. [Windows Workflow Foundation'ı yükleme](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
+Bu şablonlara erişmek için önce Visual Studio 'nun **Windows Workflow Foundation** bileşenini yüklemeniz gerekir. Ayrıntılı yönergeler için bkz. [ınstall Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
-1. Yükledikten sonra **Windows Workflow Foundation** bileşeni, select **dosya** > **yeni** > **proje**.
+1. **Windows Workflow Foundation** bileşenini yükledikten sonra **dosya**  > **Yeni**  > **Proje**' yi seçin.
 
-1. Arayın ve örnek bir iş akışı projesi şablonu seçin, **iş akışı konsol uygulaması** şablonu.
+1. Bir iş akışı proje şablonu (örneğin, **Iş akışı konsol uygulaması** şablonu) arayın ve seçin.
 
-1. Aracılığıyla proje oluşturmaya devam edin.
+1. Projeyi oluşturmak için devam edin.
 
    > [!NOTE]
-   > Varolan çözüme yeni bir proje eklemek istiyorsanız, bu çözüm, Visual Studio'da açın, çözüme sağ **Çözüm Gezgini**seçip **Ekle** > **yeni Proje**.
+   > Mevcut bir çözüme yeni bir proje eklemek istiyorsanız, Visual Studio 'da bu çözümü açın, **Çözüm Gezgini**çözüme sağ tıklayın ve  > **Yeni proje** **Ekle** ' yi seçin.
 
 ## <a name="workflow-console-app"></a>İş akışı konsol uygulaması
 
-Seçerseniz **iş akışı konsol uygulaması** şablon, Visual Studio, XAML içinde bir iş akışı tanımı oluşturur. İş Akışı Tasarımcısı açılır ve oluşturduğunuz iş akışı için tuvalde görüntüler. Bir iş akışı oluşturmak için etkinlikler veya diğer iş akışı öğeleri sürükleyin **araç kutusu** tasarım yüzeyine bırakın.
+**Iş akışı konsol uygulaması** şablonunu seçerseniz, VISUAL Studio xaml 'de bir iş akışı tanımı oluşturur. İş Akışı Tasarımcısı açılır ve oluşturduğunuz iş akışının tuvali görüntülenir. Bir iş akışı oluşturmak için, etkinlik veya diğer iş akışı öğelerini **araç kutusundan** tasarım yüzeyine sürükleyin.
 
 ## <a name="wcf-workflow-service-app"></a>WCF iş akışı hizmeti uygulaması
 
-Seçerseniz **WCF iş akışı hizmeti uygulaması** şablon, Visual Studio, bir hizmet tanımı XAML olarak oluşturur. İş Akışı Tasarımcısı ile Tasarım görünümü açılır bir <xref:System.Activities.Statements.Sequence> içeren bir dizi etkinlik <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikler.
+**WCF Iş akışı hizmeti uygulama** şablonunu seçerseniz, Visual Studio bir HIZMET tanımını xaml olarak oluşturur. İş Akışı Tasarımcısı, Tasarım görünümüne <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikleri içeren bir <xref:System.Activities.Statements.Sequence> etkinliğiyle açılır.
 
 ## <a name="activity-library"></a>Etkinlik kitaplığı
 
-Seçerseniz **etkinlik Kitaplığı** şablon, Visual Studio, XAML içinde bir etkinlik tanımı oluşturur. İş Akışı Tasarımcısı açılır ve özel etkinliğinizin tuval görüntüler. Etkinliği sürükleyin **araç kutusu** özel etkinliklerinizi içerecek şekilde tasarım yüzeyine bırakın.
+**Etkinlik kitaplığı** şablonunu seçerseniz, VISUAL Studio xaml 'de bir etkinlik tanımı oluşturur. İş Akışı Tasarımcısı açılır ve özel etkinliğinizin tuvali görüntülenir. Bir etkinliği özel etkinliğinizden dahil etmek için **araç kutusu** ' ndan tasarım yüzeyine sürükleyin.
 
 > [!NOTE]
-> Yalnızca bir alt etkinlik özel etkinliğinizin gövdesinde izin verilir. Ancak, bu alt etkinlik bileşik bir etkinlik gibi olabilir bir <xref:System.Activities.Statements.Sequence> etkinlik veya <xref:System.Activities.Statements.Flowchart> etkinlik.
+> Özel etkinliğinizin gövdesinde yalnızca bir alt etkinliğe izin verilir. Ancak, bu alt etkinlik <xref:System.Activities.Statements.Sequence> etkinliği veya <xref:System.Activities.Statements.Flowchart> etkinliği gibi bir bileşik etkinlik olabilir.
 
 ## <a name="activity-designer-library"></a>Etkinlik Tasarımcısı kitaplığı
 
-Seçerseniz **etkinlik Tasarımcısı Kitaplığı** şablon, Visual Studio, XAML ve arka plan kod uygulama dosyasında bir etkinlik tasarımcısının tanımı oluşturur. İş Akışı Tasarımcısı açılır ve tuval, etkinlik Tasarımcısı için görüntüler. Sürükle Windows Presentation Foundation (WPF) denetimleri gelen **araç kutusu** özel etkinlik Tasarımcısı'nda kullanılacak tasarım yüzeyine bırakın.
+**Etkinlik Tasarımcısı kitaplık** şablonunu seçerseniz, VISUAL Studio xaml 'de bir etkinlik Tasarımcısı tanımı ve arka plan kod uygulama dosyası oluşturur. İş Akışı Tasarımcısı açılır ve etkinlik tasarlayıcılarınızın tuvali görüntülenir. Windows Presentation Foundation (WPF) denetimlerini **araç kutusundan** tasarım yüzeyine sürükleyerek özel etkinlik tasarımcısında kullanın.
 
-Özel Etkinlik Tasarımcısı uygulamak nasıl bir örnek için bkz [nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma](/dotnet/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer).
+Özel bir etkinlik tasarımcısının nasıl uygulanacağı hakkında bir örnek için bkz. [nasıl yapılır: özel etkinlik Tasarımcısı oluşturma](/dotnet/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer).
 
 > [!NOTE]
-> Özel Etkinlik tasarımcıları, varsayılan .NET etkinlikleri ve özel etkinlikler için kullanılabilir.
+> Özel etkinlik tasarımcıları, özel etkinlikler ve varsayılan .NET etkinlikleri için kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş akışı Tasarımcısını kullanma](developing-applications-with-the-workflow-designer.md)
-- [(.NET Framework) iş akışları tasarlama](/dotnet/framework/windows-workflow-foundation/designing-workflows)
+- [İş Akışı Tasarımcısı kullanın](developing-applications-with-the-workflow-designer.md)
+- [Tasarım iş akışları (.NET Framework)](/dotnet/framework/windows-workflow-foundation/designing-workflows)

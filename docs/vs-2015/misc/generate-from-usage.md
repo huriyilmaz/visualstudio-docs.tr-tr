@@ -17,15 +17,15 @@ helpviewer_keywords:
 - delegates, generating stubs
 ms.assetid: 585a3fd5-516f-4166-9fd1-d406cbab369e
 caps.latest.revision: 67
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3a4194bb0c4e113ef717a3ac08f63b82acccff35
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2bc6c6189fadaf8d7833fe2fc7978e6fc3638b5e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822663"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655865"
 ---
 # <a name="generate-from-usage"></a>Kullanımdan Oluştur
-Bu içerik için geçmiştir [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md).
+Bu içerik, [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md)'e taşındı.

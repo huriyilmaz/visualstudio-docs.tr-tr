@@ -1,5 +1,5 @@
 ---
-title: ParallelForEach&lt;T&gt; etkinlik Tasarımcısı | Microsoft Docs
+title: ParallelForEach &lt;T &gt; etkinlik Tasarımcısı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,47 +8,45 @@ f1_keywords:
 - System.Activities.Statements.ParallelForEach`1.UI
 ms.assetid: e93a4843-aef2-4d3e-9a0a-a2d3d1411aa7
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 825906f3de1b2d40d96dc19ed45d2a368d889994
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4c659e941a8503a0d5ff601fea23fcec69b2bbcf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002313"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672607"
 ---
-# <a name="parallelforeachlttgt-activity-designer"></a>ParallelForEach&lt;T&gt; etkinlik Tasarımcısı
-<xref:System.Activities.Statements.ParallelForEach%601> Etkinlik bir koleksiyon öğelerini numaralandırır ve bir katıştırılmış deyim koleksiyonundaki her öğe için olan aynı iş parçacığında zaman uyumsuz olarak paralel olarak yürütür. Bu akış denetimi etkinliği yerine kullanın <xref:System.Activities.Statements.Sequence> boşta gitmek için bu etkinliği alt etkinliklerini bekleniyorsa etkinlik.  
-  
- <xref:System.Activities.Statements.ParallelForEach%601> Etkinliğinde bir <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> içeren bir kullanıcı tarafından belirtilen özelliğe [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ifade. <xref:System.Activities.Statements.ParallelForEach%601> Her dal tamamlandıktan sonra bu özellik etkinlik değerlendirir. Değerlendirilirse **true**, ardından <xref:System.Activities.Statements.ParallelForEach%601> etkinliği tamamlandıktan diğer dalları çalıştırmadan. Varsa <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> için değerlendirilmiyor **true**, ardından <xref:System.Activities.Statements.ParallelForEach%601> etkinliği tamamlandıktan tüm alt etkinliklerinin tamamladıktan sonra.  
-  
-## <a name="the-parallelforeacht-activity"></a>ParallelForEach\<T > etkinliği  
- <xref:System.Activities.Statements.ParallelForEach%601> değerleri ve zamanlamaları numaralandırır <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> numaralandırır üzerinde her değeri. Yalnızca zamanlar <xref:System.Activities.Statements.ParallelForEach%601.Body%2A>. Nasıl gövdesini yürütür bağlıdır <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> boşta gider.  
-  
- Varsa <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> değil Git zamanlanmış etkinlikleri bir yığın işlenir, çünkü boş bir ters sırada yürütür, son zamanlanan etkinlikten önce yürütür. Örneğin, bir koleksiyonu varsa {1,2,3,4}içinde <xref:System.Activities.Statements.ParallelForEach%601> ve bir **WriteLine** değerin yazılmasına yarar gövdesi olarak. 4, 3, 2, 1 konsolda yazdırılabilir vardır. Bunun nedeni, **WriteLine** bunu 4 sonra boşta geçmez **WriteLine** etkinlikleri zamanlanmış, yığın davranışını kullanarak yürütülen (ilk giren son çıkar).  
-  
- Ancak etkinlikler varsa <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> , gidip gibi boş bir <xref:System.ServiceModel.Activities.Receive> etkinlik veya <xref:System.Activities.Statements.Delay> etkinlik. Sonra bunların tamamlanmasını beklemenize gerek yoktur. <xref:System.Activities.Statements.ParallelForEach%601> sonraki giden gövdesi aktivitesi ve onu yürütmek deneyin. Bu etkinlik, boşta kalırsa <xref:System.Activities.Statements.ParallelForEach%601> yeniden sonraki gövdesi faaliyete taşır.  
-  
-### <a name="using-the-parallelforeacht-activity-designer"></a>ParallelForEach kullanarak\<T > etkinlik Tasarımcısı  
- **ParallelForEach\<T >** etkinlik Tasarımcısı bulunabilir **akış denetimi** kategorisi **araç kutusu**, hangi erişilen tıklayarak **Araç kutusu** sol tarafındaki sekmesinde [!INCLUDE[wfd2](../includes/wfd2-md.md)] (Alternatif olarak, seçin **araç** gelen **görünümü** menüsünü veya CTRL + ALT + X.)  
-  
- **ParallelForEach\<T >** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve oturum bırakılan [!INCLUDE[wfd2](../includes/wfd2-md.md)] etkinlik tasarımcıları normal olarak yerleştirilen her yerde yüzey için Örneğin, içini bir **dizisi** etkinlik Tasarımcısı. İçine bırakmadan sonra [!INCLUDE[wfd2](../includes/wfd2-md.md)], oluşturduğu bir <xref:System.Activities.Statements.ParallelForEach%601> içeren varsayılan olarak, etkinlik bir <xref:System.Activities.Activity.DisplayName%2A> , **ParallelForEach\<Int32 >.**  
-  
-### <a name="parallelforeacht-properties-in-the-workflow-designer"></a>ParallelForEach\<T > İş Akışı Tasarımcısı özellikleri  
- Aşağıdaki tabloda en kullanışlı gösterilmektedir <xref:System.Activities.Statements.ParallelForEach%601> etkinlik özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır.  
-  
-|Özellik Adı|Gerekli|Kullanım|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Üst bilgide etkinlik Tasarımcısı kolay görünen adını belirtir. Varsayılan değer **ParallelForEach\<Int32 >**. Değer, isteğe bağlı olarak düzenlenebilir **özellikleri** kılavuz veya doğrudan etkinlik Tasarımcısı başlığı.|  
-|<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|False|Koleksiyondaki her öğe için çalıştırılacak etkinlik. Eklemek için <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> etkinlik, etkinlik araç kutusundan bir bırakma **gövdesi** kutusuna **ParallelForEach\<T >** etkinlik Tasarımcısı ile "Etkinliği buraya bırakın" İpucu metni.|  
-|**TypeArgument**|Doğru|Öğelerin türünü <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> genel parametre tarafından belirtilen koleksiyon *T*. Varsayılan olarak, **TypeArgument** ayarlanır **Int32**. ' % S'tür T içinde değiştirmek için **ParallelForEach\<T >** etkinlik Tasarımcısı değiştirin **TypeArgument** özellik kılavuzunda birleşik giriş kutusu.|  
-|<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>|Doğru|Üzerinden yinelemek için öğeleri koleksiyonu. Ayarlanacak <xref:System.Activities.Statements.ParallelForEach%601.Values%2A>, bir [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ifadesinde **değerleri** kutusuna **ForEach\<T >** ipucu metnini "VB ifadesi gir" veya içinde kutusunda etkinlik Tasarımcısı **Değerleri** kutusuna **özellikleri** penceresi.|  
-|<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>||Her yineleme tamamlandıktan sonra değerlendirilir. Bekleyen true sonra zamanlanmış olarak değerlendirir, yinelemeler iptal edilir. Bu özellik ayarlanmamışsa, tüm zamanlanmış deyimleri işlem tamamlanana kadar yürütün.|  
-  
- Varsayılan olarak, döngü yineleyici öğesi olarak adlandırılır. Yineleyici değişkeni adını değiştirebilirsiniz **ForEach** kutusunda **ParallelForEach\<T >** etkinlik Tasarımcısı. Döngü yineleyici alt ifadelerde kullanılabilir <xref:System.Activities.Statements.ParallelForEach%601> etkinlik.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dizisi](../workflow-designer/sequence-activity-designer.md)   
- [Paralel](../workflow-designer/parallel-activity-designer.md)   
- [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
+# <a name="parallelforeachlttgt-activity-designer"></a>ParallelForEach &lt;T &gt; etkinlik Tasarımcısı
+@No__t_0 etkinliği bir koleksiyonun öğelerini numaralandırır ve aynı iş parçacığında zaman uyumsuz olan paralel olarak koleksiyonun her öğesi için gömülü bir ifade yürütür. Bu etkinliğin alt etkinliklerinin boşta olması bekleniyorsa <xref:System.Activities.Statements.Sequence> etkinliği yerine bu Flow denetim etkinliğini kullanın.
+
+ @No__t_0 etkinliği, Kullanıcı tarafından belirtilen [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ifadesi içeren bir <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> özelliğine sahiptir. @No__t_0 etkinliği her bir dal tamamlandıktan sonra bu özelliği değerlendirir. **True**olarak değerlendirilirse <xref:System.Activities.Statements.ParallelForEach%601> etkinlik diğer dalları yürütmeden tamamlanır. @No__t_0 **true**olarak değerlendirilmiyorsa, tüm alt etkinlikleri tamamlandığında <xref:System.Activities.Statements.ParallelForEach%601> etkinlik tamamlanır.
+
+## <a name="the-parallelforeacht-activity"></a>ParallelForEach \<T > etkinliği
+ <xref:System.Activities.Statements.ParallelForEach%601> değerlerini numaralandırır ve numaralandıraldığı her değer için <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> zamanlar. Yalnızca <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> zamanlar. Gövde nasıl çalıştırılır <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> boşta kalacağından bağımsız olarak değişir.
+
+ @No__t_0 boşta kalırsa, zamanlanmış etkinlikler bir yığın olarak işlendiği için ters sırada yürütülür, en son zamanlanan etkinlik ilk yürütülür. Örneğin, bir {1,2,3,4}in <xref:System.Activities.Statements.ParallelForEach%601> koleksiyonunuz varsa ve değeri yazmak için gövde olarak bir **WriteLine** kullanıyorsanız. Konsolda 4, 3, 2, 1 yazdırılmış. Bunun nedeni, **WriteLine** 'ın zamanlanan 4 **WriteLine** etkinliği zamanlanmasından sonra, bir yığın davranışı kullanılarak yürütülemediği (ilk kez geçen süre).
+
+ Ancak <xref:System.Activities.Statements.ParallelForEach%601.Body%2A>, bir <xref:System.ServiceModel.Activities.Receive> etkinliği veya <xref:System.Activities.Statements.Delay> etkinliği gibi boş kalabileceğini belirten etkinlikleriniz varsa. Daha sonra bunların tamamlanmasını beklemeniz gerekmez. <xref:System.Activities.Statements.ParallelForEach%601> bir sonraki zamanlanmış gövde etkinliğine gider ve çalıştırmayı dener. Bu etkinlik çok fazla kalırsa, <xref:System.Activities.Statements.ParallelForEach%601> sonraki gövde etkinliğini tekrar gider.
+
+### <a name="using-the-parallelforeacht-activity-designer"></a>ParallelForEach \<T > etkinlik tasarımcısını kullanma
+ **ParallelForEach \<T >** etkinlik tasarımcısı, [!INCLUDE[wfd2](../includes/wfd2-md.md)] sol tarafındaki **araç kutusu** sekmesine tıklanarak erişilen **araç kutusunun** **Denetim akışı** kategorisinde bulunabilir (alternatif olarak,  **Araç çubuğundan** **Görünüm** menüsünden veya Ctrl + Alt + X.)
+
+ **ParallelForEach \<T >** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin bir **sıra** etkinliği tasarımcısı içindeki etkinlik tasarımcılarının normalde yerleştirildiği [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzeyine bırakılabilir. @No__t_0, bu, varsayılan olarak **ParallelForEach \<Int32 >** <xref:System.Activities.Activity.DisplayName%2A> içeren bir <xref:System.Activities.Statements.ParallelForEach%601> etkinliği oluşturur.
+
+### <a name="parallelforeacht-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı \<T ParallelForEach > Özellikleri
+ Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.ParallelForEach%601> etkinlik özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
+
+|Özellik adı|Gerekli|Kullanım|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Üst bilgide etkinlik tasarımcısının kolay görünen adını belirtir. Varsayılan değer **ParallelForEach \<Int32 >** . Değer, isteğe bağlı olarak **Özellikler** kılavuzunda veya doğrudan etkinlik Tasarımcısı üstbilgisinde düzenlenebilir.|
+|<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|False|Koleksiyondaki her öğe için yürütülecek etkinlik. @No__t_0 etkinliğini eklemek için, araç kutusundan bir etkinliği **ParallelForEach \<T >** etkinlik Tasarımcısı ' nın **' de yer** alan "etkinliği buraya bırak" ipucu metin kutusuna bir etkinlik bırakın.|
+|**TypeArgument**|Doğru|Genel parametre *t*tarafından belirtilen <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> koleksiyonundaki öğelerin türü. Varsayılan olarak, **TypeArgument** değeri **Int32**olarak ayarlanır. **ParallelForEach \<T >** Etkinlik tasarımcısında T türünü değiştirmek Için, özellik kılavuzunda **TypeArgument** Birleşik giriş kutusunun değerini değiştirin.|
+|<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>|Doğru|Yinelecek öğelerin koleksiyonu. @No__t_0 ayarlamak için, **Özellikler** penceresindeki "bir vb ifadesi girin" veya **değerler** kutusuna "bir vb ifadesi girin" İpucu **metin kutusuna,** kutuya bir [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] **> \<T** ifadesi yazın.|
+|<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>||Her yineleme tamamlandıktan sonra değerlendirilir. True olarak değerlendirilirse, zamanlanan bekleyen yinelemeler iptal edilir. Bu özellik ayarlanmamışsa, tüm zamanlanmış deyimler tamamlanana kadar yürütülür.|
+
+ Varsayılan olarak, döngü yineleyicisi öğe olarak adlandırılır. Bir yineleyici değişkeninin adını **ParallelForEach \<T >** etkinlik Tasarımcısı ' nda bulunan **foreach** kutusunda değiştirebilirsiniz. Döngü yineleyicisi, <xref:System.Activities.Statements.ParallelForEach%601> etkinliğinin alt öğelerindeki ifadelerde kullanılabilir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Sıralı](../workflow-designer/sequence-activity-designer.md) [paralel](../workflow-designer/parallel-activity-designer.md) [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)

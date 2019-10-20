@@ -1,49 +1,46 @@
 ---
-title: 'Nasıl yapılır: Konu arayın | Microsoft Docs'
+title: 'Nasıl yapılır: konu arama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 683f1b0c-1551-4bba-91fe-3855f03fdd69
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 13a26ec22060985705f6a1b54cf691c50ae07f1a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d5830bb71f66b27acf2ba63133a130c2ea24a9c6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435207"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670764"
 ---
-# <a name="how-to-search-for-topics"></a>Nasıl yapılır: Konu Arama
+# <a name="how-to-search-for-topics"></a>Nasıl Yapılır: Konu Arama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirli bir sözcüğün içeren tüm konuları bulmak için tam metin arama özelliğini kullanabilirsiniz. Ayrıca, iyileştirmek ve joker karakter ifadeler, mantıksal işleçler ve Gelişmiş arama işleçlerini kullanarak aramanızı özelleştirin.  
-  
-### <a name="to-open-the-search-tab"></a>Arama sekmesi açın  
-  
-- Seçin **arama** sekmesinde Yardım Görüntüleyici penceresinde veya Ctrl seçin + E anahtarları.  
-  
-### <a name="to-perform-a-full-text-search"></a>Tam metin araması gerçekleştirmek için  
-  
-1. Arama kutusuna bulmak istediğiniz sözcüğü yazın.  
-  
-2. Arama sorgusunda, varsa hangi mantıksal ve Gelişmiş arama işleçleri, aramayı uygulamak için belirtin. Tüm kullanılabilir Yardım aranacak işleçleri kullanmayın.  
-  
+Tam metin arama özelliğini kullanarak belirli bir sözcüğü içeren tüm konuları bulabilirsiniz. Ayrıca joker karakter ifadeleri, mantıksal işleçler ve gelişmiş arama işleçlerini kullanarak aramanızı iyileştirebilirsiniz ve özelleştirebilirsiniz.
+
+### <a name="to-open-the-search-tab"></a>Arama sekmesini açmak için
+
+- Yardım Görüntüleyicisi penceresinde **Ara** sekmesini seçin veya CTRL + E tuşlarını seçin.
+
+### <a name="to-perform-a-full-text-search"></a>Tam metin araması gerçekleştirmek için
+
+1. Arama kutusuna bulmak istediğiniz sözcüğü yazın.
+
+2. Arama sorgusunda, arama için hangi mantıksal veya Gelişmiş arama işleçlerinin uygulanacağını belirtin. Tüm kullanılabilir yardımı aramak için işleçleri kullanmayın.
+
     > [!NOTE]
-    > İçinde **Görüntüleyici seçenekleri** iletişim kutusu, bir saat ve birincil yerel ayarınız İngilizce değilse, İngilizce içeriği dahil edilip edilmeyeceğini görüntülemek için arama sonuçlarının maksimum sayısı gibi ek tercihleri belirtebilirsiniz.  
-  
-3. Enter tuşunu seçin.  
-  
-     Bir arama varsayılan olarak en fazla 200 isabetli okuma sayısının döndürür ve bunları arama sonuçlarını alanında görüntüler.  
-  
-     Ek sürüm bilgileri için her sonuç içeriğe bağlı olarak görünebilir.  
-  
-4. Bir konu görüntülemek için sonuçlar listesinden başlığını seçin.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tam metin arama ipuçları](../ide/full-text-search-tips.md)   
- [Arama ifadelerindeki mantıksal işleçler](../ide/logical-operators-in-search-expressions.md)   
- [Arama işleçlerini arama ifadelerindeki Gelişmiş](../ide/advanced-search-operators-in-search-expressions.md)   
- [Nasıl yapılır: Arama Sonuçlarını Özelleştirme](../ide/how-to-customize-search-results.md)
+    > **Görüntüleyici seçenekleri** iletişim kutusunda, bir kerede görüntülenecek en fazla arama sonucu sayısı ve birincil yerel ayarınız İngilizce değilse, İngilizce içerik eklenip eklenmeyeceğini gibi ek tercihleri belirtebilirsiniz.
+
+3. Enter tuşunu seçin.
+
+     Arama, varsayılan olarak en fazla 200 isabet döndürür ve bunları arama sonuçları alanında görüntüler.
+
+     Her sonucun ek sürüm bilgileri içeriğe göre görünebilir.
+
+4. Bir konuyu görüntülemek için, sonuç listesinden başlığını seçin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Tam metin arama ipuçları](../ide/full-text-search-tips.md) arama [ifadelerinde mantıksal Işleçler](../ide/logical-operators-in-search-expressions.md) [Gelişmiş arama Işleçleri](../ide/advanced-search-operators-in-search-expressions.md) [nasıl yapılır: arama sonuçlarını özelleştirme](../ide/how-to-customize-search-results.md)

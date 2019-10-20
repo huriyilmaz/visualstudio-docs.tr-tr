@@ -1,5 +1,5 @@
 ---
-title: 'CA1724: Tür adları ad alanları değil eşleşmelidir | Microsoft Docs'
+title: 'CA1724: tür adları ad alanlarıyla eşleşmemelidir | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - CA1724
 ms.assetid: 329af3b5-5600-4101-831d-531ab3eb7060
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7fe95e08d2265baf06c6da265996ffcd579f0d1f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 53c99e34bf253b0962d054685ce637c3849a2857
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68143182"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671590"
 ---
-# <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724: Tür adları ad alanları ile eşleşmemelidir
+# <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724: Tür Adları Ad Alanlarıyla Eşleşmemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|TypeNamesShouldNotMatchNamespaces|
 |CheckId|CA1724|
-|Kategori|Microsoft.Naming|
+|Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Bir tür adıyla eşleşen bir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] büyük küçük harf duyarsız bir karşılaştırma ad alanı adları.
+ Tür adı, büyük/küçük harfe duyarsız bir karşılaştırmayla [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] ad alanı adlarıyla eşleşir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Tür adları içinde tanımlı ad alanlarının adları değil eşleşmelidir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sınıf kitaplığı. Bu kuralın ihlali kitaplığın kullanılabilirliğini azaltabilir.
+ Tür adları [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sınıfı kitaplığında tanımlanan ad alanlarının adlarıyla eşleşmemelidir. Bu kuralın ihlali kitaplığın kullanılabilirliğini azaltabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Belirleyin adı eşleşmiyor bir tür adı bir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sınıf kitaplığı ad alanı.
+ @No__t_0 sınıf kitaplığı ad alanı adıyla eşleşmeyen bir tür adı seçin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Yeni geliştirme, hiçbir bilinen senaryolar ortaya burada bu kuraldan bir uyarıyı bastırmak gerekir. Uyarının gösterilmemesi önce kitaplığınızın kullanıcılar tarafından eşleşen adı nasıl yanıltıcı dikkatlice düşünün. Kitaplıkları sevk edilmesi için bu kuraldan bir uyarıyı bastırmak gerekebilir.
+ Yeni geliştirme için, bu kuraldan bir uyarıyı bastırmalısınız hiçbir bilinen senaryo oluşmaz. Uyarıyı bastırmadan önce, kitaplığınızdaki kullanıcıların eşleşen ad ile nasıl karışabileceği hakkında dikkatle düşünün. Gönderim kitaplıkları için, bu kuraldan bir uyarıyı bastırın.

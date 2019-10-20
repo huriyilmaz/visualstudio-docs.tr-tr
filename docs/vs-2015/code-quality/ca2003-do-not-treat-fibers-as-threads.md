@@ -1,5 +1,5 @@
 ---
-title: 'CA2003: Lifleri iş parçacığı olarak yok | Microsoft Docs'
+title: 'CA2003: lifleri görmeyin iş parçacığı olarak davranmayın | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - DoNotTreatFibersAsThreads
 ms.assetid: 15398fb1-f384-4bcc-ad93-00e1c0fa9ddf
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0a1683c8cb9b9c6dc856f40ddbc7864d773f2101
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 943b52f9703e60f14756bde97ce6f27c0c6f5296
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189055"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672510"
 ---
-# <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003: Fiberleri iş parçacığı olarak görmeyin
+# <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003: Lifleri iş parçacığı olarak görmeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|DoNotTreatFibersAsThreads|
 |CheckId|CA2003|
-|Kategori|Microsoft.Reliability|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. güvenilirliği|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Yönetilen iş parçacığı bir Win32 iş parçacığı kabul edilir.
+ Yönetilen bir iş parçacığı Win32 iş parçacığı olarak kabul ediliyor.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Yönetilen iş parçacığı bir Win32 iş parçacığı olan varsaymayın. Bu, bir fiber olur. Ortak dil çalışma zamanı (CLR) yönetilen iş parçacıkları, SQL tarafından sahip olunan gerçek iş parçacıkları bağlamında iyileştirmesini olarak çalıştırılır. Bu iş parçacıkları SQL Server işlemde uygulama etki alanları ve hatta veritabanları arasında paylaşılabilir. Kullanılarak yönetilen iş parçacığı yerel depolama çalışır, ancak değil yönetilmeyen iş parçacığı yerel depolama kullanan veya kodunuzu geçerli işletim sistemi iş parçacığı üzerinde yeniden çalışacağını varsayalım. İş parçacığı yerel ayarı gibi ayarları değiştirmeyin. Kilit girer iş parçacığı kilit çıkmalı gerektirdiğinden CreateCriticalSection veya P/Invoke aracılığıyla CreateMutex çağırmayın. İyileştirmesini kullandığınızda bu durum olmayacağı için Win32 kritik bölümler ve mutex'leri SQL'de gereksiz olacaktır. Bu gibi durumlarda, durumun en güvenli bir şekilde bir yönetilen System.Thread nesnesinde kullanabilirsiniz. Bu, yönetilen iş parçacığı yerel depolama ve iş parçacığının geçerli kullanıcı arabirimi (UI) kültürü içerir. Ancak, model nedeniyle programlama için SQL kullanırken bir iş parçacığının geçerli kültürü değiştirmek mümkün olmayacaktır; Bu, yeni bir izin zorlanır.
+ Yönetilen bir iş parçacığının Win32 iş parçacığı olduğunu varsaymayın. Bu bir fiber ' dır. Ortak dil çalışma zamanı (CLR), yönetilen iş parçacıklarını SQL 'e ait gerçek iş parçacıkları bağlamında lifleri görmeyin olarak çalıştırır. Bu iş parçacıkları SQL Server işlemindeki AppDomain 'ler ve hatta veritabanları arasında paylaşılabilir. Yönetilen iş parçacığı yerel depolama alanı kullanılarak çalışır, ancak yönetilmeyen iş parçacığı yerel depolama birimini kullanamaz veya kodunuzun geçerli işletim sistemi iş parçacığında yeniden çalışacağını varsayabilirsiniz. İş parçacığının yerel ayarı gibi ayarları değiştirmeyin. P/Invoke aracılığıyla Createcriticalhandle bölümünü veya CreateMutex 'i çağırmayın, çünkü bir kilidi çağıran iş parçacığının da kiliden çıkması gerekir. Fibers kullandığınızda bu durum söz konusu olmadığından, Win32 kritik bölümleri ve zaman uyumu sağlayıcılar SQL 'de kullanılamaz olacaktır. Durumu yönetilen bir System. Thread nesnesi üzerinde güvenle kullanabilirsiniz. Buna yönetilen iş parçacığı yerel depolama alanı ve iş parçacığının geçerli kullanıcı arabirimi (UI) kültürü dahildir. Ancak, programlama modeli nedenleriyle, SQL kullandığınızda bir iş parçacığının geçerli kültürünü değiştiremeyeceksiniz; Bu, yeni bir izin ile zorlanır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- İş parçacıkları kullanımınızı inceleyin ve kodunuzu buna göre değişir.
+ İş parçacıklarının kullanımını inceleyin ve kodunuzu uygun şekilde değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kural göndermeme değil.
+ Bu kuralı göstermemelisiniz.

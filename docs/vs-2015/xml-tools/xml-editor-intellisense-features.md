@@ -6,119 +6,117 @@ ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c691eea7417e882ee3b73e9f2adc538714b486a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9cd10f9eb0e2899394788c3b19348892837426db
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158566"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669461"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML Düzenleyicisi IntelliSense Özellikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML Düzenleyicisi Visual Studio'da sağlanan diğer dil düzenleyicilere karşılaştırılabilir tam IntelliSense özelliklerini sağlar. Bu bölümde, XSLT belgeleri ve XML Şeması Tanım Dili (XSD) ile IntelliSense nasıl kullanabileceğiniz açıklanmaktadır.  
-  
-## <a name="intellisense-in-an-xsd-document"></a>Bir XSD belgesi IntelliSense  
- Bir şema, belge ile ilişkili olduğunda, yazdığınız dilediğiniz zaman beklenen öğeleri açılan listesini alma `"<"` veya **bir nesne üye listesini görüntüle** XML Düzenleyicisi araç çubuğunda. Şemaları XML belgelerinizi ile ilişkilendirme hakkında daha fazla bilgi için bkz: [XML belgesi doğrulama](../xml-tools/xml-document-validation.md).  
-  
- Bir başlangıç etiketi içinde ALANINDAN yazdığınızda, ayrıca geçerli öğeye eklediğiniz tüm öznitelikler gösteren bir açılan listesini alın.  
-  
- Yazdığınızda `"="` bir öznitelik değeri veya tırnak değeri için siz de bu öznitelik için olası değerler listesini alın. Değerleri yalnızca şema aracılığıyla numaralandırılmış değerlerden sağlıyorsa sağlanan `xsd:enumeration` modelleri, veya öznitelik ise bir `Boolean` türü. Bilinen dil kodlarının bir IntelliSense listesini de için sağlanan `xml:lang` veya tüm `simpleType` türetilen `xsd:language`. Bilinen bir IntelliSense listesini `targetNamespace` değerleri için ad alanı bildirimi sağlanır.  
-  
- Olası değerler bir IntelliSense listesini de yazarken sağlanan `">"` öğesi ise bir başlangıç etiketi kapatmak için bir `simpleType`. Benzer şekilde önceki paragrafta açıklanan öznitelikleri davranışını öğeler için davranıştır.  
-  
- Araç ipuçları da görünür göre bu IntelliSense listelerde `xsd:annotation` ve `xsd:documentation` ilişkili şemasında bilgi bulunamadı.  
-  
-## <a name="intellisense-in-an-xslt-document"></a>XSLT belge Intellisense'te  
- Adlandırılmış bir şablon ya da bir öznitelik XSLT belgenize ekledikten sonra aşağıdaki eklemek için IntelliSense kullanabilirsiniz:  
-  
-- Öznitelik adları ayarlayın.  
-  
-- Şablon mod.  
-  
-- Şablon adları.  
-  
-- Belirli bir mod için parametre adları.  
-  
-- Belirtilen adlandırılmış bir şablon parametresi adları.  
-  
-  Daha fazla bilgi için [izlenecek yol: XSLT IntelliSense kullanma](../xml-tools/walkthrough-using-xslt-intellisense.md) konu.  
-  
-## <a name="auto-completion"></a>Otomatik Tamamlama  
- XML Düzenleyicisi'ni de gerekli XML sözdiziminde doldurarak daha kolay XML düzenleme olmasını sağlar. Örneğin aşağıdaki başlangıç etiketi yazın:  
-  
- `<book>`  
-  
- XML Düzenleyicisi'ni bitiş etiketinde doldurur ve imleci sonra başlangıç etiketi yerleştirir. Buna örnek olarak verilmiştir ("&#124;" imleç konumu notları):  
-  
- `<book>`&#124;`</book>`  
-  
- Öznitelik değerlerine tırnak her zaman sahip olmanız gerektiğinden, XML Düzenleyicisi'ni tırnak doldurur. Örneğin, aşağıdaki komutu yazın:  
-  
- `<book title=`  
-  
- XML Düzenleyicisi'ni tırnak ekler ve tırnak işaretleri arasında imleci geçir yerleştirir:  
-  
- `<book title="`&#124;`"`  
-  
- Benzer şekilde, XML Düzenleyicisi'ni de aşağıdaki XML sözdizimini otomatik olarak ekler:  
-  
-- Son bir işlem yönergesi:  `?>`  
-  
-- [[CDATA bloğunun sonu: `]]>`  
-  
-- Bir açıklama sonu: `-->`  
-  
-- Son DTD bildirimi: `>`  
-  
-  XML Düzenleyicisi'ni bir ad alanı Ekle özelliğine de sahiptir bildirimi bir ad alanı tam öğesi seçin veya bir IntelliSense listesi ve bu öğe veya öznitelik için ad alanı özniteliği henüz kapsam içinde değil.  
-  
-  Örneğin, `e:Book` nerede bağlı öneki için IntelliSense listesinden öğe `http://books` XML Düzenleyicisi'ni ekler, gerekli ad alanı bildirimi belge içinde bildirilmedi ad alanı. Sonuçta elde edilen XML metni aşağıda verilmiştir:  
-  
-  `<e:Book xmlns:e="http://books"`  
-  
-## <a name="brace-matching"></a>Ayraç eşleştirme  
- XML Düzenleyicisi'ni küme parantezi vurgulama kapalı öğelerde size anında geri bildirim sağlar. Klavye kısayolu (CTRL +]), bir küme ayracı eşleşen Ayraca atlamak için de kullanabilirsiniz.  
-  
- XML Düzenleyicisi bu için aşağıdakileri yapar:  
-  
-- Başlangıç ve bitiş etiketleri eşleşen.  
-  
-- Bir çift "\<" veya ">" açılı ayraçlar.  
-  
-- Başlangıç ve bitiş açıklama.  
-  
-- Başlangıç ve bitiş işleme yönergeleri.  
-  
-- Başlangıç ve bitiş CDATA bloğu.  
-  
-- Başlangıç ve bitiş DTD'nin bildirimlerinin.  
-  
-- Açma ve özniteliklerde tırnak kapatma.  
-  
-## <a name="modifying-the-intellisense-options"></a>IntelliSense seçenekleri değiştirme  
- IntelliSense ve otomatik tamamlama özellikleri varsayılan olarak etkindir. Ancak, bu Araçlar-Seçenekler ayarlarınızı değiştirerek değiştirebilirsiniz.  
-  
- **Otomatik ekleme** bölümünü **çeşitli** sayfa aşağıdaki davranışı denetler:  
-  
-|Ad|Açıklama|  
-|----------|-----------------|  
-|Kapatma etiketleri|Yeni öğeler için etiketleri ekler kapatın.|  
-|Öznitelik tırnak işaretleri|Yeni bir öznitelik adı girin, öznitelik değer tırnakları ekler.|  
-|Diğer biçimlendirme|Açıklamalar, CDATA, DOCTYPE, işleme yönergeleri ve diğer işaretleme bildirimlerinde tamamlar.|  
-  
-#### <a name="to-change-the-auto-completion-behavior"></a>Otomatik Tamamlama davranışını değiştirmek için  
-  
-1. Seçin **seçenekleri** gelen **Araçları** menüsü.  
-  
-2. Genişletin **metin düzenleyici**, genişletme **XML**seçip **çeşitli**.  
-  
-3. Değişiklik **otomatik Ekle** tıklayın ve bölüm **Tamam**.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Düzenleyicisi](../xml-tools/xml-editor.md)   
- [IntelliSense kullanma](../ide/using-intellisense.md)   
- [İzlenecek yol: XSLT IntelliSense Kullanma](../xml-tools/walkthrough-using-xslt-intellisense.md)
+XML Düzenleyicisi, Visual Studio 'da sağlanan diğer dil düzenleyicilerle karşılaştırılabilir tam IntelliSense özellikleri sağlar. Bu bölümde, IntelliSense 'i XML şeması tanım dili (XSD) ve XSLT belgeleriyle nasıl kullanabileceğiniz açıklanmaktadır.
+
+## <a name="intellisense-in-an-xsd-document"></a>XSD belgesinde IntelliSense
+ Bir şema belgeyle ilişkilendirildikten sonra, `"<"` her seferinde beklenen öğelerin açılan listesini alır veya XML Düzenleyicisi araç çubuğundaki bir **nesne üye listesini görüntüle** düğmesine tıklayabilirsiniz. Şemaları XML belgeleriyle ilişkilendirme hakkında daha fazla bilgi için bkz. [XML belge doğrulaması](../xml-tools/xml-document-validation.md).
+
+ Başlangıç etiketinin içinden boşluk yazdığınızda, geçerli öğeye eklenebilen tüm öznitelikleri gösteren bir açılan liste da alırsınız.
+
+ Bir öznitelik değeri için `"="` yazdığınızda veya değerin açılış tırnak işareti söz konusu öznitelik için olası değerlerin listesini de alırsınız. Değerler yalnızca şema `xsd:enumeration` modelleri aracılığıyla numaralandırılmış değerler sağlıyorsa veya öznitelik bir `Boolean` türü ise sağlanır. Bilinen dil kodlarının IntelliSense listesi, `xml:lang` veya `xsd:language` türetilen `simpleType` için de sağlanır. Bilinen `targetNamespace` değerlerinin IntelliSense listesi, ad alanı bildirimleri için verilmiştir.
+
+ Öğe bir `simpleType` ise başlangıç etiketini kapatmak için `">"` yazdığınızda, olası değerlerin bir IntelliSense listesi de sağlanır. Öğelerin davranışı, önceki paragrafta açıklanan özniteliklerin davranışına benzerdir.
+
+ Araç Ipuçları Ayrıca bu IntelliSense listelerinde, ilişkili şemada bulunan `xsd:annotation` ve `xsd:documentation` bilgilerine göre de görünür.
+
+## <a name="intellisense-in-an-xslt-document"></a>XSLT belgesinde IntelliSense
+ XSLT belgenize adlandırılmış bir şablon veya öznitelik ekledikten sonra, aşağıdakini eklemek için IntelliSense 'i kullanabilirsiniz:
+
+- Öznitelik kümesi adları.
+
+- Şablon modları.
+
+- Şablon adları.
+
+- Belirli bir mod için parametre adları.
+
+- Belirli bir adlandırılmış şablon için parametre adları.
+
+  Daha fazla bilgi için bkz. [Izlenecek yol: XSLT IntelliSense 'ı kullanma](../xml-tools/walkthrough-using-xslt-intellisense.md) konusu.
+
+## <a name="auto-completion"></a>Otomatik tamamlama
+ XML Düzenleyicisi, sizin için gerekli XML söz dizimini doldurarak XML düzenlemesini daha da kolaylaştırır. Örneğin, aşağıdaki başlangıç etiketini yazarsanız:
+
+ `<book>`
+
+ XML Düzenleyicisi bitiş etiketini doldurur ve imleci başlangıç etiketinden sonra konumlandırır. Aşağıda buna bir örnek verilmiştir ("&#124;" imleç konumunu not edin):
+
+ `<book>`&#124;`</book>`
+
+ Öznitelik değerleri her zaman tırnak içine sahip olması gerektiğinden, XML Düzenleyicisi teklifleri sizin için doldurur. Örneğin, şunu yazarsanız:
+
+ `<book title=`
+
+ XML Düzenleyicisi, tırnakları ekler ve imleci tırnak arasına yerleştirir:
+
+ `<book title="`&#124;`"`
+
+ Benzer şekilde, XML Düzenleyicisi sizin için otomatik olarak aşağıdaki XML sözdizimini de ekler:
+
+- Bir işleme yönergesini sonlandır: `?>`
+
+- CDATA bloğunu sonlandır: `]]>`
+
+- Açıklamayı bitir: `-->`
+
+- Bir DTD bildirimini sonlandır: `>`
+
+  Bir IntelliSense listesinden nitelenmiş bir ad alanı veya öznitelik seçerseniz ve bu öğenin veya özniteliğin ad alanı henüz kapsamda değilse, XML Düzenleyicisi de bir ad alanı bildirimi ekleyebilme özelliğine sahiptir.
+
+  Örneğin, bir IntelliSense listesinden `e:Book` öğesini seçerseniz, önekinin, belgede bildirilmemiş `http://books` ad alanına bağlandığı, XML Düzenleyicisi sizin için gerekli olan ad alanı bildirimini ekler. Elde edilen XML metni aşağıda verilmiştir:
+
+  `<e:Book xmlns:e="http://books"`
+
+## <a name="brace-matching"></a>Ayraç eşleştirme
+ XML Düzenleyicisi, az önce kapattığınız öğeler hakkında anında geri bildirim sağlamak için küme ayracı vurgulamasını sağlar. Ayrıca, bir küme ayracından eşleşen küme ayracına geçmek için klavye kısayolunu (CTRL +]) de kullanabilirsiniz.
+
+ XML Düzenleyicisi bunu aşağıdaki öğeler için yapar:
+
+- Eşleşen başlangıç ve bitiş etiketleri.
+
+- Herhangi bir çift "\<" veya ">" açılı ayraçlar.
+
+- Yorumların başlangıcı ve sonu.
+
+- İşlem yönergelerinin başlangıcı ve sonu.
+
+- CDATA blokları başlangıcı ve sonu.
+
+- DTD bildirimlerinin başlangıcı ve sonu.
+
+- Özniteliklerde tırnak açma ve kapatma.
+
+## <a name="modifying-the-intellisense-options"></a>IntelliSense seçeneklerini değiştirme
+ IntelliSense ve otomatik tamamlama özellikleri varsayılan olarak etkindir. Ancak, Araçlar-Seçenekler ayarlarınızı değiştirerek bunu değiştirebilirsiniz.
+
+ **Çeşitli** sayfasının **Otomatik Ekle** bölümü aşağıdaki davranışı denetler:
+
+|Name|Açıklama|
+|----------|-----------------|
+|Etiketleri kapat|Yeni öğeler için kapatma etiketleri ekler.|
+|Öznitelik teklifleri|Yeni bir öznitelik adı girdiğinizde öznitelik değeri tırnakları ekler.|
+|Diğer biçimlendirme|Açıklamaları, CDATA, DOCTYPE, işleme yönergelerini ve diğer biçimlendirme bildirimlerini tamamlar.|
+
+#### <a name="to-change-the-auto-completion-behavior"></a>Otomatik tamamlama davranışını değiştirmek için
+
+1. **Araçlar** menüsünde **Seçenekler** ' i seçin.
+
+2. **Metin düzenleyiciyi**genişletin, **XML**' i genişletin ve **çeşitli**' ı seçin.
+
+3. **Otomatik ekleme** bölümünde herhangi bir değişiklik yapıp **Tamam**' a tıklayın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [IntelliSense](../ide/using-intellisense.md) [Izlenecek yol: XSLT IntelliSense kullanarak](../xml-tools/walkthrough-using-xslt-intellisense.md) [XML Düzenleyicisi](../xml-tools/xml-editor.md)

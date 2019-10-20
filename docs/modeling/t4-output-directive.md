@@ -2,42 +2,42 @@
 title: T4 Çıkış Yönergesi
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dfbe77f5b6e2bbda6a51d392c4dd16b079100e81
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1da8ec010e878ff80a9f46748993705b87193d99
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856251"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72606223"
 ---
 # <a name="t4-output-directive"></a>T4 Çıkış Yönergesi
 
-Visual Studio metin şablonlarında `output` yönergesi, dosya adı uzantısı ve dönüştürülen dosyanın kodlamasını tanımlamak için kullanılır.
+Visual Studio metin şablonlarında `output` yönergesi, dönüştürülmüş dosyanın dosya adı uzantısını ve kodlamasını tanımlamak için kullanılır.
 
- Örneğin, Visual Studio projenize adlı şablon dosyası içeriyorsa **MyTemplate.tt** aşağıdaki yönerge içerir:
+ Örneğin, Visual Studio projeniz aşağıdaki yönergeyi içeren **myTemplate.tt** adlı bir şablon dosyası içeriyorsa:
 
  `<#@output extension=".cs"#>`
 
- Visual Studio adlı bir dosya oluşturur sonra **MyTemplate.cs**
+ ardından, Visual Studio **myTemplate.cs** adlı bir dosya oluşturur
 
- `output` Çalışma zamanı (önceden işlenmiş) metin şablonunda yönergesi gerekli değildir. Bunun yerine, çağırarak uygulamanızı oluşturulan dizesi edinir `TextTransform()`. Daha fazla bilgi için [T4 metin şablonları ile çalışma süresi metni oluşturma](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ @No__t_0 yönergesi, çalışma zamanı (önceden işlenmiş) metin şablonunda gerekli değildir. Bunun yerine, uygulamanız `TextTransform()` çağırarak oluşturulan dizeyi edinir. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
-## <a name="using-the-output-directive"></a>Çıkış yönergesini kullanma
+## <a name="using-the-output-directive"></a>Output yönergesini kullanma
 
 ```
 <#@ output extension=".fileNameExtension" [encoding="encoding"] #>
 ```
 
- Olmalıdır en fazla bir `output` her metin şablonunda yönergesi.
+ Her metin şablonunda birden fazla `output` yönergesi olmamalıdır.
 
-## <a name="extension-attribute"></a>Uzantı özniteliğine
- Oluşturulan metin çıktı dosyasının dosya adı uzantısını belirtir.
+## <a name="extension-attribute"></a>uzantı özniteliği
+ Oluşturulan metin çıkış dosyasının dosya adı uzantısını belirtir.
 
- Varsayılan değer **.cs**
+ Varsayılan değer **. cs** 'dir
 
  Örnekler: `<#@ output extension=".txt" #>`
 
@@ -47,14 +47,14 @@ Visual Studio metin şablonlarında `output` yönergesi, dosya adı uzantısı v
 
  `<#@ output extension=".vb" #>`
 
- Kabul edilebilir değerler: Tüm geçerli dosya adı uzantısı.
+ Kabul edilebilir değerler: herhangi bir geçerli dosya adı uzantısı.
 
-## <a name="encoding-attribute"></a>kodlama özniteliği
- Çıkış dosyası oluşturulurken kullanılacak kodlamayı belirtir. Örneğin:
+## <a name="encoding-attribute"></a>Encoding özniteliği
+ Çıkış dosyası oluşturulduğunda kullanılacak kodlamayı belirtir. Örneğin:
 
  `<#@ output encoding="utf-8"#>`
 
- Metin şablonu dosyası tarafından kullanılan kodlama varsayılan değerdir.
+ Varsayılan değer, metin şablonu dosyası tarafından kullanılan kodlamadır.
 
  Kabul edilebilir değerler: `us-ascii`
 
@@ -68,6 +68,6 @@ Visual Studio metin şablonlarında `output` yönergesi, dosya adı uzantısı v
 
  `utf-32`
 
- `0` (Sistem varsayılanı)
+ `0` (sistem varsayılanı)
 
- Genel olarak, Web adı dizesi veya herhangi biri tarafından döndürülen kodlamalarının kod sayfası numarası kullanabilirsiniz <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName>.
+ Genel olarak, WebName dizesini veya <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName> tarafından döndürülen kodlamalara ait kod sayfası numarasını kullanabilirsiniz.

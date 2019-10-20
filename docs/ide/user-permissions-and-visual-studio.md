@@ -7,17 +7,17 @@ helpviewer_keywords:
 - user permissions
 - administrative privileges
 - permissions
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97ecddfa317eb522a8ce29a53482df5581912dad
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: 6086485ef20330de7971297f52a112d5183ee4a2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891241"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647342"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Kullanıcı izinleri ve Visual Studio
 
@@ -55,9 +55,9 @@ Visual Studio 'Yu yönetici olarak çalıştırmanız gerekiyorsa IDE 'yi açmak
 
 1. **Başlat** menüsünü açın ve Visual Studio 2017 ' a kaydırın.
 
-1. **Visual Studio 2017**' nin sağ tıklama veya bağlam menüsünden **daha fazla** > **Çalıştır yönetici**' yi seçin.
+1. **Visual Studio 2017**' un sağ tıklama veya bağlam menüsünden **yönetici olarak çalıştır**> **daha fazla** ' yı seçin.
 
-   Visual Studio başladığında **(Yönetici)** başlık çubuğundaki ürün adının görünür.
+   Visual Studio başladığında, başlık çubuğunda ürün adından sonra **(yönetici)** görüntülenir.
 
 ::: moniker-end
 
@@ -65,9 +65,9 @@ Visual Studio 'Yu yönetici olarak çalıştırmanız gerekiyorsa IDE 'yi açmak
 
 1. **Başlat** menüsünü açın ve Visual Studio 2019 ' a kaydırın.
 
-1. **Visual Studio 2019**' nin sağ tıklama veya bağlam menüsünden **daha fazla** > **Çalıştır yönetici**' yi seçin.
+1. **Visual Studio 2019**' un sağ tıklama veya bağlam menüsünden **yönetici olarak çalıştır**> **daha fazla** ' yı seçin.
 
-   Visual Studio başladığında **(Yönetici)** başlık çubuğundaki ürün adının görünür.
+   Visual Studio başladığında, başlık çubuğunda ürün adından sonra **(yönetici)** görüntülenir.
 
 ::: moniker-end
 

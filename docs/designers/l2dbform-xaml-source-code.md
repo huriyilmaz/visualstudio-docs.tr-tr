@@ -1,39 +1,39 @@
 ---
-title: L2DBForm.XAML kaynak kodu
+title: L2DBForm.xaml Kaynak Kodu
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: 624e96d4-6d27-4195-8ac2-2f3835f6c57e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b650c65eb81fb087b7783b41065445e1bbea20a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 41796664d5456876edff81662cbab44edf7a82f2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844261"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635293"
 ---
 # <a name="l2dbformxaml-source-code"></a>L2DBForm.xaml kaynak kodu
 
-Bu konu, içerir ve XAML kaynak dosyasını açıklar [LINQ, XML örneği kullanarak WPF verilerini bağlama](../designers/wpf-data-binding-using-linq-to-xml-example.md), *L2DBForm.xaml*.
+Bu konu, *L2DBForm. XAML* [LINQ to XML örneği kullanılarak WPF VERI bağlaması](../designers/wpf-data-binding-using-linq-to-xml-example.md)için xaml kaynak dosyasını içerir ve tanımlar.
 
-## <a name="overall-ui-structure"></a>Genel kullanıcı Arabirimi yapısı
+## <a name="overall-ui-structure"></a>Genel Kullanıcı arabirimi yapısı
 
-Bir WPF projesi için tipik olan bir üst öğesi, bu dosyayı içeren bir <xref:System.Windows.Window> türetilmiş sınıfla ilişkili XML öğesi `L2XDBFrom` içinde `LinqToXmlDataBinding` ad alanı.
+Bir WPF projesi için tipik olduğu gibi, bu dosya, `LinqToXmlDataBinding` ad alanındaki türetilmiş `L2XDBFrom` sınıfla ilişkili bir <xref:System.Windows.Window> XML öğesi olan bir üst öğe içerir.
 
-İstemci alanı içinde yer alan bir <xref:System.Windows.Controls.StackPanel> açık mavi bir arka plan verilir. Bu panelde dört içeren <xref:System.Windows.Controls.DockPanel> UI bölümlere ayırarak <xref:System.Windows.Controls.Separator> çubukları. Bu bölümler amacı açıklanan **açıklamalar** içinde [önceki konu](../designers/walkthrough-linqtoxmldatabinding-example.md).
+İstemci alanı, açık mavi arka plan verilen bir <xref:System.Windows.Controls.StackPanel> içinde bulunur. Bu panel, <xref:System.Windows.Controls.Separator> çubuklarıyla ayrılan dört <xref:System.Windows.Controls.DockPanel> UI bölümü içerir. Bu bölümlerin amacı, [önceki konudaki](../designers/walkthrough-linqtoxmldatabinding-example.md) **açıklamalar** bölümünde açıklanmıştır.
 
-Her bölüm onu tanımlayan bir etiket içerir. İlk iki bölümde, bu etiketi 90 derece kullanımının döndürülür. bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A>. Bölümün geri kalanında bu bölümün amacı için uygun kullanıcı Arabirimi öğeleri içerir: metin bloklarını, metin kutularını, düğmeleri ve benzeri. Bazen bir alt <xref:System.Windows.Controls.StackPanel> bu alt denetimler hizalamak için kullanılır.
+Her bölüm, onu tanımlayan bir etiket içerir. İlk iki bölümde, bu etiket bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A> kullanılarak 90 derece döndürülür. Bölümünün geri kalanı, bu bölümün amacına uygun Kullanıcı arabirimi öğeleri içerir: metin blokları, metin kutuları, düğmeler ve benzeri. Bazen bu alt denetimleri hizalamak için bir alt <xref:System.Windows.Controls.StackPanel> kullanılır.
 
-## <a name="window-resource-section"></a>Pencere kaynak bölümü
+## <a name="window-resource-section"></a>Pencere kaynağı bölümü
 
-Açılış `<Window.Resources>` 9 etiket penceresi kaynak bölümü başlangıcını gösterir. Kapanış etiketinin satırında 35 ile sona erer.
+9\. satırdaki açma `<Window.Resources>` etiketi, pencere kaynağı bölümünün başlangıcını gösterir. 35 satırındaki kapanış etiketiyle biter.
 
-`<ObjectDataProvider>` Satırları 11 25 üzerinden yayılan, etiket bildirir bir <xref:System.Windows.Data.ObjectDataProvider>, adlandırılmış `LoadedBooks`, kullanan bir <xref:System.Xml.Linq.XElement> kaynağı olarak. <xref:System.Xml.Linq.XElement> Gömülü bir XML belgesi ayrıştırma tarafından başlatılır (bir `CDATA` öğesi). Gömülü bir XML belgesi bildirirken bu boşluk korunur dikkat edin ve ayrıca, bu ayrıştırılır. Boşluk, çünkü korunur <xref:System.Windows.Controls.TextBlock> ham XML görüntülemek için kullanılan denetime sahip hiçbir özel XML özellikleri biçimlendirme.
+11 ile 25 arası çizgileri kapsayan `<ObjectDataProvider>` etiketi, kaynak olarak <xref:System.Xml.Linq.XElement> kullanan `LoadedBooks` adlı bir <xref:System.Windows.Data.ObjectDataProvider> bildirir. @No__t_0, gömülü bir XML belgesi (bir `CDATA` öğesi) ayrıştırıldığında başlatılır. Gömülü XML belgesi bildirirken beyaz alanın korunduğu ve aynı zamanda ayrıştırılıp çözümlendiğine dikkat edin. Ham XML 'yi göstermek için kullanılan <xref:System.Windows.Controls.TextBlock> denetimi özel XML biçimlendirme özelliklerine sahip olmadığı için boşluk korunur.
 
-Son olarak, bir <xref:System.Windows.DataTemplate> adlı `BookTemplate` satırlarında 28 34 aracılığıyla tanımlanır. Bu şablon girişleri görüntülemek için kullanılan **kitap listesi** UI bölümü. Veri bağlama ve LINQ için XML dinamik özellikleri aracılığıyla aşağıdaki kitap adı ve kitap Kimliği almak için kullanır:
+Son olarak, `BookTemplate` adlı bir <xref:System.Windows.DataTemplate> 28 ile 34 arası satırlarda tanımlanmıştır. Bu şablon, girdileri **kitap listesi** UI bölümünde göstermek için kullanılır. Aşağıdaki atamalar aracılığıyla kitap KIMLIĞI ve defter adını almak için veri bağlamayı ve dinamik özellikleri LINQ to XML kullanır:
 
 ```xaml
 Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"
@@ -41,27 +41,27 @@ Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"
 
 ## <a name="data-binding-code"></a>Veri bağlama kodu
 
-Ek olarak <xref:System.Windows.DataTemplate> öğesi, veri bağlama, bu dosyadaki diğer yerler, çeşitli kullanılır.
+@No__t_0 öğesine ek olarak, veri bağlama bu dosyadaki birçok farklı yerde kullanılır.
 
-Açılışında `<StackPanel>` satıra 38, etiket <xref:System.Windows.FrameworkElement.DataContext%2A> özelliği bu panelin `LoadedBooks` veri sağlayıcısı.
+38 satırındaki açma `<StackPanel>` etiketinde, bu panelin <xref:System.Windows.FrameworkElement.DataContext%2A> özelliği `LoadedBooks` veri sağlayıcısına ayarlanır.
 
 ```xaml
 DataContext="{Binding Source={StaticResource LoadedBooks}}
 ```
 
-Veri bağlamını ayarlayarak mümkün kılar (satırında, 46) için <xref:System.Windows.Controls.TextBlock> adlı `tbRawXml` bağlayarak bu veri sağlayıcısının ham XML görüntülenecek `Xml` özelliği:
+Veri bağlamının ayarlanması, bu veri sağlayıcısının `Xml` özelliğine bağlayarak ham XML 'yi göstermek için `tbRawXml` adlı <xref:System.Windows.Controls.TextBlock> için mümkün hale getirir (46. satırda).
 
 ```xaml
 Text="{Binding Path=Xml}"
 ```
 
-<xref:System.Windows.Controls.ListBox> İçinde **kitap listesi** UI bölümünde, 58 62 aracılığıyla satırlarındaki ayarlar görünen öğelerinden şablonu `BookTemplate` penceresi kaynak bölümünde tanımlanan:
+**Kitap listesi** Kullanıcı arabirimi bölümündeki <xref:System.Windows.Controls.ListBox>, 58 ile 62 arası satırlarda, görüntüleme öğelerinin şablonunu pencere kaynağı bölümünde tanımlanan `BookTemplate` olarak ayarlar:
 
 ```xaml
 ItemTemplate ="{StaticResource BookTemplate}"
 ```
 
-Ardından, satırlara 62 59 books gerçek değerleri bu liste kutusuna bağlıdır:
+Ardından, 59 ile 62 arasındaki satırlarda, kitapların gerçek değerleri bu liste kutusuna bağlıdır:
 
 ```xaml
 <ListBox.ItemsSource>
@@ -69,26 +69,26 @@ Ardından, satırlara 62 59 books gerçek değerleri bu liste kutusuna bağlıd�
 </ListBox.ItemsSource>
 ```
 
-Üçüncü UI bölüm **Düzenle seçili kitap**, ilk bağlar <xref:System.Windows.FrameworkElement.DataContext%2A> üst <xref:System.Windows.Controls.StackPanel> için şu anda seçili öğesinde **kitap listesi** UI bölümü (satır 82):
+Üçüncü Kullanıcı arabirimi bölümü, **Seçili kitabı Düzenle**, önce üst <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.FrameworkElement.DataContext%2A>, **kitap listesi** Kullanıcı arabirimi bölümünden içindeki seçili olan öğeye bağlar (satır 82):
 
 ```xaml
 DataContext="{Binding ElementName=lbBooks, Path=SelectedItem}"
 ```
 
-Kitap öğelerinin geçerli değerlerini görüntülenir ve, iki metin kutusuna bu bölmedeki güncelleştirildi çift yönlü veri bağlama, ardından kullanır. Kullanılan veri bağlama için veri bağlama dinamik özellikleri benzer `BookTemplate` veri şablonu:
+Daha sonra iki yönlü veri bağlamayı kullanır, böylece kitap öğelerinin geçerli değerleri bu paneldeki iki metin kutusunu olarak görüntülenir ve ' den güncelleştirilir. Dinamik özelliklere veri bağlama, `BookTemplate` veri şablonunda kullanılan veri bağlamasına benzerdir:
 
 ```xaml
 Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
 ```
 
-Son kullanıcı Arabirimi bölümüne **ekleme yeni kitabı**, veri bağlama, XAML kodu kullanmaz. Bunun yerine, veri bağlama, olay kodu dosyasında işleme bulunduğu *L2DBForm.xaml.cs*.
+Son Kullanıcı arabirimi bölümü, **Yeni kitap ekle**, XAML kodunda veri bağlamayı kullanmaz. Bunun yerine, veri bağlama *L2DBForm.xaml.cs*dosyasında olay işleme kodudur.
 
 ## <a name="example"></a>Örnek
 
 ### <a name="description"></a>Açıklama
 
 > [!NOTE]
-> Satır numaralarını izlemek daha kolay olacaktır, böylece C# kaynak kod Düzenleyicisi'nde Visual Studio gibi bir kod düzenleyicisi altına aşağıdaki kodu kopyalayın öneririz.
+> Satır numaralarının izlenmesi daha kolay olması için aşağıdaki kodu, Visual Studio 'daki C# kaynak kodu Düzenleyicisi gibi bir kod düzenleyicisine kopyalamanız önerilir.
 
 ### <a name="code"></a>Kod
 
@@ -240,7 +240,7 @@ Son kullanıcı Arabirimi bölümüne **ekleme yeni kitabı**, veri bağlama, XA
 
 ### <a name="comments"></a>Açıklamalar
 
-C# kaynak kodu için bir WPF UI öğeleriyle ilişkili olay işleyicileri için bkz: [L2DBForm.xaml.cs kaynak kodu](../designers/l2dbform-xaml-cs-source-code.md).
+WPF UI C# öğeleriyle ilişkili olay işleyicilerinin kaynak kodu için bkz. [L2DBForm.xaml.cs kaynak kodu](../designers/l2dbform-xaml-cs-source-code.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Açıklamalı alt yazılar verilere bağlı denetimler için özelleştirme
+title: Veri bağlantılı denetimler için açıklamalı alt yazıları özelleştirme
 ms.date: 11/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,135 +8,135 @@ helpviewer_keywords:
 - captions, data-bound
 - Data Sources Window, label captions
 ms.assetid: 6d4d15f8-4d78-42fd-af64-779ae98d62c8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1745aef29da9fc8efd49789f0112c903128f6f74
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 932d50d44fbfaa810225ef90c2f5361bc26d9b72
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62567591"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648563"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio'nun verilere bağlı denetimler için başlık oluşturma biçimini özelleştirme
 
-Öğeleri sürüklediğinizde [veri kaynakları penceresi](add-new-data-sources.md#data-sources-window) özel bir durum bir tasarımcının üzerine devreye: Başlık etiketindeki sütun adları daha okunabilir bir dizeye iki biçimlendirilen ya da daha fazla sözcük olarak bulunan birleştirilmesinden.
+Öğeleri [veri kaynakları penceresinden](add-new-data-sources.md#data-sources-window) bir tasarımcıya sürüklediğinizde, yürütmeye özel bir göz önünde bulundurun: başlık etiketlerindeki sütun adları, iki veya daha fazla sözcük birlikte art arda kaydırıldığında daha okunabilir bir dizeye yeniden biçimlendirilir.
 
 ::: moniker range="vs-2017"
 
-Bu etiketleri oluşturulduğu ayarlayarak şeklini özelleştirebilir **SmartCaptionExpression**, **SmartCaptionReplacement**, ve **SmartCaptionSuffix** değerler **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data tasarımcıları** kayıt defteri anahtarı.
+HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0 içinde **SmartCaptionExpression**, **smartcaptiondeğişim**ve **SmartCaptionSuffix** değerlerini ayarlayarak bu etiketlerin oluşturulma biçimini özelleştirebilirsiniz.  **\Data tasarımcıları** kayıt defteri anahtarı.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Bu etiketleri oluşturulduğu ayarlayarak şeklini özelleştirebilir **SmartCaptionExpression**, **SmartCaptionReplacement**, ve **SmartCaptionSuffix** değerler **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Data tasarımcıları** kayıt defteri anahtarı.
+HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0 içinde **SmartCaptionExpression**, **smartcaptiondeğişim**ve **SmartCaptionSuffix** değerlerini ayarlayarak bu etiketlerin oluşturulma biçimini özelleştirebilirsiniz.  **\Data tasarımcıları** kayıt defteri anahtarı.
 
 ::: moniker-end
 
 > [!NOTE]
-> Oluşturduğunuz kadar bu kayıt defteri anahtarı mevcut değil.
+> Bu kayıt defteri anahtarı siz oluşturana kadar yok.
 
-Akıllı Açıklamalı Altyazı değerini girilen normal ifade tarafından denetlenir **SmartCaptionExpression** değeri. Ekleme **veri tasarımcıları** kayıt defteri anahtarı başlık etiketindeki denetleyen varsayılan normal ifade geçersiz kılar. Normal ifadeler hakkında daha fazla bilgi için bkz. [Visual Studio'da normal ifadeler kullanarak](../ide/using-regular-expressions-in-visual-studio.md).
+Akıllı resim yazısı, **SmartCaptionExpression** değerinin değerine girilen normal ifade tarafından denetlenir. **Veri tasarımcıları** kayıt defteri anahtarı eklendiğinde, Başlık etiketlerini denetleyen varsayılan normal ifade geçersiz kılınır. Normal ifadeler hakkında daha fazla bilgi için bkz. [Visual Studio 'da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
-Aşağıdaki tabloda başlık etiketindeki denetleyen kayıt defteri değerleri açıklanmaktadır.
+Aşağıdaki tabloda, Başlık etiketlerini denetleyen kayıt defteri değerleri açıklanmaktadır.
 
 |Kayıt defteri öğesi|Açıklama|
 |-------------------|-----------------|
-|**SmartCaptionExpression**|Normal ifade, deseni eşleştirmesini için kullanın.|
-|**SmartCaptionReplacement**|İçinde eşleşen herhangi bir gruba görüntülenecek biçimi **SmartCaptionExpression**.|
-|**SmartCaptionSuffix**|Açıklamalı alt yazı sonuna eklenecek isteğe bağlı dize.|
+|**Smartcaptionifadesi**|Desenlerinizi eşleştirmek için kullandığınız normal ifade.|
+|**Smartcaptiondeğiştirme**|**SmartCaptionExpression**ile eşleşen grupları görüntüleme biçimi.|
+|**SmartCaptionSuffix**|Açıklamalı alt yazısının sonuna eklenecek isteğe bağlı bir dize.|
 
-Bu kayıt defteri değerleri için iç varsayılan ayarları aşağıdaki tabloda listelenmektedir.
+Aşağıdaki tabloda, bu kayıt defteri değerleri için iç varsayılan ayarlar listelenmektedir.
 
 |Kayıt defteri öğesi|Varsayılan değer|Açıklama|
 |-------------------|-------------------|-----------------|
-|**SmartCaptionExpression**|**(\\\p{Ll})(\\\p{Lu})&#124;_+**|Ardından bir büyük harf veya alt çizgi, küçük harfli bir karakterle eşleşir.|
-|**SmartCaptionReplacement**|**$1 $2**|**$1** ifadenin ilk parantez içinde eşleşen herhangi bir karakteri temsil eder ve **$2** ikinci parantez içinde eşleşen herhangi bir karakteri temsil eder. Değişiklik, ilk eşleşme, boşluk ve ikinci Eşleştir ' dir.|
-|**SmartCaptionSuffix**|**:**|Döndürülen dize için eklenmiş bir karakteri temsil eder. Örneğin, açıklamalı alt yazı ise `Company Name`, sonek kolaylaştırır `Company Name:`|
+|**Smartcaptionifadesi**|**(\\ \p{Ll}) (\\ \p{Lu}) &#124;_+**|Küçük bir karakterle ve ardından büyük bir karakter veya alt çizgi ile eşleşir.|
+|**Smartcaptiondeğiştirme**|**$1 $2**|**$1** , ifadenin ilk parantezleri ile eşleşen tüm karakterleri temsil eder ve **$2** ikinci parantez içinde eşleşen tüm karakterleri temsil eder. Değiştirme ilk eşleşme, bir boşluk ve ikinci eşleşmedir.|
+|**SmartCaptionSuffix**|**:**|Döndürülen dizeye eklenen bir karakteri temsil eder. Örneğin, başlık `Company Name` ise, sonek bunu yapar `Company Name:`|
 
 > [!CAUTION]
-> Kayıt Defteri Düzenleyicisi'nde her şeyi yaparken çok dikkatli olun. Düzenlemeden önce kayıt defterini yedekleyin. Kayıt Defteri Düzenleyicisi'ni yanlış kullanırsanız, işletim sistemini yeniden yüklemenizi gerektirebilecek önemli sorunlara neden olabilir. Microsoft Kayıt Defteri Düzenleyicisi'ni kullanarak neden sorunları çözülebilir garanti etmez. Kayıt Defteri Düzenleyicisi'ni kullanım riski size aittir.
+> Kayıt defteri düzenleyicisinde herhangi bir şey yaparken çok dikkatli olun. Düzenlemeden önce kayıt defterini yedekleyin. Kayıt Defteri Düzenleyicisi 'Ni yanlış kullanırsanız, işletim sisteminizi yeniden yüklemenizi gerektirebilecek önemli sorunlara neden olabilirsiniz. Microsoft, kayıt defteri düzenleyicisini yanlış kullanarak neden olan sorunların çözümlenemeyeceğini garanti etmez. Kayıt Defteri Düzenleyicisi'ni kullanım riski size aittir.
 >
-> Yedekleme hakkında daha fazla bilgi için bkz: düzenleme ve kayıt defterini geri [İleri düzey kullanıcılar için Windows kayıt defteri bilgilerini](https://support.microsoft.com/help/256986/windows-registry-information-for-advanced-users).
+> Kayıt defterini yedekleme, düzenlemesi ve geri yükleme hakkında bilgi için bkz. [Gelişmiş kullanıcılar Için Windows kayıt defteri bilgileri](https://support.microsoft.com/help/256986/windows-registry-information-for-advanced-users).
 
-## <a name="modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>Veri kaynakları penceresi akıllı açıklamalı alt yazı davranışını değiştirmek
+## <a name="modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>Veri kaynakları penceresinin akıllı açıklamalı alt yazı davranışını değiştirme
 
-1. Bir komut penceresi açın **Başlat** ardından **çalıştırma**.
+1. **Başlat** ' a ve ardından **Çalıştır**' a tıklayarak bir komut penceresi açın.
 
-2. Tür `regedit` içinde **çalıştırma** iletişim kutusu seçeneğine tıklayıp **Tamam**.
+2. **Çalıştır** iletişim kutusuna `regedit` yazın ve **Tamam**' a tıklayın.
 
-3. Genişletin **HKEY_CURRENT_USER** > **yazılım** > **Microsoft** > **VisualStudio**düğümü.
+3. **HKEY_CURRENT_USER**  > **Software**  > **Microsoft**  > **VisualStudio** düğümünü genişletin.
 
 ::: moniker range="vs-2017"
 
-4. Sağ **15.0** düğümünü ve yeni bir **anahtarı** adlı `Data Designers`.
+4. **15,0** düğümüne sağ tıklayın ve `Data Designers` adlı yeni bir **anahtar** oluşturun.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. Sağ **16,0** düğümünü ve yeni bir **anahtarı** adlı `Data Designers`.
+4. **16,0** düğümüne sağ tıklayın ve `Data Designers` adlı yeni bir **anahtar** oluşturun.
 
 ::: moniker-end
 
-5. Sağ **veri tasarımcıları** düğümü ve üç yeni dize değerlerini oluşturun:
+5. **Veri tasarımcıları** düğümüne sağ tıklayın ve üç yeni dize değeri oluşturun:
 
     - `SmartCaptionExpression`
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-6. Sağ **SmartCaptionExpression** değeri ve seçin **Değiştir**.
+6. **SmartCaptionExpression** değerine sağ tıklayın ve **Değiştir**' i seçin.
 
-7. İstediğiniz normal ifade girin **veri kaynakları** penceresini kullanın.
+7. **Veri kaynakları** penceresinin kullanmasını istediğiniz normal ifadeyi girin.
 
-8. Sağ **SmartCaptionReplacement** değeri ve seçin **Değiştir**.
+8. **Smartcaptiondeğiştirme** değerine sağ tıklayın ve **Değiştir**' i seçin.
 
-9. Değiştirme girin, normal ifade ile eşleşen desenlerini görüntülemek istediğiniz şekilde biçimlendirilmiş bir dize.
+9. Normal ifadenizde eşleşen desenleri göstermek istediğiniz şekilde biçimlendirilen değiştirme dizesini girin.
 
-10. Sağ **SmartCaptionSuffix** değeri ve seçin **Değiştir**.
+10. **SmartCaptionSuffix** değerine sağ tıklayın ve **Değiştir**' i seçin.
 
-11. Açıklamalı alt yazı sonunda görünmesini istediğiniz herhangi bir karakter girin.
+11. Resim yazısının sonunda görünmesini istediğiniz karakterleri girin.
 
-    Sonraki öğeleri sürükleyin **veri kaynakları** penceresinde başlık etiketindeki sağlanan yeni kayıt defteri değerleri kullanılarak oluşturulur.
+    Öğeleri **veri kaynakları** penceresinden bir dahaki sefer sürüklediğinizde, başlık etiketleri, belirtilen yeni kayıt defteri değerleri kullanılarak oluşturulur.
 
-## <a name="turn-off-the-smart-captioning-feature"></a>Akıllı açıklamalı alt yazı özelliği devre dışı bırakmak
+## <a name="turn-off-the-smart-captioning-feature"></a>Akıllı resim yazısı özelliğini kapatma
 
-1. Bir komut penceresi açın **Başlat** ardından **çalıştırma**.
+1. **Başlat** ' a ve ardından **Çalıştır**' a tıklayarak bir komut penceresi açın.
 
-2. Tür `regedit` içinde **çalıştırma** iletişim kutusu seçeneğine tıklayıp **Tamam**.
+2. **Çalıştır** iletişim kutusuna `regedit` yazın ve **Tamam**' a tıklayın.
 
-3. Genişletin **HKEY_CURRENT_USER** > **yazılım** > **Microsoft** > **VisualStudio**düğümü.
+3. **HKEY_CURRENT_USER**  > **Software**  > **Microsoft**  > **VisualStudio** düğümünü genişletin.
 
 ::: moniker range="vs-2017"
 
-4. Sağ **15.0** düğümünü ve yeni bir **anahtarı** adlı `Data Designers`.
+4. **15,0** düğümüne sağ tıklayın ve `Data Designers` adlı yeni bir **anahtar** oluşturun.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. Sağ **16,0** düğümünü ve yeni bir **anahtarı** adlı `Data Designers`.
+4. **16,0** düğümüne sağ tıklayın ve `Data Designers` adlı yeni bir **anahtar** oluşturun.
 
 ::: moniker-end
 
-5. Sağ **veri tasarımcıları** düğümü ve üç yeni dize değerlerini oluşturun:
+5. **Veri tasarımcıları** düğümüne sağ tıklayın ve üç yeni dize değeri oluşturun:
 
     - `SmartCaptionExpression`
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-6. Sağ **SmartCaptionExpression** öğesi ekleyin ve seçin **Değiştir**.
+6. **SmartCaptionExpression** öğesine sağ tıklayın ve **Değiştir**' i seçin.
 
-7. Girin `(.*)` değeri. Bu, tüm dizeyi eşleştirir.
+7. Değer için `(.*)` girin. Bu, tüm dizeyle eşleşir.
 
-8. Sağ **SmartCaptionReplacement** öğesi ekleyin ve seçin **Değiştir**.
+8. **Smartcaptiondeðiþtirme** öğesine sağ tıklayın ve **Değiştir**' i seçin.
 
-9. Girin `$1` değeri. Bu dizenin değişmeden kalır, böylece tüm dize olan eşleşen değerle değiştirir.
+9. Değer için `$1` girin. Bu, dizeyi, değiştirilmeden kalacak şekilde tüm dize olan eşleşen değerle değiştirir.
 
-    Sonraki öğeleri sürükleyin **veri kaynakları** penceresinde başlık etiketindeki değiştirilmemiş açıklamalı alt yazılar ile oluşturulur.
+    Öğeleri **veri kaynakları** penceresinden bir dahaki sefer sürüklediğinizde, resim yazısı etiketleri değiştirilmemiş açıklamalı alt yazılar ile oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

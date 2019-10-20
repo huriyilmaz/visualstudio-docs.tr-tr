@@ -6,53 +6,42 @@ ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 344940bd-c41e-4ed9-8458-3e3aa8e6bb37
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4ba095b9af87a36a1957ec94496f4445f0ed2bb7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 25f90577cecbd3bd681d0c7f3e18355fede9faa5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697032"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670993"
 ---
 # <a name="debug-xslt"></a>XSLT hatası ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XSLT hata ayıklamak için Visual Studio Hata Ayıklayıcısı'nı kullanabilirsiniz. XSLT yürütme durumlarını görüntüleme ayarı kesme noktaları, hata ayıklayıcı destekler ve benzeri. XSLT hata ayıklama, Visual Studio Professional Edition'da kullanılabilir.  
-  
+XSLT hatalarını ayıklamak için Visual Studio hata ayıklayıcısını kullanabilirsiniz. Hata ayıklayıcı, kesme noktaları ayarlamayı, XSLT yürütme durumlarını görüntülemeyi ve daha fazlasını destekler. XSLT hata ayıklaması Visual Studio Professional sürümünde kullanılabilir.
+
 ## <a name="in-this-section"></a>Bu Bölümde
-  
- [Nasıl yapılır: XSLT Hatalarını Ayıklamaya Başlama](../xml-tools/how-to-start-debugging-xslt.md)  
- XSLT hata ayıklayıcıyı başlatmak açıklar.  
-  
- [Nasıl yapılır: XSLT ile Kesme Noktaları Kullanma](../xml-tools/how-to-use-breakpoints-with-xslt.md)  
- Bir stil sayfası içinde kesme noktalarını kullanmayı açıklar.  
-  
- [Nasıl yapılır: XPath İfadesini Değerlendirme](../xml-tools/how-to-evaluate-an-xpath-expression.md)  
- Bir XPath ifadesi kullanarak değerlendirilecek açıklar **QuickWatch** iletişim kutusu.  
-  
- [İzlenecek yol: XSLT Stil Sayfasında Hata Ayıklama](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)  
- Bir XSLT stil sayfasında hata ayıklama işlemi gösterilmektedir.  
-  
- [XSLT Varsayılan Şablonları](../xml-tools/xslt-default-templates.md)  
- XSLT hata ayıklayıcı varsayılan şablonları nasıl işlediğini açıklar.  
-  
- [Hata Ayıklayıcı Kullanıcı Arabirimi (XSLT)](../xml-tools/debugger-user-interface-xslt.md)  
- XSLT hata ayıklayıcı pencereleri ve iletişim kutuları açıklar.  
-  
- [XSLT Profil Oluşturucusu](../xml-tools/xslt-profiler.md)  
- XSLT Profiler erişim açıklar.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [XSLT Stil Sayfalarını Düzenleme](../xml-tools/editing-xslt-style-sheets.md)  
- Stil sayfaları düzenlemek için XML Düzenleyicisi'ni kullanarak açıklanır.  
-  
- [XML Verileriyle Çalışırken Dikkat Edilecek Güvenlik Konuları](../xml-tools/security-considerations-when-working-with-xml-data.md)  
- XML Düzenleyicisi'ni veya XSLT hata ayıklayıcı çalışırken hakkında bilmeniz gereken güvenlik sorunları açıklar.  
-  
- [Visual Studio’da hata ayıklama](../debugger/debugging-in-visual-studio.md)  
- Visual Studio hata ayıklayıcısını tanıtır.  
-  
- [XSLT başvurusu](https://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)  
- XSLT öğeleri ve işlevleri için başvuru materyalleri sağlar.
+
+ [Nasıl yapılır: XSLT hata ayıklamayı başlatma](../xml-tools/how-to-start-debugging-xslt.md) XSLT hata ayıklayıcının nasıl başlatılacağını açıklar.
+
+ [Nasıl yapılır: XSLT Ile kesme noktaları kullanma](../xml-tools/how-to-use-breakpoints-with-xslt.md) Bir stil sayfası içinde kesme noktalarının nasıl kullanılacağını açıklar.
+
+ [Nasıl yapılır: bir XPath Ifadesini değerlendirme](../xml-tools/how-to-evaluate-an-xpath-expression.md) **Hızlı izleme** iletişim kutusu kullanılarak bir XPath ifadesinin nasıl değerlendirileceğini açıklar.
+
+ [Izlenecek yol: XSLT stil sayfasında hata ayıklama](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) XSLT stil sayfasında nasıl hata ayıklama yapılacağını gösterir.
+
+ [XSLT varsayılan şablonları](../xml-tools/xslt-default-templates.md) XSLT hata ayıklayıcının varsayılan şablonları nasıl işlediğini açıklar.
+
+ [Hata ayıklayıcı kullanıcı arabirimi (XSLT)](../xml-tools/debugger-user-interface-xslt.md) XSLT hata ayıklayıcısı pencerelerini ve iletişim kutularını açıklar.
+
+ [XSLT Profiler](../xml-tools/xslt-profiler.md) XSLT Profiler 'a nasıl erişebileceğinizi açıklar.
+
+## <a name="related-sections"></a>İlgili Bölümler
+ [XSLT stil sayfalarını düzenleniyor](../xml-tools/editing-xslt-style-sheets.md) Stil sayfalarını düzenlemek için XML düzenleyicisini kullanmayı açıklar.
+
+ [XML verileriyle çalışırken güvenlik konuları](../xml-tools/security-considerations-when-working-with-xml-data.md) XML düzenleyicisini veya XSLT hata ayıklayıcısını çalışırken bilmeniz gereken güvenlik sorunlarını açıklar.
+
+ [Visual Studio 'Da hata ayıklama](../debugger/debugging-in-visual-studio.md) Visual Studio hata ayıklayıcısını tanıtır.
+
+ [XSLT başvurusu](https://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf) XSLT öğeleri ve işlevleri için başvuru malzemesi sağlar.

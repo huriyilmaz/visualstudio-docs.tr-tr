@@ -6,28 +6,28 @@ ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: c69fe3c7-f797-4e90-b21c-f2cc4dddf152
 caps.latest.revision: 13
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 26eb001de3a8fed7c6bb1d9d1a547aa618e745e8
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 4c286f25159f3ee1934a27d2242e97482f7ec424
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871609"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672176"
 ---
-# <a name="sample-excel-extension-actionfilter-class"></a>Örnek Excel uzantısı: ActionFilter Sınıfı
+# <a name="sample-excel-extension-actionfilter-class"></a>Örnek Excel Uzantısı: ActionFilter Sınıfı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu iç sınıf [uitestactionfilter](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110)) sınıfını genişletir ve bir [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] öğe üzerindeki test eylemleri için bir filtre temsil eder.
+Bu iç sınıf [Uitestactionfilter](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110)) sınıfını genişletir ve bir [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] öğesinde test eylemleri için bir filtre temsil eder.
 
 ## <a name="simple-properties"></a>Basit özellikler
- Bu salt okunurdur özellikler, geliştiricinin bu test eylemi filtresinin kodlanmış UI test çerçevesi tarafından nasıl çalıştırılacağını belirtmesini sağlar. Örneğin, `UITestActionFilter.Name` özelliği eylem filtresinin adını sağlar. Diğer özellikler, bu `UITestActionFilter.Category` test eylemi filtresi tarafından filtrelenen test `UITestActionFilter.FilterType`eylemlerinin `UITestActionFilter.Group` adını, eylem filtresinin, bu adı alır. Diğer kişiler de test `UITestActionFilter.ApplyTimeout` `UITestActionFilter.Enabled`eyleminin olup olmadığını gösterir.
+ Bu salt okunurdur özellikler, geliştiricinin bu test eylemi filtresinin kodlanmış UI test çerçevesi tarafından nasıl çalıştırılacağını belirtmesini sağlar. Örneğin, `UITestActionFilter.Name` özelliği eylem filtresinin adını sağlar. Diğer özellikler, eylem filtresinin `UITestActionFilter.Category`, `UITestActionFilter.FilterType`, bu test eylemi filtresi tarafından filtrelenen test eylemlerinin `UITestActionFilter.Group` adını alır. Diğerleri, `UITestActionFilter.ApplyTimeout` ve ayrıca test eyleminin `UITestActionFilter.Enabled` olup olmadığını gösterir.
 
 ## <a name="processrule-method"></a>ProcessRule yöntemi
- Bu yöntem, kodlanmış UI test çerçevesi tarafından çağrılır ve filtreyi belirtilen `IUITestActionStack`şekilde yürütür. Bu özel geçersiz kılma, yığındaki bir sonraki eylem, hücreye tuş vuruşları gönderdiğinde bir hücrede fare seçme eylemini kaldırır. Ardından döndürür `false`.
+ Bu yöntem, kodlanmış UI test çerçevesi tarafından çağrılır ve bu filtre, belirtilen `IUITestActionStack` karşı yürütülür. Bu özel geçersiz kılma, yığındaki bir sonraki eylem, hücreye tuş vuruşları gönderdiğinde bir hücrede fare seçme eylemini kaldırır. Ardından `false` döndürür.
 
 ## <a name="private-methods"></a>Özel Yöntemler
- Yöntemi `IsLeftClick` , belirtilen eylemin farenin sol tıklamasını temsil ettiğini belirler. Yöntemi `AreActionsOnSameExcelCell` , Excel 'deki aynı hücrede iki adet belirtilen eylemin yürütülüp yürütülmeyeceğini belirler.
+ @No__t_0 yöntemi, belirtilen eylemin farenin sol tıklamasını temsil ettiğini belirler. @No__t_0 yöntemi, Excel 'deki aynı hücrede iki adet belirtilen eylemin yürütülüp yürütülmeyeceğini belirler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

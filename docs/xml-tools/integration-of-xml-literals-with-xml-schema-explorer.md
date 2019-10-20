@@ -1,33 +1,33 @@
 ---
-title: XML değişmez değerlerini XML Şeması Gezgini ile tümleştirme
+title: XML Değişmez Değerlerinin XML Şeması Gezgini ile Tümleştirilmesi
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 57a29998-c6e8-48ac-bdb0-5788e73f9164
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06f2942c2976179a44dc1b613d6d7c96d509a89a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c81f5db0477713ff99e9b7894bcbe86b3cf33018
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002006"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601773"
 ---
-# <a name="integration-of-xml-literals-with-xml-schema-explorer"></a>XML değişmez değerlerini XML Şeması Gezgini ile tümleştirme
+# <a name="integration-of-xml-literals-with-xml-schema-explorer"></a>XML şema Gezgini ile XML sabit değerlerini tümleştirme
 
-Visual Basic, Visual Basic kodunuzda doğrudan XML parçalarının birleştirebilirsiniz anlamına gelir, XML değişmez değerleri, destekler. Daha fazla bilgi için [XML değişmez değerlerine genel bakış](http://go.microsoft.com/fwlink/?LinkId=140325).
+Visual Basic XML sabit değerlerini destekler. Bu, XML parçalarını doğrudan Visual Basic kodunuza birleştirebilmeniz anlamına gelir. Daha fazla bilgi için bkz. [XML değişmez değerleri genel bakış](http://go.microsoft.com/fwlink/?LinkId=140325).
 
 ## <a name="how-to"></a>Nasıl Yapılır?
 
-XSD dosyası, Visual Basic projesinde bir XML değişmez değeri içeriyorsa, XML şema kümesinde görüntüleyebileceğiniz **XML Şeması Gezgini**. Bir XML değişmez değeri ile ilişkili şema kümesini görüntülemek için bir XML değişmez değeri ya da bir XML ad alanı alma bir XML düğümünü sağ tıklatın ve seçin **şema Gezgini'nde Göster**.
+Visual Basic projenizdeki bir XSD dosyası bir XML sabit değeri içeriyorsa, XML şema **Gezgini**'nde XML şeması kümesini görüntüleyebilirsiniz. Bir XML sabit değeri ile ilişkili Şema kümesini görüntülemek için, XML sabit değerinde bir xml düğümüne veya XML ad alanı içeri aktarma ' ya sağ tıklayın ve **şema Gezgininde göster**' i seçin.
 
-![Visual Basic XML sabit değerleri; XML şema Gezgini](../xml-tools/media/vbxmlliteralswithxmlschemaexplorer1.gif)
+![Visual Basic XML değişmez değerleri; XML şema Gezgini](../xml-tools/media/vbxmlliteralswithxmlschemaexplorer1.gif)
 
-Bu açılır **XML Şeması Gezgini** Visual Basic dosyanız ile yan yana.
+Bu, **XML şema gezginini** Visual Basic dosyanız ile yan yana açar.
 
-![Visual Basic XML sabit değerleri; XML şema Gezgini](../xml-tools/media/vbxmlliteralswithxmlschemaexplorer2.gif)
+![Visual Basic XML değişmez değerleri; XML şema Gezgini](../xml-tools/media/vbxmlliteralswithxmlschemaexplorer2.gif)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

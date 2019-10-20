@@ -17,65 +17,62 @@ helpviewer_keywords:
 - toolbar [Help Viewer 2.0]
 ms.assetid: 74e41666-2ce8-4ac0-a0e5-3723d1e322c2
 caps.latest.revision: 27
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3a1e9a3abd6b16ae0365279a6eb9cb067bfeb225
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 14bae318e052d0c1eb0e23638c0ad78b70e62f7d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430860"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670418"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Yardım Görüntüleyicisi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yükleme ve Microsoft Yardım Görüntüleyicisi'ni kullanarak yerel bilgisayarınızda çeşitli ürün ve teknolojiler için içerik görüntüleyin.  
-  
+Microsoft Yardım Görüntüleyicisi kullanarak, yerel bilgisayarınızdaki çeşitli ürün ve teknolojilerin içeriğini yükleyebilir ve görüntüleyebilirsiniz.
+
 > [!WARNING]
-> Visual Studio yüklediğinizde, Yardım Görüntüleyici alın. Yardım Görüntüleyicisi'nde yerine MSDN indirme sitesinde Yardım konuları okumaya başlamak için şu adrese gidin **yardımcı** Visual Studio'da seçim menüsünde **Yardım tercihini Ayarla**ve ardından **Yardımı'nda başlatın Görüntüleyici**. Visual Studio'nun belirli bir sürümü için Çevrimdışı Yardım konularını sürümü yalnızca son sürümünden sonra kullanılabilir.  
-  
- Bunu, aşağıdakileri yapabilirsiniz:  
-  
-- Bulun ve hangi kitaplar olarak da adlandırılır içerik kümelerini indirin.  
-  
-- Gözat ve başlığa göre konuları bulmak için İçindekiler tablosuna arayın.  
-  
-- Dizin içindeki konuları arayın.  
-  
-- Tam metin aramasını kullanarak bilgileri bulun.  
-  
-- Görünüm, yer işareti ve yazdırma konuları.  
-  
-## <a name="navigating-the-help-viewer"></a>Yardım görüntüleyicisinde gezinme  
- Gezinme sekmeleri, yüklü içeriği görüntüleyebilir konu sekmesi veya sekmelerinde kullanarak yüklü içerikte bilgileri bulmak ve kullanarak içeriği yönetebilirsiniz **içeriği Yönet** sekmesi. Ayrıca, araç çubuğundaki düğmeleri kullanarak ek görevleri gerçekleştirmek ve pencerenin sağ alt köşesinde ek bilgiler bulabilirsiniz.  
-  
-|||  
-|-|-|  
-|Gezinti|Kullanarak **içeriği** sekmesi, yüklü içeriği hiyerarşi olarak görüntülemek ve görünen başlıklar için filtre uygulamak üzere ölçütler belirleyebilirsiniz.<br /><br /> Kullanarak **arama** sekmesi, kod ve konu başlıkları da dahil olmak üzere herhangi bir yeri içeriğe terimlerini arayabilirsiniz.<br /><br /> Kullanarak **dizin** sekmesi, dizin arama, girdiler için filtre uygulamak üzere ölçütler belirleyebilir ve bu dizin girdileri içeren veya belirttiğiniz metni içeren başlangıç gerektirir.<br /><br /> Kullanarak **Sık Kullanılanlar** sekmesi, sık kullandığınız konulara bağlantılar kaydedebilir ve en son görüntülediğiniz konuların listesini görüntüleyebilirsiniz.|  
-|Konu görüntüleme|Her konu sekmede görünür ve aynı anda birden çok konu açabilirsiniz.|  
-|İçeriği yönetme|Yükleme, güncelleştirme, taşıma ve içerik kullanarak silme **içeriği Yönet** sekmesi. Sekmenin üstünde, kullandığınız **yükleme kaynağı** denetimi kitapları bir ağ konumundan veya diskten ya da URI yüklenip yüklenmeyeceğini belirtin. **Yerel depo yolu** kutusunda burada kitapları yerel bilgisayarda yüklü ve seçerek bunları farklı bir konuma taşıyabilirsiniz gösterir **taşıma** düğmesi.<br /><br /> İçerik listesi hangi kitapları yükleyebilir veya zaten yüklediyseniz, bir güncelleştirme kullanıma hazır ve her bir kitabın ne kadar büyük olduğunu gösterir. Yüklediğinizde veya bir veya daha fazla kitap uygun olanını kaldırmak **Ekle** veya **Kaldır** bağlantılar ve ardından **güncelleştirme** düğmesini **bekleyen değişiklikleri** bölmesi. Yüklemiş olduğunuz herhangi bir kitap için güncelleştirme mevcutsa seçerek içeriği yenileyebilirsiniz **şimdi indirmek için buraya tıklayın** pencerenin alt kısmındaki bağlantı. Ayrıca, ek kitaplar yüklediğinizde güncelleştirmeler mevcutsa tüm yüklü kitaplar yenilenecektir. **Not:**  İşlevselliğini **içeriği Yönet** sekmesi Yardım Görüntüleyici Yöneticisi bu özellikleri devre dışı bırakmışsa veya internet erişimi varsa farklı olabilir.|  
-  
- Yardım Görüntüleyici penceresinde araç çubuğu şu düğmeleri içerir:  
-  
-- **İçindekilerde konuyu Göster** düğmede konusundaki konumunu **içeriği** sekmesi.  
-  
-- **Sık Kullanılanlara Ekle** düğmesi etkin konuyu ekler **Sık Kullanılanlar** sekmesi.  
-  
-- **Konuda Bul** düğmesi etkin konudaki arama metnini vurgular.  
-  
-- **Yazdırma** düğme yazdırır veya etkin konunun önizlemesini gösterir.  
-  
-- **Görüntüleyici seçenekleri** düğmesi ne kadar büyük metin görünür, kaç arama sonuçları döndürmek için geçmiş ve çevrimiçi güncelleştirmelerin denetlenip denetlenmeyeceğini göstermek için ne kadar konunun gibi ayarlarını görüntüler.  
-  
-- **İçeriği Yönet** düğmesi **içeriği Yönet** sekmesini etkinleştirir.  
-  
-- Küçük üçgen, konu sekmelerini de içeren sekmelerin bir listesini açar ve **içeriği Yönet** sekmesi. Bu sekmeleri birini seçerek etkin hale getirebilirsiniz.  
-  
-  Yardım Görüntüleyici penceresinin alt bölümünde bekleyen yüklemeler, ihtiyaç duydukları disk alanı miktarı ve kullanılabilir disk alanı miktarını toplam boyutu hakkındaki bilgileri içerir. Bu alan ayrıca oluşmuş olabilecek hataları ve güncelleştirmeler varsa, yüklü içeriği yenilemeyi seçebileceğiniz bağlantıyı hakkında bilgi içerir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yardım Görüntüleyicisi Yönetici Kılavuzu](../ide/help-viewer-administrator-guide.md)   
- [Yerel içeriği yükleme ve yönetme](../ide/install-and-manage-local-content.md)   
- [Bilgi bulun](../ide/locate-information.md)   
- [Yardım Görüntüleyici'de Sorun Giderme](../ide/troubleshooting-the-help-viewer.md)
+> Visual Studio 'Yu yüklediğinizde, Yardım Görüntüleyiciyi alırsınız. MSDN indirme sitesinde değil, yardım görüntüleyicisinde yardım konularını okumaya başlamak için, Visual Studio 'daki **Yardım** menüsüne gidin, **Yardım tercihini ayarla**' yı seçin ve ardından **Yardım Görüntüleyicisi 'nde Başlat**' ı seçin. Belirli bir Visual Studio sürümü için satır dışı yardım konuları yalnızca söz konusu sürümün son sürümünden sonra kullanılabilir.
+
+ Şunları yapabilirsiniz:
+
+- Kitap olarak da adlandırılan içerik kümelerini bulun ve indirin.
+
+- Başlığa göre konuları bulmak için içerik tablosuna gözatıp arama yapın.
+
+- Dizinde bulunan konuları arama.
+
+- Tam metin aramasını kullanarak bilgi bulun.
+
+- Konuları görüntüleyin, yer işaretini ve yazdırın.
+
+## <a name="navigating-the-help-viewer"></a>Yardım görüntüleyicisinde gezinme
+ Gezinti sekmelerini kullanarak yüklü içerikte bilgi bulabilir, konu sekmesinde veya sekmelerde yüklü içeriği görüntüleyebilir ve **Içeriği Yönet** sekmesini kullanarak içeriği yönetebilirsiniz. Ayrıca, araç çubuğundaki düğmeleri kullanarak ek görevler gerçekleştirebilir ve pencerenin sağ alt köşesinde ek bilgiler bulabilirsiniz.
+
+|||
+|-|-|
+|Gezinti|**İçindekiler** sekmesini kullanarak, yüklü içeriği hiyerarşi olarak görüntüleyebilir ve görüntülenen başlıkları filtrelemek için ölçüt belirtebilirsiniz.<br /><br /> **Arama** sekmesini kullanarak, kod ve konu başlıkları dahil olmak üzere, içeriğin herhangi bir yerindeki terimleri arayabilirsiniz.<br /><br /> **Dizin sekmesini kullanarak** dizinde arama yapabilir, girişleri filtrelemek için ölçütler belirtebilir ve dizin girişlerinin belirttiğiniz metni içermesini veya kullanmaya başlamasını isteyebilirsiniz.<br /><br /> Sık **Kullanılanlar** sekmesini kullanarak sık kullandığınız konuların bağlantılarını kaydedebilir ve son zamanlarda görüntülediğiniz konuların bir listesini görüntüleyebilirsiniz.|
+|Konu görüntüleme|Her konu bir sekmede görünür ve aynı anda birden fazla konuyu açabilirsiniz.|
+|İçeriği yönetme|İçeriği **Yönet** sekmesini kullanarak içeriği yükleyebilir, güncelleştirebilir, taşıyabilir ve silebilirsiniz. Sekmenin en üstünde, bir ağ konumundan veya bir diskten ya da URI 'den kitap yükleme yapılıp yapılmayacağını belirtmek için **yükleme kaynak** denetimini kullanabilirsiniz. **Yerel depo yolu** kutusu, kitapların yerel bilgisayarda yüklü olduğu yeri gösterir ve **Taşı** düğmesini seçerek bunları farklı bir konuma taşıyabilirsiniz.<br /><br /> İçerik listesi, hangi kitaplar yükleyebileceğiniz veya zaten yüklü olduğunu, bir güncelleştirmenin kullanılabilir olup olmadığını ve her kitabın ne kadar büyük olduğunu gösterir. İlgili **ekleme** veya **kaldırma** bağlantılarını seçerek ve ardından **bekleyen değişiklikler** bölmesinin altındaki **Güncelleştir** düğmesini seçerek bir veya daha fazla kitap yükleyebilir veya kaldırabilirsiniz. Zaten yüklemiş olduğunuz tüm kitaplar için güncelleştirmeler varsa, pencerenin alt kısmındaki **Şimdi indirmek için buraya tıklayın** bağlantısını seçerek bu içeriği yenileyebilirsiniz. Ayrıca, ek kitaplar yüklediğinizde güncelleştirmeler varsa, yüklenen tüm kitaplar yenilenir. **Note:**  **Içerik yönetme** sekmesinin Işlevselliği, Yardım Görüntüleyicisi Yöneticisi bu özellikleri devre dışı bıraktığında veya kullanılabilir internet erişimi yoksa farklılık gösterebilir.|
+
+ Yardım Görüntüleyici penceresindeki araç çubuğu aşağıdaki düğmeleri içerir:
+
+- **İçindekiler bölümünde konuyu göster** düğmesi, **İçindekiler** sekmesindeki konunun konumunu gösterir.
+
+- **Sık Kullanılanlara Ekle** düğmesi, etkin konuyu **Sık Kullanılanlar** sekmesine ekler.
+
+- **Konuda bul** düğmesi etkin konudaki arama metnini vurgular.
+
+- **Yazdır** düğmesi, etkin konunun önizlemesini yazdırır veya görüntüler.
+
+- **Görüntüleyici seçenekleri** düğmesi, metnin ne kadar büyük göründüğünü, kaç arama sonucunun geri dönediğini, geçmişteki kaç konunun gösterileceğini ve güncelleştirmelerin çevrimiçi olup olmadığını denetlemek gibi ayarları görüntüler.
+
+- **Içeriği Yönet** düğmesi **İçeriği Yönet** sekmesini etkin hale getirir.
+
+- Küçük üçgen, konu sekmeleri ve **Içeriği Yönet** sekmesi dahil olmak üzere sekmelerin bir listesini açar. Bu sekmelerden birini seçerek etkin hale getirebilirsiniz.
+
+  Yardım Görüntüleyici penceresinin alt alanı bekleyen indirmelerin toplam boyutu, gereken disk alanı miktarı ve kullanılabilir disk alanı miktarı hakkında bilgi içerir. Bu alan Ayrıca, oluşabilecek hatalar ve güncelleştirmeler varsa, yüklü içeriği yenilemeyi seçebileceğiniz bir bağlantı hakkında bilgiler içerir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Yardım Görüntüleyicisi Yönetici Kılavuzu](../ide/help-viewer-administrator-guide.md) [Yerel Içerik yüklemesi ve yönetimi](../ide/install-and-manage-local-content.md) [Yardım Görüntüleyicisi 'nde sorun giderme](../ide/troubleshooting-the-help-viewer.md) [bilgilerini bulma](../ide/locate-information.md)

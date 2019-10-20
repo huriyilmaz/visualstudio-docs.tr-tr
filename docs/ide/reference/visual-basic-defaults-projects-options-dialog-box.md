@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Option Compare statement, setting in the IDE
 - Option Strict statement, setting in the IDE
 ms.assetid: 2465cd9d-18b6-4c4a-b1ea-86dbab23fc79
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7322ee72509a199e3b4168a0b24083fe463e2457
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 64641ebf47e5a5c91b7e20f1ddafe9490649ec9a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925957"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72622393"
 ---
 # <a name="visual-basic-defaults-projects-options-dialog-box"></a>Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu
 Visual Basic proje seçenekleri için varsayılan ayarları belirtir. Yeni bir proje oluşturulduğunda, belirtilen seçenek deyimleri kod düzenleyicisinde proje başlığına eklenecektir. Seçenekler tüm Visual Basic projelerine uygulanır.
@@ -28,7 +28,7 @@ Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler**' 
 
  **Seçenek açık**
 
-Doğrudan değişken bildirimlerinin gerekli olduğu şekilde derleyici varsayılanını ayarlar. Varsayılan olarak, **explicit seçeneği** açık olarak ayarlanır. Daha fazla bilgi için bkz. [/OptionExplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit).
+Doğrudan değişken bildirimlerinin gerekli olduğu şekilde derleyici varsayılanını ayarlar. Varsayılan olarak, **explicit seçeneği** **Açık olarak ayarlanır.** Daha fazla bilgi için bkz. [/OptionExplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit).
 
  **Option Strict**
 

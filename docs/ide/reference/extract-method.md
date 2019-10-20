@@ -1,10 +1,10 @@
 ---
-title: Bir yöntemi
+title: Bir yöntemi Ayıkla
 description: Kodu seçip CTRL + R, CTRL + M yazarak kodun bir parçasını kendi yöntemine dönüştürün.
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.extractmethod
@@ -13,14 +13,14 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: a764fd0d95696866e914ec76a560a49d641acb47
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+ms.openlocfilehash: a1ec6ca273f873c82a1bb2c730a9288b5e2ae4ed
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483665"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654388"
 ---
-# <a name="extract-a-method-refactoring"></a>Ayıklama yöntemi yeniden düzenleme
+# <a name="extract-a-method-refactoring"></a>Bir yöntemi yeniden düzenlemeyi Ayıkla
 
 Bu yeniden düzenleme için geçerlidir:
 
@@ -28,50 +28,50 @@ Bu yeniden düzenleme için geçerlidir:
 
 - Visual Basic
 
-**Yazdırılacak** Kodun bir parçasını kendi yöntemine açmanızı sağlar.
+**Ne:** Kodun bir parçasını kendi yöntemine açmanızı sağlar.
 
-**Oluşturulurken** Başka bir yöntemden çağrılması gereken, bazı bir yöntemde var olan kodun bir parçası var.
+**Ne zaman:** Başka bir yöntemden çağrılması gereken, bazı bir yöntemde var olan kodun bir parçası var.
 
-**Kaydol** Bu kodu kopyalayabilir/yapıştırabilir, ancak çoğaltmaya yol açabilir. Bu parça halinde diğer herhangi bir yöntemle serbestçe çağrılabilir kendi yöntemi yeniden düzenleme daha iyi bir çözümdür.
+**Neden:** Bu kodu kopyalayabilir/yapıştırabilir, ancak çoğaltmaya yol açabilir. Daha iyi bir çözüm, bu parçayı, başka bir yöntem tarafından serbestçe çağrılabilen kendi yöntemine yeniden düzenleme yöntemidir.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. Ayıklanacak kod vurgular:
+1. Ayıklanacak kodu vurgulayın:
 
-   - C# İÇİN:
+   - C#:
 
        ![Vurgulanan kod-C#](media/extractmethod-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanmış kodu - Visual Basic](media/extractmethod-highlight-vb.png)
+       ![Vurgulanan kod Visual Basic](media/extractmethod-highlight-vb.png)
 
-2. Ardından, aşağıdakilerden birini yapın:
+2. Sonra, aşağıdakilerden birini yapın:
 
-   - **Klavye**
-      - Tuşuna **Ctrl + R**, ardından **Ctrl + M**. (Bağlı olarak hangi profilinde seçtiğiniz klavye kısayolu farklı olabileceğini unutmayın.)
-      - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **yöntemi ayıklama** gelen önizleme penceresi açılır.
-   - **Fare**
-      - Seçin **Düzenle > yeniden düzenleyin > yöntemi Ayıkla**.
-      - Kod sağ tıklayıp **yeniden düzenleyin > Ayıkla > yöntemi ayıklama**.
-      - Kod sağ tıklayın, **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **yöntemi ayıklama** gelen önizleme penceresi açılır.
+   - **Klavyenizdeki**
+      - **CTRL + R**, ardından **CTRL + M**tuşlarına basın. (Klavye kısayolunuzun seçtiğiniz profile göre farklı olabileceğini unutmayın.)
+      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinden **yöntemi Ayıkla** ' yı seçin.
+   - **Tığında**
+      - **> ayıkla > Düzenle**' yi seçin.
+      - Koda sağ tıklayın ve **> Ayıkla metodunu ayıkla > yeniden Düzenle**' yi seçin.
+      - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin ve Önizleme penceresi açılır penceresinden **yöntemi Ayıkla** ' yı seçin.
 
-   Yöntem hemen oluşturulur. Buradan, yeni bir ad yazarak artık yöntemi adlandırabilirsiniz.
+   Yöntemi hemen oluşturulacaktır. Buradan, şimdi yeni adı yazarak yöntemi yeniden adlandırabilirsiniz.
 
    > [!TIP]
-   > Ayrıca açıklamalar ve diğer dizeleri bu yeni adı kullanacak şekilde güncelleştirebilirsiniz yanı [değişiklik önizlemesi](../../ide/preview-changes.md) önce kaydetme, içinde onay kutularını kullanarak **Yeniden Adlandır** en üstünde açılan kutusunda IDE'nizi sağında.
+   > Ayrıca, bu yeni adı kullanmak için açıklamaları ve diğer dizeleri güncelleştirebilir ve IDE 'nizin sağ üst köşesinde görünen **Yeniden Adlandır** kutusunda bulunan onay kutularını kullanarak değişiklikleri kaydetmeden önce [Önizleme](../../ide/preview-changes.md) yapabilirsiniz.
 
-   - C# İÇİN:
+   - C#:
 
-      ![Metodu yeniden adlandır-C#](media/extractmethod-rename-cs.png)
+      ![Yöntemi yeniden adlandır-C#](media/extractmethod-rename-cs.png)
 
    - Visual Basic:
 
-      ![Yöntemi - Visual Basic yeniden adlandır](media/extractmethod-rename-vb.png)
+      ![Yöntemi yeniden adlandır-Visual Basic](media/extractmethod-rename-vb.png)
 
-3. Değişiklik ile tamamladığınızda seçin **Uygula** düğme veya basın **Enter** ve değişiklikler uygulanır.
+3. Değişikliğin ne kadar memnunsanız **Uygula** düğmesini seçin veya **ENTER** tuşuna basın ve değişiklikler uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

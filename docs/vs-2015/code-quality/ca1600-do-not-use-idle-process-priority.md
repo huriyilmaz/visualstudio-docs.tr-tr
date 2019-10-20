@@ -1,5 +1,5 @@
 ---
-title: 'CA1600: Boş işlem önceliğini kullanmayın | Microsoft Docs'
+title: 'CA1600: boşta işlem önceliği kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DoNotUseIdleProcessPriority
 ms.assetid: 9b0d073b-78b6-41be-8ef3-14692a735283
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4002e17e3988ca3b449e141394ce762f95ffc78b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d4260db808d9c50f78388cf6ba976f7ace52e6a3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189307"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669291"
 ---
 # <a name="ca1600-do-not-use-idle-process-priority"></a>CA1600: Boş işlem önceliğini kullanmayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,17 +29,17 @@ ms.locfileid: "68189307"
 |-|-|
 |TypeName|DoNotUseIdleProcessPriority|
 |CheckId|CA1600|
-|Kategori|Microsoft.Mobility|
+|Kategori|Microsoft. Mobility|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Bu kural işlemleri ayarlandığından oluşur `ProcessPriorityClass.Idle`.
+ Bu kural, işlem `ProcessPriorityClass.Idle` olarak ayarlandığında oluşur.
 
 ## <a name="rule-description"></a>Kural Tanımı
- İşlem önceliğini Boşta olarak ayarlamayın. Sahip işlemler `System.Diagnostics.ProcessPriorityClass.Idle` Aksi durumda boş olacak ve bu nedenle beklemeyi engeller, CPU dolduracaktır.
+ İşlem önceliğini Boşta olarak ayarlamayın. @No__t_0 olan süreçler, aksi durumda boşta kalması durumunda CPU 'nun kaplamasına neden olur ve bu nedenle beklemeyi engeller.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Ayarlama işlemleri `ProcessPriorityClass.BelowNormal`.
+ İşlem `ProcessPriorityClass.BelowNormal` olarak ayarlayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kural yalnızca boş işlem önceliğini gereklidir ve mobility konuları güvenle görmezden gelinebilir atlanması.
+ Bu kural yalnızca boş işlem önceliği gerekli olduğunda ve hareketlilik konuları güvenli bir şekilde yoksayılarak bastırılır.

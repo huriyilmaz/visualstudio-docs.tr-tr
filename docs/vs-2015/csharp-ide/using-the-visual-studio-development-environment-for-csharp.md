@@ -1,5 +1,5 @@
 ---
-title: Geliştirme ortamını kullanarak C# | Microsoft Docs
+title: İçin C# geliştirme ortamını kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,29 +14,29 @@ helpviewer_keywords:
 - Visual C#, development environment
 ms.assetid: e10e2cba-641f-47a3-88a3-6748965254d7
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6e5b52e74eac3e9301ebb10d91c560929b1ef313
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 0cd8d8f2be0a653189130de6b38c8586957948d9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65688026"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72673151"
 ---
-# <a name="using-the-visual-studio-development-environment-for-c"></a>C için Visual Studio geliştirme ortamını kullanma\#
+# <a name="using-the-visual-studio-development-environment-for-c"></a>C \# için Visual Studio geliştirme ortamını kullanma
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio tümleşik geliştirme ortamı (IDE), ortak bir kullanıcı arabirimi aracılığıyla kullanıma sunulan geliştirme araçları koleksiyonudur. Bazı araçlar diğer paylaşılan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] diller ve C# derleyicisi gibi bazı Visual C# uygulamasına özgüdür. Bu konu, en önemli Visual C# araçlarına bağlantılar sağlar.
+Visual Studio tümleşik geliştirme ortamı (IDE), ortak bir kullanıcı arabirimi aracılığıyla kullanıma sunulan bir geliştirme araçları koleksiyonudur. Bazı araçlar diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dillerle paylaşılır ve C# derleyici gibi bazıları görsel C#olarak benzersizdir. Bu konu, en önemli Visual C# araçlarına bağlantılar sağlar.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[İzlenecek yol: Basit bir Uygulama Oluşturma](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)|Uygulama geliştirmeyle ilgili olarak Visual Studio'ya dahil olan özelliklerin ve araçların birçoğu için bir genel bakış sağlar.|
+|[İzlenecek Yol: Basit Bir Uygulama Oluşturma](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)|Uygulama geliştirmeyle ilgili olarak Visual Studio'ya dahil olan özelliklerin ve araçların birçoğu için bir genel bakış sağlar.|
 |[Çözümler ve Projeler Oluşturma](../ide/creating-solutions-and-projects.md)|Tüm kaynak kod dosyalarını, simgeler gibi kaynak dosyaları, harici dosyalara başvuruları ve derleyici ayarları gibi yapılandırma verilerini içeren bir projenin nasıl oluşturulacağını açıklar.|
-|[Proje Tasarımcısı giriş](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7)|Proje özelliklerini, ayarlarını ve kaynaklarını yönetmek için merkezi bir konum sağlayan Proje Tasarımcısı için genel bakış sağlar.|
+|[Proje tasarımcısına giriş](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7)|Proje özelliklerini, ayarlarını ve kaynaklarını yönetmek için merkezi bir konum sağlayan Proje Tasarımcısı için genel bakış sağlar.|
 |[Kod Yazma](../ide/writing-code-in-the-code-and-text-editor.md)|Metni, kodu ve biçimlendirmeyi değiştirmenize ve işlemenize, denetimleri, diğer nesneleri ve ad uzaylarını eklemenize ve yapılandırmanıza, harici bileşenlere ve kaynaklara başvurular eklemenize yardımcı olan Visual Studio araçlarını açıklar.|
 |[Visual C# IntelliSense](../ide/visual-csharp-intellisense.md)|En son kullanılan üyeler için otomatik kod oluşturma ve IntelliSense gibi Visual C# ürününe özgü özellikleri açıklayan konuların bağlantılarını sağlar.|
 |[Visual C# Kod Parçacıkları](../ide/visual-csharp-code-snippets.md)|Uygulamanıza otomatik olarak ortak kod yapıları eklemek için Visual C#'de Kod Parçacıkları'nın kullanımı için genel bakış sağlar|
@@ -52,5 +52,5 @@ Visual Studio tümleşik geliştirme ortamı (IDE), ortak bir kullanıcı arabir
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [C#](https://msdn.microsoft.com/library/7f4f8103-7068-4f1d-92c7-3c4519b6edbc)
-- [C# kullanmaya Başlarken](https://msdn.microsoft.com/library/d6ec050f-3956-4737-8030-a4fa3521d29f)
-- [C# başvurusu](https://msdn.microsoft.com/library/06de3167-c16c-4e1a-b3c5-c27841d4569a)
+- [Kullanmaya başlamaC#](https://msdn.microsoft.com/library/d6ec050f-3956-4737-8030-a4fa3521d29f)
+- [C#Başvurunun](https://msdn.microsoft.com/library/06de3167-c16c-4e1a-b3c5-c27841d4569a)

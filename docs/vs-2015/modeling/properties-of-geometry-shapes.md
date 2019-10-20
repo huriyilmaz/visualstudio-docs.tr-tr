@@ -1,5 +1,5 @@
 ---
-title: Geometri şekillerinin özellikleri | Microsoft Docs
+title: Geometri Şekillerinin Özellikleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - Domain-Specific Language, geometry shape
 ms.assetid: 3993a23e-eab3-4ceb-b475-c395d5992bfc
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6646f67db427e291fd62b731c31109eaab16f991
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 10b6d282475d3298f15319d89684f9b042bee5f6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701635"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671396"
 ---
 # <a name="properties-of-geometry-shapes"></a>Geometri Şekillerinin Özellikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Geometrik şekiller, etki alanı sınıfların örneklerini bir etki alanına özgü dil nasıl görüntüleneceğini belirtmek için kullanabilirsiniz. Daha fazla bilgi için [etki alanına özgü bir dili tanımlama nasıl](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikler kullanma hakkında daha fazla bilgi için bkz. [bir etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).  
-  
- Geometrik Şekiller aşağıdaki tabloda listelenen özelliklere sahiptir.  
-  
-|Özellik|Açıklama|Varsayılan|  
-|--------------|-----------------|-------------|  
-|Dolgu rengi|Bu şeklin dolgu rengi.|Beyaz|  
-|Dolgu gradyanı modu|(Yatay, dikey, İleri Köşegen, geriye köşegen veya hiçbiri), bu şeklin dolgu gradyanı modu.|Yatay|  
-|Geometri|Bu şeklin (dikdörtgen, yuvarlak köşeli dikdörtgen, elips veya daire) geometri.|Dikdörtgen|  
-|Varsayılan bağlantı noktalarını içerir|Varsa `True`şeklin üst, alt, sol kullanır ve doğru bağlantı noktaları oluşturulan tasarımcıdaki.|False|  
-|Anahat rengi|Bu şeklin ana hat rengi.|Siyah|  
-|Ana hat kesik çizgi stili|(Düz, kesik çizgi, nokta, çizgi nokta, çizgi nokta nokta veya özel), bu şeklin ana hat kesik çizgi stilinin.|Düz|  
-|Anahat kalınlığı|Bu şeklin ana hat kalınlığı.|0.03125|  
-|Metin rengi|Bu şeklin ile ilişkili metin dekoratörleri için kullanılan renk.|Siyah|  
-|Erişim değiştiricisi|Erişim değiştiricisi bir sınıfın (public veya internal).|Ortak|  
-|Özel Öznitelikler|Bu şeklin için oluşturulan kaynak kod sınıfı öznitelikler eklemek için kullanılır.|\<yok >|  
-|Çift oluşturur türetilmiş|Varsa `True`, hem temel sınıf hem de (geçersiz kılmalar aracılığıyla özelleştirmeyi desteklemek için) bir kısmi sınıf oluşturulur. Daha fazla bilgi için [geçersiz kılma ve oluşturulan sınıflar genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|  
-|Özel oluşturucu vardır.|Varsa `True`, kaynak kodunda özel bir oluşturucu sağlanacaktır. Daha fazla bilgi için [geçersiz kılma ve oluşturulan sınıflar genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|  
-|Devralma değiştiricisi|Devralma şekilden oluşturulan kaynak kodu sınıf türünü açıklar (`none`, `abstract` veya `sealed`).|yok|  
-|Temel geometrik şekil|Bu şeklin temel sınıf.|(hiçbiri)|  
-|Ad|Bu şeklin adı.|Geçerli ad|  
-|Ad Alanı|Bu şeklin ile bağlantılı olan ad alanı.|Geçerli ad alanı|  
-|Araç İpucu türü|Nasıl bir araç ipucu (sabit, değişken veya hiçbiri) tanımlanır. Fixed ise ardından değerini `Fixed Tooltip Text` özelliği, araç ipucu olarak kullanılır; ardından değişken durumunda, araç ipucu özel kodda tanımlanır.|None|  
-|Notlar|Bu öğeyle ilişkili resmi olmayan notlar.|\<yok >|  
-|İlk yükseklik|Bu şeklin inç cinsinden başlangıç yüksekliği.|1.|  
-|Başlangıç genişliği|Bu şeklin inç cinsinden başlangıç genişliği.|1,5|  
-|Özellik olarak kullanıma sunulan dolgu rengi<br /><br /> İfşa edilen dolgu gradyanı modu<br /><br /> Ana hat rengi özellik olarak kullanıma sunulan<br /><br /> Ana hat kesik çizgi stilinin özellik olarak kullanıma sunulan<br /><br /> Anahat kalınlığı özellik olarak kullanıma sunulan<br /><br /> Kullanıma sunan metin rengi|Varsa `True`, kullanıcının belirtilen özelliği bir şeklin ayarlayabilirsiniz. Bunu ayarlamak için Şekil tanımı sağ tıklatıp **ekleme kullanıma sunulan**.|False|  
-|Açıklama|Oluşturulan tasarımcının belgelemek için kullanılan bir açıklaması.|\<yok >|  
-|Görünen Ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<yok >|  
-|Sabit araç ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<yok >|  
-|Yardım anahtar sözcüğü|Bu şeklin için F1 Yardımı dizini oluşturmak için kullanılan anahtar sözcüğü.|\<yok >|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+Etki alanı sınıflarının örneklerinin, etki alanına özgü bir dilde nasıl görüntülendiğini belirtmek için geometri şekillerini kullanabilirsiniz. Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+
+ Geometri şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
+
+|Özellik|Açıklama|Varsayılan|
+|--------------|-----------------|-------------|
+|Rengi doldur|Bu şeklin dolgusu rengi.|be|
+|Doldur gradyanı modu|Bu şeklin (yatay, dikey, Ileri köşegen, geriye doğru köşegen veya yok) dolguyu gradyanı modu.|Yatay|
+|Geometrisi|Bu şeklin geometrisi (dikdörtgen, yuvarlatılmış dikdörtgen, elips veya daire).|Dikdörtgen|
+|Varsayılan bağlantı noktalarına sahiptir|@No__t_0, şekil oluşturulan tasarımcıda üst, alt, sol ve sağ bağlantı noktalarını kullanır.|False|
+|Ana hat rengi|Bu şeklin ana hat rengi.|siyah|
+|Ana hat kesik çizgi stili|Bu şeklin ana hat kesik çizgi stili (düz, kesik çizgi, nokta, çizgi nokta, çizgi dotdot veya özel).|Sağlam|
+|Ana hat kalınlığı|Bu şeklin ana hat kalınlığı.|0,03125|
+|Metin rengi|Bu şekille ilişkilendirilen metin Dekoratörleri için kullanılan renk.|siyah|
+|Erişim değiştiricisi|Sınıfın erişim değiştiricisi (genel veya iç).|Ortak|
+|Özel Öznitelikler|Bu şekil için oluşturulan kaynak kodu sınıfına öznitelikler eklemek için kullanılır.|\<none >|
+|Double türevi üretir|@No__t_0, hem temel sınıf hem de kısmi bir sınıf (geçersiz kılmaları kullanarak özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Özel Oluşturucusu vardır|@No__t_0, kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Devralma değiştiricisi|Şekilden oluşturulan kaynak kodu sınıfının devralım türünü açıklar (`none`, `abstract` veya `sealed`).|yok|
+|Taban geometri şekli|Bu şeklin temel sınıfı.|seçim|
+|Name|Bu şeklin adı.|Geçerli ad|
+|Ad Alanı|Bu şekille ilişkili ad alanı.|Geçerli ad alanı|
+|Araç ipucu türü|Araç ipucu nasıl tanımlanır (sabit, değişken veya yok). Düzeltildiğinde, `Fixed Tooltip Text` özelliğinin değeri araç ipucu olarak kullanılır; değişken ise, araç ipucu özel kodda tanımlanır.|Yok.|
+|Notlar|Bu öğeyle ilişkili resmi olmayan notlar.|\<none >|
+|Başlangıç yüksekliği|Bu şeklin inç cinsinden başlangıç yüksekliği.|1\.|
+|Başlangıç genişliği|Bu şeklin inç cinsinden başlangıç genişliği.|1,5|
+|Özellik olarak gösterilen Fill Color<br /><br /> Sunulma dolgusu gradyan modu<br /><br /> Özellik olarak gösterilen ana hat rengi<br /><br /> Özellik olarak sunulan ana hat kesik çizgi stili<br /><br /> Sunulan ana hat kalınlığı özellik olarak<br /><br /> Metin rengini gösterir|@No__t_0, Kullanıcı bir şeklin belirtilen özelliğini ayarlayabilir. Bunu ayarlamak için, şekil tanımına sağ tıklayıp **gösterilen Ekle**' ye tıklayın.|False|
+|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılan açıklama.|\<none >|
+|Görünen ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<none >|
+|Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<none >|
+|Help anahtar sözcüğü|Bu şekle yönelik F1 yardımını indekslemek için kullanılan anahtar sözcük.|\<none >|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

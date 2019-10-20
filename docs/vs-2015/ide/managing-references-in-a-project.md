@@ -1,5 +1,5 @@
 ---
-title: Bir projedeki başvuruları yönetme | Microsoft Docs
+title: Projedeki başvuruları yönetme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -20,103 +20,101 @@ helpviewer_keywords:
 - objects [Visual Studio], referencing
 ms.assetid: 05d1c51b-44f3-4973-8a11-6c919b08ad62
 caps.latest.revision: 55
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a54df63d71eeb641aa16c5bf7d4a2cb0c8a8a292
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a1f2f3c26d89616f083c218c6b11610fe5e329a9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65675077"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651325"
 ---
 # <a name="managing-references-in-a-project"></a>Bir projedeki başvuruları yönetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir dış bileşene karşı kodu yazın veya bağlı hizmet önce projeniz ilk buna bir başvuru içermelidir. Visual Studio bileşen veya hizmet bulmak gereken bilgileri içeren bir proje dosyası girdisinde aslında bir başvurudur.  
-  
- Bir başvuru eklemek için Çözüm Gezgini'ndeki başvurular düğümü sağ tıklatın ve seçin **Başvuru Ekle**. Daha fazla bilgi için [nasıl yapılır: Başvurular ekleme veya kaldırma başvuru Yöneticisi'ni kullanarak](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).  
-  
- ![Visual C dilinde bir başvuru ekleyin&#43;&#43;](../ide/media/vs2015-cpp-add-reference.png "vs2015_cpp_add_reference")  
-  
- Aşağıdaki bileşenler/hizmet türlerini başvuru yapabilir:  
-  
-- Windows Store app başvuruları  
-  
-- .NET framework sınıf kitaplıkları veya derlemeleri  
-  
-- COM bileşenleri  
-  
-- Diğer derlemeleri veya aynı çözüm içindeki projelerin sınıf kitaplıkları  
-  
-- XML Web hizmetleri  
-  
-## <a name="windows-store-app-references"></a>Windows Store App başvuruları  
-  
-### <a name="project-references"></a>Proje Başvuruları  
- Windows 10'u hedefleyen Evrensel Windows Platformu (UWP) projeleri çözümdeki diğer UWP projeleri veya Windows Store projeleri veya ikilileri başvuruları hedefleyen oluşturabilirsiniz [!INCLUDE[win81](../includes/win81-md.md)]bu projeleri, kullanımdan kaldırılan API'leri kullanmıyorsa, sağlanan Windows 10'da. Daha fazla bilgi için [UWP için Windows çalışma zamanı 8'den taşıma](https://msdn.microsoft.com/library/windows/apps/dn954974.aspx).  
-  
- Yeniden hedeflemek seçerseniz [!INCLUDE[win81](../includes/win81-md.md)] projeleri Windows 10 için bkz. [yükseltme Visual Studio projelerini taşıma, geçirme ve](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)  
-  
-### <a name="extension-sdk-references"></a>Uzantı SDK başvuruları  
- Evrensel Windows Platformu (UWP) hedefleyen Visual Basic, C#, C++ ve JavaScript Windows Store projelerini hedefleyen olan uzantı Sdk'lerine başvurabilir [!INCLUDE[win81](../includes/win81-md.md)]uzantı Sdk'leri, Windows 10'da kullanımdan kaldırılan API'leri kullanmıyorsa sürece. Yoksa, Windows Store projeleri tarafından başvurulabilir hedefleyen UWP bulmak için uzantı SDK satıcısı sitesini gözden geçirin.  
-  
- Belirlerseniz, uygulamanız tarafından başvurulan uzantı SDK'SİNİN desteklenmediğini ve ardından aşağıdaki adımları gerçekleştirmeniz gerekir:  
-  
-1. Hataya neden olan projenin adını arayın. Projenizin hedeflediği platform, proje adı yanında, parantez içinde belirtilir. Örneğin, **MyProjectName (Windows 8.1)** projenizi anlamına **MyProjectName** platform sürümünü hedeflediği [!INCLUDE[win81](../includes/win81-md.md)].  
-  
-2. Desteklenmeyen uzantı SDK'sine sahip satıcının sitesine gidin ve projenizin hedeflediği platformun sürümü ile uyumlu olan bağımlılıkları içeren uzantı SDK'SİNİN sürümünü yükleyin.  
-  
+Bir dış bileşene veya bağlı hizmete karşı kod yazmadan önce, projenizin bir başvurusu içermesi gerekir. Başvuru temelde, Visual Studio 'Nun bileşeni veya hizmeti bulması için gereken bilgileri içeren bir proje dosyasındaki giriştir.
+
+ Başvuru eklemek için, Çözüm Gezgini ' deki Başvurular düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. Daha fazla bilgi için bkz. [nasıl yapılır: başvuru Yöneticisi 'Ni kullanarak başvuru ekleme veya kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
+
+ ![Visual C 'de başvuru ekleme&#43;&#43;](../ide/media/vs2015-cpp-add-reference.png "vs2015_cpp_add_reference")
+
+ Aşağıdaki bileşen/hizmet türlerine bir başvuru yapabilirsiniz:
+
+- Windows Mağazası uygulama başvuruları
+
+- Sınıf kitaplıkları veya derlemeler .NET Framework
+
+- COM bileşenleri
+
+- Aynı çözümdeki projelerin diğer derlemeleri veya sınıf kitaplıkları
+
+- XML Web hizmetleri
+
+## <a name="windows-store-app-references"></a>Windows Mağazası uygulama başvuruları
+
+### <a name="project-references"></a>Proje Başvuruları
+ Windows 10 ' u hedefleyen Evrensel Windows Platformu (UWP) projeleri, çözümdeki diğer UWP projelerine ya da bu projelerin ' de kullanım dışı bırakılan API 'Leri kullanmadığından [!INCLUDE[win81](../includes/win81-md.md)] hedefleyen Windows Mağazası projelerine veya ikili dosyalara başvuru oluşturabilir. Windows 10. Daha fazla bilgi için, bkz. [Windows çalışma zamanı 8 ' den UWP 'e taşıma](https://msdn.microsoft.com/library/windows/apps/dn954974.aspx).
+
+ @No__t_0 projelerini Windows 10 ' a yeniden hedeflemeniz tercih ederseniz bkz. [Visual Studio projelerini taşıma, geçirme ve yükseltme](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)
+
+### <a name="extension-sdk-references"></a>Uzantı SDK başvuruları
+ Bu uzantı C#SDK C++ 'ları Windows 10 ' da kullanım dışı bırakılmış API 'leri kullanmadığından, Evrensel Windows platformu (UWP) ' i hedefleyen Visual Basic, ve JavaScript Windows Mağazası projeleri [!INCLUDE[win81](../includes/win81-md.md)] hedefleyen Uzantı SDK 'lerine başvurabilir. UWP 'yi hedefleyen Windows Mağazası projeleri tarafından başvuranıp başvurulamayacağını öğrenmek için lütfen Uzantı SDK 'Sı satıcı sitesini denetleyin.
+
+ Uygulamanız tarafından başvurulan Uzantı SDK 'sının desteklenmediğini belirlerseniz, aşağıdaki adımları gerçekleştirmeniz gerekir:
+
+1. Hataya neden olan projenin adına bakın. Projenizin hedeflediği platform, proje adının yanında parantez içinde belirtilmiştir. Örneğin, **MyProjectName (Windows 8.1)** , projeniz **MyProjectName** 'in platform sürümü [!INCLUDE[win81](../includes/win81-md.md)] hedeflediği anlamına gelir.
+
+2. Desteklenmeyen Uzantı SDK 'sına sahip olan satıcının sitesine gidin ve uzantı SDK 'nın sürümünü projenizin hedeflediği platformun sürümü ile uyumlu bağımlılıklarla birlikte yüklemelisiniz.
+
     > [!NOTE]
-    > Bir uzantı SDK bağımlılıklar başka uzantı SDK'lar üzerinde olup bulmanın bir yolu olan Visual Studio'yu yeniden başlatın, yeni bir C# Windows Store projesi oluşturun, projeye sağ tıklayın ve seçin **Başvuru Ekle**Git  **Windows** sekmesine gidin **uzantıları** alt sekmesinde, uzantı SDK'yı seçip sağ bölmede bakmak **başvuru Yöneticisi**. Bağımlılıkları varsa, burada listelenir.  
-  
+    > Uzantı SDK 'sının diğer uzantı SDK 'larda bağımlılıklara sahip olup olmadığını bulmanın bir yolu, Visual Studio 'Yu yeniden başlatma, yeni C# bir Windows Mağazası projesi oluşturma, projeye sağ tıklama ve **Başvuru Ekle**' yi seçme, **Windows** sekmesine gitme, **Uzantılar** alt sekmesinde Uzantı SDK 'sını seçin ve **başvuru Yöneticisi**' nde sağ bölmeye bakın. Bağımlılıklar varsa, burada listelenir.
+
     > [!IMPORTANT]
-    > Windows 10 projenizin hedeflediği ve önceki adımda yüklenen uzantı SDK'de Microsoft Visual C++ çalışma zamanı paketinde bağımlılık vardır, Microsoft Visual C++ çalışma zamanı sürümü Windows 10 ile uyumlu olan v14.0 olduğu ve yüklü Visual Studio 2015 ile.  
-  
-3. Önceki adımda yüklenen uzantı SDK'de başka uzantı SDK'lar üzerinde bağımlılıkları varsa, sdk'lerinde bağımlılıklar siteleri için Git ve platformun sürümü ile uyumlu olan bu bağımlılıkların sürümlerini yükleyin, projenin hedeflediği.  
-  
-4. Visual Studio'yu yeniden başlatın ve uygulamanızı açın.  
-  
-5. Sağ **başvuruları** hataya ve proje düğümünde **Başvuru Ekle**  
-  
-6. Tıklayın **Windows** sekmesini ve ardından **uzantıları** alt sekmesine, ardından eski uzantı Sdk'lerinin onay kutularının işaretini kaldırın ve yeni uzantı Sdk'lerinin onay kutularını işaretleyin. **Tamam**'ı tıklatın.  
-  
-## <a name="adding-a-reference-at-design-time"></a>Tasarım zamanında başvuru ekleme  
- Projenizde bir derlemeye bir başvuru yaptığınızda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] derleme aşağıdaki konumlarda arar:  
-  
-- Geçerli proje dizini. (Kullanarak bu derlemeleri bulabilirsiniz **Gözat** sekmesini.)  
-  
-- Aynı çözüm içindeki diğer proje dizinleri. (Bu derlemeleri bulabilirsiniz **projeleri** sekmesini.)  
-  
+    > Projeniz Windows 10 ' u hedefliyorsanız ve önceki adımda yüklenen Uzantı SDK 'sının Microsoft Visual C++ Runtime paketine bağımlılığı varsa, Windows 10 Ile uyumlu Microsoft Visual C++ Runtime paketinin sürümü v 14.0 ve , Visual Studio 2015 ile yüklenir.
+
+3. Önceki adımda yüklediğiniz Uzantı SDK diğer uzantı SDK 'larına bağımlılar içeriyorsa, bağımlılıklara sahip olan satıcının sitesine gidin ve platformun sürümü ile uyumlu olan bu bağımlılıkların sürümlerini yükleyebilirsiniz. Proje hedefleme.
+
+4. Visual Studio 'Yu yeniden başlatın ve uygulamanızı açın.
+
+5. Projede hataya neden olan **Başvurular** düğümüne sağ tıklayın ve **Başvuru Ekle** ' yi seçin
+
+6. **Windows** sekmesine ve sonra **Uzantılar** alt sekmesine tıklayın ve ardından eski Uzantı SDK 'larının onay kutularının Işaretini kaldırın ve yeni uzantı SDK 'larının onay kutularını işaretleyin. **Tamam**'a tıklayın.
+
+## <a name="adding-a-reference-at-design-time"></a>Tasarım zamanında başvuru ekleme
+ Projenizdeki bir derlemeye başvuru yaptığınızda, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] derlemeyi aşağıdaki konumlarda arar:
+
+- Geçerli proje dizini. (Bu derlemeleri, **tarayıcı** sekmesini kullanarak bulabilirsiniz.)
+
+- Aynı çözümdeki diğer proje dizinleri. (Bu derlemeleri **Projeler** sekmesinde bulabilirsiniz.)
+
 > [!NOTE]
-> Tüm projeler, mscorlib öğesine dolaylı bir başvuru içerir. Visual Basic projeleri dolaylı bir başvuru içeren `Microsoft.VisualBasic`.  
->   
-> Tüm projeleri Visual Studio'da dolaylı bir başvuru içeren `System.Core`bile `System.Core` başvurular listesinden kaldırılır.  
-  
-## <a name="references-to-shared-components-at-run-time"></a>Çalışma zamanında başvuruları için paylaşılan bileşenleri  
- Çalışma zamanında bileşenler projenin veya çıkış yolunda olmalıdır [genel derleme önbelleği](https://msdn.microsoft.com/library/cf5eacd0-d3ec-4879-b6da-5fd5e4372202) (GAC). Bu konumlardan birinde olmayan bir nesneye başvuru içeriyorsa, projeyi oluşturduğunuzda projenin çıktı yoluna başvuruyu kopyalamanız gerekir. <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> Özelliği, bu kopyanın çıkarılmak zorunda olup olmadığını gösterir. Değer ise **True**, projeyi oluşturduğunuzda proje dizinine başvuru kopyalanır. Değer ise **False**, ise başvuru kopyalanmaz.  
-  
- GAC'ye kayıtlı bir özel bileşene başvuru içeren bir uygulamayı dağıtırsanız, bileşen uygulama ile birlikte açmamasından dağıtılmaz <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> ayarı. Önceki sürümlerinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], ayarladığınız <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> derlemenin dağıtıldığı emin olmak için bir başvuru özelliği. Şimdi, derlemeyi \Bin klasörüne el ile eklemelisiniz. Bu, özel kod ile size tanıdık olmayan yayımlama riskini azaltarak, scrutiny altında tüm özel kodları yerleştirir.  
-  
- Varsayılan olarak, <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> özelliği **False** derleme veya bileşen, genel derleme önbelleğindeyse veya bir çerçeve bileşeniyse. Aksi takdirde, değeri şuna ayarlı **True**. Projeden projeye başvurular her zaman ayarlanmış **True**.  
-  
-## <a name="referencing-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>Bir proje ya da farklı bir .NET Framework sürümünü hedefleyen derlemeye başvurma  
- Projelere veya farklı bir .NET Framework sürümünü hedef derlemelere başvuran uygulamalar oluşturabilirsiniz. Örneğin, hedefleyen bir uygulama oluşturabilirsiniz [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)] hedefleyen bir derlemeye başvuran [!INCLUDE[dnprdnext](../includes/dnprdnext-md.md)]. Önceki bir sürümünü hedefleyen bir proje oluşturursanız [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], bir başvuru projede bir proje veya bütünleştirilmiş kod hedefleyen ayarlayamazsınız [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)] veya .NET Framework sürüm 4.  
-  
- Daha fazla bilgi için [belirli bir .NET Framework sürümünü hedefleme](../ide/targeting-a-specific-dotnet-framework-version.md).  
-  
-## <a name="project-to-project-references"></a>Projeden projeye başvurular  
- Projeden projeye başvurular, derlemeler içeren projelere başvurulardır; bunları kullanarak oluşturduğunuz **proje** sekmesi. Visual Studio, projeye bir yolu verildiğinde bir derleme bulabilirsiniz.  
-  
- Bir derleme üreten bir proje varsa, proje başvurusu ve bir dosya başvurusu (aşağıya bakın) kullanmamanız gerekir. Bir proje-proje başvurusunun avantajı yapı sistemindeki projeler arasında bağımlılık oluşturmasıdır. Bağımlı proje başvuran proje oluşturulan son daraltılmasından değişmiş ise oluşturulacaktır. Bu nedenle bağımlı proje oluşturmadan başvuran projeyi oluşturmak olasıdır ve başvuru geçersiz hale gelebilir bir dosya başvurusu bir yapı bağımlılığı oluşturmaz. (Diğer bir deyişle, proje proje daha önce oluşturulmuş bir sürümüne başvuruda bulunabilir.) Bu mümkün değildir bin dizininde gerekli tek bir DLL'nin çeşitli sürümleri neden olabilir. Bu çakışma oluştuğunda, bir ileti gibi görürsünüz [Uyarı: Bu 'dosya' başvurusunun üzerine yazacağından 'proje' projesindeki ' dosya' bağımlılığı çalıştırma dizinine kopyalanamıyor ](../misc/warning-the-dependency-file-in-project-project-cannot-be-copied.md). Daha fazla bilgi için [bozuk başvuruları sorun giderme](../ide/troubleshooting-broken-references.md) ve [nasıl yapılır: Proje bağımlılıklarını oluşturma ve kaldırma](../ide/how-to-create-and-remove-project-dependencies.md).  
-  
+> Tüm projeler mscorlib 'e örtük bir başvuru içerir. Visual Basic projeler, `Microsoft.VisualBasic` için örtük bir başvuru içerir.
+>
+> Visual Studio 'daki tüm projeler, `System.Core` başvurular listesinden kaldırılsa bile, `System.Core` için örtük bir başvuru içerir.
+
+## <a name="references-to-shared-components-at-run-time"></a>Çalışma zamanında paylaşılan bileşenlere başvurular
+ Çalışma zamanında, bileşenlerin ya projenin çıkış yolunda ya da [genel derleme önbelleğinde](https://msdn.microsoft.com/library/cf5eacd0-d3ec-4879-b6da-5fd5e4372202) (GAC) olması gerekir. Proje, bu konumlardan birinde olmayan bir nesneye başvuru içeriyorsa, projeyi oluşturduğunuzda projenin çıkış yoluna başvuruyu kopyalamanız gerekir. @No__t_0 özelliği, bu kopyanın yapılıp yapılmayacağını belirtir. Değer **true**ise, projeyi oluşturduğunuzda başvuru proje dizinine kopyalanır. Değer **false**ise, başvuru kopyalanmaz.
+
+ GAC 'de kayıtlı bir özel bileşene başvuru içeren bir uygulama dağıtırsanız, bileşen <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> ayarından bağımsız olarak uygulamayla dağıtılmaz. @No__t_0 önceki sürümlerinde, derlemenin dağıtılmasını sağlamak için bir başvuru üzerinde <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> özelliğini ayarlayabilirsiniz. Şimdi, derlemeyi \bin klasörüne el ile eklemeniz gerekir. Bu, tüm özel kodu scrutlı 'in altına koyar ve alışık olduğunuz özel kodu yayımlama riskini azaltır.
+
+ Varsayılan olarak, derleme veya bileşen genel derleme önbelleğiyle veya bir Framework bileşeni ise, <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> özelliği **false** olarak ayarlanır. Aksi takdirde, değer **true**olarak ayarlanır. Projeden projeye başvurular her zaman **true**olarak ayarlanır.
+
+## <a name="referencing-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>.NET Framework farklı bir sürümünü hedefleyen bir proje veya derlemeye başvurma
+ .NET Framework farklı bir sürümünü hedefleyen projelere veya derlemelere başvuran uygulamalar oluşturabilirsiniz. Örneğin, [!INCLUDE[dnprdnext](../includes/dnprdnext-md.md)] hedefleyen bir derlemeye başvuran [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)] hedefleyen bir uygulama oluşturabilirsiniz. @No__t_0 önceki bir sürümünü hedefleyen bir proje oluşturursanız, bu projede bir başvuruyu, [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)] veya .NET Framework sürüm 4 ' ü hedefleyen bir proje veya derlemeye ayarlayamazsınız.
+
+ Daha fazla bilgi için bkz. [belirli bir .NET Framework sürümünü hedefleme](../ide/targeting-a-specific-dotnet-framework-version.md).
+
+## <a name="project-to-project-references"></a>Projeden projeye başvurular
+ Projeden projeye başvurular, derlemeler içeren projelere referanslardır; **Proje** sekmesini kullanarak bunları oluşturursunuz. Visual Studio, projenin yolunu verildiğinde bir derlemeyi bulabilir.
+
+ Derleme üreten bir projeniz varsa, projeye başvurmanız ve dosya başvurusu kullanmamalısınız (aşağıya bakın). Proje-proje başvurusunun avantajı, derleme sistemindeki projeler arasında bir bağımlılık oluşturmasıdır. Bağımlı proje, başvuran projenin en son derlenmesinden bu yana değiştirilmişse oluşturulur. Bir dosya başvurusu, derleme bağımlılığı oluşturmaz, bu nedenle, bağımlı proje oluşturmadan başvuran projeyi derlemek mümkündür ve başvuru kullanımdan kalkabilir. (Yani, proje projenin daha önce oluşturulmuş bir sürümüne başvurabilir.) Bu, bin dizininde tek bir DLL 'nin gerekli olmasının oluşmasına neden olabilir ve bu mümkün değildir. Bu çakışma oluştuğunda, uyarı şöyle bir ileti görürsünüz [: ' proje ' projesindeki ' dosya ' bağımlılığı, ' File. ' başvurusunun üzerine yazacak olan çalıştırma dizinine kopyalanamıyor](../misc/warning-the-dependency-file-in-project-project-cannot-be-copied.md). Daha fazla bilgi için bkz. [Hatalı başvuruların sorunlarını giderme](../ide/troubleshooting-broken-references.md) ve [nasıl yapılır: Proje bağımlılıklarını oluşturma ve kaldırma](../ide/how-to-create-and-remove-project-dependencies.md).
+
 > [!NOTE]
-> Bir projenin .NET Framework hedef sürümü, sürüm 4.5 ise ve diğer projenin hedef sürümü sürüm 2, 3, 3.5 veya 4.0 ise bir proje proje başvurusu yerine dosya başvurusu oluşturulur.  
-  
-## <a name="file-references"></a>Dosya başvuruları  
- Dosya başvuruları, derlemelere bir Visual Studio projesinin bağlamı dışından doğrudan başvurulardır; bunları kullanarak oluşturduğunuz **Gözat** sekmesinde **başvuru Yöneticisi**. Yalnızca bir derleme veya bileşen ve çıktı olarak oluşturan Proje yoksa bir dosya başvurusu kullanın.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bozuk başvurularda sorun giderme](../ide/troubleshooting-broken-references.md)   
- [Bütünleştirilmiş kodlarla programlama](https://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)   
- [Nasıl yapılır: Başvuru Yöneticisi’ni Kullanarak Başvuru Ekleme veya Kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)
+> Bir projenin .NET Framework hedef sürümü 4,5 ise ve diğer projenin hedef sürümü sürüm 2, 3, 3,5 veya 4,0 ise, projeden projeye başvuru yerine bir dosya başvurusu oluşturulur.
+
+## <a name="file-references"></a>Dosya başvuruları
+ Dosya başvuruları, Visual Studio projesi bağlamı dışındaki derlemelere doğrudan referanslardır; Bunları, **başvuru Yöneticisi**'nin **tarayıcı** sekmesini kullanarak oluşturursunuz. Yalnızca bir derlemeye veya bileşene sahipseniz ve bunu çıkış olarak oluşturan projeye sahip değilseniz dosya başvurusunu kullanın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Bütünleştirilmiş kodlar Ile](https://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6) [Hatalı başvuruların sorunlarını giderme](../ide/troubleshooting-broken-references.md) derleme [nasıl yapılır: başvuru Yöneticisi 'Ni kullanarak başvuru ekleme veya kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)

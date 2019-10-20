@@ -1,80 +1,80 @@
 ---
-title: 'Nasıl yapılır: Bir XSD şemasını temel alan XML belgesi oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: XSD şemasını temel alan XML belgesi oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 193b195f-e918-4c79-a1a1-8096a1433bde
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 623da37807e0fd61041bfeb9ab411ce0cb96d4b5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9e48c48d6711a1eb21157122d13790e22688855
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68164485"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670943"
 ---
-# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Nasıl yapılır: Bir XSD Şemasını Temel Alan XML Belgesi Oluşturma
+# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Nasıl yapılır: XSD şemasını temel alan XML belgesi oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Örnek XML oluşturmak** özelliği XML Şeması (XSD) dosyanız tabanlı bir örnek XML dosyası oluşturur.  
-  
- Aşağıdaki senaryolar için bu seçeneği kullanabilirsiniz:  
-  
-- Çeşitli yapılar, şema kullanımını anlamak için.  
-  
-- Şema ne yaptığını onaylamak için bunu gerçekleştirmesi amaçlanmıştır.  
-  
-  **Örnek XML oluşturmak** özelliği yalnızca genel öğeler üzerinde kullanılabilir ve geçerli bir XML şema kümesi gerektirir.  
-  
-  Bu özellik, genellikle geçerli XML belgeleri oluşturur. Şema, bir veya daha fazlasını içeriyor, ancak örnek geçerli olmayabilir:  
-  
-- `xs:key`, `xs:keyref`, Ve `xs:unique` kimlik kısıtlamaları.  
-  
-- `xs:pattern` modeller.  
-  
-- Numaralandırmalar `xs:QName` türü.  
-  
-- `xs:ENTITY`, `xs:ENTITIES`, ve `xs:NOTATION` türleri.  
-  
-  Ayrıca, `xs:base64Binary` içeriği yalnızca numaralandırma türü için şema oluşursa oluşturulur.  
-  
-### <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>XSD dosyasını temel alan bir XML örneği belge oluşturmak için  
-  
-1. Bağlantısındaki [nasıl yapılır: Bir XSD şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).  
-  
-2. İçinde [XML Şeması Gezgini](../xml-tools/xml-schema-explorer.md), sağ `PurchaseOrder` genel öğesi. Seçin **örnek XML oluşturmak**.  
-  
-     Bu seçeneği belirlediğinizde, aşağıdaki örnek XML içeriği PurchaseOrder.xml dosyasıyla oluşturulur ve XML Düzenleyicisi'nde açılır:  
-  
-    ```  
-    <?xml version="1.0" encoding="utf-8"?>  
-    <PurchaseOrder OrderDate="1900-01-01" xmlns="http://tempuri.org/PurchaseOrderSchema.xsd">  
-      <ShipTo country="US">  
-        <name>name1</name>  
-        <street>street1</street>  
-        <city>city1</city>  
-        <state>state1</state>  
-        <zip>1</zip>  
-      </ShipTo>  
-      <ShipTo country="US">  
-        <name>name2</name>  
-        <street>street2</street>  
-        <city>city2</city>  
-        <state>state2</state>  
-        <zip>-79228162514264337593543950335</zip>  
-      </ShipTo>  
-      <BillTo country="US">  
-        <name>name1</name>  
-        <street>street1</street>  
-        <city>city1</city>  
-        <state>state1</state>  
-        <zip>1</zip>  
-      </BillTo>  
-    </PurchaseOrder>  
-    ```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+**Örnek XML oluştur** ÖZELLIĞI, XML ŞEMASı (xsd) dosyanızı temel alan örnek bir XML dosyası oluşturur.
+
+ Bu seçeneği aşağıdaki senaryolar için kullanabilirsiniz:
+
+- Şemanızda çeşitli yapıların kullanımını anlamak için.
+
+- Şemanın yapması amaçlanan şeyi doğrulamak için.
+
+  **Örnek XML oluştur** özelliği yalnızca genel öğelerde kullanılabilir ve geçerlI bir XML şema kümesi gerektirir.
+
+  Bu özellik genellikle geçerli XML belgeleri oluşturur. Ancak, şema aşağıdakilerden birini veya birkaçını içeriyorsa, örnek geçerli olmayabilir:
+
+- @No__t_0, `xs:keyref` ve `xs:unique` kimlik kısıtlamaları.
+
+- `xs:pattern` modelleri.
+
+- @No__t_0 türünün Numaralandırmalar.
+
+- `xs:ENTITY`, `xs:ENTITIES` ve `xs:NOTATION` türleri.
+
+  Ayrıca, yalnızca bu tür için şemada numaralandırmalar oluşursa `xs:base64Binary` içeriğin üretileceğini aklınızda bulabilirsiniz.
+
+### <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>XSD dosyasını temel alan bir XML örnek belgesi oluşturmak için
+
+1. [Nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
+
+2. [XML şeması Gezgini](../xml-tools/xml-schema-explorer.md)' nde, `PurchaseOrder` Genel öğesine sağ tıklayın. **Örnek XML oluştur**' u seçin.
+
+     Bu seçeneği belirlediğinizde, XML düzenleyicisinde aşağıdaki örnek XML içeriğine sahip PurchaseOrder. xml dosyası oluşturulur ve açılır:
+
+    ```
+    <?xml version="1.0" encoding="utf-8"?>
+    <PurchaseOrder OrderDate="1900-01-01" xmlns="http://tempuri.org/PurchaseOrderSchema.xsd">
+      <ShipTo country="US">
+        <name>name1</name>
+        <street>street1</street>
+        <city>city1</city>
+        <state>state1</state>
+        <zip>1</zip>
+      </ShipTo>
+      <ShipTo country="US">
+        <name>name2</name>
+        <street>street2</street>
+        <city>city2</city>
+        <state>state2</state>
+        <zip>-79228162514264337593543950335</zip>
+      </ShipTo>
+      <BillTo country="US">
+        <name>name1</name>
+        <street>street1</street>
+        <city>city1</city>
+        <state>state1</state>
+        <zip>1</zip>
+      </BillTo>
+    </PurchaseOrder>
+    ```
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XML Verileriyle Çalışma](../xml-tools/working-with-xml-data.md)

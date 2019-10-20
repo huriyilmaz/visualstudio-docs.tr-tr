@@ -9,160 +9,156 @@ helpviewer_keywords:
 - Tools Options settings, Environment node properties
 ms.assetid: 26dca41f-91fc-4ca7-9103-3da402baa1d5
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64deddd3ae8323298ad04e5a1a3a78e93c21a87a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 6c7b6370793068ff07f30066ddd51b72dcc924b3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674713"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668698"
 ---
 # <a name="options-page-environment-node-properties"></a>Seçenekler Sayfası, Ortam Düğümü Özellikleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu belgede, sayfa (veya özellik koleksiyonları) açıklanmaktadır ile ilişkili **ortam** kategori `DTE.Properties("Environment", <Property Page>)`, biri **seçenekleri** iletişim kutusu. Her bir alt bölümünün başlığı özellikler koleksiyonuna erişmek için kullanılan çağrıdır ve her bir alt bölümdeki tabloda koleksiyondaki özellikler listelenmektedir.  
-  
-## <a name="general"></a>Genel  
- `DTE.Properties("Environment", "General")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|ShowStatusBar|Get/Set (Boole)|Durum çubuğunun görünür olup olmadığını belirler.|  
-|WindowMenuContainsNItems|Get/Set (kısa)|Belge pencereleri Windows menüsünün alt kısmında bulunan nasıl belirler.|  
-|MRUListContainsNItems|Get/Set (kısa)|"En son kullanılan" alt menüde kaç dosyaları görüntülemek belirler.|  
-|Animasyonlar|Get/Set (Boole)|Tümleşik geliştirme ortamı (IDE) durum çubuğunda animasyon kullanıp kullanmadığını belirler.|  
-|AnimationSpeed|Get/Set (kısa)||  
-|AutoAdjustExperience|Get/Set (Boole)|İstemci performansına bağlı olarak görsel deneyimi otomatik olarak ayarlar.|  
-|RichClientExperienceOptions|Get/Set (Enum)|Zengin istemci görsel deneyimini değerleriyle sağlayan <xref:EnvDTE100.vsRichClientExperienceOptions>.|  
-|CloseButtonActiveTabOnly|Get/Set (Boole)|Belirler olmadığını **Kapat** düğme, yalnızca etkin sekmesinde gösterilir.|  
-|AutohidePinActiveTabOnly|Get/Set (Boole)|Belirler olmadığını **Otomatik Gizle** düğmesi sadece etkin sekmede etkiler.|  
-  
-## <a name="add-inmacros-security"></a>Ekle/makro güvenliği  
- `DTE.Properties("Environment", "AddinMacrosSecurity")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|MacrosEnabled|Get/Set (Boole)|Makroların çalıştırılmasına olanak tanır.|  
-|AddinsEnabled|Get/Set (Boole)|Yüklenecek eklentileri sağlar.|  
-|LoadAddinsFromTheWeb|Get/Set (Boole)|Web üzerinde bir URL'den yüklenecek eklentiler sağlar.|  
-  
-## <a name="documents"></a>Belgeler  
- `DTE.Properties("Environment", "Documents")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|ReuseSavedActiveDocWindow|Get/Set (Boole)|Geçerli belge kaydedilirse, yeni bir dosya açmak mevcut belge penceresini yeniden olup olmadığını belirler. `false` her zaman açık her belge için yeni bir belge penceresi Aç anlamına gelir.|  
-|DetectFileChangesOutsideIDE|Get/Set (Boole)|Ortam, işletim sistemi dosyaları diskte değiştirilmiş IDE bildirdiğinde IDE içinde açılan dosyaları otomatik olarak yükler olup olmadığını belirler.|  
-|AutoloadExternalChanges|Get/Set (Boole)|Açık belge değil değiştirilirse değiştirilen dosya otomatik olarak açmak için dış değişiklikler yeniden tespit edip etmediğini belirler. Açık belge değiştirilir ve bu özellik `true`, bu özellik'ymiş gibi IDE ister `false`.|  
-|InitializeOpenFileFromCurrentDocument|Get/Set (Boole)|Belirler olmadığını <xref:EnvDTE.DTEClass.OpenFile%2A> komut çekirdeğini son etkin belgeden dizin ve dosya adı veya son bir yerden bir dosya açılır.|  
-|MiscFilesProjectSavesLastNItems|Get/Set (kısa)|Çeşitli dosyalar projesi kayıtları kaç dosyaları belirler. Sonuç olarak, hangi en son açmış diskte çeşitli dosya olarak IDE sonraki kullandığınızda görebilirsiniz.|  
-|ShowMiscFilesProject|Get/Set (Boole)|Çeşitli dosyalar projeleri gösterilip gösterilmeyeceğini belirler.|  
-|CheckForConsisentLineEndings|Get/Set (Boole)|Dosya tutarlı satır sonlarını denetler.|  
-|SaveDocsAsUnicodeWhenDataLoss|Get/Set (Boole)|Veri kod sayfasına kaydedilemiyor, belgeleri Unicode olarak kaydeder.|  
-|DontShowGlobalUndoChangeLossDialog|Get/Set (Boole)|Genel Geri Al diğer düzenlediğiniz dosyaların değiştirecek bir uyarı görüntüler.|  
-|AllowEditingReadOnlyFiles|Get/Set (Boole)|Salt okunur dosyaları, ancak bir uyarı verme bunları kaydetme girişimi olduğunda düzenlenmesini sağlar.|  
-|DocumentDockPreference|Get/Set (Enum)|<xref:EnvDTE100.vsDocumentDockPreferenceOptions>. İyi, açılan belge eklemek sekmesinde konumu.|  
-  
-## <a name="extension-manager"></a>Uzantı Yöneticisi  
- `DTE.Properties("Environment", "ExtensionManager")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|EnableAdminExtensions|Get/Set (Boole)|Visual Studio yönetici kimlik bilgileri altında çalıştırdığınızda, kullanıcı başına uzantılar yükler. Bu değeri değiştirildikten sonra visual Studio'nun yeniden başlatılması gerekiyor.|  
-|EnableOnline|Get/Set (Boole)|Uzantılar Visual Studio Galerisi'nde erişim sağlar.|  
-|AutomaticallyCheckForUpdates|Get/Set (Boole)|Güncelleştirmeleri yüklü uzantılar için otomatik olarak denetler.|  
-  
-## <a name="find-and-replace"></a>Bulma ve Değiştirme  
- `DTE.Properties("Environment", "FindAndReplace")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|ShowWarningMessages|Get/Set (Boole)|Uyarı iletilerini görüntüler.|  
-|InitializeFromEditor|Get/Set (Boole)|Otomatik olarak doldurur **Aranan** düzenleyicisinden metin kutusu.|  
-|ShowMessageBoxes|Get/Set (Boole)|Bilgilendirici iletileri görüntüler.|  
-|HideWindowsAfterMatchFromQuickFindReplace|Get/Set (Boole)|Gizler **Bul ve Değiştir** kullanarak bir eşleşme arkalarına penceresi **Hızlı Bul** veya **hızlı Değiştir**.|  
-  
-## <a name="import-and-export-settings"></a>İçeri ve dışarı aktarma ayarları  
- `DTE.Properties("Environment", "Import and Export Settings")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|TrackTeamSettings|Get/Set (Boole)|TeamSettingsFile tarafından belirtilen dosyada ayarları kullanır.|  
-|TeamSettingsFile|Get/Set (dize)|Takım ayarları içeren dosyanın adı.|  
-|AutoSaveFile|Get/Set (dize)|Kullanıcı ayarları otomatik olarak kaydedildiği dosyanın adı.|  
-  
-## <a name="international-settings"></a>Uluslararası ayarlar  
- `DTE.Properties("Environment", "International")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|Dil|Get/Set (dize)|Visual Studio için geçerli dili için LCID değer.|  
-  
-## <a name="keyboard"></a>Klavye  
- `DTE.Properties("Environment", "Keyboard")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|Düzen|Get/Set (dize)|Yerleşik bir düzeni içeren bir dize, yüklenen .vsk dosyasının tam yolu içeren bir dize veya "(hiçbir .vsk dosyasının yüklü ise varsayılan)" döndürür.|  
-  
-## <a name="projects-and-solution"></a>Proje ve çözüm  
- `DTE.Properties("Environment", "ProjectsAndSolution")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|OnRunOrPreview|Get/Set (dize)|IDE her şeyi Önizleme veya yerleşik bir proje çalıştırmadan önce kaydetmeyeceğini belirler.|  
-|ProjectsLocation|Get/Set (dize)|Varsayılan dizin belirler burada **Proje Ekle** yeni proje iletişim kutusu kaydeder.|  
-|ShowOutputWindowBeforeBuild|Get/Set (Boole)|Bir derleme görüntüler başlangıç olup olmadığını belirleyen **çıkış** penceresi.|  
-|ShowTaskListAfterBuild|Get/Set (Boole)|Başarısız bir derleme işlemi görüntülenip görüntülenmeyeceğini belirler **görev listesi** derleme bittiğinde.|  
-|TrackFileSelectionInExplorer|Get/Set (Boole)|Geçerli öğe içinde izleniyor olup olmadığını belirler **Çözüm Gezgini**.|  
-|AlwaysShowSolutionNode|Get/Set (Boole)|Çözüm düğümüne görüntülenip görüntülenmeyeceğini belirler.|  
-|OnlySaveStartupProjectsAndDependencies|Get/Set (Boole)|Kaydetme işlemleri başlangıç projelerini ve bunların bağımlı dosyaları için sınırlı olup olmadığını belirler.|  
-|ShowAdvancedBuildConfigurations|Get/Set (Boole)|Gelişmiş derleme yapılandırmalarını görüntülenip görüntülenmeyeceğini belirler.|  
-|ConcurrentBuilds|Get/Set (dize)|Oluşabilecek paralel proje yapılandırma sayısını belirler.|  
-|SaveNewProjects|Get/Set (Boole)|Yeni projeler otomatik olarak oluşturulduktan sonra kaydedilip kaydedilmeyeceğini belirler.|  
-|PromptForRenameSymbol|Get/Set (Boole)|Dosyaları yeniden adlandırıldıklarında sembolik yeniden adlandırmayı sorulup sorulmayacağını belirtir.|  
-|OnRunWhenErrors|Get/Set (Enum)|Bir derleme hatalarla tamamlandı çalıştırmaya davranışını belirtir.|  
-|OnRunWhenOutOfDate|Get/Set (Enum)|Bir proje güncel olduğunda çalıştırma davranışını belirtir.|  
-|ProjectTemplatesLocation|Get/Set (dize)|Kullanıcı proje şablonları içeren dizin.|  
-|ProjectItemTemplatesLocation|Get/Set (dize)|Kullanıcı öğe şablonları içeren dizin.|  
-|DefaultBehaviorForStartupProjects|Get/Set (dize)||  
-|MSBuildOutputVerbosity|Get/Set (dize)|Derleme çıkışı için ayrıntı düzeyini belirtir.|  
-  
-## <a name="startup"></a>Başlangıç  
- `DTE.Properties("Environment", "Startup")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|OnStartUp|Get/Set (Enum)|Öğesinden başlatma sırasında gerçekleştirilecek eylem <xref:EnvDTE.vsStartUp>, 0 ile 5 değerleriyle:<br /><br /> -   0: Giriş sayfasını aç<br />-   1: Son yüklenen çözümü yükleme<br />-   2: Göster **açık proje** iletişim kutusu<br />-   3: Göster **yeni proje** iletişim kutusu<br />-   4: Boş ortamı göster<br />-   5: Başlangıç sayfasını göster|  
-|StartPageRSSUrl|Get/Set (dize)|RSS, akış URL'sini başlatma sırasında kullanılır.|  
-|StartPageRefreshDownloadedContent|Get/Set (Boole)|Başlangıç sayfası StartPageRefreshInterval içinde belirtilen aralık her ilgi çekici sonra yeniler.|  
-|StartPageRefreshInterval|Get/Set (kısa)|Aralığının başlangıç sayfası yenilemek için dakika cinsinden değeri.|  
-  
-## <a name="tasklist"></a>Görev listesi  
- `DTE.Properties("Environment", "TaskList")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|ConfirmTaskDeletion|Get/Set (Boole)|Bir onay kutusu görevlerden silerken görüntülenip görüntülenmeyeceğini belirtir **görev listesi**.|  
-|WarnOnAddingHiddenItem|Get/Set (Boole)|Bir kullanıcı eklerken uyarı olup olmadığını belirtir gösterilmeyecek bir görevi.|  
-|DontShowFilePaths|Get/Set (Boole)|Görev listesinde tam dosya yollarını gösterilip gösterilmeyeceğini belirtir.|  
-|CommentTokens|SafeArray|SafeArray yorum belirteci değerlerini döndürür. Her alan yok `Name` (dize) ve `Priority` (<xref:EnvDTE.vsTaskPriority>, yüksek, Orta veya düşük).|  
-  
-## <a name="web-browser"></a>Web tarayıcısı  
- `DTE.Properties("Environment", "WebBrowser")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|Giriş sayfası|Get/Set (dize)|Giriş sayfası URL'si temsil eder.|  
-|SearchPage|Get/Set (dize)|Arama sayfası URL'si temsil eder.|  
-|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (Kaynak, tasarım, dış).|  
-|ViewSourceExternalProgram|Get/Set (dize)|Dış kaynak Görüntüleyicisi yolu.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Seçenek ayarlarını denetleme](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)   
- [Seçenekler sayfasında özellik öğelerinin adlarını belirleme](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)   
- [Seçenekler sayfası, yazı tipleri ve renkler düğümü özellikleri](../../ide/reference/options-page-fonts-and-colors-node-properties.md)   
- [Seçenekler sayfası, metin düzenleyici düğümü özellikleri](../../ide/reference/options-page-text-editor-node-properties.md)   
- [Ortam Seçenekleri İletişim Kutusu](../../ide/reference/environment-options-dialog-box.md)
+Bu belgede, **Seçenekler** Iletişim kutusunun **ortam** kategorisi, `DTE.Properties("Environment", <Property Page>)` ilişkili sayfalar (veya özellikler koleksiyonlar) açıklanmaktadır. Her alt bölümünün başlığı, özellikler koleksiyonuna erişmek için kullanılan çağrıdır ve her alt bölüm içindeki tablo koleksiyondaki özellikleri listeler.
+
+## <a name="general"></a>Genel
+ `DTE.Properties("Environment", "General")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|ShowStatusBar|Get/Set (Boole)|Durum çubuğunun görünür olup olmadığını belirler.|
+|WindowMenuContainsNItems|Al/ayarla (kısa)|Belge pencerelerinin Windows menüsünün en altında nasıl dahil olduğunu belirler.|
+|MRUListContainsNItems|Al/ayarla (kısa)|"En son kullanılan" alt menüsünde kaç dosya görüntüleneceğini belirler.|
+|Animasyonlar|Get/Set (Boole)|Tümleşik geliştirme ortamının (IDE) durum çubuğunda animasyon kullanıp kullanmadığını belirler.|
+|AnimationSpeed|Al/ayarla (kısa)||
+|Oto ayarlan, Texperience|Get/Set (Boole)|İstemci performansına bağlı olarak görsel deneyimi otomatik olarak ayarlar.|
+|RichClientExperienceOptions|Get/Set (Enum)|@No__t_0 değerlerle zengin istemci görsel deneyimini sunar.|
+|Yalnızca CloseButtonActiveTabOnly|Get/Set (Boole)|**Kapat** düğmesinin yalnızca etkin sekmede gösterilip gösterilmeyeceğini belirler.|
+|Yalnızca oto hidepınactivetab|Get/Set (Boole)|**Otomatik gizleme** düğmesinin yalnızca etkin sekmeyi etkileyip etkilemeyeceğini belirler.|
+
+## <a name="add-inmacros-security"></a>Eklenti/makro güvenliği
+ `DTE.Properties("Environment", "AddinMacrosSecurity")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|Makrosenabled|Get/Set (Boole)|Makroların çalışmasına izin verir.|
+|Addınsenabled|Get/Set (Boole)|Eklentilerin yüklenmesine izin verir.|
+|Loadaddinsfromweb|Get/Set (Boole)|Web 'deki bir URL 'den yüklenecek eklentilerin yüklenmesine izin verir.|
+
+## <a name="documents"></a>Belgeler
+ `DTE.Properties("Environment", "Documents")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|ReuseSavedActiveDocWindow|Get/Set (Boole)|Geçerli belge kaydedilmişse yeni bir dosyanın açılmasını geçerli belge penceresini yeniden kullanıp kullanmayacağını belirler. `false` her belge açıldığında her zaman yeni bir belge penceresi açar.|
+|DetectFileChangesOutsideIDE|Get/Set (Boole)|İşletim sistemi IDE 'ye dosyaların diskte değiştirildiğini bildirir, ortamın IDE 'de açılan dosyaları otomatik olarak yeniden yükleyemeyeceğini belirler.|
+|Oto Loadexternalchanges|Get/Set (Boole)|Açık belge değiştirilmediyse, belgeleri açmak için algılanan dış değişikliklerin değiştirilen dosyayı otomatik olarak yeniden yükleyip yükleyemeyeceğini belirler. Açık belge değiştirilirse ve bu özellik `true`, IDE, bu özellik `false` gibi uyarır.|
+|InitializeOpenFileFromCurrentDocument|Get/Set (Boole)|@No__t_0 komutunun, son etkin belgeden veya bir dosyayı açtığınız son konumdan dizin ve dosya adı olup olmadığını belirler.|
+|MiscFilesProjectSavesLastNItems|Al/ayarla (kısa)|Çeşitli dosyalar projesinin kaç dosya için kayıt olduğunu belirler. Sonuç olarak, IDE 'yi bir dahaki kullandığınızda diskte en son ne kadar çok dosya olarak açık olduğunu görebilirsiniz.|
+|Showmiscfilesprojesi|Get/Set (Boole)|Çeşitli dosyalar projesinin gösterilip gösterilmeyeceğini belirler.|
+|CheckFor, Entlinesonları|Get/Set (Boole)|Dosya yüklerinde tutarlı satır sonları olup olmadığını denetler.|
+|SaveDocsAsUnicodeWhenDataLoss|Get/Set (Boole)|Veriler kod sayfasına kaydedilemediğinde belgeleri Unicode olarak kaydeder.|
+|DontShowGlobalUndoChangeLossDialog|Get/Set (Boole)|Genel geri alma, diğer düzenlenmiş dosyaları değiştirecek olduğunda bir uyarı görüntüler.|
+|AllowEditingReadOnlyFiles|Get/Set (Boole)|Salt okuma dosyalarının düzenlenmesine izin verir, ancak bunları kaydetme girişimi olduğunda bir uyarı verir.|
+|DocumentDockPreference|Get/Set (Enum)|<xref:EnvDTE100.vsDocumentDockPreferenceOptions>. Açılan belgeyi eklemek için sekme kutusu içinde konumlandırın.|
+
+## <a name="extension-manager"></a>Uzantı Yöneticisi
+ `DTE.Properties("Environment", "ExtensionManager")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|EnableAdminExtensions|Get/Set (Boole)|, Visual Studio yönetici kimlik bilgileri altında çalıştırıldığında kullanıcı başına uzantıları yükler. Bu değer değiştirildikten sonra Visual Studio 'Nun yeniden başlatılması gerekir.|
+|EnableOnline|Get/Set (Boole)|Visual Studio Galerisinde uzantılara erişimi sağlar.|
+|AutomaticallyCheckForUpdates|Get/Set (Boole)|Yüklü uzantılara yönelik güncelleştirmeleri otomatik olarak denetler.|
+
+## <a name="find-and-replace"></a>Bulma ve Değiştirme
+ `DTE.Properties("Environment", "FindAndReplace")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|ShowWarningMessages|Get/Set (Boole)|Uyarı iletilerini görüntüler.|
+|Initializefromeditor|Get/Set (Boole)|, Düzenleyiciden metni **bul** kutusunu otomatik olarak doldurur.|
+|Showmessagekutularý|Get/Set (Boole)|Bilgilendirici iletileri görüntüler.|
+|HideWindowsAfterMatchFromQuickFindReplace|Get/Set (Boole)|**Hızlı bul** veya **Hızlı Değiştir**kullanılarak bir eşleşme olduktan sonra **Bul ve Değiştir** penceresini gizler.|
+
+## <a name="import-and-export-settings"></a>Ayarları İçeri ve Dışarı Aktarma
+ `DTE.Properties("Environment", "Import and Export Settings")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|TrackTeamSettings|Get/Set (Boole)|TeamSettingsFile tarafından belirtilen dosyadaki ayarları kullanır.|
+|TeamSettingsFile|Get/Set (dize)|Takım ayarlarına sahip dosyanın adı.|
+|Oto SaveFile|Get/Set (dize)|Kullanıcı ayarlarının otomatik olarak kaydedildiği dosyanın adı.|
+
+## <a name="international-settings"></a>Uluslararası Ayarlar
+ `DTE.Properties("Environment", "International")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|Dil|Get/Set (dize)|Visual Studio için geçerli dilin LCıD değeri.|
+
+## <a name="keyboard"></a>Klavye
+ `DTE.Properties("Environment", "Keyboard")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|Düzen|Get/Set (dize)|Yerleşik bir düzen içeren bir dize, yüklenen. vsk dosyasının tam yolunu içeren bir dize döndürür veya. vsk dosyası yüklü değilse "(varsayılan)".|
+
+## <a name="projects-and-solution"></a>Projeler ve çözüm
+ `DTE.Properties("Environment", "ProjectsAndSolution")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|OnRunOrPreview|Get/Set (dize)|IDE 'nin, geliştirilmiş bir projeyi önizlemeden veya çalıştırmadan önce her şeyi kaydedip etmeyeceğini belirler.|
+|ProjectsLocation|Get/Set (dize)|**Proje Ekle** iletişim kutusunun yeni projeleri kaydettiği varsayılan dizini belirler.|
+|ShowOutputWindowBeforeBuild|Get/Set (Boole)|Bir yapılandırmanın başlatılmasının, **Çıkış** penceresini görüntüleyip görüntülemediğini belirler.|
+|ShowTaskListAfterBuild|Get/Set (Boole)|Derleme tamamlandığında, başarısız bir derleme işleminin **görev listesi** görüntüleyip görüntülemediğini belirler.|
+|Trackfileselectionınexplorer|Get/Set (Boole)|Geçerli öğenin **Çözüm Gezgini**izlenip izlenmeyeceğini belirler.|
+|AlwaysShowSolutionNode|Get/Set (Boole)|Çözüm düğümünün görüntülenip görüntülenmeyeceğini belirler.|
+|OnlySaveStartupProjectsAndDependencies|Get/Set (Boole)|Kaydetme işlemlerinin başlangıç projeleri ve bunların bağımlı dosyalarıyla sınırlı olup olmadığını belirler.|
+|ShowAdvancedBuildConfigurations|Get/Set (Boole)|Gelişmiş derleme yapılandırmalarının görüntülenip görüntülenmeyeceğini belirler.|
+|Concurrentderlemeler|Get/Set (dize)|Gerçekleşebileceğini en fazla paralel proje derlemesi sayısını belirler.|
+|SaveNewProjects|Get/Set (Boole)|Yeni projelerin oluşturulduktan sonra otomatik olarak kaydedilip kaydedilmediğini belirler.|
+|PromptForRenameSymbol|Get/Set (Boole)|Dosyalar yeniden adlandırıldığında sembolik yeniden adlandırma isteyip istemediğinizi belirtir.|
+|OnRunWhenErrors|Get/Set (Enum)|Bir derleme hatalarla tamamlandığında çalıştırma davranışını belirtir.|
+|OnRunWhenOutOfDate|Get/Set (Enum)|Bir proje güncel olmadığında çalıştırılacak davranışı belirtir.|
+|ProjectTemplates konumu|Get/Set (dize)|Kullanıcı projesi şablonlarını içeren dizin.|
+|Projectıtemtemplates konumu|Get/Set (dize)|Kullanıcı öğesi şablonlarını içeren dizin.|
+|DefaultBehaviorForStartupProjects|Get/Set (dize)||
+|MSBuildOutputVerbosity|Get/Set (dize)|Derleme çıkışı için ayrıntı düzeyini belirtir.|
+
+## <a name="startup"></a>Başlangıç
+ `DTE.Properties("Environment", "Startup")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|OnStartUp|Get/Set (Enum)|Başlangıçta gerçekleştirilecek eylem, <xref:EnvDTE.vsStartUp> 0 ile 5 arasında değerler içeren:<br /><br /> -0: giriş sayfasını aç<br />-1: son yüklenen çözümü yükle<br />-2: **Proje Aç** iletişim kutusunu göster<br />-3: **Yeni proje** göster iletişim kutusu<br />-4: boş ortamı göster<br />-5: başlangıç sayfasını göster|
+|StartPageRSSUrl 'Si|Get/Set (dize)|Başlangıçta kullanılan RSS akışı URL 'SI.|
+|StartPageRefreshDownloadedContent|Get/Set (Boole)|StartPageRefreshInterval içinde belirtilen aralığın her geçtikten sonra başlangıç sayfasını yeniler.|
+|StartPageRefreshInterval|Al/ayarla (kısa)|Başlangıç sayfasını yenilemek için dakika cinsinden Aralık.|
+
+## <a name="tasklist"></a>KILL
+ `DTE.Properties("Environment", "TaskList")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|ConfirmTaskDeletion|Get/Set (Boole)|**Görev listesi**görevler silinirken bir onay kutusunun görüntülenip görüntülenmeyeceğini belirtir.|
+|WarnOnAddingHiddenItem|Get/Set (Boole)|Gösterilmeyecek bir kullanıcı görevi eklerken uyarılmak isteyip istemediğinizi belirtir.|
+|DontShowFilePaths|Get/Set (Boole)|Görev Listesi tam dosya yollarının gösterilip gösterilmeyeceğini belirtir.|
+|CommentTokens|Güvenli|Açıklama belirteci değerlerinin bir SafeArray değerini döndürür. Her birinin alanları, `Name` (dize) ve `Priority` (<xref:EnvDTE.vsTaskPriority>, yüksek, orta veya düşük) vardır.|
+
+## <a name="web-browser"></a>Web tarayıcısı
+ `DTE.Properties("Environment", "WebBrowser")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|Değiştirir|Get/Set (dize)|Giriş sayfası URL 'sini temsil eder.|
+|SearchPage|Get/Set (dize)|Arama sayfası URL 'sini temsil eder.|
+|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (kaynak, tasarım, dış).|
+|ViewSourceExternalProgram|Get/Set (dize)|Dış kaynak görüntüleyicisinin yolu.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Seçenekler sayfa [seçenekleri sayfası, yazı tipleri ve renkler düğüm özellikleri](../../ide/reference/options-page-fonts-and-colors-node-properties.md) [Seçenekler sayfası, metin düzenleyici düğümü özellikleri](../../ide/reference/options-page-text-editor-node-properties.md) [ortam seçenekleri Iletişim kutusu](../../ide/reference/environment-options-dialog-box.md) [üzerinde özellik öğelerinin adlarını belirleme](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa) [seçenekleri ayarları denetleniyor](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)

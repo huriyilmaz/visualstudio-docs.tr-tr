@@ -9,17 +9,17 @@ helpviewer_keywords:
 - service references [Visual Studio], configuring behavior
 - Configure Service Reference dialog box
 ms.assetid: 25e4c36b-2db6-4e71-9010-b7068255d09d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1cf4a809c1353f2fe30383a312f65b6c623083db
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 033663c347a39c63a76bddd10625bdc86cec1f00
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925677"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72642855"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Hizmet Başvurusu Yapılandır iletişim kutusu
 
@@ -43,7 +43,7 @@ ms.locfileid: "68925677"
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-**Adresi**
+**Adrestir**
 
 Hizmet başvurusunun bir hizmet için aradığı Web adresini güncelleştirir. Örneğin, geliştirme sırasında hizmet bir geliştirme sunucusunda barındırılabilir ve daha sonra bir üretim sunucusuna taşınabilir ve bir adres değişikliği tasarımda.
 
@@ -55,7 +55,7 @@ Hizmet başvurusunun bir hizmet için aradığı Web adresini güncelleştirir. 
 WCF istemci sınıfları için kod erişim düzeyini belirler.
 
 > [!NOTE]
-> Web sitesi projeleri için, bu seçenek her zaman olarak `Public` ayarlanır ve değiştirilemez. Daha fazla bilgi için bkz. [hizmet başvurularına sorun giderme](../data-tools/troubleshooting-service-references.md).
+> Web sitesi projeleri için, bu seçenek her zaman `Public` olarak ayarlanır ve değiştirilemez. Daha fazla bilgi için bkz. [hizmet başvurularına sorun giderme](../data-tools/troubleshooting-service-references.md).
 
 **Zaman uyumsuz işlemler oluşturma**
 
@@ -105,5 +105,5 @@ Proje veya Web sitesi için başvurulan derlemelerin bir listesini içerir. **Be
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Web hizmetine başvuru ekleme](how-to-add-update-or-remove-a-wcf-data-service-reference.md)
+- [Nasıl yapılır: bir Web hizmetine başvuru ekleme](how-to-add-update-or-remove-a-wcf-data-service-reference.md)
 - [Windows Communication Foundation Hizmetleri ve WCF Veri Hizmetleri](../data-tools/configure-service-reference-dialog-box.md)

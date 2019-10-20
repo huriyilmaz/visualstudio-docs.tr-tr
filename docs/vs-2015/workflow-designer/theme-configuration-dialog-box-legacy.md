@@ -1,5 +1,5 @@
 ---
-title: Tema yapılandırması iletişim kutusu (eski) | Microsoft Docs
+title: Tema yapılandırması Iletişim kutusu (eski) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -11,33 +11,32 @@ helpviewer_keywords:
 - Theme Configuration dialog box
 ms.assetid: 9e6d182a-c4d9-4e71-b2b9-02f675fc2b29
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 825ccbf0750c1b8ac07fe02ea87ae6eddee4f455
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8171c6dcfe285ade07531896893915d0e209e0c1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976746"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670191"
 ---
 # <a name="theme-configuration-dialog-box-legacy"></a>Tema Yapılandırması İletişim Kutusu (Eski)
-Bu konu açıklar nasıl **konfigurace Motivu** eski iletişim kutusunda [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- Bir tema, arka plan ve ön plan renkleri, stiller, simgeler ve diğer görsel öğeleri bir iş akışının tanımlar. Diğer iş akışları tarafından Temalar yeniden kullanmak üzere kaydedebilirsiniz.  
-  
- Oluşturma ve kullanarak temaları düzenleme **konfigurace Motivu** iletişim kutusu. İletişim kutusunu açmak için seçmeniz **yeni tema oluştur** üzerinde **iş akışı** menüsü veya sağ tıklayarak iş akışı tasarım yüzeyi ve select **yeni tema oluştur**.  
-  
- Aşağıdaki tabloda kullanıcı arabirimi (UI) öğelerini açıklar **konfigurace Motivu** iletişim kutusu.  
-  
-|Arabirim Öğesi|Açıklama|  
-|----------------|-----------------|  
-|**Tema adı:**|Temayı tanımlayan adı [temalar, iş akışı Tasarımcısı, Seçenekler iletişim kutusu (eski)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md). Yeni temaları takımdaki herhangi biri bir ad oluşturulur.|  
-|**Tema konumu:**|Dosya adı ve Tema dosyasının yolu. Takımdaki herhangi biri dosya adı yeni temalar oluşturulan tema adı temel alınarak oluşturulur. Oluşturulan tema adını değiştirirseniz, tema adı ile eşleşmesi için dosya adını değiştirmek isteyebilirsiniz.|  
-|**...**|.Wtm dosya uzantısını kullanan iş akışı Tema dosyasını kaydetmek istediğiniz konumu seçmek için tıklayın. Seçilen yol olarak görüldüğü **tema konumu** metin kutusu.|  
-|**Tasarımcısı'nı seçin ve özelliklerini yapılandırın:**|Sol bölmede temayı özelleştirilebilir etkinlikleri ağaç görünümünü listeler. Ağaç görünümünde bir etkinlik seçin ve tema özellikleri etkinliğinin sağındaki ağaç görünümü bölmesinde Özellikler bölmesinde görüntülenir. Bir özellik değerini değiştirmek için tıklayın.|  
-|**Önizleme**|Bir pencere etkileri özellik değişikliklerinin önizlemesini görüntülemek için tıklayın.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Temalar, iş akışı Tasarımcısı, Seçenekler iletişim kutusu (eski)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)   
- [Windows Workflow Foundation Kullanıcı Arabirimi Yardımı için Eski Tasarımcı](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] **Tema yapılandırması** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+
+ Bir tema, bir iş akışının arka plan ve ön plan renklerini, stillerini, simgelerini ve diğer görsel öğelerini tanımlar. Temaları diğer iş akışları tarafından yeniden kullanmak üzere kaydedebilirsiniz.
+
+ **Tema yapılandırması** iletişim kutusunu kullanarak Temalar oluşturup düzenleyebilirsiniz. İletişim kutusunu açmak için, **Iş akışı** menüsünde **Yeni Tema oluştur** ' u seçin veya iş akışı tasarım yüzeyine sağ tıklayıp **Yeni Tema oluştur**' u seçin.
+
+ Aşağıdaki tabloda **Tema yapılandırması** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
+
+|Arabirim Öğesi|Açıklama|
+|----------------|-----------------|
+|**Tema adı:**|[Temalar, iş akışı Tasarımcısı, Seçenekler Iletişim kutusu (eski)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)içinde temayı tanımlayan ad. Yeni Temalar için değiştirilebilir bir ad oluşturulur.|
+|**Tema konumu:**|Tema dosyasının dosya adı ve yolu. Oluşturulan Tema adına göre yeni temalar için bir değiştirilebilir dosya adı oluşturulur. Oluşturulan tema adını değiştirirseniz, dosya adını tema adıyla eşleşecek şekilde değiştirmek isteyebilirsiniz.|
+|**...**|Bir. WTM dosya adı uzantısı kullanan iş akışı tema dosyasının kaydedileceği konumu seçmek için tıklayın. Seçilen yol **Tema konumu** metin kutusunda görünür.|
+|**Tasarımcı seçin ve özellikleri yapılandırın:**|Sol bölmede, temanın özelleştirilebilecek etkinliklerinin ağaç görünümü listelenir. Ağaç görünümünde bir etkinlik seçin ve etkinliğin tema özellikleri, ağaç görünümü bölmesinin sağında olan Özellikler bölmesinde görüntülenir. Değerini değiştirmek için bir özelliğe tıklayın.|
+|**Önizleme**|Özellik değişikliklerinin etkilerini önizlemek üzere bir pencere görüntülemek için tıklayın.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [WINDOWS Workflow FOUNDATION UI Yardımı Için](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md) [Temalar, iş akışı Tasarımcısı, Seçenekler Iletişim kutusu (eski)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md) eski tasarımcı

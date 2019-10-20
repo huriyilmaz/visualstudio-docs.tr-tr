@@ -4,37 +4,58 @@ ms.date: 08/03/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - fxcop analyzers
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: fec188ba61a7e4d3f27caad03f0a5d32b6758a32
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 9791e2dbb6d4a82a49539216eda53d217140bd52
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974971"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649334"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Visual Studio 'da FxCop çözümleyicileri 'ni yükler
 
 Microsoft, eski analizde en önemli "FxCop" kurallarını içeren [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)adlı bir çözümleyiciler kümesi oluşturdu. Bu çözümleyiciler, kodunuzu güvenlik, performans ve tasarım sorunlarıyla ilgili diğer kullanıcılar arasında denetler.
 
-Bu FxCop çözümleyicileri 'ni, Visual Studio 'ya bir NuGet paketi veya VSıX uzantısı olarak yükleyebilirsiniz. Her birinin olumlu ve olumsuz yönleri hakkında bilgi edinmek için bkz. [NuGet Package vs. VSıX uzantısı @ no__t-0.
+Bu FxCop çözümleyicileri 'ni, Visual Studio 'ya bir NuGet paketi veya VSıX uzantısı olarak yükleyebilirsiniz. Her birinin olumlu ve olumsuz yönleri hakkında bilgi edinmek için bkz. [NuGet Package vs. VSIX uzantısı](roslyn-analyzers-overview.md#nuget-package-versus-vsix-extension).
 
 ## <a name="nuget-package"></a>NuGet paketi
 
-[Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketini doğrudan projenin kod analizi özellikleri sayfasından yükleyebilirsiniz:
+::: moniker range=">=vs-2019"
+
+Visual Studio 2019 sürüm 16,3 ve sonraki sürümlerde, [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketini doğrudan projenin kod analizi özellikleri sayfasından yükleyebilirsiniz:
 
 1. **Çözüm Gezgini**' de proje düğümüne sağ tıklayın, **Özellikler**' i seçin ve ardından **Kod Analizi** sekmesini seçin.
 
    ![Visual Studio 'da Özellikler sayfasından FxCop çözümleyicileri paketini yükler](media/install-fxcop-properties-page.png)
 
-2. **Yükle**’yi seçin.
+2. **Yükle**'yi seçin.
 
-   Visual Studio, Microsoft. Codeçözümleyiciler. Fxcopçözümleyiciler paketinin en son sürümünü yüklüyor. Derlemeler,  >  Çözümleyicileri **başvuruları**altında **Çözüm Gezgini** görüntülenir.
+   Visual Studio, Microsoft. Codeçözümleyiciler. Fxcopçözümleyiciler paketinin en son sürümünü yüklüyor. Derlemeler, **Çözüm Gezgini**  > **çözümleyiciler**altında görüntülenir.
 
    ![Çözüm Gezgini içinde düğüm Çözümleyicileri](media/solution-explorer-analyzers-node.png)
+
+Visual Studio 2019 ' nin eski bir sürümünü kullanıyorsanız, paketi [Paket Yöneticisi konsolunu](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) veya [Paket Yöneticisi Kullanıcı arabirimini](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)kullanarak yükleyebilirsiniz.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+1. Visual Studio sürümünüze bağlı olarak [hangi çözümleyici paketi sürümünün yükleneceğini saptayın](#fxcopanalyzers-package-versions) .
+
+2. Paketi, paket [Yöneticisi konsolunu](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) veya [Paket Yöneticisi Kullanıcı arabirimini](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)kullanarak Visual Studio 'ya yükler.
+
+   > [!NOTE]
+   > Her çözümleyici paketi için nuget.org sayfasında, **Paket Yöneticisi konsoluna**yapıştırmanın komutu gösterilmektedir. Metni panoya kopyalamak için kullanışlı bir düğme de vardır.
+   >
+   > ![Paket Yöneticisi konsolu komutunu gösteren NuGet.org sayfası](media/nuget-package-manager-command.png)
+
+   Çözümleyici derlemeleri yüklenir ve > **çözümleyiciler** **' ın altında** **Çözüm Gezgini** görüntülenir.
+
+::: moniker-end
 
 ### <a name="custom-installation"></a>Özel yükleme
 
@@ -49,7 +70,7 @@ Bu FxCop çözümleyicileri 'ni, Visual Studio 'ya bir NuGet paketi veya VSıX u
 
 Visual Studio sürümünüz için FxCop çözümleyicileri paketinin hangi sürümünün yükleneceğini öğrenmek için aşağıdaki yönergeleri kullanın:
 
-| Visual Studio sürümü | FxCop Çözümleyicisi paket sürümü |
+| Visual Studio sürüm | FxCop Çözümleyicisi paket sürümü |
 | - | - |
 | Visual Studio 2019 (tüm sürümler)<br />Visual Studio 2017 sürüm 15,8 ve üzeri | [sürümü](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) |
 | Visual Studio 2017 sürüm 15,5-15,7 | [2.6.3](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3) |
@@ -59,7 +80,7 @@ Visual Studio sürümünüz için FxCop çözümleyicileri paketinin hangi sür�
 | Visual Studio 2015 Güncelleştirme 1 | [1.1.0](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.1.0) |
 | Visual Studio 2015 RTW | [1.0.1](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.0.1) |
 
-## <a name="vsix"></a>VSIX
+## <a name="vsix"></a>VSıX
 
 ::: moniker range="vs-2017"
 

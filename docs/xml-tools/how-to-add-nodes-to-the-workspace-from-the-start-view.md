@@ -1,34 +1,34 @@
 ---
-title: XML şema Tasarımcısı'nda başlangıç görünümünden çalışma alanına düğüm ekleme
+title: XML şema tasarımcısında başlangıç görünümünden çalışma alanına düğüm ekleme
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3fc7af94-dcb8-4226-a577-43f03664388b
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a62b2225eec77b2b7e2a9f00af0ff5492640c19
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: e6f1471f03dac54b484e37b2319e15380055661e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432175"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646006"
 ---
-# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Nasıl yapılır: Başlangıç Görünümünden çalışma alanına düğüm ekleme
+# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Nasıl yapılır: başlangıç görünümünden çalışma alanına düğüm ekleme
 
-Bu konu, genel düğüm eklemeyi açıklar [XML şema Tasarımcısı çalışma alanı](../xml-tools/xml-schema-designer-workspace.md) gelen [başlangıç görünümündeki](../xml-tools/start-view.md).
+Bu konuda, [Başlangıç görünümünden](../xml-tools/start-view.md) [XML şema Tasarımcısı çalışma alanına](../xml-tools/xml-schema-designer-workspace.md) genel düğümlerin nasıl ekleneceği açıklanmaktadır.
 
-## <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>Düğüm başlangıç görünümünden çalışma alanına eklemek için
+## <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>Başlangıç görünümünden çalışma alanına düğüm eklemek için
 
-1. Bağlantısındaki [nasıl yapılır: Bir XSD şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).
+1. [Nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
 
-2. XML Düzenleyicisi'nde sağ tıklayıp **Görünüm Tasarımcısı**.
+2. XML düzenleyicisine sağ tıklayıp **Görünüm Tasarımcısı**' nı seçin.
 
      Başlangıç görünümü görüntülenir.
 
-     İçinde **şema kümesi ayrıntıları** bölümünde, iki olduğuna dikkat edin (**2**) **genel karmaşık türler**.
+     **Şema kümesi ayrıntıları** bölümünde iki (**2**) **genel karmaşık tür**olduğunu fark edersiniz.
 
-3. Tıklayarak **ekleme** sağındaki bağlantı **genel karmaşık türler** başlığı.
+3. **Genel karmaşık türler** başlığının sağındaki **Ekle** bağlantısına tıklayın.
 
-     `USAddress` Ve `PurchaseOrderType` karmaşık tür düğümleri graf görünümünü tasarım yüzeyinde görünür.
+     @No__t_0 ve `PurchaseOrderType` karmaşık tür düğümleri grafik görünümünün tasarım yüzeyinde görünür.

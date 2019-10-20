@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Temel Phong Gölgelendiricisi Oluşturma'
+title: 'Nasıl Yapılır: Temel Phong Gölgelendiricisi Oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 895b797ad07018a9f4d4bf4c14b7f358a26f8eaa
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 5141df9f7504229733a269c2f7b0f94903064d8f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924412"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635935"
 ---
-# <a name="how-to-create-a-basic-phong-shader"></a>Nasıl yapılır: Temel Phong gölgelendiricisi oluşturma
+# <a name="how-to-create-a-basic-phong-shader"></a>Nasıl yapılır: temel bir Phong gölgelendiricisi oluşturma
 
 Bu makalede, klasik Phong aydınlatma modelini uygulayan bir aydınlatma gölgelendiricisi oluşturmak için Gölgelendirici Tasarımcısının ve yönlendirilmiş Graf gölgelendirici dilinin (DGSL) nasıl kullanılacağı gösterilmektedir.
 
@@ -23,11 +23,11 @@ Bu makalede, klasik Phong aydınlatma modelini uygulayan bir aydınlatma gölgel
 
 Phong aydınlatma modeli, bir yüzey 'nin yansıtıcı özelliklerini taklit eden yansımalı vurgulama 'i içerecek şekilde lambda Yansımalı bileşen Lambert aydınlatma modelinde kullanılan aynı yönlü ışık kaynaklarından ek aydınlatma sağlar, ancak nihai renge olan katkı farklı şekilde işlenir. Yansımalı vurgulama, Görünüm yönü, hafif kaynakların yönü ve yüzey yönü arasındaki ilişkiye bağlı olarak sahnenin her yüzeyi farklı şekilde etkiler. Bu, yüzeysel renk, yüzeysel güç, yüzey yönü ve açık kaynakların rengi, yoğunluğu ve yönü hakkında bir üründür. Açık kaynağı doğrudan görüntüleyicide yansıtan yüzeyler, görüntüleyicideki ışık kaynağını yansıtan maksimum yansımalı katkı ve yüzeyleri, hiçbir katkı almaz. Phong aydınlatma modelinde, bir veya daha fazla yansımalı bileşen, nesne üzerindeki her bir nokta için yansımalı Vurgulamanın rengini ve yoğunluğunu belirleyip, daha sonra pikselin son rengini oluşturmak için Lambert aydınlatma modelinin sonucuna eklenir .
 
-Lambert aydınlatma modeli hakkında daha fazla bilgi için bkz [. nasıl yapılır: Temel Lambert gölgelendiricisi](../designers/how-to-create-a-basic-lambert-shader.md)oluşturun.
+Lambert aydınlatma modeli hakkında daha fazla bilgi için bkz. [nasıl yapılır: temel Lambert gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-lambert-shader.md).
 
 Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görüntülendiğinden emin olun.
 
-1. Aşağıda açıklandığı [gibi bir Lambert gölgelendiricisi oluşturun: Temel Lambert gölgelendiricisi](../designers/how-to-create-a-basic-lambert-shader.md)oluşturun.
+1. [Nasıl yapılır: temel Lambert gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-lambert-shader.md)bölümünde açıklandığı gibi bir Lambert gölgelendiricisi oluşturun.
 
 2. **Son renk** düğümünden **Lambert** düğümünün bağlantısını kesin. **Lambert** düğümünün **RGB** terminalini seçin ve ardından **Bağlantıları Kes**' i seçin. Bu, bir sonraki adımda eklenen düğüm için yer açar.
 
@@ -42,7 +42,7 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
    Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir ekip modeline uygulanan gölgelendirici önizlemesi gösterilmektedir.
 
 > [!NOTE]
-> Bu çizimde gölgelendirici etkisini daha iyi göstermek için, gölgelendiricinin **Materialdağıt** parametresi kullanılarak turuncu bir renk belirtilmiştir ve bu, bir metalik bakış ve **Materialspeculargüç** parametreleri. Malzeme parametreleri hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)gölgelendiricilerin önizlemesi bölümü.
+> Bu çizimde gölgelendirici etkisini daha iyi göstermek için, gölgelendiricinin **Materialdağıt** parametresi kullanılarak turuncu bir renk belirtilmiştir ve **Bu, bir metalik bakış ve** **Materialspeculargüç** parametreleri. Malzeme parametreleri hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)gölgelendiricilerin önizlemesi bölümü.
 
 ![Gölgelendirici Grafiği ve efektinin önizlemesi](../designers/media/digit-lighting-graph.png)
 
@@ -57,11 +57,11 @@ Aşağıdaki çizimde, bu belgede bir 3B modele uygulanan gölgelendirici göste
 
 ![Bir modele uygulanan Phong aydınlatma](../designers/media/digit-lighting-model.png)
 
-Bir 3B modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz [. nasıl yapılır: 3B modele](../designers/how-to-apply-a-shader-to-a-3-d-model.md)gölgelendirici uygulayın.
+3D modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir gölgelendiriciyi bir gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Nasıl yapılır. 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [Nasıl yapılır: Gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md)
 - [Nasıl yapılır: Temel Lambert gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-lambert-shader.md)
 - [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)

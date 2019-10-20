@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Code Analysis page in Project Designer
 - Project Designer, Code Analysis page
 ms.assetid: 71743d26-4da5-4f7d-a403-7ab96cf2ef2e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c31617def66499e29c4c2fc3e2a1804e7446d9c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: de941e6b1a07873c2c160351cce561721e845cdb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926253"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72609851"
 ---
 # <a name="code-analysis-project-designer"></a>Kod Çözümlemesi, Proje Tasarımcısı
 
@@ -26,44 +26,44 @@ Kodunuzda çalıştırmayı tercih ettiğiniz kod analizi aracını içerir. Ara
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-Kod Analysis etkinleştir\
+Kod analizini etkinleştir \
 Projeniz için kod analizini etkinleştirilir veya devre dışı bırakır.
 
-Tasarım Rules\
+Tasarım kuralları \
 Tasarım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Genelleştirme Rules\
+Genelleştirme kuralları \
 Genelleştirme kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Birlikte çalışabilirlik Rules\
+Birlikte çalışabilirlik kuralları \
 Birlikte çalışabilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Bakım Rules\
+Bakım kuralları \
 Bakım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Mobility Rules\
+Mobility kuralları \
 Mobility kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Rules adlandırma\
+Adlandırma kuralları \
 Adlandırma kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Performans Rules\
+Performans kuralları \
 Performans kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Taşınabilirlik Rules\
+Taşınabilirlik kuralları \
 Taşınabilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Güvenilirlik Rules\
+Güvenilirlik kuralları \
 Güvenilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Güvenlik Rules\
+Güvenlik kuralları \
 Güvenlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Kullanım Rules\
+Kullanım kuralları \
 Kullanım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yönetilen Kod için Kod Çözümleme Uyarıları](../../code-quality/code-analysis-for-managed-code-warnings.md)
 - [Yönetilen Kod için Kod Çözümlemesine Genel Bakış](../../code-quality/code-analysis-for-managed-code-overview.md)
-- [İzlenecek yol: Kod kusurları için yönetilen kodu analiz etme](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
+- [İzlenecek yol: Kod Kusurları için Yönetilen Kodu Analiz Etme](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

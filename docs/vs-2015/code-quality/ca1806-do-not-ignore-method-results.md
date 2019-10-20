@@ -1,5 +1,5 @@
 ---
-title: 'CA1806: Yöntem sonuçlarını yoksaymayın | Microsoft Docs'
+title: 'CA1806: metot sonuçlarını yoksayma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,88 +12,88 @@ helpviewer_keywords:
 - DoNotIgnoreMethodResults
 ms.assetid: fd805687-0817-481e-804e-b62cfb3b1076
 caps.latest.revision: 27
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 117e26fca367c8cf00604bebe01a00f4df58a0ee
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f68ab71d9ce4fab1b0612f15d866c58e302a317e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437392"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671501"
 ---
-# <a name="ca1806-do-not-ignore-method-results"></a>CA1806: Metot sonuçlarını yoksaymayın
+# <a name="ca1806-do-not-ignore-method-results"></a>CA1806: Yöntem sonuçlarını yoksaymayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||  
-|-|-|  
-|TypeName|DoNotIgnoreMethodResults|  
-|CheckId|CA1806|  
-|Kategori|Microsoft.Usage|  
-|Yeni Değişiklik|Bozucu olmayan|  
-  
-## <a name="cause"></a>Sebep  
- Bu uyarı için birkaç olası nedeni vardır:  
-  
-- Yeni bir nesne oluşturulur, ancak hiç kullanılmadı.  
-  
-- Oluşturur ve yeni bir dize döndüren bir yöntem olarak adlandırılır ve yeni bir dize hiçbir zaman kullanılmaz.  
-  
-- Bir HRESULT ya da hata kodunu döndüren bir COM veya P/Invoke yöntemi hiçbir zaman kullanılmaz. Kural Tanımı  
-  
-  Gereksiz nesne oluşturma ve kullanılmayan nesnenin ilişkili çöp toplama performansını düşürebilir.  
-  
-  Dizeleri sabittir ve yöntemleri String.ToUpper gibi bir dize yöntemi çağrılırken dizesinde örneğini değiştirmek yerine yeni bir örneğini döndürür.  
-  
-  HRESULT ya da hata kodu yoksayılıyor beklenmeyen davranışlara hata koşullarında ya da düşük kaynak koşulları yol açabilir.  
-  
-## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?  
- Bir yöntemi hiçbir zaman kullanılmaz B nesnesinin yeni bir örneğini oluşturur, örneği bir bağımsız değişken olarak başka yönteme geçirin veya örneği bir değişkene atayın. Nesne oluşturma gereksizse kaldıramazsınız- veya -  
-  
- Yöntemi bir B yöntemini çağırır, ancak B yöntemi döndüren yeni dize örneğinde kullanmaz. Örneği bir bağımsız değişken olarak başka yönteme geçirin, örneği bir değişkene atayın. Ya da gereksizse çağrısını kaldırın.  
-  
- -veya-  
-  
- Yöntem, yöntem A B yöntemini çağırır, ancak HRESULT kullanmaz veya hata kodu döndürür. Sonucu bir koşullu deyimde kullanın, sonucu bir değişkene atayın ya da başka yönteme bağımsız değişken olarak geçirin.  
-  
-## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında  
- Nesne oluşturma işlemi bazı amaca hizmet eder sürece bu kuraldan bir uyarıyı bastırmayın.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, çağıran String.Trim sonucunu yoksayar bir sınıfı gösterir.  
-  
-<!-- TODO: review snippet reference  [!CODE [FxCop.Usage.DoNotIgnoreMethodResults#1](FxCop.Usage.DoNotIgnoreMethodResults#1)]  -->  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, önceki ihlali String.Trim sonucu geri çağrıldı değişken atanarak düzeltir.  
-  
-<!-- TODO: review snippet reference  [!CODE [FxCop.Usage.DoNotIgnoreMethodResults2#1](FxCop.Usage.DoNotIgnoreMethodResults2#1)]  -->  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, oluşturduğu bir nesne kullanmayan bir yöntemi gösterir.  
-  
+|||
+|-|-|
+|TypeName|DoNotIgnoreMethodResults|
+|CheckId|CA1806|
+|Kategori|Microsoft. Usage|
+|Yeni Değişiklik|Kırılmamış|
+
+## <a name="cause"></a>Sebep
+ Bu uyarının birkaç olası nedeni vardır:
+
+- Yeni bir nesne oluşturulur ancak hiç kullanılmaz.
+
+- Yeni bir dize oluşturan ve döndüren bir yöntem çağrılır ve yeni dize hiçbir şekilde kullanılmaz.
+
+- Hiçbir zaman kullanılmayan bir HRESULT veya hata kodu döndüren bir COM veya P/Invoke yöntemi. Kural Tanımı
+
+  Gereksiz nesne oluşturma ve kullanılmayan nesnenin ilişkili atık toplaması, performansı düşürür.
+
+  Dizeler sabittir ve String. ToUpper gibi yöntemler, çağıran yöntemde dize örneğini değiştirmek yerine bir dizenin yeni bir örneğini döndürür.
+
+  HRESULT veya hata kodu yok sayılıyor, hata koşullarında veya düşük kaynak koşullarında beklenmeyen davranışlara neden olabilir.
+
+## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
+ A yöntemi, hiç kullanılmamış bir B nesnesinin yeni bir örneğini oluşturursa, örneği bir bağımsız değişken olarak başka bir metoda geçirin veya örneği bir değişkene atayın. Nesne oluşturma gereksiz ise, bunu kaldırın.-veya-
+
+ If yöntemi B yöntemini çağırırsa, ancak B yönteminin döndürdüğü yeni dize örneğini kullanmaz. Örneği bir bağımsız değişken olarak başka bir yönteme geçirin, örneği bir değişkene atayın. Ya da gerekli değilse çağrıyı kaldırın.
+
+ veya
+
+ If yöntemi B yöntemini çağırırsa, ancak yöntemin döndürdüğü HRESULT veya hata kodunu kullanmaz. Sonucu bir koşullu ifadede kullanın, sonucu bir değişkene atayın ya da başka bir yönteme bağımsız değişken olarak geçirin.
+
+## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
+ Nesne oluşturma eylemi bir amaca hizmet etmediği takdirde bu kuraldan bir uyarıyı bastırmayın.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek String. Trim çağırma sonucunu yok sayan bir sınıfı gösterir.
+
+<!-- TODO: review snippet reference  [!CODE [FxCop.Usage.DoNotIgnoreMethodResults#1](FxCop.Usage.DoNotIgnoreMethodResults#1)]  -->
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, dizesinin sonucunu atayarak önceki ihlalin düzeltir. çağrıldığı değişkene geri kırpın.
+
+<!-- TODO: review snippet reference  [!CODE [FxCop.Usage.DoNotIgnoreMethodResults2#1](FxCop.Usage.DoNotIgnoreMethodResults2#1)]  -->
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, oluşturduğu bir nesneyi kullanmayan bir yöntemi gösterir.
+
 > [!NOTE]
-> Visual Basic'te bu ihlal oluşturulamayacak.  
-  
+> Bu ihlalin Visual Basic çoğaltılamaz.
+
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults3/cpp/FxCop.Usage.DoNotIgnoreMethodResults3.cpp#1)]
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults3/cs/FxCop.Usage.DoNotIgnoreMethodResults3.cs#1)]
- [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults3#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults3/vb/FxCop.Usage.DoNotIgnoreMethodResults3.vb#1)]  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir nesne gereksiz oluşturulmasını kaldırarak önceki ihlali düzeltir.  
-  
+ [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults3#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults3/vb/FxCop.Usage.DoNotIgnoreMethodResults3.vb#1)]
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, bir nesnenin gereksiz şekilde oluşturulmasını kaldırarak önceki ihlalin düzeltir.
+
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults4#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults4/cpp/FxCop.Usage.DoNotIgnoreMethodResults4.cpp#1)]
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults4#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults4/cs/FxCop.Usage.DoNotIgnoreMethodResults4.cs#1)]
- [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults4#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults4/vb/FxCop.Usage.DoNotIgnoreMethodResults4.vb#1)]  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, yerel GetShortPathName yöntemi döndürür hata kodu yoksayar bir yöntemi gösterir.  
-  
+ [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults4#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults4/vb/FxCop.Usage.DoNotIgnoreMethodResults4.vb#1)]
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, GetShortPathName yerel yönteminin döndürdüğü hata kodunu yok sayan bir yöntemi gösterir.
+
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults5/cpp/FxCop.Usage.DoNotIgnoreMethodResults5.cpp#1)]
- [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults5/cs/FxCop.Usage.DoNotIgnoreMethodResults5.cs#1)]  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, önceki ihlali hata kodu denetimi ve arama başarısız olduğunda bir özel durum düzeltir.  
-  
+ [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults5/cs/FxCop.Usage.DoNotIgnoreMethodResults5.cs#1)]
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, hata kodunu denetleyerek ve çağrı başarısız olduğunda bir özel durum oluşturarak önceki ihlalin düzeltir.
+
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults6/cpp/FxCop.Usage.DoNotIgnoreMethodResults6.cpp#1)]
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DoNotIgnoreMethodResults6/cs/FxCop.Usage.DoNotIgnoreMethodResults6.cs#1)]

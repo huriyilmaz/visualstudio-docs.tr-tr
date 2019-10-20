@@ -1,5 +1,5 @@
 ---
-title: N katmanlı uygulamalarda veri kümelerine kod ekleyin
+title: N katmanlı uygulamalarda Veri Kümelerine kod ekleme
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -8,45 +8,45 @@ dev_langs:
 helpviewer_keywords:
 - n-tier applications, extending DataSets
 ms.assetid: d43c2ccd-4902-43d8-b1a8-d10ca5d3210c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b776e75df2830b89fd1ffe9aed197e9cd1019851
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 3e5b3e44e1de085b5389ad0f50aed758f09a2759
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65458464"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648946"
 ---
-# <a name="add-code-to-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda veri kümelerine kod ekleyin
+# <a name="add-code-to-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda Veri Kümelerine kod ekleme
 
-Veri kümesi için bir parçalı sınıf dosyası oluşturma ve kod eklemeyi tarafından bir veri kümesinin işlevselliğini genişletebilirsiniz (kod eklemek yerine *DatasetName*. Dataset.Designer dosyası). Kısmi sınıflar arasında birden çok fiziksel dosyaları Bölünecek belirli bir sınıf için kod etkinleştirin. Daha fazla bilgi için [kısmi](/dotnet/visual-basic/language-reference/modifiers/partial) veya [kısmi sınıflar ve yöntemler](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).
+Veri kümesi için kısmi bir sınıf dosyası oluşturarak ve buna kod ekleyerek bir veri kümesinin işlevselliğini genişletebilirsiniz ( *DataSetName*'e kod eklemek yerine). DataSet. Designer dosyası). Kısmi sınıflar, belirli bir sınıfın kodunu birden çok fiziksel dosyaya bölünecek şekilde etkinleştirir. Daha fazla bilgi için bkz. [kısmi](/dotnet/visual-basic/language-reference/modifiers/partial) veya [kısmi sınıflar ve Yöntemler](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).
 
-Veri kümesi tanımında (yazılan veri kümesi) için yapılan değişiklikleri her zaman bir veri kümesini tanımlayan bir kod oluşturulur. Bu kod Ayrıca, herhangi bir veri kümesinin yapılandırmasını değiştirir Sihirbazı'nı çalıştırılması sırasında değişiklik yaptığınızda oluşturulur. Kodunuzu bir veri kümesi oluşturma işlemi sırasında silinmesini önlemek için veri kümesinin parçalı sınıf dosyası için kodu ekleyin.
+Veri kümesini tanımlayan kod, veri kümesi tanımına her değişiklik yapıldığında oluşturulur (yazılan veri kümesinde). Bu kod ayrıca, bir veri kümesinin yapılandırmasını değiştiren herhangi bir sihirbazın çalıştırılması sırasında değişiklikler yaptığınızda da oluşturulur. Bir veri kümesinin yeniden oluşturulması sırasında kodunuzun silinmesini engellemek için, veri kümesinin kısmi sınıf dosyasına kod ekleyin.
 
-Veri kümesini ve TableAdapter kodunu ayırdıktan sonra varsayılan olarak, her proje bir parçalı sınıf dosyasında sonucudur. Adlı bir dosya özgün proje sahip *DatasetName.Designer.vb* (veya *DatasetName.Designer.cs*), TableAdapter kodunu içerir. İçinde belirtilen projeyi **DataSet projesi** özellik adında bir dosya var *DatasetName.DataSet.Designer.vb* (veya *DatasetName.DataSet.Designer.cs*) . Bu dosya, veri kümesi kodunu içerir.
-
-> [!NOTE]
-> Veri kümelerini ve TableAdapter bağdaştırıcılarını ayırdığınızda (ayarlayarak **DataSet projesi** özelliği), projedeki varolan kısmi veri kümesi sınıfları olmaz taşınması otomatik olarak. Var olan veri kümesi kısmi sınıflarının veri kümesi projesine el ile taşınması gerekir.
+Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin, TableAdapter kodunu içeren *DataSetName. Designer. vb* (veya *DataSetName.Designer.cs*) adlı bir dosyası vardır. **DataSet projesi** özelliğinde belirtilen proje, *DataSetName. DataSet. Designer. vb* (veya *DataSetName.DataSet.Designer.cs*) adlı bir dosya içerir. Bu dosya veri kümesi kodunu içerir.
 
 > [!NOTE]
-> Doğrulama kodu eklenmesi gerektiğinde, yazılmış veri kümesi oluşturmak için işlevsellik sağlar. <xref:System.Data.DataTable.ColumnChanging> ve <xref:System.Data.DataTable.RowChanging> olay işleyicileri. Daha fazla bilgi için [bir n katmanlı bir veri kümesine doğrulama ekleme](../data-tools/add-validation-to-an-n-tier-dataset.md).
+> Veri kümelerini ve TableAdapters ayırabilirsiniz ( **veri kümesi proje** özelliğini ayarlayarak), projedeki mevcut kısmi veri kümesi sınıfları otomatik olarak taşınmaz. Mevcut veri kümesi kısmi sınıflarının veri kümesi projesine el ile taşınması gerekir.
 
-## <a name="to-add-code-to-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda veri kümelerine kod eklemek için
+> [!NOTE]
+> Doğrulama kodunun eklenmesi gerektiğinde, türü belirtilmiş veri kümesi <xref:System.Data.DataTable.ColumnChanging> ve <xref:System.Data.DataTable.RowChanging> olay işleyicilerini oluşturmak için işlevsellik sağlar. Daha fazla bilgi için bkz. [n katmanlı bir veri kümesine doğrulama ekleme](../data-tools/add-validation-to-an-n-tier-dataset.md).
 
-1. İçeren proje bulun *.xsd* dosya.
+## <a name="to-add-code-to-datasets-in-n-tier-applications"></a>N katmanlı uygulamalardaki veri kümelerine kod eklemek için
 
-2. Seçin **.xsd** dosyayı veri kümesini açın.
+1. *. Xsd* dosyasını içeren projeyi bulun.
 
-3. Kod (başlık çubuğundaki tablo adı) ekleyin ve ardından istediğiniz veri tablosuna sağ **kodu görüntüle**.
+2. Veri kümesini açmak için **. xsd** dosyasını seçin.
 
-     Kısmi sınıf oluşturulur ve Kod Düzenleyicisi'nde açılır.
+3. Kod eklemek istediğiniz veri tablosuna (başlık çubuğundaki tablo adı) sağ tıklayın ve ardından **kodu görüntüle**' yi seçin.
 
-4. Kısmi sınıf bildirimi içinde kod ekleyin.
+     Kod düzenleyicisinde kısmi bir sınıf oluşturulur ve açılır.
 
-     Aşağıdaki örnek, NorthwindDataSet'teki CustomersDataTable kod ekleme yeri gösterir:
+4. Kısmi sınıf bildiriminin içine kod ekleyin.
+
+     Aşağıdaki örnek, NorthwindDataSet 'teki CustomersDataTable öğesine kod nereye ekleneceğini gösterir:
 
     ```vb
     Partial Public Class CustomersDataTable
@@ -68,5 +68,5 @@ Veri kümesini ve TableAdapter kodunu ayırdıktan sonra varsayılan olarak, her
 - [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md)
 - [N katmanlı uygulamalarda TableAdapter’lara kod ekleme](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)
 - [TableAdapter’lar oluşturma ve yapılandırma](create-and-configure-tableadapters.md)
-- [Hiyerarşik güncelleştirmeye genel bakış](hierarchical-update.md)
-- [Visual Studio'da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md)
+- [Hiyerarşik Güncelleştirmeye Genel Bakış](hierarchical-update.md)
+- [Visual Studio 'da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md)

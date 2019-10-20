@@ -1,56 +1,56 @@
 ---
-title: Kodunuzdaki başvuruları bulma
+title: Kodunuzda başvuruları bulma
 ms.date: 09/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - code editor, find all references
 - find all references
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0d49223d61e3c72f2726b89de99ba9c092ddefe
-ms.sourcegitcommit: fd5a5b057df3d733f5224c305096907989811f85
+ms.openlocfilehash: 523ec566e19614951169c184b4796834c4ab0838
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67195259"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603569"
 ---
 # <a name="find-references-in-your-code"></a>Kodunuzdaki başvuruları bulma
 
-Kullanabileceğiniz **tüm başvuruları Bul** belirli kod öğelerinin tabanınızın Burada başvurulan bulmak için komutu. **Tüm başvuruları Bul** komut başvurularını bulmak istediğiniz öğe (sağ tıklama) bağlam menüsünde kullanılabilir. Veya, klavye kullanıcısıysanız basın **Shift + F12**.
+Kodlarınızın tamamında belirli kod öğelerine nerede başvurulduğunu bulmak için **tüm başvuruları bul** komutunu kullanabilirsiniz. **Tüm başvuruları bul** komutu, başvuruları bulmak istediğiniz öğenin bağlam (sağ tıklama) menüsünde mevcuttur. Ya da bir klavye kullanıcısı kullanıyorsanız **SHIFT + F12**tuşlarına basın.
 
-Adlı bir araç penceresinde Sonuçların görüntülenme  **\<öğesi > başvuruları**burada *öğesi* aradığınız öğeyi adıdır. Araç çubuğunda **başvuruları** penceresi olanak sağlar:
-- Aşağı açılan liste kutusunda arama kapsamını değiştirin. Yalnızca değiştirilen belgeler kadar tüm çözümün tamamını bakın seçebilirsiniz.
-- Başvurulan öğeye seçerek kopyalama **kopyalama** düğmesi.
-- Düğmeler, liste veya basın sonraki veya önceki konuma Git seçim **F8** ve **Shift + F8** Bunu yapmak için anahtarları.
-- Seçim yaparak ve döndürülen sonuçlarda tüm filtreleri kaldırır **tüm filtreleri Temizle** düğmesi.
-- Nasıl döndürülen öğeleri değiştirmek ayarı seçerek gruplandırılır **gruplandırma ölçütü:** aşağı açılan liste kutusu.
-- Geçerli arama sonuçları penceresini seçerek korumak **sonuçları tut** düğmesi. Bu düğmeyi seçtiğinizde, bu pencerede geçerli arama sonuçları kalın ve yeni arama sonuçları yeni bir araç penceresi görüntülenir.
-- Arama dizeleri arama sonuçları içindeki metin girerek **arama tüm başvuruları Bul** metin kutusu.
+Sonuçlar **\<element > başvuruları**adlı bir araç penceresinde görüntülenir; burada *öğe* , aradığınız öğenin adıdır. **Başvurular** penceresindeki bir araç çubuğu şunları yapmanızı sağlar:
+- Açılan liste kutusunda aramanın kapsamını değiştirin. Yalnızca değiştirilen belgelerde, tüm çözüme kadar olan görünümü seçebilirsiniz.
+- Seçilen başvurulan öğeyi **Kopyala** düğmesini seçerek kopyalayın.
+- Listedeki bir sonraki veya önceki konuma gitmek için düğmeleri seçin veya **F8** **+ SHIFT + F8** tuşlarına basarak bunu yapın.
+- **Tüm filtreleri temizle** düğmesini seçerek döndürülen sonuçlarda bulunan filtreleri kaldırın.
+- **Gruplama ölçütü:** açılan liste kutusunda bir ayar seçerek döndürülen öğelerin nasıl gruplanacağını değiştirin.
+- **Sonuçları tut** düğmesini seçerek geçerli arama sonuçları penceresini tutun. Bu düğmeyi seçtiğinizde, geçerli arama sonuçları bu pencerede kalır ve yeni arama sonuçları yeni bir araç penceresinde görüntülenir.
+- **Tüm başvuruları bul** metin kutusuna metin girerek arama sonuçlarının içindeki dizeleri arayın.
 
-Ayrıca, fare başvurunun önizlemesini görmek için Arama sonuçlarından gelebilirsiniz.
+Ayrıca, başvurunun bir önizlemesini görmek için fareyi herhangi bir arama sonucunun üzerine de taşıyabilirsiniz.
 
-![Tüm başvuruları Bul penceresi](../ide/media/vside_findallreferences.png)
+![Tüm başvuruları bul araç penceresi](../ide/media/vside_findallreferences.png)
 
-## <a name="navigate-to-references"></a>Başvurular gidin
-Başvuruları gitmek için aşağıdaki yöntemleri kullanabilirsiniz **başvuruları** penceresi:
+## <a name="navigate-to-references"></a>Başvurulara git
+**Başvurular** penceresinde başvurulara gitmek için aşağıdaki yöntemleri kullanabilirsiniz:
 
-- Tuşuna **F8** ileri başvuru için Git veya **Shift + F8** önceki başvuruya Git için.
-- Tuşuna **Enter** anahtar üzerinde bir başvuru ya da ona kodda gitmek için çift tıklayın.
-- Sağ tıklama menüsünde bir başvuru (bağlam menüsü), **önceki konuma** veya **sonraki konuma Git** komutları.
-- Seçin **yukarı ok** ve **aşağı ok** anahtarları (içinde etkinleştirilip etkinleştirilmediğini **seçenekleri** iletişim kutusunda). Menü çubuğunda, bu özelliği etkinleştirmek için seçin **Araçları** > **seçenekleri** > **ortam**  >   **Sekmeler ve Windows** > **Önizleme sekmesinde**ve ardından **Önizleme sekmesinde açılmasını yeni dosyaların izin** ve **seçilen dosyalara Önizleme Sonuçları Bul** kutuları.
+- Sonraki başvuruya gitmek için **F8** tuşuna basın veya önceki başvuruya gitmek için **SHIFT + F8** tuşlarına basın.
+- Bir başvuru üzerinde **ENTER** tuşuna basın veya kodda bu koda gitmek için çift tıklayın.
+- Başvurunun sağ tıklama menüsünde (bağlam menüsü) **önceki konuma git** ' i veya **sonraki konum komutlarına git** ' i seçin.
+- **Yukarı ok** ve **aşağı ok** tuşlarını ( **Seçenekler** iletişim kutusunda etkinse) seçin. Bu işlevi etkinleştirmek için, menü çubuğunda **araçlar**  > **seçenekler**  > **ortam**  > **Sekmeler ve Windows**  > **Önizleme sekmesini**seçin ve ardından **yeni dosyaların önizlemede açılmasına izin ver ' i seçin.**  **Arama sonuçları kutularında seçili dosyaları sekmeye ve önizlemesini görüntüleyin** .
 
-## <a name="change-reference-groupings"></a>Değişiklik başvuru grupları
-Varsayılan olarak, başvuruları projeye göre ardından tanımına göre gruplandırılır. Ancak, ayarı değiştirerek bu gruplandırma sırasını değiştirebilirsiniz **gruplandırma ölçütü:** araç çubuğundaki açılan liste kutusunda. Örneğin varsayılan ayarı olan değiştirebilirsiniz **proje sonra tanım** için **tanım sonra proje**, diğer ayarlar için de.
+## <a name="change-reference-groupings"></a>Başvuru gruplamalarını değiştirme
+Varsayılan olarak, başvurular projeye göre ve ardından tanıma göre gruplandırılır. Ancak, bu Gruplandırma sırasını, araç çubuğundaki gruplandırma **ölçütü:** açılan liste kutusunda bulunan ayarı değiştirerek değiştirebilirsiniz. Örneğin, bunu proje varsayılan ayarından, **ardından** tanım ' ın **ardından Proje**' ye ve diğer ayarlara dönüştürebilirsiniz.
 
-**Tanımı** ve **proje** iki varsayılan gruplandırmaları kullanılır, ancak diğerleri seçerek ekleyebilirsiniz **gruplandırma** seçili öğenin sağ tıklayın veya bağlam menüsünde komutu. Daha fazla gruplandırmaları ekleme dosyaları ve yolları birçok çözümünüz varsa yararlı olabilir.
+**Tanım** ve **Proje** kullanılan iki varsayılan **gruplandırmadır** , ancak seçili öğenin sağ tıklama veya bağlam menüsünde Gruplandırma komutunu seçerek diğerlerini ekleyebilirsiniz. Çözümünüz çok sayıda dosya ve yol içeriyorsa daha fazla gruplandırma eklemek yararlı olabilir.
 
-## <a name="filter-by-reference-type-in-net"></a>. NET'te başvuru türüne göre filtrele
-İçinde C# veya Visual Basic başvuruları Bul penceresi burada listeler bulduğu ne tür bir başvuru türü bir sütun vardır. Bu sütunda, sütun üst bilgisinin gelindiğinde görüntülenen filtre simgesine tıklayarak başvuru türüne göre filtrelemek için kullanılabilir. Başvurular, okuma, yazma, başvuru, adı, Namespace ve türü tarafından filtrelenebilir.
+## <a name="filter-by-reference-type-in-net"></a>.NET 'te başvuru türüne göre filtrele
+C# Veya Visual Basic, başvuruları Bul penceresinde, bulduğu başvuru türünü listeleyen bir tür sütunu vardır. Bu sütun, sütun üst bilgisinin üzerine gelindiğinde görüntülenen filtre simgesine tıklayarak başvuru türüne göre filtrelemek için kullanılabilir. Başvurular okuma, yazma, başvuru, ad, ad alanı ve tür tarafından filtrelenebilir.
 
-![Başvuruları penceresi türü sütununda bulur. ](../ide/media/vside_findallreferencesKind.png)
+![Başvuruları bul pencere türü sütunu ](../ide/media/vside_findallreferencesKind.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

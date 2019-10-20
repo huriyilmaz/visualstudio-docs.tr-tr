@@ -1,5 +1,5 @@
 ---
-title: Proje dönüştürücü
+title: Proje dönüştürücüleri
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -9,21 +9,21 @@ f1_keywords:
 helpviewer_keywords:
 - Convert dialog box
 ms.assetid: 56f23ef7-17c4-4d76-9ead-982bbcd42061
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f720e842bb1f13aa726773af0dec499d32bfcc2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f76cd5172df15aa1adc0dcf9dd4f5a8750652eff
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838795"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654556"
 ---
 # <a name="convert-dialog-box"></a>Dönüştür iletişim kutusu
 
-**Dönüştürme** iletişim kutusunda, Visual Studio'nun önceki sürümlerinde kullanılan ve kullanım dışı bırakıldı.
+**Dönüştür** iletişim kutusu, Visual Studio 'nun önceki sürümlerinde kullanılmıştır ve artık kullanım dışıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

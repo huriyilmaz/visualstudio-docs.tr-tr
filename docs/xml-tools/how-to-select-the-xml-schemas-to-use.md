@@ -1,77 +1,77 @@
 ---
-title: 'Nasıl yapılır: Kullanılacak XML Şemalarını Seçme'
+title: 'Nasıl yapılır: kullanılacak XML şemalarını seçme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41f830214b20df24587cf902e6b180e8a43a8cd3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 275def786a93d42e6b8e110d3b3d785a24e948b1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007415"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601905"
 ---
-# <a name="how-to-select-the-xml-schemas-to-use"></a>Nasıl yapılır: Kullanılacak XML şemalarını seçme
+# <a name="how-to-select-the-xml-schemas-to-use"></a>Nasıl yapılır: kullanılacak XML şemalarını seçme
 
-XML Düzenleyicisi bulunan bir şema önbelleği sağlar *%VSInstallDir%\xml\Schemas* dizin. Şema önbelleği, IntelliSense ve XML belgesi doğrulama için kullanılan XML şemaları iyi bilinen içerir.
+XML Düzenleyicisi, *%VSInstallDir%\Xml\Schemas* dizininde bulunan bir şema önbelleği sağlar. Şema önbelleği, IntelliSense ve XML belge doğrulaması için kullanılan iyi bilinen XML şemaları içerir.
 
-Kullanım **şemaları** belge özelliği bir veya daha fazla XML Şeması Tanım Dili (XSD) şemaları seçin. Şemalar şema önbelleğinden veya başka bir yerde seçebilirsiniz.
+Bir veya daha fazla XML şeması tanım dili (XSD) şeması seçmek için **şemalar** belge özelliğini kullanın. Şema önbelleğinden veya başka bir yerde şemaları seçebilirsiniz.
 
-Belirttiğiniz şemaları (gizli) çözüm kullanıcı seçenekleri dosyası'nda kaydedilir (. *suo*), yanı sıra diğer tüm XML belge özellikleri. Sonuç olarak, çözüm bir sonraki açışınızda bu değerleri girmek zorunda değilsiniz.
+Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına (. *suo*), diğer tüm XML belge özellikleriyle birlikte. Sonuç olarak, çözümü bir sonraki açışınızda bu değerleri yeniden girmeniz gerekmez.
 
 > [!NOTE]
-> Düzenleyicide bir satır içi şema veya şema tarafından başvurulan kullanarak doğrulayabilirsiniz `xsd:schemaLocation` özniteliği. Daha fazla bilgi için [XML belgesi doğrulama](../xml-tools/xml-document-validation.md).
+> Düzenleyici, satır içi bir şemanın veya `xsd:schemaLocation` özniteliği tarafından başvurulan bir şemanın kullanımını doğrulayabilir. Daha fazla bilgi için bkz. [XML belge doğrulaması](../xml-tools/xml-document-validation.md).
 
-## <a name="to-select-an-xml-schema-from-the-schema-cache"></a>Bir XML Şeması, şema önbelleğinden seçmek için
+## <a name="to-select-an-xml-schema-from-the-schema-cache"></a>Şema önbelleğinden bir XML şeması seçmek için
 
-1. Bir dosyasını XML düzenleyicisinde açın.
+1. XML düzenleyicisinde bir dosya açın.
 
-2. Belge Özellikleri penceresinde tıklayın **şemaları** alan. Gözat düğmesini (…) zaman görünürse, buna tıklayın.
+2. Belge Özellikleri penceresinde, **şemalar** alanına tıklayın. Gezinme düğmesi (...) göründüğünde, bu düğmeye tıklayın.
 
-   ![Bir XML dosyası için şemalar özelliği](media/properties-schemas.png)
+   ![XML dosyası için Schemas özelliği](media/properties-schemas.png)
 
-   [XML şemaları iletişim kutusu](xml-schemas-dialog-box.md) açılır. İletişim kutusu ile tüm şemalar listeler bir. *xsd* şema önbelleğinin uzantısında (başvurulan şemaları dahil olmak üzere *catalog.xml* dosyası) ve ayrıca Visual Studio'da açık geçerli çözüm içinde başvurulan tüm şema bir `xsd:schemaLocation` öznitelik veya başvurulan **şemaları** özelliği.
+   [XML şemaları iletişim kutusu](xml-schemas-dialog-box.md) açılır. İletişim kutusu, içeren tüm şemaları listeler. şema önbelleğinde ( *Catalog. xml* dosyasında başvurulan şemalar dahil) *XSD* uzantısı ve ayrıca geçerli çözümdeki herhangi bir şema, bir `xsd:schemaLocation` özniteliğinde başvurulan veya **şemalarda** başvurulan Visual Studio 'da aç özelliði.
 
 3. Aşağıdakilerden birini yaparak doğrulama için kullanılacak şemaları seçin:
 
-   - Listelenen bir şema seçin **XML şemaları** iletişim kutusunda, tıklayın **kullanım** sütun tıklayın ve ardından **Bu şemayı kullan**.
+   - **XML şemaları** iletişim kutusunda listelenen bir şemayı seçin, **kullan** sütununa tıklayın ve **Bu şemayı kullan**' ı seçin.
 
-     -veya-
+     veya
 
-   - Birden çok şema listelenen seçin **XML şemaları** iletişim kutusunda ve ardından sağ tıklatın ve seçin **Bu şemayı kullan**.
+   - **XML şemaları** iletişim kutusunda birden çok şema seçin ve sağ tıklayın ve **Bu şemayı kullan**' ı seçin.
 
-4. **Tamam**’ı seçin.
+4. **Tamam ' ı**seçin.
 
-   Seçili şemaları listesini geri kopyalanır **şemaları** belge özelliği.
+   Seçilen şemaların listesi, **şemalar** belge özelliğine geri kopyalanır.
 
-## <a name="to-add-an-xml-schema-to-the-schema-cache"></a>Bir XML Şeması, şema önbelleğine eklemek için
+## <a name="to-add-an-xml-schema-to-the-schema-cache"></a>Şema önbelleğine bir XML şeması eklemek için
 
-1. Düğmesine tıklayarak belge Özellikler penceresinde **şemaları** alan.
+1. Belge Özellikleri penceresinde, **şemalar** alanındaki düğmesine tıklayın.
 
 2. **Ekle**'yi tıklatın.
 
-   **Açık XSD şeması** iletişim kutusu açılır.
+   **Open xsd şeması** iletişim kutusu açılır.
 
-3. Gözat ve şemaları şema önbelleğine eklemek için seçin.
+3. Şema önbelleğine eklenecek şemaya gözatıp seçin.
 
-4. Tıklayın **açık**.
+4. **Aç**' a tıklayın.
 
-   Şemalar şema önbelleğine eklenir ve **kullanım** sütun değeri ayarı **Bu şemayı kullan**.
+   Şemalar şema önbelleğine eklenir ve **Use** sütun değeri **Bu şemayı kullanacak**şekilde ayarlanır.
 
-## <a name="to-delete-an-xml-schema-from-the-schema-cache"></a>Bir XML Şeması, şema önbelleğinden silmek için
+## <a name="to-delete-an-xml-schema-from-the-schema-cache"></a>Şema önbelleğinden bir XML şemasını silmek için
 
-1. Düğmesine tıklayarak belge Özellikler penceresinde **şemaları** alan.
+1. Belge Özellikleri penceresinde, **şemalar** alanındaki düğmesine tıklayın.
 
-2. Kaldırın ve ardından şemayı seçin **Kaldır**.
+2. Kaldırılacak şemayı seçin ve ardından **Kaldır**' a tıklayın.
 
-   Şema bellek içi şema önbelleğinden kaldırılıyor ancak dosya sisteminden kaldırılmaz.
+   Şema, bellek içi şema önbelleğinden kaldırılır, ancak dosya sisteminden kaldırılmaz.
 
    > [!NOTE]
-   > Yine de şemanın başvuru varsa bir `schemaLocation` özniteliği veya eşleşen bir `targetNamespace` ardından **Kaldır** otomatik ilişkisi nedeniyle, bu durumda işe yaramaz. Bu durumda, şema olarak işaretlemek önerilir **seçili şemaları kullanma** içinde **kullanın** sütun.
+   > Şemaya hala bir `schemaLocation` özniteliği aracılığıyla başvurunuz varsa veya eşleşen bir `targetNamespace`, otomatik ilişkilendirme nedeniyle bu durumda **kaldırma** çalışmaz. Bu durumda, şemayı **Use** sütununda **Seçili şemaları kullanmayın** olarak işaretlemeniz önerilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,87 +8,87 @@ f1_keywords:
 - VS.CHOOSEITEMS.UniversalWindowsComponents
 helpviewer_keywords:
 - Toolbox, Components tab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 17f040b9bb64c2192bc6b376f5d0397ee5438071
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: bd9c6bf4d24a681c426a20f490dba2cc1d5080fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747746"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644603"
 ---
 # <a name="toolbox-components-tab"></a>Araç kutusu, bileşenler sekmesi
 
-Windows Forms için Visual Basic ve C# tasarımcılarınızı ekleyebileceğiniz bileşenlerini gösterir. Visual Studio ile gibi dahil .NET bileşenlere ek olarak <xref:System.Messaging.MessageQueue> ve <xref:System.Diagnostics.EventLog> bileşenleri ekleyebilir, kendi veya üçüncü taraf bileşenleri için bu sekme.
+Windows Forms için Visual Basic ve C# tasarımcılara ekleyebileceğiniz bileşenleri görüntüler. @No__t_0 ve <xref:System.Diagnostics.EventLog> bileşenleri gibi Visual Studio 'da bulunan .NET bileşenlerine ek olarak, kendi veya üçüncü taraf bileşenlerinizi bu sekmeye ekleyebilirsiniz.
 
-Bu sekme görüntülemek için bir Windows Form Tasarımcısı'nı açın. Seçin **görünümü** > **araç kutusu**. İçinde **araç kutusu**seçin **bileşenleri** sekmesi.
+Bu sekmeyi göstermek için bir Windows Forms Tasarımcısı açın. @No__t_1**araç kutusunu** **görüntüle** ' yi seçin. **Araç kutusu**' nda **Bileşenler** sekmesini seçin.
 
 ## <a name="components"></a>Bileşenler
 
 **BackgroundWorker**
 
-Oluşturur bir <xref:System.ComponentModel.BackgroundWorker> bileşen örneği, bir işlem ayrı, özel bir iş parçacığı üzerinde çalıştırabilirsiniz. Daha fazla bilgi için [BackgroundWorker bileşeni](/dotnet/framework/winforms/controls/backgroundworker-component).
+Ayrı ve adanmış bir iş parçacığında bir işlemi çalıştırabilede bir <xref:System.ComponentModel.BackgroundWorker> bileşen örneği oluşturur. Daha fazla bilgi için bkz. [BackgroundWorker Component](/dotnet/framework/winforms/controls/backgroundworker-component).
 
 **DirectoryEntry**
 
-Oluşturur bir <xref:System.DirectoryServices.DirectoryEntry> bir düğüm veya Active Directory hiyerarşisinde nesne kapsüller ve Active Directory hizmet sağlayıcıları ile etkileşim kurmak için kullanılan bileşen örneği.
+Active Directory hiyerarşisinde bir düğüm veya nesneyi kapsülleyen ve Active Directory servis sağlayıcılarıyla etkileşim kurmak için kullanılabilen bir <xref:System.DirectoryServices.DirectoryEntry> bileşen örneği oluşturur.
 
 **DirectorySearcher**
 
-Oluşturur bir <xref:System.DirectoryServices.DirectorySearcher> gerçekleştirmek için kullanabileceğiniz bir bileşen örneğinin Active Directory karşı sorgular.
+Active Directory karşı sorguları gerçekleştirmek için kullanabileceğiniz bir <xref:System.DirectoryServices.DirectorySearcher> bileşen örneği oluşturur.
 
-**ErrorProvider**
+**Bileþeni**
 
-Oluşturur bir <xref:System.Windows.Forms.ErrorProvider> son kullanıcıya bir form denetiminde kendisiyle ilişkili bir hata olduğunu gösteren bileşen örneği. Daha fazla bilgi için [ErrorProvider bileşeni](/dotnet/framework/winforms/controls/errorprovider-component-windows-forms).
+Son kullanıcıya, formdaki bir denetimin bir hata ile ilişkili bir hata olduğunu gösteren <xref:System.Windows.Forms.ErrorProvider> bileşen örneği oluşturur. Daha fazla bilgi için bkz. [ErrorProvider Component](/dotnet/framework/winforms/controls/errorprovider-component-windows-forms).
 
 **EventLog**
 
-Oluşturur bir <xref:System.Diagnostics.EventLog> bileşen örneğinin sistem ve özel olay günlükleri, olaylar bir günlüğe yazma ve günlük verileri okuma gibi etkileşim kurmak için kullanabilirsiniz.
+Bir günlüğe olay yazmak ve günlük verilerini okumak dahil olmak üzere sistem ve özel olay günlükleriyle etkileşim kurmak için kullanabileceğiniz bir <xref:System.Diagnostics.EventLog> bileşen örneği oluşturur.
 
 **FileSystemWatcher**
 
-Oluşturur bir <xref:System.IO.FileSystemWatcher> herhangi bir dizin veya dosya erişim sahibi izlemek için kullanabileceğiniz bileşen örneği değiştirir.
+Erişiminiz olan herhangi bir dizin veya dosyadaki değişiklikleri izlemek için kullanabileceğiniz bir <xref:System.IO.FileSystemWatcher> bileşen örneği oluşturur.
 
 **HelpProvider**
 
-Oluşturur bir <xref:System.Windows.Forms.HelpProvider> bileşen örneği açılır veya çevrimiçi Yardım denetimleri sağlar. Daha fazla bilgi için [HelpProvider bileşeni](/dotnet/framework/winforms/controls/helpprovider-component-windows-forms).
+Denetimler için açılır veya çevrimiçi yardım sağlayan bir <xref:System.Windows.Forms.HelpProvider> bileşen örneği oluşturur. Daha fazla bilgi için bkz. [HelpProvider bileşeni](/dotnet/framework/winforms/controls/helpprovider-component-windows-forms).
 
-**ImageList**
+**'I**
 
-Oluşturur bir <xref:System.Windows.Forms.ImageList> koleksiyonunu yönetmek için yöntemler sağlar bileşen örneğinin <xref:System.Drawing.Image> nesneleri. Daha fazla bilgi için [ImageList bileşeni](/dotnet/framework/winforms/controls/imagelist-component-windows-forms).
+Bir <xref:System.Drawing.Image> nesneleri koleksiyonunu yönetmek için yöntemler sağlayan bir <xref:System.Windows.Forms.ImageList> bileşen örneği oluşturur. Daha fazla bilgi için bkz. [ImageList bileşeni](/dotnet/framework/winforms/controls/imagelist-component-windows-forms).
 
 **MessageQueue**
 
-Oluşturur bir <xref:System.Messaging.MessageQueue> gelen iletileri okumak ve kuyruklara ileti yazılıyor, işlemleri ve kuyruk yönetim görevlerini gerçekleştirme dahil, ileti kuyrukları ile etkileşim kurmak için kullanabileceğiniz bileşen örneği.
+İleti kuyrukları ile etkileşim kurmak için kullanabileceğiniz bir <xref:System.Messaging.MessageQueue> bileşen örneği oluşturur, sıralara ileti okuma ve sıralara ileti yazma, işlemleri işleme ve sıra yönetim görevleri gerçekleştirme dahil olmak üzere.
 
 **PerformanceCounter**
 
-Oluşturur bir <xref:System.Diagnostics.PerformanceCounter> sayaç verilerinin hesaplamaları yeni kategori ve örnekleri oluşturma ve sayaçlarından okumanızı dahil olmak üzere Windows performans sayaçları ile etkileşimde bulunmak için kullanabileceğiniz bileşen örneği.
+Yeni kategoriler ve örnekler oluşturma, sayaçlardan değerleri okuma ve sayaç verilerinde hesaplamalar gerçekleştirme dahil olmak üzere Windows performans sayaçlarıyla etkileşim kurmak için kullanabileceğiniz bir <xref:System.Diagnostics.PerformanceCounter> bileşen örneği oluşturur.
 
-**İşlem**
+**İşle**
 
-Oluşturur bir <xref:System.Diagnostics.Process> bileşen örneğinin durdurun, başlatın ve sisteminizdeki süreçleri ile ilişkili verileri işlemek için kullanabilirsiniz.
+Sisteminizdeki işlemlerle ilişkili verileri durdurmak, başlatmak ve işlemek için kullanabileceğiniz bir <xref:System.Diagnostics.Process> bileşen örneği oluşturur.
 
-**Çevirmek için SerialPort**
+**SerialPort**
 
-Oluşturur bir <xref:System.IO.Ports.SerialPort> bileşen örneği ve olay odaklı, zaman uyumlu g/ç, erişim için PIN ve kesme durumları ve seri sürücü özelliklerine erişim sağlar.
+Zaman uyumlu ve olay odaklı g/ç, PIN ve kesme durumlarına erişim ve seri sürücü özelliklerine erişim sağlayan bir <xref:System.IO.Ports.SerialPort> bileşen örneği oluşturur.
 
 **ServiceController**
 
-Oluşturur bir <xref:System.ServiceProcess.ServiceController> bileşen örneği başlatma, durdurma Hizmetleri ve komutlar göndererek dahil olmak üzere var olan hizmetleri yönetmek için kullanabilirsiniz.
+Hizmetleri başlatma ve durdurma ve bunlara komut gönderme dahil olmak üzere mevcut hizmetleri yönetmek için kullanabileceğiniz bir <xref:System.ServiceProcess.ServiceController> bileşen örneği oluşturur.
 
 **Timer**
 
-Oluşturur bir <xref:System.Windows.Forms.Timer> bileşen örneği, Windows tabanlı uygulamalar için zamana bağlı işlevselliği eklemek için kullanabilirsiniz. Daha fazla bilgi için [süreölçer bileşeni](/dotnet/framework/winforms/controls/timer-component-windows-forms).
+Windows tabanlı uygulamalarınıza zamana dayalı işlevsellik eklemek için kullanabileceğiniz bir <xref:System.Windows.Forms.Timer> bileşen örneği oluşturur. Daha fazla bilgi için bkz. [süreölçer bileşeni](/dotnet/framework/winforms/controls/timer-component-windows-forms).
 
 > [!NOTE]
-> De mevcuttur sistem tabanlı <xref:System.Timers.Timer> için ekleyebileceğiniz **araç kutusu** bu <xref:System.Timers.Timer> sunucu uygulamaları ve Windows Forms için optimize edilmiştir <xref:System.Windows.Forms.Timer> Windows formlarında kullanmak için uygundur.
+> Ayrıca, bu <xref:System.Timers.Timer> sunucu uygulamaları için en iyi duruma getirilmiş **araç kutusuna** ekleyebileceğiniz sistem tabanlı bir <xref:System.Timers.Timer> ve Windows Forms <xref:System.Windows.Forms.Timer> en uygun Windows Forms kullanım için uygundur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms'da kullanılacak denetimler](/dotnet/framework/winforms/controls/controls-to-use-on-windows-forms)
-- [Araç kutusu öğelerini, WPF bileşenlerini seçme](choose-toolbox-items-wpf-components.md)
+- [Windows Forms için kullanılacak denetimler](/dotnet/framework/winforms/controls/controls-to-use-on-windows-forms)
+- [Araç kutusu öğelerini, WPF bileşenlerini seçin](choose-toolbox-items-wpf-components.md)
 - [Araç Kutusu](../../ide/reference/toolbox.md)

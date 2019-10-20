@@ -1,5 +1,5 @@
 ---
-title: 'CA1715: Tanımlayıcılar doğru öneki olmalıdır | Microsoft Docs'
+title: 'CA1715: tanımlayıcıların önek doğru olmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,77 +12,77 @@ helpviewer_keywords:
 - CA1715
 ms.assetid: cf45f8df-6855-4cb6-a4e2-7cfed714cf2f
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 37c8193a166849f1361a66c640b1a414d3900fca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5988d472317540ca1b1a7f91acd75a48fa9743b4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189120"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669113"
 ---
-# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Tanımlayıcılar doğru ön eke sahip olmalıdır
+# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Tanımlayıcıların önekleri doğru olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. [CA1715: Tanımlayıcılar doğru öneki olmalıdır](https://docs.microsoft.com/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix).  
-  
-|||  
-|-|-|  
-|TypeName|IdentifiersShouldHaveCorrectPrefix|  
-|CheckId|CA1715|  
-|Kategori|Microsoft.Naming|  
-|Yeni Değişiklik|-Arabirimlerde tetiklendiğinde kesiliyor.<br /><br /> Bölünemez - genel tür parametrelerinde oluştuğunda.|  
-  
-## <a name="cause"></a>Sebep  
- Dışarıdan görünen bir arabirimin adını bir büyük harf 'ı' başlamıyor.  
-  
- -veya-  
-  
- Genel tür parametresi dışarıdan görünen tür veya yöntem adı ile bir büyük harf 'T başlamıyor '.  
-  
-## <a name="rule-description"></a>Kural Tanımı  
- Kural gereği, programlama öğelerinin adlarını belirli bir önek ile başlayın.  
-  
- Arabirim adına 'I' başka bir büyük harf tarafından izlenen büyük harf ile başlamalıdır. Bu kural ihlalleri için arabirim adına 'MyInterface' ve 'IsolatedInterface' gibi bildirir.  
-  
- Genel tür parametresi adlarına başlamalıdır bir büyük harf ile 'T' ve isteğe bağlı olarak başka bir büyük harf tarafından izlenebilir. Bu kural ihlalleri için 'V' ve 'Type' gibi genel tür parametre adları bildirir.  
-  
- Adlandırma kuralları, ortak dil çalışma zamanını hedefleyen kitaplıkları için genel bir bakış sağlar. Bu, yeni yazılım kitaplıkları için gereklidir ve kitaplık geliştirme yönetilen kodda uzmanlığına sahip olan kişi tarafından geliştirilmiştir müşterilerinizin size olan güvenini artırır öğrenme eğrisini azaltır.  
-  
-## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?  
- Tanımlayıcı doğru önek yeniden adlandırın.  
-  
-## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında  
- Bu kuraldan uyarıyı bastırmayın.  
-  
-## <a name="example"></a>Örnek  
- **Aşağıdaki örnek, yanlış adlandırılmış bir arabirimi gösterir.**  
-  
+Visual Studio ile ilgili en son belgeler için bkz. [CA1715: tanımlayıcılar doğru öneke sahip olmalıdır](https://docs.microsoft.com/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix).
+
+|||
+|-|-|
+|TypeName|IdentifiersShouldHaveCorrectPrefix|
+|CheckId|CA1715|
+|Kategori|Microsoft. Naming|
+|Yeni Değişiklik|Arabirimler üzerinde harekete geçirildiğinde.<br /><br /> Genel tür parametrelerinde ortaya çıkarılmayan-bölünmez.|
+
+## <a name="cause"></a>Sebep
+ Dışarıdan görünen bir arabirimin adı büyük harfle ' ı ' ile başlamıyor.
+
+ veya
+
+ Dışarıdan görünen bir tür veya yöntemde genel tür parametresinin adı, büyük harfle başlamamış.
+
+## <a name="rule-description"></a>Kural Tanımı
+ Kurala göre, belirli programlama öğelerinin adları belirli bir önekle başlar.
+
+ Arabirim adları büyük bir ' I ' ve ardından başka bir büyük harfle başlamalıdır. Bu kural, ' MyInterface ' ve ' IsolatedInterface ' gibi arabirim adları için ihlalleri raporlar.
+
+ Genel tür parametre adları, büyük harfle başlamalıdır ve isteğe bağlı olarak başka bir büyük harf gelmelidir. Bu kural, ' V ' ve ' Type ' gibi genel tür parametresi adları için ihlalleri raporlar.
+
+ Adlandırma kuralları, ortak dil çalışma zamanını hedefleyen kitaplıklar için ortak bir görünüm sağlar. Bu, yeni yazılım kitaplıkları için gerekli olan öğrenme eğrisini azaltır ve müşterinin, kitaplığın yönetilen kod geliştirme konusunda uzmanlığa sahip olan birisi tarafından geliştirildiğini arttırır.
+
+## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
+ Tanımlayıcıyı doğru önek olacak şekilde yeniden adlandırın.
+
+## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
+ Bu kuraldan uyarıyı bastırmayın.
+
+## <a name="example"></a>Örnek
+ **Aşağıdaki örnekte yanlış adlı bir arabirim gösterilmektedir.**
+
  [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix/cpp/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix.cpp#1)]
  [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix/cs/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix.cs#1)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix.vb#1)]  
-  
-## <a name="example"></a>Örnek  
- **Aşağıdaki örnek, önceki ihlali 'I' arabirimi koyarak düzeltir.**  
-  
+ [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix.vb#1)]
+
+## <a name="example"></a>Örnek
+ **Aşağıdaki örnek, ' I ' arabirimine önek ekleyerek önceki ihlalin düzelini düzeltir.**
+
  [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2/cpp/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2.cpp#1)]
  [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2/cs/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2.cs#1)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2.vb#1)]  
-  
-## <a name="example"></a>Örnek  
- **Aşağıdaki örnek, bir yanlış adlandırılmış genel tür parametresi gösterir.**  
-  
+ [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2.vb#1)]
+
+## <a name="example"></a>Örnek
+ **Aşağıdaki örnekte yanlış adlandırılan genel tür parametresi gösterilmektedir.**
+
  [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3/cpp/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3.cpp#1)]
  [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3/cs/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3.cs#1)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3.vb#1)]  
-  
-## <a name="example"></a>Örnek  
- **Aşağıdaki örnek önceki ihlali 'T genel tür parametre ekleyerek düzeltmeleri '.**  
-  
+ [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3.vb#1)]
+
+## <a name="example"></a>Örnek
+ **Aşağıdaki örnek, genel tür parametresinin 'T ' olarak önüne eklenerek önceki ihlalin düzeltir.**
+
  [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4/cpp/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4.cpp#1)]
  [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4/cs/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4.cs#1)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4.vb#1)]  
-  
-## <a name="related-rules"></a>İlgili kuralları  
+ [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4.vb#1)]
+
+## <a name="related-rules"></a>İlgili kurallar
  [CA1722: Tanımlayıcıların önekleri yanlış olmamalıdır](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)

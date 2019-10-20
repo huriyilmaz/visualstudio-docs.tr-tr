@@ -1,57 +1,57 @@
 ---
-title: Seçenekler, metin düzenleyici, U-SQL IntelliSense
+title: Seçenekler, metin düzenleyici, U-SQL, IntelliSense
 ms.date: 01/17/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.IntelliSense
 - VS.ToolsOptionsPages.Text_Editor.HQL.IntelliSense
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d915019775b1eeb1a1f091bb389e5d5aa8e21e8c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 04f7a66884238856ba6988b9f1e8c648f4ff1d16
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778205"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666650"
 ---
-# <a name="options-text-editor-u-sql-intellisense"></a>Seçenekler, metin düzenleyici, U-SQL IntelliSense
+# <a name="options-text-editor-u-sql-intellisense"></a>Seçenekler, metin düzenleyici, U-SQL, IntelliSense
 
-Kullanım **IntelliSense** U-SQL bazı metin düzenleyici ayarları değiştirmek için seçenekler sayfası. Bu seçenekler sayfası erişmek için kendi seçtikleri **Araçları** > **seçenekleri**ve ardından **metin düzenleyici** > **U-SQL**  >  **IntelliSense**.
+U-SQL için bazı metin düzenleyici ayarlarını değiştirmek üzere **IntelliSense** seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **araçlar**  > **Seçenekler**' i seçin ve **metın düzenleyici**  > **U-SQL**  > **IntelliSense**' i seçin.
 
 ## <a name="intellisense-settings"></a>IntelliSense ayarları
 
-Etkinleştirmek için bir onay kutusunu işaretleyin **hızlı bilgi** veya **IntelliSense**. Fare imlecini bir değişkenin geldiğinizde, hızlı bilgi tam bir bildirim görüntüler.
+**Hızlı bilgi** veya **IntelliSense**'i etkinleştirmek için bir onay kutusu seçin. Hızlı bilgi, fare imlecini bir değişken üzerine getirdiğinizde tüm bildirimi görüntüler.
 
 ## <a name="completion-lists"></a>Tamamlanma listeleri
 
-- **Bir karakter girildikten sonra Tamamlama listesini göster**
+- **Bir karakter yazıldıktan sonra tamamlanma listesini göster**
 
-   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense tamamlanma listesi otomatik olarak görüntüler. Bu seçeneği seçmezseniz, IntelliSense tamamlama IntelliSense menüsünden veya tuşuna basarak sunulmaya devam ettiği **Ctrl** + **boşluk**.
+   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense, tamamlanma listesini otomatik olarak görüntüler. Bu seçeneği seçmezseniz, IntelliSense tamamlandığında IntelliSense menüsünde veya **Ctrl**  + **boşluk çubuğuna**basılarak hala kullanılabilir.
 
-- **Anahtar sözcükleri tamamlama listelerine Yerleştir**
+- **Anahtar sözcükleri tamamlanma listelerine yerleştir**
 
-   Bu seçenek belirlendiğinde, IntelliSense tamamlanma listesine dâhil anahtar sözcükler içerir.
+   Bu seçenek belirlendiğinde, IntelliSense tamamlama listesinde anahtar sözcükler içerir.
 
-- **Kod parçacıklarını tamamlama listelerine Yerleştir**
+- **Kod parçacıklarını tamamlama listelerine yerleştir**
 
-   Bu seçenek belirlendiğinde, IntelliSense tamamlanma listesine dâhil kod parçacıklarını içerir.
+   Bu seçenek belirlendiğinde, IntelliSense tamamlama listesinde kod parçacıkları içerir.
 
-## <a name="selection-in-completion-list"></a>Tamamlama listesindeki seçim
+## <a name="selection-in-completion-list"></a>Tamamlanma listesinde seçim
 
-- **Aşağıdaki karakterleri yazarak Uygula**
+- **Aşağıdaki karakterleri yazarak işleyin**
 
-   Bu alan, vurgulanan tamamlanma listesi öneri kaydedilecek neden karakterleri gösterir. Ekleyebilir veya karakterleri bu listeden kaldırın.
+   Bu alan, şu anda vurgulanmış olan tamamlama listesi önerisine neden olan karakterleri gösterir. Bu listeden karakter ekleyebilir veya kaldırabilirsiniz.
 
-- **Boşluk çubuğuna basarak Uygula**
+- **Ara çubuğuna basarak işleyin**
 
-   Bu seçenek belirlendiğinde, Ara çubuğu tuşlarına basarak vurgulanan tamamlanma listesi öneri onaylayabilirsiniz.
+   Bu seçenek belirlendiğinde, ara çubuğuna basarak, vurgulanan tamamlanma listesi önerilerini uygulayabilirsiniz.
 
-- **ENTER tuşuna basıldığında tam yazılmış sözcüğün sonuna yeni bir satır Ekle**
+- **ENTER 'ta tam yazılmış kelimenin sonuna yeni bir satır ekle**
 
-   Seçili olduğunda, yeni bir satır otomatik olarak eklenir ve bir tamamlanma listesi öneri için tüm karakterleri yazdıktan, imleç yeni satıra taşır.
+   Seçildiğinde, yeni bir satır otomatik olarak eklenir ve bir tamamlanma listesi önerisi için tüm karakterleri yazdığınızda imleç yeni satıra gider.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

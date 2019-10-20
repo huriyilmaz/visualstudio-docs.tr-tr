@@ -1,38 +1,38 @@
 ---
-title: İş Akışı Tasarımcısı - CorrelatesOn tanımı iletişim kutusu
+title: İş Akışı Tasarımcısı-CorrelatesOn tanımı Iletişim kutusu
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - CorrelatesOnDefinition.UI
 ms.assetid: 8b2b627a-f236-4479-aa09-525df65e3413
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7b7336a3f3b0c2725f4e52116d0add8bf13b90e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 401f72f55f23779f7c6257437034a4ebc294d219
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949828"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650595"
 ---
 # <a name="correlateson-definition-dialog-box"></a>CorrelatesOn Tanımı İletişim Kutusu
 
-**CorrelatesOn** iletişim kutusunda iş akışı Tasarımcısı'nda düzenlemek için kullanılan <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> özelliği bir <xref:System.ServiceModel.Activities.Receive> etkinlik. Daha fazla bilgi için [alma etkinlik Tasarımcısı](../workflow-designer/receive-activity-designer.md).
+**CorrelatesOn** iletişim kutusu, bir <xref:System.ServiceModel.Activities.Receive> etkinliğinin <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> özelliğini düzenlemek için iş akışı Tasarımcısı kullanılır. Daha fazla bilgi için bkz. [etkinlik tasarımcısını alma](../workflow-designer/receive-activity-designer.md).
 
-Arasındaki korelasyon <xref:System.ServiceModel.Activities.Receive> etkinlikleri nasıl farklı hizmet işlemleri bağlanmak birbirleri ile bir iş akışında belirtir.
+@No__t_0 etkinlikleri arasındaki bağıntı, farklı hizmet işlemlerinin bir iş akışındaki birbirleriyle nasıl bağlanacağını belirtir.
 
-Aşağıdaki tabloda kullanıcı arabirimi (UI) öğelerini açıklar **CorrelatesOn** iletişim kutusu.
+Aşağıdaki tabloda **CorrelatesOn** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
 
 |Arabirim Öğesi|Açıklama|
 |-|-----------------|
-|**CorrelatesWith**|<xref:System.ServiceModel.Activities.CorrelationHandle> Uygun iş akışı örneği için ileti yönlendirmek için kullanılır.|
-|**XPath sorguları**|Gelen istenmeyen iletilere bağıntı verileri ayıklamak için kullanılan sorguları içeren bir anahtar/değer çifti. Bu değer karşılık gelen <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> özelliği. XPath sorguları bulunan bir <xref:System.ServiceModel.MessageQuerySet> nesne.|
+|**CorrelatesWith**|İletiyi uygun iş akışı örneğine yönlendirmek için kullanılan <xref:System.ServiceModel.Activities.CorrelationHandle>.|
+|**XPath sorguları**|Gelen iletilerden bağıntı verilerini ayıklamak için kullanılan sorguları içeren bir anahtar/değer çifti. Bu değer <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> özelliğine karşılık gelir. XPath sorguları bir <xref:System.ServiceModel.MessageQuerySet> nesnesi içinde bulunur.|
 
 ## <a name="to-launch-the-correlateson-dialog-box"></a>CorrelatesOn iletişim kutusunu başlatmak için
 
-**Alma** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve etkinlikleri genellikle yerleştirilen her yerde iş akışı Tasarımcısı yüzeyine açın. Etkinlik Tasarımcısı bırakarak oluşturur bir <xref:System.ServiceModel.Activities.Receive> etkinliği ile bir varsayılan <xref:System.Activities.Activity.DisplayName%2A> alma. Açmak için **definice vlastnosti Correlateson** iletişim kutusunda **alma** etkinlik Tasarımcısı ve sonra özellik kılavuzunda seçmek için koleksiyon ifadesinin yanındaki üç nokta düğmesini  **CorrelatesOn** özelliği.
+**Alma** etkinliği Tasarımcısı **araç kutusu** 'ndan sürüklenebilir ve etkinliklerin genellikle yerleştirildiği her yerde iş akışı Tasarımcısı yüzeyine bırakılabilir. Etkinlik Tasarımcısı ' nın atılması, varsayılan alma <xref:System.Activities.Activity.DisplayName%2A> bir <xref:System.ServiceModel.Activities.Receive> etkinlik oluşturur. **CorrelatesOn tanımı** iletişim kutusunu açmak için **alma** etkinliği tasarımcısını seçin ve sonra özellik kılavuzunda, **CorrelatesOn** özelliği için koleksiyon metninin yanındaki üç nokta düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

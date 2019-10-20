@@ -1,65 +1,65 @@
 ---
-title: SQL Server örnek veritabanları yükleme | Microsoft Docs
+title: Örnek veritabanlarını SQL Server yüklemesi | Microsoft Docs
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: 38840167-c3f8-4cb3-8d15-8af04a0a20a1
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 056e5d1fad258d063e30cfd97e85529ff3a0c9bd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3991d3b741162b4b1993e5359ad427c17f00321a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68160173"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651521"
 ---
 # <a name="install-sql-server-sample-databases"></a>SQL Server örnek veritabanlarını yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Örnek veritabanları, SQL ve LINQ sorguları, veri bağlama, Entity Framework modelleme ve benzeri ile denemek için kullanışlıdır.  Her veritabanı ürünün kendi örnek veritabanları vardır. Northwind ve AdventureWorks iki yaygın olarak kullanılan SQL Server örnek veritabanlarıdır.  
-  
- **AdventureWorks** sağlanan SQL Server ürünleri için geçerli örnek veritabanı. Bir .mdf dosyasından olarak indirebilirsiniz [Codeplex AdventureWorks sayfasında](http://msftdbprodsamples.codeplex.com/). Kullanılabilir veritabanı normal ve basit (LT) sürümleri burada. Çoğu senaryo için daha az karmaşık olduğundan LT sürümü tercih edilir.  
-  
- **Northwind** yıllardır kullanılan oldukça basit bir SQL Server veritabanıdır. .bak dosyası olarak indirebilirsiniz [Northwind veritabanı CodePlex sayfasında](https://northwinddatabase.codeplex.com/). İzin sorunları önlemek için kullanıcı klasörünüzün altında olmayan yeni bir klasöre dosyanın sıkıştırmasını açın.  
-  
-#### <a name="to-restore-a-database-from-a-bak-file-in-visual-studio"></a>Visual Studio .bak dosyasından bir veritabanını geri yüklemek için  
-  
-1. Bir Microsoft SQL Server veritabanını yedeklediğinizde, .bak dosyasının sonuç olur. Bir veritabanı dosyası olarak kullanılabilir dosya yeniden .bak yapmak için bu olmalıdır *geri*. Ana menüden **görünümü** > **SQL Server Nesne Gezgini**. Görmüyorsanız, yüklemeniz gerekebilir. Git **Denetim Masası** > **programlar ve Özellikler**, Microsoft Visual Studio 2015'i bulun ve tıklayın **değişiklik** düğmesi. Yüklü bileşenlerin listesini yükleyici penceresinde göründüğünde seçin **SQL Server Nesne Gezgini** onay kutusunu işaretleyin ve ardından yükleme işlemine devam edin.  
-  
-2. SQL Server nesne Gezgini'nde, tüm SQL Server Veritabanı Altyapısı'nı (örneğin, localdb) sağ tıklayın ve seçin**yeni sorgu**.  
-  
-     ![SQL Server Nesne Gezgini yeni sorgu](../data-tools/media/raddata-sql-server-object-explorer-new-query.png "raddata SQL Server Nesne Gezgini yeni sorgu")  
-  
-3. İlk olarak, veritabanı ve günlük dosyaları .bak dosyasının içindeki mantıksal adları gerekir. Buna ulaşmak için bu sorguyu SQL sorgu Düzenleyicisi'ne girin ve yeşil seçip **çalıştırma** pencerenin üstünde düğme. Dosya yolu, gerekiyorsa .bak dosyasına işaret edecek şekilde değiştirin.  
-  
-    ```  
-    RESTORE FILELISTONLY  
-    FROM DISK = 'C:\nw\northwind.bak'  
-    GO  
-    ```  
-  
-     Sonuçları penceresinde görüntülenen mantıksal adlarını yazın.  İçin Northwind veritabanı, iki mantıksal Northwind ve Northwind_log adlarıdır.  
-  
-4. Şimdi bir veritabanı oluşturmak için bu sorguyu çalıştırın. Kendi kaynak ve hedef yolunu, mantıksal veritabanı adları ve Northwind fiziksel dosya adlarını uygun şekilde değiştirin. .Mdf ve .ldf dosyası uzantıları tutun.  
-  
-    ```  
-    RESTORE DATABASE Northwind  
-    FROM DISK = 'c:\nw\northwind.bak'  
-    WITH MOVE 'Northwind' TO 'c:\nw\northwind.mdf',  
-    MOVE 'Northwind_log' TO 'c:\nw\northwind.ldf'  
-    ```  
-  
-5. SQL Server nesne Gezgini'nde sağ **veritabanları** düğüm ve Northwind veritabanı düğümü görmelisiniz. Aksi takdirde, daha sonra veritabanları sağ tıklatın ve **yeni veritabanı Ekle**. Ad ve yeni oluşturduğunuz .mdf dosyasının konumunu girin.  
-  
-6. Veritabanı artık Visual Studio'da veri kaynağı olarak kullanmak hazırdır.  
-  
-#### <a name="to-restore-a-database-from-a-bak-file-in-sql-server-management-studio"></a>SQL Server Management Studio .bak dosyasından bir veritabanını geri yüklemek için  
-  
-1. SQL Server Management Studio'yu indirme sitesinden indirin.  
-  
-2. Ssms'de **Nesne Gezgini** penceresinde sağ **veritabanları** düğümünü**Restore Database**ve .bak dosyasının konumunu belirtin.  
-  
-     ![SSMS Restore Database](../data-tools/media/raddata-ssms-restore-database.png "raddata SSMS veritabanını geri yükle")
+Örnek veritabanları SQL ve LINQ sorguları, veri bağlama, Entity Framework modelleme vb. ile denemeler yapmak için yararlıdır.  Her veritabanı ürününün kendi örnek veritabanları vardır. Northwind ve AdventureWorks, örnek veritabanlarından oluşan iki popüler SQL Server.
+
+ **AdventureWorks** , SQL Server ürünleri için sunulan geçerli örnek veritabanıdır. [CodePlex 'Teki AdventureWorks sayfasından](http://msftdbprodsamples.codeplex.com/)bir. mdf dosyası olarak indirebilirsiniz. Burada, veritabanının normal ve hafif (LT) sürümleri mevcuttur. Çoğu senaryoda, LT sürümü daha az karmaşık olduğu için tercih edilir.
+
+ **Northwind** , birçok yıl boyunca kullanılan görece basit bir SQL Server veritabanıdır. [CodePlex 'Teki Northwind veritabanı sayfasından](https://northwinddatabase.codeplex.com/)bir. bak dosyası olarak indirebilirsiniz. İzin sorunlarından kaçınmak için, dosyayı Kullanıcı klasörünüzün altında olmayan yeni bir klasöre ayıklayın.
+
+#### <a name="to-restore-a-database-from-a-bak-file-in-visual-studio"></a>Visual Studio 'da bir. bak dosyasından bir veritabanını geri yüklemek için
+
+1. Microsoft SQL Server bir veritabanını yedeklerken sonuç bir. bak dosyasıdır. . Bak dosyasını bir veritabanı dosyası olarak yeniden kullanılabilir hale getirmek için *geri yüklenmesi*gerekir. Ana menüde,  > **SQL Server Nesne Gezgini** **görüntüle** ' yi seçin. Bunu görmüyorsanız, yüklemeniz gerekebilir. **Denetim masası**  > **Programlar ve Özellikler**' e gidin, Microsoft Visual Studio 2015 ' i bulun ve **Değiştir** düğmesine tıklayın. Yüklü bileşenlerin listesi Yükleyici penceresinde göründüğünde, **SQL Server Nesne Gezgini** onay kutusunu seçin ve yükleme işlemine devam edin.
+
+2. SQL Server Nesne Gezgini, herhangi bir SQL Server veritabanı altyapısına (örneğin, LocalDB) sağ tıklayın ve**Yeni sorgu**' yı seçin.
+
+     ![Yeni sorgu SQL Server Nesne Gezgini](../data-tools/media/raddata-sql-server-object-explorer-new-query.png "radveri SQL Server Nesne Gezgini yeni sorgu")
+
+3. İlk olarak,. bak dosyasının içindeki veritabanının ve günlük dosyalarının mantıksal adlarına ihtiyacınız vardır. Bunu almak için, bu sorguyu SQL sorgu Düzenleyicisi 'ne girin ve ardından pencerenin üst kısmındaki yeşil **çalıştırma** düğmesini seçin. Dosya yolunu,. bak dosyasını işaret etmek için gerekiyorsa değiştirin.
+
+    ```
+    RESTORE FILELISTONLY
+    FROM DISK = 'C:\nw\northwind.bak'
+    GO
+    ```
+
+     Sonuçlar penceresinde görünen mantıksal adları yazın.  Northwind veritabanı için, iki mantıksal ad Northwind ve Northwind_log.
+
+4. Şimdi veritabanını oluşturmak için bu sorguyu çalıştırın. Northwind için kendi kaynak ve hedef yollarınızı, mantıksal veritabanı adlarınızı ve fiziksel dosya adlarını uygun şekilde değiştirin. . Mdf ve. ldf dosya uzantılarını koruyun.
+
+    ```
+    RESTORE DATABASE Northwind
+    FROM DISK = 'c:\nw\northwind.bak'
+    WITH MOVE 'Northwind' TO 'c:\nw\northwind.mdf',
+    MOVE 'Northwind_log' TO 'c:\nw\northwind.ldf'
+    ```
+
+5. SQL Server Nesne Gezgini, **veritabanları** düğümüne sağ tıklayın ve Northwind veritabanı düğümünü görmeniz gerekir. Aksi takdirde, veritabanlarına sağ tıklayıp **Yeni veritabanı Ekle**' yi seçin. Yeni oluşturduğunuz. mdf dosyasının adını ve konumunu girin.
+
+6. Veritabanı artık Visual Studio 'da bir veri kaynağı olarak kullanıma hazırdır.
+
+#### <a name="to-restore-a-database-from-a-bak-file-in-sql-server-management-studio"></a>SQL Server Management Studio bir veritabanını bir. bak dosyasından geri yüklemek için
+
+1. İndirme sitesinden SQL Server Management Studio indirin.
+
+2. SSMS **Nesne Gezgini** penceresinde **veritabanları** düğümüne sağ tıklayın,**veritabanını geri yükle**' yi seçin ve. bak dosyasının konumunu belirtin.
+
+     ![SSMS geri yükleme veritabanı](../data-tools/media/raddata-ssms-restore-database.png "radveri SSMS veritabanını geri yükleme")

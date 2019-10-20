@@ -1,5 +1,5 @@
 ---
-title: 'CA1057: String URI aşırı yüklemeleri System.Uri aşırı çağrı | Microsoft Docs'
+title: 'CA1057: dize URI aşırı yüklemeleri System. Uri aşırı yüklerini çağırır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,49 +12,49 @@ helpviewer_keywords:
 - CA1057
 ms.assetid: ef1e983e-9ca7-404b-82d7-65740ba0ce20
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4cf50ca225544b06409415320c73e7824a10843a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ba7e7de4f3ef6336ed3d82dc1e1da03ec0bf2575
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62552735"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603071"
 ---
-# <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057: String URI aşırı yüklemeleri System.Uri aşırı yüklemelerini çağırır
+# <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057: Dize URI aşırı yüklemeleri System.Uri aşırı yüklemelerini çağırır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|StringUriOverloadsCallSystemUriOverloads|
 |CheckId|CA1057|
-|Kategori|Microsoft.Design|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Design|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir tür yalnızca bir dize parametresi adlandırılan farklı yöntem aşırı yüklemeleri bildirir bir <xref:System.Uri?displayProperty=fullName> parametresi ve dize parametresi alan aşırı yüklemesini alan aşırı yüklemesini çağırmaz <xref:System.Uri> parametresi.
+ Bir tür, yalnızca bir dize parametresinin <xref:System.Uri?displayProperty=fullName> parametresiyle değiştirilmesine göre farklılık gösteren ve dize parametresini alan aşırı yükleme <xref:System.Uri> parametresini alan aşırı yüklemeyi çağırmayan Yöntem yüklerini bildirir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Yalnızca dize tarafından aşırı yüklemeler farklı olduğundan /<xref:System.Uri> parametresi dize bir Tekdüzen Kaynak Tanımlayıcısı (URI) temsil etmek için varsayılır. Bir URI'nın dize sunumu ayrıştırma ve hataları kodlama eğilimindedir ve güvenlik açıklarına yol açabilir. <xref:System.Uri> Sınıfı bu hizmetleri güvenli bir biçimde sunar. Avantajlarını kazanmak için <xref:System.Uri> sınıfı, dize aşırı yüklemesi çağırmanız <xref:System.Uri> dize bağımsız değişkeni kullanılarak aşırı yükleme.
+ Aşırı yüklemeler yalnızca dize/<xref:System.Uri> parametresi tarafından farklı olduğundan, dize bir Tekdüzen Kaynak tanımlayıcısını (URI) temsil eder. Bir URI'nın dize sunumu ayrıştırma ve hataları kodlama eğilimindedir ve güvenlik açıklarına yol açabilir. @No__t_0 sınıfı bu hizmetleri güvenli ve güvenli bir şekilde sağlar. @No__t_0 sınıfının avantajlarından yararlanmak için, dize aşırı yüklemesi dize bağımsız değişkenini kullanarak <xref:System.Uri> aşırı yüklemeyi çağırmalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- URI'ın dize gösterimini kullanır ve böylece bir örneğini oluşturur yöntemi yeniden uygulamak <xref:System.Uri> dize bağımsız değişkeni kullanarak ve ardından geçirir <xref:System.Uri> olan aşırı yüklenmiş bir nesneye <xref:System.Uri> parametresi.
+ URI 'nin dize gösterimini kullanan yöntemi yeniden uygulayın, böylece dize bağımsız değişkenini kullanarak <xref:System.Uri> sınıfının bir örneğini oluşturur ve sonra <xref:System.Uri> nesnesini <xref:System.Uri> parametresine sahip olan aşırı yüklemeye geçirir.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Dize parametresi bir URI temsil etmiyorsa, bu kuraldan bir uyarıyı bastırmak güvenlidir.
+ Dize parametresi bir URI 'yi temsil etmediği takdirde bu kuraldan bir uyarının bastırmasının güvenli hale gelir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, doğru uygulanmış bir aşırı gösterir.
+ Aşağıdaki örnek, doğru şekilde uygulanan bir dize aşırı yüklemesini göstermektedir.
 
  [!code-cpp[FxCop.Design.CallUriOverload#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.CallUriOverload/cpp/FxCop.Design.CallUriOverload.cpp#1)]
  [!code-csharp[FxCop.Design.CallUriOverload#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CallUriOverload/cs/FxCop.Design.CallUriOverload.cs#1)]
  [!code-vb[FxCop.Design.CallUriOverload#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.CallUriOverload/vb/FxCop.Design.CallUriOverload.vb#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
- [CA2234: Dizeler yerine System.Uri nesneleri geçirin](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)
+## <a name="related-rules"></a>İlgili kurallar
+ [CA2234: Dizeler yerine System.Uri nesneleri gönderin](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)
 
- [CA1056: URI özellikleri dizeler olmamalıdır](../code-quality/ca1056-uri-properties-should-not-be-strings.md)
+ [CA1056: URI özellikleri dize olmamalıdır](../code-quality/ca1056-uri-properties-should-not-be-strings.md)
 
  [CA1054: URI parametreleri dizeler olmamalıdır](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
 

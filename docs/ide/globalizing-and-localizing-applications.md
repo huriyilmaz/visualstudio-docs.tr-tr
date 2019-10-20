@@ -10,46 +10,46 @@ helpviewer_keywords:
 - world-ready applications
 - international applications [Visual Studio]
 ms.assetid: 4d9815ae-3e80-4b4d-933d-f8309aee18d5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 934427c2bfba769968b7aeb364625b71af47eca7
-ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
+ms.openlocfilehash: 886c31eb76a2cd440f1f8189aaacf592e43d34fa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66820876"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603453"
 ---
 # <a name="develop-globalized-and-localized-apps"></a>Genelleştirilmiş ve yerelleştirilmiş uygulamalar geliştirin
 
-Visual Studio yapar yerleşik hizmetlerinin avantajlarından yararlanarak uluslararası bir hedef kitle için kolay geliştirme [.NET](/dotnet/standard/globalization-localization/).
+Visual Studio, [.net](/dotnet/standard/globalization-localization/)' te yerleşik hizmetlerden yararlanarak uluslararası bir hedef kitle için geliştirmeyi kolaylaştırır.
 
-Örneğin, proje sistemi Windows Forms uygulamaları için geri dönüş UI kültürü hem de her ek UI kültürü için kaynak dosyaları oluşturabilirsiniz. Visual Studio'da bir proje oluşturduğunuzda, kaynak dosyalarını Visual Studio XML biçimi (.resx) Ara bir ikili biçimine (.resources), ardından uydu derlemeleri içinde gömülü derlenir. Daha fazla bilgi için [Visual Studio'daki kaynak dosyaları](/dotnet/framework/resources/creating-resource-files-for-desktop-apps#VSResFiles) ve [Masaüstü uygulamaları için uydu derlemeleri oluşturma](/dotnet/framework/resources/creating-satellite-assemblies-for-desktop-apps).
+Örneğin, Windows Forms uygulamalar için proje sistemi hem geri dönüş Kullanıcı arabirimi kültürü hem de her ek kullanıcı arabirimi kültürü için kaynak dosyaları oluşturabilir. Visual Studio 'da bir proje oluşturduğunuzda, kaynak dosyaları Visual Studio XML biçiminden (. resx), daha sonra uydu derlemelerine gömülü bir ara ikili biçimi (. resources) ile derlenir. Daha fazla bilgi için bkz. [Visual Studio 'Da kaynak dosyaları](/dotnet/framework/resources/creating-resource-files-for-desktop-apps#VSResFiles) ve [Masaüstü uygulamaları Için uydu derlemeleri oluşturma](/dotnet/framework/resources/creating-satellite-assemblies-for-desktop-apps).
 
 ## <a name="bidirectional-languages"></a>Çift yönlü diller
 
-Sağ-Arapça ve İbranice gibi sola doğru dillerde yazılan metin görüntüleyen uygulamalar oluşturmak için Visual Studio kullanabilirsiniz. Bazı özellikler için özellikleri ayarlayabilirsiniz. Diğer durumlarda, kod özellikleri uygulamalıdır.
+Arapça ve Ibranice gibi sağdan sola yazılan dillerde metni doğru şekilde görüntüleyen uygulamalar oluşturmak için Visual Studio 'Yu kullanabilirsiniz. Bazı özellikler için, yalnızca özellikleri ayarlayabilirsiniz. Diğer durumlarda, koddaki özellikleri uygulamanız gerekir.
 
 > [!NOTE]
-> Girin ve çift yönlü diller görüntülemek için uygun dili ile yapılandırılmış bir Windows sürümü ile çalışmalısınız. Bu bir İngilizce sürümüyle ilgili dil paketi yüklü olan Windows veya Windows uygun şekilde yerelleştirilmiş sürümünü olabilir.
+> Çift yönlü dilleri girip görüntülemesi için, uygun dille yapılandırılmış bir Windows sürümüyle çalışmanız gerekir. Bu, uygun dil paketinin yüklü olduğu bir Windows Ingilizce sürümü ya da Windows 'un uygun şekilde yerelleştirilmiş sürümü olabilir.
 
-### <a name="apps-that-support-bidirectional-languages"></a>Çift yönlü diller destekleyen uygulamalar
+### <a name="apps-that-support-bidirectional-languages"></a>Çift yönlü dilleri destekleyen uygulamalar
 
 - Windows uygulamaları
 
-   Tam olarak iki yönlü metnin sağdan sola okuma düzeni ve yansıtma (windows, menüler, iletişim kutuları ve benzeri düzenini ters) için destek içeren çift yönlü uygulamalar oluşturabilirsiniz. Yansıtma dışında bu özellikler varsayılan olarak veya özellik ayarları olarak kullanılabilir. Yansıtma ileti kutuları gibi bazı özellikler için doğal olarak desteklenir. Ancak, diğer durumlarda kod yansıtma uygulamalıdır. Daha fazla bilgi için [Windows Forms uygulamaları için çift yönlü destek](/dotnet/framework/winforms/advanced/bi-directional-support-for-windows-forms-applications).
+   Çift yönlü metin, sağdan sola okuma düzeni ve yansıtma (pencere, menü ve iletişim kutularının düzenini tersine çevirme) için destek içeren tam çift yönlü uygulamalar oluşturabilirsiniz. Yansıtma haricinde, bu özellikler varsayılan olarak veya özellik ayarları olarak kullanılabilir. Yansıtma, ileti kutuları gibi bazı özellikler için kendiliğinden desteklenir. Ancak, diğer durumlarda kodda yansıtma uygulamanız gerekir. Daha fazla bilgi için bkz. [Windows Forms uygulamalar için çift yönlü destek](/dotnet/framework/winforms/advanced/bi-directional-support-for-windows-forms-applications).
 
 - Web uygulamaları
 
-   Web Hizmetleri, UTF-8 ve çift yönlü diller gerektiren uygulamalar için uygun hale getirir, Unicode metni gönderip destekler. Web istemcisi uygulamalarını tarayıcılar için kullanıcı arabirimini kullanır, çift yönlü derecesini, destek için bir web uygulaması kullanıcı tarayıcısı bu çift yönlü Özellikler ne kadar iyi destekleyen bağlıdır. Visual Studio'da, Arapça veya İbranice metin, sağdan sola okuma düzeni, dosya kodlamasını ve yerel kültür ayarları için desteğe sahip uygulamalar oluşturabilirsiniz. Daha fazla bilgi için [ASP.NET web uygulamaları için çift yönlü destek](https://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03).
+   Web Hizmetleri, çift yönlü dilleri içeren uygulamalar için uygun hale getirerek UTF-8 ve Unicode metin gönderip almayı destekler. Web istemcisi uygulamaları, Kullanıcı arabirimi için tarayıcıları kullanır, bu nedenle bir Web uygulamasında çift yönlü destek derecesi, kullanıcı tarayıcısının bu çift yönlü özellikleri ne kadar iyi desteklediğine bağlıdır. Visual Studio 'da Arapça veya Ibranice metin, sağdan sola okuma düzeni, dosya kodlama ve yerel kültür ayarları desteğiyle uygulamalar oluşturabilirsiniz. Daha fazla bilgi için bkz. [ASP.NET Web uygulamaları Için çift yönlü destek](https://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03).
 
 > [!NOTE]
-> Konsol uygulamaları, metin çift yönlü dil desteği içermez. Windows konsol uygulamaları ile nasıl çalıştığına ilişkin bir sonucu budur.
+> Konsol uygulamaları çift yönlü diller için metin desteği içermez. Bu, Windows 'un konsol uygulamalarıyla nasıl çalıştığı hakkında bir sonucudur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da çift yönlü dil desteği](use-bidirectional-languages.md)
-- [Globalize ve .NET uygulamalarını yerelleştirme](/dotnet/standard/globalization-localization/)
-- [.NET uygulamalarında kaynakları](/dotnet/framework/resources/)
+- [Visual Studio 'da çift yönlü diller için destek](use-bidirectional-languages.md)
+- [.NET uygulamalarını globalize ve yerelleştirin](/dotnet/standard/globalization-localization/)
+- [.NET uygulamalarında kaynaklar](/dotnet/framework/resources/)

@@ -8,41 +8,37 @@ f1_keywords:
 - System.Activities.Statements.TransactionScope.UI
 ms.assetid: 8d7ebfc6-7478-4888-b3b0-b14f296096af
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: abed15a1ce3d406cfd5e95318dd332a677f61095
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b5a1d38ea37896cedcd2166c42f37ce037a1c4cd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976546"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670182"
 ---
 # <a name="transactionscope-activity-designer"></a>TransactionScope Etkinlik Tasarımcısı
-**TransactionScope** etkinlik Tasarımcısı oluşturmak ve yapılandırmak için kullanılan bir <xref:System.Activities.Statements.TransactionScope> etkinlik.  
-  
-## <a name="the-transactionscope-activity"></a>TransactionScope etkinlik  
- <xref:System.Activities.Statements.TransactionScope> Etkinliği tek bir işlemde içerilen bir etkinliği yürütür. Ne zaman işlem yürütmeleri <xref:System.Activities.Statements.TransactionScope.Body%2A> etkinliği ve diğer tüm katılımcıları işlem başarıyla tamamlandı.  
-  
-### <a name="using-the-transactionscope-activity-designer"></a>TransactionScope etkinlik Tasarımcısı kullanma  
- **TransactionScope** etkinlik Tasarımcısı bulunabilir **işlem** kategorisi **araç kutusu**, hangi erişilen tıklayarak **araç kutusu**  sekmesinde [!INCLUDE[wfd2](../includes/wfd2-md.md)] (Alternatif olarak, seçin **araç** gelen **görünümü** menüsünden veya CTRL + ALT + X.)  
-  
- **TransactionScope** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve oturum bırakılan [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzey yerde etkinlikleri genellikle yerleştirilir, örneğin olarak içinde bir <xref:System.Activities.Statements.Sequence>. Bu, oluşturur bir <xref:System.Activities.Statements.TransactionScope> etkinliği ile bir varsayılan <xref:System.Activities.Activity.DisplayName%2A> TransactionScope biri. <xref:System.Activities.Activity.DisplayName%2A> Değeri üst bilgisinde düzenlenebilir **TransactionScope** etkinlik Tasarımcısı veya **DisplayName** özellik kılavuzunda kutusu.  
-  
-### <a name="the-transactionscope-properties"></a>TransactionScope özellikleri  
- Aşağıdaki tabloda <xref:System.Activities.Statements.TransactionScope> özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır. <xref:System.Activities.Activity.DisplayName%2A> Ve <xref:System.Activities.Statements.TransactionScope.Body%2A> özelliklerinin düzenlenebilir [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzeyi. Ancak, özellik Kılavuzu'nun diğer özellikleri düzenlenmesi gerekir.  
-  
-|Özellik Adı|Gerekli|Kullanım|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|İsteğe bağlı kolay adı <xref:System.Activities.Statements.TransactionScope> etkinlik. TransactionScope varsayılandır. Ancak <xref:System.Activities.Activity.DisplayName%2A> değeri kesinlikle gerekli değil, kullanmak için en iyi bir uygulamadır.|  
-|<xref:System.Activities.Statements.TransactionScope.Body%2A>|Doğru|Tek bir işlem içinde çalıştırmak için etkinlik belirtir. Eklemek için <xref:System.Activities.Statements.TransactionScope.Body%2A> etkinlik, açılan bir etkinlikten **araç kutusu** içine **gövdesi** kutusuna **TransactionScope** ipucu metnini "bırakma etkinlik ile etkinlik Tasarımcısı Burada".|  
-|<xref:System.Activities.Statements.TransactionScope.IsolationLevel%2A>|Doğru|Belirtir <xref:System.Transactions.IsolationLevel> bu <xref:System.Activities.Statements.TransactionScope>.|  
-|<xref:System.Activities.Statements.TransactionScope.Timeout%2A>|False|(00:00: saat: dakika: saniye gösteren 00 biçimlendirilmiş) zaman aralığını belirtir. işlemin tamamlanması sahip. Varsayılan değer 1 dakikadır (00: 01:00).|  
-|<xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure?qualifyHint=False&autoUpgrade=True>|Doğru|İşlem durdurur, iş akışı durduruldu olup olmadığını belirten değeri belirtir.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlem](../workflow-designer/transaction-activity-designers.md)   
- [TerminateWorkflow](../workflow-designer/terminateworkflow-activity-designer.md)   
- [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)   
- [Telafi](../workflow-designer/compensate-activity-designer.md)   
- [Confirm](../workflow-designer/confirm-activity-designer.md)
+**TransactionScope** etkinlik Tasarımcısı <xref:System.Activities.Statements.TransactionScope> etkinlik oluşturmak ve yapılandırmak için kullanılır.
+
+## <a name="the-transactionscope-activity"></a>TransactionScope etkinliği
+ @No__t_0 etkinliği içerilen etkinliği tek bir işlemde yürütür. İşlem, <xref:System.Activities.Statements.TransactionScope.Body%2A> etkinliği ve işlemdeki tüm diğer katılımcılar başarıyla tamamlandığında işleme kaydeder.
+
+### <a name="using-the-transactionscope-activity-designer"></a>TransactionScope etkinlik tasarımcısını kullanma
+ **TransactionScope** etkinlik tasarımcısı, [!INCLUDE[wfd2](../includes/wfd2-md.md)] araç **kutusu** sekmesine tıklanarak erişilen **araç kutusu** **Işlem** kategorisinde bulunabilir (alternatif olarak, **görünümden** **araç çubuğu** ' nu seçin). menü veya CTRL + ALT + X.)
+
+ **TransactionScope** etkinlik Tasarımcısı **araç kutusundan** sürüklenip [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzeyine, örneğin <xref:System.Activities.Statements.Sequence> içinde olduğu gibi, her yerde bırakılmış olarak bırakılabilir. Bu, TransactionScope 'un varsayılan <xref:System.Activities.Activity.DisplayName%2A> bir <xref:System.Activities.Statements.TransactionScope> etkinlik oluşturur. @No__t_0 değeri, **TransactionScope** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
+
+### <a name="the-transactionscope-properties"></a>TransactionScope özellikleri
+ Aşağıdaki tabloda <xref:System.Activities.Statements.TransactionScope> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. @No__t_0 ve <xref:System.Activities.Statements.TransactionScope.Body%2A> özellikleri [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzeyi üzerinde düzenlenebilir. Ancak diğer özellikler özellik kılavuzunda düzenlenmelidir.
+
+|Özellik adı|Gerekli|Kullanım|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin isteğe bağlı kolay adı. Varsayılan, TransactionScope ' dır. @No__t_0 değeri kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.TransactionScope.Body%2A>|Doğru|Tek bir işlemde yürütülecek etkinliği belirtir. @No__t_0 etkinliğini eklemek için, **araç kutusundan** bir etkinliği, "ipucu etkinliği buraya bırak" ipucu metni ile **TransactionScope** etkinlik Tasarımcısı ' nın **gövde** kutusuna bırakın.|
+|<xref:System.Activities.Statements.TransactionScope.IsolationLevel%2A>|Doğru|Bu <xref:System.Activities.Statements.TransactionScope> için <xref:System.Transactions.IsolationLevel> belirtir.|
+|<xref:System.Activities.Statements.TransactionScope.Timeout%2A>|False|İşlemin tamamlanmasının 00:00:00 gerektiği zaman aralığını belirtir (Saat: dakika: saniye). Varsayılan değer 1 dakikadır (00:01:00).|
+|<xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure?qualifyHint=False&autoUpgrade=True>|Doğru|İşlem iptal edildikten sonra iş akışının durdurulmayacağını belirten değeri belirtir.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [İşlem](../workflow-designer/transaction-activity-designers.md) [TerminateWorkflow](../workflow-designer/terminateworkflow-activity-designer.md) [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md) [telafi](../workflow-designer/compensate-activity-designer.md) [onaylama](../workflow-designer/confirm-activity-designer.md)

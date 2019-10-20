@@ -8,31 +8,31 @@ helpviewer_keywords:
 - code, locating lines
 - Go To Line dialog box
 ms.assetid: 529fa251-b7b3-49cf-863c-10e0b82ac7cc
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ae4db65bc4e220a38e8fd5e5fefc221aa7d2eda
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8e82e7b9629e956a69e3ee69972c6e244ce10153
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62789697"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661593"
 ---
 # <a name="go-to-line-dialog-box"></a>Satıra Git iletişim kutusu
 
-**Satıra Git** etkin belgede belirli bir satıra Taşı iletişim kutusu sağlar. Bu iletişim kutusuna erişmek için bir belgeyi düzenlemek için açın ve ardından **Düzenle** > **Git** > **satıra Git** veya basın **Ctrl**  + **G**.
+**Satıra git** iletişim kutusu etkin belgedeki belirli bir satıra gitmenizi sağlar. Bu iletişim kutusuna erişmek için, düzenleme için bir belge açın ve ardından **Düzenle** ' yi seçin ** >   > ** **satıra gidin** veya **CTRL** +**G**tuşuna basın.
 
-![Visual Studio'da satıra Git iletişim kutusu](media/go-to-line-dialog-box.png)
+![Visual Studio 'da satıra Git iletişim kutusu](media/go-to-line-dialog-box.png)
 
-## <a name="line-number-1---n"></a>Satır numarası (1 - \<n >)
+## <a name="line-number-1---n"></a>Satır numarası (1-\<n >)
 
-İçinde **satır numarası (1 - \<n >)** kutusunda, etkin belgedeki taşımak istediğiniz satır numarasını girin. Girilen sayı 1 ile son satır numarası geçerli belgedeki arasında olması gerekir.
+**Satır numarası (1-\<n >)** kutusuna, etkin belgedeki, taşımak istediğiniz satırın numarasını girin. Girilen sayı 1 ile geçerli belgedeki son satır numarası arasında olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Git komutlarını kullanarak kod bulma](../../ide/go-to.md)
 - [Kodda yer işaretleri ayarlama](../../ide/setting-bookmarks-in-code.md)
 - [Metin bulma ve değiştirme](../../ide/finding-and-replacing-text.md)
-- [Kod Düzenleyicisi özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)

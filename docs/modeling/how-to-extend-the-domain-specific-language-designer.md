@@ -1,90 +1,90 @@
 ---
-title: 'Nasıl yapılır: Alana Özgü Dil Tasarımcısını Genişletme'
+title: 'Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme'
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85a4356837180d13428acf34636f28cca668a423
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aa03e43276c7c995c5f494c5325dd79716dcf998
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993171"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605601"
 ---
-# <a name="how-to-extend-the-domain-specific-language-designer"></a>Nasıl yapılır: Alana Özgü Dil Tasarımcısını Genişletme
+# <a name="how-to-extend-the-domain-specific-language-designer"></a>Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme
 
-DSL tanımlarına düzenlemek için kullandığınız Tasarımcı için Uzantılar yapabilirsiniz. Menü komutları, ekleme, işleyiciler için sürükleyin ve hareketlerini ve belirli tür değerleri veya ilişkileri değiştirdiğinizde tetiklenen kuralları ekleme yapabileceğiniz uzantı türleri. Uzantılar, paketlenmiş bir Visual Studio Tümleştirme Uzantısı (VSIX olarak) ve diğer kullanıcılara dağıtılır.
+Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantılar yapabilirsiniz. Yapabileceğiniz uzantı türleri arasında menü komutları ekleme, sürükle ve çift tıklama hareketleri için işleyiciler ekleme ve belirli değer veya ilişki türleri değiştiğinde tetiklenen kurallar sayılabilir. Uzantılar, Visual Studio Tümleştirme Uzantısı (VSıX) olarak paketlenebilir ve diğer kullanıcılara dağıtılabilir.
 
-Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. Visual Studio [Görselleştirme ve modelleme SDK'sı](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db).
+Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. Visual Studio [görselleştirme ve modelleme SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db).
 
 ## <a name="set-up-the-solution"></a>Çözümü ayarlama
 
-Uzantınızı kodunu içeren bir proje ve proje dışarı aktaran bir VSIX projesine ayarlayın. Çözümünüzü aynı VSIX içinde eklenen diğer proje içerebilir.
+Uzantınızın kodunu içeren bir proje ve projeyi dışarı aktaran bir VSıX projesi ayarlayın. Çözümünüz aynı VSıX 'e dahil edilen diğer projeleri içerebilir.
 
-### <a name="to-create-a-dsl-designer-extension-solution"></a>Bir DSL Tasarımcısı uzantısı çözümü oluşturmak için
+### <a name="to-create-a-dsl-designer-extension-solution"></a>DSL Tasarımcısı uzantısı çözümü oluşturmak için
 
-1. Kullanarak yeni bir proje oluşturma **sınıf kitaplığı** proje şablonu. Bu proje uzantılarınızı kodunu içerir.
+1. **Sınıf kitaplığı** proje şablonunu kullanarak yeni bir proje oluşturun. Bu proje, uzantılarınızın kodunu içerecektir.
 
-2. Yeni bir **VSIX projesi** proje.
+2. Yeni bir **VSIX proje** projesi oluşturun.
 
-     Seçin **çözüme ekleyin**.
+     **Çözüme Ekle**' yi seçin.
 
-     *Source.extension.vsixmanifest* VSIX bildirim düzenleyicisinde açılır.
+     *Kaynak. Extension. valtmanifest* VSIX bildirim düzenleyicisinde açılır.
 
-3. İçerik alanı **İçerik Ekle**.
+3. Içerik alanının üzerinde **Içerik Ekle**' ye tıklayın.
 
-4. İçinde **İçerik Ekle** iletişim kutusu, kümesi **içerik türünü seçin** için **MEF Bileşeni**, ayarlayıp **proje** sınıf kitaplığı projenize.
+4. **Içerik Ekle** iletişim kutusunda, **MEF bileşeni**Için **bir içerik türü seçin** ' i ayarlayın ve **projeyi** sınıf kitaplığı projeniz olarak ayarlayın.
 
-5. Tıklayın **sürümleri seçin** emin olun **Visual Studio Enterprise** denetlenir.
+5. **Sürümleri Seç** ' e tıklayın ve **Visual Studio Enterprise** işaretli olduğundan emin olun.
 
-6. VSIX projesinin çözümün başlangıç projesi olduğundan emin olun.
+6. VSıX projesinin çözümün başlangıç projesi olduğundan emin olun.
 
-7. Sınıf kitaplığı projesinde aşağıdaki derlemelere başvurular ekleyin:
+7. Sınıf kitaplığı projesinde, aşağıdaki derlemelere başvurular ekleyin:
 
-     Microsoft.VisualStudio.CoreUtility
+     Microsoft. VisualStudio. CoreUtility
 
-     Microsoft.VisualStudio.Modeling.Sdk.11.0
+     Microsoft. VisualStudio. model. SDK. 11.0
 
-     Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
+     Microsoft. VisualStudio. modellemesi. SDK. diyagramlar. 11.0
 
-     Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0
+     Microsoft. VisualStudio. modellemesi. SDK. DslDefinition. 11.0
 
-     Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
+     Microsoft. VisualStudio. model. SDK. Integration. 11.0
 
-     System.ComponentModel.Composition
+     System. ComponentModel. Composition
 
-     System.Drawing
+     System. Drawing
 
-     System.Drawing.Design
+     System. Drawing. Design
 
-     System.Windows.Forms
+     System. Windows. Forms
 
 ## <a name="test-and-deployment"></a>Test ve dağıtım
 
-Bu konuda herhangi bir uzantı sınamak için derleme ve çözümü çalıştırın. Visual Studio deneysel örneği açılır. Bu örnekte, bir DSL çözümünü açın. DslDefinition diyagramını düzenleyin. Uzantı davranışı görülebilir.
+Bu konudaki herhangi bir uzantıyı test etmek için çözümü derleyin ve çalıştırın. Visual Studio 'nun deneysel bir örneği açılır. Bu örnekte, bir DSL çözümü açın. DslDefinition diyagramını düzenleyin. Uzantı davranışı görülebilir.
 
-Uzantıları için ana Visual Studio ve diğer bilgisayarlara dağıtmak için aşağıdaki adımları izleyin:
+Uzantıları ana Visual Studio 'ya ve diğer bilgisayarlara dağıtmak için şu adımları izleyin:
 
-1. VSIX projenizde depo VSIX yükleme dosyasını bulmak\\*\*\\\*.vsix
+1. VSIX projenizde VSIX yükleme dosyasını, bin \\ * \\ \*. VSIX ' de bulun.
 
-2. Bu dosyayı hedef bilgisayara kopyalayın ve ardından Windows Explorer (veya dosya Gezgini) çift tıklayın.
+2. Bu dosyayı hedef bilgisayara kopyalayın ve ardından Windows Gezgini 'nde (veya dosya Gezgini) çift tıklayın.
 
-     Uzantının yüklü olduğunu doğrulamak için Visual Studio Uzantı Yöneticisi açılır.
+     Uzantının yüklendiğini doğrulamak için Visual Studio Uzantı Yöneticisi açılır.
 
-Uzantıyı kaldırmak için aşağıdaki adımları izleyin:
+Uzantıyı kaldırmak için şu adımları izleyin:
 
-1. Visual Studio'da üzerinde **Araçları** menüsünde tıklatın **Uzantı Yöneticisi**.
+1. Visual Studio 'da, **Araçlar** menüsünde **Uzantı Yöneticisi**' ne tıklayın.
 
 2. Uzantıyı seçin ve silin.
 
-## <a name="add-a-shortcut-menu-command"></a>Bir kısayol menü komutu ekleme
+## <a name="add-a-shortcut-menu-command"></a>Kısayol menü komutu ekleme
 
-DSL Tasarımcısı yüzeyine veya DSL Gezgini penceresinde görünen bir kısayol menü komutu yapmak için aşağıdaki benzeyen bir sınıf yazın.
+DSL Tasarımcısı yüzeyinde veya DSL Gezgini penceresinde kısayol menü komutu görünmesini sağlamak için, aşağıdaki gibi bir sınıf yazın.
 
-Sınıf uygulamalıdır `ICommandExtension` ve özniteliği olmalıdır `DslDefinitionModelCommandExtension`.
+Sınıf `ICommandExtension` uygulamalıdır ve özniteliği `DslDefinitionModelCommandExtension` sahip olmalıdır.
 
 ```csharp
 using System.Collections.Generic;
@@ -146,9 +146,9 @@ namespace Fabrikam.SimpleDslDesignerExtension
 }
 ```
 
-## <a name="handle-mouse-gestures"></a>Fare hareketlerini işleme
+## <a name="handle-mouse-gestures"></a>Fare hareketlerini işle
 
-Kod menü komutunu koda benzer.
+Kod, menü komutunun koduna benzer.
 
 ```csharp
 [DslDefinitionModelGestureExtension]
@@ -208,9 +208,9 @@ Kod menü komutunu koda benzer.
  }
 ```
 
-## <a name="respond-to-value-changes"></a>Değişiklikleri değerine Yanıtla
+## <a name="respond-to-value-changes"></a>Değer değişikliklerine yanıt verme
 
-Bu işleyici, düzgün çalışması için bir etki alanı modeli gerekir. Basit bir etki alanı modeli sunuyoruz.
+Bu işleyicinin doğru çalışması için bir etki alanı modelinin olması gerekir. Basit bir etki alanı modeli sağlıyoruz.
 
 ```csharp
 using System.Diagnostics;
@@ -250,7 +250,7 @@ namespace Fabrikam.SimpleDslDesignerExtension
 } }  }  );
 ```
 
-Aşağıdaki kod, basit bir modeli uygular. Yer tutucu değiştirmek için yeni bir GUID oluşturun.
+Aşağıdaki kod basit bir model uygular. Yer tutucuyu değiştirmek için yeni bir GUID oluşturun.
 
 ```csharp
 using System;

@@ -6,21 +6,21 @@ apiname:
 - XAttribute.Value
 apitype: Assembly
 ms.assetid: 019733d2-e050-4120-b537-831cd3fc008e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe9127d4a7c691c34f15d399bd32f5e48cc6f0ed
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fefa3d13f1a38b5d1c329fa9df9220e13e769b1c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62892826"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634527"
 ---
 # <a name="value-xattribute-dynamic-property"></a>Değer (XAttribute dinamik özelliği)
 
-Alır veya XML öznitelik değerini ayarlar.
+XML özniteliğinin değerini alır veya ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,20 +30,20 @@ attrib.Value
 
 ## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
 
-A <xref:System.String> içeren bu özniteliğin değeri.
+Bu özniteliğin değerini içeren bir <xref:System.String>.
 
 ## <a name="exceptions"></a>Özel Durumlar
 
 |Özel durum türü|Koşul|
 | - |---------------|
-|<xref:System.ArgumentNullException>|Ayarlarken `value` olduğu `null`.|
+|<xref:System.ArgumentNullException>|Ayarlanırken, `value` `null`.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu özellik değerine eşdeğer olan <xref:System.Xml.Linq.XAttribute.Value%2A> özelliği <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> sınıfı, ancak bu dinamik özellik de değişiklik bildirimleri destekler.
+Bu özellik, <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> sınıfının <xref:System.Xml.Linq.XAttribute.Value%2A> özelliğine eşdeğerdir, ancak bu dinamik özellik değişiklik bildirimlerini de destekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>
-- [XAttribute sınıfı dinamik özellikleri](../designers/xattribute-class-dynamic-properties.md)
+- [XAttribute sınıfı dinamik özellikleri](../designers/value-xattribute-dynamic-property.md)
 - [Öznitelik](../designers/attribute-xelement-dynamic-property.md)

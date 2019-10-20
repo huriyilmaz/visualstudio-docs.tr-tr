@@ -3,27 +3,27 @@ title: Seçili bağlantı desteklenmeyen bir veritabanı sağlayıcısı kullan�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4d25dfa1-8fa4-4529-9b90-973bc2ec2993
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5fab6be50a9b4c273a7bb911d8afde5cf65d7676
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: ce72f9d4f93db5d4f96bfe54e6cb0d29f4e0727b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65460580"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72639974"
 ---
 # <a name="the-selected-connection-uses-an-unsupported-database-provider"></a>Seçili bağlantı desteklenmeyen bir veritabanı sağlayıcısı kullanıyor
 
-Bu ileti, SQL Server için .NET Framework veri sağlayıcısı kullanmayan öğelerini sürükleyip bırakırken görünür **Sunucu Gezgini** veya **veritabanı Gezgini** üzerine [görselde LINQ to SQL araçları Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md).
+Bu ileti, **Sunucu Gezgini** veya **Veritabanı Gezgini** SQL Server için .NET Framework veri sağlayıcısı kullanmayan öğeleri [Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)üzerine sürüklediğinizde görüntülenir.
 
-**O/R Tasarımcısı** SQL Server için .NET Framework sağlayıcısını kullanan veri bağlantılarını destekler. Microsoft SQL Server veya Microsoft SQL Server veritabanı dosyası yalnızca bağlantıları geçerli değil.
+**O/R Tasarımcısı** , SQL Server için yalnızca .NET Framework sağlayıcıyı kullanan veri bağlantılarını destekler. Yalnızca Microsoft SQL Server veya Microsoft SQL Server veritabanı dosyası bağlantıları geçerlidir.
 
-Bu hatayı düzeltmek için SQL Server için .NET Framework veri sağlayıcısı kullanan veri bağlantıları yalnızca öğeleri ekleyin **O/R Tasarımcısı**.
+Bu hatayı düzeltmek için, yalnızca SQL Server için .NET Framework Veri Sağlayıcısı kullanan veri bağlantılarından yalnızca **O/R tasarımcısına**öğe ekleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Data.SqlClient>
-- [Visual Studio'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

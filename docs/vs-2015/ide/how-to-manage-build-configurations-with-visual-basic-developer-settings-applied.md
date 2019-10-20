@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Visual Basic Geliştirici ayarları uygulanmış olarak derleme yapılandırmalarını yönetme | Microsoft Docs'
+title: 'Nasıl yapılır: Visual Basic Geliştirici ayarları uygulanmış derleme yapılandırmasını yönetme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,39 +14,38 @@ helpviewer_keywords:
 - release builds
 ms.assetid: eaea6e0b-6c61-4869-8d63-d372c745a23c
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c2cf949803bcc864937e67c1f94addaaf6abacbd
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a5f8568edc636955558ec93b55c0aedebf0065d3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685635"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651833"
 ---
-# <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Nasıl yapılır: Visual Basic Geliştirici Ayarları Uygulanmış Olarak Derleme Yapılandırmalarını Yönetme
+# <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Nasıl Yapılır: Visual Basic Geliştirici Ayarları Uygulanmış Olarak Derleme Yapılandırmalarını Yönetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Varsayılan olarak, tüm Gelişmiş derleme yapılandırma seçenekleri ile gizli [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Geliştirici ayarları uygulanmış. Bu konuda, bu ayarları el ile etkinleştirmek açıklanmaktadır.  
-  
-## <a name="enabling-advanced-build-configurations"></a>Gelişmiş derleme yapılandırmalarını etkinleştirme  
- Varsayılan olarak, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Geliştirici ayarları Gizle açma seçeneği **Configuration Manager** iletişim kutusu ve **yapılandırma** ve **Platform** listeler [Proje Tasarımcısı](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
-  
-#### <a name="to-enable-advanced-build-configurations"></a>Gelişmiş derleme yapılandırmalarını etkinleştirmek için  
-  
-1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.  
-  
-2. Genişletin **projeler ve çözümler**, tıklatıp **genel**.  
-  
+Varsayılan olarak, tüm Gelişmiş derleme yapılandırma seçenekleri [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Geliştirici ayarları uygulanmış olarak gizlidir. Bu konuda, bu ayarların el ile nasıl etkinleştirileceği açıklanmaktadır.
+
+## <a name="enabling-advanced-build-configurations"></a>Gelişmiş derleme yapılandırmasını etkinleştirme
+ Varsayılan olarak [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Geliştirici ayarları, [Proje tasarımcısında](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7) **Configuration Manager** iletişim kutusunu ve **yapılandırma** ve **Platform** listelerini açma seçeneğini gizler.
+
+#### <a name="to-enable-advanced-build-configurations"></a>Gelişmiş derleme yapılandırmasını etkinleştirmek için
+
+1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+
+2. **Projeler ve çözümler**' i genişletin ve **genel**' e tıklayın.
+
     > [!NOTE]
-    > **Genel** düğümüdür görünür bile **tüm ayarları göster** seçeneği olarak işaretli değildir. Tüm kullanılabilir seçenekleri görmek istiyorsanız, tıklayın **tüm ayarları göster**.  
-  
-3. Tıklayın **Show Gelişmiş derleme yapılandırmaları**.  
-  
-4. **Tamam**'ı tıklatın.  
-  
-     Üzerinde **derleme** menüsünde **Configuration Manager** artık kullanımda ve **yapılandırma** ve **Platform** listeleridir görünür Proje Tasarımcısı.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md)   
- [Derleme ve Oluşturma](../ide/compiling-and-building-in-visual-studio.md)
+    > **Tüm ayarları göster** seçeneği işaretli olmasa bile **genel** düğüm görünür. Kullanılabilir her seçeneği görmek istiyorsanız **tüm ayarları göster**' e tıklayın.
+
+3. **Gelişmiş derleme yapılandırmasını göster**' e tıklayın.
+
+4. **Tamam**'a tıklayın.
+
+     **Yapı** menüsünde **Configuration Manager** artık kullanılabilir ve **yapılandırma** ve **Platform** listeleri proje tasarımcısında görünür.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Derleme yapılandırmalarının](../ide/understanding-build-configurations.md) [derlemesini ve oluşturulmasını](../ide/compiling-and-building-in-visual-studio.md) anlama

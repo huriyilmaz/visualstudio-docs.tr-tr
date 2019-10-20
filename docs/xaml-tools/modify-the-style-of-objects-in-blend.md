@@ -3,17 +3,17 @@ title: Nesnelerin stilini değiştirme
 titleSuffix: Blend for Visual Studio
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44c7cdc4de5e67c73f5ebab40de75d7dcb484ed9
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 225a9e85493711a1e2903c1f6a632ae68f31136f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451012"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668832"
 ---
 # <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>Visual Studio için Blend içindeki nesnelerin stilini değiştirme
 
@@ -75,7 +75,7 @@ Bir stil oluşturmak için, nesneyi seçin ve ardından **nesne** menüsünde **
 
 > [!NOTE]
 > Her denetim türü için stil veya şablon oluşturamazsınız. Bir denetim bunları desteklemiyorsa, içerik haritası düğmesi çalışma yüzeyi üzerinde görünmez.
-> Ana belgenizin düzenlenme kapsamına dönmek için, **kapsamı** ![dönüş kapsamını @ no__t-2 simgesine Döndür ' e tıklayın.
+> Ana belgenizin düzenlenme kapsamına dönmek için, kapsamı **geri döndür** ' e tıklayarak kapsamı simge ](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png) ![Return.
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>Denetime stil veya şablon uygulama
 
@@ -93,7 +93,7 @@ Görsel durumlar, bir denetimin görünüşünü durumunu temel alarak değişti
 
 ![Fare durumuna göre](../designers/media/a95c671a-5639-40b9-83db-1e6b214330d5.png)
 
-**Kısa bir video izleyin:** ![play Button @ no__t-2 [WPF denetimlerinizin durumunu yönetin](https://www.youtube.com/watch?v=m0PlkF5i6uw).
+[WPF denetimlerinizin durumunu yönetmek](https://www.youtube.com/watch?v=m0PlkF5i6uw)](../designers/media/bldadminconsoleinitialconfigicon.PNG) **kısa bir video izleyin:** ![Play düğme.
 
 ## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>Kaynaklar: renkler, stiller ve şablonlar oluşturun ve daha sonra yeniden kullanın
 

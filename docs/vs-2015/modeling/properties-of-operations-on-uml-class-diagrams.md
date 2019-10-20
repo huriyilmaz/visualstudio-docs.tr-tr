@@ -1,5 +1,5 @@
 ---
-title: UML işlemlerin özellikleri sınıf diyagramları | Microsoft Docs
+title: UML sınıf diyagramlarındaki işlemlerin özellikleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -10,68 +10,64 @@ helpviewer_keywords:
 - UML, element properties
 ms.assetid: 4128f3e2-3a51-4edf-b3e4-b7f170a32f6b
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f98a3211bebf832009b84fac0fc1305a4162c610
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 67d752fa802deef5dcc40fdfa4d762dc6edb1d0d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154829"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671344"
 ---
 # <a name="properties-of-operations-on-uml-class-diagrams"></a>UML sınıf diyagramlarındaki işlemlerin özellikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir UML sınıf diyagramı üzerinde eklediğiniz *işlemleri* sınıfları ve arabirimleri. Bir yöntem veya bir sınıf veya arabirim örneği tarafından gerçekleştirilebilen işlevi bir işlemdir.  
+UML sınıf diyagramında, sınıflara ve arabirimlere *işlemler* ekleyebilirsiniz. İşlem, bir sınıf veya arabirim örneği tarafından gerçekleştirilebilecek bir yöntem veya işlevdir.
 
- Bir işlem eklemek için sınıf veya arabirim sağ tıklatın, **Ekle**ve ardından **işlemi**.  
+ Bir işlem eklemek için sınıfa veya arabirime sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **işlem**' e tıklayın.
 
- Bir sınıfın işlemleri diyagramda görünür değilse, sınıf veya arabirim üst kısmındaki Genişlet Köşeli Çift Ayraca tıklayın. Gördüğünüz varsa **işlemi** başlık tıklayın **[+]** operations bölümü genişletin.  
+ Diyagramdaki bir sınıfın işlemleri görünür değilse, sınıfın veya arabirimin en üstündeki köşeli çift ayraca tıklayın. **İşlem** üst bilgisini görebiliyorsanız, işlemler bölümünü genişletmek için **[+]** öğesine tıklayın.
 
-## <a name="signature-of-an-operation"></a>Bir işlemin imzası  
- Bir işlemin imza, bir sınıfta veya arabirimde bir UML sınıf diyagramı temsil eden metin satırının değil. Bunu, aşağıdaki biçime sahiptir:  
+## <a name="signature-of-an-operation"></a>Bir Işlemin imzası
+ Bir işlemin imzası, UML sınıf diyagramı üzerindeki bir sınıfta veya arabirimde bunu temsil eden metin satırıdır. Aşağıdaki biçimdedir:
 
- \+ OperationName (parametre1: Type1 [*]...) : ReturnType [\*]  
+ \+ OperationName (parametre1: Type1 [*],...): ReturnType [\*]
 
- \+ Genel görünürlük gösterir. Bir izin verilen değerler: - (özel), (korumalı), # ~ (paket).  
+ \+ genel görünürlüğü gösterir. İzin verilen diğer değerler-(özel), # (korumalı), ~ (paket).
 
- `OperationName` altı çizili olup **Is Static** özelliği true ise ve italic varsa **soyut** özelliği true ise.  
+ `OperationName` **static** özelliği true ise altı çizili olur ve **abstract** özelliği true ise italik olur.
 
- `: ReturnType` dönüş türü tanımladıysanız atlanır.  
+ hiçbir dönüş türü tanımlanmamışsa `: ReturnType` atlanır.
 
- `[*]` bir parametre veya dönüş türünün çokluğu gösterir. Çokluk 1 ise atlanmıştır.  
+ `[*]` bir parametre veya dönüş türünün çokluğunu gösterir. Çoğulluk 1 ise atlanır.
 
- Bu özelliklerin tam bir açıklaması için sonraki bölüme bakın.  
+ Bu özelliklerin tam açıklaması için sonraki bölüme bakın.
 
-## <a name="properties"></a>Özellikler  
- Bu sınıfta veya arabirimde bir işlemde bir UML sınıf diyagramında özellikleridir.  
+## <a name="properties"></a>Özellikler
+ Bunlar bir sınıf veya arabirim içindeki bir işlemin Özellikler UML sınıf diyagramı üzerinde bulunur.
 
- Bir işlem özelliklerini görmek için diyagramda sınıfı veya arabirimi işlemi sağ tıklayın ve ardından **özellikleri**. Özellikleri görünür **özellikleri** penceresi.  
+ Bir işlemin özelliklerini görmek için diyagramdaki sınıf veya arabirimdeki işleme sağ tıklayın ve ardından **Özellikler**' e tıklayın. Özellikler **, Özellikler penceresinde görünür** .
 
 |      Özellik       |   Varsayılan    |                                                                                                                                                                                 Açıklama                                                                                                                                                                                 |
 |---------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      **Ad**       | (yeni ad) |                                                                                                                                                                Kapsayan türü içinde benzersiz olmalıdır.                                                                                                                                                                 |
-|   **Parametreler**    |    (hiçbiri)    |      Forma sahip bir listeyi <em>adı</em> **:** <em>türü</em> **,** <em>adı</em> **:**  <em>Tür</em> **,...** Tıklayın **[...]**  listesini düzenlemek için.<br /><br /> Türler, ilkel türler veya modelde tanımlı türleri olabilir. Bu özelliği yeni bir tür için bir ad girin, bir tür eklenecek **belirtilmemiş türler** UML Model Gezgini bölümü.      |
-|   **Dönüş Türü**   |    (hiçbiri)    |                                                                               **(hiçbiri)** , veya basit türü veya modelde tanımlı bir tür. Bu özelliği yeni bir tür için bir ad girin, bir tür eklenecek **belirtilmemiş türler** UML Model Gezgini bölümü.                                                                                |
-| **Koşul sonralarına**  |    (hiçbiri)    |                                                                                                                         Önce ve sonra işlemin yürütülmesinin sistem durumunu arasında bir ilişki belirten isteğe bağlı koşul.                                                                                                                         |
-|  **Önkoşulları**  |    (hiçbiri)    |                                                                                                                            Yürütme işleminden önce sistem durumu hakkındaki varsayımların belirten isteğe bağlı koşul başlar.                                                                                                                            |
-| **Gövde koşulları** |    (hiçbiri)    |                                                                                                                                                       İsteğe bağlı bir işlem tarafından döndürülen değer kısıtlaması.                                                                                                                                                       |
-|   **Görünürlük**    |    Ortak    |                  İmzada görünen karakterler ve izin verilen değerler şunlardır:<br /><br /> **+ Genel** - görünür genel<br /><br /> **-Özel** - türü dışında görünür değil<br /><br /> **# Korumalı** - sahibinden türetilen türler görünür<br /><br /> **~ Paketini** - aynı paket içindeki diğer türlere görünür.                   |
-|    **İmza**    |  +*Ad*)   |                                                                                      Görünürlük, adı, parametreleri ve dönüş türü bu işlem özetler. Bu özellikler, diyagram imza düzenleyerek veya bireysel özelliklerini düzenleyerek değiştirebilirsiniz.                                                                                      |
-|   **İş öğeleri**    | ilişkili 0 |                                                                                                  İlişkili iş öğelerinin sayısı. Salt okunur.<br /><br /> Daha fazla bilgi için [bağlantı model öğelerini ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).                                                                                                  |
-|   **Eşzamanlılık**   |  Sıralı  | **Sıralı** -işlemi olduğundan veya eşzamanlılık denetimi olmadan tasarlanır. Bu işlem aynı anda çağırma hatalara neden olabilir.<br /><br /> **Korumalı** -işlemi otomatik olarak diğer örneklerini tamamlanıncaya kadar engeller.<br /><br /> **Eş zamanlı** -işlemi birden çok çağrı eşzamanlı olarak çalıştırabilmeniz için tasarlanmıştır. |
-|    **Statik**    |    False     |                                                                                                  TRUE ise, bu işlem bu türün tüm örnekleri arasında paylaşılır.<br /><br /> TRUE ise işlemi adı diyagram üzerinde göründüğü altı çizili olacaktır.                                                                                                   |
-|   **Özet**   |    False     |                                                                                                                                        TRUE ise, hiçbir kod bu işlem ile ilişkilidir. Bu nedenle, sahip olan sınıf soyuttur.                                                                                                                                         |
-|     **Yaprak**     |    False     |                                                                                                                                              Tasarımcı, türetilen sınıflarda bu işlemi geçersiz kılınamaz amaçlamaktadır.                                                                                                                                              |
-|    **Sorgu**     |    False     |                                                                                                 TRUE ise, sistem durumunu önemli bir değişiklik bu işlem tarafından yapılır. Bu nedenle, bu, örneğin, sistemin durumunu denetlemek için bir test çalıştırmasında kullanılabilir.                                                                                                  |
-|  **Çokluk**   |      1\.       |                                 **1** -tek bir değeri belirtilen türe ait.<br /><br /> **0..1** -olabilir `null`.<br /><br /> \* -belirtilen türde değerler koleksiyonu.<br /><br /> **1..\\**  \* - en az bir değer içeren bir koleksiyon.<br /><br /> *n* `..` *m* -arasında içeren bir koleksiyon `n` ve `m` değerleri.                                  |
-|   **Sıralı**    |    False     |                                                                                                                                             TRUE ise koleksiyon sıralı bir liste oluşturur. İçin **Çoğulluk** 1'den fazla.                                                                                                                                              |
-|    **Benzersiz**    |    False     |                                                                                                                                         TRUE ise, koleksiyonda yinelenen değerler yoktur. İçin **Çoğulluk** 1'den fazla.                                                                                                                                         |
+|      **Ad**       | (yeni bir ad) |                                                                                                                                                                Kapsayan tür içinde benzersiz olmalıdır.                                                                                                                                                                 |
+|   **Parametreler**    |    seçim    |      Şu form adına sahip bir liste **:** <em>tür</em> **,** <em>ad</em> **:** <em>tür</em> **,....** Listeyi düzenlemek için **[...]** düğmesine tıklayın.<br /><br /> Türler, temel türler veya modelde tanımlanan türler olabilir. Bu özellikte yeni bir tür için ad girerseniz, UML Model Gezgini 'nin **belirtilmeyen türler** bölümüne bir tür eklenecektir.      |
+|   **Dönüş Türü**   |    seçim    |                                                                               **(yok)** veya temel bir tür ya da modelde tanımlı bir tür. Bu özellikte yeni bir tür için ad girerseniz, UML Model Gezgini 'nin **belirtilmeyen türler** bölümüne bir tür eklenecektir.                                                                                |
+| **Sonkoşulları**  |    seçim    |                                                                                                                         İşlemin yürütmeden önce ve sonra sistemin durumu arasındaki ilişkiyi belirten isteğe bağlı bir koşul.                                                                                                                         |
+|  **Üstbilgisinde**  |    seçim    |                                                                                                                            İşlem yürütülmeye başlamadan önce sistemin durumu hakkındaki varsayımları belirten isteğe bağlı bir durumdur.                                                                                                                            |
+| **Gövde koşulları** |    seçim    |                                                                                                                                                       İşlemin döndürdüğü değerler üzerinde isteğe bağlı bir kısıtlama.                                                                                                                                                       |
+|   **Görünürlük**    |    Ortak    |                  İzin verilen değerler ve İmzada görünen karakterler şunlardır:<br /><br /> **+ Genel** -genel görünür<br /><br /> **-Private** -sahip olan tür dışında görünür değil<br /><br /> **# Protected** -sahibinden türetilen türlere görünür<br /><br /> **~ Package** -aynı paket içindeki diğer türlere görünür.                   |
+|    **İmza**    |  +*adı*()   |                                                                                      Bu işlemin görünürlüğünü, adını, parametrelerini ve dönüş türünü özetler. Diyagramdaki imzayı düzenleyerek veya tek tek özellikleri düzenleyerek bu özellikleri değiştirebilirsiniz.                                                                                      |
+|   **İş öğeleri**    | 0 ilişkili |                                                                                                  İlişkili iş öğelerinin sayısı. Salt okunur.<br /><br /> Daha fazla bilgi için bkz. [model öğelerini ve iş öğelerini bağlama](../modeling/link-model-elements-and-work-items.md).                                                                                                  |
+|   **Eşzamanlılık**   |  Sıralı  | **Sıralı** -işlem Eşzamanlılık denetimi olmadan tasarlanacaktır. Bu işlemi eşzamanlı olarak çağırmak hatalara yol açabilir.<br /><br /> **Korunuyor** -işlem, diğer örnekleri tamamlanana kadar otomatik olarak engellenir.<br /><br /> **Eşzamanlı** -işlem, birden çok çağrısının eşzamanlı yürütebilmesi için tasarlanmıştır. |
+|    **Statiktir**    |    False     |                                                                                                  True ise, bu işlem bu türün tüm örnekleri arasında paylaşılır.<br /><br /> True ise işlemin adı diyagramda göründüğü yerde Altıçizili olacaktır.                                                                                                   |
+|   **Soyut**   |    False     |                                                                                                                                        True ise, bu işlemle ilişkili kod yok. Bu nedenle, sahip olan sınıf soyuttur.                                                                                                                                         |
+|     **Yaprak**     |    False     |                                                                                                                                              Tasarımcı, bu işlemin türetilmiş sınıflarda geçersiz kılınamayacağını size amaçlamaktadır.                                                                                                                                              |
+|    **Sorgu**     |    False     |                                                                                                 True ise, bu işlem tarafından sistem durumunda önemli bir değişiklik yapılmaz. Bu nedenle, örneğin, sistemin durumunu denetlemek için bir testte kullanılabilir.                                                                                                  |
+|  **Ğunun**   |      1\.       |                                 **1** -belirtilen türde tek bir değer.<br /><br /> **0.. 1** -`null` olabilir.<br /><br /> \*-belirtilen türdeki değerlerin bir koleksiyonu.<br /><br /> **1.. \\** \*-en az bir değer içeren bir koleksiyon.<br /><br /> *n* `..` *d* -`n` ve `m` değerleri içeren bir koleksiyon.                                  |
+|   **Sıralanmıştır**    |    False     |                                                                                                                                             True ise koleksiyon sıralı bir liste oluşturur. 1 ' den fazla **çokluk** için.                                                                                                                                              |
+|    **Benzersizdir**    |    False     |                                                                                                                                         True ise, koleksiyonda yinelenen değer yok. 1 ' den fazla **çokluk** için.                                                                                                                                         |
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UML Sınıf Diyagramları: Başvuru](../modeling/uml-class-diagrams-reference.md)   
- [UML sınıf diyagramlarındaki türlerin özellikleri](../modeling/properties-of-types-on-uml-class-diagrams.md)   
- [UML sınıf diyagramlarındaki özniteliklerin özellikleri](../modeling/properties-of-attributes-on-uml-class-diagrams.md)   
- [UML sınıf diyagramlarındaki İlişkilendirmelerin Özellikleri](../modeling/properties-of-associations-on-uml-class-diagrams.md)   
- [UML Sınıf Diyagramları: Yönergeler](../modeling/uml-class-diagrams-guidelines.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+ [UML sınıf diyagramları:](../modeling/uml-class-diagrams-reference.md) UML sınıf çizenekleri UML sınıf diyagramları üzerindeki [ilişkilerin](../modeling/properties-of-associations-on-uml-class-diagrams.md) UML sınıf diyagramları [özelliklerindeki](../modeling/properties-of-attributes-on-uml-class-diagrams.md) başvuru [özellikleri](../modeling/properties-of-types-on-uml-class-diagrams.md) UML sınıf diyagramları [: yönergeler](../modeling/uml-class-diagrams-guidelines.md)

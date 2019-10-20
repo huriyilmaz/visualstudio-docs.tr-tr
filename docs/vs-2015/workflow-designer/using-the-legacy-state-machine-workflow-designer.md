@@ -1,5 +1,5 @@
 ---
-title: Eski Durum makinesi iş akışı Tasarımcısı'nı kullanarak | Microsoft Docs
+title: Eski durum makinesi kullanılıyor İş Akışı Tasarımcısı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -15,54 +15,47 @@ helpviewer_keywords:
 - StateInitializationActivity activity
 ms.assetid: 2cd21123-35c2-4eaf-82f6-86fce7a8f04d
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 54469f2e255ff9ea726ea1b6c13abcb55c33252d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8c2b1ce1f1b2c6a16b5576880904feadf37a3e7b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444118"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72606765"
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>Eski Durum Makinesi İş Akışı Tasarımcısını Kullanma
-Oluştururken yeni bir Durum makinesi iş akışı projesi [!INCLUDE[vs2010](../includes/vs2010-md.md)] ya da hedefleyen [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], ya da kullanmayı da tercih edebilirsiniz **Durum makinesi iş akışı konsol uygulaması** veya  **Durum makinesi iş akışı Kitaplığı** eski proje şablonu. Bu durum makine proje şablonlarından birini seçerseniz, durum makine Tasarımcı eski iş akışı Tasarımcısı kullanıcı arabirimi olarak sunulur. Eski Durum makinesi proje şablonları hakkında daha fazla bilgi için bkz: [nasıl yapılır: Durum makinesi iş akışı konsol uygulamaları oluşturma (eski)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) ve [nasıl yapılır: Bir Durum makinesi iş akışı kitaplığı oluşturma (eski)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).  
-  
- Bir Durum makinesi iş akışı durumlarının bir kümesinden oluşur. Bir durum başlangıç durumu gösterilir. Her durum, belirli bir etkinlik kümesi alabilir. Etkinliğe göre başka bir duruma geçiş yapılabilir. Durum makinesi iş akışı, bir son duruma sahip olabilir. Son duruma geçiş yapıldığında, iş akışı tamamlanır.  
-  
-## <a name="state-machine-designer-views"></a>Durum makinesi Tasarımcı görünümleri  
- Durum makine Tasarımcısı etkinlikleri serbestçe tasarım yüzeyinde taşınabildiğinden, yani serbest biçimli bir tasarımcı olur. İki görünüm durumu makine Tasarımcı vardır: *durumu* görünümü ve *olay temelli* görünümü.  
-  
- Durum görünümü, durum etkinlikleri ve bir durum etkinlik içinde bulunan olay temelli etkinlikleri gösterir. Bu görünümde, bir durumdan diğerine geçişleri genişleten olay denetimli etkinliğinden bir durumda başka bir duruma çizgilerle gösterilir. Geçişleri çizgi çizerek kendiniz de oluşturabilirsiniz. Geçiş çizmek için olay temelli etkinliği seçin ve etkinlik tutamaçları birini seçin ve sürükleyin. Bu eylem, bir çizgi çizer. Bu satırın ardından durumları arasında geçiş gösteren hedef durum, bağlı olduğu.  
-  
- Olay görünümü temelli erişmek için olay temelli bir etkinliği çift tıklatın. Sıralı iş akışı Tasarımcısı gibi görünen tasarımcıyı olur. Tasarımcı üstünde gezinti çubuğunda görüntülenen olay temelli bir etkinlik kadar etkinlikleri hiyerarşisini gösterir. Durum görünümüne görüntülenen hiyerarşideki herhangi bir öğeyi tıklatarak gidebilirsiniz. Bir geçişi bir durumdan diğerine durum görünümünde çizmişseniz ve olay görünümü, etkinliğin temelli görüntülüyorsanız kümesi durum etkinlik olay temelli etkinliğine sizin için eklenir. Küme durumu etkinlik özelliklerini değiştirirseniz durum görünümünde yansıtılır.  
-  
-## <a name="state-machine-workflow-activities"></a>Durum makinesi iş akışı etkinlikleri  
- Aşağıdaki tabloda, bir Durum makinesi iş akışı Tasarımcısı'nda kullanılan anahtar etkinliklerini açıklar.  
-  
-|Araç adı|Etkinlik|Açıklama|  
-|------------------|--------------|-----------------|  
-|**State**|[Buraya StateActivity](http://go.microsoft.com/fwlink?LinkID=65042)|Bir durum makinesindeki bir durumu temsil eder; Ek içeren **buraya StateActivity** etkinlikler. Daha fazla bilgi için [buraya StateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65083).|  
-|**SetState**|[SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65041)|Yeni bir durum geçiş belirtir. Daha fazla bilgi için [SetStateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65082).|  
-|**StateInitialization**|[StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65044)|Bir durum girildiğinde yürütür; diğer etkinlikleri içerebilir. Daha fazla bilgi için [StateInitialization etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65006).|  
-|**StateFinalization**|[StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65043)|İçerilen etkinlikleri ayrılırken yürütür bir [buraya StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) etkinlik. Daha fazla bilgi için [StateFinalizationActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65008).|  
-|**EventDriven**|[EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029)|Çalıştırmaya başlamak için dış bir olaya kullanan durumları için kullanılır. **EventDrivenActivity** etkinlik uygulayan bir etkinlik içermelidir [IEventActivity](http://go.microsoft.com/fwlink?LinkID=65032) ilk alt etkinlik olarak arabirimi. Daha fazla bilgi için [EventDrivenActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65068).|  
-  
- Bir Durum makinesi iş akışı ana bileşeninde [buraya StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) etkinlik. Bir Durum makinesi iş akışı çeşitli noktalarında yakalanan olayları gibi farklı durumları olaylarla ilişkili görevleri işlemek için girilir. İş akışı yaşam süresi boyunca, iş akışı bırakın ve birkaç farklı durumları girin. Bu durumları kullanarak birbirine [SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65041) etkinlik.  
-  
- Yeni bir sürüklediğinizde **buraya StateActivity** iş akışı tasarım yüzeyine sürükleyin, eklediğiniz [EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029), [StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65044), [ StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65043), veya ek **buraya StateActivity** alt etkinlik olarak etkinlikler.  
-  
+@No__t_0 içinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen yeni bir durum makinesi iş akışı projesi oluştururken, **durum makinesi Iş akışı konsol uygulamasını** ya da **durum makinesi iş akışı kitaplığı** eski ' ni kullanmayı seçebilirsiniz Proje şablonu. Bu durum makinesi proje şablonlarından birini seçerseniz, durum makinesi Tasarımcısı eski iş akışı Tasarımcısı Kullanıcı arabirimi olarak sunulur. Eski durum makinesi proje şablonları hakkında daha fazla bilgi için bkz. [nasıl yapılır: durum makinesi Iş akışı konsol uygulamaları (eski)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) ve [nasıl yapılır: durum makinesi Iş akışı kitaplığı oluşturma (eski)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).
+
+ Bir durum makinesi iş akışı, bir durumlar kümesinden oluşur. Bir durum, ilk durum olarak gösterilir. Her durum, belirli bir olay kümesini alabilir. Bir olaya bağlı olarak, başka bir duruma geçiş yapılabilir. Durum makinesi iş akışı son bir duruma sahip olabilir. Son duruma bir geçiş yapıldığında iş akışı sonlanır.
+
+## <a name="state-machine-designer-views"></a>Durum makinesi tasarımcı görünümleri
+ Durum makinesi Tasarımcısı bir serbest biçim tasarlayıcıdır, bu da etkinliklerin tasarım yüzeyinde serbestçe taşınabileceği anlamına gelir. Durum makinesi tasarımcısının iki görünümü vardır: *durum* görünümü ve *olay temelli* görünüm.
+
+ Durum görünümü, durum etkinliklerini ve bir durum etkinliği içinde yer alan olay odaklı etkinlikleri gösterir. Bu görünümde, bir durumdan diğerine yapılan geçişler, olay odaklı etkinlikten başka bir duruma genişleyen satırlarla temsil edilir. Ayrıca, çizgiyi kendiniz çizerek geçişler de oluşturabilirsiniz. Geçişi çizmek için olay odaklı etkinliği seçin ve sonra etkinlikteki tutamaçlardan birini seçip sürükleyin. Bu eylem bir çizgi çizer. Bu satır daha sonra durumlar arasında bir geçiş belirten hedef durumuna eklenir.
+
+ Olay temelli görünüme erişmek için olay temelli bir etkinliğe çift tıklayın. Görüntülenen tasarımcı, sıralı iş akışı tasarımcısına çok benzer. Tasarımcı 'nın en üstünde, bir gezinti çubuğu görüntülenen olay odaklı etkinliğe kadar etkinliklerin hiyerarşisini gösterir. Görüntülenecek hiyerarşideki herhangi bir öğeye tıklayarak durum görünümüne geri gidebilirsiniz. Durum görünümünde bir durumdan diğerine geçiş çizmiş ve bu etkinliğin olay odaklı görünümünü görüntülüyorsanız, sizin için olay odaklı etkinliğe bir küme durumu etkinliği eklenir. Durum ayarla etkinliğinin özelliklerini değiştirirseniz, durum görünümüne geri yansıtılır.
+
+## <a name="state-machine-workflow-activities"></a>Durum makinesi Iş akışı etkinlikleri
+ Aşağıdaki tabloda, bir durum makinesi iş akışı tasarımcısında kullanılan önemli etkinlikler açıklanmaktadır.
+
+|Araç kutusu adı|Etkinlik|Açıklama|
+|------------------|--------------|-----------------|
+|**State**|[StateActivity](http://go.microsoft.com/fwlink?LinkID=65042)|Durum makinesindeki bir durumu temsil eder; , ek **StateActivity** etkinlikleri içerebilir. Daha fazla bilgi için bkz. [StateActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65083).|
+|**SetState**|[SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65041)|Yeni bir duruma geçiş belirtir. Daha fazla bilgi için bkz. [SetStateActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65082).|
+|**StateInitialization**|[StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65044)|Bir durum girildiğinde yürütülür; , diğer etkinlikleri içerebilir. Daha fazla bilgi için bkz. [StateInitialization etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65006).|
+|**Statesonlandırılması**|[StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65043)|[StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) etkinliğinden çıkarken içerilen etkinlikleri yürütür. Daha fazla bilgi için bkz. [StateFinalizationActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65008).|
+|**Olaytemelli**|[EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029)|Yürütmeye başlamak için bir dış olaya güvenen durumlar için kullanılır. **EventDrivenActivity** etkinliğinin ilk alt etkinlik olarak [IEventActivity](http://go.microsoft.com/fwlink?LinkID=65032) arabirimini uygulayan bir etkinliği olmalıdır. Daha fazla bilgi için bkz. [EventDrivenActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65068).|
+
+ Bir durum makinesi iş akışındaki ana bileşen [StateActivity](http://go.microsoft.com/fwlink?LinkID=65042) etkinliğidir. Olaylar bir durum makinesi iş akışındaki çeşitli noktalarda yakalandığından, olaylarla ilişkili görevleri işlemek için farklı durumlar girilir. İş akışı ömrü boyunca iş akışı bırakabilir ve birkaç farklı durum girebilir. Bu durumlar [SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65041) etkinliğini kullanarak birbirlerine bağlanır.
+
+ İş akışı tasarım yüzeyine yeni bir **StateActivity** sürüklediğinizde, şu şekilde [EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029), [StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65044), [StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65043)veya ek **StateActivity** etkinlikleri ekleyebilirsiniz alt etkinlikler.
+
 > [!CAUTION]
-> İş akışları oluşturmak için Durum makinesi iş akışı Tasarımcısı'nı kullandığınızda tasarlama konusunda iş akışının yapı izleme **belge anahattı** Görünümü penceresi. Durum makinesi iş akışı içinde yapısını görünümünü **belge anahattı** Görünüm penceresi etkinlikler iş akışı işaretleme dosyasının, mantıksal düzenini yansıtır. Tasarım yüzeyinde göründükleri gibi fiziksel düzenini iş akışı etkinlikleri iş akışı işaretleme dosyasının etkinliklerin mantıksal düzenini yansıtma değil.  
->   
-> Açmak için **belge anahattı** penceresi, **görünümü** menüsünde **diğer Windows**ve ardından **belge anahattı**.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Durum makinesi iş akışı konsol uygulamaları oluşturma (eski)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)   
- [Nasıl yapılır: Bir Durum makinesi iş akışı kitaplığı oluşturma (eski)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)   
- [Durum makinesi iş akışları](http://go.microsoft.com/fwlink?LinkID=65016)   
- [Buraya StateActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65083)   
- [StateInitializationActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65006)   
- [StateFinalizationActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65008)   
- [SetStateActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65082)   
- [EventDrivenActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65068)
+> İş akışları oluşturmak için durum makinesi iş akışı tasarımcısını kullandığınızda, **Belge anahat** görünümü penceresi ile tasarlamakta olduğunuz iş akışının yapısını izlemeniz gerekir. **Belge anahat** görünümü penceresinde durum makinesi iş akışı yapısının görünümü, iş akışı işaretleme dosyasındaki etkinliklerin mantıksal yerleşimini yansıtır. İş akışı etkinliklerinin tasarım yüzeyinde göründükleri fiziksel düzeni, iş akışı işaretleme dosyasındaki etkinliklerin mantıksal yerleşimini yansıtmayabilir.
+>
+> **Belge Anahattı** penceresini açmak Için, **Görünüm** menüsünde **diğer pencereler**' in üzerine gelin ve **Belge Anahattı**' nı seçin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl yapılır: durum makinesi Iş akışı konsol uygulamaları oluşturma (eski)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) nasıl yapılır: ' i kullanarak [StateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65083) [durum makinesi iş akışı kitaplığı (eski)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md) [durum makinesi iş akışları](http://go.microsoft.com/fwlink?LinkID=65016) oluşturma [ ](http://go.microsoft.com/fwlink?LinkID=65006) [, EventDrivenActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65068) [SetStateActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65082) [StateFinalizationActivity etkinliğini kullanan](http://go.microsoft.com/fwlink?LinkID=65008) StateInitializationActivity etkinliği

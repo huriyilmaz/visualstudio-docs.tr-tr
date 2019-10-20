@@ -14,25 +14,25 @@ helpviewer_keywords:
 - typed datasets, n-tier applications
 - multiple tier applications
 ms.assetid: f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c6da3f51a249aaf52cf3f20b90f3add6ceeb7aa1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b96f2e51048216388eea50935a1ced536d8d230b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564762"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648027"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda veri kümeleriyle çalışma
 
-*N katmanlı veri uygulamalarını* birden çok mantıksal katmana ayrılmış veri merkezli uygulamalar (veya *katmanları*). Diğer bir deyişle, bir n katmanlı veri uygulaması birden çok proje, veri erişim katmanında, iş mantığı katmanı ve sunu katmanı her kendi projesi içinde ayrılmış bir uygulamadır. Daha fazla bilgi için [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md).
+*N katmanlı veri uygulamaları* , birden çok mantıksal katmana *(veya katmana*) ayrılan veri merkezli uygulamalardır. Diğer bir deyişle, n katmanlı bir veri uygulaması, veri erişim katmanı, iş mantığı katmanı ve her biri kendi projesindeki sunum katmanı ile birden çok projeye ayrılmış bir uygulamadır. Daha fazla bilgi için bkz. [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md).
 
-Türü belirtilmiş datasets ayrı projelere Tableadapter'lar ve veri kümesi sınıfları oluşturulabilir olacak şekilde geliştirilmiştir. Bu hızlı bir şekilde uygulama katmanları ayırmak ve n katmanlı veri uygulamaları oluşturma olanağı sağlar.
+Türü belirtilmiş veri kümeleri, TableAdapters ve DataSet sınıflarının ayrı projelerde üretilebilmesi için geliştirilmiştir. Bu, uygulama katmanlarını hızlı bir şekilde ayırma ve n katmanlı veri uygulamaları oluşturma olanağı sağlar.
 
-N katmanlı destek türü belirtilmiş veri kümelerinde, n katmanlı bir tasarım uygulaması mimarisi yinelemeli geliştirilmesini sağlar. Ayrıca el ile kod birden fazla projeye ayrı gereksinimini ortadan kaldırır. Veri katmanı kullanarak dışarı tasarlamaya başlayabilir **veri kümesi Tasarımcısı**. Uygulama mimarisi, n katmanlı bir tasarım almaya hazır olduğunuzda, ayarlama **DataSet projesi** ayrı bir projeye veri kümesi sınıfı oluşturmak için bir veri kümesi özelliği.
+Türü belirtilmiş veri kümelerinde n katmanlı destek, uygulama mimarisinin n katmanlı bir tasarıma yinelemeli olarak geliştirilmesini sağlar. Ayrıca, kodu birden fazla projeye el ile ayıran gereksinimi ortadan kaldırır. **Veri kümesi Tasarımcısı**kullanarak veri katmanını tasarlamayı başlatın. Uygulama mimarisini n katmanlı bir tasarıma geçmeye hazırsanız, veri kümesi sınıfını ayrı bir projede oluşturmak için veri kümesi **Proje** özelliğini ayarlayın.
 
 ## <a name="reference"></a>Başvuru
 
@@ -42,7 +42,7 @@ N katmanlı destek türü belirtilmiş veri kümelerinde, n katmanlı bir tasar�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md)
-- [İzlenecek yol: N katmanlı veri uygulaması oluşturma](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+- [İzlenecek yol: n katmanlı veri uygulaması oluşturma](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [N katmanlı uygulamalarda TableAdapter’lara kod ekleme](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)
 - [N katmanlı uygulamalarda veri kümelerine kod ekleme](../data-tools/add-code-to-datasets-in-n-tier-applications.md)
 - [N Katmanlı bir veri kümesine doğrulama ekleme](../data-tools/add-validation-to-an-n-tier-dataset.md)
@@ -51,4 +51,4 @@ N katmanlı destek türü belirtilmiş veri kümelerinde, n katmanlı bir tasar�
 - [Visual Studio'daki veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md)
 - [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)
 - [TableAdapter’lar oluşturma ve yapılandırma](../data-tools/create-and-configure-tableadapters.md)
-- [N katmanı ve uzak uygulamalarla LINQ-SQL](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)
+- [LINQ to SQL ile N katmanlı ve uzak uygulamalar](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)

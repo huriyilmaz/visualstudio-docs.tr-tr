@@ -1,5 +1,5 @@
 ---
-title: "CA2240: ISerializable'ı doğru uygulayın | Microsoft Docs"
+title: 'CA2240: ISerializable doğru uygulama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ImplementISerializableCorrectly
 ms.assetid: cf05936d-0d6c-49ed-a1b4-220032e50b97
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 37f84bff4802c703bb61b36e9c1933a31cd6c5e3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0abc95811dc870abbfaa583fbaa7705302a70781
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142361"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670165"
 ---
 # <a name="ca2240-implement-iserializable-correctly"></a>CA2240: ISerializable'ı doğru uygulayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,42 +29,42 @@ ms.locfileid: "68142361"
 |-|-|
 |TypeName|ImplementISerializableCorrectly|
 |CheckId|CA2240|
-|Kategori|Microsoft.Usage|
-|Yeni Değişiklik|Bozucu olmayan|
+|Kategori|Microsoft. Usage|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Dışarıdan görünen tür özelleşmemiş <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> arabirimi ve aşağıdaki koşullar doğruysa:
+ Dışarıdan görünen bir tür, <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> arabirimine atanabilir ve aşağıdaki koşullardan biri doğrudur:
 
-- Tür devralır, ancak geçersiz <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> yöntemi ve türü ile işaretli olmayan örnek alanlarını bildirir <xref:System.NonSerializedAttribute?displayProperty=fullName> özniteliği.
+- Tür devralınır, ancak <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> yöntemi geçersiz kılmaz ve tür <xref:System.NonSerializedAttribute?displayProperty=fullName> özniteliğiyle işaretlenmemiş örnek alanlarını bildirir.
 
-- Tür korumalı değil ve türün uyguladığı bir <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> dışarıdan görünür ve geçersiz kılınabilir bir yöntemi.
+- Tür Sealed değildir ve tür, dışarıdan görünmeyen ve geçersiz kılınabilir bir <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> yöntemi uygular.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Örnek, devralınan bir türde bildirilen alanları <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> arabirimi seri hale getirme işleminde otomatik olarak bulunmaz. Tür alanları içerecek şekilde uygulamalıdır <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> yöntemi ve Serileştirme Oluşturucu. Alanları serileştirilecek değil, uygulama <xref:System.NonSerializedAttribute> alanları kararı açıkça belirtmek için özniteliği.
+ @No__t_0 arabirimini devralan bir tür içinde belirtilen örnek alanları, serileştirme işlemine otomatik olarak dahil edilmez. Alanları eklemek için, türün <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> yöntemini ve serileştirme oluşturucusunu uygulaması gerekir. Alanlar serileştirilmemelidir, kararı açıkça belirtmek için <xref:System.NonSerializedAttribute> özniteliğini alanlara uygulayın.
 
- Uygulamaları mühürlendi olmayan türlerde <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> yöntemi dışarıdan görünür. Bu nedenle, yöntem, türetilen türler tarafından çağrılabilir ve geçersiz kılınabilir.
+ Korumalı olmayan türlerde <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> yönteminin uygulamaları dışarıdan görünür olmalıdır. Bu nedenle, yöntemi türetilmiş türler tarafından çağrılabilir ve geçersiz kılınabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için olun <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> yöntemi geçersiz kılınabilir ve tüm örnek alanları seri hale getirme işlemine dahil veya açıkça işaretli olduğundan emin olun <xref:System.NonSerializedAttribute> özniteliği.
+ Bu kural ihlalini onarmak için <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> yöntemi görünür ve geçersiz kılınabilir yapın ve tüm örnek alanlarının serileştirme işlemine eklendiğinden emin olun veya açıkça <xref:System.NonSerializedAttribute> özniteliğiyle işaretlenmiş olun.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, kural ihlal iki serializable türler gösterir.
+ Aşağıdaki örnekte, kuralı ihlal eden iki serileştirilebilir tür gösterilmektedir.
 
  [!code-cpp[FxCop.Usage.ImplementISerializableCorrectly#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.ImplementISerializableCorrectly/cpp/FxCop.Usage.ImplementISerializableCorrectly.cpp#1)]
  [!code-csharp[FxCop.Usage.ImplementISerializableCorrectly#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.ImplementISerializableCorrectly/cs/FxCop.Usage.ImplementISerializableCorrectly.cs#1)]
  [!code-vb[FxCop.Usage.ImplementISerializableCorrectly#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.ImplementISerializableCorrectly/vb/FxCop.Usage.ImplementISerializableCorrectly.vb#1)]
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek iki önceki ihlalleri [ISerializable.GetObjectData] (geçersiz kılınabilir uygulaması sağlayarak giderir<!-- TODO: review code entity reference <xref:assetId:///ISerializable.GetObjectData?qualifyHint=False&amp;autoUpgrade=False>  -->) uygulaması sağlayarak ve kitap sınıfı hakkında <!-- TODO: review code entity reference <xref:assetId:///ISerializable.GetObjectData?qualifyHint=False&amp;autoUpgrade=False>  --> için kitaplık sınıfı.
+ Aşağıdaki örnek, [ISerializable. GetObjectData] öğesinin geçersiz kılınabilir bir uygulamasını sağlayarak önceki iki ihlali düzeltir (<!-- TODO: review code entity reference <xref:assetId:///ISerializable.GetObjectData?qualifyHint=False&amp;autoUpgrade=False>  -->), kitap sınıfında ve bir uygulama sağlayarak <!-- TODO: review code entity reference <xref:assetId:///ISerializable.GetObjectData?qualifyHint=False&amp;autoUpgrade=False>  --> Kitaplık sınıfında.
 
  [!code-cpp[FxCop.Usage.ImplementISerializableCorrectly2#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.ImplementISerializableCorrectly2/cpp/FxCop.Usage.ImplementISerializableCorrectly2.cpp#1)]
  [!code-csharp[FxCop.Usage.ImplementISerializableCorrectly2#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.ImplementISerializableCorrectly2/cs/FxCop.Usage.ImplementISerializableCorrectly2.cs#1)]
  [!code-vb[FxCop.Usage.ImplementISerializableCorrectly2#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.ImplementISerializableCorrectly2/vb/FxCop.Usage.ImplementISerializableCorrectly2.vb#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA2236: ISerializable türler üzerinde taban sınıf yöntemlerini çağırın](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
 
  [CA2229: Serileştirme oluşturucularını uygulayın](../code-quality/ca2229-implement-serialization-constructors.md)
@@ -73,8 +73,8 @@ ms.locfileid: "68142361"
 
  [CA2235: Tüm serileştirilebilir olmayan alanları işaretleyin](../code-quality/ca2235-mark-all-non-serializable-fields.md)
 
- [CA2237: İşareti ISerializable türleri SerializableAttribute ile işaretleyin](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
+ [CA2237: ISerializable türleri SerializableAttribute ile işaretleyin](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
- [CA2239: İsteğe bağlı alanlar için seri halden çıkarma yöntemleri sağlar.](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)
+ [CA2239: İsteğe bağlı alanlar için seri durumdan çıkarma metotları sağlayın](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)
 
  [CA2120: Serileştirme oluşturucularının güvenliğini sağlayın](../code-quality/ca2120-secure-serialization-constructors.md)

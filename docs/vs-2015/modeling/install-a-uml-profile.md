@@ -1,5 +1,5 @@
 ---
-title: Bir UML profili yükleme | Microsoft Docs
+title: UML profili yüklemesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,43 +8,42 @@ helpviewer_keywords:
 - UML - extending, profiles
 ms.assetid: 586f9ba5-4d01-4a1d-b001-32e2efaa4f24
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0187f7dede25900cdf3a78fdbfe2899e5f318472
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e38e89ee5572f5ba552f3b6807a3edab5012a727
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68181496"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669598"
 ---
 # <a name="install-a-uml-profile"></a>UML profili yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio bir UML profili ile genişletebilirsiniz. Bir profili UML modellerinde oluşturabilirsiniz öğelerine stereotipler ve ek özellikler eklemenize olanak tanır. Bu özellik, Visual Studio'nun hangi sürümlerinin desteklediğini görmek için bkz: [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
- Profilleri kullanılarak oluşturulan bir UML modeli alırsanız, aynı profili yüklemediğiniz sürece bazı özellikler görüntülenmez.  
-  
- Bir profili bir Visual Studio uzantısı içinde dağıtılır. Uzantı, menü komutları gibi diğer özellikleri de içerebilir. Daha fazla bilgi için [Visual Studio uzantıları yönetme](http://go.microsoft.com/fwlink/?LinkId=160728).  
-  
-### <a name="to-install-a-uml-profile-on-your-computer"></a>Bilgisayarınızda bir UML profili yüklemek için  
-  
-1. Profili, Visual Studio uzantısı biçiminde verilmiş olmalıdır (`.vsix`) dosyası. Aynı dosyadaki başka özellikler olabilir.  
-  
-     Taşıma `.vsix` dosyayı bilgisayarınızdaki uygun bir konuma.  
-  
-2. Çift `.vsix` Windows Explorer (veya dosya Gezgini) dosya veya içinde açmayı [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].  
-  
-3. Tıklayın **yükleme** iletişim kutusunda görüntülenir.  
-  
-4. Kaldırmak veya geçici olarak uzantıyı devre dışı bırakmak için açık **Uzantı Yöneticisi** gelen **Araçları** menüsü.  
-  
-### <a name="to-uninstall-or-disable-a-profile-extension"></a>Kaldırın veya bir profil uzantısı devre dışı bırakma  
-  
-1. Visual Studio **Araçları** menüsünü tıklatın **Uzantı Yöneticisi**.  
-  
-2. Kaldırın ve ardından istediğiniz uzantısına tıklayın **devre dışı** veya **kaldırma**.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Modelinizi profiller ve stereotipler aracılığıyla özelleştirme](../modeling/customize-your-model-with-profiles-and-stereotypes.md)   
- [UML’yi genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md)
+Visual Studio 'Yu bir UML profiliyle genişletebilirsiniz. Profil, UML modellerinde oluşturabileceğiniz öğelere stereotipler ve ek özellikler eklemenize olanak sağlar. Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+ Profiller kullanılarak oluşturulmuş bir UML modeli alırsanız, aynı profilleri yüklemiyorsanız bazı özellikler görüntülenmez.
+
+ Bir profil, Visual Studio uzantısı içinde dağıtılır. Uzantı, menü komutları gibi diğer özellikleri de içerebilir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını yönetme](http://go.microsoft.com/fwlink/?LinkId=160728).
+
+### <a name="to-install-a-uml-profile-on-your-computer"></a>Bilgisayarınıza bir UML profili yüklemek için
+
+1. Profil, Visual Studio uzantısı (`.vsix`) dosyası biçiminde size verilmiş olmalıdır. Aynı dosyadaki diğer özellikler olabilir.
+
+     @No__t_0 dosyasını bilgisayarınızda uygun bir konuma taşıyın.
+
+2. Windows Gezgini 'nde (veya dosya Gezgini) `.vsix` dosyasına çift tıklayın veya dosyayı [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] içinde açın.
+
+3. Görüntülenen iletişim kutusunda, **yüklensin** ' e tıklayın.
+
+4. Uzantıyı kaldırmak veya geçici olarak devre dışı bırakmak için, **Araçlar** menüsünden **Uzantı Yöneticisi** ' ni açın.
+
+### <a name="to-uninstall-or-disable-a-profile-extension"></a>Profil uzantısını kaldırmak veya devre dışı bırakmak için
+
+1. Visual Studio **araçları** menüsünde **Uzantı Yöneticisi**' ne tıklayın.
+
+2. Kaldırmak istediğiniz uzantıya tıklayın ve sonra **devre dışı bırak** veya **Kaldır**' a tıklayın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Modellerinizi profiller ve Stereotipler Ile ÖZELLEŞTIRME](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [UML genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md)

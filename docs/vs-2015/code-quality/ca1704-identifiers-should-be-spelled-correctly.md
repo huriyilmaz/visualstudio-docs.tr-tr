@@ -1,5 +1,5 @@
 ---
-title: 'CA1704: Tanımlayıcıları yazıldığından | Microsoft Docs'
+title: 'CA1704: tanımlayıcılar doğru yazılmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - IdentifiersShouldBeSpelledCorrectly
 ms.assetid: f2c7a44d-1690-44ca-9cd0-681b04b12b2a
 caps.latest.revision: 27
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d77e5ffcb7cc6688ea07cd99760e79e8f92aeb43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56ac5e60964621859c77bf53dc4f6c14480b4a83
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189227"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669248"
 ---
 # <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704: Tanımlayıcılar doğru yazılmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,39 +29,39 @@ ms.locfileid: "68189227"
 |-|-|
 |TypeName|IdentifiersShouldBeSpelledCorrectly|
 |CheckId|CA1704|
-|Kategori|Microsoft.Naming|
+|Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Bir tanımlayıcı ad Microsoft Yazım kitaplığı tarafından tanınmayan bir veya birkaç sözcük içerir. Bu kural olmayan oluşturucular veya özel adlı üye alma gibi denetleyin ve özellik erişimcileri ayarlayın.
+ Tanımlayıcının adı, Microsoft yazım denetleyicisi kitaplığı tarafından tanınmayan bir veya daha fazla sözcük içeriyor. Bu kural oluşturucuları veya Get ve set özellik erişimcileri gibi özel adlandırılmış üyeleri denetlemez.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural tanımlayıcısı belirteçlere ayrıştırmak ve her belirtecin yazımını denetler. Ayrıştırma algoritma şu dönüşümleri gerçekleştirir:
+ Bu kural, tanımlayıcıyı belirteçlere ayrıştırır ve her belirtecin yazımını denetler. Ayrıştırma algoritması aşağıdaki dönüşümleri gerçekleştirir:
 
-- Yeni bir belirteç harfle başlatın. Örneğin, MyNameIsJoe "My", "Name", "Is", "Joe" tokenizes.
+- Büyük harfler yeni bir belirteç başlatır. Örneğin, Mynameisali, "My", "Name", "The", "ali" olarak simgeleştirir.
 
-- Birden çok büyük harf, yeni bir belirteç son büyük harfle başlar. Örneğin, "GUI", "Düzenleyicisi" GUIEditor tokenizes.
+- Birden çok büyük harf için, son büyük harf yeni bir belirteç başlatır. Örneğin, Gudüzenleyici "GUI", "Düzenleyici" olarak simgeleştirir.
 
-- Baştaki ve sondaki kesme kaldırılır. Örneğin, "sender" için 'sender' tokenizes.
+- Baştaki ve sondaki kesme işaretleri kaldırılır. Örneğin, ' sender ' simgeleştirir "sender".
 
-- Alt çizgi, bir belirteç sonunu belirtmek ve kaldırılır. Örneğin, "Hello" Hello_world tokenizes "world".
+- Alt çizgiler bir belirtecin sonunu işaret eder ve kaldırılır. Örneğin, hello_world Token, "Hello", "World" olarak simgeleştirir.
 
-- Katıştırılmış kodlarına kaldırılır. Örneğin, & mat tokenizes "biçimlendirmek için".
+- Gömülü ve işaretleri kaldırılır. Örneğin, & "biçim" olarak simgeleştirir.
 
-  Varsayılan olarak, yazım denetimcisi (TR) İngilizce sürümü kullanılır. Diğer bir dil sözlükleri şu anda kullanılabilir.
+  Varsayılan olarak, yazım denetleyicisinin Ingilizce (en) sürümü kullanılır. Şu anda başka bir dil sözlüğü yok.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için sözcük yazımını düzeltin veya word CustomDictionary.xml adlı bir özel sözlüğüne ekleyin. Sözlük proje dizinine aracının yükleme dizininde veya kullanıcı profili altındaki aracı ile ilişkili dizine yerleştirin (%USERPROFILE%\Application veri\\...). Bir projeye özel sözlük ekleme hakkında bilgi edinmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bkz: [nasıl yapılır: Kod çözümleme dizinini özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+ Bu kural ihlalini düzeltmek için sözcüğün yazımını düzeltin veya sözcüğü CustomDictionary. xml adlı özel bir sözlüğe ekleyin. Sözlüğü aracın yükleme dizinine, proje dizinine veya Kullanıcı profili altındaki araçla ilişkili dizine yerleştirin (%USERPROFILE%\Application Data \\...). Özel sözlüğün [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir projeye nasıl ekleneceğini öğrenmek için bkz. [nasıl yapılır: kod analizi sözlüğünü özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
-- Sözlük/sözcükleri/Recognized yolunda bir ihlali oluşmamalıdır sözcükler ekleyin.
+- Sözlük/kelimeler/tanınan yol altında ihlale neden olmaması gereken sözcükler ekleyin.
 
-- Sözlük/sözcükleri/tanınmayan yolunda bir ihlali neden olmamalıdır sözcükler ekleyin.
+- Sözlük/kelimeler/tanınmayan yol altında ihlalin neden olması gereken sözcükler ekleyin.
 
-- Sözlük/sözcükleri/kullanım dışı yolunda geçersiz olarak işaretlenmiş sözcükler ekleyin. İlişkili kural konusuna [CA1726: Tercih edilen terimleri kullanın](../code-quality/ca1726-use-preferred-terms.md)daha fazla bilgi için.
+- Sözlük/kelimeler/kullanım dışı yol altında, eski olarak işaretlenmek zorunda olan sözcükler ekleyin. Bkz. ilgili kural konusu CA1726: daha fazla bilgi için [tercih edilen terimleri kullanın](../code-quality/ca1726-use-preferred-terms.md).
 
-- Sözlük/kısaltmalar/CasingExceptions yoluna kısaltma büyük/küçük harf kuralları için özel durumlar ekleyin.
+- Sözlük/Kısaltmalar/CasingExceptions yoluna kısaltma büyük/küçük harf kuralları için özel durumlar ekleyin.
 
-  Aşağıdaki özel sözlük dosyası yapısının bir örneğidir.
+  Aşağıda, özel sözlük dosyası yapısına bir örnek verilmiştir.
 
 ```
 <Dictionary>
@@ -87,14 +87,14 @@ ms.locfileid: "68189227"
 ```
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan bir uyarıyı yalnızca bilerek yanlış yazılmış bir sözcüktür ve sınırlı bir kitaplık kümesi için Word'ün uyguladığı gösterme. Doğru bir şekilde yazılmış kelimeler yeni yazılım kitaplıkları için gerekli olan öğrenme eğrisini azaltır.
+ Bu kuraldan bir uyarıyı, yalnızca sözcüğün kasıtlı olarak yanlış yazıldığına ve sözcüğün sınırlı bir kitaplık kümesine uygulandığına karşı gizleyin. Doğru yazılmış sözcükler, yeni yazılım kitaplıkları için gerekli olan öğrenme eğrisini azaltır.
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA2204: Değişmez değerler doğru yazılmalıdır](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
 
  [CA1703: Kaynak dizeler doğru yazılmalıdır](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
 
- [CA1709: Tanımlayıcılar doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
  [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
@@ -103,4 +103,4 @@ ms.locfileid: "68189227"
  [CA1726: Tercih edilen terimleri kullanın](../code-quality/ca1726-use-preferred-terms.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Nasıl yapılır: Kod çözümleme dizinini özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+ [Nasıl yapılır: Kod Çözümleme Dizinini Özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md)

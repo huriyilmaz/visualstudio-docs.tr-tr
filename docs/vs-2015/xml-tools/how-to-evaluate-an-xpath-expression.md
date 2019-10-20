@@ -1,56 +1,56 @@
 ---
-title: 'Nasıl yapılır: Bir XPath ifadesini değerlendirme | Microsoft Docs'
+title: 'Nasıl yapılır: XPath Ifadesini değerlendirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 03c43d272d3c740c55314db5d1b7b6c225b7e5c8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: ecec9004506a9bd05d3d773e44bb264af363f96f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63421770"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670863"
 ---
-# <a name="how-to-evaluate-an-xpath-expression"></a>Nasıl yapılır: Bir XPath İfadesini Değerlendirme
+# <a name="how-to-evaluate-an-xpath-expression"></a>Nasıl yapılır: bir XPath Ifadesini değerlendirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XPath ifadeleri ile değerlendirebilirsiniz **QuickWatch** iletişim kutusu. XPath ifadesi W3C XPath 1.0 öneri göre geçerli olmalıdır. Geçerli XSLT bağlam — diğer bir deyişle, `self::node()` düğümünde **Yereller** penceresi — için XPath ifadesini değerlendirme bağlamı sağlar.  
-  
- Aşağıdaki listede, hangi işlevlerin bir XPath ifadesi değerlendirilirken desteklenen açıklanmaktadır:  
-  
-- Yerleşik XPath işlevleri desteklenir.  
-  
-- Yerleşik XSLT işlevleri desteklenmez.  
-  
-- Kullanıcı tanımlı işlevleri desteklenmez.  
-  
+Daha **hızlı izleme** Iletişim kutusuyla XPath ifadelerini değerlendirebilirsiniz. XPath ifadesi W3C XPath 1,0 önerisine göre geçerli olmalıdır. Geçerli XSLT bağlamı — diğer bir deyişle, **Yereller** penceresindeki `self::node()` düğümü — XPath ifadesi için değerlendirme bağlamını sağlar.
+
+ Aşağıdaki listede bir XPath ifadesi hesaplanırken hangi işlevlerin desteklendiği açıklanmaktadır:
+
+- Yerleşik XPath işlevleri desteklenir.
+
+- Yerleşik XSLT işlevleri desteklenmez.
+
+- Kullanıcı tanımlı işlevler desteklenmez.
+
 > [!NOTE]
-> Aşağıdaki yordam belowAvg.xsl ve books.xml dosyalarından kullanır [izlenecek yol: Bir XSLT stil sayfasında hata ayıklama](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) konu.  
-  
-### <a name="to-evaluate-an-xpath-expression"></a>Bir XPath ifadesini değerlendirme  
-  
-1. Bir kesme noktasında Ekle `xsl:if` başlangıç etiketi.  
-  
-2. Tıklayın **hata ayıklama XSL** XML Düzenleyicisi araç çubuğu düğmesi.  
-  
-     Hata ayıklayıcıyı başlatır ve üzerinde sonları `xsl:if` etiketi.  
-  
-3. Sağ tıklayıp **QuickWatch**.  
-  
-     **QuickWatch** iletişim kutusu görüntülenir.  
-  
-4. Girin `./price/text()` içinde **ifade** alanını **QuickWatch** iletişim kutusu ve tıklatın **yeniden değerlendir**.  
-  
-     Geçerli kitap düğümün fiyatı görünür **değer** kutusu.  
-  
-5. XPath ifadesi değiştirme `./price/text() < $bookAverage` tıklatıp **yeniden değerlendir**.  
-  
-     **Değer** kutusu gösterir XPath ifadesi olarak değerlendirilen `true`.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+> Aşağıdaki yordam, [Izlenecek yol: XSLT stil sayfasında hata ayıklama](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) konusunun belowAvg. xsl ve Books. xml dosyalarını kullanır.
+
+### <a name="to-evaluate-an-xpath-expression"></a>Bir XPath ifadesini değerlendirmek için
+
+1. @No__t_0 başlangıç etiketine bir kesme noktası ekleyin.
+
+2. XML Düzenleyicisi araç çubuğundaki **XSL hata ayıkla** düğmesine tıklayın.
+
+     Hata ayıklayıcı başlatılır ve `xsl:if` etiketinde kesilir.
+
+3. Sağ tıklayın ve **hızlı gözcü**' ı seçin.
+
+     **QuickWatch** iletişim kutusu görüntülenir.
+
+4. **QuickWatch** Iletişim kutusunun **ifade** alanına `./price/text()` girin ve yeniden **değerlendir ' e**tıklayın.
+
+     Geçerli kitap düğümünün fiyatı **değer** kutusunda görünür.
+
+5. XPath ifadesini `./price/text() < $bookAverage` olarak değiştirin ve yeniden değerlendir **' e**tıklayın.
+
+     **Değer** kutusunda XPath ifadesinin `true` olarak değerlendirildiği gösterilmektedir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XSLT Hatalarını Ayıklama](../xml-tools/debugging-xslt.md)

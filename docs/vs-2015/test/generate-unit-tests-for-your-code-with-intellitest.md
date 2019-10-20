@@ -1,5 +1,5 @@
 ---
-title: Intellitest ile kodunuz için birim testleri oluşturma | Microsoft Docs
+title: IntelliTest ile kodunuz için birim testleri oluşturun | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -8,130 +8,130 @@ f1_keywords:
 - vs.UnitTest.CreateIntelliTest
 ms.assetid: cd9ff940-e948-4d28-a72c-b291ef5c1e90
 caps.latest.revision: 35
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 304b26f8724413dceef8126434861bd7128d588c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c7b3d6a3cdb6eefd27f391dbe68a45ec3824b7de
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68147364"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660551"
 ---
 # <a name="generate-unit-tests-for-your-code-with-intellitest"></a>IntelliTest ile kodunuz için birim testleri oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Intellitest, test verileri ve birim testleri paketi oluşturmak için .NET kodunuzu keşfeden. Koddaki her ifade için bir test girişi oluşturulur o ifadeyi yürütecek. Koddaki her koşullu şube için bir vaka analizi yapılır. Örneğin, deyimleri, onaylamalar ve özel durumlar oluşturabilecek tüm işlemler analiz edilirse. Bu analiz, yüksek kod kapsamı ile birim testleri oluşturma, yöntemlerinizin her biri için parametreleştirilmiş birim testi için test verilerini oluşturmak için kullanılır.  
-  
- Intellitest çalıştırdığınızda, hangi testlerin başarısız oluyor ve onları düzeltmek için tüm gerekli kodu eklemek kolayca görebilirsiniz. Hangi testlerin bir regresyon paketi sağlamak için bir test projesine kaydetmek için seçebilirsiniz. Kodunuzu değiştikçe, üretilen testler, kod değişikliğine eşitlenmiş şekilde tutmanızı sağlayacak Intellitest yeniden çalıştırın.  
-  
- Intellitest yalnızca C# için kullanılabilir ve x64 desteklemiyor yapılandırma.  
-  
-## <a name="get-started-with-intellitest"></a>Intellitest ile çalışmaya başlama  
- Visual Studio Enterprise gerekir.  
-  
-### <a name="explore-use-intellitest-to-explore-your-code-and-generate-unit-tests"></a>Keşfedin: Kodunuzu keşfedin ve birim testleri oluşturmak için Intellitest kullanın  
- Birim testler üretmek için türler genel olmalıdır. Aksi takdirde, [birim testleri oluşturma](#NoRun) bunları oluşturmadan önce ilk.  
-  
-1. Çözümünüzü Visual Studio'da açın. Ardından test etmek istediğiniz yöntemi içeren sınıf dosyasını açın.  
-  
-2. Kodunuzdaki bir yöntemi sağ tıklatın ve seçin **Intellitest Çalıştır** , yönteminde kod için birim testleri oluşturmak için.  
-  
-     ![Sağ&#45;Birim testler üretmek için yönteminizi tıklayın](../test/media/runpex.png "RunPEX")  
-  
-     Intellitest kodunuz, farklı giriş ile birden çok kez çalışır. Her bir çalıştırmanın giriş test verileri ve elde edilen çıkış gösteren tablo ya da özel durum gösterilir.  
-  
-     ![Araştırma sonuçları penceresi testleriyle görüntülenen](../test/media/pexexplorationresults.png "PEXExplorationResults")  
-  
-     Bir sınıfta tüm genel metotlar için birim testleri üretmek için yalnızca belirli bir yöntem yerine sınıfı sağ tıklayın. Ardından **Intellitest Çalıştır**. Açılır listede araştırma Sonuçları penceresinde sınıfı, birim testleri ve her yöntem için giriş verilerini görüntülemek için kullanın.  
-  
-     ![Listeden görüntülemek için test sonuçlarını seçin](../test/media/selectpextest.png "SelectPEXTest")  
-  
-     Geçmek için kontrol testler için bildirilen sonuçları Sonuç sütunundaki kodunuz için beklentilerinizi. Başarısız testler için kodunuzu uygun şekilde düzeltin. Ardından düzeltmeler doğrulamak için Intellitest yeniden çalıştırın.  
-  
-### <a name="persist-save-the-unit-tests-as-a-regression-suite"></a>Sürdür: Birim testleri bir regresyon paketi kaydedin.  
-  
-1. Parametreli birim test projesine kaydetmek istediğiniz veri satırları seçin.  
-  
-     ![Testleri seçin. doğru&#45;tıklayın ve Kaydet'i seçin](../test/media/savepextests.png "SavePEXTests")  
-  
-     Test projesini görüntüleyebilir ve oluşturuldu - parametreli birim testi tek tek birim testleri, her satır için karşılık gelen kaydedilir. g.cs dosyasında test projesini ve parametreli birim testi, karşılık gelen .cs dosyası içinde kaydedilir. Birim testlerini çalıştırmak ve el ile oluşturduğunuz herhangi bir birim test için yaptığınız gibi Test Explorer sonuçları görüntüleyin.  
-  
-     ![Birim testi görüntülemek için test yönteminin açık sınıf dosyasında](../test/media/testmethodpex.png "TestMethodPEX")  
-  
-     Gerekli tüm başvuruları da test projesine eklenir.  
-  
-     Yöntem kodunu değişirse birim testlerini değişiklikleri ile eşitlenmiş tutmak için Intellitest yeniden çalıştırın.  
-  
-### <a name="assist-use-intellitest-to-focus-code-exploration"></a>Yardımcı: Odağı kod araştırması için Intellitest kullanın  
-  
-1. Daha karmaşık bir kod varsa, Intellitest araştırma, kodunuzun odaklanarak ile yardımcı olur. Örneğin, bir parametre olarak arabirime sahip bir yöntemi varsa ve bu arabirimi uygulayan birden fazla sınıf, Intellitest söz konusu sınıfın bulur ve bir uyarı bildirir.  
-  
-     Yapmak istediğinize karar verirken uyarıları görüntüleyin.  
-  
-     ![Uyarılarını görüntüleme](../test/media/pexviewwarning.png "PEXViewWarning")  
-  
-2. Kodu inceleme ve test etmek istediğiniz anlamak sonra arabirimi sınamak üzere kullanmak için hangi sınıfların seçmek için uyarı düzeltebilirsiniz.  
-  
-     ![Sağ&#45;uyarıya tıklayarak ve düzeltme seçin](../test/media/pexfixwarning.png "PEXFixWarning")  
-  
-     Bu seçenek PexAssemblyInfo.cs dosyasına eklenir.  
-  
-     `[assembly: PexUseType(typeof(Camera))]`  
-  
-3. Artık bir parametreli birim testi oluşturma ve verileri yalnızca, sabit sınıfı kullanarak test etmek için Intellitest yeniden çalıştırabilirsiniz.  
-  
-     ![Test verilerini oluşturmak için Intellitest yeniden](../test/media/pexwarningsfixed.png "PEXWarningsFixed")  
-  
-### <a name="specify-use-intellitest-to-validate-correctness-properties-that-you-specify-in-code"></a>Belirtin: Kod içinde belirttiğiniz doğruluk özelliklerini doğrulamak için Intellitest kullanın  
- Giriş ve çıkışları doğrulamak için üretilmiş birim testlerini istediğiniz genel ilişkisi belirtin. Bu belirtim, bir test yöntemi gibi görünüyor, ancak Evrensel amaçlarıyla bir yöntem içinde kapsüllenir. Parametreli birim test yöntem budur ve yaptığınız herhangi bir onayları Intellitest oluşturabilen olası tüm giriş değerlerini tutmanız gerekir.  
-  
-## <a name="QandALink"></a> SORU- CEVAP  
-  
-### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>S: Intellitest yönetilmeyen kod için kullanabilir miyim?  
- **Y:** Hayır, Intellitest yalnızca yönetilen kod ile çalışır.  
-  
-### <a name="q-when-does-a-generated-test-pass-or-fail"></a>S: Ne zaman oluşturulan bir test geçti başarısız veya?  
- **Y:** Diğer bir birim test gibi hiçbir özel durum oluşursa bu geçirir. Herhangi bir onaylama işlemi başarısız olursa veya test edilen kod işlenmemiş bir özel durum oluşturursa başarısız olur.  
-  
- Özel bazı durumlar oluşursa, geçirilebilecek bir test varsa, test yöntemi, test sınıfına veya derleme gereksinimlerinize göre aşağıdaki özniteliklerden birini düzeyi ayarlayabilirsiniz:  
-  
-- **PexAllowedExceptionAttribute**  
-  
-- **PexAllowedExceptionFromTypeAttribute**  
-  
-- **PexAllowedExceptionFromTypeUnderTestAttribute**  
-  
-- **PexAllowedExceptionFromAssemblyAttribute**  
-  
-### <a name="q-can-i-add-assumptions-to-the-parameterized-unit-test"></a>S: Parametreli birim testine varsayımlar ekleyebilir miyim?  
- **Y:** Evet, varsayımlar hangi test verileri, belirli bir yöntem için birim testi için gerekli değildir. belirtmek için kullanın. Kullanım <xref:Microsoft.Pex.Framework.PexAssume> varsayımlar eklemek için sınıfı. Örneğin, bir varsayım uzunluk değişkeni şu şekilde null olmadığından ekleyebilirsiniz.  
-  
- `PexAssume.IsNotNull(lengths);`  
-  
- Bir varsayım ekleyip Intellitest yeniden yitirmesi test verileri kaldırılır.  
-  
-### <a name="q-can-i-add-assertions-to-the-parameterized-unit-test"></a>S: Parametreli birim testine onaylar ekleyebilir miyim?  
- **Y:** Evet, Intellitest birim testleri çalıştırdığında ne raporunuza sunduğundan aslında doğru olduğunu denetler. Kullanım <xref:Microsoft.Pex.Framework.PexAssert> sınıfı veya onaylama Onaylamalar eklemek için test framework ile birlikte gelen API. Örneğin, iki değişken eşit olduğunu onaylama ekleyebilirsiniz.  
-  
- `PexAssert.AreEqual(a, b);`  
-  
- Onaylama Ekle ve Intellitest yeniden çalıştırın, değerinizi geçerli olduğunu ve yüklü değilse test başarısız olduğunu denetler.  
-  
-### <a name="NoRun"></a> S: Parametreli birim testleri çalıştırmadan önce Intellitest oluşturabilir miyim?  
- **Y:** Evet, sınıf veya yöntemi içinde sağ tıklayın ve ardından **Intellitest oluşturma**.  
-  
- ![Sağ&#45;Düzenleyicisi, Intellitest oluşturma seçin](../test/media/pexcreateintellitest.png "PEXCreateIntelliTest")  
-  
- Testleriniz oluşturulmaya veya projenizin ve testleri nasıl adlandırıldığı değiştirmek için varsayılan biçimi kabul edin. Yeni bir test projesi oluşturun veya var olan bir projeye testlerinizi kaydedin.  
-  
- ![Intellitest MSTest varsayılan oluşturun](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
-  
-### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>S: Intellitest ile diğer birim testi çerçeveleri kullanabilir miyim?  
- **Y:** Evet, için aşağıdaki adımları [bulun ve diğer çatıları Yükle](../test/install-third-party-unit-test-frameworks.md). Visual Studio'yu yeniden başlatın ve çözümünüzü yeniden sonra sınıf veya yöntemi içinde sağ tıklayın ve ardından seçin **Intellitest oluşturma**. Burada yüklü Çerçevenizi seçin:  
-  
- ![Diğer birim testi çerçevesi için Intellitest seçin](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")  
-  
- Ardından, ilgili tek tek birim testleri oluşturmak için Intellitest Çalıştır. g.cs dosyaları.  
-  
-### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>S: Testleri nasıl oluşturulacağını hakkında daha fazla bilgi edinebilirim?  
- **Y:** Evet, üst düzey bir genel bakış için bu okuyun [blog gönderisi](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx).
+IntelliTest, test verileri ve birim testleri paketi oluşturmak için .NET kodunuzu araştırır. Koddaki her deyimin için, bu ifadeyi yürütecek bir test girişi oluşturulur. Koddaki her koşullu dal için bir olay Analizi gerçekleştirilir. Örneğin, deyimler, Onaylamalar ve özel durum oluşturabilecek tüm işlemler çözümlenmekte. Bu analiz, metotlarınızın her biri için parametreli birim testi için test verileri oluşturmak üzere kullanılır ve yüksek kod kapsamı ile birim testleri oluşturur.
+
+ IntelliTest çalıştırdığınızda, hangi testlerin başarısız olduğunu kolayca görebilir ve bunları onarmak için gerekli kodu ekleyebilirsiniz. Bir gerileme paketi sağlamak için test projesine kaydetmek üzere oluşturulan testlerin hangisi olduğunu seçebilirsiniz. Kodunuzu değiştirirken, oluşturulan testleri kod değişiklikleriyle eşitlenmiş halde tutmak için IntelliTest 'i yeniden çalıştırın.
+
+ IntelliTest yalnızca için C# kullanılabilir ve x64 yapılandırmasını desteklemez.
+
+## <a name="get-started-with-intellitest"></a>IntelliTest ile çalışmaya başlama
+ Visual Studio Enterprise gerekir.
+
+### <a name="explore-use-intellitest-to-explore-your-code-and-generate-unit-tests"></a>Keşfet: kodunuzu araştırmak ve birim testleri oluşturmak için IntelliTest kullanın
+ Birim testleri oluşturmak için, türleriniz ortak olmalıdır. Aksi takdirde, önce [birim testlerini](#NoRun) oluşturmadan önce oluşturun.
+
+1. Çözümünüzü Visual Studio 'da açın. Ardından, test etmek istediğiniz yöntemlere sahip sınıf dosyasını açın.
+
+2. Kodunuzda bir yönteme sağ tıklayın ve yöntemdeki kod için birim testleri oluşturmak üzere **IntelliTest Çalıştır** ' ı seçin.
+
+     ![Birim&#45;testleri oluşturmak için yönteminizi sağ tıklatın](../test/media/runpex.png "RunPEX")
+
+     IntelliTest, kodunuzu farklı girişlerle birçok kez çalıştırır. Her çalıştırma, giriş testi verilerini ve sonuçta elde edilen çıktıyı veya özel durumu gösteren tabloda gösterilir.
+
+     ![Araştırma sonuçları penceresi testlerle birlikte görüntülenir](../test/media/pexexplorationresults.png "Pexaraştırması Ationresults")
+
+     Bir sınıftaki tüm ortak yöntemler için birim testleri oluşturmak üzere belirli bir yöntem yerine sınıfına sağ tıklayabileceksiniz. Sonra **IntelliTest Çalıştır**' ı seçin. Sınıf içindeki her yöntemin birim testlerini ve giriş verilerini göstermek için araştırma sonuçları penceresindeki açılan listeyi kullanın.
+
+     ![Listeden görüntülenecek test sonuçlarını seçin](../test/media/selectpextest.png "SelectPEXTest")
+
+     Geçen testler için, sonuç sütunundaki rapor sonuçlarının kodunuzun beklentilerinizi eşleşip eşleştiğinden emin olun. Başarısız olan testler için kodunuzu uygun şekilde onarın. Sonra düzeltmeleri doğrulamak için IntelliTest 'i yeniden çalıştırın.
+
+### <a name="persist-save-the-unit-tests-as-a-regression-suite"></a>Kalıcı: birim testlerini regresyon paketi olarak kaydetme
+
+1. Parametreli birim testiyle bir test projesine kaydetmek istediğiniz veri satırlarını seçin.
+
+     ![Testleri seçin; sağ&#45;tıklayın ve Kaydet ' i seçin](../test/media/savepextests.png "SavePEXTests")
+
+     Oluşturulan test projesini ve parametreli birim testini görüntüleyebilirsiniz. her satıra karşılık gelen tek birim testleri, Test projesindeki. g.cs dosyasında kaydedilir ve parametreli birim testi karşılık gelen. cs dosyasına kaydedilir. Birim testlerini çalıştırabilir ve test Gezgini 'nden, el ile oluşturduğunuz tüm birim testlerinde yaptığınız gibi sonuçları görüntüleyebilirsiniz.
+
+     ![Birim testini görüntülemek için test yönteminde sınıf dosyası aç](../test/media/testmethodpex.png "TestMethodPEX")
+
+     Gerekli başvurular da test projesine eklenir.
+
+     Yöntem kodu değişirse, birim testlerini değişikliklerle eşitlenmiş halde tutmak için IntelliTest 'i yeniden çalıştırın.
+
+### <a name="assist-use-intellitest-to-focus-code-exploration"></a>Yardım: kod Gezginine odaklanmak için IntelliTest kullanma
+
+1. Daha karmaşık kodunuz varsa, IntelliTest kodunuzun odaklanarak araştırmasına yardımcı olur. Örneğin, parametresi olarak bir arabirimi olan bir yönteminiz varsa ve bu arabirimi uygulayan birden fazla sınıf varsa, IntelliTest bu sınıfları bulur ve bir uyarı bildirir.
+
+     Ne yapmak istediğinize karar vermek için uyarıları görüntüleyin.
+
+     ![Uyarıları görüntüle](../test/media/pexviewwarning.png "PEXViewWarning")
+
+2. Kodu araştırdıktan ve test etmek istediğinizi anladıktan sonra, arabirimi test etmek için kullanılacak sınıfları seçmek üzere uyarıyı çözebilirsiniz.
+
+     ![Uyarıya&#45;sağ tıklayın ve düzeltir ' ı seçin.](../test/media/pexfixwarning.png "PEXFixWarning")
+
+     Bu seçim PexAssemblyInfo.cs dosyasına eklenir.
+
+     `[assembly: PexUseType(typeof(Camera))]`
+
+3. Artık, düzeltilen sınıfı kullanarak parametreli birim testi ve test verileri oluşturmak için IntelliTest 'i yeniden çalıştırabilirsiniz.
+
+     ![Test verilerini oluşturmak için IntelliTest 'i yeniden çalıştırın](../test/media/pexwarningsfixed.png "PEXWarningsFixed")
+
+### <a name="specify-use-intellitest-to-validate-correctness-properties-that-you-specify-in-code"></a>Belirtin: kodda belirttiğiniz doğruluk özelliklerini doğrulamak için IntelliTest kullanın
+ Oluşturulan birim testlerinin doğrulamak istediğiniz girişler ve çıktılar arasındaki genel ilişkiyi belirtin. Bu belirtim, bir test yöntemi gibi görünen ancak evrensel olarak oluşan bir yöntemde kapsüllenir. Bu parametreli birim testi yöntemidir ve tüm Onaylamalar IntelliTest 'in oluşturabileceği tüm olası giriş değerleri için tutmalıdır.
+
+## <a name="QandALink"></a>soru-cevap &
+
+### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>S: yönetilmeyen kod için IntelliTest kullanabilir miyim?
+ Y **:** Hayır, IntelliTest yalnızca yönetilen kodla birlikte kullanılabilir.
+
+### <a name="q-when-does-a-generated-test-pass-or-fail"></a>S: oluşturulan bir test başarılı veya başarısız olduğunda?
+ Y **:** Özel durum oluşursa diğer birim testleri gibi geçirir. Herhangi bir onaylama başarısız olursa veya test altındaki kod işlenmeyen bir özel durum oluşturursa başarısız olur.
+
+ Belirli özel durumlar oluşursa geçebilmeniz gereken bir testiniz varsa, test yöntemi, test sınıfı veya derleme düzeyi ' nde gereksinimlerinize göre aşağıdaki özniteliklerden birini ayarlayabilirsiniz:
+
+- **PexAllowedExceptionAttribute**
+
+- **PexAllowedExceptionFromTypeAttribute**
+
+- **PexAllowedExceptionFromTypeUnderTestAttribute**
+
+- **PexAllowedExceptionFromAssemblyAttribute**
+
+### <a name="q-can-i-add-assumptions-to-the-parameterized-unit-test"></a>S: parametreli birim testine varsayımlar ekleyebilir miyim?
+ Y **:** Evet, belirli bir yöntem için birim testi için gerekli olmayan test verilerini belirtmek için varsayımlar kullanın. Varsayımlar eklemek için <xref:Microsoft.Pex.Framework.PexAssume> sınıfını kullanın. Örneğin, uzunluk değişkeninin bu şekilde null olmadığı varsayımını ekleyebilirsiniz.
+
+ `PexAssume.IsNotNull(lengths);`
+
+ Bir varsayım ekler ve IntelliTest 'i yeniden çalıştırırsanız, artık alakalı olmayan test verileri kaldırılır.
+
+### <a name="q-can-i-add-assertions-to-the-parameterized-unit-test"></a>S: parametreli birim testine onaylama ekleyebilir miyim?
+ Y **:** Evet, IntelliTest, birim testlerini çalıştırdığında deyiminizde neleri bulduhangilerinin gerçekten doğru olduğunu denetlemekte. Onaylama eklemek için test çerçevesiyle birlikte gelen <xref:Microsoft.Pex.Framework.PexAssert> sınıfını veya onaylama API 'sini kullanın. Örneğin, iki değişkenin eşit olduğu bir onaylama ekleyebilirsiniz.
+
+ `PexAssert.AreEqual(a, b);`
+
+ Bir onaylama ekler ve IntelliTest 'i yeniden çalıştırırsanız, onaylamanın geçerli olduğunu ve testin başarısız olup olmadığını kontrol eder.
+
+### <a name="NoRun"></a>S: önce IntelliTest çalıştırmadan parametreli birim testleri oluşturabilir miyim?
+ Y **:** Evet, sınıfa veya yöntemine sağ tıklayıp **IntelliTest oluştur**' u seçin.
+
+ ![Düzenleyiciyi&#45;sağ tıklatın, IntelliTest oluştur ' u seçin.](../test/media/pexcreateintellitest.png "Pexcreateıntellitest")
+
+ Testlerinizi oluşturmak için varsayılan biçimi kabul edin veya projenizin ve testlerinizin adlandırıldığını değiştirin. Yeni bir test projesi oluşturabilir veya testlerinizi var olan bir projeye kaydedebilirsiniz.
+
+ ![MSTest varsayılana sahip IntelliTest oluşturma](../test/media/pexcreateintellitestmstest.png "Pexcreateıntellitestmstest")
+
+### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>S: diğer birim test çerçevelerini IntelliTest ile kullanabilir miyim?
+ Y **:** Evet, [diğer çerçeveleri bulmak ve yüklemek](../test/install-third-party-unit-test-frameworks.md)için aşağıdaki adımları izleyin. Visual Studio 'Yu yeniden başlattıktan sonra çözümünüzü yeniden açtıktan sonra, sınıfı veya yöntemine sağ tıklayıp **IntelliTest oluştur**' u seçin. Yüklü çatısını buradan seçin:
+
+ ![IntelliTest için diğer birim test çerçevesini seçin](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")
+
+ Ardından, ilgili. g.cs dosyalarında ayrı birim testleri oluşturmak için IntelliTest çalıştırın.
+
+### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>S: testlerin nasıl oluşturulduğu hakkında daha fazla bilgi alabilir miyim?
+ Y **:** Evet, üst düzey bir genel bakış edinmek için bu [blog gönderisini](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx)okuyun.

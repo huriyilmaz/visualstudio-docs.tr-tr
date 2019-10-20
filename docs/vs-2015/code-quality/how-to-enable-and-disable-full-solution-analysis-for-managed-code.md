@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yönetilen kod için tam çözüm analizini devre | Microsoft Docs'
+title: 'Nasıl yapılır: yönetilen kod için tam çözüm analizini etkinleştirme ve devre dışı bırakma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - full solution analysis
 ms.assetid: 04315147-5792-47f0-8b5f-9ac8413c6a57
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: df06a17ecc093cf24a64e7c3aa11a096a61ee44f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 72b27bf9dcc1f0ee8a222ac701f2ffae4fc68614
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436833"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646285"
 ---
-# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Nasıl yapılır: Yönetilen kod için tam çözüm analizini devre dışı bırakma ve etkinleştirme
+# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Nasıl yapılır: yönetilen kod için tam çözüm analizini etkinleştirme ve devre dışı bırakma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[NOT]
-> Bu konu, yalnızca Visual Studio 2015 güncelleştirme 3 RC ve daha sonra uygulanır.  
-  
- *Tam çözüm analizini* çözümünüzdeki ya da açık ve kapalı Visual C# veya Visual Basic dosyalarında çözümünüzdeki açık Visual C# veya Visual Basic dosyaları, yalnızca kod analizi sorunlarına görüp görmediğinizi seçmenize olanak tanıyan bir Visual Studio özelliğidir.  
-  
- Tüm dosyalardaki tüm sorunları görmek için kullanışlı olsa da, çözümünüzü çok büyük veya çok sayıda dosya varsa, Visual Studio yavaşlamasına bile dağıtabilir ve notların olabilir.  Gösterilen sorunların sayısını sınırlayabilir ve Visual Studio performansını artırmak için tam çözüm analizini devre dışı bırakabilirsiniz. İsterseniz bu özellik kolayca yeniden etkinleştirebilirsiniz.  
-  
-#### <a name="to-toggle-full-solution-analysis"></a>Tam çözüm analizini açıp kapatmak için  
-  
-1. Visual Studio ana menüsünde **Araçları** &#124; **seçenekleri** görüntülemek için **seçenekleri** iletişim kutusu.  
-  
-2. İçinde **seçenekleri** iletişim kutusunda **metin düzenleyici** &#124; **C#** veya **temel** &#124; **Gelişmiş**.  
-  
-3. Seçin **tam çözüm analizini etkinleştirme** onay kutusunu tam çözüm analizini etkinleştirme veya devre dışı bırakmak için onay kutusunu temizleyin. Seçin **Tamam** işiniz bittiğinde düğmesi.  
-  
-     ![Tam çözüm analizi onay kutusunu etkinleştirin. ](../code-quality/media/fsa-toolsoptions.png "FSA_ToolsOptions")  
-  
-## <a name="results-of-enabling-and-disabling-full-solution-analysis"></a>Sonuçlarını tam çözüm analizini devre dışı bırakma ve etkinleştirme  
- Tam çözüm analizini etkin olduğunda, aşağıdaki ekran görüntüsünde, sonuçlarını görebilirsiniz. Tüm hataları ve Kod Analizi sorunlarıyla *tüm* dosyaların Çözümdeki dosyalar veya açık olup bağımsız olarak görünür.  
-  
- ![Tam çözüm analizini etkin. ](../code-quality/media/fsa-enabled.png "FSA_Enabled")  
-  
- Aşağıdaki ekran görüntüsünde, tam çözüm analizini devre dışı bıraktıktan sonra aynı çözümünden alınan sonuçları gösterir. Yalnızca hataları ve içinde kod analizi sorunlarına çözüm dosyalar görünür hata listesinde açın.  
-  
- ![Tam çözüm analizini devre dışı. ](../code-quality/media/fsa-disabled.png "FSA_Disabled")  
-  
-## <a name="automatically-disabling-full-solution-analysis"></a>Otomatik olarak tam çözüm analizini devre dışı bırakma  
- Visual Studio algılarsa 200MB veya daha az sistem belleği için kullanılabilir, etkinleştirildiğinde, otomatik olarak tam çözüm analizini (yanı sıra diğer bazı özellikleri) devre dışı bırakır. Bu meydana gelirse, bu size bildiren bir uyarı görünür. Bir düğme istediğinizde bunu yapmak tam çözüm analizini yeniden etkinleştirmenize olanak tanır.  
-  
- ![Uyarı metni tam çözüm analizini askıya](../code-quality/media/fsa-alert.png "FSA_Alert")  
-  
-## <a name="additional-details"></a>Ek ayrıntılar  
- Varsayılan olarak, tam çözüm analizini Visual Basic için etkinleştirilir ve Visual C# için devre dışı.  
-  
- Visual Studio güncelleştirme 3 RC, önemli ölçüde bellek kullanımını azaltır ve tam çözüm analizini etkin olsa bile, boşta için CPU süresini azaltır bir Gelişmiş kod Çözümleyicisi v2 Tanılama Altyapısı içerir.
+NOTUN
+> Bu konu yalnızca Visual Studio 2015 güncelleştirme 3 RC ve üzeri için geçerlidir.
+
+ *Tam çözüm Analizi* , kod analizi sorunlarını yalnızca çözümünüzdeki açık görsel C# veya Visual Basic dosyalarında ya da hem açık hem de kapalı Visual C# veya Visual Basic dosyalarında görmenizi sağlayan bir Visual Studio özelliğidir. çözümden.
+
+ Tüm dosyalardaki tüm sorunları görebilmekle çalışırken, çözümünüz çok büyükse veya çok fazla dosya içeriyorsa, bu, dikkat dağıtıcı ve hatta bunun yavaşlamasına neden olabilir.  Gösterilen sorun sayısını sınırlandırmak ve Visual Studio performansını geliştirmek için tam çözüm analizini devre dışı bırakabilirsiniz. İsterseniz bu özelliği kolayca yeniden etkinleştirebilirsiniz.
+
+#### <a name="to-toggle-full-solution-analysis"></a>Tam çözüm analizine geçiş yapmak için
+
+1. Visual Studio 'daki ana menüde, **Seçenekler** iletişim kutusunu görüntülemek için **Araçlar** &#124; **Seçenekler** ' i seçin.
+
+2. **Seçenekler** iletişim kutusunda **metin düzenleyici** &#124; **C#** veya **temel** &#124; **Gelişmiş**' i seçin.
+
+3. Tam çözüm analizini etkinleştirmek için **tam çözüm analizini etkinleştir** onay kutusunu seçin veya devre dışı bırakmak için kutuyu temizleyin. İşiniz bittiğinde **Tamam** düğmesini seçin.
+
+     ![Tam çözüm analizini etkinleştir onay kutusu.](../code-quality/media/fsa-toolsoptions.png "FSA_ToolsOptions")
+
+## <a name="results-of-enabling-and-disabling-full-solution-analysis"></a>Tam çözüm analizini etkinleştirme ve devre dışı bırakma sonuçları
+ Aşağıdaki ekran görüntüsünde, tam çözüm Analizi etkinleştirildiğinde sonuçları görebilirsiniz. Çözümdeki *Tüm* dosyalardaki tüm hatalar ve kod analizi sorunları, dosyaların açık olup olmamasına bakılmaksızın görünür.
+
+ ![Tam çözüm Analizi etkin.](../code-quality/media/fsa-enabled.png "FSA_Enabled")
+
+ Aşağıdaki ekran görüntüsünde, tam çözüm analizini devre dışı bıraktıktan sonra aynı çözümün sonuçları gösterilmektedir. Yalnızca açık çözüm dosyalarındaki hatalar ve kod analizi sorunları Hata Listesi görüntülenir.
+
+ ![Tam çözüm Analizi devre dışı.](../code-quality/media/fsa-disabled.png "FSA_Disabled")
+
+## <a name="automatically-disabling-full-solution-analysis"></a>Tam çözüm analizini otomatik olarak devre dışı bırakma
+ Visual Studio, 200 MB veya daha az sistem belleği olduğunu algılarsa, etkin olduğunda tam çözüm analizini (diğer bazı özellikler de dahil) otomatik olarak devre dışı bırakır. Böyle bir durum oluşursa, bunu size bildiren bir uyarı belirir. Bunu yapmak istiyorsanız, bir düğme tam çözüm analizini yeniden etkinleştirmenizi sağlar.
+
+ ![Tam çözüm analizini askıya alarak uyarı metni](../code-quality/media/fsa-alert.png "FSA_Alert")
+
+## <a name="additional-details"></a>Ek ayrıntılar
+ Varsayılan olarak, tam çözüm Analizi Visual Basic için etkinleştirilmiştir ve görsel C#için devre dışı bırakılır.
+
+ Visual Studio güncelleştirme 3 RC, tam çözüm Analizi etkin olsa bile, bellek kullanımını önemli ölçüde azaltan ve CPU süresini aşacak şekilde azaltan gelişmiş bir kod Çözümleyicisi tanılama v2 altyapısı içerir.

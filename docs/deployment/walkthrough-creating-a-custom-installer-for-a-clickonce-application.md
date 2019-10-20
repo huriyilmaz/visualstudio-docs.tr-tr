@@ -1,5 +1,5 @@
 ---
-title: ClickOnce uygulaması için özel bir yükleyici oluşturma
+title: ClickOnce uygulaması için özel yükleyici oluşturma
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,25 +18,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6969490789b4f5747c28f33e91c7d61e97de52e
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: b648134b7ad27a8f622ce270dc0f05e0a7e6516c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263467"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72637418"
 ---
 # <a name="walkthrough-create-a-custom-installer-for-a-clickonce-application"></a>İzlenecek yol: ClickOnce uygulaması için özel bir yükleyici oluşturma
-Herhangi bir ClickOnce uygulaması temel bir *.exe* dosya sessizce yüklenebilir ve özel bir yükleyici tarafından güncelleştirildi. Özel bir yükleyici özel iletişim kutuları için güvenlik ve Bakım işlemlerine dahil olmak üzere yüklemesi sırasında özel bir kullanıcı deneyimi uygulayabilirsiniz. Özel yükleyici yükleme işlemlerini gerçekleştirmek için kullandığı <xref:System.Deployment.Application.InPlaceHostingManager> sınıfı. Bu yönerge, sessiz bir ClickOnce uygulamasını yükleyen özel bir yükleyici oluşturma işlemini gösterir.
+Bir *. exe* dosyasını temel alan herhangi bir ClickOnce uygulaması sessizce yüklenebilir ve özel bir yükleyici tarafından güncelleştirilir. Özel bir yükleyici, yükleme sırasında güvenlik ve bakım işlemlerine yönelik özel iletişim kutuları dahil olmak üzere özel kullanıcı deneyimi uygulayabilir. Yükleme işlemlerini gerçekleştirmek için, özel yükleyici <xref:System.Deployment.Application.InPlaceHostingManager> sınıfını kullanır. Bu izlenecek yol, bir ClickOnce uygulamasını sessizce yükleyen özel bir yükleyicinin nasıl oluşturulacağını göstermektedir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-### <a name="to-create-a-custom-clickonce-application-installer"></a>Özel bir ClickOnce Uygulama yükleyici oluşturmak için
+### <a name="to-create-a-custom-clickonce-application-installer"></a>Özel bir ClickOnce uygulama yükleyicisi oluşturmak için
 
-1. ClickOnce uygulamanızı System.Deployment ve System.Windows.Forms öğelerini başvurular ekleyin.
+1. ClickOnce uygulamanızda, System. Deployment ve System. Windows. Forms 'a başvurular ekleyin.
 
-2. Uygulamanız için yeni bir sınıf ekleyin ve herhangi bir ad belirtin. Bu izlenecek yol adı kullanan `MyInstaller`.
+2. Uygulamanıza yeni bir sınıf ekleyin ve herhangi bir ad belirtin. Bu izlenecek yol `MyInstaller` adını kullanır.
 
-3. Aşağıdaki `Imports` veya `using` en yeni sınıfınızın.
+3. Aşağıdaki `Imports` veya `using` yönergelerini Yeni sınıfınızın en üstüne ekleyin.
 
     ```vb
     Imports System.Deployment.Application
@@ -48,17 +48,17 @@ Herhangi bir ClickOnce uygulaması temel bir *.exe* dosya sessizce yüklenebilir
     using System.Windows.Forms;
     ```
 
-4. Sınıfınıza aşağıdaki yöntemi ekleyin.
+4. Sınıfınıza aşağıdaki yöntemleri ekleyin.
 
-     Bu yöntemleri çağırmak <xref:System.Deployment.Application.InPlaceHostingManager> dağıtım bildirimini yükleme yöntemleri assert uygun izinleri yükleyin, sonra da indirin ve uygulamayı ClickOnce önbelleğine yüklemek için kullanıcı izni isteyin. ClickOnce uygulaması önceden güvenilen veya güven kararını ertelemek özel bir yükleyici belirtebilirsiniz <xref:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements%2A> yöntem çağrısı. Bu kod, uygulamanın önceden güvenir.
+     Bu yöntemler dağıtım bildirimini indirmek için <xref:System.Deployment.Application.InPlaceHostingManager> Yöntemler çağırır, uygun izinleri onaylama, kullanıcıdan yükleme iznini isteme ve uygulamayı ClickOnce önbelleğine yükleme ve yükleme. Özel bir yükleyici ClickOnce uygulamasının önceden güvenilir olduğunu belirtebilir veya <xref:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements%2A> yöntemi çağrısına güven kararını erteleyebilirsiniz. Bu kod, uygulamaya önceden güvenir.
 
     > [!NOTE]
-    > Özel yükleyici kod izinlerini önceden güvenerek atanan izinler aşamaz.
+    > Önceden güvenme tarafından atanan izinler, özel yükleyici kodunun izinlerini aşamaz.
 
      [!code-vb[System.Deployment.Application.InPlaceHostingManager#1](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-installer-for-a-clickonce-application_1.vb)]
      [!code-csharp[System.Deployment.Application.InPlaceHostingManager#1](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-installer-for-a-clickonce-application_1.cs)]
 
-5. Kodunuzu yükleme girişiminde çağrı `InstallApplication` yöntemi. Örneğin, sınıf adlı, `MyInstaller`, çağırabilirsiniz `InstallApplication` şu şekilde.
+5. Kodunuzda yükleme yapmayı denemek için `InstallApplication` yöntemini çağırın. Örneğin, sınıfınızı `MyInstaller` olarak adlandırdıysanız aşağıdaki şekilde `InstallApplication` çağırabilirsiniz.
 
     ```vb
     Dim installer As New MyInstaller()
@@ -73,8 +73,8 @@ Herhangi bir ClickOnce uygulaması temel bir *.exe* dosya sessizce yüklenebilir
     ```
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bir ClickOnce uygulamasını da güncelleştirme işlemi sırasında gösterilecek bir özel kullanıcı arabirimi de dahil olmak üzere, özel güncelleştirme mantığı ekleyebilirsiniz. Daha fazla bilgi için bkz. <xref:System.Deployment.Application.UpdateCheckInfo>. Bir ClickOnce uygulamasını da standart Başlat menüsü girişi, kısayol ve Program Ekle veya Kaldır giriş kullanarak gizleyebilirsiniz bir `<customUX>` öğesi. Daha fazla bilgi için [ \<entryPoint > öğesi](../deployment/entrypoint-element-clickonce-application.md) ve <xref:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId%2A>.
+ ClickOnce uygulaması, güncelleştirme işlemi sırasında gösterilecek özel bir kullanıcı arabirimi de dahil olmak üzere özel güncelleştirme mantığı da ekleyebilir. Daha fazla bilgi için bkz. <xref:System.Deployment.Application.UpdateCheckInfo>. Bir ClickOnce uygulaması, bir `<customUX>` öğesi kullanarak standart Başlat menüsü girdisi, kısayol ve Program Ekle veya Kaldır girişini de engelleyebilir. Daha fazla bilgi için bkz. [\<entryPoint > öğesi](../deployment/entrypoint-element-clickonce-application.md) ve <xref:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId%2A>.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
 - [\<entryPoint > öğesi](../deployment/entrypoint-element-clickonce-application.md)

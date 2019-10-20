@@ -1,5 +1,5 @@
 ---
-title: Web tarayıcısı, ortam, Seçenekler iletişim kutusu | Microsoft Docs
+title: Web tarayıcısı, ortam, Seçenekler Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -21,49 +21,43 @@ helpviewer_keywords:
 - Internet Explorer, setting options
 ms.assetid: 586db4eb-032d-4cb5-93a6-a7c14de1ae49
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6cc3f5d49844509f5b0cb5fa7c439a6ce7c69e18
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a58fc57ca840f064e7d32b830133f0d909af7585
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65698700"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604761"
 ---
 # <a name="web-browser-environment-options-dialog-box"></a>Web Tarayıcısı, Ortam, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İç Web tarayıcısı ve Internet Explorer seçeneklerini ayarlar. Bu iletişim kutusuna erişmek için tıklayın **seçenekleri** üzerinde **Araçları** menüsünü genişletin **ortam** klasörünü açın ve seçin **Web tarayıcısı**.  
-  
+Hem iç Web tarayıcısı hem de Internet Explorer seçeneklerini ayarlar. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **ortam** klasörünü genişletin ve **Web tarayıcısı**' nı seçin.
+
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden içeri ve dışarı aktarma ayarları seçin. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden Içeri ve dışarı aktarma ayarları ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
 > [!IMPORTANT]
-> Belirli dosyaları veya bileşenleri, Web'ten bilgisayarınızda kod yürütebilir.  
-  
- Giriş sayfası  
- IDE Web tarayıcısı açtığınızda görüntülenen sayfa ayarlar.  
-  
- Arama sayfası  
- İç Web tarayıcısı arama sayfası belirlemenizi sağlar. Bu konum, Internet Explorer'ın tümleşik geliştirme ortamı (IDE) dışında başlatılan örneği tarafından kullanılan arama sayfasından farklı olabilir.  
-  
- Kaynağı şurada görüntüle  
- Düzenleyicisi'ni seçtiğinizde, bir Web sayfası açmak için kullanılan ayarlar **kaynağı görüntüle** iç Web tarayıcısından sayfasında.  
-  
-- **Kaynak Düzenleyicisi** kaynakta görüntülemek için seçin [kod yazma](../../ide/writing-code-in-the-code-and-text-editor.md).  
-  
-- **HTML Düzenleyicisi** kaynakta görüntülemek için seçin [HTML Tasarımcısı](https://msdn.microsoft.com/library/640043cc-3657-4677-a091-bc315e636477). İki görünüm birinde Web sayfasını düzenlemek için bu seçimi kullanın: Tasarım görünümü veya standart metin tabanlı kaynak görünümü.  
-  
-- **Dış düzenleyici** kaynak başka bir düzenleyicide görüntülemek için seçin. Seçtiğiniz herhangi bir düzenleyiciye Örneğin, Notepad.exe yolunu belirtin.  
-  
-  Internet Explorer Options  
-  Internet Explorer seçeneklerini değiştirmek için tıklayın **Internet Özellikleri** iletişim kutusu. Bu iletişim kutusunda yapılan değişiklikler, iç Web tarayıcısı ve Internet Explorer'ın dışında (örneğin, Başlat menüsünden) Visual Studio IDE başlatılan örneklerini etkiler.  
-  
+> Web 'den belirli dosyaları veya bileşenleri açmak, bilgisayarınızda kod yürütebilir.
+
+ Ana sayfa, IDE Web tarayıcısını açtığınızda görünen sayfayı ayarlar.
+
+ Arama sayfası, iç Web tarayıcısı için bir arama sayfası belirlemenizi sağlar. Bu konum, Internet Explorer 'ın tümleşik geliştirme ortamı (IDE) dışında başlatılan örnekleri tarafından kullanılan arama sayfasından farklı olabilir.
+
+ Kaynağı görüntüle bölümünde, iç Web tarayıcısından sayfada **kaynağı görüntüle** ' yi seçtiğinizde bir Web sayfası açmak için kullanılan düzenleyiciyi ayarlar.
+
+- **Kaynak Düzenleyicisi** [Yazma kodunda](../../ide/writing-code-in-the-code-and-text-editor.md)kaynağı görüntülemek için seçin.
+
+- **HTML Düzenleyicisi** Kaynağı [HTML Tasarımcısı](https://msdn.microsoft.com/library/640043cc-3657-4677-a091-bc315e636477)'nda görüntülemek için seçin. Web sayfasını iki görünümden birinde düzenlemek için bu seçimi kullanın: Tasarım görünümü veya standart metin tabanlı kaynak görünümü.
+
+- **Dış düzenleyici** Kaynağı başka bir düzenleyicide görüntülemek için seçin. Seçtiğiniz düzenleyicinin yolunu belirtin; örneğin, Notepad. exe.
+
+  Internet Explorer seçenekleri Internet **özellikleri** Iletişim kutusunda Internet Explorer seçeneklerini değiştirmek için tıklayın. Bu iletişim kutusunda yapılan değişiklikler hem iç Web tarayıcısını hem de Visual Studio IDE dışında başlatılan Internet Explorer örneklerini (örneğin, Başlat menüsünden) etkiler.
+
 > [!NOTE]
-> Farklı, harici bir Web tarayıcısı kullanarak Internet Explorer'ın bir sürümü olan Visual Studio iç Web tarayıcısı, değiştirilecek şununla Gözat iletişim kutusunu kullanın.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ortam Seçenekleri iletişim kutusu](../../ide/reference/environment-options-dialog-box.md)   
- [Genel, ortam, Seçenekler iletişim kutusu](../../ide/reference/general-environment-options-dialog-box.md)   
- [HTML Tasarımcısı](https://msdn.microsoft.com/library/640043cc-3657-4677-a091-bc315e636477)
+> Internet Explorer 'ın bir sürümü olan Visual Studio iç Web tarayıcısını farklı, dış bir Web tarayıcısı kullanarak değiştirmek için, bununla birlikte araştır iletişim kutusunu kullanın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Ortam seçenekleri Iletişim kutusu](../../ide/reference/environment-options-dialog-box.md) [Genel, ortam, Seçenekler Iletişim kutusu](../../ide/reference/general-environment-options-dialog-box.md) [HTML Tasarımcısı](https://msdn.microsoft.com/library/640043cc-3657-4677-a091-bc315e636477)

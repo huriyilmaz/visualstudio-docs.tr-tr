@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Üye gösterimi ile ilişkilendirme gösterimi (Sınıf Tasarımcısı) arasında | Microsoft Docs'
+title: 'Nasıl yapılır: üye gösterimi ile Ilişkilendirme gösterimi arasında geçiş (Sınıf Tasarımcısı) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,43 +11,40 @@ helpviewer_keywords:
 - notation, association
 ms.assetid: 65881c5a-d251-4a36-ad0d-73d088436092
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2c0e691cd162a52dc598f9d3dc4d9a04e0f8f008
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 6a9a15b7284c647cb115c34b5655bdcaa7402ce0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439288"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663574"
 ---
-# <a name="how-to-change-between-member-notation-and-association-notation-class-designer"></a>Nasıl yapılır: Üye gösterimi ile ilişkilendirme gösterimi (Sınıf Tasarımcısı) arasında geçiş
+# <a name="how-to-change-between-member-notation-and-association-notation-class-designer"></a>Nasıl Yapılır: Üye Gösterimi ile İlişkilendirme Gösterimi Arasında Geçiş (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sınıf Tasarımcısı'nda, sınıf diyagramı temsil eden iki türden ilişkilendirme gösterimi ve bunun tersi de üye gösterimi arasında bir ilişkilendirme ilişkisi şeklini değiştirebilirsiniz. Üyeleri ilişkilendirme çizgileri genellikle görüntülenen türleri nasıl ilişkili olduğunu, kullanışlı bir görselleştirme sağlar.  
-  
+Sınıf Tasarımcısı, sınıf diyagramının üye gösterimden ilişki gösterimine ve tam tersi şekilde iki tür arasındaki ilişki ilişkisini temsil ettiğini değiştirebilirsiniz. İlişki hatları olarak görüntülenen Üyeler genellikle türlerin nasıl ilişkili olduğu konusunda yararlı bir görselleştirme sağlar.
+
 > [!NOTE]
-> İlişkilendirme ilişkileri bir üye özelliği veya alanı gösterilebilir. Üye gösterimi ilişkilendirme gösterimi değiştirmek için bir tür, başka bir tür üyesi olmalıdır. Üye gösterimi ilişkilendirme gösterimi değiştirmek için iki tür tarafından bir ilişkilendirme çizgisi bağlanması gerekir. Daha fazla bilgi için [nasıl yapılır: (Sınıf Tasarımcısı) türler arasında ilişkilendirme oluşturma](../ide/how-to-create-associations-between-types-class-designer.md). Projenizi içeren birden fazla sınıf diyagramı, diyagram ilişkilendirme ilişkileri görüntüler şekilde yaptığınız değişiklikler yalnızca o diyagramı etkiler. Başka bir diyagrama ilişkilendirme ilişkileri görüntüleme biçimini değiştirmek için açın veya bu diyagramı görüntüleyin ve aşağıdaki adımları gerçekleştirin.  
-  
-### <a name="to-change-member-notation-to-association-notation"></a>Üye gösterimi ilişkilendirme gösterimi değiştirmek için  
-  
-1. Çözüm Gezgini'nde proje düğümü aracılığıyla, sınıf diyagramı (.cd) dosyası açın.  
-  
-2. Üye özellik veya alan ilişkisini temsil eden içinde tür şeklini sınıf diyagramı'nda, sağ tıklatın ve seçin **ilişkilendirmesi olarak göster**.  
-  
+> İlişki ilişkileri, üye özelliği veya alanı olarak gösterilebilir. Üye gösterimini ilişkilendirme gösterimi olarak değiştirmek için, bir türün başka bir türün üyesi olması gerekir. İlişki gösterimini üye gösterimine göre değiştirmek için, iki tür bir ilişkilendirme satırıyla bağlanmalıdır. Daha fazla bilgi için bkz. [nasıl yapılır: türler arasında Ilişkilendirme oluşturma (sınıf Tasarımcısı)](../ide/how-to-create-associations-between-types-class-designer.md). Projeniz birden çok sınıf diyagramı içeriyorsa, bir diyagramın ilişki ilişkilerini gösterdiği şekilde yaptığınız değişiklikler yalnızca bu diyagramı etkiler. Başka bir diyagramın ilişki ilişkilerini görüntüleme şeklini değiştirmek için bu diyagramı açın veya görüntüleyin ve bu adımları uygulayın.
+
+### <a name="to-change-member-notation-to-association-notation"></a>Üye gösterimini ilişkilendirme gösterimi olarak değiştirmek için
+
+1. Çözüm Gezgini içindeki proje düğümünden sınıf diyagramı (. CD) dosyasını açın.
+
+2. Sınıf diyagramındaki tür şeklinin içinde, ilişkiyi temsil eden üye özelliğine veya alana sağ tıklayın ve **ilişkilendirme olarak göster**' i seçin.
+
     > [!TIP]
-    > Hiçbir özelliklerle veya alanlarla türü şeklinde görünür durumdaysa, bölmeleri şeklinde daraltılmış olabilir. Tür şeklini genişletmek için bölme adına çift tıklayın veya türü şekle sağ tıklayın ve seçin **genişletme**.  
-  
-     Bölme türü şeklinde üyenin kaybolur ve iki tür bağlanmak için bir ilişkilendirme çizgisi görüntülenir. İlişkilendirme çizgisi, özelliği veya alanı adıyla etiketlenir.  
-  
-### <a name="to-change-association-notation-to-member-notation"></a>Üye gösterimi ilişkilendirme gösterimi değiştirmek için  
-  
-- Sınıf diyagramı'nda ilişkilendirme çizgisi sağ tıklatın ve seçin **Göster özelliği olarak** veya **alan olarak göster** uygun şekilde.  
-  
-     İlişkilendirme çizgisi kaybolur, ve tür şeklini diyagramda içinde uygun bölme özelliği görüntülenir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: (Sınıf Tasarımcısı) türler arasında devralma oluşturma](../ide/how-to-create-inheritance-between-types-class-designer.md)   
- [Nasıl yapılır: (Sınıf Tasarımcısı) türler arasında devralmayı görüntüleme](../ide/how-to-view-inheritance-between-types-class-designer.md)   
- [Türleri ve ilişkiler (Sınıf Tasarımcısı) görüntüleme](../ide/viewing-types-and-relationships-class-designer.md)   
- [Nasıl yapılır: Koleksiyon İlişkilendirmesini Görselleştirme (Sınıf Tasarımcısı)](../ide/how-to-visualize-a-collection-association-class-designer.md)
+    > Tür şeklinin içinde hiçbir özellik veya alan görünmüyorsa, şekildeki bölmeleri daraltılmış olabilir. Tür şeklini genişletmek için bölme adına çift tıklayın veya tür şekline sağ tıklayın ve **Genişlet**' i seçin.
+
+     Üye tür şeklindeki bölmeden kaybolur ve iki türü bağlamak için bir ilişkilendirme satırı görünür. İlişkilendirme çizgisi, özelliğin veya alanın adıyla etiketlenir.
+
+### <a name="to-change-association-notation-to-member-notation"></a>İlişki gösterimini üye gösterimine göre değiştirmek için
+
+- Sınıf diyagramında, ilişkilendirme satırına sağ tıklayın ve **özellik olarak göster** ' i seçin veya uygun şekilde **alanı göster** ' i seçin.
+
+     İlişkilendirme satırı kaybolur ve özelliği, diyagramda tür şeklinin içindeki uygun bölme içinde görüntülenir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl yapılır: türler arasında devralma oluşturma (sınıf Tasarımcısı)](../ide/how-to-create-inheritance-between-types-class-designer.md) nasıl yapılır: türleri [ve ilişkileri görüntüleme](../ide/viewing-types-and-relationships-class-designer.md) ( [Sınıf Tasarımcısı) türler arasında devralmayı görüntüleme](../ide/how-to-view-inheritance-between-types-class-designer.md) (sınıf Tasarımcısı) [nasıl yapılır: koleksiyon ilişkilendirmesini görselleştirme (sınıf Tasarımcısı) ](../ide/how-to-visualize-a-collection-association-class-designer.md)

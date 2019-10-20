@@ -1,66 +1,60 @@
 ---
-title: Biçimlendirme, XML, metin düzenleyici, Seçenekler iletişim kutusu | Microsoft Docs
+title: Biçimlendirme, XML, metin düzenleyici, Seçenekler Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: bb539b3a-027c-4b2f-906e-403e0e22ba8d
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 588bf415a801a9244cd9a046e0c503c0b238db58
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 962321a1ab1a1ca5332300eea0d21781a9e4bbf5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63417412"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670967"
 ---
 # <a name="formatting-xml-text-editor-options-dialog-box"></a>Biçimlendirme, XML, Metin Düzenleyici, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu iletişim kutusu, XML Düzenleyicisi için biçimlendirme ayarları belirtmenize olanak sağlar. Erişebildiğiniz **seçenekleri** iletişim kutusundan **Araçları** menüsü.  
-  
+Bu iletişim kutusu, XML Düzenleyicisi için biçimlendirme ayarlarını belirtmenize olanak tanır. **Seçenekler** Iletişim kutusuna **Araçlar** menüsünden erişebilirsiniz.
+
 > [!NOTE]
-> Seçtiğinizde, bu ayarlar kullanılabilir **metin düzenleyici** klasöründe **XML** klasörünü ve ardından **biçimlendirme** seçeneğini **seçenekleri** iletişim kutusu.  
-  
-## <a name="attributes"></a>Öznitelikler  
- **El ile öznitelik biçimlendirmeyi koru**  
- Öznitelikleri getirilecek değil. Bu varsayılandır.  
-  
+> Bu ayarlar, **metin düzenleyici** klasörünü, **XML** klasörünü ve ardından **Seçenekler** iletişim kutusundan **biçimlendirme** seçeneğini belirlediğinizde kullanılabilir.
+
+## <a name="attributes"></a>Öznitelikler
+ **El ile öznitelik biçimlendirmesini koru** Öznitelikler yeniden biçimlendirilmedi. Bu varsayılandır.
+
 > [!NOTE]
-> Öznitelikler üzerinde birden fazla satır varsa, düzenleyici üst öğenin girintisini eşleştirilecek özniteliklerin her satırı girintiler.  
-  
- **Öznitelikleri her biri kendi satırında Hizala**  
- Dikey olarak ilk öznitelik girintisini eşleştirmek için ikinci ve sonraki öznitelikleri hizalar. Aşağıdaki XML nasıl öznitelikleri hizalanmış bir örnek metindir.  
-  
-```  
-<item id = "123-A"  
-      name = "hammer"  
-      price = "9.95">  
-</item>  
-```  
-  
-## <a name="auto-reformat"></a>Otomatik yeniden Biçimlendir  
- **Panodan yapıştırma**  
- XML metni panodan yapıştırılan yeniden biçimlendirir.  
-  
- **Bitiş etiketi tamamlandığında**  
- Öğe bitiş etiketi tamamlandığında yeniden biçimlendirir.  
-  
-## <a name="mixed-content"></a>Karışık içerik  
- **Varsayılan olarak karışık içeriği korumak**  
- Düzenleyici karışık içerik yeniden biçimlendirir olup olmadığını belirler. Varsayılan olarak, düzenleyici içeriği ne zaman bulunur dışında karışık içeriği yeniden biçimlendirmek çalışır. bir `xml:space="preserve"` kapsam.  
-  
- Bir öğe metni ve biçimlendirmeyi bir karışımını içeriyorsa, içeriği içerik karışık kabul edilir. Karışık içerikli bir öğenin bir örnek verilmiştir.  
-  
-```  
-<dir>c:\data\AlphaProject\  
-  <file readOnly="false">test1.txt</file>  
-  <file readOnly="false">test2.txt</file>  
-</dir>  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge özellikleri, özellik penceresi](../xml-tools/xml-document-properties-properties-window.md)   
- [XML Düzenleyicisi Bileşenleri](../xml-tools/xml-editor-components.md)
+> Öznitelikler birden çok satırda varsa, düzenleyici her bir öznitelik satırını üst öğenin girintilemesi ile eşleşecek şekilde girintiler.
+
+ **Öznitelikleri her biri kendi satırlarına hizalayın** İkinci ve sonraki öznitelikleri ilk özniteliğin girintilemesi ile eşleşecek şekilde dikey olarak hizalar. Aşağıdaki XML metni özniteliklerin nasıl hizalandığı hakkında bir örnektir.
+
+```
+<item id = "123-A"
+      name = "hammer"
+      price = "9.95">
+</item>
+```
+
+## <a name="auto-reformat"></a>Otomatik yeniden Biçimlendir
+ **Panodan yapıştırılırken** Panodan yapıştırılan XML metnini yeniden biçimlendirir.
+
+ **Bitiş etiketi tamamlandığında** Bitiş etiketi tamamlandığında öğeyi yeniden biçimlendirir.
+
+## <a name="mixed-content"></a>Karışık Içerik
+ **Karma içeriği varsayılan olarak koru** Düzenleyicinin karışık içeriği yeniden biçimlendirir olup olmadığını belirler. Varsayılan olarak düzenleyici, içeriğin bir `xml:space="preserve"` kapsamında bulunması dışında, karışık içeriği yeniden biçimlendirmeye çalışır.
+
+ Bir öğe metin ve biçimlendirme karışımı içeriyorsa, içerik karışık içerik olarak kabul edilir. Aşağıda, karışık içerikli bir öğe örneği verilmiştir.
+
+```
+<dir>c:\data\AlphaProject\
+  <file readOnly="false">test1.txt</file>
+  <file readOnly="false">test2.txt</file>
+</dir>
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [XML belgesi özellikleri, Özellikler penceresi](../xml-tools/xml-document-properties-properties-window.md) [XML Düzenleyicisi bileşenleri](../xml-tools/xml-editor-components.md)

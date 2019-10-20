@@ -1,5 +1,5 @@
 ---
-title: UML öğelerin özelliklerini sıralı diyagramlar | Microsoft Docs
+title: UML sıralı diyagramlarındaki öğelerin özellikleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,45 +12,43 @@ helpviewer_keywords:
 - sequence diagrams, properties
 ms.assetid: 475c10f3-a2d2-4a1e-b366-dc28997d437e
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a6008566f71a241fb5daccab8d6a5dcb68882452
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4d0753ea7396c9f21addcbb01ab7b90be066356a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444411"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671423"
 ---
 # <a name="properties-of-elements-on-uml-sequence-diagrams"></a>UML sıralı diyagramlarındaki öğelerin özellikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-UML sıralı diyagramı her öğe diyagram üzerindeki özellikleri vardır. Öğenin özelliklerini görmek için diyagram üzerinde veya öğeye sağ tıklayın **UML Model Gezgini** ve ardından **özellikleri**. Özellikleri görünür **özellikleri** penceresi.  
-  
+UML sıralı diyagramında, diyagramdaki her bir öğenin özellikleri vardır. Bir öğenin özelliklerini görmek için diyagramda veya **UML Model Gezgini** ' nde öğeye sağ tıklayın ve ardından **Özellikler**' e tıklayın. Özellikler **, Özellikler penceresinde görünür** .
+
 > [!NOTE]
-> Bu konu UML sıralı diyagramlarındaki öğelerin özellikleri hakkındadır. UML sıralı diyagramlar okuma hakkında daha fazla bilgi için bkz. [UML Sequence Diagrams: Başvuru](../modeling/uml-sequence-diagrams-reference.md). UML sıralı diyagramlar çizin hakkında daha fazla bilgi için bkz. [UML Sequence Diagrams: Yönergeleri](../modeling/uml-sequence-diagrams-guidelines.md).  
-  
-## <a name="properties-of-elements"></a>Öğelerin özellikleri  
-  
-|Özellik|Varsayılan|Öğe|Açıklama|  
-|--------------|-------------|-------------|-----------------|  
-|**Ad**|Varsayılan bir ad|Tümü|Öğeyi tanımlar.|  
-|**Tam adı**|Paket:: Ad|Tümü|Öğeyi benzersiz şekilde tanımlar. İle içerdiği paket tam adı öneki.|  
-|**İş öğeleri**|ilişkili 0|Tümü|Bu öğeyle ilişkili çalışma öğelerinin sayısı. İş öğelerini ilişkilendirmek için bkz: [bağlantı model öğelerini ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).|  
-|**Açıklama**|(boş)|Tümü|Öğeyi buraya hakkında genel bir not alabilirsiniz.|  
-|**Renk**|(öğe türü için varsayılan)|İleti yaşam çizgisi|Şeklin rengi. Bu şeklin bir özelliği, öğe yerine gösterir.|  
-|**Tür**|(boş)|Yaşam çizgisi|Yaşam çizgisi temsil eden örneği türü.<br /><br /> Yaşam çizgisi üst bilgisinde görüntülenen bir başvuru simge varsa, bu sınıf veya arabirim ayrı olarak UML Model Gezgini'nde var. sonra bir sınıf diyagramı üzerinde görüntülenebilir.|  
-|**Aktör**|False|Yaşam çizgisi|Yaşam çizgisi, diyagram hakkında bileşeni için dış bir kullanıcı, cihaz veya yazılım bileşeni temsil edip etmediğini belirtir.|  
-|**tür**|**Tam** -göndereni ve alıcısı içeren bir iletisi.<br /><br /> **Bulunan** -iletiye belirtilmeyen bir göndericisi vardır.<br /><br /> **Kayıp** -belirtilmeyen bir alıcı olan bir iletisi.|İleti|Bir iletinin biteceği çizgisine ekli gösterir.<br /><br /> Bu özellik değiştirilemez. İleti oluştururken ayarlanır.|  
-|**Sıralama**|**AsynchCall** -zaman uyumsuz ileti.<br /><br /> **SynchCall** -zaman uyumlu bir ileti.<br /><br /> **Yanıt** -zaman uyumlu bir ileti dönüş parçası.<br /><br /> **CreateMessage nesne** -oluşturma iletisi.|İleti|İleti türü. Bu özellik değiştirilemez. İleti oluşturmak için kullandığınız araç tarafından belirlenir.|  
-|**İşlem**|(boş)|İleti|İleti alma yaşam çizgisine tarafından çağırılan yöntem.<br /><br /> Yalnızca alma yaşam çizgisine bir arabirim veya sınıfa bağlı olduğunda görünür.|  
-|**İfade eder**|Sıralı diyagram|Etkileşim kullanımı|Sıralı diyagram, bu etkileşim kullanımı tarafından çağrılır.|  
-|**Etkileşim işleci**|Kullandığınız ayarlanır **Surround With** komutu|Birleştirilmiş parça|Bu parça veya parçalar topluluğu tarafından temsil edilen işleci.|  
-|**koruma**|(boş)|Birleştirilmiş parça etkileşim işleneni|Koruma true olduğu sürece parça dizisinde gerçekleşmez.<br /><br /> Herhangi bir birleştirilmiş parça ilk parçasını seçmek için parça başlığının altına tıklayın.|  
-|**Min, maks**|(sınırsız)|Birleştirilmiş parça döngü|Döngü yürütüldükten kez minimum ve maksimum sayısı.|  
-|**İletiler**|(boş)|Göz önünde bulundurun ve<br /><br /> Birleştirilmiş parçaları yoksay|Dikkate alınan veya bu parçada göz ardı iletiler.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UML Sıralı Diyagramları: Başvuru](../modeling/uml-sequence-diagrams-reference.md)   
- [UML Sıralı Diyagramları: Yönergeleri](../modeling/uml-sequence-diagrams-guidelines.md)   
- [Denetim akışını UML sıralı diyagramlarında parçalarla açıklama](../modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams.md)
+> Bu konu, UML sıralı diyagramlarındaki öğelerin özellikleri hakkındadır. UML sıralı diyagramlarını okuma hakkında daha fazla bilgi için bkz. [UML sıralı diyagramlar: başvuru](../modeling/uml-sequence-diagrams-reference.md). UML sıralı diyagramları çizme hakkında daha fazla bilgi için bkz. [UML sıralı diyagramlar: yönergeler](../modeling/uml-sequence-diagrams-guidelines.md).
+
+## <a name="properties-of-elements"></a>Öğelerin özellikleri
+
+|Özellik|Varsayılan|Öğe|Açıklama|
+|--------------|-------------|-------------|-----------------|
+|**Ad**|Varsayılan ad|Tümü|Öğesi tanımlar.|
+|**Tam ad**|Paket:: Name|Tümü|Öğeyi benzersiz bir şekilde tanımlar. Ön eki içeren paketin tam adı.|
+|**İş öğeleri**|0 ilişkili|Tümü|Bu öğeyle ilişkili iş öğelerinin sayısı. İş öğelerini ilişkilendirmek için bkz. [bağlantı modeli öğeleri ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).|
+|**Açıklama**|adet|Tümü|Öğe hakkında genel notları buradan yapabilirsiniz.|
+|**Renk**|(öğe türü için varsayılan)|Yaşam çizgisi, Ileti|Şeklin rengi. Bu, gösterdiği öğe yerine şeklin bir özelliğidir.|
+|**Türüyle**|adet|Yaşam|Yaşam çizgisinin temsil ettiği örnek türü.<br /><br /> Yaşam çizgisinin üstbilgisinde bir başvuru sembolü varsa, bu sınıf veya arabirim UML Model Gezgini 'nde ayrı olarak bulunur ve bir sınıf diyagramında görüntülenebilir.|
+|**Aktör**|False|Yaşam|Yaşam çizgisinin, diyagramın ilgili olduğu bileşenin dışında bir Kullanıcı, cihaz veya yazılım bileşenini temsil ettiğini belirtir.|
+|**Denetlenmesi**|**Tam** -gönderici ve alıcıya sahip bir ileti.<br /><br /> **Bulundu** -belirlenemeyen bir göndereni olan ileti.<br /><br /> **Kayıp** -belirtilmeyen bir alıcıya sahip bir ileti.|İleti|Bir iletinin hangi uçlarını bir yaşam çizgisine iliştirildiğini gösterir.<br /><br /> Bu özelliği değiştiremezsiniz. İletiyi oluşturduğunuzda ayarlanır.|
+|**Düzenine**|**AsynchCall** -zaman uyumsuz bir ileti.<br /><br /> **Eşlenmiş çağrı** -zaman uyumlu bir ileti.<br /><br /> **Yanıtla** -zaman uyumlu bir iletinin dönüş bölümü.<br /><br /> **CreateMessage** -bir örnek oluşturma iletisi.|İleti|İleti türü. Bu özelliği değiştiremezsiniz. İletiyi oluşturmak için kullandığınız araç tarafından belirlenir.|
+|**Çalışmasını**|olmamalıdır|İleti|Alıcı yaşam çizgisinde ileti tarafından çağrılan bir yöntem.<br /><br /> Yalnızca alıcı yaşam çizgisi bir arabirime veya sınıfa bağlıysa görünür.|
+|**Başvurduğu yer**|Sıralı diyagram|Etkileşim kullanımı|Bu etkileşim kullanımı tarafından çağrılan sıralı diyagram.|
+|**Etkileşim operatörü**|Komutu **Ile çevrelemeyi** kullandığınızda ayarlayın|Birleşik parça|Bu parça veya parçalar koleksiyonu tarafından temsil edilen işleç.|
+|**Guard**|olmamalıdır|Birleşik bir parçadaki etkileşim Işleneni|Koruyucu true olmadığı takdirde parçadaki sıra gerçekleşmeyecektir.<br /><br /> Birleşik parçaların en üst parçasını seçmek için parça başlığının altına tıklayın.|
+|**En az, en fazla**|(kısıtlama yok)|Birleşik parçayı döngüye ın|Döngünün en düşük ve en fazla kaç kez yürütüldüğü.|
+|**İletiler**|olmamalıdır|Göz önünde bulundurun<br /><br /> Birleşik parçaları yoksay|Bu parçada kabul edilen veya yoksayılan iletiler.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [UML sıralı diyagramlar: başvuru](../modeling/uml-sequence-diagrams-reference.md) [UML sıralı diyagramları: yönergeler](../modeling/uml-sequence-diagrams-guidelines.md) [, denetim akışını UML sıralı diyagramlarında parçalar ile anlatmaktadır](../modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams.md)

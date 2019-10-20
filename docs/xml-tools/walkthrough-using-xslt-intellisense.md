@@ -1,27 +1,27 @@
 ---
-title: 'İzlenecek yol: XSLT IntelliSense kullanma'
+title: 'İzlenecek Yol: XSLT IntelliSense Kullanma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 079d95ac-2eaf-4ae1-9cd3-2c81a961a942
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 880f098d96c23236a065894629a36a746ecedce7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 606c4ad307de46d19989d14e2c660cc0286cb803
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808016"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604370"
 ---
-# <a name="walkthrough-using-xslt-intellisense"></a>İzlenecek yol: XSLT IntelliSense kullanma
+# <a name="walkthrough-using-xslt-intellisense"></a>İzlenecek Yol: XSLT IntelliSense Kullanma
 
-Bu yönerge, XSLT IntelliSense otomatik tamamlama için bazı özniteliklerin değeri kullanma işlemini gösterir.
+Bu izlenecek yol, bazı özniteliklerin değerlerini otomatik olarak tamamlamak için XSLT IntelliSense 'in nasıl kullanılacağını gösterir.
 
-## <a name="to-use-intellisense-in-the-name-attribute-of-xslwith-param-and-xslcall-template-elements"></a>Xsl ad özniteliğinde IntelliSense kullanılacak: param ile ve Call-şablon öğeleri
+## <a name="to-use-intellisense-in-the-name-attribute-of-xslwith-param-and-xslcall-template-elements"></a>IntelliSense 'i xsl: WITH-param ve xsl: call-template öğeleri ad özniteliğinde kullanmak için
 
-1. Aşağıdaki kodda, yeni XSLT dosyası ve kopya oluşturun:
+1. Yeni bir XSLT dosyası oluşturun ve aşağıdaki kodu kopyalayın:
 
     ```xml
     <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -45,26 +45,26 @@ Bu yönerge, XSLT IntelliSense otomatik tamamlama için bazı özniteliklerin de
     </xsl:stylesheet>
     ```
 
-2. İmlecinizi sonra Ekle `<xsl:template name="msg23" match="msg23">` basın **Enter**. Aşağıdaki yazmaya başlayın `xsl:call-template` öğesi:
+2. @No__t_0 sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl:call-template` öğesini yazmaya başlayın:
 
     ```xml
     <xsl:call-template name="localized-message">
     </xsl:call-template>
     ```
 
-     Şablon adları listesi görünür `name=""` özniteliği `xsl:call-template` yazarken öğesi.
+     Şablon adları listesi, yazarken `xsl:call-template` öğesinin `name=""` özniteliğinde görüntülenir.
 
-3. İmlecinizi sonra Ekle `<xsl:call-template name="localized-message">` basın **Enter**. Aşağıdaki yazmaya başlayın `xsl:with-param` öğesi:
+3. @No__t_0 sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl:with-param` öğesini yazmaya başlayın:
 
     ```xml
     <xsl:with-param name="msgcode">msg23</xsl:with-param>
     ```
 
-     Parametre adları listesi görünür `name=""` özniteliği `xsl:with-param` öğesi.
+     Parametre adlarının listesi, `xsl:with-param` öğesinin `name=""` özniteliğinde görüntülenir.
 
-## <a name="to-use-intellisense-in-the-mode-attribute-of-an-xslapply-templates-element"></a>Xsl modu özniteliğinde IntelliSense kullanmak için: Uygulama Şablonları öğesi
+## <a name="to-use-intellisense-in-the-mode-attribute-of-an-xslapply-templates-element"></a>Bir xsl: apply-templates öğesinin mode özniteliğinde IntelliSense kullanmak için
 
-1. Aşağıdaki kodda, yeni XSLT dosyası ve kopya oluşturun:
+1. Yeni bir XSLT dosyası oluşturun ve aşağıdaki kodu kopyalayın:
 
     ```xml
     <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -111,17 +111,17 @@ Bu yönerge, XSLT IntelliSense otomatik tamamlama için bazı özniteliklerin de
     </xsl:stylesheet>
     ```
 
-2. İmlecinizi sonra Ekle `<xsl:apply-templates select="phone" />` basın **Enter**. Aşağıdaki yazmaya başlayın `xsl: apply-templates` öğesi:
+2. @No__t_0 sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl: apply-templates` öğesini yazmaya başlayın:
 
     ```xml
     <xsl:apply-templates select="phone"  mode="accountNumber">
     ```
 
-     Şablon modlarının listesi görünür `mode=""` özniteliği `xsl:apply-templates` öğesi.
+     Şablon modlarının listesi, `xsl:apply-templates` öğesinin `mode=""` özniteliğinde görüntülenir.
 
-## <a name="to-use-intellisense-in-the-stylesheet-prefix-and-result-prefix-attributes-of-an-xslnamespace-alias-element"></a>IntelliSense bir xsl: namespace stil sayfası öneki ve sonuç önek öznitelikleri kullanılacak-diğer ad öğesi
+## <a name="to-use-intellisense-in-the-stylesheet-prefix-and-result-prefix-attributes-of-an-xslnamespace-alias-element"></a>IntelliSense 'in stil sayfası-önek ve sonuç-önek öznitelikleri içinde bir xsl: Namespace-Alias öğesi
 
-1. Aşağıdaki kodda, yeni XSLT dosyası ve kopya oluşturun:
+1. Yeni bir XSLT dosyası oluşturun ve aşağıdaki kodu kopyalayın:
 
     ```xml
     <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate"
@@ -152,13 +152,13 @@ Bu yönerge, XSLT IntelliSense otomatik tamamlama için bazı özniteliklerin de
     </xsl:stylesheet>
     ```
 
-2. İmlecinizi sonra Ekle `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` basın **Enter**. Aşağıdaki yazmaya başlayın `xsl:namespace-alias` öğesi:
+2. @No__t_0 sonra imlecinizi yerleştirip **ENTER**tuşuna basın. Sonra aşağıdaki `xsl:namespace-alias` öğesini yazmaya başlayın:
 
     ```xml
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>
     ```
 
-     Ön ek listesini nasıl göründüğü fark `stylesheet-prefix` ve `result-prefix` özniteliklerini `xsl:namespace-alias` öğesi.
+     Ön eklerin listesinin, `xsl:namespace-alias` öğesinin `stylesheet-prefix` ve `result-prefix` özniteliklerinde görünmediğine dikkat edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

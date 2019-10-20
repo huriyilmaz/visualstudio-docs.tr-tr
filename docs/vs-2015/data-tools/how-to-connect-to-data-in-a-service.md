@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir hizmetteki verilere bağlanma | Microsoft Docs'
+title: 'Nasıl yapılır: bir hizmette verilere bağlanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -19,53 +19,52 @@ helpviewer_keywords:
 - Web services, connecting
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 caps.latest.revision: 35
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 22a1a991a950ba8e1a7c4c39299616641797630c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: d9bfa6c776e3a2137f751d4253feb0239811d95a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65684738"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654696"
 ---
-# <a name="how-to-connect-to-data-in-a-service"></a>Nasıl yapılır: Bir hizmetteki verilere bağlanma
+# <a name="how-to-connect-to-data-in-a-service"></a>Nasıl yapılır: Bir Hizmetteki Verilere Bağlanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Uygulamanızı çalıştırarak bir hizmetten döndürülen veri bağlama [veri kaynağı Yapılandırma Sihirbazı](https://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f) seçerek **hizmet** üzerinde **verikaynağıtürüseçin**sayfası.  
-  
- Sihirbaz tamamlandıktan sonra bir hizmet başvurusu projenize eklenir ve hemen kullanılabilir [veri kaynakları penceresi](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).  
-  
+Uygulamanızı [veri kaynağı Yapılandırma Sihirbazı](https://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f) 'nı çalıştırarak ve **veri kaynağı türü seç** sayfasında **hizmet** ' i seçerek bir hizmetten döndürülen verilere bağlanırsınız.
+
+ Sihirbazı tamamladıktan sonra projenize bir hizmet başvurusu eklenir ve [veri kaynakları penceresinde](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)hemen kullanılabilir.
+
 > [!NOTE]
-> Görünen öğeler **veri kaynakları** penceresinde bağımlı hizmetin döndürdüğü bilgileri bulunur. Bazı hizmetler için yeterli bilgi sağlamayabilir **veri kaynağı Yapılandırma Sihirbazı** bağlanabilir nesneleri oluşturmak için. Hizmet yazılmamış bir veri kümesi döndürürse, örneğin, daha sonra hiçbir öğe görünür **veri kaynakları penceresi** sihirbaz. Yazılmayan veri kümeleri, şema sağlamaz, bu nedenle sihirbazın veri kaynağını oluşturmak için yeterli bilgi yok olmasıdır.  
-  
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
-  
-### <a name="to-connect-your-application-to-a-service"></a>Uygulamanız bir hizmete bağlanmak için  
-  
-1. Üzerinde **veri** menüsünü tıklatın **yeni veri kaynağı Ekle**.  
-  
-2. Seçin **hizmet** üzerinde **bir veri kaynağı türü seçin** sayfasında ve ardından **sonraki**.  
-  
-3. İstediğiniz kullanın veya hizmeti adresini girmek **bulma** geçerli çözümde hizmeti bulun ve ardından **Git**.  
-  
-4. İsteğe bağlı olarak, yeni **Namespace** yerine varsayılan değer türü belirtilmiş olmalıdır.  
-  
+> **Veri kaynakları** penceresinde görünen öğeler, hizmetin döndürdüğü bilgilere bağımlıdır. Bazı hizmetler, **veri kaynağı Yapılandırma Sihirbazı** için bağlanabilir nesneler oluşturmak için yeterli bilgi sağlamayabilir. Örneğin, hizmet türsüz bir veri kümesi döndürürse, Sihirbaz tamamlandıktan sonra **veri kaynakları penceresinde** hiçbir öğe görünmez. Bunun nedeni, türsüz veri kümelerinin şema sağlamamaları, bu nedenle Sihirbazın veri kaynağını oluşturmak için yeterli bilgiye sahip olmaması.
+
+ [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
+
+### <a name="to-connect-your-application-to-a-service"></a>Uygulamanızı bir hizmete bağlamak için
+
+1. **Veri** menüsünde **Yeni veri kaynağı Ekle**' ye tıklayın.
+
+2. **Veri kaynağı türü seçin** sayfasında **hizmet** ' i seçin ve ardından **İleri**' ye tıklayın.
+
+3. Kullanmak istediğiniz hizmetin adresini girin veya geçerli çözümde hizmetleri bulmak için **bul** ' a tıklayın ve ardından **Git**' e tıklayın.
+
+4. İsteğe bağlı olarak, varsayılan değerin yerine yeni bir **ad alanı** yazılabilir.
+
     > [!NOTE]
-    > Tıklayın **Gelişmiş** açmak için [hizmeti başvuru iletişim kutusunu](../data-tools/configure-service-reference-dialog-box.md).  
-  
-5. Tıklayın **Tamam** projenize bir hizmet başvurusu eklemek için.  
-  
-6. **Son**'a tıklayın.  
-  
-     Veri kaynağı eklenir **veri kaynakları** penceresi.  
-  
-## <a name="next-steps"></a>Sonraki Adımlar  
-  
-#### <a name="to-add-functionality-to-your-application"></a>Uygulamanıza işlev eklemek için  
-  
-- Bir öğe seçin **veri kaynakları** penceresi ve ilişkili denetimler oluşturmak için bir form üzerine sürükleyin. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir WCF veri hizmetine WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)   
- [Visual Studio'da Windows Communication Foundation Hizmetleri ve WCF Veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+    > **Gelişmiş** ' e tıklayarak [hizmet başvurusunu Yapılandır iletişim kutusunu](../data-tools/configure-service-reference-dialog-box.md)açın.
+
+5. Projenize bir hizmet başvurusu eklemek için **Tamam** ' ı tıklatın.
+
+6. **Son**'a tıklayın.
+
+     Veri kaynağı **veri kaynakları** penceresine eklenir.
+
+## <a name="next-steps"></a>Sonraki Adımlar
+
+#### <a name="to-add-functionality-to-your-application"></a>Uygulamanıza işlevsellik eklemek için
+
+- **Veri kaynakları** penceresinde bir öğe seçin ve bağlantılı denetimler oluşturmak için bu öğeyi bir form üzerine sürükleyin. Daha fazla bilgi için bkz. [Visual Studio 'da denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Visual Studio 'da Windows Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) [bir WCF veri hizmetine WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)

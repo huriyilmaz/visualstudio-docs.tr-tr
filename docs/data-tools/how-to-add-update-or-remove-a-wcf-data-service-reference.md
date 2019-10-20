@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: WCF Veri Hizmeti Başvurusunu Ekleme, Güncelleştirme ve Kaldırma'
+title: 'Nasıl Yapılır: WCF Veri Hizmeti Başvurusunu Güncelleme veya Kaldırma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ADO.NET service references
 - ADO.NET Data Service reference
 ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: da8555d4246d2177b3d97eeef8d24c7b4a22b31d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 8f19fbfb82a74de0f0eedf784483ecaeccc9a5fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925631"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648415"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Nasıl yapılır: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma
-Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]erişmesini sağlar. Yerel ağda veya Internet 'te geçerli çözümde arama [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] yapmak için hizmet başvurusu Ekle iletişim kutusunu kullanın.
+Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] erişmesini sağlar. Geçerli çözümde, yerel bir ağda veya Internet 'te [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] aramak için **hizmet başvurusu Ekle** iletişim kutusunu kullanın.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -59,7 +59,7 @@ Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../d
 
 2. **Keşfet**' e tıklayın.
 
-    Geçerli Çözümdeki tüm hizmetler [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] (her ikisi ve WCF Hizmetleri) **Hizmetler** listesine eklenir.
+    Geçerli Çözümdeki tüm hizmetler (hem [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] hem de WCF Hizmetleri) **Hizmetler** listesine eklenir.
 
 3. **Hizmetler** listesinde, kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
 
@@ -70,7 +70,7 @@ Bir *hizmet başvurusu* , projenin bir veya daha fazla [!INCLUDE[ssAstoria](../d
     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app. config* dosyasına eklenir.
 
 ## <a name="update-a-service-reference"></a>Hizmet başvurusunu güncelleştirme
-[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] Bazen varlık veri modeli değişir. Bu durumda, hizmet başvurusunu güncelleştirmeniz gerekir.
+Bir [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] Varlık Veri Modeli bazen değişir. Bu durumda, hizmet başvurusunu güncelleştirmeniz gerekir.
 
 ### <a name="to-update-a-service-reference"></a>Bir hizmet başvurusunu güncelleştirmek için
 

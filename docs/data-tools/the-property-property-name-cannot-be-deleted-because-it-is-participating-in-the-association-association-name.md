@@ -1,36 +1,36 @@
 ---
-title: Özellik ilişkilendirmesine katıldığından silinemiyor
+title: Özellik, ilişkiye katıldığından silinemiyor
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 389873cc-92dd-48da-bfca-0f6c8e0ae3c2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d277919229316768cde27efdc9b2797d0351e9fe
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: e1890535fb008c8e8be6ee9dea0eda3ab3844da6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65458497"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648140"
 ---
-# <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>Özellik &lt;özellik adı&gt; ilişkilendirmesine katıldığından silinemiyor &lt;ilişkilendirme adı&gt;
+# <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>@No__t_0property ad &gt; özelliği, Association &lt;association adına katıldığından silinemiyor &gt;
 
-Seçilen özellik olarak ayarlandığından **ilişkilendirme** hata iletisinde belirtilen sınıfları arasında ilişkilendirme için. Veri sınıfları arasında ilişkilendirme katılan varsa özellikleri silinemez.
+Seçilen özellik, hata iletisinde belirtilen sınıflar arasındaki ilişki için **Ilişkilendirme özelliği** olarak ayarlanır. Özellikler, veri sınıfları arasında bir ilişkiye katılılarsa silinemez.
 
-Ayarlama **ilişkilendirme** başarılı silinmesini istenen özelliği etkinleştirmek için veri sınıfın farklı bir özellik için.
+İstenen özelliğin başarıyla silinmesini sağlamak için **Association özelliğini** Data sınıfının farklı bir özelliğine ayarlayın.
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-1. İlişkilendirme çizgisi seçin **O/R Tasarımcısı** hata iletisinde belirtilen veri sınıfları bağlanır.
+1. **O/R tasarımcısında** , hata iletisinde belirtilen veri sınıflarını bağlayan ilişki satırını seçin.
 
-2. Satırı açmak için çift tıklatın **ilişkilendirme Düzenleyicisi** iletişim kutusu.
+2. **Ilişkilendirme düzenleyici** iletişim kutusunu açmak için satıra çift tıklayın.
 
-3. Özelliğinden kaldırılacak **ilişkilendirme özellikleri**.
+3. Özelliği **Ilişkilendirme özelliklerinden**kaldırın.
 
-4. Özelliği yeniden silmeyi deneyin.
+4. Özelliği silmeyi yeniden deneyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

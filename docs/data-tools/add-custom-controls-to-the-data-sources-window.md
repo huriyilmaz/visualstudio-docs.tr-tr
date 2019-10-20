@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ComplexBindingPropertiesAttribute class, using
 - Data Sources Window, selecting controls
 ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b81bd3237f3eb2aa9a4c096ddfeae2c7bcd08c09
-ms.sourcegitcommit: 6b0503ed8d25454d6e39a8e606910b3fa58cf1d2
+ms.openlocfilehash: b6334d233ccb2c4453d117b6bdfe942b6ea092e2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980548"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648924"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Veri kaynakları penceresine özel denetimler ekleme
 
@@ -39,7 +39,7 @@ Veri kaynakları penceresinde belirli bir veri türüne sahip öğeler için kul
 2. **Veri kaynakları** penceresinde, pencereye eklediğiniz bir veri kaynağının parçası olan bir öğeye tıklayın ve sonra öğenin açılan menüsüne tıklayın.
 
    > [!TIP]
-   > Veri kaynakları penceresi açık değilse,**diğer Windows** > **veri kaynaklarını** **görüntüle** > ' yi seçerek açın.
+   > Veri kaynakları penceresi açık değilse,**diğer Windows**  > **veri kaynaklarını** **görüntüle**  >  ' yi seçerek açın.
 
 3. Açılan menüde, **Özelleştir**' e tıklayın. Aşağıdaki iletişim kutularından biri açılır:
 
@@ -60,7 +60,7 @@ Veri kaynakları penceresinde belirli bir veri türüne sahip öğeler için kul
     > [!NOTE]
     > Seçmek istediğiniz denetim **ilişkili denetimler** kutusunda görünmezse, denetimi listeye eklemeniz gerekir. Daha fazla bilgi için bkz. [ilişkili denetimler ekleme](#add-associated-controls).
 
-6.           **Tamam**'ı tıklatın.
+6. **Tamam**'a tıklayın.
 
 7. **Veri kaynakları** penceresinde, yalnızca bir veya daha fazla denetimi ilişkilendirdiğiniz veri türünün bir öğesine tıklayın ve sonra öğenin açılan menüsüne tıklayın.
 
@@ -72,15 +72,15 @@ Bir denetimi veri türüyle ilişkilendirmek istiyorsanız, ancak denetim **ili�
 
 İlişkili denetimler listesine denetim eklemek için:
 
-1. Araç kutusuna sağ tıklayıp **öğeleri seç**' i seçerek Istediğiniz denetimi **araç kutusuna** ekleyin.
+1. Araç kutusuna sağ tıklayıp **öğeleri seç** **' i** seçerek istediğiniz denetimi **araç kutusuna** ekleyin.
 
      Denetim aşağıdaki özniteliklerden birine sahip olmalıdır:
 
     |Öznitelik|Açıklama|
     |---------------|-----------------|
-    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Bu özniteliği, <xref:System.Windows.Forms.TextBox>gibi verilerin tek bir sütununu (veya özelliğini) görüntüleyen basit denetimlerde uygulayın.|
-    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Bu özniteliği, <xref:System.Windows.Forms.DataGridView>gibi verilerin listesini (veya tabloları) görüntüleyen denetimlerde uygulayın.|
-    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Bu özniteliği, verilerin listelerini (veya tablolarını) görüntüleyen denetimlerde uygulayın, ancak aynı zamanda tek bir sütun veya bir <xref:System.Windows.Forms.ComboBox>özelliği (örneğin,) sunmalıdır.|
+    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Bu özniteliği, <xref:System.Windows.Forms.TextBox> gibi verilerin tek bir sütununu (veya özelliğini) görüntüleyen basit denetimlerde uygulayın.|
+    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Bu özniteliği, <xref:System.Windows.Forms.DataGridView> gibi verilerin listesini (veya tablolarını) görüntüleyen denetimlerde uygulayın.|
+    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Bu özniteliği, verilerin listelerini (veya tablolarını) görüntüleyen denetimlerde uygulayın, ancak aynı zamanda tek bir sütun veya Özellik (<xref:System.Windows.Forms.ComboBox> gibi) sunmalıdır.|
 
 2. Windows Forms için, **Seçenekler** Iletişim kutusunda **veri UI özelleştirmesi** sayfasını açın. Ya da WPF için **Denetim Bağlamayı Özelleştir** iletişim kutusunu açın. Daha fazla bilgi için bkz. [veri türü için bağlanabilir denetim listesini özelleştirme](#customize-the-bindable-controls-list).
 

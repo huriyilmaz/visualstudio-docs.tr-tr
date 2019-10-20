@@ -13,84 +13,78 @@ helpviewer_keywords:
 - errors [Visual Studio], Error List window
 ms.assetid: b7f6d45a-733b-4ad8-bc2f-737a37509e56
 caps.latest.revision: 36
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1d481bbc71019639588c793fee64acd34d5739e8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 35be5ddeedf0b081fa94e399f294151e73a157ed
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65680146"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657740"
 ---
 # <a name="error-list-window"></a>Hata Listesi Penceresi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[NOT]
-> Hata listesi, belirli bir hata iletisi hakkındaki bilgileri görüntüler. Hata numarasını veya hata dizesi metnini çıktı penceresinden kopyalayabilirsiniz. Çıktı penceresini görüntülemek için Ctrl + Alt + O tuşlarına basın. Bkz: [çıkış penceresi](../../ide/reference/output-window.md).  
-  
- Kullanarak uygulamalarınızı daha hızlı geliştirebilirsiniz **hata listesi** penceresi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
-  
-- Hatalar, uyarılar ve kod yazdığınız sırada üretilen iletileri görüntüleyin.  
-  
-- IntelliSense tarafından fark edilen sözdizimi hatalarını bulur.  
-  
-- Bulma dağıtım hatalarını, belirli statik analiz hatalarını ve kurumsal şablon ilkeleri uygulanırken saptanan hataları.  
-  
-- Burada sorun ortaya çıkar ve hata konumuna gitmek dosyayı açmak için hata iletisini çift tıklayın.  
-  
-- Hangi girişlerin görüntüleneceğini ve her giriş için hangi bilgi sütunlarını görünür filtreleyin.  
-  
-- Özel terimleri arayın ve yalnızca geçerli proje veya belgeyi aramayı kapsamına.  
-  
-  Görüntülenecek **hata listesi**, tıklayın **görünüm / hata listesinde**, veya **CTRL +\\+ E**.  
-  
-  Seçebileceğiniz **hataları**, **uyarıları**, ve **iletileri** farklı düzeylerde bilgileri görmek için sekmeler.  
-  
-  Listeyi sıralamak için herhangi bir sütun başlığına tıklayın. Başka bir sütuna göre yeniden sıralamak için SHIFT tuşunu basılı tutun ve başka bir sütun başlığına tıklayın. Hangi sütunların görüntülenip hangilerinin gizlendiğini seçmek için seçin **sütunları göster** kısayol menüsünden. Sütunların görüntülenme sırasını değiştirmek için herhangi bir sütun başlığını sola veya sağa sürükleyin.  
-  
+NOTUN
+> Hata Listesi belirli bir hata iletisiyle ilgili bilgileri görüntüler. Hata numarasını veya hata dizesi metnini çıkış penceresinden kopyalayabilirsiniz. Çıkış penceresini göstermek için Ctrl + Alt + O tuşlarına basın. Bkz. [Çıkış penceresi](../../ide/reference/output-window.md).
+
+ **Hata listesi** penceresini kullanarak daha hızlı uygulamalar geliştirebilirsiniz. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:
+
+- Kodu yazarken üretilen hataları, uyarıları ve iletileri görüntüleyin.
+
+- IntelliSense tarafından belirtilen sözdizimi hatalarını bulun.
+
+- Dağıtım hatalarını, belirli statik analiz hatalarını ve Kurumsal Şablon İlkeleri uygulanırken algılanan hataları bulun.
+
+- Sorunun gerçekleştiği dosyayı açmak için herhangi bir hata iletisi girişine çift tıklayın ve hata konumuna gidin.
+
+- Hangi girişlerin görüntülendiğini ve her giriş için hangi bilgi sütunlarının göründüğünü filtreleyin.
+
+- Belirli terimleri arayın ve aramayı yalnızca geçerli proje veya belge ile kapsamını bulun.
+
+  **Hata listesi**görüntülemek Için, **Görünüm/hata listesi**veya **CTRL + \\ + E**' ye tıklayın.
+
+  Farklı bilgi düzeylerini görmek için **hatalar**, **Uyarılar**ve **iletiler** sekmelerini seçebilirsiniz.
+
+  Listeyi sıralamak için herhangi bir sütun başlığına tıklayın. Ek bir sütuna yeniden sıralamak için SHIFT tuşunu basılı tutarak başka bir sütun başlığına tıklayın. Hangi sütunların görüntülendiğini ve gizli olduğunu seçmek için kısayol menüsünde **sütunları göster** ' i seçin. Sütunların görüntülenme sırasını değiştirmek için herhangi bir sütun başlığını sola veya sağa sürükleyin.
+
 > [!NOTE]
-> İletişim kutuları ve menü komutları gördüğünüz, etkin ayarlarınıza ve sürüm bağlı olarak burada açıklananlar farklılık gösterebilir. Ayarlarınızı değiştirmek için tıklayın **Araçlar / içe ve dışa aktarma ayarları**. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="error-list-filters"></a>Hata listesi filtreleri  
- Araç çubuğunun sağ tarafında biri diğeri araç çubuğunun solunda iki açılır liste kutusu filtrede iki tür vardır. Araç çubuğunun sol tarafta açılır listeden kullanılacak kod dosyalarını belirtir (**çözümün tamamında**, **açık belgeler**, **geçerli proje**,  **Geçerli belge**).  
-  
- Analiz etmek ve hata grupları üzerinde hareket için arama kapsamını sınırlandırabilirsiniz. Örneğin, bir projenin derlenmesini önleyen çekirdek hatalarına odaklanmak isteyebilirsiniz. Kapsam belirleme seçenekleri şunlardır:  
-  
-1. **Açık belgeler**: Hataları, uyarıları ve iletileri açık belgelerin gösterir.  
-  
-2. **Geçerli proje**: Hataları, uyarıları ve iletileri seçilmiş belgenin projesinden **Düzenleyicisi** veya seçilen projede **Çözüm Gezgini**.  
-  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak burada açıklananlardan farklı bir şekilde farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar/içeri ve dışarı aktarma ayarları**' na tıklayın. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="error-list-filters"></a>Hata Listesi filtreleri
+ İki açılan kutuda, biri araç çubuğunun sağ tarafında ve diğeri araç çubuğunun solunda olmak üzere iki tür filtre vardır. Araç çubuğunun sol tarafındaki açılan liste, kullanılacak kod dosyası kümesini belirtir (**tüm çözüm**, **Açık belgeler**, **geçerli proje**, **geçerli belge**).
+
+ Arama kapsamını analiz edilecek ve hata gruplarını görecek şekilde kısıtlayabilirsiniz. Örneğin, bir projenin derlenmesini engelleyen temel hatalara odaklanmak isteyebilirsiniz. Kapsam seçenekleri şunlardır:
+
+1. **Açık**belgeler: açık belgeler için hataları, uyarıları ve iletileri göster.
+
+2. **Geçerli proje**: **düzenleyicide** veya seçilen projede seçili olan belgenin projesinden hataları, uyarıları ve iletileri göster **Çözüm Gezgini**.
+
    > [!NOTE]
-   > Şu anda seçili olan belgenin projesi seçili projeden farklıysa, filtrelenmiş liste hataları, uyarıları ve iletileri değiştirecek **Çözüm Gezgini**.  
-  
-3. **Geçerli belge**: Hataları, uyarıları ve iletileri için seçilmiş belgenin içinde Göster **Düzenleyicisi** veya **Çözüm Gezgini**.  
-  
-   Bir filtre o anda arama sonucuna uygulanırsa, filtrenin adını görünür **hata listesi** başlık çubuğu. **Hataları**, **uyarıları**, ve **iletileri** düğmeleri sonra toplam öğe sayısının yanı sıra gösterilen filtrelenmiş öğe sayısını da görüntüler; örneğin, düğme Göster x / y hata. Hiçbir filtre uygulanmamışsa başlık çubuğunda yalnızca "hata listesi" yazar.  
-  
-   Araç çubuğunun sağ tarafındaki listenin (bir yapı işleminden kaynaklanan hatalar) derleme hatalarından gösterilip gösterilmeyeceğini belirtir veya IntelliSense (bir derleme çalıştırmadan önce algılanan hataları) veya her ikisi de.  
-  
-## <a name="search"></a>Ara  
- Kullanım **arama hatası listesi** metin kutusunun sağ alt tarafında **hata listesi** hata Listesi'nde belirli hataları bulmak için araç çubuğu. Hata listesindeki görünen herhangi bir sütunda arama yapabilirsiniz ve arama sonuçları her zaman sorgu veya uygulanan filtre yerine sıralama önceliği olan sütun göre sıralanır. Seçerseniz **Esc** odak modundayken anahtar **hata listesi**, arama terimini temizleyebilir ve arama sonuçlarını filtrelersiniz. Ayrıca **X** temizleyin metin kutusunun sağ tarafındaki.  
-  
-## <a name="save"></a>Kaydet  
- Hata listesini kopyalayabilir ve bir dosyaya kaydedin. Kopyala ve seçimi sağ tıklayın ve ardından bağlam menüsünde istediğiniz hataları seçin **kopyalama**. Ardından, hataları bir dosyaya yapıştırabilirsiniz. Hataları bir Excel elektronik tablosuna yapıştırırsanız, alanlar farklı sütunlar olarak görünür.  
-  
-## <a name="ui-element-list"></a>UI öğe listesi  
- Önem Derecesi  
- Farklı türde görüntüler **hata listesi** giriş (**hata**, **ileti**, **uyarı**, **uyarı (etkin)**, **(Devre dışı) uyarı**.  
-  
- Kod  
- Hata kodu görüntülenir.  
-  
- Açıklama  
- Giriş metni görüntüler.  
-  
- Project  
- Geçerli projenin adını görüntüler.  
-  
- Dosya  
- Dosya adını görüntüler.  
-  
- Çizgi  
- Sorun oluştuğu satırı görüntüler.
+   > Şu anda seçili olan belgenin projesi **Çözüm Gezgini**' de seçilen projeden farklıysa, hata, uyarı ve ileti filtrelenmiş listesi değişecektir.
+
+3. **Geçerli belge**: **düzenleyicide** veya **Çözüm Gezgini**seçili olan belge için hataları, uyarıları ve iletileri göster.
+
+   Arama sonuçlarına bir filtre uygulanmışsa, filtrenin adı **hata listesi** başlık çubuğunda görüntülenir. **Hatalar**, **Uyarılar**ve **iletiler** düğmeleri daha sonra toplam öğe sayısıyla birlikte gösterilen filtrelenmiş öğe sayısını görüntüler; Örneğin, düğmeler x/y hata sayısını gösterir. Hiçbir filtre uygulanmazsa, başlık çubuğu yalnızca "Hata Listesi" ifadesini belirtir.
+
+   Araç çubuğunun sağ tarafındaki liste, derlemeden hataların (bir derleme işleminden kaynaklanan hatalar) veya IntelliSense 'den (bir derleme çalıştırılmadan önce algılanan hatalar) veya her ikisiyle ait hataların gösterilip gösterilmeyeceğini belirtir.
+
+## <a name="search"></a>Ara
+ Hata listesindeki belirli hataları bulmak için **hata listesi** araç çubuğunun sağ tarafındaki **arama hata listesi** metin kutusunu kullanın. Hata listesindeki görünür bir sütunda arama yapabilirsiniz ve arama sonuçları her zaman sorgu yerine sıralama önceliği olan sütuna göre sıralanır veya filtre uygulanmış olur. Odak **hata listesi**, **ESC** tuşunu seçerseniz arama terimini ve filtrelenmiş arama sonuçlarını temizleyebilirsiniz. Ayrıca, metin kutusunun sağ tarafındaki **X** simgesini tıklatarak temizleyebilirsiniz.
+
+## <a name="save"></a>Kaydet
+ Hata listesini kopyalayabilir ve bir dosyaya kaydedebilirsiniz. Kopyalamak istediğiniz hataları seçin ve seçimi sağ tıklatın, ardından bağlam menüsünde **Kopyala**' yı seçin. Sonra hataları bir dosyaya yapıştırabilirsiniz. Hataları bir Excel elektronik tablosuna yapıştırırsanız, alanlar farklı sütunlar halinde görünür.
+
+## <a name="ui-element-list"></a>UI öğe listesi
+ Önem derecesi farklı **hata listesi** girişi türlerini (**hata**, **ileti**, **Uyarı**, **uyarı (etkin)** , **uyarı (etkin değil)** görüntüler.
+
+ Kod, hata kodunu görüntüler.
+
+ Açıklama, girişin metnini görüntüler.
+
+ Proje, geçerli projenin adını görüntüler.
+
+ Dosya, dosya adını görüntüler.
+
+ Satır, sorunun gerçekleştiği satırı görüntüler.

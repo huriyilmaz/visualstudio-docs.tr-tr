@@ -2,21 +2,21 @@
 title: T4 Include Yönergesi
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a3ab6aa4cd116c779cac4367d1eeb9a187edaeb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 636260609aa535e3bc45efe0224a517fd782c040
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62964098"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72606384"
 ---
 # <a name="t4-include-directive"></a>T4 Include Yönergesi
 
-Metin şablonunda Visual Studio kullanarak başka bir dosyadan metin içerebilir bir `<#@include#>` yönergesi. Koyabilirsiniz `include` yönergelerini ilk sınıf özelliği bloğundan önce metin şablonunda herhangi bir yerindeki `<#+ ... #>`. Eklenen dosyalar ayrıca içerebilir `include` yönergeleriyle birlikte diğer yönergeleri. Bu şablon kodunu ve demirbaş metni şablonlar arasında paylaşmanızı sağlar.
+Visual Studio 'daki bir metin şablonunda, `<#@include#>` yönergesini kullanarak başka bir dosyadan metin ekleyebilirsiniz. İlk sınıf özelliği bloğundan önce bir metin şablonunda `include` yönergeleri herhangi bir yere yerleştirebilirsiniz `<#+ ... #>`. Dahil edilen dosyalar `include` yönergeleri ve diğer yönergeleri de içerebilir. Bu şablon kodunu ve demirbaş metni şablonlar arasında paylaşmanızı sağlar.
 
 ## <a name="using-include-directives"></a>Ekleme Yönergelerini Kullanma
 
@@ -24,29 +24,29 @@ Metin şablonunda Visual Studio kullanarak başka bir dosyadan metin içerebilir
 <#@ include file="filePath" [once="true"] #>
 ```
 
-- `filePath` mutlak ya da geçerli şablon dosyasına bağıl olabilir.
+- `filePath` mutlak olabilir veya geçerli şablon dosyasına göre değişir.
 
-   Ayrıca, belirli Visual Studio uzantıları ekleme kodu dosyalarında aranacak kendi dizinlerini belirtebilir. Örneğin, Görselleştirme ve modelleme SDK'sını (DSL araçları) yüklediğinizde aşağıdaki klasör listeyi içermek için eklenir: `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates`.
+   Ayrıca, belirli Visual Studio uzantıları, içerme dosyalarını aramak için kendi dizinlerini belirtebilir. Örneğin görselleştirme ve modelleme SDK 'sını (DSL araçları) yüklediğinizde aşağıdaki klasör ekleme listesine eklenir: `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates`.
 
-   Bu ek içerme klasörleri içeren dosyanın dosya uzantısına bağlı olabilir. Örneğin DSL araçları dahil etme klasörü, yalnızca dosya uzantısına sahip dosyalar dahil olmak üzere erişilebilir `.tt`
+   Bu ek içerme klasörleri içeren dosyanın dosya uzantısına bağlı olabilir. Örneğin, DSL araçları içerme klasörüne yalnızca dosya uzantısına sahip dosyalar dahil olmak üzere erişilebilir `.tt`
 
-- `filePath` "%" ile sınırlandırılan ortam değişkenleri içerebilir. Örneğin:
+- `filePath`, "%" ile ayrılmış ortam değişkenlerini içerebilir. Örneğin:
 
   ```
   <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>
   ```
 
-- Eklenen bir dosya adı uzantısının kullanılması gerekmez `".tt"`.
+- Dahil edilen bir dosyanın adı `".tt"` uzantısını kullanmak zorunda değildir.
 
-   Gibi başka bir uzantı kullanmak isteyebilirsiniz `".t4"` eklenen dosyalar için. Eklediğinizde, çünkü bir `.tt` bir proje, Visual Studio dosyayı otomatik olarak ayarlar, **özel araç** özelliğini `TextTemplatingFileGenerator`. Tek tek dönüştürülecek dosyaları genellikle eklemek istemezsiniz.
+   Eklenen dosyalar için `".t4"` gibi başka bir uzantı kullanmak isteyebilirsiniz. Bunun nedeni, bir projeye bir `.tt` dosyası eklediğinizde, Visual Studio **özel araç** özelliğini otomatik olarak `TextTemplatingFileGenerator` olarak ayarlıyor. Tek tek dönüştürülecek dosyaları genellikle eklemek istemezsiniz.
 
    Diğer taraftan, bazı durumlarda, dosya uzantısının ek klasörlerin hangi include dosyalarının aranacağını etkilediğinin farkında olmalısınız. Diğer dosyaları içeren eklediğiniz bir dosya varsa, bu önemli olabilir.
 
-- Eklenen içerik ekleyen metin şablonunun hemen hemen parçasıymış gibi işlenir. Ancak, bir sınıf özelliği bloğu içeren bir dosya dahil edebilirsiniz `<#+...#>` bile `include` yönergesi ve standart denetim blokları ile izlense ardından.
+- Eklenen içerik ekleyen metin şablonunun hemen hemen parçasıymış gibi işlenir. Ancak, `include` yönergesinin sıradan metin ve standart denetim blokları tarafından izlense bile, sınıf özelliği bloğu içeren bir dosyayı ekleyebilirsiniz `<#+...#>`.
 
-- Kullanım `once="true"` birden fazla başka ekleme dosyasından çağrılırsa bile şablonun yalnızca bir kez eklendiğinden emin olmak için.
+- Birden fazla başka içerme dosyasından çağrılabilir olsa da, bir şablonun yalnızca bir kez eklendiğinden emin olmak için `once="true"` kullanın.
 
-   Bu özellik yapar, ekleyebileceğiniz yeniden kullanılabilir T4 kod parçacıkları kitaplığını ayarlama kolayca, endişelenmenize gerek kalmadan çalışır başka bir kod parçacığı zaten bunları eklemiştir.  Örneğin, şablon işleme ve C# oluşturma ile ilgili çok ayrıntılı kod parçacıkları içeren bir kitaplık olduğunu varsayalım.  Buna karşılık, bunlar daha sonra daha uygulamaya özgü şablonlardan kullanabilirsiniz özel durumların gibi bazı daha göreve özel yardımcı programları tarafından kullanılır. Bağımlılık grafiği çizerseniz, bazı iş parçacıklarının birkaç kez dahil edildiğini görürsünüz. Ancak `once` parametresi sonraki eklemeleri engeller.
+   Bu özellik, başka bir kod parçacığının zaten dahil edildiğini endişelenmenize gerek kalmadan, ' de ekleyebileceğiniz, yeniden kullanılabilir bir T4 parçacıkları kitaplığı oluşturmayı kolaylaştırır.  Örneğin, şablon işleme ve C# oluşturma ile ilgilenen çok hassas kod parçacıklarının bulunduğu bir kitaplığınız olduğunu varsayalım.  Bu, daha sonra uygulamaya özgü herhangi bir şablondan kullanabileceğiniz özel durumlar oluşturma gibi görevlere özgü bazı yardımcı programlar tarafından kullanılır. Bağımlılık grafiği çizerseniz, bazı iş parçacıklarının birkaç kez dahil edildiğini görürsünüz. Ancak `once` parametresi sonraki eklemeleri engeller.
 
   **MyTextTemplate.tt:**
 
@@ -61,7 +61,7 @@ Output message 5 (from top template).
 #>
 ```
 
- **TextFile1.t4:**
+ **TextFile1. T4:**
 
 ```
    Output Message 2 (from included file).
@@ -77,7 +77,7 @@ void GenerateMessage(int n)
 #>
 ```
 
- **TextFile2.t4:**
+ **TextFile2. T4:**
 
 ```
         Output Message 3 (from included file 2).
@@ -91,7 +91,7 @@ void AnotherGenerateMessage(int n)
 #>
 ```
 
- **Sonuç dosyası, MyTextTemplate.txt oluşturuldu:**
+ **Elde edilen oluşturulan dosya, MyTextTemplate. txt:**
 
 ```
 Output message 1 (from top template).
@@ -105,10 +105,10 @@ Output message 5 (from top template).
        Output Message 7 (from AnotherGenerateMessage method).
 ```
 
-## <a name="msbuild"></a> MSBuild hem Visual Studio'da proje özelliklerini kullanma
- Yönergesinde $(SolutionDir) gibi Visual Studio makrolarını kullanabilirsiniz, ancak bunlar MSBuild içinde çalışmaz. Şablonları yapı makinenizde dönüştürmek isterseniz, bunun yerine proje özelliklerini kullanmanız gerekir.
+## <a name="msbuild"></a>MSBuild ve Visual Studio 'da proje özelliklerini kullanma
+ Include yönergesinde $ (SolutionDir) gibi Visual Studio makrolarını de kullanabilirsiniz, ancak MSBuild 'de çalışmaz. Şablonları yapı makinenizde dönüştürmek isterseniz, bunun yerine proje özelliklerini kullanmanız gerekir.
 
- Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek adlı bir özellik tanımlar `myIncludeFolder`:
+ Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek, `myIncludeFolder` adlı bir özelliği tanımlar:
 
 ```xml
 <!-- Define a project property, myIncludeFolder: -->

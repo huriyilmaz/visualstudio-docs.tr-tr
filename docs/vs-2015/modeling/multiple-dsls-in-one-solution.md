@@ -1,67 +1,65 @@
 ---
-title: Bir çözümde birden çok DSL | Microsoft Docs
+title: Tek bir çözümde birden çok DSLs | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 7e668620-6217-4e87-aea7-e9036776c8e4
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d70794dddc02605c76c1af330a49af4be917c0e3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9a3b35e05108db879b365b9cafc39cacdf843397
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68159007"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668562"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>Bir Çözümde Birden Çok DSL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bunlar birlikte yüklenir, böylece tek bir çözümün bir parçası birkaç DSL'ler paketleyebilirsiniz.  
-  
- Birden çok DSL tümleştirmek için çeşitli teknikler kullanabilirsiniz. Daha fazla bilgi için [Visual Studio Modelbus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md) ve [nasıl yapılır: Bir Sürükle ve bırak işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) ve [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).  
-  
-### <a name="to-build-more-than-one-dsl-in-the-same-solution"></a>Aynı çözümdeki birden çok DSL oluşturmak için  
-  
-1. İki veya daha fazla DSL çözümler ve bir VSIX projesi oluşturun ve tüm projeler tek bir çözüme ekleyin.  
-  
-   - Yeni bir VSIX projesi oluşturmak için: İçinde **yeni proje** iletişim kutusunda **Visual C#** , **genişletilebilirlik**, **VSIX projesi**.  
-  
-   - VSIX çözüm dizininde değil iki veya daha fazla DSL çözümleri oluşturun.  
-  
-        Her bir DSL için Visual Studio'nun yeni bir örneğini açın. Yeni DSL oluşturun ve VSIX çözümle aynı çözüm klasörü belirtin.  
-  
-        Farklı bir dosya adı uzantısı ile her DSL oluşturduğunuzdan emin olun.  
-  
-   - Adlarını değiştirme **Dsl** ve **DslPackage** böylece tüm farklıdır projeleri. Örneğin: `Dsl1`, `DslPackage1`, `Dsl2`, `DslPackage2`.  
-  
-   - Her **DslPackage\*\source.extension.tt**, bu satırı doğru Dsl projesi adıyla güncelleştirin:  
-  
-        `string dslProjectName = "Dsl2";`  
-  
-   - Dsl * ve DslPackage VSIX çözümüne ekleme\* projeleri.  
-  
-        Kendi çözüm klasöründe her çifti yerleştirmek isteyebilirsiniz.  
-  
-2. DSL VSIX bildirimlerini Birleştir:  
-  
-   1. Açık _YourVsixProject_ **\source.extension.manifest**.  
-  
-   2. Her bir DSL seçin **İçerik Ekle** ekleyin:  
-  
-       - `Dsl*` Proje olarak bir **MEF Bileşeni**  
-  
-       - `DslPackage*` Proje olarak bir **MEF Bileşeni**  
-  
-       - `DslPackage*` Proje olarak bir **VS paket**  
-  
-3. Çözümü oluşturun.  
-  
-   Sonuçta elde edilen VSIX hem DSL'ler yükler. F5 kullanarak test edebilir veya dağıtma _YourVsixProject_ **\bin\Debug\\\*.vsix**.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio Modelbus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
- [Nasıl yapılır: Bir Sürükle ve bırak işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md)   
- [Kopyalama Davranışını Özelleştirme](../modeling/customizing-copy-behavior.md)
+Birden çok DSLs 'yi tek bir çözümün parçası olarak paketleyebilir, böylece birlikte yüklenirler.
+
+ Birden çok DSLs 'yi bütünleştirmek için birkaç teknik kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md) ve [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) ve [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).
+
+### <a name="to-build-more-than-one-dsl-in-the-same-solution"></a>Aynı çözümde birden fazla DSL oluşturmak için
+
+1. İki veya daha fazla DSL çözümü ve bir VSıX projesi oluşturun ve tüm projeleri tek bir çözüme ekleyin.
+
+   - Yeni bir VSIX projesi oluşturmak için: **Yeni proje** iletişim kutusunda, **görsel C#** , **genişletilebilirlik**, **VSIX projesi**' ni seçin.
+
+   - VSıX çözüm dizininde iki veya daha fazla DSL çözümü oluşturun.
+
+        Her DSL için, Visual Studio 'nun yeni bir örneğini açın. Yeni DSL 'yi oluşturun ve VSıX çözümüyle aynı çözüm klasörünü belirtin.
+
+        Her bir DSL 'yi farklı bir dosya adı uzantısıyla oluşturduğunuzdan emin olun.
+
+   - **DSL** ve **DslPackage** projelerinin adlarını farklı olacak şekilde değiştirin. Örneğin: `Dsl1`, `DslPackage1`, `Dsl2`, `DslPackage2`.
+
+   - Her **DslPackage \* \ Source.Extension.tt**, bu satırı doğru DSL projesi adına güncelleştirin:
+
+        `string dslProjectName = "Dsl2";`
+
+   - VSıX çözümünde DSL * ve DslPackage \* projelerini ekleyin.
+
+        Her çifti kendi çözüm klasörüne yerleştirmek isteyebilirsiniz.
+
+2. DSLs 'lerin VSıX bildirimlerini birleştirin:
+
+   1. _Yourvaltıproject_ **\Source.Extension.manifest**açın.
+
+   2. Her DSL için **Içerik Ekle** ve Ekle ' yi seçin:
+
+       - bir **MEF bileşeni** olarak proje `Dsl*`
+
+       - bir **MEF bileşeni** olarak proje `DslPackage*`
+
+       - projeyi **vs paketi** olarak `DslPackage*`
+
+3. Çözümü oluşturun.
+
+   Elde edilen VSıX her iki DSLs 'i de yükleyecek. F5 'i kullanarak bunları test edebilir veya **\\ \*. vsix**' _yi dağıtabilirsiniz._
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Visual Studio ModelBus Ile modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md) [: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md)

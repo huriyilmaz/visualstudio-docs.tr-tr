@@ -1,5 +1,5 @@
 ---
-title: Belgeler, ortam, Seçenekler iletişim kutusu | Microsoft Docs
+title: Belgeler, ortam, Seçenekler Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -30,62 +30,50 @@ helpviewer_keywords:
 - Solution Explorer, displaying files in
 ms.assetid: 4e3ccf1b-cd68-4db6-9470-710c911b47fc
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a6616593f01218b4a7e15809f841ee3cb4e7edb0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 705b1a5992d1a3e7931c316c713d46e7e8c7f72e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65700794"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657778"
 ---
 # <a name="documents-environment-options-dialog-box"></a>Belgeler, Ortam, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu sayfanın kullanın **seçenekleri** tümleşik geliştirme ortamında (IDE) belgeler görüntülenmesini denetlemek ve dış değişiklikler belgelerinizi ve dosyalarınızı yönetmek için iletişim kutusu. Bu iletişim kutusuna tıklayarak erişebilirsiniz **seçenekleri** üzerinde **Araçları** menüsüne ve ardından seçerek **belgeleri** içinde **ortam** düğümü. Varsa **belgeleri** listesinde seçin görünmüyor **tüm ayarları göster** içinde **seçenekleri** iletişim kutusu.  
-  
+Tümleşik geliştirme ortamındaki (IDE) belgelerin görüntülenmesini denetlemek ve belge ve dosyalardaki dış değişiklikleri yönetmek için **Seçenekler** iletişim kutusunun bu sayfasını kullanın. Bu iletişim kutusuna, **Araçlar** menüsünden **Seçenekler** ' i ve ardından **ortam** düğümündeki **Belgeler** ' i seçerek erişebilirsiniz. **Belgeler** listede görünmüyorsa, **Seçenekler** Iletişim kutusunda **tüm ayarları göster** ' i seçin.
+
 > [!NOTE]
-> İletişim kutuları, adları ve konumları gördüğünüz gibi menü komutlarının Seçenekleri Yardımı'nda, etkin ayarlarınıza ve sürüm bağlı olarak açıklanan nedir öğesinden farklı olabilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
- **Kaydedilmiş ise mevcut belge penceresini yeniden kullanma**  
- Kaydedilmiş olan ve yeni bir belge aynı pencerede açılır seçildiğinde, geçerli belge kapatır. Geçerli belgeyi kaydedilmemiş açık kalır ve yeni belge ayrı bir pencerede açılır. Bu seçenek işaretli değilse, yeni belgeler, her zaman ayrı bir pencerede açabilirsiniz.  
-  
- Çok Belgeli Kes'i gerçekleştirme ve işlemleri nadiren yapıştırın ve açık belgeler veya çalışma alanınızı windows sayısını en aza indirmek istiyorsanız bu seçeneği deneyin.  
-  
- **Dosya ortamı dışında değiştirildiğinde Algıla**  
- Bu seçenek belirlendiğinde, bir ileti hemen açık bir dosyayı IDE dışında bir düzenleyici tarafından yapılan değişiklikleri bildirir. İleti depolama biriminden dosyayı yeniden olanak sağlar.  
-  
- **Otomatik değişiklik kaydettiyseniz yükle**  
- Olduğunda **dosya ortamı dışında değiştirildiğinde Algıla** seçili ve açık bir dosyayı bir uyarı iletisi IDE dışında IDE değişiklikleri varsayılan olarak oluşturulur. Bu seçenek etkinleştirilirse, herhangi bir uyarı görünür ve belge dış değişiklikleri almak için IDE'de yüklenir.  
-  
- **Salt okunur dosyaları düzenlemeye izin ver; uyar kaydetmeyi deneyin**  
- Bu seçenek etkinleştirildiğinde açın ve bir salt okunur dosyasını düzenleyin. İşlemi tamamladığınızda, kullanmalısınız **Kaydet**kaydını yaptığınız değişiklikleri kaydetmek istiyorsanız, dosyayı yeni bir adla kaydetmek için komutu.  
-  
- **Etkin belge dizini kullanarak dosya Aç**  
- Bu onay kutusu seçildiğinde, bu seçenek, belirtir **Dosya Aç** etkin belgeyi dizinden iletişim kutusu görüntüler. Bu seçenek temizlendiğinde **Dosya Aç** bir dosyayı açmak için en son kullanılan dizin iletişim kutusunu görüntüler.  
-  
- **Tutarlı satır sonlarını denetle**  
- Düzenleyici bir dosyada satır sonları tarama ve satır sonlarını nasıl biçimlendirileceğini içinde tutarsızlıklar algılanırsa bir ileti kutusu görüntülemek için bu seçeneği belirleyin.  
-  
- **Görünen uyarı, genel geri al işlemi düzenlenmiş dosyaları**  
- Bir ileti görüntülemek için bu seçeneği kutusunu **genel Geri Al** komut geri ayrıca yeniden düzenleme işleminden sonra değiştirilen dosyalarda yapılan düzenleme değişiklikleri. Bir dosya öncesi yeniden düzenleme durumuna geri döndürme dosyasında yapılan sonraki değişikliklerin at.  
-  
- **Çözüm Gezgini'nde diğer dosyaları göster**  
- Görüntülemek için bu seçeneği belirleyin **çeşitli dosyalar** düğümünde **Çözüm Gezgini**. Çeşitli dosyalar bir proje veya çözüm ile ilişkili olmayan ancak görünebilen dosyalarıdır **Çözüm Gezgini** size kolaylık sağlamak için.  
-  
+> İletişim kutularında kullanılabilen seçenekler ve gördüğünüz menü komutlarının adları ve konumları, etkin ayarlarınıza veya sürümüne bağlı olarak yardım altında açıklananlar arasından farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+ **Kaydedilmişse geçerli belge penceresini yeniden kullan** Seçildiğinde, geçerli belgeyi kaydettiyseniz kapatır ve aynı pencerede yeni bir belge açar. Geçerli belgeniz kaydedilmadıysa açık kalır ve yeni belge ayrı bir pencerede açılır. Bu seçenek silinirse, yeni belgeler her zaman ayrı bir pencere olarak açılır.
+
+ Çok bölgeli kesme ve yapıştırma işlemlerini nadiren gerçekleştirir ve çalışma alanınızda açık belge ve pencere sayısını en aza indirmek isterseniz, bu seçeneği deneyin.
+
+ **Dosya ortamın dışında değiştirildiğinde Algıla** Bu seçenek belirlendiğinde, bir ileti, IDE dışında bir düzenleyici tarafından yapılmış olan açık bir dosyadaki değişiklikleri hemen bilgilendirir. İleti, dosyayı depolamadan yeniden yüklemenize olanak sağlar.
+
+ **Kaydedildiğinde, değişiklikleri otomatik yükle** **Dosyanın Seçili ortamın dışında ne zaman değiştirildiğini** ve IDE 'nin IDE dışında değiştiğini tespit ettiğinizde, varsayılan olarak bir uyarı iletisi oluşturulur. Bu seçenek etkinleştirilirse, hiçbir uyarı görünmez ve dış değişikliklerin çekilmesi için belge IDE 'de yeniden yüklenir.
+
+ **Salt okuma dosyalarının düzenlenmesine Izin ver; kaydetme girişiminde uyar** Bu seçenek etkinleştirildiğinde, salt okunurdur bir dosyayı açabilir ve düzenleyebilirsiniz. İşiniz bittiğinde, değişikliklerinizin bir kaydını kaydetmek istiyorsanız dosyayı yeni bir adla kaydetmek için **farklı kaydet**komutunu kullanmanız gerekir.
+
+ **Şu anda etkin olan belgenin dizinini kullanarak dosya aç** Seçildiğinde, bu seçenek **Dosya Aç** iletişim kutusunun etkin belgenin dizinini görüntülediğini belirtir. Bu seçenek temizlenmiş olduğunda **Dosya Aç** iletişim kutusu, bir dosyayı açmak için en son kullanılan dizini görüntüler.
+
+ **Yükün tutarlı satır sonlarını denetle** Düzenleyicinin bir dosyadaki satır sonlarını taramasını sağlamak ve satır sonları nasıl biçimlendirildiğine ilişkin tutarsızlıklar algılanırsa ileti kutusu göstermek için bu seçeneği belirleyin.
+
+ **Genel geri alma, düzenlenen dosyaları değiştirecek olduğunda uyarı görüntüle** **Genel geri alma** komutu yeniden düzenleme işleminden sonra değiştirilen dosyalarda yapılan yeniden düzenleme değişikliklerini geri aldığınızda bir ileti kutusu göstermek için bu seçeneği belirleyin. Ön yeniden düzenleme durumuna bir dosya döndürmek dosyada yapılan sonraki değişiklikleri atabilir.
+
+ **Çözüm Gezgini çeşitli dosyaları göster** **Çözüm Gezgini**Içindeki **çeşitli dosyalar** düğümünü göstermek için bu seçeneği belirleyin. Çeşitli dosyalar bir proje veya çözümle ilişkilendirilmemiş ancak kolaylık olması için **Çözüm Gezgini** içinde görünebilen dosyalardır.
+
 > [!NOTE]
-> Etkinleştirmek için bu seçeneği belirleyin **tarayıcıda görüntüle** komutunu **dosya** etkin Web uygulamasında yer almayan Web belgeler için menü.  
-  
- **\<** *n* **> diğer dosyalar projesinde kaydedilmiş öğeler**  
- İçinde kalıcı hale getirmek için dosya sayısını belirtir **MiscellaneousFiles** klasörü **Çözüm Gezgini**. Artık bir düzenleyicide açık olsalar bile bu dosyalar listelenir. Bir tam sayı 0'dan 256 belirtebilirsiniz. Varsayılan sayı 0'dır.  
-  
- Bu seçenek 5 ayarlanmış ve 10 dosyanın tamamı kapattığınızda, 10 çeşitli dosyalar açık, varsa, örneğin, ilk 5 hala gösterilecek **çeşitli dosyalar** klasör.  
-  
- **Veri kod sayfasına kaydedildiğinde belgeleri Unicode olarak Kaydet**  
- Varsayılan olarak Unicode olarak kaydedilecek seçili kod sayfasıyla uyumsuz bilgi içeren dosyaları neden olmak için bu seçeneği belirleyin.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ortam Seçenekleri iletişim kutusu](../../ide/reference/environment-options-dialog-box.md)   
- [Çeşitli dosyalar](../../ide/reference/miscellaneous-files.md)   
- [Metin Bulma ve Değiştirme](../../ide/finding-and-replacing-text.md)
+> Etkin Web uygulamasına dahil edilen Web belgelerinin **Dosya** menüsünde **Tarayıcıda görüntüle** komutunu etkinleştirmek için bu seçeneği belirleyin.
+
+ **çeşitli dosyalar projesinde kaydedilen** **\<** *n* > öğeleri, **Çözüm Gezgini** **MiscellaneousFiles** klasöründe kalıcı hale getiriedilecek dosya sayısını belirtir. Bu dosyalar, bir düzenleyicide artık açık olmasalar bile listelenir. 0 ile 256 arasında bir tamsayı belirtebilirsiniz. Varsayılan sayı 0 ' dır.
+
+ Örneğin, bu seçeneği 5 olarak ayarlarsanız ve 10 çeşitli dosyanın açık olması halinde, tüm 10 dosyalarını kapattığınızda, ilk 5, **diğer dosyalar** klasöründe gösterilmeye devam eder.
+
+ **Veriler kod sayfasına kaydedilemediğinde belgeleri Unicode olarak kaydet** Seçili kod sayfasıyla uyumsuz bilgiler içeren dosyaların varsayılan olarak Unicode olarak kaydedilmesini sağlamak için bu seçeneği belirleyin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Ortam seçenekleri Iletişim kutusu](../../ide/reference/environment-options-dialog-box.md) [çeşitli dosyalar](../../ide/reference/miscellaneous-files.md) [metin bulma ve değiştirme](../../ide/finding-and-replacing-text.md)

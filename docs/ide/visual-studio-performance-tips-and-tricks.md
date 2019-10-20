@@ -1,143 +1,143 @@
 ---
-title: Performansı iyileştirmeye yönelik ipuçları
+title: Performansı artırmaya yönelik ipuçları
 ms.date: 08/14/2018
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fccae7d42d9e8f99c78fd55f74466e2f83e5dfa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ccf785cec859290cac0ebcf5c9685861bd2887e4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62581797"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647145"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio performans ipuçları ve püf noktaları
 
-Visual Studio performans önerisi, nadir durumlarda oluşabilir düşük bellek durumları yöneliktir. Bu gibi durumlarda değil kullanıyor olabileceğiniz bazı Visual Studio özellikleri iyileştirebilirsiniz. Aşağıdaki ipuçları, genel öneriler olarak tasarlanmamıştır.
+Visual Studio performans önerileri, nadir durumlarda ortaya çıkabilecek düşük bellek durumları için tasarlanmıştır. Bu durumlarda, kullanmadığınız belirli Visual Studio özelliklerini iyileştirebilirsiniz. Aşağıdaki ipuçları genel öneriler olarak tasarlanmamıştır.
 
 > [!NOTE]
-> Bellek sorunları nedeniyle ürün kullanmakta zorluk yaşıyorsanız aracılığıyla bize [geri bildirim aracı](../ide/how-to-report-a-problem-with-visual-studio.md).
+> Bellek sorunları nedeniyle ürünü kullanmada zorluk yaşıyorsanız, [geri bildirim aracı](../ide/how-to-report-a-problem-with-visual-studio.md)aracılığıyla bize bilgi verin.
 
-## <a name="use-a-64-bit-os"></a>Bir 64-bit işletim sistemi kullanın
+## <a name="use-a-64-bit-os"></a>64 bitlik bir işletim sistemi kullanın
 
-Sisteminiz Windows 32-bit sürümünden bir 64 bit sürümüne yükseltirseniz, 2 GB ile 4 GB Visual Studio için kullanılabilir sanal bellek miktarını genişletirsiniz. 32 bit işlem olsa bile bu önemli ölçüde daha büyük iş yüklerini işlemek üzere Visual Studio sağlar.
+Sisteminizi Windows 'un 32 bitlik bir sürümünden 64 bit sürümüne yükseltirseniz, Visual Studio için kullanılabilir sanal bellek miktarını 2 GB ile 4 GB arasında genişlettirsiniz. Bu, Visual Studio 'Nun 32 bit işlem olmasına rağmen önemli ölçüde daha büyük iş yüklerini işlemesini sağlar.
 
-Daha fazla bilgi için [bellek sınırlarını](/windows/desktop/Memory/memory-limits-for-windows-releases) ve [/largeaddressaware 64 bit Windows üzerinde kullanmak](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/).
+Daha fazla bilgi için bkz. [bellek sınırları](/windows/desktop/Memory/memory-limits-for-windows-releases) ve [64 bit Windows üzerinde/LARGEADDRESSAWARE kullanma](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/).
 
-## <a name="disable-automatic-file-restore"></a>Otomatik dosya geri yükleme devre dışı bırak
+## <a name="disable-automatic-file-restore"></a>Otomatik dosya geri yüklemeyi devre dışı bırak
 
-Visual Studio, önceki oturumu açık bırakıldı belgeleri otomatik olarak açılır. Bu % 30 veya daha fazla proje türü ve açılmasını belgeleri bağlı olarak bir çözümü yüklemek için gereken uzatmak. Windows Forms, XAML ve bazı JavaScript ve typescript dosyaları gibi tasarımcıları açılması yavaş olabilir.
+Visual Studio, önceki oturumda açık kalan belgeleri otomatik olarak yeniden açar. Bu, proje türüne ve açılmakta olan belgelere bağlı olarak, bir çözümü %30 ' a kadar veya daha fazla yüklemeye yönelik zaman alabilir. Windows Forms ve XAML gibi tasarımcıları ve bazı JavaScript ve TypeScript dosyalarını açmak yavaş olabilir.
 
-Visual Studio bir sarı çubuk, önemli ölçüde daha yavaş yüklemek bir çözüm otomatik belge geri yükleme ne zaman açtığını bildirir. Aşağıdaki adımları izleyerek otomatik dosya yeniden açmayı devre dışı bırakabilirsiniz:
+Otomatik belge geri yükleme bir çözümün önemli ölçüde daha yavaş yüklenmesine neden olduğunda, Visual Studio sizi sarı bir çubukta bilgilendirir. Aşağıdaki adımları izleyerek otomatik dosya yeniden açmayı devre dışı bırakabilirsiniz:
 
-1. Seçin **Araçları** > **seçenekleri** açmak için **seçenekleri** iletişim kutusu.
+1. **Seçenekler** iletişim kutusunu açmak için **Araçlar**  > **Seçenekler** ' i seçin.
 
-1. Üzerinde **proje ve çözüm** > **genel** sayfasında, seçimini **çözüm yükü belgelerde yeniden**.
+1. **Projeler ve çözüm**  > **genel** sayfasında, **çözüm yükünden belgeleri yeniden aç**seçimini kaldırın.
 
-Otomatik dosya geri yükleme devre dışı bırakırsanız, açmak istediğiniz dosyaları bulmak için hızlı bir şekilde birini kullanarak olan [Git](../ide/go-to.md) komutları:
+Otomatik dosya geri yüklemeyi devre dışı bırakırsanız, açmak istediğiniz dosyalara gitmenin hızlı bir yolu [Şu komutlardan birini](../ide/go-to.md) kullanmaktır:
 
-- Genel için **Git** işlevi, select **Düzenle** > **Git** > **tümüne Git**, veya tuşunabasın **CTRL**+**T**.
+- **İşlevselliği genel olarak belirlemek** için **Düzenle** ' yi seçin  >   > **tümüne gidin**veya **CTRL** +**t**'**e** basın.
 
-- Bir çözüm kullanarak düzenleme konumu son atlama **Düzenle** > **Git** > **Git son Düzen konumuna**, veya basarak **Ctrl**  + **Shift**+**geri**.
+- **Düzenle** ** >  kullanarak** bir çözümdeki son düzenleme konumuna atlayın  > **son düzenleme konumuna gidin**veya **CTRL** +**SHIFT** +**geri**tuşuna basın.
 
-- Kullanım **son dosya** bir çözümde en son ziyaret edilen dosyaların listesini görmek için. Seçin **Düzenle** > **Git** > **son dosya**, veya basın **Ctrl** + **1**, **Ctrl**+**R**.
+- Bir çözümde son ziyaret edilen dosyaların listesini görmek için **en son dosyayı git** ' i kullanın. **Düzenle**  > **Git** ' i seçin  > **son dosyaya gidin**veya **CTRL** +**1**, **CTRL** +**R**tuşlarına basın.
 
 ## <a name="configure-debugging-options"></a>Hata ayıklama seçeneklerini yapılandırma
 
-Genellikle bellek hata ayıklama oturumları sırasında düşük çalıştırıyorsanız, bir veya daha fazla yapılandırma değişikliklerini yaparak performansı en iyi duruma getirebilirsiniz.
+Genellikle hata ayıklama oturumları sırasında belleği azaldıysanız, bir veya daha fazla yapılandırma değişikliği yaparak performansı iyileştirebilirsiniz.
 
-- **Yalnızca kendi kodumu etkinleştir**
+- **Yalnızca kendi kodum etkinleştir**
 
-    En basit iyileştirme etkinleştirmektir **yalnızca kendi kodum** yalnızca projeniz için sembolleri yükler özelliğine sahiptir. Bu özelliğin etkinleştirilmesi kaydetme (.NET) yönetilen uygulamalarda hata ayıklama için önemli bir bellek neden olabilir. Bu seçenek varsayılan olarak, bazı proje türleri zaten etkin.
+    En basit iyileştirme, yalnızca projeniz için sembolleri yükleyen **yalnızca kendi kodum** özelliğini etkinleştirmektir. Bu özelliğin etkinleştirilmesi, yönetilen uygulamalarda hata ayıklama (.NET) için önemli miktarda bellek kaydedilmesine neden olabilir. Bu seçenek, bazı proje türlerinde varsayılan olarak zaten etkindir.
 
-    Etkinleştirmek için **yalnızca kendi kodum**, seçin **Araçları** > **seçenekleri** > **hata ayıklama**  >   **Genel**ve ardından **yalnızca benim kodumu etkinleştir**.
+    **Yalnızca kendi kodum**etkinleştirmek Için, **araçlar**  > **Seçenekler**  > **hata ayıklama**  > **genel**' i seçin ve ardından **yalnızca kendi kodum etkinleştir**' i seçin.
 
-- **Yüklenecek semboller belirtin**
+- **Yüklenecek sembolleri belirtin**
 
-    Yerel hata ayıklama sembol dosyalarını yükleme (*.pdb*) bellek kaynaklarının açısından pahalıdır. Hata ayıklayıcı sembol ayarlarınızı bellekten kazanacak şekilde yapılandırabilirsiniz. Genellikle, yalnızca projenizden modülleri yüklemek için çözümü yapılandırın.
+    Yerel hata ayıklama için, sembol dosyalarını ( *. pdb*) yüklemek bellek kaynakları açısından pahalıdır. Hata ayıklayıcı sembol ayarlarınızı belleği korumak için yapılandırabilirsiniz. Genellikle, çözümü yalnızca projenizden modülleri yükleyecek şekilde yapılandırırsınız.
 
-    Sembol yükleme belirtmek için **Araçları** > **seçenekleri** > **hata ayıklama** > **sembolleri**.
+    Sembol yüklemeyi belirtmek için **araçlar**  > **Seçenekler**  > **hata ayıklama**  > **semboller**' i seçin.
 
-    Seçenekleri ayarlamak **yalnızca belirtilen modüller** yerine **tüm modüllerin** ve sizin yüklemek için hangi Modülü belirtin. Hata ayıklama sırasında aynı zamanda belirli modüller ne sağ tıklayarak **modülleri** açıkça bir modül sembol yükleme içerecek şekilde penceresi. (Hata ayıklama sırasında penceresini açmak için seçin **hata ayıklama** > **Windows** > **modülleri**.)
+    Seçenekleri **tüm modüller** yerine **yalnızca belirtilen modüller** olarak ayarlayın ve ardından hangi modülleri yüklemek istediğinizi belirtin. Hata ayıklama sırasında, Ayrıca, simge yüküne bir modül eklemek için **modüller** penceresindeki belirli modüller ' e sağ tıklayabilirsiniz. (Hata ayıklama sırasında pencereyi açmak için**Windows**  > **modülleri** >  **Hata Ayıkla** ' yı seçin.)
 
-    Daha fazla bilgi için [sembol dosyalarını anlamak](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/).
+    Daha fazla bilgi için bkz. [sembol dosyalarını anlama](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/).
 
-- **Tanılama araçları devre dışı bırak**
+- **Tanılama Araçları devre dışı bırak**
 
-    Kullanımdan sonra CPU profili oluşturma devre dışı bırakmanız önerilir. Bu özellik, büyük miktarda kaynak tüketebilir. CPU profili oluşturma etkinleştirildikten sonra bu durum açıkça işiniz bittiğinde kapatmayı değer, bu nedenle sonraki hata ayıklama oturumları arasında kalıcıdır. Bazı kaynaklar, tanılama araçları sağlanan özelliklere ihtiyacınız yoksa hata ayıklama sırasında devre dışı bırakarak kaydedebilirsiniz.
+    Kullandıktan sonra CPU profil oluşturmayı devre dışı bırakmanız önerilir. Bu özellik, büyük miktarlarda kaynak tüketebilir. CPU profili oluşturma etkinleştirildikten sonra, bu durum sonraki hata ayıklama oturumlarında kalıcı hale getirilir, bu nedenle tamamlandığında açıkça devre dışı bırakır. Belirtilen özelliklere ihtiyacınız yoksa hata ayıklarken tanılama araçlarını devre dışı bırakarak bazı kaynakları kaydedebilirsiniz.
 
-    Devre dışı bırakmak için **tanılama araçları**, hata ayıklama oturumu başlatma öğesini **Araçları** > **seçenekleri** > **etkinleştirme tanılama Araçlar**ve bu seçeneğin işaretini kaldırın.
+    **Tanılama araçları**devre dışı bırakmak için bir hata ayıklama oturumu başlatın, **araçlar**  > **Seçenekler**  > **Tanılama araçları etkinleştir**' i seçin ve seçeneğin seçimini kaldırın.
 
-    Daha fazla bilgi için [profil oluşturma araçları](../profiling/profiling-feature-tour.md).
+    Daha fazla bilgi için bkz. [profil oluşturma araçları](../profiling/profiling-feature-tour.md).
 
-## <a name="disable-tools-and-extensions"></a>Araçlar ve uzantılar devre dışı bırak
+## <a name="disable-tools-and-extensions"></a>Araçları ve uzantıları devre dışı bırak
 
-Bazı araçları veya uzantıları performansını artırmak için kapatılabilir.
+Bazı araçlar veya uzantılar, performansı artırmak için kapatılabilir.
 
 > [!TIP]
-> Performans sorunları genellikle, aynı anda uzantıları devre dışı bir kapatma ve yeniden denetleme performans da ayırabilirsiniz.
+> Tek seferde uzantıları kapatarak ve performansı yeniden denetleyerek performans sorunlarını yalıtabilirsiniz.
 
 ### <a name="managed-language-service-roslyn"></a>Yönetilen dil hizmeti (Roslyn)
 
-.NET derleyici Platformu ("Roslyn") performans konuları hakkında daha fazla bilgi için bkz. [büyük çözümler için başarım düşünceleri](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
+.NET Compiler Platform ("Roslyn") performans konuları hakkında daha fazla bilgi için bkz. [büyük çözümler Için performans konuları](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
 
 - **Tam çözüm analizini devre dışı bırak**
 
-    Visual Studio, bir derleme çağırmadan önce hatalar hakkında zengin bir deneyim sağlamak amacıyla tüm çözümünüz çözümleme gerçekleştirir. Bu özellik, olabildiğince çabuk hataları belirlemek yararlıdır. Ancak, büyük çözümler için önemli bellek kaynakları bu özelliği kullanabilir. Bellek baskısı veya benzer sorunlar yaşıyorsanız bu deneyim, bu kaynakları serbest bırakmak için devre dışı bırakabilirsiniz. Bu seçenek varsayılan olarak, Visual Basic için etkinleştirilir ve C# için devre dışı.
+    Visual Studio, bir derlemeyi çağırmadan önce hatalar hakkında zengin bir deneyim sağlamak için tüm çözümünüzün analizini gerçekleştirir. Bu özellik, hataları mümkün olan en kısa sürede belirlemek için faydalıdır. Bununla birlikte, büyük çözümler için bu özellik önemli bellek kaynaklarını kullanabilir. Bellek baskısı veya benzer sorunlar yaşıyorsanız, bu kaynakları boşaltmak için bu deneyimi devre dışı bırakabilirsiniz. Varsayılan olarak bu seçenek, Visual Basic için etkinleştirilmiştir ve için C#devre dışı bırakılır.
 
-    Devre dışı bırakmak için **tam çözüm analizini**, seçin **Araçları** > **seçenekleri** > **metin düzenleyici**seçin Her iki **Visual Basic** veya **C#**. Seçin **Gelişmiş** ve seçimini **tam çözüm analizini etkinleştirme**.
+    **Tam çözüm analizini**devre dışı bırakmak için **araçlar**  > **Seçenekler**  > **metin düzenleyici**' yi seçin ve **Visual Basic** ya **C#** da seçeneğini belirleyin. **Gelişmiş** ' i seçin ve **tam çözüm analizini etkinleştir**seçimini kaldırın.
 
-- **CodeLens devre dışı bırak**
+- **CodeLens 'i devre dışı bırak**
 
-    Visual Studio gerçekleştiren bir **tüm başvuruları Bul** görüntülendiği her metodunda görev. CodeLens, satır içi görüntü başvuruları sayısı gibi özellikler sağlar. İş gibi ayrı bir işlemde gerçekleştirilir *ServiceHub.RoslynCodeAnalysisService32*. Büyük çözümler veya kaynak kısıtlı sistemlerde, bu özellik, performansı üzerinde önemli bir etkisi olabilir. Bellek sorunları yaşıyorsanız, örneğin, 4 GB makinede veya bu işlem için yüksek CPU kullanımından büyük bir çözümde yüklenirken, CodeLens kaynakları serbest bırakmak için devre dışı bırakabilirsiniz.
+    Visual Studio, her yöntemde gösterildiği gibi **tüm başvuruları bul** görevini gerçekleştirir. CodeLens, başvuru sayısının satır içi görüntüsü gibi özellikler sağlar. İş, *Servicehub. RoslynCodeAnalysisService32*gibi ayrı bir işlemde gerçekleştirilir. Büyük çözümlerde veya kaynak kısıtlı sistemlerde, bu özellik performans üzerinde önemli bir etkiye sahip olabilir. Örneğin, 4 GB 'lik bir makineye büyük bir çözüm yüklerken veya bu işlem için yüksek CPU kullanımı gibi bellek sorunları yaşıyorsanız, kaynakları boşaltmak için CodeLens 'i devre dışı bırakabilirsiniz.
 
-    Devre dışı bırakmak için **CodeLens**, seçin **Araçları** > **seçenekleri** > **metin düzenleyici**  >   **Tüm diller** > **CodeLens**, özellik seçimini kaldırın.
+    **CodeLens**'i devre dışı bırakmak için **araçlar**  > **Seçenekler**  > **metin düzenleyici** ' yi  > **tüm diller**  > **CodeLens**' i seçin ve özelliğin seçimini kaldırın.
 
     > [!NOTE]
-    > CodeLens, Visual Studio Professional ve Enterprise sürümlerinde kullanılabilir.
+    > CodeLens, Visual Studio 'nun Professional ve Enterprise sürümlerinde kullanılabilir.
 
 ### <a name="other-tools-and-extensions"></a>Diğer araçlar ve uzantılar
 
 - **Uzantıları devre dışı bırak**
 
-    Yeni işlevsellik sağlayan veya var olan işlevselliği genişletmek için Visual Studio eklenen ek yazılım bileşenleri uzantılarıdır. Uzantılar genellikle bellek kaynağı sorunları kaynağı olabilir. Bellek kaynak sorun yaşıyorsanız, iş akışı ve senaryoya nasıl etkilediğini görmek için bir defada tek uzantıları devre dışı bırakma deneyin.
+    Uzantılar, Visual Studio 'ya eklenen ve yeni işlevsellik sağlayan veya mevcut işlevselliği genişleten ek yazılım bileşenleridir. Uzantılar, genellikle bir bellek kaynağı sorunları kaynağı olabilir. Bellek kaynağı sorunları yaşıyorsanız, bu senaryonun senaryoyu veya iş akışını nasıl etkilediğini görmek için uzantıları tek seferde devre dışı bırakmayı deneyin.
 
    ::: moniker range="vs-2017"
 
-    Uzantıları devre dışı bırakmak için Git **Araçları** > **Uzantılar ve güncelleştirmeler**ve belirli bir uzantıyı devre dışı bırakın.
+    Uzantıları devre dışı bırakmak için **araçlar** > **Uzantılar ve güncelleştirmeler**' e gidin ve belirli bir uzantıyı devre dışı bırakın.
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-    Uzantıları devre dışı bırakmak için Git **uzantıları** > **uzantıları yönetme**ve belirli bir uzantıyı devre dışı bırakın.
+    Uzantıları devre dışı bırakmak **için uzantılara gidin** > **uzantıları yönetin**ve belirli bir uzantıyı devre dışı bırakın.
 
    ::: moniker-end
 
 - **XAML Tasarımcısı devre dışı bırak**
 
-    XAML Tasarımcısı'nı varsayılan olarak etkindir, ancak açarsanız, yalnızca kaynak tüketen bir *.xaml* dosya. XAML dosyaları ile çalışma, ancak Tasarımcı işlevselliği kullanmak istemiyorsanız, bazı belleği boşaltmak için bu özelliği devre dışı bırakın.
+    XAML Tasarımcısı varsayılan olarak etkindir, ancak yalnızca bir *. xaml* dosyası açarsanız kaynakları tüketir. XAML dosyaları ile çalışıyorsanız ancak tasarımcı işlevselliğini kullanmak istemiyorsanız, bazı belleği boşaltmak için bu özelliği devre dışı bırakın.
 
-    Devre dışı bırakmak için **XAML Tasarımcısı**Git **Araçları** > **seçenekleri** > **XAML Tasarımcısı**  >  **XAML tasarımcısını etkinleştirmek**ve bu seçeneğin işaretini kaldırın.
+    **XAML Tasarımcısı**devre dışı bırakmak için **araçlar**  > **Seçenekler**  > **XAML Tasarımcısı**  > **Etkinleştir**' e gidin ve seçeneğin seçimini kaldırın.
 
-- **İş yüklerini kaldırın**
+- **İş yüklerini kaldır**
 
-    Artık kullanılmayan iş yükleri kaldırmak için Visual Studio Yükleyicisi'ni kullanabilirsiniz. Bu eylem, paketler ve artık gerekmeyen derlemeleri atlayarak başlangıç ve çalışma zamanı maliyetini kolaylaştırabilirsiniz.
+    Artık kullanılmayan iş yüklerini kaldırmak için Visual Studio Yükleyicisi kullanabilirsiniz. Bu eylem, artık gerekli olmayan paketleri ve derlemeleri atlayarak başlangıç ve çalışma zamanı maliyetini kolaylaştırabilir.
 
-## <a name="force-a-garbage-collection"></a>Bir Çöp toplamayı zorlamak
+## <a name="force-a-garbage-collection"></a>Çöp toplamayı zorla
 
-CLR çöp toplama bellek yönetimi sistemi kullanır. Bu sistemde, bazen bellek artık gerekmeyen nesneler tarafından kullanılır. Bu durum geçici; Çöp toplayıcı, performans ve kaynak kullanımı buluşsal yöntemlerini temel alarak bu belleği serbest bırakır. Visual Studio'da bir kısayol tuşu kullanarak kullanılmayan belleği toplamak için CLR zorlayabilirsiniz. Önemli miktarda atık koleksiyonu için bekliyor ve bir Çöp toplamayı zorlamak, bellek kullanımını görmelisiniz *devenv.exe* işlem bırak **Görev Yöneticisi'ni**. Bu yöntemi kullanmak nadiren gereklidir. (Tam derleme, hata ayıklama oturumu veya bir çözüm açık olay gibi) pahalı bir işlem tamamlandıktan sonra ancak, ne kadar bellek gerçekten işlem tarafından kullanılıyor belirlemenize yardımcı olur. Visual Studio (yönetilen ve yerel) karışık olduğundan, bazen yerel ayırıcısı ve atık toplayıcı sınırlı bellek kaynaklarının mücadele etmek mümkündür. Yüksek bellek kullanım koşullarında, çöp toplayıcısının çalıştırmak için zorlayın yardımcı olabilir.
+CLR bir atık toplama bellek yönetim sistemi kullanır. Bu sistemde, bazı durumlarda bellek artık gerekli olmayan nesneler tarafından kullanılır. Bu durum geçicidir; Çöp toplayıcı bu belleği, performans ve kaynak kullanımı buluşsal yöntemlerini temel alarak yayımlayacaktır. CLR 'yi, Visual Studio 'da bir kısayol kullanarak kullanılmayan herhangi bir belleği toplamaya zorlayabilirsiniz. Koleksiyon için önemli miktarda çöp bekleniyor ve bir çöp toplama işlemi zorlarsanız, **Görev Yöneticisi**'nde *devenv. exe* işlem bırakması bellek kullanımını görmeniz gerekir. Bu yöntemin kullanılması nadiren gereklidir. Ancak, pahalı bir işlem tamamlandıktan sonra (tam derleme, hata ayıklama oturumu veya çözüm açma olayı gibi), işlem tarafından gerçekten ne kadar bellek kullanıldığını belirlemenize yardımcı olabilir. Visual Studio karışık olduğundan (yerel olarak yönetilen &), doğal ayırıcı ve çöp toplayıcısının sınırlı bellek kaynakları için rekabet halinde olması olasıdır. Yüksek bellek kullanımı koşulları altında çöp toplayıcısının çalışmasına zorlamaya yardımcı olabilir.
 
-Bir Çöp toplamayı zorlamak için kısayol tuşu kullanın: **CTRL**+**Alt**+**Shift**+**F12**, **Ctrl** + **Alt**+**Shift**+**F12** (Bu iki defa basın).
+Çöp toplamayı zorlamak için kısayol tuşlarını kullanın: **ctrl** +**alt** +**shıft** +**f12**, **CTRL** +**alt** 0**SHIFT** 2**F12** (iki kez bas).
 
-Çöp toplama güvenilir bir şekilde başlatılmasına gerek olursa çalışma, Visual Studio geri bildirim aracı üzerinden bir rapor dosyası bu hata büyük olasılıkla, davranıştır gibi senaryonuza sağlar.
+Çöp toplamayı güvenilir bir şekilde zorlamak senaryonuzu çalışır hale getirmek, bu davranışın bir hata olması nedeniyle Visual Studio geri bildirim aracı aracılığıyla bir rapor dosyaluyor.
 
-CLR çöp toplayıcısı ayrıntılı bir açıklaması için bkz. [çöp toplamanın Temelleri](/dotnet/standard/garbage-collection/fundamentals).
+CLR Atık toplayıcısının ayrıntılı bir açıklaması için bkz. [çöp toplamanın temelleri](/dotnet/standard/garbage-collection/fundamentals).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio performansını iyileştirme](../ide/optimize-visual-studio-performance.md)
-- [Daha Hızlı çözümler (Visual Studio blogu) yükleme](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)
+- [Visual Studio performansını iyileştirin](../ide/optimize-visual-studio-performance.md)
+- [Çözümleri daha hızlı yükle (Visual Studio blogu)](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)

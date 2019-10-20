@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Düzenleyicide satır numaralarını görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: düzenleyicide satır numaralarını görüntüleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,37 +11,35 @@ helpviewer_keywords:
 - code, line number displaying
 ms.assetid: 40b38559-b8de-4041-91f2-68986767c976
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a2d6d3bd1d0a27a12194005422910236ea0fd02c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 0f093cf93c2f67c91fa9eee0085a566a15289684
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704406"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72602344"
 ---
-# <a name="how-to-display-line-numbers-in-the-editor"></a>Nasıl yapılır: Düzenleyicide satır numaralarını görüntüleme
+# <a name="how-to-display-line-numbers-in-the-editor"></a>Nasıl Yapılır: Düzenleyicide Satır Numaralarını Görüntüleme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Görüntülemek veya satır kodunuzu numaralarını gösterip gizleyebilirsiniz.  
-  
+Kodunuzda satır numaralandırmayı gösterebilir veya gizleyebilirsiniz.
+
 > [!NOTE]
-> Etkin ayarlarınıza bağlı olarak, iletişim kutuları ve görüntülenen menü komutları burada anlatılanlardan farklı olabilir. Ayarlarınızı değiştirmek için **Araçlar / içe ve dışa aktarma ayarları**. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="display-line-numbers-in-code"></a>Kod içinde satır numaralarını görüntüleyin  
- Satır numaraları kodunuza eklenmez; Bunlar yalnızca başvuru için hedeflenmiştir. Buna yazdırılacak satır numaraları istiyorsanız **yazdırma** iletişim kutusunda **satır numaralarını dahil etme** onay kutusu.  
-  
-#### <a name="to-display-line-numbers-in-code"></a>Kod içinde satır numaralarını görüntülemek için  
-  
-1. Menü çubuğunda, **Araçları**, **seçenekleri**. Genişletin **metin düzenleyici** düğümünü ve ardından kullandığınız dil düğümünü veya **tüm diller** tüm dillerdeki satır numaralarını açmak. Ya da yazabilirsiniz **satır numarası** içinde **hızlı başlatma** kutusu.  
-  
-2. ![Düzenleyicide satır numaralarını görüntüleme seçeneklerini](../../ide/reference/media/vs-displaylinenumbers.png "VS_DisplayLineNumbers")  
-  
+> Etkin ayarlarınıza bağlı olarak, görüntülenen iletişim kutuları ve menü komutları burada açıklananlarla farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar/içeri ve dışarı aktarma ayarları**' nı açın. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="display-line-numbers-in-code"></a>Koddaki satır numaralarını görüntüle
+ Satır numaraları kodunuza eklenmez; yalnızca başvuruya yöneliktir. Satır numaralarının yazdırılmasını istiyorsanız, **Yazdır** iletişim kutusunda **satır numaralarını dahil** et onay kutusunu seçin.
+
+#### <a name="to-display-line-numbers-in-code"></a>Kod içinde satır numaralarını görüntüleme
+
+1. Menü çubuğunda **Araçlar**, **Seçenekler**' i seçin. **Metin düzenleyici** düğümünü genişletin ve ardından kullandığınız dilin düğümünü ya da tüm dillerde satır numaralarını açmak Için **tüm dilleri** seçin. Ya da **Hızlı başlatma** kutusuna **satır numarası** yazabilirsiniz.
+
+2. ![Düzenleyicide satır numaralarını görüntüleme seçenekleri](../../ide/reference/media/vs-displaylinenumbers.png "VS_DisplayLineNumbers")
+
 > [!NOTE]
-> Dilinize ya da ayarlarınıza bağlı olarak, seçmeniz gerekebilir **tüm ayarları göster** onay kutusuna **seçenekleri** açığa çıkarmak için iletişim kutusu **tüm diller** alt düğümü.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Düzenleyiciyi özelleştirme](../../ide/customizing-the-editor.md)   
- [Metin Düzenleyici Seçenekleri iletişim kutusu](../../ide/reference/text-editor-options-dialog-box.md)   
- [Kod Yazma](../../ide/writing-code-in-the-code-and-text-editor.md)
+> Dilinize veya ayarlarınıza bağlı olarak, **tüm diller** alt düğümünü açığa çıkarmak için **Seçenekler** Iletişim kutusundaki **tüm ayarları göster** onay kutusunu seçmeniz gerekebilir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Kod yazma](../../ide/writing-code-in-the-code-and-text-editor.md) [Düzenleyicisi](../../ide/customizing-the-editor.md) [metin düzenleyici seçenekleri iletişim kutusunu](../../ide/reference/text-editor-options-dialog-box.md) özelleştirme

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Menü öğesini kullanarak uyarıları bastırma | Microsoft Docs'
+title: 'Nasıl yapılır: menü öğesini kullanarak uyarıları bastırma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -9,37 +9,37 @@ helpviewer_keywords:
 - code analysis, suppressing warnings
 ms.assetid: 36bd1850-dcde-4ed0-9bc3-0b83df434362
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5097ecb0f7458e739def275d616eb344a2a6db0d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 96b7433ff4f696989142aa2c2ce47982006b93b2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426564"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610022"
 ---
 # <a name="how-to-suppress-warnings-by-using-the-menu-item"></a>Nasıl yapılır: Menü Öğesini Kullanarak Uyarıları Bastırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[NOT]
-> Kaynak gizleme web sitesi projeleri için desteklenmiyor.  
-  
- Kod çözümleme uyarılarını bastırma için Kod Analizi penceresi kullanabilirsiniz. Uyarı gizleme devre dışı bırakmasını ile aynı değil. Bir uyarıyı bastırmak ihlalinin yalnızca belirli bir örneği için uygulanır. Aynı uyarı diğer ihlalleri yine de hata Listesi penceresinde bildirilir.  
-  
- Kod Analizi çalıştırdıktan sonra bir veya daha fazla kod Analizi penceresi içinde görüntülenen kod çözümleme uyarıları, uygulamanız için geçerli olmadığını belirlemek. Örneğin, kodun doğru olduğunu belirlemek. Veya bazı ihlalleri düşük öncelikli ve mevcut geliştirme döngüsü içinde sabit olmayan bir durum olabilir. Bunun nedeni ne olursa olsun, uyarı kodunu gözden geçirildi ve bu uyarı bastırılabilir belirlendi takım üyelerinizin izin vermek için geçerli olduğunu belirtmek çoğunlukla yararlı olur. Bu, uyarının oluşturulduğu yakın bir gizleme yerleştirmenizi sağlar çünkü kaynakta gizleme yararlı olur.  
-  
- Kaynak kodu veya küresel bir gizleme dosyasında gizleme görüntülenip görüntülenmeyeceğini seçebilirsiniz. Genel gizleme dosyasında bazı gizlemeleri yerleştirilmelidir. Bu durum söz konusuysa **içinde kaynak** seçeneği devre dışı bırakılacak.  
-  
-### <a name="to-suppress-a-warning-by-using-menu-item"></a>Menü öğesini kullanarak bir uyarıyı bastırmak için  
-  
-1. Üzerinde **Çözümle** menüsünde seçin **Windows** seçip **Kod Analizi**.  
-  
-2. İçinde **Kod Analizi** penceresinde, uyarı bastır seçin.  
-  
-3. Eylem seçin ve ardından **iletileri gösterme**seçin **içinde kaynak** veya **proje gizleme dosyası**.  
-  
-     Özel uyarı bastırılır ve üzeri Kod Analizi penceresi bir uyarı görüntülenir.  
-  
+NOTUN
+> Kaynak gizleme bölümünde Web sitesi projelerinde desteklenmez.
+
+ Kod Analizi uyarılarını bastırmak için kod analizi penceresini kullanabilirsiniz. Bir uyarının gizlenmesi, devre dışı bırakmayla aynı değildir. Bir uyarıyı bastırdığınızda, bu yalnızca ihlalin belirli bir örneği için geçerlidir. Aynı uyarıya ilişkin diğer ihlaller de Hata Listesi penceresinde bildirilmeyecektir.
+
+ Kod analizini çalıştırdıktan sonra, Kod Analizi penceresinde görüntülenen bir veya daha fazla kod analizi uyarısı uygulamanız için geçerli değildir. Örneğin, kodun olduğu gibi doğru olduğunu tespit edebilirsiniz. Ya da bazı ihlallerin düşük öncelikli olması ve geçerli geliştirme sürecinde düzeltilmeyecek olması olabilir. Nedeninden bağımsız olarak, takım üyelerinizin kodun incelendiğini ve uyarının bastırıldığına ilişkin olduğunu bilmesini sağlamak için uyarının uygulanamaz olduğunu göstermek sık sık yararlıdır. Kaynak gizleme bölümünde, uyarının oluşturulduğu yere gizleme için bir gizleme koymanıza izin veren yararlı olur.
+
+ Göstermeme 'nın kaynak kodda veya genel gizleme dosyasında görünüp görünmeyeceğini seçebilirsiniz. Bazı gizlemeleri, genel gizleme dosyasına yerleştirilmelidir. Bu durumda, **kaynak** seçeneğinde seçeneği devre dışı bırakılır.
+
+### <a name="to-suppress-a-warning-by-using-menu-item"></a>Menü öğesini kullanarak bir uyarıyı gizlemek için
+
+1. **Çözümle** menüsünde **Windows** ' u ve ardından **Kod Analizi**' ni seçin.
+
+2. **Kod Analizi** penceresinde, uyarı bastır ' u seçin.
+
+3. Eylemler ' i seçin, sonra **iletileri**göster ' i seçin ve ardından **kaynak** veya **Proje gizleme dosyasında**öğesini seçin.
+
+     Belirli bir uyarı bastırılır ve uyarı, Kod Analizi penceresinde üstü çizili olarak görünür.
+
 > [!NOTE]
-> Bir hedef olmayan gizlemeleri küresel bir gizleme dosyasında görünür.
+> Hedefi olmayan gizlemeleri, genel gizleme dosyasında görünür.

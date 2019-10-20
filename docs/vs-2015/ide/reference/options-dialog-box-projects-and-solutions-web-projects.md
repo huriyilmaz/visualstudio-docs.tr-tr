@@ -1,5 +1,5 @@
 ---
-title: Seçenekler iletişim kutusu, projeler ve çözümler, Web projeleri | Microsoft Docs
+title: Seçenekler Iletişim kutusu, projeler ve çözümler, Web projeleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -8,29 +8,27 @@ f1_keywords:
 - VS.ToolsOptionsPages.Projects.WebProjects
 ms.assetid: ea813046-1ae6-4c9f-9784-dc41494101b9
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6e9fb8731c50080e30dfe6686d69bd57fa14a3c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ddb8688822f4465d313130e5505ff67a93413956
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674493"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668865"
 ---
 # <a name="options-dialog-box-projects-and-solutions-web-projects"></a>Seçenekler İletişim Kutusu, Projeler ve Çözümler, Web Projeleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Web projeleri içinde geliştirmek için kullanacağınız Web sunucusu ayarlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Bu iletişim kutusuna erişmek için tıklayın **Araçlar Seçenekler**. Genişletin **projeler ve çözümler** ve ardından **Web projeleri**.  
-  
- (F5 ya da Ctrl + F5'ı kullanarak örneğin,), Visual Studio'da bir Web projesi çalıştırdığınızda varsayılan olarak, Visual Studio Visual Studio geliştirme sunucusunu kullanır. Daha fazla bilgi için [ASP.NET Web projeleri için Visual Studio'daki Web sunucuları](https://msdn.microsoft.com/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
-  
+Web projelerinin [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] içinde geliştirme için kullanacağı Web sunucusunu ayarlar. Bu iletişim kutusuna erişmek için **Araçlar Seçenekler**' e tıklayın. **Projeler ve çözümler** ' i genişletin ve ardından **Web projeleri**' ne tıklayın.
+
+ Varsayılan olarak, Visual Studio 'da bir Web projesi çalıştırdığınızda (örneğin, F5 veya CTRL + F5 kullanarak) Visual Studio, Visual Studio geliştirme sunucusunu kullanır. Daha fazla bilgi için bkz. [ASP.NET Web projeleri Için Visual Studio 'Da Web sunucuları](https://msdn.microsoft.com/31d4f588-df59-4b7e-b9ea-e1f2dd204328).
+
 > [!NOTE]
-> İletişim kutuları, adları ve konumları gördüğünüz gibi menü komutlarının Seçenekleri Yardımı'nda, etkin ayarlarınıza ve sürüm bağlı olarak açıklanan nedir öğesinden farklı olabilir. Bu Yardım sayfası ile yazılmıştır **Web ayarları** unutmayın. Ayarlarınızı değiştirmek veya görüntülemek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="settings"></a>Ayarlar  
- **Web siteleri ve projeleri için IIS Express'in 64 bit sürümünü kullanın.**  
- Visual Studio geliştirme sunucusu yerine IIS Express'i kullanacak şekilde bu seçeneği belirleyin. Daha fazla bilgi için [IIS Express ile tanışın](http://go.microsoft.com/?linkid=9747914) ve [IIS Express genel bakış](http://go.microsoft.com/?linkid=9747915). Bu seçenek varsayılan olarak devre dışıdır.  
-  
- **Hata listesinde hatalar varken web uygulamalarını çalıştırmadan önce uyar**  
- Bu kutu işaretlenirse, hatasız derlenmiyor web uygulamanızı çalıştırmayı denerseniz uyarılır.
+> İletişim kutularında kullanılabilen seçenekler ve gördüğünüz menü komutlarının adları ve konumları, etkin ayarlarınıza veya sürümüne bağlı olarak yardım altında açıklananlar arasından farklılık gösterebilir. Bu yardım sayfası, **Web ayarlarına** göz önünde bulundurularak yazıldı. Ayarlarınızı görüntülemek veya değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="settings"></a>Ayarlar
+ **Web siteleri ve projeleri için IIS Express 64 bitlik sürümünü kullanın** Visual Studio geliştirme sunucusu yerine IIS Express kullanmak için bu seçeneği belirleyin. Daha fazla bilgi için bkz. [tanıtma IIS Express](http://go.microsoft.com/?linkid=9747914) ve [IIS Express genel bakış](http://go.microsoft.com/?linkid=9747915). Bu seçenek varsayılan olarak devre dışıdır.
+
+ **Hata listesinde hatalar varken Web uygulamalarını çalıştırmadan önce uyar** Bu kutu işaretliyse, Web uygulamanızı hatasız derleme yaparken çalıştırmayı denerseniz size uyarı alırsınız.

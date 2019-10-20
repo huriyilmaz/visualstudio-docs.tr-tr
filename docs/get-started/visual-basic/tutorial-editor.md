@@ -5,35 +5,35 @@ ms.custom: seodec18, get-started
 ms.date: 11/20/2018
 ms.technology: vs-ide-general
 ms.topic: tutorial
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5ebbe6ac8ef8e6a6de99159fa8dd5169a9dcac06
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: fd9643e92d4774ca1356534faca9e031395ff4d9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180400"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72632647"
 ---
-# <a name="learn-to-use-the-code-editor"></a>Kod Düzenleyicisi'ni kullanmayı öğrenin
+# <a name="learn-to-use-the-code-editor"></a>Kod düzenleyicisini kullanmayı öğrenin
 
-Visual Studio Kod düzenleyicisinde 10 dakikalık giriş, Visual Studio yazma, gezinme ve kodu daha kolay anlama yapar yollarından bazıları aramak için bir dosya için kod ekleyeceğiz.
+Visual Studio 'da kod düzenleyicisine bu 10 dakikalık bir giriş yaptığınızda, Visual Studio 'Nun kodu yazma, gezinme ve anlama işlemlerini daha kolay hale getiren bazı yöntemlere bakmak için bir dosyaya kod ekleyeceğiz.
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yüklemek için sayfa.
+> Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!TIP]
-> Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) ücretsiz yüklemek için sayfa.
+> Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
@@ -42,9 +42,9 @@ Bu makalede, Visual Basic zaten bildiğiniz varsayılmaktadır. Bu durumda, ilk 
 > [!TIP]
 > Bu makaleyle birlikte izlemek için, Visual Studio için Visual Basic ayarlarını seçtiğinizden emin olun. Tümleşik geliştirme ortamı (IDE) için ayarları seçme hakkında daha fazla bilgi için bkz. [ortam ayarlarını seçme](visual-studio-ide.md#select-environment-settings).
 
-## <a name="create-a-new-code-file"></a>Yeni bir kod dosyası oluşturma
+## <a name="create-a-new-code-file"></a>Yeni bir kod dosyası oluştur
 
-Yeni bir dosya oluşturarak ve bazı kodlar eklemeden başlatın.
+Yeni bir dosya oluşturarak ve buna kod ekleyerek başlayın.
 
 ::: moniker range="vs-2017"
 
@@ -68,27 +68,27 @@ Yeni bir dosya oluşturarak ve bazı kodlar eklemeden başlatın.
 
 ## <a name="use-code-snippets"></a>Kod parçacıkları kullanma
 
-Visual Studio sağlar yararlı *kod parçacıkları* kod bloklarında kullanılan yaygın olarak hızla ve kolayca oluşturmak için kullanabilirsiniz. [Kod parçacıkları](../../ide/code-snippets.md) Visual Basic, C#ve C++gibi farklı programlama dilleri için kullanılabilir. Visual Basic **alt** kod parçacığını dosyanıza ekleyelim.
+Visual Studio, yaygın olarak kullanılan kod bloklarını hızlı ve kolay bir şekilde oluşturmak için kullanabileceğiniz yararlı *kod parçacıkları* sağlar. [Kod parçacıkları](../../ide/code-snippets.md) Visual Basic, C#ve C++gibi farklı programlama dilleri için kullanılabilir. Visual Basic **alt** kod parçacığını dosyanıza ekleyelim.
 
-1. İmlecinizi, belirten `End Class`çizginin üzerine getirin ve **Sub**yazın.
+1. İmlecinizi, `End Class` belirten çizginin üzerine yerleştirin ve **Sub**yazın.
 
-   `Sub` Anahtar sözcüğü ve **alt** kod parçacığını ekleme hakkında bilgi içeren bir açılır iletişim kutusu görüntülenir.
+   @No__t_0 anahtar sözcüğü ve **alt** kod parçacığını ekleme hakkında bilgi içeren bir açılır iletişim kutusu görüntülenir.
 
-   ![Visual Studio'da kod parçacığı için IntelliSense](media/tutorial-intellisense-snippet.png)
+   ![Visual Studio 'da kod parçacığı için IntelliSense](media/tutorial-intellisense-snippet.png)
 
-1. Tuşuna **sekmesini** iki kez kod parçacığını eklemek için.
+1. Kod parçacığını eklemek için **sekme** tuşuna iki kez basın.
 
-   Alt yordamın `MySub()` ana hattı dosyaya eklenir.
+   @No__t_0 Sub yordamının ana hattı dosyaya eklenir.
 
-Kullanılabilir kod parçacıkları farklı programlama dili için farklılık gösterir. **IntelliSense**+ + >  'i Düzenle kod parçacığı Ekle ' yi seçerek Visual Basic için kullanılabilir kod parçacıklarına bakabilirsiniz (ya da CTRL K, CTRL tuşlarına basın). >  **X**). Visual Basic için, kod parçacıkları aşağıdaki kategoriler için kullanılabilir:
+Kullanılabilir kod parçacıkları farklı programlama dilleri için farklılık gösterir. Visual Basic için kullanılabilir kod parçacıklarına **bakabilirsiniz  > ** **IntelliSense**  > **kod parçacığı Ekle** ' yi seçerek (veya **CTRL** +**K**, **CTRL** +**X**tuşlarına basın). Visual Basic için, kod parçacıkları aşağıdaki kategoriler için kullanılabilir:
 
 ![Kod parçacığı listesini Visual Basic](media/tutorial-code-snippet-list.png)
 
 Bilgisayarda bir dosyanın var olup olmadığını belirlemek, bir metin dosyasına yazmak, bir kayıt defteri değeri okumak, SQL sorgusu yürütmek, her biri Için bir oluşturmak için kod parçacıkları vardır.. [. Sonraki bildiri](/dotnet/visual-basic/language-reference/statements/for-each-next-statement)ve çok daha fazlası.
 
-## <a name="comment-out-code"></a>Kodu açıklama
+## <a name="comment-out-code"></a>Kodu dışarı açıklama
 
-Visual Studio menü çubuğunda altında düğmelerden araç çubuğunda, kodu daha üretken olmanıza yardımcı olabilir. Örneğin, IntelliSense tamamlama modunu değiştirebilir, bir satır girintisini artırabilir veya azaltabilir ya da derlemek istemediğiniz kodu açıklama olarak ayarlayabilirsiniz. ([IntelliSense](../../ide/using-intellisense.md) , farklı şeyler arasından eşleşen yöntemlerin bir listesini görüntüleyen bir kodlama yardımıdır.) Bu bölümde, biz bazı kodu açıklama.
+Visual Studio 'daki menü çubuğu altındaki düğmelerin satırı olan araç çubuğu, kod olarak daha üretken olmanıza yardımcı olabilir. Örneğin, IntelliSense tamamlama modunu değiştirebilir, bir satır girintisini artırabilir veya azaltabilir ya da derlemek istemediğiniz kodu açıklama olarak ayarlayabilirsiniz. ([IntelliSense](../../ide/using-intellisense.md) , farklı şeyler arasından eşleşen yöntemlerin bir listesini görüntüleyen bir kodlama yardımıdır.) Bu bölümde, bazı kodları açıklayacağız.
 
 ![Düzenleyici araç çubuğu düğmeleri](media/tutorial-editor-toolbar.png)
 
@@ -116,49 +116,49 @@ Visual Studio menü çubuğunda altında düğmelerden araç çubuğunda, kodu d
                Select word
    ```
 
-1. `morewords` Diziyi kullanmıyoruz, ancak bunu daha sonra tamamen silmek istemdiğimiz için kullanabiliriz. Bunun yerine, şimdi bu satırları açıklama satırı yapar. Kapanış küme ayracı `morewords` için tüm tanımı seçin ve ardından araç çubuğundaki **Seçili çizgiler** düğmesini seçin. Klavyeyi kullanmak isterseniz, basın **Ctrl**+**K**, **Ctrl**+**C**.
+1. @No__t_0 dizisini kullanmıyoruz, ancak bunu daha sonra tamamen silmek istemediğimiz için kullanabiliriz. Bunun yerine, bu satırları açıklamaya bakalım. Kapanış küme ayracı `morewords` tüm tanımını seçin ve ardından araç çubuğunda **Seçili satırlar** düğmesini seçin. Klavyeyi kullanmayı tercih ediyorsanız **ctrl** +**K**, **CTRL** +**C**tuşlarına basın.
 
-   ![Açıklama düğmesi](media/tutorial-comment-out.png)
+   ![Açıklama dışarı düğmesi](media/tutorial-comment-out.png)
 
-   Visual Basic açıklama karakteri `'` , kodu açıklama eklemek için seçili her satırın başına eklenir.
+   Visual Basic açıklama karakteri `'`, kodu açıklama eklemek için seçili her satırın başına eklenir.
 
-## <a name="collapse-code-blocks"></a>Kod bloğu Daralt
+## <a name="collapse-code-blocks"></a>Kod bloklarını Daralt
 
-Yalnızca ilginizi çeken parçalara odaklanmak için kod bölümlerini daraltabilirsiniz. Pratikte, `_words` diziyi tek bir kod satırına darallayalım. Görüntülenen satırın kenar boşluğunda eksi işareti olan küçük gri kutusunu seçin `Dim _words = New String() {`. Ya da bir klavye kullanıcısı kullanıyorsanız, imleci dizi tanımında herhangi bir yere yerleştirin ve **CTRL**+**m**, **CTRL**+**m**tuşlarına basın.
+Yalnızca ilginizi çeken parçalara odaklanmak için kod bölümlerini daraltabilirsiniz. Pratikte `_words` dizisini tek bir kod satırına darallayalım. @No__t_0 belirten satırın kenar boşluğunda eksi işareti olan küçük gri kutusunu seçin. Ya da bir klavye kullanıcısı kullanıyorsanız, imleci dizi tanımında herhangi bir yere yerleştirin ve **ctrl** +**m**, **CTRL** +**m**tuşlarına basın.
 
-![Anahat oluşturma Daralt düğmesi](media/tutorial-collapse.png)
+![Anahat Daralt düğmesi](media/tutorial-collapse.png)
 
-Üç nokta ve ardından yalnızca ilk satırı, kod bloğu daraltır (`...`). Kod bloğunu tekrar artırmak için artık bir artı işareti veya tuşuna basın aynı gri kutusunda tıklayın **Ctrl**+**M**, **Ctrl**+**M**  yeniden. Bu özelliğin adı [anahat](../../ide/outlining.md) ve uzun yöntemleri veya tüm sınıflar daraltma özellikle yararlı olur.
+Kod bloğu yalnızca ilk satırı ve ardından üç nokta (`...`) ile daraltır. Kod bloğunu yeniden genişletmek için, şimdi de bir artı işaretine sahip olan aynı gri kutuya tıklayın veya **ctrl** +**e**, **CTRL** +**e** tuşlarına basın. Bu özellik, ana [hat](../../ide/outlining.md) olarak adlandırılır ve özellikle uzun yöntemleri veya tüm sınıfları daraltdığınızda yararlıdır.
 
-## <a name="view-symbol-definitions"></a>Sembol tanımlarını görüntüleme
+## <a name="view-symbol-definitions"></a>Sembol tanımlarını görüntüle
 
-Visual Studio Düzenleyicisi, bir tür, yöntem vb. tanımını incelemek kolaylaştırır. Örneğin seçerek tanımını içeren dosyayı gitmek için bir yolu olan **Tanıma Git** herhangi bir sembol başvurulur. İçinde çalışmakta olduğunuz odağınızı uzağa dosya hareket etmediği bir bile daha hızlı yolu [Özet tanım](../../ide/go-to-and-peek-definition.md#peek-definition). Şimdi tanımda Özet `String` türü.
+Visual Studio Düzenleyicisi bir tür, yöntem vb. tanımlamayı incelemenizi kolaylaştırır. Tek bir yol, tanımı içeren dosyaya gitmeniz, örneğin simgenin başvurduğu her yerde **Tanıma Git** ' i seçerek. Odağı, üzerinde çalıştığınız dosyadan uzağa taşımayın, [göz atma tanımını](../../ide/go-to-and-peek-definition.md#peek-definition)kullanmaktır. @No__t_0 türünün tanımına göz atalım.
 
-1. Sözcüğe `String` sağ tıklayın ve içerik menüsünden **Açıklama Özeti** ' ni seçin. Veya basın **Alt**+**F12**.
+1. @No__t_0 sözcüğe sağ tıklayın ve içerik menüsünden **Açıklama Özeti** ' ni seçin. Ya da **Alt** +**F12**tuşuna basın.
 
-   Tanımını bir açılır pencere görünür `String` sınıfı. Açılır pencere veya hatta göz at peeked kodun başka bir tür tanımı içinde gezinebilirsiniz.
+   @No__t_0 sınıfının tanımına sahip bir açılır pencere görüntülenir. Açılır pencere içinde kaydırma yapabilir veya atılamıyor kodundan başka bir türün tanımına de göz atın.
 
-   ![Özet tanım penceresi](media/tutorial-peek-definition.png)
+   ![Tanım penceresi Özeti](media/tutorial-peek-definition.png)
 
-1. Açılır pencerenin sağ üst köşedeki "x" işareti olan küçük kutusunu seçerek baktı tanım penceresini kapatın.
+1. Açılır pencerenin sağ üst köşesinde bulunan bir "x" ile küçük kutuyu seçerek atılamıyor tanım penceresini kapatın.
 
-## <a name="use-intellisense-to-complete-words"></a>Sözcükleri tamamlamak için IntelliSense kullanma
+## <a name="use-intellisense-to-complete-words"></a>Sözcükleri tamamlaması için IntelliSense kullanma
 
-[IntelliSense](../../ide/using-intellisense.md) , kodlamaya, her bir kaynaktır. Bu, kullanılabilir üyeler bir türü veya farklı bir yöntem aşırı yüklemeleri için parametre ayrıntıları hakkında bilgi gösterebilirsiniz. IntelliSense, bunu ayırt etmek için yeterli sayıda karakter girdikten sonra bir sözcük tamamlamak için de kullanabilirsiniz. Bir Git programının çıktısı için standart yerdir konsol penceresine sıralı dizeler yazdırmak için kod satırı ekleyelim.
+Kodlamadan [IntelliSense](../../ide/using-intellisense.md) , değerli bir kaynaktır. Bir türün kullanılabilir üyeleri hakkında bilgi veya bir yöntemin farklı aşırı yüklemeleri için parametre ayrıntıları gösterebilir. IntelliSense 'i, ayırt etmek için yeterince karakter yazdıktan sonra bir sözcüğü yazarak tamamlamayı de kullanabilirsiniz. Düzenli dizeleri konsol penceresine yazdırmak için bir kod satırı ekleyelim, bu da programdan git 'in çıkış için standart yer.
 
-1. Aşağıda `query` aşağıdaki kod yazarak değişken Başlat:
+1. @No__t_0 değişkeninin altında aşağıdaki kodu yazmaya başlayın:
 
    ```vb
    For Each str In qu
    ```
 
-   IntelliSense, Göster gördüğünüz **hızlı bilgi** hakkında `query` simgesi.
+   IntelliSense, `query` simgesiyle ilgili **hızlı bilgileri** gösterir.
 
-   ![Visual Studio IntelliSense Sözcük tamamlama](media/tutorial-intellisense-completion-list.png)
+   ![Visual Studio 'da IntelliSense kelime tamamlama](media/tutorial-intellisense-completion-list.png)
 
-1. Word geri kalanını eklemek için `query` IntelliSense'nın sözcük tamamlama işlevlerini kullanarak basın **sekmesini**.
+1. IntelliSense 'in Word tamamlama işlevini kullanarak `query` Word 'ün geri kalanını eklemek için **Tab**tuşuna basın.
 
-1. Şu kod gibi aramak için kod bloğunu kapatmak tamamlayın.
+1. Aşağıdaki kod gibi görmek için kod bloğunu sona erdirin.
 
    ```vb
    For Each str In query
@@ -166,21 +166,21 @@ Visual Studio Düzenleyicisi, bir tür, yöntem vb. tanımını incelemek kolayl
    Next
    ```
 
-## <a name="refactor-a-name"></a>Bir adı yeniden düzenleyin
+## <a name="refactor-a-name"></a>Bir adı yeniden düzenleme
 
-Hiç kimse ilk kez kod sağ alır ve bir değişkeni veya yöntemin adını değiştirmeniz gerekebilir şeyleri biridir. Visual Studio'nun deneyelim [yeniden düzenleme](../../ide/refactoring-in-visual-studio.md) yeniden adlandırmak için işlevselliği `_words` değişkenini `words`.
+Hiç kimse ilk kez kod alır ve değiştirmeniz gerekebilecek işlemlerden biri bir değişkenin veya yöntemin adıdır. @No__t_1 değişkenini `words` olarak yeniden adlandırmak için Visual Studio 'nun yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) işlevini deneyelim.
 
 1. İmlecinizi `_words` değişkeninin tanımına yerleştirin ve sağ tıklama ya da bağlam menüsünden **Yeniden Adlandır** ' ı seçin.
 
-   Bir açılır pencere **Yeniden Adlandır** iletişim kutusunun en üstünde görünür sağında Düzenleyici.
+   Düzenleyicinin sağ üst köşesinde bir açılır pencere **yeniden adlandırma** iletişim kutusu görüntülenir.
 
-1. Değişken `_words` seçili durumdayken, istenen **sözcüklerin**adını yazın. Dikkat başvuru `words` sorguda da otomatik olarak yeniden adlandırıldı. **ENTER** tuşuna bastıktan veya **Uygula**' ya tıklamadan önce, **Yeniden Adlandır** açılan kutusunda **açıklamaları dahil et** onay kutusunu seçin.
+1. Değişken `_words` hala seçiliyse, istenen **sözcüklerin**adını yazın. Sorgudaki `words` başvurunun da otomatik olarak yeniden adlandırıldığına dikkat edin. **ENTER** tuşuna bastıktan veya **Uygula**' ya tıklamadan önce, **Yeniden Adlandır** açılan kutusunda **açıklamaları dahil et** onay kutusunu seçin.
 
    ![Yeniden Adlandır iletişim kutusu](media/tutorial-rename.png)
 
 1. **ENTER** tuşuna basın veya **Uygula**' ya tıklayın.
 
-   Her iki tekrarın `words` her ikisi de yeniden adlandırılır ve kod açıklamasında `words` başvurusu.
+   @No__t_0 tekrarlarının her ikisi de yeniden adlandırılır ve kod açıklamasında `words` başvurusudur.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -190,8 +190,8 @@ Hiç kimse ilk kez kod sağ alır ve bir değişkeni veya yöntemin adını değ
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod parçacıkları](../../ide/code-snippets.md)
-- [Kod gidin](../../ide/navigating-code.md)
+- [Koda git](../../ide/navigating-code.md)
 - [Anahat Oluşturma](../../ide/outlining.md)
 - [Tanıma ve Özet Tanıma Gitme](../../ide/go-to-and-peek-definition.md)
-- [Yeniden Düzenleme](../../ide/refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../../ide/refactoring-in-visual-studio.md)
 - [IntelliSense kullanma](../../ide/using-intellisense.md)

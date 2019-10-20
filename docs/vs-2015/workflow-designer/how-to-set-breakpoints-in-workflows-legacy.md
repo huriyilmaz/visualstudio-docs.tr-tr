@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Eski) akışlarında kesme noktası ayarlama | Microsoft Docs'
+title: 'Nasıl yapılır: Iş akışlarında kesme noktaları ayarlama (eski) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -11,57 +11,56 @@ helpviewer_keywords:
 - workflows, setting breakpoints
 ms.assetid: 78e0be39-3e99-487c-bfef-19db0daf6f42
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7cec06813890523e604234ccefdbcd7d1de31653
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 182f28a2b21ae3129ce0d34fae97280ba0a07218
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444175"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603590"
 ---
-# <a name="how-to-set-breakpoints-in-workflows-legacy"></a>Nasıl yapılır: İş Akışlarında Kesme Noktası Ayarlama (Eski)
-Kesme noktaları ayarlama hakkında bilgi için bu konuda açıklanmaktadır [!INCLUDE[wf](../includes/wf-md.md)] uygulamaları oluşturmak eski kullanarak [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] olduğunda, [!INCLUDE[wf2](../includes/wf2-md.md)] uygulamanın gerekir ya da hedeflemek [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- Eski kullandığınızda [!INCLUDE[wfd2](../includes/wfd2-md.md)] içinde [!INCLUDE[vs2010](../includes/vs2010-md.md)] oluşturmak için bir [!INCLUDE[wf2](../includes/wf2-md.md)] uygulama ayarlayabileceğiniz kesme noktaları C# ve Visual Basic kodu Visual Studio'da yaptığınız gibi. Beklendiği gibi iş akışı yürütme ayarladığınız her bir kesme noktasında durur.  
-  
- Bir kesme noktası üç durumu vardır: *Bekleyen*, *bağlı*, ve *hata*. Bir kesme noktası ayarlarsanız, bekleyen ve boş kırmızı bir simge ile temsil edilir. Çalışma zamanı iş akışı türü yüklendiğinde bağlı olur ve düz kırmızı bir simge ile temsil edilir. Yanlış bir biçimde kesme noktası için geçersiz bir etkinlik adı olarak belirtirseniz, hata penceresinde görünür. Kesme noktası hala kesme noktası penceresine eklenir, ancak küçük "x" ile işaretlenir.  
-  
- Aşağıdaki yollarla bir etkinlik iş akışı tasarım yüzeyinde kesme noktaları ayarlayabilirsiniz:  
-  
-- Etkinliğe sağ tıklayın ve seçin **kesme noktası \ kesme noktası Ekle**.  
-  
-- Etkinliği seçin ve F9 tuşuna basın.  
-  
-- Seçin **yeni kesme noktası** gelen **hata ayıklama** menüsü.  
-  
-     Hata ayıklayıcı bir kesme noktasında durduğunda, hata ayıklama sırasında yeni bir kesme noktası ayarlamak için bu seçeneği'ni de kullanabilirsiniz.  
-  
+# <a name="how-to-set-breakpoints-in-workflows-legacy"></a>Nasıl yapılır: Iş akışlarında kesme noktaları ayarlama (eski)
+Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanarak [!INCLUDE[wf](../includes/wf-md.md)] uygulamalarında kesme noktalarının nasıl ayarlanacağı açıklanmaktadır. @No__t_1 uygulamanızın [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] ya da [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemesi gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+
+ @No__t_2 uygulaması derlemek için [!INCLUDE[vs2010](../includes/vs2010-md.md)] eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullandığınızda, ' de kesme noktaları C# ve Visual Basic kodu Visual Studio 'da yaptığınız gibi ayarlayabilirsiniz. Beklenen şekilde, iş akışı yürütmesi, ayarladığınız her kesme noktasında durmaktadır.
+
+ Kesme noktasında üç durum vardır: *bekleyen*, *bağlantılı*ve *hata*. Bir kesme noktası ayarladığınızda, bekliyor ve boş kırmızı simgesiyle temsil edilir. Çalışma zamanı iş akışı türünü yüklemiştir, bu, bağımlıdır ve düz bir kırmızı simgeyle temsil edilir. Kesme noktası için geçerli olmayan bir etkinlik adı gibi yanlış bir biçim belirtirseniz, bir hata penceresi görüntülenir. Kesme noktası, kesme noktası penceresine hala eklenir, ancak küçük bir "x" ile işaretlenir.
+
+ İş akışı tasarım yüzeyinde bir etkinliğin kesme noktalarını aşağıdaki yollarla ayarlayabilirsiniz:
+
+- Etkinliğe sağ tıklayın ve **kesme noktası \ kesme noktası Ekle**' yi seçin.
+
+- Etkinliği seçin ve F9 tuşuna basın.
+
+- **Hata ayıklama** menüsünden **Yeni kesme noktası** ' nı seçin.
+
+     Bu seçeneği, hata ayıklama sırasında hata ayıklayıcı bir kesme noktasında durdurulduğunda yeni bir kesme noktası ayarlamak için de kullanabilirsiniz.
+
     > [!NOTE]
-    > Çağrılan iş akışlarında kesme noktaları ayarlama desteklenmiyor.  
-  
-### <a name="to-set-a-breakpoint-using-the-new-breakpoint-option-on-the-debug-menu"></a>Hata ayıklama menüsünden Yeni kesme noktası seçeneğini kullanarak bir kesme noktası ayarlamak için  
-  
-1. Üzerinde **hata ayıklama** menüsünde **yeni kesme noktası**.  
-  
-2. Tıklayın **sonu işlevi**.  
-  
-     **Yeni kesme noktası** iletişim kutusu açılır.  
-  
-3. Bir etkinlik adını **işlevi** bu söz dizimini kullanarak metin kutusu: `QualifiedActivityId[:[FullClassName][:InstanceId]]`.  
-  
+    > Çağrılan iş akışlarında kesme noktalarının ayarlanması desteklenmez.
+
+### <a name="to-set-a-breakpoint-using-the-new-breakpoint-option-on-the-debug-menu"></a>Hata ayıklama menüsündeki yeni kesme noktası seçeneğini kullanarak bir kesme noktası ayarlamak için
+
+1. **Hata Ayıkla** menüsünde **Yeni kesme noktası**' nı seçin.
+
+2. **Işlevde kes**' e tıklayın.
+
+     **Yeni kesme noktası** iletişim kutusu açılır.
+
+3. **İşlev** metin kutusunda bir etkinliğin adını şu sözdizimini kullanarak belirtin: `QualifiedActivityId[:[FullClassName][:InstanceId]]`.
+
     > [!NOTE]
-    > Etkinlik adı yerine isteğe bağlı olarak, **işlevi** metin kutusunda, iş akışı aktivitesi mutlak yolunu belirterek bir kesme noktası ayarlayabilirsiniz. Örneğin, adında bir iş akışı çözümü olduğunu varsayalım **WorkflowConsoleApplication1** ve bir iş akışında adlı çözüm **Workflow1** adlı bir etkinlik kullanan **Delay1**. Etkinlik adı kullanabileceğiniz **Delay1** veya yol olarak belirtmek **Delay1:WorkflowConsoleApplication1.Workflow1** veya **Delay1:WorkflowConsoleApplication1.Workflow1: { 6614886A-608E-412B-BF98-99FF1559DDDF}**.  
-  
-4. Seçin **kullanım IntelliSense** işlev adını doğrulamak için onay kutusunu işaretleyin.  
-  
-     Bu onay kutusu seçili değilse, hiçbir kesme noktası adı doğrulama gerçekleştirilir.  
-  
-5. Seçin **iş akışı** gelen **dil** listesi.  
-  
-6. **Tamam**'ı tıklatın.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Eski iş akışlarında hata ayıklama](../workflow-designer/debugging-legacy-workflows.md)   
- [Windows Workflow Foundation için Visual Studio Hata Ayıklayıcısını Çağırma (Eski)](../workflow-designer/invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md)
+    > İsteğe bağlı olarak, **işlev** metin kutusunda etkinlik adını kullanmak yerine, iş akışı etkinliğinin mutlak yolunu belirterek bir kesme noktası ayarlayabilirsiniz. Örneğin, **WorkflowConsoleApplication1** adlı bir iş akışı çözümünüz olduğunu ve **Workflow1** adlı çözümde **Delay1**adlı bir etkinlik kullanan bir iş akışı olduğunu varsayalım. **Delay1** etkinlik adını kullanabilir veya yolu **Delay1: WorkflowConsoleApplication1. Workflow1** veya **Delay1: WorkflowConsoleApplication1. Workflow1: {6614886A-608E-412B-BF98-99FF1559DDDF}** olarak belirtebilirsiniz.
+
+4. İşlev adını doğrulamak için **IntelliSense kullan** onay kutusunu seçin.
+
+     Bu onay kutusu seçili değilse, kesme noktası adı doğrulaması yapılmaz.
+
+5. **Dil** listesinden **iş akışı** ' nı seçin.
+
+6. **Tamam**'a tıklayın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Windows Workflow Foundation Için Visual Studio hata ayıklayıcısını çağıran](../workflow-designer/invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md) [eski Iş akışlarının hatalarını ayıklama](../workflow-designer/debugging-legacy-workflows.md) (eski)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bulma ve düzenleme proje ve öğe şablonları | Microsoft Docs'
+title: 'Nasıl yapılır: proje ve öğe şablonlarını bulma ve düzenleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,168 +13,164 @@ helpviewer_keywords:
 - templates [Visual Studio], locations
 ms.assetid: 71f9ed52-c9c9-4818-9bce-c279ffaa0438
 caps.latest.revision: 28
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4b14a374214a605ec718ad60c6942752f3134edd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b5f55de910eb77ec7ccbd205b78d5c95039e6b39
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63416731"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651867"
 ---
-# <a name="how-to-locate-and-organize-project-and-item-templates"></a>Nasıl yapılır: Bulma ve düzenleme proje ve öğe şablonları
+# <a name="how-to-locate-and-organize-project-and-item-templates"></a>Nasıl Yapılır: Proje ve Öğe Şablonlarını Bulma ve Düzenleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Şablon dosyaları, Visual Studio tanır ve böylece şablonları görünür bir konumda yerleştirilmelidir **yeni proje** ve **Yeni Öğe Ekle** iletişim kutuları. Alt kategoriler, ayrıca kullanıcı arabiriminde görünmesi için şablonları için özel alt kategorileri oluşturabilirsiniz.  
-  
-## <a name="locating-templates"></a>Şablonları bulma  
- Varsayılan olarak, Visual Studio'nun proje ve öğe şablonları için iki konumları arar. Bu konumlarda, .vstemplate dosyasını içeren sıkıştırılmış bir dosya varsa, bir şablon içinde görünür **yeni proje** veya **Yeni Öğe Ekle** iletişim kutuları.  
-  
-### <a name="installed-templates"></a>Yüklü Şablonlar  
- Ürün ile birlikte yüklü şablonlar varsayılan olarak bulunur:  
-  
-- \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\\*dil*\\*yerel ayar*\  
-  
-- \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\\*dil*\\*yerel ayar\\*  
-  
-  Örneğin, şu dizin içeren [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] İngilizce için proje şablonları:  
-  
-  C:\\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\  
-  
-### <a name="custom-templates"></a>Özel şablonlar  
- Özel şablonları varsayılan olarak bulunur:  
-  
-- \My Documents\Visual studio *sürüm*\Templates\ProjectTemplates\\*dil*\  
-  
-- \My Documents\Visual studio *sürüm*\Templates\ItemTemplates\\*dil*\  
-  
-  Örneğin, aşağıdaki dizine özel içeren [!INCLUDE[csprcs](../includes/csprcs-md.md)] proje şablonları:  
-  
-  C:\Documents ve Settings\Kullanıcıadı\My belgeleri\\< Visual Studio sürümü\>\Templates\ProjectTemplates\Visual C# \  
-  
-  Bir alt yerelleştirilmiş şablonları için özel şablonlar içermez. Özel şablonlar, varsayılan dizini değiştirebilirsiniz **seçenekleri** iletişim kutusunun **Environment\Projects ve çözümleri**.  
-  
-## <a name="organizing-templates"></a>Şablon düzenleme  
- Kategorileri **yeni proje** ve **Yeni Öğe Ekle** iletişim kutuları, yüklü ve özel şablon konumları mevcut dizin yapılarını yansıtır. Sizin için anlamlı bir şekilde şablonlarınızı düzenlemek için bu dizin yapılarını değiştirebilirsiniz.  
-  
+Şablon dosyaları, şablonların **Yeni proje** ve **Yeni öğe Ekle** Iletişim kutularında görünmesi için Visual Studio 'nun tanıdığı bir konuma yerleştirilmelidir. Alt kategorilerin de Kullanıcı arabiriminde görünmesi için şablonlar için özel alt kategoriler oluşturabilirsiniz.
+
+## <a name="locating-templates"></a>Şablonları bulma
+ Varsayılan olarak, Visual Studio proje ve öğe şablonları için iki konumu arar. Bu konumlarda. vstemplate dosyası içeren sıkıştırılmış bir dosya varsa, **Yeni proje** veya **Yeni öğe Ekle** iletişim kutularında bir şablon görüntülenir.
+
+### <a name="installed-templates"></a>Yüklü şablonlar
+ Varsayılan olarak, ürünle birlikte yüklenen şablonlar şu konumda bulunur:
+
+- \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates \\*dil* \\*yerel ayarı* \
+
+- \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates \\*dil* \\*yerel ayarı \\*
+
+  Örneğin, aşağıdaki dizin Ingilizce için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje şablonlarını içerir:
+
+  C: \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\
+
+### <a name="custom-templates"></a>Özel şablonlar
+ Varsayılan olarak, özel şablonlar içinde bulunur:
+
+- \Bir Studio *sürümü*\ Templates\projecttemplates \\*dil* \
+
+- _Bu Studio *sürümü*\ Templates\ıtemtemplates \\*dil* \
+
+  Örneğin, aşağıdaki dizin özel [!INCLUDE[csprcs](../includes/csprcs-md.md)] proje şablonları içerir:
+
+  C:\Documents and Settings \ \ \ kullanýcýadý \\ < Visual Studio sürümü \> \Templates\ProjectTemplates\Visual C#\
+
+  Özel şablonlar, yerelleştirilmiş şablonlar için bir alt dizin içermez. Özel şablonlar için varsayılan dizini, **Environment\projeleri ve çözümleri**altında **Seçenekler** iletişim kutusunda değiştirebilirsiniz.
+
+## <a name="organizing-templates"></a>Şablonları düzenleme
+ **Yeni proje** ve **Yeni öğe Ekle** iletişim kutularında bulunan kategoriler, yüklü ve özel şablon konumlarında var olan dizin yapılarını yansıtır. Bu dizin yapılarını, şablonlarınızı sizin için anlamlı bir şekilde düzenlemek için değiştirebilirsiniz.
+
 > [!NOTE]
-> Yeni bir kategori programlama dili düzeyinde oluşturulamıyor. Yeni kategori her bir dilin yalnızca oluşturulabilir.  
-  
- Belirli bir dil için yüklü ve özel şablonlar için dizin yapıları aynı yapıda değilse (diğer bir deyişle, vardır altında diğer var olmayan dizinleri altında bir klasör) görünür kategoriler dizisine **yeni Proje** iletişim tüm kategorilerin birleşme olacaktır.  
-  
-### <a name="organizing-installed-templates"></a>Yüklü şablonları düzenleme  
- Yüklü Şablonlar programlama dili klasöründe alt dizinleri oluşturarak düzenleyebilirsiniz. Bu alt dizinleri görünür **yeni proje** ve **Yeni Öğe Ekle** iletişim kutusu olarak her bir dilin sanal klasörler.  
-  
-##### <a name="to-create-new-installed-project-template-categories"></a>Yeni yüklenen proje şablonu kategoriler oluşturmak için  
-  
-1. Yüklü şablon dizini dil klasörde bir klasör oluşturun. Örneğin, bir Office kategori için oluşturmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje şablonları oluşturma şu dizin:  
-  
-    \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\VisualBasic\1033\Office\  
-  
-2. Bu kategori için tüm şablonları yeni klasöre yerleştirin.  
-  
-3. Tüm örneklerini kapatın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-4. Üzerinde **Başlat** menüsünde tıklayın **çalıştırma**, türü **cmd**, tıklatıp **Tamam**.  
-  
-5. Devenv.exe ve türü içeren dizine komut isteminde bulun **devenv /installvstemplates**.  
-  
-6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]'i çalıştırın.  
-  
-7. Üzerinde **dosya** menüsünde tıklatın **yeni**ve ardından **proje**.  
-  
-8. Office kategori göründüğünü doğrulayın **yeni proje** iletişim kutusundaki **proje türleri** bölmesi altında [!INCLUDE[vbprvb](../includes/vbprvb-md.md)].  
-  
-   Proje öğesi şablonları kümesini özel bir klasöre de gruplandırabilirsiniz.  
-  
-##### <a name="to-create-new-installed-item-template-categories"></a>Yeni yüklenen öğe şablonu kategoriler oluşturmak için  
-  
-1. Yüklü şablon dizini dil klasörde bir klasör oluşturun. Örneğin, bir Web kategorisi için oluşturmak için [!INCLUDE[csprcs](../includes/csprcs-md.md)] öğe şablonları oluşturma şu dizin:  
-  
-     \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\CSharp\1033\Web\  
-  
-2. Bu kategori için tüm şablonları yeni klasöre yerleştirin.  
-  
-3. Tüm örneklerini kapatın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-4. Üzerinde **Başlat** menüsünde tıklayın **çalıştırma**, türü **cmd**, tıklatıp **Tamam**.  
-  
-5. Devenv.exe ve türü içeren dizine komut isteminde bulun **devenv/Setup**.  
-  
-6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]'i çalıştırın.  
-  
-7. Bir proje oluşturun veya varolan bir projeyi açın.  
-  
-8. Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**.  
-  
-9. Web kategori göründüğünü doğrulayın **Yeni Öğe Ekle** iletişim kutusundaki **proje türleri** bölmesi.  
-  
-### <a name="organizing-custom-templates"></a>Özel şablonları düzenleme  
- Özel şablonlar özel bir şablon konumda yeni klasörler ekleyerek kendi kategoriler halinde düzenlenebilir. **Yeni proje** iletişim kutusu, şablon kategorilere yaptığınız değişiklikleri yansıtır.  
-  
-##### <a name="to-create-new-custom-project-template-categories"></a>Yeni özel Proje şablonu kategoriler oluşturmak için  
-  
-1. Özel proje şablonu dizini dil klasöründe bir klasör oluşturun. Örneğin, bir HelloWorld kategorisi için oluşturmak için [!INCLUDE[csprcs](../includes/csprcs-md.md)] şablonları, şu dizin oluşturma:  
-  
-    \My Documents\\<Visual Studio version\>\Templates\ProjectTemplates\CSharp\HelloWorld\  
-  
-2. Bu kategori için tüm şablonları yeni klasöre yerleştirin.  
-  
-3. Üzerinde **dosya** menüsünde tıklatın **yeni**ve ardından **proje**.  
-  
-4. HelloWorld kategori göründüğünü doğrulayın **yeni proje** iletişim kutusundaki **proje türleri** bölmesi altında [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
-  
-   Özel öğe şablonları kümesini özel bir klasöre de gruplandırabilirsiniz.  
-  
-##### <a name="to-create-new-custom-item-template-categories"></a>Yeni özel öğe şablonu kategoriler oluşturmak için  
-  
-1. Özel öğesi şablon dizini dil klasöründe bir klasör oluşturun. Örneğin, bir HelloWorld kategorisi için oluşturmak için [!INCLUDE[csprcs](../includes/csprcs-md.md)] şablonları şu dizin oluşturmanız:  
-  
-     \My belgeleri\\< Visual Studio sürümü\>\Templates\ItemTemplates\CSharp\HelloWorld\  
-  
-2. Bu kategori için tüm şablonları yeni klasöre yerleştirin.  
-  
-3. Bir proje oluşturun veya varolan bir projeyi açın.  
-  
-4. Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**.  
-  
-5. HelloWorld kategori göründüğünü doğrulayın **Yeni Öğe Ekle** iletişim kutusundaki **proje türleri** bölmesi.  
-  
-### <a name="displaying-templates-in-parent-categories"></a>Ana kategoride şablonları görüntüleme  
- Alt kategoriler kullanarak kendi üst kategorilerde görüntülenecek şablonlarında etkinleştirebilirsiniz `NumberOfParentCategoriesToRollUp` .vstemplate dosyasında öğe. Bu adımlar, proje şablonları ve öğe şablonları için aynıdır.  
-  
-##### <a name="to-display-templates-in-parent-categories"></a>Üst kategorilerdeki şablonları görüntülemek için  
-  
-1. Şablonu içeren .zip dosyasını bulun.  
-  
-2. .Zip dosyasını çıkartın.  
-  
-3. İçindeki .vstemplate dosyasını açın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-4. İçinde `TemplateData` öğe, Ekle bir `NumberOfParentCategoriesToRollUp` öğesi. Örneğin, aşağıdaki kodu, üst kategori görünür, ancak bundan daha yüksek şablonu sağlar.  
-  
-    ```  
-    <TemplateData>  
-        ...  
-        <NumberOfParentCategoriesToRollUp>  
-            1  
-        </NumberOfParentCategoriesToRollUp>  
-        ...  
-    </TemplateData>  
-    ```  
-  
-5. .vstemplate dosyasını kaydedip kapatın.  
-  
-6. Şablonunuzda dosyaları seçin, seçime sağ tıklayın, **göndermek için**ve ardından **sıkıştırılmış (daraltılmış) klasör**. Dosyaları bir .zip dosyasına sıkıştırılır.  
-  
-7. Ayıklanan şablon dosyalarını ve eski şablonu .zip dosyasını silin.  
-  
-8. Yeni bir .zip dosyası silinen .zip dosyasını olduğu dizine yerleştirin.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Şablonları özelleştirme](../ide/customizing-project-and-item-templates.md)   
- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)   
- [NumberOfParentCategoriesToRollUp (Visual Studio şablonları)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)   
- [Nasıl yapılır: Proje şablonları oluşturma](../ide/how-to-create-project-templates.md)   
- [Nasıl yapılır: Öğe Şablonları Oluşturma](../ide/how-to-create-item-templates.md)
+> Programlama dili düzeyinde yeni bir kategori oluşturamazsınız. Yeni kategoriler yalnızca her bir dil içinde oluşturulabilir.
+
+ Belirli bir dile ait yüklenen ve özel şablonların dizin yapıları aynı yapıya sahip değilse (diğer bir deyişle, diğeri altında bulunmayan bir klasör altında dizinler vardır) **Yeni projede** görünen kategori kümesi iletişim kutusu tüm kategorilerin birleşmesi olacaktır.
+
+### <a name="organizing-installed-templates"></a>Yüklü şablonları düzenleme
+ Programlama dili klasöründe alt dizinler oluşturarak, yüklü şablonları düzenleyebilirsiniz. Bu alt dizinler **Yeni projede** görüntülenir ve **Yeni öğe** iletişim kutularında her bir dilde sanal klasör olarak görünür.
+
+##### <a name="to-create-new-installed-project-template-categories"></a>Yeni yüklenen proje şablonu kategorileri oluşturmak için
+
+1. Yüklü şablon dizininin dil klasöründe bir klasör oluşturun. Örneğin, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje şablonları için bir Office kategorisi oluşturmak için aşağıdaki dizini oluşturun:
+
+    \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\VisualBasic\1033\Office\
+
+2. Bu kategorinin tüm şablonlarını yeni klasöre yerleştirin.
+
+3. Tüm [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneklerini kapatın.
+
+4. **Başlat** menüsünde, **Çalıştır**' a tıklayın, **cmd**yazın ve **Tamam**' a tıklayın.
+
+5. Komut isteminde, devenv. exe dosyasını içeren dizini bulun ve **devenv/ınstallvstempsyonlar**yazın.
+
+6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]'i çalıştırın.
+
+7. **Dosya** menüsünde **Yeni**' ye ve ardından **Proje**' ye tıklayın.
+
+8. Office kategorisinin **Yeni proje** iletişim kutusunda, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] altındaki **Proje türleri** bölmesinde göründüğünü doğrulayın.
+
+   Ayrıca, proje öğesi şablonlarının bir alt kümesini özel bir klasöre gruplayabilirsiniz.
+
+##### <a name="to-create-new-installed-item-template-categories"></a>Yeni yüklenen öğe şablonu kategorileri oluşturmak için
+
+1. Yüklü şablon dizininin dil klasöründe bir klasör oluşturun. Örneğin, [!INCLUDE[csprcs](../includes/csprcs-md.md)] öğe şablonları için bir Web kategorisi oluşturmak için aşağıdaki dizini oluşturun:
+
+     \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\CSharp\1033\Web\
+
+2. Bu kategorinin tüm şablonlarını yeni klasöre yerleştirin.
+
+3. Tüm [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneklerini kapatın.
+
+4. **Başlat** menüsünde, **Çalıştır**' a tıklayın, **cmd**yazın ve **Tamam**' a tıklayın.
+
+5. Komut isteminde, devenv. exe dosyasını içeren dizini bulun ve **devenv/setup**yazın.
+
+6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]'i çalıştırın.
+
+7. Proje oluşturun veya var olan bir projeyi açın.
+
+8. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
+
+9. Web kategorisinin, **Proje türleri** bölmesinde **Yeni öğe Ekle** iletişim kutusunda göründüğünü doğrulayın.
+
+### <a name="organizing-custom-templates"></a>Özel şablonları düzenleme
+ Özel şablon konumunda yeni klasörler eklenerek, özel şablonlar kendi kategorilerine düzenlenebilir. **Yeni proje** iletişim kutusu, şablon kategorileriniz üzerinde yaptığınız tüm değişiklikleri yansıtır.
+
+##### <a name="to-create-new-custom-project-template-categories"></a>Yeni özel proje şablonu kategorileri oluşturmak için
+
+1. Özel proje şablonu dizinindeki dil klasöründe bir klasör oluşturun. Örneğin, [!INCLUDE[csprcs](../includes/csprcs-md.md)] şablonlar için HelloWorld kategorisi oluşturmak için aşağıdaki dizini oluşturursunuz:
+
+    \Documents \\ < Visual Studio sürümü \> \Templates\ProjectTemplates\CSharp\HelloWorld\
+
+2. Bu kategorinin tüm şablonlarını yeni klasöre yerleştirin.
+
+3. **Dosya** menüsünde **Yeni**' ye ve ardından **Proje**' ye tıklayın.
+
+4. **Yeni proje** iletişim kutusunda, [!INCLUDE[csprcs](../includes/csprcs-md.md)] altındaki **Proje türleri** bölmesinde HelloWorld kategorisinin göründüğünü doğrulayın.
+
+   Özel öğe şablonlarının bir alt kümesini özel bir klasöre de gruplandırabilirsiniz.
+
+##### <a name="to-create-new-custom-item-template-categories"></a>Yeni özel öğe şablonu kategorileri oluşturmak için
+
+1. Özel öğe şablonu dizinindeki dil klasöründe bir klasör oluşturun. Örneğin, [!INCLUDE[csprcs](../includes/csprcs-md.md)] şablonlar için HelloWorld kategorisi oluşturmak için aşağıdaki dizini oluşturun:
+
+     \Documents \\ < Visual Studio sürümü \> \Templates\ıtemtemplates\csharp\helloworld\
+
+2. Bu kategorinin tüm şablonlarını yeni klasöre yerleştirin.
+
+3. Proje oluşturun veya var olan bir projeyi açın.
+
+4. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
+
+5. **Proje türleri** bölmesinde **Yeni öğe Ekle** iletişim kutusunda HelloWorld kategorisinin göründüğünü doğrulayın.
+
+### <a name="displaying-templates-in-parent-categories"></a>Şablonları üst kategorilerde görüntüleme
+ Alt kategorilerindeki şablonları,. vstemplate dosyasındaki `NumberOfParentCategoriesToRollUp` öğesini kullanarak üst kategorilerinde görüntülenmek üzere etkinleştirebilirsiniz. Bu adımlar hem proje şablonları hem de öğe şablonları için aynıdır.
+
+##### <a name="to-display-templates-in-parent-categories"></a>Şablonları üst kategorilerde görüntüleme
+
+1. Şablonu içeren. zip dosyasını bulun.
+
+2. . Zip dosyasını ayıklayın.
+
+3. @No__t_0. vstemplate dosyasını açın.
+
+4. @No__t_0 öğesinde, bir `NumberOfParentCategoriesToRollUp` öğesi ekleyin. Örneğin, aşağıdaki kod, şablonu üst kategoride görünür hale getirir, ancak daha fazlasını yapmaz.
+
+    ```
+    <TemplateData>
+        ...
+        <NumberOfParentCategoriesToRollUp>
+            1
+        </NumberOfParentCategoriesToRollUp>
+        ...
+    </TemplateData>
+    ```
+
+5. . Vstemplate dosyasını kaydedin ve kapatın.
+
+6. Şablonunuzda dosyaları seçin, seçime sağ tıklayın, **Gönder ' e**tıklayın ve ardından **Sıkıştırılmış (daraltılmış) klasör**' e tıklayın. Dosyalar bir. zip dosyasında sıkıştırılır.
+
+7. Ayıklanan şablon dosyalarını ve eski şablon. zip dosyasını silin.
+
+8. Yeni. zip dosyasını silinen. zip dosyasına sahip olan dizine yerleştirin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Şablonları özelleştirme](../ide/customizing-project-and-item-templates.md) [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md) [NumberOfParentCategoriesToRollUp (Visual Studio şablonları)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) [nasıl yapılır: proje şablonları oluşturma](../ide/how-to-create-project-templates.md) [nasıl yapılır: öğe şablonları](../ide/how-to-create-item-templates.md) oluşturma

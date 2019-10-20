@@ -3,17 +3,17 @@ title: XML şema Tasarımcısı grafik görünümü
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5881afde-3f24-4eb9-bff8-6cb3fc8aade7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a9ef512108ae31617257becf702c2b820c0ab85
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: b19f8f64bc4fe63d111f4d5c61e96d6fff88a14b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918647"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646046"
 ---
 # <a name="graph-view"></a>Grafik görünümü
 
@@ -35,7 +35,7 @@ Tasarım yüzeyi boşsa, XML Düzenleyicisi, **XML şema Gezgini**ve filigran g�
 
 ![XSD Tasarımcısı; Grafik görünümü](../xml-tools/media/xsdgraphviewwatermark.gif)
 
-Şema kümesinde hatalar varsa, listenin sonunda aşağıdaki metin görüntülenir: "Kümesindeki hataları görüntülemek ve onarmak için Hata Listesi kullanın."
+Şema kümesinde hatalar varsa, listenin sonunda aşağıdaki metin görüntülenir: "küme içindeki hataları görüntülemek ve onarmak için Hata Listesi kullanın."
 
 ## <a name="breadcrumb-bar"></a>İçerik haritası çubuğu
 
@@ -101,16 +101,16 @@ Grafik görünümü etkinken aşağıdaki XSD araç çubuğu düğmeleri etkinle
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir:CTRL+**1**.|
-|**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir:CTRL+**2**.|
-|**Graf görünümünü göster**|[Grafik görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir:CTRL+**3**.|
+|**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl** +**1**.|
+|**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl** +**2**.|
+|**Graf görünümünü göster**|[Grafik görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **Ctrl** +**3**.|
 |**Çalışma alanını temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
 |**Çalışma alanından Kaldır**|Seçili düğümleri çalışma alanından ve tasarım yüzeyinden kaldırır.|
 |**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır. Bu seçenek, Içerik modeli görünümünde ve grafik görünümünde etkinleştirilir.|
-|**Soldan sağa**|Grafik görünümündeki düzeni düğümlerin soldan sağa hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir:Alt+**sağ ok**.|
-|**Sağdan sola**|Grafik görünümündeki düzeni düğümlerin sağdan sola hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir:Alt+**sol ok**.|
-|**Yukarıdan aşağıya**|Grafik görünümündeki düzeni düğümlerin üst-alt hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir:Alt+**aşağı ok**.|
-|**Aşağıdan yukarıya**|Grafik görünümündeki düzeni düğümlerin aşağıdan yukarıya hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir:Alt+**yukarı ok**.|
+|**Soldan sağa**|Grafik görünümündeki düzeni düğümlerin soldan sağa hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **Alt** +**sağ ok**kullanılarak erişilebilir.|
+|**Sağdan sola**|Grafik görünümündeki düzeni düğümlerin sağdan sola hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **Alt** +**sol ok**.|
+|**Yukarıdan aşağıya**|Grafik görünümündeki düzeni düğümlerin üst-alt hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **alt** +**aşağı ok**.|
+|**Aşağıdan yukarıya**|Grafik görünümündeki düzeni düğümlerin aşağıdan yukarıya hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **Alt** +**yukarı ok**kullanılarak erişilebilir.|
 
 ## <a name="panscroll"></a>Kaydır/KAYDIR
 

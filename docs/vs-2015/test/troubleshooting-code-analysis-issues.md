@@ -6,15 +6,15 @@ ms.technology: vs-ide-test
 ms.topic: troubleshooting
 ms.assetid: 61c7e44d-2780-4df5-9bcb-49e40c1152fc
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b2efecdefb693653ff9916e798d1a11afe44e4a5
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 4eee70b3184496e8dbb7d784501a5cac2aac00ee
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416904"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672112"
 ---
 # <a name="troubleshooting-code-analysis-issues"></a>Kod Analizi Sorunlarını Giderme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,9 +25,9 @@ Bu konu, aşağıdaki Visual Studio kod analizi sorunlarıyla ilgili sorun gider
 
 ## <a name="ChildRuleSetChangesInPreviousVersions"></a>Visual Studio 2010 kural kümesindeki değişiklikler önceki Visual Studio sürümlerine yansıtılmıyor
 
-Öğesinde [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] bir alt kural kümesi içeren bir kural kümesi oluşturduğunuzda, Visual Studio 'nun önceki bir sürümünü kullanan bilgisayarlarda kod analizi çalıştırmaları için alt kural kümesine yapılan bir değişiklik uygulanmayabilir. Bu sorunu çözmek için, üst kural kümesini, alt kural kümesini içeren kural kümesi olan bir yeniden yazmayı zorlamanız gerekir.
+Bir alt kural kümesi içeren [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] bir kural kümesi oluşturduğunuzda, alt kural kümesindeki bir değişiklik, Visual Studio 'nun önceki bir sürümünü kullanan bilgisayarlarda kod analizi çalıştırmaları halinde uygulanmayabilir. Bu sorunu çözmek için, üst kural kümesini, alt kural kümesini içeren kural kümesi olan bir yeniden yazmayı zorlamanız gerekir.
 
-1. İçinde [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]üst kural kümesini açın.
+1. @No__t_0 üst kural kümesini açın.
 
 2. Bir kural ekleme veya kaldırma gibi bir değişiklik yapın ve ardından kural kümesini kaydedin.
 

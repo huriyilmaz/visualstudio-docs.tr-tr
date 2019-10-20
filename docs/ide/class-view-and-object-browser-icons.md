@@ -11,53 +11,53 @@ helpviewer_keywords:
 - icons, IntelliSense
 - symbols, Object Browser icons
 - Object Browser, icons in Class View
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9814b03d0a8cd8733c9fd48b4e49c2cf306a8a44
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 589ec840b49d250591e2c477989d4422273cac31
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976100"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647631"
 ---
 # <a name="class-view-and-object-browser-icons"></a>Sınıf Görünümü ve Nesne Tarayıcısı simgeleri
 
-**Sınıf Görünümü** ve **Nesne Tarayıcısı** kod varlıklar, örneğin temsil eden simgeler, ad alanları, sınıflar, İşlevler ve değişkenler görüntüler. Aşağıdaki tabloda gösterilmiştir ve simgeleri açıklar.
+**Sınıf görünümü** ve **nesne tarayıcısı** ; Örneğin, ad alanları, sınıflar, işlevler ve değişkenler gibi kod varlıklarını temsil eden simgeler görüntüler. Aşağıdaki tabloda, simgeler gösterilmektedir ve açıklanmaktadır.
 
 |Simge|Açıklama|Simge|Açıklama|
 |----------|-----------------|----------|-----------------|
-|![Namespace simgesi](../ide/media/vxnamespace_icon.gif)|Ad Alanı|![Bildirim simgesi](../ide/media/vxmethod_icon.gif)|Yöntem veya işlev|
+|![Ad alanı simgesi](../ide/media/vxnamespace_icon.gif)|Ad Alanı|![Bildirim simgesi](../ide/media/vxmethod_icon.gif)|Yöntem veya Işlev|
 |![Sınıf simgesi](../ide/media/vxclass_icon.gif)|örneği|![İşleç simgesi](../ide/media/vxoperator_icon.gif)|İşleç|
-|![Lolipop arabirimini sembolü](../ide/media/vxinterface_icon.gif)|Arabirim|![Özellik simgesi](../ide/media/vxproperty_icon.gif)|Özellik|
+|![Lolipop arabirimi simgesi](../ide/media/vxinterface_icon.gif)|Arabirim|![Özellik simgesi](../ide/media/vxproperty_icon.gif)|Özellik|
 |![Yapı simgesi](../ide/media/vxstruct_icon.gif)|Yapı|![Alan simgesi](../ide/media/vxfield_icon.gif)|Alan veya değişken|
 |![Birleşim simgesi](../ide/media/vxunion_icon.gif)|UNION|![Olay simgesi](../ide/media/vxevent_icon.gif)|Olay|
-|![Sabit listesi simgesi](../ide/media/vxenum_icon.gif)|Enum|![Sabit simgesi](../ide/media/vxconstant_icon.gif)|Sabit|
-|![Tür tanımı simgesi](../ide/media/vxtypedef_icon.gif)|Tür tanımı|![Öğe numaralandırma sembolü](../ide/media/vxenumitem_icon.gif)|Sabit listesi öğesi|
-|![Visual Studio modülü simgesi](../ide/media/vxmodule_icon.gif)|Modül|![Eşleme öğesi simgesi](../ide/media/vxmapitem_icon.gif)|Eşleme öğesi|
-|![Uzantı yöntemi simgesi](../ide/media/extensionmethod.gif)|Genişletme yöntemi|![Bildirim simgesi](../ide/media/vxmethod_icon.gif)|Dış bildirimi|
-|![Temsilci simgesi](../ide/media/vxdelegate_icon.gif)|Temsilci|![Sınıf Görünümü ve nesne tarayıcısı hata simgesi](../ide/media/erroricon.gif)|Hata|
+|![Sabit Listesi simgesi](../ide/media/vxenum_icon.gif)|Enum|![Sabit simgesi](../ide/media/vxconstant_icon.gif)|Sabit|
+|![Tür tanımı simgesi](../ide/media/vxtypedef_icon.gif)|Genişletiyor|![Öğe sembolünü numaralandır](../ide/media/vxenumitem_icon.gif)|Enum öğesi|
+|![Visual Studio modül simgesi](../ide/media/vxmodule_icon.gif)|Modül|![Harita öğesi simgesi](../ide/media/vxmapitem_icon.gif)|Eşleme öğesi|
+|![Uzantı yöntemi simgesi](../ide/media/extensionmethod.gif)|Genişletme yöntemi|![Bildirim simgesi](../ide/media/vxmethod_icon.gif)|Dış bildirim|
+|![Temsilci simgesi](../ide/media/vxdelegate_icon.gif)|Temsilci|![Sınıf Görünümü ve Nesne Tarayıcısı için hata simgesi](../ide/media/erroricon.gif)|Hata|
 |![Özel durum simgesi](../ide/media/vxexception_icon.gif)|Özel Durum|![Şablon simgesi](../ide/media/vxtemplate_icon.gif)|Şablon|
-|![Harita simgesi](../ide/media/vxmap_icon.gif)|Eşleme|![Hata ünlem işareti sembolü](../ide/media/vxerror_icon.gif)|Bilinmiyor|
-|![Tür iletme simgesi](../ide/media/ob_type_forward.gif)|Tür iletme|||
+|![Harita simgesi](../ide/media/vxmap_icon.gif)|Harita|![Hata ünlem noktası simgesi](../ide/media/vxerror_icon.gif)|Bilinmiyor|
+|![Tür Iletme simgesi](../ide/media/ob_type_forward.gif)|Tür Iletme|||
 
 ## <a name="signal-icons"></a>Sinyal simgeleri
 
-Aşağıdaki sinyal simgeleri, önceki tüm simgeleri uygulamak ve kendi erişilebilirlik gösterir.
+Aşağıdaki sinyal simgeleri önceki tüm simgelere uygulanır ve erişilebilirliğini gösterir.
 
 |Simge|Açıklama|
 |----------|-----------------|
-|\<Sinyal simge yok >|Ortak alan. Erişilebilir herhangi bir yere bu bileşeni ve başvurduğu herhangi bir bileşeni.|
-|![Sembol sinyal korumalı](../ide/media/vxsignal_icon_key.gif)|Korumalı. Kapsayan sınıfı türü veya bunları içeren sınıfı veya türü türetilmiş erişilebilir.|
-|![Sinyal özel simge](../ide/media/vxsignal_icon_lock.gif)|Özel. Yalnızca kapsayan sınıfı veya türü içinde erişilebilir.|
-|![Sembol korumalı sinyali](../ide/media/vxsignal_icon_envelope.gif)|Korumalı.|
-|![Sinyal arkadaş&#47;iç simgesi](../ide/media/vxsignal_icon_diamond.gif)|İç arkadaş /. Yalnızca proje erişilebilir.|
-|![Sinyal simgesi oku](../ide/media/vxsignal_icon_arrow.gif)|Kısayol. Nesne için bir kısayol.|
+|\<No sinyal simgesi >|Geneldir. Bu bileşenin her yerinden ve ona başvuran herhangi bir bileşenden erişilebilir.|
+|![Sinyal korumalı simgesi](../ide/media/vxsignal_icon_key.gif)|Korunamadı. Kapsayan sınıf veya türden ya da kapsayan sınıf veya türden türeten erişilebilir.|
+|![Sinyal özel simgesi](../ide/media/vxsignal_icon_lock.gif)|Özelleştirme. Yalnızca kapsayan sınıfta veya türünde erişilebilir.|
+|![Sinyal korumalı simgesi](../ide/media/vxsignal_icon_envelope.gif)|Sealed.|
+|![Sinyal arkadaş&#47;iç simgesi](../ide/media/vxsignal_icon_diamond.gif)|Arkadaş/Iç. Yalnızca projeden erişilebilir.|
+|![Sinyal simgesi ok](../ide/media/vxsignal_icon_arrow.gif)|Kısayol. Nesnenin bir kısayolu.|
 
 > [!NOTE]
-> Projenize bir kaynak denetim veritabanında yer alıyorsa ek sinyal simgeleri kaynak denetimi durumunu belirtmek için görüntülenen, gibi iade veya olabilir kullanıma alındı.
+> Projeniz bir kaynak denetim veritabanına dahil edildiğinde, iade edilen veya kullanıma alma gibi kaynak denetimi durumunu göstermek için ek sinyal simgeleri gösterilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

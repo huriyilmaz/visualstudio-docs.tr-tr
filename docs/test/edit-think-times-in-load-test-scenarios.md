@@ -1,5 +1,5 @@
 ---
-title: Yük testi için düşünme sürelerini
+title: Yük testi için düşünme süreleri
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,55 +7,55 @@ helpviewer_keywords:
 - load tests, adding delays
 - load tests, changing think times
 ms.assetid: 8e03bee5-ab7b-4b40-9497-9dbe91ccb90e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e19e1cb4f9b49c40923d96b177ceb4d6c31b746f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 661a31411a561f15809a10fb15fd71a29e6a64fa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62783341"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672946"
 ---
-# <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>Yük testleri senaryolarında Web sitesi insan etkileşimi gecikmelerini benzetmek için Düşünme zamanlarını düzenleme
+# <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>Yük testi senaryolarında Web sitesi insan etkileşimi gecikmelerini benzetmek için düşünme zamanlarını düzenleyin
 
-Düşünme süreleri, insanların bir Web sitesiyle etkileşimleri ile arasında beklemesine neden olan insan davranışını benzetmekte kullanılır. Düşünme süreleri, bir web performans testindeki istekleri ve bir yük testi senaryosunda test tekrarları arasında oluşur. Bir yük testinde Düşünme süreleri kullanarak daha kesin yükleme benzetimleri oluşturmak yararlı olabilir. Düşünme süreleri kullanılan veya yükleme testlerinde kullanılıp değiştirebilirsiniz. Düşünme süreleri Yükleme kullanılan içinde testleri karar **Yük Testi Düzenleyicisi**.
+Düşünme süreleri, insanların bir Web sitesi ile etkileşimler arasında beklemesine neden olan insan davranışlarının benzetimini yapmak için kullanılır. Bir Web performans testindeki istekler arasında ve bir yük testi senaryosunda test yinelemeleri arasında düşünme süreleri oluşur. Bir yük testinde düşünme sürelerinin kullanılması, daha doğru yük benzetimleri oluşturmak için yararlı olabilir. Düşünme sürelerinin yük testlerinde kullanılıp kullanılmadığını veya yoksayılmadığını değiştirebilirsiniz. Düşünme sürelerinin **Yük Testi Düzenleyicisi**Yük testlerinizde kullanılıp kullanılmadığını değiştirirsiniz.
 
-*Düşünme profili* bir yük testi senaryosunda uygulandığı bir ayardır. Düşünme sürelerinin kaydedilip kaydedilmediğini tek tek web performansı testleri yük testi sırasında kullanılan ayarı belirler. Kullanmak istediğiniz Düşünme süreleri bazı web performans testlerinde ancak bazı durumlarda, bunları farklı senaryolarda yerleştirmelisiniz. Senaryoları hakkında daha fazla bilgi için bkz. [yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md).
+*Düşünme profili* , bir yük testinde senaryoya uygulanan bir ayardır. Ayar, Web performans testlerinde kaydedilmiş düşünme sürelerinin yük testi sırasında kullanılıp kullanılmayacağını belirler. Düşünme sürelerini bazı Web başarım testlerinde kullanmak ancak bazılarında değil de kullanmak istiyorsanız, bunları farklı senaryolara yerleştirmeniz gerekir. Senaryolar hakkında daha fazla bilgi için bkz. [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md).
 
-Başlangıçta kullanarak yük testi oluşturduğunuzda yük testlerinizi Düşünme süreleri kullanıp kullanmayacağınızı ayarlarsınız **Yeni Yük Testi Sihirbazı**. Daha fazla bilgi için [yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md).
+Başlangıçta, **yeni Yük Testi Sihirbazı**kullanarak yük testi oluşturduğunuzda, Yük testlerinizde düşünme süreleri kullanıp kullanmayacağınızı ayarlarsınız. Daha fazla bilgi için bkz. [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md).
 
-**Düşünme profili** seçenekleri, aşağıdaki listede açıklanmıştır:
+**Düşünme profili** seçenekleri aşağıdaki listede açıklanmıştır:
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Kapalı**
+**Dışına**
 
-Düşünme süreleri göz ardı edilir. Yoğun web sunucunuza stres testi uygulamak için en fazla yüklemeyi oluşturmak istiyorsanız bu ayarı kullanın. Bir web sunucusu ile daha gerçekçi Kullanıcı etkileşimlerine çalışılırken kullanmayın.
+Düşünme süreleri yok sayılır. Web sunucunuzu yoğun bir şekilde vurgulamak için maksimum yük oluşturmak istediğinizde bu ayarı kullanın. Bir Web sunucusuyla daha gerçekçi kullanıcı etkileşimleri oluşturmaya çalışırken bu uygulamayı kullanmayın.
 
-**üzerinde**
+**Dayanır**
 
-Web performans testinde tam olarak kaydedilmiş Düşünme süreleri kullanılır. Tam olarak kayıtlı web performans testlerini çalıştırma birden çok kullanıcının benzetimini yapar. Bir yük testi benzetimini yapar çünkü aynı kullanarak birden çok kullanıcı zaman bir istemeyiz yük düzeni eşitlenmiş sanal kullanıcı oluşturabilir düşünün.
+Düşünme süreleri, tam olarak Web performans testinde kaydedildikleri gibi kullanılır. Web performans testlerini tamamen kaydedilmiş şekilde çalıştıran birden çok kullanıcının benzetimini yapar. Bir yük testi birden çok kullanıcının benzetimini yaptığından, aynı düşünme süresini kullanmak eşitlenen sanal kullanıcıların doğal olmayan yük düzenlerini oluşturabilir.
 
 **Normal dağıtım**
 
-Düşünme süreleri kullanılır, ancak normal bir eğri üzerinde değişir. Daha gerçekçi bir benzetimi sanal kullanıcı istekleri arasında düşünme sürelerini biraz değiştirerek sağlar.
+Düşünme süreleri kullanılır, ancak normal bir eğri üzerinde değiştirilebilir. İstekler arasında düşünme süresini biraz değiştirerek sanal kullanıcıların daha gerçekçi bir benzetimi sağlar.
 
 > [!NOTE]
-> Yük testi senaryosu özelliklerini ve açıklamalarının tam listesi için bkz: [yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md).
+> Yük testi senaryosu özelliklerinin ve açıklamalarının tüm listesi için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
 
-## <a name="change-the-think-profile"></a>Düşünme Profili Değiştir
+## <a name="change-the-think-profile"></a>Düşünme profilini değiştirme
 
-### <a name="to-change-a-think-profile-in-a-load-test-scenario"></a>Bir yük testi senaryosunda bir Düşünme profili değiştirmek için
+### <a name="to-change-a-think-profile-in-a-load-test-scenario"></a>Bir yük testi senaryosunda bir düşünme profilini değiştirmek için
 
-1. Web performansı ve yük testi projesinden, bir yük testi açın.
+1. Web performans ve yük testi projesinden bir yük testi açın.
 
-2. İçinde **Yük Testi Düzenleyicisi**, değiştirmek istediğiniz senaryoyu düğümü seçin **Düşünme profili**. **Düşünme profili** görüntülenen **özellikleri** penceresi. Tuşuna **F4** görüntülenecek **özellikleri** penceresi.
+2. **Yük Testi Düzenleyicisi**, **Düşünme profilini**değiştirmek istediğiniz senaryo düğümünü seçin. **Düşünme profili** **Özellikler** penceresinde görüntülenir. **Özellikler** penceresini göstermek için **F4** tuşuna basın.
 
-3. Değişiklik **Düşünme profili** özelliğinde **özellikleri** penceresi.
+3. **Özellikler** penceresinde **Düşünme profili** özelliğini değiştirin.
 
-4. Özelliklerini değiştirme işlemini tamamladıktan sonra seçin **Kaydet** üzerinde **dosya** menüsü. Bu gibi durumlarda, Yük testiniz daha sonra yeni bir Düşünme profili ile çalıştırabilirsiniz.
+4. Özellikleri değiştirmeyi bitirdikten sonra **Dosya** menüsünde **Kaydet** ' i seçin. Ardından, yeni düşünme profiliyle yük testinizi çalıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını Düzenle](../test/edit-load-test-scenarios.md)

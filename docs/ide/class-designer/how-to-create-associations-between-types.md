@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Sınıf Tasarımcısı) türler arasında ilişkilendirme oluşturma'
+title: 'Nasıl yapılır: türler arasında Ilişkilendirme oluşturma (Sınıf Tasarımcısı)'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - associations, types
 - association lines
 ms.assetid: adccb9c8-2f8a-4086-9fa9-f70f99fb6e00
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 723d1565dae55852829daf0038201d0c8685b3ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 74fdc2ce798380aace3a2bce714fd5627799b564
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975391"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631787"
 ---
-# <a name="how-to-create-associations-between-types-in-class-designer"></a>Nasıl yapılır: Sınıf tasarımcısında türler arasında ilişkilendirme oluşturma
+# <a name="how-to-create-associations-between-types-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı türler arasında ilişkilendirme oluşturma
 
-İlişkilendirme satırları **Sınıf Tasarımcısı** bir diyagramdaki sınıfların nasıl ilişkili olduğunu gösterir. İlişkilendirme çizgisi, projenizdeki başka bir sınıfın özellik veya alan türü olan bir sınıfı temsil eder. İlişkilendirme çizgileri genellikle, projenizdeki sınıflar arasında en önemli ilişkileri göstermek için kullanılır.
+**Sınıf Tasarımcısı** içindeki ilişkilendirme çizgileri, diyagramdaki sınıfların nasıl ilişkili olduğunu gösterir. İlişkilendirme çizgisi, projenizdeki başka bir sınıfın özellik veya alan türü olan bir sınıfı temsil eder. İlişkilendirme çizgileri genellikle, projenizdeki sınıflar arasında en önemli ilişkileri göstermek için kullanılır.
 
 Tüm alanları ve özellikleri ilişkilendirmeler halinde görüntüleyebilirsiniz; bununla birlikte diyagramda vurgulamak istediğiniz unsura bağlı olarak yalnızca önemli üyeleri ilişkilendirme olarak göstermek daha anlamlı olur. (Daha az önemli üyeleri normal üye olarak gösterebilir veya bütünüyle gizleyebilirsiniz.)
 
@@ -34,7 +34,7 @@ Tüm alanları ve özellikleri ilişkilendirmeler halinde görüntüleyebilirsin
 
 ## <a name="to-define-an-association-line-in-the-class-diagram"></a>Sınıf Diyagramı'nda bir ilişkilendirme çizgisi tanımlamak için
 
-1. Araç Kutusu'nda, altında **Sınıf Tasarımcısı**seçin **ilişkilendirme**.
+1. Araç kutusunda, **Sınıf Tasarımcısı**altında **ilişkilendirme**' yi seçin.
 
 2. İlişkilendirme ile bağlamak istediğiniz iki şekil arasına bir çizgi çizin.
 
@@ -46,14 +46,14 @@ Diyagram yüzeyinde ilişkilendirme çizgisinin etiketine tıklayın ve etiketi 
 
 Alternatif olarak, aşağıdaki adımları izleyin:
 
-1. İlişkilendirme olarak gösterilen özelliği içeren şekle seçin.
+1. İlişki olarak gösterilen özelliği içeren şekli seçin.
 
-   Şekil odağı alır ve üyeleri görüntülemek **sınıf ayrıntıları** ve **özellikleri** windows.
+   Şekil odağı ve üyelerini edinir **Sınıf Ayrıntıları** ve **Özellikler** penceresinde görüntüler.
 
-2. Her ikisinde **sınıf ayrıntıları** veya **özellikleri** penceresinde, bu özellik ve ENTER tuşuna için ad alanını Düzenle **Enter**.
+2. **Sınıf Ayrıntıları** veya **Özellikler** penceresinde, bu özellik için ad alanını düzenleyin ve **ENTER**tuşuna basın.
 
-   Adı güncelleştirilmiştir **sınıf ayrıntıları** penceresinde, ilişkilendirme satır **özellikleri** penceresinde ve kod.
+   Ad, **Sınıf Ayrıntıları** penceresinde, ilişkilendirme satırında, **Özellikler** penceresinde ve kod ' de güncelleştirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Üye gösterimi ile ilişkilendirme gösterimi arasında geçiş](how-to-change-between-member-notation-and-association-notation.md)
+- [Nasıl yapılır: üye gösterimi ile ilişkilendirme gösterimi arasında geçiş yapma](how-to-change-between-member-notation-and-association-notation.md)

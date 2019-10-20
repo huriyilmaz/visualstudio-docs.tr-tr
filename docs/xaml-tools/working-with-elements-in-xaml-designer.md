@@ -3,15 +3,15 @@ title: XAML Tasarımcısı'nda öğelerle çalışma
 ms.date: 05/14/2018
 ms.topic: conceptual
 ms.assetid: a29690bf-f212-4ac6-a77a-adc53d14102e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c1ab50fd08b3dd455e6fb9adc9f5aa3a22b77352
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: bae8f676a009ef9e5b3560feff15b74410cc52ac
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451033"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668618"
 ---
 # <a name="work-with-elements-in-xaml-designer"></a>XAML Tasarımcısı’nda öğelerle çalışma
 
@@ -19,7 +19,7 @@ Uygulamanıza XAML 'de, kod içinde veya XAML Tasarımcısı kullanarak öğe (d
 
 ## <a name="add-an-element-to-a-layout"></a>Düzene öğe ekleme
 
-*Düzen* , BIR kullanıcı arabirimindeki öğeleri boyutlandırma ve konumlandırma işlemidir. Görsel öğeleri konumlandırmak için bunları bir düzen [paneline](xref:Windows.UI.Xaml.Controls.Panel)koymanız gerekir. @No__t-0 ' ın bir [FrameworkElement](xref:Windows.UI.Xaml.FrameworkElement) türleri koleksiyonu olan bir alt özelliği vardır. Düzen kapsayıcıları olarak görev yapmak ve öğeleri bir sayfada konumlandırmak ve düzenlemek için [tuval](xref:Windows.UI.Xaml.Controls.Canvas), [StackPanel](xref:Windows.UI.Xaml.Controls.StackPanel)ve [kılavuz](xref:Windows.UI.Xaml.Controls.Grid)gibi çeşitli `Panel` alt öğelerini kullanabilirsiniz.
+*Düzen* , BIR kullanıcı arabirimindeki öğeleri boyutlandırma ve konumlandırma işlemidir. Görsel öğeleri konumlandırmak için bunları bir düzen [paneline](xref:Windows.UI.Xaml.Controls.Panel)koymanız gerekir. Bir `Panel` [FrameworkElement](xref:Windows.UI.Xaml.FrameworkElement) türleri koleksiyonu olan bir alt özelliği vardır. Düzen kapsayıcıları olarak görev yapmak ve öğeleri bir sayfada konumlandırmak ve düzenlemek için [tuval](xref:Windows.UI.Xaml.Controls.Canvas), [StackPanel](xref:Windows.UI.Xaml.Controls.StackPanel)ve [kılavuz](xref:Windows.UI.Xaml.Controls.Grid)gibi çeşitli `Panel` alt öğelerini kullanabilirsiniz.
 
 Varsayılan olarak, bir sayfa veya form içinde en üst düzey düzen kapsayıcısı olarak bir `Grid` paneli kullanılır. Üst düzey sayfa düzeni içinde düzen bölmeleri, denetimler veya diğer öğeleri ekleyebilirsiniz.
 
@@ -99,7 +99,7 @@ XAML Tasarımcısı iki veya daha fazla öğeyi gruplandırmak yeni bir düzen k
 2. Seçilen öğelere sağ tıklayın, **grupla**' nın üzerine gelin ve ardından grubun bulunmasını istediğiniz düzen kapsayıcısı türüne tıklayın.
 
     > [!TIP]
-    > Öğelerinizi gruplamak için [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [Border](xref:Windows.UI.Xaml.Controls.Border)veya [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) ' ı seçerseniz, öğeler [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [Border](xref:Windows.UI.Xaml.Controls.Border)veya [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer)içindeki yeni bir [ızgara](xref:Windows.UI.Xaml.Controls.Grid) paneline yerleştirilir. Bu düzen kapsayıcılarından birindeki öğelerin grubunu çözerseniz, yalnızca [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [Border](xref:Windows.UI.Xaml.Controls.Border)veya [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) silinir ve [kılavuz](xref:Windows.UI.Xaml.Controls.Grid) paneli kalır. @No__t-0 panelini silmek için öğelerin grubunu yeniden çözün.
+    > Öğelerinizi gruplamak için [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [Border](xref:Windows.UI.Xaml.Controls.Border)veya [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) ' ı seçerseniz, öğeler [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [Border](xref:Windows.UI.Xaml.Controls.Border)veya [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer)içindeki yeni bir [ızgara](xref:Windows.UI.Xaml.Controls.Grid) paneline yerleştirilir. Bu düzen kapsayıcılarından birindeki öğelerin grubunu çözerseniz, yalnızca [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [Border](xref:Windows.UI.Xaml.Controls.Border)veya [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) silinir ve [kılavuz](xref:Windows.UI.Xaml.Controls.Grid) paneli kalır. @No__t_0 panelini silmek için öğelerin grubunu yeniden çözün.
 
 Öğelerin grubunu çözmek ve düzeni silmek için, grubunu çözmek istediğiniz gruba sağ tıklayın ve grubu **Çöz**' e tıklayın. Ayrıca, belge ana hat penceresinde seçili öğelere sağ tıklayıp grupla veya grubu **Çöz**' **e** tıklayarak öğeleri gruplandırabilir veya gruplarını kaldırabilirsiniz.
 
@@ -107,7 +107,7 @@ XAML Tasarımcısı iki veya daha fazla öğeyi gruplandırmak yeni bir düzen k
 
 Düzen sıfırlama komutlarını kullanarak bir öğenin belirli düzen özellikleri için varsayılan değerleri geri yükleyebilirsiniz. Bu komutu kullanarak bir öğenin kenar boşluğunu, hizalamasını, genişliğini, yüksekliğini ve boyutunu tek tek veya topluca sıfırlayabilirsiniz.
 
-Öğe yerleşimini sıfırlamak için belge anahattı penceresinde veya çalışma yüzeyinde öğesine sağ tıklayın ve **ardından @no__t-** 1**Reset** *PropertyName*öğesini seçin; burada *PropertyName* sıfırlamak istediğiniz özelliktir (veya şunu seçin **Düzen** >  öğenin tüm düzen özelliklerini sıfırlamak Için**Tümünü sıfırlayın** .
+Öğe yerleşimini sıfırlamak için belge anahattı penceresinde veya çalışma yüzeyinde öğesine sağ tıklayın ve ardından **propertyname  > ** **Sıfırla** *' yı seçin, burada* *PropertyName* sıfırlamak istediğiniz özelliktir (veya şunu seçin **Düzen**  >  öğenin tüm düzen özelliklerini sıfırlamak Için**Tümünü sıfırlayın** .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

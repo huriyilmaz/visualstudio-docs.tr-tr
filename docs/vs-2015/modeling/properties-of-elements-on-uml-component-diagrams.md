@@ -1,5 +1,5 @@
 ---
-title: Bileşen diyagramlarındaki öğelerin özellikleri | Microsoft Docs
+title: UML bileşen diyagramlarındaki öğelerin özellikleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -11,42 +11,41 @@ helpviewer_keywords:
 - UML, element properties
 ms.assetid: fa0a9460-6675-4642-aa00-50f8719a892d
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c7f3f30d08fb62defec5e783da286e968a6b17c9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 39350a9e1d340651f8e15de109ecf61eb98996bb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444425"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671457"
 ---
 # <a name="properties-of-elements-on-uml-component-diagrams"></a>Bileşen diyagramlarındaki öğelerin özellikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir UML bileşen diyagramı her öğe diyagram üzerindeki özellikleri vardır. Öğenin özelliklerini görmek için diyagram üzerinde veya öğeye sağ tıklayın **UML Model Gezgini** ve ardından **özellikleri**. Özellikleri görünür **özellikleri** penceresi.  
-  
+Bir UML bileşen diyagramında, diyagramdaki her bir öğenin özellikleri vardır. Bir öğenin özelliklerini görmek için diyagramda veya **UML Model Gezgini** ' nde öğeye sağ tıklayın ve ardından **Özellikler**' e tıklayın. Özellikler **, Özellikler penceresinde görünür** .
+
 > [!NOTE]
-> Bu konu UML Bileşen Diyagramı'ndaki öğelerin özellikleri hakkındadır. UML Bileşen diyagramları okuma hakkında daha fazla bilgi için bkz. [UML Bileşen Diyagramları: Başvuru](../modeling/uml-component-diagrams-reference.md). UML Bileşen diyagramları çizmek hakkında daha fazla bilgi için bkz. [UML Bileşen Diyagramları: Yönergeleri](../modeling/uml-component-diagrams-guidelines.md).  
-  
-## <a name="properties-of-elements"></a>Öğelerin özellikleri  
-  
-|Özellik|Varsayılan|Öğe|Açıklama|  
-|--------------|-------------|-------------|-----------------|  
-|**Ad**|Varsayılan bir ad|Tümü|Öğeyi tanımlar.|  
-|**Tam adı**|Namespace:: Ad|Tümü|Öğeyi benzersiz şekilde tanımlar.<br /><br /> Bir bileşen veya türün adını da içeren paket tam adı ile önekidir.<br /><br /> Sahibi bileşenin tam adı ile bir bölümü veya bağlantı noktası adının öneki.|  
-|**İş öğeleri**|ilişkili 0|Tümü|Bu öğeyle ilişkili çalışma öğelerinin sayısı. İş öğelerini ilişkilendirmek için bkz: [bağlantı model öğelerini ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).|  
-|**Açıklama**|(hiçbiri)|Tümü|Burada bir öğeyle ilgili genel bir not alabilirsiniz.|  
-|**Renk**|(varsayılan türü için)|Bileşen, parça, temsilci seçme, parça derlemesi|Şeklin rengi. Diğer özelliklerin aksine, şeklin gösterdiği model öğeyi yerine şeklin rengi budur.|  
-|**Dolaylı olarak Örneklendirilmiş**|Doğru|Bileşen|Bileşen yalnızca bir tasarım yapıt yok. Çalışma zamanında, yalnızca bölümleri mevcuttur.|  
-|**Özet**|False|Bileşen|Bileşen tanımı, yalnızca diğer bileşenleri özelleştirilebilir Genelleştirme kullanılabilir.|  
-|**Görünürlük**|Ortak|Bileşen, parça, bağlantı noktası|**Genel** - Global olarak görünür.<br /><br /> **Paket** - paket içinde görünür.<br /><br /> **Özel** - sahibi olan bileşen içinde görünür.<br /><br /> **Korumalı** - sahibinden türetilen bileşenleri görünür.|  
-|**Tür**|Oluşturma türü|Bölümü<br /><br /> Bağlantı Noktası|Bir bölümün bir bileşen ya da sınıf türüdür.<br /><br /> Bir bağlantı noktası bir arabirim türüdür.|  
-|**Çokluk**|1.|Bölümü<br /><br /> Bağlantı Noktası|Belirtilen tür bir parçasını oluşturan ana bileşen kaç örneklerini gösterir.<br /><br /> `1` -tam olarak bir.<br /><br /> `0..1` -bir ya da yok.<br /><br /> `*` -herhangi bir sayıdaki bir koleksiyon.<br /><br /> `n..m` -koleksiyonundan n m örnekleri.|  
-|**Davranış**|False|Bağlantı Noktası|TRUE ise bu bağlantı için ileti etkinlikleri veya parçalarından yerine bileşen bir parçası olarak açıklanan işlemlerin işlenir.|  
-|**Hizmeti**|False|Bağlantı Noktası|TRUE ise, bu bağlantı noktası bu bileşen yayımlanan arabiriminin bir parçasıdır.|  
-|**LinkedPackage**|Model|Diyagram|Bu diyagram için eklenen öğeleri varsayılan ad alanı.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UML Kullanım Örneği Diyagramları: Başvuru](../modeling/uml-use-case-diagrams-reference.md)   
- [UML Kullanım Örneği Diyagramları: Yönergeler](../modeling/uml-use-case-diagrams-guidelines.md)
+> Bu konu, UML bileşen diyagramlarındaki öğelerin özellikleri hakkındadır. UML bileşen diyagramlarını okuma hakkında daha fazla bilgi için bkz. [UML Bileşen diyagramları: başvuru](../modeling/uml-component-diagrams-reference.md). UML bileşen diyagramlarını çizme hakkında daha fazla bilgi için bkz. [UML Bileşen diyagramları: yönergeler](../modeling/uml-component-diagrams-guidelines.md).
+
+## <a name="properties-of-elements"></a>Öğelerin özellikleri
+
+|Özellik|Varsayılan|Öğe|Açıklama|
+|--------------|-------------|-------------|-----------------|
+|**Ad**|Varsayılan ad|Tümü|Öğesi tanımlar.|
+|**Tam ad**|Ad alanı:: Name|Tümü|Öğeyi benzersiz bir şekilde tanımlar.<br /><br /> Bir bileşene veya türün adına, kendisini içeren paketin tam adı eklenir.<br /><br /> Bir parça veya bağlantı noktasının adına, ona sahip olan bileşenin tam adı eklenir.|
+|**İş öğeleri**|0 ilişkili|Tümü|Bu öğeyle ilişkili iş öğelerinin sayısı. İş öğelerini ilişkilendirmek için bkz. [bağlantı modeli öğeleri ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).|
+|**Açıklama**|seçim|Tümü|Öğe hakkında genel notları buradan yapabilirsiniz.|
+|**Renk**|(tür için varsayılan)|Bileşen, bölüm, yetkilendirme, Bölüm derleme|Şeklin rengi. Diğer özelliklerden farklı olarak bu, şeklin gösterdiği model öğesi yerine şeklin rengidir.|
+|**Dolaylı olarak örneklenmiştir**|Doğru|Bileşen|Bileşen yalnızca tasarım yapıtı olarak mevcuttur. Çalışma zamanında yalnızca kendi parçaları vardır.|
+|**Soyut**|False|Bileşen|Bileşen tanımı yalnızca, diğer bileşenlerin özelleştiribileceği bir genelleştirme olarak kullanılabilir.|
+|**Görünürlük**|Ortak|Bileşen, bölüm, bağlantı noktası|**Genel** -genel olarak görünür.<br /><br /> **Paket** -paket içinde görünür.<br /><br /> **Private** -sahip olan bileşen içinde görünür.<br /><br /> **Korumalı** -sahibinden türetilmiş bileşenlere görünür.|
+|**Türüyle**|Oluşturma türü|Bölümüyle<br /><br /> Bağlantı Noktası|Bir bölümün türü bir bileşen veya sınıftır.<br /><br /> Bir bağlantı noktasının türü bir arabirimdir.|
+|**Ğunun**|1\.|Bölümüyle<br /><br /> Bağlantı Noktası|Belirtilen türde kaç örnek ana bileşenin parçasını oluşturdığını gösterir.<br /><br /> `1`-tam olarak bir.<br /><br /> `0..1`-bir veya hiçbiri.<br /><br /> `*`-herhangi bir sayı koleksiyonu.<br /><br /> `n..m`-n-k örneklerinden bir koleksiyonu.|
+|**Davranış**|False|Bağlantı Noktası|Değer true ise, bu bağlantı noktasına ait iletiler, bileşenin parçaları yerine, bileşeni kapsamında açıklanan etkinlikler veya işlemler tarafından işlenir.|
+|**Hizmet**|False|Bağlantı Noktası|True ise, bu bağlantı noktası bu bileşenin yayımlanan arabiriminin bir parçasıdır.|
+|**LinkedPackage**|Model|Diyagram|Bu diyagrama eklenen öğeler için varsayılan ad alanı.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [UML Kullanım örneği diyagramları: başvuru](../modeling/uml-use-case-diagrams-reference.md) [UML Kullanım örneği diyagramları: yönergeler](../modeling/uml-use-case-diagrams-guidelines.md)

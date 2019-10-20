@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir işlemi kullanarak veri kaydetme'
+title: 'Nasıl yapılır: işlem kullanarak verileri kaydetme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -11,41 +11,41 @@ helpviewer_keywords:
 - transactions, saving data
 - data [Visual Studio], saving
 ms.assetid: 8b835e8f-34a3-413d-9bb5-ebaeb87f1198
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: bf5864d25e78b6050da5c13097503b2998dda44a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cfb03944743609d20d14f6104e5fadd529a5cfa6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62566322"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72641306"
 ---
-# <a name="how-to-save-data-by-using-a-transaction"></a>Nasıl yapılır: Bir işlemi kullanarak veri kaydetme
+# <a name="how-to-save-data-by-using-a-transaction"></a>Nasıl yapılır: işlem kullanarak verileri kaydetme
 
-Kullanarak bir işlemde veri kaydetme <xref:System.Transactions> ad alanı. Kullanım <xref:System.Transactions.TransactionScope> sizin için otomatik olarak yönetilen bir işlem katılmak için nesne.
+@No__t_0 ad alanını kullanarak bir işleme veri kaydedersiniz. Sizin için otomatik olarak yönetilen bir işleme katılmak üzere <xref:System.Transactions.TransactionScope> nesnesini kullanın.
 
-Projeleri başvurusuyla oluşturulmaz *System.Transactions* derleme, bu nedenle el ile işlem kullanan projeler için bir başvuru eklemeniz gerekir.
+Projeler *System. Transactions* derlemesine bir başvuru ile oluşturulmaz, bu nedenle işlemleri kullanan projelere el ile bir başvuru eklemeniz gerekir.
 
-Örneği oluşturmak için bir işlem uygulamak için en kolay yolu olan bir <xref:System.Transactions.TransactionScope> nesnesine bir `using` deyimi. (Daha fazla bilgi için [Using deyimi](/dotnet/visual-basic/language-reference/statements/using-statement), ve [Using deyimi](/dotnet/csharp/language-reference/keywords/using-statement).) İçinde çalışan kodu `using` deyimi, işlem sırasında katılan.
+Bir işlemi uygulamanın en kolay yolu, bir `using` bildiriminde <xref:System.Transactions.TransactionScope> nesnesini örnekleyekullanmaktır. (Daha fazla bilgi için bkz. [using deyimleri](/dotnet/visual-basic/language-reference/statements/using-statement)ve [using deyimleri](/dotnet/csharp/language-reference/keywords/using-statement).) @No__t_2 bildiriminde çalışan kod işleme katılır.
 
-Hareketi tamamlamak için çağrı <xref:System.Transactions.TransactionScope.Complete%2A> yöntemi kullanarak son deyim olarak engelleyin.
+İşlemi yürütmek için, using bloğundaki son bildiri olarak <xref:System.Transactions.TransactionScope.Complete%2A> yöntemini çağırın.
 
-İşlem geri almak için çağrılmadan önce bir özel durum throw <xref:System.Transactions.TransactionScope.Complete%2A> yöntemi.
+İşlemi geri almak için <xref:System.Transactions.TransactionScope.Complete%2A> yöntemi çağrılmadan önce bir özel durum oluşturun.
 
-## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>System.Transactions.dll bir başvuru eklemek için
+## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>System. Transactions. dll dosyasına bir başvuru eklemek için
 
-1. Üzerinde **proje** menüsünde **Başvuru Ekle**.
+1. **Proje** menüsünde, **Başvuru Ekle**' yi seçin.
 
-2. Üzerinde **.NET** sekme (**SQL Server** SQL Server projeleri için sekmesinde), select **System.Transactions**ve ardından **Tamam**.
+2. **.Net** sekmesinde (SQL Server projeler için**SQL Server** sekmesinde), **System. Transactions**' ı seçin ve ardından **Tamam**' ı seçin.
 
-     Bir başvuru *System.Transactions.dll* projeye eklenir.
+     *System. Transactions. dll* öğesine bir başvuru projeye eklenir.
 
-## <a name="to-save-data-in-a-transaction"></a>Bir işlemde verileri kaydetmek için
+## <a name="to-save-data-in-a-transaction"></a>Verileri bir işlem içinde kaydetmek için
 
-- Kullanarak içinde verileri kaydetmek için kod ekleme deyimi, işlem içerir. Aşağıdaki kod nasıl oluşturulup örneğini gösterir. bir <xref:System.Transactions.TransactionScope> kullanarak bir nesne ifadesi:
+- İşlemi içeren using deyimindeki verileri kaydetmek için kod ekleyin. Aşağıdaki kod, bir using ifadesinde bir <xref:System.Transactions.TransactionScope> nesnesinin nasıl oluşturulduğunu ve örneklendirilendirilecek:
 
      [!code-vb[VbRaddataSaving#11](../data-tools/codesnippet/VisualBasic/save-data-by-using-a-transaction_1.vb)]
      [!code-csharp[VbRaddataSaving#11](../data-tools/codesnippet/CSharp/save-data-by-using-a-transaction_1.cs)]

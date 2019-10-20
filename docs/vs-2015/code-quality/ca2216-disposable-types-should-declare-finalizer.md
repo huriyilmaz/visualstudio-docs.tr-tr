@@ -1,5 +1,5 @@
 ---
-title: 'CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir | Microsoft Docs'
+title: 'CA2216: atılabilir türler sonlandırıcıyı bildirmelidir | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DisposableTypesShouldDeclareFinalizer
 ms.assetid: 0cabcc5e-b526-452b-8c2a-0cbe3b93c0ef
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8a033dbb152542e528b32e26f35a7d63dba30891
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 082afacba1ccf4c982e5ddceec37d2a1567efd7a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65681165"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651644"
 ---
 # <a name="ca2216-disposable-types-should-declare-finalizer"></a>CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "65681165"
 |-|-|
 |TypeName|DisposableTypesShouldDeclareFinalizer|
 |CheckId|CA2216|
-|Kategori|Microsoft.Usage|
-|Yeni Değişiklik|Bozucu olmayan|
+|Kategori|Microsoft. Usage|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Uygulayan bir tür <xref:System.IDisposable?displayProperty=fullName>ve yönetilmeyen kaynakların kullanımını öneren alanlar, bir sonlandırıcı açıklandığı uygulamıyor <xref:System.Object.Finalize%2A?displayProperty=fullName>.
+ @No__t_0 uygulayan ve yönetilmeyen kaynakların kullanımını öneren alanlar içeren bir tür, <xref:System.Object.Finalize%2A?displayProperty=fullName> açıklandığı şekilde sonlandırıcıyı uygulamaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Atılabilir türü aşağıdaki türlerde alanlar içeriyorsa bu kural ihlalini bildirilir:
+ Bu kural ihlalin, atılabilir türü aşağıdaki türlerin alanlarını içeriyorsa bildirilir:
 
 - <xref:System.IntPtr?displayProperty=fullName>
 
@@ -45,22 +45,22 @@ ms.locfileid: "65681165"
 - <xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için çağıran bir sonlandırıcı uygulamak, <xref:System.IDisposable.Dispose%2A> yöntemi.
+ Bu kural ihlalini onarmak için <xref:System.IDisposable.Dispose%2A> yönteminizi çağıran bir Sonlandırıcı uygulayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Türü uygulamazsa bu kuraldan bir uyarıyı bastırmak güvenlidir <xref:System.IDisposable> yönetilmeyen kaynakları serbest bırakmak amacıyla.
+ Tür, yönetilmeyen kaynakları serbest bırakmak amacıyla <xref:System.IDisposable> uygulamadığından, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek bu kuralı ihlal eden bir tür gösterir.
+ Aşağıdaki örnek, bu kuralı ihlal eden bir türü gösterir.
 
  [!code-csharp[FxCop.Usage.DisposeNoFinalize#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DisposeNoFinalize/cs/FxCop.Usage.DisposeNoFinalize.cs#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
- [CA2115: GC çağırın. Yerel kaynaklar kullanırken KeepAlive](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
+## <a name="related-rules"></a>İlgili kurallar
+ [CA2115: Yerel kaynaklar kullanırken GC.KeepAlive'ı çağırın](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
 
- [CA1816: GC çağırın. IDisposable.Dispose doğru](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)
+ [CA1816: GC.SuppressFinalize öğesini doğru çağırın](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)
 
- [CA1049: Yerel kaynaklara sahip türler atılabilir olmalıdır](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
+ [CA1049: Yerel kaynaklara sahip olan türler atılabilir olmalıdır](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  <xref:System.IDisposable?displayProperty=fullName><xref:System.IntPtr?displayProperty=fullName>

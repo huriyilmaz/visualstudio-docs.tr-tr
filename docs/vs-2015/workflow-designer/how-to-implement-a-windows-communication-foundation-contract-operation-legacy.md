@@ -1,55 +1,53 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Communication Foundation sözleşme işlemi (eski) uygulayan | Microsoft Docs'
+title: 'Nasıl yapılır: Windows Communication Foundation sözleşmesi Işlemini uygulama (eski) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: d6aeb20e-fac8-4a9d-bd26-ae78bef96b41
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 56866e084eac7dc3a3ac2a0b80baaa2533ccd285
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1f6f54e781dfae15b4b1c1159d73ac3495b35c21
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931197"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72603872"
 ---
-# <a name="how-to-implement-a-windows-communication-foundation-contract-operation-legacy"></a>Nasıl yapılır: Windows Communication Foundation Sözleşme İşlemi Uygulama (Eski)
-Bu konu nasıl uygulanacağını açıklar bir [!INCLUDE[indigo1](../includes/indigo1-md.md)] sözleşme işlemi kullanılarak [!INCLUDE[wfd1](../includes/wfd1-md.md)] hedefleyen [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- Sürükleme sonra bir **ReceiveActivity** iş akışı tasarım yüzeyine etkinliğini araç kutusundan ya da oluşturduğunuz yeni bir [!INCLUDE[indigo2](../includes/indigo2-md.md)] sözleşme veya var olan bir sözleşmeyi almak ve işlemleri uygular. Seçin ve/veya anlaşmanızda oluşturup aracılığıyla işlemlerini [seçin işlemi iletişim kutusu (eski)](../workflow-designer/choose-operation-dialog-box-legacy.md).  
-  
-### <a name="to-implement-a-wcf-contract-operation"></a>Bir WCF sözleşmesi işlemini uygulamak için  
-  
-1. Çift **ReceiveActivity** etkinlik Tasarımcısı'nda veya yanındaki üç noktaya tıklayın **ServiceOperationInfo** özelliğinde **özellikleri** bölmesi.  
-  
-2. Aşağıdakilerden birini yapın:  
-  
-   - Tıklayın **ekleme Sözleşme** iletişim kutusunun sağ alt köşesindeki. Bu yeni bir oluşturur [!INCLUDE[indigo2](../includes/indigo2-md.md)] sözleşme ve sizin için işlem.  
-  
-      -veya-  
-  
-   - Tıklayın **alma** iletişim kutusunun sağ alt köşesindeki. [Göz atın ve bir .NET türünü seç iletişim kutusu (eski)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md) açılır. Bir derleme veya istediğiniz sözleşme içeren proje arayın. Sözleşme seçin ve tıklayın **Tamam**.  
-  
-     Bir sözleşme oluşturulan veya içeri sonra oluşturulan veya içeri aktarılan anlaşması için yeni işlemleri ekleyebilirsiniz. Yeni işlem eklemek, sözleşmeyi seçin ve **ekleme işlemi** iletişim kutusunun sağ alt köşesindeki. Ekleme işlemleri tamamladığınızda, 3. adıma geçin.  
-  
-3. İle ilişkilendirmek istediğiniz işlemi seçin **ReceiveActivity** etkinlik. İşlemi tanımı, işlem adı, parametreleri, özellikleri ve izin ayarlarını değiştirerek değiştirebilirsiniz.  
-  
-    Adı değiştirmek için yeni adı girin. **işlem adı** metin kutusu.  
-  
-    Tıklayın **parametreleri** işlemin parametrelerinin erişmek için sekmesinde. Adı, türü veya parametre yönünü değiştirme yanı sıra ekleyebilir veya işlemi parametreleri silebilirsiniz.  
-  
-    Tıklayın **özellikleri** işlemin işlem koruma düzeyi ve desteklenen ileti exchange işlevine erişmek için sekmesinde.  
-  
-    Tıklayın **izinleri** işlemini uygulamak için hangi grupları izin verildiğini belirtmek için sekmesinde.  
-  
-4. Tıklayın **Tamam** ve **ReceiveActivity** etkinlik, işlem adı uyguladığı işlemi için görüntülenir.  
-  
-5. Bu işlem içinde uygulanması için kullanılacak seçeceğiz iş akışı etkinliklerin **ReceiveActivity** etkinlik.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlem iletişim kutusu (eski) seçin](../workflow-designer/choose-operation-dialog-box-legacy.md)   
- [Nasıl yapılır: Bir WCF sözleşmesi işlemi (eski) Çağır](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)   
- [Eski İş Akışı Etkinlikleri ](../workflow-designer/legacy-workflow-activities.md)
+# <a name="how-to-implement-a-windows-communication-foundation-contract-operation-legacy"></a>Nasıl yapılır: Windows Communication Foundation sözleşmesi Işlemi uygulama (eski)
+Bu konu, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanarak [!INCLUDE[indigo1](../includes/indigo1-md.md)] bir anlaşma işleminin nasıl uygulanacağını açıklar.
+
+ Araç kutusundan bir **ReceiveActivity** etkinliğini iş akışı tasarım yüzeyine sürükledikten sonra, yeni bir [!INCLUDE[indigo2](../includes/indigo2-md.md)] sözleşme oluşturacaksınız veya var olan bir sözleşmeyi içeri aktarıp işlemleri uygulayacaksınız. [Işlem Seç Iletişim kutusu (eski)](../workflow-designer/choose-operation-dialog-box-legacy.md)aracılığıyla sözleşmenizi ve/veya işlemlerini seçin ve/veya oluşturabilirsiniz.
+
+### <a name="to-implement-a-wcf-contract-operation"></a>Bir WCF sözleşme işlemi uygulamak için
+
+1. Tasarımcıda **ReceiveActivity** etkinliğine çift tıklayın veya **Özellikler** bölmesinde **ServiceOperationInfo** özelliğinin yanındaki üç noktaya tıklayın.
+
+2. Aşağıdakilerden birini yapın:
+
+   - İletişim kutusunun sağ üst köşesindeki **sözleşme Ekle** ' ye tıklayın. Bu, sizin için yeni bir [!INCLUDE[indigo2](../includes/indigo2-md.md)] sözleşme ve işlem oluşturur.
+
+      veya
+
+   - İletişim kutusunun sağ üst köşesindeki **Içeri aktar** ' a tıklayın. [Bir .NET türü görüntüle ve Seç Iletişim kutusu (eski)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md) açılır. İstediğiniz sözleşmeyi içeren bir derleme veya proje arayın. Sözleşmeyi seçip **Tamam**' a tıklayın.
+
+     Bir sözleşme oluşturulduktan veya alındıktan sonra, oluşturulan veya içeri aktarılan sözleşmeye yeni işlemler ekleyebilirsiniz. Yeni bir işlem eklemek için sözleşmeyi seçin ve iletişim kutusunun sağ üst köşesindeki **Işlem Ekle** ' ye tıklayın. İşlem ekleme işlemini tamamladığınızda adım 3 ' e geçin.
+
+3. **ReceiveActivity** etkinliğiyle ilişkilendirmek istediğiniz işlemi seçin. İşlemin tanımını, işlemin adını, parametrelerini, özelliklerini ve izin ayarlarını değiştirerek düzenleyebilirsiniz.
+
+    Adı değiştirmek için, **Işlem adı** metin kutusuna yeni adı girin.
+
+    İşlem parametrelerine erişmek için **Parametreler** sekmesine tıklayın. Bir parametrenin adını, türünü veya yönünü değiştirebilir ve işlemden parametre ekleyebilir veya silebilirsiniz.
+
+    İşlem koruma düzeyi ve işlemin desteklenen ileti değişimi işlevselliğine erişmek için **Özellikler** sekmesine tıklayın.
+
+    Hangi grubun işlemi uygulamasına izin verildiğini belirtmek için **izinler** sekmesine tıklayın.
+
+4. **Tamam** ' a tıkladığınızda, **ReceiveActivity** etkinliğinde uyguladığı işlem için işlem adı görüntülenir.
+
+5. Bu işlemin uygulanması için kullanacağınız iş akışı etkinliklerini **ReceiveActivity** etkinliği içinde yerleştirin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Işlem Seç Iletişim kutusu (eski)](../workflow-designer/choose-operation-dialog-box-legacy.md) [nasıl yapılır: WCF sözleşme işlemi (eski)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md) [eski iş akışı etkinliklerini](../workflow-designer/legacy-workflow-activities.md) çağırma

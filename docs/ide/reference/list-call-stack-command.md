@@ -8,17 +8,17 @@ helpviewer_keywords:
 - list call stack command
 - Debug.ListCallStack command
 ms.assetid: a8b20bf2-81d2-4069-aea8-23e6b15b4347
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a122b9fbc97816b114ba2ff6274756f9e2093eef
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 3395e0c3c2eb47e1e8c1a0c393b822f70de0c7ed
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919159"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610912"
 ---
 # <a name="list-call-stack-command"></a>Çağrı Yığınını Listele Komutu
 Geçerli çağrı yığınını görüntüler.
@@ -41,49 +41,49 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
 ## <a name="switches"></a>Anahtarlar
 Her anahtar, tamamı ya da kısa bir form kullanılarak çağrılabilir.
 
-/Count:`number` [veya]/c:`number`
+/Count: `number` [veya]/C: `number`
 
 İsteğe bağlı. Görüntülenecek en fazla çağrı yığını sayısı. Varsayılan değer sınırsızdır.
 
-/Showtypes:`yes` &#124; `no` [veya]/t:`yes`&#124;`no`
+/ShowTypes: `yes`&#124; `no` [veya]/t: `yes`&#124; `no`
 
 İsteğe bağlı. Parametre türlerinin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes`.
 
-/Shownames:`yes` &#124; `no` [veya]/n:`yes`&#124;`no`
+/ShowNames: `yes`&#124; `no` [veya]/n: `yes`&#124; `no`
 
 İsteğe bağlı. Parametre adlarının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes`.
 
-/Showvalues:`yes` &#124; `no` [veya]/v:`yes`&#124;`no`
+/ShowValues: `yes`&#124; `no` [veya]/v: `yes`&#124; `no`
 
 İsteğe bağlı. Parametre değerlerinin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes`.
 
-/Showmodule:`yes` &#124; `no` [veya]/m:`yes`&#124;`no`
+/ShowModule: `yes`&#124; `no` [veya]/m: `yes`&#124; `no`
 
 İsteğe bağlı. Modül adının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes`.
 
-/Showlinekayması:`yes` &#124; `no` [veya]/#:`yes`&#124;`no`
+/Showlinekayması: `yes`&#124; `no` [veya]/#: `yes`&#124; `no`
 
 İsteğe bağlı. Çizgi kaydırın görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no`.
 
-/Showbytekayması:`yes` &#124; `no` [veya]/b:`yes`&#124;`no`
+/Showbytekayması: `yes`&#124; `no` [veya]/b: `yes`&#124; `no`
 
 İsteğe bağlı. Bayt kaydırının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no`.
 
-/Showlanguage:`yes` &#124; `no` [veya]/l:`yes`&#124;`no`
+/ShowLanguage: `yes`&#124; `no` [veya]/l: `yes`&#124; `no`
 
 İsteğe bağlı. Dilin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no`.
 
-/Includecallsacrossthreads:`yes` &#124; `no` [veya]/i:`yes`&#124;`no`
+/Includecallsacrossthreads: `yes`&#124; `no` [veya]/i: `yes`&#124; `no`
 
 İsteğe bağlı. Diğer iş parçacıklarından veya çağrıların eklenip eklenmeyeceğini belirtir. Varsayılan değer `no`.
 
-/ShowExternalCode:`yes`&#124;`no`
+/ShowExternalCode: `yes`&#124; `no`
 
-İsteğe bağlı. Callstack için Yalnızca kendi kodum gösterilip gösterilmeyeceğini belirtir. Yalnızca kendi kodum kapalıyken, tüm Kullanıcı dışı kod görüntülenir. Yalnızca kendi kodum açık olduğunda, çağrı yığını çıkışında Kullanıcı olmayan kod görüntülenir `[external]` .
+İsteğe bağlı. Callstack için Yalnızca kendi kodum gösterilip gösterilmeyeceğini belirtir. Yalnızca kendi kodum kapalıyken, tüm Kullanıcı dışı kod görüntülenir. Yalnızca kendi kodum açık olduğunda, Kullanıcı olmayan kod, çağrı yığını çıktısında `[external]` olarak görüntülenir.
 
-Zincirinin`n`
+İş parçacığı: `n`
 
-İsteğe bağlı. İş parçacığı `n`için çağrı yığını 'i görüntüler. Hiçbir iş parçacığı belirtilmemişse, geçerli iş parçacığı için çağrı yığınını görüntüler.
+İsteğe bağlı. İş parçacığı `n` için çağrı yığını 'i görüntüler. Hiçbir iş parçacığı belirtilmemişse, geçerli iş parçacığı için çağrı yığınını görüntüler.
 
 ## <a name="remarks"></a>Açıklamalar
 Bağımsız değişkenlerde veya anahtarlarda yapılan değişiklikler, bu komutun gelecekteki etkinleştirmeleri için geçerlidir. Kendi kendine hata ayıkla. Listcallstackbir sorun varsa, tüm çağrı yığını görüntülenir. Bir dizin belirtirseniz, örneğin

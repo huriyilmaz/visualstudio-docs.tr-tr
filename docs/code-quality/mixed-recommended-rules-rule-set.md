@@ -2,17 +2,17 @@
 title: Karışık Önerilen Kurallar kural kümesi
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1940680af30928b46dbb73616569d0db318dac18
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 3f0daaf22f3e944dd76802060c53c64d40a4da04
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535733"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649213"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>Karışık Önerilen Kurallar kural kümesi
 

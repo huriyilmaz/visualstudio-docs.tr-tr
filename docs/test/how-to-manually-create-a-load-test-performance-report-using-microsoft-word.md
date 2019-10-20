@@ -1,61 +1,61 @@
 ---
-title: Yük testi başarım raporunu Microsoft Word'ü kullanarak oluşturma
+title: Microsoft Word kullanarak yük testi performans raporu oluşturma
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - load tests, reporting
 - load tests, creating Word reports
 ms.assetid: 3b864c75-2699-48c1-a2b4-9651f108c267
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a82479fabda0cd64e977af01f87492563a02853f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 715086a2c0d9196680dd1f332ee9b5122e144e5b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950078"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653487"
 ---
-# <a name="how-to-manually-create-a-load-test-performance-report-using-microsoft-word"></a>Nasıl yapılır: Microsoft Word kullanılarak bir yük testi başarım raporunu el ile oluşturma
+# <a name="how-to-manually-create-a-load-test-performance-report-using-microsoft-word"></a>Nasıl yapılır: Microsoft Word kullanarak yük testi performans raporu el Ile oluşturma
 
-Grafik görünümü ve yük testi sonuçlarını Özet görünümü verileri yapıştırarak Microsoft Word yük testi raporları el ile oluşturabilirsiniz. Özet görünümü gösterilir ve grafikler görünümünde verileri, HTML biçiminde kopyalandığında uygulanır.
+Load Test Sonuçları Özet görünümü ve grafik görünümünden veri kopyalayıp yapıştırarak Microsoft Word yük testi raporlarını el ile oluşturabilirsiniz. Özet görünümü ve grafikler görünümünde sunulan veriler, kopyalanırken HTML biçiminde uygulanır.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!TIP]
-> Tablolar görünümü ve Microsoft Word için ekran Ayrıntılar görünümünü görüntüleri düz metni kopyalayın, ancak HTML biçiminde uygulanmaz ve biçimlendirme ve düzenleme ek gerektirir.
+> Ayrıntılar görünümündeki Tablo görünümündeki ve ekran görüntülerinin düz metnini Microsoft Word 'e kopyalayabilir, ancak HTML biçiminde uygulanmaz ve ek biçimlendirme ve düzenlemeler gerekir.
 
 > [!TIP]
-> Otomatik olarak düzenlenmiş Microsoft Excel raporları da oluşturabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Kullanarak Microsoft Excel kullanarak yük testi başarım raporları oluşturma](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md).
+> Ayrıca, düzenli olarak düzenlenmiş Microsoft Excel raporları da oluşturabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Microsoft Excel kullanarak yük testi performans raporları oluşturma](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md).
 
-## <a name="copy-summary-view-data"></a>Özet görünümü verilerini kopyalama
+## <a name="copy-summary-view-data"></a>Özet görünümü verilerini Kopyala
 
-1. İçinde **yük testi sonuçları**, Özet görünümü şu anda görüntülenmiyorsa tıklayın **Özet** araç.
+1. **Yük test sonuçları**, Özet görünümü şu anda görüntülenmiyorsa, araç çubuğunda **Özet** ' e tıklayın.
 
-2. Özet görünümünde, sağ tıklayıp **Tümünü Seç**.
+2. Özet görünümünde, sağ tıklayın ve **Tümünü Seç**' i seçin.
 
-3. Özet görünümünde, sağ tıklayıp **kopyalama**. Bu, Özet görünümü verisini HTML biçiminde panoya olarak işler.
+3. Özet görünümünde, sağ tıklayın ve **Kopyala**' yı seçin. Bu, Özet Görünüm verilerini Pano 'ya HTML biçimi olarak işler.
 
-4. Microsoft Word içinde Özet görünümü verileri istediğiniz yere yapıştırın.
+4. Microsoft Word 'de, Özet görünümü verilerini istenen konuma yapıştırın.
 
-5. Artık, değiştirme, biçimlendirme ve raporlama ihtiyaçlarınızı karşılayacak şekilde kopyalanan içerik yönlerini silebilirsiniz.
+5. Artık, raporlama ihtiyaçlarınızı karşılamak için kopyalanmış içeriğin yönlerini değiştirebilir, biçimlendirebilir ve silebilirsiniz.
 
-## <a name="copy-graph-view-data"></a>Graf görünümü verilerini kopyalama
+## <a name="copy-graph-view-data"></a>Grafik görünümü verilerini Kopyala
 
-1. İçinde **yük testi sonuçları**, görünüm şu anda görüntülenmez, grafik seçerseniz **grafikleri** araç.
+1. **Yük test sonuçları**, grafik görünümü şu anda görüntülenmiyorsa, araç çubuğunda **grafikler** ' i seçin.
 
-2. (İsteğe bağlı) Aşağıdaki çizimde gösterildiği gibi Microsoft Word belgesi için kopyalamak istediğiniz belirli grafik yakınlaştırın. Daha fazla bilgi için [nasıl yapılır: Grafiğin bir bölgesine yakınlaştırmak](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md).
+2. Seçim Aşağıdaki çizimde gösterildiği gibi, Microsoft Word belgenize kopyalamak istediğiniz belirli bir grafiği yakınlaştırın. Daha fazla bilgi için bkz. [nasıl yapılır: grafiğin bir bölgesini yakınlaştırma](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md).
 
-     ![Graf görünümü yakınlaştırma denetimi](../test/media/ltest_zoomcontrol.png)
+     ![Grafik görünümü yakınlaştırma denetimi](../test/media/ltest_zoomcontrol.png)
 
-3. Microsoft Word belgeniz için kopyalamak istediğiniz grafik üzerinde sağ tıklayıp **kopyalama**.
+3. Microsoft Word belgenize kopyalamak istediğiniz grafikte, sağ tıklayıp **Kopyala**' yı seçin.
 
-4. Microsoft Word içinde grafik ve ilişkili tablo verilerini istenen konuma yapıştırın.
+4. Microsoft Word 'de grafiği ve ilişkili tablo verilerini istenen konuma yapıştırın.
 
     > [!WARNING]
-    > Uzak Masaüstü'nden grafiğe kopyalayın ve grafik ile ilişkili olan tablo bilgileri kopyaladığınızdan başka bir makineye yapıştırın ve graf görüntüsü değil. Graf görüntüsü, kopyalandığı makinedeki geçici dizinde depolanır ve ikinci makine o dizine başvuramaz.
+    > Grafiği uzak bir masaüstünden kopyalayamazsınız ve grafik görüntüsü değil yalnızca grafikle ilişkili tablo bilgileri kopyalanacağından başka bir makineye yapıştıramazsınız. Graf görüntüsü, kopyalandığı makinedeki geçici dizinde depolanır ve ikinci makine o dizine başvuramaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Rapor yük testi sonuçlarını test karşılaştırmaları veya eğilim analizi](../test/compare-load-test-results.md)
-- [Nasıl yapılır: Microsoft Excel kullanarak yük testi başarım raporları oluşturma](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)
+- [Test karşılaştırmaları veya eğilim analizi için yük testi sonuçlarını raporla](../test/compare-load-test-results.md)
+- [Nasıl yapılır: Microsoft Excel kullanarak yük testi performans raporları oluşturma](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)

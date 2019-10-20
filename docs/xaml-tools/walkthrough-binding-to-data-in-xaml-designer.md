@@ -7,15 +7,15 @@ f1_keywords:
 dev_langs:
 - CSharp
 - VB
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9d7216051484695fa5c888a6ab6bb75c21f21ac2
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 7aace70ce773c9051367bf88bea1d798eb069bcf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451026"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668624"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>İzlenecek yol: XAML Tasarımcısı’nda verilere bağlama
 
@@ -73,7 +73,7 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
 1. Araç kutusunda bir [kılavuz](xref:Windows.UI.Xaml.Controls.Grid) denetimi seçin ve forma ekleyin.
 
-1. @No__t-0 seçiliyken, Özellikler penceresi, **DataContext** özelliğinin yanındaki **Yeni** düğmesini seçin.
+1. @No__t_0 seçili olan Özellikler penceresi, **DataContext** özelliğinin yanındaki **Yeni** düğmesini seçin.
 
 1. **Nesne Seç** iletişim kutusunda, **tüm derlemeleri göster** onay kutusunun temizlenmiş olduğundan emin olun, **BindingTest** ad alanı altında **ShoppingCart** ' i seçin ve **Tamam** düğmesini seçin.
 
@@ -83,7 +83,7 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
 1. **Araç kutusunda**, forma eklemek için bir `TextBlock` denetimi seçin.
 
-1. @No__t-0 denetimi seçiliyken, Özellikler penceresi **metin** özelliğinin sağ tarafındaki özellik işaretini seçin ve sonra **veri bağlama oluştur**' u seçin. (Özellik işaretçisi küçük bir kutu gibi görünür.)
+1. @No__t_0 denetimi seçiliyken, Özellikler penceresi **metin** özelliğinin sağ tarafındaki özellik işaretçisini seçin ve sonra **veri bağlama oluştur**' u seçin. (Özellik işaretçisi küçük bir kutu gibi görünür.)
 
 1. Veri bağlamayı oluştur iletişim kutusunda, **yol** kutusunda, **ItemCount: (Int32)** özelliğini seçin ve sonra **Tamam** düğmesini seçin.
 
@@ -93,7 +93,7 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
 1. Uygulamayı çalıştırmak için **F5** tuşuna basın.
 
-     @No__t-0 denetimi metin olarak 0 varsayılan değerini göstermelidir.
+     @No__t_0 denetim, varsayılan değer olan 0 değerini metin olarak göstermelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

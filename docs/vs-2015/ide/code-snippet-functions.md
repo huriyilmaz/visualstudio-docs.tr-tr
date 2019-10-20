@@ -1,5 +1,5 @@
 ---
-title: Kod parçacığı işlevleri | Microsoft Docs
+title: Kod parçacığı Işlevleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,149 +10,148 @@ helpviewer_keywords:
 - IntelliSense code snippets, functions
 ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5a7a7522d0c3ddab224e19150f47120b92b2dd32
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 92533b90e6a2da9f29a67d13c6e0eee2c31dbcfe
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701523"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72620225"
 ---
 # <a name="code-snippet-functions"></a>Kod Parçacığı İşlevleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İle kullanılabilecek üç işlev vardır [!INCLUDE[csprcs](../includes/csprcs-md.md)] kod parçacıkları. İçinde belirtilen işlevi [işlevi](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) kod parçacığının öğesi. Kod parçacıkları oluşturma hakkında daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).  
-  
-## <a name="functions"></a>İşlevler  
- Aşağıdaki tablo ile kullanmak için kullanılabilir işlevler açıklar `Function` kod parçacıkları öğesinde.  
-  
-|İşlev|Açıklama|Dil|  
-|--------------|-----------------|--------------|  
-|`GenerateSwitchCases(` `EnumerationLiteral` `)`|Tarafından belirtilen numaralandırma üyeleri için bir switch ifadesi ve bir dizi case deyimleri oluşturur `EnumerationLiteral` parametresi. `EnumerationLiteral` Parametresi bir numaralandırma sabit değeri başvurusu veya bir sabit listesi türü olmalıdır.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|  
-|`ClassName()`|Eklenen kod parçacığı içeren sınıf adını döndürür.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|  
-|`SimpleTypeName(` `TypeName` `)`|Azaltır *TypeName* en basit haliyle kod parçacığını çağrıldığı bağlam parametresi.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `GenerateSwitchCases` işlevi. Ne zaman bu kod parçacığı eklenir ve bir numaralandırma girilir `$switch_on$` değişmez değeri `$cases$` değişmez değeri oluşturur bir `case` deyimi için listedeki her bir değer.  
-  
-```  
-<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
-    <CodeSnippet Format="1.0.0">  
-        <Header>  
-            <Title>switch</Title>   
-            <Shortcut>switch</Shortcut>   
-            <Description>Code snippet for switch statement</Description>   
-            <Author>Microsoft Corporation</Author>   
-            <SnippetTypes>  
-                <SnippetType>Expansion</SnippetType>   
-            </SnippetTypes>  
-        </Header>  
-        <Snippet>  
-            <Declarations>  
-                <Literal>  
-                    <ID>expression</ID>   
-                    <ToolTip>Expression to switch on</ToolTip>   
-                    <Default>switch_on</Default>   
-                </Literal>  
-                <Literal Editable="false">  
-                    <ID>cases</ID>   
-                    <Function>GenerateSwitchCases($expression$)</Function>   
-                    <Default>default:</Default>   
-                </Literal>  
-            </Declarations>  
-            <Code Language="csharp">  
-                <![CDATA[  
-                    switch ($expression$)  
-                    {  
-                        $cases$  
-                    }  
-                ]]>  
-            </Code>  
-        </Snippet>  
-    </CodeSnippet>  
-</CodeSnippets>  
-```  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `ClassName` işlevi. Bu kod parçacığı eklendiğinde `$classname$` değişmez değeri, kod dosyanın bu konumda kapsayan sınıfın adı ile değiştirilir.  
-  
-```  
-<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
-    <CodeSnippet Format="1.0.0">  
-        <Header>  
-            <Title>Common constructor pattern</Title>   
-            <Shortcut>ctor</Shortcut>   
-            <Description>Code Snippet for a constructor</Description>  
-            <Author>Microsoft Corporation</Author>   
-            <SnippetTypes>  
-                <SnippetType>Expansion</SnippetType>  
-            </SnippetTypes>  
-        </Header>  
-        <Snippet>  
-            <Declarations>  
-                <Literal>  
-                    <ID>type</ID>   
-                    <Default>int</Default>   
-                </Literal>  
-                <Literal>  
-                    <ID>name</ID>   
-                    <Default>field</Default>   
-                </Literal>  
-                <Literal default="true" Editable="false">  
-                    <ID>classname</ID>   
-                    <ToolTip>Class name</ToolTip>   
-                    <Function>ClassName()</Function>   
-                    <Default>ClassNamePlaceholder</Default>   
-                </Literal>  
-            </Declarations>  
-            <Code Language="vjsharp" Format="CData">  
-                <![CDATA[   
-                    public $classname$ ($type$ $name$)  
-                    {  
-                        this._$name$ = $name$;  
-                    }  
-                    private $type$ _$name$;  
-                ]]>  
-            </Code>  
-        </Snippet>  
-    </CodeSnippet>  
-</CodeSnippets>  
-```  
-  
-## <a name="example"></a>Örnek  
- Bu örnek nasıl kullanılacağını gösterir `SimpleTypeName` işlevi. Bu kod parçacığı bir kod dosyası yerleştirildiğinde `$SystemConsole$` değişmez değeri, en basit biçimi ile değiştirilecek <xref:System.Console> kod parçacığını çağrıldığı bağlamda türü.  
-  
-```  
-<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
-    <CodeSnippet Format="1.0.0">  
-        <Header>  
-            <Title>Console_WriteLine</Title>   
-            <Shortcut>cw</Shortcut>   
-            <Description>Code snippet for Console.WriteLine</Description>   
-            <Author>Microsoft Corporation</Author>   
-            <SnippetTypes>  
-                <SnippetType>Expansion</SnippetType>   
-            </SnippetTypes>  
-        </Header>  
-        <Snippet>  
-            <Declarations>  
-                <Literal Editable="false">  
-                    <ID>SystemConsole</ID>   
-                    <Function>SimpleTypeName(global::System.Console)</Function>   
-                </Literal>  
-            </Declarations>  
-            <Code Language="csharp">  
-                <![CDATA[   
-                    $SystemConsole$.WriteLine();  
-                ]]>  
-            </Code>  
-        </Snippet>  
-    </CodeSnippet>  
-</CodeSnippets>  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Function öğesi (IntelliSense kod parçacıkları)](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df)   
- [Kod Parçacıkları Şema Başvurusu](../ide/code-snippets-schema-reference.md)
+@No__t_0 kod parçacıkları ile kullanabileceğiniz üç işlev mevcuttur. İşlevler, kod parçacığının [Function](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) öğesinde belirtilir. Kod parçacıkları oluşturma hakkında daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
+
+## <a name="functions"></a>İşlevler
+ Aşağıdaki tabloda, kod parçacıkları içinde `Function` öğesiyle birlikte kullanılabilecek işlevler açıklanmaktadır.
+
+|İşlev|Açıklama|Dil|
+|--------------|-----------------|--------------|
+|`GenerateSwitchCases(` `EnumerationLiteral` `)`|@No__t_0 parametresi tarafından belirtilen numaralandırma üyeleri için bir switch deyimi ve Case deyimleri kümesi oluşturur. @No__t_0 parametresi bir sabit listesi sabit değeri ya da bir numaralandırma türü için başvuru olmalıdır.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
+|`ClassName()`|Eklenen kod parçacığını içeren sınıfın adını döndürür.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
+|`SimpleTypeName(` `TypeName` `)`|*TypeName* parametresini, kod parçacığının çağrıldığı bağlamdaki en basit biçimine düşürür.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, `GenerateSwitchCases` işlevinin nasıl kullanılacağını göstermektedir. Bu kod parçacığı eklendiğinde ve `$switch_on$` değişmez değerine bir numaralandırma girildiğinde, `$cases$` değişmez değeri, Numaralandırmadaki her değer için bir `case` açıklaması oluşturur.
+
+```
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>switch</Title>
+            <Shortcut>switch</Shortcut>
+            <Description>Code snippet for switch statement</Description>
+            <Author>Microsoft Corporation</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>expression</ID>
+                    <ToolTip>Expression to switch on</ToolTip>
+                    <Default>switch_on</Default>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>cases</ID>
+                    <Function>GenerateSwitchCases($expression$)</Function>
+                    <Default>default:</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[
+                    switch ($expression$)
+                    {
+                        $cases$
+                    }
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
+```
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, `ClassName` işlevinin nasıl kullanılacağını göstermektedir. Bu kod parçacığı eklendiğinde `$classname$` değişmez değeri, kod dosyasındaki bu konumdaki kapsayan sınıfın adı ile değiştirilmiştir.
+
+```
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Common constructor pattern</Title>
+            <Shortcut>ctor</Shortcut>
+            <Description>Code Snippet for a constructor</Description>
+            <Author>Microsoft Corporation</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>type</ID>
+                    <Default>int</Default>
+                </Literal>
+                <Literal>
+                    <ID>name</ID>
+                    <Default>field</Default>
+                </Literal>
+                <Literal default="true" Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="vjsharp" Format="CData">
+                <![CDATA[
+                    public $classname$ ($type$ $name$)
+                    {
+                        this._$name$ = $name$;
+                    }
+                    private $type$ _$name$;
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
+```
+
+## <a name="example"></a>Örnek
+ Bu örnek, `SimpleTypeName` işlevinin nasıl kullanılacağını gösterir. Bu kod parçacığı bir kod dosyasına eklendiğinde `$SystemConsole$` değişmez değeri, parçacığın çağrıldığı bağlamdaki <xref:System.Console> türünün en basit biçimiyle yerine geçer.
+
+```
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Console_WriteLine</Title>
+            <Shortcut>cw</Shortcut>
+            <Description>Code snippet for Console.WriteLine</Description>
+            <Author>Microsoft Corporation</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="false">
+                    <ID>SystemConsole</ID>
+                    <Function>SimpleTypeName(global::System.Console)</Function>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[
+                    $SystemConsole$.WriteLine();
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Function öğesi (IntelliSense kod parçacıkları)](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) [kod parçacıkları şema başvurusu](../ide/code-snippets-schema-reference.md)

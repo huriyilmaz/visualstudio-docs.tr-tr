@@ -1,381 +1,378 @@
 ---
-title: MEF kullanarak DSL'nizi genişletme | Microsoft Docs
+title: MEF kullanarak DSL 'nizi genişletme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 3e7be79a-53ab-4d79-863a-bef8d27839bd
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a1b90f37dcdadc53b6f2a81b9b4e9a860dd6a529
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: d3257acde8d3c62aca64e3401ec18134601973e5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692528"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669641"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF kullanarak DSL'nizi genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yönetilen Genişletilebilirlik Çerçevesi (MEF) kullanarak, etki alanına özgü dil (DSL) genişletebilirsiniz. Sizin veya diğer geliştiriciler DSL tanımını ve program kodunu değiştirmeden DSL için uzantıları yazmak mümkün olacaktır. Bu tür uzantılar, menü komutlarını, sürükle ve bırak işleyicisi ve doğrulama içerir. Kullanıcılar DSL'nizi yükleyin ve ardından isteğe bağlı olarak uzantıları yükleyebilmek için mümkün olacaktır.  
-  
- MEF DSL'nizi içinde etkinleştirdiğinizde, tüm DSL birlikte oluşturuldukları olsa bile ek olarak, bunu daha kolay bazı özellikler, DSL'nin, yazma için olabilir.  
-  
- MEF hakkında daha fazla bilgi için bkz: [Yönetilen Genişletilebilirlik Çerçevesi (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde).  
-  
-### <a name="to-enable-your-dsl-to-be-extended-by-mef"></a>MEF tarafından genişletilmesi DSL'nizi etkinleştirmek için  
-  
-1. Adlı yeni bir klasör oluşturun **MefExtension** içinde **DslPackage** proje. Aşağıdaki dosyaları ekleyin:  
-  
-    Dosya adı: `CommandExtensionVSCT.tt`  
-  
+Managed Extensibility Framework (MEF) kullanarak, etki alanına özgü dili (DSL) genişletebilirsiniz. Siz veya diğer geliştiriciler DSL tanımını ve program kodunu değiştirmeden DSL için Uzantılar yazabilir. Bu tür uzantılara menü komutları, sürükle ve bırak işleyicileri ve doğrulama dahildir. Kullanıcılar DSL 'yi yükleyebilecektir ve isteğe bağlı olarak uzantıları yükleyemez.
+
+ Ayrıca, DSL 'niz üzerinde MEF 'i etkinleştirdiğinizde, DSL ile birlikte yerleştirilmiş olsalar bile DSL 'nizin bazı özelliklerini yazmanız daha kolay olabilir.
+
+ MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde).
+
+### <a name="to-enable-your-dsl-to-be-extended-by-mef"></a>DSL 'nin MEF tarafından genişletilmesini sağlamak için
+
+1. **DslPackage** projesi Içinde **MefExtension** adlı yeni bir klasör oluşturun. Aşağıdaki dosyaları bu dosyaya ekleyin:
+
+    Dosya adı: `CommandExtensionVSCT.tt`
+
    > [!IMPORTANT]
-   > Bu dosyadaki DslPackage\GeneratedCode\Constants.tt içinde tanımlanan GUID CommandSetId aynı GUID'i ayarlayın  
-  
-   ```  
-   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-   <#  
-   // CmdSet Guid must be defined before master template is included  
-   // This Guid must be kept synchronized with the CommandSetId Guid in Constants.tt  
-   Guid guidCmdSet = new Guid ("00000000-0000-0000-0000-000000000000");  
-   string menuidCommandsExtensionBaseId="0x4000";  
-   #>  
-   <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>  
-   ```  
-  
-    Dosya adı: `CommandExtensionRegistrar.tt`  
-  
-   ```  
-   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-   <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>  
-   ```  
-  
-    Dosya adı: `ValidationExtensionEnablement.tt`  
-  
-   ```  
-   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-   <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>  
-   ```  
-  
-    Dosya adı: `ValidationExtensionRegistrar.tt`  
-  
-    Bu dosya eklerseniz, doğrulama DSL'nizi anahtarları en az birini kullanarak etkinleştirmelisiniz **EditorValidation** DSL Gezgini içinde.  
-  
-   ```  
-   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-   <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>  
-   ```  
-  
-    Dosya adı: `PackageExtensionEnablement.tt`  
-  
-   ```  
-   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-   <#@ include file="DslPackage\PackageExtensionEnablement.tt" #>  
-   ```  
-  
-2. Adlı yeni bir klasör oluşturun **MefExtension** içinde **Dsl** proje. Aşağıdaki dosyaları ekleyin:  
-  
-    Dosya adı: `DesignerExtensionMetaDataAttribute.tt`  
-  
-   ```  
-   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-   <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>  
-   ```  
-  
-    Dosya adı: `GestureExtensionEnablement.tt`  
-  
-   ```  
-   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-   <#@ include file="Dsl\GestureExtensionEnablement.tt" #>  
-   ```  
-  
-    Dosya adı: `GestureExtensionController.tt`  
-  
-   ```  
-   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
-   <#@ include file="Dsl\GestureExtensionController.tt" #>  
-   ```  
-  
-3. Adlı varolan dosyaya aşağıdaki satırı ekleyin **DslPackage\Commands.vsct**:  
-  
-   ```  
-   <Include href="MefExtension\CommandExtensionVSCT.vsct"/>  
-   ```  
-  
-    Var olan sonra satır Ekle `<Include>` yönergesi.  
-  
-4. `Open DslDefinition.dsl.`  
-  
-5. DSL Gezgini içinde seçin **Editor\Validation**.  
-  
-6. Özellikler penceresinde özelliklerinden en az birini adlı emin **kullanır...**  olduğu `true`.  
-  
-7. Çözüm Gezgini araç çubuğunda **tüm Şablonları Dönüştür**.  
-  
-    Paketinizle dosyalar her eklediğiniz dosyaların altında görünür.  
-  
-8. Derleme ve hala çalıştığından emin olmak için çözümü çalıştırın.  
-  
-   DSL'nizi MEF özellikli sunulmuştur. Menü komutları, hareket işleyicileri ve doğrulama kısıtlamalarını MEF uzantıları yazabilirsiniz. DSL çözümünüzdeki diğer özel kod ile birlikte bu uzantıları yazabilirsiniz. Ayrıca, sizin veya diğer geliştiriciler ayrı yazabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] DSL'nizi genişletme uzantıları.  
-  
-## <a name="creating-an-extension-for-a-mef-enabled-dsl"></a>MEF özellikli bir DSL için uzantı oluşturma  
- MEF özellikli kendinize veya başka bir kullanıcı tarafından oluşturulan bir DSL erişiminiz varsa, uzantıları için yazabilirsiniz. Uzantılar, menü komutlarını, hareket işleyicileri veya doğrulama kısıtlamalarını eklemek için kullanılabilir. Bu uzantıları yazmak için kullandığınız bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı (VSIX) çözümü. Çözüm iki bölümden oluşur: bir sınıf kitaplığı projesi, kod derleme yapıları ve derleme paketleri bir VSIX projesi.  
-  
-#### <a name="to-create-a-dsl-extension-vsix"></a>Bir DSL uzantısı VSIX oluşturmak için  
-  
-1. Yeni bir sınıf kitaplığı projesi oluşturun. Bunu yapmak için **yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#** seçip **sınıf kitaplığı**.  
-  
-2. Yeni sınıf kitaplığı projesinde DSL derlemeye bir başvuru ekleyin.  
-  
-   - Bu derleme, genellikle ile biten bir ada sahip ". DSL.dll".  
-  
-   - DSL projesi erişiminiz varsa, derleme dosyası dizini altında bulabilirsiniz **Dsl\\depo\\\***  
-  
-   - DSL VSIX dosyasına erişimi varsa, derleme ".zip olarak" dosya adı uzantısı, VSIX dosyasını değiştirerek bulabilirsiniz. .Zip dosyasını açın.  
-  
-3. Aşağıdaki .NET derlemelere başvurular ekleyin:  
-  
-   - Microsoft.VisualStudio.Modeling.Sdk.11.0.dll  
-  
-   - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll  
-  
-   - Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll  
-  
-   - System.ComponentModel.Composition.dll  
-  
-   - System.Windows.Forms.dll  
-  
-4. Aynı çözüm içinde VSIX projesi oluşturun. Bunu yapmak için **yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#** , tıklayın **genişletilebilirlik**ve ardından seçin **VSIX projesi**.  
-  
-5. Çözüm Gezgini'nde VSIX projesini sağ tıklayın ve ardından **başlangıç projesi olarak ayarla**.  
-  
-6. Yeni projeyi **source.extension.vsixmanifest**.  
-  
-7. Tıklayın **içeriğinizi**. İletişim kutusunda ayarlanan **içerik türü** için **MEF Bileşeni**, ve **kaynak proje** sınıf kitaplığı projenize.  
-  
-8. Bir DSL VSIX başvuru ekleyin.  
-  
-   1. İçinde **source.extension.vsixmanifest**, tıklayın **Başvuru Ekle**  
-  
-   2. İletişim kutusunda **eklemek yükü** DSL VSIX dosyasını bulun. VSIX dosyasını DSL çözümde içinde yerleşik **DslPackage\\bin\\\*** .  
-  
-       Bu, kullanıcıların DSL ve uzantınızı aynı anda yüklemesine olanak sağlar. Uzantınızı yalnızca kullanıcı DSL yüklü değilse yüklenir.  
-  
-9. Gözden geçirmek ve güncelleştirmek, diğer alanları **source.extension.vsixmanifest**. Tıklayın **sürümleri seçin** doğrulayın doğru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sürümleri ayarlanır.  
-  
-10. Sınıf kitaplığı projesi için kod ekleyin. Örnekler sonraki bölümde bir kılavuz olarak kullanın.  
-  
-     Komut ve hareket doğrulama sınıfları herhangi bir sayıda ekleyebilirsiniz.  
-  
-11. Uzantıyı test etmek için basın **F5**. Deneysel örneğinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]oluşturun veya bir örneğin DSL dosyası açın.  
-  
-## <a name="writing-mef-extensions-for-dsls"></a>MEF uzantıları için DSL'ler yazma  
- Ayrı bir DSL uzantısı çözümü derleme kod projesinde uzantıları yazabilirsiniz. DSL bir parçası olarak, komutlar ve hareketler doğrulama kodu yazmak için kullanışlı bir yol olarak DslPackage projenizde, MEF de kullanabilirsiniz.  
-  
-### <a name="menu-commands"></a>Menü Komutları  
- Bir menü komutu yazmak için uygulayan bir sınıf tanımlama <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> adlı DSL'nizi içinde tanımlanan özniteliğine sahip sınıf önek *YourDsl*`CommandExtension`. Birden fazla menü komutu sınıfı yazabilirsiniz.  
-  
- `QueryStatus()` Kullanıcı diyagramda sağ tıkladığı zaman çağrılır. Geçerli seçimi inceleyin ve ayarlayın gerekir `command.Enabled` komutu geçerli olduğunda belirtmek için.  
-  
-```  
-using System.ComponentModel.Composition;  
-using System.Linq;  
-using Company.MyDsl; // My DSL  
-using Company.MyDsl.ExtensionEnablement; // My DSL  
-using Microsoft.VisualStudio.Modeling; // Transactions  
-using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement; // IVsSelectionContext  
-using Microsoft.VisualStudio.Modeling.ExtensionEnablement; // ICommandExtension  
-  
-namespace MyMefExtension  
-{  
-  // Defined in Dsl\MefExtension\DesignerExtensionMetaDataAttribute.cs:  
-  [MyDslCommandExtension]   
-  public class MyCommandClass : ICommandExtension  
-  {   
-    /// <summary>  
-    /// Provides access to current document and selection.  
-    /// </summary>  
-    [Import]  
-    IVsSelectionContext SelectionContext { get; set; }  
-  
-    /// <summary>  
-    /// Called when the user selects this command.  
-    /// </summary>  
-    /// <param name="command"></param>  
-    public void Execute(IMenuCommand command)  
-    {  
-      // Transaction is required if you want to update elements.  
-      using (Transaction t = SelectionContext.CurrentStore  
-              .TransactionManager.BeginTransaction("fix names"))  
-      {  
-        foreach (ExampleShape shape in SelectionContext.CurrentSelection)  
-        {  
-          ExampleElement element = shape.ModelElement as ExampleElement;  
-          element.Name = element.Name + " !";  
-        }  
-        t.Commit();  
-      }  
-    }  
-  
-    /// <summary>  
-    /// Called when the user right-clicks the diagram.  
-    /// Determines whether the command should appear.  
-    /// This method should set command.Enabled and command.Visible.  
-    /// </summary>  
-    /// <param name="command"></param>  
-    public void QueryStatus(IMenuCommand command)  
-    {  
-      command.Enabled =  
-        command.Visible = (SelectionContext.CurrentSelection.OfType<ExampleShape>().Count() > 0);  
-    }  
-  
-    /// <summary>  
-    /// Called when the user right-clicks the diagram.  
-    /// Determines the text of the command in the menu.  
-    /// </summary>  
-    public string Text  
-    {  
-      get { return "My menu command"; }  
-    }  
-  }  
-}  
-  
-```  
-  
-### <a name="gesture-handlers"></a>Hareket işleyicileri  
- Bir hareket işleyicisi içine veya dışına diyagram üzerine yerden sürüklediğiniz nesnelerle giderebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Aşağıdaki örnek, dosyaları Windows Gezgini'nden diyagram üzerine sürükleyin. kullanıcının olanak sağlar. Dosya adlarını içeren öğeleri oluşturur.  
-  
- Diğer DSL modelleri ve UML modelleri ile etkileyen dağıtılacak işleyiciler yazabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Bir Sürükle ve bırak işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md).  
-  
-```  
-  
-using System.ComponentModel.Composition;  
-using System.Linq;  
-using Company.MyDsl;  
-using Company.MyDsl.ExtensionEnablement;  
-using Microsoft.VisualStudio.Modeling; // Transactions  
-using Microsoft.VisualStudio.Modeling.Diagrams;  
-using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;   
-using Microsoft.VisualStudio.Modeling.ExtensionEnablement;   
-  
-namespace MefExtension  
-{  
-  [MyDslGestureExtension]  
-  class MyGestureExtension : IGestureExtension  
-  {  
-    public void OnDoubleClick(ShapeElement targetElement, DiagramPointEventArgs diagramPointEventArgs)  
-    {  
-      System.Windows.Forms.MessageBox.Show("double click!");  
-    }  
-  
-    /// <summary>  
-    /// Called when the user drags anything over the diagram.  
-    /// Return true if the dragged object can be dropped on the current target.  
-    /// </summary>  
-    /// <param name="targetMergeElement">The shape or diagram that the mouse is currently over</param>  
-    /// <param name="diagramDragEventArgs">Data about the dragged element.</param>  
-    /// <returns></returns>  
-    public bool CanDragDrop(ShapeElement targetMergeElement, DiagramDragEventArgs diagramDragEventArgs)  
-    {  
-      // This handler only allows items to be dropped onto the diagram:  
-      return targetMergeElement is MefDsl2Diagram &&  
-      // And only accepts files dragged from Windows Explorer:  
-        diagramDragEventArgs.Data.GetFormats().Contains("FileNameW");  
-    }  
-  
-    /// <summary>  
-    /// Called when the user drops an item onto the diagram.  
-    /// </summary>  
-    /// <param name="targetDropElement"></param>  
-    /// <param name="diagramDragEventArgs"></param>  
-    public void OnDragDrop(ShapeElement targetDropElement, DiagramDragEventArgs diagramDragEventArgs)  
-    {  
-      MefDsl2Diagram diagram = targetDropElement as MefDsl2Diagram;  
-      if (diagram == null) return;  
-  
-      // This handler only accepts files dragged from Windows Explorer:  
-      string[] draggedFileNames = diagramDragEventArgs.Data.GetData("FileNameW") as string[];  
-      if (draggedFileNames == null || draggedFileNames.Length == 0) return;   
-  
-      using (Transaction t = diagram.Store.TransactionManager.BeginTransaction("file names"))  
-      {  
-        // Create an element to represent each file:  
-        foreach (string fileName in draggedFileNames)  
-        {  
-          ExampleElement element = new ExampleElement(diagram.ModelElement.Partition);  
-          element.Name = fileName;  
-  
-          // This method of adding the new element allows the position  
-          // of the shape to be specified:            
-          ElementGroup group = new ElementGroup(element);  
-          diagram.ElementOperations.MergeElementGroupPrototype(  
-            diagram, group.CreatePrototype(), PointD.ToPointF(diagramDragEventArgs.MousePosition));  
-        }  
-        t.Commit();  
-      }  
-    }  
-  }  
-}  
-  
-```  
-  
-### <a name="validation-constraints"></a>Doğrulama kısıtlamaları  
- Doğrulama yöntemlerinin işaretlenmiş `ValidationExtension` DSL ve ayrıca tarafından oluşturulan öznitelik <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>. Yöntemi, bir öznitelik tarafından işaretlenmemiş herhangi bir sınıf içinde görünebilir.  
-  
- Daha fazla bilgi için [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).  
-  
-```  
-using Company.MyDsl;  
-using Company.MyDsl.ExtensionEnablement;  
-using Microsoft.VisualStudio.Modeling.Validation;  
-  
-namespace MefExtension  
-{  
-  class MyValidationExtension // Can be any class.  
-  {  
-    // SAMPLE VALIDATION METHOD.  
-    // All validation methods have the following attributes.  
-  
-    // Specific to the extended DSL:  
-    [MyDslValidationExtension]   
-  
-    // Determines when validation is applied:  
-    [ValidationMethod(  
-       ValidationCategories.Save  
-     | ValidationCategories.Open  
-     | ValidationCategories.Menu)]  
-  
-    /// <summary>  
-    /// When validation is executed, this method is invoked  
-    /// for every element in the model that is an instance  
-    /// of the second parameter type.  
-    /// </summary>  
-    /// <param name="context">For reporting errors</param>  
-    /// <param name="elementToValidate"></param>  
-    private void ValidateClassNames  
-      (ValidationContext context,  
-       // Type determines to what elements this will be applied:  
-       ExampleElement elementToValidate)  
-    {   
-      // Write code here to test values and links.  
-      if (elementToValidate.Name.IndexOf(' ') >= 0)  
-      {  
-        // Log any unacceptable values:  
-        context.LogError(  
-          // Description:  
-          "Name must not contain spaces"   
-          // Error code unique to this type of error:  
-          , "MyDsl001"   
-          // Element to highlight when user double-clicks error:  
-          , elementToValidate);   
-} } } }  
-  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio uzantıları gönderme](../extensibility/shipping-visual-studio-extensions.md)   
- [Yönetilen Genişletilebilirlik Çerçevesi (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)   
- [Nasıl yapılır: Bir Sürükle ve bırak işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md)   
- [Etki Alanına Özgü bir Dilde Doğrulama](../modeling/validation-in-a-domain-specific-language.md)
+   > Bu dosyadaki GUID 'yi DslPackage\GeneratedCode\Constants.tt içinde tanımlanan GUID CommandSetId ile aynı olacak şekilde ayarlayın
+
+   ```
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+   <#
+   // CmdSet Guid must be defined before master template is included
+   // This Guid must be kept synchronized with the CommandSetId Guid in Constants.tt
+   Guid guidCmdSet = new Guid ("00000000-0000-0000-0000-000000000000");
+   string menuidCommandsExtensionBaseId="0x4000";
+   #>
+   <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>
+   ```
+
+    Dosya adı: `CommandExtensionRegistrar.tt`
+
+   ```
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+   <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>
+   ```
+
+    Dosya adı: `ValidationExtensionEnablement.tt`
+
+   ```
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+   <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>
+   ```
+
+    Dosya adı: `ValidationExtensionRegistrar.tt`
+
+    Bu dosyayı eklerseniz, DSL Explorer 'da **Editorvalidation** içindeki anahtarlardan en az bırını kullanarak DSL 'de doğrulamayı etkinleştirmeniz gerekir.
+
+   ```
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+   <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>
+   ```
+
+    Dosya adı: `PackageExtensionEnablement.tt`
+
+   ```
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+   <#@ include file="DslPackage\PackageExtensionEnablement.tt" #>
+   ```
+
+2. **DSL** projesi Içinde **MefExtension** adlı yeni bir klasör oluşturun. Aşağıdaki dosyaları bu dosyaya ekleyin:
+
+    Dosya adı: `DesignerExtensionMetaDataAttribute.tt`
+
+   ```
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+   <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>
+   ```
+
+    Dosya adı: `GestureExtensionEnablement.tt`
+
+   ```
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+   <#@ include file="Dsl\GestureExtensionEnablement.tt" #>
+   ```
+
+    Dosya adı: `GestureExtensionController.tt`
+
+   ```
+   <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+   <#@ include file="Dsl\GestureExtensionController.tt" #>
+   ```
+
+3. Aşağıdaki satırı **Dslpackage\commands.vsct**adlı mevcut dosyaya ekleyin:
+
+   ```
+   <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
+   ```
+
+    Varolan `<Include>` yönergesinden sonra satırı ekleyin.
+
+4. `Open DslDefinition.dsl.`
+
+5. DSL Gezgini ' nde **Editor\validation**' ı seçin.
+
+6. Özellikler penceresi, **...** adlı özelliklerden en az birinin `true` olduğundan emin olun.
+
+7. Çözüm Gezgini araç çubuğunda **Tüm Şablonları Dönüştür**' e tıklayın.
+
+    Bağlı olan dosyalar, eklediğiniz her bir dosyanın altında görünür.
+
+8. Hala çalıştığını doğrulamak için çözümü derleyin ve çalıştırın.
+
+   DSL 'niz artık MEF etkin. Menü komutlarını, hareket işleyicilerini ve doğrulama kısıtlamalarını MEF uzantıları olarak yazabilirsiniz. Bu uzantıları DSL çözümünüze diğer özel kodla birlikte yazabilirsiniz. Ayrıca, siz veya diğer geliştiriciler DSL 'yi genişleten ayrı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantıları yazabilir.
+
+## <a name="creating-an-extension-for-a-mef-enabled-dsl"></a>MEF etkin DSL için uzantı oluşturma
+ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye erişiminiz varsa, bunun için Uzantılar yazabilirsiniz. Uzantılar, menü komutları, hareket işleyicileri veya doğrulama kısıtlamaları eklemek için kullanılabilir. Bu uzantıları yazmak için bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı (VSıX) çözümü kullanırsınız. Çözüm iki bölümden oluşur: kod derlemesini oluşturan bir sınıf kitaplığı projesi ve derlemeyi paketleyen bir VSıX projesi.
+
+#### <a name="to-create-a-dsl-extension-vsix"></a>DSL uzantısı VSıX oluşturmak için
+
+1. Yeni bir sınıf kitaplığı projesi oluşturun. Bunu yapmak için, **Yeni proje** iletişim kutusunda **Visual Basic** veya  **C# görsel** ' i seçin ve ardından **sınıf kitaplığı**' nı seçin.
+
+2. Yeni sınıf kitaplığı projesinde, DSL derlemesine bir başvuru ekleyin.
+
+   - Bu derleme genellikle "ile biten bir ada sahiptir. DSL. dll ".
+
+   - DSL projesine erişiminiz varsa, derleme dosyasını **\\bin \\ Dizin dsl bulabilirsiniz \***
+
+   - DSL VSıX dosyasına erişiminiz varsa, VSıX dosyasının dosya adı uzantısını ". zip" olarak değiştirerek derlemeyi bulabilirsiniz. . Zip dosyasını sıkıştırmasını açın.
+
+3. Aşağıdaki .NET derlemelerine başvuruları ekleyin:
+
+   - Microsoft. VisualStudio. modellemesi. SDK. 11.0. dll
+
+   - Microsoft. VisualStudio. modellemesi. SDK. diyagramlar. 11.0. dll
+
+   - Microsoft. VisualStudio. modellemesi. SDK. Shell. 11.0. dll
+
+   - System.ComponentModel.Composition.dll
+
+   - System. Windows. Forms. dll
+
+4. Aynı çözümde bir VSıX projesi oluşturun. Bunu yapmak için **Yeni proje** iletişim kutusunda **Visual Basic** veya **görsel C#** ' i genişletin, **genişletilebilirlik**' i ve **VSIX projesi**' ni seçin.
+
+5. Çözüm Gezgini, VSıX projesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' ya tıklayın.
+
+6. Yeni projede, açık **kaynak. Extension. valtmanifest**' i açın.
+
+7. **Içerik Ekle**' ye tıklayın. İletişim kutusunda, **Içerik türünü** **MEF bileşeni**ve **kaynak proje** ' yi sınıf kitaplığı projenize ayarlayın.
+
+8. DSL 'ye bir VSıX başvurusu ekleyin.
+
+   1. **Source. Extension. valtmanifest**Içinde **Başvuru Ekle** ' ye tıklayın.
+
+   2. İletişim kutusunda **Yük Ekle** ' ye tıklayın ve ardından dsl dosyasının VSIX dosyasını bulun. VSıX dosyası, **DslPackage \\bin \\ \*** 'da DSL çözümünde oluşturulmuştur.
+
+       Bu, kullanıcıların DSL 'yi ve uzantınızı aynı anda yüklemesine olanak tanır. Kullanıcı DSL 'yi zaten yüklemiştir, yalnızca uzantınızın yüklenmesi gerekir.
+
+9. **Kaynak. Extension. valtmanifest**'in diğer alanlarını gözden geçirin ve güncelleştirin. **Sürümleri Seç** ' e tıklayın ve doğru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sürümlerinin ayarlandığını doğrulayın.
+
+10. Sınıf kitaplığı projesine kod ekleyin. Bir sonraki bölümdeki örnekleri kılavuz olarak kullanın.
+
+     İstediğiniz sayıda komut, hareket ve doğrulama sınıfı ekleyebilirsiniz.
+
+11. Uzantıyı test etmek için **F5**'e basın. @No__t_0 deneysel örneğinde, DSL 'nin örnek bir dosyasını oluşturun veya açın.
+
+## <a name="writing-mef-extensions-for-dsls"></a>DSLs için MEF uzantıları yazılıyor
+ Ayrı bir DSL uzantısı çözümünün derleme kodu projesinde uzantı yazabilirsiniz. Ayrıca, DSL 'nin bir parçası olarak komutları, hareketleri ve doğrulama kodunu yazmak için uygun bir yol olarak DslPackage projenizde MEF kullanabilirsiniz.
+
+### <a name="menu-commands"></a>Menü Komutları
+ Bir menü komutu yazmak için <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> uygulayan bir sınıf tanımlayın ve bu sınıfa, *dsl `CommandExtension` ADLı DSL içinde* tanımlanan özniteliğe önek ekleyin. Birden fazla menü komut sınıfı yazabilirsiniz.
+
+ `QueryStatus()`, kullanıcı diyagrama sağ tıkladığı zaman çağrılır. Geçerli seçimi inceleyerek, komutun ne zaman geçerli olduğunu göstermek için `command.Enabled` ayarlaması gerekir.
+
+```
+using System.ComponentModel.Composition;
+using System.Linq;
+using Company.MyDsl; // My DSL
+using Company.MyDsl.ExtensionEnablement; // My DSL
+using Microsoft.VisualStudio.Modeling; // Transactions
+using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement; // IVsSelectionContext
+using Microsoft.VisualStudio.Modeling.ExtensionEnablement; // ICommandExtension
+
+namespace MyMefExtension
+{
+  // Defined in Dsl\MefExtension\DesignerExtensionMetaDataAttribute.cs:
+  [MyDslCommandExtension]
+  public class MyCommandClass : ICommandExtension
+  {
+    /// <summary>
+    /// Provides access to current document and selection.
+    /// </summary>
+    [Import]
+    IVsSelectionContext SelectionContext { get; set; }
+
+    /// <summary>
+    /// Called when the user selects this command.
+    /// </summary>
+    /// <param name="command"></param>
+    public void Execute(IMenuCommand command)
+    {
+      // Transaction is required if you want to update elements.
+      using (Transaction t = SelectionContext.CurrentStore
+              .TransactionManager.BeginTransaction("fix names"))
+      {
+        foreach (ExampleShape shape in SelectionContext.CurrentSelection)
+        {
+          ExampleElement element = shape.ModelElement as ExampleElement;
+          element.Name = element.Name + " !";
+        }
+        t.Commit();
+      }
+    }
+
+    /// <summary>
+    /// Called when the user right-clicks the diagram.
+    /// Determines whether the command should appear.
+    /// This method should set command.Enabled and command.Visible.
+    /// </summary>
+    /// <param name="command"></param>
+    public void QueryStatus(IMenuCommand command)
+    {
+      command.Enabled =
+        command.Visible = (SelectionContext.CurrentSelection.OfType<ExampleShape>().Count() > 0);
+    }
+
+    /// <summary>
+    /// Called when the user right-clicks the diagram.
+    /// Determines the text of the command in the menu.
+    /// </summary>
+    public string Text
+    {
+      get { return "My menu command"; }
+    }
+  }
+}
+
+```
+
+### <a name="gesture-handlers"></a>Hareket Işleyicileri
+ Bir hareket işleyicisi, diyagram üzerinde her yerden, iç veya dış [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sürüklenen nesneler ile ilgilenebilirler. Aşağıdaki örnek, kullanıcının Windows Gezgini 'ndeki dosyaları diyagram üzerine sürükleyebilmenizi sağlar. Dosya adlarını içeren öğeleri oluşturur.
+
+ Diğer DSL modellerinden ve UML modellerinden sürüklerle başa çıkmak için işleyiciler yazabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md).
+
+```
+
+using System.ComponentModel.Composition;
+using System.Linq;
+using Company.MyDsl;
+using Company.MyDsl.ExtensionEnablement;
+using Microsoft.VisualStudio.Modeling; // Transactions
+using Microsoft.VisualStudio.Modeling.Diagrams;
+using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
+using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
+
+namespace MefExtension
+{
+  [MyDslGestureExtension]
+  class MyGestureExtension : IGestureExtension
+  {
+    public void OnDoubleClick(ShapeElement targetElement, DiagramPointEventArgs diagramPointEventArgs)
+    {
+      System.Windows.Forms.MessageBox.Show("double click!");
+    }
+
+    /// <summary>
+    /// Called when the user drags anything over the diagram.
+    /// Return true if the dragged object can be dropped on the current target.
+    /// </summary>
+    /// <param name="targetMergeElement">The shape or diagram that the mouse is currently over</param>
+    /// <param name="diagramDragEventArgs">Data about the dragged element.</param>
+    /// <returns></returns>
+    public bool CanDragDrop(ShapeElement targetMergeElement, DiagramDragEventArgs diagramDragEventArgs)
+    {
+      // This handler only allows items to be dropped onto the diagram:
+      return targetMergeElement is MefDsl2Diagram &&
+      // And only accepts files dragged from Windows Explorer:
+        diagramDragEventArgs.Data.GetFormats().Contains("FileNameW");
+    }
+
+    /// <summary>
+    /// Called when the user drops an item onto the diagram.
+    /// </summary>
+    /// <param name="targetDropElement"></param>
+    /// <param name="diagramDragEventArgs"></param>
+    public void OnDragDrop(ShapeElement targetDropElement, DiagramDragEventArgs diagramDragEventArgs)
+    {
+      MefDsl2Diagram diagram = targetDropElement as MefDsl2Diagram;
+      if (diagram == null) return;
+
+      // This handler only accepts files dragged from Windows Explorer:
+      string[] draggedFileNames = diagramDragEventArgs.Data.GetData("FileNameW") as string[];
+      if (draggedFileNames == null || draggedFileNames.Length == 0) return;
+
+      using (Transaction t = diagram.Store.TransactionManager.BeginTransaction("file names"))
+      {
+        // Create an element to represent each file:
+        foreach (string fileName in draggedFileNames)
+        {
+          ExampleElement element = new ExampleElement(diagram.ModelElement.Partition);
+          element.Name = fileName;
+
+          // This method of adding the new element allows the position
+          // of the shape to be specified:
+          ElementGroup group = new ElementGroup(element);
+          diagram.ElementOperations.MergeElementGroupPrototype(
+            diagram, group.CreatePrototype(), PointD.ToPointF(diagramDragEventArgs.MousePosition));
+        }
+        t.Commit();
+      }
+    }
+  }
+}
+
+```
+
+### <a name="validation-constraints"></a>Doğrulama kısıtlamaları
+ Doğrulama yöntemleri DSL tarafından oluşturulan `ValidationExtension` özniteliği tarafından ve ayrıca <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> tarafından işaretlenir. Yöntemi bir öznitelik tarafından işaretlenmemiş herhangi bir sınıfta bulunabilir.
+
+ Daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
+
+```
+using Company.MyDsl;
+using Company.MyDsl.ExtensionEnablement;
+using Microsoft.VisualStudio.Modeling.Validation;
+
+namespace MefExtension
+{
+  class MyValidationExtension // Can be any class.
+  {
+    // SAMPLE VALIDATION METHOD.
+    // All validation methods have the following attributes.
+
+    // Specific to the extended DSL:
+    [MyDslValidationExtension]
+
+    // Determines when validation is applied:
+    [ValidationMethod(
+       ValidationCategories.Save
+     | ValidationCategories.Open
+     | ValidationCategories.Menu)]
+
+    /// <summary>
+    /// When validation is executed, this method is invoked
+    /// for every element in the model that is an instance
+    /// of the second parameter type.
+    /// </summary>
+    /// <param name="context">For reporting errors</param>
+    /// <param name="elementToValidate"></param>
+    private void ValidateClassNames
+      (ValidationContext context,
+       // Type determines to what elements this will be applied:
+       ExampleElement elementToValidate)
+    {
+      // Write code here to test values and links.
+      if (elementToValidate.Name.IndexOf(' ') >= 0)
+      {
+        // Log any unacceptable values:
+        context.LogError(
+          // Description:
+          "Name must not contain spaces"
+          // Error code unique to this type of error:
+          , "MyDsl001"
+          // Element to highlight when user double-clicks error:
+          , elementToValidate);
+} } } }
+
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Visual Studio uzantılarını gönderme](../extensibility/shipping-visual-studio-extensions.md) [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde) [nasıl yapılır:](../modeling/how-to-add-a-drag-and-drop-handler.md) [etki alanına özgü bir dilde](../modeling/validation-in-a-domain-specific-language.md) sürükle ve bırak işleyicisi doğrulama ekleme

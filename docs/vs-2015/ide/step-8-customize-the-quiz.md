@@ -1,36 +1,36 @@
 ---
-title: '8\. Adım: Testi özelleştirme | Microsoft Docs'
+title: '8\. Adım: testi özelleştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: dc8edb13-1b23-47d7-b859-8c6f7888c1a9
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 75bde59c6e4b61c2775f188383fc9058a6c31242
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e6084daea11d981477bbee6f210e1faf718b58d8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68178558"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646917"
 ---
 # <a name="step-8-customize-the-quiz"></a>8\. Adım: Testi Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Öğreticinin son bölümünde testi özelleştirme ve zaten öğrendiklerinizi üzerinde genişletmek için bazı yollar hakkında bilgi edineceksiniz. Örneğin, programın yanıt hiçbir zaman bir kesir olduğu rastgele bölme problemleri nasıl oluşturduğunu hakkında düşünün. Daha fazla bilgi için kapatma `timeLabel` farklı bir renkte denetlemek ve sınava giren bir ipucu verir.  
-  
-### <a name="to-customize-the-quiz"></a>Test özelleştirmek için  
-  
-- Yalnızca beş saniyede bir sınavda kalan zaman **timeLabel** denetiminde kırmızı renkte ayarlayarak onun **BackColor** özelliği (`timeLabel.BackColor = Color.Red;`). Test bittiğinde rengi sıfırlayın.  
-  
-- Sınava giren bir NumericUpDown denetimine doğru yanıtı girildiğinde ses çalma bir ipucu verir. (Her denetim için bir olay işleyicisi yazmanız gereken `ValueChanged()` sınava denetimin değeri değiştiğinde harekete olayı,.)  
-  
-### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için  
-  
-- Sınavın tamamlanmış bir sürümünü indirmek için bkz [matematik sınavı öğretici örneği](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).  
-  
-- Sonraki eğitime gitmek için bkz: [Tutorial 3: Bir eşleştirme oyunu oluşturmak](../ide/tutorial-3-create-a-matching-game.md).  
-  
-- Önceki öğretici adımına dönmek için bkz: [adım 7: Çarpma ve bölme problemleri ekleme](../ide/step-7-add-multiplication-and-division-problems.md).
+Öğreticinin son bölümünde, testi özelleştirmenin ve daha önce öğrendiklerinizi genişletmenin bazı yollarını keşfedeceksiniz. Örneğin, programın yanıtın hiç bir kesir olmadığı rastgele bölüm sorunları nasıl oluşturduğunu düşünün. Daha fazla bilgi edinmek için `timeLabel` denetimini farklı bir renkle açın ve sınava ipucu sunun.
+
+### <a name="to-customize-the-quiz"></a>Testi özelleştirmek için
+
+- Bir test içinde yalnızca beş saniye kaldığında, **BackColor** özelliğini (`timeLabel.BackColor = Color.Red;`) ayarlayarak **timeLabel** denetimini kırmızı olarak açın. Test üzerindeyken rengi sıfırlayın.
+
+- Bir NumericUpDown denetimine doğru yanıt girildiğinde, bir sesi oynatarak sınava ipucu sunun. (Her denetimin `ValueChanged()` olayı için bir olay işleyicisi yazmanız gerekir ve bu, her bir test, denetimin değerini değiştirdiğinde ateşlenir.)
+
+### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
+
+- Sınavın tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
+
+- Sonraki öğreticiye gitmek için bkz. [öğretici 3: eşleşen oyun oluşturma](../ide/tutorial-3-create-a-matching-game.md).
+
+- Önceki öğretici adımına dönmek için bkz. [7. Adım: çarpma ve bölme sorunları ekleme](../ide/step-7-add-multiplication-and-division-problems.md).

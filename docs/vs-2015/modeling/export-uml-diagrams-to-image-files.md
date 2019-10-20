@@ -6,20 +6,20 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: b29ce2a5-0ee3-4ab7-9aa3-13ca9c6b37a2
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 782d5da27898de7a332824e6fb07842710ab0656
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: c095291cd02d591d9e493601b598a63c1ccb6f5b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871837"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669662"
 ---
 # <a name="export-uml-diagrams-to-image-files"></a>UML diyagramlarını görüntü dosyalarına aktarma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir UML belgeyi içinden [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] program denetimi altında olan bir görüntüye dışarı aktarabilirsiniz. Örneğin, bunu otomatik belge oluşturma 'nın bir parçası olarak yapmak isteyebilirsiniz.
+@No__t_0 bir UML belgeyi program denetimindeki bir görüntüye dışarı aktarabilirsiniz. Örneğin, bunu otomatik belge oluşturma 'nın bir parçası olarak yapmak isteyebilirsiniz.
 
  Bir belgeyi bir görüntüye el ile dışarı aktarmak istiyorsanız, şekilleri kopyalayıp Word gibi başka programlara yapıştırabilirsiniz. Belgeleri XPS biçimine de yazdırabilirsiniz. Daha fazla bilgi için bkz. [diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md).
 
@@ -29,7 +29,7 @@ Bir UML belgeyi içinden [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] program de
 > [!NOTE]
 > Bu kodun bir menü komutu olarak çalışmasını sağlamak için, onu bir MEF bileşenine eklemeniz gerekir. Daha fazla bilgi için bkz. [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
- Kod ilk olarak, <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> temel alınan uygulamayı almak için [IShape. GetObject](/previous-versions/ee789371(v=vs.140)) ' i kullanır. Bu tür bir yöntemi <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A>içerir.
+ Kod ilk olarak, temel alınan uygulamanın <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> almak için [IShape. GetObject](/previous-versions/ee789371(v=vs.140)) 'i kullanır. Bu türün bir yöntemi <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A> vardır.
 
 ```
 namespace SaveToImage

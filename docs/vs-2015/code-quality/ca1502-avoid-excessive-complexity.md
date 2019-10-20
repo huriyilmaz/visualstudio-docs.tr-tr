@@ -1,5 +1,5 @@
 ---
-title: 'CA1502: Aşırı karmaşıklıktan kaçının | Microsoft Docs'
+title: 'CA1502: aşırı karmaşıklıktan kaçının | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - AvoidExcessiveComplexity
 ms.assetid: d735454b-2f8f-47ce-907d-f7a5a5391221
 caps.latest.revision: 32
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e1885a07f4c9edbbdea9be4f0e74aaf8e4d3a6f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7b830e9d3a045bb54394a91d94e036613af7d1f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68191253"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72607869"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Aşırı karmaşıklıktan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,67 +29,67 @@ ms.locfileid: "68191253"
 |-|-|
 |TypeName|AvoidExcessiveComplexity|
 |CheckId|CA1502|
-|Kategori|Microsoft.Maintainability|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Bakımolmaması|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir yönteme bir aşırı döngüzel karmaşıklığına sahip.
+ Bir yöntemin aşırı döngüsel karmaşıklığı vardır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- *Döngüsel karmaşıklık* sayısı ve karmaşıklığı koşullu dalları tarafından belirlenir yöntemi giden doğrusal bağımsız yolların sayısını ölçer. Düşük döngüzel karmaşıklığına genellikle anlamak, test etme ve korumak kolay bir yöntemi gösterir. Döngüsel karmaşıklık yönteminin denetim akışı grafikten hesaplanır ve aşağıda verilmiştir:
+ *Döngüsel karmaşıklığı* , koşullu dalların sayısı ve karmaşıklığı tarafından belirlenen yöntemi aracılığıyla, doğrusal olarak bağımsız yolların sayısını ölçer. Düşük bir döngüsel karmaşıklığı genellikle anlaşılması, test etmek ve sürdürmek kolay bir yöntemi gösterir. Döngüsel karmaşıklığı, yönteminin bir denetim akışı grafiğinden hesaplanır ve aşağıdaki gibi verilmiştir:
 
- Döngüsel karmaşıklık kenarlar - düğüm sayısını + 1 sayısı =
+ Döngüsel karmaşıklığı = kenar sayısı-düğüm sayısı + 1
 
- mantıksal dal noktası ve bir uç düğüm burada temsil eder, düğümler arasında bir satırı temsil eder.
+ bir düğüm bir mantık dal noktasını temsil ettiğinde ve bir kenar, düğümler arasındaki çizgiyi temsil eder.
 
- Döngüsel karmaşıklık 25'ten fazla olduğunda kuralı ihlal bildirir.
+ Kural, döngüsel karmaşıklığı 25 ' ten fazla olduğunda bir ihlalin bildirir.
 
- Kod ölçümleri hakkında daha fazla bilgi [ölçüm karmaşıklığı ve yönetilen kod bakımı](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md),
+ Kod ölçümleri hakkında daha fazla bilgi edinmek için [karmaşıklık ve yönetilen kodun bakımlarındaki](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için döngüsel karmaşıklığı azaltmak için yöntemi yeniden düzenleyin.
+ Bu kural ihlalini onarmak için, döngüsel karmaşıklığını azaltmak üzere yöntemi yeniden düzenleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Karmaşık bir kolayca azaltılamaz ve anlaşılması, test ve korumak kolay bir yöntemdir bu kuraldan bir uyarıyı bastırmak güvenlidir. Özellikle, bir büyük içeren bir yöntem `switch` (`Select` içinde [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) deyimi dışlama için aday olduğunu. Kod tabanı geç geliştirme döngüsü ya da beklenmeyen bir çalışma zamanı davranışını daha önce sevk edilen kodda değişiklik giriş kodu yeniden düzenlemeye bakım avantajlarını gölgede bırakabilir destabilizing riskini.
+ Karmaşıklığın kolayca azaltılamamasının ve yöntemin anlaşılması, test edilmesi ve bakımının kolay olması durumunda bu kuraldan bir uyarının gösterilmesinin güvenli olması güvenlidir. Özellikle, büyük `switch` `Select` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)])) içeren bir yöntem, dışarıda bırakma için bir adaydır. Kod tabanını geliştirme döngüsündeki geç hale getirme veya daha önce sevk edilen koddaki çalışma zamanı davranışında beklenmedik bir değişikliği tanıtma riski, kodu yeniden düzenlemenin bakım avantajlarının ağır olduğunu ortadan kaldırır.
 
-## <a name="how-cyclomatic-complexity-is-calculated"></a>Döngüsel karmaşıklık nasıl hesaplanır
- Döngüsel karmaşıklık 1 aşağıdaki ekleyerek hesaplanır:
+## <a name="how-cyclomatic-complexity-is-calculated"></a>Döngüsel karmaşıklığı nasıl hesaplanır
+ Döngüsel karmaşıklığı aşağıdaki 1 eklenerek hesaplanır:
 
-- Dal sayısıyla (gibi `if`, `while`, ve `do`)
+- Dal sayısı (`if`, `while` ve `do`)
 
-- Sayısı `case` deyimlerinde bir `switch`
+- Bir `switch` `case` deyim sayısı
 
-  Aşağıdaki örnekler, değişen döngüsel karmaşıklık içeren yöntemleri gösterir.
+  Aşağıdaki örneklerde, değişen döngüsel karmaşıklıkları olan Yöntemler gösterilmektedir.
 
 ## <a name="example"></a>Örnek
- **Döngüsel karmaşıklık 1**
+ **1 döngüsel karmaşıklığı**
 
  [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cpp/FxCop.Maintainability.AvoidExcessiveComplexity.cpp#1)]
  [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cs/FxCop.Maintainability.AvoidExcessiveComplexity.cs#1)]
  [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/vb/FxCop.Maintainability.AvoidExcessiveComplexity.vb#1)]
 
 ## <a name="example"></a>Örnek
- **Döngüsel karmaşıklık 2**
+ **2 döngüsel karmaşıklığı**
 
  [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cpp/FxCop.Maintainability.AvoidExcessiveComplexity.cpp#2)]
  [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cs/FxCop.Maintainability.AvoidExcessiveComplexity.cs#2)]
  [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#2](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/vb/FxCop.Maintainability.AvoidExcessiveComplexity.vb#2)]
 
 ## <a name="example"></a>Örnek
- **Döngüsel karmaşıklık 3**
+ **3 döngüsel karmaşıklığı**
 
  [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cpp/FxCop.Maintainability.AvoidExcessiveComplexity.cpp#3)]
  [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cs/FxCop.Maintainability.AvoidExcessiveComplexity.cs#3)]
  [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#3](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/vb/FxCop.Maintainability.AvoidExcessiveComplexity.vb#3)]
 
 ## <a name="example"></a>Örnek
- **Döngüsel karmaşıklık 8**
+ **8 döngüsel karmaşıklığı**
 
  [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cpp/FxCop.Maintainability.AvoidExcessiveComplexity.cpp#4)]
  [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cs/FxCop.Maintainability.AvoidExcessiveComplexity.cs#4)]
  [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#4](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/vb/FxCop.Maintainability.AvoidExcessiveComplexity.vb#4)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1501: Aşırı devralmadan kaçının](../code-quality/ca1501-avoid-excessive-inheritance.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.

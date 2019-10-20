@@ -1,5 +1,5 @@
 ---
-title: Kod çözümleme kural kümesi başvurusu | Microsoft Docs
+title: Kod analizi kural kümesi başvurusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - code analysis, rule sets
 ms.assetid: 5874e854-e298-4d2e-bbe4-95e899d22587
 caps.latest.revision: 45
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a1f91b352da5a41ec2ef81fb6067976073c787ef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a3c0b347f186c5adee6cf86a0e1720ebfa80f253
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62576760"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670110"
 ---
 # <a name="code-analysis-rule-set-reference"></a>Kod analizi kural kümesi başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yönetilen kod projeleri için Kod Analizi yapılandırdığınızda [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], veya [!INCLUDE[vsPro](../includes/vspro-md.md)]yerleşik bir listesi sunulur *kural kümeleri*. Ya da standar kural kümelerinden birini kullanabilir veya bir kural kümesini proje gereksinimlerinizi karşılayacak şekilde özelleştirebilirsiniz.  
-  
-## <a name="available-rule-sets"></a>Kullanılabilir kural kümeleri  
- Aşağıdaki tabloda, varsayılan kural kümelerini listeler:  
-  
-|||  
-|-|-|  
-|[Tüm Kurallar kural kümesi](../code-quality/all-rules-rule-set.md)|Bu kural kümesi, tüm kurallar içerir. Bu kural kümesi çalıştıran çok sayıda rapor uyarılarına neden olabilir. Bu kural kümesini kodunuzda tüm sorunların kapsamlı bir resim almak için kullanın. Bu, hangisinin daha odaklı kural kümeleri projelerinizi çalıştırmak için daha uygun olduğuna karar vermenize yardımcı olabilir.|  
-|[Yönetilen kod için Temel Doğruluk Kuralları kural kümesi](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)|Bu kurallar mantık hataları ve Framework API kullanımı yapılan yaygın hataları odaklanır. En az önerilen kurallar tarafından bildirilen uyarılar listesini genişletmek için bu kural içerir.|  
-|[Yönetilen kod için Temel Tasarım Yönerge Kuralları kural kümesi](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md)|Bu kurallar kodunuzu anlamayı ve kullanmayı daha kolay hale getirmek için en iyi yöntemler üzerinde odaklanır. Bu kural projeniz Kütüphane kodu içeriyorsa, ya da kolayca rahat kod için en iyi yöntemler zorlamak istiyorsanız kümesini içerir.|  
-|[Yönetilen kod için Genişletilmiş Doğruluk Kuralları kural kümesi](../code-quality/extended-correctness-rules-rule-set-for-managed-code.md)|Bu kuralların raporlanan mantığı ve framework kullanım hatalarını en üst düzeye çıkarmak için temel doğruluk kurallarını genişletin. Ekstra Vurgu COM birlikte çalışma ve mobil uygulamaları gibi spesifik senaryolarda yer alır. Bu kural Bu senaryolardan biri, projenize veya projenize ek sorunları bulmak için geçerliyse kümesi dahil etmeyi düşünün.|  
-|[Yönetilen kod için Genişletilmiş Tasarım Yönerge Kuralları kural kümesi](../code-quality/extended-design-guidelines-rules-rule-set-for-managed-code.md)|Bu kurallar bildirilir ve yaşatılabilirlik en üst düzeye çıkarmak için temel tasarım yönerge kuralları'nı genişletin. Kuralları adlandırma üzerinde fazladan Vurgu yerleştirilir. Bu kural projeniz Kütüphane kodu içeriyorsa, ya da Bakımı yapılabilir kodu yazmak için en yüksek standartları zorlamak istiyorsanız kümesi dahil etmeyi düşünün.|  
-|[Yönetilen kod için Genelleştirme Kuralları kural kümesi](../code-quality/globalization-rules-rule-set-for-managed-code.md)|Bu kurallar veri uygulamanızın farklı dil, yerel ayarlar ve kültürler kullanıldığında düzgün görüntülenmesini engelleyen sorunlara odaklanır. Bu kural, uygulama yerelleştirilmiş ya da Eğer kümesini içerir.|  
-|[Yönetilen kod için Yönetilen Minimum Kurallar kural kümesi](../code-quality/managed-minimun-rules-rule-set-for-managed-code.md)|Bu kurallar kodunuzda kod analizinin en doğru olan en kritik sorunlara odaklanır.  Bu kurallar küçük ve bunlar yalnızca sınırlı bir Visual Studio sürümlerinde çalışması amaçlanmıştır.  Minimumrecommendedrules.ruleset'i diğer Visual Studio sürümleri ile kullanın.|  
-|[Yönetilen kod için Yönetilen Önerilen Kurallar kural kümesi](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)|Bu kurallar potansiyel güvenlik boşluklarını, uygulama kilitlenmesi ve diğer önemli mantık ve tasarım hataları gibi kodunuzda en kritik sorunlara odaklanır. Projeleriniz için oluşturduğunuz herhangi bir özel kural kümesi bu kural kümesini içermelidir.|  
-|[Karışık Minimum Kurallar kural kümesi](../code-quality/mixed-minimum-rules-rule-set.md)|Bu kurallar potansiyel güvenlik boşluklarını ve Uygulama Kilitlenmesi gibi Common Language Runtime destekleyen C++ projelerinizin en kritik sorunlara odaklanır. Common Language Runtime destekleyen C++ projeleriniz için oluşturduğunuz herhangi bir özel kural kümesi bu kural kümesini içermelidir.|  
-|[Karışık Önerilen Kurallar kural kümesi](../code-quality/mixed-recommended-rules-rule-set.md)|Bu kurallar potansiyel güvenlik boşluklarını, uygulama kilitlenmesi ve diğer önemli mantık ve tasarım hataları gibi Common Language Runtime destekleyen C++ projeleriniz en yaygın ve kritik sorunlarına odaklanır. Common Language Runtime destekleyen C++ projeleriniz için oluşturduğunuz herhangi bir özel kural kümesi bu kural kümesini içermelidir.  Bu kural Seti Visual Studio Professional sürümü ve üzeri sürümlerin yapılandırılması için tasarlanmıştır.|  
-|[Yerel Minimum Kurallar kural kümesi](../code-quality/native-minimum-rules-rule-set.md)|Bu kurallar potansiyel güvenlik boşluklarını ve Uygulama Kilitlenmesi gibi yerel, kodunuzda en kritik sorunlara odaklanır. Doğal projeleriniz için oluşturduğunuz herhangi bir özel kural kümesi bu kural kümesini içermelidir.|  
-|[Yerel Önerilen Kurallar kural kümesi](../code-quality/native-recommended-rules-rule-set.md)|Bu kurallar potansiyel güvenlik boşluklarını ve Uygulama Kilitlenmesi gibi yerel kodda en önemli ve en yaygın sorunları odaklanır.  Doğal projeleriniz için oluşturduğunuz herhangi bir özel kural kümesi bu kural kümesini içermelidir.  Bu kural Seti Visual Studio Professional sürümü ve üzeri sürümlerde çalışmak üzere tasarlanmıştır.|  
-|[Yönetilen kod için Güvenlik Kuralları kural kümesi](../code-quality/security-rules-rule-set-for-managed-code.md)|Bu kural kümesi, tüm Microsoft Güvenlik kuralları içerir. Bu kural raporlanan olası güvenlik sorunlarını sayısı en üst düzeye çıkarmak için kümesi içerir.|
+@No__t_0, yönetilen kod projeleri için kod analizini yapılandırdığınızda, [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] veya [!INCLUDE[vsPro](../includes/vspro-md.md)]you yerleşik *kural kümelerinin*bir listesi ile birlikte sunulur. Standar kural kümelerinden birini kullanabilir ya da bir kural kümesini proje gereksinimlerinize uyacak şekilde özelleştirebilirsiniz.
+
+## <a name="available-rule-sets"></a>Kullanılabilir kural kümeleri
+ Aşağıdaki tabloda varsayılan kural kümeleri listelenmektedir:
+
+|||
+|-|-|
+|[Tüm Kurallar kural kümesi](../code-quality/all-rules-rule-set.md)|Bu kural kümesi tüm kuralları içerir. Bu kural kümesini çalıştırmak, çok sayıda uyarı oluşmasına neden olabilir. Kodunuzdaki tüm sorunların kapsamlı bir görüntüsünü almak için bu kural kümesini kullanın. Bu, ne kadar çok odaklanmış kural kümelerinin projeleriniz için çalıştırmaya en uygun olduğuna karar vermenize yardımcı olabilir.|
+|[Yönetilen kod için Temel Doğruluk Kuralları kural kümesi](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)|Bu kurallar, çerçeve API 'Leri kullanımında yapılan mantıksal hatalara ve yaygın hatalara odaklanmaktadır. Önerilen en düşük kurallara göre raporlanan uyarılar listesinde genişletmek için bu kural kümesini ekleyin.|
+|[Yönetilen kod için Temel Tasarım Yönerge Kuralları kural kümesi](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md)|Bu kurallar, kodunuzun anlaşılması ve kullanılması için en iyi uygulamaları zorlamaya odaklanmaktadır. Projeniz kitaplık kodu içeriyorsa veya kolayca sürdürülebilir kod için en iyi yöntemleri zorlamak istiyorsanız bu kural kümesini ekleyin.|
+|[Yönetilen kod için Genişletilmiş Doğruluk Kuralları kural kümesi](../code-quality/extended-correctness-rules-rule-set-for-managed-code.md)|Bu kurallar, bildirilen mantık ve çerçeve kullanım hatalarının en üst düzeye çıkarmak için temel doğruluk kurallarına genişletilir. Ek vurgu, COM birlikte çalışma ve mobil uygulamalar gibi belirli senaryolara yerleştirilir. Bu senaryolardan biri projeniz için geçerliyse veya projenizde ek sorunlar bulmak için bu kural kümesini dahil etmeyi göz önünde bulundurun.|
+|[Yönetilen kod için Genişletilmiş Tasarım Yönerge Kuralları kural kümesi](../code-quality/extended-design-guidelines-rules-rule-set-for-managed-code.md)|Bu kurallar, bildirilen kullanılabilirlik ve bakım sorunlarını en üst düzeye çıkarmak için temel tasarım kılavuz kuralları ' nı genişletir. Ek vurgu, adlandırma yönergelerine göre yerleştirilir. Projeniz kitaplık kodu içeriyorsa veya sürdürülebilir kod yazmak için en yüksek standartları zorlamak istiyorsanız bu kural kümesini dahil etmeyi göz önünde bulundurun.|
+|[Yönetilen kod için Genelleştirme Kuralları kural kümesi](../code-quality/globalization-rules-rule-set-for-managed-code.md)|Bu kurallar, farklı dillerde, yerel ayarlarda ve kültürlerde kullanıldığında uygulamanızdaki verilerin düzgün görüntülenmesini engelleyen sorunlara odaklanmaktadır. Uygulamanız yerelleştirilmiş veya Genelleştirilmiş ise bu kural kümesini ekleyin.|
+|[Yönetilen kod için Yönetilen Minimum Kurallar kural kümesi](../code-quality/managed-minimun-rules-rule-set-for-managed-code.md)|Bu kurallar, kodunuzda kod analizini en doğru olan en kritik sorunlara odaklanmaktadır.  Bu kurallar sayı olarak küçüktür ve yalnızca sınırlı Visual Studio sürümlerinde çalışmak üzere tasarlanmıştır.  Diğer Visual Studio sürümleriyle MinimumRecommendedRules. RuleSet kullanın.|
+|[Yönetilen kod için Yönetilen Önerilen Kurallar kural kümesi](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)|Bu kurallar, olası güvenlik delikleri, uygulama kilitlenmesi ve diğer önemli mantık ve tasarım hataları da dahil olmak üzere kodunuzdaki en kritik sorunlara odaklanmaktadır. Bu kural kümesini, projeleriniz için oluşturduğunuz herhangi bir özel kural kümesine dahil etmelisiniz.|
+|[Karışık Minimum Kurallar kural kümesi](../code-quality/mixed-minimum-rules-rule-set.md)|Bu kurallar, olası güvenlik delikleri ve uygulama kilitlenmeleri C++ dahil olmak üzere, projelerinizde ortak dil çalışma zamanını destekleyen en kritik sorunlara odaklanmaktadır. Bu kural kümesini, ortak dil çalışma zamanını destekleyen C++ projeleriniz için oluşturduğunuz herhangi bir özel kural kümesine dahil etmelisiniz.|
+|[Karışık Önerilen Kurallar kural kümesi](../code-quality/mixed-recommended-rules-rule-set.md)|Bu kurallar potansiyel güvenlik delikleri, uygulama kilitlenmesi ve diğer önemli mantık C++ ve tasarım hataları dahil olmak üzere ortak dil çalışma zamanını destekleyen projelerinizdeki en yaygın ve kritik sorunlara odaklanmaktadır. Bu kural kümesini, ortak dil çalışma zamanını destekleyen C++ projeleriniz için oluşturduğunuz herhangi bir özel kural kümesine dahil etmelisiniz.  Bu RuleSet, Visual Studio Professional sürümü ve üstü ile yapılandırılacak şekilde tasarlanmıştır.|
+|[Yerel Minimum Kurallar kural kümesi](../code-quality/native-minimum-rules-rule-set.md)|Bu kurallar, olası güvenlik delikleri ve uygulama kilitlenmeleri dahil olmak üzere yerel kodunuzda en kritik sorunlara odaklanmaktadır. Bu kural kümesini yerel projeleriniz için oluşturduğunuz herhangi bir özel kural kümesine dahil etmelisiniz.|
+|[Yerel Önerilen Kurallar kural kümesi](../code-quality/native-recommended-rules-rule-set.md)|Bu kurallar, olası güvenlik delikleri ve uygulama kilitlenmeleri dahil olmak üzere yerel kodunuzda en kritik ve yaygın sorunlara odaklanmaktadır.  Bu kural kümesini yerel projeleriniz için oluşturduğunuz herhangi bir özel kural kümesine dahil etmelisiniz.  Bu RuleSet, Visual Studio Professional Edition ve üzeri ile çalışacak şekilde tasarlanmıştır.|
+|[Yönetilen kod için Güvenlik Kuralları kural kümesi](../code-quality/security-rules-rule-set-for-managed-code.md)|Bu kural kümesi tüm Microsoft güvenlik kurallarını içerir. Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarmak için bu kural kümesini ekleyin.|

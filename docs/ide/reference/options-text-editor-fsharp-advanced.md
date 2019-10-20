@@ -1,32 +1,32 @@
 ---
-title: Seçenekler, metin düzenleyici, F#, Gelişmiş
+title: Seçenekler, metin düzenleyici, F#, gelişmiş
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.F%2523.Advanced
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e28bd5b7ace34995dbf0778d59f42b5c5d383aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aacc2b6aa47f7a250b161187146accc51736b586
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778989"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668941"
 ---
-# <a name="options-text-editor-f-advanced"></a>Seçenekler, metin düzenleyici, F#, Gelişmiş
+# <a name="options-text-editor-f-advanced"></a>Seçenekler, metin düzenleyici, F#, gelişmiş
 
-Kullanım **Gelişmiş** bazı metin düzenleyici ayarları değiştirmek için seçenekler sayfası F#. Bu seçenekler sayfası erişmek için kendi seçtikleri **Araçları** > **seçenekleri**ve ardından **metin düzenleyici**  >  **F#**  >  **Gelişmiş**.
+İçin F#bazı metin Düzenleyicisi ayarlarını değiştirmek için **Gelişmiş** Seçenekler sayfasını kullanın. Bu seçenekler sayfasına erişmek için **araçlar**  > **Seçenekler**' i seçin ve**Gelişmiş** >   >  **F#** metin düzenleyici ' yi seçin.
 
-## <a name="block-structure-guides"></a>Blok yapısı kılavuzları
+## <a name="block-structure-guides"></a>Yapı kılavuzlarını engelle
 
-Seçili olduğunda, dikey çizgileri Düzenleyicisi'nde bu satırı Yukarı tek bir kod bloklarını kolayca belirlemenize olanak sağlayan yapılandırılmış kod blokları ile görünür.
+Seçildiğinde, düzenleyicide tek tek kod bloklarını kolayca tanımlamanızı sağlayan, yapılandırılmış kod bloklarıyla bir dikey çizgi görüntülenir.
 
 ## <a name="outlining"></a>Anahat Oluşturma
 
-Otomatik olarak daraltılabilir kod bloklarını oluşturan kod dosyası ana hatlarını belirlemek için bu onay kutusunu seçin.
+Daraltılabilir kod blokları oluşturan kod dosyasında otomatik olarak ana hat anahatlarını belirlemek için bu onay kutusunu seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

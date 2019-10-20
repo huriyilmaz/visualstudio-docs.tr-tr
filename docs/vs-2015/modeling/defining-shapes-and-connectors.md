@@ -1,49 +1,49 @@
 ---
-title: Şekiller ve bağlayıcıları tanımlama | Microsoft Docs
+title: Şekilleri ve bağlayıcıları tanımlama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 1fae548d-9288-4dd5-a24f-ff0d69c73628
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 761e0e77a0fe9f6f32f08045d81f6eab815801dd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8304e573f64671936eee2ce922b904b41187aad2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68181893"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669851"
 ---
 # <a name="defining-shapes-and-connectors"></a>Şekiller ve Bağlayıcıları Tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir etki alanına özgü dil (DSL) diyagramda hakkındaki bilgileri görüntülemek için kullanılan şekillerinin birkaç temel türü vardır.  
-  
-## <a name="shapeTypes"></a> Şekilleri ve bağlayıcıları temel türleri  
- Bir DSL diyagramı koleksiyonu gösterir *şekiller* birbirine satırlarla veya *Bağlayıcılar*.  Genellikle, ancak her zaman:  
-  
-- Şekiller görünür gösterimini model öğeleri var.  
-  
-- Bağlayıcılar başvurusu ilişkileri temsil eder.  
-  
-- Diyagram model kök örneğini temsil eder.  
-  
-- Model öğeler arasındaki katıştırma ilişkileri kapsamlarına göre gösterilir. Örneğin, bileşenin bağlantı noktalarını temsil eden öğe bileşeni katıştırılır.  
-  
-  Bu düzenleri zorlanmaz ancak daha kesin desteklenir. Bir DSL tasarlarken, tasarım katıştırma ilişkilerinin olmalıdır aklınızda size aittir nasıl model ekranda sunmak istediğiniz tarafından etkiler. Bunun aksine, başvuru ilişkileri iş etki alanınızın kavramları yansıtmalıdır.  
-  
-  Aşağıdaki şekil türleri kullanılabilir:  
-  
-|Şekil türü|Açıklama|  
-|----------------|-----------------|  
-|Geometri şekli|Genel amaçlı dikdörtgen veya elips şekli. Metni ve simgesi dekoratörler belirli konumda şeklin sınırları göre görüntüleyebilirsiniz.<br /><br /> Geometrik şekiller içinde şekilleri iç içe yerleştirmek için bkz: [iç içe şekiller](../modeling/nesting-shapes.md).|  
-|Bölme şekli|Üst bilgi ve bir UML sınıfı gibi bölmeleri içeren dikdörtgen. Her bölme, metni satır listesini içerebilir.<br /><br /> Satırları, genellikle şekil tarafından temsil edilen öğeyi altında katıştırılmış öğeleri temsil eder. Örneğin, sınıf diyagramları çözüm şablonundan bir DSL oluşturun.|  
-|Görüntü şekli|Resim görüntüleyen şekli.|  
-|Bağlantı noktası şekli|Küçük bir dikdörtgen için başka bir şeklin ana hat eklemek için tasarlanmıştır. Genellikle, bileşen modellerinde kullanılır.<br /><br /> Bir bağlantı noktası tarafından temsil edilen model öğesi, genellikle üst şeklin tarafından temsil edilen öğeyi altında eklenir. Örneğin, bir DSL bileşenleri çözüm şablonu kullanarak oluşturun.<br /><br /> Varsayılan olarak, bir bağlantı noktası şeklini üst tarafında kaydırabilirsiniz. Belirli bir konuma sınırlamak için bir sınır kural tanımlayabilirsiniz.<br /><br /> Çok küçük ve saydam bir bağlantı noktası şeklini hale getirerek, üst şeklin solunun yüzeyine bir sabit bağlantı noktası sağlamak için kullanabilirsiniz.|  
-|Kulvarlar|Kulvarlar diyagram parçalara yatay veya dikey bölümleme. Kulvar, her zaman diğer şekillerin diyagram üzerinde altında kalır.<br /><br /> Model kökünde genellikle kulvarın model öğeleri arasındaki shapemap ve diğer öğeleri üzerinde shapemap. Örneğin, Görev akışı çözüm şablonundan bir DSL oluşturun.|  
-|Bağlayıcılar|Şekiller arasında genellikle çizilmiş satırları başvuru ilişkileri temsil eder. Bir bağlayıcı düz veya dönüşler yapmak ve ok ucu farklı türleri için seçenekleri ayarlayabilirsiniz.|  
-  
-## <a name="shapeInheritance"></a> Şekil devralma  
- Bir şekli başka bir şekilden devralabilir. Ancak, şekilleri aynı türde olmalıdır. Örneğin, yalnızca geometri şekli geometri şekilden devralabilir. Devralınan şekilleri bölmeleri ve kendi temel şeklin dekoratörler bulunur. Bağlayıcılar bağlayıcılardan devralabilir.
+Bir diyagramda, etki alanına özgü dil (DSL) içindeki bilgileri göstermek için kullanabileceğiniz birkaç temel şekil türü vardır.
+
+## <a name="shapeTypes"></a>Temel şekil ve bağlayıcı türleri
+ DSL diyagramı çizgiler veya *Bağlayıcılar*ile birbirine bağlanmış *şekillerin* bir koleksiyonunu gösterir.  Genellikle, ancak her zaman değildir:
+
+- Şekiller model öğelerinin görünür gösterimidir.
+
+- Bağlayıcılar başvuru ilişkilerini temsil eder.
+
+- Diyagram, model kök örneğini temsil eder.
+
+- Model öğeleri arasında ilişkiler katıştırma kapsama göre gösterilir. Örneğin, bileşen bağlantı noktalarını temsil eden öğeler bileşene katıştırılır.
+
+  Bu desenler zorlanmaz, ancak daha güçlü bir şekilde desteklenir. Bir DSL tasarladığınızda, ekleme ilişkilerinin tasarımının, modeli ekranda nasıl sunmak istediğinizin etkilenmeyeceğini göz önünde bulundurun. Buna karşılık, başvuru ilişkileri iş etki alanınız kavramlarını yansıtmalıdır.
+
+  Aşağıdaki şekil türleri kullanılabilir:
+
+|Şekil türü|Açıklama|
+|----------------|-----------------|
+|Geometri şekli|Genel amaçlı dikdörtgen veya elips şekil. Şeklin sınırlarına göre belirli konumlarda metin ve simge dekoratlarını gösterebilirsiniz.<br /><br /> Şekilleri geometri şekillerinin içine yerleştirmek için bkz. [şekilleri Iç Içe geçme](../modeling/nesting-shapes.md).|
+|Bölme şekli|Bir UML sınıfı gibi üst bilgi ve bölmeleri içeren dikdörtgen. Her bölme, bir metin satırları listesi içerebilir.<br /><br /> Satırlar genellikle şeklin gösterdiği öğe altında gömülü öğeleri temsil eder. Bir örnek için, sınıf diyagramları çözüm şablonundan DSL oluşturun.|
+|Resim şekli|Bir görüntüyü görüntüleyen şekil.|
+|Bağlantı noktası şekli|Başka bir şeklin ana hattını eklemek için tasarlanan küçük bir dikdörtgen. Genellikle bileşen modellerinde kullanılır.<br /><br /> Bir bağlantı noktasıyla temsil edilen model öğesi, genellikle üst şekille temsil edilen öğe altına katıştırılır. Bir örnek için, bileşenler çözüm şablonunu kullanarak bir DSL oluşturun.<br /><br /> Varsayılan olarak, bir bağlantı noktası şekli, üst öğesinin yüzlerinin yanında yer alabilir. Belirli bir konumla sınırlamak için bir sınır kuralı tanımlayabilirsiniz.<br /><br /> Bağlantı noktası şeklini çok küçük ve saydam hale getirerek, üst şeklinin yüzeyinde sabit bir bağlantı noktası sağlamak için bunu kullanabilirsiniz.|
+|Lardır|Bir diyagramı yatay veya dikey kesimlerde bölüm olarak birleştirir. Kulvar her zaman diyagramdaki diğer şekillerin altında kalır.<br /><br /> Genellikle kulvarın model öğeleri, model kökünün üst öğesi ve diğer öğeleri ise üst öğesi. Bir örnek için, görev akışı çözüm şablonundan bir DSL oluşturun.|
+|Larında|Şekiller arasında çizilen satırlar genellikle başvuru ilişkilerini temsil eder. Bağlayıcıyı düz veya dikdörtgen hale getirmek ve farklı türde ok türlerine sahip olmak için seçenekleri ayarlayabilirsiniz.|
+
+## <a name="shapeInheritance"></a>Şekil Devralma
+ Bir şekil, başka bir şekilden devralınabilir. Ancak, şekillerin aynı türde olması gerekir. Örneğin, yalnızca bir geometri şekli geometri şeklinin içinden devralınabilir. Devralınan şekiller, temel şeklinin bölmeleri ve dekoratlarını barındırır. Bağlayıcılar bağlayıcılardan kalıtımla alabilir.

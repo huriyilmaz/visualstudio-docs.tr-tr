@@ -2,73 +2,73 @@
 title: Uygulamanızı modeller aracılığıyla oluşturma ve yapılandırma
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5ec2d1c471365dcd55aa33f00209c4154300e95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 801423ee8ad5bb9a63ebb4f970d9c53e5fe8c1e4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994414"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605703"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>Uygulamanızı modeller aracılığıyla oluşturma ve yapılandırma
-Oluşturma veya modelden uygulamanızın parçalarını yapılandırın.
+Bir modelden uygulamanızın parçalarını oluşturabilir veya yapılandırabilirsiniz.
 
- Modeli, kodun daha doğrudan gereksinimleri temsil eder. Modelden doğrudan uygulamanın davranışını türetme tarafından değiştirilen gereksinimlerine çok daha hızlı ve göre daha güvenilir bir şekilde güncelleştirme yanıtlayabilir kodu. Bazı ilk iş türetmeyi'kurmak için gerekli olmasa da, ayırdığı bu gereksinimleri değişiklikleri bekliyorsanız ya da birkaç ürün çeşidini yapmayı planlıyorsanız döndürülür.
+ Model, gereksinimleri doğrudan koddan daha fazla temsil eder. Uygulamanın davranışını doğrudan modelden türeterek, kodu güncelleştirerek değiştirilen gereksinimlere çok daha hızlı ve güvenilir bir şekilde yanıt verebilirsiniz. Türetmenin ayarlanması için bazı ilk işler gerekli olsa da, gereksinimlerde değişiklikler veya ürünün çeşitli türevlerini yapmayı düşünüyorsanız bu yatırım döndürülür.
 
-## <a name="generating-the-code-of-your-application-from-a-model"></a>Bir modelde uygulamanızın kod oluşturma
- Kod oluşturmanın en kolay yolu, metin şablonları kullanmaktır. Kod modeli tuttuğunuz aynı Visual Studio çözümü içinde oluşturabilirsiniz. Daha fazla bilgi için bkz.:
+## <a name="generating-the-code-of-your-application-from-a-model"></a>Bir modelden uygulamanızın kodunu oluşturma
+ Kod oluşturmanın en kolay yolu, metin şablonlarını kullanmaktır. Aynı Visual Studio çözümünde, modeli tutabilmeniz için kod oluşturabilirsiniz. Daha fazla bilgi için bkz.:
 
 - [T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
 - [Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)
 
-  Bu yöntem, artımlı olarak uygulamak kolay bir işlemdir. Yalnızca özel durumunuz için çalışan bir uygulama ile başlayın ve birkaç parçalarını modelden değiştirmek için istediğiniz zaman seçin. Kaynak dosyaları bu parçaların haline gelmeden metin şablonu (.tt) dosyalarını yeniden adlandırın. Bu noktada, önceden yaptığınız gibi uygulamanın çalışması için kaynak .cs dosyaları otomatik olarak şablon dosyalarından oluşturulur.
+  Bu yöntem artımlı olarak kolayca uygulanabilir. Yalnızca belirli bir durum için kullanılan bir uygulamayla başlayın ve modelin modelden farklı olmasını istediğiniz birkaç parçasını seçin. Bu bölümlerin kaynak dosyalarını metin şablonu (. tt) dosyaları olacak şekilde yeniden adlandırın. Bu noktada, kaynak. cs dosyaları şablon dosyalarından otomatik olarak oluşturulur, bu nedenle uygulama daha önce olduğu gibi çalışır.
 
-  Daha sonra kodun bir parçası olması ve model okur ve kaynak dosyasının bu bölümü oluşturan bir metin şablonu ifadesi ile değiştirin. Modelin en az bir değer uygulamayı tekrar çalıştırabilirsiniz ve önceki gibi çalışır, özgün kaynak oluşturmanız gerekir. Farklı bir model değerleri test ettikten sonra siz başka bir kod parçası şablon ifadeleri eklemek geçebilirsiniz.
+  Ardından kodun bir bölümünü alabilir ve bunu, modeli okuyan ve kaynak dosyanın bir bölümünü oluşturan bir metin şablonu ifadesiyle değiştirebilirsiniz. Bir modelin en az bir değeri özgün kaynağı üretmelidir, böylece uygulamayı çalıştırabilirsiniz ve daha önce olduğu gibi çalışır. Farklı model değerlerini test ettikten sonra, kodun başka bir bölümünde şablon ifadeleri eklemek için üzerine geçebilirsiniz.
 
-  Bu artımlı bir yöntem, kod oluşturma genellikle düşük riskli bir yaklaşım olduğunu gösterir. Elde edilen uygulamalar genellikle el ile yazılmış bir sürümünün yanı sıra hemen gerçekleştirin.
+  Bu artımlı yöntemi, kod oluşturmanın genellikle düşük riskli bir yaklaşım olduğu anlamına gelir. Elde edilen uygulamalar genellikle neredeyse ve el ile yazılmış bir sürüm olarak gerçekleştirilir.
 
-  Ancak, varolan bir uygulama ile başlatırsanız, çok sayıda yeniden düzenleme modeli tarafından yönetilir ve böylece bağımsız olarak değiştirilebilir farklı davranışları ayırmak için gerekli olduğunu fark edebilirsiniz. Projenizin maliyet tahmini yaparken uygulamanın bu en boy değerlendirmek öneririz.
+  Ancak, var olan bir uygulamayla başlatırsanız, model tarafından yönetilen farklı davranışları birbirinden bağımsız olarak farklılaştırabilmeleri için ayırmak üzere çok sayıda yeniden düzenleme gerektiğini fark edebilirsiniz. Projenizin maliyetini tahmin ettiğinizde uygulamanın bu yönünü değerlendirmenizi öneririz.
 
-## <a name="configuring-your-application-from-a-model"></a>Model aracılığıyla uygulamanızı yapılandırma
- Çalışma zamanında uygulamanızın davranışını değiştirmek istiyorsanız, uygulama derlenmeden önce kaynak kodunu üretir ve kod oluşturma kullanamazsınız. Bunun yerine, modeli okumak ve buna göre davranışını değiştirmek için uygulamanızı tasarlayabilirsiniz. Daha fazla bilgi için bkz.:
+## <a name="configuring-your-application-from-a-model"></a>Uygulamanızı bir modelden yapılandırma
+ Çalışma zamanında uygulamanızın davranışını değiştirmek istiyorsanız, uygulama derlenmesinden önce kaynak kodu oluşturan kod oluşturmayı kullanamazsınız. Bunun yerine, modeli okumak ve davranışını uygun şekilde değiştirmek için uygulamanızı tasarlayabiliyor olabilirsiniz. Daha fazla bilgi için bkz.:
 
 - [Nasıl yapılır: Program Kodunda Dosyadan Model Açma](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 
-  Bu yöntem aynı zamanda artımlı olarak uygulanabilir, ancak daha fazla iş başında yoktur. Modeli okumak ve değişken parçaları için erişilebilir olmasını değerleri olanak tanıyan bir altyapı ayarlamak kod yazmanız gerekir. Değişken parçaları genel yapma, kod oluşturmaktan daha pahalıdır.
+  Bu yöntem artımlı olarak da uygulanabilir, ancak başlangıçta daha fazla iş vardır. Modeli okuyacak kodu yazmanız ve değerlerine değişken parçalar tarafından erişilebilmesini sağlayan bir çerçeve ayarlamanız gerekir. Değişken parçalarının genel olması kod oluşturmadan daha pahalıdır.
 
-  Genel bir uygulama genellikle kendi belirli ortaklarınıza daha az iyi gerçekleştirir. Proje planınızı, performans önemliyse, bu risk değerlendirmesini içermesi gerekir.
+  Genel bir uygulama, genellikle belirli karşılıklarından daha az iyi çalışır. Performans önemli ise, proje planınız bu riskin değerlendirmesini içermelidir.
 
-## <a name="developing-a-derived-application"></a>Türetilen bir uygulama geliştirme
+## <a name="developing-a-derived-application"></a>Türetilmiş bir uygulama geliştirme
  Aşağıdaki genel yönergeleri yararlı bulabilirsiniz.
 
-- **Belirli başlayın, daha sonra genelleştirin.** İlk uygulamanızı belirli bir sürümünü yazın. Bu sürüm, koşulları bir dizi çalışması gerekir. Memnun kaldığınızda BT'nin düzgün çalıştığından, bir modelinden türetilen bazıları da yapabilirsiniz. Türetilmiş bölümlerini kademeli olarak genişletin.
+- **Belirli bir başlangıç yapın ve ardından genelleştirin.** Önce uygulamanızın belirli bir sürümünü yazın. Bu sürüm, bir dizi koşula göre çalışmalıdır. Doğru çalıştıklarından emin olduğunuzda bir modelden türetebilirsiniz. Türetilmiş parçaları kademeli olarak genişletin.
 
-     Örneğin, bir modelde tanımlanan sayfaları sunan web uygulaması tasarlamadan önce web sayfaları belirli bir dizi olan bir Web sitesi tasarlayın.
+     Örneğin, bir modelde tanımlanan sayfaları sunan bir Web uygulaması tasarlayabilmeniz için, belirli bir Web sayfaları kümesine sahip bir Web sitesi tasarlayın.
 
-- **Değişken görünüşlerini modelleyin.** Ya da bir dağıtım ve başka arasında farklılık veya gereksinimleri zamanla değiştirme yönleri tanımlar. Bir modelden türetilmesi gereken yönleri şunlardır.
+- **Değişken yönlerini modelleyin.** Bir dağıtım ya da başka bir dağıtım arasında ya da gereksinimler değiştikçe zaman içinde değişiklik olacak yönleri belirler. Bunlar bir modelden türetilmesi gereken yönlerdir.
 
-     Örneğin, web sayfaları ve arası bağlantılar, bunları değiştirir ancak stil ve biçim sayfaların her zaman aynı olduğu model bağlantıları açıklamalıdır ancak sayfaları biçimini açıklamak zorunda değildir.
+     Örneğin, Web sayfaları kümesi ve bunlar arasındaki bağlantılar değişirse, ancak sayfaların stili ve biçimi her zaman aynıysa, modelin bağlantıları açıklaması gerekir, ancak sayfaların biçimini açıklaması gerekmez.
 
-- **Sorunları ayırın.** Değişken yönleri bağımsız alanlarına ayrılabilir, ayrı modelleri her alan için kullanın. ModelBus kullanarak modelleri hem aralarında kısıtlamaları etkileyen işlemleri tanımlayabilirsiniz.
+- **Sorunları ayırın.** Değişken yönleri bağımsız alanlara bölünecekse, her alan için ayrı modeller kullanın. ModelBus kullanarak, hem modelleri hem de aralarındaki kısıtlamaları etkileyen işlemler tanımlayabilirsiniz.
 
-     Örneğin, web sayfalarını ve sayfa düzeni tanımlamak için farklı bir model arasında gezinmeyi tanımlamak için bir model kullanın.
+     Örneğin, Web sayfaları ve sayfaların yerleşimini tanımlamak için farklı bir model arasında gezinmeyi tanımlamak üzere bir model kullanın.
 
-- **Gereksinim, çözüm modeli.** Model kullanıcı gereksinimleri açıklanır şekilde tasarlayın. Bunun aksine, değişken yönleri göre gösterimini uygulamasının tasarlamayın.
+- **Çözümü değil, gereksinimi modelleyin.** Modeli, Kullanıcı gereksinimlerini açıklayan şekilde tasarlayın. Bunun aksine, gösterimi uygulamanın değişken yönlerine göre tasarlamayın.
 
-     Örneğin, web gezinti modeli, web sayfaları ve bunlar arasında köprü temsil etmelidir. Web gezinti modeli HTML veya uygulamanızdaki sınıfları parçalarını temsil etmiyor.
+     Örneğin, Web gezinti modeli aralarındaki Web sayfalarını ve köprüleri temsil etmelidir. Web gezinti modeli, uygulamanızdaki HTML veya sınıfların parçalarını temsil etmelidir.
 
-- **Oluşturma veya yorumlama?** Belirli bir dağıtım için gereksinimleri nadiren değişiklik, program kodu modeli oluşturur. Gereksinimleri, sık sık değişebilir veya aynı dağıtımda birden fazla değişken içinde birlikte var, böylece okumak ve yorumlamak bir model uygulaması yazma.
+- **Oluşturma veya yorumlama?** Belirli bir dağıtım için gereksinimler nadiren değişiyorsa, modelden program kodu oluşturur. Gereksinimler sıklıkla değişebilir veya aynı dağıtımda birden fazla değişkenle birlikte var olabilir veya bir modeli okuyup yorumlayabilmesi için uygulamayı yazın.
 
-     Bir dizi farklı ve ayrı olarak yüklenmiş bir Web sitesi geliştirmek için Web sitesi model kullanıyorsanız, örneğin, daha sonra site kodunu modelden oluşturmanız gerekir. Ancak, yazma modeli okuyan ve buna göre site sunan bir web sunucusu daha iyi ise her gün bir site denetlemek için modelinizi kullanın.
+     Örneğin, bir dizi farklı ve ayrı olarak yüklenen Web siteleri geliştirmek için Web sitesi modelinizi kullanırsanız, modelden sitenin kodunu oluşturmanız gerekir. Ancak modelinizi her gün değişen bir siteyi denetlemek için kullanıyorsanız, modeli okuyan bir Web sunucusu yazmak ve siteyi buna göre temsil etmek daha iyidir.
 
-- **UML veya DSL?** UML genişletmek için stereotipleri kullanarak, modelleme gösterimi oluşturmayı düşünün. Amaca uygun hiçbir UML diyagram ise bir DSL tanımlayın. Ancak, UML Standart semantiği bozmayı önlemek.
+- **UML veya DSL?** UML genişletmek için stereotipleri kullanarak modelleme gösteriminizi oluşturmayı düşünün. Amaca uygun bir UML diyagramı yoksa bir DSL tanımlayın. Ancak UML 'in standart semantiğini bozmaktan kaçının.
 
-     Örneğin, bir UML sınıf diyagramı kutuları ve oklar oluşan bir koleksiyondur; Bu gösterim teorik olarak herhangi bir şey tanımlayabilirsiniz. Ancak burada aslında bir dizi türleri tanımlamakta olduğunuz dışında sınıf diyagramı kullanmanızı önermiyoruz. Örneğin, web sayfalarının farklı türlerini tanımlamak için sınıf diyagramları uyarlayabilirsiniz.
+     Örneğin, bir UML sınıf diyagramı, kutular ve okların bir koleksiyonudur; Bu gösterimle, teorik olarak herhangi bir şeyi tanımlayabilir. Ancak, bir tür kümesini açıkladığınız durumlar haricinde sınıf diyagramını kullanmanızı önermiyoruz. Örneğin, farklı Web sayfası türlerini tanımlamaya yönelik sınıf diyagramlarını uyarlayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

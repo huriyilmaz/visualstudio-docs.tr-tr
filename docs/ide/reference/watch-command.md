@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Watch command
 - Debug.Watch command
 ms.assetid: aa02e647-d9f5-4905-a651-52a8df595795
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ac779dc902a331a45b600113a11db5364293f74
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: ccb87fef9ff91c77c926d5bca40a5e5ec08c3720
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925944"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72622022"
 ---
 # <a name="watch-command"></a>İzle Komutu
-Oluşturur ve belirtilen bir örneğini açar bir **Watch** penceresi. Değişkenler, ifadeler ve yazmaçların değerlerini hesaplamak, bu değerleri düzenlemek ve sonuçları kaydetmek için bir **Gözcü** penceresi kullanabilirsiniz.
+Bir **Gözcü** penceresinin belirtilen bir örneğini oluşturur ve açar. Değişkenler, ifadeler ve yazmaçların değerlerini hesaplamak, bu değerleri düzenlemek ve sonuçları kaydetmek için bir **Gözcü** penceresi kullanabilirsiniz.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,7 +36,7 @@ Gerekli. İzleme penceresinin örnek numarası.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir `index` tamsayı olmalıdır. Geçerli değerler 1, 2, 3 veya 4 ' dir.
+@No__t_0 bir tamsayı olmalıdır. Geçerli değerler 1, 2, 3 veya 4 ' dir.
 
 ## <a name="example"></a>Örnek
 

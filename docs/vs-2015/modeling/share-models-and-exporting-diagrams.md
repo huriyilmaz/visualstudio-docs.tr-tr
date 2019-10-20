@@ -1,5 +1,5 @@
 ---
-title: Modelleri ve diyagramları dışarı aktarma paylaşır | Microsoft Docs
+title: Modelleri paylaşma ve diyagramları dışarı aktarma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,57 +9,56 @@ helpviewer_keywords:
 - UML diagrams, saving
 ms.assetid: 22e47b4d-c185-478c-9535-56d292b45984
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4d2fd2af8a68ee72ec26b52a4c26a829d94376ef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 562990b14edba11abf50dc735279cba36bb21518
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68199851"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671198"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Modelleri paylaşma ve diyagramları dışarı aktarma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio'da çeşitli şekillerde iş arkadaşlarınızla modelleri ve diyagramları paylaşabilirsiniz.  
-  
- Bu özellik, Visual Studio'nun hangi sürümlerinin desteklediğini görmek için bkz: [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
-## <a name="working-on-a-model-as-a-team"></a>Bir Model üzerinde bir takım olarak çalışma  
- Kullanıcılar, Visual Studio'nun oluşturabilir ve modeller, katman diyagramları ve yönlendirilmiş grafikleri düzenleyebilirsiniz.  
-  
- Farklı kullanıcılar, UML model üzerinde aynı anda çalışabilir, ancak farklı paketleri çalışması gerekir.  
-  
- Kullanmanızı öneririz [!INCLUDE[esprscc](../includes/esprscc-md.md)].  
-  
- Daha fazla bilgi için [sürüm denetimi altındaki modelleri ve diyagramları yönetme](../modeling/manage-models-and-diagrams-under-version-control.md).  
-  
- Orta veya büyük ölçekli projelerde modelleri düzenleme hakkında daha fazla bilgi için bkz: [modelleme çözümünüzün yapısını](../modeling/structure-your-modeling-solution.md).  
-  
-## <a name="reading-and-reviewing-models"></a>Modelleri okuma ve İnceleme  
- (Bu modelleri oluşturulamıyor) Visual Studio'nun bazı sürümlerinin kullanan takım üyeleri, modeller, modelleme diyagramları ve yönlendirilmiş grafikleri okuyabilirler, ancak onları düzenleyemezsiniz.  Bu özellik, Visual Studio'nun hangi sürümlerinin desteklediğini görmek için bkz: [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
- Bir UML diyagram veya katman diyagramı, yalnızca içinde oluşturulduğu modeli içinde açılabilir. Bir diyagram erişim sağlamak için bu nedenle tüm modelleme erişimi sağlamanız gerekir proje dosyaları, ya da bunları kopyalarını.  
-  
- Daha fazla bilgi için [modelleri ve diyagramları diğer Visual Studio sürümlerinde okuma](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md).  
-  
-## <a name="using-diagrams-in-documents-and-presentations"></a>Belgelere ve sunumlara diyagramları kullanma  
- Diyagram bölümlerini belgelere veya sunumlara kopyalayabilirsiniz. XPS dosyaları için örneğin diyagramları da yazdırabilir.  
-  
- Daha fazla bilgi için [diyagramlarını görüntü dışarı aktarma](../modeling/export-diagrams-as-images.md).  
-  
-## <a name="related-topics"></a>İlgili Konular  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[Sürüm denetimi altındaki modelleri ve diyagramları yönetme](../modeling/manage-models-and-diagrams-under-version-control.md)|Visual Studio kullanıcılar, paylaşılan bir model üzerinde çalışabilir.|  
-|[Modelleme çözümünüzün yapısını oluşturma](../modeling/structure-your-modeling-solution.md)|Büyük ve orta ölçekli projelerde modelleri paylaşma.|  
-|[Diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md)|Modelleri oluşturulamıyor Visual Studio'nun bazı sürümlerinin kullanıcılarının modelleri ve diyagramları okuma.|  
-|[Diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md)|Diyagram bölümlerini PowerPoint'e veya Word gibi uygulamalara kopyalayın veya XPS dosyası için bir diyagramını yazdır.|  
-|[Mimariyi Çözümleme ve Mimarinin Modelini Oluşturma](../modeling/analyze-and-model-your-architecture.md)|Modelleri ve diyagramları genel bakış.|  
-|[Modelinizi profiller ve stereotipler aracılığıyla özelleştirme](../modeling/customize-your-model-with-profiles-and-stereotypes.md)|Bir modeldeki bir UML profili kullanın ve daha sonra modeli başka bir kişiye göndermek, aynı profili yüklü olması gerekir.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md)   
- [Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)
+Visual Studio 'da, iş arkadaşlarınızla modelleri ve diyagramları çeşitli yollarla paylaşabilirsiniz.
+
+ Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+## <a name="working-on-a-model-as-a-team"></a>Takım olarak bir modelde çalışma
+ Visual Studio kullanıcıları modeller, katman diyagramları ve yönlendirilmiş grafikler oluşturabilir ve düzenleyebilir.
+
+ Farklı kullanıcılar bir UML modelinde aynı anda çalışabilir, ancak farklı paketler üzerinde çalışır.
+
+ @No__t_0 kullanmanızı öneririz.
+
+ Daha fazla bilgi için bkz. [sürüm denetimi altındaki modelleri ve diyagramları yönetme](../modeling/manage-models-and-diagrams-under-version-control.md).
+
+ Orta veya büyük bir projede modelleri düzenleme hakkında öneriler için bkz. [modelleme çözümünüzü yapılandırma](../modeling/structure-your-modeling-solution.md).
+
+## <a name="reading-and-reviewing-models"></a>Modelleri okuma ve gözden geçirme
+ Visual Studio 'nun bazı sürümlerini kullanan takım üyeleri (model oluşturamaz) modelleri, modelleme diyagramlarını ve yönlendirilmiş grafikleri okuyabilir ancak bunları düzenleyemez.  Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+ Bir UML diyagramı veya katman diyagramı yalnızca oluşturulduğu model içinde açılabilir. Bir diyagrama erişim sağlamak için, bu nedenle tüm modelleme proje dosyalarına veya bunların kopyalarına erişim sağlamanız gerekir.
+
+ Daha fazla bilgi için bkz. [diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md).
+
+## <a name="using-diagrams-in-documents-and-presentations"></a>Belgelerde ve sunularda diyagramlar kullanma
+ Diyagramların parçalarını belgelere veya sunulara kopyalayabilirsiniz. Diyagramları, örneğin XPS dosyaları gibi da yazdırabilirsiniz.
+
+ Daha fazla bilgi için bkz. [diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md).
+
+## <a name="related-topics"></a>İlgili Konular
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[Sürüm denetimi altındaki modelleri ve diyagramları yönetme](../modeling/manage-models-and-diagrams-under-version-control.md)|Visual Studio kullanıcıları, paylaşılan bir model üzerinde çalışabilir.|
+|[Modelleme çözümünüzün yapısını oluşturma](../modeling/structure-your-modeling-solution.md)|Büyük veya orta ölçekli bir projede model paylaşma.|
+|[Diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md)|Visual Studio 'nun model oluşturamaz bazı sürümlerinin kullanıcıları modelleri ve diyagramları okuyabilir.|
+|[Diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md)|Diyagramların parçalarını PowerPoint veya Word gibi uygulamalara kopyalayabilir veya bir XPS dosyasına diyagram yazdırabilirsiniz.|
+|[Mimariyi Çözümleme ve Mimarinin Modelini Oluşturma](../modeling/analyze-and-model-your-architecture.md)|Modellere ve diyagramlarına genel bakış.|
+|[Modelinizi profiller ve stereotipler aracılığıyla özelleştirme](../modeling/customize-your-model-with-profiles-and-stereotypes.md)|Bir modelde UML profili kullanır ve ardından modeli başka birine gönderirseniz, aynı profili yüklemiş olmaları gerekir.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Geliştirme sürecinizdeki](../modeling/use-models-in-your-development-process.md) [uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md) modellerini kullanın

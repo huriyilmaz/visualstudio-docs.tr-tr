@@ -18,170 +18,170 @@ helpviewer_keywords:
 - debug mode
 - custom layouts
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4904f7bb57430fc71ab6875d39a18c5bfb0c2fe0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f6ca1f34604c314fea6e90130b298be04f3a6189
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975465"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652531"
 ---
-# <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio'da pencere düzenlerini özelleştirme
+# <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio 'da pencere düzenlerini özelleştirme
 
-Visual Studio'da, konum, boyut ve çeşitli geliştirme iş akışları için en iyi pencere düzenlerini oluşturmak için windows davranışını özelleştirebilirsiniz. Düzen'nı özelleştirdiğinizde, IDE hatırlar. Örneğin, yerleştirme konumunu değiştirirseniz **Çözüm Gezgini** ve başka bir bilgisayarda çalışıyor olsanız bile Visual Studio, açtığınız Visual Studio kapatın **Çözüm Gezgini**aynı konuma yerleştirilir.
+Visual Studio 'da, Windows 'un konumunu, boyutunu ve davranışını çeşitli geliştirme iş akışları için en iyi şekilde çalışan pencere düzenleri oluşturacak şekilde özelleştirebilirsiniz. Düzeni özelleştirdiğinizde, IDE onu anımsar. Örneğin, **Çözüm Gezgini** yerleştirme konumunu değiştirir ve ardından Visual Studio 'yu kapatırsanız, başka bir bilgisayarda çalışıyor olsanız bile, Visual Studio 'yu bir sonraki açışınızda **Çözüm Gezgini** aynı konuma yerleştirilmeyecektir.
 
-Adının da ve özel bir düzen kaydedin ve sonra tek bir komutla düzeni arasında geçiş yapın. Örneğin, düzenlemek için bir düzen ve hata ayıklama için bir düzen oluşturup kullanarak aralarında geçiş **penceresi** > **pencere düzenini Uygula** menü komutu.
+Ayrıca, özel bir düzen yazıp kaydedebilir ve sonra tek bir komutla birlikte mizanpajlar arasında geçiş yapabilirsiniz. Örneğin, düzenleme için bir düzen ve hata ayıklama için bir düzen oluşturabilir ve pencere**düzeni Düzenle** menü komutunu  >  **pencereyi** kullanarak bunlar arasında geçiş yapabilirsiniz.
 
-## <a name="kinds-of-windows"></a>Pencere cinsleri
+## <a name="kinds-of-windows"></a>Windows türleri
 
 ### <a name="tool-and-document-windows"></a>Araç ve belge pencereleri
 
-İki temel pencere türleri, IDE olan *araç pencerelerini* ve *belge windows*. Araç pencereleri dahil **Çözüm Gezgini**, **Sunucu Gezgini**, **çıkış penceresine**, **hata listesi**, tasarımcılar, hata ayıklayıcı pencereleri , ve benzeri. Belge pencereleri, kaynak kodu dosyaları, rastgele metin dosyaları, yapılandırma dosyaları vb. içerir. Araç pencereleri yeniden boyutlandırıldı ve bunların başlık çubuğundaki sürüklediğiniz. Belge pencereleri tarafından kendi sekme sürüklenebilir. Penceredeki diğer seçeneklerini ayarlamak için sekmesinde veya başlık çubuğunun sağ tıklayın.
+IDE 'nin iki temel pencere türü, *araç* penceresi ve *belge pencereleri*vardır. Araç pencereleri **Çözüm Gezgini**, **Sunucu Gezgini**, **Çıkış penceresi**, **hata listesi**, tasarımcılar, hata ayıklayıcı pencereleri vb. içerir. Belge pencereleri, kaynak kodu dosyalarını, rastgele metin dosyalarını, yapılandırma dosyalarını vb. içerir. Araç pencereleri, başlık çubuğuna göre yeniden boyutlandırılabilir ve sürüklenebilir. Belge pencereleri sekmesine göre sürüklenebilir. penceredeki diğer seçenekleri ayarlamak için sekmeye veya başlık çubuğuna sağ tıklayın.
 
-**Penceresi** kayan ve IDE'de pencereleri gizleme takma seçenekleri menüsü gösterir. Belirli bir pencere için ek seçenekleri görmek üzere bir penceresi sekme veya başlık çubuğunun sağ tıklayın. Aynı anda birden fazla örneğini belirli araç pencereleri görüntüleyebilirsiniz. Örneğin, birden fazla web tarayıcısı penceresi görüntüleyebilir ve bazı araç pencerelerinin ek örneklerini seçerek oluşturabilirsiniz **yeni pencere** üzerinde **penceresi** menüsü.
+**Pencere** menüsü, IDE 'de Windows yerleştirme, kayan ve gizleme seçeneklerini gösterir. Belirli bir pencereyle ilgili ek seçenekleri görmek için pencere sekmesine veya başlık çubuğuna sağ tıklayın. Belirli araç pencerelerinin aynı anda birden fazla örneğini görüntüleyebilirsiniz. Örneğin, birden fazla Web tarayıcısı penceresi görüntüleyebilir ve **pencere** menüsünde **yeni pencere** ' yi seçerek bazı araç pencerelerinin ek örneklerini oluşturabilirsiniz.
 
-### <a name="preview-tab-document-windows"></a>Önizleme sekmesini (belge windows)
+### <a name="preview-tab-document-windows"></a>Önizleme sekmesi (belge pencereleri)
 
-İçinde **Önizleme** sekmesinde görüntüleyebilirsiniz dosyaları düzenleyicide açmaya gerek kalmadan. Bunları seçerek dosyaları önizleyebilirsiniz **Çözüm Gezgini**, ne zaman hata ayıklama sırasında dosyalara ile adım **Tanıma Git**, ve arama sonuçlarını göz atarken. Önizleme dosyalar bir sekmede iyi belge sekmesini sağ tarafında görünür. Dosyayı değiştirmek veya seçin, düzenleme için açar **açık**.
+**Önizleme** sekmesinde, dosyaları açmadan düzenleyicide görüntüleyebilirsiniz. Dosyalara tıkladığınızda hata ayıklama sırasında ve bir aramanın sonuçlarına göz **atarken, dosyaları** **Çözüm Gezgini**seçerek önizleyebilirsiniz, bu dosyaları görüntüleyebilirsiniz. Önizleme dosyaları belge sekmesi alanının sağ tarafındaki bir sekmede görüntülenir. Dosyayı değiştirirseniz veya **Aç**seçeneğini belirlerseniz dosya düzenlenmek üzere açılır.
 
 ### <a name="tab-groups"></a>Sekme grupları
 
-Sekme grupları IDE içindeki iki veya daha fazla açık belgeler ile çalışırken, sınırlı çalışma alanını yönetme olanağı genişletin. Birden çok belge pencereleri ve araç pencerelerini ya da dikey veya yatay sekme grupları halinde düzenleyin ve belgelerin bir sekme grubundan karıştırma.
+Sekme grupları, IDE 'de iki veya daha fazla açık belge ile çalışırken sınırlı çalışma alanını yönetme yeteneğinizi genişletmenizi sağlar. Birden çok belge Windows ve araç pencerelerini dikey veya yatay sekme grupları halinde düzenleyebilir ve belgeleri bir sekme grubundan diğerine karıştırabilirsiniz.
 
-### <a name="split-windows"></a>Bölünmüş Pencereler
+### <a name="split-windows"></a>Pencereleri Böl
 
-Bir belgede aynı anda iki konuma görüntüleyemez veya varsa, windows bölebilirsiniz. Belgenizi iki bağımsız olarak kaydırma bölümlere ayırmak için tıklayın **bölünmüş** üzerinde **penceresi** menüsü. Tıklayın **Bölmeyi Kaldır** üzerinde **penceresi** tek bir görünüm geri yüklemek için menü.
+Bir belgede iki konumu aynı anda görüntülemeniz veya düzenlemeniz gerektiğinde Windows 'u ayırabilirsiniz. Belgenizi iki bağımsız kayan bölüme bölmek için **pencere** menüsünde **Böl** ' e tıklayın. Tek görünümü geri yüklemek için **pencere** menüsünde **bölmeyi kaldır** ' a tıklayın.
 
 ### <a name="toolbars"></a>Araç Çubukları
 
-Araç çubukları düzenlenmiş sürükleyerek ya da kullanarak **Özelleştir** iletişim kutusu. Getirin ve araç çubuklarını özelleştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Menüleri ve araç çubuklarını özelleştirme](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md).
+Araç çubukları sürükleyerek veya **Özelleştir** iletişim kutusu kullanılarak düzenlenebilir. Araç çubuklarını konumlandırma ve özelleştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: özelleştirme menüleri ve araç çubukları](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md).
 
-## <a name="arrange-and-dock-windows"></a>Pencereleri düzenleme ve windows yerleştirme
+## <a name="arrange-and-dock-windows"></a>Pencereleri yerleştirme ve yerleştirme
 
-Araç penceresi ya da belge penceresini *yerleştirilmiş*, konum ve boyut IDE pencere çerçevesi veya ayrı bir pencerede IDE'yi bağımsız değişken sahip olacak şekilde. Araç pencerelerini IDE çerçevesinin içinde her yerden yerleştirilmiş olabilir; Bazı araç pencerelerinin Düzenleyicisi çerçevesindeki sekmeli pencerelerin olarak sabitlenebilir. Belge pencereleri Düzenleyicisi çerçevesinde sabitlenebilir ve geçerli konumlarına sekme sırasını sabitlenebilir. Kayan nokta bir araya birden çok windows sabitleyebilirsiniz bir *raft* üzerinden veya IDE dışında. Araç pencerelerini de gizli veya simge.
+Bir belge penceresi veya araç penceresi *yerleştirilebilir*, böylece IDE pencere çerçevesinde bir konum ve boyut, ya da IDE 'den bağımsız ayrı bir pencere olarak taşınabilir. Araç pencereleri IDE çerçevesinin içinde herhangi bir yere yerleştirilebilir; Bazı araç pencereleri, Düzenleyici çerçevesinde sekmeli pencereler olarak yerleştirilebilir. Belge pencereleri, düzenleyici çerçevesinin içine yerleştirilebilir ve sekme düzeninde geçerli konumlarına sabitlenebilir. Birden çok pencereleri, IDE 'nin üzerinde veya dışında bir şekilde bir araya *getirin* . Araç pencereleri de gizli veya küçültülmüş olabilir.
 
-Aşağıdaki yollarla windows düzenleyebilirsiniz:
+Pencereleri aşağıdaki yollarla düzenleyebilirsiniz:
 
-- Belge pencerelerini sekme soluna iyice sabitleyin.
+- Belge pencerelerini sekme kutusu sol tarafında sabitleyin.
 
-- Düzenleme çerçevesindeki için sekmesinde dock windows.
+- Windows sekme yerleştirme çerçevesini Düzenle.
 
-- Araç Pencereleri IDE içinde bir çerçevenin kenarına yerleştir.
+- Araç pencerelerini IDE içindeki bir çerçevenin kenarına yerleştirin.
 
-- Belge veya aracı windows üzerinde veya IDE dışında yüzdürün.
+- Belge veya araç pencerelerini IDE üzerinde veya dışında kaydır.
 
-- Araç pencerelerini IDE kenarında gizleyin.
+- Araç pencerelerini IDE 'nin kenarı üzerinde gizleyin.
 
-- Windows, farklı monitörlerde görüntüleyin.
+- Pencereleri farklı izleyicilere göre görüntüleyin.
 
-- Pencere yerleşimini varsayılan düzene veya kaydedilen özel bir düzen sıfırlayın.
+- Pencere yerleşimini varsayılan düzene veya kaydedilmiş bir özel düzene sıfırlayın.
 
-Araç ve belge pencereleri sürükleyerek komutlarını kullanarak düzenleme **penceresi** menüsünden veya düzenlenmesini pencerenin başlık çubuğuna sağ tıklanarak.
+Araç ve belge pencerelerini sürükleyerek, **pencere** menüsündeki komutları kullanarak veya düzenlemek üzere pencerenin başlık çubuğuna sağ tıklayarak düzenleyin.
 
-### <a name="dock-windows"></a>Dock windows
+### <a name="dock-windows"></a>Pencereleri yerleştir
 
-' A tıklayın ve bir araç penceresinin başlık çubuğunda veya belge penceresi için sekmesinde sürükleyin, kılavuz elmas görünür. Fare imleci üzerine elmas okları olduğunda sürükleme işlemi sırasında artık fare düğmesini serbest bırakırsanız penceresi nereye yerleştirilir gösteren gölgeli bir alanı görünür.
+Bir araç penceresinin başlık çubuğunu tıklatıp sürüklediğinizde veya belge penceresi sekmesi göründüğünde, kılavuz elmas görünür. Sürükleme işlemi sırasında fare imleci elmas içindeki oklardan birinin üzerindeyken, fare düğmesini şimdi serbest bırakırsanız pencerenin nereye yerleştirildiğini gösteren bir gölgeli alan görüntülenir.
 
-Yerleştirilebilir bir pencereyi, yapıştırmadan taşımak için basın **Ctrl** pencereyi sürüklerken tuşu.
+Bir yerleştirilebilir penceresini yerinde yaslama olmadan taşımak için, pencereyi sürüklerken **CTRL** tuşuna basın.
 
-Araç penceresi ya da belge penceresini en son sabitlenmiş konumuna geri dönmek için basın **Ctrl** başlık çubuğunda veya pencerenin sekme çift tıklatırken aynı.
+Bir araç penceresini veya belge penceresini en son yerleştirilen konumuna döndürmek için, pencerenin başlık çubuğunu veya sekmesini çift tıklatırken **CTRL** tuşuna basın.
 
-Aşağıdaki çizimde, yalnızca düzenleme çerçevesinde yuvalanabilir belge windows için kılavuz elmas gösterir:
+Aşağıdaki çizimde belge pencereleri için kılavuz elmas gösterilmektedir ve bu, yalnızca düzenleyen çerçevesinin içine yerleştirilebilir:
 
-![Belge penceresi kılavuz elmas](../ide/media/documentwindowguidediamonds.png)
+![Belge penceresi Kılavuzu elmas](../ide/media/documentwindowguidediamonds.png)
 
-Araç Pencereleri IDE içinde veya düzenleme çerçevesindeki içinde bir çerçevenin bir tarafına sabitlenebilir. Araç penceresi bir kolayca pencereyi Yerleştir yardımcı olmak üzere başka bir konuma sürüklediğinizde kılavuz elmas görünür.
+Araç pencereleri, IDE 'deki veya Düzen çerçevesindeki bir çerçevenin bir tarafına kadar hızlı olabilir. Bir araç penceresini, pencereyi kolayca yeniden yerleştirmenize yardımcı olması için başka bir konuma sürüklediğinizde kılavuz elmas görünür.
 
-![Araç penceresi Kılavuzu Karo](../ide/media/vs10guidediamond.png)
+![Araç penceresi Kılavuzu elleri](../ide/media/vs10guidediamond.png)
 
-Aşağıdaki çizimde gösterildiği **Çözüm Gezgini** güncelleştireceğinizi yeni bir konumda mavi gölgeli alana göre sabitlenmiş:
+Aşağıdaki çizimde, mavi gölgeli alanla ilgili yeni bir konuma yerleştirilmiş **Çözüm Gezgini** gösterilmektedir:
 
-![Çözüm Gezgini içinde yeni bir konuma yerleştirme](../ide/media/vs2015_dock_diamond.png)
+![Yeni bir konumda Çözüm Gezgini sabitleme](../ide/media/vs2015_dock_diamond.png)
 
-### <a name="close-and-auto-hide-tool-windows"></a>Kapatın ve araç pencereleri otomatik gizleme
+### <a name="close-and-auto-hide-tool-windows"></a>Araç pencerelerini kapat ve otomatik gizle
 
-Tıklayarak bir araç penceresini kapatabilirsiniz **X** başlık çubuğunun sağ üst kısımdaki. Pencereyi yeniden açmak için klavye kısayol ya da menü komutunu kullanın. Araç pencereleri adlı bir özellik Destek *Otomatik Gizle*, bir pencere farklı bir pencere kullandığınızda dışına kaymasına neden olur. Bir pencere otomatik gizlenen olduğunda, adı IDE'nin kenarındaki sekmede görünür. Pencereyi tekrar kullanmak için sekmenin görünüme geri yönlendirebilmesi için sekmesinde gidin.
+Başlık çubuğunun sağ üst köşesindeki **X** simgesine tıklayarak bir araç penceresini kapatabilirsiniz. Pencereyi yeniden açmak için, klavye kısayolunu veya menü komutunu kullanın. Araç pencereleri, *Otomatik Gizle*adlı bir özelliği destekler ve bu, farklı bir pencere kullandığınızda pencerenin bu şekilde kaydırılmasına neden olur. Bir pencere gizli olduğunda, adı IDE 'nin kenarındaki bir sekmede görünür. Pencereyi yeniden kullanmak için pencerenin görünüme geri dönmesi için sekmenin üzerine gelin.
 
 ![Otomatik Gizle](../ide/media/vs2015_auto_hide.png)
 
 > [!NOTE]
-> Otomatik Gizle mi çalışacağını ayarlamak için windows ayrı ayrı veya sabitlenmiş gruplar halinde seçin veya temizleyin **otomatik gizle düğmesi sadece etkin araç pencerelerini etkiler** içinde **seçenekleri** iletişim kutusu. Daha fazla bilgi için [genel, ortam, Seçenekler iletişim kutusu](../ide/reference/general-environment-options-dialog-box.md).
+> Otomatik gizleme 'nin araç pencereleri için tek tek veya sabitlenmiş gruplar halinde çalışıp çalışmadığını belirlemek için otomatik gizleme düğmesini seçin veya temizleyin **seçeneği yalnızca seçenekler** iletişim kutusunda **etkin araç pencerelerini etkiler** . Daha fazla bilgi için bkz. [Genel, ortam, Seçenekler iletişim kutusu](../ide/reference/general-environment-options-dialog-box.md).
 
 > [!NOTE]
-> Pencere odaklandığında Otomatik Gizle Etkinleştirildi olan araç pencereleri geçici olarak görüntüye girebilir. Pencereyi yeniden gizlemek için geçerli pencere dışında bir öğe seçin. Pencere odağı kaybettiğinde, görünümden çıkar.
+> Otomatik gizleme özelliği etkin olan araç pencereleri, pencere odaklanıldığında geçici olarak görünüme kayarak çıkabilir. Pencereyi yeniden gizlemek için geçerli pencerenin dışında bir öğe seçin. Pencere odağı kaybettiğinde, görünüm geri taşınır.
 
-### <a name="specifying-a-second-monitor"></a>İkinci İzleyici belirtme
+### <a name="specifying-a-second-monitor"></a>İkinci bir izleyici belirtme
 
-İkinci bir monitörünüz varsa ve işletim sisteminizin destekliyorsa, hangi monitörün pencere görüntüleyeceğini seçebilirsiniz. Hatta birden fazla windows birlikte gruplandırma yapabilirsiniz *rafts* diğer monitörlerde.
+İkinci bir monitörünüz varsa ve işletim sisteminiz destekliyorsa, hangi izleyicinin bir pencere görüntüleyeceğini seçebilirsiniz. Diğer izleyicilerinde, *Rafts* içinde birden çok pencere de gruplandırabilirsiniz.
 
 > [!TIP]
-> Birden çok örneğini oluşturduğunuz **Çözüm Gezgini** ve başka bir monitöre taşıyabilirsiniz. Pencereye sağ tıklatın ve seçin **Yeni Çözüm Gezgini görünümü**. Tüm windows seçip çift tıklatarak özgün monitöre geri dönebilirsiniz **Ctrl** anahtarı.
+> **Çözüm Gezgini** birden çok örneğini oluşturabilir ve bunları başka bir monitöre taşıyabilirsiniz. Pencereye sağ tıklayın ve **yeni Çözüm Gezgini Görünüm**' ü seçin. **CTRL** tuşunu seçerken, tüm pencereleri geri ' ye çift tıklayarak özgün monitöre döndürebilirsiniz.
 
-### <a name="reset-name-and-switch-between-window-layouts"></a>Sıfırlama, adı ve pencere düzenlerini arasında geçiş yapma
+### <a name="reset-name-and-switch-between-window-layouts"></a>Pencere düzenleri arasında sıfırlama, adlandırma ve geçiş yapma
 
-Kullanarak ayarlar koleksiyonunuz için özgün pencere düzenini IDE döndürebilir **pencere düzenini Sıfırla** komutu. Bu komutu çalıştırdığınızda, aşağıdaki eylemler gerçekleşir:
+**Pencere mizanpajını Sıfırla** komutunu kullanarak, ayarlar KOLEKSIYONUNUZ için IDE 'yi özgün pencere düzenine döndürebilirsiniz. Bu komutu çalıştırdığınızda, aşağıdaki eylemler gerçekleşir:
 
 - Tüm pencereler varsayılan konumlarına taşınır.
 
-- Varsayılan pencere düzeninde kapatılan Windows kapatılır.
+- Varsayılan pencere düzeninde kapatılan pencereler kapalıdır.
 
-- Varsayılan pencere düzeninde Windows açılır.
+- Varsayılan pencere düzeninde açık olan pencereler açılır.
 
-### <a name="create-and-save-custom-layouts"></a>Oluşturun ve özel düzenler kaydedin
+### <a name="create-and-save-custom-layouts"></a>Özel düzenler oluşturma ve kaydetme
 
-Visual Studio, en fazla 10 özel pencere düzenlerini ve ikisi arasında hızlıca geçiş sağlar. Aşağıdaki adımlarda, oluşturma, kaydetme, çağırma ve her iki yerleşik ve kayan araç pencereleri ile birden çok monitör yararlanan özel düzenler yönetmek gösterilmektedir.
+Visual Studio, 10 ' a kadar özel pencere düzenini kaydetmenizi ve aralarında hızlıca geçiş yapmanızı sağlar. Aşağıdaki adımlarda, yerleşik ve kayan araç pencereleri ile birden çok izleyiciden faydalanan özel düzenleri oluşturma, kaydetme, çağırma ve yönetme işlemleri gösterilmektedir.
 
-İlk olarak, iki proje içeren bir test çözümü her biri farklı bir en iyi düzen oluşturun.
+İlk olarak, her biri ayrı bir en uygun düzene sahip iki projesi olan bir test çözümü oluşturun.
 
-#### <a name="create-a-ui-project-and-customize-the-layout"></a>Bir kullanıcı Arabirimi projesi oluşturun ve düzeni özelleştirme
+#### <a name="create-a-ui-project-and-customize-the-layout"></a>UI projesi oluşturma ve düzeni özelleştirme
 
-1. Yeni bir C# **WPF uygulaması** proje. Bu projede, Imagine, bir kullanıcı arabirimi geliştirme. Tasarımcı penceresinin alanını maksimuma çıkarabilmek ve diğer araç pencereleri dışına taşımak istiyorsunuz.
+1. Yeni C# bir **WPF uygulaması** projesi oluşturun. Bu projede, bir kullanıcı arabirimi geliştirdiğinizi düşünelim. Tasarımcı penceresinin alanını en üst düzeye çıkarmak ve diğer araç pencerelerini bu şekilde taşımak istiyorsunuz.
 
-2. Birden çok monitörü varsa, çekme **Çözüm Gezgini** penceresi ve **özellikleri** pencere üzerinde ikinci bir monitörünüz. Tek bir izleme sistemine, Tasarımcı dışındaki tüm windows kapatmayı deneyin.
+2. Birden çok monitörünüz varsa, **Çözüm Gezgini** penceresini ve **Özellikler** penceresini ikinci izleyicisine çekin. Tek bir izleme sisteminde, tasarımcı hariç tüm pencereleri kapatmayı deneyin.
 
-3. Tuşuna **Ctrl**+**Alt**+**X** görüntülenecek **araç kutusu** penceresi. Pencerenin yerleştirilmişse, böylece onu konumlandırmak için istediğiniz yerde gezinen sürükleyin.
+3. **Araç kutusu** penceresini göstermek için **Ctrl** +**alt** +**X** tuşlarına basın. Pencere yerleştirilmişse, yerleştirmek istediğiniz yere kayabilecek şekilde sürükleyin.
 
-4. Tuşuna **F5** Visual Studio hata ayıklama modu içine yerleştirmek için. Konumunu ayarlamak **Otolar**, **çağrı yığını**, ve **çıkış** windows bunları istediğiniz gibi hata ayıklama. Düzenleme modunda hem hata ayıklama modunda oluşturmak üzere olduğunuz düzeni uygulanır.
+4. Visual Studio 'Yu hata ayıklama moduna almak için **F5** tuşuna basın. **Oto**, **çağrı yığınının**ve **Çıkış** hata ayıklama pencerelerinin konumunu istediğiniz şekilde ayarlayın. Oluşturmakta olduğunuz düzen hem düzenleme modu hem de hata ayıklama modu için geçerlidir.
 
-5. Öğesini katmanlarınızı hem hata ayıklama modu, hem de düzenleme modunda olduğunda istediğiniz **penceresi** > **pencere düzenini Kaydet**. Bu düzen "adı Tasarımcı" çağrısı
+5. Hem hata ayıklama modu hem de düzenleme modundaki mizanpajlarınız istediğiniz gibi **olduğunda pencere düzeni  >  pencere** **düzenini kaydet**' i seçin. Bu düzeni "tasarımcı" olarak çağırın.
 
-     Yeni düzeninizi ayrılmış listesinden sonraki klavye kısayolunu atanan Not **Ctrl**+**Alt**+**1... 0**.
+     Yeni mizanpajınızı, **Ctrl** +**alt** +**1... 0**' ın ayrılmış listesinden sonraki klavye kısayoluna atandığını unutmayın.
 
-#### <a name="create-a-database-project-and-layout"></a>Bir veritabanı projesi oluşturup düzeni
+#### <a name="create-a-database-project-and-layout"></a>Veritabanı projesi ve düzeni oluşturma
 
-1. Yeni bir **SQL Server veritabanı** çözüme bir proje.
+1. Çözüme yeni bir **SQL Server veritabanı** projesi ekleyin.
 
-2. Yeni projede sağ **Çözüm Gezgini** ve **Nesne Gezgini görünümünde**. Bu görüntüler **SQL Server Nesne Gezgini** access tabloları, görünümleri ve veritabanınızdaki diğer nesnelerin sağlayan bir pencere. Bu pencere float veya yerleşik bırakın. Diğer araç pencereleri, istediğiniz şekilde ayarlayın. Eklenen gerçekçilik için gerçek bir veritabanı ekleyebilirsiniz, ancak bu kılavuz için gerekli değildir.
+2. **Çözüm Gezgini** yeni projeye sağ tıklayın ve **Nesne Gezgini Görünüm**' ü seçin. Bu, veritabanınızdaki tablolara, görünümlere ve diğer nesnelere erişmenizi sağlayan **SQL Server Nesne Gezgini** penceresini görüntüler. Bu pencereyi kayabilir ya da yuvalanmış bırakabilirsiniz. Diğer araç pencerelerini istediğiniz şekilde ayarlayın. Ek realronizme için gerçek bir veritabanı ekleyebilirsiniz, ancak bu izlenecek yol için gerekli değildir.
 
-3. Düzeninizi nasıl istediğinizi olduğunda, ana menüden **penceresi** > **pencere düzenini Kaydet**. Bu düzen "DB proje" çağrısı (Biz bu proje için hata ayıklama modu Yerleşimli çıkarmaz.)
+3. Mizanpajınızı istediğiniz **şekilde tercih ettiğinizde** , ana menüden pencere  >  pencere**yerleşimini kaydet**' i seçin. Bu düzeni "DB Project" olarak çağırın. (Bu proje için bir hata ayıklama modu düzeniyle ilgili değildir.)
 
-#### <a name="switch-between-the-layouts"></a>Düzeni arasında geçiş yapın
+#### <a name="switch-between-the-layouts"></a>Düzenler arasında geçiş yapma
 
-Düzeni arasında geçiş yapmak için klavye kısayollarını kullanın veya ana menüden **penceresi** > **pencere düzenini Uygula**.
+Düzenler arasında geçiş yapmak için klavye kısayollarını kullanın veya ana menüden pencere**düzenini uygula** >  **pencere** düzeni ' ni seçin.
 
-![Pencere düzeni menüsü Uygula](../ide/media/vs2015_applywindowlayout.png)
+![Pencere Düzen menüsünü Uygula](../ide/media/vs2015_applywindowlayout.png)
 
-UI düzenini uyguladıktan sonra hem de düzenleme modunda hata ayıklama modunda düzenini nasıl korunur unutmayın.
+Kullanıcı arabirimi düzeni uygulandıktan sonra, düzenin hem düzenleme modunda hem de hata ayıklama modunda nasıl korundığına göz önünde bulabilirsiniz.
 
-Çoklu monitör Kurulum ve tek bir izleyici dizüstü evde varsa, her makine için iyileştirilmiş düzenleri oluşturabilirsiniz.
+Evde çok sayıda izleme kurulumuna sahipseniz ve tek bir izleme dizüstü bilgisayarı evinizde, her makine için optimize edilmiş düzenler oluşturabilirsiniz.
 
 > [!NOTE]
-> Bir çoklu monitör düzeni tek izleme sisteminde uygularsanız, ikinci monitörde yerleştirilen kayan windows artık Visual Studio penceresinin gizlenir. Bu windows tuşuna basarak öne getirmek **Alt + Sekme**. Daha sonra Visual Studio ile birden çok monitör açarsanız, düzenini yeniden uygulayarak windows belirtilen konumlarına geri yükleyebilirsiniz.
+> Tek izlemeli bir sisteme çok monitörlü bir düzen uygularsanız, ikinci monitöre yerleştirdiğiniz kayan pencereler artık Visual Studio penceresinin arkasında gizlenir. **Alt + Tab**tuşlarına basarak bu pencereleri öne çıkarabilirsiniz. Daha sonra Visual Studio 'Yu birden çok izleyiciyle açarsanız, düzeni yeniden uygulayarak pencereleri belirtilen konumlarına geri yükleyebilirsiniz.
 
-#### <a name="manage-and-roam-your-layouts"></a>Yönetme ve katmanlarınızı Dolaşımda
+#### <a name="manage-and-roam-your-layouts"></a>Düzenlerinizi yönetme ve dolaşımda
 
-Kaldırabilir, yeniden adlandırmak veya seçerek özel düzeninizi yeniden sıralama **penceresi** > **pencere düzenlerini Yönet**. Bir düzen taşırsanız, tuş bağlama listesinde yeni konumunu gösterecek şekilde otomatik olarak ayarlanır. Değiştirilen bağlamaları aksi olamaz ve bu nedenle aynı anda en fazla 10 düzenleri depolayabilirsiniz.
+Pencere**düzenlerini yönet** >  **pencere** ' yi seçerek özel düzeninizi kaldırabilir, yeniden adlandırabilir veya yeniden sıralayabilirsiniz. Bir düzeni taşırsanız, anahtar bağlama otomatik olarak listedeki yeni konumu yansıtacak şekilde ayarlanır. Bağlamalar başka bir şekilde değiştirilemez ve bu nedenle, bir seferde en fazla 10 düzen saklayabilirsiniz.
 
 ![Pencere düzenlerini Yönet](../ide/media/managewindowlayouts.png)
 
-Öğesini kendiniz hatırlatan hangi klavye kısayol hangi düzene atanmış **penceresi** > **pencere düzenini Uygula**.
+Kendinize hangi klavye kısayolunun atandığını hatırlatmak için, pencere**düzeni uygula** >  **pencere** öğesini seçin.
 
-Bu düzenleri otomatik olarak Visual Studio sürümleri arasında ve Blend örnekleri ayrı makinelerde ve tüm Express sürümleri için herhangi bir Express kuruluş arasında dolaşıma girer. Ancak, düzenleri Visual Studio, Blend ve Express Dolaşımda değil.
+Bu düzenler, Visual Studio sürümleri arasında ve ayrıca ayrı makinelerde Blend örnekleri arasında ve tüm Express sürümlerinden diğer Express kuruluşlarına otomatik olarak dolaşımda yapılır. Ancak, düzenler Visual Studio, Blend ve Express arasında dolaşımda değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: IDE'de gezinme](../ide/how-to-move-around-in-the-visual-studio-ide.md)
+- [Nasıl yapılır: IDE 'de gezinme](../ide/how-to-move-around-in-the-visual-studio-ide.md)

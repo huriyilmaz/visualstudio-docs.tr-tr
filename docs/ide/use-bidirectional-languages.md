@@ -1,5 +1,5 @@
 ---
-title: Arapça ve İbranice desteği
+title: Arapça ve Ibranice desteği
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,84 +7,84 @@ helpviewer_keywords:
 - bidirectional language support
 - Arabic, creating applications
 ms.assetid: b56f9795-ed8d-4452-9d49-8ca0b0145d86
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1271e5160920dc79decc9acc98aa1e5e3d936ca5
-ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
+ms.openlocfilehash: 4fa91a1f3342039821dc1e0a2ea89c8b0e25f224
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66823564"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647365"
 ---
-# <a name="support-for-bidirectional-languages-in-visual-studio"></a>Visual Studio'da çift yönlü dil desteği
+# <a name="support-for-bidirectional-languages-in-visual-studio"></a>Visual Studio 'da çift yönlü diller için destek
 
-Visual Studio, Arapça ve İbranice metin doğru görüntüleyebilir ve nesne adları ve değerleri için çift yönlü metin girmenize olanak tanır.
+Visual Studio, Arapça ve Ibranice metinleri doğru bir şekilde görüntüleyebilir ve nesne adları ve değerleri için çift yönlü metin girmenize olanak sağlar.
 
 > [!NOTE]
-> Girin ve çift yönlü diller görüntülemek için uygun dili ile yapılandırılmış bir Windows sürümü ile çalışmalısınız. Bu bir İngilizce sürümüyle ilgili dil paketi yüklü olan Windows veya Windows uygun şekilde yerelleştirilmiş sürümünü olabilir.
+> Çift yönlü dilleri girip görüntülemesi için, uygun dille yapılandırılmış bir Windows sürümüyle çalışmanız gerekir. Bu, uygun dil paketinin yüklü olduğu bir Windows Ingilizce sürümü ya da Windows 'un uygun şekilde yerelleştirilmiş sürümü olabilir.
 
 ## <a name="fully-supported-features"></a>Tam olarak desteklenen özellikler
 
-Visual Studio'da tasarım zamanında çift yönlü diller, adlandırma, metin girme ve kaydetme ve dosya açma kullanabilirsiniz.
+Visual Studio 'da tasarım zamanında, metin girerken, nesneleri adlandırırken ve dosyaları kaydederken ve açarken çift yönlü dilleri kullanabilirsiniz.
 
 ### <a name="text-entry"></a>Metin girişi
 
-Visual Studio Unicode'u destekler, dolayısıyla sisteminizi ayarlanmış uygun yerel ve giriş dili, Arapça veya İbranice metin girebilirsiniz. (Keşide ve aksan Arapça desteği içerir.)
+Visual Studio Unicode 'U destekler, bu nedenle sisteminiz uygun yerel ayara ve giriş diline ayarlandıysa, Arapça veya Ibranice metin girebilirsiniz. (Arapça desteği keşide ve aksanlar içerir.)
 
-### <a name="arabic-or-hebrew-object-names"></a>Arapça veya İbranice nesne adları
+### <a name="arabic-or-hebrew-object-names"></a>Arapça veya Ibranice nesne adları
 
-Çift yönlü diller çözümleri, projeleri, dosyaları, klasörleri ve benzeri için ad atamak için kullanabilirsiniz. Kodu, değişkenleri, sınıflar, nesne, öznitelikler, meta verileri ve diğer öğeleri adları için çift yönlü diller kullanabilirsiniz. Arapça ile çalışırken Keşide ve aksan işaretleri dahil olmak üzere herhangi bir Arapça karakter kullanabilirsiniz.
+Çözümler, projeler, dosyalar, klasörler ve benzeri adları atamak için çift yönlü dilleri kullanabilirsiniz. Kodda, değişkenler, sınıflar, nesne, öznitelikler, meta veriler ve diğer öğelerin adları için çift yönlü dilleri kullanabilirsiniz. Arapça ile çalışırken, keşide ve aksanlar dahil olmak üzere herhangi bir Arapça karakter kullanabilirsiniz.
 
-Aşağıdaki öğeleri, Arapça veya İbranice kullanarak adlı ve Visual Studio tarafından doğru şekilde işlenir:
+Aşağıdaki öğeler Arapça veya Ibranice kullanılarak adlandırılabilir ve Visual Studio tarafından doğru şekilde işlenir:
 
-- Çözüm, proje ve proje yola dahil tüm klasörleri dahil olmak üzere, dosya adları.
+- Proje yoluna dahil ettiğiniz tüm klasörler dahil olmak üzere çözüm, proje ve dosya adları.
 
-   **Çözüm Gezgini** doğru çözüm ve öğe adlarını görüntüler.
+   **Çözüm Gezgini** çözüm ve öğe adlarını doğru şekilde görüntüler.
 
-- Dosya içerikleri.
+- Dosya içeriği.
 
-   Açabilir veya dosyaları Unicode kodlama veya seçili bir kod sayfası ile kaydedin.
+   Dosyaları Unicode kodlamalı veya seçili bir kod sayfasıyla açabilir veya kaydedebilirsiniz.
 
 - Veri öğeleri.
 
-   **Sunucu Gezgini** bu öğeleri doğru görüntüler ve bunları düzenleyebilirsiniz.
+   **Sunucu Gezgini** , bu öğeleri doğru şekilde görüntüler ve bunları düzenleyebilirsiniz.
 
-- Öğeleri Windows panoya kopyalandı.
+- Windows panosuna kopyalanmış öğeler.
 
-- Öznitelikler ve meta verileri.
+- Öznitelikler ve meta veriler.
 
-- Özellik değeri.
+- Özellik değerleri.
 
-   Arapça veya İbranice metin kullanabileceğiniz **özellikleri** penceresi. Pencere, standart Windows tuş vuruşları kullanarak sağdan sola ve sağa sola okuma düzeni arasında geçiş yapmanıza izin verir (**Ctrl**+**RightShift** sağdan sola ve **Ctrl**+**LeftShift** soldan sağa için).
+   **Özellikler** penceresinde Arapça veya İbranice metin kullanabilirsiniz. Pencere standart Windows tuş vuruşlarını kullanarak sağdan sola ve soldan sağa okuma düzeni arasında geçiş yapmanıza olanak sağlar (**ctrl** **+ sağdan** sola ve soldan sağa Için **CTRL** +**leftshıft** ).
 
-- Kod ve metin.
+- Kod ve sabit metin.
 
-   Kod Düzenleyicisi'nde, Arapça veya İbranice adı sınıfları, İşlevler, değişkenleri, özellikleri, dize değişmez değerleri, öznitelikleri ve benzeri için kullanabilirsiniz. Ancak, düzenleyici sağdan sola okuma düzeni desteklemez; metin her zaman sol kenar boşluğunda başlatır.
+   Kod Düzenleyicisi 'nde, sınıfları, işlevleri, değişkenleri, özellikleri, dize değişmez değerlerini, özniteliklerini ve benzerlerini adlandırmak için Arapça veya Ibranice kullanabilirsiniz. Ancak, düzenleyici sağdan sola okuma düzenini desteklemez; metin her zaman sol kenar boşluğunda başlar.
 
    > [!TIP]
-   > Bunları, programlarına kodlamak yerine kaynak dosyalarında dize değişmez değerleri yerleştirmeniz gerekir. Daha fazla bilgi için [(.NET Framework) masaüstü uygulamalarında kaynakların](/dotnet/framework/resources/index).
+   > Dize sabit değerlerini programlarınıza sabit kodlamak yerine kaynak dosyalarına yerleştirmeniz gerekir. Daha fazla bilgi için bkz. [Masaüstü uygulamalarındaki kaynaklar (.NET Framework)](/dotnet/framework/resources/index).
 
    > [!NOTE]
-   > Nasıl, Arapça ve İbranice adlı nesnelere başvurmak için tutarlı olması gerekir. Arapça bir değişkeni adlandırmada Kaşida kullanırsanız, örneğin, her zaman Kaşida söz konusu olduğunda değişken veya hataları neden olur kullanmanız gerekir.
+   > Arapça ve Ibranice adlı nesnelere nasıl başvurabileceğiniz tutarlı olmalıdır. Örneğin, bir Arap değişkenini adlandırırken keşide kullanırsanız, bu değişkene veya hatalara başvururken her zaman keşide kullanmanız gerekir.
 
-- Kod açıklamaları. Açıklamalar, Arapça veya İbranice oluşturabilirsiniz. Açıklama Oluşturucu aracında bu diller de kullanabilirsiniz.
+- Kod açıklamaları. Arapça veya Ibranice ile yorum oluşturabilirsiniz. Bu dilleri açıklama Oluşturucu aracında da kullanabilirsiniz.
 
 ### <a name="file-encoding"></a>Dosya kodlama
 
-Kaydet ve dosyaları bir dile özgü veya Unicode kodlaması ile açın. Daha fazla bilgi için [nasıl yapılır: Kaydetme ve açma dosyaları kodlamayla](../ide/how-to-save-and-open-files-with-encoding.md).
+Dosyaları dile özgü veya Unicode kodlamalı bir şekilde kaydedebilir ve açabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: kodlamaya sahip dosyaları kaydetme ve açma](../ide/how-to-save-and-open-files-with-encoding.md).
 
 ## <a name="right-to-left-reading-order"></a>Sağdan sola okuma düzeni
 
-Visual Studio, sağdan sola okuma düzeni için destek sınırlıdır. Varsayılan olarak, Visual Studio'daki metin girişi denetimleri sağdan sola okuma düzeni kullanın. Çoğu durumda, standart Windows hareketleri okuma sırasını değiştirmek için kullanabilirsiniz. Örneğin, basabilirsiniz **Ctrl**+**RightShift** geçiş yapmak için **özellikleri** özellik değerleri için sağdan sola okuma düzeni desteklemek için penceresi.
+Visual Studio, sağdan sola okuma düzeni için sınırlı desteğe sahiptir. Varsayılan olarak, Visual Studio 'daki metin girişi denetimleri soldan sağa okuma düzeni kullanır. Çoğu durumda, okuma düzenini değiştirmek için standart Windows hareketlerini kullanabilirsiniz. Örneğin, **Özellikler** penceresini özellik değerleri için sağdan sola okuma düzenini destekleyecek şekilde değiştirmek için **CTRL** +**rightshıft** tuşlarına basabilirsiniz.
 
-Sağdan sola okuma düzeni, Visual Studio aşağıdaki bölümlerinde desteklenmez:
+Aşağıdaki konumlarda, Visual Studio 'da sağdan sola okuma düzeni desteklenmez:
 
-- Her zaman onay kutuları, açılan listeler ve diğer Visual Studio iletişim kutularındaki denetimler sağdan sola okuma düzeni kullanın.
+- Visual Studio iletişim kutularındaki onay kutuları, açılan listeler ve diğer denetimler her zaman soldan sağa okuma düzeni kullanır.
 
-- Kod Düzenleyicisi'ni (ve metin düzenleyici) sağdan sola okuma düzeni desteklemez. Bir çift yönlü dil metin girebilirsiniz, ancak okuma her zaman sol ve sağ sırasıdır.
+- Kod Düzenleyicisi (ve metin düzenleyici) sağdan sola okuma düzenini desteklemez. Çift yönlü bir dilde metin girebilirsiniz, ancak okuma düzeni her zaman soldan sağa ayarlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

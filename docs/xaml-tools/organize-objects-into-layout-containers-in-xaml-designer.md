@@ -3,21 +3,21 @@ title: XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirm
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 859c568dc23222a960d89b6171b189d98954f556
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: bdda64792195ecac41affeb6ec8a7f4f383ac8a4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451047"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668819"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirme
 
 Bu makalede XAML Tasarımcısı yönelik düzen bölmeleri ve denetimleri açıklanmaktadır.
 
-Nesnelerin görüntü, düğme ve video gibi @ no__t-0objects sayfasında görünmesini istediğiniz yeri düşünün. Belki de satırlarda ve sütunlarda, tek bir satırda, dikey veya yatay olarak veya sabit konumlarda görünmesini isteyebilirsiniz.
+Nesnelerin görüntü, düğme ve video gibi &mdash;objects sayfada görünmesini istediğiniz yeri düşünün. Belki de satırlarda ve sütunlarda, tek bir satırda, dikey veya yatay olarak veya sabit konumlarda görünmesini isteyebilirsiniz.
 
 Sayfanın nasıl görünebileceğini düşünmek için bir şans olduktan sonra bir Düzen paneli seçin. Nesnelerinizi eklediğiniz bir şeye ihtiyacınız olduğundan tüm sayfalar bir ile başlar. Varsayılan olarak bir **kılavuz**olur ancak bunu değiştirebilirsiniz.
 
@@ -71,7 +71,7 @@ Nesneleri, panelin bir kenarına kalacak veya *sabitler*olacak şekilde düzenle
 
 ![DockPanel düzen bölmesi](../designers/media/72d46b58-9a49-4dd5-8af7-6843c0440226.png)
 
-**Kısa bir video izleyin:** ![play Button @ no__t-2 [WPF-DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
+**Kısa bir video izleyin:** ![Play Button ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF-DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
 
 ## <a name="layout-controls"></a>Düzen denetimleri
 

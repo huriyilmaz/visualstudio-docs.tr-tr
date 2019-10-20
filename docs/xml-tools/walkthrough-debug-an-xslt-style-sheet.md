@@ -1,106 +1,106 @@
 ---
-title: XSLT stil sayfalarını hata ayıklama
+title: XSLT stil sayfalarında hata ayıkla
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e787ca3d2d29f04d6af27a5f36f1f84c9d0bc9f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0c1f774757acc293091f19a783ed93f34647d494
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808520"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604605"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>İzlenecek yol: XSLT stil sayfasında hata ayıklama
 
-Bu kılavuzda açıklanan adımları XSLT hata ayıklayıcının kullanımını göstermektedir. Değişkenleri görüntüleme, kesme noktaları ayarlama ve kod içerisinde ilerlemeye adımlar içerir. Hata ayıklayıcı bir defada bir satır kod yürütmek vermenize olanak tanır.
+Bu izlenecek yolda bulunan adımlarda XSLT hata ayıklamanın nasıl kullanılacağı gösterilmektedir. Adımlar, değişkenleri görüntüleme, kesme noktalarını ayarlama ve kodun üzerinden atlama içerir. Hata ayıklayıcı, kodu tek seferde yürütmenize olanak sağlar.
 
-Bu kılavuz için hazırlamak için ilk iki kopyalama [örnek dosyaları](#sample-files) yerel bilgisayarınıza. Bir stil sayfası ve bir stil sayfası için giriş olarak kullanacağız XML dosyasıdır. Bu kılavuzda kullandığımız stil sayfası maliyeti ortalama kitap fiyat altında olan tüm kitaplar bulur.
+Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-files) yerel bilgisayarınıza kopyalayın. Stil sayfası, diğeri ise stil sayfasına giriş olarak kullanacağımız XML dosyasıdır. Bu kılavuzda, kullandığımız stil sayfası maliyeti ortalama defter fiyatının altında olan tüm kitapları bulur.
 
 > [!NOTE]
 > XSLT hata ayıklayıcısı yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
 
-## <a name="start-debugging"></a>Hata Ayıklamayı Başlat
+## <a name="start-debugging"></a>Hata ayıklamayı Başlat
 
-1. Gelen **dosya** menüsünde seçin **açık** > **dosya**.
+1. **Dosya** menüsünden  > **dosyayı** **Aç** ' ı seçin.
 
-2. Bulun *average.xsl aşağıda* seçin ve dosya **açık**.
+2. *Below-Average. xsl* dosyasını bulun ve **Aç**' ı seçin.
 
-   Stil sayfası XML Düzenleyicisi'nde açılır.
+   Stil sayfası XML düzenleyicisinde açılır.
 
-3. Gözat düğmesine tıklayın (**...** ) üzerinde **giriş** belge penceresinin alan. (Varsa **özellikleri** penceresi görünmüyorsa, dosyayı düzenleyicide Aç herhangi bir yere sağ tıklayın ve ardından **özellikleri**.)
+3. Belge Özellikleri penceresinin **giriş** alanındaki gezinme düğmesine ( **...** ) tıklayın. ( **Özellikler** penceresi görünür değilse, düzenleyicide açık dosyada herhangi bir yere sağ tıklayın ve ardından **Özellikler**' i seçin.)
 
-4. Bulun *books.xml* dosya ve ardından **açık**.
+4. *Books. xml* dosyasını bulun ve **Aç**' ı seçin.
 
-   Bu XSLT dönüşümü için kullanılan kaynak dosyanın ayarlar.
+   Bu, XSLT dönüştürmesi için kullanılan kaynak belge dosyasını ayarlar.
 
-5. Ayarlanmış bir [kesme noktası](../debugger/using-breakpoints.md) üzerinde 12. satırın *average.xsl aşağıda*. Birden çok yolla bunu yapabilirsiniz:
+5. 12 *. satırda below-Average. xsl*üzerine bir [kesme noktası](../debugger/using-breakpoints.md) ayarlayın. Bunu birden çok şekilde yapabilirsiniz:
 
-   - 12 satırındaki Düzenleyici kenar boşluğunda tıklayın.
+   - 12. satırda düzenleyicinin kenar boşluğuna tıklayın.
 
-   - 12. satırda herhangi bir yere tıklayın ve sonra basın **F9**.
+   - 12. satırda herhangi bir yere tıklayın ve ardından **F9**tuşuna basın.
 
-   - Sağ `xsl:if` başlangıç etiketi ve ardından **kesme noktası** > **kesme noktası Ekle**.
+   - @No__t_0 Başlangıç etiketini sağ tıklatın ve **ardından kesme noktası** **Ekle** >  kesme noktası ' nı seçin.
 
-      ![Visual Studio XSL dosyasında kesme noktası Ekle](media/insert-breakpoint.PNG)
+      ![Visual Studio 'da XSL dosyasında kesme noktası ekle](media/insert-breakpoint.PNG)
 
-6. Menü çubuğunda, **XML** > **XSLT hata ayıklamayı Başlat** (veya basın **Alt**+**F5**).
+6. Menü çubuğunda, **XML**  > **XSLT hata ayıklamayı Başlat** ' ı seçin (veya **alt** +**F5**tuşuna basın).
 
-   Hata ayıklama işlemini başlatır.
+   Hata ayıklama işlemi başlar.
 
-   Düzenleyici'de, hata ayıklayıcı üzerinde konumlandırılmış `xsl:if` stil sayfası öğesi. Adlı başka bir dosya *average.xml aşağıda* Düzenleyicisi'nde; açılır girdi dosyasındaki her bir düğüm olarak doldurulacak çıkış dosyası budur *books.xml* işlenir.
+   Düzenleyicide, hata ayıklayıcı stil sayfasının `xsl:if` öğesinde konumlandırılır. Düzenleyicide *below-Average. xml* adlı başka bir dosya açılır; Bu, giriş dosyası defterlerindeki her düğüm olarak doldurulacak çıkış dosyasıdır *. xml* işlenir.
 
-   **Otolar**, **Yereller**, ve **Watch 1** windows Visual Studio penceresinin en altında görünür. **Yereller** penceresi, tüm yerel değişkenlerin ve geçerli değerlerini görüntüler. Bu stil sayfası ve ayrıca hata ayıklayıcı şu anda bağlam içinde olan düğümleri izlemek için kullandığı değişkenleri tanımlanan değişkenler içerir.
+   **Oto, Yereller**ve **Gözcü 1** pencereleri, Visual Studio penceresinin alt kısmında görünür. **Yereller** penceresi tüm yerel değişkenleri ve bunların geçerli değerlerini görüntüler. Bu, stil sayfasında tanımlanan değişkenleri ve ayrıca hata ayıklayıcının Şu anda bağlamdaki düğümleri izlemek için kullandığı değişkenleri içerir.
 
 ## <a name="watch-window"></a>Gözcü penceresi
 
-İki değişken için ekleyeceğiz **Watch 1** giriş dosyası işlendi olarak biz değerlerini incelemeniz penceresi. (Ayrıca **Yereller** penceresini izlemek istediğiniz değişken zaten varsa, değerleri inceleyin.)
+Giriş dosyası işlendiğinde değerlerini inceleyebileceğiniz için, **1. gözcü** penceresine iki değişken ekleyeceğiz. (İzlemek istediğiniz değişkenler zaten orada ise, değerleri incelemek için **Yereller** penceresini de kullanabilirsiniz.)
 
-1. Gelen **hata ayıklama** menüsünde seçin **Windows** > **Watch** > **Watch 1**.
+1. **Hata Ayıkla** menüsünde **Windows**  > **İzle** ** >  izle**' yi seçin.
 
-   **Watch 1** pencere görünür olur.
+   **1. gözcü** penceresi görünür hale gelir.
 
-2. Tür `$bookAverage` içinde **adı** alan ve sonra basın **Enter**.
+2. **Ad** alanına `$bookAverage` yazın ve ardından **ENTER**tuşuna basın.
 
-   Değerini `$bookAverage` değişkeni görüntüler **değer** alan.
+   @No__t_0 değişkenin değeri **değer** alanında görüntülenir.
 
-3. Sonraki satıra yazın `self::node()` içinde **adı** alan ve sonra basın **Enter**.
+3. Sonraki satırda, **ad** alanına `self::node()` yazın ve ardından **ENTER**tuşuna basın.
 
-   `self::node()` Geçerli bağlam düğümünün için değerlendirilen bir XPath ifadesidir. Değerini `self::node()` XPath ifadesidir ilk kitap düğümü. Bu dönüşüm ilerledikçe değiştirir.
+   `self::node()`, geçerli bağlam düğümünü değerlendiren bir XPath ifadesidir. @No__t_0 XPath ifadesinin değeri ilk kitap düğümüdür. Bu, dönüşümde ilerlemede olduğu gibi değişir.
 
-4. Genişletin `self::node()` düğümünü ve sonra düğümü genişletmek kimin sahip değer `price`.
+4. @No__t_0 düğümünü genişletin ve ardından değeri `price` olan düğümü genişletin.
 
-   ![XSLT Visual Studio'da hata ayıklama sırasında izleme penceresi](media/xslt-debugging-watch-window.png)
+   ![Visual Studio 'da XSLT hata ayıklaması sırasında izleme penceresi](media/xslt-debugging-watch-window.png)
 
-   Kitap fiyatı geçerli kitap düğümün değerini görmek ve karşılaştırmak için `$bookAverage` değeri. Kitap fiyat Ortalamanın altında olduğundan `xsl:if` hata ayıklama işlemi devam ederken koşul başarılı.
+   Geçerli kitap düğümü için kitap fiyatının değerini görebilir ve `$bookAverage` değeriyle karşılaştırabilirsiniz. Kitap fiyatı ortalamanın altında olduğundan, hata ayıklama işlemine devam ettiğinizde `xsl:if` koşulun başarılı olması gerekir.
 
-## <a name="step-through-the-code"></a>Kodunuz içinde adım adım
+## <a name="step-through-the-code"></a>Kod içinde adımla
 
-1. Tuşuna **F5** devam etmek için.
+1. Devam etmek için **F5** 'e basın.
 
-   İlk kitap düğümün memnun çünkü `xsl:if` koşulu, kitap düğümün eklenen *average.xml aşağıda* çıkış dosyası. Hata ayıklayıcı üzerinde yeniden konumlandırılmış kadar yürütülmeye devam `xsl:if` stil sayfası öğesinde. Hata ayıklayıcı Şimdi ikinci kitap düğümün konumlandırılmış *books.xml* dosya.
+   İlk kitap düğümü `xsl:if` koşulunu karşıladığı için kitap düğümü *below-Average. xml* çıkış dosyasına eklenir. Hata ayıklayıcı, stil sayfasındaki `xsl:if` öğesinde yeniden konumlandırılana kadar yürütülmeye devam eder. Hata ayıklayıcı artık *Books. xml* dosyasındaki ikinci kitap düğümüne yerleştirildi.
 
-   İçinde **Watch 1** penceresinde `self::node()` için ikinci kitap düğümün değerini değiştirir. Fiyat öğenin değerini inceleyerek fiyat ortalamanın üstünde, bu nedenle olduğunu anlayabilirsiniz `xsl:if` koşul başarısız olmalıdır.
+   1\. **Gözcü** penceresinde, `self::node()` değeri ikinci kitap düğümüne değişir. Price öğesinin değerini inceleyerek, fiyatın ortalamanın üzerinde olduğunu belirleyebilir, bu nedenle `xsl:if` koşulu başarısız olmalıdır.
 
-2. Tuşuna **F5** devam etmek için.
+2. Devam etmek için **F5** 'e basın.
 
-   İkinci kitap düğümün karşılamıyorsa çünkü `xsl:if` koşulu, kitap düğümün eklenmez *average.xml aşağıda* çıkış dosyası. Hata ayıklayıcı üzerinde yeniden konumlandırılmış kadar yürütülmeye devam `xsl:if` stil sayfası öğesinde. Hata ayıklayıcısı artık üçüncü konumlandırıldı `book` düğümünde *books.xml* dosya.
+   İkinci kitap düğümü `xsl:if` koşulunu karşılamadığından, kitap düğümü *below-Average. xml* çıkış dosyasına eklenmez. Hata ayıklayıcı, stil sayfasındaki `xsl:if` öğesinde yeniden konumlandırılana kadar yürütülmeye devam eder. Hata ayıklayıcı artık *Books. xml* dosyasındaki üçüncü `book` düğümüne konumlandırıldı.
 
-   İçinde **Watch 1** penceresinde `self::node()` üçüncü kitap düğümün değerini değiştirir. Değerini inceleme tarafından `price` öğesi, fiyat Ortalamanın altında olduğunu belirleyebilirsiniz. `xsl:if` Koşul başarılı olması gerekir.
+   1\. **Gözcü** penceresinde, `self::node()` değeri üçüncü kitap düğümüne dönüşür. @No__t_0 öğesinin değerini inceleyerek, fiyatın ortalamanın altında olduğunu belirleyebilirsiniz. @No__t_0 koşulu başarılı olmalıdır.
 
-3. Tuşuna **F5** devam etmek için.
+3. Devam etmek için **F5** 'e basın.
 
-   Çünkü `xsl:if` koşulu karşılandı üçüncü kitap eklenir *average.xml aşağıda* çıkış dosyası. XML belgesi içindeki tüm kitaplar işlenen ve hata ayıklayıcıyı durdurur.
+   @No__t_0 koşul karşılandığından, üçüncü kitap *below-Average. xml* çıkış dosyasına eklenir. XML belgesindeki tüm kitaplar işlendi ve hata ayıklayıcı durdu.
 
-## <a name="sample-files"></a>Örnek dosya
+## <a name="sample-files"></a>Örnek dosyalar
 
-Aşağıdaki iki dosyada izlenecek yol tarafından kullanılır.
+Aşağıdaki iki dosya izlenecek yol tarafından kullanılır.
 
-### <a name="below-averagexsl"></a>Aşağıda average.xsl
+### <a name="below-averagexsl"></a>Below-Average. Xsl
 
 ```xml
 <?xml version='1.0'?>
@@ -123,7 +123,7 @@ Aşağıdaki iki dosyada izlenecek yol tarafından kullanılır.
 </xsl:stylesheet>
 ```
 
-### <a name="booksxml"></a>Books.XML
+### <a name="booksxml"></a>Books. xml
 
 ```xml
 <?xml version='1.0'?>

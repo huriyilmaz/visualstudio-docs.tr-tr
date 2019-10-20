@@ -13,90 +13,90 @@ helpviewer_keywords:
 - queries [Visual Studio], TableAdapters
 ms.assetid: 104d1d19-b5a9-4071-b81e-1b3af08e9c7b
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1da058cbbdda71758e9a158cfd6778a044797093
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 560587e70365a485c3391a0623b959f88d417698
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703824"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671066"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>Parametreleştirilmiş TableAdapter sorguları oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Parametreli bir sorgu, WHERE yan tümcesi içinde sorgu koşulları karşılayan verileri döndürür. Örneğin, yalnızca müşterilerin ekleyerek belirli bir şehirde görüntülemek için Müşteri listesini parametreleştirebilirsiniz `WHERE City = @City` Müşteri listesini döndüren SQL deyimini sonuna.  
-  
-Sizin parametreleştirilmiş TableAdapter sorguları veri kümesi Tasarımcısı'nda oluşturun. Bir Windows uygulaması da oluşturabilirsiniz **Parametreleştirme veri kaynağı** komutunu **veri** menüsü. **Parametreleştirme veri kaynağı** komutu, parametre değerlerini girin ve sorguyu çalıştırın, form üzerindeki denetimleri oluşturur.  
-  
+Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını karşılayan verileri döndürür. Örneğin, bir müşteri listesini, müşterilerin listesini döndüren SQL ifadesinin sonuna `WHERE City = @City` ekleyerek yalnızca belirli bir şehirdeki müşterileri görüntüleyecek şekilde parametreleştirebilirsiniz.
+
+Veri Kümesi Tasarımcısı parametreli TableAdapter sorguları oluşturursunuz. Bunları, **veri** menüsünde **Parametreleştirme veri kaynağı** komutuyla bir Windows uygulamasında da oluşturabilirsiniz. **Parametreleştirme veri kaynağı** komutu, formunuzda parametre değerlerini girebileceğiniz ve sorguyu çalıştıran denetimler oluşturur.
+
 > [!NOTE]
-> Parametreli sorgu oluşturulurken karşı kodlama veritabanına özgü parametre gösterimini kullanın. Örneğin, soru işareti Access ve OleDb veri kaynakları kullan '?' parametreleri belirtmek için bu nedenle WHERE yan tümcesi şuna benzeyecektir: `WHERE City = ?`.  
-  
+> Parametreli bir sorgu oluştururken, kodlama yaptığınız veritabanına özgü parametre gösterimini kullanın. Örneğin, Access ve OleDb veri kaynakları, parametreleri göstermek için '? ' soru işaretini kullanır, bu nedenle WHERE yan tümcesi şöyle görünür: `WHERE City = ?`.
+
 > [!NOTE]
-> İletişim kutuları ve menü komutları gördüğünüz Yardım menüsünde açıklanana içinde etkin ayarlarınıza ve kullandığınız sürüm bağlı olarak farklı olabilir. Ayarlarınızı değiştirmek için Git **Araçları** menü ve select **içeri ve dışarı aktarma ayarları**. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="create-a-parameterized-tableadapter-query"></a>Parametreleştirilmiş TableAdapter sorgu oluşturma 
-  
-- SQL deyimi için istenen parametrelere sahip bir WHERE yan tümcesi ekleyerek yeni bir TableAdapter'ı oluşturun. Daha fazla bilgi için [oluştur ve TableAdapter yapılandırma](../data-tools/create-and-configure-tableadapters.md).  
-  
-     -veya-  
-  
-- Bir sorgu, WHERE yan tümcesi istenen parametrelerle SQL deyiminde ekleme, var olan bir TableAdapter ekleyin.
-  
-### <a name="create-a-parameterized-query-while-designing-a-data-bound-form"></a>Verilere bağlı bir form tasarlarken, Parametreli sorgu oluşturma  
-  
-1. Formunuzdaki bir veri kümesine zaten bağlı bir denetim seçin. Daha fazla bilgi için [Visual Studio'da verilere Windows Forms bağlama denetimleri](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).  
-  
-2. Üzerinde **veri** menüsünde**Sorgu Ekle**.  
-  
-3. Tamamlamak **arama ölçütü Oluşturucu** iletişim kutusunda, istenen parametrelere sahip bir WHERE yan tümcesi SQL deyiminde ekleme.  
-  
-### <a name="add-a-query-to-an-existing-data-bound-form"></a>Varolan bir verilere bağlı forma bir sorgu Ekle  
-  
-1. Formda açın **Windows Form Tasarımcısı**.  
-  
-2. Üzerinde **veri** menüsünde **Sorgu Ekle** veya **veri akıllı etiketler**.  
-  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya kullandığınız sürüme bağlı olarak yardım bölümünde açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsüne gidin ve **ayarları Içeri ve dışarı aktar '** ı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="create-a-parameterized-tableadapter-query"></a>Parametreli bir TableAdapter sorgusu oluşturma
+
+- SQL deyimi için istenen parametrelerle bir WHERE yan tümcesi ekleyerek yeni bir TableAdapter oluşturun. Daha fazla bilgi için bkz. [TableAdapters oluşturma ve yapılandırma](../data-tools/create-and-configure-tableadapters.md).
+
+     veya
+
+- Var olan bir TableAdapter 'a bir sorgu ekleyin ve istenen parametrelere sahip WHERE yan tümcesini SQL deyimi 'ne ekleyin.
+
+### <a name="create-a-parameterized-query-while-designing-a-data-bound-form"></a>Veri bağlantılı form tasarlarken parametreli bir sorgu oluşturma
+
+1. Formunuzda zaten bir veri kümesine bağlı olan bir denetim seçin. Daha fazla bilgi için bkz. [Visual Studio 'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).
+
+2. **Veri** menüsünde**Sorgu Ekle**' yi seçin.
+
+3. **Arama ölçütleri Oluşturucu** iletişim kutusunu doldurun ve istenen PARAMETRELERE sahip WHERE yan tümcesini SQL deyimi 'ne ekleyin.
+
+### <a name="add-a-query-to-an-existing-data-bound-form"></a>Varolan bir veri bağlantılı forma sorgu ekleme
+
+1. **Windows Form Tasarımcısı**formunu açın.
+
+2. **Veri** menüsünde sorgu veya **veri Akıllı Etiketler** **Ekle** ' yi seçin.
+
    > [!NOTE]
-   > Varsa **Sorgu Ekle** kullanılamaz **veri** menüsü, görüntüler veri kaynağı, formda bir denetim için Parametreleştirme eklemek için seçin. Form verileri görüntüler, örneğin, bir <xref:System.Windows.Forms.DataGridView> denetlemek, onu seçin. Form bireysel denetimlerinde verileri görüntülüyorsa, herhangi bir veriye bağlı denetim seçin.  
-  
-3. İçinde **Select veri kaynağı tablosu** alanı Ekle'yi seçin istediğiniz tablethat Parametreleştirme için.  
-  
-4. Bir ad yazın **yeni sorgu adı** yeni bir sorgu oluşturuyorsanız kutusu.  
-  
-    -veya-  
-  
-    Bir sorgu seçin **varolan sorgu adı** kutusu.  
-  
-5. İçinde **sorgu metni** parametreleri alan bir sorgu yazın.  
-  
-6. **Tamam**’ı seçin.  
-  
-    Bir giriş parametresi için Denetim ve bir **yük** düğmesi, formda eklenir bir <xref:System.Windows.Forms.ToolStrip> denetimi.  
-  
-   Hiçbir geçerli bir değere sahip kayıtları için sorgu istediğinizde TableAdapter parametreleri null değerler atanabilir. Örneğin, sahip şu sorguyu inceleyin bir `ShippedDate` parametresinde kendi `WHERE` yan tümcesi:  
-  
+   > **Sorgu Ekle** ' de **veri** menüsünde kullanılabilir değilse, form üzerinde Parametreleştirme eklemek istediğiniz veri kaynağını görüntüleyen bir denetim seçin. Örneğin, form verileri bir <xref:System.Windows.Forms.DataGridView> denetiminde görüntülüyorsa, onu seçin. Form, verileri ayrı denetimlerde görüntülüyorsa, veri bağlantılı herhangi bir denetimi seçin.
+
+3. **Veri kaynağı tablosu seçin** alanında, Parametreleştirme eklemek istediğiniz tabloyu seçin.
+
+4. Yeni bir sorgu oluşturuyorsanız **Yeni sorgu adı** kutusuna bir ad yazın.
+
+    veya
+
+    **Var olan sorgu adı** kutusunda bir sorgu seçin.
+
+5. **Sorgu metin** kutusuna parametreleri alan bir sorgu yazın.
+
+6. **Tamam ' ı**seçin.
+
+    Parametre ve bir **yükleme** düğmesi girmek için bir denetim, <xref:System.Windows.Forms.ToolStrip> denetimindeki forma eklenir.
+
+   TableAdapter parametrelerine, geçerli değeri olmayan kayıtları sorgulamak istediğinizde null değerler atanabilir. Örneğin, `WHERE` yan tümcesinde `ShippedDate` parametresine sahip olan aşağıdaki sorguyu göz önünde bulundurun:
+
    ```sql
-   SELECT CustomerID, OrderDate, ShippedDate  
-   FROM Orders  
-   WHERE (ShippedDate = @ShippedDate) OR  
-   (ShippedDate IS NULL)  
+   SELECT CustomerID, OrderDate, ShippedDate
+   FROM Orders
+   WHERE (ShippedDate = @ShippedDate) OR
+   (ShippedDate IS NULL)
    ```
 
-Bu bir TableAdapter sorgu olsaydı, aşağıdaki kod ile birlikte gönderilmeyen tüm siparişleri için sorgu:  
-  
+Bu bir TableAdapter üzerinde bir sorgu olsaydı, şu kodla gönderilmeyen tüm siparişleri sorgulayabilirsiniz:
+
    [!code-csharp[VbRaddataTableAdapters#8](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataTableAdapters/CS/Form2.cs#8)]
-   [!code-vb[VbRaddataTableAdapters#8](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataTableAdapters/VB/Form2.vb#8)]  
-  
-### <a name="enable-a-query-to-accept-null-values"></a>Null değerleri kabul etmek bir sorgu etkinleştir  
-  
-1. İçinde **veri kümesi Tasarımcısı**, null parametre değerlerini kabul etmesi gerekir TableAdapter sorgu seçin.  
-  
-2. İçinde **özellikleri** penceresinde **parametreleri**. Ardından üç nokta simgesine basın (**...** ) açmak için düğmeyi **parametre koleksiyon Düzenleyicisi**.  
-  
-3. Null değerlere izin verir parametreyi seçin ve ayarlayın **AllowDbNull** özelliğini `true`.  
-  
+   [!code-vb[VbRaddataTableAdapters#8](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataTableAdapters/VB/Form2.vb#8)]
+
+### <a name="enable-a-query-to-accept-null-values"></a>Sorgunun null değerlerini kabul etmesine izin vermek
+
+1. **Veri kümesi Tasarımcısı**, null parametre değerlerini kabul etmesi gereken TableAdapter sorgusunu seçin.
+
+2. **Özellikler** penceresinde **Parametreler**' i seçin. Ardından, **Parametreler koleksiyonu düzenleyicisini**açmak için üç nokta ( **...** ) düğmesine basın.
+
+3. Null değerlere izin veren parametreyi seçin ve **AllowDBNull** özelliğini `true` olarak ayarlayın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [TableAdapter'ları kullanarak veri kümelerini doldurma](../data-tools/fill-datasets-by-using-tableadapters.md)

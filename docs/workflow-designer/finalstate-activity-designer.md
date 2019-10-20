@@ -1,36 +1,36 @@
 ---
-title: İş Akışı Tasarımcısı - FinalState etkinlik Tasarımcısı
+title: İş Akışı Tasarımcısı-FinalState etkinlik Tasarımcısı
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: aa186893-8775-40dd-981f-8593ead831d0
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 8292e22bac6063a36286930584e1d7c227913511
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: b8f25167f3a67e2d1349354ce568c076697e3e73
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949712"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650469"
 ---
 # <a name="finalstate-activity-designer"></a>FinalState Etkinlik Tasarımcısı
 
-<xref:System.Activities.Core.Presentation.FinalState> Tasarımcısı oluşturmak için kullanılan bir <xref:System.Activities.Statements.State> , durum makine örneği sonlandırır.
+@No__t_0 Tasarımcısı, bir durum makine örneğini sonlandıran bir <xref:System.Activities.Statements.State> oluşturmak için kullanılır.
 
-## <a name="using-the-finalstate-activity-designer"></a>FinalState etkinlik Tasarımcısı kullanma
+## <a name="using-the-finalstate-activity-designer"></a>FinalState etkinlik tasarımcısını kullanma
 
-**FinalState** Tasarımcısı oluşturmak için kullanılan bir <xref:System.Activities.Statements.State> bir durum makinesindeki bir sonlandırıcı durumu olarak yapılandırılmış. A <xref:System.Activities.Statements.State> kullanılarak oluşturulan <xref:System.Activities.Core.Presentation.FinalState> etkinlik Tasarımcısı sahip kendi <xref:System.Activities.Statements.State.IsFinal%2A> özelliğini **true**, hiçbir <xref:System.Activities.Statements.State.Exit%2A> etkinlik ve bundan kaynaklanan hiçbir geçişler. Kullanılacak <xref:System.Activities.Core.Presentation.FinalState> eklemek için etkinlik Tasarımcısı bir <xref:System.Activities.Statements.State> önceden yapılandırılmış bir durum makinesindeki bir sonlandırıcı durumu etkinliğini sürükleyin **FinalState** etkinlik Tasarımcısı'ndan **Durum makinesi**bölümünü **araç kutusu** ve iş akışı Tasarımcısı bırakın. <xref:System.Activities.Core.Presentation.FinalState> Etkinlik Tasarımcısı bırakılan üzerine bir <xref:System.Activities.Statements.StateMachine> ve geçişleri eklenen daha sonra; veya bir geçiş olarak oluşturulabilir <xref:System.Activities.Core.Presentation.FinalState> etkinlik Tasarımcısı bırakıldı. Geçiş oluşturma hakkında daha fazla bilgi için bkz. [geçiş](../workflow-designer/transition-activity-designer.md).
+**Sonlandırıcı durumu** Tasarımcısı, bir durum makinesinde sonlandırma durumu olarak önceden yapılandırılmış bir <xref:System.Activities.Statements.State> oluşturmak için kullanılır. @No__t_1 etkinlik Tasarımcısı kullanılarak oluşturulan <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.State.IsFinal%2A> özelliği **true**olarak ayarlanmıştır, <xref:System.Activities.Statements.State.Exit%2A> etkinliği yoktur ve bundan kaynaklı hiçbir geçiş yoktur. Bir durum makinesinde sonlandırma durumu olarak önceden yapılandırılmış bir <xref:System.Activities.Statements.State> etkinliği eklemek için <xref:System.Activities.Core.Presentation.FinalState> etkinlik tasarımcısını kullanmak için, **araç kutusu** 'Nun **durum makinesi** bölümünden **Sonlandırıcı durumu** etkinlik tasarımcısını sürükleyin ve iş akışı Tasarımcısı. @No__t_0 etkinlik Tasarımcısı, daha sonra eklenen bir <xref:System.Activities.Statements.StateMachine> ve geçişlerin üzerine bırakılabilir; ya da <xref:System.Activities.Core.Presentation.FinalState> etkinlik Tasarımcısı bırakılmadığı için bir geçiş oluşturulabilir. Geçiş oluşturma hakkında daha fazla bilgi için bkz. [geçiş](../workflow-designer/transition-activity-designer.md).
 
-### <a name="state-activity-properties-in-the-workflow-designer"></a>İş akışı tasarımcısında State etkinlik özellikleri
+### <a name="state-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı durum etkinliği özellikleri
 
-Aşağıdaki tabloda kullanılarak ayarlanabilen özelliklerini gösterir <xref:System.Activities.Core.Presentation.FinalState> Tasarımcısı ve Tasarımcısı'nda nasıl kullanıldığını açıklar. Bu özelliklerin bazıları özellik kılavuzunda düzenlenebilir ve bazı Tasarımcı yüzeyinde düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Core.Presentation.FinalState> Tasarımcısı kullanılarak ayarlanmakta olabilecek özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özelliklerden bazıları özellik kılavuzunda düzenlenebilir ve bazıları tasarımcı yüzeyinde düzenlenebilirler.
 
-|Özellik Adı|Gerekli|Kullanım|
+|Özellik adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Statements.State.DisplayName%2A>|False|Kolay adı belirtir <xref:System.Activities.Statements.State> üst bilgisindeki etkinlik Tasarımcısı. Varsayılan değer **durumu**. Değer özellik kılavuzunda veya etkinlik Tasarımcısı başlığındaki doğrudan düzenleyebilirsiniz. <xref:System.Activities.Statements.State.DisplayName%2A> İş akışı Tasarımcısı üst kısmında görüntülenen içerik haritalı gezinme kullanılır.<br /><br /> Ancak <xref:System.Activities.Statements.State.DisplayName%2A> kati şekilde gerekli değil kullanmak için en iyi bir uygulamadır.|
-|<xref:System.Activities.Statements.State.Entry%2A>|False|Bu durum için geçirildiğinde basıldığında uygulanacak eylemi belirtir. Bu değer, bir etkinlikten sürükleyerek ayarlanabilir **araç kutusu** üzerine sürükleyip bırakarak <xref:System.Activities.Statements.State.Entry%2A> durumu bölümü.|
+|<xref:System.Activities.Statements.State.DisplayName%2A>|False|Üst bilgide <xref:System.Activities.Statements.State> etkinlik tasarımcısının kolay adını belirtir. Varsayılan değer **durumdur**. Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir. @No__t_0, iş akışı tasarımcısının üst kısmında görüntülenen içerik haritası gezintisinde kullanılır.<br /><br /> @No__t_0 kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.State.Entry%2A>|False|Bu durum öğesine geçiş yapıldığında oluşan eylemi belirtir. Bu değer, **araç kutusundan** bir etkinlik sürüklenerek ve bunu durumun <xref:System.Activities.Statements.State.Entry%2A> bölümüne bırakarak ayarlanabilir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

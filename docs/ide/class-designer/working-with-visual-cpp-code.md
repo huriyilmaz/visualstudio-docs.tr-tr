@@ -13,27 +13,27 @@ helpviewer_keywords:
 - C++, class diagrams
 - C++, Class Designer
 ms.assetid: f5b40921-2ef7-4de0-b595-45b44c79ffa6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16dbcbecece0e8ec38e3f38391ca5063e2e3d36c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b2252b5e6d8da9f81fbcca9b856222a3230cd080
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975014"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647567"
 ---
-# <a name="work-with-visual-c-code-in-class-designer"></a>Sınıf tasarımcısında Visual C++ kod ile çalışma
+# <a name="work-with-visual-c-code-in-class-designer"></a>Sınıf Tasarımcısı 'de görsel C++ kodla çalışma
 
-**Sınıf Tasarımcısı** adlı bir görsel tasarım yüzeyi görüntüler bir *sınıf diyagramı* kod öğeleri, projenizdeki görsel bir gösterimini sağlar. Tasarım ve sınıflar ve diğer proje türleri görselleştirmek için sınıf diyagramlarını kullanabilirsiniz.
+**Sınıf Tasarımcısı** , projenizdeki kod öğelerinin görsel gösterimini sağlayan *sınıf diyagramı* adlı bir görsel tasarım yüzeyi görüntüler. Bir projedeki sınıfları ve diğer türleri tasarlamak ve görselleştirmek için sınıf diyagramlarını kullanabilirsiniz.
 
-**Sınıf Tasarımcısı** aşağıdaki C++ kod öğeleri destekler:
+**Sınıf Tasarımcısı** aşağıdaki C++ kod öğelerini destekler:
 
-- (Birden çok devralma ilişkisi olabilir bir yönetilen sınıf şeklinin benzer) sınıfı
+- Sınıf (birden fazla devralma ilişkisine sahip olması dışında, yönetilen bir sınıf şekline benzer)
 
-- Anonim sınıf (anonim tür sınıfı görünümün oluşturulan adını görüntüler.)
+- Anonim Sınıf (Sınıf Görünümü, anonim tür için üretilen adı görüntüler)
 
 - Şablon sınıfı
 
@@ -41,72 +41,72 @@ ms.locfileid: "62975014"
 
 - Enum
 
-- Makro (makro sonrası işlenen görünümünü görüntüler)
+- Makro (makronun işleme sonrası görünümünü görüntüler)
 
-- tür tanımı
+- Genişletiyor
 
 > [!NOTE]
-> Bu bir modelleme projesinde oluşturduğunuz UML sınıf diyagramı ile aynı değildir. Daha fazla bilgi için [UML Class Diagrams: Başvuru](../../modeling/create-uml-modeling-projects-and-diagrams.md).
+> Bu, modelleme projesinde oluşturabileceğiniz UML sınıf diyagramı ile aynı değildir. Daha fazla bilgi için bkz. [UML sınıf diyagramları: başvuru](../../modeling/create-uml-modeling-projects-and-diagrams.md).
 
-## <a name="troubleshoot-type-resolution-and-display-issues"></a>Tür çözümlemesi ilgili sorunları gidermek ve sorunları görüntüle
+## <a name="troubleshoot-type-resolution-and-display-issues"></a>Tür çözümleme ve görüntüleme sorunlarını giderme
 
 ### <a name="location-of-source-files"></a>Kaynak dosyalarının konumu
 
-**Sınıf Tasarımcısı** kaynak dosyalarının konumunu izler mi değil. Bu nedenle, proje değiştirmek ya da kaynak dosyalarını projenizde, taşıma **Sınıf Tasarımcısı** parça türü (özellikle kaynak türü bir tür tanımı, temel sınıflar veya ilişki türlerini) kaybedebilir. Gibi bir hata alabilirsiniz **Sınıf Tasarımcısı bu türü görüntüleyemiyor**. Bunu yaparsanız, değiştirilmiş ya da yeni yerlerine kaynak kodu yeniden görüntülemek için sınıf diyagramına sürükleyin.
+**Sınıf Tasarımcısı** , kaynak dosyaların konumunu izlememez. Bu nedenle, proje yapınızı değiştirir veya kaynak dosyalarını projenize taşırsanız, **Sınıf Tasarımcısı** türü (özellikle bir typedef, Taban sınıfları veya ilişkilendirme türleri kaynak türü) kaybedebilir. **Sınıf Tasarımcısı bu tür görüntülenemiyor**gibi bir hata alabilirsiniz. Bunu yaparsanız, yeniden görüntülemek için değiştirilen veya yeniden konumlandırılan kaynak kodu yeniden sınıf diyagramına sürükleyin.
 
 ### <a name="update-and-performance-issues"></a>Güncelleştirme ve performans sorunları
 
-Visual C++ projeleri için sınıf diyagramında görüntülenecek kaynak dosyada bir değişiklik 30 ila 60 saniye sürebilir. Bu gecikmeye de neden **Sınıf Tasarımcısı** hata vermesini **hiçbir tür seçiminde bulundu**. Bunun gibi bir hata alırsanız, tıklayın **iptal** hata iletisi ve bekleme görünmesini kod öğesi için **sınıf görünümü**. Bu yapıldıktan sonra **Sınıf Tasarımcısı** görüntüleyebilir türü olmalıdır.
+Visual C++ projelerinde, kaynak dosyadaki bir değişikliğin sınıf diyagramında görünmesi 30 ila 60 saniye sürebilir. Bu gecikme **, seçimde hiçbir tür bulunamamış**bir hata **Sınıf Tasarımcısı** oluşturulmasına da neden olabilir. Bunun gibi bir hata alırsanız hata iletisindeki **iptal** ' e tıklayın ve kod öğesinin **sınıf görünümü**görünmesini bekleyin. Bunu yaptıktan sonra, **Sınıf Tasarımcısı** türü görüntüleyebilmelidir.
 
-Bir sınıf diyagramı, kodda yaptığınız değişikliklerle güncelleştirmezse diyagramı kapatın ve yeniden açın gerekebilir.
+Bir sınıf diyagramı kodda yaptığınız değişikliklerle güncelleştirmezse, diyagramı kapatıp yeniden açmanız gerekebilir.
 
-### <a name="type-resolution-issues"></a>Tür çözümlemesi sorunları
+### <a name="type-resolution-issues"></a>Tür çözümleme sorunları
 
-**Sınıf Tasarımcısı** türleri aşağıdaki nedenlerden dolayı çözmek mümkün olmayabilir:
+**Sınıf Tasarımcısı** , aşağıdaki nedenlerden dolayı türleri çözemeyebilir:
 
-- Bir proje veya sınıf diyagramı içeren bir projeden başvurulan değil derleme türüdür. Bu hatayı düzeltmek için proje ya da türünü içeren derlemeyi bir başvuru ekleyin. Daha fazla bilgi için [bir projedeki başvuruları yönetme](../managing-references-in-a-project.md).
+- Tür, sınıf diyagramını içeren projeden başvurulmayan bir projede veya derlemede yer alır. Bu hatayı düzeltmek için, türü içeren proje veya derlemeye bir başvuru ekleyin. Daha fazla bilgi için bkz. [bir projedeki başvuruları yönetme](../managing-references-in-a-project.md).
 
-- Türü doğru kapsamda, bu nedenle değil **Sınıf Tasarımcısı** yeri belirlenemiyor. Kodu eksik olmadığından emin olun bir `using`, `imports`, veya `#include` deyimi. Ayrıca, türü (veya ilişkili bir türün) içinde bulunduğu orijinal yere ad alanı dışında taşınmış değil, emin olun.
+- Tür doğru kapsamda olmadığından **Sınıf Tasarımcısı** bulamıyor. Kodda `using`, `imports` veya `#include` deyimlerinin eksik olmadığından emin olun. Ayrıca, türü (veya ilgili bir tür), başlangıçta bulunduğu ad alanından taşıdığınızdan emin olun.
 
-- Türü yok (veya açıklama satırı). Bu hatayı düzeltmek için bilgisayarınızda değil yorum veya türü silinmiş olması emin olun.
+- Tür yok (veya açıklama alındı). Bu hatayı düzeltmek için, türü açıklama veya silme yaptığınızdan emin olun.
 
-- Türü bir #import yönergesi tarafından başvurulan bir kitaplıkta yer alır. İçin oluşturulan kodu (.tlh dosyası) el ile eklemek için olası bir geçici çözüm olan bir # üstbilgi dosyasına include yönergesi.
+- Tür, bir #import yönergesi tarafından başvurulan bir kitaplıkta bulunur. Olası bir geçici çözüm, oluşturulan kodu (. tlh dosyası) üst bilgi dosyasına bir #include yönergesine el ile eklemektir.
 
-- Emin **Sınıf Tasarımcısı** girdiğiniz türünü destekler. Bkz: [C++ kod öğeleri için kısıtlamalar](#limitations-for-c-code-elements).
+- **Sınıf Tasarımcısı** girdiğiniz türü desteklediğinden emin olun. [Kod öğelerine yönelik C++ sınırlamalara](#limitations-for-c-code-elements)bakın.
 
-Tür çözümleme sorunu için görmek en olası hata **kodu sınıf diyagramına bir veya daha fazla şekilleri için bulunamadı '\<öğesi >'**. Bu hata iletisini kodunuzu hatadır gelmeyebilir. Bu, Sınıf Tasarımcısı yalnızca kodunuzu görüntüleyemedi gösterir. Aşağıdaki ölçüleri deneyin:
+**' @No__t_1element > ' sınıf diyagramında bir veya daha fazla şekil için**bir tür çözümleme sorunu için görmem muhtemel hata kodu bulunamıyor. Bu hata iletisi, kodunuzun hatalı olduğunu göstermez. Yalnızca bu sınıf tasarımcısının kodunuzun görüntülenemiyor olduğunu gösterir. Aşağıdaki ölçüleri deneyin:
 
-- Türü olduğundan emin olun. Yanlışlıkla değil yorum veya kaynak kodu silinmiş olduğundan emin olun.
+- Türün var olduğundan emin olun. Kaynak kodu istemeyerek dışarı veya silmediğinden emin olun.
 
-- Türü çözmeye çalışın. Bir proje ya da sınıf diyagramı içeren bir projeden başvurulan değil derleme türü olabilir. Bu hatayı düzeltmek için proje ya da türünü içeren derlemeyi bir başvuru ekleyin. Daha fazla bilgi için [bir projedeki başvuruları yönetme](../managing-references-in-a-project.md).
+- Türü çözmeyi deneyin. Tür, sınıf diyagramını içeren projeden başvurulmayan bir projede veya derlemede olabilir. Bu hatayı düzeltmek için, türü içeren proje veya derlemeye bir başvuru ekleyin. Daha fazla bilgi için bkz. [bir projedeki başvuruları yönetme](../managing-references-in-a-project.md).
 
-- Sınıf Tasarımcısı bulabilmesi türü doğru kapsamda olduğundan emin olun. Kodu eksik olmadığından emin olun bir `using`, `imports`, veya `#include` deyimi. Ayrıca, türü (veya ilişkili bir türün) içinde bulunduğu orijinal yere ad alanı dışında taşınmış değil, emin olun.
+- Sınıf Tasarımcısı bulmak için türün doğru kapsamda olduğundan emin olun. Kodda `using`, `imports` veya `#include` deyimlerinin eksik olmadığından emin olun. Ayrıca, türü (veya ilgili bir tür), başlangıçta bulunduğu ad alanından taşıdığınızdan emin olun.
 
-### <a name="troubleshoot-other-error-messages"></a>Diğer hata iletilerinde sorun giderme
+### <a name="troubleshoot-other-error-messages"></a>Diğer hata iletileriyle ilgili sorunları giderme
 
-Microsoft Developer Network (MSDN) ortak forumlarında sorun giderme hataları ve Uyarıları ile ilgili Yardım bulabilirsiniz. Bkz: [Visual Studio Sınıf Tasarımcısı Forumu](http://go.microsoft.com/fwlink/?linkid=160754).
+Microsoft Developer Network (MSDN) ortak forumlarında sorun giderme hatalarıyla ve uyarılarla ilgili yardım bulabilirsiniz. Bkz. [Visual Studio Sınıf Tasarımcısı Forumu](http://go.microsoft.com/fwlink/?linkid=160754).
 
-## <a name="limitations-for-c-code-elements"></a>C++ kod öğeleri için kısıtlamalar
+## <a name="limitations-for-c-code-elements"></a>Kod öğeleri C++ için sınırlamalar
 
-- Bir Visual C++ proje yüklendiğinde **Sınıf Tasarımcısı** salt okunur şekilde işlevleri. Sınıf diyagramı değiştirebilirsiniz, ancak sınıf diyagramından kaynak koduna değişiklikleri kaydedemezsiniz.
+- Bir görsel C++ proje yüklendiğinde, **Sınıf Tasarımcısı** işlevleri salt okunurdur. Sınıf diyagramını değiştirebilirsiniz, ancak sınıf diyagramından değişiklikleri kaynak koda geri kaydedemezsiniz.
 
-- **Sınıf Tasarımcısı** yalnızca yerel C++ semantiği destekler. Yönetilen kod derlenmiş Visual C++ projeleri için **Sınıf Tasarımcısı** yalnızca yerel türler kod öğelerini görselleştirin. Bu nedenle, bir projeye bir sınıf diyagramı ekleyebilirsiniz ancak **Sınıf Tasarımcısı** öğeleri burada görselleştirmek izin vermez `IsManaged` özelliği `true` (diğer bir deyişle, değer türleri ve başvuru türleri).
+- **Sınıf Tasarımcısı** yalnızca yerel C++ semantiğini destekler. Yönetilen koda C++ derlenen görsel projeler için **Sınıf Tasarımcısı** yalnızca yerel türler olan kod öğelerini görselleştirilecek. Bu nedenle, bir projeye sınıf diyagramı ekleyebilirsiniz, ancak **Sınıf Tasarımcısı** `IsManaged` özelliğinin `true` (yani, değer türleri ve başvuru türleri) olarak ayarlandığı öğeleri görselleştirmenize izin vermez.
 
-- Visual C++ projeleri için **Sınıf Tasarımcısı** türünün tanımını okur. Örneğin, bir üstbilgi (.h) dosyasına tanımlayan bir tür ve üyeleri tanımlayan bir uygulama (.cpp) dosyasında varsayalım. Uygulama (.cpp) dosyasında "sınıf diyagramını görüntüle" çağırma **Sınıf Tasarımcısı** hiçbir şey görüntülemez. Başka bir örnek olarak kullanan bir .cpp dosya çubuğunda "sınıf diyagramını görüntüle" çağırma bir `#include` deyimini diğer dahil etme dosyaları, ancak herhangi bir gerçek sınıf tanımı içermiyor **Sınıf Tasarımcısı** yeniden hiçbir şey görüntüler.
+- Görsel C++ projeler için **Sınıf Tasarımcısı** yalnızca türün tanımını okur. Örneğin, bir üstbilgi (. h) dosyasında bir tür tanımladığınızı ve üyelerini bir uygulama (. cpp) dosyasında tanımladığınızı varsayalım. Uygulama (. cpp) dosyasında "Görünüm sınıf diyagramını" çağırırsanız **Sınıf Tasarımcısı** hiçbir şey görüntülemez. Başka bir örnek olarak, diğer dosyaları dahil etmek için `#include` bir ifade kullanan ancak gerçek sınıf tanımları içermeyen bir. cpp dosyasında "Görünüm sınıf diyagramını" çağırırsanız, **Sınıf Tasarımcısı** hiçbir şey göstermez.
 
-- C++ yerel koda derlenmiş sürece IDL (.idl) dosyaları, COM arabirimi tanımlayın ve tür kitaplığı, diyagramlarında görüntülemez.
+- COM arabirimlerini ve tür kitaplıklarını tanımlayan IDL (. IDL) dosyaları, yerel C++ koda derlenmedikleri takdirde diyagramlarda görüntülenmez.
 
-- **Sınıf Tasarımcısı** genel işlevler ve değişkenler desteklemez.
+- **Sınıf Tasarımcısı** , genel işlevleri ve değişkenleri desteklemez.
 
-- **Sınıf Tasarımcısı** birleşimler desteklemez. Ayrılan belleğin yalnızca tutarı Birliği'nin en büyük veri üyesi için gerekli olduğu sınıf özel bir tür budur.
+- **Sınıf Tasarımcısı** birleşimler desteklemez. Bu, ayrılan belleğin yalnızca birleşimin en büyük veri üyesi için gereken miktarı olduğu özel bir sınıf türüdür.
 
-- **Sınıf Tasarımcısı** temel veri türleri gibi görüntülemez `int` ve `char`.
+- **Sınıf Tasarımcısı** , `int` ve `char` gibi temel veri türlerini görüntülemez.
 
-- **Sınıf Tasarımcısı** proje doğru başvuru türlerine sahip değilse, geçerli projenin dışında tanımlanan türlerinden görüntülemez.
+- **Sınıf Tasarımcısı** , projenin bu türlere doğru başvuruları yoksa, geçerli projenin dışında tanımlanan türleri görüntülemez.
 
-- **Sınıf Tasarımcısı** iç içe geçmiş türler ancak iç içe türü ve diğer türleri arasında ilişkileri görüntüleyebilir.
+- **Sınıf Tasarımcısı** , iç içe geçmiş türler ve diğer türler arasındaki ilişkileri değil, iç içe geçmiş türleri görüntüleyebilir.
 
-- **Sınıf Tasarımcısı** void olan veya void türünden türetilen türler görüntülenemiyor.
+- **Sınıf Tasarımcısı** void olan veya void bir türden türetilen türleri görüntüleyemez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

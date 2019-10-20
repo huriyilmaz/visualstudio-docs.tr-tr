@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Düzenleyici modlarını yönetme | Microsoft Docs'
+title: 'Nasıl yapılır: düzenleyici modlarını yönetme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -22,50 +22,48 @@ helpviewer_keywords:
 - views, outlining
 ms.assetid: 1fb48027-d870-439f-8b72-4a0321390748
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 71f3b5b2c910bbbd61607f9112122569e5d3562e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a188e90d3feeb903eb8b4efceb91eb53cac3bdce
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685615"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651845"
 ---
-# <a name="how-to-manage-editor-modes"></a>Nasıl yapılır: Düzenleyici modlarını yönetme
+# <a name="how-to-manage-editor-modes"></a>Nasıl Yapılır: Düzenleyici Modlarını Yönetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio Kod Düzenleyicisi çeşitli görüntüleme modlarında görüntüleyebilirsiniz.  
-  
+Visual Studio Code düzenleyicisini çeşitli görüntü modlarında gösterebilirsiniz.
+
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="enabling-full-screen-mode"></a>Tam ekran modunu etkinleştirme  
- Tüm araç pencerelerini Gizle ve belge pencereleri etkinleştirerek görüntülemek seçebileceğiniz **tam ekran** modu.  
-  
-#### <a name="to-enable-full-screen-mode"></a>Tam ekran modunu etkinleştirmek için  
-  
-- Girin ya da çıkmak için ALT + SHIFT + ENTER tuşlarına basın **tam ekran** modu.  
-  
-     --veya--  
-  
-- Komutu Yürüt `View.Fullscreen` içinde **komut** penceresi.  
-  
-## <a name="enabling-virtual-space-mode"></a>Sanal alan modu etkinleştirme  
- İçinde **sanal adres alanı** modu, her kod satırının sonunda boşluklar eklenir. Kodunuzu yanındaki tutarlı bir noktada açıklamaları yerleştirmek için bu seçeneği belirleyin.  
-  
-#### <a name="to-enable-virtual-space-mode"></a>Sanal alan modu etkinleştirmek için  
-  
-1. Seçin **seçenekleri** gelen **Araçları** menüsü.  
-  
-2. Genişletin **metin düzenleyici** klasöründe ve **tüm diller** bu seçeneği genel olarak ayarlayın ya da belirli bir dil klasörü seçin. (Örneğin, yalnızca Visual Basic'te satır numaralarını etkinleştirmek için temel, metin düzenleyici seçenekleri seçin.)  
-  
-3. Seçin **genel** seçenekleri altında **ayarları**seçin **sanal boşluğu etkinleştir**.  
-  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="enabling-full-screen-mode"></a>Tam ekran modunu etkinleştirme
+ Tüm araç pencerelerini gizlemeyi ve yalnızca **tam ekran** modunu etkinleştirerek yalnızca belge pencerelerini görüntülemeyi seçebilirsiniz.
+
+#### <a name="to-enable-full-screen-mode"></a>Tam ekran modunu etkinleştirmek için
+
+- **Tam ekran** moduna girmek veya ÇıKMAK için alt + SHIFT + enter tuşlarına basın.
+
+     --veya--
+
+- **Komut penceresinde komut** `View.Fullscreen` verin.
+
+## <a name="enabling-virtual-space-mode"></a>Sanal alan modunu etkinleştirme
+ **Sanal alan** modunda, her kod satırının sonuna boşluklar eklenir. Açıklamaları kodunuzun yanındaki tutarlı bir noktada konumlandırmak için bu seçeneği belirleyin.
+
+#### <a name="to-enable-virtual-space-mode"></a>Sanal boşluk modunu etkinleştirmek için
+
+1. **Araçlar** menüsünde **Seçenekler** ' i seçin.
+
+2. **Metin düzenleyici** klasörünü genişletin ve bu seçeneği Global olarak ayarlamak Için **tüm diller** ' i seçin veya belirli bir dil klasörü seçin. (Örneğin, satır numaralarını yalnızca Visual Basic açmak için temel, metin düzenleyici seçeneklerini belirleyin.)
+
+3. **Genel** Seçenekler ' i seçin ve **Ayarlar**altında **sanal alanı etkinleştir**' i seçin.
+
     > [!NOTE]
-    > **Sanal adres alanı** etkin **sütun seçimi** modu. Zaman **sanal adres alanı** modu etkin değil, ekleme noktasını bir satır sonundan sonraki ilk karakteri için doğrudan taşır.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Düzenleyiciyi özelleştirme](../ide/customizing-the-editor.md)   
- [Nasıl yapılır: Pencereleri düzenleme ve Windows yerleştirme](../misc/how-to-arrange-and-dock-windows.md)   
- [Yazı Tipleri ve Renkler, Ortam, Seçenekler İletişim Kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)
+    > **Sütun seçim** modunda **sanal alan** etkindir. **Sanal boşluk** modu etkin olmadığında, ekleme noktası bir satırın sonundan doğrudan bir sonraki ilk karaktere gider.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Düzenleyiciyi özelleştirme](../ide/customizing-the-editor.md) [nasıl yapılır: Windows](../misc/how-to-arrange-and-dock-windows.md) [yazı tipi ve renkler, ortam, Seçenekler iletişim kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) yerleştirme ve yerleştirme

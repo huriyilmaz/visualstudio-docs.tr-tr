@@ -1,5 +1,5 @@
 ---
-title: 'CA1712: Enum değerleri için tür adıyla önek kullanmayın | Microsoft Docs'
+title: 'CA1712: tür adı ile Enum değerlerini ön Ekle | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,53 +12,53 @@ helpviewer_keywords:
 - DoNotPrefixEnumValuesWithTypeName
 ms.assetid: df0e3a12-67bf-48f1-a10b-2ef60484a5c7
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 19b64c0d7c45bb2425ca3e59bd56f5c251feef50
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8c79ed71290d54f97bb4ed143d32095b157e2e3e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189173"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669119"
 ---
-# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712: Sabit listesi değerlerine tür adını önek olarak eklemeyin
+# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712: Numaralandırma değerleri için tür adıyla önek kullanmayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|DoNotPrefixEnumValuesWithTypeName|
 |CheckId|CA1712|
-|Kategori|Microsoft.Naming|
+|Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Bir sabit listesi adı numaralandırma türü adı ile başlayan bir üye içeriyor.
+ Sabit listesi, adı numaralandırmanın tür adıyla başlayan bir üye içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Tür bilgilerini geliştirme araçları tarafından sağlanacak beklendiğinden numaralandırma üyelerinin adları tür adıyla öneklenmemiştir.
+ Tür bilgilerinin geliştirme araçları tarafından sağlanması beklendiğinden, numaralandırma üyelerinin adlarına tür adı ön eki uygulanmaz.
 
- Adlandırma kuralları, ortak dil çalışma zamanını hedefleyen kitaplıkları için genel bir bakış sağlar. Bu, yeni bir yazılım kitaplığı öğrenmek için gereklidir ve kitaplık geliştirme yönetilen kodda uzmanlığına sahip olan kişi tarafından geliştirilmiştir müşterilerinizin size olan güvenini artırır süreyi azaltır.
+ Adlandırma kuralları, ortak dil çalışma zamanını hedefleyen kitaplıklar için ortak bir görünüm sağlar. Bu, yeni bir yazılım kitaplığı öğrenmek için gereken süreyi azaltır ve müşterinin, yönetilen kod geliştirme konusunda uzmanlığa sahip olan birisi tarafından geliştirildiği müşterilerin güvenini arttırır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için sabit listesi üyesi türü adı ön eki kaldırın.
+ Bu kuralın ihlalini onarmak için, tür adı önekini numaralandırma üyesinden kaldırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, düzeltilmiş sürümü tarafından izlenen bir yanlış adlandırılmış bir numaralandırmayı gösterir.
+ Aşağıdaki örnek, düzeltilmiş sürüm tarafından izlenen yanlış adlandırılmış bir numaralandırmayı gösterir.
 
  [!code-cpp[FxCop.Naming.EnumValues#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Naming.EnumValues/cpp/FxCop.Naming.EnumValues.cpp#1)]
  [!code-csharp[FxCop.Naming.EnumValues#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Naming.EnumValues/cs/FxCop.Naming.EnumValues.cs#1)]
  [!code-vb[FxCop.Naming.EnumValues#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.EnumValues/vb/FxCop.Naming.EnumValues.vb#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
- [CA1711: Tanımlayıcılar yanlış sonek içermemelidir](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
+## <a name="related-rules"></a>İlgili kurallar
+ [CA1711: Tanımlayıcıların sonekleri yanlış olmamalıdır](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
 
- [CA1027: Sabit listelerini FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+ [CA1027: Numaralandırmaları FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
 
- [CA2217: Sabit listelerini FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+ [CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  <xref:System.Enum?displayProperty=fullName>

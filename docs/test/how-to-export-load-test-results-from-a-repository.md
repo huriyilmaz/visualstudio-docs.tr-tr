@@ -1,5 +1,5 @@
 ---
-title: Yük testi sonuçları Dışarı Aktar
+title: Yük Test Sonuçları dışarı aktar
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,54 +8,54 @@ helpviewer_keywords:
 - Load Test Results Repository
 - load test results, exporting
 ms.assetid: 716c2af5-8737-4d31-956f-a0273f7c5c0c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 477ab8ce86188af9a3db03b92e1ea0f574d8a6a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 86453ef9aa92c63ae4e96566fd08aa328b71b50e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949934"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653532"
 ---
-# <a name="how-to-export-load-test-results-from-a-repository"></a>Nasıl yapılır: Yük testi sonuçlarını bir depodan dışarı aktarma
+# <a name="how-to-export-load-test-results-from-a-repository"></a>Nasıl yapılır: bir depodan yük testi sonuçlarını dışarı aktarma
 
-Çalıştırma sırasında toplanan bilgileri, bir yük testi çalıştırdığınızda, yük testi sonuçları deposunda depolanır. Yük testi sonuçları deposu, performans sayacı verileri ve hatalar hakkında bilgi içerir. Daha fazla bilgi için [Yönet yük testi sonuçları yük testi sonuçları deposunda](../test/manage-load-test-results-in-the-load-test-results-repository.md).
+Bir yük testi çalıştırdığınızda, çalıştırma sırasında toplanan bilgiler Load Test Sonuçları deposunda depolanır. Load Test Sonuçları Deposu, performans sayacı verilerini ve hatalar hakkındaki bilgileri içerir. Daha fazla bilgi için bkz. [yük test sonuçları deposundaki yük testi sonuçlarını yönetme](../test/manage-load-test-results-in-the-load-test-results-repository.md).
 
-Kullanarak yük testi sonuçları Yük Testi Düzenleyicisi'nden yönetebilirsiniz **açık ve yük testi sonuçlarını yönetme** iletişim kutusu. Açın, içeri aktarma, dışarı aktarma ve yük testi sonuçları kaldırın.
+Yük testi sonuçlarını, **yük test sonuçları aç ve Yönet** iletişim kutusunu kullanarak Yük Testi Düzenleyicisi yönetebilirsiniz. Yük testi sonuçlarını açabilir, içeri aktarabilir, dışarı aktarabilir ve kaldırabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-export-results-from-a-repository"></a>Sonuçlarını bir depodan dışarı aktarmak için
+## <a name="to-export-results-from-a-repository"></a>Bir depodan sonuçları dışarı aktarmak için
 
-1. Bir web performansı ve yük testi projesinden, bir yük testi açın.
+1. Bir Web performans ve yük testi projesinden bir yük testi açın.
 
-2. Gömülü araç çubuğunda **sonuçları Aç ve Yönet**.
+2. Katıştırılmış araç çubuğunda, **sonuçları aç ve Yönet**' i seçin.
 
-     **Yönetme yük testi sonuçlarını Aç ve** iletişim kutusu görüntülenir.
+     **Yük test sonuçları aç ve Yönet** iletişim kutusu görüntülenir.
 
-3. İçinde **yük testi sonuçlarını bulmak için bir denetleyici adı girin**, bir denetleyici seçin. Seçin  **\<yerel - denetleyici yok >** yerel olarak depolanmış sonuçlara erişmek için.
+3. **Yük testi sonuçlarını bulmak için bir denetleyici adı girin**' de bir denetleyici seçin. @No__t_1Local, yerel olarak depolanan sonuçlara erişmek için **hiçbir denetleyici >** seçin.
 
-4. İçinde **göstermek için aşağıdaki yükleme testi sonuçları**, yük testi sonuçları görüntülemek istediğinizi seçin. Seçin  **\<tüm testler için sonuçları Göster >** tüm testler için tüm sonuçları görmek için.
+4. **Aşağıdaki yük testi için sonuçları göster**bölümünde, sonuçlarını görüntülemek istediğiniz yük testini seçin. Tüm testlerin tüm sonuçlarını görmek **> Tüm testler için \<Show sonuçları** ' nı seçin.
 
-     Yük testi sonuçları kullanamıyorsanız, görünürler **yük testi sonuçları** listesi. Sütunların **zaman**, **süresi**, **kullanıcı**, **sonucu**, **Test**, ve  **Açıklama**. **Test** test adını içerir ve **açıklama** test çalıştırılmadan önce eklenir isteğe bağlı bir açıklama içerir. **Açıklama** sütunu içindeki girilen kısa açıklamaları görüntüler **analiz yorumları** bunun için test sonucu.
+     Yük testi sonuçları kullanılabiliyorsa, bunlar **Yük testi sonuçları** listesinde görünürler. Sütunlar **saat**, **süre**, **Kullanıcı**, **sonuç**, **Test**ve **Açıklama**. **Test, testin adını içerir ve** **Açıklama** , test çalıştırılmadan önce eklenen isteğe bağlı açıklamayı içerir. **Açıklama** sütunu, bu test sonucu Için **analiz açıklamalarında** girilen kısa açıklamaları görüntüler.
 
-5. İçinde **yük testi sonuçları** listesinde, bir sonuç seçin. Kullanabileceğiniz **Shift** anahtar **Ctrl** anahtar ya da her ikisini birden fazla sonuç seçin ve bunları tek bir dosyaya dışarı aktarma.
+5. **Yük testi sonuçları** listesinde bir sonuç seçin. Birden fazla sonuç seçmek ve bunları tek bir dosyaya dışarı aktarmak için **SHIFT** tuşunu, **CTRL** tuşunu veya her ikisini de kullanabilirsiniz.
 
-6. Seçin **dışarı**.
+6. **Dışarı aktar**' ı seçin.
 
-     **Yük testi sonuçları dışa** iletişim kutusu görüntülenir.
+     **Yük test sonuçları dışarı aktar** iletişim kutusu görünür.
 
-7. İçinde **dosya adı** kutusuna bir ad yazın ve ardından **Kaydet**.
+7. **Dosya adı** kutusuna bir ad yazın ve ardından **Kaydet**' i seçin.
 
-     Sonuçları bir arşiv dosyasına aktarılır.
+     Sonuçlar bir arşiv dosyasına aktarılmalıdır.
 
     > [!NOTE]
-    > **Yönetme yük testi sonuçlarını Aç ve** sonuçlar göründükten sonra iletişim kutusu açık kalır.
+    > **Yük test sonuçları aç ve Yönet** iletişim kutusu, Sonuçlar görüntülendikten sonra açık kalır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi sonuçları deposu içindeki yük testi sonuçlarını yönetme](../test/manage-load-test-results-in-the-load-test-results-repository.md)
-- [Nasıl yapılır: Yük testi sonuçlarını bir depodan silme](../test/how-to-delete-load-test-results-from-a-repository.md)
-- [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [Nasıl yapılır: Bir depoda alma yük testi sonuçları](../test/how-to-import-load-test-results-into-a-repository.md)
+- [Yük Test Sonuçları deposundaki yük testi sonuçlarını yönetme](../test/manage-load-test-results-in-the-load-test-results-repository.md)
+- [Nasıl yapılır: bir depodan yük testi sonuçlarını silme](../test/how-to-delete-load-test-results-from-a-repository.md)
+- [Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Nasıl yapılır: yük testi sonuçlarını depoya aktarma](../test/how-to-import-load-test-results-into-a-repository.md)

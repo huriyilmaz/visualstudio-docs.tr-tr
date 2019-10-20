@@ -1,5 +1,5 @@
 ---
-title: Konuları daha sonra kullanılmak üzere korumak | Microsoft Docs
+title: Daha sonra kullanmak üzere konuları koruyun | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - Favorites tab [Help Viewer 2.0]
 ms.assetid: f0a4c657-001d-4604-a403-d46f15782724
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8e5c4fb8bde2f8ecbc231540047a8d4cd3398a54
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c6c32db6dc6fbe151b9eec3cec988443ceb73fec
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203521"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669979"
 ---
 # <a name="retain-topics-for-later-use"></a>Konuları Daha Sonra Kullanmak için Saklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yararlı bir konu bulduğunuzda, bunu daha sonra kopyalama ve bir metin dosyasına kopyalayıp yapıştırarak, konuyu yazdırabilirsiniz veya sık kullanılan olarak kaydederek erişebilir. Konular için kısayol menüsünü seçerek açarak içeriği daha sonra kullanmak için örneğin koruyabilirsiniz **kopyalama**, **yazdırma**, **Baskı Önizleme**, ve **Ekle Sık Kullanılanlar** seçenekleri.  
-  
-## <a name="using-the-favorites-tab"></a>Sık Kullanılanlar sekmesini kullanma  
- Üzerinde **Sık Kullanılanlar** sekmesinde, herhangi bir giriş ve, silebilir veya girişleri klasörler halinde düzenleyebilirsiniz yeniden adlandırabilir için kısayol menüsünü açabilir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Faydalı bir konu bulduğunuzda, kopyalayıp bir metin dosyasına yapıştırarak ve onu yazdırarak veya sık kullanılanlara kaydederek daha sonra erişebilirsiniz. Örneğin, konu başlıkları için kısayol menüsünü açarak ve **kopyalama**, **yazdırma**, **Baskı Önizleme**ve **Sık Kullanılanlara Ekle** seçeneklerini belirleyerek daha sonra kullanmak üzere içeriği koruyabilirsiniz.
+
+## <a name="using-the-favorites-tab"></a>Sık Kullanılanlar sekmesini kullanma
+ **Sık Kullanılanlar** sekmesinde herhangi bir girdinin kısayol menüsünü açabilir ve sonra yeniden adlandırabilir, silebilir veya girdileri klasörler halinde düzenleyebilirsiniz.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Kısayol Tuşları (Yardım Görüntüleyicisi)](../ide/shortcut-keys-help-viewer.md)

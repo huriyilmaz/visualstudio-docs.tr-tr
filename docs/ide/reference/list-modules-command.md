@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ListModules command
 - list modules command
 ms.assetid: 3cb73774-6ac0-43b2-b781-75ed47175bfd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89be89bb3befa6f6ab9e67f6e98ae4d7b1b94e64
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 1fef8f314f5b416edcf40c8b2f7da4eaa471a28c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926212"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610658"
 ---
 # <a name="list-modules-command"></a>Modülleri Listele Komutu
 Geçerli işlem için modülleri listeler.
@@ -33,39 +33,39 @@ Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
 ```
 
 #### <a name="parameters"></a>Parametreler
-Adrestir`yes|no`
+/Address: `yes|no`
 
 İsteğe bağlı. Modüllerin bellek adreslerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes`.
 
-Ada`yes|no`
+/Name: `yes|no`
 
 İsteğe bağlı. Modüllerin adlarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes`.
 
-Siparişi`yes|no`
+/Order: `yes|no`
 
 İsteğe bağlı. Modüllerin sırasının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
 
-Yolun`yes|no`
+/Path: `yes|no`
 
 İsteğe bağlı. Modüllerin yollarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes`.
 
-İşle`yes|no`
+/Process: `yes|no`
 
 İsteğe bağlı. Modül işlemlerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
 
-/SymbolFile:`yes|no`
+/SymbolFile: `yes|no`
 
 İsteğe bağlı. Modüllerin sembol dosyalarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
 
-/SymbolStatus:`yes|no`
+/SymbolStatus: `yes|no`
 
 İsteğe bağlı. Modüllerin sembol durumlarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes`.
 
-İlişkin`yes|no`
+/Timestamp: `yes|no`
 
 İsteğe bağlı. Modüllerin zaman damgalarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
 
-Sürümünüze`yes|no`
+/Version: `yes|no`
 
 İsteğe bağlı. Modüllerin sürümlerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no`.
 
@@ -80,4 +80,4 @@ Debug.ListModules /Address:yes /Name:yes /Order:no /Path:no /Process:no /SymbolF
 
 - [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)
-- [Nasıl yapılır: Modüller Penceresini Kullanma](../../debugger/how-to-use-the-modules-window.md)
+- [Nasıl Yapılır: Modüller Penceresini Kullanma](../../debugger/how-to-use-the-modules-window.md)

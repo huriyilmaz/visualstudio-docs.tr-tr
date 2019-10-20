@@ -1,5 +1,5 @@
 ---
-title: 'CA2145: Saydam yöntemler değil düzenlenmiş SuppressUnmanagedCodeSecurityAttribute ile | Microsoft Docs'
+title: 'CA2145: Saydam yöntemler SuppressUnmanagedCodeSecurityAttribute ile birlikte tasarlanmamalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,17 +8,17 @@ f1_keywords:
 - CA2145
 ms.assetid: 81970700-b438-4b3b-9239-16887e16f7b7
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b6a7c1b5684181098ef0bec1cde430f401ba1136
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6bffa680fa39014ffa96feec997b5eca63ee08ff
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142622"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610218"
 ---
-# <a name="ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute"></a>CA2145: Saydam metotlar SuppressUnmanagedCodeSecurityAttribute ile donatılmamalıdır
+# <a name="ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute"></a>CA2145: Saydam yöntemler SuppressUnmanagedCodeSecurityAttribute ile donatılmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -29,13 +29,13 @@ ms.locfileid: "68142622"
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Saydam bir yöntem, ile işaretlenmiş bir yöntem <xref:System.Security.SecuritySafeCriticalAttribute> yöntemi veya yöntem içeren bir tür ile işaretlenmiş <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliği.
+ Saydam bir yöntem, <xref:System.Security.SecuritySafeCriticalAttribute> yöntemiyle işaretlenmiş bir yöntem ya da bir yöntemi içeren bir tür <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliğiyle işaretlenir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Donatılmış yöntemler ile <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliğine, çağıran herhangi bir yöntem yerleştirilen örtülü Linkdemand'a sahiptir. Bu LinkDemand, çağıran kodun kritik güvenlikli olmasını gerektirir. İle SuppressUnmanagedCodeSecurity kullanan yöntemi işaretlemek <xref:System.Security.SecurityCriticalAttribute> öznitelik yapar bu gereksinimi daha belirgin yöntemini arayanlar için.
+ @No__t_0 özniteliğiyle donatılmış Yöntemler, onu çağıran herhangi bir yönteme yerleştirilmiş bir örtülü LinkDemand 'a sahiptir. Bu LinkDemand, çağıran kodun kritik güvenlikli olmasını gerektirir. SuppressUnmanagedCodeSecurity kullanan yöntemi <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretlemek, bu gereksinimi, metodun çağıranları için daha belirgin hale getirir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için yöntemi işaretlemek veya tür <xref:System.Security.SecurityCriticalAttribute> özniteliği.
+ Bu kural ihlalini onarmak için yöntemi veya türü <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.

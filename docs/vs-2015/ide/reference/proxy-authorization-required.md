@@ -1,31 +1,31 @@
 ---
-title: Proxy yetkilendirmesi gerekli | Microsoft Docs
+title: Ara sunucu yetkilendirmesi gerekli | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: troubleshooting
 ms.assetid: c2d24ae1-9902-460e-b72a-0299eed9ee82
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f2de40c520bca0ea04f50ec782fec2dda531172e
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 7456e60b42b18ad706b951ee58ca5c33f05cabc1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67822065"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665710"
 ---
 # <a name="proxy-authorization-required"></a>Proxy Yetkilendirmesi Gerekiyor
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Proxy Yetkilendirmesi gerekli** hata genellikle oluşur kullanıcılar Visual Studio online kaynakları bir ara sunucu üzerinden bağlanır ve proxy sunucusu çağrıları engeller.
+**Ara sunucu yetkilendirmesi gerekli** hatası genellikle, kullanıcılar bir ara sunucu aracılığıyla Visual Studio Online kaynaklarına bağlandığında oluşur ve proxy sunucusu çağrıları engeller.
 
-Bu hatayı düzeltmek için bir veya daha fazla aşağıdaki adımları deneyin:
+Bu hatayı düzeltmek için aşağıdaki adımlardan birini veya daha fazlasını deneyin:
 
-- Visual Studio'yu yeniden başlatın. Bir ara sunucu kimlik doğrulaması iletişim kutusu görünür. İletişim kutusunda kimlik bilgilerinizi girin.
+- Visual Studio'yu yeniden başlatın. Proxy kimlik doğrulaması iletişim kutusu görünmelidir. İletişim kutusunda kimlik bilgilerinizi girin.
 
-- Yukarıdaki adım sorunu çözmezse, proxy sunucusu için kimlik bilgileri istenmez Bunun nedeni olabilir http://go.microsoft.com yöneliktir ancak bunu yapar *. visualStudio.com adresleri. Bu sunucular için aşağıdaki URL'ler Visual Studio'da tüm oturum açma senaryoları engelini kaldırmak için izin verilenler listesine eklemeniz gerekir:
+- Yukarıdaki adım sorunu çözmezse, bu durum proxy sunucunuzun http://go.microsoft.com adresler için kimlik bilgilerini istemez ancak *. visualStudio.com adresleri için bunu yapar. Bu sunucular için, Visual Studio 'daki tüm oturum açma senaryolarının engellemesini kaldırmak için izin verilenler listesine aşağıdaki URL 'Leri eklemeniz gerekir:
 
   - *.windows.net
 
@@ -37,13 +37,13 @@ Bu hatayı düzeltmek için bir veya daha fazla aşağıdaki adımları deneyin:
 
   - *.live.com
 
-- Kaldırabilirsiniz http://go.microsoft.com için hem de proxy kimlik doğrulaması iletişim kutusu gösterilir böylece adresi izin verilenler listesinden http://go.microsoft.com adresi ve Visual Studio başlatıldığında sunucu uç noktaları.
+- @No__t_0 adresini izin verilenler listesinden kaldırabilirsiniz. böylece, Visual Studio yeniden başlatıldığında hem http://go.microsoft.com adresi hem de sunucu uç noktaları için proxy kimlik doğrulama iletişim kutusu görünür.
 
-- Ara sunucunuzda varsayılan kimlik bilgilerinizi kullanmak istiyorsanız, aşağıdakileri yapın:
+- Proxy 'niz ile varsayılan kimlik bilgilerinizi kullanmak istiyorsanız, aşağıdakileri yapın:
 
-   1. Devenv.exe.config (devenv.exe yapılandırma dosyası) bulun: **%ProgramFiles%\Microsoft Visual Studio 14.0\Common7\IDE** (veya **% ProgramFiles (x86) %\Microsoft Visual Studio 14.0\Common7\IDE**) .
+   1. : **%ProgramFiles%\Microsoft Visual Studio 14.0 \ Common7\IDE** (veya **% ProgramFiles (x86)% \ Microsoft Visual Studio 14.0 \ Common7\IDE**) içinde devenv. exe. config (devenv. exe yapılandırma dosyası) bulun.
 
-   2. Yapılandırma dosyasında bulunamıyor `<system.net>` engelleyin ve bu kodu ekleyin:
+   2. Yapılandırma dosyasında `<system.net>` bloğunu bulun ve şu kodu ekleyin:
 
       ```xml
       <defaultProxy enabled="true" useDefaultCredentials="true">
@@ -51,6 +51,6 @@ Bu hatayı düzeltmek için bir veya daha fazla aşağıdaki adımları deneyin:
       </defaultProxy>
       ```
 
-      Doğru ara sunucu adresi için ağınızda Ekle `proxyaddress="<http://<yourproxy:port#>`.
+      @No__t_0 ağ için doğru proxy adresini ekleyin.
 
-- Bölümündeki yönergeleri [bu blog gönderisini](http://blogs.msdn.com/b/rido/archive/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy.aspx) proxy kullanmak izin veren bir kodu eklemek için.
+- Proxy 'yi kullanmanıza izin veren kodu eklemek için [Bu blog gönderisine](http://blogs.msdn.com/b/rido/archive/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy.aspx) ilişkin yönergeleri izleyin.

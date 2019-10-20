@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Sınıf Tasarımcısı) türler arasında devralmayı görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: türler arasında devralmayı görüntüleme (Sınıf Tasarımcısı) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,41 +12,40 @@ helpviewer_keywords:
 - types [Visual Studio], derived
 ms.assetid: ea3f0ada-f53b-4fb1-9fb5-908286f5ec3e
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 95fc42cd3d13a0613e865b8a0294c74ca016155c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e1e76d45847d0887b47746c60b836c7acf19d03b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68178810"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670525"
 ---
-# <a name="how-to-view-inheritance-between-types-class-designer"></a>Nasıl yapılır: Türler Arasında Devralmayı Görüntüleme (Sınıf Tasarımcısı)
+# <a name="how-to-view-inheritance-between-types-class-designer"></a>Nasıl Yapılır: Türler Arasında Devralmayı Görüntüleme (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir taban türü ve Sınıf Tasarımcısı'nda bir sınıf diyagramında, türetilmiş türler arasında varsa devralma ilişkisi bulabilirsiniz. Bkz: hiçbiri, iki tür arasında yoksa bir devralma ilişkisi oluşturmak için [nasıl yapılır: (Sınıf Tasarımcısı) türler arasında devralma oluşturma](../ide/how-to-create-inheritance-between-types-class-designer.md).  
-  
-### <a name="to-find-the-base-type"></a>Temel tür bulmak için  
-  
-1. Sınıf diyagramı üzerinde taban sınıf veya arabirim görmek istediğiniz türe tıklayın.  
-  
-2. Üzerinde **sınıf diyagramı** menüsünde seçin **temel sınıfı Göster** veya **temel arabirimleri göster**.  
-  
-    Türün temel sınıf veya arabirim diyagramda seçilen görünür. Tüm gizli devralım çizgileri şimdi iki şekiller arasında görünür.  
-  
-   Ayrıca temel tür görüntülemek ve seçmek için istediğiniz tür sağ **temel sınıfı Göster** veya **temel arabirimleri göster**.  
-  
-### <a name="to-find-the-derived-types"></a>Türetilmiş tür bulmak için  
-  
-1. Sınıf diyagramında, türetilmiş sınıf veya arabirim görmek istediğiniz türe tıklayın.  
-  
-2. Üzerinde **sınıf diyagramı** menüsünde seçin **türetilmiş sınıfları Göster** veya **türetilmiş arabirimleri göster**.  
-  
-    Türün türetilmiş sınıflar veya arabirimleri diyagramda görünür. Tüm gizli devralım çizgileri şimdi şekiller arasında görünür.  
-  
-   Ayrıca türetilmiş türlerini görmek ve istediğiniz tür sağ **türetilmiş sınıfları Göster** veya **türetilmiş arabirimleri göster**.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: (Sınıf Tasarımcısı) türler arasında ilişkilendirme oluşturma](../ide/how-to-create-associations-between-types-class-designer.md)   
- [Türleri ve İlişkilendirmeleri Görüntüleme (Sınıf Tasarımcısı)](../ide/viewing-types-and-relationships-class-designer.md)
+Varsa, bir temel tür ve türetilmiş türleri arasında, devralma ilişkisini Sınıf Tasarımcısı bir sınıf diyagramında bulabilirsiniz. Hiçbiri yoksa, bir devralma ilişkisi oluşturmak için, iki tür arasında bkz. [nasıl yapılır: türler arasında devralma oluşturma (sınıf Tasarımcısı)](../ide/how-to-create-inheritance-between-types-class-designer.md).
+
+### <a name="to-find-the-base-type"></a>Temel türü bulmak için
+
+1. Sınıf diyagramında, temel sınıfı veya arabirimini görmek istediğiniz türe tıklayın.
+
+2. **Sınıf diyagramı** menüsünde, **temel sınıfı göster** ' i veya **temel arabirimleri göster**' i seçin.
+
+    Türün temel sınıfı veya arabirimi diyagramda seçili olarak görünür. Tüm gizli devralma satırları artık iki şekil arasında görüntülenir.
+
+   Ayrıca, taban türünü görüntülemek istediğiniz türe sağ tıklayıp **temel sınıfı göster** ' i veya **temel arabirimleri göster**' i seçin.
+
+### <a name="to-find-the-derived-types"></a>Türetilmiş türleri bulmak için
+
+1. Sınıf diyagramında, türetilmiş sınıfları veya arabirimleri görmek istediğiniz türe tıklayın.
+
+2. **Sınıf diyagramı** menüsünde, **türetilmiş sınıfları göster** ' i veya **türetilmiş arabirimleri göster**' i seçin.
+
+    Türün türetilmiş sınıfları veya arabirimleri diyagramda görünür. Tüm gizli devralma satırları artık şekiller arasında görüntülenir.
+
+   Ayrıca, türetilmiş türlerini görmek istediğiniz türe sağ tıklayıp **türetilmiş sınıfları göster** ' i veya **türetilmiş arabirimleri göster**' i seçin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl yapılır: türler arasında Ilişkilendirme oluşturma (sınıf Tasarımcısı)](../ide/how-to-create-associations-between-types-class-designer.md) [türleri ve ilişkileri görüntüleme (sınıf Tasarımcısı)](../ide/viewing-types-and-relationships-class-designer.md)

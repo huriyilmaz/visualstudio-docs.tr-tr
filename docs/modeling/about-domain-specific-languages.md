@@ -4,65 +4,65 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4684a0256e01cafe79fc90ae1ae97dfc2be047d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 660c93c5e1ee6b41369ebbfc9f43c4c047042589
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823368"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652408"
 ---
 # <a name="about-domain-specific-languages"></a>Etki Alanına Özgü Diller Hakkında
 
-C# veya UML gibi genel amaçlı bir dil, bir etki alanına özgü dil (DSL), belirli bir sorun alanı veya etki alanı deyimlerinde express için tasarlanmıştır.
+C# Veya UML gibi genel amaçlı bir dilden farklı olarak, etki alanına özgü DIL (DSL) belirli bir sorun alanı veya etki alanındaki deyimleri ifade etmek için tasarlanmıştır.
 
-İyi bilinen DSL'ler normal ifadeler ve SQL içerir. Her DSL kendi kapsamı dışındaki fikirleri tanımlamak için metin dizelerini veya bir veritabanı, ancak çok daha da kötüsü işlemleri tanımlamak için genel amaçlı bir dil daha çok daha iyidir. Tek tek sektörler kendi DSL'ler de vardır. Örneğin, telekomünikasyon sektörün dilleri yaygın bir telefon aramasıyla durumları dizisini belirtin ve sektör havada seyahat için kullanılan açıklama DSL uçuş kayıtları tanımlamak için kullanılan standart bir çağırın.
+İyi bilinen DSLs 'ler, normal ifadeleri ve SQL 'i içerir. Her DSL, metin dizelerindeki veya bir veritabanında işlemleri açıklamak için genel amaçlı dilden çok daha iyidir, ancak kendi kapsamı dışında kalan fikirleri açıklamak için çok daha kötülük olur. Her sektörde kendi DSLs 'Leri de vardır. Örneğin, telekomünikasyon sektöründe çağrı açıklaması dilleri bir telefon çağrısındaki durumların sırasını belirtmek için yaygın olarak kullanılır ve hava yolculuğu sektöründe uçuş rezervasyonlarını anlatmak için standart DSL kullanılır.
 
-İşletmenizi ve projenize DSL ile açıklanan kavramlar özel kümeleri de ilgilidir. Örneğin, bu uygulamaların biri için bir DSL tanımlayabilirsiniz:
+İşletmeniz ve projeniz, bir DSL ile açıklanacak özel kavram kümeleriyle de ilgilenir. Örneğin, bu uygulamalardan biri için DSL tanımlayabilirsiniz:
 
-- Bir Web sitesi gezinti yollarında planı.
+- Bir Web sitesindeki gezinti yollarının planı.
 
-- Bağlantı şemaları elektronik bileşenleri için.
+- Elektronik bileşenler için bağlantı şemaları.
 
-- Taşıyıcı bantları bagaj havaalanı ekipman işleme ve ağlar.
+- Bir Havaalanı için taşıyıcı ve bagaj işleme donatısı ağları.
 
-Bir DSL tasarlarken, tanımladığınız bir *etki alanı sınıfı* her etki alanında, bir web sayfası, lamp veya havaalanı iade masasına gibi önemli kavramları. Tanımladığınız *etki alanı ilişkileri* köprü, hat üzeri ya da kavramları birbirine bağlamak için bir taşıyıcı bandı gibi.
+Bir DSL tasarladığınızda, etki alanındaki bir Web sayfası, lamba veya Havaalanı iade masası gibi önemli kavramların her biri için bir *etki alanı sınıfı* tanımlarsınız. Kavramları birbirine bağlamak için köprü, tel veya bir taşıyıcı bant gibi *etki alanı ilişkileri* tanımlarsınız.
 
-Kullanıcılar, DSL'nin oluşturma *modelleri.* Modelleri *örnekleri* , DSL. Örneğin, bunlar belirli bir Web sitesi ya da belirli bir cihaz ya da belirli bir Havalimanı sistemindeki işleme bagaj kablolama açıklanmaktadır.
+DSL oluşturma *modellerinizin kullanıcıları.* Modeller DSL *örnekleridir* . Örneğin, belirli bir Web sitesini veya belirli bir cihazın kablolarını veya belirli bir Havaalanı içindeki Bagaj işleme sistemini tanımlarlar.
 
-Kullanıcıların bir modeli bir diyagram veya bir Windows form olarak görüntüleyebilirsiniz. Modelleri, XML olarak nasıl depolandığını olduğu de görüntülenebilir. Bir DSL tanımlarken, her bir etki alanı sınıfı ve ilişki örnekleri kullanıcının ekranda görüntülenme şeklini tanımlar. Tipik bir DSL simgeleri veya dikdörtgenler oklarla bağlı koleksiyonu olarak görüntülenir.
+Kullanıcılarınız bir modeli diyagram olarak veya bir Windows formu olarak görüntüleyebilir. Modeller, depolandıkları bir XML olarak da görüntülenebilir. Bir DSL tanımladığınızda, her bir etki alanı sınıfının ve ilişkinin örneklerinin Kullanıcı ekranında nasıl göründüğünü tanımlarsınız. Tipik bir DSL, oklar ile bağlı bir simgeler veya dikdörtgenler koleksiyonu olarak görüntülenir.
 
-Aşağıdaki şekilde grafiksel bir DSL içinde küçük bir modeli gösterilmektedir:
+Aşağıdaki şekilde, bir diagrammatik DSL 'de küçük bir model gösterilmektedir:
 
-![Tudor ailesi ağaç modeli](../modeling/media/tudor_familytreemodel.png)
+![Tuçi aile ağacı modeli](../modeling/media/tudor_familytreemodel.png)
 
-## <a name="what-you-can-do-with-dsls"></a>DSL ile yapabilecekleriniz
+## <a name="what-you-can-do-with-dsls"></a>DSLs ile yapabilecekleriniz
 
-Program kodu veya diğer yapıları üretmek için DSL'nin tipik bir uygulamasıdır. DSL'nizi tanımladığınızda, tanımlayabileceğiniz *metin şablonlarını* DSL modeli okumak ve metin dosyaları oluşturur.
+Bir DSL 'nin tipik bir uygulaması, program kodu veya diğer yapıtlar oluşturmak için kullanılır. DSL 'yi tanımlarken, DSL modelini okuyan ve metin dosyaları oluşturabileceğiniz *metin şablonları* tanımlayabilirsiniz.
 
-Örneğin, bir Havalimanı planı alın ve bagaj, bazı plan açıklayan kullanıcı belgelerin yanı sıra işleme yazılımı parçası oluşturacak şablonları yazabilirsiniz.
+Örneğin, bir Havaalanı planı alan ve bagaj işleme için yazılımın bir parçasını oluşturan şablonlar yazabilir ve planı tanımlayan bazı Kullanıcı belgeleri de oluşturabilirsiniz.
 
-Bir DSL tanımlandığında, kendi bilgisayarlarına yükleyebilmek için diğer kullanıcılara dağıtabilirsiniz. Kullanıcılar, DSL'nin oluşturabilir ve Visual Studio'da modelleri düzenleyin.
+Bir DSL tanımladığınızda, onu kendi bilgisayarlarına yükleyebilen diğer kullanıcılara dağıtabilirsiniz. DSL kullanıcıları, Visual Studio 'da modeller oluşturabilir ve düzenleyebilir.
 
-Menü komutları da tanımlayabilirsiniz ve kullanıcılara yardımcı olan diğer araçlar DSL DSL doğru şekilde kullanılır ve yeni örnekleri kullanıcılara yardımcı olmak ve öğe şablonları oluşturma sağlamaya yardımcı olmak için doğrulama kısıtlamaları düzenleyin. Bir veya daha fazla DSL'ler araçlarını ve diğer Visual Studio uzantıları ile tümleşik bir paket kaydırabilirsiniz.
+Ayrıca, kullanıcıların DSL 'yi doğru şekilde kullanmasının yanı sıra kullanıcıların yeni örnekler oluşturmalarına yardımcı olan öğe şablonları ve DSL, doğrulama kısıtlamalarını düzenleyebilmesi için yardım eden menü komutlarını ve diğer araçları da tanımlayabilirsiniz. Bir veya daha fazla DSLs 'yi, araçları ve diğer Visual Studio uzantılarını tümleşik bir paket olarak sardırabilirsiniz.
 
-Genellikle, birden çok ürünlerin benzer bir kod yazmak bir geliştirme ekibi sahip bir etki alanına özgü dil oluşturulur. Örneğin, işleme sistemlerini bagaj uzmanlaşmış bir şirket bunlar bazı yüklemeler için kod oluşturmak bagaj izleme DSL tanımlayabilirsiniz. DSL avantajları, bunu anladım, müşterileri tarafından ondan oluşturulan kodu güvenilirdir ve müşterilerin gereksinimlerinizin değişmesi durumunda sistemin hızla güncelleştirilmesi ' dir.
+Genellikle, bir geliştirme ekibinin çeşitli ürünler için benzer kod yazması gerektiğinde, etki alanına özgü bir dil oluşturulur. Örneğin, Bagaj işleme sistemlerinde uzmanlaşmış bir şirket, her yükleme için kodun bir kısmını oluşturabileceği bir Bagaj iz DSL tanımlayabilir. DSL 'nin avantajları, müşterileri tarafından anlaşılabilmesini, bundan üretilen kodun güvenilir olmasını ve müşterilerin gereksinimlerinin değiştirilmesi durumunda sistemin hızla güncelleştirilemeyebilir.
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] kendi grafik tasarımcı ve kendi diyagram gösterimi sahip bir etki alanına özgü dil oluşturma ve ardından her proje için uygun kaynak kodu oluşturmak için dil kullanmanıza olanak tanır.
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)], kendi grafik tasarlamanızı ve kendi diyagram gösteriminizi içeren, etki alanına özgü bir dil oluşturmanızı ve ardından bu dili kullanarak her proje için uygun kaynak kodu oluşturmayı sağlar.
 
 ## <a name="domain-specific-development"></a>Etki alanına özgü geliştirme
 
-Etki alanına özgü geliştirme etki alanına özgü bir dili kullanarak dil oluşturmak ve uygulama geliştiricilerine dağıtma modellenebilir uygulamalarınızı bölümlerini tanımlayan işlemidir. Geliştiriciler, uygulamalarına özgü modelleri, kaynak kodu oluşturmak için modelleri kullanır ve ardından uygulama geliştirmek için kaynak kodunu kullanma için etki alanına özgü dil kullanın.
+Etki alanına özgü geliştirme, etki alanına özgü bir dili kullanarak modellenebilir uygulamalarınızın parçalarını belirleme ve sonra dili oluşturup uygulama geliştiricilerine dağıtma işlemidir. Geliştiriciler, uygulamalarına özel modeller oluşturmak için etki alanına özgü dili kullanır, kaynak kodu oluşturmak için modelleri kullanır ve ardından uygulama geliştirmek için kaynak kodunu kullanır.
 
 ## <a name="aspects-of-graphical-domain-specific-development"></a>Grafik etki alanına özgü geliştirme yönleri
 
-Bir grafik etki alanına özgü dil aşağıdaki özellikleri içermelidir:
+Grafik etki alanına özgü dil aşağıdaki özellikleri içermelidir:
 
-- Gösterim
+- İmle
 
 - Etki alanı modeli
 
@@ -72,54 +72,54 @@ Bir grafik etki alanına özgü dil aşağıdaki özellikleri içermelidir:
 
 - Visual Studio ile Tümleştirme
 
-### <a name="notation"></a>Gösterim
+### <a name="notation"></a>İmle
 
-Bir etki alanına özgü dil makul küçük bir kolayca tanımlanabilir ve etki alanına özgü yapıları temsil etmek için genişletilmiş öğeler olması gerekir. Bir gösterimi öğelerini temsil eden, şekiller ve bağlayıcıları, bir grafik diyagram yüzeyinde öğeleri arasındaki ilişkileri gösteren oluşur. İçinde [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], şekiller genişletilmiş ve, etki alanına özgü dil öğelerini temsil eden için iyileştirilmiştir.
+Alana özgü bir dilin, etki alanına özgü yapıları temsil etmek üzere kolayca tanımlanabilen ve genişletilebilen, makul bir öğe kümesine sahip olması gerekir. Bir gösterim, bir grafik diyagram yüzeyinde öğeler arasındaki ilişkileri temsil eden öğeleri ve bağlayıcıları temsil eden şekillerden oluşur. @No__t_0, şekiller, etki alanına özgü dilin öğelerini göstermek için genişletilebilir ve iyileştirilmiş olabilir.
 
-### <a name="domain-model"></a>Domain Model
+### <a name="domain-model"></a>Etki alanı modeli
 
-Bir etki alanına özgü dil öğelerini ve bunları tutarlı dilbilgisi arasındaki ilişkileri kümesini birleştirmeniz gerekir. Öğeleri ve ilişkileri birleşimlerini geçerli olup olmadığını tanımlamalısınız. Örneğin, programlama dilleri, genellikle ikinci sınıftan türetilmiş bir sınıf ve saniye sınıfının ilk sınıfından türetilmiş döngüsel devralmaya engelleyin. Kısıtlamaları, iş mantığı ifade etmek için de kullanılabilir; örneğin, bir kişi, kendisine bağımlı bir olamaz. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] tür en etki alanına özgü diller gerektiren kısıtlamalar express için kısıtlamalar kullanır.
+Etki alanına özgü bir dilin öğe kümesini ve bunlarla arasındaki ilişkileri tutarlı bir dilbilgisinde birleştirmelidir. Ayrıca, öğe ve ilişkilerin birleşimlerinin geçerli olup olmadığını da tanımlamalıdır. Örneğin, programlama dilleri genellikle, bir sınıfın ikinci bir sınıftan türetildiği ve ikinci sınıf birinci sınıftan türetildiği dairesel devralmayı önler. Kısıtlamalar, iş mantığını ifade etmek için de kullanılabilir. Örneğin, bir kişi hımself öğesinin bağımlı olamaz. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], etki alanına özgü dillerin çoğu için gereken kısıtlama türlerini ifade etmek için kısıtlamaları kullanır.
 
 ### <a name="artifact-generation"></a>Yapıt oluşturma
 
-Bir etki alanına özgü dil ana amacı, bir yapı, örneğin, kaynak kodu, bir XML dosyasına veya diğer bir kullanışlı verileri oluşturmaktır. Genellikle, modeldeki bir değişiklik yapının bir değişiklik anlamına gelir. Kullanabileceğiniz [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] yapıtları oluşturmaya ve model değiştirdiğinizde bunları yeniden oluşturmak.
+Etki alanına özgü dilin ana amaçlarından biri, örneğin, kaynak kodu, XML dosyası veya başka bir kullanılabilir veri gibi bir yapıt oluşturmak içindir. Genellikle modeldeki bir değişiklik yapıtın bir değişikliği anlamına gelir. Yapıtları oluşturmak ve modeli değiştirirken yeniden oluşturmak için [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] kullanabilirsiniz.
 
 ### <a name="serialization"></a>Serileştirme
 
-Bir etki alanına özgü dil düzenlendi, kaydedildi, kapalı, yeniden ve bazı biçiminde kalıcı gerekir. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] tanımlama ve alana özgü dilinizi nasıl serileştirilecek veya kalıcı özelleştirme olanak sağlayan bir XML biçimini kullanır.
+Düzenlenebilen, kaydedilebilen, kapatılan ve yeniden yüklenmiş bir biçimde, etki alanına özgü bir dilin kalıcı olması gerekir. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], etki alanına özgü dilin serileştirilme veya kalıcı hale getirilme şeklini tanımlamanıza ve özelleştirmenize imkan tanıyan bir XML biçimi kullanır.
 
 ### <a name="integration-with-visual-studio"></a>Visual Studio ile Tümleştirme
 
-Çünkü [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] barındırıldığı Visual Studio'da birçok Visual Studio windows ve denetimleri genişletir. Ayrıca menü komutları, araç kutusu öğeleri ve diğer öğeleri kullanıcı arabiriminin davranışını özelleştirmenizi sağlar.
+@No__t_0 Visual Studio 'da barındırıldığından, birçok Visual Studio pencerelerini ve denetimini genişletir. Ayrıca, menü komutlarının, araç kutusu öğelerinin ve Kullanıcı arabiriminin diğer öğelerinin davranışını özelleştirmenizi sağlar.
 
-Bu gibi durumlarda, bir Model veri yolu bağdaştırıcısı Ayrıca, etki alanına özgü dil için oluşturabilirsiniz. Bu bağdaştırıcı başvuru bir model ve erişmek ve DSL örneği güncelleştirme kod yazma sağlar ve bir modeli öğeleri sağlar. Güçlü Model veri yolu mekanizması kullanarak, birden çok modellerle çalışmanıza Visual Studio uzantıları yazabilirsiniz. Modellerle çalışmanıza tek başına uygulamalar da yazabilirsiniz. Daha fazla bilgi için [Visual Studio Modelbus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
+Ayrıca, etki alanına özgü diliniz için bir model veri yolu bağdaştırıcısı da oluşturabilirsiniz. Bu bağdaştırıcı, bir model içindeki model ve öğelere başvurmanıza ve DSL örneğine erişebilen ve güncelleştiren bir kod yazmanıza olanak tanır. Güçlü model veri yolu mekanizmasını kullanarak, birden çok modelle çalışan Visual Studio uzantıları yazabilirsiniz. Ayrıca, modellerle çalışan tek başına uygulamalar yazabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 
 ## <a name="benefits-of-domain-specific-development"></a>Etki alanına özgü geliştirme avantajları
 
-Bir etki alanına özgü dil aşağıdaki faydaları sağlayabilir:
+Etki alanına özgü bir dil aşağıdaki avantajları sağlayabilir:
 
-- Sorun alanı tam olarak sığması yapıları içerir.
+- Sorun alanına tam olarak uyan yapıları içerir.
 
-     Genel amaçlı dillerden farklı olarak, bir etki alanına özgü dil öğeleri ve doğrudan sorun alanı mantığı temsil eden ilişkiler oluşur. Örneğin, bir sigorta ilke uygulama ilkeleri ve talep öğeler içermesi gerekir. Bir etki alanına özgü dil, uygulama ve Bul ve hataları mantığı tasarlamak kolaylaştırır.
+     Genel amaçlı dillerden farklı olarak, etki alanına özgü bir dil, sorun alanının mantığını doğrudan temsil eden öğe ve ilişkilerden oluşur. Örneğin, bir sigorta ilkesi uygulaması, ilkeler ve talepler için öğeleri içermelidir. Etki alanına özgü bir dil, uygulamayı tasarlamayı ve mantığın hatalarını bulmayı ve düzeltmeyi kolaylaştırır.
 
-- Geliştirici olmayan ve genel tasarımı anlama etki alanı bilmiyorsanız kişilere izin verir.
+- Geliştiricilerin ve etki alanını kullanmayan kişilerin genel tasarımı anlayabilmesini sağlar.
 
-     Bir grafik etki alanına özgü dili kullanarak, etki alanı görsel bir temsilini Geliştirici olmayan uygulama tasarımını kolayca anlayabilmeniz oluşturabilirsiniz.
+     Grafik etki alanına özgü bir dil kullanarak, geliştiricilerin uygulamanın tasarımını kolayca anlayabilmesi için etki alanının görsel bir gösterimini oluşturabilirsiniz.
 
-- Son uygulama prototipini oluşturmayı kolaylaştırır.
+- Son uygulamanın prototip oluşturmayı kolaylaştırır.
 
-     Geliştiriciler, istemcilere göstermek bir prototip uygulaması oluşturmak için model oluşturan kodu kullanabilirsiniz.
+     Geliştiriciler, istemcilerinin istemcilere gösterebilecekleri bir prototip uygulaması oluşturmak için kendi modelinin oluşturduğu kodu kullanabilir.
 
-## <a name="the-process-of-domain-specific-development"></a>Etki alanına özgü geliştirme işlemi
+## <a name="the-process-of-domain-specific-development"></a>Etki alanına özgü geliştirme Işlemi
 
-Etki alanına özgü diller kullanan çoğu yazılım geliştirme takımları, oluşturmak ve modellerini kullanmak için aşağıdaki adımları izleyin:
+Etki alanına özgü diller kullanan çoğu yazılım geliştirme ekibi, modellerini oluşturmak ve kullanmak için aşağıdaki adımları izler:
 
-- Takım, etki alanı bölümlerinden asla değiştirme değişkeni bölümlerini birbirinden ayırır.
+- Takım, etki alanının değişken kısımlarını hiçbir şekilde değişmeme bölümlerinden ayırır.
 
-- Geliştiriciler, sabit bölümleri için kod yazma ve değişken parçaları için uzantı noktaları bırakın.
+- Geliştiriciler sabit parçalar için kod yazar ve değişken parçaları için uzantı noktaları bırakır.
 
-- Yazılım geliştiricisi veya mimari tasarım desenlerini sabit bölümlerini etki alanı ve değişken parçaları için uzantı noktaları içeren bir etki alanına özgü dil oluşturur.
+- Lider yazılım geliştiricisi veya mimarı, etki alanının sabit bölümlerinin tasarım düzenlerini ve değişken bölümlerinin uzantı noktalarını içeren, etki alanına özgü bir dil oluşturur.
 
-- Yazılım geliştiricisi veya Mimarı ekip oluşturan çeşitli uygulamaların geliştiricileri için etki alanına özgü dil dağıtır.
+- Lider yazılım geliştiricisi veya mimarı, etki alanına özgü dili ekibin ürettiği çeşitli uygulamaların geliştiricilerine dağıtır.
 
-- Her geliştirici, belirli bir uygulamaya uygulanan bir model oluşturur.
+- Her geliştirici, belirli bir uygulama için geçerli olan bir model oluşturur.

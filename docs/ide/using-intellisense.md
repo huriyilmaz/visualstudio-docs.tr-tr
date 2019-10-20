@@ -10,27 +10,27 @@ helpviewer_keywords:
 - Complete word
 - List members
 - IntelliSense [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32e62131b2a66052ad4712b434c7b6f2b89065d0
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.openlocfilehash: 011542bc45680f6fb5b7bd2b83283605922189ee
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493295"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647352"
 ---
 # <a name="intellisense-in-visual-studio"></a>Visual Studio 'da IntelliSense
 
-IntelliSense, çeşitli özellikler içeren bir kod tamamlama yardımıdır: Liste üyeleri, parametre bilgileri, hızlı bilgi ve tüm kelime. Bu özellikler, kullanmakta olduğunuz kod hakkında daha fazla bilgi edinmenize, yazmakta olduğunuz parametreleri izlemenize ve yalnızca birkaç tuş vuruşu ile özelliklere ve yöntemlere çağrılar eklemenize yardımcı olur.
+IntelliSense, bir dizi özelliği içeren bir kod tamamlama yardımıdır: liste üyeleri, parametre bilgileri, hızlı bilgi ve tam sözcük. Bu özellikler, kullanmakta olduğunuz kod hakkında daha fazla bilgi edinmenize, yazmakta olduğunuz parametreleri izlemenize ve yalnızca birkaç tuş vuruşu ile özelliklere ve yöntemlere çağrılar eklemenize yardımcı olur.
 
 IntelliSense'in birçok yönü dile özgüdür. Farklı diller için IntelliSense hakkında daha fazla bilgi için [Ayrıca bkz](#see-also) . bölümünde listelenen konulara bakın.
 
 ## <a name="list-members"></a>Üyeleri Listeleme
 
-Bir tür (veya ad alanı) için geçerli üyelerin listesi, bir tetikleyici karakteri (örneğin, yönetilen kodda veya`.` `::` içinde C++bir nokta () yazdığınızda görüntülenir. Karakter yazmaya devam ederseniz, liste yalnızca bu karakterlerle başlayan üyeleri içerecek şekilde filtrelenir veya ad içindeki *herhangi bir* sözcüğün başlangıcı bu karakterlerle başlar. IntelliSense Ayrıca "Camel Case" eşleştirmesini da gerçekleştirir, bu nedenle eşleşmeleri görmek için üye adında her bir Camel sözcüğün ilk harfini yazmanız yeterlidir.
+Bir tür (veya ad alanı) için geçerli üyelerin listesi, bir tetikleyici karakteri (örneğin, Yönetilen koddaki bir nokta (`.`) veya içindeki C++`::`) yazdıktan sonra görüntülenir. Karakter yazmaya devam ederseniz, liste yalnızca bu karakterlerle başlayan üyeleri içerecek şekilde filtrelenir veya ad içindeki *herhangi bir* sözcüğün başlangıcı bu karakterlerle başlar. IntelliSense Ayrıca "Camel Case" eşleştirmesini da gerçekleştirir, bu nedenle eşleşmeleri görmek için üye adında her bir Camel sözcüğün ilk harfini yazmanız yeterlidir.
 
 Bir öğeyi seçtikten sonra **sekme** tuşuna basarak veya bir boşluk yazarak kodunuzu kodunuza ekleyebilirsiniz. Öğeyi seçip bir nokta yazarsanız, bu noktanın arkasında başka üye listesini getiren bir öğe görüntülenir. Bir öğe seçtiğinizde, öğeyi eklemeden önce öğeye ilişkin Hızlı Bilgi alırsınız.
 
@@ -38,11 +38,11 @@ Bir öğeyi seçtikten sonra **sekme** tuşuna basarak veya bir boşluk yazarak 
 
 ![Visual Studio üye listesi](../ide/media/vs2015_intellisense.png)
 
-**CTRL** > **J yazarak**,**IntelliSense**   **Liste üyelerini**Düzenle ' yi seçerek veya Liste üyelerini seçerek liste üyeleri özelliğini el ile çağırabilirsiniz. > + düğmesine basın. Boş bir satırda veya tanınabilir bir kapsamın dışında çağrıldığında, bu liste genel ad alanında simgeleri görüntüler.
+**Ctrl** +**J**yazarak, üyeleri Listele ** >   > ** **Düzenle** **' yi seçerek**veya düzenleyicide **üyeleri Listele** düğmesini seçerek **liste üyeleri** özelliğini el ile çağırabilirsiniz. Toolbar. Boş bir satırda veya tanınabilir bir kapsamın dışında çağrıldığında, bu liste genel ad alanında simgeleri görüntüler.
 
-Liste üyelerini varsayılan olarak devre dışı bırakmak için (özellikle çağrılmadıkça gözükmemesi için), **Araçlar** > **Seçenekler** > **tüm diller** ' e gidin ve **üyeleri otomatik Listele**seçimini kaldırın. Yalnızca belirli bir dil için Liste üyelerini devre dışı bırakmak istiyorsanız bu dilin **genel** ayarlarına gidin.
+Liste üyelerini varsayılan olarak devre dışı bırakmak için (özellikle çağrılmadıkça görünmez),**tüm diller**  >  **Araçlar**  > **Seçenekler** ' e gidin ve **otomatik liste üyeleri**' ni kaldırın. Yalnızca belirli bir dil için Liste üyelerini devre dışı bırakmak istiyorsanız bu dilin **genel** ayarlarına gidin.
 
-Sadece yazdığınız metnin kodun içine eklendiği öneri moduna da geçebilirsiniz. Örneğin, listede olmayan bir tanımlayıcı girip **sekme**tuşuna basarsanız, tamamlama modunda giriş, yazılan tanımlayıcının yerini alır. Tamamlama modu ve öneri modu arasında geçiş yapmak için **CTRL**+**alt**+**boşluk**tuşlarına basın veya**IntelliSense** >  **Düzenle** > **tamamlama modunu seçin** .
+Sadece yazdığınız metnin kodun içine eklendiği öneri moduna da geçebilirsiniz. Örneğin, listede olmayan bir tanımlayıcı girip **sekme**tuşuna basarsanız, tamamlama modunda giriş, yazılan tanımlayıcının yerini alır. Tamamlama modu ve öneri modu arasında geçiş yapmak için **Ctrl** +**alt** +**Space**tuşlarına basın veya  > **IntelliSense** ' i seçin  > **tamamlama modunu** **değiştirin.**
 
 ## <a name="parameter-info"></a>Parametre Bilgisi
 
@@ -54,7 +54,7 @@ Kalın yazı tipli parametre, işlevi yazarken gerekli olan bir sonraki parametr
 
 XML Belgeleri yorumlarıyla işlevlere ve parametrelere ek açıklamalar koyduğunuzda, yorumlar Parametre Bilgisi olarak görüntülenir. Daha fazla bilgi için bkz. [XML kodu açıklamalarını sağlama](reference/generate-xml-documentation-comments.md).
 
-+**IntelliSense** **parametre bilgilerini** **Düzenle** > ' yi seçerek, **CTRL**vardiyasıalanı+' na basarak veya >  Düzenleyici araç çubuğunda **parametre bilgisi** düğmesini seçme.
+Parametre bilgilerini düzenle  > **ıntellisense**  > **parametre bilgilerini** **Düzenle** ' yi seçerek, **CTRL** +**SHIFT** +**alanı**' na basarak veya **parametre bilgilerini** seçerek el ile çağırabilirsiniz. düğmesine basın.
 
 ## <a name="quick-info"></a>Hızlı Bilgi
 
@@ -66,19 +66,19 @@ Hızlı bilgi kodunuzdaki herhangi bir tanımlayıcı için bütün bildirimi g�
 
 ![C&#35; kod dosyasında parametre bilgisi](../ide/media/vs2015_paraminfo.png)
 
-Hızlı bilgiyi, **CTRL** >  > tuşunabasarakveyadüzenleyicidehızlıbilgidüğmesiniseçerekIntelliSensehızlıbilgilerinidüzenle'yiseçerekelile+çağırabilirsiniz  .  Toolbar.
+**Ctrl** +**i**tuşlarına basarak veya Düzenleyici araç çubuğunda **hızlı bilgi** düğmesini seçerek hızlı bilgileri **Düzenle**  > **IntelliSense**  > **hızlı**bilgi 'yi seçerek el ile çağırabilirsiniz.
 
 Bir işlev aşırı yüklenmişse, IntelliSense, tüm aşırı yük biçimleri için bilgileri görüntülemeyebilir.
 
-C++ **Araçlar** **Seçenekler metin**DüzenleyicisiC/ > Gelişmiş ' e giderek ve otomatik ayarı yaparak kod için hızlı bilgi 'yi kapatabilirsiniz.**C++**  >  >  >   **Hızlı bilgi** `false`.
+**@No__t_2** **Araçlar** için C++ hızlı bilgi ' yi,  > **metin Düzenleyicisi**  > **C/C++**   > **Gelişmiş**' e giderek ve **otomatik hızlı bilgi** 'yi 2 ayarlayarak devre dışı bırakabilirsiniz.
 
 ## <a name="complete-word"></a>Tam Sözcük
 
-Bütün sözcük, dönemi belirsizliğini ortadan kaldırmak için yeterli sayıda karakter girdikten sonra değişken, komut veya işlev adının kalanını tamamlar. Tüm sözcüğü,**IntelliSense** > +  > 'in**tamamını Düzenle Tamam**' ı seçerek, **CTRL**tuşuna basarak veya Düzenleyici araç çubuğu.
+Bütün sözcük, dönemi belirsizliğini ortadan kaldırmak için yeterli sayıda karakter girdikten sonra değişken, komut veya işlev adının kalanını tamamlar. Tamam  >   > **IntelliSense** ' i seçerek, **CTRL** + alanı **' na**basarak veya Düzenleyici araç çubuğunda **sözcük Tamam** **düğmesini seçerek** tüm sözcüğü çağırabilirsiniz.
 
 ## <a name="intellisense-options"></a>IntelliSense seçenekleri
 
-IntelliSense seçenekleri varsayılan olarak açıktır. Devre dışı bırakmak için **Araçlar** > **Seçenekler** > **metin düzenleyici** ' yi seçin ve liste üyeleri özelliğini istemiyorsanız, **parametre bilgileri** ' ni veya **üyeleri otomatik Listele** ' yi seçin.
+IntelliSense seçenekleri varsayılan olarak açıktır. Devre dışı bırakmak için **araçlar**  > **Seçenekler**  > **metin düzenleyici** ' yi seçin ve liste üyeleri özelliğini istemiyorsanız, **parametre bilgileri** ' ni veya **otomatik liste üyeleri** ' ni kaldırın.
 
 ## <a name="intellisense-icons"></a>IntelliSense simgeleri
 IntelliSense 'deki simgeler simge değiştiricilerine ek anlam verebilir. Bunlar, sırasıyla korumalı, dahili veya özel bir şekilde ileten nesnenin simgesinin üzerine, yıldız, kupa ve kilitler katmanlıdır.

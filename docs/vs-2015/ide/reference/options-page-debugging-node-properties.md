@@ -6,85 +6,79 @@ ms.technology: vs-ide-general
 ms.topic: reference
 ms.assetid: 564cc8b2-0084-420e-b560-200cc5621a7e
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bd02ae0c3cd9f05e817e335b942a76c849655e44
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 10537fb64e6ae0ebbe185024b76442704437e273
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674725"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668836"
 ---
 # <a name="options-page-debugging-node-properties"></a>Seçenekler Sayfası, Hata Ayıklama Düğümü Özellikleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Aşağıdaki tablolarda sayfaları (veya özellik koleksiyonları) açıklanmaktadır ile ilişkili **hata ayıklama** kategori `DTE.Properties("Debugging", <Property Page>)` , **seçenekleri** iletişim kutusu.  
-  
-## <a name="general"></a>Genel  
- `DTE.Properties("Debugging", "General")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|PromptOnBreakpointDelete|Get/Set (Boole)|Hata ayıklayıcı bir projedeki tüm kesme noktalarını silmeden önce izin ister olup olmadığını belirler.|  
-|BreakAllProcesses|Get/Set (Boole)|Tek bir işlem keser her durumda hata ayıklayıcı tüm işlemler keser olup olmadığını belirler.|  
-|BreakAtBoundaries|Get/Set (Boole)|Hata ayıklayıcı bir özel durum uygulama etki alanları arasında bir kenarlık geçtiğinde, yürütmeyi keser veya arasında yönetilen ve yerel kod belirler.|  
-|EnableAddressLevelDebugging|Get/Set (Boole)|Adres seviyesinde hata ayıklama özellikleri etkin olup olmadığını belirler.|  
-|ShowDisassemblyIfNoSource|Get/Set (Boole)|Hata ayıklayıcı kaynak kodu mevcut olmadığında ayrıştırılmış kodu görüntülenip görüntülenmeyeceğini belirler.|  
-|EnableBreakpointFilters|Get/Set (Boole)|Kesme noktası filtrelemesinin etkinleştirilip etkinleştirilmeyeceğini belirler.|  
-|EnableExceptionAssistant|Get/Set (Boole)|Özel durum Yardımcısı'nı yönetilen özel durumlar için kullanılıp kullanılmayacağını belirler.|  
-|UnwindCallstack|Get/Set (Boole)|Hata ayıklayıcı işlenmeyen bir özel durum için çağrı yığınını geriye doğru izler olup olmadığını belirler.|  
-|EnableJustMyCode|Get/Set (Boole)|C# ve Visual Basic kodu için yalnızca kendi kodum etkin olup olmadığını belirler.|  
-|ShowAllMembers|Get/Set (Boole)|Kullanıcı olmayan nesneler için hata ayıklayıcı değişken pencerelerinde tüm nesne üyeleri görüntülenip görüntülenmeyeceğini belirler. Yalnızca kendi kodum etkin değilse bu seçenek bir etkisi yoktur.|  
-|WarnIfNoUserCode|Get/Set (Boole)|Kullanıcı, kullanıcı kodu olmayan bir işleme iliştirmek çalıştığında hata ayıklayıcı bir uyarı verir olup olmadığını belirler. Yalnızca kendi kodum etkin değilse bu seçenek bir etkisi yoktur.|  
-|EnablePropertyEvaluation|Get/Set (Boole)|Hata ayıklayıcı özellikleri otomatik olarak değerlendirir ve yönetilen kodda örtük işlev çağrısı olup olmadığını belirler.|  
-|CallStringConversion|Get/Set (Boole)|Hata ayıklayıcı örtük olarak bir dize dönüştürme işlevini değişken pencerelerindeki nesnelerde çağırır olup olmadığını belirler. Bu seçenek, yalnızca C# ve JScript kod için geçerlidir.|  
-|EnableSourceServer|Get/Set (Boole)|Hata ayıklayıcı bir kaynak sunucudan erişim kodu için olup olmadığını belirler.|  
-|PrintSourceServerDiagnostics|Get/Set (Boole)|Kaynak sunucu ile ilgili tanılama iletilerini çıkış penceresine gösterip göstermediğini belirler. Kaynak sunucu erişimini etkinleştirilmediği sürece bu seçeneğin bir etkisi yoktur.|  
-|HighlightEntireLine|Get/Set (Boole)|Hata ayıklayıcı kesme noktaları ve geçerli deyim için satırın tamamını vurgular olup olmadığını belirler.|  
-|RequireSourceToMatch|Get/Set (Boole)|Hata ayıklayıcı kaynak dosyalarının hata ayıklama için dosyalar açıldığında özgün sürümle tam olarak eşleşmesi gerekli olup olmadığını belirler.|  
-|RedirectOutputToImmediate|Get/Set (Boole)|Çıkış penceresi çıkışını yürütme penceresine yeniden yönlendirilen olup olmadığını belirler.|  
-|ShowRawVariableStructure|Get/Set (Boole)|Değişken pencerelerindeki nesnelerde ham biçimde gösterilip gösterilmeyeceğini belirler.|  
-|SuppressJitOptimization|Get/Set (Boole)|Yönetilen kod için hata ayıklayıcı tarafından just-ın-time iyileştirme atlanıp atlanmadığını belirler.|  
-|WarnIfNoSymbols|Get/Set (Boole)|Hata ayıklayıcı işlemi başlatıldığında hiçbir hata ayıklama simgeleri kullanılabilir değilse bir uyarı görüntüler olup olmadığını belirler.|  
-|WarnIfScriptDisabled|Get/Set (Boole)|Hata ayıklayıcı işlemi başlatıldığında betik hata ayıklamasını etkin değilse bir uyarı görüntüler olup olmadığını belirler.|  
-|ShowMarkersForAllThreads|Get/Set (Boole)|Hata ayıklayıcı iş parçacığı işaretçileri görüntülenip görüntülenmeyeceğini belirler.|  
-|StepOverPropertiesAndOperators|Get/Set (Boole)|Yalnızca yönetilen kod içindeki özellikler ve işleçlerin üzerinden adımla belirtir.|  
-  
-## <a name="edit-and-continue"></a>Düzenle ve Devam Et  
- `DTE.Properties("Debugging", "EditAndContinue")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|EnableEditAndContinue|Get/Set (Boole)|Düzenle ve devam et etkin olup olmadığını belirler. Bu seçenek, Düzenle ve devam et destekleyen tüm diller için geçerlidir.|  
-|InvokedByCommands|Get/Set (Boole)|Düzenle ve devam et otomatik olarak uygulanıp uygulanmayacağını kod değişiklikleri kullanıcı gibi hata ayıklama komutu seçtiğinde belirler **adım** veya **devam**. Bu seçenek, yalnızca yerel kod için geçerlidir.|  
-|InvokedByCommandsAskFirst|Get/Set (Boole)|Düzenle ve devam et kullanıcıya kullanıcı gibi hata ayıklama komutu seçtiğinde, kod değişiklikleri uygulamak izni uyarıp uyarmayacağını belirler **adım** veya **devam**. Bu seçenek, yalnızca yerel kod için geçerlidir.|  
-|WarnAboutStaleCode|Get/Set (Boole)|Düzenle ve devam et güncel olmayan veya eski, kod yürütülmesine neden olur, hata ayıklayıcı bir uyarı iletisi sorunları olup olmadığını belirler. Bu seçenek, yalnızca yerel kod için geçerlidir.|  
-|RelinkChangesOnStop|Get/Set (kısa)|Visual Studio uygulamanın yürütülmesini durdurur, Düzenle ve devam et tarafından uygulanan kod değişiklikleri i olup olmadığını belirler. Bu seçenek, yalnızca yerel kod için geçerlidir.|  
-|AllowPrecompiling|Get/Set (kısa)|Düzenle ve devam et izin verilip verilmediğini arka planda önceden derlenmiş üst bilgiler yükleneceğini belirler. Bu seçenek, yalnızca yerel kod için geçerlidir.|  
-  
-## <a name="just-in-time"></a>Tam Zamanında  
- `DTE.Properties("Debugging", "JustInTime")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|JitManaged|Get/Set (Boole)|Yönetilen kod için tam zamanında hata ayıklama etkin olup olmadığını belirler.|  
-|JitNative|Get/Set (Boole)|Yerel kod için tam zamanında hata ayıklama etkin olup olmadığını belirler.|  
-|JitScript|Get/Set (Boole)|Betik kodu için tam zamanında hata ayıklama etkin olup olmadığını belirler.|  
-  
-## <a name="native"></a>Yerel  
- `DTE.Properties("Debugging", "Native")`  
-  
-|Özellik Öğesi Adı|Değer|Açıklama|  
-|------------------------|-----------|-----------------|  
-|LoadDllExports|Get/Set (Boole)|Hata ayıklayıcı DLL dışa aktarma tablolarını yükler olup olmadığını belirler.|  
-|EnableRPC|Get/Set (Boole)|Hata ayıklayıcı COM uzak yordam çağrılarını adım olup olmadığını belirler.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Seçenek ayarlarını denetleme](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)   
- [Seçenekler sayfasında özellik öğelerinin adlarını belirleme](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)   
- [Seçenekler sayfası, yazı tipleri ve renkler düğümü özellikleri](../../ide/reference/options-page-fonts-and-colors-node-properties.md)   
- [Seçenekler sayfası, metin düzenleyici düğümü özellikleri](../../ide/reference/options-page-text-editor-node-properties.md)   
- [Genel, hata ayıklama, Seçenekler iletişim kutusu](../../debugger/general-debugging-options-dialog-box.md)   
- [Düzenle ve devam et, hata ayıklama, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)   
- [Tam Zamanında, Hata Ayıklama, Seçenekler İletişim Kutusu](../../debugger/just-in-time-debugging-options-dialog-box.md)
+Aşağıdaki tablolarda, **Seçenekler** iletişim kutusunun `DTE.Properties("Debugging", <Property Page>)` **hata ayıklama** kategorisiyle ilişkili sayfalar (veya özellikler koleksiyonlar) açıklanır.
+
+## <a name="general"></a>Genel
+ `DTE.Properties("Debugging", "General")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|PromptOnBreakpointDelete|Get/Set (Boole)|Hata ayıklayıcının bir projedeki tüm kesme noktalarını silmeden önce izin isteyip istemeyeceğini belirler.|
+|Breakkallprocesses|Get/Set (Boole)|Tek bir işlem kesildiğinde hata ayıklayıcının tüm işlemleri kesip bölmeyeceğini belirler.|
+|Ayırıcı sınırları|Get/Set (Boole)|Bir özel durum AppDomain veya yönetilen ve yerel kod arasında bir kenarlığı aştığında hata ayıklayıcının yürütmeyi kesmesinin kesilmeyeceğini belirler.|
+|EnableAddressLevelDebugging|Get/Set (Boole)|Adres düzeyi hata ayıklama özelliklerinin etkinleştirilip etkinleştirilmediğini belirler.|
+|ShowDisassemblyIfNoSource|Get/Set (Boole)|Kaynak kodu kullanılabilir olmadığında hata ayıklayıcının ayrıştırılmış kodu görüntüleyip görüntülemediğini belirler.|
+|EnableBreakpointFilters|Get/Set (Boole)|Kesme noktası filtrelemesinin etkinleştirilip etkinleştirilmeyeceğini belirler.|
+|EnableExceptionAssistant|Get/Set (Boole)|Özel durum Yardımcısı 'Nın yönetilen özel durumlar için kullanılıp kullanılmayacağını belirler.|
+|Unwınbir Callstack|Get/Set (Boole)|Hata ayıklayıcının işlenmeyen bir özel durum için çağrı yığınını geri kullanıp kullanmadığını belirler.|
+|Enableadatmycode|Get/Set (Boole)|Visual Basic kodu için Yalnızca kendi kodum etkinleştirilip etkinleştirilmediğini C# belirler.|
+|ShowAllMembers|Get/Set (Boole)|Kullanıcı olmayan nesneler için, hata ayıklayıcının tüm nesne üyelerini değişkenler penceresinde görüntüleyip görüntülemediğini belirler. Yalnızca kendi kodum etkinleştirilmediği takdirde bu seçeneğin hiçbir etkisi yoktur.|
+|WarnIfNoUserCode|Get/Set (Boole)|Kullanıcı, Kullanıcı kodu olmayan bir işleme iliştirmeye çalıştığında hata ayıklayıcının bir uyarı yayıp yaymayacağını belirler. Yalnızca kendi kodum etkinleştirilmediği takdirde bu seçeneğin hiçbir etkisi yoktur.|
+|Enablepropertyedeğerleme|Get/Set (Boole)|Hata ayıklayıcının Yönetilen koddaki özellikleri ve örtük işlev çağrılarını otomatik olarak değerlendirme yapılıp yapılmayacağını belirler.|
+|CallStringConversion|Get/Set (Boole)|Hata ayıklayıcının, değişkenler penceresinde nesnelerde bir dize dönüştürme işlevini örtülü olarak çağırmayacağını belirler. Bu seçenek yalnızca ve C# JScript kodu için geçerlidir.|
+|EnableSourceServer|Get/Set (Boole)|Hata ayıklayıcının bir kaynak sunucudan koda erişip erişemeyeceğini belirler.|
+|PrintSourceServerDiagnostics|Get/Set (Boole)|Çıkış penceresinin, kaynak sunucuyla ilgili tanılama iletilerini gösterilip gösterilmeyeceğini belirler. Kaynak sunucu erişimi etkinleştirilmediği takdirde bu seçeneğin hiçbir etkisi yoktur.|
+|HighlightEntireLine|Get/Set (Boole)|Hata ayıklayıcının kesme noktaları ve geçerli ifade için bir satırın tamamını vurgulamayabileceğini belirler.|
+|RequireSourceToMatch|Get/Set (Boole)|Hata ayıklama için dosyaları açtığınızda hata ayıklayıcının kaynak dosyaların özgün sürümle tam olarak eşleşip engellenmeyeceğini gerektirip gerektirmediğini belirler.|
+|RedirectOutputToImmediate|Get/Set (Boole)|Çıkış penceresi çıktısının hemen pencereye yönlendirilip yönlendirilmeyeceğini belirler.|
+|Showrawvariableyapısı|Get/Set (Boole)|Değişkenler pencerelerinin içindeki nesnelerin ham biçimde gösterilip gösterilmeyeceğini belirler.|
+|Suppressjitoptılama|Get/Set (Boole)|Yönetilen kod için, hata ayıklayıcı tarafından tam zamanında iyileştirme 'nin bastırılmadığını belirler.|
+|WarnIfNoSymbols|Get/Set (Boole)|İşlem başlatıldığında hata ayıklama sembolleri yoksa hata ayıklayıcının bir uyarı görüntüleyip görüntülemediğini belirler.|
+|WarnIfScriptDisabled|Get/Set (Boole)|Bir işlem başlatıldığında betik hata ayıklaması etkinleştirilmemişse hata ayıklayıcının bir uyarı görüntüleyip görüntülemediğini belirler.|
+|ShowMarkersForAllThreads|Get/Set (Boole)|Hata ayıklayıcının iş parçacığı işaretçilerini görüntüleyip görüntülemediğini belirler.|
+|Stepoverpropertiesaniators|Get/Set (Boole)|Yalnızca yönetilen koddaki Özellikler ve işleçler üzerinde adımın yapılıp yapılmayacağını belirtir.|
+
+## <a name="edit-and-continue"></a>Düzenle ve Devam Et
+ `DTE.Properties("Debugging", "EditAndContinue")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|EnableEditAndContinue|Get/Set (Boole)|Düzenle ve devam et özelliğinin etkinleştirilip etkinleştirilmediğini belirler. Bu seçenek, Düzenle ve devam et 'i destekleyen tüm diller için geçerlidir.|
+|Inkedbycommands|Get/Set (Boole)|Kullanıcı **Step** veya **Continue**gibi bir hata ayıklama komutu seçtiğinde düzenleme ve devam etmeyi otomatik olarak kod değişikliği uygulanıp uygulamadığını belirler. Bu seçenek yalnızca yerel kod için geçerlidir.|
+|Inkedbycommandsaskfirst|Get/Set (Boole)|Düzenle ve devam et işlevi, Kullanıcı **adım** veya **devam et**gibi bir hata ayıklama komutu seçtiğinde, kullanıcıdan kod değişikliklerini uygulama izni isteyip istemeyeceğini belirler. Bu seçenek yalnızca yerel kod için geçerlidir.|
+|Warnai Stalecode|Get/Set (Boole)|Düzenleme ve devam etme sırasında hata ayıklayıcının bir uyarı iletisi verip etmediğini belirler, güncel olmayan veya eski kodların yürütülmesine neden olur. Bu seçenek yalnızca yerel kod için geçerlidir.|
+|RelinkChangesOnStop|Al/ayarla (kısa)|Visual Studio 'nun, uygulamanın yürütülmesi durdurulduğunda Düzenle ve devam et tarafından uygulanan kod değişikliklerinin yeniden oluşturulup oluşturulmayacağını belirler. Bu seçenek yalnızca yerel kod için geçerlidir.|
+|Allowprederlemesini yapılandırma|Al/ayarla (kısa)|Düzenle ve devam et 'in arka planda önceden derlenmiş üstbilgileri yüklemesine izin verilip verilmeyeceğini belirler. Bu seçenek yalnızca yerel kod için geçerlidir.|
+
+## <a name="just-in-time"></a>Tam Zamanında
+ `DTE.Properties("Debugging", "JustInTime")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|Jyönetilen|Get/Set (Boole)|Yönetilen kod için tam zamanında hata ayıklamanın etkinleştirilip etkinleştirilmeyeceğini belirler.|
+|Jyerel|Get/Set (Boole)|Yerel kod için tam zamanında hata ayıklamanın etkinleştirilip etkinleştirilmeyeceğini belirler.|
+|JSCRIPT|Get/Set (Boole)|Betik kodu için tam zamanında hata ayıklamanın etkinleştirilip etkinleştirilmeyeceğini belirler.|
+
+## <a name="native"></a>Yerel
+ `DTE.Properties("Debugging", "Native")`
+
+|Özellik Öğesi Adı|Değer|Açıklama|
+|------------------------|-----------|-----------------|
+|LoadDllExports|Get/Set (Boole)|Hata ayıklayıcının DLL dışa aktarma tablolarını yükleyip yüklemeyeceğini belirler.|
+|EnableRPC|Get/Set (Boole)|Hata ayıklayıcının COM uzak yordam çağrılarına erişip erişemeyeceğini belirler.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Seçenekler sayfa [seçenekleri sayfası, yazı tipleri ve renkler düğüm özellikleri](../../ide/reference/options-page-fonts-and-colors-node-properties.md) [Seçenekler sayfası, metin düzenleyici düğümü özellikleri](../../ide/reference/options-page-text-editor-node-properties.md) genel, hata ayıklama, Seçenekler Iletişim kutusu [üzerindeki özellik öğelerinin adlarını belirleyen](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa) [seçenek ayarlarını denetleme](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d) [ ](../../debugger/general-debugging-options-dialog-box.md) [Düzenle ve devam et, hata ayıklama, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103) [tam zamanında, hata ayıklama, Seçenekler iletişim kutusu](../../debugger/just-in-time-debugging-options-dialog-box.md)

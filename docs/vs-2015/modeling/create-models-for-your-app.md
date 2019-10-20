@@ -1,5 +1,5 @@
 ---
-title: Uygulamanız için model oluşturma | Microsoft Docs
+title: Uygulamanız için modeller oluşturun | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -34,68 +34,68 @@ helpviewer_keywords:
 - UML diagrams
 ms.assetid: b69d9d91-c7e7-4dee-8eb6-706076eecb85
 caps.latest.revision: 60
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 03f525d3b996875097ddee433d0e9ad887ee728f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: da86a6cf2e561fdc7e642a76b84b4e604bec12d6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679460"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651239"
 ---
 # <a name="create-models-for-your-app"></a>Uygulamanız için model oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Modelleme diyagramları kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleri hakkında fikirleri anlamanıza, açıklamak ve yardımcı olur. Örneğin, tanımlamak ve kullanıcı gereksinimlerinden için Birleşik Modelleme Dili (UML) kullanım örneği, etkinlik, sınıf ve sıralı diyagramlar kullanabilirsiniz. Tanımlamak ve sisteminizin işlevselliğini iletişim kurmak için UML bileşeni, sınıf, etkinlik ve sıralı diyagramlar kullanabilirsiniz.  
-  
- Bkz: [kanal 9 Video: Mimariyi modelleme aracılığıyla geliştirmek](http://go.microsoft.com/fwlink/?LinkID=252078).  
-  
- Bu sürümde aşağıdaki UML diyagramları oluşturabilirsiniz:  
-  
-|**Diyagramı**|**Gösterir**|  
-|-----------------|---------------|  
-|[UML Etkinlik Diyagramları: Başvuru](../modeling/uml-activity-diagrams-reference.md)|Eylemler ve iş süreci içinde katılımcılar arasındaki iş akışı|  
-|[UML Bileşen Diyagramları: Başvuru](../modeling/uml-component-diagrams-reference.md)|Bir sistem, arabirimler, bağlantı noktaları ve ilişkileri bileşenleri|  
-|[UML Sınıf Diyagramları: Başvuru](../modeling/uml-class-diagrams-reference.md)|Depolamak ve sistem ve aralarındaki ilişkiler veri değişimi için kullanılan türleri|  
-|[UML Sıralı Diyagramları: Başvuru](../modeling/uml-sequence-diagrams-reference.md)|Nesneleri, bileşenleri, sistemleri veya aktörler arasındaki etkileşimler dizesi dizileri|  
-|[UML Kullanım Örneği Diyagramları: Başvuru](../modeling/uml-use-case-diagrams-reference.md)|Kullanıcı hedefleri ve sistemin desteklediği görevleri|  
-  
- Visual Studio'nun hangi sürümlerinin her diyagram türü desteklediğini görmek için bkz: [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
- Bir sistem veya var olan kod mimarisini görselleştirmek için aşağıdaki diyagramları oluşturur:  
-  
-|**Diyagramı**|**Gösterir**|  
-|-----------------|---------------|  
-|[Katman Diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)<br /><br /> [Katman Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)|Sistemin üst düzey mimarisi|  
-|Kod haritaları<br /><br /> [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)|Bağımlılıklar ve diğer mevcut koddaki ilişkileri|  
-|Kod tarafından oluşturulan sınıf diyagramları<br /><br /> [Sınıf Diyagramları ile Çalışma (Sınıf Tasarımcısı)](../ide/working-with-class-diagrams-class-designer.md)|Türlerini ve ilişkilerini .NET kod|  
-  
-## <a name="common-tasks"></a>Ortak Görevler  
-  
-|**Konu**|**Görev**|  
-|---------------|--------------|  
-|[UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Model oluşturma** ve diyagramları ekleyin.|  
-|[UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md)|**Diyagramlarının** modeli düzenlemek için.|  
-|[Paketleri ve ad alanlarını tanımlama](../modeling/define-packages-and-namespaces.md)|**Paketleri oluşturma** bir modeli farklı takım üyeleri üzerinde çalışabilir birimlere bölmek için.|  
-|[UML sınıf diyagramları aracılığıyla kod oluşturma](../modeling/generate-code-from-uml-class-diagrams.md)|**Sınıf diyagramlarından C# kodu oluşturabilir** uygulamanızı başlatmak için.|  
-|[Modelinizi profiller ve stereotipler aracılığıyla özelleştirme](../modeling/customize-your-model-with-profiles-and-stereotypes.md)|**Model öğelerini özelleştirmek** stereotipler belirli amaçlar için standart UML model öğelerini genişletmek için kullanma.|  
-|[Model öğelerini ve iş öğelerini bağlama](../modeling/link-model-elements-and-work-items.md)|**Model öğelerini ve iş öğeleri arasında bağlantılar oluşturmak** görevleri, test çalışmalarını, hataları, gereksinimleri, izlemenize yardımcı olmak için sorunları veya diğer tür çalışmalar, modelinizin belirli bir kısmı ile ilişkili.|  
-|[Diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md)|**Model ve diyagramlarını kaydetme** diğer kullanıcılarla paylaşmak üzere, kullanmayın olanlar dahil [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)].|  
-  
-## <a name="related-tasks"></a>İlişkili görevler  
-  
-|**Konu**|**Görev**|  
-|---------------|--------------|  
-|[Kodu görselleştirme](../modeling/visualize-code.md)|Kod haritaları oluşturmak ve görselleştirerek tanımadıkları kodlarla katman diyagramlarına daha iyi anlayın.|  
-|[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını açıklamak ve modelleri kullanır.|  
-|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|Genel yapısı ve sisteminizin davranışını tanımlamak ve kullanıcıların ihtiyaçlarını karşıladığından emin olmak için modelleri kullanır.|  
-|[Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)|Yazılımınızı kullanıcılarınızın ihtiyaçlarını ve sisteminizin genel mimarisi ile tutarlı kalmasını sağlayın.|  
-|[Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)<br /><br /> [Çevik Yazılım geliştirmede modeller kullanma](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|Anlama ve kendi geliştirme sırasında sisteminizi değiştirme yardımcı olması için modelleri kullanır.|  
-|[Modelleme çözümünüzün yapısını oluşturma](../modeling/structure-your-modeling-solution.md)|Büyük ve orta ölçekli projelerde modelleri düzenleyin.|  
-  
-## <a name="external-resources"></a>Dış Kaynaklar  
-  
-|**Kategori**|**Bağlantılar**|  
-|------------------|---------------|  
-|**Forumları**|-   [Visual Studio Görselleştirme ve Modelleme Araçları](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio Görselleştirme ve modelleme SDK'sını (DSL araçları)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleri hakkındaki fikirleri anlamanıza, açıklığa kavuşturmanıza ve iletmeye yardımcı olur. Örneğin, Kullanıcı gereksinimlerini anlatmak ve iletmek için Birleşik Modelleme Dili (UML) kullanım örneği, etkinlik, sınıf ve sıra diyagramlarını kullanabilirsiniz. Sisteminizin işlevselliğini anlatmak ve iletmek için UML bileşeni, sınıf, etkinlik ve sıra diyagramlarını kullanabilirsiniz.
+
+ Bkz. [Channel 9 videosu: modelleme aracılığıyla mimariyi geliştirme](http://go.microsoft.com/fwlink/?LinkID=252078).
+
+ Bu sürümde aşağıdaki UML diyagramlarını oluşturabilirsiniz:
+
+|**Çizimindeki**|**Gösterilir**|
+|-----------------|---------------|
+|[UML Etkinlik Diyagramları: Başvuru](../modeling/uml-activity-diagrams-reference.md)|Bir iş işlemindeki eylemler ve katılımcılar arasındaki iş akışı|
+|[UML Bileşen Diyagramları: Başvuru](../modeling/uml-component-diagrams-reference.md)|Sistemin bileşenleri, arabirimleri, bağlantı noktaları ve ilişkileri|
+|[UML Sınıf Diyagramları: Başvuru](../modeling/uml-class-diagrams-reference.md)|Sistemi ve bunların ilişkilerini depolamak ve veri alışverişi yapmak için kullanılan türler|
+|[UML Sıralı Diyagramlar: Başvuru](../modeling/uml-sequence-diagrams-reference.md)|Nesneler, bileşenler, sistemler veya aktörler arasındaki etkileşim dizileri|
+|[UML Kullanım Durumu Diyagramları: Başvuru](../modeling/uml-use-case-diagrams-reference.md)|Bir sistemin desteklediği Kullanıcı hedefleri ve görevleri|
+
+ Visual Studio 'nun hangi sürümlerinin her diyagram türünü desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+ Bir sistemin veya varolan kodun mimarisini görselleştirmek için aşağıdaki diyagramları oluşturun:
+
+|**Çizimindeki**|**Gösterilir**|
+|-----------------|---------------|
+|[Katman Diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)<br /><br /> [Katman Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)|Sistemin üst düzey mimarisi|
+|Kod eşlemeleri<br /><br /> [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)|Mevcut koddaki bağımlılıklar ve diğer ilişkiler|
+|Kod tarafından oluşturulan sınıf diyagramları<br /><br /> [Sınıf Diyagramları ile Çalışma (Sınıf Tasarımcısı)](../ide/working-with-class-diagrams-class-designer.md)|.NET Code 'da türler ve ilişkileri|
+
+## <a name="common-tasks"></a>Ortak Görevler
+
+|**İlerde**|**Görevinin**|
+|---------------|--------------|
+|[UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Modeller oluşturun** ve diyagramlar ekleyin.|
+|[UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md)|Modeli düzenlemek için **diyagramlar çizin** .|
+|[Paketleri ve ad alanlarını tanımlama](../modeling/define-packages-and-namespaces.md)|Bir modeli farklı takım üyelerinin üzerinde çalışabileceği birimlere bölmek için **paketler oluşturun** .|
+|[UML sınıf diyagramları aracılığıyla kod oluşturma](../modeling/generate-code-from-uml-class-diagrams.md)|Uygulamanızı başlatmak için **Sınıf Diyagramlarından Kod oluşturun C#**  .|
+|[Modelinizi profiller ve stereotipler aracılığıyla özelleştirme](../modeling/customize-your-model-with-profiles-and-stereotypes.md)|Standart UML model öğelerini belirli amaçlarla genişletmek için stereotipler kullanarak **model öğelerini özelleştirin** .|
+|[Model öğelerini ve iş öğelerini bağlama](../modeling/link-model-elements-and-work-items.md)|Görevleri, test çalışmalarını, hataları, gereksinimleri, sorunları veya modelinizin belirli bölümleriyle ilişkili diğer iş türlerini izlemenize yardımcı olması için **model öğeleri ve iş öğeleri arasında bağlantılar oluşturun** .|
+|[Diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md)|**Modelinizi ve diyagramlarınızı** , [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] kullanmayan kullanıcılar da dahil diğer kullanıcılarla paylaşmanız için kaydedin.|
+
+## <a name="related-tasks"></a>İlgili görevler
+
+|**İlerde**|**Görevinin**|
+|---------------|--------------|
+|[Kodu görselleştirme](../modeling/visualize-code.md)|Bilmediğiniz kodu daha iyi anlamak için kod haritaları ve katman diyagramları oluşturun.|
+|[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını netleştirmek ve iletmek için modeller kullanın.|
+|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|Sisteminizin genel yapısını ve davranışını ve kullanıcıların ihtiyaçlarını karşıladığından emin olmak için modelleri kullanın.|
+|[Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)|Yazılımınızın kullanıcılarınızın ihtiyaçlarına ve sisteminizin genel mimarisine uygun olduğundan emin olun.|
+|[Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)<br /><br /> [Çevik geliştirmede modelleri kullanma](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|Geliştirme sırasında sisteminizi anlamanıza ve değiştirmenize yardımcı olması için modeller kullanın.|
+|[Modelleme çözümünüzün yapısını oluşturma](../modeling/structure-your-modeling-solution.md)|Büyük veya orta ölçekli bir projede modelleri düzenleyin.|
+
+## <a name="external-resources"></a>Dış Kaynaklar
+
+|**Alan**|**Köprü**|
+|------------------|---------------|
+|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](http://go.microsoft.com/fwlink/?LinkId=184721)|

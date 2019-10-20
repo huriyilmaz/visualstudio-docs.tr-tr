@@ -3,17 +3,17 @@ title: XML şema Gezgininde sıralama, filtreleme ve gruplandırma
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4a914de0-9ffc-4526-9603-92e460e52513
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: daa629b4c26abf7b6ce801c30ea6f6fd41fbaa48
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 6bf9226f3b491a39c7ef5936667cabd789c6a457
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926727"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604589"
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Sıralama, filtreleme ve gruplandırma (XML şema Gezgini)
 
@@ -43,33 +43,33 @@ Aşağıdaki sıralama seçenekleri kullanılabilir. Varsayılan değer **türe 
 
 **Türe göre sırala** seçeneği belirlendiğinde, genel düğümler aşağıdaki sırada sıralanır. Daha sonra düğümler her grup içinde alfabetik olarak sıralanır.
 
-1. `import`düğümlerini.
+1. düğümleri `import`.
 
-2. `include`düğümlerini.
+2. düğümleri `include`.
 
-3. `redefine`düğümlerini.
+3. düğümleri `redefine`.
 
-4. `attribute`düğümlerini.
+4. düğümleri `attribute`.
 
-5. `attributeGroup`düğümlerini.
+5. düğümleri `attributeGroup`.
 
-6. `complexType`düğümlerini.
+6. düğümleri `complexType`.
 
-7. `simpleType`düğümlerini.
+7. düğümleri `simpleType`.
 
-8. `element`düğümlerini.
+8. düğümleri `element`.
 
-9. `group`düğümlerini.
+9. düğümleri `group`.
 
 ### <a name="sort-by-name"></a>Ada göre sırala
 
 **Ada göre sırala** seçeneği belirlendiğinde, genel düğümler aşağıdaki sıraya göre sıralanır:
 
-1. `import`düğümler (ad alanlarının alfabetik sırasıyla).
+1. düğümleri `import` (ad alanlarının alfabetik sırasıyla).
 
-2. `include`düğümler ( `schemaLocation` özniteliklerin alfabetik sırasına göre).
+2. düğümler `include` (`schemaLocation` özniteliklerinin alfabetik sırasıyla).
 
-3. `redefine`düğümler ( `schemaLocation` özniteliklerin alfabetik sırasına göre).
+3. düğümler `redefine` (`schemaLocation` özniteliklerinin alfabetik sırasıyla).
 
 4. Alfabetik sırada diğer genel düğümler.
 

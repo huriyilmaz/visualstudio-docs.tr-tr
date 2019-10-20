@@ -5,39 +5,39 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, creating extensions
 - layer models
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c164174b88ca9fdd815668084c1447e20de072c
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: 8a8297ede4ce703c738133952bb13669ef6a6637
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476562"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645679"
 ---
 # <a name="extend-dependency-diagrams"></a>Bağımlılık diyagramlarını genişletme
 
-Bağımlılık diyagramları oluşturmak için ve program kodunuza Visual Studio'da bağımlılık diyagramlarına karşı yapısı doğrulamak için kod yazabilirsiniz. Diyagramların (bağlam) kısayol menüsünde görünür, sürükle ve bırak hareketlerini özelleştirme ve metin şablonlarından katman modeline erişme komutlar ekleyebilirsiniz. Bu uzantılar bir Visual Studio Tümleştirme Uzantısı (VSIX) paketini ve diğer Visual Studio kullanıcılara dağıtın.
+Bağımlılık diyagramları oluşturup güncelleştirmek ve Visual Studio 'daki bağımlılık diyagramlarına karşı program kodunuzun yapısını doğrulamak için kod yazabilirsiniz. Diyagramların kısayol (bağlam) menüsünde görünen komutları ekleyebilirsiniz, sürükle ve bırak hareketlerini özelleştirebilir ve metin şablonlarından katman modeline erişebilirsiniz. Bu uzantıları bir Visual Studio Tümleştirme Uzantısı 'na (VSıX) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Aşağıdaki katman uzantılarınızı geliştirmek istediğiniz bilgisayarda yüklü olması gerekir:
+Katman uzantılarınızı geliştirmek istediğiniz bilgisayarda aşağıdakilerin yüklü olması gerekir:
 
 - Visual Studio
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)
 
-- Visual Studio için modelleme SDK'sı
+- Visual Studio için modelleme SDK 'Sı
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Uygun bir sürümü Visual Studio'nun katman uzantılarınızı çalıştırmak istediğiniz bilgisayarda yüklü olması gerekir. Bağımlılık diyagramları Visual Studio'nun hangi sürümlerinin desteklediğini görmek için bkz: [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Katman uzantılarınızı çalıştırmak istediğiniz bilgisayarda, uygun bir Visual Studio sürümü yüklü olmalıdır. Hangi Visual Studio sürümlerini bağımlılık diyagramlarını desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağımlılık diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)
-- [Bağımlılık diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)
+- [Bağımlılık Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)
+- [Bağımlılık Diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)
 - [Kodunuz aracılığıyla bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)
 - [Bağımlılık diyagramları ile kod doğrulama](../modeling/validate-code-with-layer-diagrams.md)

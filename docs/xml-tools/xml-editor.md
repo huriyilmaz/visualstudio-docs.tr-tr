@@ -2,62 +2,62 @@
 title: XML düzenleyicisi
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39e069dfd65294ed3d40342816e871757378a57b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c7898ff0a592ff8aaf6c6a44672024e13e2f0221
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002490"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72608353"
 ---
 # <a name="xml-editor"></a>XML düzenleyicisi
 
-Visual Studio XML düzenleyicisinde metin düzenleyicisi üzerinde temel alır ve XML diller için ek destek içerir. Visual Studio'da bir XML dosyasını açtığınızda, XML Düzenleyicisi'nde açılır.
+Visual Studio 'daki XML Düzenleyicisi, metin düzenleyicisine dayalıdır ve XML dilleri için ek destek içerir. Visual Studio 'da bir XML dosyası açtığınızda, XML düzenleyicisinde açılır.
 
-XML Düzenleyicisi'ni aşağıdaki özellikleri içerir:
+XML Düzenleyicisi aşağıdaki özellikleri içerir:
 
-- XML 1.0 sözdizimi denetimi.
+- XML 1,0 sözdizimi denetimi.
 
-- Siz yazarken şema doğrulaması.
+- Yazarken şema doğrulaması.
 
-- Şema tarafından oluşturulan kod parçacıkları dahil olmak üzere XML kod parçacıklarını destekler.
+- Şema tarafından oluşturulan kod parçacıkları dahil olmak üzere XML kod parçacıkları desteği.
 
-- Belge türü tanımı (DTD'nin) için destek.
+- Belge türü tanımı (DTD) desteği.
 
-- XML Şeması Tanım Dili (XSD) şemaya desteği.
+- XML şeması tanım dili (XSD) şeması desteği.
 
-- Bir XML şeması bir XML örneği belge oluşturma.
+- XML örnek belgesinden XML şeması oluşturma.
 
-- Bir DTD'nin veya XML verileri azaltılmış (XDR) şema, bir XML şemasına dönüştürülüyor.
+- DTD veya XML verileri azaltılmış (XDR) şemasını bir XML şemasına dönüştürme.
 
 - XSLT sözdizimi denetimi.
 
-- Anahat oluşturma, böylece öğeler daraltılabilir ve Genişletilebilir belgeleyin.
+- Belge anahat oluşturma, böylece öğeler genişletilebilir ve daraltılabilirler.
 
-- İle tümleştirme [XML Şeması Gezgini](../xml-tools/xml-schema-explorer.md). Bu XML şemaları Cerberus bir görünümünü sağlar.
+- [XML şema Gezgini](../xml-tools/xml-schema-explorer.md)ile tümleştirme. Bu, XML şemaları için hiyerarşik bir görünüm sağlar.
 
-XML Düzenleyicisi gibi iyi bilinen dosya uzantıları için çağrılan *.xml*, *.xsd*, *.xsl*, ve *.config*. XML içeren dosyanın görünüyorsa herhangi bilinmeyen dosya uzantısına göre de çağrılır.
+XML Düzenleyicisi, *. xml*, *. xsd*, *. xsl*ve *. config*gibi iyi bilinen dosya uzantıları için çağrılır. Ayrıca dosya XML içeriyorsa, herhangi bir bilinmeyen dosya uzantısında da çağrılır.
 
 ## <a name="xslt-intellisense"></a>XSLT IntelliSense
 
-[XSLT IntelliSense](../xml-tools/xml-editor-intellisense-features.md) otomatik tamamlama öznitelik kümesi adları, şablon modları ve adları sağlar ve parametre adları için belirtilen bir mod ya da belirtilen bir şablon adı.
+[XSLT IntelliSense](../xml-tools/xml-editor-intellisense-features.md) , belirtilen mod veya belirtilen adlandırılmış şablon için öznitelik kümesi adlarını, şablon modlarını ve adları ve parametre adlarını otomatik olarak tamamlamanızı sağlar.
 
 ## <a name="xslt-profiler"></a>XSLT profil oluşturucusu
 
-[XSLT Profil Oluşturucusu](../xml-tools/xslt-profiler.md) ayrıntılı XSLT performansı ölçmesine, değerlendirmek ve performans ile ilgili sorunları XSLT kodda hedef yardımcı olan raporlar oluşturur. XSLT Profiler, XSL ve XSLT stil sayfası iyileştirmeler için faydalı ipuçları da içerir.
+[XSLT Profiler](../xml-tools/xslt-profiler.md) , XSLT kodundaki performansla ilgili sorunları ölçmenize, değerlendirmenize ve hedefetmenize yardımcı olan ayrıntılı XSLT performans raporları oluşturur. XSLT Profiler Ayrıca, XSL ve XSLT stil sayfası iyileştirmeleri için yararlı ipuçları içerir.
 
 ## <a name="xslt-hierarchy"></a>XSLT hiyerarşisi
 
-[XSLT hiyerarşisi araç](../xml-tools/walkthrough-using-xslt-hierarchy.md) dahil stil sayfaları ve/veya yerleşik bir şablon kuralları kesme noktaları eklemenize olanak sağlar.
+[XSLT hiyerarşisi aracı](../xml-tools/walkthrough-using-xslt-hierarchy.md) , dahil edilen stil listelerine ve/veya yerleşik şablon kurallarına kesme noktaları eklemenize olanak tanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Düzenleyicisi Seçenekleri - biçimlendirme](../ide/reference/options-text-editor-xml-formatting.md)
-- [XML Düzenleyicisi Seçenekleri - diğer](../ide/reference/options-text-editor-xml-miscellaneous.md)
-- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [XML düzenleyici seçenekleri-biçimlendirme](../ide/reference/options-text-editor-xml-formatting.md)
+- [XML düzenleyici seçenekleri-çeşitli](../ide/reference/options-text-editor-xml-miscellaneous.md)
+- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
 - [XML standartları başvurusu](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)
-- [Visual Studio'daki XML araçları](../xml-tools/xml-tools-in-visual-studio.md)
+- [Visual Studio 'da XML araçları](../xml-tools/xml-tools-in-visual-studio.md)

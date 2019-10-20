@@ -1,25 +1,25 @@
 ---
-title: 'İzlenecek yol: LinqToXmlDataBinding Örneği'
+title: 'İzlenecek yol: LinqToXmlDataBinding örneği'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: aedf42e8-896c-48fa-88df-7f7c9536aa69
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c99d8571480dd98726a5f1ae5772162e97e0baed
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 80503b0f14b31f787688fc78a75a4ceb974db4da
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925744"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634193"
 ---
 # <a name="walkthrough-linqtoxmldatabinding-example"></a>İzlenecek yol: LinqToXmlDataBinding örneği
 Bu izlenecek yol, LinqToXmlDataBinding örneğini açıklar ve iki birincil kaynak dosyasının ( *L2DBForm. xaml* ve *L2DBForm.xaml.cs*) daha ilginç içeriğini açıklar.
 
-## <a name="prerequisites"></a>Önkoşullar
-Bu kılavuzu kullanmadan önce, LinqToXmlDataBinding programını [oluşturup çalıştırmak için aşağıdaki adımları izleyin: LinqToXmlDataBinding örneğini](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)derleyin ve çalıştırın.
+## <a name="prerequisites"></a>Prerequisites
+Bu kılavuzu kullanmadan önce, LinqToXmlDataBinding programını oluşturup çalıştırmak [için, LinqToXmlDataBinding örneğini oluşturma ve çalıştırma konusunda](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)açıklandığı gibi kesinlikle tavsiye ederiz.
 
 ## <a name="remarks"></a>Açıklamalar
  LinqToXmlDataBinding programı, C# ve xaml kaynak dosyalarından oluşan bir WINDOWS PRESENTATION FOUNDATION (WPF) uygulamasıdır. Kitap listesini tanımlayan ve kullanıcının bu girdileri görüntülemesini, eklemesini, silmesini ve düzenlemesini sağlayan ekli bir XML belgesi içerir. Aşağıdaki iki birincil kaynak dosyadan oluşur:
@@ -48,4 +48,4 @@ Bu kılavuzu kullanmadan önce, LinqToXmlDataBinding programını [oluşturup ç
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML örnek kullanarak WPF veri bağlama](../designers/wpf-data-binding-using-linq-to-xml-example.md)
-- [Nasıl yapılır: LinqToXmlDataBinding örneğini derleyin ve çalıştırın](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)
+- [Nasıl yapılır: LinqToXmlDataBinding oluşturma ve çalıştırma örneği](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)

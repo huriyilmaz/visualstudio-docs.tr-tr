@@ -1,49 +1,49 @@
 ---
-title: 'Nasıl yapılır: Bir etkinlik Tasarımcısı kitaplığı oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: etkinlik Tasarımcısı kitaplığı oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: 5b62e092-63b3-462d-9d77-fb112482f45d
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a51b4cdb67590b908bc406b78c04ddf0c5aa3e2f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 63404d3d81c44ac4b8308d949cdb87df419f2e04
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65694553"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662866"
 ---
-# <a name="how-to-create-an-activity-designer-library"></a>Nasıl yapılır: Etkinlik Tasarımcısı Kitaplığı Oluşturma
-Özel Etkinlik tasarımcıları bir standart veya özel bir etkinlik için bir kullanıcı arabirimi oluşturmanıza imkan tanır. Artık kullanıcı arabiriminin karmaşıklığı denetlemek ve bir etkinliğin birden fazla etkinlik Tasarımcısı oluşturma olanağı. Bu senaryo için birden çok İzleyici uyarlandığından tasarımcıları oluşturmanıza olanak sağlar.  
-  
-### <a name="to-create-an-activity-designer-library"></a>Bir etkinlik Tasarımcısı kitaplığı oluşturmak için  
-  
-1. Başlangıç [!INCLUDE[vs2010](../includes/vs2010-md.md)].  
-  
-2. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje...** açmak için **yeni proje** iletişim kutusu.  
-  
-3. İçinde **proje türleri** bölmesinde **iş akışı** da **Visual C#** veya **Visual Basic** gruplandırmaları bağlı olarak tercih ettiğiniz dili.  
-  
-4. İçinde **şablonları** bölmesinde **etkinlik Tasarımcısı Kitaplığı**.  
-  
-5. İçinde **adı** kutusunda, tanımlamakta kolaylaştırmak, projeniz için açıklayıcı bir ad girin.  
-  
-6. İçinde **konumu** kutusunda, projeyi kaydedin veya istediğiniz dizin girin **Gözat** gitmek için.  
-  
-7. İçinde **çözüm** kutusunda, çözümünüz için açıklayıcı bir ad yazın ve ardından tıklayın **Tamam**.  
-  
+# <a name="how-to-create-an-activity-designer-library"></a>Nasıl yapılır: etkinlik Tasarımcısı kitaplığı oluşturma
+Özel etkinlik tasarımcıları, standart veya özel bir etkinlik için Kullanıcı arabirimi oluşturmanıza olanak sağlar. Kullanıcı arabiriminin karmaşıklığını kontrol edersiniz ve bir etkinlik için birden fazla etkinlik Tasarımcısı oluşturma olanağına sahip olursunuz. Bu senaryo, birden çok izleyici için uyarlanmış tasarımcılar oluşturmanıza olanak sağlar.
+
+### <a name="to-create-an-activity-designer-library"></a>Bir etkinlik Tasarımcısı kitaplığı oluşturmak için
+
+1. @No__t_0 başlatın.
+
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **proje...** öğesini seçin. **Yeni proje** iletişim kutusunu açmak için.
+
+3. **Proje türleri** bölmesinde, tercih ettiğiniz dile bağlı olarak **görsel C#**  veya **Visual Basic** gruplamalarından **iş akışı** ' nı seçin.
+
+4. **Şablonlar** bölmesinde, **etkinlik Tasarımcısı kitaplığı**' nı seçin.
+
+5. **Ad** kutusuna projeniz için açıklayıcı bir ad girin ve kolayca tanımlanmasını sağlayın.
+
+6. **Konum** kutusunda, projenizi kaydetmek istediğiniz dizini girin veya git ' e tıklayarak bu dosyayı **gösterin** .
+
+7. **Çözüm** kutusuna çözümünüz için açıklayıcı bir ad yazın ve ardından **Tamam**' a tıklayın.
+
     > [!NOTE]
-    > Varolan bir çözüm için bir iş akışı konsol uygulaması eklemek istiyorsanız, bu çözümde açık [!INCLUDE[vs2010](../includes/vs2010-md.md)], çözüme sağ tıklayın **Çözüm Gezgini**seçip **Ekle**, ardından **Yeni proje...** açmak için **yeni proje** iletişim kutusu. Bu yordamda yukarıda açıklanan şekilde devam edin.  
-  
-8. Proje şablonu, XAML ve arka plan kod uygulama kaynak kodu dosyasında bir etkinlik tasarımcısının tanımı oluşturur. [!INCLUDE[wfd1](../includes/wfd1-md.md)] Açılır ve tuval, etkinlik Tasarımcısı için görüntüler.  
-  
-9. Sürükleme [!INCLUDE[avalon1](../includes/avalon1-md.md)] denetimler **araç kutusu** özel etkinlik Tasarımcısı'nda kullanılacak tasarım yüzeyine bırakın.  Özel Etkinlik Tasarımcısı uygulamak nasıl bir örnek için bkz [nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma](https://msdn.microsoft.com/library/2f3aade6-facc-44ef-9657-a407ef8b9b31).  
-  
+    > Mevcut bir çözüme bir iş akışı konsol uygulaması eklemek istiyorsanız, bu çözümü [!INCLUDE[vs2010](../includes/vs2010-md.md)] açın, **Çözüm Gezgini**çözüme sağ tıklayın ve **Ekle**, **Yeni proje..** . öğesini seçin. **Yeni proje** iletişim kutusunu açmak için. Bu yordamda yukarıda açıklanan şekilde ilerleyin.
+
+8. Proje şablonu, XAML 'de bir etkinlik Tasarımcısı tanımı ve kaynak kodunda arka plan kod uygulama dosyası oluşturur. @No__t_0 açılır ve etkinlik tasarlayıcılarınızın tuvali görüntülenir.
+
+9. **Araç kutusundan** [!INCLUDE[avalon1](../includes/avalon1-md.md)] denetimlerini, Özel Etkinlik tasarımcısında kullanmak için tasarım yüzeyine sürükleyin.  Özel bir etkinlik tasarımcısının nasıl uygulanacağı hakkında bir örnek için bkz. [nasıl yapılır: özel etkinlik Tasarımcısı oluşturma](https://msdn.microsoft.com/library/2f3aade6-facc-44ef-9657-a407ef8b9b31).
+
     > [!WARNING]
-    > Özel Etkinlik tasarımcıları, varsayılan hem de özel etkinlikler için kullanılabilir [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)]etkinlikler.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+    > Özel etkinlik tasarımcıları özel etkinlikler için, varsayılan [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)]activities için de kullanılabilir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [İş Akışı Projesi Oluşturma](../workflow-designer/creating-a-workflow-project.md)

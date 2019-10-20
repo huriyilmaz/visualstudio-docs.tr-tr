@@ -1,23 +1,23 @@
 ---
-title: 'Örnek XSD Dosyası: Satınalma Siparişi Şeması'
+title: 'Örnek XSD dosyası: satınalma siparişi şeması'
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f92b63b5-ec61-43b5-ae1e-63432a7a7e30
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bea23307c5d35e997f41e4ec9cbfd41fa41bdee
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 9a81cae6bc91e480fb619afd647e8285b6efc410
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65455108"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601804"
 ---
-# <a name="sample-xsd-file-purchase-order-schema"></a>Örnek XSD dosyası: Satın alma siparişi şeması
+# <a name="sample-xsd-file-purchase-order-schema"></a>Örnek XSD dosyası: satınalma siparişi şeması
 
-XSD şema Tasarımcısı çeşitli örneklerini aşağıdaki XSD dosyası kullanılır. Satın alma siparişi şeması dosyasıdır.
+Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılır. Bu dosya bir satın alma Siparişi şemadır.
 
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -88,4 +88,4 @@ XSD şema Tasarımcısı çeşitli örneklerini aşağıdaki XSD dosyası kullan
 ```
 
 > [!NOTE]
-> Bir örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, yerler ve sahiplerinin hayal ürünüdür. Gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olayları ile hiçbir ilişki amaçlanmamıştır veya çıkarılmamalıdır.
+> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, konumlar ve olaylar hayal ürünüdür. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olay ile ilişki amaçlanmamıştır.

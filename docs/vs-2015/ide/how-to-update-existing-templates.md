@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Mevcut şablonları güncelleştirme | Microsoft Docs'
+title: 'Nasıl yapılır: mevcut şablonları güncelleştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,62 +10,58 @@ helpviewer_keywords:
 - project templates, updating existing templates
 ms.assetid: d585e45b-7fe2-45fa-9cf3-7f2bc060f3c4
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 26482e844a4850efb1c50b15e51e4153baf1f9ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4b56cf11057957b0eb99fc065ed26af10d8adfbd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68186259"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670581"
 ---
-# <a name="how-to-update-existing-templates"></a>Nasıl yapılır: Mevcut Şablonları Güncelleştirme
+# <a name="how-to-update-existing-templates"></a>Nasıl Yapılır: Varolan Şablonları Güncelleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir şablonu oluşturun ve dosyalarını bir .zip dosyası olarak sıkıştırıp sonra şablonu değiştirmek isteyebilirsiniz. Şablon dosyaları el ile değiştirerek veya bir projeden şablonu temel alan yeni bir şablon vererek bunu yapabilirsiniz.  
-  
-## <a name="using-the-export-template-wizard-to-update-an-existing-template"></a>Mevcut bir şablonu güncellemek için şablonu Dışarı Aktarma Sihirbazı'nı kullanma  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sağlar bir **şablonu dışarı aktar** Sihirbazı, mevcut bir şablonu güncellemek için kullanılabilir.  
-  
-#### <a name="to-use-export-template-to-update-an-existing-template"></a>Mevcut bir şablonu güncellemek için şablonu Dışarı Aktar'ı kullanmak için  
-  
-1. Üzerinde **dosya** menüsünü tıklatın **yeni** ve ardından **yeni proje**.  
-  
-2. Güncelleştirme, adını ve geçici projenizin konumunu girin ve tıklayın kullanmak istediğiniz şablonu seçin **Tamam**.  
-  
-3. Projede değiştirme [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-4. Üzerinde **dosya** menüsünde tıklatın **şablonu dışarı aktar**ve **şablonu dışarı aktar** yeni bir şablon oluşturmak için Sihirbazı.  
-  
-5. Güncelleştirilmiş şablonu bir .zip dosyasına sıkıştırıldıktan sonra eski şablonu .zip dosyasını silin.  
-  
-## <a name="manually-updating-an-existing-template"></a>Mevcut bir şablonu el ile güncelleştirme  
- Varolan bir şablonu dışında güncelleştirebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sıkıştırılmış .zip dosyasındaki dosyaları değiştirerek.  
-  
-#### <a name="to-manually-update-an-existing-template"></a>Mevcut bir şablonu el ile güncelleştirmek için  
-  
-1. Şablonu içeren .zip dosyasını bulun. Varsayılan olarak, bu dosya \My Documents\Visual Studio içinde bulunur *sürüm*\My dışarı aktarılan şablonları\\.  
-  
-2. .Zip dosyasını çıkartın.  
-  
-3. Değiştirmek ya da geçerli şablon dosyaları silin veya şablona yeni dosyalar ekleyin.  
-  
-4. Açma, değiştirme ve güncelleştirilmiş davranışı işlemek için .vstemplate XML dosyasına veya yeni dosyaları kaydedin. .Vstemplate şeması hakkında daha fazla bilgi için bkz. [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md). Kaynak dosyalarında parametreleştirebilirsiniz hakkında daha fazla bilgi için bkz. [şablon parametreleri](../ide/template-parameters.md)  
-  
-5. Dosyaları, şablonunuzda sağ tıklayın, Select **göndermek için**ve ardından **sıkıştırılmış (daraltılmış) klasör**. Seçtiğiniz dosyaların bir .zip dosyasına sıkıştırılır.  
-  
-6. Eski bir .zip dosyası olarak aynı dizinde yeni bir .zip dosyası yerleştirin.  
-  
-7. Ayıklanan şablon dosyalarını ve eski şablonu .zip dosyasını silin.  
-  
-8. (Yönetici olarak) bir örneği, geliştirici komut istemi başlatın (Başlat menüsündeki altında **Visual Studio 2010 / Visual Studio Araçları/Geliştirici komut istemi**).  
-  
-9. Aşağıdaki komutu çalıştırın: `devenv /installvstemplates`.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Şablonları özelleştirme](../ide/customizing-project-and-item-templates.md)   
- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)   
- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)   
- [Şablon parametreleri](../ide/template-parameters.md)   
- [Nasıl yapılır: Başlangıç Paketleri Oluşturma](../ide/how-to-create-starter-kits.md)
+Bir şablon oluşturup dosyaları bir. zip dosyasına sıkıştırdıktan sonra, şablonu değiştirmek isteyebilirsiniz. Bu işlemi, şablondaki dosyaları el ile değiştirerek veya şablonu temel alan bir projeden yeni bir şablonu dışarı aktararak yapabilirsiniz.
+
+## <a name="using-the-export-template-wizard-to-update-an-existing-template"></a>Mevcut bir şablonu güncelleştirmek için şablonu dışarı aktarma Sihirbazı 'Nı kullanma
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], var olan bir şablonu güncelleştirmek için kullanılabilen bir **şablonu dışarı aktarma** Sihirbazı sağlar.
+
+#### <a name="to-use-export-template-to-update-an-existing-template"></a>Var olan bir şablonu güncelleştirmek için şablonu dışarı aktar 'ı kullanmak için
+
+1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Yeni proje**' ye tıklayın.
+
+2. Güncelleştirmek istediğiniz şablonu seçin, geçici projeniz için bir ad ve konum girin ve **Tamam**' a tıklayın.
+
+3. Projeyi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] değiştirin.
+
+4. **Dosya** menüsünde, **şablonu dışarı aktar**' ı tıklatın ve **şablonu dışarı aktarma** Sihirbazı ' nı kullanarak yeni bir şablon oluşturun.
+
+5. Güncelleştirilmiş şablon bir. zip dosyasına sıkıştırıldıktan sonra eski Template. zip dosyasını silin.
+
+## <a name="manually-updating-an-existing-template"></a>Mevcut bir şablonu el ile güncelleştirme
+ Sıkıştırılmış. zip dosyasındaki dosyaları değiştirerek, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dışındaki mevcut bir şablonu güncelleştirebilirsiniz.
+
+#### <a name="to-manually-update-an-existing-template"></a>Mevcut bir şablonu el ile güncelleştirmek için
+
+1. Şablonu içeren. zip dosyasını bulun. Bu dosya varsayılan olarak, *\\ \ver*
+
+2. . Zip dosyasını ayıklayın.
+
+3. Geçerli şablon dosyalarını değiştirin veya silin ya da şablona yeni dosyalar ekleyin.
+
+4. Güncelleştirilmiş davranışı veya yeni dosyaları işlemek için. vstemplate XML dosyasını açın, değiştirin ve kaydedin. . Vstemplate şeması hakkında daha fazla bilgi için bkz. [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md). Kaynak dosyalarda parametreleştiribilecekleri hakkında daha fazla bilgi için bkz. [şablon parametreleri](../ide/template-parameters.md)
+
+5. Şablonunuzda dosyaları seçin, sağ tıklayın, **Gönder ' e**tıklayın ve ardından **Sıkıştırılmış (daraltılmış) klasör**' e tıklayın. Seçtiğiniz dosyalar bir. zip dosyasında sıkıştırılır.
+
+6. Yeni. zip dosyasını eski. zip dosyası ile aynı dizine yerleştirin.
+
+7. Ayıklanan şablon dosyalarını ve eski şablon. zip dosyasını silin.
+
+8. Geliştirici Komut İstemi bir örneğini (yönetici olarak) başlatın (Başlangıç menüsünde, **Visual Studio 2010/Visual Studio Araçları/Geliştirici komut istemi**).
+
+9. Şu komutu çalıştırın: `devenv /installvstemplates`.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Şablonları özelleştirme](../ide/customizing-project-and-item-templates.md) [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md) [Visual Studio şablon şeması başvuru](../extensibility/visual-studio-template-schema-reference.md) [şablonu parametreleri](../ide/template-parameters.md) [nasıl yapılır: Başlangıç setleri oluşturma](../ide/how-to-create-starter-kits.md)

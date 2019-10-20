@@ -9,17 +9,17 @@ helpviewer_keywords:
 - text templates, output directive
 - text templates, directives
 - text templates, template directive
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58c949eaeaf8e780fa6a85d61dea272d21fb8be1
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: 6fd13f92af80e985a6942d05f66cc64b01138955
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476547"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72606090"
 ---
 # <a name="t4-text-template-directives"></a>T4 Metin Şablonu Yönergeleri
 
@@ -33,7 +33,7 @@ Yönergelerin sözdizimi aşağıdaki gibidir:
 
 Tüm öznitelik değerleri çift tırnak işaretleri arasına alınmalıdır. Değerin kendisi tırnak işaretleri içeriyorsa, bunlardan \ karakteriyle kaçılmalıdır.
 
-Yönergeler genellikle şablon dosyasında ya da eklenen dosyadaki ilk öğelerdir. Bunları bir kod bloğunun içine girmemelisiniz `<#...#>`, ya da bir sınıf özelliği bloğu sonra `<#+...#>`.
+Yönergeler genellikle şablon dosyasında ya da eklenen dosyadaki ilk öğelerdir. Bir sınıf özelliği bloğunun `<#+...#>` `<#...#>` bir kod bloğunun içine yerleştirmemelisiniz.
 
 [T4 Şablon Yönergesi](../modeling/t4-template-directive.md)
 
@@ -77,4 +77,4 @@ Yönergeler genellikle şablon dosyasında ya da eklenen dosyadaki ilk öğelerd
 <#@ CleanupBehavior processor="T4VSHost" CleanupAfterProcessingtemplate="true" #>
 ```
 
-Ayrıca, kendi yönergelerinizi oluşturabilirsiniz. Daha fazla bilgi için [özel T4 metin şablonu yönerge işlemcileri oluşturma](../modeling/creating-custom-t4-text-template-directive-processors.md). Görselleştirme ve Modelleme SDK'sını etki alanına özgü dil (DSL) oluşturmak için kullanıyorsanız, bir yönerge işlemcisi, DSL'nin bir parçası olarak oluşturulur.
+Ayrıca, kendi yönergelerinizi oluşturabilirsiniz. Daha fazla bilgi için bkz. [özel T4 metin şablonu yönerge Işlemcileri oluşturma](../modeling/creating-custom-t4-text-template-directive-processors.md). Görselleştirme ve Modelleme SDK'sını etki alanına özgü dil (DSL) oluşturmak için kullanıyorsanız, bir yönerge işlemcisi, DSL'nin bir parçası olarak oluşturulur.

@@ -1,5 +1,5 @@
 ---
-title: Varlık veri modeli araçları
+title: Varlık Veri Modeli araçları
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -11,52 +11,52 @@ dev_langs:
 - aspx
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: da608c7f937a09d56b25b87625580e5047d560cc
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: d663b86603145f8a665f189e5abfbfa2b0b360ae
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65705041"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672390"
 ---
-# <a name="entity-data-model-tools-in-visual-studio"></a>Varlık veri modeli Visual Studio Araçları
+# <a name="entity-data-model-tools-in-visual-studio"></a>Visual Studio'daki Varlık Veri Modeli Araçları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Entity Framework, .NET geliştiricilerinin etki alanına özel nesneler kullanarak ilişkisel verilerle çalışmak bir nesne ilişkisel eşleme teknolojisidir. Genellikle geliştiricilerin yazmak zorunda olduğu çoğu veri erişim koduna yönelik gereksinimi ortadan kaldırır. Varlık, yeni .NET uygulamaları için teknoloji modelleme önerilen nesne ilişkisel eşleme (ORM) çerçevedir.
+Entity Framework, .NET geliştiricilerin, etki alanına özgü nesneleri kullanarak ilişkisel verilerle çalışmasını sağlayan, nesne ilişkisel bir eşleme teknolojisidir. Genellikle geliştiricilerin yazmak zorunda olduğu çoğu veri erişim koduna yönelik gereksinimi ortadan kaldırır. Entity Framework, yeni .NET uygulamaları için önerilen nesne ilişkisel eşleme (ORM) modelleme teknolojisidir.
 
- Mart 2016 itibariyle en son yayımlanmış sürümüdür [Entity Framework 6](https://msdn.microsoft.com/data/ef) . [Entity Framework 7](https://docs.efproject.net/en/latest/) yayın öncesi sürümde olduğunu.
+ 2016 Mart itibariyle, en güncel yayımlanmış sürüm [Entity Framework 6](https://msdn.microsoft.com/data/ef) ' dır. [Entity Framework 7](https://docs.efproject.net/en/latest/) yayın öncesi sürümündedir.
 
- [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] Araçlar oluşturmanıza yardımcı olmak için tasarlanmıştır [!INCLUDE[adonet_ef](../includes/adonet-ef-md.md)] uygulamalar. Tüm belgeler için [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] araçları, burada: [Entity Framework](https://msdn.microsoft.com/data/jj590134).
+ [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] araçlar, [!INCLUDE[adonet_ef](../includes/adonet-ef-md.md)] uygulamaları oluşturmanıza yardımcı olacak şekilde tasarlanmıştır. @No__t_0 araçların tüm belgeleri şunlardır: [Entity Framework](https://msdn.microsoft.com/data/jj590134).
 
- İle [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] oluşturabileceğiniz araçları, bir *kavramsal model* mevcut bir veritabanı ve grafik görselleştirin ve kavramsal model düzenleyin. Veya bir kavramsal model ilk grafik oluşturun ve ardından modelinizin destekleyen bir veritabanı oluşturun. Her iki durumda da temel alınan veritabanı değişiklikleri ve otomatik olarak uygulamanız için nesne katmanı kodu oluşturma modeliniz otomatik olarak güncelleştirebilirsiniz. Veritabanı oluşturma ve nesne katmanı kodu oluşturma özelleştirilebilir.
+ @No__t_0 araçlarıyla, mevcut bir veritabanından *kavramsal model* oluşturabilir ve ardından kavramsal modelinizi grafiksel olarak görselleştirebilir ve düzenleyebilirsiniz. Ya da önce bir kavramsal model oluşturabilir, ardından modelinizi destekleyen bir veritabanı oluşturabilirsiniz. Her iki durumda da, temel alınan veritabanı değiştiğinde modelinizi otomatik olarak güncelleştirebilir ve uygulamanız için otomatik olarak nesne katmanı kodu oluşturur. Veritabanı oluşturma ve nesne katmanı kod üretimi özelleştirilebilir.
 
- Varlık veri modeli araçları Visual Studio 2015'te oluşturan özel araçlar şunlardır:
+ Bunlar Visual Studio 2015 ' de Varlık Veri Modeli araçları oluşturan özel araçlardır:
 
-- Kullanabileceğiniz [!INCLUDE[vstecado](../includes/vstecado-md.md)]  **[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] Tasarımcısı** (**varlık Tasarımcısı**) görsel olarak oluşturma ve varlıklar, ilişkilendirmeleri, eşlemeler ve devralma ilişkilerinin değiştirin. **Varlık Tasarımcısı** ayrıca oluşturur [!INCLUDE[TLA#tla_cshrp](../includes/tlasharptla-cshrp-md.md)] veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] nesne katmanı kodu.
+- Varlıklar, ilişkilendirmeler, eşlemeler ve devralma ilişkilerini görsel olarak oluşturmak ve değiştirmek için [!INCLUDE[vstecado](../includes/vstecado-md.md)] **[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] tasarımcısını** (**Entity Desisgner**) kullanabilirsiniz. **Entity Desisgner** Ayrıca [!INCLUDE[TLA#tla_cshrp](../includes/tlasharptla-cshrp-md.md)] veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] nesne katmanı kodu oluşturur.
 
-- Kullanabileceğiniz  **[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] Sihirbazı** varolan bir veritabanından kavramsal model oluşturmak ve veritabanı bağlantı bilgilerini uygulamanıza ekleyin.
+- Mevcut bir veritabanından kavramsal model oluşturmak ve uygulamanıza veritabanı bağlantı bilgilerini eklemek için **[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] sihirbazını** kullanabilirsiniz.
 
-- Kullanabileceğiniz **Veritabanı Oluşturma Sihirbazı'nı** ilk kavramsal model oluşturun ve ardından modelini destekleyen bir veritabanı oluşturun.
+- Önce kavramsal model oluşturmak için **veritabanı oluşturma Sihirbazı 'nı** kullanabilir, sonra da modeli destekleyen bir veritabanı oluşturabilirsiniz.
 
-- Kullanabileceğiniz **güncelleştirme modeli Sihirbazı** temel alınan veritabanına değişiklikler yapıldığında, kavramsal model, depolama model ve eşleme güncelleştirilecek.
+- Temel veritabanında değişiklik yapıldığında kavramsal modelinizi, depolama modelinizi ve eşlemelerinizi güncelleştirmek için **model güncelleştirme sihirbazını** kullanabilirsiniz.
 
   > [!NOTE]
-  > Visual Studio 2010 ile başlayarak [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] araçları desteklemez [!INCLUDE[ss2k](../includes/ss2k-md.md)].
+  > Visual Studio 2010 ' den başlayarak [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] araçları [!INCLUDE[ss2k](../includes/ss2k-md.md)] desteklemez.
 
-  Araçlar oluşturmak veya bir .edmx dosyasını değiştirin. Bu dosya, bunları arasındaki eşlemeleri kavramsal model ve depolama modeli açıklayan bilgileri içerir. Daha fazla bilgi için [EDMX](https://msdn.microsoft.com/data/jj650889.aspx).
+  Araçlar bir. edmx dosyası oluşturur veya değiştirir. Bu dosya kavramsal modeli, depolama modelini ve bunlar arasındaki eşlemeleri açıklayan bilgiler içerir. Daha fazla bilgi için bkz. [edmx](https://msdn.microsoft.com/data/jj650889.aspx).
 
-  Entity Framework güç araçları varlık veri modeli kullanan uygulamalar oluşturmanıza yardımcı olur. Araçları bir kavramsal model oluşturmak, mevcut bir model doğrulama, kavramsal model temelinde nesne sınıfları içeren kaynak kodu dosyaları üretmek ve modeli oluşturur görünümleri içeren kaynak kodu dosyaları üretir. Ayrıntılı bilgi için bkz. [Pre-Generated eşleme görünümleri](https://msdn.microsoft.com/data/dn469601.aspx).
+  Entity Framework güç araçları, Varlık Veri Modeli kullanan uygulamalar oluşturmanıza yardımcı olur. Araçlar kavramsal model oluşturabilir, var olan bir modeli doğrulayabilir, kavramsal modeli temel alan nesne sınıflarını içeren kaynak kodu dosyaları üretebilir ve modelin oluşturduğu görünümleri içeren kaynak kodu dosyaları oluşturabilir. Ayrıntılı bilgi için bkz. [önceden oluşturulmuş eşleme görünümleri](https://msdn.microsoft.com/data/dn469601.aspx).
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[ADO.NET Entity Framework](https://msdn.microsoft.com/library/a437041f-6899-4ae7-96ce-aabf528d7205)|Nasıl kullanılacağını açıklar [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] araçları, hangi [!INCLUDE[adonet_ef](../includes/adonet-ef-md.md)] uygulamalar oluşturmasını sağlar.|
-|[Varlık Veri Modeli](https://msdn.microsoft.com/library/2dda3d5b-4582-4ba0-a91d-fcd7a1498137)|Üzerinde oluşturulan uygulamaları tarafından kullanılan verilerle çalışmaya yönelik bilgi ve bağlantılar sağlanmıştır [!INCLUDE[adonet_ef](../includes/adonet-ef-md.md)].|
-|[Tam .NET (konsol, WinForms, WPF, vb.) kullanmaya başlama](/ef/ef6/get-started)|Entity Framework 7 kullanan .NET Masaüstü uygulamaları oluşturma konusunda eğitimler sağlar.|
-|[ASP.NET 5 uygulaması için yeni veritabanı](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html)|Entity Framework 7 kullanarak yeni bir ASP.NET 5 uygulaması oluşturmayı açıklar.|
+|[ADO.NET Entity Framework](https://msdn.microsoft.com/library/a437041f-6899-4ae7-96ce-aabf528d7205)|Uygulamaları oluşturmak için [!INCLUDE[adonet_ef](../includes/adonet-ef-md.md)] sağladığı [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] araçların nasıl kullanılacağını açıklar.|
+|[Varlık Veri Modeli](https://msdn.microsoft.com/library/2dda3d5b-4582-4ba0-a91d-fcd7a1498137)|@No__t_0 oluşturulan uygulamalar tarafından kullanılan verilerle çalışmaya yönelik bağlantılar ve bilgiler sağlar.|
+|[Tam .NET kullanmaya başlama (konsol, WinForms, WPF vb.)](/ef/ef6/get-started)|Entity Framework 7 kullanan .NET masaüstü uygulamaları oluşturma hakkında öğreticiler sağlar.|
+|[ASP.NET 5 uygulamasını yeni veritabanına](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html)|Entity Framework 7 kullanarak yeni bir ASP.NET 5 uygulamasının nasıl oluşturulduğunu açıklar.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [.NET için Visual Studio veri araçları](../data-tools/visual-studio-data-tools-for-dotnet.md)

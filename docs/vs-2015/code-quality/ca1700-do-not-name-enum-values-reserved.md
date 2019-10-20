@@ -1,5 +1,5 @@
 ---
-title: 'CA1700: Sabit listesi değerlerini adlandırmayın &#39;ayrılmış&#39; | Microsoft Docs'
+title: 'CA1700: ayrılmış &#39;&#39; Enum değerlerini adlandırma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,55 +12,55 @@ helpviewer_keywords:
 - CA1700
 ms.assetid: 7a7e01c3-ae7d-4c82-a646-91b58864a749
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a5446d21b51f57b4a614e8931b154654bee99cd2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9b5ddeb77a255bcfab121746cd8748c6fcb1f113
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189269"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669311"
 ---
-# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: Sabit listesi değerlerini adlandırmayın &#39;ayrılmış&#39;
+# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: ayrılmış Enum değerlerini &#39;adlandırma&#39;
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|DoNotNameEnumValuesReserved|
 |CheckId|CA1700|
-|Kategori|Microsoft.Naming|
+|Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Bir numaralandırma üyesinin adı "ayrılmış" sözcüklerini içerir.
+ Bir numaralandırma üyesinin adı "ayrılmış" sözcüğünü içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, "ayrılmış" içeren bir ada sahip numaralandırma üyesi şu anda kullanılmamaktadır ancak yeniden adlandırılabilir veya gelecekteki bir sürüme kaldırıldığını varsayar. Üye kaldırma veya yeniden adlandırma bölünmesi farklıdır. Kullanıcıların bir üyesi olduğundan, yalnızca "ayrılmış" adını içerir ya da kullanıcılara Okuma veya belge tarafından uymayı güvenebilirsiniz yoksay beklememeniz gerekir. Ayrıca, nesne tarayıcılar ve akıllı bir tümleşik geliştirme ortamları ayrılmış üyeleri görünür olduğundan, bunlar hakkında gerçekten üyeleri kullanıldığını karışıklığa neden olabilir.
+ Bu kural, "ayrılmış" içeren bir ada sahip numaralandırma üyesi şu anda kullanılmamaktadır ancak yeniden adlandırılabilir veya gelecekteki bir sürüme kaldırıldığını varsayar. Üye kaldırma veya yeniden adlandırma bölünmesi farklıdır. Kullanıcıların, adı "ayrılmış" içerdiğinden veya belgelere göre okumak veya onları okumak için kullanıcılara güvenebilmesi için, yalnızca bir üyeyi yok saymasını beklememelisiniz. Ayrıca, ayrılmış Üyeler nesne tarayıcılarında ve akıllı tümleşik geliştirme ortamlarında göründüğünden, gerçekte hangi üyelerin kullanıldığı hakkında karışıklık oluşmasına neden olabilirler.
 
- Ayrılmış bir üye kullanmak yerine, sabit listesi gelecek sürümünde yeni bir üye ekleyin. Eklenmesini değiştirmek için özgün üyelerinin değerlerini neden olmaz sürece çoğu durumda, yeni üyenin toplama bozucu bir değişiklik değil.
+ Ayrılmış bir üye kullanmak yerine gelecekteki sürümde numaralandırmaya yeni bir üye ekleyin. Çoğu durumda, ek olarak özgün üyelerin değerlerinin değişmesine neden olmadığı sürece yeni üyenin eklenmesi bir son değişiklik değildir.
 
- Bile özgün değerlerine özgün üyelerini korumak, çalışmaları sınırlı bir süre içinde bir üyenin bir değişiklik ektir. Öncelikle, yeni üye var olan kod yolları kullanan çağıranlar bozmadan döndürülemez bir `switch` (`Select` içinde [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) ifadesi, kapsayan tüm üye listesi ve bu bir özel durum oluşturur dönüş değeri Varsayılan durumda. İstemci kodu yansıma yöntemleri davranış değişikliği gibi işleyebilir değil, bir ikincil arz ettiği <xref:System.Enum.IsDefined%2A?displayProperty=fullName>. Buna uygun olarak, mevcut yöntemlerden döndürülecek yeni üyenin veya bilinen uygulama uyumsuzluğu nedeniyle zayıf yansıma kullanım gerçekleşir, yalnızca bölünemez çözümdür:
+ Sınırlı sayıda durumda, özgün Üyeler orijinal değerlerini korusa bile bir üyenin eklenmesi Son değişiklik olur. Birincil olarak, yeni üye, tüm üye listesini kapsayan ve varsayılan durumda özel durum oluşturan dönüş değerindeki bir `switch` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `Select`) ifadesinde kullanan çağıranlar olmadan mevcut kod yollarından geri döndürülemez. İkincil bir sorun, istemci kodunun <xref:System.Enum.IsDefined%2A?displayProperty=fullName> gibi yansıma yöntemlerinden davranış değişikliğini işleyemeyebilir. Buna uygun olarak, yeni üyenin mevcut metotlardan döndürülmesi gerekiyorsa veya kötü yansıma kullanımı nedeniyle bilinen bir uygulama uyumsuzluğu oluşursa, tek bölünemez çözüm şu şekilde olur:
 
-1. Özgün ve yeni üyelerini içeren yeni bir sabit listesi ekleyin.
+1. Özgün ve yeni üyeleri içeren yeni bir sabit listesi ekleyin.
 
-2. Özgün numaralandırması ile işaretle <xref:System.ObsoleteAttribute?displayProperty=fullName> özniteliği.
+2. Özgün numaralandırmayı <xref:System.ObsoleteAttribute?displayProperty=fullName> özniteliğiyle işaretleyin.
 
-   Herhangi bir dışarıdan görülebilen türler ve özgün numaralandırma kullanıma üyeleri için aynı yordamı izleyin.
+   Tüm dışarıdan görünen türler veya özgün numaralandırmayı kullanıma sunan Üyeler için aynı yordamı izleyin.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için kaldırmak veya üye yeniden adlandırın.
+ Bu kural ihlalini onarmak için üyeyi kaldırın veya yeniden adlandırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Daha önce sevk kitaplıkları veya şu anda kullanılan bir üye için bu kuraldan bir uyarıyı bastırmak güvenlidir.
+ Şu anda kullanılan bir üyenin veya daha önce sevk edilen kitaplıklarda bu kuraldan bir uyarının görüntülenmesini güvenlidir.
 
-## <a name="related-rules"></a>İlgili kuralları
- [CA2217: Sabit listelerini FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+## <a name="related-rules"></a>İlgili kurallar
+ [CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
- [CA1712: Enum değerleri için tür adıyla önek kullanmayın](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
+ [CA1712: Numaralandırma değerleri için tür adıyla önek kullanmayın](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
 
  [CA1028: Numaralandırma depolaması Int32 olmalıdır](../code-quality/ca1028-enum-storage-should-be-int32.md)
 
  [CA1008: Numaralandırmalar sıfır değerine sahip olmalıdır](../code-quality/ca1008-enums-should-have-zero-value.md)
 
- [CA1027: Sabit listelerini FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+ [CA1027: Numaralandırmaları FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)

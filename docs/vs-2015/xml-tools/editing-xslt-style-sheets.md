@@ -1,43 +1,38 @@
 ---
-title: XSLT stil sayfalarını düzenleme | Microsoft Docs
+title: XSLT stil sayfalarını Düzenle | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 080bed0f-0ca9-4be7-aecd-6bdaebc04007
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2279a193b173924b45f42172281e106370131023
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3e1669affa89c91ca3ae1958c22ff3ec4d56bb8c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157740"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670961"
 ---
 # <a name="editing-xslt-style-sheets"></a>XSLT Stil Sayfalarını Düzenleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML Düzenleyicisi XSLT stil sayfalarını düzenlemek için de kullanılabilir. XML kod parçacıklarını, anahat oluşturma, IntelliSense gibi Düzenleyici özellikleri varsayılan yararlanın ve benzeri. Ayrıca, aynı zamanda XSLT'de geliştirmeyi daha kolay hale getiren yeni özellikler mevcuttur.  
-  
-## <a name="xslt-features"></a>XSLT özellikleri  
- XSLT stil sayfaları ile çalışmaya özgü özellikler aşağıdaki tabloda açıklanmaktadır.  
-  
- **Söz dizimi renklendirmesi**  
- XSLT anahtar sözcükler gibi `template`, `match`ve benzeri tarafından belirtilen XSLT anahtar sözcüğü renkte görüntülenir **yazı tipleri ve renkler** ayarları.  
-  
- **Dalgalı alt çizgiler**  
- XML Düzenleyicisi XSLT stil sayfalarını doğrulamak için yüklü xslt.xsd dosyasını kullanır. Doğrulama hatalarını, Mavi dalgalı çizgiler gösterilir. XML Düzenleyicisi'ni de stil sayfası arka plan ve raporları derleyici hataları veya uyarıları uygun dalgalı alt çizgiler ile derler.  
-  
- **Komut dosyası blokları için destek**  
- Kesme noktaları ve betik bloğu kodu adımlayın ayarlamak için kod komut dosyası blokları XSLT hata ayıklayıcı tarafından desteklenir.  
-  
- **Görünüm XSLT çıkış**  
- XSLT dönüştürmesi yürütme ve çıkış XML Düzenleyicisi'nden görüntüleyin. Daha fazla bilgi için [nasıl yapılır: XML düzenleyicisinden XSLT dönüştürmesi yürütme](../xml-tools/how-to-execute-an-xslt-transformation-from-the-xml-editor.md).  
-  
- **XSLT hata ayıklama**  
- XSLT hata ayıklayıcısı içinde XML Düzenleyicisi XSLT dosyasından başlatabilirsiniz. Hata ayıklayıcı, XSLT dosyası, XSLT yürütme durumu görüntüleme ve benzeri ayarı kesme noktalarını destekler. XSLT değişken geldiğinizde, değişkenin değerini içeren bir araç ipucu getirir. Hata ayıklayıcı, bir stil sayfasında hata ayıklama veya başka bir uygulamadan çağrılabilir derlenmiş bir XSL dönüşümü hata ayıklamak için kullanılabilir. Daha fazla bilgi için [XSLT hata ayıklama](../xml-tools/debugging-xslt.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+XML Düzenleyicisi, XSLT stil sayfalarını düzenlemek için de kullanılabilir. IntelliSense, anahat oluşturma, XML parçacıkları vb. gibi varsayılan düzenleyici özelliklerinden yararlanabilirsiniz. Ayrıca, XSLT 'de geliştirmeyi kolaylaştıran yeni özellikler de vardır.
+
+## <a name="xslt-features"></a>XSLT Özellikleri
+ Aşağıdaki tabloda XSLT stil sayfalarıyla çalışmaya özgü özellikler açıklanmaktadır.
+
+ **Sözdizimi renklendirme** @No__t_1, `match` vb. gibi XSLT anahtar sözcükleri, **yazı tipleri ve renkler** ayarları tarafından belirtilen XSLT anahtar sözcüğü renginde görüntülenir.
+
+ **Dalgalı alt çizgiler** XML Düzenleyicisi, XSLT stil sayfalarını doğrulamak için yüklü xslt. xsd dosyasını kullanır. Doğrulama hataları mavi dalgalı alt çizgiler olarak gösterilir. XML Düzenleyicisi aynı zamanda stil sayfasını arka planda derler ve derleyici hatalarını ya da uyarıları uygun dalgalı alt çizgilerle raporlar.
+
+ **Betik blokları Için destek** Betik bloklarında kod, XSLT hata ayıklayıcısı tarafından desteklenir, böylece kesme noktaları ayarlayabilir ve komut dosyası blok kodunda ilerleyerek adımları izleyebilirsiniz.
+
+ **XSLT çıkışını görüntüle** Bir XSL dönüşümünü yürütebilir ve XML düzenleyicisinden çıktıyı görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: XML DÜZENLEYICISINDEN XSLT dönüşümü yürütme](../xml-tools/how-to-execute-an-xslt-transformation-from-the-xml-editor.md).
+
+ **XSLT hata ayıklama** XSLT hata ayıklayıcısını XML düzenleyicisinde bir XSLT dosyasından başlatabilirsiniz. Hata ayıklayıcı XSLT dosyasındaki kesme noktalarını ayarlamayı, XSLT yürütme durumunu görüntülemeyi ve daha fazlasını destekler. Bir XSLT değişkeninin üzerine gelindiğinde, değişkenin değerine sahip bir araç Ipucu oluşur. Hata ayıklayıcı, bir stil sayfasında hata ayıklamak veya başka bir uygulamadan çağrılan derlenmiş bir XSL dönüşümünün hatalarını ayıklamak için kullanılabilir. Daha fazla bilgi için bkz. [XSLT hata ayıklama](../xml-tools/debugging-xslt.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XML Düzenleyicisi](../xml-tools/xml-editor.md)

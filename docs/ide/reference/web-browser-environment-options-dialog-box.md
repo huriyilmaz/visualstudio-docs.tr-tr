@@ -16,24 +16,24 @@ helpviewer_keywords:
 - Options dialog box, Web settings
 - Internet Explorer, setting options
 ms.assetid: 586db4eb-032d-4cb5-93a6-a7c14de1ae49
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad36a2c9c741cffdb1ad3da04f81a21ce68f7ebd
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: ae83add4db8e45fca1b97b9c4148cea5bcba0947
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605632"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72621907"
 ---
-# <a name="options-dialog-box-environment--web-browser"></a>Seçenekler iletişim kutusu: Ortam \> Web tarayıcısı
+# <a name="options-dialog-box-environment--web-browser"></a>Seçenekler iletişim kutusu: ortam \> Web tarayıcısı
 
 Hem iç Web tarayıcısı hem de Internet Explorer seçeneklerini ayarlar. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **ortam** klasörünü genişletin ve **Web tarayıcısı**' nı seçin.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [ayarlarına](../environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
 
 > [!IMPORTANT]
 > Web 'den belirli dosyaları veya bileşenleri açmak, bilgisayarınızda kod yürütebilir.

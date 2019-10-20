@@ -1,5 +1,5 @@
 ---
-title: Yönetilen kod uyarıları için Kod Analizi | Microsoft Docs
+title: Yönetilen kod uyarıları için kod analizi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -13,51 +13,51 @@ helpviewer_keywords:
 - code analysis,managed code
 ms.assetid: 3c2741ff-0d3a-42e6-acd5-d42310bd03c4
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 237091c4304b6d6fef90197d503f84fe86c12b9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fddcff8bb51216097689a86bd25718a0727c2b45
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142337"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672928"
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>Yönetilen Kod için Kod Analizi Uyarıları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yönetilen kod analizi aracı, yönetilen kod kitaplıkları kuralı ihlallerini göstermek uyarılar sağlar. Uyarılar, tasarım, yerelleştirme, performans ve güvenlik gibi kural alanları halinde düzenlenir. Her uyarı, yönetilen kod analizi kural ihlalini gösterir. Bu bölümde, her yönetilen kod analizi uyarısı için derinlemesine tartışmalar ve örnekler sağlar.  
-  
- Aşağıdaki tabloda, her uyarı için sağlanan bilgi türünü gösterir.  
-  
-|Öğe|Açıklama|  
-|----------|-----------------|  
-|Tür|Kuralın tür adı.|  
-|CheckId|Kuralı için benzersiz tanımlayıcı. Checkıd ve kategori kaynak uyarı gizleme için kullanılır.|  
-|Kategori|Uyarı kategorisi.|  
-|Yeni Değişiklik|Bu kural ihlalini düzeltmesini bir değişiklik olup olmadığı. İhlaline neden hedefte bağımlılığı bir derleme yeni derlemeniz değil değişiklik anlamına gelir bozucu sürüm sabit veya çalışma zamanında değişiklik nedeniyle başarısız olabilir. Birden çok düzeltmesi mevcuttur ve en az bir düzeltme bölünmesi farklıdır ve bir düzeltme değil, hem 'Yeni' ve 'Bozucu olmayan' belirtilir.|  
-|Sebep|Kural bir uyarı oluşturmak neden olan belirli yönetilen kod.|  
-|Açıklama|Uyarı arkasında sorunları açıklar.|  
-|İhlaller Nasıl Düzeltilir?|Kural karşılar ve bir uyarı oluşturmasını önlemek için kaynak kodunu değiştirmek açıklanmaktadır.|  
-|Uyarılar Bastırıldığında|Kuraldan bir uyarıyı bastırmak güvenli olduğunda açıklar.|  
-|Örnek kod|Kuralı ihlal ediyor ve kural karşılayan örnekler düzeltti örnekler.|  
-|İlgili uyarılar|İlgili uyarıları.|  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
-  
-|||  
-|-|-|  
-|[CheckId Uyarıları](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Checkıd tüm uyarıları listeler|  
-|[Şifreleme Uyarıları](../code-quality/cryptography-warnings.md)|Daha güvenli kütüphaneleri ve uygulamaları doğru kullanımı aracılığıyla şifreleme desteği uyarılar.|  
-|[Tasarım Uyarıları](../code-quality/design-warnings.md)|Tarafından belirtilen doğru kitaplık tasarım desteği uyarıları [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] tasarım yönergeleri.|  
-|[Genelleştirme Uyarıları](../code-quality/globalization-warnings.md)|Dünya çapında kullanılmaya hazır kitaplıkları ve uygulamaları desteklemek uyarılar.|  
-|[Birlikte Çalışabilirlik Uyarıları](../code-quality/interoperability-warnings.md)|COM istemcileri ile etkileşimi destekleyen uyarılar.|  
-|[Bakım Uyarıları](../code-quality/maintainability-warnings.md)|Kitaplık ve Uygulama Bakımı destekleyen uyarılar.|  
-|[Hareketlilik Uyarıları](../code-quality/mobility-warnings.md)|Uyarılar verimli güç kullanımını destekler.|  
-|[Adlandırma Uyarıları](../code-quality/naming-warnings.md)|Adlandırma kurallarını kıldığı destekleyen uyarıları [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] tasarım yönergeleri.|  
-|[Performans Uyarıları](../code-quality/performance-warnings.md)|Yüksek performanslı kitaplıkları ve uygulamaları desteklemek uyarılar.|  
-|[Taşınabilirlik Uyarıları](../code-quality/portability-warnings.md)|Farklı platformlar arasında taşınabilirlik destekleyen uyarılar.|  
-|[Güvenilirlik Uyarıları](../code-quality/reliability-warnings.md)|Doğru bellek ve iş parçacığı kullanımı gibi kitaplık ve uygulama güvenilirliğini destekleyen uyarılar.|  
-|[Güvenlik Uyarıları](../code-quality/security-warnings.md)|Bu uyarılar daha güvenli kütüphaneleri ve uygulamaları destekler.|  
-|[Kullanım Uyarıları](../code-quality/usage-warnings.md)|Uygun kullanımını desteklemek uyarıları [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].|  
-|[Kod Çözümleme İlkesi Hataları](../code-quality/code-analysis-policy-errors.md)|Kod Analizi İlkesi iade aşamasında karşılanmıyor, oluşan hataları.|
+Yönetilen Kod Analizi Aracı, yönetilen kod kitaplıklarında kural ihlallerini belirten uyarılar sağlar. Uyarılar, tasarım, yerelleştirme, performans ve güvenlik gibi kural alanlarında düzenlenir. Her uyarı, yönetilen kod analizi kuralının ihlal edildiğini belirtir. Bu bölümde, her bir yönetilen kod analizi uyarısıyla ilgili ayrıntılı tartışmalar ve örnekler sağlanmaktadır.
+
+ Aşağıdaki tabloda her uyarı için belirtilen bilgi türü gösterilmektedir.
+
+|Öğe|Açıklama|
+|----------|-----------------|
+|Tür|Kural için TypeName.|
+|CheckId|Kural için benzersiz tanımlayıcı. CheckId ve Category bir uyarının kaynak üzerinde gizlemesi için kullanılır.|
+|Kategori|Uyarının kategorisi.|
+|Yeni Değişiklik|Kural ihlalinin düzeltilme düzeltmesinin önemli bir değişiklik olup olmadığı. Son değişiklik, ihlale neden olan hedefe bağımlılığı olan bir derlemenin yeni sabit sürümle yeniden derlenmeyeceği veya değişiklik nedeniyle çalışma zamanında başarısız olabileceği anlamına gelir. Birden çok düzeltme kullanılabilir olduğunda ve en az bir düzeltme, Son değişiklik olduğunda ve bir düzeltme yoksa, ' kırılmamış ' ve ' kırılmamış ' seçeneklerinin her ikisi de belirtilir.|
+|Sebep|Kuralın bir uyarı oluşturmasına neden olan özel yönetilen kod.|
+|Açıklama|Uyarının arkasındaki sorunları açıklar.|
+|İhlaller Nasıl Düzeltilir?|Kaynak kodun kuralı karşılamak için nasıl değiştirileceğini ve bir uyarı oluşturmasını engellemesini açıklar.|
+|Uyarılar Bastırıldığında|Kuraldan bir uyarı bastırmasının ne kadar güvenli olduğunu açıklar.|
+|Örnek kod|Kuralı ihlal eden örnekleri ve kuralı karşılayan örnekleri düzeltildi.|
+|İlgili uyarılar|İlgili uyarılar.|
+
+## <a name="in-this-section"></a>Bu Bölümde
+
+|||
+|-|-|
+|[CheckId Uyarıları](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Tüm uyarıları CheckId 'ye göre listeler|
+|[Şifreleme Uyarıları](../code-quality/cryptography-warnings.md)|Şifrelemeyi doğru şekilde kullanarak daha güvenli kitaplıkları ve uygulamaları destekleyen uyarılar.|
+|[Tasarım Uyarıları](../code-quality/design-warnings.md)|@No__t_0 tasarım yönergeleri tarafından belirtilen şekilde doğru kitaplık tasarımını destekleyen uyarılar.|
+|[Genelleştirme Uyarıları](../code-quality/globalization-warnings.md)|Uluslararası kitaplıkları ve uygulamaları destekleyen uyarılar.|
+|[Birlikte Çalışabilirlik Uyarıları](../code-quality/interoperability-warnings.md)|COM istemcileriyle etkileşimi destekleyen uyarılar.|
+|[Bakım Uyarıları](../code-quality/maintainability-warnings.md)|Kitaplığı ve uygulama bakımını destekleyen uyarılar.|
+|[Hareketlilik Uyarıları](../code-quality/mobility-warnings.md)|Verimli güç kullanımını destekleyen uyarılar.|
+|[Adlandırma Uyarıları](../code-quality/naming-warnings.md)|@No__t_0 Tasarım Yönergelerinin adlandırma kurallarına uygunluğunu destekleyen uyarılar.|
+|[Performans Uyarıları](../code-quality/performance-warnings.md)|Yüksek performanslı kitaplıkları ve uygulamaları destekleyen uyarılar.|
+|[Taşınabilirlik Uyarıları](../code-quality/portability-warnings.md)|Farklı platformlarda taşınabilirliği destekleyen uyarılar.|
+|[Güvenilirlik Uyarıları](../code-quality/reliability-warnings.md)|Doğru bellek ve iş parçacığı kullanımı gibi kitaplık ve uygulama güvenilirliğini destekleyen uyarılar.|
+|[Güvenlik Uyarıları](../code-quality/security-warnings.md)|Daha güvenli kitaplıkları ve uygulamaları destekleyen uyarılar.|
+|[Kullanım Uyarıları](../code-quality/usage-warnings.md)|@No__t_0 uygun kullanımı destekleyen uyarılar.|
+|[Kod Çözümleme İlkesi Hataları](../code-quality/code-analysis-policy-errors.md)|Kod Analizi ilkesi iadede karşılanmıyorsa oluşan hatalar.|

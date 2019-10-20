@@ -1,33 +1,33 @@
 ---
-title: 'XML şeması: Graf görünümünden ve içerik modeli görünümünden diyagram yazdırma'
+title: 'XML şeması: grafik görünümünde & Içerik modeli görünümünde diyagramları yazdırma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 7e1785e4-4aaf-4c66-8735-51e7ca035565
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c04b35d0b90de888ad11af0920ddb0cf123638ad
-ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
+ms.openlocfilehash: c4d25ef33e22055ff6e6aa17797fcd0c4dbcb0e4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66820551"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668797"
 ---
-# <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>Nasıl yapılır: Graf görünümünden ve içerik modeli görünümünden diyagram yazdırma
+# <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>Nasıl yapılır: Grafik görünümünden ve Içerik modeli görünümünden diyagram yazdırma
 
-Bu konu, graf görünümünden veya içerik modeli görünümü, XML şema tasarımcısını diyagram yazdırma açıklar.
+Bu konu başlığı altında, XML şema Tasarımcısı ' nın grafik görünümünden veya Içerik modeli görünümünden bir diyagramın nasıl yazdırılacağı açıklanmaktadır.
 
-## <a name="to-print-diagrams-from-the-xml-schema-designer"></a>XML şema Tasarımcısı'ndan diyagramlar yazdırmak için
+## <a name="to-print-diagrams-from-the-xml-schema-designer"></a>XML şema tasarımcısından Diyagramlar yazdırmak için
 
-1. XSD dosyası Visual Studio içinde açın ve bazı düğüm ekleme [XML şema Tasarımcısı çalışma alanı](../xml-tools/xml-schema-designer-workspace.md).
+1. Visual Studio 'da bir XSD dosyası açın ve [XML şeması Tasarımcısı çalışma alanına](../xml-tools/xml-schema-designer-workspace.md)bazı düğümler ekleyin.
 
-2. Diyagram için XPS dosyası kullanarak dışarı **diyagramı görüntü olarak dışa aktar** graf görünümünden ve içerik modeli görünümünü tasarım yüzeyine bağlam (sağ tıklama) menü öğesi.
+2. Grafik görünümü veya Içerik modeli görünümü tasarım yüzeyinde **Diyagramı görüntü bağlamı olarak dışarı aktar** (sağ tıklama) menü öğesini kullanarak DIYAGRAMı bir XPS dosyasına dışarı aktarın.
 
-     Graf görünümünden diyagram verdiğinizde, tüm tasarım yüzeyi için XPS dosyası dışarı aktarılır. Yalnızca ilk düğümü, içerik modeli görünümünden diyagram dışarı aktarma ve birden fazla düğüm için içerik modeli görünümünü'nın tasarım yüzeyinde görünür olduğunda, XPS dosyası olarak dışarı aktarılır.
+     Grafik görünümünden bir diyagramı dışarı aktardığınızda, tasarım yüzeyi tamamı XPS dosyasına dışarı aktarılmalıdır. İçerik modeli görünümünden bir diyagramı dışarı aktardığınızda ve Içerik modeli görünümünün tasarım yüzeyinde birden fazla düğüm göründüğünde, yalnızca ilk düğüm XPS dosyasına dışarı aktarılmalıdır.
 
-3. XPS dosyası olarak kaydedilen resmi XPS Görüntüleyicisi'ni kullanarak yazdırma.
+3. XPS Görüntüleyici kullanarak kaydedilen görüntüyü XPS dosyasına yazdırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

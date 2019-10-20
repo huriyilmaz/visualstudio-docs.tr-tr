@@ -20,17 +20,17 @@ helpviewer_keywords:
 - Visual Studio, call hierarchy window
 - class view
 - object browser
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 616f62110dbaa18d53b4ecc3cade7737f551e5f9
-ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
+ms.openlocfilehash: 0fc7ade360ac586f09eb838057251172be5d0e81
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150120"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647299"
 ---
 # <a name="view-the-structure-of-code-using-different-tool-windows"></a>Farklı araç pencerelerini kullanarak kodun yapısını görüntüleme
 
@@ -85,7 +85,7 @@ Araç çubuğundaki **Sınıf Görünümü ayarları** düğmesi aşağıdaki ay
 |**Tanıma Git**|Öğe açık projede tanımlanmamışsa, kaynak kodundaki veya **nesne tarayıcısı**içindeki öğenin tanımını bulur.|
 |**Tanıma gözatatıon**|**Nesne tarayıcısı**seçili öğeyi görüntüler.|
 |**Tüm başvuruları bul**|Şu anda seçili olan nesne öğesini bulur ve sonuçları **Bul sonuçları** penceresinde görüntüler.|
-|**Türe göre filtrele** (yalnızca yönetilen kod)|Yalnızca seçilen türü veya ad alanını görüntüler. **Bul** kutusunun yanında bulunan **bul** (**X**) düğmesini seçerek filtreyi kaldırabilirsiniz.|
+|**Türe Filtre Uygula** (yalnızca yönetilen kod)|Yalnızca seçilen türü veya ad alanını görüntüler. **Bul** kutusunun yanında bulunan **bul** (**X**) düğmesini seçerek filtreyi kaldırabilirsiniz.|
 |**Kopyala**|Öğenin tam adını kopyalar.|
 |**Alfabetik olarak Sırala**|Türleri ve üyeleri ada göre alfabetik olarak listeler.|
 |**Üye türüne göre sırala**|Türlerine göre sırasıyla türler ve üyeleri listeler (Bu tür sınıfların önüne ve arabirimlerin önüne arabirimler ve yöntemlerin önündeki Yöntemler).|
@@ -119,7 +119,7 @@ Ana bölmede, yöntemine ve yönteminden yapılan çağrılar görüntülenir ve
 |**Tanıma Git**|Bir yöntemin orijinal tanımına gider.|
 |**Tüm başvuruları bul**|Seçili yönteme ait tüm başvuruları projede bulur.|
 |**Kopyala**|Seçili düğümü kopyalar (alt düğümleri değil).|
-|**Yenileme**|Bilgileri yeniler.|
+|**Yenileyebilir**|Bilgileri yeniler.|
 
 ## <a name="BKMK_ObjectBrowser"></a>Nesne Tarayıcısı
 
@@ -202,7 +202,7 @@ Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri a
 |**Hızlı Eylemler ve yeniden düzenlemeler**||
 |**Yeniden Adlandır**||
 |**Ekleme dosyalarının grafiğini oluştur**||
-|**Tanıma göz at**||
+|**Açıklama Özeti**||
 |**Tanıma Git**|Tanımı (veya kısmi sınıflar için tanımları) bulur ve **sonuçları bul** penceresinde görüntüler.|
 |**Bildirime git**||
 |**Tüm başvuruları bul**|Çözümdeki türe veya üyeye başvuruları bulur.|
@@ -211,8 +211,8 @@ Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri a
 |**Testleri Çalıştır**|Projede birim testleri varsa, seçilen kod için testleri çalıştırır.|
 |**Hata ayıklama testleri**||
 |**Ilı**|Bir kesme noktası (veya izleme noktası) ekler.|
-|**İmlece kadar Çalıştır**|Programı hata ayıklama modunda imleç konumuna çalıştırır.|
-|**Kod parçacığı**||
+|**Imlece kadar Çalıştır**|Programı hata ayıklama modunda imleç konumuna çalıştırır.|
+|**Gösterildiği**||
 |**Kes**, **Kopyala**, **Yapıştır**||
 |**Ek Açıklama**||
 |**Anahat Oluşturma**|Standart ana hat komutları.|
