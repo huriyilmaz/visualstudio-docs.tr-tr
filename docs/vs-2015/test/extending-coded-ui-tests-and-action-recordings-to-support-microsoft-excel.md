@@ -6,21 +6,21 @@ ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: 6b0f72a4-70ca-4e55-b236-2ea1034fd8a7
 caps.latest.revision: 32
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6eb44970cc29198ad9044281e566727a64b893c8
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: a48c01203d2e951e917482de3c0d9c2bec29ae01
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871572"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660567"
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>Kodlanmış Kullanıcı Arabirimi Testlerini ve Eylem Kayıtlarını Microsoft Excel'i Desteklemek için Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her kullanıcı arabirimini desteklemez. Test etmek istediğiniz belirli kullanıcı arabirimini desteklemiyor olabilir. Örneğin, bir [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] elektronik tablo için hemen kodlanmış UI testi veya eylem kaydı oluşturamazsınız. Ancak, kodlanmış UI test çerçevesinin genişletilebilirliğine katılarak, kodlanmış UI test çerçevesi için kendi uzantınızı oluşturabilirsiniz. Aşağıdaki konu, için [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]kodlanmış UI testleri ve eylem kayıtlarının oluşturulmasını desteklemek için çerçevesini genişletmenin bir örneğini vermektedir. Desteklenen platformlar hakkında daha fazla bilgi için bkz. [KODLANMıŞ UI testleri ve eylem kayıtları Için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).
+Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her kullanıcı arabirimini desteklemez. Test etmek istediğiniz belirli kullanıcı arabirimini desteklemiyor olabilir. Örneğin, [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] bir elektronik tablo için hemen kodlanmış UI testi veya eylem kaydı oluşturamazsınız. Ancak, kodlanmış UI test çerçevesinin genişletilebilirliğine katılarak, kodlanmış UI test çerçevesi için kendi uzantınızı oluşturabilirsiniz. Aşağıdaki konu, [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] için kodlanmış UI testleri ve eylem kayıtları oluşturmayı desteklemek üzere Framework 'ü genişletmeye yönelik bir örnek vermektedir. Desteklenen platformlar hakkında daha fazla bilgi için bkz. [KODLANMıŞ UI testleri ve eylem kayıtları Için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).
 
- **Gereksinimler**
+ **Requirements**
 
 - Visual Studio Enterprise
 
@@ -28,8 +28,8 @@ Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her 
 
   ![UI test mimarisi](../test/media/ui-testarch.png "UI_TestArch") Mimariye genel bakış
 
-## <a name="download-the-sample"></a>Örneği indirme
- Örnek, `CodedUIExtensibilitySample.sln` çözümdeki dört projeden oluşur:
+## <a name="download-the-sample"></a>Örneği indirin
+ Örnek, `CodedUIExtensibilitySample.sln` çözümünde dört projeden oluşur:
 
 - CodedUIextensibilitySample
 
@@ -50,22 +50,22 @@ Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her 
 ### <a name="microsoft-excel-add-in-excelcodeduiaddinhelper"></a>Microsoft Excel eklentisi: ExcelCodedUIAddinHelper
  Bu proje, Excel işleminde çalışan bir eklenti içerir. Eklenti projesine kısa bir genel bakış için bkz. [KODLANMıŞ UI testi Için örnek Excel eklentisi](../test/sample-excel-add-in-for-coded-ui-testing.md) .
 
- Daha fazla bilgi için bkz [. İzlenecek yol: Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)Için ilk VSTO eklentisi oluşturuluyor.
+ Daha fazla bilgi için bkz. [Izlenecek yol: Excel Için Ilk VSTO eklentisini oluşturma](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f).
 
 ### <a name="excel-ui-communication-exceluicommunicationhelper"></a>Excel UI iletişimi: Exceluıicommunicationhelper
- Bu proje, kodlanmış `IExcelUICommunication` UI test çerçevesi ve Excel arasında veri geçirmek için kullanılan arabirimi ve bilgi sınıflarını içerir. Daha fazla bilgi için bkz. [örnek Excel Communicator Arabirimi](../test/sample-excel-communicator-interface.md).
+ Bu proje, kodlanmış UI test çerçevesi ve Excel arasında veri geçirmek için kullanılan `IExcelUICommunication` arabirimini ve bilgi sınıflarını içerir. Daha fazla bilgi için bkz. [örnek Excel Communicator Arabirimi](../test/sample-excel-communicator-interface.md).
 
-### <a name="coded-ui-test-extension-codeduiexentsibilitysample"></a>Kodlanmış UI testi uzantısı: CodedUIExentsibilitySample
+### <a name="coded-ui-test-extension-codeduiexentsibilitysample"></a>Kodlanmış UI test uzantısı: CodedUIExentsibilitySample
  Bu proje, bir Excel çalışma sayfası testlerinde kullanılan özel sınıfları içerir. Bu sınıfların her biri için kod oldukça kendi kendine açıklayıcıdır. Ancak, her bir özel sınıfın kısa bir açıklamasını sağlıyoruz. Daha fazla bilgi için bkz. [Excel Için örnek KODLANMıŞ UI testi uzantısı](../test/sample-coded-ui-test-extension-for-excel.md).
 
 ### <a name="deploying-your-add-in-and-extension"></a>Eklentiyi ve uzantınızı dağıtma
- Tüm projeleri ve nesneleri oluşturduktan sonra, sağlanmış `CopyDrop.bat` dosyayı yönetici olarak çalıştırın. Bu dosya `ExcelCodedUIAddinHelper` dll ve PDB dosyalarını şu şekilde kopyalar:
+ Tüm projeleri ve nesneleri oluşturduktan sonra, sağlanmış `CopyDrop.bat` dosyasını yönetici olarak çalıştırın. Bu dosya, `ExcelCodedUIAddinHelper` DLL ve PDB dosyalarını şu şekilde kopyalar:
 
- "`%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*`", sürüm numarası 11,0, 12,0, Visual Studio sürümünüzü temel alır.
+ "`%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*`"; burada sürüm numarası, Visual Studio sürümünüze bağlı olarak 11,0, 12,0 olabilir.
 
- DLL ve pdb dosyaları ' ye `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”`kopyalanır. `ExcelUICommunicationHelper`
+ @No__t_0 DLL ve PDB dosyaları `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”` kopyalanır.
 
- Tam kopyalama yollarını ayarlamanız gerekebilir, ancak ek yükleme gerekmez. 64 bitlik bir makinede, `CopyDrop.bat` dosyayı çalıştırmak için 32-bit Visual Studio Enterprise komut istemi ' ni kullanın.
+ Tam kopyalama yollarını ayarlamanız gerekebilir, ancak ek yükleme gerekmez. 64 bit makinede, `CopyDrop.bat` dosyasını çalıştırmak için 32-bit Visual Studio Enterprise komut istemi ' ni kullanın.
 
 ### <a name="testing-excel-with-the-sampletestproject"></a>SampleTestProject ile Excel 'i test etme
  Excel 'in sahip olmadığınız belirli bir sürümünü kullanan belirtilen test projesinde testi çalıştırabilir ya da kendi test projenizi oluşturabilir ve kendi test projenize bir test kaydedebilirsiniz. Daha fazla bilgi için bkz. [KODLANMıŞ UI testleri oluşturma](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate).

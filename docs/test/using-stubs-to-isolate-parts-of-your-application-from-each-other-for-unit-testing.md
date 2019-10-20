@@ -1,43 +1,43 @@
 ---
-title: Test için uygulamanızın parçalarını yalıtmak üzere saplamalar kullanma
+title: Uygulama parçalarını test için yalıtmak üzere saplamalar kullanma
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
+author: jillre
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: b88905df0c99eb66c64e529610d6713801fceece
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: cbb47e07bbe3697f905a28d9771cf55fe6fcc74c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401713"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659733"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma
 
-*Saplama türleri* Microsoft Fakes çerçevesi çağıran başka bir bileşenden test ettiğiniz bir bileşen kolayca ayırmanıza olanak sağlayan iki teknoloji biridir. Bir saplama test sırasında başka bir bileşenin yer aldığı kodun küçük bir parçasıdır. Bir saplama kullanmanın faydası testi yazmanızı kolaylaştırması, tutarlı sonuçlar döndürmesidir. Ve diğer bileşenleri henüz çalışmıyor olsa bile, testleri çalıştırabilirsiniz.
+*Saplama türleri* , Microsoft Fakes çerçevesinin, çağırdığı diğer bileşenlerden test ettiğiniz bir bileşeni kolayca ayırmanızı sağlamak için sağladığı iki teknolojiden biridir. Bir saplama test sırasında başka bir bileşenin yer aldığı kodun küçük bir parçasıdır. Bir saplama kullanmanın faydası testi yazmanızı kolaylaştırması, tutarlı sonuçlar döndürmesidir. Ve diğer bileşenleri henüz çalışmıyor olsa bile, testleri çalıştırabilirsiniz.
 
-Fakes kılavuzuna genel bakış ve hızlı başlangıç için bkz: [Microsoft Fakes ile test edilen kodu yalıtmanıza](../test/isolating-code-under-test-with-microsoft-fakes.md).
+Fakes 'e genel bakış ve hızlı başlangıç kılavuzu için bkz. [Microsoft Fakes ile test edilen kodu yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md).
 
 Saptamalar kullanmak için bileşen yazmalısınız böylece sınıfları değil uygulamanın başka bölümüne başvuran yalnızca arabirimleri kullanır. Diğer bölüme nazaran daha az değişiklik gerektiren bir bölümde değişiklik yaptığından bu iyi bir tasarım uygulamasıdır. Test etmek için gerçek bir bileşen yerine saplama kullanmanıza olanak tanır.
 
 Diyagramda, StockAnalyzer bileşeni test etmek istediğimiz bir bileşendir. Normal olarak, başka bir bileşen, RealStockFeed kullanır. Ancak RealStockFeed her defasında StockAnalyzer test etmeyi zorlaştıran yöntemlerinin çağırdığı farklı sonuçlar döndürür.  Sınama sırasında StubStockFeed gibi farklı bir sınıf ile değiştiririz.
 
-![Gerçek ve saplama sınıfları bir arabirime uygun.](../test/media/fakesinterfaces.png)
+![Gerçek ve saplama sınıfları bir arabirimle uyumlu.](../test/media/fakesinterfaces.png)
 
-Saplamalar bu yolla kodunuzun yapısına güveneceğinden genellikle saplamaları başka bir uygulamanın bir bölümünü ayırmak için kullanırsınız. Denetiminiz altında gibi olmayan diğer derlemelerden yalıtmak üzere *System.dll*, normal olarak dolgu verileri kullanabilirsiniz. Bkz: [uygulamanızı birim testi için diğer derlemelerden yalıtmak üzere dolgular kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
+Saplamalar bu yolla kodunuzun yapısına güveneceğinden genellikle saplamaları başka bir uygulamanın bir bölümünü ayırmak için kullanırsınız. Bunu, denetiminizin altında olmayan, örneğin *System. dll*gibi diğer derlemelerden yalıtmak için normalde shims kullanırsınız. [Birim testi için uygulamanızı diğer derlemelerden yalıtmak için bkz. dolgular kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
 
 ## <a name="how-to-use-stubs"></a>Saptamalar nasıl kullanılır?
 
 ### <a name="design-for-dependency-injection"></a>Tasarım için bağımlılık ekleme
 
-Saptamaları kullanmak için uygulamanızın farklı bileşenlerini değil birbirlerine bağımlı ancak arabirim tanımlarının yalnızca bağımlı olmasını sağlamak için tasarlanır. Derleme zamanında bağlanmak yerine, bileşenler çalışma zamanında bağlıdır. Bu model yazılımın güncellemesinin güçlü ve kolay yapılmasına yardımcı olur çünkü değişiklikler bileşen sınırları boyunca yayılmaz. Saptamaları kullanmasanız bile bunu öneririz. Yeni kod yazıyorsanız, bunu izlemek kolaydır [bağımlılık ekleme](http://en.wikipedia.org/wiki/Dependency_injection) deseni. Varolan yazılım için testler yazıyorsanız, yeniden düzenlemeniz gerekebilir. Pratik olursa, yerine dolgu verileri kullanmayı düşünebilirsiniz.
+Saptamaları kullanmak için uygulamanızın farklı bileşenlerini değil birbirlerine bağımlı ancak arabirim tanımlarının yalnızca bağımlı olmasını sağlamak için tasarlanır. Derleme zamanında bağlanmak yerine, bileşenler çalışma zamanında bağlıdır. Bu model yazılımın güncellemesinin güçlü ve kolay yapılmasına yardımcı olur çünkü değişiklikler bileşen sınırları boyunca yayılmaz. Saplamalar kullanmıyor olsanız bile bunu yapmanızı öneririz. Yeni kod yazıyorsanız, [bağımlılık ekleme](http://en.wikipedia.org/wiki/Dependency_injection) düzeninin izlenmesi kolaydır. Varolan yazılım için testler yazıyorsanız, yeniden düzenlemeniz gerekebilir. Pratik olursa, yerine dolgu verileri kullanmayı düşünebilirsiniz.
 
-Bu tartışma bir diyagramdaki motive edici temel bir örnekle başlayalım. Sınıf StockAnalyzer fiyatları paylaşmayı okur ve bazı ilginç sonuçlar üretir. Test etmek istediğimiz bazı ortak yöntemler vardır. Örneği basit tutmak için yalnızca, belirli bir paylaşımın geçerli fiyatını raporlayan basit bir tane olmak üzere bu yöntemlerden birini bakalım. Bu yöntemin bir birim testini yazmak istiyoruz. Bir testin ilk taslağı aşağıdadır:
+Bu tartışmayı diyagramda bir mücadele örneği ile başlaalım. Sınıf StockAnalyzer fiyatları paylaşmayı okur ve bazı ilginç sonuçlar üretir. Test etmek istediğimiz bazı ortak yöntemler vardır. Şeyleri basit tutmak için, belirli bir paylaşımın geçerli fiyatını raporlayan çok basit bir yöntem olan bu yöntemlerden birine göz atalım. Bu yöntemin bir birim testini yazmak istiyoruz. Bir testin ilk taslağı aşağıda verilmiştir:
 
 ```csharp
 [TestMethod]
@@ -65,7 +65,7 @@ End Sub
 
 Bu test ile ilgili hemen açık bir sorun: paylaşım fiyatları farklılık gösterir ve bu nedenle onaylama işlemi genellikle başarısız olur.
 
-StockAnalyzer tarafından kullanılan hala geliştirilmekte olan StockFeed bileşeninde başka bir sorun olabilir. Test altındaki yöntem kodunun ilk taslağı aşağıdadır:
+StockAnalyzer tarafından kullanılan hala geliştirilmekte olan StockFeed bileşeninde başka bir sorun olabilir. Test edilen yöntemin ilk taslağı aşağıda verilmiştir:
 
 ```csharp
 public int GetContosoPrice()
@@ -84,13 +84,13 @@ End Function
 
 Anlaşıldığı gibi bu yöntem, derleme veya StockFeed sınıf çalışmaları henüz tam olmadığı için özel bir durum fırlatabilir. Arabirim ekleme her iki sorunu giderir. Arabirim eklemeye aşağıdaki kural uygulanır:
 
-Uygulamanızı herhangi bir bileşeninin kodu asla açıkça bir bildirim veya başka bir bileşendeki bir sınıfa başvurmalıdır bir `new` deyimi. Bunun yerine, değişkenler ve parametreler arabirimleriyle bildirilmesi gerekir. Bileşen örnekleri yalnızca bileşen kapsayıcı tarafından oluşturulmalıdır.
+Uygulamanızın herhangi bir bileşeninin kodu, bir bildirimde veya `new` bildiriminde, başka bir bileşen içindeki bir sınıfa asla açıkça başvurmamalıdır. Bunun yerine, değişkenler ve parametreler arabirimleriyle bildirilmesi gerekir. Bileşen örnekleri yalnızca bileşenin kapsayıcısı tarafından oluşturulmalıdır.
 
-- "Bileşeni tarafından", bir sınıf veya geliştirdiğiniz ve birlikte güncelleştirdiğiniz sınıflar grubu demek isteriz. Genellikle, bir bileşen Visual Studio projesindeki koddur. Aynı zamanda güncelleştirildiğinden sınıfları bir bileşen içinde ayırmak daha az önemlidir.
+- "Bileşen" olarak, bir sınıf veya geliştirmekte ve güncelleştirmekte olduğunuz bir sınıf grubu anlamına geliyor. Genellikle, bir bileşen Visual Studio projesindeki koddur. Aynı anda güncelleştirildiğinden, sınıfları bir bileşen içinde ayırmak daha az önemlidir.
 
-- Ayrıca bileşenlerinizi göreceli olarak tutarlı platform sınıflardan ayırmak çok gibi önemli değildir *System.dll*. Bu sınıfların arabirimlerini yazmak kodunuzu dağıtabilir.
+- Ayrıca, bileşenlerinizi *System. dll*gibi görece sağlam bir platformun sınıflarından ayırmak önemli değildir. Bu sınıfların arabirimlerini yazmak kodunuzu dağıtabilir.
 
-StockAnalyzer kodu, StockFeed böyle bir arabirim kullanarak ayrıştırmak:
+Aşağıdaki gibi bir arabirim kullanarak StockAnalyzer kodunu StockFeed ' dan ayırarak kullanabilirsiniz:
 
 ```csharp
 public interface IStockFeed
@@ -139,7 +139,7 @@ Bu bağlantıyı gerçekleştirmede daha esnek bir yol vardır. Örneğin, Stock
 
 ### <a name="generate-stubs"></a>Saptamalar oluştur
 
-Bunu kullanan başka bir bileşenden test etmek istediğiniz sınıfı ayırdınız. Uygulama yapmanın yanı sıra güçlü ve esnek, bağlantıyı kesmenize izin veren bileşen arayüzlerinin test amaçlı uygulamalarını saptama testteki bağlanmanıza olanak sağlar.
+Test etmek istediğiniz sınıfı, kullandığı diğer bileşenlerden ayırdık. Uygulama yapmanın yanı sıra güçlü ve esnek, bağlantıyı kesmenize izin veren bileşen arayüzlerinin test amaçlı uygulamalarını saptama testteki bağlanmanıza olanak sağlar.
 
 Her zamanki şekilde sınıflar gibi saptamaları basitçe yazabilirsiniz. Ancak Microsoft Fakes her test için en uygun saptama oluşturmak için daha dinamik bir yol sağlar.
 
@@ -147,13 +147,13 @@ Saptamalar kullanmak için saptama türleri arabirimi tanımlarından oluşturma
 
 #### <a name="add-a-fakes-assembly"></a>Fakes derlemesi Ekle
 
-1. İçinde **Çözüm Gezgini**, birim test projesinin genişletin **başvuruları**.
+1. **Çözüm Gezgini**, birim testi projenizin **başvurularını**genişletin.
 
-   Visual Basic'te çalışıyorsanız seçin **tüm dosyaları göster** içinde **Çözüm Gezgini** görmek için araç **başvuruları** düğümü.
+   Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
 
 2. Saptamaları oluşturmak istediğiniz arabirim tanımlarını içeren derlemeyi seçin.
 
-3. Kısayol menüsünde **Fakes derlemesi Ekle**.
+3. Kısayol menüsünde **Fakes derlemesi Ekle**' yi seçin.
 
 ### <a name="write-your-test-with-stubs"></a>Saptamalarla test yazma
 
@@ -212,7 +212,7 @@ Class TestStockAnalyzer
 End Class
 ```
 
-Özel sihir parçası burada sınıftır `StubIStockFeed`. Başvurulan derlemedeki her genel tür için Microsoft Fakes mekanizması saptama sınıfı oluşturur. Saplama sınıfının adı ile arabirimin adından türetilir olan "`Fakes.Stub`" ön ek ve parametre türü adları eklenir.
+Burada Magic 'in özel parçası `StubIStockFeed` sınıftır. Başvurulan derlemedeki her genel tür için Microsoft Fakes mekanizması saptama sınıfı oluşturur. Saplama sınıfının adı, arabirimin adından türetilir, ön ek olarak "`Fakes.Stub`" ve parametre türü adları eklenir.
 
 Saptamalar ayrıca olaylar ve genel yöntemlerle ilgili olarak özellik okuyucu ve ayarlayıcılar için oluşturulur.
 
@@ -294,7 +294,7 @@ End Class
 
 ### <a name="methods"></a>Yöntemler
 
-Örnekte açıklandığı gibi yöntemler saptama sınıfının bir örneği için temsilci ekleyerek tamamlanmamış. Saptama türünün adı yöntemi ve parametreleri adlarından türetilir. Örneğin, aşağıda verilen `IMyInterface` arabirimi ve yöntem `MyMethod`:
+Örnekte açıklandığı gibi yöntemler saptama sınıfının bir örneği için temsilci ekleyerek tamamlanmamış. Saptama türünün adı yöntemi ve parametreleri adlarından türetilir. Örneğin, aşağıdaki `IMyInterface` arabirimi ve yöntemi `MyMethod` verilmiştir:
 
 ```csharp
 // application under test
@@ -304,7 +304,7 @@ interface IMyInterface
 }
 ```
 
-Biz eklemek için bir saplama `MyMethod` her zaman 1 döndüren:
+Her zaman 1 döndüren `MyMethod` için bir saplama ekledik:
 
 ```csharp
 // unit test code
@@ -312,11 +312,11 @@ var stub = new StubIMyInterface ();
 stub.MyMethodString = (value) => 1;
 ```
 
-Bir işlev için saptama belirtmezseniz, Fakes dönüş türünün varsayılan değerini döndüren bir işlev oluşturur. Sayılar için varsayılan değer 0'dır ve bu sınıf türleri için `null` (C#) veya `Nothing` (Visual Basic).
+Bir işlev için saplama sağlamazsanız, Fakes, dönüş türünün varsayılan değerini döndüren bir işlev oluşturur. Sayılar için varsayılan değer 0 ' dır ve sınıf türleri için `null` (C#) veya `Nothing` (Visual Basic).
 
 ### <a name="properties"></a>Özellikler
 
-Özellik alıcılar ve ayarlayıcılar, ayrı temsilciler olarak sunulur ve ayrı ayrı saptanmış olabilirler. Örneğin, düşünün `Value` özelliği `IMyInterface`:
+Özellik alıcılar ve ayarlayıcılar, ayrı temsilciler olarak sunulur ve ayrı ayrı saptanmış olabilirler. Örneğin, `IMyInterface` `Value` özelliğini göz önünde bulundurun:
 
 ```csharp
 // code under test
@@ -326,7 +326,7 @@ interface IMyInterface
 }
 ```
 
-Alıcı ve ayarlayıcısına temsilcileri ekleyin `Value` otomatik özellik benzetimi yapmak için:
+Otomatik özelliğin benzetimini yapmak için `Value` alıcı ve ayarlayıcısına temsilciler iliştirdik:
 
 ```csharp
 // unit test code
@@ -336,11 +336,11 @@ stub.ValueGet = () => i;
 stub.ValueSet = (value) => i = value;
 ```
 
-Ayarlayıcı veya özellik alıcısı için saptama yöntemleri belirtmezseniz, Fakes saptama özelliği gibi basit bir değişken çalışmasını değerleri saklayan bir saptama oluşturur.
+Bir özelliğin ayarlayıcısı ya da alıcısı için saplama yöntemleri sağlamazsanız, Fakes, saplama özelliğinin basit bir değişken gibi çalışması için değerleri depolayan bir saplama oluşturur.
 
 ### <a name="events"></a>Olaylar
 
-Olaylar, temsilci alanları olarak sunulur. Sonuç olarak herhangi bir saptama olayı, olay yedekleme alanını çağırarak basitçe yükseltilebilir. Şimdi saptama için yandaki arayüzü göz önünde bulundurun:
+Olaylar, temsilci alanları olarak sunulur. Sonuç olarak herhangi bir saptama olayı, olay yedekleme alanını çağırarak basitçe yükseltilebilir. Saplama için aşağıdaki arabirimi ele alalım:
 
 ```csharp
 // code under test
@@ -350,7 +350,7 @@ interface IWithEvents
 }
 ```
 
-Yükseltmek için `Changed` olay, biz sadece yedekleme temsilcisini çağırır:
+@No__t_0 olayını yükseltmek için, yalnızca yedekleme temsilcisini çağırdık:
 
 ```csharp
 // unit test code
@@ -361,7 +361,7 @@ Yükseltmek için `Changed` olay, biz sadece yedekleme temsilcisini çağırır:
 
 ### <a name="generic-methods"></a>Genel yöntemler
 
-Yöntemin istenen her örneklemesi için temsilci sağlayarak genel yöntemleri saptamak mümkündür. Örneğin, aşağıda verilen arayüz genel yöntem içerir:
+Yöntemin her istenen örneği için bir temsilci sağlayarak genel yöntemleri saplama mümkündür. Örneğin, aşağıda verilen arayüz genel yöntem içerir:
 
 ```csharp
 // code under test
@@ -371,7 +371,7 @@ interface IGenericMethod
 }
 ```
 
-Test Saplamaları yazabilirsiniz `GetValue<int>` örnek oluşturma:
+@No__t_0 örneğini oluşturan bir test yazabilirsiniz:
 
 ```csharp
 // unit test code
@@ -386,7 +386,7 @@ public void TestGetValue()
 }
 ```
 
-Kod çağırıyorsa `GetValue<T>` diğer oluşturma ile saplama basitçe davranışı çağıracaktır.
+Kod, başka bir örneklemeyle `GetValue<T>` çağırırdı, saplama yalnızca davranışı çağırır.
 
 ### <a name="stubs-of-virtual-classes"></a>Sanal sınıf saptamaları
 
@@ -404,7 +404,7 @@ Kod çağırıyorsa `GetValue<T>` diğer oluşturma ile saplama basitçe davran�
     }
 ```
 
-Bu sınıftan üretilen yer için temsilci yöntemleri ayarlayabilirsiniz `DoAbstract()` ve `DoVirtual()`, ama `DoConcrete()`.
+Bu sınıftan oluşturulan saplamaya, `DoAbstract()` ve `DoVirtual()` için temsilci yöntemleri ayarlayabilir, ancak `DoConcrete()` kullanamazsınız.
 
 ```csharp
 // unit test
@@ -413,7 +413,7 @@ Bu sınıftan üretilen yer için temsilci yöntemleri ayarlayabilirsiniz `DoAbs
   stub.DoVirtualInt32 = (n) => 10 ;
 ```
 
-Sanal bir yöntem için temsilci belirtmezseniz, Fakes ya da varsayılan davranışı sağlayabilir veya temel sınıf yöntemi çağırabilirsiniz. Adı verilen temel yöntemi için ayarlanmış `CallBase` özelliği:
+Sanal bir yöntem için temsilci belirtmezseniz, Fakes ya da varsayılan davranışı sağlayabilir veya temel sınıf yöntemi çağırabilirsiniz. Temel yöntemin çağrılması için `CallBase` özelliğini ayarlayın:
 
 ```csharp
 // unit test code
@@ -427,21 +427,21 @@ stub.CallBase = true;
 Assert.AreEqual(43,stub.DoVirtual(1));
 ```
 
-## <a name="debug-stubs"></a>Hata ayıklama saptamaları
+## <a name="debug-stubs"></a>Hata ayıklama saplamaları
 
 Saptama türleri, yumuşak bir hata ayıklama deneyimini sağlamak üzere tasarlanmıştır. Varsayılan olarak, hata ayıklayıcı herhangi oluşturulan bir kod üzerinde adım adım ilerler, bu nedenle saptamaya eklenmiş olan özel üye uygulamalarının içine doğrudan atlar.
 
 ## <a name="stub-limitations"></a>Saptama sınırlamaları
 
-- İşaretçilerle birlikte yöntem imzaları desteklenmez.
+- İşaretçilerle yöntem imzaları desteklenmez.
 
-- Çünkü saptama türü sanal yöntem gönderimine dayanır, sınıfları veya statik yöntemleri saptanmamalı. Bölümünde açıklandığı gibi durumlarda Shim/dolgu türlerini kullanın [uygulamanızı birim testi için diğer derlemelerden yalıtmak üzere dolgular kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)
+- Saplama türleri sanal yöntem gönderimi kullandığından Sealed sınıflar veya statik yöntemler saplaması olamaz. Bu tür durumlarda, [birim testi için uygulamanızı diğer derlemelerden yalıtmak üzere](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) dolgu türlerini, parça kullanma bölümünde açıklandığı şekilde kullanın
 
-## <a name="change-the-default-behavior-of-stubs"></a>Saptamaların varsayılan davranışını değiştirme
+## <a name="change-the-default-behavior-of-stubs"></a>Saplamalarının varsayılan davranışını değiştirme
 
-Her üretilen saptama türü bir örneğini tutan `IStubBehavior` arabirimi (aracılığıyla `IStub.InstanceBehavior` özelliği). Hiç eklenmemiş özel temsilci ile üye istemci çağrıları olarak adlandırılır. Davranış ayarlanmamışsa, tarafından döndürülen örneği kullanır. `StubsBehaviors.Current` özelliği. Varsayılan olarak, bu özellik atan bir davranış döndürür. bir `NotImplementedException` özel durum.
+Oluşturulan her saplama türü `IStubBehavior` arabiriminin bir örneğini tutar (`IStub.InstanceBehavior` özelliği aracılığıyla). Hiç eklenmemiş özel temsilci ile üye istemci çağrıları olarak adlandırılır. Davranış ayarlanmamışsa, `StubsBehaviors.Current` özelliği tarafından döndürülen örneği kullanır. Varsayılan olarak, bu özellik `NotImplementedException` özel durumu oluşturan bir davranış döndürür.
 
-Davranış ayarlayarak herhangi bir zamanda değiştirilebilir `InstanceBehavior` herhangi bir saptamadaki özelliği. Örneğin, aşağıdaki kod parçacığı, hiçbir şey yapmaz veya dönüş türünün varsayılan değerini döndürür olarak davranışı değiştirir: `default(T)`:
+Herhangi bir saplama örneğindeki `InstanceBehavior` özelliği ayarlanarak davranış herhangi bir zamanda değiştirilebilir. Örneğin, aşağıdaki kod parçacığı hiçbir şey yapan veya dönüş türünün varsayılan değerini döndüren bir davranışı değiştirir: `default(T)`:
 
 ```csharp
 // unit test code
@@ -450,7 +450,7 @@ var stub = new StubIFileSystem();
 stub.InstanceBehavior = StubsBehaviors.DefaultValue;
 ```
 
-Tüm saptama nesneleri için davranışı ayarlanmamış ayarlayarak davranışı ayrıca genel olarak değiştirilebilir `StubsBehaviors.Current` özelliği:
+Davranış, `StubsBehaviors.Current` özelliği ayarlanarak davranışın ayarlanmayan tüm saplama nesneleri için genel olarak da değiştirilebilir:
 
 ```csharp
 // Change default behavior for all stub instances
@@ -460,4 +460,4 @@ StubBehaviors.Current = BehavedBehaviors.DefaultValue;
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Microsoft Fakes ile test edilen kodu Ayır](../test/isolating-code-under-test-with-microsoft-fakes.md)
+- [Microsoft Fakes ile test edilen kodu yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md)

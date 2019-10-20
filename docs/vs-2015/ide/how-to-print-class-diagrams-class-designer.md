@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Sınıf Tasarımcısı) sınıf diyagramlarını yazdırma | Microsoft Docs'
+title: 'Nasıl yapılır: sınıf diyagramlarını yazdırma (Sınıf Tasarımcısı) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,29 +9,28 @@ helpviewer_keywords:
 - class diagrams, printing
 ms.assetid: 62c87425-3446-41fb-943c-1f86397883c8
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 98ee448c7e8bd2429f575aeb022a2a12e943bc1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 318ae5314fe8a33e2c421c9532dafc08ceee3ca6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68144909"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651759"
 ---
-# <a name="how-to-print-class-diagrams-class-designer"></a>Nasıl yapılır: Sınıf Diyagramlarını Yazdırma (Sınıf Tasarımcısı)
+# <a name="how-to-print-class-diagrams-class-designer"></a>Nasıl Yapılır: Sınıf Diyagramlarını Yazdırma (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio yazdırma özelliğini kullanarak bir sınıf diyagramı yazdırabilir.  
-  
-### <a name="to-print-a-class-diagram"></a>Bir sınıf diyagramı'ı yazdırmak için  
-  
-1. Sınıf diyagramı görüntüler. (Gerekirse görüntülemek için sınıf diyagramı sekmesini seçin.)  
-  
-2. Tıklayın **yazdırma** üzerinde **dosya** menüsü.  
-  
-     Tüm sınıf diyagramına yazdırır. Uygun bir boyutta yazdırmak için Sayfa Yapısı iletişim kutusundaki ayarları ayarlamanız gerekebilir unutmayın.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Bir (Sınıf Tasarımcısı) Microsoft Office belgesine sınıf diyagramı öğeleri kopyalama](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md)   
- [Nasıl yapılır: Sınıf Diyagramlarını Görüntü Olarak Dışarı Aktarma (Sınıf Tasarımcısı)](../ide/how-to-export-class-diagrams-as-images-class-designer.md)
+Visual Studio 'nun Print özelliğini kullanarak bir sınıf diyagramını yazdırabilirsiniz.
+
+### <a name="to-print-a-class-diagram"></a>Bir sınıf diyagramını yazdırmak için
+
+1. Sınıf diyagramını görüntüleyin. (Gerekirse, göstermek için sınıf diyagramı sekmesini seçin.)
+
+2. **Dosya** menüsünde **Yazdır** ' a tıklayın.
+
+     Tüm sınıf diyagramı yazdırılır. Uygun boyutta yazdırmak için sayfa yapısı Iletişim kutusundaki ayarları ayarlamanız gerekebileceğini unutmayın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl yapılır: Microsoft Office belgeye sınıf diyagramı öğeleri kopyalama (sınıf Tasarımcısı)](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md) [nasıl yapılır: sınıf diyagramlarını görüntü olarak dışarı aktarma (sınıf Tasarımcısı)](../ide/how-to-export-class-diagrams-as-images-class-designer.md)

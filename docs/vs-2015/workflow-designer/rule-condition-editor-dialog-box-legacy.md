@@ -1,5 +1,5 @@
 ---
-title: Kural Koşulu Düzenleyicisi iletişim kutusu (eski) | Microsoft Docs
+title: Kural koşulu Düzenleyicisi Iletişim kutusu (eski) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -10,82 +10,76 @@ helpviewer_keywords:
 - Rule Condition dialog box
 ms.assetid: c7ca8be9-de31-4a64-939c-4d53a50d5e29
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8237c8e29007d010cd99e4323bf8e88a23b7e9fb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 93aef1e4466bd88d87ebce71161dcd1665178317
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006833"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663347"
 ---
 # <a name="rule-condition-editor-dialog-box-legacy"></a>Kural Koşulu Düzenleyicisi İletişim Kutusu (Eski)
-Bu konu açıklar nasıl **Kural Koşulu Düzenleyicisi** eski iletişim kutusunda [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- Kullanarak bildirim temelli bir kural koşulları oluşturup **Kural Koşulu Düzenleyicisi** iletişim kutusu. Bu kural koşulları, aşağıdaki Windows Workflow Foundation out-of-box etkinlikleri özellikleri olarak sunulur:  
-  
-- [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)  
-  
-- [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)  
-  
-- [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)  
-  
-- [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)  
-  
-- [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040)  
-  
-- [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)  
-  
-  Size erişim **Kural Koşulu Düzenleyicisi** iletişim kutusunu kullanarak [seçin koşul iletişim kutusu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md).  
-  
-  Aşağıdaki tabloda kullanıcı arabirimi (UI) öğelerini açıklar **Kural Koşulu Düzenleyicisi** iletişim kutusu.  
-  
-|Arabirim Öğesi|Açıklama|  
-|----------------|-----------------|  
-|**Koşul:**|Kural koşulu için ifade girin.|  
-|**TAMAM**|Kural koşulu kaydetmek için tıklatın.|  
-  
-## <a name="entering-condition-expressions"></a>Koşul ifadeleri girme  
- Koşul ifadeleri, metin olarak girilir. Yazabilirsiniz **bu.** alanlar, özellikler ve iş akışında kullanılan yöntemleri başvurmak için düzenleyicide yerleşik bir IntelliSense benzeri menüsünü kullanarak. Veya doğrudan bir iş akışı üye adı yazın. Mantıksal işleçler AND, OR'gibi bir koşul ekleyebilirsiniz ve değil. Koşullar da ekleyebilirsiniz. Bir ikili işleç ve iki işlenenden koşuldur. Desteklenen ikili işleçler **==** , **>** , **\<** , **>=** , ve **<=** . Desteklenen işlenenler şunlardır: sabit değer, aritmetik işlevi ve kapsamlı bir genel üyeler.  
-  
- Karşılaştırma türü belirtebilir ve'karşılaştırabilirsiniz **null** ya da boş bir dize. Örneğin, bir karmaşık tür içeren bir değişken üzerinde iç içe geçmiş çağrıları üyelerine yapabileceğiniz `this.Address.State == "WA"`.  
-  
- Kural Koşulu Düzenleyicisi aşağıdaki işleçleri destekler:  
-  
-- İlişkisel işleçleri: ==, =,! =  
-  
-- Karşılaştırma işleçleri: <, \<=, >, > =  
-  
-- Aritmetik işleçler: +, -, *, /, MOD  
-  
-- Mantıksal işleçler: VE &AMP; &AMP;, OR &AMP;#124; &AMP;#124;DEĞİL,!  
-  
-- Bit düzeyinde işleçler: &,&#124;  
-  
-  İfadenin İşleç önceliği, C# İşleç önceliği kurallarını izler.  
-  
-  Kural Koşulu Düzenleyicisi aşağıdaki sayısal ifadeler destekler:  
-  
-  this.i == 1 D (1.0 çözümler)  
-  
-  this.i 1E1 == (10.0 için çözümler)  
-  
-  this.i == 1 L (çözümler uzun olarak)  
-  
-  this.i == 1 M (ondalık olarak çözümler)  
-  
-  this.i 1F == (tek bir çözümler)  
-  
-  this.i 1U == (bir'unsigned int çözümler)  
-  
-  Koşullar hakkında daha fazla bilgi için bkz. [iş akışlarını kullanarak koşullarında](http://go.microsoft.com/fwlink?LinkID=65009).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033)   
- [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)   
- [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)   
- [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)   
- [Koşul seç iletişim kutusu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md)   
- [İş akışlarında koşullar kullanma](http://go.microsoft.com/fwlink?LinkID=65009)   
- [Windows Workflow Foundation Kullanıcı Arabirimi Yardımı için Eski Tasarımcı](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] **kural koşulu Düzenleyicisi** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+
+ **Kural koşulu Düzenleyicisi** iletişim kutusunu kullanarak bildirime dayalı kural koşulları oluşturun ve değiştirirsiniz. Bu kural koşulları, aşağıdaki Windows Workflow Foundation hazır etkinlikler üzerinde özellikler olarak sunulur:
+
+- [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)
+
+- [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)
+
+- [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)
+
+- [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)
+
+- [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040)
+
+- [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)
+
+  **Kural koşulu Düzenleyicisi** Iletişim kutusuna [Koşul Seç Iletişim kutusunu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md)kullanarak erişirsiniz.
+
+  Aşağıdaki tabloda, **kural koşulu Düzenleyicisi** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
+
+|Arabirim Öğesi|Açıklama|
+|----------------|-----------------|
+|**Koşul**|Kural koşulunun ifadesini girin.|
+|**Tamam**|Kural koşulunu kaydetmek için tıklayın.|
+
+## <a name="entering-condition-expressions"></a>Koşul Ifadelerini girme
+ Koşul ifadeleri metin olarak girilir. **Bunu yazabilirsiniz.** bir IntelliSense benzeri bir menü kullanarak iş akışında kullanılan alanlara, özelliklere ve yöntemlere başvurmak için düzenleyiciye. Ya da doğrudan bir iş akışı üye adı yazabilirsiniz. Koşula mantıksal işleçler ekleyebilirsiniz, örneğin ve, veya. Ayrıca, koşullar da ekleyebilirsiniz. Bir koşul, ikili bir işleçtir ve iki işleçtir. Desteklenen ikili işleçler **==** , **>** , **\<** , **>=** ve **<=** . Desteklenen işlenenler sabit değer, aritmetik işlev ve kapsamlı ortak üyeleridir.
+
+ Karşılaştırma için türü belirtebilir ve **null** ya da boş bir dize ile karşılaştırabilirsiniz. Karmaşık bir tür içeren bir değişkende (örneğin, `this.Address.State == "WA"` iç içe çağrılar yapabilirsiniz.
+
+ Kural koşulu Düzenleyicisi aşağıdaki işleçleri destekler:
+
+- İlişkisel işleçler: = =, =,! =
+
+- Karşılaştırma işleçleri: <, \< =, >, > =
+
+- Aritmetik işleçler: +,-, *,/, MOD
+
+- Mantıksal işleçler: ve, & &, veya, &#124; &#124;, Not,!
+
+- Bit düzeyinde işleçler: &,&#124;
+
+  İfade işleci önceliği, C# işleç öncelik kurallarını izler.
+
+  Kural koşulu Düzenleyicisi aşağıdaki sayısal ifadeleri destekler:
+
+  this. i = = 1D (1,0 olarak çözümlenir)
+
+  this. i = = 1E1 (10,0 olarak çözümlenir)
+
+  this. i = = 1L (uzun olarak çözümlendi)
+
+  this. i = = 1M (ondalık olarak çözümlenir)
+
+  this. i = = 1F (tek olarak çözümlenir)
+
+  this. i = = 1U (işaretsiz bir int olarak çözümlenir)
+
+  Koşullar hakkında daha fazla bilgi için bkz. [Iş akışlarında koşulları kullanma](http://go.microsoft.com/fwlink?LinkID=65009).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [IfElseActivity](http://go.microsoft.com/fwlink?LinkID=65033) [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017) [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039) [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049) [Koşul Seç iletişim kutusu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md) Windows iş akışı için eski tasarımcıda [iş akışlarında koşulları kullanma](http://go.microsoft.com/fwlink?LinkID=65009) [ Foundation Kullanıcı Arabirimi Yardımı](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

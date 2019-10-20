@@ -1,35 +1,35 @@
 ---
-title: Seçenekler, metin düzenleyici, HTML (Web formları) çeşitli
+title: Seçenekler, metin düzenleyici, HTML (Web Forms), çeşitli
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Miscellaneous
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43ab664968ca75f8af6da89db84725924caa3584
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b100defd8f50b4a487e46eef4183457e724a015
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778436"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666188"
 ---
-# <a name="options-text-editor-html-web-forms-miscellaneous"></a>Seçenekler, metin düzenleyici, HTML (Web formları) çeşitli
+# <a name="options-text-editor-html-web-forms-miscellaneous"></a>Seçenekler, metin düzenleyici, HTML (Web Forms), çeşitli
 
-Kullanım **çeşitli** HTML düzenleyicisi sayfasına yapıştırılan öğeleri nasıl işlediğini tercihleri ayarlamak için seçenekler sayfası. Menü çubuğunda, bu sayfaya erişmek için seçin **Araçları** > **seçenekleri**ve ardından **metin düzenleyici** > **HTML (Web Forms)**   >  **Çeşitli**.
+HTML düzenleyicisinin sayfaya yapıştırılan öğeleri nasıl işleyeceğini gösteren tercihleri ayarlamak için **çeşitli** Seçenekler sayfasını kullanın. Bu sayfaya erişmek için, menü çubuğunda **araçlar**  > **Seçenekler**' i seçin ve ardından **metin Düzenleyicisi**  > **HTML (Web Forms)**  > **çeşitli**' ı genişletin.
 
 ## <a name="miscellaneous-html-options"></a>Çeşitli HTML seçenekleri
 
-- **Yapıştırırken HTML'i Biçimlendir**
+- **Yapıştırırken HTML 'i Biçimlendir**
 
-   Bu onay kutusu seçili olduğunda, düzenleyici sayfasına yapıştırılan öğeleri, şu anda tanımlı biçimlendirme kurallarını kullanarak yeniden biçimlendirir. Bu onay kutusu seçili değilse, düzenleyici tam biçimlendirme özgün öğesi kullanarak öğeleri yapıştırır.
+   Bu onay kutusu seçildiğinde, düzenleyici, geçerli olarak tanımlanmış biçimlendirme kuralları kullanılarak sayfaya yapıştırılan öğeleri yeniden biçimlendirir. Bu onay kutusu seçili değilse, düzenleyici öğeleri özgün öğenin tam biçimlendirmesini kullanarak yapıştırır.
 
-- **Gerekli ' <' için tetikleyici etiket tamamlama penceresini**
+- **Etiket tamamlama penceresini tetiklemek için ' < ' iste**
 
-   Bu onay kutusu seçildiğinde etiket tamamlama penceresini küçüktür karakteri yazarken görünür ("<").
+   Bu onay kutusu seçildiğinde, karakterden daha azını yazdığınızda ("<") etiket tamamlama penceresi görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

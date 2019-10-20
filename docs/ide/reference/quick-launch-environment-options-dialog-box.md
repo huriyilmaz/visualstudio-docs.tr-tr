@@ -9,28 +9,28 @@ helpviewer_keywords:
 - searching IDE
 - IDE, searching
 ms.assetid: 4200f297-d065-4723-9a30-d91ff2e26c9d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 1f5026a014b5adc96f0729d130c4398474d6d413
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: f0cc6bcb59bf98a7416221115dbeeef8f24a5e74
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605901"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655663"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>Hızlı Başlatma, Ortam, Seçenekler İletişim Kutusu
 
-Seçenekler, şablonlar, menüler gibi IDE varlıkları için eylemleri hızlıca aramak ve yürütmek üzere **Hızlı Başlat** ' ı kullanabilirsiniz. Kodu ve sembolleri aramak için **Hızlı başlatma** kullanamazsınız. **Hızlı Başlat** arama kutusu, menü çubuğunun sağ üst köşesinde bulunur ve **CTRL**+**Q**tuşlarına basarak erişilebilir. Arama dizenizi kutuya yazın. İçeren dizeleri aramak için @, Kullan ”@@”.
+Seçenekler, şablonlar, menüler gibi IDE varlıkları için eylemleri hızlıca aramak ve yürütmek üzere **Hızlı Başlat** ' ı kullanabilirsiniz. Kodu ve sembolleri aramak için **Hızlı başlatma** kullanamazsınız. **Hızlı Başlat** arama kutusu, menü çubuğunun sağ üst köşesinde bulunur ve **CTRL** +**Q**tuşlarına basılarak erişilebilir. Arama dizenizi kutuya yazın. @ İçeren dizeleri aramak için ' @ @ ' kullanın.
 
-**Hızlı başlatma** , Visual Studio 'yu yüklediğinizde varsayılan olarak etkindir. Menü çubuğunda, **Araçlar** > **Seçenekler**' i seçerek **hızlı başlatmayı** gösterebilir veya gizleyebilirsiniz. **Ortamlar** düğümünü genişletin ve **Hızlı Başlat**' ı seçin. **Hızlı başlatmayı etkinleştir** onay kutusunu seçin veya temizleyin. Ayrıca, bu sayfada arama kategorilerini etkinleştirebilir veya devre dışı bırakabilirsiniz.
+**Hızlı başlatma** , Visual Studio 'yu yüklediğinizde varsayılan olarak etkindir. Menü çubuğunda **araçlar**  > **Seçenekler**' i seçerek **hızlı başlatmayı** gösterebilir veya gizleyebilirsiniz. **Ortamlar** düğümünü genişletin ve **Hızlı Başlat**' ı seçin. **Hızlı başlatmayı etkinleştir** onay kutusunu seçin veya temizleyin. Ayrıca, bu sayfada arama kategorilerini etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
 ## <a name="category-list"></a>Kategori listesi
 
-Hızlı başlatma arama sonuçları dört kategoride görünür: **En son kullanılanlar**, **menüler**, **Seçenekler**ve **Açık belgeler**, Kategorideki öğelerin sayısı ile birlikte. Arama sonuçlarıyla kategoriye göre geçiş yapmak için, sonraki kategorinin tüm sonuçlarını göstermek üzere **CTRL**+**Q** tuşlarını seçin. Son kategori görüntülendikten sonra, **CTRL**+**Q** her kategoriden birkaç sonuç gösterir. Kategoriler arasında ters sırada gezinmek için **CTRL**+**SHIFT**+**Q** tuşuna basın. Bir kategori altındaki tüm arama sonuçlarını görüntülemek için kategori adını seçin.
+Hızlı başlatma arama sonuçları dört kategoride görünür: **en son kullanılanlar**, **menüler**, **Seçenekler**ve **Açık belgeler**, kategori içindeki öğe sayısı ile birlikte. Arama sonuçları arasında kategoriye göre gezinmek için, sonraki kategorinin tüm sonuçlarını göstermek üzere **Ctrl** +**Q** tuşlarını seçin. Son kategori görüntülendikten sonra, **Ctrl** +**Q** her kategoriden birkaç sonuç gösterir. Kategoriler arasında ters sırada gezinmek için **Ctrl** +**SHIFT** +**Q** tuşlarına basın. Bir kategori altındaki tüm arama sonuçlarını görüntülemek için kategori adını seçin.
 
 Aramanızı belirli kategorilere sınırlamak için aşağıdaki kısayolları kullanabilirsiniz.
 
@@ -42,7 +42,7 @@ Aramanızı belirli kategorilere sınırlamak için aşağıdaki kısayolları k
 |Belgeler|@doc<br /><br /> Örneğin, `@doc program.cs`|Arama kriterlerine yönelik açık belgelerin dosya adlarıyla ve yollarına yönelik aramayı kısıtlar, ancak dosyaların içinde metinde arama yapmaz.|
 
 > [!NOTE]
-> **Seçenekler** iletişim kutusundaki **genel** > **klavye** sayfasında kısayol tuşlarını değiştirebilirsiniz.
+> **Seçenekler** Iletişim kutusundaki **genel**  > **klavye** sayfasında kısayol tuşlarını değiştirebilirsiniz.
 
 ## <a name="show-previous-results"></a>Önceki sonuçları göster
 

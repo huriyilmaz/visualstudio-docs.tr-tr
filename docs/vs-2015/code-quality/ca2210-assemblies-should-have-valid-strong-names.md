@@ -1,5 +1,5 @@
 ---
-title: 'CA2210: Derlemelerin geçerli tanımlayıcı adları olmalıdır | Microsoft Docs'
+title: 'CA2210: derlemeler geçerli tanımlayıcı adlara sahip olmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,88 +12,88 @@ helpviewer_keywords:
 - CA2210
 ms.assetid: 8ed33d1c-8ec6-4b47-a692-e22dc8693088
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f94183c6051ed0c2603bbfe35484fabb83a2160f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 6109e0dc18f98d0b22dfb5c548bd12447b53e61d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697981"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662990"
 ---
-# <a name="ca2210-assemblies-should-have-valid-strong-names"></a>CA2210: Derlemelerin geçerli tanımlayıcı adları olmalıdır
+# <a name="ca2210-assemblies-should-have-valid-strong-names"></a>CA2210: Derlemelerin tanımlayıcı adı geçerli olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|AssembliesShouldHaveValidStrongNames|
 |CheckId|CA2210|
-|Kategori|Microsoft.Design|
-|Yeni Değişiklik|Bozucu olmayan|
+|Kategori|Microsoft. Design|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir derlemeyi tanımlayıcı bir ad ile imzalı değil, tanımlayıcı adı doğrulanamadı veya tanımlayıcı adı geçerli kayıt defteri ayarları bilgisayarın geçerli olmaz.
+ Bütünleştirilmiş kod bir tanımlayıcı ad ile imzalanmamıştır, tanımlayıcı ad doğrulanamadı veya tanımlayıcı ad bilgisayarın geçerli kayıt defteri ayarları olmadan geçerli değildir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, alır ve bir derlemenin tanımlayıcı adı doğrular. Aşağıdakilerden biri doğruysa bir ihlali oluşur:
+ Bu kural, bir derlemenin tanımlayıcı adını alır ve doğrular. Aşağıdakilerden biri doğruysa bir ihlal oluşur:
 
-- Derlemeyi tanımlayıcı bir ada sahip değil.
+- Derlemenin tanımlayıcı adı yok.
 
-- Derleme imzalama sonra değiştirildi.
+- İmza, imzalandıktan sonra değiştirildi.
 
 - Derleme gecikmeli imzalanmış.
 
-- Derleme yanlış imzalı veya imzalama başarısız oldu.
+- Derleme yanlış imzalanmış veya imzalama başarısız oldu.
 
-- Derleme doğrulama geçirmek kayıt defteri ayarları gerektirir. Örneğin, tanımlayıcı ad Aracı (Sn.exe), derleme için doğrulama atlama için kullanıldı.
+- Derleme için kayıt defteri ayarlarının doğrulanması gerekir. Örneğin, tanımlayıcı ad Aracı (sn. exe), derleme için doğrulamayı atlamak için kullanılır.
 
-  Güçlü ad oynanmış derlemeyi bilmeden yükleyerek istemcileri korur. Güçlü adı olmayan derlemeler oldukça sınırlı sayıda senaryo dışında kullanılmamalıdır. Düzgün imzalanmamış derlemeleri paylaşırsanız veya dağıtırsanız, derleme aslı bozuabilir, ortak dil çalışma zamanı derlemeyi yükleyemeyebilir veya kullanıcı kendi bilgisayarındaki doğrulamayı devre dışı bırakabilir. Bir derlemeyi tanımlayıcı ad aşağıdaki dezavantajları vardır:
+  Güçlü ad oynanmış derlemeyi bilmeden yükleyerek istemcileri korur. Güçlü adı olmayan derlemeler oldukça sınırlı sayıda senaryo dışında kullanılmamalıdır. Düzgün imzalanmamış derlemeleri paylaşırsanız veya dağıtırsanız, derleme aslı bozuabilir, ortak dil çalışma zamanı derlemeyi yükleyemeyebilir veya kullanıcı kendi bilgisayarındaki doğrulamayı devre dışı bırakabilir. Güçlü adı olmayan bir derleme aşağıdaki dezavantajlardan daha fazlasını içerir:
 
-- Kendi kaynakları doğrulanamıyor.
+- Kaynakları doğrulanamıyor.
 
-- Ortak dil çalışma zamanı derlemenin içeriğini değiştirilmiş, kullanıcıları uyarın olamaz.
+- Ortak dil çalışma zamanı, derlemenin içeriği değiştirilmişse kullanıcıları uyaramaz.
 
-- Genel bütünleştirilmiş kod önbelleğine yüklenemiyor.
+- Genel bütünleştirilmiş kod önbelleğine yüklenemez.
 
-  Yüklenecek unutmayın ve gecikmeli imzalanmış bir bütünleştirilmiş kod çözümleme, derleme için doğrulama devre dışı bırakmanız gerekir.
+  Gecikmeli imzalanmış bir derlemeyi yüklemek ve analiz etmek için, derlemenin doğrulanmasını devre dışı bırakmanız gerektiğini unutmayın.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- **Bir anahtar dosyası oluşturmak için**
+ **Anahtar dosyası oluşturmak için**
 
  Aşağıdaki yordamlardan birini kullanın:
 
-- Tarafından sağlanan Assembly Linker (Al.exe) aracını [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.
+- @No__t_0 SDK tarafından sunulan derleme bağlayıcı aracı 'nı (al. exe) kullanın.
 
-- İçin [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] v1.0 veya v1.1, kullanın ya da <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> veya <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName> özniteliği.
+- @No__t_0 v 1.0 veya v 1.1 için <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> veya <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName> özniteliğini kullanın.
 
-- İçin [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)], hangisini `/keyfile` veya `/keycontainer` derleyici seçeneği [/keyfile (derlemeyi imzalamak için anahtar belirtin veya anahtar çiftini)](https://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06) veya  [ /keycontainer (derlemeyi imzalamak için bir anahtar kapsayıcısı belirtin)](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e) c++ bağlayıcı seçeneği).
+- @No__t_0 için `/keyfile` veya `/keycontainer` derleyici seçeneği [/keyfile (bir derlemeyi imzalamak Için anahtar veya anahtar çiftini belirtin)](https://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06) veya [/keycontainer (bir derlemeyi Imzalamak Için anahtar kapsayıcısı belirtin)](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e) ' deki C++bağlayıcı seçeneğini kullanın.
 
-  **Derlemenizi Visual Studio'da bir katı adla imzalamak için**
+  **Derlemenizi Visual Studio 'da güçlü bir adla imzalamak için**
 
-1. İçinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], çözümünüzü açın.
+1. @No__t_0, çözümünüzü açın.
 
-2. İçinde **Çözüm Gezgini**, projenize sağ tıklayın ve ardından **özellikleri.**
+2. **Çözüm Gezgini**, projenize sağ tıklayın ve ardından Özellikler ' e tıklayın **.**
 
-3. Tıklayın **imzalama** sekmesine tıklayın ve **derlemeyi imzalamayı** onay kutusu.
+3. **İmzalama** sekmesine tıklayın ve **derlemeyi imzala** onay kutusunu seçin.
 
-4. Gelen **bir tanımlayıcı ad anahtar dosyası seç**seçin **yeni**.
+4. **Bir tanımlayıcı ad anahtar dosyası seçin**listesinden **Yeni**' yi seçin.
 
-    **Katı ad anahtarı oluştur** penceresinde gösterilir.
+    **Tanımlayıcı ad oluştur anahtar** penceresi görüntülenecektir.
 
-5. İçinde **anahtar dosya adını**, tanımlayıcı ad anahtarınız için bir ad yazın.
+5. **Anahtar dosya adı**' nda, tanımlayıcı ad anahtarınız için bir ad yazın.
 
-6. Anahtarı bir parolayla koruyun ve ardından isteyip istemediğinizi seçin **Tamam**.
+6. Anahtarın bir parolayla korunmasını seçin ve ardından **Tamam**' a tıklayın.
 
-7. İçinde **Çözüm Gezgini**, projenize sağ tıklayın ve ardından **yapı**.
+7. **Çözüm Gezgini**, projenize sağ tıklayın ve ardından **Oluştur**' a tıklayın.
 
-   **Derlemenizi Visual Studio dışında bir katı adla imzalamak için**
+   **Derlemenizi Visual Studio dışında güçlü bir adla imzalamak için**
 
-- Tarafından sağlanan tanımlayıcı ad Aracı (Sn.exe) kullanan [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Daha fazla bilgi için [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).
+- @No__t_0 SDK tarafından sunulan tanımlayıcı ad aracı 'nı (sn. exe) kullanın. Daha fazla bilgi için bkz. [sn. exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Derleme ortamında kullandıysanız yalnızca bu kuraldan bir uyarıyı bastırmak burada içeriğiyle oynama bir sorun değildir.
+ Bu kuraldan yalnızca derleme, içerik üzerinde değişiklik yapılmasını gerektiren bir ortamda kullanılıyorsa bir uyarı göstermez.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName><xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>
- [Nasıl yapılır: Bir derlemeyi katı bir adla imzalamak](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)
+ [Nasıl yapılır: bir derlemeyi tanımlayıcı ad](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) [sn. exe Ile Imzalama (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)

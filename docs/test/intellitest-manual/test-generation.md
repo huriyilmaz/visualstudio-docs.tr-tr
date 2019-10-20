@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Test generation
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: eb567327950604fac1895ead24b776aefe434548
-ms.sourcegitcommit: dae5dfd626277b58ebd7b21a75757f683f1eacc5
+author: jillre
+ms.openlocfilehash: 3dbcbed0c336ff931971e0a4a6a939e681c6948b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739287"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653120"
 ---
 # <a name="test-generation"></a>Test oluşturma
 
@@ -55,7 +55,7 @@ IntelliTest 'in nesne oluşturulması gerektiğinde, oluşturuculara ve fabrika 
 <a name="parameterized-unit-testing"></a>
 ## <a name="parameterized-unit-testing"></a>Parametreli birim testi
 
-*Parametreli birim testleri* (Koyar) parametre alma sınamalardır. Genellikle kapalı Yöntemler olan geleneksel birim testlerin aksine, her bir parametre kümesini alır. Bu basit midir? Evet-buradan, IntelliTest, testten erişilebilen kodu [tamamen kapsayan](input-generation.md#dynamic-code-coverage) [girişlerin (minimal) bir kümesini oluşturmaya](input-generation.md) çalışır.
+*Parametreli birim testleri* (koyar) parametre alma sınamalardır. Genellikle kapalı Yöntemler olan geleneksel birim testlerin aksine, her bir parametre kümesini alır. Bu basit midir? Evet-buradan, IntelliTest, testten erişilebilen kodu [tamamen kapsayan](input-generation.md#dynamic-code-coverage) [girişlerin (minimal) bir kümesini oluşturmaya](input-generation.md) çalışır.
 
 Koyar, MSTest (veya NUnit, xUnit) ile benzer bir biçimde [PexMethod](attribute-glossary.md#pexmethod) özel özniteliği kullanılarak tanımlanır. Koyar, [PexClass](attribute-glossary.md#pexclass)ile etiketlenmiş sınıflarda mantıksal olarak gruplanmış örnek yöntemlerdir. Aşağıdaki örnek **Mypextest** sınıfında saklanan basıt bir put öğesini göstermektedir:
 

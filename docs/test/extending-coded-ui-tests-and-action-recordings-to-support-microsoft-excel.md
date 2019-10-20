@@ -2,17 +2,17 @@
 title: Kodlanmış UI testlerini ve eylem kayıtlarını genişletme
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: e43706462cadce7f27efc9509ccb2c02677d43b1
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+author: jillre
+ms.openlocfilehash: 3060014002b2e34443741dc654cf29df53278fe2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870079"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664919"
 ---
 # <a name="extend-coded-ui-tests-and-action-recordings"></a>Kodlanmış UI testlerini ve eylem kayıtlarını genişletme
 
@@ -37,4 +37,4 @@ Bu [blog gönderisi](https://blogs.msdn.microsoft.com/gautamg/2010/01/05/3-intro
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>
 - [UI otomasyonunu kullanarak kodunuzu test etme](../test/use-ui-automation-to-test-your-code.md)
 - [Kodlanmış UI testleri için en iyi uygulamalar](../test/best-practices-for-coded-ui-tests.md)
-- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen yapılandırmalar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

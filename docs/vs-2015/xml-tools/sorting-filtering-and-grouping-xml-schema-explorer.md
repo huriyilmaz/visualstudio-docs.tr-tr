@@ -1,78 +1,78 @@
 ---
-title: Sıralama, filtreleme ve gruplandırma (XML Şeması Gezgini) | Microsoft Docs
+title: Sıralama, filtreleme ve gruplandırma (XML şema Gezgini) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 4a914de0-9ffc-4526-9603-92e460e52513
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 86c13f7c710e462e1edd45acbf68fa4642d3d422
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 99c28842a92ab598ff196e80fc96678c256e4db8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68150672"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656142"
 ---
-# <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Sıralama, filtreleme ve gruplandırma (XML Şeması Gezgini)
+# <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Sıralama, filtreleme ve gruplandırma (XML şema Gezgini)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konu başlığı üzerinden seçeneklerle **sıralama, filtreleme ve gruplandırma seçeneklerini** XML şema Gezgini araç çubuğundaki menü.  
-  
-## <a name="filter-options"></a>Filtre Seçenekleri  
- Aşağıdaki filtre seçenekleri kullanılabilir. Varsayılan olarak, **ad alanlarını göster** ve **şema dosyalarını Göster** seçenekleri seçilidir.  
-  
-- **Ad alanlarını göster**.  
-  
-- **Şema dosyalarını Göster**.  
-  
-- **Oluşturucuları Göster (dizisi/seçim/tümü)** .  
-  
-## <a name="sorting-options"></a>Sıralama seçenekleri  
- Aşağıdaki sıralama seçenekleri kullanılabilir. Varsayılan değer **türe göre sırala**. Sıralama ölçütü seçenekleri dosyalar ve ad alanları için geçerli değildir.  
-  
-- **Türe Göre Sırala**.  
-  
-- **Ada göre sırala**.  
-  
-- **Belge sırada**.  
-  
-### <a name="sort-by-type"></a>Türe göre sırala  
- Zaman **türe göre sırala** seçeneği seçildiğinde, genel düğümler, aşağıdaki düzende sıralanır. Düğüm, her grup alfabetik olarak sıralanır.  
-  
-1. `import` düğümleri.  
-  
-2. `include` düğümleri.  
-  
-3. `redefine` düğümleri.  
-  
-4. `attribute` düğümleri.  
-  
-5. `attributeGroup` düğümleri.  
-  
-6. `complexType` düğümleri.  
-  
-7. `simpleType` düğümleri.  
-  
-8. `element` düğümleri.  
-  
-9. `group` düğümleri.  
-  
-### <a name="sort-by-name"></a>Ada göre sırala  
- Zaman **ada göre sırala** seçeneği seçildiğinde, genel düğümler, aşağıdaki düzende sıralanır:  
-  
-1. `import` düğümleri (alfabetik sırada ad alanları).  
-  
-2. `include` düğümleri (alfabetik sırada `schemaLocation` öznitelikleri).  
-  
-3. `redefine` düğümleri (alfabetik sırada `schemaLocation` öznitelikleri).  
-  
-4. Genel diğer düğümlere alfabetik olarak sıralayın.  
-  
-### <a name="document-order"></a>Belge sırada  
- **Belge sırada** seçeneği kullanılabilir olduğunda **şema dosyalarını Göster** seçeneği belirlenir. Zaman **belge sırada** seçildiğinde genel düğümler, şema dosyasında göründükleri sırada görüntülenir.  
-  
-## <a name="persisting-sortfilter-options"></a>Kalıcı sıralama/filtre seçenekleri  
- Sıralama, filtreleme ve gruplandırma Seçenekleri ayarları değiştirildi ne olursa olsun, çözüm veya dosya açıktı her bir kullanıcı için kayıt defterine kaydedildi.
+Bu konu başlığı altında, XML şema Gezgini araç çubuğundaki **sıralama, filtreleme ve gruplandırma seçenekleri** menüsünde bulunan seçenekler açıklanmaktadır.
+
+## <a name="filter-options"></a>Filtre seçenekleri
+ Aşağıdaki filtre seçenekleri kullanılabilir. Varsayılan olarak, **ad alanlarını göster** ve **şema dosyalarını göster** seçenekleri seçilidir.
+
+- **Ad alanlarını göster**.
+
+- **Şema dosyalarını göster**.
+
+- Oluşturucuları **göster (Sequence/Choice/All)** .
+
+## <a name="sorting-options"></a>Sıralama seçenekleri
+ Aşağıdaki sıralama seçenekleri kullanılabilir. Varsayılan değer **türe göre sıralanır**. Seçeneklere göre sırala, dosyalar ve ad alanları için geçerlidir.
+
+- **Türe göre sırala**.
+
+- **Ada göre sıralayın**.
+
+- **Belge sırası**.
+
+### <a name="sort-by-type"></a>Türe göre sırala
+ **Türe göre sırala** seçeneği belirlendiğinde, genel düğümler aşağıdaki sırada sıralanır. Daha sonra düğümler her grup içinde alfabetik olarak sıralanır.
+
+1. düğümleri `import`.
+
+2. düğümleri `include`.
+
+3. düğümleri `redefine`.
+
+4. düğümleri `attribute`.
+
+5. düğümleri `attributeGroup`.
+
+6. düğümleri `complexType`.
+
+7. düğümleri `simpleType`.
+
+8. düğümleri `element`.
+
+9. düğümleri `group`.
+
+### <a name="sort-by-name"></a>Ada göre sırala
+ **Ada göre sırala** seçeneği belirlendiğinde, genel düğümler aşağıdaki sıraya göre sıralanır:
+
+1. düğümleri `import` (ad alanlarının alfabetik sırasıyla).
+
+2. düğümler `include` (`schemaLocation` özniteliklerinin alfabetik sırasıyla).
+
+3. düğümler `redefine` (`schemaLocation` özniteliklerinin alfabetik sırasıyla).
+
+4. Alfabetik sırada diğer genel düğümler.
+
+### <a name="document-order"></a>Belge sırası
+ **Belge sırası** seçeneği, **şema dosyalarını göster** seçeneği belirlendiğinde kullanılabilir. **Belge sırası** seçildiğinde, genel düğümler, şema dosyasında göründükleri sırada görüntülenir.
+
+## <a name="persisting-sortfilter-options"></a>Kalıcı sıralama/filtre seçenekleri
+ Sıralama, filtreleme ve gruplandırma seçenekleri, her kullanıcı için kayıt defterine kaydedilir, bu da ayarlar değiştirildiğinde hangi çözüm veya dosyaların açık olduğuna bakılmaksızın.

@@ -1,72 +1,72 @@
 ---
-title: 'Nasıl yapılır: Tablolar ve görünümler (O R Designer) ile eşlenen SQL sınıflarına LINQ oluştur | Microsoft Docs'
+title: 'Nasıl yapılır: tablolar ve görünümlerle eşlenen LINQ to SQL sınıfları oluşturma (O-R Designer) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
 ms.topic: conceptual
 ms.assetid: 0fb78bbc-7a78-4ab4-b32f-85ece912e660
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b9bff102fbf87149e3adc80029eea17132e9b1b7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7a63e81abcae508487afa40d0778c0f9e9b9caf4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697723"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665921"
 ---
-# <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Nasıl yapılır: Tablolar ve görünümler (O/R Tasarımcısı) ile eşlenen SQL sınıflarına LINQ oluşturma
+# <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Nasıl yapılır: tablolar ve görünümler ile eşlenmiş LINQ to SQL sınıfları oluşturma (O/R Designer)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-Veritabanını tablolar ve görünümler ile eşlenen SQL sınıflarına LINQ çağrılır *varlık sınıfları*. Bir varlık sınıfı özelliklerini bireysel kaydı oluşturan tek tek sütunlara yapılan oluştururken varlık sınıfı bir kayda eşler. Tabloları veya görünümleri sürükleyerek veritabanı tabloları veya görünümleri temel alan bir varlık sınıfları oluşturma **Sunucu Gezgini**/**veritabanı Gezgini** üzerine [LINQ to SQL araçları Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md). [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] Sınıflar oluşturur ve belirli uygular [! Etkinleştirmek için LINQ SQL öznitelikleri [! LINQ to SQL işlevleri (veri iletişimi ve özelliklerini düzenleme <xref:System.Data.Linq.DataContext>). İlgili ayrıntılı bilgi için [! LINQ to SQL sınıfları Bkz [LINQ to SQL nesne modeli](https://msdn.microsoft.com/library/81dd0c37-e2a4-4694-83b0-f2e49e693810).
+Veritabanı tablolarıyla ve görünümleriyle eşlenmiş LINQ to SQL sınıflarına *varlık sınıfları*denir. Varlık sınıfı bir kayıtla eşlenir, ancak bir varlık sınıfının bireysel özellikleri bir kaydı oluşturan ayrı sütunlara eşlenir. **Sunucu Gezgini** /**veritabanı Gezgini** tabloları veya görünümleri [Visual Studio 'daki LINQ to SQL araçlarına](../data-tools/linq-to-sql-tools-in-visual-studio2.md)sürükleyerek veritabanı tablolarını veya görünümlerini temel alan varlık sınıfları oluşturun. @No__t_0 sınıfları oluşturur ve belirli [! Etkinleştirilecek öznitelikleri LINQ to SQL [! LINQ to SQL işlevselliği (<xref:System.Data.Linq.DataContext> veri iletişimi ve düzenlenme özellikleri). [! Hakkında ayrıntılı bilgi için Sınıfları LINQ to SQL, bkz. [LINQ to SQL nesne modeli](https://msdn.microsoft.com/library/81dd0c37-e2a4-4694-83b0-f2e49e693810).
 
 > [!NOTE]
-> [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] Yalnızca 1:1 eşleme ilişkileri desteklediğinden, bir Basit Nesne İlişkisel eşleyicisidir. Diğer bir deyişle, bir varlık sınıfı yalnızca 1:1 eşleme ilişkisi olan bir veritabanı tablosu veya görünümü olabilir. Bir varlık sınıfı birden çok tablolara eşleme gibi karmaşık eşleme desteklenmez. Bununla birlikte, birden çok ilişkili tabloyla birleştiren bir görünüm için bir varlık sınıfı eşleyebilirsiniz.
+> @No__t_0, yalnızca 1:1 eşleme ilişkilerini desteklediğinden basit bir nesne ilişkisel eşleştiricisidir. Diğer bir deyişle, bir varlık sınıfı bir veritabanı tablosu veya görünümüyle yalnızca 1:1 eşleme ilişkisine sahip olabilir. Bir varlık sınıfını birden çok tabloya eşleme gibi karmaşık eşleme desteklenmez. Ancak, bir varlık sınıfını birden çok ilişkili tabloyu birleştiren bir görünümle eşleyebilirsiniz.
 
-## <a name="create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Veritabanı tabloları veya görünümleri için eşlenen SQL sınıflarına LINQ oluşturma
- Sürükleme, tabloları veya gelen görünümleri **Sunucu Gezgini**/**veritabanı Gezgini** üzerine [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] varlık sınıflarının yanı sıra oluşturur <xref:System.Data.Linq.DataContext> için kullanılan yöntemleri güncelleştirmeler gerçekleştirme.
+## <a name="create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Veritabanı tabloları veya görünümleriyle eşlenmiş LINQ to SQL sınıfları oluşturma
+ **Sunucu Gezgini** /**veritabanı Gezgini** tabloları veya görünümleri [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] üzerine sürüklemek, güncelleştirme gerçekleştirmek için kullanılan <xref:System.Data.Linq.DataContext> yöntemlerine ek olarak varlık sınıfları oluşturur.
 
- Varsayılan olarak, [! LINQ to SQL çalışma zamanı değişiklikleri veritabanına geri güncelleştirilebilir varlık sınıfından kaydetmek için mantıksal oluşturur. Bu mantık, şemanın tablo (sütun tanımları ve birincil anahtar bilgileri) temel alır. Bu davranışı istemiyorsanız, ekleme, güncelleştirme gerçekleştirmek için saklı yordamları kullanmak için bir varlık sınıfı yapılandırabilirsiniz ve varsayılan kullanmak yerine siler. [! LINQ to SQL çalışma zamanı davranışı. Daha fazla bilgi için [nasıl yapılır: Güncelleştirme, ekleme ve silme (O/R Tasarımcısı) gerçekleştirmek için saklı yordamlar atama](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
+ Varsayılan olarak, [! LINQ to SQL Runtime, güncelleştirilebilir bir varlık sınıfından değişiklikleri veritabanına kaydetmek için mantık oluşturur. Bu mantık, tablonun şemasını temel alır (sütun tanımları ve birincil anahtar bilgileri). Bu davranışı istemiyorsanız, varsayılan [! yerine ekleme, güncelleştirme ve silme işlemleri gerçekleştirmek için saklı yordamları kullanmak üzere bir varlık sınıfı yapılandırabilirsiniz. Çalışma zamanı davranışı LINQ to SQL. Daha fazla bilgi için bkz. [nasıl yapılır: güncelleştirme, ekleme ve silme işlemleri için saklı yordamlar atama (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-#### <a name="to-create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Veritabanı tabloları veya görünümleri için eşlenen SQL sınıflarına LINQ oluşturmak için
+#### <a name="to-create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Veritabanı tabloları veya görünümleriyle eşlenmiş LINQ to SQL sınıfları oluşturmak için
 
-1. İçinde **sunucu**/**veritabanı Gezgini**, genişletme **tabloları** veya **görünümleri** veritabanı tablosunu bulun ve istediğiniz görüntülemek uygulamanızda kullanılacak.
+1. **Sunucu** /**veritabanı Gezgini**, **Tablolar** veya **Görünümler** ' i genişletin ve uygulamanızda kullanmak istediğiniz veritabanı tablosu veya görünümünü bulun.
 
-2. Tabloyu sürükleyin veya üzerine görüntülemek [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)].
+2. Tabloyu veya görünümü [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] sürükleyin.
 
-     Bir varlık sınıfı oluşturulur ve tasarım yüzeyinde görünür. Varlık sınıfı için Seçili tabloyu veya görünümü sütunları eşlemek özelliğe sahiptir.
+     Bir varlık sınıfı oluşturulur ve tasarım yüzeyinde görüntülenir. Varlık sınıfı, seçili tablodaki veya görünümdeki sütunlarla eşlenen özelliklere sahiptir.
 
-## <a name="create-an-object-data-source-and-display-the-data-on-a-form"></a>Formdaki verileri görüntülemek ve bir nesne veri kaynağı oluştur
- Kullanarak varlık sınıflarını oluşturduktan sonra [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)], bir nesne veri kaynağı oluşturma ve doldurma [veri kaynakları penceresi](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992) varlık sınıfları ile.
+## <a name="create-an-object-data-source-and-display-the-data-on-a-form"></a>Bir nesne veri kaynağı oluşturma ve verileri bir formda görüntüleme
+ @No__t_0 kullanarak varlık sınıfları oluşturduktan sonra, bir nesne veri kaynağı oluşturabilir ve [veri kaynakları penceresini](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992) varlık sınıflarıyla doldurabilirsiniz.
 
-#### <a name="to-create-an-object-data-source-based-on-linq-to-sql-entity-classes"></a>LINQ to SQL varlık sınıflarını temel bir nesne veri kaynağı oluşturmak için
+#### <a name="to-create-an-object-data-source-based-on-linq-to-sql-entity-classes"></a>LINQ to SQL varlık sınıflarına dayalı bir nesne veri kaynağı oluşturmak için
 
-1. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle** projenizi yapılandırmak için.
+1. Projeyi derlemek için **Oluştur** menüsünde **çözüm oluştur** ' a tıklayın.
 
-2. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
+2. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
-3. İçinde **veri kaynakları** penceresinde tıklayın **yeni veri kaynağı Ekle**.
+3. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle**' ye tıklayın.
 
-4. Tıklayın **nesne** üzerinde **bir veri kaynağı türü seçin** sayfasında ve ardından **sonraki**.
+4. **Veri kaynağı türü seçin** sayfasında **nesne** ' ye tıklayın ve ardından **İleri**' ye tıklayın.
 
-5. Düğümleri genişletin ve bulun ve sonra da, sınıf seçin.
+5. Düğümleri genişletin ve sınıfınızı bulun ve seçin.
 
     > [!NOTE]
-    > Varsa **müşteri** sınıf kullanılabilir değil, Sihirbazı iptal etmeniz, projeyi derleyin ve sihirbazı yeniden çalıştırın.
+    > **Müşteri** sınıfı kullanılabilir değilse, Sihirbazı iptal edin, projeyi derleyin ve Sihirbazı yeniden çalıştırın.
 
-6. Tıklayın **son** veri kaynağı oluşturma ve ekleme **müşteri** varlık sınıfı için **veri kaynakları** penceresi.
+6. Veri kaynağını oluşturmak ve **veri kaynakları** penceresine **Müşteri** varlık sınıfını eklemek için **son** ' a tıklayın.
 
-7. Öğeleri sürükleme **veri kaynakları** forma penceresi.
+7. Öğeleri **veri kaynakları** penceresinden bir form üzerine sürükleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'daki LINQ to SQL Araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
-- [İzlenecek yol: LINQ to SQL sınıfları (O R Designer) oluşturma](https://msdn.microsoft.com/library/35aad4a4-2e8a-46e2-ae09-5fbfd333c233)
+- [İzlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](https://msdn.microsoft.com/library/35aad4a4-2e8a-46e2-ae09-5fbfd333c233)
 - [DataContext Metotları (O/R Tasarımcısı)](../data-tools/datacontext-methods-o-r-designer.md)
-- [Nasıl yapılır: Saklı yordamlara eşlenen DataContext metotları oluşturma (O/R Tasarımcısı)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
+- [Nasıl yapılır: Saklı yordamlarla eşlenen DataContext metotları oluşturma (O/R Tasarımcısı)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
 - [LINQ to SQL Nesne Modeli](https://msdn.microsoft.com/library/81dd0c37-e2a4-4694-83b0-f2e49e693810)
 - [İzlenecek yol: Varlık sınıflarının ekleme, güncelleştirme ve silme davranışını özelleştirme](../data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md)
-- [İzlenecek yol: Varlık sınıflarına doğrulama ekleme](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)
+- [İzlenecek yol: varlık sınıflarına doğrulama ekleme](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)
 - [Nasıl yapılır: LINQ to SQL sınıfları arasında ilişkilendirme (ilişki) oluşturma (O/R Tasarımcısı)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)

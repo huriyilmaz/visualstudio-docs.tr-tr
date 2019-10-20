@@ -1,47 +1,45 @@
 ---
-title: Klavye kısayolları ve değiştirici tuşlar blend'de | Microsoft Docs
+title: Blend 'de klavye kısayolları ve değiştirici tuşları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: f9ec9724-7571-4777-8ff8-d9be012eae8f
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b6da7ef473f279c968c676c768e89a6f1145ae4c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1068c87a8979b853dd27de1b35e2449d7f96eaf4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68159349"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664326"
 ---
 # <a name="keyboard-shortcuts-and-modifier-keys-in-blend"></a>Blend’de klavye kısayolları ve değiştirici tuşlar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Klavye kısayolları, bir tek klavye kısayolu birden çok fare düğmesi tıklama gerektiren bir eylem azaltarak çalışmanızı hızlandırabilirsiniz. Klavye kısayolları [!INCLUDE[blend_first](../includes/blend-first-md.md)] aşağıdaki iki kategoriye ayrılır:  
-  
-- **Erişim anahtarları** klavyede belirli bir tuşa basarak menü komutunu ya da bir alanda bir iletişim kutusu erişmek için erişim anahtarlarını kullanın. Erişim tuşları, şu anda seçili komut ya da iletişim kutusunda görünen alt çizgi tarafından tanımlanır.  
-  
-   Erişim anahtarları kullanmak için önce ALT ya da F10 görünür ve tuşuna basarak belirli menü veya iletişim kutusu öğenin karşılık gelen harf alt çizgileri yapmak için basın. Alternatif olarak, SEKME tuşunu veya ok tuşlarını kullanarak bir menü veya iletişim kutusu gidebilirsiniz. Örneğin, ALT tuşuna basarsanız [!INCLUDE[blend_subs](../includes/blend-subs-md.md)], altı çizili harfi altında görünür **F** içinde **dosya** bir erişim anahtarı tanımlamak için menü. Bir projeyi açmak için tuşuna basın ve ALT tuşunu basılı F tuşlarına basın ve o tuşuna basın.  
-  
-   ![](../designers/media/441d5d67-48ee-4ba3-9e55-1826167e8d64.png "441d5d67-48ee-4ba3-9e55-1826167e8d64")  
-  Bir alt çizgiyle ALT tuşuna bastıktan sonra görüntülenen erişim anahtarları  
-  
-- **Kısayol tuşları** klavye kısayol tuşuna basarak (örneğin, bir menü komutu seçme veya bir aracı davranışını değiştirme) bir eylemi gerçekleştirmek için kısayol tuşlarını kullanabilirsiniz.  
-  
-   Çoğu klavye kısayollarını kullanıcı arabiriminde kolayca [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]; bunlar menü komutları sağında görüntülenir. Örneğin, **dosya** menüsünde **Proje Aç** CTRL + SHIFT + O klavye kısayol menü komutunu içerir. Bir aracı için kısayol tuşlarını görmek için **Araçları** panelinde, aracı işaretçisini.  
-  
-   ![](../designers/media/f147fc85-9fc5-4e8a-8039-bead80a3e595.png "f147fc85-9fc5-4e8a-8039-bead80a3e595")  
-  Kısayollar menü öğelerini yanında görüntülenen kısayol tuşları  
-  
-  Erişilebilirlik ve özellikler hakkında daha fazla bilgi için bkz. [erişilebilirlik Microsoft'ta](http://go.microsoft.com/fwlink/?LinkId=75069).  
-  
-## <a name="modifier-keys"></a>Değiştirici tuşları  
- Bazı klavye kısayolları sahip ilişkilendirilmemiş menü öğeleri, kullanamayacağınız anlamına gelir [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] bunları bulmak için kullanıcı arabirimi. Aşağıdaki konular, araçları davranışını değiştirmek veya nesneyi yeniden boyutlandırma gibi bir eylem değiştiren kısayolları listeleyin:  
-  
-- [Çalışma yüzeyi değiştirici tuşları](../designers/artboard-modifier-keys-in-blend.md)  
-  
-- [Kalem aracı değiştirici tuşları](../designers/pen-tool-modifier-keys-in-blend.md)  
-  
+Klavye kısayolları, tek bir klavye kısayoluna birden çok fare düğmesi tıklamasını gerektiren bir eylemi azaltarak çalışmanızı hızlandırabilir. @No__t_0 klavye kısayolları aşağıdaki iki kategoride gelir:
+
+- **Erişim tuşları** Klavyede belirli bir tuşa basarak bir menü komutuna veya bir iletişim kutusundaki alana erişmek için erişim tuşları ' nı kullanabilirsiniz. Erişim tuşları, seçili olan komutta veya iletişim kutusunda görüntülenen alt çizgiler tarafından tanımlanır.
+
+   Erişim tuşlarını kullanmak için, ALT çizgileri görüntülenmesini sağlamak üzere ALT veya F10 tuşlarına basın ve ardından belirli bir menü veya iletişim kutusu öğesinin karşılık gelen harfine basın. Alternatif olarak, sekme tuşunu veya ok tuşlarını kullanarak bir menü veya iletişim kutusunda gezinebilirsiniz. Örneğin, [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] ALT tuşlarına basarsanız, **Dosya** menüsündeki **F** harfinin altında bir alt çizgi görünür ve bu dosyayı bir erişim anahtarı olarak belirler. Bir projeyi açmak için ALT tuşunu basılı tutarak F tuşuna basabilir ve sonra O 'ya basabilirsiniz.
+
+   ![](../designers/media/441d5d67-48ee-4ba3-9e55-1826167e8d64.png "441d5d67-48ee-4ba3-9e55-1826167e8d64")ALT tuşuna bastıktan sonra ALT çizgi ile görüntülenen erişim tuşları
+
+- **Kısayol tuşları** Klavye kısayoluna basarak bir eylem gerçekleştirmek için kısayol tuşlarını kullanabilirsiniz (bir menü komutu seçme veya bir araç davranışını değiştirme gibi).
+
+   Çoğu klavye kısayolu, [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] Kullanıcı arabiriminde kolayca tanımlanır. menü komutlarının sağında görüntülenir. Örneğin, **Dosya** menüsünde **Proje Aç** menü komutu CTRL + SHIFT + O klavye kısayolunu içerir. **Araçlar** panelindeki bir aracın kısayol tuşlarını görmek için işaretçiyi aracın üzerine getirin.
+
+   ![](../designers/media/f147fc85-9fc5-4e8a-8039-bead80a3e595.png "f147fc85-9fc5-4e8a-8039-bead80a3e595")Kısayollara sahip menü öğelerinin yanında görünen kısayol tuşları
+
+  Erişilebilirlik ve özellikler hakkında daha fazla bilgi için bkz. [Microsoft 'Ta erişilebilirlik](http://go.microsoft.com/fwlink/?LinkId=75069).
+
+## <a name="modifier-keys"></a>Değiştirici tuşları
+ Bazı klavye kısayolları ilişkili menü öğelerine sahip değildir, bu da [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] Kullanıcı arabirimini kullanarak bunları keşfedemeyeceğiniz anlamına gelir. Aşağıdaki konularda, araçların davranışını değiştiren veya bir nesneyi değiştirme gibi bir eylemi değiştiren kısayollar listelenmektedir:
+
+- [Çalışma yüzeyi değiştirici tuşları](../designers/artboard-modifier-keys-in-blend.md)
+
+- [Kalem aracı değiştirici tuşları](../designers/pen-tool-modifier-keys-in-blend.md)
+
 - [Doğrudan Seçim aracı değiştirici tuşları](../designers/direct-selection-tool-modifier-keys-in-blend.md)

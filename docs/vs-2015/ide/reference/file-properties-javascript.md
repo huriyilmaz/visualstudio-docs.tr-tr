@@ -23,77 +23,77 @@ f1_keywords:
 - javascript.project.property.reference.version
 ms.assetid: 085913b8-a97b-45f7-85fa-bbb0902f3ee9
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 00527cf13d978da5a10e7745049df63f24e7a15c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 719a956558141684c7d755aafb6929f4368482f7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65688739"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657717"
 ---
 # <a name="file-properties-javascript"></a>Dosya Özellikleri, JavaScript
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Dosya özellikleri, proje sistemi dosyalarda gerçekleştirmesi gereken eylemleri belirtmek için kullanabilirsiniz. Örneğin, bir dosya için paket kaynak dosyası olarak eklenmesi gerekip gerekmediğini belirtmek için dosya özelliklerini ayarlayabilirsiniz.  
-  
- Çözüm Gezgini'nde herhangi bir dosya seçin ve ardından Özellikler penceresindeki özelliklerini inceleyin. JavaScript dosyaları dört özelliklere sahiptir: **Çıkış Dizinine Kopyala**, **paket eylemi**, **dosya adı**, ve **dosya yolu**.  
-  
-## <a name="file-properties"></a>Dosya özellikleri  
- Bu bölümde, JavaScript dosyaları için ortak olan özellikleri açıklanmaktadır.  
-  
-### <a name="copy-to-output-directory-property"></a>Çıkış dizini özelliğini kopyalayın  
- Bu özellik, koşullar altında seçili kaynak dosyasının çıkış dizinine kopyalanır belirtir. Seçin **kopyalamayın** dosya hiçbir zaman çıkış dizinine kopyalanacak ise. Seçin **her zaman Kopyala** dosyası her zaman çıkış dizinine kopyalanacak ise. Seçin **yeniyse Kopyala** yalnızca çıktı dizininde aynı ada sahip mevcut bir dosyayı daha yeni olduğunda kopyalanacak dosya olduğunda.  
-  
-### <a name="package-action"></a>Paket eylemi  
- **Paket eylemi** özelliği, bir yapı çalıştırıldığında Visual Studio ile bir dosyanın ne yaptığını gösterir. **Paket eylemi** değerlerden biri olabilir:  
-  
-- **Hiçbiri** -dosya paketi bildiriminde yer almaz. Örnek bir benioku dosyası gibi bir belge içeren bir metin dosyasıdır.  
-  
-- **İçerik** -dosya paketi bildiriminde bulunur. Örneğin, bu ayar bir .htm, .js, .css, görüntü, ses veya video dosyası için varsayılan değerdir.  
-  
-- **Bildirim** – dosya paketi bildiriminde yer almaz. Bunun yerine, dosya girişi için paket bildirimi oluşturulurken kullanılır. Package.appxmanifest dosyasını için varsayılan değer budur.  
-  
-- **Kaynak** -dosya paketi bildiriminde yer almaz. Bunun yerine, paket kaynak dizini (PRI) içinde paket bildirimi gider dosyasının içeriği dizine eklenir. Genellikle, kaynak dosyaları için de kullanılır.  
-  
-  İçin varsayılan değer **paket eylemi** çözüme ekleyin dosya uzantısını bağlıdır.  
-  
-### <a name="file-name-property"></a>Dosya adı özelliği  
- Dosya adı salt okunur bir değer görüntüler. Dosyayı yeniden adlandırmak için Çözüm Gezgini'nde sağ tıklayıp seçin **Yeniden Adlandır**.  
-  
-### <a name="full-path-property"></a>Tam yol özelliği  
- Tam yolunu dosyaya salt okunur bir değer görüntüler. Dosya yolunu değiştirmek için sürükle ve bırak Çözüm Gezgini'nde dosyayı kullanabilirsiniz.  
-  
-## <a name="reference-file-properties"></a>Başvuru dosyası özellikleri  
- Bu bölümde, öğesinden başvurulan dosyaları için ortak olan özellikleri açıklanmaktadır. bir [!INCLUDE[win8_app_js](../../includes/win8-app-js-md.md)]. Çözüm Gezgini'nde bir .winmd dosyası, bir SDK başvurusu, projeden projeye başvuru veya bir bütünleştirilmiş kod başvurusu gibi bir başvuru seçtiğinizde, diğer özellikleri Özellikler penceresinde dosya türüne göre görüntüleyebilir.  
-  
-### <a name="culture"></a>Kültür  
- Başvuru ile ilişkili dil görüntüler.  
-  
-### <a name="file-type"></a>Dosya türü  
- Başvurunun dosya türü görüntüler.  
-  
-### <a name="file-version"></a>Dosya Sürümü  
- Başvurunun dosya sürümünü görüntüler.  
-  
-### <a name="identity"></a>Kimlik  
- Proje dosyasında depolanan projesinde kullanılan başvurunun kimliği görüntüler.  
-  
-### <a name="package"></a>Paket  
- Başvuru ile ilişkili paket bildirimi adını görüntüler.  
-  
-### <a name="resolved-path"></a>Çözümlenen yol  
- Projede kullanılan başvuru yolunu görüntüler.  
-  
-### <a name="sdk-path"></a>SDK yolu  
- Başvurulan SDK dosyanın yolunu görüntüler.  
-  
-### <a name="uri"></a>URI  
- Dosyayı farklı bir kaynak dosyası eklemek için projenin HTML veya JavaScript dosyalarında içermesi gereken URI görüntüler.  
-  
-### <a name="version"></a>Sürüm  
- Başvurunun sürümü görüntüler.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Dosya özelliklerini, proje sisteminin dosyalarda hangi işlemleri yapması gerektiğini göstermek için kullanabilirsiniz. Örneğin, dosya özelliklerini, bir dosyanın pakete bir kaynak dosyası olarak eklenip eklenmeyeceğini belirtmek için ayarlayabilirsiniz.
+
+ Çözüm Gezgini herhangi bir dosyayı seçip Özellikler penceresi özelliklerini inceleyebilirsiniz. JavaScript dosyaları dört özelliğe sahiptir: **çıkış dizinine**, **paket eylemine**, **dosya adına**ve **dosya yoluna**kopyalayın.
+
+## <a name="file-properties"></a>Dosya özellikleri
+ Bu bölümde JavaScript dosyaları için ortak olan özellikler açıklanmaktadır.
+
+### <a name="copy-to-output-directory-property"></a>Çıkış dizinine Kopyala özelliği
+ Bu özellik, seçilen kaynak dosyanın çıkış dizinine kopyalanacağı koşulları belirtir. Dosya çıkış dizinine kopyalanmadıysa **kopyalamayın** ' ı seçin. Dosya her zaman çıkış dizinine kopyalanırsa, **her zaman Kopyala** ' yı seçin. Dosya yalnızca çıkış dizininde aynı ada sahip olan mevcut bir dosyadan daha yeniyse **Kopyala** ' yı seçin.
+
+### <a name="package-action"></a>Paket eylemi
+ **Paket eylemi** özelliği, bir derleme yürütüldüğünde Visual Studio 'nun bir dosyayla ne yaptığını gösterir. **Paket eylemi** birkaç değerden birine sahip olabilir:
+
+- **Hiçbiri** -dosya paket bildirimine dahil değildir. Örneğin, Benioku dosyası gibi belgeleri içeren bir metin dosyasıdır.
+
+- **İçerik** -dosya paket bildirimine dahildir. Örneğin, bu ayar bir. htm,. js,. css, görüntü, ses veya video dosyası için varsayılan değerdir.
+
+- **Bildirim** : dosya paket bildirimine dahil değildir. Bunun yerine, dosya, paket bildirimi oluşturulurken giriş için kullanılır. Bu, Package. appxmanifest dosyası için varsayılan değerdir.
+
+- **Kaynak** -dosya paket bildirimine dahil değildir. Bunun yerine, dosyanın içeriği paket bildirimine giden paket kaynak dizini (PRı) içinde dizinlenir. Genellikle kaynak dosyaları için kullanılır.
+
+  **Paket eylemi** için varsayılan değer çözüme eklediğiniz dosyanın uzantısına bağlıdır.
+
+### <a name="file-name-property"></a>Dosya adı özelliği
+ Dosya adını salt bir salt okuma değeri olarak görüntüler. Dosyayı yeniden adlandırmak için Çözüm Gezgini ' ye sağ tıklayıp **Yeniden Adlandır**' ı seçmeniz gerekir.
+
+### <a name="full-path-property"></a>Tam yol özelliği
+ Dosyanın tam yolunu salt okuma değeri olarak görüntüler. Dosyanın yolunu değiştirmek için Çözüm Gezgini dosyayı sürükleyip bırakabilirsiniz.
+
+## <a name="reference-file-properties"></a>Başvuru dosyası özellikleri
+ Bu bölümde, bir [!INCLUDE[win8_app_js](../../includes/win8-app-js-md.md)] başvurulan dosyalar için ortak özellikler açıklanmaktadır. Bir. winmd dosyası, bir SDK başvurusu, bir projeden projeye başvuru veya Çözüm Gezgini bir derleme başvurusu gibi bir başvuruyu seçtiğinizde, diğer özellikler dosya türüne göre Özellikler penceresi gösterebilir.
+
+### <a name="culture"></a>ayarı
+ Başvuru ile ilişkili dili görüntüler.
+
+### <a name="file-type"></a>Dosya türü
+ Başvurunun dosya türünü görüntüler.
+
+### <a name="file-version"></a>Dosya Sürümü
+ Başvurunun dosya sürümünü görüntüler.
+
+### <a name="identity"></a>Kimlik
+ Proje dosyasında saklanan, projede kullanılan başvurunun kimliğini görüntüler.
+
+### <a name="package"></a>Paket
+ Başvuruyla ilişkili paket bildiriminin adını görüntüler.
+
+### <a name="resolved-path"></a>Çözümlenen yol
+ Projede kullanılan başvurunun yolunu görüntüler.
+
+### <a name="sdk-path"></a>SDK yolu
+ Başvurulan SDK dosyasının yolunu görüntüler.
+
+### <a name="uri"></a>Kullanılmamışsa
+ Dosyayı kaynak dosya olarak dahil etmek için projenin HTML veya JavaScript dosyalarına dahil olması gereken URI 'yi görüntüler.
+
+### <a name="version"></a>Version
+ Başvurunun sürümünü görüntüler.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [NIB: Proje Özellikleri (Visual Studio)](https://msdn.microsoft.com/eb4c97ed-f667-4850-98d0-6e2a4d21bbca)

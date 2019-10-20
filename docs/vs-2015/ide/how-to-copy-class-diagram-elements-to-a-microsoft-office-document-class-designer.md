@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir (Sınıf Tasarımcısı) Microsoft Office belgesine sınıf diyagramı öğeleri kopyalama | Microsoft Docs'
+title: 'Nasıl yapılır: Microsoft Office belgeye sınıf diyagramı öğeleri kopyalama (Sınıf Tasarımcısı) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,39 +9,38 @@ helpviewer_keywords:
 - Office documents [Visual Studio]
 ms.assetid: c43061ad-d258-46b1-be66-f97a312e86d5
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f48dd69cf58a6ca3fbe292c5ed39aa3da51c4188
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a44b551e5b2a0b145040dc13cb0e624134f56cf6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68146135"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668162"
 ---
-# <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer"></a>Nasıl yapılır: Microsoft Office Belgesine Sınıf Diyagramı Öğeleri Kopyalama (Sınıf Tasarımcısı)
+# <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer"></a>Nasıl Yapılır: Microsoft Office Belgesine Sınıf Diyagramı Öğeleri Kopyalama (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Diğer belgeler için bir .NET sınıf diyagramı (.cd dosyası) şekiller kopyalayabilirsiniz. Bir şekil veya belge türüne göre temelini oluşturan kodu kopyasını yere yapıştırarak ya da elde edersiniz. Modelleme projesindeki UML sınıf diyagramlarından şekiller kopyalamak için bkz: [diyagramlarını görüntü dışarı aktarma](../modeling/export-diagrams-as-images.md).  
-  
-### <a name="to-copy-a-single-element"></a>Tek bir öğeyi kopyalamak için  
-  
-- Şekle sağ tıklayın ve seçin **görüntüsünü kopyalama**.  
-  
-### <a name="to-copy-several-elements"></a>Çeşitli öğeler kopyalamak için  
-  
-1. Kopyalamak istediğiniz diyagramdaki şekilleri seçin.  
-  
-2. Seçiminize sağ tıklayın ve seçin **görüntüsünü kopyalama**.  
-  
-### <a name="to-copy-all-the-elements-in-a-class-diagram"></a>Tüm öğeleri bir sınıf diyagramında kopyalamak için  
-  
-1. Diyagram yüzeyine sağ tıklayın ve seçin **Tümünü Seç**. (Klavye: **CTRL + A**)  
-  
-2. Üzerinde **Düzenle** menüsünde **görüntüsünü kopyalama**.  
-  
-   Ayrıca seçebilirsiniz **kopyalama** yerine **görüntüsünü kopyalama**. **Kopyalama** görüntüyü normal bir bit eşlem olarak kopyalar. **Görüntü Kopyala** olarak da çoğu Office uygulamaları için daha iyi bir vektör tabanlı görüntü, görüntü kopyalar.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Yazdırma sınıf diyagramları (Sınıf Tasarımcısı)](../ide/how-to-print-class-diagrams-class-designer.md)   
- [Nasıl yapılır: Sınıf Diyagramlarını Görüntü Olarak Dışarı Aktarma (Sınıf Tasarımcısı)](../ide/how-to-export-class-diagrams-as-images-class-designer.md)
+Bir .NET sınıf diyagramı 'ndan (. CD dosyası) diğer belgelere şekil kopyalayabilirsiniz. Şeklin kopyasını ya da yapıştırdığınız belge türünü temel alarak onun temel kodunu alacaksınız. Modelleme projesindeki UML Sınıf Diyagramlarından şekil kopyalamak için bkz. [diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md).
+
+### <a name="to-copy-a-single-element"></a>Tek bir öğeyi kopyalamak için
+
+- Şekle sağ tıklayın ve **görüntüyü Kopyala**' yı seçin.
+
+### <a name="to-copy-several-elements"></a>Birkaç öğeyi kopyalamak için
+
+1. Diyagramda kopyalamak istediğiniz şekilleri seçin.
+
+2. Seçiminize sağ tıklayın ve **görüntüyü Kopyala**' yı seçin.
+
+### <a name="to-copy-all-the-elements-in-a-class-diagram"></a>Bir sınıf diyagramındaki tüm öğeleri kopyalamak için
+
+1. Diyagram yüzeyine sağ tıklayın ve **Tümünü Seç**' i seçin. (Klavye: **CTRL + A**)
+
+2. **Düzenle** menüsünde **görüntüyü Kopyala**' yı seçin.
+
+   **Resmi Kopyala**yerine **Kopyala** seçeneğini de belirleyebilirsiniz. **Kopya** görüntüyü normal bir bit eşlem olarak kopyalar. **Görüntüyü Kopyala** , görüntüyü vektör tabanlı bir görüntü olarak kopyalar, bu da çoğu Office uygulaması için daha iyidir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl yapılır: sınıf diyagramlarını yazdırma (sınıf Tasarımcısı)](../ide/how-to-print-class-diagrams-class-designer.md) [nasıl yapılır: sınıf diyagramlarını görüntü olarak dışarı aktarma (sınıf Tasarımcısı)](../ide/how-to-export-class-diagrams-as-images-class-designer.md)

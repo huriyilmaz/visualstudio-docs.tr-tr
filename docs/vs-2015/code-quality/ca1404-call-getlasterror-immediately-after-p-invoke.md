@@ -1,5 +1,5 @@
 ---
-title: 'CA1404: P-Invoke ardından hemen GetLastError çağırın | Microsoft Docs'
+title: "CA1404: P-Invoke sonrasında GetLastError 'yi çağırın | Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - CA1404
 ms.assetid: 52ae9eff-50f9-4b2f-8039-ca7e49fba88e
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e33c724d2cebb9423f2e475d95bf42ac5e2cc966
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2664837c17894f7ca336d650a7e08e21c45d955f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68200311"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661322"
 ---
-# <a name="ca1404-call-getlasterror-immediately-after-pinvoke"></a>CA1404: P/Invoke ardından hemen GetLastError çağırın
+# <a name="ca1404-call-getlasterror-immediately-after-pinvoke"></a>CA1404: P/Invoke ardından hemen GetLastError çağır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|CallGetLastErrorImmediatelyAfterPInvoke|
 |CheckId|CA1404|
-|Kategori|Microsoft.Interoperability|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. çalışabilirliği|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- İçin bir çağrı yapılır <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A?displayProperty=fullName> yöntemi veya eşdeğer Win32 `GetLastError` işlevi ve hemen önce gelen çağrı değil bir platformda yöntemi çağır.
+ @No__t_0 yöntemine veya eşdeğer Win32 `GetLastError` işlevine çağrı yapılır ve hemen önce gelen çağrı bir platform çağırma yöntemine değildir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir platform yöntemi erişimleri yönetilmeyen kod çağırmak ve tarafından tanımlanan `Declare` anahtar sözcüğünü [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] veya <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliği. Genellikle, başarısızlık durumunda, yönetilmeyen Win32 işlevlerini `SetLastError` hata ile ilişkili bir hata kodu ayarlamak için işlevi. Başarısız işlev çağıran Win32 çağırır `GetLastError` hata kodunu alabilir ve hatanın nedenini belirlemek için işlevi. Hata kodu, bir iş parçacığı başına temelinde korunur ve sonraki çağrı tarafından üzerine `SetLastError`. Yöntem çağrısı başarısız bir platform çağırma sonra yönetilen kod hata kodunu çağırarak alabilirsiniz <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntemi. Hata kodu iç çağrılarından diğer yönetilen sınıf kitaplığı yöntemleri tarafından üzerine yazılabilir olmadığından `GetLastError` veya <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntem çağrısının hemen platform çağırma sonra yöntemi'nin çağrılabilir.
+ Platform çağırma yöntemi yönetilmeyen koda erişir ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] veya <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliğinde `Declare` anahtar sözcüğü kullanılarak tanımlanır. Genellikle, hata durumunda yönetilmeyen işlevler, hata ile ilişkili bir hata kodu ayarlamak için Win32 `SetLastError` işlevini çağırır. Başarısız işlevi çağıran, hata kodunu almak ve hatanın nedenini öğrenmek için Win32 `GetLastError` işlevini çağırır. Hata kodu iş parçacığı başına temelinde tutulur ve `SetLastError` ' a bir sonraki çağrıya göre üzerine yazılır. Başarısız platform çağırma yöntemine yapılan çağrıdan sonra, yönetilen kod <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntemini çağırarak hata kodunu alabilir. Hata kodu diğer yönetilen sınıf kitaplığı metotlarından gelen iç çağrılar tarafından üzerine yazılabildiğinden, `GetLastError` veya <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntemi platform çağırma yöntemi çağrısından hemen sonra çağrılmalıdır.
 
- Kural aşağıdaki çağrıları göz ardı eder platform çağrısı arasında gerçekleştiğinde yönetilen üyeleri çağırma yöntemini ve çağrısı <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A>. Bu üyeleri hata değiştirmeyin kod ve bazı platform başarısını belirlemek için yararlı olan çağırma yöntemi çağırır.
+ Kural, platform çağırma yöntemine yapılan çağrı ve <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> çağrısı arasında gerçekleştiklerinde, aşağıdaki yönetilen üyelere yapılan çağrıları yoksayar. Bu Üyeler hata kodunu değiştirmez ve bazı platform çağırma yöntemi çağrılarının başarısını belirlemek için faydalıdır.
 
 - <xref:System.IntPtr.Zero?displayProperty=fullName>
 
@@ -49,18 +49,18 @@ ms.locfileid: "68200311"
 - <xref:System.Runtime.InteropServices.SafeHandle.IsInvalid%2A?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için çağrı taşıma <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> böylece platform çağrısının hemen izleyen yöntemi çağır.
+ Bu kural ihlalini onarmak için çağrıyı, platform çağırma yöntemine yapılan çağrıyı hemen takip eden <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> taşıyın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Yöntem çağrısının platform arasında yer alan kodunu çağırma bu kuraldan bir uyarıyı bastırmak güvenlidir ve <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntem çağrısı yapamazsınız açıkça veya dolaylı olarak neden değiştirilecek hata kodu.
+ Platform çağırma yöntemi çağrısı ve <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> yöntemi çağrısı arasındaki kod, açıkça veya örtük olarak hata kodunun değişmesine neden değilse, bu kuraldan bir uyarıyı bastırmak güvenlidir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, kuralını ihlal eden bir yöntem ve kural karşılayan bir yöntemi gösterir.
+ Aşağıdaki örnek, kuralı ve kuralını karşılayan bir yöntemi ihlal eden bir yöntemi gösterir.
 
  [!code-csharp[FxCop.Interoperability.LastErrorPInvoke#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.LastErrorPInvoke/cs/FxCop.Interoperability.LastErrorPInvoke.cs#1)]
  [!code-vb[FxCop.Interoperability.LastErrorPInvoke#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.LastErrorPInvoke/vb/FxCop.Interoperability.LastErrorPInvoke.vb#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1060: P/Invokes öğesini NativeMethods sınıfına taşıyın](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)
 
  [CA1400: P/Invoke giriş noktaları bulunmalıdır](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)

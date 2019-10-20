@@ -5,132 +5,132 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, adding custom commands
 - dependency diagrams, adding custom gestures
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea106d98dbd18f224e7f2a9d95734eff591dfc2b
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: 7392d6f131cc1658a04769e7e2a5fc58c76f522e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476651"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652358"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Bağımlılık diyagramlarına komut ve hareket ekleme
 
-Sağ menü komutlarını tanımlama ve hareket işleyicileri Visual Studio'da bağımlılık diyagramları üzerinde. Bu uzantıları içinde bir Visual Studio Tümleştirme Uzantısı (diğer Visual Studio kullanıcılarına dağıtabileceğiniz VSIX) paketleyebilirsiniz.
+Visual Studio 'da bağımlılık diyagramlarında sağ tıklama menü komutlarını ve hareket işleyicilerini tanımlayabilirsiniz. Bu uzantıları, diğer Visual Studio kullanıcılarına dağıtabileceğiniz bir Visual Studio Tümleştirme Uzantısı 'na (VSıX) paketleyebilirsiniz.
 
-İsterseniz, aynı Visual Studio projesinde birkaç komut ve hareket işleyici tanımlayabilirsiniz. Ayrıca, gibi birçok projeyi bir VSIX içinde birleştirebilirsiniz. Örneğin, katman komutlarını ve bir etki alanına özgü dil içeren tek bir VSIX tanımlayabilirsiniz.
+İsterseniz aynı Visual Studio projesinde birkaç komut ve hareket işleyicisi tanımlayabilirsiniz. Ayrıca, bu gibi birçok projeyi tek bir VSıX içinde birleştirebilirsiniz. Örneğin, katman komutları ve etki alanına özgü dil içeren tek bir VSıX tanımlayabilirsiniz.
 
 > [!NOTE]
-> Ayrıca, hangi kullanıcıların kaynak kod bağımlılık diyagramları ile karşılaştırıldığı mimari doğrulamayı da özelleştirebilirsiniz. Mimari doğrulama ayrı bir Visual Studio projesinde tanımlamanız gerekir. Diğer uzantılarla aynı vsıx'e ekleyebilirsiniz. Daha fazla bilgi için [bağımlılık diyagramlarına özel mimari doğrulaması ekleme](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
+> Ayrıca, kullanıcıların kaynak kodunun bağımlılık diyagramlarıyla karşılaştırıldığı mimari doğrulamasını özelleştirebilirsiniz. Mimari doğrulamayı ayrı bir Visual Studio projesinde tanımlamanız gerekir. Diğer uzantılarla aynı VSıX 'e ekleyebilirsiniz. Daha fazla bilgi için bkz. [bağımlılık diyagramlarına özel mimari doğrulaması ekleme](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
 
 ## <a name="requirements"></a>Gereksinimler
 
-Bkz: [gereksinimleri](../modeling/extend-layer-diagrams.md#requirements).
+[Gereksinimlere](../modeling/extend-layer-diagrams.md#requirements)bakın.
 
-## <a name="define-a-command-or-gesture-in-a-new-vsix"></a>Yeni VSIX'de komut veya hareket tanımlama
+## <a name="define-a-command-or-gesture-in-a-new-vsix"></a>Yeni bir VSıX 'te komut veya hareket tanımlama
 
-Bir uzantı oluşturmanın en hızlı yolu, proje şablonu kullanmaktır. Bu seçenek, kodu ve VSIX bildirimini aynı projeye yerleştirir.
+Uzantı oluşturmanın en hızlı yöntemi, proje şablonunu kullanmaktır. Bu, kodu ve VSıX bildirimini aynı projeye koyar.
 
-1. Yeni bir **katman Tasarımcı komut uzantısı** veya **katman Tasarımcı hareket uzantısı** proje.
+1. Yeni bir **Katman Tasarımcısı komut uzantısı** veya **Katman Tasarımcısı hareketi uzantı** projesi oluşturun.
 
-   Şablon, küçük bir iş örneği içeren bir proje oluşturur.
+   Şablon küçük bir çalışma örneği içeren bir proje oluşturur.
 
-2. Uzantıyı test etmek için basın **Ctrl**+**F5** veya **F5**.
+2. Uzantıyı test etmek için **Ctrl** +**F5** veya **F5**tuşlarına basın.
 
-    Visual Studio deneysel örneği başlar. Bu örnekte, bir bağımlılık diyagramı oluşturun. Komut veya hareket uzantınızın Bu diyagramda çalışması gerekir.
+    Visual Studio 'nun deneysel bir örneği başlar. Bu örnekte, bir bağımlılık diyagramı oluşturun. Komut veya hareket uzantınızın bu diyagramda çalışması gerekir.
 
 3. Deneysel örneği kapatın ve örnek kodu değiştirin.
 
-4. Aynı projeye daha fazla komut veya hareket işleyicileri ekleyebilirsiniz. Daha fazla bilgi için aşağıdaki bölümlerden birine bakın:
+4. Aynı projeye daha fazla komut veya hareket işleyicisi ekleyebilirsiniz. Daha fazla bilgi için, aşağıdaki bölümlerden birine bakın:
 
-    [Bir menü komutunu tanımlama](#command)
+    [Menü komutu tanımlama](#command)
 
-    [Bir hareket işleyicisi tanımlama](#gesture)
+    [Hareket Işleyicisi tanımlama](#gesture)
 
 ::: moniker range="vs-2017"
 
-5. Visual Studio'nun veya başka bir bilgisayara ana örneğindeki uzantıyı yüklemek için bulma *.vsix* dosyası *bin* dizin. Yüklemek istediğiniz bilgisayara kopyalayın ve ardından çift tıklayın. Kaldırmak için seçin **Uzantılar ve güncelleştirmeler** üzerinde **Araçları** menüsü.
+5. Uzantıyı Visual Studio 'nun ana örneğine veya başka bir bilgisayara yüklemek için *bin* dizininde *. vsix* dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler** ' i seçin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-5. Visual Studio'nun veya başka bir bilgisayara ana örneğindeki uzantıyı yüklemek için bulma *.vsix* dosyası *bin* dizin. Yüklemek istediğiniz bilgisayara kopyalayın ve ardından çift tıklayın. Kaldırmak için seçin **uzantıları yönetme** üzerinde **uzantıları** menüsü.
+5. Uzantıyı Visual Studio 'nun ana örneğine veya başka bir bilgisayara yüklemek için *bin* dizininde *. vsix* dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için **Uzantılar** menüsünde **Uzantıları Yönet** ' i seçin.
 
 ::: moniker-end
 
-## <a name="add-a-command-or-gesture-to-a-separate-vsix"></a>Ayrı bir VSIX'e komut veya hareket ekleme
+## <a name="add-a-command-or-gesture-to-a-separate-vsix"></a>Ayrı bir VSıX 'e komut veya hareket ekleme
 
-Komutların, katman doğrulayıcılarının ve diğer uzantıların bulunduğu bir VSIX oluşturmak istiyorsanız, VSIX tanımlamak için bir proje ve işleyiciler için ayrı projeler oluşturmanızı öneririz.
+Komutları, katman Doğrulayıcıları ve diğer uzantıları içeren bir VSıX oluşturmak istiyorsanız, VSıX tanımlamak için bir proje oluşturmanızı ve işleyiciler için ayrı projeler oluşturmanızı öneririz.
 
-1. Yeni bir **sınıf kitaplığı** proje. Bu projeyi içeren komut veya hareket işleyici sınıflarını.
+1. Yeni bir **sınıf kitaplığı** projesi oluşturun. Bu proje komut veya hareket işleyicisi sınıfları içerecektir.
 
    > [!NOTE]
-   > Bir sınıf kitaplığında birden fazla komut veya hareket işleyici sınıf tanımlayabilirsiniz, ancak katman doğrulama sınıflarını ayrı sınıf kitaplığında tanımlamanız gerekir.
+   > Tek bir sınıf kitaplığında birden fazla komut veya hareket işleyicisi sınıfı tanımlayabilirsiniz, ancak katman doğrulama sınıflarını ayrı bir sınıf kitaplığında tanımlamanız gerekir.
 
-2. Ekleyin veya çözümünüzde bir VSIX projesi oluşturun. Adlı bir dosyaya bir VSIX projesi içeren **source.extension.vsixmanifest**.
+2. Çözümünüze VSıX projesi ekleyin veya oluşturun. VSıX projesi **kaynak. Extension. valtmanifest**adlı bir dosya içerir.
 
-3. İçinde **Çözüm Gezgini**, VSIX projesini sağ tıklatın ve seçin **başlangıç projesi olarak ayarla**.
+3. **Çözüm Gezgini**, VSIX projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
-4. İçinde **source.extension.vsixmanifest**altında **varlıklar**Ekle komut veya hareket işleyicisi projesini MEF Bileşeni olarak.
+4. **Source. Extension. valtmanifest**Içinde, **varlıklar**altında, komut veya hareket işleyicisi projesini MEF bileşeni olarak ekleyin.
 
-    1. İçinde **varlıklar**.tab, seçin **yeni**.
+    1. **Varlıklar**. sekmesinde **Yeni**' yi seçin.
 
-    2. Konumunda **türü**seçin **Microsoft.VisualStudio.MefComponent**.
+    2. **Türünde**, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
 
-    3. Konumunda **kaynak**seçin **geçerli çözümde proje** ve komut veya hareket işleyici projenizin adını seçin.
+    3. **Kaynakta**, **Geçerli çözümde proje** ' yi seçin ve komut veya hareket işleyicisi projenizin adını seçin.
 
     4. Dosyayı kaydedin.
 
-5. Komut veya hareket işleyici projesine dönün ve aşağıdaki proje başvurularını ekleyin:
+5. Komut veya hareket işleyicisi projesine dönün ve aşağıdaki proje başvurularını ekleyin:
 
-   |**Başvuru**|**Bunu yapmak sağlar**|
+   |**Başvuru**|**Bunu yapmanıza izin verir**|
    |-|-|
    |Program Files\Microsoft Visual Studio [sürüm] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Katmanları oluşturma ve düzenleme|
-   |Microsoft.VisualStudio.Uml.Interfaces|Katmanları oluşturma ve düzenleme|
-   |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Diyagramdaki şekilleri değiştirme|
-   |System.ComponentModel.Composition|Yönetilen Genişletilebilirlik Çerçevesi (MEF) kullanarak bileşenleri tanımlayın|
-   |Microsoft.VisualStudio.Modeling.Sdk.[version]|Modelleme uzantılarını tanımla|
-   |Microsoft.VisualStudio.Modeling.Sdk.Diagrams. [sürüm]|Şekilleri ve diyagramları güncelleyin|
+   |Microsoft. VisualStudio. Uml. Interfaces|Katmanları oluşturma ve düzenleme|
+   |Microsoft. VisualStudio. mimari Turetools. Extensibility|Diyagramlarda şekilleri değiştirme|
+   |System. ComponentModel. Composition|Managed Extensibility Framework kullanarak bileşenleri tanımlama (MEF)|
+   |Microsoft. VisualStudio. model. SDK. sürümünüze|Modelleme uzantıları tanımlama|
+   |Microsoft. VisualStudio. model. SDK. diyagramlar. sürümünüze|Şekilleri ve diyagramları güncelleştirme|
 
-6. Uzantınız için kodu içermesi için C# sınıf kitaplığı projesi sınıfı dosyayı düzenleyin. Daha fazla bilgi için aşağıdaki bölümlerden birine bakın:
+6. Uzantınızın kodunu içermesi için C# Sınıf Kitaplığı projesindeki sınıf dosyasını düzenleyin. Daha fazla bilgi için, aşağıdaki bölümlerden birine bakın:
 
-     [Bir menü komutunu tanımlama](#command)
+     [Menü komutu tanımlama](#command)
 
-     [Bir hareket işleyicisi tanımlama](#gesture)
+     [Hareket Işleyicisi tanımlama](#gesture)
 
-7. Özelliği test etmek için basın **Ctrl**+**F5** veya **F5**.
+7. Özelliği test etmek için **Ctrl** +**F5** veya **F5**tuşlarına basın.
 
-   Visual Studio deneysel örneği açılır. Bu örnekte, oluşturma veya bağımlılık diyagramı açın.
+   Visual Studio 'nun deneysel bir örneği açılır. Bu örnekte, bir bağımlılık diyagramı oluşturun veya açın.
 
-8. VSIX ana örneğine Visual Studio'nun veya başka bir bilgisayara yüklemek için bulma **.vsix** dosyası **bin** VSIX projesinin dizin. VSIX'i yüklemek istediğiniz bilgisayara kopyalayın. Dosya Gezgini'nde VSIX dosyasına çift tıklayın.
+8. VSıX 'i Visual Studio 'nun ana örneğine veya başka bir bilgisayara yüklemek için VSıX projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Dosya Gezgini 'nde VSıX dosyasına çift tıklayın.
 
-## <a name="command"></a> Bir menü komutunu tanımlama
+## <a name="command"></a>Menü komutu tanımlama
 
-Varolan bir hareket ya da komut projesine daha fazla menü komutu tanımları ekleyebilirsiniz. Her komut aşağıdaki özelliklere sahip bir sınıf tarafından tanımlanır:
+Varolan bir hareket veya komut projesine daha fazla menü komut tanımı ekleyebilirsiniz. Her komut, aşağıdaki özelliklere sahip bir sınıf tarafından tanımlanır:
 
-- Sınıf şu şekilde bildirilir:
+- Sınıfı şu şekilde bildirilmiştir:
 
    `[LayerDesignerExtension]`
 
    `[Export(typeof(ICommandExtension))]`
 
-   `public class`  *MyLayerCommand*  `: ICommandExtension { ... }`
+   `public class`*Mylayercommand* `: ICommandExtension { ... }`
 
 - Ad alanı ve sınıfın adı önemli değildir.
 
-- Uygulayan yöntemler `ICommandExtension` aşağıdaki gibidir:
+- @No__t_0 uygulayan yöntemler şunlardır:
 
-  - `string Text {get;}` -Menüde görüntülenen etiketi.
+  - `string Text {get;}`-menüde görünen etiket.
 
-  - `void QueryStatus(IMenuCommand command)` -Kullanıcı diyagrama ve komutun kullanıcının geçerli seçimi için görünür ve etkin olup olmayacağını belirler çağrılır.
+  - `void QueryStatus(IMenuCommand command)`-kullanıcı diyagrama sağ tıkladığında çağrılır ve komutun kullanıcının geçerli seçimi için görünür ve etkin olup olmayacağını belirler.
 
-  - `void Execute(IMenuCommand command)` -Kullanıcı komutu seçtiğinde çağrılır.
+  - `void Execute(IMenuCommand command)`-Kullanıcı komutu seçtiğinde çağırılır.
 
-- Geçerli seçimi belirlemek için alabilirsiniz `IDiagramContext`:
+- Geçerli seçimi belirleyebilmek için `IDiagramContext` içeri aktarabilirsiniz:
 
    `[Import]`
 
@@ -140,7 +140,7 @@ Varolan bir hareket ya da komut projesine daha fazla menü komutu tanımları ek
 
    `DiagramContext.CurrentDiagram.SelectedShapes.Count()...`
 
-Yeni bir komut eklemek için aşağıdaki örneği içeren yeni bir kod dosyası oluşturun. Ardından test edin ve düzenleyin.
+Yeni bir komut eklemek için aşağıdaki örneği içeren yeni bir kod dosyası oluşturun. Sonra test edin ve düzenleyin.
 
 ```csharp
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
@@ -212,11 +212,11 @@ namespace MyLayerExtension // Change to your preference.
 }
 ```
 
-## <a name="gesture"></a> Bir hareket işleyicisi tanımlama
+## <a name="gesture"></a>Hareket Işleyicisi tanımlama
 
-Bir hareket işleyicisi, kullanıcı öğeleri bağımlılık diyagram üzerine sürüklediğinde ve diyagramdaki kullanıcı herhangi bir yere tıkladığında yanıt verir.
+Bir hareket işleyicisi, kullanıcı öğeleri bağımlılık diyagramına sürüklediğinde ve Kullanıcı diyagramda herhangi bir yere çift tıkladığında yanıt verir.
 
-Mevcut komut veya hareket işleyicisi VSIX projeniz için bir hareket işleyicisi tanımlayan bir kod dosyası ekleyebilirsiniz:
+Mevcut komutunuz veya hareket işleyicisi VSıX projeniz için, bir hareket işleyicisini tanımlayan bir kod dosyası ekleyebilirsiniz:
 
 ```csharp
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
@@ -236,17 +236,17 @@ namespace MyLayerExtensions // change to your preference
 }
 ```
 
-Hareket işleyicilerle ilgili aşağıdaki noktalara dikkat edin:
+Hareket işleyicileri hakkında aşağıdaki noktalara dikkat edin:
 
-- Üyeleri `IGestureExtension` aşağıdaki gibidir:
+- @No__t_0 üyeleri aşağıdaki gibidir:
 
-     **OnDoubleClick** -kullanıcı diyagrama herhangi bir yeri çift tıkladığında çağrılır.
+     **OnDoubleClick** -kullanıcı diyagram üzerinde herhangi bir yere çift tıkladığında çağırılır.
 
-     **CanDragDrop** - art arda kullanıcı bir öğeyi diyagram üzerine sürüklerken fareyi hareket ettirdikçe denir. Hızlı çalışması gerekir.
+     **CanDragDrop** -Kullanıcı bir öğeyi diyagrama sürüklerken fareyi taşıdıkça sürekli çağırılır. Hızlı çalışması gerekir.
 
-     **OnDragDrop** -kullanıcı diyagrama bir öğe bıraktığında çağrılır.
+     **OnDragDrop** -kullanıcı diyagram üzerine bir öğe bırakıdüğünde çağırılır.
 
-- Her yöntem için ilk bağımsız değişken bir `IShape`, öğesinden, katman öğesini elde edebilirsiniz. Örneğin:
+- Her yöntemin ilk bağımsız değişkeni, katman öğesini alabileceğiniz bir `IShape`. Örneğin:
 
     ```csharp
     public void OnDragDrop(IShape target, IDataObject data)
@@ -259,7 +259,7 @@ Hareket işleyicilerle ilgili aşağıdaki noktalara dikkat edin:
     }
     ```
 
-- Bazı sürüklenen öğe türlerine ilişkin işleyiciler zaten tanımlanmış. Örneğin, kullanıcı öğeleri Çözüm Gezgini'nden bağımlılık diyagram üzerine sürükleyebilirsiniz. Bu öğe türleri için sürükleme işleyicisi tanımlayamazsınız. Bu gibi durumlarda, `DragDrop` yöntemleri çağrılmaz.
+- Bazı sürüklenen öğe türleri için işleyiciler zaten tanımlandı. Örneğin, Kullanıcı Çözüm Gezgini öğeleri bir bağımlılık diyagramına sürükleyebilirsiniz. Bu öğe türleri için bir sürükleme işleyicisi tanımlayamazsınız. Bu durumlarda, `DragDrop` yöntemleriniz çağırılmaz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

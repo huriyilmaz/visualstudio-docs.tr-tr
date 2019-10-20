@@ -1,23 +1,23 @@
 ---
-title: İş Akışı Tasarımcısı - akış etkinliği tasarımcılarını denetleme
+title: İş Akışı Tasarımcısı-denetim akışı etkinlik tasarımcıları
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a3bcbf5ee70b90a0606c7e4cb3d691d28298c2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f1e7d7548eef3fd6ca6a21bb8c2fe5cb23e27df1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949876"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650613"
 ---
 # <a name="control-flow-activity-designers"></a>Akış Etkinliği Tasarımcılarını denetleme
 
-İş Akışı Tasarımcısı kullanarak iş akışlarınızı oluştururken kullanabileceğiniz sistem tarafından sağlanan etkinlikler içerir. Bu bölümde, bir iş akışındaki akışını denetlemek için kullanılan sistem tarafından sağlanan etkinlikler içerir. Aşağıdaki konular bu etkinlikleri açıklar ve bunların nasıl kullanılacağı hakkında rehberlik sağlar.
+İş Akışı Tasarımcısı, iş akışlarınızı oluştururken kullanabileceğiniz, sistem tarafından sağlanmış bir dizi etkinliği içerir. Bu bölüm, bir iş akışı içindeki akışı denetlemek için kullanılan sistem tarafından sağlanmış etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri anlatmaktadır ve bunların nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="reference"></a>Başvuru
 
@@ -45,7 +45,7 @@ ms.locfileid: "62949876"
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-Etkinlik tasarımcıları diğer türleri için aşağıdaki konulara bakın:
+Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
  [Etkinlik Tasarımcılarını kullanma](../workflow-designer/using-the-activity-designers.md)
 

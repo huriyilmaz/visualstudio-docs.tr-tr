@@ -1,5 +1,5 @@
 ---
-title: 'CA1309: Sıralı StringComparison kullanın | Microsoft Docs'
+title: 'CA1309: sıralı StringComparison kullan | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA1309
 ms.assetid: 19be0854-cb6e-4efd-a4c8-a5c1fc6f7a71
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7b491cf06528b67c96f90f314210e61800e0cab1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 34054f6f444e503077c1e81da9f08ae2832d635a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68200333"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661427"
 ---
 # <a name="ca1309-use-ordinal-stringcomparison"></a>CA1309: Sıralı StringComparison kullanın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "68200333"
 |-|-|
 |TypeName|UseOrdinalStringComparison|
 |CheckId|CA1309|
-|Kategori|Microsoft.Globalization|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Globalization|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Nonlinguistic bir dize karşılaştırma işlemi ayarlı değil <xref:System.StringComparison> ya da parametre **sıra** veya **Ordinalıgnorecase**.
+ Dil olmayan bir dize karşılaştırma işlemi, <xref:System.StringComparison> parametresini **sıra** veya **OrdinalIgnoreCase**olarak ayarlamayın.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Çoğu dize işlemleri, en önemli <xref:System.String.Compare%2A?displayProperty=fullName> ve <xref:System.String.Equals%2A?displayProperty=fullName> yöntemleri artık kabul eden bir aşırı sağlayan bir <xref:System.StringComparison?displayProperty=fullName> numaralandırma değeri olarak bir parametre.
+ Çok sayıda dize işlemi, <xref:System.String.Compare%2A?displayProperty=fullName> ve <xref:System.String.Equals%2A?displayProperty=fullName> yöntemlerinin en önemlileri, artık bir parametre olarak <xref:System.StringComparison?displayProperty=fullName> numaralandırma değeri kabul eden bir aşırı yükleme sağlıyor.
 
- Belirttiğinizde ya da **StringComparison.Ordinal** veya **Stringcomparison.ordinalıgnorecase**, dize karşılaştırması nonlinguistic olacaktır. Diğer bir deyişle, karşılaştırma kararlar verildiğinde doğal dile özgü özellikleri göz ardı edilir. Bu kararların basit bayt karşılaştırmalarını temel alır ve kültür tarafından parametre haline getirilen büyük/küçük harf ya da denklik tabloları yoksay anlamına gelir. Sonuç olarak, açıkça ya da parametre ayarı tarafından **StringComparison.Ordinal** veya **Stringcomparison.ordinalıgnorecase**, kodunuzu genellikle hız kazandığı doğruluğu artırır ve olur daha güvenilir.
+ **StringComparison. Ordinal** ya da **StringComparison. OrdinalIgnoreCase**belirttiğinizde, dize karşılaştırması dil olmayan bir işlem olur. Yani, doğal dile özgü özellikler, karşılaştırma kararları verilirken yok sayılır. Bu, kararların basit bayt karşılaştırmaları temel aldığı ve kültüre göre parametreli büyük/küçük harf veya denklik tablolarının yoksayılmasına yol gösterir. Sonuç olarak, parametresini **StringComparison. Ordinal** ya da **StringComparison. OrdinalIgnoreCase**olarak ayarlayarak, kodunuz genellikle hızlanır, doğruluk artar ve daha güvenilir hale gelir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için dize karşılaştırma yöntemini kabul eden bir aşırı değiştirin <xref:System.StringComparison?displayProperty=fullName> , parametre olarak numaralandırması belirtin **sıra** veya **Ordinalıgnorecase**. Örneğin, değiştirme `String.Compare(str1, str2)` için `String.Compare(str1, str2, StringComparison.Ordinal)`.
+ Bu kural ihlalini onarmak için, dize karşılaştırma yöntemini bir parametre olarak <xref:System.StringComparison?displayProperty=fullName> numaralandırmayı kabul eden bir aşırı yüklemeye değiştirin ve **Ordinal** ya da **OrdinalIgnoreCase**belirtin. Örneğin, `String.Compare(str1, str2)` ' ı `String.Compare(str1, str2, StringComparison.Ordinal)` ' e değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Sınırlı bir yerel hedef kitle için veya geçerli kültürü semantiği kullanılmalıdır kitaplık veya uygulamanın amaçlanan bu kuraldan bir uyarıyı bastırmak güvenlidir.
+ Kitaplık veya uygulama sınırlı bir yerel hedef kitle için tasarlanıyorsa veya geçerli kültürün semantiğinin kullanılması gerektiğinde, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Genelleştirme uyarıları](../code-quality/globalization-warnings.md) [CA1307: StringComparison belirtin](../code-quality/ca1307-specify-stringcomparison.md)
+ [Genelleştirme Uyarıları](../code-quality/globalization-warnings.md) [CA1307: StringComparison belirt](../code-quality/ca1307-specify-stringcomparison.md)

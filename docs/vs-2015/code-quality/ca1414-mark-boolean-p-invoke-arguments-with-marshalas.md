@@ -1,5 +1,5 @@
 ---
-title: 'CA1414: Boolean P-Invoke bağımsız değişkenlerini MarshalAs ile işaretleyin | Microsoft Docs'
+title: 'CA1414: Boolean P-Invoke bağımsız değişkenlerini MarshalAs ile Işaretle | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - MarkBooleanPInvokeArgumentsWithMarshalAs
 ms.assetid: c0c84cf5-7701-4897-9114-66fc4b895699
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8df0404657b6740c27544292dc101a6030a6563f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 588e16a6b21b320ad7012bd20d79a62d027679e3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65691911"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652686"
 ---
 # <a name="ca1414-mark-boolean-pinvoke-arguments-with-marshalas"></a>CA1414: Boolean P/Invoke bağımsız değişkenlerini MarshalAs ile işaretleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,34 +29,34 @@ ms.locfileid: "65691911"
 |-|-|
 |TypeName|MarkBooleanPInvokeArgumentsWithMarshalAs|
 |CheckId|CA1414|
-|Kategori|Microsoft.Interoperability|
+|Kategori|Microsoft. çalışabilirliği|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Bir platform çağırma yöntemi bildirimi içeren bir <xref:System.Boolean?displayProperty=fullName> parametre veya dönüş değerindeki ancak <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> özniteliği için parametre veya dönüş değerindeki uygulanmaz.
+ Platform çağırma yöntemi bildirimi <xref:System.Boolean?displayProperty=fullName> parametresi veya dönüş değeri içeriyor, ancak <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> özniteliği parametreye veya dönüş değerine uygulanmıyor.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir platform yöntemi erişimleri yönetilmeyen kod çağırmak ve tarafından tanımlanan `Declare` anahtar sözcüğünü [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] veya <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Yönetilen ve yönetilmeyen kod arasında veri türlerine dönüştürmek için kullanılan sıralama davranışını belirtir. Gibi pek çok basit veri türleri <xref:System.Byte?displayProperty=fullName> ve <xref:System.Int32?displayProperty=fullName>, yönetimsiz kod içinde tek bir gösterimi olan ve sıralama davranışları belirtilmesine gerek yoktur; ortak dil çalışma zamanı otomatik olarak doğru davranışı sağlar.
+ Platform çağırma yöntemi yönetilmeyen koda erişir ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] veya <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> `Declare` anahtar sözcüğü kullanılarak tanımlanır. <xref:System.Runtime.InteropServices.MarshalAsAttribute>, yönetilen ve yönetilmeyen kod arasında veri türlerini dönüştürmek için kullanılan sıralama davranışını belirtir. @No__t_0 ve <xref:System.Int32?displayProperty=fullName> gibi birçok basit veri türü, yönetilmeyen kodda tek bir gösterimine sahiptir ve sıralama davranışının belirtimini gerektirmez; ortak dil çalışma zamanı, doğru davranışı otomatik olarak sağlar.
 
- <xref:System.Boolean> Veri türüne, yönetimsiz kod içinde birden çok temsile sahiptir. Zaman <xref:System.Runtime.InteropServices.MarshalAsAttribute> , varsayılan hazırlama davranışı için belirtilmemiş <xref:System.Boolean> veri türü <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>. Tüm durumlarda uygun olmayan bir 32 bit tamsayı budur. Yönetilmeyen yöntemi tarafından gerekli Boolean gösterimi belirlenen verilecek ve uygun eşleşen <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>. UnmanagedType.Bool her zaman 4 bayttır Win32 BOOL türüdür. C++ için UnmanagedType.U1 kullanılmalıdır `bool` ya da diğer 1 baytlık türleri. Daha fazla bilgi için [Boole türleri için varsayılan hazırlama](https://msdn.microsoft.com/d4c00537-70f7-4ca6-8197-bfc1ec037ff9).
+ @No__t_0 veri türünün yönetilmeyen kodda birden çok temsili vardır. @No__t_0 belirtilmediğinde, <xref:System.Boolean> veri türü için varsayılan sıralama davranışı <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>. Bu, tüm koşullarda uygun olmayan 32 bitlik bir tamsayıdır. Yönetilmeyen yöntemin gerektirdiği Boolean temsili, uygun <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName> belirlenmesi ve eşleşmesi gerekir. UnmanagedType. bool, her zaman 4 bayt olan Win32 BOOL türüdür. @No__t_1 veya diğer 1 baytlık türler için C++ UnmanagedType. U1 kullanılmalıdır. Daha fazla bilgi için bkz. [Boole türleri Için varsayılan sıralama](https://msdn.microsoft.com/d4c00537-70f7-4ca6-8197-bfc1ec037ff9).
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için geçerli <xref:System.Runtime.InteropServices.MarshalAsAttribute> için <xref:System.Boolean> parametre veya dönüş değeri. Öznitelik değerini uygun ayarlamak <xref:System.Runtime.InteropServices.UnmanagedType>.
+ Bu kuralın ihlalini onarmak için, <xref:System.Boolean> parametresine veya dönüş değerine <xref:System.Runtime.InteropServices.MarshalAsAttribute> uygulayın. Özniteliğin değerini uygun <xref:System.Runtime.InteropServices.UnmanagedType> olarak ayarlayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan uyarıyı bastırmayın. Varsayılan hazırlama davranışı uygun olsa bile, davranışı açıkça belirtildiğinde kodu daha kolay korunur.
+ Bu kuraldan uyarıyı bastırmayın. Varsayılan sıralama davranışı uygun olsa da, davranış açıkça belirtildiğinde kod daha kolay korunur.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, iki platform çağırma uygun ile işaretlenmiş yöntemler gösterir <xref:System.Runtime.InteropServices.MarshalAsAttribute> öznitelikleri.
+ Aşağıdaki örnek, uygun <xref:System.Runtime.InteropServices.MarshalAsAttribute> öznitelikleriyle işaretlenmiş iki platform Invoke yöntemini gösterir.
 
  [!code-cpp[FxCop.Interoperability.BoolMarshalAs#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.BoolMarshalAs/cpp/FxCop.Interoperability.BoolMarshalAs.cpp#1)]
  [!code-csharp[FxCop.Interoperability.BoolMarshalAs#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.BoolMarshalAs/cs/FxCop.Interoperability.BoolMarshalAs.cs#1)]
  [!code-vb[FxCop.Interoperability.BoolMarshalAs#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.BoolMarshalAs/vb/FxCop.Interoperability.BoolMarshalAs.vb#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1901: P/Invoke bildirimleri taşınabilir olmalıdır](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)
 
  [CA2101: P/Invoke dize bağımsız değişkenleri için hazırlama belirtin](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName> [Boole türleri için varsayılan sıralama](https://msdn.microsoft.com/d4c00537-70f7-4ca6-8197-bfc1ec037ff9) [yönetilmeyen kod ile birlikte](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)
+ [yönetilmeyen kodla birlikte çalışırken](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258) [Boole türleri için varsayılan sıralama](https://msdn.microsoft.com/d4c00537-70f7-4ca6-8197-bfc1ec037ff9) <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>

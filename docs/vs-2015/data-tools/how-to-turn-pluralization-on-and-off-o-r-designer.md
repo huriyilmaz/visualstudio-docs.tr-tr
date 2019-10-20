@@ -1,47 +1,45 @@
 ---
-title: 'Nasıl yapılır: Çoğullaştırmayı açıp (O R Designer) kapatma | Microsoft Docs'
+title: 'Nasıl yapılır: plurselleştirmeyi açma ve kapatma (O-R Designer) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
 ms.topic: conceptual
 ms.assetid: 9b693bc3-303a-40a9-97ee-9cef5ca3ae81
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c8497f63e2b4dc51caa69b1babe0d707e8370aab
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: afe8c8a4429efb83c09d80a5dd00dfe08b0d63e3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704949"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665943"
 ---
-# <a name="how-to-turn-pluralization-on-and-off-or-designer"></a>Nasıl yapılır: Çoğullaştırmayı açıp (O/R Tasarımcısı) kapatma
+# <a name="how-to-turn-pluralization-on-and-off-or-designer"></a>Nasıl yapılır: plurselleştirmeyi açma ve kapatma (O/R Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Varsayılan olarak, s ya da gelen zellikleri sonlanan adlara sahip veritabanı nesneleri sürüklediğinizde **Sunucu Gezgini**/**veritabanı Gezgini** üzerine [LINQ to SQL araçlarını Visual Studio'da](../data-tools/linq-to-sql-tools-in-visual-studio2.md), tekil için üretilen varlık sınıflarının ad çoğul olarak değiştirilir. Bu, daha doğru bir şekilde oluşturulan varlık sınıfı verilerin tek bir kaydına eşler olgu temsil etmek için gerçekleştirilir. Örneğin, bir Müşteriler tablosunu ekleme [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] sınıfın yalnızca tek bir müşterinin verilerini tutacak çünkü bir varlık sınıfı sonuçlarında adlı müşteri.  
-  
+Varsayılan olarak, **Sunucu Gezgini** **veritabanı Gezgini** / son görüntülenen adlara sahip veritabanı nesnelerini [Visual Studio 'daki LINQ to SQL araçlar](../data-tools/linq-to-sql-tools-in-visual-studio2.md)üzerine sürüklediğinizde, oluşturulan varlık sınıflarının adları plural 'den olarak değiştirilir Tekil. Bu, Örneklenmiş varlık sınıfının tek bir veri kaydıyla eşlendiği olguyu daha doğru bir şekilde temsil etmek için yapılır. Örneğin, [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] bir Customers tablosu eklemek, sınıf yalnızca tek bir müşteri için veri tutacağından, müşteri adlı bir varlık sınıfına neden olur.
+
 > [!NOTE]
-> Çoğullaştırma yalnızca İngilizce sürümü Visual Studio'nun içinde varsayılan olarak açıktır.  
-  
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
-  
-### <a name="to-turn-pluralization-on-and-off"></a>Çoğullaştırmayı açıp kapatmak için  
-  
-1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.  
-  
-2. İçinde **seçenekleri** iletişim kutusunda **veritabanı araçları**.  
-  
+> Pluralization, varsayılan olarak yalnızca Visual Studio 'nun Ingilizce sürümünde bulunur.
+
+ [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
+
+### <a name="to-turn-pluralization-on-and-off"></a>Çoğullaştırma 'ı açmak ve kapatmak için
+
+1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+
+2. **Seçenekler** Iletişim kutusunda **veritabanı araçları**' nı genişletin.
+
 > [!NOTE]
-> Seçin **tüm ayarları göster** varsa **veritabanı araçları** düğümü görünür değil.  
-  
-1. Tıklayın **O/R Tasarımcısı**.  
-  
-2. Ayarlama **adların Çoğullaştırılmasını** için **etkin** = **False** ayarlanacak [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] böylece sınıf adları değiştirmez.  
-  
-3. Ayarlama **adların Çoğullaştırılmasını** için **etkin** = **True** eklenen nesneleri sınıf adlarını çoğullaştırma kuralları uygulamak için [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)].  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to SQL araçlarını Visual Studio'da](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)   
- [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)
+> **Veritabanı araçları** düğümü görünür değilse **tüm ayarları göster** ' i seçin.
+
+1. **O/R Tasarımcısı**' na tıklayın.
+
+2. **Adların** , sınıf adlarını değiştirmemesi için **,** [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] ayarlamak üzere  = **false** olarak ayarlayın.
+
+3. **Adların pluralselleştirilmesi** , [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] eklenen nesnelerin sınıf adlarına plurme kuralları **uygulamak Için** **true  =  true** olarak ayarlanır.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Visual Studio 'da LINQ to SQL [LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) [](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655) [Visual Studio 'da verilere erişme](../data-tools/accessing-data-in-visual-studio.md)

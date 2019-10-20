@@ -1,23 +1,23 @@
 ---
-title: Using Microsoft.VisualStudio.TestTools.UnitTesting Members in Unit Tests | Microsoft Docs
+title: Birim testlerinde Microsoft. VisualStudio. TestTools. UnitTesting üyelerini kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: 0fa335fd-e442-448f-913f-25a19df90a93
 caps.latest.revision: 8
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 93a62b6fe5493b78a3c18c1adb87761cdb894670
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: e8b3ea10b96a63bd18098030dc884ac3f3383353
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871551"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657194"
 ---
 # <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>Birim Testlerinde Microsoft.VisualStudio.TestTools.UnitTesting Üyelerini Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-Birim testi çerçevesi içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]birim testini destekler. Birim testlerini kodlarunuzda, <xref:Microsoft.VisualStudio.TestTools.UnitTesting> ad alanındaki sınıfları ve üyeleri kullanın. Birim testini sıfırdan yazdığınızda veya sınamakta olduğunuz koddan oluşturulmuş bir birim testini iyileştirirken bunları kullanabilirsiniz.
+Birim testi çerçevesi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birim testini destekler. Birim testlerini kodlarunuzda <xref:Microsoft.VisualStudio.TestTools.UnitTesting> ad alanındaki sınıfları ve üyeleri kullanın. Birim testini sıfırdan yazdığınızda veya sınamakta olduğunuz koddan oluşturulmuş bir birim testini iyileştirirken bunları kullanabilirsiniz.
 
 ## <a name="groups-of-elements"></a>Öğe grupları
  Birim testi çerçevesine daha net bir genel bakış sağlamaya yardımcı olmak için, bu bölüm UnitTesting Ad alanının öğelerini ilgili işlevsellik grupları halinde düzenler.
@@ -30,7 +30,7 @@ Birim testi çerçevesi içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]biri
 > `[TestClassAttribute()]`
 
 ### <a name="elements-used-for-data-driven-testing"></a>Veri odaklı test için kullanılan öğeler
- Veri tabanlı birim testlerini ayarlamak için aşağıdaki öğeleri kullanın. Daha fazla bilgi için bkz [. nasıl yapılır: Veri tabanlı birim testi](../test/how-to-create-a-data-driven-unit-test.md) ve [izlenecek yol oluşturun: Bir veri kaynağı](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)tanımlamak için yapılandırma dosyası kullanma.
+ Veri tabanlı birim testlerini ayarlamak için aşağıdaki öğeleri kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: veri temelli birim testi oluşturma](../test/how-to-create-a-data-driven-unit-test.md) ve [izlenecek yol: bir veri kaynağı tanımlamak Için yapılandırma dosyası kullanma](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod>
 
@@ -88,7 +88,7 @@ Birim testi çerçevesi içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]biri
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute>
 
 ## <a name="the-testcontext-class"></a>TestContext sınıfı
- Aşağıdaki öznitelikler ve bunlara atanan değerler belirli bir test yöntemi için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Özellikler penceresi görüntülenir. Bu özniteliklere birim testinin kodu aracılığıyla erişilmek üzere tasarlanmamıştır. Bunun yerine, ' nin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]IDE veya [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] test motoru aracılığıyla sizin tarafınızdan, birim testinin kullanıldığı ya da çalıştırıldığı yolları etkiler. Örneğin, bu özniteliklerin bazıları Test Yöneticisi penceresinde ve Test Sonuçları penceresinde sütun olarak görünür, bu da testleri ve test sonuçlarını gruplamak ve sıralamak için bunları kullanabileceğiniz anlamına gelir. Bu tür bir öznitelik, birim testlerine rastgele meta veriler eklemek için kullandığınız TestPropertyAttribute ' dir. Örneğin, birim testini ile `[TestProperty("TestPass", "Accessibility")]`işaretleyerek, bu testin kapsamakta olduğu bir test geçişinin adını depolamak için kullanabilirsiniz. Ya da bunu, test türünün bir göstergesini depolamak için kullanabilirsiniz: `[TestProperty("TestKind", "Localization")]`. Bu özniteliği kullanarak oluşturduğunuz özellik ve atadığınız Özellik değeri, her ikisi de başlık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **testine özgü**Özellikler penceresi görüntülenir.
+ Aşağıdaki öznitelikler ve bunlara atanan değerler belirli bir test yöntemi için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Özellikler penceresi görünür. Bu özniteliklere birim testinin kodu aracılığıyla erişilmek üzere tasarlanmamıştır. Bunun yerine, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE veya [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] test motoru aracılığıyla sizin tarafınızdan, birim testinin kullanıldığı veya çalıştırıldığı yolları etkiler. Örneğin, bu özniteliklerin bazıları Test Yöneticisi penceresinde ve Test Sonuçları penceresinde sütun olarak görünür, bu da testleri ve test sonuçlarını gruplamak ve sıralamak için bunları kullanabileceğiniz anlamına gelir. Bu tür bir öznitelik, birim testlerine rastgele meta veriler eklemek için kullandığınız TestPropertyAttribute ' dir. Örneğin, birim testini `[TestProperty("TestPass", "Accessibility")]` ile işaretleyerek, bu testin kapsamakta olduğu bir test geçişinin adını depolamak için kullanabilirsiniz. Ya da bunu, test türünün bir göstergesini depolamak için kullanabilirsiniz: `[TestProperty("TestKind", "Localization")]`. Bu özniteliği kullanarak oluşturduğunuz özellik ve atadığınız Özellik değeri, her ikisi de başlık **testine özgü**[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Özellikler penceresi görüntülenir.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>
 
@@ -111,7 +111,7 @@ Birim testi çerçevesi içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]biri
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection>
 
 ## <a name="attributes-used-for-generating-reports"></a>Rapor oluşturmak için kullanılan öznitelikler
- Bu bölümdeki öznitelikler, bir [!INCLUDE[esprtfs](../includes/esprtfs-md.md)] takım projesinin proje hiyerarşisindeki varlıklarıyla süsledikleri test yöntemiyle ilgilidir.
+ Bu bölümdeki öznitelikler, bir [!INCLUDE[esprtfs](../includes/esprtfs-md.md)] takım projesinin proje hiyerarşisindeki varlıklarla süsledikleri test yöntemiyle ilgilidir.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute>
 

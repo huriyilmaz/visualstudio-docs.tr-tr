@@ -8,33 +8,32 @@ api_name:
 - XElement.Xml
 ms.assetid: 69ab2a33-4fe7-4cfa-97f8-eaf063decb18
 caps.latest.revision: 4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 368b18e7524e0cff31139de67f8092f9069246bf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c794d79d62fc580001efc5cf16993d4ac5fef48b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68148053"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663839"
 ---
 # <a name="xml-xelement-dynamic-property"></a>XML (XElement dinamik özelliği)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Biçimlendirilmemiş XML öğesi içeriği alır.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-elem.Xml  
-```  
-  
-## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri  
- A <xref:System.String> , öğenin biçimlendirilmemiş XML içeriğini temsil eder.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Bu özellik değerine eşdeğer olan <xref:System.Xml.Linq.XNode.ToString%28System.Xml.Linq.SaveOptions%29> yöntemi <xref:System.Xml.Linq.XNode?displayProperty=fullName> sınıfı ile `SaveOptions` parametresini <xref:System.Xml.Linq.SaveOptions>.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XElement sınıfı dinamik özellikleri](../designers/xelement-class-dynamic-properties.md)   
- [Değer](../designers/value-xelement-dynamic-property.md)
+Öğenin biçimlendirilmemiş XML içeriğini alır.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+elem.Xml
+```
+
+## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri
+ Öğenin biçimlendirilmemiş XML içeriğini temsil eden bir <xref:System.String>.
+
+## <a name="remarks"></a>Açıklamalar
+ Bu özellik, `SaveOptions` parametresi <xref:System.Xml.Linq.SaveOptions> olarak ayarlanan <xref:System.Xml.Linq.XNode?displayProperty=fullName> sınıfının <xref:System.Xml.Linq.XNode.ToString%28System.Xml.Linq.SaveOptions%29> yöntemi ile eşdeğerdir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [XElement sınıfı dinamik özellikleri](../designers/xelement-class-dynamic-properties.md) [değeri](../designers/value-xelement-dynamic-property.md)

@@ -12,45 +12,45 @@ helpviewer_keywords:
 - resources [Visual Studio]
 - Resources page in Project Designer
 - application resources [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1681484500c382b296a03e78661b808825768a5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 29e4fbbd8d50001807f3d90a82d18e40a3674d01
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62538115"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654256"
 ---
 # <a name="manage-application-resources-net"></a>Uygulama kaynaklarını yönetme (.NET)
 
-Derlenmemiş, ancak bir uygulamanın parçası olan dosyalar için örnek simge dosyaları ya da ses dosyaları kaynak dosyalarıdır. Bu dosyaları derleme işleminin bir parçası olmadığından, ikili dosyalarınızı yeniden derlemenize gerek kalmadan değiştirebilirsiniz. Uygulamanızı yerelleştirmek planlıyorsanız, tüm dizeler ve uygulamanızı yerelleştirdiğiniz zaman değiştirilmesi gereken diğer kaynaklar için kaynak dosyaları kullanmalısınız.
+Kaynak dosyaları, bir uygulamanın parçası olan ancak derlenmediği, örneğin simge dosyaları veya ses dosyaları gibi dosyalardır. Bu dosyalar derleme sürecinin bir parçası olmadığından, ikili dosyalarınızı yeniden derlemek zorunda kalmadan bunları değiştirebilirsiniz. Uygulamanızı yerelleştirmek istiyorsanız, uygulamanızı yerelleştirmeniz durumunda değiştirilmesi gereken tüm dizelerin ve diğer kaynakların kaynak dosyalarını kullanmanız gerekir.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz: [(Mac için Visual Studio) uygulama kaynaklarını yönetme](/visualstudio/mac/managing-app-resources).
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [uygulama kaynaklarını yönetme (Mac için Visual Studio)](/visualstudio/mac/managing-app-resources).
 
-.NET Masaüstü uygulamalarındaki kaynaklar hakkında daha fazla bilgi için bkz: [masaüstü uygulamalarında kaynakların](/dotnet/framework/resources/index).
+.NET masaüstü uygulamalarındaki kaynaklar hakkında daha fazla bilgi için bkz. [masaüstü uygulamalarında kaynaklar](/dotnet/framework/resources/index).
 
-## <a name="work-with-resources"></a>Kaynakları ile çalışma
+## <a name="work-with-resources"></a>Kaynaklarla çalışma
 
-Yönetilen kod projesi içinde proje özellikleri penceresini açın. Özellikler penceresinde ya da açabilirsiniz:
+Yönetilen bir kod projesinde proje özellikleri penceresini açın. Özellikler penceresini şu şekilde açabilirsiniz:
 
-- ' Nde proje düğümüne sağ tıklayarak **Çözüm Gezgini** seçerek **özellikleri**
-- Yazarak **proje özellikleri** içinde **Ctrl**+**Q** arama kutusu
-- Seçme **Alt**+**girin** içinde **Çözüm Gezgini**
+- **Çözüm Gezgini** ' de proje düğümüne sağ tıklayıp **Özellikler** ' i seçin
+- **Ctrl** +**Q** arama kutusuna **Proje özellikleri** yazma
+- **Alt** + Çözüm Gezgini**giriş** seçme
 
-Seçin **kaynakları** sekmesi. Ekleyebileceğiniz bir *.resx* projenizi değil bir zaten içeren, ekleyin ve farklı türde kaynakların silme ve var olan kaynakları değiştirmek dosyası.
+**Kaynaklar** sekmesini seçin. Projenizde bir tane yoksa bir *. resx* dosyası ekleyebilirsiniz, farklı türlerde kaynaklar ekleyip silebilir ve mevcut kaynakları değiştirebilirsiniz.
 
-## <a name="resources-in-other-project-types"></a>Kaynaklar diğer proje türleri
+## <a name="resources-in-other-project-types"></a>Diğer proje türlerindeki kaynaklar
 
-Kaynaklar, farklı .NET projeleri diğer proje türleri içinde yönetilir. Kaynaklar hakkında daha fazla bilgi için:
+Kaynaklar, .NET projelerinde diğer proje türlerinden farklı şekilde yönetilir. İçindeki kaynaklar hakkında daha fazla bilgi için:
 
-- Evrensel Windows Platformu (UWP) uygulamaları görmek [uygulama kaynaklarını ve kaynak yönetim sistemi](/windows/uwp/app-resources/)
-- C++ projeleri için bkz: [kaynak dosyalarıyla çalışmak](/cpp/windows/working-with-resource-files) ve [nasıl yapılır: Kaynak Oluştur](/cpp/windows/how-to-create-a-resource)
+- Evrensel Windows Platformu (UWP) uygulamaları, bkz. [uygulama kaynakları ve kaynak yönetimi sistemi](/windows/uwp/app-resources/)
+- C++projeler, bkz. [çalışma kaynak dosyaları](/cpp/windows/working-with-resource-files) ve [nasıl yapılır: kaynak oluşturma](/cpp/windows/how-to-create-a-resource)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(.NET Framework) Masaüstü uygulamalarındaki kaynaklar](/dotnet/framework/resources/index)
-- [(Mac için Visual Studio) uygulama kaynaklarını yönetme](/visualstudio/mac/managing-app-resources)
+- [Masaüstü uygulamalarındaki kaynaklar (.NET Framework)](/dotnet/framework/resources/index)
+- [Uygulama kaynaklarını yönetme (Mac için Visual Studio)](/visualstudio/mac/managing-app-resources)

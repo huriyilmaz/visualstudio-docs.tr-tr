@@ -1,5 +1,5 @@
 ---
-title: Oyunlarda veya uygulamalarda 3B varlıklar kullanma | Microsoft Docs
+title: Oyununuzda veya uygulamanızda 3-b varlıkları kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
@@ -13,197 +13,197 @@ f1_keywords:
 - VC.Project.ImageContentTask.GenerateMips
 ms.assetid: ea587909-e434-46a8-abf8-9b3e95a58b4f
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 20076e4f8cc05ad971a1cbe710c95f444b80938b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4b61a187f4e07c73e5c53db382a6ee5e5cb8cb70
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386885"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664077"
 ---
 # <a name="using-3-d-assets-in-your-game-or-app"></a>Oyunlarda veya Uygulamalarda 3B Varlıklar Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu makalede nasıl kullanabileceğinizi açıklar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 3B varlıkları işlemek ve bunları derlemelerinize dahil etmek için.  
-  
- Araçları kullandıktan sonra [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 3-D varlıklarını oluşturmak için sonraki adımda bunları uygulamanızda kullanmaktır. Ancak, kullanabilmeniz için önce varlıklarınızın DirectX'in anlayabileceği bir biçime dönüştürülmesi sahip. Varlıklarınızı dönüştürmenize yardımcı olması için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] üretebileceği varlık her tür için yapı özelleştirmeleri sağlar. Yapınızda varlıkları dahil etmek için tüm yapmanız gereken olduğu yapı özelleştirmelerini kullanacak, projenize varlıklar eklemek ve doğru yapı özelleştirmesini kullanacak şekilde varlıkları yapılandırmaktır projenizi yapılandırın. Bundan sonra varlıkları uygulamanıza yükleyebilir ve bunları dolduran başka bir DirectX uygulamasında yaptığınız gibi DirectX kaynakları oluşturarak kullanabilirsiniz.  
-  
-## <a name="configuring-your-project"></a>Projenizi yapılandırma  
- 3-b varlıkları kendi derlemenizin bir parçası olarak dağıtmadan önce [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , dağıtmak istediğiniz varlıkların türleri hakkında bilmesi gerekir. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birçok yaygın dosya türünü hakkında zaten bilir, ancak yalnızca belirli türdeki uygulamalar 3 boyutlu varlıklar kullandığından [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir proje bu tür dosyaları oluşturacağını varsaymaz. Size söyleyebilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uygulamanızı kullanarak bu tür varlıkları kullandığını *yapı özelleştirmeleri*— söyleyin dosyaları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] farklı türlerde dosyaları yararlı bir şekilde işlemek nasıl — her varlık türü için sağlanır. Bu özelleştirmeler proje bazında uygulandığından tek yapmanız gereken olan gereken uygun özelleştirmeleri projenize ekleyin.  
-  
-#### <a name="to-add-the-build-customizations-to-your-project"></a>Projenize yapı özelleştirmeleri eklemek için  
-  
-1. İçinde **Çözüm Gezgini**, proje için kısayol menüsünü açın ve ardından **yapı bağımlılıkları**, **yapı özelleştirmeleri**. **Visual C++ derleme özelleştirme dosyaları** iletişim kutusu görüntülenir.  
-  
-2. Altında **kullanılabilir yapı özelleştirme dosyaları**, bu tabloda açıklandığı şekilde, projenizde kullanmak istediğiniz varlık türlerine karşılık gelen onay kutularını işaretleyin:  
-  
-    |Varlık türü|Özelleştirme adı oluştur|  
-    |----------------|------------------------------|  
-    |Dokularla ve görüntülerle|**ImageContentTask (.targets, .props)**|  
-    |3B modeller|**MeshContentTask (.targets, .props)**|  
-    |Gölgelendiriciler|**ShaderGraphContentTask (.targets, .props)**|  
-  
-3. Seçin **Tamam** düğmesi.  
-  
-## <a name="including-assets-in-your-build"></a>Yapınızda varlıklar dahil olmak üzere  
- Projeniz hakkında kullanmak istediğiniz 3B varlıkların farklı türlerini bildiğine göre sonraki adım, hangi dosyaların 3B varlıklar olduğunu ve hangi türde varlıkları bunlar söylemek olacaktır.  
-  
-#### <a name="to-add-an-asset-to-your-build"></a>Yapınıza bir varlık eklemek için  
-  
-1. İçinde **Çözüm Gezgini**, projenizde bir varlığın kısayol menüsünü açın ve ardından **özellikleri**. Varlığın **özellik sayfası** iletişim kutusu görüntülenir.  
-  
-2. Emin olun **yapılandırma** ve **Platform** özellikleri, değişikliklerinizi uygulanmasını istediğiniz değerlere ayarlanır.  
-  
-3. Altında **yapılandırma özellikleri**, seçin **genel**ve sonra özellik kılavuzunda altında **genel**ayarlayın **öğesi türü** özelliği uygun içerik ardışık düzeni öğe türüne. Örneğin, bir resim veya doku dosyası için tercih **görüntü içeriği ardışık düzeni**.  
-  
+Bu makalede, 3-b varlıkları işlemek ve bunları derlemelerinize dahil etmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nasıl kullanabileceğiniz açıklanır.
+
+ 3-b varlıkları oluşturmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] içindeki araçları kullandıktan sonra, bir sonraki adım bunları uygulamanızda kullanmaktır. Ancak bunları kullanabilmeniz için, varlıklarınızın DirectX 'in anlayabilmesi için bir biçime dönüştürülmesi gerekir. Varlıklarınızı dönüştürmenizi kolaylaştırmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], üretebileceğini her bir varlık türü için derleme özelleştirmeleri sağlar. Derlemenize varlıkları dahil etmek için tüm yapmanız gerekir derleme özelleştirmelerini kullanmak için projenizi yapılandırmak, varlıkları projenize eklemek ve doğru yapı özelleştirmesini kullanmak için varlıkları yapılandırmak. Bundan sonra, varlıkları uygulamanıza yükleyebilir ve diğer herhangi bir DirectX uygulamasında olduğu gibi DirectX kaynaklarını oluşturarak ve doldurarak kullanabilirsiniz.
+
+## <a name="configuring-your-project"></a>Projenizi yapılandırma
+ 3-b varlıklarınızı yapınızı bir parçası olarak dağıtmadan önce, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dağıtmak istediğiniz varlık türleri hakkında bilgi sahibi olmanız gerekir. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çok yaygın dosya türlerini zaten biliyor, ancak yalnızca belirli türde uygulamalar 3-b varlıklar kullandığından, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projenin bu tür dosyaları sağladığını varsaymaz. Uygulamanızın, *derleme özelleştirmelerini*kullanarak bu tür varlıkları kullandığını [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] söyleyebilirsiniz — her varlık türü için sunulan farklı dosya türlerini kullanışlı bir şekilde nasıl işleyebileceğinizi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] söyleyen dosyalar. Bu özelleştirmeler proje başına temelinde uygulandığından, tüm yapmanız gereken, projenize uygun özelleştirmeler eklemektir.
+
+#### <a name="to-add-the-build-customizations-to-your-project"></a>Projenize yapı özelleştirmeleri eklemek için
+
+1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **yapı bağımlılıkları**, **yapı özelleştirmeleri**' ni seçin. **Görsel C++ yapı özelleştirmeleri dosyaları** iletişim kutusu görüntülenir.
+
+2. **Kullanılabilir yapı özelleştirmesi dosyaları**altında, projenizde kullanmak istediğiniz varlık türlerine karşılık gelen onay kutularını, bu tabloda açıklandığı gibi seçin:
+
+    |Varlık türü|Yapı özelleştirmesi adı|
+    |----------------|------------------------------|
+    |Dokular ve görüntüler|**ImageContentTask (. targets,. props)**|
+    |3-b modeller|**MeshContentTask (. targets,. props)**|
+    |Gölgelendiriciler|**ShaderGraphContentTask (. targets,. props)**|
+
+3. **Tamam** düğmesini seçin.
+
+## <a name="including-assets-in-your-build"></a>Derlemenize varlıklar ekleme
+ Artık projeniz, kullanmak istediğiniz farklı 3-b varlık türlerini öğrendiğinden, bir sonraki adım, hangi dosyaların 3-b varlık olduğunu ve hangi tür varlıkların olduğunu söyleyecektir.
+
+#### <a name="to-add-an-asset-to-your-build"></a>Derlemenize bir varlık eklemek için
+
+1. **Çözüm Gezgini**, projenizde bir varlığın kısayol menüsünü açın ve ardından **Özellikler**' i seçin. Varlığın **özellik sayfası** iletişim kutusu görüntülenir.
+
+2. **Yapılandırma** ve **Platform** özelliklerinin, değişikliklerinizin uygulanmasını istediğiniz değerlere ayarlandığından emin olun.
+
+3. **Yapılandırma özellikleri**' nin altında **genel**' i seçin ve sonra özellik kılavuzunda, **genel**altında, **öğe türü** özelliğini uygun içerik ardışık düzen öğe türü olarak ayarlayın. Örneğin, bir görüntü veya doku dosyası için **görüntü içeriği Işlem hattı**' nı seçin.
+
    > [!IMPORTANT]
-   > Varsayılan olarak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pek çok resim dosyalarını kullanarak kategorize olması gerektiğini varsayar **görüntü** öğesi yerleşik olan türünü [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Bu nedenle, değiştirmek zorunda **öğesi türü** , görüntü içeriği ardışık düzeni tarafından işlenmesini istediğiniz her görüntünün özelliği. Diğer içerik türlerine işlem hattı, kaynak dosyaları, 3B modeller ve görsel gölgelendirici grafikler varsayılan olarak doğru **öğesi türü**.  
-  
-4. Seçin **Tamam** düğmesi.  
-  
-   Üç İşte içeriği ardışık düzeni öğe türleri ve bunların ilişkili kaynakları ve çıktı dosya türleri.  
-  
-|Öğe türü|Kaynak dosya türleri|Çıkış dosyası biçimi|  
-|---------------|-----------------------|------------------------|  
-|**Görüntü içeriği ardışık düzeni**|Taşınabilir Ağ Grafikleri (.png)<br /><br /> JPEG (.jpg, .jpeg, .jpe, .jfif)<br /><br /> Doğrudan çizim yüzeyi (.dds)<br /><br /> Grafik Değişim Biçimi (.gif)<br /><br /> Bitmap (.bmp, .dib)<br /><br /> Etiketli Resim dosyası biçimi (.tif, .tiff)<br /><br /> Targa (.tga)|Doğrudan çizim yüzeyi (.dds)|  
-|**Ağ içeriği ardışık düzeni**|AutoDesk FBX değişim dosyası (.fbx)<br /><br /> Collada DAE dosyası (.dae)<br /><br /> Wavefront OBJ dosyası (.obj)|3-D mesh dosyası (.cmo)|  
-|**Gölgelendirici içerik ardışık düzeni**|Görsel gölgelendirici grafiği (.dgsl)|Derlenmiş gölgelendirici çıktısı (.cso)|  
-  
-## <a name="configuring-asset-content-pipeline-properties"></a>Varlık içeriği ardışık düzeni özelliklerini yapılandırma  
- Her varlık dosyasının içerik kanalı özelliklerini ayarlayabilirsiniz, böylece belirli bir şekilde derlenir.  
-  
-#### <a name="to-configure-content-pipeline-properties"></a>İçerik ardışık düzeni özelliklerini yapılandırmak için  
-  
-1. İçinde **Çözüm Gezgini**bulunan projenizde varlık dosyası için kısayol menüsünü açın ve ardından **özellikleri**. Varlığın **özellik sayfası** iletişim kutusu görüntülenir.  
-  
-2. Emin olun **yapılandırma** ve **Platform** özellikleri, değişikliklerinizi uygulanmasını istediğiniz değerlere ayarlanır.  
-  
-3. Altında **yapılandırma özellikleri**, içeriği ardışık düzeni düğümünü seçin; örneğin, **görüntü içeriği ardışık düzeni** doku ve resim varlıkları için — ve sonra özellik kılavuzunda özellikleri ayarlayın uygun değerleri. Örneğin, oluşturma zamanında doku varlığı için Mipmap üretmek için ayarlanmış **Mips üret** özelliğini **Evet**.  
-  
-4. Seçin **Tamam** düğmesi.  
-  
-### <a name="image-content-pipeline-configuration"></a>Görüntü içeriği ardışık düzeni yapılandırması  
- Bir doku varlığı oluşturmak için görüntü içeriği ardışık düzen aracını kullandığınızda, dokuyu çeşitli şekillerde sıkıştırma, MIP düzeylerinin oluşturma zamanında oluşturulup ve çıktı dosyası adını değiştirmek olup olmadığını gösterir.  
-  
-|Özellik|Açıklama|  
-|--------------|-----------------|  
-|**Sıkıştırma**|Çıkış dosyası için kullanılan sıkıştırma türünü belirtir.<br /><br /> Kullanılabilir seçenekler şunlardır:<br /><br /> -   **Sıkıştırma yok**<br />-   **BC1_UNORM sıkıştırma**<br />-   **BC1_UNORM_SRGB sıkıştırma**<br />-   **BC2_UNORM sıkıştırma**<br />-   **BC2_UNORM_SRGB sıkıştırma**<br />-   **BC3_UNORM sıkıştırma**<br />-   **BC3_UNORM_SRGB sıkıştırma**<br />-   **BC4_UNORM sıkıştırma**<br />-   **BC4_SNORM sıkıştırma**<br />-   **BC5_UNORM sıkıştırma**<br />-   **BC5_SNORM sıkıştırma**<br />-   **BC6H_UF16 sıkıştırma**<br />-   **BC6H_SF16 sıkıştırma**<br />-   **BC7_UNORM sıkıştırma**<br />-   **BC7_UNORM_SRGB sıkıştırma**<br /><br /> Hakkında hangi sıkıştırma biçimlerinin DirectX'in farklı sürümlerinde desteklendiği hakkında bilgi için bkz. [DXGI için Programlama Kılavuzu](http://go.microsoft.com/fwlink/p/?LinkId=246265).|  
-|Ön çarpımlı alfa biçimine Dönüştür|**Evet** görüntü çıkış dosyasına; önceden çarpılan alfa biçimine dönüştürmek için Aksi takdirde, **Hayır**. Yalnızca çıktı dosyası değiştirildi, kaynak görüntü değiştirilmez.|  
-|**Mips üret**|**Evet** derleme zamanında tam bir MIP zincir oluşturmak ve çıkış dosyasında; eklemek için Aksi takdirde, **Hayır**. Varsa **Hayır**, kaynak dosyası zaten mipmap zinciri içeriyor ve sonra çıktı dosyası bir MIP zinciri olur; Aksi takdirde, çıkış dosyası yok MIP zinciri olmaz.|  
-|**İçerik çıktısı**|Çıkış dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısını değiştirmek dosyanın formatını üzerinde etkisi yoktur.|  
-  
-### <a name="mesh-content-pipeline-configuration"></a>Kafes içerik ardışık düzen yapılandırması  
- Kafes değer oluşturmak için Kafes içerik ardışık düzen aracını kullandığınızda, çıkış dosyasının adını değiştirebilirsiniz.  
-  
-|Özellik|Açıklama|  
-|--------------|-----------------|  
-|**İçerik çıktısı**|Çıkış dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısını değiştirmek dosyanın formatını üzerinde etkisi yoktur.|  
-  
-### <a name="shader-content-pipeline-configuration"></a>Gölgelendirici içerik ardışık düzen yapılandırması  
- Gölgelendirici değerini oluşturmak için gölgelendirici içeriği ardışık düzen aracını kullandığınızda, çıkış dosyasının adını değiştirebilirsiniz.  
-  
-|Özellik|Açıklama|  
-|--------------|-----------------|  
-|**İçerik çıktısı**|Çıkış dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısını değiştirmek dosyanın formatını üzerinde etkisi yoktur.|  
-  
-## <a name="loading-and-using-3-d-assets-at-run-time"></a>Yükleme ve çalışma zamanında 3B varlıklar kullanma  
-  
-### <a name="using-textures-and-images"></a>Dokuları ve resimleri kullanma  
- Direct3D Doku kaynakları oluşturmak için işlevler sağlar. Direct3D 11'de, doku kaynaklarını ve kaynak görünümünü doğrudan görüntü dosyalarından oluşturmak için D3DX11 yardımcı program kitaplığı ek işlevler sağlar. Direct3D 11'de bir doku kaynağı oluşturma hakkında daha fazla bilgi için bkz. [dokular](http://go.microsoft.com/fwlink/p/?LinkID=246267). Bir doku kaynağı veya kaynak görünümü oluşturmak için D3DX11 kitaplığının kullanma hakkında daha fazla bilgi için bir resim dosyasını görmek [nasıl yapılır: Bir dosyadan doku başlatmak](http://go.microsoft.com/fwlink/p/?LinkId=246268).  
-  
-### <a name="using-3-d-models"></a>3-D modelleri kullanma  
- Direct3D 11, 3B modellerden kaynak oluşturmak için işlevleri sağlamaz. Bunun yerine, 3B model dosyasını okuyan ve 3 boyutlu modeli ve modelin gerektirdiği herhangi bir kaynağa temsil eden dizin arabellekleri oluşturan kod yazmanız gerekir — Örneğin, dokuları ve gölgelendiricileri.  
-  
-### <a name="using-shaders"></a>Gölgelendiricileri kullanma  
- Direct3D, gölgelendirici kaynakları oluşturmak ve bunları programlanabilir grafik ardışık düzenine bağlamak için işlevler sağlar. Direct3D gölgelendirici kaynak oluşturma ve bunu kanala bağlama hakkında daha fazla bilgi için bkz. [HLSL için Program Rehberi](http://go.microsoft.com/fwlink/p/?LinkID=261521).  
-  
- Programlanabilir grafik ardışık düzen Ardışık düzenin her aşaması işlem hattının sonraki aşamasına anlayabileceği bir şekilde biçimlendirilmiş bir sonuç vermeniz gerekir. Gölgelendirici Tasarımcısı yalnızca piksel gölgelendiricileri oluşturabildiğinden, bu, bu aldığı verilerin beklediği biçimde olmasını sağlamak için uygulamanıza kalmıştır anlamına gelir. Birçok programlanabilir gölgelendirici aşamaları, piksel gölgelendiricisinden önce oluşur ve geometrik dönüştürmeler — köşe gölgelendiricisi, hull gölgelendiricisi, etki alanı gölgelendiricisi ve geometri gölgelendiricisi. Programlanabilir olmayan Mozaik döşeme aşaması piksel gölgelendiriciden önce de gerçekleşir. Bu aşamalardan hangisi doğrudan piksel gölgelendiricisinin önünde olursa olsun, sonucunu bu biçimde vermelidir:  
-  
-```hlsl  
-  
-struct PixelShaderInput  
-{  
-    float4 pos : SV_POSITION;  
-    float4 diffuse : COLOR;  
-    float2 uv : TEXCOORD0;  
-    float3 worldNorm : TEXCOORD1;  
-    float3 worldPos : TEXCOORD2;  
-    float3 toEye : TEXCOORD3;  
-    float4 tangent : TEXCOORD4;  
-    float3 normal : TEXCOORD5;  
-};  
-```  
-  
- Gölgelendiricinizi kullandığınız gölgelendirici Tasarımcısı düğümlerine bağlı olarak, bu tanımlara göre biçime ek veri sağlamanız olabilir:  
-  
-```  
-  
-Texture2D Texture1 : register( t0 );  
-Texture2D Texture2 : register( t1 );  
-Texture2D Texture3 : register( t2 );  
-Texture2D Texture4 : register( t3 );  
-Texture2D Texture5 : register( t4 );  
-Texture2D Texture6 : register( t5 );  
-Texture2D Texture7 : register( t6 );  
-Texture2D Texture8 : register( t7 );  
-  
-TextureCube CubeTexture1 : register( t8 );  
-TextureCube CubeTexture2 : register( t9 );  
-TextureCube CubeTexture3 : register( t10 );  
-TextureCube CubeTexture4 : register( t11 );  
-TextureCube CubeTexture5 : register( t12 );  
-TextureCube CubeTexture6 : register( t13 );  
-TextureCube CubeTexture7 : register( t14 );  
-TextureCube CubeTexture8 : register( t15 );  
-  
-SamplerState TexSampler : register( s0 );  
-  
-cbuffer MaterialVars : register (b0)  
-{  
-    float4 MaterialAmbient;  
-    float4 MaterialDiffuse;  
-    float4 MaterialSpecular;  
-    float4 MaterialEmissive;  
-    float MaterialSpecularPower;  
-};  
-  
-cbuffer LightVars : register (b1)  
-{  
-    float4 AmbientLight;  
-    float4 LightColor[4];  
-    float4 LightAttenuation[4];  
-    float3 LightDirection[4];  
-    float LightSpecularIntensity[4];  
-    uint IsPointLight[4];  
-    uint ActiveLights;  
-}  
-  
-cbuffer ObjectVars : register(b2)  
-{  
-    float4x4 LocalToWorld4x4;  
-    float4x4 LocalToProjected4x4;  
-    float4x4 WorldToLocal4x4;  
-    float4x4 WorldToView4x4;  
-    float4x4 UVTransform4x4;  
-    float3 EyePosition;  
-};  
-  
-cbuffer MiscVars : register(b3)  
-{  
-    float ViewportWidth;  
-    float ViewportHeight;  
-    float Time;  
-};  
-```  
-  
-## <a name="related-topics"></a>İlgili konular  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[Nasıl yapılır: Mipmap'ler İçeren Dokuyu Dışarı Aktarma](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|Hesaplanmış mipmap'leri içeren dokuyu dışarı aktarmak için görüntü içeriği ardışık düzeni kullanmayı açıklar.|  
-|[Nasıl yapılır: Ön Çarpımlı Alfa Kullanan Dokuyu Dışarı Aktarma](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|Ön çarpımlı alfa değerleri içeren bir dokuyu dışarı aktarmak için görüntü içeriği ardışık düzeni kullanmayı açıklar.|  
-|[Nasıl yapılır: Direct2D Veya Javascript Uygulamaları ile Kullanmak İçin Dokuyu Dışarı Aktarma](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|Direct2D veya JavaScript uygulamasında kullanılabilen bir dokuyu dışarı aktarmak için görüntü içeriği ardışık düzeni kullanmayı açıklar.|  
-|[Oyunlar ve Uygulamalar için 3B Varlıklarla Çalışma](../designers/working-with-3-d-assets-for-games-and-apps.md)|Visual Studio'nun oluşturmak ve dokular ve resimler, 3B modelleri ve gölgelendiricileri içeren 3-b varlıkları işlemek için sağladığı düzenleme araçlarını açıklar.|  
-|[Nasıl yapılır: Gölgelendiriciyi Dışarı Aktarma](../designers/how-to-export-a-shader.md)|Gölgelendirici Tasarımcısı'ndan gölgelendiriciyi dışarı aktarma işlemini açıklamaktadır.|
+   > Varsayılan olarak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birçok görüntü dosyası türünün, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yerleşik **görüntü** öğesi türü kullanılarak kategorize olması gerektiğini varsayar. Bu nedenle, görüntü içeriği ardışık düzeni tarafından işlenmesini istediğiniz her bir görüntünün **öğe türü** özelliğini değiştirmeniz gerekir. 3-b modeller ve Visual gölgelendirici grafik için diğer içerik ardışık düzen kaynak dosyalarının doğru **öğe türü**için varsayılan türleri.
+
+4. **Tamam** düğmesini seçin.
+
+   Üç içerik ardışık düzen öğe türü ve bunların ilişkili kaynak ve çıkış dosyası türleri aşağıda verilmiştir.
+
+|Öğe türü|Kaynak dosya türleri|Çıkış dosyası biçimi|
+|---------------|-----------------------|------------------------|
+|**Görüntü Içeriği ardışık düzeni**|Taşınabilir Ağ Grafikleri (. png)<br /><br /> JPEG (. jpg,. jpeg,. jpe,. JI)<br /><br /> Doğrudan çizim yüzeyi (. DDS)<br /><br /> Grafik Değişim Biçimi (. gif)<br /><br /> Bit eşlem (. bmp,. dib)<br /><br /> Etiketli resim dosyası biçimi (. tif,. tiff)<br /><br /> Targa (. TGA)|DirectDraw yüzeyi (. DDS)|
+|**Kafes Içerik ardışık düzeni**|AutoDesk FBX değişim dosyası (. fbx)<br /><br /> Collada Dade dosyası (. Dade)<br /><br /> Wavefront OBJ dosyası (. obj)|3-b ağ dosyası (. CMO)|
+|**Gölgelendirici Içerik ardışık düzeni**|Görsel Gölgelendirici Grafiği (. dgsl)|Derlenen gölgelendirici çıkışı (. CSO)|
+
+## <a name="configuring-asset-content-pipeline-properties"></a>Varlık içeriği ardışık düzen özelliklerini yapılandırma
+ Her bir varlık dosyasının içerik ardışık düzen özelliklerini belirli bir şekilde oluşturulacak şekilde ayarlayabilirsiniz.
+
+#### <a name="to-configure-content-pipeline-properties"></a>İçerik ardışık düzen özelliklerini yapılandırmak için
+
+1. **Çözüm Gezgini**, projenizde varlık dosyasının kısayol menüsünü açın ve ardından **Özellikler**' i seçin. Varlığın **özellik sayfası** iletişim kutusu görüntülenir.
+
+2. **Yapılandırma** ve **Platform** özelliklerinin, değişikliklerinizin uygulanmasını istediğiniz değerlere ayarlandığından emin olun.
+
+3. **Yapılandırma özellikleri**altında, içerik ardışık düzeni düğümünü seçin — örneğin, doku ve görüntü varlıkları Için **görüntü içeriği işlem hattı** — ve sonra özellik kılavuzunda, özellikleri uygun değerlere ayarlayın. Örneğin, derleme zamanında bir doku varlığı için mı haritaları oluşturmak için, **MIPS oluştur** özelliğini **Evet**olarak ayarlayın.
+
+4. **Tamam** düğmesini seçin.
+
+### <a name="image-content-pipeline-configuration"></a>Görüntü içeriği ardışık düzen yapılandırması
+ Bir doku varlığı oluşturmak için görüntü içeriği ardışık düzen aracını kullandığınızda, dokuyu çeşitli yollarla sıkıştırabilir, MıP düzeylerinin derleme zamanında oluşturulup oluşturulmayacağını belirtebilir ve çıkış dosyasının adını değiştirebilirsiniz.
+
+|Özellik|Açıklama|
+|--------------|-----------------|
+|**Madı**|Çıktı dosyası için kullanılan sıkıştırma türünü belirtir.<br /><br /> Kullanılabilir seçenekler şunlardır:<br /><br /> **sıkıştırma** -   <br />-   **BC1_UNORM sıkıştırma**<br />-   **BC1_UNORM_SRGB sıkıştırma**<br />-   **BC2_UNORM sıkıştırma**<br />-   **BC2_UNORM_SRGB sıkıştırma**<br />-   **BC3_UNORM sıkıştırma**<br />-   **BC3_UNORM_SRGB sıkıştırma**<br />-   **BC4_UNORM sıkıştırma**<br />-   **BC4_SNORM sıkıştırma**<br />-   **BC5_UNORM sıkıştırma**<br />-   **BC5_SNORM sıkıştırma**<br />-   **BC6H_UF16 sıkıştırma**<br />-   **BC6H_SF16 sıkıştırma**<br />-   **BC7_UNORM sıkıştırma**<br />-   **BC7_UNORM_SRGB sıkıştırma**<br /><br /> DirectX 'in farklı sürümlerinde hangi sıkıştırma biçimlerinin desteklendiği hakkında bilgi için bkz. [DXGı Için Programlama Kılavuzu](http://go.microsoft.com/fwlink/p/?LinkId=246265).|
+|Önceden çoğaltılmış alfa biçimine Dönüştür|**Evet** , görüntüyü çıkış dosyasında önceden çarpılan Alfa biçimine dönüştürmek için. Aksi takdirde, **Hayır**. Yalnızca çıkış dosyası değiştirildiğinde, kaynak görüntü değiştirilmez.|
+|**MIPS oluştur**|Derleme zamanında tam MıP zinciri oluşturmak ve bunu çıkış dosyasına dahil etmek için **Evet** ; Aksi takdirde, **Hayır**. **Hayır**ise ve kaynak dosya zaten bir mipmap zinciri içeriyorsa, çıkış dosyası bir MIP zincirine sahip olur; Aksi takdirde, çıkış dosyası MıP zincirine sahip olmaz.|
+|**İçerik çıkışı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısının değiştirilmesinin dosya biçimi üzerinde hiçbir etkisi yoktur.|
+
+### <a name="mesh-content-pipeline-configuration"></a>Kafes içerik ardışık düzen yapılandırması
+ Bir kafes varlığı oluşturmak için kafes içerik ardışık düzen aracını kullandığınızda, çıkış dosyasının adını değiştirebilirsiniz.
+
+|Özellik|Açıklama|
+|--------------|-----------------|
+|**İçerik çıkışı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısının değiştirilmesinin dosya biçimi üzerinde hiçbir etkisi yoktur.|
+
+### <a name="shader-content-pipeline-configuration"></a>Gölgelendirici içerik ardışık düzen yapılandırması
+ Gölgelendirici varlığı oluşturmak için gölgelendirici içerik ardışık düzen aracını kullandığınızda, çıkış dosyasının adını değiştirebilirsiniz.
+
+|Özellik|Açıklama|
+|--------------|-----------------|
+|**İçerik çıkışı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısının değiştirilmesinin dosya biçimi üzerinde hiçbir etkisi yoktur.|
+
+## <a name="loading-and-using-3-d-assets-at-run-time"></a>Çalışma zamanında 3-b varlıklarını yükleme ve kullanma
+
+### <a name="using-textures-and-images"></a>Dokuları ve görüntüleri kullanma
+ Direct3D, doku kaynakları oluşturmak için işlevler sağlar. Direct3D 11 ' de, D3DX11 yardımcı program kitaplığı, doğrudan görüntü dosyalarından doku kaynakları ve kaynak görünümleri oluşturmak için ek işlevler sağlar. Direct3D 11 ' de doku kaynağı oluşturma hakkında daha fazla bilgi için bkz. [dokular](http://go.microsoft.com/fwlink/p/?LinkID=246267). Bir görüntü dosyasından doku kaynağı veya kaynak görünümü oluşturmak için D3DX11 kitaplığını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir dokuyu dosyadan doku başlatma](http://go.microsoft.com/fwlink/p/?LinkId=246268).
+
+### <a name="using-3-d-models"></a>3-b modeller kullanma
+ Direct3D 11, 3-b modellerinden kaynak oluşturmak için işlevler sağlamaz. Bunun yerine, 3-D model dosyasını okuyan ve 3B modeli ve modelin gerektirdiği tüm kaynakları (örneğin, dokular veya gölgelendiriciler) temsil eden köşe ve dizin arabellekleri oluşturan bir kod yazmanız gerekir.
+
+### <a name="using-shaders"></a>Gölgelendiriciler kullanma
+ Direct3D, gölgelendirici kaynakları oluşturmak ve bunları programlanabilir grafik ardışık düzenine bağlamak için işlevler sağlar. Direct3D 'de gölgelendirici kaynağı oluşturma ve ardışık düzene bağlama hakkında daha fazla bilgi için bkz. [HLSL Için Programlama Kılavuzu](http://go.microsoft.com/fwlink/p/?LinkID=261521).
+
+ Programlanabilir grafik ardışık düzeninde, işlem hattının her bir aşaması, anlanabilir bir şekilde biçimlendirilen bir sonuç olan işlem hattının sonraki aşamasına vermelidir. Gölgelendirici Tasarımcısı yalnızca Piksel gölgelendiricileri oluşturabileceğinden, bu, aldığı verilerin beklediği biçimde olduğundan emin olmak için uygulamanıza ait olduğu anlamına gelir. Birkaç programlanabilir gölgelendirici aşaması, piksel gölgelendiriciden önce oluşur ve geometrik dönüşümler, köşe gölgelendiricisi, kabuk gölgelendiricisi, etki alanı gölgelendiricisi ve geometri gölgelendirici gerçekleştirir. Programlanabilir olmayan mozaik döşeme aşaması, piksel gölgelendiriciden önce de gerçekleşir. Bu aşamaların ne kadar doğrudan piksel gölgelendiricisinin önünde olduğuna bakılmaksızın, bunun sonucunu bu biçimde vermelidir:
+
+```hlsl
+
+struct PixelShaderInput
+{
+    float4 pos : SV_POSITION;
+    float4 diffuse : COLOR;
+    float2 uv : TEXCOORD0;
+    float3 worldNorm : TEXCOORD1;
+    float3 worldPos : TEXCOORD2;
+    float3 toEye : TEXCOORD3;
+    float4 tangent : TEXCOORD4;
+    float3 normal : TEXCOORD5;
+};
+```
+
+ Gölgelendiricide kullandığınız gölgelendirici tasarımcı düğümlerine bağlı olarak, bu tanımlara göre biçimdeki ek verileri de sağlamanız gerekebilir:
+
+```
+
+Texture2D Texture1 : register( t0 );
+Texture2D Texture2 : register( t1 );
+Texture2D Texture3 : register( t2 );
+Texture2D Texture4 : register( t3 );
+Texture2D Texture5 : register( t4 );
+Texture2D Texture6 : register( t5 );
+Texture2D Texture7 : register( t6 );
+Texture2D Texture8 : register( t7 );
+
+TextureCube CubeTexture1 : register( t8 );
+TextureCube CubeTexture2 : register( t9 );
+TextureCube CubeTexture3 : register( t10 );
+TextureCube CubeTexture4 : register( t11 );
+TextureCube CubeTexture5 : register( t12 );
+TextureCube CubeTexture6 : register( t13 );
+TextureCube CubeTexture7 : register( t14 );
+TextureCube CubeTexture8 : register( t15 );
+
+SamplerState TexSampler : register( s0 );
+
+cbuffer MaterialVars : register (b0)
+{
+    float4 MaterialAmbient;
+    float4 MaterialDiffuse;
+    float4 MaterialSpecular;
+    float4 MaterialEmissive;
+    float MaterialSpecularPower;
+};
+
+cbuffer LightVars : register (b1)
+{
+    float4 AmbientLight;
+    float4 LightColor[4];
+    float4 LightAttenuation[4];
+    float3 LightDirection[4];
+    float LightSpecularIntensity[4];
+    uint IsPointLight[4];
+    uint ActiveLights;
+}
+
+cbuffer ObjectVars : register(b2)
+{
+    float4x4 LocalToWorld4x4;
+    float4x4 LocalToProjected4x4;
+    float4x4 WorldToLocal4x4;
+    float4x4 WorldToView4x4;
+    float4x4 UVTransform4x4;
+    float3 EyePosition;
+};
+
+cbuffer MiscVars : register(b3)
+{
+    float ViewportWidth;
+    float ViewportHeight;
+    float Time;
+};
+```
+
+## <a name="related-topics"></a>İlgili konular
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[Nasıl yapılır: Mipmap'leri İçeren Dokuyu Dışa Aktarma](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|Önceden hesaplanan Mımage haritaları içeren bir dokuyu dışarı aktarmak için görüntü Içeriği ardışık düzeni 'nin nasıl kullanılacağını açıklar.|
+|[Nasıl yapılır: Ön Çarpımlı Alfa kullanan Doku Dışa Aktarma](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|Ön çarpılmış Alfa değerlerini içeren bir dokuyu dışarı aktarmak için görüntü Içeriği ardışık düzeninin nasıl kullanılacağını açıklar.|
+|[Nasıl yapılır: Direct2D veya Javascript Uygulamaları Kullanmak için Doku Dışa Aktarma](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|Direct2D veya JavaScript uygulamasında kullanılabilen bir dokuyu dışarı aktarmak için görüntü Içeriği ardışık düzeni 'nin nasıl kullanılacağını açıklar.|
+|[Oyunlar ve Uygulamalar için 3B Varlıklarla Çalışma](../designers/working-with-3-d-assets-for-games-and-apps.md)|Visual Studio 'Nun dokuları ve görüntüleri, 3-b modelleri ve gölgelendiricileri içeren 3-b varlıkları oluşturmak ve işlemek için sağladığı düzenleme araçlarını açıklar.|
+|[Nasıl Yapılır: Gölgelendiriciyi Dışarı Aktarma](../designers/how-to-export-a-shader.md)|Gölgelendirici tasarımcısından bir gölgelendiricinin nasıl dışarı aktarılacağını açıklar.|

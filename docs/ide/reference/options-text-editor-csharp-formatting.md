@@ -1,5 +1,5 @@
 ---
-title: C# Düzenleyicisi biçimlendirme seçenekleri
+title: C#Düzenleyici biçimlendirme seçenekleri
 ms.date: 08/14/2018
 ms.topic: reference
 f1_keywords:
@@ -13,86 +13,86 @@ f1_keywords:
 helpviewer_keywords:
 - formatting options [C#]
 - Text editor Options dialog box, formatting
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b555ede6ecf406f98c2e1ae9384b61664e8226cf
-ms.sourcegitcommit: b468d71052a1b8a697f477ab23a3644de139f1e9
+ms.openlocfilehash: 8947f6e2fee2b8615c750b770ac3b0dea85bb991
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67260412"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666303"
 ---
-# <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>Seçenekler iletişim kutusu: Metin düzenleyici \> C# \> kod stili \> biçimlendirme
+# <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>Seçenekler iletişim kutusu: metin Düzenleyicisi \> C# \> kod stili \> biçimlendirme
 
-Kullanım **biçimlendirme** Seçenekleri sayfası ve onun alt ([**girinti**](#indentation-page), **yeni satırlar**, **aralığı** ve **sarmalama**) Kod düzenleyicisinde kod biçimlendirme seçeneklerini ayarlamak için.
+Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını ve alt sayfalarını ([**girintileme**](#indentation-page), **yeni satırlar**, **boşluk**ve **kaydırma**) kullanın.
 
-Bu seçenekler sayfası erişmek için kendi seçtikleri **Araçları** > **seçenekleri** menü çubuğundan. İçinde **seçenekleri** iletişim kutusunda **metin düzenleyici** > **C#**  > **kod stili**  >  **Biçimlendirme**.
+Bu seçenekler sayfasına erişmek için, menü çubuğundan **araçlar**  > **Seçenekler** ' i seçin. **Seçenekler** iletişim kutusunda,**kod stili**  > **biçimlendirme** >  **metin düzenleyici**  > **C#** seçin.
 
 > [!TIP]
-> **Girinti**, **yeni satırlar**, **aralığı**, ve **sarmalama** alt her gösteren alttaki Önizleme penceresini görüntüleyin Her seçeneği etkin. Önizleme penceresini kullanmak için biçimlendirme seçeneği seçin. Önizleme penceresini seçeneği örneği gösterilmektedir. Bir ayar radyo düğmesinin veya onay kutusunu, yeni ayar etkisini göstermek için önizleme penceresi güncelleştirmeleri seçerek değiştirdiğinizde.
+> **Girinti**, **yeni satırlar**, **Aralık**ve **kaydırma** alt sayfaları her bir seçeneğin etkisini gösteren bir önizleme penceresi görüntüler. Önizleme penceresini kullanmak için bir biçimlendirme seçeneği belirleyin. Önizleme penceresinde seçilen seçeneğe bir örnek gösterilir. Bir seçimi bir radyo düğmesi veya onay kutusu seçerek değiştirdiğinizde, Önizleme penceresi Yeni ayarın etkisini gösterecek şekilde güncelleştirilir.
 
-## <a name="formatting-general-page"></a>Biçimlendirme (Genel) sayfası
+## <a name="formatting-general-page"></a>Biçimlendirme (genel) sayfası
 
 ### <a name="general-settings"></a>Genel ayarlar
 
-Bu ayarlar etkiler *olduğunda* Kod düzenleyicisinde biçimlendirme seçeneklerini kod için geçerlidir.
+Bu ayarlar, kod düzenleyicisinin koda biçimlendirme seçeneklerini uyguladığı *zaman* etkiler.
 
 |Etiketle|Açıklama|
 |-----------|-----------------|
-|**Yazarken Otomatik Biçimlendir**|Seçili olmadığında, **; deyimi biçimlendirme** ve **bloğu}** seçenekleri devre dışı bırakıldı.|
-|**Biçim ifadesi üzerinde otomatik olarak;**|Seçili olduğunda, düzenleyici için seçili biçimlendirme seçeneklerine göre tamamlanma deyimleri biçimlendirir.|
-|**Otomatik olarak bloğu}**|Bu onay kutusu seçildiğinde, biçimleri kod blokları için Düzenleyicisi kod bloğu tamamlar tamamlamaz seçili biçimlendirme seçeneklerine göre.|
-|**Sonrasında Otomatik Biçimlendir**|Bu onay kutusu seçildiğinde, metin biçimleri, **Enter** düzenleyici için seçilen biçimlendirme seçenekleri uyacak şekilde basıldığında.|
-|**Yapıştırıldığında otomatik olarak Biçimlendir**|Seçili olduğunda, düzenleyici için seçilen biçimlendirme seçenekleri uyacak şekilde düzenleyicisine yapıştırılan metin biçimlendirir.|
+|**Yazarken Otomatik Biçimlendir**|Seçimi kaldırıldığında,, ve biçim **bloğu on}** seçeneklerinde **Biçim açıklaması** devre dışı bırakılır.|
+|**; Üzerinde otomatik olarak biçim ekstresi**|Seçildiğinde, deyimi, düzenleyici için seçilen biçimlendirme seçeneklerine göre tamamlama sırasında biçimlendirir.|
+|**} Üzerindeki blok otomatik olarak Biçimlendir**|Seçildiğinde kod bloğunu, kod bloğunu tamamladıktan hemen sonra düzenleyici için seçilen biçimlendirme seçeneklerine göre biçimlendirir.|
+|**Dönüşte otomatik olarak Biçimlendir**|Seçildiğinde, düzenleyici için seçilen biçimlendirme seçeneklerine uyacak şekilde, **ENTER** tuşuna basıldığında metin biçimlendirir.|
+|**Yapıştırırken otomatik olarak Biçimlendir**|Seçildiğinde, düzenleyiciye yapıştırılan metni düzenleyici için seçilen biçimlendirme seçeneklerine uyacak şekilde biçimlendirir.|
 
 ::: moniker range="vs-2019"
 
-Kod stili ayarları için daha önce uygulandıysa C# kullanarak dosyaları **belgeyi Biçimlendir** işlevi olarak kullanıma sunuldu Visual Studio 2017, komut [ **kod Temizleme** ](../code-styles-and-code-cleanup.md#apply-code-styles).
+Visual Studio 2017 ' deki **belgeyi Biçimlendir** komutunu C# kullanarak daha önce dosyalar için kod stili ayarları uyguladıysanız, bu işlev artık [**kod temizleme**](../code-styles-and-code-cleanup.md#apply-code-styles)olarak kullanılabilir.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="format-document-settings"></a>Biçim belgesi ayarları
+### <a name="format-document-settings"></a>Belge ayarlarını Biçimlendir
 
-Bu ayarları yapılandırmak **belgeyi Biçimlendir** bir dosyada ek kod temizleme işlemini gerçekleştirmek için komutu. Bu ayarları nasıl uygulanacağı hakkında daha fazla bilgi için bkz. [belgeyi Biçimlendir komut](../code-styles-and-code-cleanup.md#apply-code-styles).
+Bu ayarlar, dosya üzerinde ek kod temizleme işlemini gerçekleştirmek için **Biçim belgesi** komutunu yapılandırır. Bu ayarların nasıl uygulandığı hakkında daha fazla bilgi için bkz. [belge komutunu Biçimlendir](../code-styles-and-code-cleanup.md#apply-code-styles).
 
-|Etiketle|Açıklama|Karşılık gelen EditorConfig ve Araçlar > Seçenekler kuralları|
+|Etiketle|Açıklama|İlgili EditorConfig ve Araçlar > seçenekleri kuralları|
 |-----------|-----------------|-----------------|-----------------|
-|**Tüm uygulama C# biçimlendirme kurallarını (Girinti, sarmalama, aralık)**|**Belgeyi Biçimlendir** her zaman biçimlendirme sorunları giderir komutu. Bu ayar değiştirilemez.| [Çekirdek EditorConfig seçeneği](../../ide/create-portable-custom-editor-options.md)<br/>[.NET EditorConfig biçimlendirme seçenekleri](../../ide/editorconfig-formatting-conventions.md)<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici**  >  **C#**  >   **Biçimlendirme** > [**girinti** veya **yeni satırlar** veya **aralığı** veya **sarmalama**]|
-|**Biçimlendirme sırasında ekleme kodu temizleme gerçekleştirin**|Bu onay kutusu seçildiğinde, düzeltmeler aşağıda belirtilen kuralları geçerlidir **Edit.FormatDocument** komutu.| Yok |
-|**Gereksiz kullanımları Kaldır**|Seçili olduğunda, gereksiz kaldırır `using` yönergeleri olduğunda **Edit.FormatDocument** tetiklenir.| Yok |
-|**Kullanımları sıralama**|Bu onay kutusu seçildiğinde, sıralar `using` yönergeleri olduğunda **Edit.FormatDocument** tetiklenir.| dotnet_sort_system_directives_first<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici** > **C#**  > **Gelişmiş**   >  **Yer 'System' yönergelerini ilk kullanımları sıralarken** |
-|**Küme ayraçları için tek satır denetim ifadeleri Ekle/Kaldır**|Bu onay kutusu seçildiğinde, ekler veya küme ayraçları tek satır denetimi deyimlerini kaldırır, **Edit.FormatDocument** tetiklenir.| csharp_prefer_braces<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici** > **C#**  > **kod stili**   >  **Kod bloğu tercihleri** > **küme ayraçlarını tercih et** |
-|**Erişilebilirlik değiştiricileri Ekle**|Bu onay kutusu seçildiğinde, eksik erişilebilirlik değiştiricileri ekler, **Edit.FormatDocument** tetiklenir.| dotnet_style_require_accessibility_modifiers |
-|**Erişilebilirlik değiştiricileri Sırala**|Bu onay kutusu seçildiğinde, erişilebilirlik değiştiricileri sıralar, **Edit.FormatDocument** tetiklenir.| csharp_preferred_modifier_order<br/>visual_basic_preferred_modifier_order |
-|**İfade veya engelleme gövdesi tercihleri Uygula**|İfade gövdeli üyeler gövdeleri engellemek için bu onay kutusu seçildiğinde, dönüştürür ya da tam tersi zaman **Edit.FormatDocument** tetiklenir.| [İfade gövdeli üye EditorConfig seçeneği](../../ide/editorconfig-language-conventions.md#expression-bodied-members)<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici** > **C#**  > **kod stili**   >  **İfade tercihleri** > **yöntemleri, Oluşturucular, vb. için ifade gövdesi kullan.** |
-|**Örtük/açık tür tercihleri Uygula**|Bu onay kutusu seçildiğinde, dönüştürür `var` açık tür veya tam tersi zaman **Edit.FormatDocument** tetiklenir.| [Açık tür EditorConfig seçeneği](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types)<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici** > **C#**  > **kod stili**   >  **'var' tercihleri** |
-|**Satır içi 'out' değişken tercihleri Uygula**|Seçili olduğunda, satır içleri `out` değişkenleri burada mümkün olduğunda **Edit.FormatDocument** tetiklenir.| csharp_style_inlined_variable_declaration<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici** > **C#**  > **kod stili**   >  **Değişken tercihleri** > **satır içi değişken bildirimini tercih et** |
-|**Dil/framework tür tercihleri Uygula**|Seçildiğinde, language türleri dönüştürür framework türleri veya tam tersi zaman **Edit.FormatDocument** tetiklenir.| dotnet_style_predefined_type_for_locals_parameters_members<br/>dotnet_style_predefined_type_for_member_access<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici** > **C#**  > **kod stili**   >  **önceden tanımlanmış tür tercihleri** |
-|**Nesne/toplama başlatma tercihleri Uygula**|Bu onay kutusu seçildiğinde, mümkün olduğunda nesne ve koleksiyon başlatıcıları kullanır, **Edit.FormatDocument** tetiklenir.| dotnet_style_object_initializer<br/>dotnet_style_collection_initializer<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici** > **C#**  > **kod stili**   >  **İfade tercihleri** > **nesne başlatıcısını tercih et** veya **koleksiyon başlatıcısını tercih et** |
-|**'This.' niteliği tercihleri Uygula**|Seçili olduğunda geçerlidir `this.` tercihleri olduğunda **Edit.FormatDocument** tetiklenir.| [Bu. Nitelik EditorConfig seçeneği](../../ide/editorconfig-language-conventions.md#this-and-me)<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici** > **C#**  > **kod stili**   >  **'this.' tercihleri** |
-|**Mümkün olduğunda özel alanları salt okunur yapın**|Seçili olduğunda, özel alanlar yapar `readonly` burada mümkün olduğunda **Edit.FormatDocument** tetiklenir.| dotnet_style_readonly_field<br/><br/>**Araçlar** > **seçenekleri** > **metin düzenleyici** > **C#**  > **kod stili**   >  **Alan tercihleri** > **salt okunur tercih et** |
-|**Gereksiz atamaları Kaldır**|Bu onay kutusu seçildiğinde, mümkün olduğunda gereksiz atamalar kaldırır, **Edit.FormatDocument** tetiklenir.| Yok |
-|**Kullanılmayan değişkenler Kaldır**|Bu onay kutusu seçildiğinde, ne zaman kullanılmayan değişkenler kaldırır **Edit.FormatDocument** tetiklenir.| Yok |
+|**Tüm C# biçimlendirme kurallarını Uygula (girintileme, kaydırma, Aralık)**|**Biçim belgesi** komutu her zaman biçimlendirme sorunlarını düzeltir. Bu ayar değiştirilemez.| [Core EditorConfig seçenekleri](../../ide/create-portable-custom-editor-options.md)<br/>[.NET EditorConfig biçimlendirme seçenekleri](../../ide/editorconfig-formatting-conventions.md)<br/><br/>**Araçlar**  > **Seçenekler**  > **metin Düzenleyicisi**  > **C#**  > **biçimlendirme** > [**girintileme** veya **yeni çizgiler** veya **boşluk** ya da **kaydırma**]|
+|**Biçimlendirme sırasında ek kod temizlemeyi gerçekleştir**|Seçildiğinde, **Edit. FormatDocument** komutunda belirtilen kurallara ilişkin düzeltmeleri uygular.| Yok |
+|**Gereksiz kullanımları kaldır**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde gereksiz `using` yönergeleri kaldırır.| Yok |
+|**Using deyimlerini Sırala**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde `using` yönergeleri sıralar.| dotnet_sort_system_directives_first<br/><br/>**Araçlar**  > **Seçenekler**  > **metin Düzenleyicisi**  > **C#**  > **Gelişmiş** 0 **' sistem ' yönergelerini sıralama, using deyimlerini sıralarken** |
+|**Tek satırlı denetim deyimleri için küme ayraçları Ekle/Kaldır**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde tek satırlık denetim deyimlerine küme ayraçları ekler veya kaldırır.| csharp_prefer_braces<br/><br/>**Araçlar**  > **Seçenekler**  > **metin düzenleyici**  > **C#**  > **kod stili** 0**kod bloğu tercihleri** 2,**küme ayraçlarını tercih et** |
+|**Erişilebilirlik değiştiricileri Ekle**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde eksik erişilebilirlik değiştiricileri ekler.| dotnet_style_require_accessibility_modifiers |
+|**Erişilebilirlik değiştiricilerini sıralama**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde erişilebilirlik değiştiricilerini sıralar.| csharp_preferred_modifier_order<br/>visual_basic_preferred_modifier_order |
+|**İfade/blok gövdesi tercihlerini Uygula**|Seçildiğinde, ifade Bodied üyeleri, **Edit. FormatDocument** tetiklendiğinde ya da tam tersi olarak blok gövdeler halinde dönüştürür.| [İfade-Bodied member EditorConfig seçenekleri](../../ide/editorconfig-language-conventions.md#expression-bodied-members)<br/><br/>**Araçlar**  > **Seçenekler**  > **metin düzenleyici**  > **C#**  > **kod stili** 0**Ifade tercihleri** 2**Yöntemler, oluşturucular vb. için ifade gövdesi kullan.** |
+|**Örtük/açık tür tercihleri Uygula**|Seçildiğinde, `var` **. FormatDocument** tetiklendiğinde açık türe dönüştürür veya tam tersi de geçerlidir.| [Açık tür EditorConfig seçenekleri](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types)<br/><br/>**Araçlar**  > **Seçenekler**  > **metin düzenleyicisi**  > **C#**  > **kod stili** 0 **' var ' tercihleri** |
+|**Satır içi ' Out ' değişkenleri tercihlerini Uygula**|Seçildiğinde, Inlines, **düzenleme. FormatDocument** tetiklendiğinde mümkün olduğu durumlarda `out`.| csharp_style_inlined_variable_declaration<br/><br/>**Araçlar**  > **Seçenekler**  > **metin düzenleyicisi**  > **C#**  > **kod stili** 0**değişken tercihleri** 2**satır içi değişken bildirimini tercih et** |
+|**Dil/çerçeve türü tercihlerini Uygula**|Seçildiğinde, dil türlerini çerçeve türlerine dönüştürür veya bunun tersini yapın **. FormatDocument** tetiklenir.| dotnet_style_predefined_type_for_locals_parameters_members<br/>dotnet_style_predefined_type_for_member_access<br/><br/>**Araçlar**  > **Seçenekler**  > **metin düzenleyicisi**  > **C#**  > **kod stili** 0**önceden tanımlanmış tür tercihleri** |
+|**Nesne/koleksiyon başlatma tercihlerini Uygula**|Seçildiğinde nesne ve koleksiyon başlatıcıları, **düzenleme. FormatDocument** tetiklendiğinde mümkün olduğunca kullanılır.| dotnet_style_object_initializer<br/>dotnet_style_collection_initializer<br/><br/>**Araçlar**  > **Seçenekler**  > **metin düzenleyici**  > **C#**  > **kod stili** 0**ifade tercihleri** 2**nesne Başlatıcısı tercih et** veya toplamayı tercih et  **Başlatıcı** |
+|**' This. ' nitelik tercihlerini Uygula**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde `this.` tercihleri uygular.| [Bunun. nitelik Düzenleyicisi yapılandırma seçenekleri](../../ide/editorconfig-language-conventions.md#this-and-me)<br/><br/>**Araçlar**  > **Seçenekler**  > **metin düzenleyici**  > **C#**  > **kod stili** 0 **' this. ' tercihleri** |
+|**Mümkünse özel alanları ReadOnly yap**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde mümkün olduğunca özel alanlar `readonly` olur.| dotnet_style_readonly_field<br/><br/>**Araçlar**  > **Seçenekler**  > **metin düzenleyicisi**  > **C#**  > **kod stili** 0**alan tercihleri** 2**salt okunur tercih et** |
+|**Gereksiz yayınları kaldır**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde mümkün olduğunda gereksiz yayınları kaldırır.| Yok |
+|**Kullanılmayan değişkenleri kaldır**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde kullanılmayan değişkenleri kaldırır.| Yok |
 
-![Visual Studio'da C# kod temizleme ayarları](media/format-document-settings.png)
+![Visual Studio 'da için C# kod temizleme ayarları](media/format-document-settings.png)
 
 ::: moniker-end
 
-## <a name="indentation-page"></a>Girinti sayfası
+## <a name="indentation-page"></a>Girintileme sayfası
 
-Girintileme seçenekleri sayfasında bu kodu otomatik olarak biçimlendirildiğinde uygulayın. Bir dosya kodu yapıştırın, kod otomatik olarak biçimlendirilmiş bir örneği olduğunda **otomatik olarak, yapıştırma sırasında Biçimlendir** seçilir. ( **Otomatik olarak, yapıştırma sırasında Biçimlendir** seçenektir altında **biçimlendirme** > **genel**.)
+Bu sayfadaki girintileme seçenekleri, kod otomatik olarak biçimlendirilirken geçerlidir. Kod otomatik olarak biçimlendirildiğinde bir örnek, **yapıştırırken otomatik olarak Biçimlendir** seçildiğinde kodu dosyaya yapıştırmaktır. ( **Yapıştırma sırasında otomatik biçim** seçeneği,**genel** >  **biçimlendirme** aşamasındadır.)
 
-![C#Visual Studio Metin Düzenleyicisi girinti seçenekleri](media/csharp-indentation-options.png)
+![C#Visual Studio 'da metin düzenleyici girintileme seçenekleri](media/csharp-indentation-options.png)
 
 > [!TIP]
-> Ayrıca vardır Girintileme seçenekleri üzerinde **metin düzenleyici** > **C#**  > **sekmeleri** seçenekler sayfası. Bu seçenekler yalnızca bastığınızda Kod düzenleyicisinde imleci burada yerleştirir belirlemek **Enter** bir satırın sonunda.
+> Ayrıca, **metin düzenleyici**  > **C#**  > **sekmeleri** Seçenekler sayfasında girintileme seçenekleri de vardır. Bu seçenekler yalnızca, satırın sonunda **ENTER** tuşuna bastığınızda, imleci yalnızca kod düzenleyicisinin nereye yerleştirdiği belirlenir.
 >
-> ![C#Metin Düzenleyici sekmesi seçenekleri Visual Studio'da](media/csharp-tabs-options.png)
+> ![C#Visual Studio 'da metin düzenleyici sekmeleri seçenekleri](media/csharp-tabs-options.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

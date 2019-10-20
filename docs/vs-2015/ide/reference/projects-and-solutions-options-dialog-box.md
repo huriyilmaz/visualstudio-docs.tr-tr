@@ -1,5 +1,5 @@
 ---
-title: Projeler ve çözümler, Seçenekler iletişim kutusu | Microsoft Docs
+title: Projeler ve çözümler, Seçenekler Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,59 +9,48 @@ helpviewer_keywords:
 - Options dialog box, Projects and Solutions
 ms.assetid: 2801f24e-a138-488a-ae3c-e1f99a678ac0
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2bdcfc2f6a4b7655a6f4f2e335310e938e5acfed
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 245b453a3020e79b924cb8058ff392bd59673402
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701977"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662130"
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>Projeler ve Çözümler, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Varsayılan yolunu ayarlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proje klasörleri ve varsayılan davranışını belirler **çıkış** penceresinde **görev listesi**, ve **Çözüm Gezgini** olarak projeleri geliştirilen ve derlenen. Bu iletişim kutusuna erişmek için tıklayın **Araçlar / Seçenekler** genişletin **projeler ve çözümler**, tıklatıp **genel**.  
-  
+@No__t_0 proje klasörlerinin varsayılan yolunu ayarlar ve proje geliştirilip derlendikleri için **Çıkış** penceresi, **görev listesi**ve **Çözüm Gezgini** varsayılan davranışını belirler. Bu iletişim kutusuna erişmek için **Araçlar/Seçenekler** ' i **ve ardından projeler ve çözümler**' i genişletin ve **genel**' i tıklatın
+
 > [!NOTE]
-> İletişim kutuları, adları ve konumları gördüğünüz gibi menü komutlarının Seçenekleri Yardımı'nda, etkin ayarlarınıza ve sürüm bağlı olarak açıklanan nedir öğesinden farklı olabilir. Bu Yardım sayfası ile yazılmıştır **genel geliştirme ayarları** unutmayın. Ayarlarınızı değiştirmek veya görüntülemek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="settings"></a>Ayarlar  
- **Projeleri konumu**  
- Yeni proje ve çözüm klasörleri ve dizinleri oluşturulduğu varsayılan konumunu ayarlar. Birçok iletişim kutusu da başlangıç noktaları klasörü için bu seçeneği ayarlamak konumu kullanın. Örneğin, Proje Aç iletişim kutusu için Projelerim kısayol bu konumu kullanır.  
-  
- **Kullanıcı proje şablonları konumu**  
- Tarafından kullanılan varsayılan konumu ayarlar **yeni proje** listesini oluşturmak için iletişim kutusu **Şablonlarım**. Daha fazla bilgi için [nasıl yapılır: Şablonları bulma ve düzenleme](../../ide/how-to-locate-and-organize-project-and-item-templates.md).  
-  
- **Kullanıcı öğe Şablonları konumu**  
- Tarafından kullanılan varsayılan konumu ayarlar **Yeni Öğe Ekle** listesini oluşturmak için iletişim kutusu **Şablonlarım**. Daha fazla bilgi için [nasıl yapılır: Şablonları bulma ve düzenleme](../../ide/how-to-locate-and-organize-project-and-item-templates.md).  
-  
- **Hata listesi bir derleme hatayla bittiğinde her zaman göster**  
- Açılır **hata listesi** derleme tamamlandığında, yalnızca bir projeyi oluşturmak başarısız olursa penceresi. Derleme işlemi sırasında oluşan hatalar görüntülenir. Bu seçenek işaretli değilse, hataları oluşmaya ancak yapı tamamlandığında pencerenin açılmaz. Bu seçenek varsayılan olarak etkindir.  
-  
- **Çözüm Gezgini'nde etkin öğeyi takip et**  
- Bu onay kutusu seçildiğinde, **Çözüm Gezgini** otomatik olarak açılır ve etkin öğeyi seçili. Seçili öğe değiştikçe, farklı bir proje veya çözüm dosyaları ya da farklı bileşenlerin bir tasarımcıda çalışın. Ne zaman bu seçenek işaretli değilse, seçimdeki **Çözüm Gezgini** otomatik olarak değiştirmez. Bu seçenek varsayılan olarak etkindir.  
-  
- **Gelişmiş derleme yapılandırmalarını Göster**  
- Bu onay kutusu seçildiğinde, derleme yapılandırma seçenekleri görünür **proje özellik sayfaları** iletişim kutusu ve **çözüm özellik sayfaları** iletişim kutusu. Yapı yapılandırma seçeneklerini üzerinde görünmez temizlendiğinde **proje özellik sayfaları** iletişim kutusu ve **çözüm özellik sayfaları** iletişim kutusu için [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ve [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projeleri bir yapılandırma veya iki yapılandırması hata ayıklama ve yayın içeren. Kullanıcı tanımlı bir yapılandırma bir proje varsa, yapı yapılandırma seçenekleri gösterilmektedir.  
-  
- Seçili üzerinde olmadığında komutları **derleme** menüsünde gibi **Çözümü Derle**, **çözümü yeniden derle**, ve **çözümü Temizle**, olan Yayın yapılandırması ve komutları üzerinde gerçekleştirilen **hata ayıklama** menüsünde gibi **hata ayıklamayı Başlat** ve **hata ayıklama olmadan Başlat**, gerçekleştirilir hata ayıklama yapılandırması.  
-  
- **Çözümü her zaman göster**  
- Bu onay kutusu seçildiğinde, çözüm ve çözümler üzerinde çalışan tüm komutları her zaman IDE'de gösterilir. Bu onay kutusu temizlenirse, tüm projeler tek başına bir proje olarak oluşturulur ve çözümü yalnızca bir proje içeriyorsa, Çözüm Gezgini veya hareket komutları çözümde IDE'de çözümler üzerinde görmezsiniz.  
-  
- **Oluşturulduğunda yeni projeleri Kaydet**  
- Bu onay kutusu seçildiğinde, projeniz için bir konum belirtebilirsiniz **yeni proje** iletişim kutusu. Bu onay kutusu temizlenirse, tüm yeni projeler geçici proje olarak oluşturulur. Geçici projeler ile çalışırken, oluşturabilir ve bir disk konumu belirtmek zorunda kalmadan bir proje ile denemeler yapın.  
-  
- **Proje konumu güvenilir olmadığında kullanıcıyı uyarır.**  
- Yeni bir proje oluşturun veya tam olarak (örneğin, bir UNC yolu veya HTTP yolu) güvenli olmayan bir konumda mevcut bir projeyi açmayı denerseniz, bir ileti görüntülenir. İleti oluşturmak veya tam olarak güvenilmeyen bir konumda bir projeyi açmayı denemek her zaman görüntülenip görüntülenmeyeceğini belirtmek için bu seçeneği kullanın.  
-  
- **Derleme başladığında çıkış penceresini göster**  
- Otomatik olarak çıktı penceresinde çözümünün gizliliğe IDE görüntüler oluşturur. Daha fazla bilgi için [nasıl yapılır: Çıkış penceresini denetleme](https://msdn.microsoft.com/library/91aebd15-8854-4a7a-9f7d-57376fb4e858). Bu seçenek varsayılan olarak etkindir.  
-  
- **Sembolik yeniden adlandırmayı olduğunda yeniden adlandırmayı sor**  
- Bu onay kutusu seçildiğinde, isteyen bir ileti kutusu görüntüler olup olmadığını [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] projedeki tüm başvuruları kod öğesine de yeniden adlandırmanız gerekir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+> İletişim kutularında kullanılabilen seçenekler ve gördüğünüz menü komutlarının adları ve konumları, etkin ayarlarınıza veya sürümüne bağlı olarak yardım altında açıklananlar arasından farklılık gösterebilir. Bu yardım sayfası, **genel geliştirme ayarları** göz önünde bulundurularak yazılmıştır. Ayarlarınızı görüntülemek veya değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="settings"></a>Ayarlar
+ **Proje konumu** Yeni projelerin ve çözüm klasörlerinin ve dizinlerin oluşturulduğu varsayılan konumu ayarlar. Birçok iletişim kutusu ayrıca klasör başlangıç noktaları için bu seçenekte ayarlanan konumu kullanır. Örneğin, proje Aç iletişim kutusu, projem kısayolu için bu konumu kullanır.
+
+ **Kullanıcı projesi şablonlarının konumu** **Şablonlarım**listesini oluşturmak Için **Yeni proje** iletişim kutusu tarafından kullanılan varsayılan konumu ayarlar. Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../../ide/how-to-locate-and-organize-project-and-item-templates.md).
+
+ **Kullanıcı öğesi şablonlarının konumu** **Şablonlarım**listesini oluşturmak Için **Yeni öğe Ekle** iletişim kutusu tarafından kullanılan varsayılan konumu ayarlar. Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../../ide/how-to-locate-and-organize-project-and-item-templates.md).
+
+ **Derleme hatalarla sonlandıysanız her zaman hata listesi göster** Yapı tamamlamada **hata listesi** penceresini açar, yalnızca bir proje derlenbir şekilde başarısız olursa. Oluşturma işlemi sırasında oluşan hatalar görüntülenir. Bu seçenek kaldırıldığında hatalar yine oluşur ancak yapı tamamlandığında pencere açılmaz. Bu seçenek varsayılan olarak etkindir.
+
+ **Çözüm Gezgini etkin öğeyi izle** Seçildiğinde, **Çözüm Gezgini** otomatik olarak açılır ve etkin öğe seçilir. Seçilen öğe, bir proje veya çözümde farklı dosyalarla veya bir tasarımcıda farklı bileşenlere çalışırken değişir. Bu seçenek temizlenmiş olduğunda **Çözüm Gezgini** seçimi otomatik olarak değişmez. Bu seçenek varsayılan olarak etkindir.
+
+ **Gelişmiş derleme yapılandırmasını göster** Seçildiğinde, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve **Çözüm Özellik sayfaları** iletişim kutusunda görünür. Temizlenme sırasında, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve bir yapılandırma ya da iki yapılandırma hata ayıklaması içeren [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ve [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projeler Için **Çözüm Özellik sayfaları** iletişim kutusu üzerinde görünmez ve yayın. Bir projede Kullanıcı tanımlı bir yapılandırma varsa, derleme yapılandırma seçenekleri gösterilir.
+
+ Bu seçilmediğinde **, derleme için** derleme **çözümü**, **çözümü yeniden derleme**ve **çözümü Temizleme**gibi komutlar, sürüm yapılandırmasında ve başlatma gibi **hata ayıklama** menüsündeki komutlarda gerçekleştirilir.  **Hata ayıklama ve hata** ayıklama **olmadan başlatma**, hata ayıklama yapılandırmasında gerçekleştirilir.
+
+ **Çözümü her zaman göster** Seçildiğinde, çözüm ve çözümler üzerinde işlem yapan tüm komutlar her zaman IDE 'de gösterilir. Temizlenme sırasında, tüm projeler tek başına projeler olarak oluşturulur ve çözüm yalnızca bir proje içeriyorsa IDE 'deki çözümler üzerinde çalışan Çözüm Gezgini veya komutlarda çözümü görmezsiniz.
+
+ **Oluşturulduğunda yeni projeleri kaydet** Seçildiğinde, **Yeni proje** iletişim kutusunda projeniz için bir konum belirtebilirsiniz. Kaldırıldığında, tüm yeni projeler geçici proje olarak oluşturulur. Geçici projelerle çalışırken bir disk konumu belirtmek zorunda kalmadan bir proje oluşturup deneyebilirsiniz.
+
+ **Proje konumu güvenilir olmadığında kullanıcıyı uyar** Yeni bir proje oluşturmaya veya var olan bir projeyi tam güvenilir olmayan bir konumda açmaya çalışırsanız (örneğin, bir UNC yolu veya HTTP yolu üzerinde), bir ileti görüntülenir. Tam güvenilir olmayan bir konumda bir projeyi oluşturma veya açma girişiminde bulunan her seferinde iletinin görüntülenip görüntülenmeyeceğini belirtmek için bu seçeneği kullanın.
+
+ **Derleme başladığında çıkış penceresini göster** , Çıkış Penceresi otomatik olarak IDE 'de çözüm yapıları kümesinden görüntüler. Daha fazla bilgi için bkz. [nasıl yapılır: denetim çıkış penceresi](https://msdn.microsoft.com/library/91aebd15-8854-4a7a-9f7d-57376fb4e858). Bu seçenek varsayılan olarak etkindir.
+
+ **Dosyaları yeniden adlandırırken sembolik yeniden adlandırma iste** Seçildiğinde, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] projedeki tüm başvuruları kod öğesine de yeniden adlandırmayacağını soran bir ileti kutusu görüntüler.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Seçenekler İletişim Kutusu, Projeler ve Çözümler, Derleme ve Çalıştırma](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)

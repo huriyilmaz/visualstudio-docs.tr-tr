@@ -1,5 +1,5 @@
 ---
-title: 'CA1030: Uygun yerlerde olaylar kullanın | Microsoft Docs'
+title: 'CA1030: uygun yerlerde olayları kullanın | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,44 +12,44 @@ helpviewer_keywords:
 - UseEventsWhereAppropriate
 ms.assetid: ea051367-deeb-40f9-9b65-eb818f1e133a
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9d00db6f9a00a273198cc50704d65ed6d2e4bb33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7ab3a576b5014799e470260567a4942b5c3ef9de
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157693"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661916"
 ---
-# <a name="ca1030-use-events-where-appropriate"></a>CA1030: Uygun yerlerde olayları kullanın
+# <a name="ca1030-use-events-where-appropriate"></a>CA1030: Uygun yerlerde olaylar kullanın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|UseEventsWhereAppropriate|
 |CheckId|CA1030|
-|Kategori|Microsoft.Design|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Design|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Genel, korumalı veya özel yöntem adı aşağıdakilerden biri ile başlar:
+ Ortak, korumalı veya özel bir yöntem adı aşağıdakilerden biriyle başlar:
 
-- Eklenti fiyatı
+- Eklenti
 
 - RemoveOn
 
 - Ateş
 
-- artırma
+- Yükseltmek
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, normalde olaylar için kullanılan adlara sahip yöntemleri algılar. Olayları gözlemci ya da Yayımla-abone ol tasarım desenini izler; Bunlar, bir nesnede bir durum değişikliği diğer nesnelere iletileceği olduğunda kullanılır. Yanıt olarak açıkça tanımlanmış bir durum değişikliği bir yöntem çağrıldığında, bir olay işleyicisi tarafından yöntemin çağrılması gerekir. Yöntemi direkt olarak çağırmak yerine olayları yükselterek çağıran nesneler.
+ Bu kural, normalde olaylar için kullanılan adlara sahip yöntemleri algılar. Olaylar gözlemci veya yayımla-abone ol tasarım modelini izler; bir nesnedeki durum değişikliği diğer nesnelere iletilmesi gerektiğinde kullanılırlar. Bir yöntem açıkça tanımlanmış bir durum değişikliğine yanıt olarak çağrılırsa, yöntemi bir olay işleyicisi tarafından çağrılmalıdır. Yöntemi direkt olarak çağırmak yerine olayları yükselterek çağıran nesneler.
 
- Olayların bazı genel örnekleri burada bir düğmeye tıklanması gibi bir kullanıcı eylemi yürütmek için kod kesiminin neden olan kullanıcı arabirimi uygulamalarında bulunur. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Olay modeli için kullanıcı arabirimleri sınırlı değil; bunu her yerden, iletişim kurması gereken durumu değiştirir. bir veya daha fazla nesneye kullanılmalıdır.
+ Bazı yaygın olay örnekleri, bir düğmeye tıklanması gibi bir kullanıcı eyleminin bir kod segmentinin yürütülmesine neden olduğu kullanıcı arabirimi uygulamalarında bulunur. @No__t_0 olay modeli Kullanıcı arabirimleriyle sınırlı değildir; durum değişikliklerini bir veya daha fazla nesnede iletmelisiniz her yerde kullanılmalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bir nesnenin durumu değiştiğinde yöntemi çağrılırsa, kullanılacak tasarım değiştirme düşünmelisiniz [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] olay modeli.
+ Bir nesnenin durumu değiştiğinde yöntemi çağrılırsa, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] olay modelini kullanmak için tasarımı değiştirmeyi göz önünde bulundurmanız gerekir.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Yöntem ile çalışmazsa bu kuraldan bir uyarıyı bastırmak [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] olay modeli.
+ Yöntem [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] olay modeliyle çalışmazsa bu kuraldan bir uyarı gizleyin.

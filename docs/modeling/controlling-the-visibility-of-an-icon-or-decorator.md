@@ -2,93 +2,93 @@
 title: Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cfe6ce02b03ed69435f8056ccd340b92f9eb5a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 13f019fcb42d908d81d4e356f664772029141993
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62421505"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654144"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme
-A *dekoratör* bir simge ya da bir etki alanına özgü dil (DSL) şeklinde görünen metin satırı. Dekoratör görünmesi ve modelinde özelliklerini durumuna bağlı olarak kaybolur. Örneğin, bir kişiyi temsil eden bir şekli üzerinde alt sayıda kişinin cinsiyet bağlı olarak görünür ve benzeri farklı simgeler olabilir.
+*Dekoratör* , etki alanına özgü DILDE (DSL) bir şekil üzerinde görüntülenen bir simge veya metin satırıdır. Modelin özelliklerinin durumuna bağlı olarak dekoratörün görünmesini ve kaybolmasını sağlayabilirsiniz. Örneğin, bir kişiyi temsil eden bir şekil üzerinde, kişinin cinsiyetine, alt öğe sayısına ve buna bağlı olarak görünen farklı simgelere sahip olabilirsiniz.
 
 ## <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Bir simgenin veya dekoratörün görünürlüğünü denetleme
- Aşağıdaki yordam, zaten bir şekli ve kendi eşleme için bir alan sınıfına tanımladığınız varsayar. Daha fazla bilgi için [etki alanına özgü bir dili tanımlama nasıl](../modeling/how-to-define-a-domain-specific-language.md).
+ Aşağıdaki yordam bir şekli ve bir etki alanı sınıfıyla eşlemesini tanımlamış olduğunuzu varsayar. Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
 
-#### <a name="to-control-the-visibility-of-an-icon-or-text-decorator"></a>Bir simge veya metin dekoratörün görünürlüğünü denetleme için
+#### <a name="to-control-the-visibility-of-an-icon-or-text-decorator"></a>Bir simgenin veya metin dekoratörün görünürlüğünü denetlemek için
 
-1. DSL tanım diyagramı simgeler veya görünmesini istediğiniz metin dekoratörleri şekli sınıfına ekleyin.
+1. DSL tanımı diyagramında, görünmesini istediğiniz simgeleri veya metin dekoratlarını şekil sınıfına ekleyin.
 
-   1. Şekil sınıfı sağ tıklatın, **Ekle**ve ardından dekoratör gerekli türüne tıklayın.
+   1. Şekil sınıfına sağ tıklayın, **Ekle**' nin üzerine gelin ve gereken dekoratör türüne tıklayın.
 
-   2. Dekoratörün ait ayarlamak **konumu** özelliği. Aynı konumda birden fazla dekoratöre sahip olabilir. Örneğin erkek aynı konum paylaşımı kadın için simgeler olabilir.
+   2. Dekoratör 'ın **Position** özelliğini ayarlayın. Birden çok dekoratör aynı konuma sahip olabilir. Örneğin, erkek ve kadın paylaşım için aynı konumda simgeler olabilir.
 
-   3. Ayarlama **varsayılan simge** bir simge dekoratörünün özelliği.
+   3. Bir simge dekoratörü 'nin **varsayılan Icon** özelliğini ayarlayın.
 
-2. Şekil sınıfı DSL tanım diyagramı üzerinde alan sınıfı arasındaki gri çizgidir diyagram öğesi eşlemesi'ni seçin.
+2. DSL tanımı diyagramındaki şekil sınıfı ve alan sınıfı arasındaki gri çizgi olan diyagram öğesi haritasını seçin.
 
-3. DSL Ayrıntıları penceresinde de **Dekoratör eşlemeleri** sekmesinde, bir dekoratör seçin. Örneğin, MaleDecorator.
+3. DSL ayrıntıları penceresindeki **dekoratör haritaları** sekmesinde bir dekoratör seçin. Örneğin, MaleDecorator.
 
-4. Denetleme **görünürlük filtresini** kutusu.
+4. **Görünürlük filtre** kutusunu işaretleyin.
 
-5. Hemen etki alanı sınıfı üzerinde görünürlük kontrol domain özelliği ise bırakın **filtre özelliğinin yolu** boş.
+5. Görünürlüğü denetlemek zorunda olan etki alanı özelliği hemen etki alanı sınıfında ise, **özelliği, filtre Için yolu** boş bırakın.
 
-    Aksi takdirde, açılan menüsüne tıklayın ve ilişki veya özelliği olduğu sınıf gidin.
+    Aksi takdirde, açılan menüye tıklayın ve özelliğin bulunduğu ilişkiye veya sınıfa gidin.
 
-   - Bir hata raporu önlemek için ile işaretlenmiş bir ilişki gezinmek değil "*" Gezinti aracında.
+   - Bir hata raporunu önlemek için, gezinti aracında "*" ile işaretlenmiş bir ilişkide gezinmemelisiniz.
 
-6. Ayarlama **filtre özelliği** bir alan özelliği için. Örneğin, cinsiyeti.
+6. **Filter özelliğini** bir Domain özelliği olarak ayarlayın. Örneğin, cinsiyet.
 
-7. İçinde **görünürlük girdileri** listesinde, bu etki alanı özelliğinin dekoratörün görünür olacağı değerleri ekleyin. Örneğin, erkek.
+7. **Görünürlük girişleri** listesinde, bu alan özelliğinin, dekoratörün görünür olması gereken değerlerini ekleyin. Örneğin, erkek.
 
 8. Her simge için adımları yineleyin.
 
-9. **Tüm Şablonları dönüştürme**, derleme ve çalıştırma ve test diyagramı açın.
+9. **Tüm şablonları dönüştürün**, derleyin ve çalıştırın ve bir test diyagramı açın.
 
-10. Denetleme özellik değeri değiştiğinde dekoratörler kaybolur ve görünür.
+10. Denetim özelliği değerini değiştirdiğinizde dekoratörler görünmeli ve kaybolur.
 
-    Sık, daha karmaşık bir formül daha basit bir değerler kümesi tarafından denetlenmesi için görünürlük istersiniz. Örneğin, belirli türde bir bağlantı sayısına bağlı olarak bir simgesi vardır ya da bir olup olmadığına göre bağlı sağlamak için belirli bir aralıkta bir sayı olabilir. Bu durumda, aşağıdaki yordamı kullanın.
+    Genellikle, görünürlüğün basit bir değer kümesinden daha karmaşık bir formül tarafından denetlenmesini istersiniz. Örneğin, bir simgenin belirli bir türdeki bağlantıların sayısına bağlı olması veya bir sayının belirli bir aralıkta olup olmamasına bağlı olması için. Bu durumda, aşağıdaki yordamı kullanın.
 
-#### <a name="to-control-the-visibility-of-a-decorator-based-on-a-formula"></a>Bir formüle göre bir dekoratörün görünürlüğünü denetleme için
+#### <a name="to-control-the-visibility-of-a-decorator-based-on-a-formula"></a>Bir formüle göre dekoratörün görünürlüğünü denetlemek için
 
-1. Hesaplanan alan özelliği için etki alanı sınıfı ekleyin. İçinde **özellikleri** penceresinde aşağıdaki değerleri ayarlayın:
+1. Etki alanı sınıfına hesaplanmış bir etki alanı özelliği ekleyin. **Özellikler** penceresinde aşağıdaki değerleri ayarlayın:
 
-     **IsBrowsable =**`False`**-bu özellik kullanıcıdan gizler**
+     **Igözatılabilen =** `False` **-Bu, özelliği kullanıcıdan gizler**
 
-     **Tür =**`Calculated`**-bu değeri hesaplar kod sağlayacak anlamına gelir.**
+     **Tür =** `Calculated` **-Bu, değerini hesaplayan kodu sağlayacaksınız** .
 
-     **Adı** örneğin **DecoratorControl**
+     Örnek, **Dekoratorcontrol** **adı**
 
-     **Türü** = `Boolean`
+     **Tür**  =  `Boolean`
 
-     Daha fazla bilgi için [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).
+     Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).
 
-2. Yeni özellik dekoratör görünürlüğünü denetleme yapın.
+2. Yeni Özellik denetimini dekoratör görünürlüğünü yapın.
 
-    1. Etki alanı sınıfı gri satırından şeklin olduğu diyagram öğesi eşlemesi'ni seçin. İçinde **DSL ayrıntıları** penceresini açık **DecoratorMap** sekmesi.
+    1. Etki alanı sınıfından şekle gri çizgi olan diyagram öğesi haritasını seçin. **DSL ayrıntıları** penceresinde, **dekoratormap** sekmesini açın.
 
-    2. Denetleme **görünürlük filtresini** kutusu.
+    2. **Görünürlük filtre** kutusunu işaretleyin.
 
-    3. İçinde **filtre özelliği**, denetim özelliği seçin **DecoratorControl**.
+    3. **Filter özelliğinde**, denetim özelliği **dekoratorcontrol**' u seçin.
 
-    4. Altında **görünürlük girdileri**, girin `True`.
+    4. **Görünürlük girişleri**altında `True` girin.
 
-3. Tıklayın **tüm Şablonları Dönüştür** içinde **Çözüm Gezgini** araç çubuğu.
+3. **Çözüm Gezgini** araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıklayın.
 
-4. Tıklayın **Çözümü Derle** üzerinde **derleme** menüsü.
+4. **Yapı** menüsünde **çözüm oluştur** ' a tıklayın.
 
-5. Göründü hata raporuna çift tıklayın: "*YourClass* bir için GetDecoratorControlValue neobsahuje platnou definici...".
+5. Görüntülenen hata raporuna çift tıklayın: "*YourClass* , Getdekoratorcontrolvalue... için bir tanım içermiyor.
 
-     The text editor opens on Dsl\GeneratedCode\DomainClasses.cs. Vurgulanan hata bir yöntem eklemek için istek bir açıklamadır.
+     Dsl\GeneratedCode\DomainClasses.cs. üzerinde metin Düzenleyicisi açılıyor Vurgulanan hatanın üstünde bir yöntem eklemenizi isteyen bir açıklama bulunur.
 
-6. Ad alanı, sınıf ve metod eksik olan unutmayın.  Örneğin, Company.FamilyTree.Person.GetDecoratorControlValue().
+6. Eksik olan ad alanı, sınıf ve yöntemi unutmayın.  Örneğin, Company. FamilyTree. Person. Getdekoratorcontrolvalue ().
 
-7. Ayrı kod dosyasında, eksik yöntemi içeren kısmi sınıf tanımını yazın. Örneğin:
+7. Ayrı bir kod dosyasında, eksik yöntemi içeren kısmi bir sınıf tanımı yazın. Örneğin:
 
     ```
     namespace Company.FamilyTree
@@ -99,9 +99,9 @@ A *dekoratör* bir simge ya da bir etki alanına özgü dil (DSL) şeklinde gör
     } } }
     ```
 
-     Program kodunda modeli özelleştirme hakkında daha fazla bilgi için bkz. [gezinme ve güncelleştirme Program kodundaki modeli](../modeling/navigating-and-updating-a-model-in-program-code.md).
+     Modeli program kodu ile özelleştirme hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-8. Yeniden oluşturun ve çözümü çalıştırın.
+8. Çözümü yeniden derleyin ve çalıştırın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

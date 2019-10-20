@@ -10,33 +10,32 @@ helpviewer_keywords:
 - activity views
 ms.assetid: 83dc68cd-2cb2-45c2-9a6e-10d82053171a
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 62b3c9185226512ff28c8d028cd0ba7d33b0f12f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c7d8a13890814b56865200acf95c8e0565b52b5a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977447"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655216"
 ---
 # <a name="activity-views-legacy"></a>Etkinlik Görünümleri (Eski)
-Tarafından sağlanan etkinliklerinin birçok [!INCLUDE[wf](../includes/wf-md.md)], hangi iş akışları öğesinden oluşur, çeşitli tasarım görünümlerini eski içinde kullanılabilir olan [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Bir etkinlik Tasarımcısı'ndan sürüklediğinizde **araç kutusu** tasarım yüzeyine ve bundan sonra etkinliği seçtiğinizde kullanın ya da farklı tasarım görünümler arasında geçiş yapabilirsiniz **iş akışı**menü veya sağ tıklayarak seçili etkinlik. Seçili etkinlik adı üzerinde işaretçiyi getirdiğinizde, ayrıca, farklı görünümler arasında geçiş yapmak için kullanabileceğiniz bir sekme açılır kümesi görünür.  
-  
- Her etkinlik, en az bir görünüme sahiptir; Bu bir etkinlik Tasarımcısı'ndan sürüklediğinizde gösterilen varsayılan görünümü şu şekildedir **araç kutusu** tasarım yüzeyine. Bu etkinlik varsayılan görünüm olarak kullanılabilir **[etkinlik türü] görüntülemek** seçeneği menüleri ve sekmelerinde, örneğin, **görünümü paralel**. Ek görünümler etkinliklerin çoğunu sahip ve farklı görünümleri farklı olabilir. Örneğin, [TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65093) etkinliğinde maaş görünümü ve [EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65030) etkinliğinde bir olay görünümü. Çoğu Windows Workflow Foundation ile gelen etkinliklerinin **görünümü iptal işleyicisi** ve **görünümü hataları** Tasarım görünümüne görünümleri [CancellationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65050) ve [FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65055) ilişkili.  
-  
- Aşağıdaki tabloda, ad ve açıklama her görünümün listeler.  
-  
-|Menü/sekmesi seçeneği|Açıklama|  
-|----------------------|-----------------|  
-|**Görünüm [etkinlik türü]**|Seçili etkinlik varsayılan grafik gösterimi görüntülemek için bu menü veya sekme seçeneği belirleyin.|  
-|**Görünüm iptal işleyicisi**|Bu menü veya sekmesinde görünüm için görünüm seçeneği [CancellationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65050) seçilen etkinlikle ilişkilendirilmiş.|  
-|**Hata işleyicisini görüntüle**|Bu menü veya sekmesinde görünüm için görünüm seçeneği [FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65055) seçilen etkinlikle ilişkilendirilmiş.|  
-|**Dengeleme İşleyicisini Görüntüle**|Bu menü veya sekmesinde görünüm için görünüm seçeneği [CompensationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65053) seçili ile ilişkili [TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65093).|  
-|**Olay işleyicisini görüntüle**|Bu menü veya sekmesinde görünüm için görünüm seçeneği [EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018) seçili ile ilişkili [EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65030).|  
-  
- Benzer görünümleri hakkında daha fazla bilgi için bkz: [sıralı iş akışı görünümleri (eski)](../workflow-designer/sequential-workflow-views-legacy.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Eski iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md)   
- [Sıralı İş Akışı Görünümleri (Eski)](../workflow-designer/sequential-workflow-views-legacy.md)
+@No__t_0 tarafından sağlanan etkinliklerin birçoğu, iş akışlarının oluştuğu, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] birçok tasarım görünümüne sahip olabilir. **Araç kutusundan** bir etkinlik Tasarımcısını Tasarım yüzeyine sürüklediğinizde ve bundan sonra etkinliği seçtiğinizde, **iş akışı** menüsünü kullanarak veya seçili öğesine sağ tıklayarak farklı tasarım görünümleri arasında geçiş yapabilirsiniz. etkinlik. Ayrıca, işaretçiyi seçili bir etkinliğin adının üzerine getirdiğinizde, farklı görünümler arasında geçiş yapmak için kullanabileceğiniz bir aşağı açılan sekme kümesi görüntülenir.
+
+ Her etkinliğin en az bir görünümü vardır; Bu, **araç kutusundan** bir etkinlik Tasarımcısını Tasarım yüzeyine sürüklediğinizde gösterilen varsayılan görünümüdür. Bu etkinlik varsayılan görünümü menülerde ve sekmede **Görünüm [etkinlik türü]** seçeneği olarak kullanılabilir (örneğin, **paralel görünüm**). Etkinliklerin çoğunda ek görünümler ve farklı etkinlikler farklı görünümlere sahip olabilir. Örneğin, [TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65093) etkinliği Dengeleme görünümüne sahiptir ve [EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65030) etkinliği bir olay görünümü içerir. Windows Workflow Foundation ile birlikte gelen etkinliklerin birçoğu, [CancellationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65050) ve bunlarla Ilişkili bir [FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65055) görüntülemek Için, aynı görüntüleme **iptali işleyicisine** sahiptir ve hata tasarım görünümlerini **görüntüler** .
+
+ Aşağıdaki tabloda her bir görünümün adı ve açıklaması listelenmektedir.
+
+|Menü/sekme seçeneği|Açıklama|
+|----------------------|-----------------|
+|**Görünüm [etkinlik türü]**|Seçilen etkinliğin varsayılan grafik temsilini görüntülemek için bu menüyü veya sekme seçeneğini belirleyin.|
+|**Iptal Işleyicisini görüntüle**|Seçili etkinlikle ilişkili [CancellationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65050) görüntülemek için bu menüyü veya sekme seçenek görünümünü seçin.|
+|**Hata Işleyicisini görüntüle**|Seçili etkinlikle ilişkili [FaultHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65055) görüntülemek için bu menüyü veya sekme seçenek görünümünü seçin.|
+|**Dengeleme Işleyicisini görüntüle**|Seçili [TransactionScopeActivity](http://go.microsoft.com/fwlink?LinkID=65093)Ile Ilişkili [CompensationHandlerActivity](http://go.microsoft.com/fwlink?LinkID=65053) 'yi görüntülemek için bu menüyü veya sekme seçenek görünümünü seçin.|
+|**Olay Işleyicisini görüntüle**|Seçili [EventHandlingScopeActivity](http://go.microsoft.com/fwlink?LinkID=65030)Ile ilişkili [EventHandlersActivity](http://go.microsoft.com/fwlink?LinkID=65018) görüntülemek için bu menüyü veya sekme seçenek görünümünü seçin.|
+
+ Benzer görünümler hakkında daha fazla bilgi için bkz. [sıralı Iş akışı görünümleri (eski)](../workflow-designer/sequential-workflow-views-legacy.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Eski Iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md) [sıralı iş akışı görünümleri (eski)](../workflow-designer/sequential-workflow-views-legacy.md)

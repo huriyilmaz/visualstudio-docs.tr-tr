@@ -1,5 +1,5 @@
 ---
-title: -ResetSkipPkgs (devenv.exe) | Microsoft Docs
+title: -ResetSkipPkgs (devenv. exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,36 +10,36 @@ helpviewer_keywords:
 - ResetSkipPkgs switch
 ms.assetid: 7ece64f9-cfa4-4b34-b0d9-1c338b9557b3
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 44e2cb42bf6bf8c1a61512713e9fc87cbe8f0901
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 207ceb92d84c2186aeec49c205d8d32f4d7aa969
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68182374"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665569"
 ---
 # <a name="resetskippkgs-devenvexe"></a>/ResetSkipPkgs (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yükleme sorunu VSPackages yüklenmesini önlemek amacıyla isteyen kullanıcılar tarafından Vspackages'a eklenmiş atlamak için tüm seçenekleri temizler ve ardından başlatır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-Devenv /ResetSkipPkgs  
-```  
-  
-## <a name="remarks"></a>Açıklamalar  
- SkipLoading etiketinin varlığını VSPackage yüklenmesini devre dışı bırakır; Etiket temizleme VSPackage yükleme yeniden etkinleştirir.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tüm SkipLoading etiketlerini temizler.  
-  
-```  
-Devenv.exe /ResetSkipPkgs  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+, Sorun VSPackages 'ın yüklenmesinin önüne geçmek isteyen kullanıcılar tarafından VSPackages 'a eklenen yüklemeyi atlama seçeneklerini temizler, sonra [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] başlatır.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+Devenv /ResetSkipPkgs
+```
+
+## <a name="remarks"></a>Açıklamalar
+ Bir Skipyükleme etiketinin varlığı, VSPackage yüklemesini devre dışı bırakır. etiketi temizlemek, VSPackage yüklemesini yeniden etkinleştirilir.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, tüm Skipyükleme etiketlerini temizler.
+
+```
+Devenv.exe /ResetSkipPkgs
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Devenv Komut Satırı Anahtarları](../../ide/reference/devenv-command-line-switches.md)

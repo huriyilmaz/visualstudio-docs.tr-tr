@@ -2,23 +2,23 @@
 title: Etki Alanına Özgü Dilden Kod Oluşturma
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37c60ed42e7d4a7604dc3d99f7e0311c7000b99c
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: 5000b8b6150fe630959f4cc4bbc58617e98d4a3a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476518"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662028"
 ---
 # <a name="generating-code-from-a-domain-specific-language"></a>Etki Alanına Özgü Dilden Kod Oluşturma
 
-Microsoft [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] modellerinde temsil verilerden kod, belgeler, yapılandırma dosyalarını ve diğer yapıları üretmek için güçlü bir yol sağlar. Kullanarak [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], verilerinizi temsil eden sınıf kümesi oluşturabileceğiniz ve adları sınıflarda metin şablonlarınızı yazabilirsiniz ve özellikleri, bu verileri yansıtır.
+Microsoft [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], modeller halinde temsil edilen verilerden kod, belge, yapılandırma dosyası ve diğer yapıtları oluşturmak için güçlü bir yol sağlar. @No__t_0 kullanarak, verilerinizi temsil eden bir sınıf kümesi oluşturabilir ve metin şablonlarınızı, adları ve özellikleri bu verileri yansıtan sınıflarda yazabilirsiniz.
 
-Örneğin, Fabrikam, müşteri adları ve e-posta adreslerini bir XML dosyası vardır. Geliştiricileri, müşteri özellikleri adı ve e-posta ile bir sınıf olan bir modeli oluşturun. Bunlar, bir HTML sayfasının parçası tüm müşteriler tablosunu oluşturan bu parça içeren verileri işlemek için çeşitli metin şablonlarını yazma:
+Örneğin, Fabrikam 'ın bir XML dosyası müşteri adı ve e-posta adresi vardır. Geliştiriciler, müşterinin Özellikler adı ve e-posta ile bir sınıf olduğu bir model oluşturur. Bir HTML sayfasının parçası olarak tüm müşterilerin bir tablosunu üreten bu parça dahil, verileri işlemek için birkaç metin şablonu Yazar:
 
 ```
 <table>
@@ -28,35 +28,35 @@ Microsoft [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] modellerinde temsil ve
 <# } #>  </table>
 ```
 
-Müşteri veritabanı işlendiğinde, XML dosyasını modeli deposuna okunur. A *yönerge işlemcisi*, kullanılarak oluşturulan [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], müşteri sınıfı metin şablonunun kod için kullanılabilir hale getirir. Birçok metin şablonları aynı deponun karşı çalıştırabilirsiniz.
+Müşteri veritabanı işlendiğinde, XML dosyası model deposuna okunurdur. @No__t_1 kullanılarak oluşturulan *yönerge işlemcisi*, müşteri sınıfını metin şablonundaki kod için kullanılabilir hale getirir. Birçok metin şablonu aynı depoya karşı çalıştırılabilir.
 
-Metin şablonları için temel [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]. VSPackage'ı ve araçları, Visual Studio ile tümleştirmek için kullanılan denetimler de etki alanı model öğeleri için kaynak kodunu oluşturmak için kullanılır.
+@No__t_0 için metin şablonları gereklidir. Bunlar, etki alanı modelinin öğelerinin yanı sıra VSPackage ve araçları Visual Studio ile tümleştirmede kullanılan denetimler için kaynak kodu oluşturmak üzere kullanılır.
 
-Bu bölümde oluşturmak, değiştirmek ve metin şablonları kullanılan hata ayıklama için yollardan bazılarını ele alınmaktadır [!INCLUDE[dsl](../modeling/includes/dsl_md.md)].
+Bu bölümde [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] ' de kullanılan metin şablonlarını oluşturma, değiştirme ve hata ayıklama yöntemlerinden bazıları açıklanmaktadır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Metin şablonlarından modellere erişme](../modeling/accessing-models-from-text-templates.md)\
-Metin şablonlarında etki alanına özgü dil başvurma hakkında temel bilgiler sağlar.
+[Metin şablonlarından modellere erişme](../modeling/accessing-models-from-text-templates.md) \
+Metin şablonlarındaki alana özgü dile başvurma hakkında temel bilgiler sağlar.
 
-[İzlenecek yol: Bir modele erişen metin şablonunda hata ayıklama](../modeling/walkthrough-debugging-a-text-template-that-accesses-a-model.md)\
-Bir etki alanına özgü dil başvuran bir metin şablonunda hata ayıklama ve sorun giderme yapılacağını açıklar.
+[Izlenecek yol: modele erişen metin şablonunda hata ayıklama](../modeling/walkthrough-debugging-a-text-template-that-accesses-a-model.md) \
+Etki alanına özgü bir dile başvuran bir metin şablonunda sorun giderme ve hata ayıklama işlemlerinin nasıl yapılacağını açıklar.
 
-[İzlenecek yol: Üretilen bir yönerge işlemcisine ana bilgisayar bağlama](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)\
-Özel bir ana bilgisayar üretilen bir yönerge işlemcisine bağlama açıklar.
+[Izlenecek yol: bir konağı oluşturulan yönerge Işlemcisine bağlama](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md) \
+Özel bir konağın oluşturulan yönerge işlemcisine nasıl bağlanacağını açıklar.
 
-[DslTextTransform komutu](../modeling/the-dsltexttransform-command.md)\
-Etki alanına özgü diller başvuru metin şablonları için komut satırında TextTransform yürütülebilir dosyayı çalıştırır komut dosyası açıklanmaktadır.
+[DslTextTransform komutu](../modeling/the-dsltexttransform-command.md) \
+Alana özgü dillere başvuran metin şablonları için komut satırında TextTransform yürütülebilirini yürüten komut dosyasını açıklar.
 
 ## <a name="reference"></a>Başvuru
 
-[T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md)\
-Metin şablonu yönergeleri ve denetim blokları söz dizimi sağlar.
+[T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md) \
+Metin şablonu yönergelerinin ve denetim bloklarının sözdizimini sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-[T4 metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)\
-Metin şablonu dönüştürme süreci açıklanmaktadır.
+[T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md) \
+Metin şablonu dönüştürme işlemini açıklar.
 
-[Derleme sürecinde kod oluşturma](../modeling/code-generation-in-a-build-process.md)\
-Bir DSL bir yapı sunucusunda gelen dosyaları oluşturuyorsanız bu konuyu okuyun.
+[Yapı Işlemindeki kod üretimi](../modeling/code-generation-in-a-build-process.md) \
+Bir yapı sunucusundaki bir DSL 'den dosya oluşturuyorsanız bu konuyu okuyun.

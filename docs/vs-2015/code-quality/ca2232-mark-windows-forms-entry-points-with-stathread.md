@@ -1,5 +1,5 @@
 ---
-title: 'CA2232: İşareti Windows Forms giriş noktalarını STAThread | Microsoft Docs'
+title: 'CA2232: Windows Forms giriş noktalarını STAThread ile Işaretle | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - MarkWindowsFormsEntryPointsWithStaThread
 ms.assetid: a3c95130-8e7f-4419-9fcd-b67d077e8efb
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 6e8b7242fcd82db1a0cfb82cf6cd6df5a9f75084
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 084e7a093f92aa8eda9d9edc11865ac319adfad0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435420"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662788"
 ---
 # <a name="ca2232-mark-windows-forms-entry-points-with-stathread"></a>CA2232: Windows Forms giriş noktalarını STAThread ile işaretleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,26 +29,26 @@ ms.locfileid: "63435420"
 |-|-|
 |TypeName|MarkWindowsFormsEntryPointsWithStaThread|
 |CheckId|CA2232|
-|Kategori|Microsoft.Usage|
-|Yeni Değişiklik|Bozucu olmayan|
+|Kategori|Microsoft. Usage|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir derlemeye başvuran <xref:System.Windows.Forms> ad alanı ve kendi giriş noktası olarak işaretlenmemiş ile <xref:System.STAThreadAttribute?displayProperty=fullName> özniteliği.
+ Bir derleme <xref:System.Windows.Forms> ad alanına başvurur ve giriş noktası <xref:System.STAThreadAttribute?displayProperty=fullName> özniteliğiyle işaretlenmez.
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.STAThreadAttribute> iş parçacığı modeli uygulama için COM tek iş parçacıklı grup olduğunu gösterir. Bu öznitelik Windows Forms kullanan herhangi bir uygulamanın girişinde sunulur; atlanırsa, Windows bileşenleri doğru çalışmayabilir. Öznitelik mevcut değilse, uygulamanın Windows Forms için desteklenmiyor çok iş parçacıklı grubun modeli kullanır.
+ <xref:System.STAThreadAttribute>, uygulamanın COM iş parçacığı modelinin tek iş parçacıklı Apartment olduğunu gösterir. Bu öznitelik Windows Forms kullanan herhangi bir uygulamanın girişinde sunulur; atlanırsa, Windows bileşenleri doğru çalışmayabilir. Özniteliği yoksa, uygulama Windows Forms için desteklenmeyen çok iş parçacıklı grup modelini kullanır.
 
 > [!NOTE]
-> [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Uygulama Çerçevesi kullanan projeler işaretlemek gerekmez **ana** yöntemi STAThread ile işaretleyin. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Derleyici her şeyi otomatik olarak.
+> Uygulama çerçevesini kullanan [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projelerin, STAThread ile **Main** metodunu işaretlemek gerekmez. @No__t_0 derleyicisi bunu otomatik olarak yapar.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için ekleme <xref:System.STAThreadAttribute> özniteliği giriş noktası. Varsa <xref:System.MTAThreadAttribute?displayProperty=fullName> özniteliği varsa, bunu kaldırın.
+ Bu kural ihlalini onarmak için, giriş noktasına <xref:System.STAThreadAttribute> özniteliğini ekleyin. @No__t_0 özniteliği varsa kaldırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- .NET Compact Framework için kendisi için geliştiriyorsanız, bu kuraldan bir uyarıyı bastırmak güvenlidir <xref:System.STAThreadAttribute> özniteliktir gereksiz ve desteklenmiyor.
+ @No__t_0 özniteliğinin gerekli olmadığı ve desteklenmediği .NET Compact Framework için geliştiriyorsanız, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekler doğru kullanımını gösterir <xref:System.STAThreadAttribute>.
+ Aşağıdaki örneklerde <xref:System.STAThreadAttribute> doğru kullanımı gösterilmektedir.
 
  [!code-csharp[FxCop.Usage.StaThread#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.StaThread/cs/FxCop.Usage.StaThread.cs#1)]
  [!code-vb[FxCop.Usage.StaThread#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.StaThread/vb/FxCop.Usage.StaThread.vb#1)]

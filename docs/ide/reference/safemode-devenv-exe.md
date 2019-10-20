@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Devenv, /SafeMode switch
 - SafeMode switch
 ms.assetid: b191f6a5-8f12-47ec-bcc7-b68149a22aa8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14b2ac3a80a9e17e0c554f56ae8e31ac32450c5e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: abaeded184db78085a9629da0e763b2f76dbd328
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945485"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655511"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
 
-Visual Studio, yalnızca varsayılan ortama ve servisler yüklenirken güvenli modda başlatır.
+Visual Studio 'Yu güvenli modda başlatır, yalnızca varsayılan ortam ve Hizmetleri yükleyerek.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,11 +31,11 @@ devenv /SafeMode
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu anahtar, tüm üçüncü taraf VSPackages kararlı yürütülmesine izin Visual Studio başladığında yüklenmesini engeller.
+Bu anahtar, Visual Studio başlatıldığında tüm üçüncü taraf VSPackages 'nin yüklenmesini engeller ve kararlı yürütmeye izin verir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, Visual Studio güvenli modda başlatır.
+Aşağıdaki örnekte, Visual Studio güvenli modda başlatılır.
 
 ```shell
 devenv /safemode

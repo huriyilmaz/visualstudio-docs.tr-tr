@@ -1,5 +1,5 @@
 ---
-title: Kullanıcı ayarları Store için yazma | Microsoft Docs
+title: Kullanıcı ayarları deposuna yazma | Microsoft Docs
 ms.date: 05/23/2019
 ms.topic: conceptual
 ms.assetid: efd27f00-7fe5-45f8-9b97-371af732be97
@@ -8,21 +8,21 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 44380a03b87318be0fdf746c75eff8988ac68267
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 80b525fe896c59503cac55c9f7cab79a11b481f1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318474"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647887"
 ---
 # <a name="writing-to-the-user-settings-store"></a>Kullanıcı Ayarları Deposuna Yazma
-Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekler** iletişim ve özellikleri windows belirli bir iletişim kutusu. Visual Studio uzantıları bunlar küçük miktarlarda veri depolamak için kullanabilirsiniz. Bu izlenecek yolda not defteri için Visual Studio dış bir araç olarak okuma ve kullanıcı ayarları deposuna yazma tarafından nasıl ekleneceğini gösterir.
+Kullanıcı ayarları, **Araçlar/Seçenekler** iletişim kutusu, Özellikler pencereleri ve diğer diğer iletişim kutuları gibi yazılabilir ayarlardır. Visual Studio uzantıları, küçük miktarlarda veri depolamak için bunları kullanabilir. Bu izlenecek yol, Kullanıcı ayarları deposundan okuma ve yazma yoluyla Visual Studio 'ya bir dış araç olarak not defteri eklemeyi gösterir.
 
 ## <a name="writing-to-the-user-settings-store"></a>Kullanıcı Ayarları Deposuna Yazma
 
-1. UserSettingsStoreExtension adlı bir VSIX projesi oluşturun ve ardından UserSettingsStoreCommand adlı özel bir komut ekleyin. Özel komut oluşturma hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
+1. UserSettingsStoreExtension adlı bir VSıX projesi oluşturun ve ardından UserSettingsStoreCommand adlı bir özel komut ekleyin. Özel bir komut oluşturma hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-2. UserSettingsStoreCommand.cs içinde aşağıdaki ekleme using deyimlerini:
+2. UserSettingsStoreCommand.cs ' de, aşağıdaki using yönergelerini ekleyin:
 
     ```csharp
     using System.Collections.Generic;
@@ -30,7 +30,7 @@ Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekl
     using Microsoft.VisualStudio.Shell.Settings;
     ```
 
-3. MenuItemCallback, yöntem gövdesi silme ve kullanıcı ayarlarını depolamak, aşağıdaki gibi alır:
+3. MenuItemCallback içinde, yönteminin gövdesini silin ve Kullanıcı ayarları deposunu aşağıdaki gibi alın:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -40,7 +40,7 @@ Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekl
     }
     ```
 
-4. Artık, Not Defteri zaten dış bir araç olarak ayarlanmasına bulun. İle tüm dış araçları ToolCmd ayarı "Not", şu şekilde olup olmadığını belirlemek için yineleme yapmanız gerekir:
+4. Şimdi Not defteri 'nin zaten dış bir araç olarak ayarlanmış olup olmadığını öğrenin. ToolCmd ayarının "Notepad" olup olmadığını ve aşağıdaki gibi tüm dış araçları kullanarak yineleme yapmanız gerekir:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -64,7 +64,7 @@ Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekl
 
     ```
 
-5. Not Defteri'ni dış bir araç olarak ayarlanmamışsa, aşağıdaki gibi ayarlayın:
+5. Not defteri bir dış araç olarak ayarlanmamışsa, aşağıdaki gibi ayarlayın:
 
     ```vb
     private void MenuItemCallback(object sender, EventArgs e)
@@ -100,10 +100,10 @@ Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekl
     }
     ```
 
-6. Kodu test edin. İkinci kez çalıştırmadan önce kayıt defterini geri alma işlemleri gerekir böylece onu dış bir araç olarak not defteri ekler unutmayın.
+6. Kodu test edin. Not defteri 'nin bir dış araç olarak eklediğini unutmayın, bu yüzden kayıt defterini ikinci bir kez çalıştırmadan önce geri almanız gerekir.
 
-7. Kodu derlemek ve hata ayıklamaya başlayın.
+7. Kodu derleyin ve hata ayıklamayı başlatın.
 
-8. Üzerinde **Araçları** menüsünde tıklatın **çağırma UserSettingsStoreCommand**. Bu Not Defteri'ne ekler **Araçları** menüsü.
+8. **Araçlar** menüsünde **UserSettingsStoreCommand komutunu çağır**' a tıklayın. Bu, Not defteri 'Ni **Araçlar** menüsüne ekler.
 
-9. Not Defteri'ni araçları görürsünüz / Seçenekler menüsü ve tıklayarak **not defteri** bir not defteri örneği ayarlama duruma getirmeniz gerekir.
+9. Artık Araçlar/Seçenekler menüsünde Not defteri ' ni görmeniz ve **Not** defteri ' ne tıklamak, Not defteri 'nin bir örneğini göstermelidir.

@@ -1,5 +1,5 @@
 ---
-title: Daralt ve bölgeleri genişletin
+title: Kod bölgelerini daraltma ve genişletme
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - code [Visual Studio], outlining
 - code [Visual Studio], hiding
 - outlining code
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6451e835e44af23fbd41c9c1573e0bc5daed115
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 61772ead029dccaff9b1090a469865fcc3742df6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62811922"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666815"
 ---
 # <a name="outlining"></a>Anahat Oluşturma
 
-Artı işareti altında görünmesi bir bölge kodu daraltarak bazı kod görünümden gizlemeyi seçebilirsiniz (**+**). Daraltılmış bölgeye, artı işaretine tıklayarak genişletin. Klavye kullanıcısıysanız seçebileceğiniz **Ctrl**+**M**+**M** daraltmak ve genişletmek için. Ayrıca, herhangi bir satırda bölge kodu yalnızca solunda görünür anahat Kenar çubuğunda çift tıklayarak bir anahat oluşturma bölgesi daraltabilirsiniz. Daraltılmış bölgeye geldiğinizde, araç ipucu olarak daraltılmış bölgeye içeriğini görebilirsiniz.
+Bir kod bölgesini daraltarak bir kodu bir ve işareti ( **+** ) altında görünecek şekilde gizleyerek, bazı kodları görünümden gizlemeyi seçebilirsiniz. Daraltılmış bir bölgeyi, artı işaretine tıklayarak genişletebilirsiniz. Klavye kullanıcısı kullanıyorsanız, daraltmak ve genişletmek için **Ctrl** +**m** +**m** seçeneklerini belirleyebilirsiniz. Ayrıca, yalnızca kodun solunda görüntülenen ana hat kenar boşluğunda yer alan bölgedeki herhangi bir satırı çift tıklayarak bir anahat bölgesini daraltabilirsiniz. Daraltılan bölgenin üzerine geldiğinizde, Daraltılan bir bölgenin içeriğini araç ipucu olarak görebilirsiniz.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz: [Kaynak Düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor).
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [kaynak Düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor).
 
-Kenar boşlukları fare ile üzerine geldiğinizde anahat kenar bölgelerde ayrıca vurgulanır. Varsayılan renk vurgulama renk bazı yapılandırmalarda yerine soluk görünebilir. İçinde değiştirebilirsiniz **Araçları** > **seçenekleri** > **ortam** > **yazı tipleri ve renkler**  >  **Genişletilebilir**.
+Ana hat kenar boşluğundaki bölgeler, fare ile kenar boşluğunun üzerine geldiğinizde de vurgulanır. Varsayılan vurgulama rengi bazı renk yapılandırmalarında soluk görünebilir. **Araç**  > **seçenekleri**  > **ortam**  > **yazı tipi ve renkler**  > **Daraltılabilir bölge**' de bunu değiştirebilirsiniz.
 
-Anahatları belirlenmiş kodunda çalışırken, üzerinde çalışma, yapılması ve sonra diğer bölümleri için taşıma bunları Daralt istediğiniz bölümleri genişletebilirsiniz. Olmasını istemediğiniz anahat oluşturma görüntülenen, kullanabileceğiniz **Durdur anahat oluşturma** , temel kodu etkilemeden anahat bilgileri kaldırmak için komutu.
+Anahatları belirlenmiş kodda çalışırken, üzerinde çalışmak istediğiniz bölümleri genişletebilir, işiniz bittiğinde bunları daraltabilir ve sonra diğer bölümlere geçebilirsiniz. Ana hattını görüntülenmesini istemediğiniz zaman, temel kodunuzla ilgili kodu etkilemeden anahat bilgilerini kaldırmak için Seviyelendirmeyi **Durdur** komutunu kullanabilirsiniz.
 
-**Geri** ve **Yinele** komutlarını **Düzenle** bu Eylemler menüsü etkiler. **Kopyalama**, **Kes**, **Yapıştır**, ve sürükle ve bırak işlemleri korumak anahat oluşturma bilgileri, ancak Genişletilebilir durumunda. Örneğin, daraltılmış durumda bir bölge kopyaladığınızda **yapıştırın** işlem bir genişletilmiş bölge olarak kopyalanan metni yapıştırın.
+**Düzenle** menüsündeki **geri al** ve **Yinele** komutları bu eylemleri etkiler. **Kopyala**, **Kes**, **Yapıştır**ve sürükle bırak işlemleri, ana hat bilgilerini tutar, ancak daraltılabilir bölgenin durumunu içermez. Örneğin, Daraltılan bir bölgeyi kopyaladığınızda, **Yapıştır** işlemi kopyalanmış metni genişletilmiş bölge olarak yapıştırır.
 
 > [!CAUTION]
-> Anahatları belirlenmiş bir bölge değiştirdiğinizde, anahat oluşturma kaybolabilir. Örneğin, silme veya bulma ve değiştirme işlemlerini bölge sonuna silme.
+> Anahatları belirlenmiş bir bölgeyi değiştirdiğinizde, ana hat kaybolmuş olabilir. Örneğin, silme veya bulma ve değiştirme işlemleri bölgenin sonunu silebilir.
 
-Aşağıdaki komutları bulunabilir **Düzenle** > **anahat** alt.
+Aşağıdaki**komutlar  >  ana** hattı **Düzenle** alt menüsünde bulunabilir.
 
 |||
 |-|-|
-|Seçimi Gizle|(**Ctrl**+**M**, **Ctrl**+**H**)-seçili değil normalde olabilecek kod bloğu daraltır Örneğin, anahat için kullanılabilir bir `if` blok. Özel bölge kaldırmak için **geçerli gizlemeyi Durdur** (veya **Ctrl**+**M**, **Ctrl** + **U**). Visual Basic'te kullanılabilir değil.|
-|Anahat genişlemesini Değiştir|-Bölüm içinde iç içe geçmiş bir daraltılmış bölümü imleç gerektiği zaman Anahat en içteki geçerli gizli veya genişletilmiş durumunu tersine çevirir.|
-|Tüm ana hattı Değiştir|(**Ctrl**+**M**, **Ctrl**+**L**)-tüm bölgeler için aynı durum genişletilmiş veya daraltılmış ayarlar. Bazı bölgelerde genişletilir ve bazı daraltılmış, ardından daraltılmış genişletilmiş bölge.|
-|Ana Hat Oluşturmayı Durdur|(**Ctrl**+**M**, **Ctrl**+**P**)-tüm belgeyi tüm ana hat oluşturma bilgilerini kaldırır.|
-|Geçerliyi gizlemeyi Durdur|(**Ctrl**+**M**, **Ctrl**+**U**)-şu anda seçili anahat oluşturma bilgilerini kaldırır Kullanıcı tanımlı bölge. Visual Basic'te kullanılabilir değil.|
-|Tanımlara Daralt|(**Ctrl**+**M**, **Ctrl**+**O**)-tüm türlerin üyelerini daraltır.|
-|Bloğu Daralt:\<mantıksal sınır >|(Visual C++) Ekleme noktasını içeren işlevi bir bölgede daraltır. Örneğin, ekleme noktasını bir döngü içinde yer alıyorsa, döngü gizlenir.|
-|Tümünü Daralt: \<mantıksal yapıları >|(Visual C++) İşlevin içindeki tüm yapıları daraltır.|
+|Seçimi Gizle|(**Ctrl** +**M**, **CTRL** +**H**)-bir `if` bloğu gibi, normalde ana hat için kullanılamayacak seçili kod bloğunu daraltır. Özel bölgeyi kaldırmak için, **geçerli gizlemeyi durdur** (veya **CTRL** +**M**, **CTRL** +**U**) kullanın. Visual Basic ' de kullanılamaz.|
+|Anahat genişletmeyi değiştirme|-İmleç, iç içe daraltılmış bir bölümde yer aldığı zaman, en içteki ana hat bölümünün geçerli gizli veya genişletilmiş durumunu tersine çevirir.|
+|Tüm Anahatlamayı aç|(**Ctrl** +**m**, **CTRL** +**L**)-tüm bölgeleri aynı daraltılmış veya genişletilmiş duruma ayarlar. Bazı bölgeler genişletilir ve bazıları daraltıldı, daraltılan bölgeler genişletilir.|
+|Anahat oluşturmayı durdur|(**Ctrl** +**M**, **CTRL** +**P**)-tüm belgeye ilişkin tüm ana hat bilgilerini kaldırır.|
+|Geçerli gizlemeyi durdur|(**Ctrl** +**M**, **CTRL** +**U**)-Şu anda seçili olan Kullanıcı tanımlı bölgenin ana hat bilgilerini kaldırır. Visual Basic ' de kullanılamaz.|
+|Tanımlara Daralt|(**Ctrl** +**M**, **CTRL** +**O**)-tüm türlerin üyelerini daraltır.|
+|Engellemeyi daralt: \<logical sınır >|(Görsel C++) İşlevde ekleme noktasını içeren bir bölgeyi daraltır. Örneğin, ekleme noktası bir döngü içinde yer alıyorsa, döngü gizlenir.|
+|Tüm içinde daralt: \<logical yapıları >|(Görsel C++) İşlev içindeki tüm yapıları daraltır.|
 
-Visual Studio SDK'sı, genişletmek veya daraltmak için istediğiniz metin bölgeleri tanımlamak için de kullanabilirsiniz. Bkz: [izlenecek yol: Anahat oluşturma](../extensibility/walkthrough-outlining.md).
+Genişletmek veya daraltmak istediğiniz metin bölgelerini tanımlamak için Visual Studio SDK 'sını de kullanabilirsiniz. Bkz. [Izlenecek yol: Ana hat](../extensibility/walkthrough-outlining.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Kaynak Düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor)

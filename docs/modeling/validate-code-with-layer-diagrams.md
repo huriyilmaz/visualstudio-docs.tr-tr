@@ -14,17 +14,17 @@ helpviewer_keywords:
 - MSBuild, tasks
 - MSBuild, dependency diagrams
 - MSBuild, validating code
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a9786c35b81ac0ff4fd29ffe121aab7e1aa04f2f
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 4a2b972c3c275f3e43819220532ac0a3c4a597e3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416437"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662932"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>Bağımlılık diyagramları ile kod doğrulama
 
@@ -42,7 +42,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'da ba
 
    Kodu farklı bir mimariye taşıdığınız zaman iş gerektiren kodu veya bağımlılıkları bulun.
 
-**Gereksinimler**
+**Requirements**
 
 - Visual Studio
 
@@ -52,12 +52,12 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'da ba
 
 Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-Kodu, Visual Studio 'da veya bir komut isteminden açık bir bağımlılık diyagramından el ile doğrulayabilirsiniz. Ayrıca, yerel derlemeleri veya Azure Pipelines yapılarını çalıştırırken kodu otomatik olarak doğrulayabilirsiniz. Bkz [. Channel 9 videosu: Bağımlılık diyagramlarını](http://go.microsoft.com/fwlink/?LinkID=252073)kullanarak mimarinizi tasarlayın ve doğrulayın.
+Kodu, Visual Studio 'da veya bir komut isteminden açık bir bağımlılık diyagramından el ile doğrulayabilirsiniz. Ayrıca, yerel derlemeleri veya Azure Pipelines yapılarını çalıştırırken kodu otomatik olarak doğrulayabilirsiniz. Bkz. [Channel 9 videosu: bağımlılık diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](http://go.microsoft.com/fwlink/?LinkID=252073).
 
 > [!IMPORTANT]
 > Team Foundation Server (TFS) kullanarak katman doğrulaması çalıştırmak istiyorsanız, Yapı sunucunuza aynı Visual Studio sürümünü de yüklemelisiniz.
 
-## <a name="live-dependency-validation"></a>Canlı bağımlılık doğrulama
+## <a name="live-dependency-validation"></a>Canlı bağımlılık doğrulaması
 
 Bağımlılık doğrulaması gerçek zamanlı olarak gerçekleşir ve hatalar hemen **hata listesi**görüntülenir.
 
@@ -122,7 +122,7 @@ Katmanları birden çok uygulama arasında paylaşılan Web sitelerine, Office b
        msbuild <FilePath+ModelProjectFileName>.modelproj /p:ValidateArchitecture=true
        ```
 
-     - veya -
+     - veya
 
        Modelleme projesi (. modelproj) dosyasını ve bağımlılık diyagramını içeren klasöre gidin ve aşağıdaki özel özellikle MSBuild 'i çalıştırın:
 
@@ -136,7 +136,7 @@ Katmanları birden çok uygulama arasında paylaşılan Web sitelerine, Office b
        msbuild <FilePath+SolutionName>.sln /p:ValidateArchitecture=true
        ```
 
-     - veya -
+     - veya
 
        Bağımlılık diyagramı içeren bir modelleme projesi içermesi gereken çözüm klasörüne gidin ve aşağıdaki özel özellikle MSBuild 'i çalıştırın:
 
@@ -161,7 +161,7 @@ Geliştirme işlemi sırasında, doğrulama esnasında bildirilen çakışmalar�
 
 **Hata listesi** penceresindeki doğrulama hatalarını yönetmek için bu görevleri kullanın:
 
-|**To**|**Bu adımları izleyin**|
+|**Hedef**|**Bu adımları izleyin**|
 |-|-|
 |Doğrulama sırasında seçili hataları gizleme|Seçilen bir veya birden çok hataya sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından **hataları Gizle**' ye tıklayın.<br /><br /> Gizlenen hatalar üstü çizili biçimde görünür. Doğrulamayı daha sonra çalıştırdığınızda bu hatalar görünmez.<br /><br /> Gizlenen hatalar, ilgili bağımlılık diyagramı dosyası için bir. suppressions dosyasında izlenir.|
 |Seçili hataların gizlenmesini durdurma|Seçili gizlenen hata veya hatalara sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından hataları gizlemeyi **Durdur**' a tıklayın.<br /><br /> Doğrulamayı daha sonra çalıştırdığınızda seçili gizlenen hatalar görünecektir.|
@@ -180,7 +180,7 @@ Modelleme projesi (.modelproj) dosyası açmak için metin düzenleyicisi kullan
 <ValidateArchitecture>true</ValidateArchitecture>
 ```
 
-\- veya -
+\- veya-
 
 1. **Çözüm Gezgini**' de, bağımlılık diyagramı veya diyagramlarını içeren modelleme projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
@@ -200,7 +200,7 @@ Hata Listesi penceresindeki hataları yönetmek için bkz. [katman doğrulama ha
 
 Aşağıdaki tabloda katman doğrulama sorunları ve bunların çözümü açıklanmaktadır. Bu sorunlar, kod ve tasarım arasındaki çakışmalarla sonuçlanan hatalardan ayrılır. Bu hatalar hakkında daha fazla bilgi için bkz. [katman doğrulama sorunlarını giderme](#troubleshoot-layer-validation-issues).
 
-|**Konuda**|**Olası neden**|**Çözümleme**|
+|**Konuda**|**Olası neden**|**Çözünürlüğüne**|
 |-|-|-|
 |Doğrulama hataları beklendiği gibi gerçekleşmez.|Doğrulama, Çözüm Gezgini ' deki diğer bağımlılık diyagramlarından kopyalanmış ve aynı modelleme projesinde olan bağımlılık diyagramlarında çalışmaz. Bu şekilde kopyalanmış bağımlılık diyagramları, özgün bağımlılık diyagramı ile aynı başvuruları içerir.|Modelleme projesine yeni bir bağımlılık diyagramı ekleyin.<br /><br /> Öğeleri kaynak bağımlılığı diyagramından yeni diyagrama kopyalayın.|
 
@@ -216,7 +216,7 @@ Bu hataları çözmek için doğrulama sırasında daha fazla hata görünmeyene
 
 Aşağıdaki bölümde, bu hatalarda kullanılan sözdizimi belirtilmekte, bu hataların anlamı açıklanmakta ve bunları çözmek veya yönetmek için yapabilecekleriniz önerilmektedir.
 
-|**Söz dizimi**|**Açıklama**|
+|**Sözdizimi**|**Açıklama**|
 |-|-|
 |*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* , bağımlılık diyagramındaki bir katmanla ilişkili bir yapıdır.<br /><br /> *ArtifactTypeN* , bir **sınıf** veya **Yöntem**gibi *ArtifactN*türüdür, örneğin:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|Bir ad alanının adı.|
@@ -225,15 +225,15 @@ Aşağıdaki bölümde, bu hatalarda kullanılan sözdizimi belirtilmekte, bu ha
 
 | **Hata sözdizimi** | **Hata açıklaması** |
 |-|-|
-| DV0001: **Geçersiz bağımlılık** | Bu sorun, bir katmana eşlenen bir kod öğesi (ad alanı, tür, üye) başka bir katmana eşlenmiş bir kod öğesine başvuruyorsa, ancak bu katmanları içeren bağımlılık doğrulama diyagramında bu katmanlar arasında bağımlılık oku olmadığında raporlanır. Bu bir bağımlılık kısıtlaması ihlalidir. |
-| DV1001: **Geçersiz ad alanı adı** | Bu sorun, "Izin verilen ad alanı adları" özelliği bu kod öğesinin tanımlandığı ad alanını içermediği bir katmanla ilişkili bir kod öğesinde raporlanır. Bu bir adlandırma kısıtlaması ihlalidir. "Izin verilen ad alanı adları" sözdiziminin, katman olarak ilişkilendirilmiş kod öğelerinin tanımlanmasına izin verilen ad alanlarının noktalı virgülle bir listesi olacağını unutmayın. |
-| DV1002: **Referenceable ad alanı bağımlılığı** | Bu sorun, katman ile ilişkili bir kod öğesinde raporlanır ve katmanın "Referenceable namespace" özelliğinde tanımlanan bir ad alanında tanımlanan başka bir kod öğesine başvuracaktır. Bu bir adlandırma kısıtlaması ihlalidir. "Başvurulmayan ad alanları" özelliğinin, bu katmanla ilişkili kod öğelerinde başvurulmaması gereken, noktalı virgülle ayrılmış ad alanları listesi olarak tanımlandığını unutmayın. |
-| DV1003: **İzin verilmeyen ad alanı adı** | Bu sorun, "Izin verilmeyen ad alanı adları" özelliği bu kod öğesinin tanımlandığı ad alanını içerdiği bir katmanla ilişkili bir kod öğesinde raporlanır. Bu bir adlandırma kısıtlaması ihlalidir. "Izin verilmeyen ad alanı adı" özelliğinin, bu katman ile ilişkili kod öğelerinin tanımlanmadığı ad alanlarının noktalı virgülle ayrılmış bir listesi olarak tanımlandığını unutmayın. |
-| DV3001: **Eksik bağlantı** | '*LayerName*' katmanı, bulunamayan '*yapıt*' öğesine bağlanır. Eksik bir derleme başvurunuz mu var? |
-| DV9001: **Mimari analizi iç hatalar buldu** | Sonuçlar tamamlanmamış olabilir. Daha fazla bilgi için ayrıntılı yapı olay günlüğü veya çıkış penceresine bakın. |
+| DV0001: **geçersiz bağımlılık** | Bu sorun, bir katmana eşlenen bir kod öğesi (ad alanı, tür, üye) başka bir katmana eşlenmiş bir kod öğesine başvuruyorsa, ancak bu katmanları içeren bağımlılık doğrulama diyagramında bu katmanlar arasında bağımlılık oku olmadığında raporlanır. Bu bir bağımlılık kısıtlaması ihlalidir. |
+| DV1001: **geçersiz ad alanı adı** | Bu sorun, "Izin verilen ad alanı adları" özelliği bu kod öğesinin tanımlandığı ad alanını içermediği bir katmanla ilişkili bir kod öğesinde raporlanır. Bu bir adlandırma kısıtlaması ihlalidir. "Izin verilen ad alanı adları" sözdiziminin, katman olarak ilişkilendirilmiş kod öğelerinin tanımlanmasına izin verilen ad alanlarının noktalı virgülle bir listesi olacağını unutmayın. |
+| DV1002: **Referenceable ad alanına bağımlılık** | Bu sorun, katman ile ilişkili bir kod öğesinde raporlanır ve katmanın "Referenceable namespace" özelliğinde tanımlanan bir ad alanında tanımlanan başka bir kod öğesine başvuracaktır. Bu bir adlandırma kısıtlaması ihlalidir. "Başvurulmayan ad alanları" özelliğinin, bu katmanla ilişkili kod öğelerinde başvurulmaması gereken, noktalı virgülle ayrılmış ad alanları listesi olarak tanımlandığını unutmayın. |
+| DV1003: **Izin verilmeyen ad alanı adı** | Bu sorun, "Izin verilmeyen ad alanı adları" özelliği bu kod öğesinin tanımlandığı ad alanını içerdiği bir katmanla ilişkili bir kod öğesinde raporlanır. Bu bir adlandırma kısıtlaması ihlalidir. "Izin verilmeyen ad alanı adı" özelliğinin, bu katman ile ilişkili kod öğelerinin tanımlanmadığı ad alanlarının noktalı virgülle ayrılmış bir listesi olarak tanımlandığını unutmayın. |
+| DV3001: **eksik bağlantı** | '*LayerName*' katmanı, bulunamayan '*yapıt*' öğesine bağlanır. Eksik bir derleme başvurunuz mu var? |
+| DV9001: **mimari analizi iç hatalar buldu** | Sonuçlar tamamlanmamış olabilir. Daha fazla bilgi için ayrıntılı yapı olay günlüğü veya çıkış penceresine bakın. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio 'da canlı bağımlılık doğrulaması](https://devblogs.microsoft.com/devops/live-dependency-validation-in-visual-studio-2017/)
 - [Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)
-- [Video Mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
+- [Video: mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)

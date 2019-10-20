@@ -15,17 +15,17 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0de634ee62387e50fed89e4465842b2801748f45
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 7711d0b0f369f43cc7becf92cbdcfc986cd3a6a8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766148"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661489"
 ---
 # <a name="dependency-diagrams-reference"></a>Bağımlılık diyagramları: başvuru
 
@@ -48,7 +48,7 @@ Aşağıdaki görevleri gerçekleştirmenize yardımcı olması için bir bağı
 
 - İade etme ve oluşturma işlemlerinizin doğrulanmasını ekleyerek kodunuzun geliştirilmesi ve bakımı sırasında amaçlanan mimariyi güçle zorlayın.
 
-Bu konu başlığı altında, bir bağımlılık diyagramında kullanabileceğiniz öğeler açıklanmaktadır. Bağımlılık diyagramları oluşturma ve çizme hakkında daha ayrıntılı bilgi için bkz [. bağımlılık diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md). Katman desenleri hakkında daha fazla bilgi için, [desenler & uygulamalar sitesini](http://go.microsoft.com/fwlink/?LinkId=145794)ziyaret edin.
+Bu konu başlığı altında, bir bağımlılık diyagramında kullanabileceğiniz öğeler açıklanmaktadır. Bağımlılık diyagramları oluşturma ve çizme hakkında daha ayrıntılı bilgi için bkz. [bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md). Katman desenleri hakkında daha fazla bilgi için, [desenler & uygulamalar sitesini](http://go.microsoft.com/fwlink/?LinkId=145794)ziyaret edin.
 
 ## <a name="reading-dependency-diagrams"></a>Bağımlılık diyagramlarını okuma
 
@@ -58,9 +58,9 @@ Aşağıdaki tabloda, bir bağımlılık diyagramında kullanabileceğiniz öğe
 
 |**Şeklinin**|**Öğe**|**Açıklama**|
 |-|-|-|
-|1\.|**Katmanı**|Sisteminizdeki fiziksel yapıların mantıksal grubu. Bu yapıtlar ad alanları, projeler, sınıflar, yöntemler vb. olabilir.<br /><br /> Bir katmana bağlı yapıtları görmek için katmanın kısayol menüsünü açın ve sonra **Katman Gezgini**'ni açmak Için **bağlantıları görüntüle** ' yi seçin.<br /><br /> Daha fazla bilgi için bkz. [Katman Gezgini](#Explorer).<br /><br /> -   **Yasak ad alanı bağımlılıkları** -bu katmanla ilişkili yapıtların belirtilen ad alanlarına bağlı olduğunu belirtir.<br />-   **Yasak ad alanları** -bu katman ile ilişkili yapıtların belirtilen ad alanlarına ait olmaması gerektiğini belirtir.<br />-   **Gerekli ad alanları** -bu katman ile ilişkili yapıtların belirtilen ad alanlarından birine ait olması gerektiğini belirtir.|
-|2|**Bağımlılık**|Bir katmanın işlevselliği başka bir katmanda kullanabilir, ancak tersi anlamına gelir.<br /><br /> -   **Yön** -bağımlılığın yönünü belirtir.|
-|3|**Çift yönlü bağımlılık**|Bir katmanın başka bir katmandaki işlevleri kullanacağını ve bunun tersini gösterir.<br /><br /> -   **Yön** -bağımlılığın yönünü belirtir.|
+|1\.|**Katmanı**|Sisteminizdeki fiziksel yapıların mantıksal grubu. Bu yapıtlar ad alanları, projeler, sınıflar, yöntemler vb. olabilir.<br /><br /> Bir katmana bağlı yapıtları görmek için katmanın kısayol menüsünü açın ve sonra **Katman Gezgini**'ni açmak Için **bağlantıları görüntüle** ' yi seçin.<br /><br /> Daha fazla bilgi için bkz. [Katman Gezgini](#Explorer).<br /><br /> **yasak ad alanı bağımlılıklarını** -   -bu katmanla ilişkili yapıtların belirtilen ad alanlarına bağlı olduğunu belirtir.<br />**yasak ad alanları** -   -bu katman ile ilişkili yapıtların belirtilen ad alanlarına ait olmaması gerektiğini belirtir.<br />**gerekli ad alanlarını** -   -bu katman ile ilişkili yapıtların belirtilen ad alanlarından birine ait olması gerektiğini belirtir.|
+|2|**Bağımlılık**|Bir katmanın işlevselliği başka bir katmanda kullanabilir, ancak tersi anlamına gelir.<br /><br /> -   **yönü** -bağımlılığın yönünü belirtir.|
+|3|**Çift yönlü bağımlılık**|Bir katmanın başka bir katmandaki işlevleri kullanacağını ve bunun tersini gösterir.<br /><br /> -   **yönü** -bağımlılığın yönünü belirtir.|
 |4|**Yorum**|Diyagramdaki diyagrama veya öğelere genel notlar eklemek için kullanın.|
 |5|**Açıklama bağlantısı**|Diyagramdaki öğelere açıklama bağlamak için kullanın.|
 
@@ -76,7 +76,7 @@ Aşağıdaki tabloda, bir bağımlılık diyagramında kullanabileceğiniz öğe
 
 Katman ve yapıt bağlama hakkında daha fazla bilgi için bkz.:
 
-- [Bağımlılık diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)
+- [Bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md)
 
 - [Kodunuz aracılığıyla bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)
 
@@ -93,7 +93,7 @@ Bağımlılık diyagramında bir veya daha fazla katmanın kısayol menüsünü 
 |-|-|
 |**Kategorisine**|Sınıf, ad alanı, kaynak dosya vb. gibi yapıt türü|
 |**Katmanı**|Yapıtı bağlayan katman|
-|**Doğrulamayı destekler**|**Doğru**ise, katman doğrulama işlemi projenin bu öğeden veya bu öğeden bağımlılıklara uygun olduğunu doğrulayabilirler.<br /><br /> **Yanlışsa**, bağlantı katman doğrulama işlemine katılmaz.<br /><br /> Daha fazla bilgi için bkz [. bağımlılık diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md).|
+|**Doğrulamayı destekler**|**Doğru**ise, katman doğrulama işlemi projenin bu öğeden veya bu öğeden bağımlılıklara uygun olduğunu doğrulayabilirler.<br /><br /> **Yanlışsa**, bağlantı katman doğrulama işlemine katılmaz.<br /><br /> Daha fazla bilgi için bkz. [bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md).|
 |**Tanımlayıcısını**|Bağlı yapıt başvurusu|
 
 ## <a name="see-also"></a>Ayrıca bkz.

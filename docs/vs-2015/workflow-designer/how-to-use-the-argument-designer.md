@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bağımsız değişken Tasarımcısını kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: bağımsız değişken tasarımcısını kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,30 +9,29 @@ f1_keywords:
 - System.Activities.Presentation.View.DesignTimeArgument.UI
 ms.assetid: 64813fd5-1ea1-499a-98b4-ab2a44b7ee5e
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a244379bfebcf58d76ba726d4f6a84bcdfa7d1df
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a436d33bbb7c791f3f192357fded779fa77d148d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65696271"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659109"
 ---
-# <a name="how-to-use-the-argument-designer"></a>Nasıl yapılır: Bağımsız Değişken Tasarımcısını Kullanma
-Önceki sürümlere göre [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], bağımsız değişken tasarımcısını veri ekleme çıkarma bir etkinlik akışı izin vermek kolaylaştırır. Tasarımcı tıklayarak erişilen **bağımsız değişkenleri** tasarım tuvalin sol alt köşesindeki düğme. Tasarımcı, bir tablo biçiminde görünür ve her bir sütun üst bilgileri dışında sıralanabilir bağımsız değişkenlerinin listesi içeren **varsayılan değer** sütun. Her bağımsız değişken adı, / out/içinde-out/özellik yönü, türü ve varsayılan ifade değeri (varsa) içerir. Adı ve varsayılan ifade değeri düzenlenebilir metin alanları ve türü ve Yön açılan listeler. [!INCLUDE[crabout](../includes/crabout-md.md)] bağımsız değişkenleri, görmek [değişkenleri ve bağımsız değişkenler](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8).  
-  
-### <a name="to-create-a-new-argument"></a>Yeni bir değişken oluşturmak için  
-  
-1. İş akışı veya etkinliği bir çözüm açın [!INCLUDE[vs2010](../includes/vs2010-md.md)].  
-  
-2. Bağımsız değişkenler Tasarımcısı'nı tıklatarak **bağımsız değişkenleri** tasarım tuvalin sol alt köşesindeki düğme. Bağımsız değişken tasarımcısını görünür.  
-  
-3. Etiketli boş satırı tıklatın **bağımsız değişken oluşturma**. Bu aşağıdaki varsayılan değerleri kullanarak yeni bir değişken ile yeni bir satır ekler: argumentx için **adı** x benzersiz bağımsız değişken adları oluşturmak için otomatik olarak artırılır 1 başlangıç değeri bir tamsayı olduğu **içinde**  için **yönü**, ve **dize** için **bağımsız değişken türü**. Hiçbir değer için eklenen **varsayılan değer**. İş akışı tasarım işlemi sırasında herhangi bir zamanda bu değerleri değiştirebilirsiniz.  
-  
+# <a name="how-to-use-the-argument-designer"></a>Nasıl yapılır: bağımsız değişken tasarımcısını kullanma
+@No__t_0 önceki sürümleriyle karşılaştırıldığında, bağımsız değişken Tasarımcısı verilerin bir etkinliğin içine ve dışına akmasını kolaylaştırır. Tasarımcı, tasarım tuvalinin sol alt köşesindeki **bağımsız değişkenler** düğmesine tıklanarak erişilir. Tasarımcı, tablo biçiminde görüntülenen bağımsız değişkenlerin bir listesini içerir ve **varsayılan değer** sütunu dışında her bir sütun üst bilgisi tarafından sıralanabilir. Her bağımsız değişken bir ad, ın/out/out/Property Direction, Type ve varsayılan ifade değeri (varsa) içerir. Ad ve varsayılan ifade değeri, düzenlenebilir metin alanlarıdır ve tür ve yönün açılan listeleri vardır. bağımsız değişkenler [!INCLUDE[crabout](../includes/crabout-md.md)], bkz. [değişkenler ve bağımsız değişkenler](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8).
+
+### <a name="to-create-a-new-argument"></a>Yeni bir bağımsız değişken oluşturmak için
+
+1. @No__t_0 bir iş akışı veya etkinlik çözümü açın.
+
+2. Tasarım tuvalinin sol alt köşesindeki **bağımsız değişkenler** düğmesine tıklayarak bağımsız değişkenler tasarımcısını açın. Bağımsız değişkenler Tasarımcısı görüntülenir.
+
+3. **Oluşturma bağımsız değişkeni**etiketli boş satıra tıklayın. Bu işlem, aşağıdaki varsayılan değerleri kullanarak yeni bir bağımsız değişken içeren yeni bir satır ekler: x olarak, benzersiz bağımsız değişken adları oluşturmak için otomatik olarak arttırılan 1 başlangıç değeri, **yönü** **için,** **bağımsız değişken türü**için **dize** . **Varsayılan değer**için hiçbir değer eklenmez. Bu değerleri, iş akışı tasarım sürecinde istediğiniz zaman değiştirebilirsiniz.
+
     > [!NOTE]
-    > Bir değişkeni silmek için bağımsız değişken tıklayarak seçin ve tuşuna **Sil** anahtarı.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı Tasarımcısını kullanma](../workflow-designer/using-the-workflow-designer.md)   
- [Değişkenler ve Bağımsız Değişkenler](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8)
+    > Bir bağımsız değişkeni silmek için, ve ardından **Delete** tuşuna basarak bağımsız değişkeni seçin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [İş akışı Tasarımcısı](../workflow-designer/using-the-workflow-designer.md) [değişkenlerini ve bağımsız değişkenleri](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8) kullanma

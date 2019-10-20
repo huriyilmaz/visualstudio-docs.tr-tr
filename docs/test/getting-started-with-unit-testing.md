@@ -4,17 +4,17 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30c67bb85a7cf72090ea37680daa12933c44b0cb
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 5ecddad721547fdb5689a26a192cf0580ddb44cb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870161"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664912"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 
@@ -38,7 +38,7 @@ Bu bölümde, bir birim testi projesinin nasıl oluşturulacağı yüksek düzey
    }
    ```
 
-1. **Çözüm Gezgini**, çözüm düğümünü seçin. Ardından, üstteki menü çubuğundan **Dosya** > **Ekle** > **Yeni proje**' yi seçin.
+1. **Çözüm Gezgini**, çözüm düğümünü seçin. Ardından, üst menü çubuğundan **dosya**  >   > **Yeni proje** **Ekle** ' yi seçin.
 
 1. Yeni proje iletişim kutusunda, kullanmak istediğiniz test çerçevesi için bir birim testi proje şablonu bulun ve seçin.
 
@@ -77,7 +77,7 @@ Bu bölümde, bir birim testi projesinin nasıl oluşturulacağı yüksek düzey
 
 ## <a name="run-unit-tests"></a>Birim testlerini çalıştırma
 
-1. Üst menü çubuğundan > **Windows** [](../test/run-unit-tests-with-test-explorer.md) TestGezgini'nitestet'iseçerekTestGezgini'ni > açın.
+1. Üst menü çubuğundan **test  > ** **Windows**  > **Test Gezgini** ' ni seçerek [Test Gezgini](../test/run-unit-tests-with-test-explorer.md) 'ni açın.
 
 1. **Tümünü Çalıştır**' a tıklayarak birim testlerinizi çalıştırın.
 
@@ -97,7 +97,7 @@ Visual Studio 2017 veya sonraki sürümlerde MSTest, xUnit veya NUnit test çer�
 > [!NOTE]
 > Canlı birim testi yalnızca Enterprise sürümünde kullanılabilir.
 
-1. Test**Live Unit Testing** >  Başlat > ' a tıklayarak test menüsünden canlı birim testi ' ni açın.
+1. **Test  > ** **Live Unit Testing**  > **Başlat**' a tıklayarak **Test** menüsündeki canlı birim testini açın.
 
    ::: moniker range="vs-2017"
 
@@ -123,7 +123,7 @@ Canlı birim testi hakkında daha fazla bilgi için bkz. [canlı birim testi](..
 
 ## <a name="generate-unit-tests-with-intellitest"></a>IntelliTest ile birim testleri oluşturma
 
-IntelliTest çalıştırdığınızda hangi testlerin başarısız olduğunu görebilir ve bunları onarmak için gerekli kodu ekleyebilirsiniz. Hangi testlerin bir regresyon paketi sağlamak için bir test projesine kaydetmek için seçebilirsiniz. Kodunuzu değiştikçe, üretilen testler, kod değişikliğine eşitlenmiş şekilde tutmanızı sağlayacak Intellitest yeniden çalıştırın. Nasıl yapılacağını öğrenmek için bkz. [IntelliTest ile kodunuz için birim testleri oluşturma](../test/generate-unit-tests-for-your-code-with-intellitest.md).
+IntelliTest çalıştırdığınızda hangi testlerin başarısız olduğunu görebilir ve bunları onarmak için gerekli kodu ekleyebilirsiniz. Bir gerileme paketi sağlamak için test projesine kaydetmek üzere oluşturulan testlerin hangisi olduğunu seçebilirsiniz. Kodunuzu değiştirirken, oluşturulan testleri kod değişiklikleriyle eşitlenmiş halde tutmak için IntelliTest 'i yeniden çalıştırın. Nasıl yapılacağını öğrenmek için bkz. [IntelliTest ile kodunuz için birim testleri oluşturma](../test/generate-unit-tests-for-your-code-with-intellitest.md).
 
 > [!TIP]
 > IntelliTest yalnızca .NET Framework hedefleyen yönetilen kod için kullanılabilir.
@@ -142,7 +142,7 @@ Visual Studio 'da Boost, Google ve NUnit gibi üçüncü taraf test çerçeveler
 
 1. Test etmek istediğiniz kodu içeren çözümü açın.
 
-2. **Çözüm Gezgini** çözüme sağ tıklayın ve**Yeni proje** **Ekle** > ' yi seçin.
+2. **Çözüm Gezgini** çözüme sağ tıklayın ve  > **Yeni proje** **Ekle** ' yi seçin.
 
 3. **NUnit test projesi** proje şablonunu seçin.
 
@@ -166,7 +166,7 @@ Visual Studio 'da Boost, Google ve NUnit gibi üçüncü taraf test çerçeveler
 
 4. Test projesinden test etmek istediğiniz kodu içeren projeye bir başvuru ekleyin.
 
-   **Çözüm Gezgini**' de projeye sağ tıklayın ve ardından**başvuru** **Ekle** > ' yi seçin. ( **Başvurular** veya **Bağımlılıklar** düğümünün sağ tıklama menüsünde de bir başvuru ekleyebilirsiniz.)
+   **Çözüm Gezgini**' de projeye sağ tıklayın ve ardından  > **başvuru** **Ekle** ' yi seçin. ( **Başvurular** veya **Bağımlılıklar** düğümünün sağ tıklama menüsünde de bir başvuru ekleyebilirsiniz.)
 
 5. Test yönteminiz için kod ekleyin.
 
@@ -176,7 +176,7 @@ Visual Studio 'da Boost, Google ve NUnit gibi üçüncü taraf test çerçeveler
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [İzlenecek yol: Yönetilen kod için birim testleri oluşturma ve çalıştırma](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+* [İzlenecek yol: yönetilen kod için birim testleri oluşturma ve çalıştırma](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 * [Birim Testleri Oluştur komutu](create-unit-tests-menu.md)
 * [IntelliTest ile testler oluşturma](generate-unit-tests-for-your-code-with-intellitest.md)
 * [Test Gezgini ile testleri çalıştırma](run-unit-tests-with-test-explorer.md)

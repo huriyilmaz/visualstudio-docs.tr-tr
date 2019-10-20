@@ -1,5 +1,5 @@
 ---
-title: Kural kümesi Düzenleyicisi iletişim kutusu (eski) | Microsoft Docs
+title: Kural kümesi Düzenleyicisi Iletişim kutusu (eski) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -10,88 +10,85 @@ helpviewer_keywords:
 - Rule Set Editor dialog box
 ms.assetid: 7cfd5df1-1115-4e5c-9b72-121f39419e83
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 862842bd41762b15a38254c9d5e21bf06cdca10a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ce9e18a832ceceebc56e294023bc4ae3d06101cc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703204"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663337"
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>Kural Kümesi Düzenleyicisi İletişim Kutusu (Eski)
-Bu konu açıklar nasıl **kural kümesi Düzenleyicisi** eski iletişim kutusunda [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- **Kural kümesi Düzenleyicisi** iletişim kutusu oluşturmak ve değiştirmek için kullanılan [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) .rules dosya serileştirilmiş kümeleri, kural.  
-  
+Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] **kural kümesi Düzenleyicisi** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+
+ **Kural kümesi Düzenleyicisi** iletişim kutusu, bir. Rules dosyasına serileştirilmiş olan [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) kural kümelerini oluşturmak ve değiştirmek için kullanılır.
+
 > [!NOTE]
-> .Rules dosyasıyla açmak isteyip istemediğiniz **kodlama ile XML Düzenleyicisi**, etkinlik ve iş akışı için ilişkili Tasarımcı penceresini kapatın.  
-  
- Nasıl erişileceği hakkında daha fazla bilgi için **kural kümesi Düzenleyicisi** iletişim kutusu, bkz: [nasıl yapılır: (Eski) PolicyActivity kural kümesi oluşturma](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md).  
-  
+> **Kodlama Ile xml Düzenleyicisi**ile. Rules dosyasını açmak isterseniz, önce iş akışı veya etkinliğin ilişkili Tasarımcı penceresini kapatmanız gerekir.
+
+ **Kural kümesi Düzenleyicisi** iletişim kutusuna erişme hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir PolicyActivity kural kümesi oluşturma (eski)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md).
+
 > [!WARNING]
-> Eski kural düzenleyiciyi [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek için kullanılan [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] çoklu hedefleme desteklemez.  
-  
- Aşağıdaki tabloda kullanıcı arabirimi (UI) öğelerini açıklar **kural kümesi Düzenleyicisi** iletişim kutusu.  
-  
-|Arabirim Öğesi|Açıklama|  
-|----------------|-----------------|  
-|**Kural Ekle**|Yeni bir kural tanımı kural kümesine ekler.|  
-|**Delete**|Seçili kuralı kural kümesinden siler.|  
-|**Zincirleme**|Kural kümesi ile kullanmak için ileriye doğru zincirleme türü belirtir. Kullanılabilir seçenekler şunlardır:<br /><br /> -   **Tam zincirleme**, tüm ileriye doğru zincirleme mekanizmaları kullanma belirtir: dolaylı yöntem öznitelik atanıyor ve açık bir **güncelleştirme** işlevi.<br />-   **Sıralı**, herhangi bir iletme zincirleme kullanmayacak şekilde belirtir.<br />-   **Yalnızca açık güncelleştirme**, yalnızca üzerinde İleri zincirleme gerçekleştirmek için belirten **güncelleştirme** eylemler.<br /><br /> İleriye doğru zincirleme hakkında daha fazla bilgi için bkz. [PolicyActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65004).|  
-|**Ad**|Kural listesi sütun başlığını ayarlayın. Ada göre kural listesini sıralamak için tıklayın.|  
-|**Öncelik**|Kural listesi sütun başlığını ayarlayın. Kurallar listesini öncelik sırasına göre sıralamak için tıklayın.|  
-|**Yeniden değerlendirme**|Kural listesi sütun başlığını ayarlayın. Kuralları yeniden değerlendirme türü tarafından listesini sıralamak için tıklayın.|  
-|**Kural Önizleme**|Kural listesi sütun başlığını ayarlayın. Bir kuralın koşulunu ve eylemlerini önizlemesini kurallarının listesini sıralamak için tıklayın.|  
-|**Adı:**|Kural adını girin.|  
-|**Önceliği:**|Kural için bir öncelik girin. Varsayılan öncelik 0'dır.|  
-|**Yeniden değerlendirme:**|Kural ile kullanılacak kural yeniden değerlendirme türünü belirtir. Kullanılabilir seçenekler şunlardır:<br /><br /> -   **Her zaman**, gerektiği şekilde hesaplanması kural neden olur.<br />-   **Hiçbir zaman**, hiçbir zaman hesaplanması kural neden olur. Bu durumda bir kural yalnızca bir kez çalıştırır.|  
-|**Etkin**|Kuralın etkin hale getirmek için bu seçeneği işaretleyin.|  
-|**Koşul:**|Kural koşulu için bir ifade girin. İfade sözdizimi hakkında daha fazla bilgi için bu sayfanın "Girerek koşulu ve eylem Expressions" bölümüne bakın.|  
-|**Ardından Eylemler:**|Then ifadesi girin eylemler. İfade sözdizimi hakkında daha fazla bilgi için bu sayfanın "Girerek koşulu ve eylem Expressions" bölümüne bakın.|  
-|**Başka eylemler:**|Else eylemler için ifade girin. İfade sözdizimi hakkında daha fazla bilgi için bu sayfanın "Girerek koşulu ve eylem Expressions" bölümüne bakın.|  
-|**TAMAM**|Kural kümesi .rules dosyasına kaydetmek için tıklatın.|  
-  
- Kural kümeleri hakkında daha fazla bilgi için bkz. [PolicyActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65004).  
-  
-## <a name="entering-condition-and-action-expressions"></a>Koşul ve eylem ifadeleri girme  
- Koşul ve ardından için ifadeler girin ve bunların ilgili metnin eylemleri başka kutularındaki **kural kümesi Düzenleyicisi** iletişim kutusu. Yazabilirsiniz **bu.** alanlar, özellikler ve yöntemler iş akışı içinde kullanılan başvurmak için düzenleyicide yerleşik menünün bir IntelliSense türü kullanıyor. Veya doğrudan bir iş akışı üye adı yazın. Yöntem adından önce gelen sınıf adını yazarak başvurulan türleri üzerinde statik yöntemlerini çağırabilirsiniz.  
-  
- Mantıksal işleçler AND, OR'gibi bir koşul ekleyebilirsiniz ve değil. Koşullar da ekleyebilirsiniz. Bir ikili işleç ve iki işlenenden koşuldur. Desteklenen ikili işleçler olan ==, >, \<, > =, ve < =. Desteklenen işlenenler şunlardır: sabit değer, aritmetik işlevi ve kapsamlı bir genel üyeler.  
-  
- Karşılaştırma türü belirtebilir ve'karşılaştırabilirsiniz **null** ya da boş bir dize. Örneğin, bir karmaşık tür içeren bir değişkeni üyelerde çağrıları iç içe yerleştirebilirsiniz `this.Address.State == "WA"`.  
-  
- İfadeler, aşağıdaki işleçleri destekler:  
-  
-- İlişkisel işleçleri: ==, =,! =  
-  
-- Karşılaştırma işleçleri: <, \<=, >, > =  
-  
-- Aritmetik işleçler: +, -, *, /, MOD  
-  
-- Mantıksal işleçler: VE &AMP; &AMP;, OR &AMP;#124; &AMP;#124;DEĞİL,!  
-  
-- Bit düzeyinde işleçler: &,&#124;  
-  
-  İfadenin İşleç önceliği, C# İşleç önceliği kurallarını izler.  
-  
-  Koşullar hakkında daha fazla bilgi için bkz. [iş akışlarını kullanarak koşullarında](https://msdn.microsoft.com/541211f5-d382-4810-894f-71f00b34fa77).  
-  
-### <a name="halt-and-update-functions"></a>Durdurmak ve güncelleştirme işlevleri  
- **Ardından Eylemler:** ve **başka eylemler:** ifadeleri Destek **durdurmak** ve **güncelleştirme** işlevleri. Kullanılacak **durdurmak** işlev, yazın **durdurmak** içine bir **eylemi:** veya **başka eylem:** metin kutusu. **Durdurmak** eylem hemen durdurmak kural kümesi yürütmenin neden olur ve denetim için arama kodunu döndürür. Kullandığınız **güncelleştirme** İleri zincirleme ile işlevi.  
-  
- Bir **güncelleştirme** deyimi ifade edilemez iki farklı bir düzenleyicide; her iki biçimi aşağıdaki örnekte gösterilmiştir:  
-  
-```  
-Update(this.Address.State)  
-Update("this/Address/State")  
-```  
-  
- Kullanma hakkında daha fazla bilgi için **güncelleştirme** ileriye doğru zincirleme bkz [PolicyActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65004).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)   
- [Select kuralı Ayarla iletişim kutusu (eski)](../workflow-designer/select-rule-set-dialog-box-legacy.md)   
- [PolicyActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65004)   
- [İş akışlarında koşullar kullanma](http://go.microsoft.com/fwlink?LinkID=65009)
+> @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek için kullanılan eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kural Düzenleyicisi Çoklu hedefleme 'yi desteklemez.
+
+ Aşağıdaki tabloda **kural kümesi Düzenleyicisi** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
+
+|Arabirim Öğesi|Açıklama|
+|----------------|-----------------|
+|**Kural Ekle**|Kural kümesine yeni bir kural tanımı ekler.|
+|**Delete**|Seçili kuralı kural kümesinden siler.|
+|**İlerek**|Kural kümesiyle hangi türde bir iletme zincirin kullanılacağını belirtir. Kullanılabilir seçenekler şunlardır:<br /><br /> Tüm ileri zincirleme mekanizmaların kullanılacağını belirten**tam zincirleme**-   : örtük, yöntem Attributing ve bir **Update** işlevi kullanılarak açık.<br />herhangi bir iletme zincirin kullanılacağını belirten -   **sıralı**.<br />Yalnızca **güncelleştirme** eylemlerinde ileri zincirleme yapmayı belirten**yalnızca açık güncelleştirme**-   .<br /><br /> İleri zincirleme hakkında daha fazla bilgi için bkz. [PolicyActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65004).|
+|**Ad**|Kural kümesi listesi sütun başlığı. Kuralların listesini ada göre sıralamak için tıklayın.|
+|**Priority**|Kural kümesi listesi sütun başlığı. Kuralların listesini önceliğe göre sıralamak için tıklayın.|
+|**Yeniden değerlendirme**|Kural kümesi listesi sütun başlığı. Kural listesini yeniden değerleme türüne göre sıralamak için tıklayın.|
+|**Kural önizlemesi**|Kural kümesi listesi sütun başlığı. Kural listesini bir kuralın koşulunun ve eylemlerinin önizlemesine göre sıralamak için tıklayın.|
+|**Ada**|Kural adını girin.|
+|**Priority**|Kural için bir öncelik girin. Varsayılan öncelik 0 ' dır.|
+|**Yeniden değerlendirme**|Kuralla ne tür bir kuralın kullanılması gerektiğini belirtir. Kullanılabilir seçenekler şunlardır:<br /><br /> **her zaman**-   , kuralın gerektiği şekilde yeniden değerlendirilmesine neden olur.<br />kuralın**hiçbir şekilde yeniden**değerlendirilmesine neden olan -   . Bu durumda bir kural yalnızca bir kez yürütülür.|
+|**Bkz**|Kuralı etkin hale getirmek için işaretleyin.|
+|**Koşul**|Kural koşulu için bir ifade girin. İfade sözdizimi hakkında daha fazla bilgi için, bu sayfanın "koşul ve eylem Ifadelerini girme" bölümüne bakın.|
+|**Sonra eylemler:**|Eylemler için ifade girin. İfade sözdizimi hakkında daha fazla bilgi için, bu sayfanın "koşul ve eylem Ifadelerini girme" bölümüne bakın.|
+|**Else eylemleri:**|Else eylemleri için ifade girin. İfade sözdizimi hakkında daha fazla bilgi için, bu sayfanın "koşul ve eylem Ifadelerini girme" bölümüne bakın.|
+|**Tamam**|Kural kümesini bir. Rules dosyasına kaydetmek için tıklayın.|
+
+ Kural kümeleri hakkında daha fazla bilgi için bkz. [PolicyActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65004).
+
+## <a name="entering-condition-and-action-expressions"></a>Koşul ve eylem Ifadelerini girme
+ Koşul için ifadeler ve sonra **kural kümesi Düzenleyicisi** iletişim kutusunda ilgili metin kutularına metin olarak diğer eylemler girersiniz. **Bunu yazabilirsiniz.** bir IntelliSense-Type menü kullanılarak iş akışında kullanılan alanlara, özelliklere ve yöntemlere başvurmak için düzenleyiciye. Ya da doğrudan bir iş akışı üye adı yazabilirsiniz. Sınıf adını ve ardından yöntem adını yazarak, başvurulan türlerde statik yöntemleri çağırabilirsiniz.
+
+ Koşula mantıksal işleçler ekleyebilirsiniz, örneğin ve, veya. Ayrıca, koşullar da ekleyebilirsiniz. Bir koşul, ikili bir işleçtir ve iki işleçtir. Desteklenen ikili işleçler şunlardır = =, >, \<, > = ve < =. Desteklenen işlenenler sabit değer, aritmetik işlev ve kapsamlı ortak üyeleridir.
+
+ Karşılaştırma için türü belirtebilir ve **null** ya da boş bir dize ile karşılaştırabilirsiniz. Karmaşık bir tür içeren bir değişkende yapılan çağrıları, örneğin, `this.Address.State == "WA"` iç içe geçirebilirsiniz.
+
+ İfadeler aşağıdaki işleçleri destekler:
+
+- İlişkisel işleçler: = =, =,! =
+
+- Karşılaştırma işleçleri: <, \< =, >, > =
+
+- Aritmetik işleçler: +,-, *,/, MOD
+
+- Mantıksal işleçler: ve, & &, veya, &#124; &#124;, Not,!
+
+- Bit düzeyinde işleçler: &,&#124;
+
+  İfade işleci önceliği, C# işleç öncelik kurallarını izler.
+
+  Koşullar hakkında daha fazla bilgi için bkz. [Iş akışlarında koşulları kullanma](https://msdn.microsoft.com/541211f5-d382-4810-894f-71f00b34fa77).
+
+### <a name="halt-and-update-functions"></a>Durdur ve Işlevleri Güncelleştir
+ **Sonra eylemler:** ve **Else eylemleri:** ifadeler, **durdurmak** ve işlevleri **güncelleştirmek** için destek. **Durdur** işlevini kullanmak için, bir **sonra eyleme** **Durdur** yazın: veya **Else eylemi:** metin kutusu. Durdurma **eylemi,** kural kümesi yürütmenin hemen durdurulmasına neden olur ve denetim, çağırma koduna döner. **Update** işlevini iletme zinciriyle birlikte kullanırsınız.
+
+ Bir **Update** ifadesi, düzenleyicide iki formdan birindeki ifade edilebilir. Her iki form da aşağıdaki örnekte gösterilmiştir:
+
+```
+Update(this.Address.State)
+Update("this/Address/State")
+```
+
+ İleri zincirleme ile **güncelleştirme** kullanma hakkında daha fazla bilgi için, bkz. [PolicyActivity etkinliğini kullanma](http://go.microsoft.com/fwlink?LinkID=65004).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) [iş akışlarında koşullar kullanılarak](http://go.microsoft.com/fwlink?LinkID=65009) [PolicyActivity etkinliğini kullanarak](http://go.microsoft.com/fwlink?LinkID=65004) [kural kümesi seçme iletişim kutusu (eski)](../workflow-designer/select-rule-set-dialog-box-legacy.md)

@@ -1,56 +1,56 @@
 ---
-title: 'Nasıl yapılır: Arabirimi uygulama (Sınıf Tasarımcısı)'
+title: 'Nasıl Yapılır: Arabirimi Uygulama (Sınıf Tasarımcısı)'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - interfaces [Visual Studio], implementing
 - interfaces [Visual Studio]
 ms.assetid: 81d2cf46-7f60-448c-83e3-1d16bb88ca36
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e76aeea4c6779e97d882705e8680cd7a3b00d129
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bf03046abcf79933044cfb01bf079aee64d09077
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975183"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647711"
 ---
-# <a name="how-to-implement-an-interface-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı'nda arabirimi uygulama
+# <a name="how-to-implement-an-interface-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı bir arabirimi uygulama
 
-İçinde **Sınıf Tasarımcısı**, arabirim yöntemleri için kod sağlayan bir sınıf bağlanarak, sınıf diyagramı üzerinde bir arabirim uygulayabilir. **Sınıf Tasarımcısı** bir arabirim uygulaması oluşturur ve arabirim ve sınıfları arasındaki ilişki devralma ilişkisi görüntüler. Devralım çizgisi sınıf ve arabirim arasında çizim veya sınıf görünümünden arabirimi sürükleyerek bir arabirim uygulayabilir.
+**Sınıf Tasarımcısı**' de, arabirim yöntemleri için kod sağlayan bir sınıfa bağlayarak sınıf diyagramında bir arabirim uygulayabilirsiniz. **Sınıf Tasarımcısı** bir arabirim uygulaması oluşturur ve arabirim ile sınıf arasındaki ilişkiyi devralma ilişkisi olarak görüntüler. Arabirim ve sınıf arasında bir devralma çizgisi çizerek veya arabirimi Sınıf Görünümü sürükleyerek bir arabirim uygulayabilirsiniz.
 
 > [!TIP]
-> Diğer türleri oluşturma aynı şekilde arabirimleri oluşturabilirsiniz. Arabirimi var, ancak sınıf diyagramı üzerinde görünmesini değil, sonra ilk görüntüleyin. Daha fazla bilgi için [nasıl yapılır: Sınıf Tasarımcısı kullanarak tür oluşturma](how-to-create-types.md) ve [nasıl yapılır: Varolan türleri görüntüleme](how-to-view-existing-types.md).
+> Arabirimleri, diğer türleri oluşturduğunuz şekilde oluşturabilirsiniz. Arabirim varsa, ancak sınıf diyagramında görünmezse, önce onu görüntüleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Sınıf Tasarımcısı kullanarak tür oluşturma](how-to-create-types.md) ve [nasıl yapılır: varolan türleri görüntüleme](how-to-view-existing-types.md).
 
-## <a name="to-implement-an-interface-by-drawing-an-inheritance-line"></a>Devralım çizgisi çizerek bir arabirim uygulamak için
+## <a name="to-implement-an-interface-by-drawing-an-inheritance-line"></a>Bir devralma çizgisi çizerek bir arabirim uygulamak için
 
-1. Sınıf diyagramında, arabirimi ve arabirimini uygulayan sınıf görüntüler.
+1. Sınıf diyagramında arabirimini ve arabirimini uygulayacak sınıfı görüntüleyin.
 
-2. Devralım çizgisi, sınıf ve arabirim çizin.
+2. Sınıfından ve arabiriminden devralma çizgisi çizin.
 
-     Lolipop sınıfa iliştirilen görünür ve devralma ilişkisi arabirim adını içeren bir etiket tanımlar. Visual Studio tüm arabirim üyeleri için saplamalar oluşturur.
+     Sınıfa iliştirilmiş bir Lollipop görünür ve arabirim adı olan bir etiket devralma ilişkisini tanımlar. Visual Studio tüm arabirim üyeleri için saplamalar oluşturur.
 
-Daha fazla bilgi için [nasıl yapılır: Türler arasında devralma oluşturma](how-to-create-inheritance-between-types.md).
+Daha fazla bilgi için bkz. [nasıl yapılır: türler arasında devralma oluşturma](how-to-create-inheritance-between-types.md).
 
 ## <a name="to-implement-an-interface-from-the-class-view-window"></a>Sınıf Görünümü penceresinden bir arabirim uygulamak için
 
-1. Sınıf diyagramı üzerinde arabirim uygulamak istediğiniz sınıf görüntüler.
+1. Sınıf diyagramında, arabirimi uygulamak istediğiniz sınıfı görüntüleyin.
 
-2. Açık **sınıf görünümü** arabirimi bulun.
+2. **Sınıf görünümü** açın ve arabirimini bulun.
 
     > [!TIP]
-    > Varsa **sınıf görünümü** açık, açık olmayan **sınıf görünümü** gelen **görünümü** menü veya basın **Ctrl**+**Shift** + **C**.
+    > **Sınıf görünümü** açık değilse, **Görünüm** menüsünden **sınıf görünümü** açın veya **CTRL** +**SHIFT** +**C**tuşlarına basın.
 
-3. Arabirim düğümü diyagramında sınıf şekline sürükleyin.
+3. Arabirim düğümünü diyagramdaki sınıf şekline sürükleyin.
 
-     Lolipop sınıfa iliştirilen görünür ve devralma ilişkisi arabirim adını içeren bir etiket tanımlar. Visual Studio tüm arabirim üyeleri için saplamalar oluşturur; Bu noktada, arabirim uygulanır.
+     Sınıfa iliştirilmiş bir Lollipop görünür ve arabirim adı olan bir etiket devralma ilişkisini tanımlar. Visual Studio tüm arabirim üyeleri için saplamalar oluşturur; Bu noktada, arabirim uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Sınıf Tasarımcısı Kullanarak Tür Oluşturma](how-to-create-types.md)
-- [Nasıl yapılır: Varolan türleri görüntüleme](how-to-view-existing-types.md)
-- [Nasıl yapılır: Türler arasında devralma oluşturma](how-to-create-inheritance-between-types.md)
+- [Nasıl Yapılır: Sınıf Tasarımcısı Kullanarak Tür Oluşturma](how-to-create-types.md)
+- [Nasıl yapılır: varolan türleri görüntüleme](how-to-view-existing-types.md)
+- [Nasıl yapılır: türler arasında devralma oluşturma](how-to-create-inheritance-between-types.md)
 - [Sınıfları ve Türleri Yeniden Düzenleme](refactoring-classes-and-types.md)

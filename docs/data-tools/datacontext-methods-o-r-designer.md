@@ -1,60 +1,60 @@
 ---
-title: DataContext yöntemi (O R Tasarımcısı)
+title: DataContext yöntemleri (O-R Designer)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 83ca0059e576683571435764914bf0087eded2fa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0e81f2337931f565e0068a852bf9b8284350690c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62567132"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648535"
 ---
-# <a name="datacontext-methods-or-designer"></a>DataContext yöntemi (O/R Tasarımcısı)
+# <a name="datacontext-methods-or-designer"></a>DataContext Metotları (O/R Tasarımcısı)
 
-<xref:System.Data.Linq.DataContext> yöntemler (bağlamında [LINQ to SQL araçlarını Visual Studio'da](../data-tools/linq-to-sql-tools-in-visual-studio2.md)), yöntemler <xref:System.Data.Linq.DataContext> saklı yordamları ve işlevleri bir veritabanında çalıştırılan bir sınıf.
+<xref:System.Data.Linq.DataContext> Yöntemleri ( [Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)bağlamında), bir veritabanındaki saklı yordamları ve işlevleri çalıştıran <xref:System.Data.Linq.DataContext> sınıfının yöntemlerdir.
 
-<xref:System.Data.Linq.DataContext> Sınıfı bir [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] bir conduit arasında bir SQL Server veritabanı olarak davranan bir sınıf ve [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] veritabanına eşlenen varlık sınıfları. <xref:System.Data.Linq.DataContext> Sınıfı bağlantı dizesi bilgilerini ve bir veritabanına bağlanma ve veritabanındaki verileri işlemek için yöntemler içerir. Varsayılan olarak, <xref:System.Data.Linq.DataContext> sınıfı içerir, gibi çağırabileceğiniz birkaç yöntem <xref:System.Data.Linq.DataContext.SubmitChanges%2A> gönderen yöntemi güncelleştirilmiş verileri [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] veritabanına sınıfları. Ayrıca, ek oluşturabilirsiniz <xref:System.Data.Linq.DataContext> saklı yordamları ve işlevleri için eşleme yöntemleri. Diğer bir deyişle, bu özel metotları çağırma saklı yordamı veya işlevi veritabanında için çalıştığı <xref:System.Data.Linq.DataContext> yöntemi eşlenir. İçin yeni yöntemler ekleyebilirsiniz <xref:System.Data.Linq.DataContext> herhangi bir sınıf genişletmek için yöntemleri eklemek gibi sınıf. Hakkında tartışmalar, ancak <xref:System.Data.Linq.DataContext> bağlamında yöntemleri **O/R Tasarımcısı**, bu <xref:System.Data.Linq.DataContext> saklı yordamlar ve ele alınmıştır işlevlere eşleme yöntemleri.
+@No__t_0 sınıfı, bir SQL Server veritabanı ile bu veritabanıyla eşlenen [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] varlık sınıfları arasında bir iletken görevi gören bir [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] sınıfıdır. @No__t_0 sınıfı, bağlantı dizesi bilgilerini ve veritabanına bağlanma ve veritabanındaki verileri düzenleme yöntemlerini içerir. Varsayılan olarak <xref:System.Data.Linq.DataContext> sınıfı, [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] sınıflardan veritabanına güncelleştirilmiş verileri gönderen <xref:System.Data.Linq.DataContext.SubmitChanges%2A> yöntemi gibi çağırabilmeniz için çeşitli yöntemler içerir. Ayrıca, saklı yordamlar ve işlevlerle eşlenen ek <xref:System.Data.Linq.DataContext> yöntemler de oluşturabilirsiniz. Diğer bir deyişle, bu özel yöntemleri çağırmak, <xref:System.Data.Linq.DataContext> yönteminin eşlendiği veritabanında saklı yordamı veya işlevi çalıştırır. Herhangi bir sınıfı genişletmek için yöntemler ekleyeceğiniz gibi <xref:System.Data.Linq.DataContext> sınıfına yeni yöntemler ekleyebilirsiniz. Bununla birlikte, **O/R tasarımcısının**bağlamındaki <xref:System.Data.Linq.DataContext> yöntemleriyle ilgili tartışmalarda bu, ele alınan saklı yordamlar ve işlevlerle eşlenen <xref:System.Data.Linq.DataContext> yöntemlerdir.
 
 ## <a name="methods-pane"></a>Yöntemler bölmesi
 
-<xref:System.Data.Linq.DataContext> saklı yordamları ve işlevleri için eşleme yöntemlerini görüntülenir **yöntemleri** bölmesinde **O/R Tasarımcısı**. **Yöntemleri** bölmesidir tarafında bölmesinde **varlıkları** bölmesinde (ana tasarım yüzeyi). **Yöntemleri** bölmesinde tümünü listeler <xref:System.Data.Linq.DataContext> kullanılarak oluşturulan yöntemler **O/R Tasarımcısı**. Varsayılan olarak, **yöntemleri** bölmesidir boş; Sürükle saklı yordamları veya işlevlerden **Sunucu Gezgini** veya **veritabanı Gezgini** üzerine **O/R Tasarımcısı**  oluşturmak için <xref:System.Data.Linq.DataContext> yöntemleri ve doldurma **yöntemleri** bölmesi. Daha fazla bilgi için [nasıl yapılır: Saklı yordamları ve işlevleri (O/R Tasarımcısı) için eşlenen DataContext-metotları oluşturma](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md).
+saklı yordamlar ve işlevlerle eşlenen <xref:System.Data.Linq.DataContext> Yöntemler, **O/R tasarımcısının** **Yöntemler** bölmesinde görüntülenir. **Yöntemler** bölmesi, **varlıklar** bölmesinin (ana tasarım yüzeyi) yanındaki bölmesidir. **Yöntemler** bölmesi, **O/R tasarımcısını**kullanarak oluşturduğunuz tüm <xref:System.Data.Linq.DataContext> yöntemlerini listeler. Varsayılan olarak, **Yöntemler** bölmesi boştur; <xref:System.Data.Linq.DataContext> Yöntemler oluşturmak ve **Yöntemler** bölmesini doldurmak için **Sunucu Gezgini** veya **veritabanı Gezgini** içindeki saklı yordamları veya işlevleri **O/R tasarımcısına** sürükleyin. Daha fazla bilgi için bkz. [nasıl yapılır: saklı yordamlar ve işlevlerle eşlenen DataContext yöntemleri oluşturma (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md).
 
 > [!NOTE]
-> Açın ve sağ tıklayarak yöntemler bölmesini kapatmak **O/R Tasarımcısı** tıklayıp **yöntemler Bölmesini Gizle** veya **yöntemler bölmesini göster**, veya klavyekısayolunukullanın **CTRL**+**1**.
+> **O/R tasarımcısına** sağ tıklayıp Yöntemler bölmesini **Gizle** veya **Yöntemler bölmesini göster**' e tıklayarak ve **CTRL** +**1**klavye kısayolunu kullanarak Yöntemler bölmesini açın ve kapatın.
 
 ## <a name="two-types-of-datacontext-methods"></a>İki tür DataContext yöntemi
 
-DataContext yöntemi saklı yordamları ve işlevleri veritabanında eşleyen bu yöntemlerdir. Oluşturabilir ve DataContext yöntemi eklemek **yöntemleri** bölmesinde **O/R Tasarımcısı**. İki ayrı türü vardır <xref:System.Data.Linq.DataContext> yöntemleri; Bu, bir veya daha fazla sonuç kümesi döndüren ve desteklemeyenler:
+DataContext yöntemleri, veritabanındaki saklı yordamlar ve işlevlerle eşlenen yöntemlerdir. **O/R tasarımcısının** **Yöntemler** bölmesinde DataContext yöntemleri oluşturabilir ve ekleyebilirsiniz. @No__t_0 yöntemlerinin iki farklı türü vardır; bir veya daha fazla sonuç kümesi döndürenler ve olmayanlar:
 
-- <xref:System.Data.Linq.DataContext> bir veya daha fazla sonuç kümesi döndüren yöntemler:
+- bir veya daha fazla sonuç kümesi döndüren <xref:System.Data.Linq.DataContext> Yöntemler:
 
-   Bu tür oluşturma <xref:System.Data.Linq.DataContext> saklı yordamları ve işlevleri veritabanında çalıştırın ve sonuçları döndürmek uygulamanızı yalnızca gerektiğinde yöntemi. Daha fazla bilgi için [nasıl yapılır: Saklı yordamları ve işlevleri (O/R Tasarımcısı) için eşlenen DataContext-metotları oluşturma](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md), System.Data.Linq.ISingleResult\<T >, ve <xref:System.Data.Linq.IMultipleResults>.
+   Uygulamanız yalnızca veritabanında saklı yordamları ve işlevleri çalıştırmak ve sonuçları döndürmek için ihtiyaç duyduğunda, bu tür bir <xref:System.Data.Linq.DataContext> yöntemi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: saklı yordamlar ve işlevler (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md), System. Data. LINQ. ISingleResult \<T > ve <xref:System.Data.Linq.IMultipleResults> Ile eşlenmiş DataContext yöntemleri oluşturma.
 
-- <xref:System.Data.Linq.DataContext> Sonuç kümesi döndürmüyor yöntemleri: gibi ekler, güncelleştirmeler ve özel varlık sınıfı için siler.
+- Sonuç kümesi döndürmeyen <xref:System.Data.Linq.DataContext> Yöntemler: belirli bir varlık sınıfı için ekleme, güncelleştirme ve silme gibi.
 
-   Bu tür oluşturma <xref:System.Data.Linq.DataContext> uygulamanızın varsayılan kullanmak yerine saklı yordamları çalıştırmak sahip olduğunda yöntemi [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] kaydetme davranışını değiştiren bir varlık sınıfı ve veritabanı arasında veri. Daha fazla bilgi için [nasıl yapılır: Güncelleştirme, ekleme ve silme (O/R Tasarımcısı) gerçekleştirmek için saklı yordamlar atama](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
+   Uygulamanız, değiştirilen verileri bir varlık sınıfı ve veritabanı arasında kaydetmek için varsayılan [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] davranışını kullanmak yerine, saklı yordamları çalıştırmak zorunda olduğunda bu tür bir <xref:System.Data.Linq.DataContext> yöntemi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: güncelleştirme, ekleme ve silme işlemleri için saklı yordamlar atama (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
 
 ## <a name="return-types-of-datacontext-methods"></a>DataContext yöntemlerinin dönüş türleri
 
-Saklı yordamları ve işlevleri sürüklediğinizde **Sunucu Gezgini** veya **veritabanı Gezgini** üzerine **O/R Tasarımcısı**, dönüş türü oluşturulan <xref:System.Data.Linq.DataContext> yöntemi, öğenin nereden bırakın bağlı olarak farklılık gösterir. Öğeleri doğrudan mevcut bir varlık sınıfı üzerine bırakarak oluşturur bir <xref:System.Data.Linq.DataContext> yöntemi varlık sınıfı dönüş türüne sahip; bırakma öğeleri boş bir alanı üzerine **O/R Tasarımcısı** oluşturur (ya da bölmesinde) bir <xref:System.Data.Linq.DataContext> yöntemi otomatik olarak oluşturulan bir tür döndürür. Otomatik olarak oluşturulan saklı yordam veya işlev adı ve saklı yordamı veya işlevi tarafından döndürülen alanlarla eşlemek özellikleri eşleşen ada sahiptir.
+**Sunucu Gezgini** veya **veritabanı Gezgini** içindeki saklı yordamları ve Işlevleri **O/R tasarımcısına**sürüklediğinizde, oluşturulan <xref:System.Data.Linq.DataContext> yönteminin dönüş türü, öğeyi nereye bıraktığınızda olduğuna göre farklılık gösterir. Öğeleri doğrudan mevcut bir varlık sınıfına bırakmak, varlık sınıfının dönüş türüyle <xref:System.Data.Linq.DataContext> yöntemi oluşturur; öğeleri **O/R tasarımcısının** boş bir alanına bırakmak (her bölmede) otomatik olarak oluşturulan bir tür döndüren <xref:System.Data.Linq.DataContext> yöntemi oluşturur. Otomatik olarak oluşturulan türün saklı yordam veya işlev adı ve özellikleriyle eşleşen adı vardır ve bu, saklı yordam veya işlev tarafından döndürülen alanlarla eşlenir.
 
 > [!NOTE]
-> Dönüş türünü değiştirebilirsiniz bir <xref:System.Data.Linq.DataContext> yöntemleri bölmesine ekledikten sonra yöntemi. İnceleme veya dönüş türünü değiştirmek için bir <xref:System.Data.Linq.DataContext> yöntemi seçin ve İnceleme **dönüş türü** özelliğinde **özellikleri** penceresi. Daha fazla bilgi için [nasıl yapılır: (O/R Tasarımcısı) bir DataContext yöntemin dönüş türünü değiştirmek](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md).
+> @No__t_0 yönteminin dönüş türünü Yöntemler bölmesine ekledikten sonra değiştirebilirsiniz. Bir <xref:System.Data.Linq.DataContext> yönteminin dönüş türünü incelemek veya değiştirmek için, bunu seçin ve **Özellikler** penceresinde **dönüş türü** özelliğini inceleyin. Daha fazla bilgi için bkz. [nasıl yapılır: bir DataContext metodunun dönüş türünü değiştirme (O/R Designer)](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md).
 
-Nesneleri veritabanından O/R Tasarımcısı yüzeyine sürükleyin, veritabanındaki nesneleri adına göre otomatik olarak adlandırılır. Aynı nesne birden çok kez sürüklerseniz, bir sayı adlarını ayırır yeni adın sonuna eklenir. Veritabanı nesne adları, boşluk veya Visual Basic veya C# içinde desteklenmeyen karakterler içerdiğinde, boşluk veya geçersiz bir karakter bir alt çizgi ile değiştirilir.
+Veritabanından O/R Designer yüzeyine sürüklediğiniz nesneler, veritabanındaki nesnelerin adına göre otomatik olarak adlandırılır. Aynı nesneyi birden çok kez sürüklerseniz, adları farklılaştırır yeni adın sonuna bir sayı eklenir. Veritabanı nesne adları boşluk veya Visual Basic veya C#içinde desteklenmeyen karakterler içerdiğinde, boşluk veya geçersiz karakter alt çizgiyle değiştirilmiştir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [Saklı yordamlar](/dotnet/framework/data/adonet/sql/linq/stored-procedures)
-- [Nasıl yapılır: Saklı yordamlara eşlenen DataContext metotları oluşturma (O/R Tasarımcısı)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
+- [Nasıl yapılır: Saklı yordamlarla eşlenen DataContext metotları oluşturma (O/R Tasarımcısı)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
 - [Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
 - [İzlenecek yol: Varlık sınıflarının ekleme, güncelleştirme ve silme davranışını özelleştirme](../data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md)
-- [İzlenecek yol: (O R Designer) SQL sınıflarına LINQ oluşturma](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
+- [İzlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)

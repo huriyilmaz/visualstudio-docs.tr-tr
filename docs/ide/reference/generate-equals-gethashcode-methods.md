@@ -1,68 +1,68 @@
 ---
-title: Oluşturma C# Equals ve GetHashCode metot geçersiz kılmaları
+title: Equals C# ve GetHashCode metot geçersiz kılmaları oluştur
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: bbe04ac7a28666f32aa1da3bebe5ed50f96fb900
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e70593bc04b576237a7f9f0f51ae6c3d37e40a88
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62790586"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660036"
 ---
-# <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Equals ve oluşturma Visual Studio'da GetHashCode metot geçersiz kılmaları
+# <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Visual Studio 'da Equals ve GetHashCode metot geçersiz kılmaları oluşturma
 
-Bu kod oluşturma için geçerlidir:
+Bu kod üretimi için geçerlidir:
 
 - C#
 
-**Ne:** Oluşturmanıza olanak tanır **eşittir** ve **GetHashCode** yöntemleri.
+**Ne:** **Eşittir** ve **GetHashCode** yöntemleri oluşturmanıza olanak sağlar.
 
-**ne zaman:** Bir veya daha fazla alanlara göre yerine bellekteki nesne konuma göre karşılaştırılması gereken bir türüne sahip olduğunda bu geçersiz kılmaları oluşturur.
+**Ne zaman:** Bellekte nesne konumu yerine bir veya daha fazla alan tarafından Karşılaştırılacak bir tür varsa bu geçersiz kılmaları oluşturun.
 
-**Neden:**
+**Kaydol**
 
-- Bir değer türü uyguluyorsanız, geçersiz kılma düşünmelisiniz **eşittir** ValueType Equals yöntemini varsayılan uygulaması üzerinde yüksek performans elde etmek için yöntemi.
+- Bir değer türü uygulamadıysanız, ValueType üzerindeki Equals yönteminin varsayılan uygulamasında daha fazla performans elde etmek için **Equals** metodunu geçersiz kılmayı göz önünde bulundurmanız gerekir.
 
-- Bir başvuru türü uyguluyorsanız, geçersiz kılma düşünmelisiniz **eşittir** türünüz noktası, dize, BigNumber ve benzeri gibi bir temel tür gibi görünüyorsa yöntemi.
+- Bir başvuru türü uygulamadıysanız, türü nokta, dize, BigNumber, vb. gibi bir temel tür gibi görünüyorsa **eşittir** yöntemini geçersiz kılmayı göz önünde bulundurmanız gerekir.
 
-- Geçersiz kılma **GetHashCode** bir karma tablosunda düzgün çalışması için bir tür izin vermek için yöntemi. Daha fazla rehberliğe okumaya [eşitlik işleçleri](/dotnet/standard/design-guidelines/equality-operators).
+- Bir türün Karma tabloda düzgün çalışmasına izin vermek için **GetHashCode** metodunu geçersiz kılın. [Eşitlik işleçleri](/dotnet/standard/design-guidelines/equality-operators)hakkında daha fazla rehberlik okuyun.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi, tür bildirimi satırında yere yerleştirin.
+1. İmlecinizi tür bildiricinizin satırına bir yere yerleştirin.
 
-   ![Vurgulanmış kodu](media/overrides-highlight-cs.png)
+   ![Vurgulanan kod](media/overrides-highlight-cs.png)
 
    > [!TIP]
-   > Yapmak değil çift tür adı seçin veya menü seçeneği kullanılamaz. Yeni imleç yere satıra yerleştirin.
+   > Tür adını seç ' e çift tıklamayın veya menü seçeneği kullanılamaz. İmleci satıra bir yere yerleştirmeniz yeterlidir.
 
-1. Ardından, aşağıdakilerden birini yapın:
+1. Sonra, aşağıdakilerden birini yapın:
 
-   - Tuşuna **Ctrl**+ **.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+   - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-   - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
+   - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
 
-   - &nbsp; ![Tornavida](../media/screwdriver-icon.png) Sol kenar boşluğunda görünür simge.
+   - &nbsp; ![Screwdriver](../media/screwdriver-icon.png) Sol kenar boşluğunda görünen simge.
 
-   ![Geçersiz kılmalar Önizleme oluşturma](media/overrides-preview-cs.png)
+   ![Geçersiz kılmalar önizlemesi oluştur](media/overrides-preview-cs.png)
 
-1. Seçin **Equals(object) Oluştur** veya **oluşturmak Equals ve GetHashCode** aşağı açılan menüden.
+1. **Eşittir (nesne) oluştur** veya aşağı açılan menüden **Equals ve GetHashCode oluştur '** u seçin.
 
-1. İçinde **üyeleri çekme** istediğiniz üye oluşturmak için yöntemleri iletişim kutusunda:
+1. **Üyeleri Seç** iletişim kutusunda, yöntemlerini oluşturmak istediğiniz üyeleri seçin:
 
-    ![Geçersiz kılmalar iletişim oluştur](media/overrides-dialog-cs.png)
+    ![Geçersiz kılmalar oluştur iletişim kutusu](media/overrides-dialog-cs.png)
 
     > [!TIP]
-    > İletişim kutusunun alt kısmındaki onay kutusunu kullanarak bu iletişim kutusundan işleçleri oluşturulacak seçebilirsiniz.
+    > Ayrıca, iletişim kutusunun alt kısmındaki onay kutusunu kullanarak bu iletişim kutusundan işleçler oluşturmayı tercih edebilirsiniz.
 
-   `Equals` Ve `GetHashCode` yöntemleri varsayılan uygulamaları ile oluşturulur.
+   @No__t_0 ve `GetHashCode` yöntemleri varsayılan uygulamalarla oluşturulur.
 
-   ![Metot oluştur](media/overrides-result-cs.png)
+   ![Yöntem sonucu üret](media/overrides-result-cs.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

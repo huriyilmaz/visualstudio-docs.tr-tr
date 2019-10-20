@@ -1,5 +1,5 @@
 ---
-title: 'CA2202: Nesneleri birden çok kez atmayın | Microsoft Docs'
+title: 'CA2202: nesneleri birden çok kez atma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA2202
 ms.assetid: fa85349a-cf1e-42c8-a86b-eacae1f8bd96
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3dfe606e3083c937db3ba3d1e6cd49d34bace853
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: e0be715d8aea84fac53ea2a796e71850b961730c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697976"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667399"
 ---
 # <a name="ca2202-do-not-dispose-objects-multiple-times"></a>CA2202: Nesneleri birden çok kez atmayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,28 +29,28 @@ ms.locfileid: "65697976"
 |-|-|
 |TypeName|DoNotDisposeObjectsMultipleTimes|
 |CheckId|CA2202|
-|Kategori|Microsoft.Usage|
-|Yeni Değişiklik|Bozucu olmayan|
+|Kategori|Microsoft. Usage|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Birden çok çağrı neden olabilecek kod yolları bir yöntemi uygulaması içeren <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> veya aynı nesne üzerinde bazı türleri üzerinde Close() yöntemi gibi bir Dispose eşdeğer.
+ Yöntem uygulama, aynı nesne üzerinde <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> birden çok çağrıya veya bazı türlerde Close () yöntemi gibi bir Dispose eşdeğerine neden olabilecek kod yolları içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Düzgün uygulanan bir <xref:System.IDisposable.Dispose%2A> yöntemi çağrıldığında birden çok kez bir özel durum olmadan. Ancak, bu kesin değildir ve oluşturmaktan kaçınmak için bir <xref:System.ObjectDisposedException?displayProperty=fullName> değil, çağırmalıdır <xref:System.IDisposable.Dispose%2A> bir nesne üzerinde birden fazla kez.
+ Doğru uygulanmış bir <xref:System.IDisposable.Dispose%2A> yöntemi, özel durum oluşturmadan birden çok kez çağrılabilir. Ancak, bu garanti edilmez ve bir <xref:System.ObjectDisposedException?displayProperty=fullName> üretmemek için bir nesne üzerinde birden çok kez <xref:System.IDisposable.Dispose%2A> çağırmamalıdır.
 
-## <a name="related-rules"></a>İlgili kuralları
- [CA2000: Kapsamı kaybetmeden önce verileri nesneleri dispose](../code-quality/ca2000-dispose-objects-before-losing-scope.md)
+## <a name="related-rules"></a>İlgili kurallar
+ [CA2000: Kapsamı kaybetmeden önce verileri atın](../code-quality/ca2000-dispose-objects-before-losing-scope.md)
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için kod yolunun, bu nedenle bu bakılmaksızın uygulamasını değiştirin <xref:System.IDisposable.Dispose%2A> nesne için yalnızca bir kez çağrılır.
+ Bu kural ihlalini onarmak için, uygulamayı kod yolundan bağımsız olarak değiştirin, <xref:System.IDisposable.Dispose%2A> nesne için yalnızca bir kez çağırılır.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan uyarıyı bastırmayın. Bile <xref:System.IDisposable.Dispose%2A> nesne birden çok kez güvenli bir şekilde çağrılabilir olduğunun bilindiği için uygulama gelecekte değişebilir.
+ Bu kuraldan uyarıyı bastırmayın. Nesne için <xref:System.IDisposable.Dispose%2A> çok kez güvenle çağrılabilir olarak bilinse bile, uygulama gelecekte değişebilir.
 
 ## <a name="example"></a>Örnek
- İç içe geçmiş `using` deyimleri (`Using` Visual Basic'te) CA2202 uyarı ihlalleri neden olabilir. İç içe geçmiş iç IDisposable kaynağın `using` deyimi içeren kaynak dış `using` deyimi `Dispose` yöntemi iç içe kaynak kapsanan kaynak serbest bırakır. Bu durum ortaya çıktığında `Dispose` yöntemi dış `using` deyimi için ikinci bir zaman kaynağı dispose dener.
+ İç içe `using` deyimleri (Visual Basic `Using`), CA2202 uyarı ihlallerine neden olabilir. İç içe geçmiş iç `using` ifadesinin IDisposable kaynağı, dış `using` ifadesinin kaynağını içeriyorsa, iç içe geçmiş kaynağın `Dispose` yöntemi içerilen kaynağı serbest bırakır. Bu durum oluştuğunda, dış `using` ifadesinin `Dispose` yöntemi, kaynağını ikinci kez atmayı dener.
 
- Aşağıdaki örnekte, bir <xref:System.IO.Stream> bir dış oluşturulan nesne using deyimi içinde Dispose yöntemini using deyimi iç sonunda yayımlanır <xref:System.IO.StreamWriter> içeren nesne `stream` nesne. Dış sonunda `using` deyimi `stream` nesne ikinci kez yayımlanır. İkinci Sürüm CA2202 ihlal eder.
+ Aşağıdaki örnekte, bir dıştaki using ifadesinde oluşturulan <xref:System.IO.Stream> nesnesi, `stream` nesnesini içeren <xref:System.IO.StreamWriter> nesnesinin Dispose yönteminde yer alan Inner using ifadesinin sonunda serbest bırakılır. Dış `using` ifadesinin sonunda, `stream` nesnesi ikinci kez serbest bırakılır. İkinci sürüm, CA2202 ihlaline neden olur.
 
 ```
 using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
@@ -63,7 +63,7 @@ using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
 ```
 
 ## <a name="example"></a>Örnek
- Bu sorunu gidermek için bir `try` / `finally` bloğu dış yerine `using` deyimi. İçinde `finally` emin olun, block `stream` kaynağı null değil.
+ Bu sorunu çözmek için, dış `using` ifadesinin yerine bir `try` / `finally` bloğunu kullanın. @No__t_0 bloğunda, `stream` kaynağının null olmadığından emin olun.
 
 ```
 Stream stream = null;
@@ -84,4 +84,4 @@ finally
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.IDisposable?displayProperty=fullName> [Dispose deseni](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)
+ <xref:System.IDisposable?displayProperty=fullName> [Dispose deseninin](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

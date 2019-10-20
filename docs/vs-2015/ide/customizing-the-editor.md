@@ -9,36 +9,29 @@ helpviewer_keywords:
 - Code Editor, customizing
 ms.assetid: 7f4eee2a-586f-49ae-a763-4d9c0ac5bc71
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 54e2e44650179cafb4fd4cc9169ac27810bbdf91
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87a27cdb6b278a01434662017e05e5dca38b8c9d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68183339"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665854"
 ---
 # <a name="customizing-the-editor"></a>Düzenleyiciyi Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Biçimlendirme, sekmeler, yazı tipleri ve renkler, IntelliSense ve diğer birçok özellik Düzenleyicisi genel veya özel dil Düzenleyici seçeneklerini değiştirerek özelleştirebilirsiniz. Bu seçenekler hakkında daha fazla bilgi için bkz. [metin düzenleyici Seçenekleri iletişim kutusu](../ide/reference/text-editor-options-dialog-box.md) veya türü `Editor` içine **hızlı başlatma**. Ayrıca, düzenleyici pencerelerinin nasıl görüntüleneceğini değiştirebilirsiniz.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- Bu konular, görünümünü ve davranışını metin ve kod düzenleyicisinin ayarlama açıklanmaktadır.  
-  
- [Nasıl yapılır: Düzenleyicide Büyük/Küçük Harf Değiştirme](../ide/how-to-change-text-case-in-the-editor.md)  
- Büyük/küçük harf kodunuzdaki değiştirme açıklanmaktadır.  
-  
- [Nasıl yapılır: Düzenleyici Pencerelerini Yönetme](../ide/how-to-manage-editor-windows.md)  
- Düzenleyici pencerelerini gösterilmektedir.  
-  
- [Nasıl yapılır: Düzenleyici Modlarını Yönetme](../ide/how-to-manage-editor-modes.md)  
- Tam ekran ve sanal alanları modları nasıl kullanılacağını açıklar.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Kod yazma](../ide/writing-code-in-the-code-and-text-editor.md)   
- [Kodda yer işaretleri ayarlama](../ide/setting-bookmarks-in-code.md)   
- [Genel, ortam, Seçenekler iletişim kutusu](../ide/reference/general-environment-options-dialog-box.md)   
- [Belgeler, ortam, Seçenekler iletişim kutusu](../ide/reference/documents-environment-options-dialog-box.md)   
- [Yazı Tipleri ve Renkler, Ortam, Seçenekler İletişim Kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)
+Biçimlendirme, sekme, yazı tipi ve renkler, IntelliSense ve düzenleyicinin diğer birçok özelliğini genel veya belirli bir dil düzenleyicisinde seçenekleri değiştirerek özelleştirebilirsiniz. Bu seçenekler hakkında daha fazla bilgi için bkz. [metin düzenleyici seçenekleri Iletişim kutusu](../ide/reference/text-editor-options-dialog-box.md) veya **hızlı Başlat**'a `Editor` türü. Ayrıca, düzenleyici pencerelerinin nasıl görüntülendiğini de değiştirebilirsiniz.
+
+## <a name="in-this-section"></a>Bu Bölümde
+ Bu konularda metin ve kod düzenleyicisinin görünüm ve davranışının nasıl ayarlanacağı açıklanmaktadır.
+
+ [Nasıl yapılır: düzenleyicide metin durumunu değiştirme](../ide/how-to-change-text-case-in-the-editor.md) Kodunuzda metin çalışmasının nasıl değiştirileceğini açıklar.
+
+ [Nasıl yapılır: düzenleyici pencerelerini yönetme](../ide/how-to-manage-editor-windows.md) Düzenleyici pencerelerinin nasıl değiştirileceğini gösterir.
+
+ [Nasıl yapılır: düzenleyici modlarını yönetme](../ide/how-to-manage-editor-modes.md) Tam ekran ve sanal boşluk modlarının nasıl kullanılacağını açıklar.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Kod [Genel, ortam, Seçenekler Iletişim kutusu](../ide/reference/general-environment-options-dialog-box.md) [belgeleri, ortam, Seçenekler iletişim kutusu](../ide/reference/documents-environment-options-dialog-box.md) [yazı tipi ve renkler, ortam, Seçenekler Iletişim kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) içinde [kod](../ide/writing-code-in-the-code-and-text-editor.md) [ayarı yer işaretlerini](../ide/setting-bookmarks-in-code.md) yazma

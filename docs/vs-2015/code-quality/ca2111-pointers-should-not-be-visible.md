@@ -1,5 +1,5 @@
 ---
-title: 'CA2111: İşaretçiler görünür olmamalıdır | Microsoft Docs'
+title: 'CA2111: Işaretçiler görünür olmamalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - PointersShouldNotBeVisible
 ms.assetid: b3a8d466-895b-43bc-a2df-5d7058fe915f
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8497433088e4c49868a76dd3281d02a5e79babe5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a0d5546c6f6a2f5dbd0c6063f4a1dfd40ce1d7bb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154372"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658731"
 ---
 # <a name="ca2111-pointers-should-not-be-visible"></a>CA2111: İşaretçiler görünür olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,25 +33,25 @@ ms.locfileid: "68154372"
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Ortak veya korumalı bir <xref:System.IntPtr?displayProperty=fullName> veya <xref:System.UIntPtr?displayProperty=fullName> alanı salt okunur değildir.
+ Ortak veya korumalı <xref:System.IntPtr?displayProperty=fullName> veya <xref:System.UIntPtr?displayProperty=fullName> alanı salt okunurdur.
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.IntPtr> ve <xref:System.UIntPtr> işaretçi türleri, yönetilmeyen bellek erişmek için kullanılır. Bir işaretçi özel, içsel veya salt okunur durumda değilse, kötü amaçlı kod işaretçinin, potansiyel olarak bellekte rastgele konumlara erişmesine izin vermek veya uygulama ya da sistem hatalarına neden değerini değiştirebilirsiniz.
+ <xref:System.IntPtr> ve <xref:System.UIntPtr>, yönetilmeyen belleğe erişmek için kullanılan işaretçi türleridir. Bir işaretçi özel, iç veya salt okunurdur değilse, kötü amaçlı kod işaretçinin değerini değiştirebilir, bu da, bellekteki rastgele konumlara erişime izin verebilir veya uygulama ya da sistem arızalarına neden olabilir.
 
- İşaretçi alan içeren tür güvenli erişim yapmak istiyorsanız, bkz. [CA2112: Güvenli türler alanları kullanıma](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
+ İşaretçi alanını içeren türe erişimi güvenli hale getirmek istiyorsanız, bkz. [CA2112: güvenli türler alanları kullanıma sunmamalıdır](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- İşaretçi salt okunur, iç veya özel hale getirerek güvenli hale getirin.
+ İşaretçiyi salt okunurdur, iç veya özel yaparak güvenli hale getirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- İşaretçi değeri temel kullanmayın, bu kuraldan bir uyarıyı gizler.
+ İşaretçinin değerine bağlı değilseniz bu kuraldan bir uyarı gizleyin.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod, ihlal ve kural karşılamak işaretçileri gösterir. Özel olmayan işaretçileri de kuralı ihlal bildirimi [CA1051: Görünür örnek alanlarını bildirmeyin](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).
+ Aşağıdaki kod, kuralı ihlal eden ve karşılayan işaretçileri gösterir. Özel olmayan işaretçilerin CA1051 kuralını da ihlal ettiğini unutmayın [: görünür örnek alanlarını bildirme](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).
 
  [!code-csharp[FxCop.Security.PointersArePrivate#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.PointersArePrivate/cs/FxCop.Security.PointersArePrivate.cs#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA2112: Güvenli türler alanları açığa çıkarmamalıdır](../code-quality/ca2112-secured-types-should-not-expose-fields.md)
 
  [CA1051: Görünür örnek alanlarını bildirmeyin](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)

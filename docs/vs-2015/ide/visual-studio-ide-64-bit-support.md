@@ -1,5 +1,5 @@
 ---
-title: 64-bit desteği | Microsoft Docs
+title: 64 bit desteği | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,35 +10,35 @@ helpviewer_keywords:
 - 64-bit programming [C++]
 ms.assetid: b08ff3ad-c6fd-468f-94d5-01a61aab6833
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c83c4623854fd8f7605096d218de69460fc8a919
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7d457af78a23d03b4d87de6dd226cf55e8a191f8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65698173"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667111"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE 64 Bit Desteği
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uygulamalarınızı 64 bit platformlar da dahil olmak üzere, farklı platformları hedeflemek için ayarlamanıza imkan sağlar. 64-bit platformu hakkında daha fazla bilgi için destek [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bkz: [64-bit uygulamalar](https://msdn.microsoft.com/library/fd4026bc-2c3d-4b27-86dc-ec5e96018181).
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)], uygulamalarınızı 64 bitlik platformlar dahil farklı platformları hedefleyecek şekilde ayarlamanıza olanak sağlar. @No__t_0 'de 64 bit platform desteği hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](https://msdn.microsoft.com/library/fd4026bc-2c3d-4b27-86dc-ec5e96018181).
 
 ## <a name="deploying-a-64-bit-application"></a>64 bitlik bir uygulama dağıtma
- Aşağıdaki konular, 64 bitlik uygulamaların dağıtımını tartışır.
+ Aşağıdaki konularda 64 bitlik uygulamaların dağıtımı ele alınmaktadır.
 
 - [64 bit Uygulamalar için Dağıtım Önkoşulları](../deployment/deploying-prerequisites-for-64-bit-applications.md)
 
-- [Nasıl yapılır: Bir 64-bit platformu için bir Windows Yükleyici oluşturma](https://msdn.microsoft.com/232bfc64-f99a-4cc6-9806-ba70bb9a09ff)
+- [Nasıl yapılır: 64 bitlik bir platform için Windows Installer oluşturma](https://msdn.microsoft.com/232bfc64-f99a-4cc6-9806-ba70bb9a09ff)
 
-## <a name="configuring-projects-as-64-bit-applications"></a>Projeleri 64-bit uygulamalar yapılandırma
- Aşağıdaki başlıklar 64 bitlik uygulamalara oluşturulacak yapılandırma projelerini tartışır.
+## <a name="configuring-projects-as-64-bit-applications"></a>Projeleri 64 bitlik uygulamalar olarak yapılandırma
+ Aşağıdaki konularda, 64 bitlik uygulamalarda oluşturulacak proje yapılandırma açıklanmaktadır.
 
-- [Nasıl yapılır: Projeleri Hedef Platformlar İçin Yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md)
+- [Nasıl Yapılır: Projeleri Hedef Platformlar İçin Yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md)
 
-## <a name="debugging-a-64-bit-application"></a>Bir 64 bit uygulamanın hatalarını ayıklama
- Düzenle ve devam et seçenekleri çalışmaz [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] bir 64 bit Windows işletim sisteminde çalışıyor. Aşağıdaki konular, 64 bitlik uygulamalardaki hata ayıklamayı tartışır.
+## <a name="debugging-a-64-bit-application"></a>64 bitlik bir uygulamada hata ayıklama
+ @No__t_0, 64 bitlik bir Windows işletim sisteminde çalışırken Düzenle ve devam et çalışmaz. Aşağıdaki konularda 64 bitlik uygulamalarda hata ayıklama ele alınmaktadır.
 
 - [Nasıl yapılır: 64-bit platformlarda hata ayıklama](https://msdn.microsoft.com/27495e23-a624-46fb-996f-043d0a816dd5)
 
@@ -47,4 +47,4 @@ ms.locfileid: "65698173"
 - [Döküm Dosyalarını Kullanma](../debugger/using-dump-files.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Nasıl yapılır: Projeleri Hedef Platformlar İçin Yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md)
+ [Nasıl Yapılır: Projeleri Hedef Platformlar İçin Yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md)

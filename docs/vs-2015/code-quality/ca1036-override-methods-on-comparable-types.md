@@ -1,5 +1,5 @@
 ---
-title: 'CA1036: Karşılaştırılabilir türlerde geçersiz kılma yöntemleri | Microsoft Docs'
+title: 'CA1036: karşılaştırılabilir türlerde yöntemleri geçersiz kıl | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - CA1036
 ms.assetid: 2329f844-4cb8-426d-bee2-cd065d1346d0
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 49a4e64767497e4a1098bda9f5ee4e0eec8151f5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 779e6258f9c5be256a7973a5d917045507fc82e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65682813"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661835"
 ---
-# <a name="ca1036-override-methods-on-comparable-types"></a>CA1036: Karşılaştırılabilir türlerde metotları geçersiz kıl
+# <a name="ca1036-override-methods-on-comparable-types"></a>CA1036: Karşılaştırılabilir türlerde geçersiz kılma yöntemleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|OverrideMethodsOnComparableTypes|
 |CheckId|CA1036|
-|Kategori|Microsoft.Design|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Design|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Ortak veya korumalı tür uygulayan <xref:System.IComparable?displayProperty=fullName> arabirim ve geçersiz <xref:System.Object.Equals%2A?displayProperty=fullName> veya eşitlik, eşitsizlik durumu olabilir, daha küçük veya büyük özel dil işleciyle aşırı yüklenebilir değil. Türü arabiriminin bir uygulamasını devralırsa kuralı ihlal raporlamaz.
+ Ortak veya korumalı bir tür <xref:System.IComparable?displayProperty=fullName> arabirimini uygular <xref:System.Object.Equals%2A?displayProperty=fullName> ve eşitlik, eşitsizlik, küçüktür veya büyüktür için dile özgü işleci aşırı yüklemez. Tür, arabirimin yalnızca bir uygulamasını devralırsa kural bir ihlal raporlamaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Özel sıralama düzenini tanımlamak türleri uygulayan <xref:System.IComparable> arabirimi. <xref:System.IComparable.CompareTo%2A> Yöntem türü iki örneği için doğru sıralama düzenini belirten bir tamsayı değeri döndürür. Bu kural, bir sıralama düzeni kümesi türlerini tanımlar; Bu, olağan anlamını eşitlik, eşitsizlik durumu olabilir, daha az daha küçük ve büyük geçerli değildir, anlamına gelir. Bir uygulamasını sağlaması zaman <xref:System.IComparable>, genellikle gerekir ayrıca geçersiz <xref:System.Object.Equals%2A> ile tutarlı olan değerler döndürür, böylece <xref:System.IComparable.CompareTo%2A>. Kılarsanız <xref:System.Object.Equals%2A> ve Kodladığınız İşleç aşırı yüklemeleri destekler bir dilde tutarlı işleçleri de sağlamalıdır <xref:System.Object.Equals%2A>.
+ Özel bir sıralama düzeni tanımlayan türler <xref:System.IComparable> arabirimini uygular. @No__t_0 yöntemi, türün iki örneği için doğru sıralama düzenini gösteren bir tamsayı değeri döndürür. Bu kural bir sıralama düzeni ayarlanan türleri tanımlar; Bu, eşitlik, eşitsizlik, küçüktür ve büyüktür 'in olağan anlamının uygulanmayacağı anlamına gelir. @No__t_0 bir uygulamasını sağladığınızda, genellikle <xref:System.IComparable.CompareTo%2A> ile tutarlı değerler döndürmesi için <xref:System.Object.Equals%2A> de geçersiz kılmanız gerekir. @No__t_0 geçersiz kılarsınız ve işleç aşırı yüklerini destekleyen bir dilde kodlama yaparsanız, <xref:System.Object.Equals%2A> tutarlı işleçler sağlamanız gerekir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için geçersiz kılın <xref:System.Object.Equals%2A>. İşleç aşırı yüklemesi programlama dilini destekler, aşağıdaki işleçleri sağlayın:
+ Bu kural ihlalini onarmak için <xref:System.Object.Equals%2A> geçersiz kılın. Programlama diliniz işleç aşırı yüklemesini destekliyorsa, aşağıdaki işleçleri sağlayın:
 
 - op_Equality
 
@@ -49,18 +49,18 @@ ms.locfileid: "65682813"
 
 - op_GreaterThan
 
-  C# içinde bu işleçler temsil etmek için kullanılan belirteçleri aşağıda belirtilmiştir: ==,! =, \<, ve >.
+  ' C#De, bu işleçleri temsil etmek için kullanılan belirteçler şunlardır: = =,! =, \< ve >.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Eksik işleçleriyle ihlaline neden olur ve Visual Basic .NET ile olduğu gibi İşleç aşırı yüklemesi, programlama diliniz desteklemiyor olduğunda bu kuraldan bir uyarıyı bastırmak güvenlidir. Op_Equality işleçleri uygulamaya karar verirseniz, uygulama bağlamında mantıklı dışında eşitlik işleçlerde tetiklendiğinde için bu kuraldan bir uyarıyı bastırmak güvenlidir. Her zaman ancak op_Equality gerekir ve Object.equals'ı geçersiz kılarsanız == işleci.
+ İhlalin eksik işleçlerden kaynaklanmasından ve programlama diliniz, Visual Basic .NET ' de olduğu gibi operatör aşırı yüklemesini desteklemediğine karşı, bu kuraldan bir uyarının gösterilmesinin güvenli bir durumdur. Ayrıca, işleçleri uygulamanın uygulama bağlamında anlamlı olmadığını belirlerseniz, bu kuraldan gelen eşitlik işleçlerinde tetiklendiğinde bu kuraldan ilgili bir uyarının görüntülenmesini de güvenlidir. Ancak, Object. Equals öğesini geçersiz kıldıysanız, op_Equality ve = = işleci her zaman açık olmalıdır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, doğru uygulayan bir tür içerir <xref:System.IComparable>. Kod açıklamaları için ilgili çeşitli kuralları karşılayan yöntemleri tanımlamak <xref:System.Object.Equals%2A> ve <xref:System.IComparable> arabirimi.
+ Aşağıdaki örnek <xref:System.IComparable> doğru bir şekilde uygulayan bir tür içerir. Kod açıklamaları <xref:System.Object.Equals%2A> ve <xref:System.IComparable> arabirimiyle ilgili çeşitli kuralları karşılayan yöntemleri belirler.
 
  [!code-csharp[FxCop.Design.IComparable#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.IComparable/cs/FxCop.Design.IComparable.cs#1)]
 
 ## <a name="example"></a>Örnek
- Aşağıdaki uygulama davranışını testleri <xref:System.IComparable> daha önce gösterilen uygulama.
+ Aşağıdaki uygulama, daha önce gösterilen <xref:System.IComparable> uygulamasının davranışını sınar.
 
  [!code-csharp[FxCop.Design.TestIComparable#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TestIComparable/cs/FxCop.Design.TestIComparable.cs#1)]
 

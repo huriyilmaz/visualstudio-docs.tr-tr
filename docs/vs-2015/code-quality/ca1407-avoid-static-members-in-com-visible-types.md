@@ -1,5 +1,5 @@
 ---
-title: 'CA1407: COM görünebilir türler içinde statik üyelerden kaçının | Microsoft Docs'
+title: 'CA1407: COM görünebilir türlerde statik üyelerden kaçının | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - AvoidStaticMembersInComVisibleTypes
 ms.assetid: bebd0776-ad04-453c-bca8-8c124c2d7840
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 93c56c17998bbe672ed5816fc950eec5cc56b1c3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 6996d210417a56dd83532c481aaa0dc80b9f23ea
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65705728"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655243"
 ---
 # <a name="ca1407-avoid-static-members-in-com-visible-types"></a>CA1407: COM görünebilir türler içinde statik üyelerden kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,20 +29,20 @@ ms.locfileid: "65705728"
 |-|-|
 |TypeName|AvoidStaticMembersInComVisibleTypes|
 |CheckId|CA1407|
-|Kategori|Microsoft.Interoperability|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. çalışabilirliği|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Özel Bileşen Nesne Modeli (COM) görünür olarak işaretlenmiş bir tür içeren bir `public``static` yöntemi.
+ Özellikle bileşen nesne modeli (COM) tarafından görünür olarak işaretlenen bir tür, `public``static` yöntemi içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- COM desteklemiyor `static` yöntemleri.
+ COM `static` yöntemlerini desteklemez.
 
- Bu kural, özellik ve olay erişimcileri, işleç yöntemleri ya da kullanarak işaretlenmiş yöntem aşırı yüklemesi yoksayar <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> özniteliği veya <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> özniteliği.
+ Bu kural, <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> özniteliği veya <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> özniteliği kullanılarak işaretlenen özellik ve olay erişimcileri, işleç aşırı yükleme yöntemleri veya yöntemleri yoksayar.
 
- Varsayılan olarak, COM görünür şunlardır: derlemeleri, genel tür, genel türlerde ortak örnek üyeleri ve tüm ortak türlerin üyeleri.
+ Varsayılan olarak, aşağıdakiler COM 'a görünür: derlemeler, ortak türler, ortak türlerdeki ortak örnek üyeleri ve tüm ortak değer türleri üyeleri.
 
- Gerçekleşmesi, bir derleme düzeyi bu kural için <xref:System.Runtime.InteropServices.ComVisibleAttribute> ayarlanmalıdır `false` ve sınıf - <xref:System.Runtime.InteropServices.ComVisibleAttribute> ayarlanmalıdır `true`aşağıdaki kodda gösterildiği gibi.
+ Bu kuralın gerçekleşmesi için, derleme düzeyi <xref:System.Runtime.InteropServices.ComVisibleAttribute> ' ı `false` olarak ayarlanması gerekir ve aşağıdaki kodun gösterdiği gibi-<xref:System.Runtime.InteropServices.ComVisibleAttribute> sınıfı `true` olarak ayarlanmalıdır.
 
 ```csharp
 using System;
@@ -62,33 +62,33 @@ namespace Samples
 ```
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için aynı işlevselliği sağlayan bir örnek yöntemi kullanmak için tasarım değiştirme `static` yöntemi.
+ Bu kural ihlalini onarmak için tasarımı, `static` yöntemiyle aynı işlevselliği sağlayan bir örnek yöntemi kullanacak şekilde değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bir COM istemcisi tarafından sağlanan işlevselliğe erişim gerektirmiyorsa, bu kuraldan bir uyarıyı bastırmak güvenlidir `static` yöntemi.
+ Bir COM istemcisi `static` yöntemiyle belirtilen işlevlere erişim gerektirmiyorsa, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
 
-## <a name="example-violation"></a>Örnek ihlali
+## <a name="example-violation"></a>Örnek Ihlali
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki örnekte gösterildiği bir `static` bu kuralı ihlal yöntemi.
+ Aşağıdaki örnekte, bu kuralı ihlal eden bir `static` yöntemi gösterilmektedir.
 
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Interoperability.ComVisibleStaticMembersViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.ComVisibleStaticMembersViolation/cs/FxCop.Interoperability.ComVisibleStaticMembersViolation.cs#1)]
 
 ### <a name="comments"></a>Açıklamalar
- Bu örnekte, **Book.FromPages** COM'dan yöntemi çağrılamaz
+ Bu örnekte, **Book. FromPages** yöntemi com 'dan çağrılamaz.
 
-## <a name="example-fix"></a>Örnek düzeltme
+## <a name="example-fix"></a>Örnek onarma
 
 ### <a name="description"></a>Açıklama
- Önceki örnekte ve ihlali gidermek için yöntem bir örnek yöntemi olarak değiştirebilirsiniz, ancak, bu örnekte mantıklı değildir. Açıkça uygulamak için en iyi çözümdür `ComVisible(false)` Temizle yöntemi COM'dan görülen diğer geliştiriciler yapmak için yöntemi
+ Önceki örnekteki ihlalin giderilmesi için, yöntemini bir örnek yöntemi olarak değiştirebilirsiniz, ancak bu örnekte bu anlamlı değildir. Daha iyi bir çözüm, yöntemin COM 'dan görülemeyeceğini diğer geliştiricilere açık hale getirmek için yöntemine `ComVisible(false)` ' A uygulanmasını sağlar.
 
- Aşağıdaki örnek geçerli <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> yöntemi.
+ Aşağıdaki örnek yöntemine <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> uygular.
 
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Interoperability.ComVisibleStaticMembersFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.ComVisibleStaticMembersFixed/cs/FxCop.Interoperability.ComVisibleStaticMembersFixed.cs#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
  [CA1406: Visual Basic 6 istemcileri için Int64 bağımsız değişkenlerinden kaçının](../code-quality/ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md)

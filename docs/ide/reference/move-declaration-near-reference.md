@@ -1,45 +1,45 @@
 ---
-title: Değişken bildirimi başvurunun yanına taşıma
+title: Değişken bildirimini başvuru yakınına taşı
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: e23c5c8d6ea0895f9e5a78e726bb7a7cede071bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0a82b48a556e26866393661d4b87836db765abb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540602"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666495"
 ---
-# <a name="move-declaration-near-reference-refactoring"></a>Başvuru yeniden düzenleme yakın bildirimi taşıma
+# <a name="move-declaration-near-reference-refactoring"></a>Bildirimi başvuru yeniden düzenlemesi yakınında taşı
 
 Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
-**Ne:** Kendi kullanımı için değişken bildirimlerini yakın taşımanıza olanak tanır.
+**Ne:** Değişken bildirimlerini kullanımlarına yaklaştırmanızı sağlar.
 
-**ne zaman:** Dar bir kapsamda olabilir değişken bildirimleri var.
+**Ne zaman:** Daha dar bir kapsamda olabilecek değişken bildirimlerinizde yer vardır.
 
-**Neden:** Bu, ancak okunabilirlik sorunları veya bilgi gizleme neden olabilecek bırakabilir. Okunabilirliği artırmak için yeniden düzenleme için bir fırsat budur.
+**Neden:** Bunu olduğu gibi bırakabilirsiniz, ancak bu durum okunabilirlik sorunları veya bilgi gizlenmesine neden olabilir. Bu, okunabilirliği artırmak için yeniden düzenleme şansı sağlar.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi Değişken bildiriminde yerleştirin.
+1. İmlecinizi değişken bildirimine yerleştirin.
 
-1. Ardından, aşağıdakilerden birini yapın:
+1. Sonra, aşağıdakilerden birini yapın:
 
-   - **Klavye**
-      - Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **bildirimi başvurunun yanına taşıma** gelen önizleme penceresi açılır.
-   - **Fare**
-      - Kod sağ tıklayın, **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **bildirimi başvurunun yanına taşıma** gelen önizleme penceresi açılır.
+   - **Klavyenizdeki**
+      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinde **bildirimi başvuru yakınına taşı** ' yı seçin.
+   - **Tığında**
+      - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçip Önizleme penceresi açılır penceresinde **bildirimi başvuru yakınına taşı** ' yı seçin.
 
-1. Değişiklik ile tamamladığınızda basın **Enter** veya düzeltmeyi menüsünde tıklatın ve değişiklikler uygulanır.
+1. Değişikliğin ne kadar memnunsanız, **ENTER** tuşuna basın veya menüdeki değişikliğe tıklayın ve değişiklikler uygulanır.
 
 Örnek:
 
@@ -64,5 +64,5 @@ if (condition)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

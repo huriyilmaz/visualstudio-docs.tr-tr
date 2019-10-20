@@ -7,22 +7,22 @@ helpviewer_keywords:
 - EditorConfig coding conventions
 - language code style rules [EditorConfig]
 - formatting conventions [EditorConfig]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d8be11a8705686ade370a8107aad826b7cab9851
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 99d83157e2b6d108eb87a701aa8bc05ca2c7b1e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186558"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653713"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig için .NET kodlama kuralı ayarları
 
-Bir [Editorconfig](../ide/create-portable-custom-editor-options.md) dosyası kullanımıyla kod tabanınızda tutarlı kod stili tanımlayabilir ve bakımını yapabilirsiniz. Editorconfig, `indent_style` ve `indent_size`gibi birçok temel biçimlendirme özelliği içerir. Visual Studio 'da, .NET kodlama kuralları ayarları bir EditorConfig dosyası kullanılarak da yapılandırılabilir. Bireysel .NET kodlama kurallarını etkinleştirebilir veya devre dışı bırakabilir ve her kuralın uygulanmasını istediğiniz dereceyi bir önem düzeyi aracılığıyla yapılandırabilirsiniz.
+Bir [Editorconfig](../ide/create-portable-custom-editor-options.md) dosyası kullanımıyla kod tabanınızda tutarlı kod stili tanımlayabilir ve bakımını yapabilirsiniz. EditorConfig, `indent_style` ve `indent_size` gibi birçok temel biçimlendirme özelliği içerir. Visual Studio 'da, .NET kodlama kuralları ayarları bir EditorConfig dosyası kullanılarak da yapılandırılabilir. Bireysel .NET kodlama kurallarını etkinleştirebilir veya devre dışı bırakabilir ve her kuralın uygulanmasını istediğiniz dereceyi bir önem düzeyi aracılığıyla yapılandırabilirsiniz.
 
 > [!TIP]
 > - Bir EditorConfig dosyasında kodlama kuralları tanımladığınızda, kodunuzu çözümlemek üzere Visual Studio 'da yerleşik olarak bulunan [kod stili Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) nasıl istediğinizi yapılandırıyorsunuz. EditorConfig dosyası, bu çözümleyiciler için yapılandırma dosyasıdır.
@@ -34,7 +34,7 @@ Desteklenen üç .NET kodlama kuralı kategorisi vardır:
 
 - [Dil kuralları](../ide/editorconfig-language-conventions.md)
 
-   C# Veya Visual Basic diliyle ilgili kurallar. Örneğin, değişkenler tanımlarken veya ifade Bodied `var` Üyeler tercih edildiğinde, ya da kullanarak ya da açık türler etrafında kurallar belirtebilirsiniz.
+   C# Veya Visual Basic diliyle ilgili kurallar. Örneğin, değişkenleri tanımlarken `var` veya açık türler veya ifade Bodied Üyeler tercih ediliyor gibi kuralları belirleyebilirsiniz.
 
 - [Biçimlendirme kuralları](../ide/editorconfig-formatting-conventions.md)
 
@@ -42,7 +42,7 @@ Desteklenen üç .NET kodlama kuralı kategorisi vardır:
 
 - [Adlandırma kuralları](../ide/editorconfig-naming-conventions.md)
 
-   Kod öğelerinin adlandırılmasıyla ilgili kurallar. Örneğin, yöntemlerin "Async" ile `async` bitmesi gerektiğini belirtebilirsiniz.
+   Kod öğelerinin adlandırılmasıyla ilgili kurallar. Örneğin, `async` yöntemlerinin "Async" ile bitmesi gerektiğini belirtebilirsiniz.
 
 ## <a name="example-editorconfig-file"></a>Örnek EditorConfig dosyası
 

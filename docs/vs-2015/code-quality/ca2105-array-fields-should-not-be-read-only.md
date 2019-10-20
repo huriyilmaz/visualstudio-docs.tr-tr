@@ -1,5 +1,5 @@
 ---
-title: 'CA2105: Dizi alanları okunamadı yalnızca | Microsoft Docs'
+title: 'CA2105: dizi alanları salt okunmamalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA2105
 ms.assetid: 0bdc3421-3ceb-4182-b30c-a992fbfcc35d
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4741b30d1429a1a179328c8fb4b150fc4f920612
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7599359899ca4860913b5bc0dd601fd06d9b8b54
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154380"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666020"
 ---
 # <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105: Dizi alanları salt okunur olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,40 +33,40 @@ ms.locfileid: "68154380"
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Bir dizi içeren bir ortak veya korumalı alan salt okunur bildirilir.
+ Bir diziyi tutan ortak veya korumalı bir alan salt okunurdur.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Uyguladığınızda `readonly` (`ReadOnly` içinde [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) alan bir dizi içeren alana değiştiricisi, farklı bir dizi olarak başvurmak için değiştirilemez. Bir dizinin öğeleri salt okunur bir alanda depolanmış olsa bile değiştirilebilir. Açıklardan güvenlik açığı kararları veya genel olarak erişilebilen bir salt okunur dizi öğeleri üzerinde temel işlemleri gerçekleştiren kod içerebilir.
+ Dizi içeren bir alana `readonly` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `ReadOnly`) değiştiricisini uyguladığınızda, alan farklı bir diziye başvuracak şekilde değiştirilemez. Bir dizinin öğeleri salt okunur bir alanda depolanmış olsa bile değiştirilebilir. Herkese açık bir şekilde erişilebilen salt yazılır bir dizinin öğelerine dayalı işlemler yapan veya kararları veren kod, açıktan yararlanılır bir güvenlik açığı içerebilir.
 
- Ortak alan sahip de tasarım kuralı ihlal Not [CA1051: Görünür örnek alanlarını bildirmeyin](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).
+ Ortak bir alana sahip olmanın CA1051 tasarım kuralını da ihlal ettiğini unutmayın [: görünür örnek alanlarını bildirme](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural tarafından belirlenen güvenlik açığını gidermek için genel olarak erişilebilen bir salt okunur dizi içeriğine güvenmeyin. Aşağıdaki yordamlardan birini kullanmanız önerilir:
+ Bu kural tarafından tanımlanan güvenlik açığını gidermek için, herkese açık bir şekilde erişilebilen salt okunurdur. Aşağıdaki yordamlardan birini kullanmanız önemle önerilir:
 
-- Dizi değiştirilemez bir türü kesin belirlenmiş koleksiyon ile değiştirin. Daha fazla bilgi için bkz. <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>.
+- Diziyi, değiştirilemeyen türü kesin belirlenmiş bir koleksiyonla değiştirin. Daha fazla bilgi için bkz. <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>.
 
-- Genel alanı özel dizinin bir kopyasını döndüren bir yöntem ile değiştirin. Kodunuzu kopyada kullanmayan olduğundan tehlike öğeleri değiştirdiyseniz.
+- Ortak alanı, özel dizinin bir kopyasını döndüren bir yöntem ile değiştirin. Kodunuz kopyaya bağlı olmadığından, öğeler değiştirilirse bir tehlike yoktur.
 
-  İkinci yaklaşım seçerseniz, alana sahip bir özellik değiştirmeyin; olumsuz dizi döndüren özellikler, performansı etkiler. Daha fazla bilgi için [CA1819: Özellikler diziler döndürmemelidir](../code-quality/ca1819-properties-should-not-return-arrays.md).
+  İkinci yaklaşımı seçerseniz, alanı bir özelliği ile değiştirmeyin; dizileri döndüren Özellikler performansı olumsuz etkiler. Daha fazla bilgi için bkz. [CA1819: Properties dizileri döndürmemelidir](../code-quality/ca1819-properties-should-not-return-arrays.md).
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan bir uyarıyı, dışlama kesinlikle önerilmez. Salt okunur bir alanın içeriğini önemli olduğu neredeyse hiçbir senaryo oluşur. Senaryonuz Durum buysa, kaldırma `readonly` ileti hariç yerine değiştiricisi.
+ Bu kuraldan bir uyarının dışlanmasını kesinlikle önerilmez. Neredeyse bir salt okuma alanının içeriğinin önemli olmadığı neredeyse hiçbir senaryo meydana gelir. Bu durumda senaryonuz varsa iletiyi dışlamak yerine `readonly` değiştiricisini kaldırın.
 
 ## <a name="example"></a>Örnek
- Bu örnekte bu kuralın ihlali tehlikelerini göstermektedir. Bir türe sahip bir örnek kitaplığı ilk bölümü gösterir `MyClassWithReadOnlyArrayField`, iki alan içeren (`grades` ve `privateGrades`) güvenli değildir. Alan `grades` genel ve bu nedenle güvenlik açığı bulunan her arayana. Alan `privateGrades` özeldir ancak yine de çağıranlar tarafından döndürdüğünden savunmasızdır `GetPrivateGrades` yöntemi. `securePrivateGrades` Alanı tarafından güvenli bir şekilde kullanıma sunulan `GetSecurePrivateGrades` yöntemi. İyi tasarım yöntemleri izlemek için özel olarak bildirilir. İkinci bölümü içinde depolanan değeri değiştirir kodu gösterir `grades` ve `privateGrades` üyeleri.
+ Bu örnek, bu kuralı ihlal eden tehlikeleri gösterir. İlk bölüm, güvenli olmayan iki alan (`grades` ve `privateGrades`) içeren `MyClassWithReadOnlyArrayField` türünde bir örnek kitaplık gösterir. Alan `grades` geneldir ve bu nedenle herhangi bir çağırana karşı savunmasız olur. @No__t_0 alan özeldir, ancak `GetPrivateGrades` yöntemi tarafından çağıranlara döndürüldüğünden güvenlik açığı devam etmektedir. @No__t_0 alanı, `GetSecurePrivateGrades` yöntemi tarafından güvenli bir şekilde sunulur. İyi tasarım uygulamalarını izlemek için özel olarak bildirilmiştir. İkinci bölüm `grades` ve `privateGrades` üyelerinde depolanan değerleri değiştiren kodu gösterir.
 
- Örnek sınıf kitaplığı, aşağıdaki örnekte görünür.
+ Örnek sınıf kitaplığı aşağıdaki örnekte görünür.
 
  [!code-csharp[FxCop.Security.ArrayFieldsNotReadOnly#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.ArrayFieldsNotReadOnly/cs/FxCop.Security.ArrayFieldsNotReadOnly.cs#1)]
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği sınıf kitaplığı salt okunur bir dizi güvenlik sorunlarını göstermek için kullanır.
+ Aşağıdaki kod, salt okuma dizisi güvenlik sorunlarını göstermek için örnek sınıf kitaplığını kullanır.
 
  [!code-csharp[FxCop.Security.TestArrayFieldsRead#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.TestArrayFieldsRead/cs/FxCop.Security.TestArrayFieldsRead.cs#1)]
 
- Bu örnekte çıktı.
+ Bu örnekteki çıktı:
 
- **İzinsiz önce: Derece: 90, 90, özel 90 derece: 90, 90, 90 güvenli derece, 90, 90, 90**
-**oynama sonra: Derece: 90, 555, özel 90 derece: 90, 555-90 derece, 90, 90, 90 güvenli**
+ **Değişiklik yapmadan önce: Notlar: 90, 90, 90 özel notlar: 90, 90, 90 Secure notlar, 90, 90, 90** 
+**değiştirildikten sonra: Notlar: 90, 555, 90 özel notlar: 90, 555, 90 güvenli notlar, 90, 90, 90**
 ## <a name="see-also"></a>Ayrıca Bkz.
  <xref:System.Array?displayProperty=fullName><xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>

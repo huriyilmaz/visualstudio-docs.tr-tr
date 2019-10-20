@@ -6,103 +6,103 @@ ms.topic: conceptual
 helpviewer_keywords:
 - filtered solution
 - solution filtering
-author: gewarren
+author: jillre
 ms.author: stsu
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 2612770b760bec70ec9ee6c679c47804d4e69f42
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4c44d267ef5686d04e9549601e05866aabbfb62d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439823"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650844"
 ---
-# <a name="filtered-solutions-in-visual-studio"></a>Visual Studio'da filtrelenmiş çözümleri
+# <a name="filtered-solutions-in-visual-studio"></a>Visual Studio 'da filtrelenmiş çözümler
 
-Genellikle büyük geliştirme takımları ile çok sayıda proje tek büyük bir çözümde kullanarak işbirliği yapın. Ancak, bireysel geliştiriciler genellikle bu projeler küçük bir kısmı üzerinde çalışır. Büyük çözümlerde açılırken performansını geliştirmek için Visual Studio 2019 sunulan *çözüm filtreleme*. Çözüm filtreleme yalnızca yüklenen seçmeli projeleriyle bir çözüm açın sağlar. Bir alt kümesini bir çözümde proje yüklemeyi çözüm yükü, yapı ve test çalışma zamanı azaltır ve etkinleştirir gözden geçirme daha odaklı.
+Büyük geliştirme ekipleri genellikle birçok projeyle tek bir büyük çözüm kullanarak işbirliği yapabilirler. Ancak, bireysel geliştiriciler genellikle bu projelerin küçük bir alt kümesinde çalışır. Büyük çözümleri açarken performansı artırmak için, Visual Studio 2019 *çözüm filtrelemesini*sunmuştur. Çözüm filtreleme, yalnızca seçmeli projelerle yüklenmiş bir çözüm açmanıza olanak tanır. Bir çözümdeki projelerin alt kümesini yüklemek çözüm yükünü, derlemeyi ve test çalışma süresini azaltır ve daha odaklanmış gözden geçirmeyi mümkün bir şekilde sunar.
 
 Aşağıdaki özellikler mevcuttur:
 
-- Daha hızlı bir çözüm açarak projeleri yüklemeden kodu alabilirsiniz. Çözüm açıldıktan sonra yükleme için hangi projelerin seçerek belirleyebilirsiniz.
+- Projelerini yüklemeden bir çözümü açarak kodu daha hızlı bir şekilde alabilirsiniz. Çözüm açıldıktan sonra, hangi projelerin yükleneceğini seçmeli olarak seçebilirsiniz.
 
-- Bir çözümü yeniden açın, Visual Studio önceki oturumunuzda hangi projelerin yüklenmiş hatırlar ve yalnızca bu projeleri yükler.
+- Bir çözümü yeniden açtığınızda, Visual Studio önceki oturumunuzda hangi projelerin yüklendiğini anımsar ve yalnızca bu projeleri yükler.
 
-- Bir veya daha fazla proje yükü yapılandırmaları kaydetme veya yapılandırma arkadaşlarıyla paylaşmak için bir çözüm filtre dosyası oluşturabilirsiniz.
+- Bir veya daha fazla proje yük yapılandırması kaydetmek veya yapılandırmayı takım Mates ile paylaşmak için bir çözüm filtresi dosyası oluşturabilirsiniz.
 
 ## <a name="open-a-filtered-solution"></a>Filtrelenmiş bir çözüm açın
 
-Doğrudan projeleri yüklemeden bir çözüm açabilmek **Proje Aç** iletişim aracılığıyla veya [komut satırı](#command-line).
+Projelerini doğrudan **Proje Aç** iletişim kutusundan veya [komut satırı](#command-line)aracılığıyla yüklemeden bir çözüm açabilirsiniz.
 
-### <a name="open-project-dialog"></a>Açık proje iletişim kutusu
+### <a name="open-project-dialog"></a>Proje Aç iletişim kutusu
 
-Bir çözümü kullanarak tüm projeleri yüklemeden açmak için **Proje Aç** iletişim:
+**Proje Aç** iletişim kutusunu kullanarak herhangi bir projeyi yüklemeden bir çözüm açmak için:
 
-1. Seçin **dosya** > **açık** > **proje/çözüm** menü çubuğundan.
+1. Menü çubuğundan **dosya**  >   > **Proje/çözüm** **Aç** ' ı seçin.
 
-2. İçinde **Proje Aç** iletişim çözümünü seçin ve ardından **proje yüklenmemesine**.
+2. **Proje Aç** iletişim kutusunda çözümü seçin ve ardından **Proje yükleme**' yi seçin.
 
-   ![Visual Studio Proje Aç iletişim kutusunda seçili projeler yüklenmez](media/filtered-solutions/do-not-load-projects.png)
+   ![Visual Studio proje yükleme iletişim kutusu açık projeler işaretlendi](media/filtered-solutions/do-not-load-projects.png)
 
-3. Seçin **açık**.
+3. **Aç**' ı seçin.
 
-   Çözüm tüm yüklenmemiş projeleri ile açılır.
+   Çözüm, tüm projeleri bellekten kaldırılmış olarak açılır.
 
-4. İçinde **Çözüm Gezgini**, yüklemek istediğiniz projeleri seçin (basın **Ctrl** birden fazla proje seçmek için tıklatırken) ve ardından proje üzerinde sağ tıklatın ve seçin **projeyi yeniden yükle** .
+4. **Çözüm Gezgini**, yüklemek istediğiniz projeleri seçin (birden fazla proje seçmek için **CTRL** tuşuna basın) ve ardından projeye sağ tıklayıp **projeyi yeniden yükle**' yi seçin.
 
-   ![Visual Studio Çözüm Gezgini'nde birden çok projeleri yeniden yükle](media/filtered-solutions/reload-project.png)
+   ![Visual Studio 'da birden çok projeyi yeniden yükleme Çözüm Gezgini](media/filtered-solutions/reload-project.png)
 
-   Visual Studio çözümünü yerel olarak bir sonraki açışınızda hangi projelerin yüklenen hatırlanır.
+   Visual Studio, çözümü yerel olarak ilk açışınızda hangi projelerin yükleneceğini hatırlayacaktır.
 
 ### <a name="command-line"></a>Komut satırı
 
-(Yeni Visual Studio 2019 sürüm 16.1.)
+(Visual Studio 2019 sürüm 16,1 ' de yenidir.)
 
-Komut satırından yüklemeden, tüm projeleri bir çözümü açmak için kullanmak [ `/donotloadprojects` ](../ide/reference/donotloadprojects-devenv-exe.md) aşağıdaki örnekte gösterildiği gibi geçin:
+Bir çözümü komut satırından yüklemeden açmak için, aşağıdaki örnekte gösterildiği gibi [`/donotloadprojects`](../ide/reference/donotloadprojects-devenv-exe.md) anahtarını kullanın:
 
 ```cmd
 devenv /donotloadprojects MySln.sln
 ```
 
-## <a name="toggle-unloaded-project-visibility"></a>Yüklenmemiş proje görünürlüğünü Değiştir
+## <a name="toggle-unloaded-project-visibility"></a>Kaldırılmış proje görünürlüğünü değiştirme
 
-Çözümdeki tüm projeleri veya yalnızca aşağıdaki seçeneklerden birini kullanarak yüklü olanları görmek seçebileceğiniz **Çözüm Gezgini**:
+**Çözüm Gezgini**' de aşağıdaki seçeneklerden birini kullanarak Çözümdeki tüm projeleri ya da yalnızca yüklü olanları görmeyi seçebilirsiniz:
 
-- Çözümü sağ tıklatın **yüklenmemiş projeleri göster** veya **yüklenmemiş projeleri Gizle**.
+- Çözümünüze sağ tıklayın ve **kaldırılmış projeleri göster** ' i seçin veya **yüklü olmayan projeleri gizleyin**.
 
-- Çözümü etkinleştirmek için düğümü seçin **tüm dosyaları göster** düğmesini; ardından yüklenmemiş projeleri görünürlüğünü açıp kapatmak için düğmeyi tıklayın.
+- **Tüm dosyaları göster** düğmesini etkinleştirmek için çözüm düğümünü seçin; ardından, yüklenmeyen projelerin görünürlüğünü değiştirmek için düğmeye tıklayın.
 
-   ![Visual Studio Çözüm Gezgini'nde tüm dosyaları düğmesini göster](media/filtered-solutions/show-all-files.PNG)
+   ![Visual Studio 'da tüm dosyalar düğmesini göster Çözüm Gezgini](media/filtered-solutions/show-all-files.PNG)
 
-## <a name="load-project-dependencies"></a>Proje bağımlılıkları yükleyin
+## <a name="load-project-dependencies"></a>Proje bağımlılıklarını yükle
 
-Yalnızca seçili projeleri burada yüklü olan bir çözümde bir proje proje bağımlılıklarınızı yüklenen tüm olmayabilir. Kullanım **yük proje bağımlılıkları** menü seçeneğini bir proje bağımlı tüm projeleri aynı zamanda yüklendiğinden emin olun. Bir veya daha fazla yüklenmiş projelerinde sağ **Çözüm Gezgini** ve **yük proje bağımlılıkları**.
+Yalnızca seçili projelerin yüklendiği bir çözümde, projenin tüm proje bağımlılıkları yüklü olmayabilir. Projenin bağımlı olduğu projelerin de yüklü olduğundan emin olmak için **Proje bağımlılıklarını yükle** menü seçeneğini kullanın. **Çözüm Gezgini** yüklenen bir veya daha fazla projeye sağ tıklayın ve **Proje bağımlılıklarını yükle**' yi seçin.
 
-![Visual Studio 2019 yük proje bağımlılıkları](media/filtered-solutions/load-project-dependencies.png)
+![Visual Studio 2019 ' de Proje bağımlılıklarını yükle](media/filtered-solutions/load-project-dependencies.png)
 
 ## <a name="solution-filter-files"></a>Çözüm filtresi dosyaları
 
-Proje yükü yapılandırmanızı paylaşabilir veya kaynak denetimine uygulamak istiyorsanız, bir çözüm filtre dosyası oluşturabilirsiniz (uzantısına sahip *.slnf*). Bir çözüm filtre dosyasını açtığınızda, çözüm yüklenen belirtilen projeleri ile gizli yüklenmemiş projeleri Visual Studio'da açılır. Yapabilecekleriniz [geçiş](#toggle-unloaded-project-visibility) yüklenmemiş projeleri görüntülemek için.
+Proje yük yapılandırmanızı paylaşmak veya kaynak denetimine uygulamak istiyorsanız, bir çözüm filtresi dosyası ( *. slnf*uzantısına sahiptir) oluşturabilirsiniz. Bir çözüm filtresi dosyası açtığınızda, çözüm Visual Studio 'da belirtilen projelerle yüklendi ve tüm yüklenmemiş projeler gizli olarak açılır. Yüklü projeleri görüntülemek için [geçiş](#toggle-unloaded-project-visibility) yapabilirsiniz.
 
-Çözüm filtresi dosyaları görsel olarak ayırt normal çözüm dosyaları ek Huni glifine çözümde yanındaki simge tarafından **Çözüm Gezgini**. Filtre ve yüklenen projelerin sayısını adını da çözüm adının yanında gösterilir.
+Çözüm filtresi dosyaları, normal çözüm dosyalarından, **Çözüm Gezgini**çözümünün yanında bulunan simgenin yanındaki ek huni glifinin görsel açıdan farklılaştırılabilir. Filtrenin adı ve yüklenen proje sayısı, çözüm adının yanında da gösterilir.
 
-![Çözüm filtre dosyası Visual Studio Çözüm Gezgini'nde Aç](media/filtered-solutions/solution-filter.PNG)
+![Visual Studio 'da çözüm filtresi dosyası açık Çözüm Gezgini](media/filtered-solutions/solution-filter.PNG)
 
 > [!NOTE]
-> Çözüm filtresi dosyasını oluşturduktan sonra özgün çözüme yeni proje eklenirse, kaldırılan projelerinde olarak görünürler **Çözüm Gezgini**.
+> Çözüm filtresi dosyasını oluşturduktan sonra özgün çözüme yeni projeler eklendiyse, bunlar **Çözüm Gezgini**' de kaldırılmış projeler olarak görünürler.
 
-### <a name="create-a-solution-filter-file"></a>Bir çözüm filtre dosyası oluşturma
+### <a name="create-a-solution-filter-file"></a>Çözüm filtresi dosyası oluşturma
 
-1. İçinde **Çözüm Gezgini**, çözüme sağ tıklayın ve seçin **çözüm filtre olarak Kaydet**.
+1. **Çözüm Gezgini**, çözüme sağ tıklayıp **çözüm filtresi olarak kaydet**' i seçin.
 
-   ![Visual Studio Çözüm Gezgini'nde çözüm filtre olarak Kaydet menüsü](media/filtered-solutions/save-as-solution-filter.png)
+   ![Visual Studio 'da çözüm filtresi menüsü olarak kaydet Çözüm Gezgini](media/filtered-solutions/save-as-solution-filter.png)
 
-2. Bir ad ve çözüm filtre dosyası için konum seçin.
+2. Çözüm filtresi dosyası için bir ad ve konum seçin.
 
-Bir çözüm filtre dosyasını oluşturduktan sonra eklenir, **son projeler ve çözümler** kolay erişim için liste:
+Bir çözüm filtresi dosyası oluşturduktan sonra, kolay erişim için **son projeleriniz ve çözüm** listenize eklenir:
 
-![Visual Studio'da en son öğeyi aç](media/filtered-solutions/open-recent.png)
+![Visual Studio 'da Son Kullanılanı Aç](media/filtered-solutions/open-recent.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çözüm Gezgini'nde dosya iç içe yerleştime özelleştirme](file-nesting-solution-explorer.md)
-- [Visual Studio performansını iyileştirme](optimize-visual-studio-performance.md)
+- [Çözüm Gezgini dosya iç içe geçirmeyi özelleştirme](file-nesting-solution-explorer.md)
+- [Visual Studio performansını iyileştirin](optimize-visual-studio-performance.md)

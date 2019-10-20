@@ -1,24 +1,24 @@
 ---
-title: 'İzlenecek yol: Özel Metin Şablonu Ana Bilgisayarı Oluşturma.'
+title: 'İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: b9d2447d07d9faabb5fc7eabddafc328756056ca
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 999e8f27a9c60d776d65dc87eb2b42adeec2226c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870652"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666968"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma
 
@@ -35,7 +35,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 
 - Özel ana bilgisayarı sınama.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu kılavuzu tamamlamak için aşağıdakilere ihtiyacınız vardır:
 
@@ -51,9 +51,9 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
 
 2. Aşağıdaki derlemelere başvurular ekleyin:
 
-   - **Microsoft.VisualStudio.TextTemplating.\*.0**
+   - **Microsoft. VisualStudio. Textşablon oluşturma. \*.0**
 
-   - **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 and later versions**
+   - **Microsoft. VisualStudio. Textşablon. Interfaces. 10.0 ve sonraki sürümler**
 
 3. Program.cs veya Module1.vb dosyasındaki kodu aşağıdaki kodla değiştirin:
 
@@ -714,11 +714,11 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
    End Namespace
    ```
 
-4. Yalnızca [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] için **Proje** menüsünü açın ve **CustomHost özellikleri**' ne tıklayın. **Başlangıç nesnesi** listesinde, **CustomHost. program**' ya tıklayın.
+4. Yalnızca [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] için, **Proje** menüsünü açın ve **CustomHost özellikleri**' ne tıklayın. **Başlangıç nesnesi** listesinde, **CustomHost. program**' ya tıklayın.
 
-5. Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.
+5. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
 
-6. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+6. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
 
 ## <a name="test-the-custom-host"></a>Özel Konağı test etme
 
@@ -726,7 +726,7 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
 
 ### <a name="to-create-a-text-template-to-test-the-custom-host"></a>Özel ana bilgisayarı sınamak amacıyla metin şablonu oluşturmak için
 
-1. Bir metin dosyası oluşturun ve bunu `TestTemplate.tt`adlandırın.
+1. Bir metin dosyası oluşturun ve `TestTemplate.tt` adlandırın.
 
      Dosyayı oluşturmak için herhangi bir metin düzenleyicisi (ör. Notepad) kullanabilirsiniz.
 
@@ -819,7 +819,7 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu kılavuzda, temel dönüştürme işlevini destekleyen bir metin şablonu dönüştürme ana bilgisayarı oluşturdunuz. Ana bilgisayarınızı, özel veya oluşturulan yönerge işlemcilerini çağıran metin şablonlarını destekleyecek şekilde genişletebilirsiniz. Daha fazla bilgi için bkz [. İzlenecek yol: Bir konağı oluşturulan yönerge Işlemcisine](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)bağlama.
+Bu kılavuzda, temel dönüştürme işlevini destekleyen bir metin şablonu dönüştürme ana bilgisayarı oluşturdunuz. Ana bilgisayarınızı, özel veya oluşturulan yönerge işlemcilerini çağıran metin şablonlarını destekleyecek şekilde genişletebilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: Konağı oluşturulmuş bir yönerge Işlemcisine bağlama](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

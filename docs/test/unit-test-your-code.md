@@ -6,55 +6,55 @@ helpviewer_keywords:
 - Visual Studio, unit tests
 - unit tests, verifying code with
 - testing code, automated tests
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 5682d752ba2c1430d8ab708e3dadda754a1ba757
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+author: jillre
+ms.openlocfilehash: fd6d6dca2680dcfcaa42912333b080c428ba78d2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65461391"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659855"
 ---
-# <a name="unit-test-your-code"></a>Birim testi kod
+# <a name="unit-test-your-code"></a>Kodunuzun birim testi
 
-Birim testleri, geliştiricilere ve test edicilere C#, Visual Basic ve C++ projelerindeki sınıfların yöntemlerinde mantık hataları aramak için hızlı bir şekilde verin.
+Birim testleri C#, geliştiricilere ve test edicilere, Visual Basic ve C++ projelerdeki sınıfların yöntemlerinde mantık hataları aramak için hızlı bir yol sağlar.
 
 Birim testi araçları şunları içerir:
 
-* **Test Gezgini**&mdash;birim testleri çalıştırmak ve bunların sonuçları görmeniz **Test Gezgini**. Bir bağdaştırıcı için olan bir üçüncü taraf çerçeve dahil olmak üzere tüm birim testi çerçevesini kullanabilirsiniz **Test Gezgini**.
+* **Test gezgini &mdash;Run birim** testlerini ve sonuçlarını **Test Gezgini**'nde görün. **Test Gezgini**için bir bağdaştırıcıya sahip olan, üçüncü taraf bir çerçeve dahil olmak üzere herhangi bir birim testi çerçevesini kullanabilirsiniz.
 
-* **Yönetilen kod için Microsoft birim test çerçevesi**&mdash;yönetilen kod için Microsoft birim testi çerçevesi Visual Studio ile yüklenir ve .NET kodunu test etmek için bir çerçeve sunar.
+* **Yönetilen kod Için Microsoft** birim testi çerçevesi &mdash;The yönetilen kod için Microsoft birim testi çerçevesi Visual Studio ile yüklenir ve .NET kodunu test etmek için bir çerçeve sağlar.
 
-* **C++ için Microsoft birim test çerçevesi**&mdash;C++ için Microsoft birim test çerçevesi bir parçası olarak yüklü **C++ ile masaüstü geliştirme** iş yükü. Bu, yerel kodu test etmek için bir çerçeve sunar. CTest Google Test ve Boost.Test çerçeveleri de dahildir ve ek test çerçeveleri için üçüncü taraf bağdaştırıcılar bulunmaktadır. Daha fazla bilgi için [C/C++ için birim testleri yazma](../test/writing-unit-tests-for-c-cpp.md).
+* İçin C++ Microsoft birim testi çerçevesi &mdash;The **için C++ Microsoft birim testi çerçevesi** , iş yüküyle  **C++ masaüstü geliştirmenin** bir parçası olarak yüklenir. Yerel kodu test etmek için bir çerçeve sağlar. Google Test, Boost. test ve CTest çerçeveleri de dahil edilmiştir ve üçüncü taraf bağdaştırıcılar ek test çerçeveleri için kullanılabilir. Daha fazla bilgi için bkz. [C/C++Için birim testleri yazma](../test/writing-unit-tests-for-c-cpp.md).
 
-* **Kod kapsamı Araçları**&mdash;Birim Test Gezgini'nde tek komuttan alıştırma testleri ürün kodu miktarını belirleyebilirsiniz.
+* **Kod kapsamı araçları** &mdash;You, birim testlerinizin test Gezgini 'nde bir komuttan çalışacağını ürün kodu miktarını belirleyebilir.
 
-* **Microsoft Fakes yalıtım çerçevesi**&mdash;sınıfları ve test edilen kodda bağımlılıklar oluşturan üretim ve sistem kodunun yöntemleri yerine Microsoft Fakes yalıtım çerçevesi oluşturabilirsiniz. Bir işlev için sahte temsilciler uygulayarak, bağımlılık nesnesinin davranışını ve çıkışını denetlersiniz.
+* Microsoft Fakes yalıtım çerçevesi &mdash;The Microsoft Fakes **yalıtım çerçevesi,** test edilen kodda bağımlılıklar oluşturan üretim ve sistem kodu için alternatif sınıflar ve Yöntemler oluşturabilir. Bir işlev için sahte temsilciler uygulayarak, bağımlılık nesnesinin davranışını ve çıkışını denetlersiniz.
 
-Ayrıca [Intellitest](../test/generate-unit-tests-for-your-code-with-intellitest.md) test verileri ve birim testleri paketi oluşturmak için .NET kodunuzu keşfedin. Koddaki her ifade için bir test girişi oluşturulur o ifadeyi yürütecek. Koddaki her koşullu şube için bir vaka analizi yapılır.
+Ayrıca, test verileri ve birim testleri paketi oluşturmak üzere .NET kodunuzu araştırmak için [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) ' i de kullanabilirsiniz. Koddaki her deyimin için, bu ifadeyi yürütecek bir test girişi oluşturulur. Koddaki her koşullu dal için bir olay Analizi gerçekleştirilir.
 
 ## <a name="key-tasks"></a>Ana görevler
 
-Anlama ve birim testleri oluşturma yardımcı olması için aşağıdaki makaleleri kullanın:
+Birim testlerini anlama ve oluşturmayla ilgili yardım almak için aşağıdaki makaleleri kullanın:
 
 |Görevler|İlişkili Konular|
 |-|-----------------------|
-|**Hızlı Başlangıçlar ve izlenecek yollar:** Birim kod örneklerini kullanarak Visual Studio'da testi hakkında bilgi edinin.|- [İzlenecek yol: Yönetilen kod için birim testleri oluşturma ve çalıştırma](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />- [Hızlı Başlangıç: Test Gezgini ile test güdümlü geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)<br />- [Nasıl Yapılır: Birim testleri ekleme C++ uygulamaları](../test/how-to-use-microsoft-test-framework-for-cpp.md)|
-|**Test Gezgini ile birim testi:** Test Gezgini'nin daha üretken ve verimli birim testleri oluşturma nasıl yardımcı olabileceğini öğrenin.|- [Birim testi temel bilgileri](../test/unit-test-basics.md)<br />- [Bir birim testi projesi oluşturma](../test/create-a-unit-test-project.md)<br />- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md)<br />- [Üçüncü taraf birim testi çerçevelerini yükleme](../test/install-third-party-unit-test-frameworks.md)|
-|**Birim testi C++ kod**|- [C/C++ için birim testleri yazma](../test/writing-unit-tests-for-c-cpp.md)|
-|**Birim testlerini yalıtma**|- [Microsoft Fakes ile test edilen kodu Ayır](../test/isolating-code-under-test-with-microsoft-fakes.md)|
-|**Proje kodunuzun ne oranda test edilen belirlemek için kod kapsamı kullanın:** Visual Studio Test araçlarının kod kapsamı özelliği hakkında bilgi edinin.|- [Ne kadar kodun test edildiğini belirlemek için kod kapsamını kullanma](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
-|**Yük testlerini kullanarak stres ve performans analizleri gerçekleştirin:** Performans yalıtmak ve stres sorularınızın gidermek için yük testleri oluşturmayı öğrenin.|- [Hızlı Başlangıç: Bir yük testi projesi oluşturma](../test/quickstart-create-a-load-test-project.md)<br />- [Test (Azure Test planları ve TFS) yükleyin](/azure/devops/test/load-test/index?view=vsts)|
-|**Kalite kapıları belirleyin:** Testleri kod iade veya birleştirilmiş önce çalışmaya zorlamak için kalite kapıları oluşturmayı öğrenin.|- [İade ilkeleri (Azure depoları TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts)|
-|**Test seçeneklerini belirleyin:** Test sonuçlarını depolandığı test seçenekleri, örneğin, yapılandırmayı öğrenin.|[.runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
+|**Hızlı başlangıç ve izlenecek yollar:** Kod örneklerinden Visual Studio 'da birim testi hakkında bilgi edinin.|- [Izlenecek yol: yönetilen kod için birim testleri oluşturma ve çalıştırma](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />- [hızlı başlangıç: Test Gezgini Ile test odaklı geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)<br />- [nasıl yapılır: C++ uygulamalara birim testleri ekleme](../test/how-to-use-microsoft-test-framework-for-cpp.md)|
+|**Test Gezgini Ile birim testi:** Test Gezgini 'nin daha üretken ve verimli birim testleri oluşturmaya nasıl yardımcı olabileceğini öğrenin.|- [birim testi temelleri](../test/unit-test-basics.md)<br />- [birim testi projesi oluşturma](../test/create-a-unit-test-project.md)<br />[Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) - <br />[üçüncü taraf birim testi](../test/install-third-party-unit-test-frameworks.md) çerçevelerini -  yüklemesi|
+|**Birim test C++ kodu**|[C/C++ için birim testleri -  yazma](../test/writing-unit-tests-for-c-cpp.md)|
+|**Birim testlerini yalıtma**|[Microsoft Fakes ile test edilen kodu yalıtmak](../test/isolating-code-under-test-with-microsoft-fakes.md) - |
+|**Projenizin kodunun ne oranda test edildiğini belirlemek için kod kapsamını kullanın:** Visual Studio test araçlarının kod kapsamı özelliği hakkında bilgi edinin.|- [kodun ne kadar test edildiğini öğrenmek için kod kapsamını kullanın](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
+|**Yük testlerini kullanarak stres ve performans analizi gerçekleştirin:** Uygulamanızdaki performans ve stres sorunlarını yalıtmaya yardımcı olmak için yük testleri oluşturmayı öğrenin.|- [hızlı başlangıç: yük testi projesi oluşturma](../test/quickstart-create-a-load-test-project.md)<br />[Yük testi -  (Azure test Plans ve TFS)](/azure/devops/test/load-test/index?view=vsts)|
+|**Kalite kapıları ayarla:** Kod iade edilene veya birleştirilmeden önce testlerin çalıştırılmasını zorlamak için kalite kapıları oluşturma hakkında bilgi edinin.|- [iade ilkeleri (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts)|
+|**Test seçeneklerini ayarla:** Test seçeneklerini yapılandırma hakkında bilgi edinin, örneğin, test sonuçlarının depolandığı yer.|[.runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
 
 ## <a name="api-reference-documentation"></a>API başvuru belgeleri
 
-- <xref:Microsoft.VisualStudio.TestTools.UnitTesting> öznitelikler, özel durumlar, bildirimler ve birim testini destekleyen diğer sınıfları sağlayan UnitTesting ad alanını açıklar.
-- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Web> ASP.NET ve web hizmeti birim testleri için destek sağlayan UnitTesting ad alanını genişleten alanını UnitTesting.Web ad alanını ad alanını açıklar.
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>, öznitelikleri, özel durumları, onayları ve birim testini destekleyen diğer sınıfları sağlayan UnitTesting Ad alanını açıklar.
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Web>, ASP.NET ve Web hizmeti birim testleri için destek sağlayarak UnitTesting Ad alanını genişleten UnitTesting. Web ad alanını açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

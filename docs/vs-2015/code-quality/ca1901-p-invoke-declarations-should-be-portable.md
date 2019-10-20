@@ -1,5 +1,5 @@
 ---
-title: 'CA1901: P-Invoke bildirimleri taşınabilir | Microsoft Docs'
+title: 'CA1901: P-Invoke bildirimleri taşınabilir olmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - PInvokeDeclarationsShouldBePortable
 ms.assetid: 90361812-55ca-47f7-bce9-b8775d3b8803
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ccbbc3178a9f65c15d11a27dee1a625cca729240
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1b4c0c5bcf22db6558f156fd1acd0be94026b08
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203074"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661058"
 ---
 # <a name="ca1901-pinvoke-declarations-should-be-portable"></a>CA1901: P/Invoke bildirimleri taşınabilir olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,27 +29,27 @@ ms.locfileid: "68203074"
 |-|-|
 |TypeName|PInvokeDeclarationsShouldBePortable|
 |CheckId|CA1901|
-|Kategori|Microsoft.Portability|
-|Yeni Değişiklik|P/Invoke derlemenin dışında görünür olup olmadığını - kesiliyor. P/Invoke derlemenin dışında görünür değilse olmayan son -.|
+|Kategori|Microsoft. taşınabilirlik|
+|Yeni Değişiklik|Parçalama-P/Invoke derlemenin dışında görünüyorsa. Bölünmez olmayan-P/Invoke derlemenin dışında görünür değilse.|
 
 ## <a name="cause"></a>Sebep
- Bu kural her parametresinin boyutu ve P/Invoke dönüş değeri değerlendirir ve bunların boyutu, 32-bit ve 64-bit platformlarda, yönetilmeyen kod sıralandığı zaman doğru olduğunu doğrular. Bu kural ihlalini en yaygın bir platforma bağımlı, işaretçi boyutlu değişken gerekli olduğu sabit boyutlu bir tamsayı geçirmektir.
+ Bu kural, her parametrenin boyutunu ve bir P/Invoke dönüş değerini değerlendirir ve 32-bit ve 64 bit platformlarındaki yönetilmeyen koda sıralanmış olarak bunların boyutunun doğru olduğunu doğrular. Bu kuralın en yaygın ihlali, platforma bağımlı, işaretçi boyutunda bir değişkenin gerekli olduğu sabit boyutlu bir tamsayıyı iletmektir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kuralı ihlal aşağıdaki senaryolardan biri gerçekleşir:
+ Aşağıdaki senaryolardan biri bu kuralın oluştuğunu ihlal ediyor:
 
-- Olarak yazılmalıdır, parametre ve dönüş değeri bir sabit boyutlu tamsayı olarak yazılan bir `IntPtr`.
+- Dönüş değeri veya parametresi, `IntPtr` olarak yazılması gerektiğinde sabit boyutlu bir tamsayı olarak yazılır.
 
-- Parametre ve dönüş değeri olarak yazılmış bir `IntPtr` zaman yazdığınız sabit boyutlu bir tamsayı olarak.
+- Dönüş değeri veya parametresi, sabit boyutlu bir tamsayı olarak yazılması gerektiğinde bir `IntPtr` olarak yazılır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Kullanarak, bu ihlali düzeltebilirsiniz `IntPtr` veya `UIntPtr` yerine tanıtıcılarını temsil etmek için `Int32` veya `UInt32`.
+ @No__t_2 veya `UInt32` yerine tutamaçları temsil etmek için `IntPtr` veya `UIntPtr` kullanarak bu ihlalin düzelini çözebilirsiniz.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu uyarı göndermeme değil.
+ Bu uyarıyı gizmemelisiniz.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu kural ihlalini gösterir.
+ Aşağıdaki örnek, bu kuralın ihlaline neden olduğunu gösterir.
 
 ```csharp
 internal class NativeMethods
@@ -60,7 +60,7 @@ internal class NativeMethods
 }
 ```
 
- Bu örnekte, `nIconIndex` parametresi olarak bildirilmiş bir `IntPtr`, 4 bayt genişliğinde 32-bit bir platforma ve 8 baytlık bir 64-bit platformda geniş olduğu. Görürsünüz izleyen yönetilmeyen bildiriminde `nIconIndex` tüm platformlarda bir 4-bayt işaretsiz tamsayı.
+ Bu örnekte, `nIconIndex` parametresi, 32 bitlik bir platformda 4 bayt genişliğinde ve 64 bitlik bir platformda 8 bayt genişliğinde olan bir `IntPtr` olarak bildirilmiştir. Aşağıdaki yönetilmeyen bildirimde, `nIconIndex` ' ın tüm platformlarda 4 baytlık işaretsiz bir tamsayı olduğunu görebilirsiniz.
 
 ```csharp
 HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
@@ -68,11 +68,11 @@ HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
 ```
 
 ## <a name="example"></a>Örnek
- İhlali gidermek için bildirimi aşağıdaki gibi değiştirin:
+ İhlalin giderilmesi için bildirimi aşağıdaki şekilde değiştirin:
 
 ```csharp
 internal class NativeMethods{
-    [DllImport("shell32.dll", CharSet=CharSet.Auto)] 
+    [DllImport("shell32.dll", CharSet=CharSet.Auto)]
     internal static extern IntPtr ExtractIcon(IntPtr hInst,
         string lpszExeFileName, uint nIconIndex);
 }

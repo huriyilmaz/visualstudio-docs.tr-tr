@@ -1,5 +1,5 @@
 ---
-title: Kod oluşturma ve T4 metin şablonları | Microsoft Docs
+title: Kod oluşturma ve T4 Metin şablonları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -14,114 +14,105 @@ helpviewer_keywords:
 - generating code
 ms.assetid: 74a0a748-5b11-4999-8bea-49572967827d
 caps.latest.revision: 84
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4886a23272962d2dee03576504d60d64067faf20
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1f34422dfd47efdce9bf837f923da0e139a13398
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433403"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667916"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Kod Oluşturma ve T4 Metin Şablonları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İçinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], *T4 metin şablonu* metin blokları ve bir metin dosyası oluşturabilir Denetim mantığı bir karışımını olduğu. Denetim mantığı program kodu içinde parçalarını olarak yazılır [!INCLUDE[csprcs](../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]. Visual Studio 2015 güncelleştirme 2 ve sonraki sürümlerinde, C# sürüm 6.0 özellikleri T4 şablonları yönergeleri kullanabilirsiniz. Oluşturulan dosyanın metin bir Web sayfası veya kaynak dosya veya program herhangi bir dilde kaynak kodu gibi herhangi bir türde olabilir.  
-  
- T4 metin şablonları iki tür vardır:  
-  
- **Çalıştırma zamanı T4 metin şablonları** ('önceden işlenmiş Şablonları'), metin dizelerinin çıktısını bir parçası olarak genellikle üretmek için uygulamanızdaki yürütülür.  
- Örneğin, bir HTML sayfası tanımlamak için bir şablon oluşturabilirsiniz:  
-  
-```  
-<html><body>  
- The date and time now is: <#= DateTime.Now #>  
-</body></html>  
-```  
-  
- Şablonu oluşturulan çıktı benzer olduğuna dikkat edin. Elde edilen çıkış şablona benzerliğini değiştirmek istediğinizde hataları önlemeye yardımcı olur.  
-  
- Ayrıca, bu şablon, program kodu parçalarını içerir. Koşullu bölümler ve uygulamanızın verilerini gösterecek biçimde metnin bölümlerini yinelemek için bu parçaları kullanabilirsiniz.  
-  
- Çıktı üretmek için uygulamanızı şablon tarafından oluşturulan bir işlevi çağırır. Örneğin:  
-  
-```csharp  
-string webResponseText = new MyTemplate().TransformText();  
-  
-```  
-  
- Uygulamanızı sahip olmadığı bir bilgisayarda çalıştırabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yüklü.  
-  
- Bir çalışma zamanı şablonu oluşturmak için bir **önceden işlenmiş metin şablonu** projenize bir dosya. Alternatif olarak, bir düz metin dosyası ekleyin ve ayarlamak kendi **özel araç** özelliğini **TextTemplatingFilePreprocessor**.  
-  
- Daha fazla bilgi için [T4 metin şablonları ile çalışma süresi metni oluşturma](../modeling/run-time-text-generation-with-t4-text-templates.md). Şablonları sözdizimi hakkında daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).  
-  
- **Tasarım zamanı T4 metin şablonları** yürütülür [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kaynak kodunun bir parçası ve uygulamanızın diğer kaynakları tanımlamak için.  
- Genellikle, verileri tek bir girdi dosyası veya veritabanı okumak çeşitli şablonlar kullanın ve bazılarını oluşturun, `.cs`, `.vb`, ya da diğer kaynak dosyası. Her şablon, bir dosya oluşturur. İçinde yürütülen [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] veya [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
-  
- Örneğin, giriş verileriniz, yapılandırma verilerini bir XML dosyası olabilir. Metin şablonlarını, geliştirme sırasında XML dosyasını düzenlediğinizde, uygulama kodunun bir parçası yeniden. Şablonlardan birini, aşağıdaki örneğe benzer:  
-  
-```  
-<#@ output extension=".txt" #>  
-<#@ assembly name="System.Xml" #>  
-<#  
- System.Xml.XmlDocument configurationData = ...; // Read a data file here.  
-#>  
-namespace Fabrikam.<#= configurationData.SelectSingleNode("jobName").Value #>  
-{  
-  ... // More code here.   
-}  
-  
-```  
-  
- Oluşturulan XML dosyasında değerleri bağımlı `.cs` dosya aşağıdaki benzemesi:  
-  
-```  
-namespace Fabrikam.FirstJob  
-{  
-  ... // More code here.   
-}  
-```  
-  
- Başka bir örnek olarak, bir iş akışı diyagramı iş etkinliğinde giriş olabilir. Kullanıcılar kendi iş akışı değiştirdiğinizde veya farklı bir iş akışı yeni kullanıcılar ile iş başlattığınızda, yeni modeline uyacak şekilde kodu yeniden oluşturmak kolaydır.  
-  
- Tasarım zamanı şablonları, daha hızlı ve gereklilikler değiştiğinde yapılandırmasını değiştirmek için daha güvenilir hale getirir. Genellikle iş akışı örnekte olduğu gibi iş gereksinimleri açısından giriş tanımlanır. Bu, Kullanıcılarınızla değişiklikleri tartışmak kolaylaştırır. Tasarım zamanı şablonları, bu nedenle bir Çevik Geliştirme sürecinde kullanışlı bir araç olan.  
-  
- Tasarım zamanı şablonu oluşturmak için bir **metin şablonu** projenize bir dosya. Alternatif olarak, bir düz metin dosyası ekleyin ve ayarlamak kendi **özel araç** özelliğini **TextTemplatingFileGenerator**.  
-  
- Daha fazla bilgi için [T4 metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Şablonları sözdizimi hakkında daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).  
-  
+@No__t_0, *T4 metin şablonu* metin dosyası oluşturabilen metin blokları ve denetim mantığının bir karışımından oluşur. Denetim mantığı [!INCLUDE[csprcs](../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] program kodunun parçaları olarak yazılmıştır. Visual Studio 2015 güncelleştirme 2 ve sonrasında, T4 şablonları yönergelerinden C# sürüm 6,0 özelliklerini kullanabilirsiniz. Oluşturulan dosya, bir Web sayfası veya bir kaynak dosyası gibi herhangi bir türde metin veya herhangi bir dilde program kaynak kodu olabilir.
+
+ İki tür T4 metin şablonu vardır:
+
+ **Çalışma zamanı T4 Metin şablonları** (' önceden işlenmiş ' şablonlar) uygulamanızda, genellikle çıktısının bir parçası olarak metin dizeleri oluşturmak için yürütülür.
+Örneğin, bir HTML sayfası tanımlamak için bir şablon oluşturabilirsiniz:
+
+```
+<html><body>
+ The date and time now is: <#= DateTime.Now #>
+</body></html>
+```
+
+ Şablonun oluşturulan çıktıya benzediğine dikkat edin. Şablonun elde edilen çıktısına benzerliği, değiştirmek istediğinizde hatalardan kaçınmanıza yardımcı olur.
+
+ Ayrıca, şablon program kodunun parçalarını içerir. Bu parçaları, metnin bölümlerini yinelemek, koşullu bölümler yapmak ve uygulamanızdan verileri göstermek için kullanabilirsiniz.
+
+ Çıktı oluşturmak için, uygulamanız şablon tarafından oluşturulan bir işlevi çağırır. Örneğin:
+
+```csharp
+string webResponseText = new MyTemplate().TransformText();
+
+```
+
+ Uygulamanız, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yüklü olmayan bir bilgisayarda çalışabilir.
+
+ Çalışma zamanı şablonu oluşturmak için projenize **önceden işlenmiş bir metin şablonu** dosyası ekleyin. Alternatif olarak, düz metin dosyası ekleyebilir ve **özel araç** özelliğini **Texttemplatingfileönişlemci**olarak ayarlayabilirsiniz.
+
+ Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md). Şablonların sözdizimi hakkında daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
+
+ **Tasarım zamanı T4 Metin şablonları** , kaynak kodun ve uygulamanızın diğer kaynaklarının bir kısmını tanımlamak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yürütülür.
+Genellikle, tek bir giriş dosyası veya veritabanındaki verileri okuyan çeşitli şablonlar kullanır ve `.cs`, `.vb` veya diğer kaynak dosyalarından bazılarını oluşturabilirsiniz. Her şablon bir dosya oluşturur. @No__t_0 veya [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] içinde yürütülürler.
+
+ Örneğin, giriş verileriniz bir XML dosyası yapılandırma verileri olabilir. Geliştirme sırasında XML dosyasını düzenlediğinizde metin şablonları, uygulama kodunun bir parçasını yeniden oluşturacak. Şablonlardan biri aşağıdaki örneğe benzeyebilir:
+
+```
+<#@ output extension=".txt" #>
+<#@ assembly name="System.Xml" #>
+<#
+ System.Xml.XmlDocument configurationData = ...; // Read a data file here.
+#>
+namespace Fabrikam.<#= configurationData.SelectSingleNode("jobName").Value #>
+{
+  ... // More code here.
+}
+
+```
+
+ XML dosyasındaki değerlere bağlı olarak, oluşturulan `.cs` dosyası aşağıdakine benzer:
+
+```
+namespace Fabrikam.FirstJob
+{
+  ... // More code here.
+}
+```
+
+ Başka bir örnek olarak, giriş bir iş etkinliğinde iş akışının diyagramı olabilir. Kullanıcılar iş iş akışını Değiştir, ya da farklı bir iş akışına sahip yeni kullanıcılarla çalışmaya başladığınızda, kodu yeni modele sığacak şekilde yeniden oluşturmak kolaydır.
+
+ Tasarım zamanı şablonları, gereksinimler değiştiğinde yapılandırmanın değiştirilmesini daha hızlı ve daha güvenilir hale getirir. Genellikle giriş, iş akışı örneğinde olduğu gibi iş gereksinimlerine göre tanımlanır. Bu, değişiklikleri kullanıcılarınız ile tartışmanızı kolaylaştırır. Bu nedenle, tasarım zamanı şablonları Çevik bir geliştirme sürecinde yararlı bir araçtır.
+
+ Tasarım zamanı şablonu oluşturmak için projenize bir **metin şablonu** dosyası ekleyin. Alternatif olarak, düz metin dosyası ekleyebilir ve **özel araç** özelliğini **TextTemplatingFileGenerator**olarak ayarlayabilirsiniz.
+
+ Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Şablonların sözdizimi hakkında daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
+
 > [!NOTE]
-> Terim *modeli* bazen bir veya daha fazla şablonları tarafından okunan veriler tanımlamak için kullanılır. Modeli, herhangi bir dosyadan veya veritabanından herhangi bir biçimdeki olabilir. Bir UML modeli veya bir etki alanına özgü dil modeli yok. 'Model' yalnızca veri kod benzeyen yerine iş kavramlarını bağlamında tanımlanabilir gösterir.  
-  
- Metin şablonu dönüştürme özelliği adlı *T4*.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [T4 Metin Şablonları İle Çalışma Süresi Metni Oluşturma](../modeling/run-time-text-generation-with-t4-text-templates.md)  
- Metin dosyaları oluşturur herhangi bir uygulama, önceden derlenmiş metin şablonlarını metin tanımlamanın kolay ve güvenilir bir yöntemdir. Ancak, bu yöntem, çalışma zamanında değiştirme metin şablonları için kullanılamaz.  
-  
- [T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)  
- Kod ve diğer kaynakları bir modelde oluşturma modelini güncelleştirerek uygulamanızı güncelleştirmenize olanak tanır.  
-  
- [Derleme Sürecinde Kod Oluşturma](../modeling/code-generation-in-a-build-process.md)  
- Yüklediyseniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Görselleştirme ve modelleme SDK'sı, sağlamak oluşturulan yazılım tutar değişiklikler ile güncel modelde.  
-  
- [T4 Metin Şablonu Yazma](../modeling/writing-a-t4-text-template.md)  
- Bir metin şablonu dosyasının söz dizimi.  
-  
- [İzlenecek yol: Metin Şablonları Kullanarak Kod Oluşturma](../modeling/walkthrough-generating-code-by-using-text-templates.md)  
- Kod oluşturmayı kullan yollarından biri Tanıtımı.  
-  
- [Bir T4 Metin Şablonuna İlişkin Hata Ayıklama](../modeling/debugging-a-t4-text-template.md)  
- Metin şablonları ve bazı ortak metin şablonu hataları ayıklanacak nasıl.  
-  
- [TextTransform Yardımcı Programı ile Dosya Oluşturma](../modeling/generating-files-with-the-texttransform-utility.md)  
- Metin şablonu dönüştürmelerinin çalıştırmak için kullanabileceğiniz komut satırı aracı.  
-  
- [T4 Metin Dönüştürmeyi Özelleştirme](../modeling/customizing-t4-text-transformation.md)  
- Yazma yönerge işlemcileri ve kendi veri kaynakları için özel şablon oluşturma konakları öğreneceksiniz.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir UML modelinden dosyalar oluşturma](../modeling/generate-files-from-a-uml-model.md)   
- [Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)
+> *Model* terimi bazen bir veya daha fazla şablon tarafından okunan verileri tanımlamakta kullanılır. Model herhangi bir biçimde herhangi bir dosya veya veritabanı türünde olabilir. Bir UML modeli veya etki alanına özgü dil modeli olması gerekmez. ' Model ' yalnızca verilerin koda benzer değil iş kavramları açısından tanımlanamayacağını gösterir.
+
+ Metin şablonu dönüştürme özelliği *T4*olarak adlandırılır.
+
+## <a name="in-this-section"></a>Bu Bölümde
+ [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md) Metin dosyaları üreten herhangi bir uygulamada, önceden derlenmiş metin şablonları, metni tanımlamaya yönelik kolay ve güvenilir bir yöntemdir. Ancak, bu yöntem çalışma zamanında değişen metin şablonları için kullanılamaz.
+
+ [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md) Bir modelden kod ve diğer kaynakların oluşturulması, modeli güncelleştirerek uygulamanızı güncelleştirmenizi sağlar.
+
+ [Derleme Işleminde kod üretimi](../modeling/code-generation-in-a-build-process.md) Görselleştirme ve modelleme SDK [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yüklediyseniz, oluşturulan yazılımın modeldeki değişikliklerle güncel kalmasını sağlayabilirsiniz.
+
+ [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md) Metin şablonu dosyasının sözdizimi.
+
+ [Izlenecek yol: metin şablonları kullanarak kod oluşturma](../modeling/walkthrough-generating-code-by-using-text-templates.md) Kod oluşturmayı kullanmanın bir yolu gösterimi.
+
+ [T4 metin şablonunda hata ayıklama](../modeling/debugging-a-t4-text-template.md) Metin şablonlarındaki hata ayıklama ve bazı yaygın metin şablonu hataları.
+
+ [TextTransform yardımcı programıyla dosyalar oluşturma](../modeling/generating-files-with-the-texttransform-utility.md) Metin şablonu dönüşümlerini çalıştırmak için kullanabileceğiniz komut satırı aracı.
+
+ [T4 metin dönüşümünü özelleştirme](../modeling/customizing-t4-text-transformation.md) Kendi veri kaynaklarınız için yönerge işlemcileri ve özel şablon oluşturma Konakları yazma.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Etki alanına özgü dilden kod üreten](../modeling/generating-code-from-a-domain-specific-language.md) [UML modelden dosya oluşturma](../modeling/generate-files-from-a-uml-model.md)

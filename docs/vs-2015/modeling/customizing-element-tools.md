@@ -6,61 +6,61 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 6dac48b6-db68-4bcd-8aa2-422c2ad5d28b
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 72457070c63cdf6c76207bd92521ab7944d4318a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b6b35bbb0592f7ec9f8defcd9d78dbba5a6a47a5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68199855"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655019"
 ---
 # <a name="customizing-element-tools"></a>Öğe Araçlarını Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bazı DSL tanımlarında öğeleri bir grup olarak tek bir kavramı gösterir. Örneğin, bir bileşen sabit bir dizi bağlantı noktası olan bir model oluşturursanız, her zaman aynı zamanda kendi ana bileşen oluşturulacak bağlantı noktalarını isteyebilirsiniz. Bu nedenle, bir grubu yerine yalnızca bir öğe oluşturur, böylece öğe oluşturma aracı özelleştirmeniz gerekir. Bunu başarmak için öğe oluşturma Aracı nasıl başlatılır özelleştirebilirsiniz.  
-  
- Ayrıca, araç diyagram veya öğenin sürüklediğinizde ne geçersiz kılabilirsiniz.  
-  
-## <a name="customizing-the-content-of-an-element-tool"></a>Öğe araç içeriğini özelleştirme  
- Her öğe araç bir örneğini depolar bir <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP) bir veya daha fazla model öğelerini ve bağlantıları seri hale getirilmiş bir sürümünü içerir. Varsayılan olarak, bir öğe aracının EGP araç için belirttiğiniz sınıfının bir örneğini içerir. Geçersiz kılarak bu ayarı değiştirebilirsiniz *YourLanguage*`ToolboxHelper.CreateElementToolPrototype`. DSL paketi yüklendiğinde, bu yöntem çağrılır.  
-  
- Yönteminin parametresi, DSL tanımında belirtilen sınıfın kimliğidir. İlgilendiğiniz sınıfı ile yöntemi çağrıldığında, EGP ekstra öğeler ekleyebilirsiniz.  
-  
- EGP paketinizle öğeleri için bir ana öğe bağlantılarını ekleme içermesi gerekir. Referans bağlantıları da dahil edebilirsiniz.  
-  
- Aşağıdaki örnek, bir ana öğesi ve iki katıştırılmış öğeleri oluşturur. Ana sınıfı Direnci çağrılır ve iki gömme ilişkisi için Terminal adlı öğe vardır. Gömme rol özellikleri Terminal1 ve Terminal2 olarak adlandırılır ve her ikisi de 1..1 çokluğu sahip.  
-  
-```  
-using Microsoft.VisualStudio.Modeling; ...    
-public partial class CircuitDiagramToolboxHelper  
-{  
-  protected override ElementGroupPrototype    CreateElementToolPrototype(Store store, Guid domainClassId)  
-  {  
-    // A case for each tool to customize:    
-    if (domainClassId == Resistor.DomainClassId)  
-    {  
-      // Set up the prototype elements and links:  
-      Resistor resistor = new Resistor(store);  
-      resistor.Terminal1 = new Terminal(store);   
-      resistor.Terminal2 = new Terminal(store);  
-      resistor.Terminal1.Name = "T1"; // embedding  
-      resistor.Terminal2.Name = "T2"; // embedding  
-      // We could also set up reference links.  
-  
-      // Create an element group prototype for the toolbox:  
-      ElementGroup egp = new ElementGroup(store.DefaultPartition);  
-      egp.AddGraph(resistor, true);  
-      // We do not have to explicitly include embedded children.  
-      return egp.CreatePrototype();  
-    }  
-    // Element tools for other classes:  
-    else  
-      return base.CreateElementToolPrototype(store, domainClassId);  
-  }  
-}  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Bazı DSL tanımlarında, tek bir kavramı öğe grubu olarak temsil edersiniz. Örneğin, bir bileşenin sabit bir bağlantı noktası kümesine sahip olduğu bir model oluşturursanız, her zaman bağlantı noktalarının üst bileşenleri ile aynı zamanda oluşturulmasını istersiniz. Bu nedenle, öğe oluşturma aracını yalnızca bir tane yerine bir öğe grubu oluşturacak şekilde özelleştirmeniz gerekir. Bunu başarmak için, öğe oluşturma aracının nasıl başlatıldığını özelleştirebilirsiniz.
+
+ Ayrıca araç diyagrama veya bir öğeye sürüklendiğinde ne olacağını geçersiz kılabilirsiniz.
+
+## <a name="customizing-the-content-of-an-element-tool"></a>Öğe aracının Içeriğini özelleştirme
+ Her öğe aracı bir veya daha fazla model öğesi ve bağlantısının serileştirilmiş bir sürümünü içeren bir <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP) örneğini depolar. Varsayılan olarak, bir öğe aracının EGP 'si, araç için belirttiğiniz sınıfın bir örneğini içerir. Bunu, *dil* `ToolboxHelper.CreateElementToolPrototype` geçersiz kılarak değiştirebilirsiniz. Bu yöntem DSL paketi yüklendiğinde çağrılır.
+
+ Yöntemin parametresi, DSL tanımında belirttiğiniz sınıfın KIMLIĞIDIR. Yöntemi ilgilendiğiniz sınıfla çağrıldığında, EGP içine ek öğeler ekleyebilirsiniz.
+
+ EGP, bir ana öğeden yan öğe öğelerine ekleme bağlantıları içermelidir. Ayrıca, başvuru bağlantıları da içerebilir.
+
+ Aşağıdaki örnek, bir ana öğe ve iki Embedded öğesi oluşturur. Ana sınıfa Direntor adı verilir ve Terminal adlı öğelere iki katıştırma ilişkisi vardır. Ekleme rolü özellikleri terminal1 ve terminal2 olarak adlandırılır ve her ikisi de 1.. 1 çokluğuna sahiptir.
+
+```
+using Microsoft.VisualStudio.Modeling; ...
+public partial class CircuitDiagramToolboxHelper
+{
+  protected override ElementGroupPrototype    CreateElementToolPrototype(Store store, Guid domainClassId)
+  {
+    // A case for each tool to customize:
+    if (domainClassId == Resistor.DomainClassId)
+    {
+      // Set up the prototype elements and links:
+      Resistor resistor = new Resistor(store);
+      resistor.Terminal1 = new Terminal(store);
+      resistor.Terminal2 = new Terminal(store);
+      resistor.Terminal1.Name = "T1"; // embedding
+      resistor.Terminal2.Name = "T2"; // embedding
+      // We could also set up reference links.
+
+      // Create an element group prototype for the toolbox:
+      ElementGroup egp = new ElementGroup(store.DefaultPartition);
+      egp.AddGraph(resistor, true);
+      // We do not have to explicitly include embedded children.
+      return egp.CreatePrototype();
+    }
+    // Element tools for other classes:
+    else
+      return base.CreateElementToolPrototype(store, domainClassId);
+  }
+}
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Öğe Oluşturma ve Hareketini Özelleştirme](../modeling/customizing-element-creation-and-movement.md)

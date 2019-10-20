@@ -1,64 +1,61 @@
 ---
-title: 'Nasıl yapılır: Temel renk gölgelendiricisi oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: temel renk gölgelendiricisi oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: c301328a-079a-49e8-b688-4749c01657c0
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 59259d8186803d966e79f27012e6be6c22b47dd8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 90f27e2359954e56a5b3d86bfc31883d4f29c44d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63414713"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664581"
 ---
-# <a name="how-to-create-a-basic-color-shader"></a>Nasıl yapılır: Temel renk gölgelendiricisi oluşturma
+# <a name="how-to-create-a-basic-color-shader"></a>Nasıl Yapılır: Temel Renk Gölgelendiricisi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu belge gölgelendirici Tasarımcısı ve yönlendirilmiş grafik gölgelendirici dili (DGSL) bir düz renk gölgelendiricisi oluşturma için nasıl kullanılacağını gösterir. Bu gölgelendirici için sabit bir RGB renk değeri son rengini ayarlar.  
-  
- Bu belgede şu faaliyetler gösterilmiştir:  
-  
-- Bir grafikten düğümleri kaldırma  
-  
-- Grafiğe düğüm ekleme  
-  
-- Düğüm özelliklerini ayarlama  
-  
-- Düğümleri bağlanma  
-  
-## <a name="creating-a-flat-color-shader"></a>Düz renk gölgelendiricisi oluşturma  
- Son çıkış rengi bir RGB renk sabiti renk değerini yazarak düz renk gölgelendiricisi uygulayabilirsiniz.  
-  
- Başlamadan önce emin **özellikleri** penceresi ve **araç kutusu** görüntülenir.  
-  
-#### <a name="to-create-a-flat-color-shader"></a>Düz renk gölgelendiricisi oluşturma  
-  
-1. Çalışmak için bir DGSL gölgelendirici oluşturun. Projenize DGSL gölgelendirici ekleme hakkında daha fazla bilgi için bkz. Başlarken bölümünde [gölgelendirici Tasarımcısı](../designers/shader-designer.md).  
-  
-2. Silme **nokta rengi** düğümü. Kullanım **seçin** seçme aracı **nokta rengi** düğümünü ve ardından menü çubuğunda, **Düzenle**, **Sil**.  
-  
-3. Ekleme bir **renk sabit** grafiğe düğüm. İçinde **araç kutusu**altında **sabitleri**seçin **renk sabit** ve tasarım yüzeyine taşıyın.  
-  
-4. Renk için bir değer belirtmeniz **renk sabit** düğümü. Kullanım **seçin** seçme aracı **Color sabit** düğümünü ve ardından **özellikleri** penceresi, **çıkış** özelliği belirtin bir renk değeri. Turuncu için (1.0, 0,5, 0.2, 1.0) değerini belirtin.  
-  
-5. Renk sabiti için son rengini bağlanın. Bağlantılar oluşturmak için taşıma **RGB** , terminal **renk sabit** düğüme **RGB** , terminal **son rengini** düğümünü ve ettirin **alfa** , terminal **renk sabit** düğüme **alfa** , terminal **son rengini** düğümü. Bu bağlantılar, önceki adımda tanımlanan renk sabiti için son rengini ayarlayın.  
-  
-   Aşağıdaki resimde tamamlanmış gölgelendirici grafiği ve bir küpe uygulanan gölgelendiricinin önizlemesini gösterir.  
-  
+Bu belge, bir düz renk gölgelendiricisi oluşturmak için Gölgelendirici Tasarımcısının ve yönlendirilmiş grafik gölgelendirici dilinin (DGSL) nasıl kullanılacağını gösterir. Bu gölgelendirici, son rengi sabit bir RGB renk değerine ayarlar.
+
+ Bu belge Şu etkinlikleri gösterir:
+
+- Grafikten düğümleri kaldırma
+
+- Grafiğe düğüm ekleme
+
+- Düğüm özelliklerini ayarlama
+
+- Düğümleri bağlama
+
+## <a name="creating-a-flat-color-shader"></a>Düz renk gölgelendiricisi oluşturma
+ Bir RGB renk sabitinin Color değerini son çıkış rengine yazarak düz bir renk gölgelendiricisi uygulayabilirsiniz.
+
+ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görüntülendiğinden emin olun.
+
+#### <a name="to-create-a-flat-color-shader"></a>Düz renk gölgelendiricisi oluşturmak için
+
+1. Birlikte çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize bir DGSL gölgelendiricisi ekleme hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)Başlarken bölümü.
+
+2. **Nokta rengi** düğümünü silin. **Nokta rengi** düğümünü seçmek için **Seç** aracını kullanın ve ardından menü çubuğunda **Düzenle**, **Sil**' i seçin.
+
+3. Grafiğe **renkli sabit** bir düğüm ekleyin. **Araç kutusunda** **sabitler**altında **renk sabiti** ' ni seçin ve tasarım yüzeyine taşıyın.
+
+4. **Renk sabiti** düğümü için bir renk değeri belirtin. **Renk sabiti** düğümünü seçmek için **seçim** aracını kullanın ve ardından **Özellikler** penceresinde, **Çıkış** özelliği ' nde bir renk değeri belirtin. Turuncu için bir değer (1,0, 0,5, 0,2, 1,0) belirtin.
+
+5. Renkli sabiti son renge bağlayın. Bağlantıları oluşturmak için, renk sabiti düğümünün **RGB** terminalini **son renk** düğümünün **RGB** **terminaline** taşıyın ve ardından **renk sabiti** düğümünün **Alfa** terminalini **Alpha** 'a taşıyın **son renk** düğümünün terminali. Bu bağlantılar, son rengi önceki adımda tanımlanan renk sabitine ayarlar.
+
+   Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir küpe uygulanan gölgelendirici önizlemesi gösterilmektedir.
+
 > [!NOTE]
-> Çizimde, daha iyi gölgelendirici etkisini göstermek için turuncu renk belirtildi.  
-  
- ![Gölgelendirici grafiği ve sonucu 3&#45;D modeli](../designers/media/digit-flat-color-effect.png "basamak düz renk etkisi")  
-  
- Belirli şekiller daha iyi önizlemeleri için bazı gölgelendiricileri sağlayabilir. Gölgelendirici Tasarımcısı'nda gölgelendiricileri önizleme hakkında daha fazla bilgi için bkz: [gölgelendirici Tasarımcısı](../designers/shader-designer.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
- [Nasıl yapılır: Gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md)   
- [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)   
- [Gölgelendirici Tasarımcısı Düğümleri](../designers/shader-designer-nodes.md)
+> Çizimde, gölgelendirici efektini daha iyi göstermek için turuncu bir renk belirtildi.
+
+ ![Gölgelendirici Grafiği ve bunun sonucu 3&#45;D modelde](../designers/media/digit-flat-color-effect.png "Basamak-düz renkli efekt")
+
+ Bazı biçimler bazı gölgelendiriciler için daha iyi önizleme sağlayabilir. Gölgelendirici tasarımcısında gölgelendiricilerin önizlemesi hakkında daha fazla bilgi için bkz. [Gölgelendirici Tasarımcısı](../designers/shader-designer.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md) [nasıl yapılır: gölgelendirici](../designers/how-to-export-a-shader.md) [Gölgelendirici Tasarımcısı](../designers/shader-designer.md) [Gölgelendirici Tasarımcısı düğümlerini](../designers/shader-designer-nodes.md) dışarı aktarma

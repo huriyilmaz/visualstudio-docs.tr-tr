@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Proje şablonları oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: proje şablonları oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,48 +14,47 @@ helpviewer_keywords:
 - project templates, creating
 ms.assetid: a1a6999d-a34c-48a8-b1cf-027eb5c76398
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 109810e3650ec4cf01d781026eddf09834fc3f18
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: f358d5b95349fe99b2a2e01df5158d2c0aa10a11
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703108"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668045"
 ---
-# <a name="how-to-create-project-templates"></a>Nasıl yapılır: Proje şablonları oluşturma
+# <a name="how-to-create-project-templates"></a>Nasıl Yapılır: Proje Şablonları Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu yordamı kullanarak bir şablonu oluşturmanızı sağlayan **şablonu dışarı aktar** Sihirbazı'nı, ama bir .zip dosyası, şablonunuzda paketler. Şablonlar için geliştirilmiş dağıtım VSIX dosya biçiminde dışarı aktarma Şablon Sihirbazı uzantısı kullanarak ya da dahil şablonlarla oluşturabilirsiniz [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)], veya şablonları el ile oluşturabilirsiniz.  
-  
-### <a name="to-create-a-custom-project-template-with-the-standard-export-template-wizard"></a>Standart dışarı aktarma Şablonu Sihirbazı ile bir özel Proje şablonu oluşturmak için  
-  
-1. Bir proje oluşturun.  
-  
+Bu yordam, şablonunuzu bir. zip dosyasında paketleyen şablonu **dışarı aktarma** Sihirbazı 'nı kullanarak bir şablon oluşturmanıza olanak sağlar. Ayrıca, şablonu dışarı aktarma Sihirbazı uzantısını veya [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] dahil olan şablonları kullanarak geliştirilmiş dağıtım için VSıX dosya biçiminde şablonlar oluşturabilirsiniz veya el ile şablon oluşturabilirsiniz.
+
+### <a name="to-create-a-custom-project-template-with-the-standard-export-template-wizard"></a>Standart şablonu dışarı aktarma sihirbazıyla özel bir proje şablonu oluşturmak için
+
+1. Bir proje oluşturun.
+
     > [!NOTE]
-    > Bir proje adlandırma şablon kaynağını ne zaman yalnızca geçerli tanımlayıcı karakterler kullanın. Bir proje adı geçersiz karakterler ile'den dışarı aktarılan bir şablonu gelecekteki projeleri şablonu temel alan derleme hatalarına neden olabilir. Geçerli tanımlayıcı karakter hakkında daha fazla bilgi için bkz. [bildirilen öğe adları](https://msdn.microsoft.com/library/09d8843b-c0dc-4afe-9dab-87c439a69e66).  
-  
-2. Bir şablon olarak dışarı hazır olana kadar proje düzenleyin.  
-  
-3. Burada parametre değişikliğini gerçekleşmesi belirtmek için kod dosyaları uygun şekilde düzenleyin. Parametre değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir şablonda parametreleri ikame etme](../ide/how-to-substitute-parameters-in-a-template.md).  
-  
-4. Üzerinde **dosya** menüsünü tıklatın **şablonu dışarı aktar**. **Şablonu dışarı aktar** Sihirbazı açılır.  
-  
-5. Tıklayın **proje şablonu**.  
-  
-6. Geçerli çözümdeki birden fazla projeniz varsa, bir şablonu dışarı aktarmak istediğiniz projeleri seçin.  
-  
-7. **İleri**'ye tıklayın.  
-  
-8. Bir simge ve şablonunuz için bir önizleme görüntüsü seçin. Bunlar görünür **yeni proje** iletişim kutusu.  
-  
-9. Bir şablon adı ve açıklama girin.  
-  
-10. **Son**'a tıklayın. Projenize bir .zip dosyasına dışarı aktardığınız ve belirtilen çıkış konumda ve yanıt seçtiyseniz, içeri aktarılan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-     Varsa [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] yüklüyse, tamamlanan şablon dağıtımı için bir .vsix dosyasında kullanarak kayabilir **VSIX projesi** şablonu. Daha fazla bilgi için [VSIX proje şablonu ile çalışmaya başlama](../extensibility/getting-started-with-the-vsix-project-template.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)   
- [Nasıl yapılır: Öğe Şablonları Oluşturma](../ide/how-to-create-item-templates.md)
+    > Bir şablon için kaynak olacak bir proje adlandırırken yalnızca geçerli tanımlayıcı karakterler kullanın. Geçersiz karakterlerle adlı bir projeden aktarılmış bir şablon, gelecekteki projelerde Şablon temelinde derleme hatalarına neden olabilir. Geçerli tanımlayıcı karakterleri hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları](https://msdn.microsoft.com/library/09d8843b-c0dc-4afe-9dab-87c439a69e66).
+
+2. Proje, bir şablon olarak verilmeye hazırlanana kadar projeyi düzenleyin.
+
+3. Uygun şekilde, parametre değiştirmenin nerede olması gerektiğini belirtmek için kod dosyalarını düzenleyin. Parametre değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: şablonda parametreleri değiştirme](../ide/how-to-substitute-parameters-in-a-template.md).
+
+4. **Dosya** menüsünde, **şablonu dışarı aktar**' a tıklayın. **Şablonu dışarı aktarma** Sihirbazı açılır.
+
+5. **Proje şablonu**' na tıklayın.
+
+6. Geçerli çözümünüzde birden fazla projeniz varsa, bir şablona vermek istediğiniz projeleri seçin.
+
+7. **İleri**'ye tıklayın.
+
+8. Şablonunuz için bir simge ve önizleme görüntüsü seçin. Bu, **Yeni proje** iletişim kutusunda görünür.
+
+9. Bir şablon adı ve açıklama girin.
+
+10. **Son**'a tıklayın. Projeniz bir. zip dosyasına aktarılır ve belirtilen çıkış konumuna yerleştirilir ve seçilirse [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] içine aktarılır.
+
+     @No__t_0 yüklüyse, **VSIX proje** şablonunu kullanarak dağıtım için tamamlanmış şablonu bir. vsix dosyasına sardırabilirsiniz. Daha fazla bilgi için bkz. [VSIX proje şablonu Ile çalışmaya](../extensibility/getting-started-with-the-vsix-project-template.md)başlama.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md) [nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)

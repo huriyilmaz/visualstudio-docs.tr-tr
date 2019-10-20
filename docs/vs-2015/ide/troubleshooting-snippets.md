@@ -1,5 +1,5 @@
 ---
-title: Kod parçacıklarının sorunlarını giderme | Microsoft Docs
+title: Sorun giderme parçacıkları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - troubleshooting Visual Basic, IntelliSense Code Snippets
 ms.assetid: 7b6dd40e-2f78-4b50-8e68-41fac1bcb81e
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 61f1a623d5ee5edee376819ad6c385aead5003f8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f73cb7ba59daf2f8ee957d95dee36bba59f87614
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62429014"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654788"
 ---
 # <a name="troubleshooting-snippets"></a>Sorun Giderme Parçacıkları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-IntelliSense kod parçacıkları ile ilgili sorunlar genellikle iki sorunları neden: hatalı kod parçacığı dosyasının içeriğini ya da bozuk kod parçacığı dosyası.  
-  
-## <a name="common-problems"></a>Yaygın sorunlar  
-  
-### <a name="the-snippet-cannot-be-dragged-from-file-explorer-to-a-visual-studio-source-file"></a>Kod parçacığı bir Visual Studio kaynak dosyası için dosya Gezgini'nden sürüklenemez  
-  
-- XML kod parçacığı dosyası bozulmuş olabilir. **XML Düzenleyicisi** içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sorunları XML yapısı içinde bulabilirsiniz.  
-  
-- Kod parçacığı dosyasını kod parçacığı şemaya uygun olmayabilir. **XML Düzenleyicisi** içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sorunları XML yapısı içinde bulabilirsiniz.  
-  
-### <a name="the-code-has-compiler-errors-that-are-not-highlighted"></a>Kodu değil vurgulanan derleyici hataları var  
-  
-- Bir proje başvurusu eksik olabilir. Kod parçacığı hakkında belgeleri inceleyin. Referans bilgisayarda bulunmazsa yüklemeniz gerekir. Bir kod parçacığı eklemeden, gerekli tüm başvuruları projeye eklemeniz gerekir. Kod parçacığı başvuru bilgileri eksikse, hata olarak için kod parçacığı Oluşturucu bildirilebilir.  
-  
-- Bir değişken tanımlanmamış olabilir. Tanımlanmamış bir kod parçacığı değişkenlerinde vurgulanmış olmalıdır. Aksi durumda, kod parçacığı oluşturan hata olarak bildirilebilir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+IntelliSense kod parçacıkları ile ilgili sorunlar genellikle iki sorun nedeniyle oluşur: bozuk parçacık dosyası veya kod parçacığı dosyasındaki bozuk içerik.
+
+## <a name="common-problems"></a>Yaygın sorunlar
+
+### <a name="the-snippet-cannot-be-dragged-from-file-explorer-to-a-visual-studio-source-file"></a>Kod parçacığı dosya Gezgini 'nden bir Visual Studio kaynak dosyasına Sürüklenemiyor
+
+- Kod parçacığı dosyasındaki XML bozuk olabilir. @No__t_1 içindeki **XML Düzenleyicisi** , XML yapısındaki sorunları bulabilir.
+
+- Kod parçacığı dosyası, kod parçacığı şemasıyla uyumlu olmayabilir. @No__t_1 içindeki **XML Düzenleyicisi** , XML yapısındaki sorunları bulabilir.
+
+### <a name="the-code-has-compiler-errors-that-are-not-highlighted"></a>Kodda vurgulanmayan derleyici hataları var
+
+- Proje başvurunuz eksik olabilir. Kod parçacığı hakkındaki belgeleri inceleyin. Başvuru bilgisayarda bulunamazsa, yüklemeniz gerekir. Bir kod parçacığının eklenmesi, gerekli tüm başvuruları projeye eklememelidir. Kod parçacığında başvuru bilgileri eksikse, hata olarak kod parçacığı oluşturucuya raporlanabilir.
+
+- Bir değişken tanımsız olabilir. Kod parçacığında tanımsız değişkenler vurgulanmalıdır. Aksi takdirde, hata olarak kod parçacığı oluşturucuya rapor edilebilir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Kod Parçacıkları](../ide/code-snippets.md)

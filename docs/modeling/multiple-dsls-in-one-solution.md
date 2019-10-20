@@ -2,57 +2,57 @@
 title: Bir Çözümde Birden Çok DSL
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87d9e4ae8239994a7524cdd1da0b3cfe05ea42d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: b5d21d3954a402e7ce8eb26c34d6a6a5c237309a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808190"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658339"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>Bir Çözümde Birden Çok DSL
 
-Bunlar birlikte yüklenir, böylece tek bir çözümün bir parçası birkaç DSL'ler paketleyebilirsiniz.
+Birden çok DSLs 'yi tek bir çözümün parçası olarak paketleyebilir, böylece birlikte yüklenirler.
 
-Birden çok DSL tümleştirmek için çeşitli teknikler kullanabilirsiniz. Daha fazla bilgi için [Visual Studio Modelbus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md) ve [nasıl yapılır: Bir Sürükle ve bırak işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) ve [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).
+Birden çok DSLs 'yi bütünleştirmek için birkaç teknik kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md) ve [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) ve [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).
 
-## <a name="build-more-than-one-dsl-in-the-same-solution"></a>Aynı çözümdeki birden çok DSL oluşturun
+## <a name="build-more-than-one-dsl-in-the-same-solution"></a>Aynı çözümde birden fazla DSL oluşturun
 
-1. Yeni bir **VSIX projesi** proje.
+1. Yeni bir **VSIX proje** projesi oluşturun.
 
-2. VSIX çözüm dizininde değil iki veya daha fazla DSL projesi oluşturun.
+2. VSıX çözüm dizininde iki veya daha fazla DSL projesi oluşturun.
 
-   - Her bir DSL için Visual Studio'nun yeni bir örneğini açın. Yeni DSL oluşturun ve VSIX çözümle aynı çözüm klasörü belirtin.
+   - Her DSL için, Visual Studio 'nun yeni bir örneğini açın. Yeni DSL 'yi oluşturun ve VSıX çözümüyle aynı çözüm klasörünü belirtin.
 
-   - Farklı bir dosya adı uzantısı ile her DSL oluşturduğunuzdan emin olun.
+   - Her bir DSL 'yi farklı bir dosya adı uzantısıyla oluşturduğunuzdan emin olun.
 
-   - Adlarını değiştirme **Dsl** ve **DslPackage** böylece tüm farklıdır projeleri. Örneğin: `Dsl1`, `DslPackage1`, `Dsl2`, `DslPackage2`.
+   - **DSL** ve **DslPackage** projelerinin adlarını farklı olacak şekilde değiştirin. Örneğin: `Dsl1`, `DslPackage1`, `Dsl2`, `DslPackage2`.
 
-   - Her **DslPackage\*\source.extension.tt**, bu satırı doğru Dsl projesi adıyla güncelleştirin:
+   - Her **DslPackage \* \ Source.Extension.tt**, bu satırı doğru DSL projesi adına güncelleştirin:
 
       `string dslProjectName = "Dsl2";`
 
-   - Dsl * ve DslPackage VSIX çözümüne ekleme\* projeleri. Kendi çözüm klasöründe her çifti yerleştirmek isteyebilirsiniz.
+   - VSıX çözümünde DSL * ve DslPackage \* projelerini ekleyin. Her çifti kendi çözüm klasörüne yerleştirmek isteyebilirsiniz.
 
-2. DSL VSIX bildirimlerini Birleştir:
+2. DSLs 'lerin VSıX bildirimlerini birleştirin:
 
-   1. Açık _YourVsixProject_**\source.extension.manifest**.
+   1. _Yourvaltıproject_ **\Source.Extension.manifest**açın.
 
-   2. Her bir DSL seçin **İçerik Ekle** ekleyin:
+   2. Her DSL için **Içerik Ekle** ve Ekle ' yi seçin:
 
-       - `Dsl*` Proje olarak bir **MEF Bileşeni**
+       - bir **MEF bileşeni** olarak proje `Dsl*`
 
-       - `DslPackage*` Proje olarak bir **MEF Bileşeni**
+       - bir **MEF bileşeni** olarak proje `DslPackage*`
 
-       - `DslPackage*` Proje olarak bir **VS paket**
+       - projeyi **vs paketi** olarak `DslPackage*`
 
 3. Çözümü oluşturun.
 
-   Sonuçta elde edilen VSIX hem DSL'ler yükler. F5 kullanarak test edebilir veya dağıtma _YourVsixProject_**\bin\Debug\\\*.vsix**.
+   Elde edilen VSıX her iki DSLs 'i de yükleyecek. F5 'i kullanarak bunları test edebilir veya **\\ \*. vsix**' _yi dağıtabilirsiniz._
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

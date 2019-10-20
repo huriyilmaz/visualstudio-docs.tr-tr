@@ -12,36 +12,36 @@ helpviewer_keywords:
 - metadata as source [C#]
 ms.assetid: 4945a07f-b3be-4f05-a587-fc29058aa8fa
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5883708d0ed32f636c5e229147676cf1545f8a47
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b1d96224be13a12dcaadb394584f8441c7bd1934
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444600"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667517"
 ---
 # <a name="metadata-as-source"></a>Kaynak olarak Meta Veriler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kaynak olarak meta veriler, C# kaynak kodu bir salt okunur arabellek olarak belirir meta verilerini görüntülemenizi sağlar. Bu türler ve üyeler (uygulamalar) olmadan bildirimlerini bir görünümünü sağlar. Çalıştırarak bir kaynak olarak meta verileri görüntüleyebilirsiniz **tanıma** komutunu türleri veya üyeleri kaynak kodu, proje veya çözüm kullanılabilir değil.  
-  
+Kaynak olarak meta veriler, salt okunurdur bir arabellekte kaynak kodu C# olarak görünen meta verileri görüntülemenize olanak sağlar. Bu, türlerin ve üyelerin bildirimlerinin (uygulamalar olmadan) bir görünümünü sunar. Kaynak kodu proje veya çözümünüz tarafından kullanılamayan türler veya Üyeler için **Tanıma Git** komutunu çalıştırarak meta verileri kaynak olarak görüntüleyebilirsiniz.
+
 > [!NOTE]
-> Çalıştırılacak çalıştığınızda **tanıma** komut türleri veya iç olarak işaretlenmiş üyeleri için tümleşik geliştirme ortamı (IDE) görüntülemiyor meta verilerinin bağımsız olarak bir kaynak olarak başvurulan derleme arkadaş veya olur.  
-  
- Ya da Kod Düzenleyicisi'nde kaynak olarak meta verilerini görüntüleyin veya **kod tanımı** penceresi.  
-  
-## <a name="viewing-metadata-as-source-in-the-code-editor"></a>Kod Düzenleyicisi'nde kaynak olarak meta veri görüntüleme  
- Çalıştırdığınızda **tanıma** komut, kaynak kodu kullanılamaz bir öğe için bu öğeye ait meta veri kaynağı olarak görüntülenen bir görünümünü içeren sekmeli belge, Kod Düzenleyicisi'nde görünür. Türün adını ve ardından **[meta verilerden]**, belgenin sekmesinde görünür.  
-  
- Örneğin çalıştırırsanız, **tanıma** komutunu <xref:System.Console>, meta verileri <xref:System.Console> bildiriminden benzeyen C# kaynak kodu, ancak bir uygulama olmadan Kod Düzenleyicisi'nde görünür.  
-  
- ![Kaynak olarak meta veriler](../csharp-ide/media/metadatasource.png "MetadataSource")  
-  
-## <a name="viewing-metadata-as-source-in-the-code-definition-window"></a>Kod tanımı penceresinde kaynak olarak meta veri görüntüleme  
- Zaman **kod tanımı** penceresinde etkin veya görünür, IDE otomatik olarak yürütür **tanıma** içindeseçiliöğeleriveKodDüzenleyicisi'ndeimlecinaltındakiöğeleriçinkomutu **Sınıf Görünümü** veya **Nesne Tarayıcısı**. Kaynak kodu, bu öğe için kullanılabilir durumda değilse, IDE öğenin meta veri kaynağı olarak görüntüler. **kod tanımı** penceresi.  
-  
- Örneğin, sözcük içindeki imlecinizi yerleştirdiğiniz <xref:System.Console> Kod Düzenleyicisi'nde, meta verileri <xref:System.Console> kaynağı olarak görünür **kod tanımı** penceresi. Kaynak benzer <xref:System.Console> bildirimi, ancak bir uygulama olmadan.  
-  
- Görünür bir öğe bildirimi görmek istiyorsanız **kod tanımı** penceresinde öğeyi sağ tıklatıp **tanıma**.
+> İç olarak işaretlenmiş türler veya Üyeler için **tanım gönder** komutunu çalıştırmayı denediğinizde, tümleşik geliştirme ORTAMı (IDE), başvuran derlemenin arkadaş olup olmamasına bakılmaksızın meta verilerini kaynak olarak görüntülemez.
+
+ Meta verileri kod düzenleyicisinde ya da **kod tanımı** penceresinde kaynak olarak görüntüleyebilirsiniz.
+
+## <a name="viewing-metadata-as-source-in-the-code-editor"></a>Meta verileri kod düzenleyicisinde kaynak olarak görüntüleme
+ Kaynak kodu kullanılamayan bir öğe için **Tanıma Git** komutunu çalıştırdığınızda, kod Düzenleyicisi 'nde, kaynak olarak görüntülenen bu öğenin meta verilerinin görünümünü içeren sekmeli bir belge görüntülenir. Türün adı, ardından **gelen [meta verilerden]** belge sekmesinde görünür.
+
+ Örneğin, <xref:System.Console> için **tanımına git** komutunu çalıştırırsanız, <xref:System.Console> meta verileri kod düzenleyicisinde bildirimine benzer ancak bir uygulama olmadan kaynak kodu olarak C# görünür.
+
+ ![Kaynak olarak Meta Veriler](../csharp-ide/media/metadatasource.png "Meta veri kaynağı")
+
+## <a name="viewing-metadata-as-source-in-the-code-definition-window"></a>Meta verileri kod tanımı penceresinde kaynak olarak görüntüleme
+ **Kod tanımı** penceresi etkin veya görünür olduğunda, IDE, kod düzenleyicisinde imlecin altındaki öğeler ve **sınıf görünümü** veya **nesne tarayıcısı**seçili öğeler için otomatik olarak **Tanıma Git** komutunu yürütür. Kaynak kodu bu öğe için kullanılabilir durumda değilse IDE, **kod tanımı** penceresinde öğenin meta verilerini kaynak olarak görüntüler.
+
+ Örneğin, imlecinizi kod düzenleyicisinde <xref:System.Console> sözcüğün içine yerleştirirseniz, <xref:System.Console> meta verileri **kod tanımı** penceresinde kaynak olarak görünür. Kaynak <xref:System.Console> bildirimine benzer, ancak bir uygulama olmadan.
+
+ **Kod tanımı** penceresinde görüntülenen bir öğenin bildirimini görmek isterseniz, öğeye sağ tıklayın ve **Tanıma Git ' e**tıklayın.

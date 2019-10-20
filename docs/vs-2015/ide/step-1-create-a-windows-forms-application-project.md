@@ -1,75 +1,72 @@
 ---
-title: '1. Adım: Bir Windows Forms uygulaması projesi oluşturma | Microsoft Docs'
+title: '1\. Adım: Windows Forms uygulama projesi oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b1e806b5600c0199c1f131ebc3008cc9f8ee1c68
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d9cf0177efe373933f8c34e1600658160f489a64
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442002"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667349"
 ---
-# <a name="step-1-create-a-windows-forms-application-project"></a>1. Adım: Windows Forms Uygulaması Projesi Oluşturma
+# <a name="step-1-create-a-windows-forms-application-project"></a>1\. Adım: Windows Forms Uygulaması Projesi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Resim Görüntüleyici oluşturduğunuzda ilk adım bir Windows Forms Application projesi oluşturmaktır.  
-  
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo")bu konunun video sürümü için bkz: [öğretici 1: Visual Basic'te - Video 1 resim görüntüleyici oluşturma](http://go.microsoft.com/fwlink/?LinkId=205209) veya [öğretici 1: İçinde resim görüntüleyici oluşturma C# -Video 1](http://go.microsoft.com/fwlink/?LinkId=205199). Bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar olduğundan bu videolarda Visual Studio'nun önceki bir sürümü kullanın. Ancak, kavramlar ve yordamlar benzer şekilde Visual Studio'nun geçerli sürümünde çalışır.  
-  
-### <a name="to-create-a-windows-forms-application-project"></a>Bir Windows Forms uygulaması projesi oluşturmak için  
-  
-1. Menü çubuğunda, **dosya**, **yeni**, **proje**. İletişim kutusu şu şekilde görünmelidir.  
-  
-     ![Yeni Proje iletişim kutusu](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts")  
-Yeni Proje iletişim kutusu  
-  
-2. Seçin ya da **Visual C#** veya **Visual Basic** içinde **yüklü şablonlar** listesi.  
-  
-3. Şablonlar listesinde **Windows Forms uygulaması** simgesi. Yeni form adı **pictureviewer olarak**ve ardından **Tamam** düğmesi.  
-  
-     Visual Studio, programınız için bir çözüm oluşturur. Bir çözüm için tüm projeleri ve dosyaları, programınızın gerek duyduğu bir kapsayıcı görevi görür. Bu kullanım koşullarını, bu öğreticinin ilerleyen bölümlerinde daha ayrıntılı olarak açıklanacaktır.  
-  
-4. Artık Visual Studio arabiriminde görmeniz gereken aşağıda gösterilmiştir.  
-  
+Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygulama projesi oluşturmaktır.
+
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 1](http://go.microsoft.com/fwlink/?LinkId=205209) veya [öğretici 1: video 1 ' de C# bir resim görüntüleyici oluşturma](http://go.microsoft.com/fwlink/?LinkId=205199). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+
+### <a name="to-create-a-windows-forms-application-project"></a>Windows Forms uygulama projesi oluşturmak için
+
+1. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin. İletişim kutusu şöyle görünmelidir.
+
+     ![Yeni proje iletişim kutusu](../ide/media/newprojectdialogcallouts.png "Newprojectdialogbelirtme çizgileri") Yeni proje iletişim kutusu
+
+2. **Yüklü şablonlar** listesinde **görsel C#**  veya **Visual Basic** seçin.
+
+3. Şablonlar listesinde **Windows Forms uygulama** simgesini seçin. Yeni formu **PictureViewer olarak adlandırın**olarak adlandırın ve ardından **Tamam** düğmesini seçin.
+
+     Visual Studio, programınız için bir çözüm oluşturur. Bir çözüm, programınızın gerektirdiği tüm proje ve dosyalar için bir kapsayıcı görevi görür. Bu terimler, Bu öğreticinin ilerleyen kısımlarında daha ayrıntılı olarak açıklanacaktır.
+
+4. Aşağıdaki çizimde, Visual Studio arabiriminde neleri görmeniz gerektiği gösterilmektedir.
+
     > [!NOTE]
-    > Pencere düzeniniz tam olarak bu çizim gibi görünmeyebilir. Kesin pencere düzeni, Visual Studio, kullandığınız programlama diline ve diğer etkenlere sürümüne bağlıdır. Ancak, tüm üç pencerenin de görüntülendiğini doğrulamanız gerekir.  
-  
-     ![IDE penceresi](../ide/media/express-ideoverview-visio.png "Express_IDEOverview_Visio")  
-IDE penceresi  
-  
-     Arabirim üç pencere içerir: ana pencere, **Çözüm Gezgini**ve **özellikleri** penceresi.  
-  
-     Bu pencerelerden biri eksikse, menü çubuğundan seçerek varsayılan pencere düzenini geri **penceresi**, **pencere düzenini Sıfırla**. Windows, menü komutlarını kullanarak da görüntüleyebilirsiniz. Menü çubuğunda, **görünümü**, **Özellikler penceresi** veya **Çözüm Gezgini**. Başka bir pencere açıksa seçerek bunları kapatın **kapatmak** (x), sağ üst köşesinde düğmesini.  
-  
-5. Çizim aşağıdaki pencereleri (sol üst köşeden saat yönünde Giden) göstermektedir:  
-  
-    - **Ana pencere** Bu pencerede formlarla çalışma ve kod düzenleme gibi işin çoğunu gerçekleştirirsiniz. Çizimde, pencere, Form Düzenleyicisi'nde bir form gösterir. Pencerenin üst kısmındaki **başlangıç sayfası** sekmesi ve **Form1.cs [Design]** sekmesi görüntülenir. (Visual Basic'te, sekme adı .cs yerine .vb ile biter. cs.)  
-  
-    - **Çözüm Gezgini penceresinde** Bu pencerede, görüntüleyebilir ve çözümünüzdeki tüm öğelerine gidin. Bir dosyanın içeriğini seçerseniz **özellikleri** penceresi değişiklikler. (Bu .cs Visual C# ve Visual Basic uzantısı .vb ile biten) bir kod dosyası açarsanız kod dosyası veya kod dosyası için bir tasarımcı görünür. Bir tasarımcı, düğmeler ve listeler gibi denetimler ileride ekleyebileceğiniz görsel bir yüzeydir. Visual Studio formları için tasarımcı Windows Form Tasarımcısı olarak adlandırılır.  
-  
-    - **Özellikler penceresi** Bu pencerede diğer pencerelerde seçtiğiniz öğelerin özelliklerini değiştirebilirsiniz. Form1 seçerseniz, örneğin, alt başlık ayarlayarak değiştirebileceğiniz **metin** özelliğini değiştirebilirsiniz arka plan rengi ayarlayarak **Backcolor** özelliği.  
-  
+    > Pencere düzeniniz tam olarak bu çizim gibi görünmeyebilir. Kesin pencere düzeni, Visual Studio sürümüne, kullandığınız programlama diline ve diğer faktörlere bağlıdır. Ancak, üç pencerelerin de görüntülendiğini doğrulamanız gerekir.
+
+     ![IDE penceresi](../ide/media/express-ideoverview-visio.png "Express_IDEOverview_Visio") IDE penceresi
+
+     Arabirim üç pencere içerir: Ana pencere, **Çözüm Gezgini**ve **Özellikler** penceresi.
+
+     Bu pencerelerin herhangi biri eksikse, menü çubuğunda **pencere**, pencere **düzeni Sıfırla**' yı seçerek varsayılan pencere yerleşimini geri yükleyin. Ayrıca, menü komutlarını kullanarak da Windows görüntüleyebilirsiniz. Menü çubuğunda **Görünüm**, **özellikler penceresi** veya **Çözüm Gezgini**öğesini seçin. Başka herhangi bir pencere açıksa, sağ üst köşelerindeki **Kapat** (x) düğmesini seçerek onları kapatın.
+
+5. Çizimde aşağıdaki pencereler gösterilmektedir (sol üst köşeden saat yönünde):
+
+    - **Ana pencere** Bu pencerede, yaptığınız gibi, formlarla çalışma ve kod düzenlemeyle ilgili birçok iş olacaktır. Çizimde pencere, form düzenleyicisinde bir form gösterir. Pencerenin üst kısmında, **Başlangıç sayfası** sekmesi ve **Form1.cs [Design]** sekmesi görüntülenir. (Visual Basic, sekme adı. cs yerine. vb ile biter.)
+
+    - **Çözüm Gezgini penceresi** Bu pencerede, çözümünüzdeki tüm öğeleri görüntüleyebilir ve buna gidebilirsiniz. Bir dosya seçerseniz, **Özellikler** penceresinin içeriği değişir. Bir kod dosyası açarsanız (Visual C# üzerinde. cs ve. vb Visual Basic), kod dosyası veya kod dosyası Tasarımcısı görüntülenir. Tasarımcı, üzerinde düğme ve liste gibi denetimler ekleyebileceğiniz görsel bir yüzeydir. Visual Studio Forms için tasarımcı Windows Form Tasarımcısı olarak adlandırılır.
+
+    - **Özellikler penceresi** Bu pencerede, diğer pencereler üzerinde seçtiğiniz öğelerin özelliklerini değiştirebilirsiniz. Örneğin, Form1 ' i seçerseniz, **Text** özelliğini ayarlayarak başlığını değiştirebilir ve **BackColor** özelliğini ayarlayarak arka plan rengini değiştirebilirsiniz.
+
     > [!NOTE]
-    > Üst satırı **Çözüm Gezgini** gösterir **çözüm 'Pictureviewer olarak' (1 proje)** , Visual Studio çözüm için oluşturduğunuz anlamına gelir. Bir çözüm birden fazla proje içerebilir ancak şu an için yalnızca bir proje içeren çözümlerle çalışacaksınız.  
-  
-6. Menü çubuğunda, **dosya**, **Tümünü Kaydet**.  
-  
-     Alternatif, **Tümünü Kaydet** aşağıdaki çizimin gösterdiği araç çubuğunda düğme.  
-  
-     ![Tüm araç çubuğu düğmesi Kaydet](../ide/media/express-iconsaveall.png "Express_IconSaveAll")  
-Tüm araç çubuğu düğmesi Kaydet  
-  
-     Visual Studio klasör adını ve proje adını otomatik olarak doldurur ve daha sonra projeyi projeler klasörünüze kaydeder.  
-  
-### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için  
-  
-- Sonraki öğretici adımına gitmek için bkz: [2. adım: Programınızı çalıştırmak](../ide/step-2-run-your-program.md).  
-  
-- Genel Bakış konusuna dönmek için bkz: [öğretici 1: Resim Görüntüleyici oluşturma](../ide/tutorial-1-create-a-picture-viewer.md).
+    > **Çözüm Gezgini** en üstteki satır, Visual Studio 'nun sizin için bir çözüm oluşturduğu anlamına gelen **' PictureViewer olarak adlandırın ' (1 proje) çözümünü**gösterir. Bir çözüm birden fazla proje içerebilir, ancak şimdilik yalnızca bir proje içeren çözümlerle çalışırsınız.
+
+6. Menü çubuğunda **Dosya**, **Tümünü Kaydet**seçeneklerini belirleyin.
+
+     Alternatif olarak, aşağıdaki çizimin gösterdiği araç çubuğunda **Tümünü Kaydet** düğmesini seçin.
+
+     ![Tümünü Kaydet araç çubuğu düğmesi](../ide/media/express-iconsaveall.png "Express_IconSaveAll") Tümünü Kaydet araç çubuğu düğmesi
+
+     Visual Studio, klasör adı ve proje adını otomatik olarak doldurur ve projeyi projeler klasörünüze kaydeder.
+
+### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
+
+- Sonraki öğretici adımına gitmek için bkz. 2. [Adım: Programınızı çalıştırma](../ide/step-2-run-your-program.md).
+
+- Genel bakış konusuna dönmek için bkz. [öğretici 1: resim görüntüleyici oluşturma](../ide/tutorial-1-create-a-picture-viewer.md).

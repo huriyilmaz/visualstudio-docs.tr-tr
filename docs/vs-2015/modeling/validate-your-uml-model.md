@@ -9,66 +9,64 @@ helpviewer_keywords:
 - UML, validation
 ms.assetid: deed5092-c11d-4431-a801-1e866a103075
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f795928677f4a232c3ae3cec0d3bab9d9266cb35
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8dfaf19e358d96b7737b06880d6fa4581b5c54f8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437457"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659367"
 ---
 # <a name="validate-your-uml-model"></a>UML modelinizi doğrulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio'da çizebilirsiniz UML modellerini bazıları projenizde geçersiz olarak kabul edilebilir. Örneğin, bir kullanım durumu her zaman yaşam çizgileri kullanım örneklerinin aktörler temsil eden bir sıralı diyagrama bağlanmalıdır gerektirebilir. Yüklediğinizde veya tanımlama *kısıtlamaları* takımınızın bu gibi gereksinimlere uyum sağlamasına yardımcı olur. Kısıtlamalar uygulanabilir kullanıcı kaydederken ya da bir modeli açar ve menü komutu tarafından çağrılabilir.  
-  
- Hiçbir kısıtlama ile sağlanan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bunların nasıl takımınızın yorumlar ve UML modellerini kullandığına bağlıdır. Ancak kendi kısıtlamaları tanımlamak ve diğer kullanıcılar tarafından tanımlanan kısıtlamaları yükleyebilirsiniz. Kısıtlamaları tanımlamak ve bunları dağıtım için paket hakkında bilgi edinmek için [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md).  
-  
-## <a name="invoking-validation"></a>Doğrulamayı çağırma  
- Bir doğrulama uzantısı yüklendiğinde, aşağıdaki durumlarda sağladığı kısıtlamalar uygulanabilir. Bazı kısıtlamalar yalnızca bazı durumlarda uygulamak için ayarlanır.  
-  
-- **Doğrulama komutu.** Doğrulama herhangi bir zamanda başlatmak için tıklatın **UML modeli doğrula** üzerinde **mimarisi** menüsü.  
-  
+Visual Studio 'da çizeceğiniz bazı UML modelleriniz projenizde geçersiz olarak kabul edilebilir. Örneğin, kullanım durumunun aktörleri temsil eden Yaşam çizgilerinin bulunduğu bir dizi diyagramına her zaman bir kullanım örneğinin bağlı olması gerekebilir. Takımınızın bu gibi gereksinimlere uyum sağlamak için *kısıtlamalar* yükleyebilir veya tanımlayabilirsiniz. Kullanıcı bir modeli kaydettiğinde veya açtığında kısıtlamalar uygulanabilir ve menü komutu tarafından çağrılabilir.
+
+ @No__t_0, takımınızın UML modellerini nasıl yorumlayacağını ve kullandığını bağlı olduklarından, hiçbir kısıtlama sağlanmaz. Ancak kendi kısıtlamalarınızı tanımlayabilir ve diğer kullanıcılar tarafından tanımlanan kısıtlamaları yükleyebilirsiniz. Kısıtlamaların nasıl tanımlanacağını ve dağıtım için nasıl paketleyeceğinizi öğrenmek için bkz. [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md).
+
+## <a name="invoking-validation"></a>Doğrulama çağrılıyor
+ Bir doğrulama uzantısı yüklediğinizde, sağladığı kısıtlamalar aşağıdaki durumlarda uygulanabilir. Bazı kısıtlamalar bu durumların yalnızca bazılarında uygulanmak üzere ayarlanır.
+
+- **Doğrulama komutu.** Doğrulama 'yı dilediğiniz zaman çağırmak için **mimari** menüsünde **UML modelini doğrula** ' ya tıklayın.
+
   > [!NOTE]
-  > Komutu, yalnızca doğrulama kısıtlamalarını yüklüyse görünür.  
-  
-- **Bir modeli kaydederken.** Modeli kaydettiğinizde doğrulama kısıtlamalarını uygulanabilir. Bu kısıtlamaların amacı projenizin yorumu göre geçersiz bir modeli kaydettiğinizden emin olun yardımcı olmaktır.  
-  
-   Hatalar varsa, yine de modelini kaydetmek isteyip istemediğinizi istenecektir. Hataları düzeltin ya da yine de modeli kaydetmeyi tercih edebilirsiniz.  
-  
-- **Model açılırken.** Bir modeli açtığınızda, doğrulama yöntemlerinin modeli kaydettiğinizde var olan hata iletilerini geri yüklemek için uygulanabilir. Hataları, farklı bir model kısımlarına çalışan kullanıcılar tarafından yapılan değişiklikleri arasındaki tutarsızlıkları tarafından da tanıtılabilir. Daha fazla bilgi için [paylaşmak modelleri ve diyagramları dışarı aktarma](../modeling/share-models-and-exporting-diagrams.md).  
-  
-  Doğrulama hataları bildirilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hatalar penceresinde.  
-  
-  Yanlış olan öğeler bir diyagramda seçmek için hataya çift tıklayın. Bu, yanlış öğeler yalnızca açık bir diyagramda görünür olması durumunda çalışır.  
-  
-## <a name="installing-validation-constraints"></a>Doğrulama kısıtlamalarını yükleme  
- Kısıtlamaları içinde paketlenir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı (VSIX) dosyaları. Genellikle, bir dizi kısıtlamaları da menü komutları, profilleri ve araç kutusu öğeleri gibi diğer tanımları içeren bir uzantının parçası olacaktır.  
-  
-#### <a name="to-install-a-visual-studio-extension"></a>Visual Studio Uzantısı'nı yüklemek için  
-  
-1. Çift **.vsix** Windows Explorer (veya dosya Gezgini) dosyası.  
-  
-2. Herhangi bir örneğini yeniden başlatmanız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] zaten çalışıyor.  
-  
-## <a name="disabling-and-uninstalling-validation-constraints"></a>Doğrulama kısıtlamaları kaldırma ve devre dışı bırakma  
- Kısıtlamaları değil uygulama modeli ile çalışmak istediğinizde, bunları içeren bir uzantı geçici olarak devre dışı bırakabilirsiniz. Bu şekilde, modeli farklı türlerde farklı zamanlarda farklı uzantılarını devre dışı bırakma ve etkinleştirme ile çalışabilirsiniz.  
-  
-#### <a name="to-disable-or-uninstall-a-visual-studio-extension"></a>Devre dışı bırakın veya Visual Studio Uzantısı'nı kaldırmak için  
-  
-1. Üzerinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.  
-  
-2. Uzantıyla birlikte tıklayın **devre dışı** uzantısı geçici olarak devre dışı. Daha sonra dönme tarafından yeniden etkinleştirebilmeniz için **Uzantılar ve güncelleştirmeler** penceresi.  
-  
-     \- veya -  
-  
-     Tıklayın **kaldırma** uzantıyı kaldırmak için.  
-  
-3. Yeniden [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md)   
- [Uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md)   
- [Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)
+  > Komut yalnızca doğrulama kısıtlamaları yüklüyse görüntülenir.
+
+- **Model kaydetme sırasında.** Modeli kaydettiğinizde doğrulama kısıtlamaları uygulanabilir. Bu kısıtlamaların amacı, projenizin yorumuna göre geçersiz bir modeli kaydettiğinizden emin olmanıza yardımcı olur.
+
+   Hatalar varsa, yine de modeli kaydetmek isteyip istemediğiniz sorulur. Hataları düzeltmeyi veya yine de modeli kaydetmeyi seçebilirsiniz.
+
+- **Bir model açılırken.** Bir modeli açtığınızda, modeli kaydettiğinizde varolan hata iletilerini geri yüklemek için doğrulama yöntemleri uygulanabilir. Hatalar, bir modelin farklı bölümlerinde çalışan kullanıcılar tarafından yapılan değişiklikler arasındaki tutarsızlıklar tarafından da sunulabilir. Daha fazla bilgi için bkz. [model paylaşma ve diyagramları dışarı aktarma](../modeling/share-models-and-exporting-diagrams.md).
+
+  Doğrulama hataları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hataları penceresinde raporlanır.
+
+  Diyagramda yanlış olan öğeleri seçmek için hataya çift tıklayın. Bu, yalnızca yanlış öğeler açık diyagramda görünür durumdaysa işe yarar.
+
+## <a name="installing-validation-constraints"></a>Doğrulama kısıtlamalarını yükleme
+ Kısıtlamalar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension (VSıX) dosyaları içinde paketlenmiştir. Genellikle, bir dizi kısıtlama, menü komutları, profiller ve araç kutusu öğeleri gibi diğer tanımları da içeren bir uzantının parçası olacaktır.
+
+#### <a name="to-install-a-visual-studio-extension"></a>Visual Studio uzantısı yüklemek için
+
+1. Windows Gezgini 'nde (veya dosya Gezgini) **. vsix** dosyasına çift tıklayın.
+
+2. Zaten çalışmakta olan tüm [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneklerini yeniden başlatın.
+
+## <a name="disabling-and-uninstalling-validation-constraints"></a>Doğrulama kısıtlamalarını devre dışı bırakma ve kaldırma
+ Kısıtlamaların uygulanamadığı bir modelle çalışmak istediğinizde, bunları içeren uzantıyı geçici olarak devre dışı bırakabilirsiniz. Bu şekilde, farklı türlerde modellerle farklı şekillerde çalışarak farklı uzantıları etkinleştirip devre dışı bırakabilirsiniz.
+
+#### <a name="to-disable-or-uninstall-a-visual-studio-extension"></a>Bir Visual Studio uzantısını devre dışı bırakmak veya kaldırmak için
+
+1. @No__t_0 **araçları** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
+
+2. Uzantının yanında, uzantıyı geçici olarak devre dışı bırakmak için **devre dışı bırak** seçeneğine tıklayın. Daha sonra **Uzantılar ve güncelleştirmeler** penceresine dönerek yeniden etkinleştirebilirsiniz.
+
+     \- veya-
+
+     Uzantıyı kaldırmak için **Kaldır** ' a tıklayın.
+
+3. @No__t_0 yeniden başlatın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md) uygulama [geliştirme sürecinizdeki](../modeling/use-models-in-your-development-process.md) [modelleriniz için model oluşturma](../modeling/create-models-for-your-app.md)

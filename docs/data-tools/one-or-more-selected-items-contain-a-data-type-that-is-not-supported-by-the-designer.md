@@ -3,28 +3,28 @@ title: Seçilen bir veya birden çok öğe, tasarımcı tarafından desteklenmey
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 71dcd4f9-2946-42c5-9ce4-99c819ea2785
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e27cf5c7cd6c6cb16de317e014083af405236019
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 036026d7640dc525538191d2acc347e9ba18b871
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65460588"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648261"
 ---
 # <a name="one-or-more-selected-items-contain-a-data-type-that-is-not-supported-by-the-designer"></a>Seçilen bir veya birden çok öğe, tasarımcı tarafından desteklenmeyen bir veri türü içeriyor
 
-Bir veya daha fazla öğe sürüklediğiniz gelen **Sunucu Gezgini** veya **veritabanı Gezgini** üzerine **O/R Tasarımcısı** tarafından desteklenmeyen bir veri türü içeren **O / R Tasarımcısı**, örneğin, [kullanıcı tanımlı CLR türlerini](/dotnet/framework/data/adonet/sql/clr-user-defined-types).
+**U/r tasarımcısına** **Sunucu Gezgini** veya **veritabanı Gezgini** sürüklemiş bir veya daha fazla öğe, **o/r Tasarımcısı**tarafından desteklenmeyen bir veri türü içeriyor (örneğin, [clr kullanıcı tanımlı türler](/dotnet/framework/data/adonet/sql/clr-user-defined-types)).
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-1. İstediğiniz tabloyu temel alan bir görünümünü oluşturmak ve desteklenmeyen veri türü içermez.
+1. İstenen tabloyu temel alan ve desteklenmeyen veri türü içermeyen bir görünüm oluşturun.
 
-2. Görünümden sürükleyin **Sunucu Gezgini** veya **veritabanı Gezgini** tasarımcıya.
+2. Görünümü tasarımcı üzerinde **Sunucu Gezgini** veya **veritabanı Gezgini** sürükleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

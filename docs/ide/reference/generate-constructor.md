@@ -1,182 +1,182 @@
 ---
-title: Bir Oluşturucu Hızlı Eylem oluştur
+title: Oluşturucu hızlı eylemi oluştur
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: faef5f2420f4abd30ecec9151212b8a731736886
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 41bb9a0e3921495629a10d6783432e8b4999a117
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795282"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661732"
 ---
-# <a name="generate-a-constructor-in-visual-studio"></a>Visual Studio'da bir oluşturucu üret
+# <a name="generate-a-constructor-in-visual-studio"></a>Visual Studio 'da Oluşturucu oluşturma
 
-Bu kod oluşturma için geçerlidir:
+Bu kod üretimi için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Hemen bir sınıf üzerinde yeni bir oluşturucu için kod oluşturmanıza olanak sağlar.
+**Ne:** Bir sınıf üzerinde yeni bir Oluşturucu için kodu hemen oluşturmanıza olanak sağlar.
 
-**ne zaman:** Yeni bir oluşturucu tanıtır ve düzgün bir şekilde otomatik olarak bildirmek istiyorsanız veya var olan bir oluşturucu değiştirin.
+**Ne zaman:** Yeni bir Oluşturucu tanıtmanız ve bunu otomatik olarak doğru bir şekilde bildirmek ya da var olan bir oluşturucuyu değiştirmek istiyorsunuz.
 
-**Neden:** Ancak, bu özellik, uygun parametrelerle birlikte otomatik olarak oluşturur, kullanmadan önce Oluşturucu bildirebilirsiniz. Ayrıca, mevcut bir oluşturucu değiştirme otomatik olarak güncelleştirmek için bu özelliği kullanmadığınız sürece tüm callsites güncelleştirilmesini gerektirir.
+**Neden:** Bu özelliği kullanmadan önce oluşturucuyu bildirebilirsiniz, ancak bu özellik, doğru parametrelerle otomatik olarak oluşturulur. Ayrıca, mevcut bir oluşturucunun değiştirilmesi, bu özelliği otomatik olarak güncelleştirmek için kullanmadığınız müddetçe tüm CallSites 'ın güncelleştirilmesini gerektirir.
 
-**Nasıl:** Bir oluşturucu oluşturmak için birkaç yol vardır:
+**Nasıl yapılır:** Oluşturucu oluşturmak için çeşitli yollar vardır:
 
-- [Oluşturucu Oluşturma ve üyeleri seçin](#pick)
-- [Seçili alanları oluşturucusunu üret](#selection)
-- [Yeni kullanımdan oluşturucusunu üret](#usage)
-- [Mevcut oluşturucusuna parametre Ekle](#addparameter)
-- [Oluştur ve alan/özellik bir oluşturucu parametreden Başlat](#create)
+- [Oluşturucu oluştur ve üyeleri Seç](#pick)
+- [Seçili alanlardan Oluşturucu oluştur](#selection)
+- [Yeni kullanımdan Oluşturucu oluştur](#usage)
+- [Mevcut oluşturucuya parametre Ekle](#addparameter)
+- [Oluşturucu parametresinden alan/Özellik oluştur ve Başlat](#create)
 
-## <a id = "pick"></a> Oluşturucu Oluşturma ve üyeleri (C# yalnızca) seçin
+## <a id = "pick"></a>Oluşturucu oluştur ve üyeleri Seç (C# yalnızca)
 
-1. Bir sınıftaki herhangi bir boş satırında imleci yerleştirin:
+1. İmlecinizi bir sınıftaki boş bir satıra yerleştirin:
 
-   ![İmleç boş satır](media/constructor1-highlight-cs.png)
+   ![İmleç boş satıra](media/constructor1-highlight-cs.png)
 
-1. Ardından, aşağıdakilerden birini yapın:
+1. Sonra, aşağıdakilerden birini yapın:
 
-   - **Klavye**
-      - Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-   - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - &nbsp; ![Tornavida](media/screwdriver.png) boş bir satıra sınıfında metin imleci ise sol kenar boşluğunda görünür simge.
+   - **Klavyenizdeki**
+      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+   - **Tığında**
+      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
+      - &nbsp; ![Screwdriver](media/screwdriver.png) Sol kenar boşluğunda, metin imleci sınıfında zaten boş satırda görünen simge.
 
-   ![Oluşturucu Önizleme oluşturma](media/constructor1-preview-cs.png)
+   ![Oluşturucu önizlemesi oluştur](media/constructor1-preview-cs.png)
 
-1. Seçin **Oluştur Oluşturucusu** aşağı açılan menüden.
+1. Açılan menüden **Oluşturucu oluştur** ' u seçin.
 
-   **Üyeleri çekme** iletişim kutusu açılır.
+   **Üyeleri Seç** iletişim kutusu açılır.
 
-1. Oluşturucu parametresi olarak dahil etmek istediğiniz üyeleri seçin. Yukarı kullanarak bunları sıralayın ve aşağı okları. **Tamam**’ı seçin.
+1. Oluşturucu parametreleri olarak eklemek istediğiniz üyeleri seçin. Bunları yukarı ve aşağı okları kullanarak sipariş edebilirsiniz. **Tamam ' ı**seçin.
 
-   ![Seçim üyeleri iletişim](media/constructor1-dialog-cs.png)
+   ![Üyeleri Seç iletişim kutusu](media/constructor1-dialog-cs.png)
 
    > [!TIP]
-   > Denetleyebilirsiniz **null denetimleri Ekle** , oluşturucu parametresi için null denetimlerinin otomatik olarak oluşturmak için onay kutusu.
+   > Oluşturucu parametreleriniz için otomatik olarak null denetimleri oluşturmak üzere **null denetimleri Ekle** onay kutusunu işaretleyebilirsiniz.
 
-   Oluşturucu, belirtilen parametrelerle oluşturulur.
+   Oluşturucu belirtilen parametrelerle oluşturulur.
 
-   ![Oluşturucu sonuç oluştur](media/constructor1-result-cs.png)
+   ![Oluşturucu sonucu oluştur](media/constructor1-result-cs.png)
 
-## <a id="selection"></a> Seçili alanları (yalnızca C#) oluşturucusunu üret
+## <a id="selection"></a>Seçili alanlardan Oluşturucu oluştur (C# yalnızca)
 
-1. Oluşturulan, oluşturucuda olmasını istediğiniz üyeleri seçin:
+1. Oluşturduğunuz oluşturucuda istediğiniz üyeleri vurgulayın:
 
-   ![Üyeleri seçin](media/constructor2-highlight-cs.png)
+   ![Üyeleri Vurgula](media/constructor2-highlight-cs.png)
 
-1. Ardından, aşağıdakilerden birini yapın:
+1. Sonra, aşağıdakilerden birini yapın:
 
-   - **Klavye**
-      - Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-   - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - &nbsp; ![Tornavida](media/screwdriver.png) Seçimi içeren satırda metin imleci ise sol kenar boşluğunda görünür simge.
+   - **Klavyenizdeki**
+      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+   - **Tığında**
+      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
+      - &nbsp; ![Screwdriver](media/screwdriver.png) Sol kenar boşluğunda, metin imleci seçimle zaten varsa görüntülenen simge.
 
-      ![Oluşturucu Önizleme oluşturma](media/constructor2-preview-cs.png)
+      ![Oluşturucu önizlemesi oluştur](media/constructor2-preview-cs.png)
 
-1. Seçin **'TypeName(...)' Generate Oluşturucusu**  aşağı açılan menüden.
+1. Açılan menüden **' TypeName (...) ' oluşturucusunu üret '** i seçin.
 
    Oluşturucu seçili parametrelerle oluşturulur.
 
-   ![Oluşturucu sonuç oluştur](media/constructor2-result-cs.png)
+   ![Oluşturucu sonucu oluştur](media/constructor2-result-cs.png)
 
-## <a id="usage"></a> Oluşturucu Oluşturma yeni kullanımından (C# ve Visual Basic)
+## <a id="usage"></a>Yeni kullanımdan Oluşturucu oluştur (C# ve Visual Basic)
 
-1. İmlecinizi satıra Yerleştir kırmızı dalgalı olduğu. Kırmızı dalgalı çizgi henüz mevcut olmayan bir oluşturucu için bir çağrı gösterir.
+1. İmlecinizi kırmızı dalgalı çizgi olan çizgiye yerleştirin. Kırmızı dalgalı çizgi, henüz mevcut olmayan bir oluşturucuya yapılan çağrıyı gösterir.
 
    - C#:
 
-       ![Vurgulanmış kodu C#](media/constructor-highlight-cs.png)
+       ![Vurgulanan kodC#](media/constructor-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanmış kodu VB](media/constructor-highlight-vb.png)
+       ![Vurgulanan kod VB](media/constructor-highlight-vb.png)
 
-2. Ardından, aşağıdakilerden birini yapın:
+2. Sonra, aşağıdakilerden birini yapın:
 
-   - **Klavye**
-      - Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-   - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - Kırmızı dalgalı çizgi gelin ve tıklayın ![hata ampul](media/error-bulb.png) Bu simge görünür.
-      - &nbsp; ![hata ampul](media/error-bulb.png) kırmızı dalgalı çizgi içeren satırda metin imleci ise sol kenar boşluğunda görünür simge.
+   - **Klavyenizdeki**
+      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+   - **Tığında**
+      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
+      - Kırmızı dalgalı çizgi üzerine gelin ve ![ampul hatası](media/error-bulb.png) görüntülenen simge.
+      - &nbsp; ![ampul hatası](media/error-bulb.png) Sol kenar boşluğunda, metin imleci kırmızı dalgalı çizgi ile zaten varsa görüntülenen simge.
 
-      ![Oluşturucu Önizleme oluşturma](media/constructor-preview-cs.png)
+      ![Oluşturucu önizlemesi oluştur](media/constructor-preview-cs.png)
 
-3. Seçin **içinde Oluşturucu Üret '*TypeName*'** aşağı açılan menüden.
+3. Açılan menüden **'*TypeName*' içinde Oluşturucu üret '** i seçin.
 
    > [!TIP]
-   > Kullanım **değişiklik önizlemesi** Önizleme pencerenin alt kısmındaki bağlantı [tüm değişiklikleri görmek için](../../ide/preview-changes.md) , oluşturulacak, seçim yapmadan önce.
+   > Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) Önizleme penceresinin altındaki **Değişiklikleri Önizle** bağlantısını kullanın.
 
-   Oluşturucu, kullanımdan çıkarılan herhangi bir parametre ile oluşturulur.
+   Oluşturucu, kullanımından çıkarılan herhangi bir parametre ile oluşturulur.
 
    - C#:
 
-       ![Yöntem sonuç C# oluştur](media/constructor-result-cs.png)
+       ![Yöntem sonucu üretC#](media/constructor-result-cs.png)
 
    - Visual Basic:
 
-       ![Yöntem sonuç VB oluştur](media/constructor-result-vb.png)
+       ![Yöntem sonucu oluştur VB](media/constructor-result-vb.png)
 
-## <a id="addparameter"></a> Oluşturucuya varolan (yalnızca C#) parametre Ekle
+## <a id="addparameter"></a>Mevcut oluşturucuya parametre Ekle (C# yalnızca)
 
-1. Var olan bir oluşturucu çağrısı için bir parametre ekleyin.
+1. Varolan bir Oluşturucu çağrısına bir parametre ekleyin.
 
-2. İmlecinizi satıra Yerleştir henüz mevcut olmayan bir oluşturucu kullanılan belirten bir kırmızı dalgalı olduğu.
+2. İmlecinizi, henüz varolmayan bir Oluşturucu kullandığınızı gösteren kırmızı renkli bir dalgalı çizgi olduğu satıra yerleştirin.
 
-    ![Oluşturucu vurgulama oluştur](media/constructor4-highlight-cs.png)
+    ![Oluşturucu vurgusu oluştur](media/constructor4-highlight-cs.png)
 
-3. Ardından, aşağıdakilerden birini yapın:
+3. Sonra, aşağıdakilerden birini yapın:
 
-   - **Klavye**
-      - Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-   - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - Kırmızı dalgalı çizgi gelin ve tıklayın ![hata ampul](media/error-bulb.png) Bu simge görünür.
-      - &nbsp; ![hata ampul](media/error-bulb.png) kırmızı dalgalı çizgi içeren satırda metin imleci ise sol kenar boşluğunda görünür simge.
+   - **Klavyenizdeki**
+      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+   - **Tığında**
+      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
+      - Kırmızı dalgalı çizgi üzerine gelin ve ![ampul hatası](media/error-bulb.png) görüntülenen simge.
+      - &nbsp; ![ampul hatası](media/error-bulb.png) Sol kenar boşluğunda, metin imleci kırmızı dalgalı çizgi ile zaten varsa görüntülenen simge.
 
-      ![Oluşturucu Önizleme oluşturma](media/constructor4-preview-cs.png)
+      ![Oluşturucu önizlemesi oluştur](media/constructor4-preview-cs.png)
 
-4. Seçin **'TypeName(...)' için parametre Ekle**  aşağı açılan menüden.
+4. Açılan menüden **parametre Ekle ' TypeName (...) '** seçeneğini belirleyin.
 
-   Oluşturucuya, kullanımdan çıkarılan türü ile parametresi eklendi.
+   Parametresi, kendi kullanımından çıkarılan türü ile oluşturucuya eklenir.
 
-   ![Oluşturucu sonuç oluştur](media/constructor4-result-cs.png)
+   ![Oluşturucu sonucu oluştur](media/constructor4-result-cs.png)
 
-Varolan bir yöntem için parametre de ekleyebilirsiniz. Daha fazla bilgi için [bir yönteme parametre eklemek](add-parameter.md).
+Ayrıca, varolan bir yönteme bir parametre ekleyebilirsiniz. Daha fazla bilgi için bkz. [bir yönteme parametre ekleme](add-parameter.md).
 
-## <a id="create"></a> Oluştur ve bir alan veya özellik (yalnızca C#) bir oluşturucu parametreden Başlat
+## <a id="create"></a>Bir Oluşturucu parametresinden alan veya özellik oluşturma ve başlatma (C# yalnızca)
 
-1. Var olan bir oluşturucu bulmak ve bir parametre ekleyin:
+1. Mevcut bir Oluşturucu bulun ve bir parametre ekleyin:
 
-   ![Oluşturucu vurgulama oluştur](media/constructor5-highlight-cs.png)
+   ![Oluşturucu vurgusu oluştur](media/constructor5-highlight-cs.png)
 
-1. İmlecinizi yeni eklenen parametresi içinde yerleştirin.
+1. İmlecinizi yeni eklenen parametrenin içine yerleştirin.
 
-1. Ardından, aşağıdakilerden birini yapın:
+1. Sonra, aşağıdakilerden birini yapın:
 
-   - **Klavye**
-      - Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-   - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - &nbsp; ![Tornavida](media/screwdriver.png) eklenen parametresiyle satırındaki metin imleci ise sol kenar boşluğunda görünür simge.
+   - **Klavyenizdeki**
+      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+   - **Tığında**
+      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
+      - &nbsp; ![Screwdriver](media/screwdriver.png) Sol kenar boşluğunda görüntülenen ve metin imlece eklenmiş parametreye sahip olan satırda görünen simge.
 
-   ![Oluşturucu Önizleme oluşturma](media/constructor5-preview-cs.png)
+   ![Oluşturucu önizlemesi oluştur](media/constructor5-preview-cs.png)
 
-1. Seçin **oluşturma ve başlatma özelliği** veya **oluşturma ve başlatma alan** aşağı açılan menüden.
+1. Açılır menüden **Özellik oluştur ve Başlat** ' ı veya **Oluştur ve Başlat ' ı** seçin.
 
-   Alan veya özellik türlerinizi eşleşecek şekilde otomatik olarak adlandırılan ve bildirilen. Bir kod satırı alanı veya özelliği Oluşturucu gövdesinde başlatmak için de eklenir.
+   Alan veya özellik, türlerinizi eşleştirmek için olarak tanımlanır ve otomatik olarak adlandırılır. Oluşturucu gövdesinde alanı veya özelliği başlatmak için bir kod satırı da eklenir.
 
-   ![Oluşturucu sonuç oluştur](media/constructor5-result-cs.png)
+   ![Oluşturucu sonucu oluştur](media/constructor5-result-cs.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

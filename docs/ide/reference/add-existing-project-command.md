@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Add Existing Project command
 - File.AddExistingProject
 ms.assetid: 71cf3e31-c76b-405b-ad6a-1b1bc654bd40
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5a511e19394b397096a5a5ba2e339166454138e
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bd6aca05758185f4df47688044f479b7bbe2829e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926290"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658812"
 ---
 # <a name="add-existing-project-command"></a>Varolan Projeyi Ekle Komutu
-Mevcut bir projeyi çözüme ekler.
+Geçerli çözüme mevcut bir projeyi ekler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,7 +33,7 @@ File.AddExistingProject filename
 `filename`\
 İsteğe bağlı. Çözüme eklenecek projenin Uzantısı ile tam yol ve proje adı.
 
-`filename` Bağımsız değişken boşluk içeriyorsa, tırnak işaretleri içine alınmalıdır.
+@No__t_0 bağımsız değişkeni boşluk içeriyorsa, tırnak işaretleri içine alınmalıdır.
 
 Dosya adı belirtilmemişse, komut, kullanıcının bir proje seçmesini sağlamak için dosya iletişim kutusunu açar.
 

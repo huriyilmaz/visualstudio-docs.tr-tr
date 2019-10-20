@@ -1,5 +1,5 @@
 ---
-title: 'CA2002: Zayıf kimliği olan nesneleri kilitlemeyin | Microsoft Docs'
+title: 'CA2002: zayıf kimliğe sahip nesnelerde kilitleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DoNotLockOnObjectsWithWeakIdentity
 ms.assetid: 16100b39-c6fc-452b-8fca-8b459a26c286
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 39d233c126d35f303a30a955310859dd9a678c56
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 557f91d8b00274642accbbfc05b4a60789615bfc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65681371"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667757"
 ---
 # <a name="ca2002-do-not-lock-on-objects-with-weak-identity"></a>CA2002: Zayıf kimliği olan nesneleri kilitlemeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "65681371"
 |-|-|
 |TypeName|DoNotLockOnObjectsWithWeakIdentity|
 |CheckId|CA2002|
-|Kategori|Microsoft.Reliability|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. güvenilirliği|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir iş parçacığı, zayıf kimliğe sahip bir nesne üzerinde kilit dener.
+ Bir iş parçacığı, zayıf bir kimliğe sahip bir nesne üzerinde kilit edinmeye çalışır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir nesneye uygulama etki alanları arasından erişilebiliyorsa o nesnenin zayıf bir kimliğe sahip olduğu söylenir. Zayıf kimliğe sahip bir nesne üzerinde kilit almayı deneyen iş parçacığı aynı nesne üzerinde bir kilide sahip olan farklı uygulama etki alanı içindeki ikinci iş parçacığı tarafından engellenebilir. Aşağıdaki türleri zayıf bir kimliğe sahip ve kural tarafından işaretlenir:
+ Bir nesneye uygulama etki alanları arasından erişilebiliyorsa o nesnenin zayıf bir kimliğe sahip olduğu söylenir. Zayıf kimliğe sahip bir nesne üzerinde kilit almayı deneyen iş parçacığı aynı nesne üzerinde bir kilide sahip olan farklı uygulama etki alanı içindeki ikinci iş parçacığı tarafından engellenebilir. Aşağıdaki türlerin zayıf bir kimliği vardır ve kurala göre işaretlenir:
 
 - <xref:System.MarshalByRefObject>
 
@@ -55,20 +55,20 @@ ms.locfileid: "65681371"
 - <xref:System.Threading.Thread>
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için açıklama bölümünde listesinde olmayan bir türden bir nesne kullanın.
+ Bu kuralın ihlalini onarmak için, açıklama bölümündeki listede yer alan bir türden bir nesne kullanın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA2213: Atılabilen alanlar atılmalıdır](../code-quality/ca2213-disposable-fields-should-be-disposed.md)
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, kural ihlal bazı nesne kilitleri gösterir.
+ Aşağıdaki örnekte, kuralı ihlal eden bazı nesne kilitleri gösterilmektedir.
 
  [!code-csharp[FxCop.Reliability.LockWeakObjects#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Reliability.LockWeakObjects/cs/FxCop.Reliability.LockWeakObjects.cs#1)]
  [!code-vb[FxCop.Reliability.LockWeakObjects#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Reliability.LockWeakObjects/vb/FxCop.Reliability.LockWeakObjects.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  <xref:System.Threading.Monitor><xref:System.AppDomain>
- [lock deyimi](https://msdn.microsoft.com/library/656da1a4-707e-4ef6-9c6e-6d13b646af42) [SyncLock deyimi](https://msdn.microsoft.com/library/14501703-298f-4d43-b139-c4b6366af176)
+ [Lock ifadesinin](https://msdn.microsoft.com/library/656da1a4-707e-4ef6-9c6e-6d13b646af42) [SyncLock deyimleri](https://msdn.microsoft.com/library/14501703-298f-4d43-b139-c4b6366af176)

@@ -2,17 +2,17 @@
 title: Kodlanmış UI Testleriyle Farklı Web Tarayıcıları Kullanma
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 1b7cad6d52dc3fabc182881b99163cf15e1a260c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+author: jillre
+ms.openlocfilehash: 24e4ee35f21b7477e9b3d601305bd6534a16d9e0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926565"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659793"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle farklı Web tarayıcıları kullanma
 
@@ -38,7 +38,7 @@ Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak
 
 ## <a name="how-do-i-record-and-play-back-coded-ui-tests-on-web-applications-using-the-supported-web-browsers"></a>Kodlanmış UI testleri desteklenen web tarayıcısı kullanarak web uygulamaları üzerinde nasıl kaydederim ve kayıttan yürütürüm?
 
-**Yapılmıyor** Web uygulaması testinizi Internet Explorer kullanarak kaydetmek için kodlanmış UI Test Oluşturucusu 'nu kullanmanız gerekir. İsteğe bağlı olarak, doğrulama ve kodlanmış UI testleri için normalde yaptığınız gibi önceden tanımlanmış bir özellik kümesi kullanarak sınanmış denetimler için özel kod ekleyebilirsiniz. Daha fazla bilgi için bkz. [kodunuzu test etmek IÇIN UI Otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md).
+**Kayıt:** Web uygulaması testinizi Internet Explorer kullanarak kaydetmek için kodlanmış UI Test Oluşturucusu 'nu kullanmanız gerekir. İsteğe bağlı olarak, doğrulama ve kodlanmış UI testleri için normalde yaptığınız gibi önceden tanımlanmış bir özellik kümesi kullanarak sınanmış denetimler için özel kod ekleyebilirsiniz. Daha fazla bilgi için bkz. [kodunuzu test etmek IÇIN UI Otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md).
 
 > [!NOTE]
 > Google Chrome veya Mozilla Firefox tarayıcısı kullanarak kodlanmış UI testleri kaydedemezsiniz.
@@ -55,7 +55,7 @@ IE olmayan Web tarayıcılarındaki testleri kayıttan yürütmek için, **KODLA
 
 1. **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' i seçin.
 
-2. **Uzantılar ve güncelleştirmeler** iletişim kutusunda için `Selenium components for Cross Browser Testing`arama yapın.
+2. **Uzantılar ve güncelleştirmeler** iletişim kutusunda `Selenium components for Cross Browser Testing` aratın.
 
 ::: moniker-end
 
@@ -63,7 +63,7 @@ IE olmayan Web tarayıcılarındaki testleri kayıttan yürütmek için, **KODLA
 
 1. **Uzantılar** menüsünde, **Uzantıları Yönet**' i seçin.
 
-2. **Uzantıları Yönet** iletişim kutusunda, araması `Selenium components for Cross Browser Testing`yapın.
+2. **Uzantıları Yönet** iletişim kutusunda `Selenium components for Cross Browser Testing` aratın.
 
 ::: moniker-end
 
@@ -90,7 +90,7 @@ Web uygulamanızda hata ayıklamayı etkinleştirmek için aşağıdaki yapılan
 
     2. **Ortak dil çalışma zamanı özel durumları**Için, **Kullanıcı tarafından işlenmeyen**onay işaretini kaldırın.
 
-Kodlanmış UI testinde değiştirme `BrowserWindow.CurrentBrowser` seçeneğini görmüyorsanız, Visual Studio 'nun çeşitli web tarayıcıları kullanılarak kodlanmış UI testlerini desteklemeyen bir sürümünü kullanıyor olabilirsiniz. Bu tür kodlanmış UI testlerini kullanmak için Visual Studio Enterprise sürümünü kullanmanız gerekir.
+Kodlanmış UI testinde `BrowserWindow.CurrentBrowser` değiştirme seçeneğini görmüyorsanız, Visual Studio 'nun çeşitli web tarayıcıları kullanılarak kodlanmış UI testlerini desteklemeyen bir sürümünü kullanıyor olabilirsiniz. Bu tür kodlanmış UI testlerini kullanmak için Visual Studio Enterprise sürümünü kullanmanız gerekir.
 
 Bilmeniz gereken bazı şeyler aşağıda verilmiştir:
 
@@ -110,7 +110,7 @@ Bilmeniz gereken bazı şeyler aşağıda verilmiştir:
 
 Aşağıdaki değerleri ayarlayın:
 
-- `EqtTraceLevel``system.diagnostics` bölümüne.
+- `system.diagnostics` bölümünde `EqtTraceLevel`.
 
 - `<add name="EqtTraceLevel" value="4" />`
 
@@ -133,5 +133,5 @@ Daha fazla bilgi için bkz. [KODLANMıŞ UI test günlüklerini kullanarak KODLA
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [UI otomasyonunu kullanarak kodunuzu test etme](../test/use-ui-automation-to-test-your-code.md)
-- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen yapılandırmalar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
 - [Kodlanmış UI test günlüklerini kullanarak kodlanmış UI testlerini çözümleme](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

@@ -8,52 +8,52 @@ f1_keywords:
 - vs.graphics
 ms.assetid: 910d673b-c884-4eeb-9928-0e89f3d38cb6
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 020c934d3427dda77c41fb410143972d6f48656b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 6976d7c0e32739348ec0d78603e6b6d47d01477b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438095"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661581"
 ---
 # <a name="working-with-3-d-assets-for-games-and-apps"></a>Oyunlar ve Uygulamalar için 3B Varlıklarla Çalışma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu belge [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oluşturmak veya 3B modeller, dokuları ve gölgelendiricileri DirectX tabanlı oyunlar ve uygulamalar için değiştirmek için kullanabileceğiniz araçlar.  
-  
-## <a name="directx-app-development-in-visual-studio"></a>Visual Studio'da DirectX uygulaması geliştirme  
- DirectX uygulaması, programlama mantığı, DirectX API ve üst düzey gölgelendirme dili (HLSL) programları, zengin, etkileşimli bir multimedya deneyimi sunmak için ses ve 3B görsel varlıklar genellikle birleştirir.[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başka bir aracı kullanmak için IDE'den çıkmadan görüntü ve dokuları, 3B modeller ve gölgelendiriciler ile çalışmak için kullanabileceğiniz araçlar içerir. Visual Studio Araçları, özellikle oluşturmak için uygun *yer tutucu* kodu test veya üretime hazır varlıkları komisyon önce ve inceleme ve üretime hazır değiştirmeye yönelik prototipleri oluşturmak için kullanabileceğiniz, varlıkları Uygulamanızı hata ayıklama işlemi yaparken varlıklar.  
-  
- İle çalışmak varlıkların türleri hakkında daha fazla bilgi aşağıdadır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
-  
-### <a name="images-and-textures"></a>Görüntü ve dokuları  
- Görüntü ve dokuları rengi ve oyunlar ve uygulamalar, görsel ayrıntıları sağlayın. 3B grafikler, çeşitli biçimlerde, türleri ve geometriler farklı kullanımlarını desteklemek için doku gelir. Örneğin, normal haritalar için daha ayrıntılı aydınlatma, 3B modeller piksel başına yüzey normal değerler sağlayın ve küp eşlemlerinin sky kutulama, yansıma ve küresel doku eşleme gibi kullanımlar için her yöne doku sağlayın. Doku, farklı ayrıntı düzeyleri en verimli işleme desteklemek için mip eşlemeleri sağlayabilir ve farklı renk kanalı ve renk sıralamalarının destekleyebilir. Dokular grafik az ayrılmış bellek kaplar ve gpu erişimi dokular daha verimli bir şekilde yardımcı sıkıştırma biçimlerinin çeşitli içinde depolanabilir.  
-  
- Kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] görüntü ve dokuları birçok ortak türlerini ve biçimlerini çalışmak için görüntü Düzenleyicisi.  
-  
-### <a name="3-d-models"></a>3B modeller  
- 3B modeller, boşluk ve Şekil oyunlar ve uygulamalar oluşturun. En düşük düzeyde, 3B noktaları konumunu modelleri kodlama — olarak bilinen *köşeler*— çizgiler veya üçgenler model şeklini temsil eden tanımlamak için verileri dizinleme birlikte. Ek veriler bu köşelerde ile ilişkili olabilir — örneğin, renk bilgilerini, normal vektörleri veya uygulamaya özel öznitelikler. Her model nesnesi genelinde öznitelikleri de tanımlayabilirsiniz — Örneğin, hangi gölgelendirici nesnenin yüzeyi veya hangi doku uygulandığı görünümünü hesaplamak için kullanılır.  
-  
- Kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 3-b ile çalışmak için Model Düzenleyicisi ortak çeşitli biçimlerde modeller.  
-  
-### <a name="shaders"></a>Gölgelendiriciler  
- Gölgelendiricileri grafik işlemci birimi (GPU) üzerinde çalışan küçük, etki alanına özgü programlardır. Gölgelendiricileri belirlemek nasıl 3B modeller içine ekrandaki dönüştürülür şekiller ve bu şekiller her pikselin nasıl renklendirilmiştir. Gölgelendirici oluşturma ve nesneyi oyunlarda veya uygulamalarda uygulama nesnesi benzersiz bir görünüm verebilirsiniz.  
-  
- Kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gölgelendirici tasarım gölgelendirici grafik tabanlı bir araçtır, HLSL programlama bilmeden özel görsel efektler oluşturmak için Tasarımcısı.  
-  
+Bu belgede, DirectX tabanlı oyunlar ve uygulamalar için 3-b modeller, dokular ve gölgelendiriciler oluşturmak veya değiştirmek üzere kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] araçları açıklanmaktadır.
+
+## <a name="directx-app-development-in-visual-studio"></a>Visual Studio 'da DirectX uygulama geliştirme
+ DirectX uygulaması genellikle programlama mantığını, DirectX API 'sini ve yüksek düzeyde gölgeleme dili (HLSL) programlarını, zengin ve etkileşimli bir multimedya deneyimi sunmak için ses ve 3-D görsel varlıklarla birlikte birleştirir. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , IDE 'yi başka bir araç kullanmak için uygulamadan çıkmadan görüntüler ve dokular, 3-b modelleri ve gölgelendiriciler ile çalışmak için kullanabileceğiniz araçlar içerir. Visual Studio Araçları, üretime uygun varlıkları komisyondan önce kodu test etmek için kullanabileceğiniz ve üretim için kullanıma uygun varlıkları incelemek ve değiştirmek için kullanabileceğiniz *yer tutucu* varlıklar oluşturmaya uygundur. uygulamanızda hata ayıklama.
+
+ İşte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ' de kullanabileceğiniz varlıkların türleri hakkında daha fazla bilgi.
+
+### <a name="images-and-textures"></a>Görüntüler ve dokular
+ Görüntüler ve dokular, Oyunlar ve uygulamalar için renk ve görsel ayrıntı sağlar. 3-b grafiklerde, dokular farklı kullanımları desteklemek için çeşitli biçimlerde, türlerde ve geometrileri gelir. Örneğin, normal haritalar, 3-b modellerin daha ayrıntılı ışıklandırma için piksel başına yüzey normaller sağlar ve küp haritaları, çatkutulama, yansıma ve küresel doku eşleme gibi kullanımlar için tüm yönlerde doku sağlar. Dokular, farklı ayrıntı düzeylerinde verimli işlemeyi desteklemek için MIP haritaları sağlayabilir ve farklı renk kanallarını ve renk sırasını destekleyebilir. Dokular, daha az ayrılmış grafik belleği kaplayan ve GPU erişim dokularının daha verimli bir şekilde yardım eden çeşitli sıkıştırılmış biçimlerde depolanabilir.
+
+ Birçok ortak tür ve biçimdeki görüntülerle ve dokularla çalışmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] görüntü düzenleyicisini kullanabilirsiniz.
+
+### <a name="3-d-models"></a>3B modeller
+ 3-b modeller, Oyunlar ve uygulamalarda boşluk ve şekil oluşturur. En düşük düzeyde, modeller, *köşeler olarak bilinen*ve modelin şeklini temsil eden çizgileri ya da üçgenleri tanımlamak üzere verileri dizinleyen 3-b Space içindeki noktaların konumunu kodlayıp. Ek veriler, bu köşelerle ilişkilendirilebilir (örneğin, renk bilgileri, normal vektörler veya uygulamaya özel öznitelikler). Her model, nesne genelinde öznitelikler de tanımlayabilir — Örneğin, nesnenin yüzeyinin görünümünü hesaplamak için hangi gölgelendirici kullanılıyor, ya da buna uygulanan doku.
+
+ Birkaç ortak biçimdeki 3-b modelleriyle çalışmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] model düzenleyicisini kullanabilirsiniz.
+
+### <a name="shaders"></a>Gölgelendiriciler
+ Gölgelendiriciler, grafik işleme birimi (GPU) üzerinde çalışan küçük, etki alanına özgü programlardır. Gölgelendiriciler 3-b modellerin ekran şekillerine nasıl dönüştürüleceğini ve bu şekillerdeki her pikselin nasıl renklendirileceğini belirlenir. Bir gölgelendirici oluşturup oyununuzda veya uygulamanızdaki bir nesneye uygulayarak nesneye benzersiz bir görünüm verebilirsiniz.
+
+ HLSL programlamayı bilmeden özel görsel etkiler oluşturmak için grafik tabanlı gölgelendirici tasarım aracı olan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gölgelendirici tasarımcısını kullanabilirsiniz.
+
 > [!NOTE]
-> DirectX programlama ile başlama hakkında daha fazla bilgi için bkz. [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). DirectX tabanlı bir uygulamanın hatalarını ayıklama hakkında daha fazla bilgi için bkz. [grafik tanılama (DirectX grafik hata ayıklama)](../debugger/visual-studio-graphics-diagnostics.md).  
-  
-## <a name="directx-version-compatibility"></a>DirectX sürümü uyumluluğu  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] DirectX, 2B ve 3B varlıkları işlemek için kullanır. DirectX 11 Oluşturucu ya da Windows Gelişmiş Pikselleştirme Platformu'nu (WARP) yazılım oluşturucusu seçebilirsiniz. DirectX 11 Oluşturucu, DirectX 11 ve DirectX 10 GPU üzerinde yüksek performanslı, Donanım hızlandırmalı işleme sağlar. WARP Oluşturucu varlıklarınızı çok çeşitli bilgisayarlar çalışma emin olmaya yardımcı olur; bu modern grafik donanımının sahip olmayan bilgisayarlar ve grafik donanımının tümleşik bilgisayarları içerir. WARP hakkında daha fazla bilgi için bkz: [Windows Gelişmiş Pikselleştirme Platformu'nu (WARP) Kılavuzu](http://go.microsoft.com/fwlink/p/?LinkId=224634).  
-  
-## <a name="related-topics"></a>İlgili konular  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[Dokularla ve Görüntülerle Çalışma](../designers/working-with-textures-and-images.md)|Nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dokular ve görüntüler ile çalışmak için.|  
-|[3B Modelleriyle Çalışma](../designers/working-with-3-d-models.md)|Nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 3B modellerle çalışmak için.|  
-|[Gölgelendiricilerle Çalışma](../designers/working-with-shaders.md)|Nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oluşturmak ve özel gölgelendirici efektleri değiştirmek için gölgelendirici Tasarımcısı.|  
-|[Oyunlarda veya Uygulamalarda 3B Varlıklar Kullanma](../designers/using-3-d-assets-in-your-game-or-app.md)|Oyunlarda veya uygulamalarda görüntü Düzenleyicisi, Model düzenleyiciyi veya gölgelendirici Tasarımcısı kullanarak oluşturduğunuz varlıkları kullanmayı açıklar.|
+> DirectX programlama ile başlama hakkında daha fazla bilgi için bkz. [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). DirectX tabanlı bir uygulamada hata ayıklama hakkında daha fazla bilgi için bkz. [Grafik Tanılama (DirectX grafik hatalarını ayıklama)](../debugger/visual-studio-graphics-diagnostics.md).
+
+## <a name="directx-version-compatibility"></a>DirectX sürümü uyumluluğu
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 2-b ve 3-b varlıklarını işlemek için DirectX kullanır. DirectX 11 oluşturucuyu ya da Windows Gelişmiş Tarama Platformu (WARP) yazılım oluşturucuyu seçebilirsiniz. DirectX 11 Oluşturucu, DirectX 11 ve DirectX 10 GPU 'Larda yüksek performanslı, donanım hızlandırmalı işleme sağlar. WARP işleyicisi, varlıklarınızın çok çeşitli bilgisayarlarla çalıştığından emin olmanıza yardımcı olur. Bu, modern grafik donanımı ve tümleşik grafik donanımına sahip olmayan bilgisayarlar dahil olmak üzere, bu bilgisayarlara sahip olmayan bilgisayarları içerir. WARP hakkında daha fazla bilgi için bkz. [Windows Gelişmiş Tarama Platformu (warp) Kılavuzu](http://go.microsoft.com/fwlink/p/?LinkId=224634).
+
+## <a name="related-topics"></a>İlgili konular
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[Dokularla ve Görüntülerle Çalışma](../designers/working-with-textures-and-images.md)|Görüntüleri ve dokuları ile çalışmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanmayı açıklar.|
+|[3B Modelleriyle Çalışma](../designers/working-with-3-d-models.md)|3-b modelleriyle çalışmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanmayı açıklar.|
+|[Gölgelendiricilerle Çalışma](../designers/working-with-shaders.md)|Özel gölgelendirici efektlerini oluşturmak ve değiştirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Gölgelendirici Tasarımcısının nasıl kullanılacağını açıklar.|
+|[Oyunlarda veya Uygulamalarda 3B Varlıklar Kullanma](../designers/using-3-d-assets-in-your-game-or-app.md)|Oyununuzda veya uygulamanızda görüntü düzenleyicisini, model düzenleyicisini veya gölgelendirici tasarımcısını kullanarak oluşturduğunuz varlıkların nasıl kullanılacağını açıklar.|

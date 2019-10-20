@@ -1,5 +1,5 @@
 ---
-title: Windows Workflow Foundation (eski) için hata ayıklayıcıyı çalıştırmak | Microsoft Docs
+title: Windows Workflow Foundation için hata ayıklayıcı çağrılıyor (eski) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -17,43 +17,43 @@ helpviewer_keywords:
 - debugging workflows, starting the debugger
 ms.assetid: d6f58e35-5cce-4ff2-9afc-b2d9d0f819cf
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 82532fc2864bcb4c19b0cf122e60fd9a64b2dbf9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bcceca362f3c2a891d36f8f4e8071d0e35c8f164
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62952925"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658987"
 ---
 # <a name="invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy"></a>Windows Workflow Foundation için Visual Studio Hata Ayıklayıcısını Çağırma (Eski)
-Bu konu açıklar nasıl [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata ayıklamak için hata ayıklayıcı [!INCLUDE[wf](../includes/wf-md.md)] eski uygulamalarda [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[wf](../includes/wf-md.md)] uygulamalarda hata ayıklamada [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata ayıklayıcının nasıl kullanılacağı açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
 
- Genellikle, diğer Visual Studio programlama dillerinde yazılan programlar yalnızca hata ayıklama gibi eski iş akışı hata ayıklama. Başlatabilirsiniz [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] hata ayıklayıcı için Windows Workflow Foundation aşağıdaki yollarla:
+ Genellikle, diğer Visual Studio programlama dillerinde yazılmış programlarda hata ayıkladığınızda olduğu gibi eski iş akışlarının hatalarını ayıklayın. Aşağıdaki yollarla Windows Workflow Foundation için [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] hata ayıklayıcıyı başlatabilirsiniz:
 
-- Seçin **iliştirme** üzerinde **hata ayıklama** menüsünde kullanılabilir işlemleri çalışan bir iş akışı örneği seçin.
+- Kullanılabilir işlemlerden çalışan bir iş akışı örneği seçmek için **hata ayıklama** menüsünde **İşleme İliştir** ' i seçin.
 
-- Tuşuna **F5** iş akışı örneği çalıştırmaya başlayın ya da bir kesme noktasına isabet sonra çalışmaya devam eder.
+- İş akışının bir örneğini çalıştırmaya başlamak veya bir kesme noktası isabet ettikten sonra çalışmaya devam etmek için **F5** tuşuna basın.
 
-## <a name="stepping-through-code"></a>Kod boyunca ilerleme
- Hata ayıklayıcı, kodu satır satır aynı anda yürütülmekte olan bir Adımlama, en yaygın hata ayıklama yordamları destekler. Kod içerisinde ilerlemeye yönelik üç komutlar şunlardır:
+## <a name="stepping-through-code"></a>Kod üzerinden adımla
+ Hata ayıklayıcı, en yaygın hata ayıklama yordamlarından birini destekler, her seferinde tek bir satır yürüten adımlardır. Kod ile adımlamayı için üç komut vardır:
 
-- **Adımı**: Bir etkinlik kullanarak adım **F11**. Hata ayıklama adımlarında içinde tanımlanan herhangi bir işleyici. Hiçbir tutucusu tanımlanmazsa, etkinliğin adım veya diğer etkinlikler içeren bileşik etkinliklerle ilk yürütme etkinliğini adım. Kod işleyicisi Adımlama Tasarımcısı'ndan aşağıdaki etkinlikler için desteklenmez: **IfElseActivity**, **WhileActivity**, **ConditionedActivityGroup**, veya **ReplicatorActivity**. Bu etkinlikler ile ilişkili işleyiciler hata ayıklamak için kod açık kesme noktaları yerleştirmeniz gerekir.
+- **Adım adım**: **F11**kullanarak bir etkinliğe adım adım ekleyebilirsiniz. Hata ayıklayıcı, tanımlı herhangi bir işleyicide adımları. Hiçbir işleyici tanımlanmamışsa, etkinliğin üzerinde veya diğer etkinlikleri içeren bileşik etkinliklerle ilk yürütme etkinliğinin içine adımlayın. Tasarımcıdan kod işleyicilerine adımla şu etkinlikler için desteklenmez: **IfElseActivity**, **WhileActivity**, **ConditionedActivityGroup**veya **ReplicatorActivity**. Bu etkinliklerle ilişkili işleyicilerde hata ayıklamak için, koda açık kesme noktaları koymanız gerekir.
 
-- **Dışına adımla**: Bir etkinlik kullanıldığında dışında adım **Shift-F11**. Bir etkinlik dışına Adımlama geçerli etkinliği ve tüm eşdüzey tamamlanana kadar etkinlikleri çalıştırır. Hata ayıklayıcı, ardından geçerli etkinliğin üst öğede keser. Bir kod işleyicisinden Adımlama, hata ayıklayıcı işleyici ilişkilendirildiği faaliyete keser.
+- **Dışarı adımla**: **Shift-F11**kullanarak bir etkinliğin dışına ileredebilirsiniz. Bir etkinliğin dışına geçmek, geçerli etkinliği ve tüm eşdüzey etkinliklerini tamamlamaya kadar çalıştırır. Hata ayıklayıcı daha sonra geçerli etkinliğin üst öğesiyle kesilir. Kod işleyiciden atlama yaparken, hata ayıklayıcı işleyicinin ilişkilendirildiği etkinliği keser.
 
-- **Üzerinden adımla**: Bir etkinlik kullanıldığında üzerinden adım **F10**. Bileşik bir etkinlik Adımlama olduğunda. hata ayıklayıcı birleşik etkinlik ilk yürütülebilir alt keser. Gibi bir olmayan-bileşik Adımlama olduğunda bir **CodeActivity** etkinliği, hata ayıklayıcı, üzerinde bir sonraki etkinliğe etkinlik ve ilişkili işleyiciler ve sonları yürütür. Çalıştırılan etkinlik son alt etkinliğin bileşik bir etkinlik ise, yürütme sonrasında hata ayıklayıcı üst etkinlik keser.
+- **Adımlama**: **F10**kullanarak bir etkinliğin üzerinde ilerliğinizi yapabilirsiniz. Bileşik bir etkinliğin üzerine adımlanıyor. hata ayıklayıcı bileşik etkinliğin ilk yürütülebilir alt öğesi üzerinde kesilir. **CodeActivity** etkinliği gibi bir Composite 'ın üzerine adımlarken, hata ayıklayıcı aktiviteyi ve ilgili işleyicileri ve bir sonraki etkinliğin üzerinde kesintiler yürütür. Yürütülen etkinlik bileşik bir etkinliğin son alt etkinliği ise, yürütmeden sonra hata ayıklayıcı üst etkinliği keser.
 
-## <a name="attaching-to-a-process"></a>Bir işleme ekleme
- Bir işleme ekleyerek bir iş akışı hata ayıklamak için kullanılabilir işlemden seçin **kullanılabilir işlemler** liste kutusunda **iliştirme** iletişim kutusu. Varsa **otomatik: İş akışı kodu** görüntülenmiyorsa **ekleme** metin kutusunu işaretleyip tıklayın **seçin**. İçinde **kod türünü seç** iletişim kutusu, tıklayın **bu tür kodlarda hata ayıklama** seçip **iş akışı**. Ardından **Tamam** tıklatıp **iliştirme**.
+## <a name="attaching-to-a-process"></a>Bir Işleme iliştirme
+ Bir işleme ekleyerek bir iş akışında hata ayıklamak için, **Işleme İliştir** Iletişim kutusunda **kullanılabilir işlemler** liste kutusundan kullanılabilir işlem ' i seçin. **Otomatik: Iş akışı kodu** Ekle metin kutusunda görüntülenmiyorsa, ardından **Seç**' **e** tıklayın. **Kod türünü seç** iletişim kutusunda, **Bu kod türlerinde hata ayıkla** ' ya tıklayın ve **iş akışı**' nı seçin. Ardından **Tamam** ' a tıklayın ve **Ekle**' ye tıklayın.
 
-## <a name="debugging-with-f5"></a>F5 tuşuna basarak hata ayıklama
- Bir iş akışı etkinlik Kitaplığı kullanıldığında farklı Visual Studio projelerinde, bir iş akışı konak uygulama ve iş akışı DLL gibi bulunuyorsa, iş akışı DLL projesi iş akışının hata ayıklamak için Visual Studio çözüm başlangıç projesi olarak ayarlamanız gerekir kullanarak **F5**. Ana uygulama iş akışı DLL projenin yolu ayarlamalısınız **harici program Başlat** özelliği.
+## <a name="debugging-with-f5"></a>F5 ile hata ayıklama
+ Bir iş akışı ana bilgisayar uygulaması ve iş akışı DLL 'SI farklı Visual Studio projelerinde bulunuyorsa, örneğin, bir iş akışı etkinlik kitaplığı kullanırken, iş akışında hata ayıklamak için Visual Studio çözüm başlangıç projesi olarak iş akışı DLL projesini ayarlamanız gerekir **F5**'i kullanma. Ayrıca, iş akışı DLL projesinin **Başlat dış program** özelliğindeki ana bilgisayar uygulaması yolunu da ayarlamanız gerekir.
 
- Çözüm Gezgini'nde bir başlangıç projesi ayarlamak için proje adını sağ tıklatın ve seçin **başlangıç projesi olarak ayarla**. Ana yolunu ayarlamak için **harici program Başlat** özelliği, iş akışı projenin çift **özellikleri** düğümünü seçip Çözüm Gezgini **hata ayıklama** sekmesi. Altında **başlatma eylemi**seçin **harici program Başlat** ve ayıklamak istediğiniz iş akışı barındırma .exe dosyasının yolunu girin.
+ Çözüm Gezgini bir başlangıç projesi ayarlamak için, proje adına sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin. **Dış program Başlat** özelliğindeki ana bilgisayar yolunu ayarlamak için, Çözüm Gezgini iş akışı projesinin **Özellikler** düğümüne çift tıklayın ve **Hata Ayıkla** sekmesini seçin. **Başlat eylemi**altında **dış program Başlat** ' ı seçin ve hata ayıklamak istediğiniz iş akışını barındıran. exe dosyasının yolunu girin.
 
- Ana bilgisayar uygulaması başlangıç projesi olarak ayarlanırsa, yalnızca Visual Studio hata ayıklayıcı hata ayıklama için çağrılır; [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] Windows Workflow Foundation için hata ayıklayıcı çağrılamaz. Visual Studio hata ayıklayıcısını kullandıysanız, yalnızca C# veya Visual Basic kod kesme noktaları isabet; İş Akışı Tasarımcısı'nda ayarlanan kesme noktaları isabet değil. Örneğin, ayarladığınız bir kesme noktası bir <xref:System.Workflow.Activities.ParallelActivity> etkinlik Tasarımcısı'nda, isabet [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] Windows Workflow Foundation için hata ayıklayıcı kullanılır, ancak değil kullandığınızda, Visual Studio hata ayıklayıcısını.
+ Ana bilgisayar uygulaması başlangıç projesi olarak ayarlandıysa, yalnızca Visual Studio hata ayıklayıcısı hata ayıklama için çağrılır; Windows Workflow Foundation için [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] hata ayıklayıcı çağrılmıyor. Visual Studio hata ayıklayıcısı kullanılırsa yalnızca C# veya Visual Basic kod kesme noktaları isabet edilir; iş akışı tasarımcısında ayarlanan kesme noktaları isabet etmez. Örneğin, tasarımcıda bir <xref:System.Workflow.Activities.ParallelActivity> etkinliğinde ayarladığınız bir kesme noktası, Windows Workflow Foundation için [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] hata ayıklayıcı kullanılırsa, ancak Visual Studio hata ayıklayıcısını kullandığınızda kullanılmaz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Nasıl yapılır: (Eski) akışlarında kesme noktası ayarlama](../workflow-designer/how-to-set-breakpoints-in-workflows-legacy.md) [eski iş akışlarında hata ayıklama](../workflow-designer/debugging-legacy-workflows.md)
+ [Nasıl yapılır: Iş akışlarında (eski)](../workflow-designer/how-to-set-breakpoints-in-workflows-legacy.md) [hata ayıklama eski Iş akışlarında](../workflow-designer/debugging-legacy-workflows.md) kesme noktaları ayarlama

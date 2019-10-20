@@ -1,5 +1,5 @@
 ---
-title: Bir Visual C++ DLL Store uygulamaları için birim testi | Microsoft Docs
+title: Mağaza uygulamaları için bir C++ Visual dll 'yi test etme Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -7,345 +7,345 @@ ms.topic: conceptual
 ms.assetid: 24afc90a-8774-4699-ab01-6602a7e6feb2
 caps.latest.revision: 15
 author: alexhomer1
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4da615971004cb499fb6bab414517474c2bf6265
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9d5f86eb40e1401f98a4c66d0b971fb006762cc1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445967"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659701"
 ---
-# <a name="unit-testing-a-visual-c-dll-for-store-apps"></a>Bir Visual C++ DLL Store uygulamaları için birim testi
+# <a name="unit-testing-a-visual-c-dll-for-store-apps"></a>Mağaza uygulamaları için bir C++ Visual dll ile birim testi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konuda, Windows Store apps RooterLib DLL gösterir için unutmayacağınız bellek sınırı teorik, hesaplama bir tahminini verilen bir sayının kare kökünü hesaplayan bir işlevi uygulayarak, bir C++ DLL için birim testleri oluşturma yöntemlerinden biri açıklanmaktadır. DLL ardından eğlenceli bir kullanıcı gösteren bir Windows Store uygulaması eklenebilir matematik ile yapılabilir şeyler.  
-  
- Bu konuda birim testi geliştirmede ilk adım olarak kullanma işlemini gösterir. Bu yaklaşım önce test ettiğiniz sistemde belirli bir davranış doğrulayan bir test yöntemi yazın ve ardından testin başarılı olması kod yazacaksınız. Aşağıdaki yordamlar sırasına göre değişiklikler yaparak, bu strateji ilk Yazımdan sonra birim testleri yazma ve test etmek istediğiniz kod tersine çevirebilirsiniz.  
-  
- Bu konuda ayrıca tek bir Visual Studio çözümü de ayrı projeler için birim testleri ve test etmek istediğiniz DLL oluşturur. Doğrudan DLL projede birim testleri de içerebilir veya ayrı çözümler için birim testleri oluşturabilirsiniz ve. DLL. Bkz: [mevcut C++ uygulamalarına birim testleri ekleme](../test/unit-testing-existing-cpp-applications-with-test-explorer.md) kullanmak için hangi yapı ilişkin ipuçları için.  
-  
-## <a name="BKMK_In_this_topic"></a> Bu konudaki  
- Bu konuda aşağıdaki görevleri gerçekleştirir:  
-  
- [Çözüm ve birim testi projesi oluşturma](#BKMK_Create_the_solution_and_the_unit_test_project)  
-  
- [Testleri Test Gezgini'nde çalıştırma doğrulayın](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)  
-  
- [DLL projesi çözüme ekleyin.](#BKMK_Add_the_DLL_project_to_the_solution)  
-  
- [Birkaç dll projesi için test projesi](#BKMK_Couple_the_test_project_to_the_dll_project)  
-  
- [Yinelemeli olarak testleri genişletme ve onları geçirin](#BKMK_Iteratively_augment_the_tests_and_make_them_pass)  
-  
- [Başarısız bir test hatalarını ayıklama](#BKMK_Debug_a_failing_test)  
-  
- [Testleri değiştirmeden kodu yeniden düzenleme](#BKMK_Refactor_the_code_without_changing_tests)  
-  
-## <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> Çözüm ve birim testi projesi oluşturma  
-  
-1. Üzerinde **dosya** menüsünde seçin **yeni**ve ardından **yeni proje**.  
-  
-2. Yeni Proje iletişim kutusunda Genişlet **yüklü**, ardından **Visual C++** ve **Windows Store**. Ardından **birim testi kitaplığı (Windows Store apps)** proje şablonları listesinden.  
-  
-     ![Bir C oluşturma&#43; &#43; birim testi Kitaplığı](../test/media/ute-cpp-windows-unittestlib-create.png "UTE_Cpp_windows_UnitTestLib_Create")  
-  
-3. Projeyi adlandırın `RooterLibTests`; konumu belirtin; çözümünü arlandırın `RooterLib`; emin **çözüm için dizin oluştur** denetlenir.  
-  
-     ![Çözüm ve proje adını ve konumunu belirtin](../test/media/ute-cpp-windows-unittestlib-createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")  
-  
-4. Yeni projeyi **unittest1.cpp**.  
-  
-     ![unittest1.cpp](../test/media/ute-cpp-windows-unittest1-cpp.png "UTE_Cpp_windows_unittest1_cpp")  
-  
-     Aşağıdakilere dikkat edin:  
-  
-    - Her bir testi kullanılarak tanımlanmış `TEST_METHOD(YourTestName){...}`.  
-  
-         Geleneksel işlev imzası yazmanız gerekmez. İmza TEST_METHOD makro tarafından oluşturulur. Makro, void döndüren bir örnek işlevi oluşturur. Ayrıca, test yöntemi hakkında bilgi döndüren statik bir işlev oluşturur. Test Gezgini, yöntem bulmak bu bilgileri sağlar.  
-  
-    - Test yöntemleri, sınıflara kullanarak gruplanır `TEST_CLASS(YourClassName){...}`.  
-  
-         Testler çalıştırıldığında, her test sınıfının bir örneği oluşturulur. Test yöntemlerini belirtilmemiş sırayla çağrılır. Önce ve sonra her bir modül, sınıf veya yöntemi çağıran özel yöntemi tanımlayabilirsiniz. Daha fazla bilgi için [Microsoft.VisualStudio.TestTools.CppUnitTestFramework kullanma](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md) MSDN Kitaplığı'nda.  
-  
-## <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> Testleri Test Gezgini'nde çalıştırma doğrulayın  
-  
-1. Bazı test kodu ekleyin:  
-  
-    ```cpp  
-    TEST_METHOD(TestMethod1)  
-    {  
-        Assert::AreEqual(1,1);  
-    }  
-    ```  
-  
-     Dikkat `Assert` sınıfı yöntemleri test sonuçlarında doğrulamak için kullanabileceğiniz birkaç statik yöntemler sağlar.  
-  
-2. Üzerinde **Test** menüsünde seçin **çalıştırma** seçip **tümünü Çalıştır**.  
-  
-     Test projesi oluşturur ve çalıştırır. Test Gezgini penceresi görünür ve test altında listelenen **başarılı testler**. Pencerenin alt kısmındaki özeti bölmesinde seçilen test hakkında ek ayrıntılar sağlar.  
-  
-     ![Test Explorer](../test/media/ute-cpp-testexplorer-testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
-  
-## <a name="BKMK_Add_the_DLL_project_to_the_solution"></a> DLL projesi çözüme ekleyin.  
-  
-1. Çözüm Gezgini'nde çözüm adı seçin. Kısayol menüsünden **Ekle**, ardından **Yeni Proje Ekle**.  
-  
-     ![RooterLib projesi oluşturma](../test/media/ute-cpp-windows-rooterlib-create.png "UTE_Cpp_windows_RooterLib_Create")  
-  
-2. İçinde **Yeni Proje Ekle** iletişim kutusunda **DLL (Windows Store apps)**.  
-  
-3. Aşağıdaki kodu ekleyin **RooterLib.h** dosyası:  
-  
-    ```cpp  
-    // The following ifdef block is the standard way of creating macros which make exporting   
-    // from a DLL simpler. All files within this DLL are compiled with the ROOTERLIB_EXPORTS  
-    // symbol defined on the command line. This symbol should not be defined on any project  
-    // that uses this DLL. This way any other project whose source files include this file see   
-    // ROOTERLIB_API functions as being imported from a DLL, whereas this DLL sees symbols  
-    // defined with this macro as being exported.  
-    #ifdef ROOTERLIB_EXPORTS  
-    #define ROOTERLIB_API  __declspec(dllexport)  
-    #else  
-    #define ROOTERLIB_API __declspec(dllimport)  
-    #endif //ROOTERLIB_EXPORTS  
-  
-    class ROOTERLIB_API CRooterLib {  
-    public:  
-        CRooterLib(void);  
-        double SquareRoot(double v);  
-    };  
-    ```  
-  
-     Yorumlar yalnızca dll geliştiriciye ancak herkes tarafından DLL içinde kendi proje başvurusu ifdef bloğu açıklanmaktadır. DLL proje özelliklerini kullanarak, komut satırına ROOTERLIB_EXPORTS sembol ekleyebilirsiniz.  
-  
-     `CRooterLib` Sınıfı Oluşturucu bildirir ve `SqareRoot` estimator yöntemi.  
-  
-4. ROOTERLIB_EXPORTS sembol komut satırına ekleyin.  
-  
-    1. Çözüm Gezgini'nde **RooterLib** proje ve ardından **özellikleri** kısayol menüsünden.  
-  
-         ![Önişlemci sembolü tanımı Ekle](../test/media/ute-cpp-windows-addpreprocessorsymbol.png "UTE_Cpp_windows_AddPreprocessorSymbol")  
-  
-    2. RooterLib özellik sayfası iletişim kutusunda, **yapılandırma özellikleri**, genişletme **C++** ve **önişlemci**.  
-  
-    3. Seçin  **\<Düzenle … >** gelen **önişlemci tanımları** listeleyin ve ardından ekleyin `ROOTERLIB_EXPORTS` önişlemci tanımları iletişim kutusunda.  
-  
-5. Bildirilen işlevlerin en az uygulamaları ekleyin. Açık **RooterLib.cpp** ve aşağıdaki kodu ekleyin:  
-  
-    ```  
-    // constructor  
-    CRooterLib::CRooterLib()  
-    {  
-    }  
-  
-    // Find the square root of a number.  
-    double CRooterLib::SquareRoot(double v)  
-    {  
-        return 0.0;  
-    }  
-  
-    ```  
-  
-## <a name="BKMK_Couple_the_test_project_to_the_dll_project"></a> Birkaç dll projesi için test projesi  
-  
-1. RooterLib RooterLibTests projeye ekleyin.  
-  
-   1. Çözüm Gezgini'nde **RooterLibTests** proje ve ardından **başvuruları...**  kısayol menüsünde.  
-  
-   2. RooterLib Proje Özellikleri iletişim kutusunda, genişletme **ortak özellikler** ve **çerçeve ve başvurular**.  
-  
-   3. Seçin **Yeni Başvuru Ekle...**  
-  
-   4. İçinde **Başvuru Ekle** iletişim kutusunda **çözüm** seçip **projeleri**. Ardından **RouterLib** öğesi.  
-  
-2. RooterLib üstbilgi dosyasına eklenecek **unittest1.cpp**.  
-  
-   1. Açık **unittest1.cpp**.  
-  
-   2. Bu kod için aşağıdaki ekleme `#include "CppUnitTest.h"` satırı:  
-  
-       ```cpp  
-       #include "..\RooterLib\RooterLib.h"  
-       ```  
-  
-3. İçeri aktarılan işlevini kullanan bir test ekleyin. Aşağıdaki kodu ekleyin **unittest1.cpp**:  
-  
-   ```  
-   TEST_METHOD(BasicTest)  
-   {  
-       CRooterLib rooter;  
-       Assert::AreEqual(  
-           // Expected value:  
-           0.0,   
-           // Actual value:  
-           rooter.SquareRoot(0.0),   
-           // Tolerance:  
-           0.01,  
-           // Message:  
-           L"Basic test failed",  
-           // Line number - used if there is no PDB file:  
-           LINE_INFO());  
-   }  
-  
-   ```  
-  
-4. Çözümü oluşturun.  
-  
-    Yeni test Test Gezgini'nde görünür **çalıştırılmamış testler** düğümü.  
-  
-5. Test Gezgini'nde seçin **tümünü Çalıştır**.  
-  
-    ![Temel Test geçirilen](../test/media/ute-cpp-testexplorer-basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
-  
-   Test ve kod projelerini ayarlama sahiptir ve doğrulandı, kod projesinde işlevleri çalıştırmak testlerini çalıştırabilirsiniz. Şimdi gerçek test ve kod yazmaya başlayabilirsiniz.  
-  
-## <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> Yinelemeli olarak testleri genişletme ve onları geçirin  
-  
-1. Yeni bir test ekleyin:  
-  
-    ```  
-    TEST_METHOD(RangeTest)  
-    {  
-        CRooterLib rooter;  
-        for (double v = 1e-6; v < 1e6; v = v * 3.2)  
-        {  
-            double expected = v;  
-            double actual = rooter.SquareRoot(v*v);  
-            double tolerance = expected/1000;  
-            Assert::AreEqual(expected, actual, tolerance);  
-        }  
-    };  
-  
-    ```  
-  
+Bu konu, Windows Mağazası uygulamaları için bir C++ dll için birim testleri oluşturmanın bir yolunu açıklar. RooterLib dll, belirli bir sayının karekökünü hesaplayan bir işlev uygulayarak, ana bilgisayardan sınır teorisi olan her bir yöntemi gösterir. DLL daha sonra bir Windows Mağazası uygulamasına dahil edilebilir ve bu da Kullanıcı matematik ile yapılabilecek eğlenceli şeyleri gösterir.
+
+ Bu konu, geliştirme aşamasında ilk adım olarak birim testi kullanmayı gösterir. Bu yaklaşımda, önce test ettiğiniz sistemde belirli bir davranışı doğrulayan bir test yöntemi yazar ve ardından testi geçiren kodu yazarsınız. Aşağıdaki yordamların sırasıyla değişiklik yaparak, test etmek istediğiniz kodu yazmak ve ardından birim testlerini yazmak için bu stratejiyi ters çevirebilirsiniz.
+
+ Bu konu ayrıca, tek bir Visual Studio çözümü ve test etmek istediğiniz birim testleri ve DLL için ayrı projeler oluşturur. Birim testlerini doğrudan DLL projesine da dahil edebilir veya birim testleri ve için ayrı çözümler oluşturabilirsiniz. Dosyasını. Hangi yapının kullanılacağı hakkında ipuçları için bkz. [var olan C++ uygulamalara birim testleri ekleme](../test/unit-testing-existing-cpp-applications-with-test-explorer.md) .
+
+## <a name="BKMK_In_this_topic"></a>Bu konuda
+ Bu konu size aşağıdaki görevleri gerçekleştirir:
+
+ [Çözüm ve birim testi projesi oluşturma](#BKMK_Create_the_solution_and_the_unit_test_project)
+
+ [Test Gezgini 'nde testlerin çalıştırıldığını doğrulama](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)
+
+ [Çözüme DLL projesi ekleme](#BKMK_Add_the_DLL_project_to_the_solution)
+
+ [DLL projesine test projesi için birkaç](#BKMK_Couple_the_test_project_to_the_dll_project)
+
+ [Testleri tekrarlayarak ve geçiş yapın](#BKMK_Iteratively_augment_the_tests_and_make_them_pass)
+
+ [Başarısız bir testte hata ayıkla](#BKMK_Debug_a_failing_test)
+
+ [Testleri değiştirmeden kodu yeniden düzenleme](#BKMK_Refactor_the_code_without_changing_tests)
+
+## <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a>Çözüm ve birim testi projesi oluşturma
+
+1. **Dosya** menüsünde **Yeni**' yi ve ardından **Yeni proje**' yi seçin.
+
+2. Yeni proje iletişim kutusunda, **yüklü**' ı genişletin, ardından **görsel C++**  ' i genişletin ve **Windows Mağazası**' nı seçin Ardından, proje şablonları listesinden **birim testi kitaplığı (Windows Mağazası uygulamaları)** öğesini seçin.
+
+     ![C&#43; &#43; birim testi kitaplığı oluşturma](../test/media/ute-cpp-windows-unittestlib-create.png "UTE_Cpp_windows_UnitTestLib_Create")
+
+3. Projeyi `RooterLibTests` olarak adlandırın; konumu belirtin; çözümü adlandırın `RooterLib`; ve **çözüm için dizin oluşturma** ' nın işaretli olduğundan emin olun.
+
+     ![Çözüm ve proje adını ve konumunu belirtin](../test/media/ute-cpp-windows-unittestlib-createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")
+
+4. Yeni projede, **UnitTest1. cpp**' yi açın.
+
+     ![UnitTest1. cpp](../test/media/ute-cpp-windows-unittest1-cpp.png "UTE_Cpp_windows_unittest1_cpp")
+
+     Aşağıdakilere dikkat edin:
+
+    - Her test `TEST_METHOD(YourTestName){...}` kullanılarak tanımlanır.
+
+         Geleneksel bir işlev imzası yazmanız gerekmez. İmza, makro TEST_METHOD tarafından oluşturulur. Makro, void döndüren bir örnek işlevi oluşturur. Ayrıca test yöntemiyle ilgili bilgileri döndüren statik bir işlev oluşturur. Bu bilgiler, test Gezgini 'nin yöntemi bulmasını sağlar.
+
+    - Test yöntemleri `TEST_CLASS(YourClassName){...}` kullanılarak sınıflar halinde gruplandırılır.
+
+         Testler çalıştırıldığında, her bir test sınıfının bir örneği oluşturulur. Test yöntemleri belirtilmemiş bir sırada çağırılır. Her modül, sınıf veya yöntemden önce ve sonra çağrılan özel yöntemler tanımlayabilirsiniz. Daha fazla bilgi için MSDN Kitaplığı 'nda [Microsoft. VisualStudio. TestTools. CppUnitTestFramework kullanma](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md) konusuna bakın.
+
+## <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a>Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
+
+1. Bir test kodu ekleyin:
+
+    ```cpp
+    TEST_METHOD(TestMethod1)
+    {
+        Assert::AreEqual(1,1);
+    }
+    ```
+
+     @No__t_0 sınıfının, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığını unutmayın.
+
+2. **Test** menüsünde **Çalıştır** ' ı ve ardından **Tümünü Çalıştır**' ı seçin.
+
+     Test projesi oluşturulup çalışır. Test Gezgini penceresi görünür ve test **geçilen testler**altında listelenir. Pencerenin alt kısmındaki Özet bölmesi, seçilen test hakkında ek ayrıntılar sağlar.
+
+     ![Test Gezgini](../test/media/ute-cpp-testexplorer-testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")
+
+## <a name="BKMK_Add_the_DLL_project_to_the_solution"></a>Çözüme DLL projesi ekleme
+
+1. Çözüm Gezgini, çözüm adını seçin. Kısayol menüsünde **Ekle**' yi ve ardından **Yeni Proje Ekle**' yi seçin.
+
+     ![RooterLib projesi oluşturma](../test/media/ute-cpp-windows-rooterlib-create.png "UTE_Cpp_windows_RooterLib_Create")
+
+2. **Yeni Proje Ekle** iletişim kutusunda, **dll (Windows Mağazası uygulamaları)** öğesini seçin.
+
+3. Aşağıdaki kodu **RooterLib. h** dosyasına ekleyin:
+
+    ```cpp
+    // The following ifdef block is the standard way of creating macros which make exporting
+    // from a DLL simpler. All files within this DLL are compiled with the ROOTERLIB_EXPORTS
+    // symbol defined on the command line. This symbol should not be defined on any project
+    // that uses this DLL. This way any other project whose source files include this file see
+    // ROOTERLIB_API functions as being imported from a DLL, whereas this DLL sees symbols
+    // defined with this macro as being exported.
+    #ifdef ROOTERLIB_EXPORTS
+    #define ROOTERLIB_API  __declspec(dllexport)
+    #else
+    #define ROOTERLIB_API __declspec(dllimport)
+    #endif //ROOTERLIB_EXPORTS
+
+    class ROOTERLIB_API CRooterLib {
+    public:
+        CRooterLib(void);
+        double SquareRoot(double v);
+    };
+    ```
+
+     Açıklamalar IDEF bloğunu yalnızca dll geliştiricisi için değil, projesinde DLL 'ye başvuran herkese da açıklamaktadır. DLL 'nin proje özelliklerini kullanarak komut satırına ROOTERLIB_EXPORTS sembolünü ekleyebilirsiniz.
+
+     @No__t_0 sınıfı bir Oluşturucu ve `SqareRoot` tahmin aracı metodunu bildirir.
+
+4. Komut satırına ROOTERLIB_EXPORTS sembolünü ekleyin.
+
+    1. Çözüm Gezgini, **RooterLib** projesini seçin ve sonra kısayol menüsünden **Özellikler** ' i seçin.
+
+         ![Önişlemci sembol tanımı ekleme](../test/media/ute-cpp-windows-addpreprocessorsymbol.png "UTE_Cpp_windows_AddPreprocessorSymbol")
+
+    2. RooterLib Özellik sayfası iletişim kutusunda **yapılandırma özellikleri**' ni genişletin **C++** ve **Önişlemci**' yi seçin.
+
+    3. **@No__t_1Edit seçin...** ön **işlemci tanımları** listesinden > ve sonra Önişlemci tanımları iletişim kutusuna `ROOTERLIB_EXPORTS` ekleyin.
+
+5. Belirtilen işlevlerin minimal uygulamalarını ekleyin. **RooterLib. cpp** ' i açın ve aşağıdaki kodu ekleyin:
+
+    ```
+    // constructor
+    CRooterLib::CRooterLib()
+    {
+    }
+
+    // Find the square root of a number.
+    double CRooterLib::SquareRoot(double v)
+    {
+        return 0.0;
+    }
+
+    ```
+
+## <a name="BKMK_Couple_the_test_project_to_the_dll_project"></a>DLL projesine test projesi için birkaç
+
+1. RooterLib öğesini RooterLibTests projesine ekleyin.
+
+   1. Çözüm Gezgini, **RooterLibTests** projesini seçin ve ardından kısayol menüsünde **Başvurular...** öğesini seçin.
+
+   2. RooterLib proje özellikleri iletişim kutusunda, **ortak özellikler** ' i genişletin ve **çerçeve ve başvurular**' ı seçin.
+
+   3. **Yeni Başvuru Ekle...** seçeneğini belirleyin.
+
+   4. **Başvuru Ekle** Iletişim kutusunda **çözüm** ' i genişletin ve ardından **Projeler**' i seçin. Ardından, **Routerlib** öğesini seçin.
+
+2. **UnitTest1. cpp**Içinde RooterLib üstbilgi dosyasını dahil edin.
+
+   1. **UnitTest1. cpp**öğesini açın.
+
+   2. Bu kodu `#include "CppUnitTest.h"` satırı altına ekleyin:
+
+       ```cpp
+       #include "..\RooterLib\RooterLib.h"
+       ```
+
+3. İçeri aktarılan işlevi kullanan bir test ekleyin. Aşağıdaki kodu **UnitTest1. cpp**öğesine ekleyin:
+
+   ```
+   TEST_METHOD(BasicTest)
+   {
+       CRooterLib rooter;
+       Assert::AreEqual(
+           // Expected value:
+           0.0,
+           // Actual value:
+           rooter.SquareRoot(0.0),
+           // Tolerance:
+           0.01,
+           // Message:
+           L"Basic test failed",
+           // Line number - used if there is no PDB file:
+           LINE_INFO());
+   }
+
+   ```
+
+4. Çözümü oluşturun.
+
+    Yeni test, test Gezgini 'nde, **çalıştırma testleri** düğümünde görünür.
+
+5. Test Gezgini içinde **Tümünü Çalıştır**' ı seçin.
+
+    ![Temel test geçildi](../test/media/ute-cpp-testexplorer-basictest.png "UTE_Cpp_TestExplorer_BasicTest")
+
+   Test ve kod projelerini ayarlamış ve kod projesindeki işlevleri çalıştıran testleri çalıştıracağınızı doğruladınız. Artık gerçek testleri ve kodu yazmaya başlayabilirsiniz.
+
+## <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a>Testleri tekrarlayarak ve geçiş yapın
+
+1. Yeni bir test ekleyin:
+
+    ```
+    TEST_METHOD(RangeTest)
+    {
+        CRooterLib rooter;
+        for (double v = 1e-6; v < 1e6; v = v * 3.2)
+        {
+            double expected = v;
+            double actual = rooter.SquareRoot(v*v);
+            double tolerance = expected/1000;
+            Assert::AreEqual(expected, actual, tolerance);
+        }
+    };
+
+    ```
+
     > [!TIP]
-    > Geçmiş olan testleri değiştirmemenizi öneririz. Bunun yerine, yeni test Ekle, kod testin başarılı olması için güncelleştirin ve ardından başka bir test ekleyin ve benzeri.  
-    >   
-    >  Kullanıcılarınızın gereksinimlerine değiştirdiğinizde, artık doğru testleri devre dışı bırakın. Yeni testler yazmak ve bunları teker teker artımlı aynı şekilde çalışır duruma getirin.  
-  
-2. Test Gezgini'nde seçin **tümünü Çalıştır**.  
-  
-3. Test başarısız olur.  
-  
-     ![RangeTest başarısız](../test/media/ute-cpp-testexplorer-rangetest-fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
-  
+    > Geçilen testleri değiştirmenizi öneririz. Bunun yerine, yeni bir test ekleyin, kodu test geçişi olacak şekilde güncelleştirin ve daha sonra başka bir test ekleyin ve bu şekilde devam edin.
+    >
+    >  Kullanıcılarınız gereksinimlerini değiştirmelerine göre artık doğru olmayan Testleri devre dışı bırakın. Yeni testler yazın ve aynı anda bir kez, aynı şekilde çalışır hale getirin.
+
+2. Test Gezgini içinde **Tümünü Çalıştır**' ı seçin.
+
+3. Test başarısız oluyor.
+
+     ![RangeTest başarısız oluyor](../test/media/ute-cpp-testexplorer-rangetest-fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")
+
     > [!TIP]
-    > Hemen yazdıktan sonra her testin başarısız olduğunu doğrulayın. Bu, hiçbir zaman başarısız bir test yazma kolay onlardan yardımcı olur.  
-  
-4. Yeni test geçer, test edilen kod geliştirin. Ekleyin **RooterLib.cpp**:  
-  
-    ```cpp  
-    #include <math.h>  
-    ...  
-    // Find the square root of a number.  
-    double CRooterLib::SquareRoot(double v)  
-    {  
-        double result = v;  
-        double diff = v;  
-        while (diff > result/1000)  
-        {  
-            double oldResult = result;  
-            result = result - (result*result - v)/(2*result);  
-            diff = abs (oldResult - result);  
-        }  
-        return result;  
-    }  
-  
-    ```  
-  
-5. Çözümü derleyin ve Test Gezgini'nde seçin **tümünü Çalıştır**.  
-  
-     Her iki testler başarılı.  
-  
+    > Her testin yazıldıktan hemen sonra başarısız olduğunu doğrulayın. Bu, hiç başarısız olmayan bir testi yazmanın kolay bir hata yaşamadan kaçınmanıza yardımcı olur.
+
+4. Yeni testin başarılı olması için test kapsamındaki kodu geliştirin. Şunları **RooterLib. cpp**öğesine ekleyin:
+
+    ```cpp
+    #include <math.h>
+    ...
+    // Find the square root of a number.
+    double CRooterLib::SquareRoot(double v)
+    {
+        double result = v;
+        double diff = v;
+        while (diff > result/1000)
+        {
+            double oldResult = result;
+            result = result - (result*result - v)/(2*result);
+            diff = abs (oldResult - result);
+        }
+        return result;
+    }
+
+    ```
+
+5. Çözümü derleyin ve ardından Test Gezgini içinde **Tümünü Çalıştır**' ı seçin.
+
+     Her iki test de geçer.
+
 > [!TIP]
-> Aynı anda testleri bir ekleyerek kod geliştirin. Tüm testler her yinelemeden sonra başarılı olduğundan emin olun.  
-  
-## <a name="BKMK_Debug_a_failing_test"></a> Başarısız bir test hatalarını ayıklama  
-  
-1. Başka bir test eklemek **unittest1.cpp**:  
-  
-   ```  
-   // Verify that negative inputs throw an exception.  
-    TEST_METHOD(NegativeRangeTest)  
-    {  
-      wchar_t message[200];  
-      CRooterLib rooter;  
-      for (double v = -0.1; v > -3.0; v = v - 0.5)  
-      {  
-        try   
-        {  
-          // Should raise an exception:  
-          double result = rooter.SquareRoot(v);  
-  
-          swprintf_s(message, L"No exception for input %g", v);  
-          Assert::Fail(message, LINE_INFO());  
-        }  
-        catch (std::out_of_range ex)  
-        {  
-          continue; // Correct exception.  
-        }  
-        catch (...)  
-        {  
-          swprintf_s(message, L"Incorrect exception for %g", v);  
-          Assert::Fail(message, LINE_INFO());  
-        }  
-      }  
-   };  
-  
-   ```  
-  
-2. Test Gezgini'nde seçin **tümünü Çalıştır**.  
-  
-    Test başarısız olur. Test adı, Test Gezgini'nde seçin. Onaylama başarısız vurgulanır. Hata iletisi, Test Gezgini ayrıntı bölmesinde görünür.  
-  
-    ![Başarısız NegativeRangeTests](../test/media/ute-cpp-testexplorer-negativerangetest-fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
-  
-3. Testin neden başarısız görmek için işlev adım:  
-  
-   1. Başında bir kesme noktası ayarlamak `SquareRoot` işlevi.  
-  
-   2. Başarısız test kısayol menüsünde **seçilen Testlerde Hata Ayıkla**.  
-  
-        Kesme noktasında çalıştırma sona erdiğinde, kodda adım adım.  
-  
-   3. Kodu **RooterLib.cpp** istisna yakalamak için:  
-  
-       ```  
-       #include <stdexcept>  
-       ...  
-       double CRooterLib::SquareRoot(double v)  
-       {  
-           //Validate the input parameter:  
-           if (v < 0.0)   
-           {  
-             throw std::out_of_range("Can't do square roots of negatives");  
-           }  
-       ...  
-  
-       ```  
-  
-   1. Test Gezgini'nde seçin **tümünü Çalıştır** test düzeltilmiş yöntemi ve bir regresyon sunulan henüz emin olun.  
-  
-   Artık tüm sınamaları geçmesi.  
-  
-   ![All tests pass](../test/media/ute-ult-alltestspass.png "UTE_ULT_AllTestsPass")  
-  
-## <a name="BKMK_Refactor_the_code_without_changing_tests"></a> Testleri değiştirmeden kodu yeniden düzenleme  
-  
-1. Merkezi hesaplamaya basitleştirmek `SquareRoot` işlevi:  
-  
-    ```  
-    // old code  
-    //result = result - (result*result - v)/(2*result);  
-    // new code  
-    result = (result + v/result) / 2.0;  
-  
-    ```  
-  
-2. Seçin **tümünü Çalıştır** test UIMap'e yeniden işlenmiş yöntemi ve bir regresyon sunulan henüz emin olun.  
-  
+> Her seferinde bir test ekleyerek kod geliştirin. Her yinelemeden sonra tüm testlerin başarılı olduğundan emin olun.
+
+## <a name="BKMK_Debug_a_failing_test"></a>Başarısız bir testte hata ayıkla
+
+1. **UnitTest1. cpp**öğesine başka bir test ekleyin:
+
+   ```
+   // Verify that negative inputs throw an exception.
+    TEST_METHOD(NegativeRangeTest)
+    {
+      wchar_t message[200];
+      CRooterLib rooter;
+      for (double v = -0.1; v > -3.0; v = v - 0.5)
+      {
+        try
+        {
+          // Should raise an exception:
+          double result = rooter.SquareRoot(v);
+
+          swprintf_s(message, L"No exception for input %g", v);
+          Assert::Fail(message, LINE_INFO());
+        }
+        catch (std::out_of_range ex)
+        {
+          continue; // Correct exception.
+        }
+        catch (...)
+        {
+          swprintf_s(message, L"Incorrect exception for %g", v);
+          Assert::Fail(message, LINE_INFO());
+        }
+      }
+   };
+
+   ```
+
+2. Test Gezgini içinde **Tümünü Çalıştır**' ı seçin.
+
+    Test başarısız oluyor. Test Gezgini 'nde test adını seçin. Başarısız onaylama vurgulanır. Hata iletisi, test Gezgini 'nin ayrıntı bölmesinde görünür.
+
+    ![Negatiftiverangetests başarısız oldu](../test/media/ute-cpp-testexplorer-negativerangetest-fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")
+
+3. Testin neden başarısız olduğunu görmek için, işlevi adım adım inceleyin:
+
+   1. @No__t_0 işlevinin başlangıcında bir kesme noktası ayarlayın.
+
+   2. Başarısız testin kısayol menüsünde, **Seçili testlerin hatalarını ayıkla**' yı seçin.
+
+        Çalıştırma kesme noktasında durdurulduğunda kodda adım adım ilerleyin.
+
+   3. Özel durumu yakalamak için **RooterLib. cpp** öğesine kod ekleyin:
+
+       ```
+       #include <stdexcept>
+       ...
+       double CRooterLib::SquareRoot(double v)
+       {
+           //Validate the input parameter:
+           if (v < 0.0)
+           {
+             throw std::out_of_range("Can't do square roots of negatives");
+           }
+       ...
+
+       ```
+
+   1. Test Gezgini 'nde, düzeltilen yöntemi sınamak için **Tümünü Çalıştır** ' ı seçin ve bir gerileme sunmadığınızdan emin olun.
+
+   Şimdi tüm testler geçer.
+
+   ![Tüm testler geçer](../test/media/ute-ult-alltestspass.png "UTE_ULT_AllTestsPass")
+
+## <a name="BKMK_Refactor_the_code_without_changing_tests"></a>Testleri değiştirmeden kodu yeniden düzenleme
+
+1. @No__t_0 işlevinde merkezi hesaplamayı kolaylaştırın:
+
+    ```
+    // old code
+    //result = result - (result*result - v)/(2*result);
+    // new code
+    result = (result + v/result) / 2.0;
+
+    ```
+
+2. Yeniden düzenlenmiş yöntemini test etmek için **Tümünü Çalıştır** ' ı seçin ve bir gerileme sunmadığınızdan emin olun.
+
     > [!TIP]
-    > Kararlı bir dizi iyi birim testi kodu değiştirdiğinizde, yeni hatalar oluşturmadığından emin olmanızı sağlar.  
-    >   
-    >  Diğer değişikliklerden ayrı düzenlemesi tutun.
+    > Kararlı bir iyi birim testi kümesi, kodu değiştirirken hata sunmaabileceğinizden emin olmanızı sağlar.
+    >
+    >  Yeniden düzenlemeyi diğer değişikliklerden ayrı tutun.

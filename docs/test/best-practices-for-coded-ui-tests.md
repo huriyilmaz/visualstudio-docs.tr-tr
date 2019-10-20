@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - coded UI tests, best practices
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 896531325b3630b97a5cc076955fae6201defac6
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 174059a3b5053602c7f5d21f7b663d0a48bbe709
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870200"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665285"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>Kodlanmış UI testleri için en iyi uygulamalar
 
@@ -52,7 +52,7 @@ Esnek kodlanmış bir UI testi oluşturmak için aşağıdaki yönergeleri kulla
 
 Kodlanmış UI testleri Kullanıcı arabirimindeki birçok değişikliğe otomatik olarak uyum sağlar. Örneğin, bir kullanıcı arabirimi öğesi konum veya renge değiştiyse, çoğu zaman kodlanmış UI testi doğru öğeyi bulmaya devam eder.
 
-Bir test çalıştırması sırasında, Kullanıcı arabirimi denetimleri, bir arama özellikleri kümesi kullanılarak test çerçevesi tarafından bulunur. Arama özellikleri, *UIMap.Designer.cs* dosyasında **kodlanmış UI Test Oluşturucusu** tarafından oluşturulan tanımlarda her bir denetim sınıfına uygulanır. Arama özellikleri, denetimin <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A>, ve <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> özellikleri gibi, denetimi tanımlamak için kullanılabilen özellik adlarının ve özellik değerlerinin ad-değer çiftlerini içerir. Arama özellikleri değişmezse, kodlanmış UI testi Kullanıcı arabirimindeki denetimi başarıyla bulur. Arama özellikleri değiştirilirse, kodlanmış UI testlerinde Kullanıcı arabirimindeki denetimleri ve pencereleri bulmak için buluşsal yöntemler uygulayan bir akıllı eşleşme algoritması vardır. Kullanıcı arabirimi değiştirildiğinde, daha önce tanımlanan öğelerin arama özelliklerini değiştirerek bunların bulundıklarından emin olun.
+Bir test çalıştırması sırasında, Kullanıcı arabirimi denetimleri, bir arama özellikleri kümesi kullanılarak test çerçevesi tarafından bulunur. Arama özellikleri, *UIMap.Designer.cs* dosyasında **kodlanmış UI Test Oluşturucusu** tarafından oluşturulan tanımlarda her bir denetim sınıfına uygulanır. Arama özellikleri, denetimin <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> ve <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> özellikleri gibi, denetimi tanımlamak için kullanılabilen özellik adlarının ad-değer çiftlerini ve özellik değerlerini içerir. Arama özellikleri değişmezse, kodlanmış UI testi Kullanıcı arabirimindeki denetimi başarıyla bulur. Arama özellikleri değiştirilirse, kodlanmış UI testlerinde Kullanıcı arabirimindeki denetimleri ve pencereleri bulmak için buluşsal yöntemler uygulayan bir akıllı eşleşme algoritması vardır. Kullanıcı arabirimi değiştirildiğinde, daha önce tanımlanan öğelerin arama özelliklerini değiştirerek bunların bulundıklarından emin olun.
 
 ## <a name="if-your-user-interface-changes"></a>Kullanıcı arabiriminiz değişirse
 
@@ -72,7 +72,7 @@ Kodlanmış UI testlerini kaydetme hakkında daha fazla bilgi için bkz. [kodunu
 
 ## <a name="if-a-background-process-needs-to-complete-before-the-test-can-continue"></a>Teste devam etmeden önce bir arka plan işleminin tamamlanmasını gerekiyorsa
 
-Sonraki UI eylemine devam edebilmeniz için bir işlem bitene kadar beklemeniz gerekebilir. Bunu yapmak için, aşağıdaki örnekte <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyLevel%2A> olduğu gibi, testi devam etmeden önce beklemek için kullanabilirsiniz:
+Sonraki UI eylemine devam edebilmeniz için bir işlem bitene kadar beklemeniz gerekebilir. Bunu yapmak için, aşağıdaki örnekte olduğu gibi, testi devam etmeden önce beklemek için <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyLevel%2A> kullanabilirsiniz:
 
 ```csharp
 // Set the playback to wait for all threads to finish
@@ -92,4 +92,4 @@ Playback.PlaybackSettings.WaitForReadyLevel = WaitForReadyLevel.UIThreadOnly;
 - [UI otomasyonunu kullanarak kodunuzu test etme](../test/use-ui-automation-to-test-your-code.md)
 - [Kodlanmış UI testleri oluşturma](../test/use-ui-automation-to-test-your-code.md)
 - [Birden çok UI haritası ile büyük bir uygulamayı test etme](../test/testing-a-large-application-with-multiple-ui-maps.md)
-- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen yapılandırmalar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

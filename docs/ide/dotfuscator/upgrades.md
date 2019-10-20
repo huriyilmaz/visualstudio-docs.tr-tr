@@ -3,7 +3,7 @@ title: Dotfuscator Community’yi yükseltme
 ms.date: 03/28/2019
 ms.devlang: dotnet
 ms.topic: conceptual
-keywords: Dotfuscator, Dotfuscator Community, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive koruma, koruma, community edition, gizleme, .NET, ücretsiz, Visual Studio 2019, Visual Studio 2017, Visual Studio, yükseltme, komut satırı
+keywords: Dotfuscator, Dotfuscator Community, Dotfuscator CE, PreEmptive, PreEmptive çözümleri, PreEmptive Protection, koruma, topluluk sürümü, gizleme, .NET, ücretsiz, Visual Studio 2019, Visual Studio 2017, Visual Studio, yükseltme, komut satırı
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -19,55 +19,55 @@ helpviewer_keywords:
 - registering Dotfuscator
 - Dotfuscator command line
 - Dotfuscator Professional
-description: Dotfuscator Community, Visual Studio içinde ücretsiz bir kopyasını yükseltmeyi öğrenin.
+description: Visual Studio 'Ya dahil edilen Dotfuscator topluluğunun ücretsiz kopyasını nasıl yükselteceğinizi öğrenin.
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cee876a3904d5c47b43b58793087c901e8444dd3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 78a26da7734e4fa74a9b312b41786caca4b7cc67
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62557248"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652818"
 ---
 # <a name="upgrade-dotfuscator-community"></a>Dotfuscator Community’yi yükseltme
 
-Dotfuscator Community birçok uygulama koruması ve sağlamlaştırma özelliklerini hemen Microsoft Visual Studio kullanarak tüm geliştiricilere sunar.
-Ancak, daha fazla özellikler mevcuttur, Dotfuscator sürümüne yükseltme kullanıcılar için kullanılabilir.
+Dotfuscator topluluğu, Microsoft Visual Studio kullanan tüm geliştiriciler için hemen birçok uygulama koruma ve sağlamlaştırma özelliği sunar.
+Ancak, Dotfuscator sürümlerini yükseltecek kullanıcılar için daha fazla özellik mevcuttur.
 
-## <a name="registering-dotfuscator-community"></a>Dotfuscator Community kaydediliyor
+## <a name="registering-dotfuscator-community"></a>Dotfuscator topluluğu kaydediliyor
 
-Dotfuscator Community kayıtlı kullanıcıları almak için ek özelliklere erişimi gibi [komut satırı desteğiyle][cli], hangi kolaylaştırır Dotfuscator Community, otomatik derleme sürecinizle tümleştirin . Kaydetme ayrıca erişim için kullanılan yerleşik bir aracı verir [karıştırılmış yığın izlemelerini kod çözme][decode-obfuscated].
+Dotfuscator Community 'nin kayıtlı kullanıcıları, Dotfuscator Community 'yi otomatik derleme sürecinizde tümleştirmeyi kolaylaştıran [komut satırı desteği][cli]gibi ek özelliklere erişim sağlar. Kayıt Ayrıca, [karıştırılmış yığın izlemelerinin kodunu çözmek][decode-obfuscated]için kullanılan yerleşik bir araca erişim izni verir.
 
-Hızlı, basit ve ücretsiz olarak kayıttır.
-Dotfuscator Community kaydetmek için bkz: [tam Dotfuscator Community Kullanıcı Kılavuzu'ndaki yönergeleri][register-ce].
+Kayıt hızlı, basit ve ücretsizdir.
+Dotfuscator Community 'yi kaydettirmek için [tam Dotfuscator topluluk Kullanıcı Kılavuzu 'ndaki yönergelere][register-ce]bakın.
 
 ## <a name="dotfuscator-professional"></a>Dotfuscator Professional
 
-Dotfuscator Community temel bir düzeyde koruma sağlarken ***PreEmptive koruma - Dotfuscator Professional*** gibi gelişmiş karartma dönüştürmeler ve koruma özellikleri içerir:
+Dotfuscator Community temel bir koruma düzeyi sağladığından, ***preemptive Protection-Dotfuscator Professional*** , gelişmiş gizleme dönüştürmeleri ve aşağıdakiler gibi koruma özellikleri içerir:
 
 * *Fikri mülkiyet koruması*
-  * Ek seçenekler Enhanced Overload Induction™ ve rastgele tanımlayıcısı seçimi gibi yeniden adlandırma.
-  * Erişim için kurumsal düzeyde karartma dönüştürmeler de dahil olmak üzere, [iptal ediyor hedeflenen dönüşümler otomatik kod ılspy][control-flow].
-  * Yeteneği [hassas dizeleri gizlememeniz][string-encryption], kaynak koda dönüştürülmüş kod basit bir arama imkansızdır.
-  * Yeteneği [belirtmeyecek sahipliği ve dağıtım dizeleri, derlemelere gömmek][watermarking], yetkisiz yazılım sızıntılarını kaynağını belirlemek etmenize imkan sağlar.
-  * Yeteneği [tek birden çok derleme birleştirme][linking], görev ayrımı nettir ortadan gibi kod öğelerinin rollerini belirleme saldırganların daha zor hale.
-  * Yeteneği [kullanılmayan kod uygulamanızdan otomatik olarak kaldırmak][pruning], gönderildiğini hassas kod miktarını azaltır.
-* *Uygulama bütünlüğünü koruma*
-  * Ek [uygulama savunması davranışları][check-actions].
-  * Bir uygulamanın yaşam bitiş tarihi önce bir uyarı dönemi sağlama yeteneği.
-  * Uygulama kodu bir ömrü sonu uyarı dönemi sırasında veya son tarihten sonra bildirim özelliği.
+  * Gelişmiş aşırı yükleme endüksiyon™ ve rastgele tanımlayıcı seçimi dahil ek yeniden adlandırma seçenekleri.
+  * [Otomatik kod ayrıştırılmış derleme sırasında hedeflenen dönüşümler][control-flow]de dahil olmak üzere kurumsal düzeyde gizleme dönüştürmelerini erişim.
+  * [Gizli dizeleri gizleyebilme][string-encryption]özelliği, ayrıştırılmış kodun basit bir aramasını olanaksız hale getirir.
+  * [Şekilde belirtmeyecek adlandırmak sahiplik ve dağıtım dizelerini derlemelerinize ekleme][watermarking]özelliği, yetkisiz yazılım sızıntılarının kaynağını belirlemenizi sağlar.
+  * [Birden çok derlemeyi tek bir halinde birleştirebilme][linking]özelliği, saldırganların kod öğelerinin rollerini belirlemede daha da zor olduğundan, kaygıların ayrılması ortadan kalkar.
+  * [Kullanılmayan kodu uygulamanızdan otomatik olarak kaldırabilme][pruning], gönderilen hassas kod miktarını azaltır.
+* *Uygulama bütünlüğü koruması*
+  * Ek [uygulama savunma davranışları][check-actions].
+  * Uygulamanın yaşam süresi sonu tarihinden önce bir uyarı dönemi sağlama özelliği.
+  * Süre sonu uyarı dönemi sırasında veya son tarihten sonra uygulama kodunu bildirebilme özelliği.
 
-Dotfuscator Professional sektör standardı olan [.NET belirsizleştirici] [ net-obfuscator] ve sürekli destek, Bakım ve ürün güncelleştirmeleri gerektiren Kurumsal geliştiriciler için uygundur.
-Ayrıca, Dotfuscator Professional, Visual Studio ile sıkı tümleştirme sağlar ve Ticari kullanım için lisanslanmıştır.
+Dotfuscator Professional, sektör standardı [.net gizleme][net-obfuscator] ve sürekli destek, bakım ve ürün güncelleştirmeleri gerektiren kurumsal geliştiricilere uygundur.
+Ayrıca, Dotfuscator Professional, Visual Studio ile sıkı bir tümleştirme sunar ve ticari kullanım için lisanslanır.
 
-PreEmptive Solutions Dotfuscator Professional Gelişmiş uygulama koruma özellikleri hakkında daha fazla bilgi için ziyaret [Dotfuscator genel bakış sayfasında] [ product-about] ve [kendisine karşılaştırın Dotfuscator Community][product-compare].
-[Tam destekli deneme sırasında preemptive.com][eval].
+Dotfuscator Professional 'ın Gelişmiş uygulama koruma özellikleri hakkında daha fazla bilgi için PreEmptive Solutions ' [Dotfuscator genel bakış sayfasını][product-about] ziyaret edin ve [Dotfuscator topluluğuyla karşılaştırın][product-compare].
+[Tam olarak desteklenen denemeler preemptive.com adresinde bulunabilir][eval].
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-[Bu makalede tam Dotfuscator Community Kullanıcı Kılavuzu][full]
+[Tam Dotfuscator topluluk kullanıcı kılavuzunda bu makale][full]
 
 <!-- Copyright © 2019 PreEmptive Solutions, LLC -->
 

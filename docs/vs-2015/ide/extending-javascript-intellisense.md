@@ -1,5 +1,5 @@
 ---
-title: JavaScript IntelliSense genişletme | Microsoft Docs
+title: JavaScript IntelliSense 'ı genişletme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,539 +12,538 @@ helpviewer_keywords:
 - IntelliSense [JavaScript], extending
 ms.assetid: 004e1ab6-bd7a-4327-9e01-89b9be96ba2f
 caps.latest.revision: 43
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: eea71ffe2b449e0ee5aff893efd05e12e4ecae73
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: bf16b6fdc307e11875f30cfad6e4bb35580b0b04
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824927"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665759"
 ---
 # <a name="extending-javascript-intellisense"></a>JavaScript IntelliSense Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-JavaScript IntelliSense genişletilebilirlik özelliği, üçüncü taraf kitaplıklar için JavaScript Düzenleyicisi IntelliSense sonuçlarında özelleştirmenizi sağlar. Bu, bu kitaplıkları kullanan geliştiriciler deneyimini geliştirebilir.  
-  
- JavaScript dil servisi, bir projeye eklenen üçüncü taraf JavaScript kitaplıkları için IntelliSense özellikleri sağlar. Çoğu kitaplık için deyim tamamlama dil hizmeti tarafından otomatik olarak sağlanır. Deyim tamamlama örneği aşağıda gösterilmiştir:  
-  
- ![Deyim tamamlama örneği](../ide/media/js-intellisense-completion.png "js_intellisense_completion")  
-  
- Kitaplığınızı standart JavaScript açıklama etiketleri açıklamalarını değişkenler, İşlevler ve nesneler içeriyorsa (/ /), size otomatik olarak, varsayılan olarak açılan kutusuna açıklayıcı bilgiler sağlayan IntelliSense genişletilebilirlik özelliği yararlanın Tamamlanma listesi veya bir işlev çağrısı parantez yazdığında öğeleri sağında görünür. Açılır kutu açıklamalarda, üye açıklamasını içerir. Aşağıdaki örnek, tamamlanma listesi açılır kutusunu gösterir.  
-  
- ![Hızlı bilgi pop örneği&#45;kutusunu](../ide/media/js-intellisense-quickinfo.png "js_intellisense_quickinfo")  
-  
- Daha fazla Geliştirici deneyimini iyileştirmek için açılır kutusunda geliştiriciler tür bilgileri sağlamak isteyebilirsiniz. JavaScript kullanarak tür bilgilerini sağlayabilir [XML belgeleri yorumları](../ide/xml-documentation-comments-javascript.md) standart yorum etiketleri yerine. XML belgeleri yorumları, üç eğik çizgi açıklama etiketleri (/ / /) ve bir dizi tanımlanmış XML öğeleri kullanılarak ekleyin.  
-  
- Alternatif olarak, JavaScript IntelliSense genişletilebilirliği kullanarak tür bilgilerini sağlayabilir. Bu özellik, JavaScript uzantıları oluşturma ve bunları komut dosyası bağlamınızla ekleyerek IntelliSense sonuçları özelleştirmenize olanak sağlar. Tarafından kullanıma sunulan olaylara abone olan bir JavaScript dosyası uzantısında `intellisense` dil hizmetinin nesne. JavaScript IntelliSense genişletilebilirlik tercih edilen kitaplıkları için bir davranış desen Kitaplığı'nda JavaScript dil servisi IntelliSense desteği düzeyinde vermesini engeller ve alternatif, bildirim temelli XML çözümüdür Belge açıklamaları da gerekir. IntelliSense sonuçları özelleştirerek dil hizmet varsayılan özelliklerine kısıtlayabilir tüm davranış kalıplarını bağımsız olarak birinci sınıf bir IntelliSense deneyimi oluşturabilirsiniz. Daha fazla bilgi için [tanımlayıcılar için ifade tamamlama](../ide/statement-completion-for-identifiers.md).  
-  
-## <a name="adding-an-extension-to-the-script-context"></a>Betik bağlamı için bir uzantı ekleme  
- IntelliSense uzantı yürütülecek, geçerli komut dosyası bağlamınızla eklenmesi gerekir. Uzantı otomatik olarak komut dosyası bağlamınızla tarafından otomatik bulma mekanizmasından eklenebilir veya uzantı komut dosyası bağlamınızla el ile başvuru grupları veya başvuru yönergesi'nı kullanarak ekleyebilirsiniz.  
-  
- Otomatik bulma mekanizmasından dosya adlandırma kuralını uyguladığınızdan uzantıları otomatik olarak bulmak dil hizmeti sağlayan *libraryname*. intellisense.js ve kitaplığa ile aynı dizinde bulunur Uzantı geçerli. Örneğin, jQuery kitaplığı için geçerli bir uzantı jQuery.intellisense.js olacaktır. Daha kısıtlayıcı jQuery uzantıları için jQuery-1.7.1.intellisense.js (sürüm özgü bir uzantı) veya jQuery.ui.intellisense.js (kapsamlı jQuery kitaplığı için bir uzantı) gibi dosya adlarını kullanabilirsiniz. Belirli bir kitaplık için birden fazla uzantı bulunursa uzantısının en kısıtlayıcı sürümü kullanılır.  
-  
- Uzantı için tüm JavaScript proje dosyalarını kullanmak istiyorsanız, bunun yerine uzantısı için başvuru grubu eklemek seçebilirsiniz. Başvuru grupları; ya da örtük bir başvuru içeren ve adanmış çalışan başvuru içeren birkaç türü vardır. Bir uzantı eklemek için genellikle bir örtük bir başvuru grubu ya da dosya ekleme ihtiyacınız **örtük (Windows)** , **örtük (Web)** . Örtük başvuruda Kod Düzenleyicisi'nde açılan her .js dosyası için kapsamına dahildir. Bu yöntemi kullandığınızda, uzantısı ve uzantı ekleme dosyası eklemeniz gerekir.  
-  
- Kullanım **IntelliSense** sayfasının **seçenekleri** uzantı başvuru grubu eklemek için iletişim kutusu. Erişebildiğiniz **IntelliSense** seçerek sayfası **Araçları**, **seçenekleri** menü çubuğu ve açıp **metin düzenleyici**, **JavaScript**, **IntelliSense**, **başvuruları**. Başvuru grupları hakkında daha fazla bilgi için bkz. [JavaScript IntelliSense](../ide/javascript-intellisense.md) ve [seçenekler, metin düzenleyici, JavaScript, IntelliSense](../ide/reference/options-text-editor-javascript-intellisense.md).  
-  
- Belirli bir dosya kümesi için uzantıyı kullanmak istiyorsanız, bir başvuru yönergesini kullanın. Bu yöntemi kullandığınızda, hem genişletme hem de dosyanın uzantısı ekleme başvurmanız gerekir. Başvuru yönergesi kullanma hakkında daha fazla bilgi için bkz: [JavaScript IntelliSense](../ide/javascript-intellisense.md).  
-  
-## <a name="handling-intellisense-events"></a>IntelliSense olaylarını işleme  
- Genişletilebilirlik özelliği gibi olaylara abone olarak IntelliSense sonuçları özelleştirmenize olanak tanıyan `statementcompletion` olay dil hizmetinin `intellisense` nesne. Aşağıdaki örnek, deyim tamamlama gelen bir alt çizgi ile başlayan üyeler gizlemek için dil hizmeti tarafından kullanılan basit bir uzantıyı gösterir. Bu kod underscorefilter.js içinde yer alır ve içinde \\ \\ *Visual Studio yükleme yolu*\JavaScript\References klasör.  
-  
-```javascript  
-intellisense.addEventListener('statementcompletion', function (event) {  
-    if (event.targetName === "this") return;  
-  
-    var filterRegex;  
-  
-    if (event.target === undefined || event.target === window)  
-        filterRegex = /^_.*\d{2,}/;  
-    else  
-        filterRegex = /^_.*/;  
-  
-    event.items = event.items.filter(function (item) {  
-        return !filterRegex.test(item.name);  
-    });  
-});  
-```  
-  
- Önceki kodda; uzantısını denetler [targetName özelliği](#TargetName) ve [özelliği hedef](#Target) özelliklerini `statementcompletion` nesneleri gibi hariç tutmak için olay nesnesinin `this` ve `window`ve geçerli deyim tamamlanma listesi tanımlanabilir olmasını sağlamak için. Tamamlanma listesi tanımlanabilir, deyim tamamlama uzantı güncelleştirmeleri [özelliği](#Items) bir alt çizgiyle başlayan üyeleri kullanıma filtreleyerek koleksiyonu.  
-  
- Diğer örnekler için konum \\ \\ *Visual Studio yükleme yolu*\JavaScript\References klasör. Standart JavaScript açıklama etiketleri için varsayılan IntelliSense desteği sağlamak amacıyla diğer olayları kullanarak örnekler showPlainComments.js dosyayı bu klasöre sağlar (/ /). Underscorefilter.js gibi showPlainComments.js zaten çalışma uzantısı olarak kullanılabilir ve değişkenler, İşlevler ve nesneler için kodunuza açıklama etiketleri kullanırken, IntelliSense bilgilerine görebilirsiniz. Diğer örnekler için [kod örnekleri](#CodeExamples).  
-  
+JavaScript IntelliSense genişletilebilirlik özelliği, üçüncü taraf kitaplıklar için JavaScript düzenleyicisinde IntelliSense sonuçlarını özelleştirmenize olanak sağlar. Bu, bu kitaplıkları kullanan geliştiricilerin deneyimini geliştirebilir.
+
+ JavaScript Language Service, bir projeye eklenen üçüncü taraf JavaScript kitaplıkları için IntelliSense özellikleri sağlar. Çoğu kitaplık için, bildirim tamamlama dil hizmeti tarafından otomatik olarak sağlanır. Aşağıdaki çizimde bir ifade tamamlama örneği gösterilmektedir:
+
+ ![Deyimin tamamlanmasına örnek](../ide/media/js-intellisense-completion.png "js_intellisense_completion")
+
+ Kitaplığınız standart JavaScript açıklama etiketleri (//) içindeki değişkenlerin, işlevlerin ve nesnelerin açıklamalarını içeriyorsa, varsayılan olarak IntelliSense genişletilebilirlik özelliklerinden, bir açılan kutuda açıklayıcı bilgiler sağlayan, otomatik olarak avantajlı olursunuz. bir tamamlama listesindeki öğelerin sağında veya bir işlev çağrısında açma ayracı yazdığınızda görüntülenir. Açılır kutudaki açıklamalar üyenin açıklamasını içerir. Aşağıdaki örnek, bir tamamlanma listesinin açılan kutusunu gösterir.
+
+ ![Hızlı bilgi açılan&#45;kutusu örneği](../ide/media/js-intellisense-quickinfo.png "js_intellisense_quickinfo")
+
+ Geliştirici deneyimini daha da geliştirmek için, açılır kutuda geliştiricilere tür bilgileri sağlamak isteyebilirsiniz. Standart açıklama etiketleri yerine JavaScript [XML belge açıklamalarını](../ide/xml-documentation-comments-javascript.md) kullanarak tür bilgisi sağlayabilirsiniz. XML belge açıklamalarını, Üçlü eğik çizgi açıklama etiketleri (//) ve tanımlanmış bir XML öğeleri kümesi kullanarak eklersiniz.
+
+ Alternatif olarak, JavaScript IntelliSense genişletilebilirliği kullanarak tür bilgisi sağlayabilirsiniz. Bu özellik, JavaScript uzantıları oluşturarak ve bunları betik bağlamına ekleyerek IntelliSense sonuçlarını özelleştirmenize olanak sağlar. Bir JavaScript dosyası olan uzantısında, dil hizmetinin `intellisense` nesnesi tarafından açığa çıkarılan olaylara abone olursunuz. Kitaplığa yönelik bir davranış deseninin JavaScript dil hizmetinin istenen düzeyde IntelliSense desteği sağlaması ve bildirime dayalı XML 'e alternatif olması durumunda JavaScript IntelliSense genişletilebilirliği, kitaplıklar için tercih edilen çözümdür. Belge açıklamaları da gereklidir. IntelliSense sonuçlarını özelleştirerek, dil hizmetinin varsayılan yeteneklerini kısıtlayabilen herhangi bir davranış deseninden bağımsız olarak birinci sınıf bir IntelliSense deneyimi oluşturabilirsiniz. Daha fazla bilgi için bkz. [tanımlayıcılar Için deyimin tamamlanması](../ide/statement-completion-for-identifiers.md).
+
+## <a name="adding-an-extension-to-the-script-context"></a>Betik bağlamına uzantı ekleme
+ Bir IntelliSense uzantısının yürütülmesi için, geçerli betik bağlamına eklenmesi gerekir. Uzantı otomatik bulma mekanizması tarafından otomatik olarak komut dosyası bağlamına eklenebilir veya başvuru gruplarını veya başvuru yönergesini kullanarak uzantıyı betik bağlamına el ile ekleyebilirsiniz.
+
+ Otomatik bulma mekanizması, dil hizmetinin *LibraryName*. IntelliSense. js dosya adlandırma kuralını izleyen ve uzantının bulunduğu kitaplıkla aynı dizinde bulunan uzantıları otomatik olarak bulmasını sağlar. uygulanıyor. Örneğin, jQuery kitaplığı için geçerli bir uzantı jQuery. IntelliSense. js olacaktır. Daha kısıtlayıcı jQuery uzantıları için, jQuery-1.7.1. IntelliSense. js (sürüme özgü bir uzantı) veya jQuery. UI. IntelliSense. js (kapsamlı jQuery kitaplığı için bir uzantı) gibi dosya adlarını kullanabilirsiniz. Belirli bir kitaplık için birden fazla uzantı bulunursa, uzantının en kısıtlayıcı sürümü kullanılır.
+
+ Uzantıyı tüm JavaScript proje dosyalarınız için kullanmak istiyorsanız, bunun yerine uzantıyı bir başvuru grubuna eklemeyi tercih edebilirsiniz. Örtük başvurular ve adanmış çalışan başvuruları dahil olmak üzere çeşitli türlerde başvuru grupları vardır. Uzantı eklemek için genellikle dosyayı örtük **(Windows)** , **örtük (Web)** olarak örtük bir başvuru grubu olarak eklemeniz gerekir. Örtük başvurular, kod Düzenleyicisi 'nde açılan her. js dosyası için kapsamdadır. Bu yöntemi kullandığınızda, hem uzantıyı hem de uzantının takıma girecek dosyasını eklemeniz gerekir.
+
+ Bir uzantıyı başvuru grubu olarak eklemek için **Seçenekler** Iletişim kutusunun **IntelliSense** sayfasını kullanın. **IntelliSense** sayfasına, menü çubuğunda **Araçlar**, **Seçenekler** ' i ve ardından **metin Düzenleyicisi**, **JavaScript**, **IntelliSense**, **Başvurular**' ı seçerek erişebilirsiniz. Başvuru grupları hakkında daha fazla bilgi için bkz. [JavaScript IntelliSense](../ide/javascript-intellisense.md) ve [Seçenekler, metin düzenleyici, JavaScript, IntelliSense](../ide/reference/options-text-editor-javascript-intellisense.md).
+
+ Uzantıyı belirli bir dosya kümesi için kullanmak istiyorsanız, bir başvuru yönergesi kullanın. Bu yöntemi kullandığınızda, hem uzantıya hem de uzantının takıma girecek dosyaya başvurmanız gerekir. Başvuru yönergesini kullanma hakkında daha fazla bilgi için bkz. [JavaScript IntelliSense](../ide/javascript-intellisense.md).
+
+## <a name="handling-intellisense-events"></a>IntelliSense olaylarını işleme
+ Genişletilebilirlik özelliği, dil hizmeti `intellisense` nesnesinin `statementcompletion` olayı gibi olaylara abone olarak IntelliSense sonuçlarını özelleştirmenize olanak sağlar. Aşağıdaki örnek, bir alt çizgiyle başlayan üyeleri bir ifade tamamlamada gizlemek için dil hizmeti tarafından kullanılan basit bir uzantıyı gösterir. Bu kod, eksik scorefilter. js ' de yer alır ve \\ \\*Visual Studio yükleme yolu*\Javascript\references klasöründedir.
+
+```javascript
+intellisense.addEventListener('statementcompletion', function (event) {
+    if (event.targetName === "this") return;
+
+    var filterRegex;
+
+    if (event.target === undefined || event.target === window)
+        filterRegex = /^_.*\d{2,}/;
+    else
+        filterRegex = /^_.*/;
+
+    event.items = event.items.filter(function (item) {
+        return !filterRegex.test(item.name);
+    });
+});
+```
+
+ Önceki kodda uzantı, `this` ve `window` gibi nesneleri hariç tutmak ve geçerli bir deyimin tamamlanma listesinin olmasını sağlamak için `statementcompletion` olay nesnesinin [TargetName özelliğini](#TargetName) ve [hedef özellik](#Target) özelliklerini kontrol eder. tanıtı. Bir tamamlama listesi tanımlanamıyorsa, uzantı alt çizgiyle başlayan üyeleri filtreleyerek deyimin tamamlanma [öğeleri Özellik](#Items) koleksiyonunu günceller.
+
+ Daha fazla örnek için,*Visual Studio yükleme yolu*\Javascript\references klasörüne \\ \\ bakın. Bu klasördeki showPlainComments. js dosyası, standart JavaScript açıklama etiketleri (//) için varsayılan IntelliSense desteği sağlamak üzere diğer olayları kullanma örnekleri sunar. Iscorefilter. js gibi, showPlainComments. js zaten bir çalışma uzantısı olarak kullanılabilir ve değişken, işlev ve nesneler için kodunuzda açıklama etiketleri kullanırken elde edilen IntelliSense bilgilerini görebilirsiniz. Daha fazla örnek için bkz. [kod örnekleri](#CodeExamples).
+
 > [!WARNING]
-> Visual Studio'ya dahil edildi uzantılarını değiştirirseniz, JavaScript IntelliSense veya uzantı tarafından desteklenen özelliğini devre dışı bırakabilir.  
-  
- Uzantı kodunuzu kullanarak aşağıdaki olay türleri için işleyiciler oluşturabilirsiniz `addEventListener`:  
-  
-- `statementcompletion`, bir deyim tamamlama olayı işleyicisi ekler. Deyim tamamlama bir nokta (.) gibi özel bir karakter yazın sonra görüntülenen belirli bir tür için üye listesi veya yazarken veya CTRL + J. tuşuna bastığınızda görüntülenen tanımlayıcıları listesini sağlar. Bir olay nesne türünde işleyici alır `CompletionEvent`, aşağıdaki üyeleri destekler: [özelliği](#Items), [özelliği hedef](#Target), [targetName özelliği](#TargetName), ve [özelliği kapsam](#Scope).  
-  
-- `signaturehelp`, IntelliSense parametre bilgisi için bir işleyici ekler. Parametre bilgisi sayısı, adları ve bir işlev için gerekli parametre türleri hakkında bilgi sağlar. Bir olay nesne türünde işleyici alır `SignatureHelpEvent`, aşağıdaki üyeleri destekler: [özelliği hedef](#Target), [parentObject özelliği](#ParentObject), [functionCommentsözelliği](#FunctionComments), [functionHelp özelliği](#FunctionHelp).  
-  
-- `statementcompletionhint`, IntelliSense hızlı bilgi için bir işleyici ekler. Hızlı bilgi açılır kutunun tam bir bildirim tanımlayıcıları için kodunuzda gösterir. Bir olay nesne türünde işleyici alır `CompletionHintEvent`, aşağıdaki üyeleri destekler: [completionItem özelliği](#CompletionItem), ve [symbolHelp özelliği](#SymbolHelp).  
-  
-  Deyim tamamlama, parametre bilgileri ve hızlı bilgi gibi IntelliSense özelliklerini gösteren örnekler için bkz [IntelliSense kullanarak](../ide/using-intellisense.md).  
-  
+> Visual Studio ile birlikte gelen uzantı dosyalarını değiştirirseniz, JavaScript IntelliSense veya uzantının desteklediği özelliği devre dışı bırakabilirsiniz.
+
+ Uzantı kodunuzda, `addEventListener` kullanarak aşağıdaki olay türleri için işleyiciler oluşturabilirsiniz:
+
+- bir deyimin tamamlanma olayı için bir işleyici ekleyen `statementcompletion`. Deyimle tamamlama, belirli bir tür için, nokta (.) gibi özel bir karakter yazdıktan sonra veya yazarken veya CTRL + J tuşlarına bastığınızda görüntülenen tanımlayıcıların listesini içeren bir üye listesi sağlar. İşleyici, aşağıdaki üyeleri destekleyen `CompletionEvent` türünde bir olay nesnesi alır: [Items özelliği](#Items), [target özelliği](#Target), [TargetName özelliği](#TargetName)ve [Scope özelliği](#Scope).
+
+- IntelliSense parametre bilgileri için bir işleyici ekleyen `signaturehelp`. Parametre bilgileri, bir işlevin gerektirdiği parametre sayısı, adları ve türleri hakkında bilgi verir. İşleyici, aşağıdaki üyeleri destekleyen `SignatureHelpEvent` türünde bir olay nesnesi alır: [target özelliği](#Target), [ParentObject özelliği](#ParentObject), [functionComments özelliği](#FunctionComments), [functionHelp özelliği](#FunctionHelp).
+
+- IntelliSense hızlı Info için bir işleyici ekleyen `statementcompletionhint`. Hızlı bilgi açılır kutusu, kodunuzdaki tanımlayıcıların tam bildirimini gösterir. İşleyici, aşağıdaki üyeleri destekleyen `CompletionHintEvent` türünde bir olay nesnesi alır: [completionItem özelliği](#CompletionItem)ve [symbolHelp özelliği](#SymbolHelp).
+
+  İfade tamamlama, parametre bilgileri ve hızlı bilgi gibi IntelliSense özelliklerini gösteren örnekler için bkz. [IntelliSense kullanma](../ide/using-intellisense.md).
+
 > [!NOTE]
-> JavaScript'te hızlı bilgi tamamlanma listesi sağında görünen açılır kutusunda ifade eder. Hızlı Bilgi'yi el ile çağrılamaz.  
-  
-## <a name="intellisenseObject"></a> IntelliSense nesnesi  
- Aşağıdaki tablo, kullanılabilen işlevler gösterir `intellisense` nesne. `intellisense` Nesne yalnızca tasarım zamanında kullanılabilir.  
-  
-|İşlev|Açıklama|  
-|--------------|-----------------|  
-|`addEventListener(type, handler);`|Bir IntelliSense olay için bir olay işleyicisi ekler.<br /><br /> `type` bir dize değeridir. Geçerli değerler `statementcompletion`, `signaturehelp`, ve `statementcompletionhint`.<br /><br /> `handler` şu türlerden birinde bir olay nesnesi alan bir olay işleyici işlevi şöyledir:<br /><br /> -   `CompletionEvent`, kullanılan `statementcompletion` olay.<br />-   `SignatureHelpEvent`, kullanılan `signaturehelp` olay.<br />-   `CompletionHintEvent`, kullanılan `statementcompletionhint` olay.<br /><br /> Bu işlev kullanan örnekler için bkz [kod örnekleri](#CodeExamples).|  
-|`annotate(obj, doc);`|Belge yorumlarını bir nesneden kopyalayarak başka bir nesneye bir nesne için belgeleri belirtir.<br /><br /> `obj` belgeleri kopyalanacağı nesneyi belirtir.<br /><br /> `doc` belgeleri kopyalanacak nesnesini belirtir.<br /><br /> Bu işlevin nasıl kullanılacağını gösteren bir örnek için bkz: [IntelliSense ek açıklamaları ekleme](#Annotations).|  
-|`getFunctionComments(func);`|Belirtilen işlev için açıklamalar döndürür.<br /><br /> `func` Açıklamalar döndürülen işlevi belirtir.<br /><br /> Ayarlayabileceğiniz `func` kullanarak parametre `completionItem.value`.<br /><br /> Döndürülen `functionComments` nesne aşağıdaki üyeleri içerir: `above`, `inside`, ve `paramComment`. Daha fazla bilgi için [functionComments özelliği](#FunctionComments) özelliği.<br /><br /> `getFunctionComments` yalnızca biri tarafından kaydedilen olay işleyicileri içinde çağrılabilir `addEventListener`.<br /><br /> Bu işlevin nasıl kullanılacağını gösteren bir örnek için bkz: \\ \\ *Visual Studio yükleme yolu*\JavaScript\References\showPlainComments.js.|  
-|`logMessage(msg);`|Tanılama iletilerini çıkış penceresine gönderir.<br /><br /> `msg` iletisini içeren bir dizedir.<br /><br /> Bu işlevin nasıl kullanılacağını gösteren bir örnek için bkz: [gönderme iletilerini çıkış penceresine](#Logging).|  
-|`nullWithCompletionsOf(value);`|Kendisi için tamamlanma listesi tarafından belirlenir geçirilen nesne özel bir null değeri döndürür `value` parametresi.<br /><br /> `value` döndürülen değer için tamamlanma listesini belirler. `value` herhangi bir tür olabilir.<br /><br /> Null dönüş değeri tasarım zamanında null olarak kabul edilir, ancak dönüş değeri için tamamlanma listesi için tamamlanma listesini aynıdır `value` parametresi.<br /><br /> Bu işlev bir kullanım içindir dönüş türü, çalışma zamanında tahmin edilebilir, ancak dönüş değeri, dönüş değeri için IntelliSense sağlamak üzere `null` tasarım zamanında.|  
-|`redirectDefinition(func, definition);`|IntelliSense için belirtilen tanım işlevi parametre Yardımı özgün func işlevi yerine kullanacağınız bildirir veya **tanıma** istenir.<br /><br /> `func` Hedef işlevi belirtir.<br /><br /> `definition` işlevi için parametre bilgileri hedef işlevi yerine kullanılacak belirtir ve **tanıma**.|  
-|`setCallContext(func, thisArg);`|Arama bağlamı veya belirtilen işlev için bir kapsam belirler.<br /><br /> `func` kapsamını ayarlamak istediğiniz işlevi belirtir.<br /><br /> `thisArg` bir nesne sabit değeri olan `this` anahtar sözcüğünün başvurabileceği için yeni üye kapsamını belirtir. Örneğin bu parametrede geçirilecek bağımsız değişkenleri içerebilir, `intellisense.setCallContext(func, { thisArg: "", args: [23,2] });`<br /><br /> `setCallContext` benzer şekilde davranış sağlar `Function.prototype.bind`dışında yalnızca tasarım zamanı IntelliSense desteği için kullanılır. Kullanabileceğiniz `setCallContext` işlev çağırdığınızda, aksi takdirde ulaşılabilir değil, kod için bir arama benzetimi gerçekleştirmesi gerekiyorsa işlevi kapsamını ayarlamak için işlev çağrısının bağımsız değişkenleri ve kapsamının doğru içerecektir.|  
-|`undefinedWithCompletionsOf(value);`|Kendisi için tamamlanma listesi tarafından belirlenir geçirilen nesne özel tanımlanmamış bir değer döndürür `value` parametresi.<br /><br /> `value` döndürülen değer için tamamlanma listesini belirler. `value` herhangi bir tür olabilir.<br /><br /> Tanımsız dönüş değeri kabul edilir olarak tanımlanmamış, tasarım zamanı ancak tamamlama listesi için dönüş değeri için tamamlanma listesini aynıdır `value` parametresi.<br /><br /> İçin dönüş değeri, dönüş türü, çalışma zamanında tahmin edilebilir, ancak tasarım zamanında dönüş değeri tanımsızdır IntelliSense sağlamak için bu işlevi bir kullanım içindir.|  
-|`version()`|Visual Studio sürümünü döndürür.|  
-  
-## <a name="event-members"></a>Olay üyesi  
- Aşağıdaki olaylar için olay nesnesi sunulan üyeleri aşağıdaki bölümlerde açıklanmıştır: `statementcompletion`, `signaturehelp`, ve `statementcompletionhint`.  
-  
-### <a name="CompletionItem"></a> completionItem özelliği  
- Hızlı bilgi açılır kutu istendiği tamamlanma öğesi olarak bilinen bir tanımlayıcı döndürür. Bu özellik kullanılabilir `statementcompletionhint` olay nesnesi ve [özelliği](#Items) özelliği `statementcompletion` olay nesnesi.  
-  
- Dönüş değeri: `completionItem` nesnesi  
-  
- Aşağıdaki üyeleri olan `completionItem` nesnesi:  
-  
-- `name`. Okuma/yazma kullanıldığında `items` koleksiyonu; Aksi takdirde, salt okunur. Tamamlanma öğesi tanımlayan bir dize döndürür.  
-  
-- `kind`. Okuma/yazma kullanıldığında `items` koleksiyonu; Aksi takdirde, salt okunur. Tamamlanma öğesi türünü temsil eden bir dize döndürür. Olası değerler yöntemi, alan, özelliği, parametre, değişken ve ayrılmış.  
-  
-- `glyph`. Okuma/yazma kullanıldığında `items` koleksiyonu; Aksi takdirde, salt okunur. Tamamlama listesinde görüntülenecek bir simge temsil eden bir dize döndürür. Olası değerler için `glyph` aşağıdaki biçimi kullanın: vs:*glyphType*burada *glyphType* dilden bağımsız üyeleri karşılık gelen <xref:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup> sabit listesi. Örneğin, `vs:GlyphGroupMethod` için bir olası değer `glyph`. Zaman `glyph` ayarlı değil, `kind` özelliği varsayılan simgeyi belirtir.  
-  
-- `parentObject`. Salt okunur. Üst nesne döndürür.  
-  
-- `value`. Salt okunur. Tamamlama öğesinin değeri temsil eden bir nesne döndürür.  
-  
-- `comments`. Salt okunur. Alan veya değişken üzerindeki açıklamalar içeren bir dize döndürür.  
-  
-- `scope`. Salt okunur. Tamamlanma öğesi kapsamını döndürür. Olası değerler şunlardır: Genel, yerel, parametre ve üye.  
-  
-### <a name="Items"></a> Öğe özelliği  
- Alır veya bir dizi deyim tamamlama öğeleri ayarlar. Dizideki her öğe bir [completionItem özelliği](#CompletionItem) nesne. `items` Özelliği kullanılabilir `statementcompletion` olay nesnesi.  
-  
- Dönüş değeri: dizi  
-  
-### <a name="FunctionComments"></a> functionComments özelliği  
- İşlev için açıklamalar döndürür. Bu özellik kullanılabilir `signaturehelp` olay nesnesi.  
-  
- Dönüş değeri: `comments` nesnesi  
-  
- Aşağıdaki üyeleri olan `comments` nesnesi:  
-  
-- `above`. Açıklamalar işlevin üstünde döndürür.  
-  
-- `inside`. İşlevin içindeki açıklamalar genellikle VSDoc biçiminde döndürür.  
-  
-- `paramComments`. Her bir parametreye işlev açıklamaları temsil eden bir dizi döndürür. Dizi üyeleri Ekle:  
-  
-  - `name`. Parametre adını temsil eden bir dize döndürür.  
+> JavaScript 'te hızlı bilgi, tamamlanma listesinin sağında görüntülenen açılır kutuyu ifade eder. Hızlı bilgileri el ile çağıramazsınız.
 
-  - `comment`. Parametre açıklama içeren bir dize döndürür.  
-  
-### <a name="FunctionHelp"></a> functionHelp özelliği  
- İşlev için Yardım'ı döndürür. Bu özellik kullanılabilir `signaturehelp` olay nesnesi.  
-  
- Dönüş değeri: `functionHelp` nesnesi  
-  
- Aşağıdaki üyeleri olan `functionHelp` nesnesi:  
-  
-- `functionName`. Okuma/yazma. İşlev adı içeren bir dize döndürür.  
-  
-- `signatures`. Okuma/yazma. Alır veya ayarlar işlev imzası dizisi. Dizideki her öğe bir `signature` nesne. Bazı `signature` özellikleri gibi `locid`, karşılık gelen ortak [XML belgeleri yorumları](../ide/xml-documentation-comments-javascript.md) öznitelikleri.  
-  
-  Üyeleri `signature` nesne içerir:  
+## <a name="intellisenseObject"></a>IntelliSense nesnesi
+ Aşağıdaki tabloda `intellisense` nesnesi için kullanılabilen işlevler gösterilmektedir. @No__t_0 nesnesi yalnızca tasarım zamanında kullanılabilir.
 
-  - `description`. Okuma/yazma. İşlevi tanımlayan bir dize döndürür.  
+|İşlev|Açıklama|
+|--------------|-----------------|
+|`addEventListener(type, handler);`|IntelliSense olayı için bir olay işleyicisi ekler.<br /><br /> `type` bir dize değeridir. Geçerli değerler `statementcompletion`, `signaturehelp` ve `statementcompletionhint` içerir.<br /><br /> `handler`, aşağıdaki türlerden birinin bir olay nesnesini alan olay işleyicisi işlevidir:<br /><br /> `statementcompletion` olayı için kullanılan `CompletionEvent` -   .<br />`signaturehelp` olayı için kullanılan `SignatureHelpEvent` -   .<br />`statementcompletionhint` olayı için kullanılan `CompletionHintEvent` -   .<br /><br /> Bu işlevi kullanan örnekler için bkz. [kod örnekleri](#CodeExamples).|
+|`annotate(obj, doc);`|Belge açıklamalarını bir nesneden başka bir nesneye kopyalayarak nesnenin belgelerini belirtir.<br /><br /> `obj` belgenin kopyalanacağı nesneyi belirtir.<br /><br /> `doc` belgenin kopyalanacağı nesneyi belirtir.<br /><br /> Bu işlevin nasıl kullanılacağını gösteren bir örnek için bkz. [IntelliSense ek açıklamalarını ekleme](#Annotations).|
+|`getFunctionComments(func);`|Belirtilen işlev için açıklamaları döndürür.<br /><br /> `func`, yorumların döndürüldüğü işlevi belirtir.<br /><br /> @No__t_0 parametresini `completionItem.value` kullanarak ayarlayabilirsiniz.<br /><br /> Döndürülen `functionComments` nesnesi şu üyeleri içerir: `above`, `inside` ve `paramComment`. Daha fazla bilgi için bkz. [functionComments özelliği](#FunctionComments) özelliği.<br /><br /> `getFunctionComments`, yalnızca `addEventListener` tarafından kaydedilen olay işleyicilerinden biri içinden çağrılabilir.<br /><br /> Bu işlevin nasıl kullanılacağını gösteren bir örnek için bkz. \\ \\*Visual Studio yükleme yolu*\Javascript\references\showplainyorumts.exe \ s.|
+|`logMessage(msg);`|Tanılama iletilerini çıkış penceresine gönderir.<br /><br /> `msg`, iletiyi içeren bir dizedir.<br /><br /> Bu işlevin nasıl kullanılacağını gösteren bir örnek için, bkz. [iletileri çıkış penceresi gönderme](#Logging).|
+|`nullWithCompletionsOf(value);`|Tamamlanma listesinin `value` parametresinde geçirilen nesne tarafından belirlendiği özel bir null değer döndürür.<br /><br /> `value` döndürülen değerin tamamlanma listesini belirler. `value` herhangi bir tür olabilir.<br /><br /> Null dönüş değeri tasarım zamanında null olarak değerlendirilir, ancak dönüş değeri için tamamlama listesi `value` parametresi için tamamlama listesiyle aynıdır.<br /><br /> Bu işlev için bir kullanım, dönüş türü çalışma zamanında tahmin edildiğinde bir dönüş değeri için IntelliSense sağlamaktır, ancak dönüş değeri tasarım zamanında `null`.|
+|`redirectDefinition(func, definition);`|Parametre yardımı veya **tanım 'e git** Istendiğinde, IntelliSense 'in özgün Func işlevi yerine sağlanan tanım işlevini kullanmasını söyler.<br /><br /> `func` hedef işlevi belirtir.<br /><br /> `definition`, parametre bilgileri için hedef işlev yerine kullanılacak işlevi belirtir ve **Tanıma Git**.|
+|`setCallContext(func, thisArg);`|Belirtilen işlev için çağrı bağlamını veya kapsamını ayarlar.<br /><br /> `func`, kapsamı ayarlanacak işlevi belirtir.<br /><br /> `thisArg`, üyenin yeni kapsamını belirten `this` anahtar sözcüğünün başvurabileceği bir nesne sabit değeri. Bu parametreye geçirilecek bağımsız değişkenleri ekleyebilirsiniz, örneğin, `intellisense.setCallContext(func, { thisArg: "", args: [23,2] });`<br /><br /> `setCallContext`, `Function.prototype.bind` benzer davranışı sağlar, ancak yalnızca tasarım zamanı IntelliSense desteği için kullanılır. Başka türlü erişilebilir olmayan bir koda çağrı benzetimi yapmanız gerekiyorsa işlev kapsamını ayarlamak için `setCallContext` kullanabilirsiniz, böylece işlevi çağırdığınızda işlev çağrısının doğru kapsam ve bağımsız değişkenleri dahil edilir.|
+|`undefinedWithCompletionsOf(value);`|Tamamlanma listesinin `value` parametresinde geçirilen nesne tarafından belirlendiği özel bir tanımsız değer döndürür.<br /><br /> `value` döndürülen değerin tamamlanma listesini belirler. `value` herhangi bir tür olabilir.<br /><br /> Tanımsız dönüş değeri tasarım zamanında tanımsız olarak değerlendirilir, ancak dönüş değeri için tamamlama listesi `value` parametresi için tamamlama listesiyle aynıdır.<br /><br /> Bu işlev için bir kullanım, dönüş türü çalışma zamanında tahmin edildiğinde, ancak tasarım zamanında dönüş değeri tanımsız olduğunda bir dönüş değeri için IntelliSense sağlamaktır.|
+|`version()`|Visual Studio sürümünü döndürür.|
 
-  - `locid`. Okuma/yazma. Yerelleştirme işlevi hakkında bilgi içeren bir dize tanımlayıcı döndürür.  
+## <a name="event-members"></a>Olay üyeleri
+ Aşağıdaki bölümlerde, aşağıdaki olaylar için olay nesnesinde sunulan Üyeler açıklanır: `statementcompletion`, `signaturehelp` ve `statementcompletionhint`.
 
-  - `helpKeyword`. Okuma/yazma. Yardım anahtar sözcüğü içeren bir dize döndürür.  
+### <a name="CompletionItem"></a>completionItem özelliği
+ Bir hızlı bilgi açılır kutusu istenen, tamamlanma öğesi olarak bilinen tanımlayıcıyı döndürür. Bu özellik, `statementcompletionhint` Event nesnesi ve `statementcompletion` olay nesnesinin [Items özelliği](#Items) özelliği için kullanılabilir.
 
-  - `externalFile`. Okuma/yazma. Üye kimliği içeren dosyayı temsil eden bir dize döndürür  
+ Dönüş değeri: `completionItem` nesnesi
 
-  - `externalid`. Okuma/yazma. İşlevin üye kimliği temsil eden bir dize döndürür.  
+ @No__t_0 nesnesinin üyeleri aşağıda verilmiştir:
 
-  - `params`. Okuma/yazma. Alır veya işlevi için parametreler dizisi ayarlar. Parametreler dizideki her öğe bir `parameter` aşağıdaki özniteliklerine karşılık gelen özelliklerle nesnesi [ \<param >](../ide/param-javascript.md) öğesi:  
+- `name`. @No__t_0 koleksiyonunda kullanıldığında okuma/yazma; Aksi takdirde, salt okunurdur. Tamamlama öğesini tanımlayan bir dize döndürür.
 
-    - `name`. Okuma/yazma. Parametre adını temsil eden bir dize döndürür.  
+- `kind`. @No__t_0 koleksiyonunda kullanıldığında okuma/yazma; Aksi takdirde, salt okunurdur. Tamamlanma öğesi türünü temsil eden bir dize döndürür. Olası değerler yöntemi, alanı, özelliği, parametresi, değişkeni ve ayrılmış değerlerdir.
 
-    - `type`. Okuma/yazma. Parametre türünü temsil eden bir dize döndürür.  
+- `glyph`. @No__t_0 koleksiyonunda kullanıldığında okuma/yazma; Aksi takdirde, salt okunurdur. Tamamlama listesinde görüntülenen bir simgeyi temsil eden bir dize döndürür. @No__t_0 için olası değerler şu biçimi kullanır: vs:*GlyphType*, burada, *glyphtype* , <xref:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup> Numaralandırmadaki dilden bağımsız üyelere karşılık gelir. Örneğin, `vs:GlyphGroupMethod` `glyph` için olası bir değerdir. @No__t_0 ayarlanmamışsa, `kind` özelliği varsayılan simgeyi belirler.
 
-    - `elementType`. Okuma/yazma. Tür ise `Array`, dizideki öğelerin türünü temsil eden bir dize döndürür.  
+- `parentObject`. Salt okunur. Ana nesneyi döndürür.
 
-    - `description`. Okuma/yazma. Parametreyi açıklayan bir dize döndürür.  
+- `value`. Salt okunur. Tamamlama öğesinin değerini temsil eden bir nesne döndürür.
 
-    - `locid`. Okuma/yazma. Yerelleştirme işlevi hakkında bilgi içeren bir dize tanımlayıcı döndürür.  
+- `comments`. Salt okunur. Alanın veya değişkenin üzerinde olan açıklamaları içeren bir dize döndürür.
 
-    - `optional`. Okuma/yazma. Parametre isteğe bağlı olup olmadığını gösteren bir dize döndürür. `true` parametre isteğe bağlı olduğunu gösterir; `false` bunu olmadığını gösterir.  
+- `scope`. Salt okunur. Tamamlama öğesinin kapsamını döndürür. Olası değerler genel, yerel, parametre ve üyesidir.
 
-  - `returnValue`. Okuma/yazma. Nesneyi alır veya bir dönüş değeri karşılık gelen özelliklerle birlikte aşağıdaki öznitelikleri ayarlar [ \<döndürür >](../ide/returns-javascript.md) öğesi:  
+### <a name="Items"></a>Items özelliği
+ İfade tamamlama öğelerinin dizisini alır veya ayarlar. Dizideki her öğe bir [completionItem Özellik](#CompletionItem) nesnesidir. @No__t_0 özelliği `statementcompletion` olay nesnesi için kullanılabilir.
 
-    - `type`. Okuma/yazma. Dönüş türünü temsil eden bir dize döndürür.  
+ Dönüş değeri: dizi
 
-    - `elementType`. Okuma/yazma. Tür ise `Array`, dizideki öğelerin türünü temsil eden bir dize döndürür.  
+### <a name="FunctionComments"></a>functionComments özelliği
+ İşlevin açıklamalarını döndürür. Bu özellik `signaturehelp` Event nesnesi için kullanılabilir.
 
-    - `description`. Okuma/yazma. Dönüş değeri tanımlayan bir dize döndürür.  
+ Dönüş değeri: `comments` nesnesi
 
-    - `locid`. Okuma/yazma. Yerelleştirme işlevi hakkında bilgi içeren bir dize tanımlayıcı döndürür.  
+ @No__t_0 nesnesinin üyeleri aşağıda verilmiştir:
 
-    - `helpKeyword`. Okuma/yazma. Yardım anahtar sözcüğü içeren bir dize döndürür.  
+- `above`. İşlevin üzerindeki açıklamaları döndürür.
 
-    - `externalFile`. Okuma/yazma. Üye kimliği içeren dosyayı temsil eden bir dize döndürür  
+- `inside`. Genellikle VSDoc biçiminde işlev içindeki açıklamaları döndürür.
 
-    - `externalid`. Okuma/yazma. İşlevin üye kimliği temsil eden bir dize döndürür.  
-  
-### <a name="ParentObject"></a> parentObject özelliği  
- Bir üye işlevinin üst nesnesini döndürür. Örneğin, `document.getElementByID`, `parentObject` döndürür `document` nesne. Bu özellik kullanılabilir `signaturehelp` olay nesnesi.  
-  
- Dönüş değeri: nesne  
-  
-### <a name="Target"></a> hedef özelliği  
- Öğe sol tarafında bir nokta (.) olan bir tetikleyici karakteri temsil eden bir nesne döndürür. İşlevler için `target` parametre bilgisi talep edilen işlevi döndürür. Bu özellik kullanılabilir `statementcompletion` ve `signaturehelp` olay nesneleri.  
-  
- Dönüş değeri: nesne  
-  
-### <a name="TargetName"></a> targetName özelliği  
- Hedef temsil eden bir dize döndürür. Örneğin, "this.", `targetName` "this" döndürür. "(İmleç"B"olduğunda) A.B" için `targetName` "B" döndürür. Bu özellik kullanılabilir `statementcompletion` olay nesnesi.  
-  
- Dönüş değeri: dize  
-  
-### <a name="SymbolHelp"></a> symbolHelp özelliği  
- Hızlı bilgi açılır kutu istendiği tamamlanma öğesi döndürür. Bu özellik kullanılabilir `statementcompletionhint` olay nesnesi.  
-  
- Dönüş değeri: `symbolHelp` nesne.  
-  
- Bazı özellikleri `symbolHelp` gibi nesne `locid`, karşılık gelen ortak [XML belgeleri yorumları](../ide/xml-documentation-comments-javascript.md) öznitelikleri.  
-  
- Aşağıdaki üyeleri olan `symbolHelp` nesnesi:  
-  
-- `name`. Okuma/yazma. Tanımlayıcı adı içeren bir dize döndürür.  
-  
-- `symbolType`. Okuma/yazma. Simge türü temsil eden bir dize döndürür. Olası değerler şunlardır: Bilinmeyen, Boolean, sayı, dize, nesne, işlevi, dizi, tarih ve normal ifade.  
-  
-- `symbolDisplayType`. Okuma/yazma. Görüntülenecek tür adı içeren bir dize döndürür. Varsa `symbolDisplayType` ayarlanmamışsa, `symbolType` kullanılır.  
-  
-- `elementType`. Okuma/yazma. Varsa `symbolType` olduğu `Array`, dizideki öğelerin türünü temsil eden bir dize döndürür.  
-  
-- `scope`. Okuma/yazma. Simgenin kapsamı temsil eden bir dize döndürür. Olası değerler, küresel ve yerel, parametre ve üye içerir.  
-  
-- `description`. Okuma/yazma. Simgenin bir açıklama içeren bir dize döndürür.  
-  
-- `locid`. Okuma/yazma. Yerelleştirme sembol bilgilerini içeren bir dize tanımlayıcı döndürür.  
-  
-- `helpKeyword`. Okuma/yazma. Yardım anahtar sözcüğü içeren bir dize döndürür.  
-  
-- `externalFile`. Okuma/yazma. Üye kimliği içeren dosyayı temsil eden bir dize döndürür  
-  
-- `externalid`. Okuma/yazma. Simgenin üye kimliği temsil eden bir dize döndürür.  
-  
-- `functionHelp`. Okuma/yazma. Döndürür bir [functionHelp özelliği](#FunctionHelp), bilgiler içerebilir, zaman `symbolType` işlevdir.  
-  
-### <a name="Scope"></a> Kapsam özelliği  
- Etkinliğin tamamlanma kapsamını döndürür. Tamamlama için olası değerler, genel olan ve üye kapsamı. Bu özellik kullanılabilir `statementcompletion` olay nesnesi.  
-  
- Dönüş değeri: dize  
-  
-## <a name="debugging-intellisense-extensions"></a>IntelliSense uzantıların hatalarını ayıklama  
- Uzantıları hata ayıklama, ancak kullanabileceğiniz [IntelliSense nesne](#intellisenseObject) Visual Studio çıkış penceresinde bilgi göndermek için işlevi. Bu işlevin nasıl kullanılacağını gösteren bir örnek için bkz: [gönderme iletilerini çıkış penceresine](#Logging) bu konuda. İçin `logMessage` çözmek için en az bir olay işleyicisi uzantısı'nda kayıtlı olması gerekir.  
-  
-## <a name="CodeExamples"></a> Kod örnekleri  
- Bu bölüm, IntelliSense genişletilebilirlik API'leri kullanmayı gösteren kod örnekleri içerir. Bu API'leri kullanan başka yolları da vardır. Aşağıdaki dosyalarda ek örnekler için bkz. \\ \\ *Visual Studio yükleme yolu*\JavaScript\References klasör. Bu örnekler JavaScript dil hizmeti tarafından kullanılan çalışıyoruz.  
-  
-- underscoreFilter.js. Bu kod, IntelliSense özel üyeleri gizler. Olay işleyicilerini içerir `statementcompletion` olay.  
-  
-- showPlainComments.js. Bu kod, standart açıklamalar için IntelliSense desteği sunar. Olay işleyicilerini içerir `signaturehelp` ve `statementcompletionhint` olayları.  
-  
-### <a name="Annotations"></a> IntelliSense ek açıklamaları ekleme  
- Aşağıdaki yordam, kitaplık doğrudan değişiklik yapmadan bir üçüncü taraf kitaplık için IntelliSense belgeleri desteğini sağlamak nasıl gösterir. Bunu yapmak için kullanabileceğiniz `intellisense.annotate` bir uzantı.  
-  
- Bu örneğin çalışması, aşağıdaki JavaScript dosyaları projenize gerekir:  
-  
-- bir üçüncü taraf kitaplığı temsil eden bir proje dosyası demoLib.js.  
-  
-- demoLib.intellisense.js IntelliSense uzantısıdır. Bu dosya projeye dahil gerekmez, ancak exampleLib.js aynı klasörde olması gerekir.  
-  
-- appCode.js uygulama kodunu temsil eden bir proje dosyası.  
-  
-##### <a name="to-add-an-intellisense-annotation"></a>Bir IntelliSense ek açıklama eklemek için  
-  
-1. DemoLib.js için aşağıdaki kodu ekleyin.  
-  
-    ```javascript  
-    function someFunc(a) { };  
-    var rectangle;  
-  
-    ```  
-  
-2. DemoLib.intellisense.js için aşağıdaki kodu ekleyin.  
-  
-    ```javascript  
-    intellisense.annotate(someFunc, function (a) {  
-        /// <signature>  
-        /// <summary>Description of someFunc</summary>  
-        /// <param name="a">Param a</param>  
-        /// </signature>  
-    });  
-  
-    intellisense.annotate(window, {  
-        // This is a comment on a global variable named rectangle.  
-        rectangle: undefined  
-    });  
-    ```  
-  
-3. Aşağıdaki başvuru yönergesi appCode.js ilk satırı olarak ekleyin. Burada kullanılan yolu JavaScript dosyaları aynı klasörde gösterir.  
-  
-    ```javascript  
-    /// <reference path="demoLib.js" />  
-  
-    ```  
-  
-4. AppCode.js içinde aşağıdaki kodu yazın. XML belge açıklamaları IntelliSense parametre bilgisi olarak görüntülenen uzantısında görürsünüz.  
-  
-     ![İntellisense.annotate kullanımını gösteren örnek](../ide/media/js-intellisense-annotate-paraminfo.png "js_intellisense_annotate_paraminfo")  
-  
-5. AppCode.js içinde aşağıdaki kodu yazın. Siz yazarken, standart yorumları hızlı bilgi IntelliSense görüntülenen uzantısında görürsünüz.  
-  
-     ![İntellisense.annotate kullanımını gösteren örnek](../ide/media/js-intellisense-annotations.png "js_intellisense_annotations")  
-  
-### <a name="Logging"></a> Çıkış penceresinde ileti gönderme  
- Aşağıdaki yordam için çıkış penceresine ileti göndermek nasıl gösterir. Hata ayıklama IntelliSense uzantıları yardımcı olmak için iletileri gönderebilir.  
-  
- Bu örneğin çalışması, aşağıdaki JavaScript dosyaları projenize gerekir:  
-  
-- bir üçüncü taraf kitaplığı temsil eden bir proje dosyası exampleLib.js.  
-  
-- exampleLib.intellisense.js IntelliSense uzantısıdır. Bu dosya projeye dahil gerekmez, ancak exampleLib.js aynı klasörde olması gerekir.  
-  
-- appCode.js uygulama kodunu temsil eden bir proje dosyası.  
-  
-##### <a name="to-send-a-message-to-the-output-window"></a>Çıkış penceresinde bir ileti göndermek için  
-  
-1. ExampleLib.js için aşağıdaki kodu ekleyin.  
-  
-    ```javascript  
-    var someVar = {  
-        a: 1,  
-        b: 'hello'  
-    };  
-    ```  
-  
-2. ExampleLib.intellisense.js için aşağıdaki kodu ekleyin.  
-  
-    ```javascript  
-    intellisense.addEventListener('statementcompletion', function (e) {  
-        // Prints out statement completion info: Either (1) the member   
-        // list, if the trigger character was typed, or (2) the   
-        // statement completion identifiers.  
-        // e.target represents the object left of the trigger character.  
-        intellisense.logMessage(  
-            e.target ? 'member list requested, target: ' + e.targetName : 'statement completion for current scope requested');  
-  
-        // Prints out all statement completion items.  
-        e.items.forEach(function (item) {  
-            intellisense.logMessage('[completion item] ' + item.name + ', kind:' + item.kind + ', scope:' + item.scope + ', value:' + item.value);  
-        });  
-    });  
-    ```  
-  
-3. Aşağıdaki başvuru yönergesi appCode.js ilk satırı olarak ekleyin. Burada kullanılan yolu JavaScript dosyaları aynı klasörde gösterir.  
-  
-    ```javascript  
-    /// <reference path="exampleLib.js" />  
-  
-    ```  
-  
-4. Çıkış penceresinde **JavaScript dil hizmeti** içinde **çıktıyı Göster** listesi. (Çıktı penceresini görüntülemek için seçin **çıkış** Görünüm menüsünden.)  
-  
-5. AppCode.js içinde aşağıdaki kodu yazın. Siz yazarken, çıkış penceresine dil hizmetinden gelen iletileri gösterir. Deyim tamamlama geçerli kapsam için istenen çıkış penceresine ilk iletiyi gösterir.  
-  
-    ```javascript  
-    some  
-    ```  
-  
-     Aşağıdaki çıktıyı görmelisiniz kısmi bir görünümüdür.  
-  
-    ```scr  
-    03:16:14.3113: statement completion for current scope requested  
-    03:16:14.3113: [completion item] break, kind:reserved, scope:undefined, value:undefined  
-    03:16:14.3113: [completion item] case, kind:reserved, scope:undefined, value:undefined  
-    03:16:14.3113: [completion item] catch, kind:reserved, scope:undefined, value:undefined  
-  
-    …  
-    ```  
-  
-6. Seçin **Tümünü Temizle** çıktı penceresinde düğmesi.  
-  
-7. Aşağıdaki kodu yazın. Üye listesi istenen çıkış penceresine ilk iletiyi gösterir.  
-  
-    ```javascript  
-    someVar.  
-    ```  
-  
-     Aşağıdaki çıktıyı görmelisiniz kısmi bir görünümü şu şekildedir:  
-  
-    ```scr  
-    03:17:43.4032: member list requested, target: someVar  
-    03:17:43.4032: [completion item] a, kind:field, scope:member, value:1  
-    03:17:43.4032: [completion item] b, kind:field, scope:member, value:hello  
-    03:17:43.4032: [completion item] constructor, kind:method, scope:member, value:  
-  
-    …  
-    ```  
-  
-### <a name="Icons"></a> IntelliSense simgeleri değiştirme  
- Aşağıdaki yordam, IntelliSense tarafından varsayılan olarak görüntülenen simgeler değiştirme gösterir. Ad alanları, sınıflar, arayüzler ve numaralandırma gibi kitaplık özgü kavramları IntelliSense bilgilerini sağladığınızda bu yararlı olabilir.  
-  
- Kullanılabilir simge değerlerinin <xref:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup>.  
-  
- Bu örneğin çalışması, aşağıdaki JavaScript dosyaları projenize gerekir:  
-  
-- bir proje olan exampleLib.js bu represens üçüncü taraf kitaplık dosyası.  
-  
-- exampleLib.intellisense.js IntelliSense uzantısıdır. Bu dosya projeye dahil gerekmez, ancak exampleLib.js aynı klasörde olması gerekir.  
-  
-- appCode.js uygulama kodunu temsil eden bir proje dosyası.  
-  
-##### <a name="to-change-the-icons"></a>Simgeleri değiştirmek için  
-  
-1. ExampleLib.js için aşağıdaki kodu ekleyin.  
-  
-    ```javascript  
-    function Namespace(name) {  
-        this._isNamespace = true;  
-        window[name] = this;  
-    };  
-  
-    function Enum(values) {  
-        var e = Object.create(values);  
-        e._isEnum = true;  
-        return e;  
-    };  
-  
-    var SomeNamespace = new Namespace('SomeNamespace');  
-    // A constructor function is considered a class.  
-    SomeNamespace.SomeClass1 = function () { }  
-    SomeNamespace.Enum1 = new Enum({ VALUE1: 0, VALUE2: 1 });  
-    ```  
-  
-2. ExampleLib.intellisense.js için aşağıdaki kodu ekleyin.  
-  
-    ```javascript  
-    intellisense.addEventListener('statementcompletion', function (e) {  
-        e.items.forEach(function (item) {  
-            // Detect a namespace by using the _isNamespace flag.  
-            if (item.value && item.value._isNamespace) {  
-                item.glyph = 'vs:GlyphGroupNamespace';  
-                }  
-  
-            if (item.parentObject && item.parentObject._isNamespace) {  
-                // The item is a member of a namespace.   
-  
-                // All constructor functions that are part of a namespace   
-                // are considered classes.   
-                // A constructor function starts with  
-                // an uppercase letter by convention.    
-                if (typeof item.value == 'function' && (item.name[0].toUpperCase()   
-                    == item.name[0])) {  
-                    item.glyph = 'vs:GlyphGroupClass';  
-                }  
-  
-                // Detect an enumeration by using the _isEnum flag.  
-                if (item.value && item.value._isEnum) {  
-                    item.glyph = 'vs:GlyphGroupEnum';  
-                }  
-            }  
-        });  
-    });  
-  
-    intellisense.addEventListener('statementcompletionhint', function (e) {  
-        if (e.completionItem.value) {  
-            if (e.completionItem.value._isNamespace) {  
-                e.symbolHelp.symbolDisplayType = 'Namespace';  
-            }  
-            if (e.completionItem.value._isEnum) {  
-                e.symbolHelp.symbolDisplayType = 'Enum';  
-            }  
-        }  
-    });  
-    ```  
-  
-3. Aşağıdaki başvuru yönergesi appCode.js ilk satırı olarak ekleyin. Burada kullanılan yolu JavaScript dosyaları aynı klasörde gösterir.  
-  
-    ```javascript  
-    /// <reference path="exampleLib.js" />  
-  
-    ```  
-  
-4. AppCode.js içinde aşağıdaki kodu yazın. Siz yazarken, ad alanı simgesi değiştiğini görürsünüz "{}", C# dilinde kullanılır.  
-  
-     ![Glif özelliğinin kullanımını gösteren örnek](../ide/media/js-intellisense-glyph-namespace.png "js_intellisense_glyph_namespace")  
-  
-5. AppCode.js içinde aşağıdaki kodu yazın. Siz yazarken Enum1 üyesi için yeni bir sabit listesi simgesi ve SomeClass1 üyesi için yeni bir sınıf simgesi görürsünüz.  
-  
-     ![Glif özelliğinin kullanımını gösteren örnek](../ide/media/js-intellisense-glyph-class-enum.png "js_intellisense_glyph_class_enum")  
-  
-### <a name="Overriding"></a> Çalışma zamanı IntelliSense sonuçları etkileri kaçınma  
- JavaScript dil servisi, dinamik olarak IntelliSense bilgilerini sağlamak üzere kod çalıştırır. Sonuç olarak, çalışma zamanı davranışını bazen istenen sonuçları engelleyebilir. Aşağıdaki yordam, çalışma zamanı davranışını yanlış Intellisense'te sonuçlandığında IntelliSense sonuçları geçersiz kılmak gösterilmektedir.  
-  
- Bu örneğin çalışması, aşağıdaki JavaScript dosyaları projenize gerekir:  
-  
-- bir üçüncü taraf kitaplığı temsil eden bir proje dosyası exampleLib.js.  
-  
-- exampleLib.intellisense.js IntelliSense uzantısıdır. Bu dosya projeye dahil gerekmez, ancak exampleLib.js aynı klasörde olması gerekir.  
-  
-- appCode.js uygulama kodunu temsil eden bir proje dosyası.  
-  
-##### <a name="to-avoid-run-time-effects-on-intellisense-results"></a>Çalışma zamanı IntelliSense sonuçları etkileri önlemek için  
-  
-1. ExampleLib.js için aşağıdaki kodu ekleyin.  
-  
-    ```javascript  
-    function after(count, func) {  
-        return function () {  
-            if (--times < 1) {  
-                return func.apply(this, arguments);  
-            }  
-        };  
-    };  
-    ```  
-  
-     Önceki kodda; değerine göre ilk çağrı, sarmalanmış işlev yoksayar `count`ve sonuçlar döndürmüyor.  
-  
-2. Aşağıdaki başvuru yönergesi appCode.js ilk satırı olarak ekleyin. Burada kullanılan yolu JavaScript dosyaları aynı klasörde gösterir.  
-  
-    ```javascript  
-    /// <reference path="exampleLib.js" />  
-  
-    ```  
-  
-3. AppCode.js içinde aşağıdaki kodu yazın. Tanımlayıcı listesi, IntelliSense yerine görünür, sarmalanmış işlev hiçbir zaman anlamına çağrılır çünkü `throttled` işlevi herhangi bir sonuç döndürmez.  
-  
-     ![IntelliSense sonuçları geçersiz kılma örnek](../ide/media/js-intellisense-override.png "js_intellisense_override")  
-  
-4. ExampleLib.intellisense.js için aşağıdaki kodu ekleyin. Sarmalanan işlevi için IntelliSense gösterilir böylece bu tasarım zamanı davranışını beklendiği gibi değiştirir.  
-  
-    ```javascript  
-    window.after = function (count, func) {  
-        // Just return func.   
-        return func;  
-    };  
-    ```  
-  
-5. AppCode.js içinde daha önce yazdığınız kod yazarak test sonuçları. Bu kez, IntelliSense, istenen bilgileri sağlar.  
-  
-     ![IntelliSense sonuçları geçersiz kılma örnek](../ide/media/js-intellisense-override-fixed.png "js_intellisense_override_fixed")  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [JavaScript IntelliSense](../ide/javascript-intellisense.md)   
- [Tanımlayıcılar İçin İfade Tamamlama](../ide/statement-completion-for-identifiers.md)
+- `paramComments`. İşlevdeki her bir parametre için açıklamaları temsil eden bir dize döndürür. Dizi üyeleri şunları içerir:
+
+  - `name`. Parametre adını temsil eden bir dize döndürür.
+
+  - `comment`. Parametre açıklamasını içeren bir dize döndürür.
+
+### <a name="FunctionHelp"></a>functionHelp özelliği
+ İşlevin yardımını döndürür. Bu özellik `signaturehelp` Event nesnesi için kullanılabilir.
+
+ Dönüş değeri: `functionHelp` nesnesi
+
+ @No__t_0 nesnesinin üyeleri aşağıda verilmiştir:
+
+- `functionName`. Okuma/yazma. İşlev adını içeren bir dize döndürür.
+
+- `signatures`. Okuma/yazma. İşlev imzalarının dizisini alır veya ayarlar. Dizideki her öğe bir `signature` nesnesidir. @No__t_1 gibi bazı `signature` özellikler, ortak [XML belge açıklamaları](../ide/xml-documentation-comments-javascript.md) özniteliklerine karşılık gelir.
+
+  @No__t_0 nesnesinin üyeleri şunları içerir:
+
+  - `description`. Okuma/yazma. İşlevi tanımlayan bir dize döndürür.
+
+  - `locid`. Okuma/yazma. İşlevle ilgili yerelleştirme bilgilerini içeren bir dize tanımlayıcısı döndürür.
+
+  - `helpKeyword`. Okuma/yazma. Help anahtar sözcüğünü içeren bir dize döndürür.
+
+  - `externalFile`. Okuma/yazma. Üye KIMLIĞINI içeren dosyayı temsil eden bir dize döndürür.
+
+  - `externalid`. Okuma/yazma. İşlevin üye KIMLIĞINI temsil eden bir dize döndürür.
+
+  - `params`. Okuma/yazma. İşlevin parametre dizisini alır veya ayarlar. Parameters dizisindeki her öğe, [\<param >](../ide/param-javascript.md) öğesinin aşağıdaki özniteliklerine karşılık gelen özelliklere sahip bir `parameter` nesnesidir:
+
+    - `name`. Okuma/yazma. Parametre adını temsil eden bir dize döndürür.
+
+    - `type`. Okuma/yazma. Parametre türünü temsil eden bir dize döndürür.
+
+    - `elementType`. Okuma/yazma. Tür `Array` ise dizideki öğelerin türünü temsil eden bir dize döndürür.
+
+    - `description`. Okuma/yazma. Parametresini tanımlayan bir dize döndürür.
+
+    - `locid`. Okuma/yazma. İşlevle ilgili yerelleştirme bilgilerini içeren bir dize tanımlayıcısı döndürür.
+
+    - `optional`. Okuma/yazma. Parametrenin isteğe bağlı olup olmadığını gösteren bir dize döndürür. `true`, parametrenin isteğe bağlı olduğunu belirtir;  `false` olmadığını gösterir.
+
+  - `returnValue`. Okuma/yazma. [@No__t_1returns >](../ide/returns-javascript.md) öğesinin aşağıdaki özniteliklerine karşılık gelen özelliklerle birlikte bir dönüş değeri nesnesi alır veya ayarlar:
+
+    - `type`. Okuma/yazma. Dönüş türünü temsil eden bir dize döndürür.
+
+    - `elementType`. Okuma/yazma. Tür `Array` ise dizideki öğelerin türünü temsil eden bir dize döndürür.
+
+    - `description`. Okuma/yazma. Dönüş değerini tanımlayan bir dize döndürür.
+
+    - `locid`. Okuma/yazma. İşlevle ilgili yerelleştirme bilgilerini içeren bir dize tanımlayıcısı döndürür.
+
+    - `helpKeyword`. Okuma/yazma. Help anahtar sözcüğünü içeren bir dize döndürür.
+
+    - `externalFile`. Okuma/yazma. Üye KIMLIĞINI içeren dosyayı temsil eden bir dize döndürür.
+
+    - `externalid`. Okuma/yazma. İşlevin üye KIMLIĞINI temsil eden bir dize döndürür.
+
+### <a name="ParentObject"></a>parentObject özelliği
+ Bir üye işlevinin üst nesnesini döndürür. Örneğin, `document.getElementByID` için `parentObject` `document` nesnesini döndürür. Bu özellik `signaturehelp` Event nesnesi için kullanılabilir.
+
+ Dönüş değeri: nesne
+
+### <a name="Target"></a>Target özelliği
+ Bir nokta (.) olan tetikleyici karakterinin solundaki öğeyi temsil eden bir nesne döndürür. İşlevler için `target`, parametre bilgisinin istendiği işlevi döndürür. Bu özellik `statementcompletion` ve `signaturehelp` olay nesneleri için kullanılabilir.
+
+ Dönüş değeri: nesne
+
+### <a name="TargetName"></a>targetName özelliği
+ Hedefi temsil eden bir dize döndürür. Örneğin, "this." için `targetName` "This" döndürür. "A. B" (imleç "B" olduğunda) için, `targetName` "B" döndürür. Bu özellik `statementcompletion` Event nesnesi için kullanılabilir.
+
+ Dönüş değeri: dize
+
+### <a name="SymbolHelp"></a>symbolHelp özelliği
+ Bir hızlı bilgi açılır kutusu istenen tamamlama öğesini döndürür. Bu özellik `statementcompletionhint` Event nesnesi için kullanılabilir.
+
+ Dönüş değeri: nesne `symbolHelp`.
+
+ @No__t_0 nesnesinin `locid` gibi bazı özellikleri, ortak [XML belge açıklamaları](../ide/xml-documentation-comments-javascript.md) özniteliklerine karşılık gelir.
+
+ @No__t_0 nesnesinin üyeleri aşağıda verilmiştir:
+
+- `name`. Okuma/yazma. Tanımlayıcı adını içeren bir dize döndürür.
+
+- `symbolType`. Okuma/yazma. Sembol türünü temsil eden bir dize döndürür. Olası değerler bilinmeyen, Boole, sayı, dize, nesne, Işlev, dizi, tarih ve Regex içerir.
+
+- `symbolDisplayType`. Okuma/yazma. Görüntülenecek tür adını içeren bir dize döndürür. @No__t_0 ayarlanmamışsa `symbolType` kullanılır.
+
+- `elementType`. Okuma/yazma. @No__t_0 `Array` ise dizideki öğelerin türünü temsil eden bir dize döndürür.
+
+- `scope`. Okuma/yazma. Simgenin kapsamını temsil eden bir dize döndürür. Olası değerler genel, yerel, parametre ve üyeyi içerir.
+
+- `description`. Okuma/yazma. Simgenin açıklamasını içeren bir dize döndürür.
+
+- `locid`. Okuma/yazma. Sembol hakkında yerelleştirme bilgilerini içeren bir dize tanımlayıcısı döndürür.
+
+- `helpKeyword`. Okuma/yazma. Help anahtar sözcüğünü içeren bir dize döndürür.
+
+- `externalFile`. Okuma/yazma. Üye KIMLIĞINI içeren dosyayı temsil eden bir dize döndürür.
+
+- `externalid`. Okuma/yazma. Simgenin üye KIMLIĞINI temsil eden bir dize döndürür.
+
+- `functionHelp`. Okuma/yazma. @No__t_1 Işlevi olduğunda bilgi içerebilen bir [functionHelp özelliği](#FunctionHelp)döndürür.
+
+### <a name="Scope"></a>Scope özelliği
+ Etkinliğin tamamlanma kapsamını döndürür. Tamamlama kapsamı için olası değerler geneldir ve üyeleridir. Bu özellik `statementcompletion` Event nesnesi için kullanılabilir.
+
+ Dönüş değeri: dize
+
+## <a name="debugging-intellisense-extensions"></a>IntelliSense uzantılarında hata ayıklama
+ Uzantılara hata ayıklaması yapamazsınız, ancak Visual Studio çıktı penceresine bilgi göndermek için [IntelliSense nesne](#intellisenseObject) işlevini kullanabilirsiniz. Bu işlevin nasıl kullanılacağını gösteren bir örnek için, bu konunun ilerleyen kısımlarında [Çıkış penceresi Iletileri gönderme](#Logging) bölümüne bakın. @No__t_0 çalışması için en az bir olay işleyicisinin bir uzantıya kayıtlı olması gerekir.
+
+## <a name="CodeExamples"></a>Kod örnekleri
+ Bu bölüm, IntelliSense genişletilebilirlik API 'Lerinin nasıl kullanılacağını gösteren kod örnekleri içerir. Bu API 'Leri kullanmanın başka yolları da vardır. Daha fazla örnek için,*Visual Studio yükleme yolu*\Javascript\references klasöründeki \\ \\ aşağıdaki dosyalara bakın. Bunlar, JavaScript dil hizmeti tarafından kullanılan çalışma örnekleridir.
+
+- Eksik Scorefilter. js. Bu kod, özel üyeleri IntelliSense 'den gizler. @No__t_0 olayına yönelik olay işleyicilerini içerir.
+
+- showPlainComments. js. Bu kod, standart Yorumlar için IntelliSense desteği sağlar. @No__t_0 ve `statementcompletionhint` olaylar için olay işleyicilerini içerir.
+
+### <a name="Annotations"></a>IntelliSense ek açıklamalarını ekleme
+ Aşağıdaki yordamda, kitaplığı doğrudan değiştirmek zorunda kalmadan bir üçüncü taraf kitaplığı için IntelliSense belge desteğinin nasıl sağlanması gösterilmektedir. Bunu yapmak için, bir uzantıdaki `intellisense.annotate` kullanabilirsiniz.
+
+ Bu örneğin çalışması için, projenizde aşağıdaki JavaScript dosyaları gerekir:
+
+- bir üçüncü taraf kitaplığını temsil eden bir proje dosyası olan demoLib. js.
+
+- IntelliSense uzantısı olan demoLib. IntelliSense. js. Bu dosyanın projeye dahil olması gerekmez, ancak örnek lib. js ile aynı klasörde olması gerekir.
+
+- uygulama kodunu temsil eden bir proje dosyası olan appCode. js.
+
+##### <a name="to-add-an-intellisense-annotation"></a>Bir IntelliSense ek açıklaması eklemek için
+
+1. DemoLib. js ' ye aşağıdaki kodu ekleyin.
+
+    ```javascript
+    function someFunc(a) { };
+    var rectangle;
+
+    ```
+
+2. DemoLib. IntelliSense. js ' ye aşağıdaki kodu ekleyin.
+
+    ```javascript
+    intellisense.annotate(someFunc, function (a) {
+        /// <signature>
+        /// <summary>Description of someFunc</summary>
+        /// <param name="a">Param a</param>
+        /// </signature>
+    });
+
+    intellisense.annotate(window, {
+        // This is a comment on a global variable named rectangle.
+        rectangle: undefined
+    });
+    ```
+
+3. Aşağıdaki başvuru yönergesini appCode. js içindeki ilk satır olarak ekleyin. Burada kullanılan yol, JavaScript dosyalarının aynı klasörde olduğunu gösterir.
+
+    ```javascript
+    /// <reference path="demoLib.js" />
+
+    ```
+
+4. AppCode. js ' de aşağıdaki kodu yazın. XML belge açıklamalarını IntelliSense parametre bilgisi olarak görüntülenmiş şekilde görürsünüz.
+
+     ![IntelliSense 'in kullanımını gösteren örnek. Not](../ide/media/js-intellisense-annotate-paraminfo.png "js_intellisense_annotate_paraminfo")
+
+5. AppCode. js ' de aşağıdaki kodu yazın. Yazdığınızda, standart açıklamaları IntelliSense hızlı bilgileri olarak görüntülenmiş şekilde görürsünüz.
+
+     ![IntelliSense 'in kullanımını gösteren örnek. Not](../ide/media/js-intellisense-annotations.png "js_intellisense_annotations")
+
+### <a name="Logging"></a>Çıkış Penceresi Ileti gönderme
+ Aşağıdaki yordamda, çıkış penceresine nasıl ileti gönderileceğini gösterilmektedir. IntelliSense uzantılarının hatalarını ayıklamanıza yardımcı olmak için iletiler gönderebilirsiniz.
+
+ Bu örneğin çalışması için, projenizde aşağıdaki JavaScript dosyaları gerekir:
+
+- bir üçüncü taraf kitaplığını temsil eden bir proje dosyası olan exampleLib. js.
+
+- IntelliSense uzantısı olan exampleLib. IntelliSense. js. Bu dosyanın projeye dahil olması gerekmez, ancak örnek lib. js ile aynı klasörde olması gerekir.
+
+- uygulama kodunu temsil eden bir proje dosyası olan appCode. js.
+
+##### <a name="to-send-a-message-to-the-output-window"></a>Çıkış penceresine bir ileti göndermek için
+
+1. Aşağıdaki kodu exampleLib. js ' ye ekleyin.
+
+    ```javascript
+    var someVar = {
+        a: 1,
+        b: 'hello'
+    };
+    ```
+
+2. Aşağıdaki kodu exampleLib. IntelliSense. js ' ye ekleyin.
+
+    ```javascript
+    intellisense.addEventListener('statementcompletion', function (e) {
+        // Prints out statement completion info: Either (1) the member
+        // list, if the trigger character was typed, or (2) the
+        // statement completion identifiers.
+        // e.target represents the object left of the trigger character.
+        intellisense.logMessage(
+            e.target ? 'member list requested, target: ' + e.targetName : 'statement completion for current scope requested');
+
+        // Prints out all statement completion items.
+        e.items.forEach(function (item) {
+            intellisense.logMessage('[completion item] ' + item.name + ', kind:' + item.kind + ', scope:' + item.scope + ', value:' + item.value);
+        });
+    });
+    ```
+
+3. Aşağıdaki başvuru yönergesini appCode. js içindeki ilk satır olarak ekleyin. Burada kullanılan yol, JavaScript dosyalarının aynı klasörde olduğunu gösterir.
+
+    ```javascript
+    /// <reference path="exampleLib.js" />
+
+    ```
+
+4. Çıkış penceresinde **çıktıyı göster** listesinden **JavaScript Language Service** ' yi seçin. (Çıkış penceresini görüntülemek için, Görünüm menüsünden **Çıkış** ' ı seçin.)
+
+5. AppCode. js ' de aşağıdaki kodu yazın. Yazarken, çıkış penceresinde dil hizmetinden iletiler görüntülenir. Çıkış penceresindeki ilk ileti, geçerli kapsamın bildiri tamamlanmasının istendiğini gösterir.
+
+    ```javascript
+    some
+    ```
+
+     Aşağıda, görmeniz gereken çıktının kısmi bir görünümü verilmiştir.
+
+    ```scr
+    03:16:14.3113: statement completion for current scope requested
+    03:16:14.3113: [completion item] break, kind:reserved, scope:undefined, value:undefined
+    03:16:14.3113: [completion item] case, kind:reserved, scope:undefined, value:undefined
+    03:16:14.3113: [completion item] catch, kind:reserved, scope:undefined, value:undefined
+
+    …
+    ```
+
+6. Çıkış penceresindeki **Tümünü Temizle** düğmesini seçin.
+
+7. Aşağıdaki kodu yazın. Çıkış penceresindeki ilk ileti, bir üye listesinin istenmiş olduğunu gösterir.
+
+    ```javascript
+    someVar.
+    ```
+
+     Aşağıda, görmeniz gereken çıktının kısmi bir görünümü verilmiştir:
+
+    ```scr
+    03:17:43.4032: member list requested, target: someVar
+    03:17:43.4032: [completion item] a, kind:field, scope:member, value:1
+    03:17:43.4032: [completion item] b, kind:field, scope:member, value:hello
+    03:17:43.4032: [completion item] constructor, kind:method, scope:member, value:
+
+    …
+    ```
+
+### <a name="Icons"></a>IntelliSense simgelerini değiştirme
+ Aşağıdaki yordamda, varsayılan olarak IntelliSense tarafından gösterilen simgelerin nasıl değiştirileceği gösterilmektedir. Bu, ad alanları, sınıflar, arabirimler ve numaralandırmalar gibi kitaplığa özel kavramlar hakkında IntelliSense bilgileri sağladığınızda yararlı olabilir.
+
+ Kullanılabilir simge değerleri için bkz. <xref:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup>.
+
+ Bu örneğin çalışması için, projenizde aşağıdaki JavaScript dosyaları gerekir:
+
+- bir üçüncü taraf kitaplığı represens bir proje dosyası olan exampleLib. js.
+
+- IntelliSense uzantısı olan exampleLib. IntelliSense. js. Bu dosyanın projeye dahil olması gerekmez, ancak örnek lib. js ile aynı klasörde olması gerekir.
+
+- uygulama kodunu temsil eden bir proje dosyası olan appCode. js.
+
+##### <a name="to-change-the-icons"></a>Simgeleri değiştirmek için
+
+1. Aşağıdaki kodu exampleLib. js ' ye ekleyin.
+
+    ```javascript
+    function Namespace(name) {
+        this._isNamespace = true;
+        window[name] = this;
+    };
+
+    function Enum(values) {
+        var e = Object.create(values);
+        e._isEnum = true;
+        return e;
+    };
+
+    var SomeNamespace = new Namespace('SomeNamespace');
+    // A constructor function is considered a class.
+    SomeNamespace.SomeClass1 = function () { }
+    SomeNamespace.Enum1 = new Enum({ VALUE1: 0, VALUE2: 1 });
+    ```
+
+2. Aşağıdaki kodu exampleLib. IntelliSense. js ' ye ekleyin.
+
+    ```javascript
+    intellisense.addEventListener('statementcompletion', function (e) {
+        e.items.forEach(function (item) {
+            // Detect a namespace by using the _isNamespace flag.
+            if (item.value && item.value._isNamespace) {
+                item.glyph = 'vs:GlyphGroupNamespace';
+                }
+
+            if (item.parentObject && item.parentObject._isNamespace) {
+                // The item is a member of a namespace.
+
+                // All constructor functions that are part of a namespace
+                // are considered classes.
+                // A constructor function starts with
+                // an uppercase letter by convention.
+                if (typeof item.value == 'function' && (item.name[0].toUpperCase()
+                    == item.name[0])) {
+                    item.glyph = 'vs:GlyphGroupClass';
+                }
+
+                // Detect an enumeration by using the _isEnum flag.
+                if (item.value && item.value._isEnum) {
+                    item.glyph = 'vs:GlyphGroupEnum';
+                }
+            }
+        });
+    });
+
+    intellisense.addEventListener('statementcompletionhint', function (e) {
+        if (e.completionItem.value) {
+            if (e.completionItem.value._isNamespace) {
+                e.symbolHelp.symbolDisplayType = 'Namespace';
+            }
+            if (e.completionItem.value._isEnum) {
+                e.symbolHelp.symbolDisplayType = 'Enum';
+            }
+        }
+    });
+    ```
+
+3. Aşağıdaki başvuru yönergesini appCode. js içindeki ilk satır olarak ekleyin. Burada kullanılan yol, JavaScript dosyalarının aynı klasörde olduğunu gösterir.
+
+    ```javascript
+    /// <reference path="exampleLib.js" />
+
+    ```
+
+4. AppCode. js ' de aşağıdaki kodu yazın. Yazarken, ' de C#kullanıldığı gibi ad alanı simgesinin "{}" olarak değiştirildiğini görürsünüz.
+
+     ![Glif özelliğinin kullanımını gösteren örnek](../ide/media/js-intellisense-glyph-namespace.png "js_intellisense_glyph_namespace")
+
+5. AppCode. js ' de aşağıdaki kodu yazın. Yazarken, Enum1 üyesi için yeni bir sabit listesi simgesi ve SomeClass1 üyesi için yeni bir sınıf simgesi görürsünüz.
+
+     ![Glif özelliğinin kullanımını gösteren örnek](../ide/media/js-intellisense-glyph-class-enum.png "js_intellisense_glyph_class_enum")
+
+### <a name="Overriding"></a>IntelliSense sonuçları üzerinde çalışma zamanı etkileri önleme
+ JavaScript dil hizmeti, IntelliSense bilgilerini dinamik olarak sağlamak için kodu çalıştırır. Sonuç olarak, çalışma zamanı davranışı zaman zaman istenen sonuçlara engel olabilir. Aşağıdaki yordam, çalışma zamanı davranışı yanlış IntelliSense ile sonuçlandığı zaman IntelliSense sonuçlarının nasıl geçersiz kılınacağını göstermektedir.
+
+ Bu örneğin çalışması için, projenizde aşağıdaki JavaScript dosyaları gerekir:
+
+- bir üçüncü taraf kitaplığını temsil eden bir proje dosyası olan exampleLib. js.
+
+- IntelliSense uzantısı olan exampleLib. IntelliSense. js. Bu dosyanın projeye dahil olması gerekmez, ancak örnek lib. js ile aynı klasörde olması gerekir.
+
+- uygulama kodunu temsil eden bir proje dosyası olan appCode. js.
+
+##### <a name="to-avoid-run-time-effects-on-intellisense-results"></a>IntelliSense sonuçlarında çalışma zamanı etkilerine engel olmak için
+
+1. Aşağıdaki kodu exampleLib. js ' ye ekleyin.
+
+    ```javascript
+    function after(count, func) {
+        return function () {
+            if (--times < 1) {
+                return func.apply(this, arguments);
+            }
+        };
+    };
+    ```
+
+     Yukarıdaki kodda, Sarmalanan işlev, `count` değerine göre ilk çağrıları yoksayar ve sonuç döndürmez.
+
+2. Aşağıdaki başvuru yönergesini appCode. js içindeki ilk satır olarak ekleyin. Burada kullanılan yol, JavaScript dosyalarının aynı klasörde olduğunu gösterir.
+
+    ```javascript
+    /// <reference path="exampleLib.js" />
+
+    ```
+
+3. AppCode. js ' de aşağıdaki kodu yazın. Sarmalanan işlev hiçbir şekilde çağrılmadığından, `throttled` işlevin hiçbir sonuç döndürmediği anlamına gelen tanımlayıcı liste IntelliSense yerine görünür.
+
+     ![IntelliSense sonuçlarını geçersiz kılma örneği](../ide/media/js-intellisense-override.png "js_intellisense_override")
+
+4. Aşağıdaki kodu exampleLib. IntelliSense. js ' ye ekleyin. Bu, tasarım zamanı davranışını IntelliSense 'in beklendiği gibi sarmalanmış işlev için gösterilmesi için değiştirir.
+
+    ```javascript
+    window.after = function (count, func) {
+        // Just return func.
+        return func;
+    };
+    ```
+
+5. AppCode. js ' de, daha önce yazdığınız kodu yazarak sonuçları test edin. Bu kez, IntelliSense istenen bilgileri sağlar.
+
+     ![IntelliSense sonuçlarını geçersiz kılma örneği](../ide/media/js-intellisense-override-fixed.png "js_intellisense_override_fixed")
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Tanımlayıcılar için [JavaScript IntelliSense](../ide/javascript-intellisense.md) [bildiri tamamlama](../ide/statement-completion-for-identifiers.md)

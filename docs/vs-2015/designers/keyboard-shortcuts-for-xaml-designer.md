@@ -6,48 +6,48 @@ ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 40211cc7-294a-4943-85a4-941ad6418dad
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f59853d91d5e3f18ba662c722a5c47b7114e364e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 46adab828eea0ffb821147ba9c711634e1899a85
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62428150"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664310"
 ---
 # <a name="keyboard-shortcuts--for-xaml-designer"></a>XAML Tasarımcısı için klavye kısayolları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Klavye kısayolları XAML Tasarımcısı'nda, bir tek klavye kısayolu birden çok fare düğmesi tıklama gerektiren bir eylem azaltarak çalışmanızı hızlandırabilirsiniz.  
-  
-## <a name="element-shortcuts"></a>Öğesi kısayolları  
- Bu tabloda öğelerle çalışma yüzeyi üzerinde çalışmak için kullanılabilen kısayollar listelenmektedir.  
-  
-|**Bu eylemi gerçekleştirmek için**|**Bunu yapmak**|  
-|--------------------------------|-----------------|  
-|Bir öğe oluşturun|CTRL + N tuşlarına basın|  
-|Yinelenen bir öğe|Alt tuşunu basılı tutun ve OK tuşuna basın.|  
-|Denetimdeki metin Düzenle|F2 tuşuna basın (kapatmak için Esc tuşuna basın)|  
-|Tek bir öğe seçin|Belgede göründükleri sırayla öğeleri seçmek için SEKME tuşuna basın. (Ayrıca ok tuşlarını kullanarak öğeleri de seçebilirsiniz.)|  
-|Birden fazla öğe seçin|Her öğe seçme sırasında Shift tuşunu basılı tutun|  
-|Birden çok bitişik olmayan öğe seçin|Ctrl tuşuna basılı ilk ve son öğeleri seçerken tutun|  
-|Seçili öğeleri Taşı|(Tuşuna taşımak için uzaklık artırmak için Shift tuşunu basılı tutabilirsiniz.) ok tuşlarına basın|  
-|Bir öğe 15 derecelik artışlarla döndürmek|Öğeyi döndürme sırasında Shift tuşunu basılı tutun|  
-|Tüm öğeleri seçin|CTRL + A tuşlarına basın|  
-|Tüm öğelerin Seçimi Temizle|Ctrl + Shift + A tuşlarına basın|  
-|Göstermek veya gizlemek öğesi tanıtıcıları|F9 tuşuna basın|  
-|Bir öğe için bir özellik seçin|Seçili bir öğe ve Özellikler penceresinde odağı Tab tuşuna basın. (Ve Özellikler penceresinde odağı değiştirmek için Ctrl + Tab tuşlarını kullanın.) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|  
-  
-## <a name="document-outline-window-shortcuts"></a>Belge Anahattı penceresi kısayolları  
- Belge Anahattı penceresi öğeleri ile çalışırken, aşağıdaki tabloda kullanılabilir kısayolları listeler.  
-  
-|**Bu eylemi gerçekleştirmek için**|**Bunu yapmak**|  
-|--------------------------------|-----------------|  
-|Belge Anahattı penceresi üzerinde odak modundayken, çalışma yüzeyinde nesneleri Gizle|CTRL + H|  
-|Belge Anahattı penceresi üzerinde odak modundayken, çalışma yüzeyinde nesneleri göster|SHIFT + CTRL + H|  
-|Belge Anahattı penceresi üzerinde odak modundayken çalışma yüzeyinde nesneleri Kilitle|CTRL + L|  
-|Çalışma yüzeyinde nesneler üzerinde Belge Anahattı penceresi odak modundayken kilidini aç|SHIFT + CTRL + L|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+XAML Tasarımcısı klavye kısayolları, tek bir klavye kısayoluna birden çok fare düğmesi tıklamasını gerektiren bir eylemi azaltarak çalışmanızı hızlandırabilir.
+
+## <a name="element-shortcuts"></a>Öğe kısayolları
+ Bu tabloda, çalışma yüzeyinde öğelerle çalışmak için kullanılabilen kısayollar listelenmektedir.
+
+|**Bu eylemi gerçekleştirmek için**|**Bunu yapın**|
+|--------------------------------|-----------------|
+|Öğe oluşturma|CTRL + N tuşlarına basın|
+|Yinelenen öğe|Alt tuşunu basılı tutun ve bir ok tuşuna basın.|
+|Denetimdeki metni düzenleme|F2 tuşuna basın (çıkmak için ESC tuşuna basın)|
+|Tek bir öğe seçin|Öğeleri belgede göründükleri sırada seçmek için Tab tuşuna basın. (Ayrıca, ok tuşlarını kullanarak öğeleri de seçebilirsiniz.)|
+|Birden çok öğe seçin|Her öğeyi seçerken SHIFT tuşuna basın ve basılı tutun|
+|Bitişik olmayan birden çok öğe seç|İlk ve son öğeleri seçerken CTRL tuşuna basın ve basılı tutun|
+|Seçili öğeleri taşı|Ok tuşlarına basın (her tuş tuşuna basarak geçiş mesafesini artırmak için SHIFT tuşunu basılı tutabilirsiniz.)|
+|Bir öğeyi 15 derece artışlarla döndürme|Öğeyi döndürürken SHIFT tuşunu basılı tutun|
+|Tüm öğeleri seç|CTRL + A tuşlarına basın|
+|Tüm öğelerin seçimini temizle|CTRL + SHIFT + A tuşlarına basın|
+|Öğe tutamaçlarını göster veya gizle|F9 tuşuna basın|
+|Öğe için bir özellik seçin|Seçili bir öğe ve Özellikler penceresi odaklanıldığında Tab tuşuna basın. (odağı Özellikler penceresi değiştirmek için CTRL + TAB tuşlarını kullanın.) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|
+
+## <a name="document-outline-window-shortcuts"></a>Belge ana hat penceresi kısayolları
+ Aşağıdaki tabloda, belge ana hattı penceresindeki öğelerle çalışırken kullanılabilecek kısayollar listelenmektedir.
+
+|**Bu eylemi gerçekleştirmek için**|**Bunu yapın**|
+|--------------------------------|-----------------|
+|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerini gizle|CTRL + H|
+|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerini göster|SHıFT + CTRL + H|
+|Odak belge anahattı penceresinde olduğunda çalışma yüzeyi nesnelerini kilitle|CTRL + L|
+|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerinin kilidini aç|SHıFT + CTRL + L|
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XAML Tasarımcısı’nı kullanarak bir kullanıcı arabirimi oluşturma](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)

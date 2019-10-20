@@ -4,59 +4,59 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ca2401333f7678b821b5c6fa68f7953a91996d0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: bc7d4ef8e281cd56b7a585d516cd5d48028a00f8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440017"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653701"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Hesaplanan ve Özel Depolama Özellikleri
-Tüm etki alanı özellikleri bir etki alanına özgü dil (DSL) diyagramı ve dil gezgininizde kullanıcıya görüntülenen ve program kodu tarafından erişilebilir. Ancak, özellikleri değerlerini depolanan şekilde farklılık gösterir.
+Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagramda ve dil gezgininizde kullanıcıya görüntülenebilir ve program kodu tarafından erişilebilir. Ancak özellikler, değerlerinin depolandığı şekilde farklılık gösterir.
 
-## <a name="kinds-of-domain-properties"></a>Tür etki alanı özelliklerinin özellikleri
- DSL tanımındaki ayarladığınız **tür** aşağıdaki tabloda listelendiği gibi bir etki alanı özelliği:
+## <a name="kinds-of-domain-properties"></a>Etki alanı özelliklerinin türleri
+ DSL tanımında, aşağıdaki tabloda listelendiği gibi bir etki alanı özelliği **türünü** ayarlayabilirsiniz:
 
-|Domain Property Kind|Açıklama|
+|Alan özelliği türü|Açıklama|
 |-|-|
-|**Standart** (varsayılan)|Kaydedilen bir alan özelliği *depolamak* ve dosyaya seri hale getirilmiş.|
-|**Hesaplanan**|Depoda kaydedilmez, ancak diğer değerlerinden hesaplanır salt okunur etki alanı özelliği.<br /><br /> Örneğin, `Person.Age` hesaplanmasını `Person.BirthDate`.<br /><br /> Hesaplamayı gerçekleştiren kod sağlamanıza gerek. Genellikle, diğer etki alanı özellikleri değerini hesaplayın. Bununla birlikte, dış kaynaklara de kullanabilirsiniz.|
-|**Özel depolama**|Doğrudan deposunda kaydedilmez ancak hem get hem de set olabilir bir etki alanı özelliği.<br /><br /> Alma ve değerini ayarlama yöntemleri sağlaması gerekir.<br /><br /> Örneğin, `Person.FullAddress` içinde depolanacak `Person.StreetAddress`, `Person.City`, ve `Person.PostalCode`.<br /><br /> Örneğin almak ve bir veritabanından değerleri ayarlamak, dış kaynaklara da erişebilirsiniz.<br /><br /> Kod deposundaki değerleri ayarlanmamalıdır olduğunda `Store.InUndoRedoOrRollback` geçerlidir. Bkz: [işlemleri ve özel ayarlayıcılar](#setters).|
+|**Standart** (varsayılan)|*Depoya* kaydedilen ve dosyaya serileştirilmiş bir alan özelliği.|
+|**Hesapla**|Depoda kaydedilmemiş ancak diğer değerlerden hesaplanan salt bir salt okunurdur.<br /><br /> Örneğin, `Person.Age` `Person.BirthDate` hesaplanabilir.<br /><br /> Hesaplamayı gerçekleştiren kodu sağlamanız gerekir. Genellikle, diğer etki alanı özelliklerinden değeri hesaplayabilirsiniz. Ancak dış kaynakları da kullanabilirsiniz.|
+|**Özel depolama**|Doğrudan depoya kaydedilmemiş, ancak hem Get hem de set olabilecek bir etki alanı özelliği.<br /><br /> Değeri alan ve ayarlamış olan yöntemleri sağlamanız gerekir.<br /><br /> Örneğin, `Person.FullAddress` `Person.StreetAddress`, `Person.City` ve `Person.PostalCode` depolanabilir.<br /><br /> Ayrıca, dış kaynaklara erişebilirsiniz. Örneğin, bir veritabanından değerler almak ve ayarlamak için.<br /><br /> @No__t_0 true olduğunda kodunuzun depodaki değerleri ayarlaması gerekmez. Bkz. [işlemler ve özel ayarlayıcılar](#setters).|
 
-## <a name="providing-the-code-for-a-calculated-or-custom-storage-property"></a>Kod bir hesaplanmış ya da özel depolama özelliği için sağlama
- Hesaplanmış veya özel depolama alanına bir alan özelliği türünü ayarlarsanız, erişim yöntemi sağlamak zorunda. Çözümünüzü oluşturduğunuzda, bir hata raporu ne gereklidir bildirir.
+## <a name="providing-the-code-for-a-calculated-or-custom-storage-property"></a>Hesaplanmış veya özel bir depolama özelliği için kod sağlama
+ Bir etki alanı özelliğinin türünü hesaplanmış veya özel depolama olarak ayarlarsanız, erişim yöntemleri sağlamanız gerekir. Çözümünüzü oluşturduğunuzda bir hata raporu, size gerekli olanları bildirir.
 
-#### <a name="to-define-a-calculated-or-custom-storage-property"></a>Hesaplanmış veya özel depolama özelliği tanımlamak için
+#### <a name="to-define-a-calculated-or-custom-storage-property"></a>Hesaplanan veya özel bir depolama özelliği tanımlamak için
 
-1. DslDefinition.dsl, diyagram veya etki alanı özelliği seçin **DSL Gezgini**.
+1. DslDefinition. dsl ' de, diyagramda veya **DSL Gezgini**' nde etki alanı özelliğini seçin.
 
-2. İçinde **özellikleri** penceresinde **tür** alanı **hesaplanan** veya **özel depolama**.
+2. **Özellikler** penceresinde, **tür** alanını **hesaplanan** veya **özel depolama**olarak ayarlayın.
 
-     Siz de ayarladığınızdan emin olun, **türü** istediğiniz.
+     Ayrıca **türünü** istediğiniz gibi ayarladığınızdan emin olun.
 
-3. Tıklayın **tüm Şablonları Dönüştür** araç **Çözüm Gezgini**.
+3. **Çözüm Gezgini**araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
 
-4. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+4. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
 
-     Aşağıdaki hata iletisini alıyorsunuz: "*YourClass* Get için bir tanım içermiyor*YourProperty*."
+     Şu hata iletisini alıyorsunuz: "*YourClass* , Get*yourproperty*için bir tanım içermiyor."
 
-5. Hata iletisini çift tıklayın.
+5. Hata iletisine çift tıklayın.
 
-     Dsl\GeneratedCode\DomainClasses.cs veya DomainRelationships.cs açılır. Vurgulanan yöntemi çağrısı, yorum, Get için bir uygulama sunmak amacıyla ister*YourProperty*().
+     Dsl\GeneratedCode\DomainClasses.cs veya DomainRelationships.cs açılır. Vurgulanan yöntem çağrısının üzerinde, bir yorum Get*Yourproperty*() için bir uygulama sağlamanızı ister.
 
     > [!NOTE]
-    > Bu dosya, DslDefinition.dsl oluşturulur. Bu dosyayı düzenlerseniz, değişikliklerinizi bir sonraki tıklayışınızda olmalıdır **tüm Şablonları Dönüştür**. Bunun yerine ayrı bir dosyada gerekli yöntemi ekleyin.
+    > Bu dosya DslDefinition. dsl 'den oluşturulur. Bu dosyayı düzenlerseniz, **Tüm Şablonları Dönüştür**' e tıkladığınızda yaptığınız değişiklikler kaybedilir. Bunun yerine, gerekli yöntemi ayrı bir dosyaya ekleyin.
 
-6. Oluşturun veya bir sınıf dosyası ayrı bir klasörde, örneğin CustomCode açın\\*YourDomainClass*. cs.
+6. Sınıf dosyasını ayrı bir klasörde oluşturun veya açın, örneğin CustomCode \\*YourDomainClass*. cs.
 
-     Ad alanı oluşturulan kod ile aynı olduğundan emin olun.
+     Ad alanının oluşturulan kodla aynı olduğundan emin olun.
 
-7. Sınıf dosyasında, bir etki alanı sınıfı kısmi uygulaması yazma. Sınıfında, eksik bir tanımı yazma `Get` aşağıdaki örneğe benzer yöntemi:
+7. Sınıf dosyasında, etki alanı sınıfının kısmi bir uygulamasını yazın. Sınıfında, aşağıdaki örneğe benzer eksik `Get` yöntemi için bir tanım yazın:
 
     ```
     namespace Company.FamilyTree
@@ -66,7 +66,7 @@ Tüm etki alanı özellikleri bir etki alanına özgü dil (DSL) diyagramı ve d
     }  }
     ```
 
-8. Ayarlarsanız **tür** için **özel depolama**, sağlamanız gerekecektir bir `Set` yöntemi. Örneğin:
+8. **Türü** **özel depolama**olarak ayarlarsanız Ayrıca bir `Set` yöntemi sağlamanız gerekecektir. Örneğin:
 
     ```
     void SetAgeValue(int value)
@@ -75,20 +75,20 @@ Tüm etki alanı özellikleri bir etki alanına özgü dil (DSL) diyagramı ve d
             System.DateTime.Today.Year - value; }
     ```
 
-     Kod deposundaki değerleri ayarlanmamalıdır olduğunda `Store.InUndoRedoOrRollback` geçerlidir. Bkz: [işlemleri ve özel ayarlayıcılar](#setters).
+     @No__t_0 true olduğunda kodunuzun depodaki değerleri ayarlaması gerekmez. Bkz. [işlemler ve özel ayarlayıcılar](#setters).
 
-9. Derleme ve çözümü çalıştırın.
+9. Çözümü derleyin ve çalıştırın.
 
-10. Test özelliği. Denemek emin **geri** ve **Yinele**.
+10. Özelliği test edin. **Geri almayı** ve **yinelemeyi**denediğinizden emin olun.
 
-## <a name="setters"></a> İşlemler ve özel ayarlayıcılar
- Yöntemi genellikle etkin bir işlem çağrıldığı için özel depolama özellik kümesi yönteminde, açık bir işlem gerekmez.
+## <a name="setters"></a>İşlemler ve özel ayarlayıcılar
+ Özel depolama özelliğinin set yönteminde bir işlem açmanız gerekmez, çünkü Yöntem genellikle etkin bir işlem içinde çağırılır.
 
- Ancak, küme yöntemini kullanıcı geri alma veya yineleme çağırır veya bir işlem geri alınıyor çağrılabilir. Zaman <xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A> true kümesi yönteminizi davranış şu şekilde olur:
+ Ancak, Kullanıcı geri alma veya yeniden yapma işlemini çağrılırsa veya bir işlem geri alınırsa set yöntemi de çağrılabilir. @No__t_0 true olduğunda, set yönteminiz aşağıdaki gibi davranır:
 
-- Bu değişiklikler diğer etki alanı özellikleri için değerler atama deposundaki yapmamanız gerekir. Geri alma yöneticisi değerlerini ayarlar.
+- Diğer etki alanı özelliklerine değer atama gibi, depoda değişiklik yapmamalıdır. Geri alma Yöneticisi, değerlerini ayarlayacaktır.
 
-- Ancak, veritabanı veya dosya içeriklerini mağazası dışındaki nesnelere gibi herhangi bir dış kaynağa güncelleştirmeniz gerekir. Bu bunlar içinde synchronism deposundaki değerlerle tutulur emin olmanızı sağlar.
+- Ancak, veritabanı veya dosya içerikleri gibi dış kaynakları veya mağaza dışındaki nesneleri güncelleştirmelidir. Bu, depodaki değerlerle eşitlenmiş olduklarından emin olur.
 
   Örneğin:
 
@@ -105,7 +105,7 @@ void SetAgeValue(int value)
 }
 ```
 
- İşlemler hakkında daha fazla bilgi için bkz. [gezinme ve güncelleştirme Program kodundaki modeli](../modeling/navigating-and-updating-a-model-in-program-code.md).
+ İşlemler hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

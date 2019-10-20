@@ -1,5 +1,5 @@
 ---
-title: Tümleşik yazılım geliştirme ortamı hatalarında sorun giderme kaynakları | Microsoft Docs
+title: Tümleşik geliştirme ortamı hatalarında sorun giderme kaynakları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -91,28 +91,28 @@ f1_keywords:
 - vs.webclient.help.general
 ms.assetid: 8f866eb5-a206-4c16-807e-96a0f2c0e645
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 97edc5419cb552f853a75817564a69dd175ec54b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5198c541deb4680d19e2b15ae0e672b831dbb13e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203685"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665544"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Tümleşik Yazılım Geliştirme Ortamı Hatalarında Sorun Giderme Kaynakları
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tüm hata iletilerini belirli ilişkili bir Yardım konusu var. Hata iletisindeki bilgiler sorunu gidermenize yardımcı değil Bilgi Bankası makaleleri, geliştirici topluluğu veya ürün desteği gibi diğer kaynaklara başvurabilirsiniz.  
-  
-## <a name="knowledge-base-articles"></a>Bilgi Bankası Makaleleri  
- Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. BB makalelerine erişebileceğiniz [Microsoft Support](http://go.microsoft.com/fwlink/?linkid=1782) Web sitesi.  
-  
-## <a name="the-developer-community"></a>Geliştirici topluluğu  
- Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, başkalarının aynı sorunla ilgili paylaşım yapıp yapmadığını görmek için haber gruplarında da arama yapabilirsiniz.  
-  
- Üzerindeki forumlar, bloglar, sohbet ve diğer kaynaklara erişebilir [Microsoft Technical Communities](https://techcommunity.microsoft.com/) Web sitesi.  
-  
-## <a name="product-support"></a>Ürün Desteği  
- Diğer kaynakları denedikten sonra hala sorularınız varsa, ziyaret ederek Microsoft Destek Hizmetleri başvurabilirsiniz [Microsoft Support](http://go.microsoft.com/fwlink/?linkid=1782) Web sitesi. Bölgenizde mevcut ürün desteği hakkında daha fazla bilgi için bkz. [konuşmak bize](../../ide/talk-to-us.md).
+Tüm hata iletilerinde ilişkili belirli bir yardım konusu yoktur. Hata iletisindeki bilgiler sorunu çözmenize yardımcı değilse, Bilgi Bankası makaleleri, geliştirici topluluğu veya ürün desteği gibi diğer kaynaklara de başvurabilirsiniz.
+
+## <a name="knowledge-base-articles"></a>Bilgi Bankası Makaleleri
+ Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. [Microsoft desteği](http://go.microsoft.com/fwlink/?linkid=1782) Web sitesinde KB makalelerine erişebilirsiniz.
+
+## <a name="the-developer-community"></a>Geliştirici topluluğu
+ Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, başkalarının aynı sorunla ilgili paylaşım yapıp yapmadığını görmek için haber gruplarında da arama yapabilirsiniz.
+
+ [Microsoft Teknik topluluklar](https://techcommunity.microsoft.com/) Web sitesinde forumlara, bloglara, sohbetlere ve diğer kaynaklara erişebilirsiniz.
+
+## <a name="product-support"></a>Ürün Desteği
+ Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft desteği](http://go.microsoft.com/fwlink/?linkid=1782) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. Bölgenizdeki ürün desteği hakkında daha fazla bilgi için bkz. [bizimle Iletişim kurun](../../ide/talk-to-us.md).

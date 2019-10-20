@@ -1,5 +1,5 @@
 ---
-title: 'CA2138: Saydam yöntemler SuppressUnmanagedCodeSecurity özniteliğine sahip yöntemleri değil çağırmalıdır | Microsoft Docs'
+title: 'CA2138: Saydam yöntemler SuppressUnmanagedCodeSecurity özniteliğine sahip yöntemleri çağırmamalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,17 +8,17 @@ f1_keywords:
 - CA2138
 ms.assetid: a14c4d32-f079-4f3a-956c-a1657cde0f66
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4e9a9e10f928efe6bcff6fb3d49c1b1cd7b1bd1c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 65e00d319bff3bbfd3c441c6b60ed8a703e69251
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154291"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654810"
 ---
-# <a name="ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute"></a>CA2138: Saydam metotlar SuppressUnmanagedCodeSecurity özniteliğine sahip metotları çağırmamalıdır
+# <a name="ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute"></a>CA2138: Saydam yöntemler SuppressUnmanagedCodeSecurity özniteliğine sahip yöntemleri çağırmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -29,15 +29,15 @@ ms.locfileid: "68154291"
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Saydam güvenlik yöntemi ile işaretlenmiş bir yöntemi çağıran <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliği.
+ Bir güvenlik saydam yöntemi, <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliğiyle işaretlenmiş bir yöntemi çağırır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural tetikler kullanarak örneğin, yerel kod içinde doğrudan çağıran herhangi bir saydam yöntem üzerinde bir P/Invoke aracılığıyla (platform çağırma) çağırın. İle işaretlenmiş P/Invoke ve COM birlikte çalışma yöntemlerini <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliği karşı çağıran Metoda yapılan bir LinkDemand sonuçlanır. Güvenliği saydam kod LinkDemands gerçekleştiremiyor çünkü kod da SuppressUnmanagedCodeSecurity özniteliği ile işaretlenmiş yöntemler veya SuppressUnmanagedCodeSecurity özniteliği ile işaretlenmiş sınıf yöntemlerini çağıramazsınız. Yöntemi başarısız olur ya da isteğe bağlı tam bir talebi karşılamak için dönüştürülür.
+ Bu kural, örneğin, bir P/Invoke (Platform Invoke) çağrısını kullanarak, yerel koda doğrudan çağıran herhangi bir saydam yöntemde ateşlenir. @No__t_0 özniteliğiyle işaretlenen P/Invoke ve COM birlikte çalışma yöntemleri, çağırma yöntemine karşı gerçekleştirilen bir LinkDemand ile sonuçlanır. Güvenlik saydam kodu Linktaleplerini karşılayamadığından, kod aynı zamanda SuppressUnmanagedCodeSecurity özniteliğiyle işaretlenmiş yöntemleri veya SuppressUnmanagedCodeSecurity özniteliğiyle işaretlenmiş sınıf yöntemlerini çağıramaz. Yöntem başarısız olur veya talep tam talebe dönüştürülür.
 
- Bu kural ihlalleri neden bir <xref:System.MethodAccessException> için talepte bulunur ve Düzey 2 güvenlik saydamlık modeli içindeki <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> düzey 1 saydamlık modeli içindeki.
+ Bu kuralın ihlalleri, düzey 2 güvenlik saydamlığı modelindeki bir <xref:System.MethodAccessException> ve düzey 1 saydamlık modelinde <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> için bir tam talebe yol açabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için kaldırmak <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliği ve yöntemi işaretlemek <xref:System.Security.SecurityCriticalAttribute> veya <xref:System.Security.SecuritySafeCriticalAttribute> özniteliği.
+ Bu kural ihlalini onarmak için <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliğini kaldırın ve yöntemi <xref:System.Security.SecurityCriticalAttribute> veya <xref:System.Security.SecuritySafeCriticalAttribute> özniteliğiyle işaretleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.

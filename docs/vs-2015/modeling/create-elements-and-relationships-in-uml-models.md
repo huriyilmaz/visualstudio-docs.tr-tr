@@ -1,5 +1,5 @@
 ---
-title: UML modellerinde öğe ve ilişkiler oluşturma | Microsoft Docs
+title: UML modellerinde öğe ve ilişki oluşturma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,127 +8,126 @@ helpviewer_keywords:
 - UML API
 ms.assetid: cae81d32-8cc7-4f7c-9f00-20119952bc51
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ce1f236347ad811f1c5d115f30907b7e3356e3af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5ea066aa31cbc1f6408ee55c92a5ca761608f534
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68159640"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667822"
 ---
 # <a name="create-elements-and-relationships-in-uml-models"></a>UML modellerinde öğe ve ilişki oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir Visual Studio uzantısı için program kodu içinde oluşturun ve öğeleri ve ilişkileri silin.  
-  
-## <a name="create-a-model-element"></a>Model öğesi oluşturma  
-  
-### <a name="namespace-imports"></a>Namespace içeri aktarmalar  
- Aşağıdaki içermelidir `using` deyimleri.  
-  
- Oluşturma yöntemleri, bu ad alanında uzantı yöntemlerini olarak tanımlanır:  
-  
- `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`  
-  
-### <a name="obtain-the-owner-of-the-element-you-want-to-create"></a>Oluşturmak istediğiniz öğeyi sahibini edinin  
- Bir model, her öğe, model kökünün dışında bir sahibi sahip olacak şekilde tek bir ağaç oluşturur. Model kökü türünde `IModel`, bir tür olduğu `IPackage`.  
-  
- Belirli bir şemada görüntülenecek bir öğe oluşturuyorsanız, örneğin, kullanıcının geçerli diyagram, genellikle, bu diyagrama bağlı paketindeki oluşturmanız gerekir. Örneğin:  
-  
-```  
-IPackage linkedPackage = Context.CurrentDiagram.Element as IPackage;  
-```  
-  
- Bu tabloda ortak modeli öğeleri sahiplik özetlenmektedir:  
-  
-|Oluşturulacak öğe|Sahip|  
-|---------------------------|-----------|  
-|`IActor, IUseCase, IComponent, IClass, IInterface, IEnumeration`<br /><br /> `IActivity, IInteraction`|`IPackage, IModel`|  
-|`IAttribute, IOperation`|`IClass, IInterface`|  
-|`IPart, IPort`|`IComponent`|  
-|`IAction, IObjectNode`|`IActivity`|  
-|`ILifeline, IMessage, ICombinedFragment`|`IInteraction`|  
-  
-### <a name="invoke-the-create-method-on-the-owner"></a>Sahip üzerinde Create yöntemini çağırma  
- Yöntem adı formu şöyledir: `Create`*OwnedType*`()`. Örneğin:  
-  
-```  
-IUseCase usecase1 = linkedPackage.CreateUseCase();  
-```  
-  
- Bazı türler, özellikle sıralı diyagramlarında daha karmaşık oluşturma yöntemleri vardır. Bkz: [UML API kullanarak Düzenle UML sıralı diyagramlar](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md).  
-  
- Bazı öğe türleri için yaşam süresi boyunca, bir öğenin sahibi değiştirebilir kullanarak `SetOwner(newOwner)`.  
-  
-### <a name="set-the-name-and-other-properties"></a>Adı ve diğer özellikleri ayarlayın  
-  
-```  
-usecase1.Name = "user logs in";  
-```  
-  
-### <a name="example"></a>Örnek  
-  
-```  
-using Microsoft.VisualStudio.Uml.Classes;  
-using Microsoft.VisualStudio.Uml.Extensions;  
-...  
- void InstantiateObserverPattern (IPackage package, string namePrefix)  
- {    IInterface observer = package.CreateInterface();  
-      observer.Name = namePrefix + "Observer";  
-      IOperation operation = observer.CreateOperation();  
-      operation.Name = "Update";  
-      IClass subject = package.CreateClass();  
-      subject.Name = namePrefix + "Subject"; ...  
-```  
-  
-## <a name="create-an-association"></a>İlişkilendirme oluşturma  
-  
-#### <a name="to-create-an-association"></a>Bir ilişkilendirme oluşturmak için  
-  
-1. İlişki kaynak sonunu içeren model veya paketin genellikle olan ilişkisini sahibini edinin.  
-  
-2. Sahibi gerekli Create yöntemini çağırır.  
-  
-3. İlişkinin özellikleri gibi adını ayarlayın.  
-  
-     Örneğin:  
-  
-    ```  
-    IAssociation association = subject.Package.CreateAssociation(subject, observer);  
-    association .Name = "Observes";  
-    ```  
-  
-4. İlişki her uçtaki özelliklerini ayarlayın. Her zaman iki `MemberEnds`. Örneğin:  
-  
-    ```  
-    association .MemberEnds[0].Name = "subject";   // role name  
-    association .MemberEnds[1].Name = "observers"; // role name  
-    association .MemberEnds[1].SetBounds("0..*");           
-                // multiplicity defaults to "1"  
-    association.MemberEnds[0].Aggregation = AggregationKind.Composite;  
-    ```  
-  
-## <a name="create-a-generalization"></a>Genelleştirme oluşturma  
-  
-```  
-IGeneralization generalization =   
-  subclass.CreateGeneralization(superClass);  
-```  
-  
-## <a name="delete-an-element-relationship-or-generalization-from-the-model"></a>Bir öğe, ilişki veya Genelleştirme modelden Sil  
-  
-```  
-anElement.Delete();  
-```  
-  
- Bir öğenin bir modelden sildiğinizde:  
-  
-- Bağlantı her ilişki de silinir.  
-  
-- Bir diyagramda temsil edilen her şekil de silinir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UML modellerini ve diyagramları genişletme](../modeling/extend-uml-models-and-diagrams.md)   
- [Diyagramlar üzerinde model görüntüleme](../modeling/display-a-uml-model-on-diagrams.md)
+Visual Studio uzantısı için program kodunda, öğe ve ilişki oluşturabilir ve silebilirsiniz.
+
+## <a name="create-a-model-element"></a>Model öğesi oluşturma
+
+### <a name="namespace-imports"></a>Ad alanı Içeri aktarmaları
+ Aşağıdaki `using` deyimlerini dahil etmeniz gerekir.
+
+ Oluşturma yöntemleri, bu ad alanında uzantı yöntemleri olarak tanımlanmıştır:
+
+ `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`
+
+### <a name="obtain-the-owner-of-the-element-you-want-to-create"></a>Oluşturmak istediğiniz öğenin sahibini edinin
+ Model, her öğenin model kökü dışında bir sahibe sahip olması için tek bir ağaç oluşturur. Model kökü, bir `IPackage` türü `IModel` türüdür.
+
+ Belirli bir diyagramda görüntülenecek bir öğe oluşturuyorsanız (örneğin, kullanıcının geçerli diyagramı), genellikle onu bu diyagrama bağlı pakette oluşturmanız gerekir. Örneğin:
+
+```
+IPackage linkedPackage = Context.CurrentDiagram.Element as IPackage;
+```
+
+ Bu tablo ortak model öğelerinin sahipliğini özetler:
+
+|Oluşturulacak öğe|Sahip|
+|---------------------------|-----------|
+|`IActor, IUseCase, IComponent, IClass, IInterface, IEnumeration`<br /><br /> `IActivity, IInteraction`|`IPackage, IModel`|
+|`IAttribute, IOperation`|`IClass, IInterface`|
+|`IPart, IPort`|`IComponent`|
+|`IAction, IObjectNode`|`IActivity`|
+|`ILifeline, IMessage, ICombinedFragment`|`IInteraction`|
+
+### <a name="invoke-the-create-method-on-the-owner"></a>Sahibe oluşturma yöntemini çağır
+ Yöntem adı şu biçimdedir: `Create`*Ownedtype* `()`. Örneğin:
+
+```
+IUseCase usecase1 = linkedPackage.CreateUseCase();
+```
+
+ Bazı türlerin özellikle sıralı diyagramlarda daha karmaşık oluşturma yöntemleri vardır. Bkz. [UML API kullanarak UML sıra diyagramlarını düzenleme](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md).
+
+ Bazı öğe türleri için, `SetOwner(newOwner)` kullanarak bir öğenin sahibini ömrü boyunca değiştirebilirsiniz.
+
+### <a name="set-the-name-and-other-properties"></a>Adı ve diğer özellikleri ayarlama
+
+```
+usecase1.Name = "user logs in";
+```
+
+### <a name="example"></a>Örnek
+
+```
+using Microsoft.VisualStudio.Uml.Classes;
+using Microsoft.VisualStudio.Uml.Extensions;
+...
+ void InstantiateObserverPattern (IPackage package, string namePrefix)
+ {    IInterface observer = package.CreateInterface();
+      observer.Name = namePrefix + "Observer";
+      IOperation operation = observer.CreateOperation();
+      operation.Name = "Update";
+      IClass subject = package.CreateClass();
+      subject.Name = namePrefix + "Subject"; ...
+```
+
+## <a name="create-an-association"></a>Ilişki oluşturma
+
+#### <a name="to-create-an-association"></a>Bir ilişki oluşturmak için
+
+1. İlişkinin sahibini alma, genellikle ilişkinin kaynak sonunu içeren paket veya model.
+
+2. Sahip üzerinde gerekli oluşturma yöntemini çağırın.
+
+3. İlişkinin adı gibi özelliklerini ayarlayın.
+
+     Örneğin:
+
+    ```
+    IAssociation association = subject.Package.CreateAssociation(subject, observer);
+    association .Name = "Observes";
+    ```
+
+4. İlişkinin her ucunun özelliklerini ayarlayın. Her zaman iki `MemberEnds` vardır. Örneğin:
+
+    ```
+    association .MemberEnds[0].Name = "subject";   // role name
+    association .MemberEnds[1].Name = "observers"; // role name
+    association .MemberEnds[1].SetBounds("0..*");
+                // multiplicity defaults to "1"
+    association.MemberEnds[0].Aggregation = AggregationKind.Composite;
+    ```
+
+## <a name="create-a-generalization"></a>Genelleştirme oluşturma
+
+```
+IGeneralization generalization =
+  subclass.CreateGeneralization(superClass);
+```
+
+## <a name="delete-an-element-relationship-or-generalization-from-the-model"></a>Modelden bir öğe, Ilişki veya genelleştirme silme
+
+```
+anElement.Delete();
+```
+
+ Bir modelden bir öğe sildiğinizde:
+
+- Onunla bağlantılı her ilişki de silinir.
+
+- Diyagramda temsil eden her şekil de silinir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) [diyagramlarda bir UML modeli görüntüleme](../modeling/display-a-uml-model-on-diagrams.md)

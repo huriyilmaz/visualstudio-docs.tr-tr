@@ -1,5 +1,5 @@
 ---
-title: Bir UML modelinden dosyalar oluşturma | Microsoft Docs
+title: UML modelinden dosya oluştur | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,328 +8,328 @@ helpviewer_keywords:
 - UML model, generating files
 ms.assetid: 4e28b0e6-ce8f-45ee-9e3a-e4d600a0ad81
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0d58a8b98cb27527f3d4c464119fb5543f88e8ed
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 832dc3f7fea959ff4d2834aba921cd16f1117b5c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68182830"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666143"
 ---
 # <a name="generate-files-from-a-uml-model"></a>UML modeli aracılığıyla dosya oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir UML modelinden, program kodu, şemalar, belgelerin, kaynakları ve diğer yapılara hiçbir türde oluşturabilirsiniz. Bir UML modelinden metin dosyaları oluşturma kullanışlı bir yöntem ise [metin şablonlarını](../modeling/code-generation-and-t4-text-templates.md). Bu, program kodu içinde oluşturmak istediğiniz metni ekleme olanak tanır.  
-  
- Başlıca üç senaryo vardır:  
-  
-- [Bir menü komut dosyaları oluşturma](#Command) veya hareket. Tanımladığınız bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] UML modellerinde kullanılabilir komutu.  
-  
-- [Dosyaları dosyasından bir uygulama oluşturma](#Application). UML modellerini okur ve dosyaları oluşturan bir uygulama yazmanız.  
-  
-- [Tasarım zamanında oluşturma](#Design). Uygulamanızın işlevselliğini bir kısmını tanımlamak için bir modeli kullanır ve kod, kaynak ve benzeri içinde oluşturmak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözüm.  
-  
-  Bu konu hakkında ayrıntılı bilgi ile sona erer [metin oluşturma kullanmayı](#What). Daha fazla bilgi için [kod oluşturma ve T4 metin şablonları](../modeling/code-generation-and-t4-text-templates.md).  
-  
-## <a name="Command"></a> Bir menü komut dosyaları oluşturma  
- Kullanabileceğiniz bir UML menü komutu metin şablonlarında önceden işlenir. Metin şablonunun veya ayrı bir kısmi sınıf içindeki kod, diyagram tarafından görüntülenen model okuyabilirsiniz.  
-  
- Bu özellikler hakkında daha fazla bilgi için aşağıdaki konuları okuyun:  
-  
-- [Modelleme diyagramında menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md)  
-  
-- [T4 Metin Şablonları İle Çalışma Süresi Metni Oluşturma](../modeling/run-time-text-generation-with-t4-text-templates.md)  
-  
-- [UML modelinde gezinme](../modeling/navigate-the-uml-model.md)  
-  
-  Aşağıdaki örnekte gösterilen yaklaşım işlem modeli diyagramları birinden başlattığınızda, metin tek bir modelden oluşturmak için uygundur. Ayrı bir bağlamda modeli işlemek için kullanmayı [Visual Studio Modelbus'ı](../modeling/integrate-uml-models-with-other-models-and-tools.md) modeli ve onun öğelerine erişmek için.  
-  
-### <a name="example"></a>Örnek  
- Bu örneği çalıştırmak için oluşturun bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı (VSIX) projesi. Bu örnekte kullanılan proje adı `VdmGenerator`. İçinde **source.extension.vsixmanifest** dosyasına sağ tıklayıp **İçerik Ekle** ve tür alanı kümesine **MEF Bileşeni** ve geçerli projeye başvuran kaynak yolu. Bu tür bir proje ayarlama hakkında daha fazla bilgi için bkz. [modelleme diyagramında menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md).  
-  
- Aşağıdaki kodu içeren C# dosyası projeye ekleyin. Bu sınıf, bir UML sınıf diyagramında görünür bir menü komutu tanımlar.  
-  
-```  
-using System;  
-using System.ComponentModel.Composition;  
-using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;  
-using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;  
-using Microsoft.VisualStudio.Modeling.ExtensionEnablement;  
-  
-namespace VdmGenerator  
-{  
-  [Export(typeof(ICommandExtension))]  
-  [ClassDesignerExtension]  
-  public class GenerateVdmFromClasses : ICommandExtension  
-  {  
-    [Import] public IDiagramContext DiagramContext { get; set; }  
-    public void Execute(IMenuCommand command)  
-    {  
-      // Initialize the template with the Model Store.  
-      VdmGen generator = new VdmGen(  
-             DiagramContext.CurrentDiagram.ModelStore);  
-      // Generate the text and write it.  
-      System.IO.File.WriteAllText  
-        (System.IO.Path.Combine(  
-            Environment.GetFolderPath(  
-                Environment.SpecialFolder.Desktop),  
-            "Generated.txt")   
-         , generator.TransformText());  
-    }  
-    public void QueryStatus(IMenuCommand command)  
-    {  
-      command.Enabled = command.Visible = true;  
-    }  
-    public string Text  
-    { get { return "Generate VDM"; } }  
-  }  
-}  
-```  
-  
- Metin şablonu dosyasıdır. Bu modeldeki her UML sınıfı için metin satırı yanı sıra, her bir sınıf içindeki her bir öznitelik için bir satır oluşturur. Kod modeli tarafından ayrılmış metin gömüldüğü okumak için `<# ... #>`.  
-  
- Bu dosyayı oluşturmak için Çözüm Gezgini'nde projeye sağ tıklatın, **Ekle**ve ardından **yeni öğe**. Seçin **önceden işlenmiş metin şablonu**. Bu örnek için dosya adı olmalıdır **VdmGen.tt**. **Özel araç** dosyasının özelliği olmalıdır **TextTemplatingFilePreprocessor**. Önceden işlenmiş metin şablonları hakkında daha fazla bilgi için bkz. [T4 metin şablonları ile çalışma süresi metni oluşturma](../modeling/run-time-text-generation-with-t4-text-templates.md).  
-  
-```  
-<#@ import namespace="Microsoft.VisualStudio.Uml.Classes" #>  
-<#   
-   foreach (IClass classElement in store.AllInstances<IClass>())   {  
-#>  
-Type <#= classElement.Name #> ::  
-<#  
-     foreach (IProperty attribute in classElement.OwnedAttributes)     {  
-#>  
-       <#= attribute.Name #> : <#=   
-           attribute.Type == null ? ""  
-                                  : attribute.Type.Name #>   
-<#  
-     }   }  
-#>  
-```  
-  
- Metin şablonunun parçası olan bir C# kısmi sınıf oluşturur, uygulamanızın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje. Ayrı bir dosyada aynı sınıfın başka bir partial bildirimi ekleyin. Bu kod, UML model deposu erişimi olan şablon sağlar:  
-  
-```  
-using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;  
-namespace VdmGenerator  
-{  
-    public partial class VdmGen  
-    {  
-        private IModelStore store;  
-        public VdmGen(IModelStore s)  
-        { store = s; }  
-    }  
-}  
-```  
-  
- Projeyi test etmek için basın **F5**. Yeni bir örneğini [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlar. Bu örnekte, bir sınıf diyagramı içeren bir UML modeli oluşturun veya açın. Diyagrama bazı sınıfları eklemek ve bazı öznitelikler için her bir sınıf ekleyin. Diyagramda sağ tıkladıktan sonra örnek komut `Generate VDM`. Komut dosyası oluşturur `C:\Generated.txt`. Bu dosyayı inceleyin. İçeriğini aşağıdaki metne benzer olmalıdır, ancak kendi sınıflar ve öznitelikler listelenir:  
-  
-```  
-Type Class1 ::  
-          Attribute1 : int   
-          Attribute2 : string   
-Type Class2 ::   
-          Attribute3 : string   
-```  
-  
-## <a name="Application"></a> Dosyaları dosyasından bir uygulama oluşturma  
- Bir UML modeli okuyan bir uygulamaya ait dosyaları oluşturabilirsiniz. Bu amaçla, model ve onun öğelerine erişmenin en esnek ve sağlam yöntemdir [Visual Studio Modelbus'ı](../modeling/integrate-uml-models-with-other-models-and-tools.md).  
-  
- Temel API modeli yüklemek için kullanın ve önceki bölümde olduğu gibi aynı teknikleri kullanarak metin şablonları için model geçirin. Bir model yükleme hakkında daha fazla bilgi için bkz. [program kodundaki UML modelini okuma](../modeling/read-a-uml-model-in-program-code.md).  
-  
-## <a name="Design"></a> Tasarım zamanında dosyalar oluşturma  
- UML kod olarak yorumlanması için standart bir yöntem projeniz varsa, kodu projenizin içinde bir UML modelinden oluşturmanıza olanak tanıyan metin şablonları oluşturabilirsiniz. Genellikle UML model projesi ve uygulama kodu için bir veya daha fazla proje içeren bir çözüm yoktur. Her kod projesini modelin içeriğine göre program kodu, kaynakları ve yapılandırma dosyaları oluşturan çeşitli şablonlar içerebilir. Geliştirici tıklayarak tüm şablonları çalıştırabilir **tüm Şablonları Dönüştür** Çözüm Gezgini araç. Program kodu genellikle el ile yazılmış bölümleri tümleştirmeyi kolaylaştırmak için kısmi sınıflar, biçiminde oluşturulur.  
-  
- A [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bu tür proje böylece her bir takım üyesi kod aynı şekilde modelden üreten projeler oluşturabilir, şablon biçiminde dağıtılabilir. Genellikle, şablon kod önkoşulları karşılandığından emin olmak için model üzerinde doğrulama kısıtlamalarını içeren bir uzantı paketi parçasıdır.  
-  
-### <a name="outline-procedure-for-generating-files"></a>Anahat dosyaları oluşturmak için yordamı  
-  
-- Şablon için bir proje eklemek için seçin **metin şablonu** yeni dosya Ekle iletişim kutusunda. Çoğu proje ancak modelleme projelerine türleri için bir şablon ekleyebilirsiniz.  
-  
-- Şablon dosyasının özel Araçlar özelliği olmalıdır **TextTemplatingFileGenerator**, ve dosya adı uzantısını .tt olmalıdır.  
-  
-- En az bir çıkış yönergesi şablonu olmalıdır:  
-  
-     `<#@ output extension=".cs" #>`  
-  
-     Projenizin diline göre uzantı alanını ayarlayın.  
-  
-- Kod modeli erişmek için şablonunuzda izin vermek için yazma `<#@ assembly #>` bir UML modeli okumak için gereken derlemeler için yönergeleri. Kullanım `ModelingProject.LoadReadOnly()` modeli açmak için. Daha fazla bilgi için [program kodundaki UML modelini okuma](../modeling/read-a-uml-model-in-program-code.md).  
-  
-- Şablon ve tıkladığınızda kaydettiğinizde yürütülür **tüm Şablonları Dönüştür** Çözüm Gezgini araç.  
-  
-- Bu tür bir şablon hakkında daha fazla bilgi için bkz. [T4 metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).  
-  
-- Tipik bir projede farklı dosyalar aynı Modeli'nden çeşitli şablonlar olacaktır. Her şablon ilk bölümünü aynı olacaktır. Bu azaltmak için ortak bölümleri ayrı bir metin dosyasına taşıyın ve yönergesini kullanarak çağırma `<#@include file="common.txt"#>` her şablonda.  
-  
-- Metin oluşturma işlemi parametreleri sağlamanıza olanak tanıyan özel bir yönerge işlemcisi de tanımlayabilirsiniz. Daha fazla bilgi için [T4 metin dönüştürmeyi özelleştirme](../modeling/customizing-t4-text-transformation.md).  
-  
-### <a name="example"></a>Örnek  
- Bu örnek, C# sınıfı her UML sınıfı için kaynak modeli oluşturur.  
-  
-##### <a name="to-set-up-a-visual-studio-solution-for-this-example"></a>Bu örnek için bir Visual Studio çözümünü ayarlamak için  
-  
-1. Yeni bir çözüm içindeki bir modelleme projesindeki UML sınıf diyagramı oluşturun.  
-  
-   1. İçinde **mimarisi** menüsünü tıklatın **yeni diyagram**.  
-  
-   2. Seçin **UML sınıf diyagramı**.  
-  
-   3. Yeni bir çözüm ve modelleme projesi oluşturmak için istemleri izleyin.  
-  
-   4. Bazı sınıflar diyagramda UML sınıf aracını Toolbox'tan sürükleyerek ekleyin.  
-  
-   5. Dosyayı kaydedin.  
-  
-2. Aynı çözümdeki bir C# veya Visual Basic projesi oluşturun.  
-  
-   - Çözüm Gezgini'nde çözüme sağ tıklayın, fareyle **Ekle**ve ardından **yeni proje**. Altında **yüklü şablonlar**, tıklayın **Visual Basic** veya **Visual C#** seçip bir proje türü gibi **konsol uygulaması**.  
-  
-3. C# veya Visual Basic projesi düz metin dosyası ekleyin. Bu dosya birkaç metin şablon yazmak istiyorsanız, paylaşılan kod içerir.  
-  
-   - Çözüm Gezgini'nde projeye sağ tıklayın, fareyle **Ekle**ve ardından **yeni öğe**. Seçin **metin dosyası**.  
-  
-     Aşağıdaki bölümde görüntülenen metin ekleyin.  
-  
-4. Metin şablonu dosyasını, C# veya Visual Basic projesi ekleyin.  
-  
-   - Çözüm Gezgini'nde projeye sağ tıklayın, fareyle **Ekle**ve ardından **yeni öğe**. Seçin **metin şablonu**.  
-  
-     Metin şablon dosyasına aşağıdaki kodu ekleyin.  
-  
-5. Metin şablonu dosyasını kaydedin.  
-  
-6. Paketinizle dosyasındaki kodu inceleyin. Bu modeldeki her UML sınıf için bir sınıf içermelidir.  
-  
-   1. Bir Visual Basic projesinde tıklayın **tüm dosyaları göster** Çözüm Gezgini araç.  
-  
-   2. Çözüm Gezgini'nde şablon dosyası düğümünü genişletin.  
-  
-#### <a name="content-of-the-shared-text-file"></a>Paylaşılan bir metin dosyasının içeriği  
- Bu örnekte, dosyanın SharedTemplateCode.txt adlandırılır ve metin şablonları ile aynı klasörde olan.  
-  
-```  
-<# /* Common material for inclusion in my model templates */ #>  
-<# /* hostspecific allows access to the Visual Studio API */ #>  
-<#@ template debug="false" hostspecific="true" language="C#" #>  
-<#@ assembly name="Microsoft.VisualStudio.Uml.Interfaces.dll"#>  
-<#@ assembly name="Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll"#>  
-<#@ assembly name="EnvDTE" #>  
-<#@ import namespace="Microsoft.VisualStudio.Uml.Classes" #>  
-<#@ import namespace="Microsoft.VisualStudio.ArchitectureTools.Extensibility" #>  
-<#@ import namespace="Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml" #>  
-<#+  // Note this is a Class Feature Block  
-///<summary>  
-/// Text templates are run in a common AppDomain, so   
-/// we can cache the model store that we find.  
-///</summary>  
-private IModelStore StoreCache  
-{  
-  get { return AppDomain.CurrentDomain.GetData("ModelStore") as IModelStore; }  
-  set { AppDomain.CurrentDomain.SetData("ModelStore", value); }   
-}  
-private bool CacheIsOld()  
-{  
-    DateTime? dt = AppDomain.CurrentDomain  
-           .GetData("latestAccessTime") as DateTime?;  
-    DateTime t = dt.HasValue ? dt.Value : new DateTime();   
-    DateTime now = DateTime.Now;  
-    AppDomain.CurrentDomain.SetData("latestAccessTime", now);  
-    return now.Subtract(t).Seconds > 3;  
-}  
-  
-///<summary>  
-/// Find the UML modeling project in this solution,  
-/// and load the model.  
-///</summary>  
-private IModelStore ModelStore  
-{  
-  get   
-  {  
-    // Avoid loading the model for every template:  
-    if (StoreCache == null || CacheIsOld())  
-    {  
-      // Use Visual Studio API to find modeling project:  
-      EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)  
-                       .GetService(typeof(EnvDTE.DTE));  
-      EnvDTE.Project project = null;  
-      foreach (EnvDTE.Project p in dte.Solution.Projects)  
-      {  
-        if (p.FullName.EndsWith(".modelproj"))  
-        {  
-          project = p;  
-          break;  
-        }              
-      }  
-      if (project == null) return null;  
-  
-      // Load UML model into this AppDomain  
-      // and access model store:  
-      IModelingProjectReader reader =   
-           ModelingProject.LoadReadOnly(project.FullName);  
-      StoreCache = reader.Store;  
-    }  
-    return StoreCache;  
-  }  
-}  
-#>  
-```  
-  
-#### <a name="content-of-the-text-template-file"></a>Metin şablonu dosyasının içeriği  
- Aşağıdaki metni yerleştirilir **.tt** dosya. Bu örnek, bir C# dosyasında UML model sınıflardan sınıflar oluşturur. Ancak, tüm dosya türlerini oluşturabilir. Oluşturulan dosyanın dili metin şablonunun kod yazıldığı dili ilişkili değil.  
-  
-```  
-<#@include file="SharedTemplateCode.txt"#>  
-<#@ output extension=".cs" #>  
-namespace Test{  
-<#  
-      foreach (IClass c in ModelStore.AllInstances<IClass>())  
-      {  
-#>  
-   public partial class <#=c.Name#>  
-   {   }  
-<#  
-      }  
-#>  
-}  
-```  
-  
-## <a name="What"></a> Metin oluşturma kullanma  
- Modelleme gücü, gereksinimler veya mimari düzeyde tasarlamak için modelleri kullandığınızda elde edilir. Metin şablonları, üst düzey fikirlerinizi koda dönüştürme işinin bir kısmını yapmak için kullanabilirsiniz. Çoğu durumda, bu bire bir ilişkisi için UML modellerini ve sınıflar veya diğer bölümlerinde program kodu içinde olan öğeler arasında neden olmaz.  
-  
- Ayrıca, dönüşümün sorun etki alanınızda bağlıdır; kod modelleri arasındaki evrensel eşlemesi yok.  
-  
- Kod modelleri oluşturma bazı örnekleri aşağıda verilmiştir:  
-  
-- **Ürün serileri**. Fabrikam, Inc. oluşturur ve havaalanı bagaj sistemleri işleme yükler. Yazılımın daha sonraki bir yüklemesi arasında çok benzer, ancak işleme hangi paketi yüklenir ve bu parça tarafından taşıyıcı bantları nasıl bağlandığına yazılım yapılandırmasına bağlıdır. Bir sözleşme başında, Fabrikam analistleri havaalanı yönetimi ile gereksinimleri görüşmek ve UML etkinlik diyagramı kullanarak donanım planını yakalayın. Yapılandırma dosyalarını, program kodu, planlar ve kullanıcı belgeleri, bu modelinden geliştirme ekibi oluşturur. Bunlar, el ile eklemeler ve kod ayarlamaları iş tamamlayın. Bunlar, bunlar sonraki deneyimi bir işten elde gibi oluşturulan malzeme kapsamını genişletin.  
-  
-- **Desenler**. Contoso, Ltd geliştiriciler genellikle Web siteleri oluşturun ve UML sınıf diyagramları kullanarak gezinme düzenini tasarlama. Her Web sayfasını bir sınıfla temsil edilir ve ilişkilendirmeler gezinti bağlantılarını gösterir. Geliştiriciler kodu bir Web sitesinin çoğunu modelden oluşturur. Her Web sayfasını, çeşitli sınıflar ve kaynak dosyası girdileri karşılık gelir.  Bu yöntem, her sayfanın oluşumu daha güvenilir ve esnek elle yazılmış kod daha kolaylaştırır, tek bir desene uyar faydası vardır. Değişken yönlerini yakalamak için modeli kullanılırken şablon oluşturma modelidir.  
-  
-- **Şemaları**. Bellek bilgisayar sistemleri binlerce dünya çapında sahiptir. Bu sistemler, farklı veritabanlarındaki, diller ve arabirimler kullanın. Merkezi mimari ekibi, iş kavramları ve işlemleri modelleri dahili olarak yayımlar. Bu modeller aracılığıyla yerel takımlar kendi veritabanı ve değişim şemaları program kodu bildirimlerinde bölümleri oluşturmak ve benzeri. Grafik sunumlarını modellerin önerileri tartışmak ekipleri yardımcı olur. Takımlar, farklı iş alanlarına uygulanan model kümelerine Göster birden çok diyagramları oluşturun. Bunlar rengi değiştirilebilir alanları vurgulamak için de kullanabilirsiniz.  
-  
-## <a name="important-techniques-for-generating-artifacts"></a>Yapıları oluşturmak için önemli teknikleri  
- Önceki örneklerde, modelleri farklı iş bağımlı amaçlar için kullanılır ve sınıflar ve etkinlikler gibi öğeleri modelleme yorumu bir uygulamadan diğerine farklılık gösterir. Modellerden yapıtları oluşturmak aşağıdaki teknikleri yararlıdır.  
-  
-- **Profilleri**. Bir iş alanı içinde bile, bir öğe türü yorumunu farklılık gösterebilir. Örneğin bir Web sitesi diyagram üzerinde bazı sınıflar, Web sayfaları temsil ve diğer içerik bloklarını temsil etmek. Bu farklılıkları kaydedin açmasına kolaylaştırmak için stereotipleri tanımlayın. Stereotip Ayrıca, bu tür öğelere uygulanan ek özellikleri eklemek mümkün kılar. Stereotipler profillerinde paketlenir. Daha fazla bilgi için [UML genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md).  
-  
-     Şablon kodunda bir nesne üzerinde tanımlanan stereotipler erişmek kolaydır. Örneğin:  
-  
-    ```  
-    public bool HasStereotype(IClass c, string profile, string stereo)  
-    { return c.AppliedStereotypes.Any  
-       (s => s.Profile == profile && s.Name == stereo ); }  
-    ```  
-  
-- **Kısıtlı modelleri**. Oluşturduğunuz tüm modelleri, her amaç için geçerlidir. Örneğin, Fabrikam'ın havaalanı bagaj modellerinde iade masanızın giden bir taşıyıcı olmadan da yanlış olur. Bu kısıtlamalar ortaya koyacağını ön kullanıcıların yardımcı olma doğrulama işlevleri tanımlayabilirsiniz. Daha fazla bilgi için [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md).  
-  
-- **El ile yapılan değişiklikler korumak**. Çözüm dosyalarını yalnızca bazılarını bir modelden oluşturulabilir. Çoğu durumda, ekleyin veya oluşturulan içerik el ile ayarlamanız gerekir. Ancak, bu el ile yapılan değişiklikler şablonu dönüştürme tekrar çalıştırıldığında korunmalıdır önemlidir.  
-  
-     Burada şablonlarınızın kodda [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] diller, geliştiriciler, yöntemler ve kod ekleyebilirsiniz. böylece kısmi sınıflar oluşturmak. Bir çift olarak her bir sınıf oluşturmak kullanışlıdır: yöntemleri içeren Özet temel sınıf ve türetilen bir sınıf yalnızca Oluşturucu içerir. Bu, geliştiricilerin yöntemleri geçersiz kılmasına olanak tanır. Geçersiz kılınacak başlatma için izin vermek için bunu ayrı bir yöntem yerine oluşturucularda gerçekleştirilir.  
-  
-     XML ve diğer türleri çıktının bir şablon oluşturur, el ile içerik oluşturulan içerikten ayrı tutmak daha zor olabilir. Bir yöntemi, iki dosyayı birleştirir yapı işleminde bir görev oluşturmaktır. Başka bir yöntem oluşturma şablonu yerel bir kopyasını ayarlamak geliştiriciler içindir.  
-  
-- **Ayrı derlemeler kodu Taşı**. Kodun büyük gövdeleri şablonlarını yazma önermiyoruz. Oluşturulan içerik hesaplamadan ayrı tutmak için tercih edilir ve kod düzenleme için metin şablonları da desteklenmez.  
-  
-     Bunun yerine, metin oluşturmak için önemli ölçüde hesaplamalar gerçekleştirmek varsa, bu işlevlerde ayrı bir derleme oluşturmak ve metotlarını şablondan çağırın.
+Bir UML modelinde, program kodu, şemalar, belgeler, kaynaklar ve herhangi bir türden diğer yapıtlar oluşturabilirsiniz. UML modelden metin dosyaları oluşturmanın kullanışlı bir yöntemi, [metin şablonlarını](../modeling/code-generation-and-t4-text-templates.md)kullanmaktır. Bunlar, program kodunu oluşturmak istediğiniz metnin içine eklemenizi sağlar.
+
+ Üç ana senaryo vardır:
+
+- [Bir menü komutundan veya hareket içinden dosyalar oluşturma](#Command) . UML modellerinde kullanılabilen bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komutu tanımlarsınız.
+
+- [Uygulamadan dosyalar oluşturma](#Application). UML modellerini okuyan ve dosyalar üreten bir uygulama yazarsınız.
+
+- [Tasarım zamanında oluşturuluyor](#Design). Uygulama işlevlerinden bazılarını tanımlamak ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Çözümünüzde kod, kaynak, vb. oluşturmak için bir model kullanırsınız.
+
+  Bu konu, [metin oluşturma 'nın nasıl kullanılacağına](#What)ilişkin bir tartışmayla sonlanır. Daha fazla bilgi için bkz. [kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md).
+
+## <a name="Command"></a>Bir menü komutundan dosyalar oluşturma
+ Bir UML menü komutu içinde önceden işlem metin şablonlarını kullanabilirsiniz. Metin şablonunun kodu içinde veya ayrı bir kısmi sınıfta, diyagram tarafından görüntülenen modeli okuyabilirsiniz.
+
+ Bu özellikler hakkında daha fazla bilgi için aşağıdaki konuları okuyun:
+
+- [Modelleme diyagramında menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md)
+
+- [T4 Metin Şablonları İle Çalışma Süresi Metni Oluşturma](../modeling/run-time-text-generation-with-t4-text-templates.md)
+
+- [UML modelinde gezinme](../modeling/navigate-the-uml-model.md)
+
+  Aşağıdaki örnekte gösterilen yaklaşım, işlemi model diyagramlarından birinden başlattığınızda tek bir modelden metin oluşturmaya uygundur. Modeli ayrı bir bağlamda işlemek için [Visual Studio ModelBus](../modeling/integrate-uml-models-with-other-models-and-tools.md) kullanarak modele ve onun öğelerine erişin.
+
+### <a name="example"></a>Örnek
+ Bu örneği çalıştırmak için bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension (VSıX) projesi oluşturun. Bu örnekte kullanılan proje adı `VdmGenerator`. **Source. Extension. valtmanifest** dosyasında, **İçerik Ekle** ' ye tıklayın ve tür alanını **MEF bileşeni** ve geçerli projeye başvuran kaynak yolu olarak ayarlayın. Bu tür bir projeyi ayarlama hakkında daha fazla bilgi için bkz. [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
+
+ Projeye aşağıdaki kodu içeren bir C# dosya ekleyin. Bu sınıf, UML sınıf diyagramında görünecek bir menü komutu tanımlar.
+
+```
+using System;
+using System.ComponentModel.Composition;
+using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
+using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
+using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
+
+namespace VdmGenerator
+{
+  [Export(typeof(ICommandExtension))]
+  [ClassDesignerExtension]
+  public class GenerateVdmFromClasses : ICommandExtension
+  {
+    [Import] public IDiagramContext DiagramContext { get; set; }
+    public void Execute(IMenuCommand command)
+    {
+      // Initialize the template with the Model Store.
+      VdmGen generator = new VdmGen(
+             DiagramContext.CurrentDiagram.ModelStore);
+      // Generate the text and write it.
+      System.IO.File.WriteAllText
+        (System.IO.Path.Combine(
+            Environment.GetFolderPath(
+                Environment.SpecialFolder.Desktop),
+            "Generated.txt")
+         , generator.TransformText());
+    }
+    public void QueryStatus(IMenuCommand command)
+    {
+      command.Enabled = command.Visible = true;
+    }
+    public string Text
+    { get { return "Generate VDM"; } }
+  }
+}
+```
+
+ Aşağıdaki dosya, metin şablonudur. Modeldeki her UML sınıfı için bir metin satırı ve her bir sınıftaki her öznitelik için bir satır oluşturur. Modeli okuma kodu, `<# ... #>` ile ayrılmış metne katıştırılır.
+
+ Bu dosyayı oluşturmak için Çözüm Gezgini ' de projeye sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni öğe**' ye tıklayın. **Önceden Işlenmiş metin şablonu**' nu seçin. Bu örnek için dosya adı **VdmGen.tt**olmalıdır. Dosyanın **özel araç** özelliği **Texttemplatingfileönişlemci**olmalıdır. Önceden işlenmiş metin şablonları hakkında daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
+
+```
+<#@ import namespace="Microsoft.VisualStudio.Uml.Classes" #>
+<#
+   foreach (IClass classElement in store.AllInstances<IClass>())   {
+#>
+Type <#= classElement.Name #> ::
+<#
+     foreach (IProperty attribute in classElement.OwnedAttributes)     {
+#>
+       <#= attribute.Name #> : <#=
+           attribute.Type == null ? ""
+                                  : attribute.Type.Name #>
+<#
+     }   }
+#>
+```
+
+ Metin şablonu, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projenizin C# bir parçası haline gelen kısmi bir sınıf oluşturur. Ayrı bir dosyada, aynı sınıfın başka bir kısmi bildirimini ekleyin. Bu kod, şablonu UML Model deposuna erişimi sağlar:
+
+```
+using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
+namespace VdmGenerator
+{
+    public partial class VdmGen
+    {
+        private IModelStore store;
+        public VdmGen(IModelStore s)
+        { store = s; }
+    }
+}
+```
+
+ Projeyi test etmek için **F5**'e basın. @No__t_0 yeni bir örneği başlayacaktır. Bu örnekte, bir sınıf diyagramı içeren bir UML modeli açın veya oluşturun. Diyagrama bazı sınıflar ekleyin ve her sınıfa bazı öznitelikler ekleyin. Diyagramda sağ tıklayın ve ardından `Generate VDM` örnek komutuna tıklayın. Komut `C:\Generated.txt` dosya oluşturur. Bu dosyayı inceleyin. İçeriği aşağıdaki metne benzemelidir, ancak kendi sınıflarınızı ve öznitelerinizi listelemelidir:
+
+```
+Type Class1 ::
+          Attribute1 : int
+          Attribute2 : string
+Type Class2 ::
+          Attribute3 : string
+```
+
+## <a name="Application"></a>Uygulamadan dosyalar oluşturma
+ Bir UML modeli okuyan uygulamadan dosyalar oluşturabilirsiniz. Bu amaçla, modele ve öğelerine erişmenin en esnek ve sağlam yöntemi [Visual Studio ModelBus](../modeling/integrate-uml-models-with-other-models-and-tools.md)' dir.
+
+ Ayrıca, modeli yüklemek için temel API 'yi de kullanabilir ve önceki bölümde olduğu gibi aynı teknikleri kullanarak modeli metin şablonlarına geçirebilirsiniz. Model yükleme hakkında daha fazla bilgi için bkz. [program kodunda UML modeli okuma](../modeling/read-a-uml-model-in-program-code.md).
+
+## <a name="Design"></a>Tasarım zamanında dosyalar oluşturma
+ Projenizde UML 'i kod olarak yorumlama standart bir yöntemi varsa, bir UML modelinden projeniz içinde kod oluşturmanıza olanak sağlayan metin şablonları oluşturabilirsiniz. Genellikle, UML Model projesini ve uygulama kodu için bir veya daha fazla projeyi içeren bir çözümünüz vardır. Her kod projesi, modelin içeriğine göre program kodu, kaynakları ve yapılandırma dosyaları üreten çeşitli şablonlar içerebilir. Geliştirici, Çözüm Gezgini araç çubuğundaki **Tüm Şablonları Dönüştür** ' ü tıklayarak tüm şablonları çalıştırabilir. Program kodu, genellikle el ile yazılmış parçaları tümleştirmeyi kolaylaştırmak için kısmi sınıflar biçiminde oluşturulur.
+
+ Bu tür bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projesi bir şablon biçiminde dağıtılabilir, böylece bir ekibin her üyesi aynı şekilde bir modelden kod üreten projeler oluşturabilir. Genellikle, şablon, oluşturma kodu önkoşulları 'nın karşılanmasını sağlamak için modelde doğrulama kısıtlamaları içeren bir uzantı paketinin bir parçasıdır.
+
+### <a name="outline-procedure-for-generating-files"></a>Dosya oluşturmak için ana hat yordamı
+
+- Bir projeye şablon eklemek için yeni dosya Ekle iletişim kutusunda **metin şablonu** ' nu seçin. Çoğu proje türüne şablon ekleyebilirsiniz, ancak modelleme projelerine uygulanmaz.
+
+- Şablon dosyasının özel araçlar özelliği **TextTemplatingFileGenerator**olmalıdır ve dosya adı uzantısı. tt olmalıdır.
+
+- Şablonda en az bir çıkış yönergesi olmalıdır:
+
+     `<#@ output extension=".cs" #>`
+
+     Uzantı alanını projenizin diline göre ayarlayın.
+
+- Şablonunuzda kodun modele erişmesini sağlamak için, bir UML modelini okumak için gereken derlemeler için `<#@ assembly #>` yönergeler yazın. Modeli açmak için `ModelingProject.LoadReadOnly()` kullanın. Daha fazla bilgi için bkz. [program kodunda BIR UML modeli okuma](../modeling/read-a-uml-model-in-program-code.md).
+
+- Şablon, kaydettiğinizde ve Çözüm Gezgini araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıkladığınızda yürütülür.
+
+- Bu şablon türü hakkında daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
+
+- Tipik bir projede, aynı modelden farklı dosyalar oluşturan birkaç şablonunuz olur. Her şablonun ilk kısmı aynı olacaktır. Bu yinelemeyi azaltmak için, ortak parçaları ayrı bir metin dosyasına taşıyın ve ardından her şablonda yönerge `<#@include file="common.txt"#>` kullanarak bunu çağırın.
+
+- Ayrıca, metin oluşturma sürecine parametreler sağlamanıza olanak tanıyan özel bir yönerge işlemcisi de tanımlayabilirsiniz. Daha fazla bilgi için bkz. [T4 Metin Dönüştürmeyi Özelleştirme](../modeling/customizing-t4-text-transformation.md).
+
+### <a name="example"></a>Örnek
+ Bu örnek, kaynak C# MODELDEKI her UML sınıfı için bir sınıf oluşturur.
+
+##### <a name="to-set-up-a-visual-studio-solution-for-this-example"></a>Bu örnek için bir Visual Studio çözümü ayarlamak için
+
+1. Yeni bir çözümde modelleme projesinde UML sınıf diyagramı oluşturun.
+
+   1. **Mimari** menüsünde **Yeni Diyagram**' a tıklayın.
+
+   2. **UML sınıf diyagramını**seçin.
+
+   3. Yeni bir çözüm ve modelleme projesi oluşturmak için istemleri izleyin.
+
+   4. Araç kutusundan UML sınıf aracını sürükleyerek diyagrama bazı sınıflar ekleyin.
+
+   5. Dosyayı kaydedin.
+
+2. Aynı çözümde C# bir veya Visual Basic projesi oluşturun.
+
+   - Çözüm Gezgini, çözüme sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın. **Yüklü şablonlar**altında **Visual Basic** veya  **C#görsel** ' e tıklayın ve ardından **konsol uygulaması**gibi bir proje türü seçin.
+
+3. C# Veya Visual Basic projesine bir düz metin dosyası ekleyin. Bu dosya, çeşitli metin şablonları yazmak istiyorsanız paylaşılan kod içerir.
+
+   - Çözüm Gezgini ' de projeye sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni öğe**' ye tıklayın. **Metin dosyası**seçin.
+
+     Aşağıdaki bölümde gösterilen metni ekleyin.
+
+4. C# Veya Visual Basic projesine bir metin şablonu dosyası ekleyin.
+
+   - Çözüm Gezgini ' de projeye sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni öğe**' ye tıklayın. **Metin şablonu**seçin.
+
+     Metin şablonu dosyasına aşağıdaki kodu ekleyin.
+
+5. Metin şablonu dosyasını kaydedin.
+
+6. Şube dosyasındaki kodu inceleyin. Modeldeki her UML sınıfı için bir sınıf içermelidir.
+
+   1. Visual Basic projede, Çözüm Gezgini araç çubuğunda **tüm dosyaları göster** ' e tıklayın.
+
+   2. Çözüm Gezgini şablon dosyası düğümünü genişletin.
+
+#### <a name="content-of-the-shared-text-file"></a>Paylaşılan metin dosyasının içeriği
+ Bu örnekte, dosya SharedTemplateCode. txt olarak adlandırılır ve metin şablonlarıyla aynı klasörde yer alabilir.
+
+```
+<# /* Common material for inclusion in my model templates */ #>
+<# /* hostspecific allows access to the Visual Studio API */ #>
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="Microsoft.VisualStudio.Uml.Interfaces.dll"#>
+<#@ assembly name="Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll"#>
+<#@ assembly name="EnvDTE" #>
+<#@ import namespace="Microsoft.VisualStudio.Uml.Classes" #>
+<#@ import namespace="Microsoft.VisualStudio.ArchitectureTools.Extensibility" #>
+<#@ import namespace="Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml" #>
+<#+  // Note this is a Class Feature Block
+///<summary>
+/// Text templates are run in a common AppDomain, so
+/// we can cache the model store that we find.
+///</summary>
+private IModelStore StoreCache
+{
+  get { return AppDomain.CurrentDomain.GetData("ModelStore") as IModelStore; }
+  set { AppDomain.CurrentDomain.SetData("ModelStore", value); }
+}
+private bool CacheIsOld()
+{
+    DateTime? dt = AppDomain.CurrentDomain
+           .GetData("latestAccessTime") as DateTime?;
+    DateTime t = dt.HasValue ? dt.Value : new DateTime();
+    DateTime now = DateTime.Now;
+    AppDomain.CurrentDomain.SetData("latestAccessTime", now);
+    return now.Subtract(t).Seconds > 3;
+}
+
+///<summary>
+/// Find the UML modeling project in this solution,
+/// and load the model.
+///</summary>
+private IModelStore ModelStore
+{
+  get
+  {
+    // Avoid loading the model for every template:
+    if (StoreCache == null || CacheIsOld())
+    {
+      // Use Visual Studio API to find modeling project:
+      EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
+                       .GetService(typeof(EnvDTE.DTE));
+      EnvDTE.Project project = null;
+      foreach (EnvDTE.Project p in dte.Solution.Projects)
+      {
+        if (p.FullName.EndsWith(".modelproj"))
+        {
+          project = p;
+          break;
+        }
+      }
+      if (project == null) return null;
+
+      // Load UML model into this AppDomain
+      // and access model store:
+      IModelingProjectReader reader =
+           ModelingProject.LoadReadOnly(project.FullName);
+      StoreCache = reader.Store;
+    }
+    return StoreCache;
+  }
+}
+#>
+```
+
+#### <a name="content-of-the-text-template-file"></a>Metin şablonu dosyasının içeriği
+ Aşağıdaki metin **. tt** dosyasına yerleştirilir. Bu örnek, modeldeki UML sınıflarından C# bir dosyadaki sınıfları oluşturur. Ancak, herhangi bir türde dosya oluşturabilirsiniz. Oluşturulan dosyanın dili, metin şablonu kodunun yazıldığı dille ilişkili değildir.
+
+```
+<#@include file="SharedTemplateCode.txt"#>
+<#@ output extension=".cs" #>
+namespace Test{
+<#
+      foreach (IClass c in ModelStore.AllInstances<IClass>())
+      {
+#>
+   public partial class <#=c.Name#>
+   {   }
+<#
+      }
+#>
+}
+```
+
+## <a name="What"></a>Metin oluşturmayı kullanma
+ Model oluşturmanın gerçek gücü, gereksinimler veya mimari düzeyinde tasarlamak için modeller kullandığınızda elde edilir. Üst düzey fikirleri koda dönüştürme işinin bazılarını yapmak için metin şablonlarını kullanabilirsiniz. Çoğu durumda bu, UML modellerindeki ve sınıflardaki öğeler ile program kodunun diğer kısımları arasında bire bir yazışmaya yol göstermez.
+
+ Ayrıca, dönüştürme probleme etki alanına bağlıdır; modeller ve kod arasında evrensel eşleme yoktur.
+
+ Modellerden kod oluşturmaya ilişkin bazı örnekler şunlardır:
+
+- **Ürün hatları**. Fabrikam, Inc., Havaalanı Bagaj işleme sistemlerini oluşturur ve kurar. Yazılımın çoğu, bir yükleme ve bir sonraki arasında çok benzerdir, ancak yazılım yapılandırması, hangi paket işleme makinelerin yüklü olduğuna ve bu parçaların taşıyıcı beller tarafından nasıl birbirine bağlı olduğuna bağlıdır. Bir sözleşmenin başlangıcında fabrikam analistleri, Havaalanı yönetimiyle ilgili gereksinimleri tartışır ve bir UML etkinlik diyagramı kullanarak donanım planını yakalar. Bu modelden, geliştirme ekibi yapılandırma dosyaları, program kodu, planlar ve Kullanıcı belgeleri oluşturur. Bunlar, el ile yapılan eklemeler ve kod ayarlamaları ile çalışmayı tamamlarlar. Bir işten sonrakine bir deneyim elde ettikleri için, oluşturulan malzemenin kapsamını genişletir.
+
+- **Desenler**. Contoso 'daki geliştiriciler, genellikle Web siteleri oluşturur ve UML sınıf diyagramlarını kullanarak gezinti şemasını tasarlayacaktır. Her Web sayfası bir sınıf tarafından temsil edilir ve ilişkilendirmeler gezinti bağlantılarını temsil eder. Geliştiriciler, modelden bir Web sitesi kodunun çoğunu oluşturur. Her Web sayfası, çeşitli sınıflara ve kaynak dosyası girişlerine karşılık gelir.  Bu yöntem, her sayfanın yapımını tek bir modele uygun hale getiren avantajlara sahiptir. Bu, el ile yazılmış koddan daha güvenilir ve esnek hale gelir. Model, değişken yönlerini yakalamak için kullanıldığı sırada oluşturma şablonlarıdır.
+
+- **Şemaları**. İnsanlar sigortası dünya çapında binlerce sisteme sahiptir. Bu sistemler farklı veritabanları, diller ve arabirimler kullanır. Merkezi mimari ekibi, iş kavramlarının ve işlemlerin dahili modellerini yayınlar. Bu modellerden yerel takımlar, veritabanı ve değişim şemaları, Program kodundaki bildirimler vb. parçalarını oluşturur. Modellerin grafik sunumu, takımların teklifleri tartışmanıza yardımcı olur. Takımlar, farklı iş alanlarında uygulanan modelin alt kümelerini gösteren birden çok Diyagram oluşturur. Ayrıca, değişen alanların vurgulanmasını sağlamak için renk kullanır.
+
+## <a name="important-techniques-for-generating-artifacts"></a>Yapıtlar oluşturmaya yönelik önemli teknikler
+ Önceki örneklerde, modeller işe bağımlı farklı amaçlar için kullanılır ve sınıflar ve etkinlikler gibi modelleme öğelerinin yorumu bir uygulamadan diğerine farklılık gösterir. Modellerden yapılar oluştururken aşağıdaki teknikler yararlı olur.
+
+- **Profiller**. Bir işletme alanı içinde bile, bir öğe türünün yorumu farklılık gösterebilir. Örneğin, bir Web sitesi diyagramında bazı sınıflar Web sayfalarını temsil edebilir ve diğerleri içerik bloklarını temsil eder. Kullanıcıların bu tahminleri kaydetmesini kolaylaştırmak için stereotipleri tanımlayın. Stereotipler Ayrıca, bu türden öğeler için uygulanan ek özellikler iliştirmeyi olanaklı kılar. Stereotipler profiller içinde paketlenmiştir. Daha fazla bilgi için bkz. [UML genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md).
+
+     Şablon kodunda, bir nesne üzerinde tanımlanan stereotiplere erişmek kolaydır. Örneğin:
+
+    ```
+    public bool HasStereotype(IClass c, string profile, string stereo)
+    { return c.AppliedStereotypes.Any
+       (s => s.Profile == profile && s.Name == stereo ); }
+    ```
+
+- **Kısıtlanmış modeller**. Oluşturabileceğiniz modellerin hepsi her amaç için geçerli değildir. Örneğin, Fabrikam havaalanı bagaj modellerinde, giden taşıyıcı olmadan bir iade masasına sahip olmak yanlış olacaktır. Kullanıcılara bu kısıtlamaları gözlemlemeye yardımcı olan doğrulama işlevleri tanımlayabilirsiniz. Daha fazla bilgi için bkz. [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md).
+
+- **El ile yapılan değişiklikleri koru**. Bir modelden yalnızca bazı çözüm dosyaları oluşturulabilir. Çoğu durumda, oluşturulan içeriği el ile ekleyebilmeniz veya ayarlayabilmeniz gerekir. Ancak, şablon dönüştürmesi yeniden çalıştırıldığında bu el ile yapılan değişikliklerin korunması önemlidir.
+
+     Şablonlarınızın [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] dillerde kod oluşturması durumunda, geliştiricilerin Yöntemler ve kod ekleyebilmeleri için kısmi sınıflar oluşturması gerekir. Her bir sınıfı bir çift olarak oluşturmak da yararlıdır: yöntemleri içeren soyut temel sınıf ve yalnızca oluşturucuyu içeren bir devralan sınıf. Bu, geliştiricilerin yöntemleri geçersiz kılmasına izin verir. Başlatmanın geçersiz kılınmasına izin vermek için, oluşturucular yerine ayrı bir yöntemde yapılır.
+
+     Bir şablon XML ve diğer çıkış türlerini oluşturduğunda, el ile içeriğin oluşturulan içerikten ayrı tutulması daha zor olabilir. Bir yöntem, derleme işleminde iki dosyayı birleştiren bir görev oluşturmaktır. Diğer bir yöntem, geliştiricilerin oluşturulan şablonun yerel bir kopyasını ayarlamasına yöneliktir.
+
+- **Kodu ayrı derlemelere taşıyın**. Şablonlarda büyük gövdeler yazmak önermiyoruz. Oluşturulan içeriğin hesaplamadan ayrı tutulması tercih edilir ve kod düzenlemede metin şablonları iyi desteklenmez.
+
+     Bunun yerine, metin oluşturmak için önemli hesaplamalar yapmanız gerekiyorsa, bu işlevleri ayrı bir derlemede oluşturun ve kendi yöntemlerini şablondan çağırın.

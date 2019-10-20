@@ -8,15 +8,15 @@ helpviewer_keywords:
 - load tests, test mix
 - load tests, removing tests
 ms.assetid: 303e1d70-5d98-424a-b51e-e0898e16d3f8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f28a9be17bba0bf7fc8fa4ea2198a255a2cbde53
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9a2c882d912cb46e4f61bd03b9949aaf9fd135d6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918297"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665018"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>Yük testi senaryosuna hangi Web performansı, birim ve kodlanmış UI testlerinin ekleneceğini belirlemek için test karışımını düzenleyin
 
@@ -53,7 +53,7 @@ Yeni **Yük Testi Sihirbazı**kullanarak yeni bir senaryo oluşturduğunuzda, ye
 
      Testler test karışımına eklenir. Test karışımındaki testlere otomatik olarak yeni bir dağıtım atanır.
 
-5. (İsteğe bağlı) Test dağıtımını belirtmek için karıştırma denetimini ayarlayın. Daha fazla bilgi için [karışımı denetimi ile ilgili](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
+5. (İsteğe bağlı) Test dağıtımını belirtmek için karıştırma denetimini ayarlayın. Daha fazla bilgi için bkz. [karışım denetimi hakkında](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
 
 ## <a name="remove-tests-from-a-scenario"></a>Senaryolardan testleri kaldırma
 ![Varolan bir yük testinin bir testini kaldırma](../test/media/ltest_removetest.png)
@@ -62,7 +62,7 @@ Yeni **Yük Testi Sihirbazı**kullanarak yeni bir senaryo oluşturduğunuzda, ye
 
 1. Bir yük testi açın.
 
-2. **Yük Testi Düzenleyicisi**, yük testi ağacında, testi kaldırmak istediğiniz senaryoya sağ tıklayın ve **test karışımını düzenle**' yi seçin. **Test Karışımını Düzenle** iletişim kutusu görüntülenir.
+2. **Yük Testi Düzenleyicisi**, yük testi ağacında, testi kaldırmak istediğiniz senaryoya sağ tıklayın ve **test karışımını düzenle**' yi seçin. **Test karışımını düzenle** iletişim kutusu görüntülenir.
 
 3. Kılavuzda Web performansı, birim veya kodlanmış UI testini seçin ve ardından **Kaldır**' ı seçin.
 
@@ -72,22 +72,22 @@ Yeni **Yük Testi Sihirbazı**kullanarak yeni bir senaryo oluşturduğunuzda, ye
 4. Testleri kaldırmayı bitirdiğinizde **Tamam**' ı seçin.
 
 ## <a name="EditingTestMixAboutMixControl"></a>Karıştırma denetimi hakkında
-Karıştırma denetimini testleri, tarayıcı türleri veya bir yük testi senaryosuna ağ türleri arasında dağıtılmış yük yüzdesi ayarlamanızı sağlar. Yüzde değerleri kaydırıcılar hareket ettirilerek ayarlanır. Testler için karışımı ayarlamak, bir sanal kullanıcının bir yük testi senaryosunda belirli bir testi çalıştırma olasılığını belirtir.
+Karışım denetimi, yük testi senaryosunda testler, tarayıcı türleri veya ağ türleri arasında dağıtılan yükün yüzdesini ayarlamanıza olanak sağlar. Yüzde değerleri kaydırıcılar hareket ettirilerek ayarlanır. Testler için karışımı ayarlamak, bir sanal kullanıcının bir yük testi senaryosunda belirli bir testi çalıştırma olasılığını belirtir.
 
-Bir kaydırıcı taşıdığınızda, tüm kullanılabilir öğeleri yüzde değerlerini değiştirin. İkiden fazla öğe varsa, ekleme veya kaldırma miktarı diğer öğeler arasında eşit olarak dağıtılır. Bu davranışı geçersiz kılmak mümkündür. Belirli bir öğe için kilit sütunundaki onay kutusunu seçerseniz, o öğe için belirtilen yüzde değerini kilitlersiniz. Ardından, bir kaydırıcıyı taşıdığınızda, ekleme veya kaldırma miktarı yalnızca kilidi kalan tüm öğeleri uygulanır.
+Kaydırıcıyı taşıdığınızda, tüm kullanılabilir öğelerin yüzde değerleri değişir. İkiden fazla öğe varsa, eklediğiniz veya kaldırdığınız miktar diğer öğeler arasında eşit olarak dağıtılır. Bu davranışı geçersiz kılmak mümkündür. Belirli bir öğe için kilit sütunundaki onay kutusunu seçerseniz, o öğe için belirtilen yüzde değerini kilitlersiniz. Ardından, bir kaydırıcıyı taşıdığınızda, eklediğiniz veya kaldırdığınız miktar yalnızca kalan kilitlenmemiş öğeler için geçerlidir.
 
-**Dağıt** düğmesi, yüzdeleri tüm öğeler arasında eşit olarak ayırmak için kullanılır. Örneğin, üç öğeye sahipseniz seçme **Dağıt** yüzde değerlerini 34, 33 ve 33 olarak ayarlar.
+**Dağıt** düğmesi, yüzdeleri tüm öğeler arasında eşit olarak ayırmak için kullanılır. Örneğin, üç öğe varsa **Dağıt** ' ı seçtiğinizde, yüzde değerleri 34, 33 ve 33 olarak ayarlanır.
 
 > [!WARNING]
-> **Dağıt** düğmesi kilitli olan öğeleri geçersiz kılar.
+> **Dağıt** düğmesi kilitli olan tüm öğeleri geçersiz kılar.
 
-Yüzde değerlerini doğrudan yazmak mümkündür **%** Kaydırıcıları kullanmak yerine sütun. Bir yüzde değeri doğrudan giriyorsanız, diğer öğeler otomatik olarak ayarlar değil.
+Ayrıca, kaydırıcıları kullanmak yerine, yüzde değerlerini doğrudan **%** sütununa yazmak da mümkündür. Doğrudan bir yüzde değeri girerseniz, diğer öğeler otomatik olarak ayarlanmaz.
 
 > [!NOTE]
-> Toplam % 100 eklemez veya girilen yüzde değerleri kaydırıcılar devre dışı **%** ondalıksa sütun.
+> Toplam %100 ' e kadar veya **%** sütununa girilen yüzde değerleri ondalıksa kaydırıcıları devre dışı bırakılır.
 
-Yüzde değerlerini el ile girdiğinizde, tüm öğelerin toplamının %100 olduğundan emin olmanız gerekir. Bir karışımı kaydettiğinizde, toplam %100 değilse, yüzde değerlerini oldukları gibi kabul etmeniz veya geri gidip onları ayarlamanız istenir. Oldukları gibi bunları kabul etmeyi seçerseniz, % 100 olarak dağıtılır.  Örneğin, iki öğeniz varsa ve el ile bunları %80 ve % 40 olarak ayarlarsanız, ilk öğeye (120 bölünmüş 80) % 66.67 ayarlayın ve ikinci öğe %33.33 (40 120 bölünmüş) ayarlayın.
+Yüzde değerlerini el ile girdiğinizde, tüm öğelerin toplamının %100 olduğundan emin olmanız gerekir. Bir karışımı kaydettiğinizde, toplam %100 değilse, yüzde değerlerini oldukları gibi kabul etmeniz veya geri gidip onları ayarlamanız istenir. Bunları olduğu gibi kabul etmek istiyorsanız, bunlar %100 'e eşit olarak dağıtılır.  Örneğin, iki öğe varsa ve bunları el ile %80 ve %40 olarak ayarlarsanız, ilk öğe% 66,67 olarak ayarlanır (80 olarak 120) ve ikinci öğe% 33,33 olarak ayarlanır (40, 120 olarak bölünür).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını düzenleniyor](../test/edit-load-test-scenarios.md)

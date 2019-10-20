@@ -10,40 +10,38 @@ api_type:
 - Assembly
 ms.assetid: 019733d2-e050-4120-b537-831cd3fc008e
 caps.latest.revision: 4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2b83e4a208553b0ad732cfe927aec02b47e389dd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9a31b4c4182ed67a3e67d3c25c2c5ccf50e083f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68187504"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664058"
 ---
 # <a name="value-xattribute-dynamic-property"></a>Değer (XAttribute dinamik özelliği)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Alır veya XML öznitelik değerini ayarlar.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-attrib.Value   
-```  
-  
-## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri  
- A <xref:System.String> içeren bu özniteliğin değeri.  
-  
-## <a name="exceptions"></a>Özel Durumlar  
-  
-|Özel durum türü|Koşul|  
-|--------------------|---------------|  
-|<xref:System.ArgumentNullException>|Ayarlarken `value` olduğu `null`.|  
-  
-## <a name="remarks"></a>Açıklamalar  
- Bu özellik değerine eşdeğer olan <xref:System.Xml.Linq.XAttribute.Value%2A> özelliği <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> sınıfı, ancak bu dinamik özellik de değişiklik bildirimleri destekler.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>   
- [XAttribute sınıfı dinamik özellikleri](../designers/xattribute-class-dynamic-properties.md)   
- [Öznitelik](../designers/attribute-xelement-dynamic-property.md)
+XML özniteliğinin değerini alır veya ayarlar.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+attrib.Value
+```
+
+## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri
+ Bu özniteliğin değerini içeren bir <xref:System.String>.
+
+## <a name="exceptions"></a>Özel Durumlar
+
+|Özel durum türü|Koşul|
+|--------------------|---------------|
+|<xref:System.ArgumentNullException>|Ayarlanırken, `value` `null`.|
+
+## <a name="remarks"></a>Açıklamalar
+ Bu özellik, <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> sınıfının <xref:System.Xml.Linq.XAttribute.Value%2A> özelliğine eşdeğerdir, ancak bu dinamik özellik değişiklik bildirimlerini de destekler.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName> [XAttribute sınıfı dinamik özellikler](../designers/xattribute-class-dynamic-properties.md) [özniteliği](../designers/attribute-xelement-dynamic-property.md)

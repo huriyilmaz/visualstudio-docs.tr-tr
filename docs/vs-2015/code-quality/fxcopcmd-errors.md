@@ -6,52 +6,52 @@ ms.technology: vs-ide-code-analysis
 ms.topic: reference
 helpviewer_keywords:
 - FxCopCmd errors
-ms.author: gewarren
-author: gewarren
+ms.author: jillfra
+author: jillre
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d723065e224058b7e269299aad2900f97a1425d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 85441e90bfecc89688ce0ba6ec0ae10082562f0e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936653"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667595"
 ---
-# <a name="fxcopcmd-tool-errors"></a>FxCopCmd araç hataları
+# <a name="fxcopcmd-tool-errors"></a>FxCopCmd aracı hataları
 
-FxCopCmd önemli olması için tüm hataları dikkate almaz. FxCopCmd kısmi analiz gerçekleştirmek için yeterli bilgi varsa, oluşan analiz ve raporları hatalar gerçekleştirir. Bir 32 bitlik tamsayıdır, hata kodu karşılaştırmaya hataları karşılık gelen sayısal değerleri içerir.
+FxCopCmd tüm hataları önemli olarak kabul etmez. FxCopCmd ' nin kısmi analiz gerçekleştirmek için yeterli bilgileri varsa, Analizi gerçekleştirir ve oluşan hataları raporlar. 32 bitlik bir tamsayı olan hata kodu, hatalara karşılık gelen sayısal değerlerin bit düzeyinde birleşimini içerir.
 
-Aşağıdaki tabloda FxCopCmd tarafından döndürülen hata kodları açıklanmaktadır:
+Aşağıdaki tabloda, FxCopCmd tarafından döndürülen hata kodları açıklanmaktadır:
 
 |Hata|Sayısal değer|
 |-----------|-------------------|
-|Hata yok|0x0|
+|Hata yok|'dır|
 |Analiz hatası|0x1|
-|Kuralın özel durumları|0x2|
-|Proje yükleme hatası|0x4|
+|Kural özel durumları|0x2|
+|Proje yükleme hatası|4,|
 |Derleme yükleme hatası|0x8|
-|Kural kitaplık yükleme hatası|0x10|
-|İçeri aktarma rapor yükleme hatası|0x20|
+|Kural kitaplığı yükleme hatası|0x10|
+|Rapor yükleme hatasını içeri aktar|0x20|
 |Çıkış hatası|0x40|
-|Komut satırı geçiş hatası|0x80|
+|Komut satırı anahtar hatası|0x80|
 |Başlatma hatası|0x100|
 |Derleme başvuruları hatası|0x200|
 |BuildBreakingMessage|0x400|
 |Bilinmeyen hata|0x1000000|
 
-**Analiz hatası** için önemli hatalar döndürülür. Analiz tamamlanamadı gösterir. Uygun olduğunda hata kodu önemli hata temel nedenini de içerir. Aşağıdaki koşullar önemli hatalar oluşturur:
+Önemli hatalar için **çözümleme hatası** döndürüldü. Çözümlemenin tamamlanamayacağını gösterir. Uygun olduğunda, hata kodu önemli hatanın temel nedenini de içerir. Aşağıdaki koşullar önemli hatalar üretir:
 
-- Analiz yetersiz girişi nedeniyle gerçekleştirilemedi.
+- Yetersiz giriş nedeniyle analiz gerçekleştirilemedi.
 
-- Analiz FxCopCmd tarafından işlenmemiş özel durum oluşturdu.
+- Analiz, FxCopCmd tarafından işlenmeyen bir özel durum oluşturdu.
 
-- Belirtilen proje dosyası bulunamadı veya bozuk olabilir.
+- Belirtilen proje dosyası bulunamadı veya bozuk.
 
-- Output seçeneği belirtilmedi veya dosya yazılmadı.
+- Çıkış seçeneği belirtilmemiş veya dosya yazılamadı.
 
 > [!NOTE]
-> FxCopCmd dönüş kodu **derlemeye başvuran hata** 0x200 tek başına bir hata yerine bir uyarı olduğunu. FxCopCmd bunları işleyebilmesi olduğunu dolaylı başvuruları eksik, bu dönüş kodu gösterir. Uyarı, bazı analiz sonuçları gizliliği bozulmuş olabilecek, olasılığı anlamına gelir. İşle **derlemeye başvuran hata** diğer dönüş kodu ile birleştirildiğinde hata olarak.
+> FxCopCmd dönüş kodu **derleme** hatası 0x200 bir hata yerine bir uyarı. Bu dönüş kodu, dolaylı başvuruların eksik olduğunu, ancak FxCopCmd 'nin bunları işleyebildiğini gösterir. Uyarı, bazı analiz sonuçlarının tehlikeye girmiş olabileceğini belirten bir olasılık anlamına gelir. **Derleme başvuruları hatasını** , başka bir dönüş koduyla birleştirildiğinde hata olarak değerlendirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

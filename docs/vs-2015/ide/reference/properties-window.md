@@ -18,72 +18,59 @@ helpviewer_keywords:
 - Properties window
 ms.assetid: e6e0fa4f-75c4-4a52-af15-281cd61876ca
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 582905042938d79a1885279bd19c18f48b49bb84
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 959bd36995ca4086bf64020816b00aee6f777fbe
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438029"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662081"
 ---
 # <a name="properties-window"></a>Özellikler Penceresi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tasarım zamanı özelliklerini ve düzenleyicilerde ve tasarımcılarda bulunan seçilen nesnelerin olaylarını görüntülemek ve değiştirmek için bu pencereyi kullanın. Ayrıca **özellikleri** düzenlemek ve dosya, proje ve çözüm özelliklerini görüntülemek için penceresi. Bulabilirsiniz **özellikleri** penceresinde **görünümü** menüsü. Ayrıca, F4 tuşuna basarak veya yazarak açabileceğiniz **özellikleri** içinde **hızlı başlatma** penceresi.  
-  
- **Özellikleri** farklı tür alanları, belirli bir özelliğin gereksinimlerine bağlı olarak düzenleme penceresinde görüntülenir. Bu düzenleme alanları düzenleme kutuları, açılan listeler ve özel Düzenleyici iletişim kutularına bağlantılar içerir. Gri renkle gösterilen özellikler salt okunurdur.  
-  
-## <a name="uielement-list"></a>UIElement Listesi  
- Nesne adı  
- Seçili nesneyi ya da nesneleri listeler. Sadece aktif Düzenleyici veya tasarımcı nesnelerden görülebilir. Birden çok nesne seçtiğinize, yalnızca seçilen tüm nesneler için ortak olan özellikler görünür.  
-  
- Kategorilere ayrılmış  
- Kategoriye göre tüm özellikleri ve seçili nesne için özellik değerlerini listeler. Görünür özelliklerin sayısını azaltmak için bir kategoriyi daraltabilirsiniz. Genişlet veya daralt bir kategori artı görürsünüz (+) veya eksidir (–) sol tarafındaki kategori adı. Kategoriler alfabetik olarak listelenir.  
-  
- Alfabetik  
- Tüm tasarım zamanı özelliklerini ve seçilen nesnelerin olaylarını alfabetik olarak sıralar. Soluklaşmamış bir özelliği düzenlemek için sağındaki hücreyi tıklatın ve değişiklikleri girin.  
-  
- Özellik Sayfaları  
- Görüntüler **özellik sayfaları** iletişim kutusu veya **Proje Tasarımcısı** seçili öğe için. Özellik sayfaları görüntüler bir alt kümesini aynısını veya bulunan özelliklerin bir alt kümesi **özellikleri** penceresi. Projenizin etkin yapılandırması ile ilgili özellikleri görüntülemek ve düzenlemek için bu düğmeyi kullanın.  
-  
- Özellikler  
- Bir nesne için özellikleri görüntüler. Çok sayıda nesne kullanılarak görüntülenebilen olayları de **özellikleri** penceresi.  
-  
- Özellik kaynağına göre sırala  
- Stiller ve bağlamalar gibi devralma, bir kaynağa göre özellikleri gruplandırır uygulanır. Yalnızca tasarımcıdaki XAML dosyaları düzenlerken kullanılabilir.  
-  
- Olaylar  
- Bir nesne için olayları görüntüler.  
-  
+Düzenleyicilerde ve tasarımcılarda bulunan seçili nesnelerin tasarım zamanı özelliklerini ve olaylarını görüntülemek ve değiştirmek için bu pencereyi kullanın. Ayrıca, dosya, proje ve çözüm özelliklerini düzenlemek ve görüntülemek için **Özellikler** penceresini de kullanabilirsiniz. **Özellikler** penceresini **Görünüm** menüsünde bulabilirsiniz. Ayrıca, F4 tuşuna basarak veya **Hızlı Başlat** penceresine **Özellikler** yazarak da açabilirsiniz.
+
+ **Özellikler** penceresi, belirli bir özelliğin ihtiyaçlarına bağlı olarak farklı türlerde Düzenle alanları görüntüler. Bu düzenleme alanları, düzenleme kutularını, açılan listeleri ve özel Düzenleyici iletişim kutularına bağlantıları içerir. Gri renkte gösterilen özellikler salt okunurdur.
+
+## <a name="uielement-list"></a>UIElement Listesi
+ Nesne adı şu anda seçili olan nesneyi veya nesneleri listeler. Yalnızca etkin düzenleyici veya tasarımcı nesneleri görünür. Birden çok nesne seçtiğinizde yalnızca seçili tüm nesneler için ortak olan özellikler görünür.
+
+ Kategorilere ayrılmış olarak seçili nesne için tüm özellikleri ve özellik değerlerini kategorilere ayrılır. Görünür özelliklerin sayısını azaltmak için bir kategoriyi daraltabilirsiniz. Bir kategoriyi genişlettikten veya daralttığınızda, kategori adının solunda bir artı (+) veya eksi (-) görürsünüz. Kategoriler alfabetik olarak listelenir.
+
+ Alfabetik alfabetik olarak, seçili nesneler için tüm tasarım zamanı özelliklerini ve olaylarını sıralar. Soluk olmayan bir özelliği düzenlemek için, sağ tarafındaki hücreyi tıklatın ve değişiklikleri girin.
+
+ Özellik sayfaları, seçili öğe için **Özellik sayfaları** iletişim kutusunu veya **Proje tasarımcısını** görüntüler. Özellik sayfaları, **Özellikler** penceresinde kullanılabilen özelliklerin bir alt kümesini, aynısını veya bir üst kümesini görüntüler. Projenizin etkin yapılandırmasıyla ilgili özellikleri görüntülemek ve düzenlemek için bu düğmeyi kullanın.
+
+ Özellikler bir nesnenin özelliklerini görüntüler. Birçok nesnenin aynı zamanda **Özellikler** penceresi kullanılarak görüntülenebilen olayları vardır.
+
+ Özellik kaynağı, devralma, uygulanan stiller ve bağlamalar gibi kaynağa göre özelliklere göre sıralayın. Yalnızca tasarımcıda XAML dosyaları düzenlenirken kullanılabilir.
+
+ Olaylar bir nesne için olayları görüntüler.
+
 > [!NOTE]
-> Bu **özellikleri** penceresi araç çubuğu denetimi yalnızca yok bir form veya Denetim Tasarımcısı olduğunda bağlamında etkin bir [!INCLUDE[csprcs](../../includes/csprcs-md.md)] proje. XAML dosyalarını düzenlerken, olaylar Özellikler penceresinin ayrı bir sekmede görünür.  
-  
- İletiler  
- Tüm Windows iletilerini listeler. Ekleme veya silme seçilen sınıf için sağlanan iletilerin belirtilen işleyici işlevlerini sağlar.  
-  
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca bir form veya denetim Tasarımcısı [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projesi bağlamında etkin olduğunda kullanılabilir. XAML dosyaları düzenlenirken, olaylar Özellikler penceresinin ayrı bir sekmesinde görünür.
+
+ İletiler tüm Windows iletilerini listeler. Seçili sınıf için belirtilen işlemler için belirtilen işleyici işlevlerini eklemenize veya silmesine izin verir.
+
 > [!NOTE]
-> Bu **özellikleri** penceresi araç çubuğu denetimi yalnızca kullanılabilir olduğunda **sınıf görünümü** bağlamında etkin pencere bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] proje.  
-  
- Geçersiz Kılmalar  
- Seçilen sınıf için tüm sanal işlevleri listeler ve ekleme veya silmeyi geçersiz kılma işlevleri sağlar.  
-  
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projesi bağlamında etkin pencere olduğunda kullanılabilir.
+
+ Geçersiz kılmalar seçili sınıf için tüm sanal işlevleri listeler ve geçersiz kılma işlevlerini eklemenize veya kaldırmanıza olanak sağlar.
+
 > [!NOTE]
-> Bu **özellikleri** penceresi araç çubuğu denetimi yalnızca kullanılabilir olduğunda **sınıf görünümü** bağlamında etkin pencere bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] proje.  
-  
- Açıklama bölmesi  
- Özellik türünü ve özelliğin kısa bir açıklamasını gösterir. Ve kısayol menüsünden Açıklama komutunu kullanarak özelliğin açıklamasını kapatabilirsiniz.  
-  
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projesi bağlamında etkin pencere olduğunda kullanılabilir.
+
+ Açıklama bölmesi Özellik türünü ve özelliğin kısa bir açıklamasını gösterir. Özelliğin açıklamasını, kısayol menüsünde Açıklama komutunu kullanarak ve üzerinde açabilirsiniz.
+
 > [!NOTE]
-> Bu **özellikleri** penceresi araç çubuğu denetimi kullanılamıyor tasarımcıdaki XAML dosyaları düzenlerken.  
-  
- Küçük resim görünümü  
- Seçili olan öğenin görsel bir temsilini tasarımcıdaki XAML dosyaları düzenlerken gösterir.  
-  
- Ara  
- Özellikler ve tasarımcıdaki XAML dosyaları düzenlerken olaylar için bir arama işlevi sağlar. Arama kutusuna, kısmi sözcük aramalarına yanıt verir ve siz yazarken arama sonuçlarını güncelleştirir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Proje Özellikleri başvurusu](../../ide/reference/project-properties-reference.md)   
- [Pencere düzenlerini özelleştirme](../../ide/customizing-window-layouts-in-visual-studio.md)
+> Bu **Özellikler** penceresi araç çubuğu denetimi, tasarımcıda XAML dosyaları düzenlenirken kullanılamaz.
+
+ Küçük resim görünümü tasarımcıda XAML dosyaları düzenlenirken seçili olan öğenin görsel temsilini gösterir.
+
+ Arama, tasarımcıda XAML dosyalarını düzenlenirken Özellikler ve olaylar için bir arama işlevi sağlar. Arama kutusu, siz yazarken kısmi sözcük aramalarına ve güncelleştirmelerin arama sonuçlarına yanıt verir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Proje özellikleri başvuru](../../ide/reference/project-properties-reference.md) [pencere düzenlerini özelleştirme](../../ide/customizing-window-layouts-in-visual-studio.md)

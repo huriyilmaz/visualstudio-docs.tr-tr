@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Kod parçacığı oluşturma'
+title: 'İzlenecek Yol: Kod parçacığı oluşturma'
 ms.date: 06/10/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - code snippets, references
 - code snippets, imports
 ms.assetid: 0dcaae11-39cf-4463-9c90-2494321251c2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 130f4a5d39c756587dcf479abe4461f64e9461cb
-ms.sourcegitcommit: b468d71052a1b8a697f477ab23a3644de139f1e9
+ms.openlocfilehash: fb76fd61cb06b2877ebe0cd1714610b25845ebc0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67259815"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647108"
 ---
-# <a name="walkthrough-create-a-code-snippet"></a>İzlenecek yol: Kod parçacığı oluşturma
+# <a name="walkthrough-create-a-code-snippet"></a>İzlenecek Yol: Kod parçacığı oluşturma
 
-Yalnızca birkaç adımda bir kod parçacığı oluşturabilirsiniz. Tek yapmak için ihtiyacınız olan bir XML dosyası oluşturun, uygun öğeleri doldurmak ve kodunuzu ekleyin. İsteğe bağlı olarak değiştirme parametreleri kullanın ve proje başvuruları da yapabilirsiniz. Kod parçacığını kullanarak Visual Studio yüklemenizin içeri **alma** düğmesine **kod parçacıkları Yöneticisi** (**Araçları** > **kod Kod parçacıkları Yöneticisi'ni**).
+Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Yapmanız gereken tek şey bir XML dosyası oluşturur, uygun öğeleri doldurur ve kodunuzu buna ekler. İsteğe bağlı olarak değiştirme parametrelerini ve proje başvurularını kullanabilirsiniz. **Kod parçacıkları yöneticisinin** (**Araçlar**  > **kod parçacıkları Yöneticisi**) **Içeri aktar** düğmesini kullanarak kod parçacığını Visual Studio yüklemenize aktarın.
 
-## <a name="snippet-template"></a>Parçacık şablonu
+## <a name="snippet-template"></a>Kod parçacığı şablonu
 
-Aşağıdaki XML Temel parçacık şablonu verilmiştir:
+Aşağıdaki XML, temel kod parçacığı şablonudur:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -50,16 +50,16 @@ Aşağıdaki XML Temel parçacık şablonu verilmiştir:
 
 ## <a name="create-a-code-snippet"></a>Kod parçacığı oluşturma
 
-1. Visual Studio'da yeni bir XML dosyası oluşturun ve yukarıda gösterilen şablonu ekleyin.
+1. Visual Studio 'da yeni bir XML dosyası oluşturun ve yukarıda gösterilen şablonu ekleyin.
 
-2. Kod parçacığında başlığını doldurun **başlık** öğesi. Başlık kullanın **kare kökünü**.
+2. **Başlık** öğesindeki kod parçacığının başlığını girin. Başlık **karekökünü**kullanın.
 
-3. Kod parçacığında dilini doldurun **dil** özniteliği **kod** öğesi. İçin C#, kullanın **CSharp**ve Visual Basic için **VB**.
+3. **Kod** öğesinin **Language** özniteliğinde parçacığın dilini girin. İçin C#, **CSharp**kullanın ve Visual Basic için **vb**kullanın.
 
    > [!TIP]
-   > Tüm kullanılabilir dil değerleri görmek için Gözat [kod öğe öznitelikleri bölümünü](code-snippets-schema-reference.md#attributes) üzerinde [kod parçacıkları şema başvurusu](code-snippets-schema-reference.md) sayfası.
+   > Kullanılabilir tüm dil değerlerini görmek için [kod parçacıkları şema başvurusu](code-snippets-schema-reference.md) sayfasındaki [kod öğesi öznitelikleri bölümüne](code-snippets-schema-reference.md#attributes) gidin.
 
-4. Kod parçacığı Ekle **CDATA** bölümünü **kod** öğesi.
+4. **Kod** öğesinin içindeki **CDATA** bölümüne kod parçacığı kodunu ekleyin.
 
    C# için:
 
@@ -76,62 +76,62 @@ Aşağıdaki XML Temel parçacık şablonu verilmiştir:
        <![CDATA[Dim root = Math.Sqrt(16)]]>
    </Code>
    ```
-   
+
    > [!NOTE]
-   > Belirtemezsiniz nasıl kod satırlarını **CDATA** bir kod parçacığı bölümünü girintili veya biçimlendirilmiş. Eklendikleri sırada dil hizmeti otomatik olarak eklenen kodu biçimlendirir. 
+   > Kod parçacığının **CDATA** bölümündeki kod satırlarının nasıl girintileneceği veya biçimlendirilmesi gerektiğini belirtemezsiniz. Ekleme sırasında, dil hizmeti eklenen kodu otomatik olarak biçimlendirir.
 
-5. Kod parçacığını olarak kaydedin *SquareRoot.snippet* (herhangi bir yere kaydetmeden).
+5. Kod parçacığını *SquareRoot. parçacığını* (istediğiniz yere kaydedebilirsiniz) olarak kaydedin.
 
-## <a name="import-a-code-snippet"></a>Kod parçacığını İçeri Aktar
+## <a name="import-a-code-snippet"></a>Kod parçacığını içeri aktarma
 
-1. Visual Studio yüklemenizin bir kod parçacığını kullanarak aktarabilirsiniz **kod parçacıkları Yöneticisi**. Seçerek açın **Araçları** > **kod parçacıkları Yöneticisi**.
+1. **Kod parçacıkları Yöneticisi 'ni**kullanarak Visual Studio yüklemenize bir kod parçacığı aktarabilirsiniz. **Araçlar**  > **kod parçacıkları Yöneticisi**' ni seçerek açın.
 
-2. Tıklayın **alma** düğmesi.
+2. **Al** düğmesine tıklayın.
 
-3. Önceki yordamda kod parçacığını kaydedildiği konuma seçin ve tıklayın Git **açık**.
+3. Kod parçacığını önceki yordamda kaydettiğiniz konuma gidin, seçin ve **Aç**' a tıklayın.
 
-4. **Kod parçacığını içe aktar** iletişim kutusunu açar, sağ bölmedeki seçeneklerden parçacığın nereye isteyen. Seçeneklerden biri olmalıdır **kod Parçacıklarım**. Seçin ve **son**, ardından **Tamam**.
+4. **Kod parçacığını Içeri aktar** iletişim kutusu açılarak sağ bölmedeki seçimlerden parçacığın nereye ekleneceğini seçmenizi ister. Seçimlerinizden biri **kod**parçacıklarında olmalıdır. Seçin ve **son**' a ve ardından **Tamam**' a tıklayın.
 
-5. Kod parçacığı, kodun dile bağlı olarak aşağıdaki konumlardan birine kopyalanır:
+5. Kod diline bağlı olarak, kod parçacığı aşağıdaki konumlardan birine kopyalanır:
 
    ::: moniker range="vs-2017"
 
-   *%USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual C#\My Code Snippets*
-    *%USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual Basic\My Code Snippets*
+   *%Userprofile%\studio 2017 \ Code Snippets\Visual C#\code* parçacıklarında 
+    *%userprofile%\studio 2017 \ Code Snippets\Visual basic\code parçacıkları*
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   *%USERPROFILE%\Documents\Visual Studio 2019\Code Snippets\Visual C#\My Code Snippets*
-    *%USERPROFILE%\Documents\Visual Studio 2019\Code Snippets\Visual Basic\My Code Snippets*
+   *%Userprofile%\, Studio 2019 \ Code Snippets\Visual C#\code* parçacıklarında 
+    *%userprofile%\Bir Studio 2019 \ Code Snippets\Visual basic\code parçacıkları*
 
    ::: moniker-end
 
-6. Açarak parçacığınızı test bir C# veya Visual Basic projesi. Düzenleyicide açık bir kod dosyası ile seçin **parçacıkları** > **parçacık Ekle** sağ tıklama menüsünden **kod Parçacıklarım**. Adlı bir parçacık görmelisiniz **kare kökünü**. Çift tıklatın.
+6. Bir C# veya Visual Basic projesi açarak kod parçacığınızı test edin. Düzenleyicide bir kod dosyası açıkken, sağ tıklama menüsünde kod**parçacığı ekle**  >  **parçacıklar** ' ı, sonra da **kod parçacıklarını**seçin. **Kare kök**adlı bir kod parçacığı görmeniz gerekir. Çift tıklayın.
 
-   Kod parçacığı, kod dosyasına eklenir.
+   Kod parçacığı kodu kod dosyasına eklenir.
 
 ## <a name="description-and-shortcut-fields"></a>Açıklama ve kısayol alanları
 
 ::: moniker range="vs-2017"
 
-1. Açıklama alanları, kod parçacıkları Yöneticisi'nde görüntülendiğinde, kod parçacığı hakkında daha fazla bilgi verin. Kısayol, kod parçacığını eklemek için kullanıcıların yazabileceği bir etikettir. Dosyasını açarak eklediğiniz parçacığı düzenleyin *%USERPROFILE%\Documents\Visual Studio 2017\Code parçacıkları\\[Visual C# veya Visual Basic] \My Code Snippet\SquareRoot.snippet*.
+1. Açıklama alanları, kod parçacıkları yöneticisinde görüntülenirken kod parçacığınızı hakkında daha fazla bilgi verir. Kısayol, kod parçacığınızı eklemek için kullanıcıların yazsaykullandığı bir etikettir. { *Visual C# veya Visual Basic] \code Snippet\SquareRoot.snippet \\%userprofile%\studio 2017 \ kod parçacıkları*dosyasını açarak eklemiş olduğunuz kod parçacığını düzenleyin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Açıklama alanları, kod parçacıkları Yöneticisi'nde görüntülendiğinde, kod parçacığı hakkında daha fazla bilgi verin. Kısayol, kod parçacığını eklemek için kullanıcıların yazabileceği bir etikettir. Dosyasını açarak eklediğiniz parçacığı düzenleyin *%USERPROFILE%\Documents\Visual Studio 2019\Code parçacıkları\\[Visual C# veya Visual Basic] \My Code Snippet\SquareRoot.snippet*.
+1. Açıklama alanları, kod parçacıkları yöneticisinde görüntülenirken kod parçacığınızı hakkında daha fazla bilgi verir. Kısayol, kod parçacığınızı eklemek için kullanıcıların yazsaykullandığı bir etikettir. { *Visual C# veya Visual Basic] \Code Snippet\SquareRoot.snippet dosyasını \\%userprofile%\studio 2019 \ kod parçacıkları*dosyasını açarak eklemiş olduğunuz kod parçacığını düzenleyin.
 
 ::: moniker-end
 
    > [!TIP]
-   > Visual Studio yerleştirdiğiniz yere dizininde dosyasını düzenlediğinizden bu yana, Visual Studio için yeniden gerekmez.
+   > Dosyayı Visual Studio 'Nun yerleştirdiği dizinde düzenlemekte olduğunuzdan, Visual Studio 'ya yeniden içeri aktarmanız gerekmez.
 
-2. Ekleme **Yazar** ve **açıklama** öğelerine **üstbilgi** öğesi ve bunları doldurun.
+2. **Üstbilgi** öğesine **Yazar** ve **Açıklama** öğeleri ekleyin ve bunları içine girin.
 
-3. **Üstbilgi** öğesi şunun gibi görünmelidir:
+3. **Header** öğesi şuna benzer görünmelidir:
 
    ```xml
    <Header>
@@ -141,11 +141,11 @@ Aşağıdaki XML Temel parçacık şablonu verilmiştir:
    </Header>
    ```
 
-4. Açık **kod parçacıkları Yöneticisi** ve kod parçacığınızı seçin. Sağ bölmede, dikkat **açıklama** ve **Yazar** alanlarını artık doldurulmuş.
+4. **Kod parçacıkları yöneticisini** açın ve kod parçacığını seçin. Sağ bölmede, **Açıklama** ve **Yazar** alanlarının artık doldurulduğuna dikkat edin.
 
-   ![Kod parçacığı açıklama kod parçacığı Yöneticisi'nde](media/code-snippet-description-author.png)
+   ![Kod parçacığı Yöneticisi 'nde kod parçacığı açıklaması](media/code-snippet-description-author.png)
 
-5. Bir kısayol eklemek için Ekle bir **kısayol** öğesiyle **üstbilgi** öğesi:
+5. Bir kısayol eklemek için, **üst bilgi** öğesinin Içine bir **kısayol** öğesi ekleyin:
 
    ```xml
    <Header>
@@ -158,15 +158,15 @@ Aşağıdaki XML Temel parçacık şablonu verilmiştir:
 
 6. Kod parçacığı dosyasını yeniden kaydedin.
 
-7. Bir kısayolu sınamak için daha önce kullandığınız projesini açtığınızda,, yazın **sqrt** Düzenleyicisi ve tuşuna **sekmesini** (Visual Basic için bir kez için iki kez C#).
+7. Kısayolu test etmek için, daha önce kullandığınız projeyi açın, düzenleyicide **sqrt** yazın ve **Tab** tuşuna basın (için C#iki kez Visual Basic için).
 
-   Kod parçacığı eklenir.
+   Kod parçacığı kodu eklenir.
 
 ## <a name="replacement-parameters"></a>Değiştirme parametreleri
 
-Parçaları bir kod parçacığı, kullanıcı tarafından değiştirilmesini isteyebilirsiniz. Örneğin, kullanıcının kendi geçerli proje içinde bir değişken adı yerine isteyebilirsiniz. İki tür değişiklik sağlayabilirsiniz: sabit değerler ve nesneler. Kullanım [Literal öğesi](code-snippets-schema-reference.md#literal-element) tamamen kod parçacığı ancak büyük olasılıkla içinde yer alan kod parçasını (örneğin, dize veya sayısal bir değer) koda eklendikten sonra özelleştirilmesi yerine tanımlamak için. Kullanım [nesne öğesi](code-snippets-schema-reference.md#object-element) kod parçacığının gerek duyduğu, ancak büyük olasılıkla kod parçacığının kendisi dışında (örneğin, bir nesne örneği veya bir denetim) tanımlanacak bir öğeyi tanımlamak için.
+Kod parçacığının bölümlerinin Kullanıcı tarafından değiştirilmesini isteyebilirsiniz. Örneğin, kullanıcının bir değişken adını geçerli projesindeki bir adla değiştirmesini isteyebilirsiniz. İki tür değiştirme sağlayabilirsiniz: değişmez değerler ve nesneler. Kod parçacığı içinde tamamen yer alan, ancak koda eklendikten sonra özelleştirilme olasılığı olan bir kod parçasının yerini belirlemek için [değişmez öğe öğesini](code-snippets-schema-reference.md#literal-element) kullanın (örneğin, bir dize veya sayısal değer). Kod parçacığı için gerekli olan, ancak bir nesne örneği veya bir denetim gibi tanımlanabilmesi muhtemel olan bir öğeyi tanımlamak için [Object öğesini](code-snippets-schema-reference.md#object-element) kullanın.
 
-1. Kullanıcının kaç kare kökünü hesaplamak için kolayca etkinleştirmek için istemcilerdeki **kod parçacığı** öğesinin *SquareRoot.snippet* aşağıdaki gibi:
+1. Kullanıcının kare kökünü hesaplamak üzere sayıyı kolayca değiştirmesini sağlamak için, *SquareRoot. parçacığının* dosyasının **kod parçacığı** öğesini aşağıdaki gibi değiştirin:
 
    ```xml
    <Snippet>
@@ -183,7 +183,7 @@ Parçaları bir kod parçacığı, kullanıcı tarafından değiştirilmesini is
    </Snippet>
    ```
 
-   Değişmez değer değişikliği bir kimlik verilir dikkat edin (`Number`). Kimliği gelen içinde kod parçacığı ile çevreleyen tarafından başvuruda bulunulan `$` karakter:
+   Değişmez değer yerine bir KIMLIK verildiğine (`Number`) dikkat edin. Bu KIMLIĞE, kod parçacığı içinden `$` karakterle çevreleyerek başvurulur:
 
    ```xml
    <![CDATA[double root = Math.Sqrt($Number$);]]>
@@ -191,20 +191,20 @@ Parçaları bir kod parçacığı, kullanıcı tarafından değiştirilmesini is
 
 2. Kod parçacığı dosyasını kaydedin.
 
-3. Bir projeyi açmak ve kod parçacığını ekleyin.
+3. Bir proje açın ve kod parçacığını ekleyin.
 
-   Kod parçacığı eklendikten ve düzenlenebilir değişmez değerin yerini vurgulanır. Araç İpucu değeri görmek için değiştirme parametresi üzerine gelin.
+   Kod parçacığı eklenir ve düzenlenebilir değişmez değer değiştirme için vurgulanır. Değerin araç ipucunu görmek için değiştirme parametresinin üzerine gelin.
 
-   ![Kod parçacığı değiştirme parametresi Visual Studio araç ipucunda](media/snippet-replacement-parameter-tooltip.png)
+   ![Visual Studio 'da kod parçacığı değiştirme parametresi araç ipucu](media/snippet-replacement-parameter-tooltip.png)
 
    > [!TIP]
-   > Bir kod parçacığında replacable birden fazla parametre varsa, basabilirsiniz **sekmesini** birinden diğerine değerlerini değiştirmek için gidin.
+   > Bir kod parçacığında birden çok değiştirme kablosu parametresi varsa, değerleri değiştirmek için bir defadan diğerine gitmek üzere **Tab** tuşuna basabilirsiniz.
 
-## <a name="import-a-namespace"></a>Bir ad alanı alma
+## <a name="import-a-namespace"></a>Ad alanını içeri aktarma
 
-Kod parçacığı eklemek için kullanabileceğiniz bir `using` yönergesi (C#) veya `Imports` ekleyerek deyimi (Visual Basic) [Imports öğesi](code-snippets-schema-reference.md#imports-element). .NET Framework projeleri için de bir projeye başvuru kullanarak ekleyebileceğiniz [References öğesi](code-snippets-schema-reference.md#references-element).
+C# [İçeri aktarmalar öğesini](code-snippets-schema-reference.md#imports-element)ekleyerek bir `using` yönergesi () veya `Imports` (Visual Basic) açıklaması eklemek için bir kod parçacığı kullanabilirsiniz. .NET Framework projeler için, [Başvurular öğesini](code-snippets-schema-reference.md#references-element)kullanarak da projeye bir başvuru ekleyebilirsiniz.
 
-Aşağıdaki XML yöntemini kullanan bir kod parçacığı gösterir `File.Exists` System.IO ad alanında ve bu nedenle, tanımlar **içeri aktarmalar** System.IO ad alanı içeri aktarmak için öğesi.
+Aşağıdaki XML, System.IO ad alanında `File.Exists` yöntemi kullanan bir kod parçacığını gösterir ve bu nedenle, System.IO ad alanını içeri aktarmak için **Imports** öğesini tanımlar.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

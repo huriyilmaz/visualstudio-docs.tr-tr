@@ -1,5 +1,5 @@
 ---
-title: 'CA1822: Üyeleri statik olarak işaretleme | Microsoft Docs'
+title: 'CA1822: üyeleri statik olarak Işaretle | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,43 +12,43 @@ helpviewer_keywords:
 - CA1822
 ms.assetid: 743f0af7-41d1-4852-8d97-af0688b31118
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 42c6f0d333d1f7ee3f657b9c57c4154e9f824128
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a571be6b713cd59ca290906e9398b78c8c021ba8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201673"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661162"
 ---
-# <a name="ca1822-mark-members-as-static"></a>CA1822: Üyeleri static olarak işaretleyin
+# <a name="ca1822-mark-members-as-static"></a>CA1822: Üyeleri statik olarak işaretleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. [CA1822: Üyeleri statik olarak işaretlemek](https://docs.microsoft.com/visualstudio/code-quality/ca1822-mark-members-as-static).  
-  
-|||  
-|-|-|  
-|TypeName|MarkMembersAsStatic|  
-|CheckId|CA1822|  
-|Kategori|Microsoft.Performance|  
-|Yeni Değişiklik|Bölünemez - üyesi derlemenin dışında görünür değilse bağımsız olarak, değişiklik.<br /><br /> Örnek üyesine ile üye yalnızca değiştirirseniz bölünemez - `this` anahtar sözcüğü.<br /><br /> -Üye statik bir üyeye bir örnek üyesi değiştirirseniz ve derlemenin dışında görünür kesiliyor.|  
-  
-## <a name="cause"></a>Sebep  
- Örnek veri erişimi olmayan bir üye statik olarak işaretlenmemiş (paylaşılan [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).  
-  
-## <a name="rule-description"></a>Kural Tanımı  
- Örnek veri veya çağrı örnek yöntemlerinin erişmez üyeleri işaretlenebilir olarak statik (paylaşılan [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]). Yöntemleri statik olarak işaretledikten sonra, derleyici sanal olmayan arama sitelerini bu üyelere yayar. Sanal olmayan arama sitelerini yayma, geçerli nesne işaretçisinin null dışında değer xenapp'i her çağrı çalışma zamanında bir onay engeller. Bu, ölçülebilir kazanç performansını performans duyarlı kodunuz için elde edebilirsiniz. Bazı durumlarda geçerli nesne örneğine erişmek için başarısızlık, bir doğruluk sorununu temsil eder.  
-  
-## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?  
- Üye statik olarak işaretleyin (veya paylaşılan [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) veya 'this' kullanma / yönteminde ' Me' body, uygun olduğunda.  
-  
-## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında  
- Daha önce sevk edilen kod düzeltme bir değişiklik olur için bu kuraldan bir uyarıyı bastırmak güvenlidir.  
-  
-## <a name="related-rules"></a>İlgili kuralları  
- [CA1811: Çağrılmayan özel kodlardan kaçının](../code-quality/ca1811-avoid-uncalled-private-code.md)  
-  
- [CA1812: Örneklenmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)  
-  
+Visual Studio ile ilgili en son belgeler için bkz. [CA1822: üyeleri static olarak işaretleme](https://docs.microsoft.com/visualstudio/code-quality/ca1822-mark-members-as-static).
+
+|||
+|-|-|
+|TypeName|MarkMembersAsStatic|
+|CheckId|CA1822|
+|Kategori|Microsoft. Performance|
+|Yeni Değişiklik|Bozuk olmayan-üye, yaptığınız değişiklikten bağımsız olarak, derleme dışında görünür değilse.<br /><br /> Kırılmamış-üyeyi, `this` anahtar sözcüğüyle bir örnek üyesi olarak değiştirirseniz.<br /><br /> Parçalama-üyeyi bir örnek üyesinden statik üyeye değiştirirseniz ve derleme dışında görünür durumdaysa.|
+
+## <a name="cause"></a>Sebep
+ Örnek verilerine erişmeyen bir üye statik olarak işaretlenmez ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] içinde paylaşılır).
+
+## <a name="rule-description"></a>Kural Tanımı
+ Örnek verilerine veya çağrı örnek yöntemlerine erişmeyen Üyeler statik olarak işaretlenebilir ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] içinde paylaşılır). Yöntemleri statik olarak işaretledikten sonra, derleyici sanal olmayan arama sitelerini bu üyelere yayar. Sanal olmayan çağrı sitelerini yayma, geçerli nesne işaretçisinin null olmadığından emin olan her bir çağrı için çalışma zamanında bir denetim yapılmasını engeller. Bu, performansa duyarlı kod için ölçülebilir bir performans kazancı elde edebilir. Bazı durumlarda, geçerli nesne örneğine erişim hatası, doğruluk sorununu temsil eder.
+
+## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
+ Üyeyi statik (veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] içinde paylaşılan) olarak işaretleyin ya da uygunsa Yöntem gövdesinde ' this '/' Me ' kullanın.
+
+## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
+ Daha önce sevk edilen kodun bir uyarı olması için bu kuraldan daha önce sevkedilme bir uyarı görüntülenmesini güvenlidir.
+
+## <a name="related-rules"></a>İlgili kurallar
+ [CA1811: Çağrılmayan özel kodlardan kaçının](../code-quality/ca1811-avoid-uncalled-private-code.md)
+
+ [CA1812: Örneklendirilmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+
  [CA1804: Kullanılmayan yerel öğeleri kaldırın](../code-quality/ca1804-remove-unused-locals.md)

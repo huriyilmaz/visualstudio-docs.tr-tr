@@ -1,5 +1,5 @@
 ---
-title: Seçenekler, metin düzenleyici, C / C++, Deneysel | Microsoft Docs
+title: Seçenekler, metin düzenleyici, C-C++, deneysel | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: reference
 f1_keywords:
@@ -8,62 +8,55 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Experimental
 ms.assetid: b9e9dda2-350c-460d-b368-37d6c5342eee
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0d4406d1fc30115cc7002da24c71d2274131ce74
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7e9d1464481b33bc5fbf5e73bc09a6da4eb082c7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674526"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662344"
 ---
-# <a name="options-text-editor-cc-experimental"></a>Seçenekler, metin düzenleyici, C/C++, Deneysel
+# <a name="options-text-editor-cc-experimental"></a>Seçenekler, Metin Düzenleyici, C/C++, Deneysel
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu seçenekler değiştirerek, C veya C++ ortamında programlama, IntelliSense ve gözatma veritabanı ilgili davranışı değiştirebilirsiniz.  
-  
- Bu sayfaya erişmek için **seçenekleri** iletişim kutusunda, sol bölmede, **metin düzenleyici**, genişletme **C/C++** ve ardından **Deneysel**.  
-  
- Bu özellikler, Visual Studio 2015 güncelleştirme 1 RC yüklemesinde kullanılabilir.  
-  
+Bu seçenekleri değiştirerek, C veya C++' de programlarken IntelliSense ve gözatma veritabanı ile ilgili davranışı değiştirebilirsiniz.
+
+ Bu sayfaya erişmek için, **Seçenekler** iletişim kutusunda, sol bölmede, **metin düzenleyici**' yi genişletin, **C++C/** öğesini genişletin ve ardından **deneysel**' ı seçin.
+
+ Bu özellikler, Visual Studio 2015 güncelleştirme 1 RC yüklemesinde bulunabilir.
+
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="browsingnavigation"></a>Gözatma Gezinti  
- **Yeni veritabanı altyapısını etkinleştir**  
- Bu otomatik olarak veritabanı popülasyon hızlandırmak ve tüm veritabanı işlemleri daha hızlı (kesinlik kaybı olmadan ile) işlemlerinde gibi kolaylaştırmak **tanıma** ve **tüm başvuruları Bul**. (Yalnızca kapatın ve değişiklikleri uygulamak için çözümü yeniden açın; Visual Studio'yu yeniden başlatmanız gerekmez.)  
-  
-## <a name="intellisense"></a>IntelliSense  
- **Üye listesi nokta-oku**  
- Değiştirir '.' ile 'üye listesi için -> uygun olduğunda'.  
-  
-## <a name="refactoring"></a>Yeniden Düzenle  
- **İşlev ayıklamayı etkinleştir**  
- Seçili kodu kendi işlevine ayıklayın ve kodu yeni işlev çağrısı ile değiştirin. Bu özelliğe erişmek için seçilen koda sağ tıklayıp **hızlı Eylemler**, ya da Ctrl + nokta [Ctrl +.] varsayılan kısayol tuşuna basmanız yeterlidir.  
-  
- **İmzayı Değiştir'i etkinleştir**  
- Ekleme, yeniden sıralama ve bir işlevin parametrelerinden biri silin ve değişiklikleri tüm çağrı siteleri yayar. Bu özelliğe erişmek için tüm kullanımlar seçin ve işlev üzerinde sağ **hızlı Eylemler**, ya da Ctrl + nokta [Ctrl +.] varsayılan kısayol tuşuna basmanız yeterlidir.  
-  
-## <a name="text-editor"></a>Metin Düzenleyici  
- **Etkinleştirme kapsamları Genişlet**  
- Etkinleştirilirse, seçili metni küme ayracı ile yazarak çevreleyebilirsiniz ' {' metin düzenleyicisine.  
-  
- **Etkinleştirme öncelik genişletin**  
- Etkinleştirilirse, seçili metni parantez ile yazarak çevreleyebilirsiniz ' (' metin düzenleyicisine.  
-  
- Visual Studio Galerisi hakkında ek metin Düzenleyicisi özellikleri için listesi için bkzile [burada](http://go.microsoft.com/fwlink/?LinkId=692016). Bir örnek [C++ hızlı düzeltmeler](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f), aşağıdakileri destekler:  
-  
-- **Eksik Ekle #include** -ilgili önerir #include kodunuzu bilinmeyen sembolleri  
-  
-- **Ekleme simge ad alanı/tam olarak nitelemek** - önceki öğeyi gibi ancak ad alanları için  
-  
-- **Eksik noktalı virgül Ekle**  
-  
-- **MSDN Yardımı** -hata iletilerinizi MSDN'de arama yapın  
-  
-  Her iki vurgulu bir ampul alın veya Ctrl + nokta (Ctrl +.) varsayılan klavye kısayolu kullanmak için bir dalgalı çizgi kullanabilirsiniz. Klavye kısayolu için belirli bir hata ya da belirtecinde konumlandırılabilir, giriş işaretini gerektirmeyeceği dikkat edin. yalnızca, o satırdaki her şey için öneriler çağrılacak hata ile aynı satırda olabilir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Dile özgü Düzenleyici seçeneklerini ayarlama](../../ide/reference/setting-language-specific-editor-options.md)   
- [C++'da (VC blogunda) yeniden düzenleme](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="browsingnavigation"></a>Göz atma/gezinme
+ **Yeni veritabanı altyapısını etkinleştir** Bu, **Tanıma Git** ve **tüm başvuruları bul**gibi işlemler için veritabanı popülasyonu otomatik olarak hızlandırmalı ve tüm veritabanı işlemlerini daha hızlı (doğrulukta hiçbir kayıp olmadan) hale getirir. (Değişiklikleri uygulamak için çözümünüzü kapatıp yeniden açmanız yeterlidir; Visual Studio 'Yu yeniden başlatmanız gerekmez.)
+
+## <a name="intellisense"></a>IntelliSense
+ **Üye listesi nokta-ok** Üye listesi için uygulanabilir olduğunda '. ' yerine '-> ' koyar.
+
+## <a name="refactoring"></a>Yeniden Düzenle
+ **Extract Işlevini etkinleştir** Seçili kodu kendi işlevine ayıklayın ve kodu yeni işleve yapılan bir çağrı ile değiştirin. Bu özelliğe erişmek için seçili koda sağ tıklayın ve **hızlı eylemler**' i seçin ya da varsayılan kısayola CTRL + nokta [CTRL +.] tuşlarına basmanız yeterlidir.
+
+ **Imza değiştirmeyi etkinleştir** Bir işlevin parametrelerini ekleyin, yeniden sıralayın ve silin ve değişiklikleri tüm çağrı sitelerine yayın. Bu özelliğe erişmek için, işlevin herhangi bir kullanımına sağ tıklayın ve **hızlı eylemler**' i seçin ya da CTRL + nokta [CTRL +.] varsayılan kısayoluna basın.
+
+## <a name="text-editor"></a>Metin Düzenleyici
+ **Kapsamları genişletmeyi etkinleştir** Etkinleştirilirse, metin düzenleyicisine ' {' yazarak seçili metni küme ayraçları ile çevreleyin.
+
+ **Önceliği genişletmeyi etkinleştir** Etkinleştirilirse, metin düzenleyicisine ' (' yazarak seçili metni parantezlerle çevrelemeyi seçebilirsiniz.
+
+ Visual Studio galerisindeki ek metin Düzenleyicisi özellikleri için [buradaki](http://go.microsoft.com/fwlink/?LinkId=692016)listeye bakın. Bir örnek, aşağıdakileri destekleyen [ C++ hızlı düzeltmelerde](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)verilmiştir:
+
+- **Eksik #include Ekle** -kodunuzda bilinmeyen semboller için ilgili #include önerilir
+
+- Önceki öğe gibi **ad alanı/tam niteleme simgesini kullanarak ekleme** , ancak ad alanları için
+
+- **Eksik noktalı virgül Ekle**
+
+- **MSDN yardımı** -hata mesajlarınız için MSDN 'yi arayın
+
+  Ampul almak için bir dalgalı çizgi üzerine geldiğinizde ya da varsayılan klavye kısayolunu CTRL + nokta (CTRL +.) kullanabilirsiniz. Klavye kısayolu için, giriş işaretinin belirli bir hata veya belirtece yerleştirilme gereksinimi olmadığına unutmayın; yalnızca bu satırdaki herhangi bir şeyin önerilerini çağırmak için hata ile aynı satırda olabilirsiniz.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Dile özgü düzenleyici seçeneklerini ayarlama](../../ide/reference/setting-language-specific-editor-options.md) [içinde C++ yeniden düzenleme (VC blogu)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)

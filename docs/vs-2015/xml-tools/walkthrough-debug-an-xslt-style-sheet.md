@@ -1,158 +1,158 @@
 ---
-title: 'İzlenecek yol: Bir XSLT stil sayfasında hata ayıklama | Microsoft Docs'
+title: 'İzlenecek yol: XSLT stil sayfasında hata ayıklama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5e685e77dafe00b8cadd9b273ccc61c8e5d9e1e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c205ff68ebc51d0b0f5b32038763c1741855d7d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158630"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656115"
 ---
-# <a name="walkthrough-debug-an-xslt-style-sheet"></a>İzlenecek yol: XSLT Stil Sayfasında Hata Ayıklama
+# <a name="walkthrough-debug-an-xslt-style-sheet"></a>İzlenecek Yol: XSLT Stil Sayfasında Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu kılavuzda açıklanan adımları XSLT hata ayıklayıcının kullanımını göstermektedir. Değişkenleri görüntüleme, kesme noktaları ayarlama ve kod içerisinde ilerlemeye adımlar içerir. Stil sayfası aşağıdaki ortalama kitap Fiyat Maliyet tüm kitaplar bulur.  
-  
-### <a name="to-prepare-for-this-walkthrough"></a>Bu adım adım izleme için hazırlanmak amacıyla  
-  
-1. Herhangi bir açık çözümü kapatın.  
-  
-2. İki örnek dosyaları yerel bilgisayarınıza kopyalayın.  
-  
-## <a name="start-debugging"></a>Hata Ayıklamayı Başlat  
-  
-#### <a name="to-start-debugging"></a>Hata ayıklamayı başlatmak için  
-  
-1. Gelen **dosya** menüsünde **açık**, tıklatıp **dosya**.  
-  
-2. BelowAvg.xsl dosyasını bulun ve tıklayın **açık**.  
-  
-    Stil sayfası XML Düzenleyicisi'nde açılır.  
-  
-3. Gözat düğmesine tıklayın ( **...** ) üzerinde **giriş** belge penceresinin alan.  
-  
-4. Books.xml dosyasını bulun ve tıklatın **açık**.  
-  
-    Bu XSLT dönüşümü için kullanılan kaynak dosyanın ayarlar.  
-  
-5. Sağ `xsl:if` başlangıç etiketi, işaret **kesme noktası**, tıklatıp **kesme noktası Ekle**.  
-  
-6. Tıklayın **hata ayıklama XSL** XML Düzenleyicisi araç çubuğu düğmesi.  
-  
-   Bu, hata ayıklama işlemi başlar ve hata ayıklayıcı tarafından kullanılan birkaç yeni pencereler açılır.  
-  
-   Giriş belgesi ve stil sayfasını görüntülemek iki pencere vardır. Hata ayıklayıcı bu windows geçerli yürütme durumunu göstermek için kullanır. Hata ayıklayıcı konumlandırılıp `xsl:if` stil sayfası ve ilk books.xml dosyasını kitap düğümünde öğesi.  
-  
-   Yerel öğeler penceresi, tüm yerel değişkenlerin ve geçerli değerlerini görüntüler. Bu stil sayfası ve ayrıca hata ayıklayıcı şu anda bağlam içinde olan düğümleri izlemek için kullandığı değişkenleri tanımlanan değişkenler içerir.  
-  
-   **XSL çıkış** penceresi XSL Dönüştürme çıktısını görüntüler. Bu pencere ayrıdır **Visual Studio çıkış** penceresi.  
-  
-## <a name="watch-window"></a>İzleme penceresi  
-  
-#### <a name="to-use-the-watch-window"></a>İzleme penceresinde kullanmak için  
-  
-1. Gelen **hata ayıklama** menüsünde **Windows**, işaret **Watch**, tıklatıp **Watch 1**.  
-  
-     Bu Watch 1 penceresi görünür hale getirir.  
-  
-2. Tür `$bookAverage` içinde **adı** alanına girin ve ENTER tuşuna basın.  
-  
-     Değerini `$bookAverage` değişken penceresinde görüntülenir.  
-  
-3. Tür `self::node()` içinde **adı** alanına girin ve ENTER tuşuna basın.  
-  
-     `self::node()` Geçerli bağlam düğümünün için değerlendirilen bir XPath ifadesidir. Değerini `self::node()` XPath ifadesidir ilk kitap düğümü. Bu dönüşüm ilerledikçe değiştirir.  
-  
-4. Genişletin `self::node()` düğümünü ve ardından `price` düğümü.  
-  
-     Bu kitap Fiyat değeri görmenizi sağlar ve bunu kolayca karşılaştırabilirsiniz `$bookAverage` değeri. Kitap fiyat Ortalamanın altında olduğundan `xsl:if` koşul başarılı olması gerekir.  
-  
-## <a name="step-through-the-code"></a>Kodu adımlayın  
- Hata ayıklayıcı bir defada bir satır kod yürütmek sağlar.  
-  
-#### <a name="to-step-through-the-code"></a>Kodunuz içinde adım adım için  
-  
-1. Tuşuna **F5** devam etmek için.  
-  
-     İlk kitap düğümün memnun çünkü `xsl:if` koşulu, kitap düğümün XSL çıkış penceresine eklenir. Hata ayıklayıcı üzerinde yeniden konumlandırılmış kadar yürütülmeye devam `xsl:if` stil sayfası öğesinde. Hata ayıklayıcı artık books.xml dosyasını ikinci kitap düğümde konumlandırılır.  
-  
-     Watch1 penceresinde `self::node()` için ikinci kitap düğümün değerini değiştirir. Fiyat öğenin değerini inceleyerek fiyat ortalamanın üstünde, bu nedenle olduğunu anlayabilirsiniz `xsl:if` koşul başarısız olmalıdır.  
-  
-2. Tuşuna **F5** devam etmek için.  
-  
-     İkinci kitap düğümün karşılamıyorsa çünkü `xsl:if` koşulu, kitap düğümün XSL çıkış penceresinde eklenmez. Hata ayıklayıcı üzerinde yeniden konumlandırılmış kadar yürütülmeye devam `xsl:if` stil sayfası öğesinde. Hata ayıklayıcısı artık üçüncü konumlandırıldı `book` books.xml dosyasını düğümü.  
-  
-     Watch1 penceresinde `self::node()` üçüncü kitap düğümün değerini değiştirir. Değerini inceleme tarafından `price` öğesi, fiyat Ortalamanın altında bu nedenle olduğunu belirleyebilir `xsl:if` koşul başarılı olması gerekir.  
-  
-3. Tuşuna **F5** devam etmek için.  
-  
-     Çünkü `xsl:if` koşulu karşılandı üçüncü kitap XSL çıkış penceresine eklenir. XML belgesi içindeki tüm kitaplar işlenen ve hata ayıklayıcıyı durdurur.  
-  
-## <a name="sample-files"></a>Örnek dosya  
- Aşağıdaki iki dosyada izlenecek yol tarafından kullanılır.  
-  
-### <a name="belowavgxsl"></a>belowAvg.xsl  
-  
-```  
-<?xml version='1.0'?>  
-<xsl:stylesheet version="1.0"  
-      xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
-  <xsl:output method="xml" encoding="utf-8"/>  
-  <xsl:template match="/">  
-    <xsl:variable name="bookCount" select="count(/bookstore/book)"/>  
-    <xsl:variable name="bookTotal" select="sum(/bookstore/book/price)"/>  
-    <xsl:variable name="bookAverage" select="$bookTotal div $bookCount"/>  
-    <books>  
-      <!--Books That Cost Below Average-->  
-      <xsl:for-each select="/bookstore/book">  
-        <xsl:if test="price < $bookAverage">  
-          <xsl:copy-of select="."/>  
-        </xsl:if>  
-      </xsl:for-each>  
-    </books>  
-  </xsl:template>  
-</xsl:stylesheet>  
-```  
-  
-### <a name="booksxml"></a>Books.XML  
-  
-```  
-<?xml version='1.0'?>  
-<!-- This file represents a fragment of a book store inventory database -->  
-<bookstore>  
-  <book genre="autobiography" publicationdate="1981" ISBN="1-861003-11-0">  
-    <title>The Autobiography of Benjamin Franklin</title>  
-    <author>  
-      <first-name>Benjamin</first-name>  
-      <last-name>Franklin</last-name>  
-    </author>  
-    <price>8.99</price>  
-  </book>  
-  <book genre="novel" publicationdate="1967" ISBN="0-201-63361-2">  
-    <title>The Confidence Man</title>  
-    <author>  
-      <first-name>Herman</first-name>  
-      <last-name>Melville</last-name>  
-    </author>  
-    <price>11.99</price>  
-  </book>  
-  <book genre="philosophy" publicationdate="1991" ISBN="1-861001-57-6">  
-    <title>The Gorgias</title>  
-    <author>  
-      <name>Plato</name>  
-    </author>  
-    <price>9.99</price>  
-  </book>  
-</bookstore>  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Bu izlenecek yolda bulunan adımlarda XSLT hata ayıklamanın nasıl kullanılacağı gösterilmektedir. Adımlar, değişkenleri görüntüleme, kesme noktalarını ayarlama ve kodun üzerinden atlama içerir. Stil sayfası, ortalama defter fiyatının altında maliyeti olan tüm kitapları bulur.
+
+### <a name="to-prepare-for-this-walkthrough"></a>Bu adım adım izleme için hazırlanmak amacıyla
+
+1. Açık olan tüm çözümleri kapatın.
+
+2. İki örnek dosyayı yerel bilgisayarınıza kopyalayın.
+
+## <a name="start-debugging"></a>Hata ayıklamayı Başlat
+
+#### <a name="to-start-debugging"></a>Hata ayıklamayı başlatmak için
+
+1. **Dosya** menüsünde **Aç**' ın üzerine gelin ve **Dosya**' ya tıklayın.
+
+2. BelowAvg. xsl dosyasını bulun ve **Aç**' a tıklayın.
+
+    Stil sayfası XML düzenleyicisinde açılır.
+
+3. Belge Özellikleri penceresinin **giriş** alanındaki gezinme düğmesine ( **...** ) tıklayın.
+
+4. Books. xml dosyasını bulun ve **Aç**' a tıklayın.
+
+    Bu, XSLT dönüştürmesi için kullanılan kaynak belge dosyasını ayarlar.
+
+5. @No__t_0 başlangıç etiketine sağ tıklayın, **kesme**noktası ' nın üzerine gelin ve **kesme noktası Ekle**' ye tıklayın.
+
+6. XML Düzenleyicisi araç çubuğundaki **XSL hata ayıkla** düğmesine tıklayın.
+
+   Böylece hata ayıklama işlemi başlatılır ve hata ayıklayıcı tarafından kullanılan birkaç yeni pencere açılır.
+
+   Giriş belgesi ve stilleri sayfasını görüntüleyen iki pencere vardır. Hata ayıklayıcı, geçerli yürütme durumunu göstermek için bu pencereleri kullanır. Hata ayıklayıcı, stil sayfasının `xsl:if` öğesinde ve Books. xml dosyasındaki ilk kitap düğümünde konumlandırılır.
+
+   Yereller penceresi tüm yerel değişkenleri ve bunların geçerli değerlerini görüntüler. Bu, stil sayfasında tanımlanan değişkenleri ve ayrıca hata ayıklayıcının Şu anda bağlamdaki düğümleri izlemek için kullandığı değişkenleri içerir.
+
+   **XSL çıkış** PENCERESI, XSL dönüşümünün çıkışını görüntüler. Bu pencere, **Visual Studio çıktı** penceresinden ayrıdır.
+
+## <a name="watch-window"></a>Gözcü penceresi
+
+#### <a name="to-use-the-watch-window"></a>izleme penceresi kullanmak için
+
+1. **Hata Ayıkla** menüsünde **Windows**' un üzerine gelin, **İzle**' ye gelin ve **1. izle**' ye tıklayın.
+
+     Bu, Gözcü 1 penceresini görünür hale getirir.
+
+2. **Ad** alanına `$bookAverage` YAZıN ve ENTER tuşuna basın.
+
+     @No__t_0 değişkenin değeri pencerede görüntülenir.
+
+3. **Ad** alanına `self::node()` YAZıN ve ENTER tuşuna basın.
+
+     `self::node()`, geçerli bağlam düğümünü değerlendiren bir XPath ifadesidir. @No__t_0 XPath ifadesinin değeri ilk kitap düğümüdür. Bu, dönüşümde ilerlemede olduğu gibi değişir.
+
+4. @No__t_0 düğümünü genişletin ve `price` düğümünü genişletin.
+
+     Bu, kitap fiyatının değerini görmenizi sağlar ve `$bookAverage` değeriyle kolayca karşılaştırabilirsiniz. Kitap fiyatı ortalamanın altında olduğundan `xsl:if` koşulu başarılı olmalıdır.
+
+## <a name="step-through-the-code"></a>Kod Içinde adımla
+ Hata ayıklayıcı, kodu tek seferde bir satır yürütmenize olanak sağlar.
+
+#### <a name="to-step-through-the-code"></a>Kod boyunca ilerlemek için
+
+1. Devam etmek için **F5** 'e basın.
+
+     İlk kitap düğümü `xsl:if` koşulunu karşıladığı için kitap düğümü, XSL çıkış penceresine eklenir. Hata ayıklayıcı, stil sayfasındaki `xsl:if` öğesinde yeniden konumlandırılana kadar yürütülmeye devam eder. Hata ayıklayıcı artık Books. xml dosyasındaki ikinci kitap düğümüne yerleştirildi.
+
+     Watch1 penceresinde `self::node()` değeri ikinci kitap düğümüne değişir. Price öğesinin değerini inceleyerek, fiyatın ortalamanın üzerinde olduğunu belirleyebilir, bu nedenle `xsl:if` koşulu başarısız olmalıdır.
+
+2. Devam etmek için **F5** 'e basın.
+
+     İkinci kitap düğümü `xsl:if` koşulunu karşılamadığından, kitap düğümü XSL çıkış penceresine eklenmez. Hata ayıklayıcı, stil sayfasındaki `xsl:if` öğesinde yeniden konumlandırılana kadar yürütülmeye devam eder. Hata ayıklayıcı artık Books. xml dosyasındaki üçüncü `book` düğümüne konumlandırıldı.
+
+     Watch1 penceresinde `self::node()` değeri üçüncü kitap düğümüne dönüşür. @No__t_0 öğesinin değerini inceleyerek, fiyatın ortalamanın altında olduğunu belirleyebilir, bu nedenle `xsl:if` koşulunun başarılı olması gerekir.
+
+3. Devam etmek için **F5** 'e basın.
+
+     @No__t_0 koşul karşılandığından, üçüncü kitap XSL çıkış penceresine eklenir. XML belgesindeki tüm kitaplar işlendi ve hata ayıklayıcı durdu.
+
+## <a name="sample-files"></a>Örnek dosyalar
+ Aşağıdaki iki dosya izlenecek yol tarafından kullanılır.
+
+### <a name="belowavgxsl"></a>belowAvg. Xsl
+
+```
+<?xml version='1.0'?>
+<xsl:stylesheet version="1.0"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="xml" encoding="utf-8"/>
+  <xsl:template match="/">
+    <xsl:variable name="bookCount" select="count(/bookstore/book)"/>
+    <xsl:variable name="bookTotal" select="sum(/bookstore/book/price)"/>
+    <xsl:variable name="bookAverage" select="$bookTotal div $bookCount"/>
+    <books>
+      <!--Books That Cost Below Average-->
+      <xsl:for-each select="/bookstore/book">
+        <xsl:if test="price < $bookAverage">
+          <xsl:copy-of select="."/>
+        </xsl:if>
+      </xsl:for-each>
+    </books>
+  </xsl:template>
+</xsl:stylesheet>
+```
+
+### <a name="booksxml"></a>Books. xml
+
+```
+<?xml version='1.0'?>
+<!-- This file represents a fragment of a book store inventory database -->
+<bookstore>
+  <book genre="autobiography" publicationdate="1981" ISBN="1-861003-11-0">
+    <title>The Autobiography of Benjamin Franklin</title>
+    <author>
+      <first-name>Benjamin</first-name>
+      <last-name>Franklin</last-name>
+    </author>
+    <price>8.99</price>
+  </book>
+  <book genre="novel" publicationdate="1967" ISBN="0-201-63361-2">
+    <title>The Confidence Man</title>
+    <author>
+      <first-name>Herman</first-name>
+      <last-name>Melville</last-name>
+    </author>
+    <price>11.99</price>
+  </book>
+  <book genre="philosophy" publicationdate="1991" ISBN="1-861001-57-6">
+    <title>The Gorgias</title>
+    <author>
+      <name>Plato</name>
+    </author>
+    <price>9.99</price>
+  </book>
+</bookstore>
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XSLT Hatalarını Ayıklama](../xml-tools/debugging-xslt.md)

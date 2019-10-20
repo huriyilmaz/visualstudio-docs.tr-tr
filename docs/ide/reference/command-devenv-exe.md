@@ -7,21 +7,21 @@ helpviewer_keywords:
 - /Command Devenv switch
 - Command Devenv switch
 ms.assetid: 13c20cd6-f09d-400a-8b7b-ecc266a32cef
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6daa21f9db7eef9a651577ad829d884dccf353dc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ca9a6550fd5fd141a5f8051d1948ccd626e970b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968629"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654606"
 ---
 # <a name="command-devenvexe"></a>/Command (devenv.exe)
 
-Visual Studio IDE başlatıldıktan sonra belirtilen komutu yürütür.
+Visual Studio IDE 'yi başlattıktan sonra belirtilen komutu yürütür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,29 +31,29 @@ devenv /Command CommandName
 
 ## <a name="arguments"></a>Arguments
 
-*commandName*
+*Name*
 
-Gerekli. Visual Studio komut ya da çift tırnak işareti içine alınmış diğer adının, tam adı. Komut ve diğer ad sözdizimi hakkında daha fazla bilgi için bkz: [Visual Studio komutları](../../ide/reference/visual-studio-commands.md).
+Gerekli. Bir Visual Studio komutunun veya diğer adının, çift tırnak işareti içine alınmış olarak tamamı. Komut ve diğer ad sözdizimi hakkında daha fazla bilgi için bkz. [Visual Studio komutları](../../ide/reference/visual-studio-commands.md).
 
 ## <a name="remarks"></a>Açıklamalar
 
-Başlangıç tamamlandıktan sonra IDE adlandırılmış komutu yürütür.
+Başlangıç tamamlandıktan sonra IDE, adlandırılmış komutunu yürütür.
 
 ::: moniker range="vs-2017"
 
-Bu anahtarı kullanırsanız, IDE başlangıçta başlangıç sayfasını görüntülemez.
+Bu anahtarı kullanırsanız, IDE başlangıç sayfasını başlangıçta görüntülemez.
 
 ::: moniker-end
 
-Bir eklenti bir komut sunarsa, komut satırından eklentiyi başlatmak için bu anahtarı kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Eklentileri Eklenti Yöneticisi'ni kullanarak denetim](/previous-versions/xwdatdwh(v=vs.140)).
+Bir eklenti bir komut kullanıma sunarsa, bu anahtarı komut satırından eklentiyi başlatmak için kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: eklenti yöneticisini kullanarak eklentileri denetleme](/previous-versions/xwdatdwh(v=vs.140)).
 
 ## <a name="example"></a>Örnek
 
-İlk örnek, Visual Studio başlatır ve makro açık sık kullanılan dosyaları otomatik olarak çalıştırır.
+İlk örnek, Visual Studio 'Yu başlatır ve makro açık olan dosyaları aç makrosunu otomatik olarak çalıştırır.
 
-İkinci örnek bir web tarama IDE içinde sekme açar ve Microsoft Docs siteye gider.
+İkinci örnek, IDE içinde bir Web gözatma sekmesi açar ve Microsoft Docs sitesine gider.
 
-Üçüncü örnek adlı yeni bir dosya oluşturur `some_file.cs` ve Kod Düzenleyicisi'nde açılır.
+Üçüncü örnek `some_file.cs` adlı yeni bir dosya oluşturur ve onu bir kod düzenleyicisinde açar.
 
 ```shell
 devenv /command "Macros.MyMacros.Module1.OpenFavoriteFiles"

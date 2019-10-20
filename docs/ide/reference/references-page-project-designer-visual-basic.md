@@ -10,17 +10,17 @@ helpviewer_keywords:
 - References page in Project Designer
 - Project Designer, References page
 ms.assetid: 5a47c595-e084-401c-86e1-74e0bf74fd86
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbc53a1582a2a4f76de2ea402544137405f5d9f3
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9a92523f182300c17a3e6b08ad04ba2b6049be6c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926141"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655645"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)
 
@@ -68,7 +68,7 @@ Web başvurusu **Ekle** iletişim kutusunu kullanarak projenize Web başvurusu e
 
 Kendi ad alanınızı bu kutuya yazabilir ve **Kullanıcı Içeri aktarma Ekle** ' ye tıklayarak ad alanları listesine ekleyebilirsiniz.
 
-Kullanıcı tarafından içeri aktarılan ad alanları için diğer adlar oluşturabilirsiniz. Bunu yapmak için, biçim *diğer*=*ad alanındaki*diğer adı ve ad alanını girin. Bu, uzun ad alanları kullanıyorsanız faydalıdır, örneğin: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`.
+Kullanıcı tarafından içeri aktarılan ad alanları için diğer adlar oluşturabilirsiniz. Bunu yapmak için *diğer adı ve ad alanını = ad* *alanına*girin. Bu, uzun ad alanları kullanıyorsanız faydalıdır, örneğin: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`.
 
  **Kullanıcı Içeri aktarma Ekle**
 
@@ -82,14 +82,14 @@ Bu liste tüm kullanılabilir ad alanlarını gösterir. Projenize dahil olan ad
 
 Ad alanları listesinde Kullanıcı tarafından belirtilen bir ad alanı seçin, **Içeri aktarılan ad alanları** kutusuna değiştirmek istediğiniz adı yazın ve ardından yeni ad alanına geçmek için bu düğmeye tıklayın. Düğme, yalnızca seçilen ad alanı, **Kullanıcı Içeri aktarma Ekle** düğmesini kullanarak listeye eklediğiniz bir ise etkindir. Şunları ekleyebilirsiniz:
 
-- Gibi sınıflar veya ad alanları <xref:System.Math?displayProperty=fullName>.
+- @No__t_0 gibi sınıflar veya ad alanları.
 
-- Gibi diğer ad almalar `VB=Microsoft.VisualBasic`.
+- @No__t_0 gibi diğer ad almalar.
 
-- Gibi XML ad alanları `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`.
+- @No__t_0 gibi XML ad alanları.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Bir projedeki başvuruları yönetme](../../ide/managing-references-in-a-project.md)
-- [Nasıl yapılır: İçeri Aktarılan Ad Alanlarını Ekleme veya Kaldırma (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)
+- [Nasıl Yapılır: İçeri Aktarılan Ad Uzaylarını Ekleme veya Kaldırma (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)
 - [Imports Deyimi (XML Ad Alanı)](/dotnet/visual-basic/language-reference/statements/imports-statement-xml-namespace)

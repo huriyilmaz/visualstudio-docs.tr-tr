@@ -4,43 +4,43 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, DSL Explorer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 744407f129c85f4e083007186dd167e39401d850
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 352315b518102c5b9576c19611522e87d0e67ffe
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961943"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666911"
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>Etki Alanına Özgü Dil Gezgini ile Çalışma
-**DSL Gezgini** ağaç görünümünde çeşitli bilgiler görüntüler. DSL Gezgini içindeki öğelerin çoğu hakkında daha fazla bilgi için bkz: [etki alanına özgü bir dili tanımlama nasıl](../modeling/how-to-define-a-domain-specific-language.md).
+**DSL Gezgini** bir ağaç görünümünde çeşitli bilgi türlerini görüntüler. DSL Gezgini 'ndeki öğelerin birçoğu hakkında daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
 
- Aşağıdaki düğümleri içerir:
+ Aşağıdaki düğümlere sahiptir:
 
-- **Bağlantı oluşturucular**. Modelde bağlantı oluşturucular bir listesi.
+- **Bağlantı oluşturucular**. Modeldeki bağlantı oluşturucuların bir listesi.
 
-- **Bağlayıcılar**. Model Bağlayıcısı diyagram öğeleri listesi.
+- **Bağlayıcılar**. Modeldeki bağlayıcı diyagramı öğelerinin listesi.
 
-- **Diyagram**. Diyagram ve bağlayıcı eşlemeleri ve Şekil eşlemeleri listesi tanımlayan özellikleri kümesi.
+- **Diyagram**. Diyagramı tanımlayan özellikler kümesi ve bağlayıcı haritaları ve şekil haritaları listeleri.
 
-- **Etki alanı sınıfları**. Etki alanı sınıfları modelinde listesi.
+- **Etki alanı sınıfları**. Modeldeki etki alanı sınıflarının listesi.
 
-- **Etki alanı ilişkileri**. Etki alanı ilişkileri modelinde listesi.
+- **Etki alanı ilişkileri**. Modeldeki etki alanı ilişkilerinin bir listesi.
 
-- **Etki alanı türleri**. Model içinde kullanılan yerleşik ve dış türleri listesi.
+- **Etki alanı türleri**. Modelde kullanılan yerleşik ve dış türlerin listesi.
 
-- **Düzenleyici**. Listesini **araç kutusu** sekmeler ve içerdikleri öğelerin ve model için doğrulama ayarları. Doğrulama hakkında daha fazla bilgi için bkz: [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
+- **Düzenleyici**. **Araç kutusu** sekmelerinin ve içerdikleri öğelerin listesi ve model için doğrulama ayarları. Doğrulama hakkında daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 
-- **Gezgin davranışı**. Gezgin davranışını belirtin oluşturulan tasarımcıdaki ayarlar. Explorer özelleştirme hakkında daha fazla bilgi için bkz. [Model Gezginini özelleştirme](../modeling/customizing-the-model-explorer.md).
+- **Gezgin davranışı**. Oluşturulan tasarımcıda gezgin davranışını belirleyen ayarlar. Gezgin 'in nasıl özelleştirileceği hakkında daha fazla bilgi için bkz. [model Gezginini özelleştirme](../modeling/customizing-the-model-explorer.md).
 
-- **Şekiller**. Modeldeki şekli diyagram öğeleri listesi.
+- **Şekiller**. Modeldeki şekil diyagramı öğelerinin listesi.
 
-- **XML serileştirme davranışı**. Model için serileştirme ayarlar. Seri hale getirme hakkında daha fazla bilgi için bkz: [özelleştirme dosya depolamayı ve XML serileştirmeyi](../modeling/customizing-file-storage-and-xml-serialization.md).
+- **XML serileştirme davranışı**. Model için serileştirme ayarları. Serileştirme hakkında daha fazla bilgi için bkz. [Dosya depolamayı ve XML Serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

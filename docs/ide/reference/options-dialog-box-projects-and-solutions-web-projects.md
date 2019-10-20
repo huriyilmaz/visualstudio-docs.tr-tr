@@ -5,35 +5,35 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Projects.WebProjects
 ms.assetid: ea813046-1ae6-4c9f-9784-dc41494101b9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0d645d8c1c204105f5e505cd34386a1fcc19b46
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9419721a7d18f694f3be0afe4f12c9a3c8594ad2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945670"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666403"
 ---
 # <a name="options-dialog-box-projects-and-solutions-web-projects"></a>Seçenekler İletişim Kutusu, Projeler ve Çözümler, Web Projeleri
 
-Web projeleri içinde geliştirmek için kullanacağınız web sunucusu ayarlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Bu seçeneklere erişmek için seçin **Araçlar > Seçenekler** genişletin **projeler ve çözümler**seçip **Web projeleri**.
+Web projelerinin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] içinde geliştirme için kullanacağı Web sunucusunu ayarlar. Bu seçeneklere erişmek için **araçlar > seçenekler** ' i seçin, **projeleri ve çözümleri**genişletin ve **Web projeleri**' ni seçin.
 
-Varsayılan olarak, Visual Studio'da bir web projesi çalıştırıldığında, Visual Studio geliştirme sunucusunu kullanır. Daha fazla bilgi için [ASP.NET Web projeleri için Visual Studio'daki Web sunucuları](/previous-versions/aspnet/58wxa9w5\(v\=vs.120\)).
+Varsayılan olarak, Visual Studio 'da bir Web projesi çalıştırmak, Visual Studio geliştirme sunucusunu kullanır. Daha fazla bilgi için bkz. [ASP.NET Web projeleri Için Visual Studio 'Da Web sunucuları](/previous-versions/aspnet/58wxa9w5\(v\=vs.120\)).
 
 ## <a name="settings"></a>Ayarlar
 
-**Web siteleri ve projeleri için IIS Express'in 64 bit sürümünü kullanın.**
+**Web siteleri ve projeleri için IIS Express 64 bitlik sürümünü kullanın**
 
-Visual Studio geliştirme sunucusu yerine IIS Express'i kullanacak şekilde bu seçeneği belirleyin. Daha fazla bilgi için [IIS Express ile tanışın](http://go.microsoft.com/?linkid=9747914) ve [IIS Express genel bakış](http://go.microsoft.com/?linkid=9747915).
+Visual Studio geliştirme sunucusu yerine IIS Express kullanmak için bu seçeneği belirleyin. Daha fazla bilgi için bkz. [tanıtma IIS Express](http://go.microsoft.com/?linkid=9747914) ve [IIS Express genel bakış](http://go.microsoft.com/?linkid=9747915).
 
-**Hata listesinde hatalar varken web uygulamalarını çalıştırmadan önce uyar**
+**Hata listesinde hatalar varken Web uygulamalarını çalıştırmadan önce uyar**
 
-Bu seçenek ayarlanırsa, hatasız derlenmiyor web uygulamanızı çalıştırmayı denerseniz uyarılır.
+Bu seçenek ayarlandıysa, hata olmadan derlerken Web uygulamanızı çalıştırmayı denerseniz size uyarı alırsınız.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Seçenekler iletişim kutusu, projeler ve çözümler](projects-and-solutions-options-dialog-box.md)
-- [Seçenekler iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma](options-dialog-box-projects-and-solutions-web-projects.md)
+- [Seçenekler Iletişim kutusu, projeler ve çözümler](projects-and-solutions-options-dialog-box.md)
+- [Seçenekler Iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma](options-dialog-box-projects-and-solutions-web-projects.md)

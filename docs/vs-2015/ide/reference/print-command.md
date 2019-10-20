@@ -1,5 +1,5 @@
 ---
-title: Yazdır komutu | Microsoft Docs
+title: Komutu Yazdır | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,55 +12,50 @@ helpviewer_keywords:
 - Print command
 ms.assetid: 0412d381-590a-483f-bab4-6e1cca095645
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 65d78387c6d60d0b432db9aab175fbfe8dc2869b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 136edf7fa91e4caeb9303edfd4441ee178fa6038
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203562"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662151"
 ---
 # <a name="print-command"></a>Yazdır Komutu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir ifadeyi değerlendirir veya belirtilen metni görüntüler.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-Debug.Print text  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `text`  
- Gerekli. Değerlendirilecek ifade veya görüntülenecek metin.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Bu komut için bir diğer ad olarak, soru işareti (?) kullanabilirsiniz. Bunu, örneğin, komut  
-  
-```  
->Debug.Print expA  
-```  
-  
- Ayrıca yazılabilir  
-  
-```  
->? expA  
-```  
-  
- Bu komutun her iki sürümü ifadenin geçerli değerini döndürecektir `expA`.  
-  
-## <a name="example"></a>Örnek  
-  
-```  
->Debug.Print varA  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Deyimi değerlendir komutu](../../ide/reference/evaluate-statement-command.md)   
- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)   
- [Komut penceresi](../../ide/reference/command-window.md)   
- [Bul/komut kutusu](../../ide/find-command-box.md)   
- [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)
+Bir ifadeyi değerlendirir veya belirtilen metni görüntüler.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+Debug.Print text
+```
+
+## <a name="arguments"></a>Arguments
+ `text` gerekiyor. Değerlendirilecek ifade veya görüntülenecek metin.
+
+## <a name="remarks"></a>Açıklamalar
+ Bu komut için bir diğer ad olarak soru işareti (?) kullanabilirsiniz. Bu nedenle, örneğin, komut
+
+```
+>Debug.Print expA
+```
+
+ Ayrıca yazılabilir
+
+```
+>? expA
+```
+
+ Bu komutun her iki sürümü de `expA` ifadenin geçerli değerini döndürür.
+
+## <a name="example"></a>Örnek
+
+```
+>Debug.Print varA
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Ifadeyi değerlendir komutu](../../ide/reference/evaluate-statement-command.md) [Visual Studio komutları](../../ide/reference/visual-studio-commands.md) [komut penceresi](../../ide/reference/command-window.md) [Bul/komut kutusu](../../ide/find-command-box.md) [Visual Studio komut diğer adları](../../ide/reference/visual-studio-command-aliases.md)

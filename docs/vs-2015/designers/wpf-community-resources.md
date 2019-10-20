@@ -6,20 +6,20 @@ ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 89604bcf-da25-4180-a1d2-c5f22ab67bb6
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 63a4e207172d4f726091691985e7d1f84bb2e708
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0c2e58686c1369847fdeb0d83aaac6c65341aa08
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68187452"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663916"
 ---
 # <a name="wpf-community-resources"></a>WPF Topluluk Kaynakları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft Topluluk kaynakları hakkında bilgi edinin, tartışın ve üzerinde Windows Presentation Foundation (WPF takım üyeleri ve topluluk liderleriyle, forumlar ve Microsoft Connect geri bildirim tarafından üretilen blogları dahil olmak üzere WPF), geri bildirim sağlamak için çeşitli kullanıma sunar. Merkezi.
+Microsoft, WPF ekibi üyeleri ve topluluk liderleri, Forumlar ve Microsoft Connect geri bildirimi ile oluşturulan blogların de dahil olduğu Windows Presentation Foundation (WPF) hakkında bilgi edinmek, tartışmak ve geri bildirimde bulunmak için kullanabileceğiniz çeşitli topluluk kaynaklarını kullanıma sunar. merkezinden.
 
 ## <a name="community"></a>Topluluk
  [WPF Forumu](http://go.microsoft.com/fwlink/?LinkId=187440)
@@ -28,7 +28,7 @@ Microsoft Topluluk kaynakları hakkında bilgi edinin, tartışın ve üzerinde 
 
  [WPF ekip blogu](http://blogs.msdn.com/b/wpf/)
 
- [CodePlex üzerinde WPF Araç Seti](http://wpf.codeplex.com/)
+ [CodePlex üzerinde WPF araç seti](http://wpf.codeplex.com/)
 
  [Windows Presentation Foundation Geliştirici Merkezi](https://www.visualstudio.com/features/wpf-vs)
 

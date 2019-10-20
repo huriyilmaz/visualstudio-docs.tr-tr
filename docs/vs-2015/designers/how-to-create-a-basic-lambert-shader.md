@@ -1,69 +1,65 @@
 ---
-title: 'Nasıl yapılır: Temel Lambert gölgelendiricisi oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: temel Lambert gölgelendiricisi oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: ec5c10fb-9600-4240-8280-d59451ea1d68
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 227c9c84022e3c3340b4821df9dbd2dbe9465a03
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 038b3e7db7f1e3b79ee3e41b6e256216a39b91bd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63414681"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664564"
 ---
-# <a name="how-to-create-a-basic-lambert-shader"></a>Nasıl yapılır: Temel Lambert gölgelendiricisi oluşturma
+# <a name="how-to-create-a-basic-lambert-shader"></a>Nasıl Yapılır: Temel Lambert Gölgelendiricisi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu belge, gölgelendirici Tasarımcısı ve yönlendirilmiş grafik gölgelendirici dili (DGSL) Klasik Lambert aydınlatma modeli uygulayan aydınlatma gölgelendirici oluşturmak için nasıl kullanılacağını gösterir.  
-  
- Bu belgede şu faaliyetler gösterilmiştir:  
-  
-- Düğüm için bir gölgelendirici grafiği ekleme  
-  
-- Düğüm bağlantısı kesiliyor  
-  
-- Düğümleri bağlanma  
-  
-## <a name="the-lambert-lighting-model"></a>Lambert aydınlatma modeli  
- Lambert aydınlatma modeli, çevresel ve tek yönlü ışık 3B görünümde gölge nesnelere içerir. Ortam bileşenleri ışıklar 3B Sahne olarak temel düzeyde sağlar. Yönlü ışık (uzaktaki) kaynaklardan ek aydınlatma yönlü bileşenleri sağlar. Ortam aydınlatma sahnedeki tüm yüzeyleri eşit, bağımsız olarak kendi yönlendirmesini etkiler. Belirli bir yüzeyi için çevresel renk yüzeyi ve renk ve ortam aydınlatması sahnedeki yoğunluğunu bir üründür. Tek yönlü ışık yönü ışık kaynağına göre yüzey yönü göre her yüzeyi sahnedeki farklı etkiler. Bu bir ürün yayınık renk ve surface ve rengini, şiddeti ve yönü ışık kaynaklarına yönünü olur. En büyük katkı doğrudan ışık kaynağına doğru yüzeyleri almak ve doğrudan yerine yüz tanıma yüzey hiçbir katkı alabilirsiniz. Lambert aydınlatma modeli altında nesne üzerinde her nokta için toplam yayınık renk katkısı belirlemek için çevresel bileşeni ve bir veya daha çok yönlü bileşenleri birleştirilir.  
-  
- Başlamadan önce emin **özellikleri** penceresi ve **araç kutusu** görüntülenir.  
-  
-#### <a name="to-create-a-lambert-shader"></a>Lambert gölgelendiricisi oluşturma  
-  
-1. Çalışmak için bir DGSL gölgelendirici oluşturun. Projenize DGSL gölgelendirici ekleme hakkında daha fazla bilgi için bkz. Başlarken bölümünde [gölgelendirici Tasarımcısı](../designers/shader-designer.md).  
-  
-2. Bağlantı kesme **nokta rengi** düğümünden **son rengini** düğümü. Seçin **RGB** , terminal **nokta rengi** düğümünü seçip **Bağlantıları Kes**. Bırakın **alfa** terminal bağlı.  
-  
-3. Ekleme bir **Lambert** grafiğe düğüm. İçinde **araç kutusu**altında **yardımcı programı**seçin **Lambert** ve tasarım yüzeyine taşıyın. Lambert düğümü çevresel ve yayınık aydınlatma parametrelere bağlı olarak piksel toplam yayınık renk katkısını hesaplar.  
-  
-4. Connect **nokta rengi** düğüme **Lambert** düğümü. İçinde **seçin** modu, taşıma **RGB** , terminal **nokta rengi** düğüme **Yayınık renk** , terminal **Lambert**  düğümü. Bu bağlantı lambert düğümle ilişkilendirilmiş pikselin yayınık rengine sağlar.  
-  
-5. Hesaplanan renk değeri son rengi bağlanın. Taşıma **çıkış** , terminal **Lambert** düğüme **RGB** , terminal **son rengini** düğümü.  
-  
-   Aşağıdaki resimde tamamlanmış gölgelendirici grafiği ve çaydanlık modeline uygulanan gölgelendiricinin önizlemesini gösterir.  
-  
+Bu belge, klasik Lambert aydınlatma modelini uygulayan bir aydınlatma gölgelendiricisi oluşturmak için Gölgelendirici Tasarımcısının ve yönlendirilmiş grafik gölgelendirici dilinin (DGSL) nasıl kullanılacağını gösterir.
+
+ Bu belge Şu etkinlikleri gösterir:
+
+- Gölgelendirici grafiğine düğüm ekleme
+
+- Düğümlerin bağlantısı kesiliyor
+
+- Düğümleri bağlama
+
+## <a name="the-lambert-lighting-model"></a>Lambert aydınlatma modeli
+ Lambert aydınlatma modeli, 3-b sahnede nesneleri gölgelendirmek için çevresel ve yönlü aydınlatma özelliklerini içerir. Çevresel bileşenler, 3-b sahnede temel bir aydınlatma düzeyi sağlar. Yönlü bileşenler, yönlü (en uzakta) ışık kaynaklarından daha fazla aydınlatma sağlar. Çevresel aydınlatma, kendi yönüne bakılmaksızın sahnenin tüm yüzeylerini eşit olarak etkiler. Belirli bir yüzey için, yüzeyde ortam renginin bir ürünüdür ve sahneye ait çevresel aydınlatma renk ve yoğunluğu vardır. Yönlü aydınlatma, yüzdeki her yüzeyi, ışık kaynağının yönlerine göre yüzey yönüne göre farklı şekilde etkiler. Bu, yüzeyi dağıtma renginin ve yönlerinin yanı sıra ışık kaynaklarının rengi, yoğunluğu ve yönlerinin bir ürünüdür. Işık kaynağına doğrudan ulaşan yüzeyler, doğrudan katkı almamak için en yüksek katkı ve yüzeyleri alır. Lambert aydınlatma modeli altında, ortam bileşeni ve bir veya daha fazla yönlü bileşen, nesne üzerindeki her bir nokta için toplam dağıtma rengi katkısını belirlemede birleştirilir.
+
+ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görüntülendiğinden emin olun.
+
+#### <a name="to-create-a-lambert-shader"></a>Lambert gölgelendiricisi oluşturmak için
+
+1. Birlikte çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize bir DGSL gölgelendiricisi ekleme hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)Başlarken bölümü.
+
+2. **Son renk** düğümündeki **nokta rengi** düğümünün bağlantısını kesin. **Nokta rengi** düğümünün **RGB** terminalini seçin ve ardından **Bağlantıları Kes**' i seçin. **Alfa** terminalini bağlı bırakın.
+
+3. Grafiğe **Lambert** düğümü ekleyin. **Araç kutusu**' nda, **yardımcı program**altında **Lambert** ' yi seçin ve tasarım yüzeyine taşıyın. Lambert düğümü, çevresel ve Dağıtılmış aydınlatma parametrelerine göre pikselin toplam dağıtma rengi katkısını hesaplar.
+
+4. **Nokta rengi** düğümünü **Lambert** düğümüne bağlayın. **Seç** modunda, **nokta rengi** düğümünün **RGB** terminalini **Lambert** düğümünün **dağıtma rengi** terminaline taşıyın. Bu bağlantı, pikselin ara değerli dağıtma rengi ile Lambert düğümünü sağlar.
+
+5. Hesaplanan renk değerini son renge bağlayın. **Lambert** düğümünün **Çıkış** terminalini **son renk** düğümünün **RGB** terminaline taşıyın.
+
+   Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir ekip modeline uygulanan gölgelendirici önizlemesi gösterilmektedir.
+
 > [!NOTE]
-> Bu çizimde gösterilen gölgelendirici etkisini daha iyi göstermek için turuncu renk kullanarak belirtilmiş **MaterialDiffuse** Gölgelendirici parametresi. Oyunlarda veya uygulamalarda bu parametre, her nesne için bir benzersiz renk değeri sağlamak için kullanabilirsiniz. Gölgelendiricileri Önizleme bölümünde malzeme parametreleri hakkında daha fazla bilgi için bkz. [gölgelendirici Tasarımcısı](../designers/shader-designer.md).  
-  
- ![Gölgelendirici grafiğinin ve etkisini önizlemesidir. ](../designers/media/digit-lambert-effect-graph.png "Lambert efekt grafik basamak")  
-  
- Belirli şekiller daha iyi önizlemeleri için bazı gölgelendiricileri sağlayabilir. Gölgelendiricileri Önizleme bölümünde gölgelendiricileri gölgelendirici Tasarımcısı'nda önizleme hakkında daha fazla bilgi için bkz. [gölgelendirici Tasarımcısı](../designers/shader-designer.md).  
-  
- Aşağıdaki çizim, 3B modeline uygulanan bu belgede açıklanan gölgelendirici gösterir.  
-  
- ![Lambert aydınlatma bir modele uygulandı. ](../designers/media/digit-lambert-effect-result.png "Lambert etkisi sonuç basamak")  
-  
- 3B modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
- [Nasıl yapılır: Gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md)   
- [Nasıl yapılır: Temel Phong gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-phong-shader.md)   
- [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)   
- [Gölgelendirici Tasarımcısı Düğümleri](../designers/shader-designer-nodes.md)
+> Bu çizimde gölgelendirici etkisini daha iyi göstermek için, gölgelendiricinin **Materialdağıt** parametresi kullanılarak turuncu bir renk belirtilmiştir. Bir oyun veya uygulama, her bir nesne için benzersiz bir renk değeri sağlamak üzere bu parametreyi kullanabilir. Malzeme parametreleri hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)gölgelendiricilerin önizlemesi bölümü.
+
+ ![Gölgelendirici Grafiği ve efektinin önizlemesi.](../designers/media/digit-lambert-effect-graph.png "Basamak-Lambert-efekt-grafik")
+
+ Bazı biçimler bazı gölgelendiriciler için daha iyi önizleme sağlayabilir. Gölgelendirici tasarımcısında gölgelendiricilerin önizlemesi hakkında daha fazla bilgi için, [gölgelendirici tasarımcısında](../designers/shader-designer.md)gölgelendiricilerin önizlemesi bölümüne bakın.
+
+ Aşağıdaki çizimde, bu belgede 3-b modeline uygulanan gölgelendirici gösterilmektedir.
+
+ ![Bir modele uygulanan Lambert aydınlatma.](../designers/media/digit-lambert-effect-result.png "Digit-Lambert-efekt-sonuç")
+
+ 3B modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir gölgelendiriciyi 3-b modele uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md) [nasıl yapılır: gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md) nasıl [yapılır: temel bir Phong gölgelendirici](../designers/how-to-create-a-basic-phong-shader.md) [Gölgelendirici Tasarımcısı](../designers/shader-designer.md) [Gölgelendirici Tasarımcısı düğümleri](../designers/shader-designer-nodes.md) oluşturma

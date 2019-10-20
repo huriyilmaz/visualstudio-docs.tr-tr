@@ -1,5 +1,5 @@
 ---
-title: Seçenekler iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma | Microsoft Docs
+title: Seçenekler Iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,69 +13,58 @@ helpviewer_keywords:
 - debugger, run options
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a0ce02a76d32a967e2c7e5f06818b5838337f9b1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9b7eb229c5938165607b797205b94a318e3303b3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433671"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655184"
 ---
-# <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>Seçenekler iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma
+# <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>Seçenekler İletişim Kutusu, Projeler ve Çözümler, Derleme ve Çalıştırma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu iletişim kutusunda, aynı anda oluşturabilirsiniz Visual C++ ya da Visual C# projeleri sayısı belirtebilirsiniz, bazı varsayılan davranışlar oluşturun ve bazı günlük ayarlarını oluşturun. Açmak için **seçenekleri** iletişim kutusunda **Araçları**, **seçenekleri** menü çubuğundaki. Bu seçenek kümesi erişmek için genişletme **projeler ve çözümler**ve ardından **derleme ve çalıştırma**.  
-  
-## <a name="uielement-list"></a>UIElement Listesi  
- **derleme en fazla paralel proje sayısı**  
- Aynı anda oluşturabilirsiniz Visual C++ ve Visual C# projeleri maksimum sayısını belirtir. Derleme işlemi iyileştirmek için en fazla paralel proje yapılandırma sayısını bilgisayarınızın CPU sayısını otomatik olarak ayarlanır. En fazla 32'dir.  
-  
- **Başlangıç projelerini ve bağımlılıkları sadece çalıştırıldığında Derle**  
- F5 tuşuna basın, bu onay kutusu seçili değilse, yalnızca başlangıç projesi ve bağımlılıklarını yerleşiktir; seçin **hata ayıklama**, **Başlat** menüsünde seçin ya da çubuk; **derleme**, **derleme** menü çubuğunda. F5 tuşuna basın, bu onay kutusu işaretli değilse, tüm projeler, bağımlılıklar ve çözüm dosyaları yerleşiktir; seçin **hata ayıklama**, **Başlat** menüsünde seçin ya da çubuk; **derleme**, **derleme** menü çubuğunda. Varsayılan olarak, bu seçenek işaretli değildir.  
-  
- **Çalıştırmada, projelerin güncel olduğunda**  
+Bu iletişim kutusunda, aynı anda oluşturulabilecek en fazla görsel C++ veya görsel C# proje sayısını, belirli varsayılan derleme davranışlarını ve bazı derleme günlüğü ayarlarını belirtebilirsiniz. **Seçenekler** iletişim kutusunu açmak için menü çubuğunda **Araçlar**, **Seçenekler** ' i seçin. Bu seçenek kümesine erişmek için **Projeler ve çözümler**' i genişletin ve ardından **Oluştur ve Çalıştır**' ı seçin.
+
+## <a name="uielement-list"></a>UIElement Listesi
+ **en fazla paralel proje derlemesi sayısı** Aynı anda oluşturulabilecek en fazla görsel C++ ve görsel C# proje sayısını belirtir. Yapı işlemini iyileştirmek için, en fazla paralel proje derleme sayısı, bilgisayarınızın CPU sayısına otomatik olarak ayarlanır. Maksimum değer 32 ' dir.
+
+ **Çalıştırma sırasında yalnızca başlangıç projelerini ve bağımlılıklarını oluşturun** F5 tuşunu seçtiğinizde, bu onay kutusu seçiliyse yalnızca başlangıç projesi ve bağımlılıkları oluşturulur. **Hata Ayıkla**, menü çubuğundan **başla** ' yı seçin; ya da **menü çubuğunda Oluştur,** **Oluştur** ' u seçin. F5 tuşunu seçtiğinizde bu onay kutusu silinirse tüm projeler, bağımlılıklar ve çözüm dosyaları oluşturulur. **Hata Ayıkla**, menü çubuğundan **başla** ' yı seçin; ya da **menü çubuğunda Oluştur,** **Oluştur** ' u seçin. Varsayılan olarak, bu seçenek temizlenir.
+
+ **Çalıştırıldığında, projeler güncel olmadığında**
  > [!NOTE]
-> Bu liste uygulandığı [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] yalnızca projeleri.  
-  
- Bir proje yapılandırması F5 tuşuna basın veya seçin, güncel değil ise, varsayılan olarak, bir ileti görünür **hata ayıklama**, **Başlat** menü çubuğundaki. Projeyi yine de oluşturmak ve iletinin görüntülenip belirtebilirsiniz. İletinin görüntülenip görüntülenmeyeceğini belirtir ve yapı davranışını ileti görünmüyorsa ne olması gerektiğini belirtmek için bu seçeneği kullanın.  
-  
- **Her zaman Derle**  
- İleti kutusu görünmez ve projenin güncel yapılandırmanın rağmen oluşturulmuştur. Bu seçeneği seçtiğinizde ayarlanır **bu iletişim kutusunu bir daha gösterme** iletisinde kutusuna ve ardından **Evet** düğmesi.  
-  
- **Asla derleme**  
- İleti kutusu görünmez ve proje oluşturulan değil. Bu seçeneği seçtiğinizde ayarlanır **bu iletişim kutusunu bir daha gösterme** iletisinde kutusuna ve ardından **Hayır** düğmesi.  
-  
- **Derlerken uyar**  
- Bir proje yapılandırması güncel değil her zaman ileti kutusu görüntüler.  
-  
- **Alıştırmada, ne zaman derleme veya dağıtım hataları oluşuyor**  
- Derlemeden başlattığınızda yapı hataları oluşursa **derleme** menüsünde, bir ileti görüntülenir. Uygulama ve her zaman, yapı hataları iletinin görüntülenip ortaya başlatarak devam edilip edilmeyeceğini belirtebilirsiniz. İletinin görüntülenip görüntülenmeyeceğini belirtir ve ileti görünmüyorsa davranışı neler olması gerektiğini belirtmek için bu seçeneği kullanın.  
-  
+> Bu liste yalnızca [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projelerine yöneliktir.
+
+ Varsayılan olarak, F5 tuşunu veya **Hata Ayıkla** **' yı** seçtiğinizde menü çubuğunda bir proje yapılandırması güncel değilse bir ileti görüntülenir. Projenin yine de oluşturulup oluşturulmayacağını ve iletinin görüntülenip görüntülenmeyeceğini belirtebilirsiniz. İletinin görüntülenip görüntülenmeyeceğini ve ileti görünmüyorsa derleme davranışının ne olması gerektiğini belirtmek için bu seçeneği kullanın.
+
+ **Her zaman oluştur** İleti kutusu görünmez ve proje, güncel olmayan yapılandırmaya rağmen oluşturulur. Bu seçenek, iletideki bu iletişim kutusunu bir **daha gösterme** kutusunu seçip **Evet** düğmesini seçerek ayarlanır.
+
+ **Hiç derleme** İleti kutusu görünmez ve proje derlenmez. Bu seçenek, iletideki bu iletişim kutusunu bir **daha gösterme** kutusunu seçtiğinizde ayarlanır ve ardından **Hayır** düğmesini seçin.
+
+ **Derlemek Için sor** Bir proje yapılandırmasının güncel olmadığı her seferinde ileti kutusunu görüntüler.
+
+ **Çalıştırıldığında, derleme veya dağıtım hataları oluştuğunda** **Derleme menüsünden bir** derlemeyi başlattığınızda derleme hataları oluşursa, bir ileti görüntülenir. Uygulamayı başlatarak devam edip etmediğini ve her derleme hatası oluştuğunda iletinin görüntülenip görüntülenmeyeceğini belirtebilirsiniz. İletinin görüntülenip görüntülenmeyeceğini ve iletinin görünmeyeceğini belirten davranışı belirtmek için bu seçeneği kullanın.
+
 > [!NOTE]
-> Bu seçenek uygulanır [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] yalnızca projeleri.  
-  
- **Başlatırken uyar**  
- Her bir ileti kutusunda görüntüler, derleme hataları oluşur.  
-  
- **Başlatma**  
- İleti kutusu görünmez ve uygulama çalışmaya değil. Bu seçeneği seçtiğinizde ayarlanır **bu iletişim kutusunu bir daha gösterme** ileti kutusunda onay kutusunu işaretleyin ve ardından **Hayır** düğmesi.  
-  
- **Eski sürümü Başlat**  
- İleti kutusu görünmez ve yeni oluşturulmuş bir uygulama sürümüne çalışmaya değil. Bu seçeneği seçtiğinizde ayarlanır **bu iletişim kutusunu bir daha gösterme** ileti kutusunda onay kutusunu işaretleyin ve ardından **Evet** düğmesi.  
-  
- **Yeni çözümleri şu anda seçili projeyi başlangıç projesi olarak kullanın.**  
- Bu onay kutusu seçili değilse, yeni çözümleri şu anda seçili projeyi başlangıç projesi olarak kullanın.  
-  
- **MSBuild proje oluşturması çıkış ayrıntısı**  
- Ne kadar bilgi görünür belirler **çıkış** derleme için penceresi.  
-  
- **MSBuild proje derleme günlük dosyası ayrıntısı**  
+> Bu seçenek yalnızca [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projelerine yöneliktir.
+
+ **Başlatmak Için sor** Derleme hataları her gerçekleştiğinde bir ileti kutusu görüntüler.
+
+ **Başlatma** İleti kutusu görünmez ve uygulama başlatılmaz. Bu seçenek, ileti kutusunda **Bu iletişim kutusunu bir daha gösterme** onay kutusunu seçtiğinizde ayarlanır ve ardından **Hayır** düğmesini seçin.
+
+ **Eski sürümü Başlat** İleti kutusu görünmez ve uygulamanın yeni oluşturulan sürümü başlatılmaz. Bu seçenek, ileti kutusunda **Bu iletişim kutusunu bir daha gösterme** onay kutusunu seçip **Evet** düğmesini seçerek ayarlanır.
+
+ **Yeni çözümler için, seçili olan projeyi başlangıç projesi olarak kullanın** Bu onay kutusu işaretliyse, yeni çözümler seçili olan projeyi başlangıç projesi olarak kullanır.
+
+ **MSBuild proje derlemesi çıkış ayrıntı düzeyi** Derleme için **Çıkış** penceresinde ne kadar bilgi görüntüleneceğini belirler.
+
+ **MSBuild proje derleme günlük dosyası ayrıntı düzeyi**
  > [!NOTE]
-> Bu seçenek yalnızca Visual C++ projeleri için geçerlidir.  
-  
- Şu konumdadır derleme günlüğü dosyası için ne kadar bilgi yazılacağını belirler \\... \\ *ProjectName*\Debug\\*ProjectName*. günlük.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+> Bu seçenek yalnızca görsel C++ projeler için geçerlidir.
+
+ @No__t_0 konumunda bulunan derleme günlüğü dosyasına ne kadar bilgi yazıldığını belirler... \\*ProjectName*\debug \\*ProjectName*. log.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Derleme ve Oluşturma](../../ide/compiling-and-building-in-visual-studio.md)

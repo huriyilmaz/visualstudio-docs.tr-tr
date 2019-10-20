@@ -6,70 +6,70 @@ ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: d11803e7-f81a-41a2-a145-ba494a45cc93
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 05c32bfc6c3220739c433ef519b696953bc8b1b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a9e82cf8387756cb4a4abe8b4c41d082485cdcdc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68190328"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656287"
 ---
-# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Nasıl yapılır: XML Şema Tasarımcısını XML Değişmez Değerleri ile Kullanma
+# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Nasıl yapılır: XML şema tasarımcısını XML değişmez değerleri ile kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konuda, bir Visual Basic projesinde sabit değeri bir XML ile ilişkili bir şeması görüntülemeyi açıklar.  
-  
-### <a name="to-create-a-new-visual-basic-console-application-project"></a>Yeni bir Visual Basic konsol uygulaması projesi oluşturmak için  
-  
-1. Visual Studio 2010'u başlatın.  
-  
-2. Gelen **dosya** menüsünde **yeni**ve ardından **proje**. **Yeni Proje** iletişim kutusu görünür. İçin **proje türleri**seçin **diğer diller** seçip **Visual Basic**. İçin **şablonları**, konsol uygulaması'nı seçin. Yazarak `XMLLiterals` içinde **adı** alan ve bir proje konumda **konumu** alan.           **Tamam**'ı tıklatın.  
-  
-     Yeni poject oluşturulur. XMLLiterals proje bir Visual Basic kaynak dosyası, Module1.vb içeriyor.  
-  
-### <a name="to-add-an-existing-xsd-file-to-the-project"></a>Mevcut bir XSD dosyası projeye eklemek için  
-  
-1. Açık bir yeni metin dosyası içinde Notepad.Copy XML şema örnek koddan [satınalma siparişi şeması](../xml-tools/sample-xsd-file-simple-schema.md) dosyasına yapıştırın.  
-  
-2. Dosya PurchaseOrderSchema.xsd ada sahip bir konuma kaydedin.  
-  
-3. Çözüm Gezgini'nde proje adına sağ tıklayın, seçin **Ekle**ve ardından **mevcut öğe...** . **AddExisting öğesi** iletişim kutusu görüntülenir. PurchaseOrderSchema.xsd dosyasına gidin, seçin ve ardından **Ekle**.  
-  
-     XMLLiterals proje artık iki dosya içerir: Module1.vb ve PurchaseOrderSchema.xsd.  
-  
-### <a name="to-add-visual-basic-code-with-an-xml-literal-based-on-the-xsd-file-included-in-the-project"></a>Projeye dahil XSD dosyası göre bir XML değişmez değer, Visual Basic kodunu eklemek için  
-  
-1. Module1.vb dosyasındaki kodu aşağıdaki kodla değiştirin:  
-  
-    ```  
-    Imports <xmlns:ns="http://tempuri.org/PurchaseOrderSchema.xsd">  
-  
-    Module Module1  
-        Sub Main()  
-  
-            Dim XMLLiteral = <ns:PurchaseOrder OrderDate="1900-01-01">  
-                                 <ns:ShipTo country="US">  
-                                     <ns:name>name1</ns:name>  
-                                     <ns:street>street1</ns:street>  
-                                     <ns:city>city1</ns:city>  
-                                     <ns:state>state1</ns:state>  
-                                     <ns:zip>1</ns:zip>  
-                                 </ns:ShipTo>  
-                                 <ns:BillTo country="US">  
-                                     <ns:name>name1</ns:name>  
-                                     <ns:street>street1</ns:street>  
-                                     <ns:city>city1</ns:city>  
-                                     <ns:state>state1</ns:state>  
-                                     <ns:zip>1</ns:zip>  
-                                 </ns:BillTo>  
-                             </ns:PurchaseOrder>  
-  
-        End Sub  
-    End Module  
-    ```  
-  
-2. Herhangi bir XML değişmez değeri ya da bir XML ad alanı alma XML düğümünü sağ tıklatın ve seçin **şema Gezgini'nde Göster**.  
-  
-     XML şema Gezgini'ni ayarlama XML değişmez değer assotiated XML şeması ile sahip bir Visual Basic dosyası ile yan yana görüntülenir.
+Bu konu, bir Visual Basic projesindeki bir XML sabit değeri ile ilişkili bir şemanın nasıl görüntüleneceğini açıklamaktadır.
+
+### <a name="to-create-a-new-visual-basic-console-application-project"></a>Yeni bir Visual Basic konsol uygulaması projesi oluşturmak için
+
+1. Visual Studio 2010 ' i başlatın.
+
+2. **Dosya** menüsünde **Yeni**' yi ve ardından **Proje**' yi seçin. **Yeni proje** iletişim kutusu görüntülenir. **Proje türleri**Için **diğer diller '** i seçin ve ardından **Visual Basic**' yi seçin. **Şablonlar**Için konsol uygulaması ' nı seçin. Ardından **ad** alanına `XMLLiterals` ve **konum** alanına proje konumunu yazın. **Tamam**'a tıklayın.
+
+     Yeni poject oluşturulur. Xmlsabit değerler projesi bir Visual Basic kaynak dosyası (Module1. vb) içerir.
+
+### <a name="to-add-an-existing-xsd-file-to-the-project"></a>Projeye var olan bir XSD dosyasını eklemek için
+
+1. Not defteri 'nde yeni bir metin dosyası açın. XML şeması örnek kodunu, [satın alma siparişi şemasından](../xml-tools/sample-xsd-file-simple-schema.md) kopyalayın ve dosyasına yapıştırın.
+
+2. Dosyayı PurchaseOrderSchema. xsd adlı bir konuma kaydedin.
+
+3. Çözüm Gezgini, projenin adına sağ tıklayın, **Ekle**' yi seçin ve ardından **var olan öğe... öğesini**seçin. **Addexıting öğesi** iletişim kutusu görüntülenir. PurchaseOrderSchema. xsd dosyasına gidin, seçin ve ardından **Ekle**' ye tıklayın.
+
+     Xmlharfler projesi artık iki dosya içerir: Module1. vb ve PurchaseOrderSchema. xsd.
+
+### <a name="to-add-visual-basic-code-with-an-xml-literal-based-on-the-xsd-file-included-in-the-project"></a>Projeye dahil olan XSD dosyasını temel alan bir XML sabit değeri ile Visual Basic kodu eklemek için
+
+1. Module1. vb dosyasındaki kodu aşağıdaki kodla değiştirin:
+
+    ```
+    Imports <xmlns:ns="http://tempuri.org/PurchaseOrderSchema.xsd">
+
+    Module Module1
+        Sub Main()
+
+            Dim XMLLiteral = <ns:PurchaseOrder OrderDate="1900-01-01">
+                                 <ns:ShipTo country="US">
+                                     <ns:name>name1</ns:name>
+                                     <ns:street>street1</ns:street>
+                                     <ns:city>city1</ns:city>
+                                     <ns:state>state1</ns:state>
+                                     <ns:zip>1</ns:zip>
+                                 </ns:ShipTo>
+                                 <ns:BillTo country="US">
+                                     <ns:name>name1</ns:name>
+                                     <ns:street>street1</ns:street>
+                                     <ns:city>city1</ns:city>
+                                     <ns:state>state1</ns:state>
+                                     <ns:zip>1</ns:zip>
+                                 </ns:BillTo>
+                             </ns:PurchaseOrder>
+
+        End Sub
+    End Module
+    ```
+
+2. XML sabit değerinde bir xml düğümüne veya XML ad alanı içeri aktarma öğesine sağ tıklayın ve **şema Gezgininde göster**' i seçin.
+
+     XML şema Gezgini, XML şema kümesi ile XML sabit değeri olan bir Visual Basic dosyası ile yan yana görüntülenir.

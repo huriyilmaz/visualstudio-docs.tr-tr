@@ -9,49 +9,49 @@ helpviewer_keywords:
 - classes [Visual Studio], designing
 ms.assetid: 381481a2-87f4-475b-a780-18e85c8af350
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ddd4ae3ed3a1a2a239c0efac0f25d04f589f8fa5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 03fae58a902da5bc9432c9ed2ed587dd7ddb4f5a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437532"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665765"
 ---
 # <a name="designing-classes-and-types-class-designer"></a>Sınıfları ve Türleri Tasarlama (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanarak **Sınıf Tasarımcısı**, yalnızca sınıfları ve türleri görselleştirebilir değil, ancak de tasarlayın. Aşağıdaki konularda, bunun nasıl yapılacağı açıklanmaktadır.  
-  
+**Sınıf Tasarımcısı**kullanarak, sınıfları ve türleri görselleştirip de tasarlayamazsınız. Aşağıdaki konularda bunun nasıl yapılacağı açıklanır.
+
 > [!NOTE]
-> Sınıf Tasarımcısı ile çalışırken, güvenlik bağlamı için uygun kodu doğrulamak için yürütmeden önce yaydığı kod incelemeniz gerekir.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Sınıf Tasarımcısı Kullanarak Tür Oluşturma](../ide/how-to-create-types-by-using-class-designer.md)  
-  
- Sınıf diyagramına bir türü oluşturmak için nasıl kullanılacağını açıklar.  
-  
- [Nasıl yapılır: Türler Arasında Devralma Oluşturma (Sınıf Tasarımcısı)](../ide/how-to-create-inheritance-between-types-class-designer.md)  
-  
- Türler arasında devralma ilişkisi tanımlanacağını açıklar.  
-  
- [Nasıl yapılır: Türler Arasında İlişkilendirme Oluşturma (Sınıf Tasarımcısı)](../ide/how-to-create-associations-between-types-class-designer.md)  
-  
- Sınıf diyagramında ilişkilerini tanımlamayı açıklar.  
-  
- [Nasıl yapılır: Koleksiyon İlişkilendirmesini Görselleştirme (Sınıf Tasarımcısı)](../ide/how-to-visualize-a-collection-association-class-designer.md)  
-  
- Sınıf Tasarımcısı'nda koleksiyon ilişkilendirmesini tanımlanacağını açıklar.  
-  
- [Tür Üyeleri Oluşturma ve Yapılandırma (Sınıf Tasarımcısı)](../ide/creating-and-configuring-type-members-class-designer.md)  
-  
- Bilgi ve oluşturma ve tür üyeleri Sınıf Tasarımcısı ile yapılandırma hakkındaki konulara bağlantılar sağlar.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [Türleri ve İlişkilendirmeleri Görüntüleme (Sınıf Tasarımcısı)](../ide/viewing-types-and-relationships-class-designer.md)  
-  
- [Sınıfları ve Türleri Yeniden Düzenleme (Sınıf Tasarımcısı)](../ide/refactoring-classes-and-types-class-designer.md)  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+> Sınıf Tasarımcısı çalışırken, kodun güvenlik bağlamına uygun olduğunu doğrulamak için yürütmeden önce yaydığı kodu incelemeniz gerekir.
+
+## <a name="in-this-section"></a>Bu Bölümde
+ [Nasıl Yapılır: Sınıf Tasarımcısı Kullanarak Tür Oluşturma](../ide/how-to-create-types-by-using-class-designer.md)
+
+ Bir tür oluşturmak için sınıf diyagramının nasıl kullanılacağını açıklar.
+
+ [Nasıl Yapılır: Türler Arasında Devralma Oluşturma (Sınıf Tasarımcısı)](../ide/how-to-create-inheritance-between-types-class-designer.md)
+
+ Türler arasında bir devralma ilişkisinin nasıl tanımlanacağını açıklar.
+
+ [Nasıl Yapılır: Türler Arasında İlişkilendirme Oluşturma (Sınıf Tasarımcısı)](../ide/how-to-create-associations-between-types-class-designer.md)
+
+ Sınıf diyagramında ilişkilerin nasıl tanımlanacağını açıklar.
+
+ [Nasıl Yapılır: Koleksiyon İlişkilendirmesini Görselleştirme (Sınıf Tasarımcısı)](../ide/how-to-visualize-a-collection-association-class-designer.md)
+
+ Sınıf Tasarımcısı bir koleksiyon ilişkisinin nasıl tanımlanacağını açıklar.
+
+ [Tür Üyeleri Oluşturma ve Yapılandırma (Sınıf Tasarımcısı)](../ide/creating-and-configuring-type-members-class-designer.md)
+
+ Sınıf Tasarımcısı tür üyelerini oluşturma ve yapılandırma hakkında bilgi ve bağlantılar sağlar.
+
+## <a name="related-sections"></a>İlgili Bölümler
+ [Türleri ve İlişkilendirmeleri Görüntüleme (Sınıf Tasarımcısı)](../ide/viewing-types-and-relationships-class-designer.md)
+
+ [Sınıfları ve Türleri Yeniden Düzenleme (Sınıf Tasarımcısı)](../ide/refactoring-classes-and-types-class-designer.md)
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Sınıf Diyagramları ile Çalışma (Sınıf Tasarımcısı)](../ide/working-with-class-diagrams-class-designer.md)

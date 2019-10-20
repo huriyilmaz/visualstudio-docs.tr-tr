@@ -12,56 +12,56 @@ ms.assetid: 989124bc-1a86-41f7-b37d-8f9e54dd4f0b
 dev_langs:
 - CSharp
 - VB
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c39518c03d1a599dbe9eecac3d609343b7394313
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c2987aa1aca4132b3d134a65dec94726ee0349e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822607"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665272"
 ---
-# <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Kodu bir web performans testi için özel doğrulama kuralı
+# <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Web performans testi için özel doğrulama kuralı kodu oluşturma
 
-Kendi doğrulama kuralları oluşturabilirsiniz. Bunu yapmak için kendi kural sınıfı bir doğrulama kuralı sınıfından türetilir. Doğrulama kuralları türetilen <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> temel sınıfı.
+Kendi doğrulama kurallarınızı oluşturabilirsiniz. Bunu yapmak için, bir doğrulama kuralı sınıfından kendi kural sınıfınızı türetirsiniz. Doğrulama kuralları <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> temel sınıfından türetilir.
 
 > [!NOTE]
-> Özel ayıklama kuralları oluşturabilirsiniz. Daha fazla bilgi için [özel kod ve yük testleri için eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md).
+> Ayrıca, özel ayıklama kuralları da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Yük testleri için özel kod ve eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-create-custom-validation-rules"></a>Özel doğrulama kurallarını oluşturmak için
+## <a name="to-create-custom-validation-rules"></a>Özel doğrulama kuralları oluşturmak için
 
-1. Bir Test içeren bir web performans testi projesi açın.
+1. Web performans testi içeren bir test projesi açın.
 
-2. (İsteğe bağlı) Doğrulama kuralınızı depolanacağı ayrı bir sınıf kitaplığı projesi oluşturun.
+2. Seçim Doğrulama kuralınızı depolayacağınız ayrı bir sınıf kitaplığı projesi oluşturun.
 
     > [!IMPORTANT]
-    > Sınıfı, testlerinizi bulunan aynı projede oluşturabilirsiniz. Ancak, kural yeniden kullanmak isterseniz, kural depolanacağı ayrı bir sınıf kitaplığı projesi oluşturun en iyisidir. Ayrı bir proje oluşturursanız, bu yordam isteğe bağlı adımları tamamlamanız gerekir.
+    > Bu sınıfı, testlerinizin bulunduğu projede oluşturabilirsiniz. Ancak, kuralı yeniden kullanmak istiyorsanız, kuralınızı depolayabileceği ayrı bir sınıf kitaplığı projesi oluşturmak daha iyidir. Ayrı bir proje oluşturursanız, bu yordamdaki isteğe bağlı adımları tamamlamalısınız.
 
-3. (İsteğe bağlı) Sınıf kitaplığı projesinde Microsoft.VisualStudio.QualityTools.WebTestFramework DLL'ye bir başvuru ekleyin.
+3. Seçim Sınıf kitaplığı projesinde, Microsoft. VisualStudio. QualityTools. WebTestFramework DLL dosyasına bir başvuru ekleyin.
 
-4. Türetilen bir sınıf oluşturmanız <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> sınıfı. Uygulama <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.Validate*> ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.RuleName*> üyeleri.
+4. @No__t_0 sınıfından türeten bir sınıf oluşturun. @No__t_0 ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.RuleName*> üyelerini uygulayın.
 
-5. (İsteğe bağlı) Yeni sınıf kitaplığı projesi oluşturun.
+5. Seçim Yeni sınıf kitaplığı projesi oluşturun.
 
-6. (İsteğe bağlı) Test projesinde özel doğrulama kuralı içeren sınıf kitaplığı projesine bir başvuru ekleyin.
+6. Seçim Test projesinde, özel doğrulama kuralını içeren sınıf kitaplığı projesine bir başvuru ekleyin.
 
-7. Bir web performans testinde Test projesinde, açık **Web Performans Testi Düzenleyicisi**.
+7. Test projesinde, **Web Performans Testi Düzenleyicisi**bir Web başarım testi açın.
 
-8. Bir web performans testi isteği için özel doğrulama kuralı eklemek için bir istek ve select sağ **doğrulama kuralı Ekle**.
+8. Özel doğrulama kuralını bir Web performans testi isteğine eklemek için, bir isteğe sağ tıklayın ve **doğrulama kuralı ekle**' yi seçin.
 
-     **Doğrulama kuralı Ekle** iletişim kutusu görüntülenir. Özel doğrulama kuralınızı göreceğiniz **bir kural seçin** birlikte önceden tanımlanmış doğrulama kuralları listesi. Özel doğrulama kuralınızı seçin ve ardından **Tamam**.
+     **Doğrulama kuralı ekle** iletişim kutusu görüntülenir. Özel doğrulama kuralınızı **bir kural seçin** listesinde, önceden tanımlanmış doğrulama kurallarıyla birlikte görürsünüz. Özel doğrulama kuralınızı seçin ve ardından **Tamam**' ı seçin.
 
 9. Web performans testinizi çalıştırın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod, özel doğrulama kuralı uygulanışı gösterilmektedir. Bu doğrulama kuralı önceden tanımlanmış etiketi gerekli doğrulama kuralı davranışını taklit eder. Bu örnekte, kendi özel doğrulama kuralları için bir başlangıç noktası olarak kullanın.
+Aşağıdaki kod, özel bir doğrulama kuralının bir uygulamasını gösterir. Bu doğrulama kuralı, önceden tanımlanmış gerekli etiket doğrulama kuralının davranışını taklit eder. Bu örneği kendi özel doğrulama kurallarınız için bir başlangıç noktası olarak kullanın.
 
 > [!WARNING]
-> Özel Doğrulayıcı sağlayıcısı için kodunda genel özellikleri null değer olamaz.
+> Özel bir doğrulayıcı için koddaki ortak özellikler null değerlere sahip olamaz.
 
 ```csharp
 using System;

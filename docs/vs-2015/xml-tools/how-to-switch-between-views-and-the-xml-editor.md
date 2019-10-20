@@ -1,40 +1,40 @@
 ---
-title: 'Nasıl yapılır: Görünümler ile XML Düzenleyicisi arasında geçiş yapma | Microsoft Docs'
+title: 'Nasıl yapılır: görünümler ve XML Düzenleyicisi arasında geçiş yapma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: cb69fbbd-d99c-439e-9498-5df9050f8df0
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c8d396efdc615ae954ef16453c9c5459f0685650
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 28267f705dd9a747d0e3f3ac5dc2869ab7de8f6a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68190351"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656314"
 ---
-# <a name="how-to-switch-between-views-and-the-xml-editor"></a>Nasıl yapılır: Görünümler ile XML Düzenleyicisi Arasında Geçiş Yapma
+# <a name="how-to-switch-between-views-and-the-xml-editor"></a>Nasıl yapılır: görünümler ve XML Düzenleyicisi arasında geçiş yapma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konuda, XML şema Tasarımcısı (XSD Tasarımcısı) görünümler ile XML Düzenleyicisi arasında geçiş yapma gösterilmektedir. Bu örnekte [satınalma siparişi şeması](../xml-tools/sample-xsd-file-simple-schema.md).  
-  
-### <a name="to-switch-between-the-views-and-the-xml-editor"></a>Görünümler ile XML Düzenleyicisi arasında geçiş yapmak için  
-  
-1. Yeni bir XML şema dosyası oluşturma ve düzenleme için adımları [nasıl yapılır: Bir XSD şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).  
-  
-2. İçin XML şema tasarımcısını XML düzenleyicisinden geçiş yapmak için sağ XML Düzenleyicisi'nde herhangi bir yere tıklayın ve seçin **Görünüm Tasarımcısı**.  
-  
-3. Filigran kullanarak grafik görünümüne geçmek için tıklatın **düğümler arasındaki ilişkiyi görmek için graf görünümünü kullanın** başlangıç görünümünde bağlantı.  
-  
-4. Sürükleme `USAddress` graf görünümünü üzerine XML şema gezgininden düğümü. Sağ `USAddress` graf görünümünden ve select düğümünde **içerik modeli görünümünde göster** bağlam menüsünde.  
-  
-     İçerik modeli görünümünü ayrıntılarıyla `USAddress` düğümü görüntülenir.  
-  
-5. Araç çubuğunu kullanarak içerik modeli görünümünden başlatmak görünümüne geçmek için XSD araç çubuğundaki Başlat Görüntüle düğmesini tıklatın.  
-  
-6. Kısayol tuşlarını kullanarak görünümler arasında geçiş yapmak için CTRL + 1 başlangıç görünümünde, CTRL + 2 için graf görünümünden ve CTRL + 3 içerik modeli görünümünü basın.  
-  
-7. İçerik modeli görünümünden XML Düzenleyicisi'ne gitmek için düğümünü sağ tıklatın ve seçin **kodu görüntüle** bağlam menüsünde.
+Bu konu başlığı altında, XML şema Tasarımcısı (XSD Designer) görünümleri ve XML Düzenleyicisi arasında nasıl geçiş yapılacağı gösterilmektedir. Bu örnek, [satın alma siparişi şemasını](../xml-tools/sample-xsd-file-simple-schema.md)kullanır.
+
+### <a name="to-switch-between-the-views-and-the-xml-editor"></a>Görünümler ve XML Düzenleyicisi arasında geçiş yapmak için
+
+1. Yeni bir XML şema dosyası oluşturmak ve düzenlemek için [nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
+
+2. XML Düzenleyicisi ' nden XML şema tasarımcısına geçiş yapmak için, XML düzenleyicisinde herhangi bir yere sağ tıklayın ve **Görünüm Tasarımcısı**' nı seçin.
+
+3. Filigranı kullanarak grafik görünümüne geçiş yapmak için, başlangıç görünümündeki düğümler bağlantısı **arasındaki ilişkiyi görmek Için Graf görünümünü kullanın** ' a tıklayın.
+
+4. @No__t_0 düğümünü XML şema Gezgini ' nden grafik görünümüne sürükleyin. Grafik görünümünde `USAddress` düğümüne sağ tıklayın ve bağlam menüsünde **Içerik modeli görünümünde göster** ' i seçin.
+
+     @No__t_0 düğümün ayrıntıları ile Içerik modeli görünümü görüntülenir.
+
+5. Araç çubuğunu kullanarak Içerik modeli görünümünden başlangıç görünümüne geçiş yapmak için, XSD araç çubuğundaki görünümü Başlat düğmesine tıklayın.
+
+6. Kısayol tuşlarını kullanarak görünümler arasında geçiş yapmak için başlangıç görünümü için CTRL + 1, grafik görünümü için CTRL + 2 ve Içerik modeli görünümü için CTRL + 3 tuşlarına basın.
+
+7. Içerik modeli görünümünden XML düzenleyicisine gitmek için düğüme sağ tıklayın ve bağlam menüsünde **kodu görüntüle** ' yi seçin.

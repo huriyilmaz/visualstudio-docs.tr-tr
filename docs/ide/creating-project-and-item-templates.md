@@ -1,5 +1,5 @@
 ---
-title: Projeleri ve dosyaları için şablonlar
+title: Projeler ve dosyalar için şablonlar
 ms.date: 01/02/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,71 +7,71 @@ helpviewer_keywords:
 - templates [Visual Studio], item
 - item templates [Visual Studio]
 - project templates [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 83ac401b67444d4fdd467d5aefeb46bccb5e7e84
-ms.sourcegitcommit: cd21b38eefdea2cdefb53e68e7a30b868e78dd6b
+ms.openlocfilehash: 1590317bf2749cc1aeef8a4c3bfbf2937c8404c7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66037005"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652605"
 ---
 # <a name="project-and-item-templates"></a>Proje ve öğe şablonları
 
-Proje ve öğe şablonları, bazı temel kod ve kendi amaçları için özelleştirebilecekleri yapısı, kullanıcılara vermek yeniden kullanılabilir saptamalar sağlar.
+Proje ve öğe şablonları, kullanıcılara kendi amaçlarına göre özelleştirebilecekleri bazı temel kod ve yapıları sağlayan yeniden kullanılabilir saplamalar sağlar.
 
 ## <a name="visual-studio-templates"></a>Visual Studio şablonları
 
-Bir dizi önceden tanımlanmış proje ve öğe şablonları, Visual Studio ile yüklenir. Bu şablonlar gibi **ASP.NET Web uygulaması** ve **sınıf kitaplığı** yeni bir proje oluştururken seçmek şablonlar kullanılabilir. Öğe şablonları, kod dosyaları, XML dosyaları, HTML sayfaları ve stil sayfalarını gibi görünür **Yeni Öğe Ekle** penceresi.
+Bir dizi önceden tanımlanmış proje ve öğe şablonu, Visual Studio ile birlikte yüklenir. **ASP.NET Web uygulaması** ve **sınıf kitaplığı** şablonları gibi bu şablonlar, yeni bir proje oluşturduğunuzda arasından seçim yapmak için kullanılabilir. Kod dosyaları, XML dosyaları, HTML sayfaları ve stil sayfaları gibi öğe şablonları, **Yeni öğe Ekle** penceresinde görünür.
 
-Bu şablonlar, proje oluşturmaya başlamak için veya mevcut projeleri genişletmek için kullanıcılar için bir başlangıç noktası sağlar. Proje şablonları, belirli proje türü için gerekli dosyaları sağlar, standart derleme başvurularını içerir ve varsayılan proje özellikleri ve derleyici seçeneklerini ayarlayın. Öğe şablonları, birden çok kaynak kodu dosyaları saplama kodla, Tasarımcı bilgi dosyaları ve gömülü kaynaklar belirli dosya uzantısına sahip tek bir boş dosya karmaşıklığı değişebilir.
+Bu şablonlar, kullanıcıların proje oluşturmaya başlaması için bir başlangıç noktası sağlar veya mevcut projeleri genişletir. Proje şablonları, belirli bir proje türü için gereken dosyaları sağlar, standart derleme başvurularını dahil eder ve varsayılan proje özelliklerini ve derleyici seçeneklerini ayarlar. Öğe şablonları, belirli bir dosya uzantısına sahip tek bir boş dosyanın karmaşıklık halinde, saplama kodu, tasarımcı bilgi dosyaları ve katıştırılmış kaynaklarla birden çok kaynak kodu dosyasına sahip olabilir.
 
-Yüklü Şablonlar kullanmak, kendi özel şablonlarınızı yazar veya indirin ve topluluk tarafından oluşturulan şablonlarını kullanın. Daha fazla bilgi için [nasıl yapılır: Proje şablonları oluşturma](../ide/how-to-create-project-templates.md) ve [nasıl yapılır: Öğe şablonları oluşturma](../ide/how-to-create-item-templates.md).
+Yüklü şablonları kullanabilir, kendi özel şablonlarınızı yazabilir veya topluluk tarafından oluşturulan şablonları indirebilir ve kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: proje şablonları oluşturma](../ide/how-to-create-project-templates.md) ve [nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md).
 
-## <a name="contents-of-a-template"></a>Bir şablon içeriği
+## <a name="contents-of-a-template"></a>Şablonun içeriği
 
-Tüm proje ve öğe şablonları, Visual Studio ile yüklenir veya sizin tarafınızdan oluşturulan aynı ilkeleri kullanarak işlev ve benzer içeriğe sahip. Tüm şablonları aşağıdaki öğeleri içerir:
+Tüm proje ve öğe şablonları, Visual Studio ile yüklenip, sizin tarafınızdan oluşturulmuş olsun, aynı ilkeleri kullanarak çalışır ve benzer içeriğe sahiptir. Tüm şablonlar aşağıdaki öğeleri içerir:
 
-- Şablonu kullanıldığında oluşturulan dosyalar. Bu dosyalar, kaynak kodu dosyaları, katıştırılmış kaynaklar, proje dosyaları vb. içerir.
+- Şablon kullanıldığında oluşturulacak dosyalar. Bu dosyalar kaynak kodu dosyalarını, katıştırılmış kaynakları, proje dosyalarını vb. içerir.
 
 ::: moniker range="vs-2017"
 
-- A *.vstemplate* şablondan bir proje veya öğe oluşturmak için ve şablonda görüntülemek için gerekli meta veriler içeren dosya **yeni proje** ve **Add New Item** Windows.
+- Şablondan bir proje veya öğe oluşturmak ve şablonu **Yeni projede** göstermek ve **Yeni öğe pencereleri eklemek** için gereken meta verileri içeren bir *. vstemplate* dosyası.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- A *.vstemplate* şablondan bir proje veya öğe oluşturmak ve şablonu görüntülemek için gerekli meta veriler içeren dosya **yeni bir proje oluşturma** sayfası veya **Add New Item** iletişim kutusu.
+- Şablondan bir proje veya öğe oluşturmak ve şablonu **Yeni proje oluştur** sayfasında veya **Yeni öğe Ekle** iletişim kutusunda göstermek için gereken meta verileri içeren bir *. vstemplate* dosyası.
 
 ::: moniker-end
 
-   Hakkında daha fazla bilgi için *.vstemplate* dosyaları görmek [şablon etiketleri](template-tags.md) ve [şablon parametreleri](../ide/template-parameters.md).
+   *. Vstemplate* dosyaları hakkında daha fazla bilgi için bkz. [Şablon Etiketleri](template-tags.md) ve [şablon parametreleri](../ide/template-parameters.md).
 
-Ne zaman bu dosyaları sıkıştırılır içine bir *.zip* dosya ve doğru klasöre yerleştirin, Visual Studio otomatik olarak aşağıdaki konumlarda görüntüler:
+Bu dosyalar bir *. zip* dosyasında sıkıştırıldığında ve doğru klasöre koyduğunuzda, Visual Studio bunları otomatik olarak aşağıdaki yerlerde görüntüler:
 
 ::: moniker range="vs-2017"
 
-- Proje şablonları görünür **yeni proje** penceresi.
+- Proje şablonları **Yeni proje** penceresinde görünür.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- Proje şablonları görünmez **yeni bir proje oluşturma** sayfası.
+- Proje şablonları **Yeni proje oluştur** sayfasında görünür.
 
 ::: moniker-end
 
-- Öğe şablonları görünür **Yeni Öğe Ekle** penceresi.
+- Öğe şablonları **Yeni öğe Ekle** penceresinde görünür.
 
-Şablon klasörleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: Şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+Şablon klasörleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Proje şablonları oluşturma](../ide/how-to-create-project-templates.md)
-- [Nasıl yapılır: Öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
-- [Şablon etiketleri](template-tags.md)
+- [Nasıl yapılır: proje şablonları oluşturma](../ide/how-to-create-project-templates.md)
+- [Nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
+- [Şablon Etiketleri](template-tags.md)
 - [Şablon parametreleri](../ide/template-parameters.md)
 - [Şablonları özelleştirme](../ide/customizing-project-and-item-templates.md)
-- [Visual Studio şablonları NuGet paketleri](/nuget/visual-studio-extensibility/visual-studio-templates)
+- [Visual Studio şablonlarındaki NuGet paketleri](/nuget/visual-studio-extensibility/visual-studio-templates)

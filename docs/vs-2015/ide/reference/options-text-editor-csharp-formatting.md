@@ -23,40 +23,40 @@ helpviewer_keywords:
 - Text Editor Options dialog box, formatting
 ms.assetid: 5a7bb668-1d0c-4ffe-9508-24592813162e
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f75d2b73946a006057945b1e68f018a358e38279
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 5371b7180aed462910a57daeb9bf5d43f2ecfedb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674195"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662282"
 ---
 # <a name="options-text-editor-c-formatting"></a>Seçenekler, Metin Düzenleyici, C++, Biçimlendirme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kullanım **biçimlendirme** özellik sayfası iletişim kutusu için Kod Düzenleyicisi'nde kod biçimlendirme seçeneklerini ayarlayın. Bu iletişim kutusuna erişmek için tıklayın **seçenekleri** üzerinde **Araçları** menüsünü genişletin **metin düzenleyici**, genişletin **C#** ve ardından  **Biçimlendirme**.  
-  
+Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için özellik sayfasını **biçimlendirme** iletişim kutusunu kullanın. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **metin düzenleyici** **C#** ' yi genişletin ve ardından **biçimlendirme**' ye tıklayın.
+
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="general-settings"></a>Genel ayarlar  
- Genel ayarlar, Kod Düzenleyicisi kod için biçimlendirme seçeneklerini nasıl geçerlidir etkiler.  
-  
-## <a name="uielement-list"></a>UIElement Listesi  
-  
-|Etiketle|Açıklama|  
-|-----------|-----------------|  
-|**Otomatik olarak tamamlanmış deyimi Biçimlendir;**|Seçili olduğunda, seçili Kod Düzenleyicisi için biçimlendirme seçeneklerine göre tamamlanma deyimleri biçimlendirir. Kod Düzenleyicisi'deyimleri alter istemiyorsanız bu kutusunun işaretini kaldırın.|  
-|**Otomatik olarak tamamlandı bloğu Biçimlendir}**|Bu onay kutusu seçildiğinde, biçimleri kod blokları için Kod Düzenleyicisi kod bloğu tamamlar tamamlamaz seçili biçimlendirme seçeneklerine göre. Kod Düzenleyicisi'ni blokları alter istemiyorsanız bu kutusunun işaretini kaldırın.|  
-|**Yapıştırırken girinti Ayarla**|Bu onay kutusu seçildiğinde, içine kod için Kod Düzenleyicisi seçilen biçimlendirme seçenekleri uyacak şekilde Düzenleyicisi yapıştırılan metnin biçimlendirir. Clear istemiyorsanız, bu kutu yapıştırılan değiştirilecek metin.|  
-  
-## <a name="preview-window"></a>Önizleme penceresi  
- **Girinti**, **yeni satırlar**, **aralığı**, ve **sarmalama** seçenekleri bölmeleri Önizleme penceresini görüntüleyin. Önizleme penceresini her seçeneği etkisini gösterir. Önizleme penceresini kullanmak için biçimlendirme seçeneği seçin. Önizleme penceresini seçeneği örneği gösterilmektedir. Ayarı değiştirdiğinizde, seçin veya bir onay kutusunu temizleyin, örneğin, Önizleme penceresini yeni ayar etkisini göstermek için güncelleştirir.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Girinti seçenekleri üzerinde **sekmeleri** her bir dilin sayfaları yalnızca belirlemek bir satırın sonunda ENTER tuşuna bastığınızda Kod düzenleyicisinde imleci burada yerleştirir. Girinti seçenekleri altında **biçimlendirme** dosyaya kod yapıştırdığınızda kod otomatik olarak, örneğin, biçimlendirildiğinde uygulamak **yapıştırırken girinti ayarlamak** seçildiğinde ve ne zaman edilen blok biçimlendirilmiş el ile yazılır.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="general-settings"></a>Genel ayarlar
+ Genel ayarlar, kod düzenleyicisinin kod için biçimlendirme seçeneklerini nasıl uygulayacağını etkiler.
+
+## <a name="uielement-list"></a>UIElement Listesi
+
+|Etiketle|Açıklama|
+|-----------|-----------------|
+|**Tamamlandı ifadesinin üzerinde otomatik olarak Biçimlendir;**|Seçildiğinde, kod Düzenleyicisi için seçilen biçimlendirme seçeneklerine göre, deyimleri tamamlanma aşamasında biçimlendirir. Kod Düzenleyicisi 'nin alter deyimlerini istemiyorsanız bu kutuyu temizleyin.|
+|**Tamamlandı bloğunu} tarihinde otomatik olarak Biçimlendir**|Seçildiğinde, kod bloğunu tamamladıktan hemen sonra kod Düzenleyicisi için seçilen biçimlendirme seçeneklerine göre kod bloklarını biçimlendirir. Kod düzenleyicisinin blokları değiştirmesini istemiyorsanız bu kutuyu temizleyin.|
+|**Yapıştırırken girintiyi ayarla**|Seçildiğinde kod düzenleyicisine yapıştırılan metni kod Düzenleyicisi için seçilen biçimlendirme seçeneklerine uyacak şekilde biçimlendirir. Yapıştırılan metnin değiştirilmesini istemiyorsanız bu kutuyu temizleyin.|
+
+## <a name="preview-window"></a>Önizleme penceresi
+ **Girintileme**, **yeni satırlar**, **aralıklar**ve **kaydırma** seçenekleri bölmeleri, her biri bir önizleme penceresi görüntüler. Önizleme penceresi her bir seçeneğin etkisini gösterir. Önizleme penceresini kullanmak için bir biçimlendirme seçeneği belirleyin. Önizleme penceresinde seçilen seçeneğe bir örnek gösterilir. Ayarı değiştirdiğinizde, örneğin, bir onay kutusunu seçtiğinizde veya temizlediğinizde, Yeni ayarın etkisini göstermek için Önizleme penceresi güncellenir.
+
+## <a name="remarks"></a>Açıklamalar
+ Her dilin **Sekmeler** sayfalarındaki girintileme seçenekleri yalnızca, bir SATıRıN sonunda ENTER tuşuna bastığınızda yalnızca kod düzenleyicisinin işaretçiyi nereye yerleştirdiği belirlenir. **Biçimlendirme** ' nin altındaki girintileme seçenekleri kod otomatik olarak biçimlendirildiğinde, örneğin, **Yapıştırma sırasında girinti ayarlama** seçildiğinde ve biçimlendirilmekte olan blok el ile yazıldığında kod, dosyaya yapıştırdığınızda geçerlidir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Genel, Ortam, Seçenekler İletişim Kutusu](../../ide/reference/general-environment-options-dialog-box.md)

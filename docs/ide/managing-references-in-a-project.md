@@ -16,23 +16,23 @@ helpviewer_keywords:
 - namespaces [Visual Studio], referencing
 - COM components, referencing
 - objects [Visual Studio], referencing
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77b52e66d0278d7e9f8446fe728cca285c8418fa
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 06235439fdff952225fe3aafea9f5354a27cb0a3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787630"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658429"
 ---
 # <a name="manage-references-in-a-project"></a>Bir projedeki başvuruları yönetme
 
 Bir dış bileşene veya bağlı hizmete karşı kod yazmadan önce, projenizin bir başvurusu içermesi gerekir. Başvuru temelde, Visual Studio 'Nun bileşeni veya hizmeti bulması için gereken bilgileri içeren bir proje dosyasındaki giriştir.
 
-Başvuru eklemek için, **Çözüm Gezgini** ' deki **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. Ayrıca, proje düğümüne sağ tıklayıp**başvuru** **Ekle** > ' yi seçebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Başvuruları](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)ekleyin veya kaldırın.
+Başvuru eklemek için, **Çözüm Gezgini** ' deki **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. Proje düğümüne sağ tıklayıp  > **başvuru** **Ekle** ' yi de seçebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: başvuruları ekleme veya kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
 
 ![Visual C 'de başvuru ekleme&#43;&#43;](../ide/media/vs2015_cpp_add_reference.png)
 
@@ -80,7 +80,7 @@ Uygulamanız tarafından başvurulan Uzantı SDK 'sının desteklenmediğini bel
 
 1. Projede hataya neden olan **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
-1. **Windows** sekmesine ve sonra **Uzantılar** alt sekmesine tıklayın ve ardından eski Uzantı SDK 'larının onay kutularının Işaretini kaldırın ve yeni uzantı SDK 'larının onay kutularını işaretleyin.           **Tamam**'ı tıklatın.
+1. **Windows** sekmesine ve sonra **Uzantılar** alt sekmesine tıklayın ve ardından eski Uzantı SDK 'larının onay kutularının Işaretini kaldırın ve yeni uzantı SDK 'larının onay kutularını işaretleyin. **Tamam**'a tıklayın.
 
 ## <a name="add-a-reference-at-design-time"></a>Tasarım zamanında başvuru ekleme
 
@@ -92,16 +92,16 @@ Projenizdeki bir derlemeye başvuru yaptığınızda, Visual Studio derlemeyi a�
 
 > [!NOTE]
 > - Tüm projeler **mscorlib**'e örtük bir başvuru içerir.
-> - Tüm projeler, başvurular listesinden kaldırılsa `System.Core` `System.Core` bile, için örtük bir başvuru içerir.
-> - Visual Basic projeler için <xref:Microsoft.VisualBasic>örtük bir başvuru içerir.
+> - Tüm projeler, `System.Core` başvurular listesinden kaldırılsa bile, `System.Core` için örtük bir başvuru içerir.
+> - Visual Basic projeler, <xref:Microsoft.VisualBasic> için örtük bir başvuru içerir.
 
 ## <a name="references-to-shared-components-at-run-time"></a>Çalışma zamanında paylaşılan bileşenlere başvurular
 
-Çalışma zamanında, bileşenlerin ya projenin çıkış yolunda ya da genel derleme önbelleğinde (GAC) olması gerekir. Proje, bu konumlardan birinde olmayan bir nesneye başvuru içeriyorsa, projeyi oluşturduğunuzda projenin çıkış yoluna başvuruyu kopyalamanız gerekir. Özelliği <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> , bu kopyanın yapılıp yapılmayacağını belirtir. Değer **true**ise, projeyi oluşturduğunuzda başvuru proje dizinine kopyalanır. Değer **false**ise, başvuru kopyalanmaz.
+Çalışma zamanında, bileşenlerin ya projenin çıkış yolunda ya da genel derleme önbelleğinde (GAC) olması gerekir. Proje, bu konumlardan birinde olmayan bir nesneye başvuru içeriyorsa, projeyi oluşturduğunuzda projenin çıkış yoluna başvuruyu kopyalamanız gerekir. @No__t_0 özelliği, bu kopyanın yapılıp yapılmayacağını belirtir. Değer **true**ise, projeyi oluşturduğunuzda başvuru proje dizinine kopyalanır. Değer **false**ise, başvuru kopyalanmaz.
 
-GAC 'de kayıtlı bir özel bileşene başvuru içeren bir uygulama dağıtırsanız, bu <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> ayar ne olursa olsun bileşen uygulamayla birlikte dağıtılmaz. Visual Studio 'nun önceki sürümlerinde, derlemenin dağıtılmasını sağlamak için bir <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> başvuru üzerinde özelliğini ayarlayabilirsiniz. Şimdi, derlemeyi \bin klasörüne el ile eklemeniz gerekir. Bu, tüm özel kodu scrutlı 'in altına koyar ve alışık olduğunuz özel kodu yayımlama riskini azaltır.
+GAC 'de kayıtlı bir özel bileşene başvuru içeren bir uygulama dağıtırsanız, bileşen <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> ayarından bağımsız olarak uygulamayla dağıtılmaz. Visual Studio 'nun önceki sürümlerinde, derlemenin dağıtıldığından emin olmak için bir başvuru üzerinde <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> özelliğini ayarlayabilirsiniz. Şimdi, derlemeyi \bin klasörüne el ile eklemeniz gerekir. Bu, tüm özel kodu scrutlı 'in altına koyar ve alışık olduğunuz özel kodu yayımlama riskini azaltır.
 
-Varsayılan olarak, <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> derleme veya bileşen genel derleme önbelleğiyle veya bir çerçeve bileşeni ise, özelliği **false** olarak ayarlanır. Aksi takdirde, değer **true**olarak ayarlanır. Projeden projeye başvurular her zaman **true**olarak ayarlanır.
+Varsayılan olarak, derleme veya bileşen genel derleme önbelleğiyle veya bir Framework bileşeni ise, <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> özelliği **false** olarak ayarlanır. Aksi takdirde, değer **true**olarak ayarlanır. Projeden projeye başvurular her zaman **true**olarak ayarlanır.
 
 ## <a name="reference-a-project-or-assembly-that-targets-a-different-version-of-net"></a>.NET 'in farklı bir sürümünü hedefleyen bir proje veya derlemeye başvuru
 
@@ -113,7 +113,7 @@ Daha fazla bilgi için bkz. [Çerçeve hedefleme genel bakış](../ide/visual-st
 
 Projeden projeye başvurular, derlemeler içeren projelere referanslardır; proje başvurularını başvuru Yöneticisi iletişim kutusunun **Projeler** sekmesini kullanarak eklersiniz. Visual Studio, projenin yolunu verildiğinde bir derlemeyi bulabilir.
 
-Derleme üreten bir projeniz varsa, projeye başvurmanız ve dosya başvurusu kullanmamalısınız (aşağıya bakın). Proje-proje başvurusunun avantajı, derleme sistemindeki projeler arasında bir bağımlılık oluşturmasıdır. Bağımlı proje, başvuran projenin en son derlenmesinden bu yana değiştirilmişse oluşturulur. Bir dosya başvurusu, derleme bağımlılığı oluşturmaz, bu nedenle, bağımlı proje oluşturmadan başvuran projeyi derlemek mümkündür ve başvuru kullanımdan kalkabilir. (Yani, proje projenin daha önce oluşturulmuş bir sürümüne başvurabilir.) Bu, *bin* dizininde tek bir dll 'nin gerekli olmasının oluşmasına neden olabilir ve bu mümkün değildir. Bu çakışma oluştuğunda "Uyarı: proje ' proje ' içindeki ' dosya ' bağımlılığı ' dosyası, ' File. '" başvurusunun üzerine yazabileceğinden çalıştırma dizinine kopyalanamıyor gibi bir ileti görürsünüz. Daha fazla bilgi için bkz. [Bozuk Başvurularda Sorun giderme](../ide/troubleshooting-broken-references.md) ve [nasıl yapılır: Proje bağımlılıklarını](../ide/how-to-create-and-remove-project-dependencies.md)oluşturun ve kaldırın.
+Derleme üreten bir projeniz varsa, projeye başvurmanız ve dosya başvurusu kullanmamalısınız (aşağıya bakın). Proje-proje başvurusunun avantajı, derleme sistemindeki projeler arasında bir bağımlılık oluşturmasıdır. Bağımlı proje, başvuran projenin en son derlenmesinden bu yana değiştirilmişse oluşturulur. Bir dosya başvurusu, derleme bağımlılığı oluşturmaz, bu nedenle, bağımlı proje oluşturmadan başvuran projeyi derlemek mümkündür ve başvuru kullanımdan kalkabilir. (Yani, proje projenin daha önce oluşturulmuş bir sürümüne başvurabilir.) Bu, *bin* dizininde tek bir dll 'nin gerekli olmasının oluşmasına neden olabilir ve bu mümkün değildir. Bu çakışma oluştuğunda "Uyarı: proje ' proje ' içindeki ' dosya ' bağımlılığı ' dosyası, ' File. '" başvurusunun üzerine yazabileceğinden çalıştırma dizinine kopyalanamıyor gibi bir ileti görürsünüz. Daha fazla bilgi için bkz. [bozuk başvuruların sorunlarını giderme](../ide/troubleshooting-broken-references.md) ve [nasıl yapılır: Proje bağımlılıklarını oluşturma ve kaldırma](../ide/how-to-create-and-remove-project-dependencies.md).
 
 > [!NOTE]
 > Bir projenin .NET Framework hedef sürümü 4,5 ise ve diğer projenin hedef sürümü sürüm 2, 3, 3,5 veya 4,0 ise, projeden projeye başvuru yerine bir dosya başvurusu oluşturulur.
@@ -129,4 +129,4 @@ Dosya başvuruları, Visual Studio projesi bağlamı dışındaki derlemelere do
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bozuk başvurularda sorun giderme](../ide/troubleshooting-broken-references.md)
-- [Nasıl yapılır: Başvuruları ekleme veya kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)
+- [Nasıl yapılır: başvuruları ekleme veya kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)

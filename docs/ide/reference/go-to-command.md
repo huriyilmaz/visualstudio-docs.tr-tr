@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Debug.Goto command
 - Go To command
 ms.assetid: 201e1dd2-6701-467d-8cc1-faec2ef20511
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bdc1c97d35b79fec40bbaf8994176cfbb27b8e8
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 93ad14561b1fdd2aade1978831b784e014568a6c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919226"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668257"
 ---
 # <a name="go-to-command"></a>Git Komutu
-İmleci belirtilen satıra taşır.
+İmleci belirtilen satıra kaydırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,9 +34,9 @@ Edit.GoTo [linenumber]
 İsteğe bağlı. Gidilecek satırın numarasını temsil eden bir tamsayı.
 
 ## <a name="remarks"></a>Açıklamalar
-Satır numaralandırması bir kerede başlar. Değeri `linenumber` bir değerinden küçükse, ilk satır görüntülenir. Değeri `linenumber` , son satırın sayısından büyükse, son satır görüntülenir.
+Satır numaralandırması bir kerede başlar. @No__t_0 değeri bir değerinden küçükse, ilk satır görüntülenir. @No__t_0 değeri son satırın sayısından büyükse, son satır görüntülenir.
 
-İçin `linenumber` bir değer belirtilmemişse, **satıra git** iletişim kutusu görüntülenir.
+@No__t_0 için bir değer belirtilmemişse, **satıra git** iletişim kutusu görüntülenir.
 
 Bu komutun diğer adı Sayfayln 'dir.
 

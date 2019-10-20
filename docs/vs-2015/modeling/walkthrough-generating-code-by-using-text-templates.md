@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Metin şablonları kullanarak kod oluşturma | Microsoft Docs'
+title: 'İzlenecek yol: metin şablonları kullanarak kod oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,417 +9,416 @@ helpviewer_keywords:
 - walkthroughs [text templates]
 ms.assetid: 24602ade-baca-425e-a6ce-be09a2c7f7e1
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 37abc4862b12ab11239b2dd8a24b8c18acab2a51
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 29a455194e64ee30186941cb67b014170426cce0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446708"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659261"
 ---
-# <a name="walkthrough-generating-code-by-using-text-templates"></a>İzlenecek yol: Metin şablonları kullanarak kod oluşturma
+# <a name="walkthrough-generating-code-by-using-text-templates"></a>İzlenecek Yol: Metin Şablonları Kullanarak Kod Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kod oluşturma, türü kesin olarak belirtilmiş kaynak modeli değiştiğinde henüz kolayca değiştirilebilir program kodunu oluşturmak sağlar. Bunu daha esnek bir yapılandırma dosyası, kabul eden tamamen genel bir program yazma Alternatif yöntem ile karşılaştırın ancak ne kodu sonuçlarında çok kolay okumak ve değiştirmek ya da bu tür iyi bir performans sahiptir. Bu yönerge, bu Avantajdan gösterir.  
-  
-## <a name="typed-code-for-reading-xml"></a>XML okuma için yazılan kod  
- System.Xml ad alanı bir XML belgesi yüklenirken ve bellekte serbestçe gezinme için kapsamlı araçlar sağlar. Ne yazık ki, tüm düğümlerin aynı XmlNode türü vardır. Bu nedenle, alt düğümü veya yanlış öznitelikleri yanlış türde bekleniyor gibi programlama hatalarını yapmak çok kolay.  
-  
- Bu örnek proje, şablon bir örnek XML dosyasını okur ve her düğüm türü için karşılık gelen sınıflar oluşturur. El ile yazılmış kod içinde XML dosyasına gitmek için bu sınıfları kullanabilirsiniz. Uygulamanız üzerinde aynı düğüm türleri kullanan diğer dosyaları da çalıştırabilirsiniz. Örnek XML dosyası amacı uğraşmanız uygulamanızın istediğiniz tüm düğüm türleri sağlamaktır.  
-  
+Kod üretimi, kesin olarak yazılmış program kodu oluşturmanıza ve kaynak model değiştiğinde kolayca değiştirilebilmesini sağlar. Bunu, daha esnek olan bir yapılandırma dosyasını kabul eden tamamen genel bir program yazmanın alternatif tekniğinin aksine, ancak bu, daha kolay okunması ve değişmemesi ya da bu iyi performansa sahip olmayan koda neden olur. Bu anlatımda bu avantaj gösterilmektedir.
+
+## <a name="typed-code-for-reading-xml"></a>XML okumak için yazılan kod
+ System. xml ad alanı, bir XML belgesi yüklemeye ve sonra bellekte ücretsiz olarak gezinerek kapsamlı araçlar sağlar. Ne yazık ki, tüm düğümlerin aynı türde ve XmlNode vardır. Bu nedenle, yanlış türde alt düğüm veya yanlış öznitelikleri bekleyen bir programlama hatası yapmak çok kolaydır.
+
+ Bu örnek projede, bir şablon örnek bir XML dosyası okur ve her bir düğüm türüne karşılık gelen sınıflar oluşturur. El ile yazılmış kodda, XML dosyasında gezinmek için bu sınıfları kullanabilirsiniz. Uygulamanızı aynı düğüm türlerini kullanan başka herhangi bir dosya üzerinde de çalıştırabilirsiniz. Örnek XML dosyasının amacı, uygulamanızın ilgilenmesi için istediğiniz tüm düğüm türlerine örnekler sağlamaktır.
+
 > [!NOTE]
-> Uygulama [XSD.exe'nin](http://go.microsoft.com/fwlink/?LinkId=178765), birlikte bulunan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], türü kesin belirlenmiş sınıf XML dosyaları oluşturabilirsiniz. Burada gösterilen şablonu, bir örnek olarak verilmiştir.  
-  
- Örnek dosyası şu şekildedir:  
-  
-```  
-<?xml version="1.0" encoding="utf-8" ?>  
-<catalog>  
-  <artist id ="Mike%20Nash" name="Mike Nash Quartet">  
-    <song id ="MikeNashJazzBeforeTeatime">Jazz Before Teatime</song>  
-    <song id ="MikeNashJazzAfterBreakfast">Jazz After Breakfast</song>  
-  </artist>  
-  <artist id ="Euan%20Garden" name="Euan Garden">  
-    <song id ="GardenScottishCountry">Scottish Country Garden</song>  
-  </artist>  
-</catalog>  
-```  
-  
- Bu izlenecek yolda oluşturur, aşağıdaki gibi bir kod yazabilirsiniz ve IntelliSense doğru özniteliği ve alt adlarla yazarken ister projesinde:  
-  
-```  
-Catalog catalog = new Catalog(xmlDocument);  
-foreach (Artist artist in catalog.Artist)  
-{  
-  Console.WriteLine(artist.name);  
-  foreach (Song song in artist.Song)  
-  {  
-    Console.WriteLine("   " + song.Text);  
-  }  
-}  
-```  
-  
- Bu şablonu kullanmadan yazabilirsiniz yazılmamış kod ile karşılaştırın.  
-  
-```  
-XmlNode catalog = xmlDocument.SelectSingleNode("catalog");  
-foreach (XmlNode artist in catalog.SelectNodes("artist"))  
-{  
-    Console.WriteLine(artist.Attributes["name"].Value);  
-    foreach (XmlNode song in artist.SelectNodes("song"))  
-    {  
-         Console.WriteLine("   " + song.InnerText);  
-     }  
-}  
-```  
-  
- Kesin türü belirtilmiş sürümünde XML şeması bir değişiklik sınıfları değişikliklerle sonuçlanır. Derleyici, uygulama kodunun değiştirilmesi gerekmeden bölümleri vurgular. Genel XML kodu kullanan yazılmamış sürümde bu tür desteği yoktur.  
-  
- Bu projede tek şablon dosyası türü belirtilmiş sürümünü mümkün kılan sınıflar oluşturmak için kullanılır.  
-  
-## <a name="setting-up-the-project"></a>Projeyi ayarlama  
-  
-### <a name="create-or-open-a-c-project"></a>Bir C# projesi oluşturun veya açın  
- Bu teknik, herhangi bir kod projesine uygulayabilirsiniz. Bu kılavuzda bir C# projesi kullanır ve bir konsol uygulaması Test amaçları için kullanırız.  
-  
-##### <a name="to-create-the-project"></a>Proje oluşturmak için  
-  
-1. Üzerinde **dosya** menüsünü tıklatın **yeni** ve ardından **proje**.  
-  
-2. Tıklayın **Visual C#** düğümünü ve ardından **şablonları** bölmesinde tıklayın **konsol uygulaması.**  
-  
-### <a name="add-a-prototype-xml-file-to-the-project"></a>Bir prototip XML dosyası projeye ekleyin.  
- Bu dosyanın amacı, okuyabilir, uygulamanızın istediğiniz XML düğüm türleri örnekleri sağlamaktır. Uygulamanızı test etmek için kullanılacak bir dosya olabilir. Bu dosyadaki her düğüm türü için bir C# sınıf şablonu oluşturur.  
-  
- Dosya, böylece şablon okuyabilir, ancak derlenmiş uygulamasına oluşturulmuyor projenin bir parçası olmalıdır.  
-  
-##### <a name="to-add-an-xml-file"></a>Bir XML dosyası eklemek için  
-  
-1. İçinde **Çözüm Gezgini**, projeye sağ tıklayın, **Ekle** ve ardından **yeni öğe**.  
-  
-2. İçinde **Yeni Öğe Ekle** iletişim kutusunda **XML dosyası** gelen **şablonları** bölmesi.  
-  
-3. Örnek içerik dosyasına ekleyin.  
-  
-4. Bu kılavuz için dosya adı `exampleXml.xml`. Önceki bölümde gösterilenle XML olarak dosyanın içeriği ayarlayın.  
-  
-   .  
-  
-### <a name="add-a-test-code-file"></a>Bir test kod dosyasına ekleyin  
- Projenize bir C# dosyası ekleyin ve içinde yazma yazabiliyor olmasını istediğiniz kod bir örnek. Örneğin:  
-  
-```  
-using System;  
-namespace MyProject  
-{  
-  class CodeGeneratorTest  
-  {  
-    public void TestMethod()  
-    {  
-      Catalog catalog = new Catalog(@"..\..\exampleXml.xml");  
-      foreach (Artist artist in catalog.Artist)  
-      {  
-        Console.WriteLine(artist.name);  
-        foreach (Song song in artist.Song)  
-        {  
-          Console.WriteLine("   " + song.Text);  
-} } } } }  
-```  
-  
- Bu aşamada bu kodu derlemek başarısız olur. Şablon yazarken, başarılı olması izin sınıflar oluşturur.  
-  
- Daha kapsamlı bir testi bu test işlevi karşı örnek XML dosyası bilinen içeriğini çıktısını denetleyebilirsiniz. Ancak test yönteminin derlediğinde bu kılavuzda, biz memnun olacaktır.  
-  
-### <a name="add-a-text-template-file"></a>Bir metin şablonu dosyasını ekleyin  
- Bir metin şablonu dosyasını ekleyin ve ".cs" çıkış uzantısına ayarlandı.  
-  
-##### <a name="to-add-a-text-template-file-to-your-project"></a>Bir metin şablonu dosyasını projenize eklemek için  
-  
-1. İçinde **Çözüm Gezgini**, projeye sağ tıklayın, **Ekle**ve ardından **yeni öğe**.  
-  
-2. İçinde **Yeni Öğe Ekle** iletişim kutusu seç **metin şablonu** gelen **şablonları** bölmesi.  
-  
+> @No__t_1 ile birlikte gelen [XSD. exe](http://go.microsoft.com/fwlink/?LinkId=178765)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
+
+ Örnek dosya aşağıda verilmiştir:
+
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<catalog>
+  <artist id ="Mike%20Nash" name="Mike Nash Quartet">
+    <song id ="MikeNashJazzBeforeTeatime">Jazz Before Teatime</song>
+    <song id ="MikeNashJazzAfterBreakfast">Jazz After Breakfast</song>
+  </artist>
+  <artist id ="Euan%20Garden" name="Euan Garden">
+    <song id ="GardenScottishCountry">Scottish Country Garden</song>
+  </artist>
+</catalog>
+```
+
+ Bu izlenecek yolun oluşturulduğu projede, aşağıdaki gibi bir kod yazabilirsiniz ve IntelliSense sizin yazarken doğru öznitelik ve alt adlar ister:
+
+```
+Catalog catalog = new Catalog(xmlDocument);
+foreach (Artist artist in catalog.Artist)
+{
+  Console.WriteLine(artist.name);
+  foreach (Song song in artist.Song)
+  {
+    Console.WriteLine("   " + song.Text);
+  }
+}
+```
+
+ Bunu, şablon olmadan yazisteyebileceğiniz türsüz kod ile kontrast:
+
+```
+XmlNode catalog = xmlDocument.SelectSingleNode("catalog");
+foreach (XmlNode artist in catalog.SelectNodes("artist"))
+{
+    Console.WriteLine(artist.Attributes["name"].Value);
+    foreach (XmlNode song in artist.SelectNodes("song"))
+    {
+         Console.WriteLine("   " + song.InnerText);
+     }
+}
+```
+
+ Türü kesin belirlenmiş sürümde, XML şemasında yapılan bir değişiklik sınıflardaki değişikliklere neden olur. Derleyici, uygulama kodunun değiştirilmesi gereken parçalarını vurgulayacaktır. Genel XML kodu kullanan türsüz sürümde, böyle bir destek yoktur.
+
+ Bu projede, türü belirlenmiş sürümü mümkün kılan sınıfları oluşturmak için tek bir şablon dosyası kullanılır.
+
+## <a name="setting-up-the-project"></a>Projeyi ayarlama
+
+### <a name="create-or-open-a-c-project"></a>C# Proje oluşturun veya açın
+ Bu tekniği, herhangi bir kod projesine uygulayabilirsiniz. Bu izlenecek yol bir C# proje kullanır ve test amaçları için bir konsol uygulaması kullanıyoruz.
+
+##### <a name="to-create-the-project"></a>Proje oluşturmak için
+
+1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje**' ye tıklayın.
+
+2. **Görsel C#**  düğümüne tıklayın ve ardından **Şablonlar** bölmesinde **konsol uygulaması** ' na tıklayın.
+
+### <a name="add-a-prototype-xml-file-to-the-project"></a>Projeye prototip XML dosyası ekleyin
+ Bu dosyanın amacı, uygulamanızın okuyabilmesini istediğiniz XML düğüm türlerinin örneklerini sağlamaktır. Bu, uygulamanızı test etmek için kullanılacak bir dosya olabilir. Şablon, bu dosyadaki her C# düğüm türü için bir sınıf oluşturur.
+
+ Şablonun okuyabilmesi için dosyanın projenin bir parçası olması gerekir, ancak derlenen uygulamada derlenmeyecektir.
+
+##### <a name="to-add-an-xml-file"></a>XML dosyası eklemek için
+
+1. **Çözüm Gezgini**, projeye sağ tıklayın, **Ekle** ' ye tıklayın ve ardından **Yeni öğe**' ye tıklayın.
+
+2. **Yeni öğe Ekle** Iletişim kutusunda **Şablonlar** bölmesinden **XML dosyası** ' nı seçin.
+
+3. Örnek içeriğinizi dosyaya ekleyin.
+
+4. Bu izlenecek yol için `exampleXml.xml` dosyayı adlandırın. Dosyanın içeriğini önceki bölümde gösterilen XML olacak şekilde ayarlayın.
+
+   .
+
+### <a name="add-a-test-code-file"></a>Test kodu dosyası Ekle
+ Projenize bir C# dosya ekleyin ve yazabilmesi istediğiniz kodun bir örneğini yazın. Örneğin:
+
+```
+using System;
+namespace MyProject
+{
+  class CodeGeneratorTest
+  {
+    public void TestMethod()
+    {
+      Catalog catalog = new Catalog(@"..\..\exampleXml.xml");
+      foreach (Artist artist in catalog.Artist)
+      {
+        Console.WriteLine(artist.name);
+        foreach (Song song in artist.Song)
+        {
+          Console.WriteLine("   " + song.Text);
+} } } } }
+```
+
+ Bu aşamada, bu kod derlenmeyecektir. Şablonu yazarken, başarılı olmasını sağlayan sınıflar oluşturacaksınız.
+
+ Daha kapsamlı bir test, bu test işlevinin çıkışını örnek XML dosyasının bilinen içeriğine karşı denetleyebilir. Ancak bu kılavuzda, test yöntemi derlendiğinde karşılanması gerekecektir.
+
+### <a name="add-a-text-template-file"></a>Metin şablonu dosyası Ekle
+ Bir metin şablonu dosyası ekleyin ve çıkış uzantısını ". cs" olarak ayarlayın.
+
+##### <a name="to-add-a-text-template-file-to-your-project"></a>Projenize metin şablonu dosyası eklemek için
+
+1. **Çözüm Gezgini**, projeye sağ tıklayın, **Ekle**' ye tıklayın ve ardından **Yeni öğe**' ye tıklayın.
+
+2. **Yeni öğe Ekle** Iletişim kutusunda **Şablonlar** bölmesinden **metin şablonu** ' nu seçin.
+
    > [!NOTE]
-   > Bir metin şablonu ve değil önceden işlenmiş metin şablonu eklediğinizden emin olun.  
-  
-3. Şablon yönergesinde dosyasını değiştirmek `hostspecific` özniteliğini `true`.  
-  
-    Bu değişiklik, erişim elde etmek şablon kodunu etkinleştirir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Hizmetleri.  
-  
-4. Çıktı yönergesinde, uzantı özniteliğine ".cs" değiştirin, böylece şablon bir C# dosyası oluşturur. Bir Visual Basic projesinde ".vb" için değiştirirsiniz.  
-  
-5. Dosyayı kaydedin. Bu aşamada, metin şablonu dosyasını bu satırlar içermelidir:  
-  
-   ```  
-   <#@ template debug="false" hostspecific="true" language="C#" #>  
-   <#@ output extension=".cs" #>  
-   ```  
-  
-   biçimindeki telefon numarasıdır.  
-  
-   Bir .cs dosyası Çözüm Gezgini'nde bir yan kuruluşu olan şablon dosyası göründüğüne dikkat edin. [+]'i tıklatarak şablon dosyasının adının yanında görebileceğiniz. Bu dosya, kaydedin veya şablon dosyası uzağa odağı Taşı şablon dosyasından oluşturulur. Oluşturulan dosyanın, projenizin bir parçası olarak derlenir.  
-  
-   Siz kolaylık sağlamak için şablon dosyası geliştirme, böylece bunları birbirinin yanına görebilirsiniz pencereleri şablon dosyası ve oluşturulan dosya. Bu çıkış şablonunuzun hemen görmenize olanak sağlar. Ayrıca, şablonunuzu geçersiz C# kodu oluşturduğunda, hatalar hata iletisi penceresinde görünür fark edeceksiniz.  
-  
-   Şablon dosyasını kaydettiğinizde doğrudan oluşturulan dosyada gerçekleştirdiğiniz düzenlemeler kaybedilir. Bu nedenle oluşturulan dosyayı düzenlemekten kaçının, veya yalnızca kısa denemeleri için düzenleyin. Bazen, IntelliSense işlemde olduğu dosyanın oluşturulan kodda kısa bir parçasını deneyin ve ardından şablon dosyasına kopyalama kullanışlıdır.  
-  
-## <a name="developing-the-text-template"></a>Metin şablonu geliştirme  
- En iyi öneri Çevik Geliştirme test kodu şekilde sıkışmalı ve kadar her artış hatalarını bazıları temizleme biz küçük adımlar, şablonda geliştireceksiniz.  
-  
-### <a name="prototype-the-code-to-be-generated"></a>Prototip kod oluşturulacak  
- Test kodu, dosyanın her düğüm için bir sınıf gerektirir. Bu nedenle, bazı derleme hataları şablona şu satırları ekleyin ve kaydedin yerine geçer:  
-  
-```  
-class Catalog {}   
-class Artist {}  
-class Song {}  
-```  
-  
- Bu, gerekli olan görmenize yardımcı olur, ancak bildirimleri örnek XML dosyasında düğüm türlerinden oluşturulabilir. Bu Deneysel satırı şablondan silin.  
-  
-### <a name="generate-application-code-from-the-model-xml-file"></a>Model XML dosyasından uygulama kodu oluştur  
- XML dosyasını okuma ve sınıf bildirimleri oluşturmak için aşağıdaki şablon kodla içerik şablonu değiştirin:  
-  
-```  
-<#@ template debug="false" hostspecific="true" language="C#" #>  
-<#@ output extension=".cs" #>  
-<#@ assembly name="System.Xml"#>  
-<#@ import namespace="System.Xml" #>  
-<#  
- XmlDocument doc = new XmlDocument();  
- // Replace this file path with yours:  
- doc.Load(@"C:\MySolution\MyProject\exampleXml.xml");  
- foreach (XmlNode node in doc.SelectNodes("//*"))  
- {  
-#>  
-  public partial class <#= node.Name #> {}  
-<#  
- }  
-#>  
-```  
-  
- Projeniz için doğru yol ile dosya yolunu değiştirin.  
-  
- Kod bloğu sınırlayıcılar fark `<#...#>`. Bu sınırlayıcılar metin oluşturduğu program kodun bir parçasını ayraç içine alın. Deyim bloğu sınırlayıcılar `<#=...#>` köşeli ayraç string olarak değerlendirilen bir ifade.  
-  
- Uygulamanız için kaynak kodu oluşturan bir şablonu yazarken, iki ayrı program metni ile çalışıyorsanız. Şablonu kaydedin veya başka bir pencereye odağı Taşı, program kod bloğu sınırlayıcıları içinde her zaman çalışır. Sınırlayıcılar dışında görünen, oluşturduğu metin için oluşturulan dosya kopyalanır ve uygulama kodunuzun bir parçası haline gelir.  
-  
- `<#@assembly#>` Yönergesi davranacağını gibi derleme şablonu kod için kullanılabilir hale getirme, bir başvuru. Şablon tarafından görülen derlemelerin listesini uygulama projesi başvuruları listesinde ayrıdır.  
-  
- `<#@import#>` Yönergesi çalışır gibi bir `using` deyimi, bunları içeri aktarılan ad alanındaki sınıflar kısa adları kullanabilirsiniz.  
-  
- Ne yazık ki, bu şablon kodunu oluşturur ancak örnek XML dosyası kümedeki her düğüm için bir sınıf bildirimi ürettiği böylece birden çok örneği varsa `<song>` düğümü, sınıf şarkıyı birkaç bildirimlerini görünür.  
-  
-### <a name="read-the-model-file-then-generate-the-code"></a>Model dosyasını okuyun ve ardından kodu oluştur  
- Birçok metin şablonu şablon ilk bölümünü kaynak dosyasını okuyan deseni izler ve şablon ikinci bölümü oluşturur. Tüm örnek dosyasının içerdiği düğüm türleri özetlemek için okuma ve ardından sınıf bildirimleri oluşturmak ihtiyacımız var. Başka bir `<#@import#>` kullanabiliriz böylece gereklidir `Dictionary<>:`  
-  
-```  
-<#@ template debug="false" hostspecific="true" language="C#" #>  
-<#@ output extension=".cs" #>  
-<#@ assembly name="System.Xml"#>  
-<#@ import namespace="System.Xml" #>  
-<#@ import namespace="System.Collections.Generic" #>  
-<#  
- // Read the model file  
- XmlDocument doc = new XmlDocument();  
- doc.Load(@"C:\MySolution\MyProject\exampleXml.xml");  
- Dictionary <string, string> nodeTypes =   
-        new Dictionary<string, string>();  
- foreach (XmlNode node in doc.SelectNodes("//*"))  
- {  
-   nodeTypes[node.Name] = "";  
- }  
- // Generate the code  
- foreach (string nodeName in nodeTypes.Keys)  
- {  
-#>  
-  public partial class <#= nodeName #> {}  
-<#  
- }  
-#>  
-```  
-  
-### <a name="add-an-auxiliary-method"></a>Bir yardımcı yöntemi ekleyin  
- Bir sınıf özelliği denetim bloğu olan bir blok içinde tanımlayabilirsiniz yardımcı yöntemler. Blok tarafından ayrılmış `<#+...#>` ve son blok dosya olarak görünmesi gerekir.  
-  
- Sınıf adları büyük harfle başlamak için tercih ederseniz, aşağıdaki şablon kodla şablonu son kısmını değiştirebilirsiniz:  
-  
-```  
-// Generate the code  
- foreach (string nodeName in nodeTypes.Keys)  
- {  
-#>  
-  public partial class <#= UpperInitial(nodeName) #> {}  
-<#  
- }  
-#>  
-<#+  
- private string UpperInitial(string name)  
- { return name[0].ToString().ToUpperInvariant() + name.Substring(1); }  
-#>  
-```  
-  
- Bu aşamada, aşağıdaki bildirimleri oluşturulan .cs dosyası içerir:  
-  
-```  
-public partial class Catalog {}  
-public partial class Artist {}  
-public partial class Song {}  
-```  
-  
- Alt düğümler, öznitelikleri ve iç metin özellikleri gibi başka ayrıntılar, aynı yaklaşımı kullanarak eklenebilir.  
-  
-### <a name="accessing-the-visual-studio-api"></a>Visual Studio API erişme  
- Ayarı `hostspecific` özniteliği `<#@template#>` erişim sağlamak şablon yönergesi verir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API. Şablon Şablon kodda bir mutlak dosya yolunu kullanarak önlemek için proje dosyalarının konumunu almak için bunu kullanabilirsiniz.  
-  
-```  
-<#@ template debug="false" hostspecific="true" language="C#" #>  
-...  
-<#@ assembly name="EnvDTE" #>  
-...  
-EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)  
-                       .GetService(typeof(EnvDTE.DTE));  
-// Open the prototype document.  
-XmlDocument doc = new XmlDocument();  
-doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));  
-```  
-  
-## <a name="completing-the-text-template"></a>Metin şablonu Tamamlanıyor  
- Aşağıdaki şablon içeriği veren test kodu derlemek ve çalıştırmak kod oluşturur.  
-  
-```  
-<#@ template debug="false" hostspecific="true" language="C#" #>  
-<#@ output extension=".cs" #>  
-<#@ assembly name="System.Xml" #>  
-<#@ assembly name="EnvDTE" #>  
-<#@ import namespace="System.Xml" #>  
-<#@ import namespace="System.Collections.Generic" #>  
-using System;using System.Collections.Generic;using System.Linq;using System.Xml;namespace MyProject{  
-<#  
- // Map node name --> child name --> child node type  
- Dictionary<string, Dictionary<string, XmlNodeType>> nodeTypes = new Dictionary<string, Dictionary<string, XmlNodeType>>();  
-  
- // The Visual Studio host, to get the local file path.  
- EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)  
-                       .GetService(typeof(EnvDTE.DTE));  
- // Open the prototype document.  
- XmlDocument doc = new XmlDocument();  
- doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));  
- // Inspect all the nodes in the document.  
- // The example might contain many nodes of the same type,   
- // so make a dictionary of node types and their children.  
- foreach (XmlNode node in doc.SelectNodes("//*"))  
- {  
-   Dictionary<string, XmlNodeType> subs = null;  
-   if (!nodeTypes.TryGetValue(node.Name, out subs))  
-   {  
-     subs = new Dictionary<string, XmlNodeType>();  
-     nodeTypes.Add(node.Name, subs);  
-   }  
-   foreach (XmlNode child in node.ChildNodes)  
-   {  
-     subs[child.Name] = child.NodeType;  
-   }   
-   foreach (XmlNode child in node.Attributes)  
-   {  
-     subs[child.Name] = child.NodeType;  
-   }  
- }  
- // Generate a class for each node type.  
- foreach (string className in nodeTypes.Keys)  
- {  
-    // Capitalize the first character of the name.  
-#>  
-    partial class <#= UpperInitial(className) #>  
-    {      private XmlNode thisNode;      public <#= UpperInitial(className) #>(XmlNode node)       { thisNode = node; }  
-  
-<#  
-    // Generate a property for each child.  
-    foreach (string childName in nodeTypes[className].Keys)  
-    {  
-      // Allow for different types of child.  
-      switch (nodeTypes[className][childName])  
-      {  
-         // Child nodes:  
-         case XmlNodeType.Element:  
-#>  
-      public IEnumerable<<#=UpperInitial(childName)#>><#=UpperInitial(childName) #>      {         get         {            foreach (XmlNode node in                thisNode.SelectNodes("<#=childName#>"))              yield return new <#=UpperInitial(childName)#>(node);       } }  
-<#  
-         break;  
-         // Child attributes:  
-         case XmlNodeType.Attribute:  
-#>  
-      public string <#=childName #>      { get { return thisNode.Attributes["<#=childName#>"].Value; } }  
-<#  
-         break;  
-         // Plain text:  
-         case XmlNodeType.Text:  
-#>  
-      public string Text  { get { return thisNode.InnerText; } }  
-<#  
-         break;  
-       } // switch  
-     } // foreach class child  
-  // End of the generated class:  
-#>  
-   }   
-<#  
- } // foreach class  
-  
-   // Add a constructor for the root class   
-   // that accepts an XML filename.  
-   string rootClassName = doc.SelectSingleNode("*").Name;  
-#>  
-   partial class <#= UpperInitial(rootClassName) #>   {      public <#= UpperInitial(rootClassName) #>(string fileName){        XmlDocument doc = new XmlDocument();        doc.Load(fileName);        thisNode = doc.SelectSingleNode("<#=rootClassName#>");}   }}  
-<#+  
-   private string UpperInitial(string name)  
-   {  
-      return name[0].ToString().ToUpperInvariant() + name.Substring(1);  
-   }  
-#>  
-```  
-  
-### <a name="running-the-test-program"></a>Test programı çalıştırma  
- Konsol uygulamasının ana, aşağıdaki satırları test metodunu çalıştırır. Programın hata ayıklama modunda çalıştırmak için F5 tuşuna basın:  
-  
-```  
-using System;  
-namespace MyProject  
-{ class Program  
-  { static void Main(string[] args)  
-    { new CodeGeneratorTest().TestMethod();  
-      // Allow user to see the output:  
-      Console.ReadLine();  
-} } }  
-```  
-  
-### <a name="writing-and-updating-the-application"></a>Yazma ve uygulamayı güncelleştirme  
- Uygulama artık genel XML kodunu kullanmak yerine üretilen sınıfları kullanarak, kesin türü belirtilmiş stilinde yazılabilir.  
-  
- XML Şeması değiştiğinde yeni sınıflar kolayca oluşturulabilir. Derleyici, uygulama kodunun nereye güncelleştirilmelidir Geliştirici bildirir.  
-  
- Örnek XML dosyası değiştirildiğinde sınıfları yeniden üret için tıklatın **tüm Şablonları Dönüştür** Çözüm Gezgini araç.  
-  
-## <a name="conclusion"></a>Sonuç  
- Bu izlenecek yol çeşitli teknikler ve kod oluşturma avantajlarını göstermektedir:  
-  
-- *Kod oluşturma* oluşturulmasını uygulamanızdan kaynak kodunun bir parçası olan bir *model*. Model, uygulama etki alanı için uygun bir biçimde bilgileri içerir ve uygulama ömrü boyunca değişebilir.  
-  
-- Güçlü bir kod avantajdır. Model bilgileri kullanıcıya daha uygun bir biçimde temsil ederken, oluşturulan kod bilgilerle türleri kümesi kullanarak çıkılacağını uygulamanın diğer bölümlerini sağlar.  
-  
-- IntelliSense ve derleyicinin yeni kod yazdığınızda hem şemayı güncelleştirildiğinde modelinin şemasıyla uyumluysa kod oluşturmanıza yardımcı olur.  
-  
-- Bir tek eylemlerin şablon dosyası bir projeye eklenmesi, bu avantajlar sağlayabilir.  
-  
-- Bir metin şablonu geliştirilen ve hızlı bir şekilde ve artımlı olarak test.  
-  
-  Bu izlenecek yolda, program kodu modeli, temsili bir örnek uygulamanın işlem XML dosyalarının bir örnekten gerçekten oluşturulur. Daha resmi bir yaklaşım, XML şeması .xsd dosyasını veya etki alanına özgü dil tanımıma biçiminde şablonu girişi olacaktır. Bu yaklaşım, bir ilişkinin çoğulluk gibi özellikleri belirlemek şablon kolaylaştırmak.  
-  
-## <a name="troubleshooting-the-text-template"></a>Metin şablonu sorunlarını giderme  
- Şablonu dönüştürme veya derleme hatalarıyla gördüyseniz **hata listesi**, veya çıktı dosyası doğru şekilde oluşturulmadı, açıklanan olan tekniklerle metin şablonunun giderebilirsiniz [oluşturma TextTransform yardımcı programı ile dosya](../modeling/generating-files-with-the-texttransform-utility.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [T4 metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)   
- [T4 Metin Şablonu Yazma](../modeling/writing-a-t4-text-template.md)
+   > Önceden Işlenmiş bir metin şablonu değil, bir metin şablonu eklediğinizden emin olun.
+
+3. Dosyasında, şablon yönergesinde `hostspecific` özniteliğini `true` olarak değiştirin.
+
+    Bu değişiklik, şablon kodunun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hizmetlerine erişim sağlamasına olanak sağlar.
+
+4. Output yönergesinde uzantı özniteliğini ". cs" olarak değiştirin, böylece şablon bir C# dosya oluşturur. Visual Basic bir projede, bunu ". vb" olarak değiştirirsiniz.
+
+5. Dosyayı kaydedin. Bu aşamada, metin şablonu dosyası şu satırları içermelidir:
+
+   ```
+   <#@ template debug="false" hostspecific="true" language="C#" #>
+   <#@ output extension=".cs" #>
+   ```
+
+   biçimindeki telefon numarasıdır.
+
+   Bir. cs dosyasının şablon dosyasının yan kuruluşu olarak Çözüm Gezgini göründüğünü unutmayın. Şablon dosyasının adının yanındaki [+] simgesini tıklatarak görebilirsiniz. Bu dosya, Şablon dosyasından odağı her kaydedişinizde veya taşıdığınızda şablon dosyasından oluşturulur. Oluşturulan dosya, projenizin bir parçası olarak derlenir.
+
+   Şablon dosyasını geliştirirken kolaylık sağlaması için, şablon dosyasının ve oluşturulan dosyanın pencerelerini birbirlerinin yanında görebilmeniz için düzenleyin. Bu, şablonunuzun hemen çıktısını görmenizi sağlar. Ayrıca, şablonunuz geçersiz C# kod oluşturduğunda hata iletisi penceresinde hataların göründüğünü fark edersiniz.
+
+   Şablon dosyasını her kaydettiğinizde, oluşturulan dosyada doğrudan gerçekleştirdiğiniz düzenlemeler kaybedilir. Bu nedenle, oluşturulan dosyanın düzenlenmesinden kaçının ya da yalnızca Short denemeleri için düzenleme yapmanız gerekir. IntelliSense 'in işlem içinde olduğu üretilen dosyadaki kodun kısa bir parçasını denemek ve şablon dosyasına kopyalayabilmesini bazen yararlı olur.
+
+## <a name="developing-the-text-template"></a>Metin şablonu geliştirme
+ Çevik geliştirmede en iyi önerisi izleyerek, test kodu derlenip doğru şekilde çalışana kadar her bir artışdaki bazı hataları temizleyerek şablonu küçük adımlarla geliştireceğiz.
+
+### <a name="prototype-the-code-to-be-generated"></a>Oluşturulacak kodu prototip
+ Test kodu, dosyadaki her düğüm için bir sınıf gerektirir. Bu nedenle, bu satırları şablona ekler ve sonra kaydettiğinizde, bazı derleme hataları kaybolur:
+
+```
+class Catalog {}
+class Artist {}
+class Song {}
+```
+
+ Bu, gerekli olanları görmenizi sağlar, ancak bildirimlerin örnek XML dosyasındaki düğüm türlerinden oluşturulması gerekir. Bu deneysel satırları şablondan silin.
+
+### <a name="generate-application-code-from-the-model-xml-file"></a>Model XML dosyasından uygulama kodu oluştur
+ XML dosyasını okumak ve sınıf bildirimleri oluşturmak için şablon içeriğini aşağıdaki şablon kodu ile değiştirin:
+
+```
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Xml"#>
+<#@ import namespace="System.Xml" #>
+<#
+ XmlDocument doc = new XmlDocument();
+ // Replace this file path with yours:
+ doc.Load(@"C:\MySolution\MyProject\exampleXml.xml");
+ foreach (XmlNode node in doc.SelectNodes("//*"))
+ {
+#>
+  public partial class <#= node.Name #> {}
+<#
+ }
+#>
+```
+
+ Dosya yolunu, projeniz için doğru yol ile değiştirin.
+
+ Kod bloğu sınırlayıcılarının `<#...#>` dikkat edin. Bu sınırlayıcılar, metni oluşturan program kodunun bir parçasını ayraç içine koyun. İfade blok sınırlayıcıları `<#=...#>` bir dizeye değerlendirilebilen bir ifadenin ayracı.
+
+ Uygulamanız için kaynak kodu üreten bir şablon yazarken, iki ayrı program metni ile ilgilenolursunuz. Kod bloğu sınırlayıcılarının içindeki program, şablonu her kaydettiğinizde veya odağı başka bir pencereye taşıdığınızda çalışır. Oluşturduğu metin, sınırlayıcılar dışında görünen metin oluşturulan dosyaya kopyalanır ve uygulama kodunuzun bir parçası haline gelir.
+
+ @No__t_0 yönergesi bir başvuru gibi davranır ve derlemeyi şablon kodu için kullanılabilir hale getirir. Şablon tarafından görülen derlemelerin listesi, uygulama projesindeki başvuruların listesinden ayrıdır.
+
+ @No__t_0 yönergesi `using` bir ifade gibi davranır ve içeri aktarılan ad alanındaki sınıfların kısa adlarını kullanmanıza olanak sağlar.
+
+ Ne yazık ki bu şablon kod üretse de, örnek XML dosyasındaki her düğüm için bir sınıf bildirimi oluşturur, böylece `<song>` düğümünün birkaç örneği varsa, sınıf şarkının çeşitli bildirimleri görünür.
+
+### <a name="read-the-model-file-then-generate-the-code"></a>Model dosyasını okuyun, sonra kodu oluşturun
+ Birçok metin şablonu, şablonun ilk bölümünün kaynak dosyayı okuduğunu ve ikinci bölüm şablonu oluşturduğu bir kalıbı izler. İçerdiği düğüm türlerini özetlemek için örnek dosyanın tümünü okudum ve sonra sınıf bildirimleri oluşturacaktır. @No__t_1 kullanabilmemiz için başka bir `<#@import#>` gerekir
+
+```
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Xml"#>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+ // Read the model file
+ XmlDocument doc = new XmlDocument();
+ doc.Load(@"C:\MySolution\MyProject\exampleXml.xml");
+ Dictionary <string, string> nodeTypes =
+        new Dictionary<string, string>();
+ foreach (XmlNode node in doc.SelectNodes("//*"))
+ {
+   nodeTypes[node.Name] = "";
+ }
+ // Generate the code
+ foreach (string nodeName in nodeTypes.Keys)
+ {
+#>
+  public partial class <#= nodeName #> {}
+<#
+ }
+#>
+```
+
+### <a name="add-an-auxiliary-method"></a>Yardımcı yöntem Ekle
+ Sınıf özelliği denetim bloğu, yardımcı yöntemleri tanımlayabilmeniz için kullanabileceğiniz bir bloğudur. Blok `<#+...#>` sınırlandırılır ve dosyada son blok olarak görünmelidir.
+
+ Sınıf adlarını büyük harfle başlayacak şekilde tercih ediyorsanız, şablonun son bölümünü aşağıdaki şablon kodu ile değiştirebilirsiniz:
+
+```
+// Generate the code
+ foreach (string nodeName in nodeTypes.Keys)
+ {
+#>
+  public partial class <#= UpperInitial(nodeName) #> {}
+<#
+ }
+#>
+<#+
+ private string UpperInitial(string name)
+ { return name[0].ToString().ToUpperInvariant() + name.Substring(1); }
+#>
+```
+
+ Bu aşamada, oluşturulan. cs dosyası aşağıdaki bildirimleri içerir:
+
+```
+public partial class Catalog {}
+public partial class Artist {}
+public partial class Song {}
+```
+
+ Alt düğümlerin, özniteliklerin ve iç metnin özellikleri gibi ayrıntılar aynı yaklaşım kullanılarak eklenebilir.
+
+### <a name="accessing-the-visual-studio-api"></a>Visual Studio API 'sine erişme
+ @No__t_1 yönergesinin `hostspecific` özniteliği ayarlandığında, şablonun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API 'sine erişimi elde etmesine izin verir. Şablon, Şablon kodunda mutlak bir dosya yolu kullanmaktan kaçınmak için bunu proje dosyalarının konumunu almak için kullanabilir.
+
+```
+<#@ template debug="false" hostspecific="true" language="C#" #>
+...
+<#@ assembly name="EnvDTE" #>
+...
+EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
+                       .GetService(typeof(EnvDTE.DTE));
+// Open the prototype document.
+XmlDocument doc = new XmlDocument();
+doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));
+```
+
+## <a name="completing-the-text-template"></a>Metin şablonu Tamamlanıyor
+ Aşağıdaki şablon içeriği, test kodunun derleyip çalıştırmasına izin veren kodu oluşturur.
+
+```
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="EnvDTE" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Collections.Generic" #>
+using System;using System.Collections.Generic;using System.Linq;using System.Xml;namespace MyProject{
+<#
+ // Map node name --> child name --> child node type
+ Dictionary<string, Dictionary<string, XmlNodeType>> nodeTypes = new Dictionary<string, Dictionary<string, XmlNodeType>>();
+
+ // The Visual Studio host, to get the local file path.
+ EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
+                       .GetService(typeof(EnvDTE.DTE));
+ // Open the prototype document.
+ XmlDocument doc = new XmlDocument();
+ doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));
+ // Inspect all the nodes in the document.
+ // The example might contain many nodes of the same type,
+ // so make a dictionary of node types and their children.
+ foreach (XmlNode node in doc.SelectNodes("//*"))
+ {
+   Dictionary<string, XmlNodeType> subs = null;
+   if (!nodeTypes.TryGetValue(node.Name, out subs))
+   {
+     subs = new Dictionary<string, XmlNodeType>();
+     nodeTypes.Add(node.Name, subs);
+   }
+   foreach (XmlNode child in node.ChildNodes)
+   {
+     subs[child.Name] = child.NodeType;
+   }
+   foreach (XmlNode child in node.Attributes)
+   {
+     subs[child.Name] = child.NodeType;
+   }
+ }
+ // Generate a class for each node type.
+ foreach (string className in nodeTypes.Keys)
+ {
+    // Capitalize the first character of the name.
+#>
+    partial class <#= UpperInitial(className) #>
+    {      private XmlNode thisNode;      public <#= UpperInitial(className) #>(XmlNode node)       { thisNode = node; }
+
+<#
+    // Generate a property for each child.
+    foreach (string childName in nodeTypes[className].Keys)
+    {
+      // Allow for different types of child.
+      switch (nodeTypes[className][childName])
+      {
+         // Child nodes:
+         case XmlNodeType.Element:
+#>
+      public IEnumerable<<#=UpperInitial(childName)#>><#=UpperInitial(childName) #>      {         get         {            foreach (XmlNode node in                thisNode.SelectNodes("<#=childName#>"))              yield return new <#=UpperInitial(childName)#>(node);       } }
+<#
+         break;
+         // Child attributes:
+         case XmlNodeType.Attribute:
+#>
+      public string <#=childName #>      { get { return thisNode.Attributes["<#=childName#>"].Value; } }
+<#
+         break;
+         // Plain text:
+         case XmlNodeType.Text:
+#>
+      public string Text  { get { return thisNode.InnerText; } }
+<#
+         break;
+       } // switch
+     } // foreach class child
+  // End of the generated class:
+#>
+   }
+<#
+ } // foreach class
+
+   // Add a constructor for the root class
+   // that accepts an XML filename.
+   string rootClassName = doc.SelectSingleNode("*").Name;
+#>
+   partial class <#= UpperInitial(rootClassName) #>   {      public <#= UpperInitial(rootClassName) #>(string fileName){        XmlDocument doc = new XmlDocument();        doc.Load(fileName);        thisNode = doc.SelectSingleNode("<#=rootClassName#>");}   }}
+<#+
+   private string UpperInitial(string name)
+   {
+      return name[0].ToString().ToUpperInvariant() + name.Substring(1);
+   }
+#>
+```
+
+### <a name="running-the-test-program"></a>Test programını çalıştırma
+ Konsol uygulamasının ana öğesinde, aşağıdaki satırlar test yöntemini yürütür. Programı hata ayıklama modunda çalıştırmak için F5 tuşuna basın:
+
+```
+using System;
+namespace MyProject
+{ class Program
+  { static void Main(string[] args)
+    { new CodeGeneratorTest().TestMethod();
+      // Allow user to see the output:
+      Console.ReadLine();
+} } }
+```
+
+### <a name="writing-and-updating-the-application"></a>Uygulamayı yazma ve güncelleştirme
+ Uygulama artık, genel XML kodu kullanmak yerine, oluşturulan sınıflar kullanılarak kesin türü belirtilmiş stilde yazılabilir.
+
+ XML şeması değiştiğinde yeni sınıflar kolayca oluşturulabilir. Derleyici, uygulama kodunun güncelleştirilmeleri gereken geliştiriciyi bildirir.
+
+ Örnek XML dosyası değiştirildiğinde sınıfları yeniden oluşturmak için Çözüm Gezgini araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıklayın.
+
+## <a name="conclusion"></a>Sonuç
+ Bu izlenecek yol, kod oluşturmanın çeşitli tekniklerini ve avantajlarını göstermektedir:
+
+- *Kod üretimi* , bir *modelden*uygulamanızın kaynak kodunun bir kısmının oluşturulması. Model, uygulama etki alanına uygun bir formda bilgi içerir ve uygulamanın kullanım ömrü boyunca değişebilir.
+
+- Güçlü yazma kod oluşturmanın bir avantajıdır. Model, bir formdaki bilgileri kullanıcıya daha uygun bir biçimde temsil ederken, oluşturulan kod uygulamanın diğer bölümlerinin bir tür kümesi kullanarak bilgilerle ilgilenmesi için izin verir.
+
+- IntelliSense ve derleyici, her ikisi de yeni kod yazdığınızda ve şema güncelleniyorsa modelin şemasına uygun kod oluşturmanıza yardımcı olur.
+
+- Bir projeye, karmaşık olmayan tek bir şablon dosyası eklenmesi bu avantajları sağlayabilir.
+
+- Bir metin şablonu hızlı ve artımlı olarak geliştirilebilir ve test edilebilir.
+
+  Bu kılavuzda, program kodu aslında modelin bir örneğinden oluşturulur ve uygulamanın işlem kullanacağı XML dosyalarının temsili bir örneğidir. Daha resmi bir yaklaşımda XML şeması, bir. xsd dosyası veya etki alanına özgü dil tanımı biçiminde şablon girişi olacaktır. Bu yaklaşım, şablonun bir ilişkinin çoğulluğu gibi özellikleri belirlemesine daha kolay hale getirir.
+
+## <a name="troubleshooting-the-text-template"></a>Metin şablonunda sorun giderme
+ **Hata listesi**şablon dönüştürme veya derleme hatalarıyla karşılaşdıysanız veya çıkış dosyası doğru şekilde oluşturulmediyse, metin şablonunda, [TextTransform ile dosya oluşturma bölümünde açıklanan tekniklerle ilgili sorunları giderebilirsiniz Yardımcı programı](../modeling/generating-files-with-the-texttransform-utility.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ T4 metin [şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md) , [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md)

@@ -11,162 +11,162 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], TableAdapter
 ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ed5b0f84ea19e465a9d820d9f25c4fc19546c639
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b73e193f1bb3082a353e004200d437a74f508941
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62567578"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72641156"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect metotlarıyla veri kaydetme
 
-Bu izlenecek yol, bir TableAdapter DBDirect yöntemleri kullanılarak doğrudan veritabanına karşı SQL deyimleri çalıştırmaya yönelik ayrıntılı yönergeler sağlar. Veritabanı güncelleştirmelerinizi denetime ayrıntılı bir düzeyde bir TableAdapter DBDirect yöntemleri sağlar. Bunları ayrı ayrı çağrı yaparak belirli SQL deyimlerini ve depolanan yordamları çalıştırmak için kullanabileceğiniz `Insert`, `Update`, ve `Delete` uygulamanızın ihtiyaç duyduğu gibi yöntemleri (aşırı yüklenmiş'ın aksine `Update` güncelleştirme gerçekleştirir yöntemi INSERT ve DELETE deyimleri bir çağrıda tüm).
+Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL deyimlerini doğrudan bir veritabanına karşı çalıştırmaya yönelik ayrıntılı yönergeler sağlar. Bir TableAdapter 'ın DBDirect yöntemleri, veritabanı güncelleştirmeleriniz üzerinde ince bir denetim düzeyi sağlar. Uygulamanızı gerektiği gibi bireysel `Insert`, `Update` ve `Delete` yöntemlerini çağırarak belirli SQL deyimlerini ve saklı yordamları çalıştırmak için bunları kullanabilirsiniz (GÜNCELLEŞTIRMEYI gerçekleştiren aşırı yüklenmiş `Update` yönteminin aksine, Ekle ve deyimleri tek bir çağrıda sıler).
 
-Bu kılavuz boyunca, öğreneceksiniz nasıl yapılır:
+Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
-- Yeni bir **Windows Forms uygulaması**.
+- Yeni bir **Windows Forms uygulaması**oluşturun.
 
-- Oluşturma ve yapılandırma ile dataset [veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png).
+- [Veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png)ile bir veri kümesi oluşturun ve yapılandırın.
 
-- Denetimin formda öğelerinden sürüklendiğinde oluşturulacak seçin **veri kaynakları** penceresi. Daha fazla bilgi için [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+- **Veri kaynakları** penceresinden öğeleri sürüklerken form üzerinde oluşturulacak denetimi seçin. Daha fazla bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-- Öğe sürükleyerek veriye bağlı form oluşturma **veri kaynakları** forma penceresi.
+- **Veri kaynakları** penceresinden forma öğe sürükleyerek veri bağlantılı bir form oluşturun.
 
-- Doğrudan veritabanına erişmek ve ekleme, güncelleştirme ve silme işlemleri gerçekleştirmek için yöntemleri ekleyin.
+- Veritabanına doğrudan erişmek ve ekleme, güncelleştirme ve silme işlemleri gerçekleştirmek için yöntemler ekleyin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa,'nden ya da yükleme [SQL Server Express indirme sayfası](https://www.microsoft.com/sql-server/sql-server-editions-express), aracılığıyla veya **Visual Studio yükleyicisi**. İçinde **Visual Studio yükleyicisi**, bir parçası olarak SQL Server Express LocalDB yükleyebilirsiniz **veri depolama ve işleme** iş yükü veya tek bir bileşen olarak.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi**aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
-2. Northwind örnek veritabanı, şu adımları izleyerek yükleyin:
+2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio'da açın **SQL Server Nesne Gezgini** penceresi. (Bir parçası olarak SQL Server Nesne Gezgini yüklü **veri depolama ve işleme** iş yükünü Visual Studio Yükleyicisi'nde.) Genişletin **SQL Server** düğümü. LocalDB Örneğinizde sağ tıklayıp **yeni sorgu**.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
-    2. Kopyalama [Northwind Transact-SQL betiği](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza. Bu T-SQL betiği, sıfırdan Northwind veritabanı oluşturur ve verilerle doldurur.
+    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
 
-       Kısa bir süre sonra sorgu çalışmayı tamamladıktan ve Northwind veritabanı oluşturulur.
+       Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
-## <a name="create-a-windows-forms-application"></a>Bir Windows Forms uygulaması oluşturma
+## <a name="create-a-windows-forms-application"></a>Windows Forms uygulaması oluşturma
 
-İlk adım oluşturmaktır bir **Windows Forms uygulaması**.
+İlk adım **Windows Forms bir uygulama**oluşturmaktır.
 
-1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** > **proje**.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
 
-2. Ya da genişletin **Visual C#** veya **Visual Basic** seçip sol bölmedeki **Windows Masaüstü**.
+2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
-3. Orta bölmede seçin **Windows Forms uygulaması** proje türü.
+3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi adlandırın **TableAdapterDbDirectMethodsWalkthrough**ve ardından **Tamam**.
+4. Projeyi **TableAdapterDbDirectMethodsWalkthrough**olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-     **TableAdapterDbDirectMethodsWalkthrough** projesi oluşturulur ve eklenen **Çözüm Gezgini**.
+     **TableAdapterDbDirectMethodsWalkthrough** projesi oluşturulup **Çözüm Gezgini**eklenir.
 
-## <a name="create-a-data-source-from-your-database"></a>Veritabanından bir veri kaynağı oluşturun
+## <a name="create-a-data-source-from-your-database"></a>Veritabanınızdan bir veri kaynağı oluşturun
 
-Bu adımı kullanan **veri kaynağı Yapılandırma Sihirbazı** dayalı bir veri kaynağını oluşturmak için `Region` Northwind örnek veritabanındaki tablo. Bağlantı oluşturmak için Northwind örnek veritabanına erişiminiz olmalıdır. Northwind örnek veritabanını ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Örnek veritabanlarını yüklemek](../data-tools/installing-database-systems-tools-and-samples.md).
+Bu adım, Northwind örnek veritabanındaki `Region` tablosuna dayalı bir veri kaynağı oluşturmak için **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanır. Bağlantıyı oluşturmak için Northwind örnek veritabanına erişiminizin olması gerekir. Northwind örnek veritabanını ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: örnek veritabanlarını kurma](../data-tools/installing-database-systems-tools-and-samples.md).
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. Üzerinde **veri** menüsünde **veri kaynaklarını Göster**.
+1. **Veri** menüsünde **veri kaynaklarını göster**' i seçin.
 
    **Veri kaynakları** penceresi açılır.
 
-2. İçinde **veri kaynakları** penceresinde **yeni veri kaynağı Ekle** başlatmak için **veri kaynağı Yapılandırma Sihirbazı**.
+2. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı**' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. Üzerinde **bir veri kaynağı türü seçin** ekranındayken **veritabanı**ve ardından **sonraki**.
+3. **Veri kaynağı türü seçin** ekranında **veritabanı**' nı seçin ve ardından **İleri**' yi seçin.
 
-4. Üzerinde **veri bağlantınızı seçin** ekranında, aşağıdakilerden birini yapın:
+4. **Veri bağlantınızı seçin** ekranında aşağıdakilerden birini yapın:
 
     - Northwind örnek veritabanıyla kurulan veri bağlantısı aşağı açılan listede kullanılabilir durumdaysa bunu seçin.
 
-         -veya-
+         veya
 
-    - Seçin **yeni bağlantı** başlatmak için **Bağlantı Ekle/Değiştir** iletişim kutusu.
+    - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu başlatın.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri eklemek ve ardından seçeneğini **sonraki**.
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri**' yi seçin.
 
-6. Üzerinde **bağlantı dizesini uygulama yapılandırma dosyasına Kaydet** ekranındayken **sonraki**.
+6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri**' yi seçin.
 
-7. Üzerinde **veritabanı nesnelerinizi seçin** ekranında, **tabloları** düğümü.
+7. **Veritabanı nesnelerinizi seçin** ekranında **Tablolar** düğümünü genişletin.
 
-8. Seçin `Region` tablosuna sağ tıklayıp ardından **son**.
+8. @No__t_0 tablosunu seçip **son**' u seçin.
 
-     **NorthwindDataSet** projenize eklenir ve `Region` tablo görünür **veri kaynakları** penceresi.
+     **NorthwindDataSet** , projenize eklenir ve `Region` tablosu **veri kaynakları** penceresinde görünür.
 
-## <a name="add-controls-to-the-form-to-display-the-data"></a>Verileri görüntülemek için formu için denetimler ekleme
+## <a name="add-controls-to-the-form-to-display-the-data"></a>Verileri göstermek için forma denetimler ekleme
 
-Öğe sürükleyerek veriye bağlı denetimler oluşturmak **veri kaynakları** formunuza penceresi.
+Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlantılı denetimler oluşturun.
 
-Windows form üzerinde veri bağlama denetimleri oluşturmak için ana sürükleyin **bölge** düğümünden **veri kaynakları** forma penceresi.
+Windows formunda veri bağlantılı denetimler oluşturmak için, **veri kaynakları** penceresinden ana **bölge** düğümünü form üzerine sürükleyin.
 
-A <xref:System.Windows.Forms.DataGridView> denetim ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) Kayıtlarda gezinmek için formda görünür. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource>, ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> denetimi ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) formda görüntülenir. Bileşen tepsisinde bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> görüntülenir.
 
-### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Tek tek TableAdapter DbDirect yöntemleri çağıran düğme eklemek için
+### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Bireysel TableAdapter DbDirect yöntemlerini çağıran düğmeler eklemek için
 
-1. Üç sürükleyin <xref:System.Windows.Forms.Button> denetimler **araç kutusu** üzerine **Form1** (aşağıda **RegionDataGridView**).
+1. **Araç kutusundan** üç <xref:System.Windows.Forms.Button> denetimini **Form1** üzerine sürükleyin ( **RegionDataGridView**altında).
 
-2. Aşağıdakileri ayarlayın **adı** ve **metin** her düğmesine özellikleri.
+2. Her düğme için aşağıdaki **ad** ve **metin** özelliklerini ayarlayın.
 
-    |Ad|Metin|
+    |Name|Metin|
     |----------|----------|
-    |`InsertButton`|**Ekle**|
+    |`InsertButton`|**Ekleyin**|
     |`UpdateButton`|**Güncelleştir**|
     |`DeleteButton`|**Delete**|
 
-### <a name="to-add-code-to-insert-new-records-into-the-database"></a>Veritabanına yeni kayıtlar eklemek için kod eklemek için
+### <a name="to-add-code-to-insert-new-records-into-the-database"></a>Veritabanına yeni kayıtlar eklemek üzere kod eklemek için
 
-1. Seçin **InsertButton** click olayı için olay işleyicisi oluşturmak ve formunuza Kod Düzenleyicisi'nde açın.
+1. Tıklama olayı için bir olay işleyicisi oluşturmak ve kod düzenleyicisinde formunuzu açmak için **InsertButton** öğesini seçin.
 
-2. Değiştirin `InsertButton_Click` olay işleyicisi aşağıdaki kod ile:
+2. @No__t_0 olay işleyicisini aşağıdaki kodla değiştirin:
 
      [!code-vb[VbRaddataSaving#1](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_1.vb)]
      [!code-csharp[VbRaddataSaving#1](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_1.cs)]
 
-### <a name="to-add-code-to-update-records-in-the-database"></a>Veritabanındaki kayıtları güncelleştirmek için kod eklemek için
+### <a name="to-add-code-to-update-records-in-the-database"></a>Veritabanındaki kayıtları güncelleştirmek üzere kod eklemek için
 
-1. Çift **UpdateButton** click olayı için olay işleyicisi oluşturmak ve formunuza Kod Düzenleyicisi'nde açın.
+1. Tıklama olayı için bir olay işleyicisi oluşturmak ve formunuzu Kod düzenleyicisinde açmak için **UpdateButton** öğesine çift tıklayın.
 
-2. Değiştirin `UpdateButton_Click` olay işleyicisi aşağıdaki kod ile:
+2. @No__t_0 olay işleyicisini aşağıdaki kodla değiştirin:
 
      [!code-vb[VbRaddataSaving#2](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_2.vb)]
      [!code-csharp[VbRaddataSaving#2](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_2.cs)]
 
-### <a name="to-add-code-to-delete-records-from-the-database"></a>Kayıtlarını veritabanından silmek için kod eklemek için
+### <a name="to-add-code-to-delete-records-from-the-database"></a>Veritabanından kayıtları silmek üzere kod eklemek için
 
-1. Seçin **DeleteButton** click olayı için olay işleyicisi oluşturmak ve formunuza Kod Düzenleyicisi'nde açın.
+1. Tıklama olayı için bir olay işleyicisi oluşturmak üzere **DeleteButton** ' ı seçin ve formunuzu Kod düzenleyicisinde açın.
 
-2. Değiştirin `DeleteButton_Click` olay işleyicisi aşağıdaki kod ile:
+2. @No__t_0 olay işleyicisini aşağıdaki kodla değiştirin:
 
      [!code-vb[VbRaddataSaving#3](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_3.vb)]
      [!code-csharp[VbRaddataSaving#3](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_3.cs)]
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-- Seçin **F5** uygulamayı çalıştırın.
+- Uygulamayı çalıştırmak için **F5** ' i seçin.
 
-- Seçin **Ekle** düğmesini ve yeni kayıt kılavuzda göründüğünü doğrulayın.
+- **Ekle** düğmesini seçin ve yeni kaydın kılavuzda göründüğünü doğrulayın.
 
-- Seçin **güncelleştirme** düğmesini ve kayıt kılavuzda güncelleştirildiğini doğrulayın.
+- **Güncelleştir** düğmesini seçin ve kaydın kılavuzda güncelleştirildiğinden emin olun.
 
-- Seçin **Sil** düğmesini ve kayıt kılavuzdan kaldırıldığını doğrulayın.
+- **Sil** düğmesini seçin ve kaydın kılavuzdan kaldırıldığını doğrulayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Uygulama gereksinimlerinize bağlı olarak, veri bağlama form oluşturduktan sonra gerçekleştirmek isteyebileceğiniz birkaç adım vardır. Bu izlenecek yolda yapabileceğiniz bazı geliştirmeler şunlardır:
+Uygulama gereksinimlerinize bağlı olarak, verilere bağlı bir form oluşturduktan sonra gerçekleştirmek isteyebileceğiniz birkaç adım vardır. Bu izlenecek yolda yapabileceğiniz bazı geliştirmeler şunlardır:
 
-- Forma arama işlevselliği ekleme.
+- Forma arama işlevleri ekleniyor.
 
-- Seçerek veri kümesine ek tablolar ilave **veri kümesini Yapılandırma Sihirbazı ile** içinden **veri kaynakları** penceresi. İlgili düğümlerin form üzerine sürükleyerek ilgili verileri görüntüleyen denetimler ekleyebilirsiniz. Daha fazla bilgi için [veri kümelerindeki ilişkiler](relationships-in-datasets.md).
+- **Veri kaynakları** penceresi Içinden veri **kümesini sihirbaz ile yapılandır** ' a seçerek veri kümesine ek tablolar ekleme. İlgili düğümleri form üzerine sürükleyerek ilgili verileri görüntüleyen denetimler ekleyebilirsiniz. Daha fazla bilgi için bkz. [veri kümelerinde ilişkiler](relationships-in-datasets.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

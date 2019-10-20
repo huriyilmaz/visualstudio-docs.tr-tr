@@ -8,46 +8,46 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting.Indentation
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting.General
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c402033efe31b4cbbddbe02b73aec7be08914fc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1e57470c1afa0fad97265bdcebff4fd9a2a0a43
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778371"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666659"
 ---
 # <a name="options-text-editor-u-sql-formatting"></a>Seçenekler, metin düzenleyici, U-SQL, biçimlendirme
 
-Kullanım **biçimlendirme** seçenekler sayfası, Kod düzenleyicisinde kod biçimlendirme seçeneklerini ayarlamak için. Bu seçenekler sayfası erişmek için kendi seçtikleri **Araçları** > **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **metin düzenleyici** > **U-SQL** > **biçimlendirme**.
+Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **araçlar**  > **Seçenekler**' i seçin. **Seçenekler** iletişim kutusunda,**U-SQL**  > **biçimlendirme** >  **metin düzenleyici** ' yi seçin.
 
-## <a name="general-page"></a>Genel sayfası
+## <a name="general-page"></a>Genel sayfa
 
 ### <a name="general-settings"></a>Genel ayarlar
 
-Bu ayarlar etkiler *olduğunda* Kod düzenleyicisinde biçimlendirme seçeneklerini kod için geçerlidir.
+Bu ayarlar, kod düzenleyicisinin koda biçimlendirme seçeneklerini uyguladığı *zaman* etkiler.
 
-- **Noktalı virgül girildiğinde tamamlanmış deyimi Otomatik Biçimlendir**
+- **Tamamlandı ifadesini noktalı virgül girildiğinde otomatik olarak Biçimlendir**
 
-   Düzenleyici için seçili biçimlendirme seçeneklerine göre noktalı virgül anahtarı seçtiğinizde seçili olduğunda, deyimleri biçimlendirir.
+   Seçildiğinde, düzenleyici için seçilen biçimlendirme seçeneklerine göre noktalı virgül tuşunu seçtiğinizde deyimlerini biçimlendirir.
 
-- **Yapıştırıldığında otomatik olarak Biçimlendir**
+- **Yapıştırırken otomatik olarak Biçimlendir**
 
-   Seçili olduğunda, düzenleyici için seçilen biçimlendirme seçenekleri uyacak şekilde düzenleyicisine yapıştırılan metin biçimlendirir.
+   Seçildiğinde, düzenleyiciye yapıştırılan metni düzenleyici için seçilen biçimlendirme seçeneklerine uyacak şekilde biçimlendirir.
 
-## <a name="preview-windows"></a>Windows Preview
+## <a name="preview-windows"></a>Önizleme pencereleri
 
-**Girinti**, **yeni satırlar**, ve **aralığı** alt her alt kısmında Önizleme penceresini görüntüleyin. Önizleme penceresini her seçeneği etkisini gösterir. Önizleme penceresini kullanmak için biçimlendirme seçeneği seçin. Önizleme penceresini seçeneği örneği gösterilmektedir. Bir onay kutusunu seçerek bir ayarı değiştirdiğinizde, bu yeni ayar etkisini göstermek için Önizleme penceresini güncelleştirir.
+**Girinti**, **yeni satırlar**ve **Aralık** alt sayfaları her biri en altta bir önizleme penceresi görüntüler. Önizleme penceresi her bir seçeneğin etkisini gösterir. Önizleme penceresini kullanmak için bir biçimlendirme seçeneği belirleyin. Önizleme penceresinde seçilen seçeneğe bir örnek gösterilir. Bir ayarı bir onay kutusu seçerek değiştirdiğinizde, Önizleme penceresi Yeni ayarın etkisini gösterecek şekilde güncelleştirilir.
 
-### <a name="indentation-remarks"></a>Girinti açıklamalar
+### <a name="indentation-remarks"></a>Girintileme açıklamaları
 
-Girinti seçenekleri üzerinde **sekmeleri** her bir dilin sayfaları yalnızca belirlemek bastığınızda Kod düzenleyicisinde imleci burada yerleştirir **Enter** bir satırın sonunda. Girinti seçenekleri altında **biçimlendirme** kod otomatik olarak, örneğin biçimlendirildiğinde uygulayın:
+Her dilin **Sekmeler** sayfalarındaki girintileme seçenekleri yalnızca, bir satırın sonunda **ENTER** tuşuna bastığınızda yalnızca kod düzenleyicisinin işaretçiyi nereye yerleştirdiği belirlenir. **Biçimlendirme** altındaki girintileme seçenekleri, kod otomatik olarak biçimlendirilirken uygulanır, örneğin:
 
-- Sırasında bir dosyaya kod yapıştırdığınızda **otomatik olarak, yapıştırma sırasında Biçimlendir** seçili
-- Biçimlendirilen blok el ile yazdığınız zaman
+- **Yapıştırırken otomatik biçim** seçildiğinde kodu dosyaya yapıştırdığınızda
+- Biçimlendirilen blok el ile yazıldığında
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

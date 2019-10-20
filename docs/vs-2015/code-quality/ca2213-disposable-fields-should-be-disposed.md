@@ -1,5 +1,5 @@
 ---
-title: 'CA2213: Atılabilen alanlar elden | Microsoft Docs'
+title: 'CA2213: atılabilir alanları atılmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DisposableFieldsShouldBeDisposed
 ms.assetid: e99442c9-70e2-47f3-b61a-d8ac003bc6e5
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: cbb606729fe89eb5c2ebe3c814096ef39120836a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 8ebeae3e5e367bb2c1a09bc1cb38dcc80d2c3826
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685265"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662892"
 ---
 # <a name="ca2213-disposable-fields-should-be-disposed"></a>CA2213: Atılabilen alanlar atılmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,30 +29,30 @@ ms.locfileid: "65685265"
 |-|-|
 |TypeName|DisposableFieldsShouldBeDisposed|
 |CheckId|CA2213|
-|Kategori|Microsoft.Usage|
-|Yeni Değişiklik|Bozucu olmayan|
+|Kategori|Microsoft. Usage|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Uygulayan bir tür <xref:System.IDisposable?displayProperty=fullName> ayrıca uygulayan türler alanlar bildirir <xref:System.IDisposable>. <xref:System.IDisposable.Dispose%2A> Alanının yöntemi çağrılmaz <xref:System.IDisposable.Dispose%2A> bildirim türü yöntemi.
+ @No__t_0 uygulayan bir tür, <xref:System.IDisposable> uygulayan tür alanları bildirir. Alanın <xref:System.IDisposable.Dispose%2A> yöntemi, bildirim türünün <xref:System.IDisposable.Dispose%2A> yöntemi tarafından çağrılmaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir tür için kendi yönetilmeyen tüm kaynaklarını atma sorumludur; Bu uygulama tarafından gerçekleştirilir <xref:System.IDisposable>. Tek kullanımlık bir tür olup olmadığını görmek için bu kural denetler `T` bir alan bildirir `F` atılabilir bir türün diğer bir deyişle bir örneğini `FT`. Her bir alan için `F`, kural için bir çağrı bulmaya çalışır `FT.Dispose`. Kural çağrılan yöntemler arar `T.Dispose`ve daha düşük bir düzey (çağrılan yöntemler tarafından çağrılan yöntemler `FT.Dispose`).
+ Bir tür, yönetilmeyen tüm kaynakların elden atılırken sorumludur; Bu, <xref:System.IDisposable> uygulayarak gerçekleştirilir. Bu kural, bir atılabilir türünün bir atılabilir tür `FT` örneği olan bir alan `F` bildiriyorsa `T` olup olmadığını denetler. @No__t_0 her alan için, kural `FT.Dispose` çağrısını bulmaya çalışır. Kural, `T.Dispose` tarafından çağırılan yöntemleri ve bir düzey daha düşük (`FT.Dispose` tarafından çağrılan yöntemler tarafından çağrılan yöntemleri) arar.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için çağrı <xref:System.IDisposable.Dispose%2A> uygulayan türler alanlar üzerinde <xref:System.IDisposable> sorumlu ve tutulan alanı tarafından yönetilmeyen kaynakları serbest bırakmak.
+ Bu kural ihlalini onarmak için, alan tarafından tutulan yönetilmeyen kaynakları ayırmaktan ve serbest bırakmaktan sorumlu olduğunuzda, <xref:System.IDisposable> uygulayan türler üzerinde <xref:System.IDisposable.Dispose%2A> çağırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Kaynağı serbest bırakarak alanı tarafından tutulan için sorumlu olduğunuz değil veya bu kuraldan bir uyarıyı bastırmak güvenlidir çağrısı <xref:System.IDisposable.Dispose%2A> kural denetimleri daha derin arama düzeyinde gerçekleşir.
+ Alan tarafından tutulan kaynağı serbest bırakmaktan sorumlu değilseniz veya <xref:System.IDisposable.Dispose%2A> çağrısı kural denetimlerinden daha derin bir arama düzeyinde gerçekleşirse, bu kuraldan bir uyarının görüntülenmesini güvenli hale getirmektir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir tür gösterir `TypeA` uygulayan <xref:System.IDisposable> (`FT` önceki tartışmada).
+ Aşağıdaki örnek, <xref:System.IDisposable> uygulayan bir tür `TypeA` gösterir (önceki tartışmadaki `FT`).
 
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposablePattern/cs/FxCop.Usage.IDisposablePattern.cs#1)]
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir tür gösterir `TypeB` , ihlal bu kural bir alan bildirerek `aFieldOfADisposableType` (`F` önceki tartışmada) tek kullanımlık bir tür olarak (`TypeA`) ve değil çağırma <xref:System.IDisposable.Dispose%2A> alanı. `TypeB` karşılık gelen `T` önceki tartışmada.
+ Aşağıdaki örnek, bir alan `aFieldOfADisposableType` (önceki tartışmadaki `F` `TypeB`) bir atılabilir türü (`TypeA`) olarak bildirerek ve alan üzerinde <xref:System.IDisposable.Dispose%2A> çağırarak bu kuralı ihlal eden bir tür gösterir. `TypeB`, önceki tartışmadaki `T` karşılık gelir.
 
  [!code-csharp[FxCop.Usage.IDisposableFields#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposableFields/cs/FxCop.Usage.IDisposableFields.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.IDisposable?displayProperty=fullName> [Dispose deseni](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)
+ <xref:System.IDisposable?displayProperty=fullName> [Dispose deseninin](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

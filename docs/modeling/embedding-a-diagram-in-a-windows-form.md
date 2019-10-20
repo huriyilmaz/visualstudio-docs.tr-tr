@@ -2,33 +2,33 @@
 title: Windows Forms'a Diyagram Ekleme
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b2ed12175e986178d43ffe5e3da8b85e2ab22e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b0f6bbcfdfcf57902979d73b0181547cf779777b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994588"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653758"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Windows Formunda bir Diyagram ekleme
 
-Bir DSL diyagramı Visual Studio penceresinde görünür bir Windows Denetim ekleyin.
+Bir DSL diyagramını, Visual Studio penceresinde görünen bir Windows denetimine ekleyebilirsiniz.
 
-## <a name="embed-a-dsl-diagram-in-a-windows-control"></a>Bir DSL diyagramı Windows denetimi ekleme
+## <a name="embed-a-dsl-diagram-in-a-windows-control"></a>Windows denetimine DSL diyagramı ekleme
 
-1. Yeni bir **kullanıcı denetimi** DslPackage projeye dosya.
+1. DslPackage projesine yeni bir **Kullanıcı denetim** dosyası ekleyin.
 
-2. Panel denetimi, kullanıcı denetimine ekleyin. Bu panelde DSL diyagramı içerir.
+2. Kullanıcı denetimine bir panel denetimi ekleyin. Bu panelde DSL diyagramı bulunur.
 
-     İhtiyacınız olan diğer denetimleri ekleyin.
+     İhtiyaç duyduğunuz diğer denetimleri ekleyin.
 
-     Denetimin bağlantı özelliklerini ayarlayın.
+     Denetimlerin bağlayıcı özelliklerini ayarlayın.
 
-3. Çözüm Gezgini'nde, kullanıcı denetimi dosyaya sağ tıklayın ve **kodu görüntüle**. Bu oluşturucu ve değişken için kodu ekleyin:
+3. Çözüm Gezgini, Kullanıcı denetim dosyasına sağ tıklayın ve **kodu görüntüle**' ye tıklayın. Bu oluşturucuyu ve değişkeni koda ekleyin:
 
     ```csharp
     internal UserControl1(MyDSLDocView docView, Control content)
@@ -40,7 +40,7 @@ Bir DSL diyagramı Visual Studio penceresinde görünür bir Windows Denetim ekl
     private MyDSLDocView docView;
     ```
 
-4. Aşağıdaki içeriğe sahip DslPackage projeye yeni bir dosya ekleyin:
+4. DslPackage projesine aşağıdaki içerikle yeni bir dosya ekleyin:
 
     ```csharp
     using System.Windows.Forms;
@@ -63,13 +63,13 @@ Bir DSL diyagramı Visual Studio penceresinde görünür bir Windows Denetim ekl
     } } } }
     ```
 
-5. DSL test etmek için basın **F5** ve bir örnek model dosyasını açın. Denetim içinde diyagramda görünür. Araç kutusu ve diğer özellikler normal şekilde çalışır.
+5. DSL 'yi test etmek için **F5** tuşuna basın ve örnek bir model dosyası açın. Diyagram denetimin içinde görünür. Araç kutusu ve diğer özellikler normal şekilde çalışır.
 
-## <a name="update-the-form-using-store-events"></a>Formu deposu olayları kullanarak güncelleştirme
+## <a name="update-the-form-using-store-events"></a>Mağaza olaylarını kullanarak formu güncelleştirme
 
-1. Form Tasarımcısı'nda ekleme bir **ListBox** adlı `listBox1`. Bu modelde öğeleri listesi görüntülenir. Kullanarak modeli ile eşitlenir *olayları depolamak*. Daha fazla bilgi için [olay işleyicileri yaymak değişiklikleri dışında modeli](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+1. Form tasarımcısında `listBox1` adlı bir **ListBox** ekleyin. Bu, modeldeki öğelerin bir listesini görüntüler. *Mağaza olayları*kullanılarak modeliyle eşitlenir. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
-2. Özel kod dosyasında, daha fazla DocView sınıfı yöntemleri geçersiz kıl:
+2. Özel kod dosyasında, DocView sınıfına yönelik diğer yöntemleri geçersiz kılın:
 
     ```csharp
     partial class MyDSLDocView
@@ -110,7 +110,7 @@ Bir DSL diyagramı Visual Studio penceresinde görünür bir Windows Denetim ekl
      }
     ```
 
-3. Kullanıcı denetimi arkasındaki kodda eklenebilen ve kaldırılabilen öğelerde dinlemek için yöntemleri ekleyin:
+3. Kullanıcı denetiminin arkasındaki kodda eklenen ve kaldırılan öğeleri dinlemek için yöntemler ekleyin:
 
     ```csharp
     public partial class UserControl1 : UserControl { ...
@@ -137,9 +137,9 @@ Bir DSL diyagramı Visual Studio penceresinde görünür bir Windows Denetim ekl
     }
     ```
 
-4. DSL test etmek için basın **F5** ve bir örnek model dosyasını Visual Studio'nun deneysel örneğinde açın.
+4. DSL 'yi test etmek için **F5** tuşuna basın ve Visual Studio 'nun deneysel örneğinde örnek bir model dosyası açın.
 
-     Liste kutusu model içinde öğeleri listesini gösterir ve sonra tüm ekleme veya silmeyi ve sonra geri al ve Yinele doğru olup olmadığını dikkat edin.
+     Liste kutusunda modeldeki öğelerin bir listesi gösterildiğine ve herhangi bir ekleme veya silme işleminden sonra, geri alma ve yineleme sonrasında doğru olduğundan emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Mevcut proje öğesi şablonları güncelleştirme
+title: Mevcut proje öğesi şablonlarını Güncelleştir
 ms.date: 01/02/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,63 +7,63 @@ helpviewer_keywords:
 - Visual Studio templates, updating
 - project templates, updating
 - updating templates [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 57e457224d47e278df169b931c6e9cf6b8ae25e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ee0118ce4181a12ca4c199b8174a28fb4b431063
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974702"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656536"
 ---
-# <a name="how-to-update-existing-templates"></a>Nasıl yapılır: Mevcut şablonları güncelleştirme
+# <a name="how-to-update-existing-templates"></a>Nasıl yapılır: mevcut şablonları güncelleştirme
 
-Bir şablon oluşturmak ve içine dosyaları sıkıştır sonra bir *.zip* dosyası şablonu değiştirmek isteyebilirsiniz. Şablon dosyaları el ile değiştirerek veya yeni bir şablonu dışarı aktarma şablonu temel alan bir projeden bunu yapabilirsiniz.
+Bir şablon oluşturup dosyaları bir *. zip* dosyasına sıkıştırdıktan sonra, şablonu değiştirmek isteyebilirsiniz. Bu işlemi, şablondaki dosyaları el ile değiştirerek veya şablonu temel alan bir projeden yeni bir şablonu dışarı aktararak yapabilirsiniz.
 
-## <a name="use-the-export-template-wizard"></a>Şablonu Dışarı Aktarma Sihirbazı'nı kullanma
+## <a name="use-the-export-template-wizard"></a>Şablonu dışarı aktarma Sihirbazı 'Nı kullanma
 
-Visual Studio sağlar bir **şablonu Dışarı Aktarma Sihirbazı** mevcut bir şablonu güncellemek için kullanılabilir:
+Visual Studio, var olan bir şablonu güncelleştirmek için kullanılabilen bir **şablonu dışarı aktarma Sihirbazı** sağlar:
 
-1. Seçin **dosya** > **yeni** > **proje** menü çubuğundan.
+1. Menü çubuğundan **dosya**  > **Yeni**  > **projesi** öğesini seçin.
 
-1. Güncelleştirme ve yeni proje oluşturma adımlarında size devam etmek için kullanmak istediğiniz şablonu seçin.
+1. Güncelleştirmek istediğiniz şablonu seçin ve yeni projeyi oluşturma adımlarında devam edin.
 
-1. Visual Studio'da proje değiştirin. Örneğin, çıktı türünü değiştirin veya yeni bir dosya projeye ekleyin.
+1. Visual Studio 'da projeyi değiştirin. Örneğin, çıkış türünü değiştirin veya projeye yeni bir dosya ekleyin.
 
-1. Üzerinde **proje** menüsünde seçin **şablonu dışarı aktar**.
+1. **Proje** menüsünde, **şablonu dışarı aktar**' ı seçin.
 
-    **Şablonu Dışarı Aktarma Sihirbazı** açılır.
+    **Şablonu dışarı aktarma Sihirbazı** açılır.
 
-1. Şablon olarak dışarı aktarmak için sihirbazdaki istemleri izleyerek bir *.zip* dosya.
+1. Şablonu bir *. zip* dosyası olarak dışarı aktarmak için sihirbazdaki yönergeleri izleyin.
 
-1. (İsteğe bağlı) Bir yerde *.zip* dosyası aşağıdaki dizinde: *%USERPROFILE%\Documents\Visual Studio \<sürüm\>\Templates\ProjectTemplates* için kullanılabilir hale getirmek için Seçimi. Seçeneğini seçmediyseniz, bu adımı gerçekleştirmeniz gerekecektir **otomatik olarak şablonu Visual Studio'ya içeri aktarma** içinde **şablonu Dışarı Aktarma Sihirbazı**.
+1. Seçim *. Zip* dosyasını şu dizine yerleştirin: *%userprofıle%\k\studio \<version \> \Templates\ProjectTemplates* seçim için kullanılabilir hale getirir. Şablonu **dışarı aktar sihirbazında** **şablonu otomatik olarak Visual Studio 'ya aktar** seçeneğini seçmediyseniz bu adımı gerçekleştirmeniz gerekir.
 
-1. Eski Şablonu Sil *.zip* dosya.
+1. Eski template *. zip* dosyasını silin.
 
 ## <a name="manually-update-an-existing-template"></a>Mevcut bir şablonu el ile güncelleştirme
 
-Mevcut bir şablonu kullanmadan güncelleştirebilirsiniz **şablonu Dışarı Aktarma Sihirbazı**, sıkıştırılmış dosyalarda değiştirerek *.zip* dosya.
+Sıkıştırılmış *. zip* dosyasındaki dosyaları değiştirerek, **şablonu dışarı aktarma Sihirbazı 'nı**kullanmadan mevcut bir şablonu güncelleştirebilirsiniz.
 
 ### <a name="to-manually-update-an-existing-template"></a>Mevcut bir şablonu el ile güncelleştirmek için
 
-1. Bulun *.zip* şablonu içeren dosya. Kullanıcı proje şablonları konumu *%USERPROFILE%\Documents\Visual Studio \<sürüm\>\Templates\ProjectTemplates*.
+1. Şablonu içeren *. zip* dosyasını bulun. Kullanıcı projesi şablonları, *%USERPROFILE%\k\studio \<version \> \Templates\ProjectTemplates*yolunda bulunur.
 
-1. Ayıklama *.zip* dosya.
+1. *. Zip* dosyasını ayıklayın.
 
-1. Değiştirmek ya da geçerli şablon dosyaları silin veya şablona yeni dosyalar ekleyin.
+1. Geçerli şablon dosyalarını değiştirin veya silin ya da şablona yeni dosyalar ekleyin.
 
-1. Açık, değiştirebilir ve Kaydet *.vstemplate* güncelleştirilmiş davranışı ya da yeni dosyaları işlemek için XML dosyası.
+1. Güncelleştirilmiş davranışı veya yeni dosyaları işlemek için *. vstemplate* XML dosyasını açın, değiştirin ve kaydedin.
 
-    Hakkında daha fazla bilgi için *.vstemplate* şema bakın [Visual Studio Şablon Şeması Başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md). Kaynak dosyalarında parametreleştirebilirsiniz hakkında daha fazla bilgi için bkz. [şablon parametreleri](../ide/template-parameters.md).
+    *. Vstemplate* şeması hakkında daha fazla bilgi için bkz. [Visual Studio Şablon Şeması Başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md). Kaynak dosyalarında parametreleştiribilecekleri hakkında daha fazla bilgi için bkz. [şablon parametreleri](../ide/template-parameters.md).
 
-1. Dosyaları şablonunuzdaki ve sağ tıklayın veya bağlam menüsünü seçin ve seçin **göndermek** > **sıkıştırılmış (daraltılmış) klasör**.
+1. Şablonunuzda dosyaları seçin ve sağ tıklayıp bağlam menüsünden  > **Sıkıştırılmış (daraltılmış) klasöre** **Gönder** ' i seçin.
 
-    Seçtiğiniz dosyalar sıkıştırılmadan bir *.zip* dosya.
+    Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 
-1. Yeni put *.zip* eski ile aynı dizinde dosya *.zip* dosya.
+1. Yeni *. zip* dosyasını eski *. zip* dosyası ile aynı dizine yerleştirin.
 
-1. Ayıklanan şablon dosyalarını ve eski şablonu silmek *.zip* dosya.
+1. Ayıklanan şablon dosyalarını ve eski şablon *. zip* dosyasını silin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

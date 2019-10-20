@@ -8,21 +8,21 @@ helpviewer_keywords:
 - /DebugExe [devenv.exe]
 - debugging executables
 ms.assetid: cd700006-1648-418f-924b-4b1e5c1412ab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 05266a6f1b5ee0be22e2edc8df1c03b720844f4f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bb4eb1eb49cd6b29740fb6d365a98a51cc28387e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968086"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661674"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 
-Ayıklanacak belirtilen yürütülebilir dosyayı açar.
+Ayıklanmakta olan belirtilen yürütülebilir dosyayı açar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,17 +32,17 @@ devenv /DebugExe ExecutableFile
 
 ## <a name="arguments"></a>Arguments
 
-- *YürütülebilirDosya*
+- *ExecutableFile*
 
-  Gerekli. Yol ve dosya adını bir `.exe` dosya. Varsa `.exe` dosya bulunamadığında veya mevcut değil, hiçbir uyarı veya hata görüntülenir ve Visual Studio normal olarak başlatır.
+  Gerekli. @No__t_0 bir dosyanın yolu ve dosya adı. @No__t_0 dosyası bulunamazsa veya yoksa, uyarı veya hata gösterilmez ve Visual Studio normal olarak başlatılır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Aşağıdaki dizeleri *YürütülebilirDosya* parametresi, o dosya için bağımsız değişken olarak geçirilir.
+*ExecutableFile* parametresini izleyen dizeler, bu dosyaya bağımsız değişken olarak geçirilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte dosyayı açar `MyApplication.exe` hata ayıklama.
+Aşağıdaki örnek, hata ayıklama için `MyApplication.exe` dosyasını açar.
 
 ```shell
 devenv /debugexe MyApplication.exe

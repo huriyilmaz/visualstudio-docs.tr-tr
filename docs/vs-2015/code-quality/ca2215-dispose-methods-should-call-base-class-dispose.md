@@ -1,5 +1,5 @@
 ---
-title: 'CA2215: Atma yöntemleri taban sınıf atmayı çağırmalıdır | Microsoft Docs'
+title: 'CA2215: Dispose yöntemleri temel sınıf atmayı çağırmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -13,47 +13,47 @@ helpviewer_keywords:
 - CA2215
 ms.assetid: c772e7a6-a87e-425c-a70e-912664ae9042
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: bc934afd9289a6bce425084f3588a7e912baf9b9
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 89f3705169fb9d28a1ec773671d460f00b98d892
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65681187"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662861"
 ---
-# <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Atma metotları taban sınıf atmayı çağırmalıdır
+# <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Atma yöntemleri taban sınıf atmayı çağırmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|DisposeMethodsShouldCallBaseClassDispose|
 |CheckId|CA2215|
-|Kategori|Microsoft.Usage|
-|Yeni Değişiklik|Bozucu olmayan|
+|Kategori|Microsoft. Usage|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Uygulayan bir tür <xref:System.IDisposable?displayProperty=fullName> ayrıca uygulayan bir tür tarafından devralındığında <xref:System.IDisposable>. <xref:System.IDisposable.Dispose%2A> Türetilen türün yöntemi çağırmaz <xref:System.IDisposable.Dispose%2A> üst türü yöntemi.
+ @No__t_0 uygulayan bir tür, <xref:System.IDisposable> uygulayan bir türden devralır. Devralan türün <xref:System.IDisposable.Dispose%2A> yöntemi üst türün <xref:System.IDisposable.Dispose%2A> yöntemini çağırmaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir tür atılabilen bir türden devralınırsa, çağırmalıdır <xref:System.IDisposable.Dispose%2A> yöntemi kendi içinde temel türün <xref:System.IDisposable.Dispose%2A> yöntemi. Temel tür yöntem çağırma Dispose taban türü tarafından oluşturulan tüm kaynakların serbest bırakıldığından sağlar.
+ Bir tür atılabilir bir türden devralırsa, kendi <xref:System.IDisposable.Dispose%2A> yöntemi içinde temel türün <xref:System.IDisposable.Dispose%2A> yöntemini çağırmalıdır. Temel tür metodunu çağırmak, temel tür tarafından oluşturulan kaynakların serbest bırakıldığını sağlar.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için çağrı `base`.<xref:System.IDisposable.Dispose%2A> içinde <xref:System.IDisposable.Dispose%2A> yöntemi.
+ Bu kural ihlalini onarmak için `base` çağırın. <xref:System.IDisposable.Dispose%2A> <xref:System.IDisposable.Dispose%2A> metodunda.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Varsa bu kuraldan bir uyarıyı bastırmak güvenlidir çağrısı `base`.<xref:System.IDisposable.Dispose%2A> daha ayrıntılı bir çağırma kuralı denetimleri'den oluşur.
+ @No__t_0 çağrısı varsa, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir. <xref:System.IDisposable.Dispose%2A> kural denetimlerinden daha derin bir çağrı düzeyinde gerçekleşir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir tür gösterir `TypeA` uygulayan <xref:System.IDisposable>.
+ Aşağıdaki örnek, <xref:System.IDisposable> ' i uygulayan `TypeA` türünü gösterir.
 
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposablePattern/cs/FxCop.Usage.IDisposablePattern.cs#1)]
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir tür gösterir `TypeB` türünden devralan `TypeA` ve doğru bir şekilde çağıran kendi <xref:System.IDisposable.Dispose%2A> yöntemi.
+ Aşağıdaki örnek, türü `TypeA` devralan ve <xref:System.IDisposable.Dispose%2A> metodunu doğru şekilde çağıran bir tür `TypeB` gösterir.
 
  [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposableBaseCalled/vb/FxCop.Usage.IDisposableBaseCalled.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.IDisposable?displayProperty=fullName> [Dispose deseni](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)
+ <xref:System.IDisposable?displayProperty=fullName> [Dispose deseninin](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

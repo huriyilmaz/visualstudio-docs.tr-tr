@@ -2,31 +2,31 @@
 title: Renk, Çizgi Stili ve Diğer Şekil Özelliklerini Denetleme
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1783ecf3b30207838d93fdb9cda93e3ed7e232c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6bcc7e3a80650edff411506b9e651885b3852383
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62422933"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654154"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>Renk, Çizgi Stili ve Diğer Şekil Özelliklerini Denetleme
 
-Renk gibi bazı Şekil özelliklerini 'kullanıma sunulabilecek'. Diğer bir deyişle, özellikleri, şekle bir alan özelliğine bağlanabilir. Başkalarının doğrudan denetlenmesi gerekir.
+Renk gibi bazı şekil özellikleri ' açığa çıkabilir ' olabilir. Diğer bir deyişle, Özellikler şeklin bir etki alanı özelliğine bağlanabilir. Diğerlerinin doğrudan denetlenmesi gerekir.
 
-## <a name="exposing-a-property"></a>Bir özelliği kullanıma sunma
- Renk gibi bazı Şekil özelliklerini değeri alan özelliği olarak bağlanabilir.
+## <a name="exposing-a-property"></a>Bir özelliği gösterme
+ Color gibi bazı şekil özellikleri, bir etki alanı özelliğinin değeri ile bağlantılı olabilir.
 
- DSL tanımındaki şekil, bağlayıcı veya diyagram sınıfı seçin. Kendi sağ tıklama menüsünde **ekleme kullanıma sunulan**, istediğiniz gibi dolgu rengi özelliği seçin.
+ DSL tanımında bir şekil, bağlayıcı veya Diyagram sınıfı seçin. Sağ tıklama menüsünde, **gösterilen Ekle**' yi seçin ve ardından istediğiniz özelliği (örneğin, Fill Color) seçin.
 
- Şekil, program kodu veya bir kullanıcı olarak ayarlanmış bir alan özelliği artık sahiptir.
+ Artık şekil, program kodunda veya Kullanıcı olarak ayarlayabileceğiniz bir etki alanı özelliğine sahiptir.
 
-## <a name="dynamically-updating-an-exposed-property"></a>Dinamik olarak sunulan bir özellik güncelleştiriliyor
- Genellikle sunulan özelliği başka bir özellikte bağlı olmanız gerekir. Örneğin, belirli bir etki alanı özelliği olduğunda kırmızıya şekle sıfırdan isteyebilirsiniz. Bu bağımlılık olmak için oluşturun bir [kural](../modeling/rules-propagate-changes-within-the-model.md). Örneğin:
+## <a name="dynamically-updating-an-exposed-property"></a>Sunulan bir özelliği dinamik olarak güncelleştirme
+ Genellikle, ortaya çıkan özelliği başka bir özelliğe bağımlı hale getirmek istersiniz. Örneğin, belirli bir etki alanı özelliği sıfırdan küçük olduğunda bir şeklin kırmızı olmasını isteyebilirsiniz. Bu bağımlılığı yapmak için bir [kural](../modeling/rules-propagate-changes-within-the-model.md)oluşturun. Örneğin:
 
 ```csharp
 using System;

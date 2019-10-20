@@ -1,5 +1,5 @@
 ---
-title: Günlük komut penceresi komut çıktı | Microsoft Docs
+title: Komut penceresi Çıkış komutunu günlüğe kaydet | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,68 +11,61 @@ helpviewer_keywords:
 - View.LogCommandWindowOutput command
 ms.assetid: d4ecec35-5af4-4954-8d60-2cd24583fbb4
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a05fe75aabaf2ce04010fe0c985a3cc1645ee696
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d9a5a29cd63f9d51f86d41d2f0f5986a77666318
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446022"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666873"
 ---
 # <a name="log-command-window-output-command"></a>Command penceresi çıktısı günlüğü tut komutu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tüm giriş ve çıkış kopyaları **komut** penceresine bir dosya.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `filename`  
- İsteğe bağlı. Günlük dosyasının adı. Varsayılan olarak, kullanıcı profili klasöründe bir dosya oluşturulur. Dosya adı zaten varsa, günlük varolan dosyanın sonuna eklenir. Dosya yok belirtilirse, belirtilen son dosya kullanılır. Önceki dosya varsa, cmdline.log adlı varsayılan günlük dosyası oluşturulur.  
-  
+**Komut** penceresinden tüm giriş ve çıkışları bir dosyaya kopyalar.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
+```
+
+## <a name="arguments"></a>Arguments
+ Isteğe bağlı `filename`. Günlük dosyasının adı. Varsayılan olarak, dosya kullanıcının profil klasöründe oluşturulur. Dosya adı zaten varsa, günlük varolan dosyanın sonuna eklenir. Dosya belirtilmemişse, belirtilen son dosya kullanılır. Önceki bir dosya mevcut değilse, komut satırı. log adlı varsayılan bir günlük dosyası oluşturulur.
+
 > [!TIP]
-> Günlük dosyasına kaydedildiği konumu değiştirmek için yol boşluk içeriyorsa tırnak işareti içine alınmış dosyanın tam yolunu girin.  
-  
-## <a name="switches"></a>Anahtarlar  
- /on  
- İsteğe bağlı. Günlüğü başlar **komut** belirtilen dosya penceresinde ve yeni bilgiler ile dosya ekler.  
-  
- / Kapalı  
- İsteğe bağlı. Günlüğü durdurur **komut** penceresi.  
-  
- / overwrite  
- İsteğe bağlı. Dosyanın içinde belirtilen `filename` bağımsız değişken var olan bir dosya ile eşleşen, dosyanın üzerine yazılır.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Dosya yok belirtilirse, dosya cmdline.log varsayılan olarak oluşturulur. Varsayılan olarak, bu komut için diğer ad günlüktür.  
-  
-## <a name="examples"></a>Örnekler  
- Bu örnek, yeni bir günlük dosyası cmdlog, oluşturur ve komut günlük başlatır.  
-  
-```  
->Tools.LogCommandWindowOutput cmdlog  
-```  
-  
- Bu örnek, oturum açma komutları durdurur.  
-  
-```  
->Tools.LogCommandWindowOutput /off  
-```  
-  
- Bu örnek komut daha önce kullanılan günlük dosyasında günlük sürdürür.  
-  
-```  
->Tools.LogCommandWindowOutput /on  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)   
- [Komut penceresi](../../ide/reference/command-window.md)   
- [Bul/komut kutusu](../../ide/find-command-box.md)   
- [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)
+> Günlük dosyasının kaydedildiği konumu değiştirmek için, yolun herhangi bir boşluk içermesi durumunda tırnak işaretleriyle çevrelenen dosyanın tam yolunu girin.
+
+## <a name="switches"></a>Anahtarlar
+ /On Isteğe bağlı. Belirtilen dosyadaki **komut** penceresi için günlüğü başlatır ve dosyayı yeni bilgilerle ekler.
+
+ /off Isteğe bağlı. **Komut** penceresi için günlüğü sonlandırır.
+
+ /overwrite Isteğe bağlı. @No__t_0 bağımsız değişkeninde belirtilen dosya varolan bir dosyayla eşleşiyorsa, dosyanın üzerine yazılır.
+
+## <a name="remarks"></a>Açıklamalar
+ Dosya belirtilmemişse, komut satırı. log dosyası varsayılan olarak oluşturulur. Varsayılan olarak, bu komutun diğer adı günlüğe kaydedilir.
+
+## <a name="examples"></a>Örnekler
+ Bu örnek, yeni bir günlük dosyası oluşturur, cmdlog ve komut günlüğünü başlatır.
+
+```
+>Tools.LogCommandWindowOutput cmdlog
+```
+
+ Bu örnek günlüğe kaydetme komutlarını durduruyor.
+
+```
+>Tools.LogCommandWindowOutput /off
+```
+
+ Bu örnek, daha önce kullanılan günlük dosyasındaki komutların günlüğe kaydedilmesini sürdürür.
+
+```
+>Tools.LogCommandWindowOutput /on
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Visual Studio komutları](../../ide/reference/visual-studio-commands.md) [komut penceresi](../../ide/reference/command-window.md) [Bul/komut kutusu](../../ide/find-command-box.md) [Visual Studio komut diğer adları](../../ide/reference/visual-studio-command-aliases.md)

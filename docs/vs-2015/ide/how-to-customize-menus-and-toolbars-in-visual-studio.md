@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Menüleri ve araç çubuklarını özelleştirme'
+title: 'Nasıl Yapılır: Menüleri ve Araç Çubuklarını Özelleştirme'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -25,106 +25,106 @@ helpviewer_keywords:
 - toolbars [Visual Studio], customizing in the IDE
 ms.assetid: b570ae2f-5302-45dc-9cc9-8d4d1ad50603
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 91223021ce6f05b91d47e7b7019fb0c5c02243db
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 500debe6faa62079c6a93185bac409e7a3bf2813
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63416796"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667999"
 ---
-# <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Nasıl yapılır: Menüleri ve Visual Studio araç çubuklarını özelleştirme
+# <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Nasıl Yapılır: Visual Studio'da Menüleri ve Araç Çubuklarını Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Araç çubuklarını ve menü çubuğundaki menüleri ekleyip kaldırmanın yanı sıra herhangi bir araç çubuğundaki veya menüdeki komutları ekleyip kaldırmak suretiyle de Visual Studio'yu özelleştirebilirsiniz.
 
 > [!WARNING]
-> Bir araç çubuğunu veya menüyü özelleştirdikten sonra ilgili onay kutusunun seçili kaldığından emin olun **Özelleştir** iletişim kutusu. Aksi takdirde, Visual Studio'yu kapatıp yeniden açtıktan sonra değişiklikleriniz kalıcı olmaz.
+> Bir araç çubuğunu veya menüyü özelleştirdikten sonra, **Özelleştirme** iletişim kutusunda onay kutusunun seçili olmaya devam ettiğinden emin olun. Aksi takdirde, Visual Studio'yu kapatıp yeniden açtıktan sonra değişiklikleriniz kalıcı olmaz.
 
  **Bu konuda:**
 
-- [Ekleme, kaldırma veya menü çubuğunda taşıma](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_addmenu)
+- [Menü çubuğuna menü ekleme, kaldırma veya taşıma](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_addmenu)
 
-- [Ekleme, kaldırma veya taşıma araç çubuğu](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_addtoolbar)
+- [Araç çubuğunu ekleme, kaldırma veya taşıma](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_addtoolbar)
 
-- [Bir menü veya araç çubuğunu özelleştirme](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_customize)
+- [Menüyü veya araç çubuğunu özelleştirme](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_customize)
 
-- [Bir menü veya araç çubuğunu sıfırlama](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_reset)
+- [Menüyü veya araç çubuğunu sıfırlama](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_reset)
 
-## <a name="bkmk_addmenu"></a> Ekleme, kaldırma veya menü çubuğunda taşıma
+## <a name="bkmk_addmenu"></a>Menü çubuğuna menü ekleme, kaldırma veya taşıma
 
-1. Menü çubuğunda, **Araçları**, **Özelleştir**.
-
-     **Özelleştir** iletişim kutusu açılır.
-
-2. Üzerinde **komutları** sekmesinde **menü çubuğu** bırakın, seçenek düğmesini seçili **menü çubuğu** bu seçeneğin yanındaki listede seçili bırakmanızı ve ardından aşağıdaki adımlardan birini gerçekleştirin adımlar:
-
-    - Menü eklemek için **yeni menü Ekle** düğmesini öğesini **Seçimi Değiştir** düğmesini ve sonra eklemek istediğiniz menünün adını.
-
-         ![Özelleştir iletişim kutusu bir menü ekleme gösteren](../ide/media/addmenu.png "MenüEkle")
-
-    - Bir menüyü kaldırmak için projeyi seçin **denetimleri** listeleyin ve ardından **Sil** düğmesi.
-
-    - Menü çubuğu dahilinde bir menüyü taşımak için menüden seçin **denetimleri** listeleyin ve ardından **Yukarı Taşı** veya **Aşağı Taşı** düğmesi.
-
-## <a name="bkmk_addtoolbar"></a> Ekleme, kaldırma veya taşıma araç çubuğu
-
-1. Menü çubuğunda, **Araçları**, **Özelleştir**.
+1. Menü çubuğunda **Araçlar**, **Özelleştir**' i seçin.
 
      **Özelleştir** iletişim kutusu açılır.
 
-2. Üzerinde **araç** sekmesinde, aşağıdaki adımlardan birini gerçekleştirin:
+2. **Komutlar** sekmesinde **menü çubuğu** seçenek düğmesini seçili bırakın, bu seçeneğin yanındaki listede bulunan **menü çubuğunu** seçili bırakın ve ardından aşağıdaki adım kümelerinden birini gerçekleştirin:
 
-    - Araç çubuğu eklemek için **yeni** ekleyin ve ardından istediğiniz araç için bir ad belirtin, düğme **Tamam** düğmesi.
+    - Bir menü eklemek için **yeni menü ekle** düğmesini seçin, **Seçimi Değiştir** düğmesini seçin ve sonra eklemek istediğiniz menüyü adlandırın.
 
-         ![Özelleştir iletişim kutusu araç çubuğu ekleme gösteren](../ide/media/addtoolbar.png "AddToolbar")
+         ![Menünün nasıl ekleneceğini gösteren iletişim kutusunu özelleştirme](../ide/media/addmenu.png "Eyleminin")
 
-    - Özel bir araç çubuğunu kaldırmak için onu seçin **araç çubukları** listeleyin ve ardından **Sil** düğmesi.
+    - Menüyü kaldırmak için, **denetimler** listesinden seçin ve ardından **Sil** düğmesini seçin.
+
+    - Menü çubuğundaki menüyü taşımak için, **denetimler** listesinden menüyü seçin ve ardından **Yukarı taşı** veya **aşağı taşı** düğmesini seçin.
+
+## <a name="bkmk_addtoolbar"></a>Araç çubuğunu ekleme, kaldırma veya taşıma
+
+1. Menü çubuğunda **Araçlar**, **Özelleştir**' i seçin.
+
+     **Özelleştir** iletişim kutusu açılır.
+
+2. **Araç çubuğu** sekmesinde, aşağıdaki adım kümelerinden birini gerçekleştirin:
+
+    - Bir araç çubuğu eklemek için **Yeni** düğmesini seçin, eklemek istediğiniz araç çubuğu için bir ad belirtin ve sonra **Tamam** düğmesini seçin.
+
+         ![Araç çubuğunun nasıl ekleneceğini gösteren iletişim kutusunu özelleştirme](../ide/media/addtoolbar.png "AddToolbar")
+
+    - Özel bir araç çubuğunu kaldırmak için **araç çubukları** listesinden seçin ve ardından **Sil** düğmesini seçin.
 
         > [!IMPORTANT]
         > Kendi oluşturduğunuz araç çubuklarını silebilir, ancak varsayılan araç çubuklarını silemezsiniz.
 
-    - Bir araç çubuğunu farklı bir yerleştirme konumuna taşımak için projeyi seçin **araç çubukları** listesinde **Seçimi Değiştir** düğmesini ve ardından görüntülenen listede bir konum seçin.
+    - Bir araç çubuğunu farklı bir yerleştirme konumuna taşımak için, **araç çubukları** listesinden seçin, **Seçimi Değiştir** düğmesini seçin ve açılan listeden bir konum seçin.
 
          Ayrıca, bir araç çubuğunu, ana yerleştirme alanında herhangi bir konuma taşımak için sol kenarından sürükleyebilirsiniz.
 
         > [!NOTE]
-        > Kullanılabilirliğini ve erişilebilirliğini araç çubuklarının geliştirme konusunda daha fazla bilgi için bkz. [nasıl yapılır: IDE erişilebilirlik seçeneklerini ayarlama](../ide/reference/how-to-set-ide-accessibility-options.md).
+        > Araç çubuklarının kullanılabilirliğini ve erişilebilirliğini geliştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: IDE erişilebilirlik seçeneklerini ayarlama](../ide/reference/how-to-set-ide-accessibility-options.md).
 
-## <a name="bkmk_customize"></a> Bir menü veya araç çubuğunu özelleştirme
+## <a name="bkmk_customize"></a>Menüyü veya araç çubuğunu özelleştirme
 
-1. Menü çubuğunda, **Araçları**, **Özelleştir**.
+1. Menü çubuğunda **Araçlar**, **Özelleştir**' i seçin.
 
      **Özelleştir** iletişim kutusu açılır.
 
-2. Üzerinde **komutları** sekmesinde, özelleştirmek istediğiniz öğe türüne ilişkin seçenek düğmesini seçin.
+2. **Komutlar** sekmesinde, özelleştirmek istediğiniz öğe türüne ilişkin seçenek düğmesini seçin.
 
 3. Bu öğe türüne ilişkin listede, özelleştirmek istediğiniz menü veya araç çubuğunu seçin ve sonra aşağıdaki adım gruplarından birini gerçekleştirin:
 
-    - Bir komut eklemek için **Add Command** düğmesi.
+    - Bir komut eklemek için **Komut Ekle** düğmesini seçin.
 
-         İçinde **Add Command** iletişim kutusunda, bir öğeyi **kategorileri** listesinde, bir öğe seçin **komutları** listeleyin ve ardından **Tamam**düğmesi.
+         **Komut Ekle** Iletişim kutusunda **Kategoriler** listesinden bir öğe seçin, **Komutlar** listesinden bir öğe seçin ve **Tamam** düğmesini seçin.
 
-         ![Visual Studio'da Ekle komutu iletişim kutusu](../ide/media/addcommand.png "AddCommand")
+         ![Visual Studio 'da komut Ekle iletişim kutusu](../ide/media/addcommand.png "AddCommand 'i")
 
-    - Bir komutu silmek için onu seçin **denetimleri** listeleyin ve ardından **Sil** düğmesi.
+    - Bir komutu silmek için, **denetimler** listesinden seçin ve ardından **Sil** düğmesini seçin.
 
-    - Komutları yeniden düzenlemek için bir komut seçin **denetimleri** listeleyin ve ardından **Yukarı Taşı** veya **Aşağı Taşı** düğmesi.
+    - Komutları yeniden sıralamak için, **denetimler** listesinde bir komut seçin ve ardından **Yukarı taşı** veya **aşağı taşı** düğmesini seçin.
 
-    - Komutları gruplar halinde ayırmak için bir komut seçin **denetimleri** listesinde **Seçimi Değiştir** düğmesine ve ardından **bir Grup Başlat** menüde görünür.
+    - Komutları gruplara ayırmak için, **denetimler** listesinde bir komut seçin, **Seçimi Değiştir** düğmesini seçin ve açılan menüden **bir Grup Başlat** ' ı seçin.
 
-## <a name="bkmk_reset"></a> Bir menü veya araç çubuğunu sıfırlama
+## <a name="bkmk_reset"></a>Menüyü veya araç çubuğunu sıfırlama
 
-1. Menü çubuğunda, **Araçları**, **Özelleştir**.
+1. Menü çubuğunda **Araçlar**, **Özelleştir**' i seçin.
 
      **Özelleştir** iletişim kutusu açılır.
 
-2. Üzerinde **komutları** sekmesinde, sıfırlamak istediğiniz öğe türüne ilişkin seçenek düğmesini seçin.
+2. **Komutlar** sekmesinde, sıfırlamak istediğiniz öğe türüne ilişkin seçenek düğmesini seçin.
 
 3. Bu öğe türüne ilişkin listede, sıfırlamak istediğiniz menü veya araç çubuğunu seçin.
 
-4. Seçin **Seçimi Değiştir** düğmesine ve ardından **sıfırlama** menüde görünür.
+4. **Seçimi Değiştir** düğmesini seçin ve açılan menüden **Sıfırla** ' yı seçin.
 
-     Seçerek tüm menüleri ve araç çubuklarını da sıfırlayabilirsiniz **Tümünü Sıfırla** düğmesi.
+     Tümünü **Sıfırla** düğmesini seçerek de tüm menüleri ve araç çubuklarını sıfırlayabilirsiniz.

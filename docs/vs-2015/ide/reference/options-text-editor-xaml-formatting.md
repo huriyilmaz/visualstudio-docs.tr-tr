@@ -1,5 +1,5 @@
 ---
-title: Biçimlendirme seçenekler, metin düzenleyici, XAML, | Microsoft Docs
+title: Seçenekler, metin düzenleyici, XAML, biçimlendirme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -28,105 +28,105 @@ helpviewer_keywords:
 - XAML view settings, attribute spacing
 ms.assetid: ad3820b1-0d94-4807-a74c-c3467ed973a2
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8f820ac16667a9550db17bc252c547f16b81e70b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 319e09d2438b23c217f7820fe4288758a595be56
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65696013"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662217"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>Seçenekler, Metin Düzenleyici, XAML, Biçimlendirme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kullanım **biçimlendirme** öğeler ve öznitelikler XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için özellik sayfası. Açmak için **seçenekleri** iletişim kutusu, tıklayın **Araçları** menüsünü seçin ve ardından **seçenekleri**. Erişim için **biçimlendirme** özellik sayfasında **metin düzenleyici**, **XAML**, **biçimlendirme** düğümü.
+Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için **biçimlendirme** özelliği sayfasını kullanın. **Seçenekler** iletişim kutusunu açmak için **Araçlar** menüsüne ve ardından **Seçenekler**' e tıklayın. **Biçimlendirme** özelliği sayfasına erişmek Için **metin düzenleyici**, **xaml**, **biçimlendirme** düğümünü genişletin.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="auto-formatting-events"></a>Otomatik biçimlendirme olayları
-Otomatik biçimlendirme oluşabilir, aşağıdaki olaylardan herhangi biri algılandı.
+Aşağıdaki olaylardan herhangi biri algılandığında otomatik biçimlendirme gerçekleşebilir.
 
-- Bir bitiş etiketi ya da basit etiket tamamlama.
+- Bitiş etiketi veya basit etiket tamamlama.
 
-- Bir başlangıç etiketi tamamlandığında.
+- Başlangıç etiketinin tamamlanması.
 
-- Panodan yapıştırarak.
+- Panodan yapıştırılıyor.
 
-- Klavye komutlarını biçimlendirme.
+- Klavye komutları biçimlendiriliyor.
 
-  Otomatik biçimlendirme olayları neden belirtebilirsiniz.
-
-|||
-|-|-|
-|**Bitiş etiketi ya da basit etiket tamamlandığında**|Otomatik biçimlendirme bir bitiş etiketi ya da basit etiket yazmayı bitirdikten sonra gerçekleşir. Basit bir etiket öznitelikleri, örneğin yok `<Button />`.|
-|**Başlangıç etiketi tamamlandığında**|Otomatik biçimlendirme, bir başlangıç etiketi yazmayı bitirdikten sonra gerçekleşir.|
-|**Pano'dan üzerinde Yapıştır**|XAML görünümü panodan XAML yapıştırın otomatik biçimlendirme gerçekleşir.|
-
-## <a name="quotation-mark-style"></a>Tırnak işareti stili
-Bu ayar, öznitelik değerleri tek veya çift tırnak içine alınmış olup olmadığını gösterir. Otomatik-biçimlendirici ve IntelliSense otomatik tamamlama, bu ayarı kullanın.
-
-Bu seçeneği belirlediğinizde, yalnızca öznitelikler, daha sonra Tasarımcı kullanılarak eklenen veya el ile XAML görünümünde etkilenir.
+  Hangi olayların otomatik biçimlendirmeye neden olduğunu belirtebilirsiniz.
 
 |||
 |-|-|
-|**Çift tırnak (")**|Öznitelik değerleri çift tırnak işareti içine alınır.<br /><br /> `<Button Name="button1">Hello</Button>`|
-|**Tek tırnak (')**|Öznitelik değerleri tek tırnak işaretleri içine alınır.<br /><br /> `<Button Name='button1'>Hello</Button>`|
+|**Bitiş etiketi veya basit etiket tamamlandığında**|Bir bitiş etiketi veya basit bir etiket yazmayı bitirdiğinizde otomatik biçimlendirme gerçekleşir. Basit bir etiketin öznitelikleri yoktur, örneğin `<Button />`.|
+|**Başlangıç etiketi tamamlandığında**|Başlangıç etiketi yazmayı bitirdiğinizde otomatik biçimlendirme gerçekleşir.|
+|**Panodan yapıştırılırken**|Otomatik biçimlendirme, panodaki XAML 'yi XAML görünümüne yapıştırdığınızda oluşur.|
 
-## <a name="tag-wrapping"></a>Etiket kaydırma
-Etiket sarmalama için bir satır uzunluğu belirtebilirsiniz. Etiket kaydırma etkin olduğunda, tüm XAML Tasarımcısı'nı kullanarak daha sonradan eklenen uygun şekilde sarmalanır.
+## <a name="quotation-mark-style"></a>Tırnak Işareti stili
+Bu ayar, öznitelik değerlerinin tek veya çift tırnak işareti içine alınmış olup olmadığını gösterir. Otomatik biçimlendirici ve IntelliSense otomatik tamamlama bu ayarı kullanır.
+
+Bu seçeneği ayarladıktan sonra, yalnızca Tasarımcı kullanılarak veya XAML görünümünde el ile eklenen öznitelikler etkilenir.
 
 |||
 |-|-|
-|**Belirtilen uzunluğu geçen etiketleri Kaydır**|Tarafından belirtilen satır uzunluğu'konumundaki satırları sarmalanmış olup olmadığını belirtir **uzunluğu**.|
-|**Uzunluğu**|Bir satırın karakter içerebilir. Gerekirse, bazı XAML satırları belirtilen satır uzunluğu aşabilir.|
+|**Çift tırnak işareti (")**|Öznitelik değerleri çift tırnak içine alınır.<br /><br /> `<Button Name="button1">Hello</Button>`|
+|**Tek tırnak (')**|Öznitelik değerleri tek tırnak içine alınır.<br /><br /> `<Button Name='button1'>Hello</Button>`|
+
+## <a name="tag-wrapping"></a>Etiket sarmalama
+Etiket sarmalama için bir satır uzunluğu belirtebilirsiniz. Etiket kaydırma etkinleştirildiğinde, daha sonra tasarımcı kullanılarak eklenen XAML, uygun şekilde sarmalanır.
+
+|||
+|-|-|
+|**Belirtilen uzunluğu aşan etiketleri sarın**|Çizgilerin, **uzunluğa**göre belirtilen satır uzunluğuna kaydırılıp kaydırılmayacağını belirtir.|
+|**Uzunluklu**|Bir çizginin içerebileceği karakter sayısı. Gerekirse, bazı XAML satırları belirtilen satır uzunluğunu aşabilir.|
 
 ## <a name="attribute-spacing"></a>Öznitelik aralığı
-XAML belgenizde öznitelikleri nasıl düzenlenir denetlemek için bu ayarı kullanın.
+Özniteliklerin XAML belgenizde nasıl düzenlendiğini denetlemek için bu ayarı kullanın
 
 |||
 |-|-|
-|**Satır başı ve öznitelikleri arasındaki boşlukları koru**|Yeni satırlar ve öznitelikler arasında boşluk tarafından otomatik olarak biçimlendirme etkilenmez.<br /><br /> `<Button Height="23" Name="button1"`<br /><br /> `Width="75">Hello</Button>`|
-|**Öznitelikler arasına tek boşluk Ekle**|Öznitelikleri bir boşluk ile ayırarak bitişik öznitelikleri bir satır kaplayabilir. Etiket sarmalama ayarları uygulanır.<br /><br /> `<Button Height="23" Name="button1" Width="75">Hello</Button>`|
-|**Her özniteliği ayrı bir satıra Yerleştir**|Her öznitelik kendi satırına kaplar. Fazla öznitelik mevcut olduğunda bu kullanışlıdır.<br /><br /> `<Button`<br /><br /> `Height="23"`<br /><br /> `Name="button1"`<br /><br /> `Width="75">Hello</Button>`|
-|**Konum ilk özniteliği başlangıç etiketiyle aynı satıra**|Bu onay kutusu işaretlendiğinde, öğenin başlangıç etiketi ile aynı satırda ilk öznitelik görünür.<br /><br /> `<Button Height="23"`<br /><br /> `Name="button1"`<br /><br /> `Width="75">Hello</Button>`|
+|**Öznitelikler arasındaki newlines ve boşlukları koru**|Öznitelikler arasındaki yeni satırlar ve boşluklar otomatik biçimlendirmeden etkilenmez.<br /><br /> `<Button Height="23" Name="button1"`<br /><br /> `Width="75">Hello</Button>`|
+|**Öznitelikler arasına tek boşluk Ekle**|Öznitelikler bir satır kaplar ve bitişik öznitelikleri ayıran bir alandır. Etiket kaydırma ayarları uygulanır.<br /><br /> `<Button Height="23" Name="button1" Width="75">Hello</Button>`|
+|**Her özniteliği ayrı bir satıra yerleştir**|Her öznitelik kendi satırını kaplar. Bu, birçok öznitelik mevcut olduğunda faydalıdır.<br /><br /> `<Button`<br /><br /> `Height="23"`<br /><br /> `Name="button1"`<br /><br /> `Width="75">Hello</Button>`|
+|**İlk özniteliği başlangıç etiketiyle aynı satıra yerleştir**|İşaretlendiğinde, ilk öznitelik öğenin başlangıç etiketiyle aynı satırda görüntülenir.<br /><br /> `<Button Height="23"`<br /><br /> `Name="button1"`<br /><br /> `Width="75">Hello</Button>`|
 
 ## <a name="element-spacing"></a>Öğe aralığı
-XAML belgenizde öğeleri nasıl düzenlenir denetlemek için bu ayarı kullanın.
+Öğelerin XAML belgenizde nasıl düzenlendiğini denetlemek için bu ayarı kullanın
 
 |                                                               |                                                                                                                                                                                       |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **İçeriği yeni satırları koru**                             | Öğe içeriği boş satırları kaldırılmaz.<br /><br /> `<Grid>`<br /><br /><br /><br /><br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /><br /><br /> `</Grid>\`   |
-| **İçerikte birden çok boş satırlar için tek bir satırı Daralt** | Öğe içeriği boş satırları tek bir satıra daraltılır.<br /><br /> `<Grid>`<br /><br /><br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /><br /><br /> `</Grid>` |
-| **İçerikteki boş satırları Kaldır**                             | Öğesi içerik tüm boş satırlar kaldırıldı.<br /><br /> `<Grid>`<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> `</Grid>`                                        |
+| **İçerikte yeni satırları koru**                             | Öğe içeriğindeki boş satırlar kaldırılmaz.<br /><br /> `<Grid>`<br /><br /><br /><br /><br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /><br /><br /> `</Grid>\`   |
+| **İçerikteki birden çok boş satırı tek bir satıra Daralt** | Öğe içeriğindeki boş satırlar tek bir satıra daraltılır.<br /><br /> `<Grid>`<br /><br /><br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /><br /><br /> `</Grid>` |
+| **İçerikteki boş satırları kaldır**                             | Öğe içeriğindeki tüm boş satırlar kaldırılır.<br /><br /> `<Grid>`<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> `</Grid>`                                        |
 
 ## <a name="auto-insert"></a>Otomatik Ekle
-Etiketleri ve teklifler ne zaman otomatik olarak oluşturulan denetlemek için bu ayarı kullanın.
+Etiketlerin ve tekliflerin otomatik olarak ne zaman oluşturulduğunu denetlemek için bu ayarı kullanın.
 
 |||
 |-|-|
-|**Kapanış etiketleri**|Büyüktür (>) karakteri ile açılış etiketinde'ı kapattığınızda, bir öğenin kapatma etiketi otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
-|**Öznitelik tırnak işaretleri**|Deyim tamamlama açılır listeden bir öznitelik değeri seçildiğinde çevreleyen tırnak oluşturulup oluşturulmadığını belirtir.|
-|**Küme ayraçları Markupextension'lar için kapanış**|Açılış yazdığınızda, bir biçimlendirme uzantının kapanış ayracından (}) otomatik olarak oluşturulup oluşturulmayacağını belirtir ayracı karakteri ({}).|
-|**MarkupExtension parametrelerini ayıran ayırmak için virgül**|Birden fazla parametre bir işaretleme uzantısı'nda yazarken virgül oluşturulup oluşturulmadığını belirtir.|
+|**Kapatma etiketleri**|Açılış etiketini (>) karakterden daha uzun bir öğe kapatma etiketinin otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
+|**Öznitelik teklifleri**|Ekstre tamamlama açılan listesinden bir öznitelik değeri seçildiğinde kapsayan tekliflerin oluşturulup oluşturulmayacağını belirtir.|
+|**MarkupExtensions için kapatma ayraçları**|Açma küme ayracı ({) yazdığınızda bir işaretleme uzantısının kapanış ayracı (}) otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
+|**MarkupExtension parametrelerini ayırmak için virgüller**|Bir biçimlendirme uzantısına birden fazla parametre yazdığınızda virgüllerin oluşturulup oluşturulmayacağını belirtir.|
 
-## <a name="default-view"></a>Varsayılan Görünüm
-Tasarım görünümü XAML belgeleri yüklendiğinde görünür olup olmadığını denetlemek için bu ayarı kullanın.
+## <a name="default-view"></a>Varsayılan görünüm
+XAML belgeleri yüklendiğinde Tasarım görünümü görünüp başlatılmayacağını denetlemek için bu ayarı kullanın.
 
 |||
 |-|-|
-|**Tam XAML görünümünde her zaman açık belgeler**|XAML belgeleri yalnızca Tasarım görünümü olmadan XAML Görünümü'nde görüntülenip görüntülenmeyeceğini belirtir. Büyük belgelerin yüklenmesi için yararlıdır.|
+|**Belgeleri her zaman tam XAML görünümünde aç**|XAML belgelerinin Tasarım görünümü olmadan yalnızca XAML görünümünde görünüp görünmeyeceğini belirtir. Büyük belgeleri yüklemek için faydalıdır.|
 
 ## <a name="toolbox"></a>Araç Kutusu
-Kullanıcı denetimleri ve özel denetimler araç kutusunda gösterilip gösterilmeyeceğini belirtmek için bu ayarı kullanın.
+Araç kutusunda Kullanıcı denetimleri ve özel denetimlerin gösterilip gösterilmeyeceğini belirtmek için bu ayarı kullanın.
 
 |||
 |-|-|
-|**Araç kutusu öğeleri otomatik olarak doldurur.**|Kullanıcı denetimleri ve geçerli çözüme özel denetimleri araç kutusunda otomatik olarak gösterilip gösterilmeyeceğini belirtir.|
+|**Araç kutusu öğelerini otomatik olarak doldur**|Geçerli çözümdeki Kullanıcı denetimlerinin ve özel denetimlerin araç kutusunda otomatik olarak gösterilip gösterilmeyeceğini belirtir.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[WPF'de XAML](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8)  
-[Nasıl yapılır: XAML Görünümü Ayarları Değiştir](https://msdn.microsoft.com/aee87c79-ca01-4f84-8fb7-a9e47048ee47)  
-[XAML ve kod gözden geçirmeleri](https://msdn.microsoft.com/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)
+[WPF 'de xaml](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) 
+ nasıl yapılır: XAML[ve kod Izlenecek](https://msdn.microsoft.com/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c) yol 
+[xaml görünüm ayarlarını değiştirme](https://msdn.microsoft.com/aee87c79-ca01-4f84-8fb7-a9e47048ee47)

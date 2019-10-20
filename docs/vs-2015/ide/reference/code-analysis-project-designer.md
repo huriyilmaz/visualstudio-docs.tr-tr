@@ -1,5 +1,5 @@
 ---
-title: Kod Analizi, Proje Tasarımcısı | Microsoft Docs
+title: Kod Analizi, proje Tasarımcısı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,59 +11,45 @@ helpviewer_keywords:
 - Project Designer, Code Analysis page
 ms.assetid: 71743d26-4da5-4f7d-a403-7ab96cf2ef2e
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fa2aa4b3055ff49f59da329ea828e0dbcfc8ec05
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.openlocfilehash: 7c14396c8ebaba2b45587d70e44fa41ba8f2742b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62419942"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660865"
 ---
 # <a name="code-analysis-project-designer"></a>Kod Çözümlemesi, Proje Tasarımcısı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kodunuz üzerinde çalıştırmak için iyileştirilmiş kod analizi aracı içerir. Microsoft .NET Framework tasarım yönergeleri ile ortaya konan programlama ve tasarım kuralları ihlalleri gibi araç derlemelerinizi, bilgileri raporlar.  
-  
-## <a name="uielement-list"></a>UIElement Listesi  
- Kod analizini etkinleştir  
- Etkinleştirir veya projeniz için Kod Analizi devre dışı bırakır.  
-  
- Tasarım Kuralları  
- Etkinleştirir veya tasarım kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Genelleştirme kuralları  
- Etkinleştirir veya Genelleştirme kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Birlikte çalışabilirlik kuralları  
- Etkinleştirir veya birlikte çalışabilirlik kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Bakım kuralları  
- Etkinleştirir veya bakım kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Taşınabilirlik kuralları  
- Etkinleştirir veya taşınabilirlik kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Adlandırma kuralları  
- Etkinleştirir veya adlandırma kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Performans Kuralları  
- Etkinleştirir veya performans kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Taşınabilirlik kuralları  
- Etkinleştirir veya taşınabilirlik kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Güvenilirlik kuralları  
- Etkinleştirir veya güvenilirlik kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Güvenlik kuralları  
- Etkinleştirir veya güvenlik kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
- Kullanım Kuralları  
- Etkinleştirir veya kullanım kuralları devre dışı bırakır. Ayrıca, etkinleştirme veya devre dışı bireysel kuralları bu girdiyi genişletebilirsiniz.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen kod uyarıları için Kod Analizi](../../code-quality/code-analysis-for-managed-code-warnings.md)   
- [Yönetilen kod genel bakış için Kod Analizi](../../code-quality/code-analysis-for-managed-code-overview.md)   
- [İzlenecek yol: Kod kusurları için yönetilen kodu analiz etme](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
+Kodunuzda çalıştırmayı tercih ettiğiniz kod analizi aracını içerir. Araç, Microsoft .NET Framework Tasarım yönergeleriyle belirtilen programlama ve tasarım kuralları ihlalleri gibi derlemeleriniz hakkındaki bilgileri raporlar.
+
+## <a name="uielement-list"></a>UIElement Listesi
+ Kod analizini etkinleştirme, projeniz için kod analizini etkinleştirir veya devre dışı bırakır.
+
+ Tasarım kuralları tasarım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Genelleştirme kuralları, Genelleştirme kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Birlikte çalışabilirlik kuralları birlikte çalışabilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Bakım kuralları bakım kurallarını mümkün veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Mobility kuralları, Mobility kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Adlandırma kuralları, adlandırma kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Performans kuralları, performans kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Taşınabilirlik kuralları taşınabilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Güvenilirlik kuralları, güvenilirlik kurallarını mümkün veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Güvenlik kuralları güvenlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+ Kullanım kuralları kullanım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Yönetilen kod için kod analizi [için kod](../../code-quality/code-analysis-for-managed-code-warnings.md) Analizi [genel bakış](../../code-quality/code-analysis-for-managed-code-overview.md) [izlenecek yol: kod kusurları için yönetilen kodu analiz etme](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

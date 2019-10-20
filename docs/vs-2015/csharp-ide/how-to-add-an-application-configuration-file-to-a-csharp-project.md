@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir uygulama yapılandırma dosyasına ekleyin bir C# proje | Microsoft Docs'
+title: 'Nasıl yapılır: bir C# projeye uygulama yapılandırma dosyası ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,41 +10,37 @@ helpviewer_keywords:
 - app.config files, adding to C# projects
 ms.assetid: 9caf6bb0-c2fc-4ab6-ba69-bed3b880fbf8
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bc5c8dbad4d2bb248a3183e2e73d7c2932e7bce4
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: f8417b5520dc9587fa3231a3bc459335d2a9896d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65681721"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667526"
 ---
-# <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>Nasıl yapılır: Bir uygulama yapılandırma dosyasına ekleyin bir C# proje
+# <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>Nasıl yapılır: C# Projesine Uygulama Yapılandırma Dosyası Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir C# projesine uygulama yapılandırma dosyası (app.config dosyası) ekleyerek, ortak dil çalışma zamanının nasıl bulur ve derleme dosyalarını yükler özelleştirebilirsiniz. Uygulama yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](https://msdn.microsoft.com/library/772ac6f4-64d2-4cfb-92fd-58096dcd6c34).  
-  
+Bir C# projeye uygulama yapılandırma dosyası (App. config dosyası) ekleyerek, ortak dil çalışma zamanının derleme dosyalarını nasıl bulup yüklediğini özelleştirebilirsiniz. Uygulama yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](https://msdn.microsoft.com/library/772ac6f4-64d2-4cfb-92fd-58096dcd6c34).
+
 > [!NOTE]
-> Windows Store desteklemiyor <xref:System.Configuration>. Sonuç olarak, Store uygulamaları, bir app.config şablonunu içermez.  
-  
- Projenizi yapılandırdığınızda, geliştirme ortamı, app.config dosyasına otomatik olarak kopyalar, yürütülebilir dosyanın eşleştirilecek kopyalama dosya adını değiştirir ve ardından kopya ait bin dizinine taşır.  
-  
-### <a name="to-add-an-application-configuration-file-to-your-c-project"></a>C# projenize bir uygulama yapılandırma dosyası eklemek için  
-  
-1. Menü çubuğunda, **proje**, **Yeni Öğe Ekle**.  
-  
-     **Yeni Öğe Ekle** iletişim kutusu görünür.  
-  
-2. Genişletin **yüklü**, genişletme **Visual C# öğeleri**ve ardından **uygulama yapılandırma dosyası** şablonu.  
-  
-3. İçinde **adı** metin kutusuna bir ad girin ve ardından **Ekle** düğmesi.  
-  
-     App.config adlı bir dosyayı projenize eklenir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama ayarları (.NET) yönetme](../ide/managing-application-settings-dotnet.md)   
- [Yapılandırma dosyası şeması](https://msdn.microsoft.com/library/69003d39-dc8a-460c-a6be-e6d93e690b38)   
- [Uygulamaları yapılandırma](https://msdn.microsoft.com/library/86bd26d3-737e-4484-9782-19b17f34cd1f)   
- [Nasıl yapılır: Bir uygulamayı .NET Framework sürümünü hedefleyecek şekilde yapılandırma](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717)   
- [C# için Visual Studio Geliştirme Ortamını Kullanma](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md)
+> Windows Mağazası <xref:System.Configuration> desteklemiyor. Sonuç olarak, Mağaza uygulamaları App. config şablonu içermez.
+
+ Projenizi oluşturduğunuzda, geliştirme ortamı App. config dosyanızı otomatik olarak kopyalar, kopyanın dosya adını çalıştırılabilirle eşleşecek şekilde değiştirir ve ardından kopyayı bin dizinine taşımalıdır.
+
+### <a name="to-add-an-application-configuration-file-to-your-c-project"></a>C# Projenize bir uygulama yapılandırma dosyası eklemek için
+
+1. Menü çubuğunda **Proje**, **Yeni öğe Ekle**' yi seçin.
+
+     **Yeni öğe Ekle** iletişim kutusu görüntülenir.
+
+2. **Yüklü**' i genişletin **, C# görsel öğeler**' i genişletin ve ardından **uygulama yapılandırma dosyası** şablonunu seçin.
+
+3. **Ad** metin kutusuna bir ad girin ve sonra **Ekle** düğmesini seçin.
+
+     Projenize App. config adlı bir dosya eklenir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Uygulama ayarlarını yönetme (.net)](../ide/managing-application-settings-dotnet.md) [yapılandırma dosya şeması](https://msdn.microsoft.com/library/69003d39-dc8a-460c-a6be-e6d93e690b38) [uygulamaları yapılandırma](https://msdn.microsoft.com/library/86bd26d3-737e-4484-9782-19b17f34cd1f) nasıl yapılır: bir uygulamayı [Visual Studio geliştirme ortamı C# kullanarak](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md) [bir .NET Framework sürümünü hedefleyecek şekilde yapılandırma](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717)

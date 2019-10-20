@@ -1,52 +1,52 @@
 ---
-title: 'İş Akışı Tasarımcısı: System.Activities, araç kutusu öğelerini Seç'
+title: 'İş Akışı Tasarımcısı: System. Activities, araç kutusu öğelerini seçin'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES_COMPONENTS
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES COMPONENTS
 ms.assetid: cef390cd-eeda-42e6-9d2e-18c8325a4f06
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd25b939519bb1a1cb179ab5bbd4d20b9307f920
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 14ca8baa34de7763608641d9269b1721058c5af2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747763"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649873"
 ---
-# <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>System.Activities sekmesi, araç kutusu öğelerini Seç iletişim kutusu
+# <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>System. Activities sekmesi, araç kutusu öğeleri iletişim kutusu seçin
 
-Bu sekme, **araç kutusu öğelerini Seç** iletişim kutusu, Windows Workflow Foundation (WF) etkinlikleri, şablonları ve kullanılabilir öğeleri listesini görüntüler. Bu listeyi görüntülemek için seçin **araç kutusu öğelerini Seç** gelen **Araçları** menüsü veya sağ tıklayarak **araç kutusu** seçerek **öğelerini Seç**görüntülenecek **araç kutusu öğelerini Seç** iletişim kutusunu ve ardından kendi **System.Activities** sekmesi. Kullanıma hazır, liste iş akışı etkinlikleri System.Activities System.ServiceModel.Activities ve System.Activities.Core.Presentation derlemelerden içerir. Ancak, yalnızca sistem tarafından sağlanan gösterilen etkinlikleri ve görüntülenen diğer derlemeleriyle eklenen etkinlikleri **araç kutusu** varsayılan olarak denetlenir. En son eklenen etkinlikler otomatik olarak denetlenir ve görünür **araç kutusu** tıkladığınızda **Tamam** iletişim kutusundaki. Bu öğeler de görünür **araç kutusu** etkinlik/öğe/şablonunda yer aldığı ad alanına karşılık gelen yeni bir kategori altında.
+**Araç kutusu öğelerini Seç** iletişim kutusunun bu sekmesi, kullanabileceğiniz WINDOWS Workflow FOUNDATION (WF) etkinliklerinin, şablonlarının ve öğelerin bir listesini görüntüler. Bu listeyi göstermek için **Araçlar** menüsünden **araç kutusu öğelerini Seç** ' i seçin **veya araç kutusuna** sağ tıklayıp **öğeleri seç** ' i seçerek **araç kutusu öğelerini Seç** iletişim kutusunu görüntüleyin ve sonra da **bunu seçin System. Activities** sekmesi. kutudan çıkar, listede System. Activities, System. ServiceModel. Activities ve System. Activities. Core. Presentation derlemelerinden iş akışı etkinlikleri bulunur; Ancak, yalnızca, **araç kutusunda** görüntülenen diğer derlemeler aracılığıyla eklenen ve yalnızca sistem tarafından sağlanmış etkinlikler, varsayılan olarak denetlenir. Son eklenen etkinlikler otomatik olarak denetlenir ve iletişim kutusunda **Tamam** ' a tıkladığınızda **araç** kutusunda görüntülenir. Ayrıca, bu öğeler etkinlik/öğe/şablonun bulunduğu ad alanına karşılık gelen yeni bir kategori altında **araç kutusunda** görüntülenir.
 
 > [!WARNING]
-> Herhangi bir iş akışı etkinlik içermiyor bir bütünleştirilmiş kod eklemeyi denerseniz, derleme hiç etkinlik içermiyor açıklayan bir hata iletişim kutusu görüntülenir.
+> Herhangi bir iş akışı etkinliği içermeyen bir derleme eklemeye çalışırsanız, derlemenin hiç etkinlik içermediğini açıklayan bir hata iletişim kutusu görüntülenir.
 
-Bu iletişim kutusunda proje belirsiz olduğundan ve bu nedenle **System.Activities** sekmesini tek başına XAML ya da bir iş akışı dışın proje türü görünmesini devam eder.
+Bu iletişim kutusu proje agtik olur ve bu nedenle **System. Activities** sekmesi tek başına xaml 'de veya iş akışı olmayan bir proje türünde görünmeye devam eder.
 
-Filtreleme her sekmede gerçekleştirilir ve iş akışı etkinlikleri aracılığıyla eklemek mümkün değildir **.NET bileşeni** sekmesi. Bloblarda ekleme **System.Activities** kendisini sekmesi.
+Filtreleme her sekmede yapılır ve **.net bileşen** sekmesi aracılığıyla iş akışı etkinliklerini eklemek mümkün değildir. bunları **System. Activities** sekmesinin kendisi aracılığıyla ekleyin.
 
-Tüm öğeleri görmek için istemediğiniz işaretini kaldırarak **araç kutusu** bu iletişim kutusundan sekmesinde veya alternatif olarak, bunu kullanarak yapabilirsiniz **Sil** menü seçeneğini sağ tıklayın **araç kutusu**ve serbest bir derlemeye başvuran öğesinden kaldırmaz **araç kutusu**.
+**Araç** kutusunda bu iletişim kutusundan görmek istemediğiniz öğelerin işaretini kaldırın veya alternatif olarak, **araç kutusu** **'ndaki sağ tıklama** menü seçeneğini kullanarak, bir derlemeye yeniden başvuru yapan öğeyi **Araç kutusu**.
 
-Tasarımcıda bırakarak etkinlik örnekleme başvurulan bütünleştirilmiş kodların listesi öğesine otomatik olarak içeren derlemeyi ekler. Etkinlik derleme C başvuruyorsa, ayrıca, C başvurulan derleme listesine eklemez. C derlemeyi GAC'ye veya etkinlik b ile aynı dizinde olması gerekir Tek başına durumda, derlemeyi GAC veya VS araştırma yollarını olması gerekir. Ancak bundan sonra sürükleyip bırakabilirsiniz etkinlik iş akışı Tasarımcı yüzeyinde.
+Tasarımcı üzerinde sürükleyip bırakarak etkinliğin örneklenmesi, öğeyi içeren derlemeyi otomatik olarak başvurulan derlemeler listesine ekler. Ayrıca, etkinlik bir derleme C 'ye başvuruyorsa, başvurulan derleme listesine C eklemez. Derleme C, GAC içinde veya etkinlik B ile aynı dizinde olmalıdır. Tek başına durumda, derleme GAC 'de veya VS 'nin araştırma yollarında olmalıdır. Etkinliği yalnızca iş akışı Tasarımcısı yüzeyine sürükleyip bırakabilirsiniz.
 
-**Araç kutusu** ayarları kullanıcı seçenekleri varsayılan olarak kaydedileceği böylece olduğunda, sonraki açışınızda, **araç kutusu**, özelleştirilmiş iş akışı etkinlikleri listesini görüntüler. Bu bir yan etkisi olan, belirli bir etki alanı öğelerinizi eklediyseniz **araç kutusu** aracılığıyla **araç kutusu öğelerini Seç** iletişim kutusu, yine de devam, çalışırken bu öğeleri görmek bir De iş akışı konsol uygulaması. Bunları görmek istemiyorsanız, sonra sağ tıklama menüsünü kullanarak bunları silin veya aracılığıyla işaretini kaldırın **araç kutusu öğelerini Seç** daha önce belirtildiği gibi iletişim kutusu.
+**Araç kutusu** ayarları varsayılan olarak Kullanıcı seçenekleri olarak kaydedilir. bu nedenle, bir sonraki sefer, **araç kutusunu**açtığınızda özelleştirilmiş iş akışı etkinlikleri listesini görüntüler. Bunun yan etkisi, **araç kutusu öğelerini Seç** iletişim kutusunda belirli etki alanı öğelerinizi **araç** kutusuna eklediyseniz, yine de bir iş akışı konsol uygulamasında çalışırken bu öğeleri görmeye devam edersiniz. Bunları görmek istemiyorsanız, sağ tıklama menüsünü kullanarak silin veya daha önce belirtildiği gibi **araç kutusu öğelerini Seç** iletişim kutusunda bunları kaldırın.
 
-Sütunları bu iletişim kutusunda aşağıdaki bilgileri içerir:
+Bu iletişim kutusundaki sütunlar aşağıdaki bilgileri içerir:
 
-Name\
-Yerel makinenizde şu anda kayıtlı olan iş akışı etkinlikleri adlarını listeler.
+Ada
+Yerel makinenizde kayıtlı olan iş akışı etkinliklerinin adlarını listeler.
 
-Namespace\
-Etkinlik yapısını tanımlar .NET ad alanı hiyerarşisini görüntüler.
+Uzayına
+Etkinliğin yapısını tanımlayan .NET ad alanı hiyerarşisini görüntüler.
 
-Derleme Name\
-Etkinlik içeren .NET derleme sürümünü ve adını görüntüler.
+Derleme adı \
+Etkinliği içeren .NET derlemesinin adını ve sürümünü görüntüler.
 
-Directory\
-İş akışı etkinlikleri içeren .NET derleme konumunu görüntüler. Genel Derleme Önbelleği tüm derlemeler için varsayılan konumdur.
+Dizinden
+İş akışı etkinliklerini içeren .NET derlemesinin konumunu görüntüler. Tüm derlemeler için varsayılan konum genel derleme önbelleğidir.
 
 Listelenen bileşenleri sıralamak için herhangi bir sütun başlığını seçin.

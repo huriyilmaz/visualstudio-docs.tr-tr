@@ -11,17 +11,17 @@ helpviewer_keywords:
 - code visualization [Visual Studio]
 - dependencies, visualizing
 - dependency graphs
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ecc8ae714dfb35281029a9d6e240a148e7c9511
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 45fb9b1a08dc54257f24f469d3a717b82faccf45
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913352"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661537"
 ---
 # <a name="map-dependencies-with-code-maps"></a>Bağımlılıkları kod eşlemeleriyle eşleyin
 
@@ -38,7 +38,7 @@ Bu dillerdeki kod bağımlılıklarını eşleyebilirsiniz:
 
 - Bir C# çözümde veya derlemelerde ( *. dll* veya *. exe*) görsel veya Visual Basic
 
-- Visual C++ projelerinde yerel veya yönetilen C++ C veya kod, üst bilgi dosyaları ( *. h* veya `#include`) ya da ikili dosyalar
+- Visual C++ projelerinde yerel veya yönetilen C++ C veya kod, üst bilgi dosyaları ( *. h* veya `#include`) veya ikili dosyalar
 
 - X + + projeleri ve Microsoft Dynamics AX için .NET modüllerinden oluşturulan derlemeler
 
@@ -49,7 +49,7 @@ Bu dillerdeki kod bağımlılıklarını eşleyebilirsiniz:
 
 Visual Studio 'da bir kod haritası oluşturmak için önce **kod haritasını** ve **canlı bağımlılık doğrulama** bileşenlerini yüklemeniz gerekir:
 
-1. **Visual Studio yükleyicisi**açın. Windows Başlat menüsünden veya Visual Studio içinde **Araçlar** > **Al araçlar ve Özellikler**' i seçerek açabilirsiniz.
+1. **Visual Studio yükleyicisi**açın. Araçları**ve özellikleri al** >  **Araçlar** ' ı seçerek Windows Başlat menüsünden veya Visual Studio içinden açabilirsiniz.
 
 1. **Ayrı bileşenler** sekmesini seçin.
 
@@ -67,7 +67,7 @@ Derleme başvuruları, dosyalar ve klasörler de dahil olmak üzere boş bir kod
 
 Boş bir kod eşlemesi eklemek için:
 
-1. **Çözüm Gezgini**' de, en üst düzey çözüm Düğümünüzün kısayol menüsünü açın. **Yeni öğe** **Ekle** > ' yi seçin.
+1. **Çözüm Gezgini**' de, en üst düzey çözüm Düğümünüzün kısayol menüsünü açın. @No__t_1**Yeni öğe** **Ekle** ' yi seçin.
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **yüklü**altında **genel** kategorisini seçin.
 
@@ -78,13 +78,13 @@ Boş bir kod eşlemesi eklemek için:
 
    Çözümünüzün **Çözüm öğeleri** klasöründe boş bir harita görüntülenir.
 
-Benzer şekilde, **mimari** > **Yeni kod eşlemesi** veya **Dosya** > **Yeni** > **Dosya dosyası**seçerek çözümünüze eklemeden yeni bir kod eşleme dosyası oluşturabilirsiniz.
+Benzer şekilde, yeni kod**eşlemesi** veya **dosya**  > **Yeni**  > **dosyası** >  **mimari** seçerek çözümünüze eklemeden yeni bir kod eşleme dosyası oluşturabilirsiniz.
 
 ## <a name="generate-a-code-map-for-your-solution"></a>Çözümünüz için bir kod Haritası oluşturma
 
 Çözümünüzdeki tüm bağımlılıkları görmek için:
 
-1. Menü çubuğunda, **mimari** > **çözüm için kod Haritası Oluştur**' u seçin. Kodunuz son kez derlenmeden bu yana değiştirilmediyse, bunun yerine**Yapı olmadan çözüm için kod Haritası üret** ' **i seçebilirsiniz.**  > 
+1. Menü çubuğunda **mimari** ' i seçin  > **çözüm Için kod Haritası Oluştur**' u seçin. Kodunuz son kez derlenmeden bu yana değiştirilmediyse, bunun yerine**Yapı olmadan çözüm Için kod haritası oluşturmak**  >  **mimari** ' i seçebilirsiniz.
 
    ![Kod Haritası komutu oluştur](../modeling/media/codemapsarchitecturemenu.png)
 
@@ -104,7 +104,7 @@ Benzer şekilde, **mimari** > **Yeni kod eşlemesi** veya **Dosya** > **Yeni** >
 
    ![Kod haritasında düğüm genişletme](../modeling/media/dependencygraph_containment.png)
 
-   Ya da öğeyi seçip artı tuşuna ( **+** ) basarak klavyeyi kullanın. Daha derin kod düzeylerini araştırmak için ad alanları, türler ve Üyeler için de aynısını yapın.
+   Ya da öğeyi seçip artı tuşuna basarak ( **+** ) klavyeyi kullanın. Daha derin kod düzeylerini araştırmak için ad alanları, türler ve Üyeler için de aynısını yapın.
 
    > [!TIP]
    > Fare, klavye ve dokunma kullanarak kod eşlemeleriyle çalışma hakkında daha fazla ayrıntı için bkz. [kod haritalarını inceleyin ve yeniden düzenleyin](../modeling/browse-and-rearrange-code-maps.md).
@@ -162,7 +162,7 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
 
    ![Eşlemek istediğiniz öğeleri seçin](../modeling/media/codemapsselectinsolutionexplorer.png)
 
-1. **Çözüm Gezgini** araç çubuğunda, **kod eşlemesinde** ![göster ' i seçerek seçili düğümlerden yeni grafik oluştur düğmesini](../modeling/media/createnewgraphfromselectedbutton.gif)seçin. Ya da bir grup öğe için kısayol menüsünü açın ve **kod eşlemesinde göster '** i seçin.
+1. **Çözüm Gezgini** araç çubuğunda, seçili düğümlerde yeni grafik ![Create **kod eşlemesinde göster** ' i seçin (](../modeling/media/createnewgraphfromselectedbutton.gif). Ya da bir grup öğe için kısayol menüsünü açın ve **kod eşlemesinde göster '** i seçin.
 
    Ayrıca **Çözüm Gezgini**, **sınıf görünümü**veya **nesne tarayıcısı**öğeleri [Yeni](#add-a-code-map) veya varolan bir kod haritasına sürükleyebilirsiniz. Öğelerinizin üst hiyerarşisini dahil etmek için, öğeleri sürüklerken **CTRL** tuşuna basın ve basılı tutun ya da varsayılan eylemi belirtmek için kod Haritası araç çubuğundaki **üst öğeleri dahil et** düğmesini kullanın. Ayrıca, derleme dosyalarını **Windows Gezgini**gibi Visual Studio 'nun dışından da sürükleyebilirsiniz.
 
@@ -177,13 +177,13 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
 
    ![Kod haritasında bir düğümü genişletme](../modeling/media/dependencygraph_containment.png)
 
-   Tüm öğeleri genişletmek için, **CTRL**+**A**'yı kullanarak bunları seçin, sonra haritanın kısayol menüsünü açın ve **Grup** > **Genişlet**' i seçin. Ancak, tüm grupların genişletilmesi kullanılamaz bir eşleme veya bellek sorunları oluşturursa, bu seçenek kullanılamaz.
+   Tüm öğeleri genişletmek için, **Ctrl** +**A**kullanarak bunları seçin, sonra haritanın kısayol menüsünü açın ve **Grup**  > **Genişlet**' i seçin. Ancak, tüm grupların genişletilmesi kullanılamaz bir eşleme veya bellek sorunları oluşturursa, bu seçenek kullanılamaz.
 
 5. İlgilendiğiniz öğeleri genişletmeye devam edin, gerekirse sınıf ve üye düzeyine doğru bir şekilde geçin.
 
    ![Grupları sınıfa ve üye düzeyine Genişlet](../modeling/media/codemapsexpandtoclassandmember.png)
 
-   Koddaki, ancak haritada görünmeyen üyeleri görmek için, bir grubun sol üst köşesindeki **tekrar al Children** Icon ![tekrar al Children simgesine](../modeling/media/dependencygraph_deletednodesicon.png) tıklayın.
+   Koddaki, ancak haritada görünmeyen üyeleri görmek için, bir grubun sol üst köşesinde bulunan alt öğe ](../modeling/media/dependencygraph_deletednodesicon.png) simgesini ![Refetch **tekrar al alt** simgesine tıklayın.
 
 6. Haritadaki öğelerle ilgili daha fazla öğe görmek için, bir tane seçin ve kod Haritası araç çubuğunda **ilgili öğe göster** ' i seçin, ardından haritaya eklenecek ilgili öğelerin türünü seçin. Alternatif olarak, bir veya daha fazla öğe seçin, kısayol menüsünü açın ve ardından haritaya eklenecek ilgili öğelerin türünün **göster** seçeneğini seçin. Örneğin:
 
@@ -228,7 +228,7 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
 
     ![Bu üye tarafından çağrılan yöntemleri göster](../modeling/media/codemapsshowrelatedmethods.png)
 
-7. Haritada ilişkiler gösterilmektedir. Bu örnekte, eşleme `Find` yöntemi tarafından çağrılan yöntemleri ve çözüm veya dışarıdan konumunu gösterir.
+7. Haritada ilişkiler gösterilmektedir. Bu örnekte, haritada `Find` yöntemi tarafından çağrılan yöntemler ve bu konumdaki veya dışarıdan konumları gösterilmektedir.
 
    ![Kod haritasında belirli bağımlılıkları göster](../modeling/media/codemapsspecificdependenciesintro.png)
 
@@ -238,7 +238,7 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Video Visual Studio 2015 kod haritaları ile koddan tasarımı anlama](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)
+- [Video: Visual Studio 2015 kod haritaları ile koddan tasarımı anlama](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)
 - [Uygulamalarınızda hata ayıklamak için kod haritalarını kullanma](../modeling/use-code-maps-to-debug-your-applications.md)
 - [Hata ayıklarken çağrı yığınında eşleştirme yöntemleri](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 - [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)

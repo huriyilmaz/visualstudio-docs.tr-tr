@@ -1,5 +1,5 @@
 ---
-title: '&lt;alan&gt; (JavaScript) | Microsoft Docs'
+title: '&lt;field &gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,151 +9,137 @@ helpviewer_keywords:
 - field JavaScript XML tag
 ms.assetid: c494bae0-3095-42a3-aa0a-4c415188c65c
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b2fe09070261460b7b83f54de44a07cf96d40cf2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a3fc786e4d99d1eaff4a8b152ea9496ce8400ff1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68181269"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663854"
 ---
-# <a name="ltfieldgt-javascript"></a>&lt;alan&gt; (JavaScript)
+# <a name="ltfieldgt-javascript"></a>&lt;field &gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir alan veya bir nesne üzerinde tanımlanan üyesi için bir açıklama da dahil olmak üzere, belgelendirme bilgilerini belirtir.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-<field name="fieldName" static="true|false"  
-    type="FieldType" integer="true|false"  
-    domElement="true|false" mayBeNull="true|false"  
-    elementType="ArrayElementType" elementInteger="true|false"  
-    elementDomElement="true|false" elementMayBeNull="true|false"  
-    helpKeyword="keyword" locid="descriptionID"  
-    value="code">description  
-</field>  
-```  
-  
-#### <a name="parameters"></a>Parametreler  
- `name`  
- Alan veya üye adı. Zaman `<field>` öğe bir oluşturucu işlevi içinde kullanılan `name` gereklidir ve etiketin uygulandığı üye tanımlar. Zaman `<field>` öğesi bir alan doğrudan yorumlama, bu öznitelik yoksayılır ve Visual Studio tarafından kullanılan adı kaynak kodundaki gerçek alan adıdır.  
-  
- `static`  
- İsteğe bağlı. Alan oluşturucu işlevi bir üyesidir veya nesnenin bir üyesi Oluşturucu işlevin döndürdüğü belirtir. Kümesine `true` alan oluşturucu işlevi bir üyesi olarak değerlendirilecek. Kümesine `false` alan bir oluşturucu işlevi tarafından döndürülen nesne üyesi olarak değerlendirilecek.  
-  
- `type`  
- İsteğe bağlı. Alanın veri türü. Tür aşağıdakilerden biri olabilir:  
-  
-- ECMAScript dil yazın, ECMAScript 5 açıklamasında gibi `Number` ve `Object`.  
-  
-- Gibi bir DOM nesnesi `HTMLElement`, `Window`, ve `Document`.  
-  
-- Bir JavaScript oluşturucu işlevi.  
-  
-  `integer`  
-  İsteğe bağlı. Varsa `type` olduğu `Number`, alanı bir tamsayı olup olmadığını belirtir. Kümesine `true` alanı bir tamsayı; olduğunu belirtmek için Aksi takdirde, kümesine `false`. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `domElement`  
-  İsteğe bağlı. Bu öznitelik kullanım dışı; `type` özniteliği bu öznitelik göre önceliklidir. Bu öznitelik, belgelenmiş alanın bir DOM öğesi olup olmadığını belirtir. Kümesine `true` alan bir DOM öğesi; olduğunu belirtmek için Aksi takdirde, kümesine `false`. Varsa `type` özniteliği ayarlanmamıştır ve `domElement` ayarlanır `true`, IntelliSense belgelenmiş alan olarak değerlendirir bir `HTMLElement` deyim tamamlama gerçekleştirirken.  
-  
-  `mayBeNull`  
-  İsteğe bağlı. Belgelenen alanın ayarlayıp ayarlayamayacağını belirler null. Kümesine `true` alan ayarlanabilir, aksi takdirde çok belirtmek için ayarlanmış `false`. Varsayılan değer `false` şeklindedir. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `elementType`  
-  İsteğe bağlı. Varsa `type` olduğu `Array`, bu öznitelik, dizideki öğelerin türünü belirtir.  
-  
-  `elementInteger`  
-  İsteğe bağlı. Varsa `type` olduğu `Array` ve `elementType` olduğu `Number`, bu öznitelik, dizideki öğelerin tamsayılar olup olmadığını belirtir. Kümesine `true` göstermek için dizideki öğelerin tamsayılardır; Aksi takdirde, kümesine `false`. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `elementDomElement`  
-  İsteğe bağlı. Bu öznitelik kullanım dışı; `elementType` özniteliği bu öznitelik göre önceliklidir. Varsa `type` olduğu `Array`, bu öznitelik, dizideki öğelerin DOM öğeleri olup olmadığını belirtir. Kümesine `true` belirtmek için öğeleri DOM öğeleri; Aksi takdirde, kümesine `false`. Varsa `elementType` özniteliği ayarlanmamıştır ve `elementDomElement` ayarlanır `true`, IntelliSense her öğe dizisi değerlendirir bir `HTMLElement` deyim tamamlama gerçekleştirirken.  
-  
-  `elementMayBeNull`  
-  İsteğe bağlı. Varsa `type` olduğu `Array`, dizideki öğelerin ayarlayıp ayarlayamayacağını belirler null. Kümesine `true` dizideki öğelerin ayarlanabilir, aksi takdirde çok belirtmek için ayarlanmış `false`. Varsayılan değer `false` şeklindedir. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `helpKeyword`  
-  İsteğe bağlı. F1 Yardım anahtar sözcüğü.  
-  
-  `locid`  
-  İsteğe bağlı. Yerelleştirme alanı hakkında bilgi için tanımlayıcı. Tanımlayıcıdır ya da bir üye kimliği veya karşılık gelen `name` öznitelik değeri bir ileti paketteki OpenAjax meta verileri tarafından tanımlanır. Belirtilen biçim tanımlayıcı türü bağımlı [ \<loc >](../ide/loc-javascript.md) etiketi.  
-  
-  `value`  
-  İsteğe bağlı. İşlev kodunun kendisi yerine IntelliSense tarafından kullanılmak üzere değerlendirilmelidir kodu belirtir. İçin `<field>`, bu öznitelik, oluşturucu işlevleri için desteklenir, ancak nesne sabit değeri için desteklenmiyor. Bu alan türü tanımlanmamış olduğunda tür bilgisini sağlaması özniteliktir. Örneğin, kullanabileceğiniz `value=’1’` alan türünün sayı olarak değerlendirilecek.  
-  
-  `description`  
-  İsteğe bağlı. Alan için bir açıklama.  
-  
-## <a name="remarks"></a>Açıklamalar  
- `name` Özniteliği, bir oluşturucu işlevi bir alanda belgeleme durumlarda gereklidir. Diğer tüm senaryolar için tüm öznitelikler için `<field>` öğe isteğe bağlıdır.  
-  
- Bir oluşturucu işlevi belgeleme zaman `<field>` öğesi alanı bildiriminden hemen önce görünmelidir. `name` Özniteliği, kaynak kodunda kullanılan alanın adıyla eşleşmelidir. Nesne üyeleri için `name` varsa, öznitelik atlanabilir `<field>` öğesi hemen önce nesne üyesi bildirimi görünür.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği kullanma işlemini gösterir `<field>` öğesi.  
-  
-```javascript  
-// Use of <field> in an object definition.  
-var Rectangle = {  
-    /// <field type='Number'>The width of the rectangle.</field>  
-    wid: 5,  
-    /// <field type='Number'>The length of the rectangle.</field>  
-    len: 0,  
-    /// <field type='Number'>Returns the area of the rectangle.</field>  
-    getArea: function (wid, len) {  
-        return len * wid;  
-    }  
-}  
-  
-// Use of <field> in a constructor function.  
-// The name attribute is required.  
-function Engine() {  
-    /// <field name='HorsePower' type='Number'>The engine's horsepower.</field>  
-    this.HorsePower = 150;  
-}  
-```  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `<field>` öğeyle `static` özniteliğini `true`.  
-  
-```javascript  
-function Engine() {  
-    /// <field name='HorsePower' static='true' type='Number'>static field desc.</field>  
-}  
-  
-Engine.HorsePower = 140;  
-// IntelliSense on the field is available here.  
-Engine.  
-  
-```  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `<field>` öğeyle `static` özniteliğini `false`.  
-  
-```javascript  
-function Engine() {  
-    /// <field name='HorsePower' static='false' type='Number'>Non-static field desc.</field>  
-}  
-  
-Engine.HorsePower = 140;  
-var eng = new Engine();  
-// IntelliSense on the field is available here.  
-eng.  
-  
-```  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `<field>` öğeyle `value` özniteliği.  
-  
-```javascript  
-function calculator(a) {  
-    /// <field name='f' value='1'/>  
-}  
-new calculator().f.   // Completion list for a Number.  
-  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Bir nesne ya da bir nesnede tanımlı üye için bir açıklama dahil belge bilgilerini belirtir.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+<field name="fieldName" static="true|false"
+    type="FieldType" integer="true|false"
+    domElement="true|false" mayBeNull="true|false"
+    elementType="ArrayElementType" elementInteger="true|false"
+    elementDomElement="true|false" elementMayBeNull="true|false"
+    helpKeyword="keyword" locid="descriptionID"
+    value="code">description
+</field>
+```
+
+#### <a name="parameters"></a>Parametreler
+ alanın veya üyenin adını `name`. Bir Oluşturucu işlevinde `<field>` öğesi kullanıldığında, `name` gereklidir ve etiketin geçerli olduğu üyeyi tanımlar. @No__t_0 öğesi bir alana doğrudan açıklama eklendiğinde, bu öznitelik yok sayılır ve Visual Studio tarafından kullanılan ad, kaynak kodundaki gerçek alanın adıdır.
+
+ Isteğe bağlı `static`. Alanın Oluşturucu işlevinin bir üyesi mi yoksa Oluşturucu işlevi tarafından döndürülen nesnenin bir üyesi mi olduğunu belirtir. Alanı Oluşturucu işlevinin bir üyesi olarak değerlendirmek için `true` olarak ayarlayın. Alanı, Oluşturucu işlevinin döndürdüğü nesnenin bir üyesi olarak değerlendirmek için `false` olarak ayarlayın.
+
+ Isteğe bağlı `type`. Alanın veri türü. Tür aşağıdakilerden biri olabilir:
+
+- ECMAScript 5 belirtiminde `Number` ve `Object` gibi bir ECMAScript dil türü.
+
+- @No__t_0, `Window` ve `Document` gibi bir DOM nesnesi.
+
+- JavaScript Oluşturucu işlevi.
+
+  Isteğe bağlı `integer`. @No__t_0 `Number`, alanın bir tamsayı olup olmadığını belirtir. Alanın bir tamsayı olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `domElement`. Bu öznitelik kullanım dışıdır; `type` özniteliği bu özniteliğin üzerine gelir. Bu öznitelik, belgelenen alanın bir DOM öğesi olup olmadığını belirtir. Alanın bir DOM öğesi olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `domElement` `true` olarak ayarlandıysa, IntelliSense, ifade tamamlama gerçekleştirirken belgelenen alanı bir `HTMLElement` olarak değerlendirir.
+
+  Isteğe bağlı `mayBeNull`. Belgelenen alanın null olarak ayarlanamayacağını belirtir. Alanın null olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `elementType`. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin türünü belirtir.
+
+  Isteğe bağlı `elementInteger`. @No__t_0 `Array` ve `elementType` `Number` ise, bu öznitelik dizideki öğelerin tamsayı olup olmadığını belirtir. Dizideki öğelerin tamsayılar olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `elementDomElement`. Bu öznitelik kullanım dışıdır; `elementType` özniteliği bu özniteliğin üzerine gelir. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin DOM öğeleri olup olmadığını belirtir. Öğelerin DOM öğeleri olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `elementDomElement` `true` olarak ayarlandıysa, IntelliSense deyimin tamamlanma sırasında dizideki her öğeyi bir `HTMLElement` olarak değerlendirir.
+
+  Isteğe bağlı `elementMayBeNull`. @No__t_0 `Array`, dizideki öğelerin null olarak ayarlanamayacağını belirtir. Dizideki öğelerin null olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `helpKeyword`. F1 Yardım anahtar sözcüğü.
+
+  Isteğe bağlı `locid`. Alanla ilgili yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki `name` öznitelik değerine karşılık gelir. Tanımlayıcı türü, [\<loc >](../ide/loc-javascript.md) etiketinde belirtilen biçime bağlıdır.
+
+  Isteğe bağlı `value`. İşlev kodunun kendisi yerine IntelliSense tarafından kullanılmak üzere değerlendirilmesi gereken kodu belirtir. @No__t_0 için bu öznitelik, Oluşturucu işlevleri için desteklenir, ancak nesne değişmezleri için desteklenmez. Bu özniteliği, alan türü tanımsız olduğunda tür bilgilerini sağlamak için kullanabilirsiniz. Örneğin, `value=’1’` alan türünü sayı olarak değerlendirmek için kullanabilirsiniz.
+
+  Isteğe bağlı `description`. Alan için bir açıklama.
+
+## <a name="remarks"></a>Açıklamalar
+ Bir Oluşturucu işlevindeki bir alanı belgeyorsanız `name` özniteliği gereklidir. Tüm diğer senaryolar için `<field>` öğesi için tüm öznitelikler isteğe bağlıdır.
+
+ Bir Oluşturucu işlevini belgeliyoruz, `<field>` öğesi alan bildiriminden hemen önce görünmelidir. @No__t_0 özniteliği, kaynak kodunda kullanılan alan adıyla eşleşmelidir. Nesne üyeleri için, nesne üye bildiriminden hemen önce `<field>` öğesi görünürse `name` özniteliği atlanabilir.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki kod örneği, `<field>` öğesinin nasıl kullanılacağını gösterir.
+
+```javascript
+// Use of <field> in an object definition.
+var Rectangle = {
+    /// <field type='Number'>The width of the rectangle.</field>
+    wid: 5,
+    /// <field type='Number'>The length of the rectangle.</field>
+    len: 0,
+    /// <field type='Number'>Returns the area of the rectangle.</field>
+    getArea: function (wid, len) {
+        return len * wid;
+    }
+}
+
+// Use of <field> in a constructor function.
+// The name attribute is required.
+function Engine() {
+    /// <field name='HorsePower' type='Number'>The engine's horsepower.</field>
+    this.HorsePower = 150;
+}
+```
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, `true` olarak ayarlanan `static` özniteliği ile `<field>` öğesinin nasıl kullanılacağını gösterir.
+
+```javascript
+function Engine() {
+    /// <field name='HorsePower' static='true' type='Number'>static field desc.</field>
+}
+
+Engine.HorsePower = 140;
+// IntelliSense on the field is available here.
+Engine.
+
+```
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, `false` olarak ayarlanan `static` özniteliği ile `<field>` öğesinin nasıl kullanılacağını gösterir.
+
+```javascript
+function Engine() {
+    /// <field name='HorsePower' static='false' type='Number'>Non-static field desc.</field>
+}
+
+Engine.HorsePower = 140;
+var eng = new Engine();
+// IntelliSense on the field is available here.
+eng.
+
+```
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, `value` özniteliğiyle `<field>` öğesinin nasıl kullanılacağını gösterir.
+
+```javascript
+function calculator(a) {
+    /// <field name='f' value='1'/>
+}
+new calculator().f.   // Completion list for a Number.
+
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)

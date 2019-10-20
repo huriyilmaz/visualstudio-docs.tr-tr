@@ -1,24 +1,24 @@
 ---
-title: Türü eşleşen dosya yeniden düzenleme için Taşı
-description: Bir türü aynı ada sahip ayrı bir dosyaya taşıyın. Türe sağ tıklayın, hızlı eylemler ve yeniden düzenlemeler ' ı seçin ve türü. cs ' ye <TypeName>taşıyın.
+title: Türü eşleşen dosyaya taşıma yeniden düzenleme
+description: Bir türü aynı ada sahip ayrı bir dosyaya taşıyın. Türe sağ tıklayın, hızlı eylemler ve yeniden düzenlemeler ' ı seçin ve türü <TypeName>. cs ' ye taşıyın.
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3021e08d3cfb601a67f51e53c97d2eba60c397a5
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+ms.openlocfilehash: ba822981ade5ebdc191732e0a32b02a9a4005fb4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483648"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666482"
 ---
-# <a name="move-a-type-to-a-matching-file-refactoring"></a>Bir eşleşen dosya yeniden düzenleme için bir tür Taşı
+# <a name="move-a-type-to-a-matching-file-refactoring"></a>Bir türü eşleşen bir dosyaya taşıma yeniden düzenleme
 
 Bu yeniden düzenleme için geçerlidir:
 
@@ -26,15 +26,15 @@ Bu yeniden düzenleme için geçerlidir:
 
 - Visual Basic
 
-**Yazdırılacak** Seçilen türü aynı ada sahip ayrı bir dosyaya taşımanızı sağlar.
+**Ne:** Seçilen türü aynı ada sahip ayrı bir dosyaya taşımanızı sağlar.
 
-**Oluşturulurken** Ayırmak istediğiniz aynı dosyada birden çok sınıf, yapı, arabirim, vb. vardır.
+**Ne zaman:** Ayırmak istediğiniz aynı dosyada birden çok sınıf, yapı, arabirim, vb. vardır.
 
-**Kaydol** Aynı dosyaya birden çok tür koymak, bu türleri bulmayı zorlaştırır. Aynı ada sahip dosyaları türleri taşıyarak, kod daha okunabilir ve giderek daha kolay hale gelir.
+**Neden:** Aynı dosyaya birden çok tür koymak, bu türleri bulmayı zorlaştırır. Türleri aynı ada sahip dosyalara taşıyarak, kod daha okunabilir ve gezinmek daha kolay olur.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. Burada tanımlanan türünün adı imleci yerleştirin. Örneğin:
+1. İmleci, tanımlandığı türün adının içine yerleştirin. Örneğin:
 
    ```csharp
    class Person
@@ -44,23 +44,23 @@ Bu yeniden düzenleme için geçerlidir:
    Class Person
    ```
 
-2. Ardından, aşağıdakilerden birini yapın:
+2. Sonra, aşağıdakilerden birini yapın:
 
-   - Tuşuna **Ctrl**+ **.**
-   - Tür adına sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler**
+   - **Ctrl** + tuşuna basın **.**
+   - Tür adına sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** ' i seçin.
 
-1. Seçin **türüne taşımak için *TypeName*.cs** menüsünden, burada *TypeName* seçtiğiniz türünün adı.
+1. Menüden **tür *TypeName*. cs** ' yi seçin; burada *TypeName* seçtiğiniz türün adıdır.
 
-   Yeni bir dosya türü ile aynı ada sahip bir proje türü taşınır.
+   Tür, projedeki aynı ada sahip olan yeni bir dosyaya taşınır.
 
-   - C# İÇİN:
+   - C#:
 
-      ![Satır içi sonucu-C#](media/movetype-result-cs.png)
+      ![Satır içi sonuç-C#](media/movetype-result-cs.png)
 
    - Visual Basic:
 
-      ![Satır içi sonucu - Visual Basic](media/movetype-result-vb.png)
+      ![Satır içi sonuç-Visual Basic](media/movetype-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)

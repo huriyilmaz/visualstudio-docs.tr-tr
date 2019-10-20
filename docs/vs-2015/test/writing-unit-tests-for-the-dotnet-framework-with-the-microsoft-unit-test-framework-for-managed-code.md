@@ -6,31 +6,30 @@ ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: fbeba971-c468-4429-8017-0f12ab55638c
 caps.latest.revision: 7
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 945b6f7b4f7b1e6418f45e5130ef08edaabf8b53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7f02c3fe2e3d8fa67cb8a996ba14dddce7b1a3a8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68185675"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657077"
 ---
 # <a name="writing-unit-tests-for-the-net-framework-with-the-microsoft-unit-test-framework-for-managed-code"></a>Yönetilen Kod için Microsoft Birim Testi Çerçevesi ile .NET Framework için Birim Testleri Yazma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu bölümde  
- [İzlenecek yol: Yönetilen Kod için Birim Testleri Oluşturma ve Çalıştırma](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)  
-  
- [Hızlı Başlangıç: Test Gezgini ile Test Güdümlü Geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)  
-  
- [Birim Testlerinde Microsoft.VisualStudio.TestTools.UnitTesting Üyelerini Kullanma](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)  
-  
- [Onay Sınıfları Kullanma](../test/using-the-assert-classes.md)  
-  
- [Nasıl yapılır: Veri Temelli Birim Testi Oluşturma](../test/how-to-create-a-data-driven-unit-test.md)  
-  
- [Genel Metotlar için birim testleri](../test/unit-tests-for-generic-methods.md)  
-  
- [Nasıl yapılır: .NET'in Önceki Sürümünü Hedefleme](../test/how-to-configure-unit-tests-to-target-an-earlier-version-of-the-dotnet-framework.md)  
-  
+Bu bölümde [Izlenecek yol: yönetilen kod Için birim testleri oluşturma ve çalıştırma](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+
+ [Hızlı Başlangıç: Test Gezgini ile Test Güdümlü Geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)
+
+ [Birim Testlerinde Microsoft.VisualStudio.TestTools.UnitTesting Üyelerini Kullanma](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
+
+ [Onay Sınıfları Kullanma](../test/using-the-assert-classes.md)
+
+ [Nasıl Yapılır: Veri Temelli Birim Testi Oluşturma](../test/how-to-create-a-data-driven-unit-test.md)
+
+ [Genel Metotlar için birim testleri](../test/unit-tests-for-generic-methods.md)
+
+ [Nasıl Yapılır: .NET'in Önceki Sürümünü Hedefleme](../test/how-to-configure-unit-tests-to-target-an-earlier-version-of-the-dotnet-framework.md)
+
  [Birim Testleri Oluşturmak için Örnek Proje](../test/sample-project-for-creating-unit-tests.md)

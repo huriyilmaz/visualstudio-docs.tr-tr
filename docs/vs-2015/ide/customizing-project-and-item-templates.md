@@ -9,46 +9,46 @@ helpviewer_keywords:
 - Visual Studio templates, customizing
 ms.assetid: d7344a0a-d93f-4b69-bbc4-0c2d67ef272b
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6567b4ff4ee7c798ac82c5d33ea50ac206fcd692
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fd88191baf15837a7862fc447471744977bdf60b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68146170"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665867"
 ---
 # <a name="customizing-project-and-item-templates"></a>Proje ve Öğe Şablonlarını Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Proje ve öğe şablonlarını oluşturduktan sonra hala gereksinimlerinizi karşılayacak şekilde özelleştirin olanağına da sahip olursunuz.  
-  
- Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
-  
-- Değiştirin ve var olan bir şablonu özel bir şablon olarak dışarı aktarın.  
-  
-     Daha fazla bilgi için [nasıl yapılır: Mevcut şablonları güncelleştirme](../ide/how-to-update-existing-templates.md).  
-  
-- Özel Parametreler mevcut değerleri değiştirmek için bir şablona geçirin.  
-  
-     Daha fazla bilgi için [nasıl yapılır: Bir şablonda parametreleri ikame etme](../ide/how-to-substitute-parameters-in-a-template.md).  
-  
-- Şablonlardan proje oluşturma sihirbazları özelleştirin.  
-  
-     Daha fazla bilgi için [nasıl yapılır: Sihirbazları proje şablonlarıyla kullanma](../extensibility/how-to-use-wizards-with-project-templates.md).  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [Proje ve Öğe Şablonları Oluşturma](../ide/creating-project-and-item-templates.md)  
-  
- [Nasıl yapılır: Şablon Sorunlarını Giderme](../ide/how-to-troubleshoot-templates.md)  
-  
- [Nasıl yapılır: Proje Şablonları Oluşturma](../ide/how-to-create-project-templates.md)  
-  
- [Nasıl yapılır: Öğe Şablonları Oluşturma](../ide/how-to-create-item-templates.md)  
-  
- [Nasıl yapılır: Başlangıç Paketleri Oluşturma](../ide/how-to-create-starter-kits.md)  
-  
- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)  
-  
+Proje ve öğe şablonları oluşturulduktan sonra, gereksinimlerinizi karşılayacak şekilde bunları daha fazla özelleştirme olanağına sahip olursunuz.
+
+ Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:
+
+- Var olan bir şablonu özel bir şablon olarak değiştirin ve dışarı aktarın.
+
+     Daha fazla bilgi için bkz. [nasıl yapılır: Varolan şablonları güncelleştirme](../ide/how-to-update-existing-templates.md).
+
+- Varolan değerleri değiştirmek için özel parametreleri bir şablona geçirin.
+
+     Daha fazla bilgi için bkz. [nasıl yapılır: şablonda parametreleri değiştirme](../ide/how-to-substitute-parameters-in-a-template.md).
+
+- Şablonlardan Proje oluşturan sihirbazları özelleştirin.
+
+     Daha fazla bilgi için bkz. [nasıl yapılır: Sihirbazları Proje Şablonlarıyla Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md).
+
+## <a name="related-sections"></a>İlgili Bölümler
+ [Proje ve Öğe Şablonları Oluşturma](../ide/creating-project-and-item-templates.md)
+
+ [Nasıl Yapılır: Şablonlarda Sorun Giderme](../ide/how-to-troubleshoot-templates.md)
+
+ [Nasıl Yapılır: Proje Şablonları Oluşturma](../ide/how-to-create-project-templates.md)
+
+ [Nasıl Yapılır: Öğe Şablonları Oluşturma](../ide/how-to-create-item-templates.md)
+
+ [Nasıl Yapılır: Başlangıç Paketleri Oluşturma](../ide/how-to-create-starter-kits.md)
+
+ [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+
  <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>

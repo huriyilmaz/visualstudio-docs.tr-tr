@@ -6,23 +6,23 @@ helpviewer_keywords:
 - Devenv, /DoNotLoadProjects switch
 - /DoNotLoadProjects Devenv switch
 - DoNotLoadProjects Devenv switch
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a414fde4dee401016e997fa5d6890da2ae8d9d53
-ms.sourcegitcommit: db30651dc0ce4d0b274479b23a6bd102a5559098
+ms.openlocfilehash: 34fe7dfed2774eace7d32b1c9041355b566d4e76
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083927"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654502"
 ---
-# <a name="donotloadprojects-devenvexe"></a>/ DoNotLoadProjects (devenv.exe)
+# <a name="donotloadprojects-devenvexe"></a>/DoNotLoadProjects (devenv. exe)
 
-**Yeni Visual Studio 2019 sürüm 16.1 için**
+**Visual Studio 2019 sürüm 16,1 için yeni**
 
-Tüm projeler yükleniyor olmadan belirtilen çözümü açar. Daha fazla bilgi için [filtrelenmiş çözümlerini Visual Studio'da](../filtered-solutions.md).
+Herhangi bir proje yüklemeden belirtilen çözümü açar. Daha fazla bilgi için bkz. [Visual Studio 'Da filtrelenmiş çözümler](../filtered-solutions.md).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,11 +34,11 @@ devenv /DoNotLoadProjects SolutionName
 
 *SolutionName*
 
-Gerekli. Açılacak bir çözüm adını ve tam yolu.
+Gerekli. Açılacak çözümün tam yolu ve adı.
 
 ## <a name="example"></a>Örnek
 
-Örnek, herhangi bir projeyi yüklemeden MySln.sln çözümü açar.
+Örnek, herhangi bir proje yüklemeden hayal ln. sln çözümünü açar.
 
 ```shell
 devenv /donotloadprojects MySln.sln
@@ -46,5 +46,5 @@ devenv /donotloadprojects MySln.sln
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da filtrelenmiş çözümleri](../filtered-solutions.md)
+- [Visual Studio 'da filtrelenmiş çözümler](../filtered-solutions.md)
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)

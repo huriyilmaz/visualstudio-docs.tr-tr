@@ -1,140 +1,140 @@
 ---
-title: 'Nasıl yapılır: Program kodunda dosyadan Model açma | Microsoft Docs'
+title: 'Nasıl yapılır: program kodunda dosyadan model açma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: d7d68697-5418-4263-bdb2-48401924ea71
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c788a9ae126530484efc5f693505fc34c2793768
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: c98bec69631b852521f682a24dd1b5ce6ddf0424
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824232"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662566"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Nasıl yapılır: Program Kodunda Dosyadan Model Açma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-DSL model herhangi bir uygulama açabilirsiniz.  
-  
- Gelen bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı, bu amaçla Modelbus'ı kullanabilirsiniz. ModelBus bir model veya bir model öğelerini ve taşınmışsa, model bulma için standart mekanizması sağlar. Daha fazla bilgi için [Visual Studio Modelbus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).  
-  
-## <a name="target-framework"></a>Hedef Çerçeve  
- Ayarlama **hedef Framework'ü** uygulama projenizin **.NET Framework 4**.  
-  
-#### <a name="to-set-the-target-framework"></a>Hedef Framework'ü ayarlama  
-  
-1. Açık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] DSL modeli okumak istediğiniz uygulama için proje.  
-  
-2. İçinde **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **özellikleri**.  
-  
-3. Proje Özellikleri penceresinde üzerinde **uygulama** sekmesinde, belirleyin **hedef Framework'ü** alanı **.NET Framework 4**.  
-  
+DSL modellerini herhangi bir uygulamada açabilirsiniz.
+
+ @No__t_0 uzantısından bu amaçla ModelBus kullanabilirsiniz. ModelBus bir modeldeki model veya öğelere başvurmak ve taşındıktan sonra modeli bulmak için standart bir mekanizma sağlar. Daha fazla bilgi için bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
+
+## <a name="target-framework"></a>Hedef Çerçeve
+ Uygulama projenizin **hedef çerçevesini** **.NET Framework 4**olarak ayarlayın.
+
+#### <a name="to-set-the-target-framework"></a>Hedef Framework 'ü ayarlamak için
+
+1. DSL modelini okumak istediğiniz uygulama için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projesi açın.
+
+2. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+
+3. Proje Özellikleri penceresinde, **uygulama** sekmesinde, **hedef Framework** alanını **.NET Framework 4**olarak ayarlayın.
+
 > [!NOTE]
-> Seçtiyseniz, bunu yapmak ihtiyacınız olabilecek **.NET Framework 4** proje oluşturma iletişim kutusunda. Hedef Framework'ü olmamalıdır **.NET Framework 4 istemci profili**.  
-  
-## <a name="references"></a>Referanslar  
- Bu başvuruları eklemeniz gerekir, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uygulama projesi:  
-  
-- `Microsoft.VisualStudio.Modeling.Sdk.11.0`  
-  
-  - İşbu sözleşmenin görmüyorsanız **.NET** sekmesinde **Add References** iletişim kutusu, tıklayın **Gözat** gidin ve sekme `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`.  
-  
-- DSL projenizin bin klasörü altında bulabilirsiniz, DSL derleme. Adı genellikle formu şöyledir: *Şirketiniz*. *Projeniz*`.Dsl.dll`.  
-  
-## <a name="important-classes-in-the-dsl"></a>DSL önemli sınıfları  
- DSL'nizi okuyan kod yazabileceğiniz önce bazı DSL'nizi tarafından oluşturulan sınıfların adlarını bilmeniz gerekir. DSL çözümünüzü açın **Dsl** proje ve konum **GeneratedCode** klasör. Alternatif olarak, projenizin DSL derlemede çift **başvuruları**, DSL ad alanında açın **Nesne Tarayıcısı**.  
-  
- Tanımlamanız gerekir sınıfları şunlardır:  
-  
-- *YourDslRootClass* -kök sınıfı adıdır, `DslDefinition.dsl`.  
-  
-- *YourDslName* `SerializationHelper` -bu sınıfı içinde tanımlanan `SerializationHelper.cs` DSL projenizdeki.  
-  
-- *YourDslName* `DomainModel` -bu sınıfı içinde tanımlanan `DomainModel.cs` DSL projenizdeki.  
-  
-## <a name="reading-from-a-file"></a>Bir dosyadan okuma  
- Aşağıdaki örnek, önemli sınıfları aşağıdaki gibi olan bir DSL okumak için tasarlanmıştır:  
-  
-- FamilyTreeModel  
-  
-- FamilyTreeSerializationHelper  
-  
-- FamilyTreeDomainModel  
-  
-  Bu DSL içinde diğer etki alanı sınıfı kişi anlamına gelir.  
-  
-```  
-using System;  
-using Microsoft.VisualStudio.Modeling;  
-using Company.FamilyTree; // Your DSL namespace  
-  
-namespace StandaloneReadDslConsole  
-{ class Program  
-  { static void Main(string[] args)  
-    {  
-      // The path of a DSL model file:  
-      string dslModel = @"C:\FamilyTrees\Tudor.ftree";  
-      // Set up the Store to read your type of model:  
-      Store store = new Store(  
-        typeof(Company.FamilyTree.FamilyTreeDomainModel));  
-      // The Model type generated by the DSL:  
-      FamilyTreeModel familyTree;  
-      // All Store changes must be in a Transaction:  
-      using (Transaction t =   
-        store.TransactionManager.BeginTransaction("Load model"))  
-      {  
-        familyTree =   
-           FamilyTreeSerializationHelper.Instance.  
-              LoadModel(store, dslModel, null, null, null);  
-        t.Commit(); // Don't forget this!  
-      }  
-      // Now we can read the model:  
-      foreach (Person p in familyTree.People)  
-      {  
-        Console.WriteLine(p.Name);   
-        foreach (Person child in p.Children)  
-        {  
-          Console.WriteLine("    " + child.Name);  
-        }  
-} } } }  
-```  
-  
-## <a name="saving-to-a-file"></a>Bir dosyaya kaydetme  
- Önceki kod aşağıdaki eklemeyi modele bir değişiklik yapar ve sonra bir dosyaya kaydeder.  
-  
-```  
-using (Transaction t =  
-  store.TransactionManager.BeginTransaction("update model"))  
-{  
-  // Create a new model element:  
-  Person p = new Person(store);  
-  // Set its embedding relationship:  
-  p.FamilyTreeModel = familyTree;  
-  // - same as: familyTree.People.Add(p);  
-  // Set its properties:  
-  p.Name = "Edward VI";  
-  t.Commit(); // Don't forget this!  
-}  
-// Save the model:  
-try  
-{  
-  SerializationResult result = new SerializationResult();  
-  FamilyTreeSerializationHelper.Instance  
-    .SaveModel(result, familyTree, @"C:\FamilyTrees\Tudor-upd.ftree");  
-  // Report any error:  
-  if (result.Failed)  
-  {  
-    foreach (SerializationMessage message in result)  
-    {  
-      Console.WriteLine(message);  
-    }  
-  }  
-}  
-catch (System.IO.IOException ex)  
-{ ... }  
+> Proje oluşturma iletişim kutusunda **.NET Framework 4** ' ü seçtiyseniz bile bunu yapmanız gerekebilir. Hedef Framework **.NET Framework 4 Istemci profili**olmamalıdır.
+
+## <a name="references"></a>Referanslar
+ Bu başvuruları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uygulama projenize eklemeniz gerekir:
+
+- `Microsoft.VisualStudio.Modeling.Sdk.11.0`
+
+  - **Başvuru Ekle** iletişim kutusunda **.net** sekmesinde bunu görmüyorsanız, **gözden** geçirme sekmesine tıklayın ve `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` ' a gidin.
+
+- Dsl projenizin bin klasörü altında bulacağınız DSL derlemenizin olması gerekir. Genellikle kendi adı şu biçimdedir: *yourcompany*. *Projeniz* `.Dsl.dll`.
+
+## <a name="important-classes-in-the-dsl"></a>DSL 'deki önemli sınıflar
+ DSL 'yi okuyan kodu yazmadan önce, DSL 'niz tarafından oluşturulan sınıfların bazılarının adlarını bilmeniz gerekir. DSL çözümünüzde **DSL** projesini açın ve **GeneratedCode** klasörüne bakın. Alternatif olarak, proje **başvurularında**DSL derlemesine çift tıklayın ve **nesne TARAYıCıSı**' de dsl ad alanını açın.
+
+ Şunları belirlemeniz gereken sınıflardır:
+
+- *YourDslRootClass* -bu, `DslDefinition.dsl` kök sınıfın adıdır.
+
+- *Yourdslname* `SerializationHelper`-Bu sınıf DSL projenizdeki `SerializationHelper.cs` tanımlanmıştır.
+
+- *Yourdslname* `DomainModel`-Bu sınıf DSL projenizdeki `DomainModel.cs` tanımlanmıştır.
+
+## <a name="reading-from-a-file"></a>Bir dosyadan okuma
+ Aşağıdaki örnek, önemli sınıfların aşağıdaki gibi olduğu bir DSL okumak için tasarlanmıştır:
+
+- FamilyTreeModel
+
+- FamilyTreeSerializationHelper
+
+- FamilyTreeDomainModel
+
+  Bu DSL 'deki diğer etki alanı sınıfı kişidir.
+
+```
+using System;
+using Microsoft.VisualStudio.Modeling;
+using Company.FamilyTree; // Your DSL namespace
+
+namespace StandaloneReadDslConsole
+{ class Program
+  { static void Main(string[] args)
+    {
+      // The path of a DSL model file:
+      string dslModel = @"C:\FamilyTrees\Tudor.ftree";
+      // Set up the Store to read your type of model:
+      Store store = new Store(
+        typeof(Company.FamilyTree.FamilyTreeDomainModel));
+      // The Model type generated by the DSL:
+      FamilyTreeModel familyTree;
+      // All Store changes must be in a Transaction:
+      using (Transaction t =
+        store.TransactionManager.BeginTransaction("Load model"))
+      {
+        familyTree =
+           FamilyTreeSerializationHelper.Instance.
+              LoadModel(store, dslModel, null, null, null);
+        t.Commit(); // Don't forget this!
+      }
+      // Now we can read the model:
+      foreach (Person p in familyTree.People)
+      {
+        Console.WriteLine(p.Name);
+        foreach (Person child in p.Children)
+        {
+          Console.WriteLine("    " + child.Name);
+        }
+} } } }
+```
+
+## <a name="saving-to-a-file"></a>Bir dosyaya kaydetme
+ Önceki koda eklenen aşağıdaki ekleme modelde değişiklik yapar ve bir dosyaya kaydeder.
+
+```
+using (Transaction t =
+  store.TransactionManager.BeginTransaction("update model"))
+{
+  // Create a new model element:
+  Person p = new Person(store);
+  // Set its embedding relationship:
+  p.FamilyTreeModel = familyTree;
+  // - same as: familyTree.People.Add(p);
+  // Set its properties:
+  p.Name = "Edward VI";
+  t.Commit(); // Don't forget this!
+}
+// Save the model:
+try
+{
+  SerializationResult result = new SerializationResult();
+  FamilyTreeSerializationHelper.Instance
+    .SaveModel(result, familyTree, @"C:\FamilyTrees\Tudor-upd.ftree");
+  // Report any error:
+  if (result.Failed)
+  {
+    foreach (SerializationMessage message in result)
+    {
+      Console.WriteLine(message);
+    }
+  }
+}
+catch (System.IO.IOException ex)
+{ ... }
 ```

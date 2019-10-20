@@ -6,110 +6,108 @@ ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ba4d98a1d6a59a35bf4aa279831036eecec99989
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4998fbc530cf4350f4a64b0fd527e0764eafce27
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440576"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656269"
 ---
-# <a name="how-to-use-xml-snippets"></a>Nasıl yapılır: XML Kod Parçacıklarını Kullanma
+# <a name="how-to-use-xml-snippets"></a>Nasıl yapılır: XML kod parçacıklarını kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML Düzenleyicisi kısayol menüsünde aşağıdaki iki komutu kullanarak XML kod parçacıklarını çağırabilirsiniz. **Parçacık Ekle** komut İmleç konumuna XML kod parçacığı ekler. **Surround With** komut XML kod parçacığı seçili metin etrafına sarmalar. Her XML kod parçacığı, kod parçacığı türleri atadığı. Kod parçacığı türleri, kod parçacığı ile kullanılabilir olup olmadığını belirlemek **parçacık Ekle** komutu **Surround With** komut veya her ikisi de.  
-  
- Düzenleyici için XML kod parçacığı eklendikten sonra kod parçacığında düzenlenebilir tüm alanlar sarı renkle vurgulanır ve imleç ilk düzenlenebilir bir alanı üzerinde konumlandırıldı.  
-  
-## <a name="insert-snippet"></a>Kod parçacığı Ekle  
- Aşağıdaki yordamlar nasıl erişileceğini açıklar **parçacık Ekle** komutu.  
-  
+XML Düzenleyicisi kısayol menüsünde aşağıdaki iki komutu kullanarak XML kod parçacıklarını çağırabilirsiniz. **Kod parçacığı Ekle** komutu, Imleç konumuna XML kod parçacığını ekler. Komutuyla **çevreleme** , XML kod parçacığını seçili metnin çevresinde sarmalanmış. Her XML kod parçacığında belirlenen kod parçacığı türleri vardır. Kod parçacığı türleri, kod parçacığının **ekleme parçacığı** komutu, komut **ile çevreleme** veya her ikisi için kullanılabilir olup olmadığını belirtir.
+
+ XML kod parçacığı düzenleyiciye eklendikten sonra, kod parçacığındaki düzenlenebilir alanlar sarı renkle vurgulanır ve imleç ilk düzenlenebilir alana konumlandırılır.
+
+## <a name="insert-snippet"></a>Kod parçacığı Ekle
+ Aşağıdaki yordamlarda, **kod parçacığı Ekle** komutuna nasıl erişebileceğiniz açıklanır.
+
 > [!NOTE]
-> **Parçacık Ekle** komuttur ayrıca klavye kısayolunu (CTRL + K, ardından CTRL + X) kullanılabilir.  
-  
-#### <a name="to-insert-snippets-from-the-shortcut-menu"></a>Kısayol menüsünden kod parçacığı eklemek için  
-  
-1. XML kod parçacığı eklemek istediğiniz imleci getirin.  
-  
-2. Sağ tıklayıp **parçacık Ekle**.  
-  
-     Kullanılabilir XML kod parçacıklarını listesi görüntülenir.  
-  
-3. Fareyi kullanarak listeden veya kod parçacığı adını yazarak ve sekme veya ENTER tuşuna basarak bir kod parçacığı seçin.  
-  
-#### <a name="to-insert-snippets-using-the-intellisense-menu"></a>IntelliSense menüsünü kullanarak kod parçacığı eklemek için  
-  
-1. XML kod parçacığı eklemek istediğiniz imleci getirin.  
-  
-2. Gelen **Düzenle** menüsünde **IntelliSense**ve ardından **parçacık Ekle**.  
-  
-     Kullanılabilir XML kod parçacıklarını listesi görüntülenir.  
-  
-3. Fareyi kullanarak liste veya kod parçacığı adını yazarak ve sekme veya ENTER tuşuna basarak bir kod parçacığı seçin.  
-  
-#### <a name="to-insert-snippets-through-the-intellisense-complete-word-list"></a>Tam sözcük IntelliSense listesinde kod parçacığı eklemek için  
-  
-1. XML kod parçacığı eklemek istediğiniz imleci getirin.  
-  
-2. Dosyanıza eklemek istediğiniz XML kod parçacığı yazmaya başlayın. Otomatik tamamlama açıksa, IntelliSense tam sözcük listesi görüntülenir. Etkinleştirmek için CTRL + Ara çubuğu görünmüyorsa, basın.  
-  
-3. XML kod parçacığı tam sözcük listeden seçin.  
-  
-4. Sekme tuşuna basın, XML kod parçacığı çağırmak için SEKMESİNDE.  
-  
+> **Kod parçacığı Ekle** komutu, klavye KıSAYOLU (CTRL + K, sonra CTRL + X) aracılığıyla da kullanılabilir.
+
+#### <a name="to-insert-snippets-from-the-shortcut-menu"></a>Kısayol menüsünden kod parçacıkları eklemek için
+
+1. İmleci XML parçacığı eklemek istediğiniz yere konumlandırın.
+
+2. Sağ tıklayın ve **kod parçacığı Ekle**' yi seçin.
+
+     Kullanılabilir XML kod parçacıklarının listesi görüntülenir.
+
+3. Fareyi kullanarak listeden bir kod parçacığı seçin ya da kod parçacığının adını yazarak sekme veya ENTER tuşuna basın.
+
+#### <a name="to-insert-snippets-using-the-intellisense-menu"></a>IntelliSense menüsünü kullanarak kod parçacıkları eklemek için
+
+1. İmleci XML parçacığı eklemek istediğiniz yere konumlandırın.
+
+2. **Düzenle** menüsünde, **IntelliSense**' ın üzerine gelin ve **kod parçacığı Ekle**' yi seçin.
+
+     Kullanılabilir XML kod parçacıklarının listesi görüntülenir.
+
+3. Fareyi kullanarak veya kod parçacığının adını yazıp TAB veya ENTER tuşuna basarak listeden bir kod parçacığı seçin.
+
+#### <a name="to-insert-snippets-through-the-intellisense-complete-word-list"></a>IntelliSense 'in bir bütün kelime listesinden kod eklemek için
+
+1. İmleci XML parçacığı eklemek istediğiniz yere konumlandırın.
+
+2. Dosyanıza eklemek istediğiniz XML kod parçacığını yazmaya başlayın. Otomatik tamamlama açıksa, IntelliSense Tamam sözcük listesi görüntülenir. Görünmezse, etkinleştirmek için CTRL + Ara çubuğu tuşlarına basın.
+
+3. Tüm sözcük listesinden XML kod parçacığını seçin.
+
+4. XML kod parçacığını çağırmak için TAB ve TAB tuşlarına basın.
+
 > [!NOTE]
-> XML kod parçacığı çağrılmayacağı durumlar olabilir. Örneğin, eklemeye çalışırsanız bir `xs:complexType` öğesi içinde bir `xs:element` düğüm, düzenleyici XML kod parçacığı oluşturmaz. Olduğunda bir `xs:complexType` öğesi içinde kullanılan bir `xs:element` düğüm, düzenleyici eklemek için herhangi bir veri içermez gerekli öznitelikleri veya alt öğeleri, yoktur.  
-  
-#### <a name="to-insert-snippets-using-the-shortcut-name"></a>Kısayol adı kullanarak kod parçacığı eklemek için  
-  
-1. XML kod parçacığı eklemek istediğiniz imleci getirin.  
-  
-2. Tür `<` Düzenleyicisi bölmesinde.  
-  
-3. Tam sözcük IntelliSense listesini kapatmak için ESC tuşuna basın.  
-  
-4. Kod parçacığı kısayol adını yazın ve XML kod parçacığı çağırmak için SEKME tuşuna basın.  
-  
-## <a name="surround-with"></a>Şununla Çevrele  
- Aşağıdaki yordamlar nasıl erişileceğini açıklar **Surround With** komutu.  
-  
+> XML parçacığı çağrılmayan durumlar olabilir. Örneğin, bir `xs:element` düğümüne bir `xs:complexType` öğesi eklemeye çalışırsanız, düzenleyici bir XML kod parçacığı oluşturmaz. Bir `xs:element` düğümü içinde `xs:complexType` öğesi kullanıldığında, gerekli öznitelik veya alt öğeler yoktur, bu nedenle düzenleyicide eklenecek veri yoktur.
+
+#### <a name="to-insert-snippets-using-the-shortcut-name"></a>Kısayol adını kullanarak kod parçacıkları eklemek için
+
+1. İmleci XML parçacığı eklemek istediğiniz yere konumlandırın.
+
+2. Düzenleyici bölmesine `<` yazın.
+
+3. IntelliSense Tamam sözcük listesini kapatmak için ESC tuşuna basın.
+
+4. Kod parçacığının kısayol adını yazın ve XML kod parçacığını çağırmak için TAB tuşuna basın.
+
+## <a name="surround-with"></a>Şununla Çevrele
+ Aşağıdaki yordamlarda, komutla **birlikte** nasıl erişebileceğiniz açıklanır.
+
 > [!NOTE]
-> **Surround With** komuttur ayrıca klavye kısayolunu (CTRL + K, ardından CTRL + S) kullanılabilir.  
-  
-#### <a name="to-use-surround-with-from-the-context-menu"></a>Bağlam menüsünden çevrelemeyi kullanmak için  
-  
-1. XML Düzenleyicisi'nde kapsamak için metni seçin.  
-  
-2. Sağ tıklayıp **Surround With**.  
-  
-     XML kod parçacıklarını kullanılabilir çevreleyen listesi görüntülenir.  
-  
-3. Fareyi kullanarak listeden veya kod parçacığı adını yazarak ve sekme veya ENTER tuşuna basarak bir kod parçacığı seçin.  
-  
-#### <a name="to-use-surround-with-from-the-intellisense-menu"></a>IntelliSense menüsünden çevrelemeyi kullanmak için  
-  
-1. XML Düzenleyicisi'nde kapsamak için metni seçin.  
-  
-2. Gelen **Düzenle** menüsünde **IntelliSense**ve ardından **Surround With**.  
-  
-     XML kod parçacıklarını kullanılabilir çevreleyen listesi görüntülenir.  
-  
-3. Fareyi kullanarak listeden veya kod parçacığı adını yazarak ve sekme veya ENTER tuşuna basarak bir kod parçacığı seçin.  
-  
-## <a name="using-xml-snippets"></a>XML kod parçacıklarını kullanma  
- XML kod parçacığı seçtikten sonra metin kod parçacığının İmleç konumuna otomatik olarak eklenir. Kod parçacığı düzenlenebilir tüm alanlarda vurgulanır ve ilk düzenlenebilir bir alanı otomatik olarak seçilir. Şu anda seçili alanı Kutulu olmasıdır.  
-  
- Bir alan seçildiğinde, alan için yeni bir değer yazabilirsiniz. Sekme döngüleri parçacığının düzenlenebilir alanlarından basarak; SHIFT + SEKME döngüleri bunları ters sırada tuşuna basın. Bir alana tıklayarak alana imleci koyar ve seçen bir alana çift tıklayın. Bir alan vurgulandığında, alanın açıklaması sunan bir araç ipucu görüntülenebilir.  
-  
- Yalnızca ilk örneği, belirli bir alanın düzenlenebilir. Bu alan de vurgulandığında, bu alana diğer örneklerini özetlenmiştir. Düzenlenebilir bir alanın değerini değiştirdiğinizde, bu alan kod parçacığında kullanılan her yerde değiştirilir.  
-  
- ENTER veya ESC tuşuna basarak alan düzenleme iptal eder ve düzenleyici normale döner.  
-  
- Düzenlenebilir bir kod parçacığı alanlar için varsayılan renkleri, kod parçacığı alanı ayarı değiştirerek değiştirilebilir **yazı tipleri ve renkler** bölmesinde **seçenekleri** iletişim kutusu. Daha fazla bilgi için [nasıl yapılır: Yazı tipleri ve renkler düzenleyicisinde değişiklik](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XML kod parçacıkları](../xml-tools/xml-snippets.md)   
- [Nasıl yapılır: XML şemasından XML kod parçacığı oluşturma](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)   
- [Nasıl yapılır: XML Kod Parçacıkları Oluşturma](../xml-tools/how-to-create-xml-snippets.md)
+> Komut **Ile çevreleme** , klavye KıSAYOLU (CTRL + K, sonra CTRL + S) aracılığıyla da kullanılabilir.
+
+#### <a name="to-use-surround-with-from-the-context-menu"></a>Bağlam menüsünden ile çevrelemeyi kullanmak için
+
+1. XML düzenleyicisinde çevreleyecek metni seçin.
+
+2. Sağ tıklayıp **birlikte Çevrele**' yi seçin.
+
+     XML parçacıkları ile kullanılabilir çevreler listesi görüntülenir.
+
+3. Fareyi kullanarak listeden bir kod parçacığı seçin ya da kod parçacığının adını yazarak sekme veya ENTER tuşuna basın.
+
+#### <a name="to-use-surround-with-from-the-intellisense-menu"></a>IntelliSense menüsünden ile çevrelemeyi kullanmak için
+
+1. XML düzenleyicisinde çevreleyecek metni seçin.
+
+2. **Düzenle** menüsünde, **IntelliSense**' ın üzerine gelin ve **birlikte Çevrele**' yi seçin.
+
+     XML parçacıkları ile kullanılabilir çevreler listesi görüntülenir.
+
+3. Fareyi kullanarak listeden bir kod parçacığı seçin ya da kod parçacığının adını yazarak sekme veya ENTER tuşuna basın.
+
+## <a name="using-xml-snippets"></a>XML kod parçacıklarını kullanma
+ Bir XML parçacığı seçtikten sonra, kod parçacığının metni imleç konumuna otomatik olarak eklenir. Kod parçacığındaki düzenlenebilir alanlar vurgulanır ve ilk düzenlenebilir alan otomatik olarak seçilir. Şu anda seçili olan alan kutulanır.
+
+ Bir alan seçildiğinde, alan için yeni bir değer yazabilirsiniz. Kod parçacığının düzenlenebilir alanları aracılığıyla sekme döngülerine basma SHIFT + TAB tuşlarına basıldığında ters sırada geçiş yapın. Bir alana tıklanması imleci alana koyar ve bir alana çift tıklamak onu seçer. Bir alan vurgulandığında, alanın açıklamasını sunan bir araç Ipucu görüntülenebilir.
+
+ Belirli bir alanın yalnızca ilk örneği düzenlenebilir. Bu alan vurgulandığında, bu alanın diğer örnekleri ana hatlarıyla gösterilir. Düzenlenebilir bir alanın değerini değiştirdiğinizde, bu alan kod parçacığında kullanıldığı her yerde değişir.
+
+ ENTER veya ESC tuşlarına basıldığında alan düzenleme iptal edilir ve düzenleyici normal olarak döndürülür.
+
+ Düzenlenebilir kod parçacığı alanları için varsayılan renkler, **Seçenekler** Iletişim kutusunun **yazı tipi ve renkler** bölmesindeki kod parçacığı alanı ayarı değiştirilerek değiştirilebilir. Daha fazla bilgi için bkz. [nasıl yapılır: düzenleyicideki yazı tiplerini ve renkleri değiştirme](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [XML kod parçacıkları](../xml-tools/xml-snippets.md) [nasıl yapılır: xml şemasından XML kod parçacığı](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md) [oluşturma nasıl yapılır: XML parçacıkları oluşturma](../xml-tools/how-to-create-xml-snippets.md)

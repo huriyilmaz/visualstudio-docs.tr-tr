@@ -7,15 +7,15 @@ helpviewer_keywords:
 - load tests, scenarios
 - load tests, virtual users
 ms.assetid: 0ba0363b-7f50-4bde-a919-0e3bce7bc115
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5459f1b82dd83905f2672d198f503a741778287b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 8651b3a11b9db82d4c52ff600706b51855881f02
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926530"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665048"
 ---
 # <a name="edit-load-patterns-to-model-virtual-user-activities"></a>Sanal Kullanıcı etkinliklerini modellemek için yük düzenlerini düzenleme
 
@@ -65,7 +65,7 @@ Bir adım yük şekli, yük testi çalışırken, kullanıcı yükü arttıkça 
 
 - **Adım kullanıcı sayısı**: 100
 
-  Bu ayarlar, 100, 200, 300 ve en fazla 2.000 Kullanıcı yükünde, 30 dakika (1.800 saniye) için yük testini çalıştırır. **Yeni Yük Testi Sihirbazı**seçilmek üzere kullanılamayan bu özelliklerden yalnızca biri olduğundan, **Adım Rampa Süresi** özelliği özel bahsetmeye değecektir. Bu özellik, bir adımdan bir sonrakine (örneğin, 100 ' den 200 ' e kadar) kadar artışın hemen yerine yavaş bir şekilde gerçekleşmesini sağlar. Örnekte, kullanıcı yükü 20 saniyelik bir süre (her saniyede beş Kullanıcı artışı) üzerinden 100 ' dan 200 kullanıcıya yükseltilir. Daha fazla bilgi için [nasıl yapılır: Adım yükleme deseninin](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)Adım Rampa Süresi özelliğini belirtin.
+  Bu ayarlar, 100, 200, 300 ve en fazla 2.000 Kullanıcı yükünde, 30 dakika (1.800 saniye) için yük testini çalıştırır. **Yeni Yük Testi Sihirbazı**seçilmek üzere kullanılamayan bu özelliklerden yalnızca biri olduğundan, **Adım Rampa Süresi** özelliği özel bahsetmeye değecektir. Bu özellik, bir adımdan bir sonrakine (örneğin, 100 ' den 200 ' e kadar) kadar artışın hemen yerine yavaş bir şekilde gerçekleşmesini sağlar. Örnekte, kullanıcı yükü 20 saniyelik bir süre (her saniyede beş Kullanıcı artışı) üzerinden 100 ' dan 200 kullanıcıya yükseltilir. Daha fazla bilgi için bkz. [nasıl yapılır: adım yükleme deseninin Adım Rampa Süresi özelliğini belirtme](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md).
 
 ### <a name="goal-based"></a>Hedef tabanlı
 
@@ -93,7 +93,7 @@ Hedef tabanlı yük deseninin adım düzenine benzer ancak performans sayacı e�
 |Kullanıcı sayısı sınırları|Maksimum Kullanıcı sayısı artışı|5|
 |Kullanıcı sayısı sınırları|En düşük Kullanıcı sayısı|1\.|
 
-Bu ayarlar, **Yük Testi Çözümleyicisinin** , `70%` WebServer01 `% Processor Time` **sayacının** ve arasında dolaşması gibi bir test çalışması sırasında 1 ile 100 arasında Kullanıcı yükünü ayarlamasına neden olur.`90%.`
+Bu ayarlar, **Yük Testi Çözümleyicisi** 'nin bir test çalışması sırasında 1 ile 100 arasında Kullanıcı yükünü ayarlamasına neden olur; bu şekilde, WebServer01 'In `% Processor Time` **sayacı** `70%` ve `90%.` arasında bekletildiğinde
 
 Her kullanıcı yükleme ayarlamasının boyutu, **en yüksek Kullanıcı sayısı artışı** ve **en yüksek Kullanıcı sayısı azaltma** ayarlarına göre belirlenir. Kullanıcı sayısı sınırları, **en yüksek Kullanıcı** sayısı ve **En düşük Kullanıcı sayısı** özelliklerine göre ayarlanır.
 
@@ -110,21 +110,21 @@ Hedef tabanlı yük düzeniyle, sisteminizin bazı kaynak kullanımı düzeyine 
 |Görevler|İlişkili Konular|
 |-|-----------------------|
 |**Yük testiniz için başlangıç yük modelini belirtme:** **Yeni Yük Testi Sihirbazı**kullanarak bir yük testi oluşturduğunuzda, bir yük kalıbı seçersiniz.|-   [Yük modelini değiştirme](../test/edit-load-patterns-to-model-virtual-user-activities.md#change-the-load-pattern)|
-|**Yük testiniz için yük modelini düzenlemeyle:** Yük testinizi oluşturduktan sonra, **Yük Testi Düzenleyicisi**yük modelini düzenleyebilirsiniz.|-   [Nasıl Yapılır: Adım yükleme deseninin Adım Rampa Süresi özelliğini belirtin](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
-|**Yük testi senaryonuzdaki sanal kullanıcıların Web önbelleği verilerini içerip içermediğini belirtme:** **Yeni kullanıcılar özelliğinin yüzdesini** , yük testinin sanal kullanıcılar için bir Web tarayıcısı tarafından gerçekleştirilecek Web önbelleğini taklit etme yöntemini etkileyecek şekilde değiştirebilirsiniz.|-   [Nasıl Yapılır: Web önbelleği verilerini kullanan sanal kullanıcıların yüzdesini belirtin](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)|
-|**Adım yükleme deseninin Adım Rampa süresini belirtme:** **Adım Rampa Süresi** özelliği bir adımdan bir sonrakine (örneğin, 100 ' den 200 ' e kadar) kadar artışın hemen yerine yavaş bir şekilde gerçekleşmesini sağlar.|-   [Nasıl Yapılır: Adım yükleme deseninin Adım Rampa Süresi özelliğini belirtin](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
+|**Yük testiniz için yük modelini düzenlemeyle:** Yük testinizi oluşturduktan sonra, **Yük Testi Düzenleyicisi**yük modelini düzenleyebilirsiniz.|-   [nasıl yapılır: adım yükleme deseninin Adım Rampa Süresi özelliğini belirtme](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
+|**Yük testi senaryonuzdaki sanal kullanıcıların Web önbelleği verilerini içerip Içermediğini belirtme:** **Yeni kullanıcılar özelliğinin yüzdesini** , yük testinin sanal kullanıcılar için bir Web tarayıcısı tarafından gerçekleştirilecek Web önbelleğini taklit etme yöntemini etkileyecek şekilde değiştirebilirsiniz.|-   [nasıl yapılır: Web önbelleği verileri kullanan sanal kullanıcıların yüzdesini belirtme](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)|
+|**Adım yükleme deseninin Adım Rampa süresini belirtme:** **Adım Rampa Süresi** özelliği bir adımdan bir sonrakine (örneğin, 100 ' den 200 ' e kadar) kadar artışın hemen yerine yavaş bir şekilde gerçekleşmesini sağlar.|-   [nasıl yapılır: adım yükleme deseninin Adım Rampa Süresi özelliğini belirtme](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
 
 ## <a name="change-the-load-pattern"></a>Yük modelini değiştirme
 
 **Yeni Yük Testi Sihirbazı**yük testinizi oluşturduktan sonra, bir senaryoyla ilişkili yük deseninin özelliklerini test hedeflerinizi karşılayan düzeylere değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz.
 
 > [!NOTE]
-> Yük testi senaryosu özelliklerini ve açıklamalarının tam listesi için bkz [yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md).
+> Yük testi senaryosu özelliklerinin tam listesi ve açıklamaları için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
 
 Yük düzeniyle, yük testi sırasında etkin olan sanal kullanıcı sayısı ve yeni kullanıcıların Eklenme oranı belirtilir. Kullanılabilir üç desen arasından seçim yapabilirsiniz: adım deseni, sabit ve amaç tabanlı. Daha fazla bilgi için bkz. [bir yük testi senaryosunda yük desenlerine sahip sanal kullanıcı sayısını belirtme](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
 > [!NOTE]
-> Ayrıca yük testi eklentisini kullanarak yükleme özelliklerinizi programlı bir şekilde değiştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Yük testi eklentisi](../test/how-to-create-a-load-test-plug-in.md)oluşturun.
+> Ayrıca yük testi eklentisini kullanarak yükleme özelliklerinizi programlı bir şekilde değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md).
 
 ### <a name="to-change-the-load-pattern"></a>Yükleme modelini değiştirmek için
 
@@ -135,7 +135,7 @@ Yük düzeniyle, yük testi sırasında etkin olan sanal kullanıcı sayısı ve
     > [!NOTE]
     > Yük testinin senaryo ağacında gösterildiği gibi, yük örüntüsünün düğümünün ifadesi, yük testini oluştururken seçtiğiniz yük profilini yansıtır. Bu, **sabit yük profili** ya da **adım yükleme profili**olabilir.
 
-3. Tuşuna **F4** görüntülenecek **özellikleri** penceresi.
+3. **Özellikler** penceresini göstermek için **F4** tuşuna basın.
 
      **Yükleme kalıbı** ve **Parametreler** kategorileri **Özellikler** penceresinde görüntülenir.
 
@@ -152,6 +152,6 @@ Yük düzeniyle, yük testi sırasında etkin olan sanal kullanıcı sayısı ve
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
-- [Nasıl yapılır: Web önbelleği verilerini kullanan sanal kullanıcıların yüzdesini belirtin](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)
-- [Nasıl yapılır: Adım yükleme deseninin Adım Rampa Süresi özelliğini belirtin](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)
+- [Yük testi senaryolarını Düzenle](../test/edit-load-test-scenarios.md)
+- [Nasıl yapılır: Web önbelleği verilerini kullanan sanal kullanıcıların yüzdesini belirtme](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)
+- [Nasıl yapılır: adım yükleme deseninin Adım Rampa Süresi özelliğini belirtme](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)

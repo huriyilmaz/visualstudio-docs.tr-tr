@@ -13,42 +13,42 @@ helpviewer_keywords:
 - Toolbox, moving items
 ms.assetid: b754dad3-1f32-464f-8b9f-065e17e0bc22
 caps.latest.revision: 38
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f7477017edc3c00a155064152f1d5df77bd35e63
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 5abf89828576c44b2f5ec5c59813d366cec73b7a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65689364"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661552"
 ---
 # <a name="toolbox"></a>Araç Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Araç kutusu** denetimler ve ekleyebileceğiniz diğer öğeler için simgeleri görüntüler [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] projeleri. Açmak için **araç kutusu**, tıklayın **araç kutusu** üzerinde **görünümü** menüsü. Pinleyebilir **araç kutusu**, ve açık sabitleme veya ayarlayın **Otomatik Gizle**.  
-  
- **Araç kutusu** simgeleri Tasarım görünümüne sürüklenebilir veya Kod düzenleyicisinde yapıştırılabilir. Her iki eylem bir örneğini oluşturmak için temel kodu ekler **araç kutusu** etkin proje dosyasında öğesi.  
-  
- **Araç kutusu** içinde çalıştığınız dosya türü için uygun olan öğeleri görüntüler. Daha fazla filtre uygulamak için araç kutusu içinde görüntülenen öğe arayabilirsiniz. Projenize istemci profili tarafından desteklenmeyen bir denetim gerekiyorsa, projenizin proje özelliklerini düzenleyerek tüm çerçeveyi hedeflemek üzere ayarlayabilirsiniz.  
-  
+**Araç kutusu** , [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] projelerine ekleyebileceğiniz denetimler ve diğer öğeler için simgeler görüntüler. **Araç kutusunu**açmak için **Görünüm** menüsünde **araç kutusu** ' na tıklayın. **Araç kutusunu**sabitleyebilir ve açık olarak sabitleyebilir ya da **otomatik olarak gizleyebileceğiniz**şekilde ayarlayabilirsiniz.
+
+ **Araç kutusu** simgeleri bir Tasarım görünümüne sürüklenebilir veya bir kod düzenleyicisine yapıştırılamaz. Her iki eylem de, etkin proje dosyasındaki **araç kutusu** öğesinin bir örneğini oluşturmak için temel kodu ekler.
+
+ **Araç kutusu** yalnızca, üzerinde çalıştığınız dosyanın türüne uygun olan öğeleri görüntüler. Görüntülenen öğeleri daha fazla filtrelemek için araç kutusu içinde arama yapabilirsiniz. Projeniz Istemci profili tarafından desteklenmeyen bir denetim gerektiriyorsa, projenizi proje özelliklerini düzenleyerek tüm çerçeveyi hedefleyecek şekilde ayarlayabilirsiniz.
+
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="help-on-toolbox-tabs"></a>Araç kutusu sekmelerindeki Yardım  
- Aşağıdaki belgeler özel hakkında daha fazla bilgi sağlayan **araç kutusu** sekmeler.  
-  
-- [Araç Kutusu, Veri Sekmesi](https://msdn.microsoft.com/library/8a41dyt7\(v=vs.110\))  
-  
-- [Araç Kutusu, Bileşenler Sekmesi](https://msdn.microsoft.com/library/kb1cz7z9\(v=vs.110\))  
-  
-- [Araç Kutusu, HTML Sekmesi](https://msdn.microsoft.com/library/w9ss7h1a\(v=vs.110\))  
-  
-- [Araç Kutusu, Veri Sekmesi](https://msdn.microsoft.com/library/8a41dyt7\(v=vs.120\))  
-  
-- [Araç Kutusu, Bileşenler Sekmesi](https://msdn.microsoft.com/library/kb1cz7z9\(v=vs.120\))  
-  
-- [Araç Kutusu, HTML Sekmesi](https://msdn.microsoft.com/library/w9ss7h1a\(v=vs.120\))  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="help-on-toolbox-tabs"></a>Araç kutusu sekmelerinde yardım
+ Aşağıdaki belgeler, belirli **araç kutusu** sekmeleri hakkında daha fazla bilgi sağlar.
+
+- [Araç Kutusu, Veri Sekmesi](https://msdn.microsoft.com/library/8a41dyt7\(v=vs.110\))
+
+- [Araç Kutusu, Bileşenler Sekmesi](https://msdn.microsoft.com/library/kb1cz7z9\(v=vs.110\))
+
+- [Araç Kutusu, HTML Sekmesi](https://msdn.microsoft.com/library/w9ss7h1a\(v=vs.110\))
+
+- [Araç Kutusu, Veri Sekmesi](https://msdn.microsoft.com/library/8a41dyt7\(v=vs.120\))
+
+- [Araç Kutusu, Bileşenler Sekmesi](https://msdn.microsoft.com/library/kb1cz7z9\(v=vs.120\))
+
+- [Araç Kutusu, HTML Sekmesi](https://msdn.microsoft.com/library/w9ss7h1a\(v=vs.120\))
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Araç Kutusunu Kullanma](../../ide/using-the-toolbox.md)

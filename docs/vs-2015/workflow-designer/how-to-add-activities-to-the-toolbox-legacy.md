@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Eski) araç kutusuna etkinlik ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: araç kutusuna etkinlik ekleme (eski) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,29 +9,28 @@ helpviewer_keywords:
 - activities, adding to Toolbox
 ms.assetid: b66ea29c-120b-40ba-8a61-c1c8240850fa
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c3a8c6f397bbafdbdb29ecbb193c4200a26335c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f3f982372f0189871c4f3d294c07a9e3cfc44391
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62943374"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656615"
 ---
-# <a name="how-to-add-activities-to-the-toolbox-legacy"></a>Nasıl yapılır: Araç Kutusuna Etkinlik Ekleme (Eski)
-Eski ile bir iş akışı çözümü oluşturma sırasında [!INCLUDE[wfd1](../includes/wfd1-md.md)] hedefleyen [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], özel etkinlikler iş akışı projesine eklenebilir ve bunların tasarımcıları yerleştirilir **araç kutusu** için kolay erişim. Etkinlik doğrudan ekleyebilirsiniz **araç kutusu** bir dinamik bağlantı kitaplığı (DLL).  
-  
-### <a name="to-add-an-activity-to-the-toolbox-from-a-dll"></a>Bir etkinlik araç kutusu DLL'den eklemek için  
-  
-1. Araç kutusu penceresini yüzeyi altında sağ **Windows iş akışı**ve ardından **öğelerini Seç**.  
-  
-2. İçinde **araç kutusu öğelerini Seç** iletişim kutusu, tıklayın **System.Activities bileşenleri** sekmesine ve ardından **Gözat** pencerenin sağ alt tarafındaki.  
-  
-3. DLL eklemek için özel etkinlik uygulaması içeren dosya dizini seçin **araç kutusu**ve ardından **açık**.  
-  
-4. Tıklayın **Tamam** araç kutusuna etkinlik ekleme işlemini sonlandırmak için.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Eski etkinlik Tasarımcısını kullanma](../workflow-designer/using-the-legacy-activity-designer.md)   
- [Eski İş Akışı Etkinlikleri ](../workflow-designer/legacy-workflow-activities.md)
+# <a name="how-to-add-activities-to-the-toolbox-legacy"></a>Nasıl yapılır: araç kutusuna etkinlik ekleme (eski)
+@No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] bir iş akışı çözümü oluştururken, özel etkinlikler iş akışı projesine eklenebilir ve bu kullanıcıların tasarımcıları kolay erişim için **araç kutusuna** yerleştirilebilir. Ayrıca, bir dinamik bağlantı kitaplığından (DLL) doğrudan **araç kutusuna** etkinlikler ekleyebilirsiniz.
+
+### <a name="to-add-an-activity-to-the-toolbox-from-a-dll"></a>Bir DLL 'den araç kutusuna etkinlik eklemek için
+
+1. **Windows Iş akışı**altında araç kutusu pencere yüzeyine sağ tıklayın ve ardından **öğeleri seç**' e tıklayın.
+
+2. **Araç kutusu öğelerini Seç** iletişim kutusunda, **System. Activities bileşenleri** sekmesine tıklayın ve ardından pencerenin sağ alt tarafındaki **gözata** tıklayın.
+
+3. **Araç kutusuna**eklenecek özel etkinliğin uygulamasını içeren dosya dizininden DLL 'yi seçin ve ardından **Aç**' a tıklayın.
+
+4. Etkinliği araç kutusuna eklemeyi sona erdirin **Tamam** ' a tıklayın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Eski etkinlik Tasarımcısı](../workflow-designer/using-the-legacy-activity-designer.md) [eski Iş akışı etkinliklerini](../workflow-designer/legacy-workflow-activities.md) kullanma

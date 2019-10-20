@@ -1,123 +1,123 @@
 ---
-title: Modelleme çözümünüzün yapısını | Microsoft Docs
+title: Modelleme çözümünüzü yapılandırma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 2ba70ba4-2cea-4e01-93c2-055903d59470
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2b82bd903fe594ca2f2b650833cd29bfb54efa85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: edf9eaee512eda7439d1beea7303cd0e74b27178
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68155635"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661032"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Modelleri geliştirme projesindeki etkili bir şekilde kullanmak için ekip üyelerinin aynı anda farklı bölümlerini proje modelleri çalışabilmek için olmalıdır. Bu konuda öneren bir düzen uygulama katmanları genel bir karşılık gelen farklı parçalara bölmek için katman diyagramı.
+Bir geliştirme projesinde modelleri etkin bir şekilde kullanmak için, takım üyelerinin projenin farklı bölümlerinin modelleriyle aynı anda çalışabilebilmesi gerekir. Bu konu başlığı altında, uygulamayı genel bir katman diyagramındaki katmanlara karşılık gelen farklı bölümlere bölmek için bir düzen önerilir.
 
-Bir projeye başlayın ya da hızlı bir şekilde alt proje için seçtiğiniz Proje yapısı aşağıdaki proje şablonuna sahip kullanışlıdır. Bu konu, oluşturmak ve bu tür bir şablon kullanmak açıklar.
+Bir projede veya alt projede hızlı bir şekilde başlamak için, seçtiğiniz proje yapısını izleyen bir proje şablonu olması yararlı olur. Bu konu, böyle bir şablonun nasıl oluşturulacağını ve kullanılacağını açıklar.
 
-Bu konuda, birkaç ekip üyeleri gerektirecek kadar büyük olduğunu ve belki de Takımlarınız bir proje üzerinde çalışmakta olduğunuz varsayılır. Proje modelleri ve kod üzerinde kaynak denetim sistemi gibi depolanan [!INCLUDE[esprtfs](../includes/esprtfs-md.md)]. En azından bazı ekip üyeleri, modelleri geliştirmek için Visual Studio'yu kullanın ve diğer takım üyelerinin diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilirsiniz.
+Bu konu, birkaç takım üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığınızı ve belki de birçok takıma sahip olduğunu varsayar. Projenin kodu ve modelleri [!INCLUDE[esprtfs](../includes/esprtfs-md.md)] gibi bir kaynak denetimi sisteminde depolanır. En az bazı takım üyeleri, model geliştirmek için Visual Studio kullanır ve diğer takım üyeleri diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilir.
 
-Visual Studio'nun hangi sürümlerinin her aracı ve modelleme özelliğini desteklemek için bkz [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Hangi Visual Studio sürümlerinin her bir aracı ve modelleme özelliğini desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="solution-structure"></a>Çözüm yapısı
 
-Orta veya büyük bir projede takım yapısı, yapıya uygulamanın temel alır. Her takım bir Visual Studio çözümünü kullanır.
+Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre belirlenir. Her takım bir Visual Studio çözümü kullanır.
 
-#### <a name="to-divide-an-application-into-layers"></a>Bir uygulamayı katmanlara ayırmak için
+#### <a name="to-divide-an-application-into-layers"></a>Bir uygulamayı katmanlara bölmek için
 
-1. Web uygulaması, hizmet uygulama veya masaüstü uygulaması gibi uygulamanızın yapısını çözümlerinizi yapısını temel. Yaygın mimarileri çeşitli içinde ele alınmıştır [Microsoft Uygulama Mimarisi Kılavuzu'ndaki uygulama mimarisi türleri](http://go.microsoft.com/fwlink/?LinkId=196681).
+1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](http://go.microsoft.com/fwlink/?LinkId=196681)bölümünde açıklanmaktadır.
 
-2. Oluşturma bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü mimarisi çözümü diyoruz. Bu çözüm, genel sistem tasarımı oluşturmak için kullanılır. Modelleri, ancak hiçbir kodu içerecek.
+2. Mimari çözümünü çağıracağız bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü oluşturun. Bu çözüm, sistemin genel tasarımını oluşturmak için kullanılacaktır. Modeller içerir, ancak kod içermez.
 
-    Bir katman diyagramı, bu çözüme ekleyin. Katman diyagramı üzerinde uygulamanız için seçtiğiniz mimarisi çizin. Örneğin, diyagramda şu katmanları ve aralarındaki bağımlılıkları gösterebilir: Sunu; İş mantığı; ve verileri.
+    Bu çözüme bir katman diyagramı ekleyin. Katman diyagramında, uygulamanız için seçtiğiniz mimariyi çizin. Örneğin, diyagram bu katmanları ve bunlar arasındaki bağımlılıkları gösterebilir: sunum; İş mantığı; ve verileri.
 
-    Kullanarak aynı anda katman diyagramına ve yeni bir Visual Studio çözümü oluşturabilirsiniz **yeni UML veya katman diyagramı** komutunu **mimarisi** menüsü.
+    **Mimari** MENÜSÜNDEKI **Yeni UML veya katman diyagramı** komutunu kullanarak katman diyagramını ve yeni bir Visual Studio çözümünü aynı anda oluşturabilirsiniz.
 
-3. Önemli iş kavramlarını göstermek ve tasarım tüm katmanların başvurulan kullanım mimarisi modeli UML diyagramları ekleyin.
+3. Önemli iş kavramlarını temsil eden mimari modeli UML diyagramlarına ekleyin ve tüm katmanların tasarımında başvurulan servis taleplerini kullanın.
 
-4. Her katman için ayrı bir Visual Studio çözümü Mimari katman diyagramı oluşturun.
+4. Mimari katman diyagramında her katman için ayrı bir Visual Studio çözümü oluşturun.
 
-    Bu çözümler, katmanları kodunu geliştirmek için kullanılır.
+    Bu çözümler katmanların kodunu geliştirmek için kullanılacaktır.
 
-5. Katmanlar ve tüm katmanlarda yaygın kavramları tasarımları temsil edecek bir UML modeller oluşturun. Modelleri, böylece tüm modelleri Mimari çözümünden görülebilir ve ilgili modellerin her katmandan görülebilir düzenleyin.
+5. Katmanların ve tüm katmanlarda ortak olan kavramların tasarımlarını temsil edecek UML modelleri oluşturun. Tüm modellerin mimari çözümden görünebilmesi ve ilgili modellerin her katmandan görünebilmesi için modelleri düzenleyin.
 
-    Aşağıdaki yordamlardan birini kullanarak bunu gerçekleştirebilirsiniz. İlk seçenek, her katman için ayrı bir modelleme projesi oluşturur ve ikinci katmanlar arasında paylaşılan tek bir modelleme projesi oluşturur.
+    Bunu, aşağıdaki yordamlardan birini kullanarak elde edebilirsiniz. İlk alternatif, her katman için ayrı bir modelleme projesi oluşturur ve ikincisi, katmanlar arasında paylaşılan tek bir modelleme projesi oluşturur.
 
 ###### <a name="to-use-a-separate-modeling-project-for-each-layer"></a>Her katman için ayrı bir modelleme projesi kullanmak için
 
-1. Her katman çözümde bir modelleme projesi oluşturun.
+1. Her katman çözümünde bir modelleme projesi oluşturun.
 
-    Bu model gereksinimleri ve katman tasarımını açıklayan UML diyagramları içerir. Katman diyagramları, iç içe katmanlar Göster de içerebilir.
+    Bu modelde, bu katmanın gereksinimlerini ve tasarımını tanımlayan UML diyagramları bulunur. Ayrıca, iç içe geçmiş katmanları gösteren katman diyagramları da içerebilir.
 
-    Artık her katman için bir model yanı sıra, uygulama mimarisi için bir modeli vardır. Her model, kendi çözümde yer alır. Bu katmanlardaki aynı anda çalışmak takım üyeleri sağlar.
+    Artık her katman için bir modeliniz ve uygulama mimarisi için bir model vardır. Her model kendi çözümünde bulunur. Bu, takım üyelerinin katmanlar üzerinde aynı anda çalışmasını sağlar.
 
-2. Her katman çözüm modelleme projesini Mimarisi çözüme ekleyin. Bunu yapmak için mimarisi çözümü açın. Çözüm Gezgini'nde çözüm düğümüne sağ tıklayın, işaret ekleme ve ardından **mevcut proje**. Çözümdeki bir katman modelleme projesi (.modelproj) gidin.
+2. Mimari çözümüne her katman çözümünün modelleme projesini ekleyin. Bunu yapmak için mimari çözümünü açın. Çözüm Gezgini, çözüm düğümüne sağ tıklayın, Ekle ' nin üzerine gelin ve ardından **Varolan proje**' ye tıklayın. Tek bir katman çözümünde modelleme projesine (. modelproj) gidin.
 
-    Her model iki çözümlerinde görülebilir: "home", çözüm ve çözüm mimarisi.
+    Her model artık iki çözüm halinde görünür: "giriş" çözümü ve mimari çözümü.
 
-3. Her katman modelleme projesine bir katman diyagramı ekleyin. Mimari katman diyagramının bir kopyasını başlatın. Katman diyagramının bağımlılıkları olmayan parçaları silebilirsiniz.
+3. Her katmanın modelleme projesine bir katman diyagramı ekleyin. Mimari katman diyagramının bir kopyasıyla başlayın. Katman diyagramının bağımlılıkları olmayan bölümleri silebilirsiniz.
 
-    Bu katman ayrıntılı yapısını temsil eden katman diyagramları da ekleyebilirsiniz.
+    Ayrıca, bu katmanın ayrıntılı yapısını temsil eden katman diyagramları da ekleyebilirsiniz.
 
-    Bu diyagramları bu katmanda geliştirilen kodu doğrulamak için kullanılır.
+    Bu diyagramlar, bu katmanda geliştirilen kodu doğrulamak için kullanılır.
 
-4. Visual Studio kullanarak tüm katmanlara yönelik tasarım modelleri ve gereksinimleri mimarisi çözümde düzenleyin.
+4. Mimari çözümde, Visual Studio 'Yu kullanarak tüm katmanların gereksinimlerini ve tasarım modellerini düzenleyin.
 
-    Her katman çözümde modele başvuran, söz konusu katman için kod geliştirin. Modeli güncelleştirmek için aynı bilgisayara kullanmadan geliştirme yapmak içerik modeli okumak ve modelleri oluşturulamıyor Visual Studio sürümlerini kullanarak kod geliştirin. Kod modelinden bu sürümleri de oluşturabilirsiniz.
+    Her katman çözümünde, modele başvuran bu katman için kod geliştirin. Modeli güncelleştirmek için aynı bilgisayarı kullanmadan geliştirme yapmak için içeriğiniz varsa modeli okuyabilir ve model oluşturmaksızın Visual Studio sürümlerini kullanarak kodu geliştirebilirsiniz. Ayrıca, bu sürümlerdeki modelden kod oluşturabilirsiniz.
 
-    Bu yöntem, aynı anda katman modellerini düzenleme geliştiriciler tarafından hiçbir kesintiye neden garanti eder.
+    Bu yöntem, aynı anda katman modellerini düzenleyen geliştiriciler tarafından hiçbir girişim olmadığını güvence altına alır.
 
-    Ancak, modelleri ayrı olduğundan, ortak kavramlara başvurmak zor olabilir. Her model, diğer katmanları ve mimariye bağımlı olduğu öğeleri kendine ait kopyasını olmalıdır. Katman diyagramı her katmanda Mimari katman diyagramı ile eşitlenmiş durumda tutulmalıdır. Bu öğeleri değiştirdiğinizde, bunu gerçekleştirmek için Araçlar geliştirmeniz ancak eşitleme elde etmek zordur.
+    Ancak modeller ayrı olduğundan, yaygın kavramlara başvurmak zordur. Her modelin, diğer katmanlardan ve mimariden bağımlı olduğu öğelerin kendi kopyasına sahip olması gerekir. Her katmandaki katman diyagramının mimari katman diyagramı ile eşitlenmiş durumda tutulması gerekir. Bu öğeler değiştiğinde eşitlemenin korunması zordur, ancak bunu gerçekleştirmek için Araçlar geliştirebilirsiniz.
 
 ###### <a name="to-use-a-separate-package-for-each-layer"></a>Her katman için ayrı bir paket kullanmak için
 
-1. Her katmanın çözümde mimari modelleme projesine ekleyin. Çözüm Gezgini'nde çözüm düğümüne sağ tıklayın, fareyle **Ekle**ve ardından **mevcut proje**. Tek bir modelleme projesi artık her bir çözümden erişilebilir: Mimari proje ve her katman için geliştirme projesi.
+1. Her katmanın çözümünde mimari modelleme projesini ekleyin. Çözüm Gezgini, çözüm düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Varolan proje**' ye tıklayın. Tek modelleme projesine artık her bir çözümden erişilebilir: mimari proje ve her katmanın geliştirme projesi.
 
-2. Paylaşılan UML modelinde, her katman için bir paket oluşturun: Çözüm Gezgini içinde modelleme projesini seçin. UML Model Gezgini'nde model kök düğümünü sağ tıklatın, **Ekle**ve ardından **paket**.
+2. Paylaşılan UML modelinde, her katman için bir paket oluşturun: Çözüm Gezgini, modelleme projesini seçin. UML Model Gezgini ' nde model kök düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **paket**' e tıklayın.
 
-    Her paket gereksinimleri ve ilgili katmanı tasarımını açıklayan UML diyagramları içerir.
+    Her paket, ilgili katmanın gereksinimlerini ve tasarımını tanımlayan UML diyagramları içerir.
 
-3. Gerekirse, her katmanın iç yapısı için yerel katman diyagramları ekleyin.
+3. Gerekirse, her bir katmanın iç yapısına yönelik yerel katman diyagramları ekleyin.
 
-    Bu yöntem, her katmanın doğrudan bu bağımlı olduğu bir yaygın mimari ve katman başvurmak için tasarım öğeleri sağlar.
+    Bu yöntem, her bir katmanın tasarım öğelerinin, bağımlı olduğu katmanlara ve ortak mimariye doğrudan başvuranlara izin verir.
 
-    Eşzamanlı işler farklı paketleri bazı çakışmalara neden olabilir, ancak paketleri ayrı dosyalarda depolandığından Yönetimi oldukça kolaydır. Bağımlı bir paket başvurulan bir öğeyi silme işlemi önemli güçlük kaynaklanır. Daha fazla bilgi için [sürüm denetimi altındaki modelleri ve diyagramları yönetme](../modeling/manage-models-and-diagrams-under-version-control.md).
+    Farklı paketlerdeki eşzamanlı iş bazı çakışmalara neden olabilir, ancak paketler ayrı dosyalarda depolandığından yönetilmesi oldukça kolaydır. Önemli zorluk, bağımlı bir paketten başvurulan bir öğenin silinmesinden kaynaklanmıştır. Daha fazla bilgi için bkz. [sürüm denetimi altındaki modelleri ve diyagramları yönetme](../modeling/manage-models-and-diagrams-under-version-control.md).
 
 ## <a name="creating-architecture-templates"></a>Mimari şablonları oluşturma
 
-Uygulamada, aynı anda tüm Visual Studio çözümleri oluşturmaz ancak bunları Proje ilerledikçe ekleyin. Muhtemelen de aynı çözüm yapısını gelecekteki projeleri kullanın.  Yeni çözümleri hızlı bir şekilde oluşturmanıza yardımcı olmak için bir çözüm veya proje şablonu oluşturabilirsiniz. Böylece bir kolayca dağıtmak ve diğer bilgisayarlara yüklemek için bir Visual Studio Tümleştirme Uzantısı (VSIX) içinde şablon yakalayabilirsiniz.
+Uygulamada, tüm Visual Studio çözümlerinizi aynı anda oluşturmayacak, ancak proje ilerledikçe bunları Ekleriniz. Büyük olasılıkla gelecekteki projelerde aynı çözüm yapısını da kullanacaksınız.  Yeni çözümleri hızlı bir şekilde oluşturmanıza yardımcı olmak için bir çözüm veya proje şablonu oluşturabilirsiniz. Şablonu bir Visual Studio Tümleştirme Uzantısı 'nda (VSıX) yakalayıp diğer bilgisayarlara dağıtmak ve yüklemek kolay olacak şekilde yakalayabilirsiniz.
 
-Örneğin, sık sık sunu, iş ve veri katmanlarına sahip bir çözüm kullanıyorsanız, bu yapıya sahip yeni çözümler oluşturan şablondan yapılandırabilirsiniz.
+Örneğin, sunum, Iş ve veri katmanlarındaki çözümleri sıklıkla kullanıyorsanız, bu yapıya sahip yeni çözümler oluşturacak bir şablonu yapılandırabilirsiniz.
 
 #### <a name="to-create-a-solution-template"></a>Bir çözüm şablonu oluşturmak için
 
-1. [Şablonu Dışarı Aktarma Sihirbazı'nı indirip](http://go.microsoft.com/fwlink/?LinkId=196686), bu yapmış olduğunuz değil.
+1. Bunu yapmadıysanız, [şablonu dışarı aktarma Sihirbazı 'Nı indirin ve yükleyin](http://go.microsoft.com/fwlink/?LinkId=196686).
 
-2. İleride gerçekleştirilecek projeler için bir başlangıç noktası olarak kullanmak istediğiniz çözüm yapısını oluşturun.
+2. Gelecekteki projeler için başlangıç noktası olarak kullanmak istediğiniz çözüm yapısını oluşturun.
 
-3. Üzerinde **dosya** menüsünde tıklatın **VSIX olarak şablonu dışarı aktar**. **VSIX Sihirbazı olarak dışarı aktarma şablonu** açılır.
+3. **Dosya** menüsünde, **Şablonu VSIX olarak dışarı aktar**' a tıklayın. **Şablonu VSIX olarak dışarı Aktar Sihirbazı** açılır.
 
-4. Sihirbazdaki yönergeleri, şablona dahil, bir ad ve şablon için bir açıklama girin ve bir çıkış konumunu belirtme istediğiniz projeleri seçin.
+4. Sihirbazdaki yönergeleri izleyerek, şablona dahil etmek istediğiniz projeleri seçin, şablon için bir ad ve açıklama girin ve bir çıkış konumu belirtin.
 
 > [!NOTE]
-> Bu konudaki malzeme soyutlanır ve Visual Studio mimari araç kullanımı Visual Studio ALM, en değerli uzmanları (MVP), Microsoft Services ve Visual Studio arasında işbirliği Rangers tarafından yazılan yönergesi, gelen açıklanır ürün ekibi ve yazarlar. [Tam Kılavuzu paketi indirmek için buraya tıklayın.](http://go.microsoft.com/fwlink/?LinkID=191984)
+> Bu konudaki malzeme, en değerli uzmanlar (MVP), Microsoft Hizmetleri ve Visual Studio arasında işbirliği olan Visual Studio ALM derecelendirmeleri tarafından yazılmış, Visual Studio mimari araç kılavuzlarından ve paraphrased soyutlanmaktadır. ürün ekibi ve yazıcılar. [Tüm rehberlik paketini indirmek için buraya tıklayın.](http://go.microsoft.com/fwlink/?LinkID=191984)
 
 ## <a name="related-materials"></a>İlgili malzemeler
 
-[Düzenleme ve yönetme Modellerinizi](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-9-Organizing-and-Managing-Your-Models/) - video Clint Edmondson tarafından.
+[Modellerinizi organize etme ve yönetme](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-9-Organizing-and-Managing-Your-Models/) -Clint Edmondson 'a göre video.
 
-[Visual Studio mimari araç kullanımı yönergesi](../modeling/visual-studio-architecture-tooling-guidance.md) – daha fazla takım modellerinde yönetme hakkında rehberlik
+[Visual Studio mimarisi araç Kılavuzu](../modeling/visual-studio-architecture-tooling-guidance.md) – bir takımda modelleri yönetme hakkında daha fazla rehberlik
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-[Sürüm denetimi altındaki modelleri ve diyagramları yönetme](../modeling/manage-models-and-diagrams-under-version-control.md)
-[geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)
+[Sürüm denetimi altındaki modelleri ve diyagramları yönetin](../modeling/manage-models-and-diagrams-under-version-control.md) 
+[geliştirme sürecinizdeki modelleri kullanın](../modeling/use-models-in-your-development-process.md)

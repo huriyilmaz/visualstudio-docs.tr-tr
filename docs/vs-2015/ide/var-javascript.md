@@ -1,5 +1,5 @@
 ---
-title: '&lt;Varyasyon&gt; (JavaScript) | Microsoft Docs'
+title: '&lt;var &gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,88 +9,77 @@ helpviewer_keywords:
 - var JavaScript XML tag
 ms.assetid: 34ff9023-c81c-46d1-85b6-0022f0962e66
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 98bf86f807874fefe066ed2d1008e31451fbbba0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f72b403d4c6c9cc71bc2a3fdbff8f778a44b3b55
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558417"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663069"
 ---
-# <a name="ltvargt-javascript"></a>&lt;Varyasyon&gt; (JavaScript)
+# <a name="ltvargt-javascript"></a>&lt;var &gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belgelendirme bilgilerini bir değişken için belirtir.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-<var type="ValueType" integer="true|false"  
-    domElement="true|false" mayBeNull="true|false"  
-    elementType="ArrayElementType" elementInteger="true|false"  
-    elementDomElement="true|false" elementMayBeNull="true|false"  
-    helpKeyword="keyword" locid="descriptionID">description  
-</var>   
-```  
-  
-#### <a name="parameters"></a>Parametreler  
- `type`  
- İsteğe bağlı. Değişken veri türü. Tür aşağıdakilerden biri olabilir:  
-  
-- Olduğu gibi ECMAScript 5 açıklamasında bir ECMAScript dil türü `Number` ve `Object`.  
-  
-- Gibi bir DOM nesnesi `HTMLElement`, `Window`, ve `Document`.  
-  
-- Bir JavaScript oluşturucu işlevi.  
-  
-  `integer`  
-  İsteğe bağlı. Varsa `type` olduğu `Number`, değişkeni bir tam sayı olup olmadığını belirtir. Kümesine `true` ; tamsayı değişkeni olduğunu göstermek için Aksi takdirde, kümesine `false`. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `domElement`  
-  İsteğe bağlı. Bu öznitelik kullanım dışı; `type` özniteliği bu öznitelik göre önceliklidir. Bu öznitelik, belgelenmiş değişkeni DOM öğesi olup olmadığını belirtir. Kümesine `true` değişkeni bir DOM öğesi; olduğunu belirtmek için Aksi takdirde, kümesine `false`. Varsa `type` özniteliği ayarlanmamıştır ve `domElement` ayarlanır `true`, IntelliSense belgelenmiş değişken olarak değerlendirir bir `HTMLElement` deyim tamamlama gerçekleştirirken.  
-  
-  `mayBeNull`  
-  İsteğe bağlı. Belgelenen değişkeni ayarlayıp ayarlayamayacağını belirler null. Kümesine `true` değişken ayarlanabilir, aksi takdirde çok belirtmek için ayarlanmış `false`. Varsayılan değer `false` şeklindedir. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `elementType`  
-  İsteğe bağlı. Varsa `type` olduğu `Array`, bu öznitelik, dizideki öğelerin türünü belirtir.  
-  
-  `elementInteger`  
-  İsteğe bağlı. Varsa `type` olduğu `Array` ve `elementType` olduğu `Number`, bu öznitelik, dizideki öğelerin tamsayılar olup olmadığını belirtir. Kümesine `true` göstermek için dizideki öğelerin tamsayılardır; Aksi takdirde, kümesine `false`. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `elementDomElement`  
-  İsteğe bağlı. Bu öznitelik kullanım dışı; `elementType` özniteliği bu öznitelik göre önceliklidir. Varsa `type` olduğu `Array`, bu öznitelik, dizideki öğelerin DOM öğeleri olup olmadığını belirtir. Kümesine `true` belirtmek için öğeleri DOM öğeleri; Aksi takdirde, kümesine `false`. Varsa `elementType` özniteliği ayarlanmamıştır ve `elementDomElement` ayarlanır `true`, IntelliSense her öğe dizisi değerlendirir bir `HTMLElement` deyim tamamlama gerçekleştirirken.  
-  
-  `elementMayBeNull`  
-  İsteğe bağlı. Varsa `type` olduğu `Array`, dizideki öğelerin ayarlayıp ayarlayamayacağını belirler null. Kümesine `true` dizideki öğelerin ayarlanabilir, aksi takdirde çok belirtmek için ayarlanmış `false`. Varsayılan değer `false` şeklindedir. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `helpKeyword`  
-  İsteğe bağlı. F1 Yardım anahtar sözcüğü.  
-  
-  `locid`  
-  İsteğe bağlı. Yerelleştirme değişken hakkında bilgi için tanımlayıcı. Tanımlayıcıdır ya da bir üye kimliği veya karşılık gelen `name` öznitelik değeri bir ileti paketteki OpenAjax meta verileri tarafından tanımlanır. Belirtilen biçim tanımlayıcı türü bağımlı [ \<loc >](../ide/loc-javascript.md) etiketi.  
-  
-  `description`  
-  İsteğe bağlı. Değişken açıklaması.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği kullanma işlemini gösterir `<var>` öğesi.  
-  
-```javascript  
-/// <var>A rectangle that has a width of 5.</var>  
-var Rectangle = {  
-    /// <field type = 'Number'>The width of the rectangle.</field>  
-    wid: 5,  
-    /// <field type = 'Number'>The length of the rectangle.</field>  
-    len: 0,  
-    /// <field type='Number'>Returns the area of the rectangle.</field>  
-    getArea: function (wid, len) {  
-        return len * wid;  
-    }  
-}  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Bir değişken için belge bilgilerini belirtir.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+<var type="ValueType" integer="true|false"
+    domElement="true|false" mayBeNull="true|false"
+    elementType="ArrayElementType" elementInteger="true|false"
+    elementDomElement="true|false" elementMayBeNull="true|false"
+    helpKeyword="keyword" locid="descriptionID">description
+</var>
+```
+
+#### <a name="parameters"></a>Parametreler
+ Isteğe bağlı `type`. Değişkenin veri türü. Tür aşağıdakilerden biri olabilir:
+
+- @No__t_0 ve `Object` gibi ECMAScript 5 belirtiminde bir ECMAScript dil türü.
+
+- @No__t_0, `Window` ve `Document` gibi bir DOM nesnesi.
+
+- JavaScript Oluşturucu işlevi.
+
+  Isteğe bağlı `integer`. @No__t_0 `Number`, değişkenin bir tamsayı olup olmadığını belirtir. Değişkenin bir tamsayı olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `domElement`. Bu öznitelik kullanım dışıdır; `type` özniteliği bu özniteliğin üzerine gelir. Bu öznitelik, belgelenen değişkenin bir DOM öğesi olup olmadığını belirtir. Değişkenin bir DOM öğesi olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `domElement` `true` olarak ayarlandıysa, IntelliSense, deyimin tamamlanmasını gerçekleştirirken belgelenen değişkeni bir `HTMLElement` olarak değerlendirir.
+
+  Isteğe bağlı `mayBeNull`. Belgelenmiş değişkenin null olarak ayarlanamayacağını belirtir. Değişkenin null olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `elementType`. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin türünü belirtir.
+
+  Isteğe bağlı `elementInteger`. @No__t_0 `Array` ve `elementType` `Number` ise, bu öznitelik dizideki öğelerin tamsayı olup olmadığını belirtir. Dizideki öğelerin tamsayılar olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `elementDomElement`. Bu öznitelik kullanım dışıdır; `elementType` özniteliği bu özniteliğin üzerine gelir. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin DOM öğeleri olup olmadığını belirtir. Öğelerin DOM öğeleri olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `elementDomElement` `true` olarak ayarlandıysa, IntelliSense deyimin tamamlanma sırasında dizideki her öğeyi bir `HTMLElement` olarak değerlendirir.
+
+  Isteğe bağlı `elementMayBeNull`. @No__t_0 `Array`, dizideki öğelerin null olarak ayarlanamayacağını belirtir. Dizideki öğelerin null olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `helpKeyword`. F1 Yardım anahtar sözcüğü.
+
+  Isteğe bağlı `locid`. Değişkenle ilgili yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki `name` öznitelik değerine karşılık gelir. Tanımlayıcı türü, [\<loc >](../ide/loc-javascript.md) etiketinde belirtilen biçime bağlıdır.
+
+  Isteğe bağlı `description`. Değişkenin açıklaması.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki kod örneği, `<var>` öğesinin nasıl kullanılacağını gösterir.
+
+```javascript
+/// <var>A rectangle that has a width of 5.</var>
+var Rectangle = {
+    /// <field type = 'Number'>The width of the rectangle.</field>
+    wid: 5,
+    /// <field type = 'Number'>The length of the rectangle.</field>
+    len: 0,
+    /// <field type='Number'>Returns the area of the rectangle.</field>
+    getArea: function (wid, len) {
+        return len * wid;
+    }
+}
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)

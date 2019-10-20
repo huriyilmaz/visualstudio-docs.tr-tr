@@ -4,21 +4,21 @@ ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.F%2523.Code_Fixes
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a73991702455fab54baf868499634e1a4f5bbf48
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: a5c736be59c257d98085831971d6b7b9dc2a0ef3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870754"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666277"
 ---
-# <a name="options-text-editor--f--code-fixes"></a>Seçenekler: Metin düzenleyici > F# > kod düzeltmeleri
+# <a name="options-text-editor--f--code-fixes"></a>Seçenekler: metin Düzenleyicisi > F# > kod düzeltmeleri
 
-Kod hatalarını ve teklif çözümlerini belirlemenize yardımcı olabilecek ayarları belirtmek için kod düzeltmeleri seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar** > **Seçenekler**' i ve ardından **metin düzenleyici** > **F#**  > **kod düzeltmeleri**' ni seçin.
+Kod hatalarını ve teklif çözümlerini belirlemenize yardımcı olabilecek ayarları belirtmek için kod düzeltmeleri seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **araçlar**  > **Seçenekler**' i seçin ve ardından**kod düzeltmeleri** >  **metin Düzenleyicisi**  > **F#** seçin.
 
 ## <a name="code-fixes"></a>Kod Düzeltmeleri
 
@@ -28,11 +28,11 @@ Kod hatalarını ve teklif çözümlerini belirlemenize yardımcı olabilecek ay
 
 - **Açık deyimleri her zaman en üst düzeyde yerleştir**
 
-  Bu onay kutusu işaretliyse ve koda bir `open` ifade yazarsanız, en üst düzeye konur.
+  Bu onay kutusu işaretliyse ve koda bir `open` ifadesini yazarsanız, en üst düzeye konur.
 
 - **Kullanılmayan açık deyimleri kaldır**
 
-  Bu onay kutusu işaretliyse, belgeler kullanılmamış `open` deyimler için analiz edilir ve tüm kullanılmayan `open` deyimleri kaldırma eylemi içeren hızlı bir [eylem](../quick-actions.md) ampul görüntülenir.
+  Bu onay kutusu işaretliyse, belgeler kullanılmamış `open` deyimlerine göre çözümlenir ve kullanılmayan tüm `open` deyimlerini kaldırma eylemi içeren [hızlı bir eylem](../quick-actions.md) ampul görünür.
 
 - **Kullanılmayan değerler için düzeltmeleri çözümle ve önerme**
 

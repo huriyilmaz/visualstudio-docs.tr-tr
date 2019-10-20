@@ -1,5 +1,5 @@
 ---
-title: 'CA1063: Doğru IDisposable | Microsoft Docs'
+title: "CA1063: IDisposable 'ı doğru uygulayın | Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ImplementIDisposableCorrectly
 ms.assetid: 12afb1ea-3a17-4a3f-a1f0-fcdb853e2359
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 90f218165c0543c1881857191efd202717c6e372
-ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
+ms.openlocfilehash: 1fe2982ab9e1b3951583b268eadb44c97c8e4805
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66820890"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663630"
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063: IDisposable'ı doğru uygulayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,59 +29,59 @@ ms.locfileid: "66820890"
 |-|-|
 |TypeName|ImplementIDisposableCorrectly|
 |CheckId|CA1063|
-|Kategori|Microsoft.Design|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Design|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- `IDisposable` doğru uygulanmadı. Bu sorun için bazı nedenler aşağıda listelenmiştir:
+ `IDisposable` doğru uygulanmadı. Bu sorunun bazı nedenleri aşağıda listelenmiştir:
 
-- IDisposable sınıfta yeniden uygulanmış olur.
+- IDisposable, sınıfında yeniden uygulanır.
 
-- Sonlandırma yeniden geçersiz kılınır.
+- Finalize yeniden geçersiz kılındı.
 
-- Dispose geçersiz kılınır.
+- Dispose geçersiz kılındı.
 
-- Dispose() public değil korumalı ya da Dispose adlı.
+- Dispose () public, Sealed veya adlandırılmış Dispose değil.
 
-- Dispose(bool) korumalı, sanal veya korumasız değil.
+- Dispose (bool) korumalı, sanal veya korumasız değil.
 
-- Korumasız türlerinde Dispose(true) Dispose() çağırmalıdır.
+- Korumasız türlerde Dispose () Dispose (true) çağrılmalıdır.
 
-- Mühürlenmemiş türler için her ikisi de Dispose(bool) veya büyük/küçük harf Sonlandırıcıları Finalize uygulama çağırmaz.
+- Korumasız türler için, Finalize, Dispose (bool) ya da Case sınıfı sonlandırıcısını çağırmaz.
 
-  Bu desenleri herhangi birinin ihlali bu uyarıyı tetikleyecektir.
+  Bu desenlerden herhangi birinin ihlal olması bu uyarıyı tetikler.
 
-  Kendi korumalı sanal void Dispose(bool) yönteminin her korumasız kök IDisposable tür sağlamanız gerekir. Dispose(true) Dispose() çağırmalıdır ve Finalize Dispose(false) yöntemini çağırması gerekir. Bir korumasız kök IDisposable tür oluşturuyorsanız, Dispose(bool) tanımlayın ve bunu çağırmanız gerekir. Daha fazla bilgi için [Cleaning Up Unmanaged Resources](https://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213) içinde [çerçeve tasarım yönergeleri](https://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b) .NET Framework belgelerinin bölümü.
+  Her korumasız kök IDisposable türü kendi korumalı sanal void Dispose (bool) metodunu sağlamalıdır. Dispose () Dispose (true) öğesini çağırmalıdır ve Finalize, Dispose (false) çağrısını çağırmalıdır. Korumasız bir kök IDisposable türü oluşturuyorsanız Dispose (bool) tanımlamanız ve bunu çağırmanız gerekir. Daha fazla bilgi için, .NET Framework belgelerinin [çerçeve tasarım yönergeleri](https://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b) bölümünde [yönetilmeyen kaynakları temizleme](https://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213) bölümüne bakın.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Tüm IDisposable türleri Dispose kalıbını doğru uygulamalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Kesip kodunuzu inceleyebilir ve aşağıdaki çözümlerden birini, bu ihlali düzeltir belirleyin.
+ Kodunuzu inceleyin ve aşağıdaki çözümlerden hangisinin bu ihlalin düzelceğini saptayın.
 
-- IDisposable tarafından uygulanan arabirimler listesinden kaldırın {0} ve temel sınıfın Dispose uygulamasını geçersiz kılın.
+- @No__t_0 tarafından uygulanan arabirimler listesinden IDisposable 'yi kaldırın ve bunun yerine temel sınıf Dispose uygulamasını geçersiz kılın.
 
-- Sonlandırıcı türünden kaldırın {0}, Dispose (bool disposing) yöntemini geçersiz kılın ve sonlandırma mantığını 'disposing ' değerinin false olduğu kod yoluna koyun.
+- @No__t_0 türünden sonlandırıcıyı kaldırın, Dispose (bool disposing) öğesini geçersiz kılın ve sonlandırma mantığını ' disposing ' değeri false olan kod yoluna koyun.
 
-- Kaldırma {0}, Dispose (bool disposing) yöntemini geçersiz kılın ve atma mantığını 'disposing ' değerinin true olduğu kod yoluna koyun.
+- @No__t_0 kaldırın, Dispose (bool disposing) öğesini geçersiz kılın ve Dispose mantığını ' disposing ' değeri true olduğunda kod yoluna koyun.
 
-- Emin {0} genel olarak bildirildi ve korumalı.
+- @No__t_0 public ve Sealed olarak bildirildiği için emin olun.
 
-- Yeniden adlandırma {0} yöntemini 'Dispose' ve onu public ve sealed olarak bildirildiğinden emin olun.
+- @No__t_0 ' Dispose ' olarak yeniden adlandırın ve Public ve Sealed olarak belirtilen şekilde ayarlandığından emin olun.
 
-- Emin olun {0} korumalı olarak sanal bildirilen ve korumasız.
+- @No__t_0 korumalı, sanal ve korumasız olarak bildirildiği için emin olun.
 
-- Değiştirme {0} Dispose(true) çağırır, böylece daha sonra GC çağırır. IDisposable.Dispose geçerli nesne örneğinde ('this' veya 'Me' [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) ve ardından döndürür.
+- @No__t_0, Dispose (true) yöntemini çağıracak şekilde değiştirin ve ardından GC çağırır. Geçerli nesne örneğinde (' this ' veya ' Me ' [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) SuppressFinalize ve sonra döndürür.
 
-- Değiştirme {0} böylece Dispose(false) yöntemini çağıracak ve sonra döndürür.
+- @No__t_0, Dispose (false) yöntemini çağıracak ve sonra geri döndüren şekilde değiştirin.
 
-- Bir korumasız kök IDisposable sınıfı yazıyorsanız, aşağıdaki IDisposable uygulamasını daha önce bu bölümde açıklanan desene uygun olduğunu emin olun.
+- Korumasız bir kök IDisposable sınıfı yazıyorsanız, IDisposable uygulamasının bu bölümde daha önce açıklanan modele uyduğundan emin olun.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="pseudo-code-example"></a>Sözde kod örneği
- Aşağıdaki sözde kod Dispose(bool) yönetilen kullanan bir sınıf içinde nasıl uygulanması gerekir ve yerel kaynaklara genel bir örnek sağlar.
+ Aşağıdaki sözde kod, Dispose (bool) ' ın yönetilen ve yerel kaynakları kullanan bir sınıfta nasıl uygulanması gerektiği hakkında genel bir örnek sağlar.
 
 ```
 public class Resource : IDisposable

@@ -1,57 +1,57 @@
 ---
-title: Dönüştürme kodu yeniden düzenleme bir for döngüsü foreach deyimi
+title: For döngüsünü foreach ifadesine dönüştürmek için kodu yeniden düzenleme
 ms.date: 05/10/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: d61e79055b2158115b459e643a36170304b7f655
-ms.sourcegitcommit: b468d71052a1b8a697f477ab23a3644de139f1e9
+ms.openlocfilehash: 3d35897bd928166410ffd950534277cfac2c06b7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67261718"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654549"
 ---
-# <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>Yeniden düzenleme arasında dönüştürmek için bir döngü için ve bir foreach deyimi
+# <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>For döngüsü ve foreach ifadesi arasında dönüştürmek için yeniden düzenleme
 
-Bu makalede iki döngü yapıları arasında dönüştürme hızlı Eylemler yeniden düzenlemeler. Neden isteyebilirsiniz arasında geçiş yapmak için bazı nedenler içeren bir [için](/dotnet/csharp/language-reference/keywords/for) döngü ve [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) kodunuzda deyimi.
+Bu makalede, iki döngü yapısı arasında dönüştürme yapan hızlı eylemler yeniden düzenlemeler açıklanır. Kodunuzda bir [for](/dotnet/csharp/language-reference/keywords/for) döngüsü ve [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) ifadesi arasında geçiş yapmak isteyebileceğiniz bazı nedenleri içerir.
 
-## <a name="convert-a-for-loop-to-a-foreach-statement"></a>Dönüştürme bir for döngüsü foreach deyimi
+## <a name="convert-a-for-loop-to-a-foreach-statement"></a>For döngüsünü foreach ifadesine Dönüştür
 
-Varsa bir [için](/dotnet/csharp/language-reference/keywords/for) döngü kodunuzda bu yeniden düzenleme öğesine dönüştürmek için kullanabileceğiniz bir [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) deyimi.
+Kodunuzda bir [for](/dotnet/csharp/language-reference/keywords/for) Loop varsa, bu yeniden düzenlemeyi bir [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) ifadesine dönüştürmek için kullanabilirsiniz.
 
 Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
 > [!NOTE]
-> **Dönüştürmek için foreach** hızlı eylem yeniden düzenleme, yalnızca kullanılabilir [için](/dotnet/csharp/language-reference/keywords/for) döngüleri, tüm üç parça içerir: bir başlatıcı, koşul ve yineleyici.
+> **ForEach** hızlı eylemine Dönüştür yeniden düzenlemesi yalnızca üç bölümden [oluşan Döngülerde](/dotnet/csharp/language-reference/keywords/for) kullanılabilir: Başlatıcı, koşul ve yineleyici.
 
-### <a name="why-convert"></a>Neden Dönüştür
+### <a name="why-convert"></a>Neden dönüştürme
 
-Neden dönüştürmek istediğiniz bir [için](/dotnet/csharp/language-reference/keywords/for) döngüsü bir [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) deyimi içerir:
+[For](/dotnet/csharp/language-reference/keywords/for) döngüsünü [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) ifadesine dönüştürmek isteyebileceğiniz nedenler şunlardır:
 
-- Öğelere erişmek için bir dizin olarak dışında döngü içinde yerel bir döngü değişkeninin kullanmayın.
+- Bir dizin olarak, öğelere erişmek için bir dizin olması dışında yerel döngü değişkenini döngü içinde kullanamazsınız.
 
-- Kodunuzu basitleştirin ve Başlatıcı, koşul ve yineleyici bölümleri mantık hataları olasılığını azaltmak istediğiniz.
+- Kodunuzu basitleştirmek ve Başlatıcı, koşul ve yineleyici bölümlerindeki mantık hatalarının olasılığını azaltmak istiyorsunuz.
 
-### <a name="how-to-use-it"></a>Kullanımı
+### <a name="how-to-use-it"></a>Nasıl kullanılır
 
-1. İçinde giriş işareti koyun `for` anahtar sözcüğü.
+1. Giriş işaretini `for` anahtar sözcüğüne yerleştirin.
 
-1. Tuşuna **Ctrl**+ **.** veya tornavida ![tornavida simgesi](../media/screwdriver-icon.png) kod dosyasının boşluğundaki simgeye.
+1. **Ctrl** + tuşuna basın **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![Screwdriver simgesine ](../media/screwdriver-icon.png) simgesine tıklayın.
 
-   ![Foreach menüye dönüştürme](media/convert-to-foreach.png)
+   ![Foreach menüsüne Dönüştür](media/convert-to-foreach.png)
 
-1. Seçin **'foreach' olarak Dönüştür**. Ya da seçin **değişiklik önizlemesi** açmak için [Değişiklikleri Önizle](../../ide/preview-changes.md) iletişim tıklayın ve ardından **Uygula**.
+1. **' Foreach ' olarak Dönüştür**' ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula**' yı seçin.
 
-## <a name="convert-a-foreach-statement-to-a-for-loop"></a>Foreach deyimi için dönüştürme bir for döngüsü
+## <a name="convert-a-foreach-statement-to-a-for-loop"></a>Foreach ifadesini for döngüsüne Dönüştür
 
-Varsa bir [foreach (C#)](/dotnet/csharp/language-reference/keywords/foreach-in) veya [her biri için... İleri (Visual Basic)](/dotnet/visual-basic/language-reference/statements/for-each-next-statement) deyim, kodunuzda kullanabileceğiniz bu yeniden düzenleme öğesine dönüştürmek için bir [için](/dotnet/csharp/language-reference/keywords/for) döngü.
+Bir [foreach (C#)](/dotnet/csharp/language-reference/keywords/foreach-in) veya [her biri için... Sonraki (Visual Basic)](/dotnet/visual-basic/language-reference/statements/for-each-next-statement) deyiminizde, bu yeniden düzenlemeyi bir [for](/dotnet/csharp/language-reference/keywords/for) döngüsüne dönüştürmek için kullanabilirsiniz.
 
 Bu yeniden düzenleme için geçerlidir:
 
@@ -59,30 +59,30 @@ Bu yeniden düzenleme için geçerlidir:
 
 - Visual Basic
 
-### <a name="why-convert"></a>Neden Dönüştür
+### <a name="why-convert"></a>Neden dönüştürme
 
-Neden dönüştürmek istediğiniz bir [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) deyimi bir [için](/dotnet/csharp/language-reference/keywords/for) döngü içerir:
+[Foreach](/dotnet/csharp/language-reference/keywords/foreach-in) ifadesini bir [for](/dotnet/csharp/language-reference/keywords/for) döngüsüne dönüştürmek isteyebileceğiniz nedenler şunlardır:
 
-- Öğe daha fazlasına erişmek için yerel Döngü değişkeninin döngü içinde kullanmak istiyorsunuz.
+- Yalnızca öğeye erişenden daha fazla bilgi için döngü içinde yerel döngü değişkenini kullanmak istiyorsunuz.
 
-- İşiniz [çok boyutlu bir dizi boyunca gezinme](/dotnet/csharp/programming-guide/arrays/using-foreach-with-arrays) ve dizi öğeleri üzerinde daha fazla denetim istiyorsanız.
+- [Çok boyutlu bir dizide yineleme](/dotnet/csharp/programming-guide/arrays/using-foreach-with-arrays) yapılır ve dizi öğeleri üzerinde daha fazla denetim istiyorsunuz.
 
-### <a name="how-to-use-it"></a>Kullanımı
+### <a name="how-to-use-it"></a>Nasıl kullanılır
 
-1. İçinde giriş işareti koyun `foreach` veya `For Each` anahtar sözcüğü.
+1. Giriş işaretini `foreach` veya `For Each` anahtar sözcüğüne yerleştirin.
 
-1. Tuşuna **Ctrl**+ **.** veya tornavida ![tornavida simgesi](../media/screwdriver-icon.png) kod dosyasının boşluğundaki simgeye.
+1. **Ctrl** + tuşuna basın **.** ya da kod dosyasının kenar boşluğundaki screwdriver ![Screwdriver simgesine ](../media/screwdriver-icon.png) simgesine tıklayın.
 
-   ![Menüsünü Dönüştür](media/convert-to-for.png)
+   ![Menüye Dönüştür](media/convert-to-for.png)
 
-1. Seçin **'for' olarak Dönüştür**. Ya da seçin **değişiklik önizlemesi** açmak için [Değişiklikleri Önizle](../../ide/preview-changes.md) iletişim tıklayın ve ardından **Uygula**.
+1. **' For ' olarak Dönüştür '** ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula**' yı seçin.
 
-1. Yeniden düzenleme, yeni bir yineleme sayısı değişken oluşturduğundan **Yeniden Adlandır** kutusu Düzenleyicisinin sağ üst köşesinde görüntülenir. Değişken için farklı bir ad seçmek istiyorsanız, yazın ve sonra basın **Enter** veya **Uygula** içinde **Yeniden Adlandır** kutusu. Yeni bir ad seçin istemiyorsanız basın **Esc** veya **Uygula** kapatmak için **Yeniden Adlandır** kutusu.
+1. Yeniden düzenleme yeni bir yineleme sayısı değişkeni tanıtıldığı için, düzenleyicinin sağ üst köşesinde **Yeniden Adlandır** kutusu görünür. Değişken için farklı bir ad seçmek istiyorsanız, yazın ve **ENTER tuşuna basın** veya **Yeniden Adlandır** kutusuna **Uygula** ' yı seçin. Yeni bir ad seçmek istemiyorsanız, **ESC** tuşuna basın veya **Yeniden Adlandır** kutusunu kapatmak için **Uygula** ' yı seçin.
 
 > [!NOTE]
-> İçin C#, bu yeniden düzenlemeler tarafından oluşturulan kodu açık bir tür kullanan veya [var](/dotnet/csharp/language-reference/keywords/var) koleksiyondaki öğelerin türü. Kapsam içinde kod stili ayarları türü oluşturulan kodda, doğrudan veya dolaylı bağlıdır. Bu belirli kod stili ayarları altında makine düzeyinde yapılandırılır **Araçları** > **seçenekleri** > **metin düzenleyici**  >  **C#**  >  **Kod stili** > **genel** >  **\'var' Tercihler**, ya da çözüm düzeyinde bir [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosya. Kod stili ayarı değiştirirseniz **seçenekleri**, değişikliklerin etkili olabilmesi için kod dosyasını açın.
+> İçin C#, bu yeniden düzenlemeler tarafından oluşturulan kod, koleksiyondaki öğelerin türü için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **araçlar**  > **Seçenekler** altında makine düzeyinde yapılandırılır  > **metin düzenleyicisi**  > **C#**  > **kod stili** 0**genel**  **2 @no__t_ 14var ' tercihleri**veya bir [editorconfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

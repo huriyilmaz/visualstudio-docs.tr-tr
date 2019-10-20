@@ -2,46 +2,46 @@
 title: Yönlendirilmiş Grafik Biçimlendirme Dili (DGML) başvurusu
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b473dc706cd7183835c5d84091fb53e45337c013
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f6d29717c57d37daf200a859fb12f88c1108520b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834223"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653859"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Yönlendirilmiş Grafik Biçimlendirme Dili (DGML) başvurusu
 
-Yönlendirilmiş Grafik işaretleme dili (DGML) Görselleştirme ve karmaşıklık analizleri gerçekleştirmek için kullanılan bilgileri açıklar ve biçimi Visual Studio'daki kod haritaları kalıcı hale getirmek için kullanılır. Döngüsel ve döngüsel olmayan yönlendirilmiş grafikleri açıklamak için basit XML kullanır. Yönlendirilmiş bir grafik, bağlantılarla veya kenarlarla bağlanmış bir düğüm kümesidir. Düğümler ve bağlantılar, bir yazılım projesindeki öğeler gibi ağ yapılarını açıklamak için kullanılabilir.
+Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullanılan bilgileri açıklar ve karmaşıklık Analizi gerçekleştirir ve Visual Studio 'da kod eşlemelerini kalıcı hale getirmek için kullanılan biçimdir. Hem döngüsel hem de döngüsel olarak yönlendirilmiş grafikleri anlatmak için basit XML kullanır. Yönlendirilmiş bir grafik, bağlantılarla veya kenarlarla bağlanmış bir düğüm kümesidir. Düğümler ve bağlantılar, bir yazılım projesindeki öğeler gibi ağ yapılarını açıklamak için kullanılabilir.
 
-Visual Studio'nun bazı sürümlerinin yalnızca bir alt kümesini DGML özellikleri desteği, bkz: Not [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Visual Studio 'nun bazı sürümlerinin yalnızca DGML özellikleri alt kümesini desteklediğine, bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Bir .dgml dosyasını düzenlerken, IntelliSense her öğe için kullanılabilen öznitelikleri ve değerlerini belirlemenize yardımcı olur. Bir öznitelikte renk belirlemek için "Mavi" gibi genel renklerin adlarını veya "#ffa0b1c3" gibi ARGB onaltılık değerlerini kullanın. DGML Windows Presentation Foundation (WPF) renk tanımı biçimlerinin küçük bir alt kümesini kullanır. Daha fazla bilgi için [renkler sınıfı](http://go.microsoft.com/fwlink/?LinkId=182345).
+> Bir .dgml dosyasını düzenlerken, IntelliSense her öğe için kullanılabilen öznitelikleri ve değerlerini belirlemenize yardımcı olur. Bir öznitelikte renk belirlemek için "Mavi" gibi genel renklerin adlarını veya "#ffa0b1c3" gibi ARGB onaltılık değerlerini kullanın. DGML Windows Presentation Foundation (WPF) renk tanımı biçimlerinin küçük bir alt kümesini kullanır. Daha fazla bilgi için bkz. [renkler sınıfı](http://go.microsoft.com/fwlink/?LinkId=182345).
 
-## <a name="DGML"></a> DGML söz dizimi
+## <a name="DGML"></a>DGML sözdizimi
 
-Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır:
+Aşağıdaki tabloda DGML 'de kullanılan öğelerin türleri açıklanmaktadır:
 
 - `<DirectedGraph></DirectedGraph>`
 
-   Kod Haritası (.dgml) belgesinin kök öğesi öğesidir. Diğer tüm DGML öğeleri, bu öğe kapsamı içinde görünür.
+   Bu öğe, kod Haritası (. dgml) belgesinin kök öğesidir. Diğer tüm DGML öğeleri, bu öğe kapsamı içinde görünür.
 
    Aşağıdaki liste dahil edebileceğiniz isteğe bağlı öznitelikleri tanımlar:
 
-   `Background` -Harita arka plan rengi
+   `Background`-harita arka planının rengi
 
-   `BackgroundImage` -Harita arka planı olarak kullanılacak bir görüntü dosyasının konumu.
+   `BackgroundImage`-harita arka planı olarak kullanılacak bir görüntü dosyasının konumu.
 
-   `GraphDirection` -Map ayarlandığında ağaç düzenine (`Sugiyama`), düğümleri bağlantıların çoğu belirtilen yönde akmasını şekilde düzenleyin: `TopToBottom`, `BottomToTop`, `LeftToRight`, veya `RightToLeft`. Bkz: [eşleme düzenini](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `GraphDirection`-harita ağaç düzenine (`Sugiyama`) ayarlandığında, bağlantıların çoğunun belirtilen yönde akmasını sağlamak için düğümleri düzenleyin: `TopToBottom`, `BottomToTop`, `LeftToRight` veya `RightToLeft`. Bkz. [harita yerleşimini değiştirme](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
-   `Layout` -Map şu düzenlere ayarlayın: `None`, `Sugiyama` (ağaç düzeni) `ForceDirected` (hızlı kümeler) veya `DependencyMatrix`. Bkz: [eşleme düzenini](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `Layout`-Haritayı şu düzenlerle ayarlayın: `None`, `Sugiyama` (ağaç düzeni), `ForceDirected` (hızlı kümeler) veya `DependencyMatrix`. Bkz. [harita yerleşimini değiştirme](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
-   `NeighborhoodDistance` -Map ağaç düzenine veya hızlı küme düzenine ayarlandığında, seçilen düğümlerden belirtilen sayıda (1-7) olan düğümleri gösterir. Bkz: [eşleme düzenini](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `NeighborhoodDistance`-eşleme ağaç düzenine veya hızlı kümeler düzenine ayarlandığında, seçilen düğümlerden uzakta bulunan bağlantıların yalnızca belirtilen sayısı (1-7) olan düğümleri gösterir. Bkz. [harita yerleşimini değiştirme](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
    Örnek:
 
@@ -65,10 +65,10 @@ Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Nodes></Nodes>`
 
-   Bu isteğe bağlı öğe listesini içeren `<Node/>` haritada düğümleri tanımlayan öğeleri. Daha fazla bilgi için `<Node/>` öğesi.
+   Bu isteğe bağlı öğe, haritadaki düğümleri tanımlayan `<Node/>` öğelerinin bir listesini içerir. Daha fazla bilgi için `<Node/>` öğesine bakın.
 
   > [!NOTE]
-  > İçinde tanımlanmamış bir düğüme başvurduğunuzda bir `<Link/>` harita öğesi, oluşturur bir `<Node/>` öğe otomatik olarak.
+  > Bir `<Link/>` öğesinde tanımsız bir düğüme başvurduğunuzda, eşleme otomatik olarak bir `<Node/>` öğesi oluşturur.
 
    Örnek:
 
@@ -86,27 +86,27 @@ Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Node/>`
 
-   Bu öğe tek bir düğümü tanımlar. İçinde görünür `<Nodes><Nodes/>` öğe listesi.
+   Bu öğe tek bir düğümü tanımlar. @No__t_0 öğesi listesi içinde görünür.
 
    Bu öğenin öznitelikleri şunlardır:
 
-   `Id` -Düğüm ve varsayılan değerini benzersiz bir ad `Label` ayrı özniteliği `Label` özniteliği belirtildi. Bu adı eşleşmelidir `Source` veya `Target` , kendisine başvuran bağlantının özniteliği.
+   `Id`-ayrı bir `Label` özniteliği belirtilmediyse, düğümün benzersiz adı ve `Label` özniteliğinin varsayılan değeri. Bu ad, ona başvuran bağlantının `Source` veya `Target` özniteliğiyle eşleşmelidir.
 
    Aşağıdaki liste, dahil edebileceğiniz isteğe bağlı özniteliklerin bazılarını açıklar:
 
-   `Label` -Düğüm görünen adı.
+   `Label`-düğümün görünen adı.
 
-   Stil öznitelikleri. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Stil öznitelikleri. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
-   `Category` -Bu özniteliği paylaşan öğeleri tanımlayan kategorinin adı. Daha fazla bilgi için `<Category/>` öğesi.
+   `Category`-bu özniteliği paylaşan öğeleri tanımlayan kategorinin adı. Daha fazla bilgi için `<Category/>` öğesine bakın.
 
-   `Property` -Aynı özellik değerine sahip öğeleri tanımlayan bir özelliğin adı. Daha fazla bilgi için `<Property/>` öğesi.
+   `Property`-aynı özellik değerine sahip öğeleri tanımlayan bir özelliğin adı. Daha fazla bilgi için `<Property/>` öğesine bakın.
 
-   `Group` -Düğümü diğer düğümleri içeriyorsa, bu öznitelik ayarlanan `Expanded` veya `Collapsed` içeriğini gizlemek veya göstermek için. Olmalıdır bir `<Link/>` içeren öğe `Category="Contains"` özniteliği ve üst düğümü kaynak düğüm ve alt düğümü hedef düğüm olarak belirtir. Bkz: [Grup kod öğeleri](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes).
+   `Group`-düğüm diğer düğümleri içeriyorsa, içeriğini göstermek veya gizlemek için bu özniteliği `Expanded` veya `Collapsed` olarak ayarlayın. @No__t_1 özniteliğini içeren bir `<Link/>` öğesi olmalıdır ve kaynak düğüm ve alt düğüm olarak ana düğümü hedef düğüm olarak belirtir. Bkz. [grup kodu öğeleri](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes).
 
-   `Visibility` -Bu öznitelik ayarlanan `Visible`, `Hidden`, veya `Collapsed`. Kullanan `System.Windows.Visibility`. Bkz: [Gizle veya Göster düğümlere ve bağlantılara](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
+   `Visibility`-bu özniteliği `Visible`, `Hidden` veya `Collapsed` olarak ayarlayın. @No__t_0 kullanır. Bkz. [düğümleri ve bağlantıları gizleme veya gösterme](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
 
-   `Reference` -Bu özniteliği bir belgeye veya URL'ye bağlanacak ayarlayın. Bkz: [bağlantı belgeler veya URL'ler için kod öğeleri ve bağlantılarına](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences).
+   `Reference`-bu özniteliği bir belge veya URL bağlantısı olacak şekilde ayarlayın. Bkz. [belge veya URL 'leri kod öğelerine ve bağlantılarına bağlama](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences).
 
    Örnek:
 
@@ -131,7 +131,7 @@ Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Links></Links>`
 
-   Bu öğe listesini içeren `<Link>` düğümler arasındaki bağlantıları belirleyen öğeleri. Daha fazla bilgi için `<Link/>` öğesi.
+   Bu öğe, düğümler arasındaki bağlantıları tanımlayan `<Link>` öğelerinin listesini içerir. Daha fazla bilgi için `<Link/>` öğesine bakın.
 
    Örnek:
 
@@ -146,26 +146,26 @@ Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Link/>`
 
-   Bu öğe, bir kaynak düğümünü hedef düğüme bağlayan tek bir bağlantıyı tanımlar. İçinde görünür `<Links></Links>` öğe listesi.
+   Bu öğe, bir kaynak düğümünü hedef düğüme bağlayan tek bir bağlantıyı tanımlar. @No__t_0 öğesi listesi içinde görünür.
 
   > [!NOTE]
-  > Bu öğe tanımlanmamış bir düğüme başvuruyorsa, harita belge belirtilen öznitelikleri, varsa var olan bir düğümü otomatik olarak oluşturur.
+  > Bu öğe tanımsız bir düğüme başvuruyorsa, eşleme belgesi, varsa belirtilen özniteliklere sahip bir düğümü otomatik olarak oluşturur.
 
    Bu öğenin öznitelikleri şunlardır:
 
-   `Source` -Bağlantının kaynak düğümü
+   `Source`-bağlantının kaynak düğümü
 
-   `Target` -Bağlantının hedef düğümü
+   `Target`-bağlantının hedef düğümü
 
    Aşağıdaki liste, dahil edebileceğiniz isteğe bağlı özniteliklerin bazılarını açıklar:
 
-   `Label` -Bağlantının görünen adı
+   `Label`-bağlantının görünen adı
 
-   Stil öznitelikleri. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Stil öznitelikleri. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
-   `Category` -Bu özniteliği paylaşan öğeleri tanımlayan kategorinin adı. Daha fazla bilgi için `<Category/>` öğesi.
+   `Category`-bu özniteliği paylaşan öğeleri tanımlayan kategorinin adı. Daha fazla bilgi için `<Category/>` öğesine bakın.
 
-   `Property` -Aynı özellik değerine sahip öğeleri tanımlayan bir özelliğin adı. Daha fazla bilgi için `<Property/>` öğesi.
+   `Property`-aynı özellik değerine sahip öğeleri tanımlayan bir özelliğin adı. Daha fazla bilgi için `<Property/>` öğesine bakın.
 
    Örnek:
 
@@ -189,7 +189,7 @@ Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Categories></Categories>`
 
-   Bu öğe listesini içeren `<Category/>` öğeleri. Daha fazla bilgi için `<Category/>` öğesi.
+   Bu öğe `<Category/>` öğelerinin listesini içerir. Daha fazla bilgi için `<Category/>` öğesine bakın.
 
    Örnek:
 
@@ -204,21 +204,21 @@ Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Category/>`
 
-   Bu öğe tanımlar bir `Category` bu özniteliği paylaşan öğeleri tanımlamak için kullanılan öznitelik. A `Category` özniteliği, harita öğelerini düzenlemek, devralma yoluyla paylaşılan öznitelikler sağlamak veya ek meta verileri tanımlamak için kullanılabilir.
+   Bu öğe, bu özniteliği paylaşan öğeleri tanımlamak için kullanılan bir `Category` özniteliğini tanımlar. Bir `Category` özniteliği harita öğelerini düzenlemek, devralma yoluyla paylaşılan öznitelikler sağlamak veya ek meta veri tanımlamak için kullanılabilir.
 
    Bu öğenin öznitelikleri şunlardır:
 
-   `Id` -Benzersiz bir ad, kategori ve varsayılan değerini `Label` ayrı özniteliği `Label` özniteliği belirtildi.
+   `Id`, ayrı bir `Label` özniteliği belirtilmediyse kategorinin benzersiz adı ve `Label` özniteliğinin varsayılan değeri.
 
    Aşağıdaki liste, dahil edebileceğiniz isteğe bağlı özniteliklerin bazılarını açıklar:
 
-   `Label` -Kategori için okuyucuya kolaylık sağlayan ad bir.
+   `Label`-kategori için bir okuyucu kolay adı.
 
-   `BasedOn` -Üst kategori `<Category/>` geçerli öğenin devralır.
+   `BasedOn`-geçerli öğenin `<Category/>` devraldığı üst kategori.
 
-   Bu öğenin örneğinde `FailedTest` kategorisi kendi `Stroke` özniteliğini `PassedTest` kategorisi. "Hiyerarşik kategoriler oluşturmak için" bölümüne bakın [Özelleştir kod eşlemeleri DGML dosyalarını düzenleyerek](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Bu öğe için örneğinde, `FailedTest` kategorisi `PassedTest` kategorisinden `Stroke` özniteliğini devralır. [Dgml dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md)bölümünde "Hiyerarşik kategoriler oluşturmak için" bölümüne bakın.
 
-   Kategoriler, düğümlerin ve bağlantıların görünümünü bir haritada görüntülendiklerinde denetleyen birkaç temel şablon davranışı da sağlar. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Kategoriler Ayrıca, bir haritada görüntülendiklerinde düğümlerin ve bağlantıların görünümünü denetleyen bazı temel şablon davranışlarını de sağlar. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    Örnek:
 
@@ -246,7 +246,7 @@ Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Properties></Properties>`
 
-   Bu öğe listesini içeren `<Property/>` öğeleri. Daha fazla bilgi için `<Property/>` öğesi.
+   Bu öğe `<Property/>` öğelerinin listesini içerir. Daha fazla bilgi için `<Property/>` öğesine bakın.
 
    Örnek:
 
@@ -261,17 +261,17 @@ Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Property/>`
 
-   Bu öğe tanımlar bir `Property` herhangi bir DGML öğesine ya özniteliğine, kategoriler ve diğer özellikler dahil olmak üzere bir değer atamak için kullanabileceğiniz bir öznitelik.
+   Bu öğe, Kategoriler ve diğer özellikler de dahil olmak üzere herhangi bir DGML öğesine veya özniteliğe değer atamak için kullanabileceğiniz bir `Property` özniteliği tanımlar.
 
    Bu öğenin öznitelikleri şunlardır:
 
-  - `Id` -Özellik ve varsayılan değerini benzersiz bir ad `Label` ayrı özniteliği `Label` özniteliği belirtildi.
+  - `Id`-ayrı bir `Label` özniteliği belirtilmediyse özelliğin benzersiz adı ve `Label` özniteliğinin varsayılan değeri.
 
-  - `DataType` -Özellik tarafından depolanan verinin türü
+  - `DataType`-özellik tarafından depolanan verilerin türü
 
-    Özellik görünmesini istiyorsanız **özellikleri** kullanın `Label` özelliği Özelliğin görünen adı belirtin.
+    Özelliğin **Özellikler** penceresinde görünmesini istiyorsanız, özelliğin görünen adını belirtmek için `Label` özelliğini kullanın.
 
-    Bkz: [kod öğeleri ve bağlantılara kategoriler atama](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories).
+    Bkz. [kod öğelerine ve bağlantılara kategori atama](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories).
 
     Örnek:
 
@@ -300,9 +300,9 @@ Aşağıdaki tabloda, DGML'de kullanılan öğelerin türleri açıklanmaktadır
   </DirectedGraph>
   ```
 
-### <a name="AddAlias"></a> Sık kullanılan yolların diğer adları
+### <a name="AddAlias"></a>Yaygın olarak kullanılan yolların diğer adları
 
-Yaygın olarak kullanılan yolların takma adlarla değiştirilmesi .dgml dosyasının boyutunu azaltır ve dosyayı yüklemek veya kaydetmek için gereken süreyi kısaltır. Bir diğer ad oluşturmak için bir `<Paths></Paths>` .dgml dosyasının sonundaki bölümü. Bu bölümde, ekleme bir `<Path/>` yolu için bir diğer ad tanımlamak için:
+Yaygın olarak kullanılan yolların takma adlarla değiştirilmesi .dgml dosyasının boyutunu azaltır ve dosyayı yüklemek veya kaydetmek için gereken süreyi kısaltır. Bir diğer ad oluşturmak için. dgml dosyasının sonuna bir `<Paths></Paths>` bölümü ekleyin. Bu bölümde, yol için bir diğer ad tanımlamak üzere bir `<Path/>` öğesi ekleyin:
 
 ```xml
 <Paths>
@@ -310,7 +310,7 @@ Yaygın olarak kullanılan yolların takma adlarla değiştirilmesi .dgml dosyas
 </Paths>
 ```
 
-.Dgml dosyasındaki bir öğeden diğer ada başvuru yapmak içine `Id` , \<Path / > öğesi bir dolar işareti ($) ve parantez (()):
+. Dgml dosyasındaki bir öğeden diğer ada başvuru yapmak için \<Path/> öğesinin `Id` dolar işareti ($) ve parantez (()) arasına koyun:
 
 ```xml
 <Nodes>

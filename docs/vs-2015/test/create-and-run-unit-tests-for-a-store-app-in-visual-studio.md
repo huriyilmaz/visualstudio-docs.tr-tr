@@ -1,5 +1,5 @@
 ---
-title: Bir Store uygulaması için birim testleri oluşturma ve çalıştırma
+title: Bir mağaza uygulaması için birim testleri oluşturma ve çalıştırma
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -9,28 +9,28 @@ helpviewer_keywords:
 ms.assetid: d3de7b31-0262-4373-ba84-e74eda7651e4
 caps.latest.revision: 28
 author: alexhomer1
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0fc24dc76e59a04b9485a71ba4dff44e0c7ba64d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a7efb5fe4484fdd0ce7d2fcb0a1988e9b089509e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442801"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660619"
 ---
-# <a name="create-and-run-unit-tests-for-a-store-app-in-visual-studio"></a>Oluşturma ve Visual Studio'da bir Store uygulaması için birim testleri çalıştırma
+# <a name="create-and-run-unit-tests-for-a-store-app-in-visual-studio"></a>Visual Studio 'da bir mağaza uygulaması için birim testleri oluşturma ve çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2012 Express Windows 8 için birim testi araçları, geliştiricilerin ve birim testi içinde yazılım geliştirme yöntemleri bünyesine ekipleri desteklemek üzere tasarlanmıştır. Birim testleri, geliştiricilere Visual C#, Visual Basic ve Visual C++ projelerindeki sınıfların yöntemlerinde mantık hataları aramak için verimli ve sürdürülebilir bir yol verin.
+Windows 8 için Visual Studio 2012 Express birim testi araçları, yazılım geliştirme uygulamalarında birim testi birleştiren geliştiricileri ve ekipleri desteklemek üzere tasarlanmıştır. Birim testleri, geliştiricilere ve test edicilere görsel C#, Visual Basic ve görsel C++ projelerdeki sınıfların yöntemlerinde mantık hataları aramak için verimli ve sürdürülebilir bir yol sağlar.
 
 > [!NOTE]
-> Bu bölümdeki konular, Visual Studio 2012 Express Windows 8 için işlevselliğini açıklar. Visual Studio Ultimate, VS Premium ve Professional VS birim testi için ek özellikler sağlar.
+> Bu bölümdeki konularda, Windows 8 için Visual Studio 2012 Express işlevinin işlevleri açıklanır. Visual Studio Ultimate, VS Premium ve VS Professional birim testi için ek özellikler sağlar.
 >
-> - VS Ultimate, Premium VS ve VS Professional içinde bir eklenti bağdaştırıcısı Microsoft Test Gezgini için oluşturduğu tüm üçüncü taraf veya açık kaynak birim testi çerçevesini kullanabilirsiniz. Ayrıca, analiz ve testlerinizi ile VS Ultimate ve VS Premium için kod kapsamı bilgileri görüntüleyebilirsiniz.
->   - VS Ultimate içinde testlerinizi her yapıdan sonra çalıştırabilirsiniz. Microsoft Fakes, testlerinizi, sistem ve üçüncü taraf işlevselliği için test kodu değiştirerek kendi kodlarına odaklanmasını yönetilen kod için bir yalıtım çerçevesi de kullanabilirsiniz.
->   - **JavaScript**. JavaScript birim testi, IDE, Visual Studio Express için Windows 8'den kullanılamıyor. JavaScript birim testi çerçevelerini Visual Studio Professional, Premium ve Ultimate, Visual Studio Galerisi uzantıları olarak kullanılabilir. Ayrıca, bağımsız üçüncü taraf birini kullanarak JavaScript kodu test veya kaynak JavaScript birim testi çerçevelerini açın.
+> - VS Ultimate, VS Premium ve VS Professional ' de, Microsoft Test Gezgini için bir eklenti bağdaştırıcısı oluşturmuş olan herhangi bir üçüncü taraf veya açık kaynak birim testi çerçevesini kullanabilirsiniz. Ayrıca, VS Ultimate ve VS Premium ile testleriniz için kod kapsamı bilgilerini analiz edebilir ve görüntüleyebilirsiniz.
+>   - VS Ultimate 'ta, her derlemeden sonra testlerinizi çalıştırabilirsiniz. Ayrıca, sistem ve üçüncü taraf işlevselliği için test kodunu değiştirerek testlerinizi kendi kodunuzda odaklamak üzere yönetilen kod için bir yalıtım çerçevesi olan Microsoft Fakes 'i de kullanabilirsiniz.
+>   - **JavaScript**. JavaScript birim testi, Windows 8 için Visual Studio Express IDE 'den kullanılamıyor. Visual Studio Professional, Premium ve Ultimate 'ta JavaScript birim testi çerçeveleri, Visual Studio Galerisinde uzantı olarak kullanılabilir. JavaScript kodunu, tek başına üçüncü taraf veya açık kaynak JavaScript birim testi çerçevelerinden birini kullanarak da test edebilirsiniz.
 >
->   Daha fazla bilgi için [Birim Test kodunuzu](../test/unit-test-your-code.md) MSDN Kitaplığı'nda.
+>   Daha fazla bilgi için bkz. MSDN Kitaplığı 'nda [kodunuzda birim testi](../test/unit-test-your-code.md) .
 
 ## <a name="in-this-section"></a>Bu bölümde
  [C# birim testi sınıfı](../test/unit-testing-visual-csharp-code-in-a-store-app.md)

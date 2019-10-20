@@ -9,55 +9,55 @@ helpviewer_keywords:
 - TextTransform.exe
 ms.assetid: 06a48235-fe02-403e-a1cf-2ae70b4db62f
 caps.latest.revision: 43
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 607eda7550819e4150f026a0671ed744ba9c10a7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 18776795fdf693c855edd3f629d674089daaaebd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63427050"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666091"
 ---
 # <a name="generating-files-with-the-texttransform-utility"></a>TextTransform Yardımcı Programı ile Dosya Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-TextTransform.exe bir metin şablonu dönüştürmek için kullanabileceğiniz bir komut satırı aracıdır. TextTransform.exe çağırdığınızda, bağımsız değişken olarak bir metin şablonu dosyasının adını belirtin. TextTransform.exe metin dönüştürme motoru çağırır ve metin şablonu işler. TextTransform.exe genellikle betiklerin çağrılır. Visual Studio'da ya da yapı işleminde metin dönüştürme gerçekleştirmek için ancak, bu genellikle gerekli değildir.  
-  
+TextTransform. exe, bir metin şablonunu dönüştürmek için kullanabileceğiniz bir komut satırı aracıdır. TextTransform. exe ' yi çağırdığınızda, bir metin şablonu dosyasının adını bağımsız değişken olarak belirtirsiniz. TextTransform. exe, metin dönüştürme altyapısını çağırır ve metin şablonunu işler. TextTransform. exe genellikle betiklerden çağırılır. Bununla birlikte, Visual Studio 'da veya yapı sürecinde metin dönüştürmesi gerçekleştirebildiğinden genellikle gerekli değildir.
+
 > [!NOTE]
-> Bir yapı işleminin parçası olarak metin dönüştürme gerçekleştirmek istiyorsanız, MSBuild metin dönüştürme görevi kullanılarak göz önünde bulundurun. Daha fazla bilgi için [derleme sürecinde kod oluşturma](../modeling/code-generation-in-a-build-process.md). İçindeki bir makineye [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , ayrıca bir uygulama yazabilirsiniz yüklenir veya [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] metin şablonlarını dönüştürmek uzantı. Daha fazla bilgi için [özel konak kullanarak metin şablonlarını işleme](../modeling/processing-text-templates-by-using-a-custom-host.md).  
-  
- TextTransform.exe şu dizinde bulunur:  
-  
- **\Program Files\Common Files\Microsoft Shared\TextTemplating\11.0**  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-TextTransform [<options>] <templateName>  
-```  
-  
-#### <a name="parameters"></a>Parametreler  
-  
-|**Bağımsız değişken**|**Açıklama**|  
-|------------------|---------------------|  
-|`templateName`|Dönüştürmek istediğiniz şablon dosyasının adını tanımlar.|  
-  
-|**Seçeneği**|**Açıklama**|  
-|----------------|---------------------|  
-|**-out** \<dosya adı >|Dönüşümün çıkış yazıldığı dosya.|  
-|**-r** \<derleme >|Derleme ve metin şablonu çalıştırmak için kullanılan derleme.|  
-|**-u** \<ad alanı >|Şablon derlemek için kullanılan bir ad alanı.|  
-|**-I** \<includedirectory >|Belirtilen metin şablonuna dahil metin şablonlarını içeren bir dizin.|  
-|**-P** \<referencepath >|Metin şablonu içinde belirtilen derlemeler için ya da kullanarak aramak için bir dizin **- r** seçeneği.<br /><br /> Örneğin, Visual Studio API için kullanılan derlemeler eklemek için kullanın<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|  
-|**-dp** \<processorName >!\< SınıfAdı >! \<assemblyName&#124;codeBase >|Adı, tam tür adı ve özel yönergeler metin şablonu içinde işlemek için kullanılan bir yönerge işlemcisi derlemenin.|  
-|**-bir** [processorName]! [ directiveName]! \<parameterName >! \<parameterValue >|Bir yönerge işlemcisi için bir parametre değeri belirtin. Yalnızca parametre adı ve değeri belirtirseniz, tüm yönerge işlemcileri için parametre kullanılabilir. Bir yönerge işlemcisi belirtirseniz, yalnızca belirtilen işlemci için kullanılabilir bir parametredir. Bir yönerge adı belirtirseniz, yalnızca belirtilen yönerge işlenirken parametresi kullanılabilir.<br /><br />  Bir metin şablonunda dahil `hostspecific` şablon yönergesinde ve ileti üzerinde çağırmak `this.Host`. Örneğin:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`.<br /><br /> Türü her zaman '!' yönergesi adı ve isteğe bağlı işlemci bile atlarsanız işaretler. Örneğin:<br /><br /> `-a !!param!value`|  
-|**-h**|Yardım sağlar.|  
-  
-## <a name="related-topics"></a>İlgili konular  
-  
-|Görev|Konu|  
-|----------|-----------|  
-|Dosyalarında bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözüm.|[T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|  
-|Kendi veri kaynaklarınızı dönüştürmek için yönerge işlemcileri yazın.|[T4 Metin Dönüştürmeyi Özelleştirme](../modeling/customizing-t4-text-transformation.md)|  
-|Kendi uygulamanızı metin şablonlarını çağırmak izin veren bir metin şablonu oluşturma barındırıcısı yazın.|[Bir Özel Konak kullanarak Metin Şablonlarını İşleme](../modeling/processing-text-templates-by-using-a-custom-host.md)|
+> Yapı işleminin bir parçası olarak metin dönüştürmesi gerçekleştirmek istiyorsanız, MSBuild metin dönüştürme görevini kullanmayı düşünün. Daha fazla bilgi için bkz. [derleme sürecinde kod oluşturma](../modeling/code-generation-in-a-build-process.md). @No__t_0 yüklü bir makinede, metin şablonlarını dönüştürebilen bir uygulama veya [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı da yazabilirsiniz. Daha fazla bilgi için bkz. [özel bir konak kullanarak metin şablonlarını işleme](../modeling/processing-text-templates-by-using-a-custom-host.md).
+
+ TextTransform. exe aşağıdaki dizinde bulunur:
+
+ **\Program Files\Common Files\Microsoft Shared\TextTemplating\11.0**
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+TextTransform [<options>] <templateName>
+```
+
+#### <a name="parameters"></a>Parametreler
+
+|**Değişkendir**|**Açıklama**|
+|------------------|---------------------|
+|`templateName`|Dönüştürmek istediğiniz şablon dosyasının adını tanımlar.|
+
+|**Seçeneği**|**Açıklama**|
+|----------------|---------------------|
+|**-out** \<filename >|Dönüşümün çıktısının yazıldığı dosya.|
+|**-r** \<assembly >|Metin şablonunu derlemek ve çalıştırmak için kullanılan bir derleme.|
+|**-u** \<namespace >|Şablonu derlemek için kullanılan bir ad alanı.|
+|**-I** \<includedirectory >|Belirtilen metin şablonunda bulunan metin şablonlarını içeren bir dizin.|
+|**-P** \<referencepath >|Metin şablonunda belirtilen derlemeleri aramak veya **-r** seçeneğinin kullanılması için bir dizin.<br /><br /> Örneğin, Visual Studio API için kullanılan derlemeleri dahil etmek için şunu kullanın<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
+|**-dp** \<processorName >! \<className >! \<assemblyName&#124;codebase >|Metin şablonu içinde özel yönergeleri işlemek için kullanılabilen bir yönerge işlemcisinin adı, tam tür adı ve derlemesi.|
+|**-a** [ProcessorName]! [directiveName]! \<parameterName >! \<parameterValue >|Yönerge işlemcisi için bir parametre değeri belirtin. Yalnızca parametre adını ve değerini belirtirseniz parametre tüm yönerge işlemcileri tarafından kullanılabilir. Bir yönerge işlemcisi belirtirseniz, parametre yalnızca belirtilen işlemci için kullanılabilir. Bir yönerge adı belirtirseniz parametre yalnızca belirtilen yönerge işlenirken kullanılabilir.<br /><br />  Bir metin şablonunda, şablon yönergesine `hostspecific` ekleyin ve `this.Host` ileti çağırın. Örneğin:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`.<br /><br /> İsteğe bağlı işlemci ve yönerge adlarını atlarsanız bile her zaman '! ' işaretlerini yazın. Örneğin:<br /><br /> `-a !!param!value`|
+|**-h**|Yardım sağlar.|
+
+## <a name="related-topics"></a>İlgili konular
+
+|Görev|Konu|
+|----------|-----------|
+|@No__t_0 çözümünde dosya oluşturun.|[T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
+|Kendi veri kaynaklarınızı dönüştürmek için yönerge işlemcileri yazın.|[T4 Metin Dönüştürmeyi Özelleştirme](../modeling/customizing-t4-text-transformation.md)|
+|Kendi uygulamanızdan metin şablonları çağırmanıza olanak sağlayan bir metin şablonu oluşturma Konağı yazın.|[Bir Özel Konak kullanarak Metin Şablonlarını İşleme](../modeling/processing-text-templates-by-using-a-custom-host.md)|

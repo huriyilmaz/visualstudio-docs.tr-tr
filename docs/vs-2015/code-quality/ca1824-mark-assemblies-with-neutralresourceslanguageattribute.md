@@ -1,5 +1,5 @@
 ---
-title: 'CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleme | Microsoft Docs'
+title: 'CA1824: derlemeleri NeutralResourcesLanguageAttribute ile Işaretle | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,46 +12,46 @@ helpviewer_keywords:
 - CA1824
 ms.assetid: 10e97f8a-aa6e-47aa-b253-1e5d3a295d82
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 795d48b96392057a3f96cf3a67f3c49de8aee9b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: efa328fdff9c357e0183fc2ca80e4d77d4f6782e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203081"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661111"
 ---
-# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin
+# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|MarkAssembliesWithNeutralResourcesLanguage|
 |CheckId|CA1824|
-|Kategori|Microsoft.Performance|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Performance|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir derlemeyi içeren bir **ResX**-yoktur ancak kaynak tabanlı <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> uygulanmış.
+ Bir derleme, **resx**tabanlı bir kaynak içerir ancak buna <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> uygulanmaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
- **NeutralResourcesLanguage** öznitelik bildirir **ResourceManager** bir derleme için nötr kültürün kaynakları görüntülemek için kullanılan dili. Bağımsız kaynaklar dili ile aynı kültüründeki kaynakları göründüğünde **ResourceManager** otomatik olarak ana derlemede bulunan kaynakları kullanır. Geçerli iş parçacığı için geçerli kullanıcı arabirimi kültürünü sahip bir uydu derleme aramak yerine bunu yapar. Bu ilk yüklediğiniz kaynak için arama performansını artırır ve çalışma kümenizi azaltabilir.
+ **NeutralResourcesLanguage** özniteliği, bir derleme için nötr kültürün kaynaklarını göstermek için kullanılan dilin **ResourceManager** değerini bilgilendirir. Aynı kültürden kaynakları bağımsız kaynaklar diliyle ararken **ResourceManager** otomatik olarak ana derlemede bulunan kaynakları kullanır. Geçerli iş parçacığı için geçerli kullanıcı arabirimi kültürüne sahip bir uydu derlemesini aramak yerine bunu yapar. Bu ilk yüklediğiniz kaynak için arama performansını artırır ve çalışma kümenizi azaltabilir.
 
-## <a name="fixing-violations"></a>İhlalleri düzeltme
- Bu kural ihlalini düzeltmek için özniteliği derlemeye ekleyin ve dil nötr kültürün kaynakları belirtin.
+## <a name="fixing-violations"></a>Ihlaller düzeltiliyor
+ Bu kural ihlalini onarmak için, derlemeye özniteliği ekleyin ve nötr kültürün kaynak dilini belirtin.
 
-## <a name="specifying-the-language"></a>Dil belirtme
+## <a name="specifying-the-language"></a>Dili belirtme
 
-#### <a name="to-specify-the-language-of-the-resource-of-the-neutral-culture"></a>Nötr kültürün kaynağın dilini belirtmek için
+#### <a name="to-specify-the-language-of-the-resource-of-the-neutral-culture"></a>Bağımsız kültür kaynağının dilini belirtmek için
 
-1. İçinde **Çözüm Gezgini**, projenize sağ tıklayın ve ardından **özellikleri**.
+1. **Çözüm Gezgini**, projenize sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. Sol gezinti çubuğundan seçin **uygulama**ve ardından **derleme bilgileri**.
+2. Sol gezinti çubuğundan **uygulama**' yı seçin ve ardından **derleme bilgileri**' ne tıklayın.
 
-3. İçinde **derleme bilgileri** iletişim kutusunda, dili seçin **nötr dil** aşağı açılan listesi.
+3. **Derleme bilgileri** iletişim kutusunda, **nötr dil** açılan listesinden dili seçin.
 
-4. **Tamam**'ı tıklatın.
+4. **Tamam**'a tıklayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan bir uyarıyı bastırmak için izin verilebilir. Ancak, başlangıç performansı düşürebilir.
+ Bu kuraldan bir uyarı gösterilmemek için izin verilir. Ancak, başlangıç performansı düşebilir.

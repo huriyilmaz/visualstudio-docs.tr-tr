@@ -15,36 +15,36 @@ helpviewer_keywords:
 - Visual Studio, line break characters
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0ae85397e0d9b5859ab39a8a580dd50d1ea7324c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 2e1b13cc101ea4d7609633fd9c11bf87946d7b7d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701055"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665733"
 ---
 # <a name="encodings-and-line-breaks"></a>Kodlamalar ve Satır Sonları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio'da kullanabileceğiniz **dosya/Gelişmiş kaydetme seçenekleri** karakterler satır sonu türünü belirlemek için ayarları istiyorsunuz. Ayrıca, aynı ayarlarla bir dosyanın kodlamasını değiştirebilirsiniz.  
-  
+Visual Studio 'da istediğiniz satır sonu karakterlerinin türünü öğrenmek için **Dosya/Gelişmiş kaydetme seçenekleri** ayarlarını kullanabilirsiniz. Aynı ayarlarla bir dosyanın kodlamasını de değiştirebilirsiniz.
+
 > [!NOTE]
-> Belirli türlerdeki geliştirme ayarları varsa (Visual Basic F#, Web geliştirme) değil de görebileceğiniz **Gelişmiş kaydetme seçenekleri** menüsünde. Ayarlarınızı (örneğin genel) değiştirmek için **Araçlar / içe ve dışa aktarma ayarları**. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
- Visual Studio'da şu karakterler satır sonu yorumlanır:  
-  
-- CRLF: Satır başı ve satır besleme, 000 D + 000A Unicode karakterler  
-  
-- LF: Satır besleme, Unicode karakter 000A  
-  
-- NEL: Sonraki satır, Unicode karakter 0085  
-  
-- LS: Unicode karakter 2028 satır ayırıcı  
-  
-- PS: Paragraf ayırıcı, Unicode karakter 2029  
-  
-  Diğer uygulamalardan kopyaladığınız metin orijinal kodlama ve satır sonu karakterleri korur. Örneğin, Not Defteri'nden metni kopyalayın ve Visual Studio'da bir metin dosyasına yapıştırın, metni Not Defteri'nde olduğu aynı ayarları içerir.  
-  
-  Farklı satır sonu karakterleri olan bir dosyayı açtığınızda, tutarsız satır sonu karakterleri normalleştirilmeli olup olmadığını ve hangi tür seçmek için satır sonları soran bir iletişim kutusu görebilirsiniz.
+> Belirli türde geliştirme ayarlarına sahipseniz (Visual Basic, F#Web geliştirme) menüde **Gelişmiş Kaydet seçeneklerini** göremeyebilirsiniz. Ayarlarınızı değiştirmek için (örneğin, genel), **Araçlar/içeri ve dışarı aktarma ayarları**' nı açın. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+ Visual Studio 'da aşağıdaki karakterler satır sonları olarak yorumlanır:
+
+- CRLF: satır başı + satır besleme, Unicode karakterler 000D + 000A
+
+- LF: satır besleme, Unicode karakter 000A
+
+- NEL: sonraki satır, Unicode karakter 0085
+
+- LS: satır ayırıcı, Unicode karakter 2028
+
+- PS: paragraf ayırıcı, Unicode karakter 2029
+
+  Diğer uygulamalardan kopyalanmış olan metin özgün kodlamayı ve satır sonu karakterlerini tutar. Örneğin, Not defteri 'nden metin kopyaladığınızda ve Visual Studio 'daki bir metin dosyasına yapıştırdığınızda, metin Notepad 'de bulunan aynı ayarlara sahiptir.
+
+  Farklı satır sonu karakterleri olan bir dosyayı açtığınızda tutarsız çizgi kesme karakterlerinin normalleştirilip normalleştirilmeyeceğini ve ne tür satır sonlarını seçeceğini soran bir iletişim kutusu görebilirsiniz.

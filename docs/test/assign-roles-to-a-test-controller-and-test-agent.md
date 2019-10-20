@@ -9,15 +9,15 @@ helpviewer_keywords:
 - test controller, walkthrough
 - walkthroughs, test controller and test agents
 ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6a5fcb489e403ff4297b4e8520346d0cc7be8361
-ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
+ms.openlocfilehash: 9ae46db2d99024b598ff655452ca748298b528a0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342337"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665299"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Bir test denetleyicisine ve test aracısına roller atama
 
@@ -25,7 +25,7 @@ Bu makalede, Visual Studio kullanarak çeşitli makinelerde test dağıtmak içi
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - Test ayarıyla çalıştırmak için birim testleri veya kodlanmış UI testleri oluşturun.
 
@@ -35,21 +35,21 @@ Bu makalede, Visual Studio kullanarak çeşitli makinelerde test dağıtmak içi
 
 1. **Çözüm Gezgini**, **Çözüm öğeleri** ' ne sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **Yeni öğe**' yi seçin.
 
-     **Yeni Öğe Ekle** iletişim kutusu görünür.
+     **Yeni öğe Ekle** iletişim kutusu görüntülenir.
 
-2. İçinde **yüklü şablonlar** bölmesinde seçin **Test ayarları**.
+2. **Yüklü şablonlar** bölmesinde, **Test ayarları**' nı seçin.
 
 3. **Ad** kutusuna **TestSettingDistributedTestWalkthrough**yazın.
 
-4. Seçin **ekleme**.
+4. **Ekle**' yi seçin.
 
      Yeni test *TestSettingDistributedTestWalkthrough. testsettings* dosyası **Çözüm öğeleri** klasörü altında **Çözüm Gezgini**görüntülenir.
 
-     **Test ayarları** iletişim kutusu görüntülenir. **Genel** sayfası seçili.
+     **Test ayarları** iletişim kutusu görüntülenir. **Genel** sayfa seçilidir.
 
-     Şimdi, düzenleme ve test ayarları değerlerini kaydedin.
+     Şimdi, test ayarları değerlerini düzenleyebilir ve kaydedebilirsiniz.
 
-5. Altında **adı**, test ayarları adını yazın.
+5. **Ad**' ın altında, test ayarlarının adını yazın.
 
 6. **Açıklama**' nın altında, **Dağıtılmış test ayarları**yazın.
 
@@ -57,16 +57,16 @@ Bu makalede, Visual Studio kullanarak çeşitli makinelerde test dağıtmak içi
 
 ## <a name="to-assign-roles-to-a-test-controller-and-test-agents"></a>Bir test denetleyicisine ve Test aracılarına roller atamak için
 
-1. Seçin **rolleri**.
+1. **Rolleri**seçin.
 
-     **Rolleri** sayfası görüntülenir.
+     **Roller** sayfası görüntülenir.
 
 2. Testinizi uzaktan çalıştırmak için **test yürütme yöntemi** açılan listesini kullanın ve **Uzaktan yürütme**' yi seçin.
 
 3. **Denetleyici** açılan listesinde, [Test denetleyicinizin](../test/lab-management/install-configure-test-agents.md)bilgisayar adını yazın.
 
     > [!NOTE]
-    > İlk kez bir denetleyici ekliyorsanız, açılan listede hiçbir denetleyici listelenmez. Liste diğer test ayarlarında belirttiğiniz önceki denetleyiciler tarafından doldurulur.
+    > İlk kez bir denetleyici ekliyorsanız, açılan listede hiçbir denetleyici listelenmez. Liste, diğer test ayarlarında belirttiğiniz önceki denetleyiciler tarafından doldurulur.
 
 4. **Roller**altında **Ekle**' yi seçin.
 
@@ -74,7 +74,7 @@ Bu makalede, Visual Studio kullanarak çeşitli makinelerde test dağıtmak içi
 
 ## <a name="to-assign-a-diagnostic-and-data-adapter-to-your-test-setting"></a>Test ayarınıza bir tanılama ve veri bağdaştırıcısı atamak için
 
-1. Seçin **veri ve tanılama**.
+1. **Veri ve tanılama**seçeneklerini belirleyin.
 
      **Veri ve tanılama** sayfası görüntülenir.
 
@@ -89,11 +89,11 @@ Bu makalede, Visual Studio kullanarak çeşitli makinelerde test dağıtmak içi
 5. Seçim Makineniz Microsoft Windows 'un 64 bitlik bir sürümü altında çalışıyorsa ve **herhangi BIR CPU** yapılandırmasını kullanarak testinizi derlediğiniz takdirde, test için **32 bit veya 64 bit işlem Çalıştır** açılan listesini kullanın ve **64-bit 64 işleminde Testleri Çalıştır ' ı seçin. makine**.
 
     > [!TIP]
-    > En yüksek esneklik için, test projelerinizi **herhangi BIR CPU** yapılandırmasıyla derlemeniz gerekir. Daha sonra hem 32-bit hem de 64 bit aracıların çalıştırabilirsiniz. **64 bitlik** yapılandırma ile test projelerini derlemek avantajsız değildir.
+    > En yüksek esneklik için, test projelerinizi **herhangi BIR CPU** yapılandırmasıyla derlemeniz gerekir. Ardından, 32-bit ve 64 bit aracılarında çalıştırabilirsiniz. **64 bitlik** yapılandırma ile test projelerini derlemek avantajsız değildir.
 
 6. Yeni test ayarlarını kaydetmek için **Uygula**' yı seçin.
 
-7. Seçin **Kapat**.
+7. **Kapat**' ı seçin.
 
 ::: moniker range="vs-2017"
 

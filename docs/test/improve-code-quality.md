@@ -5,28 +5,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - testing tools [Visual Studio]
 - unit tests [Visual Studio]
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 153624ec6f0bdb13e4d89a92edf977d0badc7e62
-ms.sourcegitcommit: 3e74ec49a54e5c3da7631f4466128cdf4384af6b
+author: jillre
+ms.openlocfilehash: b68793e512cdb367375cc9f27d61ae5a85e4f078
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712212"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653273"
 ---
-# <a name="testing-tools-in-visual-studio"></a>Visual Studio Test Araçları
+# <a name="testing-tools-in-visual-studio"></a>Visual Studio'daki test etme araçları
 
-Visual Studio Test Araçları size yardımcı olabilir ve takımınızın geliştirmek ve bunu sürdürmek yüksek standartlarda kod memnuniyeti.
+Visual Studio test araçları, sizin ve ekibinizin yüksek standartlara sahip kod mükemmelliği geliştirmelerine ve bu konuda yardımcı olabilir.
 
 > [!NOTE]
-> Birim testi Visual Studio'nun tüm sürümlerinde kullanılabilir. Live Unit Testing, IntelliTest ve kodlanmış UI testi gibi diğer test araçları yalnızca Visual Studio Enterprise sürümünde kullanılabilir. Sürümler hakkında daha fazla bilgi için bkz. [Visual Studio Ides 'ı karşılaştırın](https://visualstudio.microsoft.com/vs/compare/).
+> Birim testi, Visual Studio 'nun tüm sürümlerinde kullanılabilir. Live Unit Testing, IntelliTest ve kodlanmış UI testi gibi diğer test araçları yalnızca Visual Studio Enterprise sürümünde kullanılabilir. Sürümler hakkında daha fazla bilgi için bkz. [Visual Studio Ides 'ı karşılaştırın](https://visualstudio.microsoft.com/vs/compare/).
 
 ## <a name="test-explorer"></a>Test Gezgini
 
-**Test Gezgini** penceresi, geliştiricilerin birim testlerini oluşturmalarına, yönetmesine ve çalıştırmasına yardımcı olur. Microsoft birim test çerçevesini veya çeşitli üçüncü taraf ve açık kaynak çerçevelerinden birini kullanabilirsiniz.
+**Test Gezgini** penceresi, geliştiricilerin birim testlerini oluşturmalarına, yönetmesine ve çalıştırmasına yardımcı olur. Microsoft birim testi çerçevesini veya çeşitli üçüncü taraf ve açık kaynak çerçevelerinden birini kullanabilirsiniz.
 
 ::: moniker range="vs-2017"
 ![Visual Studio Test Gezgini](media/devtest-testexplorer.png)
@@ -47,7 +47,7 @@ Visual Studio da genişletilebilir ve NUnit ve xUnit.net gibi üçüncü taraf b
 
 ## <a name="live-unit-testing"></a>Live Unit Testing
 
-[Live Unit Testing](../test/live-unit-testing.md) otomatik olarak birim testleri arka planda çalışır ve grafik olarak Visual Studio Kod Düzenleyicisi'nde kod kapsamı ve test sonuçlarını görüntüler.
+[Live Unit Testing](../test/live-unit-testing.md) arka planda birim testlerini otomatik olarak çalıştırır ve Visual Studio kod düzenleyicisinde kod kapsamını ve test sonuçlarını grafiksel olarak görüntüler.
 
 ## <a name="intellitest"></a>IntelliTest
 
@@ -61,13 +61,13 @@ IntelliTest, yönetilen kodunuz için birim testlerini ve test verilerini otomat
 
 ## <a name="code-coverage"></a>Kod kapsamı
 
-[Kod kapsamı](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) proje kodunuzun ne oranda aslında birim testleri gibi kodlanmış testler tarafından edildiğini belirler. Hatalara karşı etkili bir şekilde koruma sağlamak için, testleriniz kodunuzun büyük bir oranını "ele almalıdır" veya "kapsamalıdır".
+[Kod kapsamı](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) , proje kodunuzun birim testleri gibi kodlanmış testler tarafından ne oranda test edildiğini belirler. Hatalara karşı etkili bir şekilde koruma sağlamak için, testleriniz kodunuzun büyük bir oranını "ele almalıdır" veya "kapsamalıdır".
 
 Kod kapsamı analizi, hem yönetilen hem de yönetilmeyen (yerel) koda uygulanabilir.
 
 Test yöntemlerini Test Gezgini'ni kullanarak çalıştırdığınızda kod kapsamı bir seçenektir. Sonuçlar tablosu, her derleme sınıfı ve yöntemi içinde çalışan kod yüzdesini gösterir. Ayrıca, kaynak düzenleyici hangi kodun test edildiğini gösterir.
 
-* [Ne kadar kodun test edildiğini belirlemek için kod kapsamını kullanma](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+* [Ne kadar kodun test edildiğini öğrenmek için kod kapsamını kullanın](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 * [Visual Studio (Lab) ile birim testi, kod kapsamı ve kod kopyası Analizi](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Unit%20Testing,%20Code%20Coverage%20and%20Code%20Clone%20Analysis%20with%20Visual%20Studio%202015.docx)
 * [Kod kapsamı analizini özelleştirme](customizing-code-coverage-analysis.md)
 
@@ -90,11 +90,11 @@ Selenium ile, en iyi kodlanmış UI testlerini veya genel tarayıcı tabanlı UI
 
 ## <a name="load-testing"></a>Yük testi
 
-[Yük testi](../test/quickstart-create-a-load-test-project.md) birim testleri ve web performans testleri çalıştırarak sunucu uygulaması üzerindeki yük benzetimini yapar.
+[Yük testi](../test/quickstart-create-a-load-test-project.md) , birim testlerini ve Web performans testlerini çalıştırarak bir sunucu uygulamasındaki yükün benzetimini yapar.
 
 ## <a name="related-scenarios"></a>İlgili senaryolar
 
-* [Keşif & el ile test (Azure Test planları)](/azure/devops/test/index?view=vsts)
-* [Yük testi (Azure Test planları)](/azure/devops/test/load-test/index?view=vsts)
-* [Sürekli test (Azure Test planları)](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
-* [Kod çözümleme araçları](../code-quality/code-analysis-for-managed-code-overview.md)
+* [Araştırmacı & el ile test (Azure Test Plans)](/azure/devops/test/index?view=vsts)
+* [Yük testi (Azure Test Plans)](/azure/devops/test/load-test/index?view=vsts)
+* [Sürekli test (Azure Test Plans)](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
+* [Kod analizi araçları](../code-quality/code-analysis-for-managed-code-overview.md)

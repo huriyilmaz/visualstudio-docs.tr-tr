@@ -1,5 +1,5 @@
 ---
-title: Verileri yeniden veritabanına kaydetme | Microsoft Docs
+title: Verileri veritabanına geri kaydetme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -23,255 +23,251 @@ helpviewer_keywords:
 - TableAdapters
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2882434f0638d565133efd9744a94d224d39d121
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: e1b1a54d8be5ab4aa9703d318d0b537deff53b6f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65692545"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652877"
 ---
 # <a name="save-data-back-to-the-database"></a>Verileri yeniden veritabanına kaydetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Veri kümesi, verilerin bir bellek içi kopyasıdır. Bu verileri değiştirirseniz, bu değişiklikleri veritabanına kaydetmek için iyi bir uygulamadır. Üç yoldan biriyle bunu yapabilirsiniz:  
-  
-- Aşağıdakilerden birini çağırarak `Update` TableAdapter yöntemleri  
-  
-- TableAdapter DBDirect yöntemleri çağırarak  
-  
-- Üzerinde UpdateAll yöntemi çağırarak `TableAdapterManager` diğer tablolara veri kümesinde ilişkili tabloları veri kümesi içerdiğinde, Visual Studio sizin için oluşturur.  
-  
-  Verileri bir Windows Form veya XAML sayfası denetimleri için veri kümesi tablolarını bağladığınızda, veri bağlama mimarisi işin tümünü sizin için halleder.  
-  
-  TableAdapter'ları ile sahibiyseniz, doğrudan aşağıdaki konulardan birine atlayabilirsiniz:  
-  
-|Konu|Açıklama|  
-|-----------|-----------------|  
-|[Veritabanına yeni kayıtlar ekleme](../data-tools/insert-new-records-into-a-database.md)|Gerçekleştirme güncelleştirir ve TableAdapter bağdaştırıcıları veya komut nesneleri kullanarak ekler|  
-|[TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md)|TableAdapters güncelleştirmeleriyle gerçekleştirme|  
-|[Hiyerarşik güncelleştirme](../data-tools/hierarchical-update.md)|İki veya daha fazla ilgili tablo ile bir veri kümesinden güncelleştirmeleri gerçekleştirme|  
-|[Bir eşzamanlılık özel durumunu işleme](../data-tools/handle-a-concurrency-exception.md)|İki kullanıcı aynı anda bir veritabanındaki verilerle aynı değiştirmeye çalıştığında özel durumları işleme|  
-|[Bir işlemi kullanarak veri kaydetme](../data-tools/save-data-by-using-a-transaction.md)|System.Transactions ad alanı ve TransactionScope nesnesini kullanarak bir işlemde veri kaydetme|  
-|[Bir işlemde veri kaydetme](../data-tools/save-data-in-a-transaction.md)|System.Transactions ad alanı kullanarak bir işlemde veri kaydetme|  
-|[Bir veritabanına (birden çok tablo) veri kaydetme](../data-tools/save-data-to-a-database-multiple-tables.md)|Nasıl kayıtlarını düzenleyin ve birden çok tablo veritabanına değişiklikleri kaydetmek için|  
-|[Verileri bir nesneden veritabanına kaydetme](../data-tools/save-data-from-an-object-to-a-database.md)|Nasıl bir nesneden veritabanına bir veri kümesinde bir TableAdapter DbDirect yöntemi kullanarak değil veri geçirme|  
-|[TableAdapter DBDirect metotlarıyla veri kaydetme](../data-tools/save-data-with-the-tableadapter-dbdirect-methods.md)|SQL sorguları doğrudan veritabanına göndermek için TableAdapter'ı kullanma|  
-|[Bir veri kümesini XML olarak kaydetme](../data-tools/save-a-dataset-as-xml.md)|Bir veri kümesi için bir XML belgesi kaydetme|  
-  
-## <a name="two-stage-updates"></a>İki aşamalı güncelleştirmeleri  
- Bir veri kaynağını güncelleştirme iki adımlı bir işlemdir. İlk adım, yeni kayıtlar, kayıtlar ve silinen kayıtlar ile DataSet'i güncellemek sağlamaktır. Uygulamanızı hiçbir zaman bu değişiklikleri veri kaynağına geri gönderirse, ardından güncelleştirme ile işiniz bittiğinde.  
-  
- Değişiklikleri veritabanına geri göndermek, ikinci bir adım gereklidir. Verilere bağlı denetimler kullanmıyorsanız, el ile aynı TableAdapter (veya veri bağdaştırıcısı) DataSet'i doldurmak için kullanılan güncelleştirme yöntemi çağrısı vardır. Ancak, farklı bağdaştırıcıları verileri bir veri kaynağından diğerine taşımak için veya birden çok veri kaynaklarını güncelleştirmek için kullanabilirsiniz. Veri bağlama kullanmıyorsanız ve ilişkili tablolar için değişiklikleri kaydetme, el ile otomatik olarak oluşturulan TableAdapterManager sınıfın bir değişken oluşturma ve ardından kendi UpdateAll yöntemi çağırmak zorunda.  
-  
- ![Visual Basic veri kümesi güncelleştirmeleri](../data-tools/media/vbdatasetupdates.gif "vbDatasetUpdates")  
-İki aşamalı güncelleştirme işlemi ve DataRowVersion başarılı bir güncelleştirme görevi  
-  
- Bir koleksiyon satır içeren tablolar, koleksiyonları bir veri kümesi içerir. Bir temel alınan veri kaynağına daha sonra güncelleştirmek istiyorsanız, DataTable.DataRowCollection özelliği eklerken veya kaldırırken satırları yöntemlerini kullanmanız gerekir. Bu yöntemleri veri kaynağını güncelleştirmek için gerekli olan değişiklik izleme gerçekleştirin. Satır özelliği RemoveAt koleksiyon çağırırsanız, silme veritabanına geri bildirilmesi olmaz.  
-  
-## <a name="merge-datasets"></a>Veri kümeleri birleştirme  
- Bir veri kümesi tarafından içeriğini güncelleştirebilirsiniz *birleştirme* başka bir veri kümesi ile. Bu içeriği kopyalamayı bir *kaynak* çağıran veri kümesine veri kümesi (olarak adlandırılan *hedef* veri kümesi). Veri kümeleri birleştirdiğinizde, kaynak veri kümesi yeni kayıt hedef veri kümesine eklenir. Ayrıca, kaynak veri kümesi ek sütunlar hedef veri kümesine eklenir. Veri kümeleri birleştirme yerel bir veri kümeniz ve başka bir uygulamadan ikinci bir veri kümesi alma kullanışlıdır. Ayrıca bir bileşenin bir XML web hizmeti gibi ikinci bir veri kümesi aldığınızda veya birden fazla veri kümesi verileri tümleştirin gerektiğinde kullanışlıdır.  
-  
- Veri kümeleri birleştirme işlemi gerçekleştirirken, Boole bir bağımsız değişken geçirebilirsiniz (`preserveChanges`) başarılı olduğunu anlatan <xref:System.Data.DataSet.Merge%2A> yöntemi mi hedef kümesindeki var olan değişiklikleri saklamak. Veri kümeleri kayıtları birden çok sürümünü korumak için birden fazla sürüm kayıtlarının birleştirilmiş olduğunu aklınızda bulundurun önemlidir. Aşağıdaki tablo, bir kayıtta iki veri kümesi nasıl birleştirileceğini gösterir:  
-  
-|DataRowVersion|Hedef veri kümesi|Kaynak veri kümesi|  
-|--------------------|--------------------|--------------------|  
-|Özgün|James Wilson|James C. Wilson|  
-|Geçerli|Jim Wilson|James C. Wilson|  
-  
- Çağırma <xref:System.Data.DataSet.Merge%2A> yöntemi ile önceki tabloda `preserveChanges=false targetDataset.Merge(sourceDataset)` aşağıdaki sonuçları:  
-  
-|DataRowVersion|Hedef veri kümesi|Kaynak veri kümesi|  
-|--------------------|--------------------|--------------------|  
-|Özgün|James C. Wilson|James C. Wilson|  
-|Geçerli|James C. Wilson|James C. Wilson|  
-  
- Çağırma <xref:System.Data.DataSet.Merge%2A> yöntemiyle `preserveChanges = true targetDataset.Merge(sourceDataset, true)` aşağıdaki sonuçları:  
-  
-|DataRowVersion|Hedef veri kümesi|Kaynak veri kümesi|  
-|--------------------|--------------------|--------------------|  
-|Özgün|James C. Wilson|James C. Wilson|  
-|Geçerli|Jim Wilson|James C. Wilson|  
-  
+Veri kümesi, verilerin bellek içi bir kopyasıdır. Bu verileri değiştirirseniz, bu değişiklikleri veritabanına geri kaydetmek iyi bir uygulamadır. Bunu üç farklı şekilde yapabilirsiniz:
+
+- Bir TableAdapter 'ın `Update` yöntemlerinden birini çağırarak
+
+- TableAdapter 'ın DBDirect yöntemlerinden birini çağırarak
+
+- Veri kümesindeki diğer tablolarla ilişkili tablolar içerdiğinde, Visual Studio 'nun sizin için oluşturduğu `TableAdapterManager` UpdateAll yöntemini çağırarak
+
+  Veri kümesi tablolarını bir Windows form veya XAML sayfasında denetimlere veri bağladığınızda, veri bağlama mimarisi tüm işleri sizin için yapar.
+
+  TableAdapters hakkında bilgi sahibiyseniz, doğrudan bu konulardan birine atlayabilirsiniz:
+
+|Konu|Açıklama|
+|-----------|-----------------|
+|[Veritabanına yeni kayıtlar ekleme](../data-tools/insert-new-records-into-a-database.md)|TableAdapters veya komut nesnelerini kullanarak güncelleştirmeleri ve eklemeleri gerçekleştirme|
+|[TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md)|TableAdapters ile güncelleştirme gerçekleştirme|
+|[Hiyerarşik güncelleştirme](../data-tools/hierarchical-update.md)|İki veya daha fazla ilişkili tabloyla bir veri kümesinden güncelleştirme gerçekleştirme|
+|[Bir eşzamanlılık özel durumunu işleme](../data-tools/handle-a-concurrency-exception.md)|İki kullanıcı aynı anda bir veritabanında aynı verileri değiştirmeyi denediklerinde özel durumları işleme|
+|[Bir işlemi kullanarak veri kaydetme](../data-tools/save-data-by-using-a-transaction.md)|System. Transactions ad alanını ve TransactionScope nesnesini kullanarak bir işlemde verileri kaydetme|
+|[Bir işlemde veri kaydetme](../data-tools/save-data-in-a-transaction.md)|System. Transactions ad alanını kullanarak bir işlemde verileri kaydetme|
+|[Bir veritabanına (birden çok tablo) veri kaydetme](../data-tools/save-data-to-a-database-multiple-tables.md)|Kayıtları düzenleme ve birden çok tablodaki değişiklikleri veritabanına geri kaydetme|
+|[Verileri bir nesneden veritabanına kaydetme](../data-tools/save-data-from-an-object-to-a-database.md)|TableAdapter DbDirect yöntemi kullanarak bir veri kümesinde olmayan bir nesneden verileri veritabanına geçirme|
+|[TableAdapter DBDirect metotlarıyla veri kaydetme](../data-tools/save-data-with-the-tableadapter-dbdirect-methods.md)|SQL sorgularını doğrudan veritabanına göndermek için TableAdapter 'ı kullanma|
+|[Bir veri kümesini XML olarak kaydetme](../data-tools/save-a-dataset-as-xml.md)|Bir veri kümesini bir XML belgesine kaydetme|
+
+## <a name="two-stage-updates"></a>İki aşamalı güncelleştirmeler
+ Veri kaynağını güncelleştirme iki adımlı bir işlemdir. İlk adım, veri kümesini yeni kayıtlar, değiştirilen kayıtlar veya silinen kayıtlarla güncelleştirmedir. Uygulamanız bu değişiklikleri hiçbir şekilde veri kaynağına geri gönderdiyseniz, güncelleştirme ile işiniz tamamlanmıştır.
+
+ Değişiklikleri veritabanına geri gönderirseniz ikinci bir adım gereklidir. Veri bağlantılı denetimleri kullanmıyorsanız, veri kümesini doldurmak için kullandığınız aynı TableAdapter (veya veri bağdaştırıcısı) güncelleştirme yöntemini el ile çağırmanız gerekir. Ancak, örneğin, verileri bir veri kaynağından diğerine taşımak veya birden çok veri kaynağını güncelleştirmek için farklı bağdaştırıcılar de kullanabilirsiniz. Veri bağlamayı kullanmıyorsanız ve ilgili tablolar için değişiklikleri kaydediyorsanız, otomatik olarak oluşturulan TableAdapterManager sınıfının bir değişkenini el ile örneklemeli ve sonra UpdateAll yöntemini çağırmanız gerekir.
+
+ ![Visual Basic veri kümesi güncelleştirmeleri](../data-tools/media/vbdatasetupdates.gif "vbDatasetUpdates") İki aşamalı güncelleştirme işlemi ve başarılı bir güncelleştirmede DataRowVersion rolü
+
+ Bir veri kümesi, bir satır koleksiyonu içeren tablo koleksiyonlarını içerir. Temel alınan bir veri kaynağını daha sonra güncelleştirmek istiyorsanız, satırları eklerken veya kaldırırken DataTable. DataRowCollection özelliğindeki yöntemleri kullanmanız gerekir. Bu yöntemler, veri kaynağını güncelleştirmek için gereken değişiklik izlemeyi gerçekleştirir. Rows özelliğinde RemoveAt koleksiyonunu çağırırsanız, silme işlemi veritabanına geri iletilir.
+
+## <a name="merge-datasets"></a>Veri kümelerini birleştirme
+ Bir veri kümesinin içeriğini başka bir veri kümesiyle *birleştirerek* güncelleştirebilirsiniz. Bu, *kaynak* veri kümesinin içeriğini çağıran veri kümesine kopyalamayı içerir ( *hedef* veri kümesi olarak adlandırılır). Veri kümelerini birleştirdiğinizde, kaynak veri kümesindeki yeni kayıtlar hedef veri kümesine eklenir. Ayrıca, kaynak veri kümesindeki ek sütunlar hedef veri kümesine eklenir. Veri kümelerini birleştirme, yerel bir veri kümeniz olduğunda ve başka bir uygulamadan ikinci bir veri kümesi alırsanız faydalıdır. Ayrıca, bir XML Web hizmeti gibi bir bileşenden veya birden çok veri kümesinden verileri tümleştirmeniz gerektiğinde de yararlı olur.
+
+ Veri kümeleri birleştirilirken, bir Boole bağımsız değişkeni (`preserveChanges`) geçirebilirsiniz. Bu, <xref:System.Data.DataSet.Merge%2A> yöntemine hedef veri kümesinde var olan değişikliklerin tutulması gerekip gerekmediğini söyler. Veri kümeleri kayıtların birden çok sürümünü koruduğundan, kayıtların birden fazla sürümünün birleştirildiğini aklınızda bulundurmanız önemlidir. Aşağıdaki tabloda, iki veri kümesi içindeki bir kaydın nasıl birleştirileceği gösterilmektedir:
+
+|DataRowVersion|Hedef veri kümesi|Kaynak veri kümesi|
+|--------------------|--------------------|--------------------|
+|Özgün|James Wilson|James C. Solson|
+|Geçerli|Jim Wilson|James C. Solson|
+
+ Önceki tabloda <xref:System.Data.DataSet.Merge%2A> yönteminin `preserveChanges=false targetDataset.Merge(sourceDataset)` ile çağrılması, aşağıdakiler ile sonuçlanır:
+
+|DataRowVersion|Hedef veri kümesi|Kaynak veri kümesi|
+|--------------------|--------------------|--------------------|
+|Özgün|James C. Solson|James C. Solson|
+|Geçerli|James C. Solson|James C. Solson|
+
+ @No__t_0 yönteminin `preserveChanges = true targetDataset.Merge(sourceDataset, true)` ile çağrılması aşağıdakiler ile sonuçlanır:
+
+|DataRowVersion|Hedef veri kümesi|Kaynak veri kümesi|
+|--------------------|--------------------|--------------------|
+|Özgün|James C. Solson|James C. Solson|
+|Geçerli|Jim Wilson|James C. Solson|
+
 > [!CAUTION]
-> İçinde `preserveChanges = true` senaryosu, varsa <xref:System.Data.DataSet.RejectChanges%2A> hedef dataset kaydı yöntemi çağrılır, ardından özgün verilerin geri döner *kaynak* veri kümesi. Bu, hedef veri kümesi ile özgün veri kaynağını güncelleştirmek çalışırsanız, güncelleştirilecek özgün satır bulmak mümkün olmayabilir, anlamına gelir. Güncelleştirilmiş kayıtları veri kaynağından başka bir dataset doldurma ve ardından bir tutarlılık ihlali önlemek için birleştirme işlemi, bir eşzamanlılık ihlali engelleyebilirsiniz. (Veri kümesi doldurulmuş sonra başka bir kullanıcı bir veri kaynağındaki kaydı değiştirir. eşzamanlılık ihlali meydana gelir.)  
-  
-## <a name="update-constraints"></a>Kısıtlamaları güncelleştir  
- Mevcut bir veri satırı için değişiklik yapmak için ekleyin veya tek tek sütunlardaki verileri güncelleştirin. Veri kümesi (örneğin, yabancı anahtarlar veya NULL olmayan kısıtlamaları) kısıtlamaları içeriyorsa, bu güncelleştirme gibi kayıt geçici olarak bir hata durumunda olabilir mümkündür. Diğer bir deyişle, bir sütunu güncelleştirme işlemini tamamladıktan sonra ancak bir sonrakine geçmeden önce bir hata durumunda olabilir.  
-  
- Erken sabiti ihlallerini önlemek için güncelleştirme kısıtlamaları geçici olarak askıya alabilirsiniz. Bu iki amaca hizmet eder:  
-  
-- Bir hata, bir sütunu güncelleştirme işlemi tamamlandı, ancak başka bir güncelleştirme başlamamış sonra durum engeller.  
-  
-- Bazı güncelleştirme engelleyen (genellikle doğrulama için kullanılan olayları) tetiklenen engeller olayları.  
-  
-  Güncelleştirme tamamlandıktan sonra kısıtlama denetimi, da güncelleştirme olaylarını yeniden etkinleştirir ve bunları başlatır, yeniden etkinleştirebilirsiniz.  
-  
+> @No__t_0 senaryosunda, hedef veri kümesindeki bir kayıt üzerinde <xref:System.Data.DataSet.RejectChanges%2A> yöntemi çağrılırsa, *kaynak* veri kümesindeki özgün verilere geri döner. Bu, özgün veri kaynağını hedef veri kümesiyle güncelleştirmeye çalışırsanız, güncelleştirilecek orijinal satırı bulamayabilir. Farklı bir veri kümesini veri kaynağından güncelleştirilmiş kayıtlarla doldurarak ve ardından bir eşzamanlılık ihlalinden kaçınmak için birleştirme gerçekleştirerek eşzamanlılık ihlalini engelleyebilirsiniz. (Veri kümesi doldurulduktan sonra, başka bir kullanıcı veri kaynağındaki bir kaydı değiştirdiğinde eşzamanlılık ihlali oluşur.)
+
+## <a name="update-constraints"></a>Güncelleştirme kısıtlamaları
+ Var olan bir veri satırında değişiklik yapmak için, sütunları ayrı sütunlara ekleyin veya güncelleştirin. Veri kümesi kısıtlamalar içeriyorsa (örneğin, yabancı anahtarlar veya null yapılamayan kısıtlamalar), bu kayıt sizin güncelleştirdiğinde geçici olarak bir hata durumunda olabilir. Diğer bir deyişle, bir sütunun güncelleştirilmesini tamamladıktan sonra, bir sonrakine geçmeden önce bir hata durumunda olabilir.
+
+ Zamanından önce kısıtlama ihlallerini engellemek için, güncelleştirme kısıtlamalarını geçici olarak askıya alabilirsiniz. Bu iki amaca hizmet eder:
+
+- Bir sütunun güncelleştirilmesini tamamladıktan sonra, başka bir sütunu güncelleştirmeden sonra bir hatanın oluşturulmasını engeller.
+
+- Belirli güncelleştirme olaylarının oluşturulmasını engeller (genellikle doğrulama için kullanılan olaylar).
+
+  Bir güncelleştirmeyi tamamladıktan sonra, ayrıca güncelleştirme olaylarını yeniden etkinleştiren ve bunları başlatan kısıtlama denetimini yeniden etkinleştirebilirsiniz.
+
 > [!NOTE]
-> Windows Formları datagrid içinde yerleşik veri bağlama mimarisi odağı bir satır dışında taşır ve açıkça çağırmanız gerekmez kadar denetleme kısıtlaması askıya alır. <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, veya <xref:System.Data.DataRow.CancelEdit%2A> yöntemleri.  
-  
- Kısıtlamaları olan otomatik olarak devre dışı <xref:System.Data.DataSet.Merge%2A> yöntemi, bir veri kümesi üzerinde çağrılır. Birleştirme işlemi tamamlandığında kısıtlamalardan etkinleştirilemez, bir veri kümesini ise bir <xref:System.Data.ConstraintException> oluşturulur. Bu durumda <xref:System.Data.DataSet.EnforceConstraints%2A> özelliği `false,` ve tüm sabiti ihlallerini sıfırlamadan önce çözümlenmelidir <xref:System.Data.DataSet.EnforceConstraints%2A> özelliğini `true`.  
-  
- Güncelleştirme tamamlandıktan sonra kısıtlama denetimi, da güncelleştirme olaylarını yeniden etkinleştirir ve bunları başlatır, yeniden etkinleştirebilirsiniz.  
-  
- Olayları askıya almayla ilgili daha fazla bilgi için bkz. [bir veri kümesini doldururken kısıtlamaları kapatma kapatma](../data-tools/turn-off-constraints-while-filling-a-dataset.md).  
-  
-## <a name="dataset-update-errors"></a>Veri kümesi güncelleştirme hataları  
- Bir kayıt kümesindeki güncelleştirdiğinizde, hata olasılığı yoktur. Örneğin, bir sütuna, yanlış türde veri veya çok uzun veri ya da diğer bazı bütünlüğü sorunu olan verilerin yanlışlıkla yazabilirsiniz. Veya özel hatalar, herhangi bir güncelleştirme olay aşamasında yükseltebilirsiniz uygulamaya özgü doğrulama denetimlerini olabilir. Daha fazla bilgi için [veri kümelerindeki verileri doğrulama](../data-tools/validate-data-in-datasets.md).  
-  
-## <a name="maintaining-information-about-changes"></a>Değişiklikler hakkında bilgi koruma  
- Dataset içindeki değişiklikleri hakkında bilgi, iki yolla saklanır: Bunlar değiştiğini gösteren bir satır işaretlemesini tarafından (<xref:System.Data.DataRow.RowState%2A>) ve bir kayıt birden çok kopyasını tutarak (<xref:System.Data.DataRowVersion>). Bu bilgileri kullanarak, işlemler kümesinde nelerin değiştiğini belirlemek ve uygun güncelleştirmeleri veri kaynağına gönderebilirsiniz.  
-  
-### <a name="rowstate-property"></a>RowState özelliği  
- <xref:System.Data.DataRow.RowState%2A> Özelliği bir <xref:System.Data.DataRow> nesne belirli bir veri satırının durumu hakkında bilgi sağlayan bir değerdir.  
-  
- Aşağıdaki tabloda olası değerlerini ayrıntıları <xref:System.Data.DataRowState> sabit listesi:  
-  
-|DataRowState değeri|Açıklama|  
-|------------------------|-----------------|  
-|<xref:System.Data.DataRowState>|Satır için bir öğe olarak eklenmiş olan bir <xref:System.Data.DataRowCollection>. (Bunu mevcut olmadığından bu durumdaki bir satır karşılık gelen bir özgün sürümüne sahip değil, son <xref:System.Data.DataRow.AcceptChanges%2A> yöntemi çağrıldı).|  
-|<xref:System.Data.DataRowState>|Kullanarak satır silindi <xref:System.Data.DataRow.Delete%2A> , bir <xref:System.Data.DataRow> nesne.|  
-|<xref:System.Data.DataRowState>|Satır oluşturuldu, ancak herhangi bir parçası değil <xref:System.Data.DataRowCollection>. A <xref:System.Data.DataRow> nesnesi oluşturulduktan sonra önce bir koleksiyonuna eklendikten hemen ve koleksiyondan kaldırıldıktan sonra bu durumda olan.|  
-|<xref:System.Data.DataRowState>|Bir satırda sütun değeri şekilde değişti.|  
-|<xref:System.Data.DataRowState>|Satır bu yana değişmemiştir <xref:System.Data.DataRow.AcceptChanges%2A> son çağrıldı.|  
-  
-### <a name="datarowversion-enumeration"></a>DataRowVersion numaralandırması  
- Veri kümeleri, birden çok sürümünü kayıtları korur. <xref:System.Data.DataRowVersion> Numaralandırması bir <xref:System.Data.DataRow> nesnedir, belirli bir sürümünü döndürmek için kullanılan bir değeri bir <xref:System.Data.DataRow> nesne.  
-  
- Aşağıdaki tabloda olası değerlerini ayrıntıları <xref:System.Data.DataRowVersion> sabit listesi:  
-  
-|DataRowVersion değeri|Açıklama|  
-|--------------------------|-----------------|  
-|<xref:System.Data.DataRowVersion>|Bir kaydın geçerli sürümünü son daraltılmasından kayıt üzerinde gerçekleştirilen tüm değişiklikleri içeren <xref:System.Data.DataRow.AcceptChanges%2A> çağrıldı. Satır silinmiş olması durumunda geçerli sürümü yoktur.|  
-|<xref:System.Data.DataRowVersion>|Veri kümesi şemasını veya verileri kaynak tarafından tanımlanan bir kaydı, varsayılan değeri.|  
-|<xref:System.Data.DataRowVersion>|Son saat değişikliklerini kümesinde kaydedilmiş haliyle bir kaydın orijinal sürümünü kayıt kopyasıdır. Pratikte, bu genellikle bir kaydın okundu olarak bir veri kaynağından sürümüdür.|  
-|<xref:System.Data.DataRowVersion>|Ortasında bir güncelleştirme çalışırken geçici olarak kullanılabilir bir kaydın önerilen sürüm — diğer bir deyişle, arasındaki süreyi aradığınız <xref:System.Data.DataRow.BeginEdit%2A> yöntemi ve <xref:System.Data.DataRow.EndEdit%2A> yöntemi. Genellikle bir kayıttaki bir olay işleyicisi önerilen sürümü gibi erişim <xref:System.Data.DataTable.RowChanging>. Çağırma <xref:System.Data.DataRow.CancelEdit%2A> yöntemi değişiklikleri geri alır ve önerilen sürümü veri satırı siler.|  
-  
- Geçerli ve orijinal sürümler, bir veri kaynağına güncelleştirme bilgileri iletilirken yararlıdır. Veri kaynağına gönderilen bir güncelleştirme olduğunda, genellikle yeni veritabanı için bir kayıt geçerli sürümünde bilgilerdir. Özgün sürümle bilgileri güncelleştirilecek kaydın bulmak için kullanılır.  
-  
- Örneğin, burada bir kaydın birincil anahtarı değiştirildiğinde bir durumda, doğru kaydı değişiklikleri güncelleştirmek için veri kaynağı bulmak için bir yol gerekir. Özgün sürüm varsa, ardından kayıt büyük olasılıkla yalnızca bir ek istenmeyen kaydındaki ancak yanlış ve güncel bir kayıtta kaynaklanan veri kaynağına eklenmiş olacaktı. İki sürümü de eşzamanlılık denetimi kullanılır. Kayıt kümesine yüklendiğinden bu yana değişip değişmediğini belirlemek için veri kaynağındaki bir kaydı karşı özgün sürümle karşılaştırabilirsiniz.  
-  
- Önerilen sürüm, aslında veri kümesine değişiklikleri gerçekleştirmeden önce doğrulamayı gerçekleştirmek gerektiğinde faydalıdır.  
-  
- Kayıtları değiştirilmiş olsa bile, yok her zaman özgün ya da geçerli satır sürümleri. Tabloya yeni bir satır ekleyin, özgün sürümü, yalnızca geçerli sürümü yoktur. Benzer şekilde, tablonun çağırarak bir satır silerseniz `Delete` yöntemi, orijinal bir sürümünü kullanır, ancak hiçbir geçerli sürümü yoktur.  
-  
- Bir veri sıranın sorgulayarak bir kaydın belirli bir sürümü olup olmadığını sınayabilirsiniz <xref:System.Data.DataRow.HasVersion%2A> yöntemi. Ya da bir kaydın sürümünü geçirerek erişebileceğiniz bir <xref:System.Data.DataRowVersion> numaralandırma değeri olarak isteğe bağlı bağımsız değişken bir sütunun değerini istediğinizde.  
-  
-## <a name="getting-changed-records"></a>Kayıtlar alınıyor  
- Bir veri kümesindeki tüm kayıtların güncelleştirmeyi yaygın bir uygulamadır. Örneğin, bir kullanıcı bir Windows Forms ile çalışmıyor olabilir <xref:System.Windows.Forms.DataGridView> çok sayıda kayıt görüntüleyen denetim. Ancak, kullanıcı yalnızca birkaç kayıtları güncelleştirmek, silmek ve yeni bir tane ekleyin. Veri kümeleri ve veri tabloları bir yöntem sunar (`GetChanges`) değiştirilmiş satırları döndürmek için.  
-  
- Kullanarak değiştirilmiş kayıt kümelerine oluşturabilirsiniz `GetChanges` veri tablosunun yöntemi (<xref:System.Data.DataTable.GetChanges%2A>) veya veri kümesinin (<xref:System.Data.DataSet.GetChanges%2A>) kendisi. Veri tablosu için yöntem çağırırsanız, tablo yalnızca değiştirilen kayıtları ile birlikte bir kopyasını döndürür. Veri kümesi üzerinde yöntem çağırırsanız, benzer şekilde, yalnızca kayıtlar ile yeni bir veri kümesi içinde olursunuz.  
-  
- `GetChanges` tek başına değişen tüm kayıtları döndürür. Buna karşılık, geçirerek istenen <xref:System.Data.DataRowState> bir parametre olarak `GetChanges` yöntemi, hangi istediğiniz değiştirilmiş kayıt kümesini belirtebilirsiniz: yeni kayıtlar, silinmek üzere işaretlenmiş kayıtları ayrılmış kayıtları eklendi veya değiştirilmiş kayıtlar.  
-  
- Bir alt kümesini kayıtlar alınırken işleme için başka bir bileşen kayıtları göndermek istediğinizde yararlıdır. Veri kümesinin tamamının göndermek yerine yalnızca bileşen gereken kayıtları alarak başka bir bileşen ile iletişim kurulurken yükünü azaltabilir. Daha fazla bilgi için [nasıl yapılır: Değiştirilen satırları alma](https://msdn.microsoft.com/library/6ff0cbd0-5253-48e7-888a-144d56c2e0a9).  
-  
-## <a name="committing-changes-in-the-dataset"></a>Veri kümesi değişiklikleri işleme  
- Veri kümesindeki değişiklikler yapıldıkça <xref:System.Data.DataRow.RowState%2A> değiştirilen satırların özelliği ayarlanmış. Kayıtları geçerli ve özgün sürümlerini oluşturulan, korunur ve size sunulan <xref:System.Data.DataRowView.RowVersion%2A> özelliği. Bu değiştirilen satırların özelliklerinde depolanan meta veriler, doğru güncelleştirmeleri veri kaynağına göndermek için gereklidir.  
-  
- Değişiklikleri veri kaynağına geçerli durumu yansıtacak, artık bu bilgileri sürdürmeniz gerekir. Genellikle, veri kümesini ve kaynağı zaman eşitlenmiş durumda iki kez vardır:  
-  
-- Hemen sonra ne zaman veri kaynağından okumak kümesine bilgi yüklediniz.  
-  
-- Değişiklikleri veri kaynağına, veri kümesinden gönderdikten sonra (ancak daha önce değil çünkü veritabanına değişiklikleri göndermek için gereken değişiklik bilgileri kaybedersiniz).  
-  
-  Veri kümesine ilişkin bekleyen değişiklikleri çağırarak yürütülemez <xref:System.Data.DataSet.AcceptChanges%2A> yöntemi. Genellikle, <xref:System.Data.DataSet.AcceptChanges%2A> uygulamanızda aşağıdaki saatleri sırasında çağrılır.  
-  
-- Sonra veri kümesine yükler. Bir veri kümesi, yük TableAdapter bağdaştırıcısının çağırarak `Fill` yöntemi sonra bağdaştırıcı otomatik olarak tamamlar değişiklikleri sizin için. Bir veri kümesi içine başka bir veri kümesini birleştirerek yüklerseniz, ancak, daha sonra değişiklikleri el ile kaydetmek gerekir.  
-  
+> Windows Forms, DataGrid içinde yerleşik veri bağlama mimarisi, odak bir satırın dışına çıkana kadar kısıtlama denetimini askıya alır ve <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> veya <xref:System.Data.DataRow.CancelEdit%2A> yöntemlerini açıkça çağırmanız gerekmez.
+
+ Bir veri kümesinde <xref:System.Data.DataSet.Merge%2A> yöntemi çağrıldığında kısıtlamalar otomatik olarak devre dışıdır. Birleştirme tamamlandığında, veri kümesinde etkinleştirilemez bir kısıtlama varsa, bir <xref:System.Data.ConstraintException> oluşturulur. Bu durumda <xref:System.Data.DataSet.EnforceConstraints%2A> özelliği `false,` olarak ayarlanır ve <xref:System.Data.DataSet.EnforceConstraints%2A> özelliği `true` olarak sıfırlanmadan önce tüm kısıtlama ihlalleri çözümlenmelidir.
+
+ Bir güncelleştirmeyi tamamladıktan sonra, ayrıca güncelleştirme olaylarını yeniden etkinleştiren ve bunları başlatan kısıtlama denetimini yeniden etkinleştirebilirsiniz.
+
+ Olayları askıya alma hakkında daha fazla bilgi için bkz. [veri kümesini doldururken kısıtlamaları](../data-tools/turn-off-constraints-while-filling-a-dataset.md)kapatma.
+
+## <a name="dataset-update-errors"></a>Veri kümesi güncelleştirme hataları
+ Bir veri kümesindeki bir kaydı güncelleştirdiğinizde bir hata olasılığı vardır. Örneğin, yanlışlıkla yanlış türde verileri veya çok uzun verileri veya başka bir bütünlük sorunu olan verileri istemeden yazabilirsiniz. Ya da bir güncelleştirme olayının herhangi bir aşamasında özel hatalar oluşturabilen uygulamaya özgü doğrulama denetimlerine sahip olabilirsiniz. Daha fazla bilgi için bkz. [veri kümelerinde verileri doğrulama](../data-tools/validate-data-in-datasets.md).
+
+## <a name="maintaining-information-about-changes"></a>Değişikliklerle ilgili bilgileri koruma
+ Bir veri kümesindeki değişikliklerle ilgili bilgiler iki şekilde tutulur: değiştirildikleri (<xref:System.Data.DataRow.RowState%2A>) ve bir kaydın birden çok kopyasını (<xref:System.Data.DataRowVersion>) tutarak satırlara bayrak koyarak. Süreçler, bu bilgileri kullanarak veri kümesinde nelerin değiştiğini belirleyebilir ve uygun güncelleştirmeleri veri kaynağına gönderebilir.
+
+### <a name="rowstate-property"></a>RowState özelliği
+ Bir <xref:System.Data.DataRow> nesnesinin <xref:System.Data.DataRow.RowState%2A> özelliği, belirli bir veri satırının durumu hakkında bilgi sağlayan bir değerdir.
+
+ Aşağıdaki tabloda <xref:System.Data.DataRowState> numaralandırmasının olası değerleri ayrıntılı olarak verilmiştir:
+
+|DataRowState değeri|Açıklama|
+|------------------------|-----------------|
+|<xref:System.Data.DataRowState>|Satır bir <xref:System.Data.DataRowCollection> öğe olarak eklendi. (Son <xref:System.Data.DataRow.AcceptChanges%2A> yöntemi çağrıldığında mevcut olmadığından, bu durumdaki bir satırın karşılık gelen bir özgün sürümü yok).|
+|<xref:System.Data.DataRowState>|Satır, bir <xref:System.Data.DataRow> nesnesinin <xref:System.Data.DataRow.Delete%2A> kullanılarak silindi.|
+|<xref:System.Data.DataRowState>|Satır oluşturuldu ancak hiçbir <xref:System.Data.DataRowCollection> parçası değil. Bir <xref:System.Data.DataRow> nesnesi, oluşturulduktan hemen sonra, bir koleksiyona eklendikten önce ve bir koleksiyondan kaldırıldıktan sonra bu durumda olur.|
+|<xref:System.Data.DataRowState>|Satırdaki bir sütun değeri bir şekilde değiştirildi.|
+|<xref:System.Data.DataRowState>|@No__t_0 son çağrılmasından bu yana satır değişmedi.|
+
+### <a name="datarowversion-enumeration"></a>DataRowVersion numaralandırması
+ Veri kümeleri kayıtların birden çok sürümünü tutar. Bir <xref:System.Data.DataRow> nesnesinin <xref:System.Data.DataRowVersion> numaralandırması, <xref:System.Data.DataRow> nesnesinin belirli bir sürümünü döndürmek için kullanılabilecek bir değerdir.
+
+ Aşağıdaki tabloda <xref:System.Data.DataRowVersion> numaralandırmasının olası değerleri ayrıntılı olarak verilmiştir:
+
+|DataRowVersion değeri|Açıklama|
+|--------------------------|-----------------|
+|<xref:System.Data.DataRowVersion>|Bir kaydın geçerli sürümü, <xref:System.Data.DataRow.AcceptChanges%2A> son kez çağrılmasından bu yana kayıt üzerinde gerçekleştirilen tüm değişiklikleri içerir. Satır silinmişse, geçerli sürüm yoktur.|
+|<xref:System.Data.DataRowVersion>|Bir kaydın veri kümesi şeması veya veri kaynağı tarafından tanımlanan varsayılan değeri.|
+|<xref:System.Data.DataRowVersion>|Bir kaydın orijinal sürümü, veri kümesinde son değişiklikler işlendiği için kaydın bir kopyasıdır. Pratik koşullarda, bu genellikle bir veri kaynağından okunan bir kaydın sürümüdür.|
+|<xref:System.Data.DataRowVersion>|Bir güncelleştirmenin ortasındayken geçici olarak kullanılabilen bir kaydın önerilen sürümü (<xref:System.Data.DataRow.BeginEdit%2A> yöntemi ve <xref:System.Data.DataRow.EndEdit%2A> yöntemi arasında). Genellikle <xref:System.Data.DataTable.RowChanging> gibi bir olay için işleyicide bir kaydın önerilen sürümüne erişirsiniz. @No__t_0 yöntemini çağırmak değişiklikleri tersine çevirir ve veri satırının önerilen sürümünü siler.|
+
+ Özgün ve güncel sürümler, güncelleştirme bilgileri bir veri kaynağına aktarıldığında yararlı olur. Genellikle, veri kaynağına bir güncelleştirme gönderildiğinde, veritabanının yeni bilgileri bir kaydın geçerli sürümüdür. Özgün sürümden alınan bilgiler güncelleştirilecek kaydı bulmak için kullanılır.
+
+ Örneğin, bir kaydın birincil anahtarının değiştirildiği bir durumda, değişiklikleri güncelleştirmek için veri kaynağında doğru kaydı bulmanız için bir yol gerekir. Özgün sürüm yoksa, kayıt büyük olasılıkla veri kaynağına eklenebilir, bu da yalnızca fazladan istenmeyen bir kayıtta değil, hatalı ve güncel olmayan bir kayıtta olur. Eşzamanlılık denetiminde iki sürüm de kullanılır. Kayıt kümesine yüklendikten sonra kaydın değişip değişmediğini öğrenmek için özgün sürümü veri kaynağındaki bir kayıtla karşılaştırarak karşılaştırabilirsiniz.
+
+ Önerilen sürüm, değişiklikleri aslında veri kümesine kaydetmeden önce doğrulama gerçekleştirmeniz gerektiğinde faydalıdır.
+
+ Kayıtlar değişmiş olsa bile, bu satırın her zaman orijinal veya güncel sürümü yoktur. Tabloya yeni bir satır eklediğinizde, özgün sürüm yoktur, yalnızca geçerli bir sürümdür. Benzer şekilde, tablonun `Delete` yöntemini çağırarak bir satırı silerseniz, orijinal bir sürüm vardır ancak geçerli sürüm yoktur.
+
+ Bir veri satırının <xref:System.Data.DataRow.HasVersion%2A> yöntemi sorgulanarak bir kaydın belirli bir sürümünün mevcut olup olmadığını görmek için test edebilirsiniz. Bir sütunun değerini istediğinizde bir <xref:System.Data.DataRowVersion> numaralandırma değerini isteğe bağlı bağımsız değişken olarak geçirerek, bir kaydın her iki sürümüne de erişebilirsiniz.
+
+## <a name="getting-changed-records"></a>Değiştirilen kayıtları alma
+ Bir veri kümesindeki her kaydı güncelleştirmeme yaygın bir uygulamadır. Örneğin, bir kullanıcı birçok kayıt görüntüleyen bir Windows Forms <xref:System.Windows.Forms.DataGridView> denetimiyle çalışıyor olabilir. Ancak, Kullanıcı yalnızca birkaç kaydı güncelleştirebilir, bir tane silebilir ve yeni bir tane ekleyebilir. Veri kümeleri ve veri tabloları yalnızca değiştirilen satırları döndürmek için bir Yöntem (`GetChanges`) sağlar.
+
+ Veri tablosunun (<xref:System.Data.DataTable.GetChanges%2A>) ya da veri kümesinin (<xref:System.Data.DataSet.GetChanges%2A>) `GetChanges` yöntemini kullanarak değiştirilen kayıtların alt kümelerini oluşturabilirsiniz. Veri tablosu için yöntemini çağırırsanız, yalnızca değiştirilen kayıtlarla tablonun bir kopyasını döndürür. Benzer şekilde, yöntemi veri kümesinde çağırırsanız, içinde yalnızca değiştirilmiş kayıtları olan yeni bir veri kümesi alırsınız.
+
+ tek başına `GetChanges` tüm değiştirilen kayıtları döndürür. Buna karşılık, istenen <xref:System.Data.DataRowState> `GetChanges` yöntemine parametre olarak geçirerek, hangi değiştirilen kayıtların alt kümesini istediğinizi belirtebilirsiniz: yeni eklenen kayıtlar, silinmek üzere işaretlenmiş kayıtlar, ya da değiştirilen kayıtlar.
+
+ Değiştirilen kayıtların bir alt kümesini almak, kayıtları işlemek için başka bir bileşene göndermek istediğinizde faydalıdır. Veri kümesinin tamamını göndermek yerine, yalnızca bileşenin ihtiyaç duyacağı kayıtları alarak diğer bileşenle iletişim yükünü azaltabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: değiştirilen satırları alma](https://msdn.microsoft.com/library/6ff0cbd0-5253-48e7-888a-144d56c2e0a9).
+
+## <a name="committing-changes-in-the-dataset"></a>Veri kümesinde değişiklikler yürütülüyor
+ Veri kümesinde değişiklik yapıldıkça, değiştirilen satırların <xref:System.Data.DataRow.RowState%2A> özelliği ayarlanır. Kayıtların orijinal ve güncel sürümleri oluşturulur, tutulur ve <xref:System.Data.DataRowView.RowVersion%2A> özelliği tarafından kullanılabilir hale getirilir. Bu değiştirilen satırların özelliklerinde depolanan meta veriler, doğru güncelleştirmelerin veri kaynağına gönderilmesi için gereklidir.
+
+ Değişiklikler veri kaynağının geçerli durumunu yansıttığından, bu bilgileri artık sürdürmenize gerek kalmaz. Genellikle, veri kümesi ve kaynağı eşitlenmiş olduğunda iki zaman vardır:
+
+- Verileri veri kümesine yükledikten hemen sonra (örneğin, kaynaktan veri okurken).
+
+- Veri kümesindeki değişiklikleri veri kaynağına gönderdikten sonra (daha önce değil, değişiklikleri veritabanına göndermek için gereken değişiklik bilgilerini kaybedeceğinizi).
+
+  @No__t_0 yöntemini çağırarak, bekleyen değişiklikleri veri kümesine kaydedebilirsiniz. Genellikle, <xref:System.Data.DataSet.AcceptChanges%2A> uygulamanızda aşağıdaki saatlerde çağrılır.
+
+- Veri kümesini yükledikten sonra. Bir TableAdapter 'ın `Fill` yöntemini çağırarak bir veri kümesi yüklerseniz, bağdaştırıcı değişiklikleri sizin için otomatik olarak kaydeder. Ancak, başka bir veri kümesini içine birleştirerek bir veri kümesini yüklerseniz, değişiklikleri el ile yürütmeniz gerekir.
+
   > [!NOTE]
-  > Bağdaştırıcı çağırdığınızda otomatik olarak değişiklikleri yürütmeyi öğesinden engelleyebilirsiniz `Fill` ayarlayarak yöntemi `AcceptChangesDuringFill` bağdaştırıcısının özellik `false`. Bu ayarlanırsa `false`, ardından <xref:System.Data.DataRow.RowState%2A> doldurma sırasında eklenen her bir satır kümesine <xref:System.Data.DataRowState>.  
-  
-- XML Web hizmeti gibi başka bir işlem için veri kümesi değişiklikleri gönderdikten sonra.  
-  
+  > Bağdaştırıcının `AcceptChangesDuringFill` özelliğini `false` olarak ayarlayarak `Fill` yöntemini çağırdığınızda bağdaştırıcının otomatik olarak değişiklikleri almasını engelleyebilirsiniz. @No__t_0 olarak ayarlandıysa, Fill sırasında eklenen her satırın <xref:System.Data.DataRow.RowState%2A> <xref:System.Data.DataRowState> olarak ayarlanır.
+
+- Veri kümesi değişikliklerini bir XML Web hizmeti gibi başka bir işleme gönderdikten sonra.
+
   > [!CAUTION]
-  > Bu şekilde ardından değişikliği uygulamayı herhangi bir değişiklik bilgi siler. Değil değişiklikleri kadar çalıştırdıktan sonra uygulamanızı kümesinde hangi değişiklikler yapılmıştır bilmek gerektiren işlemler gerçekleştirme son.  
-  
-  Bu yöntem, aşağıdakileri yerine getirir:  
-  
-- Yazar <xref:System.Data.DataRowVersion> bir kayıtta sürümü kendi <xref:System.Data.DataRowVersion> sürümü ve özgün sürümle üzerine yazar.  
-  
-- Satırları kaldıran burada <xref:System.Data.DataRow.RowState%2A> özelliği <xref:System.Data.DataRowState>.  
-  
-- Kümeleri <xref:System.Data.DataRow.RowState%2A> özelliği için bir kaydın <xref:System.Data.DataRowState>.  
-  
-  <xref:System.Data.DataSet.AcceptChanges%2A> Yöntemi üç düzeyde kullanılabilir. Üzerinde çağırmak bir <xref:System.Data.DataRow> işlemeler için nesne yalnızca bu satır için değişiklikleri. Üzerinde de çağırabilirsiniz bir <xref:System.Data.DataTable> bir tablodaki tüm satırları işlemek için nesne. Üzerinde çağrı son olarak, <xref:System.Data.DataSet> nesnenin tüm kayıtları veri kümesinin tüm tabloların tüm bekleyen değişiklikleri kaydedin.  
-  
-  Aşağıdaki tablo, hangi yöntemin çağrıldığı nesne üzerinde göre hangi değişiklikler uygulandıktan açıklar.  
-  
-|Yöntem|Sonuç|  
-|------------|------------|  
-|<xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=fullName>|Yalnızca belirli satırda değişiklikler uygulanır.|  
-|<xref:System.Data.DataTable.AcceptChanges%2A?displayProperty=fullName>|Değişiklikler, belirli bir tablodaki tüm satırlar üzerinde uygulanır.|  
-|<xref:System.Data.DataSet.AcceptChanges%2A?displayProperty=fullName>|Değişiklik kümesinin tüm tablolardaki tüm satırları üzerinde uygulanır.|  
-  
+  > Değişikliği bu şekilde yürütmek, değişiklik bilgilerini siler. Uygulamanızın veri kümesinde hangi değişikliklerin yapıldığını bilmesini gerektiren işlemleri gerçekleştirmeyi bitirene kadar değişiklikleri yürütmeyin.
+
+  Bu yöntem şunları gerçekleştirir:
+
+- Bir kaydın <xref:System.Data.DataRowVersion> sürümünü <xref:System.Data.DataRowVersion> sürümüne yazar ve özgün sürümün üzerine yazar.
+
+- @No__t_0 özelliğinin <xref:System.Data.DataRowState> olarak ayarlandığı tüm satırları kaldırır.
+
+- Bir kaydın <xref:System.Data.DataRow.RowState%2A> özelliğini <xref:System.Data.DataRowState> olarak ayarlar.
+
+  @No__t_0 yöntemi üç düzeyde kullanılabilir. Yalnızca söz konusu satır için değişiklikleri kaydetmeleri için bir <xref:System.Data.DataRow> nesnesinde çağırabilirsiniz. Ayrıca, bir tablodaki tüm satırları yürütmek için bir <xref:System.Data.DataTable> nesnesi üzerinde çağırabilirsiniz. Son olarak, veri kümesinin tüm tablolarındaki tüm kayıtlarda bekleyen tüm değişiklikleri kaydetmek için <xref:System.Data.DataSet> nesnesinde çağırabilirsiniz.
+
+  Aşağıdaki tabloda, yöntemin hangi nesneye çağrıldığı üzerinde hangi değişikliklerin yürütüldüğü açıklanmaktadır.
+
+|Yöntem|Sonuç|
+|------------|------------|
+|<xref:System.Data.DataRow.AcceptChanges%2A?displayProperty=fullName>|Değişiklikler yalnızca belirli bir satıra kaydedilir.|
+|<xref:System.Data.DataTable.AcceptChanges%2A?displayProperty=fullName>|Değişiklikler, belirli bir tablodaki tüm satırlara kaydedilir.|
+|<xref:System.Data.DataSet.AcceptChanges%2A?displayProperty=fullName>|Değişiklikler, veri kümesinin tüm tablolarındaki tüm satırlara kaydedilir.|
+
 > [!NOTE]
-> Bir veri kümesi, yük TableAdapter bağdaştırıcısının çağırarak `Fill` yöntemi, açıkça değişiklikleri kabul etmek zorunda değilsiniz. Varsayılan olarak, `Fill` yöntem çağrılarını `AcceptChanges` veri tablosunu doldurmak bittikten sonra yöntemi.  
-  
- İlgili bir yöntem `RejectChanges`, değişikliklerin etkisini kopyalayarak alır <xref:System.Data.DataRowVersion> sürümüne geri <xref:System.Data.DataRowVersion> kayıtları sürümü. Ayrıca ayarlar <xref:System.Data.DataRow.RowState%2A> , her kayıt geri <xref:System.Data.DataRowState>.  
-  
-## <a name="data-validation"></a>Veri doğrulama  
- Uygulamanızdaki verileri için geçirilen işlemlerin gereksinimlerini karşıladığını doğrulamak için genellikle doğrulama eklemeniz gerekir. Bu form kullanıcının girişi uygulamanız başka bir uygulama tarafından gönderilen verileri doğrulama ya da devre dışı bile bileşeninizin içinde hesaplanan bilgi veri kaynağınızın kısıtlamaları içinde kalan denetimi doğru olup olmadığını denetleyerek gerektirebilir ve uygulama gereksinimleri.  
-  
- Verileri farklı şekillerde doğrulayabilirsiniz:  
-  
-- Verileri doğrulamak için uygulamanıza kod ekleyerek iş katmanı içinde. Veri kümesi, bunu yapmak için bir yerdir. Veri kümesi Tasarımcısı arka uç doğrulama avantajlarından bazıları sağlar; sütun ve satır değerleri değiştirme gibi değişiklikleri doğrulamak için özelliği gibi. Daha fazla bilgi için [veri kümelerindeki verileri doğrulama](../data-tools/validate-data-in-datasets.md).  
-  
-- Doğrulama formlar ekleyerek sunu katmanda. Daha fazla bilgi için [Windows Forms'ta kullanıcı girdisi doğrulama](https://msdn.microsoft.com/library/4ec07681-1dee-4bf9-be5e-718f635a33a1).  
-  
-- Veri kaynağına veri gönderen tarafından arka uç, verileri — Örneğin, veritabanı — ve kabul etme veya reddetme veri olanak tanır. Verileri doğrulama ve hata bilgilerini sağlayarak olanakları karmaşık bir veritabanı ile çalışıyorsanız, verilerin nereden geldiğini ne olursa olsun doğrulayabilirsiniz çünkü bu pratik bir yaklaşım olabilir. Ancak, bu yaklaşım uygulamaya özgü doğrulama gereksinimlerini karşılamaya değil. Ayrıca, verileri doğrulama veri kaynağına sahip çok sayıda gidiş dönüş içinde nasıl, uygulamanızın arka ucu tarafından oluşturulan doğrulama hatalarını çözümlenmesi kolaylaştırır bağlı olarak veri kaynağına neden olabilir.  
-  
+> Bir TableAdapter 'ın `Fill` yöntemini çağırarak bir veri kümesi yüklüyorsanız, değişiklikleri açıkça kabul etmeniz gerekmez. Varsayılan olarak `Fill` yöntemi, veri tablosunu doldurmayı tamamladıktan sonra `AcceptChanges` yöntemini çağırır.
+
+ @No__t_0 ilgili bir yöntem, <xref:System.Data.DataRowVersion> sürümünü kayıtların <xref:System.Data.DataRowVersion> sürümüne geri kopyalayarak değişikliklerin etkisini geri alır. Ayrıca, her kaydın <xref:System.Data.DataRow.RowState%2A> <xref:System.Data.DataRowState> olarak ayarlanır.
+
+## <a name="data-validation"></a>Veri doğrulama
+ Uygulamanızdaki verilerin geçirildiği işlemlerin gereksinimlerini karşıladığından emin olmak için, genellikle doğrulama eklemeniz gerekir. Bu, bir kullanıcının bir formdaki girişinin doğru olup olmadığını, başka bir uygulama tarafından uygulamanıza gönderilen verileri doğrulamayı ve hatta bileşeninizin içinde hesaplanan bilgilerin veri kaynağınızın kısıtlamaları dahilinde olduğunu kontrol etmeyi gerektirebilir ve uygulama gereksinimleri.
+
+ Verileri çeşitli yollarla doğrulayabilirsiniz:
+
+- İş katmanında, verileri doğrulamak için uygulamanıza kod ekleyerek. Veri kümesi, bunu yapabileceğiniz bir yerdir. DataSet Designer, arka uç doğrulamanın avantajlarından bazılarını sağlar — örneğin, değişiklikleri sütun olarak doğrulama özelliği ve satır değerleri değişiyor. Daha fazla bilgi için bkz. [veri kümelerinde verileri doğrulama](../data-tools/validate-data-in-datasets.md).
+
+- Sunu katmanında, formlara doğrulama ekleyerek. Daha fazla bilgi için [Windows Forms Içindeki Kullanıcı giriş doğrulaması](https://msdn.microsoft.com/library/4ec07681-1dee-4bf9-be5e-718f635a33a1)konusuna bakın.
+
+- Veri arka ucunda, veri kaynağına veri göndererek — Örneğin, veritabanı — ve bu verilerin verileri kabul etmesine veya reddetmesine izin verir. Verileri doğrulamak ve hata bilgileri sağlamak için karmaşık tesislere sahip bir veritabanıyla çalışıyorsanız, veri nereden geldiği bağımsız olarak verileri doğrulayabilmeniz için bu pratik bir yaklaşım olabilir. Ancak, bu yaklaşım uygulamaya özgü doğrulama gereksinimlerine uyum sağlayabilir. Ayrıca, veri kaynağı verilerinin doğrulanması, uygulamanızın arka uçta oluşan doğrulama hatalarının çözümlenmesini nasıl kolaylaştırdığına bağlı olarak veri kaynağına çok sayıda gidiş dönüşine yol açabilir.
+
   > [!IMPORTANT]
-  > Veri komutları ile kullanırken bir <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> ayarlanan özellik <xref:System.Data.CommandType>, dikkatli bir şekilde veritabanına geçirmeden önce bir istemciden gönderilen bilgilere bakın. Kötü amaçlı kullanıcılara gönderilecek deneyin (Ekle) yetkisiz erişim veya veritabanı zarar vermek için çaba değiştirilmiş veya ek SQL deyimlerinde. Bir veritabanına kullanıcı girişi aktarmadan önce her zaman bilgilerin geçerli olduğunu doğrulayın. Parametreli sorgular veya saklı yordamları mümkün olduğunda kullanılması her zaman iyi bir uygulamadır. Daha fazla bilgi için [betik yararlanan genel bakış](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
-  
-  Bir veri kümesinde değişiklik yapıldıktan sonra değişiklikleri veri kaynağına aktarabilir. En yaygın olarak, çağrı yaparak bunu `Update` yöntemi bir TableAdapter (veya veri bağdaştırıcısı). Her bir veri tablosu kayıt yöntemi döner belirler ne tür bir güncelleştirme gerekli değildir (güncelleştirme, ekleme veya silme), varsa, ve ardından uygun komutu çalıştırır.  
-  
-## <a name="transmitting-updates-to-the-data-source"></a>Veri kaynağına aktaran güncelleştirmeleri  
- Güncelleştirmeleri nasıl yapılacağını ilişkin bir çizim, uygulamanızın kullandığı bir tek veri tablosu içeren bir veri kümesi varsayalım. Uygulama, iki satır veritabanından veri getirir. Sonra alma, bellek içi verileri tablo şöyle görünür:  
-  
-```  
-(RowState)     CustomerID   Name             Status  
-(Unchanged)    c200         Robert Lyon      Good  
-(Unchanged)    c400         Nancy Buchanan    Pending  
-```  
-  
- Uygulamanız, Gamze Koç'ın durumu "Tercih edilen olarak." değiştirir. Değeri, bu değişikliğin sonucu olarak <xref:System.Data.DataRow.RowState%2A> ilgili satır için özelliği değişir <xref:System.Data.DataRowState> için <xref:System.Data.DataRowState>. Değerini <xref:System.Data.DataRow.RowState%2A> özelliği ilk satır için kalan <xref:System.Data.DataRowState>. Veri tablosu artık şöyle görünür:  
-  
-```  
-(RowState)     CustomerID   Name             Status  
-(Unchanged)    c200         Robert Lyon      Good  
-(Modified)     c400         Nancy Buchanan    Preferred  
-```  
-  
- Uygulama şimdi çağrılarınızı `Update` dataset veritabanına aktarmak için yöntemi. Yöntemi, her satır sırayla denetler. Başlangıçta veritabanından getirildikten sonra satır değişmediği için ilk satırında, veritabanına herhangi bir SQL deyimi yöntemi iletir.  
-  
- İkinci satır, ancak `Update` yöntemi otomatik olarak doğru veri komutu çağırır ve veritabanına iletir. Belirli bir söz dizimi SQL deyiminin temel veri deposu tarafından desteklenen bir SQL diyalekti bağlıdır. Ancak, aşağıdaki genel özellikleri iletilen SQL deyiminin kayda değer:  
-  
-- İletilen SQL deyimi, bir güncelleştirme ifadedir. Bir UPDATE deyimi için kullanılacak bağdaştırıcı bilir değerini <xref:System.Data.DataRow.RowState%2A> özelliği <xref:System.Data.DataRowState>.  
-  
-- İletilen SQL deyimi UPDATE deyiminin hedefi satır olduğunu belirten bir WHERE yan tümcesi içeren burada `CustomerID = 'c400'`. Bu bölüm SELECT deyiminin hedef satır tüm başkalarından çünkü ayıran `CustomerID` hedef tablonun birincil anahtarı. WHERE yan tümcesi kaydının özgün sürümden türetilen bilgileri (`DataRowVersion.Original`), satır tanımlamak için gerekli değerleri değişmesi durumunda.  
-  
-- Değiştirilen sütun yeni değerleri ayarlamak için SET yan tümcesi iletilen SQL deyimi içerir.  
-  
+  > @No__t_1 olarak ayarlanan bir <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> özelliği ile veri komutları kullanırken, bir istemciden gönderilen bilgileri veritabanınıza geçirmeden önce dikkatle kontrol edin. Kötü niyetli kullanıcılar, yetkisiz erişim elde etmek veya veritabanına zarar vermek için bir denemeye değiştirilmiş veya ek SQL deyimleri göndermeye (eklemeye) çalışabilir. Kullanıcı girişini bir veritabanına aktarmadan önce, bilgilerin geçerli olduğunu her zaman doğrulayın. Mümkün olduğunda her zaman parametreli sorguları veya saklı yordamları kullanmak en iyi uygulamadır. Daha fazla bilgi için bkz. [komut dosyası açıklardan genel bakış](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).
+
+  Bir veri kümesinde değişiklik yapıldıktan sonra, değişiklikleri bir veri kaynağına aktarabilirsiniz. En yaygın olarak, bunu bir TableAdapter (veya veri bağdaştırıcısı) `Update` yöntemini çağırarak yapabilirsiniz. Yöntemi bir veri tablosundaki her kayıt için döngü yapar, varsa ne tür bir güncelleştirme gerektiğini (güncelleştirme, ekleme veya silme) belirler ve ardından uygun komutu çalıştırır.
+
+## <a name="transmitting-updates-to-the-data-source"></a>Güncelleştirmeler veri kaynağına iletiliyor
+ Güncelleştirmelerin nasıl yapıldığını gösteren bir çizim olarak, uygulamanızın tek bir veri tablosu içeren bir veri kümesi kullandığını varsayalım. Uygulama, veritabanından iki satır getirir. Alma işleminden sonra, bellek içi veri tablosu şöyle görünür:
+
+```
+(RowState)     CustomerID   Name             Status
+(Unchanged)    c200         Robert Lyon      Good
+(Unchanged)    c400         Nancy Buchanan    Pending
+```
+
+ Uygulamanız Gamze Uludağ 'ın durumunu "tercih edilen" olarak değiştiriyor. Bu değişikliğin sonucu olarak, bu satırın <xref:System.Data.DataRow.RowState%2A> özelliğinin değeri <xref:System.Data.DataRowState> <xref:System.Data.DataRowState> olarak değişir. İlk satırın <xref:System.Data.DataRow.RowState%2A> özelliğinin değeri <xref:System.Data.DataRowState> kalır. Veri tablosu şu şekilde görünür:
+
+```
+(RowState)     CustomerID   Name             Status
+(Unchanged)    c200         Robert Lyon      Good
+(Modified)     c400         Nancy Buchanan    Preferred
+```
+
+ Uygulamanız şimdi veri kümesini veritabanına aktarmak için `Update` yöntemini çağırır. Yöntemi her satırı sırayla inceler. İlk satır için, bu satır veritabanından getirilmesinden bu yana değişmediğinden, yöntemi veritabanına hiçbir SQL ifadesini iletir.
+
+ Ancak, ikinci satır için `Update` yöntemi doğru veri komutunu otomatik olarak çağırır ve veritabanına iletir. SQL ifadesinin belirli sözdizimi, temel alınan veri deposu tarafından desteklenen SQL 'in lehçine bağlıdır. Ancak aktarılan SQL ifadesinin aşağıdaki genel nitelikleri önemli değildir:
+
+- Aktarılan SQL deyimleri bir UPDATE deyimidir. @No__t_0 özelliğinin değeri <xref:System.Data.DataRowState> olduğundan, bağdaştırıcı bir UPDATE ifadesini kullanmayı bilir.
+
+- İletilen SQL deyimi, UPDATE ifadesinin hedefinin `CustomerID = 'c400'` sıranın olduğunu gösteren bir WHERE yan tümcesi içerir. SELECT ifadesinin bu bölümü, hedef tablonun birincil anahtarı olduğundan, hedef satırı diğerlerinden ayırt eder, çünkü `CustomerID`. WHERE yan tümcesinin bilgileri, kaydın orijinal sürümünden (`DataRowVersion.Original`) türetilir ve bu da, satırı tanımlamak için gereken değerlerin değişmiş olması durumunda.
+
+- Aktarılan SQL deyimi, değiştirilen sütunların yeni değerlerini ayarlamak için SET yan tümcesini içerir.
+
     > [!NOTE]
-    > TableAdapter bağdaştırıcısının `UpdateCommand` özelliği bir saklı yordam adı için ayarlandı, bağdaştırıcı SQL deyimi oluşturmak değil. Bunun yerine uygun parametrelerle geçirilen saklı yordamını çağırır.  
-  
-## <a name="passing-parameters"></a>Parametreleri geçirme  
- Genellikle veritabanında güncelleştirilebilir gidip kayıtlar için değerleri geçirmek için parametreleri kullanın.  TableAdapter bağdaştırıcısının `Update` yöntemi bir UPDATE deyimi çalıştırır, parametre değerlerini doldurmanız gerekir. Bu değerleri alır `Parameters` uygun veri komutu için koleksiyon — bu durumda, `UpdateCommand` TableAdapter nesne.  
-  
- Bir veri bağdaştırıcısı oluşturmak için Visual Studio Araçları kullandıysanız `UpdateCommand` nesne her parametre yer tutucu deyiminde karşılık gelen parametrelerin bir koleksiyonunu içerir.  
-  
- <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A?displayProperty=fullName> Özelliği, her parametrenin veri tablosunda bir sütun işaret eder. Örneğin, `SourceColumn` özelliği `au_id` ve `Original_au_id` parametreleri, veri tablodaki hangi sütunun Yazar kimliğini içeren için ayarlanır. Olduğunda bağdaştırıcının `Update` yöntemi çalıştığında, yazar kimlik sütunu güncelleştiriliyor ve değerleri ifadesine doldurur kaydı okur.  
-  
- UPDATE deyiminde, her iki yeni değerler (Bu kaydı için yazılır) eski değerleri olarak (kayıt veritabanında konumlandırılabilir böylece) belirtmeniz gerekir. Bu nedenle her bir değer için iki parametre vardır: biri SET yan tümcesi, farklı bir WHERE yan tümcesi için. Her iki parametre güncelleştirilmekte kayıttan veri okuma, ancak bunlar farklı sürümlerini parametresine ait bağlı sütun değeri elde [SqlParameter.SourceVersion özelliği](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sourceversion.aspx). Geçerli sürüm parametresi SET yan tümcesi için alır ve özgün sürümle WHERE yan tümcesi için parametre alır.  
-  
+    > TableAdapter 'ın `UpdateCommand` özelliği saklı yordamın adına ayarlandıysa, bağdaştırıcı bir SQL deyimleri oluşturmaz. Bunun yerine, saklı yordamı geçirilen uygun parametrelerle çağırır.
+
+## <a name="passing-parameters"></a>Parametreleri geçirme
+ Genellikle, veritabanında güncelleştirileceği kayıtların değerlerini geçirmek için parametreleri kullanırsınız.  TableAdapter 'ın `Update` yöntemi bir UPDATE ifadesini çalıştırdığında parametre değerlerini doldurması gerekir. Bu değerleri, uygun veri komutuna ait `Parameters` koleksiyonundan alır — bu durumda TableAdapter içindeki `UpdateCommand` nesnesi.
+
+ Veri bağdaştırıcısı oluşturmak için Visual Studio araçlarını kullandıysanız, `UpdateCommand` nesnesi, deyimindeki her bir parametre yer tutucusuna karşılık gelen parametrelerin bir koleksiyonunu içerir.
+
+ Her parametrenin <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A?displayProperty=fullName> özelliği, veri tablosundaki bir sütuna işaret eder. Örneğin, `au_id` ve `Original_au_id` parametrelerinin `SourceColumn` özelliği, veri tablosundaki yazar kimliğini içeren herhangi bir sütun olarak ayarlanır. Bağdaştırıcının `Update` yöntemi çalıştırıldığında, güncelleştirilmekte olan kayıttaki yazar kimliği sütununu okur ve değerleri deyimle doldurur.
+
+ Bir UPDATE ifadesinde, hem yeni değerleri (kayda yazılacak olanlar) hem de eski değerleri (kaydın veritabanında konumlandırılabilir olması için) belirtmeniz gerekir. Bu nedenle, her bir değer için iki parametre vardır: SET yan tümcesi ve WHERE yan tümcesi için farklı bir tane. Her iki parametre de, güncelleştirilmekte olan kayıttan verileri okur, ancak parametrenin [SqlParameter. SourceVersion özelliğine](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sourceversion.aspx)göre sütun değerinin farklı sürümlerini alırlar. SET yan tümcesinin parametresi geçerli sürümü alır ve WHERE yan tümcesinin parametresi orijinal sürümü alır.
+
 > [!NOTE]
-> De değerlerini ayarlayabilirsiniz `Parameters` koleksiyon kendiniz bir olay işleyicisi veri bağdaştırıcının için genellikle yaptığınız kodlarda <xref:System.Data.DataTable.RowChanging> olay.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md)   
- [Uygulamanızı veri almaya hazırlama](https://msdn.microsoft.com/library/c17bdb7e-c234-4f2f-9582-5e55c27356ad)   
- [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Verileri doğrulama](https://msdn.microsoft.com/library/b3a9ee4e-5d4d-4411-9c56-c811f2b4ee7e)   
+> Ayrıca, `Parameters` koleksiyondaki değerleri, genellikle veri bağdaştırıcısının <xref:System.Data.DataTable.RowChanging> olayına bir olay işleyicide yapacağınız kodda da ayarlayabilirsiniz.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Bir TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md) [Visual Studio 'da veri bağlama denetimleri](../data-tools/bind-controls-to-data-in-visual-studio.md) [almak için uygulamanızı hazırlama](https://msdn.microsoft.com/library/c17bdb7e-c234-4f2f-9582-5e55c27356ad) [verileri doğrulama](https://msdn.microsoft.com/library/b3a9ee4e-5d4d-4411-9c56-c811f2b4ee7e)

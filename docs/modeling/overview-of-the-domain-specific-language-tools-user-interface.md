@@ -6,48 +6,48 @@ f1_keywords:
 - vs.dsltools.dsldesigner.editor
 helpviewer_keywords:
 - Domain-Specific Language Tools, user interface
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bcc16b5287e4980d94a7cbcc4dff4d1f5f63d00
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9a99eef692eb776908c6b8c4a32eb361092855a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808347"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658302"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Etki Alanına Özgü Dil Araçları Kullanıcı Arabirimine Genel Bakış
-Visual Studio'da bir etki alanına özgü dil Araçları (DSL araçları) çözümü ilk kez açtığınızda, kullanıcı arabirimi aşağıdaki resme benzeyecektir.
+Visual Studio 'da ilk olarak bir Alana Özgü Dil Araçları (DSL araçları) çözümü açtığınızda, Kullanıcı arabirimi aşağıdaki resme benzeyecektir.
 
  ![DSL Tasarımcısı](../modeling/media/dsl_designer.png)
 
- Aşağıdaki tablo, kullanıcı Arabiriminin bölümlerini nasıl kullanılacağını açıklar.
+ Aşağıdaki tabloda, Kullanıcı arabiriminin bölümlerinin nasıl kullanıldığı açıklanmaktadır.
 
 |**Öğe**|**Tanım**|
 |-|-|
-|Diyagram|Etki alanı modeli diyagramı görüntülenir.<br /><br /> Diyagramda iki kenara sahiptir. Bir yüzü Modellerinizi içinde öğelerin türlerini tanımlar. Diğer taraftan, Modellerinizi ekranda nasıl görüntüleneceğini tanımlar.|
-|Araç Kutusu|Araçlar, etki alanı sınıfları eklemek ve Şekil diyagrama türleri için araç kutusundan sürükleyin. İlişkileri, bağlayıcılar ve Şekil eşlemeleri eklemek için Aracı'nı tıklatın ve diyagram kaynak düğümde ve hedef düğümü tıklayın.|
-|DSL Gezgini|**DSL Gezgini** bir DSL tanımını etkin pencere olduğunda görünür. Bu DSL ağaç olarak gösterir. DSL Gezgini diyagram üzerinde görüntülenmez model özelliklerini düzenlemenize olanak tanır. Örneğin, araç kutusu öğeleri ekleme ve doğrulama işlemi üzerinde kullanarak geçiş **DSL Gezgini**.|
-|DSL Ayrıntıları penceresi|**DSL ayrıntıları** pencere öğeleri nasıl görüntüleneceğini ve öğeleri nasıl kopyalanır ve Silinen denetlemenize izin modeli öğeleri etki alanının özelliklerini gösterir.<br /><br /> -Varsayılan olarak, **DSL ayrıntıları** penceresi görünür yanındaki **hata listesi** ve **çıkış** windows.|
+|Diyagram|Diyagram, etki alanı modelini görüntüler.<br /><br /> Diyagramda iki kenar vardır. Bir taraf modellerinizde öğelerin türlerini tanımlar. Diğer kenar, modellerinizin ekranda nasıl görüneceğini tanımlar.|
+|Araç Kutusu|Diyagrama etki alanı sınıfları ve şekil türleri eklemek için araç kutusundan Araçlar ' a sürükleyin. İlişkiler, bağlayıcılar ve şekil haritaları eklemek için araca tıklayın, ardından diyagramdaki kaynak düğümüne ve ardından hedef düğüme tıklayın.|
+|DSL Gezgini|DSL **Gezgini** , bir DSL tanımı etkin pencere olduğunda görüntülenir. DSL 'yi ağaç olarak gösterir. DSL Gezgini, modelin diyagramda görüntülenmeyen özelliklerini düzenlemenize olanak tanır. Örneğin, **DSL Gezginini**kullanarak araç kutusu öğelerini ve doğrulama işlemine geçiş yapabilirsiniz.|
+|DSL ayrıntıları penceresi|**DSL ayrıntıları** penceresi, öğelerin nasıl görüntülendiğini ve öğelerin nasıl kopyalanıp silineceğini denetlemenizi sağlayan etki alanı modelinin öğelerinin özelliklerini gösterir.<br /><br /> -Varsayılan olarak, **hata listesi** ve **Çıkış** pencerelerinin yanında **DSL ayrıntıları** penceresi görünür.|
 
 ## <a name="the-domain-model-diagram"></a>Etki alanı modeli diyagramı
- Etki alanı modeli diyagramı, iki bölüme ayrılmıştır. Diyagram bir tarafı model içinde öğeleri ve ilişkileri gösterir. Diğer taraftan nasıl model görüntülenecek gösterilir ve öğeleri ve modeli diyagramı özelliklerini görüntülemek için kullanılan şekilleri içerir. Aşağıdaki resimde, diyagramın öğeleri gösterir.
+ Etki alanı modeli diyagramı iki parçaya ayrılmıştır. Diyagramın bir tarafı modeldeki öğeleri ve ilişkileri gösterir. Diğer tarafta modelin nasıl görüntüleneceği gösterilir ve öğe ve model diyagramının özelliklerini göstermek için kullanılan şekiller bulunur. Aşağıdaki resimde diyagramın öğeleri gösterilmektedir.
 
- ![DSL Tasarımcısı ile Kulvar](../modeling/media/dsl_desinger.png)
+ ![Kulvar ile DSL Tasarımcısı](../modeling/media/dsl_desinger.png)
 
- Aşağıdaki tabloda, etki alanı modeli diyagramı öğelerinden bazıları açıklanmaktadır.
+ Aşağıdaki tabloda, etki alanı modeli diyagramının bazı öğeleri açıklanmaktadır.
 
-|**Terim**|**Tanım**|
+|**Terimli**|**Tanım**|
 |-|-|
-|Domain Class|Etki alanı, modellerinizde öğelerin türlerini sınıflardır.<br /><br /> Birden fazla ilişki hedefinin ise bir alan sınıfına bir diyagramda, birden fazla kez görünebilir.<br /><br /> Bir etki alanı sınıfı eklemek için etki alanı sınıfı aracından sürükleyin **araç kutusu** için **sınıflar ve ilişkiler** tarafında diyagram.|
-|Etki alanı ilişkisi|Etki alanı ilişkileri Modellerinizi öğeler arasında bağlantılar türleridir.<br /><br /> Bir *gömme ilişkisi* hedef öğenin sahibi olduğu veya kaynak öğe tarafından içerilen gösterir ve düz bir çizgi olarak görünür. Bir ağaç modeli forms modeldeki her öğe bir gömme ilişkisi hedef olmalıdır. A *başvuru ilişkisi* model öğeleri arasında genel bir bağlantı gösterir ve kesikli bir çizgi olarak görünür. Herhangi bir öğeye referans bağlantıları herhangi bir sayıda olabilir.<br /><br /> Aracı'nı tıklatarak bir ilişki oluşturmak **araç kutusu**, kaynak etki alanı sınıfı ve ardından hedef sınıf'nı tıklatın.|
-|Şekilleri ve bağlayıcıları|Şekiller nasıl model öğelerini bir DSL diyagramı. görüntüleneceğini belirtmek, bağlayıcılar satırları ilişkileri görüntülemek için kullanılan bir DSL diyagramında belirtin.<br /><br /> Bir şekil veya bağlayıcının oluşturmak için araç sürükleyin **diyagram öğelerine** tarafında diyagram.|
-|Şekil eşlemeleri|Şekil Haritası bir şekil bağlama görüntüler, etki alanı sınıfı için etki alanı modeli diyagramı ya da bağlayıcıyı görüntüler etki alanı ilişkisi üzerinde bir çizgi görünür.|
+|Alan sınıfı|Etki alanı sınıfları, modellerinizde bulunan öğelerin türleridir.<br /><br /> Bir etki alanı sınıfı, birden fazla ilişkinin hedefi ise diyagramda birden çok kez görünebilir.<br /><br /> Bir etki alanı sınıfı eklemek için, etki alanı sınıfı aracını **araç kutusundan** diyagramın **sınıflar ve ilişkiler** tarafına sürükleyin.|
+|Etki alanı Ilişkisi|Etki alanı ilişkileri, modellerinizde bulunan öğeler arasındaki bağlantı türleridir.<br /><br /> Bir *katıştırma ilişkisi* , hedef öğenin sahip olduğunu veya kaynak öğe tarafından içerildiğini ve düz bir çizgi olarak göründüğünü gösterir. Modeldeki her öğe tek bir katıştırma ilişkisinin hedefi olmalıdır, böylece model bir ağaç oluşturur. *Başvuru ilişkisi* , model öğeleri arasındaki genel bağlantıyı gösterir ve kesik çizgili bir çizgi olarak görünür. Herhangi bir öğe herhangi bir sayıda başvuru bağlantısına sahip olabilir.<br /><br /> **Araç kutusundaki**araca tıklayıp kaynak etki alanı sınıfına ve ardından hedef sınıfa tıklayarak bir ilişki oluşturun.|
+|Şekiller ve bağlayıcılar|Şekiller, model öğelerinin bir DSL diyagramında nasıl görüntüleneceğini belirtir. bağlayıcılar, ilişkileri göstermek için kullanılabilecek bir DSL diyagramında çizgiler belirler.<br /><br /> Bir şekil veya bağlayıcı oluşturmak için, aracı diyagram **öğeleri** tarafına sürükleyin.|
+|Şekil haritaları|Şekil eşlemesi, etki alanı modeli diyagramında bir çizgi olarak görünür, bir şekli görüntülediği etki alanı sınıfına ya da görüntülediği etki alanı ilişkisine bir bağlayıcı ile bağlantılandırın.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Etki Alanına Özgü Dil Araçlarına Genel Bakış](../modeling/overview-of-domain-specific-language-tools.md)
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
 - [Etki Alanına Özgü Dili Özelleştirme ve Genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md)

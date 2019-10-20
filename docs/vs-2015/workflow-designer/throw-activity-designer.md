@@ -8,37 +8,34 @@ f1_keywords:
 - System.Activities.Statements.Throw.UI
 ms.assetid: 5e97c947-be39-4a1f-af04-000e2e09528a
 caps.latest.revision: 4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: db909618971eeab2d92506d1c29b06290aa9263b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1855daa5016241fb6eb04f05d7218e02083fc0a8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976626"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655159"
 ---
 # <a name="throw-activity-designer"></a>Throw Etkinlik Tasarımcısı
-**Throw** etkinlik Tasarımcısı oluşturmak ve yapılandırmak için kullanılan bir <xref:System.Activities.Statements.Throw> etkinlik.  
-  
-## <a name="the-throw-activity"></a>Throw etkinlik  
- <xref:System.Activities.Statements.Throw> Etkinlik bir özel durum oluşturur.  
-  
-### <a name="using-the-throw-activity-designer"></a>Throw etkinlik Tasarımcısı kullanma  
- **Throw** etkinlik Tasarımcısı bulunabilir **hata işleme** kategorisi **araç kutusu**, hangi erişilen tıklayarak **araç kutusu**sol tarafındaki sekmesinde [!INCLUDE[wfd2](../includes/wfd2-md.md)] (Alternatif olarak, seçin **araç** gelen **görünümü** menüsünü veya CTRL + ALT + X.)  
-  
- **Throw** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve oturum bırakılan [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzey yerde etkinlikleri genellikle yerleştirilir, örneğin olarak içinde bir <xref:System.Activities.Statements.Sequence>. Bu, oluşturur bir <xref:System.Activities.Statements.Throw> etkinliği ile bir varsayılan **DisplayName** Throw biri. <xref:System.Activities.Activity.DisplayName%2A> Değeri üst bilgisinde düzenlenebilir **Throw** etkinlik Tasarımcısı veya **DisplayName** özellik kılavuzunda kutusu. <xref:System.Activities.Statements.Throw.Exception%2A> Özellik Kılavuzu'nun özellik düzenlenemez.  
-  
-### <a name="the-throw-properties"></a>Throw özellikleri  
- Aşağıdaki tabloda <xref:System.Activities.Statements.Throw> özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır.  
-  
-|Özellik Adı|Gerekli|Kullanım|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|İsteğe bağlı kolay adı belirtir <xref:System.Activities.Statements.Throw> etkinlik. Throw varsayılandır.|  
-|<xref:System.Activities.Statements.Throw.Exception%2A>|Doğru|Oluşturulacak özel durum. Bu özel durumun öğesinden türetilmelidir <xref:System.Exception>. Özel durumu belirtmek için bir Visual Basic ifadesinin özellik kılavuzunda yazın.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Koleksiyon](../workflow-designer/collection-activity-designers.md)   
- [yeniden oluşturma](../workflow-designer/rethrow-activity-designer.md)   
- [Throw etkinlik Tasarımcısı](../workflow-designer/throw-activity-designer.md)   
- [TryCatch](../workflow-designer/trycatch-activity-designer.md)
+**Throw** etkinlik Tasarımcısı <xref:System.Activities.Statements.Throw> etkinlik oluşturmak ve yapılandırmak için kullanılır.
+
+## <a name="the-throw-activity"></a>Throw etkinliği
+ @No__t_0 etkinliği bir özel durum oluşturur.
+
+### <a name="using-the-throw-activity-designer"></a>Throw etkinlik tasarımcısını kullanma
+ **Throw** etkinliği tasarımcısı, [!INCLUDE[wfd2](../includes/wfd2-md.md)] sol tarafındaki araç **kutusu** sekmesine tıklanarak erişilen **araç kutusunun** **hata Işleme** kategorisinde bulunabilir (alternatif olarak, görünümden **araç çubuğu** ' nu seçin).menü veya Ctrl + Alt + X.)
+
+ **Throw** etkinlik Tasarımcısı **araç kutusundan** sürüklenip [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzeyine, örneğin <xref:System.Activities.Statements.Sequence> içinde olduğu gibi, her yerde bırakılmış olarak bırakılabilir. Bu, varsayılan throw **DisplayName** 'i olan bir <xref:System.Activities.Statements.Throw> etkinliği oluşturur. @No__t_0 değeri, **throw** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. @No__t_0 özelliği, özellik kılavuzunda düzenlenmelidir.
+
+### <a name="the-throw-properties"></a>Throw özellikleri
+ Aşağıdaki tabloda <xref:System.Activities.Statements.Throw> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
+
+|Özellik adı|Gerekli|Kullanım|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin isteğe bağlı kolay adını belirtir. Varsayılan değer throw ' dir.|
+|<xref:System.Activities.Statements.Throw.Exception%2A>|Doğru|Throw özel durumu. Bu özel durum <xref:System.Exception> türetmelidir. Özel durumu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Koleksiyon](../workflow-designer/collection-activity-designers.md) [Rethrow](../workflow-designer/rethrow-activity-designer.md) [throw etkinlik Tasarımcısı](../workflow-designer/throw-activity-designer.md) [TryCatch](../workflow-designer/trycatch-activity-designer.md)

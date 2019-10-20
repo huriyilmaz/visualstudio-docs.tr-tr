@@ -1,5 +1,5 @@
 ---
-title: 'CA2106: Bildirimlerin güvenliğini sağlayın | Microsoft Docs'
+title: 'CA2106: güvenli onaylar | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - SecureAsserts
 ms.assetid: 91feb36e-6e2c-436c-8272-5aee31f77e98
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1fb1968c6e2750f658f39f009c97fbab133cccab
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 1f333478c952db74fa6a9482cdad91ce6a858301
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65687403"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666007"
 ---
-# <a name="ca2106-secure-asserts"></a>CA2106: Onay deyimlerinin güvenliğini sağlayın
+# <a name="ca2106-secure-asserts"></a>CA2106: Bildirimlerin güvenliğini sağlayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -36,13 +36,13 @@ ms.locfileid: "65687403"
  Bir yöntem izin ileri sürer ve güvenlik önlemi olmayan çağrı üzerinde gerçekleşir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Güvenlik denetimleri yapmadan herhangi bir güvenlik izni ileri sürmek, kodunuzdaki güvenlik zayıflıklarını yararlanılabilir bırakır. Bir güvenlik izni onaylanan güvenlik yığın ilerlemesi sona erer. Çağıran tüm denetimleri yapmadan bir izin onaylama işlemi ise çağıranın dolaylı olarak kod izinlerinizi kullanarak yürütebilir. Yalnızca assert zararlı bir biçimde kullanılamaz emin olduğunuzda verilebilir güvenlik denetimleri olmadan onaylar. Assert çağırmanızı kod zararsız ise zararsız olduğunda ya da kullanıcıların çağırdığınız koda rastgele bilgi geçiremezsiniz.
+ Güvenlik denetimleri yapmadan herhangi bir güvenlik izni ileri sürmek, kodunuzdaki güvenlik zayıflıklarını yararlanılabilir bırakır. Güvenlik yığını, bir güvenlik izni belirtildiğine göre ilerleme gösterir. Arayan üzerinde herhangi bir denetim gerçekleştirmeksizin bir izin belirtirseniz, çağıran, izinlerinizi kullanarak kodu dolaylı olarak yürütebilir. Güvenlik denetimleri olmadan Onaylamalar yalnızca, onay için zararlı bir şekilde kullanılmadığından emin olduğunuzda izin verilebilir. Çağırdığınız kod zararsız ise veya kullanıcılar, çağırdığınız koda rastgele bilgi geçiremezse bir onaylama işlemi zararsız olur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için yöntemi veya metodu bildirim türünün için bir güvenlik talebi ekleyin.
+ Bu kural ihlalini onarmak için yönteme veya bildirim türüne bir güvenlik talebi ekleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan bir uyarıyı dikkatli bir güvenlik incelemesinden sonra yalnızca gösterme.
+ Bu kuraldan bir uyarıyı yalnızca dikkatli bir güvenlik incelemesi sonrasında gizleyin.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> [Güvenli kodlama yönergeleri](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
+ <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> [güvenli kodlama yönergeleri](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)

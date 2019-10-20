@@ -1,61 +1,61 @@
 ---
-title: Surround-with kod parçacıklarını kullanma | Microsoft Docs
+title: Kod parçacıkları ile surround kullanımı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - surround-with snippets
 - snippets [C#], surround with
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bf279502c52c47a68ea7eb5fb5c193e7d31e4d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3550efde20dbacb0afb17665a2ef1c811ac39946
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62428215"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656507"
 ---
-# <a name="how-to-use-surround-with-code-snippets"></a>Nasıl yapılır: Surround-with kod parçacıklarını kullanma
+# <a name="how-to-use-surround-with-code-snippets"></a>Nasıl yapılır: kod parçacıkları ile surround kullanma
 
-Aşağıdaki yordamlar Çevrele kod parçacıklarını kullanma işlemini açıklar. Surround-with kod parçacıkları kullanılabilir üç yolu vardır: bir klavye kısayolu aracılığıyla aracılığıyla **Düzenle** menüsünde ve sağ tıklayın veya bağlam menüsü aracılığıyla.
+Aşağıdaki yordamlar, kod parçacıkları ile surround kullanmayı açıklamaktadır. Kod parçacıkları ile surround, üç şekilde kullanılabilir: klavye kısayolu, **düzenleme** menüsünde ve sağ tıklama ya da bağlam menüsü.
 
-## <a name="to-use-surround-with-code-snippets-through-keyboard-shortcut"></a>Surround-with kod parçacıkları klavye kısayolu üzerinden kullanmak için
+## <a name="to-use-surround-with-code-snippets-through-keyboard-shortcut"></a>Klavye kısayolu ile surround ile kod parçacıklarını kullanmak için
 
-1. Visual Studio IDE'de, düzenlemek istediğiniz dosyayı açın.
+1. Visual Studio IDE 'de, düzenlemek istediğiniz dosyayı açın.
 
-1. İçinde **Kod Düzenleyicisi**, kapsamak için metni seçin.
+1. **Kod düzenleyicisinde**, çevrelemek için metin ' i seçin.
 
-1. Tür **Ctrl**+**K**, **Ctrl**+**S**.
+1. **Ctrl** +**K**, **CTRL** +**S**yazın.
 
-1. Fareyi kullanarak kod parçacığı liste veya kod parçacığını adı yazıp ENTER tuşuna basarak kod parçacığını seçin **sekmesini** veya **Enter**.
+1. Fare kullanarak kod parçacığı listesinden kod parçacığını seçin ya da kod parçacığının adını yazıp **Tab** veya **ENTER**tuşuna basın.
 
-## <a name="to-use-surround-with-code-snippets-through-the-edit-menu"></a>Surround-with kod parçacıkları Düzenle menüsü aracılığıyla kullanmak için
+## <a name="to-use-surround-with-code-snippets-through-the-edit-menu"></a>Düzenleme menüsü ile surround ile kod parçacıklarını kullanmak için
 
-1. Visual Studio IDE'de, düzenlemek istediğiniz dosyayı açın.
+1. Visual Studio IDE 'de, düzenlemek istediğiniz dosyayı açın.
 
-1. İçinde **Kod Düzenleyicisi**, kapsamak için metni seçin.
+1. **Kod düzenleyicisinde**, çevrelemek için metin ' i seçin.
 
-1. Gelen **Düzenle** menüsünde **IntelliSense** seçip **Surround With** komutu.
+1. **Düzenle** menüsünde **IntelliSense** ' i seçin ve ardından komutla **çevrelemeyi** seçin.
 
-1. Kod parçacığı ekleyici kod parçacığını seçin ve sonra basın **sekmesini** veya **Enter**.
+1. Kod parçacığı Ekleyici ' den kod parçacığını seçin ve ardından **sekme** veya **ENTER**tuşuna basın.
 
-     Alternatif olarak, kod parçacığı adını yazın ve tuşuna **sekmesini** veya **Enter**.
+     Alternatif olarak, kod parçacığının adını yazabilir ve ardından **sekme** veya **ENTER**tuşuna basın.
 
-## <a name="to-use-surround-with-code-snippets-through-the-context-menu"></a>Surround-with kod parçacıkları bağlam menüsü üzerinden kullanmak için
+## <a name="to-use-surround-with-code-snippets-through-the-context-menu"></a>Bağlam menüsü ile surround ile kod parçacıklarını kullanmak için
 
-1. Visual Studio IDE'de, düzenlemek istediğiniz dosyayı açın.
+1. Visual Studio IDE 'de, düzenlemek istediğiniz dosyayı açın.
 
-1. İçinde **Kod Düzenleyicisi**, kapsamak için metni seçin.
+1. **Kod düzenleyicisinde**, çevrelemek için metin ' i seçin.
 
-1. Seçili metnin sağ tıklayın ve ardından **Surround With** bağlam menüsünden komutu.
+1. Seçili metne sağ tıklayıp bağlam menüsünden komutla **Çevrele** ' yi seçin.
 
-1. Kod parçacığı ekleyici kod parçacığını seçin ve sonra basın **sekmesini** veya **Enter**.
+1. Kod parçacığı Ekleyici ' den kod parçacığını seçin ve ardından **sekme** veya **ENTER**tuşuna basın.
 
-     Alternatif olarak, kod parçacığı adını yazın ve tuşuna **sekmesini** veya **Enter**.
+     Alternatif olarak, kod parçacığının adını yazabilir ve ardından **sekme** veya **ENTER**tuşuna basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#kod parçacıkları](../ide/visual-csharp-code-snippets.md)
-- [Kod parçacığı Seçici](../ide/reference/code-snippet-picker.md)
+- [Kod parçacığı seçici](../ide/reference/code-snippet-picker.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Bağımlılık Diyagramları: Kuralları'
+title: 'Bağımlılık Diyagramları: Yönergeler'
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6241a92d8f40a75ba98f09b7e1e0f113e45d4be8
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 39da24dd0d8b7372c63609124ee0b9427fccb03d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766508"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661501"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Bağımlılık diyagramları: yönergeler
 
-Visual Studio 'da *bağımlılık diyagramları* oluşturarak uygulamanızın mimarisini yüksek düzeyde tanıtın. Kodunuzu bir bağımlılık diyagramı ile doğrulayarak kodunuzun bu tasarımla tutarlı kalmasını sağlayın. Yapı sürecinizdeki katman doğrulamasını da dahil edebilirsiniz. Bkz [. Channel 9 videosu: Bağımlılık diyagramlarını](http://go.microsoft.com/fwlink/?LinkID=252073)kullanarak mimarinizi tasarlayın ve doğrulayın.
+Visual Studio 'da *bağımlılık diyagramları* oluşturarak uygulamanızın mimarisini yüksek düzeyde tanıtın. Kodunuzu bir bağımlılık diyagramı ile doğrulayarak kodunuzun bu tasarımla tutarlı kalmasını sağlayın. Yapı sürecinizdeki katman doğrulamasını da dahil edebilirsiniz. Bkz. [Channel 9 videosu: bağımlılık diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](http://go.microsoft.com/fwlink/?LinkID=252073).
 
 Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -30,7 +30,7 @@ Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bk
 
 ## <a name="what-is-a-dependency-diagram"></a>Bağımlılık diyagramı nedir?
 
-Geleneksel mimari diyagramı gibi bir bağımlılık diyagramı, tasarımın ana bileşenlerini veya işlevsel birimlerini ve bunların bağımlılıklarını tanımlar. Diyagramdaki *Katman*olarak adlandırılan her düğüm, bir dizi ad alanı, proje veya diğer yapıtları temsil eder. Tasarımınızda bulunması gereken bağımlılıkları çizebilirsiniz. Geleneksel mimari diyagramlarından farklı olarak, kaynak kodundaki gerçek bağımlılıkların belirttiğiniz hedeflenen bağımlılıklara uygun olduğunu doğrulayabilirsiniz. Üzerinde [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]düzenli bir yapılandırmanın doğrulama parçasını yaparak, program kodunun sonraki değişikliklerle sistem mimarisine uymaya devam etmesini sağlayabilirsiniz. Bkz [. bağımlılık diyagramları: Başvuru](../modeling/layer-diagrams-reference.md).
+Geleneksel mimari diyagramı gibi bir bağımlılık diyagramı, tasarımın ana bileşenlerini veya işlevsel birimlerini ve bunların bağımlılıklarını tanımlar. Diyagramdaki *Katman*olarak adlandırılan her düğüm, bir dizi ad alanı, proje veya diğer yapıtları temsil eder. Tasarımınızda bulunması gereken bağımlılıkları çizebilirsiniz. Geleneksel mimari diyagramlarından farklı olarak, kaynak kodundaki gerçek bağımlılıkların belirttiğiniz hedeflenen bağımlılıklara uygun olduğunu doğrulayabilirsiniz. @No__t_0 düzenli bir yapılandırmanın doğrulama parçasını yaparak, program kodunun sonraki değişikliklerle sistem mimarisine uymaya devam ettiğinden emin olabilirsiniz. Bkz. [bağımlılık diyagramları: başvuru](../modeling/layer-diagrams-reference.md).
 
 ## <a name="how-to-design-or-update-your-app-with-dependency-diagrams"></a>Uygulamanızı bağımlılık diyagramlarıyla tasarlama veya güncelleştirme
 
@@ -70,7 +70,7 @@ Bkz. [kodunuzda bağımlılık diyagramları oluşturma](../modeling/create-laye
 
 Katmanlar, projeler, kod dosyaları, ad alanları, sınıflar ve yöntemler gibi mantıksal *yapıt*gruplarını temsil eder. Görsel C# ve Visual Basic projelerden yapıtlardan katmanlar oluşturabilir veya Word dosyaları ya da PowerPoint sunuları gibi belgeleri bağlayarak bir katmana özellikler veya planlar ekleyebilirsiniz. Her katman diyagramda dikdörtgen olarak görünür ve onunla bağlantılı yapıların sayısını gösterir. Katman, daha belirli görevleri tanımlayan iç içe katmanlar içerebilir.
 
-Genel bir kılavuz olarak, "sunum" veya "Hizmetler" gibi işlevleri işlevine göre adlandırın. Yapıtlar yakından bağımlıysa, bunları aynı katmana yerleştirin. Yapıtlar ayrı ayrı güncelleştirilebiliyorsanız veya ayrı uygulamalarda kullanılıyorsa, bunları farklı katmanlara yerleştirin. Katman desenleri hakkında bilgi edinmek için konusundaki desenler & Uygulamalar sitesini [http://go.microsoft.com/fwlink/?LinkId=145794](http://go.microsoft.com/fwlink/?LinkId=145794)ziyaret edin.
+Genel bir kılavuz olarak, "sunum" veya "Hizmetler" gibi işlevleri işlevine göre adlandırın. Yapıtlar yakından bağımlıysa, bunları aynı katmana yerleştirin. Yapıtlar ayrı ayrı güncelleştirilebiliyorsanız veya ayrı uygulamalarda kullanılıyorsa, bunları farklı katmanlara yerleştirin. Katman desenleri hakkında bilgi edinmek için [http://go.microsoft.com/fwlink/?LinkId=145794](http://go.microsoft.com/fwlink/?LinkId=145794)konumundaki desenler & Uygulamalar sitesini ziyaret edin.
 
 > [!TIP]
 > Katmanlara bağlayabileceğiniz ancak bağımlılık diyagramına karşı doğrulamayı desteklemeyen belirli türde yapıtlar vardır. Yapının doğrulamayı destekleyip desteklemediğini görmek için, yapıt bağlantısının **doğrulamayı destekler** özelliğini Incelemek üzere **Katman Gezgini** ' ni açın. Bkz. [katmanlar arasında var olan bağımlılıkları bulma](#Generate).
@@ -102,7 +102,7 @@ Genellikle var olmaması gereken bazı bağımlılıklar göreceksiniz. Bu bağ�
 
 Sisteminizde veya amaçlanan mimaride yapmayı planladığınız değişiklikleri anlatmak için, bağımlılık diyagramını düzenlemek üzere aşağıdaki adımları kullanın. Ayrıca, kod yapısını genişletmeden önce geliştirmek için bazı yeniden düzenleme değişiklikleri yapmayı düşünebilirsiniz. Bkz. [kodun yapısını geliştirme](#Improving).
 
-|**To**|**Bu adımları gerçekleştirin**|
+|**Hedef**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Olmaması gereken bir bağımlılığı silme|Bağımlılığa tıklayın ve ardından **Delete**tuşuna basın.|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
@@ -123,7 +123,7 @@ Bu durum bu değilse, kodun ömrü boyunca değiştirilmesi daha zordur ve bağ�
 
 Yeni bir proje veya yeni bir projedeki yeni bir alan geliştirmeyi başlattığınızda, kodu geliştirmeye başlamadan önce ana bileşenleri belirlemenize yardımcı olmak için Katmanlar ve bağımlılıklar çizebilirsiniz.
 
-- Mümkünse, bağımlılık diyagramlarınızda **tanımlanabilir mimari desenleri gösterin** . Örneğin, bir masaüstü uygulamasını açıklayan bir bağımlılık diyagramı, sunum, etki alanı mantığı ve veri deposu gibi katmanları içerebilir. Bir uygulamadaki tek bir özelliği kaplayan bir bağımlılık diyagramı, model, görünüm ve denetleyici gibi katmanlara sahip olabilir. Bu tür desenler hakkında daha fazla bilgi için [bkz. desenler & Uygulamalar: Uygulama mimarisi](http://go.microsoft.com/fwlink/?LinkId=145794).
+- Mümkünse, bağımlılık diyagramlarınızda **tanımlanabilir mimari desenleri gösterin** . Örneğin, bir masaüstü uygulamasını açıklayan bir bağımlılık diyagramı, sunum, etki alanı mantığı ve veri deposu gibi katmanları içerebilir. Bir uygulamadaki tek bir özelliği kaplayan bir bağımlılık diyagramı, model, görünüm ve denetleyici gibi katmanlara sahip olabilir. Bu tür desenler hakkında daha fazla bilgi için bkz. [desenler & uygulamalar: uygulama mimarisi](http://go.microsoft.com/fwlink/?LinkId=145794).
 
 - Ad alanı, sınıf veya bileşen gibi **her katman için bir kod yapıtı oluşturun** . Bu, kodu izlemenizi ve kod yapıtlarını katmanlara bağlamayı kolaylaştırır. Her yapıyı oluşturur almaz, uygun katmana bağlayın.
 
@@ -174,5 +174,5 @@ Koddaki gelecekteki değişikliklerin bağımlılık diyagramlarına uyduğundan
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağımlılık diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)
+- [Bağımlılık Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)
 - [Kodunuz aracılığıyla bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)

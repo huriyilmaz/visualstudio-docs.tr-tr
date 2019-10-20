@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Find command
 - Edit.Find command
 ms.assetid: f0c705dc-2b97-423d-abbf-5584d4827208
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e94f8aa823fc7665144f1d774339d1c41f37edc
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 813b9ea0c51b4812c1d8bab4f1fb8be624893016
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926246"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654350"
 ---
 # <a name="find-command"></a>Bul Komutu
 **Bul ve Değiştir** penceresinin **dosyalarda bul** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak dosyaları arar.
@@ -31,41 +31,41 @@ Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]
 ```
 
 ## <a name="arguments"></a>Arguments
-`findwhat`Gerekli. Eşleştirilecek metin.
+`findwhat` gerekiyor. Eşleştirilecek metin.
 
 ## <a name="switches"></a>Anahtarlar
 /Case veya/C\
-İsteğe bağlı. Eşleşmeler yalnızca büyük ve küçük harfli karakterler `findwhat` bağımsız değişkende belirtilen olanlarla tam olarak eşleşiyorsa oluşur.
+İsteğe bağlı. Eşleşmeler yalnızca, büyük harf ve küçük harf karakterlerinin `findwhat` bağımsız değişkeninde belirtilen olanlarla tam olarak eşleşmesi durumunda meydana gelir.
 
 /doc veya/d\
-İsteğe bağlı. Yalnızca geçerli belgeyi arar. Kullanılabilir `/doc`arama kapsamlarından `/proc` `/open`yalnızca birini belirtin,,, veya `/sel`.
+İsteğe bağlı. Yalnızca geçerli belgeyi arar. Kullanılabilir arama kapsamlarından yalnızca birini belirtin, `/doc`, `/proc`, `/open` veya `/sel`.
 
 /markall veya/M\
 İsteğe bağlı. Geçerli belge içinde arama eşleşmesi içeren her satıra bir grafik koyar.
 
 /Open veya/O\
-İsteğe bağlı. Tüm açık belgeleri bir belge gibi arar. Kullanılabilir `/doc`arama kapsamlarından `/proc` `/open`yalnızca birini belirtin,,, veya `/sel`.
+İsteğe bağlı. Tüm açık belgeleri bir belge gibi arar. Kullanılabilir arama kapsamlarından yalnızca birini belirtin, `/doc`, `/proc`, `/open` veya `/sel`.
 
 /Options veya/t \
 İsteğe bağlı. Geçerli bulma seçeneği ayarlarının listesini görüntüler ve arama yapmaz.
 
 /proc veya/p\
-İsteğe bağlı. Yalnızca geçerli yordamı arar. Kullanılabilir `/doc`arama kapsamlarından `/proc` `/open`yalnızca birini belirtin,,, veya `/sel`.
+İsteğe bağlı. Yalnızca geçerli yordamı arar. Kullanılabilir arama kapsamlarından yalnızca birini belirtin, `/doc`, `/proc`, `/open` veya `/sel`.
 
 /Reset süpürmeden veya/e\
 İsteğe bağlı. Bulma seçeneklerini varsayılan ayarlarına döndürür ve arama yapmaz.
 
 /sel veya/s\
-İsteğe bağlı. Yalnızca geçerli seçimi arar. Kullanılabilir `/doc`arama kapsamlarından `/proc` `/open`yalnızca birini belirtin,,, veya `/sel`.
+İsteğe bağlı. Yalnızca geçerli seçimi arar. Kullanılabilir arama kapsamlarından yalnızca birini belirtin, `/doc`, `/proc`, `/open` veya `/sel`.
 
 /up veya/U\
 İsteğe bağlı. Dosyadaki geçerli konumdan dosyanın başlangıcına doğru arar. Varsayılan olarak, aramalar dosyadaki geçerli konumda başlar ve dosyanın sonuna doğru arar.
 
 /Regex veya/r \
-İsteğe bağlı. `findwhat` Bağımsız değişkende önceden tanımlanmış özel karakterleri, değişmez karakterler yerine metin desenlerini temsil eden gösterimler olarak kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
+İsteğe bağlı. @No__t_0 bağımsız değişkeninde, sabit karakterler yerine metin desenlerini temsil eden gösterimler olarak önceden tanımlanmış özel karakterler kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
 
 /joker veya/L\
-İsteğe bağlı. Bağımsız değişkende, `findwhat` bir karakter veya karakter dizisini temsil etmek için önceden tanımlanmış özel karakterleri gösterimler olarak kullanır.
+İsteğe bağlı. Bir karakteri veya karakter dizisini göstermek için `findwhat` bağımsız değişkeninde gösterimler olarak önceden tanımlanmış özel karakterleri kullanır.
 
 /Word veya/w\
 İsteğe bağlı. Yalnızca tam sözcükleri arar.

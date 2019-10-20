@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yönetilen kod kusurlarını görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: yönetilen kod kusurlarını görüntüleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - code, viewing defects
 ms.assetid: 58aa6c23-d0b3-414d-930d-82e676cb7e5f
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5ef9b5f8da2cf38566c6cedbf10eae3fa5921362
-ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.openlocfilehash: 3fe1c6440f76e358ccde22129cbd413bb229b77e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54755762"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646264"
 ---
-# <a name="how-to-view-managed-code-defects"></a>Nasıl yapılır: Yönetilen Kod Hatalarını Görüntüleme
+# <a name="how-to-view-managed-code-defects"></a>Nasıl yapılır: Yönetilen Kod Kusurlarını Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kod Analizi hataları, uyarıları ve iletileri Kod Analizi penceresinde bildirilir. Bir proje veya çözüm üzerinde kod analizini çalıştırdığınızda Kod Analizi penceresi otomatik olarak görüntülenir.  
-  
- Kod Analizi penceresinde şunları yapabilirsiniz:  
-  
--   **Uyarı başlığı seçin.**  
-  
-     Uyarı hakkında ek bilgi Kod Analizi penceresi açılır. Uyarıyı tetikleyen kaynak dosyadaki bir satır görüntülenir ve Kaynak Kod Düzenleyicisi'nde vurgulanır.  
-  
--   **Uyarı kimliği seçin.** Uyarı kimlikleri ön eki **CA** ve dört basamaklı bir sayı içerir. Örneğin, CA1234.  
-  
-     MSDN Kitaplığı Yardım konusuna uyarı görüntülenir. Yardım konusu, uyarının nedeni hakkında ayrıntılı bilgiler içerir ve uyarı sorunu nasıl gerçekleşir ve çözülmüş gösteren örnekler içerir.
+Kod Analizi, hatalar, uyarılar ve iletiler, Kod Analizi penceresinde raporlanır. Kod Analizi penceresi, Kod analizini bir proje veya çözümde çalıştırdığınızda otomatik olarak görünür.
+
+ Kod Analizi penceresinde şunları yapabilirsiniz:
+
+- **Uyarı başlığını seçin.**
+
+     Uyarı hakkında ek bilgiler, Kod Analizi penceresinde görünür. Kaynak dosyadaki uyarıyı Başlatan çizgi görüntülenir ve kaynak kodu düzenleyicisinde vurgulanır.
+
+- **Uyarı kimliğini seçin.** Uyarı kimliklerinin **CA** tarafından ön eki alınır ve dört basamaklı bir sayı vardır. Örneğin, CA1234.
+
+     Uyarı için MSDN Kitaplığı Yardım konusu görüntülenir. Yardım konusu, uyarının nedeni hakkında ayrıntılı bilgi içerir ve uyarı sorununun nasıl oluştuğunu ve çözümlendiğini gösteren örnekleri içerir.

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Değişken Tasarımcısını kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: değişken tasarımcısını kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,35 +8,33 @@ f1_keywords:
 - System.Activities.Presentation.View.DesignTimeVariable.UI
 ms.assetid: 0318dfb0-bf8f-4f92-9b86-ae4c1b2161ad
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9ebfcf53ce4d03f676930bd905baa0723c17e481
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 4744864824da5efb238e9af1a5a12fcef79ea4ff
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697084"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659069"
 ---
-# <a name="how-to-use-the-variable-designer"></a>Nasıl yapılır: Değişken Tasarımcısını Kullanma
-Değişken tasarımcısını kullanmak için değişkenler veri bağlama senaryoları ve koşul deyimlerini oluşturmak için kullanılır. Tasarımcı tıklayarak erişilen **değişkenleri** tasarım tuvalin sol alt köşesindeki düğme. Tasarımcı, bir tablo biçiminde görünür ve her bir sütun üst bilgileri dışında sıralanabilir değişkenlerin bir listesi içeren **varsayılan** sütun. Her bir değişken adı, değişken türü, kapsamı ve varsayılan değer (varsa) içerir. Ad ve varsayılan değer düzenlenebilir metin alanları ve türüne ve kapsamına açılan listeler. Kapsam değişken tasarımcısını çağrıldığında, seçilen etkinliğidir. Bir değişken seçimi kapsamında oluşturulamıyorsa, kapsamı en yakın üst etkinliği değişkenleri kapsamında oluşturulmasına izin veren seçimin varsayılacaktır. [!INCLUDE[crabout](../includes/crabout-md.md)] değişkenleri bkz [değişkenleri ve bağımsız değişkenler](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8).  
-  
- Sıralama düzenini kullanıcı açıkça sıralama denetimlerden birini kullanır, kapatır ve değişken tasarımcısını yeniden açana veya başka bir değişken oluşturur kadar uygulanmaz.  
-  
-### <a name="to-create-a-new-variable"></a>Yeni bir değişken oluşturmak için  
-  
-1. İş akışı veya etkinliği bir çözüm açın [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].  
-  
-2. Tasarım tuvalde akışınızda bir etkinlik seçin.  
-  
-3. Değişken tasarımcısını tıklatarak **değişkenleri** tasarım tuvalin sol alt köşesindeki düğme. Değişken tasarımcısını görünür.  
-  
-4. Etiketli boş satırı tıklatın **oluşturma değişken**. Bu aşağıdaki varsayılan değerleri kullanarak yeni bir değişken ile yeni bir satır ekler: variablex için **adı** x benzersiz değişken adları oluşturmak için otomatik olarak artırılır 1 başlangıç değeri bir tamsayı olduğu  **Dize** için **değişken türü**, ve **dizisi** için **kapsam**. Hiçbir değer için eklenen **varsayılan**. İş akışı tasarım işlemi sırasında herhangi bir zamanda bu değerleri değiştirebilirsiniz.  
-  
+# <a name="how-to-use-the-variable-designer"></a>Nasıl yapılır: değişken tasarımcısını kullanma
+Değişken tasarımcı, veri bağlama senaryolarında ve Koşullu deyimlerde kullanılmak üzere değişkenler oluşturmak için kullanılır. Tasarımcı, tasarım tuvalinin sol alt köşesindeki **değişkenler** düğmesine tıklanarak erişilir. Tasarımcı, tablo biçiminde görüntülenen ve **varsayılan** sütun hariç her bir sütun üst bilgisi tarafından sıralanan değişkenlerin bir listesini içerir. Her değişken bir ad, değişken türü, kapsam ve varsayılan değer (varsa) içerir. Ad ve varsayılan değer düzenlenebilir metin alanlarıdır ve tür ve kapsam açılır. Kapsam, değişken tasarımcı çağrıldığında seçilmiş olan etkinliktir. Seçim kapsamında bir değişken oluşturuoluşturuoluşturulamadığı takdirde kapsam, varsayılan olarak, değişkenlerin kapsamında oluşturulmasına izin veren seçimin en yakın üst etkinliği olur. değişkenleri [!INCLUDE[crabout](../includes/crabout-md.md)], bkz. [değişkenler ve bağımsız değişkenler](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8).
+
+ Sıralama düzeni, kullanıcı açıkça sıralama denetimlerinden birini kullanmadığı sürece uygulanmaz, değişken tasarımcısını kapatır ve yeniden açar ya da başka bir değişken oluşturur.
+
+### <a name="to-create-a-new-variable"></a>Yeni bir değişken oluşturmak için
+
+1. @No__t_0 bir iş akışı veya etkinlik çözümü açın.
+
+2. Tasarım tuvalinde iş akışınızda bir etkinlik seçin.
+
+3. Tasarım tuvalinin sol alt köşesindeki **değişkenler** düğmesine tıklayarak değişken tasarımcısını açın. Değişken tasarımcı belirir.
+
+4. **Oluşturma değişkeni**etiketli boş satıra tıklayın. Bu işlem, şu varsayılan değerleri kullanarak yeni bir değişken içeren yeni bir satır ekler: **x, benzersiz** değişken adları oluşturmak için otomatik olarak artan 1 başlangıç değeri olan bir tamsayı, değişken için **dize** **kapsam**Için tür ve **sıra** . **Varsayılan**için değer eklenmez. Bu değerleri, iş akışı tasarım sürecinde istediğiniz zaman değiştirebilirsiniz.
+
     > [!NOTE]
-    > Bir değişkeni silmek için değişken tıklayarak seçin ve tuşuna **Sil** anahtarı.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı Tasarımcısını kullanma](../workflow-designer/using-the-workflow-designer.md)   
- [Değişkenler ve bağımsız değişkenler](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8)   
- [Nasıl yapılır: Bağımsız Değişken Tasarımcısını Kullanma](../workflow-designer/how-to-use-the-argument-designer.md)
+    > Bir değişkeni silmek için, ve ardından **Delete** tuşuna basarak değişkeni seçin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [İş akışı Tasarımcısı](../workflow-designer/using-the-workflow-designer.md) [değişkenlerini ve bağımsız değişkenleri](https://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8) kullanma [nasıl yapılır: bağımsız değişken tasarımcısını kullanma](../workflow-designer/how-to-use-the-argument-designer.md)
