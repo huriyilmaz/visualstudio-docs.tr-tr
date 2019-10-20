@@ -1,5 +1,5 @@
 ---
-title: İş Akışı Tasarımcısı'nı kullanarak | Microsoft Docs
+title: İş Akışı Tasarımcısı kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,37 +9,30 @@ helpviewer_keywords:
 - Visual Studio 2010 Workflow Designer [WFD], using
 ms.assetid: 991a942f-29bc-4868-9299-ed80c5665ab5
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6e60c314a6886831758f403402958cfe97c4a4fc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1490708dc3dce4120d79879ded69283dd6108f67
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855419"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656375"
 ---
-# <a name="using-the-workflow-designer"></a>İş akışı Tasarımcısını kullanma
-Bu bölümde, birkaç etkinlik tasarımcıları tarafından barındırılan Düzenleyicisi yeni etkinlikler ve yerleşik tasarımcıları ve ifade kullanarak iş akışı projeleri oluşturma işlemi açıklanmaktadır.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [İş Akışı Projesi Oluşturma](../workflow-designer/creating-a-workflow-project.md)  
- Kitaplıkları kullanarak bu şablonları nasıl oluşturulacağını açıklayan konulara.  
-  
- [Nasıl yapılır: Araç Kutusuna Etkinlik Ekleme](../workflow-designer/how-to-add-activities-to-the-toolbox.md)  
- Araç kutusuna etkinlik ekleme farklı yollarını gösterir.  
-  
- [Nasıl yapılır: Bağımsız Değişken Tasarımcısını Kullanma](../workflow-designer/how-to-use-the-argument-designer.md)  
- Nasıl bağımsız değişken tasarımcısını, veri ekleme çıkarma bir etkinlik akışı izin vermek kolaylaştırır gösterir.  
-  
- [Nasıl yapılır: Değişken Tasarımcısını Kullanma](../workflow-designer/how-to-use-the-variable-designer.md)  
- Veri bağlama senaryoları ve koşullu deyimler kullanılacak değişkenleri oluşturma işlemi gösterilmektedir.  
-  
- [Nasıl yapılır: İfade Düzenleyicisini Kullanma](../workflow-designer/how-to-use-the-expression-editor.md)  
- Girip nevyhodnocovat ifade düzenleyicisini kullanma işlemi gösterilmektedir.  
-  
- [Nasıl yapılır: İçeri Aktarmalar Tasarımcısını Kullanma](../workflow-designer/how-to-use-the-imports-designer.md)  
- İfadelerinizde kullanan türler için ad alanları girmek gösterilmektedir.  
-  
- [Nasıl yapılır: İçerik Haritalı Gezinmeyi Kullanma](../workflow-designer/how-to-use-breadcrumb-navigation.md)  
- Etkinlikler arasında gezinmek gösterilmektedir.
+# <a name="using-the-workflow-designer"></a>İş Akışı Tasarımcısını Kullanma
+Bu bölümde, çeşitli etkinlik tasarımcıları tarafından barındırılan yerleşik tasarımcılar ve ifade Düzenleyicisi kullanılarak yeni etkinlikler ve iş akışı projelerinin nasıl oluşturulacağı açıklanır.
+
+## <a name="in-this-section"></a>Bu Bölümde
+ [Iş akışı projesi oluşturma](../workflow-designer/creating-a-workflow-project.md) Bu şablonların kullanımı aracılığıyla kitaplıkların nasıl oluşturulacağını betimleyen konular.
+
+ [Nasıl yapılır: araç kutusuna etkinlik ekleme](../workflow-designer/how-to-add-activities-to-the-toolbox.md) Araç kutusuna etkinlik eklemenin farklı yollarını gösterir.
+
+ [Nasıl yapılır: bağımsız değişken tasarımcısını kullanma](../workflow-designer/how-to-use-the-argument-designer.md) Bağımsız değişken tasarımcısının, verilerin bir etkinliğin içine ve dışına akmasını nasıl kolaylaştırdığını gösterir.
+
+ [Nasıl yapılır: değişken tasarımcısını kullanma](../workflow-designer/how-to-use-the-variable-designer.md) Veri bağlama senaryolarında ve Koşullu deyimlerde kullanılmak üzere değişkenlerin nasıl oluşturulacağını gösterir.
+
+ [Nasıl yapılır: Ifade düzenleyicisini kullanma](../workflow-designer/how-to-use-the-expression-editor.md) İfadeleri girmek ve değerlendirmek için Ifade düzenleyicisinin nasıl kullanılacağını gösterir.
+
+ [Nasıl yapılır: Içeri aktarmalar tasarımcısını kullanma](../workflow-designer/how-to-use-the-imports-designer.md) Deyimlerde kullandığınız türler için ad alanlarının nasıl ekleneceğini gösterir.
+
+ [Nasıl yapılır: Içerik Haritası gezintisini kullanma](../workflow-designer/how-to-use-breadcrumb-navigation.md) Etkinlikler arasında nasıl gezinmeniz gerektiğini gösterir.

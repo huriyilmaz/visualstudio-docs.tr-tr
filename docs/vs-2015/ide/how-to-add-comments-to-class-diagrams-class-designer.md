@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Sınıf Tasarımcısı) sınıf diyagramlarına açıklamalar ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: Sınıf Diyagramlarına Açıklamalar ekleme (Sınıf Tasarımcısı) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,32 +12,30 @@ helpviewer_keywords:
 - comment shapes
 ms.assetid: d54005d5-a29d-4c4e-b153-feb6e84dd44f
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bcf6a06ee89bcc3ba691b38e98cf8bf43d9c063b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fe77e8cb0f21789c7311d9c337b3b973c4dd44f9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62584445"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645510"
 ---
-# <a name="how-to-add-comments-to-class-diagrams-class-designer"></a>Nasıl yapılır: (Sınıf Tasarımcısı) sınıf diyagramlarına açıklamalar ekleme
+# <a name="how-to-add-comments-to-class-diagrams-class-designer"></a>Nasıl Yapılır: Sınıf Diyagramlarına Açıklamalar Ekleme (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Açıklama şekilleri sınıf diyagramlarına açıklamalar ekleme için kullanabilirsiniz. Açıklama Şekli bir özelliği olan **metin**, metin içine yazabileceğiniz. Açıklama şekilleri diyagram yüzeyinde yalnızca alan ve kod mevcut.  
-  
- Bir yorum içinde sınıf diagramview bulunduğu **Sınıf Tasarımcısı**; bir ikinci sınıf diyagramı aynı projede ve açıklamaları, oluşturduğunuz ilk görünümü'nde oturum açın, görünür değildir. Bir diyagram silerseniz, içerdiği tüm açıklamaları da silinir.  
-  
- Açıklama Şekli yeniden boyutlandırmak, ancak diğer yönleri gibi arka plan rengi, yazı tipi veya yazı tipi boyutunu görünümünü değiştiremezsiniz.  
-  
-### <a name="to-add-a-comment"></a>Açıklama eklemek için  
-  
-1. Bir açıklama da sürükleyin **Sınıf Tasarımcısı araç kutusu** sınıf diyagramına sürükleyebilirsiniz.  
-  
-2. Yeni Yorum şekli diyagram üzerinde tıklayın ve istediğiniz metni yazın.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sınıf diyagramları (Sınıf Tasarımcısı) ile çalışma](../ide/working-with-class-diagrams-class-designer.md)   
- [Sınıf diyagramları (Sınıf Tasarımcısı) ile çalışma](../ide/working-with-class-diagrams-class-designer.md)   
- [Nasıl yapılır: Sınıf Diyagramlarını Özelleştirme (Sınıf Tasarımcısı)](../ide/how-to-customize-class-diagrams-class-designer.md)
+Sınıf Diyagramlarına açıklama eklemek için açıklama şekillerini kullanabilirsiniz. Açıklama şeklinin, metin yazabileceğiniz bir özelliği, **metni**vardır. Açıklama şekilleri yalnızca Diyagram yüzeyinde bulunur ve kodda değildir.
+
+ **Sınıf Tasarımcısı**; bir yorum, sınıf DiagramView üzerinde bulunur; ikinci bir sınıf diyagramını aynı proje üzerine açarsanız, ilk görünümde oluşturduğunuz açıklamalar görünmez. Bir diyagramı silerseniz, içerdiği yorumların tümü de silinir.
+
+ Bir yorum şeklini yeniden boyutlandırabilirsiniz, ancak arka plan rengi, yazı tipi veya yazı tipi boyutu gibi görünüşünün diğer yönlerini değiştiremezsiniz.
+
+### <a name="to-add-a-comment"></a>Açıklama eklemek için
+
+1. **Sınıf Tasarımcısı araç kutusundan** bir açıklamayı sınıf diyagramı üzerine sürükleyin.
+
+2. Diyagramdaki yeni açıklama şekline tıklayın ve istediğiniz metni yazın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Sınıf diyagramları ile çalışma ( [Sınıf Tasarımcısı)](../ide/working-with-class-diagrams-class-designer.md) [sınıf diyagramları ile çalışma (sınıf Tasarımcısı)](../ide/working-with-class-diagrams-class-designer.md) [nasıl yapılır: sınıf diyagramlarını özelleştirme (sınıf Tasarımcısı)](../ide/how-to-customize-class-diagrams-class-designer.md)

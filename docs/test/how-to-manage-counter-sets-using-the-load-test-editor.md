@@ -1,5 +1,5 @@
 ---
-title: Yük Testi Sayaç kümeleri
+title: Yük testi sayaç kümeleri
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,58 +10,58 @@ helpviewer_keywords:
 - counter sets
 - load tests, counter sets
 ms.assetid: 64315c2f-a0b2-4378-be16-0774b99beef5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4ca910038e35ee65e6d97999f08013f398eaec9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f781580f28c3b829483180d559851bc9730fa18e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950130"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653495"
 ---
-# <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>Nasıl yapılır: Yük Testi Düzenleyicisini kullanılarak sayaç kümelerini yönetme
+# <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>Nasıl yapılır: Yük Testi Düzenleyicisi kullanarak sayaç kümelerini yönetme
 
-İle bir yük testi oluşturduğunuzda, **Yeni Yük Testi Sihirbazı**, bir başlangıç sayaç kümesini ekleyin. Bu, Yük testiniz için ön tanımlı sayaç kümeleri kümesini sunar.
+**Yeni Yük Testi Sihirbazı**bir yük testi oluşturduğunuzda, ilk sayaç kümesini eklersiniz. Bunlar, yük testiniz için önceden tanımlanmış sayaç kümeleri kümesi sunar.
 
 > [!NOTE]
-> Yük testlerinizi Uzak makinelerde dağıtılmışsa, denetleyici ve aracı sayaçları denetleyicisi ve aracısı için eşlenen sayaç kümeleri. Uzak makinede yük testinizde kullanma hakkında daha fazla bilgi için bkz. [Test denetleyicileri ve test aracılarını](configure-test-agents-and-controllers-for-load-tests.md).
+> Yük testleriniz uzak makineler arasında dağıtılmışsa, denetleyici ve aracı sayaçları denetleyici ve aracı sayaç kümelerine eşlenir. Yük testinizde uzak makinelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md).
 
-Sayaç kümelerini yönetme performans verilerini toplamak istediğiniz bilgisayar kümesini seçme ve atama her bir bilgisayardan toplamak için sayaç kümeleri kümesini içerir. Sayaçlarınızı yönettiğiniz **Yük Testi Düzenleyicisi**.
+Sayaç kümelerini yönetmek, performans verilerini toplamak istediğiniz bilgisayar kümesini seçmeyi ve her bir bilgisayardan toplanacak bir dizi sayaç kümesi atamayı içerir. Sayaçlarınızı **Yük Testi Düzenleyicisi**yönetirsiniz.
 
 ![Sayaç kümelerini yönetme](../test/media/loadtestmanagecountersets.png)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-manage-counter-sets"></a>Sayaç kümelerini yönetme
+## <a name="to-manage-counter-sets"></a>Sayaç kümelerini yönetmek için
 
 1. Bir yük testi açın.
 
-2. Seçin **sayaç kümelerini Yönet** düğmesi.
+2. **Sayaç Kümelerini Yönet** düğmesini seçin.
 
-     – veya –
+     veya
 
-     Sağ **sayaç kümeleri** klasörü yük testi ağacında ve seçin **sayaç kümelerini Yönet**.
+     Yük testi ağacındaki **sayaç kümeleri** klasörünü sağ tıklatın ve **Sayaç Kümelerini Yönet**' i seçin.
 
-     **Sayaç kümelerini Yönet** iletişim kutusu görüntülenir.
+     **Sayaç Kümelerini Yönet** iletişim kutusu görüntülenir.
 
-3. (İsteğe bağlı) İçinde **seçili bilgisayarlar ve sayaç kümeleri aşağıdaki çalışma ayarları altına eklenecek** liste kutusu, farklı bir çalışma ayarı seçin.
+3. Seçim **Seçilen bilgisayarlarda ve sayaç kümeleri aşağıdaki çalışma ayarları liste kutusu altına eklenir** , farklı bir çalışma ayarı seçin.
 
     > [!NOTE]
-    > Bu, yalnızca yük testinize birden fazla çalışma ayarı varsa geçerlidir.
+    > Bu yalnızca yük testinizde birden fazla çalışma ayarınız varsa geçerlidir.
 
-4. (İsteğe bağlı) Seçin **bilgisayar Ekle** izlemek için yeni bir bilgisayar eklemek için. İçin bir ad istenir. Bir bilgisayarın adını yazın ve yeni girdi altındaki düğümleri görürsünüz. Örneğin **ASP.NET**, **IIS**, **SQL**ve diğerleri. Seçmek istediğiniz düğümleri önünde onay kutularını seçin. Yeni sayaç görünür **Önizleme seçimleri** bölmesi.
+4. Seçim İzlemek üzere yeni bir bilgisayar eklemek için **Bilgisayar Ekle** ' yi seçin. Sizden bir ad girmeniz istenir. Bilgisayarın adını yazın ve yeni girdinin altında düğümleri görürsünüz. Örneğin, **ASP.net**, **IIS**, **SQL**ve diğerleri. Seçmek istediğiniz düğümlerin önündeki onay kutularını seçin. Yeni sayaçlar **Önizleme seçimleri** bölmesinde görünür.
 
-5. (İsteğe bağlı) İçinde **bilgisayar etiketleri** metin kutusuna bilgisayarla ilişkilendirmek için bir etiket yazın. Örneğin, "TestMachine12 olarak lab3".
+5. Seçim **Bilgisayar etiketleri** metin kutusuna bilgisayarla ilişkilendirilecek bir etiket yazın. Örneğin, "TestMachine12 in lab3".
 
-     Bilgisayar etiketleri bir kolayca tanımak ada sahip bir bilgisayar tanımlamanıza olanak sağlar.
+     Bilgisayar etiketleri, kullanımı kolay bir ada sahip bir bilgisayarı tanımlamanızı sağlar.
 
-     Etiketler görüntülenir **sayaç kümesi eşlemeleri** Yük Testi Düzenleyicisi'nde ağaç düğümü. Daha da önemlisi, etiketler yardımcı olan bilgisayar ve yük testinde sahip rolü proje katılımcılarını belirleme, Excel raporlarında görüntülenir. Örneğin, "Web Sunucu1 lab2 içinde" veya "SQL Server2 Phoenix Office". Daha fazla bilgi için [rapor yük testleri için test karşılaştırmaları veya eğilim analizi sonuçları](../test/compare-load-test-results.md).
+     Etiketler, Yük Testi Düzenleyicisi ağaçtaki **sayaç kümesi eşlemeleri** düğümünde görüntülenir. Daha önemli olan Etiketler, paydaşların bilgisayarın yük testinde hangi rolün olduğunu belirlemesine yardımcı olan Excel raporlarında görüntülenir. Örneğin, "Web 'de Sunucu1 lab2" veya "Phoenix ofisinde SQL Sunucu2". Daha fazla bilgi için bkz. [Test karşılaştırmaları veya eğilim analizi Için rapor yükleme testleri sonuçları](../test/compare-load-test-results.md).
 
-6. Seçin **Tamam**.
+6. **Tamam ' ı**seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md)
-- [Sayaç kümelerini ve eşik kurallarını bilgisayarlar için bir yük testi içinde belirtin.](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Yük testi çalıştırma ayarlarını yapılandırma](../test/configure-load-test-run-settings.md)
+- [Yük testinde bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtin](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Yük testi çalıştırma ayarlarını yapılandır](../test/configure-load-test-run-settings.md)

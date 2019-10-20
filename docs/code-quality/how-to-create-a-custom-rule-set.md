@@ -6,17 +6,17 @@ f1_keywords:
 - vs.codeanalysis.addremoverulesets
 helpviewer_keywords:
 - rule sets
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33d8d97a5d036a2bd931bfa951fea2715569830a
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 6b904fd484135943228b2d8ac21e2df0d1c02e34
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72448990"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649503"
 ---
 # <a name="customize-a-rule-set"></a>Bir kural kümesini özelleştirme
 
@@ -57,7 +57,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 **Yeni dosya** iletişim kutusundan yeni bir kural kümesi dosyası oluşturabilirsiniz:
 
-1. @No__t **-** 1**Yeni** > **dosyası**seçin veya **CTRL**+**N**tuşlarına basın.
+1. **Dosya**  > **Yeni**  > **Dosya**' yı seçin veya **CTRL** +**N**tuşuna basın.
 
 2. **Yeni dosya** iletişim kutusunda, sol taraftaki **genel** kategorisini seçin ve ardından **kod analizi kural kümesi**' ni seçin.
 
@@ -76,13 +76,13 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 ::: moniker range="vs-2017"
 
-3. @No__t seçin-1 **Bu kural kümesini çalıştır** **> birden çok kural kümesi seçin** .
+3. **Bu kural kümesini çalıştır>** **birden çok kural kümesi \<Choose** seçin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. @No__t seçin- **1Etkin kurallardan** **> birden çok kural kümesi seçin** .
+3. **Etkin kurallardan** **> birden çok kural kümesi \<Choose** seçin.
 
 ::: moniker-end
 
@@ -111,7 +111,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 - *Aynı önem derecesine* sahip bir kural kümesinde aynı kural iki veya daha fazla kez listeleniyorsa, **hata listesi**aşağıdaki uyarıyı görebilirsiniz:
 
-   **CA0063: ' \['niz]. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
+   **CA0063: ' \[your]. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
 
 - Kural kümesi bir **içerme** etiketi kullanarak ayarlanmış bir alt kural içeriyorsa ve alt ve üst kural her ikisi de aynı kuralı, ancak farklı önem derecelerine sahip olarak ayarlarsa, üst kural kümesindeki önem derecesi önceliklidir. Örneğin:
 

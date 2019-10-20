@@ -5,17 +5,17 @@ ms.topic: reference
 helpviewer_keywords:
 - fxcop rules
 - fxcop analyzers, ported rules
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7dec16291758b330614d8a522aaf3825ae461047
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 2ad427c058265694205444c3ade04e317e407072
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449054"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649571"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
@@ -67,8 +67,8 @@ Kural KIMLIĞI | Başlık
 [CA1063](ca1063-implement-idisposable-correctly.md) | IDisposable 'ı doğru uygulayın
 [CA1064](ca1064-exceptions-should-be-public.md) | Özel durumlar genel olmalıdır
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | Beklenmeyen konumlarda özel durum harekete geçirmeyin
-CA1066 | @No__t-0, eşit olarak geçersiz kılındığından IEquatable @ no__t-1T > uygulamalıdır
-CA1067 | IEquatable @ no__t-0T > uygularken Object. Equals (nesne) öğesini geçersiz kıl
+CA1066 | @No__t_0, eşit olarak geçersiz kılındığından, IEquatable \<T > uygulamalıdır
+CA1067 | IEquatable \<T uygularken Object. Equals (nesne) öğesini geçersiz kıl >
 [CA1068](ca1068.md) | CancellationToken parametreleri en sonda olmalıdır
 CA1200 | cref etiketlerini ön ek ile kullanmaktan kaçının
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | Harfleri yerelleştirilmiş parametreler olarak göndermeyin

@@ -14,122 +14,122 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 622dfafbe16efee1e953fbc42bfa3b94cfa3cc58
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3cbc4b9a2eecd6eb9853c515eb5358009c32843a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965277"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655908"
 ---
-# <a name="walkthrough-create-a-web-part-for-sharepoint"></a>İzlenecek yol: SharePoint için bir web bölümü oluşturma
+# <a name="walkthrough-create-a-web-part-for-sharepoint"></a>İzlenecek yol: SharePoint için bir Web Bölümü oluşturma
 
-Web bölümleri, kullanıcıların içeriğini, görünümünü ve SharePoint sitesi sayfalarının davranışını bir tarayıcı kullanarak doğrudan değiştirmesine izin etkinleştirin. Bu izlenecek yol kullanarak bir Web Bölümü oluşturulacağını gösterir **Web Bölümü** öğe şablonu Visual Studio 2010.
+Web Bölümleri, kullanıcıların SharePoint site sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak doğrudan değiştirmesini sağlar. Bu izlenecek yol, Visual Studio 2010 ' de **Web Bölümü** öğe şablonunu kullanarak bir Web Bölümü oluşturmayı gösterir.
 
-Web Bölümü, bir veri kılavuzunda çalışanlar görüntüler. Kullanıcı çalışan verilerini içeren dosyanın konumunu belirtir. Böylece yöneticileri Çalışanlar yalnızca listede görüntülenen kullanıcı ayrıca veri kılavuzu filtreleyebilirsiniz.
+Web Bölümü çalışanları bir veri kılavuzunda görüntüler. Kullanıcı, çalışan verilerini içeren dosyanın konumunu belirtir. Kullanıcı, yönetici olan çalışanların yalnızca listede görünmesini sağlamak için veri kılavuzunu da filtreleyebilir.
 
 Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Visual Studio kullanarak bir Web Bölümü oluşturma **Web Bölümü** öğe şablonu.
+- Visual Studio **Web Bölümü** öğe şablonunu kullanarak bir Web Bölümü oluşturma.
 
-- Bir özelliği, oluşturma, Web Bölümü'nün kullanıcı tarafından ayarlanabilir. Bu özellik, çalışan veri dosyasının konumunu belirtir.
+- Web bölümünün kullanıcısı tarafından ayarlanabilir bir özellik oluşturma. Bu özellik, çalışan veri dosyasının konumunu belirtir.
 
-- Web bölümüne denetimler ekleyerek bir Web Bölümü içeriği oluşturma koleksiyonu denetler.
+- Web bölümü denetimleri koleksiyonuna denetimler ekleyerek bir Web bölümünde içerik işleme.
 
-- Yeni bir menü öğesi oluşturma olarak adlandırılan bir *fiili* işlenmiş Web Bölümü fiilleri menüsünde görünür. Web bölümünde görünen verileri değiştirmek kullanıcı fiillere etkinleştirin.
+- İşlenmiş Web bölümünün fiiller menüsünde görünen, *fiil* olarak adlandırılan yeni bir menü öğesi oluşturma. Fiiller, kullanıcının Web bölümünde görünen verileri değiştirmesini sağlar.
 
-- SharePoint Web bölümünü sınama.
+- SharePoint 'te Web bölümünü test etme.
 
     > [!NOTE]
-    > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+    > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-- Microsoft Windows ve SharePoint sürümleri desteklenir.
+- Desteklenen Microsoft Windows ve SharePoint sürümleri.
 
-- Visual Studio 2017 veya Azure DevOps Hizmetleri.
+- Visual Studio 2017 veya Azure DevOps Services.
 
 ## <a name="create-an-empty-sharepoint-project"></a>Boş bir SharePoint projesi oluşturma
 
-İlk olarak boş bir SharePoint projesi oluşturun. Projeye kullanarak bir Web Bölümü daha sonra ekleyeceksiniz **Web Bölümü** öğe şablonu.
+İlk olarak, boş bir SharePoint projesi oluşturun. Daha sonra, **Web Bölümü** öğe şablonunu kullanarak projeye bir Web Bölümü eklersiniz.
 
-1. Başlangıç [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kullanarak **yönetici olarak çalıştır** seçeneği.
+1. **Yönetici olarak çalıştır** seçeneğini kullanarak [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] başlatın.
 
-2. ADAM çubuğunda **dosya** > **yeni** > **proje**.
+2. Bay çubuğunda **dosya**  > **Yeni**  > **projesi**' ni seçin.
 
-3. İçinde **yeni proje** iletişim kutusunda **SharePoint** kullanın ve ardından istediğiniz dili düğümünde **2010** düğümü.
+3. **Yeni proje** iletişim kutusunda, kullanmak istediğiniz dilin altındaki **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-4. İçinde **şablonları** bölmesinde seçin **SharePoint 2010 projesi**ve ardından **Tamam** düğmesi.
+4. **Şablonlar** bölmesinde **SharePoint 2010 projesi**' ni seçin ve ardından **Tamam** düğmesini seçin.
 
-     **SharePoint Özelleştirme Sihirbazı** görünür. Bu sihirbaz, proje ve çözüm güven düzeyini hata ayıklamak için kullanacağınız siteyi seçmenizi sağlar.
+     **SharePoint Özelleştirme Sihirbazı** görüntülenir. Bu sihirbaz, projenin hatalarını ayıklamak için kullanacağınız siteyi ve çözümün güven düzeyini seçmenizi sağlar.
 
-5. Seçin **Grup çözümü olarak Dağıt** seçenek düğmesini ve ardından **son** varsayılan yerel SharePoint sitesini kabul etmek için düğmeyi.
+5. **Grup çözümü olarak dağıt** seçenek düğmesini seçin ve ardından varsayılan yerel SharePoint sitesini kabul etmek için **son** düğmesini seçin.
 
-## <a name="add-a-web-part-to-the-project"></a>Projeye bir web bölümü ekleyin
+## <a name="add-a-web-part-to-the-project"></a>Projeye bir Web Bölümü ekleme
 
-Ekleme bir **Web Bölümü** projeye öğe. **Web Bölümü** öğesi Web Bölümü kod dosyası ekler. Daha sonra Web Bölümü içeriğini işlemek için Web Bölümü kod dosyasına kod ekleyeceksiniz.
+Projeye bir **Web Bölümü** öğesi ekleyin. **Web Bölümü** öğesi, Web bölümü kod dosyasını ekler. Daha sonra Web bölümünün içeriğini işlemek için Web bölümü kod dosyasına kod ekleyeceksiniz.
 
-1. Menü çubuğunda, **proje** > **Yeni Öğe Ekle**.
+1. Menü çubuğunda, **proje**  > **Yeni öğe Ekle**' yi seçin.
 
-2. İçinde **Yeni Öğe Ekle** iletişim kutusundaki **yüklü şablonlar** bölmesinde genişletin **SharePoint** düğümünü seçip **2010** düğümü.
+2. **Yeni öğe Ekle** iletişim kutusunda, **yüklü şablonlar** bölmesinde, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-3. SharePoint şablonları listesinde seçin **Web Bölümü** şablonu seçip **Ekle** düğmesi.
+3. SharePoint şablonları listesinde, **Web Bölümü** şablonunu seçin ve sonra **Ekle** düğmesini seçin.
 
-     **Web Bölümü** öğesi görünür **Çözüm Gezgini**.
+     **Web Bölümü** öğesi **Çözüm Gezgini**görüntülenir.
 
-## <a name="rendering-content-in-the-web-part"></a>Web bölümü içeriği oluşturma
+## <a name="rendering-content-in-the-web-part"></a>Web bölümünde içerik işleme
 
-Web Bölümü sınıfı denetimler koleksiyonuna ekleyerek Web bölümünde görünmesini istediğiniz hangi denetimlerin belirtebilirsiniz.
+Web bölümünde görünmesini istediğiniz denetimleri, Web Bölümü sınıfının denetimler koleksiyonuna ekleyerek belirtebilirsiniz.
 
-1. İçinde **Çözüm Gezgini**açın *WebPart1.vb* (Visual Basic'te) veya *WebPart1.cs* (C# dilinde).
+1. **Çözüm Gezgini**' de, *WebPart1. vb* dosyasını açın (Visual Basic) veya *WebPart1.cs* ( C#içinde).
 
-     Web Bölümü kod dosyası Kod Düzenleyicisi'nde açılır.
+     Web bölümü kod dosyası kod düzenleyicisinde açılır.
 
-2. Web Bölümü kod dosyasının en üstüne aşağıdaki deyimleri ekleyin.
+2. Aşağıdaki yönergeleri Web bölümü kod dosyasının en üstüne ekleyin.
 
      [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]
      [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]
 
-3. Aşağıdaki kodu ekleyin `WebPart1` sınıfı. Bu kod, aşağıdaki alanları bildirir:
+3. Aşağıdaki kodu `WebPart1` sınıfına ekleyin. Bu kod aşağıdaki alanları bildirir:
 
-   - Çalışanlar Web bölümünde görüntülenecek veri kılavuzu.
+   - Web bölümünde çalışanları görüntüleyen bir veri kılavuzu.
 
-   - Veri Kılavuzu filtrelemek için kullanılan bir denetimde görünen metin.
+   - Denetimde görüntülenen ve veri kılavuzunu filtrelemek için kullanılan metin.
 
-   - Bir etiket veri kılavuzu verileri görüntülemek kuramazsa, bir hata gösterir.
+   - Veri kılavuzu verileri görüntüleyemiyor ise hata görüntüleyen bir etiket.
 
    - Çalışan veri dosyasının yolunu içeren bir dize.
 
      [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
      [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]
 
-4. Aşağıdaki kodu ekleyin `WebPart1` sınıfı. Bu kodu adlı özel bir özellik ekler `DataFilePath` Web Bölümü. Özel bir özellik SharePoint'te kullanıcı tarafından ayarlanabilen bir özelliğidir. Bu özellik, alır ve veri kılavuzu doldurmak için kullanılan bir XML veri dosyasının konumunu ayarlar.
+4. Aşağıdaki kodu `WebPart1` sınıfına ekleyin. Bu kod, Web bölümüne `DataFilePath` adlı özel bir özellik ekler. Özel özellik, Kullanıcı tarafından SharePoint 'te ayarlanarak kullanılabilecek bir özelliktir. Bu özellik, veri kılavuzunu doldurmak için kullanılan bir XML veri dosyasının konumunu alır ve ayarlar.
 
      [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]
      [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]
 
-5. Değiştirin `CreateChildControls` yöntemini aşağıdaki kod ile. Bu kod aşağıdaki görevleri gerçekleştirir:
+5. @No__t_0 yöntemini aşağıdaki kodla değiştirin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
-   - Önceki adımda, veri kılavuzu ve bildirdiğiniz etiketi ekler.
+   - Önceki adımda bildirdiğiniz veri kılavuzunu ve etiketini ekler.
 
-   - Veri Kılavuzu çalışan verilerini içeren bir XML dosyasına bağlar.
+   - Veri kılavuzunu, çalışan verileri içeren bir XML dosyasına bağlar.
 
      [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)]
      [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]
 
-6. Aşağıdaki yöntemi ekleyin `WebPart1` sınıfı. Bu kod aşağıdaki görevleri gerçekleştirir:
+6. Aşağıdaki yöntemi `WebPart1` sınıfına ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
-   - İşlenmiş Web Bölümünü Web Bölümü fiilleri menüde görüntülenen fiil oluşturur.
+   - İşlenmiş Web Bölümünün Web Bölümü fiiller menüsünde görünen bir fiil oluşturur.
 
-   - Kullanıcı fiillere menüde fiili seçtiğinde başlatan olayını işler. Bu kod, veri kılavuzunda görüntülenen çalışanlar listesini filtreler.
+   - Kullanıcı fiiller menüsünde fiil seçtiğinde oluşan olayı işler. Bu kod, veri kılavuzunda görünen çalışanların listesini filtreler.
 
      [!code-csharp[SP_WebPart#5](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#5)]
      [!code-vb[SP_WebPart#5](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#5)]
 
-## <a name="test-the-web-part"></a>Web bölümünü sınama
+## <a name="test-the-web-part"></a>Web bölümünü test etme
 
-Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Otomatik olarak Web bölümünü SharePoint içindeki Web Bölümü Galerisi'ne eklenir. Web bölümü herhangi bir Web Bölümü sayfasına ekleyebilirsiniz.
+Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Web Bölümü, SharePoint 'teki Web Bölümü galerisine otomatik olarak eklenir. Web bölümünü herhangi bir Web Bölümü sayfasına ekleyebilirsiniz.
 
-1. Aşağıdaki XML bir not defteri dosyasına yapıştırın. Bu XML dosyası içinde Web Bölümü görünür örnek veriler içerir.
+1. Aşağıdaki XML 'i bir not defteri dosyasına yapıştırın. Bu XML dosyası, Web bölümünde görünecek örnek verileri içerir.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -162,61 +162,61 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Otomatik olarak 
         </employees>
     ```
 
-2. Not Defteri'nde, menü çubuğunda, **dosya** > **Kaydet**.
+2. Not defteri 'nde, menü çubuğunda **dosya**  > **farklı kaydet**' i seçin.
 
-3. İçinde **Kaydet** iletişim kutusundaki **farklı kaydetme türü** listesinde **tüm dosyaları**.
+3. **Farklı kaydet** iletişim kutusunda, **farklı kaydet türü** listesinde **tüm dosyalar**' ı seçin.
 
-4. İçinde **dosya adı** kutusuna **data.xml**.
+4. **Dosya adı** kutusuna **Data. xml**yazın.
 
-5. Kullanarak herhangi bir klasör seçin **klasörlere Gözat** düğmesine ve ardından **Kaydet** düğmesi.
+5. **Klasörlere gözatamazsınız** düğmesini kullanarak herhangi bir klasör seçin ve ardından **Kaydet** düğmesini seçin.
 
-6. Visual Studio'da **F5** anahtarı.
+6. Visual Studio 'da **F5** tuşunu seçin.
 
      SharePoint sitesi açılır.
 
-7. Üzerinde **Site eylemleri** menüsünde seçin **diğer seçenekler**.
+7. **Site eylemleri** menüsünde **diğer seçenekler**' i seçin.
 
-8. İçinde **Oluştur** sayfasında **Web Bölümü sayfası** yazın ve ardından **Oluştur** düğmesi.
+8. **Oluştur** sayfasında, **Web Bölümü sayfası** türünü seçin ve ardından **Oluştur** düğmesini seçin.
 
-9. İçinde **yeni Web Bölümü sayfası** sayfasında, sayfanın adını **SampleWebPartPage.aspx**ve ardından **Oluştur** düğmesi.
+9. **Yeni Web Bölümü sayfası** sayfasında **SampleWebPartPage. aspx**sayfasını adlandırın ve **Oluştur** düğmesini seçin.
 
      Web Bölümü sayfası görüntülenir.
 
-10. Web Bölümü sayfada herhangi bir bölge seçin.
+10. Web Bölümü sayfasında herhangi bir bölgeyi seçin.
 
-11. Sayfanın en üstünde **Ekle** sekmesine ve ardından **Web Bölümü** düğmesi.
+11. Sayfanın üst kısmında **Ekle** sekmesini seçin ve ardından **Web Bölümü** düğmesini seçin.
 
-12. İçinde **kategorileri** bölmesinde seçin **özel** klasörü seçin **WebPart1** Web Bölümü ve ardından **Ekle** düğmesi.
+12. **Kategoriler** bölmesinde **özel** klasörü seçin, **WebPart1** Web bölümünü seçin ve sonra **Ekle** düğmesini seçin.
 
      Web Bölümü sayfada görüntülenir.
 
-## <a name="test-the-custom-property"></a>Özel özellik test
+## <a name="test-the-custom-property"></a>Özel özelliği test etme
 
-Web bölümünde görünen veri kılavuzu doldurmak için her çalışan hakkında veri içeren XML dosyasının yolunu belirtin.
+Web bölümünde görünen veri kılavuzunu doldurmak için, her çalışanla ilgili verileri içeren XML dosyasının yolunu belirtin.
 
-1. Web Bölümü'nün sağ tarafta açılan oku seçin ve ardından **Web Bölümünü Düzenle** görünen menüden.
+1. Web bölümünün sağ tarafında görüntülenen oku seçin ve açılan menüden **Web bölümünü Düzenle** ' yi seçin.
 
-     Web Bölümü için özellikleri içeren bir bölme, sayfanın sağ tarafında görünür.
+     Web Bölümü özelliklerini içeren bir bölme sayfanın sağ tarafında görünür.
 
-2. Bölmesinde, **çeşitli** düğümünü seçin, daha önce oluşturduğunuz XML dosyasının yolunu girin **Uygula** düğmesine ve ardından **Tamam** düğmesi.
+2. Bölmesinde, **çeşitli** düğümünü genişletin, daha önce oluşturduğunuz XML dosyasının yolunu girin, **Uygula** düğmesini seçin ve sonra **Tamam** düğmesini seçin.
 
-     Çalışanların listesi Web bölümünde göründüğünden emin olun.
+     Bir çalışanlar listesinin Web bölümünde göründüğünü doğrulayın.
 
-## <a name="test-the-web-part-verb"></a>Web bölümü fiili test
+## <a name="test-the-web-part-verb"></a>Web Bölümü fiilini test etme
 
-Gösterebilir ve Web Bölümü fiilleri menüde görünen bir öğeye tıklayarak Yöneticileri olmayan çalışanların gizleyebilirsiniz.
+Web Bölümü fiiller menüsünde görünen bir öğeye tıklayarak yönetici olmayan çalışanları gösterin ve gizleyin.
 
-1. Web Bölümü'nün sağ tarafta açılan oku seçin ve ardından **yalnızca yöneticileri Göster** görünen menüden.
+1. Web bölümünün sağ tarafında görüntülenen oku seçin ve ardından açılan menüden **yöneticileri göster** ' i seçin.
 
-     Yalnızca yöneticileri çalışanlar Web bölümünde görüntülenir.
+     Web bölümünde yalnızca Yöneticiler olan çalışanlar görüntülenir.
 
-2. Oku tekrar seçin ve ardından **Göster tüm çalışanlar** görünen menüden.
+2. Oku yeniden seçin ve açılan menüden **tüm çalışanları göster** ' i seçin.
 
-     Tüm çalışanların Web bölümünde görüntülenir.
+     Tüm çalışanlar Web bölümünde görünür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)
-[nasıl yapılır: Bir SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md)
-[nasıl yapılır: Tasarımcı kullanarak bir SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)
-[izlenecek yol: Tasarımcı kullanarak SharePoint için bir web bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
+[SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md) 
+[nasıl yapılır: SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md) 
+[nasıl yapılır: tasarımcı kullanarak SharePoint Web](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) bölümü oluşturma 
+[izlenecek yol: tasarımcı kullanarak SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

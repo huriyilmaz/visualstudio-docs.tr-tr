@@ -4,15 +4,15 @@ ms.date: 08/09/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Forms Designer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0df8b7ec5955f472d716af2850d2ab0b776c6552
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: b26ad18da19d5a2e53199b49e7acc024c728be9c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585337"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634024"
 ---
 # <a name="windows-forms-designer-overview"></a>Windows Form Tasarımcısı’na genel bakış
 
@@ -24,7 +24,7 @@ Tasarımcı kullanarak şunları yapabilirsiniz:
 
 - Form için bileşenleri, veri denetimlerini veya Windows tabanlı denetimleri ekleyin.
 
-- Tasarımcıda forma çift tıklayın ve bu formun `Load` olayına kod yazın veya formdaki bir denetime çift tıklayın ve denetimin varsayılan olayı için kod yazın.
+- Tasarımcıda forma çift tıklayın ve bu form için `Load` olayına kod yazın veya formdaki bir denetime çift tıklayın ve denetimin varsayılan olayı için kodu yazın.
 
 - Denetimi seçip bir ad yazarak bir denetimin metin özelliğini düzenleyin.
 
@@ -42,4 +42,4 @@ Tasarımcı kullanarak şunları yapabilirsiniz:
 - [Windows Forms Kullanıcı girişi](/dotnet/framework/winforms/user-input-in-windows-forms)
 - [Windows Forms veri bağlama](/dotnet/framework/winforms/windows-forms-data-binding)
 - [Windows Forms uygulamalarını geliştirin](/dotnet/framework/winforms/advanced/)
-- <xref:System.Windows.Forms?displayProperty=fullName>API başvurusu
+- <xref:System.Windows.Forms?displayProperty=fullName> API başvurusu

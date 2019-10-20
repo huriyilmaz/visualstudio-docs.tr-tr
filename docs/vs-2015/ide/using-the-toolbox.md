@@ -24,47 +24,47 @@ helpviewer_keywords:
 - toolbox
 ms.assetid: 82e7cb43-4d0b-4e17-b7b0-43f96c22c3c2
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 207beb085046748a4eaabdff025cd461c5ddba26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 49f5d1d0cef7ec4d5a6f8ab61c785ea01f77d24b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68179298"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652664"
 ---
 # <a name="using-the-toolbox"></a>Araç Kutusunu Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Araç kutusu denetimleri ve diğer öğeleri projenize eklemek için kullanabilirsiniz. Kullanmakta olduğunuz ve yeniden boyutlandırma ve yerleştirmenize Tasarımcı yüzeyine başka denetimler sürükleyip bırakabilirsiniz.  
-  
- Araç, Tasarımcı görünümü bir XAML dosyasının gibi tasarımcı görünümleri ile birlikte görüntülenir. Araç, kullanılabilir denetimleri geçerli tasarımcıda görüntüler.  
-  
- Projenizi denetimleri araç kutusunda görünür kümesini de etkiler hedefleyen .NET Framework sürümü. Varsayılan olarak, [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] projeleri .NET Framework 4.5.1'i hedefleyen. Projenizi'nde proje düğümüne seçerek farklı bir .NET Framework sürümünü hedefleyecek şekilde ayarlayabileceğiniz **Çözüm Gezgini**, öğesine göz atarak **özellikleri/uygulama/hedef Framework'ü**.  
-  
-## <a name="managing-the-toolbox-and-its-controls"></a>Araç ve denetimlerini yönetme  
- Varsayılan olarak araç Visual Studio IDE'nin sol tarafında daraltılmış ve imleci üzerine taşındığında görünür. Araç kutusu sabitleyebilirsiniz (tıklayarak **PIN** araç çubuğunda simge) açık kalması taşıdığınızda imleç. Ayrıca, araç penceresi çıkar ve ekran üzerinde herhangi bir yere sürükleyin. Yerleştirme, çıkar ve araç sağ tıklayarak ve seçeneklerden birini seçerek araç gizle.  
-  
- Araç kutusu sekmeyi öğeleri yeniden düzenlemek veya bağlam menüsünde aşağıdaki komutları kullanarak özel sekme ve öğeleri ekleyin:  
-  
-- **Öğeyi yeniden adlandır** -seçili öğeyi yeniden adlandırır.  
-  
-- **Tümünü Göster** -tüm olası denetimleri (geçerli Tasarımcı için geçerli olanları değil) gösterir.  
-  
-- **Liste görünümü** -denetimleri dikey listesini gösterir. Denetimleri yatay olarak işaretlenmemişse, görünür.  
-  
-- **Seç öğeleri** -açılır **araç kutusu öğelerini Seç** iletişim kutusunda görünen öğeler belirtebilirsiniz böylece **araç kutusu**. Göstermek veya seçerek ya da onay kutusunu temizleyerek bir öğeyi gizler.  
-  
-- **Öğeleri alfabetik olarak Sırala** -öğeleri ada göre sıralar.  
-  
-- **Araç çubuğunu sıfırlama** - varsayılan araç kutusunu ayarlarını geri yükler ve öğeleri.  
-  
-- **Sekme Ekle** -yeni bir araç kutusu sekmesi ekler.  
-  
-- **Yukarı Taşı** -seçili öğeyi yukarı taşır.  
-  
-- **Aşağı Taşı** -seçili öğeyi aşağı taşır.  
-  
-## <a name="creating-and-distributing-custom-toolbox-controls"></a>Oluşturma ve özel araç kutusu denetimleri dağıtma  
- Visual Basic veya Visual C# içinde bir özel araç kutusu denetimi oluşturun ve temel alan bir proje şablonu ile başlayabilirsiniz [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) veya [Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md). Denetiminiz için kodunuza dağıtmak veya kullanarak Web'de Yayımlama [araç kutusu denetimleri yükleyici](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx).
+Projenize denetim ve diğer öğeleri eklemek için araç kutusunu kullanabilirsiniz. Kullandığınız tasarımcı yüzeyine farklı denetimleri sürükleyip bırakabilir ve denetimleri yeniden boyutlandırabilir ve yerleştirebilirsiniz.
+
+ Araç kutusu, bir XAML dosyasının Tasarımcı görünümü gibi tasarımcı görünümleriyle birlikte görüntülenir. Araç kutusu yalnızca geçerli tasarımcıda kullanılabilecek denetimleri görüntüler.
+
+ Projenizin hedeflediği .NET Framework sürümü araç kutusunda görünen denetim kümesini de etkiler. Varsayılan olarak, [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] projeler .NET Framework 4.5.1 hedefleyin. **Çözüm Gezgini**' de proje düğümünü seçip **Özellikler/uygulama/hedef çerçevesine**göz atarak, projenizi .NET Framework farklı bir sürümünü hedefleyecek şekilde ayarlayabilirsiniz.
+
+## <a name="managing-the-toolbox-and-its-controls"></a>Araç kutusunu ve denetimlerini yönetme
+ Varsayılan olarak, araç kutusu Visual Studio IDE 'nin sol tarafında daraltılır ve imleç onun üzerine taşındığında görüntülenir. Araç kutusunu sabitleyebilir (araç kutusu araç çubuğundaki **sabitleme** simgesine tıklayarak) imleci taşıdığınızda açık kalması gerekir. Ayrıca araç kutusu penceresini çıkarabilir ve ekranınızdaki herhangi bir yere sürükleyebilirsiniz. Araç kutusu araç çubuğuna sağ tıklayıp seçeneklerden birini seçerek araç kutusunu sabitleyebilir, çıkarabilir ve gizleyebilirsiniz.
+
+ Bağlam menüsünde aşağıdaki komutları kullanarak bir araç kutusu sekmesindeki öğeleri yeniden düzenleyebilir veya özel sekmeler ve öğeler ekleyebilirsiniz:
+
+- **Öğeyi yeniden adlandır** -seçili öğeyi yeniden adlandırır.
+
+- **Tümünü göster** -tüm olası denetimleri gösterir (yalnızca geçerli Tasarımcı için geçerli olanları değil).
+
+- **Liste görünümü** -denetimleri dikey bir listede gösterir. İşaretlenmezse, denetimler yatay olarak görüntülenir.
+
+- **Öğeleri seç** - **araç**kutusunda görünen öğeleri belirleyebilmeniz Için **araç kutusu öğelerini Seç** iletişim kutusunu açar. Onay kutusunu seçerek veya temizleyerek bir öğeyi gösterebilir veya gizleyebilirsiniz.
+
+- **Öğeleri alfabetik olarak Sırala** -öğeleri ada göre sıralar.
+
+- **Araç çubuğunu Sıfırla** -varsayılan araç kutusu ayarlarını ve öğelerini geri yükler.
+
+- **Sekme Ekle** -yeni bir araç kutusu sekmesi ekler.
+
+- **Yukarı taşı** -seçili öğeyi yukarı taşır.
+
+- **Aşağı taşı** -seçili öğeyi aşağı taşır.
+
+## <a name="creating-and-distributing-custom-toolbox-controls"></a>Özel araç kutusu denetimleri oluşturma ve dağıtma
+ Visual Basic veya görselde C#özel bir araç kutusu denetimi oluşturabilirsiniz ve [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) ya da [Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md)dayalı bir proje şablonuyla başlayabilirsiniz. Daha sonra denetiminizi, [araç kutusu denetimleri yükleyicisi](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx)' ni kullanarak takım mateklarına dağıtabilir veya Web 'de yayımlayabilirsiniz.

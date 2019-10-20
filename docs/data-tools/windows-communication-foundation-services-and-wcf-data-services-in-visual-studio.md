@@ -30,118 +30,118 @@ helpviewer_keywords:
 - WCF services, endpoints
 - service method, called asynchronously[Visual Studio]
 ms.assetid: d56f12cb-e139-4fec-b3e4-488383356642
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3032c73d92f69e6380427bfc675ee263a3eb013f
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 3c83e6b85e8657487254f1f4fb275a6280c786ff
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714479"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72638953"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio'da Windows Communication Foundation Hizmetleri ve WCF Veri Hizmetleri
 
-Visual Studio, Windows Communication Foundation (WCF) ve WCF Veri Hizmetleri, dağıtılmış uygulamalar oluşturmak için Microsoft teknolojileri ile çalışmaya yönelik araçlar sağlar. Bu konu Visual Studio açısından hizmetlere bir giriş sağlar. Tüm belgeler için bkz. [WCF Veri Hizmetleri 4.5](/dotnet/framework/data/wcf/index).
+Visual Studio, dağıtılmış uygulamalar oluşturmaya yönelik Windows Communication Foundation (WCF) ve WCF Veri Hizmetleri, Microsoft teknolojileri ile çalışmaya yönelik araçlar sağlar. Bu konu, Visual Studio perspektifinden hizmetlere giriş sağlar. Tüm belgeler için bkz. [WCF Veri Hizmetleri 4,5](/dotnet/framework/data/wcf/index).
 
 ## <a name="what-is-wcf"></a>WCF nedir?
 
-Windows Communication Foundation (WCF), güvenli, güvenilir, işlenen ve birlikte çalışabilen bir dağıtılmış uygulamalar oluşturmak için birleştirilmiş bir çerçevedir. ASMX web Hizmetleri, .NET uzaktan iletişim, Enterprise Hizmetleri (DCOM) ve MSMQ gibi eski işlemler arası iletişimi teknolojilerini değiştirir. WCF bu teknolojilerden birleşik bir programlama modeli altında işlevselliğini bir araya getirir. Bu, dağıtılmış uygulamalar geliştirme deneyimi basitleştirir.
+Windows Communication Foundation (WCF), güvenli, güvenilir, işlem temelli ve birlikte çalışabilen dağıtılmış uygulamalar oluşturmaya yönelik Birleşik bir çerçevedir. ASMX Web Hizmetleri, .NET Remoting, Enterprise Services (DCOM) ve MSMQ gibi eski işlemler arası iletişim teknolojilerinin yerini alır. WCF, birleştirilmiş bir programlama modeli altındaki tüm teknolojilerin işlevlerini birlikte getirir. Bu, dağıtılmış uygulamalar geliştirme deneyimini basitleştirir.
 
-### <a name="what-are-wcf-data-services"></a>WCF Veri Hizmetleri nelerdir
+### <a name="what-are-wcf-data-services"></a>WCF Veri Hizmetleri nedir?
 
-WCF Veri Hizmetleri, standart açık veri (OData) protokolünün bir uygulamasıdır.  Tablolu verileri gibi standart HTTP fiillerini kullanarak veri alma, sonrası, YERLEŞTİRME veya silme gelmesini REST API'ler, bir dizi açığa WCF veri hizmetleri sağlar. Sunucu tarafında, WCF Veri Hizmetleri tarafından değiştirilen [ASP.NET Web API](http://www.asp.net/web-api) yeni OData hizmetlerini oluşturma. WCF Veri Hizmetleri İstemci Kitaplığı Visual Studio'dan bir .NET uygulamasında OData hizmetlerini kullanma için iyi bir seçim olmaya devam eder (**proje** > **hizmet Başvurusu Ekle**). Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](http://go.microsoft.com/fwlink/?LinkID=119952).
+WCF Veri Hizmetleri, açık veri (OData) protokolü standardının bir uygulamasıdır.  WCF Veri Hizmetleri, tablo verilerini bir dizi REST API 'si olarak kullanıma sunmanızı sağlayarak GET, POST, PUT veya DELETE gibi standart HTTP fiillerini kullanarak veri döndürmenize olanak tanır. Sunucu tarafında WCF Veri Hizmetleri, yeni OData Hizmetleri oluşturmak için [ASP.NET Web API 'sinin](http://www.asp.net/web-api) yerini almıştır. WCF Veri Hizmetleri istemci kitaplığı, Visual Studio 'dan bir .NET uygulamasında (**proje**  > **hizmet başvurusu Ekle**) OData hizmetlerini kullanmak için iyi bir seçenek olmaya devam etmektedir. Daha fazla bilgi için bkz. [WCF Veri Hizmetleri 4,5](http://go.microsoft.com/fwlink/?LinkID=119952).
 
 ### <a name="wcf-programming-model"></a>WCF programlama modeli
 
-İki varlık arasındaki iletişimi WCF programlama modeli dayanır: bir WCF hizmeti ve bir WCF istemcisi. Programlama modeli içinde kapsüllenir <xref:System.ServiceModel> .NET içinde ad alanı.
+WCF programlama modeli iki varlık arasındaki iletişimi temel alır: bir WCF hizmeti ve WCF istemcisi. Programlama modeli, .NET 'teki <xref:System.ServiceModel> ad alanında kapsüllenir.
 
-### <a name="wcf-service"></a>WCF Hizmeti
+### <a name="wcf-service"></a>WCF hizmeti
 
-Bir WCF hizmeti, hizmet ve istemci arasındaki bir sözleşme tanımlayan bir arabirim dayanır. İle işaretlenmiş bir <xref:System.ServiceModel.ServiceContractAttribute> aşağıdaki kodda gösterildiği gibi öznitelik:
+WCF hizmeti, hizmet ile istemci arasında bir sözleşmeyi tanımlayan arabirimi temel alır. Aşağıdaki kodda gösterildiği gibi bir <xref:System.ServiceModel.ServiceContractAttribute> özniteliğiyle işaretlenir:
 
 [!code-csharp[WCFWalkthrough#6](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.cs)]
 [!code-vb[WCFWalkthrough#6](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.vb)]
 
-İşlevleri veya yöntemleri ile işaretleyerek bir WCF hizmeti tarafından sunulan tanımladığınız bir <xref:System.ServiceModel.OperationContractAttribute> özniteliği.
+Bir WCF hizmeti tarafından sunulan işlevleri veya yöntemleri bir <xref:System.ServiceModel.OperationContractAttribute> özniteliğiyle işaretleyerek tanımlarsınız.
 
 [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.cs)]
 [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.vb)]
 
-Ayrıca, bileşik bir türü ile işaretleyerek serileştirilmiş verilerini açığa çıkarabilir bir <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği. Bu, istemcisinde veri bağlama sağlar.
+Ayrıca, bir <xref:System.Runtime.Serialization.DataContractAttribute> özniteliğiyle bileşik bir tür işaretleyerek serileştirilmiş verileri kullanıma sunabilirsiniz. Bu, bir istemcide veri bağlamayı mümkün bir şekilde sunar.
 
-Bir arabirim ve metotlarını tanımlandıktan sonra bunlar arabirimi uygulayan bir sınıf içinde kapsüllenir. Tek bir WCF hizmet sınıfı, birden çok hizmet sözleşmelerini uygulayabilirsiniz.
+Bir arabirim ve yöntemleri tanımlandıktan sonra, arabirimini uygulayan bir sınıfta kapsüllenir. Tek bir WCF hizmeti sınıfı, birden çok hizmet sözleşmesi uygulayabilir.
 
-Bir WCF hizmeti olarak tüketim üzerinden ne bilinen için sunulan bir *uç nokta*. Uç nokta hizmetiyle iletişim kurmak için tek yolu sağlar. diğer sınıflarla gibi bir doğrudan başvuru hizmetine erişilemiyor.
+Bir WCF hizmeti, *uç nokta*olarak bilinen bir şekilde tüketimine sunulur. Uç nokta, hizmetle iletişim kurmanın tek yolunu sağlar; diğer sınıflarla yaptığınız gibi doğrudan başvuru aracılığıyla hizmete erişemezsiniz.
 
-Bir uç nokta, adres, bağlama ve bir sözleşme oluşur. Hizmet bulunduğu adresi tanımlar; Bu URL, bir FTP adresi veya ağ ya da yerel yolu olabilir. Bir bağlama hizmeti ile iletişim bir şekilde tanımlar. WCF bağlamaları, HTTP veya FTP, Windows kimlik doğrulaması veya kullanıcı adları ve parolalar gibi bir güvenlik mekanizması gibi bir protokol belirtmek için verimli bir model sağlar ve daha fazlasını. Bir sözleşme WCF hizmet sınıfı tarafından sunulan işlemlerini içerir.
+Bir uç nokta, bir adres, bağlama ve bir anlaşmada oluşur. Adres, hizmetin nerede olduğunu tanımlar; Bu bir URL, FTP adresi veya ağ ya da yerel yol olabilir. Bağlama, hizmetle iletişim kurma şeklini tanımlar. WCF bağlamaları, HTTP veya FTP gibi bir protokol ve Windows kimlik doğrulaması, Kullanıcı adları ve parolalar gibi bir güvenlik mekanizması ve çok daha fazlasını belirtmek için çok yönlü bir model sağlar. Bir sözleşme, WCF hizmet sınıfı tarafından sunulan işlemleri içerir.
 
-Birden fazla uç nokta için tek bir WCF hizmet sunulabilir. Bu, farklı şekilde aynı hizmetle iletişim kurmak farklı istemcilerin sağlar. Örneğin, bir bankacılık hizmeti bir uç nokta çalışanlar ve başka bir dış müşteriler için her bağlama, farklı bir adres kullanarak sağlar ve/veya sözleşme.
+Tek bir WCF hizmeti için birden fazla uç nokta sunulabilir. Bu, farklı istemcilerin aynı hizmetle farklı yollarla iletişim kurmasını sağlar. Örneğin, bir bankacılık hizmeti çalışanlar için bir uç nokta ve her biri farklı bir adres, bağlama ve/veya sözleşme kullanan harici müşteriler için bir uç nokta sağlayabilir.
 
 ### <a name="wcf-client"></a>WCF istemcisi
 
-Bir WCF istemcisi oluşan bir *proxy* bir WCF Hizmeti ile iletişim kurmak bir uygulama sağlar ve bir uç nokta eşleşen bir uç nokta için hizmet tanımlı. Ara sunucu istemci tarafında oluşturulur *app.config* dosya ve hizmet tarafından kullanıma sunulan yöntemleri ve türleri hakkında bilgi içerir. Birden çok uç noktalarını kullanıma Hizmetleri için istemci kendi gereksinimlerini, örneğin, HTTP üzerinden iletişim kurmak ve Windows kimlik doğrulaması kullanmak için en uygun olanı seçebilirsiniz.
+WCF istemcisi, bir uygulamanın bir WCF hizmeti ile iletişim kurmasını sağlayan bir *proxy* 'den ve hizmet için tanımlanan bir uç nokta ile eşleşen bir uç noktanın oluşur. Proxy, *app. config* dosyasındaki istemci tarafında oluşturulur ve hizmet tarafından açığa çıkarılan türler ve yöntemler hakkında bilgi içerir. Birden çok bitiş noktası sunan hizmetler için, istemci, HTTP üzerinden iletişim kurmak ve Windows kimlik doğrulamasını kullanmak gibi, ihtiyaçlarına en uygun olanı seçebilir.
 
-Bir WCF istemcisi oluşturulduktan sonra diğer nesnelerde olduğu gibi kodunuzda hizmete başvuramaz. Örneğin, çağrılacak `GetData` yazma aşağıdakine benzer kod daha önce gösterilen yöntemi:
+Bir WCF istemcisi oluşturulduktan sonra, kodunuzun içindeki hizmete tıpkı diğer herhangi bir nesne gibi başvurabilirsiniz. Örneğin, daha önce gösterilen `GetData` yöntemi çağırmak için aşağıdakine benzer bir kod yazarsınız:
 
 [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.cs)]
 [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.vb)]
 
-## <a name="wcf-tools-in-visual-studio"></a>WCF Visual Studio Araçları
+## <a name="wcf-tools-in-visual-studio"></a>Visual Studio 'da WCF araçları
 
-Visual Studio, WCF hizmetleri ve WCF istemcileri hem oluşturmanıza yardımcı olacak araçlar sağlar. Araçlar gösteren bir kılavuz için bkz. [izlenecek yol: Windows Forms'ta basit bir WCF hizmeti oluşturma](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md).
+Visual Studio, WCF Hizmetleri ve WCF istemcileri oluşturmanıza yardımcı olacak araçlar sağlar. Araçları gösteren bir izlenecek yol için, bkz. [Izlenecek yol: Windows Forms basit BIR WCF hizmeti oluşturma](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md).
 
-### <a name="create-and-test-wcf-services"></a>Oluşturma ve WCF hizmetleri test etme
+### <a name="create-and-test-wcf-services"></a>WCF Hizmetleri oluşturma ve test etme
 
-WCF Visual Studio şablonları, kendi hizmetinizi hızla oluşturmak için bir temel kullanabilirsiniz. Ardından, hata ayıklamak ve hizmeti test etmek için WCF hizmet otomatik konağı ve WCF Test İstemcisi kullanabilirsiniz. Bu araçlar birlikte hızlı ve kolay bir hata ayıklama ve test döngüsünü sağlamak ve erken bir aşamada bir barındırma modeli için işleme gereksinimini ortadan kaldırır.
+Kendi hizmetinizi hızlı bir şekilde oluşturmak için WCF Visual Studio şablonlarını bir temel olarak kullanabilirsiniz. Ardından, hizmet hatalarını ayıklamak ve test etmek için WCF hizmeti otomatik ana bilgisayarı ve WCF test Istemcisi kullanabilirsiniz. Bu araçlar birlikte hızlı ve kullanışlı bir hata ayıklama ve test çevrimi sağlar ve bir barındırma modeline erken bir aşamada yürütülmesi gereksinimini ortadan kaldırır.
 
 #### <a name="wcf-templates"></a>WCF şablonları
 
-WCF Visual Studio şablonları, hizmet geliştirme için bir temel sınıf yapısı sağlar. WCF çeşitli şablonlar kullanılabilir **Yeni Proje Ekle** iletişim kutusu. Bunlar, WCF Hizmeti lLibrary projeleri, WCF Hizmeti ile Web siteleri ve WCF Hizmeti öğe şablonları içerir.
+WCF Visual Studio şablonları, hizmet geliştirme için temel bir sınıf yapısı sağlar. Çeşitli WCF şablonları **Yeni Proje Ekle** iletişim kutusunda kullanılabilir. Bunlar WCF hizmeti lLibrary projelerini, WCF hizmeti Web sitelerini ve WCF hizmeti öğe şablonlarını içerir.
 
-Bir şablon seçin, bir hizmet sözleşmesi, hizmet uygulaması ve hizmet yapılandırması için dosyalar eklenir. Hizmet, basit bir "Merhaba Dünya" türünü oluşturma, tüm gerekli özniteliklere zaten eklenir ve kod yazmadan yoktu. Elbette, işlevleri ve gerçek dünya hizmetiniz için yöntemler sağlamak üzere kod eklemek istediğiniz ancak şablonların temel sağlamasıdır.
+Bir şablon seçtiğinizde, bir hizmet sözleşmesi, hizmet uygulama ve hizmet yapılandırması için dosyalar eklenir. Tüm gerekli öznitelikler zaten eklendi, basit bir "Merhaba Dünya" hizmet türü oluşturuyor ve herhangi bir kod yazmak zorunda değilsiniz. Kuşkusuz, gerçek dünya hizmetiniz için işlevler ve Yöntemler sağlamak üzere kod eklemek isteyeceksiniz, ancak şablonlar temel temeli sağlar.
 
-WCF şablonları hakkında daha fazla bilgi için bkz: [WCF Visual Studio şablonları](/dotnet/framework/wcf/wcf-vs-templates).
+WCF şablonları hakkında daha fazla bilgi için bkz. [WCF Visual Studio şablonları](/dotnet/framework/wcf/wcf-vs-templates).
 
-#### <a name="wcf-service-host"></a>WCF hizmet konağı
+#### <a name="wcf-service-host"></a>WCF hizmet ana bilgisayarı
 
-Visual Studio hata ayıklayıcısını başlattığınızda (tuşuna basarak **F5**) bir WCF hizmet projesi için WCF hizmet konağı aracı otomatik olarak hizmeti yerel olarak barındırmak için başlatılır. WCF hizmet konağı bir WCF Hizmeti projesini Hizmetleri'nde numaralandırır, projenin yapılandırması yükler ve bulduğu her hizmet için bir ana bilgisayar örneği oluşturur.
+Bir WCF hizmeti projesi için Visual Studio hata ayıklayıcısını başlattığınızda ( **F5**tuşuna basarak), hizmeti yerel olarak BARıNDıRMAK Için WCF hizmeti ana bilgisayar aracı otomatik olarak başlatılır. WCF hizmeti ana bilgisayarı bir WCF hizmeti projesindeki Hizmetleri numaralandırır, projenin yapılandırmasını yükler ve bulduğu her hizmet için bir konak başlatır.
 
-WCF hizmet konağı kullanarak ek kod yazmadan veya belirli bir ana bilgisayara geliştirme sırasında yürüten olmadan bir WCF Hizmeti sınayabilirsiniz.
+WCF hizmeti ana bilgisayarı kullanarak, ek kod yazmadan veya geliştirme sırasında belirli bir konağa işlemeden bir WCF hizmetini test edebilirsiniz.
 
-WCF hizmet konağı hakkında daha fazla bilgi için bkz: [WCF hizmet Konağı (WcfSvcHost.exe)](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe).
+WCF hizmet ana bilgisayarı hakkında daha fazla bilgi için bkz. [WCF hizmet Konağı (WcfSvcHost. exe)](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe).
 
-#### <a name="wcf-test-client"></a>WCF test istemcisi
+#### <a name="wcf-test-client"></a>WCF Test istemcisi
 
-WCF Test İstemcisi aracı test parametreleri giriş, bir WCF hizmeti için girdi gönderme sağlar ve hizmet geri gönderir yanıtı görüntüleyin. Bu deneyimi ile WCF hizmet konağı birleştirdiğinizde test uygun bir hizmet sağlar. Aracı bulma *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* klasör.
+WCF test Istemcisi Aracı, test parametreleri girmenizi, bu girişi bir WCF hizmetine göndermenizi ve hizmetin geri gönderdiği yanıtı görüntülemenizi sağlar. WCF hizmet ana bilgisayarı ile birleştirdiğinizde uygun bir hizmet testi deneyimi sağlar. Aracı *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE* klasöründe bulun.
 
-Bastığınızda **F5** WCF Test istemcisi bir WCF Hizmeti projede hata ayıklamak için açılır ve yapılandırma dosyasında tanımlanan hizmet uç noktaları listesini görüntüler. Test parametreleri ve hizmeti başlatın ve sürekli olarak test edin ve hizmetinizi doğrulamak için bu işlemi yineleyin.
+WCF hizmeti projesinde hata ayıklamak için **F5** tuşuna BASTıĞıNıZDA, WCF Test istemcisi açılır ve yapılandırma dosyasında tanımlanan hizmet uç noktalarının bir listesini görüntüler. Parametreleri test edebilir ve hizmeti başlatabilir ve hizmetinizi sürekli olarak test etmek ve doğrulamak için bu işlemi yineleyebilirsiniz.
 
-WCF Test İstemcisi hakkında daha fazla bilgi için bkz: [WCF test istemcisi (WcfTestClient.exe)](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe).
+WCF test Istemcisi hakkında daha fazla bilgi edinmek için bkz. [WCF Test istemcisi (WcfTestClient. exe)](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe).
 
-### <a name="accessing-wcf-services-in-visual-studio"></a>Visual Studio'da WCF hizmetlerine erişme
+### <a name="accessing-wcf-services-in-visual-studio"></a>Visual Studio 'da WCF hizmetlerine erişme
 
-Visual Studio, WCF istemcileri otomatik olarak bir ara sunucu ve aracılığıyla eklediğiniz Hizmetleri için uç nokta oluşturma, oluşturma görevini basitleştirir **hizmet Başvurusu Ekle** iletişim kutusu. Tüm gerekli yapılandırma bilgileri eklenir *app.config* dosya. Çoğu zaman tüm yapmanız gereken olan örneği hizmet kullanmak için.
+Visual Studio, WCF istemcileri oluşturma görevini basitleştirir, otomatik olarak bir ara sunucu ve **hizmet başvurusu Ekle** iletişim kutusunu kullanarak eklediğiniz hizmetler için bir uç nokta oluşturur. Tüm gerekli yapılandırma bilgileri *app. config* dosyasına eklenir. Çoğu zaman tüm yapmanız gereken, hizmeti kullanmak için örnekleyebilirsiniz.
 
-**Hizmet Başvurusu Ekle** iletişim kutusu için bir hizmet adresini girin ya da çözümünüz içinde tanımlanan bir hizmet için aranacak sağlar. İletişim kutusu, hizmetleri ve bu hizmetlerin sunduğu işlemleri listesini döndürür. Ayrıca kod Hizmetleri'nde başvurur ad alanı tanımlamanıza olanak sağlar.
+**Hizmet başvurusu Ekle** iletişim kutusu, bir hizmetin adresini girmenizi veya çözümünüzde tanımlanan bir hizmeti aramanızı sağlar. İletişim kutusu, hizmetlerin ve bu hizmetler tarafından sunulan işlemlerin bir listesini döndürür. Ayrıca, koddaki hizmetlere başvurmayacak ad alanını tanımlamanızı sağlar.
 
-**Yapılandırma hizmet başvuruları** iletişim kutusu, hizmet yapılandırmasını özelleştirmenizi sağlar. Hizmet adresini değiştirmek, erişim düzeyi, zaman uyumsuz davranış ve ileti anlaşması türleri belirtin ve tür yeniden yapılandırın.
+**Hizmet başvurularını Yapılandır** iletişim kutusu, bir hizmetin yapılandırmasını özelleştirmenizi sağlar. Bir hizmetin adresini değiştirebilir, erişim düzeyi, zaman uyumsuz davranış ve ileti sözleşme türlerini belirtebilir ve tür yeniden kullanımını yapılandırabilirsiniz.
 
-## <a name="how-to-select-a-service-endpoint"></a>Nasıl yapılır: Hizmet uç noktası seçin
+## <a name="how-to-select-a-service-endpoint"></a>Nasıl yapılır: hizmet uç noktası seçme
 
-Bazı Windows Communication Foundation (WCF) Hizmetleri bir istemci hizmeti ile iletişim kurabilir birden çok uç noktalarını kullanıma sunar. Örneğin, bir hizmeti bir HTTP bağlaması ve kullanıcı adı ve parola güvenlik kullanan bir uç nokta ve FTP ve Windows kimlik doğrulaması kullanan ikinci bir uç nokta doğurabilir. İkinci bir intranet üzerinde kullanılabilir ise ilk uç hizmeti bir güvenlik duvarı dışından erişen uygulamalar tarafından kullanılıyor olabilir.
+Bazı Windows Communication Foundation (WCF) Hizmetleri, bir istemcinin hizmetle iletişim kurabildiği birden çok uç noktasını kullanıma sunar. Örneğin, bir hizmet, bir HTTP bağlaması ve Kullanıcı adı ve parola güvenliği kullanan bir uç nokta ve FTP ve Windows kimlik doğrulaması kullanan ikinci bir uç nokta açığa çıkabilir. İlk uç nokta, hizmete bir güvenlik duvarı dışından erişen uygulamalar tarafından kullanılabilir, ikincisi ise bir intranette kullanılabilir.
 
-Böyle bir durumda, belirttiğiniz `endpointConfigurationName` bir parametresi olarak bir hizmet başvurusu için oluşturucu.
+Böyle bir durumda, bir hizmet başvurusunun oluşturucusuna parametre olarak `endpointConfigurationName` belirtebilirsiniz.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-### <a name="to-select-a-service-endpoint"></a>Hizmet uç noktası seçin
+### <a name="to-select-a-service-endpoint"></a>Hizmet uç noktası seçmek için
 
-1. ' Nde proje düğümüne sağ tıklayarak bir WCF hizmeti bir başvuru ekleyin **Çözüm Gezgini** seçip **hizmet Başvurusu Ekle**.
+1. **Çözüm Gezgini** ' de proje düğümüne sağ tıklayıp **hizmet başvurusu Ekle**' yi seçerek bir WCF hizmetine bir başvuru ekleyin.
 
-2. Kod Düzenleyicisi'nde hizmet başvurusu için bir oluşturucu ekleyin:
+2. Kod düzenleyicisinde, hizmet başvurusu için bir Oluşturucu ekleyin:
 
     ```vb
     Dim proxy As New ServiceReference.Service1Client(
@@ -152,116 +152,116 @@ Böyle bir durumda, belirttiğiniz `endpointConfigurationName` bir parametresi o
     ```
 
     > [!NOTE]
-    > Değiştirin *ServiceReference* değiştirin ve hizmet başvurusu için ad alanı ile *Service1Client* hizmetin adı.
+    > *ServiceReference* öğesini hizmet başvurusu için ad alanıyla değiştirin ve *Service1Client* değerini hizmetin adıyla değiştirin.
 
-3. Bir IntelliSense listesi için oluşturucu aşırı yüklemeleri içeren görüntüler. Seçin `endpointConfigurationName As String` aşırı yükleme.
+3. Oluşturucunun aşırı yüklerini içeren bir IntelliSense listesi görüntülenir. @No__t_0 aşırı yüklemeyi seçin.
 
-4. Aşırı yükleme yazın `=` *ConfigurationName*burada *ConfigurationName* kullanmak istediğiniz uç noktaya adıdır.
+4. Aşırı yüklemeden sonra, *ConfigurationName* , kullanmak istediğiniz uç noktanın adı olan `=` *ConfigurationName*yazın.
 
     > [!NOTE]
-    > Kullanılabilir uç noktalar adını bilmiyorsanız, bunları bulabilirsiniz *app.config* dosya.
+    > Kullanılabilir uç noktaların adlarını bilinmediğinizde, bunları *app. config* dosyasında bulabilirsiniz.
 
-### <a name="to-find-the-available-endpoints-for-a-wcf-service"></a>Bir WCF hizmeti için kullanılabilir uç noktalar bulmak için
+### <a name="to-find-the-available-endpoints-for-a-wcf-service"></a>Bir WCF hizmeti için kullanılabilir uç noktaları bulmak için
 
-1. İçinde **Çözüm Gezgini**, sağ **app.config** hizmet başvurusunu içeren proje için dosya ve ardından **açık**. Dosya, Kod Düzenleyicisi'nde görünür.
+1. **Çözüm Gezgini**' de, hizmet başvurusunu içeren proje için **app. config** dosyasına sağ tıklayın ve sonra **Aç**' a tıklayın. Dosya kod düzenleyicisinde görünür.
 
-2. Arama `<Client>` dosyasındaki etiketi.
+2. Dosyadaki `<Client>` etiketini arayın.
 
-3. Altındaki arama `<Client>` etiketi ile başlayan etiket `<Endpoint>`.
+3. @No__t_1 ile başlayan bir etiket için `<Client>` etiketinin altında arama yapın.
 
-     Hizmet başvurusu birden fazla uç nokta sağlıyorsa, olacaktır iki veya daha fazla `<Endpoint` etiketler.
+     Hizmet başvurusu birden fazla uç nokta sağlıyorsa, iki veya daha fazla `<Endpoint` etiketi olacaktır.
 
-4. İçinde `<EndPoint>` etiketlemek, size bir `name="` *SomeService* `"` parametresi (burada *SomeService* bir uç nokta adı temsil eder). Geçirilebilir uç nokta unvanıdır `endpointConfigurationName As String` bir hizmet başvurusu için bir oluşturucu aşırı yüklemesi.
+4. @No__t_0 etiketinin içinde, bir `name="`*someservice* `"` parametresi ( *SomeService* 'in bir uç nokta adını temsil ettiği) bulacaksınız. Bu, bir hizmet başvurusu için bir oluşturucunun `endpointConfigurationName As String` aşırı yüküne geçirilebilecek olan bitiş noktasının adıdır.
 
-## <a name="how-to-call-a-service-method-asynchronously"></a>Nasıl yapılır: Bir hizmet yöntemini zaman uyumsuz olarak çağırma
+## <a name="how-to-call-a-service-method-asynchronously"></a>Nasıl yapılır: bir hizmet yöntemini zaman uyumsuz olarak çağırma
 
-Windows Communication Foundation (WCF) hizmetlerini çoğu yöntemleri zaman uyumlu veya zaman uyumsuz olarak çağrılabilir. Zaman uyumsuz bir yöntemi çağırmak uygulamanızın yavaş bir bağlantı üzerinden çalıştığında yöntemi Aranan çalışmaya devam olanak tanır.
+Windows Communication Foundation (WCF) hizmetlerindeki yöntemlerin çoğu, zaman uyumlu veya zaman uyumsuz olarak çağrılabilir. Yöntemi zaman uyumsuz olarak çağırmak, yavaş bir bağlantı üzerinden çalışırken yöntem çağrıldığında uygulamanızın çalışmaya devam etmesini sağlar.
 
-Bir hizmet başvurusu bir projeye eklendiğinde varsayılan olarak, zaman uyumlu yöntemleri çağırmak için yapılandırılır. Bir ayarı değiştirerek zaman uyumsuz yöntemleri çağırma davranışını değiştirebilirsiniz **hizmet başvurusu yapılandırma** iletişim kutusu.
+Varsayılan olarak, bir projeye bir hizmet başvurusu eklendiğinde, yöntemleri zaman uyumlu olarak çağırmak üzere yapılandırılır. **Hizmet başvurusunu Yapılandır** iletişim kutusunda bir ayarı değiştirerek yöntemleri zaman uyumsuz olarak çağırma davranışını değiştirebilirsiniz.
 
 > [!NOTE]
-> Bu seçenek, bir hizmet başına temelinde ayarlanır. Zaman uyumsuz olarak bir hizmet için bir yöntem çağrılırsa, tüm yöntemlerin zaman uyumsuz olarak çağrılmalıdır.
+> Bu seçenek hizmet başına temelinde ayarlanır. Bir hizmet için bir yöntem zaman uyumsuz olarak çağrılırsa, tüm yöntemler zaman uyumsuz olarak çağrılmalıdır.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-### <a name="to-call-a-service-method-asynchronously"></a>Bir hizmet yöntemini zaman uyumsuz olarak çağırma
+### <a name="to-call-a-service-method-asynchronously"></a>Bir hizmet yöntemini zaman uyumsuz olarak çağırmak için
 
-1. İçinde **Çözüm Gezgini**, hizmet başvurusunu seçin.
+1. **Çözüm Gezgini**' de, hizmet başvurusunu seçin.
 
-2. Üzerinde **proje** menüsünü tıklatın **hizmet başvurusu Yapılandır**.
+2. **Proje** menüsünde, **hizmet başvurusunu Yapılandır**' ı tıklatın.
 
-3. İçinde **hizmet başvurusu yapılandırma** iletişim kutusunda **zaman uyumsuz işlemler oluşturma** onay kutusu.
+3. **Hizmet başvurusunu Yapılandır** iletişim kutusunda, **zaman uyumsuz işlemler oluştur** onay kutusunu seçin.
 
-## <a name="how-to-bind-data-returned-by-a-service"></a>Nasıl yapılır: Bir hizmet tarafından döndürülen veri bağlama
+## <a name="how-to-bind-data-returned-by-a-service"></a>Nasıl yapılır: bir hizmet tarafından döndürülen verileri bağlama
 
-Yalnızca bir denetim için herhangi bir veri kaynağını bağlayabilirsiniz gibi bir denetim için bir Windows Communication Foundation (WCF) hizmeti tarafından döndürülen veriler bağlayabilirsiniz. Hizmet veri döndüren bileşik türler içeriyorsa bir WCF hizmeti bir başvuru eklediğinizde, otomatik olarak eklenen **veri kaynakları** penceresi.
+Bir Windows Communication Foundation (WCF) hizmeti tarafından döndürülen verileri, başka bir veri kaynağını bir denetime bağlayacağınız gibi bir denetime bağlayabilirsiniz. WCF hizmetine bir başvuru eklediğinizde, hizmet verileri döndüren bileşik türler içeriyorsa, bunlar otomatik olarak **veri kaynakları** penceresine eklenir.
 
-### <a name="to-bind-a-control-to-single-data-field-returned-by-a-wcf-service"></a>Bir WCF hizmeti tarafından döndürülen tek bir veri alanı denetim Bağlanılacak
+### <a name="to-bind-a-control-to-single-data-field-returned-by-a-wcf-service"></a>Bir WCF hizmeti tarafından döndürülen tek veri alanına bir denetim bağlamak için
 
-1. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
+1. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
    **Veri kaynakları** penceresi görüntülenir.
 
-2. İçinde **veri kaynakları** penceresinde, hizmet başvurusu düğümünü genişletin. Hizmet görünen tarafından döndürülen, bileşik bir tür.
+2. **Veri kaynakları** penceresinde, hizmet başvurunuz için düğümü genişletin. Hizmet görüntüsü tarafından döndürülen bileşik türler.
 
-3. Bir tür için bir düğümünü genişletin. Bu tür için veri alanlarını görünür.
+3. Bir tür için düğüm genişletin. Bu tür için veri alanları görüntülenir.
 
-4. Bir alan seçin ve veri türü için uygun olan denetimler listesini görüntülemek için açılan oka tıklayın.
+4. Bir alan seçin ve veri türü için kullanılabilen denetimlerin listesini göstermek için aşağı açılan oka tıklayın.
 
-5. Bağlamak istediğiniz denetim türünü tıklayın.
+5. Bağlamak istediğiniz denetim türüne tıklayın.
 
-6. Alanı form üzerine sürükleyin. Denetim ile birlikte formuna eklenir bir <xref:System.Windows.Forms.BindingSource> bileşeni ve bir <xref:System.Windows.Forms.BindingNavigator> bileşeni.
+6. Alanı bir formun üzerine sürükleyin. Denetim, bir <xref:System.Windows.Forms.BindingSource> bileşeni ve bir <xref:System.Windows.Forms.BindingNavigator> bileşeniyle birlikte forma eklenir.
 
-7. 6 herhangi diğer alanları ancak 4 arasındaki adımları yineleyin bağlamak istediğiniz.
+7. Bağlamak istediğiniz diğer alanlar için 4 ile 6 arasındaki adımları yineleyin.
 
-### <a name="to-bind-a-control-to-composite-type-returned-by-a-wcf-service"></a>Bir WCF hizmeti tarafından döndürülen bileşik türü bir denetim Bağlanılacak
+### <a name="to-bind-a-control-to-composite-type-returned-by-a-wcf-service"></a>WCF hizmeti tarafından döndürülen bileşik türe bir denetim bağlamak için
 
-1. Üzerinde **veri** menüsünde **veri kaynaklarını Göster**. **Veri kaynakları** penceresi görüntülenir.
+1. **Veri** menüsünde **veri kaynaklarını göster**' i seçin. **Veri kaynakları** penceresi görüntülenir.
 
-2. İçinde **veri kaynakları** penceresinde, hizmet başvurusu düğümünü genişletin. Hizmet görünen tarafından döndürülen, bileşik bir tür.
+2. **Veri kaynakları** penceresinde, hizmet başvurunuz için düğümü genişletin. Hizmet görüntüsü tarafından döndürülen bileşik türler.
 
-3. Bir tür için bir düğüm seçin ve kullanılabilir seçeneklerin bir listesini görüntülemek için açılan oka tıklayın.
+3. Bir tür için düğüm seçin ve kullanılabilir seçeneklerin listesini göstermek için aşağı açılan oka tıklayın.
 
-4. Tıklayın **DataGridView** veri kılavuzunda görüntülemek için veya **ayrıntıları** bireysel denetimlerinde verileri görüntülemek için.
+4. Verileri ayrı denetimlerde göstermek için DataGridView veya **Details** içindeki verileri göstermek için **DataGridView** ' e tıklayın.
 
-5. Düğümü form üzerine sürükleyin. İle birlikte formu için denetimler ekleninceye bir <xref:System.Windows.Forms.BindingSource> bileşeni ve bir <xref:System.Windows.Forms.BindingNavigator> bileşeni.
+5. Düğümü formun üzerine sürükleyin. Denetimler, bir <xref:System.Windows.Forms.BindingSource> bileşeni ve bir <xref:System.Windows.Forms.BindingNavigator> bileşeniyle birlikte forma eklenir.
 
-## <a name="how-to-configure-a-service-to-reuse-existing-types"></a>Nasıl yapılır: Varolan türleri yeniden kullan bir hizmetini yapılandırma
+## <a name="how-to-configure-a-service-to-reuse-existing-types"></a>Nasıl yapılır: mevcut türleri yeniden kullanmak için bir hizmet yapılandırma
 
-Bir hizmet başvurusu için bir proje eklendiğinde, hizmette tanımlanan herhangi bir türü yerel projede oluşturulur. Çoğu durumda, bu hizmet ortak .NET türleri kullanıyorsa veya türleri bir paylaşılan kitaplıkta tanımlandığında yinelenen türleri oluşturur.
+Bir projeye hizmet başvurusu eklendiğinde, hizmette tanımlı türler yerel projede oluşturulur. Çoğu durumda bu, bir hizmet ortak .NET türlerini kullandığında veya türler paylaşılan bir kitaplıkta tanımlandığında yinelenen türler oluşturur.
 
-Bu sorunu önlemek için bütünleştirilmiş kodlardaki türleri varsayılan olarak paylaşılır. Tür için bir veya daha fazla derlemeleri paylaşımı devre dışı bırakmak isterseniz, bu nedenle, bunu yapabilirsiniz **yapılandırma hizmet başvuruları** iletişim kutusu.
+Bu sorundan kaçınmak için, başvurulan derlemelerdeki türler varsayılan olarak paylaşılır. Bir veya daha fazla derleme için tür paylaşımını devre dışı bırakmak istiyorsanız, **Hizmet başvurularını Yapılandır** iletişim kutusunda bunu yapabilirsiniz.
 
-### <a name="to-disable-type-sharing-in-a-single-assembly"></a>Tek bir bütünleştirilmiş kod paylaşımı türü devre dışı bırakmak için
+### <a name="to-disable-type-sharing-in-a-single-assembly"></a>Tek bir derlemede tür paylaşımını devre dışı bırakmak için
 
-1. İçinde **Çözüm Gezgini**, hizmet başvurusunu seçin.
+1. **Çözüm Gezgini**' de, hizmet başvurusunu seçin.
 
-2. Üzerinde **proje** menüsünü tıklatın **hizmet başvurusu Yapılandır**.
+2. **Proje** menüsünde, **hizmet başvurusunu Yapılandır**' ı tıklatın.
 
-3. İçinde **yapılandırma hizmet başvuruları** iletişim kutusunda **belirtilen bütünleştirilmiş kodlardaki türleri yeniden**.
+3. **Hizmet başvurularını Yapılandır** iletişim kutusunda, **belirtilen başvurulan derlemelerdeki türleri yeniden kullan**' ı seçin.
 
-4. Tür paylaşımını etkinleştirmek istediğiniz her derleme için onay kutusunu seçin. Bir derleme için paylaşım türü devre dışı bırakmak için onay kutusunu temizleyin.
+4. Tür paylaşımını etkinleştirmek istediğiniz her derleme için onay kutusunu seçin. Bir derlemenin tür paylaşımını devre dışı bırakmak için onay kutusunu işaretsiz bırakın.
 
-### <a name="to-disable-type-sharing-in-all-assemblies"></a>Tüm derlemelerde paylaşım türü devre dışı bırakmak için
+### <a name="to-disable-type-sharing-in-all-assemblies"></a>Tüm derlemelerde tür paylaşımını devre dışı bırakmak için
 
-1. İçinde **Çözüm Gezgini**, hizmet başvurusunu seçin.
+1. **Çözüm Gezgini**' de, hizmet başvurusunu seçin.
 
-2. Üzerinde **proje** menüsünü tıklatın **hizmet başvurusu Yapılandır**.
+2. **Proje** menüsünde, **hizmet başvurusunu Yapılandır**' ı tıklatın.
 
-3. İçinde **yapılandırma hizmet başvuruları** iletişim kutusu, NET **bütünleştirilmiş kodlardaki türleri yeniden** onay kutusu.
+3. **Hizmet başvurularını Yapılandır** iletişim kutusunda, **başvurulan derlemelerde türleri yeniden kullan** onay kutusunu temizleyin.
 
 ## <a name="related-topics"></a>İlgili konular
 
 | Başlık | Açıklama |
 | - | - |
-| [İzlenecek yol: Windows Forms içinde basit bir WCF Hizmeti oluşturma](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md) | Oluşturma ve Visual Studio'da WCF hizmetleri kullanarak adım adım bir gösterim sağlar. |
-| [İzlenecek yol: WPF ve Entity Framework ile WCF veri hizmeti oluşturma](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | Oluşturma ve Visual Studio'da WCF veri hizmetlerini kullanmak için adım adım bir gösterim sağlar. |
-| [WCF geliştirme araçlarını kullanma](/dotnet/framework/wcf/using-the-wcf-development-tools) | Oluşturma ve WCF hizmetlerini Visual Studio'da test anlatılmaktadır. |
-| | [Nasıl yapılır: Ekleme, güncelleştirme veya WCF veri hizmeti başvurusunu Kaldır](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md) |
-| [Hizmet başvurularında sorun giderme](../data-tools/troubleshooting-service-references.md) | Hizmet başvuruları ve bunların nasıl ile ortaya çıkabilecek bazı yaygın hatalar gösterir. |
-| [WCF hizmetlerinde hata ayıklama](../debugger/debugging-wcf-services.md) | Genel hata ayıklama sorunları ve WCF hizmetlerinde hata ayıklama sırasında karşılaşabileceğiniz teknikleri açıklar. |
-| [İzlenecek yol: N katmanlı veri uygulaması oluşturma](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | Türü belirtilmiş veri kümesi oluşturma ve birden çok projelere TableAdapter ve veri kümesi kodunu ayırmak için adım adım yönergeler sağlar. |
-| [Hizmet başvurusu Yapılandır iletişim kutusu](../data-tools/configure-service-reference-dialog-box.md) | Kullanıcı arabirimi öğelerini açıklar **hizmet başvurusu yapılandırma** iletişim kutusu. |
+| [İzlenecek yol: Windows Forms içinde basit bir WCF Hizmeti oluşturma](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md) | Visual Studio 'da WCF Hizmetleri oluşturma ve kullanma hakkında adım adım bir tanıtım sağlar. |
+| [İzlenecek yol: WPF ve Entity Framework bir WCF veri hizmeti oluşturma](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | Visual Studio 'da WCF Veri Hizmetleri oluşturma ve kullanma hakkında adım adım bir tanıtım sağlar. |
+| [WCF geliştirme araçlarını kullanma](/dotnet/framework/wcf/using-the-wcf-development-tools) | Visual Studio 'da WCF hizmetlerinin nasıl oluşturulduğunu ve test yapıldığını açıklar. |
+| | [Nasıl yapılır: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md) |
+| [Hizmet başvurularının sorunlarını giderme](../data-tools/troubleshooting-service-references.md) | Hizmet başvurularıyla oluşabilecek bazı yaygın hataları ve bunların nasıl önleyebileceğini gösterir. |
+| [WCF hizmetlerinde hata ayıklama](../debugger/debugging-wcf-services.md) | WCF hizmetlerinde hata ayıklarken karşılaşabileceğiniz yaygın hata ayıklama sorunlarını ve tekniklerini açıklar. |
+| [İzlenecek yol: n katmanlı veri uygulaması oluşturma](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | Türü belirtilmiş bir veri kümesi oluşturmak ve TableAdapter ve dataset kodunu birden çok projeye ayırmak için adım adım yönergeler sağlar. |
+| [Hizmet başvurusunu yapılandırma iletişim kutusu](../data-tools/configure-service-reference-dialog-box.md) | **Hizmet başvurusunu Yapılandır** iletişim kutusunun Kullanıcı arabirimi öğelerini açıklar. |
 
 ## <a name="reference"></a>Başvuru
 

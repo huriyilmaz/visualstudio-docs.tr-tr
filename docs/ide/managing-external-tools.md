@@ -6,83 +6,83 @@ f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - external tools [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3562ed9ebf2d62ab002ac227486218c8c38ad337
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1caf72ea2dccd9dfe2978726834e8066a9f5b56b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62535685"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652389"
 ---
 # <a name="manage-external-tools"></a>Dış araçları yönetme
 
-Dış Araçları'ndan çağırabilirsiniz kullanarak Visual Studio içinde **Araçları** menüsü. Birkaç varsayılan araç ulaşılabilir **Araçları** menü ve özelleştirme menüsünü diğer yürütülebilir dosyaların kendi ekleyerek.
+**Araçlar** menüsünü kullanarak Visual Studio 'nun içinden dış araçlar çağırabilirsiniz. **Araçlar** menüsünde birkaç varsayılan araç mevcuttur ve kendi kendinize ait diğer yürütülebilir dosyaları ekleyerek menüyü özelleştirebilirsiniz.
 
-## <a name="tools-available-on-the-tools-menu"></a>Araçlar menüsünde kullanılabilen Araçlar
+## <a name="tools-available-on-the-tools-menu"></a>Araçlar menüsünde bulunan araçlar
 
-**Araçları** menüsü dahil olmak üzere çeşitli yerleşik komut içerir:
+**Araçlar** menüsü aşağıdakiler dahil olmak üzere çeşitli yerleşik komutlar içerir:
 
 ::: moniker range="vs-2017"
 
-* **Uzantılar ve güncelleştirmeler** için [Visual Studio uzantılarını yönetme](finding-and-using-visual-studio-extensions.md)
-* **Kod parçacıkları Yöneticisi** için [kod parçacıkları düzenleme](code-snippets.md)
-* **Özelleştirme** için [menüleri ve araç çubuklarını özelleştirme](how-to-customize-menus-and-toolbars-in-visual-studio.md)
-* **Seçenekleri** için [çeşitli Visual Studio IDE ve diğer araçları için farklı seçenekleri ayarlama](reference/options-dialog-box-visual-studio.md)
+* [Visual Studio uzantılarını yönetmeye](finding-and-using-visual-studio-extensions.md) yönelik **Uzantılar ve güncelleştirmeler**
+* [Kod parçacıklarını düzenlemek](code-snippets.md) Için **kod parçacıkları Yöneticisi**
+* [Menüleri ve araç çubuklarını özelleştirmek](how-to-customize-menus-and-toolbars-in-visual-studio.md) için **özelleştirin**
+* [Visual STUDIO IDE ve diğer araçlar için çeşitli farklı seçenekler ayarlama](reference/options-dialog-box-visual-studio.md) **seçenekleri**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-* **Kod parçacıkları Yöneticisi** için [kod parçacıkları düzenleme](code-snippets.md)
-* **Özelleştirme** için [menüleri ve araç çubuklarını özelleştirme](how-to-customize-menus-and-toolbars-in-visual-studio.md)
-* **Seçenekleri** için [çeşitli Visual Studio IDE ve diğer araçları için farklı seçenekleri ayarlama](reference/options-dialog-box-visual-studio.md)
+* [Kod parçacıklarını düzenlemek](code-snippets.md) Için **kod parçacıkları Yöneticisi**
+* [Menüleri ve araç çubuklarını özelleştirmek](how-to-customize-menus-and-toolbars-in-visual-studio.md) için **özelleştirin**
+* [Visual STUDIO IDE ve diğer araçlar için çeşitli farklı seçenekler ayarlama](reference/options-dialog-box-visual-studio.md) **seçenekleri**
 
 ::: moniker-end
 
-## <a name="add-new-tools-to-the-tools-menu"></a>Araçlar menüsüne yeni araçları ekleme
+## <a name="add-new-tools-to-the-tools-menu"></a>Araçlar menüsüne yeni araçlar ekleme
 
-Görüntülenmesini harici bir aracı ekleyebilirsiniz **Araçları** menüsü.
+**Araçlar** menüsünde görünecek bir dış araç ekleyebilirsiniz.
 
-1. Açık **dış Araçlar** iletişim kutusunu **Araçları** > **dış Araçları**.
+1. **Dış Araçlar iletişim kutusunu,** **Araçlar**  > **dış araçlar**' a tıklayarak açın.
 
-1. Tıklayın **Ekle**ve ardından bilgileri doldurun. Örneğin, aşağıdaki giriş neden **Windows Explorer** dosya dizininde açmak için şu anda Visual Studio'da açtığınız:
+1. **Ekle**' ye tıklayın ve ardından bilgileri girin. Örneğin, aşağıdaki giriş, **Windows Gezgini** 'nin şu anda Visual Studio 'da açtığınız dosyanın dizininde açılmasını sağlar:
 
    * Başlık: `Open File Location`
 
    * Komut: `explorer.exe`
 
-   * Bağımsız değişkenleri: `/root, "$(ItemDir)"`
+   * Bağımsız değişkenler: `/root, "$(ItemDir)"`
 
-   ![Dış araçlar iletişim kutusu](media/external-tools-dialog.png)
+   ![Dış Araçlar iletişim kutusu](media/external-tools-dialog.png)
 
-Dış bir araç tanımlarken kullanılabilir değişkenlerin tam listesi verilmiştir:
+Aşağıda, dış bir araç tanımlarken kullanılabilecek bağımsız değişkenlerin tam bir listesi verilmiştir:
 
-|Ad|Bağımsız Değişken|Açıklama|
+|Name|Bağımsız Değişken|Açıklama|
 |----------|--------------|-----------------|
-|Öğe yolu|$(ItemPath)|Geçerli dosyanın tam dosya adı (sürücü yolu + dosya adı).|
-|Öğe dizini|$(ItemDir)|Geçerli bir dosya (sürücü + yolu) dizini.|
-|Öğe dosya adı|$(ItemFilename)|Dosya adı geçerli dosyanın (dosya adı).|
-|Öğesi uzantısı|$(ItemExt)|Geçerli dosyanın dosya adı uzantısı.|
-|Geçerli satırı|$(CurLine)|İmleci kod penceresinde geçerli satır konumu.|
-|Geçerli sütun|$(CurCol)|İmleci kod penceresinde geçerli sütun konumu.|
-|Geçerli metin|$(CurText)|Seçili metni.|
-|Hedef yolu|$(TargetPath)|Oluşturulacak öğe tam dosya adı (sürücü yolu + dosya adı).|
-|Hedef Dizin|$(TargetDir)|Oluşturulacak öğe dizini.|
-|Hedef Adı|$(TargetName)|Oluşturulacak öğe dosya adı.|
-|Hedef uzantısı|$(TargetExt)|Oluşturulacak öğesinin dosya adı uzantısı.|
-|İkili dizin|$(BinDir)|Oluşturulmakta olan ikili (sürücü + yolu tanımlanan) son konum.|
-|Proje dizini|$(ProjectDir)|Geçerli proje (sürücü + yolu) dizini.|
-|Proje dosyası adı|$(ProjectFileName)|Geçerli projenin dosya adını (sürücü yolu + dosya adı).|
-|Çözüm dizini|$(SolutionDir)|Geçerli çözüme (sürücü + yolu) dizini.|
-|Çözüm dosyası adı|$(SolutionFileName)|Geçerli çözümün dosya adını (sürücü yolu + dosya adı).|
+|Öğe yolu|$ (ItemPath)|Geçerli dosyanın (sürücü + yol + dosya adı) tüm dosya adı.|
+|Öğe dizini|$ (Itemdır)|Geçerli dosyanın dizini (sürücü + yol).|
+|Öğe dosyası adı|$ (Itemfilename)|Geçerli dosyanın (dosya adı) dosya adı.|
+|Öğe uzantısı|$ (ItemExt)|Geçerli dosyanın dosya adı uzantısı.|
+|Geçerli satır|$ (CurLine)|İmlecin kod penceresindeki geçerli satır konumu.|
+|Geçerli sütun|$ (CurCol)|İmlecin kod penceresindeki geçerli sütun konumu.|
+|Geçerli metin|$ (CurText)|Seçilen metin.|
+|Hedef yol|$ (TargetPath)|Oluşturulacak öğenin tamamı dosya adı (sürücü + yol + dosya adı).|
+|Hedef Dizin|$ (TARGETDIR)|Oluşturulacak öğenin dizini.|
+|Hedef Adı|$ (TargetName)|Oluşturulacak öğenin dosya adı.|
+|Hedef uzantısı|$ (TargetExt)|Oluşturulacak öğenin dosya adı uzantısı.|
+|İkili dizin|$ (BinDir)|Oluşturulmakta olan ikilinin son konumu (sürücü + yol olarak tanımlanır).|
+|Proje dizini|$ (ProjectDir)|Geçerli projenin dizini (sürücü + yol).|
+|Proje dosyası adı|$ (ProjectFileName)|Geçerli projenin dosya adı (sürücü + yol + dosya adı).|
+|Çözüm dizini|$ (SolutionDir)|Geçerli çözümün dizini (sürücü + yol).|
+|Çözüm dosyası adı|$ (SolutionFileName)|Geçerli çözümün dosya adı (sürücü + yol + dosya adı).|
 
 > [!NOTE]
-> IDE durum çubuğu görüntüler **geçerli satırı** ve **geçerli sütunun** noktasını etkin nerede göstermek için değişkenleri **Kod Düzenleyicisi**. **Geçerli metin** metin veya bu konumda seçili kod değişkeni döndürür.
+> IDE durum çubuğu, ekleme noktasının etkin **kod düzenleyicisinde**nerede olduğunu göstermek Için **geçerli satırı** ve **Geçerli sütun** değişkenlerini görüntüler. **Geçerli metin** değişkeni, bu konumda seçili olan metni veya kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C/C++ derleme araçları](/cpp/build/reference/c-cpp-build-tools)
+- [C/C++ Build araçları](/cpp/build/reference/c-cpp-build-tools)

@@ -1,5 +1,5 @@
 ---
-title: Dosya, sembol'e Git satıra Git için Git
+title: Dosyaya git, simgeye git, satıra git
 ms.date: 08/14/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,87 +7,87 @@ helpviewer_keywords:
 - code editor, go to line
 - go to line
 - go to
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 588bc57dc2cda1030e9e1b8d1f989b2cc2d31662
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c3a810e96b410c0f1f6f5d6ffdaa07b1e007abd6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62550067"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654634"
 ---
 # <a name="find-code-using-go-to-commands"></a>Git komutlarını kullanarak kod bulma
 
-Visual Studio'nun **Git** komutları belirtilen öğeleri hızlı bir şekilde bulmanıza yardımcı olmak üzere, kodunuzun odaklanmış bir arama gerçekleştirin. Belirli bir satır, tür, sembol, dosya ve üye için basit ve birleşik bir arabirimden gidebilirsiniz.
+Visual Studio 'nun komutlara **Git** , belirtilen öğeleri hızlı bir şekilde bulmanıza yardımcı olmak için kodunuzda odaklanmış bir arama gerçekleştirir. Basit ve Birleşik bir arabirimden belirli bir satıra, türe, simgeye, dosyaya ve üyeye gidebilirsiniz.
 
-## <a name="how-to-use-it"></a>Kullanımı
+## <a name="how-to-use-it"></a>Nasıl kullanılır
 
 Giriş | İşlev
 ------------ | ---
-**Klavye** | Tuşuna **Ctrl**+**T** veya **Ctrl**+ **,**
-**Fare** | Seçin **Düzenle** > **Git** > **tümüne Git**
+**Klavyenizdeki** | **Ctrl** +**t** veya **CTRL** + tuşlarına basın **,**
+**Tığında** | **Düzenle**  > **Git** ' i seçin  > **tümüne git**
 
-Küçük bir pencere üst kısmında görüntülenir, Kod Düzenleyicisi, doğru.
+Kod Düzenleyicinizde sağ üst köşede küçük bir pencere görüntülenir.
 
-![Tümüne Git penceresi](media/go-to-all.png)
+![Tüm pencereye git](media/go-to-all.png)
 
-Metin kutusuna yazdığınız sırada, sonuçları bir metin kutusunun altındaki açılır listede görüntülenir. Bir öğeye gitmek için listeden seçin.
+Metin kutusuna yazarken sonuçlar, metin kutusunun altındaki bir açılan listede görüntülenir. Bir öğeye gitmek için listeden seçin.
 
-![Git penceresini](../ide/media/vside_navigatetowindow.png)
+![Pencereye git](../ide/media/vside_navigatetowindow.png)
 
-Bir soru işareti de girebilirsiniz ( **?** ) ek Yardım almak için.
+Ek Yardım almak için bir soru işareti ( **?** ) de girebilirsiniz.
 
-![Tüm Yardım'a gidin](media/go-to-all-help.png)
+![Tüm yardım 'A git](media/go-to-all-help.png)
 
 ## <a name="filtered-searches"></a>Filtrelenmiş aramalar
 
-Varsayılan olarak, tüm çözüm öğeleri için belirtilen öğeyi aranır. Ancak, arama terimleri belirli karakterlerle koyarak tarafından belirli bir öğe türleri için kod arama sınırlayabilirsiniz. Düğmeler seçim yaparak arama filtresi ayrıca bir kolayca değiştirebilirsiniz **Git** iletişim kutusu araç çubuğu. Sol taraftaki türü filtrelerini Değiştir düğmeleri ve sağ taraftaki arama kapsamını değiştirmek düğme vardır.
+Varsayılan olarak, belirtilen öğe tüm çözüm öğelerinde aranır. Ancak, arama terimlerinizi belirli karakterlerle önceden sunarak, kod Aramanızı belirli öğe türleriyle sınırlayabilirsiniz. Ayrıca, **Git** iletişim kutusu araç çubuğunda düğmeler ' i seçerek arama filtresini hızlıca değiştirebilirsiniz. Tür filtrelerini değiştiren düğmeler sol tarafta, aramanın kapsamını değiştiren düğmeler sağ tarafta bulunur.
 
-![Üye gidin](../ide/media/vside_navigation_toolbar.png)
+![Üyelere git](../ide/media/vside_navigation_toolbar.png)
 
-### <a name="filter-to-a-specific-type-of-code-element"></a>Kod öğesinin belirli bir türe göre filtrele
+### <a name="filter-to-a-specific-type-of-code-element"></a>Belirli bir kod öğesi türüne filtrele
 
-Belirli türde bir kod öğesi için aramanızı daraltmak için arama kutusuna bir ön ek belirtin veya beş filtre simgelerden birini seçebilirsiniz:
+Aramanızı belirli bir kod öğesi türüne daraltmak için, arama kutusunda bir ön ek belirtebilir veya beş filtre simgelerinden birini seçebilirsiniz:
 
-Ön eki | Simge | Kısayol | Açıklama
+koy | Simge | Kısayol | Açıklama
 :-: | - | - | -
-:| ![Satır simgesi](media/gotoall-line-icon.png) | **CTRL**+**G** | Belirtilen satır numarası gidin
-F| ![Dosyalar simgesi](media/gotoall-files-icon.png) | **Ctrl**+**1**, **Ctrl**+**F** | Belirtilen dosyaya Git
-r| ![Son Dosyalar simgesi](media/gotoall-recent-files-icon.png) | **Ctrl**+**1**, **Ctrl**+**R** | Belirtilen en son ziyaret edilen dosyaya Git
-t| ![Tür simgesi](media/gotoall-types-icon.png) | **CTRL**+**1**, **Ctrl**+**T** | Belirtilen türe Git
-m| ![Üye simgesi](media/gotoall-members-icon.png) | **CTRL**+**1**, **Ctrl**+**M** | Belirtilen üyeye Git
-\#| ![Sembol simgesi](media/gotoall-symbols-icon.png) | **CTRL**+**1**, **Ctrl**+**S** | Belirtilen sembol'e Git
+:| ![Çizgi simgesi](media/gotoall-line-icon.png) | **Ctrl**+**G** | Belirtilen satır numarasına git
+Vadeli| ![Dosyalar simgesi](media/gotoall-files-icon.png) | **Ctrl** +**1**, **CTRL** +**F** | Belirtilen dosyaya git
+Sağ| ![Son dosyalar simgesi](media/gotoall-recent-files-icon.png) | **Ctrl** +**1**, **CTRL** +**R** | Belirtilen, son ziyaret edilen dosyaya git
+t| ![Türler simgesi](media/gotoall-types-icon.png) | **Ctrl** +**1**, **CTRL** +**t** | Belirtilen türe git
+m| ![Üyeler simgesi](media/gotoall-members-icon.png) | **Ctrl** +**1**, **CTRL** +**ı** | Belirtilen üyeye git
+\#| ![Semboller simgesi](media/gotoall-symbols-icon.png) | **Ctrl** +**1**, **CTRL** +**S** | Belirtilen simgeye git
 
-### <a name="filter-to-a-specific-location"></a>Belirli bir konuma Filtrele
+### <a name="filter-to-a-specific-location"></a>Belirli bir konuma filtrele
 
-Belirli bir konuma aramanızı daraltmak için iki belge simgelerden birini seçin:
+Aramanızı belirli bir konuma daraltmak için, iki belge simgesinin birini seçin:
 
 Simge | Açıklama
 ---- | ---
-![Geçerli belge](media/gotoall_currentdocument.png) | Yalnızca geçerli belgede arama
-![Dış belgeleri](media/gotoall_external.png) | Bunlara ek olarak proje/çözüm bulunan dış belge Ara
+![Geçerli belge](media/gotoall_currentdocument.png) | Yalnızca geçerli belgeyi ara
+![Dış belgeler](media/gotoall_external.png) | Dış belgeleri projede/çözümde bulunanlara ek olarak ara
 
-## <a name="camel-casing"></a>Camel casing
+## <a name="camel-casing"></a>Kamel büyük harfleri
 
-Kullanırsanız [camel casing](https://en.wikipedia.org/wiki/Camel_case) kodunuzda yalnızca büyük harf kod öğe adı girerek daha hızlı kod öğeleri bulabilirsiniz. Kodunuzu adlı bir türü varsa, örneğin, `CredentialViewModel`, seçerek, aramayı daraltmak **türü** filtre (**t**) ve ardından yalnızca büyük harf adı girerek (`CVM`) içinde Git iletişim kutusu. Bu özellik, kodunuzu uzun adı varsa yararlı olabilir.
+Kodunuzda [ortası](https://en.wikipedia.org/wiki/Camel_case) büyük harfleri kullanırsanız, yalnızca kod öğesi adının büyük harflerini girerek kod öğelerini daha hızlı bulabilirsiniz. Örneğin, kodunuzun `CredentialViewModel` adında bir türü varsa, **tür** filtresini (**t**) seçerek ve ardından Git iletişim kutusunda adın yalnızca büyük harflerini (`CVM`) girerek aramayı daraltabilirsiniz. Kodunuzun uzun adlara sahip olması durumunda bu özellik yararlı olabilir.
 
-![Pencere Git ile büyük harflerin arama-](../ide/media/vside_capitalsearch.png)
+![Pencereye gitme-büyük harfler ile arama](../ide/media/vside_capitalsearch.png)
 
 ## <a name="settings"></a>Ayarlar
 
-Dişli simgesini seçme ![Dişli simgesi](media/gotoall_gear.png) Bu özellik çalışma şeklini değiştirmenize olanak sağlar:
+Dişli simgesini seçme ![Dişli simgesi](media/gotoall_gear.png) Bu özelliğin nasıl çalıştığını değiştirmenize izin verir:
 
 Ayar | Açıklama
 ------- | ---
-Önizleme sekmesini kullan | Seçili öğeyi IDE'nin Önizleme sekmesinde hemen görüntüler.
-Ayrıntıları Göster | Proje, dosya, satır ve belge açıklamaları Özet bilgilerden pencerede görüntülemektir.
-Pencereyi Ortala | Üst Orta kısmındaki Kod düzenleyicisinde, sağ üst yerine bu pencereyi Taşı
+Önizleme sekmesini kullan | Seçili öğeyi IDE 'nin önizleme sekmesinde hemen görüntüle
+Ayrıntıları göster | Penceredeki belge açıklamalarından proje, dosya, satır ve Özet bilgilerini görüntüleme
+Pencereyi Ortala | Bu pencereyi, sağ üst yerine kod düzenleyicisinin üst ortasına taşıyın
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod gidin](../ide/navigating-code.md)
+- [Koda git](../ide/navigating-code.md)
 - [Satıra Git iletişim kutusu](../ide/reference/go-to-line.md)
 - [Tanıma ve Özet Tanıma Gitme](../ide/go-to-and-peek-definition.md)

@@ -1,68 +1,67 @@
 ---
-title: 'Öğretici 1: Resim Görüntüleyici oluşturma | Microsoft Docs'
+title: 'Öğretici 1: resim görüntüleyici oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c382ff2a16e47f52a33e5c6728f0c57d57e4315b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ad57a05e45b7e9acd3db455f0a8849166dc3c735
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703061"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654756"
 ---
-# <a name="tutorial-1-create-a-picture-viewer"></a>Öğretici 1: Resim Görüntüleyici oluşturma
+# <a name="tutorial-1-create-a-picture-viewer"></a>Eğitmen 1: Resim Görüntüleyici Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu öğreticide, bir dosyadan resim yükleyen ve pencerede görüntüleyen bir program oluşturun. Düğmeler ve resim kutuları, form üzerindeki özellikleri ayarlamak ve sorunsuz formu yeniden boyutlandırmak için kapsayıcıları kullanma gibi denetimleri Sürüklemeyi öğrenin. Ayrıca, kod yazmaya başlayın. Aşağıdakilerin nasıl yapıldığını öğreneceksiniz:  
-  
-- Yeni bir proje oluşturun.  
-  
-- Test (hata ayıklama) bir uygulama.  
-  
-- Bir forma onay kutuları ve düğmeler gibi temel denetimler ekleyin.  
-  
-- Düzenleri kullanarak form üzerinde denetimleri yerleştirin.  
-  
-- Ekleme **açık dosya** ve **renk** bir forma iletişim kutuları.  
-  
-- IntelliSense ve kod parçacıkları kullanarak kod yazın.  
-  
-- Olay işleyicisi yöntemleri yazın.  
-  
-  İşiniz bittiğinde, programınız aşağıdaki resim gibi görünecektir.  
-  
-  ![Bu öğreticide oluşturduğunuz resim](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone")  
-  Bu öğreticide oluşturduğunuz resim  
-  
-  Örnek tamamlanmış bir sürümünü indirmek için bkz [eksiksiz resim görüntüleyici Öğreticisi örneği](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8).  
-  
-  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo")bu konunun video sürümü için bkz: [nasıl yazarım Visual Basic'te resim görüntüleyici oluşturma? ](http://go.microsoft.com/fwlink/?LinkId=205207) veya [nasıl yaparım? İçinde resim görüntüleyici oluşturma C#? ](http://go.microsoft.com/fwlink/?LinkId=205198).  
-  
+Bu öğreticide, bir dosyadan resim yükleyen ve onu bir pencerede görüntüleyen bir program oluşturacaksınız. Formunuza düğmeler ve resim kutuları gibi denetimleri nasıl sürükleyeceğinizi, özelliklerini ayarlamanıza ve formu düzgün şekilde yeniden boyutlandırmak için kapsayıcıları nasıl kullanacağınızı öğreneceksiniz. Ayrıca kod yazmaya başlayın. Aşağıdakilerin nasıl yapıldığını öğreneceksiniz:
+
+- Yeni bir proje oluşturun.
+
+- Bir uygulamayı test etme (hata ayıklama).
+
+- Bir forma onay kutuları ve düğmeler gibi temel denetimleri ekleyin.
+
+- Düzenleri kullanarak bir formdaki denetimleri konumlandırın.
+
+- Bir forma **Açık dosya** ve **renk** iletişim kutuları ekleyin.
+
+- IntelliSense ve kod parçacıkları kullanarak kod yazın.
+
+- Olay işleyicisi yöntemlerini yazın.
+
+  Bitirdiğinizde, programınız aşağıdaki resme benzer şekilde görünür.
+
+  ![Bu öğreticide oluşturduğunuz resim](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone") Bu öğreticide oluşturduğunuz resim
+
+  Örneğin tamamlanmış bir sürümünü indirmek için bkz. [tüm resim Görüntüleyici öğreticisi örneği](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8).
+
+  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz. [nasıl yapılır: Visual Basic bir resim görüntüleyici oluşturma?](http://go.microsoft.com/fwlink/?LinkId=205207) veya [' C#de nasıl yapılır: bir resim görüntüleyici oluşturma?](http://go.microsoft.com/fwlink/?LinkId=205198).
+
 > [!NOTE]
-> Bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar olduğundan bu videolarda Visual Studio'nun önceki bir sürümü kullanın. Ancak, kavramlar ve yordamlar benzer şekilde Visual Studio'nun geçerli sürümünde çalışır. Visual C# ve Visual Basic hem de Bu öğreticide ele alınmaktadır; bu nedenle kullandığınız programlama diline özgü bilgilere odaklanın.  
->   
-> Visual Basic için kod görmek için **VB** sekmesinde kod blokları üstündeki ve Visual C# kodunu görmek için **C#** sekmesi. Visual C++ hakkında bilgi almakla ilgileniyorsanız bkz [Başlarken](../misc/getting-started-with-visual-cpp-in-visual-studio-2015.md) ve [C++ dil Eğitmeni](http://www.cplusplus.com/doc/tutorial/).  
->   
-> Visual C# veya Visual Basic uygulamaları için Windows Store yazma öğrenmek istiyorsanız [C# veya Visual Basic kullanarak ilk Windows Store uygulamasını oluşturma](https://msdn.microsoft.com/library/windows/apps/hh974581.aspx). Windows Store için JavaScript uygulamaları oluşturma hakkında daha fazla bilgi için bkz: [JavaScript kullanarak ilk Windows Store uygulamasını oluşturma](https://msdn.microsoft.com/library/windows/apps/br211385.aspx).  
-  
-## <a name="related-topics"></a>İlgili Konular  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[1. Adım: Windows Forms Uygulaması Projesi Oluşturma](../ide/step-1-create-a-windows-forms-application-project.md)|Bir Windows Forms uygulaması projesi oluşturarak başlayın.|  
-|[2. Adım: Programınızı Çalıştırma](../ide/step-2-run-your-program.md)|Önceki adımda oluşturduğunuz Windows Forms uygulama programını çalıştırın.|  
-|[3. Adım: Form Özelliklerinizi Ayarlama](../ide/step-3-set-your-form-properties.md)|Yolu kullanarak formunuzun görünüşünü değiştirin **özellikleri** penceresi.|  
-|[4. Adım: TableLayoutPanel Denetimi ile Formunuzu Düzenleme](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)|Ekleme bir `TableLayoutPanel` form denetimi.|  
-|[5. Adım: Formunuza Denetimler Ekleme](../ide/step-5-add-controls-to-your-form.md)|Denetimleri gibi ekleme bir `PictureBox` denetimi ve bir `CheckBox` form denetimi. Formunuza düğmeler ekleyin.|  
-|[6. Adım: Düğme Denetimlerinizi Adlandırma](../ide/step-6-name-your-button-controls.md)|Düğmelerinizi daha anlamlı olarak yeniden adlandırın.|  
-|[7. Adım: Formunuza İletişim Kutusu Bileşenleri Ekleme](../ide/step-7-add-dialog-components-to-your-form.md)|Ekleme bir **OpenFileDialog** bileşeni ve bir **ColorDialog** formunuza bileşen.|  
-|[8. Adım: Resim Göster Düğmesi Olay İşleyicisi için Kod Yazma](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)|IntelliSense aracını kullanarak kod yazın.|  
-|[9. Adım: Kodunuzu Gözden Geçirme, Açıklama ve Test Etme](../ide/step-9-review-comment-and-test-your-code.md)|Gözden geçirin ve kodunuzu test edin. Gerektiği gibi açıklamaları ekleyin.|  
-|[10. Adım: Ek Düğmeler ve Onay Kutusu için Kod Yazma](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|Diğer düğmelerin ve IntelliSense kullanarak onay kutusu iş yapmak için kod yazın.|  
-|[11. Adım: Programınızı Çalıştırma ve Diğer Özellikleri Deneme](../ide/step-11-run-your-program-and-try-other-features.md)|Programınızı çalıştırmak ve arka plan rengini ayarlayın. Renkleri, yazı tiplerini ve kenarlıkları değiştirme gibi diğer özellikleri deneyin.|
+> Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır. Görsel C# ve Visual Basic her ikisi de bu öğreticide ele alınmıştır, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanın.
+>
+> Visual Basic kodunu görmek için, kod bloklarının en üstündeki **vb** sekmesini seçin ve görsele C#yönelik kodu görmek için **C#** sekmeyi seçin. Görsel C++ [hakkında bilgi edinmek](../misc/getting-started-with-visual-cpp-in-visual-studio-2015.md) istiyorsanız bkz. Başlarken ve [ C++ dil Öğreticisi](http://www.cplusplus.com/doc/tutorial/).
+>
+> Windows Mağazası için Visual C# veya Visual Basic uygulamaları yazmayı öğrenmek istiyorsanız, bkz. [veya Visual Basic kullanarak C# ilk Windows mağazası uygulamanızı oluşturma](https://msdn.microsoft.com/library/windows/apps/hh974581.aspx). Windows Mağazası için JavaScript uygulamaları oluşturma hakkında daha fazla bilgi için bkz. [JavaScript kullanarak Ilk Windows mağazası uygulamanızı oluşturma](https://msdn.microsoft.com/library/windows/apps/br211385.aspx).
+
+## <a name="related-topics"></a>İlgili Konular
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[1. Adım: Windows Forms Uygulaması Projesi Oluşturma](../ide/step-1-create-a-windows-forms-application-project.md)|Windows Forms bir uygulama projesi oluşturarak başlayın.|
+|[2. Adım: Programınızı Çalıştırma](../ide/step-2-run-your-program.md)|Önceki adımda oluşturduğunuz Windows Forms uygulama programını çalıştırın.|
+|[3. Adım: Form Özelliklerinizi Ayarlama](../ide/step-3-set-your-form-properties.md)|**Özellikler** penceresini kullanarak formunuzun görünme şeklini değiştirin.|
+|[4. Adım: TableLayoutPanel Denetimi ile Formunuzu Düzenleme](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)|Formunuza `TableLayoutPanel` denetimi ekleyin.|
+|[5. Adım: Formunuza Denetimler Ekleme](../ide/step-5-add-controls-to-your-form.md)|Formunuza `PictureBox` denetimi ve `CheckBox` denetimi gibi denetimler ekleyin. Formunuza düğmeler ekleyin.|
+|[6. Adım: Düğme Denetimlerinizi Adlandırma](../ide/step-6-name-your-button-controls.md)|Düğmelerinizi daha anlamlı bir şekilde yeniden adlandırın.|
+|[7. Adım: Formunuza İletişim Kutusu Bileşenleri Ekleme](../ide/step-7-add-dialog-components-to-your-form.md)|Formunuza bir **OpenFileDialog** bileşeni ve bir **ColorDialog** bileşeni ekleyin.|
+|[8. Adım: Resim Göster Düğmesi Olay İşleyicisi için Kod Yazma](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)|IntelliSense aracını kullanarak kod yazın.|
+|[9. Adım: Kodunuzu Gözden Geçirme, Açıklama ve Test Etme](../ide/step-9-review-comment-and-test-your-code.md)|Kodunuzu gözden geçirin ve test edin. Gerektiğinde Yorumlar ekleyin.|
+|[10. Adım: Ek Düğmeler ve Onay Kutusu için Kod Yazma](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|IntelliSense kullanarak diğer düğmeleri ve onay kutusunu çalışacak şekilde kod yazın.|
+|[11. Adım: Programınızı Çalıştırma ve Diğer Özellikleri Deneme](../ide/step-11-run-your-program-and-try-other-features.md)|Programınızı çalıştırın ve arka plan rengini ayarlayın. Renkleri, yazı tiplerini ve kenarlıkları değiştirme gibi diğer özellikleri deneyin.|

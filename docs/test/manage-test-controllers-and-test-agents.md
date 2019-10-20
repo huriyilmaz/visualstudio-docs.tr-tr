@@ -2,221 +2,221 @@
 title: Test denetleyicilerini ve test aracılarını yönetme
 ms.date: 09/18/2018
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41e15982734731defabd79416c73eef4538f0c04
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 530a3d7ac205988639ed1346f823d889f56adffb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824235"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652921"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Test denetleyicilerini ve test aracılarını yönetme
 
-Visual Studio testleri uzaktan çalıştırmak, testleri birden fazla makine arasında dağıtmak için kullanacağınız veya yük testleri, test denetleyicisi yapılandırmanız gerekir, test aracılarını ve test ayarları dosyası. Bu konu, test denetleyicilerini Yönet ve test aracılarını yükledikten ve bunları ilk kez yapılandırdıktan sonra açıklar.
+Testleri uzaktan çalıştırmak, testleri birden çok makineye dağıtmak veya yük testleri çalıştırmak için Visual Studio 'Yu kullanmak istiyorsanız bir test denetleyicisi, test aracıları ve test ayarları dosyası yapılandırmanız gerekir. Bu konu, ilk kez yüklenip yapılandırıldıktan sonra test denetleyicilerinin ve test aracılarının nasıl yönetileceğini açıklar.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Laboratuvar ortamlarında testleri çalıştırmak için Microsoft Test Yöneticisi'ni kullanırsanız, test denetleyicilerini ve aracılarını kullanarak yönettiğiniz **Test denetleyicisi Yöneticisi** içinde **Laboratuvar Merkezi** Microsoft Test Yöneticisi için. Bu konu yalnızca testleri çalıştırmak için Visual Studio kullanıyorsanız geçerlidir.
+Laboratuvar ortamlarında testleri çalıştırmak için Microsoft Test Yöneticisi kullanıyorsanız, Microsoft Test Yöneticisi için **Laboratuvar merkezindeki** **Test denetleyicisi Yöneticisi** ' ni kullanarak test denetleyicilerini ve aracılarını yönetirsiniz. Bu konu yalnızca, testleri çalıştırmak için Visual Studio kullanıyorsanız geçerlidir.
 
-Yükleme ve test aracıları yapılandırmak ve test denetleyicilerini Visual Studio'da testleri çalıştırmak için hakkında daha fazla bilgi için bkz. [test aracıları ve denetleyicileri yapılandırma](../test/configure-test-agents-and-controllers-for-load-tests.md).
+Visual Studio 'da testleri çalıştırmak için test aracıları ve test denetleyicilerinin nasıl yükleneceği ve yapılandırılacağı hakkında bilgi için bkz. [test aracılarını ve denetleyicilerini yapılandırma](../test/configure-test-agents-and-controllers-for-load-tests.md).
 
-Yapılandırma ve test denetleyicisini ve herhangi kayıtlı aracıyı izlemek için test projenizi çalıştırmak istediğiniz testleri içeren test ayarları dosyası olmalıdır. Test ayarları dosyasını açın, **rol** ve **Test Denetleyicilerini Yönet** için açılan **denetleyicisi** alan.
+Test denetleyicisini ve tüm kayıtlı aracıları yapılandırmak ve izlemek için, test projenizde çalıştırmak istediğiniz testleri içeren bir test ayarları dosyası olması gerekir. Test ayarları dosyasını açın, **rol** ' i seçin ve **Denetleyici** alanı Için açılan listeden **Test Denetleyicilerini Yönet** ' i seçin.
 
-Bir yük testi projesi için de seçebilirsiniz **Test Denetleyicilerini Yönet** gelen **yük testi** menüsü.
+Yük testi projesi için **Yük testi** menüsünden **Test Denetleyicilerini Yönet** ' i de seçebilirsiniz.
 
-## <a name="add-a-test-agent-to-a-test-controller"></a>Test aracısı test denetleyicisine eklemek
+## <a name="add-a-test-agent-to-a-test-controller"></a>Test denetleyicisine test aracısı ekleme
 
-Farklı test denetleyicisine test aracısı eklemek isteyebilirsiniz veya yüklü olan bir test denetleyicisine test aracısı eklemek zorunda kalabilirsiniz.
+Farklı bir test denetleyicisine test aracısı eklemek isteyebilirsiniz veya yeni yüklediğiniz bir test denetleyicisine test aracısı eklemeniz gerekebilir.
 
-### <a name="to-add-a-test-agent-to-a-test-controller"></a>Bir test aracısı test denetleyicisine eklemek için
+### <a name="to-add-a-test-agent-to-a-test-controller"></a>Test denetleyicisine test aracısı eklemek için
 
-1. Seçin **Başlat** > **Test Aracısı Yapılandırma Aracı**.
+1. **Test Aracısı yapılandırma aracı** >  **Başlat** ' ı seçin.
 
      **Test aracısını Yapılandır** iletişim kutusu görüntülenir.
 
     > [!NOTE]
-    > Bir test aracısı test denetleyicisine eklemek için zaten yüklü olması gerekir. Bir test aracısı yükleme hakkında daha fazla bilgi için bkz. [yüklemek ve test denetleyicisilerinin](../test/lab-management/install-configure-test-agents.md).
+    > Test denetleyicisine eklemek için zaten yüklü bir test aracınız olması gerekir. Test aracısının nasıl yükleneceğine ilişkin daha fazla bilgi için bkz. [test aracılarını yüklemek ve yapılandırmak](../test/lab-management/install-configure-test-agents.md).
 
-2. Test aracısını nasıl çalıştırılabilir için iki seçenek sunulur:
+2. Test aracısının nasıl çalıştırılabilecekiyle ilgili iki seçenek sunulur:
 
-   - **Hizmet**: Masaüstü ile etkileşmesi gereken otomatik testleri çalıştırmak zorunda değilsiniz gibi kodlanmış UI testleri veya test, altında çalıştığında bir video kaydı oluşturmak, **test aracısını farklı çalıştır**seçin **hizmet**. Test aracısı hizmet olarak başlatılacak. Seçin **sonraki**.
+   - **Hizmet**: kodlanmış UI testleri gibi masaüstü ile etkileşime geçen otomatik testleri çalıştırmak veya testiniz çalıştığında bir video kaydı oluşturmak zorunda değilseniz, **Test aracısını farklı çalıştır**' ın altında **hizmet**' i seçin. Test Aracısı bir hizmet olarak başlatılır. **İleri ' yi**seçin.
 
-      Artık test aracısı hizmet olarak başladığında kullanıcı hakkındaki ayrıntıları girebilirsiniz.
+      Artık, test Aracısı hizmet olarak başladığında kullanıcı hakkındaki ayrıntıları girebilirsiniz.
 
-      1. Adı girin **kullanıcı adı**.
+      1. **Kullanıcı adında**adı girin.
 
-      2. Parolayı girin **parola**.
+      2. Parolayı **parola**olarak girin.
 
-        |**Önemli kullanıcı hesabı bilgileri**|
+        |**Önemli Kullanıcı hesabı bilgileri**|
         |-|
-        |-Null parolalar kullanıcı hesapları için desteklenmez.|
-        |IntelliTrace collector ya da ağ öykünmesini kullanmak istiyorsanız, kullanıcı hesabı Yöneticileri grubunun bir üyesi olmalıdır.|
-        |-Aracı kullanıcı adı Aracı hizmeti içinde değilse, bunu eklemek test denetleyicisi üzerinde izinler gerektirir dener.|
-        |-Test denetleyicisini kullanmaya çalışan kullanıcı test denetleyicisinin kullanıcı hesabında olmalıdır ya da denetleyiciye karşı testleri çalıştırmak mümkün olmayacaktır.|
+        |-Null parolalar Kullanıcı hesapları için desteklenmez.|
+        |-IntelliTrace toplayıcısını veya ağ öykünmesini kullanmak istiyorsanız, Kullanıcı hesabının Yöneticiler grubunun bir üyesi olması gerekir.|
+        |-Aracı Kullanıcı adı aracı hizmetinde değilse, test denetleyicisinde izinler gerektiren bu uygulamayı eklemeye çalışacaktır.|
+        |-Test denetleyicisini kullanmaya çalışan Kullanıcı, test denetleyicisinin Kullanıcı hesabında olmalıdır, aksi durumda denetleyiciye karşı testleri çalıştıramazlar.|
 
-   - **Etkileşimli işlem**: Masaüstü ile etkileşmesi gereken otomatik testleri çalıştırmak istiyorsanız, aşağıdaki gibi kodlanmış UI testleri veya testiniz çalıştığında bir video kaydı oluşturma, seçin **etkileşimli işlem**. Test aracısı hizmet yerine etkileşimli bir işlem olarak başlatılacak.
+   - **Etkileşimli işlem**: kodlanmış UI testleri gibi masaüstü ile etkileşmesi gereken otomatik testleri çalıştırmak veya testiniz çalıştığında bir video kaydı oluşturmak Istiyorsanız **etkileşimli işlem**' i seçin. Test Aracısı hizmet yerine etkileşimli bir işlem olarak başlatılır.
 
-      Sonraki sayfada, test aracısını bir işlem ve diğer seçenekleri başladığında kullanıcı hakkındaki ayrıntıları girin.
+      Bir sonraki sayfada, test Aracısı işlem olarak başladığında kullanıcı hakkındaki ayrıntıları ve diğer seçenekleri girin.
 
-      1. Adı girin **kullanıcı adı**.
+      1. **Kullanıcı adında**adı girin.
 
-      2. Parolayı girin **parola**.
+      2. Parolayı **parola**olarak girin.
 
         > [!NOTE]
-        > Şu anda etkin kullanıcı olmayan farklı bir kullanıcı ile interaktif bir süreç olarak çalıştırmak için test aracını yapılandırırsanız, bilgisayarı yeniden başlatın ve aracıyı başlatabilmek bu farklı bir kullanıcı oturum açın. Ayrıca, null parolalar kullanıcı hesapları için desteklenmez. IntelliTrace collector ya da ağ öykünmesini kullanmak istiyorsanız, kullanıcı hesabının Yöneticiler grubunun bir üyesi olması gerekir.
+        > Test aracısını, şu anda etkin olan kullanıcı olmayan farklı bir kullanıcıyla etkileşimli bir işlem olarak çalışacak şekilde yapılandırırsanız, bilgisayarı yeniden başlatmanız ve aracıyı başlatabilmeniz için bu farklı kullanıcı olarak oturum açmanız gerekir. Ayrıca, null parolalar Kullanıcı hesapları için desteklenmez. IntelliTrace toplayıcısını veya ağ öykünmesini kullanmak istiyorsanız, Kullanıcı hesabının Yöneticiler grubunun bir üyesi olması gerekir.
 
-      3. Bir test aracısı olan bilgisayarın yeniden başlattıktan sonra testleri çalıştıracağından emin olmak için bilgisayarı otomatik olarak test aracısı olarak oturumu açması için ayarlayabilirsiniz. Seçin **otomatik olarak oturum açma**. Bu kullanıcı adını ve parolasını şifrelenmiş bir biçimde kayıt defterinde depolar.
+      3. Test aracısı olan bir bilgisayarın yeniden başlatıldıktan sonra testleri çalıştırabileceği emin olmak için, bilgisayarı test Aracısı tarafından otomatik olarak oturum açacak şekilde ayarlayabilirsiniz. **Otomatik oturum aç '** ı seçin. Bu işlem, Kullanıcı adını ve parolayı kayıt defterindeki şifreli bir biçimde depolar.
 
-      4. Masaüstüyle etkileşimde olması gereken otomatikleştirilmiş testleri engelleyebilmesi yüzünden ekran koruyucunun devre dışı bırakıldığından emin olmak için seçin **olun ekran koruyucu devre dışı**.
+      4. BT koruyucunun devre dışı bırakıldığından emin olmak için, bu, masaüstü ile etkileşim kurması gereken otomatikleştirilmiş testleri etkileyebilecek olduğundan, **ekran koruyucunun devre dışı bırakıldığından emin olun**' ı seçin.
 
         > [!WARNING]
-        > Otomatik olarak oturum açın veya ekran koruyucuyu devre dışı güvenlik riskleri vardır. Otomatik oturum açmayı etkinleştirerek, diğer kullanıcıların bilgisayarı başlatmasını ve otomatik olarak oturum hesabını kullanabilmelerini sağlar. Ekran koruyucu devre dışı bırakırsanız, bilgisayar kullanıcının oturum açmak bilgisayarın kilidini açmak istemeyebilir. Bu, herkesin bilgisayara fiziksel erişimi olan makineye erişmesine olanak tanır. Bu özellikleri bir bilgisayarda etkinleştirirseniz, bu bilgisayarların fiziksel olarak güvenli olduğundan emin olun. Örneğin, bu bilgisayarların fiziksel olarak güvenli laboratuarda bulunur. (Silerseniz **olun ekran koruyucu devre dışı**, bu ekran koruyucunuzu etkinleştirmez.)
+        > Otomatik olarak oturum açtığınızda veya ekran koruyucuyu devre dışı bıraktığınızda güvenlik riskleri vardır. Otomatik oturum açma özelliğini etkinleştirerek, diğer kullanıcıların bu bilgisayarı başlatmasını ve otomatik olarak oturum açtığı hesabı kullanabilmelerini sağlayabilirsiniz. Ekran koruyucusunu devre dışı bırakırsanız, bilgisayar bir kullanıcının bilgisayarın kilidini açmak için oturum açmasını istemez. Bu, bilgisayara fiziksel erişimi olan herkesin makineye erişmesini sağlar. Bu özellikleri bir bilgisayarda etkinleştirirseniz, bu bilgisayarların fiziksel olarak güvenli olduğundan emin olun. Örneğin, bu bilgisayarlar fiziksel olarak güvenli bir laboratuvarda bulunur. ( **Ekran koruyucunun devre dışı bırakıldığından emin olun**, bu ekran koruyucunuzu etkinleştirmez.)
 
-3. Bu aracıyı farklı bir test denetleyicisiyle kaydetmek için seçin **test denetleyicisiyle birlikte Kaydet.** Ardından, test denetleyicisinin adını yazın **:** ve içinde kullandığınız bağlantı noktası numarasını **test aracısını aşağıdaki test denetleyicisiyle**. Örneğin **agent1: 6901**.
+3. Bu aracıyı farklı bir test denetleyicisiyle kaydetmek için, **test denetleyicisiyle kaydet** ' i seçin. Test denetleyicinizin adını izleyen **:** ve **Test aracısını aşağıdaki test denetleyicisiyle kaydet**bölümünde kullandığınız bağlantı noktası numarasını yazın. Örneğin, **agent1:6901**yazın.
 
     > [!NOTE]
-    > Varsayılan bağlantı noktası numarası 6901'dir.
+    > Varsayılan bağlantı noktası numarası 6901 ' dir.
 
-4. Değişikliklerinizi kaydetmek için seçin **ayarlarını uygula**. Kapatma **Yapılandırma Özeti** iletişim kutusunu ve sonra close **Test Aracısı Yapılandırma Aracı**.
+4. Değişikliklerinizi kaydetmek için **Ayarları Uygula**' yı seçin. **Yapılandırma Özeti** iletişim kutusunu kapatın ve ardından **Test Aracısı yapılandırma aracını**kapatın.
 
 > [!WARNING]
-> Aracı şu anda başka bir test denetleyicisinde çalıştırmak için yapılandırıldıysa, test aracısını o denetleyiciden kaldırmanız gerekir.
+> Aracı şu anda başka bir test denetleyicisinde çalışacak şekilde yapılandırıldıysa, test aracısını o denetleyiciden kaldırmanız gerekir.
 
-## <a name="remove-a-test-agent-from-a-test-controller"></a>Bir test aracısı test denetleyicisinden kaldırın.
+## <a name="remove-a-test-agent-from-a-test-controller"></a>Test denetleyicisinden test aracısını kaldırma
 
-Bir test aracısı kaldırılmadan önce çevrimdışı duruma ayarlanması gerekir.
+Bir test aracısının kaldırılmadan önce çevrimdışı duruma ayarlanması gerekir.
 
 > [!NOTE]
-> Bu yordamı, bir denetleyici için bir laboratuvar ortamının bir parçası kayıtlı aracıları kaldırmak için kullanamazsınız. Bir denetleyiciden bu aracıları kaldırmak için Microsoft Test Yöneticisi'ni kullanarak ortama kaldırmanız gerekir.
+> Laboratuvar ortamının bir parçası olarak bir denetleyiciye kayıtlı aracıları kaldırmak için bu yordamı kullanamazsınız. Bu aracıları bir denetleyiciden kaldırmak için Microsoft Test Yöneticisi kullanarak ortamı kaldırmanız gerekir.
 
-### <a name="to-remove-a-test-agent-from-a-test-controller"></a>Test denetleyicisinden test aracısı kaldırmak için
+### <a name="to-remove-a-test-agent-from-a-test-controller"></a>Test denetleyicisinden bir test aracısı kaldırmak için
 
-1. Test denetleyicisi bir proje ile kayıtlı değilse, aşağıdaki adımları izleyin.
+1. Test denetleyicisi bir projeye kayıtlı değilse, bu adımları izleyin.
 
-    1. Visual Studio'dan test projeniz için test ayarları dosyasını açın, **rol** ve **Test Denetleyicilerini Yönet** için açılan **denetleyicisi** alan.
+    1. Visual Studio 'da test projenizin test ayarları dosyasını açın, **rol** ' i seçin ve **Denetleyici** alanı Için açılan listeden **Test Denetleyicilerini Yönet** ' i seçin.
 
          **Test denetleyicisini Yönet** iletişim kutusu görüntülenir.
 
-    2. İçinde **denetleyicisi** aşağı açılan listesinde, test denetleyicisini üzerinde ayarladığınız bilgisayarın adını yazın. Daha önce belirli bir test denetleyicisi yönettiyseniz, adı listeden seçebilirsiniz.
+    2. **Denetleyici** açılan listesinde, test denetleyicisi 'ni ayarladığınız bilgisayarın adını yazın. Daha önce belirli bir test denetleyicisi yönetilmiyorsa listeden adı seçebilirsiniz.
 
-    3. İçinde **aracıları** bölmesinde, test aracısı adı seçin. Aracı hala çevrimiçiyse seçin **çevrimdışı.** Kaldırmak için seçin **Kaldır**.
+    3. **Aracılar** bölmesinde, test Aracısı adını seçin. Aracı hala çevrimiçiyse, çevrimdışı ' ı seçin **.** Kaldırmak için **Kaldır**' ı seçin.
 
         > [!NOTE]
-        > Yalnızca bir test aracısı kaldırmak, bu test denetleyicisiyle ilişkisini keser. Test aracısını tümüyle kaldırmak için kullanın **programlar ve Özellikler** test aracısı bilgisayarında Denetim Masası.
+        > Test aracısının kaldırılması, bunu test denetleyicisi ile ilişkilendirir. Test aracısını tamamen kaldırmak için, test aracısı bilgisayarındaki **Programlar ve Özellikler** denetim masasını kullanın.
 
-2. Test denetleyicisi bir projesiyle kayıtlıysa, Microsoft Test Yöneticisi'ni kullanarak aracıyı kaldırın.
+2. Test denetleyicisi bir proje ile kayıtlıysa, Microsoft Test Yöneticisi kullanarak aracıyı kaldırın.
 
-## <a name="change-the-settings-for-a-test-agent"></a>Test aracısı için ayarları değiştirme
+## <a name="change-the-settings-for-a-test-agent"></a>Test Aracısı için ayarları değiştirme
 
-Test aracısın durumu aşağıdaki değerlerden biri olabilir:
+Test aracısının durumu aşağıdaki değerlerden herhangi biri olabilir:
 
 |Durum|Açıklama|
 |-|-----------------|
-|Çalışan Test|Testleri çalıştırma|
-|Hazır|Testleri çalıştırmak veya veri toplamak ve tanılamak kullanılabilir|
-|Çevrimdışı|Testleri çalıştırmak veya veri toplamak ve tanılamak kullanılamaz|
-|Bağlantısı kesildi|Test aracısı başlatılmadı|
+|Test çalıştırılıyor|Testleri çalıştırma|
+|Hazır|Testleri çalıştırmak veya veri ve tanılama toplamak için kullanılabilir|
+|Çevrimdışı|Testleri çalıştırmak veya veri ve tanılama toplamak için kullanılamaz|
+|bağlantınızı|Test aracısı başlatılmadı|
 
-Durum ve diğer ayarları için aşağıdaki yordamları kullanarak test aracısın değiştirebilirsiniz.
+Aşağıdaki yordamları kullanarak bir test aracısının durumunu ve diğer ayarlarını değiştirebilirsiniz.
 
-### <a name="to-change-the-settings-of-a-test-agent"></a>Test aracısın ayarlarını değiştirmek için
+### <a name="to-change-the-settings-of-a-test-agent"></a>Bir test aracısının ayarlarını değiştirmek için
 
 > [!NOTE]
-> Test aracısını bir projesiyle kayıtlı bir test denetleyicisine kayıtlı değilse, Microsoft Test Yöneticisi ayarlarını değiştirin.
+> Test Aracısı bir proje ile kayıtlı bir test denetleyicisine kayıtlıysa, Microsoft Test Yöneticisi ayarları değiştirin.
 
-1. Yapılandırma ve test denetleyicisini ve tüm kayıtlı aracıları için bir yük testi izleme için seçmek **yük testi** Visual Studio'da menü seçip **Test Denetleyicilerini Yönet**. Diğer herhangi bir test için test projeniz için test ayarları dosyasını Visual Studio'da açın, **rol** ve **Test Denetleyicilerini Yönet** için açılan **denetleyicisi**alan.
+1. Test denetleyicisini ve bir yük testi için kayıtlı aracıları yapılandırmak ve izlemek için, Visual Studio 'da **Yük testi** menüsünü ve ardından **Test Denetleyicilerini Yönet**' i seçin. Diğer herhangi bir test için, Visual Studio 'da test projenizin test ayarları dosyasını açın, **rol** ' i seçin ve **Denetleyici** alanı Için açılan listeden **Test Denetleyicilerini Yönet** ' i seçin.
 
    **Test denetleyicisini Yönet** iletişim kutusu açılır.
 
-1. Test aracısı test denetleyicisi listesinde değiştirmek istediğiniz test denetleyicisinin adını seçin. Test denetleyicisi listede görünmüyorsa, test denetleyicisinin doğru kaydedilmiş olduğunu denetleyin. Daha fazla bilgi için test denetleyicisinin nasıl yapılandırılacağı hakkında aşağıdaki yordama bakın.
+1. Test denetleyicisi listesinde, test aracılarını değiştirmek istediğiniz test denetleyicisinin adını seçin. Test denetleyicisi listede görünmezse, test denetleyicisinin doğru şekilde kaydedilip kaydedilmadığını denetleyin. Daha fazla bilgi için, test denetleyicisi yapılandırma hakkında aşağıdaki yordama bakın.
 
-1. (İsteğe bağlı) İçinde **Test aracıları** bölmesinde, özelliklerini değiştirmek istediğiniz test aracısı bilgisayarı seçin.
+1. Seçim **Test aracıları** bölmesinde, özelliklerini değiştirmek istediğiniz test aracısı bilgisayarını seçin.
 
-1. Seçin **özellikleri**.
+1. **Özellikler**' i seçin.
 
-1. Aşağıdaki test aracısı özelliklerini gerektiği gibi değiştirin:
+1. Aşağıdaki test Aracısı özelliklerini gerekli şekilde değiştirin:
 
-|Test aracısı özelliği|Açıklama|
+|Test Aracısı özelliği|Açıklama|
 |-|-----------------|
-|**Ağırlığı**|Test aracılarını farklı performans düzeyleriyle kullandığınızda yükü dağıtmak için kullanılır. Örneğin, 100 ağırlığı ile bir test aracısı, 50 ağırlığı ile bir test aracısı yükünün iki katı alır.|
-|**IP geçişi**|IP geçişini yapılandırmak için kullanılır. IP geçişi, bir IP adresi aralığı kullanarak bir sunucuya istek göndermek bir test aracısı sağlar. Bu, farklı istemci bilgisayarlardan gelen çağrıların benzetimini yapar.<br /><br /> Yük testiniz web grubuna erişiyorsa IP geçişi önemlidir. Çoğu yük dengeleyicileri, istemcinin IP adresini kullanarak bir istemci ve belirli bir web sunucusu arasında benzeşim kurar. Tüm istekler tek bir istemciden geliyor gibi görünüyorsa, yük dengeleyicisi yükü dengelemez. Web grubunda iyi bir yük dengesi edinmek için istekleri bir dizi IP adreslerinden geldiğinden emin olun. **Not:**  Bir ağ bağdaştırıcısı belirtebilir veya kullanın **(Tümü Atanmamış)** otomatik olarak şu anda kullanılmayan birini seçmek için. <br /><br /> IP geçiş özelliğini kullanmak için Visual Studio Test aracısı hizmetinin o aracı bilgisayar için Yöneticiler grubundaki bir kullanıcı olarak çalıştırılması gerekir. Bu kullanıcı, aracı kurulumu sırasında seçilir, ancak hizmet özelliklerini değiştirme ve yeniden başlatarak değiştirilebilir.<br /><br /> IP geçişinin düzgün çalıştığını doğrulamak için IIS web sunucusunda günlüğe kaydetmeyi etkinleştirmek için isteklerin yapılandırdığınız IP adreslerinden geldiğini doğrulamak için IIS günlüğü işlevini kullanın.|
-|**Öznitelikler**|Test aracısı seçiminde kullanılabilecek ad/değer çiftleri kümesi. Örneğin, bir test belirli bir OS gerektirebilir. Öznitelik ekleyebilirsiniz **rolleri** sekmesinde test öznitelikleri eşleşen bir test aracısı seçmek için ayarları dosyası ve bunlar kullanılabilir. Birden fazla makinede test çalıştırmak isterseniz, testlerinizi çalıştırmak üzere yapılandırılmış test ayarları rolünde bir öznitelik oluşturun ve sonra ilgili rolde kullanmak istediğiniz her test aracısı üzerinde eşleştirme özniteliğini yapılandırın... **Not:**  Bu ayar, yalnızca bu öznitelikler sadece Visual Studio için test ayarlarında kullanılır çünkü bir proje için kaydedilmemiş bir test denetleyicisiyle kayıtlı test aracıları için kullanılabilir.|
+|**Ağırlıklı**|Farklı performans düzeyleriyle test aracıları kullandığınızda yükü dağıtmak için kullanılır. Örneğin, 100 ağırlığı olan bir test aracısı, yük, 50 ağırlığa sahip bir test aracısı olarak iki kat alır.|
+|**IP değiştirme**|IP geçişini yapılandırmak için kullanılır. IP anahtarlama, bir test aracısının bir IP adresi aralığı kullanarak istekleri sunucuya göndermesini sağlar. Bu, farklı istemci bilgisayarlardan gelen çağrıların benzetimini yapar.<br /><br /> Yük testiniz bir Web grubuna erişiyorsa, IP geçişi önemlidir. Çoğu yük dengeleyiciler, istemcinin IP adresini kullanarak bir istemciyle belirli bir Web sunucusu arasında benzeşim kurar. Tüm istekler tek bir istemciden geliyor gibi görünüyorsa, yük dengeleyici yükü dengeetmez. Web grubunda iyi yük dengelemesi elde etmek için isteklerin bir IP adresi aralığından geldiğinden emin olun. **Note:**  Bir ağ bağdaştırıcısı belirtebilir veya şu anda kullanılmayan birini otomatik olarak seçmek için **(Tümü Atanmamış)** seçeneğini kullanabilirsiniz. <br /><br /> IP anahtarlama özelliğini kullanmak için, Visual Studio Test Aracısı hizmetinin bu aracı bilgisayar için Yöneticiler grubunda bir kullanıcı olarak çalışıyor olması gerekir. Bu Kullanıcı, aracı kurulumu sırasında seçilir, ancak hizmetin özellikleri değiştirilerek yeniden başlatılarak değiştirilebilir.<br /><br /> IP geçişinin düzgün çalıştığını doğrulamak için Web sunucusunda IIS günlüğü 'nü etkinleştirin, isteklerin yapılandırdığınız IP adreslerinden geldiğini doğrulamak için IIS günlük oluşturma işlevini kullanın.|
+|**Öznitelikler**|Test Aracısı seçiminde kullanılabilecek ad/değer çiftleri kümesi. Örneğin, bir test belirli bir işletim sistemi gerektirebilir. Öznitelikleri, test ayarları dosyanızın **Roller** sekmesine ekleyebilirsiniz ve eşleşen özniteliklere sahip bir test aracısı seçmek için kullanılabilirler. Birden çok makine üzerinde bir test çalıştırmak istiyorsanız, testlerinizi çalıştırmak için yapılandırılan test ayarları rolünde bir öznitelik oluşturun ve ardından bu rolde kullanmak istediğiniz her test aracısında eşleşen bir öznitelik yapılandırın. **Note:**  Bu ayar yalnızca, bir projeye kayıtlı olmayan bir test denetleyicisiyle kayıtlı test aracılarında kullanılabilir, çünkü bu öznitelikler yalnızca Visual Studio için test ayarları 'nda kullanılır.|
 
-Değişiklikleri hemen yürürlüğe girer fakat çalışan testleri etkilemez Aracısı ağırlığı ve test aracısı özniteliği test edin. IP adresi aralığı, test denetleyicisi yeniden başlatıldıktan sonra etkili olur.
+Test Aracısı ağırlığı ve test aracısı öznitelik değişiklikleri hemen yürürlüğe girer, ancak çalıştıran testleri etkilemez. IP adresi aralığı, test denetleyicisi yeniden başlatıldıktan sonra devreye girer.
 
-(İsteğe bağlı) Bir test aracısı durumunu değiştirmek için listedeki aracıyı seçin ve ardından aracının geçerli duruma dayanarak kullanılabilir seçeneklerden eylemini seçin.
-
-> [!NOTE]
-> Test aracısını bir işlem olarak çalışıyorsa, test aracısının yüklü olduğu bilgisayarda çalışan bildirim alanında simgesinden test aracısın durumu yönetin. Bu test aracısı durumunu gösterir. Başlat, Durdur veya bu aracı kullanarak bir işlem olarak çalışıyorsa aracıyı yeniden başlatın.
-
-## <a name="configure-a-test-controller"></a>Bir test denetleyicisi yapılandırın
-
-Bir test denetleyicisini yapılandırmak için kullanmanız gerekir **Takım Test denetleyicisi yapılandırma aracı**. Test denetleyicinizi yapılandırırken, farklı proje koleksiyonuyla test denetleyicisini Kaydet veya proje koleksiyonundan test denetleyicisi kaydını silin.
-
-Test denetleyiciniz, Team Foundation Server Proje koleksiyonu ile kaydetmek istiyorsanız, test denetleyicisi hizmeti için kullandığınız hesabın hesabı veya proje koleksiyonu için proje koleksiyonu Test hizmeti hesapları grubunun bir üyesi olması gerekir test denetleyicisi yapılandırma aracını çalıştırmak için kullandığınız bir proje koleksiyonu yöneticisi olması gerekir.
+Seçim Bir test aracısının durumunu değiştirmek için, listeden aracıyı seçin ve ardından aracının geçerli durumuna bağlı olarak kullanılabilir seçimlerden eylemi seçin.
 
 > [!NOTE]
-> Mevcut ortamlar proje koleksiyonunda bulunan proje koleksiyonundan test denetleyicisi kaydını kaldırırsanız da, ortamları, Proje Koleksiyonu taşıdığınız, yine de korunur ve taşınan projesi koleksiyonundaki test denetleyicisine yeniden kaydedin.
+> Test aracınız bir işlem olarak çalışıyorsa, test aracısının durumunu test aracınızın yüklendiği bilgisayarda çalışan bildirim alanı simgesinden yönetirsiniz. Bu, test aracısının durumunu gösterir. Bu aracı kullanarak bir işlem olarak çalışıyorsa aracıyı başlatabilir, durdurabilir veya yeniden başlatabilirsiniz.
+
+## <a name="configure-a-test-controller"></a>Test denetleyicisi yapılandırma
+
+Bir test denetleyicisi yapılandırmak için, **takım test denetleyicisi yapılandırma aracını**kullanmanız gerekir. Test denetleyicinizi yapılandırırken, test denetleyicinizi farklı bir proje koleksiyonu ile kaydedebilir veya test denetleyicinizin kaydını bir proje koleksiyonundan silebilirsiniz.
+
+Test denetleyicinizi Team Foundation Server projesi koleksiyonunuza kaydetmek istiyorsanız, test denetleyicisi hizmeti için kullandığınız hesap, proje koleksiyonu için proje koleksiyonu test hizmeti hesapları grubunun bir üyesi veya hesabı olmalıdır test denetleyicisi yapılandırma aracını çalıştırmak için kullandığınız bir proje koleksiyonu Yöneticisi olmalıdır.
+
+> [!NOTE]
+> Bir test denetleyicisinin bir proje koleksiyonunda mevcut ortamları bulunan bir proje koleksiyonundan kaydını kaldırırsanız, bu proje koleksiyonunu taşıdıysanız ve test denetleyicisini taşınan proje koleksiyonuna yeniden kaydettiğinizde, ortamlar hala sürdürülür.
 
 ### <a name="to-configure-a-test-controller"></a>Bir test denetleyicisini yapılandırmak için
 
-1. Test denetleyicinizi istediğiniz zaman yeniden yapılandırmak üzere aracı çalıştırmak için seçin **Başlat** > **Test denetleyicisi yapılandırma aracı**.
+1. Test denetleyicinizi istediğiniz zaman yeniden yapılandırmak üzere aracı çalıştırmak için,**Test denetleyicisi yapılandırma aracı** >  **Başlat** ' ı seçin.
 
      **Test denetleyicisini Yapılandır** iletişim kutusu görüntülenir.
 
-2. Test denetleyicisi hizmetinizin oturum açma hesabı olarak kullanılacak olan kullanıcıyı seçin.
+2. Test denetleyicisi hizmetiniz için oturum açma hesabı olarak kullanılacak kullanıcıyı seçin.
 
     > [!NOTE]
-    > Null parolalar kullanıcı hesapları için desteklenmez.
+    > Kullanıcı hesaplarında null parolalar desteklenmez.
 
-4. (İsteğe bağlı) Test denetleyicinizi bir laboratuar ortamında kullanmak istiyor musunuz, ancak yalnızca çalıştırmak için Visual Studio'dan Temizle testleri **kaydı test denetleyicisi takım projesi koleksiyonuyla**.
+4. Seçim Test denetleyicinizi laboratuvar ortamıyla kullanmak istemiyorsanız, ancak yalnızca Visual Studio 'dan testleri çalıştırmak istiyorsanız, **Test denetleyicisini takım projesi koleksiyonuyla kaydet**' i temizleyin.
 
-5. (İsteğe bağlı) Yük testi için test denetleyicisi yapılandırmak için seçin **yük testi için test denetleyicisini Yapılandır**. SQL Server örneği girmeniz **Oluştur yük testi sonuçları veritabanında aşağıdaki SQL Server örneğinde**.
+5. Seçim Test denetleyicinizi yük testi için yapılandırmak için **Test denetleyicisini yük testi Için Yapılandır**' ı seçin. **Aşağıdaki SQL Server örneğinde yük testi sonuçları veritabanı oluştur**altında SQL Server örneğini girin.
 
 > [!NOTE]
-> Daha fazla sorun giderme test denetleyicileri hakkında daha fazla bilgi için bkz. [yüklemek ve test denetleyicisilerinin](../test/lab-management/install-configure-test-agents.md).
+> Test denetleyicileri hakkında daha fazla sorun giderme için bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).
 
-## <a name="manage-your-agents-when-you-run-your-tests-with-a-test-controller"></a>Bir test denetleyicisiyle testlerinizi çalıştırdığınızda aracılarınızı yönetme
+## <a name="manage-your-agents-when-you-run-your-tests-with-a-test-controller"></a>Testlerinizi bir test denetleyicisi ile çalıştırdığınızda aracılarınızı yönetin
 
-Visual Studio için test ayarlarınıza uygulamanız için roller eklediğinizde, her rolünüz için aracı özellikleri ekleyebilirsiniz. Bu, hangi test aracılarının bu rol için kullanılabilen belirler. Kullanarak testlerinizi çalıştırdığınızda, bu test ayarları, test ayarları için seçili test denetleyicisi gerekli aracıların kullanılabilirliğini belirler. Aşağıdaki aracı kullanılabilirliği belirlendiğinde oluşabilecek durumlar şunlardır:
+Visual Studio için test ayarlarınıza uygulamanız için roller eklediğinizde, rollerinizin her biri için aracı özellikleri ekleyebilirsiniz. Bu, hangi test aracılarının bu rol için kullanılabilir olduğunu belirler. Bu test ayarlarını kullanarak testlerinizi çalıştırdığınızda, test ayarları için seçilen test denetleyicisi gerekli aracıların kullanılabilirliğini belirler. Bunlar, aracı kullanılabilirliği belirleniyorsa oluşabilecek aşağıdaki durumlardır:
 
-- Testlerin çalıştırılması gereken rol için kullanılabilen hiçbir aracı yoktur. Testleriniz çalıştırılamaz. Aşağıdaki eylemlerden birini gerçekleştirin ve sonra testlerinizi yeniden çalıştırın:
+- Testleri çalıştırması gereken rol için kullanılabilir aracı yok. Testleriniz çalıştırılamaz. Aşağıdaki eylemlerden birini gerçekleştirip testlerinizi yeniden çalıştırabilirsiniz:
 
-  - Bir aracının bu rol testleri çalıştırmak kullanılabilir olmasını bekleyebilirsiniz.
+  - Bu rolün testleri çalıştırması için bir aracının kullanılabilir olmasını bekleyebilirsiniz.
 
-  - Çevrimdışı aracılar varsa, bu rol için kullanılabilir, böylece kullanılabilir aracı yeniden başlatabilirsiniz.
+  - Bu rol için kullanılabilen çevrimdışı aracılar varsa, kullanılabilir olması için aracıyı yeniden başlatabilirsiniz.
 
-  - Bu rol için doğru aracı özellikleriyle başka bir aracı için test denetleyicisi ekleyebilirsiniz.
+  - Test denetleyicisine bu rolün doğru aracı özelliklerine sahip başka bir aracı ekleyebilirsiniz.
 
-  - Test ayarlarını kullanmak istediğiniz diğer aracıları etkinleştirmek üzere bu rol için aracı özelliklerini değiştirebilirsiniz.
+  - Kullanmak istediğiniz diğer aracıları etkinleştirmek için test ayarlarında bu rolün aracı özelliklerini değiştirebilirsiniz.
 
-- Tanılama veri bağdaştırıcılarını çalıştıran bir veya daha fazla rol için kullanılabilir aracı yok. Testleriniz çalıştırılabilir, ancak tanılama veri bağdaştırıcısı çalıştırılamaz. Testlerinizi tanılama veri bağdaştırıcısı olmadan çalıştırabilir veya aşağıdaki eylemlerden birini gerçekleştirin ve testlerinizi yeniden çalıştırın:
+- Tanılama veri bağdaştırıcılarını çalıştıran bir veya daha fazla rol için kullanılabilir aracı yok. Testleriniz çalıştırılabilir, ancak tanılama veri bağdaştırıcısı çalıştırılamaz. Testlerinizi tanılama veri bağdaştırıcısı olmadan çalıştırabilir veya aşağıdaki eylemlerden birini gerçekleştirip testlerinizi yeniden çalıştırabilirsiniz:
 
-  - Bir aracının bu rol için kullanılabilir olmasını bekleyebilirsiniz.
+  - Bu roller için bir aracının kullanılabilir olmasını bekleyebilirsiniz.
 
-  - Çevrimdışı aracılar varsa, bu rol için kullanılabilen, Online'dan için aracı durumunu değiştirme **Test denetleyicisini Yönet** üzerinde **Test** menüsü. Ayrıca, denetleyiciden bağlantısı kesilmişse aracıyı yeniden başlatmanız gerekebilir.
+  - Bu rol için kullanılabilen çevrimdışı aracılar varsa, **Test** menüsündeki **Test denetleyicisini Yönet** ' e, aracının durumunu çevrimiçi olarak değiştirmeniz gerekir. Ayrıca, denetleyicinin bağlantısı kesildiyse aracıyı yeniden başlatmanız gerekebilir.
 
-  - Bu test için ihtiyacınız olabilecek aracılarının testleri çalıştırmakla meşgul olmadığından emin olun. Tüm aracıların durumunu kontrol edebilirsiniz **Test denetleyicisini Yönet** üzerinde **Test** menüsü.
+  - Bu test çalıştırması için ihtiyaç duyduğunuz tüm aracıların testleri çalıştırmakla meşgul olmadığından emin olun. **Test menüsündeki** **Test denetleyicisini Yönet** ' den herhangi bir aracının durumunu kontrol edebilirsiniz.
 
-  - Test denetleyicisi rolü için doğru aracı özellikleriyle başka bir aracı ekleyebilirsiniz.
+  - Rolün test denetleyicisine doğru aracı özelliklerine sahip başka bir aracı ekleyebilirsiniz.
 
-  - Kullanmak istediğiniz diğer aracıları etkinleştirmek üzere test ayarları rolünde için aracı özelliklerini değiştirebilirsiniz.
+  - Kullanmak istediğiniz diğer aracıları etkinleştirmek için test ayarlarındaki rolün aracı özelliklerini değiştirebilirsiniz.
 
-## <a name="load-tests-from-delay-signed-assemblies"></a>Gecikmeli İmzalanmış Derlemelerden Test Yükleme
+## <a name="load-tests-from-delay-signed-assemblies"></a>Gecikmeli imzalanmış derlemelerden test yükleme
 
-Test denetleyicisi ve test aracıları yalnızca sağlam imzalı veya imzasız derlemeler test derlemelerini yükleyebilir. Bazı test derlemeleri gecikme-uygulama için üretim derlemelerine erişimi gerektiğinden imzalanmıştır. Ancak, bu derlemeler kuvvetle imzalanmamıştır çünkü bunlar yalnızca test derlemeleridir ve dağılımı değil. Burada derleme test denetleyicisi makineyi de yüklenecek tüm makinelerde bu derlemeler için tanımlayıcı ad doğrulaması devre dışı bırakmalısınız gecikmeli imzalanmış oldukları için bu bütünleştirilmiş kodları yüklenemiyor. Gecikmeli imzalanmış doğrulamayı devre dışı bırakmak için *sn.exe*. Tanımlayıcı ad doğrulamasının atlanmasını istendiği gecikmeli imzalanmış derlemenin ortak anahtar belirteci de eklenmesi gerekebilir.
+Test denetleyicisi ve test aracıları, yalnızca kesin olarak imzalanmış derlemelerin veya imzasız derlemelerin test derlemelerini yükleyebilir. Bazı test derlemeleri, uygulama için üretim derlemelerine erişimi olması gerektiğinden gecikmeli imzalanmıştır. Ancak, bu derlemeler yalnızca test derlemeleri olduklarından ve dağıtılmadığından sağlam bir şekilde imzalanmamıştır. Bu derlemeler gecikmeli imzalanmış olduklarından yüklenemez, bu nedenle, derlemenin test denetleyicisi makinesi dahil yükleneceği tüm makinelerde, bu derlemeler için tanımlayıcı ad doğrulamasını devre dışı bırakmanız gerekir. Gecikmeli imzalanmış doğrulamayı devre dışı bırakmak için *sn. exe*kullanın. Tanımlayıcı ad doğrulamasının atlandığı, gecikmeli imzalanmış derlemenin ortak anahtar belirtecinin da dahil olması gerekebilir.
 
-Kullanım *Sn.exe* (gecikmeli imzalanmış doğrulamayı devre dışı bırakmak için tanımlayıcı ad aracı).
+Gecikmeli imzalanmış doğrulamayı devre dışı bırakmak için *sn. exe* (tanımlayıcı ad aracı) kullanın.
 
-Bu, yalnızca belirtilen derleme için tanımlayıcı ad doğrulamasının komutu çalıştırdığınız bilgisayarda devre dışı bırakır. Bunu sadece yeterli izinleriniz varsa yapabilirsiniz.
+Bu, yalnızca belirtilen derleme için komutu çalıştırdığınız bilgisayardaki tanımlayıcı ad doğrulamasını devre dışı bırakır. Bunu yalnızca yeterli izinleriniz varsa yapabilirsiniz.
 
-Test çalıştırması tamamlandıktan sonra Gecikmeli İmza doğrulamasını kullanarak yeniden etkinleştirebilir *SN.exe* komutu.
+Test çalıştırması tamamlandıktan sonra, *sn. exe* komutunu kullanarak Gecikmeli imzalama doğrulamasını yeniden etkinleştirin.
 
-İmza doğrulamasını yeniden etkinleştirin ve devre dışı bırakmak için önerilen yol kullanmaktır *SN.exe* betik komutları. Kurulum betik doğrulamayı devre dışı bırakabilir ve bir temizleme betik doğrulamayı yeniden etkinleştirin.
+İmzalama doğrulamasının devre dışı bırakılması ve yeniden etkinleştirilmesi için önerilen bir yol, betiklerdeki *sn. exe* komutlarını kullanmaktır. Bir kurulum komut dosyasında doğrulamayı devre dışı bırakabilir ve bir temizleme komut dosyasında doğrulamayı yeniden etkinleştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

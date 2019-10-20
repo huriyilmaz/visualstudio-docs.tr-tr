@@ -1,59 +1,58 @@
 ---
-title: '7. Adım: Formunuza iletişim kutusu bileşenleri ekleme | Microsoft Docs'
+title: '7\. Adım: formunuza Iletişim kutusu bileşenleri ekleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: ea98c55e-6213-4893-ba7b-f19d7f119527
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 54d2b83fab24aa3c9deabc979782d9b82ea5c482
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b58f76dc5137ac0e281f109ee78f3ed43f907400
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442478"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646956"
 ---
-# <a name="step-7-add-dialog-components-to-your-form"></a>7. Adım: Formunuza İletişim Kutusu Bileşenleri Ekleme
+# <a name="step-7-add-dialog-components-to-your-form"></a>7\. Adım: Formunuza İletişim Kutusu Bileşenleri Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Programınızın resim dosyalarınızı açmasını ve bu adımda, bir arka plan rengini seçin etkinleştirmek için bir **OpenFileDialog** bileşeni ve bir **ColorDialog** formunuza bileşen.  
-  
- Bazı açılardan denetim gibi bir bileşenidir. Formunuza bir bileşen eklemek için araç kutusunu kullanın ve kullanarak onun özelliklerini ayarlarsınız **özellikleri** penceresi. Ancak denetimden farklı olarak formunuza bir bileşen eklemek, kullanıcının formda görebileceği görünür bir öğe eklemez. Bunun yerine, kod ile tetikleyebileceğiniz belirli davranışlar sağlar. Açılır bir bileşendir bir **açık dosya** iletişim kutusu.  
-  
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo")bu konunun video sürümü için bkz: [öğretici 1: Visual Basic'te - Video 3 resim görüntüleyici oluşturma](http://go.microsoft.com/fwlink/?LinkId=205213) veya [öğretici 1: İçinde resim görüntüleyici oluşturma C# -Video 3](http://go.microsoft.com/fwlink/?LinkId=205202). Bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar olduğundan bu videolarda Visual Studio'nun önceki bir sürümü kullanın. Ancak, kavramlar ve yordamlar benzer şekilde Visual Studio'nun geçerli sürümünde çalışır.  
-  
-### <a name="to-add-dialog-components-to-your-form"></a>Formunuza iletişim kutusu bileşenleri eklemek için  
-  
-1. Windows Form Tasarımcısı (Form1.cs [Design] veya Form1.vb [Design]) seçin ve ardından açın **iletişim kutuları** araç kutusu grubu.  
-  
+Programınızın resim dosyalarını açmasını ve bir arka plan rengi seçmesini etkinleştirmek için, bu adımda formunuza bir **OpenFileDialog** bileşeni ve bir **ColorDialog** bileşeni eklersiniz.
+
+ Bir bileşen, bazı yollarla denetim gibidir. Formunuza bir bileşen eklemek için araç kutusunu kullanın ve **Özellikler penceresini kullanarak özelliklerini ayarlarsınız** . Ancak, bir denetimin aksine formunuza bir bileşen eklemek, kullanıcının formda görebileceği görünür bir öğe eklemez. Bunun yerine, kodla tetikleyebileceğiniz belirli davranışları sağlar. Bu, bir **Dosya Aç** iletişim kutusu açan bir bileşendir.
+
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 3](http://go.microsoft.com/fwlink/?LinkId=205213) veya [öğretici 1: video 3 ' te C# resim görüntüleyici oluşturma](http://go.microsoft.com/fwlink/?LinkId=205202). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+
+### <a name="to-add-dialog-components-to-your-form"></a>Formunuza iletişim kutusu bileşenleri eklemek için
+
+1. Windows Form Tasarımcısı (Form1.cs [Design] veya Form1. vb [Design]) seçin ve ardından araç kutusunda **Iletişim** kutusu grubunu açın.
+
     > [!NOTE]
-    > **İletişim kutuları** araç grubunda açma ve dosyaları kaydetmek, klasörlere göz atma ve yazı tiplerini ve renkleri seçmek için kullanılabilecek pek çok yararlı iletişim kutuları, açılan bileşeni vardır. Bu projede iki iletişim kutusu bileşeni kullanırsınız: **OpenFileDialog** ve **ColorDialog**.  
-  
-2. Adlı bir bileşen eklemek için **openFileDialog1** formunuza, çift **OpenFileDialog**. Adlı bir bileşen eklemek için **colorDialog1** formunuza, çift **ColorDialog** araç. (Bir sonraki Eğitmen adımında kullanın.) Windows Form Tasarımcısı (Resim Görüntüleyicisi formunun altında) aşağıdaki resimde gösterildiği gibi bir simge her biri, eklediğiniz iki iletişim kutusu bileşenleri için sahip alt kısmındaki bir alan görmelisiniz.  
-  
-     ![İletişim kutusu bileşenleri](../ide/media/express-dialogsadded.png "Express_DialogsAdded")  
-İletişim kutusu bileşenleri  
-  
-3. Seçin **openFileDialog1** Windows Form Tasarımcısı'nın atındaki simgesi. İki özellikleri ayarlayın:  
-  
-    - Ayarlama **filtre** özelliğini aşağıdaki (kopyalayın ve yapıştırın):  
-  
-        ```  
-        JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All files (*.*)|*.*  
-        ```  
-  
-    - Ayarlama **başlık** özelliğini aşağıdaki: **Bir resim dosyası seçin**  
-  
-         **Filtre** özellik ayarları görüntülenecek dosya türlerinin çeşitlerini belirtir **Resim Seç** dosya iletişim kutusu.  
-  
+    > Araç kutusundaki **Iletişim** kutusu grubunda, sizin için birçok yararlı iletişim kutusu açan bileşenler bulunur. Bu, dosyaları açmak ve kaydetmek, klasörlere gözatmak ve yazı tipi ve renkler seçmek için kullanılabilir. Bu projede iki iletişim kutusu bileşeni kullanıyorsunuz: **OpenFileDialog** ve **ColorDialog**.
+
+2. Formunuza **OpenFileDialog1** adlı bir bileşen eklemek Için, **OpenFileDialog**öğesine çift tıklayın. Formunuza **colorDialog1** adlı bir bileşen eklemek Için araç kutusunda **ColorDialog** ' a çift tıklayın. (Bunu bir sonraki öğretici adımında kullanırsınız.) Aşağıdaki resimde gösterildiği gibi, eklediğiniz iki iletişim kutusu bileşeninin bir simgesine sahip Windows Form Tasarımcısı (resim Görüntüleyicisi formunun altında) altında bir alanı görmeniz gerekir.
+
+     ![Iletişim kutusu bileşenleri](../ide/media/express-dialogsadded.png "Express_DialogsAdded") İletişim kutusu bileşenleri
+
+3. Windows Form Tasarımcısı altındaki alanda bulunan **OpenFileDialog1** simgesini seçin. İki özellik ayarlayın:
+
+    - **Filter** özelliğini aşağıdaki gibi ayarlayın (kopyalayabilir ve yapıştırabilirsiniz):
+
+        ```
+        JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All files (*.*)|*.*
+        ```
+
+    - **Title** özelliğini şu şekilde ayarlayın: **bir resim dosyası seçin**
+
+         **Filtre** özelliği ayarları, **resim dosyası seç** iletişim kutusunda görünecek dosya türü türlerini belirtir.
+
     > [!NOTE]
-    > Bir örnek görmek için **Dosya Aç** iletişim kutusu farklı bir uygulama Not Defteri'ni veya Paint'i açın ve menü çubuğunda, **dosya**, **açın**. Nasıl olduğuna dikkat edin bir **dosya türü** altındaki aşağı açılan listeden. Yalnızca kullanılan **filtre** özelliğinde **OpenFileDialog** kurmak için bileşen. Ayrıca, nasıl **başlık** ve **filtre** özellikleri kalın **özellikleri** penceresi. IDE, varsayılan değerleri değiştirilmiş özellikleri size göstermek için yapar.  
-  
-### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için  
-  
-- Sonraki öğretici adımına gitmek için bkz: [adım 8: Bir resim düğme olayı işleyicisi Göster için kod yazma](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md).  
-  
-- Önceki öğretici adımına dönmek için bkz: [adım 6: Düğme denetimlerinizi adlandırma](../ide/step-6-name-your-button-controls.md).
+    > Farklı bir uygulamadaki **Dosya Aç** iletişim kutusunun bir örneğini görmek Için, Not defteri veya Paint ' i açın ve menü çubuğunda **Dosya**, **Aç**' ı seçin. En altta bulunan bir **dosya türü** aşağı açılan listesi hakkında dikkat edin. Bunu ayarlamak için **OpenFileDialog** bileşeninde **Filter** özelliğini kullandınız. Ayrıca, **başlık** ve **filtre** özelliklerinin **Özellikler** penceresinde nasıl kalın olduğuna dikkat edin. IDE, varsayılan değerlerinden değiştirilmiş olan özellikleri göstermek için bunu yapar.
+
+### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
+
+- Sonraki öğretici adımına gitmek için bkz. [8. Adım: resim göster düğmesi olay işleyicisi Için kod yazma](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md).
+
+- Önceki öğretici adımına dönmek için bkz. 6. [Adım: düğme denetimlerinizi adlandırma](../ide/step-6-name-your-button-controls.md).

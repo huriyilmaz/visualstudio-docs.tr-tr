@@ -1,5 +1,5 @@
 ---
-title: "CA2205: Win32 API'sının yönetilen eşdeğerlerini kullanın | Microsoft Docs"
+title: 'CA2205: Win32 API yönetilen eşdeğerlerini kullan | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,45 +12,45 @@ helpviewer_keywords:
 - CA2205
 ms.assetid: 1c65ab59-3e50-4488-a727-3969c7f6cbe4
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 2da7faabb05d2f6eaf2ec345f9bae19401953093
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 931b1e5099bf221fefc7a8f4a19524d2531a4418
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142547"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72609481"
 ---
-# <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Win32 API'sinin yönetilen eşdeğerlerini kullanın
+# <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Win32 API'sının yönetilen eşdeğerlerini kullanın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|UseManagedEquivalentsOfWin32Api|
 |CheckId|CA2205|
-|Kategori|Microsoft.Usage|
-|Yeni Değişiklik|Bozucu olmayan|
+|Kategori|Microsoft. Usage|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir platform çağırma yöntemi tanımlanır ve eşdeğer bir işlevselliği olan bir yöntem bulunmaktadır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sınıf kitaplığı.
+ Platform çağırma yöntemi tanımlanır ve [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sınıf kitaplığında denk işlevlere sahip bir yöntem bulunur.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir platform çağırma yöntemi kullanılarak tanımlanır ve yönetilmeyen bir DLL işlevini çağırmak için kullanılan <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliği veya `Declare` Visual Basic'teki. Hatalı tanımlanmış bir platform çağırma yöntemi için çalışma zamanı özel durumları nedeniyle, parametre ve dönüş değeri veri türleri ve çağırma kuralı ve karakter gibi yanlış alan belirtimleri eşleme hatalı misnamed bir işlev gibi sorunlara neden olabilir ayarlayın. Varsa, daha basit ve daha az hataya tanımlayın ve yönetilmeyen yöntemi doğrudan çağırmanız eşdeğer yönetilen yöntemini çağırmak genelde olduğu. Platform çağırma yöntemi Çağır ele alınması gereken ek güvenlik sorunlarına da yol açabilir.
+ Bir platform çağırma yöntemi, yönetilmeyen bir DLL işlevini çağırmak için kullanılır ve <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliği veya Visual Basic `Declare` anahtar sözcüğü kullanılarak tanımlanır. Yanlış tanımlanmış bir platform çağırma yöntemi, yanlış adlandırılmış bir işlev, parametre ve dönüş değeri veri türlerinin hatalı eşlemesi ve çağırma kuralı ve karakteri gibi yanlış alan belirtimleri nedeniyle çalışma zamanı özel durumlarına neden olabilir kurmak. Varsa, genellikle daha basit ve yönetilmeyen yöntemi doğrudan çağırdığından, eşdeğer yönetilen yöntemi çağırmak için daha basit ve daha az hataya açıktır. Platform çağırma yöntemini çağırmak, giderilmesi gereken ek güvenlik sorunlarına da yol açabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için yönetilmeyen işlev çağrısı yönetilen eşdeğerine çağrısı ile değiştirin.
+ Bu kuralın ihlalini onarmak için yönetilmeyen işleve yapılan çağrıyı, yönetilen eşdeğeri çağrısıyla değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Önerilen değiştirme yöntemi gerekli işlevleri sağlamıyorsa bu kuraldan bir uyarıyı gizler.
+ Önerilen değiştirme yöntemi gerekli işlevselliği sağlamıyorsa bu kuraldan bir uyarı gizleyin.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte gösterildiği bir platform kuralı ihlal yöntem tanımını çağırın. Ayrıca, platform çağrıları yöntemi çağırın ve eşdeğer Yönetilen yöntemi gösterilir.
+ Aşağıdaki örnek, kuralı ihlal eden bir platform çağırma yöntemi tanımını gösterir. Ayrıca, platform çağırma yöntemine yapılan çağrılar ve eşdeğer yönetilen yöntem gösterilir.
 
  [!code-csharp[FxCop.Usage.ManagedEquivalents#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.ManagedEquivalents/cs/FxCop.Usage.ManagedEquivalents.cs#1)]
  [!code-vb[FxCop.Usage.ManagedEquivalents#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.ManagedEquivalents/vb/FxCop.Usage.ManagedEquivalents.vb#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1404: P/Invoke ardından hemen GetLastError çağırın](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)
 
  [CA1060: P/Invokes öğesini NativeMethods sınıfına taşıyın](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)

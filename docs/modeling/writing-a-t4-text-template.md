@@ -6,46 +6,46 @@ helpviewer_keywords:
 - text templates, syntax
 - text templates, guide
 - text templates, functions that generate text
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2549ad27f0f05d3425dd6625e9d48fdfab4db3a6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 860f322724618ddb99bd9ab39eeefa488d9a71c5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386076"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666887"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 Metin Şablonu Yazma
-Bir metin şablonu, ondan oluşturulan metni içerir. Örneğin, bir web sayfası oluşturan bir şablonu içerir "\<html >..." ve tüm diğer standart bölümlerini bir HTML sayfası. Şablona eklenmiş olan *denetim blokları*, program kodu parçalarını olduğu. Denetim blokları, değişken değerlerini sağlayın ve bölümlerini koşullu ve tekrarlanan olmasını sağlar.
+Bir metin şablonu, bundan oluşturulacak metni içerir. Örneğin, bir Web sayfası oluşturan bir şablon "\<html >..." içerecektir HTML sayfasının diğer tüm standart parçaları. Şablona eklenen, program kodu parçaları olan *Denetim bloklarıdır*. Denetim blokları, değişen değerler sağlar ve metnin bölümlerinin koşullu ve yinelenebilir olmasını sağlar.
 
- Bu yapı, bir şablon geliştirin, çünkü oluşturulan dosyanın bir prototip ile başlayın ve artımlı olarak sonucun değişebileceğini denetim blokları eklemek kolay hale getirir.
+ Oluşturulan dosyanın bir prototipi ile başlayabileceğiniz ve sonucu değişen denetim bloklarını artımlı olarak ekleyebileceğiniz bu yapı, bir şablonu geliştirmeyi kolaylaştırır.
 
- Metin şablonları aşağıdaki bölümden oluşur:
+ Metin şablonları aşağıdaki bölümlerden oluşur:
 
-- **Yönergeleri** -şablonu nasıl işleneceğini denetleyen öğeleri.
+- **Yönergeler** -şablonun nasıl işlendiğini denetleyen öğeler.
 
-- **Metin blokları** - içerik çıkışa doğrudan kopyalanır.
+- **Metin blokları** -çıkışa doğrudan kopyalanmış içerik.
 
-- **Denetim blokları** -program değişken değerleri metnine ekler ve koşullu veya yinelenen bölümleri metin denetimlerini kodu.
+- **Denetim blokları** -metin içine değişken değerleri ekleyen program kodu ve metnin koşullu veya yinelenen kısımlarını denetler.
 
-Bu konudaki örnekleri denemek için bunları bir şablon dosyasına açıklandığı gibi kopyalayın [T4 metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Şablon dosyası düzenleme sonra dosyayı kaydedin ve ardından çıkışı inceleyebileceğiniz **.txt** dosya.
+Bu konudaki örnekleri denemek için, [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)bölümünde açıklandığı gibi bir şablon dosyasına kopyalayın. Şablon dosyasını düzenledikten sonra kaydedin ve Output **. txt** dosyasını inceleyin.
 
 ## <a name="directives"></a>Yönergeler
- Metin şablonu yönergeleri, metin şablon oluşturma altyapısı dönüştürme kodu ve çıktı dosyası oluşturma hakkında genel yönergeler sağlar.
+ Metin şablonu yönergeleri, metin şablonu oluşturma altyapısına, dönüştürme kodu ve çıkış dosyasının nasıl oluşturulacağı hakkında genel yönergeler sağlar.
 
- Örneğin, aşağıdaki yönerge çıkış dosyası .txt uzantısı olması gerektiğini belirtir:
+ Örneğin, aşağıdaki yönerge, çıkış dosyasının bir. txt uzantısına sahip olması gerektiğini belirtir:
 
 ```
 <#@ output extension=".txt" #>
 ```
 
- Yönergeleri hakkında daha fazla bilgi için bkz: [T4 metin şablonu yönergeleri](../modeling/t4-text-template-directives.md).
+ Yönergeler hakkında daha fazla bilgi için bkz. [T4 metin şablonu yönergeleri](../modeling/t4-text-template-directives.md).
 
 ## <a name="text-blocks"></a>Metin blokları
- Bir metin bloğu doğrudan çıkış dosyasına metin ekler. Hiçbir özel biçimlendirme metin blokları için yoktur. Örneğin, aşağıdaki metin şablonu "Hello" sözcüğünü içeren bir metin dosyası oluşturur:
+ Metin bloğu doğrudan çıkış dosyasına metin ekler. Metin blokları için özel biçimlendirme yoktur. Örneğin, aşağıdaki metin şablonu "Merhaba" sözcüğünü içeren bir metin dosyası oluşturacak:
 
 ```
 <#@ output extension=".txt" #>
@@ -53,20 +53,20 @@ Hello
 ```
 
 ## <a name="control-blocks"></a>Denetim blokları
- Denetim, şablonlarını dönüştürmek için kullanılan program kod bölümlerini taşlarıdır. Varsayılan C# kullanın ancak dildir [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], bu yönerge dosyasının başında yazabilirsiniz:
+ Denetim blokları, şablonları dönüştürmek için kullanılan program kodunun bölümleridir. Varsayılan dil C#, ancak [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kullanmak için, bu yönergeyi dosyanın başına yazabilirsiniz:
 
 ```
 <#@ template language="VB" #>
 ```
 
- Denetim blokları, kod yazdığınız dil için oluşturulan metnin dilini ilişkili değildir.
+ Denetim bloklarına kod yazdığınız dilin, oluşturulan metnin diliyle ilgisi yoktur.
 
 ### <a name="standard-control-blocks"></a>Standart denetim blokları
- Standart denetim bloğu, çıkış dosyasının bir kısmını oluşturduğu program kodu bölümüdür.
+ Standart denetim bloğu, çıkış dosyasının bir parçasını oluşturan program kodu bölümüdür.
 
- Metin blokları ve standart denetim blokları ile bir şablon dosyasındaki herhangi bir sayıda karıştırabilirsiniz. Bununla birlikte, içinde başka bir denetim bloğu yerleştirilemiyor. Her standart denetim bloğu simgeleri tarafından sınırlandırılmıştır `<# ... #>`.
+ Şablon dosyasında istediğiniz sayıda metin bloğunu ve standart denetim bloklarını karıştırabilirsiniz. Ancak, bir denetim bloğunu diğerinin içine yerleştirebilirsiniz. Her bir standart denetim bloğu `<# ... #>` semboller tarafından sınırlandırılır.
 
- Örneğin, aşağıdaki denetim bloğu ve metin bloğu satırı içerecek şekilde çıkış dosyası neden "0, 1, 2, 3, 4 Merhaba!":
+ Örneğin, aşağıdaki denetim bloğu ve metin bloğu çıkış dosyasının "0, 1, 2, 3, 4 Merhaba!" satırını içermesine neden olur:
 
 ```
 <#
@@ -78,7 +78,7 @@ Hello
 #> Hello!
 ```
 
- Açık kullanmak yerine `Write()` ifadeleri, metin ve kod ayırma. Aşağıdaki örnek "Hello!" yazdırır. dört kez:
+ Açık `Write()` deyimlerini kullanmak yerine metin ve kodu ayırma yapabilirsiniz. Aşağıdaki örnek "Merhaba!" yazdırır dört kez:
 
 ```
 <#
@@ -91,25 +91,25 @@ Hello!
 #>
 ```
 
- Bir metin ekleyebilirsiniz yerde engelleyecek bir `Write();` deyimine kodda izin.
+ Kodda `Write();` ifadeye izin verilecek her yerde bir metin bloğu ekleyebilirsiniz.
 
 > [!NOTE]
-> Bir metin bloğu veya koşullu bir döngü gibi bileşik deyim içinde eklediğinizde, her zaman küme ayraçları {…} kullanın metin bloğu içerecek şekilde.
+> Bir metin bloğunu döngü veya koşullu gibi bileşik bir ifadeye gömdüğünüzde her zaman ayraç {...} kullanın metin bloğunu içerir.
 
 ### <a name="expression-control-blocks"></a>İfade denetim blokları
- Bir ifade denetim bloğu bir ifadeyi değerlendirir ve bir dizeye dönüştürür. Bu çıktı dosyasına eklenir.
+ Bir ifade denetim bloğu bir ifadeyi değerlendirir ve bir dizeye dönüştürür. Bu, çıkış dosyasına eklenir.
 
- İfade denetim blokları ile simgeleriyle ayrılmıştır. `<#= ... #>`
+ İfade denetim blokları semboller tarafından sınırlandırılır `<#= ... #>`
 
- Örneğin, aşağıdaki denetim bloğu "5" içerecek şekilde çıkış dosyası oluşturulmamasını sağlar:
+ Örneğin, aşağıdaki denetim bloğu çıkış dosyasının "5" içermesine neden olur:
 
 ```
 <#= 2 + 3 #>
 ```
 
- Açılış sembol için üç karakter olduğunu göreceksiniz "< #=".
+ Açma simgesinin "< # =" üç karakteri olduğuna dikkat edin.
 
- İfade, kapsam içi herhangi bir değişken içerebilir. Örneğin, bu bloktaki satır numaralarıyla yazdırır:
+ İfade, kapsamdaki herhangi bir değişken içerebilir. Örneğin, bu blok satırları şu sayılarla yazdırır:
 
 ```
 <#@ output extension=".txt" #>
@@ -124,11 +124,11 @@ This is hello number <#= i+1 #>: Hello!
 ```
 
 ### <a name="class-feature-control-blocks"></a>Sınıf özelliği denetim blokları
- Bir sınıf özelliği denetim bloğu, özellikler, yöntemler veya ana dönüşüm dahil edilmemesi gereken herhangi bir kod tanımlar. Sınıf özelliği bloklarını yardımcı işlevleri için sıkça kullanılır.  Genellikle, böylece olabilir sınıf özelliği bloklarını ayrı dosyalarda yerleştirilir [dahil](#Include) birden fazla metin şablonu tarafından.
+ Sınıf özelliği denetim bloğu özellikleri, yöntemleri veya ana dönüşümde içerilmemelidir başka herhangi bir kodu tanımlar. Sınıf özellik blokları, genellikle yardımcı işlevler için kullanılır.  Genellikle sınıf özelliği blokları, birden fazla metin şablonu tarafından [eklenebilecek](#Include) şekilde ayrı dosyalara yerleştirilir.
 
- Sınıf özelliği denetim blokları ile simgeleriyle ayrılmıştır. `<#+ ... #>`
+ Sınıf özelliği denetim blokları semboller tarafından sınırlandırılır `<#+ ... #>`
 
- Örneğin, şu şablon dosyası bildirir ve bir yöntem kullanır:
+ Örneğin, aşağıdaki şablon dosyası bir yöntemi bildirir ve kullanır:
 
 ```
 <#@ output extension=".txt" #>
@@ -150,12 +150,12 @@ private int Square(int i)
 #>
 ```
 
- Sınıf özellikleri, yazıldığı dosyanın sonunda yerleştirilmelidir. Ancak, `<#@include#>` olsa bile bir sınıf özelliği içeren bir dosya `include` yönergesi standart blokları ve metin tarafından izlenen.
+ Sınıf özelliklerinin yazıldığı dosyanın sonuna yerleştirilmesi gerekir. Ancak, bir sınıf özelliği içeren bir dosyayı, `include` yönergesinin ardından standart bloklar ve metin tarafından izlenen olsa bile `<#@include#>` yapabilirsiniz.
 
- Denetim blokları hakkında daha fazla bilgi için bkz: [metin şablonu denetim blokları](../modeling/text-template-control-blocks.md).
+ Denetim blokları hakkında daha fazla bilgi için bkz. [metin şablonu denetim blokları](../modeling/text-template-control-blocks.md).
 
-### <a name="class-feature-blocks-can-contain-text-blocks"></a>Sınıf özelliği bloklarını, metin blokları içerebilir
- Metin oluşturan bir yöntem yazabilirsiniz. Örneğin:
+### <a name="class-feature-blocks-can-contain-text-blocks"></a>Sınıf özelliği blokları, metin blokları içerebilir
+ Metin üreten bir yöntem yazabilirsiniz. Örneğin:
 
 ```
 List of Squares:
@@ -174,74 +174,74 @@ private void WriteSquareLine(int i)
 #>
 ```
 
- Birden fazla şablon tarafından eklenen ayrı bir dosyada metin oluşturan bir yöntem yerleştirmek özellikle yararlıdır.
+ Birden fazla şablon tarafından eklenebilecek ayrı bir dosyada metin üreten bir yöntemi yerleştirmek özellikle yararlıdır.
 
-## <a name="using-external-definitions"></a>Dış tanımlar kullanma
+## <a name="using-external-definitions"></a>Dış tanımları kullanma
 
 ### <a name="assemblies"></a>Bütünleştirilmiş kodlar
- Kod blokları şablonunuzun en sık tanımlanan kullanım türleri kullanılabilir System.dll gibi .NET derlemeleri. Ayrıca, diğer .NET derlemelerini veya kendi derlemelere başvurabilir. Bir yol veya bir derlemenin tanımlayıcı ad sağlayabilirsiniz:
+ Şablonunuzun kod blokları, System. dll gibi en sık kullanılan .NET derlemeleri tanımlanmış türleri kullanabilir. Ayrıca, diğer .NET derlemelerine veya kendi derlemelerinize başvurabilirsiniz. Bir yol adı veya bir derlemenin tanımlayıcı adını sağlayabilirsiniz:
 
 ```
 <#@ assembly name="System.Xml" #>
 ```
 
- Mutlak yol adlarını kullanmanız veya yol adına standart makro adları kullanın. Örneğin:
+ Mutlak yol adları kullanmanız veya yol adında standart makro adlarını kullanmanız gerekir. Örneğin:
 
 ```
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>
 ```
 
- Derleme yönergesinin hiçbir etkisi yoktur bir [önceden işlenmiş metin şablonu](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ Derleme yönergesinin [önceden işlenmiş bir metin şablonunda](../modeling/run-time-text-generation-with-t4-text-templates.md)hiçbir etkisi yoktur.
 
- Daha fazla bilgi için [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
+ Daha fazla bilgi için bkz. [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
 
 ### <a name="namespaces"></a>Ad Alanları
- İçeri aktarma yönergesini aynıdır `using` yan tümcesinde C# veya `imports` Visual Basic'te yan tümcesi. Tam adı kullanmadan kodunuzdaki türleri başvurmak olanak tanır:
+ İçeri aktarma yönergesi, içindeki C# `using` yan tümcesiyle veya Visual Basic `imports` yan tümcesinde aynıdır. Tam nitelikli bir ad kullanmadan kodunuzdaki türlere başvurabileceğiniz bir kod sağlar:
 
 ```
 <#@ import namespace="System.Xml" #>
 ```
 
- Kadar kullanabileceğiniz `assembly` ve `import` yönergeleri yazarken istiyor. Metin ve denetim blokları önce bunları yerleştirmeniz gerekir.
+ İstediğiniz kadar çok `assembly` ve `import` yönergesi kullanabilirsiniz. Bunları metin ve denetim bloklarından önce yerleştirmeniz gerekir.
 
- Daha fazla bilgi için [T4 içe aktarma yönergesi](../modeling/t4-import-directive.md).
+ Daha fazla bilgi için bkz. [T4 Içeri aktarma yönergesi](../modeling/t4-import-directive.md).
 
-### <a name="Include"></a> Kod ve metin gibi
- `include` Yönergesi, başka bir şablon dosyasından metin ekler. Örneğin, bu yönerge içeriğini ekler `test.txt`.
+### <a name="Include"></a>Kod ve metin ekleme
+ @No__t_0 yönergesi başka bir şablon dosyasından metin ekler. Örneğin, bu yönerge `test.txt` içeriğini ekler.
 
 ```
 <#@ include file="c:\test.txt" #>
 ```
 
- Eklenen içerik ekleyen metin şablonunun hemen hemen parçasıymış gibi işlenir. Ancak, bir sınıf özelliği bloğu içeren bir dosya dahil edebilirsiniz `<#+...#>` bile içerme yönergesi ve standart denetim blokları ile izlense izlenir.
+ Eklenen içerik ekleyen metin şablonunun hemen hemen parçasıymış gibi işlenir. Ancak, dahil etme yönergesinin sıradan metin ve standart denetim blokları tarafından izlense bile, sınıf özelliği bloğu içeren bir dosyayı ekleyebilirsiniz `<#+...#>`.
 
- Daha fazla bilgi için [T4 dahil yönergesi](../modeling/t4-include-directive.md).
+ Daha fazla bilgi için bkz. [T4 Içerme yönergesi](../modeling/t4-include-directive.md).
 
 ### <a name="utility-methods"></a>Yardımcı program yöntemleri
- Çeşitli yöntemler vardır gibi `Write()` , her zaman bir denetim bloğu içinde kullanılabilir. Bunlar, çıkış Girintile yardımcı olur ve hata raporlama yöntemler içerir.
+ Her zaman bir denetim bloğunda kullanabileceğiniz `Write()` gibi çeşitli yöntemler vardır. Bunlar, çıktıyı girintileme ve raporlama hataları için yöntemleri içerir.
 
- Kendi yardımcı program yöntemleri kümesini de yazabilirsiniz.
+ Kendi yardımcı program yöntemlerinizi de yazabilirsiniz.
 
- Daha fazla bilgi için [metin şablonu yardımcı program yöntemleri](../modeling/text-template-utility-methods.md).
+ Daha fazla bilgi için bkz. [metin şablonu yardımcı program yöntemleri](../modeling/text-template-utility-methods.md).
 
-## <a name="transforming-data-and-models"></a>Veri ve modelleri dönüştürme
- Bir metin şablonu için en kullanışlı uygulama modeli, veritabanı veya veri dosyası gibi bir kaynaktaki içeriği temel malzeme oluşturmaktır. Şablonunuzu ayıklar ve verileri yeniden biçimlendirir. Şablonları koleksiyonu gibi bir kaynak birden fazla dosyaya dönüştürebilirsiniz.
+## <a name="transforming-data-and-models"></a>Verileri ve modelleri dönüştürme
+ Bir metin şablonu için en kullanışlı uygulama, model, veritabanı veya veri dosyası gibi bir kaynağın içeriğine göre malzeme oluşturmadır. Şablonunuz verileri ayıklar ve yeniden biçimlendirir. Şablon koleksiyonu, böyle bir kaynağı birden çok dosyaya dönüştürebilir.
 
- Kaynak dosyayı okumak için birçok yaklaşım vardır.
+ Kaynak dosyayı okumak için birkaç yaklaşım vardır.
 
- **Bir metin şablonu dosyasını oku**. Bu şablona veri almak için en basit yoludur:
+ **Metin şablonundaki bir dosyayı okuyun**. Bu, şablona veri almanın en kolay yoludur:
 
 ```
 <#@ import namespace="System.IO" #>
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **Bir dosya gezilebilir bir model olarak yük**. Metin şablonu kodunuzu gidebilirsiniz bir model verileri okumak daha güçlü bir yöntemdir. Örneğin, bir XML dosyasını yükleyin ve XPath ifadeleri ile gidin. Ayrıca kullanabileceğinizi [XSD.exe'nin](http://go.microsoft.com/fwlink/?LinkId=178765) ile okuyabilir XML veri sınıfları kümesi oluşturmak için.
+ **Bir dosyayı gezinebilir model olarak yükleyin**. Daha güçlü bir yöntem, metin şablonu kodunuzun gezinebileceği bir model olarak verileri okumalıdır. Örneğin, bir XML dosyası yükleyebilir ve XPath ifadeleriyle gidebilirsiniz. Ayrıca, XML verilerini okuyabilmeniz için bir sınıf kümesi oluşturmak üzere [XSD. exe](http://go.microsoft.com/fwlink/?LinkId=178765) ' yi de kullanabilirsiniz.
 
- **Bir diyagram veya form model dosyasını düzenleyin.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] bir modeli diyagramı veya Windows form olarak düzenlemenize olanak tanıyan araçlar sağlar. Bu, oluşturulan uygulamayı kullanıcılarla model tartışmak kolaylaştırır. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Ayrıca, modeli yapısını yansıtan türü kesin belirlenmiş sınıf kümesi oluşturur. Daha fazla bilgi için [bir etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md).
+ **Model dosyasını diyagram veya formda düzenleyin.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], bir modeli diyagram veya Windows formu olarak düzenlemenize olanak sağlayan araçlar sağlar. Bu, modeli oluşturulan uygulamanın kullanıcılarıyla tartışmanızı kolaylaştırır. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Ayrıca, modelin yapısını yansıtan türü kesin belirlenmiş sınıflar kümesi de oluşturur. Daha fazla bilgi için bkz. [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md).
 
-### <a name="relative-file-paths-in-design-time-templates"></a>Tasarım zamanı şablonları göreli dosya yolları
- İçinde bir [tasarım zamanı metin şablonu](../modeling/design-time-code-generation-by-using-t4-text-templates.md)başvuru bir dosyayı bir konuma göre metin şablonu kullanmak istiyorsanız `this.Host.ResolvePath()`. Ayrıca ayarlamanız gerekir `hostspecific="true"` içinde `template` yönergesi:
+### <a name="relative-file-paths-in-design-time-templates"></a>Tasarım zamanı şablonlarındaki göreli dosya yolları
+ [Tasarım zamanı metin şablonunda](../modeling/design-time-code-generation-by-using-t4-text-templates.md), metin şablonuna göre konumdaki bir dosyaya başvurmak istiyorsanız `this.Host.ResolvePath()` kullanın. @No__t_1 yönergesinde `hostspecific="true"` de ayarlamanız gerekir:
 
 ```
 <#@ template hostspecific="true" language="C#" #>
@@ -255,24 +255,24 @@ Content of MyFile.txt is:
 <#= myFile #>
 ```
 
-Ana bilgisayar tarafından sağlanan diğer hizmetlere de edinebilirsiniz. Daha fazla bilgi için [erişme Visual Studio'ya veya diğer Konaklara bir şablondan](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
+Konak tarafından sunulan diğer hizmetleri de elde edebilirsiniz. Daha fazla bilgi için bkz. [bir şablondan Visual Studio 'ya veya diğer konaklara erişme](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
 
-### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Tasarım zamanı metin şablonları ayrı bir AppDomain içinde çalıştırın
+### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Tasarım zamanı metin şablonları ayrı bir uygulama etki alanında çalışır
 
- Farkında olmalıdır, bir [tasarım zamanı metin şablonu](../modeling/design-time-code-generation-by-using-t4-text-templates.md) ana uygulamadan ayrı bir AppDomain içinde çalışır. Çoğu durumda bu önemli değildir, ancak belirli karmaşık durumlarda kısıtlamaları keşfedebilirsiniz. Örneğin, ayrı bir hizmetten veri ya da şablonu dışına geçirmek istiyorsanız, hizmet seri hale getirilebilir bir API sağlamanız gerekir.
+ [Tasarım zamanı metin şablonunun](../modeling/design-time-code-generation-by-using-t4-text-templates.md) ana uygulamadan ayrı bir uygulama etki alanında çalıştığını bilmelisiniz. Çoğu durumda bu önemli değildir, ancak belirli karmaşık durumlarda kısıtlamalar bulabilirsiniz. Örneğin, ayrı bir hizmetten şablon içine veya dışına veri geçirmek istiyorsanız, hizmet serileştirilebilir bir API sağlamalıdır.
 
- (Bu doğru değilse bir [çalışma zamanı metin şablonu](../modeling/run-time-text-generation-with-t4-text-templates.md), kodunuzun geri kalanı ile birlikte derlenmiş kod sağlar.)
+ (Bu, kodunuzun geri kalanıyla birlikte derlenen kodu sağlayan bir [çalışma zamanı metin şablonunda](../modeling/run-time-text-generation-with-t4-text-templates.md)doğru değildir.)
 
-## <a name="editing-templates"></a>Şablon düzenleme
- Özel metin şablonu düzenleyicileri, Uzantı Yöneticisi çevrimiçi Galeri'den indirilebilir. Üzerinde **Araçları** menüsünde tıklatın **Uzantı Yöneticisi**. Tıklayın **çevrimiçi galeri**ve ardından arama aracını kullanın.
+## <a name="editing-templates"></a>Şablonları Düzenle
+ Özelleştirilmiş metin şablonu düzenleyicileri Uzantı Yöneticisi çevrimiçi galerisinden indirilebilir. **Araçlar** menüsünde, **Uzantı Yöneticisi**' ne tıklayın. **Çevrimiçi Galeri**' ye tıklayın ve ardından arama aracını kullanın.
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Görev|Konu|
 |-|-|
-|Bir şablon yazma.|[T4 Metin Şablonları Yazma Yönergeleri](../modeling/guidelines-for-writing-t4-text-templates.md)|
-|Program kodunu metin oluşturmak.|[Metin şablonu yapısı](../modeling/writing-a-t4-text-template.md)|
-|Visual Studio çözümü içinde dosyaları oluşturur.|[T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
-|Visual Studio dışında metin oluşturma çalıştırın.|[TextTransform Yardımcı Programı ile Dosya Oluşturma](../modeling/generating-files-with-the-texttransform-utility.md)|
-|Bir etki alanına özgü dil biçiminde verilerinizi dönüştürün.|[Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)|
+|Şablon yazma.|[T4 Metin Şablonları Yazma Yönergeleri](../modeling/guidelines-for-writing-t4-text-templates.md)|
+|Program kodunu kullanarak metin oluşturun.|[Metin şablonu yapısı](../modeling/writing-a-t4-text-template.md)|
+|Visual Studio çözümünde dosya oluşturun.|[T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
+|Metin oluşturmayı Visual Studio dışında çalıştırın.|[TextTransform Yardımcı Programı ile Dosya Oluşturma](../modeling/generating-files-with-the-texttransform-utility.md)|
+|Verilerinizi, etki alanına özgü dil biçiminde dönüştürün.|[Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)|
 |Kendi veri kaynaklarınızı dönüştürmek için yönerge işlemcileri yazın.|[T4 Metin Dönüştürmeyi Özelleştirme](../modeling/customizing-t4-text-transformation.md)|

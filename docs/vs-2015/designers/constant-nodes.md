@@ -6,43 +6,43 @@ ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 2c798a50-a2d7-459b-9879-ad4ad8290c9b
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d38a4f8a182562c11dbb742cb26392218edfd981
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d15d14c59049a2a514a6c779c23875c2dfccb539
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68162650"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657963"
 ---
 # <a name="constant-nodes"></a>Sabit Düğümler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Gölgelendirici Tasarımcısı'nda sabit düğümler değişmez değerleri temsil eder ve piksel gölgelendirici hesaplamalarında köşe öznitelikleri ilişkilendirilmiş. Köşe öznitelikleri ilişkilendirilmiş olduğundan — ve bu nedenle, her bir pikseli farklıdır — sabiti farklı bir sürümünü her piksel gölgelendiricisi örneği alır. Bu, her pikselin benzersiz bir görünüm sağlar.  
-  
-## <a name="vertex-attribute-interpolation"></a>Köşe özniteliği ilişkilendirme  
- Oyunlarda veya uygulamalarda 3B Sahne görüntüsü matematiksel olarak nesne sayısı dönüştürerek yapılan — köşe, köşe öznitelikleri ve temel tanımları tarafından tanımlanan — içine ekrandaki piksel. Tüm bir piksel benzersiz görünümünü sağlamak için gereken bilgileri oluşturan farklı köşeler için pikselin yakınlık göre birlikte karışık köşe öznitelikleri, aracılığıyla sağlanmaktadır kendi *ilkel*. Basit bir tür temel bir işleme öğedir; diğer bir deyişle, basit bir nokta, bir satırı veya bir üçgen gibi şekil. Bu köşe için neredeyse aynı sabitleri çok yalnızca biri köşeleri yakın bir piksel alır, ancak bu köşeler ortalamasını olan sabitleri, temel tüm köşeler arasında eşit aralıklı bir piksel alır. Grafik programlamada piksel alma sabitleri olduğu söylenir *ilişkilendirilmiş*. Bu şekilde piksel sabit veri sağlayan çok iyi görsel kaliteyi oluşturur ve aynı anda bellek Ayak izi ve bant genişliği gereksinimlerini azaltır.  
-  
- Her piksel gölgelendiricisi örneği yalnızca bir sabit değerler kümesini alır ve bu değerleri değiştiremezsiniz ancak farklı piksel gölgelendiricisi örnekleri farklı sabit veri kümelerini alır. Bu tasarım, her pikselin temel için bir farklı renk çıktı oluşturmak bir gölgelendirici programla sağlar.  
-  
-## <a name="constant-node-reference"></a>Sabit düğüm başvurusu  
-  
-|Düğüm|Ayrıntılar|Özellikler|  
-|----------|-------------|----------------|  
-|**Kamera vektörü**|Geçerli pikselden, dünya alanındaki kameraya genişleyen vektör.<br /><br /> Bunu, dünya alanındaki yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin öğesinden kameraya.|Yok.|  
-|**Renk sabiti**|Bir sabit renk değeri.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Renk değeri.|**Output**<br /> Renk değeri.|  
-|**Sabit**|Sabit bir skaler değer.<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Skaler değer.|**Output**<br /> Skaler değer.|  
-|**2B sabiti**|Bir iki bileşenli bir vektör sabiti.<br /><br /> **Output**<br /><br /> `Output`: `float2`<br /> Vektör değeri.|**Output**<br /> Vektör değeri.|  
-|**3B sabiti**|Bir üç bileşenli bir vektör sabiti.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Vektör değeri.|**Output**<br /> Vektör değeri.|  
-|**4b sabiti**|Bir dört bileşenli bir vektör sabiti.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Renk değeri.|**Output**<br /> Vektör değeri.|  
-|**Normalleştirilmiş konum**|Normalleştirilmiş cihaz koordinatlarında belirtilen geçerli pikselin konumu.<br /><br /> X koordinatını ve y koordinatını aralığında değerlere sahip [-1, 1], z koordinatı aralığında bir değere sahip. [0, 1] ve w bileşeni görüntüleme alanı; noktası derinlik değerini içerir. w normale döndürülemez.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Yok.|  
-|**Nokta rengi**|Malzeme yayınık renk ve köşe renk öznitelikleri birleşimi geçerli pikselin yayınık rengi.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin yayınık rengi.|Yok.|  
-|**Nokta derinliği**|Görünüm alanında geçerli pikselin derinliği.<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Geçerli pikselin derinliği.|Yok.|  
-|**Normalleştirilmiş nokta derinliği**|Normalleştirilmiş cihaz koordinatlarında belirtilen geçerli pikselin derinliği.<br /><br /> Sonuç aralığında bir değere sahip. [0, 1].<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Geçerli pikselin derinliği.|Yok.|  
-|**Ekran konumu**|Ekran koordinatlarında belirtilen geçerli pikselin konumu.<br /><br /> Ekran koordinatları, geçerli görünüm penceresine bağlı temel alır. X ve y bileşenleri içeren ekran koordinatları, z bileşen içeren bir aralığına normalleştirilmiş derinliği [0, 1] ve w bileşeni görüntüleme alanı derinlik değerini içerir.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|None|  
-|**Yüzey normali**|Nesne alanındaki geçerli pikselin yüzey normali.<br /><br /> Bu, nesne alanındaki aydınlatma katkılarını ve yansımalarını hesaplamak için kullanabilirsiniz.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin yüzey normali.|Yok.|  
-|**Eğim alanı kamera vektörü**|Geçerli pikselden, eğim alanındaki kameraya genişleyen vektör.<br /><br /> Bunu, eğim alanındaki yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin öğesinden kameraya.|None|  
-|**Eğim alanı ışık yönü**|Işığın, geçerli pikselin Eğim alanındaki bir ışık kaynağından saçıldığı yönü tanımlayan vektör.<br /><br /> Bunu, eğim alanındaki aydınlatma ve Yansımalı Katkıları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıkış:**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin öğesinden bir ışık kaynağına.|None|  
-|**Dünya normali**|Dünya alanındaki geçerli pikselin yüzey normali.<br /><br /> Bunu, dünya alanındaki aydınlatma katkılarını ve yansımalarını hesaplamak için kullanabilirsiniz.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin yüzey normali.|Yok.|  
+Gölgelendirici tasarımcısında, sabit düğümler sabit değerleri ve piksel gölgelendirici hesaplamalarında enterpolasyonlu köşe özniteliklerini temsil eder. Köşe öznitelikleri enterpolacağından ve bu nedenle her bir piksel için farklı olduğundan, her piksel gölgelendirici örneği, sabit 'in farklı bir sürümünü alır. Bu, her piksele benzersiz bir görünüm sağlar.
+
+## <a name="vertex-attribute-interpolation"></a>Köşe özniteliği ilişkilendirme
+ Bir oyun veya uygulamadaki 3B sahnenin görüntüsü, köşeler, köşe öznitelikleri ve ilkel tanımlar tarafından tanımlanan bir dizi nesneyi ekran piksellerine göre matematiksel olarak dönüştürerek yapılır. Bir piksel benzersiz görünümü sağlamak için gereken tüm bilgiler, temel öznitelikleri aracılığıyla sağlanır ve bu da, *temel*bir şekilde bir piksel oluşturan farklı köşelere göre karışrdı. Temel bir temel işleme öğesidir; diğer bir deyişle, nokta, çizgi veya üçgen gibi basit bir şekil. Köşelerin yalnızca birine yakın bir piksel, bu köşenin neredeyse aynısı olan sabitleri alır, ancak bir ilkel öğenin tüm köşeleri arasında eşit aralıklı bir piksel, bu köşelerin ortalaması olan sabitleri alır. Grafik programlamada, piksellerin aldığı sabitler, *enterpolasyonda*denir. Bu şekilde piksellere sabit veri sağlanması çok iyi bir görsel kalite oluşturur ve aynı zamanda, bellek ayak ve bant genişliği gereksinimlerini azaltır.
+
+ Her piksel gölgelendirici örneği yalnızca bir sabit değer kümesi alırsa ve bu değerleri değiştiremese de, farklı piksel gölgelendirici örnekleri farklı sabit veri kümelerini alır. Bu tasarım, gölgelendirici programının ilkel içindeki her bir piksel için farklı bir renk çıkışı üretmesine olanak sağlar.
+
+## <a name="constant-node-reference"></a>Sabit düğüm başvurusu
+
+|Düğüm|Ayrıntılar|Özellikler|
+|----------|-------------|----------------|
+|**Kamera vektörü**|Dünya alanındaki geçerli pikselden kameraya genişleyen vektör.<br /><br /> Bunu, dünya alanındaki yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden kameraya olan vektör.|Yok.|
+|**Renk sabiti**|Sabit bir renk değeri.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Renk değeri.|**Output**<br /> Renk değeri.|
+|**Sabit**|Sabit bir skaler değer.<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Skaler değer.|**Output**<br /> Skaler değer.|
+|**2B sabit**|İki bileşenden oluşan vektör sabiti.<br /><br /> **Output**<br /><br /> `Output`: `float2`<br /> Vektör değeri.|**Output**<br /> Vektör değeri.|
+|**3B sabiti**|Üç bileşenden oluşan bir vektör sabiti.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Vektör değeri.|**Output**<br /> Vektör değeri.|
+|**4D sabiti**|Dört bileşenden oluşan vektör sabiti.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Renk değeri.|**Output**<br /> Vektör değeri.|
+|**Normalleştirilmiş konum**|Normalleştirilmiş cihaz koordinatları olarak ifade edilen geçerli pikselin konumu.<br /><br /> X koordinatı ve y koordinatı [-1, 1] aralığında değerler içeriyor, z koordinatı [0, 1] aralığında bir değere sahip ve w bileşeni görünüm alanındaki nokta derinliği değerini içeriyor; w normalleştirilemez.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Yok.|
+|**Nokta rengi**|Malzeme dağıtma rengi ve köşe rengi özniteliklerinin bir birleşimi olan geçerli pikselin dağıtma rengi.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin dağıtma rengi.|Yok.|
+|**Nokta derinliği**|Görünüm alanındaki geçerli pikselin derinliği.<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Geçerli pikselin derinliği.|Yok.|
+|**Normalleştirilmiş nokta derinliği**|Normalleştirilmiş cihaz koordinatlarında ifade edilen geçerli pikselin derinliği.<br /><br /> Sonucun [0, 1] aralığında bir değeri vardır.<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Geçerli pikselin derinliği.|Yok.|
+|**Ekran konumu**|Geçerli pikselin ekran koordinatları olarak ifade edilen konumu.<br /><br /> Ekran koordinatları geçerli görünüm penceresini temel alır. X ve y bileşenleri ekran koordinatlarını içerir, z bileşeni bir [0, 1] aralığına normalleştirilmiş derinliği içerir ve w bileşeni görünüm alanındaki derinlik değerini içerir.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Yok.|
+|**Yüzey normal**|Nesne alanında geçerli pikselin yüzey normal.<br /><br /> Bunu, nesne alanındaki aydınlatma katkılarını ve yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin yüzey normal.|Yok.|
+|**Teğet alanı kamera vektörü**|Teğet alanında geçerli pikselden kameraya genişleyen vektör.<br /><br /> Bu alanı, tanjant alanındaki yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden kameraya olan vektör.|Yok.|
+|**Teğet boşluk ışığı yönü**|Işığın, geçerli pikselin teğet alanındaki bir ışık kaynağından saçıldığı yönü tanımlayan vektör.<br /><br /> Bu bunu, tanjant alanında aydınlatma ve yansımalı katkıları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden bir ışık kaynağına vektör.|Yok.|
+|**Dünya normal**|Dünya alanındaki geçerli pikselin yüzey normal.<br /><br /> Bunu, dünya alanındaki aydınlatma katlamalarını ve yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Geçerli pikselin yüzey normal.|Yok.|
 |**Dünya konumu**|Dünya alanındaki geçerli pikselin konumu.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Geçerli pikselin konumu.|Yok.|

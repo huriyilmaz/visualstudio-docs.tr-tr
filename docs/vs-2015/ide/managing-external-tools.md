@@ -54,72 +54,72 @@ helpviewer_keywords:
 - Resource Compiler
 ms.assetid: f382fd40-a98f-4934-8c9a-5aeae881acde
 caps.latest.revision: 41
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e568286a5e17b13b5009eccf01988d458fc9cd47
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7a9ebda81f013f42aeac23c9c0a8cc5a0a41f5f0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65686960"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651346"
 ---
 # <a name="managing-external-tools"></a>Dış Araçları Yönetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Dış Araçları'ndan çağırabilirsiniz Visual Studio içinde. Birkaç varsayılan araç ulaşılabilir **Araçları** menü, ancak diğer yürütülebilir dosyaların kendi ekleyebilirsiniz.  
-  
-## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Visual Studio Araçları menüsündeki araçları  
- Aşağıdaki araçları çağırabilirsiniz **Araçları** menüde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Adından tarafından de çağırabilirsiniz **hızlı başlatma** penceresi. GuidGen.exe çağırmak için örneğin **GUID Oluştur**.  
-  
-1. GUID oluştur: bir GUID oluşturur.  
-  
-2. Hata arama: girilen değerin bir hata iletisi alır. Daha fazla bilgi için [ERRLOOK başvurusu](https://msdn.microsoft.com/library/6040ffc1-2355-4a45-8998-84cbcba4ca91).  
-  
-3. ATL/MFC izleme aracı: hata ayıklama İzleyici iletileri ATL ve MFC kaynakları gösterir.  
-  
-4. PreEmptive koruma - Dotfuscator: .NET programlarının tersine mühendislik karşı korur.  
-  
-5. SPY++: Grafik işlemleri, iş parçacıkları, windows ve pencere iletilerini görüntüler.  
-  
-6. WCF Hizmeti Yapılandırma Düzenleyicisi: Oluşturma ve WCF hizmetleri için yapılandırma ayarlarını değiştirmenize olanak sağlar.  
-  
+Visual Studio 'Nun içinden dış araçlar çağırabilirsiniz. **Araçlar** menüsünde birkaç varsayılan araç mevcuttur, ancak kendi diğer yürütülebilir dosyalarını ekleyebilirsiniz.
+
+## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Visual Studio Araçları menüsünde bulunan araçlar
+ @No__t_1 **Araçlar** menüsünden aşağıdaki araçları çağırabilirsiniz. Ayrıca, bunları **Hızlı başlatma** penceresinden adına göre de çağırabilirsiniz. Örneğin, GUIDgen. exe ' yi çağırmak için **GUID oluştur**yazın.
+
+1. GUID oluştur: bir GUID oluşturur.
+
+2. Hata arama: girilen değerden bir hata iletisi alır. Daha fazla bilgi için bkz. [ERRLOOK başvurusu](https://msdn.microsoft.com/library/6040ffc1-2355-4a45-8998-84cbcba4ca91).
+
+3. ATL/MFC Izleme aracı: ATL ve MFC kaynaklarında hata ayıklama izleme iletilerini gösterir.
+
+4. PreEmptive Protection-Dotfuscator: .NET programlarını tersine mühendisliğe karşı korur.
+
+5. SPY + +: işlem, iş parçacıkları, pencereler ve pencere iletilerini grafiksel olarak görüntüler.
+
+6. WCF hizmeti yapılandırma Düzenleyicisi: WCF Hizmetleri için yapılandırma ayarları oluşturmanıza ve değiştirmenize Izin verir.
+
 > [!WARNING]
-> Dış araçların farklı bir liste görebilirsiniz, hangi Visual Studio sürümü bağlı olarak, yüklediğiniz ve uyguladığınız ayarları profili. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="adding-new-tools"></a>Yeni araçları ekleme  
- Harici bir aracı için ekleyebilirsiniz **Araçları** menüsü. Açık **dış Araçlar** iletişim kutusu ve tıklatın **Ekle**, ardından bilgileri doldurun. Örneğin, Windows Explorer'ın şu anda dosya dizininde açmak için şu girdiyi Visual Studio'da Aç nedenleri:  
-  
-1. Başlık: Dosya konumunu Aç  
-  
-2. Komut: explorer.exe  
-  
-3. Bağımsız değişkenleri: / root, "$(ItemDir)"  
-  
-## <a name="arguments-for-external-tools"></a>Dış araçlar bağımsız değişkenleri  
- Şu bağımsız değişkenler bir dış Aracı'nı başlattığınızda, atanmış olan Visual Studio değişkenlerdir. Not Defteri'ni veya Spy ++ hakkında listelenebilir gibi dış araçlara bağlantıları **Araçları** dış Araçlar iletişim kutusunu kullanarak menüsü.  
-  
+> Yüklediğiniz Visual Studio sürümüne ve uygulanan ayarlar profiline bağlı olarak, dış araçların farklı bir listesini görebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="adding-new-tools"></a>Yeni araçlar ekleme
+ **Araçlar** menüsüne bir dış araç ekleyebilirsiniz. **Dış araçlar** iletişim kutusunu açın ve **Ekle**' ye tıklayın ve ardından bilgileri girin. Örneğin, aşağıdaki giriş, Windows Gezgini 'nin şu anda Visual Studio 'da açtığınız dosyanın dizininde açılmasını sağlar:
+
+1. Başlık: dosya konumunu aç
+
+2. Komut: Explorer. exe
+
+3. Bağımsız değişkenler:/root, "$ (ıtemdır)"
+
+## <a name="arguments-for-external-tools"></a>Dış araçlar için bağımsız değişkenler
+ Aşağıdaki bağımsız değişkenler, dış bir araç başlattığınızda atanan Visual Studio değişkenleridir. Not defteri veya Spy + + gibi dış araçların bağlantıları, Dış Araçlar iletişim kutusu kullanılarak **Araçlar** menüsünde listelenebilir.
+
 > [!NOTE]
-> IDE durum çubuğu ekleme noktasını etkin Kod Düzenleyicisi'nde nerede göstermek için geçerli satır ve sütun geçerli değişkenlerini görüntüler. Geçerli metin değişkeni, bu konumda seçili kod ve metin döndürür.  
-  
-|Ad|Bağımsız Değişken|Açıklama|  
-|----------|--------------|-----------------|  
-|Öğe yolu|$(ItemPath)|Geçerli dosyanın tam dosya adı (sürücü yolu + dosya adı).|  
-|Öğe dizini|$(ItemDir)|Geçerli bir dosya (sürücü + yolu) dizini.|  
-|Öğe dosya adı|$(ItemFilename)|Dosya adı geçerli dosyanın (dosya adı).|  
-|Öğesi uzantısı|$(ItemExt)|Geçerli dosyanın dosya adı uzantısı.|  
-|Geçerli satırı|$(CurLine)|İmleci kod penceresinde geçerli satır konumu.|  
-|Geçerli sütun|$(CurCol)|İmleci kod penceresinde geçerli sütun konumu.|  
-|Geçerli metin|$(CurText)|Seçili metni.|  
-|Hedef yolu|$(TargetPath)|Oluşturulacak öğe tam dosya adı (sürücü yolu + dosya adı).|  
-|Hedef Dizin|$(TargetDir)|Oluşturulacak öğe dizini.|  
-|Hedef Adı|$(TargetName)|Oluşturulacak öğe dosya adı.|  
-|Hedef uzantısı|$(TargetExt)|Oluşturulacak öğesinin dosya adı uzantısı.|  
-|İkili dizin|$(BinDir)|Oluşturulmakta olan ikili (sürücü + yolu tanımlanan) son konum. Örneğin:**\\... \My Documents\Visual Studio \<sürüm >\\< ProjectName\>\bin\debug**|  
-|Proje dizini|$(ProjDir)|Geçerli proje (sürücü + yolu) dizini.|  
-|Proje dosyası adı|$(ProjFileName)|Geçerli projenin dosya adını (sürücü yolu + dosya adı).|  
-|Çözüm dizini|$(SolutionDir)|Geçerli çözüme (sürücü + yolu) dizini.|  
-|Çözüm dosyası adı|$(SolutionFileName)|Geçerli çözümün dosya adını (sürücü yolu + dosya adı).|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+> IDE durum çubuğu, ekleme noktasının etkin kod düzenleyicisinde nerede olduğunu göstermek için geçerli satırı ve geçerli sütun değişkenlerini görüntüler. Geçerli metin değişkeni, bu konumda seçili olan metni veya kodu döndürür.
+
+|Name|Bağımsız Değişken|Açıklama|
+|----------|--------------|-----------------|
+|Öğe yolu|$ (ItemPath)|Geçerli dosyanın (sürücü + yol + dosya adı) tüm dosya adı.|
+|Öğe dizini|$ (Itemdır)|Geçerli dosyanın dizini (sürücü + yol).|
+|Öğe dosyası adı|$ (Itemfilename)|Geçerli dosyanın (dosya adı) dosya adı.|
+|Öğe uzantısı|$ (ItemExt)|Geçerli dosyanın dosya adı uzantısı.|
+|Geçerli satır|$ (CurLine)|İmlecin kod penceresindeki geçerli satır konumu.|
+|Geçerli sütun|$ (CurCol)|İmlecin kod penceresindeki geçerli sütun konumu.|
+|Geçerli metin|$ (CurText)|Seçilen metin.|
+|Hedef yol|$ (TargetPath)|Oluşturulacak öğenin tamamı dosya adı (sürücü + yol + dosya adı).|
+|Hedef Dizin|$ (TARGETDIR)|Oluşturulacak öğenin dizini.|
+|Hedef Adı|$ (TargetName)|Oluşturulacak öğenin dosya adı.|
+|Hedef uzantısı|$ (TargetExt)|Oluşturulacak öğenin dosya adı uzantısı.|
+|İkili dizin|$ (BinDir)|Oluşturulmakta olan ikilinin son konumu (sürücü + yol olarak tanımlanır). Örneğin: **\\. ..\Bir Studio \<Version > \\ < ProjectName \> \bin\Debug**|
+|Proje dizini|$ (ProjDir)|Geçerli projenin dizini (sürücü + yol).|
+|Proje dosyası adı|$ (ProjFileName)|Geçerli projenin dosya adı (sürücü + yol + dosya adı).|
+|Çözüm dizini|$ (SolutionDir)|Geçerli çözümün dizini (sürücü + yol).|
+|Çözüm dosyası adı|$ (SolutionFileName)|Geçerli çözümün dosya adı (sürücü + yol + dosya adı).|
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [C/C++ Derleme Araçları](https://msdn.microsoft.com/library/48d9daf4-6bbf-473a-8ce2-bf2923b69f80)

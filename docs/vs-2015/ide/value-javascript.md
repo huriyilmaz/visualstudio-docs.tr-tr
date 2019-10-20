@@ -1,5 +1,5 @@
 ---
-title: '&lt;değer&gt; (JavaScript) | Microsoft Docs'
+title: '&lt;value &gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,84 +9,74 @@ helpviewer_keywords:
 - value JavaScript XML tag
 ms.assetid: 983e31de-cb1d-411e-b60d-eea6698a26f6
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ac74dde41a2d6cea0a768cfc89838cc34ce41afd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aefe710cc730d5624abc01bbdfc54d9961788787
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68179322"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656393"
 ---
-# <a name="ltvaluegt-javascript"></a>&lt;değer&gt; (JavaScript)
+# <a name="ltvaluegt-javascript"></a>&lt;value &gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belgeleri bilgilerini belirtir `get` ve `set` ECMAScript 3 özellikleri için işlevleri.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-<value type="ValueType" integer="true|false"  
-    domElement="true|false" mayBeNull="true|false"  
-    elementType="ArrayElementType" elementInteger="true|false"  
-    elementDomElement="true|false" elementMayBeNull="true|false"  
-    locid="descriptionID">description  
-</value>  
-```  
-  
-#### <a name="parameters"></a>Parametreler  
- `type`  
- İsteğe bağlı. Özelliğin veri türü. Tür aşağıdakilerden biri olabilir:  
-  
-- Olduğu gibi ECMAScript 5 açıklamasında bir ECMAScript dil türü `Number` ve `Object`.  
-  
-- Gibi bir DOM nesnesi `HTMLElement`, `Window`, ve `Document`.  
-  
-- Bir JavaScript oluşturucu işlevi.  
-  
-  `integer`  
-  İsteğe bağlı. Varsa `type` olduğu `Number`, özelliği bir tamsayı olup olmadığını belirtir. Kümesine `true` özelliği bir tamsayı; olduğunu belirtmek için Aksi takdirde, kümesine `false`. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `domElement`  
-  İsteğe bağlı. Bu öznitelik kullanım dışı; `type` özniteliği bu öznitelik göre önceliklidir. Bu öznitelik, belgelenmiş özelliği bir DOM öğesi olup olmadığını belirtir. Kümesine `true` özelliği bir DOM öğesi; olduğunu belirtmek için Aksi takdirde, kümesine `false`. Varsa `type` özniteliği ayarlanmamıştır ve `domElement` ayarlanır `true`, IntelliSense belgelenmiş özelliği olarak değerlendirir bir `HTMLElement` deyim tamamlama gerçekleştirirken.  
-  
-  `mayBeNull`  
-  İsteğe bağlı. Belgelenen özelliği ayarlayıp ayarlayamayacağını belirler null. Kümesine `true` özellik ayarlanabilir, aksi takdirde çok belirtmek için ayarlanmış `false`. Varsayılan değer `false` şeklindedir. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `elementType`  
-  İsteğe bağlı. Varsa `type` olduğu `Array`, bu öznitelik, dizideki öğelerin türünü belirtir.  
-  
-  `elementInteger`  
-  İsteğe bağlı. Varsa `type` olduğu `Array` ve `elementType` olduğu `Number`, bu öznitelik, dizideki öğelerin tamsayılar olup olmadığını belirtir. Kümesine `true` göstermek için dizideki öğelerin tamsayılardır; Aksi takdirde, kümesine `false`. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `elementDomElement`  
-  İsteğe bağlı. Bu öznitelik kullanım dışı; `elementType` özniteliği bu öznitelik göre önceliklidir. Varsa `type` olduğu `Array`, bu öznitelik, dizideki öğelerin DOM öğeleri olup olmadığını belirtir. Kümesine `true` belirtmek için öğeleri DOM öğeleri; Aksi takdirde, kümesine `false`. Varsa `elementType` özniteliği ayarlanmamıştır ve `elementDomElement` ayarlanır `true`, IntelliSense her öğe dizisi değerlendirir bir `HTMLElement` deyim tamamlama gerçekleştirirken.  
-  
-  `elementMayBeNull`  
-  İsteğe bağlı. Varsa `type` olduğu `Array`, dizideki öğelerin ayarlayıp ayarlayamayacağını belirler null. Kümesine `true` dizideki öğelerin ayarlanabilir, aksi takdirde çok belirtmek için ayarlanmış `false`. Varsayılan değer `false` şeklindedir. Bu öznitelik, IntelliSense bilgilerini sağlamak için Visual Studio tarafından kullanılmaz.  
-  
-  `locid`  
-  İsteğe bağlı. Yerelleştirme özelliği hakkında bilgi için tanımlayıcı. Tanımlayıcıdır ya da bir üye kimliği veya karşılık gelen `name` öznitelik değeri bir ileti paketteki OpenAjax meta verileri tarafından tanımlanır. Belirtilen biçim tanımlayıcı türü bağımlı [ \<loc >](../ide/loc-javascript.md) öğesi.  
-  
-  `description`  
-  İsteğe bağlı. Özellik açıklaması.  
-  
-## <a name="remarks"></a>Açıklamalar  
- ECMAScript 5 özellikleri kullanım [ \<Özet >](../ide/summary-javascript.md) öğesi.  
-  
- Kullanım `<value>` öğesi hemen önce `get` veya `set` işlevi.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği kullanma işlemini gösterir `<value>` öğe üzerinde bir `get` işlevi.  
-  
-```javascript  
-function Sys$CancelEventArgs$get_cancel() {  
-    /// <value type="Boolean" locid="P:J#Sys.CancelEventArgs.cancel"></value>  
-    if (arguments.length !== 0) throw Error.parameterCount();  
-    return this._cancel();  
-}  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+ECMAScript 3 özellikleri için `get` ve `set` işlevleriyle ilgili belge bilgilerini belirtir.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+<value type="ValueType" integer="true|false"
+    domElement="true|false" mayBeNull="true|false"
+    elementType="ArrayElementType" elementInteger="true|false"
+    elementDomElement="true|false" elementMayBeNull="true|false"
+    locid="descriptionID">description
+</value>
+```
+
+#### <a name="parameters"></a>Parametreler
+ Isteğe bağlı `type`. Özelliğin veri türü. Tür aşağıdakilerden biri olabilir:
+
+- @No__t_0 ve `Object` gibi ECMAScript 5 belirtiminde bir ECMAScript dil türü.
+
+- @No__t_0, `Window` ve `Document` gibi bir DOM nesnesi.
+
+- JavaScript Oluşturucu işlevi.
+
+  Isteğe bağlı `integer`. @No__t_0 `Number`, özelliğin bir tamsayı olup olmadığını belirtir. Özelliğin bir tamsayı olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `domElement`. Bu öznitelik kullanım dışıdır; `type` özniteliği bu özniteliğin üzerine gelir. Bu öznitelik, belgelenen özelliğin bir DOM öğesi olup olmadığını belirtir. Özelliğin bir DOM öğesi olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `domElement` `true` olarak ayarlandıysa, IntelliSense, deyimin tamamlanmasını gerçekleştirirken belgelenen özelliği bir `HTMLElement` olarak değerlendirir.
+
+  Isteğe bağlı `mayBeNull`. Belgelenmiş özelliğin NULL olarak ayarlanamayacağını belirtir. Özelliğin NULL olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `elementType`. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin türünü belirtir.
+
+  Isteğe bağlı `elementInteger`. @No__t_0 `Array` ve `elementType` `Number` ise, bu öznitelik dizideki öğelerin tamsayı olup olmadığını belirtir. Dizideki öğelerin tamsayılar olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `elementDomElement`. Bu öznitelik kullanım dışıdır; `elementType` özniteliği bu özniteliğin üzerine gelir. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin DOM öğeleri olup olmadığını belirtir. Öğelerin DOM öğeleri olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `elementDomElement` `true` olarak ayarlandıysa, IntelliSense deyimin tamamlanma sırasında dizideki her öğeyi bir `HTMLElement` olarak değerlendirir.
+
+  Isteğe bağlı `elementMayBeNull`. @No__t_0 `Array`, dizideki öğelerin null olarak ayarlanamayacağını belirtir. Dizideki öğelerin null olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+
+  Isteğe bağlı `locid`. Özelliği ile ilgili yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki `name` öznitelik değerine karşılık gelir. Tanımlayıcı türü [\<loc >](../ide/loc-javascript.md) öğesinde belirtilen biçime bağlıdır.
+
+  Isteğe bağlı `description`. Özelliğin açıklaması.
+
+## <a name="remarks"></a>Açıklamalar
+ ECMAScript 5 özellikleri [\<summary >](../ide/summary-javascript.md) öğesini kullanır.
+
+ @No__t_1 veya `set` işlevinden hemen önce `<value>` öğesini kullanın.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki kod örneği, bir `get` işlevinde `<value>` öğesinin nasıl kullanılacağını gösterir.
+
+```javascript
+function Sys$CancelEventArgs$get_cancel() {
+    /// <value type="Boolean" locid="P:J#Sys.CancelEventArgs.cancel"></value>
+    if (arguments.length !== 0) throw Error.parameterCount();
+    return this._cancel();
+}
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)

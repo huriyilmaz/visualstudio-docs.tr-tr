@@ -3,39 +3,39 @@ title: XML şeması oluşturma
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 1d6700a9-fd67-4794-8997-399589e99bec
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e93155f230ee4a564116f5d1357a97923706c36
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 73563d732aab48192892794c15750bc9e5d3eb6a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62783499"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645959"
 ---
 # <a name="how-to-create-an-xml-schema-from-an-xml-document"></a>Nasıl yapılır: XML belgesinden XML şeması oluşturma
 
-XML Düzenleyicisi, bir XML Şeması Tanım Dili (XSD) şeması bir XML belgesinden oluşturmanızı sağlar. XML dosyası şeması aşağıdaki şekilde nasıl oluşturulacağını belirler:
+XML Düzenleyicisi bir XML belgesinden XML şeması tanım dili (XSD) şeması oluşturmanıza olanak sağlar. XML dosyası şemanın nasıl oluşturulduğunu aşağıdaki şekilde belirler:
 
-- XML belgesi bir şeması yok veya belge türü tanımı (DTD'nin) ilişkili varsa, XML belgesi verileri yeni bir XML şema çıkarsanacak kullanılır.
+- XML belgesinde ilişkili bir şema veya belge türü tanımı (DTD) yoksa, XML belgesindeki veriler yeni bir XML şemasını çıkarsmak için kullanılır.
 
-- XML belgesi ilişkili bir DTD'nin içeriyorsa, karşılık gelen bir XML şeması için dış DTD'nin ve iç alt dönüştürülür.
+- XML belgesi ilişkili bir DTD içeriyorsa, dış DTD ve iç alt küme karşılık gelen bir XML şemasına dönüştürülür.
 
-- XML belgesi bir satır içi XML verileri azaltılmış (XDR) şema içeriyorsa, karşılık gelen bir XML şemasına XDR şeması dönüştürülür.
+- XML belgesi satır içi XML verisi azaltılmış (XDR) şeması içeriyorsa, XDR şeması karşılık gelen bir XML şemasına dönüştürülür.
 
-Oluşturulan şemaları, daha sonra XML dosyası için IntelliSense sağlamak için kullanılır.
+Oluşturulan şemalar, XML dosyası için IntelliSense sağlamak üzere kullanılır.
 
-Şema çıkarımı altyapısının hakkında daha fazla bilgi için bkz: [bir XML şeması tanım Çıkarsama](/dotnet/standard/data/xml/inferring-an-xml-schema).
+Şema çıkarımı altyapısı hakkında daha fazla bilgi için bkz. [XML şemasını](/dotnet/standard/data/xml/inferring-an-xml-schema)çıkarma.
 
 ## <a name="to-create-an-xml-schema"></a>Bir XML şeması oluşturmak için
 
-1. Bir XML dosyasını Visual Studio'da açın.
+1. Visual Studio 'da bir XML dosyası açın.
 
-2. Menü çubuğunda, **XML** > **Create Schema**.
+2. Menü çubuğunda **XML**  > **şema oluştur**' u seçin.
 
-   Bir XML Şeması belgesi oluşturulup XML dosyasında bulunan her ad alanı için açılır. Her şema geçici çeşitli dosya olarak açılır. Şemalar, projenize eklenir veya atılan diske kaydedildi.
+   XML dosyasında bulunan her ad alanı için bir XML şeması belgesi oluşturulup açılır. Her şema geçici bir çeşitli dosya olarak açılır. Şemalar diske kaydedilebilir, projenize eklenebilir veya atılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

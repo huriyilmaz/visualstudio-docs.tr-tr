@@ -1,48 +1,48 @@
 ---
-title: 'Nasıl yapılır: MIP düzeyleri oluşturma ve değiştirme | Microsoft Docs'
+title: 'Nasıl yapılır: MıP düzeyleri oluşturma ve değiştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: f64d4369-2307-4175-a39a-2e45506f7fa1
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1c1d0babfec4a2fd56e2ed40c5f2c75329ccb6d3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 99d2b07a64781929962ff37823ddcbf219598331
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434453"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664476"
 ---
-# <a name="how-to-create-and-modify-mip-levels"></a>Nasıl yapılır: MIP düzeyleri oluşturma ve değiştirme
+# <a name="how-to-create-and-modify-mip-levels"></a>Nasıl yapılır: MIP Düzeyleri Oluşturma ve Değiştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu belgenin nasıl kullanılacağını gösteren **Resim Düzenleyicisi** oluşturmak ve değiştirmek amacıyla *MIP düzeyleri* doku alanı düzeyi ayrıntı düzeyi (LoD) için.  
-  
-## <a name="generating-mip-levels"></a>MIP düzeyleri oluşturma  
- *Mipeşlem* işleme hızını arttırmak ve dokulu nesnelerdeki yumuşatma yapıtları önceden hesaplama ve farklı boyutlardaki bir dokunun çeşitli kopyalarını depolayarak azaltmak için kullanılan bir tekniktir. MIP düzeyi olarak bilinen her kopya yarım genişlik ve yükseklik önceki kopyanın ' dir. Doku bir nesnenin yüzeyine işlenirken dokulanan yüzeyin ekran alanı bölgesine en yakın karşılık gelen MIP seviyesi otomatik olarak seçilir. Bu grafik donanımının tutarlı görsel kaliteyi korumak için aşırı boyutlu dokuları filtrelemek zorunda olmadığı anlamına gelir. MIP düzeylerini saklamanın bellek maliyetinin yaklaşık % 33 daha fazla tek başına orijinal dokununkinden olsa da, performans ve görüntü kalitesi kazançları onu haklı çıkarır.  
-  
-#### <a name="to-generate-mip-levels"></a>MIP düzeyleri oluşturmak için  
-  
-1. Bölümünde anlatıldığı gibi temel bir doku ile başlayan [nasıl yapılır: Temel doku oluşturma](../designers/how-to-create-a-basic-texture.md). En iyi sonuçlar için genişliği ve yüksekliği, örneğin 256, 512, 1024, boyut olarak ikinin kuvveti olan bir doku belirtin ve benzeri.  
-  
-2. MIP düzeylerini oluşturun. Üzerinde **resim düzenleyici modu** araç seçin **Gelişmiş**, **Araçları**, **Mips üret**.  
-  
-     Dikkat **sonraki MIP düzeyine Git** ve **önceki MIP düzeyine Git** düğmeler artık görünür **resim düzenleyici modu** araç çubuğu. Varsa **özellikleri** penceresi görüntüleniyorsa, ayrıca dikkat salt okunur özellikler **MIP düzeyini** ve **Mip düzeyi sayısı** artık görüntü özelliklerinde göründüğüne.  
-  
-## <a name="modifying-mip-levels"></a>MIP düzeylerini değiştirme  
- Özel efektler elde etmek veya belirli ayrıntı düzeylerinde resim kalitesini artırmak için her MIP düzeyini tek tek değiştirebilirsiniz. Örneğin, dokulu bir nesneye (daha büyük Mesafeler daha küçük MIP düzeylerine karşılık gelir) uzaklıkta farklı bir görünüm verebilirsiniz ya da metin ya da sembol içeren Dokuların daha küçük MIP seviyelerinde bile okunaklı kalmasını sağlayabilirsiniz.  
-  
-#### <a name="to-modify-an-individual-mip-level"></a>Bir tek tek MIP düzeyini değiştirmek için  
-  
-1. Değiştirmek istediğiniz MIP düzeyini seçin. Üzerinde **resim düzenleyici modu** araç kullanımı **sonraki MIP düzeyine Git** ve **önceki MIP düzeyine Git** düğmeleri MIP düzeyleri arasında hareket etmek.  
-  
-2. Değiştirmek istediğiniz MIP düzeyini seçtikten sonra diğer MIP düzeylerinin içeriğini değiştirmeden değiştirmek için çizim araçlarını kullanabilirsiniz. Çizim Araçları mevcuttur **Resim Düzenleyicisi** araç çubuğu. Bir aracı seçtikten sonra özelliklerini değiştirebilirsiniz **özellikleri** penceresi. Çizim araçları ve özellikleri hakkında daha fazla bilgi için bkz. [Resim Düzenleyicisi](../designers/image-editor.md).  
-  
+Bu belgede, doku alanı ayrıntı düzeyi (LoD) için *MIP düzeylerini* oluşturmak ve değiştirmek üzere **Görüntü Düzenleyicisi** 'nin nasıl kullanılacağı gösterilir.
+
+## <a name="generating-mip-levels"></a>MıP düzeyleri oluşturma
+ Msunucudan *eşleme* , farklı boyutlarda dokuların birkaç kopyasını önceden hesaplayarak ve depolayarak, işleme hızını artırmak ve dokulu nesnelerdeki diğer ad yapılarını azaltmak için kullanılan bir tekniktir. MıP düzeyi olarak bilinen her kopya, önceki kopyanın genişliğinin ve yüksekliğinin yarısı. Bir doku nesnenin yüzeyinde işlendiğinde, dokulu yüzeyin ekran alanı alanına en yakın şekilde karşılık gelen MıP düzeyi otomatik olarak seçilir. Bu, grafik donanımının tutarlı görsel kalite sağlamak için büyük dokuları filtrelemeniz gerekmediği anlamına gelir. MıP düzeylerini depolamanın bellek maliyeti orijinal dokudan daha fazla yüzde 33 daha büyük olsa da, performans ve görüntü kalitesi kazançları bunu kolaylaştırır.
+
+#### <a name="to-generate-mip-levels"></a>MıP düzeyleri oluşturmak için
+
+1. [Nasıl yapılır: temel doku oluşturma](../designers/how-to-create-a-basic-texture.md)bölümünde açıklandığı gibi temel bir dokuyla başlayın. En iyi sonuçlar için, boyutun boyutunun iki üssü olan genişlik ve yüksekliğe sahip bir doku belirtin, örneğin, 256, 512, 1024 vb.
+
+2. MıP düzeylerini oluşturun. **Görüntü Düzenleyicisi Modu** araç çubuğunda **Gelişmiş**, **Araçlar**, **MIPS oluştur**' u seçin.
+
+     **Sonraki MIP düzeyine git** ve **önceki MIP düzeyine git** düğmeleri artık **Görüntü Düzenleyicisi Modu** araç çubuğunda görünmediğine dikkat edin. **Özellikler** penceresi görüntülenirse, salt okuma özellikleri **MIP düzeyi** ve **MIP düzeyi sayısı** ' nın artık görüntü özelliklerinde göründüğünü de unutmayın.
+
+## <a name="modifying-mip-levels"></a>MıP düzeylerini değiştirme
+ Özel etkileri elde etmek veya belirli ayrıntı düzeylerinde görüntü kalitesini artırmak için her MıP düzeyini tek tek değiştirebilirsiniz. Örneğin, bir uzaklıktan farklı bir görünüme (daha fazla mesafe daha küçük MıP düzeylerine karşılık gelir) göre dokulu bir nesneye izin verebilir veya metin veya sembolleri içeren dokuların daha küçük MıP düzeylerinde bile okunabilir olmasını sağlayabilirsiniz.
+
+#### <a name="to-modify-an-individual-mip-level"></a>Tek bir MıP düzeyini değiştirmek için
+
+1. Değiştirmek istediğiniz MıP düzeyini seçin. **Görüntü Düzenleyicisi Modu** araç çubuğunda, sonraki MIP **düzeyine git** ' i kullanın ve MIP düzeyleri arasında ilerlemek Için **önceki MIP düzeyi düğmelerine gidin** .
+
+2. Değiştirmek istediğiniz MıP düzeyini seçtikten sonra, diğer MıP düzeylerinin içeriğini değiştirmeden değiştirmek için çizim araçlarını kullanabilirsiniz. Çizim araçları, **Görüntü Düzenleyicisi** araç çubuğunda bulunur. Bir araç seçtikten sonra **Özellikler penceresinde özelliklerini** değiştirebilirsiniz. Çizim araçları ve özellikleri hakkında bilgi için bkz. [görüntü düzenleyici](../designers/image-editor.md).
+
 > [!NOTE]
-> Bireysel MIP seviyelerindeki içeriği değiştirmek gerekmez, — bazı efektler elde etmek için yapabileceğiniz gibi — derleme zamanında kaynak dokudan Mipmap üretmek öneririz. Bu, MIP düzeyinde yapılan değişiklikler diğer düzeylere otomatik olarak yayılmadığından dolayı MIP düzeylerinin kaynak doku ile eşit kalmasını sağlamaya yardımcı olur. Derleme zamanında Mipmap konusunda daha fazla bilgi için bkz. [nasıl yapılır: Mipmap'leri içeren dokuyu dışa aktarma](../designers/how-to-export-a-texture-that-contains-mipmaps.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Temel Doku Oluşturma](../designers/how-to-create-a-basic-texture.md)
+> Ayrı ayrı MıP düzeylerinin içeriğini değiştirmeniz gerekmiyorsa — belirli etkileri elde etmek gibi, kaynak dokusundaki de derleme zamanında MIP haritaları oluşturmanızı öneririz. Bu, MıP seviyesindeki değişiklikler diğer düzeylere otomatik olarak yayılmadığından, MıP düzeylerinin kaynak dokuyla eşitlenmiş durumda kalmasını sağlamaya yardımcı olur. Derleme zamanında mı haritaları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: mı haritaları Içeren dokuyu dışarı aktarma](../designers/how-to-export-a-texture-that-contains-mipmaps.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl Yapılır: Temel Doku Oluşturma](../designers/how-to-create-a-basic-texture.md)

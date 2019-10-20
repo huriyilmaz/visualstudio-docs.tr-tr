@@ -1,5 +1,5 @@
 ---
-title: Yük testi için test yinelemelerini yapılandırma
+title: Yük testi için test yinelemeleri yapılandırma
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,91 +7,91 @@ helpviewer_keywords:
 - load test, iterations
 - load tests, scenarios
 ms.assetid: ac480fb7-f4f7-47dc-9ae5-98be3aca4fba
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cce1da2d3cb20ca7f577c806d0506ffc0b947903
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: ae0f75ac19f858cba9de1e2d75d4ef5529da1d75
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918283"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665151"
 ---
-# <a name="configure-test-iterations-in-a-load-test-scenario"></a>Bir yük testi senaryosunda test yinelemelerini yapılandırma
+# <a name="configure-test-iterations-in-a-load-test-scenario"></a>Yük testi senaryosunda test yinelemelerini yapılandırma
 
-Yük Testi Düzenleyicisini kullanarak yük testi senaryosunun test yineleme ayarlarını yapılandırmak için düzenlemek ve **özellikleri** penceresi. Varsayılan olarak, bir yük testi senaryosuna en yüksek test yinelemeleri belirtmeden ayarlanır. En yüksek yineleme sayısı senaryosunda ve bunlar arasında beklenecek süreyi yapılandırma seçeneğiniz vardır.
+Test yineleme ayarlarını yapılandırmak için, Yük Testi Düzenleyicisi ve **Özellikler** penceresini kullanarak bir yük testi senaryosunu düzenleyin. Varsayılan olarak, bir yük testi senaryosu en fazla test yinelemesi belirtilmeden ayarlanır. Senaryoda en fazla yineleme sayısını ve bunların arasında ne kadar duraklama gerektiğini yapılandırma seçeneğiniz vardır.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="specify-the-maximum-test-iterations-for-a-scenario"></a>Bir senaryo için en yüksek test yinelemeleri belirtin
+## <a name="specify-the-maximum-test-iterations-for-a-scenario"></a>Bir senaryo için en fazla test yinelemesi belirleme
 
-Belirtebileceğiniz maksimum sayısını değiştirmek için Yük Testi Düzenleyicisini kullanarak testlerinizi çalıştırmak için bir senaryo için istediğiniz **en yüksek Test Yinelemeleri** özelliğinde **özellikleri** penceresi.
+**Özellikler** penceresindeki **Maksimum test yinelemeleri** özelliğini değiştirmek için Yük Testi Düzenleyicisi kullanarak testlerinizin bir senaryo için kaç kez çalışacağını belirtebilirsiniz.
 
-**En yüksek Test Yinelemeleri** özelliği en fazla senaryo için çalışacak test yineleme sayısını denetler. Yalnızca olarak için **Test Yinelemeleri** özelliği yük testinde çalışma ayarları, bu en yüksek şirketteki tüm kullanıcıların tüm aracılar üzerinde değil bir kullanıcı ayarı başına.
-
-> [!NOTE]
-> Yük testi senaryosu özelliklerini ve açıklamalarının tam listesi için bkz [yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md).
-
-Sıralı test karışımı için tek seferde tüm testleri Karıştır aracılığıyla bir yineleme olur. Diğer tüm test karışımları için her test yürütme bir yineleme olarak sayılır. Daha fazla bilgi için [karışımı denetimi ile ilgili](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
-
-Yük testi süresi tabanlı yük testi ve süresi yineleme sayısı tamamlanmadan önce sona, test yine durdurulur. Yineleme tabanlı test ve test yinelemeleri senaryo yinelemeler önce karşılandığından, test durur. Kullanarak süresi yapılandırılan **çalışma süresi** özelliğinde **özellikleri** penceresi bir çalışma ayarında bir yük testi ile ilişkili.
-
-Senaryo yineleme sayısı karşılandığında senaryoyu çalışmayı durdurur, ancak herhangi bir etkin senaryolar çalışmaya devam eder.
+**Maksimum test yinelemeleri** özelliği, senaryo için çalıştırılacak en fazla test yinelemesi sayısını denetler. Yük testi çalıştırma ayarlarındaki **test yinelemeleri** özelliğinin olduğu gibi, bu, her kullanıcı için değil, tüm aracılarda bulunan tüm kullanıcılar arasında en yüksek değer olacaktır.
 
 > [!NOTE]
-> İlgili bir özellik **benzersiz** hangi ilerler sırayla verileri, satır satır, ancak yalnızca bir kez her kayıt için bir web test verisi kaynağı özelliği. Daha fazla bilgi için [web performans testine veri kaynağı Ekle](../test/add-a-data-source-to-a-web-performance-test.md).
+> Yük testi senaryosu özelliklerinin tam listesi ve açıklamaları için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
 
-**En yüksek Test Yinelemeleri** özelliği, çeşitli durumlarda kullanışlıdır. Bazı yük test yineleme tabanlı yük test edicileri süre tabanlı test tercih ederken yürütmek tercih eder.
+Sıralı test karışımı için, bir yineleme, karışımdaki tüm testlerin bir geçiştir. Tüm diğer test karışımları için, her test yürütmesi yineleme olarak sayılır. Daha fazla bilgi için bkz. [karışım denetimi hakkında](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
 
-![Test Yinelemeleri bir senaryoda belirtme](../test/media/loadtest_prop.png)
+Yük testi Duration tabanlı bir yük testi ise ve süre süresi yineleme sayısı tamamlanmadan önce dolarsa, test durmaya devam eder. Test yineleme tabanlıdır ve test yinelemeleri senaryo yinelemeden önce karşılanıyorsa, test durur. Süre, yük testinde bir çalıştırma ayarıyla ilişkili **Özellikler** penceresindeki **çalışma süresi** özelliği kullanılarak yapılandırılır.
+
+Senaryo yineleme sayısı karşılandığında, senaryo çalışmayı durdurur, ancak diğer etkin senaryolar çalışmaya devam eder.
+
+> [!NOTE]
+> İlgili bir özellik, bir Web testi veri kaynağı üzerindeki **benzersiz** bir özelliktir. Bu, veri, satır satır, ancak her bir kayıt için yalnızca bir kez sırayla taşınarak. Daha fazla bilgi için bkz. [Web performans testine veri kaynağı ekleme](../test/add-a-data-source-to-a-web-performance-test.md).
+
+**En yüksek test yinelemeleri** özelliği, çeşitli durumlar için faydalıdır. Bazı yük Sınayıcılar yineleme tabanlı test yapmayı tercih eder, diğer yük Sınayıcılar süre tabanlı test yapmak için tercih eder.
+
+![Bir senaryoda test yinelemeleri belirtme](../test/media/loadtest_prop.png)
 
 ### <a name="to-specify-the-maximum-test-iterations"></a>En yüksek test yinelemeleri belirtmek için
 
 1. Bir yük testi açın.
 
-2. Yük Testi Düzenleyicisi görünür. Yük testi ağacında görüntülenir.
+2. Yük Testi Düzenleyicisi görüntülenir. Yük testi ağacı görüntülenir.
 
-3. Yük testi **senaryoları** klasörü, en fazla test yinelemesi sayısını belirtmek istediğiniz senaryoyu düğümünü seçin.
+3. Yük testi ağaçları **senaryolar** klasöründe, en fazla test yinelemesi sayısını belirtmek istediğiniz senaryo düğümünü seçin.
 
-4. Üzerinde **görünümü** menüsünde **Özellikler penceresi**.
+4. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
 
-     Kategoriler ve özellikler bu senaryonun görüntülenen **özellikleri** penceresi.
+     Senaryonun kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
 
-5. Metin kutusunda **en yüksek Test Yinelemeleri** özelliği, bir yük testi çalıştırdığınızda, senaryo için çalıştırılacak testlerin sayısını belirten bir değer yazın.
+5. **En yüksek test yinelemeleri** özelliğinin metin kutusunda, yük testi çalıştırıldığında senaryo için çalıştırılacak maksimum test sayısını belirten bir değer yazın.
 
     > [!NOTE]
-    > Bir değer için 0'ı kullanarak **en yüksek Test Yinelemeleri** özellik yok en fazla yineleme belirtir.
+    > **Maksimum test yinelemeleri** özelliği için 0 değeri kullanılması en fazla yineleme olmadığını belirtir.
 
-6. Özelliği değiştirmeyi bitirdikten sonra seçin **Kaydet** üzerinde **dosya** menüsü. Ardından, yeni kullanarak yük testi çalıştırabilirsiniz **en yüksek Test Yinelemeleri** değeri.
+6. Özelliği değiştirmeyi bitirdikten sonra **Dosya** menüsünde **Kaydet** ' i seçin. Daha sonra, yeni **en yüksek test yinelemeleri** değerini kullanarak yük testinizi çalıştırabilirsiniz.
 
-## <a name="specify-think-times-between-test-iterations-for-a-scenario"></a>Bir senaryo için test yinelemeleri arasındaki Düşünme süreleri belirtebilirsiniz
+## <a name="specify-think-times-between-test-iterations-for-a-scenario"></a>Senaryo için test yinelemeleri arasında düşünme süreleri belirtme
 
-**Test Yinelemeleri Arasındaki Düşünme süresi** özelliği kullanılarak ayarlanır **özellikleri** Yük Testi Düzenleyicisi'nde yük testi senaryosu özelliklerini düzenlerken penceresi.
+**Test Yinelemeleri özelliği arasındaki düşünme süresi** , Yük Testi Düzenleyicisi yük testi senaryosu özellikleri düzenlenirken **Özellikler** penceresi kullanılarak ayarlanır.
 
-**Test Yinelemeleri Arasındaki Düşünme süresi** özelliği, bir test yineleme başlamadan önce beklenecek saniye miktarı belirtmek için kullanılır.
+Test **Yinelemeleri özelliği arasındaki düşünme süresi** , bir test yinelemesi başlatılmadan önce beklenecek saniye miktarını belirtmek için kullanılır.
 
 > [!NOTE]
-> Yük testi senaryosu özelliklerini ve açıklamalarının tam listesi için bkz: [yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md).
+> Yük testi senaryosu özelliklerinin ve açıklamalarının tüm listesi için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
 
-### <a name="to-specify-the-think-time-between-test-iterations"></a>Test yinelemeleri arasındaki düşünme süresi belirtmek için
+### <a name="to-specify-the-think-time-between-test-iterations"></a>Test yinelemeleri arasındaki düşünme süresini belirtmek için
 
 1. Bir yük testi açın.
 
-     **Yük Testi Düzenleyicisi** görünür. Yük testi ağacında görüntülenir.
+     **Yük Testi Düzenleyicisi** görüntülenir. Yük testi ağacı görüntülenir.
 
-2. Yük testi **senaryoları** klasörü, düşünme süresi için belirtmek istediğiniz senaryoyu düğümünü seçin.
+2. Yük testi ağaçları **senaryolar** klasöründe, düşünme süresini belirtmek istediğiniz senaryo düğümünü seçin.
 
-3. Üzerinde **görünümü** menüsünde **Özellikler penceresi**.
+3. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
 
-     Senaryonun kategoriler ve özellikler görüntülenir **özellikleri** penceresi.
+     Senaryonun kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
 
-4. İçin değer **Test Yinelemeleri Arasındaki Düşünme süresi** özelliği, bir sonraki test yineleme başlamadan önce beklenecek saniye sayısını temsil eden bir sayı girin.
+4. **Test Yinelemeleri özelliği arasındaki düşünme süresi** değeri için, sonraki test yinelemesine başlamadan önce beklenecek saniye sayısını gösteren bir sayı girin.
 
-5. Özelliği değiştirmeyi bitirdikten sonra seçin **Kaydet** üzerinde **dosya** menüsü. Daha sonra yeni kullanarak yük testlerini çalıştırabilirsiniz **Test Yinelemeleri Arasındaki Düşünme süresi** değeri.
+5. Özelliği değiştirmeyi bitirdikten sonra **Dosya** menüsünde **Kaydet** ' i seçin. Ardından, **test yinelemeleri değeri arasındaki yeni düşünme süresini** kullanarak yük testinizi çalıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
-- [Test aracıları yapılandırmak ve test denetleyicilerini yük testleri için](../test/configure-test-agents-and-controllers-for-load-tests.md)
+- [Yük testi senaryolarını düzenleniyor](../test/edit-load-test-scenarios.md)
+- [Yük testleri için test aracılarını ve test denetleyicilerini yapılandırma](../test/configure-test-agents-and-controllers-for-load-tests.md)
 - [Yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md)
-- [Web sitesi insan etkileşimi gecikmelerini benzetmek için Düşünme zamanlarını düzenleme](../test/edit-think-times-in-load-test-scenarios.md)
+- [Web sitesi insan etkileşimi gecikmelerini benzetmek için düşünme zamanlarını düzenleme](../test/edit-think-times-in-load-test-scenarios.md)

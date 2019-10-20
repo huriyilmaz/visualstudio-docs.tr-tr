@@ -1,88 +1,88 @@
 ---
-title: 'İş Akışı Tasarımcısı: Tanımlama ve etkinlik temsilcileri kullanma'
+title: 'İş Akışı Tasarımcısı: etkinlik temsilcilerini tanımlama ve kullanma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c68e42ad-3ec0-4c2d-b104-fe36c6d83b5e
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 34cb06bbc5c9575f5a10507a8015c9819e7b533b
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+author: jillre
+ms.openlocfilehash: 67e862e3772b157c4a0999ccd44c3698119ae8a8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66431790"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650344"
 ---
-# <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında etkinlik temsilcileri tanımlama ve kullanma
+# <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısı etkinlik temsilcileri tanımlama ve kullanma
 
-.NET framework 4.5 içeren bir kullanıma hazır Tasarımcı için <xref:System.Activities.Statements.InvokeDelegate> etkinlik. Bu tasarımcı, türetilen etkinlik temsilcileri atamak için kullanılabilir <xref:System.Activities.ActivityDelegate>, gibi <xref:System.Activities.ActivityAction> veya <xref:System.Activities.ActivityFunc%601>.
+.NET Framework 4,5 <xref:System.Activities.Statements.InvokeDelegate> etkinliği için hazır bir tasarımcı içerir. Bu tasarımcı, <xref:System.Activities.ActivityAction> veya <xref:System.Activities.ActivityFunc%601> gibi <xref:System.Activities.ActivityDelegate> türetilen etkinliğe temsilciler atamak için kullanılabilir.
 
-## <a name="define-an-activity-delegate"></a>Bir etkinlik temsilci tanımlama
+## <a name="define-an-activity-delegate"></a>Etkinlik temsilcisi tanımlama
 
-1. Yeni bir **iş akışı konsol uygulaması** proje.
+1. Yeni bir **Iş akışı konsol uygulaması** projesi oluşturun.
 
    > [!NOTE]
-   > Görmüyorsanız **iş akışı** proje şablonları, ilk yükleme **Windows Workflow Foundation** Visual Studio bileşen. Ayrıntılı yönergeler için bkz. [Windows Workflow Foundation'ı yükleme](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
+   > **Iş akışı** proje şablonlarını görmüyorsanız, önce Visual Studio 'nun **Windows Workflow Foundation** bileşenini yüklemeniz gerekir. Ayrıntılı yönergeler için bkz. [ınstall Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
-3. Projeye sağ tıklayarak **Çözüm Gezgini** seçip **Ekle** > **yeni öğe**. Seçin **iş akışı** kategori tıklayın ve ardından **etkinlik** öğe şablonu. Yeni Etkinlik adı **MyForEach.xaml** seçip **Tamam**.
+3. **Çözüm Gezgini** projeye sağ tıklayın ve  > **Yeni öğe** **Ekle** ' yi seçin. **Iş akışı** kategorisini seçin ve ardından **etkinlik** öğesi şablonunu seçin. Yeni etkinliği **MyForEach. xaml** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-   Etkinlik iş akışı Tasarımcısı'nda açılır.
+   Etkinlik, iş akışı Tasarımcısı 'nda açılır.
 
-4. İş Akışı Tasarımcısı'nda tıklatın **bağımsız değişkenleri** sekmesi.
+4. İş Akışı Tasarımcısı, **bağımsız değişkenler** sekmesine tıklayın.
 
-5. Tıklayın **bağımsız değişken oluşturma**. Yeni bağımsız değişken adı **öğeleri**.
+5. **Bağımsız değişken Oluştur**' a tıklayın. Yeni bağımsız değişken **öğelerini**adlandırın.
 
-6. İçinde **bağımsız değişken türü** sütunundaki **[T] dizi**.
+6. **Bağımsız değişken türü** sütununda, **[T] dizisini**seçin.
 
-7. Tür tarayıcıda seçin **nesne** seçip **Tamam**.
+7. Tür tarayıcısında, **nesne** ' yi seçin ve ardından **Tamam**' ı seçin.
 
-8. Tıklayın **bağımsız değişken oluşturma** yeniden. Yeni bağımsız değişken adı **gövdesi**. İçinde **yönü** yeni bağımsız değişken için seçim sütunu **özelliği**.
+8. **Bağımsız değişken Oluştur** ' a tekrar tıklayın. Yeni bağımsız değişken **gövdesini**adlandırın. Yeni bağımsız değişkenin **Yön** sütununda **özellik**' i seçin.
 
-9. Bağımsız değişken türü sütununda seçin **vyhledat Typy**
+9. Bağımsız değişken türü sütununda **türler Için araştır** ' ı seçin.
 
-10. Tür tarayıcıya girmek **ActivityAction** içinde **tür adı** alan. Seçin **ActivityAction\<T >** ağaç görünümünde. Seçin **nesne** atamak üzere görünen açılan menüdeki **ActivityAction\<Nesne >** bağımsız değişkeni.
+10. Tür tarayıcısında, **tür adı** alanına **ActivityAction** girin. Ağaç görünümünde **ActivityAction \<T >** seçin. **ActivityAction > \<Object** türünün bağımsız değişkenine atanması için görüntülenen açılan menüden **nesne** ' yi seçin.
 
-11. Sürükleme bir <xref:System.Activities.Statements.While> etkinliğinden **akış denetimi** bölümünü araç Tasarımcı yüzeyine bırakın.
+11. Araç kutusunun **Denetim akışı** bölümünden bir <xref:System.Activities.Statements.While> etkinliğini tasarımcı yüzeyine sürükleyin.
 
-12. Seçin <xref:System.Activities.Statements.While> etkinliği ve select **değişkenleri** sekmesi.
+12. @No__t_0 etkinliğini seçin ve **değişkenler** sekmesini seçin.
 
-13. Seçin **değişken oluşturma**. Yeni değişken **dizin**.
+13. **Değişken Oluştur**' u seçin. Yeni değişken **dizinini**adlandırın.
 
-14. İçinde **değişken türü** sütunundaki **Int32**. Bırakın **kapsam** olarak **sırada**ve **varsayılan** sütunu boş.
+14. **Değişken türü** sütununda **Int32**' yi seçin. **Kapsamı** **sırasında**ve **varsayılan** sütunu boş bırakın.
 
-15. Ayarlama **koşul** özelliği <xref:System.Activities.Statements.While> etkinliğini **dizini < Items.Length;** .
+15. @No__t_1 etkinliğinin **Condition** özelliğini **< Items. length; dizinine**ayarlayın.
 
-16. Sürükleme bir <xref:System.Activities.Statements.InvokeDelegate> etkinliğinden **Temelleri** araç kutusuna bölümünü **gövdesi** , <xref:System.Activities.Statements.While> etkinlik.
+16. Araç kutusu ' nu **temel elemanlar** bölümünden bir <xref:System.Activities.Statements.InvokeDelegate> etkinliğini <xref:System.Activities.Statements.While> etkinliğinin **gövdesine** sürükleyin.
 
-17. Seçin **gövdesi** temsilci açılan.
+17. Temsilci açılan kutusunda **gövde** ' yi seçin.
 
-18. İçinde **özellikleri** için kılavuz <xref:System.Activities.Statements.InvokeDelegate> etkinliği tıklatın **...**  düğmesine **temsilci bağımsız değişkenleri** özelliği.
+18. @No__t_1 etkinliğinin **Özellikler** kılavuzunda, **temsilci bağımsız değişkenleri** özelliğindeki **...** düğmesine tıklayın.
 
-19. İçinde **değer** adlı bağımsız değişkenin sütun **bağımsız değişken**, girin **öğeleri [dizin]** . Tıklayın **Tamam** kapatmak için **DelegateArguments** iletişim.
+19. **Bağımsız değişkenin adlandırılmış bağımsız**değişkeninin **değer** sütununda, **[Dizin] öğesini**girin. **Temsilci bağımsız değişkenleri** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
-20. Sürükleme bir <xref:System.Activities.Statements.Assign> etkinlik altında yatay çizgi üzerine <xref:System.Activities.Statements.InvokeDelegate> etkinlik. <xref:System.Activities.Statements.Assign> Etkinlik oluşturulur ve <xref:System.Activities.Statements.Sequence> etkinlik otomatik olarak oluşturulur iki etkinliklerini içermesini **gövdesi** bölümünü **MyForEach** etkinlik. Bu yana dizisi gerekli **gövdesi** bölümü yalnızca tek bir etkinlik içermelidir. Otomatik olarak yeni bir oluşturma <xref:System.Activities.Statements.Sequence> etkinliği, .NET Framework 4.5, yeni bir özelliktir.
+20. @No__t_0 etkinliğini <xref:System.Activities.Statements.InvokeDelegate> etkinliğinin altındaki yatay satıra sürükleyin. @No__t_0 etkinliği oluşturulur ve **MyForEach** etkinliğinin **Body** bölümündeki iki etkinliği içermek için bir <xref:System.Activities.Statements.Sequence> etkinliği otomatik olarak oluşturulur. **Body** bölümü yalnızca tek bir etkinlik içerebileceğinden, bu sıra gereklidir. Otomatik olarak yeni bir <xref:System.Activities.Statements.Sequence> etkinliği oluşturmak, .NET Framework 4,5 'nin yeni bir özelliğidir.
 
-21. Ayarlama **için** özelliği <xref:System.Activities.Statements.Assign> etkinliğini **dizin**. Ayarlama **değer** özelliği **atama** etkinliğini **dizini + 1**.
+21. @No__t_1 etkinliğinin **to** özelliğini **index**olarak ayarlayın. **Assign** etkinliğinin **Value** özelliğini **index + 1**olarak ayarlayın.
 
-    Özel **MyForEach** etkinliği çağırır içine geçirilen her değerin bir kez rastgele bir etkinlik **öğeleri** etkinliği için girdi olarak toplama değerleri koleksiyonu.
+    Özel **MyForEach** etkinliği, **öğe** koleksiyonu aracılığıyla kendisine geçirilen her bir değer için bir kez rastgele etkinlik çağırır. bu değerler, etkinliğin girdileri olarak koleksiyondaki değerlerdir.
 
-## <a name="use-the-custom-activity-in-a-workflow"></a>Bir iş akışında özel etkinlik kullanma
+## <a name="use-the-custom-activity-in-a-workflow"></a>Bir iş akışında özel etkinliği kullanma
 
-1. Tuşuna basarak projeyi oluşturun **Ctrl**+**Shift**+**B**.
+1. **Ctrl** +**SHIFT** +**B**'ye basarak projeyi derleyin.
 
-2. İçinde **Çözüm Gezgini**açın **Workflow1.xaml** Tasarımcısı'nda.
+2. **Çözüm Gezgini**, tasarımcıda **Workflow1. xaml** ' yi açın.
 
-3. Sürükleme bir **MyForEach** araç kutusundan bir etkinlik Tasarımcı yüzeyine bırakın. Araç kutusu projeyle aynı ada sahip bir bölümünde bir etkinliktir.
+3. Araç kutusundan bir **MyForEach** etkinliğini tasarımcı yüzeyine sürükleyin. Etkinlik, araç kutusunun bir bölümünde projeyle aynı adı taşıyan bir bölümdür.
 
-4. Ayarlama **öğeleri** özelliği **MyForEach** etkinliğini **yeni Object [] {1, "abc"}** .
+4. **MyForEach** etkinliğinin **Items** özelliğini **New Object [] {1, "abc"}** olarak ayarlayın.
 
-5. Sürükleme bir <xref:System.Activities.Statements.WriteLine> etkinliğinden **Temelleri** araç kutusuna bölümünü **temsilci: gövdesi** bölümünü **MyForEach** etkinlik.
+5. Araç kutusunun **temel öğeler** bölümünden bir <xref:System.Activities.Statements.WriteLine> etkinliğini **MyForEach** etkinliğinin **Delegate: Body** bölümüne sürükleyin.
 
-6. Ayarlama **metin** özelliği <xref:System.Activities.Statements.WriteLine> etkinliğini **Argument.ToString()** .
+6. @No__t_1 etkinliğinin **Text** özelliğini **Argument. ToString ()** olarak ayarlayın.
 
 İş akışı yürütüldüğünde, konsol aşağıdaki çıktıyı gösterir:
 
-**1**
-**abc**
+**1** 
+**ABC**

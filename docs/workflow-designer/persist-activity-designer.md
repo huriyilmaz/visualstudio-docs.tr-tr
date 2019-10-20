@@ -5,39 +5,39 @@ ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Persist.UI
 ms.assetid: be8648dd-3eb9-4a50-8ec1-57a8be804692
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7be70d18b1fc8ff12e2d1fb177b41775954334ed
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 882a68e006ac139d717320b0b8b7ce4d75aceb38
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254843"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650113"
 ---
 # <a name="persist-activity-designer"></a>Persist Etkinlik Tasarımcısı
 
-**Kalıcı** etkinlik Tasarımcısı, <xref:System.Activities.Statements.Persist> etkinlik oluşturmak ve yapılandırmak için kullanılır.
+**Kalıcı** etkinlik Tasarımcısı <xref:System.Activities.Statements.Persist> etkinlik oluşturmak ve yapılandırmak için kullanılır.
 
 ## <a name="the-persist-activity"></a>Kalıcı etkinlik
 
-<xref:System.Activities.Statements.Persist> Etkinlik, mümkünse bir iş akışını diske kaydeder. Etkinlik, örneğin bir <xref:System.Activities.Statements.TransactionScope> etkinlik içinde, kalıcılık olmayan bir bölgede yürütülemez. <xref:System.Activities.Statements.Persist> Kalıcı olmayan bir kapsamda <xref:System.Activities.Statements.Persist> etkinlik kullanıyorsanız, çalışma zamanında bir özel durum oluşturulur.
+@No__t_0 etkinliği, mümkünse bir iş akışını diske kaydeder. @No__t_0 etkinliği, örneğin bir <xref:System.Activities.Statements.TransactionScope> etkinliği içinde, kalıcılık olmayan bir bölgede yürütülemez. Kalıcı olmayan bir kapsamda <xref:System.Activities.Statements.Persist> etkinliğini kullanıyorsanız, çalışma zamanında bir özel durum oluşturulur.
 
 ### <a name="using-the-persist-activity-designer"></a>Kalıcı etkinlik tasarımcısını kullanma
 
 **Kalıcı** etkinlik **Tasarımcısı araç kutusu sekmesine** tıklanarak erişilen (alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu veya Ctrl + Alt + X ' i seçerek **),** **çalışma alanının çalışma zamanı** kategorisinde bulunabilir.
 
-**Kalıcı** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde <xref:System.Activities.Statements.Sequence>olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir. Bu, varsayılan <xref:System.Activities.Statements.Persist> olarak **görünmeyen** bir etkinlik oluşturur. , <xref:System.Activities.Activity.DisplayName%2A> **Kalıcı** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
+**Kalıcı** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, her durumda (örneğin, <xref:System.Activities.Statements.Sequence> gibi) iş akışı Tasarımcısı yüzeyine bırakılabilir. Bu, varsayılan olarak **görünmeyen** bir <xref:System.Activities.Statements.Persist> etkinliği oluşturur. @No__t_0, **kalıcı** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-persist-properties"></a>Devam eden özellikler
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.Persist> özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilirler.
+Aşağıdaki tabloda <xref:System.Activities.Statements.Persist> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilirler.
 
-|Özellik Adı|Gerekli|Kullanım|
+|Özellik adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Persist> Etkinliğin kolay adı. Varsayılan değer korunur. Görünen ad kesinlikle gerekli olmasa da, bir görünen ad kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin kolay adı. Varsayılan değer korunur. Görünen ad kesinlikle gerekli olmasa da, bir görünen ad kullanmak en iyi uygulamadır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

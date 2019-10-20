@@ -1,5 +1,5 @@
 ---
-title: Klavye kısayolları iş akışı tasarımcısında | Microsoft Docs
+title: İş Akışı Tasarımcısı klavye kısayolları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,83 +8,83 @@ f1_keywords:
 - WFDKeyboardShortcuts.UI
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
 caps.latest.revision: 4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b1a03463d292fa1d4d980c62daa74b291d6a8cb1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6f7bc701c4a7009d402c778356a290ce4e129bb3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951963"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658966"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>İş Akışı Tasarımcısında Klavye Kısayolları
-Tüm temel işlevlerini [!INCLUDE[wfd1](../includes/wfd1-md.md)] klavye tarafından erişilebilir.  
-  
-## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>Klavyeyi kullanarak iş akışı Tasarımcısı gezinme  
- İçinde [!INCLUDE[vs2010](../includes/vs2010-md.md)], genel kısayolları ve hata ayıklama kısayolları uygulamak [!INCLUDE[wfd2](../includes/wfd2-md.md)]. Ayrıca, bir dizi [!INCLUDE[wfd2](../includes/wfd2-md.md)] özel klavye kısayollarını oluşturuldu. İçinde [!INCLUDE[vs2010](../includes/vs2010-md.md)], tüm klavye kısayollarını uri'lerini. Ancak, yeniden barındırılan bir uygulamada şu klavye kısayollarını sabittir.  
-  
-### <a name="workflow-designer-keyboard-shortcuts"></a>İş Akışı Tasarımcısı klavye kısayolları  
- Atanan varsayılan klavye kısayolları aşağıdaki tabloda özetlenmiştir [!INCLUDE[wfd2](../includes/wfd2-md.md)] komutları.  
-  
-|Kısayol|Amaç|  
-|--------------|-------------|  
-|CTRL+E, A|Bağımsız değişken tasarımcısını gizler veya gösterir.|  
-|CTRL+E, C|Seçili etkinlik yerinde daraltır.|  
-|CTRL+E, E|Seçili etkinlik yerinde genişletir.|  
-|CTRL+E, F|Bir akış grafiğindeki seçili etkinlikler bağlanır.|  
-|CTRL+E, I|İçe Aktarılanlar tasarımcısını gizler veya gösterir.|  
-|CTRL+E, M|Klavye odağını sekme sırasında bir sonraki öğeye taşır.|  
-|CTRL+E, N|Seçili etkinlik (veya en yakın) kapsamında yeni bir değişken oluşturur.|  
-|CTRL+E, O|Genel Bakış haritasını gizler veya gösterir.|  
-|CTRL+E, P|Seçilen etkinliğin üst gider. Bu içerik haritası gezintisini bir düzey yukarı gider ve tasarımcı yüzeyinde Kök etkinlik değiştirir.|  
-|CTRL+E, S|Klavye odağı sahip öğe geçerli seçime ekler.|  
-|CTRL+E, V|Değişken tasarımcısını gizler veya gösterir.|  
-|CTRL+E, X|İş akışındaki tüm etkinlikler genişletir.|  
-|CTRL+ALT+F6|Klavye odağı geçerli kullanıcı Arabirimi alanından dizideki sonraki alanına taşır. Sırayla aşağıdaki gibidir:<br /><br /> 1.  İçerik haritası gezinme çubuğu.<br />2.  Tasarımcı yüzeyi<br />3.  Bağımsız değişkenler/değişkenler/içe Aktarılanlar tasarımcısını açıksa<br />4.  Kabuk|  
-  
-### <a name="flowchart"></a>Akış Çizelgesi  
- Aşağıdaki liste, bir akış oluşturmak için klavye tarafından kullanılan hareketlerini gösterir. Kalan olduğu gibi [!INCLUDE[wfd2](../includes/wfd2-md.md)], etkinlikleri ile sağlanan genel araç kısayolları kullanılarak Tasarımcı yüzeyine eklenir [!INCLUDE[vs2010](../includes/vs2010-md.md)].  
-  
-- Bir etkinlik taşımak için etkinliği seçin ve bunu yeniden konumlandırmak için ok tuşlarını kullanın.  
-  
-- Bir akış yeniden boyutlandırmak için ok tuşlarını kullanarak akış geçerli kenarlığını geçmiş etkinlik taşıyın. Akış otomatik olarak yeniden boyutlandırılır.  
-  
-- Etkinlik Başlangıç düğümü olarak ayarlamak için kullanın **BaşlangıçDüğümü ayarlamak** bağlam menüsündeki komutu.  
-  
-- Etkinlikleri bağlanmak için:  
-  
-  1. Kaynak etkinliği için etkinlik sekmelerle seçin.  
-  
-  2. CTRL + E, hedef etkinliğe klavye odağı taşımak için gerekli sayıda M tuşuna basın.  
-  
-  3. CTRL + E, seçime hedef etkinlik eklemek için S tuşuna basın.  
-  
-  4. CTRL + E, bağlayıcı kaynaktan hedefe eklemek için F tuşuna basın.  
-  
-  Etkinlikleri tarafından klavye bağlama hakkında notlar:  
-  
-- CTRL + E, f tuşuna basarak önce seçime daha fazla etkinlikler ekleyerek aynı anda birden çok bağlantı yapabilirsiniz Bağlantılar, etkinlikleri seçimi eklendiğini sırada yapılır.  
-  
-- Kaynak etkinliği giden bir bağlantı zaten varsa, örneğin bir çift etkinlikleri bağlanamaz, seçimdeki etkinlikler arasında diğer bağlantılar hala mümkün olduğunca yapılır.  
-  
-- Olduğunda bir **FlowDecision** seçime dahil ve **FlowDecision** giden bağlayıcı yok, bağlayıcı yerleştirildiği **True** dal.  
-  
-### <a name="expression-editing"></a>İfade düzenleme  
- Varsayılan olarak, varsayılan klavye kısayolları [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ifade Düzenleyicisi'nde içinde uygulama metni düzenleme [!INCLUDE[wfd2](../includes/wfd2-md.md)], aşağıdaki kısıtlamalarla:  
-  
-- Aşağıdaki komutlar için klavye kısayolları yeniden eşleme, hiçbir etkisi olmaz. Bir ifade düzenlerken bu komutlara erişmek için yalnızca klavye kısayolları kullanabilirsiniz.  
-  
-    1. Kes  
-  
-    2. Kopyala  
-  
-    3. Yapıştır  
-  
-    4. Tümünü Seç  
-  
-    5. Geri alma  
-  
-    6. Yinele  
-  
-- İfade içindeki komutları düzenlemek için klavye kısayolları yeniden eşlemek için [!INCLUDE[wfd2](../includes/wfd2-md.md)] içinde [!INCLUDE[vs2010](../includes/vs2010-md.md)], kısayolları Düzenle [!INCLUDE[wfd2](../includes/wfd2-md.md)] kapsam. Metin Düzenleyici kapsamı içinde yapılan değişiklikleri otomatik olarak geçerli olmayan [!INCLUDE[wfd2](../includes/wfd2-md.md)]. Her iki yerde kısayolları eşlemek isterseniz değişiklikleri iki kez uygulamanız gerekir (her kapsam için bir kez).
+@No__t_0 tüm temel işlevlerine klavye tarafından erişilebilir.
+
+## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>Klavyeyi kullanarak İş Akışı Tasarımcısı gezinme
+ @No__t_0 içinde, genel kısayollar ve hata ayıklama kısayolları [!INCLUDE[wfd2](../includes/wfd2-md.md)] için geçerlidir. Ayrıca, bazı [!INCLUDE[wfd2](../includes/wfd2-md.md)] belirli klavye kısayolları oluşturulmuştur. @No__t_0, tüm klavye kısayolları yeniden eşlenir. Ancak, yeniden barındırılan bir uygulamada, bu klavye kısayolları sabit olarak kodlanmıştır.
+
+### <a name="workflow-designer-keyboard-shortcuts"></a>Klavye kısayollarını İş Akışı Tasarımcısı
+ Aşağıdaki tabloda [!INCLUDE[wfd2](../includes/wfd2-md.md)] komutlarına atanan varsayılan klavye kısayolları özetlenmektedir.
+
+|Kısayol|Amaç|
+|--------------|-------------|
+|CTRL + E, A|Bağımsız değişken tasarımcısını gösterir veya gizler.|
+|CTRL + E, C|Seçili aktiviteyi yerinde daraltır.|
+|CTRL + E, E|Seçili aktiviteyi yerinde genişletir.|
+|CTRL + E, F|Seçilen etkinlikleri bir akış çizelgesine bağlar.|
+|CTRL + E, ı|Içeri aktarmalar tasarımcısını gösterir veya gizler.|
+|CTRL + E, M|Klavye odağını sekme düzeninde bir sonraki öğeye kaydırır.|
+|CTRL + E, N|Seçilen etkinliğin kapsamında (veya en yakın) yeni bir değişken oluşturur.|
+|CTRL + E, O|Genel bakış haritasını gösterir veya gizler.|
+|CTRL + E, P|Seçili etkinliğin üst öğesine gider. Bu, içerik haritası gezinmede bir düzey yukarı gider ve tasarımcı yüzeyinde kök etkinliği değiştirir.|
+|CTRL + E, S|Klavye odağının bulunduğu öğeyi geçerli seçime ekler.|
+|CTRL + E, V|Değişken tasarımcısını gösterir veya gizler.|
+|CTRL + E, X|İş akışındaki tüm etkinlikleri genişletir.|
+|CTRL + ALT + F6|Klavye odağını geçerli kullanıcı arabirimi alanından dizideki bir sonraki alana kaydırır. Sıra aşağıdaki gibidir:<br /><br /> 1. içerik haritası gezinti çubuğu.<br />2. tasarımcı yüzeyi<br />3. açık ise bağımsız değişkenler/değişkenler/Içeri aktarma Tasarımcısı<br />4. Shell|
+
+### <a name="flowchart"></a>Akış Çizelgesi
+ Aşağıdaki listede klavye tarafından akış çizelgesi oluşturmak için kullanılan hareketler gösterilmektedir. @No__t_0 kalanında olduğu gibi, Etkinlikler, [!INCLUDE[vs2010](../includes/vs2010-md.md)] birlikte sunulan genel araç kutusu kısayollarını kullanarak tasarımcı yüzeyine eklenir.
+
+- Bir etkinliği taşımak için etkinliği seçin ve ok tuşlarını kullanarak yeniden konumlandırın.
+
+- Bir akış çizelgesini yeniden boyutlandırmak için, ok tuşlarını kullanarak bir etkinliği akış çizelgesinin geçerli kenarlığının ötesine taşıyın. Akış çizelgesi otomatik olarak yeniden boyutlandırılır.
+
+- Bir etkinliği başlangıç düğümü olarak ayarlamak için bağlam menüsünde **StartNode olarak ayarla** komutunu kullanın.
+
+- Etkinlikleri bağlamak için:
+
+  1. Etkinliğe göre sekmeye tıklayarak Kaynak etkinliğini seçin.
+
+  2. Klavye odağını hedef etkinliğe taşımak için gereken sayıda CTRL + E, M tuşuna basın.
+
+  3. Hedef etkinliği seçime eklemek için CTRL + E, S tuşlarına basın.
+
+  4. Bağlayıcıyı kaynaktan hedefe eklemek için CTRL + E, F tuşlarına basın.
+
+  Etkinlikleri klavyeye göre bağlama hakkında notlar:
+
+- CTRL + E, F tuşlarına basmadan önce seçime daha fazla etkinlik ekleyerek aynı anda birden fazla bağlantı yapabilirsiniz. Bağlantılar, etkinliklerin seçime eklendiği sırada yapılır.
+
+- Bir dizi çiftin bağlantısı yapılaamadığında Örneğin, kaynak etkinliğin zaten bir giden bağlantısı varsa, seçimdeki etkinlikler arasındaki diğer bağlantılar mümkün olduğunda yine de yapılabilir.
+
+- Seçime bir **flowkararı** dahil edildiğinde ve **flowkararının** giden bağlayıcıları yoksa, bağlayıcı **doğru** dala yerleştirilir.
+
+### <a name="expression-editing"></a>İfade düzenlemesi
+ Varsayılan olarak, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] metin düzenleme için varsayılan klavye kısayolları aşağıdaki sınırlamalarla birlikte [!INCLUDE[wfd2](../includes/wfd2-md.md)] ifade Düzenleyicisi içinde geçerlidir:
+
+- Aşağıdaki komutlar için klavye kısayollarının yeniden eşleştirbir etkisi yoktur. Bir ifadeyi düzenlediğinizde bu komutlara erişmek için yalnızca varsayılan klavye kısayollarını kullanabilirsiniz.
+
+    1. Kes
+
+    2. Kopyala
+
+    3. Yapıştır
+
+    4. Tümünü Seç
+
+    5. Komutunu
+
+    6. Yinele
+
+- @No__t_1 [!INCLUDE[wfd2](../includes/wfd2-md.md)] içindeki ifade düzenleme komutlarının klavye kısayollarını yeniden eşlemek için [!INCLUDE[wfd2](../includes/wfd2-md.md)] kapsamındaki kısayolları düzenleyin. Metin düzenleyici kapsamında yapılan değişiklikler [!INCLUDE[wfd2](../includes/wfd2-md.md)] için otomatik olarak uygulanmaz. Her iki yerde de kısayolları yeniden eşlemek isterseniz, değişiklikleri iki kez uygulamanız gerekir (her kapsam için bir kez).

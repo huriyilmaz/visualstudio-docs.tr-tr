@@ -1,46 +1,46 @@
 ---
-title: Bir projeye bir app.config dosyası ekleme
+title: Projeye bir App. config dosyası ekleme
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
 - CSharp
 helpviewer_keywords:
 - app.config files, adding to C# projects
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7e760d952d03a31fdb633ae57c0fb670b50fcc2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48e6516b48b524c3da4d80bc5171608ac1aea03d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62547916"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654259"
 ---
-# <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>Nasıl yapılır: Bir uygulama yapılandırma dosyasına ekleyin bir C# proje
+# <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>Nasıl yapılır: bir C# projeye uygulama yapılandırma dosyası ekleme
 
-Bir uygulama yapılandırma dosyasına ekleyerek (*app.config* dosyası) için bir C# projesi, ortak dil çalışma zamanının nasıl bulur ve derleme dosyalarını yükler özelleştirebilirsiniz. Uygulama yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [çalışma zamanı (.NET Framework) derlemeleri nasıl bulur](/dotnet/framework/deployment/how-the-runtime-locates-assemblies).
+Bir C# projeye uygulama yapılandırma dosyası (*app. config* dosyası) ekleyerek, ortak dil çalışma zamanının derleme dosyalarını nasıl bulup yüklediğini özelleştirebilirsiniz. Uygulama yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır (.NET Framework)](/dotnet/framework/deployment/how-the-runtime-locates-assemblies).
 
 > [!NOTE]
-> UWP uygulamaları içermeyen bir *app.config* dosya.
+> UWP uygulamaları bir *app. config* dosyası içermez.
 
-Projenizi yapılandırdığınızda, geliştirme ortamı otomatik olarak kopyalar, *app.config* dosya, dosya adı yürütülebilir dosyanızın eşleştirilecek kopyanın değiştirir ve sonra bu kopya taşır **bin** Dizin.
+Projenizi oluşturduğunuzda, geliştirme ortamı *app. config* dosyanızı otomatik olarak kopyalar, kopyanın dosya adını çalıştırılabilirle eşleşecek şekilde değiştirir ve ardından kopyayı **bin** dizinine taşımalıdır.
 
-## <a name="to-add-an-application-configuration-file-to-a-c-project"></a>Bir uygulama yapılandırma dosyasına eklemek için bir C# proje
+## <a name="to-add-an-application-configuration-file-to-a-c-project"></a>Bir C# projeye uygulama yapılandırma dosyası eklemek için
 
-1. Menü çubuğunda, **proje** > **Yeni Öğe Ekle**.
+1. Menü çubuğunda, **proje**  > **Yeni öğe Ekle**' yi seçin.
 
-     **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
+     **Yeni öğe Ekle** iletişim kutusu görüntülenir.
 
-1. Genişletin **yüklü** > **Visual C# öğeleri**ve ardından **uygulama yapılandırma dosyası** şablonu.
+1. **Yüklü**  > **görsel C# öğelerini**genişletin ve ardından **uygulama yapılandırma dosyası** şablonunu seçin.
 
-1. İçinde **adı** metin kutusuna bir ad girin ve ardından **Ekle** düğmesi.
+1. **Ad** metin kutusuna bir ad girin ve sonra **Ekle** düğmesini seçin.
 
-     Adlı bir dosya *app.config* projenize eklenir.
+     Projenize *app. config* adlı bir dosya eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uygulama ayarlarını yönetme (.NET)](../ide/managing-application-settings-dotnet.md)
 - [Yapılandırma dosyası şeması (.NET Framework)](/dotnet/framework/configure-apps/file-schema/index)
-- [Uygulamaları (.NET Framework) yapılandırma](/dotnet/framework/configure-apps/index)
+- [Uygulamaları yapılandırma (.NET Framework)](/dotnet/framework/configure-apps/index)

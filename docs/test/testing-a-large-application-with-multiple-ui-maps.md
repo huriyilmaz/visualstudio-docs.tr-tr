@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - coded UI tests, multiple UI maps
 - coded UI tests, for large applications
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cb534fc08706ef56ebbc85afe1500e4424196ad
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 86a4ad5c44c124ee7faf9ac633f2a78685adb426
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018898"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659902"
 ---
 # <a name="test-a-large-application-with-multiple-ui-maps"></a>Birden çok UI haritası ile büyük bir uygulamayı test etme
 
@@ -23,7 +23,7 @@ Bu konu, birden çok UI haritası kullanarak büyük bir uygulamayı test ederke
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-**Gereksinimler**
+**Requirements**
 
 - Visual Studio Enterprise
 
@@ -50,22 +50,22 @@ Bu tür durumların her birinde birden çok UI haritası oluşturun:
 
 ### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>Kodlanmış UI test projenize bir UI haritası eklemek için
 
-1. **Çözüm Gezgini**' de, tüm UI haritalarını depolamak IÇIN kodlanmış UI test projenizde bir klasör oluşturmak için, kodlanmış UI test projesi dosyasına sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' ü seçin. Örneğin, `UIMaps` olarak adlandırın.
+1. **Çözüm Gezgini**' de, tüm UI haritalarını depolamak IÇIN kodlanmış UI test projenizde bir klasör oluşturmak için, kodlanmış UI test projesi dosyasına sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' ü seçin. Örneğin, `UIMaps` adını yazabilirsiniz.
 
     Yeni klasör, kodlanmış UI test projesi altında görüntülenir.
 
-2. @No__t-0 klasörüne sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **Yeni öğe**' yi seçin.
+2. @No__t_0 klasöre sağ tıklayın, **Ekle**' nin üzerine gelin ve sonra **Yeni öğe**' yi seçin.
 
-    **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
+    **Yeni öğe Ekle** iletişim kutusu görüntülenir.
 
    > [!NOTE]
    > Yeni bir kodlanmış UI test eşlemesi eklemek için kodlanmış UI test projesi içinde olmanız gerekir.
 
 3. Listeden **KODLANMıŞ UI test Haritası** ' nı seçin.
 
-    **Ad** kutusuna yeni kullanıcı arabirimi eşlemesi için bir ad girin. Haritanın temsil ettiği bileşen veya sayfanın adını kullanın, örneğin, `HomePageMap`.
+    **Ad** kutusuna yeni kullanıcı arabirimi eşlemesi için bir ad girin. Haritanın temsil ettiği bileşen veya sayfanın adını kullanın, örneğin `HomePageMap`.
 
-4. Seçin **ekleme**.
+4. **Ekle**' yi seçin.
 
     Visual Studio penceresi en aza indirir ve **KODLANMıŞ UI Test Oluşturucusu** iletişim kutusu görüntülenir.
 
@@ -77,7 +77,7 @@ Bu tür durumların her birinde birden çok UI haritası oluşturun:
 
    Çoğu durumda, uygulamanızın en üst düzey penceresi tüm sihirbazlar, formlar ve sayfalar için sabit kalır. Her kullanıcı arabirimi eşlemesi üst düzey pencere için bir sınıfa sahip olsa da, tüm haritalar muhtemelen uygulamanızın tüm bileşenlerinin çalıştırıldığı en üst düzey pencereye başvurıyordur. Kodlanmış UI testleri, üst düzey pencereden başlayarak yukarı doğru bir şekilde yukarıdan aşağı doğru olan denetimleri arar, bu nedenle karmaşık bir uygulamada, gerçek üst düzey pencere her kullanıcı arabirimi eşlemesinde yinelenebilir. Gerçek üst düzey pencere yinelendiyse, bu pencere değişirse birden çok değişiklik olur. Bu, UI haritaları arasında geçiş yaparken performans sorunlarına neden olabilir.
 
-   Bu etkiyi en aza indirmek için, Kullanıcı arabirimi haritadaki yeni en üst düzey pencerenin ana en üst düzey pencereyle aynı olduğundan emin olmak için `CopyFrom()` yöntemini kullanabilirsiniz.
+   Bu etkiyi en aza indirmek için, bu kullanıcı arabirimi eşlemesindeki yeni üst düzey pencerenin ana en üst düzey pencereyle aynı olduğundan emin olmak için `CopyFrom()` yöntemini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 

@@ -1,5 +1,5 @@
 ---
-title: Verilere WPF denetimleri bağlama | Microsoft Docs
+title: WPF denetimlerini verilere bağlama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -19,106 +19,106 @@ helpviewer_keywords:
 - data binding, WPF
 ms.assetid: 00dd5147-db0b-4b59-8d6c-8229b09ca9dd
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e37d17cbe67bd1e4e64e306831f38996a7f93c80
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: f99c9a9ecbb18155ea8cd1197b94a7b383a80a1f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697966"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662501"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere WPF denetimleri bağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Veri bağlama oluşturabilirsiniz [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md.md)] kullanarak denetimleri **veri kaynakları** penceresi. İlk olarak, bir veri kaynağına ekleme **veri kaynakları** penceresi. Ardından, öğeleri sürükleyin **veri kaynakları** penceresine**WPF Tasarımcısı**.
+Veri **kaynakları** penceresini kullanarak veriye dayalı [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md.md)] denetimleri oluşturabilirsiniz. İlk olarak, **veri kaynakları** penceresine bir veri kaynağı ekleyin. Ardından, öğeleri **veri kaynakları** penceresinden**WPF tasarımcısına**sürükleyin.
 
-## <a name="adding"></a> Bir veri kaynağı veri kaynakları penceresine ekleme
- Verilere bağlı denetimler oluşturabilmeniz için önce bir veri kaynağına eklemelisiniz **veri kaynakları** penceresi.
+## <a name="adding"></a>Veri Kaynakları penceresine veri kaynağı ekleme
+ Veriye dayalı denetimler oluşturabilmeniz için önce **veri kaynakları** penceresine bir veri kaynağı eklemeniz gerekir.
 
-#### <a name="to-add-a-data-source-to-the-data-sources-window"></a>Veri kaynakları penceresine bir veri kaynağı eklemek için
+#### <a name="to-add-a-data-source-to-the-data-sources-window"></a>Veri Kaynakları penceresine veri kaynağı eklemek için
 
-1. Üzerinde **görünümü** menüsünde **diğer Windows**ve ardından **veri kaynakları**.
+1. **Görünüm** menüsünde **diğer pencereler**' in üzerine gelin ve ardından **veri kaynakları**' na tıklayın.
 
-2. Tıklayın **yeni veri kaynağı Ekle**ve tamamlayın **veri kaynağı yapılandırması** Sihirbazı.
+2. **Yeni veri kaynağı Ekle**' ye tıklayın ve **veri kaynağı yapılandırma** Sihirbazı ' nı doldurun.
 
-3. Verilere bağlı denetimler oluşturmak için aşağıdaki görevlerden birini gerçekleştirin:
+3. Veri bağlantılı denetimler oluşturmak için aşağıdaki görevlerden birini gerçekleştirin:
 
-    - [Denetim oluşturma tek bir veri alanı için bağlı](#simple).
+    - [Tek bir veri alanına bağlanan bir denetim oluşturma](#simple).
 
-    - [Denetim oluşturma birden fazla veri alanlarına bağlı](#complex).
+    - [Birden çok veri alanına bağlanan bir denetim oluşturma](#complex).
 
-    - [Bir dizi denetimi oluşturma birden fazla veri alanlarına bağlı](#details).
+    - [Birden çok veri alanına bağlanan bir denetim kümesi oluşturma](#details).
 
-    - [Tasarımcıda varolan denetimlere veri bağlama](#existing).
+    - [Tasarımcıdaki verileri varolan denetimlere bağlama](#existing).
 
-## <a name="simple"></a> Tek bir veri alanı için bağlı bir denetim oluşturma
- Bir veri kaynağına ekledikten sonra **veri kaynakları** penceresinde gibi tek bir alan veri görüntüleyen yeni bir verilere bağlı denetim oluşturabileceğiniz bir <xref:System.Windows.Controls.ComboBox> veya <xref:System.Windows.Controls.TextBox>.
+## <a name="simple"></a>Tek bir veri alanına bağlanan bir denetim oluşturma
+ Veri **kaynakları** penceresine bir veri kaynağı ekledikten sonra, <xref:System.Windows.Controls.ComboBox> veya <xref:System.Windows.Controls.TextBox> gibi tek bir veri alanını görüntüleyen yeni bir veri bağlantılı denetim oluşturabilirsiniz.
 
-#### <a name="to-create-a-control-that-is-bound-to-a-single-field-of-data"></a>Tek bir veri alanı için bağlı bir denetim oluşturmak için
+#### <a name="to-create-a-control-that-is-bound-to-a-single-field-of-data"></a>Tek bir veri alanına bağlanan bir denetim oluşturmak için
 
-1. İçinde **veri kaynakları** penceresinde bir tablo veya bir nesneyi temsil eden bir öğeyi genişletin. Sütun veya bağlamak istediğiniz bir özellik temsil eden alt öğeyi bulun. Görsel bir örnek için bkz: [veri kaynakları penceresi](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).
+1. **Veri kaynakları** penceresinde, bir tabloyu veya nesneyi temsil eden bir öğeyi genişletin. Bağlamak istediğiniz sütunu veya özelliği temsil eden alt öğeyi bulun. Görsel bir örnek için bkz. [veri kaynakları penceresi](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).
 
-2. İsteğe bağlı olarak oluşturmak için denetimi seçin. Her öğe **veri kaynakları** penceresine sahip öğeyi tasarımcıya sürüklediğinizde varsayılan denetim oluşturulur. Varsayılan Denetim öğesi temel alınan veri türüne göre değişir.
+2. İsteğe bağlı olarak, oluşturulacak denetimi seçin. **Veri kaynakları** penceresindeki her öğe, öğeyi tasarımcıya sürüklediğinizde oluşturulan bir varsayılan denetime sahiptir. Varsayılan denetim, öğenin temel alınan veri türüne bağlıdır.
 
-     Farklı bir denetimi seçmek için öğesinin yanındaki açılan oka tıklayın ve bir denetim seçin. Daha fazla bilgi için [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+     Farklı bir denetim seçmek için öğenin yanındaki aşağı açılan oka tıklayın ve bir denetim seçin. Daha fazla bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-3. Geçerli bir kapsayıcıya Tasarımcısı'nda öğeyi sürükleyin. Geçerli kapsayıcıları hakkında daha fazla bilgi için bkz. [Visual Studio'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+3. Öğeyi tasarımcıda geçerli bir kapsayıcıya sürükleyin. Geçerli kapsayıcılar hakkında daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Yeni veri bağlı denetim ve uygun şekilde başlıklı oluşturur <xref:System.Windows.Controls.Label> kapsayıcısında. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ayrıca oluşturur [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] ve denetimini verilere bağlama için kod. Daha fazla bilgi için [Visual Studio'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], yeni veri bağlantılı denetimi ve kapsayıcıda <xref:System.Windows.Controls.Label> başlıklı uygun bir şekilde oluşturur. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ayrıca, denetimi verilere bağlamak için [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] ve kod üretir. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-## <a name="complex"></a> Birden fazla veri alanlarına bağlı bir denetim oluşturma
- Bir veri kaynağına ekledikten sonra **veri kaynakları** penceresinde oluşturabileceğiniz gibi verilerin birden çok alan görüntüleyen yeni bir verilere bağlı denetim bir <xref:System.Windows.Controls.DataGrid> veya <xref:System.Windows.Controls.ListView>.
+## <a name="complex"></a>Birden çok veri alanına bağlanan bir denetim oluşturma
+ Veri **kaynakları** penceresine bir veri kaynağı ekledikten sonra, <xref:System.Windows.Controls.DataGrid> veya <xref:System.Windows.Controls.ListView> gibi birden çok veri alanını görüntüleyen yeni bir veri bağlantılı denetim oluşturabilirsiniz.
 
-#### <a name="to-create-a-control-that-is-bound-to-multiple-fields-of-data"></a>Birden fazla veri alanlarına bağlı bir denetim oluşturmak için
+#### <a name="to-create-a-control-that-is-bound-to-multiple-fields-of-data"></a>Birden çok veri alanına bağlanan bir denetim oluşturmak için
 
-1. İçinde **veri kaynakları** penceresinde, bir tablo veya nesne temsil eden öğeyi seçin. Görsel bir örnek için bkz: [veri kaynakları penceresi](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).
+1. **Veri kaynakları** penceresinde, bir tabloyu veya nesneyi temsil eden bir öğe seçin. Görsel bir örnek için bkz. [veri kaynakları penceresi](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).
 
-2. İsteğe bağlı olarak oluşturmak için denetimi seçin. Varsayılan olarak, her öğesi **veri kaynakları** veri tablosu veya nesneyi temsil eden pencere oluşturmak için ayarlanmış bir <xref:System.Windows.Controls.DataGrid> (projeniz .NET Framework 4 hedefliyse) veya <xref:System.Windows.Controls.ListView> (için .NET Framework'ün önceki sürümler).
+2. İsteğe bağlı olarak, oluşturulacak denetimi seçin. Varsayılan olarak, veri **kaynakları** penceresinde bir veri tablosunu veya nesnesini temsil eden her öğe, bir <xref:System.Windows.Controls.DataGrid> oluşturmak (projeniz .NET Framework 4 ' i hedefliyorsa) veya <xref:System.Windows.Controls.ListView> (.NET Framework önceki sürümleri için) olarak ayarlanır.
 
-     Farklı bir denetimi seçmek için öğesinin yanındaki açılan oka tıklayın ve bir denetim seçin. Daha fazla bilgi için [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
-
-    > [!NOTE]
-    > Belirli bir sütun veya özellik görüntülenecek istemiyorsanız, alt öğelerini görüntülemek için öğeyi genişletin. Sütun veya görüntüler ve ardından istemediğiniz özelliğin yanındaki açılan oka tıklayın **hiçbiri**.
-
-3. Öğeyi Tasarımcısı'nda geçerli bir kapsayıcı gibi sürüklemek bir <xref:System.Windows.Controls.Grid>. Geçerli kapsayıcıları hakkında daha fazla bilgi için bkz. [Visual Studio'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
-
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Yeni veri bağlı denetim kapsayıcıda oluşturur. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ayrıca oluşturur [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] ve denetimini verilere bağlama için kod. Daha fazla bilgi için [Visual Studio'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
-
-## <a name="details"></a> Birden fazla veri alanlarına bağlı denetimler kümesi oluşturma
- Bir veri kaynağına ekledikten sonra **veri kaynakları** penceresinde bir dizi denetimi için bir veri tablosu veya nesne bağlayabilirsiniz. Her bir sütun veya tablo veya nesne özelliği için farklı bir denetim oluşturulur.
-
-#### <a name="to-create-a-set-of-controls-that-are-bound-to-multiple-fields-of-data"></a>Birden fazla veri alanlarına bağlı denetimler oluşturmak için
-
-1. İçinde **veri kaynakları** penceresinde, bir tablo veya nesne temsil eden öğeyi seçin. Görsel bir örnek için bkz: [veri kaynakları penceresi](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).
-
-2. Seçin ve öğe yanındaki açılan oka tıklayın **ayrıntıları**.
+     Farklı bir denetim seçmek için öğenin yanındaki aşağı açılan oka tıklayın ve bir denetim seçin. Daha fazla bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
     > [!NOTE]
-    > Belirli bir sütun veya özellik görüntülenecek istemiyorsanız, alt öğelerini görüntülemek için öğeyi genişletin. Sütun veya görüntüler ve ardından istemediğiniz özelliğin yanındaki açılan oka tıklayın **hiçbiri**.
+    > Belirli bir sütunu veya özelliği göstermek istemiyorsanız, alt öğelerini göstermek için öğeyi genişletin. Görüntülenmesini istemediğiniz sütunun veya özelliğin yanındaki açılan oka tıklayın ve ardından **hiçbiri**' ne tıklayın.
 
-3. Öğeyi Tasarımcısı'nda geçerli bir kapsayıcı gibi sürüklemek bir <xref:System.Windows.Controls.Grid>. Geçerli kapsayıcıları hakkında daha fazla bilgi için bkz. [Visual Studio'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+3. Öğeyi tasarımcıda <xref:System.Windows.Controls.Grid> gibi geçerli bir kapsayıcıya sürükleyin. Geçerli kapsayıcılar hakkında daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yeni verilere bağlı denetimler kapsayıcıda oluşturur. Her denetim, farklı bir sütun veya özelliğe bağlıdır ve her bir denetimin eşlik uygun şekilde başlıklı tarafından <xref:System.Windows.Controls.Label> denetimi. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ayrıca oluşturur [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] ve denetimleri verilere bağlamak için kodu. Daha fazla bilgi için [Visual Studio'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], kapsayıcıda veri bağlantılı yeni denetimi oluşturur. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ayrıca, denetimi verilere bağlamak için [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] ve kod üretir. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-## <a name="existing"></a> Binddata Tasarımcısı'nda mevcut denetimleri için
- Bir veri kaynağına ekledikten sonra **veri kaynakları** penceresinde bir veri tasarımcıda varolan bir denetime bağlama ekleyebilirsiniz.
+## <a name="details"></a>Birden çok veri alanına bağlanan bir denetim kümesi oluşturma
+ Veri **kaynakları** penceresine bir veri kaynağı ekledikten sonra bir veri tablosu veya nesnesini bir denetim kümesine bağlayabilirsiniz. Tablo veya nesne içindeki her sütun veya özellik için farklı bir denetim oluşturulur.
 
-#### <a name="to-bind-data-to-an-existing-control-in-the-designer"></a>Veri Tasarımcısı'nda varolan bir denetime bağlamak için
+#### <a name="to-create-a-set-of-controls-that-are-bound-to-multiple-fields-of-data"></a>Birden çok veri alanına bağlanan bir denetim kümesi oluşturmak için
 
-1. İçinde **veri kaynakları** penceresinde, aşağıdaki yordamlardan birini kullanın:
+1. **Veri kaynakları** penceresinde, bir tabloyu veya nesneyi temsil eden bir öğe seçin. Görsel bir örnek için bkz. [veri kaynakları penceresi](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).
 
-    - Veri bağlama gibi birden çok alan verileri görüntüleyen varolan bir denetime eklemek için bir <xref:System.Windows.Controls.DataGrid> veya <xref:System.Windows.Controls.ListView>, tabloyu temsil eden öğeyi seçin veya denetime bağlamak istediğiniz nesne.
-
-    - Veri bağlama gibi tek bir alan veri görüntüleyen varolan bir denetime eklemek için bir <xref:System.Windows.Controls.ComboBox> veya <xref:System.Windows.Controls.TextBox>, tabloyu veya verileri içeren bir nesneyi temsil eden öğesini genişletin ve ardından istediğiniz verileri temsil eden öğeyi seçin denetime bağlama.
-
-2. Seçili öğe sürüklemeden **veri kaynakları** tasarımcıda varolan bir denetime penceresinden. Denetim geçerli bırakma hedefi olması gerekir. Daha fazla bilgi için [Visual Studio'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
-
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oluşturur [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] ve denetimini verilere bağlama için kod. Daha fazla bilgi için [Visual Studio'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+2. Öğenin yanındaki aşağı açılan oka tıklayın ve **Ayrıntılar**' ı seçin.
 
     > [!NOTE]
-    > Denetim verileri zaten bağlıysa, veri bağlama denetimi için denetimin en son sürüklenen öğeye sıfırlanır.
+    > Belirli bir sütunu veya özelliği göstermek istemiyorsanız, alt öğelerini göstermek için öğeyi genişletin. Görüntülenmesini istemediğiniz sütunun veya özelliğin yanındaki açılan oka tıklayın ve ardından **hiçbiri**' ne tıklayın.
+
+3. Öğeyi tasarımcıda <xref:System.Windows.Controls.Grid> gibi geçerli bir kapsayıcıya sürükleyin. Geçerli kapsayıcılar hakkında daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], kapsayıcıda yeni veri bağlantılı denetimleri oluşturur. Her denetim farklı bir sütuna veya özelliğe bağlanır ve her denetim, uygun bir <xref:System.Windows.Controls.Label> denetimi ile birlikte sunulur. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ayrıca, denetimleri verilere bağlamak için [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] ve kod üretir. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+
+## <a name="existing"></a>Tasarımcıda varolan denetimlere yönelik binddata
+ Veri **kaynakları** penceresine bir veri kaynağı ekledikten sonra, Tasarımcıda varolan bir denetime veri bağlama ekleyebilirsiniz.
+
+#### <a name="to-bind-data-to-an-existing-control-in-the-designer"></a>Tasarımcıda varolan bir denetime veri bağlamak için
+
+1. **Veri kaynakları** penceresinde aşağıdaki yordamlardan birini kullanın:
+
+    - @No__t_0 veya <xref:System.Windows.Controls.ListView> gibi birden çok veri alanını görüntüleyen varolan bir denetime veri bağlama eklemek için, denetime bağlamak istediğiniz tabloyu veya nesneyi temsil eden öğeyi seçin.
+
+    - @No__t_0 veya <xref:System.Windows.Controls.TextBox> gibi tek bir veri alanını görüntüleyen var olan bir denetime veri bağlama eklemek için, verileri içeren tabloyu veya nesneyi temsil eden öğeyi genişletin ve sonra bağlamak istediğiniz verileri temsil eden öğeyi seçin. denetimle.
+
+2. Seçili öğeyi **veri kaynakları** penceresinden tasarımcıda var olan bir denetimin üzerine sürükleyin. Denetim geçerli bir bırakma hedefi olmalıdır. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], denetimi verilere bağlamak için [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] ve kod üretir. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+
+    > [!NOTE]
+    > Denetim, verilere zaten bağlıysa, denetimin veri bağlaması en son denetim üzerine sürüklenen öğeye sıfırlanır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Visual Studio'da verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) [WPF uygulamalarında arama tabloları oluşturma](../data-tools/create-lookup-tables-in-wpf-applications.md) [WPF uygulamalarında ilgili verileri görüntüleyen](../data-tools/display-related-data-in-wpf-applications.md) [denetimleriverikümesineWPFbağlama](../data-tools/bind-wpf-controls-to-a-dataset.md) [Denetimleri bir WCF veri hizmetine WPF bağlama](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md) [izlenecek yol: Bir WPF uygulamasında ilgili verileri görüntüleme](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md)
+ [Visual Studio 'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) [oluşturma WPF uygulamaları](../data-tools/create-lookup-tables-in-wpf-applications.md) WPF uygulamalarında [ilgili verileri](../data-tools/display-related-data-in-wpf-applications.md) [bir VERI kümesine](../data-tools/bind-wpf-controls-to-a-dataset.md) bağlama WPF denetimleri için bir [WCF veri hizmeti](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md) [izlenecek yol: Bir WPF uygulamasında Ilgili verileri görüntüleme](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md)

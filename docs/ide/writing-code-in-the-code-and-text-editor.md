@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code, editing [Visual Studio]
 - code editor [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7dbb14a7ea6b3271c7608f3bbb49dd30aa605b66
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.openlocfilehash: 86cab4db7c732aeb33d9adf61bfdcb2c4563da57
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72380971"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647040"
 ---
 # <a name="features-of-the-code-editor"></a>Kod düzenleyicisinin özellikleri
 
@@ -41,14 +41,14 @@ Farklı Visual Studio dilleri farklı özellik kümeleri sunar ve bazı durumlar
 |Satır numaraları|Satır numaraları, kod penceresinin sol kenar boşluğunda görüntülenebilir. Varsayılan olarak gösterilmezler. Bu seçeneği, **metin düzenleyici tüm diller** ayarlarında (**Araçlar** > **seçenekleri** > **metin Düzenleyicisi** > **tüm diller**) açabilirsiniz. Bu dillerin ayarlarını değiştirerek bağımsız programlama dillerinin satır numaralarını görüntüleyebilirsiniz (**araçlar** > **seçenekleri** > **metin Düzenleyicisi** >  **\<dil >** ). Yazdırılacak satır numaraları için **Yazdır** iletişim kutusunda **satır numaralarını dahil et** ' i seçmeniz gerekir.|
 |Değişiklik İzleme|Sol kenar boşluğunun rengi, bir dosyada yaptığınız değişiklikleri izlemenize olanak sağlar. Dosya açıldığı ancak kaydedilmediği için yaptığınız değişiklikler sol kenar boşluğunda (seçim kenar boşluğu olarak bilinir) sarı bir çubukla gösterilir. Değişiklikleri kaydettikten sonra (ancak dosyayı kapatmadan önce), çubuk yeşile döner. Dosyayı kaydettikten sonra bir değişikliği geri alırsanız, çubuk turuncu 'ı kapatır. Bu özelliği devre dışı bırakmak ve açmak için **metin Düzenleyicisi** ayarlarındaki **Değişiklikleri İzle** seçeneğini değiştirin (**araçlar** > **Seçenekler** > **metin Düzenleyicisi**).|
 |Kod ve metin seçme|Standart sürekli akış modunda veya kutu modunda metin seçebilirsiniz, burada satır kümesi yerine metnin dikdörtgen bir bölümünü seçersiniz. Kutu modunda seçim yapmak için, fareyi seçimin üzerine sürüklerken **alt** tuşuna basın (veya **alt**+**SHIFT**+ **\<OK tuşuna basın >** ). Seçim, seçimdeki ilk karakter ve son karakter tarafından tanımlanan dikdörtgenin içindeki tüm karakterleri içerir. Seçilen alana yazılan veya yapıştırılan her şey, her satırda aynı noktaya eklenir.|
-|Yakınlaştır|**CTRL** tuşunu basılı tutarak ve kaydırma tekerleğini fareyle taşıyarak (ya da **CTRL**+**SHIFT**+ ' i seçerek herhangi bir kod penceresinde yakınlaştırıp uzaklaştırabilirsiniz **.** **@no__t artırmak**için-1**SHIFT**+ **' ü** azaltmak için). Ayrıca, belirli bir yakınlaştırma yüzdesi ayarlamak için kod penceresinin sol alt köşesindeki **Yakınlaştır** kutusunu da kullanabilirsiniz. Yakınlaştırma özelliği araç pencereleri içinde çalışmaz.|
+|Yakınlaştır|**CTRL** tuşunu basılı tutarak ve kaydırma tekerleğini fareyle taşıyarak (ya da **CTRL**+**SHIFT**+ ' i seçerek herhangi bir kod penceresinde yakınlaştırıp uzaklaştırabilirsiniz **.** artırmak ve **Ctrl** +**SHIFT** **+ azaltmak için.** Ayrıca, belirli bir yakınlaştırma yüzdesi ayarlamak için kod penceresinin sol alt köşesindeki **Yakınlaştır** kutusunu da kullanabilirsiniz. Yakınlaştırma özelliği araç pencereleri içinde çalışmaz.|
 |Sanal alan|Varsayılan olarak, Visual Studio düzenleyicilerinde bulunan satırlar son karakterden sonra sona erdir, böylece satırın sonundaki **sağ ok** tuşu imleci bir sonraki satırın başlangıcına taşıdıkça. Bazı diğer düzenleyicilerde, bir satır son karakterden sonra bitmez ve imlecinizi satıra istediğiniz yere yerleştirebilirsiniz. **Araçlar** > **seçenekleri** > **metin Düzenleyicisi** > **tüm diller** ayarları ' nda düzenleyicide sanal alanı etkinleştirebilirsiniz. **Sanal alanı** veya **sözcük kaydırmayı**etkinleştirebileceğinizi, ancak ikisini de kullanabileceğinizi unutmayın.|
 |Yazdırma|Dosya yazdırırken satır numaralarını dahil etmek veya daraltılmış kod bölgelerini gizlemek için **Yazdır** iletişim kutusundaki seçenekleri kullanabilirsiniz. **Sayfa yapısı** iletişim kutusunda, **sayfa üstbilgisi**' ni seçerek dosyanın tam yolunu ve adını yazdırmayı da tercih edebilirsiniz.<br /><br /> **Araçlar** > **seçenekleri** > **ortam** > **yazı tipi ve renkler** iletişim kutusunda renkli yazdırma seçeneklerini ayarlayabilirsiniz. Renkli yazdırmayı özelleştirmek için **ayarları göster** listesinden **Yazıcı** ' yı seçin. Bir dosyayı düzenleyen bir dosyayı yazdırmak için farklı renkler belirtebilirsiniz.|
 |Küresel geri alma ve yineleme|**Düzenleme** menüsündeki **son genel eylemi geri al** ve **son genel eylemi yinele** komutları, birden çok dosyayı etkileyen genel eylemleri geri alır veya yineler. Genel eylemler bir sınıf veya ad alanını yeniden adlandırma, bir çözüm genelinde bul ve değiştir işlemi gerçekleştirme, bir veritabanını yeniden düzenleme ya da birden çok dosyayı değiştiren başka bir işlem yapma içerir. Bir eylemin uygulandığı çözümü kapattıktan sonra bile, geçerli Visual Studio oturumunda eylemlere genel geri alma ve yineleme komutlarını uygulayabilirsiniz.|
 
 ## <a name="advanced-editing-features"></a>Gelişmiş Özellikleri Düzenle
 
-Araç **çubuğundaki @no__t-** 1**Gelişmiş** menüsünden bir dizi gelişmiş özellik bulabilirsiniz. Tüm kod dosyası türlerinde bu özelliklerin hepsi kullanılamaz.
+Araç **çubuğundaki  > ** **Gelişmiş** Özellikler menüsünden Gelişmiş özellikler bulabilirsiniz. Tüm kod dosyası türlerinde bu özelliklerin hepsi kullanılamaz.
 
 |||
 |-|-|
@@ -82,7 +82,7 @@ Belirli kod öğelerine kod tabanınızın tamamında başvurulduğunu bulmak i�
 
 Visual Studio ayarlarınızı başka bir geliştiriciyle paylaşabilir, ayarlarınızı bir standart ile uyumlu yapabilir veya **Araçlar** menüsünde **ayarları Içeri ve dışarı aktarma Sihirbazı** komutunu kullanarak Visual Studio varsayılan ayarlarına dönebilirsiniz. **Ayarları içeri ve dışarı aktarma sihirbazında**, seçili genel ayarları veya dili ve projeye özgü ayarları değiştirebilirsiniz.
 
-Yeni kısayol tuşlarını tanımlamak veya mevcut kısayol tuşlarını yeniden tanımlamak için **araçlar** >  **@no__t-** 3**ortam** > **klavye**seçeneğine gidin. Kısayol tuşları hakkında daha fazla bilgi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Yeni kısayol tuşlarını tanımlamak veya mevcut kısayol tuşlarını yeniden tanımlamak için **araçlar**  > **seçenekler**  > **ortam**  > **klavye**' ye gidin. Kısayol tuşları hakkında daha fazla bilgi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
 JavaScript 'e özgü düzenleyici seçenekleri için bkz. [JavaScript Düzenleyicisi seçenekleri](../ide/reference/options-text-editor-javascript-formatting.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Visual C# IntelliSense | Microsoft Docs
+title: Görsel C# IntelliSense | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,152 +10,152 @@ helpviewer_keywords:
 - IntelliSense [C#]
 ms.assetid: 79ca304d-dc1e-4dc9-a2a6-7808df2e588e
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6b1af6a2900a579e7490f47f2e8ee4983310e19e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 36803dfbba7ea6d6d2a869fb94c05105ed4af15d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65698202"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72643341"
 ---
 # <a name="visual-c-intellisense"></a>Visual C# IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual C# IntelliSense, kodlama Düzenleyicisi'nde ve siz hata ayıklama sırasında kullanılabilir [anlık mod](../ide/reference/immediate-window.md) komut penceresi.  
-  
-## <a name="completion-lists"></a>Tamamlanma listeleri  
- IntelliSense tamamlanma listelerinde Visual C# ' ta belirteçleri üyeleri listeleme, tam sözcük ve daha fazlasını içerir. Hızlı erişim sağlar:  
-  
-- Üyeleri bir tür veya ad alanı  
-  
-- Değişkenleri, komutlar ve İşlevler adları  
-  
-- [Kod parçacıkları](#CodeSnippets),  
-  
-- [Dil anahtar sözcükleri](#Keywords),  
-  
-- [Genişletme Yöntemleri](#ExtensionMethods)  
-  
-  Tamamlanma listesine dâhil C# ilgisiz belirteçleri filtrelemek ve bağlamına dayalı bir belirteç önceden seçmek akıllı. Daha fazla bilgi için [C# ' de filtrelenmiş tamamlanma listeleri](../misc/filtered-completion-lists-in-csharp.md) ve [Pre-selected tamamlanma listesi öğeleri, C#](../misc/pre-selected-completion-list-items-in-csharp.md).  
-  
-### <a name="CodeSnippets"></a> Kod parçacıkları tamamlanma listeleri  
- Visual C# içinde önceden tanımlanmış gövdeleri kodu programınıza kolayca eklemenize yardımcı olmak için kod parçacıkları tamamlanma listesi içerir. Kod parçacığının olarak tamamlama listede görünür [Shortcut öğesi (IntelliSense kod parçacıkları)](https://msdn.microsoft.com/052cc97a-5c70-42f8-b398-4c3adf670cfa).  Varsayılan olarak Visual C# dilinde kullanılabilir kod parçacıkları hakkında daha fazla bilgi için bkz: [Visual C# kod parçacıkları](../ide/visual-csharp-code-snippets.md).  
-  
-### <a name="Keywords"></a> Tamamlanma listeleri dil anahtar sözcükleri  
- Visual C# ' ta tamamlanma listesi dil anahtar sözcükleri de içerir. C# dil anahtar sözcükleri hakkında daha fazla bilgi için bkz: [C# anahtar sözcükleri](https://msdn.microsoft.com/library/e929b0f2-4b92-4d37-8060-23d323b098ad).  
-  
-### <a name="ExtensionMethods"></a> Tamamlama listelerinde genişletme yöntemleri  
- Visual C# ' ta tamamlanma listesi kapsamlarındaki genişletme yöntemleri içerir.  
-  
+Visual C# IntelliSense, düzenleyicide kodlarken ve [anında mod](../ide/reference/immediate-window.md) komut penceresinde hata ayıklarken kullanılabilir.
+
+## <a name="completion-lists"></a>Tamamlanma listeleri
+ Görselde C# IntelliSense tamamlanma listeleri, liste üyelerinden belirteçler, tüm sözcüğü ve daha fazlasını içerir. Öğesine hızlı erişim sağlar:
+
+- Bir türün veya ad alanının üyeleri,
+
+- Değişkenler, komutlar ve işlev adları,
+
+- [Kod parçacıkları](#CodeSnippets),
+
+- [Dil anahtar sözcükleri](#Keywords),
+
+- [Genişletme Yöntemleri](#ExtensionMethods)
+
+  ' De C# tamamlanma listesi, ilgisiz belirteçleri filtreleyecek ve bağlam temelinde bir belirteci önceden seçecek kadar akıllı bir değer sağlar. Daha fazla bilgi için, içindeki [filtrelenmiş tamamlanma listelerine C# ](../misc/filtered-completion-lists-in-csharp.md) ve [üzerinde C#önceden seçilmiş tamamlanma listesi öğelerine ](../misc/pre-selected-completion-list-items-in-csharp.md)bakın.
+
+### <a name="CodeSnippets"></a>Tamamlanma listelerindeki kod parçacıkları
+ Görsel C#olarak, tamamlama listesi, önceden tanımlanmış kod gövdelerini programınıza kolayca ekleyebileceğiniz kod parçacıkları içerir. Kod parçacıkları, [öğe parçacığının kısayol öğesi (IntelliSense kod parçacıkları)](https://msdn.microsoft.com/052cc97a-5c70-42f8-b398-4c3adf670cfa)olarak tamamlanma listesinde görünür.  Görselde C# varsayılan olarak kullanılabilen kod parçacıkları hakkında daha fazla bilgi için bkz. [ C# görsel kod parçacıkları](../ide/visual-csharp-code-snippets.md).
+
+### <a name="Keywords"></a>Tamamlanma listelerinde dil anahtar sözcükleri
+ Görselde C#, tamamlanma listesi dil anahtar sözcüklerini de içerir. Dil anahtar sözcükleri hakkında C# daha fazla bilgi için bkz [ C# . anahtar sözcükler](https://msdn.microsoft.com/library/e929b0f2-4b92-4d37-8060-23d323b098ad).
+
+### <a name="ExtensionMethods"></a>Tamamlanma listelerindeki genişletme yöntemleri
+ Görselde C#, tamamlanma listesi kapsamdaki genişletme yöntemlerini içerir.
+
 > [!NOTE]
-> Tamamlanma listesi için tüm genişletme yöntemleri görüntülemez <xref:System.String> nesneleri.  
-  
- Genişletme yöntemleri örnek yöntemleri farklı bir simge kullanın. Liste simgelerin bir listesi için bkz: [sınıf görünümü ve Nesne Tarayıcısı simgeleri](../ide/class-view-and-object-browser-icons.md). Bir örnek yöntemi ve aynı ada sahip bir uzantı yöntemi kapsam içinde her ikisi de olduğunda tamamlanma listesi uzantısı yöntemi simgesi görüntüler.  
-  
-### <a name="filtered-completion-lists"></a>Filtrelenmiş tamamlanma listeleri  
- IntelliSense, gereksiz üyeleri filtrelerini kullanarak tamamlama listesinden kaldırır.  
-  
- Visual C# bu öğeler için görüntülenmesini tamamlanma listeleri filtreler:  
-  
-- **Arabirimleri ve temel sınıfları.** IntelliSense arabirimi ve temel sınıf tamamlanma listeleri, sınıf bildiriminin temel ve arabirimi listeler, hem de kısıtlaması listeleri öğeleri otomatik olarak kaldırır. Örneğin, sabit listeleri için temel sınıflar kullanılamadığı için temel sınıflar için tamamlama listesinde numaralandırmalar görünmez. Taban sınıflar tamamlanma listesi yalnızca arabirimleri ve ad alanları içerir. Listede bir öğe seçin ve ardından virgül girin, IntelliSense Visual C#, birden çok devralma desteklemediği için temel sınıflar tamamlama listesinden kaldırır. Aynı davranışı için kısıtlama yan tümceleri de gerçekleşir.  
-  
-- **Öznitelikleri**: Bir türe öznitelik uyguladığınızda, liste yalnızca bu türleri gibi içeren ad alanlarını Düzen bu türleri içeren tamamlanma listesi filtrelenir <xref:System.Attribute>.  
-  
-- `as` ve `is` işleçleri.  
-  
-- **Yan tümceleri yakalayın.**  
-  
-- **Nesne başlatıcıları:** Yalnızca başlatılabilir üyeleri tamamlama listesinde görünür.  
-  
-- **Yeni anahtar sözcük**: Yazdığınızda `new` ve tamamlanma listesi görünür boşluk tuşuna basın. Bir öğe, listede, kodunuzu bağlamda göre otomatik olarak seçilir. Örneğin, öğeleri yöntemleri return deyimleri ve bildirimler için tamamlama listesinde otomatik olarak seçilir.  
-  
-- **olarak ve is işleçlerini:** Filtrelenmiş tamamlanma listesini otomatik olarak yazdığınız sonra boşluk tuşuna bastığınızda görüntülenen `as` veya `is` anahtar sözcüğü.  
-  
-- Olayları: Anahtar sözcüğü yazdığınızda `event`, tamamlanma listesi yalnızca temsilci türleri içerir.  
-  
-- Parametre Yardımı, onları girerken, parametrelerle eşleşen ilk yöntem aşırı yüklemesi için otomatik olarak sıralar. Birden çok yöntem aşırı yükleme varsa, yukarı ve aşağı oklarını sonraki olası aşırı yükleme listesindeki gidin.  
-  
-## <a name="most-recently-used-members"></a>En son kullanılan üyeler  
- IntelliSense, yakın zamanda açılır pencerede seçtiğiniz üyeleri hatırlar [üyeleri Listele](../ide/using-intellisense.md) kutusu otomatik nesne adı tamamlama. Üye listesi, sonraki açışınızda, en son kullanılan üyeler en üstünde gösterilir. En son kullanılan üyeler geçmişi, her oturum IDE içindeki arasında temizlenir.  
-  
-## <a name="override"></a>override  
- Yazdığınızda [geçersiz kılma](https://msdn.microsoft.com/library/dd1907a8-acf8-46d3-80b9-c2ca4febada8) ve sürüklerken boşluk tuşuna basın, IntelliSense tüm bir açılır liste kutusunda geçersiz kılma geçerli bir temel sınıf üyelerini görüntüler. Sonraki yöntemin dönüş türü yazarak `override` yalnızca aynı türü döndüren yöntemler göstermek için IntelliSense ister. IntelliSense herhangi bir eşleşme bulamazsa, tüm temel sınıf üyelerinin görüntülenir.  
-  
-## <a name="automatic-code-generation"></a>Otomatik Kod Üretimi  
-  
-### <a name="add-using"></a>using Ekle  
- IntelliSense işlemi kullanarak ekleme kodu yazmak yerine, kodun başka bir parçası, odağı gerek odaklanma tutmanıza olanak sağlar.  
-  
- Ekleme işlemi kullanarak başlatmak için çözümlenemeyen bir tür başvurusu imleci getirin. Örneğin, ne zaman, bir konsol uygulaması oluşturun ve ardından eklemek `XmlTextReader` body `Main` yöntemi, bir akıllı etiket en sağdaki karakter altında görünür `XmlTextReader`, çözümlenemeyen bir tür başvurusu görüntülendiğinden.  
-  
- ![Akıllı etiket görüntü kullanarak ekleyin](../ide/media/addusesmart.gif "AddUseSmart")  
-  
- Ardından menüsünden seçim yaparak Ekle kullanarak çağırabilirsiniz **çözmek** alt **IntelliSense** menü veya bağlam menüsü akıllı etiket ekleme kullanarak çağırılarak veya. Akıllı etiket yalnızca, imleç üzerinde konumlandırılmış ya da bağlanmamış tür için bitişik olduğunda görülebilir.  
-  
- ![Kullanarak ekleyin, akıllı etiket genişletilmiş resmi](../ide/media/addusesmartexp.gif "AddUseSmartExp")  
-  
-### <a name="organize-usings"></a>Using'leri düzenleme  
- **Using'leri düzenleme** seçenekleri Sırala ve Kaldır `using` ve `extern` kaynak kodu davranışını değiştirmeden bildirimleri. Zaman içinde kaynak dosyaları bloated ve gereksiz ve düzensiz nedeniyle okunması zor hale gelebilir `using` yönergeleri. **Using'leri düzenleme** seçenekleri kullanılmayan kaldırarak kaynak kodu compact `using` yönergeleri ve sıralayarak okunabilirliğini artırır.  
-  
- Visual Studio IDE'de kullanılabilir seçenekleri görmek için **Düzenle** menüsünde **IntelliSense**, gelin ve ardından **Using'leri düzenleme**. IDE düzenlemek ve kaldırmak için aşağıdaki seçenekleri sağlar `usings` yönergeleri:  
-  
-### <a name="implement-interface"></a>Arabirimi Uygulama  
- IntelliSense sağlar, yardımcı bir seçenek bir [arabirimi](https://msdn.microsoft.com/library/7da38e81-4f99-4bc5-b07d-c986b687eeba) Kod Düzenleyicisi'nde çalışırken. Normalde, bir arabirim düzgün bir şekilde uygulamak için bir yöntem bildiriminde arabirimi her üyesi için sınıfınızda oluşturmanız gerekir. Bir sınıf bildiriminde bir arabirimin adını yazdıktan sonra IntelliSense'i kullanarak, bir akıllı etiket görüntülenir. Akıllı etiket açık veya örtülü adlandırma kullanarak arabirimi otomatik olarak uygulamak için seçeneği sunar. Açık adlandırma altında yöntem bildirimleri arabirimin adını taşıyan; örtük adlandırma altında yöntem bildirimleri ait oldukları arabirimi göstermez. Açıkça adlandırılmış arabirim yöntemi yalnızca bir sınıf örneği üzerinden değil ve bir arabirim örneği aracılığıyla erişilebilir. Daha fazla bilgi için [açık arabirim uygulaması](https://msdn.microsoft.com/library/181c901f-0d4c-4f29-97fc-895079617bf2).  
-  
- Arabirim uygulama arabirimi karşılamak için gereken en az sayıda yöntem saptamalar oluşturur. Ardından bir temel sınıf arabirimi bölümlerini uyguluyorsa, bu saptamalar yeniden oluşturulmaz.  
-  
-### <a name="implement-abstract-base-class"></a>Soyut taban sınıfı uygulama  
- IntelliSense, Kod Düzenleyicisi'nde çalışırken Özet temel sınıf üyelerinin otomatik olarak Uygula yardımcı olması için bir seçenek sunar. Normalde, bir soyut üye uygulamak için temel sınıfı soyut temel sınıf yeni yöntem tanımının her bir yöntemin türetilmiş sınıfınızın oluşturmak gerekir. Bir sınıf bildiriminde bir soyut temel sınıf adını yazdıktan sonra IntelliSense'i kullanarak, bir akıllı etiket görüntülenir. Akıllı etiket otomatik olarak taban sınıf yöntemlerini uygulamak için seçeneği sunar.  
-  
- Uygulama soyut temel sınıf özelliği tarafından oluşturulan yöntem saptamalar MethodStub.snippet dosyasında tanımlanan kod parçacığı tarafından modellenir. Kod parçacıkları değiştirilebilir. Daha fazla bilgi için [izlenecek yol: Kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md).  
-  
-### <a name="generate-from-usage"></a>Kullanımdan oluştur  
- **Kullanımından Oluştur** özellik tanımlamadan önce sınıflar ve üyeler kullanmanıza olanak sağlar. Herhangi bir sınıfı, oluşturucu, yöntemi, özelliği, alan veya kullanabilirsiniz ancak henüz tanımlanmamış istediğiniz sabit listesi için bir saplama oluşturabilirsiniz. Yeni türler ve üyeler, kodun geçerli konumu çıkmadan oluşturabilirsiniz. Bu, iş akışınızdaki en aza indirir.  
-  
- Dalgalı çizgi her tanımlanmamış tanımlayıcı altında görünür. Tanımlayıcının fare işaretçisini getirdiğinizde, bir araç ipucunda bir hata iletisi görüntülenir.  
-  
- Uygun seçenekleri görüntülemek için aşağıdaki yordamlardan birini kullanabilirsiniz:  
-  
-- Tanımlanmamış tanımlayıcı tıklayın. Bir kısa çizgi, en soldaki karakterin altında görünür. Fare işaretçisini üzerinde kısa çizgi ve bir akıllı etiket (simge) görüntülenir. Akıllı etiket tıklayın.  
-  
-- Tanımlanmamış tanımlayıcı tıklayın ve ardından CTRL tuşuna basın. (nokta).  
-  
-- Tanımlanmamış tanımlayıcı sağ tıklayın ve ardından **Oluştur**.  
-  
-  Görünen seçenekler şunları içerebilir:  
-  
-- **Özellik taslağı oluşturmak**  
-  
-- **Alan taslağı üret**  
-  
-- **Metot taslağı üret**  
-  
-- **Sınıfı oluşturun**  
-  
-- **Yeni tür oluşturma** (için bir sınıf, yapı, arabirim veya numaralandırma)  
-  
-## <a name="generate-event-handlers"></a>Olay işleyicileri oluşturma  
- Kod düzenleyicisinde, IntelliSense yöntemleri (olay işleyicileri) olay alanlarını kanca yardımcı olabilir.  
-  
- Yazdığınızda `+=` işleçten sonra IntelliSense .cs dosyası olay alanı sizden seçeneği SEKME tuşuna basın. Bu, yeni bir olay işleme yöntemine işaret eden bir temsilci örneğini ekler.  
-  
- ![Yukarı düğme otomatik kanca](../ide/media/vxautohookup.gif "vxAutoHookUp")  
-  
- Sekme tuşuna basarsanız, IntelliSense, otomatik olarak sizin için deyim tamamlanır ve olay işleyici başvurusu Kod Düzenleyicisi'nde seçilen metin olarak görüntüler. Otomatik olay birleştirme tamamlamak için IntelliSense, olay işleyicisi için boş bir saplama yeniden oluşturmak için SEKME tuşuna basın ister.  
-  
- ![Olay işleyicisi oluşturmak](../ide/media/vxgenerateeventhandler.gif "vxGenerateEventHandler")  
-  
+> Tamamlanma listesi <xref:System.String> nesneleri için tüm genişletme yöntemlerini görüntülemez.
+
+ Uzantı yöntemleri örnek metotlardan farklı bir simge kullanır. Liste simgelerinin listesi için bkz. [sınıf görünümü ve nesne tarayıcısı simgeleri](../ide/class-view-and-object-browser-icons.md). Aynı ada sahip bir örnek yöntemi ve genişletme yöntemi her ikisi de kapsam içinde olduğunda, tamamlanma listesi uzantı yöntemi simgesini görüntüler.
+
+### <a name="filtered-completion-lists"></a>Filtrelenmiş tamamlanma listeleri
+ IntelliSense, filtre kullanarak gereksiz üyeleri tamamlama listesinden kaldırır.
+
+ Görsel C# , bu öğeler için görüntülenen tamamlanma listelerine filtre uygular:
+
+- **Arabirimler ve temel sınıflar.** IntelliSense, hem sınıf bildirimi tabanında hem de arabirim listelerinde ve kısıtlama listelerinde, arabirim ve temel sınıf tamamlama listelerinden öğeleri otomatik olarak kaldırır. Örneğin, numaralandırmalar taban sınıflar için kullanılamadığından numaralandırmalar, temel sınıfların tamamlanma listesinde görünmez. Temel sınıfların tamamlanma listesi yalnızca arabirimler ve ad alanları içerir. Listeden bir öğe seçer ve bir virgül yazarsanız, görsel C# birden çok devralmayı desteklemediğinden, IntelliSense, tamamlama listesinden temel sınıfları kaldırır. Aynı davranış de kısıtlama yan tümceleri için oluşur.
+
+- **Öznitelikler**: bir türe bir öznitelik uyguladığınızda, listenin yalnızca bu türleri içeren ad alanlarından (<xref:System.Attribute> gibi) ilgili türleri içermesi için tamamlama listesi filtrelenir.
+
+- `as` ve `is` işleçleri.
+
+- **Catch yan tümceleri.**
+
+- **Nesne başlatıcıları:** Yalnızca başlatılmış Üyeler tamamlama listesinde görünür.
+
+- **Yeni anahtar sözcük**: `new` yazdığınızda ve sonra ara çubuğuna bastığınızda bir tamamlama listesi görüntülenir. Kodunuzda bağlam temelinde, listede otomatik olarak bir öğe seçilir. Örneğin, öğeler için tamamlama listesinde ve metotlarda Return deyimlerinin öğeleri otomatik olarak seçilir.
+
+- **as ve, işleçleri:** @No__t_1 veya `is` anahtar sözcüğünü yazdıktan sonra ara çubuğuna bastığınızda filtrelenmiş bir tamamlanma listesi otomatik olarak görüntülenir.
+
+- Olaylar: `event` anahtar sözcüğünü yazdığınızda, tamamlanma listesi yalnızca temsilci türlerini içerir.
+
+- Parametre yardımı, parametreleri girdiğiniz parametrelerle eşleşen ilk yöntem aşırı yüklemesini otomatik olarak sıralar. Birden çok yöntem aşırı yüklemesi varsa, listede bir sonraki olası aşırı yüklemeye gitmek için yukarı ve aşağı okları kullanabilirsiniz.
+
+## <a name="most-recently-used-members"></a>En son kullanılan Üyeler
+ IntelliSense, otomatik nesne adı tamamlamada açılan [liste üyeleri](../ide/using-intellisense.md) kutusunda en son seçtiğiniz üyeleri anımsar. Üye listesini bir dahaki sefer kullandığınızda en son kullanılan Üyeler en üstte gösterilir. En son kullanılan üyelerin geçmişi, IDE içindeki her oturum arasında temizlenir.
+
+## <a name="override"></a>override
+ [Geçersiz kılma](https://msdn.microsoft.com/library/dd1907a8-acf8-46d3-80b9-c2ca4febada8) yazın ve ardından boşluk tuşuna bastığınızda IntelliSense, bir açılır liste kutusunda geçersiz kılabileceğiniz geçerli temel sınıf üyelerini görüntüler. @No__t_0 sonra yöntemin dönüş türünü yazmak, IntelliSense 'in yalnızca aynı türü döndüren yöntemleri göstermesini ister. IntelliSense herhangi bir eşleşme bulamadığınızda, tüm temel sınıf üyelerini görüntüler.
+
+## <a name="automatic-code-generation"></a>Otomatik Kod Üretimi
+
+### <a name="add-using"></a>using Ekle
+ IntelliSense kullanarak ekleme işlemi, odağınızı kodun başka bir bölümüne kaydırabilmeniz yerine, yazmakta olduğunuz koda odaklanmanızı sağlar.
+
+ Using using işlemini başlatmak için imleci çözümlenemeyen bir tür başvurusu üzerine konumlandırın. Örneğin, bir konsol uygulaması oluşturup `Main` yönteminin gövdesine `XmlTextReader` eklediğinizde, çözülemeyen bir tür başvurusu olarak göründüğünden `XmlTextReader` en sağdaki karakter altında akıllı bir etiket görüntülenir.
+
+ ![Akıllı Etiket görüntüsünü kullanarak ekleme](../ide/media/addusesmart.gif "AddUseSmart")
+
+ Daha sonra, **IntelliSense** menüsünün veya bağlam menüsünün **Çözümle** alt menüsünden seçerek Ekle ' yi çağırabilir veya akıllı etiket aracılığıyla kullanarak Ekle ' yi çağırarak çalıştırabilirsiniz. Akıllı etiket yalnızca imleç açık veya ilişkisiz tür olarak konumlandırıldığında görünür.
+
+ ![Using, akıllı etiket genişletilmiş görüntüsünü kullanarak ekleme](../ide/media/addusesmartexp.gif "AddUseSmartExp")
+
+### <a name="organize-usings"></a>Using deyimlerini Düzenle
+ **Düzenleme** kullanımları seçenekleri, kaynak kodun davranışını değiştirmeden `using` ve `extern` bildirimlerini sıralar ve kaldırır. Zaman içinde, kaynak dosyalar gereksiz ve düzensiz `using` yönergeleri nedeniyle okunabilir ve okunabilir hale gelebilir. Kullanılmayan `using` yönergelerini kaldırarak ve bunları sıralayarak okunabilirliği geliştirerek, **using using** , kaynak kodu düzenleme özelliklerini geliştirir.
+
+ Visual Studio IDE 'deki kullanılabilir seçenekleri görmek için, **Düzenle** menüsünde, **IntelliSense**' in üzerine gelin ve ardından kullanımları **Düzenle**' ye gelin. IDE `usings` yönergeleri düzenlemek ve kaldırmak için aşağıdaki seçenekleri sağlar:
+
+### <a name="implement-interface"></a>Arabirimi Uygulama
+ IntelliSense, kod Düzenleyicisi 'nde çalışırken bir [arabirimi](https://msdn.microsoft.com/library/7da38e81-4f99-4bc5-b07d-c986b687eeba) uygulamanıza yardımcı olacak bir seçenek sunar. Normalde, bir arabirimi düzgün bir şekilde uygulamak için sınıfınıza arabirimin her üyesi için bir yöntem bildirimi oluşturmanız gerekir. IntelliSense kullanarak bir sınıf bildiriminde bir arabirimin adını yazdıktan sonra akıllı bir etiket görüntülenir. Akıllı etiket, açık veya örtük adlandırma kullanarak arabirimi otomatik olarak uygulama seçeneği sunar. Açık adlandırma altında yöntem bildirimleri arabirimin adını taşır; örtük adlandırma altında yöntem bildirimleri ait oldukları arabirimi göstermez. Açıkça adlandırılmış bir arabirim yöntemine, bir sınıf örneği aracılığıyla değil, yalnızca bir arabirim örneği üzerinden erişilebilir. Daha fazla bilgi için bkz. [Açık arabirim uygulama](https://msdn.microsoft.com/library/181c901f-0d4c-4f29-97fc-895079617bf2).
+
+ Arabirim Uygula, arabirimi karşılamak için gerekli olan en az Yöntem saplamaları sayısını oluşturacaktır. Bir temel sınıf arabirimin parçalarını uygularsa, bu saplamalar yeniden oluşturulmaz.
+
+### <a name="implement-abstract-base-class"></a>Soyut temel sınıf Uygula
+ IntelliSense, kod Düzenleyicisi 'nde çalışırken soyut bir temel sınıfın üyelerini otomatik olarak uygulamanıza yardımcı olacak bir seçenek sunar. Normalde, soyut bir temel sınıfın üyelerini uygulamak için, türetilmiş sınıfınızdaki soyut temel sınıfın her bir yöntemi için yeni bir yöntem tanımı oluşturulmasını gerektirir. IntelliSense kullanarak bir sınıf bildiriminde soyut bir temel sınıfın adını yazdıktan sonra akıllı bir etiket görüntülenir. Akıllı etiket, temel sınıf yöntemlerini otomatik olarak uygulama seçeneği sunar.
+
+ Soyut temel sınıf Uygula özelliği tarafından oluşturulan Yöntem saplamaları, MethodStub. parçacığında dosyasında tanımlanan kod parçacığına göre modellenir. Kod parçacıkları değiştirilebilir. Daha fazla bilgi için bkz. [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md).
+
+### <a name="generate-from-usage"></a>Kullanımdan oluştur
+ **Kullanımdan oluştur** özelliği, sınıfları ve üyeleri tanımladıktan önce kullanmanıza olanak sağlar. Kullanmak istediğiniz ancak henüz tanımlamamış herhangi bir sınıf, Oluşturucu, yöntem, özellik, alan veya Enum için bir saplama oluşturabilirsiniz. Geçerli konumunuzu kodda bırakmadan yeni türler ve Üyeler oluşturabilirsiniz. Bu, iş akışınız için kesintiye en aza indirir.
+
+ Her tanımsız tanımlayıcı altında dalgalı alt çizgi görünür. Fare işaretçisini tanımlayıcıda bıraktığınızda, araç ipucunda bir hata iletisi görüntülenir.
+
+ Uygun seçenekleri göstermek için aşağıdaki yordamlardan birini kullanabilirsiniz:
+
+- Tanımsız tanımlayıcıya tıklayın. En soldaki karakter altında kısa bir alt çizgi görünür. Fare işaretçisini kısa alt çizginin üzerinde bekletin ve akıllı bir etiket (simge) görünür. Akıllı etikete tıklayın.
+
+- Tanımsız tanımlayıcıya tıklayın ve ardından CTRL + tuşlarına basın. (nokta).
+
+- Tanımsız tanımlayıcıya sağ tıklayın ve ardından **Oluştur**' a tıklayın.
+
+  Görüntülenen seçenekler şunları içerebilir:
+
+- **Özellik saplaması oluştur**
+
+- **Alan saplaması oluştur**
+
+- **Yöntem saplaması oluştur**
+
+- **Sınıf üret**
+
+- **Yeni tür oluşturma** (bir sınıf, yapı, arabirim veya sabit listesi için)
+
+## <a name="generate-event-handlers"></a>Olay işleyicileri oluştur
+ IntelliSense, kod Düzenleyicisi 'nde Yöntemler (olay işleyicileri) ile olay alanlarını almanıza yardımcı olabilir.
+
+ Bir. cs dosyasındaki bir olay alanından sonra `+=` işlecini yazdığınızda, IntelliSense, sekme tuşuna basarak bu seçeneği girmenizi ister. Bu, olayı işleme yöntemine işaret eden bir temsilcinin yeni bir örneğini ekler.
+
+ ![Düğme otomatik kancası](../ide/media/vxautohookup.gif "Vxoto")
+
+ Sekme tuşuna basarsanız, IntelliSense sizin için ifadeyi otomatik olarak tamamlar ve olay işleyicisi başvurusunu kod düzenleyicisinde seçili metin olarak görüntüler. Otomatik olay kancaini tamamlayabilmeniz için, IntelliSense, olay işleyicisi için boş bir saplama oluşturmak üzere TAB tuşuna tekrar basmanız istenir.
+
+ ![Olay Işleyicisi oluştur](../ide/media/vxgenerateeventhandler.gif "vxGenerateEventHandler")
+
 > [!NOTE]
-> IntelliSense tarafından oluşturulan yeni bir temsilci, mevcut bir olay işleyicisi başvuruyorsa, IntelliSense araç ipucu için bu bilgiyi iletişim kurar. Ardından bu başvuruyu değiştirebilirsiniz; metin, Kod Düzenleyicisi'nde zaten seçildi. Aksi takdirde otomatik olay birleştirme bu noktada tamamlanmıştır.  
-  
- Sekme tuşuna basarsanız, IntelliSense doğru imzaya sahip bir yöntemi çıkış Saplamaları ve imleç, olay işleyicisi gövdesinde koyar.  
-  
+> IntelliSense tarafından oluşturulan yeni bir temsilci var olan bir olay işleyicisine başvuruyorsa, IntelliSense bu bilgileri araç ipucunda iletişim kurar. Bu başvuruyu daha sonra değiştirebilirsiniz; metin, kod düzenleyicisinde zaten seçilidir. Aksi takdirde, bu noktada otomatik olay kancau tamamlanmıştır.
+
+ Sekme tuşuna basarsanız, IntelliSense doğru imzaya sahip bir yöntemi dışarı yerleştirir ve imleci olay işleyicinizin gövdesine koyar.
+
 > [!NOTE]
-> Kullanım **Navigate Backward** komutunu **görünümü** menü (CTRL +-) olay birleştirme deyimine geri dönmek için.  
-  
- IntelliSense adlı bir olay işleyicisi otomatik olarak nasıl kancaları aşağıdaki görevleri gösterir `button1_Click` bir olayı alana adlı `button1.Click`.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+> Olay kancası bildirimine geri dönmek için **Görünüm** menüsündeki **geri GIT** komutunu (Ctrl +-) kullanın.
+
+ Aşağıdaki görev, IntelliSense 'in `button1.Click` adlı bir olay alanına `button1_Click` adlı bir olay işleyicisini otomatik olarak nasıl yedeklegösterdiğini gösterir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio IDE](../ide/visual-studio-ide.md)

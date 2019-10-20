@@ -6,20 +6,20 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 2b0a8e04-6fee-4c6c-b086-e49fc728a3ed
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7eeae6a14c846de83aaffa6568c6c30b82d9d81b
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: d4c6176caee5551b860029ac98b19d52fcb7b51f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871736"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658547"
 ---
 # <a name="t4-template-directive"></a>T4 Şablon Yönergesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-T4 metin şablonu genellikle şablonun nasıl işleneceğini belirten `template` bir yönergeyle başlar. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Bir metin şablonu ve içerdiği herhangi bir dosya içinde birden fazla şablon yönergesi bulunmamalıdır.
+@No__t_0 T4 metin şablonu genellikle şablonun nasıl işleneceğini belirten bir `template` yönergesiyle başlar. Bir metin şablonu ve içerdiği herhangi bir dosya içinde birden fazla şablon yönergesi bulunmamalıdır.
 
  Metin şablonları yazma hakkında genel bir bakış için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
 
@@ -29,16 +29,16 @@ T4 metin şablonu genellikle şablonun nasıl işleneceğini belirten `template`
 <#@ template [language="VB"] [compilerOptions="options"] [culture="code"] [debug="true"] [hostspecific="true"] [inherits="templateBaseClass"] [visibility="internal"] [linePragmas="false"] #>
 ```
 
- `template` Yönergesinin, dönüşümün farklı yönlerini belirtmenize imkan tanıyan birkaç özniteliği vardır. Tüm öznitelikler isteğe bağlıdır.
+ @No__t_0 yönergesinin, dönüşümün farklı yönlerini belirtmenizi sağlayan birkaç özniteliği vardır. Tüm öznitelikler isteğe bağlıdır.
 
 ## <a name="compileroptions-attribute"></a>compilerOptions özniteliği
  Örnek: `compilerOptions="optimize+"`
 
- Geçerli değerler: Tüm geçerli derleyici seçenekleri. Daha fazla bilgi için bkz [ C# ](https://msdn.microsoft.com/library/96437ecc-6502-4cd3-b070-e9386a298e83) . kategoriye göre listelenen derleyici seçenekleri ve [kategoriye göre listelenmiş Visual Basic derleyici seçenekleri](https://msdn.microsoft.com/library/fbe36f7a-7cfa-4f77-a8d4-2be5958568e3).
+ Geçerli değerler: tüm geçerli derleyici seçenekleri. Daha fazla bilgi için bkz [ C# ](https://msdn.microsoft.com/library/96437ecc-6502-4cd3-b070-e9386a298e83) . kategoriye göre listelenen derleyici seçenekleri ve [kategoriye göre listelenmiş Visual Basic derleyici seçenekleri](https://msdn.microsoft.com/library/fbe36f7a-7cfa-4f77-a8d4-2be5958568e3).
 
  Çalışma zamanı (önceden işlenmiş) şablonları için yok sayılır.
 
- Bu seçenekler, şablon veya [!INCLUDE[csprcs](../includes/csprcs-md.md)] [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)]içine dönüştürüldüğünde uygulanır ve elde edilen kod derlenir.
+ Bu seçenekler, şablon [!INCLUDE[csprcs](../includes/csprcs-md.md)] veya [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)] dönüştürüldüğünde uygulanır ve sonuçta elde edilen kod derlenir.
 
 ## <a name="culture-attribute"></a>culture özniteliği
  Örnek: `culture="de-CH"`
@@ -58,7 +58,7 @@ debug="true"
 
  Geçerli değerler: `true, false`. False, varsayılan değerdir.
 
- `debug` Özniteliği ise`true`, ara kod dosyası, hata ayıklayıcının şablonunuzda bir kesme veya özel durum oluştuğunda daha doğru konumu belirlemesine olanak sağlayan bilgiler içerir.
+ @No__t_0 özniteliği `true` ise, ara kod dosyası, hata ayıklayıcının, şablonunuzda bir kesmenin veya özel durumun gerçekleştiği konumu daha doğru belirlemesine olanak tanıyan bilgiler içerir.
 
  Tasarım zamanı şablonlarında, ara kod dosyası **% Temp%** dizininize yazılır.
 
@@ -73,11 +73,11 @@ hostspecific="true"
 
  Geçerli değerler: `true, false, trueFromBase`. False, varsayılan değerdir.
 
- Bu özniteliğin değerini olarak `true`ayarlarsanız, metin şablonunuz tarafından oluşturulan sınıfa adlı `Host` bir özellik eklenir. Özelliği, dönüşüm altyapısının ana bilgisayarına bir başvurudur ve [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))olarak bildirilmiştir. Özel bir sunucu tanımladıysanız, bunu özel ana bilgisayar türüne atayabilirsiniz.
+ Bu özniteliğin değerini `true` olarak ayarlarsanız, metin şablonunuz tarafından oluşturulan sınıfa `Host` adlı bir özellik eklenir. Özelliği, dönüşüm altyapısının ana bilgisayarına bir başvurudur ve [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))olarak bildirilmiştir. Özel bir sunucu tanımladıysanız, bunu özel ana bilgisayar türüne atayabilirsiniz.
 
  Bu özelliğin türü ana bilgisayarın türüne bağlı olduğundan, yalnızca belirli bir ana bilgisayar ile çalışan bir metin şablonu yazıyorsanız faydalıdır. [Tasarım zamanı şablonları](../modeling/design-time-code-generation-by-using-t4-text-templates.md), ancak [çalışma zamanı şablonları](../modeling/run-time-text-generation-with-t4-text-templates.md)için geçerlidir.
 
- `hostspecific` `this.Host` Ne zaman vekullanıyorsanız[!INCLUDE[vsprvs](../includes/vsprvs-md.md)], özelliklere erişmek[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] için IServiceProvider 'a çevirebilirsiniz. `true` Projedeki bir dosyanın mutlak `Host.ResolvePath(filename)` yolunu elde etmek için de kullanabilirsiniz. Örneğin:
+ @No__t_0 `true` ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanıyorsanız, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] özelliklere erişmek için IServiceProvider 'a `this.Host` çevirebilirsiniz. Projedeki bir dosyanın mutlak yolunu almak için `Host.ResolvePath(filename)` de kullanabilirsiniz. Örneğin:
 
 ```csharp
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -99,7 +99,7 @@ Content of myFile is:
 
 ```
 
- `inherits` Ve`hostspecific` özniteliklerini birlikte kullanırsanız, türetilmiş sınıfta Host = "trueFromBase" ve taban sınıfta Host = "true" değerini belirtin. Bu, oluşturulan koddaki `Host` özelliğinin çift tanımını önler.
+ @No__t_0 ve `hostspecific` özniteliklerini birlikte kullanırsanız, türetilmiş sınıfta Host = "trueFromBase" ve taban sınıfta Host = "true" değerini belirtin. Bu, oluşturulan koddaki `Host` özelliğinin çift tanımını önler.
 
 ## <a name="language-attribute"></a>language özniteliği
  Örnek: `language="VB"`
@@ -108,7 +108,7 @@ Content of myFile is:
 
  `VB`
 
- Language özniteliği, deyim ve ifade blokları[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] içindeki [!INCLUDE[csprcs](../includes/csprcs-md.md)]kaynak kodu için kullanılacak dili (veya) belirtir. Çıktının oluşturulmasında kullanılan ara kod dosyası bu dili kullanır. Bu dil, şablonunuzun oluşturduğu ve herhangi bir türdeki bir metin olabilecek dille ilişkili değildir.
+ Language özniteliği, deyim ve ifade blokları içindeki kaynak kodu için kullanılacak dili ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] veya [!INCLUDE[csprcs](../includes/csprcs-md.md)]) belirtir. Çıktının oluşturulmasında kullanılan ara kod dosyası bu dili kullanır. Bu dil, şablonunuzun oluşturduğu ve herhangi bir türdeki bir metin olabilecek dille ilişkili değildir.
 
  Örneğin:
 
@@ -133,9 +133,9 @@ Squares of numbers:
 ### <a name="inheritance-in-a-run-time-preprocessed-text-template"></a>Çalışma zamanı (önceden işlenmiş) metin şablonunda devralma
  Türetilmiş birkaç varyanta sahip bir temel şablon oluşturmak için çalışma zamanı metin şablonları arasında devralmayı kullanabilirsiniz. Çalışma zamanı şablonları, **özel araç** özelliği **Texttemplatingfileönişlemci**olarak ayarlanmış olanlardır. Çalışma zamanı şablonu, şablonda tanımlanan metin oluşturmak için uygulamanızda çağırabildiğiniz bir kod oluşturur. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
- Bir `inherits` öznitelik belirtmezseniz, metin şablonınızdan bir temel sınıf ve türetilmiş sınıf oluşturulur. Bir `inherits` öznitelik belirttiğinizde yalnızca türetilmiş sınıf oluşturulur. Bir taban sınıfı elle yazabilirsiniz, ancak türetilmiş sınıf tarafından kullanılan yöntemleri sağlaması gerekir.
+ Bir `inherits` özniteliği belirtmezseniz, metin şablonınızdan bir temel sınıf ve türetilmiş sınıf oluşturulur. Bir `inherits` özniteliği belirttiğinizde yalnızca türetilmiş sınıf oluşturulur. Bir taban sınıfı elle yazabilirsiniz, ancak türetilmiş sınıf tarafından kullanılan yöntemleri sağlaması gerekir.
 
- Daha genel bir durum, önceden işlenmiş başka bir şablonu taban sınıf olarak belirtmenizdir. Temel şablon, türetilmiş şablonlara ait metinle ayrılabilen ortak metin blokları sağlar. Metin parçaları içeren yöntemleri tanımlamak için `<#+ ... #>` sınıf özelliği bloklarını kullanabilirsiniz. Örneğin, türetilmiş şablonlarda geçersiz kılınabilen sanal yöntemler sağlayacak şekilde, çıktı metninin çerçevesini temel şablona yerleştirebilirsiniz:
+ Daha genel bir durum, önceden işlenmiş başka bir şablonu taban sınıf olarak belirtmenizdir. Temel şablon, türetilmiş şablonlara ait metinle ayrılabilen ortak metin blokları sağlar. Metin parçaları içeren yöntemleri tanımlamak için sınıf özelliği bloklarını `<#+ ... #>` kullanabilirsiniz. Örneğin, türetilmiş şablonlarda geçersiz kılınabilen sanal yöntemler sağlayacak şekilde, çıktı metninin çerçevesini temel şablona yerleştirebilirsiniz:
 
  Çalışma zamanı (önceden işlenmiş) metin şablonu BaseTemplate.tt:
 
@@ -204,12 +204,12 @@ This is the common footer.
  Ayrıca sıradan bir elle yazılmış sınıfı taban sınıf olarak kullanabilirsiniz. Taban sınıfın, türetilmiş sınıf tarafından kullanılan yöntemleri sağlaması gerekir.
 
 > [!WARNING]
-> `inherits` Ve`hostspecific` özniteliklerini birlikte kullanıyorsanız, ' ın türetilmiş sınıfta hostspecific = "trueFromBase" ve taban sınıfta Host = "true" değerini belirtin. Bu, oluşturulan koddaki `Host` özelliğinin çift tanımını önler.
+> @No__t_0 ve `hostspecific` özniteliklerini birlikte kullanıyorsanız, ana sınıfta hostspecific = "trueFromBase" değerini türetilmiş sınıfta ve Host = "true" olarak belirtin. Bu, oluşturulan koddaki `Host` özelliğinin çift tanımını önler.
 
 ### <a name="inheritance-in-a-design-time-text-template"></a>Tasarım zamanı metin şablonunda devralma
- Tasarım zamanı metin şablonu, **özel aracın** **TextTemplatingFileGenerator**olarak ayarlandığı bir dosyadır. Şablon, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projenizin bir kısmını oluşturan kod veya metin çıkış dosyası oluşturur. Çıktı dosyasını oluşturmak için, şablon ilk olarak genellikle görmediğiniz bir ara program kod dosyasına çevrilir. `inherits` Öznitelik, bu ara kodun temel sınıfını belirtir.
+ Tasarım zamanı metin şablonu, **özel aracın** **TextTemplatingFileGenerator**olarak ayarlandığı bir dosyadır. Şablon, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projenizin bir parçasını oluşturan kod veya metin çıkış dosyası oluşturur. Çıktı dosyasını oluşturmak için, şablon ilk olarak genellikle görmediğiniz bir ara program kod dosyasına çevrilir. @No__t_0 özniteliği bu ara kodun temel sınıfını belirtir.
 
- Tasarım zamanı metin şablonu için, öğesinden <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>türetilmiş herhangi bir temel sınıfı belirtebilirsiniz. Temel sınıfı içeren derlemeyi veya projeyi yüklemek için yönergesinikullanın.`<#@assembly#>`
+ Tasarım zamanı metin şablonu için <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> türetilen herhangi bir temel sınıfı belirtebilirsiniz. Temel sınıfı içeren derlemeyi veya projeyi yüklemek için `<#@assembly#>` yönergesini kullanın.
 
  Daha fazla bilgi için, [Gareth Jones ' bloguna "metin şablonlarına devralma"](http://go.microsoft.com/fwlink/?LinkId=208373)konusuna bakın.
 
@@ -231,4 +231,4 @@ This is the common footer.
 
  `internal`
 
- Bir çalışma zamanı şablonunda, bu, oluşturulan sınıfın görünürlük özniteliğini ayarlar. Varsayılan olarak, sınıfı kodunuzun genel API 'sinin bir parçasıdır, ancak ayarlanarak `visibility="internal"` yalnızca kodunuzun metin oluşturma sınıfını kullanabilmesini sağlayabilirsiniz.
+ Bir çalışma zamanı şablonunda, bu, oluşturulan sınıfın görünürlük özniteliğini ayarlar. Varsayılan olarak, sınıfı, kodunuzun ortak API 'sinin bir parçasıdır, ancak `visibility="internal"` ayarlanarak yalnızca kodunuzun metin oluşturma sınıfını kullanabilmesini sağlayabilirsiniz.

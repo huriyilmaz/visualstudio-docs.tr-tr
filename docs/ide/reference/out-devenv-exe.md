@@ -13,21 +13,21 @@ helpviewer_keywords:
 - builds [Visual Studio], errors
 - output files, build errors
 ms.assetid: 9002d8c2-36d4-451c-b489-8f01932f31f7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 039456c10993199ec2265042aabc0ed5c475ccd9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a073b4815a01696c546dc2a9dd1132e3605281e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969299"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655780"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
 
-Depolamak ve hataları görüntülemek için bir dosya belirtir olduğunda, [çalıştırma](run-devenv-exe.md), [çalıştırın ve çıkış](runexit-devenv-exe.md), [yükseltme](upgrade-devenv-exe.md), [derleme](build-devenv-exe.md), [yenidenoluşturun](rebuild-devenv-exe.md), [temiz](clean-devenv-exe.md), veya [dağıtma](deploy-devenv-exe.md) bir çözüm.
+Bir çözümü [çalıştırmak](run-devenv-exe.md), [çalıştırmak ve çıkmak](runexit-devenv-exe.md), [yükseltmek](upgrade-devenv-exe.md), [derlemek](build-devenv-exe.md), [yeniden derlemek](rebuild-devenv-exe.md), [temizlemek](clean-devenv-exe.md)veya [dağıtmak](deploy-devenv-exe.md) için bir dosyayı depolamak ve göstermek için bir dosya belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,19 +37,19 @@ devenv /Out FileName
 
 ## <a name="arguments"></a>Arguments
 
-- *Dosya adı*
+- *Kısaltın*
 
-  Gerekli. Almak için dosyanın adı ve yolu yürütülebilir oluşturduğunuzda çıktı.
+  Gerekli. Yürütülebilir dosya oluştururken çıkışın alınacağı dosyanın yolu ve adı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Dosya, varolmayan dosya adı belirtilirse, otomatik olarak oluşturulur. Aksi takdirde dosya zaten var ve sonuçları için dosyanın mevcut içeriğini eklenir.
+Varolmayan bir dosya adı belirtilmişse dosya otomatik olarak oluşturulur. Aksi takdirde dosya zaten var olur ve sonuçlar dosyanın var olan içeriğine eklenir.
 
-Komut satırı derleme hataları görüntülenir **komut** penceresi ve çözüm Oluşturucusu'nu görüntülemek **çıkış** penceresi. Bu anahtar, katılımsız yapılar sonuçlarını görüntülemek için yararlıdır.
+Komut satırı derleme hataları, **komut** penceresinde ve **Çıkış** penceresinin çözüm Oluşturucu görünümünde görüntülenir. Bu anahtar, katılımsız derlemelerin sonuçlarını görüntülemek için yararlıdır.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek çalıştırılır `MySolution` ve hataları Yazar `MyErrorLog.txt`.
+Bu örnek `MySolution` çalıştırır ve dosya `MyErrorLog.txt` hataları yazar.
 
 ```shell
 devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"
@@ -58,10 +58,10 @@ devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /out "C:\MyEr
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
-- [/ Çalıştırma (devenv.exe)](../../ide/reference/run-devenv-exe.md)
-- [/ RunExit (devenv.exe)](runexit-devenv-exe.md)
-- [/ Yükseltme (devenv.exe)](upgrade-devenv-exe.md)
-- [/ Clean (devenv.exe)](clean-devenv-exe.md)
-- [/ Derleme (devenv.exe)](../../ide/reference/build-devenv-exe.md)
-- [/ Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
-- [/ (Devenv.exe) dağıtma](../../ide/reference/deploy-devenv-exe.md)
+- [/Run (devenv. exe)](../../ide/reference/run-devenv-exe.md)
+- [/RunExit (devenv. exe)](runexit-devenv-exe.md)
+- [/Upgrade (devenv. exe)](upgrade-devenv-exe.md)
+- [/Clean (devenv. exe)](clean-devenv-exe.md)
+- [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md)
+- [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Deploy (devenv. exe)](../../ide/reference/deploy-devenv-exe.md)

@@ -4,35 +4,35 @@ ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.FSharp.IntelliSense
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7227fa83e829fff7bac28fa7bb2b50969768e934
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d293d2c649329f5de8444ea75fd05ddc34738ab4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778462"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666222"
 ---
 # <a name="options-text-editor-f-intellisense"></a>Seçenekler, metin düzenleyici, F#, IntelliSense
 
-Kullanım **IntelliSense** bazı metin düzenleyici ayarları değiştirmek için seçenekler sayfası F#. Bu seçenekler sayfası erişmek için kendi seçtikleri **Araçları** > **seçenekleri**ve ardından **metin düzenleyici**  >  **F#**  >  **IntelliSense**.
+İçin F#bazı metin Düzenleyicisi ayarlarını değiştirmek üzere **IntelliSense** seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **araçlar**  > **Seçenekler**' i seçin ve ardından**IntelliSense** >   > **F#** **metin düzenleyici** ' yi seçin.
 
 ## <a name="completion-lists"></a>Tamamlanma listeleri
 
-- **Bir karakter girildikten sonra Tamamlama listesini göster**
+- **Bir karakter yazıldıktan sonra tamamlanma listesini göster**
 
-   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense tamamlanma listesi otomatik olarak görüntüler. Bu seçeneği seçmezseniz, IntelliSense tamamlama IntelliSense menüsünden veya tuşuna basarak sunulmaya devam ettiği **Ctrl** + **alanı**.
+   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense, tamamlanma listesini otomatik olarak görüntüler. Bu seçeneği seçmezseniz, IntelliSense tamamlandığında IntelliSense menüsünde veya **Ctrl**  + **alanı**' na basılarak kullanılabilir.
 
-- **Bir karakter silindikten sonra Tamamlama listesini göster**
+- **Bir karakter silindikten sonra tamamlanma listesini göster**
 
-   Bu seçenek belirlendiğinde, kodunuzda karakterleri silme başlattığınızda IntelliSense otomatik olarak ilgili tamamlanma listesini görüntüler.
+   Bu seçenek belirlendiğinde, kodunuzda karakterleri silmeye başladığınızda IntelliSense otomatik olarak ilgili tamamlanma listesini görüntüler.
 
-- **Açılmamış ad alanlarında simgelerini göster**
+- **Açık olmayan ad alanlarında sembolleri göster**
 
-   Bu seçenek belirlendiğinde, IntelliSense otomatik olarak yazmaya başladığınızda, tamamlanma listesini görüntüler ve açtığınız henüz ad alanından öğeler içerir.
+   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense otomatik olarak tamamlanma listesini görüntüler ve açılmadığınız ad alanlarından öğe ekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

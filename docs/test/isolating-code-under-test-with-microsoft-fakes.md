@@ -2,65 +2,65 @@
 title: Microsoft Fakes ile Test Edilen Kodu Yalıtma
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
+author: jillre
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: c2f3ec4accc9353923e80017774f5a2b15fe095d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bf00c35868ac5b4df34f2453f046232a91387085
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926631"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653111"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes ile test edilen kodu yalıtma
 
-Microsoft Fakes ile uygulamanın diğer kısımlarını değiştirerek test ettiğiniz kodu yalıtmanıza yardımcı olan *saptamalar* veya *dolgular*. Bunlar, testlerinizin denetimi altında olan küçük kod parçalarıdır. Kodunuzu sınama için yalıttığınız zaman, sınama başarısız olduğunda nedeninin başka bir yerde değil, tam da orada olduğunu bileceksiniz. Uygulamanın diğer parçaları çalışmıyor olsa bile, saptamalar ve dolgular kodunuzu test etmenize olanak sağlar.
+Microsoft Fakes, uygulamanın diğer bölümlerini *saplamalar* *veya parçalar*ile değiştirerek test ettiğiniz kodu yalıtmanıza yardımcı olur. Bunlar, testlerinizin denetimi altında olan küçük kod parçalarıdır. Kodunuzu sınama için yalıttığınız zaman, sınama başarısız olduğunda nedeninin başka bir yerde değil, tam da orada olduğunu bileceksiniz. Uygulamanın diğer parçaları çalışmıyor olsa bile, saptamalar ve dolgular kodunuzu test etmenize olanak sağlar.
 
 Fakes iki türde olabilir:
 
-- A [saplama](#get-started-with-stubs) sınıfı aynı arabirimi uygulayan küçük bir yedekle değiştirir.  Saptamalar kullanmak için uygulamanızı her bir bileşenin diğer bileşenlere değil yalnızca arabirimlere bağlı olacak şekilde tasarlamanız gerekir. ("Bileşen" ifadesiyle, birlikte tasarlanan ve güncelleştirilen ve tipik olarak bir derlemede yer alan sınıf veya sınıflardan oluşan grup kastedilmektedir.)
+- [Saplama](#get-started-with-stubs) , bir sınıfı aynı arabirimi uygulayan küçük bir değiştirme ile değiştirir.  Saptamalar kullanmak için uygulamanızı her bir bileşenin diğer bileşenlere değil yalnızca arabirimlere bağlı olacak şekilde tasarlamanız gerekir. ("Bileşen" ifadesiyle, birlikte tasarlanan ve güncelleştirilen ve tipik olarak bir derlemede yer alan sınıf veya sınıflardan oluşan grup kastedilmektedir.)
 
-- A [dolgu](#get-started-with-shims) çalışma zamanında uygulamanızın derlenmiş kodunu değiştirir, böylece bir belirtilen bir yöntemi çağırmak yerine, testin sağladığı dolgu kodunu çalıştırır. Dolgular çağrıları, .NET derlemeleri gibi değiştiremediğiniz Derlemelerle değiştirmek için kullanılabilir.
+- Bir [Dolgu](#get-started-with-shims) , çalışma zamanında uygulamanızın derlenmiş kodunu değiştirir, böylece belirli bir yöntem çağrısını yapmak yerine, testinizin sağladığı dolgu kodunu çalıştırır. Dolgu, .NET derlemeleri gibi değiştiremeyeceğiniz Derlemelerle değiştirmek için kullanılabilir.
 
-![Fakes diğer bileşenleri değiştirin](../test/media/fakes-2.png)
+![Fakes diğer bileşenleri değiştirir](../test/media/fakes-2.png)
 
-**Gereksinimler**
+**Requirements**
 
 - Visual Studio Enterprise
 - Bir .NET Framework projesi
 
 > [!NOTE]
-> - .NET standard projeleri desteklenmez.
+> - .NET Standard projeler desteklenmez.
 > - Visual Studio ile profil oluşturma, Microsoft Fakes kullanan testler için kullanılamaz.
 
-## <a name="choose-between-stub-and-shim-types"></a>Saptama ve Dolgu türü arasında seçin
+## <a name="choose-between-stub-and-shim-types"></a>Saplama ve dolgu türleri arasında seçim yapın
 Genelde bu sınıfları aynı anda geliştirip güncelleştirdiğinizden bir Visual Studio projesini bileşen olarak kabul edebilirsiniz. Projenin çözümünüzdeki diğer projelere veya diğer derlemelere yaptığı çağrılar için saptama ve dolgu kullanmayı deneyebilirsiniz.
 
-Genel bir kılavuzluk sağlaması için, Visual Studio çözümünüzdeki çağrılar için saptamaları ve diğer başvurulan derlemelerde çağrılar için dolgu verilerini kullanın. Bunun nedeni kendi çözümünüzde bileşenleri, saptamaların gerektirdiği şekilde arabirimleri tanımlayarak ayırmanızın iyi bir uygulama olmasıdır. Ancak dış derlemeler gibi *System.dll* onun yerine dolguları kullanmalısınız için ayrı arabirim tanımlarıyla genellikle sağlanmaz.
+Genel bir kılavuzluk sağlaması için, Visual Studio çözümünüzdeki çağrılar için saptamaları ve diğer başvurulan derlemelerde çağrılar için dolgu verilerini kullanın. Bunun nedeni kendi çözümünüzde bileşenleri, saptamaların gerektirdiği şekilde arabirimleri tanımlayarak ayırmanızın iyi bir uygulama olmasıdır. Ancak *System. dll* gibi dış derlemeler genellikle ayrı arabirim tanımlarıyla sağlanmaz, bu nedenle bunun yerine dolgular kullanmanız gerekir.
 
 Diğer değerlendirmeler şunlardır:
 
-**Performans.** Çalışma zamanında kodunuzu yeniden yazdıkları için dolgular daha yavaş çalışır. Saptamalarda bu performans düşüklüğü yoktur ve sanal yöntemler kadar hızlı ilerleyebilirler.
+**Mının.** Çalışma zamanında kodunuzu yeniden yazdıkları için dolgular daha yavaş çalışır. Saptamalarda bu performans düşüklüğü yoktur ve sanal yöntemler kadar hızlı ilerleyebilirler.
 
 **Statik yöntemler, korumalı türler.** Arayüzleri uygulamak için yalnızca saptamalar kullanabilirsiniz. Bu nedenle saptama türleri statik yöntemler, sanal olmayan yöntemler, korumalı sanal yöntemler, korumalı türlerdeki yöntemler gibi yöntemlerle kullanılamaz.
 
-**Dahili türler.** Saptamalar ve dolgular kullanılabilir derleme özniteliğini kullanarak erişilebilir yapılan dahili türlerle birlikte <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.
+**İç türler.** Hem saplamalar hem de parçalar, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme özniteliği kullanılarak erişilebilir hale getirilen iç türlerle birlikte kullanılabilir.
 
 **Özel yöntemler.** Dolgular, bir yöntem imzasındaki tüm türler görünür durumdaysa çağrıları özel yöntemlerle değiştirebilir. Saptamalar yalnızca görünür yöntemlerle değiştirilebilir.
 
-**Arabirimler ve Özet yöntemler.** Saptamalar, test sırasında kullanılabilecek arayüzlerin ve özet yöntemlerin uygulanmalarını sağlar. Metot gövdeleri olmadığından dolgular, arabirimleri ve Özet yöntemleri izlenemez.
+**Arabirimler ve soyut yöntemler.** Saptamalar, test sırasında kullanılabilecek arayüzlerin ve özet yöntemlerin uygulanmalarını sağlar. Kims, metot gövdeleri olmadığından, arabirimleri ve soyut yöntemleri görüntüleyemez.
 
 Genel olarak saptama türlerini kod temelindeki bağımlılıkları ayırmak için kullanmanızı öneririz. Bunu bileşenleri arayüzlerin arkasına gizleyerek yapabilirsiniz. Dolgu türleri, test edilebilir API sağlamayan üçüncü taraf bileşenlerden ayırmak için kullanılabilir.
 
-## <a name="get-started-with-stubs"></a>Saptamalar ile çalışmaya başlama
-Daha ayrıntılı bir açıklama için bkz. [birim testi için birbirinden uygulamanızın parçalarını yalıtmak üzere saplamalar kullanma](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).
+## <a name="get-started-with-stubs"></a>Saplamalarla çalışmaya başlama
+Daha ayrıntılı bir açıklama için, [birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)konusuna bakın.
 
-1. **Arabirimleri Ekle**
+1. **Arabirim Ekle**
 
      Saptamalar kullanmak için test etmek istediğiniz kodu, uygulamanızın içindeki diğer bileşende yer alan sınıflara açıkça başvurmayacak şekilde yazmanız gerekir. "Bileşen" ifadesiyle, birlikte geliştirilen ve güncellenen ve tipik olarak tek Visual Studio projesinde yer alan sınıf veya sınıflar kastedilmektedir. Değişkenler ve parametreler, arabirimler kullanılarak bildirilmelidir ve diğer bileşenlerin örnekleri iletilmeli veya fabrika kullanılarak oluşturulmalıdır. Örneğin, StockFeed uygulamadaki farklı bir bileşende bulunan bir sınıfsa bu hatalı olarak değerlendirilir:
 
@@ -81,9 +81,9 @@ Daha ayrıntılı bir açıklama için bkz. [birim testi için birbirinden uygul
 
 2. **Fakes derlemesi Ekle**
 
-    1. İçinde **Çözüm Gezgini**, test projesinin başvuru listesini genişletin. Visual Basic'te çalışıyorsanız, seçmelisiniz **tüm dosyaları göster** başvuru listesini görmek için.
+    1. **Çözüm Gezgini**, test projesinin başvuru listesini genişletin. Visual Basic ' de çalışıyorsanız, başvuru listesini görmek için **tüm dosyaları göster** ' i seçmeniz gerekir.
 
-    2. Arabirimin (örneğin IStockFeed) tanımlandığı derleme başvurusunu seçin. Bu başvurunun kısayol menüsünde **Fakes derlemesi Ekle**.
+    2. Arabirimin (örneğin IStockFeed) tanımlandığı derleme başvurusunu seçin. Bu başvurunun kısayol menüsünde **Fakes derlemesi Ekle**' yi seçin.
 
     3. Çözümü yeniden derleyin.
 
@@ -145,14 +145,14 @@ Daha ayrıntılı bir açıklama için bkz. [birim testi için birbirinden uygul
 
     ```
 
-    Özel sihir parçası burada sınıftır `StubIStockFeed`. Başvurulan derlemedeki her arabirim için saptama sınıfı Microsoft Fakes mekanizması oluşturur. Saplama sınıfının adı ile arabirimin adından türetilir olan "`Fakes.Stub`" ön ek ve parametre türü adları eklenir.
+    Burada Magic 'in özel parçası `StubIStockFeed` sınıftır. Başvurulan derlemedeki her arabirim için saptama sınıfı Microsoft Fakes mekanizması oluşturur. Saplama sınıfının adı, arabirimin adından türetilir, ön ek olarak "`Fakes.Stub`" ve parametre türü adları eklenir.
 
-    Saptamalar ayrıca olaylar ve genel yöntemlerle ilgili olarak özellik okuyucu ve ayarlayıcılar için oluşturulur. Daha fazla bilgi için [birim testi için birbirinden uygulamanızın parçalarını yalıtmak üzere saplamalar kullanma](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).
+    Saptamalar ayrıca olaylar ve genel yöntemlerle ilgili olarak özellik okuyucu ve ayarlayıcılar için oluşturulur. Daha fazla bilgi için bkz. [birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).
 
 ## <a name="get-started-with-shims"></a>Dolgu ile çalışmaya başlama
-(Daha ayrıntılı bir açıklama için bkz. [uygulamanızı birim testi için diğer derlemelerden yalıtmak üzere dolgular kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).)
+(Daha ayrıntılı bir açıklama için bkz. [birim testi için uygulamanızı diğer derlemelerden yalıtmak için dolgu kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).)
 
-Bileşeniniz için çağrılar içerdiğini varsayın `DateTime.Now`:
+Bileşeninizin `DateTime.Now` çağrıları içerdiğini varsayalım:
 
 ```csharp
 // Code under test:
@@ -162,17 +162,17 @@ Bileşeniniz için çağrılar içerdiğini varsayın `DateTime.Now`:
     }
 ```
 
-Test sırasında dolgu oluşturmak istediğiniz `Now` özelliği, çünkü gerçek sürüm farklı bir değer her çağrıda kullanışsız biçimde döndürür.
+Sınama sırasında, gerçek sürüm uygun şekilde her çağrıda farklı bir değer döndürdüğünden `Now` özelliğini dolgu yapmak istersiniz.
 
-Dolgu verileri kullanmak için uygulama kodunu değiştirmeniz veya belirli bir biçimde yazmanız gerekmez.
+Dolgu kullanmak için uygulama kodunu değiştirmeniz veya belirli bir şekilde yazmanız gerekmez.
 
 1. **Fakes derlemesi Ekle**
 
-     İçinde **Çözüm Gezgini**, birim testi projenizin başvurularını açın ve sahtesini oluşturmak istediğiniz yöntemi içeren derlemenin başvurusunu seçin. Bu örnekte, `DateTime` sınıfı *System.dll*.  Bir Visual Basic projesindeki başvuruları görmek için **tüm dosyaları göster**.
+     **Çözüm Gezgini**, birim testi projenizin başvurularını açın ve taklit etmek istediğiniz yöntemi içeren derlemenin başvurusunu seçin. Bu örnekte, `DateTime` sınıfı *System. dll*' dir.  Visual Basic projesindeki başvuruları görmek için **tüm dosyaları göster**' i seçin.
 
-     Seçin **Fakes derlemesi Ekle**.
+     **Fakes derlemesi Ekle**' yi seçin.
 
-2. **ShimsContext içine dolgu ekleyin**
+2. **ShimsContext içine dolgu ekleme**
 
     ```csharp
     [TestClass]
@@ -232,17 +232,17 @@ Dolgu verileri kullanmak için uygulama kodunu değiştirmeniz veya belirli bir 
     End Class
     ```
 
-    Dolgu sınıfı adları eklenmesiyle `Fakes.Shim` orijinal tür adının. Parametre adları yöntem adına eklenir. (Herhangi bir derleme başvursuna System.Fakes eklemeniz gerekmez.)
+    Dolgu sınıfı adları, özgün tür adına `Fakes.Shim` önüne eklenerek yapılır. Parametre adları yöntem adına eklenir. (System. Fakes 'e herhangi bir derleme başvurusu eklemeniz gerekmez.)
 
-Önceki örnek statik yöntem olarak bir dolgu kullanır. Bir örnek yöntemi için dolgu kullanmak üzere `AllInstances` tür adı ve yöntem adı arasında:
+Önceki örnek statik yöntem olarak bir dolgu kullanır. Bir örnek yöntemi için dolgu kullanmak üzere tür adı ve Yöntem adı arasında `AllInstances` yazın:
 
 ```vb
 System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...
 ```
 
-(Başvurmak için hiçbir 'System.IO.Fakes' derleme yok. Ad alanını dolgu oluşturma işlemi tarafından oluşturulur. Ancak, 'using' veya 'Al' her zamanki şekilde kullanabilirsiniz.)
+(Başvurulacak ' System. ıO. Fakes ' derlemesi yok. Ad alanı dolgu oluşturma işlemi tarafından oluşturulur. , Ancak her zamanki şekilde ' Using ' veya ' Import ' kullanabilirsiniz.)
 
-Ayrıca belirli örnekler, oluşturucular ve özellikler için dolgular oluşturabilirsiniz. Daha fazla bilgi için [uygulamanızı birim testi için diğer derlemelerden yalıtmak üzere dolgular kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
+Ayrıca belirli örnekler, oluşturucular ve özellikler için dolgular oluşturabilirsiniz. Daha fazla bilgi için bkz. [birim testi için uygulamanızı diğer derlemelerden yalıtmak için dolgu kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
 
 ## <a name="in-this-section"></a>Bu bölümde
 [Birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)

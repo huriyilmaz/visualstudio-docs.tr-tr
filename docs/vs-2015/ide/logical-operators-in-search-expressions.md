@@ -1,5 +1,5 @@
 ---
-title: Arama ifadelerindeki mantıksal işleçler | Microsoft Docs
+title: Arama Ifadelerindeki mantıksal Işleçler | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,31 +9,30 @@ helpviewer_keywords:
 - logical operators in search [Help Viewer 2.0]
 ms.assetid: 0c38ae7d-3e20-4d47-a020-9677cd285916
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 30a33a434540fded8daab0628d0bd6dd7fb0ff38
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 3d56f2dfc2924008a6be293fe1498f0ffe32abaf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63412260"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651434"
 ---
 # <a name="logical-operators-in-search-expressions"></a>Arama İfadelerindeki Mantıksal İşleçler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Mantıksal işleçleri kullanarak aramanızı içerik için daha basit olanlardan daha karmaşık arama ifadeler oluşturarak iyileştirebilirsiniz. Aşağıdaki tabloda gösterildiği gibi arama sorgusu birden çok arama terimlerini birleştirilmelidir mantıksal işleçler belirtin.  
-  
+Mantıksal işleçleri kullanarak, daha karmaşık arama ifadelerini daha basit bir şekilde oluşturarak içerik aramanızı geliştirebilirsiniz. Aşağıdaki tabloda gösterildiği gibi mantıksal işleçler, birden çok arama terimlerinin bir arama sorgusunda nasıl birleştirilmesi gerektiğini belirtir.
+
 > [!IMPORTANT]
-> Mantıksal işleçler tanıması arama motoru için tüm büyük harfler girmeniz gerekir.  
-  
-|Aramak için|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|Örnek|Sonuç|  
-|-------------------|---------|-------------|------------|  
-|Her iki terim aynı konuda|AND|DIB ve paleti|Hem "DIB" ve "palet" içeren konulardır.|  
-|Her iki terim bir konu başlığı|VEYA|Izgara veya vektör|"Tarama" veya "vektör" içeren konulardır.|  
-|İkinci terimi aynı konuda olmadan ilk terimi|DEĞİL|"işletim sistemi" DOS değil|"İşletim sistemi" ancak değil "DOS" içeren konulardır.|  
-|Birbirine yakın bir konu başlığı her iki terim|YAKIN|Kullanıcı yakın çekirdek|Yakınlık "çekirdek" içinde "kullanıcı" içeren konuların kapatın.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Tam metin arama ipuçları](../ide/full-text-search-tips.md)   
- [Bilgilerin Konumunu Bulma](../ide/locate-information.md)
+> Arama altyapısının bunları tanıması için tüm büyük harflerle mantıksal işleçler girmeniz gerekir.
+
+|Arama yapmak için|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|Örnek|Sonuç|
+|-------------------|---------|-------------|------------|
+|Aynı konunun her iki terimi|AND|DIB ve palet|Hem "DIB" hem de "palet" içeren konular.|
+|Konu başlığında iki terim|VEYA|Raster veya vektör|"Tarama" ya da "vektör" içeren konular.|
+|Aynı konu başlığında ikinci terim olmadan ilk terim|BAŞLATıLMADı|"işletim sistemi" DOS DEĞIL|"İşletim sistemi" ("DOS" değil) içeren konular.|
+|Her iki terim de bir konu başlığında birlikte kapat|KALEMIN|çekirdeğin YAKıNıNDA Kullanıcı|"Kernel" öğesinin yakın yakınına "user" içeren konular.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Tam metin arama Ipuçları](../ide/full-text-search-tips.md) [bilgileri bulma](../ide/locate-information.md)

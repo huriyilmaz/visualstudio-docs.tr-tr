@@ -14,76 +14,66 @@ f1_keywords:
 - javascript.project.property.debugging.allowlocalnetworkloopback
 ms.assetid: a05ab01f-3d5d-4675-a845-eab51807d3a3
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dc0cf5d488c81b119d5a50464ae60ef44f233d7a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 1fe8acd8628fcbd40e9c675558379049fd6658b8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701784"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665741"
 ---
 # <a name="property-pages-javascript"></a>Özellik Sayfaları, JavaScript
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Özellik sayfaları**proje ayarlarına erişim sağlar. Görüntülenen sayfaları kullanabilirsiniz **özellik sayfaları** proje özelliklerini değiştirmek için.  
-  
- Proje özelliklerine erişmek için bir proje düğümü seçin **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
-  
- [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]  
-  
- Aşağıdaki sayfalar ve seçenekleri görünür **özellik sayfaları**.  
-  
-## <a name="configuration-and-platform-page"></a>Yapılandırma ve Platform sayfası  
- Görüntülenecek veya değiştirilecek platform ve yapılandırmayı seçmek için aşağıdaki seçenekleri kullanın.  
-  
- **Yapılandırma**  
- Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın**, **yapılandırmalarında**, veya kullanıcı tarafından tanımlanan bir yapılandırmadır. Daha fazla bilgi için [hata ayıklama ve dağıtım proje yapılandırmalarını](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e).  
-  
- **Platform**  
- Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Ayarlar **herhangi bir CPU** (için varsayılan [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] uygulamaları), **x64**, **ARM**, **x86**, veya kullanıcı tarafından tanımlanan bir platformdur. Daha fazla bilgi için [hata ayıklama ve dağıtım proje yapılandırmalarını](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e).  
-  
-## <a name="general-page"></a>Genel sayfası  
- Projenin genel özellikler ayarlamak için aşağıdaki seçenekleri kullanın.  
-  
+**Özellik sayfaları**, proje ayarlarına erişim sağlar. Proje özelliklerini değiştirmek için **özellik sayfalarında** görünen sayfaları kullanabilirsiniz.
+
+ Proje özelliklerine erişmek için **Çözüm Gezgini**bir proje düğümü seçin. **Proje** menüsünde **Özellikler**' e tıklayın.
+
+ [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]
+
+ Aşağıdaki sayfalar ve Seçenekler **özellik sayfalarında**görünür.
+
+## <a name="configuration-and-platform-page"></a>Yapılandırma ve platform sayfası
+ Görüntülenecek veya değiştirilecek olan yapılandırmayı ve platformu seçmek için aşağıdaki seçenekleri kullanın.
+
+ **Yapılandırma** Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın**, **tüm yapılandırmalar**veya Kullanıcı tanımlı bir yapılandırmadır. Daha fazla bilgi için bkz. [hata ayıklama ve yayın projesi yapılandırması](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e).
+
+ **Platform** Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Ayarlar **herhangi BIR CPU** ([!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] uygulamalar için varsayılan), **x64**, **ARM**, **x86**veya Kullanıcı tanımlı bir platform. Daha fazla bilgi için bkz. [hata ayıklama ve yayın projesi yapılandırması](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e).
+
+## <a name="general-page"></a>Genel sayfa
+ Projenin genel özelliklerini ayarlamak için aşağıdaki seçenekleri kullanın.
+
 > [!NOTE]
-> Bazı seçenekler yalnızca Windows Store uygulamalarında kullanılabilir.  
-  
- **Çıkış yolu**  
- Projenin yapılandırması için çıkış dosyalarının konumunu belirtir. Yol görelidir; mutlak bir yol girerseniz, mutlak yol projeye kaydedilir. Bin\Debug varsayılan yoldur.  
-  
- Basitleştirilmiş yapı yapılandırmaları kullandığınızda, proje sistemi bir hata ayıklama sürüm yayını mı belirler. Tıkladığınızda **hata ayıklama**, **hata ayıklamayı Başlat** (veya F5 tuşuna basın) derleme, hata ayıklama konumuna koyar koymak **çıkış yolu** belirtirsiniz. Ancak, **Çözümü Derle** komutunu **derleme** menü, belirttiğiniz konuma koyar. Menü çubuğunda, Gelişmiş derleme yapılandırmalarını etkinleştirmeyi tercih **Araçları**, **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **projeler ve çözümler**seçin **genel**ve ardından temizlemek **Show Gelişmiş derleme yapılandırmaları**onay kutusu. Bu, tüm yapılandırma değerleri üzerinde el ile denetim ve hata ayıklama veya sürüm sürümü olup olmadığını oluşturulmuştur sağlar. Daha fazla bilgi için [NIB: Genel, projeler ve çözümler, Seçenekler iletişim kutusu](https://msdn.microsoft.com/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
-  
- **Varsayılan dil**  
- Projenin varsayılan dilini belirtir. Seçilen dil seçeneği **saat, dil ve bölge** Denetim Masası'nda kullanıcının tercih edilen dili belirtir. Proje için varsayılan dil belirleyerek kullanıcının tercih ettiği dil uygulamada sağlanan dil kaynaklarıyla eşleşmiyorsa belirtilen varsayılan dil kaynaklarını kullanıldığından emin olun.  
-  
-## <a name="debug-page"></a>Hata ayıklama sayfası  
- Davranış projesinde hata ayıklama özelliklerini ayarlamak için aşağıdaki seçenekleri kullanın.  
-  
+> Bazı seçenekler yalnızca Windows Mağazası uygulamalarında kullanılabilir.
+
+ **Çıkış yolu** Projenin yapılandırması için çıkış dosyalarının konumunu belirtir. Yol görelidir; mutlak bir yol girerseniz, mutlak yol projeye kaydedilir. Varsayılan yol bin\Debug.
+
+ Basitleştirilmiş derleme yapılandırması kullandığınızda, proje sistemi bir hata ayıklama veya yayın sürümü oluşturulup oluşturulmayacağını belirler. **Hata Ayıkla**, **hata ayıklamayı Başlat** (veya F5 tuşuna basın) ' e tıkladığınızda, belirttiğiniz **çıkış yolundan** bağımsız olarak derleme hata ayıklama konumuna konur. Ancak, **Yapı** menüsündeki **Build Solution** komutu onu belirttiğiniz konuma koyar. Gelişmiş derleme yapılandırmalarının etkinleştirilmesi için menü çubuğunda **Araçlar**, **Seçenekler**' i seçin. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin, **genel**' i seçin ve ardından **Gelişmiş derleme yapılandırmasını göster** onay kutusunu temizleyin. Bu, tüm yapılandırma değerleri üzerinde el ile denetim elde etmenizi ve bir hata ayıklama ya da sürüm sürümünün oluşturulup oluşturulmayacağını sağlar. Daha fazla bilgi için bkz. [nib: genel, projeler ve çözümler, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).
+
+ **Varsayılan dil** Proje için varsayılan dili belirtir. Denetim Masası 'nda **saat, dil ve bölge** ' de seçilen dil seçeneği kullanıcının tercih ettiği dili belirtir. Proje için varsayılan bir dil belirterek, kullanıcının tercih ettiği dilin uygulamada belirtilen dil kaynaklarıyla eşleşmemesi durumunda belirtilen varsayılan dil kaynaklarının kullanıldığından emin olursunuz.
+
+## <a name="debug-page"></a>Hata ayıklama sayfası
+ Projedeki hata ayıklama davranışının özelliklerini ayarlamak için aşağıdaki seçenekleri kullanın.
+
 > [!NOTE]
-> Bazı seçenekler yalnızca Windows Store uygulamalarında kullanılabilir.  
-  
- **Hata ayıklayıcıyı başlatmak için**  
- Hata ayıklayıcı için varsayılan ana bilgisayar belirtir.  
-  
-- Seçin **yerel makine** Visual Studio ana bilgisayarda uygulamayı başlatmak için. Daha fazla bilgi için [yerel makine üzerinde çalışan uygulamalar](http://go.microsoft.com/fwlink/?LinkId=234912).  
-  
-- Seçin **simülatör** Simulator'da uygulamayı başlatmak için. Daha fazla bilgi için [uygulamaları simülatörde çalıştırılan](http://go.microsoft.com/fwlink/?LinkId=234913).  
-  
-- Seçin **uzak makine** uzak bir bilgisayarda uygulamayı başlatmak için. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [uzak makinede çalışan uygulamalar](http://go.microsoft.com/fwlink/?LinkId=234914).  
-  
-  **Uygulamayı Başlat**  
-  F5 tuşuna basın veya tıklayın uygulamanın başlatılıp başlatılmayacağını belirtir **hata ayıklama**, **hata ayıklamayı Başlat**. Seçin **Evet** için uygulamayı başlatın; Aksi takdirde seçin **Hayır**. Seçerseniz **Hayır**, başlatmak için farklı bir yöntem kullanıyorsanız yine de uygulamayı ayıklayabilirsiniz.  
-  
-  **Hata ayıklayıcı türü**  
-  Hata ayıklanacak kod türlerini belirtir. Seçin **yalnızca betik** JavaScript kod hatası ayıklamak için. Seçin **yalnızca yönetilen** ortak dil çalışma zamanı tarafından yönetilen kodda hata ayıklamak için. Seçin **yalnızca yerel** C++ kod hatalarını ayıklamak için. Seçin **betik ile yerel** C++ ve JavaScript hata ayıklama. Seçin **(yönetilen ve yerel) karışık** yönetilen hatasını ayıklamak ve C++ kodu.  
-  
-  **Yerel ağ geri döngüsüne izin ver**  
-  Uygulamayı test etmek için IP Geridöngü adresine erişime izin verilip verilmediğini belirtir. Seçin **Evet** istemci uygulaması aynı makinede ise, aksi takdirde çalışan sunucu uygulaması olduğu geri döngü adresinin kullanımına izin vermek için seçin **Hayır**. Bu özellik yalnızca **başlatmak için hata ayıklayıcı** özelliği **uzak makine**.  
-  
-  **Makine adı**  
-  Hata ayıklayıcıyı barındıracak uzak bilgisayarın adını belirtir. Bu özellik yalnızca **başlatmak için hata ayıklayıcı** ayarlanır **uzak makine**.  
-  
-  **Kimlik doğrulaması gerektir**  
-  Uzak bilgisayarın kimlik doğrulaması gerektirip gerektirmediğini belirtir. Bu özellik yalnızca **başlatmak için hata ayıklayıcı** ayarlanır **uzak makine**.
+> Bazı seçenekler yalnızca Windows Mağazası uygulamalarında kullanılabilir.
+
+ **Başlatılacak hata ayıklayıcı** Hata ayıklayıcı için varsayılan Konağı belirtir.
+
+- Uygulamayı Visual Studio konak bilgisayarında başlatmak için **yerel makine** ' yi seçin. Daha fazla bilgi için bkz. [Yerel makinede uygulamaları çalıştırma](http://go.microsoft.com/fwlink/?LinkId=234912).
+
+- Simülatör 'da uygulamayı başlatmak için **simülatör** ' ı seçin. Daha fazla bilgi için bkz. [simülatörde uygulamaları çalıştırma](http://go.microsoft.com/fwlink/?LinkId=234913).
+
+- Uzak bir bilgisayarda uygulamayı başlatmak için **uzak makine** ' yi seçin. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [uzak makinede uygulamaları çalıştırma](http://go.microsoft.com/fwlink/?LinkId=234914).
+
+  **Uygulamayı Başlat** F5 tuşuna bastığınızda veya **Hata Ayıkla**, **hata ayıklamayı Başlat**' a tıkladığınızda uygulamanın başlatılıp başlatılmayacağını belirtir. Uygulamayı başlatmak için **Evet** ' i seçin; Aksi takdirde **Hayır**' ı seçin. **Hayır**' ı seçerseniz, uygulamayı başlatmak için farklı bir yöntem kullanıyorsanız uygulamada hata ayıklamaya devam edebilirsiniz.
+
+  **Hata ayıklayıcı türü** Hata ayıklaması yapılacak kod türlerini belirtir. JavaScript kodunda hata ayıklamak için **yalnızca betiği** seçin. Yalnızca ortak dil çalışma zamanı tarafından yönetilen kodda hata ayıklama için **yönetilen** ' ı seçin. **Yalnızca** hata ayıklama C++ kodunda yerel ' i seçin. Hata ayıklama C++ ve JavaScript için **betiği ile yerel** ' i seçin. Hem yönetilen hem de C++ kodun hatalarını ayıklamak için **karışık (yönetilen ve yerel)** seçeneğini belirleyin.
+
+  **Yerel ağ geri döngüsüne Izin ver** Uygulama testi için IP geri döngü adresine erişime izin verilip verilmeyeceğini belirtir. İstemci uygulaması, sunucu uygulamasının çalıştığı makinada ise geri döngü adresinin kullanılmasına izin vermek için **Evet** ' i seçin; Aksi takdirde **Hayır**' ı seçin. Bu özellik yalnızca, **başlatma Için hata ayıklayıcı** özelliği **uzak makine**olarak ayarlanırsa kullanılabilir.
+
+  **Makine adı** Hata ayıklayıcıyı barındıracak uzak bilgisayarın adını belirtir. Bu özellik yalnızca **başlatma Için hata ayıklayıcı** **uzak makineye**ayarlanmışsa kullanılabilir.
+
+  **Kimlik doğrulaması gerektir** Uzak bilgisayarın kimlik doğrulaması gerektirip gerektirmediğini belirtir. Bu özellik yalnızca **başlatma Için hata ayıklayıcı** **uzak makineye**ayarlanmışsa kullanılabilir.

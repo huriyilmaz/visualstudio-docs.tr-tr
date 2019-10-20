@@ -6,146 +6,146 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 99c73344-86ba-4b08-9e15-f6111cc04185
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b80faa2ceb48cfec933d2287b70d304564a8106a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 001b394d86e56b172bb1a50c335bd8ba5bcacb15
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704444"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645625"
 ---
 # <a name="getting-started-with-c-in-visual-studio"></a>Visual Studio'da C++ Kullanmaya Başlarken
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yolu tamamlayarak, Visual Studio ile uygulamalar geliştirirken kullanabileceğiniz iletişim kutuları ve araçları birçoğu ile sahibi olacaksınız. Bir basit "Hello, World" oluşturacaksınız-tümleşik geliştirme ortamında (IDE) çalışma hakkında daha fazla bilgi edinirken stil uygulaması.
+Bu yönergeyi tamamlayarak, Visual Studio ile uygulama geliştirirken kullanabileceğiniz birçok araç ve iletişim kutusu hakkında bilgi sahibi olacaksınız. Tümleşik geliştirme ortamında (IDE) çalışma hakkında daha fazla bilgi edinirken basit bir "Merhaba, Dünya" stili uygulama oluşturacaksınız.
 
  Bu konu aşağıdaki bölümleri içermektedir:
 
- [Visual Studio'da oturum açın](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_Configure)
+ [Visual Studio 'Da oturum açın](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_Configure)
 
  [Basit bir uygulama oluşturma](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_CreateApp)
 
- [Uygulamanıza kod eklemek](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_AddCode)
+ [Uygulamaya kod ekleme](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_AddCode)
 
- [Hata ayıklama ve uygulamayı test etme](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_DebugTest)
+ [Uygulamanın hatalarını ayıklama ve test etme](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_DebugTest)
 
- [Uygulama sürümü oluşturma](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_BuildRelease)
+ [Uygulamanın yayın sürümünü oluştur](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_BuildRelease)
 
-## <a name="BKMK_Configure"></a> Visual Studio'da oturum açın
- Visual Studio'yu ilk kez başlattığınızda, Live veya Outlook gibi bir Microsoft hesabı ile oturum açması olasılığını verilir. Oturum açarken ayarlarınızı tüm cihazlarınızda eşitlenmesine izin verir. Daha fazla bilgi için [Visual Studio'da oturum açma](../ide/signing-in-to-visual-studio.md)
+## <a name="BKMK_Configure"></a>Visual Studio 'Da oturum açın
+ Visual Studio 'Yu ilk kez başlattığınızda, Live veya Outlook gibi bir Microsoft hesabı kullanarak oturum açma şansı vermiş olursunuz. Oturum açmak, ayarlarınızın tüm cihazlarınızda eşitlenmesini sağlar. Daha fazla bilgi için bkz. [Visual Studio 'Da oturum açma](../ide/signing-in-to-visual-studio.md)
 
  Şekil 1: Visual Studio IDE
 
- ![Visual C ile IDE&#43; &#43; uygulanan ayarları](../ide/media/c-ide-defaultenvironmentlayout.png "C ++ IDE_DefaultEnvironmentLayout")
+ ![Visual C&#43; &#43; ayarları uygulanmış IDE](../ide/media/c-ide-defaultenvironmentlayout.png "C + + IDE_DefaultEnvironmentLayout")
 
- Visual Studio'yu açtıktan sonra IDE üç temel bölümlerini görebilirsiniz: windows, menüler ve araç çubuklarını ve ana pencere alanını aracı. Araç pencereleri tutturulmuştur ve uygulama penceresinin sol tarafında ile **hızlı başlatma**, menü çubuğu ve en üstte standart araç çubuğu. Uygulama penceresinin merkezi içerir **başlangıç sayfası**. Bir çözüm veya projeyi açtığınızda, düzenleyiciler ve tasarımcılar Bu alanda görüntülenir. Uygulama geliştirirken zamanınızın çoğunu bu orta alanda geçireceksiniz.
+ Visual Studio 'Yu açtıktan sonra IDE 'nin üç temel parçasını görebilirsiniz: araç pencereleri, menüler ve araç çubukları ve ana pencere alanı. Araç pencereleri, **Hızlı Başlat**, menü çubuğu ve en üstteki Standart araç çubuğu ile uygulama penceresinin sol ve sağ taraflarına yerleştirilir. Uygulama penceresinin Merkezi **Başlangıç sayfasını**içerir. Bir çözüm veya proje açtığınızda, düzenleyiciler ve tasarımcılar bu alanda görüntülenir. Uygulama geliştirirken zamanınızın çoğunu bu orta alanda geçireceksiniz.
 
-## <a name="BKMK_CreateApp"></a> Basit bir uygulama oluşturma
- Visual Studio'da bir uygulama oluşturduğunuzda, proje ve çözüm ilk oluşturun. Bu örnekte, bir Windows konsol uygulaması oluşturacaksınız.
+## <a name="BKMK_CreateApp"></a>Basit bir uygulama oluşturma
+ Visual Studio 'da bir uygulama oluşturduğunuzda, önce bir proje ve bir çözüm oluşturursunuz. Bu örnekte, bir Windows konsol uygulaması oluşturacaksınız.
 
-#### <a name="to-create-a-console-app"></a>Bir konsol uygulaması oluşturmak için
+#### <a name="to-create-a-console-app"></a>Konsol uygulaması oluşturmak için
 
-1. Menü çubuğunda, **dosya**, **yeni**, **proje**.
+1. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.
 
-    ![Menü çubuğunda, dosya, yeni seçin, proje](../ide/media/exploreide-filenewproject.png "ExploreIDE FileNewProject")
+    ![Menü çubuğunda dosya, yeni, proje ' yi seçin.](../ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")
 
-2. İçinde **Visual C++** kategorisi seçin **Win32 konsol uygulaması** şablonu ve ardından ad proje `GreetingsConsoleApp`.
+2. **Görsel C++**  kategorisinde **Win32 konsol uygulaması** şablonunu seçin ve ardından projeyi `GreetingsConsoleApp` olarak adlandırın.
 
-    ![Win32 konsol uygulaması şablonu](../ide/media/c-ide-newprojectdlg.png "C ++ IDE_NewProjectDlg")
+    ![Win32 konsol uygulaması şablonu](../ide/media/c-ide-newprojectdlg.png "C + + IDE_NewProjectDlg")
 
-3. Win32 Uygulama Sihirbazı'nı göründüğünde **son** düğmesi.
+3. Win32 uygulama Sihirbazı göründüğünde **son** düğmesini seçin.
 
-    ![Win32 Konsol Uygulama Sihirbazı'nı](../ide/media/c-ide-win32consoleappwizard.png "C ++ IDE_Win32ConsoleAppWizard")
+    ![Win32 konsol uygulaması Sihirbazı](../ide/media/c-ide-win32consoleappwizard.png "C + + IDE_Win32ConsoleAppWizard")
 
-   GreetingsConsoleApp projeyi ve çözümü, bir Win32 konsol uygulaması için temel dosyalar oluşturulur ve otomatik olarak yüklenen **Çözüm Gezgini**. GreetingsConsoleApp.cpp dosyası Kod Düzenleyicisi'nde açılır. Aşağıdaki öğeler görünür **Çözüm Gezgini**:
+   Bir Win32 konsol uygulaması için temel dosyalarla birlikte bulunan ve **Çözüm Gezgini**' ye otomatik olarak yüklenen, Alaingsconsoleapp projesi ve çözümü oluşturulur. , Kod Düzenleyicisi 'nde,,,,,. cpp dosyası açılır. Aşağıdaki öğeler **Çözüm Gezgini**görüntülenir:
 
-   Şekil 4: Proje öğeleri
+   Şekil 4: proje öğeleri
 
-   ![Çözüm Gezgini'nde çözüm dosyalarını](../ide/media/c-ide-solutioncontents.png "C ++ IDE_SolutionContents")
+   ![Çözüm Gezgini çözüm dosyaları](../ide/media/c-ide-solutioncontents.png "C + + IDE_SolutionContents")
 
-## <a name="BKMK_AddCode"></a> Uygulamanıza kod eklemek
- Ardından konsol penceresinde "Hello" word görüntülenecek kod ekleyeceksiniz.
+## <a name="BKMK_AddCode"></a>Uygulamaya kod ekleme
+ Daha sonra, konsol penceresinde "Hello" sözcüğünü göstermek için kod ekleyeceksiniz.
 
-#### <a name="to-display-hello-in-the-console-window"></a>"Hello" Konsol penceresinde görüntülemek için
+#### <a name="to-display-hello-in-the-console-window"></a>Konsol penceresinde "Merhaba" göstermek için
 
-1. Boş bir satır satırından önce GreetingsConsoleApp.cpp dosyasında girin `return 0;` ve ardından aşağıdaki kodu girin:
+1. , Bir satır `return 0;` önüne boş bir satır girin ve ardından aşağıdaki kodu girin:
 
     ```
     cout << "Hello\n";
     ```
 
-     Altında kırmızı dalgalı çizgi görünür `cout`. Üzerine bir hata iletisi görüntülenir.
+     @No__t_0 altında kırmızı dalgalı çizgi görünür. Üzerine geldiğinizde bir hata iletisi görüntülenir.
 
-     ![Hata metni cout](../ide/media/c-ide-couterror.png "C ++ IDE_CoutError")
+     ![Cout için hata metni](../ide/media/c-ide-couterror.png "C + + IDE_CoutError")
 
-     Hata iletisi ayrıca görünür **hata listesi** penceresi. Pencere tarafından menü çubuğundan seçme görüntüleyebileceğiniz **görünümü**, **hata listesi**.
+     Hata iletisi **hata listesi** penceresinde de görüntülenir. Pencereyi, menü çubuğunda **Görünüm**, **hata listesi**seçeneğini belirleyerek görüntüleyebilirsiniz.
 
-     [cout](https://msdn.microsoft.com/library/d87db6c3-e4e1-4d09-9ec5-458f55018257) dahil \<iostream\> üst bilgi dosyası.
+     [cout](https://msdn.microsoft.com/library/d87db6c3-e4e1-4d09-9ec5-458f55018257) , \<iostream \> üstbilgi dosyasına dahildir.
 
-2. İostream üstbilgi eklemek için sonra aşağıdaki kodu girin. `#include "stdafx.h"`:
+2. İostream üst bilgisini eklemek için `#include "stdafx.h"` sonra aşağıdaki kodu girin:
 
     ```
     #include \<iostream\>
     using namespace std;
     ```
 
-     Girdiğiniz karakterler için önerileri sağlama kodu girildiği gibi görünen bir kutu büyük bir olasılıkla fark. Bu kutuyu C++ IntelliSense, sınıf veya arabirim üyeleri ve parametre bilgileri de dahil olmak üzere kodlama yönergeleri sağlayan bir parçasıdır. Önceden tanımlanmış kod bloklarını olan kod parçacıklarını da kullanabilirsiniz. Daha fazla bilgi için [IntelliSense kullanarak](../ide/using-intellisense.md) ve [kod parçacıkları](../ide/code-snippets.md).
+     Büyük olasılıkla, girdiğiniz karakterler için öneriler sağlayan bir kutunun kod girdiğinizde göründü olduğunu fark etmiş olabilirsiniz. Bu kutu, sınıf veya C++ arabirim üyelerini ve parametre bilgilerini listelemek dahil olmak üzere kodlama istemleri sağlayan IntelliSense 'in bir parçasıdır. Önceden tanımlanmış kod blokları olan kod parçacıklarını da kullanabilirsiniz. Daha fazla bilgi için bkz. IntelliSense ve [kod parçacıkları](../ide/code-snippets.md) [kullanma](../ide/using-intellisense.md) .
 
-     Altında kırmızı dalgalı çizgi `cout` hatayı düzeltmeniz kaybolur.
+     Hatayı düzelttikten sonra `cout` altındaki kırmızı dalgalı çizgi kaybolur.
 
 3. Değişiklikleri dosyaya kaydedin.
 
-     ![Cout hata düzeltmeleri kod](../ide/media/c-ide-coutfix.png "C ++ IDE_CoutFix")
+     ![Cout hatasını düzelten kod](../ide/media/c-ide-coutfix.png "C + + IDE_CoutFix")
 
-## <a name="BKMK_DebugTest"></a> Hata ayıklama ve uygulamayı test etme
- "Hello" sözcüğünü konsol penceresinde görünür olup olmadığını görmek için GreetingsConsoleApp ayıklayabilirsiniz.
+## <a name="BKMK_DebugTest"></a>Uygulamanın hatalarını ayıklama ve test etme
+ "Hello" sözcüğünün konsol penceresinde görünüp görüntülenmediğini görmek için, "Merhaba" hata ayıklaması yapabilirsiniz.
 
 #### <a name="to-debug-the-application"></a>Uygulamada hata ayıklamak için
 
 - Hata ayıklayıcıyı başlatın.
 
-     ![Hata ayıklama menüsünden hata ayıklamayı Başlat](../ide/media/exploreide-startdebugging.png "ExploreIDE StartDebugging")
+     ![Hata ayıklama menüsünde hata ayıklamayı Başlat komutu](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")
 
-     Hata ayıklayıcıyı başlatır ve kodu çalıştırır. Konsol penceresi (bir komut istemi gibi görünüyor ayrı bir pencerede) için birkaç saniye görüntülenir ancak hata ayıklayıcı çalışmayı durdurduğunda hızla kapatır. Metin görmek için program yürütme durdurmak için bir kesme noktasını ayarlamanız gerekir.
+     Hata ayıklayıcı başlatılır ve kodu çalıştırır. Konsol penceresi (bir komut istemi gibi görünen ayrı bir pencere) birkaç saniye boyunca görünür, ancak hata ayıklayıcı çalışmayı durdurduktan sonra hızlı bir şekilde kapanır. Metni görmek için, program yürütmeyi durdurmak için bir kesme noktası ayarlamanız gerekir.
 
-#### <a name="to-add-a-breakpoint"></a>Bir kesme noktası eklemek için
+#### <a name="to-add-a-breakpoint"></a>Kesme noktası eklemek için
 
-1. Menü çubuğundan satırında bir kesme noktası ekleyin `return 0;`. Ayrıca, bir kesme noktası ayarlamak için sol kenar boşluğunda tıklayabilirsiniz.
+1. Satır `return 0;` menü çubuğundan bir kesme noktası ekleyin. Ayrıca, bir kesme noktası ayarlamak için sol kenar boşluğunu de tıklayabilirsiniz.
 
-    ![Kesme noktası komutu hata ayıklama menüsünden geçiş](../ide/media/exploreide-togglebreakpoint.png "ExploreIDE ToggleBreakpoint")
+    ![Hata ayıklama menüsünde kesme noktasını Aç komutu](../ide/media/exploreide-togglebreakpoint.png "ExploreIDE-ToggleBreakpoint")
 
     Düzenleyici penceresinin en sol kenar boşluğunda, kod satırının yanında kırmızı bir daire görünür.
 
-2. Hata ayıklamayı başlatmak için F5 tuşuna basın.
+2. Hata ayıklamayı başlatmak için F5 tuşunu seçin.
 
-    Hata ayıklayıcıyı başlatır, word gösteren bir konsol penceresi görünür **Hello**.
+    Hata ayıklayıcı başlar ve **Hello**sözcüğünün gösterildiği bir konsol penceresi görüntülenir.
 
-    ![Merhaba Windows Komut İstemi penceresindeki metin](../ide/media/c-ide-hellocommandwindow.png "C ++ IDE_HelloCommandWindow")
+    ![Windows komut Istemi penceresinde Merhaba metin](../ide/media/c-ide-hellocommandwindow.png "C + + IDE_HelloCommandWindow")
 
-3. SHIFT + hata ayıklamayı durdurmak için F5 tuşuna basın.
+3. Hata ayıklamayı durdurmak için SHIFT + F5 tuşlarına basın.
 
-   Daha fazla bilgi için [konsol projeleri](../debugger/debugging-preparation-console-projects.md).
+   Daha fazla bilgi için bkz. [Konsol projeleri](../debugger/debugging-preparation-console-projects.md).
 
-## <a name="BKMK_BuildRelease"></a> Uygulama sürümü oluşturma
+## <a name="BKMK_BuildRelease"></a>Uygulamanın yayın sürümünü oluştur
  Her şeyin çalıştığını doğruladığınıza göre artık, uygulamanın bir yayın derlemesini hazırlayabilirsiniz.
 
 #### <a name="to-clean-the-solution-files-and-build-a-release-version"></a>Çözüm dosyalarını temizlemek ve yayın sürümünü oluşturmak için
 
-1. Menü çubuğundan ara dosyaları ve önceki derlemeler sırasında oluşturulan çıktı dosyalarını silin.
+1. Menü çubuğundan, önceki derlemeler sırasında oluşturulan ara dosyaları ve çıktı dosyalarını silin.
 
-    ![Yapı menüsünde çözümü Temizle komutunu](../ide/media/exploreide-cleansolution.png "ExploreIDE CleanSolution")
+    ![Derleme menüsündeki Çözümü Temizle komutu](../ide/media/exploreide-cleansolution.png "ExploreIDE-CleanSolution")
 
-2. GreetingsConsoleApp için yapı yapılandırmasını değiştirme **hata ayıklama** için **yayın**.
+2. Insdingsconsoleapp için derleme yapılandırmasını **hata ayıklamadan** **Release**olarak değiştirin.
 
-    ![Uygulamanın yayın sürümünü oluşturmak](../ide/media/c-ide-changingbuildtorelease.png "C ++ IDE_ChangingBuildtoRelease")
+    ![Uygulamanın yayın sürümünü oluştur](../ide/media/c-ide-changingbuildtorelease.png "C + + IDE_ChangingBuildtoRelease")
 
 3. Çözümü oluşturun.
 
-    ![Derleme çözümü komutu yapı menüsünde](../ide/media/exploreide-buildsolution.png "ExploreIDE BuildSolution")
+    ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-   Tebrikler, bu izlenecek yolu tamamladınız! Daha fazla örnek keşfetmek isterseniz bkz [Visual Studio örnekleri](../ide/visual-studio-samples.md).
+   Tebrikler, bu izlenecek yolu tamamladınız! Daha fazla örnek araştırmak isterseniz bkz. [Visual Studio örnekleri](../ide/visual-studio-samples.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [İzlenecek yol: Basit bir uygulama oluşturma](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md) [üretkenlik ipuçları](../ide/productivity-tips-for-visual-studio.md) [Visual Studio örnekleri](../ide/visual-studio-samples.md) [Visual Studio ile geliştirmeye başlayın](../ide/get-started-developing-with-visual-studio.md)
+ [Izlenecek yol: basit bir uygulama](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md) [üretkenlik Ipuçları](../ide/productivity-tips-for-visual-studio.md) oluşturma Visual [Studio örnekleri](../ide/visual-studio-samples.md) [Visual Studio ile geliştirmeye başlama](../ide/get-started-developing-with-visual-studio.md)

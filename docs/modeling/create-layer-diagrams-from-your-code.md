@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4a4d2c1600558e4c31c6dd12b85f931a83e7ba7
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 573d03761bc4d8ccddf666dbc39cb8301d7c9afa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766223"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654127"
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>Kodunuz aracılığıyla bağımlılık diyagramları oluşturma
 
@@ -27,7 +27,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
 Bağımlılık diyagramı, Visual Studio çözüm öğelerini *Katmanlar*olarak adlandırılan mantıksal, soyut gruplar halinde düzenlemenize olanak tanır. Bu yapıların gerçekleştirdiği temel görevleri veya sistemin ana bileşenlerini açıklamak için katmanları kullanabilirsiniz. Her katman, daha ayrıntılı görevleri açıklayan başka katmanlar içerebilir. Katmanlar arasında amaçlanan veya var olan *bağımlılıkları* da belirtebilirsiniz. Oklar olarak temsil edilen bu bağımlılıklar, hangi katmanların diğer katmanlar tarafından temsil edilen işlevi kullanabileceğini veya kullanmakta olduğunu gösterir. Kodunun mimari denetimini sağlamak için diyagram üzerinde hedeflenen bağımlılıkları gösterin ve ardından kodu diyagrama karşı doğrulayın.
 
-[Video Mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
+[Video: mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
 
 ## <a name="CreateDiagram"></a>Bağımlılık diyagramı oluşturma
 
@@ -51,7 +51,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
 4. **Modelleme projesine ekle**' de, çözümünüzde var olan bir modelleme projesine gidin ve seçin.
 
-     -veya-
+     veya
 
      Çözüme yeni modelleme projesi eklemek için **Yeni modelleme projesi oluştur** ' a tıklayın.
 
@@ -70,7 +70,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
 4. **Mimari** menüsünü kullanarak çözüm için yeni bir bağımlılık diyagramı oluşturun
 
-5. Kod eşlemesindeki tüm düğümleri seçin ( _CTRL_ + _A_kullanın veya tıklamadan, sürüklemeden ve serbest bırakmadan önce _SHIFT_ tuşuna basarak lastik bant seçimini kullanın.
+5. Kod eşlemesindeki tüm düğümleri seçin ( _Ctrl_  + _A_kullanın veya tıklamadan, sürüklemeden ve serbest bırakmadan önce _SHIFT_ tuşuna basarak lastik bant seçimini kullanın.
 
 6. Seçilen öğeleri sürükleyip bırakma veya kopyalama ve yapıştırma yeni bağımlılık doğrulama diyagramına.
 
@@ -85,11 +85,11 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
  Bağlı bir öğenin doğrulamayı destekleyip desteklemediğini görmek için **Katman Gezgini** ' ni açın ve öğenin **doğrulamayı destekler** özelliğini inceleyin. Bkz. [yapıtlara bağlantıları yönetme](#Managing).
 
-|**To**|**Bu adımları izleyin**|
+|**Hedef**|**Bu adımları izleyin**|
 |-|-|
 |Tek bir yapı için katman oluşturma|<ol><li>Öğeyi şu kaynaklardaki bağımlılık diyagramına sürükleyin:<br /><br /> <ul><li>**Çözüm Gezgini**<br /><br />         Örneğin, dosyaları veya projeleri sürükleyebilirsiniz.</li><li>Kod eşlemeleri<br /><br />         Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md) ve [uygulamalarınızda hata ayıklamak Için kod haritaları kullanın](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Sınıf görünümü** veya **nesne tarayıcısı**</li></ul><br />     Katman, diyagramda görünür ve yapıya bağlanır.</li><li>İlişkili kodun veya yapıların sorumluluklarını yansıtmak için katmanı yeniden adlandırın.</li></ol> **Önemli:**  İkili dosyaları bağımlılık diyagramına sürüklemek, başvurularını otomatik olarak modelleme projesine eklemez. Doğrulamak istediğiniz ikili dosyaları el ile modelleme projesine eklemeniz gerekir. **Modelleme projesine ikili dosyalar eklemek için** <ol><li>**Çözüm Gezgini**, modelleme projesi için kısayol menüsünü açın ve ardından **Varolan öğe Ekle**' yi seçin.</li><li>**Varolan öğe Ekle** iletişim kutusunda, ikili dosyalar ' a gidin, bunları seçin ve ardından **Tamam**' ı seçin.     İkili dosyalar modelleme projesinde görünür.</li><li>**Çözüm Gezgini**, eklediğiniz bir ikili dosyayı seçin ve ardından **Özellikler** penceresini açmak için **F4** tuşuna basın.</li><li>Her ikili dosyada, **derleme eylemi** özelliğini **doğrulanacak**olarak ayarlayın.</li></ol>|
 |Seçilen tüm yapılar için tek bir katman oluşturma|Tüm yapıtları aynı anda bağımlılık diyagramına sürükleyin.<br /><br /> Katman diyagramda görünür ve tüm yapılara bağlıdır.|
-|Seçilen her yapı için bir katman oluşturma|Tüm yapıtları aynı anda bağımlılık diyagramına sürüklerken **SHIFT** tuşuna basın ve basılı tutun. **Not:**  Bir dizi öğeyi seçmek için **SHIFT** tuşunu kullanırsanız, yapıtları seçtikten sonra anahtarı bırakın. Yapıları diyagrama sürüklerken tuşu tekrar basılı tutun. <br /><br /> Katman her yapı için diyagramda görünür ve her yapıya bağlanır.|
+|Seçilen her yapı için bir katman oluşturma|Tüm yapıtları aynı anda bağımlılık diyagramına sürüklerken **SHIFT** tuşuna basın ve basılı tutun. **Note:**  Bir dizi öğeyi seçmek için **SHIFT** tuşunu kullanırsanız, yapıtları seçtikten sonra anahtarı bırakın. Yapıları diyagrama sürüklerken tuşu tekrar basılı tutun. <br /><br /> Katman her yapı için diyagramda görünür ve her yapıya bağlanır.|
 |Katmana yapı ekleme|Yapıyı katmana sürükleyin.|
 |Bağlantısız bir katman oluşturma|**Araç kutusunda**, **bağımlılık diyagramı** bölümünü genişletin ve ardından bir **katmanı** bağımlılık diyagramına sürükleyin.<br /><br /> Çoklu katman eklemek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracını seçin veya **ESC** tuşuna basın.<br /><br /> veya<br /><br /> Bağımlılık diyagramının kısayol menüsünü açın, **Ekle**' yi ve ardından **Katman**' ı seçin.|
 |İç içe katmanlar oluşturma|Varolan katmanı başka bir katmanın üzerine sürükleyin.<br /><br /> veya<br /><br /> Katman için kısayol menüsünü açın, **Ekle**' yi ve ardından **Katman**' ı seçin.|
@@ -115,11 +115,11 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
 2. Bu bağlantıları yönetmek için aşağıdaki görevleri kullanın.
 
-|**To**|**Katman Gezgini 'nde**|
+|**Hedef**|**Katman Gezgini 'nde**|
 |-|-|
 |Katman ve yapı arasındaki bağlantıyı silme|Yapıt bağlantısının kısayol menüsünü açın ve **Sil**' i seçin.|
-|Bağlantıyı bir katmandan diğerine taşıma|Yapı bağlantısını diyagramda varolan bir katmana sürükleyin.<br /><br /> veya<br /><br /> 1.  Yapıt bağlantısının kısayol menüsünü açın ve **Kes**' i seçin.<br />2.  Bağımlılık diyagramında, katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
-|Bağlantıyı bir katmandan diğerine kopyalama|1.  Yapıt bağlantısının kısayol menüsünü açın ve **Kopyala**' yı seçin.<br />2.  Bağımlılık diyagramında, katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
+|Bağlantıyı bir katmandan diğerine taşıma|Yapı bağlantısını diyagramda varolan bir katmana sürükleyin.<br /><br /> veya<br /><br /> 1. yapıt bağlantısının kısayol menüsünü açın ve **Kes**' i seçin.<br />2. bağımlılık diyagramında katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
+|Bağlantıyı bir katmandan diğerine kopyalama|1. yapıt bağlantısının kısayol menüsünü açın ve **Kopyala**' yı seçin.<br />2. bağımlılık diyagramında katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
 |Varolan yapı bağlantısından yeni bir katman oluşturma|Yapı bağlantısını diyagramdaki boş bir alana sürükleyin.|
 |Bağlı bir yapının, bağımlılık diyagramında doğrulamayı desteklediğini doğrulayın.|Yapıt bağlantısı için **doğrulama sütununu destekler** bölümüne bakın.|
 
@@ -136,7 +136,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 ## <a name="EditDependencies"></a>Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
  Sisteminizde veya amaçlanan mimaride yapmayı planladığınız değişiklikleri anlatmak için, bağımlılık diyagramını düzenleyin:
 
-|**To**|**Bu adımları gerçekleştirin**|
+|**Hedef**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
 |Yeni bağımlılıklar oluşturma|**Bağımlılık** ve **çift yönlü bağımlılık** araçlarını kullanın.<br /><br /> Çoklu bağımlılıklar çizmek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracını seçin veya **ESC** tuşuna basın.|
@@ -159,8 +159,8 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Mimari ve modelleme araçları için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#edition-support-for-architecture-and-modeling-tools)
-- [Video Mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
-- [Bağımlılık diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)
-- [Bağımlılık diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)
+- [Video: mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
+- [Bağımlılık Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)
+- [Bağımlılık Diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)
 - [Bağımlılık diyagramları ile kod doğrulama](../modeling/validate-code-with-layer-diagrams.md)
 - [Kodu görselleştirme](../modeling/visualize-code.md)

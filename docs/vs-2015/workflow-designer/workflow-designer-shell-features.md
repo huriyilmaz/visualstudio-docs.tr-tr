@@ -1,5 +1,5 @@
 ---
-title: İş Akışı Tasarımcısı Kabuk özellikleri | Microsoft Docs
+title: İş Akışı Tasarımcısı Shell özellikleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -8,32 +8,32 @@ f1_keywords:
 - WFDShellFeatures.UI
 ms.assetid: 14bfe312-9592-408e-92ce-e98585ad16e7
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f732fd66439897b67f150ddb9603b7d67003eff2
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2c59dc8232713d4126b2c37693a1e241735eb163
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431379"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72606594"
 ---
 # <a name="workflow-designer-shell-features"></a>İş Akışı Tasarımcısı Kabuk Özellikleri
-[!INCLUDE[wfd1](../includes/wfd1-md.md)] üç temel kullanıcı Arabirimi alanları oluşur: tasarım yüzeyinde, içerik haritası çubuğu üstünde ve altındaki Kabuk. Ekranın en üstünde konumlandırılmış içerik haritası çubuğu, geçerli bir kök etkinlik öncüleri listesini görüntülemek için kullanılır. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Nasıl Yapılır: İçerik haritası gezintisini kullanma](../workflow-designer/how-to-use-breadcrumb-navigation.md). Tasarımcı yüzeyine konumlandırılmış ekranın merkezinde, iş akışları oluşturmak için kullanılır. Ekranın alt kısmında konumlandırılmış Kabuk geçerli görünümü yönetme düğmelerini içerir.  
-  
-## <a name="shell-features"></a>Kabuk özellikleri  
- Kabuk düğmeleri yakınlaştırma veya uzaklaştırma iş akışınızı, iş akışınızın, ekran boyutuna içindekilere ve Göster veya gizle genel bakış haritasını için kullanabileceğiniz çubuğunun sağ tarafında vardır. İçine veya dışına CTRL ++ ve CTRL + klavye kısayollarını kullanarak iş akışı yakınlaştırma yapabilirsiniz-.  
-  
-## <a name="overview-map"></a>Genel Bakış haritasını  
- Genel Bakış haritasını, tüm alt öğelerini ve tüm genişletilmiş bunların alt öğeleri dahil olmak üzere geçerli içerik haritası kökündeki tüm etkinlik küçük bir sürümünü görüntüler. Görünüm penceresi, şu anda Düzenleyicisi içinde görüntülenen bir etkinlik kısmını vurgular turuncu bir kenarlık ile bir dikdörtgen yoktur. Genel Bakış haritasını çevresinde bir dikdörtgen sürükleyerek iş akışı Tasarımcısı kaydırılır ve düzenleyici görünümünü değiştirir.  
-  
+[!INCLUDE[wfd1](../includes/wfd1-md.md)] üç ana kullanıcı arabirimi alandan oluşur: tasarımcı yüzeyi, yukarıdaki içerik haritası çubuğu ve bunun altındaki Kabuk. Ekranın en üstünde konumlandırılmış olan içerik haritası çubuğu, geçerli kök etkinliğin üst öğelerinin listesini göstermek için kullanılır. [!INCLUDE[crdefault](../includes/crdefault-md.md)][nasıl yapılır: Içerik Haritası gezintisini kullanma](../workflow-designer/how-to-use-breadcrumb-navigation.md). Ekranın ortasında konumlandırılmış olan tasarımcı yüzeyi iş akışları oluşturmak için kullanılır. Ekranın alt kısmında konumlandırılmış olan kabuk, geçerli görünümü yönetmek için bir dizi düğme içerir.
+
+## <a name="shell-features"></a>Kabuk özellikleri
+ Kabuğun sağ tarafında, iş akışınızı yakınlaştırmak veya uzaklaştırmak için kullanabileceğiniz düğmeler bulunur, iş akışınızın içeriğini Ekranınızın boyutuna uydurun ve genel bakış haritasını gösterebilir veya gizleyebilirsiniz. Ayrıca, CTRL + + ve CTRL +-klavye kısayollarını kullanarak bir iş akışını da yakınlaştırıp dışına taşıyabilirsiniz.
+
+## <a name="overview-map"></a>Genel Bakış Haritası
+ Genel Bakış Haritası, tüm alt öğeleri ve tüm genişletilmiş alt öğeleri dahil olmak üzere geçerli içerik haritası kökündeki tüm etkinliğin küçük bir sürümünü görüntüler. Şu anda düzenleyici içinde görüntülenen etkinliğin bölümünü vurgulayan turuncu kenarlığı olan bir görünüm penceresi bulunur. Dikdörtgeni genel bakış haritasının etrafında sürüklemek, iş akışı tasarımcısını kaydırır ve düzenleyicinin görünümünü değiştirir.
+
 > [!NOTE]
-> [!INCLUDE[wfd2](../includes/wfd2-md.md)] Kullanıcı arabirimi sanallaştırılmış. Etkinlik tasarımcıları, yalnızca gerekli olduğunda işlenir. İş akışının bir kısmını hiçbir zaman Tasarımcı yüzeyinde düzenlendi, söz konusu bölümü genel bakış harita üzerinde beyaz olarak görünür. Genel Bakış haritasını tamamen kaydırma iş akışı çizer.  
-  
-## <a name="copying-or-saving-workflows-as-images"></a>Kopyalama veya görüntü olarak iş akışları kaydediliyor  
- İş akışları, bit eşlem biçiminde kopyalanamaz veya bit eşlem ya da vektör biçiminde kaydedilmiş. Kopyalama veya görüntü kaydetme kökünde tüm alt öğelerini ve tüm genişletilmiş alt öğelerini başka bir programa dahil olmak üzere geçerli içerik haritası, tüm etkinlik görünümünü dışarı aktarmak için bir yol sağlar.  
-  
- Görüntü olarak Kopyala için herhangi bir yere Tasarımcısı seçin sağ tıklayıp **görüntü olarak Kopyala**. Görüntü olarak kaydetmek için her yerde Tasarımcısı seçin sağ tıklayın ve **görüntüyü farklı Kaydet**. İş akışları, JPG, GIF, PNG ya da XPS biçiminde kaydedilebilir. Biçimi seçildiğinde **Kaydet** iletişim kutusunda **farklı kaydetme türü:** pencerenin alt kısmındaki liste kutusunda aşağı açılır.  
-  
-## <a name="fonts-and-colors"></a>Yazı tipleri ve renkler  
- Kullanılan yazı tipleri [!INCLUDE[wfd2](../includes/wfd2-md.md)] içinde [!INCLUDE[vs2010](../includes/vs2010-md.md)] ortam yazı tipi tarafından denetlenir. Görüntülenen renkleri [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüksek karşıtlık renk şeması için işletim sistemi temanızı kullanıyorsanız değiştirin. Yeniden başlatmanız gerekir [!INCLUDE[vs2010](../includes/vs2010-md.md)] değişikliklerin etkili olabilmesi için yazı tipi veya renk ayarlarını değiştirdikten sonra [!INCLUDE[wfd2](../includes/wfd2-md.md)].
+> @No__t_0 Kullanıcı arabirimi sanallaştırılır. Etkinlik tasarımcıları yalnızca gerektiğinde işlenir. İş akışının bir kısmı tasarımcı yüzeyine hiç çizildiyse, bu bölüm genel bakış haritasında beyaz olarak görünür. Genel Bakış haritasının etrafında kaydırma, iş akışını tamamen çizer.
+
+## <a name="copying-or-saving-workflows-as-images"></a>Iş akışlarını görüntü olarak kopyalama veya kaydetme
+ İş akışları, bit eşlem biçiminde kopyalanabilir veya bit eşlem ya da vektör biçiminde kaydedilebilir. Bir görüntüyü kopyalama veya kaydetme, tüm alt öğeleri ve genişletilmiş alt öğelerinin tümünü başka bir programa dahil olmak üzere geçerli içerik haritası kökündeki tüm etkinliğin bir görünümünü dışarı aktarmanın bir yolunu sağlar.
+
+ Görüntü olarak kopyalamak için, Tasarımcıda herhangi bir yere sağ tıklayın ve **görüntü olarak Kopyala**' yı seçin. Görüntü olarak kaydetmek için, Tasarımcıda herhangi bir yere sağ tıklayın ve **görüntü olarak kaydet**' i seçin. İş akışları JPG, PNG, GIF veya XPS biçiminde kaydedilebilir. Biçim, pencerenin alt kısmındaki farklı **Kaydet:** açılan liste kutusunda bulunan **farklı kaydet** iletişim kutusunda seçilir.
+
+## <a name="fonts-and-colors"></a>Yazı Tipleri ve Renkler
+ @No__t_1 içinde [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanılan yazı tipleri, ortam yazı tipi tarafından denetlenir. İşletim sistemi temanız için yüksek karşıtlıklı bir renk düzeni kullanıyorsanız, [!INCLUDE[wfd2](../includes/wfd2-md.md)] içinde görüntülenen renkler değişir. Değişiklikler [!INCLUDE[wfd2](../includes/wfd2-md.md)] etkin hale gelmeden önce yazı tipi veya renk ayarlarında değişiklik yaptıktan sonra [!INCLUDE[vs2010](../includes/vs2010-md.md)] yeniden başlatmanız gerekir.

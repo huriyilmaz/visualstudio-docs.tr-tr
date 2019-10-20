@@ -1,18 +1,18 @@
 ---
-title: Visual C# koduna birim testi
+title: Birim testi görsel C# kodu
 ms.date: 09/27/2019
 ms.topic: conceptual
-ms.author: gewarren
-author: gewarren
+ms.author: jillfra
+author: jillre
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 0a724ab273401994faeb88ae197966ef538e842a
-ms.sourcegitcommit: 13decf878b33fc0c5d665a88067170c2861b261b
+ms.openlocfilehash: 309cf408167cc463db8cde9e39d5c0fe4dbe26d6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71681601"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659838"
 ---
 # <a name="unit-test-c-code"></a>C# birim testi sınıfı
 
@@ -24,19 +24,19 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a>Çözüm ve birim testi projesi oluşturma
 
-1. Üzerinde **dosya** menüsünde seçin **yeni** > **proje**.
+1. **Dosya** menüsünde, **Yeni** > **Proje**' yi seçin.
 
 2. **Boş uygulama (Evrensel Windows)** proje şablonunu arayın ve seçin.
 
 3. Projeyi **Maaltı**olarak adlandırın.
 
-4. **Çözüm Gezgini**, çözüme sağ tıklayıp  > **Yeni proje** **Ekle**' yi seçin.
+4. **Çözüm Gezgini**, çözüme sağ tıklayın ve  > **Yeni proje** **Ekle** ' yi seçin.
 
 5. **Birim testi uygulaması (Evrensel Windows)** proje şablonunu arayın ve seçin.
 
 6. Test projesi kökü \ **tertest**adını adlandırın.
 
-## <a name="verify-that-the-tests-run-in-test-explorer"></a>Testleri Test Gezgini'nde çalıştırma doğrulayın
+## <a name="verify-that-the-tests-run-in-test-explorer"></a>Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
 
 1. *UnitTest.cs* dosyasına **testyöntemi1** ' ye bazı test kodu ekleyin:
 
@@ -48,11 +48,11 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
    }
    ```
 
-   @No__t-0 sınıfı, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağlar.
+   @No__t_0 sınıfı, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağlar.
 
 ::: moniker range="vs-2017"
 
-2. **Test** menüsünde, **Çalıştır** > **Tüm testler**' i seçin.
+2. **Test** menüsünde, **Tüm testler**> **Çalıştır** ' ı seçin.
 
 ::: moniker-end
 
@@ -62,13 +62,13 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
 
 ::: moniker-end
 
-   Test projesi oluşturur ve çalıştırır. Biraz uzun sürebileceğinden sabırlı olun. **Test Gezgini** penceresi görünür ve test altında listelenen **başarılı testler**. **Özeti** pencerenin alt kısmındaki bölmesi, seçilen test hakkında ek ayrıntılar sağlar.
+   Test projesi oluşturulup çalışır. Biraz uzun sürebileceğinden sabırlı olun. **Test Gezgini** penceresi görünür ve test **geçilen testler**altında listelenir. Pencerenin alt kısmındaki **Özet** bölmesi, seçilen test hakkında ek ayrıntılar sağlar.
 
-## <a name="add-the-rooter-class-to-the-maths-project"></a>Matematik projeye Rooter sınıfı Ekle
+## <a name="add-the-rooter-class-to-the-maths-project"></a>Rooter sınıfını Maon projesine ekleyin
 
-1. **Çözüm Gezgini**, **maaltı** projeye sağ tıklayın ve ardından  > **sınıfı** **Ekle**' yi seçin.
+1. **Çözüm Gezgini**, **maaltı** projeye sağ tıklayın ve ardından  > **sınıfı** **Ekle** ' yi seçin.
 
-2. Sınıf dosyasının adı *Rooter.cs*.
+2. Sınıf dosyasını *Rooter.cs*olarak adlandırın.
 
 3. Aşağıdaki kodu **Rooter** sınıfı *Rooter.cs* dosyasına ekleyin:
 
@@ -86,27 +86,27 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
 
    **Rooter** sınıfı bir Oluşturucu ve **SquareRoot** tahmin aracı metodunu bildirir. **SquareRoot** yöntemi yalnızca en az bir uygulama, test kurulumunun temel yapısını test etmek için yeterlidir.
 
-4. @No__t-0 anahtar sözcüğünü **Rooter** sınıfı bildirimine ekleyin, böylece test kodu buna erişebilir.
+4. @No__t_0 anahtar sözcüğünü **Rooter** sınıfı bildirimine ekleyin, böylece test kodu buna erişebilir.
 
    ```csharp
    public class Rooter
    ```
 
-## <a name="add-a-project-reference"></a>Bir proje başvurusu Ekle
+## <a name="add-a-project-reference"></a>Proje başvurusu Ekle
 
 1. RooterTests projesinden Maon uygulamasına bir başvuru ekleyin.
 
-    1. **Çözüm Gezgini**, **RooterTests** projesine sağ tıklayın ve ardından **Add** > **başvurusu**' nı seçin.
+    1. **Çözüm Gezgini**, **RooterTests** projesine sağ tıklayın ve ardından  > **başvuru** **Ekle** ' yi seçin.
 
-    2. İçinde **Başvuru Ekle - RooterTests** iletişim kutusunda **çözüm** ve **projeleri**. **Maaltı** projeyi seçin.
+    2. **Başvuru Ekle-RooterTests** Iletişim kutusunda **çözüm** ' i genişletin ve **Projeler**' i seçin. **Maaltı** projeyi seçin.
 
-        ![Matematik projeye bir başvuru ekleyin](../test/media/ute_cs_windows_addreference.png)
+        ![Maaltı projeye başvuru ekleme](../test/media/ute_cs_windows_addreference.png)
 
-2. *UnitTest.cs* dosyasına `using` ifadesini ekleyin:
+2. *UnitTest.cs* dosyasına bir `using` ifadesini ekleyin:
 
     1. *UnitTest.cs*'i açın.
 
-    2. Aşağıdaki bu kod ekleme `using Microsoft.VisualStudio.TestTools.UnitTesting;` satırı:
+    2. Bu kodu `using Microsoft.VisualStudio.TestTools.UnitTesting;` satırı altına ekleyin:
 
        ```csharp
        using Maths;
@@ -126,13 +126,13 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
    }
    ```
 
-   Yeni test görünür **Test Gezgini** içinde **çalıştırılmamış testler** düğümü.
+   Yeni test, **Test Gezgini** 'Nde, **çalıştırma testleri** düğümünde görünür.
 
 4. "Yükün aynı hedef yolu ile iki veya daha fazla dosya içermesi" hatasını önlemek için, **Çözüm Gezgini**' de, **masekiz** projenin altındaki **Özellikler** düğümünü genişletin ve ardından *default. RD. xml* dosyasını silin.
 
 ::: moniker range="vs-2017"
 
-6. İçinde **Test Gezgini**, seçin **tümünü Çalıştır**.
+6. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
 
    Çözüm oluşturulur ve testler çalışır ve geçer.
 
@@ -150,9 +150,9 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
 
 ::: moniker-end
 
-Test ve uygulama projelerini ayarlamış ve uygulama projesindeki işlevleri çağıran testleri çalıştıracağınızı doğruladınız. Şimdi gerçek test ve kod yazmaya başlayabilirsiniz.
+Test ve uygulama projelerini ayarlamış ve uygulama projesindeki işlevleri çağıran testleri çalıştıracağınızı doğruladınız. Artık gerçek testleri ve kodu yazmaya başlayabilirsiniz.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>Yinelemeli olarak testleri genişletme ve onları geçirin
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>Testleri tekrarlayarak ve geçiş yapın
 
 1. **Rangetest**adlı yeni bir test ekleyin:
 
@@ -172,16 +172,16 @@ Test ve uygulama projelerini ayarlamış ve uygulama projesindeki işlevleri ça
    ```
 
    > [!TIP]
-   > Geçmiş olan testleri değiştirmemenizi öneririz. Bunun yerine yeni bir test ekleyin.
+   > Geçilen testleri değiştirmenizi öneririz. Bunun yerine yeni bir test ekleyin.
 
 2. **Rangetest** testini çalıştırın ve başarısız olduğunu doğrulayın.
 
-   ![RangeTest başarısız](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
+   ![RangeTest başarısız oluyor](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
    > [!TIP]
-   > Test yazdıktan hemen sonra, başarısız olduğunu doğrulamak için çalıştırın. Bu, hiçbir zaman başarısız bir test yazma kolay onlardan yardımcı olur.
+   > Test yazdıktan hemen sonra, başarısız olduğunu doğrulamak için çalıştırın. Bu, hiç başarısız olmayan bir testi yazmanın kolay bir hata yaşamadan kaçınmanıza yardımcı olur.
 
-3. Yeni test geçer, test edilen kod geliştirin. *Rooter.cs* içindeki **SquareRoot** işlevini şu şekilde değiştirin:
+3. Yeni testin başarılı olması için test kapsamındaki kodu geliştirin. *Rooter.cs* içindeki **SquareRoot** işlevini şu şekilde değiştirin:
 
    ```csharp
    public double SquareRoot(double x)
@@ -200,7 +200,7 @@ Test ve uygulama projelerini ayarlamış ve uygulama projesindeki işlevleri ça
 
 ::: moniker range="vs-2017"
 
-4. İçinde **Test Gezgini**, seçin **tümünü Çalıştır**.
+4. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
 
 ::: moniker-end
 
@@ -210,12 +210,12 @@ Test ve uygulama projelerini ayarlamış ve uygulama projesindeki işlevleri ça
 
 ::: moniker-end
 
-   Üç testi şimdi geçirin.
+   Tüm üç test artık geçer.
 
 > [!TIP]
-> Aynı anda testleri bir ekleyerek kod geliştirin. Tüm testler her yinelemeden sonra başarılı olduğundan emin olun.
+> Her seferinde bir test ekleyerek kod geliştirin. Her yinelemeden sonra tüm testlerin başarılı olduğundan emin olun.
 
-## <a name="refactor-the-code"></a>Kodu yeniden düzenleyin
+## <a name="refactor-the-code"></a>Kodu yeniden düzenleme
 
 Bu bölümde, hem uygulama hem de test kodunu yeniden düzenleyin ve ardından devam ettiğinden emin olmak için testleri yeniden çalıştırın.
 
@@ -234,7 +234,7 @@ Bu bölümde, hem uygulama hem de test kodunu yeniden düzenleyin ve ardından d
 2. Bir gerileme sunmadığınızdan emin olmak için tüm testleri çalıştırın. Hepsi başarılı olmalıdır.
 
 > [!TIP]
-> Kararlı bir dizi iyi birim testi kodu değiştirdiğinizde, yeni hatalar oluşturmadığından emin olmanızı sağlar.
+> Kararlı bir iyi birim testi kümesi, kodu değiştirirken hata sunmaabileceğinizden emin olmanızı sağlar.
 
 ### <a name="eliminate-duplicated-code"></a>Yinelenen kodu kaldırın
 
@@ -270,4 +270,4 @@ Bu bölümde, hem uygulama hem de test kodunu yeniden düzenleyin ve ardından d
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Test Gezgini kullanarak test odaklı geliştirme @ no__t-0
+- [İzlenecek yol: test Gezginini kullanarak test odaklı geliştirme](quick-start-test-driven-development-with-test-explorer.md)

@@ -1,5 +1,5 @@
 ---
-title: 'CA1812: Örneklenmemiş iç sınıflardan kaçının | Microsoft Docs'
+title: 'CA1812: Örneklendirilmemiş iç sınıflardan kaçının | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - CA1812
 ms.assetid: 1bb92a42-322a-44cc-98a8-8858212c1e1f
 caps.latest.revision: 28
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f44dcb010dd9c62d130913efd590a4c1b651de50
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f5a36ee8cffc221d15243ff72e2e71558e867319
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157988"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645404"
 ---
-# <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812: Örneklenmemiş iç sınıflardan kaçının
+# <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812: Örneklendirilmemiş iç sınıflardan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|AvoidUninstantiatedInternalClasses|
 |CheckId|CA1812|
-|Kategori|Microsoft.Performance|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Performance|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
  Bir derleme düzeyi türünün örneği, derleme içindeki kod tarafından oluşturulmaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, bir türü oluşturucular bir çağrı bulmaya çalışır ve hiçbir çağrı bulunursa bir ihlali bildirir.
+ Bu kural, türün oluşturucularından birine yönelik çağrıyı bulmaya çalışır ve hiçbir çağrı bulunmazsa bir ihlalin bildirir.
 
- Aşağıdaki türleri bu kural tarafından incelenir değil:
+ Aşağıdaki türler bu kural tarafından incelendi:
 
 - Değer türleri
 
@@ -48,29 +48,29 @@ ms.locfileid: "68157988"
 
 - Temsilciler
 
-- Derleyici yayılan dizi türleri
+- Derleyicinin yayınlaması dizi türleri
 
-- Olamaz başlatılamaz ve tanımlayan türler `static` (`Shared` Visual Basic'te) yalnızca yöntemleri.
+- Örneklenemez ve yalnızca `static` (`Shared` Visual Basic) yöntemlerinde tanımlayan türler.
 
-  Uygularsanız, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName> analiz ediliyor. derlemeye olarak işaretlenmiş tüm oluşturucular üzerinde bu kural gerçekleşmez `internal` alana bir başkası tarafından kullanılıp kullanılmadığını bildiremez çünkü `friend` derleme.
+  Çözümlenmekte olan derlemeye <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName> uygularsanız, bir alanın başka bir `friend` derlemesi tarafından kullanılıp kullanılmadığını söyleyeceğinden, bu kural `internal` olarak işaretlenen herhangi bir Oluşturucu üzerinde gerçekleşmeyecektir.
 
-  İçinde bu sınırlamaya geçici bir çözüm çalışamaz olsa bile [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kod analizi, dış tek başına FxCop oluşacak iç oluşturucularda her varsa `friend` analiz derleme varsa.
+  @No__t_0 kodu analizinde bu kısıtlamayı geçici olarak çözemeseniz bile, her `friend` derlemesi Analize mevcutsa, dış tek başına FxCop iç oluşturucular üzerinde gerçekleşmeyecektir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için türünü kaldırın veya onu kullanan kodu ekleyin. Tür yalnızca statik yöntemler içeriyorsa, derleyici varsayılan bir ortak örnek oluşturucusu yayma gelen önlemek için türü için aşağıdakilerden birini ekleyin:
+ Bu kural ihlalini onarmak için, türü kaldırın veya onu kullanan kodu ekleyin. Tür yalnızca statik yöntemler içeriyorsa, derleyicinin varsayılan bir ortak örnek Oluşturucu yaymasını engellemek için aşağıdakilerden birini türüne ekleyin:
 
-- İçin özel bir oluşturucu türleri hedefleyen [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 1.0 ve 1.1 sürümleri.
+- 1,0 ve 1,1 sürümlerini [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] hedefleyen türler için özel Oluşturucu.
 
-- `static` (`Shared` Visual Basic) değiştirici için türleri hedefleyen [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)].
+- @No__t_2 hedefleyen türler için `static` (Visual Basic `Shared`) değiştiricisi.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan bir uyarıyı bastırmak güvenlidir. Aşağıdaki durumlarda bu uyarının gösterilmemesi gerektiğini öneririz:
+ Bu kuraldan bir uyarıyı gizlemek güvenlidir. Aşağıdaki durumlarda bu uyarıyı bastırmalarını öneririz:
 
-- Sınıfı gibi geç bağlanan yansıma yöntemleri ile oluşturulan <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>.
+- Sınıfı, <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> gibi geç bağlantılı yansıma yöntemleriyle oluşturulur.
 
-- Sınıfı çalışma zamanı tarafından otomatik olarak oluşturulan veya [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]. Örneğin, uygulayan sınıflar <xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName> veya <xref:System.Web.IHttpHandler?displayProperty=fullName>.
+- Sınıf, çalışma zamanı veya [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] tarafından otomatik olarak oluşturulur. Örneğin, <xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName> veya <xref:System.Web.IHttpHandler?displayProperty=fullName> uygulayan sınıflar.
 
-- Sınıfının yeni bir kısıtlamaya sahip bir genel tür parametresi geçirilir. Örneğin, aşağıdaki örnekte, bu kural oluşturacak.
+- Sınıfı, yeni kısıtlaması olan bir genel tür parametresi olarak geçirilir. Örneğin, aşağıdaki örnek bu kuralı yükseltir.
 
   ```csharp
   internal class MyClass
@@ -91,9 +91,9 @@ ms.locfileid: "68157988"
   mc.Create();
   ```
 
-  Bu durumda, bu uyarının gösterilmemesi önerilir.
+  Bu durumlarda, bu uyarıyı bastırdığınız için tavsiye ederiz.
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1811: Çağrılmayan özel kodlardan kaçının](../code-quality/ca1811-avoid-uncalled-private-code.md)
 
  [CA1801: Kullanılmayan parametreleri gözden geçir](../code-quality/ca1801-review-unused-parameters.md)

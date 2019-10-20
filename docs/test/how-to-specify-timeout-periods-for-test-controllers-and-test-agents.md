@@ -1,5 +1,5 @@
 ---
-title: Test denetleyicileri ve Test aracıları için zaman aşımı süreleri
+title: Test denetleyicileri ve test aracıları için zaman aşımı süreleri
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,47 +8,47 @@ helpviewer_keywords:
 - controllers, configuring
 - controllers, timeouts
 ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5e703ca3e1770d92a2dc01402acaaba0b4988e92
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2f4e82261b9b36ced471dfa3e93be085e22c4d64
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970645"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653330"
 ---
-# <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Nasıl yapılır: Test denetleyicileri için zaman aşımı sürelerini belirtme ve test aracıları
+# <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Nasıl yapılır: test denetleyicileri ve test aracıları için zaman aşımı sürelerini belirtme
 
-Test denetleyicisi ve test aracısını hem ne kadar bunlar birbirinden veya bir hata ile başarısız olmadan önce bir veri kaynağından yanıt beklemesi gerektiğini belirten birkaç zaman aşımı ayarı vardır. Belirli koşullar altında topolojinizin veya diğer ortam sorunlarının ihtiyaçlarını karşılamak için zaman aşımı değerlerini düzenlemek gerekli olabilir. Zaman aşımı değerlerini düzenlemek için aşağıdaki yordamlarda anlatıldığı gibi test denetleyicisi veya test aracısı ile ilişkili XML yapılandırma dosyasını düzenleyin.
+Test denetleyicisi ve test aracısının her ikisi de bir hatadan veya bir hata ile başarısız olmadan önce bir veri kaynağından yanıtlara ne kadar beklemeleri gerektiğini belirten birkaç zaman aşımı ayarlarına sahiptir. Belirli koşullarda, topolojinizin veya diğer ortam sorunlarının ihtiyaçlarını karşılamak için zaman aşımı değerlerini düzenlemek gerekli olabilir. Zaman aşımı değerlerini düzenlemek için, aşağıdaki yordamlarda da gösterildiği gibi, test denetleyicisi veya test aracısı ile ilişkili XML yapılandırma dosyasını düzenleyin.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Test denetleyicisi veya test aracısın çeşitli zaman aşımı ayarlarını düzenlemek için tablolardaki anahtar isimleri ve değerleri kullanarak aşağıdaki yapılandırma dosyalarını değiştirin:
+Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarlarını düzenlemek için tablolardaki anahtar adlarını ve değerleri kullanarak aşağıdaki yapılandırma dosyalarını değiştirin:
 
-- Test denetleyicisi: *QTController.exe.config*
-
-    |Anahtar adı|Açıklama|Değer|
-    |-|-----------------|-|
-    |AgentConnectionTimeoutInSeconds|Bağlantının kaybedildiğini düşünmeden önce aracının ping isteği için beklenecek saniye sayısını kaybolur.|"n" saniye.|
-    |AgentSyncTimeoutInSeconds|Bir eşitleme test çalışması çalıştırma iptal edilmeden önce eşitlemek tüm aracılar için beklenecek saniye sayısını başlattığınızda.|"n" saniye.|
-    |AgentInitializeTimeout|Test çalıştırması iptal edilmeden önce tüm aracıların beklenecek saniye ve veri toplayıcılarının testinin başında başlatmak için çalıştırın. Bu değer, veri toplayıcıları kullanıyorsanız oldukça büyük olmalıdır.|"n" saniye. Varsayılan: "120" (iki dakika).|
-    |AgentCleanupTimeout|Ve veri toplayıcılarının temizlemek, test tamamlanmadan önce tüm aracıları için beklenecek saniye sayısı'nı çalıştırın. Bu değer, veri toplayıcıları kullanıyorsanız oldukça büyük olmalıdır.|"n" saniye. Varsayılan: "120" (iki dakika).|
-
-- Test aracısı: *QTAgentService.exe.config*
+- Test denetleyicisi: *QTController. exe. config*
 
     |Anahtar adı|Açıklama|Değer|
     |-|-----------------|-|
-    |ControllerConnectionPeriodInSeconds|Denetleyiciyi bağlama girişimleri arasında saniye sayısı.|"n" saniye. Varsayılan: "30" (otuz saniye).|
-    |RemotingTimeoutSeconds|En uzun süreyi saniye cinsinden bir çağrının sürebileceği dayanabilir.|"n" saniye. Varsayılan: "600" (on dakika).|
-    |StopTestRunCallTimeoutInSeconds|Çağrının testi durdurması için beklenen saniye sayısı'nı çalıştırın.|"n" saniye. Varsayılan: "120" (iki dakika).|
-    |GetCollectorDataTimeout|Veri Toplayıcı için beklenen saniye sayısı.|"n" saniye. Varsayılan: "300" (beş dakika).|
+    |AgentConnectionTimeoutInSeconds|Bağlantının kaybolduğu kabul edilmeden önce aracı ping isteği için beklenecek saniye sayısı.|"n" saniye.|
+    |Agentsynctimeoutınseconds|Bir eşitleme testi çalıştırması başlattığınızda, çalıştırmayı iptal etmeden önce tüm aracıların eşitlenmesi için beklenecek saniye sayısı.|"n" saniye.|
+    |Agentınitialetimeout|Test çalıştırmasını iptal etmeden önce, tüm aracıların ve veri toplayıcılarının bir test çalıştırmasının başlangıcında başlatılması için bekleyeceği saniye sayısı. Veri toplayıcıları kullanılıyorsa bu değer makul bir şekilde büyük olmalıdır.|"n" saniye. Varsayılan: "120" (iki dakika).|
+    |AgentCleanupTimeout|Test çalıştırmasını tamamlamadan önce tüm aracıların ve veri toplayıcılarının temizlenmesi için beklenecek saniye sayısı. Veri toplayıcıları kullanılıyorsa bu değer makul bir şekilde büyük olmalıdır.|"n" saniye. Varsayılan: "120" (iki dakika).|
 
-## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>Bir test denetleyicisi için aracı zamanaşımı seçeneklerini belirtmek için
+- Test Aracısı: *QTAgentService. exe. config*
 
-1. Açık *QTCcontroller.exe.config* bulunan XML yapılandırma dosyasını *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
+    |Anahtar adı|Açıklama|Değer|
+    |-|-----------------|-|
+    |ControllerConnectionPeriodInSeconds|Denetleyiciye bağlanma denemeleri arasındaki saniye sayısı.|"n" saniye. Varsayılan: "30" (otuz saniye).|
+    |RemotingTimeoutSeconds|Uzaktan iletişim çağrısının en uzun süre (saniye cinsinden).|"n" saniye. Varsayılan: "600" (on dakika).|
+    |Stoptestruncalltimeoutınseconds|Çağrının test çalıştırmasını durdurmak için bekleyeceği saniye sayısı.|"n" saniye. Varsayılan: "120" (iki dakika).|
+    |GetCollectorDataTimeout|Veri toplayıcısının bekleyeceği saniye sayısı.|"n" saniye. Varsayılan: "300" (beş dakika).|
 
-2. bulun `<appSettings>` etiketi.
+## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>Bir test denetleyicisi için aracı zaman aşımı seçeneklerini belirtmek için
+
+1. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*Içinde bulunan *QTCcontroller. exe. config* XML yapılandırma dosyasını açın.
+
+2. `<appSettings>` etiketini bulun.
 
     ```xml
     <appSettings>
@@ -62,7 +62,7 @@ Test denetleyicisi veya test aracısın çeşitli zaman aşımı ayarlarını d�
     </appSettings>
     ```
 
-3. Test denetleyicisinin zaman aşımı anahtarlarından biri için bir varolan değeri düzenleyin. Örneğin, anahtar için varsayılan değer değiştirebilirsiniz `AgentConnectionTimeoutInSeconds` iki dakikadan üç dakikaya:
+3. Test denetleyicisinin zaman aşımı anahtarlarından biri için varolan bir değeri düzenleyin. Örneğin, anahtar `AgentConnectionTimeoutInSeconds` için varsayılan değeri iki dakikadan üç dakikaya değiştirebilirsiniz:
 
     ```xml
     <add key="AgentConnectionTimeoutInSeconds" value="180"/>
@@ -70,7 +70,7 @@ Test denetleyicisi veya test aracısın çeşitli zaman aşımı ayarlarını d�
 
     veya
 
-    İlave bir anahtar ekleyin ve bir zaman aşımı değeri belirtin. Örneğin, ekleyebileceğiniz `AgentInitializeTimeout` anahtarını `<appSettings>` bölümünde ve beş dakikalık bir değer belirtin:
+    Ek bir anahtar ekleyin ve bir zaman aşımı değeri belirtin. Örneğin, `<appSettings>` bölümüne `AgentInitializeTimeout` anahtarını ekleyebilir ve beş dakikalık bir değer belirleyebilirsiniz:
 
     ```xml
     <appSettings>
@@ -78,11 +78,11 @@ Test denetleyicisi veya test aracısın çeşitli zaman aşımı ayarlarını d�
     </appSettings>
     ```
 
-## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>Bir test aracısı için aracı zamanaşımı seçeneklerini belirtmek için
+## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>Bir test aracısı için aracı zaman aşımı seçeneklerini belirtmek için
 
-1. Açık *QTAgentService.exe.config* bulunan XML yapılandırma dosyasını *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
+1. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*konumunda bulunan *QTAgentService. exe. config* XML yapılandırma dosyasını açın.
 
-2. bulun `<appSettings>` etiketi.
+2. `<appSettings>` etiketini bulun.
 
     ```xml
     <appSettings>
@@ -96,7 +96,7 @@ Test denetleyicisi veya test aracısın çeşitli zaman aşımı ayarlarını d�
     </appSettings>  </appSettings>
     ```
 
-3. Test aracısın zaman aşımı anahtarlarından biri için bir varolan değeri düzenleyin. Örneğin, anahtar için varsayılan değer değiştirebilirsiniz `ControllerConnectionPeriodInSeconds` otuz dakikadan bir dakikaya:
+3. Test aracısının zaman aşımı anahtarlarından biri için varolan bir değeri düzenleyin. Örneğin, anahtar `ControllerConnectionPeriodInSeconds` varsayılan değerini otuz saniyeden bir dakikaya değiştirebilirsiniz:
 
     ```xml
     <add key="ControllerConnectionPeriodInSeconds" value="60"/>
@@ -104,7 +104,7 @@ Test denetleyicisi veya test aracısın çeşitli zaman aşımı ayarlarını d�
 
     veya
 
-    İlave bir anahtar ekleyin ve bir zaman aşımı değeri belirtin. Örneğin, ekleyebileceğiniz `RemotingTimeoutSeconds` anahtarını `<appSettings>` bölümünde ve on beş dakikalık bir değer belirtin:
+    Ek bir anahtar ekleyin ve bir zaman aşımı değeri belirtin. Örneğin, `<appSettings>` bölümüne `RemotingTimeoutSeconds` anahtarını ekleyip on beş dakikalık bir değer belirleyebilirsiniz:
 
     ```xml
     <appSettings>
@@ -115,6 +115,6 @@ Test denetleyicisi veya test aracısın çeşitli zaman aşımı ayarlarını d�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Test aracılarını yükleme ve yapılandırma](../test/lab-management/install-configure-test-agents.md)
-- [Yük testi günlüğü ayarlarını değiştirme](../test/modify-load-test-logging-settings.md)
-- [Test denetleyicileri için bağlantı noktalarını yapılandırın ve test aracıları](../test/configure-ports-for-test-controllers-and-test-agents.md)
-- [Nasıl yapılır: Bir ağ bağdaştırıcısına bir test denetleyicisi veya test aracısı bağlama](../test/how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md)
+- [Yük testi günlük ayarlarını değiştir](../test/modify-load-test-logging-settings.md)
+- [Test denetleyicileri ve test aracıları için bağlantı noktalarını yapılandırma](../test/configure-ports-for-test-controllers-and-test-agents.md)
+- [Nasıl yapılır: bir test denetleyicisini veya test aracısını ağ bağdaştırıcısına bağlama](../test/how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md)

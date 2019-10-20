@@ -1,25 +1,25 @@
 ---
-title: İş Akışı Tasarımcısı - Mesajlaşma etkinlik tasarımcıları
+title: İş Akışı Tasarımcısı-mesajlaşma etkinlik tasarımcıları
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 897e63cf-a42f-4edd-876f-c4ccfffaf6d6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a9868b5eb52edde8e12d6a3b4f5edab1a4a9e499
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 0ba6aaaf0f6e77714af14e690d4944eac031e1d7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747098"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650138"
 ---
-# <a name="messaging-activity-designers"></a>Mesajlaşma etkinlik tasarımcıları
+# <a name="messaging-activity-designers"></a>Messaging etkinlik tasarımcıları
 
-Mesajlaşma etkinlik tasarımcıları oluşturmak ve bir Windows Workflow Foundation (WF) uygulama içinden Windows Communication Foundation (WCF) iletilerini gönderip Mesajlaşma etkinlikleri yapılandırmak için kullanılır. Beş Mesajlaşma etkinlikleri, .NET Framework 4'te tanıtıldı. İş Akışı Tasarımcısı bir iş akışı içinde Mesajlaşma yönetmenizi sağlayan iki Şablon tasarımcıları sağlar.
+Mesajlaşma etkinliği tasarımcıları, bir Windows Workflow Foundation (WF) uygulamasının içinden Windows Communication Foundation (WCF) iletileri gönderen ve alan mesajlaşma etkinlikleri oluşturmak ve yapılandırmak için kullanılır. .NET Framework 4 ' te beş mesajlaşma etkinliği tanıtılmıştı. İş Akışı Tasarımcısı, bir iş akışı içinde mesajlaşma yönetmenizi sağlayan iki şablon tasarımcıları sağlar.
 
-Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular, Şablon tasarımcıları ve etkinlik iş akışı Tasarımcısını kullanma konusunda rehberlik sağlar.
+Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular İş Akışı Tasarımcısı etkinliğinin ve Şablon tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 - <xref:System.Activities.Activity>
 
@@ -37,7 +37,7 @@ Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular, Şablon tasar�
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-Etkinlik tasarımcıları diğer türleri için aşağıdaki konulara bakın:
+Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
 - [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
 

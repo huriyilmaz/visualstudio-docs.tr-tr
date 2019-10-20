@@ -2,75 +2,75 @@
 title: Arabirim uygulama
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 58c714dec8b8a4679d34168cdaf901dc2fb94ea6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 45265c10677b8d3eadc27eb3b6e22c69bb5299be
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974832"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658911"
 ---
-# <a name="implement-an-interface-in-visual-studio"></a>Visual Studio'da arabirimi uygulama
+# <a name="implement-an-interface-in-visual-studio"></a>Visual Studio 'da arabirim uygulama
 
-Bu kod oluşturma için geçerlidir:
+Bu kod üretimi için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Hemen bir arabirim uygulamak için gereken kodu oluşturmanıza olanak sağlar.
+**Ne:** Bir arabirim uygulamak için gereken kodu hemen üretmenizi sağlar.
 
-**ne zaman:** Bir arabirimden devralma istiyorsunuz.
+**Ne zaman:** Bir arabirimden devralması istiyorsunuz.
 
-**Neden:** Bu özellik otomatik olarak tüm yöntem imzaları oluşturur ancak tüm arabirimi birer birer el ile uygulayabilirsiniz.
+**Neden:** Tüm arabirimi tek tek el ile uygulayabilirsiniz, ancak bu özellik tüm yöntem imzalarını otomatik olarak oluşturur.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi satırdaki bir arabirim başvurulan, ancak gerekli tüm üyeleri uygulanmadı belirten bir kırmızı dalgalı olduğu.
+1. İmlecinizi, bir arabirime başvurduğunu ancak gerekli tüm üyeleri uygulamadığını belirten kırmızı renkli bir dalgalı çizgi olan çizgiye yerleştirin.
 
-   - C# İÇİN:
+   - C#:
 
-       ![Vurgulanmış kodu C#](media/interface-highlight-cs.png)
-
-   - Visual Basic:
-
-       ![Vurgulanmış kodu VB](media/interface-highlight-vb.png)
-
-2. Ardından, aşağıdakilerden birini yapın:
-
-   - **Klavye**
-      - Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-   - **Fare**
-      - Sağ tıklayıp **hızlı Eylemler ve yeniden düzenlemeler** menüsü.
-      - Kırmızı dalgalı çizgi gelin ve tıklayın ![hata ampul](media/error-bulb.png) Bu simge görünür.
-      - &nbsp; ![hata ampul](media/error-bulb.png) kırmızı dalgalı çizgi içeren satırda metin imleci ise sol kenar boşluğunda görünür simge.
-
-3. Seçin **arabirim uygulama** aşağı açılan menüden.
-
-   ![Uygulama arabirimi Önizleme](media/interface-preview-cs.png)
-
-   > [!TIP]
-   > - Kullanım **değişiklik önizlemesi** Önizleme pencerenin alt kısmındaki bağlantı [tüm değişiklikleri görmek için](../../ide/preview-changes.md) , oluşturulacak, seçim yapmadan önce.
-   > - Kullanım **belge**, **proje**, ve **çözüm** uygulayan birden fazla sınıflar arasında uygun bir yöntem imzaları oluşturmak için Önizleme pencerenin alt kısmındaki bağlantıları arabirim.
-
-   Arabirimin yöntem imzaları oluşturulur ve uygulanması hazırdır.
-
-   - C# İÇİN:
-
-       ![C# arabirimi sonucu uygulayın](media/interface-result-cs.png)
+       ![Vurgulanan kodC#](media/interface-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Uygulama arabirimi sonucu VB](media/interface-result-vb.png)
+       ![Vurgulanan kod VB](media/interface-highlight-vb.png)
+
+2. Sonra, aşağıdakilerden birini yapın:
+
+   - **Klavyenizdeki**
+      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+   - **Tığında**
+      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
+      - Kırmızı dalgalı çizgi üzerine gelin ve ![ampul hatası](media/error-bulb.png) görüntülenen simge.
+      - &nbsp; ![ampul hatası](media/error-bulb.png) Sol kenar boşluğunda, metin imleci kırmızı dalgalı çizgi ile zaten varsa görüntülenen simge.
+
+3. Açılan menüden **arabirimi Uygula** ' yı seçin.
+
+   ![Arabirim önizlemeyi Uygula](media/interface-preview-cs.png)
 
    > [!TIP]
-   > (C# yalnızca) Kullanım **arayüzleri açıkça gerçekleştir** seçeneği her yazdığınızdan oluşturulan yöntemi ile ad çakışmalarını önlemek için arabirim adı.
+   > - Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) Önizleme penceresinin altındaki **Değişiklikleri Önizle** bağlantısını kullanın.
+   > - Arabirimi uygulayan birden çok sınıfta doğru yöntem imzalarını oluşturmak için Önizleme penceresinin altındaki **belge**, **Proje**ve **çözüm** bağlantılarını kullanın.
+
+   Arabirimin yöntem imzaları oluşturulur ve uygulanmaya hazırlanın.
+
+   - C#:
+
+       ![Arabirim sonucunu UygulaC#](media/interface-result-cs.png)
+
+   - Visual Basic:
+
+       ![Arabirim sonucunu Uygula VB](media/interface-result-vb.png)
+
+   > [!TIP]
+   > (C# yalnızca) Ad çakışmalarını önlemek için arabirim adına sahip her bir yöntemi ön yüz olarak **Uygula** seçeneğini kullanın.
    >
-   > ![Arabirim uygulama açıkça neden](media/interface-explicitresult-cs.png);
+   > ![Arabirime açıkça sonuç uygulama](media/interface-explicitresult-cs.png);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

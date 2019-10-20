@@ -2,174 +2,174 @@
 title: Sık kullanılan komutlar için varsayılan klavye kısayolları
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72e010d76188be1ebe07eb9400b7cde60c2bf0a6
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: eda902db03d7211a4025663088cf8bf3718e4a2f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043337"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652527"
 ---
 # <a name="popular-keyboard-shortcuts-for-visual-studio"></a>Visual Studio için popüler klavye kısayolları
 
-Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan komutlara erişebilirsiniz. Varsayılan kısayolları bulunan komutların tam listesi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan komutlara erişebilirsiniz. Varsayılan kısayollara sahip komutların tüm listesi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
-*Genel* bağlam, kısayol Visual Studio araç penceresinde geçerli olmadığını anlamına gelir.
+*Genel* bağlam, kısayolun Visual Studio 'daki herhangi bir araç penceresinde geçerli olduğu anlamına gelir.
 
 > [!NOTE]
-> Yapabilecekleriniz [kısayol Ara](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) açarak herhangi bir komutun **seçenekleri** genişletme iletişim kutusu, **ortam** düğümünü ve ardından **klavye**.
+> **Seçenekler** iletişim kutusunu açıp **ortam** düğümünü genişleterek ve ardından **klavye**' yi seçerek herhangi bir komutun [kısayolunu arayabilirsiniz](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) .
 
 ## <a name="build"></a>Yapı
 
-|Komutlar|Klavye kısayolları [Bağlamlar]|
+|Komutlar|Klavye kısayolları [bağlamlar]|
 |--------------| - |
-|Build.BuildSolution|**Ctrl + Shift + B** [genel]|
-|Build.Cancel|**Ctrl + Break** [genel]|
-|Build.Compile|**CTRL + F7** [genel]|
-|Build.RunCodeAnalysisonSolution|**Alt + F11** [genel]|
+|Build.BuildSolution|**CTRL + SHIFT + B** [Genel]|
+|Build.Cancel|**Ctrl + Break** [Genel]|
+|Build.Compile|**Ctrl + F7** [Genel]|
+|Build.RunCodeAnalysisonSolution|**Alt + F11** [Genel]|
 
 ## <a name="debug"></a>Hata ayıklama
 
-|Komutlar|Klavye kısayolları [Bağlamlar]|
+|Komutlar|Klavye kısayolları [bağlamlar]|
 |--------------| - |
-|Debug.BreakatFunction|**CTRL + B** [genel]|
-|Debug.BreakAll|**Ctrl + Alt + Break** [genel]|
-|Debug.DeleteAllBreakpoints|**CTRL + SHIFT + F9** [genel]|
-|Debug.Exceptions|**Ctrl + Alt + E** [genel]|
-|Debug.QuickWatch|**Ctrl + Alt + Q** [genel]<br /><br />veya **SHIFT + F9** [genel]|
-|Debug.Restart|**Ctrl + Shift + F5** [genel]|
-|Debug.RunToCursor|**CTRL + F10** [genel]|
-|Debug.SetNextStatement|**Ctrl + Shift + F10** [genel]|
-|Debug.Start|**F5** [genel]|
-|Debug.StartWithoutDebugging|**CTRL + F5** [genel]|
-|Debug.StepInto|**F11** [genel]|
-|Debug.StepOut|**Shift + F11** [genel]|
-|Debug.StepOver|**F10** [genel]|
-|Debug.StopDebugging|**Shift + F5** [genel]|
-|Debug.ToggleBreakpoint|**F9** [genel]|
+|Debug.BreakatFunction|**CTRL + B** [Genel]|
+|Debug.BreakAll|**Ctrl + Alt + Break** [Genel]|
+|Debug.DeleteAllBreakpoints|**CTRL + SHIFT + F9** [Genel]|
+|Debug.Exceptions|**Ctrl + Alt + E** [Genel]|
+|Debug.QuickWatch|**Ctrl + Alt + Q** [Genel]<br /><br />veya **SHIFT + F9** [Genel]|
+|Debug.Restart|**CTRL + SHIFT + F5** [Genel]|
+|Debug.RunToCursor|**CTRL + F10** [Genel]|
+|Debug.SetNextStatement|**CTRL + SHIFT + F10** [Genel]|
+|Debug.Start|**F5** [Genel]|
+|Debug.StartWithoutDebugging|**CTRL + F5** [Genel]|
+|Debug.StepInto|**F11** [Genel]|
+|Debug.StepOut|**SHIFT + F11** [Genel]|
+|Debug.StepOver|**F10** [Genel]|
+|Debug.StopDebugging|**SHIFT + F5** [Genel]|
+|Debug.ToggleBreakpoint|**F9** [Genel]|
 
 ## <a name="edit"></a>Düzenle
 
-|Komutlar|Klavye kısayolları [Bağlamlar]|
+|Komutlar|Klavye kısayolları [bağlamlar]|
 |--------------| - |
-|Edit.BreakLine|**Girin** [metin düzenleyici, Rapor Tasarımcısı, Windows Forms Tasarımcısı]<br /><br />veya **Shift + Enter** [metin düzenleyici]|
-|Edit.CollapseToDefinitions|**CTRL + M**, **Ctrl + O** [metin düzenleyici]|
-|Edit.CommentSelection|**CTRL + K**, **Ctrl + C** [metin düzenleyici]|
-|Edit.CompleteWord|**Alt + sağ ok** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />veya **Ctrl + Ara çubuğu** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />veya **Ctrl + K**, **W** [iş akışı Tasarımcısı]<br /><br />veya **Ctrl + K, Ctrl + W** [iş akışı Tasarımcısı]|
-|Edit.Copy|**CTRL + C** [genel]<br /><br />veya **Ctrl + INSERT** [genel]|
-|Edit.Cut|**CTRL + X** [genel]<br /><br />veya **Shift + Delete** [genel]|
-|Edit.Delete|**Silme** [genel, Ekip Gezgini]<br /><br />veya **Shift + Delete** [sıralı diyagram, UML etkinlik diyagramı, katman diyagramı]<br /><br />veya **Ctrl + Delete** [sınıf diyagramı]|
-|Edit.Find|**CTRL + F** [genel]|
-|Edit.FindAllReferences|**Shift + F12** [genel]|
-|Edit.FindinFiles|**CTRL + SHIFT + F** [genel]|
-|Edit.FindNext|**F3** [genel]|
-|Edit.FindNextSelected|**CTRL + F3** [genel]|
-|Edit.FormatDocument|**CTRL + K, Ctrl + D** [metin düzenleyici]|
-|Edit.FormatSelection|**CTRL + K, Ctrl + F** [metin düzenleyici]|
-|Edit.GoTo|**CTRL + g'tuşlarını** [genel]|
-|Edit.GoToDeclaration|**CTRL + F12** [genel]|
+|Edit.BreakLine|**ENTER** [metin düzenleyicisi, Rapor Tasarımcısı, Windows Form Tasarımcısı]<br /><br />veya **SHIFT + enter** [metin düzenleyici]|
+|Düzenle. CollapseToDefinitions|**CTRL + M**, **CTRL + O** [metin düzenleyici]|
+|Edit.CommentSelection|**CTRL + K**, **CTRL + C** [metin düzenleyici]|
+|Edit.CompleteWord|**Alt + sağ ok** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />veya **CTRL + Ara çubuğu** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K**, **W** [iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K, CTRL + W** [iş akışı Tasarımcısı]|
+|Edit.Copy|**CTRL + C** [Genel]<br /><br />veya **CTRL + INSERT** [Genel]|
+|Edit.Cut|**CTRL + X** [Genel]<br /><br />veya **SHIFT + DELETE** [Genel]|
+|Edit.Delete|**Sil** [genel, Takım Gezgini]<br /><br />veya **SHIFT + DELETE** [sıralı DIYAGRAM, UML etkinlik diyagramı, katman diyagramı]<br /><br />ya da **Ctrl + Delete** [sınıf diyagramı]|
+|Edit.Find|**CTRL + F** [Genel]|
+|Edit.FindAllReferences|**SHIFT + F12** [Genel]|
+|Edit.FindinFiles|**CTRL + SHIFT + F** [Genel]|
+|Edit.FindNext|**F3** [Genel]|
+|Edit.FindNextSelected|**CTRL + F3** [Genel]|
+|Edit.FormatDocument|**CTRL + K, CTRL + D** [metin düzenleyici]|
+|Edit.FormatSelection|**CTRL + K, CTRL + F** [metin düzenleyici]|
+|Edit.GoTo|**CTRL + G** [Genel]|
+|Edit.GoToDeclaration|**CTRL + F12** [Genel]|
 |Edit.GoToDefinition|**F12**|
-|Edit.GoToFindCombo|**CTRL + D** [genel]|
-|Edit.GoToNextLocation|**F8** [genel]|
-|Edit.InsertSnippet|**CTRL + K**, **Ctrl + X** [genel]|
+|Edit.GoToFindCombo|**CTRL + D** [Genel]|
+|Edit.GoToNextLocation|**F8** [Genel]|
+|Edit.InsertSnippet|**CTRL + K**, **CTRL + X** [Genel]|
 |Edit.InsertTab|**Sekme** [Rapor Tasarımcısı, Windows Form Tasarımcısı, metin düzenleyici]|
 |Edit.LineCut|**CTRL + L** [metin düzenleyici]|
-|Edit.LineDownExtendColumn|**Shift + Alt + Aşağı ok** [metin düzenleyici]|
-|Edit.LineOpenAbove|**Ctrl + Enter** [metin düzenleyici]|
-|Edit.ListMembers|**CTRL + J** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />veya **Ctrl + K, Ctrl + L** [iş akışı Tasarımcısı]<br /><br />veya **Ctrl + K, L** [iş akışı Tasarımcısı]|
-|Edit.NavigateTo|**CTRL +** [genel]|
-|Edit.OpenFile|**Ctrl + Shift + G** [genel]|
-|Edit.OvertypeMode|**INSERT** [metin düzenleyici]|
-|Edit.ParameterInfo|**Ctrl + Shift + Ara çubuğu** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />veya **Ctrl + K, Ctrl + P** [iş akışı Tasarımcısı]<br /><br />veya **Ctrl + K, P** [iş akışı Tasarımcısı]|
-|Edit.Paste|**CTRL + V** [genel]<br /><br />veya **SHIFT + INSERT** [genel]|
+|Edit.LineDownExtendColumn|**SHIFT + alt + aşağı ok** [metin düzenleyici]|
+|Edit.LineOpenAbove|**CTRL + ENTER** [metin düzenleyici]|
+|Edit.ListMembers|**CTRL + J** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K, CTRL + L** [iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K, L** [iş akışı Tasarımcısı]|
+|Edit.NavigateTo|**CTRL +,** [Genel]|
+|Edit.OpenFile|**CTRL + SHIFT + G** [Genel]|
+|Edit.OvertypeMode|**Ekle** [metin düzenleyici]|
+|Edit.ParameterInfo|**CTRL + SHIFT + ara çubuğu** [metin düzenleyici, iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K, CTRL + P** [iş akışı Tasarımcısı]<br /><br />ya da **CTRL + K, P** [iş akışı Tasarımcısı]|
+|Edit.Paste|**CTRL + V** [Genel]<br /><br />veya **SHIFT + INSERT** [Genel]|
 |Edit.PeekDefinition|**Alt + F12** [metin düzenleyici]|
-|Edit.Redo|**CTRL + Y** [genel]<br /><br />veya **SHIFT + Alt + Backspace** [genel]<br /><br />veya **Ctrl + Shift + Z** [genel]|
-|Edit.Replace|**CTRL + H** [genel]|
-|Edit.SelectAll|**CTRL + A** [genel]|
+|Edit.Redo|**CTRL + Y** [Genel]<br /><br />veya **SHIFT + alt + geri al** [Genel]<br /><br />ya da **CTRL + SHIFT + Z** [Genel]|
+|Edit.Replace|**CTRL + H** [Genel]|
+|Edit.SelectAll|**CTRL + A** [Genel]|
 |Edit.SelectCurrentWord|**CTRL + W** [metin düzenleyici]|
-|Edit.SelectionCancel|**ESC** [metin düzenleyici, Rapor Tasarımcısı, ayarlar Tasarımcısı, Windows Form Tasarımcısı, yönetilen kaynaklar düzenleyicisini]|
-|Edit.SurroundWith|**CTRL + K, Ctrl + S** [genel]|
-|Edit.TabLeft|**Shift + Sekme** [metin düzenleyici, Rapor Tasarımcısı, Windows Forms Düzenleyici]|
-|Edit.ToggleAllOutlining|**CTRL + M, Ctrl + L** [metin düzenleyici]|
-|Edit.ToggleBookmark|**CTRL + K, Ctrl + K** [metin düzenleyici]|
-|Edit.ToggleCompletionMode|**Ctrl + Alt + boşluk** [metin düzenleyici]|
-|Edit.ToggleOutliningExpansion|**CTRL + M, Ctrl + M** [metin düzenleyici]|
-|Edit.UncommentSelection|**CTRL + K, Ctrl + U** [metin düzenleyici]|
-|Edit.Undo|**CTRL + Z** [genel]<br /><br />veya **Alt + Backspace** [genel]|
-|Edit.WordDeleteToEnd|**CTRL + Delete** [metin düzenleyici]|
-|Edit.WordDeleteToStart|**CTRL + Backspace** [metin düzenleyici]|
+|Edit.SelectionCancel|**ESC** [metin düzenleyicisi, rapor Tasarımcısı, ayarlar tasarımcısı, Windows Form Tasarımcısı, yönetilen kaynaklar Düzenleyicisi]|
+|Edit.SurroundWith|**CTRL + K, CTRL + S** [Genel]|
+|Edit.TabLeft|**SHIFT + TAB** [metin düzenleyicisi, Rapor Tasarımcısı, Windows Forms Düzenleyicisi]|
+|Edit.ToggleAllOutlining|**CTRL + m, CTRL + L** [metin düzenleyici]|
+|Edit.ToggleBookmark|**Ctrl + k, Ctrl + k** [metin düzenleyici]|
+|Edit.ToggleCompletionMode|**Ctrl + Alt + ara çubuğu** [metin düzenleyici]|
+|Edit.ToggleOutliningExpansion|**CTRL + a, CTRL +** u [metin düzenleyici]|
+|Edit.UncommentSelection|**CTRL + K, CTRL + U** [metin düzenleyici]|
+|Edit.Undo|**CTRL + Z** [Genel]<br /><br />veya **alt + geri al** [Genel]|
+|Edit.WordDeleteToEnd|**Ctrl + Delete** [metin düzenleyici]|
+|Edit.WordDeleteToStart|**CTRL + geri al** [metin düzenleyici]|
 
 ## <a name="file"></a>Dosya
 
-|Komutlar|Klavye kısayolları [Bağlamlar]|
+|Komutlar|Klavye kısayolları [bağlamlar]|
 |--------------| - |
-|File.Exit|**Alt + F4** [genel]|
-|File.NewFile|**CTRL + N** [genel]|
-|File.NewProject|**Ctrl + Shift + N** [genel]|
-|File.NewWebSite|**Shift + Alt + N** [genel]|
-|File.OpenFile|**CTRL + O** [genel]|
-|File.OpenProject|**Ctrl + Shift + O** [genel]|
-|File.OpenWebSite|**Shift + Alt + O** [genel]|
-|File.Rename|**F2** [Ekip Gezgini]|
-|File.SaveAll|**Ctrl + Shift + S** [genel]|
-|File.SaveSelectedItems|**CTRL + S** [genel]|
-|File.ViewinBrowser|**Ctrl + Shift + W** [genel]|
+|File.Exit|**Alt + F4** [Genel]|
+|File.NewFile|**CTRL + N** [Genel]|
+|File.NewProject|**CTRL + SHIFT + N** [Genel]|
+|File.NewWebSite|**SHIFT + alt + N** [Genel]|
+|File.OpenFile|**CTRL + O** [Genel]|
+|File.OpenProject|**CTRL + SHIFT + O** [Genel]|
+|File.OpenWebSite|**SHIFT + alt + O** [Genel]|
+|File.Rename|**F2** [Takım Gezgini]|
+|File.SaveAll|**CTRL + SHIFT + S** [Genel]|
+|File.SaveSelectedItems|**CTRL + S** [Genel]|
+|File.ViewinBrowser|**CTRL + SHIFT + W** [Genel]|
 
-## <a name="project"></a>Proje
+## <a name="project"></a>Project
 
-|Komutlar|Klavye kısayolları [Bağlamlar]|
+|Komutlar|Klavye kısayolları [bağlamlar]|
 |--------------| - |
-|Project.AddExistingItem|**SHIFT + Alt + A** [genel]|
-|Project.AddNewItem|**Ctrl + Shift + A** [genel]|
+|Project.AddExistingItem|**SHIFT + alt + A** [Genel]|
+|Project.AddNewItem|**CTRL + SHIFT + A** [Genel]|
 
 ## <a name="refactor"></a>Yeniden Düzenleme (Refactor)
 
 |Komut|Klavye kısayolu [bağlam]|
 |-------------| - |
-|Refactor.ExtractMethod|**CTRL + R, Ctrl + M** [genel]|
+|Refactor.ExtractMethod|**CTRL + R, CTRL + M** [Genel]|
 
 ## <a name="tools"></a>Araçlar
 
 |Komut|Klavye kısayolu [bağlam]|
 |-------------| - |
-|Tools.AttachtoProcess|**Ctrl + Alt + P** [genel]|
+|Tools.AttachtoProcess|**Ctrl + Alt + P** [Genel]|
 
 ## <a name="view"></a>Görüntüle
 
-|Komutlar|Klavye kısayolları [Bağlamlar]|
+|Komutlar|Klavye kısayolları [bağlamlar]|
 |--------------| - |
-|View.ClassView|**Ctrl + Shift + C** [genel]|
-|View.EditLabel|**F2** [genel]|
-|View.ErrorList|**CTRL +\\, Ctrl + E** [genel]<br /><br />veya **Ctrl +\\, E** [genel]|
-|View.NavigateBackward|**CTRL +-** [genel]|
-|View.NavigateForward|**Ctrl + Shift +-** [genel]|
-|View.ObjectBrowser|**Ctrl + Alt + J** [genel]|
-|View.Output|**Ctrl + Alt + O** [genel]|
-|View.PropertiesWindow|**F4**|
-|View.Refresh|**F5** [Ekip Gezgini]|
-|View.ServerExplorer|**Ctrl + Alt + S** [genel]|
-|View.ShowSmartTag|**Ctrl+.** [Genel]<br /><br />veya **Shift + Alt + F10** [genel, HTML düzenleyicisi Tasarım görünümü]|
-|View.SolutionExplorer|**Ctrl + Alt + L** [genel]|
-|View.TfsTeamExplorer|**CTRL +\\, Ctrl + M** [genel]|
-|View.Toolbox|**Ctrl + Alt + X** [genel]|
-|View.ViewCode|**Girin** [sınıf diyagramı]<br /><br />veya **F7** [ayarlar Tasarımcısı]|
-|View.ViewDesigner|**Shift + F7** [HTML düzenleyicisi kaynak görünümü]|
+|View.ClassView|**CTRL + SHIFT + C** [Genel]|
+|View.EditLabel|**F2** [Genel]|
+|View.ErrorList|**CTRL + \\, CTRL + E** [Genel]<br /><br />ya da **CTRL + \\, E** [Genel]|
+|View.NavigateBackward|**CTRL +-** [Genel]|
+|View.NavigateForward|**CTRL + SHIFT +-** [Genel]|
+|View.ObjectBrowser|**Ctrl + Alt + J** [Genel]|
+|View.Output|**Ctrl + Alt + O** [Genel]|
+|View.PropertiesWindow|**Oluşturulurken**|
+|View.Refresh|**F5** [Takım Gezgini]|
+|View.ServerExplorer|**CTRL + ALT + S** [Genel]|
+|View.ShowSmartTag|**CTRL +.** [Genel]<br /><br />veya **SHIFT + alt + F10** [Genel, HTML Düzenleyicisi tasarım görünümü]|
+|View.SolutionExplorer|**CTRL + ALT + L** [Genel]|
+|View.TfsTeamExplorer|**CTRL + \\, CTRL + d** [Genel]|
+|View.Toolbox|**Ctrl + Alt + X** [Genel]|
+|View.ViewCode|**ENTER** [sınıf diyagramı]<br /><br />or **F7** [Ayarlar Tasarımcısı]|
+|View.ViewDesigner|**SHIFT + F7** [HTML düzenleyici kaynak görünümü]|
 
 ## <a name="window"></a>Pencere
 
-|Komutlar|Klavye kısayolları [Bağlamlar]|
+|Komutlar|Klavye kısayolları [bağlamlar]|
 |--------------| - |
-|Window.ActivateDocumentWindow|**ESC** [genel]|
-|Window.CloseDocumentWindow|**CTRL + F4** [genel]|
-|Window.NextDocumentWindow|**CTRL + F6** [genel]|
-|Window.NextDocumentWindowNav|**CTRL + SEKME** [genel]|
-|Window.NextSplitPane|**F6** [genel]|
+|Window.ActivateDocumentWindow|**ESC** [Genel]|
+|Window.CloseDocumentWindow|**CTRL + F4** [Genel]|
+|Window.NextDocumentWindow|**CTRL + F6** [Genel]|
+|Window.NextDocumentWindowNav|**CTRL + TAB** [Genel]|
+|Window.NextSplitPane|**F6** [Genel]|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanımlamak ve Visual Studio'daki klavye kısayollarını özelleştirme](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
-- [Tüm klavye kısayolları Visual Studio'da](default-keyboard-shortcuts-in-visual-studio.md)
+- [Visual Studio 'da klavye kısayollarını tanımla ve Özelleştir](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
+- [Visual Studio 'daki tüm klavye kısayolları](default-keyboard-shortcuts-in-visual-studio.md)

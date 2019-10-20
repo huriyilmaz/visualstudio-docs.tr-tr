@@ -1,26 +1,26 @@
 ---
-title: Visual Studio mimari araç kullanımı yönergesi | Microsoft Docs
+title: Visual Studio mimarisi araç Kılavuzu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: fce6b398-935e-4241-bdf4-875d09ff57c7
 caps.latest.revision: 12
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d23afb98b1818f4f7320041f202857e61873975a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b7c34e9cae335af12f59e6c25d5fb3c24e5c1749
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68200553"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659351"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Visual Studio Mimari Araç Kullanımı Kılavuzu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu mimari araç kullanımı yönergesi, Visual Studio 2010 modelleme araçlarının kullanımıyla ilgili faydalı yönergeler içeren indirilebilir bir pakettir. Tüm modelleme araçlarının tümleşik bir şekilde kullanma üst düzey bir görünümünü sunar ve araçları kullanılan en yaygın senaryoları açıklar.  
-  
- İçeriği tarafından oluşturulan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ALM Rangers üyelere sahip özel bir grup [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ürün ekibi, Microsoft Services, Microsoft'un en değerli uzmanları (MVP) ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] topluluk yol açar.  
-  
- [Mimari Araç kullanımı yönergesi indirmek için buraya tıklayın. ](http://go.microsoft.com/fwlink/?LinkID=191984).
+Bu mimari araç araçları, Visual Studio 2010 ' de modelleme araçlarının kullanımı ile ilgili pratik yönergelerin indirilebileceğine dair bir pakettir. Tüm modelleme araçlarının tümleşik bir şekilde nasıl kullanılacağına ilişkin üst düzey bir görünüm sunar ve araçların kullanıldığı en yaygın senaryoları açıklar.
+
+ İçerik, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ürün ekibinin, Microsoft hizmetlerinin, Microsoft en değerli profesyonellerin (MVP) ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] topluluk liderlerinden üyelere sahip olan özel bir grup olan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ALM Ranger tarafından oluşturulmuştur.
+
+ [Mimari araç kılavuzunu indirmek için buraya tıklayın.](http://go.microsoft.com/fwlink/?LinkID=191984)

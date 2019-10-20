@@ -1,5 +1,5 @@
 ---
-title: İş Akışı Tasarımcısı - FlowSwitch<T> etkinlik Tasarımcısı
+title: İş Akışı Tasarımcısı-FlowSwitch <T> etkinlik Tasarımcısı
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,43 +8,43 @@ f1_keywords:
 - System.Activities.Core.Presentation.FlowSwitchLink`1.UI
 - System.Activities.Core.Presentation.FlowSwitchLinkIdentifier.UI
 ms.assetid: 5b9c5afe-7499-4ee8-8c33-28aff14bde07
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3f6d396acb62b9cac8f34ef106ac96257eec612
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f167f46a2ed118e8781f66e4a781d4a3ef95b0d6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949636"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650401"
 ---
-# <a name="flowswitcht-activity-designer"></a>FlowSwitch\<T > etkinlik Tasarımcısı
+# <a name="flowswitcht-activity-designer"></a>FlowSwitch \<T > etkinlik Tasarımcısı
 
-<xref:System.Activities.Statements.FlowSwitch%601> Dallanma ikiden fazla alternatif dalları gerekli olduğunda eşleştirme ölçütü temel alan denetim akışı için sağlayan bir koşullu düğüm bir etkinliktir. Akış dallanma yalnızca iki yolu gerektiriyorsa, kullanın <xref:System.Activities.Statements.FlowDecision> etkinliği bunun yerine.
+@No__t_0 etkinliği, ikiden fazla alternatif dal gerektiğinde, eşleşme ölçütüne göre denetim akışı için dallandırma sağlayan koşullu bir düğümdür. Akış dallandırma yalnızca iki yol gerektiriyorsa, bunun yerine <xref:System.Activities.Statements.FlowDecision> etkinliğini kullanın.
 
-## <a name="the-flowswitcht-activity"></a>FlowSwitch\<T > etkinliği
+## <a name="the-flowswitcht-activity"></a>FlowSwitch \<T > etkinliği
 
-<xref:System.Activities.Statements.FlowSwitch%601> Etkinliği içeren bir <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> türünde bir değer döndüren *T* (genel parametre tarafından belirtilen) değerlendirildiğinde. Etkinliği de bir dizi içeren <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>, bir dizi benzersiz bir eşleme bu değerlendirmeyi mümkün sonuçlarından belirtir <xref:System.Activities.Statements.FlowNode> nesneleri. <xref:System.Activities.Statements.FlowNode> Yürütülen bir olan nesnenin türü olan *T* değerlendirilen değeri ile eşleşen <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>. A <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> çalışması eşleşme alınır durum (isteğe bağlı olarak) sağlanabilir.
+@No__t_0 etkinliği, değerlendirildiğinde *t* türünde bir değer döndüren bir <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> içerir (genel parametresiyle belirtilir). Etkinlik Ayrıca, bu değerlendirmenin olası sonuçlarından bir dizi <xref:System.Activities.Statements.FlowNode> nesneye benzersiz bir eşleme belirten <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> bir kümesini içerir. Yürütülen <xref:System.Activities.Statements.FlowNode>, nesne türü *t* , değerlendirilen <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> değeriyle eşleşen bir nesnedir. Bir <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> durumu (isteğe bağlı olarak), hiçbir eşleşme alınmadıysa durum için sağlanır.
 
-### <a name="using-the-flowswitcht-activity-designer"></a>FlowSwitch kullanarak\<T > etkinlik Tasarımcısı
+### <a name="using-the-flowswitcht-activity-designer"></a>FlowSwitch \<T > etkinlik tasarımcısını kullanma
 
-**FlowSwitch\<T >** etkinlik Tasarımcısı bulunabilir **akış** kategorisi **araç kutusu**, hangi erişilen tıklayarak**Araç kutusu** iş akışı Tasarımcısı'nın sol tarafındaki sekmesi. Alternatif olarak, seçin **araç kutusu** gelen **görünümü** tuşuna basın veya menü **Ctrl**+**Alt** + **X**.
+**FlowSwitch \<T >** etkinlik tasarımcısı, iş akışı Tasarımcısı 'nin sol tarafındaki **araç kutusu** sekmesine tıklanarak erişilen, **araç çubuğu** **kategorisinde bulunabilir** . Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** +**alt** +**X**tuşuna basın.
 
-**FlowSwitch\<T >** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve iş akışı Tasarımcısı yüzeyine içinde açın bırakılan bir **akış** Etkinlik Tasarımcısı. Kullanım **türleri seçin** türü belirtmek için görüntüleyen pencere (kod ile ilişkili <xref:System.Activities.Statements.FlowSwitch%601> genel parametresi tarafından) hesaplanmasının elde <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>. Bu yordam oluşturur bir <xref:System.Activities.Statements.FlowSwitch%601> etiketli etkinlik **anahtar** içinde <xref:System.Activities.Statements.Flowchart> etkinlik. <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> Yazılabilir **ifade** kutusunun **özellikleri** tıklayarak penceresi ipucu metnini burada Yazan "VB ifadesi girin".
+**FlowSwitch \<T >** etkinlik Tasarımcısı **araç kutusundan** sürüklenip bir **akış çizelgesi** etkinlik Tasarımcısı içindeki iş akışı Tasarımcısı yüzeyine bırakılabilir. @No__t_2 değerlendirmeden elde edilen türü belirtmek için görüntülenen **türleri Seç** penceresini kullanın (genel parametresine göre <xref:System.Activities.Statements.FlowSwitch%601> ile ilişkilidir). Bu yordam, <xref:System.Activities.Statements.Flowchart> etkinliğinde **anahtar** etiketli <xref:System.Activities.Statements.FlowSwitch%601> bir etkinlik oluşturur. @No__t_0, ipucu metninin "VB ifadesi gir" olarak tıklanarak **Özellikler** penceresinin **ifade** kutusuna yazılabilir.
 
-Fare üzerindeyken **FlowSwitch\<T >** bağlantı için kullanılan kare tutamaçları neden etkinlik Tasarımcısı <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> kenarlarını geçici bir çözüm bulmak görüntülenmesini. Sürükleme sonra **FlowSwitch < T\>**  etkinlik Tasarımcısı ve diğer etkinlik tasarımcıları üzerine **akış**, <xref:System.Activities.Activity> temsil ettikleri nesneler birbirine bağlı hazır Yürütme sırası belirtmek için. Birini <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> ilişkili <xref:System.Activities.Statements.FlowSwitch%601>, çevre kare büyük/küçük harf tutamaçlardan birini tıklatın **FlowSwitch < T\>**  ve (fare düğmesini basılı tutarak) tutamaçlarından birinin sürükleyin İş Tasarımcısı fare geldiğinde hedef etkinlik etrafında benzer şekilde görünür. Sürüm fare düğmesini ve bir ok **FlowSwitch < T\>**  bu durumda temsil eden hedef tasarımcıya görünür. Varsayılan değer, bu durumda bulunan oka görüntüler ve içinde düzenlenebilir **çalışması** kutusunun **özellikleri** penceresi.
+**@No__t_1T >** etkinlik Tasarımcısı üzerinde fare, <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> bağlantı kurmak için kullanılan kare tutamaçlarının kenarları etrafında görünmesini sağlamak için. **FlowSwitch < T \>** etkinlik Tasarımcısı ve diğer etkinlik tasarımcılarını **Akış Çizelgesine**sürükledikten sonra temsil ettikleri <xref:System.Activities.Activity> nesneleri, yürütme sırasını belirtmek için birlikte bağlanmaya hazırlardır. @No__t_1 ilişkili <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> birini oluşturmak için, **akışların FlowSwitch < t \>** çevresi üzerinde yer alan ve sürükleyin (fare düğmesini basılı tutarak), benzer bir şekilde görünen tanıtıcıların birine fare tasarımcısının üzerine geldiğinde hedef etkinlik. Fare düğmesini ve **FlowSwitch < T \>** , bu durumu temsil eden hedef tasarlayıcısından bir ok olarak bırakın. Bu örnek için varsayılan değer ok üzerinde görüntülenir ve **Özellikler** penceresinin **durum** kutusunda düzenlenebilir.
 
-### <a name="the-flowswitcht-properties"></a>FlowSwitch\<T > Özellikleri
+### <a name="the-flowswitcht-properties"></a>FlowSwitch \<T > Özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.FlowSwitch%601> özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, özellik kılavuzunda veya tasarımcı yüzeyinde düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Statements.FlowSwitch%601> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, özellik kılavuzunda veya tasarımcı yüzeyinde düzenlenebilir.
 
-|Özellik Adı|Gerekli|Kullanım|
+|Özellik adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>|Doğru|Hangi belirlemek için değerlendirilen bir ifade belirtir <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> yolu yürütme penceresine geçin.|
-|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|False|Hesaplanmasının elde edilen olası sonuçları benzersiz bir eşlemeyi belirtir <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> bir dizi <xref:System.Activities.Statements.FlowNode> nesneleri.|
-|<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|Doğru|Eşleme belirtir, değerlendirmesi <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> yer alan değerlerden eşleşmiyor <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> nesne.|
+|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>|Doğru|Yürütmenin yolunda ne <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> hangilerinin ekleneceğini belirlemekte değerlendirilen ifadeyi belirtir.|
+|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|False|@No__t_0 bir <xref:System.Activities.Statements.FlowNode> nesne kümesine değerlendirilmeden elde edilen olası sonuçlardan benzersiz bir eşleme belirtir.|
+|<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|Doğru|@No__t_0 değerlendirmesi <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> nesnesinde bulunan değerlerden biriyle eşleşmezse eşlemeyi belirtir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

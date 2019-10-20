@@ -5,19 +5,19 @@ ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.selecttfsruleset
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a35ba1b9d54507883882fbe62c0533805882560
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: fe6e9e49998c3e98335cd7e873d53531c8bfa99a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975055"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649378"
 ---
-# <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Nasıl yapılır: Kod proje kural kümelerini bir Azure DevOps projesi Iade Ilkesiyle eşitler
+# <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Nasıl yapılır: Azure DevOps projesi Iade Ilkesiyle kod proje kural kümelerini senkronize etme
 
 Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kural kümesinde belirtilen kuralları içeren bir kural kümesi belirterek Azure DevOps projesi için iade etme ilkesiyle eşitlerseniz. Geliştirici liderinize, iade ilkesi için kural kümesinin adı ve konumu hakkında bilgi alabilirsiniz. Proje için kod analizinin doğru kural kümesini kullandığından emin olmak için aşağıdaki seçeneklerden birini kullanabilirsiniz:
 
@@ -31,7 +31,7 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>Bir Microsoft standart kural kümesi belirtmek için
 
-1. İçinde **Çözüm Gezgini**kod projesine sağ tıklayın ve ardından **özellikleri**.
+1. **Çözüm Gezgini**, kod projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
 2. **Kod Analizi**' ne tıklayın.
 
@@ -51,7 +51,7 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 1. Gerekirse, iade ilkesini belirten kural kümesi dosyasında bir get işlemi gerçekleştirin.
 
-2. İçinde **Çözüm Gezgini**kod projesine sağ tıklayın ve ardından **özellikleri**.
+2. **Çözüm Gezgini**, kod projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
 3. **Kod Analizi**' ne tıklayın.
 
@@ -63,7 +63,7 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 ::: moniker range=">=vs-2019"
 
-4. **Etkin kurallar** listesinde **\<zat >** ' a tıklayın.
+4. **Etkin kurallar** listesinde **\<Browse >** ' ne tıklayın.
 
 ::: moniker-end
 

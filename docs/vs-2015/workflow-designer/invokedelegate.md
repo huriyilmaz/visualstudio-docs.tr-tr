@@ -10,38 +10,38 @@ f1_keywords:
 ms.assetid: 289a7498-5127-453f-beb5-05f05b80d26f
 caps.latest.revision: 3
 author: steved0x
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 30281d8cd5d5ed94ed89a980006f9618292a778d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fc35aec714255b467431488936605fb37009db9d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951976"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659011"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 
-**InvokeDelegate** Tasarımcısı oluşturmak ve yapılandırmak için kullanılan bir <xref:System.Activities.Statements.InvokeDelegate> etkinlik.
+**InvokeDelegate** Tasarımcısı, bir <xref:System.Activities.Statements.InvokeDelegate> etkinliği oluşturmak ve yapılandırmak için kullanılır.
 
 ## <a name="the-invokedelegate-activity"></a>InvokeDelegate etkinliği
 
-<xref:System.Activities.Statements.InvokeDelegate> Genel temsilcisini çağırır.
+@No__t_0 ortak bir temsilciyi çağırır.
 
-### <a name="using-the-invokedelegate-activity-designer"></a>InvokeDelegate etkinlik Tasarımcısını kullanma
+### <a name="using-the-invokedelegate-activity-designer"></a>InvokeDelegate etkinlik tasarımcısını kullanma
 
-**InvokeDelegate** etkinlik Tasarımcısı bulunabilir **Temelleri** kategorisi **araç kutusu**, hangi erişilen tıklayarak **araçkutusu** sekmesini [!INCLUDE[wfd2](../includes/wfd2-md.md)] (Alternatif olarak, seçin **araç** gelen **görünümü** menü veya CRTL + ALT + X.)
+**InvokeDelegate** etkinlik Tasarımcısı, **araç kutusu [!INCLUDE[wfd2](../includes/wfd2-md.md)]** **sekmesine (alternatif olarak,** **Görünüm** menüsünden **araç çubuğu** ' nu seçin veya CRTL + ALT + X.)
 
-**InvokeDelegate** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve oturum bırakılan [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzey nerede hiç etkinlikleri genellikle yerleştirilir, gibi olarak içinde bir <xref:System.Activities.Statements.Sequence>. Bu, oluşturur bir <xref:System.Activities.Statements.InvokeDelegate> etkinliği ile bir varsayılan <xref:System.Activities.Activity.DisplayName%2A> InvokeDelegate biri. <xref:System.Activities.Activity.DisplayName%2A> Üst bilgisinde düzenlenebilir **InvokeDelegate** etkinlik Tasarımcısı veya **DisplayName** özellik kılavuzunda kutusu.
+**InvokeDelegate** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, bir <xref:System.Activities.Statements.Sequence> içinde olduğu gibi, her zaman etkinliklerin genellikle yerleştirildiği [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzeyine bırakılabilir. Bu, InvokeDelegate 'in varsayılan <xref:System.Activities.Activity.DisplayName%2A> bir <xref:System.Activities.Statements.InvokeDelegate> etkinliği oluşturur. @No__t_0, **InvokeDelegate** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-invokedelegate-properties"></a>InvokeDelegate özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.InvokeDelegate> özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, özellik kılavuzunda düzenlenebilir ve bazı şirket düzenlenebilir [!INCLUDE[wfd2](../includes/wfd2-md.md)]Tasarımcı yüzeyine bırakın.
+Aşağıdaki tabloda <xref:System.Activities.Statements.InvokeDelegate> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları [!INCLUDE[wfd2](../includes/wfd2-md.md)]designer yüzeyinde düzenlenebilirler.
 
-|Özellik Adı|Gerekli|Kullanım|
+|Özellik adı|Gerekli|Kullanım|
 |-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Kolay adı <xref:System.Activities.Statements.InvokeDelegate> etkinlik. InvokeDelegate varsayılan değerdir.<br /><br /> Ancak <xref:System.Activities.Activity.DisplayName%2A> kati şekilde gerekli değil kullanmak için en iyi bir uygulamadır.|
-|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|Doğru|Adını <xref:System.Activities.ActivityDelegate> etkinlik yürütüldüğünde çağrılabilir. Bu özellik, Tasarımcı yüzeyinde düzenlenebilir. Bu zorunlu bir özelliğidir.|
-|<<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|Çağrılan temsilci bağımsız değişken koleksiyonu. Anahtarları adlarıdır <xref:System.Activities.DelegateArgument> üzerindeki nesneleri <xref:System.Activities.ActivityDelegate> ve bağımsız değişkenler, ifadeler değerlendirilir ve karşılık gelen atanan değerler <xref:System.Activities.DelegateArgument> nesneleri. Özellik kılavuzunda, üç nokta düğmesini **DelegateArguments** alanını görüntüler **DelegateArguments** iletişim, bu özelliği ayarlayabilirsiniz. Tıklayın **bağımsız değişken oluşturma** bağımsız değişkenleri eklemek için alan.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin kolay adı. Varsayılan değer InvokeDelegate ' dir.<br /><br /> @No__t_0 kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|Doğru|Etkinlik yürütüldüğünde çağrılacak <xref:System.Activities.ActivityDelegate> adı. Bu özellik, tasarımcı yüzeyinde düzenlenebilir. Bu zorunlu bir özelliktir.|
+|<<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|Çağrılan temsilcinin bağımsız değişken koleksiyonu. Anahtarlar, <xref:System.Activities.ActivityDelegate> <xref:System.Activities.DelegateArgument> nesnelerinin adlarıdır ve değerler, ifadeleri değerlendirilen ve karşılık gelen <xref:System.Activities.DelegateArgument> nesnelerine atanan bağımsız değişkenlerdir. Özellik kılavuzunda, **DelegateArguments** alanındaki üç nokta düğmesine tıklayın, bu özelliği ayarlamanıza olanak sağlamak Için **DelegateArguments** iletişim kutusu görüntülenir. Bağımsız değişkenleri eklemek için **bağımsız değişken Oluştur** alanına tıklayın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

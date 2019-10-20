@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 342a27571c9ad7b6ed1586fc762b2952ba86c3db
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
-ms.translationtype: HT
+ms.openlocfilehash: 64edeb6d6180907e6b1aa07fd5d443e8523c10b1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72575155"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647467"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>7\. Adım: çarpma ve bölme sorunları ekleme
 
@@ -64,6 +64,6 @@ Bu öğreticinin yedinci kısmında çarpma ve bölme sorunları ekleyeceksiniz,
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına geçmek için, bkz. **[8. Adım: sınavları özelleştirme](../ide/step-8-customize-the-quiz.md)** .
+- Sonraki öğretici adımına geçmek için, bkz. **[8. Adım: testi özelleştirme](../ide/step-8-customize-the-quiz.md)** .
 
 - Önceki öğretici adımına dönmek için bkz. 6. [Adım: çıkarma sorunu ekleme](../ide/step-6-add-a-subtraction-problem.md).

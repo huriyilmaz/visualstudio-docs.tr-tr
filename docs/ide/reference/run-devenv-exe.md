@@ -10,21 +10,21 @@ helpviewer_keywords:
 - Devenv, /Run switch
 - R Devenv switch (/R)
 ms.assetid: b1f22f9d-39a5-4918-8a2a-4b5c1e872665
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22c56e3dc4272fd927cc060f5a5a9972e5b8e6ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1797a9731db63999188f05c603cbd83ed0079ac1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945522"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655534"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 
-Derler ve belirtilen proje veya çözüm çalıştırır.
+Belirtilen proje veya çözümü derler ve çalıştırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,27 +36,27 @@ devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 
 - *SolutionName*
 
-  Bir çözüm dosyası adını ve tam yolu.
+  Bir çözüm dosyasının tam yolu ve adı.
 
-- *projectName*
+- *ProjectName*
 
-  Bir proje dosyasının adını ve tam yolu.
+  Bir proje dosyasının tam yolu ve adı.
 
-- `/Out` *OutputFilename*
+- `/Out` *outputFilename*
 
-  İsteğe bağlı. Aracı göndermek istediğiniz bir dosya adı için çıkış. Dosya zaten varsa, aracı çıkış dosyasının sonuna ekler.
+  İsteğe bağlı. Aracın çıkışını göndermek istediğiniz dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Derler ve belirtilen proje veya çözümü etkin çözüm yapılandırması için belirtilen ayarlara göre çalıştırır. Bu anahtar IDE'yi başlatır ve sonra proje etkin bırakan veya çözüm çalıştırma tamamlandı.
+Belirtilen proje veya çözümü, etkin çözüm yapılandırması için belirtilen ayarlara göre derler ve çalıştırır. Bu anahtar, IDE 'yi başlatır ve proje veya çözüm çalışmayı tamamladıktan sonra etkin bırakır.
 
-- Çift tırnak içine boşluk dizeleri alın.
+- Boşluk içeren dizeleri çift tırnak işaretleri içine alın.
 
-- Hataları dahil olmak üzere Özet bilgileri görüntülenebilir **komut** penceresinde veya belirtilen herhangi bir günlük dosyasını `/Out` geçin.
+- Hatalar da dahil olmak üzere Özet bilgiler, **komut** penceresinde veya `/Out` anahtarıyla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek çözüm çalıştırılır `MySolution` kullanarak etkin dağıtım yapılandırması.
+Bu örnek, etkin dağıtım yapılandırmasını kullanarak `MySolution` çözümünü çalıştırır.
 
 ```shell
 devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
@@ -65,7 +65,7 @@ devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 ## <a name="see-also"></a>Ayrıca Bkz.
 
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
-- [/ Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)
-- [/ Derleme (devenv.exe)](../../ide/reference/build-devenv-exe.md)
-- [/ Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
-- [/ (Devenv.exe out)](../../ide/reference/out-devenv-exe.md)
+- [/Runexit (devenv. exe)](../../ide/reference/runexit-devenv-exe.md)
+- [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md)
+- [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Out (devenv. exe)](../../ide/reference/out-devenv-exe.md)

@@ -1,93 +1,93 @@
 ---
-title: Birim testlerini .NET Framework'ün önceki sürümünü hedefleyecek
+title: Birim testleri .NET Framework önceki sürümünü hedefleyin
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-author: gewarren
-ms.openlocfilehash: 0d77bd4fa5a1797b5e405c0b1af12cd1c24b18f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: 32f34eb9af74f8db06cfc6910db83806383ae3be
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979398"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72643616"
 ---
-# <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Nasıl yapılır: Birim testlerini .NET Framework'ün önceki sürümünü hedefleyecek şekilde yapılandırma
+# <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Nasıl yapılır: birim testlerini .NET Framework önceki bir sürümünü hedeflemek için yapılandırma
 
-Microsoft Visual Studio ile bir test projesi oluşturduğunuzda, .NET Framework'ün en son sürümü ve hedef olarak varsayılan olarak ayarlanır. Test projeleri Visual Studio'nun önceki sürümlerinden yükseltiyorsanız, ayrıca, bunlar .NET Framework'ün en son sürümünü hedefleyecek şekilde yükseltilir. Proje özelliklerini düzenleyerek, açıkça projenin .NET Framework'ün önceki sürümleri için yeniden hedefleyebilirsiniz.
+Microsoft Visual Studio ' de bir test projesi oluşturduğunuzda, varsayılan olarak .NET Framework en son sürümü hedef olarak ayarlanır. Ayrıca, Visual Studio 'nun önceki sürümlerinden test projelerini yükseltirseniz, .NET Framework en son sürümünü hedeflemek üzere yükseltilir. Proje özelliklerini düzenleyerek, projeyi .NET Framework önceki sürümlerine açık bir şekilde yeniden hedefleyebilirsiniz.
 
-.NET Framework'ün belirli sürümlerini hedefleyen bir test projeleri birim oluşturabilirsiniz. Hedeflenen sürüm 3.5 veya sonraki sürümler olmalıdır ve bir istemci sürümü olamaz. Visual Studio, belirli sürümlerini hedefleyen birim testleri için aşağıdaki temel destek sağlar:
+.NET Framework belirli sürümlerini hedefleyen birim testi projeleri oluşturabilirsiniz. Hedeflenen sürüm 3,5 veya üzeri olmalıdır ve istemci sürümü olamaz. Visual Studio, belirli sürümleri hedefleyen birim testleri için aşağıdaki temel desteği sunar:
 
-- Birim test projesi oluşturmak ve bunları belirli bir .NET Framework sürümünü hedef.
+- Birim testi projeleri oluşturabilir ve bunları .NET Framework belirli bir sürümüne hedefleyebilirsiniz.
 
-- Birim testleri belirli bir .NET Framework sürümünü hedefleyen yerel makinenizde Visual Studio'dan çalıştırabilirsiniz.
+- Yerel makinenizde Visual Studio 'dan belirli bir .NET Framework sürümünü hedefleyen birim testlerini çalıştırabilirsiniz.
 
-- Hedef .NET Framework'ün belirli bir sürümü kullanarak birim testlerini çalıştırabilirsiniz *MSTest.exe* komut isteminden.
+- Komut isteminden *MSTest. exe* ' yi kullanarak .NET Framework belirli bir sürümünü hedefleyen birim testlerini çalıştırabilirsiniz.
 
-- Birim Testleri yapının bir parçası olarak bir yapı aracısında çalıştırabilirsiniz.
+- Yapı aracısında bir derleme parçası olarak birim testlerini çalıştırabilirsiniz.
 
 **SharePoint uygulamalarını test etme**
 
-Yukarıda listelenen özellikleri de birim testleri yazma ve Visual Studio kullanarak SharePoint uygulamaları için tümleştirme testleri sağlar. Visual Studio kullanarak SharePoint uygulamaları geliştirme hakkında daha fazla bilgi için bkz. [oluşturma SharePoint çözümleri](../sharepoint/create-sharepoint-solutions.md), [oluşturun ve SharePoint çözümlerinde hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md) ve [doğrulayın ve hata ayıklama SharePoint kodunu](../sharepoint/verifying-and-debugging-sharepoint-code.md).
+Yukarıda listelenen yetenekler, Visual Studio kullanarak SharePoint uygulamaları için birim testleri ve tümleştirme testleri yazmanızı de sağlar. Visual Studio kullanarak SharePoint uygulamaları geliştirme hakkında daha fazla bilgi için bkz. SharePoint [çözümleri oluşturma](../sharepoint/create-sharepoint-solutions.md), [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md) ve [SharePoint kodunu doğrulama ve hata ayıklama](../sharepoint/verifying-and-debugging-sharepoint-code.md).
 
 **Sınırlamalar**
 
-.NET Framework'ün önceki sürümlerini kullanmak için test projelerinizi yeniden hedeflediğinizde aşağıdaki sınırlamalar geçerlidir:
+.NET Framework önceki sürümlerini kullanmak için test projelerinizi yeniden hedeflediğinizde aşağıdaki sınırlamalar geçerlidir:
 
-- .NET Framework 3.5, çoklu sürüm desteği yalnızca birim testleri içeren test projeleri için desteklenir. .NET Framework 3.5, kodlanmış kullanıcı Arabirimi veya yük testi gibi diğer test türlerini desteklemez. Yeniden hedefleme, birim testleri dışında test türleri için engellenir.
+- .NET Framework 3,5 ' de, Çoklu hedefleme yalnızca birim testleri içeren test projeleri için desteklenir. .NET Framework 3,5, kodlanmış UI veya yük testi gibi başka herhangi bir test türünü desteklemez. Yeniden hedefleme, birim testi dışındaki test türleri için engellenir.
 
-- .NET Framework'ün önceki bir sürümde hedeflenen Test yürütme, yalnızca varsayılan ana bilgisayar bağdaştırıcısında desteklenir. ASP.NET ana bilgisayar bağdaştırıcısında desteklenmiyor. ASP.NET Geliştirme Sunucusu bağlamında çalışacak şekilde ASP.NET uygulamaları .NET Framework'ün geçerli sürümüyle uyumlu olması gerekir.
+- .NET Framework önceki bir sürümünü hedefleyen testlerin yürütülmesi yalnızca varsayılan ana bilgisayar bağdaştırıcısında desteklenir. ASP.NET ana bilgisayar bağdaştırıcısında desteklenmez. ASP.NET Development Server bağlamında çalıştırılması gereken ASP.NET uygulamaları .NET Framework geçerli sürümüyle uyumlu olmalıdır.
 
-- .NET Framework 3.5 çoklu hedefleme desteği testleri çalıştırırken veri koleksiyonu desteği devre dışı bırakıldı. Visual Studio komut satırı araçlarını kullanarak kod kapsamı çalıştırabilirsiniz.
+- .NET Framework 3,5 Çoklu hedefleme desteği olan testler çalıştırdığınızda veri toplama desteği devre dışıdır. Visual Studio komut satırı araçlarını kullanarak kod kapsamını çalıştırabilirsiniz.
 
-- Uzak makinede .NET Framework 3.5 kullanan birim testleri çalıştıramazsınız.
+- .NET Framework 3,5 kullanan birim testleri uzak makinede çalıştırılamaz.
 
-- Birim testleri için framework'ün önceki istemci sürümlerini hedefleyemez.
+- Birim testlerini Framework 'ün önceki istemci sürümlerine hedeflenemez.
 
 ## <a name="retargeting-for-visual-basic-unit-test-projects"></a>Visual Basic birim testi projeleri için yeniden hedefleme
 
-1. Yeni bir Visual Basic Oluştur **birim testi projesi** proje.
+1. Yeni bir Visual Basic **birim testi proje** projesi oluşturun.
 
-2. İçinde **Çözüm Gezgini**, seçin **özellikleri** sağ tıklama menüsünden Yeni bir Visual Basic test projesi.
+2. **Çözüm Gezgini**' de, yeni Visual Basic test projesinin sağ tıklama menüsünden **Özellikler** ' i seçin.
 
-     Visual Basic test projeniz için özellikleri görüntülenir.
+     Visual Basic test projenizin özellikleri görüntülenir.
 
-3. Üzerinde **derleme** sekmesini, **Gelişmiş derleme seçenekleri** aşağıdaki çizimde gösterildiği gibi.
+3. **Derle** sekmesinde, aşağıdaki çizimde gösterildiği gibi **Gelişmiş derleme seçenekleri** ' ni seçin.
 
      ![Gelişmiş derleme seçenekleri](../test/media/howtoconfigureunittest35frameworka.png)
 
-4. Kullanım **hedef Framework'ü (tüm yapılandırmaları)** için hedef Framework'ü değiştirmek için açılır listede **.NET Framework 3.5** veya sonraki bir sürümünü belirtme çizgisi B aşağıdaki resimde gösterildiği gibi. Bir istemci sürümü belirtilmemelidir.
+4. Hedef Framework 'ü **.NET Framework 3,5** veya sonraki bir sürümü, aşağıdaki çizimde yer alarak B çağrısında gösterildiği gibi değiştirmek için **hedef Framework (tüm yapılandırma)** açılan listesini kullanın. İstemci sürümü belirtmemelisiniz.
 
-     ![Hedef framework bırakma&#45;açılan listesinde](../test/media/howtoconfigureunitest35frameworkstepb.png)
+     ![Hedef çerçeve açılan&#45;listesi](../test/media/howtoconfigureunitest35frameworkstepb.png)
 
-## <a name="retargeting-for-c-unit-test-projects"></a>İçin yeniden hedefleme C# birim testi projeleri
+## <a name="retargeting-for-c-unit-test-projects"></a>Birim testi projeleri C# için yeniden hedefleme
 
-1. Yeni bir C# **birim testi projesi** proje.
+1. Yeni C# bir **birim testi proje** projesi oluşturun.
 
-2. İçinde **Çözüm Gezgini**, seçin **özellikleri** yeni sağ tıklama menüsünden C# test projesi.
+2. **Çözüm Gezgini**' de, yeni C# test projenizin sağ tıklama menüsünden Özellikler ' i seçin.
 
-   Özellikleri, C# test projesi görüntülenir.
+   C# Test projenizin özellikleri görüntülenir.
 
-3. Üzerinde **uygulama** sekmesini, **hedef Framework'ü**. Aşağı açılan listeden seçin **.NET Framework 3.5** veya aşağıdaki çizimde gösterildiği gibi sonraki bir sürümü. Bir istemci sürümü belirtilmemelidir.
+3. **Uygulama** sekmesinde **hedef çerçeve**' yi seçin. Aşağı açılan listeden, aşağıdaki çizimde gösterildiği gibi **.NET Framework 3,5** veya sonraki bir sürümü seçin. İstemci sürümü belirtmemelisiniz.
 
-   ![Hedef framework bırakma&#45;açılan listesinde](../test/media/howtoconfigureunittest35frameworkcsharp.png)
+   ![Hedef çerçeve açılan&#45;listesi](../test/media/howtoconfigureunittest35frameworkcsharp.png)
 
-## <a name="retargeting-for-ccli-unit-test-projects"></a>İçin yeniden hedefleme C++/CLI birim testi projeleri
+## <a name="retargeting-for-ccli-unit-test-projects"></a>/CLI birim testi C++projeleri için yeniden hedefleme
 
-1. Yeni bir C++ oluşturma **birim testi projesi** proje.
+1. Yeni C++ bir **birim testi proje** projesi oluşturun.
 
    > [!WARNING]
-   > İçin derleme C + +/ CLI birim testlerini .NET framework'ün önceki bir sürümü için Visual C++ için ilgili Visual Studio sürümünü kullanmanız gerekir.
+   > Visual C++Studio C++için .NET Framework 'ün önceki bir sürümü için/CLI birim testlerini derlemek için, Visual Studio 'nun karşılık gelen sürümünü kullanmanız gerekir.
 
-2. İçinde **Çözüm Gezgini**, seçin **projeyi** yeni C++ test projenizden.
+2. **Çözüm Gezgini**, yeni C++ test projenizden **Projeyi Kaldır** ' ı seçin.
 
-3. İçinde **Çözüm Gezgini**, kaldırılan C++ test projesi seçin ve ardından **Düzenle \<proje adı > .vcxproj**.
+3. **Çözüm Gezgini**, yüklenmeyen C++ test projesini seçin ve ardından **\<project adı Düzenle >. vcxproj**öğesini seçin.
 
-   *.Vcxproj* dosyası düzenleyicide açılır.
+   *. Vcxproj* dosyası düzenleyicide açılır.
 
-4. Ayarlama `TargetFrameworkVersion` sürüm 3.5 veya sonraki bir sürümde `PropertyGroup` etiketli `"Globals"`. Bir istemci sürümü belirtilmemelidir:
+4. @No__t_0 sürüm 3,5 ' e veya `"Globals"` etiketli `PropertyGroup` sonraki bir sürüme ayarlayın. İstemci sürümü belirtmemelisiniz:
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -100,12 +100,12 @@ Yukarıda listelenen özellikleri de birim testleri yazma ve Visual Studio kulla
       </PropertyGroup>
     ```
 
-5. Kaydet ve Kapat *.vcxproj* dosya.
+5. *. Vcxproj* dosyasını kaydedin ve kapatın.
 
-6. İçinde **Çözüm Gezgini**, Seç **projeyi** yeni C++ test projenizin sağ tıklatma menüsünden.
+6. **Çözüm Gezgini**' de, yeni C++ test projenizin sağ tıklama menüsünden **projeyi yeniden yükle** ' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [SharePoint çözümleri oluşturma](../sharepoint/create-sharepoint-solutions.md)
-- [Derleme ve SharePoint çözümlerinde hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
-- [Gelişmiş derleme Ayarları iletişim kutusu (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)
+- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [Gelişmiş derleyici ayarları iletişim kutusu (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)

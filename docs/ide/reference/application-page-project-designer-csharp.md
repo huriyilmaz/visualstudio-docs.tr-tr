@@ -8,23 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - Project Designer, Application page
 - Application page in Project Designer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04a130528edbe8ab3aae0a24d69315b934b19d54
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: cc28c4b6585c52bca084234b8d21f211b4209b87
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551435"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651980"
 ---
 # <a name="application-page-project-designer-c"></a>Uygulama Sayfası, Proje Tasarımcısı (C#)
 
 Projenin uygulama ayarlarını ve özelliklerini belirtmek için **Proje Tasarımcısı** ' nın **uygulama** sayfasını kullanın.
 
-**Uygulama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından, menü çubuğunda **Proje** > **özellikleri** ' ni seçin. **Proje Tasarımcısı** göründüğünde **uygulama** sekmesine tıklayın.
+**Uygulama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından, menü çubuğunda **proje**  > **Özellikler** ' i seçin. **Proje Tasarımcısı** göründüğünde **uygulama** sekmesine tıklayın.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -38,7 +38,7 @@ Derleme bildirimini tutacak çıkış dosyasının adını belirtir. Bu özelli�
 
 Ayrıca, [/Out (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option)kullanarak komut satırından da bu değişikliği yapabilirsiniz.
 
-Programlı olarak bu özelliğe erişmek için bkz <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
+Bu özelliğe program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
 
 **Varsayılan ad alanı**
 
@@ -46,7 +46,7 @@ Projeye eklenen dosyalar için temel ad alanını belirtir.
 
 Kodunuzda ad alanları oluşturma hakkında daha fazla bilgi için bkz. [ad alanı](/dotnet/csharp/language-reference/keywords/namespace) .
 
-Programlı olarak bu özelliğe erişmek için bkz <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
+Bu özelliğe program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
 
 **Hedef Çerçeve**
 
@@ -71,7 +71,7 @@ Bir Web uygulaması projesi için **sınıf kitaplığı**belirtmeniz gerekir.
 
 **Çıktı türü** özelliği hakkında daha fazla bilgi için bkz. [/target (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option).
 
-Bu özelliğe programlı bir şekilde erişme hakkında daha fazla bilgi için <xref:VSLangProj.ProjectProperties.OutputType%2A>bkz.
+Bu özelliğe programlı bir şekilde erişme hakkında daha fazla bilgi için bkz. <xref:VSLangProj.ProjectProperties.OutputType%2A>.
 
 **Bağlama yeniden yönlendirmelerini otomatik oluştur**
 
@@ -81,11 +81,11 @@ Yeniden yönlendirme hakkında daha fazla bilgi için bkz. [derleme sürümlerin
 
 **Başlangıç nesnesi**
 
-Uygulama yüklenirken çağrılacak giriş noktasını tanımlar. Genellikle bu, uygulamanızdaki ana forma veya `Main` uygulama başladığında çalışması gereken yordama ayarlanır. Sınıf kitaplıklarının bir giriş noktası olmadığından, bu özellik için yalnızca seçeneği **(ayarlanmamış)** olur.
+Uygulama yüklenirken çağrılacak giriş noktasını tanımlar. Genellikle bu, uygulamanızdaki ana forma veya uygulama başladığında çalışması gereken `Main` yordama ayarlanır. Sınıf kitaplıklarının bir giriş noktası olmadığından, bu özellik için yalnızca seçeneği **(ayarlanmamış)** olur.
 
-Varsayılan olarak, bir WPF uygulama projesinde, bu seçenek **(ayarlanmamış)** olarak ayarlanır. Diğer seçenek ProjectName] \[. App ' dir. Bir WPF projesinde, uygulama başladığında bir UI kaynağı yüklemek için başlangıç URI 'sini ayarlamanız gerekir. Bunu yapmak için, projenizdeki *Application. xaml* dosyasını açın ve `StartupUri` özelliğini projenizdeki *. xaml* dosyasına (örneğin, *Window1. xaml*) ayarlayın. Kabul edilebilir kök öğelerinin bir listesi için bkz <xref:System.Windows.Application.StartupUri%2A>. Ayrıca, projedeki bir sınıfta `public static void Main()` bir yöntemi tanımlamanız gerekir. Bu sınıf, **Başlangıç nesnesi** listesinde *ProjectName. ClassName*olarak görünür. Ardından, başlangıç nesnesi olarak sınıfını seçebilirsiniz.
+Varsayılan olarak, bir WPF uygulama projesinde, bu seçenek **(ayarlanmamış)** olarak ayarlanır. Diğer seçenek \[projectname]. App ' dir. Bir WPF projesinde, uygulama başladığında bir UI kaynağı yüklemek için başlangıç URI 'sini ayarlamanız gerekir. Bunu yapmak için, projenizdeki *Application. xaml* dosyasını açın ve `StartupUri` özelliğini projenizdeki bir *. xaml* dosyası (örneğin, *Window1. xaml*) olarak ayarlayın. Kabul edilebilir kök öğelerinin bir listesi için bkz. <xref:System.Windows.Application.StartupUri%2A>. Ayrıca, projedeki bir sınıfta bir `public static void Main()` yöntemi tanımlamanız gerekir. Bu sınıf, **Başlangıç nesnesi** listesinde *ProjectName. ClassName*olarak görünür. Ardından, başlangıç nesnesi olarak sınıfını seçebilirsiniz.
 
-Daha fazla bilgi için bkz. [/Main (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option) . Programlı olarak bu özelliğe erişmek için bkz <xref:VSLangProj.ProjectProperties.StartupObject%2A>.
+Daha fazla bilgi için bkz. [/Main (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option) . Bu özelliğe program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.StartupObject%2A>.
 
 **Derleme bilgileri**
 
@@ -93,7 +93,7 @@ Bu düğme, [derleme bilgileri](../../ide/reference/assembly-information-dialog-
 
 ## <a name="resources"></a>Kaynaklar
 
-Kaynak seçenekleri, uygulamanız için kaynak ayarlarını yapılandırmanıza yardımcı olur.
+Kaynak **seçenekleri,** uygulamanız için kaynak ayarlarını yapılandırmanıza yardımcı olur.
 
 **Simge ve bildirim**
 
@@ -103,15 +103,15 @@ Varsayılan olarak, bu radyo düğmesi seçilidir ve **simge** ve **bildirim** s
 
 Program simgenizin olarak kullanmak istediğiniz *. ico* dosyasını ayarlar. Var olan bir grafiğe gitmek için, **Araştır** ' a tıklayın veya istediğiniz dosyanın adını yazın. Daha fazla bilgi için bkz. [/Win32Icon (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) .
 
-Programlı olarak bu özelliğe erişmek için bkz <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
+Bu özelliğe program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
 
 Simge oluşturma hakkında daha fazla bilgi için bkz. [simgeler Için görüntü düzenleyici](/cpp/windows/image-editor-for-icons).
 
-**Bildirimi**
+**Bildirim**
 
 Uygulama Windows Vista 'da Kullanıcı hesabı denetimi (UAC) altında çalışırken bir bildirim oluşturma seçeneği belirler. Bu seçenek aşağıdaki değerlere sahip olabilir:
 
-- **Bildirimi varsayılan ayarlarla ekleyin**. , Uygulamanın yürütülebilir dosyasında güvenlik bilgilerini eklemek ve bunu belirtmek `requestedExecutionLevel` `AsInvoker`için olan Windows Vista 'da Visual Studio 'nun çalıştığı tipik şekilde desteklenir. Bu varsayılan seçenektir.
+- **Bildirimi varsayılan ayarlarla ekleyin**. , Uygulamanın yürütülebilir dosyasındaki güvenlik bilgilerini eklemek için `requestedExecutionLevel` `AsInvoker` olduğunu belirterek, Visual Studio 'Nun Windows Vista 'da işlem yaptığı tipik yolu destekler. Bu varsayılan seçenektir.
 
 - **Bildirim olmadan uygulama oluşturun**. Bu yöntem *sanallaştırma*olarak bilinir. Önceki uygulamalarla uyumluluk için bu seçeneği kullanın.
 

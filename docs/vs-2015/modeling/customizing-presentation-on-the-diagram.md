@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Domain-Specific Language, diagram
 ms.assetid: 259836b0-783c-46a0-b7c7-dc4b2f7b4a81
 caps.latest.revision: 33
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5a420ddd7be646eceb7822b4b2bb78d15918fda4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7454a110d5321a8f3a9dbf2472f15252cfaf13d0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68164655"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655008"
 ---
 # <a name="customizing-presentation-on-the-diagram"></a>Diyagramda Sunuyu Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Diyagram, bir etki alanına özgü dil Tasarımcısı'nın ana sunu alanıdır. Genellikle, kullanıcılar, diyagram modellerini oluşturmak için kullanır. Diyagramda şu konularda açıklandığı gibi özelleştirebilirsiniz.  
-  
-- [Şekiller ve Bağlayıcıları Tanımlama](../modeling/defining-shapes-and-connectors.md)  
-  
-- [Renk, Çizgi Stili ve Diğer Şekil Özelliklerini Denetleme](../modeling/controlling-color-line-style-and-other-shape-properties.md)  
-  
-- [Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme](../modeling/controlling-the-visibility-of-an-icon-or-decorator.md)  
-  
-- [Metin ve Görüntü Alanlarını Özelleştirme](../modeling/customizing-text-and-image-fields.md)  
-  
-- [Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama](../modeling/setting-a-background-image-on-a-diagram.md)  
-  
-- [Şekilleri İç İçe Geçirme](../modeling/nesting-shapes.md)  
-  
-- [Windows Forms'a Diyagram Ekleme](../modeling/embedding-a-diagram-in-a-windows-form.md)  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Diyagram, etki alanına özgü dil tasarımcısının ana sunum alanıdır. Genellikle, kullanıcılar kendi modellerini oluşturmak için diyagramı kullanır. Aşağıdaki konularda açıklandığı gibi diyagramı özelleştirebilirsiniz.
+
+- [Şekiller ve Bağlayıcıları Tanımlama](../modeling/defining-shapes-and-connectors.md)
+
+- [Renk, Çizgi Stili ve Diğer Şekil Özelliklerini Denetleme](../modeling/controlling-color-line-style-and-other-shape-properties.md)
+
+- [Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme](../modeling/controlling-the-visibility-of-an-icon-or-decorator.md)
+
+- [Metin ve Görüntü Alanlarını Özelleştirme](../modeling/customizing-text-and-image-fields.md)
+
+- [Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama](../modeling/setting-a-background-image-on-a-diagram.md)
+
+- [Şekilleri İç İçe Geçirme](../modeling/nesting-shapes.md)
+
+- [Windows Forms'a Diyagram Ekleme](../modeling/embedding-a-diagram-in-a-windows-form.md)
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Program Kodunda Modeli Gezinme ve Güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md)

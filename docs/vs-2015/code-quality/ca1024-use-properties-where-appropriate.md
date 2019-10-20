@@ -1,5 +1,5 @@
 ---
-title: 'CA1024: Uygun yerlerde özellikler kullan | Microsoft Docs'
+title: 'CA1024: uygun yerlerde özellikleri kullanın | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,62 +12,62 @@ helpviewer_keywords:
 - UsePropertiesWhereAppropriate
 ms.assetid: 3a04f765-af7c-4872-87ad-9cc29e8e657f
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 43487aa97afcd41a5375bacc26efba705cbaa76c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b190e007cfdb016e54148cf0295c68baf68c5033
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68144815"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661958"
 ---
-# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Uygun yerlerde özellikleri kullanın
+# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Uygun yerlerde özellikler kullan
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|UsePropertiesWhereAppropriate|
 |CheckId|CA1024|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Ortak veya korumalı yöntem ile başlayan bir ada sahip `Get`hiçbir parametre almaz ve dizi olmayan bir değer döndürür.
+ Ortak veya korumalı bir yöntemin `Get` ile başlayan bir adı vardır, hiçbir parametre kullanmaz ve dizi olmayan bir değer döndürür.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Çoğu durumda veri özelliklerini temsil eder ve yöntemleri eylemleri gerçekleştirebilirsiniz. Özellikler, bunları kullanmayı kolaylaştırır alanları gibi erişilir. Bir yöntem, Bu koşullardan biri varsa özellik olmak için iyi bir adaydır:
+ Çoğu durumda, özellikler verileri ve yöntemleri eylemler gerçekleştirir. Özellikler, alanları gibi erişilir, bu da daha kolay kullanılmasını sağlar. Bu koşullardan biri mevcutsa, bir özellik olmak için bir yöntem iyi bir adaydır:
 
-- Hiçbir bağımsız değişkeni alır ve bir nesnenin durum bilgilerini döndürür.
+- Bağımsız değişken almaz ve bir nesnenin durum bilgilerini döndürür.
 
-- Bir nesnenin durumu kısmı ayarlamak için tek bir bağımsız değişken kabul eder.
+- Bir nesnenin durumunun bir bölümünü ayarlamak için tek bir bağımsız değişkeni kabul eder.
 
-  Özellikleri, alanları ise olarak hareket etmesi gerektiğini; yöntem çözemezseniz, bir özelliğe değiştirilmemelidir. Aşağıdaki durumlarda özelliklerini daha iyi yöntemler şunlardır:
+  Özellikler alanlar gibi davranmalıdır; yöntemi değilse, bir özelliğe değiştirilmemelidir. Yöntemler aşağıdaki durumlarda özelliklerden daha iyidir:
 
-- Yöntem, zaman alıcı bir işlem gerçekleştirir. Yöntemi, perceivably ayarlamak veya bir alanın değerini almak için gereken süreden daha yavaştır.
+- Yöntemi zaman alan bir işlem gerçekleştirir. Yöntemi, bir alanın değerini ayarlamak ya da almak için gereken zamandan daha yavaştır perceivably.
 
-- Bir dönüştürme yöntemi gerçekleştirir. Bir alana erişim depoladığı verilerin dönüştürülmüş bir sürümünü döndürmez.
+- Yöntemi bir dönüştürme gerçekleştirir. Bir alana erişmek, depoladığı verilerin dönüştürülmüş bir sürümünü döndürmez.
 
-- Get yöntemi gözlemlenebilir bir yan etkisi vardır. Bir alanın değerini alma yan etkileri üretmez.
+- Get yönteminin bir observable yan etkisi vardır. Bir alanın değerini almak hiçbir yan efekt oluşturmaz.
 
-- Yürütme sırası önemlidir. Bir alanın değerini ayarlama, diğer işlemleri oluşması bağımlı kalmayacak.
+- Yürütmenin sırası önemlidir. Bir alanın değerini ayarlamak, diğer işlemlerin oluşumuna bağlı değildir.
 
-- Yöntemi, art arda iki kez çağırmak farklı sonuçlar oluşturur.
+- Yöntemi art arda iki kez çağırmak farklı sonuçlar oluşturur.
 
-- Yöntem statik olsa da arayan tarafından değiştirilebilen bir nesne döndürür. Bir alanın değerini alma alanı tarafından depolanan verileri değiştirmek çağıranın izin vermez.
+- Yöntemi statiktir, ancak çağıran tarafından değiştirilebilen bir nesne döndürür. Bir alanın değerini almak, çağıranın alan tarafından depolanan verileri değiştirmesine izin vermez.
 
-- Yöntemi, bir dizi döndürür.
+- Yöntemi bir dizi döndürür.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için yöntem bir özelliğini değiştirin.
+ Bu kuralın ihlalini onarmak için, yöntemini bir özelliği olarak değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Yöntem en az bir tanesi yukarıda listelenen ölçütlerini karşılıyorsa bu kuraldan bir uyarıyı gizler.
+ Yöntem daha önce listelenen ölçütlerden en az birini karşılıyorsa, bu kuraldan bir uyarı gizleyin.
 
-## <a name="controlling-property-expansion-in-the-debugger"></a>Hata ayıklayıcısı özellik genişletme denetleme
- Programcıların bir özelliğini kullanmaktan nedenlerinden biri, otomatik-genişletmek için hata ayıklayıcı istemediğiniz olmasıdır. Örneğin, özellik, büyük nesne ayırma veya P/Invoke çağırma gerektirebilir, ancak gözlemlenebilir bir yan etkileri gerçekten olmayabilir.
+## <a name="controlling-property-expansion-in-the-debugger"></a>Hata ayıklayıcıda Özellik genişletmeyi denetleme
+ Programcıların bir özelliği kullanmaktan kaçınmasının nedeni, hata ayıklayıcının otomatik olarak genişletmesine engel olmasıdır. Örneğin, özelliği büyük bir nesne ayırmayı veya bir P/Invoke çağırmayı içerebilir, ancak aslında herhangi bir observable yan etkisi olmayabilir.
 
- Hata ayıklayıcı otomatik-aşmasını önlemek özellikler uygulayarak <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>. Aşağıdaki örnek, bir örnek özelliğine uygulanan bu özniteliği gösterir.
+ @No__t_0 uygulayarak hata ayıklayıcının özellikleri otomatik olarak genişletmesinin engellenmesini sağlayabilirsiniz. Aşağıdaki örnek, bir örnek özelliğine uygulanan bu özniteliği gösterir.
 
 ```vb
 Imports System
@@ -117,6 +117,6 @@ namespace Microsoft.Samples
 ```
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, özelliklerine dönüştürülmesi gerektiğini ve değil gibi alanlarını davranmayabilir olduğundan, birkaç gereken çeşitli yöntemler içerir.
+ Aşağıdaki örnek, özelliklerine dönüştürülmesi gereken çeşitli yöntemler ve bunlar gibi davranmamaları nedeniyle olmaması gereken birkaç yöntem içerir.
 
  [!code-csharp[FxCop.Design.MethodsProperties#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.MethodsProperties/cs/FxCop.Design.MethodsProperties.cs#1)]

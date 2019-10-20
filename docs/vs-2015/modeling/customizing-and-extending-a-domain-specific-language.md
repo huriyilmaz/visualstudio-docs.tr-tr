@@ -1,5 +1,5 @@
 ---
-title: Bir etki alanına özgü dili özelleştirme ve genişletme | Microsoft Docs
+title: Etki alanına özgü dili özelleştirme ve genişletme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,73 +8,71 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
 ms.assetid: b155eb79-4e0a-4a99-a6f2-ca4f811fb5ca
 caps.latest.revision: 50
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0bd0feefb2d184a6d9b9667b2b4498403a5868b8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b02b1e5bac7f39bcabb9cdc9b5c3acabe169827b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433314"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655082"
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>Etki Alanına Özgü Dili Özelleştirme ve Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio modelleme ve görselleştirme SDK'sı (VMSDK) modelleme araçları tanımlamak birden fazla düzeyleri sağlar:  
-  
-1. DSL tanım diyagramı kullanarak bir etki alanına özgü dil (DSL) tanımlayın. Bir DSL, bir grafiksel gösterimi, okunabilir XML form ve kodu ve diğer yapıları üretmek için gerekli olan temel araçları ile hızlı bir şekilde oluşturabilirsiniz.  
-  
-     Daha fazla bilgi için [etki alanına özgü bir dili tanımlama nasıl](../modeling/how-to-define-a-domain-specific-language.md).  
-  
-2. DSL DSL tanımının daha gelişmiş özelliklerini kullanarak hassas ayarlamalar yapabilirsiniz. Örneğin, ek bağlantılar kullanıcı bir öğe oluşturduğunda görünür yapabilirsiniz. Bu teknikler genellikle DSL tanımındaki elde edilir ve bazı program kodu birkaç satır gerektirir.  
-  
-3. Program kodunu kullanarak, modelleme araçları genişletir. VMSDK uzantılarınızı DSL tanımını oluşturan kod ile tümleştirmeyi kolaylaştırmak için tasarlanmıştır.  Daha fazla bilgi için [bir etki alanına özgü dili özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md).  
-  
+Visual Studio modelleme ve görselleştirme SDK 'Sı (VMSDK), modelleme araçlarını tanımlayabilmeniz için çeşitli düzeyler sağlar:
+
+1. DSL tanımı diyagramını kullanarak etki alanına özgü dil (DSL) tanımlayın. Bir diagrammatik gösterimi, okunabilir bir XML formu ve kod ve diğer yapıtlar oluşturmak için gereken temel araçları kullanarak hızlı bir şekilde DSL oluşturabilirsiniz.
+
+     Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
+
+2. DSL tanımının daha gelişmiş özelliklerini kullanarak DSL 'yi hassas olarak ayarlayın. Örneğin, Kullanıcı bir öğe oluşturduğunda ek bağlantıların görüntülenmesini sağlayabilirsiniz. Bu teknikler genellikle DSL tanımında elde edilir ve bazıları bazı program kodu satırları gerektirir.
+
+3. Program kodunu kullanarak modelleme araçlarınızı genişletin. VMSDK, uzantılarınızı DSL tanımından oluşturulan kodla tümleştirmeyi kolaylaştırmak için özel olarak tasarlanmıştır.  Daha fazla bilgi için bkz. [bir etki alanına özgü dili özelleştirmek Için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md).
+
 > [!NOTE]
-> DSL tanımlarına dosya güncelleştirildiğinde tıklamayı değil **tüm Şablonları Dönüştür** çözümünüzü yeniden oluşturmayı önce Çözüm Gezgini araç çubuğundaki.  
-  
-## <a name="customShapes"></a> Bu bölümde  
-  
-|Bu etkiyi elde etmek için|Bu konuya bakın|  
-|----------------------------|-------------------------|  
-|Şeklin rengi ve stil özelliklerini ayarlama izin verin.|Şekil veya bağlayıcının sınıfı sağ tıklatın, **ekleme kullanıma sunulan**ve bir öğeye tıklayın.<br /><br /> Bkz: [diyagramda sunuyu özelleştirme](../modeling/customizing-presentation-on-the-diagram.md).|  
-|Model öğesinin farklı sınıflar diyagramda ilk yükseklik ve genişlik, renk, araç ipuçları gibi özellikleri paylaşımı benzer.|Şekilleri veya bağlayıcı sınıfları arasındaki devralma kullanın. Türetilmiş şekiller ve türetilmiş alan sınıfları arasındaki eşlemeleri üst eşleme ayrıntılarını alır.<br /><br /> Ya da farklı bir etki alanı sınıfları aynı şekli sınıfa eşleme.|  
-|Model öğesinin bir sınıf tarafından bağlamları farklı şekiller görüntülenir.|Birden fazla şekil sınıfı için aynı etki alanı sınıfı eşleyin. Çözüm derlediğinizde, hata raporu izleyin ve kullanmak için nasıl bir şekil karar vermek için istenen kod sağlar.|  
-|Şekil rengine veya yazı tipi gibi diğer özellikleri geçerli durumunu gösterir.|Bkz: [modeli yansıtacak şekilleri ve bağlayıcıları güncelleştirme](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Sunulan özellikler güncelleştiren bir kural oluşturun. Bkz: [değişiklikleri modelin içinde yayan kurallar](../modeling/rules-propagate-changes-within-the-model.md).<br /><br /> Dilerseniz OnAssociatedPropertyChanged() bağlantı oklar veya yazı tipi gibi açık olmayan özellikleri güncelleştirmek için kullanın.|  
-|Simge durumu göstermek için şekli değişir.|DSL Ayrıntıları penceresinde dekoratör eşlemesi görünürlüğünü ayarlayabilirsiniz. Aynı konumda birden fazla görüntü dekoratörleri bulun. Bkz: [modeli yansıtacak şekilleri ve bağlayıcıları güncelleştirme](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Veya geçersiz kılma `ImageField.GetDisplayImage()`. Örnekte bakın <xref:Microsoft.VisualStudio.Modeling.Diagrams.ImageField>.|  
-|Herhangi bir şekli bir arka plan görüntüsü ayarlama|Bağlantılı bir ImageField eklemek için InitializeInstanceResources() geçersiz kılar. Bkz: [diyagramda sunuyu özelleştirme](../modeling/customizing-presentation-on-the-diagram.md).|  
-|İç içe şekillere herhangi derinliği|Özyinelemeli bir ağaç katıştırma ayarlayın. BoundsRules şekil içerecek şekilde tanımlar. Bkz: [diyagramda sunuyu özelleştirme](../modeling/customizing-presentation-on-the-diagram.md).|  
-|Bir öğenin sınırında sabit noktalarda bağlayıcıları ekleyin.|Küçük bağlantı noktalarına diyagram tarafından temsil edilen katıştırılmış terminal öğelerini tanımlayın. BoundsRules yerinde bağlantı noktaları düzeltmek için kullanın. Bağlantı hattı diyagramı örneğine bakın [Görselleştirme ve modelleme SDK'sı](http://go.microsoft.com/fwlink/?LinkID=186128).|  
-|Metin alanı, diğer değerlerden türetilmiş bir değer görüntüler.|Metin dekoratör bir hesaplanmış ya da özel depolama etki alanı özelliğine eşleyin. Daha fazla bilgi için [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|  
-|Şekil veya model öğeleri arasında değişiklikleri yayma|Bkz: [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).|  
-|Kaynakları gibi diğer değişiklikleri yaymak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] deponun dışında uzantıları.|Bkz: [değişiklikleri modelin dışına yayan olay işleyicileri](../modeling/event-handlers-propagate-changes-outside-the-model.md).|  
-|Özellik penceresi ilgili öğenin özelliklerini görüntüler.|İletme özelliği ayarlayın. Bkz: [Özellikler penceresini özelleştirme](../modeling/customizing-the-properties-window.md).|  
-|Özellik kategorisi|Özellikler penceresinde kategorileri adlı bölümlere ayrılmıştır. Ayarlama **kategori** , etki alanı özelliklerinin özellikleri. Aynı kategori adlı özellikler aynı bölümde görünecektir. Ayrıca **kategori** ilişki rolü.|  
-|Kullanıcı erişimini denetlemek için etki alanı özellikleri|Ayarlama **olan gözatılabilir** bir alan özelliği, Özellikler penceresinde çalışma zamanında görünmesini engellemek için false. Yine de metin dekoratörleri için eşleyebilirsiniz.<br /><br /> **Salt okunur kullanıcı Arabirimi** kullanıcıların bir alan özelliği değiştirmesini engeller.<br /><br /> Etki alanı özelliği program erişimi etkilenmez.|  
-|Ad, simge ve DSL'NİZİN model Gezgini'nde düğümler görünürlüğünü değiştirin.|Bkz: [Model Gezginini özelleştirme](../modeling/customizing-the-model-explorer.md).|  
-|Kopyala, Kes ve Yapıştır etkinleştir|Ayarlama **etkinleştirme Kopyala Yapıştır** özelliği **Düzenleyicisi** DSL Gezgininde.|  
-|Her bir öğe kopyalanır referans bağlantıları ve hedeflerine kopyalayın. Örneğin, bir iş öğesine ekli açıklamalar kopyalayın.|Ayarlama **yayar kopyalama** (DSL tanım diyagramı, etki alanı ilişkinin bir tarafında çizgiyle gösterilir) kaynak rolünün özelliği.<br /><br /> Daha karmaşık efektler elde etmek için ProcessOnCopy geçersiz kılmak için kod yazın.<br /><br /> Bkz: [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|  
-|Silme, yeniden üst öğe yap veya bir öğe silindiğinde ilgili öğeleri yeniden bağlayın.|Ayarlama **yayar Sil** ilişki rolü değeri. Daha karmaşık etkileri için geçersiz kılma `ShouldVisitRelationship` ve `ShouldVisitRolePlayer` yöntemleri `MyDslDeleteClosure` sınıfı içinde tanımlanan **DomainModel.cs**<br /><br /> Bkz: [silme davranışını özelleştirme](../modeling/customizing-deletion-behavior.md)|  
-|Şekil düzeninin ve görünümünün kopyalama ve sürükle-bırak korur.|Şekilleri ve bağlayıcıları kopyalanan ekleme `ElementGroupPrototype`. Geçersiz kılmak için en uygun yöntemi `ElementOperations.CreateElementGroupPrototype()`<br /><br /> Bkz: [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|  
-|Şekiller geçerli imleç konumu gibi seçtiğiniz bir konuma yapıştırın.|Geçersiz kılma `ClipboardCommandSet.ProcessOnCopy()` konuma özgü sürümünü kullanacak şekilde `ElementOperations.Merge().` bkz [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|  
-|Yapıştırırken ek bağlantılar oluşturma|Override ClipboardCommandSet.ProcessOnPasteCommand()|  
-|Sürükle ve bırak Bu diyagram ile başka bir DSL veya UML etkinleştirmek diyagramları ve Windows öğeleri|Bkz: [nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md)|  
-|Üst sürüklediğiniz gibi bir şekil veya bir bağlantı noktası gibi bir alt Şekil'üzerine sürüklenerek aracı sağlar.|Öğe birleştirme yönergesinde, bırakılan nesne üst iletmek için hedef nesne sınıfı üzerinde tanımlayın. Bkz: [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).|  
-|Bir şekil veya ek bağlantılar ve şeklin üzerine sürüklenerek aracını izin verin veya oluşturulan nesneler. Örneğin, bir yorum, bağlı durumda olan bir öğe kesilmesine izin vermek için.|Öğe birleştirme yönergesinde hedef etki alanı sınıfını tanımlamak ve oluşturulacak bağlantılara tanımlayın. Karmaşık durumlarda, özel kod ekleyebilirsiniz. Bkz: [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).|  
-|Bir aracıyla öğeleri bir grup oluşturun. Örneğin, sabit bir dizi bağlantı noktası ile bir bileşen.|ToolboxHelper.cs araç kutusu başlatma yöntemi yok sayın. Bir öğe grubu prototip (öğeleri ve bunların ilişki bağlantılarını içeren EGP) oluşturun. Bkz: [araçları ve araç kutusunu özelleştirme](../modeling/customizing-tools-and-the-toolbox.md).<br /><br /> Asıl ve bağlantı noktası şekiller EGP içeriyor ya da bağlantı noktası şekilleri EGP örneği oluşturulduğunda konumlandırmak için BoundsRules tanımlayın. Bkz: [BoundsRules şekil konumunu ve boyutunu Kısıtlamama](../modeling/boundsrules-constrain-shape-location-and-size.md).|  
-|Birden fazla ilişki oluşturmak için bir bağlantı aracını kullanın.|Bağlantı bağlama yönergesi (LCD) araç tarafından çağrılan bağlantı oluşturucuyu ekleyin. LCD'ler iki öğe türleri arasında ilişki türünü belirler. Bu öğelerin durumlarını bağımlı hale getirmek için özel kod ekleyebilirsiniz. Bkz: [araçları ve araç kutusunu özelleştirme](../modeling/customizing-tools-and-the-toolbox.md).|  
-|Yapışkan araçları – kullanıcı, çok sayıda şekilleri veya bağlayıcıları art arda oluşturmak için herhangi bir aracı çift tıklayabilirsiniz.|DSL Gezgini içinde seçin `Editor` düğümü. Özellikler penceresinde ayarlayın **kullanan Yapışkan araç kutusu öğeleri**.|  
-|Menü komutlarını tanımlama|Bkz: [nasıl yapılır: Standart Menü Komutunu Değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)|  
-|Model doğrulama kuralları ile sınırlama|Bkz: [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md)|  
-|Bir DSL kod, yapılandırma dosyaları ve belgeleri oluşturur.|[Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)|  
-|Modelleri nasıl kaydedileceğini özelleştirme dosyası için.|Bkz: [dosya depolamayı ve XML serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md)|  
-|Modelleri, veritabanları veya diğer ortam kaydedin.|Geçersiz kılma *YourLanguage*DocData<br /><br /> Bkz: [dosya depolamayı ve XML serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md)|  
-|Bir uygulamanın bir parçası çalışmaları için birden çok DSL tümleştirin.|Bkz: [Visual Studio Modelbus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).|  
-|DSL'nizi üçüncü taraflarca genişletilmesi izin ve uzantı denetleyin.|[MEF kullanarak DSL'nizi genişletme](../modeling/extend-your-dsl-by-using-mef.md)<br /><br /> [DSL Kitaplığı Kullanarak DSL'ler Arasında Sınıfları Paylaşma](../modeling/sharing-classes-between-dsls-by-using-a-dsl-library.md)<br /><br /> [Salt Okunur Kesimler Oluşturmak için Kilitleme İlkesi Tanımlama](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)|  
-|||  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md)   
- [Bir etki alanına özgü dili özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
- [Visual Studio için Modelleme SDK'sı - Etki Alanına Özgü Diller](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
+> DSL tanımları dosyasını güncelleştirdikten sonra, çözümünüzü yeniden oluşturmadan önce Çözüm Gezgini araç çubuğundaki **Tüm Şablonları Dönüştür** ' e tıklamayın.
+
+## <a name="customShapes"></a>Bu bölümde
+
+|Bu etkiyi elde etmek için|Bu konuya başvurun|
+|----------------------------|-------------------------|
+|Kullanıcının bir şeklin renk ve stil özelliklerini ayarlamaya izin verin.|Şekle veya bağlayıcı sınıfına sağ tıklayın, **gösterilen Ekle**' nin üzerine gelin ve bir öğeye tıklayın.<br /><br /> Bkz. [diyagramda sunuyu özelleştirme](../modeling/customizing-presentation-on-the-diagram.md).|
+|Farklı model öğesi sınıfları diyagram üzerinde benzerdir, ilk yükseklik ve genişlik, renk ve araç ipuçları gibi özellikleri paylaşıyor.|Şekiller veya bağlayıcı sınıfları arasında devralmayı kullanın. Türetilmiş şekiller ve türetilmiş etki alanı sınıfları arasındaki eşlemeler üst öğelerinin eşleme ayrıntılarını alırlar.<br /><br /> Ya da, farklı etki alanı sınıflarını aynı şekil sınıfına eşleyin.|
+|Model öğesi sınıfı farklı şekil bağlamları tarafından görüntülenir.|Birden fazla şekil sınıfını aynı etki alanı sınıfına eşleyin. Çözümü oluştururken, hata raporunu izleyin ve hangi şekle kullanılacağına karar vermek için istenen kodu sağlayın.|
+|Şekil rengi veya yazı tipi gibi diğer özellikler geçerli durumu gösterir.|Bkz. [modeli yansıtmak Için şekilleri ve bağlayıcıları güncelleştirme](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Gösterilen özellikleri güncelleştiren bir kural oluşturun. Bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).<br /><br /> Ya da bağlantı okları veya yazı tipi gibi görünmeyen özellikleri güncelleştirmek için Onilişkilendirilmemiş PropertyChanged () kullanın.|
+|Durumu göstermek için şekildeki simge değişiklikleri.|DSL ayrıntıları penceresinde dekoratör eşlemesinin görünürlüğünü ayarlayın. Birçok görüntü dekoratlarını aynı konumda bulun. Bkz. [modeli yansıtmak Için şekilleri ve bağlayıcıları güncelleştirme](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Veya `ImageField.GetDisplayImage()` geçersiz kılın. @No__t_0 örneğe bakın.|
+|Herhangi bir şekil üzerinde arka plan resmi ayarlama|Sabitlenmiş bir ImageField eklemek için ınitializeınstancereso, () öğesini geçersiz kılın. Bkz. [diyagramda sunuyu özelleştirme](../modeling/customizing-presentation-on-the-diagram.md).|
+|Şekilleri herhangi bir derinliğe iç içe geçme|Özyinelemeli bir ekleme ağacı ayarlayın. Şekilleri içerecek BoundsRules tanımlayın. Bkz. [diyagramda sunuyu özelleştirme](../modeling/customizing-presentation-on-the-diagram.md).|
+|Bir öğenin sınırında sabit noktalara bağlayıcılar ekleyin.|Diyagramda küçük bağlantı noktalarıyla temsil edilen gömülü Terminal öğelerini tanımlayın. Bağlantı noktalarını yerinde onarmak için BoundsRules kullanın. [Görselleştirme ve modelleme SDK](http://go.microsoft.com/fwlink/?LinkID=186128)'Sindeki devre diyagramı örneğine bakın.|
+|Metin alanı diğer değerlerden türetilmiş bir değeri görüntüler.|Metin dekoratörü hesaplanan veya özel bir depolama alanı özelliği ile eşleyin. Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|
+|Değişiklikleri model öğeleri veya şekiller arasında yayma|Bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).|
+|Değişiklikleri mağaza dışındaki diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantıları gibi kaynaklara yayın.|Bkz. [olay Işleyicileriyle değişiklikleri model dışına yayın](../modeling/event-handlers-propagate-changes-outside-the-model.md).|
+|Özellik penceresi, ilgili bir öğenin özelliklerini görüntüler.|Özellik Iletmeyi ayarlayın. Bkz. [Özellikler penceresini özelleştirme](../modeling/customizing-the-properties-window.md).|
+|Özellik kategorileri|Özellikler penceresi Kategoriler adlı bölümlere ayrılmıştır. Etki alanı özelliklerinin **kategorisini** ayarlayın. Aynı kategori adına sahip özellikler aynı bölümde görüntülenir. Bir ilişki rolü **kategorisini** de ayarlayabilirsiniz.|
+|Etki alanı özelliklerine Kullanıcı erişimini denetleme|Bir etki alanı özelliğinin çalışma zamanında Özellikler penceresi görünmesini engellemek için, bu ayarı göz **atılamaz** false. Yine de metin Dekoratörleri ile eşleme yapabilirsiniz.<br /><br /> **UI Read yalnızca** kullanıcıların bir etki alanı özelliğini değiştirmesini engeller.<br /><br /> Alan özelliğine program erişimi etkilenmez.|
+|DSL model Gezgininde düğümlerin adını, simgesini ve görünürlüğünü değiştirin.|Bkz. [model Gezginini özelleştirme](../modeling/customizing-the-model-explorer.md).|
+|Kopyalama, kesme ve yapıştırmayı etkinleştir|DSL Gezgini 'ndeki **Düzenleyici** düğümünün **kopyalama Yapıştır özelliğini etkinleştir** ' i ayarlayın.|
+|Her öğe kopyalanırken başvuru bağlantılarını ve bunların hedeflerini kopyalayın. Örneğin, bir öğeye ekli açıklamaları kopyalayın.|Kaynak rolün **yayar kopyalama** özelliğini AYARLAYıN (DSL tanım diyagramında etki alanı ilişkisinin bir tarafındaki satırla temsil edilir).<br /><br /> Daha karmaşık etkileri elde etmek için ProcessOnCopy 'i geçersiz kılmak üzere kod yazın.<br /><br /> Bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
+|Bir öğe silindiğinde, ilgili öğeleri silin, yeniden üst üste veya yeniden bağlayın.|Bir ilişki rolünün **yayar silme** değerini ayarlayın. Daha karmaşık efektler için, **DomainModel.cs** içinde tanımlanan `MyDslDeleteClosure` sınıfında `ShouldVisitRelationship` ve `ShouldVisitRolePlayer` yöntemleri geçersiz kılın<br /><br /> Bkz. [silme davranışını özelleştirme](../modeling/customizing-deletion-behavior.md)|
+|Kopyalama ve sürükleme bırakma üzerinde şekil mizanpajını ve görünümünü koruyun.|Şekilleri ve bağlayıcıları kopyalanmış `ElementGroupPrototype` ekleyin. Geçersiz kılınacak en kullanışlı Yöntem `ElementOperations.CreateElementGroupPrototype()`<br /><br /> Bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
+|Şekilleri seçili bir konuma (örneğin, geçerli imleç konumu) yapıştırın.|@No__t_1 konuma özgü sürümü kullanmak için `ClipboardCommandSet.ProcessOnCopy()` geçersiz kılın bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
+|Yapıştırma sırasında ek bağlantılar oluştur|ClipboardCommandSet. ProcessOnPasteCommand () öğesini geçersiz kıl|
+|Bu diyagram, diğer DSLs veya UML diyagramları ve Windows öğeleri için sürükle ve bırak özelliğini etkinleştir|Bkz [. nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md)|
+|Bir şeklin veya aracın, üst öğeye sürüklenmiş gibi bir alt şekle (bağlantı noktası gibi) sürüklenmesi için izin verin.|Bırakılan nesneyi üst öğeye iletmek için, hedef nesne sınıfında bir öğe birleştirme yönergesi tanımlayın. Bkz. [öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md).|
+|Şekil veya aracın bir şekle sürüklenmesi ve ek bağlantılara ya da nesnelerin oluşturulmasını sağlar. Örneğin, bir yorumun bağlanacağı bir öğeye bırakılmasına izin vermek için.|Hedef etki alanı sınıfında bir öğe birleştirme yönergesi tanımlayın ve oluşturulacak bağlantıları tanımlayın. Karmaşık durumlarda özel kod ekleyebilirsiniz. Bkz. [öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md).|
+|Bir araçla bir öğe grubu oluşturun. Örneğin, sabit bir bağlantı noktası kümesine sahip bir bileşen.|ToolboxHelper.cs içinde araç kutusu başlatma yöntemini geçersiz kılın. Öğeleri ve bunların ilişki bağlantılarını içeren bir öğe grubu prototipi (EGP) oluşturun. Bkz. [araçları ve araç kutusunu özelleştirme](../modeling/customizing-tools-and-the-toolbox.md).<br /><br /> EGP 'ye asıl ve bağlantı noktası şekillerini ekleyin ya da EGP örneği oluşturulduğunda bağlantı noktası şekillerini konumlandırmak için BoundsRules tanımlayın. Bkz. [BoundsRules şekil konumunu ve boyutunu kısıtla](../modeling/boundsrules-constrain-shape-location-and-size.md).|
+|Çeşitli ilişki türlerini örneklemek için bir bağlantı aracı kullanın.|Araç tarafından çağrılan bağlantı oluşturucusuna bağlantı bağlama yönergeleri (LCD) ekleyin. LCD 'Ler, iki öğenin türünden ilişki türünü tespit. Bunu, öğelerin durumlarına bağlı yapmak için özel kod ekleyebilirsiniz. Bkz. [araçları ve araç kutusunu özelleştirme](../modeling/customizing-tools-and-the-toolbox.md).|
+|Yapışkan araçlar: Kullanıcı, art arda birçok şekil veya bağlayıcı oluşturmak için herhangi bir araca çift tıklaedebilir.|DSL Gezgini ' nde `Editor` düğümünü seçin. Özellikler penceresi, kümesi **yapışkan araç kutusu öğelerini kullanır**.|
+|Menü komutlarını tanımlama|Bkz [. nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)|
+|Modeli doğrulama kurallarıyla kısıtlama|Bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md)|
+|DSL 'den kod, yapılandırma dosyaları veya belgeler oluşturun.|[Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)|
+|Modellerin dosyaya nasıl kaydedildiğini özelleştirin.|Bkz. [Dosya depolamayı ve XML Serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md)|
+|Modelleri veritabanlarına veya diğer ortamlara kaydedin.|DocData *dilini*geçersiz kılın<br /><br /> Bkz. [Dosya depolamayı ve XML Serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md)|
+|Birden çok DSLs 'yi bir uygulamanın parçası olarak çalışacak şekilde tümleştirin.|Bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).|
+|DSL 'nizin üçüncü taraflarca uzatılarak ve uzantıyı denetlemesine izin verin.|[MEF kullanarak DSL'nizi genişletme](../modeling/extend-your-dsl-by-using-mef.md)<br /><br /> [DSL Kitaplığı Kullanarak DSL'ler Arasında Sınıfları Paylaşma](../modeling/sharing-classes-between-dsls-by-using-a-dsl-library.md)<br /><br /> [Salt Okunur Kesimler Oluşturmak için Kilitleme İlkesi Tanımlama](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)|
+|||
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Visual Studio için etki alanına özgü dil [modelleme SDK 'Sını](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md) [özelleştirmek Için bir](../modeling/writing-code-to-customise-a-domain-specific-language.md) [etki alanına özgü dil](../modeling/how-to-define-a-domain-specific-language.md) yazma-alana özgü diller

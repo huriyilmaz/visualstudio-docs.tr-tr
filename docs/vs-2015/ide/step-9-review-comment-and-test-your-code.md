@@ -1,96 +1,94 @@
 ---
-title: '9. Adım: Gözden geçirme, açıklama ve kodunuzu test etmek | Microsoft Docs'
+title: '9\. Adım: kodunuzu gözden geçirme, açıklama ve test etme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: f26f79ba-c91b-4164-b87f-679a1b231c09
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c3fec670f7516d28e20b43b0e1968782a496ef49
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 7fc6f29246f90c47a4c59a5ae6bb1999ceac72bf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63428576"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646913"
 ---
-# <a name="step-9-review-comment-and-test-your-code"></a>9. Adım: Kodunuzu Gözden Geçirme, Açıklama ve Test Etme
+# <a name="step-9-review-comment-and-test-your-code"></a>9\. Adım: Kodunuzu Gözden Geçirme, Açıklama ve Test Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sonraki kod bir açıklama ekleyin. Bir yorum, programın davranışını değiştirmeyen bir nottur. Ne yaptığını anlamak için kodunuzu okuyan kişi için kolaylaştırır. Kodunuza yorumlar eklemek, öğrenmek için iyi bir alışkanlıktır. Visual C# içinde iki İleri eğik çizgi (/ /) satırı bir açıklama olarak işaretler. Visual Basic'te, tek tırnak işareti ('), bir satırı yorum olarak işaretlemek için kullanılır. Bir açıklama ekledikten sonra programınızı test edin. Çalıştırın ve sık yakalayın ve erken önce kod daha karmaşık sorunları düzeltmek için projeler üzerinde çalıştığınız sırada kodunuzu test etmek için iyi bir uygulamadır. Bu adlandırılır *yinelemeli sınama*.  
-  
- Çalışır bir şey yalnızca yerleşik ve henüz yapılmaz olsa da, zaten bir resim yüklüyor olabilir. Bir açıklamayı kodunuza ekleyin ve test için önce aşağıdaki kavramları sıkça kullanacağınız için kod kavramlarını gözden geçirmek için zaman ayırın:  
-  
-- Ne zaman tıklattığınız **resim Göster** düğmesini Windows Form Tasarımcısı'nda, IDE otomatik olarak eklenen bir *yöntemi* program kodunuza için.  
-  
-- Kodunuzu düzenleme şeklinizdir nasıl yöntemler şunlardır: Bunu nasıl kodunuzun gruplandırılma şeklidir.  
-  
-- Çoğu zaman bir yöntem bir küçük birçok şeyi nasıl gibi belirli bir sırayla yapar, `showButton_Click()` yöntemi bir iletişim kutusu gösterir ve bir resim yükler.  
-  
-- Bir yöntem kodunu yapılır *deyimleri*, ya da kod satırlarını. Yöntemi, kod deyimlerini paket için bir yol olarak düşünün.  
-  
-- Bir yöntem yürütüldüğünde veya *adlı*, yöntemdeki deyimler birbiri ardına, ilkinden başlayarak sırayla yürütülür.  
-  
-   Bir deyim örneği verilmiştir.  
-  
-  ```csharp  
-  pictureBox1.Load(openFileDialog1.FileName);  
-  ```  
-  
-  ```vb  
-  pictureBox1.Load(openFileDialog1.FileName)  
-  ```  
-  
-   Deyimleri ne programlarınızın şeyler yaptıran şeydir. Visual C# içinde bir ifade her zaman noktalı virgülle biter. Visual Basic'te, bir satırın sonuna bir deyimin sonudur. (Visual Basic'de noktalı virgül gerekiyor.) Önceki deyim söyler, `PictureBox` ile kullanıcının seçtiği dosyayı yüklemek için Denetim **OpenFileDialog** bileşeni.  
-  
-  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo")bu konunun video sürümü için bkz: [öğretici 1: Visual Basic'te - Video 5 resim görüntüleyici oluşturma](http://go.microsoft.com/fwlink/?LinkId=205216) veya [öğretici 1: İçinde resim görüntüleyici oluşturma C# -Video 5](http://go.microsoft.com/fwlink/?LinkId=205206). Bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar olduğundan bu videolarda Visual Studio'nun önceki bir sürümü kullanın. Ancak, kavramlar ve yordamlar benzer şekilde Visual Studio'nun geçerli sürümünde çalışır.  
-  
-### <a name="to-add-comments"></a>Yorum eklemek için  
-  
-1. Aşağıdaki açıklamayı kodunuza ekleyin.  
-  
+Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biçimini değiştirmeyen bir notdur. Kodunuzu okuyan birisinin ne yaptığını öğrenmesini kolaylaştırır. Kodunuza açıklama eklemek için iyi bir önleminizi alarak vardır. Görselde C#iki eğik çizgi (//) bir satırı açıklama olarak işaretleyin. Visual Basic, bir satırı açıklama olarak işaretlemek için tek tırnak işareti (') kullanılır. Bir açıklama ekledikten sonra, programınızı test edersiniz. Projeniz üzerinde çalışırken kodunuzu sık çalıştırmak ve test etmek iyi bir uygulamadır. bu sayede, kod daha karmaşık hale gelmeden önce sorunları önceden yakalayabilir ve çözebilirsiniz. Buna *yinelemeli test*denir.
+
+ Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi yükleyebilir. Kodunuza bir açıklama eklemeden ve test etmeden önce, bu kavramları sık kullandığınız için kod kavramlarını gözden geçirmek için zaman alın:
+
+- Windows Form Tasarımcısı **resim göster** düğmesine çift TıKLADıĞıNıZDA, IDE programınızın koduna otomatik olarak bir *Yöntem* ekledi.
+
+- Yöntemler, kodunuzun nasıl düzenlenme yöntemleridir: kodunuz birlikte gruplandırılır.
+
+- Çoğu zaman bir yöntem, `showButton_Click()` yönteminizin bir iletişim kutusu gösterdiği ve sonra bir resmi yükleyen gibi belirli bir sırada çok sayıda şey yapar.
+
+- Yöntem kod *deyimlerinden*veya kod satırlarından oluşur. Bir yöntemi kod deyimlerini birlikte paketetmenin bir yolu olarak düşünün.
+
+- Bir yöntem yürütüldüğünde veya *çağrıldığında*, yöntem içindeki deyimler sırayla yürütülür ve ilki birinci bir ile başlar.
+
+   Aşağıda bir deyimin örneği verilmiştir.
+
+  ```csharp
+  pictureBox1.Load(openFileDialog1.FileName);
+  ```
+
+  ```vb
+  pictureBox1.Load(openFileDialog1.FileName)
+  ```
+
+   Deyimler, programlarınızın şeyleri yapabilecekleri şeydir. Görsel C#içinde, bir ifade her zaman noktalı virgül ile biter. Visual Basic, satırın sonu deyimin sonu olur. (Visual Basic noktalı virgül gerekmez.) Yukarıdaki ifade, `PictureBox` denetimine kullanıcının seçtiği dosyayı **OpenFileDialog** bileşeniyle yüklemesini söyler.
+
+  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 5](http://go.microsoft.com/fwlink/?LinkId=205216) veya [öğretici 1: video üzerinde C# bir resim görüntüleyici oluşturma 5](http://go.microsoft.com/fwlink/?LinkId=205206). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+
+### <a name="to-add-comments"></a>Açıklama eklemek için
+
+1. Aşağıdaki yorumu kodunuza ekleyin.
+
      [!code-csharp[VbExpressTutorial1Step9_10#1](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial1step9_10/cs/form1.cs#1)]
-     [!code-vb[VbExpressTutorial1Step9_10#1](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step9_10/vb/form1.vb#1)]  
-  
+     [!code-vb[VbExpressTutorial1Step9_10#1](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step9_10/vb/form1.vb#1)]
+
     > [!NOTE]
-    > **ShowButton** düğmenin Click olay işleyicisi artık tamamlandı ve çalışıyor. Kodu yazmaya başlayarak başlattığınız bir `if` deyimi. Bir `if` deyimdir nasıl programınıza "Bu şeyi denetle ve true ise, şu eylemleri gerçekleştir." Bu durumda programınıza size **Dosya Aç** iletişim kutusu, ve kullanıcı bir dosya seçer ve seçer **Tamam** düğmesi, o dosyayı PictureBox'a yüklemesini yük.  
-  
+    > **ShowButton** düğinizin Click olay işleyicisi artık tamamlandı ve çalışıyor. Bir `if` ifadesiyle başlayarak kod yazmaya başladıysanız. @No__t_0 bir ifade, programınıza "Bu şeyi denetleme ve doğru ise, bu eylemleri yapma" şeklinde nasıl söylüyorsunuz. Bu durumda, programınıza **Dosya Aç** iletişim kutusunu açmasını söylersiniz ve Kullanıcı bir dosya seçip **Tamam** düğmesini seçerse, bu dosyayı PictureBox 'a yükleyin.
+
     > [!TIP]
-    > IDE kod yazmanızı kolaylaştırmak amacıyla oluşturulmuştur ve *kod parçacıkları* bunu yapmanın bir yoludur. Bir kod parçacığı, küçük bir kod bloğuna genişletilmiş kısayoldur.  
-    >   
-    >  Tüm kullanılabilir kod parçacıkları görebilirsiniz. Menü çubuğunda, **Araçları**, **kod parçacıkları Yöneticisi**. Visual C#, `if` kod parçacığı olan **Visual C#** . Visual Basic'te `if` parçacıkları **Koşullular ve döngüler**, **kod desenleri**. Varolan parçacıklara gözatmak veya kendi parçalarınızı eklemek için bu Yöneticisi'ni kullanabilirsiniz.  
-    >   
-    >  Kod yazarken bir parçacığı etkinleştirmek için bunu yazın ve TAB tuşuna basın. Birçok Parçacıklar görüntülenir **IntelliSense** SEKME tuşunu iki kere seçmenizin nedeni olan penceresi: kod parçacığından önce seçilecek **IntelliSense** penceresinde ve IDE'ye parçacığı kullanmasını söylemek için. (IntelliSense'i destekler `if` kod parçacığı, ama `ifelse` kod parçacığı.)  
-  
-2. Programı çalıştırmadan önce seçerek programınızı kaydedin **Tümünü Kaydet** gibi görünen araç çubuğu düğmesi.  
-  
-     ![Tüm araç çubuğu düğmesi Kaydet](../ide/media/express-iconsaveall.png "Express_IconSaveAll")  
-Tümünü Kaydet düğmesi  
-  
-     Menü çubuğunda, programınızı kaydetmek için alternatif olarak, seçin **dosya**, **Tümünü Kaydet**. Erken ve sıkça kaydetmek iyi bir uygulamadır.  
-  
-     Çalışırken, programınız aşağıdaki resim gibi görünmelidir.  
-  
-     ![Resim Görüntüleyicisi](../ide/media/express-pictureviewerdonerun.png "Express_PictureViewerDoneRun")  
-Resim Görüntüleyici  
-  
-### <a name="to-test-your-program"></a>Programınızı test etmek için  
-  
-1. F5 tuşuna basın veya tercih **hata ayıklamayı Başlat** araç çubuğu düğmesi.  
-  
-2. Seçin **resim Göster** az önce yazdığınız kodu çalıştırmak için düğme. İlk olarak, programı açar bir **açık dosya** iletişim kutusu. Filtrelerinizi göründüğünü doğrulayın **dosya türü** iletişim kutusunun altındaki açılır listede. Ardından bir resme gidin ve açın. Windows işletim sistemi ile gönderilen örnek resimler çoğunlukla olabilir, **Belgelerim** klasöründe **resimlerim\örnek Resimlerim** klasör.  
-  
+    > IDE, kod yazmanızı kolaylaştıracak şekilde oluşturulmuştur ve *kod parçacıkları* bunu yapmanın bir yoludur. Kod parçacığı, küçük bir kod bloğuna genişletilmiş bir kısayoldur.
+    >
+    >  Kullanılabilir tüm parçacıkları görebilirsiniz. Menü çubuğunda **Araçlar**, **kod parçacıkları Yöneticisi**' ni seçin. Görsel C#için `if` kod parçacığı **görseldir C#**  . Visual Basic için, `if` parçacıkları **conditionals ve döngüler**, **kod desenlerinde**yer alır. Bu yöneticiyi, mevcut parçacıkları taramak veya kendi kod parçacıklarınızı eklemek için kullanabilirsiniz.
+    >
+    >  Kodu yazarken bir kod parçacığını etkinleştirmek için yazın ve sekme tuşunu seçin. Birçok parçacık, **IntelliSense** penceresinde görünür. bu nedenle, **IntelliSense** penceresinde kod PARÇACıĞıNı seçmek ve sonra IDE 'nin kod parçacığını kullanmasını söylemek için. (IntelliSense, `if` parçacığı destekler, ancak `ifelse` parçacığı değil.)
+
+2. Programınızı çalıştırmadan önce, aşağıdaki gibi görünen **Tümünü Kaydet** araç çubuğu düğmesini seçerek programınızı kaydedin.
+
+     ![Tümünü Kaydet araç çubuğu düğmesi](../ide/media/express-iconsaveall.png "Express_IconSaveAll") Tümünü Kaydet düğmesi
+
+     Alternatif olarak, programınızı kaydetmek için menü çubuğunda **Dosya**, **Tümünü Kaydet**' i seçin. Bu, erken ve sık tasarrufu sağlamak için en iyi uygulamadır.
+
+     Çalıştığında, programınız aşağıdaki resim gibi görünmelidir.
+
+     ![Resim görüntüleyici](../ide/media/express-pictureviewerdonerun.png "Express_PictureViewerDoneRun") Resim görüntüleyici
+
+### <a name="to-test-your-program"></a>Programınızı test etmek için
+
+1. F5 tuşunu seçin veya **hata ayıklamayı Başlat** araç çubuğu düğmesini seçin.
+
+2. Yeni yazdığınız kodu çalıştırmak için **bir resim göster** düğmesini seçin. İlk olarak, program açık bir **Dosya** iletişim kutusu açar. Filtrelerinizin, iletişim kutusunun alt kısmındaki **dosya türü** açılan listesinde göründüğünü doğrulayın. Ardından bir resme gidin ve açın. Genellikle **Belgelerim klasörünüzdeki Windows** işletim sistemiyle birlikte gelen örnek resimleri, **Resimlerim \ örnek resimler** klasörü içinde bulabilirsiniz.
+
     > [!NOTE]
-    > Herhangi bir görüntü görmüyorsanız **bir resim dosyası seçin** iletişim kutusunda, olduğundan emin olun "tüm dosyalar (*.\*)" filtresinin seçili iletişim kutusunun alt sağ tarafındaki aşağı açılan listesinde.  
-  
-3. Bir resim yükleyin ve PictureBox içinde görüntülenecektir. Sonra kenarlıkları sürükleyerek formunuzu yeniden boyutlandırmaya çalışın. PictureBox TableLayoutPanel içine yerleştirmiş olduğundan, böylece form olarak kadar geniş ve formun üst yüzde 90 doldurur kendi kendini formun içine yerleştirildiğini resim alanınız kendi kendini yeniden boyutlandırarak. İşte bu nedenle TableLayoutPanel ve FlowLayoutPanel kapsayıcılarını kullandınız: Bunlar, formunuzu kullanıcı yeniden boyutlandırdığında doğru boyutta tutun.  
-  
-     Şimdi, daha büyük resimler, resim görüntüleyicinizin kenarlıklarının dışına gider. Sonraki adımda, resimleri pencereye sığdırmak için kod ekleyeceksiniz.  
-  
-### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için  
-  
-- Sonraki öğretici adımına gitmek için bkz: [adım 10: Ek düğmeler ve onay kutusu için kod yazma](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).  
-  
-- Önceki öğretici adımına dönmek için bkz: [adım 8: Bir resim düğme olayı işleyicisi Göster için kod yazma](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md).
+    > **Resim dosyası seç** iletişim kutusunda herhangi bir görüntü görmüyorsanız, "tüm dosyalar (*. \*) "iletişim kutusunun sağ alt tarafındaki aşağı açılan listede filtre seçilidir.
+
+3. Bir resim yükleyin ve PictureBox 'da görünür. Ardından, kenarlıklarını sürükleyerek formunuzu yeniden boyutlandırmayı deneyin. PictureBox 'ın, kendisini formun içine yerleştirilmiş bir TableLayoutPanel içinde yerleştiğinden, resim alanı kendini form kadar geniş olacak şekilde yeniden boyutlandırır ve formun en üstteki %90 ' unu dolduracaktır. TableLayoutPanel ve FlowLayoutPanel kapsayıcılarını şu nedenle kullandınız: Kullanıcı yeniden boyutlandırdığında formunuzu doğru boyutlandırırlar.
+
+     Şimdi, daha büyük resimler resim görüntüleyicinizin kenarlıklarının ötesine geçer. Sonraki adımda, resimlerin pencereye sığması için kod ekleyeceksiniz.
+
+### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
+
+- Sonraki öğretici adımına gitmek için bkz. [adım 10: ek düğmeler ve onay kutusu Için kod yazma](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).
+
+- Önceki öğretici adımına dönmek için bkz. [8. Adım: resim göster düğmesi olay işleyicisi Için kod yazma](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md).

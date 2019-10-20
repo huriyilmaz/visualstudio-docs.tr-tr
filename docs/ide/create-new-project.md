@@ -6,98 +6,98 @@ f1_keywords:
 - vs.newproject
 helpviewer_keywords:
 - projects [Visual Studio], creating
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f5d48ee97e1e0d92237fe5836c8bd9c1888c3a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a35302e8f749563ab173e7be15e944f8462fdb18
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818919"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652647"
 ---
-# <a name="create-a-new-project-in-visual-studio"></a>Visual Studio'da yeni proje oluşturma
+# <a name="create-a-new-project-in-visual-studio"></a>Visual Studio 'da yeni proje oluşturma
 
 ::: moniker range="vs-2017"
 
-## <a name="open-the-new-project-dialog"></a>Yeni Proje iletişim kutusunu aç
+## <a name="open-the-new-project-dialog"></a>Yeni proje iletişim kutusunu aç
 
-Visual Studio 2017'de yeni bir proje oluşturmak için birden çok yolu vardır. Başlangıç sayfasında, bir proje şablonunda adını yazabilirsiniz **arama proje şablonları** kutusuna veya tercih **yeni proje oluştur** açmak için bağlantıyı **yeni proje** iletişim bir kutu. Başlangıç sayfası tarafından da seçebilirsiniz **dosya** > **yeni** > **proje** tıklayın ya da menü çubuğu üzerinde **yeni proje**  araç çubuğunda.
+Visual Studio 2017 ' de yeni bir proje oluşturmanın birden çok yolu vardır. Başlangıç sayfasında, proje **şablonları ara** kutusuna bir proje şablonunun adını yazabilir veya yeni proje **Oluştur** bağlantısını seçerek **Yeni proje** iletişim kutusunu açabilirsiniz. Başlangıç sayfasından sonra, menü çubuğunda **dosya**  > **Yeni**  > **projesi** ' ni seçip araç çubuğunda **Yeni proje** düğmesine tıklayabilirsiniz.
 
-![Başlangıç sayfası ve Dosya > Yeni > Proje](./media/vside-newproject1.png)
+![Yeni > projesi > sayfa ve dosya başlatma](./media/vside-newproject1.png)
 
-## <a name="select-a-template-type"></a>Şablon türünü seçin
+## <a name="select-a-template-type"></a>Şablon türü seçin
 
-İçinde **yeni proje** iletişim kutusu, kullanılabilir proje şablonları görünür altında bir listede **şablonları** kategorisi. Şablonları Visual gibi dil ve proje türü programlama tarafından düzenlenir C#, JavaScript ve Azure Data Lake.
+**Yeni proje** iletişim kutusunda, kullanılabilir proje şablonları **Şablonlar** kategorisi altındaki bir listede görüntülenir. Şablonlar programlama dili ve görsel C#, JavaScript ve Azure Data Lake gibi proje türüne göre düzenlenir.
 
-![Yeni Proje iletişim kutusu](./media/vside-newproject-templates-list.png)
+![Yeni proje iletişim kutusu](./media/vside-newproject-templates-list.png)
 
 > [!NOTE]
-> Görüntülenen listeden kullanılabilir diller ve proje şablonları, kullanmakta olduğunuz Visual Studio ve yüklü iş yükleri sürümüne bağlıdır. Ek iş yüklerinin yükleme hakkında bilgi edinmek için [iş yükleri ve bileşenleri ekleyerek veya kaldırarak tarafından Visual Studio değiştirme](../install/modify-visual-studio.md).
+> Görüntülenen kullanılabilir dillerin ve proje şablonlarının listesi, çalıştırdığınız Visual Studio sürümüne ve yüklü iş yüklerine bağlıdır. Ek iş yüklerini nasıl yükleyeceğiniz hakkında bilgi edinmek için bkz. [iş yüklerini ve bileşenleri ekleyerek veya kaldırarak Visual Studio 'Yu değiştirme](../install/modify-visual-studio.md).
 
-Dil adının yanındaki üçgeni tıklayarak ve sonra bir proje kategorisi (örneğin, Windows Masaüstü) seçerek kullanmak istediğiniz programlama dili için şablonları listesini gösterir.
+Dil adının yanındaki üçgeni tıklatıp ardından bir proje kategorisi (Windows Masaüstü gibi) seçerek kullanmak istediğiniz programlama diline ait şablonların listesini görüntüleyin.
 
-Kullanılabilir proje şablonları aşağıdaki resimde gösterilmektedir görsel için C# .NET Core projeleri:
+Aşağıdaki görüntüde, Visual C# .NET Core projeleri için kullanılabilir proje şablonları gösterilmektedir:
 
 ![Proje şablonları](./media/new-project-dialog-net-core.png)
 
-## <a name="configure-your-project"></a>Projenizi yapılandırın
+## <a name="configure-your-project"></a>Projenizi yapılandırma
 
-Yeni proje için bir ad girin **adı** kutusu. Proje bilgisayar ya da'a tıklayın varsayılan konumda kaydedebilirsiniz **Gözat** başka bir konum bulmak için düğme. Ayrıca bir çözüm adı seçin veya yeni proje için Git deposu ekleme (seçerek **kaynak denetimine Ekle**).
+**Ad** kutusuna yeni proje için bir ad girin. Projeyi bilgisayarınızda varsayılan konuma kaydedebilir ya da başka bir konum bulmak için **tarayıcı** düğmesine tıklayabilirsiniz. Ayrıca, bir çözüm adı seçebilir veya yeni projeyi bir git deposuna ekleyebilirsiniz ( **kaynak denetimine Ekle**' yi seçerek).
 
-Tıklayın **Tamam** proje ve çözüm oluşturmak için.
+Çözümü ve projeyi oluşturmak için **Tamam** ' ı tıklatın.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-## <a name="open-the-create-a-new-project-page"></a>Yeni Proje sayfası oluşturma açın
+## <a name="open-the-create-a-new-project-page"></a>Yeni proje oluştur sayfasını açın
 
-Visual Studio 2019 içinde yeni bir proje oluşturmak için birden çok yolu vardır. Visual Studio'yu ilk kez açın, başlangıç penceresi görüntülenir ve burada, seçtiğiniz **yeni bir proje oluşturma**.
+Visual Studio 2019 ' de yeni bir proje oluşturmanın birden çok yolu vardır. Visual Studio 'yu ilk kez açtığınızda, başlangıç penceresi görünür ve buradan **Yeni proje oluştur**seçeneğini belirleyebilirsiniz.
 
-![VS 2019 ' Başlangıç penceresinden yeni bir proje oluşturun](media/vs-2019/start-window-create-new-project.png)
+![VS 2019 ' de başlangıç penceresinden yeni bir proje oluştur](media/vs-2019/start-window-create-new-project.png)
 
-Visual Studio geliştirme ortamı zaten açıksa, seçerek yeni bir proje oluşturabilirsiniz **dosya** > **yeni** > **proje** üzerinde menü çubuğu veya tıklayarak **yeni proje** araç çubuğunda.
+Visual Studio geliştirme ortamı zaten açıksa, menü çubuğunda **dosya** > **Yeni** > **Proje** ' yi seçerek veya araç çubuğundaki **Yeni proje** düğmesine tıklayarak yeni bir proje oluşturabilirsiniz.
 
-![Visual Studio 2019 içinde yeni proje düğmesi](media/vs-2019/new-project-button.png)
+![Visual Studio 2019 ' de yeni proje düğmesi](media/vs-2019/new-project-button.png)
 
-## <a name="select-a-template-type"></a>Şablon türünü seçin
+## <a name="select-a-template-type"></a>Şablon türü seçin
 
-Üzerinde **yeni bir proje oluşturma** sayfasında, sol tarafta, son seçilen şablonları listesi görüntülenir. Şablonları göre sıralanır *en son kullanılan*.
+**Yeni proje oluştur** sayfasında, son seçtiğiniz şablonların listesi solda görüntülenir. Şablonlar *en son kullanılanlar*tarafından sıralanır.
 
-Son kullanılan şablonlardan seçeneğini belirliyoruz değil, tüm kullanılabilir proje şablonları tarafından filtreleyebilirsiniz **dil** (örneğin, C# veya C++), **Platform** (örneğin, Windows veya Azure) ve **Proje türü** (örneğin, masaüstü veya Web). Aranacak metin şablonları, örneğin, daha fazla filtrelemek için arama kutusuna girebilirsiniz **asp.net**.
+Son kullanılan şablonlardan seçim yapmadıysanız, tüm kullanılabilir proje şablonlarını **dile** göre C# (örneğin, C++veya), **Platform** (örneğin, Windows veya Azure) ve **Proje türü** olarak filtreleyebilirsiniz (örneğin, Masaüstü veya Web). Şablonları daha fazla filtrelemek için arama kutusuna arama metni de girebilirsiniz, örneğin, **ASP.net**.
 
-![Visual Studio 2019 proje şablonu filtreleri](media/vs-2019/create-new-project-filters.png)
+![Visual Studio 2019 'de proje şablonu filtreleri](media/vs-2019/create-new-project-filters.png)
 
-Her şablon altında görünen etiketlerin üç açılan filtreleri (dil, Platform ve proje türü) karşılık gelir.
+Her şablon altında görüntülenen Etiketler üç açılan listeye (dil, platform ve proje türü) karşılık gelir.
 
 > [!TIP]
-> Aradığınız şablon görmüyorsanız, bir iş yükü için Visual Studio eksik olabilir. Ek yükleri yüklemek için **Azure geliştirme** veya **.NET ile Mobil Geliştirme**, tıklayın **daha fazla araçları ve özellikleri yükleme** görseli açmak için bağlantı Studio yükleyicisi. Buradan yükleyin ve ardından istediğiniz iş yüklerini seçin **Değiştir**. Bundan sonra ek proje şablonları arasından seçim kullanılabilir.
+> Aradığınız şablonu görmüyorsanız, Visual Studio için bir iş yükünüz eksik olabilir. Örneğin, **Azure geliştirme** veya **.NET ile mobil geliştirme**gibi ek iş yükleri yüklemek için Visual Studio yükleyicisi açmak üzere **daha fazla araç ve özellik yüklemesi** bağlantısına tıklayın. Buradan, yüklemek istediğiniz iş yüklerini seçin ve ardından **Değiştir**' i seçin. Bundan sonra, ek proje şablonları arasından seçim yapabileceğiniz şekilde sunulacaktır.
 >
-> ![Daha fazla araçlarına ve özelliklerine bağlantı, VS 2019 yükleyin](media/vs-2019/install-more-tools-features.png)
+> ![VS 2019 ' de daha fazla araç ve özellik yüklemesi](media/vs-2019/install-more-tools-features.png)
 
-Bir şablon seçin ve ardından **sonraki**.
+Bir şablon seçin ve ardından **İleri**' ye tıklayın.
 
-## <a name="configure-your-project"></a>Projenizi yapılandırın
+## <a name="configure-your-project"></a>Projenizi yapılandırma
 
-**Yeni projenizi yapılandırın** sayfası, proje (ve çözüm) adı, bir disk konumu seçin ve bir Framework sürümünü (seçtiğiniz şablona varsa) seçin. seçeneği vardır.
+**Yeni projenizi yapılandırma** sayfasında projenize (ve çözümüne) ad vermek için kullanabileceğiniz seçenekler bulunur, bir disk konumu seçebilir ve bir çerçeve sürümü (seçtiğiniz şablona uygunsa) seçin.
 
-![VS 2019 ', yeni proje sayfası yapılandırma](media/vs-2019/configure-new-project.png)
+![VS 2019 ' de yeni proje sayfanızı yapılandırma](media/vs-2019/configure-new-project.png)
 
 > [!NOTE]
-> Bir proje veya çözüm Visual Studio'da Aç zaten varsa, yeni bir proje oluşturursanız, ek bir yapılandırma seçeneği kullanılabilir. Yeni bir çözüm oluşturabilir veya zaten açık olan çözüme yeni projeyi eklemek isteyebilirsiniz.
+> Visual Studio 'da zaten açık bir proje veya çözümünüz varsa yeni bir proje oluşturursanız, ek bir yapılandırma seçeneği kullanılabilir. Yeni bir çözüm oluşturmayı veya zaten açık olan çözüme yeni projeyi eklemeyi seçebilirsiniz.
 >
-> ![Yeni çözüm oluşturma veya mevcut çözümde VS 2019 ekleyin](media/vs-2019/configure-new-project-solution.png)
+> ![VS 2019 ' de yeni çözüm oluşturma veya var olan çözüme ekleme](media/vs-2019/configure-new-project-solution.png)
 
-Tıklayın **Oluştur** yeni projeyi oluşturmak için.
+Yeni projeyi oluşturmak için **Oluştur** ' a tıklayın.
 
 ::: moniker-end
 
-## <a name="add-additional-projects-to-a-solution"></a>Ek projeleri çözüme ekleme
+## <a name="add-additional-projects-to-a-solution"></a>Çözüme ek projeler ekleme
 
-Bir çözüm için ek bir proje eklemek istiyorsanız, ndeki çözüm düğümüne sağ **Çözüm Gezgini** ve **Ekle** > **yeni proje**.
+Bir çözüme ek bir proje eklemek istiyorsanız **Çözüm Gezgini** çözüm düğümüne sağ tıklayın ve  > **Yeni proje** **Ekle** ' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

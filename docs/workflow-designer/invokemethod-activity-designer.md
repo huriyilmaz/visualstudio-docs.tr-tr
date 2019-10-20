@@ -1,63 +1,63 @@
 ---
-title: İş Akışı Tasarımcısı - InvokeMethod etkinlik Tasarımcısı
+title: İş Akışı Tasarımcısı-InvokeMethod etkinlik Tasarımcısı
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.InvokeMethod.UI
 ms.assetid: 15e6efdc-52ca-46d8-9c5e-063f7c8265a6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eed5d81cce05b316ef7593639e868936e7f2fa69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 593ec198cdfdd8acd1967abb046384711e1fa9ac
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62537647"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650162"
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod Etkinlik Tasarımcısı
 
-**InvokeMethod** Tasarımcısı oluşturmak ve yapılandırmak için kullanılan bir <xref:System.Activities.Statements.InvokeMethod> etkinlik.
+**InvokeMethod** Tasarımcısı, bir <xref:System.Activities.Statements.InvokeMethod> etkinliği oluşturmak ve yapılandırmak için kullanılır.
 
 ## <a name="the-invokemethod-activity"></a>InvokeMethod etkinliği
 
-<xref:System.Activities.Statements.InvokeMethod> Belirtilen nesnenin veya türün genel bir yöntemi çağırır.
+@No__t_0, belirtilen nesnenin veya türün ortak bir yöntemini çağırır.
 
-### <a name="use-the-invokemethod-activity-designer"></a>InvokeMethod etkinlik Tasarımcısı kullanma
+### <a name="use-the-invokemethod-activity-designer"></a>InvokeMethod etkinlik tasarımcısını kullanma
 
-Erişim **InvokeMethod** etkinlik Tasarımcısı'nda **Temelleri** kategorisi **araç kutusu**. **InvokeMethod** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve etkinlikleri genellikle yerleştirilir burada ever, örneğin olarak içinde iş akışı Tasarımcısı yüzeyine açın bırakılan bir <xref:System.Activities.Statements.Sequence>. Etkinlik Tasarımcısı bırakarak oluşturur bir <xref:System.Activities.Statements.InvokeMethod> etkinliği ile bir varsayılan <xref:System.Activities.Activity.DisplayName%2A> InvokeMethod biri. <xref:System.Activities.Activity.DisplayName%2A> Üst bilgisinde düzenlenebilir **InvokeMethod** etkinlik Tasarımcısı veya **DisplayName** özellik kılavuzunda kutusu.
+**Araç kutusunun** **temel elemanlar** kategorisindeki **InvokeMethod** etkinlik tasarımcısına erişin. **InvokeMethod** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, bir <xref:System.Activities.Statements.Sequence> içinde olduğu gibi, hiç etkinliğin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir. Etkinlik Tasarımcısı ' nın atılması, InvokeMethod 'un varsayılan <xref:System.Activities.Activity.DisplayName%2A> bir <xref:System.Activities.Statements.InvokeMethod> etkinlik oluşturur. @No__t_0, **InvokeMethod** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-invokemethod-properties"></a>InvokeMethod özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.InvokeMethod> özelliklerini ve bunların Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, özellik kılavuzunda düzenlenebilir ve bazı iş akışı Tasarımcısı yüzeyine düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Statements.InvokeMethod> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilirler.
 
-|Özellik Adı|Gerekli|Kullanım|
+|Özellik adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Kolay adı <xref:System.Activities.Statements.InvokeMethod> etkinlik. InvokeMethod varsayılan değerdir.<br /><br /> Ancak <xref:System.Activities.Activity.DisplayName%2A> kati şekilde gerekli değil kullanmak en iyisidir.|
-|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|Doğru|Etkinlik yürütüldüğünde çağrılacak yöntemin adı. Çağrılan yöntem olarak bildirilmelidir **genel**. Bu özellik, Tasarımcı yüzeyinde düzenlenebilir ve zorunludur.|
-|<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|False|Çağrılan yöntem parametre koleksiyonu. Parametreler koleksiyonu Yöntem imzasında göründükleri sırayla eklenmesi gerekir. Görüntülenecek **parametreleri** iletişim ayarlayabilirsiniz bu özellik üç nokta düğmesini tıklatın **parametreleri** özellik kılavuzunda alanı. Tıklayın **bağımsız değişken oluşturma** düğmesini parametreleri ekleyin.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin kolay adı. Varsayılan değer InvokeMethod ' dır.<br /><br /> @No__t_0 kesinlikle gerekli olmasa da, en iyisi bir tane kullanmaktır.|
+|<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|Doğru|Etkinlik yürütüldüğünde çağrılacak yöntemin adı. Çağrılan yöntem **ortak**olarak bildirilmelidir. Bu özellik tasarımcı yüzeyinde düzenlenebilir ve zorunludur.|
+|<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|False|Çağrılan metodun parametre koleksiyonu. Parametrelerin, yöntem imzasında göründükleri sırada koleksiyona eklenmesi gerekir. Bu özelliği ayarlayabileceğiniz **Parametreler** iletişim kutusunu göstermek için, özellik kılavuzunun **Parametreler** alanındaki üç nokta düğmesine tıklayın. Parametreleri eklemek için **bağımsız değişken Oluştur** düğmesine tıklayın.|
 |<xref:System.Activities.Statements.InvokeMethod.Result%2A>|False|Yöntem çağrısının dönüş değeri.|
-|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Doğru|Zaman uyumsuz olarak çağrılan yöntemi olup olmadığını belirtir. Varsayılan değer **False**.|
-|<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|False|Çağrılacak yöntem içeren nesne. Bu özellik, Tasarımcı yüzeyinde düzenlenebilir.<br /><br /> Ya da <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> veya <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> ayarlanması için gereklidir.|
-|<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|False|Türünü <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>. Bu özellik, Tasarımcı yüzeyinde düzenlenebilir. Çağrılan yöntemi statik ise bu özellik yalnızca ayarlamanız gerekir.|
+|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Doğru|Metodun zaman uyumsuz olarak verilip verilmeyeceğini belirtir. Varsayılan değer **false**'dur.|
+|<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|False|Çağrılacak yöntemi içeren nesne. Bu özellik, tasarımcı yüzeyinde düzenlenebilir.<br /><br /> @No__t_0 ya da <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> ayarlanması gerekiyor.|
+|<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|False|@No__t_0 türü. Bu özellik tasarımcı yüzeyinde düzenlenebilir. Bu özellik yalnızca çağrılan yöntem static ise ayarlanmalıdır.|
 
-Parametre olarak geçirmeniz bir C# **kullanıma** parametresi (örneğin, `Method1(out myParam))`, kullanın **OutArgument** yerine **InOutArgument**
+Parametreleri C# **Out** parametresi olarak geçirmek için (örneğin, `Method1(out myParam))` **InOutArgument** yerine **OutArgument** kullanın
 
-Adlı bağımsız değişkenleri olan yöntemleri **TargetObject** veya **sonucu** kullanılarak çağrılamaz <xref:System.Activities.Statements.InvokeMethod> etkinlik. Bunun nedeni olan <xref:System.Activities.Statements.InvokeMethod> etkinlik kayıtlarını <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A>, <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> ve <xref:System.Activities.Statements.InvokeMethod.Result%2A> içinde <xref:System.Activities.Activity.CacheMetadata%2A>.
+**TargetObject** veya **Result** adlı bağımsız değişkenlerle Yöntemler <xref:System.Activities.Statements.InvokeMethod> etkinliği kullanılarak çağrılamaz. Bunun nedeni <xref:System.Activities.Statements.InvokeMethod> etkinliğin <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A>, <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> ve <xref:System.Activities.Statements.InvokeMethod.Result%2A> <xref:System.Activities.Activity.CacheMetadata%2A> kaydeder.
 
-Parametreleri kaydetmek için algoritma <xref:System.Activities.Activity.CacheMetadata%2A> aşağıda gösterilmiştir:
+@No__t_0 parametreleri kaydetme algoritması aşağıdaki listede gösterilmektedir:
 
-1. Kayıt <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> bağımsız değişken.
+1. @No__t_0 bağımsız değişkenini kaydettirin.
 
-2. Kayıt <xref:System.Activities.Statements.InvokeMethod.Result%2A> bağımsız değişken.
+2. @No__t_0 bağımsız değişkenini kaydettirin.
 
-3. Yinelemek <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> koleksiyonu ve her bağımsız değişken kaydedin.
+3. @No__t_0 koleksiyonunu yineleyin ve her bağımsız değişkeni kaydettirin.
 
-Sonuçta elde edilen özel durum türüdür <xref:System.Activities.InvalidWorkflowException> şu ileti ile: 'InvokeMethod': Bir değişken RuntimeArgument veya zaten bir DelegateArgument 'TargetObject' adıyla var. Adları bir ortam kapsamı içinde benzersiz olmalıdır.
+Elde edilen özel durum, şu ileti ile <xref:System.Activities.InvalidWorkflowException> türüdür: ' InvokeMethod ': ' TargetObject ' adlı bir değişken, RuntimeArgument veya DelegateArgument zaten var. Adlar bir ortam kapsamı içinde benzersiz olmalıdır.
 
-Bu kısıtlama geçerli değildir <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> ve <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>. İş akışı bağımsız değişkenleri olmadığınız ve bu nedenle kayıtlı olmayan <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> koleksiyonunu <xref:System.Activities.Statements.InvokeMethod> etkinliğinde <xref:System.Activities.Activity.CacheMetadata%2A> yöntemi.
+Bu kısıtlama <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> ve <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A> için geçerlidir. İş akışı bağımsız değişkenleri değildir ve bu nedenle <xref:System.Activities.Activity.CacheMetadata%2A> yönteminde <xref:System.Activities.Statements.InvokeMethod> etkinliğinin <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> koleksiyonuna kayıtlı değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

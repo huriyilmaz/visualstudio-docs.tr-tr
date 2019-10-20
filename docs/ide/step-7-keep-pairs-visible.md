@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d0cab30734aa5411f759e85ef555ecb36f3f0cf
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
-ms.translationtype: HT
+ms.openlocfilehash: 60b058883e30587ed656690796732b15750b6277
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72575143"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647441"
 ---
 # <a name="step-7-keep-pairs-visible"></a>7\. Adım: çiftleri görünür tutma
 Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Zamanlayıcıyı etkinleştirerek (<xref:System.Windows.Forms.Timer.Start> yöntemi kullanılarak) simgeleri ortadan kaldırmamak yerine, oyunun kendisini sıfırlamasına gerek kalmadan, `firstClicked` ve `secondClicked` başvuru değişkenlerini kullanarak hiçbir etiketi takip etmeden önce Seçilen Etiketler.
@@ -59,13 +59,13 @@ Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün 
 
      Bu deyimlerden birincisi iki simgenin aynı olup olmadığını denetler. İki değer karşılaştırıldığından, C# program `==` eşitlik işlecini kullanır. İkinci ifade gerçekten değeri değiştirir ( *atama*olarak adlandırılır), `firstClicked` başvuru değişkenini sıfırlamak için `null` eşittir. Bunun yerine `=` atama işlecini kullanmasıdır. C#değerleri ayarlamak için `=` kullanır ve bunları karşılaştırmak için `==`. Visual Basic, hem değişken atama hem de karşılaştırma için `=` kullanır.
 
-2. Programı kaydedip çalıştırın ve sonra formdaki simgeleri seçmeye başlayın. Eşleşmeyen bir çift seçerseniz, zamanlayıcının Tick olayı tetiklenir ve iki simge de kaybolur. Eşleşen bir çift seçerseniz, yeni `if` deyimleri yürütülür ve Return deyimleri, aşağıdaki resimde gösterildiği gibi, simgenin görünür kalması için, metodun zamanlayıcıyı başlatan kodu atlamasına neden olur.
+2. Programı kaydedip çalıştırın ve sonra formdaki simgeleri seçmeye başlayın. Eşleşmeyen bir çift seçerseniz, zamanlayıcının Tick olayı tetiklenir ve iki simge de kaybolur. Eşleşen bir çift seçerseniz, yeni `if` deyimleri yürütülür ve Return deyimleri, aşağıdaki görüntüde gösterildiği gibi, simgenin görünür kalması için, metodun zamanlayıcıyı başlatan kodu atlamasına neden olur.
 
      Bu öğreticide oluşturduğunuz ![Game ](../ide/media/express_finishedgame.png)<br/>
-Görünür simge çiftleri ile **eşleşen oyun**
+*Görünür simge çiftleri Ile* ***eşleşen oyun***
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için bkz. 8. [Adım: oyuncunun kazandığını doğrulamak için yöntem ekleme](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md).
+- Sonraki öğretici adımına gitmek için bkz. 8. **[Adım: oyuncunun kazandığını doğrulamak için yöntem ekleme](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)** .
 
 - Önceki öğretici adımına dönmek için bkz. 6. [Adım: Zamanlayıcı ekleme](../ide/step-6-add-a-timer.md).

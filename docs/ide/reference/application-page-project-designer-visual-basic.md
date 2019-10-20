@@ -1,5 +1,5 @@
 ---
-title: VB Proje Özellikleri'nin uygulama sayfası
+title: VB proje özelliklerinin uygulama sayfası
 ms.date: 10/30/2018
 ms.topic: reference
 f1_keywords:
@@ -8,179 +8,179 @@ f1_keywords:
 helpviewer_keywords:
 - Project Designer, Application page
 - Application page in Project Designer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 032bc54d5e904cf23d3e886c7dfeb38aa3ecfd93
-ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
+ms.openlocfilehash: a40b35960b1dda30e1151e242380147ac58a77ce
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67160071"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651921"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)
 
-Kullanım **uygulama** sayfası Proje Tasarımcısı projenin uygulama ayarları ve özellikleri belirtin.
+Projenin uygulama ayarlarını ve özelliklerini belirtmek için proje Tasarımcısı ' nın **uygulama** sayfasını kullanın.
 
-Erişim için **uygulama** sayfasında, bir proje düğümü seçin (değil **çözüm** düğümü) içinde **Çözüm Gezgini**. Ardından **proje** > **özellikleri** menü çubuğundaki. Zaman **Proje Tasarımcısı** görüntülenirse, seçin **uygulama** sekmesi.
+**Uygulama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından, menü çubuğunda **proje**  > **Özellikler** ' i seçin. **Proje Tasarımcısı** göründüğünde **uygulama** sekmesini seçin.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="general-application-settings"></a>Genel Uygulama ayarları
+## <a name="general-application-settings"></a>Genel uygulama ayarları
 
-Aşağıdaki seçenekler, bir uygulamanın genel ayarlarını yapılandırmak etkinleştirin.
+Aşağıdaki seçenekler bir uygulama için genel ayarları yapılandırmanıza olanak tanır.
 
-### <a name="assembly-name"></a>Derleme adı
+### <a name="assembly-name"></a>Bütünleştirilmiş kod adı
 
-Derleme bildirimini içeren çıktı dosyasının adını belirtir. Bu özelliği değiştirirseniz **çıkış adı** özelliği de değişir.
+Derleme bildirimini içeren çıkış dosyasının adını belirtir. Bu özelliği değiştirirseniz, **Çıkış adı** özelliği de değişir.
 
-Kullanarak bir komut isteminden çıkış dosyasının adını belirtebilirsiniz [/out (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out) derleyici anahtarı.
+Ayrıca, [/Out (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out) derleyici anahtarını kullanarak bir komut isteminden çıkış dosyasının adını belirtebilirsiniz.
 
-Bu özelliği programlama yoluyla erişim hakkında daha fazla bilgi için bkz: <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
+Bu özelliğe programlı bir şekilde erişme hakkında daha fazla bilgi için bkz. <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
 
 ### <a name="root-namespace"></a>Kök ad alanı
 
-Projedeki tüm dosyalar için temel ad alanını belirtir. Örneğin, ayarlarsanız **kök Namespace** için `Project1` ve sahip olduğunuz bir `Class1` kodunuzdaki herhangi bir ad dışında ad alanı olacaktır `Project1.Class1`. Varsa bir `Class2` ad alanında `Order` kodda, kendi ad alanı olacaktır `Project1.Order.Class2`.
+Projedeki tüm dosyalar için temel ad alanını belirtir. Örneğin, **kök ad alanını** `Project1` olarak ayarlarsanız ve kodunuzda herhangi bir ad alanı dışında bir `Class1` varsa, ad alanı `Project1.Class1` olur. Kodda `Order` bir ad alanında `Class2` varsa, ad alanı `Project1.Order.Class2` olur.
 
-Silerseniz **kök Namespace**, kodu projenizin ad alanı yapısını belirtebilirsiniz.
+**Kök ad alanını**temizlerseniz, kodda projenizin ad alanı yapısını belirtebilirsiniz.
 
 > [!NOTE]
-> Kullanırsanız `Global` anahtar sözcüğü bir [Namespace deyimi](/dotnet/visual-basic/language-reference/statements/namespace-statement), projenizin kök ad alanı dışında bir ad alanı tanımlayabilirsiniz. Silerseniz **kök Namespace**, `Global` gereksinimini ortadan kaldırır üst düzey ad olur `Global` anahtar sözcüğü bir `Namespace` deyimi. Daha fazla bilgi için bkz: "Genel anahtar sözcüğü, arama Namespace deyimleri" [Visual Basic'de ad alanları](/dotnet/visual-basic/programming-guide/program-structure/namespaces).
+> Bir [Namespace ifadesinde](/dotnet/visual-basic/language-reference/statements/namespace-statement)`Global` anahtar sözcüğünü kullanıyorsanız, projenizin kök ad alanından bir ad alanı tanımlayabilirsiniz. **Kök ad alanını**temizlerseniz `Global` en üst düzey ad alanı olur ve bu da `Namespace` deyimindeki `Global` anahtar kelimesinin gereksinimini ortadan kaldırır. Daha fazla bilgi için [Visual Basic ad alanları](/dotnet/visual-basic/programming-guide/program-structure/namespaces)Içindeki "ad alanı deyimlerine genel anahtar sözcük" başlığına bakın.
 
-Kodunuzda ad alanları oluşturma hakkında daha fazla bilgi için bkz: [Namespace deyimi](/dotnet/visual-basic/language-reference/statements/namespace-statement).
+Kodunuzda ad alanlarını oluşturma hakkında daha fazla bilgi için bkz. [Namespace deyimleri](/dotnet/visual-basic/language-reference/statements/namespace-statement).
 
 Kök ad alanı özelliği hakkında daha fazla bilgi için bkz. [/RootNamespace](/dotnet/visual-basic/reference/command-line-compiler/rootnamespace).
 
-Bu özelliği programlama yoluyla erişim hakkında daha fazla bilgi için bkz: <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
+Bu özelliğe programlı bir şekilde erişme hakkında daha fazla bilgi için bkz. <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
 
-### <a name="target-framework-all-configurations"></a>Hedef Framework'ü (tüm yapılandırmaları)
+### <a name="target-framework-all-configurations"></a>Hedef çerçeve (tüm yapılandırma)
 
-.NET sürümünü belirtir, uygulama hedefler. Bu seçenek bilgisayarınızda yüklü olan .NET sürümlerini bağlı olarak farklı değerlere sahip olabilir.
+Uygulamanın hedeflediği .NET sürümünü belirtir. Bu seçenek, bilgisayarınızda hangi .NET sürümlerinin yüklü olduğuna bağlı olarak farklı değerlere sahip olabilir.
 
-.NET Framework projeleri için varsayılan değer, projeyi oluştururken belirttiğiniz hedef çerçeve ile eşleşir.
+.NET Framework projeleri için, varsayılan değer projeyi oluştururken belirttiğiniz hedef Framework ile eşleşir.
 
 > [!NOTE]
-> Listelenen önkoşul paketleri [Önkoşullar iletişim kutusu](../../ide/reference/prerequisites-dialog-box.md) iletişim kutusu ilk kez açtığınızda, otomatik olarak ayarlanır. Projenin hedef çerçevesi daha sonra değiştirirseniz, yeni hedef Framework'ü el ile eşleştirmek için önkoşulları belirtmeniz gerekir.
+> [Önkoşullar Iletişim kutusunda](../../ide/reference/prerequisites-dialog-box.md) listelenen önkoşul paketleri, iletişim kutusunu ilk kez açtığınızda otomatik olarak ayarlanır. Projenin hedef çerçevesini daha sonra değiştirirseniz, yeni hedef Framework 'ü eşleştirmek için önkoşulları el ile belirtmeniz gerekir.
 
-Daha fazla bilgi için [genel bakışı hedefleyen Framework](../../ide/visual-studio-multi-targeting-overview.md).
+Daha fazla bilgi için bkz. [Çerçeve hedefleme genel bakış](../../ide/visual-studio-multi-targeting-overview.md).
 
 ### <a name="application-type"></a>Uygulama türü
 
-Oluşturulacak uygulamanın türünü belirtir. Proje türüne bağlı olarak farklı değerler. Örneğin, bir **Windows Forms uygulaması** belirtebileceğiniz projesi **Windows Forms uygulaması**, **sınıf kitaplığı**, **konsol uygulaması**, **Windows hizmeti**, veya **Web Denetim Kitaplığı**.
+Oluşturulacak uygulamanın türünü belirtir. Değerler proje türüne göre farklılık açmış. Örneğin, **Windows Forms bir uygulama** projesi Için **Windows Forms uygulama**, **sınıf kitaplığı**, **konsol uygulaması**, **Windows hizmeti**veya **Web denetim kitaplığı**belirtebilirsiniz.
 
-Bir web uygulaması projesi belirtmelisiniz **sınıf kitaplığı**.
+Bir Web uygulaması projesi için **sınıf kitaplığı**belirtmeniz gerekir.
 
-Hakkında daha fazla bilgi için **uygulama türü** özelliğine bakın [/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target). Bu özelliğe program aracılığıyla erişme hakkında daha fazla bilgi için bkz: <xref:VSLangProj.ProjectProperties.OutputType%2A>.
+**Uygulama türü** özelliği hakkında daha fazla bilgi için bkz. [/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target). Bu özelliğe programlı bir şekilde erişme hakkında daha fazla bilgi için bkz. <xref:VSLangProj.ProjectProperties.OutputType%2A>.
 
-### <a name="auto-generate-binding-redirects"></a>Bağlama yeniden yönlendirmelerini otomatik olarak oluştur
+### <a name="auto-generate-binding-redirects"></a>Bağlama yeniden yönlendirmelerini otomatik oluştur
 
-Uygulamanız veya bileşenleri aynı derlemenin birden fazla sürümüne başvuruyorsa, bağlama yeniden yönlendirmeleri projenize eklenir. Bağlama yeniden yönlendirmeleri proje dosyasında el ile tanımlamak istiyorsanız seçimini **otomatik oluştur bağlama yönlendirmeleri**.
+Uygulamanız veya bileşenleri aynı derlemenin birden fazla sürümüne başvurduğu takdirde bağlama yeniden yönlendirmeleri projenize eklenir. Proje dosyasında bağlama yeniden yönlendirmelerini el ile tanımlamak istiyorsanız **bağlama yeniden yönlendirmelerini otomatik oluştur**seçimini kaldırın.
 
 Yeniden yönlendirme hakkında daha fazla bilgi için bkz. [derleme sürümlerini yeniden yönlendirme](/dotnet/framework/configure-apps/redirect-assembly-versions).
 
-### <a name="startup-form--startup-object--startup-uri"></a>Başlangıç formu / Başlangıç nesnesi / başlangıç URI'si
+### <a name="startup-form--startup-object--startup-uri"></a>Başlangıç formu/başlangıç nesnesi/başlangıç URI 'SI
 
-Uygulamanın başlangıç formu ya da giriş noktası belirtir.
+Uygulamanın başlangıç formunu veya giriş noktasını belirtir.
 
-Varsa **etkinleştir uygulama çerçevesi** seçilir (varsayılan), bu liste başlıklı **başlangıç formu** ve yalnızca bir form uygulama çerçevesi yalnızca başlangıç formları desteklediğinden değil nesneleri gösterir.
+**Uygulama çerçevesini etkinleştir** seçilirse (varsayılan), bu liste **başlangıç formu** olarak belirlenir ve yalnızca form gösterir çünkü uygulama çerçevesi nesneleri değil yalnızca başlangıç formlarını destekler.
 
-Projeyi WPF tarayıcı uygulaması ise, bu liste başlıklı **başlangıç URI**, ve varsayılan **Page1.xaml**. **Başlangıç URI** listesi uygulama başlatıldığında uygulama görüntüleyen kullanıcı arabirimi kaynağı (XAML öğesi) belirtmenize imkan tanır. Daha fazla bilgi için bkz. <xref:System.Windows.Application.StartupUri%2A>.
+Proje bir WPF tarayıcı uygulamasıdır, bu liste **Başlangıç URI 'si**ve varsayılan olarak **Sayfa1. xaml**' dir. **Başlangıç URI** listesi, uygulama başladığında uygulamanın görüntülediği Kullanıcı arabirimi KAYNAĞıNı (XAML öğesi) belirtmenize olanak sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Application.StartupUri%2A>.
 
-Varsa **etkinleştir uygulama çerçevesi** temizlendiğinde, bu liste olur **Başlangıç nesnesi** ve formlar ve sınıflar veya modülleriyle gösterir bir `Sub Main`.
+**Uygulama çerçevesini etkinleştir** ayarı silinirse, bu liste **Başlangıç nesnesi** haline gelir ve hem formları hem de sınıfları veya modülleri bir `Sub Main` gösterir.
 
-**Başlangıç nesnesi** uygulama yüklenirken çağrılacak giriş noktasını tanımlar. Genellikle bu, uygulamanızda ya da çok ana formu ayarlandığından `Sub Main` yordamı, uygulama başlatıldığında çalıştırmanız gerekir. Sınıf kitaplıkları, bir giriş noktası olmadığı için tek seçenektir bu özellik için **(hiçbiri)** . Daha fazla bilgi için [/main](/dotnet/visual-basic/reference/command-line-compiler/main). Bu özelliğe program aracılığıyla erişmek için bkz: <xref:VSLangProj.ProjectProperties.StartupObject%2A>.
+**Başlangıç nesnesi** , uygulama yüklenirken çağrılacak giriş noktasını tanımlar. Genellikle bu, uygulamanızdaki ana forma veya uygulama başladığında çalışması gereken `Sub Main` yordama ayarlanır. Sınıf kitaplıklarının bir giriş noktası olmadığından, bu özellik için yalnızca seçeneği **(None)** olur. Daha fazla bilgi için bkz. [/Main](/dotnet/visual-basic/reference/command-line-compiler/main). Bu özelliğe program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.StartupObject%2A>.
 
 ### <a name="icon"></a>Simge
 
-İstediğiniz, program simge olarak kullanılacak .ico dosyasını seçer. Seçin  **\<Gözat … >** için varolan grafiği gidin. Bkz: [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) (veya [/win32icon (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)) daha fazla bilgi için. Bu özelliğe program aracılığıyla erişmek için bkz: <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
+Program simgenizin olarak kullanmak istediğiniz. ico dosyasını ayarlar. **@No__t_1Browse seçin...** var olan bir grafiğe gitmek için >. Daha fazla bilgi için bkz. [/Win32Icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) (veya [/Win32ıcon (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)). Bu özelliğe program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
 
 ### <a name="assembly-information"></a>Derleme bilgileri
 
-Görüntülemek için bu düğmeye tıklayın [derleme bilgileri iletişim kutusu](../../ide/reference/assembly-information-dialog-box.md).
+[Derleme bilgileri Iletişim kutusunu](../../ide/reference/assembly-information-dialog-box.md)göstermek için bu düğmeye tıklayın.
 
-### <a name="enable-application-framework"></a>Uygulama Framework'ü etkinleştir
+### <a name="enable-application-framework"></a>Uygulama çerçevesini etkinleştir
 
-Bir proje uygulama çerçevesi kullanıp kullanmayacağını belirtir. Bu seçenek ayarı kullanılabilir seçenekleri etkiler **başlangıç formu**/**Başlangıç nesnesi**.
+Projenin uygulama çerçevesini kullanıp kullanmayacağını belirtir. Bu seçeneğin ayarı, **Başlangıç formundaki** /**Başlangıç nesnesi**için kullanılabilir seçenekleri etkiler.
 
-Bu onay kutusu seçili değilse, standart uygulamanızın kullandığı `Sub Main`. Bu onay kutusunu işaretleyerek özellikleri sağlayan **Windows Uygulama Çerçevesi Özellikleri** bölümünde ve ayrıca bir başlangıç formu seçmenizi gerektirir.
+Bu onay kutusu işaretliyse, uygulamanız standart `Sub Main` kullanır. Bu onay kutusu seçildiğinde, **Windows uygulama çerçevesi özellikleri** bölümündeki Özellikler etkinleştirilir ve ayrıca bir başlangıç formu seçmeniz gerekir.
 
-Bu onay kutusu işaretli değilse, uygulamanızın özel kullandığı `Sub Main` belirttiğiniz **başlangıç formu**. Bu durumda, bir başlangıç nesnesi belirtebilirsiniz (özel `Sub Main` bir yöntem veya bir sınıf) veya bir form. Ayrıca, seçeneklerinde **Windows Uygulama Çerçevesi Özellikleri** bölümü kullanılamıyor.
+Bu onay kutusu silinirse, uygulamanız **Başlangıç formunda**belirttiğiniz özel `Sub Main` kullanır. Bu durumda, bir başlangıç nesnesi (bir yöntemde veya bir sınıfta özel `Sub Main`) ya da form belirtebilirsiniz. Ayrıca, **Windows Application Framework Özellikler** bölümündeki seçenekler kullanılamaz hale gelir.
 
-### <a name="view-windows-settings"></a>Windows ayarlarını görüntüle
+### <a name="view-windows-settings"></a>Windows ayarlarını görüntüleme
 
-Oluşturmak ve açmak için bu düğmeye tıklayın *app.manifest* dosya. Visual Studio, uygulama için bildirim verileri oluşturmak için bu dosyayı kullanır. Değiştirerek kümesi UAC yürütme düzeyi istenen sonra `<requestedExecutionLevel>` içindeki *app.manifest* gibi:
+*App. manifest* dosyasını oluşturmak ve açmak için bu düğmeye tıklayın. Visual Studio, uygulama için bildirim verileri oluşturmak üzere bu dosyayı kullanır. Ardından *app. manifest* 'teki `<requestedExecutionLevel>` etiketini aşağıdaki gıbı değiştirerek UAC istenen yürütme düzeyini ayarlayın:
 
 `<requestedExecutionLevel level="asInvoker" />`
 
-ClickOnce çalışır bir düzeyde `asInvoker` veya sanallaştırılmış modunda (bildirim üretme yok). Sanallaştırılmış modunu belirtmek için tüm etiket app.manifest kaldırın.
+ClickOnce bir `asInvoker` düzeyi veya sanallaştırılmış modda (bildirim oluşturma olmadan) kullanılabilir. Sanallaştırılmış modu belirtmek için, tüm etiketi App. manifest öğesinden kaldırın.
 
-Bildirim oluşturma hakkında daha fazla bilgi için bkz: [Windows Vista'da ClickOnce dağıtımı](../../deployment/clickonce-deployment-on-windows-vista.md).
+Bildirim oluşturma hakkında daha fazla bilgi için bkz. [Windows Vista 'Da ClickOnce dağıtımı](../../deployment/clickonce-deployment-on-windows-vista.md).
 
-## <a name="windows-application-framework-properties"></a>Windows uygulama Çerçeve Özellikleri
+## <a name="windows-application-framework-properties"></a>Windows uygulama çerçevesi özellikleri
 
-Aşağıdaki ayarlar kullanılabilir **Windows Uygulama Çerçevesi Özellikleri** bölümü. Bu seçenekler kullanılabilir yalnızca **etkinleştir uygulama çerçevesi** onay kutusu seçilidir.
+**Windows uygulama çerçevesi özellikleri** bölümünde aşağıdaki ayarlar bulunur. Bu seçenekler yalnızca **uygulama çerçevesini etkinleştir** onay kutusu seçiliyse kullanılabilir.
 
 > [!TIP]
-> Bunu izleyen bir bölümde anlatılmaktadır **Windows Uygulama Çerçevesi Özellikleri** Windows Presentation Foundation (WPF) uygulamaları için özel ayarları.
+> Bunu izleyen bölümde, Windows Presentation Foundation (WPF) uygulamalarına özgü **Windows uygulama çerçevesi özellikleri** ayarları açıklanmaktadır.
 
-### <a name="enable-xp-visual-styles"></a>XP görsel stilleri etkinleştirme
+### <a name="enable-xp-visual-styles"></a>XP görsel stillerini etkinleştir
 
-Etkinleştirir ya da olarak da bilinen Windows XP görsel stillerini devre dışı bırakır *Windows XP temalarını*. Windows XP görsel stilleri, örneğin, yuvarlatılmış köşeler ve dinamik renkleri denetimleriyle etkinleştirin. Varsayılan durumda etkindir.
+*WINDOWS XP temaları*olarak da BILINEN Windows XP görsel stillerini etkinleştirilir veya devre dışı bırakır. Windows XP görsel stilleri, yuvarlatılmış köşeler ve dinamik renklerle denetimleri sağlar. Varsayılan değer etkindir.
 
-### <a name="make-single-instance-application"></a>Tek örnek uygulama
+### <a name="make-single-instance-application"></a>Tek örnekli uygulama oluştur
 
-Kullanıcıların uygulama birden çok örneğini çalıştırmasını engellemek için bu onay kutusunu seçin. Bu onay kutusu için varsayılan ayar *temizlenmiş*, uygulamanın çalıştırılması için birden fazla örneği sağlar. Daha fazla bilgi için <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> olay.
+Kullanıcıların uygulamanın birden çok örneğini çalıştırmasını engellemek için bu onay kutusunu işaretleyin. Bu onay kutusunun varsayılan ayarı *temizlenir*ve bu, uygulamanın birden çok örneğinin çalıştırılmasına izin verir. Daha fazla bilgi için <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> olayına bakın.
 
-### <a name="save-mysettings-on-shutdown"></a>My.Settings kapanışında Kaydet
+### <a name="save-mysettings-on-shutdown"></a>My. Settings 'i kapatmadan Kaydet
 
-Uygulamanın belirtmek için bu onay kutusunu işaretleyin `My.Settings` ayarları, kullanıcıların bilgisayarlarını kapattığınızda kaydedilir. Varsayılan ayar etkindir. Bu seçenek devre dışı bırakılırsa, uygulama ayarlarını el ile çağırarak kaydedebilir `My.Settings.Save`.
+Kullanıcılar bilgisayarlarını kapatdıkları zaman uygulamanın `My.Settings` ayarlarının kaydedileceğini belirtmek için bu onay kutusunu işaretleyin. Varsayılan ayar etkindir. Bu seçenek devre dışıysa, `My.Settings.Save` çağırarak uygulama ayarlarını el ile kaydedebilirsiniz.
 
 ### <a name="authentication-mode"></a>Kimlik doğrulama modu
 
-Seçin **Windows** (şu anda oturum açmış kullanıcıyı tanımlamak için Windows kimlik doğrulaması kullanımını belirlemek için varsayılan). Çalışma zamanında bu bilgileri kullanarak alabilirsiniz `My.User` nesne. Seçin **uygulama tanımlı** varsayılan Windows kimlik doğrulama yöntemleri kullanmak yerine, kullanıcıların kimliklerini doğrulamak için kendi kodunuzu sağlayıp sağlamayacağınızı.
+Şu anda oturum açmış kullanıcıyı tanımlamak için Windows kimlik doğrulamasının kullanımını belirtmek üzere **Windows** (varsayılan) seçeneğini belirleyin. @No__t_0 nesnesini kullanarak, çalışma zamanında bu bilgileri alabilirsiniz. Varsayılan Windows kimlik doğrulama yöntemlerini kullanmak yerine, kullanıcıların kimliğini doğrulamak için kendi kodunuzu sağlayacağınızı **uygulama tanımlı** ' yı seçin.
 
-### <a name="shutdown-mode"></a>Kapatma
+### <a name="shutdown-mode"></a>Kapalı modu
 
-Seçin **başlangıç formu kapattığı zaman** (uygulama çıkış form başlangıç formu olarak ayarladığınızda, kapatır, diğer forms açık olsalar bile belirtmek için varsayılan). Seçin **zaman son formu kapanır** uygulamanın son formu kapatıldığında veya zaman çıkış belirtmek için `My.Application.Exit` veya `End` deyimi açıkça çağrılır.
+Başlangıç formu kapandığında uygulamanın çıkış ' ı kapattığında, diğer formlar açık olsa bile, uygulamanın çıkış **biçimini seçin (** varsayılan). Son form kapatıldığında veya `My.Application.Exit` ya da `End` ifadesiyle açıkça çağrıldığında uygulamanın çıkış yapmak için **son form kapandığında** öğesini seçin.
 
-Seçin **açık kapatma sırasında** açıkça çağırdığınızda uygulamadan çıkın belirtmek için `Shutdown`.
+@No__t_1 açıkça çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **Açık Kapat '** ı seçin.
 
-Seçin **son pencereyi** uygulama son pencere kapandığında veya açıkça çağırmanız exit belirtmek için `Shutdown`. Varsayılan ayar budur.
+Son pencere kapandığında veya `Shutdown` açık olarak çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **son pencere Kapat '** ı seçin. Varsayılan ayar budur.
 
-Seçin **ana pencereyi** uygulamanın ana pencere kapandığında veya açıkça çağırdığınızda çıkmak belirtmek için `Shutdown`.
+Ana pencere kapandığında veya `Shutdown` açıkça çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **ana pencerede Kapat '** ı seçin.
 
 ### <a name="splash-screen"></a>Giriş ekranı
 
-Giriş ekranı kullanmak istediğiniz form seçin. Daha önce bir giriş ekranı bir form veya şablon kullanarak oluşturmuş olmanız gerekir. Varsayılan değer **(hiçbiri)** .
+Giriş ekranı olarak kullanmak istediğiniz formu seçin. Daha önce bir form veya şablon kullanarak bir giriş ekranı oluşturmuş olmanız gerekir. Varsayılan değer **(yok)** .
 
 ### <a name="view-application-events"></a>Uygulama olaylarını görüntüle
 
-Uygulama framework olayları için olay içine yazabileceğiniz bir olayları kod dosyasını görüntülemek için bu düğmeye tıklayın `Startup`, `Shutdown`, `UnhandledException`, `StartupNextInstance` ve `NetworkAvailabilityChanged`. Ayrıca, belirli uygulama framework yöntemlerini geçersiz kılabilirsiniz. Örneğin, Karşılama ekranında görünen davranışını geçersiz kılarak değiştirebileceğiniz `OnInitialize`.
+@No__t_0, `Shutdown`, `UnhandledException`, `StartupNextInstance` ve `NetworkAvailabilityChanged` uygulama çerçevesi olayları için olay yazabileceğiniz bir olay kodu dosyası göstermek için bu düğmeye tıklayın. Ayrıca, belirli uygulama çerçevesi yöntemlerini geçersiz kılabilirsiniz. Örneğin, `OnInitialize` geçersiz kılarak giriş ekranının görüntüleme davranışını değiştirebilirsiniz.
 
-## <a name="windows-application-framework-properties-for-windows-presentation-foundation-wpf-apps"></a>Windows Presentation Foundation (WPF) uygulamaları için Windows uygulama Çerçeve Özellikleri
+## <a name="windows-application-framework-properties-for-windows-presentation-foundation-wpf-apps"></a>Windows Presentation Foundation (WPF) uygulamaları için Windows uygulama çerçevesi özellikleri
 
-Aşağıdaki ayarlar kullanılabilir **Windows Uygulama Çerçevesi Özellikleri** bölümünde Proje bir Windows Presentation Foundation (WPF) uygulaması olduğunda. Bu seçenekler kullanılabilir yalnızca **etkinleştir uygulama çerçevesi** onay kutusu seçilidir. Bu tabloda listelenen seçeneklerden yalnızca WPF ya da WPF için kullanılabilen tarayıcı uygulamaları. WPF kullanıcı denetimi veya özel denetim kitaplığı için kullanılamaz.
+Aşağıdaki ayarlar, proje bir Windows Presentation Foundation (WPF) uygulaması olduğunda **Windows uygulama çerçevesi özellikleri** bölümünde bulunur. Bu seçenekler yalnızca **uygulama çerçevesini etkinleştir** onay kutusu seçiliyse kullanılabilir. Bu tabloda listelenen seçenekler yalnızca WPF veya WPF tarayıcı uygulamaları için kullanılabilir. Bunlar WPF Kullanıcı denetimi veya özel denetim kitaplıkları için kullanılamaz.
 
-### <a name="shutdown-mode"></a>Kapatma
+### <a name="shutdown-mode"></a>Kapalı modu
 
 Bu özellik yalnızca Windows Presentation Foundation (WPF) uygulamaları için geçerlidir.
 
-Seçin **açık kapatma sırasında** açıkça çağırdığınızda uygulamadan çıkın belirtmek için <xref:System.Windows.Application.Shutdown%2A>.
+@No__t_1 açıkça çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **Açık Kapat '** ı seçin.
 
-Seçin **son pencereyi** uygulama son pencere kapandığında veya açıkça çağırmanız exit belirtmek için <xref:System.Windows.Application.Shutdown%2A>. Varsayılan ayar budur.
+Son pencere kapandığında veya <xref:System.Windows.Application.Shutdown%2A> açık olarak çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **son pencere Kapat '** ı seçin. Varsayılan ayar budur.
 
-Seçin **ana pencereyi** uygulamanın ana pencere kapandığında veya açıkça çağırdığınızda çıkmak belirtmek için <xref:System.Windows.Application.Shutdown%2A>.
+Ana pencere kapandığında veya <xref:System.Windows.Application.Shutdown%2A> açıkça çağırdığınızda uygulamanın çıkış olduğunu belirtmek için **ana pencerede Kapat '** ı seçin.
 
-Bu ayar kullanma hakkında daha fazla bilgi için bkz. <xref:System.Windows.Application.Shutdown%2A>
+Bu ayarı kullanma hakkında daha fazla bilgi için bkz. <xref:System.Windows.Application.Shutdown%2A>
 
-### <a name="edit-xaml"></a>XAML Düzenle
+### <a name="edit-xaml"></a>XAML düzenleme
 
-Bu düğme, uygulama tanımı dosyası (Application.xaml) XAML Düzenleyicisi'nde açılır. Bu düğmeye tıkladığınızda *Application.xaml* uygulama tanımı düğümde açılır. Kaynakları tanımlama gibi belirli görevleri gerçekleştirmek için bu dosyayı düzenlemeniz gerekebilir. Uygulama tanımı dosyası mevcut değilse, Proje Tasarımcısı tane oluşturur.
+Bu düğme, XAML düzenleyicisinde uygulama tanım dosyasını (Application. xaml) açar. Bu düğmeye tıkladığınızda, Application *. xaml* uygulama tanımı düğümünde açılır. Kaynakları tanımlama gibi belirli görevleri gerçekleştirmek için bu dosyayı düzenlemeniz gerekebilir. Uygulama tanımı dosyası yoksa, proje Tasarımcısı bir tane oluşturur.
 
 ### <a name="view-application-events"></a>Uygulama olaylarını görüntüle
 
-Bu düğme açar `Application` sınıf dosyası (*Application.xaml.vb*) içinde bir kod Düzenleyicisi. Dosya mevcut değilse, Proje Tasarımcısı uygun sınıf ve ad alanına sahip bir tane oluşturur.
+Bu düğme bir kod düzenleyicisinde `Application` sınıf dosyasını (*Application. xaml. vb*) açar. Dosya yoksa, proje Tasarımcısı uygun sınıf adı ve ad alanıyla bir tane oluşturur.
 
-<xref:System.Windows.Application> Nesne (örneğin, uygulama başlatma veya kapatma) belirli uygulama durumu değişiklikleri meydana geldiğinde olayları başlatır. Bu sınıf sunan olayları tam bir listesi için bkz. <xref:System.Windows.Application>. Bu olaylar kullanıcı kod bölümünde işlenmektedir `Application` kısmi sınıf.
+@No__t_0 nesnesi, bazı uygulama durumu değişiklikleri oluştuğunda (örneğin, uygulama başlangıcında veya kapatılırken) olaylar oluşturur. Bu sınıfın sunduğu olayların tam listesi için bkz. <xref:System.Windows.Application>. Bu olaylar `Application` kısmi sınıfının Kullanıcı kodu bölümünde işlenir.

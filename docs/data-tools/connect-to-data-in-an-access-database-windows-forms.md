@@ -7,23 +7,23 @@ helpviewer_keywords:
 - connecting to data, Access databases
 - Access databases, connecting
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2a068414fb157ab71733d6c726b6ec71532629d4
-ms.sourcegitcommit: 8562a337cc9f674c756a4a0b2c7e288ebd61b51e
+ms.openlocfilehash: d24fc2fa1ee34567e0c32859eeccf6af62813a20
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345417"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648714"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Bir Access veritabanındaki verilere bağlanma
 
 Visual Studio 'Yu kullanarak bir Access veritabanına (bir *. mdb* dosyası ya da *. accdb* dosyası) bağlanabilirsiniz. Bağlantıyı tanımladıktan sonra veriler **veri kaynakları** penceresinde görünür. Buradan, tasarım yüzeyiniz üzerine tabloları veya görünümleri sürükleyebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu yordamları kullanmak için bir Windows Forms veya WPF projesine ve bir erişim veritabanı ( *. accdb* dosyası) ya da erişim 2000-2003 veritabanı ( *. mdb* dosyası) gerekir. Dosya türünüze karşılık gelen yordamı izleyin.
 
@@ -33,7 +33,7 @@ Aşağıdaki yordamı kullanarak Office 365, Access 2013, Access 2010 veya 2007 
 
 1. Visual Studio 'da bir Windows Forms veya WPF uygulama projesi açın.
 
-2. **Veri kaynakları** penceresini açmak için, **Görünüm** menüsünde **diğer Windows** > **veri kaynakları**' nı seçin.
+2. **Veri kaynakları** penceresini açmak Için, **Görünüm** menüsünde **diğer Windows**  > **veri kaynakları**' nı seçin.
 
    ![Diğer Windows veri kaynaklarını görüntüleme](../data-tools/media/viewdatasources.png)
 
@@ -53,7 +53,7 @@ Aşağıdaki yordamı kullanarak Office 365, Access 2013, Access 2010 veya 2007 
 
    **Veri kaynağını Değiştir** iletişim kutusu açılır. Veri kaynakları listesinde, **Microsoft Access veritabanı dosyası**' nı seçin. **Veri sağlayıcısı** açılır penceresinde **OLE DB için .NET Framework veri sağlayıcısı**' ni seçin ve ardından **Tamam**' ı seçin.
 
-8. **Veritabanı dosya adı**' nın yanındaki Git ' **i seçin ve** ardından *. accdb* dosyanıza gidin ve **Aç**' ı seçin.
+8. **Veritabanı dosya adı**' nın **yanındaki Git ' i seçin ve** ardından *. accdb* dosyanıza gidin ve **Aç**' ı seçin.
 
 9. Bir Kullanıcı adı ve parola girin (gerekliyse) ve ardından **Tamam**' ı seçin.
 
@@ -75,7 +75,7 @@ Aşağıdaki yordamı kullanarak Access 2000-2003 ile oluşturulan veritabanlar�
 
 1. Visual Studio 'da bir Windows Forms veya WPF uygulama projesi açın.
 
-2. **Görünüm** menüsünde **diğer Windows** > **veri kaynakları**' nı seçin.
+2. **Görünüm** menüsünde **diğer Windows**  > **veri kaynakları**' nı seçin.
 
    ![Diğer Windows veri kaynaklarını görüntüleme](../data-tools/media/viewdatasources.png)
 

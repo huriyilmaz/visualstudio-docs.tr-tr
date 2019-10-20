@@ -1,5 +1,5 @@
 ---
-title: Değişiklik başlangıç deneyimi
+title: Başlangıç deneyimini değiştirme
 ms.date: 02/01/2017
 ms.topic: conceptual
 f1_keywords:
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Start Page [Visual Studio]
 - customizing Start Page [Visual Studio]
 - Visual Studio Start Page
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c8b31f033b9c04871e57836dd263071d87a24fda
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b0a415c8a61e360ed1bcc323214d4144b2875cc0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62824262"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652545"
 ---
-# <a name="customize-startup"></a>Başlangıç'ı özelleştirme
+# <a name="customize-startup"></a>Başlangıç Özelleştir
 
-Visual Studio için başlangıç deneyimini çözümünüzün en son ya da boş bir geliştirme ortamı yalnızca bir açma gibi birçok farklı şekilde özelleştirebilirsiniz.
+Visual Studio için başlangıç deneyimini, en son çözümünüzü açma veya yalnızca boş bir geliştirme ortamı gibi birçok farklı yolla özelleştirebilirsiniz.
 
 ::: moniker range="vs-2017"
 
@@ -32,43 +32,43 @@ Araç penceresinde çalışan ve Visual Studio'ya özel dahili komutları çalı
 
 ## <a name="to-change-the-startup-item"></a>Başlangıç öğesini değiştirmek için
 
-1. Menü çubuğunda, **Araçları** > **seçenekleri**.
+1. Menü çubuğunda **araçlar**  > **Seçenekler**' i seçin.
 
-2. Genişletin **ortam**ve ardından **başlangıç**.
+2. **Ortam**' ı genişletin ve ardından **Başlangıç**' ı seçin.
 
 ::: moniker range="vs-2017"
 
-3. İçinde **başlangıçta** listesinde, Visual Studio'yu başlattıktan sonra görüntülenecek öğeyi seçin.
+3. **At başlangıç** listesinde, Visual Studio başlatıldıktan sonra görüntülenecek öğeyi seçin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. İçinde **, başlangıçta açılması** listesinde, Visual Studio'yu başlattıktan sonra olmasını istediğinizi seçin. Aralarından seçim yapabileceğiniz **başlangıç penceresi** (olanak sağlayan yeni veya mevcut bir projeyi açmayı), **en son çözüm**, veya **boş ortam**.
+3. **Başlangıçta,** listede, Visual Studio başlatıldıktan sonra ne olmasını istediğinizi seçin. **Başlangıç penceresi** (yeni veya var olan bir proje açmanıza olanak tanır), **en son çözüm**veya **boş ortam**arasından seçim yapabilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-## <a name="to-show-a-custom-start-page"></a>Özel başlangıç sayfası göstermek için
+## <a name="to-show-a-custom-start-page"></a>Özel bir başlangıç sayfası göstermek için
 
-Yapabilecekleriniz [kendi özel başlangıç sayfası oluşturma](../extensibility/creating-a-custom-start-page.md) Visual Studio SDK'sını kullanarak veya bir başkası zaten oluşturduğu kullanın. Örneğin, özel başlangıç sayfalarda bulabilirsiniz [Visual Studio Market](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Start%20Pages&sortBy=Downloads).
+Visual Studio SDK 'sını kullanarak [kendi özel başlangıç sayfanızı oluşturabilir](../extensibility/creating-a-custom-start-page.md) veya başka birisinin zaten oluşturduğu bir tane kullanabilirsiniz. Örneğin, [Visual Studio Market](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Start%20Pages&sortBy=Downloads)özel başlangıç sayfaları bulabilirsiniz.
 
-Özel başlangıç sayfası yüklemek için açın *.vsix* dosyası veya kopyalayın ve başlangıç sayfası dosyalarına yapıştırın *%USERPROFILE%\Documents\Visual Studio 2017\StartPages* bilgisayarınızda bir klasör.
+Özel bir başlangıç sayfası yüklemek için *. vsix* dosyasını açın veya başlangıç sayfası dosyalarını kopyalayıp bilgisayarınızdaki *%userprofile%\Bir Studio 2017 \ startpages* klasörüne yapıştırın.
 
-### <a name="to-select-which-custom-start-page-to-display"></a>Görüntülenecek hangi özel başlangıç sayfası seçin
+### <a name="to-select-which-custom-start-page-to-display"></a>Görüntülenecek özel başlangıç sayfasını seçmek için
 
-1. Menü çubuğunda, **Araçları** > **seçenekleri**.
+1. Menü çubuğunda **araçlar** > **Seçenekler**' i seçin.
 
-1. Genişletin **ortam**ve ardından **başlangıç**.
+1. **Ortam**' ı genişletin ve ardından **Başlangıç**' ı seçin.
 
-1. İçinde **başlangıç sayfasını Özelleştir** listesinde, istediğiniz sayfayı seçin.
+1. **Başlangıç sayfası Özelleştir** listesinde istediğiniz sayfayı seçin.
 
 > [!TIP]
-> Özel Başlangıç sayfasındaki bir hata Visual Studio'nun çökmesine neden olursa, Visual Studio'yu güvenli modda açın ve ardından varsayılan başlangıç sayfasını kullanacak şekilde ayarlayın. Bkz: [safemode (devenv.exe)](../ide/reference/safemode-devenv-exe.md).
+> Özel başlangıç sayfasındaki bir hata, Visual Studio 'Nun kilitlenmesine neden oluyorsa, Visual Studio 'Yu güvenli modda açıp varsayılan başlangıç sayfasını kullanacak şekilde ayarlayabilirsiniz. Bkz. [/safemode (devenv. exe)](../ide/reference/safemode-devenv-exe.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md)
+- [Visual Studio IDE 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md)
 
 ::: moniker-end

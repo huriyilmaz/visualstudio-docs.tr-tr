@@ -5,26 +5,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
 - walkthroughs [text templates], directive processor
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 661d8670f857240fdd4ed7714ca389c851d83601
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 73473a549c774cd0f4302404e2ca3a450cc2e6d2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935366"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666990"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>İzlenecek yol: Özel Yönerge İşlemcisi Oluşturma
 
-*Yönerge işlemcileri* kod ekleyerek iş *oluşturulan dönüştürme sınıfına*. Eğer bir *yönergesi* gelen bir *metin şablonu*, metin şablonunuza yazdığınız kodun geri kalanını yönergenin sağladığı işlevselliğe dayanabilir.
+*Yönerge işlemcileri* , *oluşturulan dönüştürme sınıfına*kod ekleyerek çalışır. Bir *metin şablonundan*bir *yönerge* çağırırsanız, metin şablonunuzda yazdığınız kodun geri kalanı, yönergesinin sağladığı işlevselliğe bağlı olabilir.
 
-Kendi özel yönerge işlemcilerinizi yazabilirsiniz. Bu metin şablonlarınızı özelleştirmenize olanak sağlar. Özel bir yönerge işlemcisi oluşturmak için öğesinden devralınan bir sınıf oluşturun. <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> veya <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.
+Kendi özel yönerge işlemcilerinizi yazabilirsiniz. Bu metin şablonlarınızı özelleştirmenize olanak sağlar. Özel bir yönerge işlemcisi oluşturmak için <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> ya da <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> devralan bir sınıf oluşturursunuz.
 
 Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
 
@@ -36,13 +36,13 @@ Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
 
 ## <a name="create-a-custom-directive-processor"></a>Özel Yönerge İşlemcisi Oluşturma
 
-Bu kılavuzda, özel bir yönerge işlemcisi oluşturursunuz. Depolar, XML dosyasını okuyan özel bir yönerge eklersiniz bir <xref:System.Xml.XmlDocument> değişkeni ve özelliği aracılığıyla sunar. "Yönerge İşlemcisini Test Etme" bölümünde, XML dosyasına erişmek için metin şablonunda bu özelliği kullanırsınız.
+Bu kılavuzda, özel bir yönerge işlemcisi oluşturursunuz. Bir XML dosyasını okuyan, <xref:System.Xml.XmlDocument> bir değişkende depolayan ve bunu bir özellik aracılığıyla sunan özel bir yönerge eklersiniz. "Yönerge İşlemcisini Test Etme" bölümünde, XML dosyasına erişmek için metin şablonunda bu özelliği kullanırsınız.
 
 Özel yönergenize yaptığınız çağrı aşağıdaki gibi görünür:
 
 `<#@ CoolDirective Processor="CustomDirectiveProcessor" FileName="<Your Path>DocFile.xml" #>`
 
-Özel yönerge işlemcisi, değişkeni ve özelliği oluşturulan dönüştürme sınıfına ekler. Yazdığınız yönerge <xref:System.CodeDom> sınıfları altyapısı oluşturulan dönüştürme sınıfına eklediği kodu oluşturur. <xref:System.CodeDom> Sınıflar ya da görsele kod oluşturma C# veya belirtilen dile bağlı olarak, Visual Basic `language` parametresinin `template` yönergesi. Yönerge işlemcisinin dili ve yönerge işlemcisine erişen metin şablonunun dilinin eşleşmesi gerekmez.
+Özel yönerge işlemcisi, değişkeni ve özelliği oluşturulan dönüştürme sınıfına ekler. Yazdığınız yönerge, altyapının oluşturulan dönüştürme sınıfına eklediği kodu oluşturmak için <xref:System.CodeDom> sınıflarını kullanır. @No__t_0 sınıfları, `template` yönergesinin `language` parametresinde belirtilen C# dile bağlı olarak, Visual ya da Visual Basic kod oluşturur. Yönerge işlemcisinin dili ve yönerge işlemcisine erişen metin şablonunun dilinin eşleşmesi gerekmez.
 
 Yönergenin oluşturduğu kod aşağıdaki gibi görünür:
 
@@ -80,15 +80,15 @@ End Property
 1. Visual Studio'da, CustomDP adlı bir C# veya Visual Basic kitaplık projesi oluşturun.
 
     > [!NOTE]
-    > Yönerge işlemcisini birden fazla bilgisayara yüklemek istiyorsanız, bir Visual Studio Uzantısı (VSIX) projesi kullanmanız ve .pkgdef dosyasını uzantıya eklemeniz daha iyidir. Daha fazla bilgi için [özel yönerge işlemcisini dağıtma](../modeling/deploying-a-custom-directive-processor.md).
+    > Yönerge işlemcisini birden fazla bilgisayara yüklemek isterseniz, bir Visual Studio uzantısı (VSıX) projesi kullanmak ve uzantıya bir. pkgdef dosyası eklemek daha iyidir. Daha fazla bilgi için bkz. [özel yönerge Işlemcisi dağıtma](../modeling/deploying-a-custom-directive-processor.md).
 
-2. Bu derlemelere başvuruları ekleyin:
+2. Bu derlemelere başvurular ekleyin:
 
-    - **Microsoft.VisualStudio.TextTemplating.\*.0**
+    - **Microsoft. VisualStudio. Textşablon oluşturma. \*.0**
 
-    - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
+    - **Microsoft. VisualStudio. Textşablon. Interfaces. \*.0**
 
-3. Değiştirin **Class1** aşağıdaki kod ile. Bu kod, devralınan CustomDirectiveProcessor sınıfını tanımlar <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> sınıfı ve gerekli yöntemleri uygular.
+3. **Class1** içindeki kodu aşağıdaki kodla değiştirin. Bu kod, <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> sınıfından devralan bir CustomDirectiveProcessor sınıfını tanımlar ve gerekli yöntemleri uygular.
 
     ```csharp
     using System;
@@ -599,22 +599,22 @@ End Property
     End Namespace
     ```
 
-4. Yalnızca Visual Basic için açık **proje** menüsüne ve ardından **CustomDP özellikleri**. Üzerinde **uygulama** sekmesinde **kök ad alanı**, varsayılan değeri Sil `CustomDP`.
+4. Yalnızca Visual Basic için, **Proje** menüsünü açın ve **CustomDP özellikleri**' ne tıklayın. **Uygulama** sekmesinde, **kök ad alanında**, `CustomDP` varsayılan değeri silin.
 
-5. Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.
+5. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
 
-6. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+6. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
 
 ### <a name="build-the-project"></a>Projeyi Oluşturma
 
-Projeyi oluşturun. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+Projeyi oluşturun. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
 
-## <a name="register-the-directive-processor"></a>Yönerge işlemcisini kaydetme
+## <a name="register-the-directive-processor"></a>Yönerge Işlemcisini kaydetme
 
-Bir metin şablonundan Visual Studio'da bir yönerge çağrı yapmadan önce yönerge işlemcisi için bir kayıt defteri anahtarını eklemeniz gerekir.
+Visual Studio 'da bir metin şablonundan bir yönergeyi çağırabilmeniz için, yönerge işlemcisi için bir kayıt defteri anahtarı eklemeniz gerekir.
 
 > [!NOTE]
-> Yönerge işlemcisini birden fazla bilgisayara yüklemek istiyorsanız, içeren bir Visual Studio Uzantısı (VSIX) tanımlamak daha iyi bir *.pkgdef* derlemenizle birlikte dosya. Daha fazla bilgi için [özel yönerge işlemcisini dağıtma](../modeling/deploying-a-custom-directive-processor.md).
+> Yönerge işlemcisini birden fazla bilgisayara yüklemek istiyorsanız derlemeinizle birlikte bir *. pkgdef* dosyası Içeren bir Visual Studio UZANTıSı (VSIX) tanımlanması daha iyidir. Daha fazla bilgi için bkz. [özel yönerge Işlemcisi dağıtma](../modeling/deploying-a-custom-directive-processor.md).
 
 Yönerge işlemcilerinin anahtarları, kayıt defterinde aşağıdaki konumda bulunur:
 
@@ -635,11 +635,11 @@ Bu bölümde, özel bir yönerge işlemciniz için aynı konumda kayıt defterin
 
 ### <a name="to-add-a-registry-key-for-the-directive-processor"></a>Yönerge işlemcisi için bir kayıt defteri anahtarı eklemek için
 
-1. Çalıştırma `regedit` Başlat menüsünden veya komut satırını kullanarak komutu.
+1. Başlat menüsünü veya komut satırını kullanarak `regedit` komutunu çalıştırın.
 
-2. Konumuna göz atın **hkey_local_machıne\software\microsoft\visualstudio\\\*.0\TextTemplating\DirectiveProcessors**ve düğüme tıklatın.
+2. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \* 0 \ Texttemplating\directiveişlemcilerle**konumuna göz atın ve düğüme tıklayın.
 
-   64-bit sistemlerde kullanın **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**
+   64 bit sistemlerde, **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio \\ kullanın \*.0 \ Texttemplating\directiveiþlemcileri**
 
 3. CustomDirectiveProcessor adlı yeni bir anahtar ekleyin.
 
@@ -650,19 +650,19 @@ Bu bölümde, özel bir yönerge işlemciniz için aynı konumda kayıt defterin
 
 5. Bu kılavuzda daha önce oluşturduğunuz CustomDP.dll dosyasının yoluna eşit değere sahip, CodeBase adlı yeni bir dize değeri ekleyin.
 
-     Örneğin, yol aşağıdaki gibi görünmelidir `C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll`.
+     Örneğin yol, `C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll` gibi görünebilir.
 
      Kayıt defteri anahtarınız aşağıdaki değerlere sahip olmalı:
 
-   | Ad | Tür | Veri |
+   | Name | Tür | Veri |
    |-|-|-|
    | (Varsayılan) | REG_SZ | (değer ayarlı değil) |
    | örneği | REG_SZ | CustomDP.CustomDirectiveProcessor |
-   | CodeBase | REG_SZ | <strong>\<Path to Your Solution></strong>CustomDP\bin\Debug\CustomDP.dll |
+   | CodeBase | REG_SZ | <strong>çözümünüze \<Path ></strong> CustomDP\bin\Debug\CustomDP.dll |
 
      Derlemeyi GAC içine koyduysanız, değerler aşağıdaki gibi görünmelidir:
 
-   | Ad | Tür | Veri |
+   | Name | Tür | Veri |
    |-|-|-|
    | (Varsayılan) | REG_SZ | (değer ayarlı değil) |
    | örneği | REG_SZ | CustomDP.CustomDirectiveProcessor |
@@ -670,20 +670,20 @@ Bu bölümde, özel bir yönerge işlemciniz için aynı konumda kayıt defterin
 
 6. Visual Studio'yu yeniden başlatın.
 
-## <a name="test-the-directive-processor"></a>Yönerge işlemcisini test etme
+## <a name="test-the-directive-processor"></a>Yönerge Işlemcisini test etme
 
 Yönerge işlemcisini sınamak için onu çağıran bir metin şablonu yazmanız gerekir.
 
-Bu örnekte, metin şablonu yönergeyi çağırır ve bir sınıf dosyasının belgelerini içeren bir XML dosyası adını geçirir. Metin şablonu kullanan <xref:System.Xml.XmlDocument> yönergenin XML'e gitmek ve belge yorumlarını yazdırmak için oluşturduğu özelliği.
+Bu örnekte, metin şablonu yönergeyi çağırır ve bir sınıf dosyasının belgelerini içeren bir XML dosyası adını geçirir. Metin şablonu, XML 'de gezinmek ve belge açıklamalarını yazdırmak için yönergesinin oluşturduğu <xref:System.Xml.XmlDocument> özelliğini kullanır.
 
 ### <a name="to-create-an-xml-file-for-use-in-testing-the-directive-processor"></a>Yönerge işlemcisini sınamada kullanmak için bir XML dosyası oluşturmak için
 
-1. Adlı bir dosya oluşturun *DocFile.xml* herhangi bir metin düzenleyicisi (ör. Notepad) kullanarak.
+1. Herhangi bir metin düzenleyicisi kullanarak *DocFile. xml* adlı bir dosya oluşturun (örneğin, Not defteri).
 
     > [!NOTE]
-    > Bu dosyayı herhangi bir konuma oluşturabilirsiniz (örneğin, *C:\Test\DocFile.xml*).
+    > Bu dosyayı herhangi bir konumda (örneğin, *C:\Test\DocFile.xml*) oluşturabilirsiniz.
 
-2. XML dosyasına aşağıdakileri ekleyin:
+2. Aşağıdakileri XML dosyasına ekleyin:
 
     ```xml
     <?xml version="1.0"?>
@@ -732,12 +732,12 @@ Bu örnekte, metin şablonu yönergeyi çağırır ve bir sınıf dosyasının b
 
 2. TestDP.tt adlı yeni bir metin şablonu dosyasını ekleyin.
 
-3. Emin olun **özel araç** özelliği testdp.tt'nin `TextTemplatingFileGenerator`.
+3. TestDP.tt öğesinin **özel araç** özelliğinin `TextTemplatingFileGenerator` olarak ayarlandığından emin olun.
 
-4. TestDP.tt içeriğini aşağıdaki metni değiştirin.
+4. TestDP.tt içeriğini aşağıdaki metinle değiştirin.
 
     > [!NOTE]
-    > Dize değiştirin `<YOUR PATH>` yoluyla *DocFile.xml* dosya.
+    > @No__t_0 dize, *DocFile. xml* dosyasının yoluyla değiştirin.
 
     Metin şablonunun dilinin yönerge işlemcisinin diliyle eşleşmesine gerek yoktur.
 
@@ -824,17 +824,17 @@ Bu örnekte, metin şablonu yönergeyi çağırır ve bir sınıf dosyasının b
     ```
 
     > [!NOTE]
-    > Bu örnekte, değerini `Processor` parametresi `CustomDirectiveProcessor`. Değerini `Processor` parametresi, işlemcinin kayıt defteri anahtarının adıyla eşleşmelidir.
+    > Bu örnekte, `Processor` parametresinin değeri `CustomDirectiveProcessor`. @No__t_0 parametresinin değeri, işlemcinin kayıt defteri anahtarının adıyla aynı olmalıdır.
 
-5. Üzerinde **dosya** menüsünde seçin **Tümünü Kaydet**.
+5. **Dosya** menüsünde **Tümünü Kaydet**' i seçin.
 
 ### <a name="to-test-the-directive-processor"></a>Yönerge işlemcisini sınamak için
 
-1. İçinde **Çözüm Gezgini**, TestDP.tt öğesine sağ tıklatın ve ardından **özel aracı Çalıştır**.
+1. **Çözüm Gezgini**' de, TestDP.tt ' a sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
-   Visual Basic kullanıcıları için TestDP.txt görünmeyebilir **Çözüm Gezgini** varsayılan olarak. Projeye atanan tüm dosyaları görüntülemek için Aç **proje** menüsüne ve ardından **tüm dosyaları göster**.
+   Visual Basic kullanıcılar için, TestDP. txt varsayılan olarak **Çözüm Gezgini** görünmeyebilir. Projeye atanan tüm dosyaları görüntülemek için, **Proje** menüsünü açın ve **tüm dosyaları göster**' e tıklayın.
 
-2. İçinde **Çözüm Gezgini**, TestDP.txt düğümünü genişletin ve ardından da TestDP.txt Düzenleyicisi'nde açmak için çift tıklayın.
+2. **Çözüm Gezgini**, TestDP. txt düğümünü genişletin ve ardından bu dosyayı düzenleyicide açmak Için TestDP. txt dosyasına çift tıklayın.
 
     Oluşturulan metin çıktısı görüntülenir. Çıktı aşağıdaki gibi görünmelidir:
 
@@ -874,10 +874,10 @@ Bu örnekte, metin şablonu yönergeyi çağırır ve bir sınıf dosyasının b
 
 ### <a name="to-add-html-to-the-generated-text"></a>Oluşturulan metninize HTML eklemek için
 
-1. Değiştirin *TestDP.tt* aşağıdaki. HTML vurgulanır. Dize değiştirdiğinizden emin olun `YOUR PATH` yoluyla *DocFile.xml* dosya.
+1. *TestDP.tt* içindeki kodu aşağıdaki kodla değiştirin. HTML vurgulanır. @No__t_0 dize, *DocFile. xml* dosyasının yolunu ile değiştirdiğinizden emin olun.
 
     > [!NOTE]
-    > Ek Aç \<# ve Kapat #> etiketleri, ifade kodunu HTML etiketleri ayırmak.
+    > Ek açık \< # ve Close # > etiketi, deyimin kodunu HTML etiketlerinden ayırır.
 
     ```csharp
     <#@ assembly name="System.Xml" #>
@@ -959,8 +959,8 @@ Bu örnekte, metin şablonu yönergeyi çağırır ve bir sınıf dosyasının b
     </body></html>
     ```
 
-2. Üzerinde **dosya** menüsünü tıklatın **gt;testdp.txt'yi Kaydet &**.
+2. **Dosya** menüsünde, **TestDP. txt dosyasını Kaydet**' e tıklayın.
 
-3. Çıktıyı bir tarayıcıda görüntülemek için **Çözüm Gezgini**, Testdp.htm'ye sağ tıklatın ve **tarayıcıda görüntüle**.
+3. Çıktıyı bir tarayıcıda görüntülemek için, **Çözüm Gezgini**, TestDP. htm öğesine sağ tıklayın ve **Tarayıcıda görüntüle**' ye tıklayın.
 
-   HTML biçiminin sahip dışında çıktınız orijinal metinle aynı olmalıdır. Her öğe adı kalın yazı tipinde görünür.
+   Çıktınızın, HTML biçiminin uygulanmış olması dışında, özgün metinle aynı olması gerekir. Her öğe adı kalın görünür.

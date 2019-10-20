@@ -1,5 +1,5 @@
 ---
-title: Başlangıç, ortam, Seçenekler iletişim kutusu | Microsoft Docs
+title: Başlangıç, ortam, Seçenekler Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -8,20 +8,20 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.Startup
 ms.assetid: 9d517203-3c62-4660-b7b4-ea7d032dcb1e
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c54bea7e5d80db2b6aecf9fac06070bf012d3d2e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ab31b9a3b5ee17240e0dd29a99675cf87739056
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68163275"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663147"
 ---
 # <a name="startup-environment-options-dialog-box"></a>Başlangıç, Ortam, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Visual Studio başlangıç sayfasını özelleştirme veya Visual Studio başlatıldığında farklı bir varsayılan eylem ayarlamak için bu sayfayı kullanın. Daha fazla bilgi için [başlangıç sayfasını özelleştirme](../../ide/customizing-the-start-page-for-visual-studio.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Visual Studio başlangıç sayfasını özelleştirmek veya Visual Studio başlatıldığında farklı bir varsayılan eylem ayarlamak için bu sayfayı kullanın. Daha fazla bilgi için bkz. [Başlangıç sayfasını özelleştirme](../../ide/customizing-the-start-page-for-visual-studio.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Ortam Seçenekleri İletişim Kutusu](../../ide/reference/environment-options-dialog-box.md)

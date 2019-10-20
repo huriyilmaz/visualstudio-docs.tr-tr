@@ -1,5 +1,5 @@
 ---
-title: 'CA2100: SQL sorgularını güvenlik açıkları için gözden geçirin | Microsoft Docs'
+title: 'CA2100: güvenlik açıkları için SQL sorgularını Inceleyin | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ReviewSqlQueriesForSecurityVulnerabilities
 ms.assetid: 79670604-c02a-448d-9c0e-7ea0120bc5fe
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 75a95e5972b26632a1cfbfce1242e49c38c9e27b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: e7258ec98937e7ea84773e788234e5a34772e9d4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65683032"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652190"
 ---
 # <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: SQL sorgularını güvenlik açıkları için inceleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,21 +31,21 @@ ms.locfileid: "65683032"
 |TypeName|ReviewSqlQueriesForSecurityVulnerabilities|
 |CheckId|CA2100|
 |Kategori|Microsoft.Security|
-|Yeni Değişiklik|Bölünemez|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir yöntem ayarlar <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> yönteme değişkeninden oluşturulmuş dize kullanarak özellik.
+ Yöntemi, yöntemine dize bağımsız değişkeninden oluşturulan bir dize kullanarak <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> özelliğini ayarlar.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, dize değişkeninin kullanıcı girişi içerdiğini varsayar. Kullanıcı girişi ile oluşturulan SQL komut dizesi, SQL enjeksiyon saldırılarına karşı savunmasız durumdadır. SQL ekleme saldırısına kötü niyetli bir kullanıcı sorgu tasarımını zarar verecek ya da temel alınan veritabanına yetkisiz erişim girişimi değiştiren bir giriş sağlar. Tipik teknikleri ekleme tek tırnak işareti veya kesme işareti SQL değişmez dize sınırlayıcısı olan içerir. SQL açıklama gösterir iki kısa çizgi; ve noktalı virgül, yeni bir komut izlediğini belirtir. Kullanıcı girişi sorgu, aşağıdakilerden birini bir parçası olması gerekiyorsa saldırı riskini azaltmak için verimliliği, sırasına göre listelenmiş.
+ Bu kural, dize değişkeninin kullanıcı girişi içerdiğini varsayar. Kullanıcı girişi ile oluşturulan SQL komut dizesi, SQL enjeksiyon saldırılarına karşı savunmasız durumdadır. Bir SQL ekleme saldırısında, kötü niyetli bir Kullanıcı, bir sorgunun tasarımını değiştiren ve temel alınan veritabanına yetkisiz erişim elde eden bir giriş sağlar. Tipik teknikler, SQL sabit dize sınırlayıcısı olan tek tırnak işareti veya kesme işareti ekleme işlemini içerir; bir SQL yorumunu belirten iki tire; ve yeni bir komutun izlediği noktalı virgül. Kullanıcı girişi sorgunun bir parçası olmalıdır, saldırı riskini azaltmak için, verimlilik sırasıyla listelenen aşağıdakilerden birini kullanın.
 
-- Bir saklı yordamı kullanın.
+- Saklı yordam kullanın.
 
-- Bir parametreli komut dizesi kullanın.
+- Parametreli bir komut dizesi kullanın.
 
-- Komut dizesi oluşturmadan önce hem tür hem de içerik için kullanıcı girişi doğrulayın.
+- Komut dizesini oluşturmadan önce hem tür hem de içerik için Kullanıcı girişini doğrulayın.
 
-  Aşağıdaki [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] türleri uygulayan <xref:System.Data.IDbCommand.CommandText%2A> özelliği veya özelliği bir dize bağımsız değişkeni ayarlamak oluşturucular sağlar.
+  Aşağıdaki [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] türleri <xref:System.Data.IDbCommand.CommandText%2A> özelliğini uygular veya bir dize bağımsız değişkeni kullanarak özelliği ayarlamış olan oluşturucular sağlar.
 
 - <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> ve <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>
 
@@ -53,20 +53,20 @@ ms.locfileid: "65683032"
 
 - <xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName> ve <xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>
 
-- [System.Data.SqlServerCe.SqlCeCommand](<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeCommand?qualifyHint=False&amp;autoUpgrade=True>  -->) ve [System.Data.SqlServerCe.SqlCeDataAdapter] ()<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeDataAdapter?qualifyHint=False&amp;autoUpgrade=True>  -->)
+- [System. Data. SqlServerCe. SqlCeCommand] (<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeCommand?qualifyHint=False&amp;autoUpgrade=True>  -->) ve [System. Data. SqlServerCe. SqlCeDataAdapter] (<!-- TODO: review code entity reference <xref:assetId:///System.Data.SqlServerCe.SqlCeDataAdapter?qualifyHint=False&amp;autoUpgrade=True>  -->)
 
 - <xref:System.Data.SqlClient.SqlCommand?displayProperty=fullName> ve <xref:System.Data.SqlClient.SqlDataAdapter?displayProperty=fullName>
 
-  ToString yöntemini bir türün açıkça veya dolaylı olarak kullanıldığında, bu kuralı ihlal ettiğini fark sorgu dizesi oluşturmak için. Bir örnek verilmiştir.
+  Bir türün ToString yöntemi açıkça veya sorgu dizesini oluşturmak için örtük olarak kullanıldığında bu kuralın ihlal edildiğini unutmayın. Bir örnek verilmiştir.
 
 ```
 int x = 10;
 string query = "SELECT TOP " + x.ToString() + " FROM Table";
 ```
 
- Kötü niyetli bir kullanıcı ToString() yöntemini geçersiz kılma nedeni kuralı ihlal edildi.
+ Kötü amaçlı bir Kullanıcı ToString () metodunu geçersiz kılabildiğinden kural ihlal edilir.
 
- ToString örtük olarak kullanıldığında kural ayrıca ihlal edildi.
+ Ayrıca, ToString örtük olarak kullanıldığında kural da çiğnendir.
 
 ```
 int x = 10;
@@ -74,13 +74,13 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 ```
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için parametreli bir sorgu kullanın.
+ Bu kuralın ihlalini onarmak için parametreli bir sorgu kullanın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Komut metni herhangi bir kullanıcı girişi içermiyorsa bu kuraldan bir uyarıyı bastırmak güvenlidir.
+ Komut metni herhangi bir kullanıcı girişi içermiyorsa, bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek bir yöntemi gösterir `UnsafeQuery`, kural ve bir yöntem ihlal `SaferQuery`, karşılayan kural parametreli komut dizesi kullanarak.
+ Aşağıdaki örnek, parametreli bir komut dizesi kullanarak kuralı karşılayan `UnsafeQuery` ve kuralı ihlal eden bir yöntemi gösterir, `SaferQuery`.
 
  [!code-cpp[FxCop.Security.ReviewSqlQueries#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/cpp/FxCop.Security.ReviewSqlQueries.cpp#1)]
  [!code-csharp[FxCop.Security.ReviewSqlQueries#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/cs/FxCop.Security.ReviewSqlQueries.cs#1)]

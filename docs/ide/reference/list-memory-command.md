@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ListMemory command
 - list memory command
 ms.assetid: a84de361-a6a6-4f6d-96aa-a0d4a424371e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6d0b694f9703c6260d95ad03e085fcdf774dc52
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: fb5e6181c2dbe9a79b2ab1d0859722de324d768e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919140"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610691"
 ---
 # <a name="list-memory-command"></a>Belleği Listele Komutu
-Belirtilen bellek aralığının içeriklerini görüntüler.
+Belirtilen bellek aralığının içeriğini görüntüler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 
 İsteğe bağlı. Belleği, ANSI veya Unicode bellek baytlarına karşılık gelen karakterler olarak görüntüler.
 
-Biriktirme`number`
+/Count: `number`
 
-İsteğe bağlı. ' Den `expression`başlayarak, kaç baytlık bellek gösterileceğini belirler.
+İsteğe bağlı. @No__t_0 başlayarak, kaç baytlık bellek gösterileceğini belirler.
 
-Formatını`formattype`
+/Format: `formattype`
 
-İsteğe bağlı. Bellek penceresinde bellek bilgilerini görüntülemek için biçim türü ; OneByte, TwoBytes, on bayt, sekizinci TBytes, float (32-bit) veya Double (64-bit) olabilir. Eğer OneByte kullanılıyorsa `/Unicode` kullanılamaz.
+İsteğe bağlı. **Bellek penceresinde bellek** bilgilerini görüntülemek için biçim türü; OneByte, TwoBytes, on bayt, sekizinci TBytes, float (32-bit) veya Double (64-bit) olabilir. OneByte kullanılıyorsa `/Unicode` kullanılamaz.
 
 /Hex&#124;imzalı&#124;işaretsiz
 
@@ -70,14 +70,14 @@ Tüm anahtarlarla birlikte bir **hata ayıklama. ListMemory** komutu yazmak yeri
 
 |Alias|Komut ve anahtarlar|
 |-----------| - |
-|**d**|Debug.ListMemory|
-|**kapattığımda**|Debug.ListMemory /Ansi|
-|**veritabanı**|Debug.ListMemory /Format:OneByte|
-|**'ye**|Debug.ListMemory /Format:FourBytes /Ansi|
-|**gg**|Debug.ListMemory /Format:FourBytes|
+|**TID**|Debug. ListMemory|
+|**kapattığımda**|Debug. ListMemory/ANSI|
+|**veritabanı**|Debug. ListMemory/Format: OneByte|
+|**'ye**|Debug. ListMemory/Format: on bayt/ANSI|
+|**gg**|Debug. ListMemory/Format: on bayt|
 |**df**|Debug. ListMemory/Format: float|
-|**DQ**|Debug.ListMemory /Format:EightBytes|
-|**du**|Debug.ListMemory / Unicode|
+|**DQ**|Debug. ListMemory/Format: sekizinci TBytes|
+|**du**|Debug. ListMemory/UNICODE|
 
 ## <a name="example"></a>Örnek
 

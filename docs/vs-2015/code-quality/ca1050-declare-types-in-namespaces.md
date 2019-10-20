@@ -1,5 +1,5 @@
 ---
-title: 'CA1050: Ad alanlarında türleri bildirin | Microsoft Docs'
+title: 'CA1050: ad alanlarında tür bildirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,46 +12,46 @@ helpviewer_keywords:
 - CA1050
 ms.assetid: 1002748d-ac8d-404f-85dd-7a12d1ad3e05
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f13684df70db7026e874bc8edb6282faca2cf98d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c56de70daeabd05215f68024339d5855686d529b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68200538"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653828"
 ---
-# <a name="ca1050-declare-types-in-namespaces"></a>CA1050: Ad alanlarında türler bildirin
+# <a name="ca1050-declare-types-in-namespaces"></a>CA1050: Ad alanlarında türleri bildirin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|DeclareTypesInNamespaces|
 |CheckId|CA1050|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Ortak veya korumalı tür, adlandırılmış bir ad alanı kapsamı dışında tanımlanır.
+ Ortak veya korumalı bir tür, adlandırılmış bir ad alanının kapsamı dışında tanımlanır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Türleri ad çakışmalarını önlemek için ad alanları ve ilgili türü bir nesne hiyerarşisine düzenlemek için bir yol olarak bildirilir. Herhangi bir adlandırılmış ad alanı dışında olan kod içinde başvurulan bir genel ad alanında türleridir.
+ Türler ad çakışmalarını engellemek için ad alanlarında ve bir nesne hiyerarşisinde ilgili türleri düzenlemenin bir yolu olarak belirtilir. Adlandırılmış ad alanı dışında olan türler, kodda başvurulmayacak genel bir ad alanında bulunur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için bir ad alanında tür yerleştirin.
+ Bu kuralın ihlalini onarmak için, türü bir ad alanına yerleştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan bir uyarıyı bastırmak hiçbir zaman sahip, ancak derleme hiçbir zaman diğer Derlemelerle birlikte kullanılması durumunda bunu yapmak güvenlidir.
+ Bu kuraldan bir uyarıyı bastırmanız gerekmese de, derleme diğer derlemelerle birlikte hiçbir zaman kullanılmaz.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, hatalı bir ad alanı dışında bildirilen bir türe sahip bir kitaplık ve bir ad alanında bildirilen aynı ada sahip bir tür gösterir.
+ Aşağıdaki örnek, bir ad alanı dışında yanlış bir şekilde bildirilmeli bir kitaplık ve bir ad alanında bildirildiği aynı ada sahip bir tür gösterir.
 
  [!code-csharp[FxCop.Design.TypesLiveInNamespaces#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TypesLiveInNamespaces/cs/FxCop.Design.TypesLiveInNamespaces.cs#1)]
  [!code-vb[FxCop.Design.TypesLiveInNamespaces#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.TypesLiveInNamespaces/vb/FxCop.Design.TypesLiveInNamespaces.vb#1)]
 
 ## <a name="example"></a>Örnek
- Aşağıdaki uygulama önceden tanımlanmış kitaplığını kullanır. Bir ad dışında bildirilen tür ne zaman oluşturulduğunu unutmayın adı `Test` bir ad ile nitelenmiyor. Ayrıca erişmeye unutmayın `Test` yazın `Goodspace`, ad alanı adı gereklidir.
+ Aşağıdaki uygulama daha önce tanımlanan kitaplığı kullanır. Ad alanı dışında belirtilen türün `Test` adı bir ad alanı tarafından nitelendirilmediği zaman oluşturulduğunu unutmayın. Ayrıca, `Goodspace` ' deki `Test` türüne erişmek için ad alanı adının gerekli olduğunu unutmayın.
 
  [!code-csharp[FxCop.Design.TestTypesLive#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TestTypesLive/cs/FxCop.Design.TestTypesLive.cs#1)]
  [!code-vb[FxCop.Design.TestTypesLive#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.TestTypesLive/vb/FxCop.Design.TestTypesLive.vb#1)]

@@ -17,19 +17,19 @@ helpviewer_keywords:
 - tokens, and the Task List
 - Task List, comment tasks
 ms.assetid: 88327e04-fa3e-48db-995b-ad89e0dc4ed2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 980b4ae40b1b7706b47bd884cc02dad14b743625
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: f2d0ba45ffea940ddb57a6da1e6df55e3da8867b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605679"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644854"
 ---
-# <a name="options-dialog-box-environment--task-list"></a>Seçenekler iletişim kutusu: Ortam \> görev listesi
+# <a name="options-dialog-box-environment--task-list"></a>Seçenekler iletişim kutusu: ortam \> Görev Listesi
 
 Bu seçenekler sayfası **görev listesi** anımsatıcılar üreten açıklama belirteçlerini eklemenize, silmenizi ve değiştirmenize olanak sağlar. Bu ayarları göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin, **ortam** klasörünü genişletin ve **görev listesi**' yi seçin.
 

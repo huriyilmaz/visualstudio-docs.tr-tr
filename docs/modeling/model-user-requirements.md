@@ -5,96 +5,96 @@ ms.topic: conceptual
 helpviewer_keywords:
 - requirements
 - stories
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d75bfd7634e068224b12168390193773c198957a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 68aa46b3dc07813b73921b8acb5970289c30aecc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62814582"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658408"
 ---
 # <a name="model-user-requirements"></a>Kullanıcı gereksinimlerini modelleme
 
-Etkinlikler ve bölümü hakkında diyagramlar çizerek kullanıcılarınızın ihtiyaçlarını anlamanıza, tartışın ve visual Studio yardımcı sisteminizi hedeflerine elde etmelerine yardımcı oynadığı. Her biri farklı bir açısını Kullanıcıların ihtiyaçlarını üzerinde odaklanır. Bu diyagramları kümesi gereksinimleri modelidir. Video gösterimi için bkz: [İş etki alanı modelleme](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain).
+Visual Studio, etkinlikleri hakkında diyagramlar çizerek kullanıcılarınızın ihtiyaçlarını anlamanıza, tartışmanıza ve iletmenize yardımcı olur. Gereksinimler modeli, her biri kullanıcı gereksinimlerinin farklı bir yönüne odaklanan Bu diyagramların bir kümesidir. Video gösterimi için bkz. [Iş etki alanını modelleme](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain).
 
-Visual Studio'nun hangi sürümlerinin her model türünü desteklemek için bkz [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Hangi Visual Studio sürümlerinin her model türünü desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-Gereksinimler modeli, yardımcı olur:
+Gereksinim modeli şunları yapmanıza yardımcı olur:
 
-- İç tasarımından ayrı olarak sistemin dış özelliklerine odaklanır.
+- İç tasarımından ayrı olarak sistemin dış davranışına odaklanın.
 
-- Kullanıcıların ve hissedarların ile doğal dilde daha az belirsizlik gerekiyor.
+- Doğal dilde olduğundan, kullanıcıların ve paydaşların ihtiyaçlarını çok daha az belirsizliğe göre tanıtın.
 
-- Tutarlı bir kullanıcı, geliştiriciler ve testçiler tarafından kullanılan terimler sözlüğü tanımlayın.
+- Kullanıcılar, geliştiriciler ve test ediciler tarafından kullanılabilecek tutarlı bir terim sözlüğü tanımlayın.
 
-- Boşluk ve tutarsızlıkları azaltın.
+- Gereksinimlerde boşlukları ve tutarsızlıkları azaltın.
 
-- Gereksinim değişikliklerine yanıt vermek için gereken iş miktarını azaltmaya.
+- Gereksinim değişikliklerine yanıt vermek için gereken işi azaltın.
 
-- Özellikleri geliştirileceğini sırasını planlayın.
+- Özelliklerin geliştirilecek sırayı planlayın.
 
-- Modelleri, testler ve gereksinimler arasında NET bir ilişki yapma, sistem testleri için temel olarak kullanın. Gereksinimleri değiştiğinde, bu ilişki, testler doğru bir şekilde güncelleştirmenize yardımcı olur. Bu, sistemin yeni gereksinimlerini karşıladığından emin olur.
+- Testler ve gereksinimler arasında net bir ilişki yaparak modelleri sistem testleri için temel olarak kullanın. Gereksinimler değiştiğinde, bu ilişki testleri doğru şekilde güncelleştirmenize yardımcı olur. Bu, sistemin yeni gereksinimleri karşıladığından emin olmanızı sağlar.
 
-Kullanıcıları veya temsilciler ile tartışmalara odaklanmak için kullanın ve bunu her yineleme başlangıcında yeniden ziyaret gereksinimler modelini en büyük avantajı sağlar. Ayrıntılı olarak kod yazmadan önce tamamlamanız gerekmez. Kısmen çalışan bir uygulama, çok Basitleştirilmiş bile genellikle kullanıcıların gereksinimleriyle irdelemesi en cazip temelini oluşturur. Model, bu tartışmaların sonuçları özetlemek için etkili bir yoludur. Daha fazla bilgi için [geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md).
+Bir gereksinim modeli, kullanıcıları veya temsilcileriyle tartışmalara odaklanmak için kullanıyorsanız en büyük avantaj sağlar ve her yinelemenin başlangıcında onu tekrar ziyaret edebilirsiniz. Kodu yazmadan önce ayrıntılı olarak doldurmanız gerekmez. Kısmen çalışan bir uygulama, çok fazla Basitleştirilmiş olsa bile, genellikle gereksinimlerle ilgili olarak gereksinimlerin tartışılması için en fazla bir temel oluşturur. Model, bu tartışmaların sonuçlarını özetlemek için etkili bir yoldur. Daha fazla bilgi için bkz. [geliştirme sürecinizdeki modelleri kullanma](../modeling/use-models-in-your-development-process.md).
 
 > [!NOTE]
-> Bu konular boyunca sistem ya da geliştirmekte olduğunuz uygulamanın "Sistem" anlamına gelir. Birçok yazılım ve donanım bileşenleri büyük koleksiyonu olabilir; ya da tek bir uygulama; veya daha büyük bir sistemde içinde bir yazılım bileşeni. Her durumda, bir kullanıcı arabirimi ya da API aracılığıyla sistemin dışından görülemediğinden, davranışı gereksinimler modelini açıklar.
+> Bu konularda, "sistem", geliştirmekte olduğunuz sistem veya uygulama anlamına gelir. Birçok yazılım ve donanım bileşeninin büyük bir koleksiyonu olabilir; ya da tek bir uygulama; veya daha büyük bir sistem içindeki bir yazılım bileşenidir. Her durumda, gereksinimler modeli, bir kullanıcı arabirimi veya API aracılığıyla sisteminizin dışından görülebilen davranışı açıklar.
 
 ## <a name="common-tasks"></a>Ortak görevler
 
-Kullanıcı gereksinimlerini birkaç farklı görünümler oluşturabilirsiniz.  Her görünüm, belirli türde bilgi sağlar.  Bu görünümler oluşturduğunuzda, sık birinden diğerine taşımak idealdir. Herhangi bir görüntüden yeniden başlatabilirsiniz.
+Kullanıcıların gereksinimlerinin birkaç farklı görünümünü oluşturabilirsiniz.  Her görünüm belirli bir bilgi türü sağlar.  Bu görünümleri oluşturduğunuzda sıklıkla bir tane diğerine taşımak en iyisidir. Herhangi bir görünümden başlayabilirsiniz.
 
-|Diyagram veya belge|Bu gereksinimler modelinde açıklar|Bölüm|
+|Diyagram veya belge|Gereksinimler modelinde neleri açıklar|Bölüm|
 |-|-|-|
-|Kavramsal bir sınıf diyagramı|Gereksinimlerini tanımlamak için kullanılan türler sözlüğü; görünen türler sistemin arabirimi.||
-|Ek belgelerin veya iş öğeleri|Performans, güvenlik, kullanılabilirlik ve güvenilirlik ölçütleri.|[Hizmet gereksinimlerinin kalitesini açıklayan](#QoSRequirements)|
-|Ek belgelerin veya iş öğeleri|Kullanım kısıtlamaları ve belirli bir özel olmayan kuralları|[İş kurallarını gösterme](#BusinessRules)|
+|Kavramsal sınıf diyagramı|Gereksinimleri anlatmak için kullanılan türlerin sözlüğü; Sistem arabiriminde görünen türler.||
+|Ek belgeler veya iş öğeleri|Performans, güvenlik, kullanılabilirlik ve güvenilirlik ölçütleri.|[Hizmet gereksinimlerinin kalitesini açıklama](#QoSRequirements)|
+|Ek belgeler veya iş öğeleri|Belirli bir kullanım örneğine özgü bulunmayan kısıtlamalar ve kurallar|[İş kurallarını gösterme](#BusinessRules)|
 
-Diyagram türlerin çoğu başka bir amaçla kullanılabilir dikkat edin. Diyagram türleri genel bakış için bkz. [uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md).
+Diyagram türlerinin çoğunun başka amaçlar için de kullanılabileceğini unutmayın. Diyagram türlerine genel bir bakış için bkz. [uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md).
 
-## <a name="BusinessRules"></a> İş kurallarını gösterme
+## <a name="BusinessRules"></a>Iş kurallarını gösterme
 
-Bir iş kuralı, belirli kullanım örneği ile ilişkili değil ve sistem genelinde gözlenmelidir bir gereksinimdir.
+İş kuralı, belirli bir kullanım örneği ile ilişkilendirilmemiş ve sistem genelinde gözlenecek bir gereksinimdir.
 
-Birçok iş kuralları kavramsal sınıflar arasındaki ilişkileri kısıtlamalar şunlardır. Bu yazma *statik iş kuralları* kavramsal sınıf diyagramında ilgili sınıflar ile ilgili açıklamalar olarak. Örneğin:
+Birçok iş kuralı, kavramsal sınıflar arasındaki ilişkilerdeki kısıtlamalardır. Bu *statik iş kurallarını* , kavramsal sınıf diyagramında ilgili sınıflarla ilişkili açıklamalar olarak yazabilirsiniz. Örneğin:
 
-![Açıklama kuralında sırasını sınıfa iliştirilen.](../modeling/media/uml_reqmcd2.png)
+![Açıklama, Order sınıfına iliştirilmiş kural.](../modeling/media/uml_reqmcd2.png)
 
-*Dinamik iş kuralları* kısıtlamak izin verilen olaylar dizisi. Örneğin, bir kullanıcı, sisteminizdeki diğer işlemleri gerçekleştirmeden önce oturum açması gerektiğini göstermek için bir sıralı veya etkinlik diyagramı kullanın.
+*Dinamik iş kuralları* , izin verilen olay dizilerini kısıtlar. Örneğin, bir kullanıcının sisteminizde başka işlemler gerçekleştirmeden önce oturum açması gerektiğini göstermek için bir sıra veya etkinlik diyagramı kullanın.
 
-Ancak, çok sayıda dinamik kurallar daha etkili bir şekilde ve genel statik kuralları ile değiştirerek belirtilebilir. Örneğin, bir sınıfa sınıf kavramsal modeldeki 'Farklı oturum' bir Boolean özniteliği ekleyebilirsiniz. Günlük kullanım örneğindeki Sonkoşul olarak oturum ekleyin ve diğer kullanım örnekleri çoğunu önkoşulu olarak ekleyin. Bu yaklaşım, tüm olası eşleştirme birleşimlerini olaylar dizisini tanımlamamaya özen gösterin sağlar. Yeni kullanım durumlarını modele eklemek, ihtiyacınız olduğunda, ayrıca daha esnektir.
+Ancak, birçok dinamik kural, statik kurallarla değiştirilerek daha etkin ve genel olarak ifade edilebilir. Örneğin, kavramsal sınıf modelindeki bir sınıfa ' oturum açmış ' Boole özniteliği ekleyebilirsiniz. Oturum açma durumunu kullanım durumunun sonkoşulu olarak, diğer kullanım örneklerinin çoğunun bir önkoşulu olarak eklemeniz gerekir. Bu yaklaşım, olay sıralarının tüm olası birleşimlerini tanımlamaktan kaçınmanızı sağlar. Modele yeni kullanım durumları eklemeniz gerektiğinde de daha esnektir.
 
-Seçimi buraya gereksinimleri nasıl tanımlayacağınız hakkında olduğunu ve bunun nasıl gereksinimleri program kodu içinde uygulamanız bağımsız olduğuna dikkat edin.
+Buradaki seçim, gereksinimlerin nasıl tanımladığına ilişkin olduğunu ve bu seçeneğin program kodunda gereksinimlerin nasıl uygulandığını fark ettiğini unutmayın.
 
-Aşağıdaki konular, daha fazla bilgi sağlar:
+Aşağıdaki konularda daha fazla bilgi sağlanmaktadır:
 
 |Hakkında bilgi edinmek için|Oku|
 |-|-|
-|İş kurallarının aynılarını kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
+|İş kurallarına uygun kod geliştirme|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="QoSRequirements"></a> Hizmet gereksinimlerinin kalitesini açıklayan
+## <a name="QoSRequirements"></a>Hizmet gereksinimlerinin kalitesini açıklama
 
-Hizmet gereksinimi kalitesi birkaç işlem kategorisi vardır. Bunlar aşağıdakileri içerir:
+Hizmet gereksinimi kalitesi için çeşitli kategoriler vardır. Bunlar aşağıdakileri içerir:
 
 - Performans
 
 - Güvenlik
 
-- Kullanılabilirlik
+- Stillerin
 
 - Güvenilirlik
 
 - Sağlamlık
 
-Bu gereksinimlerin bazıları belirli kullanım durumları açıklamasında içerebilir. Diğer gereksinimler kullanım örneklerine özgü olmayan ve ayrı bir belgede en etkili bir şekilde yazılır. Mümkün olduğunda, gereksinimler modeli tarafından tanımlanan sözlük izliyor kullanışlıdır. Aşağıdaki örnekte, özel olarak gereksinimini kullanılan ana sözcüklerin aktörleri kullanım örnekleri ve önceki çizimlerde sınıfları başlıklarını olduğuna dikkat edin:
+Bu gereksinimlerin bazılarını, belirli kullanım durumlarının açıklamalarına dahil edebilirsiniz. Diğer gereksinimler kullanım örneklerine özgü değildir ve en etkili şekilde ayrı bir belgede yazılır. Mümkün olduğunda, gereksinim modeli tarafından tanımlanan bir sözlüğüne bağlı kalmak yararlı olur. Aşağıdaki örnekte, gereksinimde kullanılan ana sözcüklerin, önceki çizimlerdeki aktörlerin, kullanım durumlarının ve sınıfların başlıkları olduğunu fark edeceksiniz:
 
-Bir müşteri, Yemek Sipariş sırada bir restoran, bir menü öğesini siler. Bu menü öğesine başvuran bir sipariş öğesi kırmızı renkte görüntülenir.
+Bir restoran, bir müşteri bir yemek sipariş ederken bir menü öğesini silerse, bu menü öğesine başvuran herhangi bir sıralama öğesi kırmızı renkte görüntülenir.
 
-Bkz: [uygulama Mimarinizi modelleme](../modeling/model-your-app-s-architecture.md) Hizmet gereksinimlerinin kalitesini için uyar kod geliştirme hakkında bilgi edinmek için.
+Hizmet gereksinimlerinin kalitesine uygun kod geliştirmeyi öğrenmek için [uygulamanızın mimarisini modelleyin](../modeling/model-your-app-s-architecture.md) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

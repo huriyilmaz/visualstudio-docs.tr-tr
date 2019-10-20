@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Windows Forms'ta basit bir WCF hizmeti oluşturma"
+title: 'İzlenecek yol: Windows Forms içinde basit bir WCF hizmeti oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - WCF services
 - WCF services, walkthrough
 ms.assetid: 5fef1a64-27a4-4f10-aa57-29023e28a2d6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 97bbf8212caf87f28849df15d350811579f22ccd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7e2954d333ae3fe0dc6ff1c221d1e450eb9bf51a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62565397"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72639467"
 ---
-# <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>İzlenecek yol: Windows Forms'ta basit bir WCF hizmeti oluşturma
+# <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>İzlenecek yol: Windows Forms basit bir WCF hizmeti oluşturma
 
-Bu izlenecek yol basit bir Windows Communication Foundation (WCF) hizmet oluşturma, test etmesine ve ardından bir Windows Forms uygulamasından erişmek nasıl gösterir.
+Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluşturmayı, test etmek ve sonra bu bir Windows Forms uygulamasından erişmeyi gösterir.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="create-a-service"></a>Bir hizmet oluşturma
+## <a name="create-a-service"></a>Hizmet oluşturma
 
 1. Visual Studio'yu açın.
 
 ::: moniker range="vs-2017"
 
-2. Üzerinde **dosya** menüsünde seçin **yeni** > **proje**.
+2. **Dosya** menüsünde **Yeni** > **Proje**' yi seçin.
 
-3. İçinde **yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#**  düğümünü seçip **WCF** çizgidir**WCF hizmet Kitaplığı**.
+3. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **görsel C#**  düğümünü genişletin ve **ardından WCF** **hizmet kitaplığı**' nı seçin.
 
-4. Tıklayın **Tamam** projeyi oluşturmak için.
+4. Projeyi oluşturmak için **Tamam** ' ı tıklatın.
 
    ![WCF hizmet kitaplığı projesi](../data-tools/media/wcf1.png)
 
@@ -47,108 +47,108 @@ Bu izlenecek yol basit bir Windows Communication Foundation (WCF) hizmet oluştu
 
 ::: moniker range=">=vs-2019"
 
-2. Pencerenin başlangıç seçin **yeni bir proje oluşturma**.
+2. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-3. Tür **wcf hizmet Kitaplığı** arama kutusuna **yeni bir proje oluşturma** sayfası. Şunlardan birini seçin C# veya Visual Basic şablonu **WCF hizmet Kitaplığı**ve ardından **sonraki**.
+3. **Yeni proje oluştur** sayfasındaki arama kutusuna **WCF hizmet kitaplığı** yazın. C# **WCF hizmet kitaplığı**için veya Visual Basic şablonunu seçin ve ardından **İleri**' ye tıklayın.
 
-   ![Visual Studio 2019 içinde yeni bir WCF hizmet kitaplığı projesi oluşturun](media/vs-2019/create-new-wcf-service-library.png)
+   ![Visual Studio 2019 'de yeni WCF hizmet kitaplığı projesi oluşturma](media/vs-2019/create-new-wcf-service-library.png)
 
    > [!TIP]
-   > Şablonlardan görmüyorsanız yüklemeniz gerekebilir **Windows Communication Foundation** Visual Studio bileşen. Seçin **daha fazla araçları ve özellikleri yükleme** Visual Studio Yükleyicisi'ni açın. Seçin **tek tek bileşenler** sekmesinde, aşağı kaydırarak **geliştirme etkinliklerini**ve ardından **Windows Communication Foundation**. Tıklayın **değiştirme**.
+   > Herhangi bir şablon görmüyorsanız, Visual Studio 'nun **Windows Communication Foundation** bileşenini yüklemeniz gerekebilir. Visual Studio Yükleyicisi açmak için **daha fazla araç ve özellik yüklemeyi** seçin. **Ayrı bileşenler** sekmesini seçin, **geliştirme etkinlikleri**' ne gidin ve ardından **Windows Communication Foundation**' yi seçin. **Değiştir**' e tıklayın.
 
-4. Üzerinde **yeni projenizi yapılandırın** sayfasında **Oluştur**.
+4. **Yeni projenizi yapılandırın** sayfasında **Oluştur**' a tıklayın.
 
 ::: moniker-end
 
    > [!NOTE]
-   > Bu, test ve erişilen bir çalışma hizmet oluşturur. Aşağıdaki iki adımı farklı bir veri türü kullanılacak varsayılan yöntemini nasıl değişiklik yapabileceğiniz gösterir. Gerçek bir uygulamada hizmete kendi işlevlerinizi eklersiniz.
+   > Bu, test edilebilir ve erişilebilen bir çalışan hizmet oluşturur. Aşağıdaki iki adım, farklı bir veri türünü kullanmak için varsayılan yöntemi nasıl değiştirebileceğinizi göstermektedir. Gerçek bir uygulamada, hizmete kendi işlevlerinizi de eklemeniz gerekir.
 
-5. İçinde **Çözüm Gezgini**, çift **Iservice1.vb** veya **Iservice1.cs**.
+5. **Çözüm Gezgini**, **IService1. vb** veya **IService1.cs**öğesine çift tıklayın.
 
-   ![Iservice1 dosyası](../data-tools/media/wcf2.png)
+   ![IService1 dosyası](../data-tools/media/wcf2.png)
 
-   Şu satırı bulun:
+   Aşağıdaki satırı bulun:
 
    [!code-csharp[WCFWalkthrough#4](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.cs)]
    [!code-vb[WCFWalkthrough#4](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.vb)]
 
-   Değişiklik türü için `value` dize parametresi:
+   @No__t_0 parametresinin türünü dize olarak değiştirin:
 
    [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.cs)]
    [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.vb)]
 
-   Yukarıdaki kodda Not `<OperationContract()>` veya `[OperationContract]` öznitelikleri. Bu öznitelik hizmet tarafından sunulan herhangi bir yöntem için gerekli değildir.
+   Yukarıdaki kodda `<OperationContract()>` veya `[OperationContract]` özniteliklerini aklınızda edin. Bu öznitelikler, hizmet tarafından sunulan herhangi bir yöntem için gereklidir.
 
-6. İçinde **Çözüm Gezgini**, çift **Service1.vb** veya **Service1.cs**.
+6. **Çözüm Gezgini**, **Service1. vb** veya **Service1.cs**öğesine çift tıklayın.
 
    ![Service1 dosyası](../data-tools/media/wcf3.png)
 
-   Şu satırı bulun:
+   Aşağıdaki satırı bulun:
 
    [!code-vb[WCFWalkthrough#5](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.vb)]
    [!code-csharp[WCFWalkthrough#5](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.cs)]
 
-   Değişiklik türü için `value` dize parametresi:
+   @No__t_0 parametresinin türünü dize olarak değiştirin:
 
    [!code-csharp[WCFWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.cs)]
    [!code-vb[WCFWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.vb)]
 
 ## <a name="test-the-service"></a>Hizmeti test etme
 
-1. Tuşuna **F5** hizmeti çalıştırmak için. A **WCF Test istemcisi** form görünür ve hizmeti yükler.
+1. Hizmeti çalıştırmak için **F5** tuşuna basın. Bir **WCF Test istemcisi** formu görünür ve hizmeti yükler.
 
-2. İçinde **WCF Test istemcisi** formunda, çift **GetData()** altındaki yöntemin **Iservice1**. **GetData** sekmesi görünür.
+2. **WCF Test istemcisi** formunda, **IService1**altındaki **GetData ()** yöntemine çift tıklayın. **GetData** sekmesi görüntülenir.
 
      ![GetData&#40; &#41; yöntemi](../data-tools/media/wcf4.png)
 
-3. İçinde **istek** kutusunda **değer** alan ve tür `Hello`.
+3. **İstek** kutusunda **değer** alanı ' nı seçin ve `Hello` yazın.
 
      ![Değer alanı](../data-tools/media/wcf5.png)
 
-4. Tıklayın **Invoke** düğmesi. Varsa bir **Güvenlik Uyarısı** iletişim kutusu görüntülendikten sonra **Tamam**. Sonuç görüntüler **yanıt** kutusu.
+4. **Çağır** düğmesine tıklayın. Bir **güvenlik uyarısı** iletişim kutusu görünürse, **Tamam**' a tıklayın. Sonuç, **Yanıt** kutusunda görüntülenir.
 
-     ![Yanıt kutusunda sonucu](../data-tools/media/wcf6.png)
+     ![Yanıt kutusundaki Sonuç](../data-tools/media/wcf6.png)
 
-5. Üzerinde **dosya** menüsünde tıklatın **çıkış** test formu kapatmak için.
+5. **Dosya** menüsünde **Çıkış** ' a tıklayarak test formunu kapatın.
 
-## <a name="access-the-service"></a>Hizmete erişim
+## <a name="access-the-service"></a>Hizmete erişme
 
-### <a name="reference-the-wcf-service"></a>WCF hizmeti başvurusu
+### <a name="reference-the-wcf-service"></a>WCF hizmetine başvur
 
-1. Üzerinde **dosya** menüsünde **Ekle** ve ardından **yeni proje**.
+1. **Dosya** menüsünde, **Ekle** ' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.
 
-2. İçinde **yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#** düğümünü **Windows**ve ardından  **Windows Forms uygulamalarındaki**. Tıklayın **Tamam** projeyi açmak için.
+2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **görsel C#**  düğümünü genişletin, **Windows**' u seçin ve sonra **Windows Forms uygulama**' yı seçin. Projeyi açmak için **Tamam** ' ı tıklatın.
 
-     ![Windows Forms uygulaması projesi](../data-tools/media/wcf7.png)
+     ![Windows Forms uygulama projesi](../data-tools/media/wcf7.png)
 
-3. Sağ **WindowsApplication1** tıklatıp **hizmet Başvurusu Ekle**. **Hizmet Başvurusu Ekle** iletişim kutusu görüntülenir.
+3. **WindowsApplication1** öğesine sağ tıklayın ve **hizmet başvurusu Ekle**' ye tıklayın. **Hizmet başvurusu Ekle** iletişim kutusu görüntülenir.
 
-4. İçinde **hizmet Başvurusu Ekle** iletişim kutusu, tıklayın **bulma**.
+4. **Hizmet başvurusu Ekle** Iletişim kutusunda **bul**' a tıklayın.
 
      ![Hizmet Başvurusu Ekle iletişim kutusu](../data-tools/media/wcf8.png)
 
-     **Service1** görüntüler **Hizmetleri** bölmesi.
+     **Service1** , **Hizmetler** bölmesinde görüntülenir.
 
-5. Tıklayın **Tamam** hizmet başvurusu eklemek için.
+5. Hizmet başvurusunu eklemek için **Tamam** ' ı tıklatın.
 
 ### <a name="build-a-client-application"></a>İstemci uygulaması oluşturma
 
-1. İçinde **Çözüm Gezgini**, çift **Form1.vb** veya **Form1.cs** Windows Form Tasarımcısı zaten açık değilse açın.
+1. **Çözüm Gezgini**, zaten açık değilse Windows Form Tasarımcısı açmak için **Form1. vb** veya **Form1.cs** öğesine çift tıklayın.
 
-2. Gelen **araç kutusu**, sürükleyin bir `TextBox` denetimi, bir `Label` denetimi ve bir `Button` forma denetim.
+2. **Araç kutusundan**bir `TextBox` denetimini, bir `Label` denetimini ve `Button` denetimini form üzerine sürükleyin.
 
-     ![Formu için denetimler ekleme](../data-tools/media/wcf9.png)
+     ![Forma denetim ekleme](../data-tools/media/wcf9.png)
 
-3. Çift `Button`ve aşağıdaki kodu ekleyin `Click` olay işleyicisi:
+3. @No__t_0 çift tıklayın ve `Click` olay işleyicisine aşağıdaki kodu ekleyin:
 
      [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.cs)]
      [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.vb)]
 
-4. İçinde **Çözüm Gezgini**, sağ **WindowsApplication1** tıklatıp **başlangıç projesi olarak ayarla**.
+4. **Çözüm Gezgini**' de, **WindowsApplication1** ' a sağ tıklayın ve **Başlangıç projesi olarak ayarla**' ya tıklayın.
 
-5. Tuşuna **F5** projeyi çalıştırın. Bir metin girin ve düğmeye tıklayın. Etiket görüntüler "girdiniz:", girdiğiniz metni gösterir.
+5. Projeyi çalıştırmak için **F5** tuşuna basın. Biraz metin girin ve düğmeye tıklayın. Etiket "girdiğiniz:" görüntüler ve girdiğiniz metni gösterir.
 
-     ![Formun sonucu gösteriliyor](../data-tools/media/wcf10.png)
+     ![Sonucu gösteren form](../data-tools/media/wcf10.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

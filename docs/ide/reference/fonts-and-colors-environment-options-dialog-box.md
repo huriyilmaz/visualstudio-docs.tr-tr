@@ -20,21 +20,21 @@ helpviewer_keywords:
 - defaults, colors
 - printers, customizing
 ms.assetid: c767d302-51ed-47a8-a527-c07bce2aa485
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b05d6651f865a300a0c065c5e0a275cb29fd309
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 527c01629fbff856748a50d393ca5df2a413d056
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605421"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667027"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>Yazı Tipleri ve Renkler, Ortam, Seçenekler İletişim Kutusu
 
-**Seçenekler** Iletişim kutusunun **yazı tipleri ve renkler** sayfası, TÜMLEŞIK geliştirme ortamındaki (IDE) çeşitli kullanıcı arabirimi öğeleri için özel bir yazı tipi ve renk düzeni ayarlamanıza olanak sağlar. Bu iletişim kutusuna **Araçlar** > **Seçenekler**' e ve ardından **ortam** > **yazı tipleri ve renkler**' i seçerek erişebilirsiniz.
+**Seçenekler** Iletişim kutusunun **yazı tipleri ve renkler** sayfası, TÜMLEŞIK geliştirme ortamındaki (IDE) çeşitli kullanıcı arabirimi öğeleri için özel bir yazı tipi ve renk düzeni ayarlamanıza olanak sağlar. Bu iletişim kutusuna **araçlar**  > **Seçenekler**' e tıklayıp, ardından**yazı tipleri ve renkler** >  **ortam** ' ı seçerek erişebilirsiniz.
 
 Renk şeması değişiklikleri, yaptığınız oturum sırasında etkili olmaz. Visual Studio 'nun başka bir örneğini açarak ve değişikliklerinizin uygulanmasını istediğiniz koşulları üreterek renk değişikliklerini değerlendirebilirsiniz.
 
@@ -42,7 +42,7 @@ Renk şeması değişiklikleri, yaptığınız oturum sırasında etkili olmaz. 
 
 Yazı tipi ve renk düzenlerini değiştirebileceğiniz tüm Kullanıcı arabirimi öğelerini listeler. Bu listeden bir öğe seçtikten sonra, **görüntüleme öğelerinde**seçilen öğenin renk ayarlarını özelleştirebilirsiniz.
 
-- **Metin Düzenleyici**
+- **Metin düzenleyici**
 
      Metin Düzenleyicisi için yazı tipi stili, boyutu ve renk görüntüleme ayarlarındaki değişiklikler, varsayılan metin düzenleyicinizdeki metnin görünümünü etkiler. IDE dışında bir metin düzenleyicisinde açılan belgeler bu ayarlardan etkilenmeyecektir.
 
@@ -122,7 +122,7 @@ Bazı görüntü öğeleri şunlardır:
 |**Kesme noktası-eşlenmiş (etkin)**|İfadelerin veya eşlenmiş kesme noktaları içeren satırların vurgu rengini belirtir. İfade düzeyi kesme noktaları etkinse veya [Genel, hata ayıklama, Seçenekler Iletişim kutusunda](../../debugger/general-debugging-options-dialog-box.md) **kesme noktaları veya geçerli ifade için tüm kaynak satırını VURGULA** seçeneği belirlenmişse ASP veya ASP.NET hata ayıklama için geçerlidir.|
 |**Kesme noktası-eşlenmiş (hata)**|Bir hata durumunda, eşleşen kesme noktaları içeren deyimlerin veya satırların vurgu rengini belirtir. İfade düzeyi kesme noktaları etkinse veya [Genel, hata ayıklama, Seçenekler Iletişim kutusunda](../../debugger/general-debugging-options-dialog-box.md) **kesme noktaları veya geçerli ifade için tüm kaynak satırını VURGULA** seçeneği belirlenmişse ASP veya ASP.NET hata ayıklama için geçerlidir.|
 |**Kesme noktası-eşlenmiş (uyarı)**|Bir uyarı durumunda eşlenmiş kesme noktaları içeren deyimler veya çizgiler için vurgu rengi belirtir. İfade düzeyi kesme noktaları etkinse veya [Genel, hata ayıklama, Seçenekler Iletişim kutusunda](../../debugger/general-debugging-options-dialog-box.md) **kesme noktaları veya geçerli ifade için tüm kaynak satırını VURGULA** seçeneği belirlenmişse ASP veya ASP.NET hata ayıklama için geçerlidir.|
-|**C/C++ Kullanıcı anahtar sözcükleri**|`#define` Yönergeyle tanımlanan belirli bir kod dosyası içindeki bir sabit.|
+|**C/C++ Kullanıcı anahtar sözcükleri**|@No__t_0 yönergesinin aracılığıyla tanımlanan belirli bir kod dosyası içindeki bir sabit.|
 |**Çağrı dönüşü**|Hata ayıklama sırasında bağlam en üst olmayan yığın çerçevesine dönüştürüldüğünde, kaynak deyimleri veya çağrı dönüş noktalarını belirten çizgiler için vurgu rengi belirtir.|
 |**Kod parçacığına bağımlı alan**|Geçerli düzenlenebilir alan değiştirildiğinde güncellenecek alan.|
 |**Kod parçacığı alanı**|Bir kod parçacığı etkin olduğunda düzenlenebilir alan.|
@@ -132,7 +132,7 @@ Bazı görüntü öğeleri şunlardır:
 |**Dokunulmayan kapsam alanı**|Birim testi kapsamında olmayan kod.|
 |**Kapsam kısmen dokunulmaz alanı**|Birim testinin kısmen kapsadığı kod.|
 |**Kapsam dokunulmaz alanı**|Bir birim testinin tamamen kapsadığı kod.|
-|**CSS yorumu**|Geçişli Stil Sayfaları bir yorum. Örneğin:<br /><br /> /* yorum\*/|
+|**CSS yorumu**|Geçişli Stil Sayfaları bir yorum. Örneğin:<br /><br /> /* yorum \* /|
 |**CSS anahtar sözcüğü**|Basamaklı stil sayfasındaki anahtar sözcükler.|
 |**CSS özellik adı**|Arka plan gibi bir özelliğin adı.|
 |**CSS özellik değeri**|Mavi gibi bir özelliğe atanan değer.|
@@ -147,15 +147,15 @@ Bazı görüntü öğeleri şunlardır:
 |**Ayrıştırılmış kaynak**|**Ayrıştırma** penceresinin içindeki kaynak satırları göstermek için kullanılan metnin rengi.|
 |**Ayrıştırılmış kod simgesi**|**Ayrıştırma** penceresinin içindeki sembol adlarını göstermek için kullanılan metin rengi.|
 |**Ayrıştırılmış kod metni**|İşlem kodunu ve verileri **ayrıştırma** penceresi içinde göstermek için kullanılan metnin rengi.|
-|**Dışlanan kod**|Bir koşullu ön işlemci yönergesi `#if`başına, derlenemediği kod.|
+|**Dışlanan kod**|@No__t_0 gibi bir koşullu Önişlemci yönergesine göre derlenmemelidir.|
 |**Tanımlayıcısını**|Kod içindeki tanımlayıcılar, sınıf adları, yöntem adları ve değişken adları gibi.|
 |**Sözcükle**|Verilen dile ayrılan dil için anahtar sözcükler. Örneğin: sınıf ve ad alanı.|
 |**Bellek adresi**|**Bellek** penceresi içindeki adres sütununu göstermek için kullanılan metin rengi.|
 |**Bellek değişti**|**Bellek** penceresi içindeki değiştirilen verileri göstermek için kullanılan metnin rengi.|
 |**Bellek verileri**|**Bellek** penceresi içindeki verileri göstermek için kullanılan metin rengi.|
 |**Bellek okunamaz**|**Bellek** penceresi içindeki okunamaz bellek alanını göstermek için kullanılan metnin rengi.|
-|**Sayı**|Kodda gerçek bir sayısal değeri temsil eden bir sayı.|
-|**İşleci**|+,-, Ve! = gibi işleçler.|
+|**Sayısından**|Kodda gerçek bir sayısal değeri temsil eden bir sayı.|
+|**İşlecinde**|+,-, Ve! = gibi işleçler.|
 |**Diğer hata**|Diğer hata türleri diğer hata dalgalı çizgiler kapsamına girmeyen bir hata oluştu. Şu anda, Düzenle ve devam et 'de işlenmemiş düzenlemelerini içerir.|
 |**Önişlemci anahtar sözcüğü**|#İnclude gibi Önişlemci tarafından kullanılan anahtar sözcükler.|
 |**Salt okuma bölgesi**|Düzenlenemeyen kod. Örneğin, kod tanımı görünümü penceresinde veya Düzenle ve devam et sırasında değiştirilemeyen kodda görüntülenen kod.|
@@ -191,17 +191,17 @@ Bazı görüntü öğeleri şunlardır:
 |**Kullanıcı türleri (arabirimler)**|Arabirimler için Color yazın.|
 |**Kullanıcı türleri (değer türleri)**|İçindeki C#yapılar gibi değer türleri için Color yazın.|
 |**Visual Basic salt okuma Işaretçisi**|Özel durum bölgeleri, yöntem tanımı ve yaprak olmayan çağrı çerçeveleri gibi EnC 'yi belirlemek için kullanılan Visual Basic özgü bir işaretleyici.|
-|**Uyarı**|Derleyici uyarıları.|
+|**Warning**|Derleyici uyarıları.|
 |**Uyarı satırları yolu**|Statik analiz uyarı satırları için kullanılır.|
 |**XML özniteliği**|Öznitelik adları.|
 |**XML öznitelik teklifleri**|XML öznitelikleri için tırnak karakterleri.|
 |**XML öznitelik değeri**|XML özniteliklerinin içeriği.|
-|**XML CDATA bölümü**|\<İçeriği! [ CDATA [...]] >.|
-|**XML açıklaması**|\<!----> İçeriği.|
-|**XML sınırlayıcısı**|<, <?, <!, \<!--,-->,?\>, \<! [,]] >, Ve [,] dahil olmak üzere XML sözdizimi sınırlayıcıları.|
-|**XML doc özniteliği**|\<Param Name = "i" gibi bir XML belgesi özniteliğinin değeri, "i" nin renklendirilme olduğu >.|
+|**XML CDATA bölümü**|@No__t_0 içeriği! [CDATA [...]] >.|
+|**XML açıklaması**|@No__t_0!----> içeriği.|
+|**XML sınırlayıcısı**|<, <?, <!, @No__t_0!--,--> da dahil olmak üzere XML sözdizimi sınırlayıcıları? \>, \<! [, ]] > ve [,].|
+|**XML doc özniteliği**|@No__t_0param Name = "I" gibi bir XML belge özniteliğinin değeri, "I" nin renklendirilme olduğu >.|
 |**XML belgesi açıklaması**|XML belgeleri yorumlarına eklenen açıklamalar.|
-|**XML belge etiketi**|XML belgesi açıklamalarındaki Etiketler, örneğin<br /><br /> /// \<Özet >.|
+|**XML belge etiketi**|XML belgesi açıklamalarındaki Etiketler, örneğin<br /><br /> ///  \<summary >.|
 |**XML anahtar sözcüğü**|CDATA, ıDREF ve NDATA gibi DTD anahtar sözcükleri.|
 |**XML adı**|Öğe adları ve Işleme yönergeleri hedef adı.|
 |**XML Işleme yönergesi**|Işleme yönergelerinin içerikleri, hedef adı dahil değildir.|
@@ -225,7 +225,7 @@ Visual Studio 'Yu ilk kez açtığınızda öğe için görüntülenen renk. **V
 Görüntüleme öğeleri listesinde seçilen öğe için özel bir renk ayarlamanıza olanak tanımak üzere renk iletişim kutusunu görüntüler.
 
 > [!NOTE]
-> Özel renkler tanımlama olanağınız, bilgisayarınızın görüntüsüne ait renk ayarlarıyla sınırlı olabilir. Örneğin, Bilgisayarınız 256 renk görüntüleyecek şekilde ayarlandıysa ve **renk** iletişim kutusundan özel bir renk SEÇTIĞINIZDE, IDE varsayılan olarak en yakın kullanılabilir **Temel renge** sahiptir ve **renk önizleme kutusunda** siyah rengi görüntüler.
+> Özel renkler tanımlama olanağınız, bilgisayarınızın görüntüsüne ait renk ayarlarıyla sınırlı olabilir. Örneğin, Bilgisayarınız 256 renk görüntüleyecek şekilde ayarlandıysa ve **renk** iletişim kutusundan özel bir renk SEÇTIĞINIZDE, IDE varsayılan olarak en yakın kullanılabilir **Temel renge** sahiptir ve **renk önizleme kutusunda siyah rengi görüntüler** .
 
 **Öğe arka planı**
 
@@ -254,4 +254,4 @@ Seçilen **görüntüleme öğelerinin** metnini kalın metinde göstermek için
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Seçenekler İletişim Kutusu](../../ide/reference/options-dialog-box-visual-studio.md)
-- [Nasıl yapılır: Yazı Tiplerini ve Renkleri Değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
+- [Nasıl Yapılır: Yazı Tiplerini ve Renkleri Değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)

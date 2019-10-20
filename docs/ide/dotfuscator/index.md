@@ -15,14 +15,14 @@ helpviewer_keywords:
 description: Visual Studio 'Ya dahil edilen Dotfuscator topluluğunun ücretsiz kopyasıyla .NET uygulamalarınızı nasıl koruyabileceğinizi öğrenin.
 ms.assetid: d9550502-0a82-49a6-b005-2caa791fbe02
 author: Joe-Sewell-PreEmptive
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 53bd95875cf990afee6d356744961d3637f16842
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 18e2ee678e5cf71693d12d4ddeb6af51f55a870b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253765"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652433"
 ---
 # <a name="dotfuscator-community"></a>Dotfuscator Community
 
@@ -30,7 +30,7 @@ ms.locfileid: "71253765"
 Ticari gizli dizileri ve diğer fikri mülkiyet (IP) güvenliğini sağlamak, korsanlığın ve sahteciliği azaltmak ve izinsiz ve yetkisiz hata ayıklamaya karşı koruma sağlamak için masaüstünü, mobil, sunucu ve katıştırılmış uygulamaları güvenli hale getirmek, korumak ve ayıklamak için bu özelliği kullanın.
 Dotfuscator, derlenmiş derlemelerde, ek programlamaya gerek olmadan veya kaynak koduna hatta erişim gerektirmeden çalışmaktadır.
 
-![PreEmptive koruma - Dotfuscator](media/header.svg)
+![PreEmptive koruması-Dotfuscator](media/header.svg)
 
 ## <a name="why-protection-matters"></a>Korumanın önemi önemli
 
@@ -70,7 +70,7 @@ Dotfuscator 'u geliştirme hakkında daha fazla bilgi için [yükseltmeler sayfa
 
 ::: moniker range="vs-2019"
 
-Visual Studio 'dan Dotfuscator topluluğunu kullanmaya başlamak için, `dotfuscator` **Arama kutusuna** (CTRL + Q) yazın.
+Visual Studio 'dan Dotfuscator topluluğunu kullanmaya başlamak için, **Arama kutusuna** `dotfuscator` yazın (CTRL + Q).
 
 * Dotfuscator topluluğu zaten yüklüyse, **arama kutusu** *menü* başlığı altında Dotfuscator Community 'yi başlatma seçeneğini gösterecektir. Ayrıntılar için, [tam Dotfuscator topluluk Kullanıcı kılavuzunun Başlarken sayfasına][get-started]bakın.
 * Dotfuscator topluluğu henüz yüklenmemişse, **arama kutusu** bunun yerine *tek tek bileşenler* başlığı altında **Install preemptive Protection-Dotfuscator** öğesini gösterir. Ayrıntılar için [yükleme sayfasına][install] bakın.
@@ -79,7 +79,7 @@ Visual Studio 'dan Dotfuscator topluluğunu kullanmaya başlamak için, `dotfusc
 
 ::: moniker range="vs-2017"
 
-Visual Studio 'dan Dotfuscator topluluğunu kullanmaya başlamak için `dotfuscator` **Hızlı Başlat** (CTRL + Q) arama çubuğuna yazın.
+Visual Studio 'dan Dotfuscator topluluğunu kullanmaya başlamak için **Hızlı Başlat** (CTRL + Q) arama çubuğuna `dotfuscator` yazın.
 
 * Dotfuscator topluluğu zaten yüklüyse **Hızlı Başlat** , Dotfuscator topluluk Kullanıcı arabirimini başlatmak için *menü* seçeneğini getirir. Ayrıntılar için, [tam Dotfuscator topluluk Kullanıcı kılavuzunun Başlarken sayfasına][get-started]bakın.
 * Dotfuscator topluluğu henüz yüklenmemişse **Hızlı başlatma** ilgili *yükleme* seçeneğini getirir. Ayrıntılar için [yükleme sayfasına][install] bakın.

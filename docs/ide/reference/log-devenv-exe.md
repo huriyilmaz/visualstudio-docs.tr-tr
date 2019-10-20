@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Log switch [devenv.exe]
 - /Log Devenv switch
 ms.assetid: ae23c4ae-2376-4fe3-b8d2-81d34e61c8ba
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b2e11cb36176aec94528019cdd19bb5fa86c92b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc37f4cd7441fc7945ca1762d16300c18d9ecbfe
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946810"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610366"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 
-Tüm etkinliği, sorun giderme amacıyla günlük dosyasına kaydeder. Bu dosya çağırdıktan sonra görünür `devenv /log` en az bir kez. Varsayılan olarak, günlük dosyası şuradan ulaşabilirsiniz:
+Tüm etkinliği, sorun giderme amacıyla günlük dosyasına kaydeder. Bu dosya, en az bir kez `devenv /log` çağrıldıktan sonra görüntülenir. Varsayılan olarak, günlük dosyası şurada bulunur:
 
-**% APPDATA %\\Microsoft\\VisualStudio\\**\<sürüm\>**\\ActivityLog.xml**
+**% AppData% \\Microsoft \\VisualStudio \\** \<Version \> **\\ActivityLog. xml**
 
-Burada \<sürüm\> Visual Studio sürümüdür. Ancak, farklı bir yol ve dosya adı belirtebilirsiniz.
+\<Version \>, Visual Studio sürümüdür. Ancak, farklı bir yol ve dosya adı belirtebilirsiniz.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,17 +37,17 @@ devenv /Log NameOfLogFile
 
 - *NameOfLogFile*
 
-  Gerekli. Tam yol ve kaydetmek için günlük dosyasının adı.
+  Gerekli. Kaydedilecek günlük dosyasının tam yolu ve adı.
 
 ## <a name="remarks"></a>Açıklamalar
 
 Bu anahtar, diğer tüm anahtarlardan sonra komut satırının en sonunda görünmelidir.
 
-Günlük ile açtığınız tüm örnekleri Visual Studio için yazılır `/Log` geçin.
+Günlük yalnızca `/Log` anahtarıyla açtığınız tüm Visual Studio örnekleri için yazılır.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek için günlük yönlendirir `MyVSLog.xml` kullanıcının ana dizini dosyasında.
+Bu örnek, kullanıcının giriş dizinindeki `MyVSLog.xml` dosyasına günlüğü yönlendirir.
 
 ```shell
 devenv /log "%USERPROFILE%\MyVSLog.xml"

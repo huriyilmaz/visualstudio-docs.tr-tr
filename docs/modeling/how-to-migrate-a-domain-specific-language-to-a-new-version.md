@@ -1,86 +1,86 @@
 ---
-title: 'Nasıl yapılır: Alana Özgü Dili Yeni Sürüme Geçirme'
+title: 'Nasıl yapılır: Etki Alanına Özgü Dili Yeni Sürüme Geçirme'
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63d313534fab789c5e4e79fb644111314e054250
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: c9678bf0c98774a504f17e9ea74197f82d9ba7ad
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445159"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605364"
 ---
-# <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>Nasıl yapılır: Alana Özgü Dili Yeni Sürüme Geçirme
-Tanımlamak ve etki alanına özgü dil kullanan projeler geçirebileceğiniz [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] sürümünden [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , ile dağıtılan [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)].
+# <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>Nasıl yapılır: Etki Alanına Özgü Dili Yeni Sürüme Geçirme
+@No__t_2 ile dağıtılan [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] sürümünden [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] için, etki alanına özgü dili tanımlayan ve kullanan projeleri geçirebilirsiniz.
 
- Geçiş Aracı bir parçası olarak sağlanan [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]. Araç, Visual Studio projeleri ve çözümleri kullanın veya DSL araçları tanımlamak dönüştürür.
+ Bir geçiş aracı [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] bir parçası olarak sağlanır. Araç, DSL araçlarını kullanan veya tanımlayan Visual Studio projelerini ve çözümlerini dönüştürür.
 
- Geçiş Aracı açıkça çalıştırmanız gerekir: Visual Studio'da bir çözümü açtığınızda otomatik olarak başlatılmaz. Ayrıntılı yönergeler belge ve araç bu yolda bulunabilir:
+ Geçiş aracını açıkça çalıştırmanız gerekir: Visual Studio 'da bir çözüm açtığınızda bu otomatik olarak başlatılmaz. Araç ve ayrıntılı kılavuz belgesi şu yolda bulunabilir:
 
- **%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
+ **% Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
-## <a name="before-you-migrate-your-dsl-projects"></a>DSL projelerinizin geçiş önce
- Geçiş Aracı Visual Studio proje dosyalarını değiştirir (**.csproj**) ve çözüm dosyaları (**.sln**).
+## <a name="before-you-migrate-your-dsl-projects"></a>DSL projelerinizi geçirmeden önce
+ Geçiş Aracı, Visual Studio proje dosyalarını ( **. csproj**) ve çözüm dosyalarını ( **. sln**) değiştirir.
 
 #### <a name="to-prepare-projects-for-migration"></a>Projeleri geçişe hazırlamak için.
 
-- Emin **.csproj** ve **.sln** dosyaları yazılabilir. Kaynak denetimi altında olmaları durumunda, bunlar kullanıma emin emin olun.
+- **. Csproj** ve **. sln** dosyalarının yazılabilmesini sağlayın. Kaynak denetimi altındaysa, kullanıma aldıklarından emin olun.
 
-- Geçirmek istediğiniz klasörleri bir kopyasını oluşturun.
+- Geçişini planladığınız klasörlerin bir kopyasını oluşturun.
 
-## <a name="migrating-a-collection-of-projects"></a>Proje koleksiyonu geçirme
+## <a name="migrating-a-collection-of-projects"></a>Proje koleksiyonunu geçirme
 
-#### <a name="to-migrate-dsl-projects-and-solutions-to-visual-studio-2010"></a>DSL projeler ve çözümler, Visual Studio 2010'a geçirmeye
+#### <a name="to-migrate-dsl-projects-and-solutions-to-visual-studio-2010"></a>DSL projelerini ve çözümlerini Visual Studio 2010 ' ye geçirmek için
 
 1. DSL geçiş aracını başlatın.
 
-   - Windows Explorer (veya dosya Gezgini) araca çift tıklayın veya bir komut istemi'nden aracını başlatın. Bu konumda aracıdır:
+   - Windows Gezgini 'nde (veya dosya Gezgini) araca çift tıklayarak veya aracı bir komut isteminden başlatabilirsiniz. Araç şu konumda:
 
         **%ProgramFiles%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
-2. Dönüştürmek istediğiniz projeler ve çözümler içeren bir klasör seçin.
+2. Dönüştürmek istediğiniz çözüm ve projeleri içeren bir klasör seçin.
 
-   - Üst kısmındaki araç kutusunda yolunu girin veya **Gözat**.
+   - Aracın en üstündeki kutuya yolu girin veya **Araştır**' a tıklayın.
 
-     Geçiş Aracı tanımlayın veya DSL kullanan projeler ağacını görüntüler. Ağaç kullanan her bir proje içerir **Microsoft.VisualStudio.Modeling.Sdk** veya **TextTemplating** derlemeler.
+     Geçiş Aracı, DSLs 'leri tanımlayan veya kullanan bir proje ağacı görüntüler. Ağaç, **Microsoft. VisualStudio. modellemesi. SDK** veya **textşablon** oluşturma derlemelerini kullanan her projeyi içerir.
 
-3. Proje ağacını gözden geçirin ve projeleri dönüştürmek istiyor musunuz işaretini kaldırın.
+3. Proje ağacını gözden geçirin ve dönüştürmek istemediğiniz projelerin işaretini kaldırın.
 
-   - Bir proje veya çözüm, araç haline getiren değişikliklerin bir listesini görmek için seçin.
+   - Aracın yapacağız değişikliklerin listesini görmek için bir proje veya çözüm seçin.
 
        > [!NOTE]
-       > Klasör adları yanında görünen onay kutularını hiçbir etkisi yoktur. Projeler ve çözümler incelemek için klasörleri genişletmeniz gerekir.
+       > Klasör adlarının yanında görünen onay kutularının etkisi yoktur. Projeleri ve çözümleri incelemek için klasörleri genişletmeniz gerekir.
 
 4. Projeleri dönüştürün.
 
-   1. Tıklayın **Dönüştür**.
+   1. **Dönüştür**' e tıklayın.
 
-        Her proje dosyası dönüştürülür önce bir kopyasını _proje_**.csproj** olarak kaydedilen _proje_**. vs2008.csproj**
+        Her proje dosyası dönüştürüldükten sonra _Project._ **csproj** 'un bir kopyası _Project_ **. VS2008. csproj** olarak kaydedilir
 
-        Her bir kopyasını _çözüm_**.sln** olarak kaydedilen _çözüm_**. vs2008.sln**
+        Her çözümün bir kopyası **. sln** , _Solution_ **. VS2008. sln** olarak kaydedilir
 
-   2. Bildirilen herhangi bir başarısız dönüştürmeler araştırın.
+   2. Bildirilen tüm başarısız dönüştürmeleri araştırın.
 
-        Metin penceresindeki hataları raporlanır. Ayrıca, ağaç görünümünde kırmızı bayrak dönüştürmek için başarısız olan her düğümde gösterir. Bu hata hakkında daha fazla bilgi almak için düğüme tıklayabilirsiniz.
+        Hataların metin penceresinde bildirilmesi. Ayrıca, ağaç görünümünde dönüştürebileceğiniz her düğümde kırmızı bayrak gösterilir. Bu hata hakkında daha fazla bilgi edinmek için düğüme tıklayabilirsiniz.
 
-5. **Tüm Şablonları dönüştürme** çözümlerinde başarıyla içeren projeleri dönüştürülür.
+5. Başarıyla dönüştürülmüş projeler içeren çözümlerdeki **Tüm Şablonları Dönüştür** .
 
    1. Çözümü açın.
 
-   2. Tıklayın **tüm Şablonları Dönüştür** Çözüm Gezgini başlığını düğmesi.
+   2. Çözüm Gezgini üstbilgisindeki **Tüm Şablonları Dönüştür** düğmesine tıklayın.
 
        > [!NOTE]
-       > Bu adım, gereksiz yapabilirsiniz. Daha fazla bilgi için [otomatikleştirmek tüm Şablonları Dönüştür nasıl](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\)).
+       > Bu adımı gereksiz hale getirebilirsiniz. Daha fazla bilgi için bkz. [tüm şablonları dönüştürmeyi otomatikleştirme](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\)).
 
-6. Özel kodunuz dönüştürülmüş projelerinde güncelleştirin.
+6. Dönüştürülen projelerde özel kodunuzu güncelleştirin.
 
-   - Projeleri derlemek ve tüm hataları araştırmak çalışır.
+   - Projeleri oluşturmayı deneyin ve tüm sorunları araştırın.
 
-   - Tasarımcınıza test edin.
+   - Tasarlayıcıyı test edin.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 

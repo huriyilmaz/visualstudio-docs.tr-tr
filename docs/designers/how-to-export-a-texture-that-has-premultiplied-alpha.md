@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Ön Çarpımlı Alfa Kullanan Dokuyu Dışarı Aktarma'
+title: 'Nasıl yapılır: Ön Çarpımlı Alfa kullanan Doku Dışa Aktarma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16448a53064844f1c75db8b7eaa58c2cf909a968
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 84017bef80f42bd1848833b957abd88297d1e12d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924253"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635477"
 ---
-# <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Nasıl yapılır: Ön çarpımlı alfa kullanan dokuyu dışarı aktarma
+# <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Nasıl yapılır: ön çarpılmış Alpha içeren bir dokuyu dışarı aktarma
 
 Görüntü Içeriği ardışık düzeni, kaynak görüntüden ön çarpılmış Alfa dokuları oluşturabilir. Bu, kullanımı daha kolay ve ön çarpılmış Alfa içermeyen dokulardan daha sağlam olabilir.
 
@@ -38,12 +38,12 @@ Bu belge Şu etkinlikleri gösterir:
 
 #### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>Ön çarpılmış alfa kullanan bir doku oluşturmak için
 
-1. Temel bir dokuyla başlayın. Varolan bir resim dosyasını yükleyin veya bir tane [oluşturun: Temel doku](../designers/how-to-create-a-basic-texture.md)oluşturun.
+1. Temel bir dokuyla başlayın. Varolan bir resim dosyasını yükleyin veya [nasıl yapılır: temel doku oluşturma](../designers/how-to-create-a-basic-texture.md)bölümünde açıklandığı gibi bir tane oluşturun.
 
-2. Doku dosyasını görüntü Içeriği ardışık düzeni tarafından işlenecek şekilde yapılandırın. **Çözüm Gezgini**, doku dosyasının kısayol menüsünü açın ve ardından **Özellikler**' i seçin. **Yapılandırma özellikleri** > **genel** sayfasında, **öğe türü** özelliğini **görüntü içeriği ardışık düzeni**olarak ayarlayın. **İçerik** özelliğinin **Evet** olarak ayarlandığından ve **derlemeden hariç tut** ' un **Hayır**olarak ayarlandığından emin olun ve ardından **Uygula** düğmesini seçin. **Görüntü Içeriği ardışık düzen** yapılandırma özelliği sayfası görüntülenir.
+2. Doku dosyasını görüntü Içeriği ardışık düzeni tarafından işlenecek şekilde yapılandırın. **Çözüm Gezgini**, doku dosyasının kısayol menüsünü açın ve ardından **Özellikler**' i seçin. **Yapılandırma özellikleri**  > **genel** sayfasında, **öğe türü** özelliğini **görüntü içeriği ardışık düzeni**olarak ayarlayın. **İçerik** özelliğinin **Evet** olarak ayarlandığından ve **derlemeden hariç tut** ' un **Hayır**olarak ayarlandığından emin olun ve ardından **Uygula** düğmesini seçin. **Görüntü Içeriği ardışık düzen** yapılandırma özelliği sayfası görüntülenir.
 
-3. Ön çarpılmış alfa oluşturmak için görüntü Içeriği ardışık düzenini yapılandırın. **Yapılandırma özellikleri** > **görüntüsü içerik ardışık düzeni** > **genel** sayfasında, **önceden çarpılan Alfa biçimi** özelliğini **Evet (/generatepremultipliedalpha)** olarak ayarlayın.
+3. Ön çarpılmış alfa oluşturmak için görüntü Içeriği ardışık düzenini yapılandırın. **Yapılandırma özellikleri**  > **görüntü içeriği ardışık düzeni**  > **genel** sayfasında, **önceden çarpılmış Alfa biçimini Dönüştür** özelliğini **Evet (/generatepremultipliedalpha)** olarak ayarlayın.
 
-4. Seçin **Tamam** düğmesi.
+4. **Tamam** düğmesini seçin.
 
    Projeyi oluşturduğunuzda, görüntü Içeriği ardışık düzeni kaynak görüntüyü çalışma biçiminden belirlediğiniz çıkış biçimine dönüştürür — bu, görüntünün ön çarpılmış Alfa biçimine dönüştürülmesini içerir ve sonuç projenin çıktısına kopyalanır dizinden.

@@ -4,83 +4,83 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - tests and requirements
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d2fd53b3dc1237e9d31daf0e80fff3ddf5f1475
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ccb6e8d938bbb807211d0d555294c94948705240
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821945"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653873"
 ---
 # <a name="develop-tests-from-a-model"></a>Model aracılığıyla test geliştirme
-Sisteminiz ve bileşenlerinin testleri düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcıların ve diğer proje katılımcıları için önemli olan gereksinimleri test etmek ve gereklilikler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı emin olun yardımcı olur. Kullanırsanız [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)], modeller ve testler arasındaki bağlantıları da sağlayabilirsiniz.
+Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenize yardımcı olur ve gereksinimler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı olur. @No__t_0 kullanıyorsanız, modeller ve testler arasındaki bağlantıları da tutabilirsiniz.
 
- Visual Studio'nun hangi sürümlerinin bu özellikleri desteklediğini görmek için bkz: [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Visual Studio 'nun hangi sürümlerinin bu özellikleri desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="system-and-subsystem-testing"></a>Sistem ve alt test etme
- *Sistem sınaması,* olarak da bilinen *kabul testi*, kullanıcıların gereksinimlerini karşılayıp karşılamadığını test anlamına gelir. Bu tür testler iç tasarımının yerine sistem dışarıdan görünen davranışını hakkında duyarlıdır.
+## <a name="system-and-subsystem-testing"></a>Sistem ve alt sistem testi
+ *Kabul testi*olarak da bilinen *sistem testi* , kullanıcıların ihtiyaçlarını karşılamakta olup olmadığını test ediyor demektir. Bu tür testler, iç tasarım yerine sistemin dışarıdan görünür davranışına ilişkin kaygılardır.
 
- Sistem testleri genişletme veya bir sistem yeniden tasarlanmasını çok değerlidir. Bunlar, hata kodu değiştirdiğinizde oluşturmaktan kaçının yardımcı olur.
+ Sistem testleri sistemi genişletirken veya yeniden tasarlarken çok değerlidir. Kodu değiştirirken hata getirmekten kaçınmanıza yardımcı olurlar.
 
- Herhangi bir değişiklik veya bir sistem uzantısı planlarken, mevcut sistem üzerinde çalışan sistem testleri bir dizi başlatmak yararlıdır. Ardından genişletin veya yeni gereksinimleri test etmek, koda değişiklik ve test kümesinin tamamını yeniden çalıştırmak için testleri ayarlayın.
+ Bir sisteme herhangi bir değişiklik veya uzantı planlarken, var olan sistemde çalışan bir sistem testi kümesiyle başlamak yararlı olur. Ardından, yeni gereksinimleri test etmek, koddaki değişiklikleri yapmak ve tüm test kümesini yeniden çalıştırmak için testleri genişletebilir veya düzenleyebilirsiniz.
 
- Yeni bir sistem geliştirdiğinizde, geliştirme başlar başlamaz testleri oluşturmaya başlayabilirsiniz. Her bir özellik geliştirme önce testleri tanımlayarak belirli bir biçimde gereksinimleri tartışmalar yakalayabilirsiniz.
+ Yeni bir sistem geliştirirken, geliştirme başladıktan hemen sonra test oluşturmaya başlayabilirsiniz. Her bir özelliği geliştirmeden önce testleri tanımlayarak, gereksinim tartışmalarını çok belirli bir şekilde yakalayabilirsiniz.
 
- Alt sistem testi sistemin ana bileşenleri için aynı ilkeler geçerlidir. Her bir bileşeni ayrı olarak başka bir bileşenden test edilir. Alt sistemi bileşenin kullanıcı arabirimleri veya API görünür davranışına odaklanmak sınar.
+ Alt sistem testi, bir sistemin ana bileşenlerine aynı ilkeleri uygular. Her bileşen diğer bileşenlerden ayrı olarak test edilir. Alt sistem testleri, bileşenin kullanıcı arabirimlerinde veya API 'sinde görünen davranışa odaklanmaktadır.
 
-## <a name="deriving-system-tests-from-a-requirements-model"></a>Sistem testleri gereksinimleri modelden türetme
- Oluşturun ve sistem testleri ve gereksinimler modeli arasında bir ilişki korumak. Bu ilişki kurmak için gereksinimler modelinin ana öğelere karşılık gelen testler yazın. Visual Studio testleri ve model bölümleri arasında bağlantılar oluşturmanıza imkan vererek bu ilişkiyi tutmanıza yardımcı olur. Gereksinim modelleri hakkında daha fazla bilgi için bkz: [kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md).
+## <a name="deriving-system-tests-from-a-requirements-model"></a>Gereksinimler modelinden Sistem testlerini türeten
+ Sistem testleri ve gereksinimler modeli arasında bir ilişki oluşturabilir ve bakımını yapabilirsiniz. Bu ilişkiyi oluşturmak için, gereksinimler modelinin ana öğelerine karşılık gelen testleri yazarsınız. Visual Studio, modelin testleri ve bölümleri arasında bağlantılar oluşturmanıza izin vererek ilişkiyi korumanıza yardımcı olur. Gereksinim modelleri hakkında daha fazla bilgi için bkz. [model Kullanıcı gereksinimleri](../modeling/model-user-requirements.md).
 
-### <a name="write-tests-for-each-use-case"></a>Her kullanım örneği için testleri yazma
- Kullanırsanız [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)], gereksinimleri modelinizde tanımlı her kullanım örneği için testleri bir grup oluşturabilirsiniz. Örneğin, bir kullanım örneği oluştur ve sipariş Ekle öğesine içerir, yemek siparişi varsa her iki genel testler oluşturabilirsiniz ve bunların daha ayrıntılı kullanım örnekleri.
+### <a name="write-tests-for-each-use-case"></a>Her kullanım örneği için test yazma
+ @No__t_0 kullanıyorsanız, gereksinim modelinizde tanımladığınız her kullanım örneği için bir test grubu oluşturabilirsiniz. Örneğin, sipariş oluştur ve sipariş Ekle öğelerini içeren bir yemek kullanım örneği siparişiniz varsa, bu kullanım örneklerinin her ikisi için de test oluşturabilirsiniz.
 
  Bu yönergeler yararlı olabilir:
 
-- Her kullanım örneği, ana yollar ve özel sonuçlar için çeşitli sınamalar olması gerekir.
+- Her kullanım örneğinin, ana yollar ve olağanüstü sonuçlar için birkaç testi olmalıdır.
 
-- Bir kullanım örneği gereksinimlerini modeli, açıklayan, diğer bir deyişle, daha ayrıntılı bir yordam tanımlamak için kullanıcı kaydetme amacına ulaşmanız için takip eden sağlanır, hedef kendi sonkoşulunu tanımlamak daha önemlidir. Örneğin, yemek siparişi Sonkoşul, olabilir bir restoran, bir müşterinin yemek hazırlanıyor ve müşteriye ödediği. Sonkoşul testlerinizi doğrulamalıdır ölçüttür.
+- Gereksinimler modelinde bir kullanım durumu tanımlarken, hedefin hedefe ulaşmak için izlediği yordamları ayrıntılandırmak üzere, bu, elde edilen hedefi tanımlamak daha önemlidir. Örneğin, bir yemeğin siparişin sonkoşulu bir restoran 'nın müşteri için yemek hazırlamakta ve müşterinin ödediği bir şekilde olabilir. Sonkoşul, testlerinizin doğrulanması gereken ölçüttür.
 
-- Ayrı yan tümceleri Sonkoşul temel ayrı testler. Örneğin, restorana sipariş bilgilendirme ve müşterinin Ödeme almak için ayrı testler oluşturun. Bu ayrım bu avantajları vardır:
+- Sonkoşulun ayrı yan tümcelerinde ayrı test tabanlı testler. Örneğin, siparişi restorana bildirmek ve müşteriden ödeme yapmak için ayrı testler oluşturun. Bu ayrım şu avantajlara sahiptir:
 
-  - Gereksinimleri farklı yönlerini değişiklikleri sık bağımsız olarak gerçekleşir. Bu şekilde farklı yönlere testleri ayırarak, testleri gereklilikler değiştiğinde güncelleştirmenin kolaylaştırır.
+  - Gereksinimlerin farklı yönlerinde yapılan değişiklikler genellikle bağımsız olarak gerçekleşir. Testleri bu şekilde farklı açılardan ayırarak, gereksinimler değiştiğinde testleri güncellemeyi daha kolay hale getirebilirsiniz.
 
-  - Geliştirme planı önce başka bir kullanım örneği tek bir yönüne uygularsa, geliştirme ilerledikçe testleri ayrı ayrı etkinleştirebilirsiniz.
+  - Geliştirme planı, bir önceki kullanım durumunun bir yönünü daha önce uygularsa, geliştirme ilerledikçe testleri ayrı olarak etkinleştirebilirsiniz.
 
-- Testleri tasarlarken, test verileri seçimi sonkoşulun olup olmadığını belirten bir betik veya kod ayırın. Örneğin, bir basit aritmetik işlevinin bir test olabilir: Giriş 4; Çıkış 2 olduğundan emin olun. Bunun yerine, betiği şu şekilde tasarlayın: Bir giriş seçin. Çıkış kendisi tarafından çarpma ve sonuç, özgün girişi olduğundan emin olun. Bu stil, testin ana gövdesini değiştirmeden test girdilerine değiştirmenizi sağlar.
+- Testleri tasarlarken, sonkoşulun gerçekleştirilip gerçekleştirilmediğini belirleyen koddan veya betikten test verilerinin seçimini ayırın. Örneğin, basit bir aritmetik işlevin testi şu şekilde olabilir: giriş 4; çıkışın 2 olduğunu doğrulayın. Bunun yerine betiği şu şekilde tasarlayın: bir giriş seçin; çıktıyı kendisiyle çarpın ve sonucun özgün giriş olduğunu doğrulayın. Bu stil, testin ana gövdesini değiştirmeden test girişlerinin değiştirilmesini sağlar.
 
-#### <a name="linking-tests-to-use-cases"></a>Kullanım örnekleri için testleri bağlama
- Kullanıyorsanız [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] tasarlama ve testleri çalıştırmak için testlerinizin gereksinimi, kullanım durumu ve kullanıcı hikayesi iş öğeleri altında düzenleyebilirsiniz. Bu bağlantı iş öğeleri, modelinizde kullanım için. Bu hızlı bir şekilde izleme gereksinimleri değişiklikler testleri sağlar ve kullanım örneği her ilerlemesini izlemenize yardımcı olur.
+#### <a name="linking-tests-to-use-cases"></a>Testleri kullanım örneklerine bağlama
+ Testlerinizi tasarlamak ve çalıştırmak için [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] kullanıyorsanız, testlerinizi gereksinim, kullanım durumu veya Kullanıcı hikayesi iş öğeleri altında düzenleyebilirsiniz. Bu iş öğelerini modelinizdeki kullanım taleplerine bağlayabilirsiniz. Bu, testlerin gereksinim değişikliklerini hızlıca izlemenizi sağlar ve her kullanım örneğinin ilerlemesini izlemenize yardımcı olur.
 
-###### <a name="to-link-tests-to-a-use-case"></a>Testleri bir kullanım örneğine bağlamak için
+###### <a name="to-link-tests-to-a-use-case"></a>Testleri kullanım örneğine bağlamak için
 
-1. İçinde [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], bir gereksinim oluşturmanız ve bir test paketi üzerinde temel.
+1. @No__t_0, bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
 
-    Bir iş öğesinde oluşturduğunuz gereksinimi olan [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]. Team Foundation ile projenizin kullandığı işlem şablonuna bağlı olarak kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için [hakkında Çevik araçları ve Çevik proje yönetimi](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
+    Oluşturduğunuz gereksinim, [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] bir iş öğesidir. Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
 
-2. Modelinizde bir veya daha fazla kullanım örnekleri için gereksinim iş öğesine bağlayın.
+2. Gereksinim iş öğesini modelinizdeki bir veya daha fazla kullanım durumuna bağlayın.
 
-    Bir kullanım durumu diyagramı, kullanım örneğine sağ tıklayın ve ardından **iş öğesine bağlantı**.
+    Kullanım durumu diyagramında, bir kullanım örneğine sağ tıklayın ve sonra **Iş öğesine bağla**' ya tıklayın.
 
-3. Kullanım örnekleri doğrulama test çalışmaları, test paketine ekleyin.
+3. Test paketine, kullanım durumlarını doğrulayan test çalışmalarına ekleyin.
 
-   Genellikle, her kullanıcı hikayesi veya gereksinim çalışma öğesi, modelinizdeki çeşitli kullanım örnekleri için bağlantı içerir ve her kullanım örneği, birkaç kullanıcı hikayeleri veya gereksinimler bağlayacaksınız. Her kullanıcı öyküsü veya gereksinime çeşitli kullanım örnekleri geliştirme görevlerin kümesi sağlanmıştır olmasıdır. Örneğin, projenizin erken bir yineleme bir müşteri Kataloğu'ndan öğeleri seçin ve bunları teslim temel kullanıcı hikayesi geliştirebilir. Bir sonraki yinelemede hikayeyi malları gönderdikten sonra para sırasını ve tedarikçi Tamamlanıyor aldığında, kullanıcı öder olabilir.  Her hikayenin Sonkoşul sırasını ürün kullanım örneği için bir yan tümce ekler.
+   Genellikle, her kullanıcı hikayesi veya gereksinim çalışma öğesi modelinizdeki birkaç kullanım örneğine bağlanır ve her kullanım örneği, birkaç kullanıcı hikayesine veya gereksinimine bağlanır. Bunun nedeni, her kullanıcı hikayesi veya gereksinimi çeşitli kullanım durumları geliştiren bir görev kümesini kapsamadır. Örneğin, projenizin erken tekrarında, bir müşterinin bir katalogdan öğe seçebileceği ve teslim edileceği temel kullanıcı hikayesini geliştirebilirsiniz. Daha sonraki bir yinelemede hikaye, kullanıcının siparişi tamamlarken ödeme yaptığı ve tedarikçinin malları gönderdikten sonra para aldığı para ile ilgili olduğunu gösterebilir.  Her hikaye, malların kullanım durumunun sonkoşulun sonuna bir yan tümce ekler.
 
-   Bu yan tümceleri ayrı açıklamalara kullanım durumu diyagramında yazarak Sonkoşul yan tümceyi gereksinimlerinden ayrı bağlantılar oluşturabilirsiniz. Her bir gereksinim iş öğesine bağlayın ve açıklama kullanım örneği diyagramındaki bağlayabilirsiniz.
+   Kullanım durumu diyagramında ayrı açıklamalarda bu yan tümceleri yazarak, gereksinimlerden sonkoşulun yan tümcelerine ayrı bağlantılar oluşturabilirsiniz. Her yorumu bir gereksinim iş öğesine bağlayabilir ve yorumu diyagramdaki kullanım örneğine bağlayabilirsiniz.
 
-### <a name="base-tests-on-the-requirements-types"></a>Gereksinim türleri temel testler
- Olan türler, sınıflar, arabirimler ve numaralandırmalar, gereksinimler modelini kavramlar ve kullanıcıların nasıl düşünün ve iş hakkında iletişim açısından ilişkiler açıklanmaktadır. Bu, sistemin yalnızca iç tasarımı ile ilgili türler hariç tutar.
+### <a name="base-tests-on-the-requirements-types"></a>Gereksinim türlerinde temel testler
+ Gereksinimler modelinin sınıfları, arabirimleri ve numaralandırmalar, kullanıcıların işletmeyle ilgili olarak nasıl düşündüğünü ve iletişim kurduğunu betimleyen kavramları ve ilişkileri açıklamaktadır. Yalnızca sistemin dahili tasarımıyla ilgili türleri dışlar.
 
- Bu gereksinim türleri açısından testlerinizi tasarlayın. Bu yöntem, değişiklikler gereksinimleri ele alınmıştır, bunun gerekli değişiklikleri testlerdeki değişiklikleri ilişkilendirilecek kolay olduğundan emin olun yardımcı olur. Testleri ve son kullanıcılar ve diğer proje katılımcıları ile doğrudan hedeflenen sonuçları tartışmanıza olanak sağlar. Bu, kullanıcıların geliştirme süreci dışında tutulabilir ve olası tasarım eksiklikler etrafında testleri yanlışlıkla tasarımını önler anlamına gelir.
+ Testlerinizi bu gereksinim türleri açısından tasarlayın. Bu uygulama, gereksinimlerdeki değişikliklerin tartışıldığı durumlarda, değişiklikleri sınamalarda gerekli değişikliklerle ilişkilendirmek çok kolay olur. Testleri ve amaçlanan sonuçları doğrudan son kullanıcılarla ve diğer hissedarlarla tartışmak mümkün kılar. Bu, kullanıcıların ihtiyaçlarını geliştirme süreci dışında korunabilir ve tasarımda olası kusurların yanlışlıkla tasarımını önler.
 
- El ile testler için test betiklerdeki gereksinimleri modeli için bağlılığı bu yöntem içerir. Otomatik sınamalar için bu yöntem, gereksinimleri sınıf diyagramları, test kodunuz için bir temel olarak kullanarak ve erişimcisi ve güncelleştirici gereksinim modelini koda bağlamak için işlevleri oluşturmayı içerir.
+ El ile testler için, bu uygulama test betiklerinde gereksinimler modelinin sözlüğüne bağlama ile ilgilidir. Otomatikleştirilmiş testler için, bu uygulama, gereksinimler sınıfı diyagramlarını test kodunuzun temeli olarak kullanmayı ve gereksinim modelini koda bağlamak için erişimci ve Güncelleştirici işlevleri oluşturmayı içerir.
 
- Örneğin, model içerebilir bir gereksinimleri menü, menü öğesi, sipariş ve onlar arasındaki ilişkileri türleri. Bu model, depolanır ve ile sistem sıralama yemek tarafından ele ancak uygulanması karmaşıklığını göstermiyor bilgileri temsil eder. Çalışma sisteminde birkaç farklı veritabanlarındaki kullanıcı arabirimleri ve API'leri her tür gerçekleştirimi olabilir. Dağıtılmış bir sistemde her örneğinin aynı anda sistemin farklı bölümlerinin depolanan birkaç çeşitleri olabilir.
+ Örneğin, bir gereksinim modeli, aralarında türler menüsü, menü öğesi, düzen ve ilişkilendirmeler içerebilir. Bu model, yemek siparişi sistemi tarafından depolanan ve ele gelen ve uygulamanın karmaşıklıklarını temsil eden bilgileri temsil eder. Çalışma sisteminde, veritabanlarında, kullanıcı arabirimlerinde ve API 'lerde bulunan her bir türün birkaç farklı Reali olabilir. Dağıtılmış bir sistemde, aynı anda sistemin farklı bölümlerinde depolanan her bir örneğin birkaç varyantı olabilir.
 
- Bir kullanım örneği siparişi Ekle öğesine gibi test etmek için bir test yöntemi kodu şuna benzer şekilde ekleyebilirsiniz:
+ Öğe ekleme gibi bir kullanım durumunu test etmek için bir test yöntemi şuna benzer bir kod içerebilir:
 
 ```
 Order order = ... ; // set up an order
@@ -94,66 +94,66 @@ int countAfter = order.MenuItems.Count;
 Assert (countAfter == countBefore = 1);
 ```
 
- Bu test yöntemi gereksinimleri modeli sınıflarını kullandığına dikkat edin. İlişkilendirmeleri ve öznitelikleri .NET özellikleri olarak gerçekleşir.
+ Bu test yönteminin, gereksinimler modelinin sınıflarını kullandığına dikkat edin. İlişkilendirmeler ve öznitelikler .NET özellikleri olarak gerçekleştirilir.
 
- Bunun çalışmasını sağlamak için sınıflarının özellikleri salt okunur işlevleri veya geçerli durumunda hakkında bilgi almak için sistem erişimi erişimcileri, olarak yeniden tanımlanması gerekir. Benzetimini yapan yöntemler kullanım örnekleri gibi AddItemToOrder sistem API'si aracılığıyla veya bir katmanı aracılığıyla kullanıcı arabirimi sürücüsü gerekir. Test nesnelerin sırasını ve MenuItem gibi Oluşturucular, da sistem içinde karşılık gelen öğeleri oluşturmak için sistem sürücüsü gerekir.
+ Bu işi yapmak için sınıfların özelliklerinin geçerli durumu hakkında bilgi almak üzere sisteme erişen salt okuma işlevleri veya erişimcileri olarak tanımlanması gerekir. AddItemToOrder gibi kullanım örneklerinin benzetimini yapan Yöntemler, sistemi API 'siyle veya Kullanıcı arabiriminin altındaki bir katmanda kullanmalıdır. Order ve MenuItem gibi test nesnelerinin oluşturucuları, sistem içinde karşılık gelen öğeleri oluşturmak için de sistemi de sağlamalıdır.
 
- Erişimciler ve güncelleyici çoğunu zaten uygulamanın normal API aracılığıyla kullanılabilir. Ancak, bazı ek işlevler testleri etkinleştirmek için yazılması gerekebilir. Bazen bu ek erişimci ve güncelleyici 'test Araçları' bilinir. Bunlar iç sistemin tasarımını üzerinde bağımlı olduğundan test edicilere test gereksinimler modelini açısından kod yazmaya ise bunları sağlamak için sistemin geliştiricilerin sorumluluğundadır.
+ Çoğu erişimci ve güncelleştiriciler, uygulamanın normal API 'SI aracılığıyla zaten kullanılabilir olacaktır. Ancak testlerin etkinleştirilmesi için bazı ek işlevlerin yazılması gerekebilir. Bu ek erişimciler ve güncelleştiriciler bazen ' test izleme ' olarak bilinir. Sistemin dahili tasarımına bağlı olduğundan, bu, sistemin geliştiricilerin bunları sağlama sorumluluğunda olduğundan, test ediciler, gereksinimler modeli açısından testlerin kodunu yazar.
 
- Otomatikleştirilmiş testleri yazdığınızda, erişimci ve güncelleyici kaydırmak için genel testler kullanabilirsiniz.
+ Otomatikleştirilmiş testler yazdığınızda, erişimcileri ve güncelleştiricileri kaydırmak için genel testleri kullanabilirsiniz.
 
-### <a name="tests-for-business-rules"></a>İş kuralları için testler
- Bazı gereksinimler herhangi bir kullanım durumu için doğrudan ilgili değildir. Örneğin, DinnerNow iş birçok menülerden seçme özgürlüğü tanır, ancak her sırada gerektiren tüm seçilen öğeleri tek bir menüden olacaktır. Bu iş kuralı, siparişler, menüler ve öğeler arasındaki ilişkilendirmeleri gereksinimleri sınıfı modelinde hakkında bir değişmez değer olarak ifade edilebilir.
+### <a name="tests-for-business-rules"></a>Iş kuralları için testler
+ Bazı gereksinimler, herhangi bir kullanım durumuyla doğrudan ilgili değildir. Örneğin, DinnerNow Business müşterilerin birçok menü arasından seçim yapmasına olanak tanır, ancak her sırada tüm seçili öğelerin tek bir menüden olması gerekir. Bu iş kuralı, gereksinimler sınıf modelindeki siparişler, menüler ve öğeler arasındaki ilişkilendirmeler hakkında bir sabit olarak ifade edilebilir.
 
- Bu tür sabit bir kuralı, yalnızca şu anda tanımlanmış tüm kullanım durumlarını ancak daha sonra yeniden tanımlanacak ayrıca diğer kullanım örneklerini yönetir. Bu nedenle, ayrı olarak herhangi bir kullanım örneğinden yazma ve kullanım örneklerinden ayrı olarak test etmek için yararlı olur.
+ Bu türden sabit bir kural, şu anda tanımlanmış olan tüm kullanım örneklerini değil, daha sonra tanımlanacak diğer kullanım örneklerini de yönetir. Bu nedenle, herhangi bir kullanım durumundan ayrı olarak yazmak ve kullanım çalışmalarından ayrı olarak test etmek yararlı olur.
 
-## <a name="deriving-subsystem-tests-from-models"></a>Alt sistem testleri modellerinden türetme
- İçinde üst düzey tasarım büyük bir sistemin bileşenler veya alt sistemlerin tanımlayabilirsiniz. Bunlar, birçok bakımdan tasarlanabilen yeniden kullanılabilir modüller ayrı olarak tasarlanmış veya farklı bilgisayarlarda bulunan bölümleri temsil eder.
+## <a name="deriving-subsystem-tests-from-models"></a>Modellerden alt sistem testleri türetme
+ Büyük bir sistemin üst düzey tasarımında bileşenleri veya alt sistemleri tanımlayabilirsiniz. Bunlar, ayrı olarak tasarlanan veya farklı bilgisayarlarda bulunan veya birçok şekilde yeniden birleştirilebilen yeniden kullanılabilir modüllerden oluşan parçaları temsil eder.
 
- Tam bir sistem için kullandığınız her ana bileşene aynı ilkeler uygulayabilirsiniz. Büyük bir projenin her bileşenin kendi gereksinimler modelini olabilir. Daha küçük projelerinde, ana bileşenleri ve bunların etkileşimleri göstermek için mimari model veya üst düzey tasarım oluşturulabilir. Daha fazla bilgi için [uygulama Mimarinizi modelleme](../modeling/model-your-app-s-architecture.md).
+ Her bir ana bileşene, tüm sistem için kullandığınız ilkeler için de uygulayabilirsiniz. Büyük bir projede, her bileşen kendi Gereksinimler modeline sahip olabilir. Daha küçük projelerde, büyük bileşenleri ve bunların etkileşimlerini göstermek için bir mimari model veya üst düzey tasarım oluşturulabilir. Daha fazla bilgi için bkz. [uygulamanızın mimarisini modelleme](../modeling/model-your-app-s-architecture.md).
 
- Her iki durumda da, gereksinimler modelini ve sistem testleri arasında olduğu gibi aynı şekilde model öğelerini ve alt sistem testleri arasında bir ilişki kurabilirsiniz.
+ Her iki durumda da, model öğeleri ile alt sistem testleri arasında, gereksinim modeli ve sistem testleri arasında yaptığınız şekilde aynı şekilde bir ilişki oluşturabilirsiniz.
 
-### <a name="isolate-components-with-provided-and-required-interfaces"></a>Sağlanan ve gerekli arabirimleri bileşenleriyle Ayır
- Sistem veya dış hizmetlere diğer kısımlarına bir bileşeni olan tüm bağımlılıkları belirlemek ve gerekli arabirimleri olarak göstermek için kullanışlıdır. Bu alıştırmada genellikle bileşeni daha ayrılmış ve bir kolayca ayrılabilir tasarımınızı geri kalanından ayrılması bazı yöntemini yeniden tasarlamaya neden olur.
+### <a name="isolate-components-with-provided-and-required-interfaces"></a>Bileşenleri, belirtilen ve gerekli arabirimlere ayır
+ Bir bileşenin sisteminizin veya dış hizmetlerinizin diğer bölümlerine sahip olduğu tüm bağımlılıkları belirlemek ve bunları gerekli arabirimler olarak göstermek yararlıdır. Bu alıştırma genellikle, tasarımın geri kalanından çok daha fazla ayrılmış ve kolayca ayrılabilir bir şekilde yeniden tasarlamasına yol açar.
 
- Bu ayırma bir avantajı, genellikle hizmetler sahte nesneler ile değiştirerek test etmek için bileşen yürütülebilecek olmasıdır. Bu test etme amacıyla ayarlanan bileşenlerdir. Sahte bir bileşen benzetimli verilerle sorgulara yanıt bileşeniniz gerektirdiği için arabirim sağlar. Sahte bileşenleri, bileşenin tüm arabirimleri bağlanabilen bir tam test bandı bir parçasını oluşturur.
+ Bu ayrılma avantajı, bileşenin genellikle kullandığı hizmetlerin sahte nesneleriyle değiştirilerek test için yürütülemeidir. Bunlar, test amaçları için ayarlanan bileşenlerdir. Bir sahte bileşen, bileşeninizin gerektirdiği arabirimi sağlar ve bunları benzetimli verilerle sorgular. Sahte bileşenler, bileşenin tüm arabirimlerine bağlanabilmiş olan bir bütün test bandı parçasını oluşturur.
 
- Sahte test bileşeniniz kullanacağı olan hizmetleri hala geliştirilmektedir diğer bileşenleri sırasında geliştirebilirsiniz avantajdır.
+ Sahte testin bir avantajı, bileşeninizin kullanacağı diğer bileşenler hala geliştirme aşamasında olduğundan, bileşenlerinizi geliştirebileceğiniz bir avantajdır.
 
-## <a name="maintain-the-relationships-between-tests-and-model"></a>Testleri ve Model arasındaki ilişkileri koru
- Birkaç haftada yineleme gerçekleştiren tipik bir projede, her yineleme başlangıcı yakınında gereksinimlerini gözden geçirme tutulur. Toplantı sonraki yinelemesine sağlanacak olan özellikler açıklanmaktadır. Gereksinimler modelini kavramları, senaryolar ve geliştirilecek Eylemler dizisi tartışmanıza yardımcı olmak için kullanılabilir. İş hissedarları öncelikleri ayarlar, geliştiriciler tahminler yapın ve test edicilere Beklenen davranış her özelliğin doğru şekilde yakalanan emin olun.
+## <a name="maintain-the-relationships-between-tests-and-model"></a>Testler ve model arasındaki Ilişkileri koruma
+ Birkaç haftada bir yineleme gerçekleştiren tipik bir projede, gereksinim incelemesi her yinelemenin başlangıcında yakınında tutulur. Toplantıda bir sonraki yinelemede teslim edilecek özellikler ele alınmaktadır. Gereksinimler modeli, geliştirilecek eylem kavramlarını, senaryoları ve işlem dizilerini tartışmak için kullanılabilir. İş hissedarları öncelikleri, geliştiriciler tahminleri yapar ve test ediciler her bir özelliğin beklenen davranışının doğru yakalandığından emin olur.
 
- Testleri yazma gereksinim tanımlamak için en etkili yoludur ve ayrıca bir kişi, gerekli olan açık bir anlama sahip olmamasını sağlamaya etkili bir yoludur. Yazma testleri zaman alırken bir belirtim Atölyesi sırasında çok uzun, ancak modelleri oluşturmak çok daha hızlı bir şekilde gerçekleştirebilirsiniz.
+ Sınama yazma, bir gereksinimi tanımlamanın en etkili yoludur ve ayrıca bir kişinin gerekli olanları anlayacağından emin olmanın etkili bir yoludur. Ancak, bir belirtim atölyesi sırasında testlerin yazılması çok uzun sürer, model oluşturma işlemi çok daha hızlı bir şekilde yapılabilir.
 
- Bir test açısından bakıldığında, gereksinimler modelini testler için bir toplu olarak görülebilir. Bu nedenle, testler ve proje boyunca model arasındaki ilişkiyi sağlamak önemlidir.
+ Bir test noktasından, gereksinimler modeli testler için bir toplu değer olarak görülebilir. Bu nedenle, proje genelinde testler ve modeller arasındaki ilişkinin korunması önemlidir.
 
-## <a name="Attaching"></a> Model öğelerine test çalışmalarını ekleme
- Projeniz kullanıyorsa [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], testleri modelinizde öğelerine bağlayabilirsiniz. Bu değişikliği gereksinimleri etkilenen testleri hızla bulmanıza olanak tanır ve bir gereksinim gerçekleşti ölçüde izlemenize yardımcı olur.
+## <a name="Attaching"></a>Model öğelerine test durumları iliştirme
+ Projeniz [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] kullanıyorsa, testlerinizi modelinizdeki öğelere bağlayabilirsiniz. Bu, gereksinimlerdeki bir değişiklikten etkilenen testleri hızlı bir şekilde bulmanıza olanak sağlar ve bir gereksinimin gerçekleştirilme kapsamını izlemenize yardımcı olur.
 
- Tüm öğe türleri için testleri bağlayabilirsiniz. Bazı örnekler şunlardır:
+ Testleri tüm öğe türlerine bağlayabilirsiniz. Aşağıda bazı örnekler verilmiştir:
 
-- Kullanım örneği, onu çalıştıran testlere bağlayın.
+- Kullanım örneğini, onu uygulayan testlere bağlayın.
 
-- Yan tümceleri bir kullanım örneği sonkoşulunun veya hedef, kullanım örneğine bağlı yorumlar üzerine yazma ve testler her açıklama bağlayın.
+- Kullanım örneği sonkoşulun yan tümcesini veya hedefini, kullanım örneğine bağlı açıklamaların üzerine yazın ve ardından her açıklamaya test bağlayın.
 
-- Sınıf diyagramları veya etkinlik diyagramları açıklamalarda sabit kuralları yazma ve bunları testler bağlayabilirsiniz.
+- Sınıf diyagramlarındaki veya Etkinlik diyagramlarındaki açıklamalarda sabit kurallar yazın ve bunları testlerle ilişkilendirin.
 
-- Testleri bir etkinlik diyagramı veya tek tek etkinliklerin bağlayın.
+- Testleri bir etkinlik diyagramına veya tek tek etkinliklere bağlayın.
 
-- Bir test paketi bileşen veya alt test bağlayın.
+- Bir test paketini bileşene bağlayın veya sınar.
 
-#### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Testleri bir model öğe veya ilişki bağlamak için
+#### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Testleri model öğesine veya ilişkiye bağlamak için
 
-1. İçinde [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], bir gereksinim oluşturmanız ve bir test paketi üzerinde temel.
+1. @No__t_0, bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
 
-    Bir iş öğesinde oluşturduğunuz gereksinimi olan [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]. Team Foundation ile projenizin kullandığı işlem şablonuna bağlı olarak kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için [hakkında Çevik araçları ve Çevik proje yönetimi](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
+    Oluşturduğunuz gereksinim, [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] bir iş öğesidir. Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
 
-2. Bir veya daha fazla öğe modelinizdeki gereksinim iş öğesine bağlayın.
+2. Gereksinim iş öğesini modelinizdeki bir veya daha fazla öğeye bağlayın.
 
-    Modelleme diyagramında bir öğe, yorum veya ilişkiye sağ tıklayın ve ardından **iş öğesine bağlantı**.
+    Modelleme diyagramında bir öğeye, açıklamaya veya ilişkiye sağ tıklayın ve sonra **Iş öğesine bağla**' ya tıklayın.
 
-3. Model öğe ifade gereksinim doğrulayın test çalışmalarını test paketine ekleyin.
+3. Test paketine, model öğesinde ifade edilen gereksinimi doğrulayan test çalışmalarına ekleyin.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 

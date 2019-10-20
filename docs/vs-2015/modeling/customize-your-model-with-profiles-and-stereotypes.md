@@ -1,5 +1,5 @@
 ---
-title: Modelinizi profiller ve stereotipler aracılığıyla özelleştirme | Microsoft Docs
+title: Modelinizi Profiller ve Stereotipler ile özelleştirme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -10,39 +10,39 @@ helpviewer_keywords:
 - UML model, customizing
 ms.assetid: fd607157-0d3a-4583-a84e-427a4b2a5acb
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f7e9aee38208a96ab75318a86810359392b5b8e1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4f83fcf3ea500e0640a226b80d3d3c0e2c7ed869
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433351"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655100"
 ---
 # <a name="customize-your-model-with-profiles-and-stereotypes"></a>Modelinizi profiller ve stereotipler aracılığıyla özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio'da sınıfları ve bunları belirli amaçlarla özelleştirmek için bileşenleri gibi standart UML model öğelerini uyarlayabilirsiniz. Uygulayabileceğiniz bir *stereotip* bir model öğesine öğenin özellikler listesini değiştirebilirsiniz. Stereotipler adlı koleksiyon içinde tanımlanan *profilleri*.  
-  
- Bu özellik, Visual Studio'nun hangi sürümlerinin desteklediğini görmek için bkz: [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
-  
- Stereotip kullanmak için bir profil için bir paket bağlayın. Bu, paket öğe profilinde tanımlanan stereotiplerin sağlar. Bazı profiller, Visual Studio ile birlikte yüklenir. Ayrıca, kendi profilinizi tanımlayabilirsiniz.  
-  
- Bir öğenin özellikler listesinde bulunan stereotipler ayarlanabilir. Şekli diyagram üzerinde temel türleri için uygulanan stereotipler da örnekte gösterildiği gibi şeklinde görünür.  
-  
- ![UML sınıf ile bir stereotip. ](../modeling/media/uml-class-stereotype.png "UML_class_stereotype")  
-  
+Visual Studio 'da sınıflar ve bileşenler gibi standart UML model öğelerini belirli amaçlarla özelleştirmek için uyarlayabilirsiniz. Öğenin özellik listesini değiştirebilen bir model öğesine *stereotip* uygulayabilirsiniz. Stereotipler, *profiller*olarak adlandırılan koleksiyonlar içinde tanımlanır.
+
+ Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+
+ Bir stereotip kullanmak için bir paketi profile bağlarsınız. Bu, profilde tanımlanan stereotipleri paketteki öğelere uygulamanıza olanak sağlar. Bazı profiller Visual Studio ile birlikte yüklenir. Ayrıca, kendi profillerinizi tanımlayabilirsiniz.
+
+ Stereotiplerde bir öğenin Özellikler listesinde stereotipler ayarlanabilir. Diyagramdaki ana şekil türleri için, örnekte gösterildiği gibi, uygulanan stereotipler da şekilde görünür.
+
+ ![Stereotipe sahip UML sınıfı.](../modeling/media/uml-class-stereotype.png "UML_class_stereotype")
+
 > [!NOTE]
-> Bir model oluşturmak ve ardından model başkalarıyla paylaşmak için bir profil kullanıyorsanız, bunlar aynı profili kendi bilgisayarınızda yüklü olan sürece stereotipleri görme olanakları mümkün olmayacaktır.  
-  
-## <a name="related-topics"></a>İlgili Konular  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[UML model öğelerine stereotipler ekleme](../modeling/add-stereotypes-to-uml-model-elements.md)|Profile paket bağlama ve bir stereotip öğeye uygulayarak bir paket içindeki bir model öğesini yapılıyor.|  
-|[UML modelleri için standart stereotipler](../modeling/standard-stereotypes-for-uml-models.md)|L3 ve UML Standart profilleri L2 Visual Studio ile yüklenir ve her model için varsayılan olarak bağlanır. Bunlar, modellerinize eklemek için kullanabileceğiniz stereotipler sağlar.<br /><br /> Örneğin, yalnızca kendi örnekleri dışarıdan görünen davranışını tanımlamak üzere tasarlanmış olduğunu belirtmek için bir sınıf «belirtimi» stereotipi uygulayabilirsiniz,|  
-|[UML’yi genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md)|Kendi uygulama alanına kendi stereotipleri ve uyumlu araçları tanımlayabilirsiniz.<br /><br /> Örneğin, bankacılık yazılımı geliştiriyorsanız, sınıflara uygulanabilecek bir «Hesap» stereotipi tanımlayabilirsiniz. Ardından, farklı türdeki hesabı ve ilişkilerini açıklamak için sınıf diyagramlarını kullanabilirsiniz.|  
-|[UML profili yükleme](../modeling/install-a-uml-profile.md)|Birisi bir UML profili verdiği, bilgisayarınıza yükleyebilirsiniz.|  
-|[Özel bir modelleme araç kutusu öğesi tanımlama](../modeling/define-a-custom-modeling-toolbox-item.md)|Özel araç kutusu öğesi bir stereotip yeni öğeler üzerinde sürekli olarak ayarlama özelliğinden kaydeder.|  
-|[Sterotipe göre renkli UML sınıfları](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Bu örnek kod, UML diyagramları genişletir. Otomatik olarak, bir UML şekli göre stereotip öğenin rengini ayarlar.|
+> Model oluşturmak için bir profil kullanır ve ardından modeli başka biriyle paylaşıyorsanız, kendi bilgisayarlarına aynı profili yüklemedikleri takdirde stereotipleri göremez.
+
+## <a name="related-topics"></a>İlgili Konular
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[UML model öğelerine stereotipler ekleme](../modeling/add-stereotypes-to-uml-model-elements.md)|Bir model öğesini bir pakete yerleştirme, paketi bir profile bağlama ve bir stereotipine bir stereotip uygulama.|
+|[UML modelleri için standart stereotipler](../modeling/standard-stereotypes-for-uml-models.md)|UML Standart profilleri L2 ve L3, Visual Studio ile yüklenir ve her model varsayılan olarak bunlara bağlanır. Modellerinize açıklama eklemek için kullanabileceğiniz stereotipler sağlar.<br /><br /> Örneğin, yalnızca örneklerinin dışarıdan görünür davranışını tanımlamak için tasarlanan bir sınıfa «Specification» stereotipini uygulayabilirsiniz.|
+|[UML’yi genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md)|Kendi uygulama alanınızı uyarlanan kendi stereotiplerinizi ve araçlarınızı tanımlayabilirsiniz.<br /><br /> Örneğin, bankacılık yazılımı geliştirirseniz, sınıflara uygulanabilen bir «Account» stereotipi tanımlayabilirsiniz. Daha sonra farklı hesap türlerini ve bunların ilişkilerini betimleyen sınıf diyagramlarını kullanabilirsiniz.|
+|[UML profili yükleme](../modeling/install-a-uml-profile.md)|Size bir UML profili verildiyse, bunu bilgisayarınıza yükleyebilirsiniz.|
+|[Özel bir modelleme araç kutusu öğesi tanımlama](../modeling/define-a-custom-modeling-toolbox-item.md)|Özel bir araç kutusu öğesi, yeni öğelerde bir stereotipin sürekli olarak ayarlanmasını sağlar.|
+|[Stereotipe göre renk UML sınıfları](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Bu örnek kod UML diyagramlarını genişletir. Bir UML şeklinin rengini, öğenin stereotipine göre otomatik olarak ayarlar.|

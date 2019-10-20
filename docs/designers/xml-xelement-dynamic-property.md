@@ -5,21 +5,21 @@ ms.topic: reference
 apiname:
 - XElement.Xml
 ms.assetid: 69ab2a33-4fe7-4cfa-97f8-eaf063decb18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d58dea02a45ccc84e7829da2acdb479eb17dda3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c93aaf3b43a930fe88020738460ec131972a205a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843959"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72633517"
 ---
 # <a name="xml-xelement-dynamic-property"></a>Xml (XElement dinamik özelliği)
 
-Biçimlendirilmemiş XML öğesi içeriği alır.
+Öğenin biçimlendirilmemiş XML içeriğini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,13 +29,13 @@ elem.Xml
 
 ## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
 
-A <xref:System.String> , öğenin biçimlendirilmemiş XML içeriğini temsil eder.
+Öğenin biçimlendirilmemiş XML içeriğini temsil eden bir <xref:System.String>.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu özellik değerine eşdeğer olan <xref:System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)> yöntemi <xref:System.Xml.Linq.XNode?displayProperty=fullName> sınıfı ile `SaveOptions` parametresini <xref:System.Xml.Linq.SaveOptions>.
+Bu özellik, `SaveOptions` parametresi <xref:System.Xml.Linq.SaveOptions> olarak ayarlanan <xref:System.Xml.Linq.XNode?displayProperty=fullName> sınıfının <xref:System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)> yöntemi ile eşdeğerdir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XElement sınıfı dinamik özellikleri](../designers/xelement-class-dynamic-properties.md)
+- [XElement sınıfı dinamik özellikleri](../designers/attribute-xelement-dynamic-property.md)
 - [Değer](../designers/value-xelement-dynamic-property.md)

@@ -1,5 +1,5 @@
 ---
-title: 'CA1505: Kodlardan kaçının | Microsoft Docs'
+title: 'CA1505: sürdürülebilir koddan kaçının | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA1505
 ms.assetid: 8292b268-5929-4221-b699-f9c414bcec5d
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d9d5dc976c27ca2459fa64b95fe0502579a500b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87aacfd675181e35d289b2a054c58f83f3f790fa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68191220"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72607581"
 ---
 # <a name="ca1505-avoid-unmaintainable-code"></a>CA1505: Bakımı yapılamayan kodlardan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "68191220"
 |-|-|
 |TypeName|AvoidUnmantainableCode|
 |CheckId|CA1505|
-|Kategori|Microsoft.Maintainability|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Bakımolmaması|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
  Bir tür veya yöntemin düşük bakım dizin değeri vardır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bakım dizini aşağıdaki ölçümleri kullanarak hesaplanır: kod, programın toplu ve döngüzel karmaşıklığına satır. Programın toplu bir türün veya yöntemin işleçler ve işlenenleri kodda sayısını temel alan bir anlayış zorluk ölçüsüdür. Döngüsel karmaşıklık yapısal türü veya yönteminde karmaşıklığını ölçüsüdür. Kod ölçümleri hakkında daha fazla bilgi [ölçüm karmaşıklığı ve yönetilen kod bakımı](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md).
+ Bakımı dizini aşağıdaki ölçümler kullanılarak hesaplanır: kod satırları, program hacmi ve döngüsel karmaşıklığı. Program birimi, koddaki işleç ve işlenen sayısını temel alan bir tür veya yöntemin anlaşılmasından zorluk gösteren bir ölçüdür. Döngüsel karmaşıklığı, tür veya metodun yapısal karmaşıklığına yönelik bir ölçüdür. Kod ölçümleri hakkında daha fazla bilgi edinmek için [karmaşıklık ve yönetilen kodun bakımsından](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)bahseden daha fazla bilgi edinebilirsiniz.
 
- Düşük bakım dizini bir türün veya yöntemin korumak muhtemelen koruması zor olan ve yeniden tasarlamanız için iyi bir aday olabilir gösterir.
+ Düşük bakım dizini, bir tür veya yöntemin bakımını yapmak zor olabilir ve yeniden tasarımı için iyi bir aday olacaktır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu ihlali gidermek için tür veya yöntem yeniden tasarlayın ve daha küçük ve daha fazla odaklanmış türleri veya yöntemleri bölmek deneyin.
+ Bu ihlalin giderilmesi için tür veya yöntemi yeniden tasarlayıp daha küçük ve daha odaklanmış tür ya da yöntemlere bölmeyi deneyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu uyarı, bir türün veya yöntemin hala en büyük boyutuna rağmen veya türü veya yönteminde bölünemez sürdürülebilir edildiği durumlarda hariç tutun.
+ Bir tür veya yöntem hala büyük boyuta karşın veya tür ya da Yöntem bölünemeyeceği zaman sürdürülebilir olarak düşünüldüğünde bu uyarıyı hariç tutun.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Bakım uyarıları](../code-quality/maintainability-warnings.md) [ölçüm karmaşıklığı ve yönetilen kod bakımı](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
+ [](../code-quality/maintainability-warnings.md) [Yönetilen kodun karmaşıklık ve bakım durumunu ölçen](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md) bakım uyarıları

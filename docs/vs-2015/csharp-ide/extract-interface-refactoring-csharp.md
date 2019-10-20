@@ -1,5 +1,5 @@
 ---
-title: Ayıklama arabirimi yeniden düzenlemesi (C#) | Microsoft Docs
+title: Ayıklama arabirimi yeniden düzenlemesiC#() | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,67 +13,67 @@ helpviewer_keywords:
 - Extract Interface refactoring operation [C#]
 ms.assetid: 7d0aa225-3b33-4331-9652-5a67cac6f3d0
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: deb2e446ff051b52e9c34d28abfa99436c064ad6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: fdcf281e1ace40d1d7cdac0be302810ea173581b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65680900"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667562"
 ---
 # <a name="extract-interface-refactoring-c"></a>Ayıklama Arabirimi Yeniden Düzenlemesi (C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ayıklama arabirimi bir varolan bir sınıf, yapı veya arabirim üyeleri ile yeni bir arabirim oluşturmak için kolay bir yol sağlayan bir yeniden düzenleme bir işlemdir.  
-  
- Çeşitli istemciler bir sınıf, yapı veya arabirim üyeleri aynı alt kümesi kullandığınızda veya birden çok sınıflar, yapılar veya arabirimleri üyelerin bir alt kümesini ortak olduğunda alt kümesini bir arabirim üyeleri somutlaştırmak yararlı olabilir. Arabirimleri kullanma hakkında daha fazla bilgi için bkz. [arabirimleri](https://msdn.microsoft.com/library/2feda177-ce11-432d-81b4-d50f5f35fd37).  
-  
- Ayıklama arabirimi arabirim yeni bir dosya oluşturur ve yeni dosyanın başında imleç yerleştirir. Yeni arabirim, yeni arabirimin adı ve kullanarak oluşturulan dosya adı ayıklamak için hangi üyelerin belirtebilirsiniz **Arabirimi Ayıkla** iletişim kutusu.  
-  
-### <a name="to-use-extract-interface"></a>Arabirimi Ayıkla kullanmak için  
-  
-1. Adlı bir konsol uygulaması oluşturun `ExtractInterface`ve ardından `Program` aşağıdaki kodla  
-  
-    ```csharp  
-    // Invoke Extract Interface on ProtoA.  
-    // Note:  the extracted interface will be created in a new file.  
-    class ProtoA  
-    {  
-        public void MethodB(string s) { }  
-    }  
-    ```  
-  
-2. İçinde bulunan imleç ile `MethodB`, tıklatıp **Arabirimi Ayıkla** üzerinde **yeniden düzenleme** menüsü.  
-  
-     **Arabirimi Ayıkla** iletişim kutusu görüntülenir.  
-  
-     CTRL + R klavye kısayolunu, ı görüntülemek için de yazabilirsiniz **Arabirimi Ayıkla** iletişim kutusu.  
-  
-     Ayrıca farenin sağ işaret **yeniden düzenleme**ve ardından **Arabirimi Ayıkla** görüntülenecek **Arabirimi Ayıkla** iletişim kutusu.  
-  
-3. Tıklayın **Tümünü Seç**.  
-  
-4. **Tamam**'ı tıklatın.  
-  
-     Yeni dosyanın, IProtoA.cs ve aşağıdaki kodu görürsünüz:  
-  
-    ```csharp  
-    using System;  
-    namespace TopThreeRefactorings  
-    {  
-        interface IProtoA  
-        {  
-            void MethodB(string s);  
-        }  
-    }  
-    ```  
-  
-## <a name="remarks"></a>Açıklamalar  
- Bu özellik yalnızca, imleç sınıf, struct veya ayıklamak istediğiniz üyeleri içeren arabirimi konumlandırıldığında erişilebilir. İmleci bu konumda olduğunda, yeniden düzenleme işlemi Arabirimi Ayıkla çağırın.  
-  
- Bir sınıf veya yapı çıkartma arabirimi çağırdığınızda tabanları ve arabirimleri listenin yeni arabirim adını içerecek şekilde değiştirilir. Tabanları ve arabirimleri listenin ayıklama bir arabirimde çağırdığınızda değiştirilmez.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Ayıklama arabirimi, mevcut bir sınıf, yapı veya arabirimden kaynaklanan üyelere sahip yeni bir arabirim oluşturmanın kolay bir yolunu sağlayan bir yeniden düzenleme işlemidir.
+
+ Birçok istemci, bir sınıf, yapı veya arabirimden aynı üye alt kümesini kullandıklarında veya birden çok sınıf, yapı veya arabirimlerin ortak bir üye alt kümesine sahip olduğu durumlarda, bir arabirimdeki üyelerin alt kümesini emkaya eklemek yararlı olabilir. Arabirimleri kullanma hakkında daha fazla bilgi için bkz. [arabirimler](https://msdn.microsoft.com/library/2feda177-ce11-432d-81b4-d50f5f35fd37).
+
+ Ayıklama arabirimi yeni bir dosyada bir arabirim oluşturur ve imleci yeni dosyanın başlangıcında konumlandırır. Hangi üyelerin yeni arabirime ayıklanacağı, yeni arabirimin adının ve oluşturulan dosyanın adını, **arayüzü Ayıkla** iletişim kutusunu kullanarak belirtebilirsiniz.
+
+### <a name="to-use-extract-interface"></a>Ayıklama arabirimini kullanmak için
+
+1. @No__t_0 adlı bir konsol uygulaması oluşturun ve `Program` aşağıdaki kodla değiştirin
+
+    ```csharp
+    // Invoke Extract Interface on ProtoA.
+    // Note:  the extracted interface will be created in a new file.
+    class ProtoA
+    {
+        public void MethodB(string s) { }
+    }
+    ```
+
+2. İmleci `MethodB` konumuna yerleştirilmiş ve yeniden **düzenleme** menüsünde **Arabirimi Ayıkla** ' ya tıklayın.
+
+     **Arabirimi Ayıkla** iletişim kutusu görüntülenir.
+
+     Ayrıca CTRL + R klavye kısayolunu yazarak, **arayüzü Ayıkla** iletişim kutusunu görüntüleyebilirsiniz.
+
+     Ayrıca, fareyi sağ tıklayıp yeniden **Düzenle**' nin üzerine gelip **arabirimi** **Ayıkla iletişim kutusunu** görüntüleyebilirsiniz.
+
+3. **Tümünü Seç**' e tıklayın.
+
+4. **Tamam**'a tıklayın.
+
+     Yeni dosya, IProtoA.cs ve aşağıdaki kodu görürsünüz:
+
+    ```csharp
+    using System;
+    namespace TopThreeRefactorings
+    {
+        interface IProtoA
+        {
+            void MethodB(string s);
+        }
+    }
+    ```
+
+## <a name="remarks"></a>Açıklamalar
+ Bu özellik yalnızca imleç, ayıklamak istediğiniz üyeleri içeren sınıf, yapı veya arayüzde konumlandırıldığında erişilebilir. İmleç bu konumdayken, arayüzü yeniden düzenleme işlemini çağırın.
+
+ Bir sınıfta veya bir yapıda ayıklama arabirimini çağırdığınızda, tabanlar ve arabirimler listesi yeni arabirim adını içerecek şekilde değiştirilir. Bir arabirimde ayıklama arabirimini çağırdığınızda, tabanlar ve arabirimler listesi değiştirilmez.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Yeniden Düzenleme (C#)](../csharp-ide/refactoring-csharp.md)

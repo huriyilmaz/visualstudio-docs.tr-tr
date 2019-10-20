@@ -1,41 +1,41 @@
 ---
-title: Metin büyük veya küçük harfe Dönüştür
+title: Metni büyük veya küçük harfe Dönüştür
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - editors, text case
 - text, case
 ms.assetid: b04d1327-a45e-4c12-a0d0-67672b3fa855
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f01b16971c85a07923783e97f08a8b91512eef6
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: d390548537497272e3b67af4b2b8bc981962983b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870783"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652765"
 ---
-# <a name="how-to-change-text-case-in-the-editor"></a>Nasıl yapılır: Düzenleyicide metin durumunu değiştirme
+# <a name="how-to-change-text-case-in-the-editor"></a>Nasıl yapılır: düzenleyicide metin durumunu değiştirme
 
-Seçili metni büyük tümü büyük harf veya küçük harflerle dönüştürülecek menü komutlarını veya klavye kısayollarını kullanabilirsiniz.
+Seçilen metnin büyük/küçük harflere veya tüm küçük harflere dönüştürülmesini sağlamak için menü komutlarını veya klavye kısayollarını kullanabilirsiniz.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, bu makalede açıklananlardan farklı olarak **genel** ortam ayarlarını temel alır. Ortam ayarlarınızı değiştirmek için **Araçlar** > **içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
+> Gördüğünüz iletişim kutuları ve menü komutları, bu makalede açıklananlardan farklı olarak **genel** ortam ayarlarını temel alır. Ortam ayarlarınızı değiştirmek için **araçlar**  > **Içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
 
 ## <a name="to-change-text-case"></a>Metin durumunu değiştirmek için
 
 1. Dönüştürmek istediğiniz metni seçin.
 
-2. Metni büyük harflere dönüştürmek için**Gelişmiş** > **Oluştur büyük harf** **Düzenle** > ' yi seçin veya **CTRL**+**SHIFT**+**U**tuşlarına basın.
+2. Metni büyük harflere dönüştürmek için **düzenle**  > **Gelişmiş** ' i seçin  > **büyük harfle yapın** veya **CTRL** +**SHIFT** +**U**tuşlarına basın.
 
-   Metni küçük harfe dönüştürmek için**Gelişmiş** > yap **Düzenle** > **küçük harf** ' i seçin veya **CTRL**+**U**tuşlarına basın. ( C++ Geliştirme iş yükünüz yüklüyse, bu KeyBinding farklı bir komut tarafından kullanılabilir.)
+   Metni küçük harfe dönüştürmek için **düzenle**  > **Gelişmiş**  > **küçük harf yap** ' ı seçin veya **CTRL** +**U**tuşlarına basın. ( C++ Geliştirme iş yükünüz yüklüyse, bu KeyBinding farklı bir komut tarafından kullanılabilir.)
 
 > [!TIP]
-> Bu değişiklikten önce biçimlendirme önceki durumuna geri döndürmek için seçin **geri** gelen **Düzenle** menüsü.
+> Bu değişiklikten önce önceki durum biçimlendirmesine dönmek için, **Düzenle** menüsünden **geri al** ' ı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)

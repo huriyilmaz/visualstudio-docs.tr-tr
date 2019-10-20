@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Oluşturma veya güncelleştirme standart kod çözümleme iade ilkeleri | Microsoft Docs'
+title: 'Nasıl yapılır: standart kod analizi Iade Ilkeleri oluşturma veya güncelleştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -10,67 +10,67 @@ helpviewer_keywords:
 - code analysis, migrating check-in policy
 ms.assetid: 458eb3b8-bb5e-4056-82b7-7079ce9c4089
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 47e7c2b6e02aab3b6b1df0c54ba91668bbb2673c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5e8016032a0ea8d1b8c62b2dfc2bbdf72251590c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825809"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661773"
 ---
-# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Nasıl yapılır: Standart Kod Analizi İade İlkeleri Oluşturma veya Güncelleştirme
+# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Nasıl yapılır: Standart Kod Çözümleme İade İlkeleri Oluşturma veya Güncelleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kod çözümleme İade İlkesi'ni kullanarak kod analizi bir takım projesindeki tüm kod projeleri üzerinde çalıştırılması gerektirebilir. Kod Analizi gerektiren kod tabanında denetlenen kodun kalitesini artırabilir.  
-  
+Kod Analizi iade etme ilkesini kullanarak, bir takım projesindeki tüm kod projelerinde kod analizinin çalıştırılmasını isteyebilirsiniz. Kod analizini zorunlu kılmak, kod tabanına işaretlenmiş kodun kalitesini iyileştirebilir.
+
 > [!NOTE]
-> Bu özellik yalnızca Team Foundation Server kullanıyorsanız kullanılabilir.  
-  
- Kod çözümleme iade ilkeleri, takım proje ayarlarında belirlenir ve her kod projesini takım projesinde geçerli. Kod Analizi yürütmeleri kod projesi için proje (.xxproj) dosyasında kod projeleri için yapılandırılır. Kod Analizi yürütmeleri yerel bilgisayarda gerçekleştirilir. İade Kod Analizi ilkesini etkinleştirmek, son kullanıcıların düzenlemeden sonra iade edilmesi için bir kod projesi dosyalarda derlenmiş ve en az bir kod analizini çalıştırdığınızda, içeren takım projesi ayarlarını kurallarında bilgisayarda gerçekleştirilmesi gereken yere c değişiklikleri yapıldı.  
-  
-- Yönetilen kod için iade ilkesi belirterek ayarladığınız bir *kural kümesi* , bir alt kod analizi kuralları içerir.  
-  
-- C/C++ kodu için tüm kod analizi kuralları çalıştırılır iade ilkesi gerektirir. Takım projenizdeki bireysel kod projeleri için belirli kuralları devre dışı bırakmak için ön işlemci yönergeleri ekleyebilirsiniz.  
-  
-  İade İlkesi yönetilen kod için belirttikten sonra takım üyeleri, takım projesi ilke ayarları için kod projeleri için Kod Analizi ayarları eşitleyebilirsiniz.  
-  
-### <a name="to-open-the-check-in-policy-editor"></a>İade İlkesi Düzenleyicisi'ni açmak için  
-  
-1. Takım projesi adı Ekip Gezgini'nde sağ tıklatın, **takım projesi ayarları**ve ardından **kaynak denetimi**.  
-  
-2. İçinde **kaynak denetimi** iletişim kutusunda **iade ilkesi** sekmesi.  
-  
-3. Aşağıdakilerden birini yapın:  
-  
-    - Tıklayın **Ekle** yeni bir iade ilkesi oluşturulacak.  
-  
-    - Var olan çift **Kod Analizi** öğesi **ilke türü** ilkeyi değiştirmek için liste.  
-  
-### <a name="to-set-policy-options"></a>İlke seçeneklerini ayarlamak için  
-  
-- Seçin veya aşağıdaki seçenekleri temizleyin:  
-  
-    |Seçenek|Açıklama|  
-    |------------|-----------------|  
-    |**Yalnızca geçerli çözümün bir parçası olan dosyaları içerecek şekilde iade uygular.**|Kod Analizi, çözüm ve proje yapılandırma dosyalarında belirtilen dosyalar üzerinde çalıştırabilirsiniz. Bu ilke, bir çözümün parçası olan tüm kod analiz edilen garanti eder.|  
-    |**C/C++ kod analizini zorla (/ analyze)**|Tüm C veya C++ projeleri ile oluşturulması gerekir / analyze derleyici seçeneği, Kod Analizi iade edilmeden önce çalıştırılacak.|  
-    |**Yönetilen kod için kod analizini zorla**|Tüm yönetilen projeleri için kod analizini Çalıştır ve iade edilmeden önce yapı gerektirir.|  
-  
-- 
-  
-### <a name="to-specify-a-managed-rule-set"></a>Bir yönetilen kural kümesi belirtmek için  
-  
-- Gelen **bu kural kümesini Çalıştır** listesinde, aşağıdaki yöntemlerden birini kullanın:  
-  
-  - Bir Microsoft Standart kural kümesi seçin.  
+> Bu özellik yalnızca Team Foundation Server kullanıyorsanız kullanılabilir.
 
-  - Özel kural kümesi seçmek için tıklatın  **\<kaynak denetiminden kural kümesi seçin >** , kural kümesi kaynak denetimi tarayıcıda sürüm denetim yolunu yazın. Bir sürüm denetim yolu sözdizimi aşağıdaki gibidir:  
+ Kod Analizi iade ilkeleri takım projesi ayarlarında ayarlanır ve takım projesindeki her bir kod projesi için geçerlidir. Kod Analizi çalıştırmaları, kod projesi için proje (. xxproj) dosyasındaki kod projeleri için yapılandırılır. Kod Analizi çalıştırmaları yerel bilgisayarda gerçekleştirilir. Bir kod analizi iade ilkesini etkinleştirdiğinizde, iade edilecek bir kod projesindeki dosyaların son Düzenlemeden sonra derlenmesi gerekir ve en azından içeren bir kod analizi çalıştıraldıktan sonra, takım projesi ayarlarındaki kuralların c 'nin bulunduğu bilgisayarda gerçekleştirilmesi gerekir haneler yapıldı.
 
-  - **$/** `TeamProjectName` **/** `VersionControlPath`  
+- Yönetilen kod için, kod analizi kurallarının bir alt kümesini içeren bir *kural kümesi* belirterek iade ilkesini ayarlarsınız.
 
-  - Oluşturma ve bir özel iade ilkesi kuralı uygulamak hakkında daha fazla bilgi için bkz: [yönetilen kod için uygulamaya özel iade ilkeleri](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+- C/C++ Code için, iade ilkesi tüm kod analizi kurallarının çalıştırılmasını gerektirir. Takım projenizdeki bireysel kod projeleri için belirli kuralları devre dışı bırakmak üzere, ön işlemci yönergeleri ekleyebilirsiniz.
+
+  Yönetilen kod için bir iade ilkesi belirttikten sonra, ekip üyeleri kod projeleri için kod analizi ayarlarını takım projesi ilkesi ayarlarına eşitleyebilir.
+
+### <a name="to-open-the-check-in-policy-editor"></a>İade İlkesi düzenleyicisini açmak için
+
+1. Takım Gezgini, takım projesi adına sağ tıklayın, **Takım Projesi Ayarları**' nın üzerine gelin ve **kaynak denetimi**' ne tıklayın.
+
+2. **Kaynak denetimi** iletişim kutusunda, **iade ilkesi** sekmesini seçin.
+
+3. Aşağıdakilerden birini yapın:
+
+    - Yeni bir iade ilkesi oluşturmak için **Ekle** ' ye tıklayın.
+
+    - İlkeyi değiştirmek için **Ilke türü** listesindeki mevcut **Kod Analizi** öğesine çift tıklayın.
+
+### <a name="to-set-policy-options"></a>İlke seçeneklerini ayarlamak için
+
+- Aşağıdaki seçenekleri seçin veya temizleyin:
+
+    |Seçenek|Açıklama|
+    |------------|-----------------|
+    |**İade etme yalnızca geçerli çözümün parçası olan dosyaları içerecek şekilde zorla.**|Kod Analizi, yalnızca çözüm ve proje yapılandırma dosyalarında belirtilen dosyalarda çalıştırılabilir. Bu ilke, bir çözümün parçası olan tüm kodların çözümlenme garantisi sağlar.|
+    |**C/C++ Code analizini zorla (/Analyze)**|Tüm C veya C++ projelerin, iade etmeden önce kod analizini çalıştırmak için/analyze derleyici seçeneğiyle oluşturulması gerekir.|
+    |**Yönetilen kod için kod analizini zorla**|Tüm yönetilen projelerin, iade etmeden önce kod analizini ve derlemeyi çalıştırmasını gerektirir.|
+
+-
+
+### <a name="to-specify-a-managed-rule-set"></a>Yönetilen bir kural kümesi belirtmek için
+
+- **Bu kural kümesini Çalıştır** listesinde, aşağıdaki yöntemlerden birini kullanın:
+
+  - Bir Microsoft standart kural kümesi seçin.
+
+  - Özel bir kural kümesi seçmek için **kaynak denetiminden \<Select kural kümesi ' ne tıklayın. >** ve ardından kaynak denetimi tarayıcısına kural kümesinin sürüm denetim yolunu yazın. Sürüm denetimi yolunun sözdizimi şöyledir:
+
+  - **$/** `TeamProjectName` **/** `VersionControlPath`
+
+  - Özel bir iade ilkesi kural kümesi oluşturma ve uygulama hakkında daha fazla bilgi için bkz. [yönetilen kod Için özel Iade Ilkeleri uygulama](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Kod Çözümleme İade İlkeleri Oluşturma ve Kullanma](../code-quality/creating-and-using-code-analysis-check-in-policies.md)

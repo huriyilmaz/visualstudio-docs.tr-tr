@@ -6,21 +6,21 @@ apiname:
 - XElement.Element
 apitype: Assembly
 ms.assetid: c6c25b8d-a1da-41ff-aeff-867ff1dcf749
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbd197082174bcd23ab6b47d64eb4eb0f7944ca2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 08b2f7f008c1522c5f65b5ee7a58c3ed98e8a845
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62845549"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72637334"
 ---
 # <a name="element-xelement-dynamic-property"></a>Öğe (XElement dinamik özelliği)
 
-Alt almak için kullanılan bir dizin oluşturucu, belirtilen Genişletilmiş adı için karşılık gelen öğe örneğini alır.
+Belirtilen genişletilmiş ada karşılık gelen alt öğe örneğini almak için kullanılan bir dizin oluşturucuyu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,14 +30,14 @@ elem.Element[{namespaceName}localName]
 
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri
 
-Bir dizin oluşturucu türü `XElement Item(String expandedName)`. Bu dizin oluşturucu genişletilmiş adı bir parametre alır ve buna karşılık gelen döndürür <xref:System.Xml.Linq.XElement>, veya `null` varsa belirtilen ada sahip bir öğe yok.
+@No__t_0 türünde bir Dizin Oluşturucu. Bu dizin oluşturucu genişletilmiş bir ad parametresi alır ve karşılık gelen <xref:System.Xml.Linq.XElement> döndürür veya belirtilen ada sahip hiçbir öğe yoksa `null`.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu özellik değerine eşdeğer olan <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi <xref:System.Xml.Linq.XContainer?displayProperty=fullName> sınıfı.
+Bu özellik <xref:System.Xml.Linq.XContainer?displayProperty=fullName> sınıfının <xref:System.Xml.Linq.XContainer.Element%2A> metoduna eşdeğerdir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>
-- [XElement sınıfı dinamik özellikleri](../designers/xelement-class-dynamic-properties.md)
+- [XElement sınıfı dinamik özellikleri](../designers/attribute-xelement-dynamic-property.md)
 - [Elements](../designers/elements-xelement-dynamic-property.md)

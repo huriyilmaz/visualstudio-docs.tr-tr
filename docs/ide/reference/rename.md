@@ -1,9 +1,9 @@
 ---
-title: Yeniden Adlandır yeniden düzenleyin
+title: Yeniden düzenleme yeniden Düzenle
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.rename
@@ -12,14 +12,14 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: d1b4ff448f04ff6f683fac06cbc0b31797edf587
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 2991227b3c8d742da360465e6c506e7123259e2c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186587"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655616"
 ---
-# <a name="rename-a-code-symbol-refactoring"></a>Bir kod sembol yeniden düzenlemeyi yeniden adlandırma
+# <a name="rename-a-code-symbol-refactoring"></a>Kod sembolünü yeniden düzenlemeyi yeniden adlandırma
 
 Bu yeniden düzenleme için geçerlidir:
 
@@ -27,60 +27,60 @@ Bu yeniden düzenleme için geçerlidir:
 
 - Visual Basic
 
-**Yazdırılacak** Alanlar, yerel değişkenler, Yöntemler, ad alanları, Özellikler ve türler gibi kod sembolleri için tanımlayıcıları yeniden adlandırmanızı sağlar.
+**Ne:** Alanlar, yerel değişkenler, Yöntemler, ad alanları, Özellikler ve türler gibi kod sembolleri için tanımlayıcıları yeniden adlandırmanızı sağlar.
 
-**Oluşturulurken** Tüm örnekleri bulmak zorunda kalmadan bir şeyi güvenle yeniden adlandırmak ve yeni adı kopyalayıp yapıştırmak istiyorsunuz.
+**Ne zaman:** Tüm örnekleri bulmak zorunda kalmadan bir şeyi güvenle yeniden adlandırmak ve yeni adı kopyalayıp yapıştırmak istiyorsunuz.
 
-**Kaydol** Yeni adı bir projenin tamamına kopyalamak ve yapıştırmak muhtemelen hatalara neden olabilir. Bu yeniden düzenleme aracı doğru yeniden adlandırma eylemi gerçekleştirir.
+**Neden:** Yeni adı bir projenin tamamına kopyalamak ve yapıştırmak muhtemelen hatalara neden olabilir. Bu yeniden düzenleme aracı yeniden adlandırma eylemini doğru bir şekilde gerçekleştirir.
 
-## <a name="how-to"></a>Nasıl Yapılır Konuları
+## <a name="how-to"></a>Nasıl yapılır
 
-1. Vurgulama veya yeniden adlandırılacak öğe metin imleci yerleştirin:
+1. Yeniden adlandırılacak öğenin içine metin imlecini vurgula veya Yerleştir:
 
-   - C# İÇİN:
+   - C#:
 
-       ![Vurgulanan kodu:C#](media/rename-highlight-cs.png)
-
-   - Visual Basic:
-
-       ![Vurgulanmış kodu - Visual Basic](media/rename-highlight-vb.png)
-
-2. Ardından, aşağıdakilerden birini yapın:
-
-   - **Klavye**
-      - Tuşuna **Ctrl + R**, ardından **Ctrl + R**. (Bağlı olarak hangi profilinde seçtiğiniz klavye kısayolu farklı olabileceğini unutmayın.)
-   - **Fare**
-      - Seçin **Düzenle > yeniden düzenleyin > Yeniden Adlandır**.
-      - Kod sağ tıklayıp **Yeniden Adlandır**.
-
-3. Yeni bir ad yazarak öğeyi yeniden adlandırın.
-
-   - C# İÇİN:
-
-      ![Animasyon yeniden adlandır-C#](media/rename-animated-cs.gif)
+       ![Vurgulanan kod-C#](media/rename-highlight-cs.png)
 
    - Visual Basic:
 
-      ![Rename - VB](media/rename-rename-vb.png)
+       ![Vurgulanan kod Visual Basic](media/rename-highlight-vb.png)
+
+2. Sonra, aşağıdakilerden birini yapın:
+
+   - **Klavyenizdeki**
+      - **CTRL + r**, ardından **CTRL + r**tuşlarına basın. (Klavye kısayolunuzun seçtiğiniz profile göre farklı olabileceğini unutmayın.)
+   - **Tığında**
+      - **Düzenle > yeniden düzenle > yeniden adlandır**' ı seçin.
+      - Koda sağ tıklayıp **Yeniden Adlandır**' ı seçin.
+
+3. Yeni adı yazarak öğeyi yeniden adlandırın.
+
+   - C#:
+
+      ![Animasyonu yeniden adlandır-C#](media/rename-animated-cs.gif)
+
+   - Visual Basic:
+
+      ![Yeniden adlandır-VB](media/rename-rename-vb.png)
 
    > [!TIP]
-   > Ayrıca açıklamalar ve diğer dizeleri bu yeni adı kullanacak şekilde güncelleştirebilirsiniz yanı [değişiklikleri Önizleme](../../ide/preview-changes.md) önce kaydetme, içinde onay kutularını kullanarak **Yeniden Adlandır** en üstünde açılan kutusunda düzenleyiciniz sağında.
+   > Ayrıca, bu yeni adı kullanmak için açıklamaları ve diğer dizeleri güncelleştirebilir ve Düzenleyicinizde, **Yeniden Adlandır** ' ın sağ üst köşesinde görünen onay kutularını kullanarak [değişiklikleri gözden](../../ide/preview-changes.md) aktarabilirsiniz.
 
-4. Değişiklik ile tamamladığınızda seçin **Uygula** düğme veya basın **Enter** ve değişiklikler uygulanır.
+4. Değişikliğin ne kadar memnunsanız **Uygula** düğmesini seçin veya **ENTER** tuşuna basın ve değişiklikler uygulanır.
 
 ## <a name="remarks"></a>Açıklamalar
 
 - Visual Studio 2019 sürüm 16,3 ' den başlayarak, içindeki dosyanın adıyla eşleşen bir türü yeniden adlandırdığınızda, dosyayı aynı anda yeniden adlandırmanızı sağlayan bir onay kutusu görüntülenir. Bu seçenek, bir sınıfı, arabirimi veya numaralandırmayı yeniden adlandırdığınızda görüntülenir. Bu seçenek, birden çok tanım içeren kısmi türler için desteklenmez.
 
    ![Animasyonu dosyayla yeniden adlandırma-C#](media/rename-with-file-animated-cs.gif)
-   
-- Bir çakışma neden zaten var olan bir ad kullanırsanız **Yeniden Adlandır** kutusunun sizi uyaracaktır.
+
+- Bir çakışmaya neden olabilecek zaten var olan bir ad kullanırsanız, **yeniden adlandırma** kutusu sizi uyarır.
 
    ![Yeniden adlandırma çakışması](media/rename-conflict-cs.png)
 
-- Bir sembolü yeniden adlandırmaya yönelik başka bir yol da düzenleyicide adını değiştirkullanmaktır. Ardından, imleç sembol adında, **CTRL**+tuşuna basın **.** ya da görünen ampul simgesi menüsünü genişlettikten sonra **eski adı > > \<yeni ad olarak \<yeniden adlandır**' ı seçin.
+- Bir sembolü yeniden adlandırmaya yönelik başka bir yol da düzenleyicide adını değiştirkullanmaktır. Sonra, sembol adındaki imleç ile **Ctrl** + ' a basın **.** ya da görünen ampul simgesi menüsünü genişlettikten sonra **\<old ad > yeniden adlandır**' ı seçerek > \<new.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

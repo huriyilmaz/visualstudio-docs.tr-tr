@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: XML Kod Parçacıklarını Oluşturma'
+title: 'Nasıl yapılır: XML parçacıkları oluşturma'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d8556dd7-1382-4af7-ba80-3e873c9416be
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d5ba351c20328829c05168d846fb7bffad7c11d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: eb511ba6f2eea9c56be4e826c3b689856c22214a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926501"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645934"
 ---
-# <a name="how-to-create-xml-snippets"></a>Nasıl yapılır: XML kod parçacıklarını oluşturma
+# <a name="how-to-create-xml-snippets"></a>Nasıl yapılır: XML parçacıkları oluşturma
 
 XML Düzenleyicisi, yeni XML parçacıkları oluşturmak için kullanılabilir. Düzenleyici, yeni XML parçacıkları oluşturmak için ortak bir kod parçacığı olan "kod parçacığı" adlı bir XML kod parçacığı içerir.
 
@@ -56,16 +56,16 @@ Düzenleyici iki kod parçacığı türünü destekler:
 </SnippetTypes>
 ```
 
-Tür parçacığı Ekle komutunu çağırdığınızda kod parçacığının görünüp görünmeyeceğini belirler. `Expansion` Türü, komut **ile çevrelerle** çağırdığınızda parçacığın görünüp görünmeyeceğini belirler. `SurroundsWith`
+@No__t_0 türü, kod **parçacığı Ekle** komutunu çağırdığınızda parçacığın görünüp görünmeyeceğini belirler. @No__t_0 türü, **birlikte çevreler** komutuyla çağırdığınızda parçacığın görünüp görünmeyeceğini belirler.
 
 ### <a name="code-element"></a>Kod öğesi
 
-`Code` Öğesi, kod parçacığı çağrıldığında eklenecek XML metnini tanımlar.
+@No__t_0 öğesi, kod parçacığı çağrıldığında eklenecek XML metnini tanımlar.
 
 > [!NOTE]
 > XML kod parçacığı metni bir `<![CDATA[...]]>` bölümü içine alınmalıdır.
 
-Ortak parçacığı tarafından oluşturulan `Code` öğe aşağıda verilmiştir.
+Ortak parçacığı tarafından oluşturulan `Code` öğesi aşağıda verilmiştir.
 
 ```xml
 <Code Language="XML">
@@ -75,15 +75,15 @@ Ortak parçacığı tarafından oluşturulan `Code` öğe aşağıda verilmişti
 </Code>
 ```
 
-`Code` Öğesi üç değişken içerir.
+@No__t_0 öğesi üç değişken içerir.
 
-- $name $ Kullanıcı tanımlı değişkendir. Varsayılan olarak " `name` Name" olan düzenlenebilir bir değere sahip bir öğesi oluşturur. Kullanıcı tanımlı değişkenler `Literal` öğesi kullanılarak tanımlanır.
+- $name $ Kullanıcı tanımlı değişkendir. Varsayılan olarak "Name" olan düzenlenebilir bir değere sahip bir `name` öğesi oluşturur. Kullanıcı tanımlı değişkenler `Literal` öğesi kullanılarak tanımlanır.
 
 - $selected $ önceden tanımlanmış bir değişkendir. Kod parçacığını çağırmadan önce XML düzenleyicisinde seçilen metni temsil eder. Bu değişkenin yerleştirilmesi, seçilen metnin, bu seçimi çevreleyen kod parçacığında nerede göründüğünü belirler.
 
 - $end $ önceden tanımlanmış bir değişkendir. Kod parçacığı alanlarını Düzenlemeden sonra Kullanıcı ENTER tuşuna bastığında bu değişken, **giriş** işaretinin (^) nereye taşındığını belirler.
 
-  Yukarıdaki `Code` öğe aşağıdaki XML metnini ekler:
+  Yukarıdaki `Code` öğesi aşağıdaki XML metnini ekler:
 
 ```xml
 <test>
@@ -95,7 +95,7 @@ Name öğesinin değeri düzenlenebilir bir bölge olarak işaretlenir.
 
 ### <a name="literal-element"></a>Literal öğesi
 
-`Literal` Öğesi, dosyaya eklendikten sonra özelleştirilebilecek değiştirme metnini belirlemek için kullanılır. Örneğin, değişmez dizeler, sayısal değerler ve bazı değişken adları değişmez değer olarak bildirilemez. XML kod parçacığınızdan herhangi bir sayıda sabit değer tanımlayabilir ve kod parçacığının içinden birden çok kez başvurabilirsiniz. Aşağıda, varsayılan değeri "Name" `Literal` olan $Name $ değişkenini tanımlayan bir öğe örneği verilmiştir.
+@No__t_0 öğesi, dosyaya eklendikten sonra özelleştirilebilecek değiştirme metnini belirlemek için kullanılır. Örneğin, değişmez dizeler, sayısal değerler ve bazı değişken adları değişmez değer olarak bildirilemez. XML kod parçacığınızdan herhangi bir sayıda sabit değer tanımlayabilir ve kod parçacığının içinden birden çok kez başvurabilirsiniz. Aşağıda, varsayılan değeri "ad" olan bir $name $ değişkenini tanımlayan bir `Literal` öğesi örneği verilmiştir.
 
 ```xml
 <Literal>
@@ -104,7 +104,7 @@ Name öğesinin değeri düzenlenebilir bir bölge olarak işaretlenir.
 </Literal
 ```
 
-Değişmez değerler, işlevlere da başvurabilir. XML Düzenleyicisi **LookupPrefix**adlı bir işlev içerir. **LookupPrefix** işlevi, bu kod PARÇACıĞıNıN çağrıldığı XML belgesindeki konumdan verilen ad alanı URI 'sini arar ve bu ad alanı için tanımlanan ad alanı önekini (varsa) döndürür ve iki nokta üst üste ekler (:) Bu adda. Aşağıda `Literal` **LookupPrefix** işlevini kullanan bir öğe örneği verilmiştir.
+Değişmez değerler, işlevlere da başvurabilir. XML Düzenleyicisi **LookupPrefix**adlı bir işlev içerir. **LookupPrefix** işlevi, bu kod PARÇACıĞıNıN çağrıldığı XML belgesindeki konumdan verilen ad alanı URI 'sini arar ve bu ad alanı için tanımlanan ad alanı önekini (varsa) döndürür ve iki nokta üst üste ekler (:) Bu adda. Aşağıda **LookupPrefix** işlevini kullanan bir `Literal` öğesi örneği verilmiştir.
 
 ```xml
 <Literal Editable="false">

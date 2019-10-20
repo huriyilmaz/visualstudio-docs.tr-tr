@@ -1,56 +1,56 @@
 ---
-title: Birim test yöntemini saplamalar oluşturma
+title: Birim testi yöntemi saplamaları oluştur
 ms.date: 04/01/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit tests
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aba0edbabdac6eb0e0c391371b51151a5be1ecba
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 3edd4694688011722b9975d299bd09cfb3832a9e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745795"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665077"
 ---
-# <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Birim test yöntemini saptamalar ile birim testleri Oluştur komutu oluşturun.
+# <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Birim Testleri Oluştur komutuyla birim testi yöntemi saplamaları oluşturma
 
-**Birim testleri Oluştur** komut, birim test yöntemini saptamalar oluşturur. Bu özellik, bir test projesi ve test sınıfı içindeki test metodu saptaması kolayca yapılandırmasını sağlar.
+**Birim Testleri Oluştur** komutu birim testi yöntemi saplamaları oluşturur. Bu özellik bir test projesinin, test sınıfının ve içindeki test yönteminin Saplamasının kolay yapılandırılmasını sağlar.
 
 > [!NOTE]
-> **Birim testleri Oluştur** menü komutu, yalnızca .NET Framework (ancak .NET Core) hedefleyen yönetilen kod için kullanılabilir.
+> **Birim Testleri Oluştur** menü komutu yalnızca .NET Framework (.NET Core) hedefleyen yönetilen kod için kullanılabilir.
 
-**Birim testleri Oluştur** menü komutu genişletilebilir ve MSTest, MSTest V2, NUnit ve xUnit testleri oluşturmak için kullanılabilir.
+**Birim Testleri Oluştur** menü komutu genişletilebilir ve MSTest, MSTest v2, NUnit ve xUnit için testler oluşturmak üzere kullanılabilir.
 
 ## <a name="get-started"></a>Kullanmaya başlayın
 
-Başlamak için Kod Düzenleyicisi'nde, test etmek istediğiniz projeye bir yöntem, bir tür veya ad alanı seçin, sağ tıklatın ve ardından **birim testleri Oluştur**. **Birim testleri Oluştur** yapılandırabileceğiniz oluşturulması için testleri nasıl istediğinizi iletişim kutusu açılır.
+Başlamak için, test etmek istediğiniz projedeki kod düzenleyicisinde bir yöntem, bir tür veya ad alanı seçin, sağ tıklayın ve ardından **Birim Testleri Oluştur**' u seçin. , Testlerin nasıl oluşturulmasını istediğinizi yapılandırabileceğiniz **Birim Testleri Oluştur** iletişim kutusu açılır.
 
-![Birim Testleri Oluştur komutunu kullanarak](media/createunittestcommand.png)
+![Birim Testleri Oluştur komutunu kullanma](media/createunittestcommand.png)
 
-## <a name="set-unit-test-traits"></a>Birim testi Özellikleri Ayarla
+## <a name="set-unit-test-traits"></a>Birim testi nitelikleri ayarla
 
-Test Otomasyonu işleminin bir parçası olarak bu testleri çalıştırmayı planlıyorsanız, başka bir test projesi (yukarıdaki iletişim ikinci seçenek) oluşturulan test sahip düşünebilirsiniz ve nitelikler, birim testi için test ayarı birimi. Bu, daha kolay dahil etmek veya sürekli tümleştirme veya sürekli dağıtım işlem hattı bir parçası olarak bu belirli testleri dışlamak sağlar. Nitelikler aşağıda gösterildiği gibi meta veriler için birim testi doğrudan ekleyerek ayarlanır.
+Bu testleri test Otomasyonu sürecinin bir parçası olarak çalıştırmayı planlıyorsanız, testin başka bir test projesinde oluşturulmasını (yukarıdaki iletişim kutusunda ikinci seçenek) ve birim testi için birim testi nitelikleri ayarlamayı düşünebilirsiniz. Bu, sürekli tümleştirme veya sürekli dağıtım işlem hattının parçası olarak bu belirli testleri daha kolay bir şekilde dahil etmenizi veya dışlamanıza olanak sağlar. Bu nitelikler, aşağıda gösterildiği gibi, birim testine doğrudan meta veriler eklenerek ayarlanır.
 
-![Birim testi özellikleri ayarlama](media/createunittest.png)
+![Birim testi nitelikleri ayarlanıyor](media/createunittest.png)
 
-## <a name="use-third-party-unit-test-frameworks"></a>Üçüncü taraf birim test çerçeveleri kullanma
+## <a name="use-third-party-unit-test-frameworks"></a>Üçüncü taraf birim testi çerçeveleri kullanma
 
-NUnit veya xUnit birim testleri otomatik olarak oluşturmak için bu test framework uzantılara Visual Studio Market'ten yükleyin:
+NUnit veya xUnit için birim testlerini otomatik olarak oluşturmak için, bu test çerçevesi uzantılarından birini Visual Studio Market adresinden birine yüklersiniz:
 
-* [NUnit test oluşturucuları uzantısı](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
-* [test oluşturucuları için ise xUnit.net uzantısı](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
+* [Test oluşturucuları için NUnit uzantısı](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
+* [test oluşturucuları için xUnit.net uzantısı](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
 
-## <a name="when-should-i-use-this-feature"></a>Bu özellik ne zaman kullanmalıyım?
+## <a name="when-should-i-use-this-feature"></a>Bu özelliği ne zaman kullanmalıyım?
 
-Bu özelliği kullanmak için birim testleri oluşturmak için ihtiyacınız olduğunda, ancak özellikle mevcut kodunuzu sınarken çok az kayıpla veya hiç test kapsamı ve hiçbir belge sahip. Diğer bir deyişle, burada sınırlı veya var olmayan kod belirtimi. Etkili bir şekilde benzer bir yaklaşım uygular [akıllı birim testleri](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/) , kod gözlemlenen davranışını belirtir.
+Birim testlerini her oluşturmanız gerektiğinde bu özelliği kullanın, ancak özellikle çok fazla test kapsamı ve hiç belge bulunmayan mevcut kodu test ederken. Diğer bir deyişle, sınırlı veya mevcut olmayan kod belirtimi. Kodun gözlemlenen davranışını gösteren [akıllı birim testlerine](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/) benzer bir yaklaşımı etkili bir şekilde uygular.
 
-Ancak, bir geliştirici bazı kodlar yazarak başlar ve ardından birim testleri önyüklemenizi kullanan bu özellik eşit oranda geçerlidir. Kodlama, akış içinde Geliştirici hızlı bir şekilde bir birim test metodu saptaması (ile uygun test sınıfı ve uygun bir test projesi) için belirli bir kod parçasını oluşturmak isteyebilirsiniz.
+Ancak, bu özellik, bir geliştirici başlatıldığında bazı kod yazarak ve ardından birim testlerini önyüklemek için kullandığında aynı şekilde geçerlidir. Geliştirici, kodlama akışında, belirli bir kod parçası için hızlı bir şekilde birim testi yöntemi saplaması (uygun bir test sınıfı ve uygun bir test projesiyle birlikte) oluşturmak isteyebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birim testi "Birim Testleri Oluştur ile" yöntemi saplamalar oluşturma](https://devblogs.microsoft.com/devops/creating-unit-test-method-stubs-with-create-unit-tests/)
+- ["Birim testleri oluştur" ile birim testi yöntemi saplamaları oluşturma](https://devblogs.microsoft.com/devops/creating-unit-test-method-stubs-with-create-unit-tests/)
 - [Birim testi blog gönderileri](https://devblogs.microsoft.com/devops/?s=unit+testing)

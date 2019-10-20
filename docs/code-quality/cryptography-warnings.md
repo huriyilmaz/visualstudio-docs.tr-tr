@@ -3,17 +3,17 @@ title: Şifreleme Uyarıları
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d96723ea-a293-488d-b9db-adb437e50cdd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c72dd1455405ecbabb86ca10744639d402881cef
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 2414a12c00b7d496e09f01982783a90874721cdc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449146"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649687"
 ---
 # <a name="cryptography-warnings"></a>Şifreleme Uyarıları
 Şifreleme uyarıları, doğru şifreleme kullanımıyla daha güvenli kitaplıkları ve uygulamaları destekler. Bu uyarılar, programınızdaki güvenlik açıklarını önlemeye yardımcı olur. Bu uyarılardan birini devre dışı bırakırsanız, bunun sebebini kodunuzda açıkça işaretlemelisiniz ve ayrıca geliştirme projeniz için güvenlik çalışanını bilgilendirmelisiniz.

@@ -6,37 +6,36 @@ ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 9611d00f-23bf-444b-ab0c-f30701bfc13d
 caps.latest.revision: 4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8c89e04346a4b08d6ee7bbc0012ef52f3b648512
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0b0496a04219c88573b3b555ef879a046d90faa3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68178206"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664778"
 ---
 # <a name="descendants-xelement-dynamic-property"></a>Alt öğeler (XElement dinamik özelliği)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirtilen genişletilmiş adı ile eşleşen tüm azalan öğeleri geçerli öğenin almak için kullanılan bir dizin oluşturucuyu alır.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-elem.Descendants[{namespaceName}localName]  
-```  
-  
-## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri  
- Bir dizin oluşturucu türü `IEnumerable<XElement> Item(String expandedName)`. Bu dizin oluşturucu, belirtilen alt öğeleri genişletilmiş adını alır ve eşleşen alt öğeleri döndürür bir <xref:System.Collections.IEnumerable> `<` <xref:System.Xml.Linq.XElement> `>` koleksiyonu.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Bu özellik değerine eşdeğer olan <xref:System.Xml.Linq.XContainer.Descendants%28System.Xml.Linq.XName%29?displayProperty=fullName> yöntemi <xref:System.Xml.Linq.XContainer> sınıfı.  
-  
- İade edilen koleksiyon içinde XML kaynak belge düzeninde öğeleridir.  
-  
- Bu özellik, ertelenmiş yürütme kullanır.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [XElement sınıfı dinamik özellikleri](../designers/xelement-class-dynamic-properties.md)   
- [Elements](../designers/elements-xelement-dynamic-property.md)
+Belirtilen genişletilmiş adla eşleşen geçerli öğenin tüm alt öğelerini almak için kullanılan bir dizin oluşturucuyu alır.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+elem.Descendants[{namespaceName}localName]
+```
+
+## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri
+ @No__t_0 türünde bir Dizin Oluşturucu. Bu Dizin Oluşturucu belirtilen alt öğelerin genişletilmiş adını alır ve bir <xref:System.Collections.IEnumerable> `<` <xref:System.Xml.Linq.XElement> `>` koleksiyonundaki eşleşen alt öğeleri döndürür.
+
+## <a name="remarks"></a>Açıklamalar
+ Bu özellik <xref:System.Xml.Linq.XContainer> sınıfının <xref:System.Xml.Linq.XContainer.Descendants%28System.Xml.Linq.XName%29?displayProperty=fullName> yöntemi ile eşdeğerdir.
+
+ Döndürülen koleksiyondaki öğeler XML kaynak belgesi sıratümcesinde.
+
+ Bu özellik ertelenmiş yürütmeyi kullanır.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [XElement sınıfı dinamik özellikler](../designers/xelement-class-dynamic-properties.md) [öğeleri](../designers/elements-xelement-dynamic-property.md)

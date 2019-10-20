@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Replace In Files command
 - ReplaceInFiles command
 ms.assetid: f116066a-4f65-4f2c-94ef-12cbd8cfb598
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb121962bbfd61dc4d4aac84467a2a8659918b63
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 0f7cb81f99644fc9d7253487030ed6da1f400bb5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926114"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655580"
 ---
 # <a name="replace-in-files-command"></a>Dosyalarda Değiştir Komutu
 Dosyalardaki metni **Bul ve Değiştir** penceresinin **dosyaları değiştir** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak değiştirir.
@@ -48,9 +48,9 @@ Gerekli. Eşleşen metnin yerine konacak metin.
 
 /Case veya/c
 
-İsteğe bağlı. Eşleşmeler yalnızca büyük ve küçük harfli karakterlerin `findwhat` bağımsız değişkende belirtilen olanlarla tam olarak eşleşmesi durumunda oluşur.
+İsteğe bağlı. Eşleşmeler yalnızca, büyük harf ve küçük harf karakterlerinin `findwhat` bağımsız değişkeninde belirtilen olanlarla tam olarak eşleşmesi durumunda meydana gelir.
 
-leri`extensions`
+/ext: `extensions`
 
 İsteğe bağlı. Aranacak dosyalar için dosya uzantılarını belirtir.
 
@@ -58,7 +58,7 @@ leri`extensions`
 
 İsteğe bağlı. Değiştirilen tüm dosyaların açık kaldığını belirtir.
 
-aramakonumu`searchpath`
+/LOOKIN: `searchpath`
 
 İsteğe bağlı. Aranacak dizin. Yol boşluk içeriyorsa, tüm yolu tırnak işaretleri içine alın.
 
@@ -68,7 +68,7 @@ aramakonumu`searchpath`
 
 /Regex veya/r
 
-İsteğe bağlı. `findwhat` Bağımsız değişkende önceden tanımlanmış özel karakterleri, değişmez karakterler yerine metin desenlerini temsil eden gösterimler olarak kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
+İsteğe bağlı. @No__t_0 bağımsız değişkeninde, sabit karakterler yerine metin desenlerini temsil eden gösterimler olarak önceden tanımlanmış özel karakterler kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
 
 /Reset süpürmeden veya/e
 
@@ -76,7 +76,7 @@ aramakonumu`searchpath`
 
 /Stop
 
-İsteğe bağlı. Devam eden bir işlem varsa geçerli arama işlemini durdurur. Değiştirme belirtildiğinde diğer tüm bağımsız değişkenleri `/stop` yoksayar. Örneğin, geçerli değişikliği durdurmak için şunu girin:
+İsteğe bağlı. Devam eden bir işlem varsa geçerli arama işlemini durdurur. Değiştirme `/stop` belirtildiğinde diğer tüm bağımsız değişkenleri yoksayar. Örneğin, geçerli değişikliği durdurmak için şunu girin:
 
 ```
 >Edit.ReplaceinFiles /stop
@@ -84,7 +84,7 @@ aramakonumu`searchpath`
 
 /Sub seçeneklerini veya/s
 
-İsteğe bağlı. /Lookin:`searchpath` bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar.
+İsteğe bağlı. /Lookin: `searchpath` bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar.
 
 /text2 veya/2
 
@@ -92,14 +92,14 @@ aramakonumu`searchpath`
 
 /joker veya/l
 
-İsteğe bağlı. Bağımsız değişkende, `findwhat` bir karakter veya karakter dizisini temsil etmek için önceden tanımlanmış özel karakterleri gösterimler olarak kullanır.
+İsteğe bağlı. Bir karakteri veya karakter dizisini göstermek için `findwhat` bağımsız değişkeninde gösterimler olarak önceden tanımlanmış özel karakterleri kullanır.
 
 /Word veya/w
 
 İsteğe bağlı. Yalnızca tam sözcükleri arar.
 
 ## <a name="example"></a>Örnek
-Bu örnek, " `btnCancel` My Visual Studio Projects `btnReset` " klasöründe bulunan tüm. CLS dosyalarında bunu arar ve yerini alır ve **sonuçları bul 2** penceresinde değiştirme bilgilerini görüntüler.
+Bu örnek `btnCancel` arar ve "My Visual Studio Projects" klasöründe bulunan tüm. CLS dosyalarındaki `btnReset` ile değiştirir ve **sonuçları bul 2** penceresinde değiştirme bilgilerini görüntüler.
 
 ```
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2

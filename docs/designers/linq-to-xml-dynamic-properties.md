@@ -1,33 +1,33 @@
 ---
-title: LINQ to XML dinamik özellikleri
+title: LINQ to XML Dinamik Özellikleri
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0455f47c-4a68-4f2e-a3f8-dd1d85b99012
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 181e9e4fb86a0348c0b5adb1d26a0a4e4e1721bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5993639a1bd6db1b814615bc75c1a57b64212185
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893217"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635258"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>LINQ to XML dinamik özellikleri
 
-Bu bölümde, XML dinamik özellikleri LINQ hakkında başvuru bilgileri sağlar. Özellikle, bu özellikleri tarafından kullanıma sunulan <xref:System.Xml.Linq.XAttribute> ve <xref:System.Xml.Linq.XElement> bulunan sınıfları, <xref:System.Xml.Linq> ad alanı.
+Bu bölüm LINQ to XML içindeki dinamik özelliklerle ilgili başvuru bilgileri sağlar. Özellikle, bu özellikler <xref:System.Xml.Linq> ad alanındaki <xref:System.Xml.Linq.XAttribute> ve <xref:System.Xml.Linq.XElement> sınıfları tarafından gösterilir.
 
-Konu başlığı altında açıklandığı gibi [LINQ to XML ile genel bakış, WPF verilerini bağlama](../designers/wpf-data-binding-with-linq-to-xml-overview.md), dinamik özelliklerin her birini bir standart genel özelliğin veya aynı sınıftaki yöntemi eşdeğerdir. Bu standart üyeleri birçok amaç için kullanılması gereken; Dinamik özellikler, LINQ to XML veri bağlama senaryoları için özel olarak sağlanır. Bu sınıfların standart üyeleri hakkında daha fazla bilgi için bkz. <xref:System.Xml.Linq.XAttribute> ve <xref:System.Xml.Linq.XElement> başvuru konuları.
+[LINQ to XML Ile WPF veri bağlamaya genel bakış](../designers/wpf-data-binding-with-linq-to-xml-overview.md)konusunda açıklandığı gibi, dinamik özelliklerin her biri aynı sınıftaki standart ortak bir özellik veya yönteme eşdeğerdir. Bu standart Üyeler çoğu amaçla kullanılmalıdır; dinamik özellikler, LINQ to XML veri bağlama senaryoları için özel olarak sağlanır. Bu sınıfların standart üyeleri hakkında daha fazla bilgi için, <xref:System.Xml.Linq.XAttribute> ve <xref:System.Xml.Linq.XElement> başvuru konularına bakın.
 
-Çözümlenen değerlerine göre dinamik özellikler bu bölümün iki kategoriye ayrılır:
+Çözümlenme değerlerine göre, bu bölümdeki dinamik özellikler iki kategoriye ayrılır:
 
-- Basit olanlar gibi `Value` özelliklerinde <xref:System.Xml.Linq.XAttribute> ve <xref:System.Xml.Linq.XElement> çözümlenmesi için tek bir değer sınıfları.
+- Tek bir değere çözüm veren <xref:System.Xml.Linq.XAttribute> ve <xref:System.Xml.Linq.XElement> sınıflarında `Value` özellikleri gibi basit olanlar.
 
-- Değerleri gibi dizine [öğeleri](../designers/elements-xelement-dynamic-property.md) ve [alt öğeleri](../designers/descendants-xelement-dynamic-property.md) özelliklerini <xref:System.Xml.Linq.XElement>, bir dizin oluşturucu türüne çözün. Dizin oluşturucu türleri istediğiniz değeri veya koleksiyona çözülmesi için bir genişletilmiş adı parametresi geçirilmelidir.
+- Dizin Oluşturucu türünde çözümlenilen <xref:System.Xml.Linq.XElement> [öğeleri](../designers/elements-xelement-dynamic-property.md) ve [alt](../designers/descendants-xelement-dynamic-property.md) öğeler gibi dizinli değerler. Dizin Oluşturucu türlerinin istenen değere veya koleksiyona çözümlenmesi için, bir genişletilmiş ad parametresi geçirilmesi gerekir.
 
-Dizinli bir değer türü döndüren Dinamik Özellikler <xref:System.Collections.Generic.IEnumerable%601> ertelenmiş yürütme kullanın. Ertelenmiş yürütme hakkında daha fazla bilgi için bkz: [(C#) LINQ sorgularına giriş](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries).
+@No__t_0 türünde dizinli bir değer döndüren tüm dinamik özellikler ertelenmiş yürütmeyi kullanır. Ertelenmiş yürütme hakkında daha fazla bilgi için bkz. [LINQ Sorgularına Giriş (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries).
 
 ## <a name="reference"></a>Başvuru
 
@@ -38,5 +38,5 @@ Dizinli bir değer türü döndüren Dinamik Özellikler <xref:System.Collection
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to XML ile WPF verilerini bağlama](../designers/wpf-data-binding-with-linq-to-xml-overview.md)
-- [LINQ ile WPF verilerini bağlama XML genel bakış](../designers/wpf-data-binding-with-linq-to-xml-overview.md)
-- [LINQ sorguları (C#) giriş](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
+- [LINQ to XML genel bakış ile WPF veri bağlama](../designers/wpf-data-binding-with-linq-to-xml-overview.md)
+- [LINQ Sorgularına Giriş (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)

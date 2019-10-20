@@ -1,32 +1,32 @@
 ---
-title: Ayarlar şelalesi | Microsoft Intellitest Geliştirici Test aracı
+title: Ayarlar şelale | Microsoft IntelliTest geliştirici test aracı
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Settings waterfall
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 966182ca79ffd06e17642e1b24d6e48b8e637efe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: ad5f03d7722fa2fb8452b6a1217c18996d6c978f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939137"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653162"
 ---
 # <a name="settings-waterfall"></a>Ayarlar şelalesi
 
-Kullanıcı ayarlarını belirtebilir ayarlar şelalesi kavramını anlamına gelir **derleme**, **düzeni**, ve **araştırma** düzeyi:
+Ayarlar şelale kavramı, kullanıcının **derlemeyi**, **armatürü**ve **araştırma** düzeyinde ayarları belirleyebileceği anlamına gelir:
 
-* Derleme - [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
-* Düzeni - [PexClass](attribute-glossary.md#pexclass)
-* Araştırma - [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
+* Assembly- [Pexassemblysettings](attribute-glossary.md#pexassemblysettings)
+* Fixture- [PexClass](attribute-glossary.md#pexclass)
+* Araştırma- [Pexaraştırması Ationattributebase](attribute-glossary.md#pexexplorationattributebase)
 
-Belirtilen ayarlar **derleme** tüm armatürleri ve araştırma altında bu derleme düzeyi etkiler. Belirtilen ayarlar **düzeni** düzeyi bu düzeni altındaki tüm araştırmaları etkiler. Alt ayarları win&mdash;konumundaki bir ayarı tanımlanmışsa **derleme** ve **düzeni** düzeylerini **düzeni** ayarları kullanılır.
+**Derleme** düzeyinde belirtilen ayarlar, bu derleme altındaki tüm armatürleri ve araştırmayı etkiler. **Fixture** düzeyinde belirtilen ayarlar, bu armaün altındaki tüm araştırmaları etkiler. Alt ayarlar Win &mdash;if bir ayar **derleme** ve **armadeğer** düzeylerinde tanımlanmıştır ve **Bu ayarlar kullanılır** .
 
-Bazı ayarlar özel olduğunu unutmayın **derleme** düzeyi veya **düzeni** düzeyi.
+Bazı ayarların **derleme** düzeyi veya **armatürü** düzeyine özgü olduğunu unutmayın.
 
 **Örnek**
 
@@ -46,6 +46,6 @@ namespace MyTests
 }
 ```
 
-## <a name="got-feedback"></a>Geri bildirim var mı?
+## <a name="got-feedback"></a>Geri bildirim alındı mı?
 
-Fikirlerinizi gönderin ve özellik istekleri [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.

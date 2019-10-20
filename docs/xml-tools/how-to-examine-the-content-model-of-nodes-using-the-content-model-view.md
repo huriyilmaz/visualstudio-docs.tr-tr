@@ -1,44 +1,44 @@
 ---
-title: XML şema Tasarımcısı'nda içerik modeli görünümünü kullanarak düğümlerin içerik modelini İnceleme
+title: XML şema tasarımcısında Içerik modeli görünümünü kullanarak düğümleri inceleyin
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c42ddac8-b0e3-48d6-9832-112a19d6c104
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63e337162dc8499bf9ac2acb5606fbf75292574f
-ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
+ms.openlocfilehash: c109d167534dc969ae34c55d16f2ee55e34fe3aa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66820453"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645896"
 ---
-# <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>Nasıl yapılır: İçerik modeli görünümünü kullanarak düğümlerin içerik modelini İnceleme
+# <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>Nasıl yapılır: Içerik modeli görünümünü kullanarak düğümlerin içerik modelini Inceleme
 
-Bu konuda düğümlerinizi kullanarak keşfedin açıklar [içerik modeli görünümünü](../xml-tools/content-model-view.md).
+Bu konu, [Içerik modeli görünümünü](../xml-tools/content-model-view.md)kullanarak düğümlerinizi nasıl keşfedebileceğinizi açıklamaktadır.
 
-## <a name="to-create-a-new-xsd-file-and-display-the-root-element-in-the-content-model-view"></a>Yeni bir XSD dosyası oluşturun ve kök öğe içerik modeli Görünümü'nde görüntülemek için
+## <a name="to-create-a-new-xsd-file-and-display-the-root-element-in-the-content-model-view"></a>Yeni bir XSD dosyası oluşturmak ve Içerik modeli görünümünde kök öğeyi görüntülemek için
 
 1. Yeni bir XML şema dosyası oluşturun.
 
-2. Tıklayın **görüntülemek ve temel alınan XML şema dosyası düzenleme için kullanım XML Düzenleyicisi** başlangıç görünümü.
+2. Başlangıç görünümündeki **temel ALıNAN XML şema dosyasını görüntülemek ve düzenlemek IÇIN XML düzenleyicisini kullan** ' a tıklayın.
 
-3. XML şema örnek koddan kopyalama [örnek XML şeması: satın alma siparişi şeması](../xml-tools/sample-xsd-file-purchase-order-schema.md) ve varsayılan olarak yeni bir XSD dosyasına eklenen kodu değiştirmek için yapıştırın.
+3. XML şeması örnek kodunu [örnek xml şemasından kopyalayın: satın alma sırası şeması](../xml-tools/sample-xsd-file-purchase-order-schema.md) , varsayılan olarak yeni xsd dosyasına eklenen kodu değiştirmek için yapıştırın.
 
-4. Seçin `purchaseOrder` sağ tıklanarak şema Gezgini öğesinde `purchaseOrder` öğesinde XML Düzenleyicisi ve seçerek **XML Gezgini'nde Göster**.
+4. XML düzenleyicisinde `purchaseOrder` öğesine sağ tıklayıp **XML Explorer 'Da göster '** i seçerek şema Gezgininde `purchaseOrder` öğesini seçin.
 
-5. Sağ `purchaseOrder` XML Gezgini seçip **içerik modeli görünümünde göster**.
+5. XML Explorer 'da `purchaseOrder` sağ tıklayın ve **Içerik modeli görünümünde göster**' i seçin.
 
-     İçerik modeli görünümünü görüntüler `purchaseOrder` tasarım yüzeyinde öğesi.
+     Içerik modeli görünümü `purchaseOrder` öğesini tasarım yüzeyinde görüntüler.
 
-6. Genişletin `shipTo`, `billTo`, ve `items` düğümleri her düğümünü çift veya çift her düğümün sağ oka tıklayarak.
+6. Her bir düğüme çift tıklayarak veya her bir düğümün sağ tarafındaki çift oka tıklayarak `shipTo`, `billTo` ve `items` düğümlerini genişletin.
 
-     Düğümleri `purchaseOrder` öğesi artık genişletilmiş ve öğenin içerik modeli görebilirsiniz.
+     @No__t_0 öğenin düğümleri artık genişletilir ve öğenin içerik modelini görebilirsiniz.
 
-7. Tıklayın altında herhangi bir düğümde `purchaseOrder` öğesi ve seçili düğümü şema kümesinde nerede olduğunu görmek için içerik haritası çubuğu bakın.
+7. @No__t_0 öğesinin altındaki herhangi bir düğüme tıklayın ve seçili düğümün şema kümesinde nerede olduğunu görmek için içerik haritası çubuğuna bakın.
 
-8. Tıklayın **Göster belgeleri** belgeleri açıp kapatmak için XSD araç çubuğu düğmesi. Ayrıca, belgeleri açıp kapatmak için tasarım yüzeyine sağ tıklayabilirsiniz.
+8. Belge değiştirmek için XSD araç çubuğundaki **belgeleri göster** düğmesine tıklayın. Ayrıca, belge değiştirmek için tasarım yüzeyine sağ tıklayabilirsiniz.
 
-9. Sağ `purchaseOrder` düğümünü seçip alt **örnek XML oluşturmak** XML örneği görmek için.
+9. @No__t_0 düğümüne sağ tıklayıp XML örnek belgesini görmek için **örnek XML oluştur** ' u seçin.

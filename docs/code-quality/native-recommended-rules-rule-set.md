@@ -2,17 +2,17 @@
 title: Yerel Önerilen Kurallar kural kümesi
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc18859e84262e9b2a40efde7ed9733fce701a6c
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: dcc5112262dd36e431a34becd36729ea9a3c186f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72448826"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649166"
 ---
 # <a name="native-recommended-rules-rule-set"></a>Yerel Önerilen Kurallar kural kümesi
 
@@ -154,7 +154,7 @@ Bu kuralı, yerel projeler için oluşturduğunuz herhangi bir özel kural küme
 |[C28020](../code-quality/c28020.md)|İfade bu çağrıda doğru değil|
 |[C28021](../code-quality/c28021.md)|Açıklama eklenen parametrenin bir işaretçi olması gerekir|
 |[C28022](../code-quality/c28022.md)|Bu işlevdeki işlev sınıfı (es), kendisini tanımlamak için kullanılan typedef üzerindeki işlev sınıfları ile eşleşmiyor.|
-|[C28023](../code-quality/c28023.md)|Atanan veya geçirilen işlev, en az bir sınıftan (es) bir \_Function @ no__t-1class @ no__t-2 ek açıklamasına sahip olmalıdır|
+|[C28023](../code-quality/c28023.md)|Atanan veya geçirilen işlev, sınıftan en az biri için bir \_Function \_class \_ ek açıklamasına sahip olmalıdır|
 |[C28024](../code-quality/c28024.md)|Atanmakta olan işlev işaretçisine işlev sınıfı (es) listesinde bulunmayan işlev sınıfıyla açıklama eklenir.|
 |[C28039](../code-quality/c28039.md)|Gerçek parametre türü, türle tam olarak eşleşmelidir|
 |[C28112](../code-quality/c28112.md)|Birbirine kenetlenmiş bir işlev aracılığıyla erişilen bir değişkene, her zaman birbirine kenetlenmiş bir işlev aracılığıyla erişilmesi gerekir.|
@@ -172,14 +172,14 @@ Bu kuralı, yerel projeler için oluşturduğunuz herhangi bir özel kural küme
 |[C28196](../code-quality/c28196.md)|Gereksinim karşılanmıyor. (İfade true olarak değerlendirilmez.)|
 |[C28202](../code-quality/c28202.md)|Statik olmayan üyeye geçersiz başvuru|
 |[C28203](../code-quality/c28203.md)|Sınıf üyesine belirsiz başvuru.|
-|[C28205](../code-quality/c28205.md)|\_Success @ no__t-1 veya \_On @ no__t-3failure @ no__t-4 geçersiz bir bağlamda kullanıldı|
+|[C28205](../code-quality/c28205.md)|geçersiz bağlamda kullanılan \_Success \_ veya \_On \_failure \_|
 |[C28206](../code-quality/c28206.md)|Sol işlenen bir yapıya işaret ediyor, '-> ' kullanın|
 |[C28207](../code-quality/c28207.md)|Sol işlenen bir struct, '. ' kullanın|
 |[C28209](../code-quality/c28209.md)|Sembol bildiriminin çakışan bir bildirimi vardır|
 |[C28210](../code-quality/c28210.md)|__On_failure bağlamının ek açıklamaları açık bir ön bağlamda olmamalıdır|
 |[C28211](../code-quality/c28211.md)|SAL_context için beklenen statik bağlam adı|
 |[C28212](../code-quality/c28212.md)|Ek açıklama için beklenen işaretçi ifadesi|
-|[C28213](../code-quality/c28213.md)|@No__t-0Use @ no__t-1decl @ no__t-2annotation @ no__t-3 ek açıklaması, önceki bir bildirime göre başvurulmadan önce kullanılmalıdır.|
+|[C28213](../code-quality/c28213.md)|@No__t_0Use \_decl \_annotations \_ ek açıklaması, önceki bir bildirime göre başvurulmadan başvurmak için kullanılmalıdır.|
 |[C28214](../code-quality/c28214.md)|Öznitelik parametresi adları P1 olmalıdır... P9 olmalıdır|
 |[C28215](../code-quality/c28215.md)|Typedüzeltmesini zaten bir tür düzeltmesine sahip olan bir parametreye uygulanamaz|
 |[C28216](../code-quality/c28216.md)|CheckReturn ek açıklaması yalnızca belirli işlev parametresi için Sonkoşulları için geçerlidir.|
@@ -188,7 +188,7 @@ Bu kuralı, yerel projeler için oluşturduğunuz herhangi bir özel kural küme
 |[C28219](../code-quality/c28219.md)|Ek açıklamada parametre ek açıklaması için beklenen numaralandırma üyesi|
 |[C28220](../code-quality/c28220.md)|Ek açıklamada parametre ek açıklaması için beklenen tamsayı ifadesi|
 |[C28221](../code-quality/c28221.md)|Ek açıklamada parametre için beklenen dize ifadesi|
-|[C28222](../code-quality/c28222.md)|__yes, @no__t -0 _No veya @no__t -1 _annotation için beklenen olabilir|
+|[C28222](../code-quality/c28222.md)|ek açıklama için __yes, \__no veya \__maybe bekleniyor|
 |[C28223](../code-quality/c28223.md)|Ek açıklama, parametre için beklenen belirteç/tanımlayıcı bulunamadı|
 |[C28224](../code-quality/c28224.md)|Ek açıklama parametre gerektiriyor|
 |[C28225](../code-quality/c28225.md)|Ek açıklamada gerekli parametrelerin doğru sayısı bulunamadı|
@@ -222,22 +222,22 @@ Bu kuralı, yerel projeler için oluşturduğunuz herhangi bir özel kural küme
 |[C28267](../code-quality/c28267.md)|Ek açıklamalarda bir söz dizimi hatası bulundu.|
 |[C28272](../code-quality/c28272.md)|İşlevi için ek açıklama, incelenirken parametresi, işlev bildirimiyle tutarsız|
 |[C28273](../code-quality/c28273.md)|İşlev için, ipuçları işlev bildirimiyle tutarsız|
-|[C28275](../code-quality/c28275.md)|@No__t-0Macro @ no__t-1value @ no__t-2 parametresi null|
+|[C28275](../code-quality/c28275.md)|@No__t_1value \_ \_Macro parametresi null|
 |[C28279](../code-quality/c28279.md)|Sembol için, eşleşen bir ' End ' olmadan bir ' begin' bulundu|
 |[C28280](../code-quality/c28280.md)|Sembol için, eşleşen bir ' begin' olmadan bir ' End ' bulundu|
 |[C28282](../code-quality/c28282.md)|Biçim dizeleri ön koşullarda olmalıdır|
 |[C28285](../code-quality/c28285.md)|İşlev için, parametrede söz dizimi hatası|
 |[C28286](../code-quality/c28286.md)|İşlev için, sonda yakınında sözdizimi hatası|
-|[C28287](../code-quality/c28287.md)|İşlev için, \_Konumundaki @ no__t-1 () ek açıklamasında söz dizimi hatası (Tanınmayan parametre adı)|
-|[C28288](../code-quality/c28288.md)|İşlev için, \_Konumundaki @ no__t-1 () ek açıklamasında söz dizimi hatası (geçersiz parametre adı)|
+|[C28287](../code-quality/c28287.md)|İşlev için \_At \_ () ek açıklamasında söz dizimi hatası (Tanınmayan parametre adı)|
+|[C28288](../code-quality/c28288.md)|İşlev için \_At \_ () ek açıklamasında söz dizimi hatası (geçersiz parametre adı)|
 |[C28289](../code-quality/c28289.md)|İşlev için: ReadableTo veya WritableTo parametre olarak bir limit-spec içermiyordu|
 |[C28290](../code-quality/c28290.md)|işlev için ek açıklama, gerçek parametre sayısından daha fazla dışlar içeriyor|
 |[C28291](../code-quality/c28291.md)|deref düzey 0 ' da null/NotNull Post işlevi için anlamsız bir küçüktür.|
 |[C28300](../code-quality/c28300.md)|İşleç için uyumsuz türlerin ifade işlenenleri|
 |[C28301](../code-quality/c28301.md)|İşlevin ilk bildirimi için ek açıklama yok.|
-|[C28302](../code-quality/c28302.md)|Ek açıklamada fazladan bir \_Deref @ no__t-1 işleci bulundu.|
-|[C28303](../code-quality/c28303.md)|Ek açıklamada belirsiz bir \_Deref @ no__t-1 işleci bulundu.|
-|[C28304](../code-quality/c28304.md)|Belirtece hatalı yerleştirilmiş \_Notref @ no__t-1 işleci uygulandı.|
+|[C28302](../code-quality/c28302.md)|Ek açıklamada bir ek \_Deref \_ işleci bulundu.|
+|[C28303](../code-quality/c28303.md)|Ek açıklamada belirsiz bir \_Deref \_ işleci bulundu.|
+|[C28304](../code-quality/c28304.md)|Belirtece uygulanmış, uygun olmayan bir \_Notref \_ işleci bulundu.|
 |[C28305](../code-quality/c28305.md)|Belirteç ayrıştırılırken bir hata bulundu.|
 |[C28306](../code-quality/c28306.md)|Parametresindeki ek açıklama kullanımdan görünmez|
 |[C28307](../code-quality/c28307.md)|Parametresindeki ek açıklama kullanımdan görünmez|

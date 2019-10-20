@@ -8,15 +8,15 @@ helpviewer_keywords:
 - layer diagrams, adding custom properties
 ms.assetid: 52b3ac25-d10b-4507-a1fe-209ccb4d2777
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 75d3284c4584c67550c7dcee3c8f1737ebed5380
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: ec1c7c94c8a0e6aa233cf21f9b57e093cc430d48
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871916"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655296"
 ---
 # <a name="add-custom-properties-to-layer-diagrams"></a>Katman diyagramlarına özel özellikler ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68871916"
 Katman diyagramları için uzantı kodu yazdığınızda, değerleri katman diyagramında herhangi bir öğe ile saklayabilirsiniz. Diyagram kaydedilip yeniden açıldığında değerler kalır. Ayrıca, kullanıcıların bunları görebilmesi ve düzenleyebilmeleri için **Özellikler** penceresinde bu özelliklerin görünmesini sağlayabilirsiniz. Örneğin, kullanıcıların her katman için bir normal ifade belirtmesini ve her katmandaki sınıfların adlarının Kullanıcı tarafından belirtilen düzene uygun olduğunu doğrulamak için doğrulama kodu yazabilmesini sağlayabilirsiniz.
 
 ## <a name="properties-not-visible-to-the-user"></a>Kullanıcıya görünmeyen Özellikler
- Yalnızca kodunuzun katman diyagramındaki herhangi bir öğeye değer iliştirmek istiyorsanız, MEF bileşeni tanımlamanız gerekmez. [ILayerElement](/previous-versions/ff644511(v=vs.140))içinde adlı `Properties` bir sözlük var. Yalnızca herhangi bir katman öğesinin sözlüğüne sıralanabilecek değerleri eklemeniz yeterlidir. Katman diyagramının bir parçası olarak kaydedilir. Daha fazla bilgi için bkz. [Program kodundaki katman modellerini gezinme ve güncelleştirme](../modeling/navigate-and-update-layer-models-in-program-code.md).
+ Yalnızca kodunuzun katman diyagramındaki herhangi bir öğeye değer iliştirmek istiyorsanız, MEF bileşeni tanımlamanız gerekmez. [ILayerElement](/previous-versions/ff644511(v=vs.140))içinde `Properties` adlı bir sözlük var. Yalnızca herhangi bir katman öğesinin sözlüğüne sıralanabilecek değerleri eklemeniz yeterlidir. Katman diyagramının bir parçası olarak kaydedilir. Daha fazla bilgi için bkz. [Program kodundaki katman modellerini gezinme ve güncelleştirme](../modeling/navigate-and-update-layer-models-in-program-code.md).
 
 ## <a name="properties-that-the-user-can-edit"></a>Kullanıcının düzenleyebilmesi için Özellikler
  **İlk hazırlık**
@@ -32,9 +32,9 @@ Katman diyagramları için uzantı kodu yazdığınızda, değerleri katman diya
 > [!IMPORTANT]
 > Özellikleri görünmesi için, katman özelliklerinin görünür olmasını istediğiniz her bilgisayarda aşağıdaki değişikliği yapmanız gerekir.
 >
->  1. **Yönetici olarak çalıştır**'ı kullanarak not defteri 'ni çalıştırın. Açın`%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest`
+>  1. **Yönetici olarak çalıştır**'ı kullanarak not defteri 'ni çalıştırın. @No__t_0 açın
 >
->  2. `Content` Öğesinin içinde şunu ekleyin:
+>  2. @No__t_0 öğesinin içinde şunu ekleyin:
 >
 >     ```xml
 >     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>
@@ -69,9 +69,9 @@ public class MyProperty
 
  [ILayerElement](/previous-versions/ff644511(v=vs.140)) veya türetilmiş sınıflarından herhangi birini içeren özellikleri tanımlayabilirsiniz:
 
-- `ILayerModel`-Model
+- `ILayerModel`-model
 
-- `ILayer`-Her katman
+- `ILayer`-her katman
 
 - `ILayerDependencyLink`-Katmanlar arasındaki bağlantılar
 
@@ -80,7 +80,7 @@ public class MyProperty
 - `ILayerCommentLink`
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod tipik bir özel özellik tanımlayıcısıdır. Kullanıcının özel bir doğrulama yöntemi için değer sağlamasına imkan tanıyan`ILayerModel`katman modelinde () bir Boole özelliği tanımlar.
+ Aşağıdaki kod tipik bir özel özellik tanımlayıcısıdır. Katman modelinde (`ILayerModel`), kullanıcının özel doğrulama yöntemi için değer sağlamasına imkan tanıyan bir Boole özelliği tanımlar.
 
 ```
 using System;

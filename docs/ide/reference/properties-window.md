@@ -15,73 +15,73 @@ helpviewer_keywords:
 - virtual functions, Properties window
 - Properties window
 ms.assetid: e6e0fa4f-75c4-4a52-af15-281cd61876ca
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e26bd9d874ba5526a858e32907bff6676b68c81e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4701f5ea882ab2fbb75f11bc3cc6d85fc92b4b8e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969039"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655691"
 ---
 # <a name="properties-window"></a>Özellik penceresi
 
-Tasarım zamanı özelliklerini ve düzenleyicilerde ve tasarımcılarda bulunan seçilen nesnelerin olaylarını görüntülemek ve değiştirmek için bu pencereyi kullanın. Ayrıca **özellikleri** düzenlemek ve dosya, proje ve çözüm özelliklerini görüntülemek için penceresi. Bulabilirsiniz **özellikleri** penceresinde **görünümü** menüsü. Ayrıca tuşlarına basarak açabilirsiniz **F4** veya yazarak **özellikleri** arama kutusuna.
+Düzenleyicilerde ve tasarımcılarda bulunan seçili nesnelerin tasarım zamanı özelliklerini ve olaylarını görüntülemek ve değiştirmek için bu pencereyi kullanın. Ayrıca, dosya, proje ve çözüm özelliklerini düzenlemek ve görüntülemek için **Özellikler** penceresini de kullanabilirsiniz. **Özellikler** penceresini **Görünüm** menüsünde bulabilirsiniz. Ayrıca, **F4** tuşuna basarak veya arama kutusuna **Özellikler** yazarak da açabilirsiniz.
 
-**Özellikleri** farklı tür alanları, belirli bir özelliğin gereksinimlerine bağlı olarak düzenleme penceresinde görüntülenir. Bu düzenleme alanları düzenleme kutuları, açılan listeler ve özel Düzenleyici iletişim kutularına bağlantılar içerir. Gri renkle gösterilen özellikler salt okunurdur.
+**Özellikler** penceresi, belirli bir özelliğin ihtiyaçlarına bağlı olarak farklı türlerde Düzenle alanları görüntüler. Bu düzenleme alanları, düzenleme kutularını, açılan listeleri ve özel Düzenleyici iletişim kutularına bağlantıları içerir. Gri renkte gösterilen özellikler salt okunurdur.
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
-Nesne name\
-Seçili nesneyi ya da nesneleri listeler. Sadece aktif Düzenleyici veya tasarımcı nesnelerden görülebilir. Birden çok nesne seçtiğinize, yalnızca seçilen tüm nesneler için ortak olan özellikler görünür.
+Nesne adı \
+Şu anda seçili olan nesneyi veya nesneleri listeler. Yalnızca etkin düzenleyici veya tasarımcı nesneleri görünür. Birden çok nesne seçtiğinizde yalnızca seçili tüm nesneler için ortak olan özellikler görünür.
 
-Categorized\
-Kategoriye göre tüm özellikleri ve seçili nesne için özellik değerlerini listeler. Görünür özelliklerin sayısını azaltmak için bir kategoriyi daraltabilirsiniz. Genişlet veya daralt bir kategori artı görürsünüz (+) veya eksidir (–) sol tarafındaki kategori adı. Kategoriler alfabetik olarak listelenir.
+Sınıflandır
+Seçili nesne için tüm özellikleri ve özellik değerlerini kategoriye göre listeler. Görünür özelliklerin sayısını azaltmak için bir kategoriyi daraltabilirsiniz. Bir kategoriyi genişlettikten veya daralttığınızda, kategori adının solunda bir artı (+) veya eksi (-) görürsünüz. Kategoriler alfabetik olarak listelenir.
 
-Alphabetical\
-Tüm tasarım zamanı özelliklerini ve seçilen nesnelerin olaylarını alfabetik olarak sıralar. Soluklaşmamış bir özelliği düzenlemek için sağındaki hücreyi tıklatın ve değişiklikleri girin.
+Göre
+Alfabetik olarak, seçilen nesneler için tüm tasarım zamanı özelliklerini ve olaylarını sıralar. Soluk olmayan bir özelliği düzenlemek için, sağ tarafındaki hücreyi tıklatın ve değişiklikleri girin.
 
-Özellik Sayfaları\
-Görüntüler **özellik sayfaları** iletişim kutusu veya **Proje Tasarımcısı** seçili öğe için. Özellik sayfaları görüntüler bir alt kümesini aynısını veya bulunan özelliklerin bir alt kümesi **özellikleri** penceresi. Projenizin etkin yapılandırması ile ilgili özellikleri görüntülemek ve düzenlemek için bu düğmeyi kullanın.
+Özellik sayfaları \
+Seçili öğe için **Özellik sayfaları** iletişim kutusunu veya **Proje Tasarımcısı** ' nı görüntüler. Özellik sayfaları, **Özellikler** penceresinde kullanılabilen özelliklerin bir alt kümesini, aynısını veya bir üst kümesini görüntüler. Projenizin etkin yapılandırmasıyla ilgili özellikleri görüntülemek ve düzenlemek için bu düğmeyi kullanın.
 
-Properties\
-Bir nesne için özellikleri görüntüler. Çok sayıda nesne kullanılarak görüntülenebilen olayları de **özellikleri** penceresi.
+Özelliklerinin
+Bir nesnenin özelliklerini görüntüler. Birçok nesnenin aynı zamanda **Özellikler** penceresi kullanılarak görüntülenebilen olayları vardır.
 
-Özellik Source göre sırala\
-Stiller ve bağlamalar gibi devralma, bir kaynağa göre özellikleri gruplandırır uygulanır. Yalnızca tasarımcıdaki XAML dosyaları düzenlerken kullanılabilir.
+Özellik kaynağına göre sırala \
+Devralma, uygulanan stiller ve bağlamalar gibi, kaynağa göre özellikleri gruplandırır. Yalnızca tasarımcıda XAML dosyaları düzenlenirken kullanılabilir.
 
-Events\
+Olayları
 Bir nesne için olayları görüntüler.
 
 > [!NOTE]
-> Bu **özellikleri** penceresi araç çubuğu denetimi yalnızca yok bir form veya Denetim Tasarımcısı olduğunda bağlamında etkin bir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] proje. XAML dosyalarını düzenlerken, olaylar Özellikler penceresinin ayrı bir sekmede görünür.
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca bir form veya denetim Tasarımcısı [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projesi bağlamında etkin olduğunda kullanılabilir. XAML dosyaları düzenlenirken, olaylar Özellikler penceresinin ayrı bir sekmesinde görünür.
 
-Messages\
-Tüm Windows iletilerini listeler. Ekleme veya silme seçilen sınıf için sağlanan iletilerin belirtilen işleyici işlevlerini sağlar.
-
-> [!NOTE]
-> Bu **özellikleri** penceresi araç çubuğu denetimi yalnızca kullanılabilir olduğunda **sınıf görünümü** bağlamında etkin pencere bir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] proje.
-
-Overrides\
-Seçilen sınıf için tüm sanal işlevleri listeler ve ekleme veya silmeyi geçersiz kılma işlevleri sağlar.
+İletilerine
+Tüm Windows iletilerini listeler. Seçili sınıf için belirtilen işlemler için belirtilen işleyici işlevlerini eklemenize veya silmesine izin verir.
 
 > [!NOTE]
-> Bu **özellikleri** penceresi araç çubuğu denetimi yalnızca kullanılabilir olduğunda **sınıf görünümü** bağlamında etkin pencere bir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] proje.
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projesi bağlamında etkin pencere olduğunda kullanılabilir.
 
-Açıklama pane\
-Özellik türünü ve özelliğin kısa bir açıklamasını gösterir. Ve kısayol menüsünden Açıklama komutunu kullanarak özelliğin açıklamasını kapatabilirsiniz.
+Kılma
+Seçilen sınıf için tüm sanal işlevleri listeler ve geçersiz kılma işlevlerini eklemenize veya kaldırmanıza olanak sağlar.
 
 > [!NOTE]
-> Bu **özellikleri** penceresi araç çubuğu denetimi kullanılamıyor tasarımcıdaki XAML dosyaları düzenlerken.
+> Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projesi bağlamında etkin pencere olduğunda kullanılabilir.
 
-Küçük resim view\
-Seçili olan öğenin görsel bir temsilini tasarımcıdaki XAML dosyaları düzenlerken gösterir.
+Açıklama bölmesi \
+Özelliğin türünü ve kısa bir açıklamasını gösterir. Özelliğin açıklamasını, kısayol menüsünde Açıklama komutunu kullanarak ve üzerinde açabilirsiniz.
 
-Search\
-Özellikler ve tasarımcıdaki XAML dosyaları düzenlerken olaylar için bir arama işlevi sağlar. Arama kutusuna, kısmi sözcük aramalarına yanıt verir ve siz yazarken arama sonuçlarını güncelleştirir.
+> [!NOTE]
+> Bu **Özellikler** penceresi araç çubuğu denetimi, tasarımcıda XAML dosyaları düzenlenirken kullanılamaz.
+
+Küçük resim görünümü \
+Tasarımcıda XAML dosyaları düzenlenirken Şu anda seçili olan öğenin görsel temsilini gösterir.
+
+Aramanız
+Tasarımcıda XAML dosyaları düzenlenirken Özellikler ve olaylar için bir arama işlevi sağlar. Arama kutusu, siz yazarken kısmi sözcük aramalarına ve güncelleştirmelerin arama sonuçlarına yanıt verir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

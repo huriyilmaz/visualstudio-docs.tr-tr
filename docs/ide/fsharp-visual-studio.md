@@ -5,17 +5,17 @@ ms.date: 07/11/2018
 ms.topic: reference
 helpviewer_keywords:
 - F# features [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: fef50748942aaa800cf1181e4c8f8b8a030f99ee
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 176504ceb7c80a36028e7d5f1806aa598cdf708e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211309"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645360"
 ---
 # <a name="develop-with-visual-f-in-visual-studio"></a>Visual Studio 'da F# Visual ile geliştirme
 
@@ -23,7 +23,7 @@ Bu makale, geliştirme için F# Visual Studio özellikleri hakkında bilgi içer
 
 ## <a name="install-f-support"></a>Destek F# yüklemesi
 
-Visual Studio 'da F# ile geliştirme yapmak için, henüz yapmadıysanız **.net masaüstü geliştirme** iş yükünü yüklemeniz gerekir. **Araçlar** > **ve Özellikler al**' ı seçerek açabileceğiniz Visual Studio yükleyicisi aracılığıyla Visual Studio iş yüklerini yüklersiniz.
+Visual Studio 'da F# ile geliştirme yapmak için, henüz yapmadıysanız **.net masaüstü geliştirme** iş yükünü yüklemeniz gerekir. Araçlar**ve Özellikler al** >  **Araçlar** ' ı seçerek açabileceğiniz Visual Studio yükleyicisi aracılığıyla Visual Studio iş yüklerini yüklersiniz.
 
 ![Visual Studio 'da .NET masaüstü geliştirme iş yükü](media/dotnet-desktop-development-workload.png)
 
@@ -74,7 +74,7 @@ Aşağıdaki tablo, öğesine F#özgü ayarları özetler:
 
 |Proje Tasarımcısı sayfası|Ayar|Açıklama|
 | - |-------|-----------|
-|Yapı|Kuyruk çağrıları oluştur|Seçilirse, tail Microsoft ara dili (MSIL) yönergesinin kullanımını etkinleştirilir. Bu, yığın çerçevesinin tail Özyinelemeli işlevler için yeniden kullanılmasına neden olur. `--tailcalls` Derleyici seçeneğine eşdeğerdir.|
+|Yapı|Kuyruk çağrıları oluştur|Seçilirse, tail Microsoft ara dili (MSIL) yönergesinin kullanımını etkinleştirilir. Bu, yığın çerçevesinin tail Özyinelemeli işlevler için yeniden kullanılmasına neden olur. @No__t_0 derleyici seçeneğine eşdeğerdir.|
 |Yapı|Diğer bayraklar|Ek derleyici komut satırı seçeneklerini belirtmenizi sağlar.|
 
 ## <a name="code-and-text-editor-features"></a>Kod ve metin Düzenleyicisi özellikleri
@@ -98,13 +98,13 @@ Visual Studio Code ve metin düzenleyicilerinin aşağıdaki özellikleri içind
 |Sekmeye Dönüştür|Boşlukları sekmelere dönüştürür.|Evet|
 |Tür renklendirme|Tanımlı tür adlarını özel bir renkte gösterir.|Evet|
 |Hızlı bul. Bkz. hızlı bul, bul ve Değiştir penceresi.|Bir dosya veya projede arama yapmanızı sağlar.|Evet|
-|+Tanıma gitmek için CTRL tuşuna**tıklayın**|Tanıma Git 'i çağırmak için **CTRL** tuşunu basılı tutarak F# simgeye tıklamenize olanak tanır.|Evet|
+|Tanıma gitmek için **Ctrl** +**tıklayın**|Tanıma Git 'i çağırmak için **CTRL** tuşunu basılı tutarak F# simgeye tıklamenize olanak tanır.|Evet|
 |Hızlı bilgilerim tanımına git|ToolTip 'e git çağıran araç ipuçları içinde tıklatılabilir semboller.|Evet|
-|Tümüne Git|**CTRL** F# T+aracılığıyla tüm yapılar için genel, benzer şekilde eşleşen gezinmeyi mümkün hale sunar.|Evet|
+|Tümüne git|F# **CTRL** +**t**aracılığıyla tüm yapılar için genel, benzer şekilde eşleşen gezinmeyi mümkün hale sunar.|Evet|
 |Satır içi yeniden adlandırma|Bir simgenin tüm oluşumlarını satır içi olarak yeniden adlandırır.|Evet|
 |Tüm başvuruları bul|Bir kod tabanında bir sembolün tüm oluşumlarını bulur.|Evet|
 |Ad kodu düzeltmesini basitleştirme|Semboller için F# gereksiz niteleyicileri kaldırır.|Evet|
-|Kullanılmayan `open` beyan kodu düzeltmesini kaldır|Belgedeki tüm gereksiz `open` deyimleri kaldırır.|Evet|
+|Kullanılmayan `open` bildiri kodu düzeltmesini kaldır|Belgedeki tüm gereksiz `open` deyimlerini kaldırır.|Evet|
 |Kullanılmayan değer kodu onarımı|Alt çizgi için kullanılmamış tanımlayıcıyı yeniden adlandırmayı önerir.|Evet|
 
 Visual Studio 'da kod düzenleme ve metin düzenleyicisinin özellikleri hakkında genel bilgi için bkz. [düzenleyicide kod yazma](writing-code-in-the-code-and-text-editor.md).
@@ -118,8 +118,8 @@ Aşağıdaki tabloda, desteklenen ve içinde F#desteklenmeyen IntelliSense özel
 |Arabirimleri otomatik olarak Uygula|Arabirim yöntemleri için kod saplamaları üretir.|Evet|
 |Kod parçacıkları|Ortak kodlama yapıları kitaplığındaki kodu konu başlıkları halinde çıkartır.|Hayır|
 |Tam Sözcük|Yazdığınız sözcükleri ve adları tamamlayarak yazma işlemini kaydeder.|Evet|
-|Otomatik tamamlama|Etkin olduğunda, bir tane seçmenizi veya **CTRL**+**Space**'e basmanız beklenmeden, sözcük tamamlamada yazarken ilk eşleşmeyi seçmesini sağlar.|Evet|
-|Açık olmayan ad alanlarında semboller için tamamlama sunma|Otomatik tamamlama ile, açılmamış bir ad alanında bulunan eşleşen bir sembol önerilir ve seçilirken karşılık gelen `open` deyimle tamamlamak için teklif edilir.|Evet|
+|Otomatik tamamlama|Etkinleştirildiğinde, sözcüğün tamamlanmasını beklemek yerine, bir tane seçmenizi veya **Ctrl** +**boşluk**tuşlarına basmanız beklenmez.|Evet|
+|Açık olmayan ad alanlarında semboller için tamamlama sunma|Otomatik tamamlama ile, açılmamış bir ad alanında bulunan eşleşen bir sembol önerilir ve seçilirken karşılık gelen `open` ifadesiyle tamamlamak için teklif edilir.|Evet|
 |Kod öğeleri oluşturma|Çeşitli yapılar için saplama kodu oluşturmanıza olanak sağlar.|Hayır|
 |Üyeleri Listeleme|Üye erişim işlecini (.) yazdığınızda, bir türün üyelerini gösterir.|Evet|
 |Kullanımlar/açık düzenleme|İçindeki deyimler **kullanılarak** başvurulan ad alanlarını düzenler C# veya içinde F#açık yönergeler.|Hayır|
@@ -142,9 +142,9 @@ Aşağıdaki tabloda, kod hata ayıkladığınızda F# kullanılabilen özellikl
 |İfade değerlendirici|Çalışma zamanında kodu değerlendirir ve yürütür.|Hayır, ancak sözdizimi C# kullanmanız C# gerekir, ancak ifade değerlendirici kullanılabilir.|
 |Geçmiş hata ayıklama|Daha önce yürütülen koda adım adım eklemenizi sağlar.|Evet|
 |Yerel öğeler penceresi|Yerel olarak tanımlanan değerleri ve değişkenleri gösterir.|Evet|
-|İmlece kadar Çalıştır|İmleci içeren satıra ulaşılana kadar kodu çalıştırmanızı sağlar.|Evet|
+|Imlece kadar Çalıştır|İmleci içeren satıra ulaşılana kadar kodu çalıştırmanızı sağlar.|Evet|
 |Adımla|Yürütmeyi ilerletebilirsiniz ve herhangi bir işlev çağrısına geçiş yapmanızı sağlar.|Evet|
-|Üzerinden adımla|Geçerli yığın çerçevesindeki yürütmeyi ilerlemenize ve herhangi bir işlev çağrısını taşımanızı sağlar.|Evet|
+|Adımla|Geçerli yığın çerçevesindeki yürütmeyi ilerlemenize ve herhangi bir işlev çağrısını taşımanızı sağlar.|Evet|
 
 Visual Studio hata ayıklayıcısı hakkında genel bilgi için bkz. [Visual Studio 'Da hata ayıklama](../debugger/index.yml).
 

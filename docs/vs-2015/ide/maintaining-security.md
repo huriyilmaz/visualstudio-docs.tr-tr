@@ -1,5 +1,5 @@
 ---
-title: Güvenliğini sağlama | Microsoft Docs
+title: Güvenliği koruma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,33 +13,29 @@ helpviewer_keywords:
 - security [.NET Framework], maintaining after deployment
 ms.assetid: 621d10c1-842b-4902-be60-bb9719591751
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b99db8a9e1f34bc724059ff9cbf2a065df39e78f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 008199331778a1e7d780a6aac7591ca2285d683e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68186086"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651405"
 ---
 # <a name="maintaining-security"></a>Güvenliğini Sağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Güvenliğin bedelinin sürekli tetikte bulunmak olduğu söylenir. Uygulamanızın tasarımı ve geliştirilmesi sırasında güvenliğe verdiğiniz büyük öneme rağmen, dağıtımdan sonra güvenlik açıkları ortaya çıkacağını varsaymalısınız. Uygulamanızı denetleyerek ve olay günlüklerini çözümleyerek, daha önceleri gizli kalmış bazı kusurları keşfedebilirsiniz.  
-  
- Ayrıca, yalnızca kendi uygulamanız hakkında dikkatli olmanız yeterli olmadığı gibi, uygulamanızın çalıştığı platforma ve uygulamanızın bağımlı olduğu diğer ürünlere yönelik güvenlik tehditlerini ve açıklarını da takip etmeniz gerekir.  
-  
- [Güvenlik, gizlilik ve hesaplar](http://go.microsoft.com/fwlink/?LinkId=72881)  
- Virüsler, parolalar, ebeveyn denetimleri ve sürücü şifreleme dahil, güvenlik, gizlilik ve kullanıcı hesapları ile ilgili yardım alın.  
-  
- [Microsoft Güvenlik Bülteni Araması](/security-updates/)  
- Bu sayfa, daha önce yayınlanmış bültenleri bulmayı kolaylaştırır. BT uzmanları için tasarlanmış olan güvenlik bültenleri, güvenlik güncelleştirmeleri ile ilgili ayrıntılı bilgi sağlar.  
-  
- [Windows Server 2003 Güvenlik Kılavuzu] (/previous-versions/tn-archive/cc163140(v=technet.10) BT uzmanları'nın doğru kişilerin doğru içeriğe doğru şekilde erişimini sağlarken bir Windows Server 2003 ortamını güvenle işletmek gerekli Yardımı sunar.  
-  
- [Kurumsal güvenlik için en iyi uygulamalar](/previous-versions/tn-archive/cc750076%28v%3dtechnet.10%29)  
- Kurumsal ağlarda farklı yönleriyle güvenliğe odaklanan teknik incelemeler koleksiyonu.  
-  
- [Microsoft Baseline Security Analyzer'ı](/windows/security/threat-protection/mbsa-removal-and-guidance)  
- Microsoft Baseline Security Analyzer (MBSA) bireysel ev kullanıcısının, kurumsal bir kullanıcının veya yöneticinin bir veya daha çok Windows tabanlı bilgisayarı genel güvenlik yapılandırması hataları açısından taramasına imkan veren bir araçtır.
+Güvenliğin bedelinin sürekli tetikte bulunmak olduğu söylenir. Uygulamanızın tasarımı ve geliştirilmesi sırasında güvenliğe verdiğiniz büyük öneme rağmen, dağıtımdan sonra güvenlik açıkları ortaya çıkacağını varsaymalısınız. Uygulamanızı denetleyerek ve olay günlüklerini çözümleyerek, daha önceleri gizli kalmış bazı kusurları keşfedebilirsiniz.
+
+ Ayrıca, yalnızca kendi uygulamanız hakkında dikkatli olmanız yeterli olmadığı gibi, uygulamanızın çalıştığı platforma ve uygulamanızın bağımlı olduğu diğer ürünlere yönelik güvenlik tehditlerini ve açıklarını da takip etmeniz gerekir.
+
+ [Güvenlik, gizlilik ve hesaplar](http://go.microsoft.com/fwlink/?LinkId=72881) Virüsler, parolalar, ebeveyn denetimleri, güvenlik duvarları ve sürücü şifreleme hakkında bilgiler de dahil olmak üzere güvenlik, gizlilik ve Kullanıcı hesaplarıyla ilgili yardım alın.
+
+ [Microsoft Güvenlik Bülteni araması](/security-updates/) Bu sayfa, daha önce yayınlanmış bültenleri bulmayı kolaylaştırır. BT uzmanları için tasarlanmış olan güvenlik bültenleri, güvenlik güncelleştirmeleri ile ilgili ayrıntılı bilgi sağlar.
+
+ [Windows Server 2003 Güvenlik Kılavuzu] (/Previous-Versions/TN-Archive/cc163140 (v = TechNet. 10) BT uzmanlarının doğru kişilerin doğru içeriğe doğru erişimi sağlarken bir Windows Server 2003 ortamını güvenli bir şekilde çalıştırabilmesini sağlamak için gerekli olan Kılavuzu sunar.
+
+ [Kurumsal Güvenlik Için En Iyi uygulamalar](/previous-versions/tn-archive/cc750076%28v%3dtechnet.10%29) Kurumsal ağlardaki güvenliğin farklı yönlerine odaklanan teknik incelemeler koleksiyonu.
+
+ [Microsoft Baseline Security Analyzer](/windows/security/threat-protection/mbsa-removal-and-guidance) Microsoft Baseline Security Analyzer (MBSA), bireysel bir kullanıcının, bir şirket kullanıcısının veya yöneticinin ortak güvenlik yapılandırması hataları için bir veya daha fazla Windows tabanlı bilgisayarı taramasını sağlayan bir araçtır.

@@ -6,39 +6,39 @@ helpviewer_keywords:
 - modeling diagrams, saving
 - diagrams - modeling, saving modeling diagrams
 - UML diagrams, saving
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54e36b942780f9efd4ddb3612d9631188b17d791
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 8cbbdab08b5bc9298f83d4159f31ac8b9b0fb963
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744519"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645722"
 ---
 # <a name="export-diagrams-as-images"></a>Diyagramları görüntü olarak dışarı aktarma
 
-Visual Studio'da proje katılımcılarını, kullanıcıları veya Visual Studio'nun aynı sürümünü kullanmayan proje ekibi üyesi ile bunları paylaşabileceği modelleme diyagramlarını salt okunur biçimde kaydedebilirsiniz.
+Visual Studio 'da, modelleme diyagramlarını salt okunurdur, kullanıcılar ya da Visual Studio 'nun aynı sürümünü kullanmayan proje ekibi üyeleriyle paylaşabilirsiniz.
 
-Bu özellik, Visual Studio'nun hangi sürümlerinin desteklediğini görmek için bkz: [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="copy-a-diagram-or-part-of-a-diagram-to-another-application"></a>Bir diyagram veya diyagram parçası başka bir uygulamaya kopyalayın.
+## <a name="copy-a-diagram-or-part-of-a-diagram-to-another-application"></a>Bir diyagramı veya diyagramın bir bölümünü başka bir uygulamaya kopyalama
 
-1. Diyagram üzerinde bazı veya tüm şekilleri seçin.
+1. Diyagramda, şekillerin bazılarını veya tümünü seçin.
 
-2. Seçiminize sağ tıklayın ve ardından **kopyalama**.
+2. Seçiminize sağ tıklayın ve sonra **Kopyala**' ya tıklayın.
 
 3. Seçiminizi istediğiniz uygulamaya yapıştırın.
 
-## <a name="save-a-modeling-diagram-as-an-xml-paper-specification-xps-file"></a>Modelleme diyagramında bir XML Paper Specification (.xps) dosyası olarak Kaydet
+## <a name="save-a-modeling-diagram-as-an-xml-paper-specification-xps-file"></a>Modelleme diyagramını XML Kağıt Belirtimi (. XPS) dosyası olarak kaydetme
 
-1. Üzerinde **dosya** menüsünde tıklatın **yazdırma** açmak için **yazdırma** iletişim kutusu.
+1. **Dosya** menüsünde **Yazdır ' ı** tıklatarak **Yazdır** iletişim kutusunu açın.
 
-2. İçinde **adı** listesinden **Microsoft XPS Belge Yazıcısı**ve ardından **Tamam**.
+2. **Ad** listesinde, **Microsoft XPS Belge Yazıcısı**' nı seçin ve ardından **Tamam**' a tıklayın.
 
-3. İçinde **dosyayı farklı Kaydet** dosyayı farklı Kaydet iletişim kutusu bir **Dokument XPS (\*.xps)** dosya.
+3. **Dosyayı farklı kaydet** iletişim kutusunda, dosyayı bir **XPS belgesi (\*. XPS)** dosyası olarak kaydedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

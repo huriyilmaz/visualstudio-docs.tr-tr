@@ -1,5 +1,5 @@
 ---
-title: 'CA2102: CLSCompliant olmayan özel durumları Genel işleyiciler içinde yakalayın | Microsoft Docs'
+title: 'CA2102: CLSCompliant olmayan özel durumları genel işleyicilerde yakala | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CA2102
 ms.assetid: bf2df68f-d386-4379-ad9e-930a2c2e930d
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3fc0803e4ad73b08e99a05fa62930e039e1b7534
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 051b59183a761477476269480ecdf83ccbf0cb37
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65687436"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652169"
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102: CLSCompliant olmayan özel durumları genel işleyiciler içinde yakalayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,28 +29,28 @@ ms.locfileid: "65687436"
 |TypeName|CatchNonClsCompliantExceptionsInGeneralHandlers|
 |CheckId|CA2102|
 |Kategori|Microsoft.Security|
-|Yeni Değişiklik|Bölünemez|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- İle işaretlenmiş derlemedeki bir üye <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> veya işaretlenmiş `RuntimeCompatibility(WrapNonExceptionThrows = false)` işleyen yakalama bloğu içerir <xref:System.Exception?displayProperty=fullName> ve hemen arkasından bir genel bir catch bloğu içermez. Bu kural göz ardı eder [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] derlemeler.
+ Bir derlemedeki <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> veya işaretli bir üye `RuntimeCompatibility(WrapNonExceptionThrows = false)` <xref:System.Exception?displayProperty=fullName> ' i işleyen ve hemen aşağıdaki genel catch bloğunu içermeyen bir catch bloğu içerir. Bu kural [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] derlemelerini yoksayar.
 
 ## <a name="rule-description"></a>Kural Tanımı
- İşleme bir catch bloğu <xref:System.Exception> ortak dil belirtimi (CLS) uyumlu özel durumların tamamını yakalar. Ancak, CLS olmayan uyumlu özel durumları yakalamaz. CLS olmayan uyumlu özel durumlar yerel koddan veya Microsoft tarafından oluşturulan yönetilen koddan Ara dil (MSIL) derleyici. Dikkat edin C# ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] derleyiciler CLS olmayan uyumlu özel durum oluşturulmasına izin verme ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] CLS olmayan uyumlu özel durumları yakalamaz. Catch bloğu amacı, tüm özel durumları işlemek için ise, aşağıdaki genel bir catch bloğu sözdizimini kullanın.
+ @No__t_0 işleyen bir catch bloğu, tüm ortak dil belirtimi (CLS) uyumlu özel durumlarını yakalar. Ancak, CLS uyumlu olmayan özel durumları yakalamaz. CLS uyumlu olmayan özel durumlar yerel koddan veya Microsoft ara dili (MSIL) derleyicisi tarafından oluşturulan yönetilen koddan oluşturulabilir. C# Ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] DERLEYICILERININ CLS uyumlu olmayan özel durumların atılamayacağını ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] CLS uyumlu olmayan özel durumları yakalayamadığından emin olun. Catch bloğunun amacı tüm özel durumları işlemek ise, aşağıdaki genel catch bloğu sözdizimini kullanın.
 
-- C# İÇİN: `catch {}`
+- C#: `catch {}`
 
 - C++: `catch(...) {}` veya `catch(Object^) {}`
 
-  Daha önce verilen izinler içindeki yakalama bloğunun kaldırıldığında işlenmemiş CLS olmayan uyumlu özel bir güvenlik sorunu haline gelir. CLS olmayan uyumlu özel durum yakalandı çünkü CLS olmayan uyumlu özel durum oluşturur, kötü amaçlı bir yöntem yükseltilmiş izinlerle çalıştırabilir.
+  İşlenmemiş CLS uyumlu olmayan bir özel durum, önceden izin verilen izinler catch bloğunda kaldırıldığında bir güvenlik sorunu haline gelir. CLS uyumlu olmayan özel durumlar yakalanmadığı için, CLS uyumlu olmayan bir özel durum oluşturan kötü niyetli bir yöntem yükseltilmiş izinlerle çalıştırılabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Amaç kaynaklananlar olduğunda bu kural ihlalini düzeltmek için özel durumlar, değiştirin veya bir genel bir catch bloğu ekleyin veya derlemeyi işaretlemek `RuntimeCompatibility(WrapNonExceptionThrows = true)`. İzinleri içindeki yakalama bloğunun kaldırılırsa, yinelenen genel işlevleri catch bloğu. İşleyen yakalama bloğu tüm özel durumları işlemek için hedefi değil ise, yerine <xref:System.Exception> belirli özel durum türlerini işleme catch bloğu ile.
+ Amaç tüm özel durumları yakalamada, genel bir catch bloğu yerine koymak veya eklemek ya da derlemeyi `RuntimeCompatibility(WrapNonExceptionThrows = true)` olarak işaretlemek için bu kural ihlalini onarmak için. İzinler catch bloğunda kaldırılırsa, genel catch bloğundaki işlevselliği çoğaltın. Tüm özel durumları işleme amacı değilse, <xref:System.Exception> ' ı işleyen catch bloğunu, belirli özel durum türlerini işleyen catch bloklarıyla değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Try bloğu CLS olmayan uyumlu özel durum oluşturabilir herhangi bir deyim içermiyorsa bu kuraldan bir uyarıyı bastırmak güvenlidir. Herhangi bir yerel veya yönetilen kod CLS olmayan uyumlu özel durum oluşturma olasılığı nedeniyle bu bilgi try bloğu içindeki tüm kod yolları'nda yürütülen tüm kod gerektirir. CLS olmayan uyumlu ortak dil çalışma zamanı tarafından özel durumlar değil dikkat edin.
+ Try bloğu CLS uyumlu olmayan bir özel durum oluşturabilen deyimler içermiyorsa, bu kuraldan bir uyarıyı gizlemek güvenlidir. Herhangi bir yerel veya yönetilen kod CLS uyumlu olmayan bir özel durum oluşturabileceğinden, bu, try bloğu içindeki tüm kod yollarında yürütülebilecek tüm kodlar için bilgi gerektirir. CLS uyumlu olmayan özel durumların ortak dil çalışma zamanı tarafından oluşturulduğuna dikkat edin.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, CLS olmayan uyumlu özel durum oluşturur bir MSIL sınıfı gösterir.
+ Aşağıdaki örnekte, CLS uyumlu olmayan bir özel durum oluşturan bir MSIL sınıfı gösterilmektedir.
 
 ```
 .assembly ThrowNonClsCompliantException {}
@@ -67,19 +67,19 @@ ms.locfileid: "65687436"
 ```
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, kural karşılayan bir genel bir catch bloğu içeren bir yöntemi gösterir.
+ Aşağıdaki örnek, kuralını karşılayan genel bir catch bloğunu içeren bir yöntemi gösterir.
 
  [!code-csharp[FxCop.Security.CatchNonClsCompliantException#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.CatchNonClsCompliantException/cs/FxCop.Security.CatchNonClsCompliantException.cs#1)]
 
- Önceki örneklerde şu şekilde derleyin.
+ Önceki örnekleri aşağıdaki şekilde derleyin.
 
 ```
 ilasm /dll ThrowNonClsCompliantException.il
 csc /r:ThrowNonClsCompliantException.dll CatchNonClsCompliantException.cs
 ```
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1031: Genel özel durum türlerini yakalamayın](../code-quality/ca1031-do-not-catch-general-exception-types.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Özel durumlar ve özel durum işleme](https://msdn.microsoft.com/library/0001887f-4fa2-47e2-8034-2819477e2344) [Ilasm.exe (IL derleyici)](https://msdn.microsoft.com/library/4ca3a4f0-4400-47ce-8936-8e219961c76f) [güvenlik denetimlerini geçersiz kılma](https://msdn.microsoft.com/4acdeff5-fc05-41bf-8505-7387cdbfca28) [dil bağımsızlığı ve dilden bağımsız bileşenler](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)
+ [Özel durumlar ve özel durum işleme](https://msdn.microsoft.com/library/0001887f-4fa2-47e2-8034-2819477e2344) [Ilasm. exe (Il Assembler)](https://msdn.microsoft.com/library/4ca3a4f0-4400-47ce-8936-8e219961c76f) [güvenlik denetimlerini geçersiz kılma](https://msdn.microsoft.com/4acdeff5-fc05-41bf-8505-7387cdbfca28) [Dil bağımsızlığı ve dilden bağımsız bileşenler](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

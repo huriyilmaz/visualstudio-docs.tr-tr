@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İçeri aktarılan ad alanlarını (Visual Basic) ekleyip | Microsoft Docs'
+title: 'Nasıl yapılır: Içeri aktarılan ad alanlarını ekleme veya kaldırma (Visual Basic) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,71 +12,71 @@ helpviewer_keywords:
 - references [Visual Studio], imported namespaces
 ms.assetid: 44cebec3-0ea0-47c2-8406-4edeab6a997e
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1eb88a5baa09256aa58d3c62b926047df01b32f2
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 75299dae66a07b2bc1671dbfcda935fc4af2b284
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65700987"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645494"
 ---
-# <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Nasıl yapılır: Ekleme veya kaldırma içeri aktarılan ad alanlarını (Visual Basic)
+# <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Nasıl Yapılır: İçeri Aktarılan Ad Uzaylarını Ekleme veya Kaldırma (Visual Basic)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir ad alanı içeri aktarma öğesi tam olarak niteleme olmadan kodunuzda bu ad alanından öğeler kullanmanıza olanak tanır. Örneğin erişmek istiyorsanız, `Create` yönteminde `System.Messaging.MessageQueue` alabileceğiniz sınıfı `System.Messaging` ad alanı ve yalnızca gereksinim duyduğunuz kod öğesi bakın `MessageQueue.Create`.  
-  
- İçeri aktarılan ad uzaylarını yönetilir **başvuruları** sayfasının **Proje Tasarımcısı**. Bu iletişim kutusunda belirttiğiniz Imports doğrudan derleyici geçirilen (`/imports`) ve projenizdeki tüm dosyalara uygulayın. Kullanma `Imports` tek kaynak kod dosyasında bir ad alanını kullanacak şekilde deyimi.  
-  
-### <a name="to-add-an-imported-namespace"></a>Bir içeri aktarılan ad alanı eklemek için  
-  
-1. İçinde **Çözüm Gezgini**, çift **Projem** projesinin düğümü.  
-  
-2. İçinde **Proje Tasarımcısı**, tıklayın **başvuruları** sekmesi.  
-  
-3. İçinde **içeri aktarılan ad alanlarını** listesinde, eklemek istediğiniz ad alanı için onay kutusunu seçin.  
-  
+Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad alanındaki öğeleri kullanmanıza olanak sağlar. Örneğin, `System.Messaging.MessageQueue` sınıfındaki `Create` yöntemine erişmek istiyorsanız, `System.Messaging` ad alanını içeri aktarabilir ve yalnızca `MessageQueue.Create` olarak kodunuzda ihtiyacınız olan öğeye başvurabilirsiniz.
+
+ İçeri aktarılan ad alanları, **Proje Tasarımcısı**'nın **Başvurular** sayfasında yönetilir. Bu iletişim kutusunda belirttiğiniz içeri aktarmalar doğrudan derleyiciye geçirilir (`/imports`) ve projenizdeki tüm dosyalar için geçerlidir. Tek kaynak kod dosyasında bir ad alanı kullanmak için `Imports` ifadesini kullanın.
+
+### <a name="to-add-an-imported-namespace"></a>İçeri aktarılan bir ad alanı eklemek için
+
+1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
+
+2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
+
+3. **Içeri aktarılan ad alanları** listesinde, eklemek istediğiniz ad alanının onay kutusunu seçin.
+
     > [!NOTE]
-    > Ad alanı içeri aktarılması için başvurulan bir bileşen olarak olması gerekir. Ad alanı listede görünmüyorsa, içerdiği bileşenine bir başvuru eklemeniz gerekir. Daha fazla bilgi için [NIB nasıl: Başvurular ekleme veya kaldırma Başvuru Ekle iletişim kutusunu kullanarak](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).  
-  
-### <a name="to-remove-an-imported-namespace"></a>Bir içeri aktarılan ad alanı kaldırmak için  
-  
-1. İçinde **Çözüm Gezgini**, çift **Projem** projesinin düğümü.  
-  
-2. İçinde **Proje Tasarımcısı**, tıklayın **başvuruları** sekmesi.  
-  
-3. İçinde **içeri aktarılan ad alanlarını** listesinde, kaldırmak istediğiniz ad alanı için onay kutusunu temizleyin.  
-  
-## <a name="user-imports"></a>Kullanıcı içeri aktarmalar  
- Kullanıcı içeri aktarmalar, belirli bir sınıf içindeki tüm ad alanı yerine bir ad alanı içe olanak tanır. Örneğin, uygulamanızın yönelik içeri aktarma olabilir `Systems.Diagnostics` ad alanı, ancak yalnızca sınıf ilgilendiğiniz bu ad alanı içinde `Debug` sınıfı. Tanımlayabileceğiniz `System.Diagnostics.Debug` bir kullanıcı olarak içeri aktarma ve içeri aktarma için Kaldır'ı `System.Diagnostics`.  
-  
- Daha sonra değiştirmeleri ve yalnızca karar verirseniz gerçekten `EventLog` gereksinim sınıfı yazabilirsiniz `System.Diagnostics.EventLog` bir kullanıcı olarak içeri aktarma ve üzerine `System.Diagnostics.Debug` güncelleştirme işlevini kullanarak.  
-  
-#### <a name="to-add-a-user-import"></a>Kullanıcı içeri aktarma eklemek için  
-  
-1. İçinde **Çözüm Gezgini**, çift **Projem** projesinin düğümü.  
-  
-2. İçinde **Proje Tasarımcısı**, tıklayın **başvuruları** sekmesi.  
-  
-3. Metin kutusundaki **içeri aktarılan ad alanlarını** listesinde, almak istediğiniz ad alanı için tam adı kök ad alanı dahil girin.  
-  
-4. Tıklayın **kullanıcı içeri aktarma eklemek** ad alanına eklemek için Ekle düğmesine **içeri aktarılan ad alanlarını** listesi.  
-  
+    > İçeri aktarılmak üzere, ad alanı başvurulan bir bileşende olmalıdır. Ad alanı listede görünmezse, onu içeren bileşene bir başvuru eklemeniz gerekir. Daha fazla bilgi için bkz. [nib nasıl yapılır: Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
+
+### <a name="to-remove-an-imported-namespace"></a>İçeri aktarılan bir ad alanını kaldırma
+
+1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
+
+2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
+
+3. **Içeri aktarılan ad alanları** listesinde, kaldırmak istediğiniz ad alanı için onay kutusunu temizleyin.
+
+## <a name="user-imports"></a>Kullanıcı Içeri aktarmaları
+ Kullanıcı içeri aktarmaları, tüm ad alanı yerine bir ad alanı içinde belirli bir sınıfı içeri aktarmanızı sağlar. Örneğin, uygulamanızda `Systems.Diagnostics` ad alanı için bir içeri aktarma olabilir, ancak ilgilendiğiniz bu ad alanı içindeki tek sınıf `Debug` sınıfıdır. @No__t_0 Kullanıcı içeri aktarma olarak tanımlayabilir ve sonra `System.Diagnostics` için içeri aktarmayı kaldırabilirsiniz.
+
+ Daha sonra fikrinizi değiştirirseniz ve bunun gerçekten gereken `EventLog` sınıfı olduğuna karar verirseniz, Kullanıcı içeri aktarma olarak `System.Diagnostics.EventLog` girebilir ve güncelleştirme işlevini kullanarak `System.Diagnostics.Debug` üzerine yazabilirsiniz.
+
+#### <a name="to-add-a-user-import"></a>Kullanıcı içeri aktarma eklemek için
+
+1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
+
+2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
+
+3. **Içeri aktarılan ad alanları** listesinin altındaki metin kutusunda, kök ad alanı dahil olmak üzere içeri aktarmak istediğiniz ad alanının tam adını girin.
+
+4. Ad alanını **Içeri aktarılan ad alanları** listesine eklemek için **Kullanıcı içeri aktarma Ekle** düğmesine tıklayın.
+
     > [!NOTE]
-    > **Kullanıcı içeri aktarma eklemek** düğmesini devre dışı bırakılacak ad alanı zaten listede bir eşleşiyorsa; bir alma işlemi iki kez ekleyemezsiniz.  
-  
-#### <a name="to-update-a-user-import"></a>Kullanıcı içeri aktarma güncelleştirmek için  
-  
-1. İçinde **Çözüm Gezgini**, çift **Projem** projesinin düğümü.  
-  
-2. İçinde **Proje Tasarımcısı**, tıklayın **başvuruları** sekmesi.  
-  
-3. İçinde **içeri aktarılan ad alanlarını** listesinde, değiştirmek istediğiniz ad alanını seçin.  
-  
-4. Metin kutusundaki **içeri aktarılan ad alanlarını** listesinde, yeni ad alanı için bir ad girin.  
-  
-5. Tıklayın **güncelleştirme kullanıcı içeri aktarma** ad alanında güncelleştirmek için düğmesini **içeri aktarılan ad alanlarını** listesi.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+    > Ad alanı zaten listede bir tane eşleşiyorsa **Kullanıcı içeri aktarma Ekle** düğmesi devre dışı bırakılır; İçeri aktarma 'yi iki kez ekleyemezsiniz.
+
+#### <a name="to-update-a-user-import"></a>Bir kullanıcı içeri aktarmayı güncelleştirmek için
+
+1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
+
+2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
+
+3. **Içeri aktarılan ad alanları** listesinde, değiştirmek istediğiniz ad alanını seçin.
+
+4. **Içeri aktarılan ad alanları** listesinin altındaki metin kutusuna yeni ad alanı için bir ad girin.
+
+5. **Içeri aktarılan ad alanları** listesinde ad alanını güncelleştirmek için **Kullanıcı içeri aktarmayı Güncelleştir** düğmesine tıklayın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Bir projedeki başvuruları yönetme](../ide/managing-references-in-a-project.md)

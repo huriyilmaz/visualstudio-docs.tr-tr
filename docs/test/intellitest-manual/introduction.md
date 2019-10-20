@@ -1,54 +1,54 @@
 ---
-title: Genel bakış | Microsoft Intellitest Geliştirici Test aracı
+title: Genel Bakış | Microsoft IntelliTest geliştirici test aracı
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Visual Studio IntelliTest developer testing tool
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 5aa67bd32f6895e4e1dfc4e7c558bc3bc0d8001b
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+author: jillre
+ms.openlocfilehash: 94bd67ecb4646e3b8079d2d1aadda097c655af4c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65461488"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653167"
 ---
-# <a name="overview-of-microsoft-intellitest"></a>Microsoft Intellitest genel bakış
+# <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest 'e genel bakış
 
-Intellitest, erken hataları bulmanıza olanak sağlar ve test bakım maliyetlerini azaltır. Intellitest, otomatik ve şeffaf bir sınama yaklaşımı kullanarak testleri için .NET kodunuzu aday paketi oluşturabilirsiniz. Test paketi oluşturma daha destekli tarafından *doğruluk özelliklerini* belirtirsiniz. Test edilen kod geliştikçe Intellitest bile test paketi otomatik olarak evrilir.
+IntelliTest, hataları erken bulmanıza ve test bakım maliyetlerini azaltmanızı sağlar. IntelliTest, otomatikleştirilmiş ve şeffaf bir test yaklaşımı kullanarak .NET kodunuz için bir aday test paketi oluşturabilir. Test paketi oluşturma, belirttiğiniz *doğruluk özelliklerine* göre daha fazla yönetilebilir. IntelliTest, sınama geliştikçe kod olarak test paketini otomatik olarak de gelişir.
 
-**Nitelemesi testleri** Intellitest açısından geleneksel birim testleri paketi kod davranışını belirlemek etkinleştirir.
-Bu tür bir test paketi, eski veya tanımadığınız kodu yeniden düzenleme ile ilişkili karmaşıklığı bağlayabileceğiniz temelini oluşturan bir regresyon paketi olarak kullanılabilir.
+**Karakter seçme testleri** IntelliTest, bir geleneksel birim testleri paketi açısından kodun davranışını belirlemenizi sağlar.
+Böyle bir test paketi, bir gerileme paketi olarak kullanılabilir ve bu, eski veya tanıdık kod yeniden düzenleme ile ilişkili karmaşıklığa karşı bir temel oluşturulur.
 
-**Kılavuzlu test üretimi giriş** kesin test giriş değerleri; otomatik olarak oluşturmak için Intellitest kullanan bir açık Kod Analizi ve yaklaşım çözme kısıtlaması herhangi bir kullanıcı müdahalesi gerektirmeden genellikle. Karmaşık nesne türleri için fabrikaları otomatik olarak oluşturur. Genişletme ve gereksinimlerinize uyacak şekilde fabrikaları yapılandırarak test giriş üretim yönlendirebilir. Koddaki onaylar olarak belirtilen doğruluk özelliklerini de otomatik olarak daha fazla test giriş oluşturma kılavuzu için kullanılır.
+**Kılavuzlu test girişi oluşturma** IntelliTest, kesin test girişi değerlerini otomatik olarak oluşturmak için açık kod analizini ve kısıtlama çözme yaklaşımını kullanır; genellikle herhangi bir kullanıcı müdahalesine gerek kalmadan. Karmaşık nesne türleri için otomatik olarak fabrika oluşturur. Fabrikaları gereksinimlerinize uyacak şekilde genişleterek ve yapılandırarak test girişi oluşturmaya kılavuzluk edebilirsiniz. Kodda onaylar olarak belirtilen doğruluk özellikleri, test girişi oluşturma hakkında daha fazla rehberlik için de otomatik olarak kullanılır.
 
-**IDE tümleştirme** Intellitest Visual Studio IDE içinde tamamen tümleşiktir. (Otomatik olarak oluşturulan giriş, çıkış kodunuzu, oluşturulan test çalışmalarını ve bunların geçiş veya başarısız durumu gibi) test paketi oluşturma sırasında toplanan tüm bilgiler Visual Studio IDE içinde görünür. Kod çözme ve Visual Studio IDE'den çıkmadan Intellitest, artırarak algoritmanın yeniden çalıştırılması arasında kolayca yineleyebilirsiniz.
-Testleri çözümünde birim testi projesi olarak kaydedilebilir ve otomatik olarak daha sonra Visual Studio Test Gezgini tarafından algılanır.
+**IDE tümleştirmesi** IntelliTest, Visual Studio IDE ile tamamen tümleşiktir. Test paketi oluşturma sırasında toplanan tüm bilgiler (otomatik olarak oluşturulan girişler, kodunuzun çıktısı, oluşturulan test çalışmaları ve bunların geçiş veya başarısızlık durumu gibi), Visual Studio IDE içinde görünür. Visual Studio IDE 'den çıkmadan kodunuzu düzeltme ve IntelliTest yeniden çalıştırma arasında kolayca yineleme yapabilirsiniz.
+Testler bir birim testi projesi olarak çözüme kaydedilebilir ve daha sonra Visual Studio Test Gezgini tarafından otomatik olarak algılanır.
 
-**Var olan uygulamaları test etme için tamamlayıcı** var olan bir sınama tamamlamak için kullanım Intellitest yöntemler, zaten izleyin.
+**Mevcut test uygulamalarını tamamlama** Zaten takip ettiğiniz mevcut test uygulamalarını tamamlamak için IntelliTest kullanın.
 
-Test etmek isterseniz:
+Test etmek istiyorsanız:
 
-* Temel veri ya da temel veri dizileri üzerinden algoritmaları:
-  * Yazma [parametreli birim testleri](test-generation.md#parameterized-unit-testing)
-* Algoritmalar derleyici gibi karmaşık veri üzerinde:
-  * Intellitest ilk soyut bir veri temsilini oluşturur ve ardından algoritmaya akışı sağlar
-  * Intellitest kullanarak örneği oluşturmak istiyorum [özel nesne oluşturma](input-generation.md#objects) ve veri okuduğunuzda ve ardından algoritma çağırma
+* Temel veriler veya temel veri dizileri üzerinde algoritmalar:
+  * [parametreli birim testleri](test-generation.md#parameterized-unit-testing) yazma
+* Derleyici gibi karmaşık veriler üzerinde algoritmalar:
+  * IntelliTest 'in ilk olarak verilerin soyut bir gösterimini oluşturmasını sağlar ve ardından bunu algoritmaya akışın
+  * [özel nesne oluşturma](input-generation.md#objects) ve veri ınvaryantları kullanarak IntelliTest derleme örneklerine izin verin ve ardından algoritmayı çağırır
 * Veri kapsayıcıları:
-  * Yazma [parametreli birim testleri](test-generation.md#parameterized-unit-testing)
-  * Intellitest kullanarak örneği oluşturmak istiyorum [özel nesne oluşturma](input-generation.md#objects) ve veri okuduğunuzda ve kapsayıcının bir yöntemi çağırmak ve okuduğunuzda daha sonra yeniden denetle
-  * Yazma [parametreli birim testleri](test-generation.md#parameterized-unit-testing) farklı yöntemleri parametrelere bağlı olarak bir uygulama arayın
-* Varolan bir kod tabanına:
-  * bir dizi oluşturarak çalışmaya başlamak için Visual Studio'nun Intellitest Sihirbazı'nı kullanın [parametreli birim testleri (PUTs)](test-generation.md#parameterized-unit-testing)
+  * [parametreli birim testleri](test-generation.md#parameterized-unit-testing) yazma
+  * [özel nesne oluşturma](input-generation.md#objects) ve veri ınvaryantları kullanarak IntelliTest derleme örneklerine izin verin ve sonra kapsayıcının bir yöntemini çağırın ve daha sonra ınvarıant 'ları yeniden denetleyin
+  * parametre değerlerine bağlı olarak uygulamanın farklı yöntemlerini çağıran [parametreli birim testleri](test-generation.md#parameterized-unit-testing) yazma
+* Var olan bir kod tabanı:
+  * [parametreli birim testleri kümesi (koyar)](test-generation.md#parameterized-unit-testing) oluşturarak başlamak Için Visual Studio 'Nun IntelliTest Sihirbazı 'nı kullanın
 
-## <a name="the-hello-world-of-intellitest"></a>Intellitest, Merhaba Dünya
+## <a name="the-hello-world-of-intellitest"></a>IntelliTest Merhaba Dünya
 
-Intellitest girişleri, ünlü oluşturmak için kullanabileceğiniz anlamına gelir test edilmiş program ilgili bulur **Merhaba Dünya!** dize. Bu, oluşturduğunuz varsayılır bir C# MSTest tabanlı test projesi ve bir başvuru eklenir **Microsoft.Pex.Framework**. Farklı test çerçevesi kullanıyorsanız, oluşturun bir C# sınıf kitaplığı ve projeyi kurmak nasıl test framework belgelerine bakın.
+IntelliTest, sınanan programla ilgili girişleri bulur, bu da bunu kullanarak çok fazla Merhaba Dünya oluşturmak için kullanabilirsiniz **!** dizisinde. Bu, MSTest tabanlı bir C# test projesi oluşturduğunuzu ve **Microsoft. Pex. Framework**için bir başvuru eklendiğini varsayar. Farklı bir test çerçevesi kullanıyorsanız, bir C# sınıf kitaplığı oluşturun ve projenin nasıl ayarlanacağı hakkında test çerçevesi belgelerine başvurun.
 
-Aşağıdaki örnek, iki kısıtlamalar adlı parametre oluşturur **değer** böylece Intellitest gereken dizeyi oluşturur:
+Aşağıdaki örnek, IntelliTest 'in gerekli dizeyi oluşturması için **Value** adlı parametrede iki kısıtlama oluşturur:
 
 ```csharp
 using System;
@@ -67,18 +67,18 @@ public partial class HelloWorldTest {
 }
 ```
 
-Intellitest, derlemenizi ve yürütmenizi sonra aşağıdaki gibi test kümesi oluşturur:
+Derlendikten ve yürütüldükten sonra, IntelliTest aşağıdaki küme gibi bir test kümesi oluşturur:
 
 1. ""
-2. "\0\0\0\0\0"
-3. "Hello"
-4. "\0\0\0\0\0\0"
-5. "Hello\0"
-6. "Hello\0\0"
-7. "Hello\0World!"
-8. "Hello World!"
+2. "\ 0 \ 0 \ 0 \ 0 \ 0"
+3. Herkese
+4. "\ 0 \ 0 \ 0 \ 0 \ 0 \ 0"
+5. "Merhaba \"
+6. "Merhaba \0\0"
+7. "Merhaba \0Dünya!"
+8. "Merhaba Dünya!"
 
-Okuma [Intellitest ile birim testleri oluşturmak](../../test/generate-unit-tests-for-your-code-with-intellitest.md) testlerin kaydedildiği anlamak için. Oluşturulan test kodu aşağıdaki kod gibi bir test içermelidir:
+Oluşturulan testlerin nerede kaydedileceğini anlamak için [, IntelliTest ile birim testleri oluştur](../../test/generate-unit-tests-for-your-code-with-intellitest.md) konusunu okuyun. Oluşturulan test kodu aşağıdaki kod gibi bir test içermelidir:
 
 ```csharp
 [TestMethod]
@@ -94,61 +94,61 @@ Bu kadar kolay!
 
 ## <a name="limitations"></a>Sınırlamalar
 
-Bu bölümde, Intellitest sınırlamaları açıklanmaktadır:
+Bu bölümde IntelliTest kısıtlamaları açıklanmaktadır:
 
-* [Nondeterminism](#nondeterminism)
+* [Belirleyici olmayan ISM](#nondeterminism)
 * [Eşzamanlılık](#concurrency)
-* [.NET yerel kodu](#native-code)
-* [Platform](#platform)
+* [Yerel .NET kodu](#native-code)
+* [Platformunun](#platform)
 * [Dil](#language)
-* [Sembolik akıl yürütme](#symbolic-reasoning)
+* [Sembolik mantık yürütme](#symbolic-reasoning)
 * [Yığın izlemeleri](#incorrect-stack-traces)
 
-### <a name="nondeterminism"></a>Nondeterminism
+### <a name="nondeterminism"></a>Belirleyici olmayan ISM
 
-Intellitest çözümlenen program kararlı olduğunu varsayar. Yüklü değilse, bağlı bir araştırma ulaşana kadar Intellitest döngüsü.
+IntelliTest, çözümlenen programın belirleyici olduğunu varsayar. Aksi takdirde, IntelliTest bir araştırmayla bağlanana kadar dolacaktır.
 
-Intellitest Intellitest kontrol girişleri üzerinde dayanıyorsa determistic olmayan olacak şekilde bir program göz önünde bulundurur.
+IntelliTest, IntelliTest 'in denetleyemeyen girdileri kullanıyorsa, bir programı determistic olmayan bir şekilde değerlendirir.
 
-Intellitest denetimleri için sağlanan girişler [parametreli birim testleri](test-generation.md#parameterized-unit-testing) ve öğesinden alınan [PexChoose](static-helper-classes.md#pexchoose).
-Bu algılama yönetilmeyen veya izlemesiz koddaki çağrıları sonuçlarını "Giriş" olarak işaretlenmiş program ayrıca değerlendirilir, ancak Intellitest kontrol edemezsiniz. Programın denetim akışı, bu dış kaynaklardan gelen belirli değerlere bağlıysa, Intellitest "program önceden yazdığı ortaya çıkarıldı alanları faaliyetidir olamaz".
+IntelliTest, [parametreli birim testlerine](test-generation.md#parameterized-unit-testing) sunulan ve [PexChoose](static-helper-classes.md#pexchoose)öğesinden elde edilen girişleri denetler.
+Bu anlamda, yönetilmeyen veya açıklanmeyen koda yapılan çağrıların sonuçları, işaretlenmiş programa "girişler" olarak da değerlendirilir, ancak IntelliTest bunları denetleyebilir. Programın denetim akışı bu dış kaynaklardan gelen belirli değerlere bağımlıysa, IntelliTest, programı daha önce kapsamayan alanlara yönlendiren "sözcük" olamaz.
 
-Ayrıca, programın dış kaynaklardan gelen değerleri, programın yeniden çalıştırma değiştirirseniz determistic olmayan olarak kabul edilir. Böyle durumlarda, programın yürütülmesini denetime Intellitest kaybeder ve arama verimli hale gelir.
+Ayrıca, program yeniden çalıştırıldığında dış kaynaklardaki değerler değiştiğinde program determistic olmayan olarak değerlendirilir. Bu gibi durumlarda, IntelliTest programın yürütülmesi üzerinde denetimi kaybeder ve arama verimsiz hale gelir.
 
-Böyle bir durumda bazen belirgin değildir. Aşağıdaki örnekleri dikkate alın:
+Bazen bu gerçekleştiğinde belirgin değildir. Aşağıdaki örnekleri göz önünde bulundurun:
 
-* Sonucu **GetHashCode()** yöntemi yönetilmeyen kod tarafından sağlanır ve tahmin edilebilir değil.
-* **System.Random** sınıfı geçerli sistem saatinin gerçekten rastgele değerler sunmak için kullanır.
-* **System.DateTime** sınıfı Intellitest denetimi altında değil geçerli saati sağlar.
+* **GetHashCode ()** yönteminin sonucu yönetilmeyen kod tarafından sağlanır ve tahmin edilebilir değildir.
+* **System. Random** sınıfı, gerçekten rastgele değerler sunmak için geçerli sistem saatini kullanır.
+* **System. DateTime** sınıfı, IntelliTest denetiminde olmayan geçerli zamanı sağlar.
 
 ### <a name="concurrency"></a>Eşzamanlılık
 
-Intellitest, çok iş parçacıklı programlar işlemez.
+IntelliTest çok iş parçacıklı programları işlemez.
 
 ### <a name="native-code"></a>Yerel kod
 
-Intellitest anlamak x86 gibi yerel kod yönergeleri adlı aracılığıyla **P/Invoke**. Böyle çağrılar için geçirilen kısıtlamalar çevirmek nasıl bilmez [kısıtlama Çözücü](input-generation.md#constraint-solver).
-.NET kodu için bile, yalnızca bu Instruments kod çözümleyebilirsiniz. Intellitest bazı kısımlarını işaretleme yapılamıyor **mscorlib**, reflection kitaplığını dahil. **DynamicMethod** izlenemez.
+IntelliTest, **P/Invoke**aracılığıyla çağrılan x86 yönergeleri gibi yerel kodu anlamaz. Bu tür çağrıların [kısıtlama çözücü](input-generation.md#constraint-solver)' ne geçirilebilen kısıtlamalara nasıl çevrileceğini bilmez.
+.NET kodu için bile, yalnızca BT aletlerine yönelik kodu analiz edebilir. IntelliTest, yansıma kitaplığı dahil olmak üzere **mscorlib**'in bazı parçalarını işaretlemelidir. **DynamicMethod** , düzenlenemez.
 
-Önerilen geçici çözüm, bu tür yöntemler dinamik bütünleştirilmiş kodundaki türler nerede bulunur test modu sağlamaktır. Ancak, bazı yöntemler izlemesiz olsa bile Intellitest olarak işaretlenmiş bir kod mümkün olduğunca çoğunu kaplayacak şekilde çalışacaktır.
+Önerilen geçici çözüm, bu tür yöntemlerin dinamik bir derlemedeki türlerde bulunduğu bir test moduna sahip olur. Ancak, bazı yöntemler açıklanmasa bile, IntelliTest, belgelenmiş kodun mümkün olduğunca fazlasını ele almaya çalışır.
 
 ### <a name="platform"></a>Platform
 
-Intellitest yalnızca X86 üzerinde 32-bit desteklenir. NETframework.
+IntelliTest yalnızca x86, 32 bit üzerinde desteklenir. NETframework.
 
 ### <a name="language"></a>Dil
 
-İlkesi, Intellitest herhangi bir .NET dilinde yazılmış rastgele .NET programlarının çözümleyebilirsiniz. Ancak, Visual Studio'da yalnızca desteklediği C#.
+İlke ' de, IntelliTest, herhangi bir .NET dilinde yazılmış rastgele .NET programlarını analiz edebilir. Ancak, Visual Studio 'da yalnızca C#destekler.
 
-### <a name="symbolic-reasoning"></a>Sembolik akıl yürütme
+### <a name="symbolic-reasoning"></a>Sembolik mantık yürütme
 
-Intellitest kullanan otomatik [kısıtlama Çözücü](input-generation.md#constraint-solver) hangi değerlerin test ve test programı için uygun olduğunu belirlemek için. Ancak, kısıtlama Çözücü yeteneklerini de her zaman olacaktır, sınırlı.
+IntelliTest, test ve test altındaki program için hangi değerlerin ilgili olduğunu belirleyen bir otomatik [kısıtlama çözücü](input-generation.md#constraint-solver) kullanır. Ancak, kısıtlama çözücü 'nün becerileri ve her zaman sınırlı olacaktır.
 
-### <a name="incorrect-stack-traces"></a>Yanlış Yığın izlemeleri
+### <a name="incorrect-stack-traces"></a>Hatalı yığın izlemeleri
 
-Intellitest yakalar ve "özel durumları izleme eklenmiş her yöntemi beklerseniz" çünkü yığın izlemelerini satır numaralarını doğru olmayacaktır. Tasarıma göre "rethrow" yönerge sınırlama budur.
+Her bir belgelenmiş yöntemde IntelliTest catch ve "Re," özel durumları, yığın izlemelerinde bulunan satır numaraları doğru olmayacaktır. Bu, "Rethrow" yönergesinin tasarımıyla bir kısıtlamadır.
 
-## <a name="further-reading"></a>Daha fazla bilgi
+## <a name="further-reading"></a>Daha fazla okuma
 
-* [Tanıtım blog gönderisi](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/).
+* [Giriş blog gönderisi](https://devblogs.microsoft.com/devops/introducing-smart-unit-tests/).
 * [Intellitest ile kodunuz için birim testleri oluşturma](../../test/generate-unit-tests-for-your-code-with-intellitest.md)

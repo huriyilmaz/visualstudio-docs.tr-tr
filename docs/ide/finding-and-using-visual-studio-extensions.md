@@ -9,17 +9,17 @@ helpviewer_keywords:
 - install packages
 - managing extensions visual studio
 ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f86aa6cf99ae910c9b10bc6e93c408ca2c85265
-ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
+ms.openlocfilehash: 92fe7d47a74112fb804770cca356084fa79fe1e4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150096"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654206"
 ---
 # <a name="manage-extensions-for-visual-studio"></a>Visual Studio için uzantıları yönetme
 
@@ -31,7 +31,7 @@ Visual Studio uzantıları oluşturma hakkında daha fazla bilgi için bkz. [Vis
 
 ## <a name="extensions-and-updates-dialog-box"></a>Uzantılar ve güncelleştirmeler iletişim kutusu
 
-Visual Studio uzantılarını yüklemek ve yönetmek için **Uzantılar ve güncelleştirmeler** iletişim kutusunu kullanın. **Uzantılar ve güncelleştirmeler** iletişim kutusunu açmak için **Araçlar** > **Uzantılar ve güncelleştirmeler**' i seçin veya **Hızlı Başlat** arama kutusuna **Uzantılar** yazın.
+Visual Studio uzantılarını yüklemek ve yönetmek için **Uzantılar ve güncelleştirmeler** iletişim kutusunu kullanın. **Uzantılar ve güncelleştirmeler** iletişim kutusunu açmak için **Araçlar**  > **Uzantılar ve güncelleştirmeler**' i seçin veya **Hızlı başlatma** arama kutusuna **Uzantılar** yazın.
 
 ::: moniker-end
 
@@ -39,7 +39,7 @@ Visual Studio uzantılarını yüklemek ve yönetmek için **Uzantılar ve günc
 
 ## <a name="manage-extensions-dialog-box"></a>Uzantıları Yönet iletişim kutusu
 
-Visual Studio uzantılarını yüklemek ve yönetmek için **Uzantıları Yönet** iletişim kutusunu kullanın. **Uzantıları Yönet** iletişim kutusunu açmak için **Uzantılar** > **Yönet uzantılar**' ı seçin. Ya da, arama kutusuna **Uzantılar** yazın ve **Uzantıları Yönet**' i seçin.
+Visual Studio uzantılarını yüklemek ve yönetmek için **Uzantıları Yönet** iletişim kutusunu kullanın. **Uzantıları Yönet** iletişim kutusunu açmak için, uzantıları**Yönet** >  **Uzantılar** ' ı seçin. Ya da, arama kutusuna **Uzantılar** yazın ve **Uzantıları Yönet**' i seçin.
 
 ::: moniker-end
 
@@ -55,17 +55,17 @@ Uzantıları, Visual Studio 'daki [Visual Studio Market](https://marketplace.vis
 
 Visual Studio içinden uzantı yüklemek için:
 
-1. **Araçlar** > **uzantılarından ve güncelleştirmelerden**, yüklemek istediğiniz uzantıyı bulun. Uzantının adının veya adının bir kısmını biliyorsanız **arama** penceresinde arama yapabilirsiniz.
+1. **Araçlar**  > **Uzantılar ve güncelleştirmeler**'den yüklemek istediğiniz uzantıyı bulun. Uzantının adının veya adının bir kısmını biliyorsanız **arama** penceresinde arama yapabilirsiniz.
 
 2. **İndir**' i seçin.
 
    Uzantı yüklenmek üzere zamanlandı. Uzantınız, Visual Studio 'nun tüm örnekleri kapatıldıktan sonra yüklenir.
 
-Bağımlılıkları olan bir uzantıyı yüklemeye çalışırsanız, yükleyici bunların yüklenmiş olup olmadığını denetler. Bunlar yüklü değilse **Uzantılar ve güncelleştirmeler** iletişim kutusunda uzantıyı yükleyebilmeniz için önce yüklenmesi gereken bağımlılıklar listelenmiştir.
+Bağımlılıkları olan bir uzantıyı yüklemeye çalışırsanız, yükleyici bunların yüklenmiş olup olmadığını denetler. Yüklü değilse, **Uzantılar ve güncelleştirmeler** iletişim kutusu, uzantıyı yükleyebilmeniz için yüklenmesi gereken bağımlılıkları listeler.
 
 ### <a name="install-without-using-the-extensions-and-updates-dialog-box"></a>Uzantılar ve güncelleştirmeler iletişim kutusunu kullanmadan yükler
 
-*. Vsix* dosyalarında paketlenmiş uzantılar Visual Studio Market dışındaki konumlarda kullanılabilir olabilir. Araçlar > **uzantıları ve güncelleştirmeler** iletişim kutusu bu dosyaları algılayamaz, ancak dosyayı çift tıklayarak veya dosyayı seçip **ENTER**tuşuna basarak bir *. vsix* dosyası yükleyebilirsiniz. Bundan sonra yalnızca yönergeleri izleyin. Uzantı yüklendiğinde, kullanabileceğiniz **Uzantılar ve güncelleştirmeler** etkinleştirmek, devre dışı bırakmak veya kaldırmak için iletişim kutusu.
+*. Vsix* dosyalarında paketlenmiş uzantılar Visual Studio Market dışındaki konumlarda kullanılabilir olabilir. **Araçlar**  > **Uzantılar ve güncelleştirmeler** iletişim kutusu bu dosyaları algılayamaz, ancak dosyayı çift tıklayarak veya dosyayı seçip **ENTER**tuşuna basarak bir *. vsix* dosyası yükleyebilirsiniz. Bundan sonra yönergeleri izlemeniz yeterlidir. Uzantı yüklendiğinde, uzantıyı etkinleştirmek, devre dışı bırakmak veya kaldırmak için **Uzantılar ve güncelleştirmeler** iletişim kutusunu kullanabilirsiniz.
 
 > [!NOTE]
 > - Visual Studio Market hem VSıX hem de MSI uzantılarını içerir. Uzantılar ve güncelleştirmeler iletişim kutusu, MSI tabanlı uzantıları etkinleştiremez veya devre dışı bırakamıyorum.
@@ -79,7 +79,7 @@ Uzantıları, Visual Studio 'daki [Visual Studio Market](https://marketplace.vis
 
 Visual Studio içinden uzantı yüklemek için:
 
-1. Uzantılardan**Uzantıları Yönet**' den yüklemek istediğiniz uzantıyı bulun. >  (Adı veya uzantı adının bir kısmını biliyorsanız, içinde arama yapabilirsiniz **arama** penceresi.)
+1. Uzantılardan**Uzantıları yönet** ** > ,** yüklemek istediğiniz uzantıyı bulun. (Uzantının adının adını veya parçasını biliyorsanız, **arama** penceresinde arama yapabilirsiniz.)
 
 2. **İndir**' i seçin.
 
@@ -89,7 +89,7 @@ Bağımlılıkları olan bir uzantıyı yüklemeye çalışırsanız, yükleyici
 
 ### <a name="install-without-using-the-manage-extensions-dialog-box"></a>Uzantıları Yönet iletişim kutusunu kullanmadan yükler
 
-*. Vsix* dosyalarında paketlenmiş uzantılar Visual Studio Market dışındaki konumlarda kullanılabilir olabilir. Uzantıları Yönet iletişim kutusu bu dosyaları algılayamaz, ancak dosyayı çift tıklayarak veya dosyayı seçip ENTER tuşuna basarak bir. vsix dosyası yükleyebilirsiniz. >  Bundan sonra yalnızca yönergeleri izleyin. Uzantı yüklendiğinde, **Uzantıları Yönet** iletişim kutusunu etkinleştirmek, devre dışı bırakmak veya kaldırmak için kullanabilirsiniz.
+*. Vsix* dosyalarında paketlenmiş uzantılar Visual Studio Market dışındaki konumlarda kullanılabilir olabilir. **Uzantılar**  > **Uzantıları Yönet** iletişim kutusu bu dosyaları algılayamaz, ancak dosyayı çift tıklayarak veya dosyayı seçip **ENTER**tuşuna basarak bir *. vsix* dosyası yükleyebilirsiniz. Bundan sonra yönergeleri izlemeniz yeterlidir. Uzantı yüklendiğinde, **Uzantıları Yönet** iletişim kutusunu etkinleştirmek, devre dışı bırakmak veya kaldırmak için kullanabilirsiniz.
 
 > [!NOTE]
 > - Visual Studio Market hem VSıX hem de MSI uzantılarını içerir. Uzantıları Yönet iletişim kutusu, MSI tabanlı uzantıları etkinleştiremez veya devre dışı bırakamıyorum.
@@ -99,20 +99,20 @@ Bağımlılıkları olan bir uzantıyı yüklemeye çalışırsanız, yükleyici
 
 ## <a name="uninstall-or-disable-an-extension"></a>Uzantıyı kaldırma veya devre dışı bırakma
 
-Bir uzantıyı kullanmayı bırakmak isterseniz devre dışı bırakabilir veya kaldırabilirsiniz. Bir uzantı devre dışı bırakıldığında yüklü kalır, ancak etkin değildir. Uzantı bulun ve tıklatın **kaldırma** veya **devre dışı**. Devre dışı bırakılmış bir uzantıyı kaldırmak için Visual Studio 'Yu yeniden başlatın.
+Bir uzantıyı kullanmayı bırakmak isterseniz devre dışı bırakabilir veya kaldırabilirsiniz. Bir uzantı devre dışı bırakıldığında yüklü kalır, ancak etkin değildir. Uzantıyı bulun ve **Kaldır** veya **devre dışı bırak**' a tıklayın. Devre dışı bırakılmış bir uzantıyı kaldırmak için Visual Studio 'Yu yeniden başlatın.
 
 > [!NOTE]
 > VSıX uzantılarını devre dışı bırakabilirsiniz, ancak MSI kullanılarak yüklenen uzantılar kullanılamaz. MSI yüklenmiş uzantılar yalnızca kaldırılabilir.
 
 ## <a name="per-user-and-administrative-extensions"></a>Kullanıcı başına ve yönetim uzantıları
 
-Çoğu uzantı Kullanıcı başına ve *\\%LocalAppData%\microsoft\visualstudio < Visual Studio Sürüm\>\ Extensions\\*  klasörüne yüklenir. Birkaç uzantı yönetim uzantılarıdır ve  *\<Visual Studio yükleme\\ klasörü > \Common7\IDE\Extensions* klasörüne yüklenir.
+Çoğu uzantı Kullanıcı başına ve *%LocalAppData%\microsoft\visualstudio \\ < Visual Studio sürümü \> \Extensions \\* klasörüne yüklenir. Birkaç uzantı yönetim uzantılarıdır ve *\<Visual Studio yükleme klasörü > \Common7\IDE\Extensions \\* klasörüne yüklenir.
 
-Hata veya kötü amaçlı kod içerebilecek uzantıları karşı sisteminizi korumak için yalnızca Visual Studio normal kullanıcı izinleriyle çalıştırıldığında yüklemek için kullanıcı başına uzantılar kısıtlayabilirsiniz. Bu, Visual Studio yükseltilmiş izinlerle çalıştırıldığında kullanıcı başına uzantıların devre dışı bırakıldığı anlamına gelir.
+Sisteminizi hatalar veya kötü amaçlı kod içerebilen uzantılara karşı korumak için, Kullanıcı başına uzantıları yalnızca Visual Studio normal Kullanıcı izinleriyle çalıştırıldığında yüklenecek şekilde kısıtlayabilirsiniz. Bu, Visual Studio yükseltilmiş izinlerle çalıştırıldığında kullanıcı başına uzantıların devre dışı bırakıldığı anlamına gelir.
 
 Kullanıcı başına uzantıların ne zaman yükleneceğini kısıtlamak için:
 
-1. Uzantılar Seçenekler sayfasını açın (**Araçlar** > **Seçenekler** > **ortam** > **uzantıları**).
+1. Uzantılar Seçenekler sayfasını açın (**araçlar**  > **seçenekler**  > **ortam**  > **uzantıları**).
 
 2. **Yönetici olarak çalışırken Kullanıcı Uzantıları başına yükle** onay kutusunu temizleyin.
 
@@ -126,15 +126,15 @@ Otomatik güncelleştirmeleri devre dışı bırakmak istiyorsanız, tüm uzant�
 
 ::: moniker range="vs-2017"
 
-- Tüm uzantılar için otomatik güncelleştirmeleri devre dışı bırakmak için, **Araçlar** > **Uzantılar ve güncelleştirmeler** iletişim kutusunda **uzantılarınızı ve güncelleştirme ayarlarını değiştirin** bağlantısını seçin. **Seçenekler** iletişim kutusunda, **uzantıları otomatik güncelleştir**onay kutusunun işaretini kaldırın.
+- Tüm uzantılar için otomatik güncelleştirmeleri devre dışı bırakmak için **araçlar**  > **Uzantılar ve güncelleştirmeler** iletişim kutusundaki **uzantılarınızı ve güncelleştirme ayarlarını değiştirin** bağlantısını seçin. **Seçenekler** iletişim kutusunda, **uzantıları otomatik güncelleştir**onay kutusunun işaretini kaldırın.
 
-- Belirli bir uzantı için Otomatik Güncelleştirmeler devre dışı bırakmak için işareti kaldırın **bu uzantıyı otomatik olarak güncelleştir** seçeneği uzantının ayrıntıları bölmesinde sağ alt tarafında **Uzantılar ve güncelleştirmeler** iletişim.
+- Belirli bir uzantının otomatik güncelleştirmelerini devre dışı bırakmak için **Uzantılar ve güncelleştirmeler** iletişim kutusunun sağ tarafındaki uzantının Ayrıntılar bölmesinde **Bu uzantıyı otomatik olarak güncelleştir** seçeneğinin işaretini kaldırın.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- Tüm uzantılar için otomatik güncelleştirmeleri devre dışı bırakmak **üzere uzantılar** > **Uzantıları Yönet** iletişim kutusunda **Uzantılar için ayarlarınızı değiştirin** bağlantısı ' nı seçin. **Seçenekler** iletişim kutusunda, **uzantıları otomatik güncelleştir**onay kutusunun işaretini kaldırın.
+- Tüm uzantılar için otomatik güncelleştirmeleri devre dışı bırakmak üzere **uzantılar  >  uzantıları** **Yönet** iletişim kutusunda uzantılar **için ayarları değiştir** bağlantısını seçin. **Seçenekler** iletişim kutusunda, **uzantıları otomatik güncelleştir**onay kutusunun işaretini kaldırın.
 
 - Belirli bir uzantının otomatik güncelleştirmelerini devre dışı bırakmak için, **Uzantıları Yönet** iletişim kutusunun sağ tarafındaki uzantının Ayrıntılar bölmesinde **Bu uzantıyı otomatik olarak güncelleştir** seçeneğinin işaretini kaldırın.
 
@@ -142,35 +142,35 @@ Otomatik güncelleştirmeleri devre dışı bırakmak istiyorsanız, tüm uzant�
 
 ## <a name="crash-and-unresponsiveness-notifications"></a>Kilitlenme ve yanıt verme bildirimleri
 
-Visual Studio, bir uzantının önceki bir oturum sırasında kilitlenmeyle ilgili olduğunu şüpheleniyorsa sizi bilgilendirir. Visual Studio kilitleniyor, özel durum yığını depolar. Visual Studio başlatılır, sonraki açışınızda yaprak ile başlayan ve temel çalışma yığını inceler. Visual Studio çerçeve uzantı yüklü ve etkin bir parçası olan bir modüle ait olduğunu belirlerse, bir bildirim gösterilir.
+Visual Studio, bir uzantının önceki bir oturum sırasında kilitlenmeyle ilgili olduğunu şüpheleniyorsa sizi bilgilendirir. Visual Studio kilitlenirse, özel durum yığınını depolar. Visual Studio 'Nun bir sonraki başlatılmasında, yaprağı inceleyerek ve temel doğru çalışarak yığını inceler. Visual Studio, bir çerçevenin yüklü ve etkin bir uzantının parçası olan bir modüle ait olduğunu belirlerse, bir bildirim gösterir.
 
 Visual Studio, bir uzantının ne kadar şüpheleniyorsa, Kullanıcı arabiriminin yanıt vermemesine neden olduğunu da bildirir.
 
-Bu bildirimleri gösterilirken, bildirim Yoksay veya aşağıdaki eylemlerden birini gerçekleştirin:
+Bu bildirimler gösterildiğinde, bildirimi yoksayabilirsiniz veya aşağıdaki eylemlerden birini gerçekleştirebilirsiniz:
 
 ::: moniker range="vs-2017"
 
-- Seçin **bu uzantıyı devre dışı**. Visual Studio, uzantıyı devre dışı bırakır ve devre dışı bırakma etkinleşmesi için sisteminizi yeniden başlatması gerek olup olmadığını bildirir. İsterseniz, uzantıyı **Araçlar** > **Uzantılar ve güncelleştirmeler** iletişim kutusunda yeniden etkinleştirebilirsiniz.
+- **Bu uzantıyı devre dışı bırak**' ı seçin. Visual Studio, uzantıyı devre dışı bırakır ve devre dışı bırakmanın etkili olması için sisteminizi yeniden başlatmanız gerekip gerekmediğini bilmenizi sağlar. İsterseniz, uzantıyı **araçlar**  > **Uzantılar ve güncelleştirmeler** iletişim kutusunda yeniden etkinleştirebilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- Seçin **bu uzantıyı devre dışı**. Visual Studio, uzantıyı devre dışı bırakır ve devre dışı bırakma etkinleşmesi için sisteminizi yeniden başlatması gerek olup olmadığını bildirir. İsterseniz **uzantıları** > **Yönet** iletişim kutusunda uzantıyı yeniden etkinleştirebilirsiniz.
+- **Bu uzantıyı devre dışı bırak**' ı seçin. Visual Studio, uzantıyı devre dışı bırakır ve devre dışı bırakmanın etkili olması için sisteminizi yeniden başlatmanız gerekip gerekmediğini bilmenizi sağlar. İsterseniz uzantıyı **uzantılar**  >  uzantıları**Yönet** iletişim kutusunda yeniden etkinleştirebilirsiniz.
 
 ::: moniker-end
 
-- Seçin **bu iletiyi bir daha gösterme**.
+- **Bu Iletiyi hiçbir daha gösterme**seçeneğini belirleyin.
 
-  - Bildirim önceki bir oturumdaki kilitlenmeyle ilgiliyse, bu uzantıyla ilişkili bir kilitlenme oluştuğunda Visual Studio artık bir bildirim göstermez. Bu uzantı veya kilitlenme veya diğer uzantıları ile ilişkilendirilebilen yanıt vermeyi durdurma sorununa yanıt vermeyi durdurma sorununa ilişkilendirilebilir zaman visual Studio hala bildirimleri göster.
+  - Bildirim önceki bir oturumdaki kilitlenmeyle ilgiliyse, bu uzantıyla ilişkili bir kilitlenme oluştuğunda Visual Studio artık bir bildirim göstermez. Yanıt verme süresi bu uzantıyla ilişkilendirilemediği veya diğer uzantılarla ilişkilendirilebilen kilitlenmeler veya yanıt verme için, Visual Studio hala bildirim göstermeye devam eder.
   - Bildirim yanıt verme ile ilgiliyse, bu uzantı yanıt verme ile ilişkilendirildiğinde tümleşik geliştirme ortamı (IDE) artık bildirim göstermez. Visual Studio, bu uzantı için kilitlenmeyle ilgili bildirimleri ve diğer uzantılara yönelik kilitlenme ve yanıt verme ile ilgili bildirimleri göstermeye devam eder.
 
 - Bu sayfaya gitmek için **daha fazla bilgi** ' yi seçin.
 
-- Seçin **X** bildirimi kapatmak için bildirim sonunda düğmesi. Gelecekteki bir kilitlenme veya kullanıcı Arabirimi yanıt vermeyi durdurma sorununa ile ilişkilendiriliyor uzantısı örneklerinin yeni bir bildirim görüntülenir.
+- Bildirimi kapatmak için bildirimin sonundaki **X** düğmesini seçin. Uzantının kilitlenme veya Kullanıcı Arabirimi yanıt verme ile ilişkilendirilmesi gelecekteki örnekleri için yeni bir bildirim görüntülenir.
 
 > [!NOTE]
-> Bir kullanıcı Arabirimi yanıt vermeyi durdurma sorununa veya kilitlenme bildirimi yalnızca bir uzantının modüllerinin yığında UI yanıt vermiyor veya kilitlenme ortaya çıktığında anlamına gelir. Bu mutlaka uzantısı sorunlu olduğunu gelmez. Uzantı, Visual Studio 'nun parçası olan kod olarak adlandırılır, bu da yanıt vermeyen Kullanıcı arabirimi veya kilitlenme ile sonuçlanır. Ancak, bildirim yine de kullanıcı Arabirimi yanıt vermeyi durdurma sorununa veya kilitlenme sonuçlanan uzantı sizin için önemli değilse yararlı olabilir. Bu durumda, uzantıyı devre dışı kullanıcı Arabirimi yanıt vermeyi durdurma sorununa veya kilitlenme gelecekte üretkenliğinizi etkilemeden önler.
+> Kullanıcı Arabirimi yanıt verme veya kilitlenme bildirimi, Kullanıcı Arabirimi yanıt vermediğinde veya kilitlenme oluştuğunda yalnızca uzantının modüllerinde bir yığının bulunduğu anlamına gelir. Uzantının kendisinin kendisi olduğu anlamına gelmez. Uzantı, Visual Studio 'nun parçası olan kod olarak adlandırılır, bu da yanıt vermeyen Kullanıcı arabirimi veya kilitlenme ile sonuçlanır. Ancak, Kullanıcı Arabirimi yanıt verme veya kilitlenme için yol gösteren uzantının sizin için önemli olmadığı durumlarda bildirim yine de yararlı olabilir. Bu durumda, uzantının devre dışı bırakılması, üretkenliğinizi etkilemeden UI 'nin yanıt verme hızını veya ileride çökmeyi önler.
 
 ## <a name="samples"></a>Örnekler
 
@@ -182,13 +182,13 @@ Bu bildirimleri gösterilirken, bildirim Yoksay veya aşağıdaki eylemlerden bi
 
 ::: moniker range="vs-2017"
 
-Bu örneklerle ilgili görevleri gerçekleştirmek için **Araçlar** > **Uzantılar ve güncelleştirmeler** iletişim kutusunu kullanabilirsiniz:
+Bu örneklerle ilgili görevleri gerçekleştirmek için **araçlar** > **Uzantılar ve güncelleştirmeler** iletişim kutusunu kullanabilirsiniz:
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Bu örneklerle ilgili görevleri gerçekleştirmek için **uzantıları** > **Yönet** iletişim kutusunu kullanabilirsiniz:
+**Uzantılar >** **Yönet** iletişim kutusunu kullanarak bu örneklerle ilgili görevleri gerçekleştirebilirsiniz:
 
 ::: moniker-end
 
@@ -202,7 +202,7 @@ Bu örneklerle ilgili görevleri gerçekleştirmek için **uzantıları** > **Y�
 
 - Yüklü örnekler için kaynak kodu değişiklikleri yayımlandığında güncelleştirme bildirimlerini görüntüleyin.
 
-- Bir güncelleştirme bildirimi olduğunda yüklü bir örneğin ana kopyasını güncelleştirin.
+- Bir güncelleştirme bildirimi olduğunda, yüklü bir örneğin ana kopyasını güncelleştirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

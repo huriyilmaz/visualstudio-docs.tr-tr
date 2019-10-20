@@ -1,57 +1,57 @@
 ---
-title: 'Nasıl yapılır: Etki alanına özgü bir dilin ad alanını değiştirme'
+title: 'Nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme'
 ms.date: 10/31/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, namespace
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16fec4cf6150fe0711812d9fabe57fc667e36eef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b64a61c02f44db0ce70b758331d0d70f7bb8014d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993508"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653759"
 ---
-# <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>Nasıl yapılır: Etki alanına özgü bir dilin ad alanını değiştirme
+# <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>Nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme
 
-Etki alanına özgü bir dilin ad alanını değiştirebilirsiniz. Değişiklik yapmak **DSL Gezgini**, Dsl paket proje özelliklerinde ve derleme bilgileri.
+Etki alanına özgü dilin ad alanını değiştirebilirsiniz. DSL **Gezgini**' nde, DSL paketi projesinin özelliklerinde ve derleme bilgilerinde değişiklik yapın.
 
-## <a name="to-change-the-namespace-of-a-domain-specific-language"></a>Etki alanına özgü bir dilin ad alanını değiştirmek için
+## <a name="to-change-the-namespace-of-a-domain-specific-language"></a>Etki alanına özgü dilin ad alanını değiştirmek için
 
-1. İçinde **DSL Gezgini**seçin **Dsl** düğümü.
+1. **DSL Gezgini**' nde **DSL** düğümünü seçin.
 
-2. İçinde **özellikleri** penceresinde değişiklik **Namespace** özelliği.
+2. **Özellikler** penceresinde **ad alanı** özelliğini değiştirin.
 
-3. Çözüm kaydedin ve şablonlarını Dönüştür.
+3. Çözümü kaydedin ve şablonları dönüştürün.
 
-4. Üzerinde **proje** menüsünde seçin **Dsl özellikleri**.
+4. **Proje** menüsünde **DSL özellikleri**' ni seçin.
 
-   Projeniz için Özellikler görünür.
+   Projenizin özellikleri görüntülenir.
 
-5. Seçin **uygulama** sekmesi.
+5. **Uygulama** sekmesini seçin.
 
-6. Değişiklik **varsayılan ad alanı** özelliğini yeni ad alanı adı.
+6. **Varsayılan ad alanı** özelliğini yeni ad alanı adı olarak değiştirin.
 
-7. Derlemenin adı değiştirmek istiyorsanız, değişiklik **bütünleştirilmiş kodun ad özelliği.**
+7. Derlemenin adını da değiştirmek istiyorsanız, **derleme adı özelliğini değiştirin.**
 
-8. Derleme adı değişmişse DslPackage\Package.tt açın ve bu satırı güncelleştirin:
+8. Derleme adını değiştirdiyseniz Dslpackage\package.exe ' i açın ve bu satırı güncelleştirin:
 
    `string dslAssembly = "YourDSLassembly.Dsl.dll";`
 
-9. Herhangi bir özel kod yazdığınız, kod dosyalarında ad alanını ve sınıf başvuruları değiştirdiğinizden emin olun.
+9. Herhangi bir özel kod yazdıysanız, kod dosyalarındaki ad alanını ve sınıf başvurularını değiştirdiğinizden emin olun.
 
-10. Visual Studio deneysel örneği sıfırlayın.
+10. Visual Studio Deneysel örneğini sıfırlayın.
 
-    1. Silme **\Users\\** _{adınız}_ **\AppData\Local\Microsoft\VisualStudio\\\*Exp**.
+    1. **\Users \\** _{Name}_ **\appdata\local\microsoft\visualstudio \\ \*Exp**silin.
 
-    2. Windows üzerinde **Başlat** menüsünde seçin **tüm programlar** > **Microsoft Visual Studio 2010 SDK** > **Araçları**  >  **Deneysel örneğini sıfırlama**.
+    2. Windows **Başlat** menüsünde **tüm programlar**  > **Microsoft Visual Studio 2010 SDK**  > **Araçlar**  > **deneysel örneği sıfırlayın**.
 
-11. Üzerinde **derleme** menüsünde seçin **çözümü yeniden derle**.
+11. **Derle** menüsünde **çözümü yeniden derle**' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+[Etki alanına özgü dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

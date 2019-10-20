@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Window.NextDocumentWindowNav
 - IDE navigator
 ms.assetid: 6c36b6eb-c93f-496b-af08-4199f7afd8bd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8764ccc5a662a40559b6b7ab4f19cdff0e2d555e
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.openlocfilehash: b3aa39c1c9748eb3a9270a66a3a6bbcb43fdcea2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381325"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645837"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Nasıl yapılır: Visual Studio IDE 'de gezinme
 
@@ -74,7 +74,7 @@ Ayrıca, dosyaya son erişiminizden bağımsız olarak, **IDE Gezginini**, düze
 
     \- veya-
 
-- Menü çubuğunda **, @no__t-** 1**Windows**' u seçin.
+- Menü çubuğunda **pencere**  > **Windows**' u seçin.
 
 - Listede, görüntülemek istediğiniz dosyayı seçin ve ardından **Etkinleştir**' i seçin.
 

@@ -14,59 +14,52 @@ helpviewer_keywords:
 - Workflow Designer [WFD], overview
 ms.assetid: 4cd062b1-b496-4668-bbc1-ee85545e066d
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9eea79978b7b61de1e56d787b5a4cd9797be1aa6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 848300c54800e229ee1f487fc415bad45d982a6c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704782"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656822"
 ---
-# <a name="developing-applications-with-the-workflow-designer"></a>İş Akışı Tasarımcısı ile uygulama geliştirme
-[!INCLUDE[wfd1](../includes/wfd1-md.md)] Bir görsel tasarımcı ve grafik oluşturma ve hata ayıklama için hata ayıklayıcı [!INCLUDE[wf](../includes/wf-md.md)] uygulamalarda [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)] barındırılan [!INCLUDE[vs2010](../includes/vs2010-md.md)] geliştirme ortamı. Bir bileşik iş akışı uygulaması, etkinlik kitaplığı oluşturma olanak tanır veya [!INCLUDE[indigo1](../includes/indigo1-md.md)] hizmet şablonları ve etkinlik tasarımcıları kullanarak. [!INCLUDE[crabout](../includes/crabout-md.md)] İş akışları için bkz: [Windows Workflow Foundation &#91;.NET Framework 4&#93;](https://msdn.microsoft.com/library/9a23ea6b-d600-483e-89cd-8889cfec5f66).  
-  
- Bu yeni sürümünü birkaç yeni tasarım özelliklerinin şunlardır [!INCLUDE[wfd2](../includes/wfd2-md.md)] eski sürümlerini dışında [!INCLUDE[wfd2](../includes/wfd2-md.md)]:  
-  
-- [!INCLUDE[wfd2](../includes/wfd2-md.md)] Kullanılarak oluşturulan [!INCLUDE[avalon1](../includes/avalon1-md.md)]. Bu etkinlik Tasarımcısı deneyimini geliştirir ve büyük ve karmaşık iş akışları için performansı geliştirir.  
-  
-- Özel etkinlikler ile tasarlanmaktadır [!INCLUDE[avalon2](../includes/avalon2-md.md)], etkinlik tasarımcıları oluşturma Basitleştirilmiş için XAML ve programlama modeli kullanarak.  
-  
-- Tanıdık akış stilini modelleme kullanarak program akışını görselleştirmenizi bir akış etkinliği uygulandı.  
-  
-- [!INCLUDE[wfd2](../includes/wfd2-md.md)] Bunları etkinliklerini bağlama bildirme ve iş akışlarınızı, değişkenler kapsam olanak tanıyan bir yeni değişken tasarımcısını sahiptir.  
-  
-- İçinde [!INCLUDE[vs2010](../includes/vs2010-md.md)], [!INCLUDE[wfd2](../includes/wfd2-md.md)] içinde Visual Basic deyimleri yazılırken tüm IntelliSense özelliklerini sağlar, [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] iş akışları.  
-  
-- Hata ayıklama deneyimi artık XAML iş akışı tanımınızı ve çalışma zamanında yönetilen kodda benzer bir deneyim sağlar, XAML kod içine Adımlama, kesme noktaları ayarlamanıza olanak sağlayan XAML içinde genişletir.  
-  
-- Yeniden barındırma [!INCLUDE[wfd2](../includes/wfd2-md.md)] dışında [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] artık yalnızca birkaç satır kod gerektiren önceki sürümlere kıyasla önemli ölçüde basitleştirilmiştir.  
-  
-- Yeni <xref:System.Activities.Statements.Flowchart> etkinlik ve [akış](../workflow-designer/flowchart-activity-designer.md) tanıdık akış stilini modelleme kullanarak, program akışını görselleştirin olanak sağlar.  
-  
-- Mesajlaşma etkinlikleri, yazmak tam bildirim temelli sağlayarak geliştirilmiştir (kod) [!INCLUDE[indigo1](../includes/indigo1-md.md)] Hizmetleri.  
-  
-- **Hizmet Başvurusu Ekle...** işlev otomatik olarak Web Hizmetleri erişen etkinlikler oluşturmanıza olanak tanır.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [İş Akışı Tasarımcısını Kullanma](../workflow-designer/using-the-workflow-designer.md)  
- Yeni etkinlikler ve yerleşik tasarımcıları kullanarak iş akışı projeleri oluşturma ve tasarımcı tarafından sağlanan diğer araçlar bağımsız değişkenler, değişkenleri, ifadeleri, içeri aktarmalar ve içerik haritalı gezinme işlemek için nasıl kullanılacağını gösterir.  
-  
- [Etkinlik Tasarımcılarını kullanma](../workflow-designer/using-the-activity-designers.md)  
- Etkinlikler, şablonları ve sistem tarafından sağlanan, tasarımcılar kategorileri açıklanmaktadır.  
-  
- [İş Akışı Tasarımcısı ile İş Akışlarında Hata Ayıklama](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)  
- Geleneksel hata ayıklama yordamları yanı sıra XAML ve ifadeler hata ayıklama gerçekleştirmeyi açıklar.  
-  
- [İş Akışı Tasarımcısı Kullanıcı Arabirimi Yardımı](../workflow-designer/workflow-designer-ui-help.md)  
- Tarafından sağlanan iletişim kutuları için bağlama duyarlı Yardım konularını içerir [!INCLUDE[wfd1](../includes/wfd1-md.md)], kısayolları ve hata iletileri Tasarımcısı Kabuk özellikleri hakkında daha fazla rehberlik yanı sıra, klavye.  
-  
- [.NET 3.0 veya .NET 3.5 Framework’ü Hedefleyen İş Akışı Uygulamaları Geliştirme](../workflow-designer/developing-workflow-applications-targeting-the-dotnet-3-0-or-dotnet-3-5-framework.md)  
- Hedefleyen eski Tasarımcı kullanma yönergeleri içeren [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- [Tasarımcı yeniden barındırma &#91;WF örnekleri&#93;](https://msdn.microsoft.com/library/b676ad31-5f64-4d84-9a36-b4d7113a2f4d)  
- Bu örnek, Tasarımcı içerecek şekilde WPF düzen oluşturma işlemi gösterilmektedir.  
-  
- [Özel Etkinlik Tasarımcıları](https://msdn.microsoft.com/library/dcf14dca-ce6d-4278-96ba-062f0a679075)  
- Bu bölüm, iş akışı tasarımcısında görüntülemek için özel tasarımcılar kullanın etkinliği örneği içerir.
+# <a name="developing-applications-with-the-workflow-designer"></a>İş Akışı Tasarımcısı ile Uygulama Geliştirme
+@No__t_0, [!INCLUDE[vs2010](../includes/vs2010-md.md)] geliştirme ortamında barındırılan [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)] [!INCLUDE[wf](../includes/wf-md.md)] uygulamalarda grafik oluşturma ve hata ayıklama için bir görsel tasarımcı ve hata ayıklayıcısıdır. Şablonları ve etkinlik tasarımcılarını kullanarak bileşik bir iş akışı uygulaması, etkinlik kitaplığı veya [!INCLUDE[indigo1](../includes/indigo1-md.md)] hizmeti oluşturmanız mümkün olur. iş akışları [!INCLUDE[crabout](../includes/crabout-md.md)], bkz [. &#91;Windows Workflow Foundation .NET Framework&#93;4](https://msdn.microsoft.com/library/9a23ea6b-d600-483e-89cd-8889cfec5f66).
+
+ Aşağıda, [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[wfd2](../includes/wfd2-md.md)] eski sürümlerinden ayrı olarak bu yeni sürümü ayarlanan çeşitli yeni tasarım özellikleri verilmiştir:
+
+- @No__t_0, [!INCLUDE[avalon1](../includes/avalon1-md.md)] kullanılarak oluşturulmuştur. Bu, etkinlik Tasarımcısı deneyimini geliştirir ve büyük ve karmaşık iş akışlarının performansını geliştirir.
+
+- Özel etkinlikler artık [!INCLUDE[avalon2](../includes/avalon2-md.md)] ile tasarlanmıştır, XAML kullanımı ve etkinlik tasarımcıları oluşturmak için programlama modeli basitleştirilmiştir.
+
+- Bir akış çizelgesi etkinliği uygulandı, böylece tanıdık akış çizelgesi modelleme stilini kullanarak program akışını görselleştirebilirsiniz.
+
+- @No__t_0, iş akışlarınızda değişkenleri bildirmenizi ve kapsamını etkinliklere bağlamayı sağlayan yeni bir değişken tasarımcısına sahiptir.
+
+- @No__t_0, [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] iş akışlarınızda Visual Basic ifadeleri yazarken tam IntelliSense özellikleri sağlar.
+
+- Hata ayıklama deneyimi artık XAML 'e taşıyor ve XAML iş akışı tanımınızda kesme noktaları ayarlamanıza ve yönetilen kodda buna benzer bir deneyim sağlayan çalışma zamanında XAML kodunuzu adım adım görmenize olanak tanır.
+
+- @No__t_0 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dışında yeniden barındırma, önceki sürümlere kıyasla büyük ölçüde basitleştirilmiştir, şimdi yalnızca birkaç satır kod gerektirir.
+
+- Yeni <xref:System.Activities.Statements.Flowchart> etkinliği ve onun [akış çizelgesi](../workflow-designer/flowchart-activity-designer.md) , tanıdık akış çizelgesi modelleme stilini kullanarak program akışınızı görselleştirmenize olanak tanır.
+
+- Mesajlaşma etkinlikleri geliştirilmiştir, tam bildirime dayalı (kod yok) [!INCLUDE[indigo1](../includes/indigo1-md.md)] Hizmetleri yazmanızı sağlar.
+
+- **Hizmet başvurusu Ekle..** . işlevselliği, Web hizmetlerine erişim sağlayan etkinlikleri otomatik olarak oluşturmanıza olanak tanır.
+
+## <a name="in-this-section"></a>Bu Bölümde
+ [İş akışı Tasarımcısı kullanma](../workflow-designer/using-the-workflow-designer.md) Yerleşik tasarımcıları ve tasarımcı tarafından sunulan diğer araçların bağımsız değişkenleri, değişkenleri, ifadeleri, içeri aktarımları ve içerik haritası gezintisini işlemek için nasıl kullanılacağını gösterir.
+
+ [Etkinlik tasarımcılarını kullanma](../workflow-designer/using-the-activity-designers.md) Etkinlikleri ve şablonları ve sistem tarafından belirtilen tasarımcılarının kategorilerini açıklar.
+
+ [İş akışı Tasarımcısı Iş akışlarında hata ayıklama](../workflow-designer/debugging-workflows-with-the-workflow-designer.md) Geleneksel hata ayıklama yordamlarının yanı sıra XAML ve ifadelerin hatalarını ayıklamanın nasıl yapılacağını açıklamaktadır.
+
+ [İş akışı TASARıMCıSı UI Yardımı](../workflow-designer/workflow-designer-ui-help.md) @No__t_1 tarafından sağlanan iletişim kutuları için bağlama duyarlı Yardım konuları ve tasarımcı kabuğu özellikleri, klavye kısayolları ve hata iletileri hakkında yönergeler içerir.
+
+ [.Net 3,0 veya .net 3,5 çerçevesini hedefleyen Iş akışı uygulamaları geliştirme](../workflow-designer/developing-workflow-applications-targeting-the-dotnet-3-0-or-dotnet-3-5-framework.md) @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen eski tasarımcıyı kullanma hakkında rehberlik içerir.
+
+ [Tasarımcı örnek oluşturma &#91;WF örnekleri&#93; ](https://msdn.microsoft.com/library/b676ad31-5f64-4d84-9a36-b4d7113a2f4d) Bu örnek, tasarımcıyı içeren WPF düzeninin nasıl oluşturulacağını gösterir.
+
+ [Özel etkinlik tasarımcıları](https://msdn.microsoft.com/library/dcf14dca-ce6d-4278-96ba-062f0a679075) Bu bölüm, iş akışı tasarımcısında görüntülenmek üzere özel tasarımcılar kullanan etkinlik örneklerini içerir.

@@ -1,29 +1,29 @@
 ---
-title: İş Akışı Tasarımcısı - geçiş etkinlik tasarımcıları
+title: İş Akışı Tasarımcısı-geçiş etkinliği tasarımcıları
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7598e869-1da1-4721-b4bf-6cbe402be1a2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a7b284b370f248ed2497ece835036679af2e5a8
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: da8459db53a1ecb9a297e2a4a218791281806313
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747027"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650135"
 ---
-# <a name="migration-activity-designers"></a>Geçiş etkinlik tasarımcıları
+# <a name="migration-activity-designers"></a>Migration etkinlik tasarımcıları
 
-Geçiş etkinlik tasarımcıları, .NET Framework 4 hedefleyen bir iş akışından 3.0/3.5 etkinlikleri iş akışını çağırmak için kullanılan veya üzeri.
+Geçiş etkinliği tasarımcıları, .NET Framework 4 veya üstünü hedefleyen bir iş akışından iş akışı 3.0/3,5 etkinlikleri çağırmak için kullanılır.
 
-Bu bölümdeki konular, iş akışı Tasarımcısı etkinlik tasarımcılarını kullanma hakkında rehberlik sağlar.
+Bu bölümde yer alan konular İş Akışı Tasarımcısı etkinlik tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-Etkinlik tasarımcıları diğer türleri için aşağıdaki konulara bakın:
+Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
 - [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
 

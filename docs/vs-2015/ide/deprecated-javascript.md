@@ -1,62 +1,59 @@
 ---
-title: '&lt;kullanım dışı&gt; (JavaScript) | Microsoft Docs'
+title: '&lt;deprecated &gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: cf33d371-59da-4310-95ee-d7524fd9d58c
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b93a2b4dcc541f32c16766da0dd9dd19a4fdfe0d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 343f3ebe4bea7ee999f60741c189f35defb0ac7b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68177813"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665813"
 ---
-# <a name="ltdeprecatedgt-javascript"></a>&lt;kullanım dışı&gt; (JavaScript)
+# <a name="ltdeprecatedgt-javascript"></a>&lt;deprecated &gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir kullanım dışı işlev veya metot belirtir.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-<deprecated  
-    type="deprecate|remove"  
-    locid="descriptionID">description  
-</deprecated>  
-```  
-  
-#### <a name="parameters"></a>Parametreler  
- `type`  
- İsteğe bağlı. İşlev veya yöntem gelecekteki bir sürümde olup olmadığını kaldırılacak veya olup işlev veya yöntem zaten kaldırıldı ve kullanımını hataya neden belirtir. Kümesine `deprecate` işlev veya yöntem gelecekteki bir sürümde kaldırılacak belirtmek için. Kümesine `remove` işlev veya yöntem zaten kaldırıldığını belirtmek için.  
-  
- `locid`  
- İsteğe bağlı. Yerelleştirme bilgilerini işlev veya yöntem tanımlayıcısı. Tanımlayıcıdır ya da bir üye kimliği veya karşılık gelen `name` öznitelik değeri bir ileti paketteki OpenAjax meta verileri tarafından tanımlanır. Belirtilen biçim tanımlayıcı türü bağımlı [ \<loc >](../ide/loc-javascript.md) öğesi.  
-  
- `description`  
- İsteğe bağlı. İşlev veya kullanım dışı yöntem açıklaması.  
-  
-## <a name="remarks"></a>Açıklamalar  
- İçeren İşlevler, ek açıklama eklemek için kullanılan öğelerin `<deprecated>`, işlev gövdesinin herhangi bir deyim önce yerleştirilmelidir. Bir işlev kullanım dışı olarak işaretlediğinizde, değiştirmeniz önerilir, [ \<Özet >](../ide/summary-javascript.md) öğeyle `<deprecated>` öğesi.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod nasıl kullanılacağını gösterir `<deprecated>` öğesi.  
-  
-```javascript  
-function areaFunction(radiusParam) {  
-    /// <deprecated type="deprecate" >Determines the area of a circle when supplied a radius parameter.</deprecated>  
-    /// <param name="radiusParam" type="Number">The radius of the circle.</param>  
-    /// <returns type="Number">The area.</returns>  
-    var areaVal;  
-    areaVal = Math.PI * radiusParam * radiusParam;  
-    return areaVal;  
-}  
-  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Kullanım dışı bırakılan bir işlevi veya yöntemi belirtir.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+<deprecated
+    type="deprecate|remove"
+    locid="descriptionID">description
+</deprecated>
+```
+
+#### <a name="parameters"></a>Parametreler
+ Isteğe bağlı `type`. İşlevin veya yöntemin gelecekteki bir sürümde kaldırılıp kaldırılameyeceğini veya işlevin ya da yöntemin zaten kaldırılıp kaldırılmadığını ve bunun bir hatayla sonuçlanabileceğini belirtir. İşlevin veya yöntemin gelecekteki bir sürümde kaldırılacağını belirtmek için `deprecate` olarak ayarlayın. İşlevin veya metodun zaten kaldırılmış olduğunu belirtmek için `remove` olarak ayarlayın.
+
+ Isteğe bağlı `locid`. İşlev veya yöntem hakkında yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki `name` öznitelik değerine karşılık gelir. Tanımlayıcı türü [\<loc >](../ide/loc-javascript.md) öğesinde belirtilen biçime bağlıdır.
+
+ Isteğe bağlı `description`. Kullanım dışı bırakılan işlev veya metodun açıklaması.
+
+## <a name="remarks"></a>Açıklamalar
+ @No__t_0 içeren işlevlere Not eklemek için kullanılan öğeler, herhangi bir deyimden önce işlev gövdesine yerleştirilmelidir. Bir işlevi kullanım dışı olarak işaretlediğinizde, [\<summary >](../ide/summary-javascript.md) öğesini `<deprecated>` öğesiyle değiştirmenizi öneririz.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki kod `<deprecated>` öğesinin nasıl kullanılacağını gösterir.
+
+```javascript
+function areaFunction(radiusParam) {
+    /// <deprecated type="deprecate" >Determines the area of a circle when supplied a radius parameter.</deprecated>
+    /// <param name="radiusParam" type="Number">The radius of the circle.</param>
+    /// <returns type="Number">The area.</returns>
+    var areaVal;
+    areaVal = Math.PI * radiusParam * radiusParam;
+    return areaVal;
+}
+
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)

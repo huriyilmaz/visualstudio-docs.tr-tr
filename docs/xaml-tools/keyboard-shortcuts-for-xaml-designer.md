@@ -3,15 +3,15 @@ title: XAML Tasarımcısı için klavye kısayolları
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 40211cc7-294a-4943-85a4-941ad6418dad
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f104d554a86a49cce05f4e115db30122bcc3af42
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: fededb6127c306c9cecfca5bde479b0b80972212
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450750"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650915"
 ---
 # <a name="keyboard-shortcuts-for-xaml-designer"></a>XAML Tasarımcısı için klavye kısayolları
 
@@ -23,7 +23,7 @@ Bu tabloda, çalışma yüzeyinde öğelerle çalışmak için kullanılabilen k
 
 |**Bu eylemi gerçekleştirmek için**|**Bunu yapın**|
 | - |-----------------|
-|Öğe oluşturma|**Ctrl**@no__t tuşuna basın-1**N**|
+|Öğe oluşturma|**Ctrl** +**N** tuşlarına basın|
 |Yinelenen öğe|**Alt** tuşunu basılı tutun ve bir ok tuşuna basın.|
 |Denetimdeki metni düzenleme|**F2** tuşuna basın (çıkmak için **ESC** tuşuna basın)|
 |Tek bir öğe seçin|Öğeleri belgede göründükleri sırada seçmek için **Tab** tuşuna basın. (Ayrıca, ok tuşlarını kullanarak öğeleri de seçebilirsiniz.)|
@@ -32,7 +32,7 @@ Bu tabloda, çalışma yüzeyinde öğelerle çalışmak için kullanılabilen k
 |Seçili öğeleri taşı|Ok tuşlarına basın. (Her tuş tuşuna basarak geçiş mesafesini artırmak için **SHIFT** tuşunu basılı tutabilirsiniz.)|
 |Bir öğeyi 15 derece artışlarla döndürme|Öğeyi döndürürken **SHIFT** tuşunu basılı tutun|
 |Tüm öğeleri seç|**Ctrl**+**A** tuşlarına basın|
-|Tüm öğelerin seçimini temizle|**Ctrl**+**SHIFT**@no__t **-3 tuşlarına** basın|
+|Tüm öğelerin seçimini temizle|**Ctrl** +**SHIFT** +**A** 'ya basın|
 |Öğe tutamaçlarını göster veya gizle|**F9** tuşuna basın|
 |Öğe için bir özellik seçin|Seçili bir öğe ve Özellikler penceresi odaklanıldığında **Tab**tuşuna basın. (Odağı Özellikler penceresi değiştirmek için **Ctrl**+**sekmesini** kullanın.) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|
 

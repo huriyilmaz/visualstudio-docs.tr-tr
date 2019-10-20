@@ -5,21 +5,21 @@ ms.date: 01/10/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - refactoring [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b9ce37df2999ac27f5bc8e5aeb7edfb1959b8cc
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+ms.openlocfilehash: c79a85314313cffce26667be8dbaf99eaa67cebd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483636"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645353"
 ---
 # <a name="refactor-code"></a>Kodu yeniden düzenleme
 
-Yeniden düzenleme, anlama ve genişletmek daha kolay hale getirmek için kod değiştirme, ancak davranışını değiştirmeden işlemidir.
+Yeniden düzenleme, korumayı kolaylaştırmak, anlamak ve genişletmek, ancak davranışını değiştirmeden daha kolay hale getirmek için kodu değiştirme işlemidir.
 
 ## <a name="programming-languages"></a>Programlama dilleri
 
@@ -27,12 +27,12 @@ Visual Studio 'da farklı programlama dilleri için farklı yeniden düzenleme i
 
 - İçindekiler tablosunun bu bölümündeki sayfalar, ve Visual Basic için C# kullanılabilir olan yeniden düzenlemeler ' i kapsar. Bazı örnekler, [bir yöntem yeniden düzenlemesi ayıklar](reference/extract-method.md) ve [türü eşleşen bir dosya yeniden düzenleme öğesine taşınır](reference/move-type-to-matching-file.md).
 - Yeniden düzenleme C++ kodu hakkında daha fazla bilgi için bkz. [yazma veC++yeniden düzenleme kodu ()](/cpp/ide/writing-and-refactoring-code-cpp).
-- Yeniden düzenleme desteği için F# tarafından sağlanan [Visual F# Power Tools](https://marketplace.visualstudio.com/items?itemName=FSharpSoftwareFoundation.VisualFPowerTools), bir üçüncü taraf Visual Studio uzantısı.
+- İçin F# yeniden düzenleme desteği, üçüncü taraf bir Visual Studio uzantısı olan [ F# görsel güç araçları](https://marketplace.visualstudio.com/items?itemName=FSharpSoftwareFoundation.VisualFPowerTools)tarafından sağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hızlı Eylemler](../ide/quick-actions.md)
 - [Visual Studio IDE](../get-started/visual-studio-ide.md)
-- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Değişiklikleri Önizle](../ide/preview-changes.md)
 - [Yeniden düzenleme (Mac için Visual Studio)](/visualstudio/mac/refactoring)

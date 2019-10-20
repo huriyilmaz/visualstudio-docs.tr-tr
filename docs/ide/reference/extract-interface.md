@@ -1,9 +1,9 @@
 ---
-title: Bir arabirimi yeniden düzenleme ayıklayın
+title: Arabirim yeniden düzenlemesi Ayıkla
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.extractinterface
@@ -12,14 +12,14 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8890bac11a37d64c2ace4ea23b92a6ad20a6cbb0
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.openlocfilehash: 15da8bdf1a3df60a7ad4816ce578ec5672c85ecf
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65531688"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654423"
 ---
-# <a name="extract-an-interface-refactoring"></a>Bir arabirimi yeniden düzenleme ayıklayın
+# <a name="extract-an-interface-refactoring"></a>Arabirim yeniden düzenlemesi Ayıkla
 
 Bu yeniden düzenleme için geçerlidir:
 
@@ -27,60 +27,60 @@ Bu yeniden düzenleme için geçerlidir:
 
 - Visual Basic
 
-**Ne:** Varolan bir sınıf, yapı veya arabirim üyelerini kullanarak bir arabirim oluşturmanıza olanak sağlar.
+**Ne:** Bir sınıf, yapı veya arabirimden var olan üyeleri kullanarak bir arabirim oluşturmanıza olanak sağlar.
 
-**ne zaman:** Bir sınıf, yapı veya diğer sınıflar, yapılar veya arabirimleri tarafından devralınır arabirim üyeleri var.
+**Ne zaman:** Başka sınıflar, yapılar veya arabirimler tarafından devralınabilir bir sınıf, yapı veya arabirimdeki üyelere sahipsiniz.
 
-**Neden:** Arabirimleri, nesne yönelimli tasarım harika yapılarıdır. Sınıflar için tüm Eat, içecek, uyku gibi yaygın yöntemleri olabilir çeşitli hayvanlar (Dog, Kedi, Bird) sahip olduğunuzu düşünelim. IAnimal gibi bir arabirim kullanarak köpek Cat ve Bird ortak bir "SIGNATURE" Bu yöntemlere ait olmasını çalıştırmasına olanak tanır.
+**Neden:** Arabirimler, nesne odaklı tasarımlar için harika yapılardır. Çeşitli hayvanlar (köpek, kedi, kedi) için, hepsi, yiyecek, DRINK, uyku gibi yaygın yöntemlerle sahip olabilecek bir sınıf olduğunu düşünün. Ihayvan gibi bir arabirim kullanmak, bu yöntemler için köpek, Cat ve Bird ortak bir "imzaya" sahip olmasını sağlar.
 
-## <a name="extract-an-interface-refactoring"></a>Bir arabirimi yeniden düzenleme ayıklayın
+## <a name="extract-an-interface-refactoring"></a>Arabirim yeniden düzenlemesi Ayıkla
 
-1. İmlecinizi, sınıf adını yerleştirin.
+1. İmlecinizi sınıf adına yerleştirin.
 
    - C#:
 
-       ![Vurgulanan kodu:C#](media/extractinterface-highlight-cs.png)
+       ![Vurgulanan kod-C#](media/extractinterface-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanmış kodu - Visual Basic](media/extractinterface-highlight-vb.png)
+       ![Vurgulanan kod Visual Basic](media/extractinterface-highlight-vb.png)
 
-2. Ardından, aşağıdaki işlemlerden birini yapın:
+2. Sonra, aşağıdaki eylemlerden birini yapın:
 
-   - **Klavye**
-      - Tuşuna **Ctrl + R**, ardından **Ctrl + ı**. (Klavye kısayolu hangi profilini temel alan farklı olabilir, seçtiğiniz.)
-      - Tuşuna **Ctrl**+**.** Tetikleyici için **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **Arabirimi Ayıkla** gelen önizleme penceresi açılır.
-   - **Fare**
-      - Seçin **Düzenle > yeniden düzenleyin > Arabirimi Ayıkla**.
-      - Select sınıf adına sağ tıklayın **hızlı Eylemler ve yeniden düzenlemeler** menü ve select **Arabirimi Ayıkla** gelen önizleme penceresi açılır.
+   - **Klavyenizdeki**
+      - **CTRL + R**, ardından **CTRL + ı**tuşlarına basın. (Klavye kısayolunuz, seçtiğiniz profile bağlı olarak farklı olabilir.)
+      - **Ctrl** + tuşuna basın **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinden **Arabirimi Ayıkla** ' yı seçin.
+   - **Tığında**
+      - **Arabirimi ayıkla > düzenle > yeniden Düzenle**' yi seçin.
+      - Sınıfın adına sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin ve Önizleme penceresi açılır penceresinden **Arabirimi Ayıkla** ' yı seçin.
 
-3. İçinde **Arabirimi Ayıkla** , açılan iletişim kutusunda sorulan bilgileri girin:
+3. Açılan **Arabirimi Ayıkla** iletişim kutusunda, istenen bilgileri girin:
 
    ![Ayıklama Arabirimi](media/extractinterface-dialog-same-file.png)
 
    | Alan | Açıklama |
    | - | - |
-   | **Yeni arabirimin adı** | Oluşturulacak arabirimin adı. T adı varsayılan*ClassName*burada *ClassName* Yukarıda seçilen sınıf adıdır. |
-   | **Yeni dosya adı** | Arabirim içeren oluşturulan dosyanın adı. Arabirim adı ile bu ad t varsayılacaktır gibi*ClassName*burada *ClassName* Yukarıda seçilen sınıf adıdır. Seçeneğini de seçebilirsiniz **geçerli dosyaya eklemek**. |
-   | **Form arabirimi için genel üyeleri seçin** | Ayıklama arabirimi öğelerdir. İstediğiniz kadar çok seçebilirsiniz. |
+   | **Yeni arabirim adı** | Oluşturulacak arabirimin adı. Ad varsayılan olarak I*ClassName*olarak, burada *ClassName* yukarıda seçtiğiniz sınıfın adıdır. |
+   | **Yeni dosya adı** | Arabirimi içerecek oluşturulan dosyanın adı. Arabirim adında olduğu gibi, bu ad varsayılan olarak I*ClassName*olur; burada *ClassName* yukarıda seçtiğiniz sınıfın adıdır. Ayrıca **geçerli dosyaya ekleme**seçeneğini de belirleyebilirsiniz. |
+   | **Arabirim oluşturmak için ortak üyeleri seçin** | Arabirime Ayıklanacak öğeler. İstediğiniz kadar istediğiniz kadar seçebilirsiniz. |
 
-4. Seçin **Tamam**.
+4. **Tamam ' ı**seçin.
 
-   Belirtilen adı dosyasında arabirimi oluşturulur. Buna ek olarak, seçtiğiniz sınıfı bu arabirimi uygular.
+   Arabirim, belirtilen ad dosyasında oluşturulur. Ayrıca, seçtiğiniz sınıf bu arabirimi uygular.
 
    - C#:
 
-      ![Sonuçta elde edilen sınıfı-C#](media/extractinterface-class-cs.png)
+      ![Elde edilen sınıf-C#](media/extractinterface-class-cs.png)
 
-      ![Sonuçta elde edilen Interface-C#](media/extractinterface-interface-cs.png)
+      ![Sonuç arabirimi-C#](media/extractinterface-interface-cs.png)
 
    - Visual Basic:
 
-      ![Sonuçta elde edilen sınıfı - Visual Basic](media/extractinterface-class-vb.png)
+      ![Elde edilen sınıf-Visual Basic](media/extractinterface-class-vb.png)
 
-      ![Sonuçta elde edilen Interface - Visual Basic](media/extractinterface-interface-vb.png)
+      ![Sonuç arabirimi-Visual Basic](media/extractinterface-interface-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Düzenleme](../refactoring-in-visual-studio.md)
+- [Yeniden Düzenle](../refactoring-in-visual-studio.md)
 - [.NET Geliştiricileri için İpuçları](../csharp-developer-productivity.md)

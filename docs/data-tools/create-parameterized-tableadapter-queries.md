@@ -13,21 +13,21 @@ helpviewer_keywords:
 - TableAdapters, searching data
 - queries [Visual Studio], TableAdapters
 ms.assetid: 104d1d19-b5a9-4071-b81e-1b3af08e9c7b
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 33282f65c004643ec29b4c4d3074261ff437662c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 0926558c4d6e94032e2af2c75189f287da8d4811
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925649"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72642156"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>Parametreleştirilmiş TableAdapter sorguları oluşturma
 
-Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını karşılayan verileri döndürür. Örneğin, bir müşteri listesini, müşterilerin listesini döndüren SQL ifadesinin sonuna ekleyerek `WHERE City = @City` yalnızca belirli bir şehirdeki müşterileri görüntüleyecek şekilde parametreleştirebilirsiniz.
+Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını karşılayan verileri döndürür. Örneğin, bir müşteri listesini, müşterilerin listesini döndüren SQL ifadesinin sonuna `WHERE City = @City` ekleyerek yalnızca belirli bir şehirdeki müşterileri görüntüleyecek şekilde parametreleştirebilirsiniz.
 
 **Veri kümesi Tasarımcısı**parametreli TableAdapter sorguları oluşturursunuz. Bunları, **veri** menüsünde **Parametreleştirme veri kaynağı** komutuyla bir Windows uygulamasında da oluşturabilirsiniz. **Parametreleştirme veri kaynağı** komutu, formunuzda parametre değerlerini girebileceğiniz ve sorguyu çalıştıran denetimler oluşturur.
 
@@ -40,7 +40,7 @@ Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını 
 
 - SQL deyimi için istenen parametrelerle bir WHERE yan tümcesi ekleyerek yeni bir TableAdapter oluşturun. Daha fazla bilgi için bkz. [TableAdapters oluşturma ve yapılandırma](../data-tools/create-and-configure-tableadapters.md).
 
-     -veya-
+     veya
 
 - Var olan bir TableAdapter 'a bir sorgu ekleyin ve istenen parametrelere sahip WHERE yan tümcesini SQL deyimi 'ne ekleyin.
 
@@ -59,25 +59,25 @@ Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını 
 2. **Veri** menüsünde sorgu veya **veri Akıllı Etiketler** **Ekle** ' yi seçin.
 
     > [!NOTE]
-    > **Sorgu Ekle** ' de **veri** menüsünde kullanılabilir değilse, form üzerinde Parametreleştirme eklemek istediğiniz veri kaynağını görüntüleyen bir denetim seçin. Örneğin, form verileri bir <xref:System.Windows.Forms.DataGridView> denetimde görüntülüyorsa, onu seçin. Form, verileri ayrı denetimlerde görüntülüyorsa, veri bağlantılı herhangi bir denetimi seçin.
+    > **Sorgu Ekle** ' de **veri** menüsünde kullanılabilir değilse, form üzerinde Parametreleştirme eklemek istediğiniz veri kaynağını görüntüleyen bir denetim seçin. Örneğin, form verileri bir <xref:System.Windows.Forms.DataGridView> denetiminde görüntülüyorsa, onu seçin. Form, verileri ayrı denetimlerde görüntülüyorsa, veri bağlantılı herhangi bir denetimi seçin.
 
 3. **Veri kaynağı tablosu seçin** alanında, Parametreleştirme eklemek istediğiniz tabloyu seçin.
 
 4. Yeni bir sorgu oluşturuyorsanız **Yeni sorgu adı** kutusuna bir ad yazın.
 
-     -veya-
+     veya
 
      **Var olan sorgu adı** kutusunda bir sorgu seçin.
 
 5. **Sorgu metin** kutusuna parametreleri alan bir sorgu yazın.
 
-6. **Tamam**’ı seçin.
+6. **Tamam ' ı**seçin.
 
-     Bir <xref:System.Windows.Forms.ToolStrip> denetimde parametre ve bir **yükleme** düğmesi girişi için bir denetim eklenir.
+     Parametre ve bir **yükleme** düğmesi girmek için bir denetim, <xref:System.Windows.Forms.ToolStrip> denetimindeki forma eklenir.
 
 ### <a name="query-for-null-values"></a>Null değerler için sorgu
 
-TableAdapter parametrelerine, geçerli değeri olmayan kayıtları sorgulamak istediğinizde null değerler atanabilir. Örneğin, `ShippedDate` `WHERE` yan tümcesindeki bir parametreye sahip aşağıdaki sorguyu göz önünde bulundurun:
+TableAdapter parametrelerine, geçerli değeri olmayan kayıtları sorgulamak istediğinizde null değerler atanabilir. Örneğin, `WHERE` yan tümcesinde `ShippedDate` parametresine sahip olan aşağıdaki sorguyu göz önünde bulundurun:
 
 ```sql
 SELECT CustomerID, OrderDate, ShippedDate
@@ -96,7 +96,7 @@ Bir sorguyu null değerlerini kabul edecek şekilde etkinleştirmek için:
 
 2. **Özellikler** penceresinde **Parametreler**' i seçin, sonra **Parametreler koleksiyonu düzenleyicisini**açmak için üç nokta ( **...** ) düğmesini tıklatın.
 
-3. Null değerlere izin veren parametreyi seçin ve **AllowDBNull** özelliğini olarak `true`ayarlayın.
+3. Null değerlere izin veren parametreyi seçin ve **AllowDBNull** özelliğini `true` olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

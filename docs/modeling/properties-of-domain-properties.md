@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, domain properties
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23bac93b6e5892e8a4d4680e6829240fed9a03d8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: debf263fa18d2a6af8e95ee959002686540e2c06
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443126"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658198"
 ---
 # <a name="properties-of-domain-properties"></a>Etki Alanı Özelliklerinin Özellikleri
-A *domain özelliği* değer tutan bir model öğesi olan bir özelliktir. Örneğin, `Person` etki alanı sınıfı özellikleri vardır `Name` ve `BirthDate`. DSL tanımındaki etki alanı özellikleri, etki alanı sınıfı kutusuna Diyagramı'nda ve etki alanı sınıfı, DSL Gezgini altında listelenir. Daha fazla bilgi için [etki alanına özgü bir dili tanımlama nasıl](../modeling/how-to-define-a-domain-specific-language.md).
+Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğidir. Örneğin, `Person` etki alanı sınıfı, `Name` ve `BirthDate` özelliklerine sahip olabilir. DSL tanımında etki alanı özellikleri, diyagramdaki etki alanı sınıfı kutusunda ve DSL Gezgini 'ndeki etki alanı sınıfında listelenir. Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
 
 > [!NOTE]
-> "Özelliği" sözcüğü iki kullanımı vardır. A *domain özelliği* üzerinde bir etki alanı sınıfı tanımlayan bir özelliktir. Bunun aksine, DSL'nin birçok öğe sahip *özellikleri*, bu makalenin **özellikleri** DSL tanımı penceresinde. Örneğin, her etki alanı özelliği, bu konuda açıklanan özellikler kümesi vardır.
+> "Property" sözcüğünün iki kullanımı vardır. Bir *etki alanı özelliği* , bir etki alanı sınıfında tanımladığınız bir özelliktir. Buna karşılık, bir DSL 'nin birçok öğesi DSL tanımındaki **Özellikler** penceresinde listelenen *özelliklere*sahiptir. Örneğin, her etki alanı özelliği, bu konuda açıklanan bir dizi özellik içerir.
 
- Çalışma zamanında, bir kullanıcı etki alanı sınıfı örneğini oluşturduğunda, etki alanı özelliklerinin değerlerini Özellikler penceresinde görülebilir ve diyagramdaki şekilleri görüntülenebilir.
+ Çalışma zamanında, bir kullanıcı etki alanı sınıfının örneklerini oluşturduğunda, etki alanı özelliklerinin değerleri Özellikler penceresi görünebilir ve şekiller üzerinde görüntülenebilir.
 
- Çoğu etki alanı özellikleri sıradan CLR özellikleri olarak uygulanır. Ancak, bir programlama açısından bakıldığında, etki alanı özellikleri daha zengin işlevsellik sıradan program özellikleri vardır:
+ Çoğu etki alanı özelliği sıradan CLR özellikleri olarak uygulanır. Ancak, bir programlama noktasından, etki alanı özellikleri sıradan program özelliklerinden daha zengin işlevlere sahiptir:
 
-- Kurallar ve bir özelliğinin durumu izleme olayları tanımlayabilirsiniz. Daha fazla bilgi için [yanıt verme ve değişiklikleri yayma](../modeling/responding-to-and-propagating-changes.md).
+- Bir özelliğin durumunu izleyen kuralları ve olayları tanımlayabilirsiniz. Daha fazla bilgi için bkz. [değişiklikleri yanıtlama ve yayma](../modeling/responding-to-and-propagating-changes.md).
 
-- İşlem, özel olarak tutarsız durumları önlemeye yardımcı olur. Daha fazla bilgi için [gezinme ve güncelleştirme Program kodundaki modeli](../modeling/navigating-and-updating-a-model-in-program-code.md).
+- İşlemler tutarsız durumları önlemeye yardımcı olur. Daha fazla bilgi için bkz. [program kodunda modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-  Bir diyagram veya DSL Gezgini'nde bir etki alanı özelliğini seçtiğinizde, aşağıdaki öğeleri Özellikler penceresinde görebilirsiniz. Bu öğelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [bir etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+  Bir diyagramda veya DSL Gezgininde bir etki alanı özelliği seçtiğinizde, Özellikler penceresi aşağıdaki öğeleri görebilirsiniz. Bu öğelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 |Özellik|Açıklama|Varsayılan Değer|
 |-|-|-|
-|**Açıklama**|Belge oluşturulan tasarımcının kullanıcı arabirimi (UI) için kullanılan bir açıklaması.|\<yok >|
-|**Görünen ad**|Bu etki alanı özellik için oluşturulan tasarımcıda görüntülenecek ad. Boşluk ve noktalama işaretleri, örneğin "şarkı Title" içerebilir.|\<yok >|
-|**Öğe adı sağlayıcısı**|Bunun yalnızca belirlediğiniz geçerli `Is Element Name` için `true`. Varsayılan davranışı geçersiz kılma alan sınıfının yeni bir öğe için bir ad sağlar kod yazabilirsiniz.<br /><br /> DSL projesi içinde bir kod dosyasında, türetilen bir sınıf oluşturun <xref:Microsoft.VisualStudio.Modeling.ElementNameProvider>.<br /><br /> Ardından DSL Gezgini DSL kök sağ tıklatın ve eklemek dış türüne tıklayın. Sınıfın adını girin.<br /><br /> Bu etki alanı özelliği yeniden seçin ve açılan listeden sınıfın adını seçin.|\<yok >|
-|**Alıcı erişim değiştiricisi**|Etki alanı sınıfı, erişim düzeyi (`public` veya `internal`). Bu özelliği erişip hangi programda kod kapsamı denetler.|`public`|
-|**Yardım anahtar sözcüğü**|Bu alan özelliği için F1 Yardımı dizini oluşturmak için kullanılan isteğe bağlı anahtar sözcük.|\<yok >|
-|**Gözatılabilir olduğu**|Varsa `True`, bu DSL modelleri açıkken etki alanı özelliği kullanıcıya Özellikler penceresinde görüntülenir.<br /><br /> Varsa `False`, etki alanı özelliği kullanıcı Arabiriminde gizlenir.<br /><br /> Görünür ancak salt okunur etki alanı özelliği yapmak istiyorsanız, **kullanıcı Arabirimi salt okunur**.|`True`|
-|**Öğe adı:**|Varsa `True`, bu etki alanı özelliği DSL Gezgini içinde model öğesinin adı olarak görüntülenir.<br /><br /> Yeni model öğeleri bu özellik için benzersiz bir varsayılan bir değer alır. Bu değerleri nasıl oluşturulacağını denetlemek istiyorsanız, **öğe adı sağlayıcısı**.|`False`|
-|**Kullanıcı Arabirimi salt okunur**|Varsa `True`, kullanıcı arabirimini kullanarak etki alanı özelliğinin değeri değiştirilemez. Programlar tarafından hala ayarlanabilir ve Özellikler penceresinde görünür.<br /><br /> Kullanıcı etki alanı özelliği gizlemek istiyorsanız, ayarlama **olan gözatılabilir**. Programlar tarafından erişimi denetlemek istiyorsanız, **ayarlayıcı erişim değiştiricisi**.|`False`|
-|**tür**|Etki alanı özelliğin türünü (`Normal`, `Calculated`, veya `CustomStorage`). Daha fazla bilgi için [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|`Normal`|
-|**Ad**|Bu etki alanı özelliğinin adı. Örneğin geçerli bir tanımlayıcı olmalıdır **SongTitle**.|\<yok >|
-|**Notlar**|Bu etki alanı özelliği ile ilişkili resmi olmayan notlar.|\<yok >|
-|**Ayarlayıcı erişim değiştiricisi**|Ayarlayıcının erişim değiştiricisini. Bu, hangi programda kod özelliği ayarlayabilirsiniz kapsamı denetler.|`public`|
-|**Tür**|Özellik türü. Kullanılabilir türler listesine eklemek için DSL DSL Gezgini içinde kök sağ tıklayın ve tıklayın **dış türü Ekle**.|`String`|
+|**Açıklama**|Oluşturulan tasarımcının Kullanıcı arabirimini (UI) belgelemek için kullanılan açıklama.|\<none >|
+|**Görünen ad**|Bu etki alanı özelliği için oluşturulan tasarımcıda görüntülenecek ad. Boşluk ve noktalama işareti içerebilir, örneğin "şarkı başlığı".|\<none >|
+|**Öğe adı sağlayıcı**|Bu, yalnızca `true` `Is Element Name` ayarladıysanız geçerlidir. Bir etki alanı sınıfının yeni bir öğesi için bir ad sağlayan, varsayılan davranışı geçersiz kılan bir kod yazabilirsiniz.<br /><br /> DSL projesindeki bir kod dosyasında, <xref:Microsoft.VisualStudio.Modeling.ElementNameProvider> türetilen bir sınıf oluşturun.<br /><br /> Ardından DSL Gezgini ' nde DSL köküne sağ tıklayın ve dış tür Ekle ' ye tıklayın. Sınıfınızın adını girin.<br /><br /> Bu etki alanı özelliğini yeniden seçin ve açılan listeden sınıfın adını seçin.|\<none >|
+|**Alıcı erişim değiştiricisi**|Etki alanı sınıfına erişim düzeyi (`public` veya `internal`). Bu, program kodunun özelliğe erişebileceği kapsamı denetler.|`public`|
+|**Help anahtar sözcüğü**|Bu etki alanı özelliği için F1 yardımını dizine eklemek için kullanılan isteğe bağlı anahtar sözcük.|\<none >|
+|**Göz atılamaz**|@No__t_0, bu DSL modelleri açık olduğunda, Özellikler penceresindeki kullanıcıya etki alanı özelliği görüntülenir.<br /><br /> @No__t_0, etki alanı özelliği Kullanıcı arabiriminde gizlenir.<br /><br /> Etki alanı özelliğini görünür halde salt okunurdur, küme **yalnızca kullanıcı arabirimi salt okunurdur**.|`True`|
+|**Öğe adı**|@No__t_0, bu etki alanı özelliği DSL Gezgini 'ndeki model öğesinin adı olarak görüntülenecektir.<br /><br /> Yeni model öğeleri, bu özellik için benzersiz bir varsayılan değer alacaktır. Bu değerlerin nasıl oluşturulduğunu denetlemek istiyorsanız, **öğe adı sağlayıcısı**' nı ayarlayın.|`False`|
+|**UI salt okunurdur**|@No__t_0, Domain özelliğinin değeri kullanıcı arabirimi kullanılarak değiştirilemez. Hala programlar tarafından ayarlanabilir ve Özellikler penceresi görünür olur.<br /><br /> Etki alanı özelliğini kullanıcıdan gizlemek istiyorsanız, **Bu ayarı göz atılamaz olarak**ayarlayın. Erişimi programlara göre denetlemek istiyorsanız, **ayarlayıcı erişim değiştiricisi**' ni ayarlayın.|`False`|
+|**Denetlenmesi**|Etki alanı özelliği türü (`Normal`, `Calculated` veya `CustomStorage`). Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|`Normal`|
+|**Ad**|Bu etki alanı özelliğinin adı. Bunun geçerli bir tanımlayıcı olması gerekir, örneğin **SongTitle**.|\<none >|
+|**Notlar**|Bu etki alanı özelliği ile ilişkili resmi olmayan notlar.|\<none >|
+|**Ayarlayıcı erişim değiştiricisi**|Ayarlayıcı için erişim değiştiricisi. Bu, program kodunun özelliği ayarlayabileceği kapsamı denetler.|`public`|
+|**Türüyle**|Özelliğin türü. Kullanılabilir türler listesine eklemek için DSL Gezgini 'ndeki DSL köküne sağ tıklayın ve **dış tür Ekle**' ye tıklayın.|`String`|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

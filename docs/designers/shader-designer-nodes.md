@@ -3,17 +3,17 @@ title: Gölgelendirici Tasarımcısı Düğümleri
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 775d447b3e513e15eeafb1bfd90c54e3ffa70770
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 23877f9b94b498d87a89ae8e657aa2fe52984953
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925750"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634922"
 ---
 # <a name="shader-designer-nodes"></a>Gölgelendirici Tasarımcısı düğümleri
 Belgelerinin bu bölümündeki makaleler, grafik etkileri oluşturmak için kullanabileceğiniz çeşitli gölgelendirici tasarımcı düğümleri hakkında bilgiler içerir.
@@ -25,13 +25,13 @@ Gölgelendirici Tasarımcısı görsel etkileri bir grafik olarak temsil eder. B
 Tüm düğümler ortak öğelerin birleşiminden oluşur. Her düğümün sağ tarafında en az bir çıkış terminali vardır (gölgelendirici çıkışını temsil eden son renk düğümü hariç). Hesaplamaları veya doku örnekleyicileri temsil eden düğümler, sol taraflarındaki giriş terminallerine sahiptir, ancak bilgileri temsil eden düğümlerin giriş terminalleri yoktur. Çıkış terminalleri, bir düğümden diğerine bilgi taşımak için giriş terminallere bağlanır.
 
 ### <a name="promotion-of-inputs"></a>Girişlerin yükseltilmesi
-Gölgelendirici Tasarımcısının, efektin bir oyun veya uygulamada kullanılabilmesi için sonunda HLSL kaynak kodu oluşturması gerektiğinden, gölgelendirici tasarımcı düğümleri HLSL 'ın kullandığı tür yükseltme kurallarına tabidir. Grafik donanımı öncelikli olarak kayan nokta değerlerinde çalıştığından, farklı türler arasında yükseltme yapın `int` — Örneğin, öğesinden `float`veya türünden `float` `double`- Bunun yerine, grafik donanımı birden çok bilgi halinde aynı işlemi aynı anda kullandığından, bir dizi girişin daha kısa olması, en uzun giriş boyutuyla eşleşecek şekilde uzadığı için farklı bir promosyon türü meydana gelebilir. Nasıl boyunun, girişin türüne ve ayrıca işlemin kendisine göre belirlenir:
+Gölgelendirici Tasarımcısının, efektin bir oyun veya uygulamada kullanılabilmesi için sonunda HLSL kaynak kodu oluşturması gerektiğinden, gölgelendirici tasarımcı düğümleri HLSL 'ın kullandığı tür yükseltme kurallarına tabidir. Grafik donanımı öncelikle kayan nokta değerlerinde çalıştığından, farklı türler arasında yükseltme yazın — örneğin, `int` `float` veya `float` 'den `double` 'ye). Bunun yerine, grafik donanımı birden çok bilgi halinde aynı işlemi aynı anda kullandığından, bir dizi girişin daha kısa olması, en uzun giriş boyutuyla eşleşecek şekilde uzadığı için farklı bir promosyon türü meydana gelebilir. Nasıl boyunun, girişin türüne ve ayrıca işlemin kendisine göre belirlenir:
 
 - **Daha küçük tür skaler bir değer ise:**
 
      Skalar değerin değeri, daha büyük girişe eşit olan bir Vector öğesine çoğaltılır. Örneğin, işlemin en büyük girişi işlemin ne olursa olsun üç öğeli bir vektör olduğunda, 5,0 skaler girişi vektörü (5,0, 5,0, 5,0) olur.
 
-- **Küçük tür bir Vector ise ve işlem çarpanda (\*,/,%, vb.) varsa:**
+- **Daha küçük tür bir Vector ise ve işlem çarpanda (\*,/,%, vb.) ise:**
 
      Vector değeri, daha büyük girişe eşit olan bir Vector öğesinin önde gelen öğelerine kopyalanır ve sondaki öğeler 1,0 olarak ayarlanır. Örneğin, vektör girişi (5,0, 5,0) dört öğeli vektörle çarpıldığı zaman vektör (5,0, 5,0, 1,0, 1,0) olur. Bu, çarpma kimliği, 1,0 kullanılarak çıktının üçüncü ve dördüncü öğelerini korur.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Sınıf Tasarımcısı) koleksiyon ilişkilendirmesini Görselleştirme'
+title: 'Nasıl Yapılır: Koleksiyon İlişkilendirmesini Görselleştirme (Sınıf Tasarımcısı)'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - collections, collection associations
 - Class Designer [Visual Studio], collection associations
 ms.assetid: 54e39838-2fc9-4dc2-85b6-7e88a743108e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 09c23b59711a95f0729555acfd0203160bd9995d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e074eee5972bcf952108a36f52c0915057c470a3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975079"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631318"
 ---
-# <a name="how-to-visualize-a-collection-association-in-class-designer"></a>Nasıl yapılır: Sınıf tasarımcısında koleksiyon ilişkilendirmesini Görselleştirme
+# <a name="how-to-visualize-a-collection-association-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı bir koleksiyon ilişkilendirmesini görselleştirme
 
-Özellikleri ve diğer türler alanlar, sınıf diyagramı üzerinde bir koleksiyon ilişkilendirmesi olarak görüntülenebilir. Alanın türünü bağlama sahip olan sınıfı bir satır olarak bir alan veya özellik görüntüleyen normal bir ilişkilendirme, koleksiyon ilişkilendirmesini bağlama toplanan türüne sahip olan sınıfı bir satır olarak görüntülenir.
+Diğer türlerin koleksiyonları olan özellikler ve alanlar, sınıf diyagramında bir koleksiyon ilişkisi olarak görüntülenebilir. Bir alan veya özelliği sahip olan sınıfı alanın türüne bağlayan bir çizgi olarak görüntüleyen düzenli bir ilişkilendirmeden farklı olarak, bir koleksiyon ilişkisi, sahip olan sınıfı toplanan türe bağlayan bir çizgi olarak görüntülenir.
 
-## <a name="to-create-a-collection-association"></a>Koleksiyon ilişkilendirmesini oluşturmak için
+## <a name="to-create-a-collection-association"></a>Bir koleksiyon ilişkilendirmesi oluşturmak için
 
-1. Kod içinde bir özellik veya alan türü kendisi olan bir türü kesin belirlenmiş koleksiyon oluşturun.
+1. Kod içinde, türü kesin olarak belirlenmiş bir koleksiyon olan bir özellik veya alan oluşturun.
 
-2. Sınıf diyagramında sınıf özellikler ve alanları gösterilen şekilde genişletin.
+2. Sınıf diyagramında sınıfı genişleterek Özellikler ve alanlar gösterilir.
 
-3. Sınıfı, alan veya özellik sağ tıklatın ve seçin **koleksiyon ilişkilendirmesi olarak göster**.
+3. Sınıfında alan veya özelliğe sağ tıklayın ve **koleksiyon ilişkilendirmesi olarak göster**' i seçin.
 
-Özellik veya alan için toplanan tür bağlama bir ilişkilendirme çizgisi olarak gösterilir.
+Özellik veya alan, toplanan türe bağlanan bir ilişkilendirme çizgisi olarak gösterilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Türler arasında ilişkilendirme oluşturma](how-to-create-associations-between-types.md)
+- [Nasıl yapılır: türler arasında Ilişkilendirme oluşturma](how-to-create-associations-between-types.md)
 - [Sınıfları ve türleri tasarlama](designing-and-viewing-classes-and-types.md)

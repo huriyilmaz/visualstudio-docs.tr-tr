@@ -1,37 +1,37 @@
 ---
-title: 'Nasıl yapılır: Üretilen kod için kod çözümleme uyarılarını bastırma | Microsoft Docs'
+title: 'Nasıl yapılır: üretilen kod için kod analizi uyarılarını gizleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: 3a96434e-d419-43a7-81ba-95cccac835b8
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9949a72abc46f2212fe448e193a06cce90b6df7c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 52caadd7f4dd9349eccb80a366a1458212aba5ca
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438981"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646270"
 ---
-# <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>Nasıl yapılır: Üretilen Kod İçin Kod Analizi Uyarılarını Gizleme
+# <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>Nasıl yapılır: Üretilen Kod İçin Kod Analizi Uyarılarını Bastırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yönetilen kod derleyiciler genellikle hızlı kod geliştirilmesini sağlamak üzere bir projeye eklenen kod oluşturur. Ayrıca, geliştiriciler genellikle üçüncü taraf araçları uygulamaları hızla geliştirmenizi yardımcı olması için kullanın. Bu araçlar ayrıca projesine eklenen kod oluşturur.  
-  
- Kod Analizi üretilen kodda bulur kural ihlalleri görmek isteyebilirsiniz. Ancak, görüntülemek ve ihlalin içerdiği kodu korumak görmek istemeyebilirsiniz.  
-  
- **Üretilen koddan gelen sonuçları Gizle** Kod Analizi özellik sayfasında projenin onay kutusu, bir üçüncü taraf araç tarafından üretilen koddan Kod Analizi uyarıları görmek isteyip istemediğinizi seçmenizi sağlar.  
-  
+Yönetilen kod derleyicileri genellikle hızlı kod geliştirmeyi kolaylaştırmak için bir projeye eklenen kodu oluşturur. Ayrıca, geliştiriciler uygulamaları hızla geliştirmeye yardımcı olmak için genellikle üçüncü taraf araçları kullanır. Bu araçlar projeye eklenen kodu da oluşturur.
+
+ Kod analizinin üretilen kodda bulduğu kural ihlallerini görmek isteyebilirsiniz. Ancak, ihlalin bulunduğu kodu görüntüleyemez ve koruyabilmeniz durumunda bunları görmek istemeyebilirsiniz.
+
+ Bir projenin kod analizi özelliği sayfasında, **üretilen koddan sonuçları gösterme** onay kutusu, üçüncü taraf bir araç tarafından oluşturulan koddan kod analizi uyarılarını görmek isteyip istemediğinizi seçmenizi sağlar.
+
 > [!NOTE]
-> Bu seçenek hataları ve Uyarıları formları ve şablonlar görüntülendiğinde Kod Analizi hataları ve Uyarıları üretilen koddan gelen engellemez. Hem görüntüleyebilir ve bir form veya şablon için kaynak kodunu korumak.  
-  
-### <a name="to-suppress-warnings-for-generated-code-in-a-project"></a>Bir projedeki üretilen kod için uyarıları bastırmak için  
-  
-1. Çözüm Gezgini'nde projeye sağ tıklayın ve ardından **özellikleri**.  
-  
-2. Tıklayın **Kod Analizi**.  
-  
-3. Seçin **üretilen koddan gelen sonuçları Gizle** onay kutusu.
+> Bu seçenek, hatalar ve uyarılar formlarda ve şablonlarda görüntülendiğinde, kod analizi hatalarını ve üretilen koddan gelen uyarıları göstermez. Bir form veya şablon için kaynak kodu görüntüleyebilir ve bakımını yapabilirsiniz.
+
+### <a name="to-suppress-warnings-for-generated-code-in-a-project"></a>Bir projede oluşturulan koda yönelik uyarıları gizlemek için
+
+1. Çözüm Gezgini ' de projeye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+
+2. **Kod Analizi**' ne tıklayın.
+
+3. **Oluşturulan koddan sonuçları bastır** onay kutusunu seçin.

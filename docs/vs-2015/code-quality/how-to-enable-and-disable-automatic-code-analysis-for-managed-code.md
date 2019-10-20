@@ -1,32 +1,32 @@
 ---
-title: 'Nasıl yapılır: Yönetilen kod için otomatik kod analizini devre | Microsoft Docs'
+title: 'Nasıl yapılır: yönetilen kod için otomatik kod analizini etkinleştirme ve devre dışı bırakma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: 7c22d194-5fea-4f23-b02d-19344fa64a64
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c4f5de2926cb38f570defa95463489523c694132
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d87cc57b31e63ae7aafa53c335df2b56f86a0409
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142278"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658095"
 ---
-# <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>Nasıl yapılır: Yönetilen kod için otomatik kod analizini devre dışı bırakma ve etkinleştirme
+# <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>Nasıl yapılır: Yönetilen Kod İçin Otomatik Kod Çözümlemesini Etkinleştirme ve Devre Dışı Bırakma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Her bir yönetilen kod projesi derlemeden önce çalıştırılacak Kod Analizi yapılandırabilirsiniz. Her biri için farklı kod analizi özellikleri ayarlayabilirsiniz [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] yapılandırma.  
-  
-### <a name="to-enable-or-disable-automatic-code-analysis"></a>Etkinleştirme veya devre dışı otomatik kod çözümlemesini  
-  
-1. İçinde **Çözüm Gezgini**projeye sağ tıklayın ve ardından **özellikleri**.  
-  
-2. Proje Özellikleri iletişim kutusunda tıklayın **Kod Analizi**.  
-  
-3. İçinde derleme türünü belirtmeniz **yapılandırma** ve hedef platform **Platform**.  
-  
-4. Etkinleştirmek veya otomatik kod analizini devre dışı bırakmak için seçin veya temizleyin **etkinleştir (code_analysıs sabitini tanımlar) derlemede kod analizini** onay kutusu.
+Kod analizini, her bir yönetilen kod projesi derlemeden önce çalışacak şekilde yapılandırabilirsiniz. Her bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] yapılandırması için farklı kod analizi özellikleri ayarlayabilirsiniz.
+
+### <a name="to-enable-or-disable-automatic-code-analysis"></a>Otomatik Kod analizini etkinleştirmek veya devre dışı bırakmak için
+
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+
+2. Projenin Özellikler iletişim kutusunda, **Kod Analizi**' ne tıklayın.
+
+3. **Yapılandırmada** derleme türünü ve hedef platformu **Platform**' da belirtin.
+
+4. Otomatik Kod analizini etkinleştirmek veya devre dışı bırakmak için **derlemede Kod analizini etkinleştir (CODE_ANALYSIS sabiti tanımlar)** onay kutusunu işaretleyin veya temizleyin.

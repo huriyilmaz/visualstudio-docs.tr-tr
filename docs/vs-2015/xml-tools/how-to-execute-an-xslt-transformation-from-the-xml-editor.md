@@ -6,64 +6,64 @@ ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 56a0fe82-5231-487d-8b6e-a08a9b04e0fc
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8085864ebdb73e8233322a2f91a044dec95dc126
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4b305d88779603b374e5f95842d7a5271a657268
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431045"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666530"
 ---
-# <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Nasıl yapılır: XML Düzenleyicisinden XSLT Dönüştürmesi Yürütme
+# <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Nasıl yapılır: XML düzenleyicisinden XSLT dönüşümü yürütme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML Düzenleyicisi'ni dönüştürmeyi gerçekleştirmek ve çıktısını görüntülemek bir XSLT stil sayfası bir XML belgesi ile ilişkilendirmenizi sağlar. XSLT dönüşümü sonuç çıktısı, yeni bir belge penceresi görüntülenir.  
-  
- **Çıkış** özellik çıkış dosya adını belirtir. Varsa **çıkış** özelliği boşsa, bir dosya adı, geçici dizin oluşturulur. Dosya uzantısı dayanır `xsl:output` öğesi, stil sayfası ve .xml, .txt veya .htm olabilir.  
-  
- Varsa **çıkış** özelliği, bir dosya adı ile bir .htm belirtir ya da .html uzantısı, XSLT çıkış önizlemesi kullanarak [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Diğer tüm dosya uzantıları tarafından seçilen varsayılan Düzenleyicisi kullanılarak açılan [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio. Örneğin, .xml dosya uzantısı ise Visual Studio XML Düzenleyicisi'ni kullanır.  
-  
-### <a name="to-execute-an-xslt-transformation-from-an-xml-document"></a>Bir XML belgesinden XSLT dönüştürmesi yürütme için  
-  
-1. Bir XML belgesi bir XML düzenleyicisinde açın.  
-  
-2. Bir XSLT stil sayfası XML belge ile ilişkilendirin.  
-  
-    - Ekleme bir `xml-stylesheet` işleme yönergesi için XML belgesi. Örneğin, aşağıdaki satırı ekleyin `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>` için belge giriş.  
-  
-         -veya-  
-  
-    - XSLT stil sayfası kullanılarak ekleme **özellikleri** penceresi. Belgedeki **Özellikler penceresi**, tıklayın **Gözat** için düğme **stil sayfası** alan, XSLT stil sayfası seçin ve tıklayın **açın**.  
-  
-3. Tıklayın **ShowXSL çıkış** düğmesini **XML Düzenleyicisi** araç çubuğu.  
-  
+XML Düzenleyicisi bir XSLT stil sayfasını bir XML belgesi ile ilişkilendirmenize, dönüştürmeyi gerçekleştirmenize ve çıktıyı görüntülemenize olanak sağlar. XSLT dönüşümünde elde edilen çıktı yeni bir belge penceresinde görüntülenir.
+
+ **Output** özelliği, çıktının dosya adını belirtir. **Output** özelliği boşsa, geçici dizininizde bir dosya adı oluşturulur. Dosya uzantısı, stil sayfanızdaki `xsl:output` öğesine dayalıdır ve. xml,. txt veya. htm olabilir.
+
+ **Output** özelliği. htm veya. html uzantılı bir dosya adı BELIRTIYORSA, XSLT çıkışının [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer kullanılarak önizlemesi yapılır. Diğer tüm dosya uzantıları, [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio tarafından seçilen varsayılan düzenleyici kullanılarak açılır. Örneğin, dosya uzantısı. xml ise, Visual Studio XML düzenleyicisini kullanır.
+
+### <a name="to-execute-an-xslt-transformation-from-an-xml-document"></a>Bir XML belgesinden XSLT dönüşümünü yürütmek için
+
+1. XML düzenleyicisinde bir XML belgesi açın.
+
+2. XSLT stil sayfasını XML belgesiyle ilişkilendirin.
+
+    - XML belgesine bir `xml-stylesheet` işleme yönergesi ekleyin. Örneğin, belge giriş satırına aşağıdaki satırı `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>` ekleyin.
+
+         veya
+
+    - **Özellikler** PENCERESINI kullanarak XSLT stil sayfasını ekleyin. Belge **Özellikleri penceresinde** **stil sayfası** alanı için **Araştır** düğmesine tıklayın, XSLT stil sayfasını seçin ve **Aç**' a tıklayın.
+
+3. **XML Düzenleyicisi** araç çubuğundaki **showxsl çıkışı** düğmesine tıklayın.
+
     > [!NOTE]
-    > XML belge ile ilişkilendirilmiş hiç stil sayfası varsa, bir iletişim kutusu kullanmak için stil sayfası girmenizi ister.  
-    >   
-    >  XSLT dönüşümü sonuç çıktısı, yeni bir belge penceresi görüntülenir.  
-  
-### <a name="to-execute-an-xslt-transformation-from-an-xslt-style-sheet"></a>Bir XSLT stil sayfasındaki XSLT dönüştürmesi yürütme için  
-  
-1. Bir XSLT stil sayfası XML düzenleyicisinde açın.  
-  
-2. Bir XML belgesinde belirtin **giriş** belge alanını **özellikleri** penceresi.  
-  
+    > XML belgesiyle ilişkili bir stil sayfası yoksa, bir iletişim kutusu sizden kullanılacak stil sayfasını sağlamanızı ister.
+    >
+    >  XSLT dönüşümünde elde edilen çıktı yeni bir belge penceresinde görüntülenir.
+
+### <a name="to-execute-an-xslt-transformation-from-an-xslt-style-sheet"></a>XSLT stil sayfasından XSLT dönüşümünü yürütmek için
+
+1. XML düzenleyicisinde bir XSLT stil sayfası açın.
+
+2. Belge **özellikleri** penceresinin **GIRIŞ** alanında bir XML belgesi belirtin.
+
     > [!NOTE]
-    > XML belge dönüştürme için kullanılan giriş belgesidir. XSLT dönüşümü başlatıldığında, bir belge belirtilmezse **Dosya Aç** iletişim kutusu görünür ve o anda bir belge belirtebilirsiniz.  
-  
-3. Tıklayın **ShowXSLT çıkış** düğmesini **XML Düzenleyicisi** araç çubuğu.  
-  
-     XSLT dönüşümü sonuç çıktısı, yeni bir belge penceresi görüntülenir.  
-  
-### <a name="to-provide-a-different-output-file-name"></a>Farklı çıkış dosyası adı sağlamak için  
-  
-1. Bir dosya adı belirtin **çıkış** belge alanını **özellikleri** penceresi.  
-  
-2. Tıklayın **ShowXSLT çıkış** düğmesini **XML Düzenleyicisi** araç çubuğu.  
-  
-     XSLT dönüşümü sonuç çıktısı, yeni bir belge penceresi görüntülenir ve çıkış penceresinde kullanılan Düzenleyicisi'nin dosya uzantısını üzerinde bağlıdır, **çıkış** belge özelliği.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+    > XML belgesi, dönüştürme için kullanılan giriş belgesidir. XSLT dönüşümü başlatıldığında bir belge belirtilmemişse, **Dosya Aç** iletişim kutusu görüntülenir ve o sırada bir belge belirtebilirsiniz.
+
+3. **XML Düzenleyicisi** araç çubuğundaki **showxslt çıkışı** düğmesine tıklayın.
+
+     XSLT dönüşümünde elde edilen çıktı yeni bir belge penceresinde görüntülenir.
+
+### <a name="to-provide-a-different-output-file-name"></a>Farklı bir çıkış dosyası adı sağlamak için
+
+1. Belge **özellikleri** penceresinin **çıktı** alanında bir dosya adı belirtin.
+
+2. **XML Düzenleyicisi** araç çubuğundaki **showxslt çıkışı** düğmesine tıklayın.
+
+     XSLT dönüşümünde elde edilen çıktı yeni bir belge penceresinde görüntülenir ve çıkış penceresinde kullanılan Düzenleyici, **Çıkış** belgesi özelliğinin dosya uzantısına bağlıdır.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XML Düzenleyicisi](../xml-tools/xml-editor.md)

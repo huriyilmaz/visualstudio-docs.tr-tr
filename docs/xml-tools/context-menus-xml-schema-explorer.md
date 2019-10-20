@@ -3,23 +3,23 @@ title: XML şema Gezgini 'nde bağlam menüleri
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 42ab17ca-b8c1-40d7-beda-d033f66fe874
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e74bf2cdf2da8007af11875c018eebc86bd41cab
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: a9310102177e19d2129dd620285d6c45df63ec78
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926368"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651197"
 ---
 # <a name="context-menus-xml-schema-explorer"></a>Bağlam menüleri (XML şeması Gezgini)
 
 Bağlam menüsü, bir şeye sağ tıkladığınızda görüntülenen bir menü olur. Şemaya özgü aramalar ve diğer işlemleri gerçekleştirmek için aşağıdaki bağlam menüsü öğeleri kullanılır.
 
-## <a name="node-type-schema-set"></a>Düğüm türü: Şema kümesi
+## <a name="node-type-schema-set"></a>Düğüm türü: şema kümesi
 
 Aşağıdaki tabloda, bir şema kümesi düğümü için kullanılabilen seçenekler açıklanmaktadır.
 
@@ -30,24 +30,24 @@ Aşağıdaki tabloda, bir şema kümesi düğümü için kullanılabilen seçene
 |**Genel öğeleri göster**|Şema kümesindeki tüm genel öğeleri bulur ve vurgular.|
 |**Özellik Penceresi**|**Özellikler** penceresini açar (zaten açık değilse). Bu pencere, düğüm hakkındaki bilgileri görüntüler.|
 
-## <a name="node-type-namespace"></a>Düğüm türü: Ad Alanı
+## <a name="node-type-namespace"></a>Düğüm türü: ad alanı
 Aşağıdaki tabloda, bir ad alanı düğümü için kullanılabilen seçenekler açıklanmaktadır.
 
 |Seçenek|Açıklama|
 |-|-----------------|
 |**Tüm gelen başvuruları göster**|Seçilen ad alanını içeri aktarma dosyalarını bulur ve vurgular.|
-|**Tüm giden başvuruları göster**|Seçili ad alanındaki her dosya için aşağıdakileri bulur ve vurgular:<br /><br /> -İçeri aktarma deyimlerine bir `schemaLocation` özniteliği olmadan başvuruda bulunulan tüm ad alanları.<br />-İçeri aktarma ve ekleme deyimlerine ait `schemaLocation` özniteliğinde belirtilen bir ad alanındaki tüm dosyalar.|
+|**Tüm giden başvuruları göster**|Seçili ad alanındaki her dosya için aşağıdakileri bulur ve vurgular:<br /><br /> -İçeri aktarma deyimlerine `schemaLocation` özniteliği olmadan başvurulan tüm ad alanları.<br />-İçeri aktarma ve ekleme deyimlerine ait `schemaLocation` özniteliğinde belirtilen bir ad alanındaki tüm dosyalar.|
 |**Genel türleri göster**|Seçilen ad alanındaki tüm genel türleri bulur ve vurgular.|
 |**Genel öğeleri göster**|Seçilen ad alanındaki tüm genel öğeleri bulur ve vurgular.|
 |**Özellik Penceresi**|**Özellikler** penceresini açar (zaten açık değilse). Bu pencere, düğüm hakkındaki bilgileri görüntüler.|
 
-## <a name="node-type-file"></a>Düğüm türü: Dosya
+## <a name="node-type-file"></a>Düğüm türü: dosya
 Aşağıdaki tabloda bir dosya düğümü için kullanılabilen seçenekler açıklanmaktadır.
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Tüm gelen başvuruları göster**|Dahil edilen ve içeri aktarma deyimlerinin `schemaLocation` özniteliklerinde seçili dosyayı belirten tüm dosyaları bulur ve vurgular.|
-|**Tüm giden başvuruları göster**|Aşağıdakileri bulur ve vurgular:<br /><br /> - `schemaLocation` Özniteliği olmayan tüm Import deyimlerinin ad alanı özniteliklerinde belirtilen tüm ad alanları.<br />-Tüm Import ve Include deyimlerinin `schemaLocation` özniteliklerinde belirtilen tüm dosyalar.|
+|**Tüm gelen başvuruları göster**|İçerme ve içeri aktarma deyimlerinin `schemaLocation` özniteliklerinde seçili dosyayı belirten tüm dosyaları bulur ve vurgular.|
+|**Tüm giden başvuruları göster**|Aşağıdakileri bulur ve vurgular:<br /><br /> -@No__t_0 özniteliği olmayan tüm Import deyimlerinin ad alanı özniteliklerinde belirtilen tüm ad alanları.<br />-Tüm Import ve Include deyimlerinin `schemaLocation` özniteliklerinde belirtilen tüm dosyalar.|
 |**Genel türleri göster**|Bu dosyadaki tüm genel türleri bulur ve vurgular.|
 |**Genel öğeleri göster**|Bu dosyadaki tüm genel öğeleri bulur ve vurgular.|
 |**Kodu görüntüle**|XML düzenleyicisinde Seçili düğümü içeren dosyayı açar. XML şeması Gezgininde seçilen öğe, XML düzenleyicisinde de seçilir.|
@@ -63,19 +63,19 @@ Aşağıdaki tabloda tüm genel düğümler için kullanılabilen seçenekler a�
 |**Kodu görüntüle**|XML düzenleyicisinde Seçili düğümü içeren dosyayı açar. XML şeması Gezgininde seçilen öğe, XML düzenleyicisinde de seçilir.|
 |**Özellik Penceresi**|**Özellikler** penceresini açar (zaten açık değilse). Bu pencere, düğüm hakkındaki bilgileri görüntüler.|
 
-## <a name="node-type-element"></a>Düğüm türü: Öğe
+## <a name="node-type-element"></a>Düğüm türü: öğe
 Yukarıda açıklanan genel düğüm seçeneklerine ek olarak, öğe düğümleri için bağlam menüsü aşağıdaki seçeneklere sahiptir:
 
 |Seçenek|Açıklama|
 |-|-----------------|
 |**Tür tanımına git**|Seçili öğenin tür tanımına gider. Bu, öğesi için kullanılan tür genel bir tür olduğunda geçerlidir.|
 |**Özgün öğeye git**|Öğe başvuruları için, öğenin gerçek tanımına gider.|
-|**Tüm başvuruları göster**|Genel öğeler için, seçili öğe için tüm başvuruları bulur ve vurgular ( `ref="selectedElement"`olan öğeler).|
+|**Tüm başvuruları göster**|Genel öğeler için, seçili öğe için tüm başvuruları bulur ve vurgular (`ref="selectedElement"` olan öğeler).|
 |**Değiştirme grubunun üyelerini göster**|Değiştirme grubunun kafaları için, seçili öğenin üyesi olduğu değiştirme grubunun üyesi olan tüm öğeleri bulur ve vurgular. Bu, doğrudan ve dolaylı katılımcıları gösterir.|
 |**Değiştirme grubu kafalarını göster**|Bir değiştirme grubunun üyesi olan genel öğeler için, aşağıdaki gibi, seçili öğe için tüm doğrudan ve dolaylı kafaları bulur ve vurgular:<br /><br /> -Seçili öğede bir değiştirme grubu kafası belirtildi.<br />-Baş öğesinde bir değiştirme grubu kafası belirtildi.|
 |**Örnek XML oluştur**|Yalnızca genel öğeler için kullanılabilir. Genel öğe için örnek bir XML dosyası oluşturur.|
 
-## <a name="node-type-global-types"></a>Düğüm türü: Genel türler
+## <a name="node-type-global-types"></a>Düğüm türü: genel türler
 Yukarıda açıklanan genel düğüm seçeneklerine ek olarak, genel tür düğümlerinin bağlam menüsü aşağıdaki seçeneklere sahiptir:
 
 |Seçenek|Açıklama|
@@ -85,32 +85,32 @@ Yukarıda açıklanan genel düğüm seçeneklerine ek olarak, genel tür düğ�
 |**Tüm türetilmiş türleri göster**|Seçilen türden doğrudan ve dolaylı olarak türetilen tüm türleri bulur ve vurgular.|
 |**Tüm üst öğeleri göster**|Tüm üst (taban) türlerini göster.|
 
-## <a name="node-type-attribute"></a>Düğüm türü: Öznitelik
+## <a name="node-type-attribute"></a>Düğüm türü: öznitelik
 Yukarıda açıklanan genel düğüm seçeneklerine ek olarak, öznitelik düğümleri için bağlam menüsü aşağıdaki seçeneklere sahiptir:
 
 |Seçenek|Açıklama|
 |-|-----------------|
 |**Tür tanımına git**|Özniteliği için kullanılan tür genel bir tür olduğunda, Seçili özniteliğin tür tanımına gider.|
 |**Özgün özniteliğe git**|Öznitelik başvuruları için, özniteliğin gerçek tanımına gider.|
-|**Tüm başvuruları göster**|Genel öznitelikler için, seçilen özniteliğe ilişkin tüm başvuruları bulur ve vurgular (diğer `ref="selectedAttribute"`öznitelikler).|
+|**Tüm başvuruları göster**|Genel öznitelikler için, seçili özniteliğe tüm başvuruları bulur ve vurgular (`ref="selectedAttribute"` olan diğer öznitelikler).|
 
-## <a name="node-type-attribute-group"></a>Düğüm türü: Öznitelik grubu
+## <a name="node-type-attribute-group"></a>Düğüm türü: öznitelik grubu
 Yukarıda açıklanan genel düğüm seçeneklerine ek olarak, öznitelik grubu düğümleri için bağlam menüsü aşağıdaki seçeneklere sahiptir:
 
 |Seçenek|Açıklama|
 |-|-----------------|
 |**Tanıma Git**|Başvurular için, özniteliğin gerçek tanımına gider.|
 |**Tüm üyeleri göster**|Öznitelik grubunun tüm üyelerini bulur ve vurgular.|
-|**Tüm başvuruları göster**|Seçilen öznitelik grubuna yönelik tüm başvuruları bulur ve vurgular ( `ref="selectedAttributeGroup"`öznitelik grupları).|
+|**Tüm başvuruları göster**|Seçilen öznitelik grubuna tüm başvuruları bulur ve vurgular (`ref="selectedAttributeGroup"` olan öznitelik grupları).|
 
-## <a name="node-type-named-group"></a>Düğüm türü: Adlandırılmış Grup
+## <a name="node-type-named-group"></a>Düğüm türü: adlandırılmış Grup
 Yukarıda açıklanan genel düğüm seçeneklerine ek olarak, adlandırılmış Grup düğümleri için bağlam menüsü aşağıdaki seçeneklere sahiptir:
 
 |Seçenek|Açıklama|
 |-|-----------------|
 |**Tanıma Git**|Başvurular için, özniteliğin gerçek tanımına gider.|
 |**Tüm üyeleri göster**|Adlandırılmış grubun tüm üyelerini bulur ve vurgular.|
-|**Tüm başvuruları göster**|Seçili grup için tüm başvuruları (sahip `ref="selectedGroup"`olan gruplar) bulur ve vurgular.|
+|**Tüm başvuruları göster**|Seçili grup için tüm başvuruları (`ref="selectedGroup"` olan gruplar) bulur ve vurgular.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

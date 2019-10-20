@@ -1,5 +1,5 @@
 ---
-title: Bir metin şablonundan Visual Studio 2015 veya diğer Konaklara erişme | Microsoft Docs
+title: Metin şablonundan Visual Studio 2015 veya diğer konaklara erişme | Microsoft Docs
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -7,29 +7,29 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: a68886da-7416-4785-8145-3796bb382cba
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 053e8b09fd2b52683238f1ffe008e5e7d38b3962
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 0e8cedc66d6b52f80239364a3e51b73e93a69aa4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872015"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655335"
 ---
-# <a name="accessing-visual-studio-or-other-hosts-from-a-text-template"></a>Metin Şablonundan Visual Studio'ya veya diğer Konaklara Erişme
+# <a name="accessing-visual-studio-or-other-hosts-from-a-text-template"></a>Metin Şablonundan Visual Studio'ya veya diğer Ana Bilgisayarlara Erişme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Metin şablonunda, yöntemleri ve şablon gibi yürüten bir ana bilgisayar tarafından kullanıma sunulan özellikler kullanabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+Bir metin şablonunda, şablonu yürüten ana bilgisayar tarafından kullanıma sunulan yöntemleri ve özellikleri (örneğin, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]) kullanabilirsiniz.
 
- Bu değil önceden işlenmiş metin şablonlarını normal metin şablonları için geçerlidir.
+ Bu, önceden işlenmemiş metin şablonları için normal metin şablonları için geçerlidir.
 
-## <a name="obtaining-access-to-the-host"></a>Konağa erişim elde etme
+## <a name="obtaining-access-to-the-host"></a>Konağa erişim sağlama
 
-Ayarlama `hostspecific="true"` içinde `template` yönergesi. Bu, [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))türünde `this.Host`bir kullanmanıza olanak sağlar. Bu tür, örneğin, dosya adlarını çözümleme ve hataları günlüğe kaydetmek için kullanabileceğiniz üyeleri var.
+@No__t_1 yönergesinde `hostspecific="true"` ayarlayın. Bu, [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))türünde `this.Host` kullanmanıza olanak sağlar. Bu tür, örneğin, dosya adlarını çözümlemek ve hataları günlüğe kaydetmek için kullanabileceğiniz üyelere sahiptir.
 
-### <a name="resolving-file-names"></a>Dosya adları çözme
- Metin şablonu göreli bir dosyanın tam yolunu bulmak için bunu kullanın. Host.ResolvePath().
+### <a name="resolving-file-names"></a>Dosya adlarını çözme
+ Metin şablonuyla ilişkili bir dosyanın tam yolunu bulmak için bunu kullanın. Host. ResolvePath ().
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -44,8 +44,8 @@ Content of myFile is:
 
 ```
 
-### <a name="displaying-error-messages"></a>Hata iletilerini görüntüleme
- Bu örnekte, şablon dönüştürdüğünüzde iletileri günlüğe kaydeder. Ana bilgisayar ise [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], hata penceresine eklenir.
+### <a name="displaying-error-messages"></a>Hata Iletilerini görüntüleme
+ Bu örnek, şablonu dönüştürdüğünüzde iletileri günlüğe kaydeder. Ana bilgisayar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], hata penceresine eklenir.
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -62,12 +62,12 @@ Content of myFile is:
 
 ```
 
-## <a name="using-the-visual-studio-api"></a>Visual Studio API kullanma
- Metin şablonunda çalıştırıldığında [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], kullanabileceğiniz `this.Host` Erişim Hizmetleri tarafından sağlanan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve paketleri veya yüklenen uzantıları.
+## <a name="using-the-visual-studio-api"></a>Visual Studio API 'sini kullanma
+ @No__t_0 içinde bir metin şablonu yürütüyorsunuz, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve yüklenen paketler ya da uzantılar tarafından sunulan hizmetlere erişmek için `this.Host` kullanabilirsiniz.
 
- Ayarlama hostspecific = "true" ve dönüştürme `this.Host` için <xref:System.IServiceProvider>.
+ Hostspecific = "true" ve cast `this.Host` <xref:System.IServiceProvider> olarak ayarlayın.
 
- Bu örnekte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API <xref:EnvDTE.DTE>, hizmet olarak:
+ Bu örnek, hizmet olarak <xref:EnvDTE.DTE> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API 'sini alır:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -82,5 +82,5 @@ Number of projects in this solution: <#=  dte.Solution.Projects.Count #>
 
 ```
 
-## <a name="using-hostspecific-with-template-inheritance"></a>Şablon kalıtım hostSpecific kullanma
- Belirtin `hostspecific="trueFromBase"` da kullanıyorsanız `inherits` özniteliği ve belirten bir şablondan devralıyorsanız `hostspecific="true"`. Bu bir derleyici uyarısı etkisine önler, özellik `Host` iki kez bildirilmiş.
+## <a name="using-hostspecific-with-template-inheritance"></a>Şablon devralma ile hostSpecific kullanma
+ @No__t_1 özniteliğini de kullanıyorsanız ve `hostspecific="true"` belirten bir şablondan kalýtýmla alıyorsanız `hostspecific="trueFromBase"` belirtin. Bu, özelliğin `Host` iki kez bildirildiği etkiye yönelik bir derleyici uyarısını önler.

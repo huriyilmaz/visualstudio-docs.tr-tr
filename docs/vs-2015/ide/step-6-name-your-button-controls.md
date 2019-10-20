@@ -1,82 +1,80 @@
 ---
-title: '6. Adım: Düğme denetimlerinizi adlandırma | Microsoft Docs'
+title: '6\. Adım: düğme denetimlerinizi adlandırma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 56b3baa3-651e-4ad4-8942-e334c5c57158
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 26ba081e893867fcd80c7fc969301f417400d37a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: be633da5e8af6b987178d7c7360096db57fff1a0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679299"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647008"
 ---
-# <a name="step-6-name-your-button-controls"></a>6. Adım: Düğme Denetimlerinizi Adlandırma
+# <a name="step-6-name-your-button-controls"></a>6\. Adım: Düğme Denetimlerinizi Adlandırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Formunuzda tek bir PictureBox vardır. Onu eklediğinizde IDE otomatik olarak bunu adlı **pictureBox1**. Adlı tek bir CheckBox vardır **checkBox1**. Bir süre sonra biraz kod yazacaksınız ve bu kod CheckBox'a ve PictureBox'a başvuracaktır. Olmadığı için bu denetimlerin her birinden yalnızca biri gördüğünüzde ne anlama geldiğini bilirsiniz **pictureBox1** veya **checkBox1** kodunuzda.  
-  
+Formunuzda yalnızca bir PictureBox vardır. Bunu eklediğinizde, IDE otomatik olarak **PictureBox1**olarak adlandırılır. Yalnızca **CheckBox1**adlı bir onay kutusu vardır. Yakında bazı kodlar yazacaksınız ve bu kod CheckBox ve PictureBox öğesine başvuracaktır. Bu denetimlerden yalnızca biri olduğundan, kodunuzda **PictureBox1** veya **CheckBox1** gördüğünüz zaman ne anlama geldiğini bilirsiniz.
+
 > [!NOTE]
-> Adları Visual Basic'te, herhangi bir denetim adının varsayılan ilk harfi ilk harf olduğundan **PictureBox1**, **CheckBox1**ve benzeri.  
-  
- Formunuzda dört düğme vardır ve IDE bunları adlı **button1**, **button2**, **button3**, ve **button4**. Yalnızca geçerli adlarına bakarak hangi düğmesi olduğunu bilemezsiniz **Kapat** düğmesi ve hangisinin **resim Göster** düğmesi. İşte bu nedenle düğme denetimlerinize daha açıklayıcı adlar vermek yararlıdır.  
-  
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo")bu konunun video sürümü için bkz: [öğretici 1: Visual Basic'te - Video 3 resim görüntüleyici oluşturma](http://go.microsoft.com/fwlink/?LinkId=205213) veya [öğretici 1: İçinde resim görüntüleyici oluşturma C# -Video 3](http://go.microsoft.com/fwlink/?LinkId=205202). Bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar olduğundan bu videolarda Visual Studio'nun önceki bir sürümü kullanın. Ancak, kavramlar ve yordamlar benzer şekilde Visual Studio'nun geçerli sürümünde çalışır.  
-  
-### <a name="to-name-your-button-controls"></a>Düğme denetimlerinizi adlandırmak için  
-  
-1. Form üzerinde seçin **Kapat** düğmesi. (Tüm düğmeler seçiliyse hala varsa seçimini iptal etmek için ESC tuşuna basın.) Kaydırın **özellikleri** penceresini görene kadar **(ad)** özelliği. ( **(Ad)** özelliği, Özellikler alfabetik olduğunda en olan.) Adla değiştirin **closeButton**, aşağıdaki resimde gösterildiği gibi.  
-  
-     ![CloseButton adıyla Özellikler penceresi](../ide/media/express-setnameproperty.png "Express_SetNameProperty")  
-CloseButton adıyla Özellikler penceresi  
-  
+> Visual Basic, herhangi bir denetim adının varsayılan ilk harfi ilk tepdir, bu nedenle adlar **PictureBox1**, **CheckBox1**vb. olur.
+
+ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3**ve **Button4**olarak adlandırılan IDE. Yalnızca geçerli adlarına bakarak, hangi düğmenin **kapatma** düğmesi olduğunu ve hangilerinin **resim göster** düğmesi olduğunu bilemezsiniz. Bu nedenle, düğme denetimlerinizi daha bilgilendirici adlar yararlı olur.
+
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 3](http://go.microsoft.com/fwlink/?LinkId=205213) veya [öğretici 1: video 3 ' te C# resim görüntüleyici oluşturma](http://go.microsoft.com/fwlink/?LinkId=205202). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+
+### <a name="to-name-your-button-controls"></a>Düğme denetimlerinizi adlandırmak için
+
+1. Formda, **Kapat** düğmesini seçin. (Tüm düğmeler seçiliyse, seçimi iptal etmek için ESC tuşunu seçin.) **(Ad)** özelliğini görene kadar **Özellikler** penceresinde kaydırma yapın. ( **(Ad)** özelliği, Özellikler alfabetik olduğunda üst kısımdaki bir yakındır.) Aşağıdaki resimde gösterildiği gibi, adı **CloseButton**olarak değiştirin.
+
+     ![CloseButton adıyla Özellikler penceresi](../ide/media/express-setnameproperty.png "Express_SetNameProperty") CloseButton adıyla Özellikler penceresi
+
     > [!NOTE]
-    > İçin düğmenizin adını değiştirmeyi denerseniz **closeButton**, Kapat ve düğme sözcükleri arasına bir boşluk koyun, IDE bir hata iletisi görüntüler: "Özellik değeri geçerli değil." Denetim adlarında boşluklara (ve diğer birkaç karaktere) izin verilmez.  
-  
-2. Diğer üç düğmeyi yeniden adlandır **Arkaplandüğmesi**, **Temizledüğmesi**, ve **showButton**. Denetim Seçici açılan listesini seçerek adları doğrulayabilirsiniz **özellikleri** penceresi. Yeni düğme adları görüntülenir.  
-  
-3. Çift **resim Göster** formundaki düğmesi. Alternatif, **resim Göster** formda düğmesine ve ardından ENTER tuşuna basın. Bunu yaptığınızda, IDE adlı ana penceresinde bir ek sekme açar **Form1.cs** (**Form1.vb** Visual Basic kullanılıyorsa). Bu sekme aşağıdaki resimde gösterildiği gibi formun arkasındaki kod dosyasını gösterir.  
-  
-     ![Visual C Form1.cs sekmesi&#35; kod](../ide/media/express-showbuttoncode.png "Express_ShowButtonCode")  
-Visual C# koduyla Form1.cs sekmesi  
-  
-4. Bu kod parçası üzerinde odaklanın. (Seçin **VB** aşağıda Visual Basic kullanıyorsanız kod Visual Basic sürümünü görüntülemek için sekmesinde.)  
-  
+    > Düğmenize ilişkin adı kapat ve düğme arasındaki boşluk ile değiştirmeyi **denerseniz, IDE**bir hata iletisi görüntüler: "özellik değeri geçerli değil." Denetim adlarında boşluklara (ve diğer birkaç karaktere) izin verilmez.
+
+2. Diğer üç düğmeyi **backgroundButton**, **clearButton**ve **showButton**olarak yeniden adlandırın. **Özellikler** penceresinde denetim Seçicisi açılan listesini seçerek adları doğrulayabilirsiniz. Yeni düğme adları görüntülenir.
+
+3. Formdaki **resim göster** düğmesine çift tıklayın. Alternatif olarak, formda **bir resim göster** düğmesini seçin ve ardından Enter tuşunu seçin. Bunu yaptığınızda IDE, **Form1.cs** adlı ana pencerede ek bir sekme açar (Visual Basic kullanıyorsanız**Form1. vb** ). Bu sekme, aşağıdaki resimde gösterildiği gibi, formun arkasındaki kod dosyasını gösterir.
+
+     ![Görsel kod içeren Visual C&#35; Code Form1.cs sekmesi ile Form1.cs sekmesi](../ide/media/express-showbuttoncode.png "Express_ShowButtonCode") C#
+
+4. Kodun bu bölümüne odaklanın. (Kodun Visual Basic sürümünü görüntülemek için Visual Basic kullanıyorsanız aşağıdaki **vb** sekmesini seçin.)
+
      [!code-csharp[VbExpressTutorial1Step6#1](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial1step6/cs/form1.cs#1)]
-     [!code-vb[VbExpressTutorial1Step6#1](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step6/vb/form1.vb#1)]  
-  
-     Kodun adı aradığınız `showButton_Click()`. İçin kod dosyasını açtığınızda IDE bunu formun koduna eklemiştir **showButton** düğmesi. Bir formda bir denetim için kod dosyasını açtığınızda, tasarım zamanında, zaten mevcut değilse denetim için kod oluşturulur. Olarak da bilinen bu kod, bir *yöntemi*, programınızı çalıştırıp denetimi - bu durumda, seçin çalışır **resim Göster** düğmesi.  
-  
+     [!code-vb[VbExpressTutorial1Step6#1](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step6/vb/form1.vb#1)]
+
+     @No__t_0 adlı koda bakıyorsunuz. IDE bunu, **showButton** düğmesi için kod dosyasını açtığınızda formun koduna eklemiştir. Tasarım zamanında, bir formdaki denetim için kod dosyasını açtığınızda, zaten mevcut değilse denetim için kod oluşturulur. *Yöntem*olarak bilinen bu kod, programınızı çalıştırdığınızda çalışır ve bu durumda, **bir resim göster** düğmesi.
+
     > [!NOTE]
-    > Bu öğreticide, otomatik olarak oluşturulan Visual Basic kodu parantez () arasındaki her şey kaldırılarak basitleştirilmiştir. Bu her gerçekleştiğinde, aynı kodu kaldırabilirsiniz. Programınız her iki şekilde çalışır. Öğreticiler kalanı için otomatik olarak oluşturulan herhangi bir kod mümkün olduğunda basitleştirilecektir.  
-  
-5. Windows Form Tasarımcısı sekmesini tekrar seçin (**Form1.cs [Design]** görselde C#, **Form1.vb [Design]** Visual Basic'te) ve kod dosyası açın **ResmiTemizle** formun koduna bunun için bir yöntem oluşturmak için düğme. Bu, kalan iki düğme için yineleyin. Her defasında IDE formun kod dosyasına yeni bir yöntem ekler.  
-  
-6. Birden fazla yöntem eklemek için onay kutusu denetimi için kod dosyasını ekleyin için Windows Form Tasarımcısı'nda açın bir `checkBox1_CheckedChanged()` yöntemi. Bu yöntem, her kullanıcı seçer veya temizler onay kutusunu çağrılır.  
-  
+    > Bu öğreticide, otomatik olarak oluşturulan Visual Basic kodu, () ayraçları arasındaki her şeyi kaldırarak basitleştirilmiştir. Bu her gerçekleştiğinde, aynı kodu kaldırabilirsiniz. Programınız her iki şekilde de çalışır. Öğreticilerin geri kalanı için, mümkün olduğunda otomatik olarak oluşturulan tüm kodlar basitleştirilir.
+
+5. Windows Form Tasarımcısı sekmesini bir kez daha seçin (**Form1.cs [Design]** with C#Visual, **Form1. vb [Design]** Visual Basic) ve ardından formun kodunda bir yöntem oluşturmak için **Resmi Temizle** düğmesini açmak üzere kod dosyasını açın. Bunu kalan iki düğme için tekrarlayın. Her seferinde IDE, formun kod dosyasına yeni bir yöntem ekler.
+
+6. Bir başka yöntem eklemek için, IDE 'nin bir `checkBox1_CheckedChanged()` yöntemi eklemesini sağlamak üzere Windows Form Tasarımcısı onay kutusu denetimi için kod dosyasını açın. Bu yöntem, Kullanıcı onay kutusunu seçtiğinde veya temizlediğinde çağrılır.
+
     > [!NOTE]
-    > Bir programda çalışırken, Kod Düzenleyicisi'ni ve Windows Form Tasarımcısı arasında genellikle taşıyın. IDE, projenizde gezinmeyi kolaylaştırır. Kullanım **Çözüm Gezgini** çift tıklayarak Windows Form Tasarımcısı açmak için **Form1.cs** Visual C# veya **Form1.vb** Visual Basic veya menü çubuğunda, seçin**Görünümü**, **Tasarımcısı**.  
-  
-     Aşağıdaki yeni kod, Kod düzenleyicisinde gördüğünüz gösterir.  
-  
+    > Bir program üzerinde çalışırken genellikle kod Düzenleyicisi ve Windows Form Tasarımcısı arasında geçiş yapabilirsiniz. IDE, projenizde gezinmeyi kolaylaştırır. Windows Form Tasarımcısı açmak için **Çözüm Gezgini** kullanın Visual Basic, Visual C# veya **Form1. vb** içindeki **Form1.cs** çift tıklayarak ya da menü çubuğunda **Görünüm**, **Tasarımcı**' yı seçin.
+
+     Aşağıdaki kod düzenleyicisinde gördüğünüz yeni kodu gösterir.
+
      [!code-csharp[VbExpressTutorial1Step6#2](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial1step6/cs/form1.cs#2)]
-     [!code-vb[VbExpressTutorial1Step6#2](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step6/vb/form1.vb#2)]  
-  
-     Eklediğiniz beş yönteme adlı *olay işleyicileri*, (örneğin, bir kullanıcı bir düğmeyi veya bir kutuyu seçmesi) bir olay gerçekleştiğinde programınız onları çağırır.  
-  
-     Tasarım zamanında IDE'de bir denetimin kodunu görüntülediğinizde, yoksak Visual Studio denetim için olay işleyicisi yöntemi ekler. Örneğin, bir düğmeye çift tıkladığınızda, IDE, bunun tıklama olayı (kullanıcı bir düğme seçtiği) için bir olay işleyicisi ekler. Bir onay kutusunu çift tıkladığınızda, IDE CheckedChanged olayı (kullanıcı seçerse ya da kutuyu her adlandırılan) için bir olay işleyicisi ekler.  
-  
-     Bir denetim için bir olay işleyici ekledikten sonra ona dilediğiniz zaman Windows Forms Tasarımcısı'ndan denetimi çift tıklayarak veya menü çubuğundan seçme dönebilirsiniz **görünümü**, **kod**.  
-  
-     Programları derleme ve yöntemler (olay işleyicileri dahil), istediğiniz herhangi bir ad olabilir adları önemlidir. IDE ile bir olay işleyicisi eklediğinizde, denetimin adını ve işlenen olayı temel alan bir ad oluşturur. Örneğin, adlı bir düğme için tıklama olayı **showButton** çağrılır `showButton_Click()` olay işleyicisi yöntemi. Ayrıca, açma ve Kapama parantezleri () genellikle yöntemleri ele belirtmek üzere yöntem adından sonra eklenir. İstediğiniz bir kod değişkeni adını değiştirmeye karar verirseniz, kod içindeki değişkene sağ tıklayın ve ardından **yeniden düzenleme**, **Yeniden Adlandır**. Koddaki bu değişkenin tüm örnekleri yeniden adlandırılır. Bkz: [düzenlemeyi yeniden adlandırma (C#)](../csharp-ide/rename-refactoring-csharp.md) veya [yeniden düzenleme ve yeniden adlandır iletişim kutusu](https://msdn.microsoft.com/library/001d2d81-9bb6-4e8e-ae3a-20c0daaa3959) daha fazla bilgi için.  
-  
-### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için  
-  
-- Sonraki öğretici adımına gitmek için bkz: [adım 7: Formunuza iletişim kutusu bileşenleri ekleme](../ide/step-7-add-dialog-components-to-your-form.md).  
-  
-- Önceki öğretici adımına dönmek için bkz: [5. adım: Formunuza denetimler ekleme](../ide/step-5-add-controls-to-your-form.md).
+     [!code-vb[VbExpressTutorial1Step6#2](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step6/vb/form1.vb#2)]
+
+     Eklediğiniz beş yöntem *olay işleyicileri*olarak adlandırılır, çünkü bir olay (Kullanıcı bir düğme seçme veya bir kutu seçme gibi) olduğunda programınız bunları çağırır.
+
+     Tasarım zamanında IDE 'deki bir denetimin kodunu görüntülediğinizde, Visual Studio bir tane değilse denetim için bir olay işleyici yöntemi ekler. Örneğin, bir düğmeye çift tıkladığınızda IDE, Click olayı (Kullanıcı düğmeyi seçtiğinde çağrılır) için bir olay işleyicisi ekler. Bir onay kutusuna çift tıkladığınızda, IDE, CheckedChanged olayı (Kullanıcı kutuyu seçtiğinde veya temizlediğinde çağrılır) için bir olay işleyicisi ekler.
+
+     Bir denetim için bir olay işleyicisi ekledikten sonra, denetime çift tıklayarak ya da menü çubuğunda **Görünüm**, **kod**' ı seçerek Windows Form Tasarımcısı istediğiniz zaman bu nesneye dönebilirsiniz.
+
+     Programlar oluştururken adlar önemlidir ve Yöntemler (olay işleyicileri dahil) istediğiniz herhangi bir ada sahip olabilir. IDE ile bir olay işleyicisi eklediğinizde, denetimin adına ve işlenmekte olan olaya göre bir ad oluşturur. Örneğin, **showButton** adlı bir düğmenin click olayına `showButton_Click()` olay işleyicisi yöntemi denir. Ayrıca, yöntemlerin açıklanmakta olduğunu göstermek için, açma ve kapatma parantezleri () genellikle yöntem adından sonra eklenir. Kod değişkeni adını değiştirmek istediğinize karar verirseniz, koddaki değişkene sağ tıklayıp yeniden **Düzenle**, **Yeniden Adlandır**' ı seçin. Koddaki bu değişkenin tüm örnekleri yeniden adlandırılır. Daha fazla bilgi için bkz. [yeniden düzenleme (C#)](../csharp-ide/rename-refactoring-csharp.md) veya [yeniden düzenleme ve yeniden adlandırma iletişim kutusu](https://msdn.microsoft.com/library/001d2d81-9bb6-4e8e-ae3a-20c0daaa3959) .
+
+### <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
+
+- Sonraki öğretici adımına geçmek için, bkz. [7. Adım: formunuza Iletişim kutusu bileşenleri ekleme](../ide/step-7-add-dialog-components-to-your-form.md).
+
+- Önceki öğretici adımına dönmek için bkz. 5. [Adım: Formunuza denetim ekleme](../ide/step-5-add-controls-to-your-form.md).

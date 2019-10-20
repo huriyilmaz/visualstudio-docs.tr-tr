@@ -1,5 +1,5 @@
 ---
-title: 'CA1038: Numaralandırıcılar kesin tür belirtilmiş | Microsoft Docs'
+title: 'CA1038: Numaralandırıcılar kesin belirlenmiş olmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - CA1038
 ms.assetid: 8919f526-d487-42a4-87dc-2b2ee25260c4
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 84b6ae6ef0c63870ad9dc593fd0cf2e166e65397
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c3a08f4987fe57a94aaee8f3df6129782fd6448c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62559853"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661759"
 ---
-# <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038: Numaralandırıcıların kesin türü belirtilmiş olmalıdır
+# <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038: Numaralandırıcıların türü kesin olarak belirtilmelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|EnumeratorsShouldBeStronglyTyped|
 |CheckId|CA1038|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Ortak veya korumalı tür uygulayan <xref:System.Collections.IEnumerator?displayProperty=fullName> kesin türü belirtilmiş sürümünü sağlamaz, ancak <xref:System.Collections.IEnumerator.Current%2A?displayProperty=fullName> özelliği. Bu kurala aşağıdaki türlerden türetilmiş türleri şunlardır:
+ Ortak veya korumalı bir tür <xref:System.Collections.IEnumerator?displayProperty=fullName> uygular, ancak <xref:System.Collections.IEnumerator.Current%2A?displayProperty=fullName> özelliğinin kesin türü belirtilmiş bir sürümünü sağlamaz. Aşağıdaki türlerden türetilmiş türler bu kuraldan muaf tutulur:
 
 - <xref:System.Collections.CollectionBase?displayProperty=fullName>
 
@@ -42,23 +42,23 @@ ms.locfileid: "62559853"
 - <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural gerektirir <xref:System.Collections.IEnumerator> de türü kesin belirlenmiş bir sürümünü sağlamak için uygulamaları <xref:System.Collections.IEnumerator.Current%2A> özelliği böylece kullanıcıların arabirim tarafından sağlanan işlevselliği kullandığınızda güçlü tür için dönen değer atama gerekmez. Bu kural, türün uyguladığı varsayar <xref:System.Collections.IEnumerator> değerinden daha güçlü bir türün örneklerinin bir koleksiyonunu içeren <xref:System.Object>.
+ Bu kural, kullanıcıların, arabirim tarafından sunulan işlevleri kullandıklarında döndürülen değeri güçlü türe dönüştürmek için gerekli olmaması için <xref:System.Collections.IEnumerator.Current%2A> özelliğinin kesin belirlenmiş bir sürümünü sağlaması için <xref:System.Collections.IEnumerator> uygulamalar gerektirir. Bu kural <xref:System.Collections.IEnumerator> uygulayan türün <xref:System.Object> ' den daha güçlü bir tür örnek koleksiyonu içerdiğini varsayar.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için arabirim özelliği açıkça uygulama (olarak bildirin `IEnumerator.Current`). Olarak bildirilen özelliğinin genel bir türü kesin belirlenmiş sürümü ekleme `Current`, ve bu türü kesin belirlenmiş bir nesne döndürür.
+ Bu kural ihlalini onarmak için Interface özelliğini açıkça uygulayın (`IEnumerator.Current` olarak bildirin). Özelliğinin, `Current` olarak bildirildiği ve kesin tür belirtilmiş bir nesne döndürmesini sağlamak için, özelliğin kesin türü belirtilmiş bir sürümünü ekleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bir ikili ağaç gibi bir nesne tabanlı koleksiyon ile kullanmak için bir nesne tabanlı Numaralandırıcı uyguladığınızda bu kuraldan bir uyarıyı gizler. Yeni koleksiyon genişleten türler kesin türü belirtilmiş Numaralandırıcı tanımlayın ve kesin türü belirtilmiş özelliği kullanıma sunun.
+ Bir ikili ağaç gibi nesne tabanlı bir koleksiyonla birlikte kullanmak üzere nesne tabanlı bir Numaralandırıcı uyguladığınızda bu kuraldan bir uyarı gizleyin. Yeni koleksiyonu genişleten türler kesin türü belirtilmiş Numaralandırıcı tanımlar ve kesin türü belirtilmiş özelliği sunar.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, türü kesin belirlenmiş uygulamak için doğru şekilde gösterir. <xref:System.Collections.IEnumerator> türü.
+ Aşağıdaki örnek, türü kesin belirlenmiş <xref:System.Collections.IEnumerator> türünü uygulamak için doğru yolu gösterir.
 
  [!code-csharp[FxCop.Design.IEnumeratorStrongTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.IEnumeratorStrongTypes/cs/FxCop.Design.IEnumeratorStrongTypes.cs#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1035: ICollection uygulamalarında türü kesin olarak belirtilmiş üyeler olmalıdır](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)
 
- [CA1039: Listeler kesin türdedir](../code-quality/ca1039-lists-are-strongly-typed.md)
+ [CA1039: Listelerin türü kesin olarak belirlenmiştir](../code-quality/ca1039-lists-are-strongly-typed.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  <xref:System.Collections.IEnumerator?displayProperty=fullName><xref:System.Collections.CollectionBase?displayProperty=fullName>

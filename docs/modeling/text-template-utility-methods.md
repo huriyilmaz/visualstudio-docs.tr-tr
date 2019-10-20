@@ -4,30 +4,30 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - text templates, utility methods
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c65960b2ad7f0eb31a9c969fb4671f883dc477c7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1e6426ea57fbdbec6ec47a4f6348463b88b250e0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001470"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605999"
 ---
 # <a name="text-template-utility-methods"></a>Metin Şablonu Yardımcı Program Yöntemleri
 
-Visual Studio metin şablonunda kod yazdığınızda, her zaman kullanabileceğiniz çeşitli yöntemler vardır. Bu yöntemler, şurada tanımlanan <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>.
+Visual Studio metin şablonunda kod yazdığınızda her zaman kullanabileceğiniz çeşitli yöntemler vardır. Bu yöntemler <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> tanımlanmıştır.
 
 > [!TIP]
-> Ayrıca, diğer yöntemler ve normal (değil önceden işlenmiş) metin şablonunda konak ortamı tarafından sağlanan hizmetleri de kullanabilirsiniz. Örneğin, dosya yollarını çözmek, oturum hataları ve Visual Studio ve tüm tarafından sağlanan hizmetleri edinin yüklenen paketler. Daha fazla bilgi için [metin şablonunda Visual Studio'dan erişme](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
+> Ayrıca, ana bilgisayar ortamı tarafından sunulan diğer yöntemleri ve Hizmetleri normal (önceden işlenmiş) metin şablonunda de kullanabilirsiniz. Örneğin, dosya yollarını çözümleyebilir, hataları günlüğe kaydedebilir ve Visual Studio tarafından sunulan hizmetleri ve yüklenmiş tüm paketleri alabilirsiniz. Daha fazla bilgi için bkz. [bir metin şablonundan Visual Studio 'Ya erişme](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
 
-## <a name="write-methods"></a>Yöntemleri yazın
+## <a name="write-methods"></a>Yazma yöntemleri
 
-Kullanabileceğiniz `Write()` ve `WriteLine()` bir ifade kod bloğu kullanmak yerine standart bir kod bloğu içindeki metni eklenecek yöntemleri. Aşağıdaki iki kod blokları işlevsel olarak eşdeğerdir.
+@No__t_0 ve `WriteLine()` yöntemlerini, bir ifade kod bloğu kullanmak yerine standart bir kod bloğunun içine metin eklemek için kullanabilirsiniz. Aşağıdaki iki kod bloğu işlevsel olarak eşdeğerdir.
 
-### <a name="code-block-with-an-expression-block"></a>Bir ifade bloğu ile kod bloğu
+### <a name="code-block-with-an-expression-block"></a>İfade bloğuna sahip kod bloğu
 
 ```
 <#
@@ -39,7 +39,7 @@ while (i-- > 0)
 #>
 ```
 
-### <a name="code-block-using-writeline"></a>Kod bloğu WriteLine() kullanma
+### <a name="code-block-using-writeline"></a>WriteLine () kullanarak kod bloğu
 
 ```
 <#
@@ -51,9 +51,9 @@ while (i-- > 0)
 #>
 ```
 
-Bu yardımcı program yöntemleri yerine iç içe geçmiş denetim yapıları ile uzun kod bloğu içinde bir ifade bloğu birini daha yararlı olabilir.
+İç içe geçmiş denetim yapılarına uzun bir kod bloğu içindeki bir ifade bloğu yerine bu yardımcı program yöntemlerinden birini kullanmayı yararlı bulabilirsiniz.
 
-`Write()` Ve `WriteLine()` yöntemleri iki aşırı yükleme varsa, bir bileşik biçimlendirme dizesi artı dizesinde eklenecek nesneleri dizisi alır, tek bir dize parametresi ve bir alan (gibi `Console.WriteLine()` yöntemi). Aşağıdaki iki kullanımlarını `WriteLine()` işlevsel olarak eşdeğerdir:
+@No__t_0 ve `WriteLine()` yöntemlerinin iki aşırı yüklemesi vardır, biri tek bir dize parametresi ve bir bileşik biçim dizesi ve bir dizi nesnenin içermesi için bir nesne dizisi (`Console.WriteLine()` yöntemi gibi) alır. Aşağıdaki iki kullanım `WriteLine()` işlevsel olarak eşdeğerdir:
 
 ```
 <#
@@ -67,9 +67,9 @@ Bu yardımcı program yöntemleri yerine iç içe geçmiş denetim yapıları il
 #>
 ```
 
-## <a name="indentation-methods"></a>Girinti yöntemleri
+## <a name="indentation-methods"></a>Girintileme yöntemleri
 
-Girinti yöntemleri, metin şablonunuzu çıkışını biçimlendirmek için kullanabilirsiniz. <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> Sınıfında bir `CurrentIndent` dizesi geçerli girinti metin şablonunda gösteren özelliğinin ve bir `indentLengths` diğer bir deyişle eklenmiş olan girintileri listesini alan. Bir girintilemeli ekleyebilirsiniz `PushIndent()` yöntemi ve bir girintilemeli çıkarmayı `PopIndent()` yöntemi. Tüm girintileri kaldırmak istediğiniz kullanırsanız `ClearIndent()` yöntemi. Aşağıdaki kod bloğu, bu yöntemlerin kullanımını gösterir:
+Metin şablonunuzun çıkışını biçimlendirmek için girintileme yöntemlerini kullanabilirsiniz. @No__t_0 sınıfı, metin şablonundaki geçerli girintiyi ve eklenen girintilendirme listesi olan bir `indentLengths` alanını gösteren bir `CurrentIndent` String özelliğine sahiptir. @No__t_0 yöntemiyle bir girintileme ekleyebilir ve `PopIndent()` yöntemiyle bir girintileme çıkarabilirsiniz. Tüm girintileri kaldırmak istiyorsanız, `ClearIndent()` yöntemini kullanın. Aşağıdaki kod bloğu bu yöntemlerin kullanımını gösterir:
 
 ```
 <#
@@ -85,7 +85,7 @@ Girinti yöntemleri, metin şablonunuzu çıkışını biçimlendirmek için kul
 #>
 ```
 
-Bu kod bloğunu aşağıdaki çıktıyı üretir:
+Bu kod bloğu aşağıdaki çıktıyı üretir:
 
 ```
 Hello
@@ -97,7 +97,7 @@ Hello
 
 ## <a name="error-and-warning-methods"></a>Hata ve uyarı yöntemleri
 
-İleti Visual Studio hata listesine eklemek için hata ve uyarı yardımcı program yöntemleri kullanabilirsiniz. Örneğin, aşağıdaki kod bir hata iletisi hata listesine ekler.
+Visual Studio Hata Listesi ileti eklemek için Error ve Warning yardımcı program yöntemlerini kullanabilirsiniz. Örneğin, aşağıdaki kod Hata Listesi bir hata mesajı ekler.
 
 ```
 <#
@@ -113,25 +113,25 @@ Hello
 #>
 ```
 
-## <a name="access-to-host-and-service-provider"></a>Ana bilgisayar ve hizmet sağlayıcısı erişimi
+## <a name="access-to-host-and-service-provider"></a>Konak ve hizmet sağlayıcısına erişim
 
-Özellik `this.Host` şablonunun yürütülmesinin ana bilgisayar tarafından kullanıma sunulan özellikler erişim sağlayabilir. Kullanılacak `this.Host`, ayarlamalısınız `hostspecific` özniteliğini `<@template#>` yönergesi:
+Özellik `this.Host`, şablonu yürüten ana bilgisayar tarafından kullanıma sunulan özelliklere erişim sağlayabilir. @No__t_0 kullanmak için `<@template#>` yönergesinde `hostspecific` özniteliğini ayarlamanız gerekir:
 
 `<#@template ... hostspecific="true" #>`
 
-Türünü `this.Host` şablon yürütüyordur ana bilgisayar türüne bağlıdır. Visual Studio'da çalışan bir şablonda verdiğiniz `this.Host` için `IServiceProvider` IDE gibi hizmetlere erişim elde etmek için. Örneğin:
+@No__t_0 türü, şablonun yürütüldüğü konak türüne bağlıdır. Visual Studio 'da çalışan bir şablonda, IDE gibi hizmetlere erişim kazanmak için `this.Host` `IServiceProvider` çevirebilirsiniz. Örneğin:
 
 ```
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
                        .GetService(typeof(EnvDTE.DTE));
 ```
 
-## <a name="using-a-different-set-of-utility-methods"></a>Farklı bir yardımcı program yöntemleri kümesini kullanma
+## <a name="using-a-different-set-of-utility-methods"></a>Farklı bir yardımcı program yöntemi kümesi kullanma
 
-Metin oluşturma işleminin bir parçası olarak, her zaman adlı bir sınıf içinde şablon dosyanızın dönüştürülür `GeneratedTextTransformation`ve devralınan <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>. Farklı bir kullanmak istiyorsanız bunun yerine, yöntemlerinin ayarlayın, kendi sınıfınızı yazabilir ve şablon yönergesinde belirtin. Sınıfınıza devralmalıdır <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>.
+Metin oluşturma sürecinin bir parçası olarak, şablon dosyanız her zaman <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> `GeneratedTextTransformation`and devraldığı bir sınıfa dönüştürülür. Bunun yerine farklı bir yöntem kümesi kullanmak istiyorsanız kendi sınıfınızı yazabilir ve onu şablon yönergesinde belirtebilirsiniz. Sınıfınızın <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> devralması gerekir.
 
 ```
 <#@ template inherits="MyUtilityClass" #>
 ```
 
-Kullanım `assembly` derlenmiş sınıfı burada bulunabilir derlemeye başvuru yönergesi.
+Derlenmiş sınıfın bulunabileceği derlemeye başvurmak için `assembly` yönergesini kullanın.

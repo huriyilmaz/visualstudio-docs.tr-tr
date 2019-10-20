@@ -4,17 +4,17 @@ titleSuffix: Blend for Visual Studio
 ms.date: 07/31/2019
 ms.topic: conceptual
 ms.assetid: d5378c59-e2e5-49f0-91f1-aa82d984a33c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4503209db5ed405e77c706629e68efb22bee5842
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 6cd722e6b8690ef5ff059b69db1fbc467eec7ca3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450764"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650930"
 ---
 # <a name="draw-shapes-and-paths"></a>Şekiller ve yollar çizin
 
@@ -88,7 +88,7 @@ Yolu seçmek için **seçim** aracını kullanın. Noktayı eklemek istediğiniz
 
 Bir şekli bir yolu değiştirdiğiniz şekilde değiştirmek için şekli bir yola dönüştürün. Şekli seçin ve sonra **biçim** > **yol** > **yola Dönüştür**' yı seçin.
 
-**Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma @ no__t-2 [yollarla çalışma: şekli yola dönüştürme](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
+**Kısa bir video izleyin:** ![Configure yüklü özellikleri ](../designers/media/bldadminconsoleinitialconfigicon.png) [yollarla çalışma: şekli yola dönüştürme](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
 
 > [!NOTE]
 > **Yola Dönüştür** en az `TargetPlatformVersion` 10.0.16299.0 veya ÜZERI olan UWP uygulamaları için şu anda kullanılamıyor.
@@ -105,7 +105,7 @@ Yolları ve şekilleri tek bir yolda birleştirebilirsiniz.
 |![Birleştir](../designers/media/b1_2.png)|Birleştir|![Örtüşmeyi Dışla](../designers/media/b1_5.png)|Örtüşmeyi Dışla|
 |![Sayısına](../designers/media/b1_3.png)|Sayısına|![Çıkarma](../designers/media/b1_6.png)|Çıkarma|
 
-**Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma @ no__t-2 [yollarla çalışma: yolları birleştirme](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
+**Kısa bir video izleyin:** ![Configure yüklü özellikleri ](../designers/media/bldadminconsoleinitialconfigicon.png) [yollarla çalışma: yolları birleştirin](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
 
 ## <a name="create-a-compound-path"></a>Bileşik yol oluşturma
 
@@ -115,7 +115,7 @@ Bir bileşik yolu, oluşturduktan sonra istediğiniz zaman bölebilir.
 
 ![Bileşik yolu bölme](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png)
 
-**Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma @ no__t-2 [yollarla çalışma: bileşik yol oluşturma](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
+**Kısa bir video izleyin:** ![Configure yüklü özellikleri ](../designers/media/bldadminconsoleinitialconfigicon.png) [yollarla çalışma: bileşik yol oluşturma](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
 
 ## <a name="create-a-clipping-path"></a>Kırpma yolu oluşturma
 
@@ -123,4 +123,4 @@ Bir kırpma yolu, kırpma yolu dışına düşen maskelenmiş nesnenin kısımla
 
 ![Kırpma yolu](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png)
 
-**Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma @ no__t-2 [yollarla çalışma: kırpma yolu oluşturma](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).
+**Kısa bir video izleyin:** ![Configure yüklü özellikleri ](../designers/media/bldadminconsoleinitialconfigicon.png) [yollarla çalışma: kırpma yolu oluşturma](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).

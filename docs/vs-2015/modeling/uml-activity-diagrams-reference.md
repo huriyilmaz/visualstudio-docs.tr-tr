@@ -1,5 +1,5 @@
 ---
-title: 'UML etkinlik diyagramları: Referans | Microsoft Docs'
+title: 'UML etkinlik diyagramları: başvuru | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -17,88 +17,87 @@ helpviewer_keywords:
 - behaviors, UML
 ms.assetid: 07efcd17-2a96-4052-9957-6dcccbb725ee
 caps.latest.revision: 50
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c60405331ebab909e8056d4800bd43b208c92493
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3a882867720e9cca2d51419643ebe60e692817a1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68193790"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658448"
 ---
-# <a name="uml-activity-diagrams-reference"></a>UML etkinlik diyagramları: Başvuru
+# <a name="uml-activity-diagrams-reference"></a>UML Etkinlik Diyagramları: Başvuru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir *etkinlik diyagramı* yazılım işlem veya iş sürecini, bir dizi eylem iş akışı olarak gösterilir. Kişiler, yazılım bileşenlerini veya bilgisayarların bu eylemleri gerçekleştirebilirsiniz.  
-  
- Etkinlik diyagramı, aşağıdaki örneklerde gibi çeşitli türlerde işlemleri tanımlamak için kullanabilirsiniz:  
-  
-- Bir iş sürecini veya kullanıcıların sisteminizi arasındaki iş akışı. Daha fazla bilgi için [kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md).  
-  
-- Bir kullanım örneği, adımların. Daha fazla bilgi için [UML Kullanım durumu diyagramları: Yönergeleri](../modeling/uml-use-case-diagrams-guidelines.md).  
-  
-- Yazılım protokol, diğer bir deyişle, izin verilen dizileri bileşenleri arasındaki etkileşimler dizesi.  
-  
-- Bir yazılım algoritması.  
-  
-  Bu konuda, etkinlik diyagramlarını kullanabilirsiniz öğeleri açıklar. Daha ayrıntılı etkinlik çizim hakkında bilgi için bkz [UML etkinlik diyagramları: Yönergeleri](../modeling/uml-activity-diagrams-guidelines.md). UML etkinlik diyagramı oluşturmak için **mimarisi** menüsünü tıklatın **yeni UML veya katman diyagramı**. Genel olarak modelleme diyagramları çizmek hakkında daha fazla bilgi için bkz. [Düzenle UML modellerini ve diyagramları](../modeling/edit-uml-models-and-diagrams.md).  
-  
-## <a name="reading-activity-diagrams"></a>Etkinlik diyagramları okuma  
- Aşağıdaki bölümlerde tablolar etkinlik diyagramı ve ana özelliklerini kullandığınız öğeleri açıklar. Öğelerin özelliklerinin tam listesi için bkz. [etkinlik diyagramlarındaki öğelerin özellikleri](../modeling/properties-of-elements-on-uml-activity-diagrams.md).  
-  
- Eylemler ve etkinlik diyagramında görünen diğer öğelerin bir etkinlik oluşturur. Etkinlik UML Model Gezgini'nde görebilirsiniz. Diyagrama ilk öğeyi eklediğinizde, oluşturulur.  
-  
- Bir diyagram okumak için bir belirteç veya iş parçacığı denetimin bağlayıcılar boyunca bir eylemden geçirir olduğunu hayal edin.  
-  
-### <a name="simple-control-flows"></a>Basit bir denetim akışı  
- Bir dizi eylem dallar ve döngüler ile gösterebilirsiniz. Akış denetimi açıklayan bölümüne burada açıklanan öğeleri kullanma hakkında daha fazla bilgi için bkz. [UML etkinlik diyagramları: Yönergeleri](../modeling/uml-activity-diagrams-guidelines.md).  
-  
- ![Basit bir iş akışı](../modeling/media/uml-actovsimple.png "UML_ActOvSimple")  
-  
-||||  
-|-|-|-|  
-|**Şekil**|**Öğe**|**Açıklama ve ana özellikleri**|  
-|1\.|**Eylem**|Bir etkinlikte adımda kullanıcılardan veya yazılımlardan bazı görevleri gerçekleştirir.<br /><br /> Bir belirteç tüm gelen akışlar sunuldu eylemi başlatabilirsiniz. Sona erdiğinde belirteçleri tüm giden akışlar gönderilir.<br /><br /> -   **Gövde** -ayrıntılı olarak eylemi belirtir.<br />-   **Dil** -gövdesi içindeki ifade dili.<br />-   **Yerel koşul Sonralarına** -yürütme sona erdiğinde karşılanması gereken kısıtlamaları. Eylem tarafından elde edilen hedefi.<br />-   **Yerel önkoşulları** -yürütme başlamadan önce karşılanması gereken kısıtlamaları.|  
-|2|**Denetim Akışı**|Bir bağlayıcı Eylemler arasındaki denetim akışı gösterilmektedir. Diyagram yorumlamak için bir belirteç sonraki bir eylemden akışları düşünün.<br /><br /> Bir iş akışı oluşturmak için kullanın **bağlayıcı** aracı.|  
-|3|**İlk düğüm**|İlk eylem veya eylem etkinliğindeki gösterir. Bir etkinlik başladığında, ilk düğümü aracılığıyla bir belirteç akar.|  
-|4|**Etkinliğin son düğümü**|Etkinlik bitiş olayı. Bir belirteç geldiğinde etkinlik sona erer.|  
-|5|**Karar düğümü**|Bir akışta koşullu bir dal. Bir giriş ve çıkışları iki veya daha fazla vardır. Gelen bir belirteci yalnızca bir çıkışları ortaya çıkar.|  
-|6|**koruma**|Bir belirteç bağlayıcı boyunca akış olup olmadığını belirten bir koşul. Karar düğümünün giden akışlar üzerinde en sık kullanılan.<br /><br /> Bir koruma ayarlamak için bir akış sağ tıklayın, **özellikleri** ve ardından **koruyucu** özelliği.|  
-|7|**Birleştirme düğümü**|Karar düğümüyle ayrılmış akışlar birleştirmek için gereklidir. İki veya daha fazla giriş ve bir çıktı. Çıkıştan herhangi bir giriş belirteç.|  
-|8|**Yorum**|Bağlı öğeleri hakkında ek bilgi sağlar.|  
-|9|**Davranış eylem çağrısı**|Başka bir etkinlik diyagramı'nda daha ayrıntılı bir şekilde tanımlanan bir eylem.<br /><br /> -   **IsSynchronous** - etkinlik kapsayıcınızın doğru eylemi bekler.<br />-   **Davranış** -etkinlik çağrılır.|  
-|(gösterilmez)|**İşlem eylem çağrısı**|Bir sınıfın bir örneği üzerinde bir işlem çağıran eylem.|  
-||**Etkinlik**|Bir etkinlik diyagramı tarafından düzenlenmiş iş akışı. Bir etkinlik özelliklerini görmek için bunu seçmelisiniz **UML Model Gezgini**.<br /><br /> -   **Salt okunur** - true ise etkinlik herhangi bir nesne durumunu değiştirmemesi gerekir.<br />-   **Tek yürütme** - true ise en fazla Bu diyagramda, tek bir yürütme birer birer.|  
-||**UML etkinlik diyagramı**|Bir etkinlik gösteren diyagram. Özelliklerini görmek için diyagramın boş bir kısmına tıklayın. **Not:**  Etkinlik diyagramı adlarını, Diyagram ve diyagram tarafından görüntülenen etkinlik içeren dosyayı farklı olabilir.|  
-  
-### <a name="concurrent-flows"></a>Eşzamanlı Akışlar  
- Aynı anda yürütmek Eylemler dizisi tanımlayabilirsiniz. Çizim eşzamanlı akışlar daha fazla bilgi için bkz.  
-  
- ![Eş zamanlı akışını gösteren bir etkinlik diyagramı](../modeling/media/uml-actovconcurrent.png "UML_ActovConcurrent")  
-  
-||||  
-|-|-|-|  
-|**Şekil**|**Öğe**|**Açıklama**|  
-|11|**Çatal düğümü**|Tek bir akış eşzamanlı akışlara böler. Gelen her belirteç, her giden bağlayıcıdaki bir belirteç oluşturur.|  
-|12|**Düğüm katılın**|Eşzamanlı akışlara akar tek bir akış birleştirir. Bekleyen bir belirteci her gelen akış sahip olduğunda, bir belirteç çıktı oluşturulur.|  
-|13|**Sinyal eylemi Gönder**|Başka bir etkinlik veya eş zamanlı bir iş parçacığı aynı etkinlik için bir mesaj ya da sinyal gönderen bir eylem. İleti içeriği ve tür eyleme ait başlık tarafından kapsanan veya ek açıklamalarda belirlenir.<br /><br /> Eylem, bir nesne akışı veya giriş PIN (16) eyleme geçirilebilir sinyal içinde veri gönderebilirsiniz.|  
-|14|**Olay eylemi kabul edin**|Eylem devam etmeden önce bir ileti ya da sinyal bekleyen bir eylem. Eylem alabilir iletisinin türü başlık tarafından kapsanan veya ek açıklamalarda belirlenir.<br /><br /> Gelen denetim akışı eylem varsa her bir ileti aldığında bir belirteç oluşturur.<br /><br /> Eylem, bir nesne akışı veya çıkış PIN'i (17) geçirilebilir sinyal içinde veri alabilir.<br /><br /> -   **IsUnmarshall türde** - true ise birden çok çıktı pini olabilir ve veri açtığına unmarshalled ise. False ise, tüm veriler tek bir PIN'in görünür.|  
-  
-### <a name="DataFlow"></a> Bir veri akışı  
- Bir eylem veri akışını tanımlayabilir. Bu bölümde kullanılan öğeleri hakkında daha fazla bilgi için etkinlik diyagramı çizmek için yönergeler çizim veri akışları bölümüne bakın.  
-  
- ![Etkinlik diyagramı veri akışını gösteren](../modeling/media/uml-actovdata.png "UML_ActOvData")  
-  
-||||  
-|-|-|-|  
-|**Şekil**|**Öğe**|**Açıklama**|  
-|15|**Nesne düğümü**|Akış boyunca geçen verileri temsil eder.<br /><br /> -   **Sıralama** - nasıl birden çok belirteç depolanır.<br />-   **Seçimi** -verilere filtre başka bir şemada tanımlanan bir işlem başlatır.<br />-   **Üst sınır** -0 verileri doğrudan akış boyunca; geçmesi gerektiğini gösterir \* veri akışı depolanabileceğini belirtir.<br />-   **Tür** -nesnelerin türü depolanan ve aktarılan.|  
-|16|**Giriş PIN**|Yürütüldüğünde bir eylemi alıp verileri temsil eder.<br /><br /> -   **Tür** -aktarılan nesnelerin türü.|  
-|17|**Çıkış PIN**|Yürütüldüğünde bir eylem üretir verileri temsil eder.<br /><br /> -   **Tür** -aktarılan nesnelerin türü.|  
-|18|**Etkinlik parametre düğümü**|Üzerinden veri alınabilmesi veya etkinlik tarafından oluşturulan bir nesne düğümü.<br /><br /> Diyagram tarafından temsil edilen etkinlik başka bir etkinlik tarafından çağrıldığında ya da diyagramda bir işlemi ya da işlevin açıkladığında kullanılır.<br /><br /> -   **Tür** -aktarılan nesnelerin türü.|  
-|(gösterilmez)|**Nesne akışı**|Eylemler ve nesne düğümleri arasındaki veri akışını gösteren bir bağlayıcı.<br /><br /> Bir nesne akışı oluşturmak için kullanın **bağlayıcı** giriş veya çıkış PIN ya da bir nesne düğümü başka bir öğeye bağlamak için aracı.<br /><br /> -   **Seçimi** -verilere filtre başka bir şemada tanımlanan bir işlem başlatır.<br />-   **Dönüştürme** -verileri dönüştüren başka bir şemada tanımlanan bir işlem başlatır.<br />-   **IsMulticast** -birden çok alıcı nesneleri veya bileşenleri olabileceğini gösterir.<br />-   **IsMultiReceive girdilerin** -çeşitli nesneleri veya bileşenleri alınabileceğini gösterir.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md)   
- [UML Etkinlik Diyagramları: Yönergeler](../modeling/uml-activity-diagrams-guidelines.md)
+Bir *etkinlik diyagramı* , bir dizi eylem aracılığıyla iş akışı olarak iş sürecini veya yazılım işlemini gösterir. Kişiler, yazılım bileşenleri veya bilgisayarlar bu eylemleri gerçekleştirebilir.
+
+ Aşağıdaki örnekler gibi çeşitli türlerde süreçler için bir etkinlik diyagramı kullanabilirsiniz:
+
+- Kullanıcılar ve sisteminiz arasındaki iş süreci veya iş akışı. Daha fazla bilgi için bkz. [Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md).
+
+- Kullanım durumunda gerçekleştirilen adımlar. Daha fazla bilgi için bkz. [UML Kullanım örneği diyagramları: yönergeler](../modeling/uml-use-case-diagrams-guidelines.md).
+
+- Bir yazılım protokolü, diğer bir deyişle, bileşenler arasında etkileşimlerin izin verilen dizileri.
+
+- Yazılım algoritması.
+
+  Bu konuda, etkinlik diyagramlarında kullanabileceğiniz öğeler açıklanmaktadır. Etkinlik diyagramlarını çizme hakkında daha ayrıntılı bilgi için bkz. [UML etkinlik diyagramları: yönergeler](../modeling/uml-activity-diagrams-guidelines.md). Bir UML etkinlik diyagramı oluşturmak için **mimari** menüsünde **Yeni UML veya katman diyagramı**' na tıklayın. Modelleme diyagramlarını genel olarak çizme hakkında daha fazla bilgi için bkz. [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md).
+
+## <a name="reading-activity-diagrams"></a>Etkinlik diyagramlarını okuma
+ Aşağıdaki bölümlerde yer alan tablolar bir etkinlik diyagramında ve bunların ana özelliklerinde kullanabileceğiniz öğeleri anlatmaktadır. Öğelerin özelliklerinin tam listesi için bkz. [UML Etkinlik diyagramlarındaki öğelerin özellikleri](../modeling/properties-of-elements-on-uml-activity-diagrams.md).
+
+ Etkinlik diyagramında görünen eylemler ve diğer öğeler bir etkinlik oluşturur. Etkinliği UML Model Gezgini 'nde görebilirsiniz. Diyagrama ilk öğe eklediğinizde oluşturulur.
+
+ Bir diyagramı okumak için, bir belirteç veya denetim iş parçacığının, bağlayıcılar üzerinde bir eylemden sonrakine geçirdiğinin olduğunu düşünün.
+
+### <a name="simple-control-flows"></a>Basit denetim akışları
+ Dallar ve döngüler içeren bir dizi eylemi gösterebilirsiniz. Burada açıklanan öğelerin nasıl kullanılacağı hakkında daha fazla bilgi için [UML etkinlik diyagramları: yönergeler](../modeling/uml-activity-diagrams-guidelines.md)konusunun denetim akışını açıklama bölümüne bakın.
+
+ ![Basit bir denetim akışı](../modeling/media/uml-actovsimple.png "UML_ActOvSimple")
+
+||||
+|-|-|-|
+|**Şeklinin**|**Öğe**|**Açıklama ve ana Özellikler**|
+|1\.|**Ön**|Etkinliğin Kullanıcı veya yazılımın bir görevi gerçekleştirdiği bir adım.<br /><br /> Eylem, tüm gelen akışlara bir belirteç ulaştığında başlayabilir. Bu tamamlandığında, tüm giden akışlara belirteç gönderilir.<br /><br /> -   **gövdesi** -eylemi ayrıntılı olarak belirtir.<br />-   **Language** -Gövdedeki ifadenin dili.<br />**Yerel Postconditions** -   , yürütme sona erdiğinde karşılanması gereken kısıtlamalar. Eylem tarafından elde edilen hedef.<br />**Yerel önkoşulları** -   , yürütme başlamadan önce karşılanması gereken kısıtlamalar.|
+|2|**Denetim Akışı**|Eylemler arasındaki denetim akışını gösteren bir bağlayıcı. Diyagramı yorumlamak için bir belirtecin bir eylemden sonrakine akmasını düşünün.<br /><br /> Bir denetim akışı oluşturmak için **bağlayıcı** aracını kullanın.|
+|3|**İlk düğüm**|Etkinlikteki ilk eylemi veya eylemleri gösterir. Etkinlik başladığında, bir belirteç ilk düğümden akar.|
+|4|**Etkinlik son düğümü**|Etkinliğin bitişi. Bir belirteç geldiğinde etkinlik sonlanır.|
+|5|**Karar düğümü**|Akıştaki koşullu dal. Bir giriş ve iki veya daha fazla çıkışı vardır. Gelen bir belirteç çıktılardan yalnızca birinde oluşur.|
+|6|**Guard**|Bir belirtecin bağlayıcı üzerinde akabilir olup olmadığını belirten bir koşul. Bir karar düğümünün giden akışlarında en sık kullanılan.<br /><br /> Bir koruyucu ayarlamak için bir akışa sağ tıklayın, **Özellikler** ' e tıklayın ve ardından **Guard** özelliğini ayarlayın.|
+|7|**Birleştirme düğümü**|Bir karar düğümüyle bölünen akışları birleştirmek için gereklidir. İki veya daha fazla girişe ve bir çıkışa sahiptir. Herhangi bir girişte bir belirteç çıktıda ortaya çıkar.|
+|8|**Yorum**|Bağlandığı öğeler hakkında ek bilgi sağlar.|
+|9|**Çağrı davranışı eylemi**|Başka bir etkinlik diyagramı üzerinde daha ayrıntılı olarak tanımlanmış bir eylem.<br /><br /> -   **IsSynchronous** -true ise eylem, etkinlik sonlanana kadar bekler.<br />-   **davranış** -çağrılan etkinlik.|
+|(gösterilmez)|**Çağrı Işlemi eylemi**|Bir sınıf örneği üzerinde bir işlem çağıran bir eylem.|
+||**Etkinlik**|Bir etkinlik diyagramı tarafından gösterilen iş akışı. Etkinliğin özelliklerini görmek için **UML Model Gezgini**' nde seçmeniz gerekir.<br /><br /> -   **salt okunurdur** -true ise etkinlik herhangi bir nesnenin durumunu değiştirmemelidir.<br />-   **tek yürütme** -true ise, bu diyagramda aynı anda en fazla bir yürütme vardır.|
+||**UML etkinlik diyagramı**|Etkinlik görüntüleyen diyagram. Özelliklerini görmek için diyagramın boş bir kısmına tıklayın. **Note:**  Etkinlik diyagramının adları, diyagramı içeren dosya ve diyagram tarafından görüntülenen etkinlik farklı olabilir.|
+
+### <a name="concurrent-flows"></a>Eş zamanlı Akışlar
+ Aynı anda yürütülen eylem dizilerini tanımlayabilirsiniz. Daha fazla bilgi için bkz. eşzamanlı akışları çizme.
+
+ ![Eşzamanlı akışı gösteren etkinlik diyagramı](../modeling/media/uml-actovconcurrent.png "UML_ActovConcurrent")
+
+||||
+|-|-|-|
+|**Şeklinin**|**Öğe**|**Açıklama**|
+|11|**Çatal düğümü**|Tek bir akışı eşzamanlı akışlara böler. Her gelen belirteç, giden bağlayıcıda bir belirteç üretir.|
+|12|**Düğüm Birleştir**|Eşzamanlı akışları tek bir akışta birleştirir. Her gelen akış için bekleyen bir belirteç olduğunda, çıktıda bir belirteç oluşturulur.|
+|13|**Sinyal gönderme eylemi**|Başka bir etkinliğe veya aynı etkinlik içindeki eşzamanlı bir iş parçacığına ileti veya sinyal gönderen bir eylem. İletinin türü ve içeriği, eylemin başlığı tarafından kapsanır veya ek açıklamalarda belirtilir.<br /><br /> Eylem, bir nesne akışında veya giriş sabitinde (16) eyleme geçirilebilen, sinyalde veri gönderebilir.|
+|14|**Olay kabul etme eylemi**|Eyleme devam etmeden önce bir ileti veya sinyal bekleyen bir eylem. Eylemin alabileceği ileti türü, başlık tarafından ima edilir veya ek açıklamalarda belirtilir.<br /><br /> Eylemin gelen denetim akışı yoksa, ileti her aldığında bir belirteç üretir.<br /><br /> Eylem, bir nesne akışına veya çıkış iğnesine (17) geçirilebilen, sinyalde veri alabilir.<br /><br /> -   **IsUnmarshall** -true ise, birkaç tür çıkış iğnesi olabilir ve veriler bunlar üzerinde sıradan çıkar. Yanlış ise, tüm veriler bir PIN üzerinde görünür.|
+
+### <a name="DataFlow"></a>Veri akışları
+ Verilerin akışını bir eylemden diğerine tanımlayabilirsiniz. Bu bölümde kullanılan öğeler hakkında daha fazla bilgi için, bir etkinlik diyagramı çizmek için Konu Kılavuzu konusunun veri akışları çizme bölümüne bakın.
+
+ ![Veri akışını gösteren etkinlik diyagramı](../modeling/media/uml-actovdata.png "UML_ActOvData")
+
+||||
+|-|-|-|
+|**Şeklinin**|**Öğe**|**Açıklama**|
+|15|**Nesne düğümü**|Bir akış üzerinde geçen verileri temsil eder.<br /><br /> -   **sıralaması** -birden çok belirteç nasıl depolanır.<br />-   **seçimi** -bir işlemi çağırır, bu, verileri filtreleyerek başka bir diyagramda tanımlanabilir.<br />-   **üst sınır** -0 verilerin akış üzerinde doğrudan geçmesi gerektiğini belirtir;  \*, verilerin akışta depolanabileceğini belirtir.<br />-   **türü** -depolanan ve aktarılan nesnelerin türü.|
+|16|**Giriş PIN 'ı**|Bir eylemin yürütüldüğünde alabileceği verileri temsil eder.<br /><br /> -   **türü** -aktarılan nesnelerin türü.|
+|17|**Çıkış Iğnesi**|Bir eylemin yürütüldüğünde oluşturduğu verileri temsil eder.<br /><br /> -   **türü** -aktarılan nesnelerin türü.|
+|18|**Etkinlik parametresi düğümü**|Etkinlik tarafından verilerin alınabileceği veya üretilebileceği bir nesne düğümü.<br /><br /> Diyagram tarafından temsil edilen etkinlik başka bir etkinlikten çağrıldığında veya diyagramda bir işlem ya da işlev açıklandığı zaman kullanılır.<br /><br /> -   **türü** -aktarılan nesnelerin türü.|
+|(gösterilmez)|**Nesne akışı**|Eylemler ve nesne düğümleri arasında veri akışını gösteren bir bağlayıcı.<br /><br /> Bir nesne akışı oluşturmak için **bağlayıcı** aracını kullanarak bir giriş veya çıkış sabitlemesi ya da bir nesne düğümünü başka bir öğeye bağlayın.<br /><br /> -   **seçimi** -bir işlemi çağırır, bu, verileri filtreleyerek başka bir diyagramda tanımlanabilir.<br />-   **dönüştürme** -bir işlemi çağırır, bu, verileri dönüştüren başka bir diyagramda tanımlanabilir.<br />**IÇok noktaya yayın** -   -çeşitli alıcı nesne veya bileşen olabileceğini belirtir.<br />**ımultireceive** -   -girişlerin çeşitli nesnelerden veya bileşenlerden alınamayacağını gösterir.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML etkinlik diyagramları: yönergeler](../modeling/uml-activity-diagrams-guidelines.md)

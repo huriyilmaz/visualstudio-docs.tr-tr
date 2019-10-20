@@ -8,41 +8,41 @@ helpviewer_keywords:
 - load tests, analyzing
 - thresholds in load tests
 ms.assetid: 3d8fac8f-426f-4155-9ced-f7cd4c79792c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2a5865eba5ec6971a35104af3ccd090ee6b06410
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4ecec4826966205d849c07169da954198d687696
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002297"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644437"
 ---
 # <a name="how-to-add-a-threshold-rule-using-the-load-test-editor"></a>Nasıl yapılır: Yük Testi Düzenleyicisini kullanarak bir eşik kuralı ekleme
 
-Yük testlerindeki eşik kuralları, bir performans sayacı değeri bir sabit değer ya da başka bir performans sayacı değeri ile karşılaştırın.
+Yük testlerinde eşik kuralları bir performans sayacı değerini sabit bir değerle veya başka bir performans sayacı değeriyle karşılaştırır.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-add-a-threshold-rule"></a>Eşik kuralı ekleme
+## <a name="to-add-a-threshold-rule"></a>Eşik kuralı eklemek için
 
 1. Bir yük testi açın.
 
-2. Yük Testi Düzenleyicisi'nde genişletin **sayaç kümeleri** düğümü.
+2. Yük Testi Düzenleyicisi, **sayaç kümeleri** düğümünü genişletin.
 
-3. Birini genişletin **sayaç kategorileri** sayaç kümelerinden birinde. Örneğin, seçebileceğiniz **YüklemeTesti**. Düğümünü genişletin.
+3. Sayaç kümelerinden birindeki **sayaç kategorilerinden** birini genişletin. Örneğin, **LoadTest: Scenario**öğesini seçebilirsiniz. Düğümünü genişletin.
 
-4. Örneğin, sayaçları birine sağ tıklayın **kullanıcı yükü**altında **YüklemeTesti**. Seçin **eşik kuralı ekleme**.
+4. Sayaçlarından birine sağ tıklayın, örneğin, **LoadTest: Scenario**altında **Kullanıcı yükü**. **Eşik kuralı ekle**' yi seçin.
 
-     **Eşik Kuralı Ekle** iletişim kutusu görüntülenir.
+     **Eşik kuralı ekle** iletişim kutusu görüntülenir.
 
-5. İki kural türlerinden birini seçebilirsiniz: **Sabiti Karşılaştır** ve **karşılaştırma sayaç**. Uygun türünü seçin ve şu değerleri ayarlayın.
+5. İki tür kural arasından seçim yapabilirsiniz: **sabiti Karşılaştır** ve **sayacı Karşılaştır**. Uygun türü seçin ve değerleri ayarlayın.
 
     > [!NOTE]
-    > Ayarlama **aşarsa uyar** özelliğini **True** bir Eşiği aşan bir sorun olduğunu belirtmek için veya **False** eşiğin altında kalan bir sorun olduğunu belirtmek için.
+    > Bir eşiğin bir sorun olduğunu veya eşiğin altına düşülecek bir sorun olduğunu **göstermek için,** özelliği **true** olarak ayarlandıysa **uyarıyı** ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eşik kuralı ihlallerini çözümleme](../test/analyze-threshold-rule-violations-in-load-tests.md)
-- [Sayaç kümelerini ve eşik kurallarını bilgisayarlar için bir yük testi içinde belirtin.](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Eşik Kuralı İhlallerini Çözümleme](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [Yük testinde bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtin](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

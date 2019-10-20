@@ -1,5 +1,5 @@
 ---
-title: -RunExit (devenv.exe)
+title: -RunExit (devenv. exe)
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Devenv, /RunExit switch
 - /RunExit Devenv switch
 ms.assetid: bfc94875-5fc0-4110-b961-d59c0b403790
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fa010e72267dadfb1974f7ce8be3b6b9a3e1cff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 295d4999437248cc9221631378c2beffd80094d8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935053"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655528"
 ---
-# <a name="runexit-devenvexe"></a>/ RunExit (devenv.exe)
+# <a name="runexit-devenvexe"></a>/RunExit (devenv. exe)
 
-Derler ve belirtilen proje veya çözüm çalıştırır ve ardından tümleşik geliştirme ortamı (IDE) kapatır.
+Belirtilen proje veya çözümü derler ve çalıştırır ve ardından tümleşik geliştirme ortamını (IDE) kapatır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,27 +33,27 @@ devenv /RunExit {SolutionName|ProjectName} [/Out OutputFilename]
 
 - *SolutionName*
 
-  Bir çözüm dosyası adını ve tam yolu.
+  Bir çözüm dosyasının tam yolu ve adı.
 
-- *projectName*
+- *ProjectName*
 
-  Bir proje dosyasının adını ve tam yolu.
+  Bir proje dosyasının tam yolu ve adı.
 
-- `/Out` *OutputFilename*
+- `/Out` *outputFilename*
 
-  İsteğe bağlı. Aracı göndermek istediğiniz bir dosya adı için çıkış. Dosya zaten varsa, aracı çıkış dosyasının sonuna ekler.
+  İsteğe bağlı. Aracın çıkışını göndermek istediğiniz dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Derler ve belirtilen proje veya çözümü etkin çözüm yapılandırması için belirtilen ayarlara göre çalıştırır. IDE projeyi sırasında bu anahtar en aza indirir veya çözümü çalıştırın. Proje sonra IDE'yi kapatır veya çözüm çalıştırma tamamlandı.
+Belirtilen proje veya çözümü, etkin çözüm yapılandırması için belirtilen ayarlara göre derler ve çalıştırır. Bu anahtar, proje veya çözüm çalıştırılırken IDE 'yi en aza indirir. Proje veya çözüm çalışmayı tamamladıktan sonra IDE 'yi kapatır.
 
-- Çift tırnak içine boşluk dizeleri alın.
+- Boşluk içeren dizeleri çift tırnak işaretleri içine alın.
 
-- Hataları dahil olmak üzere Özet bilgileri görüntülenebilir **komut** penceresinde veya belirtilen herhangi bir günlük dosyasını `/Out` geçin.
+- Hatalar da dahil olmak üzere Özet bilgiler, **komut** penceresinde veya `/Out` anahtarıyla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek çözüm çalıştırılır `MySolution` simge durumuna küçültülmüş IDE'de etkin dağıtım yapılandırması kullanan ve daha sonra IDE'yi kapatır.
+Bu örnek, etkin dağıtım yapılandırmasını kullanarak, simge durumuna küçültülmüş bir IDE 'de `MySolution` çözümünü çalıştırır ve ardından IDE 'yi kapatır.
 
 ```
 devenv /runexit "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
@@ -62,7 +62,7 @@ devenv /runexit "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
-- [/ Çalıştırma (devenv.exe)](../../ide/reference/run-devenv-exe.md)
-- [/ Derleme (devenv.exe)](../../ide/reference/build-devenv-exe.md)
-- [/ Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
-- [/ (Devenv.exe out)](../../ide/reference/out-devenv-exe.md)
+- [/Run (devenv. exe)](../../ide/reference/run-devenv-exe.md)
+- [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md)
+- [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Out (devenv. exe)](../../ide/reference/out-devenv-exe.md)

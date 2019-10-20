@@ -4,21 +4,21 @@ titleSuffix: ''
 ms.date: 08/05/2019
 ms.topic: conceptual
 ms.assetid: 288e2415-9fcf-408e-bc35-9848315e14fd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 88e03307f9f72d50fb77818ffaf632debbd830f6
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 50e378591330807bdddcc10277032aa82c914863
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451145"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650942"
 ---
 # <a name="design-xaml-in-visual-studio-and-blend-for-visual-studio"></a>Visual Studio ve Visual Studio için Blend XAML tasarlama
 
 Visual Studio ve Visual Studio için Blend her ikisi de birçok uygulama türü için XAML ile etkileyici kullanıcı arabirimleri ve zengin medya deneyimleri oluşturmaya yönelik görsel araçlar sağlar. Tümleşik geliştirme ortamları (IDE), Visual XAML Düzenleyicisi (Tasarımcı) dahil olmak üzere ortak bir özellikler kümesini paylaşır. WPF ve UWP platformlarını destekleyen Visual Studio için Blend, görsel durumlar tasarlamak ve animasyonlar oluşturmak için ek araçlar sağlar.
 
-Visual Studio ile Visual Studio için Blend arasında geri dönebilir ve aynı projede her iki Ides içinde de aynı projeyi açabilmenize de sahip olabilirsiniz. Bir IDE 'deki XAML dosyalarına kaydedilen değişiklikler, diğer IDE 'ye geçtiğinizde otomatik yeniden yükleme yoluyla uygulanabilir. Her iki IDE 'deki @no__t-**1 @no__t**-3**ortam** > **belge** ' **ne giderek yeniden**yükleme davranışını kontrol edebilirsiniz.
+Visual Studio ile Visual Studio için Blend arasında geri dönebilir ve aynı projede her iki Ides içinde de aynı projeyi açabilmenize de sahip olabilirsiniz. Bir IDE 'deki XAML dosyalarına kaydedilen değişiklikler, diğer IDE 'ye geçtiğinizde otomatik yeniden yükleme yoluyla uygulanabilir. Yeniden yükleme davranışını, **araçlar**  > **Seçenekler** ' e gıderek, her iki ıde içindeki**Belgeler** ** >   > ** .
 
 ## <a name="installation"></a>Yükleme
 
@@ -34,7 +34,7 @@ Visual Studio ile Visual Studio için Blend arasında geri dönebilir ve aynı p
 
 - **Hata ayıklama:** Çalışan bir uygulamada hata ayıklamak için kod noktalarını ayarlama ve uygulama çalışırken XAML kodunuzu değiştirmek için [sık yeniden yükleme](../xaml-tools/xaml-hot-reload.md) kullanma dahil olmak üzere, [Visual Studio](../debugger/inspect-xaml-properties-while-debugging.md) ve [Visual Studio için Blend](../xaml-tools/debug-xaml-in-blend.md)hata ayıklaması yapabilirsiniz. Visual Studio ile tutarlı bir hata ayıklama deneyimi sağlamak için Visual Studio için Blend Visual Studio 'nun hata ayıklama pencerelerini ve araç çubuklarının çoğunu içerir.
 
-- **Dosya yeniden yükleme:** XAML dosyalarınızı, Visual Studio veya Visual Studio için Blend düzenleyebilirsiniz. Değiştirilmiş dosyalar, Ides 'ler arasında geçiş yaparken otomatik olarak yeniden yüklenir. Her iki IDE 'deki @no__t-**1 @no__t**-3**ortam** > **belge** ' **ne giderek yeniden**yükleme davranışını kontrol edebilirsiniz.
+- **Dosya yeniden yükleme:** XAML dosyalarınızı, Visual Studio veya Visual Studio için Blend düzenleyebilirsiniz. Değiştirilmiş dosyalar, Ides 'ler arasında geçiş yaparken otomatik olarak yeniden yüklenir. Yeniden yükleme davranışını, **araçlar**  > **Seçenekler** ' e gıderek, her iki ıde içindeki**Belgeler** ** >   > ** .
 
 - **Eşitlenmiş düzenler ve Ayarlar:** Visual Studio veya Visual Studio için Blend için özelleştirilmiş araç penceresi düzenleri ve ayarları tercihleri, aynı kişiselleştirme hesabıyla oturum açtığınızda cihazlarınız ve sürümleriniz arasında eşitlenir. Bkz. [birden çok bilgisayar üzerinde ayarları eşitler](../ide/synchronized-settings-in-visual-studio.md).
 

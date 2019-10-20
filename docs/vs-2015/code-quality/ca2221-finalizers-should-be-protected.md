@@ -1,5 +1,5 @@
 ---
-title: 'CA2221: Sonlandırıcılar korunmalıdır | Microsoft Docs'
+title: 'CA2221: sonlandırıcılar korunmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA2221
 ms.assetid: bda03aee-4cce-45d3-907d-17f4ee030acc
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9e8deec8687e3ddb2b3d961aa9fc1e97a45c961d
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 3e98c2ea598bcf73b919ba10ef1ea0b53c2a40f3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685128"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651968"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221: Sonlandırıcılar korunmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "65685128"
 |-|-|
 |TypeName|FinalizersShouldBeProtected|
 |CheckId|CA2221|
-|Kategori|Microsoft.Usage|
-|Yeni Değişiklik|Bozucu olmayan|
+|Kategori|Microsoft. Usage|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Bir genel tür ailesi (korumalı) erişim belirtmeyen bir sonlandırıcıyı uygular.
+ Ortak tür, Aile (korumalı) erişimi belirtmeyen bir Sonlandırıcı uygular.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Sonlandırıcılar aile erişim değiştiricisi kullanmalıdır. Bu kural, C#, Visual Basic ve Visual C++ Derleyicileri tarafından zorlanır.
+ Sonlandırıcılar aile erişim değiştiricisi kullanmalıdır. Bu kural, Visual Basic ve Visual C# C++ derleyicileri tarafından zorlanır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için Sonlandırıcı ailesi erişilebilir olacak şekilde değiştirin.
+ Bu kural ihlalini onarmak için sonlandırıcıyı aile erişimi olacak şekilde değiştirin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Bu kural, tüm üst düzey bir .NET dilinde ihlal olamaz; Microsoft Ara dili yazıyorsanız ihlal.
+ Bu kural, herhangi bir üst düzey .NET dilinde ihlal edilemez; Microsoft ara dili yazıyorsanız, bu çiğnenebilir.
 
 ```
 // =============== CLASS MEMBERS DECLARATION ===================

@@ -1,23 +1,23 @@
 ---
-title: İş Akışı Tasarımcısı - akış çizelgesi etkinlik tasarımcıları
+title: İş Akışı Tasarımcısı-akış çizelgesi etkinlik tasarımcıları
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 8b7b4aa6-d27d-45c8-87c2-641440d38afc
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f3b816c0e486eeaad49bac0b0054d7d3c2bff9b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c7426ea21e1928eb46a2b733df7eb24c9de6e147
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949649"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650449"
 ---
 # <a name="flowchart-activity-designers"></a>Flowchart Etkinlik Tasarımcıları
 
-İş Akışı Tasarımcısı kullanarak iş akışlarınızı oluştururken kullanabileceğiniz sistem tarafından sağlanan etkinlikler içerir. Bu bölümde, akış çizelgeleri iş akışı içinde yönetmek için kullanılan sistem tarafından sağlanan etkinlikler içerir. Aşağıdaki konular bu etkinlikleri açıklar ve bunların nasıl kullanılacağı hakkında rehberlik sağlar.
+İş Akışı Tasarımcısı, iş akışlarınızı oluştururken kullanabileceğiniz, sistem tarafından sağlanmış bir dizi etkinliği içerir. Bu bölüm, bir iş akışı içindeki akış çizelgeleriyle yönetmek için kullanılan sistem tarafından sağlanmış etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri anlatmaktadır ve bunların nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="reference"></a>Başvuru
  <xref:System.Activities.Activity>
@@ -29,7 +29,7 @@ ms.locfileid: "62949649"
  <xref:System.Activities.Statements.FlowSwitch%601>
 
 ## <a name="related-sections"></a>İlgili Bölümler
- Etkinlik tasarımcıları diğer türleri için aşağıdaki konulara bakın.
+ Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın.
 
  [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
 

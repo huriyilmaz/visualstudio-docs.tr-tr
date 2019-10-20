@@ -2,17 +2,17 @@
 title: FxCop Çözümleyicisi yapılandırma seçenekleri
 ms.date: 09/23/2019
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: de4fdbbdf54976ba3ee12c3621f7038cd4704a76
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 78967c93a990aaef0d5863446433c286bdcf46b7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449066"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649603"
 ---
 # <a name="rule-scope-options-for-fxcop-analyzers"></a>FxCop çözümleyicileri için kural kapsamı seçenekleri
 
@@ -21,9 +21,9 @@ Bazı FxCop çözümleyici kuralları, kod tabanınızın hangi bölümlerinin u
 Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketinin 2.6.3 sürümünden başlayarak kullanılabilir.
 
 > [!TIP]
-> Fxcopçözümleyiciler paketinin belirli bir sürümü için kullanılabilen seçeneklerin tam listesini görmek için, paketin *Belgeler* klasöründeki *Analyzer Configuration.MD* dosyasına bakın. Dosya *% USERPROFILE% \\. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\documentation\Analyzer Configuration.MD*konumunda bulunuyor. Bu yapılandırma belge dosyası, sürüm 2.6.5 'den başlayarak paketin her bir sürümüne dahildir. Bir seçeneğin *çözümleyici Configuration.MD* dosyasında nasıl belgelendiği hakkında bir örnek aşağıda verilmiştir:
+> Fxcopçözümleyiciler paketinin belirli bir sürümü için kullanılabilen seçeneklerin tam listesini görmek için, paketin *Belgeler* klasöründeki *Analyzer Configuration.MD* dosyasına bakın. Dosya *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \Belgei\analyzer Configuration.MD*konumunda bulunuyor. Bu yapılandırma belge dosyası, sürüm 2.6.5 'den başlayarak paketin her bir sürümüne dahildir. Bir seçeneğin *çözümleyici Configuration.MD* dosyasında nasıl belgelendiği hakkında bir örnek aşağıda verilmiştir:
 >
-> Seçenek adı: `sufficient_IterationCount_for_weak_KDF_algorithm` @ no__t-1
+> Seçenek adı: `sufficient_IterationCount_for_weak_KDF_algorithm` \
 > Seçenek değerleri: tam sayı değerleri \
 > Varsayılan değer: her yapılandırılabilir kurala (' 100000 ' varsayılan olarak çoğu kural için) özeldir \
 > Örnek: `dotnet_code_quality.CA5387.sufficient_IterationCount_for_weak_KDF_algorithm = 100000`
@@ -56,4 +56,4 @@ Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler]
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Bu tür derlemeyi üreten bir projedeki kodun analiz edilmesi gerektiğini belirtir | @No__t-0 sabit listesinin bir veya daha fazla alanı<br/><br/>Birden çok değeri virgülle ayırın (,) | Tüm çıktı türleri | [CA2007](ca2007-do-not-directly-await-task.md) |
+| Bu tür derlemeyi üreten bir projedeki kodun analiz edilmesi gerektiğini belirtir | @No__t_0 numaralandırmasının bir veya daha fazla alanı<br/><br/>Birden çok değeri virgülle ayırın (,) | Tüm çıktı türleri | [CA2007](ca2007-do-not-directly-await-task.md) |

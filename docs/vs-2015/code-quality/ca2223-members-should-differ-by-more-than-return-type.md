@@ -1,5 +1,5 @@
 ---
-title: 'CA2223: Üyeler dönüş türünden daha fazla tarafından farklı | Microsoft Docs'
+title: 'CA2223: Üyeler dönüş türünden daha fazla farklı olmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - MembersShouldDifferByMoreThanReturnType
 ms.assetid: eb326d9f-50d9-48cb-84be-d41c84a8fe09
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 6a460cd01d671d347e1cd126d009fe19e140cc69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1fab269e8f583f8b55f52eb70a5a813450f8a184
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201600"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658888"
 ---
 # <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: Üyeler dönüş türünden daha fazla farklı olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "68201600"
 |-|-|
 |TypeName|MembersShouldDifferByMoreThanReturnType|
 |CheckId|CA2223|
-|Kategori|Microsoft.Usage|
+|Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- İki ortak veya korumalı üyeler dönüş türü dışında aynı imzalara sahip olduğunu.
+ İki ortak veya korumalı üyenin, dönüş türü dışında aynı imzaları vardır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Ortak dil çalışma zamanı aynı üyeler arasında ayrım yapmak için dönüş türleri kullanımına izin verse de, bu özellik ortak dil belirtimi ne de, bir .NET programlama dillerinin ortak özelliğidir. Üyeler yalnızca dönüş türüne göre farklı olduğunda, geliştiricilerin ve geliştirme araçları doğru bunları ayırt değil.
+ Ortak dil çalışma zamanı, başka türlü özdeş Üyeler arasında ayrım yapmak için dönüş türlerinin kullanılmasına izin veriyorsa, bu özellik ortak dil belirtiminde değildir ve .NET programlama dillerinin ortak bir özelliğidir. Üyeler yalnızca dönüş türüne göre farklılık gösterdiği zaman, geliştiriciler ve geliştirme araçları aralarında doğru ayırt edilmeyebilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için böylece yalnızca, adları ve/veya parametre türleri dayalı olarak benzersizdirler veya üyeleri gösterme üyelerin tasarım değiştirin.
+ Bu kural ihlalini onarmak için üyelerin tasarımını, yalnızca adlarına ve parametre türlerine göre benzersiz olacak şekilde değiştirin ya da üyeleri açığa çıkarın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, bu kuralı ihlal eden bir tür Microsoft Ara dilini (MSIL) gösterir. Bu kural C# veya Visual Basic .NET kullanarak ihlal olamaz dikkat edin.
+ Aşağıdaki örnekte, Microsoft ara dili (MSIL), bu kuralı ihlal eden bir türü gösterir. Bu kuralın veya Visual Basic .NET kullanılarak C# ihlal edilemez olduğunu unutmayın.
 
 ```
 

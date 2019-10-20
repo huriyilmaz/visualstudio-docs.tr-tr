@@ -26,21 +26,21 @@ helpviewer_keywords:
 - warnings, files changed
 - Solution Explorer, displaying files in
 ms.assetid: 4e3ccf1b-cd68-4db6-9470-710c911b47fc
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a09036e0c0f83d262760598dd02e6cf6e8cdd38e
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: ff1b5e83d9aaca0181699e3cc7effcc973ef2349
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606067"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661638"
 ---
-# <a name="options-dialog-box-environment--documents"></a>Seçenekler iletişim kutusu: Ortam \> belgeleri
+# <a name="options-dialog-box-environment--documents"></a>Seçenekler iletişim kutusu: ortam \> belgeleri
 
-Tümleşik geliştirme ortamındaki (IDE) belgelerin görüntülenmesini denetlemek ve belge ve dosyalardaki dış değişiklikleri yönetmek için **Seçenekler** iletişim kutusunun bu sayfasını kullanın. Bu iletişim kutusuna, **Araçlar** menüsünde **Seçenekler** ' i ve ardından **ortam** > **belgeleri**' ni seçerek erişebilirsiniz.
+Tümleşik geliştirme ortamındaki (IDE) belgelerin görüntülenmesini denetlemek ve belge ve dosyalardaki dış değişiklikleri yönetmek için **Seçenekler** iletişim kutusunun bu sayfasını kullanın. Bu iletişim kutusuna, **Araçlar** menüsünde **Seçenekler** ' i ve ardından **ortam**  > **Belgeler**' i seçerek erişebilirsiniz.
 
 **Dosya ortamın dışında değiştirildiğinde Algıla**
 

@@ -5,21 +5,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Class Designer [Visual Studio], enumerations
 ms.assetid: 11e90ba1-18cd-44f8-9e26-e3746a7a19d1
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f31f153183d0cdd809bd9dde9187ade32b20ddd2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b5df17176839dccf0fbe0c42f164bde6b3e39f56
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975028"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631131"
 ---
-# <a name="visual-c-enumerations-in-class-designer"></a>Sınıf tasarımcısında Visual C++ numaralandırmaları
+# <a name="visual-c-enumerations-in-class-designer"></a>Sınıf Tasarımcısı C++ görsel numaralandırmalar
 
-**Sınıf Tasarımcısı** C++ destekler `enum` ve kapsamlı `enum class` türleri. Bir örneği verilmiştir:
+**Sınıf Tasarımcısı** `enum` C++ ve kapsamlı `enum class` türlerini destekler. Aşağıda bir örnek verilmiştir:
 
 ```cpp
 enum CardSuit {
@@ -38,9 +38,9 @@ enum class CardSuit {
 };
 ```
 
-Sınıf diyagramında C++ numaralandırma şekli görünür ve etiketi dışında bir yapı şeklinde çalışır **Enum** veya **sabit listesi sınıfı**, mavi yerine pembe ve sol üst taraftaki renkli kenarlık vardır Kenar boşlukları. Numaralandırma şekilleri ve yapı şekilleri dörtgen köşelerine sahiptir.
+Bir C++ sınıf diyagramındaki sabit listesi şekli bir yapı şekli gibi görünür ve bu şekilde çalışıyor, etiket **enum** veya **enum sınıfını**okuduğu, mavi yerine pembe ve sol ve üst kenar boşluklarında renkli bir kenarlığa sahip olur. Hem numaralandırma şekilleri hem de yapı şekillerinin kare köşeleri vardır.
 
-Kullanma hakkında daha fazla bilgi için `enum` yazın, bkz: [numaralandırmalar](/cpp/cpp/enumerations-cpp).
+@No__t_0 türünü kullanma hakkında daha fazla bilgi için bkz. [numaralandırmalar](/cpp/cpp/enumerations-cpp).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

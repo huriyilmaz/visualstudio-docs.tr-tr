@@ -2,30 +2,30 @@
 title: VS Shell dağıtımı
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70f39dd23851a2ebc0a48afd05da54b0d8deb24a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0e010d2efd8174f2c61d7c97eb63d585f47812ff
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934307"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663665"
 ---
 # <a name="vs-shell-deployment"></a>VS Shell dağıtımı
 
-Bir yalıtılmış Kabuk hangi Visual Studio belirlemenize olanak tanır işlevselliğe gereksinim, etki alanına özgü dil ve bu çözümü nasıl görüneceğini ile etkileşim kurmak. Visual Studio yalıtılmış Kabuk hakkında daha fazla bilgi için bkz. [yalıtılmış Kabuğu özelleştirme](https://vspartner.com/pages/vsshells).
+Yalıtılmış bir kabuk, etki alanına özgü diliniz ve bu çözümün görünmesi için hangi Visual Studio işlevselliğini kullanmanız gerektiğini belirlemenizi sağlar. Visual Studio yalıtılmış Kabuğu hakkında daha fazla bilgi için bkz. [yalıtılmış Kabuğu özelleştirme](https://vspartner.com/pages/vsshells).
 
-Bir Visual Studio Shell dağıtım hedefi olarak ayarlamak için:
+Bir Visual Studio kabuğunu dağıtım hedefi olarak ayarlamak için:
 
-1. İçinde **DslPackage** projesini açarsanız **source.extension.tt**.
+1. **DslPackage** projesinde **Source.Extension.tt**öğesini açın.
 
-2. Altında `<SupportedProducts>` ekleyin:
+2. @No__t_0 Ekle altında:
 
    ```xml
    <IsolatedShell Version="1.0">MyIsolatedShell</IsolatedShell>
    ```
 
-   Değiştirin *MyIsolatedShell* yalıtılmış Kabuk paketinizin ada sahip.
+   *MyIsolatedShell* öğesini yalıtılmış Kabuk paketinizin adıyla değiştirin.

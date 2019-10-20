@@ -1,5 +1,5 @@
 ---
-title: -Out (devenv.exe) | Microsoft Docs
+title: -Out (devenv. exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -16,46 +16,41 @@ helpviewer_keywords:
 - output files, build errors
 ms.assetid: 9002d8c2-36d4-451c-b489-8f01932f31f7
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e1f20b446d355ea0cbc6700de5f2e6f79de51d09
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 075746353440462a66133cd83ed9158470d8de5b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68187876"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662208"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Depolama ve çalıştırma, derleme, yeniden oluşturun veya bir çözüm dağıtma hataları görüntülemek için dosyayı belirtir.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-devenv /out FileName  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `FileName`  
- Gerekli. Bir yürütülebilir dosya oluştururken hatalar almak için dosyanın adı ve yolu.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Dosya, var olmayan bir dosya adı belirtilirse, otomatik olarak oluşturulur. Dosya zaten varsa, dosyanın mevcut içeriğini için sonuçları eklenir.  
-  
- Komut satırı derleme hataları görüntülenir **komut** penceresi ve çözüm Oluşturucusu'nu görüntülemek **çıkış** penceresi. Bu seçenek, katılımsız yapılar çalıştırıyorsanız ve sonuçları görmek gereken yararlıdır.  
-  
-## <a name="example"></a>Örnek  
- Bu örnek çalıştırılır `MySolution` ve hataları Yazar `MyErrorLog.txt`.  
-  
-```  
-devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)   
- [/ Çalıştırma (devenv.exe)](../../ide/reference/run-devenv-exe.md)   
- [/ Derleme (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
- [/ Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
- [/ (Devenv.exe) dağıtma](../../ide/reference/deploy-devenv-exe.md)
+Bir çözümü çalıştırdığınızda, yapılandırdığınızda, yeniden oluşturduğunuzda veya dağıtırken hataları depolamak ve göstermek için bir dosya belirtir.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+devenv /out FileName
+```
+
+## <a name="arguments"></a>Arguments
+ `FileName` gerekiyor. Yürütülebilir dosya oluştururken hata alacak dosyanın yolu ve adı.
+
+## <a name="remarks"></a>Açıklamalar
+ Varolmayan bir dosya adı belirtilmişse dosya otomatik olarak oluşturulur. Dosya zaten varsa, sonuçlar dosyanın varolan içeriğine eklenir.
+
+ Komut satırı derleme hataları, **komut** penceresinde ve **Çıkış** penceresinin çözüm Oluşturucu görünümünde görüntülenir. Bu seçenek, katılımsız derlemeler çalıştırıyorsanız ve sonuçları görmeniz gerekiyorsa yararlıdır.
+
+## <a name="example"></a>Örnek
+ Bu örnek `MySolution` çalıştırır ve dosya `MyErrorLog.txt` hataları yazar.
+
+```
+devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md) [/Run (devenv. exe)](../../ide/reference/run-devenv-exe.md) [/Build (devenv. exe](../../ide/reference/build-devenv-exe.md) ) [/Rebuild (devenv. exe](../../ide/reference/rebuild-devenv-exe.md) ) [/Deploy (devenv. exe)](../../ide/reference/deploy-devenv-exe.md)

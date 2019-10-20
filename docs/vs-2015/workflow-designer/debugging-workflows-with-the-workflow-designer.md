@@ -1,5 +1,5 @@
 ---
-title: İş Akışı Tasarımcısı ile iş akışlarında hata ayıklama | Microsoft Docs
+title: İş Akışı Tasarımcısı Iş akışlarında hata ayıklama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Workflow Designer [WFD], debugging workflows
 ms.assetid: d71308cf-d464-4536-8711-0d0a8eadb255
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0135d9f782976f1d6ad6e2e09dc95c27cc66d846
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b2b5dcbc69853007eebec65142f522f8a942abd1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976742"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656842"
 ---
 # <a name="debugging-workflows-with-the-workflow-designer"></a>İş Akışı Tasarımcısı ile İş Akışlarında Hata Ayıklama
-[!INCLUDE[wfd1](../includes/wfd1-md.md)] İş akışları ve özel etkinlikler hata ayıklama olanağı sağlar. İşlem ve davranışı, varsayılan benzer [!INCLUDE[vs2010](../includes/vs2010-md.md)] hata ayıklayıcı. Bu bölümdeki konular, geleneksel hata ayıklama yordamları yanı sıra XAML ve ifadeler hata ayıklama gerçekleştirmeyi açıklar.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: İş Akışı Hata Ayıklayıcısını Çağırma](../workflow-designer/how-to-invoke-the-workflow-debugger.md)  
-  
- [Nasıl yapılır: İş Akışlarında Kesme Noktası Ayarlama](../workflow-designer/how-to-set-breakpoints-in-workflows.md)  
-  
- [Nasıl yapılır: İş Akışı Tasarımcısı ile XAML Hatalarını Ayıklama](../workflow-designer/how-to-debug-xaml-with-the-workflow-designer.md)  
-  
+@No__t_0, iş akışlarının ve özel etkinliklerin hatalarını ayıklama özelliğini sağlar. İşlem ve davranış, varsayılan [!INCLUDE[vs2010](../includes/vs2010-md.md)] hata ayıklayıcıyla benzerdir. Bu bölümdeki konularda geleneksel hata ayıklama yordamlarının yanı sıra XAML ve ifadelerin hatalarını ayıklama işlemi açıklanır.
+
+## <a name="in-this-section"></a>Bu Bölümde
+ [Nasıl Yapılır: İş Akışı Hata Ayıklayıcısını Çağırma](../workflow-designer/how-to-invoke-the-workflow-debugger.md)
+
+ [Nasıl Yapılır: İş Akışlarında Kesme Noktası Ayarlama](../workflow-designer/how-to-set-breakpoints-in-workflows.md)
+
+ [Nasıl Yapılır: İş Akışı Tasarımcısı ile XAML Hatalarını Ayıklama](../workflow-designer/how-to-debug-xaml-with-the-workflow-designer.md)
+
  [İş Akışı Tasarımcısında desteklenmeyen hata ayıklama senaryoları](../workflow-designer/unsupported-debugging-scenarios-in-the-workflow-designer.md)

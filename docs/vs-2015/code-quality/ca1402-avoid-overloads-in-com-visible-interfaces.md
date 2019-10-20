@@ -1,5 +1,5 @@
 ---
-title: 'CA1402: COM görünebilir arabirimler içinde aşırı yüklemelerden kaçının | Microsoft Docs'
+title: 'CA1402: COM görünebilir arabirimlerde aşırı yüklerini önleyin | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA1402
 ms.assetid: 2724c1f9-d5d3-4704-b124-21c4d398e5df
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: abf6382dfba8b8d9c3cc0ed6ccf90e929afca589
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 258b7ba1444cd990c3ec68ebfd5faccc945439e8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65694970"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661344"
 ---
 # <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402: COM görünebilir arabirimler içinde aşırı yüklemelerden kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "65694970"
 |-|-|
 |TypeName|AvoidOverloadsInComVisibleInterfaces|
 |CheckId|CA1402|
-|Kategori|Microsoft.Interoperability|
+|Kategori|Microsoft. çalışabilirliği|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Bir Bileşen Nesne Modeli (görünür arabirimi bildirir COM) aşırı yüklenmiş yöntemler.
+ Bileşen nesne modeli (COM) görünür arabirimi, aşırı yüklenmiş yöntemleri bildirir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Aşırı yüklenmiş yöntemler COM istemcilerine maruz kaldığında, sadece ilk yöntem aşırı yüklemesi adını korur. Sonraki aşırı yüklemeler adına bir alt çizgi karakteri '_' ve aşırı yükleme bildirimi sıra karşılık gelen bir tam sayı eklenerek benzersiz olarak adlandırılır. Örneğin, aşağıdaki yöntemlerden göz önünde bulundurun.
+ Aşırı yüklenmiş yöntemler COM istemcilerine maruz kaldığında, sadece ilk yöntem aşırı yüklemesi adını korur. Sonraki aşırı yüklemeler, ada bir alt çizgi karakteri olan ' _ ' ve aşırı yükleme bildiriminin sırasına karşılık gelen bir tamsayı eklenerek benzersiz olarak yeniden adlandırılır. Örneğin, aşağıdaki yöntemleri göz önünde bulundurun.
 
 ```
 void SomeMethod(int valueOne);
@@ -44,7 +44,7 @@ void SomeMethod(int valueOne, int valueTwo, int valueThree);
 void SomeMethod(int valueOne, int valueTwo);
 ```
 
- Bu yöntemler aşağıdaki COM istemcilerine maruz kalır.
+ Bu yöntemler aşağıdaki gibi COM istemcilerine sunulur.
 
 ```
 void SomeMethod(int valueOne);
@@ -52,21 +52,21 @@ void SomeMethod_2(int valueOne, int valueTwo, int valueThree);
 void SomeMethod_3(int valueOne, int valueTwo);
 ```
 
- Visual Basic 6 COM istemcileri, arabirim yöntemleri adında alt çizgi kullanılarak uygulanamıyor.
+ Visual Basic 6 COM istemcileri, ad içinde bir alt çizgi kullanarak arabirim yöntemleri uygulayamaz.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için adları benzersiz olacak şekilde yüklenmiş yöntemleri yeniden adlandırın. Alternatif olarak, arabirimi COM erişilebilirlik değiştirerek görünmez yapma `internal` (`Friend` içinde [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) veya uygulayarak <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> özniteliğini `false`.
+ Bu kuralın ihlalini onarmak için, aşırı yüklenmiş yöntemleri adların benzersiz olması için yeniden adlandırın. Alternatif olarak, erişilebilirliği `internal` (`Friend` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) olarak değiştirerek veya `false` olarak ayarlanan <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> özniteliğini uygulayarak arabirimi COM 'a görünmez hale getirebilirsiniz.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, kuralını ihlal eden bir arabirim ve kural karşılayan bir arabirimi gösterir.
+ Aşağıdaki örnekte, kuralı ve kuralı karşılayan bir arabirimi ihlal eden bir arabirim gösterilmektedir.
 
  [!code-csharp[FxCop.Interoperability.OverloadsInterface#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.OverloadsInterface/cs/FxCop.Interoperability.OverloadsInterface.cs#1)]
  [!code-vb[FxCop.Interoperability.OverloadsInterface#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.OverloadsInterface/vb/FxCop.Interoperability.OverloadsInterface.vb#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1413: COM görünebilir değer türleri içinde genel olmayan alanlardan kaçının](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
 
  [CA1407: COM görünebilir türler içinde statik üyelerden kaçının](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
@@ -74,4 +74,4 @@ void SomeMethod_3(int valueOne, int valueTwo);
  [CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Yönetilmeyen kod ile birlikte](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258) [Long veri türü](https://msdn.microsoft.com/library/b4770c34-1804-4f8c-b512-c10b0893e516)
+ [Yönetilmeyen kod](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258) [uzun veri türüyle](https://msdn.microsoft.com/library/b4770c34-1804-4f8c-b512-c10b0893e516) birlikte çalışma

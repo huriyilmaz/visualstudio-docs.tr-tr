@@ -1,107 +1,107 @@
 ---
-title: XSLT hata ayıklayıcı pencereleri
+title: XSLT hata ayıklayıcısı pencereleri
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 846fdabd-e5c3-4688-9b0d-a93fbeea1b96
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b25c47e6db79fe4b860b6e7c209f0fc8403d0fcd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ae37db21072e81a5940f09f085bf261839686a69
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838499"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646083"
 ---
 # <a name="debugger-user-interface-xslt"></a>Hata ayıklayıcı kullanıcı arabirimi (XSLT)
 
-Bu makalede, hata ayıklayıcı pencereleri ve iletişim kutuları açıklanır. Yalnızca özel XSLT hata ayıklama davranışa sahip kullanıcı arabirimi parçaları ele alınmaktadır.
+Bu makalede hata ayıklayıcı pencereleri ve iletişim kutuları açıklanmaktadır. Yalnızca XSLT 'ye özgü hata ayıklama davranışına sahip kullanıcı arabirimi parçalarını ele alır.
 
-Daha fazla bilgi için [kullanıcı arabirim başvurusunda hata ayıklama](../debugger/debugging-user-interface-reference.md).
+Daha fazla bilgi için bkz. [Kullanıcı arabirimi başvurusuna hata ayıklama](../debugger/debugging-user-interface-reference.md).
 
 ## <a name="locals-window"></a>Yerel öğeler penceresi
 
-Stil sayfasında tanımlanan tüm değişkenler hakkında bilgi için Yereller penceresine görüntüler. Yerel öğeler penceresinde üç sütun bilgileri içerir:
+Yereller penceresi, stil sayfasında tanımlanmış değişkenler hakkında bilgi görüntüler. Yereller penceresi üç sütun bilgi içerir:
 
 **Ad**
 
-Bu sütun, geçerli kapsamdaki tüm yerel değişkenlerin adlarını içerir. Alt klasörlerinde görmek için detaya gidebilirsiniz bir ağaç denetimi düğümü vardır.
+Bu sütun, geçerli kapsamdaki tüm yerel değişkenlerin adlarını içerir. Düğüm kümelerinin alt klasörlerini görmek için ayrıntıya gidebileceğiniz bir ağaç denetimi vardır.
 
 **Değer**
 
-Bu sütunda yer alan her bir değişken değeri görüntülenir. Öznitelik, işlem yönergesi, yorum, metin ve CData düğümler, düğümün metin değerini görüntüler. Ad alanı URI Namespace düğümleri görüntüleyin.
+Bu sütunda her bir değişken tarafından içerilen değer gösterilir. Öznitelik, işleme yönergesi, açıklama, metin ve CData düğümleri, düğümün metin değerini görüntüler. Ad alanı düğümleri ad alanı URI 'sini görüntüler.
 
-**Tür**
+**Türüyle**
 
-Bu sütunda listelenen her bir değişken veri türünü tanımlayan **adı** sütun.
+Bu sütun, **ad** sütununda listelenen her değişkenin veri türünü tanımlar.
 
-Yerel öğeler penceresinde de XSLT dönüşümü bağlamında izleyen önceden tanımlanmış bağlam değişkenlerini görüntüler. XSLT hata ayıklayıcısı tarafından kullanılan önceden tanımlanmış bağlam değişkenleri aşağıdaki tabloda açıklanmaktadır.
+Yereller penceresi ayrıca XSLT dönüşümünün bağlamını izleyen önceden tanımlanmış bağlam değişkenlerini de görüntüler. Aşağıdaki tabloda XSLT hata ayıklayıcısı tarafından kullanılan önceden tanımlanmış bağlam değişkenleri açıklanmaktadır.
 
-|Ad|Açıklama|
+|Name|Açıklama|
 |-|-----------------|
-|`last()`|İçerik boyutu.|
-|`position()`|Konumu veya dizin sayısı, bağlam düğümü göre içerik boyutu.|
+|`last()`|Bağlam boyutu.|
+|`position()`|Bağlam düğümünün bağlam boyutuna göre konumu veya dizin numarası.|
 |`self::node()`|Bağlam düğümünün değeri.|
 
 ## <a name="output-window"></a>Çıktı penceresi
 
-Çıkış penceresi, herhangi bir hata iletileri veya hata ayıklama sırasında oluşan bir güvenlik özel durumları gösterir. Ayrıca, hata ayıklayıcı çıkış gösterir.
+Çıkış penceresinde hata iletileri veya hata ayıklama sırasında oluşan güvenlik özel durumları gösterilir. Ayrıca hata ayıklayıcı çıktısını gösterir.
 
 ## <a name="task-list"></a>Görev Listesi
 
-**Görev listesi** stil sayfası tüm derleme hataları listeler. Hata çift hata satırı için imleç alır.
+**Görev listesi** stil sayfasındaki tüm derleme hatalarını listeler. Hataya çift tıklamak imleci hata ile satıra götürür.
 
-**Görev listesi** komut dosyası blokları XSLT dosyasında oluşan hataları içerir.
+**Görev LISTESI** XSLT dosyasındaki betik bloklarından oluşan tüm hataları içerir.
 
 > [!NOTE]
-> XSLT hata ayıklayıcısı hiçbir zaman görünürler, uyarı olduğundan **görev listesi**.
+> XSLT hata ayıklayıcısında hiçbir uyarı yoktur, bu nedenle **görev listesi**hiçbir şekilde görünmez.
 
 ## <a name="breakpoints-window"></a>Kesme Noktaları penceresi
 
-Kesme noktaları penceresi tüm kesme noktalarını ayarlayın geçerli projedeki gösterir. Pencerenin görünümde olduğu sürece bir kesme noktası eklenirse, pencerenin yeni kesme noktası gösterecek şekilde otomatik olarak güncelleştirilir.
+Kesme noktaları penceresi geçerli projede ayarlanan tüm kesme noktalarını gösterir. Pencere görünümünde bir kesme noktası eklenirse pencere, yeni kesme noktasını gösterecek şekilde otomatik olarak güncelleştirilir.
 
-Kesme noktaları penceresini diğer Visual Studio hata ayıklayıcıları aynı şekilde çalışacaktır.
+Kesme noktaları penceresi diğer Visual Studio hata ayıklayıcıları ile aynı şekilde davranır.
 
 ## <a name="watch-window"></a>Gözcü penceresi
 
 İzleme penceresi değişkenleri değerlendirmek için kullanılır. Değişkenlerin değerlerini de değiştirebilirsiniz.
 
-İzleme penceresinde görüntülenen geçerli bağlam (çağrı yığınında en üst öğe) için değişkenlerdir. Bağlam değiştirirseniz, İzleme penceresinde güncelleştirir ve bu bağlam için ayarlanan değişkenler görüntüler.
+İzleme penceresi görüntülenen değişkenler geçerli bağlam içindir (çağrı yığınında en üstteki öğe). Bağlamı değiştirirseniz, Gözcü penceresi güncellenir ve bu bağlam için ayarlanan değişkenleri görüntüler.
 
 ## <a name="call-stack-window"></a>Çağrı Yığını penceresi
 
-**Çağrı yığını** penceresinin, çağrı yığını, parametre türleri ve parametre değerlerini işlevlerin adları görüntülemek için kullanılır. Çağrı yığını bilgileri yalnızca ayıklanan programın bir kesme durumunda olduğunda gösterilir.
+Çağrı **yığını penceresi,** çağrı yığınında işlevlerin adlarını, parametre türlerini ve parametre değerlerini görüntülemek için kullanılır. Çağrı yığını bilgileri yalnızca, hata Ayıklanan program bir kesme durumunda olduğunda gösterilir.
 
-Çağrı yığınını XSLT yürütme oluşturulmak çeşitli bağlamı temsil eder. Örneğin, şablondan bir çağrı ise "a" Şablon "b", şablon "a" ve "b" şablonu görünür **çağrı yığını** penceresi listenin üst kısmındaki geçerli bağlam ile. Kullanıcı şu anda yürütülmekte olan sorgu görebilirsiniz.
+Çağrı yığını, XSLT yürütmesinin devam ettiği çeşitli bağlamlarını temsil eder. Örneğin, "a" şablonundan "b" şablonuna bir çağrı varsa, "a" şablonu ve "b" şablonu, **çağrı yığını** penceresinde listenin en üstünde bulunan geçerli bağlamla görüntülenir. Kullanıcı şu anda yürütülmekte olan sorguyu görebilir.
 
-Şablonlar XSLT dosyasında bir adı yoksa, XSLT işlemcisi tarafından oluşturulan adları kullanılır.
+Şablonlar XSLT dosyasında bir ada sahip değilse, XSLT işlemcisi tarafından oluşturulan adlar kullanılır.
 
-Bir listenin üst kısmındaki dışında bir öğeye tıklandığında Burada XSLT yürütme dal standart yeşil vurgu kullanarak oldu ve yeşil ok Görüntüleyicisi gösterir.
+Listenin en üstünde yer aldığı bir öğeyi tıklatmak, XSLT yürütme dalının standart yeşil vurgulama ve yeşil oklar kullanılarak gerçekleştiği görüntüleyiciye işaret gösterir.
 
 ## <a name="quickwatch-dialog-box"></a>QuickWatch iletişim kutusu
 
-**QuickWatch** iletişim kutusu, XPath 1.0 ifade değerlendirmek için kullanılır. Bağlam düğümünün ( `self::node()` Yereller penceresinde düğüm) için XPath ifadesinin yürütme bağlamı sağlar. XPath ifadesini yürütmenin sonucu İzleme penceresinde görüntülenir.
+**Hızlı izleme** iletişim kutusu, XPath 1,0 ifadelerini değerlendirmek için kullanılır. Bağlam düğümü (Yerel öğeler penceresinden `self::node()` düğümü), XPath ifadesinin yürütülmesi için bağlam sağlar. XPath ifadesinin yürütülmesi sonucu izleme penceresi görüntülenir.
 
-Aşağıdaki listede XPath ifadesi değerlendirmesi kısıtlamaları açıklar:
+Aşağıdaki listede XPath ifade değerlendirmesi kısıtlamaları açıklanmaktadır:
 
-- Yerleşik XPath işlevleri izin verilir.
+- Yalnızca yerleşik XPath işlevlerine izin verilir.
 
-- Yerleşik XSLT işlevleri gibi `document()` ve `key()` izin verilmez.
+- @No__t_0 ve `key()` gibi yerleşik XSLT işlevlerine izin verilmez.
 
-- Kullanıcı tanımlı işlevlerde izin verilmez.
+- Kullanıcı tanımlı işlevlere izin verilmiyor.
 
-Daha fazla bilgi için [nasıl yapılır: Bir XPath ifadesini değerlendirme](../xml-tools/how-to-evaluate-an-xpath-expression.md).
+Daha fazla bilgi için bkz. [nasıl yapılır: bir XPath Ifadesini değerlendirme](../xml-tools/how-to-evaluate-an-xpath-expression.md).
 
 ## <a name="disassembly-window"></a>Ayrıştırma penceresi
 
-Ayrıştırılmış kod penceresini XSLT derleyici tarafından oluşturulan bütünleştirilmiş kodu gösterir. Bu pencerede diğer Visual Studio çözümünü windows ile aynı şekilde kullanılabilir.
+Ayrıştırılmış pencere, XSLT derleyicisi tarafından oluşturulan derleme kodunu gösterir. Bu pencere, diğer tüm Visual Studio Derlemele pencereleri ile aynı şekilde kullanılabilir.
 
-Daha fazla bilgi için [nasıl yapılır: Ayrıştırılmış kod penceresini kullanma](../debugger/how-to-use-the-disassembly-window.md).
+Daha fazla bilgi için [nasıl yapılır: ayrıştırma penceresini kullanma](../debugger/how-to-use-the-disassembly-window.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XSLT Hatalarını Ayıklama](../xml-tools/debugging-xslt.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
-- [Visual Studio'da otolar ve yerel öğeler pencerelerinde değişkenleri denetleyin](../debugger/autos-and-locals-windows.md)
+- [Visual Studio 'da oto ve Yereller pencerelerinde değişkenleri İnceleme](../debugger/autos-and-locals-windows.md)

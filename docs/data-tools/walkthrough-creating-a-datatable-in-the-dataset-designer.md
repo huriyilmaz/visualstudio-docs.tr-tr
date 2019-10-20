@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Veri kümesi tasarımcısında DataTable oluşturma'
+title: 'İzlenecek Yol: Veri Kümesi Tasarımcısında DataTable Oluşturma'
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,63 +7,63 @@ helpviewer_keywords:
 - Dataset Designer, creating data tables
 - tables [Visual Studio], creating
 - data [Visual Studio], Dataset Designer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1126117cb1fc26c4f61bfb0f6ed0e19e86ce9323
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9dbf7116c614a8eec599f197f975ab4c389bc950
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564928"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648066"
 ---
-# <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>İzlenecek yol: Veri kümesi tasarımcısında DataTable oluşturma
+# <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>İzlenecek yol: Veri Kümesi Tasarımcısı bir DataTable oluşturun
 
-Bu izlenecek yolda nasıl oluşturulacağını açıklar bir <xref:System.Data.DataTable> (olmadan bir TableAdapter) kullanarak **veri kümesi Tasarımcısı**. TableAdapter'ları içeren veri tabloları oluşturma hakkında daha fazla bilgi için bkz. [oluştur ve TableAdapter yapılandırma](../data-tools/create-and-configure-tableadapters.md).
+Bu izlenecek yol, **veri kümesi Tasarımcısı**kullanılarak <xref:System.Data.DataTable> (TableAdapter olmadan) oluşturmayı açıklar. TableAdapters içeren veri tabloları oluşturma hakkında daha fazla bilgi için bkz. [Create and configure TableAdapters](../data-tools/create-and-configure-tableadapters.md).
 
 ## <a name="create-a-new-windows-forms-application"></a>Yeni bir Windows Forms uygulaması oluşturma
 
-1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** > **proje**.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
 
-2. Ya da genişletin **Visual C#** veya **Visual Basic** seçip sol bölmedeki **Windows Masaüstü**.
+2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
-3. Orta bölmede seçin **Windows Forms uygulaması** proje türü.
+3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi adlandırın **DataTableWalkthrough**ve ardından **Tamam**.
+4. Projeyi **DataTableWalkthrough**olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-     **DataTableWalkthrough** projesi oluşturulur ve eklenen **Çözüm Gezgini**.
+     **DataTableWalkthrough** projesi oluşturulup **Çözüm Gezgini**eklenir.
 
-## <a name="add-a-new-dataset-to-the-application"></a>Uygulamaya yeni bir veri kümesi ekleyin
+## <a name="add-a-new-dataset-to-the-application"></a>Uygulamaya yeni bir veri kümesi ekleme
 
-1. Üzerinde **proje** menüsünde **Yeni Öğe Ekle**.
+1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-     **Yeni Öğe Ekle** iletişim kutusu görünür.
+     **Yeni öğe Ekle** iletişim kutusu görüntülenir.
 
-2. Sol bölmede seçin **veri**, ardından **veri kümesi** orta bölmesinde.
+2. Sol bölmedeki **veriler**' i seçin ve ardından orta bölmedeki veri **kümesi** ' ni seçin.
 
-3. Seçin **ekleme**.
+3. **Ekle**' yi seçin.
 
-     Visual Studio adlı bir dosya ekler **dataSet1.xsd dosyasını** projeye ve onu açar **veri kümesi Tasarımcısı**.
+     Visual Studio **dataSet1. xsd** adlı bir dosyayı projeye ekler ve **veri kümesi Tasarımcısı**açar.
 
-## <a name="add-a-new-datatable-to-the-dataset"></a>Veri kümesine yeni bir DataTable ekleme
+## <a name="add-a-new-datatable-to-the-dataset"></a>Veri kümesine yeni bir DataTable ekleyin
 
-1. Sürükleme bir **DataTable** gelen **veri kümesi** sekmesinde **araç kutusu** üzerine **veri kümesi Tasarımcısı**.
+1. **Araç kutusunun** **veri kümesi** sekmesinden bir **DataTable nesnesini** **veri kümesi Tasarımcısı**üzerine sürükleyin.
 
-     Adlı bir tablo **DataTable1** veri kümesine eklenir.
+     **DataTable1** adlı bir tablo, veri kümesine eklenir.
 
-2. Başlık çubuğuna tıklayın **DataTable1** ve yeniden adlandırmak `Music`.
+2. **DataTable1** öğesinin başlık çubuğuna tıklayın ve `Music` yeniden adlandırın.
 
-## <a name="add-columns-to-the-datatable"></a>DataTable tablosuna sütun ekleme
+## <a name="add-columns-to-the-datatable"></a>DataTable 'a sütun ekleme
 
-1. Sağ **müzik** tablo. İşaret **Ekle**ve ardından **sütun**.
+1. **Müzik** tablosuna sağ tıklayın. **Ekle**' nin üzerine gelin ve ardından **sütun**' a tıklayın.
 
-2. Sütun adı `SongID`.
+2. Sütunu `SongID` olarak adlandırın.
 
-3. İçinde **özellikleri** penceresinde <xref:System.Data.DataColumn.DataType%2A> özelliğini <xref:System.Int16?displayProperty=fullName>.
+3. **Özellikler** penceresinde <xref:System.Data.DataColumn.DataType%2A> özelliğini <xref:System.Int16?displayProperty=fullName> olarak ayarlayın.
 
-4. Bu işlemi tekrarlayın ve aşağıdaki sütunları ekleyin:
+4. Bu işlemi yineleyin ve aşağıdaki sütunları ekleyin:
 
      `SongTitle`: <xref:System.String?displayProperty=fullName>
 
@@ -71,18 +71,18 @@ Bu izlenecek yolda nasıl oluşturulacağını açıklar bir <xref:System.Data.D
 
      `Genre`: <xref:System.String?displayProperty=fullName>
 
-## <a name="set-the-primary-key-for-the-table"></a>Tablonun birincil anahtarı Ayarla
+## <a name="set-the-primary-key-for-the-table"></a>Tablo için birincil anahtarı ayarla
 
-Tüm veri tablolarının birincil anahtarı olmalıdır. Bir birincil anahtar, bir veri tablosu belirli bir kaydı benzersiz olarak tanımlar.
+Tüm veri tabloları birincil bir anahtara sahip olmalıdır. Birincil anahtar, bir veri tablosunda belirli bir kaydı benzersiz şekilde tanımlar.
 
-Birincil anahtarı ayarlamak için **SongID** sütun ve ardından **birincil anahtarı Ayarla**. Bir anahtar simgesi görünür **SongID** sütun.
+Birincil anahtarı ayarlamak için **SongID** sütununa sağ tıklayın ve ardından **birincil anahtarı ayarla**' ya tıklayın. **SongID** sütununun yanında bir anahtar simgesi görünür.
 
 ## <a name="save-your-project"></a>Projenizi kaydedin
 
-Kaydetmek için **DataTableWalkthrough** projesi **dosya** menüsünde **Tümünü Kaydet**.
+**DataTableWalkthrough** projesini kaydetmek Için, **Dosya** menüsünde **Tümünü Kaydet**' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio’da veri kümeleri oluşturma ve yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md)
 - [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md)
-- [Verileri doğrulama](../data-tools/validate-data-in-datasets.md)
+- [Veriler doğrulanıyor](../data-tools/validate-data-in-datasets.md)

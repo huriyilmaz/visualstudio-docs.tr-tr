@@ -3,20 +3,20 @@ title: Yaygın Hızlı Eylemler
 description: Visual Basic ve için C# en popüler hızlı eylemler, yanlış yazılmış anahtar sözcükleri veya sembolleri düzeltme, birleştirme çakışmalarını çözme, gerekli içeri aktarmaları kaldırma, türleri oluşturma, yerel değişkenlere giriş vb.
 ms.date: 03/28/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 600fb1b4abea2103c28e3a5067d640228d68b755
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: bad97ac5574afd65103263b2ce51a4dfba02741c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72000148"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652244"
 ---
 # <a name="common-quick-actions"></a>Yaygın Hızlı Eylemler
 
@@ -30,7 +30,7 @@ Bu bölümdeki hızlı eylemler, bir yapılandırmanın başarısız olmasına n
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>Yanlış yazılmış sembol veya anahtar sözcüğü düzelt
 
-Visual Studio 'da bir tür veya anahtar sözcüğü yanlışlıkla yanlış yazarsanız, bu hızlı eylem sizin için otomatik olarak düzeltir. Bu öğeleri ampul menüsünde **"Değiştir ' \<yanlış yazılmış kelime > ' olarak" \<doğru kelime > ' "** olarak görürsünüz. Örneğin:
+Visual Studio 'da bir tür veya anahtar sözcüğü yanlışlıkla yanlış yazarsanız, bu hızlı eylem sizin için otomatik olarak düzeltir. Bu öğeleri ampul menüsünde **"\<misspelled sözcüğü > ' ' \<correct word > '" olarak değiştirin**. Örneğin:
 
 ```csharp
 // Before
@@ -96,7 +96,7 @@ private void MyMethod()
 
 ### <a name="remove-unnecessary-usingsimports"></a>Gereksiz kullanımlar/Içeri aktarmaları kaldır
 
-**Gereksiz kullanımlar/Içeri aktarmalar kaldırma** hızlı eylemi, geçerli dosya için kullanılmayan `using` ve `Import` deyimlerini kaldırır. Bu öğeyi seçtiğinizde, kullanılmayan ad alanı içeri aktarmaları kaldırılır.
+**Gereksiz kullanımlar/Içeri aktarmalar kaldırma** hızlı eylemi, geçerli dosya için kullanılmayan `using` ve `Import` yönergeleri kaldırır. Bu öğeyi seçtiğinizde, kullanılmayan ad alanı içeri aktarmaları kaldırılır.
 
 | Uygun diller | Desteklenen sürüm |
 | - | - |
@@ -184,7 +184,7 @@ void DoWork(CancellationToken cancellationToken = default) { ... }
 - Başvuru derlemelerindeki türler için kullanımlar/içeri aktarmalar öner
 - NuGet paketlerindeki türler için kullanımlar/içeri aktarmalar öner
 
-Etkinleştirildiğinde, şu anda içeri aktarılmayan, ancak başvuru derlemesinde veya NuGet paketinde bulunan bir ad alanında bir tür kullanırsanız, using/Import deyimleri oluşturulur.
+Etkinleştirildiğinde, şu anda içeri aktarılmamış ancak başvuru derlemesinde veya NuGet paketinde bulunan bir ad alanında bir tür kullanırsanız, using veya Import yönergesi oluşturulur.
 
 ```csharp
 // Before
@@ -204,7 +204,7 @@ Debug.WriteLine("Hello")
 
 ' Imports System.Diagnostics
 
-// After
+' After
 Imports System.Diagnostics
 
 Debug.WriteLine("Hello")
@@ -216,9 +216,9 @@ Debug.WriteLine("Hello")
 
 ### <a name="add-missing-casesdefault-caseboth"></a>Eksik durumları/varsayılan durumu/her ikisini de ekle
 
-İçinde C#`switch` ifadesinde veya Visual Basic `Select Case` ifadesinde oluştururken, eksik durum öğelerini otomatik olarak eklemek Için bir kod eylemi, varsayılan bir Case ifadesini veya her ikisini de kullanabilirsiniz.
+İçinde C#`switch` bir ifade veya Visual Basic `Select Case` bildiriminde oluştururken, eksik durum öğelerini otomatik olarak eklemek Için bir kod eylemi, varsayılan bir Case ifadesini veya her ikisini de kullanabilirsiniz.
 
-Aşağıdaki sabit listesini ve boş `switch` veya `Select Case` ifadesini göz önünde bulundurun:
+Aşağıdaki sabit listesi ve boş `switch` ya da `Select Case` ifadesini göz önünde bulundurun:
 
 ```csharp
 enum MyEnum
@@ -335,7 +335,7 @@ var date = new DateTime(year: 1997, month: 7, day: 8);
 
 ### <a name="add-braces"></a>Küme ayracı Ekle
 
-Ayraç ekleme hızlı eylemi, tek satır `if` deyimlerinin etrafına ayraçları kaydırır.
+Parantez ekleme hızlı eylemi, tek satır `if` deyimlerinin etrafına ayraçları kaydırır.
 
 ```csharp
 // Before
@@ -511,7 +511,7 @@ Dim c = New Customer() With {.Age = 21}
 
 ### <a name="use-collection-initializers"></a>Koleksiyon Başlatıcıları kullanma
 
-Bu hızlı eylem, sınıfınızın `Add` yöntemine birden çok çağrı yerine [koleksiyon başlatıcıları](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) kullanmanıza olanak sağlar.
+Bu hızlı eylem, sınıfınızın `Add` metoduna birden çok çağrı yerine [koleksiyon başlatıcıları](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers) kullanmanıza olanak sağlar.
 
 ```csharp
 // Before
@@ -876,7 +876,7 @@ Console.WriteLine($"{x} {y}");
 
 ### <a name="make-method-synchronous"></a>Yöntemi zaman uyumlu yap
 
-Bir yöntemde `async` veya `Async` anahtar sözcüğünü kullanırken, bu yöntemin içinde `await` veya `Await` anahtar sözcüğünün de kullanıldığı beklenmektedir. Ancak böyle bir durum yoksa, `async` veya `Async` anahtar sözcüğünü kaldırarak ve dönüş türünü değiştirerek yöntemi zaman uyumlu hale getiren hızlı bir eylem görünür. Hızlı Eylemler menüsünden **yöntemi zaman uyumlu yap** seçeneğini kullanın.
+Bir yöntemde `async` veya `Async` anahtar sözcüğünü kullanırken, bu yöntemin içinde `await` veya `Await` anahtar sözcüğünün de kullanılması beklenmektedir. Ancak böyle bir durum yoksa, `async` veya `Async` anahtar sözcüğünü kaldırarak ve dönüş türünü değiştirerek yöntemi zaman uyumlu hale getiren hızlı bir eylem görünür. Hızlı Eylemler menüsünden **yöntemi zaman uyumlu yap** seçeneğini kullanın.
 
 ```csharp
 // Before

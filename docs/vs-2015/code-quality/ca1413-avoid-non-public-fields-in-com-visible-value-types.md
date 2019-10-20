@@ -1,5 +1,5 @@
 ---
-title: 'CA1413: COM görünebilir değer türleri içinde genel olmayan alanlardan kaçının | Microsoft Docs'
+title: 'CA1413: COM görünebilir değer türlerinde genel olmayan alanlardan kaçının | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - AvoidNonpublicFieldsInComVisibleValueTypes
 ms.assetid: 1352e7eb-fefc-4239-8847-25edc7804a54
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 59ca3c5f53dee43bdd73eb706f03792458e71698
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7d66c2c52b6ee7f7d1d2fbbd461ca8c1251ce13d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65691134"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652707"
 ---
 # <a name="ca1413-avoid-non-public-fields-in-com-visible-value-types"></a>CA1413: COM görünebilir değer türleri içinde genel olmayan alanlardan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,33 +29,33 @@ ms.locfileid: "65691134"
 |-|-|
 |TypeName|AvoidNonpublicFieldsInComVisibleValueTypes|
 |CheckId|CA1413|
-|Kategori|Microsoft.Interoperability|
+|Kategori|Microsoft. çalışabilirliği|
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Özel Bileşen Nesne Modeli (COM) görünür olarak işaretlenmiş bir değer türü, bir ortak olmayan örnek alan bildirir.
+ Özellikle bileşen nesne modeli (COM) tarafından görünür olarak işaretlenen bir değer türü, ortak bir örnek alanı bildirir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- COM-görünür değer türlerinin ortak olmayan örnek alanları COM istemcilerine görünürdür. Alanın değil açılmamalıdır veya, istenmeyen bir tasarım veya güvenlik etkisi olmayacak bilgi içeriği gözden geçirin.
+ COM-görünür değer türlerinin ortak olmayan örnek alanları COM istemcilerine görünürdür. Açığa çıkmamalıdır veya istenmeyen bir tasarım ya da güvenlik etkisine sahip olacak bilgiler için alanın içeriğini gözden geçirin.
 
- Varsayılan olarak, tüm ortak türlerin COM tarafından görülebilir Ancak, hatalı pozitif sonuçları azaltmak için bu kural türünü açıkça belirtilen COM görünürlüğünü gerektirir. Derlemeyi içeren ile işaretlenmelidir <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> kümesine `false` ve türü ile işaretlenmelidir <xref:System.Runtime.InteropServices.ComVisibleAttribute> kümesine `true`.
+ Varsayılan olarak, tüm ortak değer türleri COM olarak görünür. Ancak, hatalı pozitif sonuçları azaltmak için bu kural, türün COM görünürlüğünü açık bir şekilde ifade etmek için gereklidir. Kapsayan bütünleştirilmiş kod, <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> `false` ayarlanmış olarak işaretlenmelidir ve tür, <xref:System.Runtime.InteropServices.ComVisibleAttribute> `true` olarak işaretli olmalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek ve gizli alan tutmak için bir başvuru türü için değer türü değiştirme veya kaldırma <xref:System.Runtime.InteropServices.ComVisibleAttribute> türü özniteliği.
+ Bu kuralın ihlalini onarmak ve alanı gizli tutmaya devam etmek için, değer türünü bir başvuru türü olarak değiştirin veya <xref:System.Runtime.InteropServices.ComVisibleAttribute> özniteliğini türden kaldırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Alanın genele kabul edilebilir ise bu kuraldan bir uyarıyı bastırmak güvenlidir.
+ Alanın genel pozlaması kabul edilebilir ise, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek kuralını ihlal eden bir tür gösterir.
+ Aşağıdaki örnek, kuralı ihlal eden bir türü gösterir.
 
  [!code-csharp[FxCop.Interoperability.NonpublicField#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.NonpublicField/cs/FxCop.Interoperability.NonpublicField.cs#1)]
  [!code-vb[FxCop.Interoperability.NonpublicField#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.NonpublicField/vb/FxCop.Interoperability.NonpublicField.vb#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA1407: COM görünebilir türler içinde statik üyelerden kaçının](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
 
  [CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Yönetilmeyen kod ile birlikte](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258) [birlikte çalışma için .NET türlerini niteleme](https://msdn.microsoft.com/library/4b8afb52-fb8d-4e65-b47c-fd82956a3cdd)
+ [Birlikte çalışabilirlik Için yönetilmeyen kod niteleyen .net türleriyle](https://msdn.microsoft.com/library/4b8afb52-fb8d-4e65-b47c-fd82956a3cdd) [birlikte çalışma](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)

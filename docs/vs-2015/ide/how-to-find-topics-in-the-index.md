@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Dizin konuları bulun | Microsoft Docs'
+title: 'Nasıl yapılır: dizinde konu bulma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - Help Viewer 2.0, index filtering
 ms.assetid: cb071e93-f297-459c-a6fa-8ae0dabc42a4
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 67eb54d06297458915edfe34718948b085c6e86b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4de007ef262304d570ec8ebed39e6b14a2730833
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63416826"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651933"
 ---
 # <a name="how-to-find-topics-in-the-index"></a>Nasıl yapılır: Dizinde Konu Bulma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Dizin, yüklü içeriği konularındaki ile ilişkili anahtar sözcüklerin listesini içerir. Kendisiyle ilişkili birden fazla anahtar sözcüğü her konu olabilir ve her anahtar sözcüğün birden fazla konu ile ilişkili olabilir. Bu dizin, dizin bir kitap kullandığınız gibi aynı şekilde kullanın.  
-  
-### <a name="to-find-a-topic-by-using-the-index"></a>Dizini kullanarak bir konu bulunamadı  
-  
-1. Üzerinde **dizin** sekmesinde, aşağıdaki görevlerden birini gerçekleştirin:  
-  
-   - Metin kutusuna aramak için anahtar sözcüğü belirtin. Örneğin, anahtar sözcükler "güncelleştir"güncelleştirme"," gibi konularda bulmak için "güncelleştir" ve "güncelleştiriliyor." belirtin  
-  
-      Sekme üst kısmındaki filtre düğmesini seçerek, belirttiğiniz metni içeren tüm girişleri veya yalnızca belirttiğiniz metni içeren başlangıç girişleri görüntüleyebilirsiniz.  
-  
+Dizin, yüklü içerikteki konularda ilişkili anahtar sözcüklerin bir listesini içerir. Her konunun kendisiyle ilişkili birden fazla anahtar sözcüğü olabilir ve her anahtar sözcük birden fazla konuyla ilişkilendirilebilir. Bu dizini, bir kitapta Dizin kullandığınız şekilde kullanın.
+
+### <a name="to-find-a-topic-by-using-the-index"></a>Dizini kullanarak bir konu bulmak için
+
+1. **Dizin** sekmesinde, aşağıdaki görevlerden birini gerçekleştirin:
+
+   - Metin kutusunda aranacak anahtar sözcüğünü belirtin. Örneğin, "güncelleştirme", "güncelleştirilmiş" ve "güncelleştirme" gibi anahtar kelimelerle ilgili konuları bulmak için "Güncelleştir" i belirtin.
+
+      Sekmenin üst kısmında bulunan filtre düğmesini seçerek, belirttiğiniz metni içeren tüm girişleri veya yalnızca belirttiğiniz metinle başlayan girdileri gösterebilirsiniz.
+
      > [!NOTE]
-     > Filtre düğmesine daha koyu bir kenarlık arka plan üzerinde göründüğünde, belirttiğiniz metni girişleri içermelidir. Girişler, arka planını ve kenarlığı görünmüyorsa, belirttiğiniz metni içeren başlatmanız gerekir.  
-  
-   - Dizin gidin ve bir anahtar seçin.  
-  
-     Belirttiğiniz anahtar sözcüğü yalnızca bir konu ile ilişkili ise, görünür. Aksi halde, anahtar sözcüğü ile ilişkili olan tüm konuların listesi görüntülenir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+     > Filtre düğmesi kenarlıklı daha koyu bir arka planda göründüğünde, girişlerin belirttiğiniz metni içermesi gerekir. Arka plan ve kenarlık görünmezse, girişlerin belirttiğiniz metinle başlaması gerekir.
+
+   - Dizinde ilerleyin ve bir anahtar sözcük seçin.
+
+     Belirttiğiniz anahtar sözcük yalnızca bir konuyla ilişkiliyse, görüntülenir. Aksi takdirde, bu anahtar sözcükle ilişkili tüm konuların listesi görüntülenir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Dizin Arama İpuçları](../ide/index-search-tips.md)

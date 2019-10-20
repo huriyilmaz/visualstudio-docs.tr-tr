@@ -1,5 +1,5 @@
 ---
-title: -Yükseltme (devenv.exe) | Microsoft Docs
+title: -Upgrade (devenv. exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,48 +10,45 @@ helpviewer_keywords:
 - upgrade Devenv switch
 ms.assetid: 3468045c-5cc9-4157-9a9d-622452145d27
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b2ba3caf7931449e2c1657270838a45505fd5d92
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24bb6160f9895f129c4d7d36c2b0aa8a56ca282a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68176938"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657907"
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Çözüm dosyası ve proje dosyalarının ya da proje dosyası, belirtilen geçerli tüm güncelleştirmeleri [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bu dosyaların biçimleri.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-devenv SolutionFile | ProjectFile /upgrade  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `SolutionFile`  
- Tüm bir çözümü ve projelerini yükseltiyorsanız, gereklidir. Çözüm dosyasının adı ve yolu. Yalnızca çözüm dosyasının veya tam yol adı ve çözüm dosyasının adını girebilirsiniz. Adlandırılmış klasör veya dosya henüz yoksa, oluşturulur.  
-  
- `ProjectFile`  
- Tek bir projeyi yükseltiyorsanız gereklidir. Çözüm içindeki bir proje dosyasının adı ve yolu. Yalnızca proje dosyasının veya tam yol adını ve proje dosyasının adını girebilirsiniz. Adlandırılmış klasör veya dosya henüz yoksa, oluşturulur.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Yedeklemeleri otomatik olarak oluşturulur ve geçerli dizinde oluşturulan Backup adlı dizine kopyalanır.  
-  
- Yükseltilebilmesi için önce kaynağı denetlenen çözümlerin veya projelerin kullanıma alınması gerekir.  
-  
- Kullanarak `/upgrade` anahtar başlamıyor [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Yükseltmenin sonuçları, çözüm veya projenin geliştirme dilinin yükseltme Raporu'nda görülebilir. Hiçbir hata veya kullanım bilgisi döndürülür. Projeleri yükseltme hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], bkz: [nasıl yapılır: Başarısız Visual Studio Proje yükseltmelerinde sorun giderme](../../porting/how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades.md).  
-  
-## <a name="example"></a>Örnek  
- Bu örnek için varsayılan klasörünüzdeki "MyProject.sln" adlı bir çözüm dosyasını yükseltir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] çözümler.  
-  
-```  
-devenv "MyProject.sln" /upgrade  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Başarısız Visual Studio Proje yükseltmelerinde sorun giderme](../../porting/how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades.md)   
- [Devenv Komut Satırı Anahtarları](../../ide/reference/devenv-command-line-switches.md)
+Çözüm dosyasını ve tüm proje dosyalarını veya belirtilen proje dosyasını, bu dosyalar için geçerli [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] biçimlerine güncelleştirir.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+devenv SolutionFile | ProjectFile /upgrade
+```
+
+## <a name="arguments"></a>Arguments
+ tüm çözümü ve projelerini yükseltiyorsanız `SolutionFile` gerekir. Çözüm dosyasının yolu ve adı. Yalnızca çözüm dosyasının adını veya çözüm dosyasının tam yolunu ve adını girebilirsiniz. Adlı klasör veya dosya henüz yoksa, oluşturulur.
+
+ tek bir projeyi yükseltiyorsanız gerekli `ProjectFile`. Çözüm içindeki bir proje dosyasının yolu ve adı. Yalnızca proje dosyasının adını veya proje dosyasının tam yolunu ve adını girebilirsiniz. Adlı klasör veya dosya henüz yoksa, oluşturulur.
+
+## <a name="remarks"></a>Açıklamalar
+ Yedeklemeler otomatik olarak oluşturulur ve geçerli dizinde oluşturulan yedekleme adlı bir dizine kopyalanır.
+
+ Kaynak denetimli çözümlerin veya projelerin yükseltibilmeleri için önce kullanıma alınması gerekir.
+
+ @No__t_0 anahtarının kullanılması [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] başlamaz. Yükseltmenin sonuçları, çözüm veya projenin geliştirme dili için yükseltme raporunda görülebilir. Hata veya kullanım bilgisi döndürülmedi. Projeleri [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] yükseltme hakkında daha fazla bilgi için bkz. [nasıl yapılır: başarısız Visual Studio proje yükseltmelerinde sorun giderme](../../porting/how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades.md).
+
+## <a name="example"></a>Örnek
+ Bu örnek, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] çözümleri için varsayılan klasörünüzdeki "MyProject. sln" adlı bir çözüm dosyasını yükseltir.
+
+```
+devenv "MyProject.sln" /upgrade
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Nasıl yapılır: başarısız Visual Studio proje yükseltmeleri](../../porting/how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades.md) [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md) sorunlarını giderme

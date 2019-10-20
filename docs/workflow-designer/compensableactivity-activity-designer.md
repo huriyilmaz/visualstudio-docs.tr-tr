@@ -1,45 +1,45 @@
 ---
-title: İş Akışı Tasarımcısı - CompensableActivity etkinlik Tasarımcısı
+title: İş Akışı Tasarımcısı-CompensableActivity etkinlik Tasarımcısı
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.CompensableActivity.UI
 ms.assetid: e0340d89-d39e-4a52-8557-13e27040d7b5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfe5a207136b44e61beff77bec8c8c7b869568b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f498c6d025e7527b9767284a77c953e538cef377
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949904"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650670"
 ---
 # <a name="compensableactivity-activity-designer"></a>CompensableActivity Etkinlik Tasarımcısı
 
-**CompensableActivity** etkinlik Tasarımcısı oluşturmak ve yapılandırmak için kullanılan bir <xref:System.Activities.Statements.CompensableActivity> etkinlik.
+**CompensableActivity** etkinlik Tasarımcısı <xref:System.Activities.Statements.CompensableActivity> etkinlik oluşturmak ve yapılandırmak için kullanılır.
 
-## <a name="the-compensableactivity-activity"></a>CompensableActivity etkinlik
- <xref:System.Activities.Statements.CompensableActivity> Onaylanabilir veya işlemin başarıyla tamamlanmasından sonra dengelenebilecek iş birimi tanımlar.
+## <a name="the-compensableactivity-activity"></a>CompensableActivity etkinliği
+ @No__t_0 başarılı bir şekilde tamamlandıktan sonra onaylanabileceğini veya dengelenebilir bir iş birimi tanımlar.
 
-### <a name="using-the-compensableactivity-activity-designer"></a>CompensableActivity etkinlik Tasarımcısı kullanma
- **CompensableActivity** etkinlik Tasarımcısı bulunabilir **işlem** kategorisi **araç kutusu**. Açmak için **araç kutusu**seçin **araç kutusu** iş akışı Tasarımcısı'nın sol tarafındaki sekmesi. Alternatif olarak, seçin **araç kutusu** gelen **görünümü** tuşuna basın veya menü **Ctrl**+**Alt** + **X**.
+### <a name="using-the-compensableactivity-activity-designer"></a>CompensableActivity etkinlik tasarımcısını kullanma
+ **CompensableActivity** etkinlik Tasarımcısı **araç kutusu** **işlem** kategorisinde bulunabilir. **Araç kutusunu**açmak için iş akışı Tasarımcısı sol tarafında bulunan **araç kutusu** sekmesini seçin. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** +**alt** +**X**tuşuna basın.
 
- **CompensableActivity** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve iş akışı Tasarımcısı yüzeyine açın. Etkinlik Tasarımcısı içinde açılan bir <xref:System.Activities.Statements.Sequence>. Etkinlik Tasarımcısı bırakarak oluşturur bir <xref:System.Activities.Statements.CompensableActivity> etkinliği ile bir varsayılan <xref:System.Activities.Activity.DisplayName%2A> CompensableActivity biri. Düzen <xref:System.Activities.Activity.DisplayName%2A> üstbilgisinin değerini **CompensableActivity** etkinlik Tasarımcısı. İçinde de düzenlenebilir **DisplayName** özellik kılavuzunda kutusu.
+ **CompensableActivity** etkinlik Tasarımcısı **araç kutusu** 'ndan sürüklenip iş akışı Tasarımcısı yüzeyine bırakılabilir. Etkinlik tasarımcısını bir <xref:System.Activities.Statements.Sequence> içine bırakabilirsiniz. Etkinlik Tasarımcısı ' nın atılması, CompensableActivity 'nin varsayılan <xref:System.Activities.Activity.DisplayName%2A> bir <xref:System.Activities.Statements.CompensableActivity> etkinlik oluşturur. **CompensableActivity** etkinlik tasarımcısı üstbilgisindeki <xref:System.Activities.Activity.DisplayName%2A> değerini düzenleyin. Ayrıca, özellik kılavuzunun **DisplayName** kutusunda de düzenlenebilir.
 
 ### <a name="the-compensableactivity-properties"></a>CompensableActivity özellikleri
- Aşağıdaki tabloda <xref:System.Activities.Statements.CompensableActivity> özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır. <xref:System.Activities.Activity.DisplayName%2A> Ve <xref:System.Activities.Activity%601.Result%2A> özelliği özellik kılavuzunda düzenlenebilir ancak iş akışı Tasarımcısı yüzeyine diğer özellikleri düzenlenmesi gerekir.
+ Aşağıdaki tabloda <xref:System.Activities.Statements.CompensableActivity> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. @No__t_0 ve <xref:System.Activities.Activity%601.Result%2A> özelliği özellik kılavuzunda düzenlenebilir, ancak diğer özellikler İş Akışı Tasarımcısı yüzeyinde düzenlenmelidir.
 
-|Özellik Adı|Gerekli|Kullanım|
+|Özellik adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|İsteğe bağlı kolay adı <xref:System.Activities.Statements.CompensableActivity> etkinlik. CompensableActivity varsayılandır.|
-|<xref:System.Activities.Activity%601.Result%2A>|False|Dönüş değerini belirtir <xref:System.Activities.Statements.CompensableActivity>. Bu özellik, özellik kılavuzunda düzenlenmelidir.|
-|<xref:System.Activities.Statements.CompensableActivity.Body%2A>|Doğru|Sağlanan maaş, iptal ve Doğrulama mantığı için etkinlik belirtir. Eklemek için <xref:System.Activities.Statements.CompensableActivity.Body%2A> etkinlik, açılan bir etkinlikten **araç kutusu** içine **gövdesi** kutusuna **CompensableActivity** etkinlik Tasarımcısı. "Buraya Bırak etkinlik" İpucu metnini ekleyin.|
-|<xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>|False|İptal durumunda olduğunda çalıştırılan etkinlik belirtir. Etkinlik eklemek için kendi Tasarımcısından bırak **araç kutusu** içine **CancellationHandler** kutusuna **CompensableActivity** etkinlik Tasarımcısı. İpucu metni "Etkinliği buraya bırakın" ekleyin.|
-|<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|False|Etkinlik için telafi bırakıldığında yürütülecek belirtir <xref:System.Activities.Statements.CompensableActivity.Body%2A> etkinlik. Bu işleyici açıkça çağrılabilir <xref:System.Activities.Statements.Compensate> etkinlik.<br /><br /> Etkinlik eklemek için etkinlik Tasarımcısı'ndan doğrudan **araç kutusu** içine **CompensationHandler** kutusuna **CompensableActivity** etkinlik Tasarımcısı. İpucu metni "Etkinliği buraya bırakın" ekleyin.|
-|<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|False|Onaylama yürütülecek etkinliği <xref:System.Activities.Statements.CompensableActivity.Body%2A> etkinlik. Bu işleyici açıkça çağrılabilir <xref:System.Activities.Statements.Confirm> etkinlik.<br /><br /> Etkinlik eklemek için etkinlik Tasarımcısı'ndan doğrudan **araç kutusu** içine **ConfirmationHandler** kutusuna **CompensableActivity** etkinlik Tasarımcısı. İpucu metni "Etkinliği buraya bırakın" ekleyin.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin isteğe bağlı kolay adı. Varsayılan değer CompensableActivity 'dir.|
+|<xref:System.Activities.Activity%601.Result%2A>|False|@No__t_0 dönüş değerini belirtir. Bu özellik, özellik kılavuzunda düzenlenmelidir.|
+|<xref:System.Activities.Statements.CompensableActivity.Body%2A>|Doğru|Dengeleme, iptal ve onaylama mantığının sağlandığı etkinliği belirtir. @No__t_0 etkinliğini eklemek için, **araç** kutusundan bir etkinliği **CompensableActivity** etkinlik Tasarımcısı ' nın **gövde** kutusuna bırakın. "Etkinliği buraya bırak" ipucu metnini ekleyin.|
+|<xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>|False|İptal edildiğinde yürütülen etkinliği belirtir. Etkinliği eklemek için, tasarımcısını **araç kutusu** ' ndan, **CompensableActivity** etkinlik Tasarımcısı ' nın **CancellationHandler** kutusuna bırakın. İpucu metni Ekle "etkinliği buraya bırakın".|
+|<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|False|@No__t_0 etkinliği için telafi edildiğinde yürütülecek etkinliği belirtir. Bu işleyici, <xref:System.Activities.Statements.Compensate> etkinliği kullanılarak açık bir şekilde çağrılabilir.<br /><br /> Etkinliği eklemek için, etkinlik tasarımcısını **araç kutusu** ' ndan **CompensableActivity** etkinlik Tasarımcısı ' nın **CompensationHandler** kutusuna bırakın. İpucu metni Ekle "etkinliği buraya bırakın".|
+|<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|False|@No__t_0 etkinliğini onaylayarak yürütülecek etkinliği belirtir. Bu işleyici, <xref:System.Activities.Statements.Confirm> etkinliği kullanılarak açık bir şekilde çağrılabilir.<br /><br /> Etkinliği eklemek için, etkinlik tasarımcısını **araç kutusu** ' ndan **CompensableActivity** etkinlik Tasarımcısı ' nın **ConfirmationHandler** kutusuna bırakın. İpucu metni Ekle "etkinliği buraya bırakın".|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

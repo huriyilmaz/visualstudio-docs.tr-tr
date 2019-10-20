@@ -1,125 +1,125 @@
 ---
-title: XAML Tasarımcısı'nda öğelerle çalışma | Microsoft Docs
+title: XAML Tasarımcısı öğelerle çalışma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: a29690bf-f212-4ac6-a77a-adc53d14102e
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1ecb5981a8111f3fca013d3b5f115155ac7baf89
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 483023fbd28da26d9967dd2d88bc37748d00f088
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824854"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663981"
 ---
 # <a name="working-with-elements-in-xaml-designer"></a>XAML Tasarımcısı'nda öğelerle çalışma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Öğeleri ekleyebilirsiniz; denetimler, düzenler ve şekiller — uygulamanıza XAML, kod veya XAML Tasarımcısını kullanarak. Bu konuda, Visual Studio veya Visual Studio için Blend, XAML Tasarımcısı'nda öğelerle çalışma açıklar.  
-  
-## <a name="adding-an-element-to-a-layout"></a>Bir öğe için bir düzen ekleme  
- *Düzen* boyutlandırma ve bir kullanıcı Arabiriminde öğelerin konumlandırmasını, işlemidir. Görsel öğeleri konumlandırmak için bunları bir düzende yerleştirmelisiniz [paneli](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.panel.aspx). A `Panel` koleksiyonu olan bir alt özelliğine sahiptir, [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706.aspx) türleri. Çeşitli kullanabileceğiniz `Panel` alt öğeleri gibi [tuval](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.canvas.aspx), [StackPanel](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx), ve [kılavuz](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx), Düzen kapsayıcıları görev yapacak ve getirin ve öğeleri düzenlemek için bir sayfa üzerinde.  
-  
- Varsayılan olarak, bir `Grid` paneli sayfa veya form içinde üst düzey Düzen kapsayıcısı olarak kullanılır. Düzen bölmeleri, denetimleri veya diğer öğeleri içinde üst düzey sayfa düzeni ekleyebilirsiniz.  
-  
-#### <a name="to-add-an-element-to-a-layout"></a>Bir öğenin bir düzenine eklemek için  
-  
-- XAML Tasarımcısı'nda, aşağıdakilerden birini yapın:  
-  
-  - Bir öğedeki çift **araç kutusu** (veya araç kutusundan bir öğe seçin ve Enter tuşuna basın).  
+Uygulamanıza XAML 'de, kod içinde veya XAML Tasarımcısı kullanarak öğe (denetimler, düzenler ve şekiller) ekleyebilirsiniz. Bu konu başlığı altında, Visual Studio veya Visual Studio için Blend XAML Tasarımcısı öğeleri ile nasıl çalışılacağı açıklanmaktadır.
 
-  - Bir öğeyi sürükleyin **araç kutusu** çalışma yüzeyine.  
+## <a name="adding-an-element-to-a-layout"></a>Bir düzene öğe ekleme
+ *Düzen* , BIR kullanıcı arabirimindeki öğeleri boyutlandırma ve konumlandırma işlemidir. Görsel öğeleri konumlandırmak için bunları bir düzen [paneline](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.panel.aspx)koymanız gerekir. @No__t_0, [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706.aspx) türlerinin bir koleksiyonu olan bir child özelliğine sahiptir. Düzen kapsayıcıları olarak görev yapmak ve öğeleri bir sayfada konumlandırmak ve düzenlemek için [tuval](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.canvas.aspx), [StackPanel](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx)ve [kılavuz](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)gibi çeşitli `Panel` alt öğeleri kullanabilirsiniz.
 
-  - İçinde **araç kutusu**, çizim araçlarından birini seçin (örneğin, [elipsin](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.ellipse.aspx) veya [dikdörtgen](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.aspx)) ve sonra etkin panelindeki bir öğesi çizin.  
-  
-## <a name="changing-the-layering-order-of-elements"></a>Öğeleri katman sırasını değiştirme  
- XAML Tasarımcısı'nda çalışma yüzeyine iki öğe olduğunda, bir öğe katman sırasını diğer önünde görünür. Belge Anahattı öğeleri listesi kısmındaki en öndedir öğesi penceredir (ne zaman dışında **haritadaki** özelliği bir öğe için). Sayfa, form veya Düzen kapsayıcısı için bir öğe eklediğinizde, öğe otomatik olarak etkin kapsayıcı öğe diğer öğeleri önüne yerleştirilir. Öğelerin sırasını değiştirmek için kullanabileceğiniz **sipariş** komutları veya belge ana hattı penceresinin nesne ağacında öğeleri sürükleyin.  
-  
-#### <a name="to-change-the-layering-order"></a>Katman sırasını değiştirmek için  
-  
-- Aşağıdakilerden birini yapın:  
-  
-  - İçinde **belge anahattı** penceresi, istenen katman sırasını oluşturmak için aşağı veya yukarı öğeleri sürükleyin.  
-  
-  - Belge Anahattı penceresi veya üzerine gelin, katman sırasını değiştirmek istediğiniz çalışma yüzeyi öğe sağ **sipariş**ve sonra aşağıdakilerden birine tıklayın:  
-  
-    - **Öne Getir** öğe tüm sipariş öne getirmek için.  
-  
-    - **Öne Getir** öğe getirmek için sırada bir düzey iletin.  
-  
-    - **Geri gönderme** öğesi geri bir düzey sıraya göndermek için.  
-  
-    - **Arkaya Gönder** öğe tüm sırasını geri göndermek için.  
-  
-    Değişiklik **haritadaki** özelliğinde **Düzen** Özellikler penceresindeki bölümü. Çakışan öğe için **haritadaki** özelliğini belge anahat penceresinde gösterilen öğelerin sırasını üzerinden öncelik alır. Bir alt sahip bir öğe **haritadaki** değeri önde öğeleri çakışma halinde görünür.  
-  
-## <a name="changing-the-alignment-of-an-element"></a>Bir öğe hizalamasını değiştirme  
- Menü komutlarını kullanarak veya dayama çizgilerine öğeleri sürükleyerek çalışma yüzeyine öğeleri getirebilirsiniz.  
-  
- A *snapline* yardımcı olan görsel bir ipucu hizalama uygulamadaki diğer öğeleri göreli öğe olan.  
-  
-#### <a name="to-align-two-or-more-elements-by-using-menu-commands"></a>İki veya daha fazla öğe, menü komutlarını kullanarak hizalamak için  
-  
-1. Hizalamak için kullanmak istediğiniz öğeleri seçin. Tuşuna basarak ve öğeleri seçerken Ctrl tuşunu basılı tutarak birden fazla öğe seçebilirsiniz.  
-  
-2. Altında aşağıdaki özelliklerden birini **HorizontalAlignment** içinde **Düzen** Özellikler penceresinin bölümü: **Sol**, **Merkezi**, **sağ**, veya **Esnetme**.  
-  
-3. Altında aşağıdaki özelliklerden birini **VerticalAlignment** içinde **Düzen** Özellikler penceresinin bölümü: **Üst**, **Merkezi**, **alt**, veya **Esnetme**.  
-  
-#### <a name="to-align-two-or-more-elements-by-using-snaplines"></a>Dayama çizgileri kullanarak iki veya daha fazla öğe hizalamak için  
-  
-- XAML Tasarımcısı'nda, en az iki öğe içeren bir düzene sürükleyin veya edge başka bir öğe ile hizalanır. böylece öğelerden birini yeniden boyutlandırın.  
-  
-     Kenarlara hizalandığını, bir *hizalama sınırı* hizalama görünür. Hizalama, kırmızı bir kesikli çizgiye sınırıdır. Hizalama sınırları yalnızca görünür **dayama çizgilerine yaslamayı** etkinleştirilir. Çalışma yüzeyine bir hizalama sınırı gösteren çizim için bkz [XAML Tasarımcısını kullanarak kullanıcı Arabirimi oluşturma](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).  
-  
-## <a name="changing-the-an-elements-margins"></a>Değiştirme bir öğenin kenar boşlukları  
- XAML Tasarımcısı'nda kenar boşlukları, çalışma yüzeyinde bir öğe etrafında boş alan miktarını belirler. Örneğin, kenar boşlukları bir öğenin dış kenarları sınırları arasındaki boşluk miktarını belirtin bir `Grid` öğeyi içeren paneli. Kenar boşlukları da bulunan öğeler arasındaki boşluk miktarını belirtin bir `StackPanel`.  
-  
-#### <a name="to-change-an-elements-margins-in-the-properties-window"></a>Özellikler penceresinde bir öğenin kenar boşluklarını değiştirmek için  
-  
-1. Kenar boşluklarını değiştirmek istediğiniz öğeyi seçin.  
-  
-2. Altında **Düzen** Özellikler penceresinde değeri (piksel veya yaklaşık 1/96 inç olan CİHAZDAN bağımsız birimler) herhangi birini değiştirin **kenar boşluğu** özellikleri (**üst**, **Sol**, **sağ**, veya **alt**).  
-  
-#### <a name="to-change-an-elements-margins-in-the-artboard"></a>Çalışma yüzeyine bir öğenin kenar boşluklarını değiştirmek için  
-  
-- Düzen kapsayıcısı göreli öğe kenar boşluklarını değiştirmek için tıklayın *margin donatıcıları* görünen çalışma yüzeyi öğe etrafında öğe seçildiğinde ve içinde bir düzen kapsayıcıdır. Kenar boşluğu donatıcıları gösteren çizim için bkz: [XAML Tasarımcısını kullanarak kullanıcı Arabirimi oluşturma](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).  
-  
-     Kenar boşluğu donatıcısı yatay veya dikey olarak açıksa, bu kenar boşluğu ayarlanmamış. Kenar boşluğu donatıcısı kapalı ise, bu kenar boşluğu ayarlıdır.  
-  
-     Kenar boşluğu donatıcısı açın ve ters kenar boşluğu ayarlı değil, ters kenar çalışma yüzeyine öğenin konumuna göre doğru değerine ayarlanır. Ters kenar boşlukları için gibi **sol** ve **sağ** kenar boşlukları, en az bir özelliği ayarlandığında her zaman.  
-  
+ Varsayılan olarak, bir sayfa veya form içinde en üst düzey düzen kapsayıcısı olarak bir `Grid` paneli kullanılır. Üst düzey sayfa düzeni içinde düzen bölmeleri, denetimler veya diğer öğeleri ekleyebilirsiniz.
+
+#### <a name="to-add-an-element-to-a-layout"></a>Bir düzene öğe eklemek için
+
+- XAML Tasarımcısı, aşağıdakilerden birini yapın:
+
+  - **Araç kutusunda** bir öğeye çift tıklayın (veya araç kutusunda bir öğe seçin ve ENTER tuşuna basın).
+
+  - **Araç kutusundan** bir öğeyi çalışma yüzeyine sürükleyin.
+
+  - **Araç kutusunda**, çizim araçlarından birini seçin (örneğin, [elips](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.ellipse.aspx) veya [dikdörtgen](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.aspx)) ve ardından etkin panelde bir öğe çizin.
+
+## <a name="changing-the-layering-order-of-elements"></a>Öğelerin katmanlama sırasını değiştirme
+ XAML Tasarımcısı çalışma yüzeyinde iki öğe olduğunda, katman sırasında diğeri önünde bir öğe görünür. Belge ana hattı penceresindeki öğelerin listesinin en altında, en öndeki öğedir (bir öğe için **ZIndex** özelliğinin ayarlandığı durumlar dışında). Bir sayfa, form veya Düzen kapsayıcısına bir öğe eklediğinizde, öğe, etkin kapsayıcı öğesindeki diğer öğelerin önüne otomatik olarak yerleştirilir. Öğelerin sırasını değiştirmek için, **Düzen** komutlarını kullanabilir veya öğeleri belge ana hattı penceresinde nesne ağacında sürükleyebilirsiniz.
+
+#### <a name="to-change-the-layering-order"></a>Katman sırasını değiştirmek için
+
+- Aşağıdakilerden birini yapın:
+
+  - **Belge Anahattı** penceresinde, istenen katman sırasını oluşturmak için öğeleri yukarı veya aşağı sürükleyin.
+
+  - Belge Anahattı penceresinde veya katman sırasını değiştirmek istediğiniz çalışma yüzeyinde öğesine sağ tıklayın, **sırasıyla Order**' a gelin ve sonra aşağıdakilerden birine tıklayın:
+
+    - Öğeyi sıranın önüne getirmek için **önüne getirin** .
+
+    - Öğeyi sırayla bir düzey öne çıkarmak için **Ileri getirin** .
+
+    - Öğeyi sırayla bir düzey geri göndermek için **geri gönderin** .
+
+    - Öğeyi sıranın sonuna kadar bir şekilde göndermek için **geri gönderin** .
+
+    Özellikler penceresi **Düzen** bölümündeki **ZIndex** özelliğini değiştirin. Örtüşen öğeler için, **ZIndex** özelliği, belge ana hattı penceresinde gösterilen öğelerin sırasına göre önceliklidir. Alt **zindex** değeri olan bir öğe, öğeler çakıştığında önünde görünür.
+
+## <a name="changing-the-alignment-of-an-element"></a>Bir öğenin hizalamasını değiştirme
+ Çalışma yüzeyindeki öğeleri menü komutlarını kullanarak veya öğeleri yama çizgilere sürükleyerek hizalayabilirsiniz.
+
+ Bir anlık görüntü *satırı* , bir öğeyi uygulamadaki diğer öğelere göre hizalamanıza yardımcı olan bir görsel ipucudur.
+
+#### <a name="to-align-two-or-more-elements-by-using-menu-commands"></a>Menü komutlarını kullanarak iki veya daha fazla öğeyi hizalamak için
+
+1. Hizalamak istediğiniz öğeleri seçin. Öğeleri seçerken CTRL tuşuna basarak ve basılı tutarak birden fazla öğe seçebilirsiniz.
+
+2. Özellikler penceresi **Düzen** bölümünde **HorizontalAlignment** altında aşağıdaki özelliklerden birini seçin: **sol**, **Orta**, **sağ**veya **Esnetme**.
+
+3. Özellikler penceresi **Düzen** bölümünde **VerticalAlignment** altında aşağıdaki özelliklerden birini seçin: **top**, **Center**, **Bottom**veya **Esnetme**.
+
+#### <a name="to-align-two-or-more-elements-by-using-snaplines"></a>İki veya daha fazla öğeyi Snapın çizgilerini kullanarak hizalamak için
+
+- XAML Tasarımcısı, en az iki öğe içeren bir düzende, kenar başka bir öğeyle hizalı olacak şekilde öğelerinden birini sürükleyin veya yeniden boyutlandırın.
+
+     Kenarlar hizalandığında, hizalamayı göstermek için bir *Hizalama sınırı* belirir. Hizalama sınırı kırmızı kesikli bir çizgi. Hizalama sınırları yalnızca, **yama çizgilere yaslaması** etkin olduğunda görünür. Bir hizalama sınırını gösteren çalışma yüzeyi çizimi için, bkz. [XAML Tasarımcısı kullanarak Kullanıcı arabirimi oluşturma](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).
+
+## <a name="changing-the-an-elements-margins"></a>Öğenin kenar boşluklarını değiştirme
+ XAML Tasarımcısı kenar boşlukları, çalışma yüzeyinde bir öğe etrafında bulunan boş alan miktarını tespit ediyor. Örneğin, kenar boşlukları, bir öğenin dış kenarları arasındaki boşluk miktarını ve öğeyi içeren `Grid` panelinin sınırlarını belirtir. Kenar boşlukları Ayrıca, `StackPanel` içinde bulunan öğeler arasındaki boşluk miktarını da belirtir.
+
+#### <a name="to-change-an-elements-margins-in-the-properties-window"></a>Özellikler penceresi bir öğenin kenar boşluklarını değiştirmek için
+
+1. Kenar boşluklarını değiştirmek istediğiniz öğeyi seçin.
+
+2. Özellikler penceresi **Düzen** altında, **kenar boşluğu** özelliklerinden herhangi biri (**üst**, **sol**, **sağ**veya **alt**) için değeri (piksel veya yaklaşık 1/96 inç olan cihazdan bağımsız birimler) değiştirin.
+
+#### <a name="to-change-an-elements-margins-in-the-artboard"></a>Çalışma yüzeyinde bir öğenin kenar boşluklarını değiştirmek için
+
+- Bir öğenin düzen kapsayıcısına göre kenar boşluklarını değiştirmek için, öğe seçildiğinde ve bir düzen kapsayıcısı içinde olduğunda, çalışma yüzeyinde öğe etrafında görünen *kenar boşluğu donatıcıları* ' na tıklayın. Kenar boşluğu donatıcıları gösteren bir çizim için, bkz. [XAML Tasarımcısı kullanarak Kullanıcı arabirimi oluşturma](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).
+
+     Bir kenar boşluğu donatıcısı, dikey veya yatay olarak açıksa, bu kenar boşluğu ayarlı değildir. Bir kenar boşluğu donatıcısı kapalıysa, bu kenar boşluğu ayarlanır.
+
+     Bir kenar boşluğu donatıcısını açtığınızda ve ters kenar boşluğu ayarlanmamışsa, ters kenar boşluğu, çalışma yüzeyinde öğenin konumuna göre doğru değere ayarlanır. **Sol** ve **sağ** kenar boşlukları gibi zıt kenar boşlukları için en az bir özellik her zaman ayarlanır.
+
     > [!IMPORTANT]
-    > Öğelerin yerleştirilmesi bazı Düzen kapsayıcıları içinde gibi bir <xref:Windows.UI.Xaml.Controls.Canvas>, kenar boşluğu donatıcıları yok. Öğelerin yerleştirilmesi içinde bir <xref:Windows.UI.Xaml.Controls.StackPanel> kenar boşluğu donatıcıları ya da sol ve sağ kenar boşluklarının veya yönünü bağlı olarak üst ve alt kenar boşluklarını sahip `StackPanel`.  
-  
-## <a name="grouping-and-ungrouping-elements"></a>Gruplandırma ve öğeleri gruplarını çözme  
- XAML Tasarımcısı'nda iki veya daha fazla öğe gruplandırma, yeni bir düzen kapsayıcısı oluşturur ve bu öğeler bu kapsayıcı içinde yerleştirir. İki veya daha fazla öğe birlikte bir düzen kapsayıcısına yerleştirerek kolayca seçin, taşıma ve o gruptaki öğeleri bir öğe olarak varsa dönüştürmenize olanak sağlar. Gruplama, bir gezinti öğesini oluşturan düğmeler gibi bir şekilde birbiriyle ilgili öğeleri tanımlamak için yararlıdır. Öğeleri çözdüğünüzde, basitçe öğeleri içeren düzen kapsayıcısının siliyorsunuz.  
-  
-#### <a name="to-group-elements-into-a-new-layout-container"></a>Yeni bir düzen kapsayıcısına için Grup öğeleri  
-  
-1. Gruplandırmak için kullanmak istediğiniz öğeleri seçin. (Birden fazla öğe seçmek için tuşuna basın ve bunları tıklatırken Ctrl tuşunu basılı tutun.)  
-  
-2. Seçili öğeye sağ tıklayın, fareyle **halinde Gruplandır**ve ardından ve grubun yer almasını istediğiniz düzen kapsayıcısı türüne tıklayın.  
-  
+    > @No__t_0 gibi bazı Düzen kapsayıcıları içine yerleştirilmiş öğelerin kenar boşluğu donatıcıları yoktur. @No__t_0 içine yerleştirilmiş öğelerin, `StackPanel` yönüne bağlı olarak sol ve sağ kenar boşlukları veya üst ve alt kenar boşlukları için kenar boşluğu donatıcıları vardır.
+
+## <a name="grouping-and-ungrouping-elements"></a>Öğeleri gruplandırma ve gruplarını çözme
+ XAML Tasarımcısı iki veya daha fazla öğeyi gruplandırmak yeni bir düzen kapsayıcısı oluşturur ve bu öğeleri bu kapsayıcıya koyar. İki veya daha fazla öğeyi bir düzen kapsayıcısına yerleştirmek, bu gruptaki öğeler bir öğe gibi, grubu kolayca seçmenizi, taşımanızı ve dönüştürmenizi sağlar. Gruplama, bir gezinti öğesini oluşturan düğmeler gibi her bir şekilde birbirleriyle ilgili öğeleri tanımlamak için de yararlıdır. Öğelerin grubunu kaldırdığınızda, öğeleri içeren düzen kapsayıcısını silmeniz yeterlidir.
+
+#### <a name="to-group-elements-into-a-new-layout-container"></a>Öğeleri yeni bir düzen kapsayıcısına gruplandırmak için
+
+1. Gruplandırmak istediğiniz öğeleri seçin. (Birden çok öğe seçmek için, tıkladığınızda CTRL tuşunu basılı tutun.)
+
+2. Seçilen öğelere sağ tıklayın, **grupla**' nın üzerine gelin ve ardından grubun bulunmasını istediğiniz düzen kapsayıcısı türüne tıklayın.
+
     > [!TIP]
-    > Seçerseniz <xref:Windows.UI.Xaml.Controls.Viewbox>, <xref:Windows.UI.Xaml.Controls.Border>, veya <xref:Windows.UI.Xaml.Controls.ScrollViewer> öğelerinizin gruplandırmak için öğelerin yeni bir yerleştirilir <xref:Windows.UI.Xaml.Controls.Grid> içinde panelinde <xref:Windows.UI.Xaml.Controls.Viewbox>, <xref:Windows.UI.Xaml.Controls.Border>, veya <xref:Windows.UI.Xaml.Controls.ScrollViewer>. Öğeleri yalnızca bu düzen kapsayıcıları birinde'ungroup <xref:Windows.UI.Xaml.Controls.Viewbox>, <xref:Windows.UI.Xaml.Controls.Border>, veya <xref:Windows.UI.Xaml.Controls.ScrollViewer> silindi ve <xref:Windows.UI.Xaml.Controls.Grid> paneli kalır. Silinecek `Grid` panelinde, öğeleri grubunu tekrar çözün.  
-  
-#### <a name="to-ungroup-elements-and-delete-the-layout"></a>Öğe grubunu Çöz ve düzenini silmek için  
-  
-- Grubunu çözmek ve istediğiniz gruba sağ tıklayıp **Ungroup**.  
-  
-  Gruplandırma veya grubu çözme öğeleri Belge Anahattı penceresi seçili öğelere sağ tıklatıp ayrıca **halinde Gruplandır** veya **Ungroup**.  
-  
-## <a name="resetting-the-element-layout"></a>Öğesi düzeni sıfırlama  
- Düzeni Sıfırla komutlarını kullanarak, bir öğenin belirli düzen özellikleri için varsayılan değerleri geri yükleyebilirsiniz. Bu komutu kullanarak, tek tek veya topluca kenar boşluğu, hizalama, genişlik, yükseklik ve bir öğenin boyutunu sıfırlayabilirsiniz.  
-  
-#### <a name="to-reset-the-element-layout"></a>Öğe yerleşimi sıfırlamak için  
-  
-- Belge Anahattı penceresi ya da çalışma yüzeyi, öğeye sağ tıklayın, seçin **Düzen**, **sıfırlama** *PropertyName*burada *PropertyName*sıfırlamak istediğiniz özelliktir (veya tercih **Düzen**, **Tümünü Sıfırla** öğesi için düzen özelliklerini sıfırlamak için).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+    > Öğelerinizi gruplamak için <xref:Windows.UI.Xaml.Controls.Viewbox>, <xref:Windows.UI.Xaml.Controls.Border> veya <xref:Windows.UI.Xaml.Controls.ScrollViewer> ' yı seçerseniz, öğeler <xref:Windows.UI.Xaml.Controls.Viewbox>, <xref:Windows.UI.Xaml.Controls.Border> veya <xref:Windows.UI.Xaml.Controls.ScrollViewer> içinde yeni bir <xref:Windows.UI.Xaml.Controls.Grid> paneline yerleştirilir. Bu düzen kapsayıcılarından birindeki öğelerin grubunu çözerseniz, yalnızca <xref:Windows.UI.Xaml.Controls.Viewbox>, <xref:Windows.UI.Xaml.Controls.Border> veya <xref:Windows.UI.Xaml.Controls.ScrollViewer> silinir ve <xref:Windows.UI.Xaml.Controls.Grid> paneli kalır. @No__t_0 panelini silmek için öğelerin grubunu yeniden çözün.
+
+#### <a name="to-ungroup-elements-and-delete-the-layout"></a>Öğelerin grubunu çözme ve düzeni silme
+
+- Grubunu çözmek istediğiniz gruba sağ tıklayın ve grubu **Çöz**' e tıklayın.
+
+  Ayrıca, belge ana hat penceresinde seçili öğelere sağ tıklayıp grupla veya grubu **Çöz**' **e** tıklayarak öğeleri gruplandırabilir veya gruplarını kaldırabilirsiniz.
+
+## <a name="resetting-the-element-layout"></a>Öğe düzeni sıfırlanıyor
+ Düzen sıfırlama komutlarını kullanarak bir öğenin belirli düzen özellikleri için varsayılan değerleri geri yükleyebilirsiniz. Bu komutu kullanarak bir öğenin kenar boşluğunu, hizalamasını, genişliğini, yüksekliğini ve boyutunu tek tek veya topluca sıfırlayabilirsiniz.
+
+#### <a name="to-reset-the-element-layout"></a>Öğe yerleşimini sıfırlamak için
+
+- Belge Anahattı penceresinde veya çalışma yüzeyinde öğesine sağ tıklayın, **Düzen**' i, *PropertyName*'i **Sıfırla** ' yı seçin, burada *PropertyName* sıfırlamak istediğiniz özelliktir (veya **Düzen**' i seçin, **Tümünü Sıfırla** öğe için tüm düzen özelliklerini sıfırlayın).
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [XAML Tasarımcısı’nı kullanarak bir kullanıcı arabirimi oluşturma](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)

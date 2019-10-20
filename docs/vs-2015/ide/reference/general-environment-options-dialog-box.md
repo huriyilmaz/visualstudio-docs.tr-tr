@@ -1,5 +1,5 @@
 ---
-title: Genel, ortam, Seçenekler iletişim kutusu | Microsoft Docs
+title: Genel, ortam, Seçenekler Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -24,63 +24,51 @@ helpviewer_keywords:
 - General Environment Options dialog box
 ms.assetid: 90fc2e6f-572f-4384-96d8-5678299ce58e
 caps.latest.revision: 38
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0725b2bdd14a89103b2695c7e4f1d3b0bbf77b7c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 83fc6adeba0529be03a9a982713d0584a2a7bc45
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65676466"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661269"
 ---
 # <a name="general-environment-options-dialog-box"></a>Genel, Ortam, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Renk temaları, durum çubuğu ayarları ve tümleşik geliştirme ortamı (IDE) için diğer seçenekler arasında dosya uzantısı ilişkilendirmelerini değiştirmek için bu sayfayı kullanın. Erişebileceğiniz **seçenekleri** iletişim kutusunu açarak **Araçları** menüsünde, seçme **seçenekleri**açarak **ortam** klasörünü ve ardından seçme **genel** sayfası. Bu sayfa, listede görünmüyorsa, seçin **tüm ayarları göster** onay kutusuna **seçenekleri** iletişim kutusu.  
-  
+Bu sayfayı, tümleşik geliştirme ortamı (IDE) için diğer seçenekler arasında renk temalarını, durum çubuğu ayarlarını ve dosya uzantısı ilişkilendirmelerini değiştirmek için kullanın. **Seçenekler** Iletişim kutusuna **Araçlar** menüsünü açıp **Seçenekler**' i seçip, **ortam** klasörünü açıp **genel** sayfasını seçerek erişebilirsiniz. Bu sayfa listede görünmezse, **Seçenekler** iletişim kutusundaki **tüm ayarları göster** onay kutusunu seçin.
+
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçları** menüsünü seçip **içeri ve dışarı aktarma ayarları**. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="visual-experience"></a>Görsel deneyim  
- **Renk teması**  
- Seçin **mavi**, **ışık** veya **koyu** IDE renk teması.  
-  
- Ek önceden tanımlı Temalar yükleyebilir ve özel temalar, indirme ve yükleme oluşturma **Visual Studio 2015 Color Theme Editor** gelen [Visual Studio Market](https://marketplace.visualstudio.com). Bu aracı yükledikten sonra ek renk temaları renk teması liste kutusunda görünür.  
-  
- Menü çubuğunda başlık büyük/küçük harf uygulayın  
- Menüler bulunduğunuz **başlık büyük/küçük harf** Visual Studio 2015'te varsayılan olarak. İşaretini kaldırın ayarlamak için bu seçeneği **tümü büyük harf**.  
-  
- **İstemci performansına dayalı görsel deneyimi otomatik olarak ayarla**  
- Görsel deneyimi için düzeltme Visual Studio otomatik olarak ayarlar ya da düzeltme açık olarak belirtir. Düz renkler için bu ayarı renkleri görüntülenmesini gradyanlar değişebilir veya menüleri veya açılır pencereleri içinde animasyon kullanımını kısıtlayabilirsiniz.  
-  
- **Zengin istemci deneyimini etkinleştir**  
- Visual Studio, gradyanlar ve animasyonlar içeren tam görsel deneyimi sağlar. Bu özellikler, bu gibi durumlarda kötü performans olabileceği için bu seçeneği kullanırken Uzak Masaüstü bağlantılarında veya eski grafik bağdaştırıcıları temizleyin. Bu seçenek yalnızca, temizlediğinizde kullanılabilir **istemcide dayalı görsel deneyimi otomatik olarak ayarla** seçeneği.  
-  
- **Donanım grafik ivmesi kullan**  
- Yazılım hızlandırma yerine varsa donanım grafik hızlandırması kullanır.  
-  
-## <a name="other"></a>Diğer  
- **Pencere menüde görüntülenen öğeler**  
- Windows listesinde görünen pencerelerinin sayısını özelleştirir **penceresi** menüsü. 1 ile 24 arasında bir sayı yazın. Varsayılan olarak, sayı 10'dur.  
-  
- **Son kullanılan listesinde gösterilen öğeler**  
- En son kullanılan projeler ve görünen dosyaları sayısı özelleştirir **dosya** menüsü. 1 ile 24 arasında bir sayı yazın. Varsayılan olarak, sayı 10'dur. Alma son kullanılan projeler ve dosyalar için kolay bir yolu budur.  
-  
- **Durum çubuğunu göster**  
- Durum çubuğu görüntüler. Durum çubuğu, IDE pencerenin alt kısmında bulunur ve devam eden işlemler ilerleme durumu hakkında bilgileri görüntüler.  
-  
- **Kapat düğmesi sadece etkin araç penceresini etkiler**  
- Belirtir **Kapat** düğmesine tıklandığında, odaklanmış araç penceresi yalnızca kapalı ve tüm yerleşik kümesindeki aracı Windows. Varsayılan olarak, bu seçenek seçilidir.  
-  
- **Otomatik Gizle düğmesi sadece etkin araç penceresini etkiler**  
- Belirtir **Otomatik Gizle** düğmesine tıklandığında, odaklanmış araç penceresi otomatik olarak ve değil gizli tüm yerleştirilmiş kümesindeki aracı pencereleri. Bu seçenek varsayılan olarak, seçili değil.  
-  
- **Dosya ilişkilendirmelerini yönetme**  
- Görüntüler **Windows Program ilişkilerini ayarla** iletişim kutusu, görüntüleyebileceğiniz genellikle Visual Studio ile ilişkili olan öğeleri için dosya uzantıları ve her dosya türünün açmak için geçerli varsayılan program. Visual Studio kendisiyle ilişkili olmayan dosya türleri için varsayılan uygulamayı yapmak için dosya uzantısı seçin ve ardından **Kaydet**.  
-  
- Visual Studio'nun aynı bilgisayara yüklenmiş iki sürüme sahiptir ve sürümlerinden daha sonra kaldırırsanız, bu seçenek yararlı olabilir. Kaldırdıktan sonra Visual Studio dosyalarına simgelerini artık dosya Gezgini'nde görünür. Ayrıca, Windows artık Visual Studio bu dosyaları düzenlemek için varsayılan uygulamayı olarak tanır. Bu seçenek, bu ilişkilendirmeleri geri yükler.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Ortam Seçenekleri iletişim kutusu](../../ide/reference/environment-options-dialog-box.md)   
- [Pencere düzenlerini özelleştirme](../../ide/customizing-window-layouts-in-visual-studio.md)
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünü açın ve ardından **ayarları Içeri ve dışarı aktar**' ı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+## <a name="visual-experience"></a>Görsel deneyim
+ **Renk teması** IDE için **mavi**, **hafif** veya **koyu** renkli bir tema seçin.
+
+ [Visual Studio Market](https://marketplace.visualstudio.com), **Visual Studio 2015 Color teması düzenleyicisini** indirip yükleyerek, önceden tanımlanmış ek temalar yükleyebilir ve özel temalar oluşturabilirsiniz. Bu aracı yükledikten sonra, renk teması liste kutusunda ek renk temaları görüntülenir.
+
+ Başlık küçük harflerini menü çubuğu menülerinde Uygula, Visual Studio 2015 ' de varsayılan olarak **başlık büyük küçük** harflerinde bulunur. **Tüm büyük harflere**ayarlamak için bu seçeneğin işaretini kaldırın.
+
+ **İstemci performansına göre görsel deneyimi otomatik olarak ayarla** Visual Studio 'Nun ayarlamayı otomatik olarak ayarlama veya ayarlamayı açık olarak ayarlama gibi belirtir. Bu ayarlama, renklerin degradeden düz renklere görüntüsünü değiştirebilir veya menülerde veya açılan pencerelerin animasyonların kullanımını kısıtlayabilir.
+
+ **Zengin istemci deneyimini etkinleştir** Degradeler ve animasyonlar dahil olmak üzere Visual Studio 'nun tam görsel deneyimini sunar. Uzak Masaüstü bağlantıları veya daha eski grafik bağdaştırıcılar kullanılırken bu seçeneği temizleyin çünkü bu özellikler bu durumlarda düşük performansa sahip olabilir. Bu seçenek yalnızca, **istemci seçeneğine göre görsel deneyimi otomatik olarak ayarla** seçeneğini belirlediğinizde kullanılabilir.
+
+ **Kullanılabiliyorsa, donanım grafik hızlandırmasını kullanın** Yazılım hızlandırma yerine, varsa, donanım grafik hızlandırmasını kullanır.
+
+## <a name="other"></a>Diğer
+ **Pencere menüsünde gösterilen öğeler** **Pencere** menüsünün Windows listesinde görüntülenen pencerelerin sayısını özelleştirir. 1 ile 24 arasında bir sayı yazın. Varsayılan olarak, sayı 10 ' dur.
+
+ **Son kullanılan listelerde gösterilen öğeler** **Dosya** menüsünde görünen en son kullanılan proje ve dosya sayısını özelleştirir. 1 ile 24 arasında bir sayı yazın. Varsayılan olarak, sayı 10 ' dur. Bu, son kullanılan projeleri ve dosyaları almanın kolay bir yoludur.
+
+ **Durum çubuğunu göster** Durum çubuğunu görüntüler. Durum çubuğu IDE penceresinin alt kısmında bulunur ve devam eden işlemlerin ilerleme durumuyla ilgili bilgileri görüntüler.
+
+ **Kapat düğmesi yalnızca etkin araç penceresini etkiler** **Kapat** düğmesine tıklandığında, yalnızca odağı olan araç penceresinin kapalı olduğunu ve yerleşik küme içindeki araç pencerelerinin tümünü değil ' i belirtir. Varsayılan olarak, bu seçenek seçilidir.
+
+ **Otomatik Gizle düğmesi yalnızca etkin araç penceresini etkiler** **Otomatik Gizle** düğmesine tıklandığında, yalnızca odağı olan araç penceresinin, yerleşik küme içindeki araç pencerelerinin hepsi değil otomatik olarak gizlendiğini belirtir. Varsayılan olarak, bu seçenek seçili değildir.
+
+ **Dosya Ilişkilendirmelerini Yönet** Genellikle Visual Studio ile ilişkili öğeler için dosya uzantılarını ve her dosya türünü açmak için geçerli varsayılan programı görüntüleyebileceğiniz, **Windows program Ilişkilendirmelerini ayarla** iletişim kutusunu görüntüler. Visual Studio 'Yu zaten ilişkili olmayan dosya türleri için varsayılan uygulama yapmak üzere dosya uzantısını seçin ve ardından **Kaydet**' i seçin.
+
+ Aynı bilgisayarda Visual Studio 'nun iki sürümü yüklüyse ve daha sonra sürümlerden birini kaldırırsanız bu seçenek yararlı olabilir. Kaldırıldıktan sonra, Visual Studio dosyaları için simgeler artık dosya Gezgini 'nde görünmez. Ayrıca, Windows artık bu dosyaları düzenlemekte olan varsayılan uygulama olarak Visual Studio 'Yu tanımaz. Bu seçenek, bu ilişkilendirmeleri geri yükler.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Ortam seçenekleri Iletişim kutusu](../../ide/reference/environment-options-dialog-box.md) [pencere düzenlerini özelleştirme](../../ide/customizing-window-layouts-in-visual-studio.md)

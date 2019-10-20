@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Edit.Replace command
 - Replace command
 ms.assetid: a15767f1-5a3d-44f5-8c77-7b0f1157f340
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edcff51428451b50dc149b7b55cee11cb9ede853
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: efd6398e475f08d07b8c2fd2eadb3d580aa4255d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919040"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655595"
 ---
 # <a name="replace-command"></a>Değiştir Komutu
 Dosyalardaki metni **Bul ve Değiştir** penceresinin **dosyaları değiştir** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak değiştirir.
@@ -47,11 +47,11 @@ Gerekli. Eşleşen metnin yerine konacak metin.
 
 /Case veya/c
 
-İsteğe bağlı. Eşleşmeler yalnızca büyük ve küçük harfli karakterlerin `findwhat` bağımsız değişkende belirtilen olanlarla tam olarak eşleşmesi durumunda oluşur.
+İsteğe bağlı. Eşleşmeler yalnızca, büyük harf ve küçük harf karakterlerinin `findwhat` bağımsız değişkeninde belirtilen olanlarla tam olarak eşleşmesi durumunda meydana gelir.
 
 /doc veya/d
 
-İsteğe bağlı. Yalnızca geçerli belgeyi arar. Kullanılabilir `/doc`arama kapsamlarından `/proc` `/open`yalnızca birini belirtin,,, veya `/sel`.
+İsteğe bağlı. Yalnızca geçerli belgeyi arar. Kullanılabilir arama kapsamlarından yalnızca birini belirtin, `/doc`, `/proc`, `/open` veya `/sel`.
 
 /Hidden veya/h
 
@@ -59,7 +59,7 @@ Gerekli. Eşleşen metnin yerine konacak metin.
 
 /Open veya/o
 
-İsteğe bağlı. Tüm açık belgeleri bir belge gibi arar. Kullanılabilir `/doc`arama kapsamlarından `/proc` `/open`yalnızca birini belirtin,,, veya `/sel`.
+İsteğe bağlı. Tüm açık belgeleri bir belge gibi arar. Kullanılabilir arama kapsamlarından yalnızca birini belirtin, `/doc`, `/proc`, `/open` veya `/sel`.
 
 /Options veya/t
 
@@ -67,11 +67,11 @@ Gerekli. Eşleşen metnin yerine konacak metin.
 
 /proc veya/p
 
-İsteğe bağlı. Yalnızca geçerli yordamı arar. Kullanılabilir `/doc`arama kapsamlarından `/proc` `/open`yalnızca birini belirtin,,, veya `/sel`.
+İsteğe bağlı. Yalnızca geçerli yordamı arar. Kullanılabilir arama kapsamlarından yalnızca birini belirtin, `/doc`, `/proc`, `/open` veya `/sel`.
 
 /Regex veya/r
 
-İsteğe bağlı. `findwhat` Bağımsız değişkende önceden tanımlanmış özel karakterleri, değişmez karakterler yerine metin desenlerini temsil eden gösterimler olarak kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
+İsteğe bağlı. @No__t_0 bağımsız değişkeninde, sabit karakterler yerine metin desenlerini temsil eden gösterimler olarak önceden tanımlanmış özel karakterler kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
 
 /Reset süpürmeden veya/e
 
@@ -79,7 +79,7 @@ Gerekli. Eşleşen metnin yerine konacak metin.
 
 /sel or/s
 
-İsteğe bağlı. Yalnızca geçerli seçimi arar. Kullanılabilir `/doc`arama kapsamlarından `/proc` `/open`yalnızca birini belirtin,,, veya `/sel`.
+İsteğe bağlı. Yalnızca geçerli seçimi arar. Kullanılabilir arama kapsamlarından yalnızca birini belirtin, `/doc`, `/proc`, `/open` veya `/sel`.
 
 /up veya/u
 
@@ -87,14 +87,14 @@ Gerekli. Eşleşen metnin yerine konacak metin.
 
 /joker veya/l
 
-İsteğe bağlı. Bağımsız değişkende, `findwhat` bir karakter veya karakter dizisini temsil etmek için önceden tanımlanmış özel karakterleri gösterimler olarak kullanır.
+İsteğe bağlı. Bir karakteri veya karakter dizisini göstermek için `findwhat` bağımsız değişkeninde gösterimler olarak önceden tanımlanmış özel karakterleri kullanır.
 
 /Word veya/w
 
 İsteğe bağlı. Yalnızca tam sözcükleri arar.
 
 ## <a name="example"></a>Örnek
-Bu örnek, `btnSend` tüm `btnSubmit` açık belgelerde ile değiştirilir.
+Bu örnek, tüm açık belgelerdeki `btnSubmit` `btnSend` değiştirir.
 
 ```
 >Edit.Replace btnSend btnSubmit /open

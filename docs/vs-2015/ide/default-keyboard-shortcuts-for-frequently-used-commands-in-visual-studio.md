@@ -6,32 +6,32 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 5839d6ca-e5ac-4468-9025-3d5ea177f19c
 caps.latest.revision: 9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7c64207f6ab26c78492db9feae80698b0af5679d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 77214948609bd73a2a630a62b4c1b7db114cf8e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437516"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665790"
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio'daki Sık Kullanılan Komutlar için Varsayılan Klavye Kısayolları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan komutlara erişebilirsiniz. Varsayılan kısayolları bulunan komutların tam listesi için bkz. [klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan komutlara erişebilirsiniz. Varsayılan kısayollara sahip komutların tüm listesi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
 > [!NOTE]
-> Herhangi bir komutun kısayolunu açarak arayabilirsiniz **seçenekleri** genişletme iletişim kutusu, **ortam** düğümünü ve ardından **klavye**.
+> **Seçenekler** iletişim kutusunu açıp **ortam** düğümünü genişleterek ve ardından **klavye**' yi seçerek herhangi bir komutun kısayolunu arayabilirsiniz.
 
- **Bu konudaki**
+ **Bu konuda**
 
 ||||||
 |-|-|-|-|-|
-|[Derleme](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_build)|[Düzenle](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_edit)|[Project](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_project)|[Araçlar](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_tools)|[Pencere](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_window)|
-|[Hata ayıklama](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_debug)|[Dosya](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_file)|[Yeniden düzenleme](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_refactor)|[Görünümü](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_view)||
+|[Derleme](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_build)|[Düzenle](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_edit)|[Proje](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_project)|[Araçlar](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_tools)|[Penceresine](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_window)|
+|[H](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_debug)|[Dosyasýný](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_file)|[Düzenle](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_refactor)|[Görünümü](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_view)||
 
-## <a name="bkmk_build"></a> Derleme
+## <a name="bkmk_build"></a>Derlemeyi
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -40,7 +40,7 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 |Build.Compile|Ctrl+F7 [Genel]|
 |Build.RunCodeAnalysisonSolution|Alt+F11 [Genel]|
 
-## <a name="bkmk_debug"></a> Hata ayıklama
+## <a name="bkmk_debug"></a>H
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -54,13 +54,13 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 |Debug.SetNextStatement|Ctrl+Shift+F10 [Genel]|
 |Debug.Start|F5 [Genel]|
 |Debug.StartWithoutDebugging|Ctrl+F5 [Genel]|
-|Debug.StepInto|F11 [genel]|
+|Debug.StepInto|F11 [Genel]|
 |Debug.StepOut|Shift+F11 [Genel]|
-|Debug.StepOver|F10 [genel]|
+|Debug.StepOver|F10 [Genel]|
 |Debug.StopDebugging|Shift+F5 [Genel]|
-|Debug.ToggleBreakpoint|F9 [genel]|
+|Debug.ToggleBreakpoint|F9 [Genel]|
 
-## <a name="bkmk_edit"></a> Düzenle
+## <a name="bkmk_edit"></a>Düzenle
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -73,8 +73,8 @@ Bu varsayılan klavye kısayolları seçerek Visual Studio'da sık kullanılan k
 |Edit.Delete|Delete [Genel, Ekip Gezgini]<br /><br /> veya Shift+Delete [Sıralı Diyagram, UML Etkinlik Diyagramı, Katman Diyagramı]<br /><br /> veya Ctrl+Delete [Sınıf Diyagramı]|
 |Edit.Find|Ctrl+F [Genel]|
 |Edit.FindAllReferences|Shift+F12 [Genel]|
-DIT. FindinFiles|Ctrl+Shift+F [Genel]|
-|Edit.FindNext|F3 [genel]|
+düzenleme. FindInFiles|Ctrl+Shift+F [Genel]|
+|Edit.FindNext|F3 [Genel]|
 |Edit.FindNextSelected|Ctrl+F3 [Genel]|
 |Edit.FormatDocument|Ctrl+K, Ctrl+D [Metin Düzenleyici]|
 |Edit.FormatSelection|Ctrl+K, Ctrl+F [Metin Düzenleyici]|
@@ -82,14 +82,14 @@ DIT. FindinFiles|Ctrl+Shift+F [Genel]|
 |Edit.GoToDeclaration|Ctrl+F12 [Genel]|
 |Edit.GoToDefinition|F12|
 |Edit.GoToFindCombo|Ctrl+D [Genel]|
-|Edit.GoToNextLocation|F8 [genel]|
+|Edit.GoToNextLocation|F8 [Genel]|
 |Edit.InsertSnippet|Ctrl+K, Ctrl+X [Genel]|
 |Edit.InsertTab|Sekme [Rapor Tasarımcısı, Windows Form Tasarımcısı, Metin Düzenleyici]|
 |Edit.LineCut|Ctrl+L [Metin Düzenleyici]|
 |Edit.LineDownExtendColumn|Shift+Alt+Aşağı Ok [Metin Düzenleyici]|
 |Edit.LineOpenAbove|Ctrl+Enter [Metin Düzenleyici]|
 |Edit.ListMembers|Ctrl+J [Metin Düzenleyici, İş Akışı Tasarımcısı]<br /><br /> veya Ctrl+K, Ctrl+L [İş Akışı Tasarımcısı]<br /><br /> veya Ctrl+K, L [İş Akışı Tasarımcısı]|
-DIT. Gezin|Ctrl+, [Genel]|
+düzenleme. Gezin|Ctrl+, [Genel]|
 |Edit.OpenFile|Ctrl+Shift+G [Genel]|
 |Edit.OvertypeMode|Insert [Metin Düzenleyici]|
 |Edit.ParameterInfo|Ctrl+Shift+Ara Çubuğu [Metin Düzenleyici, İş Akışı Tasarımcısı]<br /><br /> veya Ctrl+K, Ctrl+P [İş Akışı Tasarımcısı]<br /><br /> veya Ctrl+K, P [İş Akışı Tasarımcısı]|
@@ -100,7 +100,7 @@ DIT. Gezin|Ctrl+, [Genel]|
 |Edit.SelectAll|Ctrl+A [Genel]|
 |Edit.SelectCurrentWord|Ctrl+W [Metin Düzenleyici]|
 |Edit.SelectionCancel|Esc [Metin Düzenleyici, Rapor Tasarımcısı, Ayarlar Tasarımcısı, Windows Form Tasarımcısı, Yönetilen Kaynak Düzenleyici]|
-DIT. Surroundwıth|Ctrl+K, Ctrl+S [Genel]|
+düzenleme. SurroundWith|Ctrl+K, Ctrl+S [Genel]|
 |Edit.TabLeft|Shift+Sekme [Metin Düzenleyici, Rapor Tasarımcısı, Windows Form Tasarımcısı]|
 |Edit.ToggleAllOutlining|Ctrl+M, Ctrl+L [Metin Düzenleyici]|
 |Edit.ToggleBookmark|Ctrl+K, Ctrl+K [Metin Düzenleyici]|
@@ -111,7 +111,7 @@ DIT. Surroundwıth|Ctrl+K, Ctrl+S [Genel]|
 |Edit.WordDeleteToEnd|Ctrl+Delete [Metin Düzenleyici]|
 |Edit.WordDeleteToStart|Ctrl+Geri Al [Metin Düzenleyici]|
 
-## <a name="bkmk_file"></a> Dosya
+## <a name="bkmk_file"></a>Dosyasýný
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -134,40 +134,40 @@ DIT. Surroundwıth|Ctrl+K, Ctrl+S [Genel]|
 |Project.AddExistingItem|Shift+Alt+A [Genel]|
 |Project.AddNewItem|Ctrl+Shift+A [Genel]|
 
-## <a name="bkmk_refactor"></a> Yeniden düzenleme
+## <a name="bkmk_refactor"></a>Düzenle
 
 |Komut|Klavye Kısayolu [Bağlam]|
 |-------------|-----------------------------------|
 |Refactor.ExtractMethod|Ctrl+R, Ctrl+M [Genel]|
 
-## <a name="bkmk_tools"></a> Araçları
+## <a name="bkmk_tools"></a>Aracı
 
 |Komut|Klavye Kısayolu [Bağlam]|
 |-------------|-----------------------------------|
 |Tools.AttachtoProcess|Ctrl+Alt+P [Genel]|
 
-## <a name="bkmk_view"></a> Görünümü
+## <a name="bkmk_view"></a>Görünümü
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
 |View.ClassView|Ctrl+Shift+C [Genel]|
-|View.EditLabel|F2 [genel]|
-|View.ErrorList|CTRL +\\, Ctrl + E [genel]<br /><br /> veya Ctrl +\\, E [genel]|
+|View.EditLabel|F2 [Genel]|
+|View.ErrorList|CTRL + \\, CTRL + E [Genel]<br /><br /> ya da CTRL + \\, E [Genel]|
 |View.NavigateBackward|Ctrl+- [Genel]|
 |View.NavigateForward|Ctrl+Shift+- [Genel]|
 |View.ObjectBrowser|Ctrl+Alt+J [Genel]|
 |View.Output|Ctrl+Alt+O [Genel]|
-|View.PropertiesWindow|F4|
+|View.PropertiesWindow|Oluşturulurken|
 |View.Refresh|F5 [Ekip Gezgini, Team Foundation Yapı Ayrıntı Düzenleyicisi]|
 |View.ServerExplorer|Ctrl+Alt+S [Genel]|
 |View.ShowSmartTag|Ctrl+. [Genel]<br /><br /> veya Shift+Alt+F10 [Genel, HTML Düzenleyicisi Tasarım Görünümü]|
 |View.SolutionExplorer|Ctrl+Alt+L [Genel]|
-görünümü. TfsTeamExplorer|CTRL +\\, Ctrl + M [genel]|
+görüntüle. TfsTeamExplorer|CTRL + \\, CTRL + d [Genel]|
 |View.Toolbox|Ctrl+Alt+X [Genel]|
 |View.ViewCode|Enter [Sınıf Diyagramı]<br /><br /> veya F7 [Ayarlar Tasarımcısı]|
 |View.ViewDesigner|Shift+F7 [HTML Düzenleyicisi Tasarım Görünümü]|
 
-## <a name="bkmk_window"></a> Pencere
+## <a name="bkmk_window"></a>Penceresine
 
 |Komutlar|Klavye Kısayolları [Bağlamlar]|
 |--------------|-------------------------------------|
@@ -175,4 +175,4 @@ görünümü. TfsTeamExplorer|CTRL +\\, Ctrl + M [genel]|
 |Window.CloseDocumentWindow|Ctrl+F4 [Genel]|
 |Window.NextDocumentWindow|Ctrl+F6 [Genel]|
 |Window.NextDocumentWindowNav|Ctrl+Sekme [Genel]|
-|Window.NextSplitPane|F6 [genel]|
+|Window.NextSplitPane|F6 [Genel]|

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c11c9da607e983dcde0b84ac236943751bca71c
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 72e0a8393a65d4c0e1549a6617971b0adb8c1df7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251851"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653960"
 ---
 # <a name="customize-the-properties-window"></a>Özellikler penceresi özelleştirme
 
@@ -24,7 +24,7 @@ Visual Studio 'da etki alanına özgü dilinizdeki (DSL) Özellikler penceresini
 
 **Ad ve görünen ad**. Bir etki alanı özelliği tanımınızda, özelliğin görünen adı, Özellikler penceresinde çalışma zamanında görünen addır. Buna karşılık, bu ad, özelliği güncellemek için program kodu yazdığınızda kullanılır. Ad, doğru bir CLR alfasayısal adı olmalıdır, ancak görünen ad boşluk içerebilir.
 
-DSL tanımındaki bir özelliğin adını belirlediğinizde, görünen adı otomatik olarak adının bir kopyasına ayarlanır. "Fuelölçer" gibi bir Pascal Kased adı yazarsanız, görünen ad otomatik olarak bir boşluk içerecektir: "Yakıt ölçer". Ancak, görünen adı açıkça başka bir değere ayarlayabilirsiniz.
+DSL tanımındaki bir özelliğin adını belirlediğinizde, görünen adı otomatik olarak adının bir kopyasına ayarlanır. "Fuelölçer" gibi bir Pascal Kased adı yazarsanız, görünen ad otomatik olarak bir boşluk içerecektir: "yakıt ölçer". Ancak, görünen adı açıkça başka bir değere ayarlayabilirsiniz.
 
 **Açıklama**. Bir etki alanı özelliğinin açıklaması iki yerde görünür:
 
@@ -40,9 +40,9 @@ Grafik öğelerinin bazı dinamik özellikleri, etki alanı *özellikleri olarak
 
 DSL tanımında bir şekil sınıfına sağ tıklayın, **gösterilen Ekle**' nin üzerine gelin ve ardından bir özellik seçin.
 
-Şekiller üzerinde, **FillColor**, **OutlineColor**, **TextColor**, **outlinetirestyle**, **outlinekalınlığı** ve **FillGradientMode** özelliklerini kullanıma sunabilirsiniz. Bağlayıcılar üzerinde, **Color**`,`**TextColor**, **çizgi stili**ve **kalınlığı** özelliklerini kullanıma sunabilirsiniz. Diyagramlarda, **FillColor** ve **TextColor** özelliklerini kullanıma sunabilirsiniz.
+Şekiller üzerinde, **FillColor**, **OutlineColor**, **TextColor**, **outlinetirestyle**, **outlinekalınlığı** ve **FillGradientMode** özelliklerini kullanıma sunabilirsiniz. Bağlayıcılar ' da,**TextColor**, **çizgi stili**ve **kalınlığı** özelliklerini ortaya çıkarmak için **renk** `,`. Diyagramlarda, **FillColor** ve **TextColor** özelliklerini kullanıma sunabilirsiniz.
 
-## <a name="forwarding-display-properties-of-related-elements"></a>İletildiğinde İlgili öğelerin özelliklerini görüntüle
+## <a name="forwarding-display-properties-of-related-elements"></a>İletme: ilgili öğelerin özelliklerini görüntüle
 
 DSL 'niz Kullanıcı bir modelde bir öğe seçtiğinde, bu öğenin özellikleri Özellikler penceresinde görüntülenir. Bununla birlikte, belirtilen ilişkili öğelerin özelliklerini de görüntüleyebilirsiniz. Birlikte çalışarak bir öğe grubunu tanımlamış olmanız durumunda bu yararlı olur. Örneğin, bir ana öğe ve isteğe bağlı bir eklenti öğesi tanımlayabilirsiniz. Ana öğe bir şekle eşlenmişse ve diğeri değilse, tüm özelliklerini tek bir öğe gibi görmek yararlıdır.
 
@@ -52,7 +52,7 @@ Bu efekt, *özellik iletme*olarak adlandırılır ve çeşitli durumlarda otomat
 
 Kullanıcı bir şekil veya bağlayıcı ya da gezgin içindeki bir öğe seçtiğinde, Özellikler penceresi aşağıdaki özellikler görüntülenir:
 
-- Temel sınıflarda tanımlananlar da dahil olmak üzere, model öğesinin etki alanı sınıfında tanımlanan etki alanı özellikleri. Bir özel durum, sizin ayarladığınız ve göz **atılabilen** `False`etki alanı özellikleridir.
+- Temel sınıflarda tanımlananlar da dahil olmak üzere, model öğesinin etki alanı sınıfında tanımlanan etki alanı özellikleri. Bir özel durum, ayarlamış olduğunuz etki alanı özellikleridir `False` için **gözatılabilir** .
 
 - Çokluğu 0.. 1 olan ilişkilerle bağlantılı öğelerin adları. Bu, ilişki için bir bağlayıcı eşlemesi tanımlamadınız bile, isteğe bağlı olarak bağlı öğeleri görmek için kullanışlı bir yöntem sağlar.
 
@@ -71,7 +71,7 @@ Aşağıdaki yordamda bir DSL oluşturduğunuzu varsayılmaktadır. İlk birkaç
 
 #### <a name="forward-a-property-from-another-element"></a>Bir özelliği başka bir öğeden ilet
 
-1. Bu örnekte [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] **kitap** ve **Yazar**olarak adlandırılan en az iki sınıf içeren bir çözüm oluşturun. **Kitap** ve **Yazar**arasında her iki türden bir ilişki olmalıdır.
+1. Bu örnekte **Book** ve **Author**olarak adlandırılan en az iki sınıf içeren bir [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] çözümü oluşturun. **Kitap** ve **Yazar**arasında her iki türden bir ilişki olmalıdır.
 
     Kaynak rolün çoğulluğu ( **kitap** tarafındaki rol) 0.. 1 veya 1.. 1 olmalıdır, böylece her **kitapta** bir **Yazar**bulunur.
 
@@ -146,9 +146,9 @@ Aşağıdaki biçimde, Domain özelliğine bir CLR özniteliği ekleyin:
 
 Bir özellikte özniteliği, Özellikler penceresi **özel öznitelik** girişini kullanarak ayarlayabilirsiniz.
 
-Türünün ikinci parametrede `AnEditor` belirtilen türden türetilmesi gerekir. İkinci parametre ya <xref:System.Drawing.Design.UITypeEditor> <xref:System.ComponentModel.ComponentEditor>da olmalıdır. Daha fazla bilgi için bkz. <xref:System.ComponentModel.EditorAttribute>.
+@No__t_0 türünün ikinci parametrede belirtilen türden türetilmesi gerekir. İkinci parametre <xref:System.Drawing.Design.UITypeEditor> ya da <xref:System.ComponentModel.ComponentEditor> olmalıdır. Daha fazla bilgi için bkz. <xref:System.ComponentModel.EditorAttribute>.
 
-Kendi düzenleyicinizi veya <xref:System.Windows.Forms.Design.FileNameEditor> ya <xref:System.Drawing.Design.ImageEditor>da gibi bir .net düzenleyicisini belirtebilirsiniz. Örneğin, kullanıcının bir dosya adı girebileceği bir özelliği olması için aşağıdaki yordamı kullanın.
+Kendi düzenleyicinizi veya <xref:System.Windows.Forms.Design.FileNameEditor> ya da <xref:System.Drawing.Design.ImageEditor> gibi bir .NET düzenleyicisini belirtebilirsiniz. Örneğin, kullanıcının bir dosya adı girebileceği bir özelliği olması için aşağıdaki yordamı kullanın.
 
 #### <a name="define-a-file-name-domain-property"></a>Bir dosya adı etki alanı özelliği tanımlayın
 
@@ -177,13 +177,13 @@ Kendi düzenleyicinizi veya <xref:System.Windows.Forms.Design.FileNameEditor> ya
 
 Kendi düzenleyicinizi tanımlayabilirsiniz. Bunu, kullanıcının tanımladığınız bir türü düzenlemesine veya standart bir türü özel bir şekilde düzenlemenize izin vermek için yapabilirsiniz. Örneğin, kullanıcının bir formülü temsil eden bir dize girişine izin verebilirsiniz.
 
-Sınıfından türetilmiş <xref:System.Drawing.Design.UITypeEditor>bir sınıf yazarak bir düzenleyici tanımlarsınız. Sınıfınız geçersiz kılmalıdır:
+@No__t_0 türetilen bir sınıf yazarak bir düzenleyici tanımlarsınız. Sınıfınız geçersiz kılmalıdır:
 
 - <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>, kullanıcıyla etkileşime geçmek ve özellik değerini güncelleştirmek için.
 
-- <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, Düzenleyicinizde bir iletişim kutusu açıp açmayacağını veya açılan bir menü belirtin.
+- <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, Düzenleyicinizde bir iletişim kutusu açıp açmayacağını veya açılan menüyü sağlayıp sağlamamayacağını belirtmek için.
 
-Özellik kılavuzunda görüntülenecek özelliğin değerinin grafik gösterimini de sağlayabilirsiniz. Bunu yapmak için, ve `GetPaintValueSupported` `PaintValue`geçersiz kılın.  Daha fazla bilgi için bkz. <xref:System.Drawing.Design.UITypeEditor>.
+Özellik kılavuzunda görüntülenecek özelliğin değerinin grafik gösterimini de sağlayabilirsiniz. Bunu yapmak için `GetPaintValueSupported` ve `PaintValue` geçersiz kılın.  Daha fazla bilgi için bkz. <xref:System.Drawing.Design.UITypeEditor>.
 
 > [!NOTE]
 > Kodu **DSL** projesindeki ayrı bir kod dosyasına ekleyin.
@@ -226,7 +226,7 @@ Standart değerlerin bir listesini tanımlamak için, aşağıdaki biçime sahip
 (typeof(MyTypeConverter))]
 ```
 
-Öğesinden <xref:System.ComponentModel.TypeConverter>türetilen bir sınıf tanımlayın. Kodu **DSL** projesindeki ayrı bir dosyaya ekleyin. Örneğin:
+@No__t_0 türeten bir sınıf tanımlayın. Kodu **DSL** projesindeki ayrı bir dosyaya ekleyin. Örneğin:
 
 ```csharp
 /// <summary>

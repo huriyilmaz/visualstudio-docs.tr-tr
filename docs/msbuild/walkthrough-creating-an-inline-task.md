@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Satır içi göre oluşturma | Microsoft Docs'
+title: 'İzlenecek yol: satır Içi görev oluşturma | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,63 +11,63 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 322c8d4b766619a6404a315fb83298bf5416fba4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: cbeba8418b3364d4e3762643a78465158f80e6fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445331"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655442"
 ---
-# <a name="walkthrough-create-an-inline-task"></a>İzlenecek yol: Satır içi göre oluşturma
-MSBuild görevleri, derleme uygulayan bir sınıf tarafından genellikle oluşturulur <xref:Microsoft.Build.Framework.ITask> arabirimi. .NET Framework sürüm 4 ile başlayarak, proje dosyasında görevleri satır içi oluşturabilirsiniz. Görev barındırmak için ayrı bir derleme oluşturmak zorunda değildir. Daha fazla bilgi için [satır içi görevleri](../msbuild/msbuild-inline-tasks.md).
+# <a name="walkthrough-create-an-inline-task"></a>İzlenecek yol: satır içi görev oluşturma
+MSBuild görevleri genellikle <xref:Microsoft.Build.Framework.ITask> arabirimini uygulayan bir sınıf derlenerek oluşturulur. .NET Framework sürüm 4 ' den başlayarak, proje dosyasında görevleri satır içinde oluşturabilirsiniz. Görevi barındırmak için ayrı bir derleme oluşturmanız gerekmez. Daha fazla bilgi için bkz. [satır içi görevler](../msbuild/msbuild-inline-tasks.md).
 
- Bu izlenecek yol, oluşturmak ve bu satır içi görevleri çalıştırmak gösterilmektedir:
+ Bu izlenecek yolda, bu satır içi görevlerin nasıl oluşturulacağı ve çalıştırılacağı gösterilmektedir:
 
-- Giriş veya çıkış parametresi yok bir görev.
+- Giriş veya çıkış parametrelerine sahip olmayan bir görev.
 
-- Bir giriş parametresi ve hiçbir çıktı parametreleri olan bir görev.
+- Bir giriş parametresi ve çıkış parametresi olmayan bir görev.
 
-- İki giriş parametresi ve bir MSBuild özellik döndüren bir output parametresi olan bir görev.
+- İki giriş parametresine sahip bir görev ve bir MSBuild özelliği döndüren bir çıkış parametresi.
 
-- İki giriş parametresi ve MSBuild öğesi döndüren bir output parametresi olan bir görev.
+- İki giriş parametresine sahip bir görev ve bir MSBuild öğesi döndüren bir çıktı parametresi.
 
-Oluşturma ve görevleri çalıştırmak için Visual Studio'yu kullanın ve **Visual Studio komut istemi penceresi**gibi:
+Görevleri oluşturmak ve çalıştırmak için, Visual Studio ve **Visual Studio komut Istemi penceresini**aşağıdaki gibi kullanın:
 
-1. Visual Studio kullanarak bir MSBuild proje dosyası oluşturun.
+1. Visual Studio 'Yu kullanarak bir MSBuild proje dosyası oluşturun.
 
-2. Satır içi görev oluşturmak üzere Visual Studio'da proje dosyasını değiştirin.
+2. Satır içi görevi oluşturmak için Visual Studio 'da proje dosyasını değiştirin.
 
-3. Kullanım **komut istemi penceresi** projeyi oluşturun ve sonuçları inceleyin.
+3. Projeyi derlemek ve sonuçları incelemek için **komut Istemi penceresini** kullanın.
 
-## <a name="create-and-modify-an-msbuild-project"></a>MSBuild projesi oluşturup
- Visual Studio proje sistemi MSBuild'i temel alır. Bu nedenle, Visual Studio kullanılarak yapı projesi dosyası oluşturabilirsiniz. Bu bölümde, bir Visual C# proje dosyası oluşturun. (Visual Basic proje dosyası yerine oluşturabilirsiniz. Bu öğreticide bağlamında, iki proje dosyaları arasındaki fark küçük.)
+## <a name="create-and-modify-an-msbuild-project"></a>MSBuild projesi oluşturma ve değiştirme
+ Visual Studio proje sistemi MSBuild'i temel alır. Bu nedenle, Visual Studio 'Yu kullanarak bir yapı proje dosyası oluşturabilirsiniz. Bu bölümde, bir Visual C# proje dosyası oluşturun. (Bunun yerine Visual Basic proje dosyası oluşturabilirsiniz. Bu öğreticinin bağlamında, iki proje dosyası arasındaki fark küçük.)
 
-#### <a name="to-create-and-modify-a-project-file"></a>Oluşturma ve bir proje dosyasını değiştirmek için
+#### <a name="to-create-and-modify-a-project-file"></a>Proje dosyası oluşturmak ve değiştirmek için
 
-1. Visual Studio'da üzerinde **dosya** menüsünde tıklatın **yeni** ve ardından **proje**.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje**' ye tıklayın.
 
-2. İçinde **yeni proje** iletişim kutusunda **Visual C#** proje türü ve ardından **Windows Forms uygulaması** şablonu. İçinde **adı** kutusuna `InlineTasks`. Tür a **konumu** çözümü, örneğin, *D:\\*. Emin **çözüm için dizin oluştur** seçildiğinde **kaynak denetimine Ekle** temizlenir, ve **çözüm adı** olduğu **InlineTasks**.
+2. **Yeni proje** iletişim kutusunda,  **C# görsel** proje türünü seçin ve sonra **Windows Forms uygulama** şablonunu seçin. **Ad** kutusuna `InlineTasks` yazın. Çözüm için bir **konum** yazın, örneğin, *D: \\* . **Çözüm için dizin oluştur** ' un seçili olduğundan emin olun, **kaynak denetimine Ekle** ' nin Işaretli olmadığından ve **çözüm adının** **InlineTasks**olması gerekir.
 
-3. Tıklayın **Tamam** proje dosyası oluşturmak için.
+3. Proje dosyasını oluşturmak için **Tamam** ' ı tıklatın.
 
-3. İçinde **Çözüm Gezgini**, sağ **InlineTasks** proje düğümünü ve ardından **projeyi**.
+3. **Çözüm Gezgini**, **InlineTasks** proje düğümüne sağ tıklayın ve ardından **Projeyi Kaldır**' a tıklayın.
 
-4. Proje düğümüne sağ tıklayın ve ardından **Düzenle InlineTasks.csproj**.
+4. Proje düğümüne tekrar sağ tıklayın ve ardından **InlineTasks. csproj öğesini Düzenle**' ye tıklayın.
 
      Proje dosyası kod düzenleyicisinde görüntülenir.
 
-## <a name="add-a-basic-hello-task"></a>Temel bir Hello görev ekleyin
- Şimdi proje dosyasına iletisini gösteren temel bir görev ekleyin "Hello, world!" Ayrıca görev çağırmak için bir varsayılan TestBuild hedef ekleyin.
+## <a name="add-a-basic-hello-task"></a>Temel bir Merhaba görev ekleme
+ Şimdi, proje dosyasına "Hello, World!" iletisini görüntüleyen temel bir görev ekleyin Ayrıca, görevi çağırmak için varsayılan bir TestBuild hedefi de ekleyin.
 
-#### <a name="to-add-a-basic-hello-task"></a>Temel bir Hello görev eklemek için
+#### <a name="to-add-a-basic-hello-task"></a>Temel bir Merhaba görev eklemek için
 
-1. Kök `Project` düğümü, değişiklik `DefaultTargets` özniteliğini `TestBuild`. Ortaya çıkan `Project` düğüm, bu örnekte benzemelidir:
+1. Kök `Project` düğümünde `DefaultTargets` özniteliğini `TestBuild` olarak değiştirin. elde edilen `Project` düğümü şu örneğe benzemelidir:
 
    ```xml
    <Project ToolsVersion="4.0" DefaultTargets="TestBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
    ```
 
-2. Aşağıdaki satır içi görev ekleyin ve proje dosyasına hemen önce hedef `</Project>` etiketi.
+2. Aşağıdaki satır içi görevi ve hedefi, `</Project>` etiketinden hemen önce proje dosyasına ekleyin.
 
    ```xml
    <UsingTask TaskName="Hello" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" >
@@ -85,34 +85,34 @@ Oluşturma ve görevleri çalıştırmak için Visual Studio'yu kullanın ve **V
 
 3. Proje dosyasını kaydedin.
 
-   Bu kod Hello olarak adlandırılır ve başvuruları, hiç parametre yok bir satır içi görev oluşturur veya `Using` deyimleri. Başlangıç görevi selamlama iletisine varsayılan günlük kaydı cihazda genellikle konsol penceresinde görüntüler kodun tek satırı içerir.
+   Bu kod, Merhaba adlı bir satır içi görev oluşturur ve hiçbir parametre, başvuru veya `Using` yönergesi içermez. Merhaba görev, genellikle konsol penceresi olan varsayılan günlük cihazında bir Merhaba ileti görüntüleyen yalnızca bir kod satırı içerir.
 
-### <a name="run-the-hello-task"></a>Başlangıç görevi çalıştır
- MSBuild kullanarak Çalıştır **komut istemi penceresi** Hello görevi oluşturmak ve onu çağıran TestBuild hedef işlemek için.
+### <a name="run-the-hello-task"></a>Merhaba görevi çalıştırma
+ Merhaba görevi oluşturmak ve bunu çağıran TestBuild hedefini işlemek için **komut Istemi penceresini** kullanarak MSBuild 'i çalıştırın.
 
-##### <a name="to-run-the-hello-task"></a>Başlangıç görevi çalıştırmak için
+##### <a name="to-run-the-hello-task"></a>Merhaba görevi çalıştırmak için
 
-1. Tıklayın **Başlat**, tıklayın **tüm programlar**ve bulun **Visual Studio Araçları** klasörü ve tıklatın **Visual Studio komut istemi**.
+1. **Başlat**' a tıklayın, **tüm programlar**' a tıklayın ve ardından **Visual Studio Araçları** klasörünü bulun ve **Visual Studio komut istemi**' ne tıklayın.
 
-2. İçinde **komut istemi penceresi**, bu durumda, proje dosyasını içeren klasörü bulun *D:\InlineTasks\InlineTasks\\*.
+2. **Komut Istemi penceresinde**, proje dosyasını içeren klasörü bulun, bu durumda *D:\ınlinetasks\ınlinetasks \\* .
 
-3. Tür **msbuild** komut anahtarlar ve ENTER tuşuna olmadan **Enter**. Varsayılan olarak, bu yapıları *InlineTasks.csproj* dosya ve Hello görevini çağırır TestBuild, varsayılan hedef işler.
+3. Komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER**tuşuna basın. Bu, varsayılan olarak, *InlineTasks. csproj* dosyasını oluşturur ve varsayılan hedef TestBuild öğesini işler ve bu da Hello görevini çağırır.
 
-4. Çıktıyı inceleyin **komut istemi penceresi**. Şu satırı görmeniz gerekir:
+4. **Komut Istemi penceresindeki**çıktıyı inceleyin. Şu satırı görmeniz gerekir:
 
     `Hello, world!`
 
    > [!NOTE]
-   > Selamlama iletisine görmüyorsanız, proje dosyasını kaydetmeyi tekrar deneyin ve sonra başlangıç görevi çalıştırın.
+   > Merhaba iletisini görmüyorsanız, proje dosyasını tekrar kaydetmeyi deneyin ve ardından Merhaba görevini çalıştırın.
 
-   Kod Düzenleyicisi arasında geçiş yapma tarafından ve **komut istemi penceresi**, proje dosyasını değiştirebilir ve sonuçları hızlı bir şekilde görmek.
+   Kod Düzenleyicisi ve **komut Istemi penceresi**arasında değişiklik yaparak, proje dosyasını değiştirebilir ve sonuçları hızlıca görebilirsiniz.
 
-## <a name="define-the-echo-task"></a>Yankı görev tanımlayın
- Bir dize parametresi kabul eder ve dize cihaz günlüğü varsayılan olarak görüntüleyen bir satır içi görev oluşturun.
+## <a name="define-the-echo-task"></a>Yankı görevini tanımlama
+ Dize parametresini kabul eden ve varsayılan günlük cihazında dizeyi görüntüleyen bir satır içi görev oluşturun.
 
-#### <a name="to-define-the-echo-task"></a>Yankı görev tanımlamak için
+#### <a name="to-define-the-echo-task"></a>Yankı görevini tanımlamak için
 
-1. Kod Düzenleyicisi'nde aşağıdaki kodu kullanarak başlangıç görevi ve TestBuild hedef değiştirin.
+1. Kod Düzenleyicisi 'nde, aşağıdaki kodu kullanarak Hello görevini ve TestBuild hedefini değiştirin.
 
    ```xml
    <UsingTask TaskName="Echo" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" >
@@ -130,20 +130,20 @@ Oluşturma ve görevleri çalıştırmak için Visual Studio'yu kullanın ve **V
    </Target>
    ```
 
-2. İçinde **komut istemi penceresi**, türü **msbuild** komut anahtarlar ve ENTER tuşuna olmadan **Enter**. Varsayılan olarak, bu varsayılan hedef Echo görev çağıran TestBuild işler.
+2. **Komut Istemi penceresinde**, komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER**tuşuna basın. Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild öğesini işler.
 
-3. Çıktıyı inceleyin **komut istemi penceresi**. Şu satırı görmeniz gerekir:
+3. **Komut Istemi penceresindeki**çıktıyı inceleyin. Şu satırı görmeniz gerekir:
 
     `Greetings!`
 
-   Bu kod, Echo adlandırılmış ve tek gerekli giriş parametresi metin olan bir satır içi görev tanımlar. Varsayılan olarak, System.String türünde parametrelerdir. TestBuild hedef Echo görevi çağırdığında, metin parametresinin değeri ayarlanır.
+   Bu kod, Echo adlı ve yalnızca bir tane gerekli giriş parametresi metnine sahip olan bir satır içi görevi tanımlar. Varsayılan olarak, parametreler System. String türündedir. Metin parametresinin değeri, TestBuild hedefi Echo görevi istediğinde ayarlanır.
 
-## <a name="define-the-adder-task"></a>Ekleyici görev tanımlayın
- İki tamsayı parametre ekler ve bir MSBuild özelliği olarak toplamları yayan bir satır içi görev oluşturun.
+## <a name="define-the-adder-task"></a>Adder görevini tanımlama
+ İki tamsayı parametresi ekleyen ve toplamlarını MSBuild özelliği olarak yayar bir satır içi görev oluşturun.
 
-#### <a name="to-define-the-adder-task"></a>Ekleyici görev tanımlamak için
+#### <a name="to-define-the-adder-task"></a>Adder görevini tanımlamak için
 
-1. Kod Düzenleyicisi'nde aşağıdaki kodu kullanarak TestBuild hedef ve yankı görev değiştirin.
+1. Kod Düzenleyicisi 'nde, aşağıdaki kodu kullanarak yankı görevini ve TestBuild hedefini değiştirin.
 
    ```xml
    <UsingTask TaskName="Adder" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" >
@@ -166,20 +166,20 @@ Oluşturma ve görevleri çalıştırmak için Visual Studio'yu kullanın ve **V
    </Target>
    ```
 
-2. İçinde **komut istemi penceresi**, türü **msbuild** komut anahtarlar ve ENTER tuşuna olmadan **Enter**. Varsayılan olarak, bu varsayılan hedef Echo görev çağıran TestBuild işler.
+2. **Komut Istemi penceresinde**, komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER**tuşuna basın. Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild öğesini işler.
 
-3. Çıktıyı inceleyin **komut istemi penceresi**. Şu satırı görmeniz gerekir:
+3. **Komut Istemi penceresindeki**çıktıyı inceleyin. Şu satırı görmeniz gerekir:
 
     `The sum is 9`
 
-   Bu kod, ekleyici adlı bir satır içi görev tanımlar ve iki tamsayı giriş parametreleri, A ve B zorunludur ve bir tamsayı çıkış parametresi, c Ekleyici görev iki giriş parametreleri ekler ve toplam çıkış parametresinde döndürür. MSBuild özelliği olarak toplamı yayıldığını `Sum`. TestBuild hedef ekleyici görevi çağırdığında, giriş parametrelerinin değerlerini ayarlanır.
+   Bu kod, Adder adlı bir satır içi görevi tanımlar ve iki gerekli tamsayı giriş parametresine, A ve B ve bir tamsayı çıkış parametresi olan C ' yi içerir. Adder görevi iki giriş parametrelerini ekler ve çıkış parametresindeki toplamı döndürür. Toplam, MSBuild özelliği `Sum` olarak yayılır. Giriş parametrelerinin değerleri, TestBuild hedefi Adder görevini çalıştırdığında ayarlanır.
 
-## <a name="define-the-regx-task"></a>RegX görev tanımlayın
- Bir öğe grubunu ve normal bir ifade kabul eder ve ifadeyle eşleşen dosya içeriğini gösteren tüm öğeleri listesi döndüren bir satır içi görev oluşturun.
+## <a name="define-the-regx-task"></a>RegX görevini tanımlama
+ Bir öğe grubunu ve normal ifadeyi kabul eden bir satır içi görev oluşturun ve ifadesiyle eşleşen dosya içeriğine sahip tüm öğelerin bir listesini döndürür.
 
-#### <a name="to-define-the-regx-task"></a>RegX görev tanımlamak için
+#### <a name="to-define-the-regx-task"></a>RegX görevini tanımlamak için
 
-1. Kod Düzenleyicisi'nde aşağıdaki kodu kullanarak TestBuild hedef ve görev ekleyici değiştirin.
+1. Kod düzenleyicisinde, aşağıdaki kodu kullanarak Adder görevini ve TestBuild hedefini değiştirin.
 
    ```xml
    <UsingTask TaskName="RegX" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" >
@@ -221,9 +221,9 @@ Oluşturma ve görevleri çalıştırmak için Visual Studio'yu kullanın ve **V
    </Target>
    ```
 
-2. İçinde **komut istemi penceresi**, türü **msbuild** komut anahtarlar ve ENTER tuşuna olmadan **Enter**. Varsayılan olarak, bu varsayılan hedef RegX görev çağıran TestBuild işler.
+2. **Komut Istemi penceresinde**, komut anahtarları olmadan **MSBuild** yazın ve ardından **ENTER**tuşuna basın. Varsayılan olarak, bu, RegX görevini çağıran varsayılan hedef TestBuild öğesini işler.
 
-3. Çıktıyı inceleyin **komut istemi penceresi**. Şu satırları görmeniz gerekir:
+3. **Komut Istemi penceresindeki**çıktıyı inceleyin. Şu satırları görmeniz gerekir:
 
    ```
    Input files: Form1.cs;Form1.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;Properties\Resources.Designer.cs;Properties\Settings.Designer.cs
@@ -233,18 +233,18 @@ Oluşturma ve görevleri çalıştırmak için Visual Studio'yu kullanın ve **V
    Matched files: Form1.cs;Form1.Designer.cs;Properties\Settings.Designer.cs
    ```
 
-   Bu kod, RegX adlı ve şu üç parametreyi içeren bir satır içi görev tanımlar:
+   Bu kod, RegX adlı bir satır içi görevi tanımlar ve bu üç parametreye sahiptir:
 
-- `Expression` eşleştirilecek normal ifade olan bir değere sahip bir gerekli dize giriş parametresidir. Bu örnekte, "Genel" veya "korumalı" sözcüklerini ifadeyi eşleştirir.
+- `Expression`, eşleştirilecek normal ifade olan bir değere sahip gerekli bir dize giriş parametresidir. Bu örnekte, ifade "public" veya "Protected" kelimelerle eşleşir.
 
-- `Files` eşleşme için aranacak dosyaların listesini bir değere sahip bir gerekli öğe listesi giriş parametresidir. Bu örnekte, `Files` ayarlanır `Compile` proje kaynak dosyaları listeleyen öğesi.
+- `Files`, eşleşme için aranacak dosyaların listesi olan bir değere sahip gerekli bir öğe listesi giriş parametresidir. Bu örnekte `Files`, proje kaynak dosyalarını listeleyen `Compile` öğesine ayarlanır.
 
-- `Result` Normal bir ifadeyle eşleşen içeriğe sahip dosyaların listesini bir değere sahip bir çıktı parametresidir.
+- `Result`, normal ifadeyle eşleşen içeriği olan dosyaların listesi olan bir çıkış parametresidir.
 
-  Giriş parametreleri değerini TestBuild hedef RegX görevi çağırdığında ayarlanır. RegX görev her dosyasını okur ve normal bir ifadeyle eşleşen dosyaların listesini döndürür. Bu liste olarak döndürülür `Result` MSBuild öğesi olarak yayılan çıkış parametresi, `MatchedFiles`.
+  Giriş parametrelerinin değeri, TestBuild hedefi RegX görevini çalıştırdığında ayarlanır. RegX görevi her dosyayı okur ve normal ifadeyle eşleşen dosyaların listesini döndürür. Bu liste, MSBuild öğesi `MatchedFiles` olarak yayılan `Result` çıkış parametresi olarak döndürülür.
 
-### <a name="handle-reserved-characters"></a>Ayrılmış karakterleri
- MSBuild ayrıştırıcının XML olarak satır içi görevleri işler. Anlamı XML, örneğin, ayrılmış karakterleri "\<" ve ">", algılanan ve XML ve .NET kaynak kodu değil gibi işlenir. Kod ifadeleri gibi ayrılmış karakterleri eklemek için `Files.Length > 0`, yazma `Code` öğesi böylece içeriğinin bir CDATA ifadesinde gibi yer alır:
+### <a name="handle-reserved-characters"></a>Ayrılan karakterleri işle
+ MSBuild ayrıştırıcısı satır içi görevleri XML olarak işler. "@No__t_0" ve ">" gibi, XML olarak ayrılmış anlamı olan karakterler, .NET kaynak kodu değil, XML gibi algılanır ve işlenir. @No__t_0 gibi kod ifadelerinde ayrılmış karakterleri dahil etmek için, `Code` öğesini, içeriğinin CDATA ifadesinde olması için aşağıdaki gibi yazın:
 
  ```xml
 <Code Type="Fragment" Language="cs">
@@ -257,6 +257,6 @@ Oluşturma ve görevleri çalıştırmak için Visual Studio'yu kullanın ve **V
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Satır içi görevleri](../msbuild/msbuild-inline-tasks.md)
+- [Satır içi görevler](../msbuild/msbuild-inline-tasks.md)
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Hedefler](../msbuild/msbuild-targets.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yönetilen kod hatası için iş öğesi oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: yönetilen bir kod hatası için Iş öğesi oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - code analysis, creating work items
 ms.assetid: 46ddfd57-af4a-4c1d-bd00-8e6328f321f0
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ab8744e84e035501ba9bb8d531d982f4c17e206e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8a3e9277ca29a20d817b04bf06cde120c0f073d8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201376"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655130"
 ---
-# <a name="how-to-create-a-work-item-for-a-managed-code-defect"></a>Nasıl yapılır: Yönetilen Kod Hatası için İş Öğesi Oluşturma
+# <a name="how-to-create-a-work-item-for-a-managed-code-defect"></a>Nasıl yapılır: Yönetilen bir Kod Hatası için bir İş Öğesi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İş öğesi izleme günlük iş öğesi için bir özellik içinden kullanabileceğiniz [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]. Bu özelliği kullanmak için projenizin takım projesinde bir parçası olmalıdır [!INCLUDE[esprfound](../includes/esprfound-md.md)].  
-  
-### <a name="to-create-a-work-item-for-managed-code-defect"></a>Yönetilen kod hatası için bir iş öğesi oluşturmak için  
-  
-1. İçinde **Kod Analizi** penceresinde uyarıyı seçin.  
-  
-2. Seçin **eylemleri**, ardından **iş öğesi oluştur** ve oluşturulacak çalışma öğesi türünü seçin.  
-  
-     Yeni bir iş öğesi, hata bilgilerini belirtmek oluşturulur.  
-  
-### <a name="to-create-a-work-item-for-multiple-managed-code-defects"></a>Birden çok yönetilen kod kusurları için iş öğesi oluşturmak için  
-  
-1. İçinde **hata listesi**, birden çok uyarıları seçin ve sonra uyarılar sağ tıklayın.  
-  
-2. İşaret **iş öğesi oluştur** ve oluşturulacak çalışma öğesi türüne tıklayın.  
-  
-     Tek bir iş öğesi, hata bilgilerini belirtmek seçilen tüm uyarılar oluşturulur.
+Çalışma öğesini [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] içinden kaydetmek için çalışma öğesi izleme özelliğini kullanabilirsiniz. Bu özelliği kullanmak için, projenizin [!INCLUDE[esprfound](../includes/esprfound-md.md)] takım projesinin bir parçası olması gerekir.
+
+### <a name="to-create-a-work-item-for-managed-code-defect"></a>Yönetilen kod hatası için bir iş öğesi oluşturmak için
+
+1. **Kod Analizi** penceresinde, uyarıyı seçin.
+
+2. **Eylemler**' i seçin, sonra **iş öğesi oluştur** ' u seçin ve oluşturulacak iş öğesi türünü seçin.
+
+     Hata bilgilerini belirtmeniz için yeni bir iş öğesi oluşturulur.
+
+### <a name="to-create-a-work-item-for-multiple-managed-code-defects"></a>Birden çok yönetilen kod kusurları için bir iş öğesi oluşturmak için
+
+1. **Hata listesi**birden çok uyarı seçin ve ardından uyarılara sağ tıklayın.
+
+2. **Iş öğesi oluştur** ' un üzerine gelin ve oluşturulacak iş öğesi türüne tıklayın.
+
+     Hata bilgilerini belirtmeniz için seçili tüm uyarılar için tek bir iş öğesi oluşturulur.

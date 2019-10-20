@@ -5,58 +5,58 @@ ms.topic: conceptual
 f1_keywords:
 - vs.graphics
 ms.assetid: 910d673b-c884-4eeb-9928-0e89f3d38cb6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94dc97766d4f04451910a43146587b27726b87e3
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 55986a703bd53318f8c0f74b8cf661412a82b716
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65459090"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634007"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>Oyunlar ve uygulamalar için 3B varlıklarla çalışma
 
-Bu makale oluşturmak veya 3B modelleri, dokuları ve gölgelendiricileri DirectX tabanlı oyunlar ve uygulamalar için değiştirmek için kullanabileceğiniz Visual Studio Araçları açıklar.
+Bu makalede, DirectX tabanlı oyunlar ve uygulamalar için 3B modeller, dokular ve gölgelendiriciler oluşturmak veya değiştirmek için kullanabileceğiniz Visual Studio araçları açıklanmaktadır.
 
-## <a name="directx-app-development-in-visual-studio"></a>Visual Studio'da DirectX uygulaması geliştirme
+## <a name="directx-app-development-in-visual-studio"></a>Visual Studio 'da DirectX uygulama geliştirme
 
-DirectX uygulaması, programlama mantığı, DirectX API ve üst düzey gölgelendirme dili (HLSL) programları, zengin, etkileşimli bir multimedya deneyimi sunmak için ses ve 3B görsel varlıklar genellikle birleştirir. Visual Studio, başka bir aracı kullanmak için IDE'den çıkmadan görüntü ve dokuları, 3B modeller ve gölgelendiriciler ile çalışmak için kullanabileceğiniz araçları içerir. Visual Studio Araçları, özellikle oluşturmak için uygun *yer tutucu* kodu test veya üretime hazır varlıkları komisyon önce ve inceleme ve üretime hazır değiştirmeye yönelik prototipleri oluşturmak için kullanabileceğiniz, varlıkları Uygulamanızı hata ayıklama işlemi yaparken varlıklar.
+DirectX uygulaması genellikle programlama mantığını, DirectX API 'sini ve yüksek düzeyde gölgeleme dili (HLSL) programlarını zengin ve etkileşimli bir multimedya deneyimi sunmak için ses ve 3B görsel varlıklarla birlikte birleştirir. Visual Studio, IDE 'yi başka bir araç kullanmak için uygulamadan çıkmadan görüntüler, dokular, 3B modeller ve gölgelendiriciler ile çalışmak için kullanabileceğiniz araçlar içerir. Visual Studio Araçları, üretime uygun varlıkları komisyondan önce kodu test etmek için kullanabileceğiniz ve üretim için kullanıma uygun varlıkları incelemek ve değiştirmek için kullanabileceğiniz *yer tutucu* varlıklar oluşturmaya uygundur. uygulamanızda hata ayıklama.
 
-İşte türde varlıkları hakkında daha fazla bilgi Visual Studio'da çalışabilirsiniz.
+Visual Studio 'da çalıştığınız varlık türleri hakkında daha fazla bilgi edinebilirsiniz.
 
-### <a name="images-and-textures"></a>Görüntü ve dokuları
+### <a name="images-and-textures"></a>Görüntüler ve dokular
 
-Görüntü ve dokuları rengi ve oyunlar ve uygulamalar, görsel ayrıntıları sağlayın. 3B grafikler, çeşitli biçimlerde, türleri ve geometriler farklı kullanımlarını desteklemek için doku gelir. Örneğin, normal haritalar için daha ayrıntılı aydınlatma, 3B modelleri piksel başına yüzey normal değerler sağlayın ve küp eşlemlerinin sky kutulama, yansıma ve küresel doku eşleme gibi kullanımlar için her yöne doku sağlayın. Doku, farklı ayrıntı düzeyleri en verimli işleme desteklemek için Mipmap sağlayabilir ve farklı renk kanalı ve renk sıralamalarının destekleyebilir. Dokular grafik az ayrılmış bellek kaplar ve gpu erişimi dokular daha verimli bir şekilde yardımcı sıkıştırma biçimlerinin çeşitli içinde depolanabilir.
+Görüntüler ve dokular, Oyunlar ve uygulamalar için renk ve görsel ayrıntı sağlar. 3B grafiklerde, dokular farklı kullanımları desteklemek için çeşitli biçimlerde, türlere ve geometrileri gelir. Örneğin, normal haritalar 3B modellerin daha ayrıntılı ışıklandırma için piksel başına yüzey normaller sağlar ve küp haritaları, gök kutulama, yansıma ve küresel doku eşleme gibi kullanımlar için tüm yönlerde doku sağlar. Dokular, farklı ayrıntı düzeylerinde verimli işlemeyi desteklemek için mı haritaları sağlayabilir ve farklı renk kanallarını ve renk sıralamayı destekleyebilir. Dokular, daha az ayrılmış grafik belleği kaplayan ve GPU erişim dokularının daha verimli bir şekilde yardım eden çeşitli sıkıştırılmış biçimlerde depolanabilir.
 
-Görüntü ve dokuları birçok ortak türlerini ve biçimlerini çalışmak için Visual Studio görüntü Düzenleyicisi'ni kullanabilirsiniz.
+Birçok ortak tür ve biçimdeki görüntülerle ve dokularla çalışmak için Visual Studio görüntü düzenleyicisini kullanabilirsiniz.
 
-### <a name="3d-models"></a>3B modeller
+### <a name="3d-models"></a>3B Modeller
 
-3B modeller, boşluk ve Şekil oyunlar ve uygulamalar oluşturun. En düşük düzeyde, 3B alanda noktaları konumunu modelleri kodlama — olarak bilinen *köşeler*— çizgiler veya üçgenler model şeklini temsil eden tanımlamak için verileri dizinleme birlikte. Ek veriler bu köşelerde ile ilişkili olabilir — örneğin, renk bilgilerini, normal vektörleri veya uygulamaya özel öznitelikler. Her model nesnesi genelinde öznitelikleri de tanımlayabilirsiniz — Örneğin, hangi gölgelendirici nesnenin yüzeyi veya hangi doku uygulandığı görünümünü hesaplamak için kullanılır.
+3B modeller, Oyunlar ve uygulamalarda boşluk ve şekil oluşturur. En düşük düzeyde, modeller, *köşe*olarak bilinen ve modelin şeklini temsil eden çizgileri ya da üçgenleri tanımlamak üzere verileri dizinleyen 3B alanda noktaların konumunu kodlayarak tanımlar. Ek veriler, bu köşelerle ilişkilendirilebilir (örneğin, renk bilgileri, normal vektörler veya uygulamaya özel öznitelikler). Her model, nesne genelinde öznitelikler de tanımlayabilir — Örneğin, nesnenin yüzeyinin görünümünü hesaplamak için hangi gölgelendirici kullanılıyor, ya da buna uygulanan doku.
 
-Sık kullanılan çeşitli biçimlerde 3B modellerle çalışmak için Visual Studio Model Düzenleyicisi'ni kullanabilirsiniz.
+Visual Studio model düzenleyicisini kullanarak birkaç ortak biçimdeki 3B modellerle çalışabilirsiniz.
 
 ### <a name="shaders"></a>Gölgelendiriciler
 
-Gölgelendiricileri grafik işlemci birimi (GPU) üzerinde çalışan küçük, etki alanına özgü programlardır. Gölgelendiricileri belirlemek 3B modelleri içine ekrandaki dönüştürülür şekiller ve bu şekiller her pikselin nasıl renklendirilmiştir. Gölgelendirici oluşturma ve nesneyi oyunlarda veya uygulamalarda uygulama nesnesi benzersiz bir görünüm verebilirsiniz.
+Gölgelendiriciler, grafik işleme birimi (GPU) üzerinde çalışan küçük, etki alanına özgü programlardır. Gölgelendiriciler 3B modellerin ekran şekillerine nasıl dönüştürüleceğini ve bu şekillerdeki her pikselin nasıl renklendirileceğini belirlenir. Bir gölgelendirici oluşturup oyununuzda veya uygulamanızdaki bir nesneye uygulayarak nesneye benzersiz bir görünüm verebilirsiniz.
 
-Özel görsel efektler HLSL programlama bilmeden oluşturmak için Visual Studio gölgelendirici tasarım gölgelendirici grafik tabanlı bir araçtır, Tasarımcısı'nı kullanabilirsiniz.
+Bir grafik tabanlı gölgelendirici tasarım aracı olan Visual Studio gölgelendirici Tasarımcısı ' nı kullanarak, HLSL programlamayı bilmeden özel görsel etkiler oluşturabilirsiniz.
 
 > [!NOTE]
-> DirectX programlama ile başlama hakkında daha fazla bilgi için bkz. [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). DirectX tabanlı bir uygulamanın hatalarını ayıklama hakkında daha fazla bilgi için bkz. [(DirectX grafiklerinde hata ayıklama) grafik tanılama](../debugger/graphics/visual-studio-graphics-diagnostics.md).
+> DirectX programlama ile başlama hakkında daha fazla bilgi için bkz. [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). DirectX tabanlı bir uygulamada hata ayıklama hakkında daha fazla bilgi için bkz. [Grafik Tanılama (DirectX grafik hatalarını ayıklama)](../debugger/graphics/visual-studio-graphics-diagnostics.md).
 
 ## <a name="directx-version-compatibility"></a>DirectX sürümü uyumluluğu
 
-Visual Studio, DirectX 2B ve 3B varlıkları işlemek için kullanır. DirectX 11 Oluşturucu ya da Windows Gelişmiş Pikselleştirme Platformu'nu (WARP) yazılım oluşturucusu seçebilirsiniz. DirectX 11 Oluşturucu, DirectX 11 ve DirectX 10 GPU üzerinde yüksek performanslı, Donanım hızlandırmalı işleme sağlar. WARP Oluşturucu varlıklarınızı çok çeşitli bilgisayarlar çalışma emin olmaya yardımcı olur; bu modern grafik donanımının sahip olmayan bilgisayarlar ve grafik donanımının tümleşik bilgisayarları içerir. WARP hakkında daha fazla bilgi için bkz: [Windows Gelişmiş Pikselleştirme Platformu'nu (WARP) Kılavuzu](http://go.microsoft.com/fwlink/p/?LinkId=224634).
+Visual Studio, 2B ve 3B varlıkları işlemek için DirectX kullanır. DirectX 11 oluşturucuyu ya da Windows Gelişmiş Tarama Platformu (WARP) yazılım oluşturucuyu seçebilirsiniz. DirectX 11 Oluşturucu, DirectX 11 ve DirectX 10 GPU 'Larda yüksek performanslı, donanım hızlandırmalı işleme sağlar. WARP işleyicisi, varlıklarınızın çok çeşitli bilgisayarlarla çalıştığından emin olmanıza yardımcı olur. Bu, modern grafik donanımı ve tümleşik grafik donanımına sahip olmayan bilgisayarlar dahil olmak üzere, bu bilgisayarlara sahip olmayan bilgisayarları içerir. WARP hakkında daha fazla bilgi için bkz. [Windows Gelişmiş Tarama Platformu (warp) Kılavuzu](http://go.microsoft.com/fwlink/p/?LinkId=224634).
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Dokularla ve görüntülerle çalışma](../designers/working-with-textures-and-images.md)|Dokular ve görüntüler ile çalışmak için Visual Studio kullanmayı açıklar.|
-|[3B modelleriyle çalışma](../designers/working-with-3-d-models.md)|3B modellerle çalışmak için Visual Studio kullanmayı açıklar.|
-|[Gölgelendiricilerle çalışma](../designers/working-with-shaders.md)|Visual Studio gölgelendirici Tasarımcısı oluşturmak ve özel gölgelendirici efektleri değiştirmek için nasıl kullanılacağını açıklar.|
-|[Oyunlarda veya uygulamalarda 3B varlıklar kullanma](../designers/using-3-d-assets-in-your-game-or-app.md)|Oyunlarda veya uygulamalarda görüntü Düzenleyicisi, Model düzenleyiciyi veya gölgelendirici Tasarımcısı kullanarak oluşturduğunuz varlıkları kullanmayı açıklar.|
+|[Dokularla ve görüntülerle çalışma](../designers/working-with-textures-and-images.md)|Görüntüler ve dokularla çalışmak için Visual Studio 'Nun nasıl kullanılacağını açıklar.|
+|[3D modellerle çalışma](../designers/working-with-3-d-models.md)|3D modellerle çalışmak için Visual Studio 'Nun nasıl kullanılacağını açıklar.|
+|[Gölgelendiricilerle çalışma](../designers/working-with-shaders.md)|Özel gölgelendirici efektlerini oluşturmak ve değiştirmek için Visual Studio gölgelendirici Tasarımcısı 'nın nasıl kullanılacağını açıklar.|
+|[Oyununuzda veya uygulamanızda 3B varlıkları kullanma](../designers/using-3-d-assets-in-your-game-or-app.md)|Oyununuzda veya uygulamanızda görüntü düzenleyicisini, model düzenleyicisini veya gölgelendirici tasarımcısını kullanarak oluşturduğunuz varlıkların nasıl kullanılacağını açıklar.|

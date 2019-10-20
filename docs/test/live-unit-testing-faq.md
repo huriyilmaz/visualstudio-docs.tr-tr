@@ -4,16 +4,16 @@ ms.date: 10/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing FAQ
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 545c8974e3d0dea196a6168db03586a37d15ed72
-ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
+ms.openlocfilehash: 8db8264268eb04edc3140d0e2a6ece5896692e38
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72262297"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653046"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing sık sorulan sorular
 
@@ -21,17 +21,17 @@ ms.locfileid: "72262297"
 
 **Hangi test çerçeveleri Live Unit Testing destekler ve desteklenen en düşük sürüm nedir?**
 
-Live Unit Testing, aşağıdaki tabloda listelenen üç popüler birim testi çerçevesi ile birlikte kullanılabilir. Desteklenen en düşük sürüm bağdaştırıcılarının ve çerçeveleri de tabloda listelenir. Birim testi çerçevelerini NuGet.org adresinden tüm kullanılabilir.
+Live Unit Testing, aşağıdaki tabloda listelenen üç popüler birim testi çerçevesi ile birlikte kullanılabilir. Bağdaştırıcıların ve çerçevelerinin desteklenen minimum sürümü tabloda de listelenmiştir. Birim test çerçevelerinin tümü NuGet.org adresinden kullanılabilir.
 
-|Test çerçevesi  |Visual Studio bağdaştırıcısı en düşük sürüm  |Framework en düşük sürüm  |
+|Test çerçevesi  |Visual Studio bağdaştırıcısı en düşük sürüm  |Framework minimum sürümü  |
 |---------|---------|---------|
-|xUnit.net |xunit.Runner.VisualStudio sürüm 2.2.0-beta3-build1187 |xunit 1.9.2 |
-|NUnit |NUnit3TestAdapter sürümü 3.7.0 |NUnit 3.5.0 sürümü |
-|MSTest |MSTest.TestAdapter 1.1.4-preview |MSTest.TestFramework 1.0.5-preview |
+|xUnit.net |xUnit. Runner. VisualStudio sürüm 2.2.0-Beta3-build1187 |xUnit 1.9.2 |
+|NUnit |NUnit3TestAdapter sürümü 3.7.0 |NUnit sürümü 3.5.0 |
+|MSTest |MSTest. TestAdapter 1.1.4-Önizleme |MSTest. TestFramework 1.0.5-Önizleme |
 
-@No__t-0 ' a başvuruda bulunan daha önceden MSTest tabanlı test projelerine sahipseniz ve daha yeni MSTest NuGet paketlerine geçmek istemiyorsanız, Visual Studio 2019 veya Visual Studio 2017 sürümüne yükseltin.
+@No__t_0 başvuruda bulunan daha önce MSTest tabanlı test projelerine sahipseniz ve yeni MSTest NuGet paketlerine geçmek istemiyorsanız, Visual Studio 2019 veya Visual Studio 2017 sürümüne yükseltin.
 
-Bazı durumlarda, açıkça için Live Unit Testing çalışmaya sırayla çözümde proje tarafından başvurulan NuGet paketlerini geri yüklemek gerekebilir. Çözümün açık bir derlemesini gerçekleştirerek veya çözüm üzerinde sağ tıklayıp **NuGet paketlerini geri yükle** ' yi seçerek paketleri geri yükleyebilirsiniz. (bkz.  > **çözümü** **Derle** , oturma birimi testini etkinleştirmeden önce.
+Bazı durumlarda, Live Unit Testing çalışması için çözümdeki projeler tarafından başvurulan NuGet paketlerini açıkça geri yüklemeniz gerekebilir. Çözümün açık bir derlemesini gerçekleştirerek veya çözüm üzerinde sağ tıklayıp **NuGet paketlerini geri yükle** ' yi seçerek paketleri geri yükleyebilirsiniz. ( **derleme**  > **çözümü** seçin , oturma birimi testini etkinleştirmeden önce.
 
 ## <a name="net-core-support"></a>.NET Core desteği
 
@@ -47,7 +47,7 @@ Evet. Live Unit Testing .NET Core ve .NET Framework ile birlikte kullanılabilir
 
 - Çözümdeki projeler tarafından başvurulan NuGet paketleri geri yüklenemediğinde Live Unit Testing çalışmaz. Çözümün açık bir derlemesini yapmak veya Live Unit Testing açılmadan önce çözümde NuGet paketlerini geri yüklemek, bu sorunu çözmelidir.
 
-- Projelerinizde MSTest tabanlı testler kullanıyorsanız, `Microsoft.VisualStudio.QualityTools.UnitTestFramework` ' a yönelik başvuruyu kaldırdığınızdan ve en son MSTest NuGet paketlerine başvurular eklediğinizden emin olun, `MSTest.TestAdapter` (minimum 1.1.11 sürümü gereklidir) ve `MSTest.TestFramework` (en düşük sürümü 1.1.11 gereklidir) . Daha fazla bilgi için, [Visual Studio 'da Live Unit Testing kullanma](live-unit-testing.md#supported-test-frameworks) makalesindeki "desteklenen test çerçeveleri" bölümüne bakın.
+- Projelerinizde MSTest tabanlı testler kullanıyorsanız, `Microsoft.VisualStudio.QualityTools.UnitTestFramework` başvurusunu kaldırdığınızdan ve en son MSTest NuGet paketlerine başvuruları eklediğinizden emin olun, `MSTest.TestAdapter` (en düşük sürüm 1.1.11 gereklidir) ve `MSTest.TestFramework` (en düşük sürüm 1.1.11 gereklidir) . Daha fazla bilgi için, [Visual Studio 'da Live Unit Testing kullanma](live-unit-testing.md#supported-test-frameworks) makalesindeki "desteklenen test çerçeveleri" bölümüne bakın.
 
 - Çözümünüzde en az bir projede bir NuGet başvurusu veya xUnit, NUnit veya MSTest test çerçevesine doğrudan başvuru olmalıdır. Bu proje Ayrıca karşılık gelen bir Visual Studio test bağdaştırıcıları NuGet paketine başvurmalıdır. Visual Studio test bağdaştırıcısına bir *. runsettings* dosyası aracılığıyla da başvurulabilir. *. Runsettings* dosyası aşağıdaki örnekteki gibi bir girdiye sahip olmalıdır:
 
@@ -75,7 +75,7 @@ Evet. Live Unit Testing .NET Core ve .NET Framework ile birlikte kullanılabilir
 
 **Live Unit Testing Derlemelerimi özelleştirebilir miyim?**
 
-Çözümünüz, "normal" işaretlenmiş olmayan derleme için gerekli olmayan izleme (Live Unit Testing) için derleme için özel adımlar gerektiriyorsa, projenize veya *. targets* dosyalarına `BuildingForLiveUnitTesting` özelliğini denetleyen bir kod ekleyebilirsiniz ve özel ön/sonrası oluşturma adımları gerçekleştirir. Ayrıca, belirli derleme adımlarını (paket yayımlama veya oluşturma gibi) ya da bu proje özelliğine dayalı Live Unit Testing bir yapıya derleme adımları (örneğin, önkoşulları kopyalama) eklemeyi seçebilirsiniz. Bu özelliğe göre yapınızı özelleştirmek, normal derlemenizi herhangi bir şekilde değiştirmez ve yalnızca Live Unit Testing yapıları etkiler.
+Çözümünüz, "normal" işaretlenmiş olmayan derleme için gerekli olmayan izleme (Live Unit Testing) için derleme için özel adımlar gerektiriyorsa, projenize veya *. targets* dosyalarınıza, `BuildingForLiveUnitTesting` özelliğini denetleyen bir kod ekleyebilirsiniz ve özel ön/sonrası oluşturma adımları gerçekleştirir. Ayrıca, belirli derleme adımlarını (paket yayımlama veya oluşturma gibi) ya da bu proje özelliğine dayalı Live Unit Testing bir yapıya derleme adımları (örneğin, önkoşulları kopyalama) eklemeyi seçebilirsiniz. Bu özelliğe göre yapınızı özelleştirmek, normal derlemenizi herhangi bir şekilde değiştirmez ve yalnızca Live Unit Testing yapıları etkiler.
 
 Örneğin, normal bir derleme sırasında NuGet paketleri üreten bir hedef olabilir. Yaptığınız her Düzenlemeden sonra NuGet paketlerinin oluşturulmasını istemezsiniz. Bu nedenle, aşağıdaki gibi bir şey yaparak Live Unit Testing derlemesinde bu hedefi devre dışı bırakabilirsiniz:  
 
@@ -85,13 +85,13 @@ Evet. Live Unit Testing .NET Core ve .NET Framework ile birlikte kullanılabilir
 </Target>
 ```
 
-## <a name="error-messages-with-outputpath-or-outdir"></a>@No__t-0OutputPath > veya \<OutDir > ile hata iletileri
+## <a name="error-messages-with-outputpath-or-outdir"></a>@No__t_0OutputPath > veya \<OutDir olan hata iletileri >
 
-@no__t-Live Unit Testing çözümümüzü derlemeyi denediğinde şu hatayı alıyorum: "... `<OutputPath>` veya `<OutDir>` koşullu olarak ayarlanamaz. Live Unit Testing, çıkış derlemesinden testleri yürütmez "? **
+**Live Unit Testing çözümümüzü derlemeyi denediğinde neden aşağıdaki hatayı alıyorum: "... koşulsuz olarak ayarlı `<OutputPath>` veya `<OutDir>` görünür. Live Unit Testing, çıkış derlemesinden testleri yürütmez "?**
 
-Çözümünüz için derleme işlemi `<OutputPath>` veya `<OutDir>` ' i `<BaseOutputPath>` ' nin alt dizini olmaması adına koşulsuz olarak geçersiz kılıyorsa bu hatayı alabilirsiniz. Bu gibi durumlarda Live Unit Testing, derleme yapıtlarının `<BaseOutputPath>` altındaki bir klasöre bırakıldığından emin olmak için de bu değerleri geçersiz kıldığından çalışmayacaktır. Yapı yapıtlarınızın düzenli bir yapıda kesilmesini istediğiniz konumu geçersiz kılmanız gerekirse, `<BaseOutputPath>` ' e göre koşullu @no__t geçersiz kılın.
+Çözümünüze yönelik derleme işlemi `<OutputPath>` veya `<OutDir>` `<BaseOutputPath>` alt dizini olmaması adına koşulsuz olarak geçersiz kıldığında bu hatayı alabilirsiniz. Bu gibi durumlarda Live Unit Testing, derleme yapıtlarının `<BaseOutputPath>` altındaki bir klasöre bırakıldığından emin olmak için bu değerleri geçersiz kıldığından çalışmayacaktır. Yapı yapıtlarınızın düzenli bir yapıda kesilmesini istediğiniz konumu geçersiz kılmanız gerekiyorsa, `<BaseOutputPath>` göre koşullu `<OutputPath>` geçersiz kılın.
 
-Örneğin, derlemeniz aşağıda gösterildiği gibi `<OutputPath>` ' yı geçersiz kılıyorsa:
+Örneğin, derlemeniz aşağıda gösterildiği gibi `<OutputPath>` geçersiz kılıyorsa:
 
 ```xml 
 <Project>
@@ -112,15 +112,15 @@ ardından, aşağıdaki XML ile değiştirebilirsiniz:
 </Project>
 ```
 
-Bu, `<OutputPath>` ' ın `<BaseOutputPath>` klasörü içinde olmasını sağlar.
+Bu, `<OutputPath>` `<BaseOutputPath>` klasörünün içinde olmasını sağlar.
 
-Doğrudan derleme sürecinizdeki `<OutDir>` ' i geçersiz kılmayın; derleme yapıtlarını belirli bir konuma bırakmak yerine, `<OutputPath>` ' i geçersiz kılın.
+Yapı sürecinizdeki `<OutDir>` doğrudan geçersiz kılmayın; derleme yapıtlarını belirli bir konuma bırakmak yerine `<OutputPath>` geçersiz kılın.
 
 ## <a name="build-artifact-location"></a>Yapı yapıt konumu
 
-**I Live Unit Testing derleme yapıtlarının *. vs* klasörü altındaki varsayılan konum yerine belirli bir konuma gitmesini istiyor. Bunu nasıl değiştirebilirim?**
+**Live Unit Testing derleme yapıtlarının, *. vs* klasörü altındaki varsayılan konum yerine belirli bir konuma gitmesini istiyorum. Bunu nasıl değiştirebilirim?**
 
-@No__t-0 Kullanıcı düzeyi ortam değişkenini Live Unit Testing derleme yapıtlarının kesilmesini istediğiniz yola ayarlayın. 
+@No__t_0 Kullanıcı düzeyi ortam değişkenini Live Unit Testing derleme yapıtlarının kesilmesini istediğiniz yola ayarlayın. 
 
 ## <a name="test-explorer-versus-live-unit-testing"></a>Test Gezgini Live Unit Testing karşı
 
@@ -128,15 +128,15 @@ Doğrudan derleme sürecinizdeki `<OutDir>` ' i geçersiz kılmayın; derleme ya
 
 Çeşitli farklılıklar vardır:
 
-- **Test Gezgini** penceresinde testleri çalıştırmak veya hata ayıklamak, düzenli ikili dosyalar çalıştırlarken Live Unit Testing, işaretlenmiş ikililer çalıştırır. Bir [hata ayıklayıcı](xref:System.Diagnostics.Debugger.Launch)ekleyerek, işaretlenmiş ikililer için hata ayıklama yapmak istiyorsanız. test yönteinizde  yöntem çağrısı, bu yöntem her yürütüldüğünde hata ayıklayıcının başlatılmasına neden olur (Live Unit Testing tarafından yürütüldüğü zaman dahil) ve sonra ekleyebilir ve işaretlenmiş ikilide hata ayıklayın. Bununla birlikte, umuyoruz çoğu kullanıcı senaryosunda sizin için şeffaf ve işaretlenmiş ikililerin hata ayıklamanıza gerek kalmaz.
+- **Test Gezgini** penceresinde testleri çalıştırmak veya hata ayıklamak, düzenli ikili dosyalar çalıştırlarken Live Unit Testing, işaretlenmiş ikililer çalıştırır. Bir [hata ayıklayıcı](xref:System.Diagnostics.Debugger.Launch) ekleyerek, işaretlenmiş ikililer için hata ayıklama yapmak istiyorsanız. test yönteinizde başlatma  method çağrısı, yöntemin her yürütüldüğü zaman hata ayıklayıcının başlatılmasına neden olur (Live Unit Testing tarafından yürütüldüğü zaman dahil) ve daha sonra ekleyebilir ve işaretlenmiş ikilide hata ayıklayın. Bununla birlikte, umuyoruz çoğu kullanıcı senaryosunda sizin için şeffaf ve işaretlenmiş ikililerin hata ayıklamanıza gerek kalmaz.
 
 - Live Unit Testing testleri çalıştırmak için yeni bir uygulama etki alanı oluşturmaz, ancak **Test Gezgini** penceresinden çalıştırılan testler yeni bir uygulama etki alanı oluşturur.
 
-- Live Unit Testing testler sırayla her bir test derlemesindeki çalıştırır. **Test Gezgini**'nde, paralel olarak birden çok test çalıştırmayı seçebilirsiniz.
+- Live Unit Testing her bir test derlemesindeki testleri sırayla çalıştırır. **Test Gezgini**'nde, paralel olarak birden çok test çalıştırmayı seçebilirsiniz.
 
-- Live Unit Testing testlerin bulunması ve yürütülmesi, `TestPlatform` ' ın 2. sürümünü kullanır, ancak **Test Gezgini** penceresi sürüm 1 ' i kullanır. Ancak çoğu durumda fark vermezsiniz.
+- Live Unit Testing testlerin keşfi ve yürütülmesi `TestPlatform` sürüm 2 ' yi kullanır, ancak **Test Gezgini** penceresi sürüm 1 ' i kullanır. Ancak çoğu durumda fark vermezsiniz.
 
-- **Test Gezgini** , testleri tek iş parçacıklı bir grupta (STA) çalıştırır. Live Unit Testing, testleri çok iş parçacıklı bir grupta (MTA) çalıştırır. Live Unit Testing 'de STA 'da MSTest testlerini çalıştırmak için, test yöntemini veya içeren sınıfı, `MSTest.STAExtensions 1.0.3-beta` NuGet paketinde bulunan `<STATestMethod>` veya `<STATestClass>` özniteliğiyle süsledir. NUnit için, `<RequiresThread(ApartmentState.STA)>` özniteliğiyle ve xUnit için, `<STAFact>` özniteliğiyle test yöntemini süsle.
+- **Test Gezgini** , testleri tek iş parçacıklı bir grupta (STA) çalıştırır. Live Unit Testing, testleri çok iş parçacıklı bir grupta (MTA) çalıştırır. Live Unit Testing içinde STA 'da MSTest testlerini çalıştırmak için, test yöntemini veya içeren sınıfı, `MSTest.STAExtensions 1.0.3-beta` NuGet paketinde bulunan `<STATestMethod>` veya `<STATestClass>` özniteliğiyle süsledir. NUnit için, `<RequiresThread(ApartmentState.STA)>` özniteliğiyle ve xUnit için `<STAFact>` özniteliğiyle test yöntemini süsle.
 
 ## <a name="exclude-tests"></a>Testleri hariç tut
 
@@ -144,9 +144,9 @@ Doğrudan derleme sürecinizdeki `<OutDir>` ' i geçersiz kılmayın; derleme ya
 
 Kullanıcıya özgü ayar için, [Visual Studio 'da Live Unit Testing kullanma](live-unit-testing.md#include-and-exclude-test-projects-and-test-methods) makalesindeki "test projelerini ve test yöntemlerini ekleme ve dışlama" bölümüne bakın. Belirli bir düzenleme oturumu için belirli bir test kümesini çalıştırmak veya kendi kişisel tercihlerinizi sürdürmek istediğinizde, testlerin dahil edilmesi veya dışlanması yararlı olur.
 
-Çözüme özgü ayarlar için, <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute?displayProperty=fullName> özniteliğini programlı bir şekilde, yöntemleri, özellikleri, sınıfları veya yapıları Live Unit Testing tarafından işaretlenmiş olarak hariç tutabilir. Ayrıca, projenin tamamını işaretlenmiş olarak hariç tutmak için `<ExcludeFromCodeCoverage>` özelliğini proje dosyanızda `true` olarak ayarlayabilirsiniz. Live Unit Testing, henüz eklenmemiş testleri çalıştırmaya devam eder, ancak kapsamı görselleştirilecektir.
+Çözüme özgü ayarlar için, Live Unit Testing tarafından işaretlenmiş yöntemlerin, özelliklerin, sınıfların veya yapıların hariç tutulması için <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute?displayProperty=fullName> özniteliğini programlı bir şekilde uygulayabilirsiniz. Ayrıca, projenin tamamını işaretlenmiş olarak hariç tutmak için `<ExcludeFromCodeCoverage>` özelliğini proje dosyanızda `true` olarak ayarlayabilirsiniz. Live Unit Testing, henüz eklenmemiş testleri çalıştırmaya devam eder, ancak kapsamı görselleştirilecektir.
 
-Ayrıca, geçerli uygulama etki alanında `Microsoft.CodeAnalysis.LiveUnitTesting.Runtime` ' ın yüklenip yüklenmediğini denetleyebilir ve Testleri neden temel alarak devre dışı bırakabilirsiniz. Örneğin, xUnit ile aşağıdakine benzer bir şey yapabilirsiniz:
+Ayrıca, `Microsoft.CodeAnalysis.LiveUnitTesting.Runtime` geçerli uygulama etki alanında yüklenip yüklenmediğini denetleyebilir ve Testleri neden temel alarak devre dışı bırakabilirsiniz. Örneğin, xUnit ile aşağıdakine benzer bir şey yapabilirsiniz:
 
 ```csharp
 [ExcludeFromCodeCoverage]
@@ -177,11 +177,11 @@ Bu sorun düzeltildi ve Visual Studio 2017 sürüm 15,3 ve sonraki sürümlerde 
 
 Visual Studio 2017 ' nin eski sürümleri için, Live Unit Testing derlemelerin aşağıdaki Win32 PE başlık verilerini ekleyememesi ile sonuçlanabileceğini belirten bilinen bir hata vardır:
 
-- Dosya sürümü (kodda @System.Reflection.AssemblyFileVersionAttribute ile belirtilir).
+- Dosya sürümü (kodda @System.Reflection.AssemblyFileVersionAttribute tarafından belirtilen).
 
-- Win32 simgesi (komut satırında `/win32icon:` ile belirtilir).
+- Win32 simgesi (komut satırında `/win32icon:` tarafından belirtilir).
 
-- Win32 bildirimi (komut satırında `/win32manifest:` ile belirtilir).
+- Win32 bildirimi (komut satırında `/win32manifest:` tarafından belirtilir).
 
 Bu değerleri kullanan testler, canlı birim testi tarafından yürütüldüğünde başarısız olabilir.
 
@@ -199,7 +199,7 @@ Live Unit Testing, kaynak dosyaların değiştiğini algıladığında bir derle
 
 **Neden, çıkış penceresindeki iletilere göre testlerin çalıştırılmasına rağmen Live Unit Testing düzenleyicide hiç simge görmüyorum?**
 
-Live Unit Testing üzerinde çalışan derlemeler herhangi bir nedenle işaretlenmemişse düzenleyicide simge göremeyebilirsiniz. Örneğin, Live Unit Testing `<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>` olarak ayarlanmış projelerle uyumlu değildir. Bu durumda, derleme işleminizin bu ayarı kaldıracak şekilde güncelleştirilmesi veya Live Unit Testing çalışması için `true` olarak değiştirilmesi gerekir. 
+Live Unit Testing üzerinde çalışan derlemeler herhangi bir nedenle işaretlenmemişse düzenleyicide simge göremeyebilirsiniz. Örneğin, Live Unit Testing `<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>` ayarlanmış projelerle uyumlu değildir. Bu durumda, bu ayarı kaldırmak veya Live Unit Testing çalışması için `true` değiştirmek üzere derleme işleminizin güncelleştirilmesi gerekir. 
 
 ## <a name="capture-logs"></a>Günlükleri yakala
 
@@ -207,13 +207,13 @@ Live Unit Testing üzerinde çalışan derlemeler herhangi bir nedenle işaretle
 
 Daha ayrıntılı Günlükler toplamak için birkaç şey yapabilirsiniz:
 
-- **Araçlar** > **seçeneklerine** > **Live Unit Testing** gidin ve günlük seçeneğini **verbose**olarak değiştirin. Ayrıntılı günlük kaydı, **Çıkış** penceresinde daha ayrıntılı günlüklerin gösterilmesine neden olur.
+- **Araçlar**  > **Seçenekler**  > **Live Unit Testing** gidin ve günlük seçeneğini **verbose**olarak değiştirin. Ayrıntılı günlük kaydı, **Çıkış** penceresinde daha ayrıntılı günlüklerin gösterilmesine neden olur.
 
-- @No__t-0 Kullanıcı ortam değişkenini, MSBuild günlüğünü yakalamak için kullanmak istediğiniz dosyanın adı olarak ayarlayın. Live Unit Testing derlemelerden ayrıntılı MSBuild günlük iletileri daha sonra bu dosyadan alınabilir.
+- @No__t_0 Kullanıcı ortam değişkenini, MSBuild günlüğünü yakalamak için kullanmak istediğiniz dosyanın adı olarak ayarlayın. Live Unit Testing derlemelerden ayrıntılı MSBuild günlük iletileri daha sonra bu dosyadan alınabilir.
 
-- Test platformu günlüğünü yakalamak için `LiveUnitTesting_TestPlatformLog` Kullanıcı ortam değişkenini `1` olarak ayarlayın. Live Unit Testing çalıştırmalarının ayrıntılı test platformu günlük iletileri daha sonra `[Solution Root]\.vs\[Solution Name]\log\[VisualStudio Process ID]` ' dan alınabilir.
+- Test platformu günlüğünü yakalamak için `LiveUnitTesting_TestPlatformLog` Kullanıcı ortam değişkenini `1` olarak ayarlayın. Live Unit Testing çalıştırmalarının ayrıntılı test platformu günlük iletileri daha sonra `[Solution Root]\.vs\[Solution Name]\log\[VisualStudio Process ID]` alabilir.
 
-- @No__t-0 adlı bir Kullanıcı düzeyi ortam değişkeni oluşturun ve bunu 1 (veya herhangi bir değere) olarak ayarlayın ve Visual Studio 'Yu yeniden başlatın. Artık Visual Studio 'daki **çıkış testleri** sekmesinde çok fazla günlük görmeniz gerekir.
+- @No__t_0 adlı bir Kullanıcı düzeyi ortam değişkeni oluşturun ve bunu 1 (veya herhangi bir değere) olarak ayarlayın ve Visual Studio 'Yu yeniden başlatın. Artık Visual Studio 'daki **çıkış testleri** sekmesinde çok fazla günlük görmeniz gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

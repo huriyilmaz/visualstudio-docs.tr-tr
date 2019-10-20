@@ -1,5 +1,5 @@
 ---
-title: Bulma ve uzantıları kullanma | Microsoft Docs
+title: Uzantıları bulma ve kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,63 +12,63 @@ helpviewer_keywords:
 - managing extensions visual studio
 ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
 caps.latest.revision: 47
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f4878827ae65a8f42e8225c7daab207a27a0614a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: df6219a66b0f6c85e197b209741706abc7ce3d06
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426382"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655873"
 ---
 # <a name="finding-and-using-visual-studio-extensions"></a>Visual Studio Uzantıları’nı bulma ve kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio uzantıları Visual Studio içinde çalıştırın ve yeni veya geliştirilmiş Visual Studio özellikleri sağlayan kod paketlerdir. Visual Studio uzantıları hakkında daha fazla bilgi bulabilirsiniz: [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+Visual Studio uzantıları, Visual Studio içinde çalışan ve yeni veya geliştirilmiş Visual Studio özellikleri sağlayan kod paketlerdir. Visual Studio uzantıları hakkında daha fazla bilgiyi buradan edinebilirsiniz: [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
- Kullanabileceğiniz **Uzantılar ve güncelleştirmeler** iletişim kutusunda, Web siteleri ve diğer konumlardan Visual Studio uzantılarını ve örneklerini yüklemek ve etkinleştirmek, devre dışı bırakmak, güncelleştirmek veya bunları kaldırmak için. (**Araçları / Uzantılar ve güncelleştirmeler**, veya tür **uzantıları** içinde **hızlı başlatma** pencere). İletişim kutusu, yüklü örnekler ve uzantılar için güncelleştirmeleri de gösterir. Ayrıca, Web sitelerinden uzantıları indirmesi veya diğer geliştiricilerden alın.
+ **Uzantılar ve güncelleştirmeler** iletişim kutusunu, Web sitelerinden ve diğer konumlardan Visual Studio uzantıları ve örnekleri yüklemek ve sonra etkinleştirebilir, devre dışı bırakmak, güncelleştirmek veya kaldırmak için kullanabilirsiniz. (**Araçlar/Uzantılar ve güncelleştirmeler**veya **Hızlı başlatma** penceresinde tür **uzantıları** ). İletişim kutusu ayrıca yüklü örnekler ve uzantılar için güncelleştirmeleri gösterir. Ayrıca, Web sitelerinden uzantıları indirebilir veya diğer geliştiricilerden edinebilirsiniz.
 
 > [!NOTE]
-> Visual Studio 2015'ten başlayarak, Visual Studio Galerisi üzerinde barındırılan uzantıları otomatik olarak güncelleştirilir.  Bu ayarı yoluyla değiştirebilirsiniz **Uzantılar ve güncelleştirmeler** iletişim.  Bölümüne **otomatik uzantı güncelleştirmeleri** altındaki ayrıntılar için.
+> Visual Studio 2015 ' den itibaren, Visual Studio Galerisinde barındırılan uzantılar otomatik olarak güncelleştirilir.  Bu ayarı **Uzantılar ve güncelleştirmeler** iletişim kutusu aracılığıyla değiştirebilirsiniz.  Ayrıntılar için aşağıdaki **Otomatik uzantı güncelleştirmeleri** bölümüne bakın.
 
-## <a name="finding-visual-studio-extensions"></a>Visual Studio uzantıları bulma
- Uzantılardan yükleyebileceğiniz [Visual Studio Market](https://marketplace.visualstudio.com/) veya [örnek Galerisi](https://code.msdn.microsoft.com/vstudio) Microsoft Web sitesinde. Uzantılar; denetimler, örnekler, şablonlar, araçlar veya Visual Studio'ya işlevsellik katan diğer bileşenler olabilir. Visual Studio, VSIX paketi biçimindeki uzantıları destekler; bu proje şablonları içerir, öğe şablonları, **araç kutusu** öğeleri, yönetilen uzantı çerçevesi (MEF) bileşenleri ve VSPackages. Ayrıca indirin ve MSI tabanlı uzantılar yükleyin ancak **Uzantılar ve güncelleştirmeler** iletişim kutusunu etkinleştirin veya devre dışı. Visual Studio Galerisi VSIX hem de MSI uzantıları içerir.
+## <a name="finding-visual-studio-extensions"></a>Visual Studio uzantılarını bulma
+ Uzantıları, Microsoft Web sitesindeki [Visual Studio Market](https://marketplace.visualstudio.com/) veya [örnek Galerisi](https://code.msdn.microsoft.com/vstudio) ' nden yükleyebilirsiniz. Uzantılar; denetimler, örnekler, şablonlar, araçlar veya Visual Studio'ya işlevsellik katan diğer bileşenler olabilir. Visual Studio, VSıX paket biçimindeki uzantıları destekler; bunlar arasında proje şablonları, öğe şablonları, **araç kutusu** öğeleri, yönetilen uzantı ÇERÇEVESI (MEF) bileşenleri ve VSPackages bulunur. MSI tabanlı uzantıları da indirebilir ve yükleyebilirsiniz, ancak **Uzantılar ve güncelleştirmeler** iletişim kutusu bunları etkinleştiremez veya devre dışı bırakabilirler. Visual Studio Galerisi hem VSıX hem de MSI uzantılarını içerir.
 
-## <a name="installing-or-uninstalling-visual-studio-extensions"></a>Visual Studio uzantıları yükleme veya kaldırma
- İçinde **Uzantılar ve güncelleştirmeler**, yüklemek istediğiniz uzantıyı bulun. (Adı veya uzantı adının bir kısmını biliyorsanız, içinde arama yapabilirsiniz **Visual Studio Galerisi'nde Ara** penceresi.) Tıklayın **indirme**, ardından **yükleme**. Uzantıyı yüklemek için Visual Studio'yu yeniden başlatmanız gerekir.
+## <a name="installing-or-uninstalling-visual-studio-extensions"></a>Visual Studio uzantılarını yükleme veya kaldırma
+ **Uzantılar ve güncelleştirmeler**' de, yüklemek istediğiniz uzantıyı bulun. (Uzantının adının adını veya parçasını biliyorsanız, **Visual Studio Galerisi** penceresinde arama yapabilirsiniz.) **İndir**ve **Yükle**' ye tıklayın. Uzantıyı yüklemek için Visual Studio 'Yu yeniden başlatmanız gerekir.
 
- Bağımlılıkları olan bir uzantıyı yüklemeye çalışırsanız, yükleyici bunların yüklenmiş olup olmadığını denetler. Bunlar yüklü değilse **Uzantılar ve güncelleştirmeler** iletişim kutusunda uzantıyı yükleyebilmeniz için önce yüklenmesi gereken bağımlılıklar listelenmiştir.
+ Bağımlılıkları olan bir uzantıyı yüklemeye çalışırsanız, yükleyici bunların yüklenmiş olup olmadığını denetler. Yüklü değilse, **Uzantılar ve güncelleştirmeler** iletişim kutusu, uzantıyı yükleyebilmeniz için yüklenmesi gereken bağımlılıkları listeler.
 
- Bir uzantıyı kullanmayı bırakmak isterseniz devre dışı bırakabilir veya kaldırabilirsiniz. Bir uzantı devre dışı bırakıldığında yüklü kalır, ancak etkin değildir. Yalnızca VSIX uzantılarını devre dışı bırakabilirsiniz; MSI kullanarak yüklenmiş uzantıları sadece kaldırılabilir. Uzantı bulun ve tıklatın **kaldırma** veya **devre dışı**. Devre dışı bırakılmış bir uzantıyı kaldırmak için Visual Studio'yu yeniden başlatmanız gerekir.
+ Bir uzantıyı kullanmayı bırakmak isterseniz devre dışı bırakabilir veya kaldırabilirsiniz. Bir uzantı devre dışı bırakıldığında yüklü kalır, ancak etkin değildir. Yalnızca VSıX uzantılarını devre dışı bırakabilirsiniz; MSI kullanılarak yüklenen uzantılar yalnızca kaldırılabilir. Uzantıyı bulun ve **Kaldır** veya **devre dışı bırak**' a tıklayın. Devre dışı bırakılmış bir uzantıyı kaldırmak için Visual Studio 'Yu yeniden başlatmanız gerekir.
 
 ## <a name="per-user-and-administrative-extensions"></a>Kullanıcı Başına ve Yönetim Uzantıları
- Uzantıların çoğu kullanıcı başına uzantılar ve yüklenmiş **%LocalAppData%\Microsoft\VisualStudio\\< Visual Studio sürümü\>\Extensions\\**  klasör. Bazı uzantılar yönetimsel uzantıları ve yüklenmiş **\<Visual Studio yükleme klasörü > \Common7\IDE\Extensions\\** klasör.
+ Çoğu uzantı Kullanıcı başına uzantılardır ve **%LocalAppData%\microsoft\visualstudio \\ < Visual Studio sürümü \> \Extensions \\** klasörüne yüklenir. Birkaç uzantı yönetim uzantılarıdır ve **\<Visual Studio yükleme klasörü > \Common7\IDE\Extensions \\** klasörüne yüklenir.
 
- Hata veya kötü amaçlı kod içerebilecek uzantıları karşı sisteminizi korumak için yalnızca Visual Studio normal kullanıcı izinleriyle çalıştırıldığında yüklemek için kullanıcı başına uzantılar kısıtlayabilirsiniz. Başka bir deyişle, Visual Studio Yönetici kullanıcı izinleriyle çalıştırdığınızda kullanıcı başına uzantılar devre dışı bırakılır. Bunu yapmak için Git **Uzantılar ve güncelleştirmeler** seçenekler sayfası (**Araçlar / Seçenekler**, **ortam**, **Uzantılar ve güncelleştirmeler**, veya yalnızca tür **uzantısı** içinde **hızlı başlatma** pencere). NET **bağımsız kullanıcı uzantılarının yönetici olarak çalışırken yük** onay kutusunu işaretleyin ve ardından Visual Studio'yu yeniden başlatın.
+ Sisteminizi hatalar veya kötü amaçlı kod içerebilen uzantılara karşı korumak için, Kullanıcı başına uzantıları yalnızca Visual Studio normal Kullanıcı izinleriyle çalıştırıldığında yüklenecek şekilde kısıtlayabilirsiniz. Bu, Visual Studio Yönetici Kullanıcı izinleriyle çalıştırıldığında kullanıcı başına uzantıların devre dışı bırakıldığı anlamına gelir. Bunu yapmak için, **Uzantılar ve güncelleştirmeler** Seçenekler sayfasına gidin (**Araçlar/Seçenekler**, **ortam**, **Uzantılar ve güncelleştirmeler**veya **Hızlı başlatma** penceresinde yalnızca **uzantı** yazın). **Yönetici olarak çalışırken Kullanıcı Uzantıları başına yükle** onay kutusunu temizleyin ve ardından Visual Studio 'yu yeniden başlatın.
 
 ## <a name="automatic-extension-updates"></a>Otomatik uzantı güncelleştirmeleri
- Kullanıcı başına uzantılar, yeni bir sürümü Visual Studio galerisinde kullanılabilir olduğunda otomatik olarak güncelleştirilir.  Uzantının yeni sürümünü algılanır ve arka planda ve sonraki yeniden başlatmada Visual Studio'nun yüklü, uzantının yeni sürümünü çalıştırırsınız.
+ Visual Studio Galerisinde yeni bir sürüm kullanılabilir olduğunda, Kullanıcı başına uzantılar otomatik olarak güncelleştirilir.  Uzantının yeni sürümü algılanır ve arka planda yüklenir ve Visual Studio 'nun bir sonraki yeniden başlatıldığında, uzantının yeni sürümü çalışıyor olur.
 
- Yalnızca kullanıcı başına uzantılar otomatik olarak güncelleştirilebilir.  Tüm kullanıcılar güncelleştirilmez ve aracılığıyla yeni sürümleri yine de el ile yüklemek için yüklenen yönetim uzantıları **Uzantılar ve güncelleştirmeler** iletişim **güncelleştirmeleri** düğümü. Hangi uzantıların uzantının Ayrıntılar bölmesinde otomatik olarak güncelleştirilecek gördüğünüz **Uzantılar ve güncelleştirmeler** iletişim.
+ Yalnızca Kullanıcı başına uzantılar otomatik olarak güncelleştirilir.  Tüm kullanıcılar için yüklenen yönetim uzantıları güncelleştirilmeyecek ve **Uzantılar ve güncelleştirmeler** Iletişim kutusu **güncelleştirmeleri** düğümü aracılığıyla yine de yeni sürümleri el ile yükleyeceksiniz. **Uzantılar ve güncelleştirmeler** iletişim kutusunun uzantısının Ayrıntılar bölmesinde hangi uzantıların otomatik olarak güncelleştirileceğini görebilirsiniz.
 
- Otomatik Güncelleştirmeler devre dışı bırakmak istiyorsanız, tüm uzantıları veya yalnızca belirli uzantılara özelliği devre dışı bırakabilirsiniz.
+ Otomatik güncelleştirmeleri devre dışı bırakmak istiyorsanız, tüm uzantılara veya yalnızca belirli uzantılara yönelik özelliği devre dışı bırakabilirsiniz.
 
-- Tüm uzantılar için Otomatik Güncelleştirmeler devre dışı bırakmak için **Uzantılar ve güncelleştirmeler ayarlarınızı değiştirin** bağlantısını **Uzantılar ve güncelleştirmeler** iletişim kaldırın **otomatik olarak güncelleştir Uzantıları**.
+- Tüm uzantılar için otomatik güncelleştirmeleri devre dışı bırakmak için **Uzantılar ve güncelleştirmeler** Iletişim kutusundaki **uzantılarınızı ve güncelleştirme ayarlarını değiştirin** bağlantısına tıklayın ve **uzantıları otomatik olarak güncelleştir**' in işaretini kaldırın.
 
-- Belirli bir uzantı için Otomatik Güncelleştirmeler devre dışı bırakmak için işareti kaldırın **bu uzantıyı otomatik olarak güncelleştir** seçeneği uzantının ayrıntıları bölmesinde sağ alt tarafında **Uzantılar ve güncelleştirmeler** iletişim.
+- Belirli bir uzantının otomatik güncelleştirmelerini devre dışı bırakmak için **Uzantılar ve güncelleştirmeler** iletişim kutusunun sağ tarafındaki uzantının Ayrıntılar bölmesinde **Bu uzantıyı otomatik olarak güncelleştir** seçeneğinin işaretini kaldırın.
 
 > [!NOTE]
-> Visual Studio 2015 güncelleştirme 2'de başlayarak, belirtebilirsiniz (içinde **Araçlar / Seçenekler / ortam / Uzantılar ve güncelleştirmeler**) kullanıcı başına uzantılar, tüm kullanıcı uzantıları veya hem de (varsayılan ayar) için Otomatik Güncelleştirmeler isteyip istemediğinizi.
+> Visual Studio 2015 güncelleştirme 2 ' den başlayarak, Kullanıcı başına uzantılar, tüm Kullanıcı Uzantıları veya her ikisi için de otomatik güncelleştirme isteyip istemediğinizi ( **Araçlar/Seçenekler/ortam/Uzantılar ve güncelleştirmeler**içinde) belirtebilirsiniz (varsayılan ayar).
 
 ## <a name="sample-master-copies-and-working-copies"></a>Örnek ana kopyalar ve çalışma kopyaları
  Çevrimiçi bir örneği yüklediğinizde, çözüm iki konumda depolanır:
 
-- Belirtilen konumda bir çalışma kopyası depolanır **yeni proje** iletişim kutusu.
+- Çalışma kopyası, **Yeni proje** iletişim kutusunda belirttiğiniz konumda depolanır.
 
 - Ayrı bir ana kopya bilgisayarınızda depolanır.
 
-  Kullanabileceğiniz **Uzantılar ve güncelleştirmeler** iletişim kutusu örneklerle ilgili şu görevleri gerçekleştirebilirsiniz:
+  Bu örneklerle ilgili görevleri gerçekleştirmek için **Uzantılar ve güncelleştirmeler** iletişim kutusunu kullanabilirsiniz:
 
 - Yüklediğiniz örneklerin ana kopyalarını listeleyin.
 
@@ -76,17 +76,17 @@ Visual Studio uzantıları Visual Studio içinde çalıştırın ve yeni veya ge
 
 - Örnek Paketleri (bir teknoloji veya özellik ile ilgili örnek koleksiyonları) yükleyin.
 
-- Tek tek çevrimiçi örnekleri yükleyin. (Ayrıca bunu yapabilirsiniz **yeni proje** iletişim kutusu.)
+- Tek tek çevrimiçi örnekleri yükleyin. (Bunu **Yeni proje** iletişim kutusunda da yapabilirsiniz.)
 
 - Yüklü örnekler için kaynak kodu değişiklikleri yayımlandığında güncelleştirme bildirimlerini görüntüleyin.
 
-- Bir güncelleştirme bildirimi olduğunda yüklü bir örneğin ana kopyasını güncelleştirin.
+- Bir güncelleştirme bildirimi olduğunda, yüklü bir örneğin ana kopyasını güncelleştirin.
 
 ## <a name="installing-without-using-the-extensions-and-updates-dialog-box"></a>Uzantılar ve Güncelleştirmeler İletişim Kutusunu Kullanmadan Yükleme
- .vsix dosyalarında paketlenmiş uzantılar Visual Studio Galerisi dışındaki konumlarda bulunabilir. **Uzantılar ve güncelleştirmeler** iletişim kutusunda, bu dosyaları silemese ancak dosyasına çift veya dosyasını seçme ve ENTER tuşuna basmak .vsix dosyasını yükleyebilirsiniz. Bundan sonra yalnızca yönergeleri izleyin. Uzantı yüklendiğinde, kullanabileceğiniz **Uzantılar ve güncelleştirmeler** etkinleştirmek, devre dışı bırakmak veya kaldırmak için iletişim kutusu.
+ .vsix dosyalarında paketlenmiş uzantılar Visual Studio Galerisi dışındaki konumlarda bulunabilir. **Uzantılar ve güncelleştirmeler** iletişim kutusu bu dosyaları algılayamaz, ancak dosyayı çift tıklayarak veya dosyayı seçip ENTER tuşuna basarak bir. vsix dosyası yükleyebilirsiniz. Bundan sonra yönergeleri izlemeniz yeterlidir. Uzantı yüklendiğinde, uzantıyı etkinleştirmek, devre dışı bırakmak veya kaldırmak için **Uzantılar ve güncelleştirmeler** iletişim kutusunu kullanabilirsiniz.
 
-## <a name="extension-types-not-supported-by-the-extensions-and-updates-dialog-box"></a>Uzantılar tarafından desteklenmeyen uzantı türleri ve güncelleştirmeler iletişim kutusu
- Visual Studio Microsoft Installer (MSI) tarafından yüklenen Uzantıları desteği devam eder ancak ile **Uzantılar ve güncelleştirmeler** yapmadan iletişim kutusu.
+## <a name="extension-types-not-supported-by-the-extensions-and-updates-dialog-box"></a>Uzantılar ve güncelleştirmeler Iletişim kutusu tarafından desteklenmeyen uzantı türleri
+ Visual Studio, Microsoft yükleyicisi (MSI) tarafından yüklenen, ancak **Uzantılar ve güncelleştirmeler** iletişim kutusunda değişiklik yapılmadan yüklenmeyen uzantıları desteklemeye devam etmektedir.
 
 > [!TIP]
-> MSI tabanlı uzantı bir extension.vsixmanifest dosyası içeriyorsa, uzantı görünür **Uzantılar ve güncelleştirmeler** iletişim kutusu.
+> MSI tabanlı bir uzantı. valtmanifest dosyası uzantısı içeriyorsa, uzantı **Uzantılar ve güncelleştirmeler** iletişim kutusunda görünür.

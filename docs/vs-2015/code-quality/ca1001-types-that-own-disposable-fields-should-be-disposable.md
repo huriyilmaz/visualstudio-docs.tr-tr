@@ -1,5 +1,5 @@
 ---
-title: 'CA1001: Atılabilen alanlar atılabilir türler | Microsoft Docs'
+title: 'CA1001: atılabilir alanlarının sahibi olan türler atılabilir olmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,49 +12,49 @@ helpviewer_keywords:
 - TypesThatOwnDisposableFieldsShouldBeDisposable
 ms.assetid: c85c126c-2b16-4505-940a-b5ddf873fb22
 caps.latest.revision: 23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 98be3bafb582e4d48560108625be911e53acf664
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 42d21eb0bf32b3abb0eb26d3723123bf085914ed
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62562321"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646323"
 ---
-# <a name="ca1001-types-that-own-disposable-fields-should-be-disposable"></a>CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır
+# <a name="ca1001-types-that-own-disposable-fields-should-be-disposable"></a>CA1001: Atılabilir alanlara sahip olan türler atılabilir olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||  
-|-|-|  
-|TypeName|TypesThatOwnDisposableFieldsShouldBeDisposable|  
-|CheckId|CA1001|  
-|Kategori|Microsoft.Design|  
-|Yeni Değişiklik|Bölünemez - türü derlemenin dışında görünür değilse.<br /><br /> Derlemenin dışında görünür bir tür ise - kesiliyor.|  
-  
-## <a name="cause"></a>Sebep  
- Bir sınıfı bildirir ve bir örnek alan uygulayan bir <xref:System.IDisposable?displayProperty=fullName> türü ve sınıf uygulamıyor <xref:System.IDisposable>.  
-  
-## <a name="rule-description"></a>Kural Tanımı  
- Arabirimini uygulayan bir sınıf <xref:System.IDisposable> sahip olduğu yönetilmeyen kaynaklarını silmek için arabirim. Bir örnek alan bir <xref:System.IDisposable> türü, alan bir yönetilmeyen kaynağa sahip olduğunu gösterir. Bildiren bir sınıf bir <xref:System.IDisposable> alan dolaylı olarak bir yönetilmeyen kaynağa sahip ve uygulamalıdır <xref:System.IDisposable> arabirimi. Sınıf doğrudan herhangi bir yönetilmeyen kaynağa sahip değilse, bir sonlandırıcı uygulamamalıdır.  
-  
-## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?  
- Bu kural ihlalini düzeltmek için uygulama <xref:System.IDisposable> ve <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> yöntem çağrısının <xref:System.IDisposable.Dispose%2A> alan yöntemi.  
-  
-## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında  
- Bu kuraldan uyarıyı bastırmayın.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kuralını ihlal eden bir sınıf ve kural uygulayarak karşılayan bir sınıfı gösterir <xref:System.IDisposable>. Sınıf doğrudan herhangi bir yönetilmeyen kaynağa sahibi değildir çünkü sınıfı bir sonlandırıcı uygulamıyor.  
-  
+|||
+|-|-|
+|TypeName|TypesThatOwnDisposableFieldsShouldBeDisposable|
+|CheckId|CA1001|
+|Kategori|Microsoft. Design|
+|Yeni Değişiklik|Not-tür, derlemenin dışında görünmüyorsa bölünmez.<br /><br /> Parçalama-tür derleme dışında görünüyorsa.|
+
+## <a name="cause"></a>Sebep
+ Bir sınıf, <xref:System.IDisposable?displayProperty=fullName> türü olan bir örnek alanı bildirir ve uygular ve sınıf <xref:System.IDisposable> uygulamaz.
+
+## <a name="rule-description"></a>Kural Tanımı
+ Bir sınıf, sahip olduğu yönetilmeyen kaynakların atılırken <xref:System.IDisposable> arabirimini uygular. @No__t_0 türü olan bir örnek alan, alanın yönetilmeyen bir kaynağa sahip olduğunu gösterir. Bir <xref:System.IDisposable> alanı bildiren bir sınıf, yönetilmeyen bir kaynağa dolaylı olarak sahiptir ve <xref:System.IDisposable> arabirimini uygulamalıdır. Sınıf, hiçbir yönetilmeyen kaynağa doğrudan sahip değilse, bir Sonlandırıcı uygulamamalıdır.
+
+## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
+ Bu kural ihlalini onarmak için <xref:System.IDisposable> uygulayın ve <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> yönteminden alanın <xref:System.IDisposable.Dispose%2A> yöntemini çağırın.
+
+## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
+ Bu kuraldan uyarıyı bastırmayın.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, kuralı ihlal eden bir sınıfı ve <xref:System.IDisposable> uygulayarak kuralı karşılayan bir sınıfı gösterir. Sınıf, hiçbir yönetilmeyen kaynağa doğrudan sahip olmadığından, sınıf bir Sonlandırıcı uygulamaz.
+
  [!code-csharp[FxCop.Design.DisposableFields#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.DisposableFields/cs/FxCop.Design.DisposableFields.cs#1)]
- [!code-vb[FxCop.Design.DisposableFields#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.DisposableFields/vb/FxCop.Design.DisposableFields.vb#1)]  
-  
-## <a name="related-rules"></a>İlgili kuralları  
- [CA2213: Atılabilen alanlar atılmalıdır](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
-  
- [CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
-  
- [CA2215: Atma yöntemleri taban sınıf atmayı çağırmalıdır](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)  
-  
- [CA1049: Yerel kaynaklara sahip türler atılabilir olmalıdır](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
+ [!code-vb[FxCop.Design.DisposableFields#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.DisposableFields/vb/FxCop.Design.DisposableFields.vb#1)]
+
+## <a name="related-rules"></a>İlgili kurallar
+ [CA2213: Atılabilen alanlar atılmalıdır](../code-quality/ca2213-disposable-fields-should-be-disposed.md)
+
+ [CA2216: Atılabilir türler sonlandırıcıyı bildirmelidir](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)
+
+ [CA2215: Atma yöntemleri taban sınıf atmayı çağırmalıdır](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)
+
+ [CA1049: Yerel kaynaklara sahip olan türler atılabilir olmalıdır](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)

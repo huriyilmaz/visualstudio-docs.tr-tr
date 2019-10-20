@@ -1,138 +1,138 @@
 ---
-title: Dinamik sembolik yürütme | Microsoft Intellitest Geliştirici Test aracı
+title: Dinamik sembolik yürütme | Microsoft IntelliTest geliştirici test aracı
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Dynamic symbolic execution
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: fe0215b3474e72316d848c89f2284ab4e39f213b
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+author: jillre
+ms.openlocfilehash: 26befe6612c874c2565e44459cc90fe980296137
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746300"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653181"
 ---
 # <a name="input-generation-using-dynamic-symbolic-execution"></a>Dinamik sembolik yürütme kullanarak giriş oluşturma
 
-Intellitest oluşturur için girişler [parametreli birim testleri](test-generation.md#parameterized-unit-testing) programı dal koşulları analiz tarafından. Test girdileri olup programın yeni dal oluşturma davranışları tetikleyebilir göre seçilir. Analiz artımlı bir işlemdir. Bir koşul iyileştirir `q: I -> {true, false}` giriş parametrelerini resmi test `I`. `q` Intellitest zaten gözlemlenen davranışların kümesini temsil eder. Başlangıçta `q := false`, bu yana hiçbir şey henüz gözlenmiştir.
+IntelliTest, programdaki dal koşullarını çözümleyerek [parametreli birim testleri](test-generation.md#parameterized-unit-testing) için girişler oluşturur. Test girdileri, programın yeni dallanma davranışlarını tetikleyebilecekleri ve bunlara göre seçilir. Analiz, artımlı bir işlemdir. Biçimsel test giriş parametreleri `I` üzerinde `q: I -> {true, false}` bir koşulu iyileştirir. `q` IntelliTest 'in zaten gözlemlediği davranışlar kümesini temsil eder. Başlangıçta, hiçbir şey gözlemlenmemiş olduğundan `q := false`.
 
-Döngünün adımlar şunlardır:
+Döngünün adımları şunlardır:
 
-1. Intellitest belirler girişleri `i` şekilde `q(i)=false` kullanarak bir [kısıtlama Çözücü](#constraint-solver). Yapı, giriş olarak `i` önce görülmeyen bir yürütme yolu götürür. Başlangıçta, yani `i` yürütme yol henüz saptanmamış olduğundan herhangi bir girişi olabilir.
+1. IntelliTest, bir [kısıtlama çözücü](#constraint-solver)kullanarak `q(i)=false` `i` girdileri belirler. Oluşturma ile, giriş `i` daha önce görülmeyen bir yürütme yolu alır. Başlangıçta bu, `i` herhangi bir giriş olabileceği anlamına gelir, çünkü henüz bir yürütme yolu bulunamamıştır.
 
-1. Intellitest, seçilen giriş ile test yürütür `i`, test ve test edilen programın yürütülmesini izler.
+1. IntelliTest, seçili giriş `i` ile testi yürütür ve testin ve test altındaki programın yürütülmesini izler.
 
-1. Yürütme sırasında program, program tarafından koşullu dalları hakkında belirlenir belirli bir yol alır. Yürütme belirlemek tüm koşullar kümesini adlı *yol koşulu*koşul olarak yazılmış `p: I -> {true, false}` biçimsel giriş parametrelerini üzerinden. Intellitest bir gösterimiyse, bu koşul hesaplar.
+1. Yürütme sırasında program, programın tüm koşullu dallarıyla belirlenen belirli bir yolu alır. Yürütmeyi tespit eden tüm koşulların kümesine, biçimsel giriş parametreleri üzerinde `p: I -> {true, false}` koşul olarak yazılmış *yol koşulu*denir. IntelliTest bu koşulun gösterimini hesaplar.
 
-1. Intellitest kümeleri `q := (q or p)`. Diğer bir deyişle, bu yolun gösterdiği yakaladı olgu kayıtları `p`.
+1. IntelliTest kümeleri `q := (q or p)`. Diğer bir deyişle, `p` tarafından temsil edilen yolu gördüğü olguyu kaydeder.
 
-1. 1. adıma gidin.
+1. 1\. adıma gidin.
 
-Intellitest'ın [kısıtlama Çözücü](#constraint-solver) .NET programlarında görünebilir tüm türlerin değerlerle giderebilirsiniz:
+IntelliTest [kısıtlama çözücü](#constraint-solver) , .net programlarında görünebilen tüm türlerin değerleriyle uğraşmak için:
 
-* [Tamsayıları](#integers-and-floats) ve [kaydırmalar](#integers-and-floats)
+* [Tamsayılar](#integers-and-floats) ve [float](#integers-and-floats)
 * [Nesneler](#objects)
 * [Yapılar](#structs)
-* [Diziler](#arrays-and-strings) ve [dizeleri](#arrays-and-strings)
+* [Diziler](#arrays-and-strings) ve [dizeler](#arrays-and-strings)
 
-Intellitest belirtilen varsayımlar ihlal girişleri filtreler.
+IntelliTest, belirtilen varsayımları ihlal eden girdileri filtreler.
 
-Hemen girişleri yanı sıra (bağımsız değişkenleri [parametreli birim testleri](test-generation.md#parameterized-unit-testing)), bir test daha fazla giriş değerlerini çizebilirsiniz [PexChoose](static-helper-classes.md#pexchoose) statik sınıf. Seçenekler de davranışını belirlemek [mocks parametreli](#parameterized-mocks).
+Anlık girdilerin yanı sıra, bir test [](test-generation.md#parameterized-unit-testing), [PexChoose](static-helper-classes.md#pexchoose) statik sınıfından daha fazla giriş değeri çizebilir. Seçimler aynı zamanda [parametreli](#parameterized-mocks)davranışlarının davranışını de tespit.
 
-## <a name="constraint-solver"></a>Kısıtlama Çözücü
+## <a name="constraint-solver"></a>Kısıtlama çözücü
 
-Intellitest, test ve test altındaki program ilgili giriş değerlerini belirlemek için bir kısıtlama Çözücü kullanır.
+IntelliTest, bir testin ve test edilen programın ilgili giriş değerlerini belirlemede bir kısıtlama çözücü kullanır.
 
-Intellitest kullanan [Z3](https://github.com/Z3Prover/z3/wiki) kısıtlama Çözücü.
+IntelliTest, [Z3](https://github.com/Z3Prover/z3/wiki) kısıtlaması çözücü kullanır.
 
 ## <a name="dynamic-code-coverage"></a>Dinamik kod kapsamı
 
-Bir yan etkisi olarak izleme çalışma zamanının, Intellitest dinamik kod kapsamı verilerini toplar.
-Bu adlandırılır *dinamik* Intellitest yürütülen kod hakkında bildiğinden, başka bir kapsamı araç normalde yaptığınız gibi bu nedenle, mutlak değerler kapsam için aynı şekilde veremez.
+Çalışma zamanı izlemenin yan etkisi olarak, IntelliTest dinamik kod kapsamı verilerini toplar.
+Bu *dinamik* olarak adlandırılır çünkü IntelliTest yalnızca yürütülen kodu bilir ve bu nedenle, diğer kapsam araçlarının genellikle yaptığı şekilde kapsama için mutlak değerler veremeyiz.
 
-Intellitest 5/10 temel taşı olarak dinamik kapsam bildirdiğinde, örneğin, on dışında beş blokları, burada ele alındığını yani analiz tarafından şimdiye ulaştınız tüm yöntemleri bloklarında toplam sayısı (mevcut olan tüm yöntemleri aksine bir test edilen erleme) 10'dur.
-Daha sonra analiz, daha fazla erişilebilir yöntemleri olarak bulunan, hem pay (Bu örnekte 5) ve (10) paydası artırabilir.
+Örneğin, IntelliTest dinamik kapsamı 5/10 temel bloklar olarak raporladığında, bu, analiz tarafından şimdiye kadar ulaşılan tüm yöntemlerin toplam blok sayısının (örneğin, bir içinde var olan tüm yöntemlerin aksine) ele alınmıştır. test edilen erleme) on ' dur.
+Daha sonra analizde daha erişilebilir yöntemler bulunduğundan, her ikisi de pay (Bu örnekteki 5) ve payda (10) artabilir.
 
-## <a name="integers-and-floats"></a>Tamsayıları ve float
+## <a name="integers-and-floats"></a>Tamsayılar ve float
 
-Intellitest'ın [kısıtlama Çözücü](#constraint-solver) test giriş değerleri ilkel türleri gibi belirler **bayt**, **int**, **float**ve diğerleri test ve test altındaki program için farklı yürütme yollarını tetiklemek için sırası.
+IntelliTest [kısıtlama çözücü](#constraint-solver) , test ve test edilen program için farklı yürütme yolları tetiklemek üzere **byte**, **Int**, **float**ve diğer basit türlerin test giriş değerlerini belirler.
 
 ## <a name="objects"></a>Nesneler
 
-Intellitest olabilir ya da [mevcut .NET sınıfların örneklerini oluşturmak](#existing-classes), veya Intellitest'e otomatik olarak kullanabileceğiniz [sahte nesneler oluşturma](#parameterized-mocks) , belirli bir arabirim uygulamak ve farklı şekilde davranan kullanımınıza bağlı olarak.
+IntelliTest, [var olan .net sınıflarının örneklerini oluşturabilir](#existing-classes)veya belirli bir arabirimi uygulayan ve kullanıma bağlı olarak farklı şekillerde davranan, otomatik olarak bir [model oluşturmak](#parameterized-mocks) için IntelliTest ' i kullanabilirsiniz.
 
 <a name="existing-classes"></a>
-## <a name="instantiate-existing-classes"></a>Varolan bir sınıf örneği
+## <a name="instantiate-existing-classes"></a>Varolan sınıfların örneğini oluşturma
 
 **Sorun nedir?**
 
-Intellitest, test ve test altındaki program çalıştığında yürütülen yönergeleri izler. Özellikle, tüm alanlarına erişim izler. Ardından kullanan bir [kısıtlama Çözücü](#constraint-solver) test ve program test altındaki diğer ilginç bir şekilde davranır, nesneleri ve alan değerlerini de dahil olmak üzere yeni test girdileri belirlemek için.
+IntelliTest, bir testi ve test altındaki programı çalıştırdığında yürütülen yönergeleri izler. Özellikle, tüm alanlara erişimi izler. Daha sonra nesneler ve alan değerleri dahil olmak üzere yeni test girişlerini belirlemek için bir [kısıtlama çözücü](#constraint-solver) kullanır, bu nedenle test ve test altındaki program diğer ilginç yollarla davranır.
 
-Bu alan değerlerine ayarlayın ve belirli bir türden nesneler oluşturmak için Intellitest gerektiğini anlamına gelir. Sınıf ise [görünür](#visibility) ve bir [görünür](#visibility) varsayılan oluşturucu, Intellitest sınıfının bir örneğini oluşturabilirsiniz.
-Sınıfın tüm alanları [görünür](#visibility), Intellitest alanları otomatik olarak ayarlanır.
+Bu, IntelliTest 'in belirli türlerde nesneler oluşturması ve alan değerlerini ayarlaması gerektiği anlamına gelir. Sınıf [görünür](#visibility) durumdaysa ve [görünür](#visibility) bir varsayılan oluşturucuya sahipse, IntelliTest sınıfın bir örneğini oluşturabilir.
+Sınıfın tüm alanları [görünür](#visibility)durumdaysa, IntelliTest alanları otomatik olarak ayarlayabilir.
 
-Tür görünür değil veya alanları olmayan [görünür](#visibility), Intellitest nesneleri oluşturmak ve bunları düzeyde kod kapsamını elde etmek için ilgi çekici durumlara getirmek için Yardım gerekiyor. Intellitest oluşturma ve isteğe bağlı şekillerde örnekleri başlatma için yansıma kullanabilirsiniz, ancak nesne hiçbir zaman normal program yürütme sırasında oluşabilecek bir duruma getirin çünkü bu genellikle tercih değildir. Bunun yerine, Intellitest kullanıcıdan ipuçları kullanır.
+Tür görünür değilse veya alanlar [görünür](#visibility)değilse, IntelliTest, nesne oluşturmaya ve bunları en fazla kod kapsamı elde etmek için ilginç durumlara getirmeye yardımcı olur. IntelliTest, örnekleri rastgele şekilde oluşturmak ve başlatmak için yansıma kullanabilir, ancak nesneyi normal program yürütmesi sırasında hiçbir zaman gerçekleşmeyecek bir duruma getirebileceğinden bu genellikle istenmez. Bunun yerine, IntelliTest kullanıcının ipuçlarını kullanır.
 
 ## <a name="visibility"></a>Görünürlük
 
-.NET ayrıntılı görünürlük modeli vardır: türleri, yöntemleri, alanları ve diğer üyeleri olabilir **özel**, **genel**, **iç**ve daha fazlası.
+.NET, ayrıntılı görünürlük modeline sahiptir: türler, Yöntemler, alanlar ve diğer Üyeler **özel**, **genel**, **dahili**ve daha birçok iş olabilir.
 
-Intellitest testleri oluşturduğunda, üretilen testler bağlamında .NET görünürlük kuralları ile ilgili yasal (örneğin, Oluşturucular, yöntemler, arama ve alanlarını ayarlama) yalnızca eylemleri gerçekleştirmek çalışacaktır.
+IntelliTest testleri oluşturduğunda, oluşturulan testlerin bağlamı içinden .NET görünürlük kurallarına göre geçerli olan yalnızca eylemleri (oluşturucular, Yöntemler ve ayar alanları gibi) gerçekleştirmeye çalışır.
 
 Kurallar aşağıdaki gibidir:
 
 * **İç üyelerin görünürlüğü**
-  * Intellitest, üretilen testler kapsayan görünür iç üyelerine erişimi olduğunu varsayar [PexClass](attribute-glossary.md#pexclass).
-  .NET sahip **Internalsvisibletoattribute** başka derlemeler iç üyelerin görünürlüğü genişletmek için.
+  * IntelliTest, üretilen testlerin kapsayan [PexClass](attribute-glossary.md#pexclass)tarafından görülebilen iç üyelere erişebileceğini varsayar.
+  .NET, iç üyelerin görünürlüğünü diğer derlemelere genişletmek için **InternalsVisibleToAttribute** sahiptir.
 
-* **Özel görünürlüğünü ve ailesi (korumalı, C#) üyeleri [PexClass](attribute-glossary.md#pexclass)**
-  * Intellitest her zaman yerleştirir testlerin doğrudan [PexClass](attribute-glossary.md#pexclass) veya bir alt sınıfı. Bu nedenle, tüm görünür aile üyelerine kullanabilir Intellitest varsayılır (**korumalı** C#).
-  * Doğrudan testlerin yerleştirdiyseniz [PexClass](attribute-glossary.md#pexclass) (genellikle kısmi sınıflar kullanarak), Intellitest tüm özel üyeleri de kullanabilirsiniz. varsayar [PexClass](attribute-glossary.md#pexclass).
+* **[PexClass](attribute-glossary.md#pexclass) 'ın özel ve Aile ( C#üzerinde korunan) üyelerinin görünürlüğü**
+  * IntelliTest, oluşturulan testleri her zaman doğrudan [PexClass](attribute-glossary.md#pexclass) içinde veya bir alt sınıfa koyar. Bu nedenle, IntelliTest, tüm görünür aile üyelerini (üzerinde C#**korunan** ) kullanabilir olduğunu varsayar.
+  * Oluşturulan testler doğrudan [PexClass](attribute-glossary.md#pexclass) 'a (genellikle kısmi sınıflar kullanılarak) yerleştirilmişse, IntelliTest, [PexClass](attribute-glossary.md#pexclass)' ın tüm özel üyelerini de kullanabilir olduğunu varsayar.
 
-* **Genel üye görünürlüğü**
-  * Intellitest varsayar bağlamında görünen dışarı aktarılan tüm üyelere kullanabilir [PexClass](attribute-glossary.md#pexclass).
+* **Ortak üyelerin görünürlüğü**
+  * IntelliTest, tüm aktarılmış üyeleri [PexClass](attribute-glossary.md#pexclass)bağlamında görünür olabileceğini varsayar.
 
-## <a name="parameterized-mocks"></a>Parametreli mocks
+## <a name="parameterized-mocks"></a>Parametreli hareketler
 
-Test bir arabirim türünün bir parametresi olan bir yöntemi nasıl? Korumalı olmayan bir sınıfın veya? Intellitest, bu yöntem çağrıldığında, daha sonra hangi uygulamaları kullanılacak bilmez. Ve belki de hiç bile gerçek bir uygulama kullanılabilir test zaman.
+Arabirim türünde parametresi olan bir yöntemi test etme. Veya korumalı olmayan bir sınıfa mi? IntelliTest, bu yöntem çağrıldığında daha sonra hangi uygulamaların kullanılacağını bilmez. Ve belki de test zamanında gerçek bir uygulama kullanılabilir değildir.
 
-Geleneksel yanıt kullanmaktır *sahte nesneler* açık davranış.
+Geleneksel yanıt, *sahte nesneleri* açık davranışla kullanmaktır.
 
-Sahte bir nesne bir arabirimi uygulayan (veya korumalı olmayan bir sınıfın uzantısı). Gerçek bir uygulama, ancak yalnızca sahte nesnesini kullanarak testlerin yürütmesini sağlayan kısayol temsil etmiyor. Davranışını kullanıldığı her test çalışmasının bir parçası olarak el ile tanımlanır. Sahte nesneler ve beklenen davranışları tanımlamanızı kolaylaştıran birçok araç vardır, ancak bu davranış yine de el ile tanımlanmalıdır.
+Bir sahte nesne bir arabirim uygular (veya korumalı olmayan bir sınıfı genişletir). Gerçek bir uygulamayı temsil etmez, ancak yalnızca sahte nesne kullanarak testlerin yürütülmesine izin veren bir kısayoldur. Davranışı, kullanıldığı her test çalışmasının bir parçası olarak el ile tanımlanır. Sahte nesneler ve bunların beklenen davranışlarını tanımlamanızı kolaylaştıran birçok araç mevcuttur, ancak bu davranışın yine de el ile tanımlanması gerekir.
 
-Sabit kodlanmış sahte nesnelerindeki değerler yerine Intellitest değerleri oluşturabilirsiniz. Bağlayabileceğinizi gibi [parametreli birim testi](test-generation.md#parameterized-unit-testing), Intellitest parametreli mocks de sağlar.
+Sahte nesnelerde sabit kodlu değerler yerine, IntelliTest değerleri oluşturabilir. Yalnızca [parametreli birim testi](test-generation.md#parameterized-unit-testing)sağladığından, IntelliTest de parametreli bir şekilde izin vermez.
 
-Parametreli mocks iki farklı yürütme modu vardır:
+Parametreli modlar iki farklı yürütme moduna sahiptir:
 
-* **seçme**: Kodu Keşfetme, parametreli mocks ek test giriş kaynağı olan ve ilgi çekici değerleri seçmek Intellitest çalışır
-* **yeniden yürütme**: daha önce oluşturulan bir test çalıştırırken, parametreli mocks saptamalar davranış (diğer bir deyişle, önceden tanımlı davranış) gibi davranır.
+* **seçme**: kodu araştırırken, parametreleştirilen bir ek test girişi kaynağıdır ve IntelliTest, ilginç değerler seçmeye çalışır
+* yeniden **yürütme**: daha önce oluşturulmuş bir test yürütürken parametreli bir test, davranış (diğer bir deyişle, önceden tanımlanmış davranış) ile saplamalar gibi davranır.
 
-Kullanım [PexChoose](static-helper-classes.md#pexchoose) parametreli mocks değerlerini almak için.
+Parametreli bir değer elde etmek için [PexChoose öğesini](static-helper-classes.md#pexchoose) kullanın.
 
 ## <a name="structs"></a>Yapılar
 
-Intellitest hakkında akıl **yapı** ilgilenen ile olduğu gibi değerler benzer [nesneleri](#objects).
+IntelliTest 'in **Yapı** değerleri hakkında yöntemi, [nesnelerle](#objects)ilgilenen yönteme benzerdir.
 
 ## <a name="arrays-and-strings"></a>Diziler ve dizeler
 
-Intellitest, test ve test altındaki program çalışırken yürütülen yönergeleri izler. Özellikle, ne zaman program bir dize veya bir dizi (alt sınırı ve çok boyutlu bir dizi uzunluğu) uzunluğuna bağlıdır gözlemler.
-Program bir dize veya dizi listesinin farklı öğelerini nasıl kullanır uyan. Ardından kullanan bir [kısıtlama Çözücü](#constraint-solver) hangi uzunlukları ve öğe değerlerini test ve program test ilginç bir şekilde davranmasına yol açabileceğini saptayabilirsiniz.
+IntelliTest, bir testi ve test altındaki programı çalıştırdığı için yürütülen yönergeleri izler. Özellikle, program bir dizenin veya dizinin uzunluğuna (ve çok boyutlu bir dizinin alt sınırlarına ve uzunluklarına) bağlı olduğunda çalışır.
+Ayrıca programın bir dizenin veya dizinin farklı öğelerini nasıl kullandığını da gözlemleyen. Ardından bir [kısıtlama çözücü](#constraint-solver) kullanarak hangi uzunluklara ve öğe değerlerinin teste ve test altındaki programa ilginç yollarla davranmasına neden olabileceğini tespit edebilir.
 
-Intellitest ilginç program davranışları tetiklemek için gereken dizeler ve dizi boyutu en aza indirmek çalışır.
+IntelliTest, ilginç program davranışlarını tetiklemek için gereken dizilerin ve dizelerin boyutunu en aza indirmeye çalışır.
 
 <a name="additional-inputs"></a>
-## <a name="obtain-additional-inputs"></a>Ek girişler alın
+## <a name="obtain-additional-inputs"></a>Ek girişler alma
 
-[PexChoose](static-helper-classes.md#pexchoose) statik sınıf testine ek girişler elde etmek için kullanılabilir ve uygulamak için kullanılan [mocks parametreli](#parameterized-mocks).
+[PexChoose](static-helper-classes.md#pexchoose) statik sınıfı, bir teste ek girişler elde etmek için kullanılabilir ve [parametreli modülleri](#parameterized-mocks)uygulamak için kullanılabilir.
 
-## <a name="got-feedback"></a>Geri bildirim var mı?
+## <a name="got-feedback"></a>Geri bildirim alındı mı?
 
-Fikirlerinizi gönderin ve özellik istekleri [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.
 
-## <a name="further-reading"></a>Daha fazla bilgi
+## <a name="further-reading"></a>Daha fazla okuma
 
 * [Nasıl çalışır?](https://devblogs.microsoft.com/devops/smart-unit-tests-a-mental-model/)

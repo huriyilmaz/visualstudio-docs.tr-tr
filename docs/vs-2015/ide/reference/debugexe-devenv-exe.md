@@ -1,5 +1,5 @@
 ---
-title: -DebugExe (devenv.exe) | Microsoft Docs
+title: -DebugExe (devenv. exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,42 +10,41 @@ helpviewer_keywords:
 - /DebugExe [devenv.exe]
 ms.assetid: cd700006-1648-418f-924b-4b1e5c1412ab
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ac542ded884e922028c6cbc16447fb2a3241613b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f472add6b821693d1d48397e878db19e707e2868
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68193805"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660800"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Ayıklanacak belirtilen yürütülebilir dosyayı açar.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-Devenv /debugexe ExecutableFile  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `ExecutableFile`  
- Gerekli. Bir .exe dosyası yolu ve dosya adı.  
-  
- .Exe dosyası bulunamadı veya yok, hiçbir uyarı veya hata görüntülenir ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] normalde başlatır.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki dizeleri `ExecutableFile` parametresi, o dosya için bağımsız değişken olarak geçirilir.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnekte dosyayı açar `MyApplication.exe` hata ayıklama.  
-  
-```  
-Devenv.exe /debugexe MyApplication.exe  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
+Ayıklanmakta olan belirtilen yürütülebilir dosyayı açar.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+Devenv /debugexe ExecutableFile
+```
+
+## <a name="arguments"></a>Arguments
+ `ExecutableFile` gerekiyor. Bir. exe dosyasının yolu ve dosya adı.
+
+ . Exe dosyası bulunamazsa veya yoksa, hiçbir uyarı veya hata görüntülenmez ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] normal olarak başlatılır.
+
+## <a name="remarks"></a>Açıklamalar
+ @No__t_0 parametresini izleyen dizeler, bu dosyaya bağımsız değişken olarak geçirilir.
+
+## <a name="example"></a>Örnek
+ Aşağıdaki örnek, hata ayıklama için `MyApplication.exe` dosyasını açar.
+
+```
+Devenv.exe /debugexe MyApplication.exe
+```
+
+## <a name="see-also"></a>Ayrıca Bkz.
  [Devenv Komut Satırı Anahtarları](../../ide/reference/devenv-command-line-switches.md)

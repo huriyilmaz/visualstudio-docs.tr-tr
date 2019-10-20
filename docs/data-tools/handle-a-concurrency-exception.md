@@ -13,204 +13,204 @@ helpviewer_keywords:
 - updating datasets, errors
 - concurrency control, walkthroughs
 ms.assetid: 73ee9759-0a90-48a9-bf7b-9d6fc17bff93
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a8e14a53719d4913bcc04bcb2b702ca4ec4a8c55
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6096e8919d21a93af0dbf6beea2f263bd500d26c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62566748"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648438"
 ---
 # <a name="handle-a-concurrency-exception"></a>Bir eşzamanlılık özel durumunu işleme
 
-Eşzamanlılık özel durumları (<xref:System.Data.DBConcurrencyException?displayProperty=fullName>) iki kullanıcı, bir veritabanında aynı verileri aynı anda değiştirme girişiminde oluşturulur. Bu kılavuzda, catch gösterilmektedir bir Windows uygulaması oluşturma bir <xref:System.Data.DBConcurrencyException>hataya neden satırı bulun ve nasıl işleyeceğini bir stratejisi öğrenin.
+Eşzamanlılık özel durumları (<xref:System.Data.DBConcurrencyException?displayProperty=fullName>) iki kullanıcı aynı anda bir veritabanında aynı verileri değiştirmeye çalıştıklarında tetiklenir. Bu kılavuzda, bir <xref:System.Data.DBConcurrencyException> nasıl yakalayacağınızı gösteren bir Windows uygulaması oluşturacaksınız, hataya neden olan satırı nasıl bulabileceğinizi ve nasıl işleyeceğinizi gösteren bir strateji öğreneceksiniz.
 
-Bu izlenecek yol aşağıdaki süreci alır:
+Bu izlenecek yol, aşağıdaki işlem boyunca size kılavuzluk eden bir işlemdir:
 
-1. Yeni bir **Windows Forms uygulaması** proje.
+1. Yeni bir **Windows Forms uygulama** projesi oluşturun.
 
-2. Northwind Customers tabloyu temel alan yeni bir veri kümesi oluşturursunuz.
+2. Northwind Customers tablosunu temel alan yeni bir veri kümesi oluşturun.
 
-3. Bir formla oluşturma bir <xref:System.Windows.Forms.DataGridView> verileri görüntülemek için.
+3. Verileri göstermek için <xref:System.Windows.Forms.DataGridView> bir form oluşturun.
 
-4. Bir veri kümesi, Northwind veritabanındaki Müşteriler tablosunu verilerle doldurun.
+4. Northwind veritabanındaki Customers tablosunun verileri ile bir veri kümesini doldur.
 
-5. Kullanım **tablo verilerini Göster** da **Sunucu Gezgini** müşteriler tablo verilerine erişmek ve bir kaydı değiştirmek için.
+5. Müşteriler tablosunun verilerine erişmek ve bir kaydı değiştirmek için **Sunucu Gezgini** Içindeki **tablo verilerini göster** özelliğini kullanın.
 
-6. Aynı kaydı başka bir değerle değiştirmek, veri kümesini güncelleştirin ve değişiklikleri gerçekleştirilen bir eşzamanlılık hatası sonuçları veritabanına yazma girişimi.
+6. Aynı kaydı farklı bir değerle değiştirin, veri kümesini güncelleştirin ve değişiklikleri veritabanına yazmayı deneyin, bu da bir eşzamanlılık hatası oluşur.
 
-7. Hata catch, devam etmek ve veritabanını güncelleştirmek belirlemek kullanıcının kayıt farklı sürümlerini görüntüleme veya güncelleştirmeyi iptal eder.
+7. Hatayı Yakalayın, ardından kaydın farklı sürümlerini görüntüleyin, kullanıcının devam edip etmediğini ve veritabanını güncelleştirip güncelleştirmeyeceğini belirlemesine izin verir veya güncelleştirmeyi iptal edin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa,'nden ya da yükleme [SQL Server Express indirme sayfası](https://www.microsoft.com/sql-server/sql-server-editions-express), aracılığıyla veya **Visual Studio yükleyicisi**. İçinde **Visual Studio yükleyicisi**, bir parçası olarak SQL Server Express LocalDB yükleyebilirsiniz **veri depolama ve işleme** iş yükü veya tek bir bileşen olarak.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi**aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
-2. Northwind örnek veritabanı, şu adımları izleyerek yükleyin:
+2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio'da açın **SQL Server Nesne Gezgini** penceresi. (Bir parçası olarak SQL Server Nesne Gezgini yüklü **veri depolama ve işleme** iş yükünü Visual Studio Yükleyicisi'nde.) Genişletin **SQL Server** düğümü. LocalDB Örneğinizde sağ tıklayıp **yeni sorgu**.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
-    2. Kopyalama [Northwind Transact-SQL betiği](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza. Bu T-SQL betiği, sıfırdan Northwind veritabanı oluşturur ve verilerle doldurur.
+    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
 
-       Kısa bir süre sonra sorgu çalışmayı tamamladıktan ve Northwind veritabanı oluşturulur.
+       Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
 ## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
 
 Yeni bir Windows Forms uygulaması oluşturarak başlayın:
 
-1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** > **proje**.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  > **projesi**' ni seçin.
 
-2. Ya da genişletin **Visual C#** veya **Visual Basic** seçip sol bölmedeki **Windows Masaüstü**.
+2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
-3. Orta bölmede seçin **Windows Forms uygulaması** proje türü.
+3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi adlandırın **ConcurrencyWalkthrough**ve ardından **Tamam**.
+4. Projeyi **ConcurrencyWalkthrough**olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-     **ConcurrencyWalkthrough** projesi oluşturulur ve eklenen **Çözüm Gezgini**, ve yeni bir form Tasarımcısı'nda açılır.
+     **ConcurrencyWalkthrough** projesi oluşturulup **Çözüm Gezgini**eklenir ve tasarımcıda yeni bir form açılır.
 
-## <a name="create-the-northwind-dataset"></a>Northwind veri kümesi oluşturma
+## <a name="create-the-northwind-dataset"></a>Northwind veri kümesini oluşturma
 
-Ardından, adlı bir veri kümesi oluşturma **NorthwindDataSet**:
+Sonra, **NorthwindDataSet**adlı bir veri kümesi oluşturun:
 
-1. Üzerinde **veri** menüsünde seçin **ekleme yeni veri kaynağı**.
+1. **Veri** menüsünde **Yeni veri kaynağı Ekle**' yi seçin.
 
-   Veri Kaynağı Yapılandırma Sihirbazı açılır.
+   Veri kaynağı Yapılandırma Sihirbazı açılır.
 
-2. Üzerinde **bir veri kaynağı türü seçin** ekranındayken **veritabanı**.
+2. **Veri kaynağı türü seçin** ekranında **veritabanı**' nı seçin.
 
-   ![Visual Studio'da veri kaynağı Yapılandırma Sihirbazı](media/data-source-configuration-wizard.png)
+   ![Visual Studio 'da veri kaynağı Yapılandırma Sihirbazı](media/data-source-configuration-wizard.png)
 
-3. Bir bağlantı, Northwind örnek veritabanına kullanılabilir bağlantılar listesinden seçin. Bağlantı bağlantılar listesinde kullanılabilir durumda değilse, seçin **yeni bağlantı**.
+3. Kullanılabilir bağlantılar listesinden Northwind örnek veritabanına bir bağlantı seçin. Bağlantı listesinde bağlantı yoksa, **Yeni bağlantı**' yı seçin.
 
     > [!NOTE]
-    > Bir yerel veritabanı dosyasına bağlıyorsanız seçin **Hayır** sorulduğunda isterseniz ister dosyayı projenize ekleyin.
+    > Bir yerel veritabanı dosyasına bağlanıyorsanız, dosyayı projenize eklemek isteyip istemediğiniz sorulduğunda **Hayır** ' ı seçin.
 
-4. Üzerinde **bağlantı dizesini uygulama yapılandırma dosyasına Kaydet** ekranındayken **sonraki**.
+4. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri**' yi seçin.
 
-5. Genişletin **tabloları** düğümünü seçip alt **müşteriler** tablo. Veri kümesi için varsayılan adı olması gereken **NorthwindDataSet**.
+5. **Tablolar** düğümünü genişletin ve **müşteriler** tablosunu seçin. Veri kümesinin varsayılan adı **NorthwindDataSet**olmalıdır.
 
-6. Seçin **son** veri kümesini projeye eklenecek.
+6. Veri kümesini projeye eklemek için **son** ' u seçin.
 
-## <a name="create-a-data-bound-datagridview-control"></a>DataGridView denetimine veri bağlama oluşturun
+## <a name="create-a-data-bound-datagridview-control"></a>Veri bağlantılı DataGridView denetimi oluşturma
 
-Bu bölümde, oluşturduğunuz bir <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> sürükleyerek **müşteriler** öğesini **veri kaynakları** Windows formunuza penceresi.
+Bu bölümde, **müşteriler** öğesini **veri kaynakları** penceresinden Windows formunuzun üzerine sürükleyerek bir <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> oluşturursunuz.
 
-1. Açmak için **veri kaynakları** penceresi, **veri** menüsünde seçin **veri kaynaklarını Göster**.
+1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' i seçin.
 
-2. İçinde **veri kaynakları** penceresini genişletin **NorthwindDataSet** düğümüne tıklayın ve ardından **müşteriler** tablo.
+2. **Veri kaynakları** penceresinde **NorthwindDataSet** düğümünü genişletin ve ardından **Customers** tablosunu seçin.
 
-3. Tablo düğümü aşağı oku seçip ardından **DataGridView** aşağı açılan listesinde.
+3. Tablo düğümünde aşağı oku seçin ve ardından açılır listeden **DataGridView** ' i seçin.
 
-4. Tablo boş bir alana formunuzu sürükleyin.
+4. Tabloyu formunuzun boş bir alanının üzerine sürükleyin.
 
-     A <xref:System.Windows.Forms.DataGridView> adlı Denetim **CustomersDataGridView**ve <xref:System.Windows.Forms.BindingNavigator> adlı **CustomersBindingNavigator**, bağlı forma eklenen <xref:System.Windows.Forms.BindingSource>. Bu sırayla NorthwindDataSet'teki Müşteriler tablosunu bağlı olan.
+     **CustomersDataGridView**adlı bir <xref:System.Windows.Forms.DataGridView> denetimi ve **customersbindingnavigator**adlı bir <xref:System.Windows.Forms.BindingNavigator>, <xref:System.Windows.Forms.BindingSource> bağlanan forma eklenir. Bu, sırasıyla NorthwindDataSet 'teki Customers tablosuna bağlanır.
 
-## <a name="test-the-form"></a>Form test
+## <a name="test-the-form"></a>Formu test etme
 
-Artık bu noktaya kadar beklendiği gibi davrandığından emin olmak için form test edebilirsiniz:
+Artık formu, bu noktaya kadar beklenen şekilde davrandığından emin olmak için test edebilirsiniz:
 
-1. Seçin **F5** uygulamayı çalıştırın.
+1. Uygulamayı çalıştırmak için **F5** ' i seçin.
 
-     Form görünür bir <xref:System.Windows.Forms.DataGridView> bulunan müşteriler tablosundaki verilerle doldurulmuş denetimi.
+     Form, Müşteriler tablosundaki verilerle doldurulmuş bir <xref:System.Windows.Forms.DataGridView> denetimiyle görüntülenir.
 
-2. Üzerinde **hata ayıklama** menüsünde **hata ayıklamayı Durdur**.
+2. **Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur**' u seçin.
 
 ## <a name="handle-concurrency-errors"></a>Eşzamanlılık hatalarını işleme
 
-Hataların nasıl işleneceğini belirleyen uygulamanızı belirli iş kurallarına bağlıdır. Bu kılavuz için eşzamanlılık hatası işlemek nasıl bir örnek olarak aşağıdaki stratejiyi kullanın.
+Hataları nasıl işleyeceğinizi uygulamanızı yöneten belirli iş kurallarına göre değişir. Bu kılavuzda, eşzamanlılık hatasının nasıl ele alınacağını gösteren bir örnek olarak aşağıdaki stratejiyi kullanırız.
 
-Uygulama, kullanıcı kaydı üç sürümleriyle sunar:
+Uygulama, kullanıcıya kaydın üç sürümünü sunar:
 
-- Veritabanı geçerli kayıt
+- Veritabanındaki geçerli kayıt
 
-- Veri kümesine yüklenmesidir özgün kaydı
+- Veri kümesine yüklenen özgün kayıt
 
-- Önerilen değişikliklerin veri kümesi
+- Veri kümesindeki önerilen değişiklikler
 
-Kullanıcı daha sonra önerilen sürümü, veritabanı üzerine veya güncelleştirmeyi iptal eder ve yeni değerlerle veritabanından veri kümelerini yenileme mümkün değil.
+Böylece Kullanıcı önerilen sürümle birlikte veritabanının üzerine yazabilir veya güncelleştirmeyi iptal edebilir ve veri kümesini veritabanından yeni değerlerle yenileyebilir.
 
-### <a name="to-enable-the-handling-of-concurrency-errors"></a>Eşzamanlılık hata işlemesini etkinleştirmek için
+### <a name="to-enable-the-handling-of-concurrency-errors"></a>Eşzamanlılık hatalarının işlenmesini etkinleştirmek için
 
-1. Özel hata işleyicisi oluşturun.
+1. Özel bir hata işleyicisi oluşturun.
 
-2. Kullanıcı için seçenekleri görüntüler.
+2. Kullanıcılara seçenekleri görüntüleyin.
 
-3. Kullanıcının yanıt işler.
+3. Kullanıcının yanıtını işleyin.
 
-4. Güncelleştirmenin yeniden ya da veri kümesindeki verileri sıfırlayın.
+4. Güncelleştirmeyi yeniden gönderin veya veri kümesindeki verileri sıfırlayın.
 
-### <a name="add-code-to-handle-the-concurrency-exception"></a>Eşzamanlılık özel durumunu işlemek için kod ekleyin
+### <a name="add-code-to-handle-the-concurrency-exception"></a>Eşzamanlılık özel durumunu işlemek için kod ekleme
 
-Bir güncelleştirme gerçekleştirmeyi denedi ve bir özel durum, genellikle özel durumu tarafından sağlanan bilgilerle bir şey istersiniz. Bu bölümde, veritabanını güncellemek için çalışan kod ekleyin. Tüm de ele <xref:System.Data.DBConcurrencyException> , yükseltilebilir, yanı sıra diğer tüm özel durumlar.
+Bir güncelleştirme gerçekleştirmeye çalıştığınızda ve bir özel durum ortaya çıktığında, genellikle oluşturulan özel durum tarafından verilen bilgilerle ilgili bir şey yapmak istersiniz. Bu bölümde, veritabanını güncelleştirmeyi deneyen kodu eklersiniz. Ayrıca, başka özel durumlar da ortaya çıkarılan <xref:System.Data.DBConcurrencyException> de işleyebilirsiniz.
 
 > [!NOTE]
-> `CreateMessage` Ve `ProcessDialogResults` yöntemleri, izlenecek yolda eklenir.
+> @No__t_0 ve `ProcessDialogResults` yöntemleri daha sonra izlenecek yolda eklenir.
 
-1. Aşağıdaki kodu ekleyin `Form1_Load` yöntemi:
+1. @No__t_0 yönteminin altına aşağıdaki kodu ekleyin:
 
    [!code-csharp[VbRaddataConcurrency#1](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_1.cs)]
    [!code-vb[VbRaddataConcurrency#1](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_1.vb)]
 
-2. Değiştirin `CustomersBindingNavigatorSaveItem_Click` çağrılacak yöntem `UpdateDatabase` yöntemi aşağıdaki gibi görünür:
+2. @No__t_0 yöntemini, aşağıdaki gibi görünmesi için `UpdateDatabase` yöntemini çağırmak üzere değiştirin:
 
    [!code-csharp[VbRaddataConcurrency#2](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_2.cs)]
    [!code-vb[VbRaddataConcurrency#2](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_2.vb)]
 
-### <a name="display-choices-to-the-user"></a>Kullanıcıya görünen seçenekleri
+### <a name="display-choices-to-the-user"></a>Kullanıcı için seçimleri görüntüle
 
-Yeni kod yazdığınız çağrıları `CreateMessage` kullanıcıya hata bilgilerini görüntülemek için yordamı. Bu kılavuz için kaydın farklı sürümlerine kullanıcıya görüntülenecek bir ileti kutusu kullanın. Bu, kullanıcının kaydı değişikliklerle değiştirmek ya da düzenlemeyi iptal etmek isteyip istemediğinizi seçin sağlar. Kullanıcı ileti kutusunda (bir düğmeye tıkladığında) seçeneği seçtikten sonra yanıt geçirilen `ProcessDialogResult` yöntemi.
+Yeni yazdığınız kod, kullanıcıya hata bilgilerini göstermek için `CreateMessage` yordamını çağırır. Bu izlenecek yol için, kaydın farklı sürümlerini kullanıcıya göstermek üzere bir ileti kutusu kullanın. Bu, kullanıcının değişikliklerle ilgili kaydın üzerine yazılıp yazılmayacağını veya düzenlemeyi iptal edip etmediğini seçmesini sağlar. Kullanıcı, ileti kutusunda bir seçenek seçtiğinde (bir düğmeye tıkladığında), yanıt `ProcessDialogResult` yöntemine geçirilir.
 
-Aşağıdaki kodu ekleyerek iletiyi oluşturmak **Kod Düzenleyicisi**. Bu aşağıdaki kodu girin `UpdateDatabase` yöntemi:
+**Kod düzenleyicisine**aşağıdaki kodu ekleyerek iletiyi oluşturun. @No__t_0 yönteminin altına bu kodu girin:
 
 [!code-csharp[VbRaddataConcurrency#4](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_3.cs)]
 [!code-vb[VbRaddataConcurrency#4](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_3.vb)]
 
-### <a name="process-the-users-response"></a>Kullanıcının yanıt işleme
+### <a name="process-the-users-response"></a>Kullanıcının yanıtını işle
 
-İleti kutusunda kullanıcının yanıta işlemek için kod da gerekir. Önerilen değişiklik, veritabanındaki geçerli kaydın üzerine veya yerel değişiklikleri iptal ve yenilemek veri tablosu veritabanında şu anda var olan kayıtla seçeneklerdir. Kullanıcı seçerse **Evet**, <xref:System.Data.DataTable.Merge%2A> yöntemi çağrıldığında *preserveChanges* değişkenini **true**. Bu, kaydın orijinal sürümünü artık veritabanında kayıt eşleştiği için başarılı olması güncelleştirme girişimi neden olur.
+Kullanıcının ileti kutusuna yanıtını işlemek için de kod gerekir. Seçenekler, önerilen değişiklikle veritabanındaki geçerli kaydın üzerine yazar veya yerel değişiklikleri iptal edebilir ve veri tablosunu veritabanında Şu anda olan kayıtla yeniler. Kullanıcı **Evet**' i seçerse <xref:System.Data.DataTable.Merge%2A> yöntemi *PreserveChanges* bağımsız değişkeniyle **doğru**olarak ayarlanır. Bu, kaydın orijinal sürümü artık veritabanındaki kayıtla eşleştiğinden güncelleştirme denemesinin başarılı olmasına neden olur.
 
-Önceki bölümde eklenen kodun altına aşağıdaki kodu ekleyin:
+Önceki bölümde eklenmiş olan kodun altına aşağıdaki kodu ekleyin:
 
 [!code-csharp[VbRaddataConcurrency#3](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_4.cs)]
 [!code-vb[VbRaddataConcurrency#3](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_4.vb)]
 
-## <a name="test-the-form"></a>Form test
+## <a name="test-the-form"></a>Formu test etme
 
-Şimdi beklendiği gibi davrandığından emin olmak için form test edebilirsiniz. Eşzamanlılık ihlalinin benzetimini yapmak için NorthwindDataSet doldurduktan sonra veritabanındaki verileri değiştirme.
+Artık, beklenen şekilde davrandığından emin olmak için formu test edebilirsiniz. Eşzamanlılık ihlalinin benzetimini yapmak için, NorthwindDataSet 'i doldurduktan sonra veritabanındaki verileri değiştirirsiniz.
 
-1. Seçin **F5** uygulamayı çalıştırın.
+1. Uygulamayı çalıştırmak için **F5** ' i seçin.
 
-2. Form göründükten sonra çalışan bırakın ve geçiş yapmak için Visual Studio IDE.
+2. Form görüntülendikten sonra çalışır durumda bırakın ve Visual Studio IDE 'ye geçin.
 
-3. Üzerinde **görünümü** menüsünde seçin **Sunucu Gezgini**.
+3. **Görünüm** menüsünde **Sunucu Gezgini**' yi seçin.
 
-4. İçinde **Sunucu Gezgini**, uygulamanızı kullanma ve ardından bağlantıyı genişletin **tabloları** düğümü.
+4. **Sunucu Gezgini**, uygulamanızın kullandığı bağlantıyı genişletin ve **Tablolar** düğümünü genişletin.
 
-5. Sağ **müşteriler** tablosuna sağ tıklayıp ardından **tablo verilerini Göster**.
+5. **Müşteriler** tablosuna sağ tıklayın ve ardından **tablo verilerini göster**' i seçin.
 
-6. İlk kayda (**ALFKI**), değiştirme **ContactName** için **Maria Anders2**.
+6. İlk kayıtta (**alfki**) **ContactName** öğesini **Maria Anders2**olarak değiştirin.
 
     > [!NOTE]
-    > Değişikliği kaydetmek için farklı bir satıra gidin.
+    > Değişikliği uygulamak için farklı bir satıra gidin.
 
-7. ConcurrencyWalkthrough'ın çalışan forma geçiş yapın.
+7. ConcurrencyWalkthrough 'in çalışan formuna geçiş yapın.
 
-8. Formdaki ilk kayda (**ALFKI**), değiştirme **ContactName** için **Maria Anders1**.
+8. Formdaki (**alfki**) ilk kayıtta, **ContactName** öğesini **Maria Anders1**olarak değiştirin.
 
 9. **Kaydet** düğmesini seçin.
 
-     Eşzamanlılık hatası tetiklenir ve ileti kutusu görünür.
+     Eşzamanlılık hatası oluşur ve ileti kutusu görüntülenir.
 
-   Seçme **Hayır** güncelleştirmeyi iptal eder ve veri kümesini veritabanında şu anda değerlerini güncelleştirir. Seçme **Evet** önerilen değeri veritabanına yazar.
+   **Hayır** seçilirse güncelleştirme iptal edilir ve veri kümesini veritabanında Şu anda olan değerlerle günceller. **Evet** seçildiğinde önerilen değer veritabanına yazılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

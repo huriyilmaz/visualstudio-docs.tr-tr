@@ -2,20 +2,20 @@
 title: Visual Studio 'da DPı tanımayı devre dışı bırak
 description: HDPı izleyicilerinde Windows Form Tasarımcısı sınırlamaları ve Visual Studio 'Yu DPı kullanmayan bir işlem olarak çalıştırmayı açıklar.
 ms.date: 04/05/2019
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.topic: conceptual
-ms.openlocfilehash: fdcf255b8ad7c613a83284759a1f4859041acfc4
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: a368108f1b8f9682151ed8c7b0a6d8b83b1b8a1f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69619728"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72637403"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio 'da DPı tanımayı devre dışı bırak
 
-Visual Studio, bir nokta/inç (DPI) uyumlu uygulama (yani, ekran otomatik olarak ölçeklendirilebilen bir uygulamadır). Bir uygulama DPı uyumlu değilse, işletim sistemi uygulamayı bir bit eşlem olarak ölçeklendirir. Bu davranışa Ayrıca DPı Sanallaştırması da denir. Uygulama hala% 100 ölçeklendirme veya 96 DPI ' da çalıştığını düşünüyor.
+Visual Studio, bir nokta/inç (DPI) uyumlu uygulama (yani, ekran otomatik olarak ölçeklendirilebilen bir uygulamadır). Bir uygulama DPı uyumlu değilse, işletim sistemi uygulamayı bir bit eşlem olarak ölçeklendirir. Bu davranışa Ayrıca DPı Sanallaştırması da denir. Uygulama hala %100 ölçeklendirme veya 96 DPI ' da çalıştığını düşünüyor.
 
 Bu makalede, HDPı izleyicilerinde Windows Form Tasarımcısı sınırlamaları ve Visual Studio 'nun DPı kullanmayan bir işlem olarak çalıştırılması açıklanmaktadır.
 
@@ -29,7 +29,7 @@ Visual Studio 'da bir HDPı izleyicisinde **Windows Form Tasarımcısı** form a
 
 ![Visual Studio 'da DPı kullanmayan modda yeniden başlatılacak bilgi çubuğu](./media/scaling-gold-bar.png)
 
-Ana görüntüinizdeki **ölçeklendirmeyi okuyan ileti,% 200 (192 DPI) olarak ayarlanmıştır. Bu, tasarımcı penceresinde işleme sorunlarına neden olabilir.**
+**Ana görüntüinizdeki ölçeklendirmeyi okuyan ileti, %200 (192 DPI) olarak ayarlanmıştır. Bu, tasarımcı penceresinde işleme sorunlarına neden olabilir.**
 
 > [!NOTE]
 > Bu bilgi çubuğu, Visual Studio 2017 sürüm 15,8 ' de eklenmiştir.
@@ -42,17 +42,17 @@ Görüntü sorununu çözmek için üç seçenek vardır:
 
 - [Visual Studio 'Yu DPı kullanmayan bir işlem olarak yeniden Başlat](#restart-visual-studio-as-a-dpi-unaware-process)
 - [Kayıt defteri girişi ekleme](#add-a-registry-entry)
-- [Görüntü ölçeklendirme ayarınızı% 100 olarak ayarlayın](#set-your-display-scaling-setting-to-100)
+- [Görüntü ölçeklendirme ayarınızı %100 olarak ayarlayın](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>Visual Studio 'Yu DPı kullanmayan bir işlem olarak yeniden Başlat
 
 Sarı bilgi çubuğu 'ndaki seçeneği belirleyerek Visual Studio 'Yu DPı kullanmayan bir işlem olarak yeniden başlatabilirsiniz. Bu, sorunu çözmenin tercih edilen yoludur.
 
-Visual Studio, DPı kullanmayan bir işlem olarak çalıştırıldığında tasarımcı düzeni sorunları çözümlenir, ancak yazı tipleri bulanık görünebilir. Visual Studio, Visual Studio 'nun DPI kullanmayan bir işlem olarak çalıştığını bildiren **, DPI kullanmayan bir işlem olarak çalıştırıldığında, farklı bir sarı bilgilendirici ileti görüntüler. WPF ve XAML tasarımcıları doğru görüntülenmeyebilir.** Bilgi çubuğu, **Visual Studio 'YU DPI kullanan bir işlem olarak yeniden başlatma**seçeneği de sunar.
+Visual Studio, DPı kullanmayan bir işlem olarak çalıştırıldığında tasarımcı düzeni sorunları çözümlenir, ancak yazı tipleri bulanık görünebilir. Visual Studio **, Visual Studio 'NUN DPI kullanmayan bir işlem olarak çalıştığını bildiren, DPI kullanmayan bir işlem olarak çalıştırıldığında, farklı bir sarı bilgilendirici ileti görüntüler. WPF ve XAML tasarımcıları doğru görüntülenmeyebilir.** Bilgi çubuğu, **Visual Studio 'YU DPI kullanan bir işlem olarak yeniden başlatma**seçeneği de sunar.
 
 > [!NOTE]
 > - DPı kullanmayan bir işlem olarak yeniden başlatma seçeneğini belirlediğinizde Visual Studio 'da yerleştirilmemiş araç pencereleri varsa, bu araç pencerelerinin konumu değişebilir.
-> - Varsayılan Visual Basic profilini kullanıyorsanız veya **Araçlar** > **Seçenekler** > **projelerinde ve çözümlerinde** **oluşturduğunuz sırada yeni projeler kaydet** seçeneği işaretli değilse, Visual Studio verilerinizi yeniden açamazsınız DPı kullanmayan bir işlem olarak yeniden başlatıldığında proje. Ancak, projeyi > **en son projeler ve çözümler**altında seçerek açabilirsiniz.
+> - Varsayılan Visual Basic profilini kullanıyorsanız veya **araçlar**  > **Seçenekler**  > **Projeler ve çözümler**' de **oluşturulan yeni projeleri kaydet** seçeneği işaretli değilse, Visual Studio projenizi yeniden açamazsınız DPı kullanmayan bir işlem olarak yeniden başlatılır. Ancak, projeyi **dosya**  > **son projeler ve çözümler**altında seçerek açabilirsiniz.
 
 **Windows Form Tasarımcısı**çalışmayı bitirdiğinizde Visual STUDIO 'yu DPI kullanan bir işlem olarak yeniden başlatmanız önemlidir. DPı kullanmayan bir işlem çalışırken, yazı tipleri bulanık görünebilir ve **XAML Tasarımcısı**gibi diğer tasarımcılarda sorunlar görebilirsiniz. Visual Studio 'Yu, DPı kullanmayan modda çalışırken kapatıp yeniden açarsanız, bu, DPı uyumlu hale gelir. Bilgi çubuğunda, **Visual Studio 'YU DPI kullanan bir işlem olarak yeniden Başlat** seçeneği de tıklayabilirsiniz.
 
@@ -68,24 +68,24 @@ Kayıt defterini değiştirerek Visual Studio 'Yu DPı duyarsız olarak işaretl
 > [!NOTE]
 > Visual Studio 'nun Professional veya Enterprise sürümünü kullanıyorsanız, **Community** 'Yi girişte **Professional** veya **Enterprise** ile değiştirin. Ayrıca, sürücü harfini gereken şekilde değiştirin.
 
-**Şunu yazın**: REG_SZ
+**Tür**: REG_SZ
 
-**Değer**: DPIDUYARSIZ
+**Değer**: dpiduyarsız
 
 > [!NOTE]
 > Visual Studio, kayıt defteri girişini kaldırana kadar DPı duyarsız modda kalır.
 
-### <a name="set-your-display-scaling-setting-to-100"></a>Görüntü ölçeklendirme ayarınızı% 100 olarak ayarlayın
+### <a name="set-your-display-scaling-setting-to-100"></a>Görüntü ölçeklendirme ayarınızı %100 olarak ayarlayın
 
-Ekran ölçeklendirme ayarınızı Windows 10 ' da% 100 ' a ayarlamak için, görev çubuğu arama kutusunda **ekran ayarları** yazın ve ardından **görüntü ayarlarını değiştir**' i seçin. **Ayarlar** penceresinde **metin, uygulamalar ve diğer öğelerin boyutunu** **% 100**olarak değiştirin.
+Ekran ölçeklendirme ayarınızı Windows 10 ' da %100 ' a ayarlamak için, görev çubuğu arama kutusunda **ekran ayarları** yazın ve ardından **görüntü ayarlarını değiştir**' i seçin. **Ayarlar** penceresinde **metin, uygulamalar ve diğer öğelerin boyutunu** **%100**olarak değiştirin.
 
-Ekran ölçeklendirmesinin% 100 olarak ayarlanması, Kullanıcı arabirimini kullanılabilir hale getirmek için çok küçük hale gösterebileceğinden, istenmeyen bir durum olabilir.
+Ekran ölçeklendirmesinin %100 olarak ayarlanması, Kullanıcı arabirimini kullanılabilir hale getirmek için çok küçük hale gösterebileceğinden, istenmeyen bir durum olabilir.
 
 ## <a name="disable-notifications"></a>Bildirimleri devre dışı bırak
 
 Visual Studio 'da DPı ölçeklendirme sorunları hakkında bildirim almak zorunda değilsiniz seçeneğini belirleyebilirsiniz. Örneğin, tasarımcıda çalışmıyorsanız bildirimleri devre dışı bırakmak isteyebilirsiniz.
 
-Bildirimleri devre dışı bırakmak için **Seçenekler** iletişim kutusunu açmak üzere **Araçlar** > **Seçenekler** ' i seçin. Ardından **Windows Form Tasarımcısı** > **genel**' i seçin ve **DPI ölçeklendirme bildirimleri** ' ni **false**olarak ayarlayın.
+Bildirimleri devre dışı bırakmak için **Seçenekler** iletişim kutusunu açmak üzere **Araçlar**  > **Seçenekler** ' i seçin. Sonra,**genel** >  **Windows Form Tasarımcısı** seçin ve **DPI ölçeklendirme bildirimlerini** **false**olarak ayarlayın.
 
 ![Visual Studio 'da DPı ölçeklendirme bildirimleri seçeneği](./media/notifications-option.png)
 
@@ -93,7 +93,7 @@ Bildirimleri devre dışı bırakmak için **Seçenekler** iletişim kutusunu a�
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
-DPI tanıma geçişi, Visual Studio 'da beklendiği gibi çalışmıyorsa, `dpiAwareness` **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe** alt anahtarındaki değerin olup olmadığını denetleyin Kayıt Defteri Düzenleyicisi 'nde. Varsa değeri silin.
+DPı tanıma geçişi, Visual Studio 'da beklendiği gibi çalışmıyorsa, içindeki **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Nt\currentversion\ımage File Execution Options\devenv.exe** alt anahtarında `dpiAwareness` değer olup olmadığını denetleyin. Kayıt Defteri Düzenleyicisi. Varsa değeri silin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

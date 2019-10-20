@@ -16,44 +16,44 @@ helpviewer_keywords:
 - diagrams - modeling, layer
 - software, designing
 - software, modeling
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79d116cfb7c9b6514032aa12d916b21b38ae94b3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 996f0336742441e565d16b0fe491e846d0d24329
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62811693"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654125"
 ---
 # <a name="create-models-for-your-app"></a>Uygulamanız için model oluşturma
 
-Modelleme diyagramları kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleri hakkında fikirleri anlamanıza, açıklamak ve yardımcı olur.
+Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleri hakkındaki fikirleri anlamanıza, açıklığa kavuşturmanıza ve iletmeye yardımcı olur.
 
-Visual Studio'nun hangi sürümlerinin her diyagram türü desteklediğini görmek için bkz: [mimari ve Modelleme Araçları sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Visual Studio 'nun hangi sürümlerinin her diyagram türünü desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-Bir sistem veya var olan kod mimarisini görselleştirmek için aşağıdaki diyagramları oluşturur:
+Bir sistemin veya varolan kodun mimarisini görselleştirmek için aşağıdaki diyagramları oluşturun:
 
-|**Diyagramı**|**Gösterir**|
+|**Çizimindeki**|**Gösterilir**|
 |-|-|
-|[Bağımlılık diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)<br /><br /> [Bağımlılık diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)|Sistemin üst düzey mimarisi|
-|Kod haritaları<br /><br /> [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)|Bağımlılıklar ve diğer mevcut koddaki ilişkileri|
-|Kod tarafından oluşturulan sınıf diyagramları<br /><br /> [Sınıf Diyagramları ile Çalışma (Sınıf Tasarımcısı)](../ide/class-designer/designing-and-viewing-classes-and-types.md)|Türlerini ve ilişkilerini .NET kod|
+|[Bağımlılık Diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)<br /><br /> [Bağımlılık Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)|Sistemin üst düzey mimarisi|
+|Kod eşlemeleri<br /><br /> [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)|Mevcut koddaki bağımlılıklar ve diğer ilişkiler|
+|Kod tarafından oluşturulan sınıf diyagramları<br /><br /> [Sınıf Diyagramları ile Çalışma (Sınıf Tasarımcısı)](../ide/class-designer/designing-and-viewing-classes-and-types.md)|.NET Code 'da türler ve ilişkileri|
 
-## <a name="related-tasks"></a>İlişkili görevler
+## <a name="related-tasks"></a>İlgili görevler
 
-|**Konu**|**Görev**|
+|**İlerde**|**Görevinin**|
 |-|-|
-|[Kodu görselleştirme](../modeling/visualize-code.md)|Kod haritaları oluşturmak ve görselleştirerek tanımadıkları kodlarla bağımlılık diyagramlarına daha iyi anlayın.|
-|[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını açıklamak ve modelleri kullanır.|
-|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|Genel yapısı ve sisteminizin davranışını tanımlamak ve kullanıcıların ihtiyaçlarını karşıladığından emin olmak için modelleri kullanır.|
-|[Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)|Yazılımınızı kullanıcılarınızın ihtiyaçlarını ve sisteminizin genel mimarisi ile tutarlı kalmasını sağlayın.|
-|[Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)<br /><br /> [Çevik Yazılım geliştirmede modeller kullanma](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|Anlama ve kendi geliştirme sırasında sisteminizi değiştirme yardımcı olması için modelleri kullanır.|
-|[Modelleme çözümünüzün yapısını oluşturma](../modeling/structure-your-modeling-solution.md)|Büyük ve orta ölçekli projelerde modelleri düzenleyin.|
+|[Kodu görselleştirme](../modeling/visualize-code.md)|Bilmediğiniz kodu daha iyi anlamak için kod haritaları ve bağımlılık diyagramları oluşturun.|
+|[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını netleştirmek ve iletmek için modeller kullanın.|
+|[Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)|Sisteminizin genel yapısını ve davranışını ve kullanıcıların ihtiyaçlarını karşıladığından emin olmak için modelleri kullanın.|
+|[Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)|Yazılımınızın kullanıcılarınızın ihtiyaçlarına ve sisteminizin genel mimarisine uygun olduğundan emin olun.|
+|[Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)<br /><br /> [Çevik geliştirmede modelleri kullanma](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|Geliştirme sırasında sisteminizi anlamanıza ve değiştirmenize yardımcı olması için modeller kullanın.|
+|[Modelleme çözümünüzün yapısını oluşturma](../modeling/structure-your-modeling-solution.md)|Büyük veya orta ölçekli bir projede modelleri düzenleyin.|
 
 ## <a name="resources"></a>Kaynaklar
 
-- [Visual Studio Görselleştirme ve Modelleme Araçları Forumu](http://go.microsoft.com/fwlink/?LinkId=184720)
+- [Visual Studio görselleştirme & modelleme araçları forumu](http://go.microsoft.com/fwlink/?LinkId=184720)
 - [Visual Studio genişletilebilirlik Forumu](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)

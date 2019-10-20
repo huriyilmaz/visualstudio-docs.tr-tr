@@ -6,111 +6,111 @@ f1_keywords:
 - vs.dsltools.dsldesigner.explorerbehavior
 helpviewer_keywords:
 - Domain-Specific Language Tools, Domain-Specific Language Explorer
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65ada4a061fd928a074c9fcdb24fab60a277c457
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 82d9a64721f9d1c4f4db982e3a39c65a4b29f167
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445848"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653975"
 ---
 # <a name="customizing-the-model-explorer"></a>Model Gezginini Özelleştirme
-İçin etki alanına özgü dil Tasarımcısı görünümünü ve davranışını Gezginin şu şekilde değiştirebilirsiniz:
+Etki alanına özgü dil tasarlayana ait Gezgin görünümünü ve davranışını aşağıdaki şekilde değiştirebilirsiniz:
 
-- Pencere Başlığı değiştirin.
+- Pencere başlığını değiştirin.
 
-- Tab simgesi değiştirin.
+- Sekme simgesini değiştirin.
 
-- Düğümler için simgeler olarak değişir.
+- Düğümlerin simgelerini değiştirin.
 
-- Düğümleri gizleme.
+- Düğümleri gizleyin.
 
 ## <a name="changing-the-window-title"></a>Pencere başlığını değiştirme
- Oluşturulan Gezgini'nin pencere başlığı değiştirmek için seçin **Gezgin davranışı** içinde **DSL Gezgini**ve ardından **özellikleri** penceresinde  **Başlık** özelliğini istediğiniz başlığı.
+ Oluşturulan gezgin 'in pencere başlığını değiştirmek için, **DSL Gezgini**'Nde **Gezgin davranışı** ' nı seçin ve ardından **Özellikler** penceresinde **başlık** özelliğini istediğiniz başlığa ayarlayın.
 
 ## <a name="changing-the-tab-icon"></a>Sekme simgesini değiştirme
- Explorer için sekmesinde simgesi değiştirmek için 16 x 16 piksel simgesi .bmp dosyasında kullanın. Simge dosyası \DslPackage\Resources\ klasöre yerleştirin ve ardından için dosya adını değiştirerek **ModelExplorerToolWindowBitmaps.bmp**. Örneğin, size Visual Studio setup.ico simge dosyası .bmp biçimine değiştirin ve yeniden adlandırın **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**. İle birlikte yerleştirildiğinde oluşturulan tasarımcının gezgininizde sekmesinde bu simge görüntülemek **Çözüm Gezgini**.
+ Gezgin 'in sekme simgesini değiştirmek için. BMP dosyasında 16x16 piksellik bir simge kullanın. Simge dosyasını \DslPackage\Resources\ klasörüne yerleştirin ve ardından dosya adını **Modelexplorertoolwindowbitmap. bmp**olarak değiştirin. Örneğin, Visual Studio Setup. ico simge dosyasını. bmp biçiminde değiştirebilir ve **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**olarak yeniden adlandırabilirsiniz. Oluşturulan tasarımcı, **Çözüm Gezgini**birlikte yuvalandığında, bu simgeyi gezgin 'in sekmesinde görüntüler.
 
-## <a name="setting-custom-icons-on-explorer-nodes"></a>Özel simgeleri Gezgini düğümlerinde ayarlama
- Gezgin düğümü ayarlarını kullanarak düğümleri gezgininizde özelleştirebilirsiniz. Aşağıdaki yordamda, bir düğüm için bir simge eklemek gösterilmektedir.
+## <a name="setting-custom-icons-on-explorer-nodes"></a>Gezgin düğümlerinde özel simgeler ayarlama
+ Gezgin düğüm ayarlarını kullanarak, gezginizdeki düğümleri özelleştirebilirsiniz. Aşağıdaki yordam, bir düğüme bir simgenin nasıl ekleneceğini gösterir.
 
-#### <a name="to-add-an-icon-to-an-explorer-node"></a>Bir Gezgini düğümü için bir simge eklemek için
+#### <a name="to-add-an-icon-to-an-explorer-node"></a>Gezgin düğümüne simge eklemek için
 
-1. Oluşturma bir [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Görev akışı çözüm şablonunu kullanarak çözüm.
+1. Görev akışı çözüm şablonunu kullanarak bir [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] çözümü oluşturun.
 
-2. Bir 16 x 16 piksel simgesi içeren bir .bmp dosyası yerleştirme **Dsl\Resources** çözüm klasöründe.
+2. Çözümdeki **Dsl\resources** klasörüne 16x16 piksellik bir simge içeren bir. bmp dosyası yerleştirin.
 
-3. İçinde **DSL Gezgini**, sağ **Gezgin davranışı** ve ardından **ekleme Yeni Gezgin düğümü ayarlarını**.
+3. **DSL Gezgini**' nde **Gezgin davranışı** ' na sağ tıklayın ve ardından **Yeni Gezgin düğüm ayarları ekle**' ye tıklayın.
 
-    Bir **ExplorerNodeSettings** düğümü altında görünür **özel düğüm ayarları** düğümü.
+    **Özel düğüm ayarları** düğümünün altında bir **ExplorerNodeSettings** düğümü görüntülenir.
 
-4. Seçin **ExplorerNodeSettings**ve ardından **özellikleri** penceresinde **sınıfı** için **aktör**.
+4. **ExplorerNodeSettings**' i seçin ve ardından **Özellikler** penceresinde **sınıfı** **aktör**olarak ayarlayın.
 
-5. Ayarlama **görüntülenecek simge** simge dosyasının yolu.
+5. Simge dosyasının yolunu **gösterecek şekilde** ayarlayın.
 
-6. Tüm Şablonları Dönüştür ve derleme ve çözümü çalıştırın.
+6. Tüm şablonları dönüştürün ve Çözümü derleyin ve çalıştırın.
 
 7. Oluşturulan tasarımcıda örnek diyagramı açın.
 
-    Gezgin üç göstermelidir **aktör** simge olan düğümleri.
+    Gezgin, simgenizi içeren üç **aktör** düğümü göstermelidir.
 
 > [!NOTE]
-> Oluşturulan Gezgini'nde görüntülenen herhangi bir öğe için bir düğüm simgesi ayarlarsanız, tüm Gezgini düğümleri simgesi görüntüler. Herhangi bir simge ayarlarsanız düğümleri varsayılan simge görüntüler.
+> Oluşturulan Gezgin içinde görüntülenen herhangi bir öğe için bir düğüm simgesi ayarladıysanız, tüm gezgin düğümleri simgeyi görüntüler. Hiçbir simge ayarlanmamışsa, düğümler varsayılan simgeyi görüntüler.
 
-## <a name="changing-the-name-displayed-on-an-explorer-node"></a>Bir Gezgini düğümünde görüntülenen adını değiştirme
- Model öğelerinin adlarını gezgininizde nasıl görüntüleneceğini değiştirebilirsiniz. Aşağıdaki yordamı, adını görüntülemek gösterilmektedir **görev** tarafından başvurulan bir **yorum** açıklama düğümünde.
+## <a name="changing-the-name-displayed-on-an-explorer-node"></a>Gezgin düğümünde görünen adı değiştirme
+ Bir model öğeleri adının Gezgini 'nde görüntülenme şeklini değiştirebilirsiniz. Aşağıdaki yordam, yorum düğümündeki bir **yorum** tarafından başvurulan **görevin** adının nasıl görüntüleneceğini gösterir.
 
-#### <a name="to-display-a-property"></a>Bir özelliği görüntülemek için
+#### <a name="to-display-a-property"></a>Bir özelliği görüntüleme
 
 1. Önceki yordamda oluşturduğunuz çözümü açın.
 
-2. Emin olun **yorum** yalnızca bir tek etki alanı sınıfı, özellik adı ile rol'ün çoğulluğunun ayarlayarak başvuruyor **konuları** 0.. 1. Özellik adı olması gerektiğini **konu**, ve ilişki adı olması gerektiğini **CommentReferencesSubject**.
+2. Bir rolün çoğulluk özelliğini 0.. **1 olarak ayarlayarak** , **açıklamanın** yalnızca tek bir etki alanı sınıfına başvurduğundan emin olun. Özellik adının **konusu**olması gerekir ve ilişki adı, **CommentReferencesSubject**olmalıdır.
 
-3. İçinde **DSL Gezgini**, sağ **Gezgin davranışı** ve ardından **ekleme Yeni Gezgin düğümü ayarlarını**.
+3. **DSL Gezgini**' nde **Gezgin davranışı** ' na sağ tıklayın ve ardından **Yeni Gezgin düğüm ayarları ekle**' ye tıklayın.
 
-     Bir **ExplorerNodeSettings** düğümü altında görünür **özel düğüm ayarları** düğümü.
+     **Özel düğüm ayarları** düğümünün altında bir **ExplorerNodeSettings** düğümü görüntülenir.
 
-4. Seçin **ExplorerNodeSettings**ve ardından **özellikleri** penceresinde **sınıfı** için **yorum**.
+4. **ExplorerNodeSettings**' i seçin ve ardından **Özellikler** penceresinde **sınıfı** **Açıklama**olarak ayarlayın.
 
-5. Sağ **yorum** düğümünü ve ardından **yeni özellik yolu Ekle**.
+5. **Yorum** düğümüne sağ tıklayın ve ardından **yeni özellik yolu Ekle**' ye tıklayın.
 
-     Adlı yeni bir düğüm görünür **özelliği görüntülenen**.
+     **Görüntülenen özellik**adlı yeni bir düğüm görüntülenir.
 
-6. Seçin **özelliği görüntülenen**ve ardından **özellikleri** penceresinde Değer alanını tıklatın **yolu için özellik**. Seçin **yorum**, ardından **CommentReferencesSubject**, ardından **FlowElement**. Sonuçlanan yolunu benzemelidir **CommentReferencesSubject.Subject/! Konu**.
+6. **Görüntülenecek özellik**' i seçin ve ardından **Özellikler** penceresinde, **özelliğin yolunu**olan değer alanına tıklayın. **Açıklama**' yı ve ardından **CommentReferencesSubject**' **i seçin.** Elde edilen yol, **CommentReferencesSubject. Subject/! ' a benzemelidir. Konu**.
 
-7. Değer alanında **özelliği**seçin **adı**.
+7. **Özelliğin**değer alanında **ad**' ı seçin.
 
-8. Tüm Şablonları Dönüştür ve sonra çözümünüzün çalıştırın.
+8. Tüm şablonları dönüştürün ve çözümünüzü derleyin ve çalıştırın.
 
 9. Oluşturulan tasarımcıda örnek diyagramı açın.
 
-10. Çizim bir **açıklama bağlayıcı** yorum öğe arasında ve **Task1** öğeyi diyagram üzerinde.
+10. Diyagramda Comment öğesi ve **Task1** öğesi arasında bir **Açıklama Bağlayıcısı** çizin.
 
-     Gezgin düğümünü açıklama olarak görüntülenmelidir **Task1**.
+     Gezgin düğümü, yorumu **Task1**olarak görüntülemelidir.
 
 ## <a name="hiding-nodes"></a>Düğümleri gizleme
- Kendi yoluna ekleyerek bir düğüm gezgininizde gizleyebilirsiniz **gizli düğümleri** düğümünün **DSL Gezgini**. Aşağıdaki yordam nasıl gizleneceği gösterilmektedir **yorum** düğümleri.
+ Kendi yolunu **DSL Gezgini**'Nin **Gizli düğümler** düğümüne ekleyerek, gezginizdeki bir düğümü gizleyebilirsiniz. Aşağıdaki yordamda, **Açıklama** düğümlerinin nasıl gizlenmesi gösterilmektedir.
 
-#### <a name="to-hide-an-explorer-node"></a>Gezgini düğümü gizlemek için
+#### <a name="to-hide-an-explorer-node"></a>Gezgin düğümünü gizlemek için
 
 1. Önceki yordamda oluşturduğunuz çözümü açın.
 
-2. İçinde **DSL Gezgini**, sağ **Gezgin davranışı** ve ardından **yeni etki alanı yolu Ekle**.
+2. **DSL Gezgini**' nde **Gezgin davranışı** ' na sağ tıklayın ve ardından **yeni etki alanı yolu Ekle**' ye tıklayın.
 
-     A **etki alanı yolu** düğümü altında görünür **gizli düğümleri**.
+     **Gizli düğümler**altında bir **etki alanı yolu** düğümü görüntülenir.
 
-3. Seçin **etki alanı yolu**ve ardından **özellikleri** penceresinde Değer alanını tıklatın **yol tanımı**. Seçin **FlowGraph**, ardından **FlowGraphHasComments**. Sonuçlanan yolunu benzemelidir **FlowGraphHasComments.Comments**
+3. **Etki alanı yolu**' nu seçin ve ardından **Özellikler** penceresinde **yol tanımının**değer alanına tıklayın. **FlowGraph**ve **FlowGraphHasComments**öğelerini seçin. Elde edilen yol **FlowGraphHasComments. Comments** öğesine benzemelidir
 
-4. Tüm Şablonları Dönüştür ve sonra çözümünüzün çalıştırın.
+4. Tüm şablonları dönüştürün ve çözümünüzü derleyin ve çalıştırın.
 
 5. Oluşturulan tasarımcıda örnek diyagramı açın.
 
-     Explorer yalnızca göstermelidir bir **aktörler** düğümünü ve değil gösterilip gösterilmeyeceğini **açıklamaları** düğümü.
+     Gezgin yalnızca bir **aktör** düğümü göstermelidir ve **açıklamalar** düğümünü göstermemelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

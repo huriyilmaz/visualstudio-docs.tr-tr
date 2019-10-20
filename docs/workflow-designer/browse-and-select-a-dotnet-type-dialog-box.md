@@ -1,77 +1,77 @@
 ---
-title: İş Akışı Tasarımcısı - göz atın ve bir .NET türünü seç iletişim kutusu
+title: İş Akışı Tasarımcısı-.NET türüne gözatıp seçin Iletişim kutusu
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
 ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f48a30e11e28daef2d1803646d2b495bcb718b84
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dfdbe972034920869908c1bac1cb349c98d96d3f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993208"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650719"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET Türüne Gözat ve Seç İletişim Kutusu
 
-İçinde **özellikleri** pencere, iletişim kutuları ve tasarımcıları gibi değişken tasarımcısını seçtiğinizde, **vyhledat Typy** veri türleri bir listede olan **göz atın ve bir .NET türüseçin** iletişim kutusu (kısaltılmış biçimdeki "türü tarayıcı" olarak adlandırılır). Bu iletişim kutusunda, derlemeleri ve projeleri bir ağaç görünümünden bir türü seçebilirsiniz.
+**Özellikler** penceresi, iletişim kutuları veya değişken Tasarımcısı gibi tasarımcılarda, bir veri türleri listesinden **türler için araştır** ' ı seçtiğinizde, **bir .NET türü görüntüle ve Seç** iletişim kutusu (kısaltılmış bir biçimde "tür olarak adlandırılır tarayıcı "). Bu iletişim kutusunda, derlemelerin ve projelerin ağaç görünümünden bir tür seçebilirsiniz.
 
-Bu iletişim kutusu, kullanıcı senaryoları, aşağıdakiler dahil olmak üzere bir dizi içinde kullanılır:
+Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı senaryolarında işe alındı:
 
-- Bir değişken veya bağımsız değişken türü ayarlarken.
+- Bir değişkenin veya bağımsız değişkenin türü ayarlanırken.
 
-- Genel etkinlik için bir türü seçerken.
+- Genel etkinlik için bir tür seçerken.
 
-- Bir catch eklenirken <xref:System.Activities.Statements.TryCatch> etkinlik.
+- @No__t_0 etkinliğine bir catch eklenirken.
 
 > [!NOTE]
-> Tür tarayıcı olmayan çok boyutlu dizi türleri, ancak Visual Basic Basit dizi türlerini görüntüleyebilirsiniz. Bkz: [basit diziler](http://go.microsoft.com/fwlink/?LinkId=195226) ve [çok boyutlu diziler](http://go.microsoft.com/fwlink/?LinkId=195227) Ayrıntılar için.
+> Tür tarayıcısı Visual Basic basit dizi türleri görüntüleyebilir, ancak çok boyutlu dizi türleri gösterebilir. Ayrıntılar için bkz. [pürüzlü Diziler](http://go.microsoft.com/fwlink/?LinkId=195226) ve [çok boyutlu diziler](http://go.microsoft.com/fwlink/?LinkId=195227) .
 
-## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>Bir değer veya başvuru türü tür tarayıcısından seçme
+## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>Tür tarayıcısından bir değer veya başvuru türü seçme
 
-### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>Bir değer veya başvuru türü tür tarayıcısından seçin
+### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>Tür tarayıcısından bir değer veya başvuru türü seçmek için
 
-1. İçinde **tür adı** kutusunda, kullanmak istediğiniz türün adını girin.
+1. **Tür adı** kutusuna, kullanmak istediğiniz türün adını girin.
 
 2. Aşağıdakilerden birini yapın:
 
-    - Kullanmak istediğiniz türün adını ağaçta göründüğünde **tür adı** kutusunda, seçmek için türü'ne çift tıklayın.
+    - Kullanmak istediğiniz türün adı, **tür adı** kutusundaki ağaçta göründüğünde, seçmek için türe çift tıklayın.
 
-    - Yeterli karakterler girdiğinizde, bu **tür adı** türünü seçmek için ENTER tuşuna basın ve kullanmak istediğiniz türü benzersiz olarak tanımlanabilmesi için kutusu
+    - Kullanmak istediğiniz türü benzersiz bir şekilde tanımlamak için **tür adı** kutusuna yeterli sayıda karakter yazın ve ardından türü seçmek için ENTER tuşuna basın
 
-### <a name="to-select-a-generic-type-from-the-type-browser"></a>Genel tür tür tarayıcısından seçmek için
+### <a name="to-select-a-generic-type-from-the-type-browser"></a>Tür tarayıcısından genel bir tür seçmek için
 
-1. İçinde **tür adı** kutusunda, kullanmak istediğiniz tür adını yazın.
+1. **Tür adı** kutusuna, kullanmak istediğiniz türün adını yazın.
 
-2. Kullanmak istediğiniz türün adını ağaçta göründüğünde **tür adı** kutusunda, açılır kutuları neden seçmek için türü görünür tıklatın.
+2. Kullanmak istediğiniz türün adı **tür adı** kutusundaki ağaçta göründüğünde, açılan kutuların görünmesine neden olacak şekilde seçmek için türe tıklayın.
 
-     Açılan kutu genel kapatın ve ardından kullanmak istediğiniz türü seçin **Tamam**.
+     Açılan kutulardan genel ' i kapatmak için kullanmak istediğiniz türü seçin ve ardından **Tamam**' a tıklayın.
 
-## <a name="types-displayed-in-the-type-browser"></a>Tür tarayıcıda görüntülenen türleri
+## <a name="types-displayed-in-the-type-browser"></a>Tür tarayıcısında görünen türler
 
-Tür tarayıcıda görüntülenen türleri türü tarayıcı nasıl başlatıldı bağlı olarak değişebilir. Tür tarayıcı içinde bir iş akışı projeden başlatıldı, **vs2010**, tüm bütünleştirilmiş kodlardaki türleri varsayılan olarak ve başvurulan projeler gösterilir. Tarayıcı Türü alanından dışında başlatıldıysa bir **vs2010** proje sistemine (Bu tür bir yeniden barındırılan iş akışı uygulaması olduğu gibi veya tek başına bir iş akışı dosyası), sonra tüm derleme AppDomain'e türleri varsayılan olarak gösterilir .
+Tür tarayıcısında görünen türler, tür tarayıcısının nasıl başlatıldığına bağlı olarak farklılık gösterebilir. Tür tarayıcısı **VS2010**içindeki bir iş akışı projesinden başlatılmışsa, varsayılan olarak başvurulan derlemelerdeki tüm türler ve başvurulan projeler gösterilir. Tür tarayıcısı bir **VS2010** projesi sisteminin dışından (örneğin, yeniden barındırılan bir iş akışı uygulamasında veya tek başına bir iş akışı dosyasında) başlatılmışsa, varsayılan olarak, uygulama etki alanında yüklü derlemelerin tümünün türleri gösterilir.
 
-Tür tarayıcı türleri, etkinlik Tasarımcısı geliştiriciler tarafından filtrelenebilir. Verilen herhangi bir etkinlik için yalnızca bir alt türleri görebilirsiniz. Örneğin, <xref:System.Activities.Statements.TryCatch> etkinliği yalnızca türler türetilen <xref:System.Exception> türü tarayıcıda görüntülenir.
+Tür tarayıcısındaki türler, etkinlik Tasarımcısı geliştiricilerine göre filtrelenebilir. Belirli bir etkinlik için yalnızca türlerin bir alt kümesini görebilirsiniz. Örneğin, <xref:System.Activities.Statements.TryCatch> etkinliğinde, tür tarayıcısında yalnızca <xref:System.Exception> türetilen türler gösterilir.
 
-## <a name="filtering-search-results-in-the-type-browser"></a>Türü tarayıcı arama sonuçlarını filtreleme
+## <a name="filtering-search-results-in-the-type-browser"></a>Arama sonuçlarını tür tarayıcısında filtreleme
 
-Türleri listesini **tür adı** kutusu daha kısa bir eşleştirme bulmak üzere daha fazla karakter türü olarak alır. Yalnızca fullyqualified adı yazdığınız dize ile başlayan türleri veya kısa adı yazdığınız dize ile başlayan türleri filtrelenen listede görünür.
+**Tür adı** kutusundaki türlerin listesi, bir eşleşme bulmak için daha fazla karakter yazdığınızda daha kısa olur. Yalnızca FullyQualified adı yazdığınız dize ile başlayan türler veya kısa adı yazdığınız dize ile başlayan ve filtrelenmiş listede görünen türler.
 
 Örneğin:
 
-1. Yazarak **işlemi** eşleşen <xref:System.OperationCanceledException> ama <xref:System.InvalidOperationException>. Eşleştirilecek <xref:System.InvalidOperationException>, System.I ya da geçersiz yazmaya başlayın.
+1. Yazma **işlemi** <xref:System.OperationCanceledException> eşleşir, ancak <xref:System.InvalidOperationException> eşleşmez. @No__t_0 eşleştirmek için, System. ı veya geçersiz yazmaya başlayın.
 
-2. Yazarak **genel** eşleşen <xref:System.GenericUriParser> ancak türlerini değil <xref:System.Collections.Generic> ad alanı. Türler için aranacak <xref:System.Collections.Generic> ad alanı, ad alanının tam adını yazın.
+2. **Genel** eşleşmeler yazmak <xref:System.GenericUriParser>, <xref:System.Collections.Generic> ad alanındaki türleri değil. @No__t_0 ad alanındaki türleri aramak için ad alanının tam adını yazın.
 
-## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>Tür Tarayıcı iletişim kutusunu kullanarak bir hizmet sözleşmesini seçme
+## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>Tarayıcı türü iletişim kutusunu kullanarak bir hizmet sözleşmesi seçme
 
-Bir hizmet sözleşme türünü seçerken, türü tarayıcı türleri yalnızca gösterir. <xref:System.ServiceModel.ServiceContractAttribute> özniteliği.
+Bir hizmet sözleşmesi türü seçerken tür tarayıcısı yalnızca <xref:System.ServiceModel.ServiceContractAttribute> özniteliğine sahip türleri gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

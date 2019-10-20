@@ -5,70 +5,70 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, best practices
 - code snippets, security
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42a6eec4b6478f9a789c81311fdfdec4e664cb8a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 8afb10d2fb5dcf99c63fb12ac624b904353d95b9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825956"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647762"
 ---
-# <a name="best-practices-for-using-code-snippets"></a>Kod parçacıkları için en iyi uygulamalar
+# <a name="best-practices-for-using-code-snippets"></a>Kod parçacıkları kullanmak için en iyi uygulamalar
 
-Kod parçacığı kodda bir şey yalnızca en basit yol gösterir. Çoğu uygulama için kod uygulaması uyacak şekilde değiştirilmesi gerekir.
+Kod parçacığındaki kod yalnızca bir şeyi yapmanın en temel yolunu gösterir. Çoğu uygulama için, kodun uygulamaya uyacak şekilde değiştirilmesi gerekir.
 
 ## <a name="handling-exceptions"></a>Özel durumları işleme
 
-Genellikle, kod parçacığı deneyin... Catch blokları catch ve tüm özel durumları rethrow. Bu, projeniz için doğru seçim olmayabilir. Her özel durum için yanıt birkaç yolu vardır. Örnekler için bkz [nasıl yapılır: Try/catch kullanarak özel bir durumu işlemek (C#)](/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch) ve [deneyin... Catch... Finally deyimi (Visual Basic)](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement).
+Genellikle kod parçacığı dene... Catch blokları, tüm özel durumları yakalar ve yeniden oluşturur. Bu, projeniz için doğru seçim olmayabilir. Her özel durum için, yanıt vermenin birkaç yolu vardır. Örnekler için bkz. [nasıl yapılır: try/catch kullanarak özel durum işleme (C#)](/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch) ve [TRY... Yakala... Finally ekstresi (Visual Basic)](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement).
 
 ## <a name="file-locations"></a>Dosya konumları
 
-Dosya konumları uygulamanıza uyum, aşağıdakiler hakkında düşünün:
+Dosya konumlarını uygulamanıza uyardığınızda, aşağıdakilere göz önünde bulundurun:
 
-- Erişilebilir bir konumda bulunuyor. Kullanıcılar, erişimi olmayabilir *Program dosyaları* uygulamayla dosyaların depolanması Mayıs iş dosyaları değil, bu nedenle bilgisayarının klasör.
+- Erişilebilir bir konum bulma. Kullanıcıların, bilgisayarın *Program Files* klasörüne erişimi olmayabilir, bu nedenle dosyaları uygulama dosyalarıyla depolamak çalışmayabilir.
 
-- Güvenli bir konumda bulunuyor. Dosya depolama kök klasöründe (*C:\\* ) güvenli değildir. Uygulama verileri için öneririz *uygulama verileri* klasör. Bireysel kullanıcı verileri için uygulama her kullanıcı için bir dosya oluşturabilirsiniz *belgeleri* klasör.
+- Güvenli bir konum bulma. Dosyaların kök klasörde depolanması (*C: \\* ) güvenli değildir. Uygulama verileri için *uygulama verileri* klasörünü öneririz. Uygulama, bireysel kullanıcı verileri için *Belgeler* klasöründeki her bir kullanıcı için bir dosya oluşturabilir.
 
-- Geçerli bir dosya adı kullanıyor. Kullanabileceğiniz <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> geçersiz dosya adları olasılığını azaltmak için denetimleri. Bir dosya kullanıcının seçtiği zaman ve kodunuzu dosyasını yöneten zaman arasında dosya silinebilir dikkat edin. Ayrıca, kullanıcı dosyaya yazmak için gerekli izinlere sahip.
+- Geçerli bir dosya adı kullanılıyor. Geçersiz dosya adlarının olasılığını azaltmak için <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> denetimlerini kullanabilirsiniz. Kullanıcının bir dosyayı seçtiği zaman ve kodunuzun dosyayı ne zaman kullandığı zaman arasında, dosyanın silinmiş olabileceğini unutmayın. Ayrıca, kullanıcının dosyaya yazma izni olmayabilir.
 
 ## <a name="security"></a>Güvenlik
 
-Nasıl bir kod parçacığı güvenlidir, kaynak kodunda kullanıldığı ve kodda olduğunda nasıl değiştirilir bağlıdır. Aşağıdaki liste, dikkate alınması gereken alanların birkaçını içerir.
+Bir parçacığı güvenli hale getirme, kaynak kodda kullanıldığı yere ve kodda olduktan sonra nasıl değiştirildiği üzerine bağlıdır. Aşağıdaki liste, göz önünde bulundurulması gereken birkaç alanı içerir.
 
 - Dosya ve veritabanı erişimi
 
-- Kod erişimi güvenliği
+- Kod erişim güvenliği
 
 - Kaynakları koruma (olay günlükleri, kayıt defteri)
 
 - Gizli dizileri depolama
 
-- Giriş doğrulanıyor
+- Girişleri doğrulama
 
-- Komut dosyası teknolojileri için veri geçirme
+- Verileri kodlama teknolojilerine geçirme
 
-Daha fazla bilgi için [uygulamalarının güvenliğini sağlama](../ide/securing-applications.md).
+Daha fazla bilgi için bkz. [uygulamaları güvenli hale getirme](../ide/securing-applications.md).
 
 ## <a name="downloaded-code-snippets"></a>İndirilen kod parçacıkları
 
-Visual Studio tarafından yüklenmiş IntelliSense kod parçacıkları kendisi içinde bir tehlike değildir. Ancak, bunlar uygulamanızda güvenlik risklerini oluşturabilirsiniz. Internet'ten indirilen kod parçacıkları gibi diğer tüm indirilen içeriği - işlemini çok dikkatli olunmalıdır.
+Visual Studio tarafından yüklenen IntelliSense kod parçacıkları kendi kendine güvenlik tehlikesi içinde değildir. Ancak, uygulamanızda güvenlik riskleri oluşturabilir. Internet 'ten indirilen kod parçacıkları, çok dikkatli bir şekilde indirilen diğer içerikler gibi değerlendirilmelidir.
 
-- Yalnızca güvendiğiniz sitelerden parçacıkları indirir ve güncel virüsten yazılımı kullanın.
+- Yalnızca güvendiğiniz sitelerden kod parçacıklarını indirin ve güncel virüs yazılımlarını kullanın.
 
-- Tüm indirilen kod parçacığı dosyaları Not Defteri veya Visual Studio XML düzenleyicisinde açın ve yüklemeden önce dikkatle gözden geçirin. Aşağıdaki sorunları arayın:
+- İndirilen tüm kod parçacığı dosyalarını Not defteri 'nde veya Visual Studio 'nun XML düzenleyicisinde açın ve yüklemeden önce dikkatlice gözden geçirin. Aşağıdaki sorunları arayın:
 
-  - Bunu, kod parçacığı sisteminize zarar verebilir. Kaynak kodu çalıştırmadan önce dikkatle okuyun.
+  - Kod parçacığı kodu, çalıştırırsanız sisteminize zarar verebilir. Kaynak kodunu çalıştırmadan önce dikkatle okuyun.
 
-  - Kod parçacığı dosyasını Yardım URL'si bloğunu bir kötü amaçlı bir komut dosyası yürütme veya rahatsız edici bir Web sitesi görüntüleme URL'leri içerebilir.
+  - Kod parçacığı dosyasının yardım URL bloğu, kötü amaçlı betik dosyası çalıştıran veya saldırgan bir Web sitesi görüntüleyen URL 'Leri içerebilir.
 
-  - Kod parçacığı sessizce projenize eklenir ve herhangi bir yere sisteminize yüklenebilir başvuruları içerebilir. Bu başvurular bilgisayarınıza kod parçacığını indirdiğiniz gelen indirilmiş olabilir. Kod parçacığı, ardından kötü amaçlı kod yürüten başvurusunda bir yönteme bir çağrı yapabilir. Tür bir saldırıya karşı korunmak için kod parçacığı dosyasını içeri aktarmalar ve başvurular bloklarını gözden geçirin.
+  - Kod parçacığında projenize sessizce eklenen ve sisteminizde herhangi bir yerden yüklenebilecek başvurular bulunabilir. Bu başvurular, kod parçacığını indirdiğiniz bilgisayardan bilgisayarınıza indirilmiş olabilir. Kod parçacığı daha sonra, başvuru içindeki kötü amaçlı kodu yürüten bir yönteme çağrı yapabilir. Bunu böyle bir saldırıya karşı korumak için, kod parçacığı dosyasının Içeri aktarmaları ve başvuru bloklarını gözden geçirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic IntelliSense kod parçacıkları](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
-- [Uygulamalarının güvenliğini sağlama](../ide/securing-applications.md)
+- [Uygulamaların güvenliğini sağlama](../ide/securing-applications.md)
 - [Kod parçacıkları](../ide/code-snippets.md)

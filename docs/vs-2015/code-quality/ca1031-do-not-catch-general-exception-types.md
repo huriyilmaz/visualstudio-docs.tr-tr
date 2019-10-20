@@ -1,5 +1,5 @@
 ---
-title: 'CA1031: Genel özel durum türlerini yakalamayın | Microsoft Docs'
+title: 'CA1031: genel özel durum türlerini yakalamayın | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DoNotCatchGeneralExceptionTypes
 ms.assetid: cbc283ae-2a46-4ec0-940e-85aa189b118f
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4588a949b4b6439c3f76270b0bcdab9cd52c23d9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2696446ee2b257b78559909c0cba672cded39943
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431225"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661890"
 ---
 # <a name="ca1031-do-not-catch-general-exception-types"></a>CA1031: Genel özel durum türlerini yakalamayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,30 +29,30 @@ ms.locfileid: "63431225"
 |-|-|
 |TypeName|DoNotCatchGeneralExceptionTypes|
 |CheckId|CA1031|
-|Kategori|Microsoft.Design|
-|Yeni Değişiklik|Bölünemez|
+|Kategori|Microsoft. Design|
+|Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
- Genel bir özel durum gibi <xref:System.Exception?displayProperty=fullName> veya <xref:System.SystemException?displayProperty=fullName> , yakalanan bir `catch` deyimi veya bir genel bir catch yan tümcesi gibi `catch()` kullanılır.
+ @No__t_0 veya <xref:System.SystemException?displayProperty=fullName> gibi genel bir özel durum `catch` ifadesinde yakalanır veya `catch()` gibi genel bir catch yan tümcesi kullanılır.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Genel özel durum yakalanmamalı.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için daha özel istisnaları yakalayın veya son ifade olarak genel özel durumu yeniden `catch` blok.
+ Bu kural ihlalini onarmak için, daha belirli bir özel durumu yakalayın veya `catch` bloğundaki son bildiri olarak genel özel durumu yeniden oluşturun.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan uyarıyı bastırmayın. Genel özel durum türlerini yakalamak çalışma zamanı sorunlarını kitaplık kullanıcısından gizleyebilir ve hata ayıklama daha zor hale getirebilir.
+ Bu kuraldan uyarıyı bastırmayın. Genel özel durum türlerini yakalama, kitaplık kullanıcısının çalışma zamanı sorunlarını gizleyebilir ve hata ayıklamayı daha zor hale getirebilirsiniz.
 
 > [!NOTE]
-> İle başlayarak [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)], ortak dil çalışma zamanı (CLR) erişim ihlali gibi yönetilen kod ve işletim sistemi ortaya bozuk durum özel durumlar artık teslim [!INCLUDE[TLA#tla_mswin](../includes/tlasharptla-mswin-md.md)], yönetilen kod tarafından işlenecek. Bir uygulamada derlemek istiyorsanız [!INCLUDE[net_v40_short](../includes/net-v40-short-md.md)] veya sonraki sürümler ve bakımını bozuk durum özel durumları işleme, uygulayabileceğiniz <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> öznitelik bozuk durum özel durumu işleyen yöntem.
+> @No__t_0 başlayarak, ortak dil çalışma zamanı (CLR) artık işletim sisteminde oluşan bozuk durum özel durumlarını ve yönetilen kod tarafından işlenmek üzere [!INCLUDE[TLA#tla_mswin](../includes/tlasharptla-mswin-md.md)] erişim ihlalleri gibi yönetilen kodu teslim eder. @No__t_0 veya sonraki sürümlerde bir uygulamayı derlemek ve bozulmuş durum özel durumlarının işlenmesini sürdürmek istiyorsanız, <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> özniteliğini bozuk durum özel durumunu işleyen yönteme uygulayabilirsiniz.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek bu kuralı ihlal eden bir tür ve doğru bir şekilde uygulayan bir tür gösterir `catch` blok.
+ Aşağıdaki örnek, bu kuralı ihlal eden bir türü ve `catch` bloğunu doğru bir şekilde uygulayan bir türü gösterir.
 
  [!code-cpp[FxCop.Design.ExceptionAndSystemException#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.ExceptionAndSystemException/cpp/FxCop.Design.ExceptionAndSystemException.cpp#1)]
  [!code-csharp[FxCop.Design.ExceptionAndSystemException#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ExceptionAndSystemException/cs/FxCop.Design.ExceptionAndSystemException.cs#1)]
  [!code-vb[FxCop.Design.ExceptionAndSystemException#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ExceptionAndSystemException/vb/FxCop.Design.ExceptionAndSystemException.vb#1)]
 
-## <a name="related-rules"></a>İlgili kuralları
+## <a name="related-rules"></a>İlgili kurallar
  [CA2200: Yığın ayrıntılarını korumak için yeniden fırlatma](../code-quality/ca2200-rethrow-to-preserve-stack-details.md)

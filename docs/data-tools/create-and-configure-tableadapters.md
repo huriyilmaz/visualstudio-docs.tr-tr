@@ -9,111 +9,111 @@ helpviewer_keywords:
 - data [Visual Studio], TableAdapters
 - data [Visual Studio], creating table adapters
 ms.assetid: 08630d69-0d6c-4e8f-b42d-2922f45f8415
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 026b670deb5beff42c927894ee9851ddb3ccc3ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f1403d61dd7a0d36401e449806fdafa6adc533b5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62567535"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648600"
 ---
 # <a name="create-and-configure-tableadapters"></a>TableAdapter’lar oluşturma ve yapılandırma
 
-TableAdapter, uygulamanızla veritabanı arasındaki iletişimi sağlar. Veritabanı, çalışma sorguları veya saklı yordamları bağlanmak ve ya da yeni bir veri döndürmeyen tablo veya mevcut bir dolgu <xref:System.Data.DataTable> döndürülen verilerle. TableAdapter ayrıca uygulamanızdan veritabanına güncelleştirilmiş veriler gönderebilirsiniz.
+TableAdapter, uygulamanızla veritabanı arasındaki iletişimi sağlar. Veritabanına bağlanır, sorguları veya saklı yordamları çalıştırır ve yeni bir veri tablosu döndürür ya da döndürülen verilerle mevcut bir <xref:System.Data.DataTable> doldurur. Ayrıca, TableAdapters güncelleştirilmiş verileri uygulamanızdan veritabanına geri gönderebilir.
 
-Aşağıdaki eylemlerden birini gerçekleştirdiğinizde TableAdapters sizin için oluşturulur:
+TableAdapters, aşağıdaki eylemlerden birini gerçekleştirdiğinizde sizin için oluşturulur:
 
-- Veritabanı nesneleri sürükleyin **Sunucu Gezgini** içine **veri kümesi Tasarımcısı**.
+- Veritabanı nesnelerini **Sunucu Gezgini** **veri kümesi Tasarımcısı**sürükleyin.
 
-- Veri Kaynağı Yapılandırma Sihirbazı'nı çalıştırın ve şunlardan birini seçin **veritabanı** veya **Web hizmeti** veri kaynağı türü.
+- Veri kaynağı Yapılandırma Sihirbazı 'nı çalıştırın ve **veritabanı** ya da **Web hizmeti** veri kaynağı türünü seçin.
 
-   ![Visual Studio'da veri kaynağı Yapılandırma Sihirbazı](media/data-source-configuration-wizard.png)
+   ![Visual Studio 'da veri kaynağı Yapılandırma Sihirbazı](media/data-source-configuration-wizard.png)
 
-Ayrıca yeni bir TableAdapter oluşturmak ve gelen bir TableAdapter sürükleyerek bir veri kaynağı ile yapılandırma **araç kutusu** için boş bir bölgede **veri kümesi Tasarımcısı** yüzeyi.
+Ayrıca yeni bir TableAdapter oluşturup bir TableAdapter 'ı **araç kutusundan** **veri kümesi Tasarımcısı** yüzeyinde boş bir bölgeye sürükleyerek bir veri kaynağıyla yapılandırabilirsiniz.
 
-TableAdapter bağdaştırıcıları için bir giriş için bkz [TableAdapter kullanarak veri kümelerini dolgu](../data-tools/fill-datasets-by-using-tableadapters.md).
+TableAdapters 'e giriş için bkz. [TableAdapters kullanarak veri kümelerini doldur](../data-tools/fill-datasets-by-using-tableadapters.md).
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="use-the-tableadapter-configuration-wizard"></a>TableAdapter Yapılandırma Sihirbazı'nı kullanma
+## <a name="use-the-tableadapter-configuration-wizard"></a>TableAdapter Yapılandırma Sihirbazı 'nı kullanma
 
-Çalıştırma **TableAdapter Yapılandırma Sihirbazı'nı** oluşturmak veya TableAdapter'ları ve bunların ilişkili DataTable düzenlemek için. Mevcut bir TableAdapter içinde sağ tıklayarak yapılandırabileceğiniz **veri kümesi Tasarımcısı**.
+TableAdapters ve ilişkili DataTable değerlerini oluşturmak veya düzenlemek için **TableAdapter Yapılandırma sihirbazını** çalıştırın. Mevcut bir TableAdapter 'ı **veri kümesi Tasarımcısı**sağ tıklayarak yapılandırabilirsiniz.
 
-![raddata tablo bağdaştırıcısı Yapılandırma Sihirbazı](../data-tools/media/raddata-table-adapter-configuration-wizard.png)
+![radveri tablo bağdaştırıcısı yapılandırma Sihirbazı](../data-tools/media/raddata-table-adapter-configuration-wizard.png)
 
-Araç kutusundan yeni bir TableAdapter sürüklerseniz, **veri kümesi Tasarımcısı** odak Sihirbazı başlar ve istemleri TableAdapter hangi veri belirtmek için kaynak bağlanmak için kullanılabilir. Sonraki sayfada, ne tür bir komutları veritabanı ile SQL deyimleri ya da saklı yordamlar için kullanmalısınız sihirbaz sorar. (Zaten bir veri kaynağı ile ilişkili olan bir TableAdapter'ı yapılandırıyorsanız, bu görmezsiniz.)
+Araç kutusundan yeni bir TableAdapter sürükleyip **veri kümesi Tasarımcısı** odak edildiğinde sihirbaz başlatılır ve TableAdapter 'ın hangi veri kaynağını bağlanacağı belirtmenizi ister. Bir sonraki sayfada, sihirbaz, SQL deyimleri ya da saklı yordamlar veritabanıyla iletişim kurmak için kullanması gereken komut türlerini ister. (Zaten bir veri kaynağıyla ilişkilendirilmiş bir TableAdapter yapılandırıyorsanız bunu göremezsiniz.)
 
-- Veritabanı için doğru izinlere sahip değilse temel alınan veritabanında yeni bir saklı yordam oluşturmak için bu seçeneği var. Bu izinlere sahip değilseniz, bu seçeneği olmayacaktır.
+- Veritabanı için doğru izinleriniz varsa, temel alınan veritabanında yeni bir saklı yordam oluşturma seçeneğiniz vardır. Bu izinlere sahip değilseniz bu bir seçenek değildir.
 
-- İçin mevcut saklı yordamları çalıştırmak de seçebilirsiniz **seçin**, **Ekle**, **güncelleştirme**, ve **Sil** komutları TableAdapter. Atanan saklı yordamı **güncelleştirme** komutu, örneğin, çalıştığı zaman `TableAdapter.Update()` yöntemi çağrılır.
+- Ayrıca, TableAdapter 'ın **Select**, **Insert**, **Update**ve **Delete** komutları için mevcut saklı yordamları çalıştırmayı da tercih edebilirsiniz. **Update** komutuna atanan saklı yordam, örneğin, `TableAdapter.Update()` yöntemi çağrıldığında çalıştırılır.
 
-Seçilen saklı yordamın parametreleri veri tablosunda karşılık gelen sütunlara eşleyin. Örneğin, depolanmış yordamınızdaki adlı bir parametre kabul eder `@CompanyName` için geçen `CompanyName` tablodaki sütun kümesini **kaynak sütunu** , `@CompanyName` parametresi `CompanyName`.
+Seçili saklı yordamdaki parametreleri veri tablosundaki karşılık gelen sütunlara eşleyin. Örneğin, saklı yordamınız tablodaki `CompanyName` sütununa geçtiğinde `@CompanyName` adlı bir parametreyi kabul ederse `@CompanyName` parametresinin **kaynak sütununu** `CompanyName` olarak ayarlayın.
 
 > [!NOTE]
-> SELECT komutu için atanan saklı yordamı, sihirbazın bir sonraki adımda isimlendirdiğiniz TableAdapter'ın yöntemi çağrılarak çalıştırılır. İçin varsayılan yöntemdir `Fill`, genellikle SELECT yordamı çalıştırmak için kullanılan kod, bu nedenle `TableAdapter.Fill(tableName)`. Varsayılan adı değiştirirseniz `Fill`, yedek `Fill` adıyla atayın ve "TableAdapter" TableAdapter'ın gerçek adıyla değiştirin (örneğin, `CustomersTableAdapter`).
+> SELECT komutuna atanan saklı yordam, sihirbazın bir sonraki adımında adı ettiğiniz TableAdapter 'ın yöntemi çağırarak çalıştırılır. Varsayılan yöntem `Fill`, bu nedenle genellikle SELECT yordamını çalıştırmak için kullanılan kod `TableAdapter.Fill(tableName)`. @No__t_0 varsayılan adı değiştirirseniz, `Fill` adını atadığınız adla değiştirin ve "TableAdapter" değerini TableAdapter 'ın gerçek adıyla değiştirin (örneğin, `CustomersTableAdapter`).
 
-- Seçme **güncelleştirmeleri doğrudan veritabanına göndermek için metotlar Oluştur** seçeneği ayarını eşdeğerdir `GenerateDBDirectMethods` özelliği true. Özgün SQL deyimi yeterli bilgi sağlamaz veya sorgu güncelleştirilebilen bir sorgu değil seçeneği kullanılamaz. Bu durum, örneğin, içinde ortaya çıkabilir **katılın** sorgular ve tek bir (sayı) değerini döndüren sorgular.
+- **Güncelleştirmeleri doğrudan veritabanına göndermek Için oluşturma yöntemleri** seçildiğinde `GenerateDBDirectMethods` özelliği true olarak ayarlanmasına eşdeğerdir. Özgün SQL açıklaması yeterli bilgi sağlamıyorsa veya sorgu güncelleştirilebilir bir sorgu olmadığında bu seçenek kullanılamaz. Bu durum, örneğin, bir tek (skaler) değer döndüren sorguları ve sorguları **birleştirmek** gibi meydana gelebilir.
 
-**Gelişmiş Seçenekler** sihirbazda olanak sağlar:
+Sihirbazdaki **Gelişmiş Seçenekler** şunları sağlar:
 
-- Göre tanımlanan bir SELECT deyimi INSERT, UPDATE ve DELETE deyimleri oluşturmasını **oluşturmak SQL deyimleri** sayfası
-- İyimser eşzamanlılığı kullanın
-- Veri tablosu ekleme sonrasında yenilemek etkinleştirilip etkinleştirilmeyeceğini belirtin ve UPDATE ifadeleriyle çalıştırılır
+- **Generate SQL deyimleri** SAYFASıNDA tanımlanan select deyimini temel alan INSERT, Update ve delete deyimlerini oluştur
+- İyimser eşzamanlılık kullanma
+- INSERT ve UPDATE deyimlerinin çalıştırıldıktan sonra veri tablosunun yenilenip yenilenmeyeceğini belirtin
 
-## <a name="configure-a-tableadapters-fill-method"></a>TableAdapter bağdaştırıcısının dolgu yöntemini yapılandırma
+## <a name="configure-a-tableadapters-fill-method"></a>TableAdapter 'ın Fill metodunu yapılandırma
 
-Bazen TableAdapter bağdaştırıcısının tablo şemasını değiştirmek isteyebilirsiniz. Bunu yapmak için TableAdapter bağdaştırıcısının birincil değiştirme `Fill` yöntemi. TableAdapter'ları ile birincil oluşturulan `Fill` ilişkili veri tablosunun şemasını tanımlayan yöntemi. Birincil `Fill` yöntemi sorgu veya saklı yordamı TableAdapter bağdaştırıcısının özgün yapılandırmasında, girdiğiniz dayanır. Veri tablosu veri kümesi Tasarımcısı'nda ilk (en üstte) yöntem var.
+Bazen TableAdapter tablosunun şemasını değiştirmek isteyebilirsiniz. Bunu yapmak için, TableAdapter 'ın birincil `Fill` yöntemini değiştirirsiniz. TableAdapters, ilişkili veri tablosunun şemasını tanımlayan bir birincil `Fill` yöntemiyle oluşturulur. Birincil `Fill` yöntemi, TableAdapter 'ı ilk kez yapılandırdığınızda girdiğiniz sorguyu veya saklı yordamı temel alır. Veri kümesi Tasarımcısı ' nda veri tablosu altındaki ilk (en üst) yöntemdir.
 
-![TableAdapter ile birden çok sorgu](../data-tools/media/tableadapter.gif)
+![Birden çok sorguya sahip TableAdapter](../data-tools/media/tableadapter.gif)
 
-TableAdapter bağdaştırıcısına yaptığınız tüm değişiklikler ana `Fill` yöntemi ilişkili veri tablosunun şemada yansıtılır. Örneğin, ana sorgudan bir sütun kaldırılması `Fill` yöntemi ilişkili veri tablosundan da sütunu kaldırır. Ayrıca, ana sütunu kaldırmak `Fill` yöntemi herhangi bir ek sorgularından sütunu için TableAdapter kaldırır.
+TableAdapter 'ın Main `Fill` yönteminde yaptığınız tüm değişiklikler, ilişkili veri tablosunun şemasına yansıtılır. Örneğin, ana `Fill` yöntemindeki sorgudan bir sütunu kaldırmak, sütunu ilişkili veri tablosundan da kaldırır. Ayrıca, ana `Fill` yönteminden sütunu kaldırmak, sütunu o TableAdapter için ek sorgulardan kaldırır.
 
-Oluşturun ve ek sorgular için TableAdapter'ı düzenlemek için TableAdapter sorgu Yapılandırma Sihirbazı'nı kullanabilirsiniz. Sürece bir skalar değer döndürürler bu ek sorgular tablonun şemasına uygun olmalıdır.  Her ek sorgu, belirttiğiniz bir adı vardır.
+TableAdapter sorgu Yapılandırma Sihirbazı 'nı kullanarak TableAdapter için ek sorgular oluşturabilir ve düzenleyebilirsiniz. Bu ek sorgular, skaler bir değer döndürmedikleri müddetçe tablo şemasına uymalıdır.  Her ek sorgunun belirttiğiniz bir adı vardır.
 
-Aşağıdaki örnekte adlı ek bir sorguyu çağırmak nasıl gösterir `FillByCity`:
+Aşağıdaki örnek, `FillByCity` adlı ek bir sorgunun nasıl çağrılacağını göstermektedir:
 
 `CustomersTableAdapter.FillByCity(NorthwindDataSet.Customers, "Seattle")`
 
-### <a name="to-start-the-tableadapter-query-configuration-wizard-with-a-new-query"></a>Yeni bir sorgu ile TableAdapter sorgu Yapılandırma Sihirbazı'nı başlatmak için
+### <a name="to-start-the-tableadapter-query-configuration-wizard-with-a-new-query"></a>TableAdapter sorgu Yapılandırma Sihirbazı 'nı yeni bir sorgu ile başlatmak için
 
-1. Kümenizde açın **veri kümesi Tasarımcısı**.
+1. Veri kümenizi **veri kümesi Tasarımcısı**açın.
 
-2. Yeni bir sorgu oluşturuyorsanız, sürükleyin bir **sorgu** nesnesinden **veri kümesi** sekmesinde **araç kutusu** üzerine bir <xref:System.Data.DataTable>, ya da seçin **Sorgu Ekle**TableAdapter bağdaştırıcısının kısayol menüsünden. Sürükleyebilirsiniz bir **sorgu** boş bir alanı nesneye **veri kümesi Tasarımcısı**, TableAdapter bağdaştırıcısının ilişkili bir olmadan oluşturan <xref:System.Data.DataTable>. Bu sorgular yalnızca tek (skaler) değerler ya da çalışma güncelleştirme, ekleme, döndürür veya veritabanı komutları SİLEBİLİRSİNİZ.
+2. Yeni bir sorgu oluşturuyorsanız, bir **sorgu** nesnesini **araç kutusu** **sekmesinden bir** <xref:System.Data.DataTable> sürükleyin veya TableAdapter 'ın kısayol menüsünden **Sorgu Ekle** ' yi seçin. Ayrıca, ilişkili bir <xref:System.Data.DataTable> olmayan bir TableAdapter oluşturan **veri kümesi Tasarımcısı**boş bir alanına bir **sorgu** nesnesi sürükleyebilirsiniz. Bu sorgular yalnızca tek (skaler) değerler döndürebilir veya veritabanına karşı UPDATE, INSERT veya DELETE komutlarını çalıştırabilir.
 
-3. Üzerinde **veri bağlantınızı seçin** ekran, seçin veya sorguyu bir bağlantı oluşturun.
-
-    > [!NOTE]
-    > Bu ekran Tasarımcısı'nı kullanmak için uygun bağlantı belirleyemediğinde veya bağlantı kullanılabilir olduğunda yalnızca görünür.
-
-4. Üzerinde **komut türü seçin** ekranında, verileri veritabanından getirmekten aşağıdaki yöntemleri arasından seçim:
-
-    - **SQL deyimlerini** veritabanınızdan verileri seçmek için bir SQL deyimi yazabileceğiniz yeri sağlar.
-
-    - **Yeni saklı yordam oluşturma** etkinleştirir, sihirbaz için oluşturduğunuz yeni bir saklı yordam'ı (veritabanında) belirtilen SELECT deyiminde göre.
-
-    - **Mevcut saklı yordamlar kullanma** , varolan bir saklı yordam sorgu çalıştırırken çalıştırmanızı sağlar.
-
-### <a name="to-start-the-tableadapter-query-configuration-wizard-on-an-existing-query"></a>Varolan bir sorguyu temel TableAdapter sorgu Yapılandırma Sihirbazı'nı başlatmak için
-
-- Varolan bir TableAdapter sorgu düzenliyorsanız, sorguyu sağ tıklayın ve ardından **yapılandırma** kısayol menüsünden.
+3. **Veri bağlantınızı seçin** ekranında, sorgunun kullanacağı bağlantıyı seçin veya oluşturun.
 
     > [!NOTE]
-    > TableAdapter bağdaştırıcısının ana sorguda sağ TableAdapter yeniden yapılandırır ve <xref:System.Data.DataTable> şema. Bir TableAdapter üzerindeki ek bir sorgu sağ tıklayarak, ancak yalnızca seçilen sorgu yapılandırır. **TableAdapter Yapılandırma Sihirbazı'nı** TableAdapter tanımı yeniden yapılandırır ancak **TableAdapter sorgu Yapılandırma Sihirbazı'nı** yalnızca seçili sorguyu yeniden yapılandırır.
+    > Bu ekran yalnızca Tasarımcı kullanılacak uygun bağlantıyı belirleyeleyemiyorsa veya hiçbir bağlantı yoksa görüntülenir.
 
-### <a name="to-add-a-global-query-to-a-tableadapter"></a>Bir TableAdapter için genel bir sorgu eklemek için
+4. **Bir komut türü seçin** ekranında, veritabanından veri getirme yöntemlerinden aşağıdaki yöntemlerden birini seçin:
 
-- Genel sorgular tek bir (sayı) değerini veya herhangi bir değer döndüren SQL sorgular kullanılmaktadır. Genellikle, genel işlevler ekleme, güncelleştirme ve silme gibi veritabanı işlemlerini gerçekleştirir. Bunlar ayrıca bir tablo ya da belirli bir sırada tüm öğeler için Toplam ücret müşterilerin sayısını gibi bilgileri toplayın.
+    - **SQL deyimlerini kullanın** , veritabanınızdaki verileri seçmek IÇIN bir SQL deyimi yazmanız sağlar.
 
-     Sürükleyerek genel sorgular ekleme bir **sorgu** nesnesinden **veri kümesi** sekmesinde **araç kutusu** boş bir alanı üzerine **veri kümesi Tasarımcısı**.
+    - **Yeni saklı yordam oluştur** , SIHIRBAZıN belirtilen SELECT ifadesine göre yeni bir saklı yordam (veritabanında) oluşturmasını sağlar.
 
-- Örneğin, istenen bir görevi gerçekleştiren bir sorgu sağlamanız `SELECT COUNT(*) AS CustomerCount FROM Customers`.
+    - **Mevcut saklı yordamları Kullan** , sorguyu çalıştırırken mevcut bir saklı yordamı çalıştırmanızı sağlar.
+
+### <a name="to-start-the-tableadapter-query-configuration-wizard-on-an-existing-query"></a>Mevcut bir sorguda TableAdapter sorgu Yapılandırma Sihirbazı 'nı başlatmak için
+
+- Mevcut bir TableAdapter sorgusunu düzenliyorsanız, sorguyu sağ tıklatın ve ardından kısayol menüsünden **Yapılandır** ' ı seçin.
 
     > [!NOTE]
-    > Sürükleyerek bir **sorgu** doğrudan nesne **veri kümesi Tasarımcısı** yalnızca skaler (tek) değer döndüren bir yöntem oluşturur. Sorgu veya saklı yordam seçtiğiniz birden çok tek bir değer döndürebilir sırasında sihirbaz tarafından oluşturulan yöntemi yalnızca tek bir değer döndürür. Örneğin, sorgu döndürülen verileri ilk satırının ilk sütununu döndürebilir.
+    > TableAdapter 'ın ana sorgusuna sağ tıklamak TableAdapter ve <xref:System.Data.DataTable> şemasını yeniden yapılandırır. TableAdapter üzerinde ek bir sorguya sağ tıklanması, ancak yalnızca seçili sorguyu yapılandırır. TableAdapter **Yapılandırma Sihirbazı** TableAdapter tanımını yeniden yapılandırır, ancak **TableAdapter sorgu Yapılandırma Sihirbazı** yalnızca seçili sorguyu yeniden yapılandırır.
+
+### <a name="to-add-a-global-query-to-a-tableadapter"></a>TableAdapter 'a genel sorgu eklemek için
+
+- Genel sorgular, tek (skaler) bir değer veya değer döndürmeyen SQL sorgulardır. Genellikle, genel işlevler ekleme, güncelleştirme ve silme gibi veritabanı işlemleri gerçekleştirir. Ayrıca, bir tablodaki müşterilerin sayısı veya belirli bir sırada tüm öğeler için toplam ücretler gibi bilgileri toplar.
+
+     Bir **sorgu** nesnesini **araç** **kümesi** sekmesinden **veri kümesi Tasarımcısı**boş bir alana sürükleyerek genel sorgular eklersiniz.
+
+- İstenen görevi gerçekleştiren bir sorgu sağlayın, örneğin, `SELECT COUNT(*) AS CustomerCount FROM Customers`.
+
+    > [!NOTE]
+    > Bir **sorgu** nesnesini doğrudan **veri kümesi Tasarımcısı** sürüklemek yalnızca skaler (tek) bir değer döndüren bir yöntem oluşturur. Seçtiğiniz sorgu veya saklı yordam tek bir değerden daha fazla döndürebileceğinden, sihirbaz tarafından oluşturulan yöntem yalnızca tek bir değer döndürür. Örneğin, sorgu döndürülen verilerin ilk satırının ilk sütununu döndürebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,23 +1,23 @@
 ---
-title: Veri çözümleri geliştirin
-description: Visual Studio'da .NET araçları, SQL Server veri araçları, Azure Data Lake, Azure HDInsight ve Azure akış analizi dahil olmak üzere, veri çözümleri geliştirme için farklı araçlar hakkında bilgi edinin.
+title: Veri çözümleri geliştirme
+description: .NET araçları, SQL Server Veri Araçları, Azure Data Lake, Azure HDInsight ve Azure Akış Analizi dahil olmak üzere Visual Studio 'da veri çözümleri geliştirmeye yönelik farklı araçlar hakkında bilgi edinin.
 layout: LandingPage
 ms.date: 01/01/2018
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 ms.topic: landing-page
 ms.workload:
 - data-storage
-ms.openlocfilehash: 768d3d1f130c3ef7b81da9706559e9d6b5f159ee
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 38b0d25539b4fe02d81463e9bc4e481c3b45010e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715047"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648331"
 ---
-# <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Veri araçları, veri çözümleri geliştirmek üzere Visual Studio'da kullanın.
+# <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Veri çözümleri geliştirmek için Visual Studio 'da veri araçları kullanma
 
-SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini test etmek ve geliştirmek için Visual Studio'da veri araçlarını kullanmayı öğrenin.
+SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini geliştirmek ve test etmek için Visual Studio 'da veri araçları 'nı nasıl kullanacağınızı öğrenin.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -33,7 +33,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini test etme
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Visual Studio ve .NET hakkında bilgi edinin&#39;s araçları ve API desteği veri uygulamaları geliştirmek için</h3>
+                        <h3>Visual Studio ve .NET&#39;s araçları ve veri uygulamaları GELIŞTIRMEYE yönelik API desteği hakkında bilgi edinin</h3>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini test etme
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Tasarlama, dağıtma ve SQL Server veri araçları ile veritabanlarını koruma hakkında bilgi edinin</h3>
+                        <h3>SQL Server Veri Araçları veritabanlarını tasarlama, dağıtma ve sürdürme hakkında bilgi edinin</h3>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini test etme
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>U-SQL ve .NET kullanarak Azure Data Lake ile büyük veri uygulamaları geliştirme hakkında bilgi edinin</h3>
+                        <h3>Azure Data Lake kullanarak U-SQL ve .NET ile büyük veri uygulamaları geliştirme hakkında bilgi edinin</h3>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini test etme
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Azure HDInsight üzerinde Hadoop ile Hive sorguları çalıştırma hakkında bilgi edinin</h3>
+                        <h3>Azure HDInsight 'ta Hadoop ile Hive sorguları çalıştırma hakkında bilgi edinin</h3>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@ SQL Server, Azure Data Lake veya Hadoop kullanarak veri çözümlerini test etme
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Azure akış Analizi ile neredeyse gerçek zamanlı büyük veri çözümleri geliştirme hakkında bilgi edinin</h3>
+                        <h3>Azure Akış Analizi ile neredeyse gerçek zamanlı zaman büyük veri çözümleri geliştirme hakkında bilgi edinin</h3>
                     </div>
                 </div>
             </div>

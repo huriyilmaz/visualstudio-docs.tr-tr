@@ -6,15 +6,15 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 64674976-841f-43cb-8e61-0645c8a89eec
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cd491ea0a17bcc0a4fccc0ade205736daae552d5
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: a87f84a945d9d79f6d481f7bcc9e656f7ec7bcbd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871864"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646144"
 ---
 # <a name="invoking-text-transformation-in-a-vs-extension"></a>Bir VS Uzantısında Metin Dönüştürmeyi Çağırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,9 +41,9 @@ string result = t4.ProcessTemplate(filePath, System.IO.File.ReadAllText(filePath
 ## <a name="passing-parameters-to-the-template"></a>Parametreleri şablona geçirme
  Parametreleri şablona geçirebilirsiniz. Şablon içinde, `<#@parameter#>` yönergesini kullanarak parametre değerlerini alabilirsiniz.
 
- Parametre türü için, seri hale getirilebilen veya sıralanabilen bir tür kullanmalısınız. Diğer bir deyişle, türü ile <xref:System.SerializableAttribute>bildirilmelidir veya ' den <xref:System.MarshalByRefObject>türetilmiş olmalıdır. Bu kısıtlama gereklidir çünkü metin şablonu ayrı bir AppDomain içinde yürütülür. **System. String** ve **System. Int32** gibi tüm yerleşik türler seri hale getirilebilir.
+ Parametre türü için, seri hale getirilebilen veya sıralanabilen bir tür kullanmalısınız. Diğer bir deyişle, tür <xref:System.SerializableAttribute> ile bildirilmelidir veya <xref:System.MarshalByRefObject> türetilmesi gerekir. Bu kısıtlama gereklidir çünkü metin şablonu ayrı bir AppDomain içinde yürütülür. **System. String** ve **System. Int32** gibi tüm yerleşik türler seri hale getirilebilir.
 
- Parametre değerlerini geçirmek için, çağıran kod, `Session` sözlükte ya da <xref:System.Runtime.Remoting.Messaging.CallContext>içinde değer yerleştirebilir.
+ Parametre değerlerini geçirmek için, çağıran kod `Session` sözlüğünde ya da <xref:System.Runtime.Remoting.Messaging.CallContext> bir değer yerleştirebilir.
 
  Aşağıdaki örnek bir kısa test şablonunu dönüştürmek için her iki yöntemi kullanmaktadır:
 
@@ -82,7 +82,7 @@ string result = t4.ProcessTemplate("",
 ## <a name="error-reporting-and-the-output-directive"></a>Hata Raporlama ve Çıkış Yönergesi
  İşlem sırasında ortaya çıkan hatalar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata penceresinde görüntülenir. Ayrıca, [ITextTemplatingCallback](/previous-versions/visualstudio/visual-studio-2012/bb932397(v=vs.110))uygulayan bir geri çağırma belirterek hatalarla ilgili bildirim alabilirsiniz.
 
- Sonuç dizesini bir dosyaya yazmak istiyorsanız, şablondaki `<#@output#>` yönergede hangi dosya uzantısının ve kodlamasının belirtildiklerini bilmeniz gerekebilir. Bu bilgiler, geri çağırmanıza da geçirilir. Daha fazla bilgi için bkz. [T4 çıkış yönergesi](../modeling/t4-output-directive.md).
+ Sonuç dizesini bir dosyaya yazmak istiyorsanız, şablondaki `<#@output#>` yönergesinde hangi dosya uzantısının ve kodlamasının belirtildiklerini bilmeniz gerekebilir. Bu bilgiler, geri çağırmanıza da geçirilir. Daha fazla bilgi için bkz. [T4 çıkış yönergesi](../modeling/t4-output-directive.md).
 
 ```csharp
 void ProcessMyTemplate(string MyTemplateFile)
@@ -134,14 +134,14 @@ class T4Callback : ITextTemplatingCallback
 Sample text.
 ```
 
- Derleyici Uyarısı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata penceresinde görünür ve aynı zamanda öğesine `ErrorCallback`bir çağrı oluşturacaktır.
+ Derleyici Uyarısı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata penceresinde görünür ve ayrıca `ErrorCallback` bir çağrı oluşturur.
 
 ## <a name="reference-parameters"></a>Başvuru parametreleri
- Öğesinden <xref:System.MarshalByRefObject>türetilmiş bir parametre sınıfını kullanarak değerleri bir metin şablonundan geçirebilirsiniz.
+ @No__t_0 türetilmiş bir parametre sınıfını kullanarak değerleri bir metin şablonundan geçirebilirsiniz.
 
 ## <a name="related-topics"></a>İlgili Konular
- Önceden işlenmiş bir metin şablonundan metin oluşturmak için: Oluşturulan sınıfın `TransformText()` yöntemini çağırın. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ Önceden işlenmiş bir metin şablonundan metin oluşturmak için: oluşturulan sınıfın `TransformText()` yöntemini çağırın. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
- Bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantının dışında metin oluşturmak için: Özel bir ana bilgisayar tanımlayın. Daha fazla bilgi için [özel konak kullanarak metin şablonlarını işleme](../modeling/processing-text-templates-by-using-a-custom-host.md).
+ @No__t_0 uzantısı dışında metin oluşturmak için: özel bir konak tanımlayın. Daha fazla bilgi için bkz. [özel bir konak kullanarak metin şablonlarını işleme](../modeling/processing-text-templates-by-using-a-custom-host.md).
 
- Daha sonra derlenebilecek ve yürütülebilecek kaynak kodu oluşturmak için: [Itextşablon](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110))oluşturma 'Nın [PreprocessTemplate](/previous-versions/visualstudio/visual-studio-2012/ee844321(v=vs.110)) metodunu çağırın.
+ Daha sonra derlenebilecek ve yürütülebilecek kaynak kodu oluşturmak için: [ıtextşablon](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110))oluşturma 'Nın [PreprocessTemplate](/previous-versions/visualstudio/visual-studio-2012/ee844321(v=vs.110)) metodunu çağırın.

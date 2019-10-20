@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama Adımlama seçenekleri (eski) | Microsoft Docs
+title: Hata ayıklama atlama seçenekleri (eski) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -12,29 +12,28 @@ helpviewer_keywords:
 - instance stepping
 ms.assetid: 3e9e3041-68c7-4f16-9bd6-da5e5144744b
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b1f0761ba750146ce7f8cc52e6992dae689f7779
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 443cbac0ea9d74c61f24d6714162ec08e2906a62
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976957"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656873"
 ---
 # <a name="debug-stepping-options-legacy"></a>Hata Ayıklama Adımlama Seçenekleri (Eski)
-Bu konu, hata ayıklamak açıklar [!INCLUDE[wf](../includes/wf-md.md)] eşzamanlı etkinliğin eski uygulamaları [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek gerektiğinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].  
-  
- Ne zaman hata ayıklamasını yaptığınız gibi eş zamanlı yürütme olan eski etkinlikler **ParallelActivity** veya **ConditionedActivityGroup**, kodunuzda adım adım ilerleyin için aşağıdaki iki seçenekten birini kullanabilirsiniz .  
-  
-- **Adımlama dal.** Adım adım ve belirli bir dala bileşik bir etkinlik gibi hata ayıklama Adımlama bu modu sağlar **ParallelActivity** veya **ConditionalActivityGroup** etkinlik. Hata ayıklamak için bu seçeneği kullandığınızda, denetiminde bir değişikliği eş zamanlı yürütme iş akışındaki diğer etkinliklerin nedeniyle oluştuğunu olduğunu fark etmez. Hata ayıklayıcı tek adımlarında size etkinlikler, diğer etkinlikler iş akışı ile eşzamanlı olarak yürütülmesi sırasında şu anda seçili dal. Örneğin, varsayılan olarak, en soldaki dalda bir **ParallelActivity** etkinliği ve ilk alt etkinliğini bir **ConditionedActivityGroup** etkinliği atlamak için kullanılır. Kullanıcı diğer dal ya da alt etkinlik hata ayıklama ilgileniyor, açık bir kesme noktası, dal ya da alt etkinlik yerleştirilmelidir. Adımlama, kesme noktası tetiklendiğinde dalında Gerçekleştirdiğim eder.  
-  
-- **Adımlama örneği.** Bu mod, Adımlama, adım adım ilerleyin ve etkinliklerini iş akışı içinde eşzamanlı olarak yürütülmesi hata ayıklama olanak tanır. Bu seçenek ile bir değişiklik denetimi etkinlikleri iş akışı içinde çalıştırmak aynı anda çalıştırılırken oluştuğunu fark edeceksiniz.  
-  
-  Varsayılan olarak, dal Adımlama seçeneğini seçtiyseniz ve kullanıcılar eski iş akışı hata ayıklama sırasında iki seçenek arasında geçiş yapabilir.  
-  
-  Eski durum makine iş akışları hata ayıklama sırasında seçeneği Adımlama örneği seçmeniz gerekir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Eski iş akışlarında hata ayıklama](../workflow-designer/debugging-legacy-workflows.md)   
- [Nasıl yapılır: Hata Ayıklama Adımlama Seçeneğini Değiştirme (Eski)](../workflow-designer/how-to-change-the-debug-stepping-option-legacy.md)
+Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] eşzamanlı etkinlikleri olan [!INCLUDE[wf](../includes/wf-md.md)] uygulamalarda hata ayıklama işlemleri açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+
+ **ParallelActivity** veya **ConditionedActivityGroup**gibi eşzamanlı yürütmeye sahip eski etkinliklerden hata ayıklaması yaparken, kodunuzda ilerlemek için aşağıdaki iki seçenekten birini kullanabilirsiniz.
+
+- **Dal Adımlama.** Bu Adımlama modu, bir bileşik etkinliğin **Paralellactivity** veya **ConditionalActivityGroup** etkinliği gibi belirli bir dalında ilerlemenize ve hata ayıklamanıza olanak sağlar. Hata ayıklamak için bu seçeneği kullandığınızda, bir denetimdeki değişikliğin iş akışındaki diğer etkinliklerin eşzamanlı yürütmesi nedeniyle oluştuğunu fark edeceksiniz. Hata ayıklayıcı, yalnızca şu anda seçili olan daldaki etkinliklere yönelik adımları izleyerek iş akışındaki diğer etkinlikler eşzamanlı olarak yürütülemeyebilir. Örneğin, varsayılan olarak, bir **ParallelActivity** etkinliğinin en sol dalı ve bir **ConditionedActivityGroup** etkinliğinin ilk alt etkinliği Adımlama için kullanılır. Kullanıcı başka bir dalın veya alt etkinliğin hatalarını ayıklamaya ilgileniyorsa, bu dala veya alt etkinliğe açık bir kesme noktası yerleştirilmesi gerekir. Kesme noktası tetiklendiğinde, bu dalda adım devam eder.
+
+- **Örnek Adımlama.** Bu Adımlama modu, iş akışında eşzamanlı olarak yürütülen etkinlikleri ilerlemenize ve hata ayıklamanıza olanak sağlar. Bu seçenekle, iş akışı içinde eşzamanlı olarak yürütülen etkinlikler çalıştırıldığında denetimdeki bir değişikliğin gerçekleştiğini fark edeceksiniz.
+
+  Varsayılan olarak, dal adımla seçeneği seçilidir ve kullanıcılar eski bir iş akışında hata ayıklarken iki seçenek arasında geçiş yapabilir.
+
+  Eski durum makinesi iş akışlarının hatalarını ayıklarken örnek adımlamayı seçmeniz gerekir.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Eski Iş akışlarında hata ayıklama](../workflow-designer/debugging-legacy-workflows.md) [nasıl yapılır: hata ayıklama adımlamayı değiştirme seçeneği (eski)](../workflow-designer/how-to-change-the-debug-stepping-option-legacy.md)

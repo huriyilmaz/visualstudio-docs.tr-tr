@@ -11,25 +11,25 @@ helpviewer_keywords:
 - icons [Visual Studio], Image Library
 - bitmaps [Visual Studio], Image Library
 ms.assetid: f7a2e7c8-3b9f-4f8e-a6a8-000d72e3811d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aee70ea2c0463b56f7f82093087ec5a629aba53e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fd6cb64c3dad56c291b229dfee6cc2816e574b69
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62892898"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634834"
 ---
 # <a name="the-visual-studio-image-library"></a>Visual Studio görüntü kitaplığı
 
-Visual Studio görüntü kitaplığı, Microsoft Visual Studio, Microsoft Windows, Office sistemi ve diğer Microsoft yazılımlarında görünen uygulama görüntülerini içerir. Bu 1000'den fazla görüntü kümesi Microsoft yazılımıyla görsel olarak tutarlı olan uygulamalar oluşturmak için kullanılabilir.
+Visual Studio Görüntü Kitaplığı Microsoft Visual Studio, Microsoft Windows, Office sistemi ve diğer Microsoft yazılımlarında görünen uygulama görüntülerini içerir. Bu 1.000 ' den fazla görüntü, Microsoft yazılımlarıyla görsel olarak tutarlı görünen uygulamalar oluşturmak için kullanılabilir.
 
-[Visual Studio görüntü kitaplığı'nı indirin](http://go.microsoft.com/fwlink/p/?LinkId=275090)
+[Visual Studio Görüntü Kitaplığı 'nı indirin](http://go.microsoft.com/fwlink/p/?LinkId=275090)
 
-Görüntü kitaplığı beş kategoriye ayrılmıştır: Ortak öğeler, Eylemler, ek açıklamalar, simgeler ve nesneler. Benioku dosyaları ortak öğeler ve simge türleri için PDF biçiminde dahil edilir. Bunlar, bu görüntüler, uygun şekilde uygulamalarınızda kullanma hakkında bilgi içerir.
+Görüntü Kitaplığı beş kategoriye ayrılmıştır: ortak öğeler, Eylemler, ek açıklamalar, simgeler ve nesneler. Benioku dosyaları, ortak öğeler ve simge türleri için PDF biçiminde bulunur. Bu görüntülerin uygulamalarınızda uygun şekilde nasıl kullanılacağına ilişkin bilgiler içerirler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

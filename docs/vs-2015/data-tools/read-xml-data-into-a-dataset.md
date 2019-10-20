@@ -1,5 +1,5 @@
 ---
-title: Okuma XML veri kümesine | Microsoft Docs
+title: XML verilerini bir veri kümesine okuma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -20,233 +20,230 @@ helpviewer_keywords:
 - datasets [Visual Basic], reading XML data
 ms.assetid: fae72958-0893-47d6-b3dd-9d42418418e4
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64a5edbec2f9f482981002e609117996f0080e56
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: c34fb87c02ff60d9b28c43130d6fbf3a12e70349
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825888"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652897"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>Bir veri kümesinin içine XML verileri okuma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-ADO.NET ile XML verileri çalışmak için basit yöntemler sağlar. Bu kılavuzda, bir veri kümesine XML veri yükleyen bir Windows uygulaması oluşturun. Veri kümesi ardından görüntülenen bir <xref:System.Windows.Forms.DataGridView> denetimi. Son olarak, bir XML Şeması XML dosyasının içeriğine göre metin kutusunda görüntülenir.  
-  
- Bu izlenecek yol, beş ana adımdan oluşur:  
-  
-1. Yeni proje oluşturma  
-  
-2. Dataset nesnesine okumak için bir XML dosyası oluşturma  
-  
-3. Kullanıcı arabirimi oluşturma  
-  
-4. İçinde görüntüleyen veri kümesi oluşturma ve XML dosyası okunurken bir <xref:System.Windows.Forms.DataGridView> denetimi  
-  
-5. XML şeması görüntülemek için kod ekleme temel XML dosyasında bir <xref:System.Windows.Forms.TextBox> denetimi  
-  
+ADO.NET XML verileriyle çalışmak için basit yöntemler sağlar. Bu kılavuzda, XML verilerini bir veri kümesine yükleyen bir Windows uygulaması oluşturacaksınız. Veri kümesi daha sonra bir <xref:System.Windows.Forms.DataGridView> denetiminde görüntülenir. Son olarak, XML dosyasının içeriğini temel alan bir XML şeması metin kutusunda görüntülenir.
+
+ Bu izlenecek yol beş ana adımdan oluşur:
+
+1. Yeni bir proje oluşturma
+
+2. Veri kümesine okunacak bir XML dosyası oluşturma
+
+3. Kullanıcı arabirimi oluşturma
+
+4. Veri kümesini oluşturma, XML dosyasını okuma ve bir <xref:System.Windows.Forms.DataGridView> denetiminde görüntüleme
+
+5. XML şemasını bir <xref:System.Windows.Forms.TextBox> denetimindeki XML dosyasına göre göstermek için kod ekleme
+
 > [!NOTE]
-> İletişim kutuları ve menü komutları Yardım menüsünde açıklanana etkin ayarlarınıza veya sürüm bağlı olarak değişebilir gördüğünüz kullandığınız. Ayarlarınızı değiştirmek için **Araçları** menüsünde**içeri ve dışarı aktarma ayarları**. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma  
- Bu adımda, bu izlenecek yolda içeren bir Visual Basic veya Visual C# projesi oluşturun.  
-  
-#### <a name="to-create-the-new-windows-project"></a>Yeni Windows projesi oluşturmak için  
-  
-1. Üzerinde **dosya** menüsünden Yeni bir proje oluşturun.  
-  
-2. Projeyi adlandırın `ReadingXML`.  
-  
-3. Seçin **Windows uygulama**ve ardından **Tamam**. Daha fazla bilgi için [istemci uygulamaları](https://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68).  
-  
-     **ReadingXML** projesi oluşturulur ve eklenen **Çözüm Gezgini**.  
-  
-## <a name="generate-the-xml-file-to-be-read-into-the-dataset"></a>Dataset nesnesine okumak için XML dosyası oluştur  
- Bu izlenecek yol, bir veri kümesine XML verilerini okuma üzerinde odaklanır olduğundan, bir XML dosyasının içeriğini sağlanır.  
-  
-#### <a name="to-create-the-xml-file-that-will-be-read-into-the-dataset"></a>Veri kümesine okunacak XML dosyası oluşturmak için  
-  
-1. Üzerinde **proje** menüsünde**Yeni Öğe Ekle**.  
-  
-2. Seçin **XML dosyası**, dosya adı `authors.xml`ve ardından **Ekle**.  
-  
-     XML dosyası tasarımcıya yükler ve düzenleme için hazırdır.  
-  
-3. XML bildirimi aşağıda düzenleyicisine aşağıdaki kodu yapıştırın:  
-  
-    ```xml  
-    <Authors_Table>  
-      <authors>  
-        <au_id>172-32-1176</au_id>  
-        <au_lname>White</au_lname>  
-        <au_fname>Johnson</au_fname>  
-        <phone>408 496-7223</phone>  
-        <address>10932 Bigge Rd.</address>  
-        <city>Menlo Park</city>  
-        <state>CA</state>  
-        <zip>94025</zip>  
-        <contract>true</contract>  
-      </authors>  
-      <authors>  
-        <au_id>213-46-8915</au_id>  
-        <au_lname>Green</au_lname>  
-        <au_fname>Margie</au_fname>  
-        <phone>415 986-7020</phone>  
-        <address>309 63rd St. #411</address>  
-        <city>Oakland</city>  
-        <state>CA</state>  
-        <zip>94618</zip>  
-        <contract>true</contract>  
-      </authors>  
-      <authors>  
-        <au_id>238-95-7766</au_id>  
-        <au_lname>Carson</au_lname>  
-        <au_fname>Cheryl</au_fname>  
-        <phone>415 548-7723</phone>  
-        <address>589 Darwin Ln.</address>  
-        <city>Berkeley</city>  
-        <state>CA</state>  
-        <zip>94705</zip>  
-        <contract>true</contract>  
-      </authors>  
-      <authors>  
-        <au_id>267-41-2394</au_id>  
-        <au_lname>Hunter</au_lname>  
-        <au_fname>Anne</au_fname>  
-        <phone>408 286-2428</phone>  
-        <address>22 Cleveland Av. #14</address>  
-        <city>San Jose</city>  
-        <state>CA</state>  
-        <zip>95128</zip>  
-        <contract>true</contract>  
-      </authors>  
-      <authors>  
-        <au_id>274-80-9391</au_id>  
-        <au_lname>Straight</au_lname>  
-        <au_fname>Dean</au_fname>  
-        <phone>415 834-2919</phone>  
-        <address>5420 College Av.</address>  
-        <city>Oakland</city>  
-        <state>CA</state>  
-        <zip>94609</zip>  
-        <contract>true</contract>  
-      </authors>  
-    </Authors_Table>  
-    ```  
-  
-4. Üzerinde **dosya** menüsünde**authors.xml Kaydet**.  
-  
-## <a name="create-the-user-interface"></a>Kullanıcı arabirimi oluşturma  
- Bu uygulama için kullanıcı arabirimi aşağıdakilerden oluşur:  
-  
-- A <xref:System.Windows.Forms.DataGridView> verileri olarak XML dosyasının içeriğini görüntüleyen denetim.  
-  
-- A <xref:System.Windows.Forms.TextBox> XML dosyasını XML şemasını görüntüler denetimi.  
-  
-- İki <xref:System.Windows.Forms.Button> kontrol eder.  
-  
-  - Bir düğme XML dosyasının DataSet'e okur ve görüntüler <xref:System.Windows.Forms.DataGridView> denetimi.  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya kullandığınız sürüme bağlı olarak yardım bölümünde açıklananlardan farklı bir şekilde farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden**Içeri ve dışarı aktarma ayarları**' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
-  - İkinci bir düğme şema veri kümesinden ve aracılığıyla ayıklar bir <xref:System.IO.StringWriter> görüntüler <xref:System.Windows.Forms.TextBox> denetimi.  
-  
-#### <a name="to-add-controls-to-the-form"></a>Formu için denetimler ekleme  
-  
-1. Açık `Form1` Tasarım görünümünde.  
-  
-2. Gelen **araç kutusu**, aşağıdaki denetimleri form üzerine sürükleyin:  
-  
-    - Bir <xref:System.Windows.Forms.DataGridView> denetimi  
-  
-    - Bir <xref:System.Windows.Forms.TextBox> denetimi  
-  
-    - İki <xref:System.Windows.Forms.Button> denetimleri  
-  
-3. Aşağıdaki özellikleri ayarlayın:  
-  
-    |Denetim|Özellik|Ayar|  
-    |-------------|--------------|-------------|  
-    |`TextBox1`|**Çok satırlı**|`true`|  
-    ||**Kaydırma çubukları**|**Dikey**|  
-    |`Button1`|**Ad**|`ReadXmlButton`|  
-    ||**Metin**|`Read XML`|  
-    |`Button2`|**Ad**|`ShowSchemaButton`|  
-    ||**Metin**|`Show Schema`|  
-  
-## <a name="create-the-dataset-thatreceives-the-xml-data"></a>Veri kümesi thatreceives XML verileri oluşturma  
- Bu adımda, adlı yeni bir veri kümesi oluşturma `authors`. Veri kümeleri hakkında daha fazla bilgi için bkz. [Visual Studio'daki veri kümesi Araçları](../data-tools/dataset-tools-in-visual-studio.md).  
-  
-#### <a name="to-create-a-new-dataset-that--receives-the-xml-data"></a>XML verileri alan yeni bir veri kümesini oluşturmak için  
-  
-1. İçinde **Çözüm Gezgini**, kaynak dosyasını seçin **Form1**ve ardından **Görünüm Tasarımcısı** düğmesini **Çözüm Gezgini** araç çubuğu.  
-  
-2. Gelen [araç kutusu, veri sekmesinde](../ide/reference/toolbox-data-tab.md), sürükleyin bir **veri kümesi** üzerine **Form1**.  
-  
-3. İçinde **veri kümesi Ekle** iletişim kutusunda **türü belirsiz dataset**ve ardından **Tamam**.  
-  
-     **DataSet1** bileşen tepsisine eklenir.  
-  
-4. İçinde **özellikleri** penceresinde **adı** ve <xref:System.Data.DataSet.DataSetName%2A> özelliklerini`AuthorsDataSet`.  
-  
-## <a name="create-the-event-handler-to-read-the-xml-file-into-the-dataset"></a>XML dosyasının DataSet'e okumak için olay işleyicisi oluşturun  
- **Okuma XML** düğmesi kümesine XML dosyasını okur. Üzerinde özelliklerini daha sonra Ayarlar <xref:System.Windows.Forms.DataGridView> veri kümesine bağlanan bir denetim.  
-  
-#### <a name="to-add-code-to-the-readxmlbuttonclick-event-handler"></a>ReadXmlButton_Click olay işleyicisine kod eklemek için  
-  
-1. İçinde **Çözüm Gezgini**seçin **Form1**ve ardından **Görünüm Tasarımcısı** düğmesini **Çözüm Gezgini** araç çubuğu.  
-  
-2. Seçin **okuma XML** düğmesi.  
-  
-     **Kod Düzenleyicisi** açılır `ReadXmlButton_Click` olay işleyicisi.  
-  
-3. Aşağıdaki kodu yazın `ReadXmlButton_Click` olay işleyicisi:  
-  
+## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+ Bu adımda, bu yönergeyi içeren bir Visual Basic veya görsel C# proje oluşturursunuz.
+
+#### <a name="to-create-the-new-windows-project"></a>Yeni Windows projesi oluşturmak için
+
+1. **Dosya** menüsünde Yeni bir proje oluşturun.
+
+2. Projeyi `ReadingXML` olarak adlandırın.
+
+3. **Windows uygulaması**' nı seçin ve ardından **Tamam**' ı seçin. Daha fazla bilgi için bkz. [Istemci uygulamaları](https://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68).
+
+     **ReadingXML** projesi oluşturulup **Çözüm Gezgini**eklenir.
+
+## <a name="generate-the-xml-file-to-be-read-into-the-dataset"></a>Veri kümesine okunacak XML dosyasını oluştur
+ Bu izlenecek yol, XML verilerinin bir veri kümesine okunmasına odaklandığı için, bir XML dosyasının içeriği sağlanır.
+
+#### <a name="to-create-the-xml-file-that-will-be-read-into-the-dataset"></a>Veri kümesine okunacak XML dosyasını oluşturmak için
+
+1. **Proje** menüsünde**Yeni öğe Ekle**' yi seçin.
+
+2. **XML dosyası**' nı seçin, `authors.xml` dosyayı adlandırın ve ardından **Ekle**' yi seçin.
+
+     XML dosyası tasarımcıya yüklenir ve düzenleme için hazırlayın.
+
+3. Aşağıdaki kodu, XML bildiriminin altındaki düzenleyiciye yapıştırın:
+
+    ```xml
+    <Authors_Table>
+      <authors>
+        <au_id>172-32-1176</au_id>
+        <au_lname>White</au_lname>
+        <au_fname>Johnson</au_fname>
+        <phone>408 496-7223</phone>
+        <address>10932 Bigge Rd.</address>
+        <city>Menlo Park</city>
+        <state>CA</state>
+        <zip>94025</zip>
+        <contract>true</contract>
+      </authors>
+      <authors>
+        <au_id>213-46-8915</au_id>
+        <au_lname>Green</au_lname>
+        <au_fname>Margie</au_fname>
+        <phone>415 986-7020</phone>
+        <address>309 63rd St. #411</address>
+        <city>Oakland</city>
+        <state>CA</state>
+        <zip>94618</zip>
+        <contract>true</contract>
+      </authors>
+      <authors>
+        <au_id>238-95-7766</au_id>
+        <au_lname>Carson</au_lname>
+        <au_fname>Cheryl</au_fname>
+        <phone>415 548-7723</phone>
+        <address>589 Darwin Ln.</address>
+        <city>Berkeley</city>
+        <state>CA</state>
+        <zip>94705</zip>
+        <contract>true</contract>
+      </authors>
+      <authors>
+        <au_id>267-41-2394</au_id>
+        <au_lname>Hunter</au_lname>
+        <au_fname>Anne</au_fname>
+        <phone>408 286-2428</phone>
+        <address>22 Cleveland Av. #14</address>
+        <city>San Jose</city>
+        <state>CA</state>
+        <zip>95128</zip>
+        <contract>true</contract>
+      </authors>
+      <authors>
+        <au_id>274-80-9391</au_id>
+        <au_lname>Straight</au_lname>
+        <au_fname>Dean</au_fname>
+        <phone>415 834-2919</phone>
+        <address>5420 College Av.</address>
+        <city>Oakland</city>
+        <state>CA</state>
+        <zip>94609</zip>
+        <contract>true</contract>
+      </authors>
+    </Authors_Table>
+    ```
+
+4. **Dosya** menüsünde,**yazarları. xml dosyasını Kaydet**' i seçin.
+
+## <a name="create-the-user-interface"></a>Kullanıcı arabirimini oluşturma
+ Bu uygulama için Kullanıcı arabirimi aşağıdakilerden oluşur:
+
+- XML dosyasının içeriğini veri olarak görüntüleyen bir <xref:System.Windows.Forms.DataGridView> denetimi.
+
+- XML dosyası için XML şemasını görüntüleyen bir <xref:System.Windows.Forms.TextBox> denetimi.
+
+- İki <xref:System.Windows.Forms.Button> denetimi.
+
+  - Bir düğme, XML dosyasını veri kümesine okur ve <xref:System.Windows.Forms.DataGridView> denetiminde görüntüler.
+
+  - İkinci bir düğme, şemayı veri kümesinden ayıklar ve bir <xref:System.IO.StringWriter> aracılığıyla <xref:System.Windows.Forms.TextBox> denetiminde görüntüler.
+
+#### <a name="to-add-controls-to-the-form"></a>Forma denetim eklemek için
+
+1. @No__t_0 Tasarım görünümünde açın.
+
+2. **Araç kutusundan**aşağıdaki denetimleri form üzerine sürükleyin:
+
+    - Bir <xref:System.Windows.Forms.DataGridView> denetimi
+
+    - Bir <xref:System.Windows.Forms.TextBox> denetimi
+
+    - İki <xref:System.Windows.Forms.Button> denetimi
+
+3. Aşağıdaki özellikleri ayarlayın:
+
+    |Denetim|Özellik|Ayar|
+    |-------------|--------------|-------------|
+    |`TextBox1`|**Çok satırlı**|`true`|
+    ||**Çubuklarını**|**Matema**|
+    |`Button1`|**Ad**|`ReadXmlButton`|
+    ||**Metin**|`Read XML`|
+    |`Button2`|**Ad**|`ShowSchemaButton`|
+    ||**Metin**|`Show Schema`|
+
+## <a name="create-the-dataset-thatreceives-the-xml-data"></a>XML verilerini alan veri kümesini oluşturma
+ Bu adımda, `authors` adlı yeni bir veri kümesi oluşturursunuz. Veri kümeleri hakkında daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
+
+#### <a name="to-create-a-new-dataset-that--receives-the-xml-data"></a>XML verilerini alan yeni bir veri kümesi oluşturmak için
+
+1. **Çözüm Gezgini**, **Form1**için kaynak dosyasını seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
+
+2. [Araç kutusu, veri sekmesinde](../ide/reference/toolbox-data-tab.md)bir **veri kümesini** **Form1**üzerine sürükleyin.
+
+3. **Veri kümesi Ekle** Iletişim kutusunda **türsüz veri kümesi**' ni seçin ve ardından **Tamam**' ı seçin.
+
+     **DataSet1** , bileşen tepsisine eklenir.
+
+4. **Özellikler** penceresinde, `AuthorsDataSet` için **adı** ve <xref:System.Data.DataSet.DataSetName%2A> özelliklerini ayarlayın.
+
+## <a name="create-the-event-handler-to-read-the-xml-file-into-the-dataset"></a>XML dosyasını veri kümesine okumak için olay işleyicisini oluşturma
+ **XML oku** düğmesi XML dosyasını veri kümesine okur. Daha sonra, <xref:System.Windows.Forms.DataGridView> denetimindeki özellikleri veri kümesine bağlayan Özellikler belirler.
+
+#### <a name="to-add-code-to-the-readxmlbutton_click-event-handler"></a>ReadXmlButton_Click olay işleyicisine kod eklemek için
+
+1. **Çözüm Gezgini**, **Form1**' i seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
+
+2. **XML oku** düğmesini seçin.
+
+     **Kod düzenleyicisi** `ReadXmlButton_Click` olay işleyicisinde açılır.
+
+3. @No__t_0 olay işleyicisine aşağıdaki kodu yazın:
+
      [!code-csharp[VbRaddataFillingAndExecuting#2](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/CS/Form1.cs#2)]
-     [!code-vb[VbRaddataFillingAndExecuting#2](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/VB/Form1.vb#2)]  
-  
-4. İçinde `ReadXMLButton_Click` olay işleyici kodu, değişiklik `filepath =` doğru yola girişi.  
-  
-## <a name="create-the-event-handler-to-display-the-schema-in-the-textbox"></a>Şema metin kutusunda görüntülemek için olay işleyicisi oluşturun  
- **Göster şema** düğmesi oluşturur bir <xref:System.IO.StringWriter> şema ile doldurulur ve görüntülenen nesne <xref:System.Windows.Forms.TextBox>denetimi.  
-  
-#### <a name="to-add-code-to-the-showschemabuttonclick-event-handler"></a>ShowSchemaButton_Click olay işleyicisine kod eklemek için  
-  
-1. İçinde **Çözüm Gezgini**seçin **Form1**ve ardından **Görünüm Tasarımcısı** düğmesi.  
-  
-2. Seçin **Göster şema** düğmesi.  
-  
-     **Kod Düzenleyicisi** açılır `ShowSchemaButton_Click` olay işleyicisi.  
-  
-3. Aşağıdaki kodu yazın `ShowSchemaButton_Click` olay işleyicisi.  
-  
+     [!code-vb[VbRaddataFillingAndExecuting#2](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/VB/Form1.vb#2)]
+
+4. @No__t_0 olay işleyicisi kodunda, `filepath =` girdisini doğru yola değiştirin.
+
+## <a name="create-the-event-handler-to-display-the-schema-in-the-textbox"></a>Metin kutusu içinde şemayı göstermek için olay işleyicisini oluşturma
+ **Şemayı göster** düğmesi, şemayla doldurulmuş ve <xref:System.Windows.Forms.TextBox>control görüntülenen bir <xref:System.IO.StringWriter> nesnesi oluşturur.
+
+#### <a name="to-add-code-to-the-showschemabutton_click-event-handler"></a>ShowSchemaButton_Click olay işleyicisine kod eklemek için
+
+1. **Çözüm Gezgini**, **Form1**' i seçin ve sonra **Tasarımcı görüntüle** düğmesini seçin.
+
+2. **Şemayı göster** düğmesini seçin.
+
+     **Kod düzenleyicisi** `ShowSchemaButton_Click` olay işleyicisinde açılır.
+
+3. @No__t_0 olay işleyicisine aşağıdaki kodu yazın.
+
      [!code-csharp[VbRaddataFillingAndExecuting#3](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/CS/Form1.cs#3)]
-     [!code-vb[VbRaddataFillingAndExecuting#3](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/VB/Form1.vb#3)]  
-  
-## <a name="test-the-form"></a>Form test  
+     [!code-vb[VbRaddataFillingAndExecuting#3](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/VB/Form1.vb#3)]
 
-Şimdi beklendiği gibi davrandığından emin olmak için form test edebilirsiniz.
-  
-1. Seçin **F5** uygulamayı çalıştırın.  
-  
-2. Seçin **okuma XML** düğmesi.  
-  
-     DataGridView XML dosyasının içeriğini görüntüler.  
-  
-3. Seçin **Göster şema** düğmesi.  
-  
-     XML Şeması XML dosyası için metin kutusu görüntüler.  
-  
-## <a name="next-steps"></a>Sonraki Adımlar  
+## <a name="test-the-form"></a>Formu test etme
 
-Bu izlenecek yol, bir şema XML dosyasının içeriğine göre oluşturma yanı sıra bir XML dosyası okunurken bir veri kümesine ilişkin temel bilgileri size öğretir. Sonraki yapabilecek bazı görevler aşağıda verilmiştir:  
-  
-- Veri kümesini ve geri XML olarak yazma verileri düzenleyin. Daha fazla bilgi için bkz. <xref:System.Data.DataSet.WriteXml%2A>.  
-  
-- Veri kümesindeki verileri düzenleyebilir ve veritabanına yazamadı.
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri izlenecek yollar](https://msdn.microsoft.com/library/15a88fb8-3bee-4962-914d-7a1f8bd40ec4)   
- [Visual Studio'da verilere erişme](../data-tools/accessing-data-in-visual-studio.md)   
- [Uygulamanızı veri almaya hazırlama](https://msdn.microsoft.com/library/c17bdb7e-c234-4f2f-9582-5e55c27356ad)   
- [Visual Studio'daki XML Araçları](../xml-tools/xml-tools-in-visual-studio.md)
+Artık, beklenen şekilde davrandığından emin olmak için formu test edebilirsiniz.
+
+1. Uygulamayı çalıştırmak için **F5** ' i seçin.
+
+2. **XML oku** düğmesini seçin.
+
+     DataGridView, XML dosyasının içeriğini görüntüler.
+
+3. **Şemayı göster** düğmesini seçin.
+
+     Metin kutusu XML dosyası için XML şemasını görüntüler.
+
+## <a name="next-steps"></a>Sonraki Adımlar
+
+Bu izlenecek yol, bir XML dosyasını bir veri kümesine okumayla ilgili temel bilgileri ve XML dosyasının içeriğine göre bir şema oluşturmayı öğretir. Daha sonra gerçekleştirebileceğiniz bazı görevler şunlardır:
+
+- Veri kümesindeki verileri düzenleyin ve XML olarak yeniden yazın. Daha fazla bilgi için bkz. <xref:System.Data.DataSet.WriteXml%2A>.
+
+- Veri kümesindeki verileri düzenleyin ve veritabanına yazın.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ Visual [Studio 'da veri erişimi](../data-tools/accessing-data-in-visual-studio.md) için [veri,](https://msdn.microsoft.com/library/15a88fb8-3bee-4962-914d-7a1f8bd40ec4) Visual Studio 'Da veri [XML araçları](../xml-tools/xml-tools-in-visual-studio.md) [almak üzere hazırlama](https://msdn.microsoft.com/library/c17bdb7e-c234-4f2f-9582-5e55c27356ad)

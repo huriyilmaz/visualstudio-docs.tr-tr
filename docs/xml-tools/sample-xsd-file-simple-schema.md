@@ -1,23 +1,23 @@
 ---
-title: 'Örnek XSD Dosyası: Basit Şema'
+title: 'Örnek XSD dosyası: basit şema'
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f7e1dde1-b4f6-4371-add4-935b68ec77d7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0228ab75da15099aad3a6f60feca3d71f644b4ff
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 0b6681e47ba33d16cd48f5f34389a5d113fc36ef
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65455084"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651168"
 ---
-# <a name="sample-xsd-file-simple-schema"></a>Örnek XSD dosyası: Basit şema
+# <a name="sample-xsd-file-simple-schema"></a>Örnek XSD dosyası: basit şema
 
-XSD şema Tasarımcısı çeşitli örneklerini aşağıdaki XSD dosyası kullanılır. Basit satınalma siparişi şeması dosyasıdır.
+Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılır. Bu dosya basit bir satın alma Siparişi şemadır.
 
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -47,4 +47,4 @@ XSD şema Tasarımcısı çeşitli örneklerini aşağıdaki XSD dosyası kullan
 ```
 
 > [!NOTE]
-> Bir örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, yerler ve sahiplerinin hayal ürünüdür. Gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olayları ile hiçbir ilişki amaçlanmamıştır veya çıkarılmamalıdır.
+> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, konumlar ve olaylar hayal ürünüdür. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olay ile ilişki amaçlanmamıştır.

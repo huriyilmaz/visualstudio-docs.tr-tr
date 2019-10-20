@@ -1,43 +1,43 @@
 ---
-title: Öznitelik sözlüğü | Microsoft Intellitest Geliştirici Test aracı
+title: Öznitelik sözlüğü | Microsoft IntelliTest geliştirici test aracı
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Attribute glossary
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: aada3c1053ed30521d8c7116c887061650a083dc
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+author: jillre
+ms.openlocfilehash: dce8d33f876ee34e18812cb744d7d3d6f53a5506
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825322"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653239"
 ---
 # <a name="attribute-glossary"></a>Öznitelik sözlüğü
 
-## <a name="attributes-by-namespace"></a>Ad alanı öznitelikleri
+## <a name="attributes-by-namespace"></a>Ad alanına göre öznitelikler
 
-* **Microsoft.Pex.Framework**
+* **Microsoft. Pex. Framework**
   * [PexAssumeNotNull](#pexassumenotnull)
   * [PexClass](#pexclass)
   * [PexGenericArguments](#pexgenericarguments)
   * [PexMethod](#pexmethod)
-    * [PexExplorationAttributeBase](#pexexplorationattributebase)
+    * [Pexaraştırması Ationattributebase](#pexexplorationattributebase)
 
-* **Microsoft.Pex.Framework.Settings**
+* **Microsoft. Pex. Framework. Settings**
   * [PexAssemblySettings](#pexassemblysettings)
 
-* **Microsoft.Pex.Framework.Instrumentation**
+* **Microsoft. Pex. Framework. Instrumentation**
   * [PexAssemblyUnderTest](#pexassemblyundertest)
   * [PexInstrumentAssembly](#pexinstrumentassemblyattribute)
 
-* **Microsoft.Pex.Framework.Using**
+* **Microsoft. Pex. Framework. using**
   * [PexUseType](#pexusetype)
 
-* **Microsoft.Pex.Framework.Validation**
+* **Microsoft. Pex. Framework. doğrulaması**
   * [PexAllowedException](#pexallowedexception)
   * [PexAllowedExceptionFromAssembly](#pexallowedexceptionfromassembly)
   * [PexAllowedExceptionFromType](#pexallowedexceptionfromtype)
@@ -46,9 +46,9 @@ ms.locfileid: "67825322"
 <a name="pexassumenotnull"></a>
 ## <a name="pexassumenotnull"></a>PexAssumeNotNull
 
-Bu öznitelik yönetilen değeri olamaz onaylar **null**. İçin eklenebilir:
+Bu öznitelik, yönetilen değerin **null**olamaz. Bu, şu şekilde iliştirilebilir:
 
-* bir **parametre** parametreli bir test yöntemi
+* Parametreli test yönteminin **parametresi**
 
   ```csharp
   // assume foo is not null
@@ -66,7 +66,7 @@ Bu öznitelik yönetilen değeri olamaz onaylar **null**. İçin eklenebilir:
   }
   ```
 
-* A **türü**
+* bir **tür**
 
   ```csharp
   // never consider null for Foo types
@@ -74,24 +74,24 @@ Bu öznitelik yönetilen değeri olamaz onaylar **null**. İçin eklenebilir:
   public class Foo {}
   ```
 
-Ayrıca bir test bütünleştirilmiş kodu, test düzeni veya test yöntemi bağlanabilir; Bu durumda ilk bağımsız değişken, hangi alanın ya da türü varsayımların uygulamak belirtmeniz gerekir. Öznitelik, bir tür için geçerli olduğu durumlarda bu biçimsel türüyle tüm alanlar için geçerlidir.
+Ayrıca bir test derlemesine, test armakoduna veya test yöntemine eklenebilir; Bu durumda, ilk bağımsız değişkenlerin varsayımlar uygulanan alan veya tür olduğunu belirtmesi gerekir. Öznitelik bir tür için geçerliyse, bu biçimsel türdeki tüm alanlar için geçerlidir.
 
 <a name="pexclass"></a>
 ## <a name="pexclass"></a>PexClass
 
-Bu öznitelik içeren bir sınıf işaretler *araştırmaları*. MSTest eşdeğerdir **TestClassAttribute** (veya NUnit **TestFixtureAttribute**). Bu öznitelik isteğe bağlıdır.
+Bu öznitelik, *araştırma*içeren bir sınıfı işaretler. MSTest **TestClassAttribute** (veya NUnit **TestFixtureAttribute**) eşdeğerdir. Bu öznitelik isteğe bağlıdır.
 
-İşaretlenmiş sınıfların [PexClass](#pexclass) olmalıdır *varsayılan atmamalıdır*:
+[PexClass](#pexclass) ile işaretlenen sınıflar *varsayılan oluşturulabilir*olmalıdır:
 
-* Genel olarak dışarı aktarılan tür
+* Genel olarak dışarıya aktarılmış tür
 * varsayılan oluşturucu
-* soyut değil
+* Özet değil
 
-Sınıfı, bu gereksinimleri karşılamıyorsa, bir hata bildirilir ve araştırma başarısız olur.
+Sınıf bu gereksinimleri karşılamıyorsa, bir hata bildirilir ve araştırma başarısız olur.
 
-Bu sınıfları oluşturmak için de kesinlikle önerilir **kısmi** Intellitest kapsamındaki sınıf, ancak ayrı bir dosyada yeni testler oluşturabilmesi. Bu yaklaşım nedeniyle çoğu sorunu çözdü [görünürlük](input-generation.md#visibility) ve tipik bir teknik de C#.
+IntelliTest 'in sınıfın parçası olan, ancak ayrı bir dosyada yeni testler oluşturabileceği şekilde bu sınıfları **kısmi** yapmak da önemle tavsiye edilir. Bu yaklaşım, [görünürlük](input-generation.md#visibility) nedeniyle birçok sorunu çözer ve içinde C#tipik bir tekniktir.
 
-**Ek suite ve kategoriler**:
+**Ek paket ve Kategoriler**:
 
 ```csharp
 [TestClass] // MSTest test fixture attribute
@@ -99,34 +99,34 @@ Bu sınıfları oluşturmak için de kesinlikle önerilir **kısmi** Intellitest
 public partial class MyTests { ... }
 ```
 
-**Test edilen türünü belirterek**:
+**Test altındaki türü belirtme**:
 
 ```csharp
 [PexClass(typeof(Foo))] // this is a test for Foo
 public partial class FooTest { ... }
 ```
 
-Sınıfı yöntemleri ile ek açıklama içerebilir [PexMethod](#pexmethod). Intellitest ayrıca anlayan [ayarlama ve ayırma yöntemleri](test-generation.md#setup-teardown).
+Sınıfı, [PexMethod](#pexmethod)ile açıklama eklenmiş yöntemler içerebilir. IntelliTest Ayrıca [ayarlama ve ayırma yöntemlerini](test-generation.md#setup-teardown)de anlamıştır.
 
 <a name="pexgenericarguments"></a>
 ## <a name="pexgenericarguments"></a>PexGenericArguments
 
-Bu öznitelik oluşturmak için bir tür tanımlama grubu sağlar. bir [genel parametreli birim testine](test-generation.md#generic-parameterized).
+Bu öznitelik, [genel parametreli birim testi](test-generation.md#generic-parameterized)örneği oluşturmak için bir tür tanımlama grubu sağlar.
 
 <a name="pexmethod"></a>
 ## <a name="pexmethod"></a>PexMethod
 
-Bu öznitelik bir yöntem olarak işaretler. bir [parametreli birim testine](test-generation.md#parameterized-unit-testing).
-Yöntem ile işaretlenmiş bir sınıf içinde bulunmalıdır [PexClass](#pexclass) özniteliği.
+Bu öznitelik, bir yöntemi [parametreli birim testi](test-generation.md#parameterized-unit-testing)olarak işaretler.
+Yöntem, [PexClass](#pexclass) özniteliğiyle işaretlenmiş bir sınıf içinde bulunmalıdır.
 
-Intellitest, arama, Geleneksel, parametresiz testleri oluşturacağını [parametreli birim testine](test-generation.md#parameterized-unit-testing) farklı parametrelerle.
+IntelliTest, farklı parametrelerle [parametreli birim testi](test-generation.md#parameterized-unit-testing) çağıran geleneksel, parametresiz testler oluşturacaktır.
 
 Parametreli birim testi:
 
 * bir örnek yöntemi olmalıdır
-* olmalıdır [görünür](input-generation.md#visibility) hangi testlerin yerleştirilir göre test sınıfına [ayarlar Şelalesi](settings-waterfall.md)
+* oluşturulan testlerin, [Ayarlar şelale](settings-waterfall.md) göre yerleştirildiği test sınıfına [görünür](input-generation.md#visibility) olması gerekir
 * herhangi bir sayıda parametre alabilir
-* Genel olabilir
+* genel olabilir
 
 **Örnek**
 
@@ -140,14 +140,14 @@ public partial class MyTests {
 ```
 
 <a name="pexexplorationattributebase"></a>
-## <a name="pexexplorationattributebase"></a>PexExplorationAttributeBase
+## <a name="pexexplorationattributebase"></a>Pexaraştırması Ationattributebase
 
 [Daha fazla bilgi](xref:Microsoft.Pex.Framework.PexExplorationAttributeBase)
 
 <a name="pexassemblysettings"></a>
 ## <a name="pexassemblysettings"></a>PexAssemblySettings
 
-Bu öznitelik tüm araştırmaları için varsayılan ayarı geçersiz kılmak için derleme düzeyinde ayarlanabilir.
+Bu öznitelik, tüm araştırmalar için varsayılan ayar değerlerini geçersiz kılmak üzere derleme düzeyinde ayarlanabilir.
 
 ```csharp
 using Microsoft.Pex.Framework;
@@ -158,7 +158,7 @@ using Microsoft.Pex.Framework;
 <a name="pexassemblyundertest"></a>
 ## <a name="pexassemblyundertest"></a>PexAssemblyUnderTest
 
-Bu öznitelik geçerli bir test projesi tarafından test edilmiş bir derleme belirtir.
+Bu öznitelik, geçerli test projesi tarafından test edilmekte olan bir derlemeyi belirtir.
 
 ```csharp
 [assembly: PexAssemblyUnderTest("MyAssembly")]
@@ -167,7 +167,7 @@ Bu öznitelik geçerli bir test projesi tarafından test edilmiş bir derleme be
 <a name="pexinstrumentassemblyattribute"></a>
 ## <a name="pexinstrumentassemblyattribute"></a>PexInstrumentAssemblyAttribute
 
-Bu öznitelik, bir derlemeyi gerçekleştirilmeyecek belirtmek için kullanılır.
+Bu öznitelik, bir derlemeyi belirlemek için kullanılır.
 
 **Örnek**
 
@@ -184,7 +184,7 @@ using Microsoft.Pex.Framework;
 <a name="pexusetype"></a>
 ## <a name="pexusetype"></a>PexUseType
 
-Bu öznitelik, belirli bir tür (soyut) temel türler veya arabirimleri oluşturmak için kullanabileceğiniz Intellitest söyler.
+Bu öznitelik, IntelliTest 'e, temel türler veya arabirimler oluşturmak için belirli bir tür kullanıp kullanmayacağını söyler.
 
 **Örnek**
 
@@ -201,11 +201,11 @@ public void MyTest(object testParameter)
 <a name="pexallowedexception"></a>
 ## <a name="pexallowedexception"></a>PexAllowedException
 
-Bu öznitelik ekli ise bir [PexMethod](#pexmethod) (veya bir [PexClass](#pexclass), test başarısız olduğunda belirten varsayılan Intellitest mantığı değiştirir. Belirtilen özel durum oluşturursa bile test başarısız olarak değerlendirilmeyecek.
+Bu öznitelik bir [PexMethod](#pexmethod) 'a (veya bir [PexClass](#pexclass)'a) eklenmişse, testlerin ne zaman başarısız olduğunu gösteren varsayılan IntelliTest mantığını değiştirir. Belirtilen özel durumu oluşturan bile test başarısız olarak değerlendirilmeyecektir.
 
 **Örnek**
 
-Şu test belirten oluşturucusunun **yığın** oluşturabilecek bir **üretiliyor**:
+Aşağıdaki test, **yığın** oluşturucusunun bir **ArgumentOutOfRangeException**oluşturmayacağını belirtir:
 
 ```csharp
 class Stack {
@@ -220,7 +220,7 @@ class Stack {
 }
 ```
 
-Filtre (Bu da derleme veya test düzeyinde tanımlanabilir) aşağıdaki gibi bir düzen için eklenir:
+Filtre, aşağıdaki gibi bir armatürü öğesine iliştirilir (derleme veya test düzeyinde de tanımlanabilir):
 
 ```csharp
 [PexMethod]
@@ -245,6 +245,6 @@ class CtorTest(int capacity) {
 
 [Daha fazla bilgi](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeUnderTestAttribute)
 
-## <a name="got-feedback"></a>Geri bildirim var mı?
+## <a name="got-feedback"></a>Geri bildirim alındı mı?
 
-Fikirlerinizi gönderin ve özellik istekleri [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).
+Fikirlerinizi ve özellik isteklerinizi [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)' na gönderin.

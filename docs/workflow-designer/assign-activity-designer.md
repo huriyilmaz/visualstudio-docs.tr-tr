@@ -1,45 +1,45 @@
 ---
-title: İş Akışı Tasarımcısı - Ata etkinlik Tasarımcısı
+title: İş Akışı Tasarımcısı-etkinlik Tasarımcısı atama
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Assign.UI
 ms.assetid: ba3feb3c-f144-47ea-926d-cf752b804153
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4179c23cefbf995242288c1e778f9e0413bfe28e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 44d4136aabd5bd383cc3718dc5c6c1676f94e45d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993260"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650726"
 ---
 # <a name="assign-activity-designer"></a>Assign Etkinlik Tasarımcısı
 
-**Atama** etkinlik Tasarımcısı oluşturmak ve yapılandırmak için kullanılan bir <xref:System.Activities.Statements.Assign> etkinlik.
+Bir <xref:System.Activities.Statements.Assign> etkinliği oluşturmak ve yapılandırmak için **atama** etkinliği Tasarımcısı kullanılır.
 
-## <a name="the-assign-activity"></a>Ata etkinliği
+## <a name="the-assign-activity"></a>Atama etkinliği
 
-<xref:System.Activities.Statements.Assign> Etkinliği, bir değişken veya bağımsız değişken bir değer atar.
+@No__t_0 etkinliği bir değişkene veya bağımsız değişkene bir değer atar.
 
-### <a name="using-the-assign-activity-designer"></a>Ata etkinlik Tasarımcısını kullanma
+### <a name="using-the-assign-activity-designer"></a>Atama etkinliği tasarımcısını kullanma
 
-**Atama** etkinlik Tasarımcısı bulunabilir **Temelleri** kategorisi **araç kutusu**, hangi erişilen tıklayarak **araç kutusu**sekme (Alternatif olarak, seçin **araç kutusu** gelen **görünümü** menüsünden veya CTRL + ALT + X.)
+**Ata** etkinlik Tasarımcısı **, araç kutusu sekmesine** tıklanarak **erişilen araç kutusu**' nda (alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu veya Ctrl + Alt + X ' i seçerek) bulunan **temel öğeler** kategorisinde bulunabilir.
 
-**Atama** etkinlik Tasarımcısı, gelen sürüklenebilir **araç kutusu** ve etkinlikleri yerleştirilir burada ever, örneğin olarak içinde iş akışı Tasarımcısı yüzeyine açın bırakılan bir <xref:System.Activities.Statements.Sequence>. Bırakarak **atama** etkinlik Tasarımcısı oluşturur bir <xref:System.Activities.Statements.Assign> etkinliği ile bir varsayılan **DisplayName** Ata'nın. <xref:System.Activities.Activity.DisplayName%2A> Üst bilgisinde düzenlenebilir **atama** etkinlik Tasarımcısı veya **DisplayName** özellik kılavuzunda kutusu.
+**Atama** etkinliği Tasarımcısı **araç kutusundan** sürüklenip, <xref:System.Activities.Statements.Sequence> içinde olduğu gibi, her zaman etkinliklerin yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir. **Atama** etkinliği Tasarımcısı ' nın atılması, varsayılan ata **DisplayName** ile bir <xref:System.Activities.Statements.Assign> etkinliği oluşturur. @No__t_0, **atama** Tasarımcısı ' nın üstbilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
-### <a name="the-assign-properties"></a>Ata özellikleri
+### <a name="the-assign-properties"></a>Atama özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.Assign> özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, özellik kılavuzunda düzenlenebilir ve bunlardan bazıları iş akışı Tasarımcısı yüzeyine düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Statements.Assign> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilirler.
 
-|Özellik Adı|Gerekli|Kullanım|
+|Özellik adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Kolay adı <xref:System.Activities.Statements.Assign> etkinlik. Ata varsayılandır. Ancak <xref:System.Activities.Activity.DisplayName%2A> değeri kesinlikle gerekli değil, kullanmak için en iyi bir uygulamadır.|
-|<xref:System.Activities.Statements.Assign.To%2A>|Doğru|Değişken veya bağımsız değişken olarak <xref:System.Activities.Statements.Assign.Value%2A> atanır. Değerin geçerli bir Visual Basic tanımlayıcısı olması gerekir. Özellik ayarlamak için bir Visual Basic ifadesinin türü **için** kutusuna **atama** etkinlik Tasarımcısı veya özellik kılavuzunda.|
-|<xref:System.Activities.Statements.Assign.Value%2A>|Doğru|Değişkene atanan değer. Ayarlanacak <xref:System.Activities.Statements.Assign.Value%2A>, Visual Basic ifadesindeki türü **değer** kutusuna **atama** etkinlik Tasarımcısı veya özellik kılavuzunda.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin kolay adı. Varsayılan değer atama ' dır. @No__t_0 değeri kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.Assign.To%2A>|Doğru|@No__t_0 atandığı değişken veya bağımsız değişken. Değer geçerli bir Visual Basic tanımlayıcısı olmalıdır. Özelliği ayarlamak için, **assign** Activity Designer 'daki **to** kutusuna veya özellik kılavuzunda bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Statements.Assign.Value%2A>|Doğru|Değişkene atanan değer. @No__t_0 ayarlamak için, eylem **atama** Tasarımcısı ' nın **değer** kutusuna veya özellik kılavuzunda bir Visual Basic ifadesi yazın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

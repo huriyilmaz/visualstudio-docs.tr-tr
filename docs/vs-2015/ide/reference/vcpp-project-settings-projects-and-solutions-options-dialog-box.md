@@ -1,5 +1,5 @@
 ---
-title: VC ++ proje ayarları, projeler ve çözümler, Seçenekler iletişim kutusu | Microsoft Docs
+title: VC + + proje ayarları, projeler ve çözümler, Seçenekler Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -16,67 +16,58 @@ helpviewer_keywords:
 - BuildLog.htm
 ms.assetid: 56420efd-6a95-464e-b890-e2b38c48d66a
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 65115be12d00f335272c65083be4a323a604b646
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ef861d13387c013659e5e4c1714680b71896858c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65689358"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657858"
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>VC++ Proje Ayarları, Projeler ve Çözümler, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu iletişim kutusunu tanımlamanızı sağlar [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] proje dosya türlerini destekleyen ve günlük kaydı oluşturmak için ilgili ayarlar.  
-  
-### <a name="to-access-this-dialog-box"></a>Bu iletişim kutusuna erişmek için  
-  
-1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.  
-  
-2. Seçin **projeler ve çözümler**ve ardından **VC ++ proje ayarları**.  
-  
-## <a name="build-customization-search-path"></a>Derleme özelleştirme arama yolu  
- Yardımcı .rules dosyaları içeren dizinler listesini tanımlamak projeleriniz için derleme kuralları belirtir.  
-  
-## <a name="build-logging"></a>Günlük kaydı oluşturun  
- **Evet**  
- Derleme günlük dosyasının oluşturulmasını etkinleştirir. Bu seçeneği projenin Ara dosyaları dizininde bulunan BuildLog.htm üretir. Her yeni derleme önceki BuildLog.htm dosyanın üzerine yazar.  
-  
- **Yok**  
- Derleme günlüğü dosyası oluşturulmasını devre dışı bırakır.  
-  
-## <a name="build-timing"></a>Zamanlama oluşturma  
- **Evet**  
- Derleme zamanlaması üzerinde kapatır. Seçili olduğunda, derleme tamamlamak geçen süre için çıkış penceresine gönderilir. Daha fazla bilgi için [çıkış penceresine](../../ide/reference/output-window.md).  
-  
- **Yok**  
- Derleme zamanlaması devre dışı bırakır.  
-  
-## <a name="extensions-to-hide"></a>Gizlenecek uzantılar  
- İçinde görüntülenmeyecek dosyalarının dosya adı uzantılarını belirtir **Çözüm Gezgini** olduğunda **tüm dosyaları göster** etkinleştirilir.  
-  
-## <a name="extensions-to-include"></a>Dahil etmek için uzantıları  
- Projenize unity'nin dosyalarının dosya adı uzantılarını belirtir.  
-  
-## <a name="maximum-concurrent-c-compilations"></a>En fazla eşzamanlı C++ derlemesi  
- En fazla paralel C++ derlemesi için kullanılacak CPU çekirdeği sayısını belirtir.  
-  
-## <a name="show-environment-in-log"></a>Günlükte ortamı Göster  
- **Evet**  
- Derleme günlüğü dosyası ortam değişkenleri listeler. Bu seçenek, tüm ortam değişkenleri, oluşumunu sırasında yantısılmayacağını belirtir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projelere derleme günlüğü dosyası.  
-  
- **Yok**  
- Ortam değişkenleri derleme günlük dosyasından hariç tutun.  
-  
-## <a name="solution-explorer-mode"></a>Çözüm Gezgini modu  
- **Projede sadece dosyaları göster**  
- Yapılandırır **Çözüm Gezgini** sadece projedeki dosyaları görüntülemek için.  
-  
- **tüm dosyaları göster**  
- Yapılandırır **Çözüm Gezgini** diskteki proje klasöründeki dosya ve proje dosyaları göstermek için.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C/C++ programları oluşturma](https://msdn.microsoft.com/library/fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008)   
- [C/C++ Derleme Başvurusu](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d)
+Bu iletişim kutusu, derleme günlüğü ve destekleyici dosya türleriyle ilgili [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] proje ayarlarını tanımlamanıza olanak sağlar.
+
+### <a name="to-access-this-dialog-box"></a>Bu iletişim kutusuna erişmek için
+
+1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+
+2. **Projeler ve çözümler**' i seçin ve ardından **VC + + proje ayarları**' nı seçin.
+
+## <a name="build-customization-search-path"></a>Yapı özelleştirme arama yolu
+ Projeleriniz için yapı kuralları tanımlamanıza yardımcı olan. Rules dosyalarını içeren dizinlerin listesini belirtir.
+
+## <a name="build-logging"></a>Derleme günlüğü
+ **Evet** Derleme günlüğü dosyasının oluşturulmasını etkinleştirir. Bu seçenek, projenin ara dosyalar dizininde bulunan BuildLog. htm dosyasını oluşturur. Her yeni derleme önceki BuildLog. htm dosyasının üzerine yazar.
+
+ **Hayır** Derleme günlüğü dosyasının oluşturulmasını devre dışı bırakır.
+
+## <a name="build-timing"></a>Derleme zamanlaması
+ **Evet** Derleme zamanlamasını etkinleştirir. Seçilirse, derleme işleminin tamamlaması için gereken süre çıkış penceresine gönderilir. Daha fazla bilgi için bkz. [Çıkış penceresi](../../ide/reference/output-window.md).
+
+ **Hayır** Derleme zamanlamasını kapatır.
+
+## <a name="extensions-to-hide"></a>Gizlenecek uzantılar
+ **Tüm dosyaları göster** etkinleştirildiğinde **Çözüm Gezgini** görüntülenmeyen dosyaların dosya adı uzantılarını belirtir.
+
+## <a name="extensions-to-include"></a>Dahil edilecek uzantılar
+ Projenizde yer alan dosyaların dosya adı uzantılarını belirtir.
+
+## <a name="maximum-concurrent-c-compilations"></a>Maksimum eşzamanlı C++ derlemeler
+ Paralel C++ derleme için kullanılacak en fazla CPU çekirdeği sayısını belirtir.
+
+## <a name="show-environment-in-log"></a>Ortamı günlükte göster
+ **Evet** Yapı günlük dosyasındaki ortam değişkenlerini listeler. Bu seçenek, [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projelerinin derlemeleri sırasında tüm ortam değişkenlerini derleme günlüğü dosyasına yankılanması gerektiğini belirtir.
+
+ **Hayır** Ortam değişkenlerini derleme günlük dosyasından hariç tutun.
+
+## <a name="solution-explorer-mode"></a>Çözüm Gezgini modu
+ **Yalnızca projedeki dosyaları göster** Yalnızca projedeki dosyaları göstermek için **Çözüm Gezgini** yapılandırır.
+
+ **Tüm dosyaları göster** Proje klasöründeki dosyaları projede ve diskte göstermek için **Çözüm Gezgini** yapılandırır.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [C/C++ programlar derleme](https://msdn.microsoft.com/library/fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008) [C++ /oluşturma başvurusu](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d)

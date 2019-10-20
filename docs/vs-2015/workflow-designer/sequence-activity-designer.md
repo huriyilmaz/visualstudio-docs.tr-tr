@@ -8,31 +8,30 @@ f1_keywords:
 - System.Activities.Statements.Sequence.UI
 ms.assetid: 51c8d3cb-4d43-458f-9631-b63755f9ac94
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 47743feae8c256aa0ddb4e3270aca32b108aa5d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3acf02ab478eee244557e04f19f78ba2d5f0b950
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007511"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663256"
 ---
 # <a name="sequence-activity-designer"></a>Sequence Etkinlik Tasarımcısı
-<xref:System.Activities.Statements.Sequence> Etkinlik sırayla yürütülen bir alt etkinlik sıralı bir koleksiyonunu içerir.  
-  
- Sırayla bir dizi etkinliği yürütmek için başka bir yolu bir <xref:System.Activities.Statements.Flowchart> etkinlik. Kullanmayı [akış](../workflow-designer/flowchart-activity-designer.md) basit dallanma veya diagrammatically modellemek için istediğiniz program akışı döngü olduğunda.  
-  
-## <a name="using-the-sequence-activity-designer"></a>Sıralı etkinlik Tasarımcısını kullanma  
- Eklemek için bir <xref:System.Activities.Statements.Sequence> etkinliğini sürükleyip **dizisi** etkinlik Tasarımcısı'ndan **araç kutusu** oturum bırakın [!INCLUDE[wfd1](../includes/wfd1-md.md)] yüzeyi. Bunun için bir alt etkinlik eklemek için <xref:System.Activities.Statements.Sequence> etkinlik, diğer bazı etkinliğinden sürükleyin **araç kutusu** ve bu üçgen İpucu metin kutusunda "etkinliği buraya bırakın" bırakın.  
-  
-### <a name="sequence-activity-properties-in-the-workflow-designer"></a>Sıralı iş akışı tasarımcısında etkinlik özellikleri  
- Aşağıdaki tabloda <xref:System.Activities.Statements.Sequence> özellikleri Tasarımcısı'nda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, özellik kılavuzu veya tasarımcı yüzeyine düzenlenebilir.  
-  
-|Özellik Adı|Gerekli|Kullanım|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Kolay adı belirtir <xref:System.Activities.Statements.Sequence> üst bilgisindeki etkinlik Tasarımcısı. Varsayılan değer sırasıdır. Değer özellik kılavuzunda veya etkinlik Tasarımcısı başlığındaki doğrudan düzenleyebilirsiniz.<br /><br /> Ancak <xref:System.Activities.Activity.DisplayName%2A> kati şekilde gerekli değil kullanmak için en iyi bir uygulamadır.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Akış Çizelgesi](../workflow-designer/flowchart-activity-designer.md)   
- [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
+@No__t_0 etkinliği sırayla çalıştırdığı alt etkinliklerin sıralı bir koleksiyonunu içerir.
+
+ Bir etkinlik kümesini sırayla yürütmeye yönelik başka bir yöntem de <xref:System.Activities.Statements.Flowchart> etkinlik kullanmaktır. Diagram, modellemek istediğiniz basit bir dallandırma veya döngü programı akışınız varsa, [akış çizelgesini](../workflow-designer/flowchart-activity-designer.md) kullanmayı düşünün.
+
+## <a name="using-the-sequence-activity-designer"></a>Sıra etkinliği tasarımcısını kullanma
+ @No__t_0 etkinlik eklemek için, **dizi** etkinlik tasarımcısını **araç kutusundan** sürükleyin ve [!INCLUDE[wfd1](../includes/wfd1-md.md)] yüzeyine bırakın. Bu <xref:System.Activities.Statements.Sequence> etkinliğine bir alt etkinlik eklemek için, başka bir etkinliği **araç** kutusundan sürükleyin ve kutuya "etkinliği buraya bırak" ipucu metni ile kutudaki üçgeni bırakın.
+
+### <a name="sequence-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı dizi etkinliği özellikleri
+ Aşağıdaki tabloda <xref:System.Activities.Statements.Sequence> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, özellik kılavuzunda veya tasarımcı yüzeyinde düzenlenebilir.
+
+|Özellik adı|Gerekli|Kullanım|
+|-------------------|--------------|-----------|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Üst bilgide <xref:System.Activities.Statements.Sequence> etkinlik tasarımcısının kolay adını belirtir. Varsayılan değer dizidir. Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir.<br /><br /> @No__t_0 kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Akış çizelgesi](../workflow-designer/flowchart-activity-designer.md) [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)

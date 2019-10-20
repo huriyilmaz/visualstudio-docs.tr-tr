@@ -6,61 +6,61 @@ helpviewer_keywords:
 - TableAdapters, n-tier applications
 - n-tier applications, separating Datasets and TableAdapters
 ms.assetid: f66a3940-6227-46af-a930-9177f425f4fd
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cb70705d29ad636329803656aeaa1a27ddf237d5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9198378c5acf492216e2bebaceb210073766ea23
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63402762"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648182"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Veri kümeleri ile TableAdapter’ları farklı projelere ayırma
-Türü belirtilmiş datasets Gelişmiş böylece [TableAdapters](create-and-configure-tableadapters.md) ve veri kümesi sınıfları ayrı projelere oluşturulabilir. Bu, hızla uygulama katmanları ayırmak ve n katmanlı veri uygulamaları oluşturmak sağlar.
+Türü belirtilmiş veri kümeleri, [TableAdapters](create-and-configure-tableadapters.md) ve DataSet sınıflarının ayrı projelere üretilebilmeleri için geliştirilmiştir. Bu, uygulama katmanlarını hızlıca ayırmanızı ve n katmanlı veri uygulamaları oluşturmanıza olanak sağlar.
 
-Aşağıdaki yordamda kullanma işlemi açıklanmaktadır **veri kümesi Tasarımcısı** oluşturulan TableAdapter kodunu içeren projeden farklı bir projeye veri kümesi kodunu oluşturmak için.
+Aşağıdaki yordamda, oluşturulan TableAdapter kodunu içeren projeden ayrı bir projede veri kümesi kodu oluşturmak için **veri kümesi Tasarımcısı** kullanma işlemi açıklanmaktadır.
 
-## <a name="separate-datasets-and-tableadapters"></a>Ayrı veri kümeleri ve TableAdapters öğelerini
-Veri kümesi kodunu TableAdapter koddan ayırdığınızda, veri kümesi kodunu içeren projenin geçerli çözümde bulunması gerekir. Bu projenin geçerli çözümde yer almıyorsa, kullanılabilir olmayacaktır **DataSet projesi** listesinde **özellikleri** penceresi.
+## <a name="separate-datasets-and-tableadapters"></a>Ayrı veri kümeleri ve TableAdapters
+Veri kümesi kodunu TableAdapter kodundan ayırdığınızda, veri kümesi kodunu içeren proje geçerli çözümde bulunmalıdır. Bu proje geçerli çözümde bulunmuyorsa, **Özellikler** penceresindeki **veri kümesi proje** listesinde kullanılamaz.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-#### <a name="to-separate-the-dataset-into-a-different-project"></a>Farklı bir projeye veri kümesini ayırmak için
+#### <a name="to-separate-the-dataset-into-a-different-project"></a>Veri kümesini farklı bir projeye ayırmak için
 
-1. Bir veri kümesini içeren bir çözüm açın (*.xsd* dosyası).
-
-    > [!NOTE]
-    > Veri kümesi kodunuzu ayırmak istediğiniz proje çözüm içermiyorsa, projeyi oluşturmak veya mevcut bir projeyi çözüme ekleyin.
-
-2. Türü belirtilmiş veri kümesi dosyasına çift tıklayın (bir *.xsd* dosya) içinde **Çözüm Gezgini** açmak için **veri kümesi Tasarımcısı**.
-
-3. Boş bir alanı seçin **veri kümesi Tasarımcısı**.
-
-4. İçinde **özellikleri** penceresinde bulun **DataSet projesi** düğümü.
-
-5. İçinde **DataSet projesi** listesinde, istediğiniz veri kümesi kodunu oluşturmak proje adını seçin.
-
-     Veri kümesi kodunu oluşturmak istediğiniz projeyi seçin sonra **veri kümesi dosyası** özelliği, bir varsayılan dosya adıyla doldurulur. Gerekirse, bu adı değiştirebilirsiniz. Ayrıca, belirli bir dizine veri kümesi kodunu oluşturmak istiyorsanız, ayarlayabileceğiniz **proje klasörü** özelliğini bir klasörün adı.
+1. Bir veri kümesi ( *. xsd* dosyası) içeren bir çözüm açın.
 
     > [!NOTE]
-    > Veri kümelerini ve TableAdapter bağdaştırıcılarını ayırdığınızda (ayarlayarak **DataSet projesi** özelliği), projedeki varolan kısmi veri kümesi sınıfları olmaz taşınması otomatik olarak. Varolan kısmi veri kümesi sınıfları, veri kümesi projesine el ile taşınmalıdır.
+    > Çözüm, veri kümesi kodunuzu ayırmak istediğiniz projeyi içermiyorsa, projeyi oluşturun veya var olan bir projeyi çözüme ekleyin.
 
-6. Veri kümesini kaydetme.
+2. **Veri kümesi Tasarımcısı**veri kümesini açmak için **Çözüm Gezgini** bir türü belirtilmiş veri kümesi dosyasına ( *. xsd* dosyası) çift tıklayın.
 
-     Veri kümesi kod içinde seçilen projede oluşturulur **DataSet projesi** özelliği ve **TableAdapter** kod, geçerli projenin içine oluşturulur.
+3. **Veri kümesi Tasarımcısı**boş bir alan seçin.
 
-Veri kümesini ve TableAdapter kodunu ayırdıktan sonra varsayılan olarak, her proje bir parçalı sınıf dosyasında sonucudur. Adlı bir dosya özgün proje sahip *DatasetName.Designer.vb* (veya *DatasetName.Designer.cs*), TableAdapter kodunu içerir. İçinde belirtilen projeyi **Dataset projesi** özelliği adlı bir dosya var *DatasetName.DataSet.Designer.vb* (veya *DatasetName.DataSet.Designer.cs*), veri kümesi kodunu içerir.
+4. **Özellikler** penceresinde **veri kümesi proje** düğümünü bulun.
+
+5. **Veri kümesi proje** listesinde, veri kümesi kodunu oluşturmak istediğiniz projenin adını seçin.
+
+     Veri kümesi kodu oluşturmak istediğiniz projeyi seçtikten sonra, **veri kümesi dosyası** özelliği varsayılan bir dosya adı ile doldurulur. Gerekirse bu adı değiştirebilirsiniz. Ayrıca, veri kümesi kodunu belirli bir dizine oluşturmak istiyorsanız **Proje klasörü** özelliğini bir klasörün adı olarak ayarlayabilirsiniz.
+
+    > [!NOTE]
+    > Veri kümelerini ve TableAdapters ayırabilirsiniz ( **veri kümesi proje** özelliğini ayarlayarak), projedeki mevcut kısmi veri kümesi sınıfları otomatik olarak taşınmaz. Mevcut kısmi veri kümesi sınıflarının veri kümesi projesine el ile taşınması gerekir.
+
+6. Veri kümesini kaydedin.
+
+     Veri kümesi kodu, **veri kümesi proje** özelliğindeki seçili projede oluşturulur ve **TableAdapter** kodu geçerli projede oluşturulur.
+
+Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin, TableAdapter kodunu içeren *DataSetName. Designer. vb* (veya *DataSetName.Designer.cs*) adlı bir dosyası vardır. **DataSet projesi** özelliğinde belirtilen proje, dataset kodunu Içeren *DataSetName. DataSet. Designer. vb* (veya *DataSetName.DataSet.Designer.cs*) adlı bir dosyaya sahiptir.
 
 > [!NOTE]
-> Oluşturulan sınıf dosyayı görüntülemek için veri kümesi veya TableAdapter projesini seçin. Ardından **Çözüm Gezgini**seçin **tüm dosyaları göster**.
+> Oluşturulan sınıf dosyasını görüntülemek için DataSet veya TableAdapter projesini seçin. Ardından, **Çözüm Gezgini**, **tüm dosyaları göster**' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md)
-- [İzlenecek yol: Bir N katmanlı veri uygulaması oluşturma](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+- [İzlenecek yol: N katmanlı veri uygulaması oluşturma](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [Hiyerarşik güncelleştirme](../data-tools/hierarchical-update.md)
 - [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)
 - [ADO.NET](/dotnet/framework/data/adonet/index)

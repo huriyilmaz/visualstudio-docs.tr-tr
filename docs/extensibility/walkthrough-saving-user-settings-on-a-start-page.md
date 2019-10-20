@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Kullanıcı ayarlarını başlangıç sayfasına kaydetme | Microsoft Docs'
+title: 'İzlenecek yol: bir başlangıç sayfasına kullanıcı ayarlarını kaydetme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 754b9bf3-8681-4c77-b0a4-09146a4e1d2d
@@ -9,61 +9,61 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 79a54867044961d972e2ded452958d2463038e7d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fe3d1040089a4b78368a4da94933a4a1440afafd
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318517"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647916"
 ---
-# <a name="walkthrough-save-user-settings-on-a-start-page"></a>İzlenecek yol: Bir başlangıç sayfasında kullanıcı ayarlarını Kaydet
+# <a name="walkthrough-save-user-settings-on-a-start-page"></a>İzlenecek yol: bir başlangıç sayfasına kullanıcı ayarlarını kaydetme
 
-Başlangıç sayfası için kullanıcı ayarlarını kalıcı hale getirebilirsiniz. Bu izlenecek yolu takip ederek, kullanıcı bir düğmeye tıkladığında ve ardından başlangıç sayfası yükleyen her zaman bu ayarı alır bir ayarı kayıt defterine kaydeder bir denetim oluşturabilirsiniz. Başlangıç sayfası proje şablonu özelleştirilebilir kullanıcı denetimini içerir ve söz konusu denetim varsayılan başlangıç sayfası XAML çağrıları olduğundan, başlangıç sayfası kendisini değiştirmek zorunda değilsiniz.
+Başlangıç sayfanız için Kullanıcı ayarlarını kalıcı hale getirebilirsiniz. Bu izlenecek yolu izleyerek, Kullanıcı bir düğmeye tıkladığında kayıt defterine bir ayar kaydeden ve sonra başlangıç sayfası her yüklendiğinde bu ayarı alan bir denetim oluşturabilirsiniz. Başlangıç sayfası proje şablonu özelleştirilebilir bir kullanıcı denetimi içerdiğinden ve varsayılan başlangıç sayfası XAML bu denetimi çağırırsa, başlangıç sayfasının kendisini değiştirmeniz gerekmez.
 
-Bu izlenecek yolda örneği ayarlar deposu örneğidir <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> okuyan ve bunu çağrıldığında aşağıdaki kayıt defteri konumuna yazma arabirimi: **HKCU\Software\Microsoft\VisualStudio\14.0\\\<CollectionName>**
+Bu izlenecek yolda örneği oluşturulan ayarlar deposu, çağrıldığında aşağıdaki kayıt defteri konumunu okuyan ve yazan <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> arabiriminin bir örneğidir: **Hkcu\software\microsoft\visualstudio\14.exe \\ \<CollectionName >**
 
-Visual Studio'nun deneysel örneğinde çalıştığı sırada ayarlar deposu okuyan ve yazan **HKCU\Software\Microsoft\VisualStudio\14.0Exp\\\<KoleksiyonAdı >.**
+Visual Studio 'nun deneysel örneğinde çalışırken, ayarlar deposu **Hkcu\software\microsoft\visualstudio\14.0Exp \\ \<CollectionName >** okur ve yazar.
 
-Ayarlarını kalıcı yapma hakkında daha fazla bilgi için bkz: [genişletme kullanıcı ayarları ve seçenekleri](../extensibility/extending-user-settings-and-options.md).
+Ayarları kalıcı hale getirme hakkında daha fazla bilgi için bkz. [Kullanıcı ayarlarını ve seçeneklerini genişletme](../extensibility/extending-user-settings-and-options.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 > [!NOTE]
-> Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+> Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 >
-> Başlangıç sayfası proje şablonu kullanarak indirebilirsiniz **Uzantı Yöneticisi**.
+> **Uzantı Yöneticisi**' ni kullanarak başlangıç sayfası proje şablonunu indirebilirsiniz.
 
-## <a name="set-up-the-project"></a>Projesi kurun
+## <a name="set-up-the-project"></a>Projeyi ayarlama
 
-1. Bölümünde anlatıldığı gibi bir başlangıç sayfası proje oluşturma [özel bir başlangıç sayfası oluşturma](creating-a-custom-start-page.md). Projeyi adlandırın **SaveMySettings**.
+1. [Özel başlangıç sayfası oluşturma](creating-a-custom-start-page.md)bölümünde açıklandığı gibi bir başlangıç sayfası projesi oluşturun. Projeyi **SaveMySettings**olarak adlandırın.
 
-2. İçinde **Çözüm Gezgini**, aşağıdaki derleme başvurularının StartPageControl projeye ekleyin:
+2. **Çözüm Gezgini**' de, StartPageControl projesine aşağıdaki derleme başvurularını ekleyin:
 
     - EnvDTE
 
     - EnvDTE80
 
-    - Microsoft.VisualStudio.OLE.Interop
+    - Microsoft. VisualStudio. OLE. Interop
 
-    - Microsoft.VisualStudio.Shell.Interop.11.0
+    - Microsoft. VisualStudio. Shell. Interop. 11.0
 
-3. Açık *MyControl.xaml*.
+3. *MyControl. xaml*' i açın.
 
-4. XAML bölmesinden, üst düzey <xref:System.Windows.Controls.UserControl> öğe tanımı; ad alanı bildirimi sonra aşağıdaki olay bildirimi ekleyin.
+4. XAML bölmesinde, üst düzey <xref:System.Windows.Controls.UserControl> öğesi tanımında, ad alanı bildirimlerinden sonra aşağıdaki olay bildirimini ekleyin.
 
     ```xml
     Loaded="OnLoaded"
     ```
 
-5. Tasarım bölmesini denetimin ana alana tıklayın ve ardından tuşuna basın **Sil**.
+5. Tasarım bölmesinde, denetimin ana alanına tıklayın ve ardından **Sil**' e basın.
 
-     Bu adım kaldırır <xref:System.Windows.Controls.Border> öğe ve içindeki her şeyi ve yalnızca en üst düzey bırakır <xref:System.Windows.Controls.Grid> öğesi.
+     Bu adım <xref:System.Windows.Controls.Border> öğesi ve içindeki her şeyi kaldırır ve yalnızca üst düzey <xref:System.Windows.Controls.Grid> öğesini bırakır.
 
-6. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Controls.StackPanel> kılavuz denetimi.
+6. **Araç kutusundan**bir <xref:System.Windows.Controls.StackPanel> denetimini kılavuza sürükleyin.
 
-7. Artık sürükleyin bir <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.TextBox>ve bir düğmeyi <xref:System.Windows.Controls.StackPanel>.
+7. Şimdi bir <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.TextBox> ve bir düğmeyi <xref:System.Windows.Controls.StackPanel> sürükleyin.
 
-8. Ekleme bir **x: Name** özniteliğini <xref:System.Windows.Controls.TextBox>ve `Click` olayı <xref:System.Windows.Controls.Button>, aşağıdaki örnekte gösterildiği gibi.
+8. Aşağıdaki örnekte gösterildiği gibi, <xref:System.Windows.Controls.TextBox> için bir **X:Name** özniteliği ve <xref:System.Windows.Controls.Button> için `Click` bir olay ekleyin.
 
     ```xml
     <StackPanel Width="300" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -73,17 +73,17 @@ Ayarlarını kalıcı yapma hakkında daha fazla bilgi için bkz: [genişletme k
     </StackPanel>
     ```
 
-## <a name="implement-the-user-control"></a>Kullanıcı denetimi uygulayın
+## <a name="implement-the-user-control"></a>Kullanıcı denetimini uygulama
 
-1. XAML bölmesinde, `Click` özniteliği <xref:System.Windows.Controls.Button> öğesini ve ardından **olay işleyicisine Git**.
+1. XAML bölmesinde, <xref:System.Windows.Controls.Button> öğesinin `Click` özniteliğine sağ tıklayıp **olay Işleyicisine git ' e**tıklayın.
 
-     Bu adım açılır *MyControl.xaml.cs*ve için bir saplama işleyici oluşturur `Button_Click` olay.
+     Bu adım *MyControl.xaml.cs*' ı açar ve `Button_Click` olayı için bir saplama işleyicisi oluşturur.
 
-2. Aşağıdaki `using` deyimlerini dosyanın üstüne.
+2. Aşağıdaki `using` yönergelerini dosyanın en üstüne ekleyin.
 
      [!code-csharp[StartPageDTE#11](../extensibility/codesnippet/CSharp/walkthrough-saving-user-settings-on-a-start-page_1.cs)]
 
-3. Özel bir ekleme `SettingsStore` özelliği, aşağıdaki örnekte gösterildiği gibi.
+3. Aşağıdaki örnekte gösterildiği gibi özel bir `SettingsStore` özelliği ekleyin.
 
     ```csharp
     private IVsWritableSettingsStore _settingsStore = null;
@@ -115,9 +115,9 @@ Ayarlarını kalıcı yapma hakkında daha fazla bilgi için bkz: [genişletme k
     }
     ```
 
-     Bu özellik, önce bir başvuru edinir <xref:EnvDTE80.DTE2> Otomasyon nesne modeli içerir arabirimi <xref:System.Windows.FrameworkElement.DataContext%2A> kullanıcı denetimi ve ardından kullanan bir kopyasını almak için DTE <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> arabirimi. Daha sonra geçerli kullanıcı ayarları döndürmek için bu örneği kullanır.
+     Bu özellik ilk olarak, Kullanıcı denetiminin <xref:System.Windows.FrameworkElement.DataContext%2A> Otomasyon nesne modelini içeren <xref:EnvDTE80.DTE2> arabirimine bir başvuru alır ve ardından <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsManager> arabiriminin bir örneğini almak için DTE 'yi kullanır. Ardından, geçerli kullanıcı ayarlarını döndürmek için bu örneği kullanır.
 
-4. Doldurun `Button_Click` aşağıdaki gibi olay.
+4. @No__t_0 olayını aşağıdaki şekilde girin.
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -132,9 +132,9 @@ Ayarlarını kalıcı yapma hakkında daha fazla bilgi için bkz: [genişletme k
     }
     ```
 
-     Bu kayıt defteri "MySettings" koleksiyonunda "MySetting" alanına metin kutusunun içeriğini yazar. Koleksiyon mevcut değilse oluşturulur.
+     Bu, metin kutusunun içeriğini kayıt defterindeki bir "MySettings" koleksiyonundaki "MySetting" alanına yazar. Koleksiyon yoksa, oluşturulur.
 
-5. Aşağıdaki işleyicisi eklemek `OnLoaded` kullanıcı denetiminin olay.
+5. Kullanıcı denetiminin `OnLoaded` olayı için aşağıdaki işleyiciyi ekleyin.
 
     ```csharp
     private void OnLoaded(Object sender, RoutedEventArgs e)
@@ -146,57 +146,57 @@ Ayarlarını kalıcı yapma hakkında daha fazla bilgi için bkz: [genişletme k
     }
     ```
 
-     Bu kod metni metin kutusunun geçerli değeri "MySetting" olarak ayarlar.
+     Bu kod metin kutusunun metnini "MySetting" öğesinin geçerli değerine ayarlar.
 
-6. Kullanıcı denetimi oluşturun.
+6. Kullanıcı denetimini oluşturun.
 
-7. İçinde **Çözüm Gezgini**açın *source.extension.vsixmanifest*.
+7. **Çözüm Gezgini**, *kaynak. Extension. valtmanifest*' i açın.
 
-8. Bildirim düzenleyicisinde ayarlama **ürün adı** için **My ayarlarını başlangıç sayfası Kaydet**.
+8. Bildirim düzenleyicisinde, **ürün adı** ' nı ayarlarımı **Kaydet başlangıç sayfası**olarak ayarlayın.
 
-     Görünür olduğundan, bu özellik başlangıç sayfası adını ayarlar **başlangıç sayfasını Özelleştir** listesinde **seçenekleri** iletişim kutusu.
+     Bu özellik, başlangıç sayfasının adını **Seçenekler** Iletişim kutusundaki **Başlangıç sayfası Özelleştir** listesinde görünecek şekilde ayarlar.
 
-9. Derleme *StartPage.xaml*.
+9. Build *StartPage. xaml*.
 
-## <a name="test-the-control"></a>Denetimi test
+## <a name="test-the-control"></a>Denetimi test etme
 
-1. Tuşuna **F5**.
+1. **F5**tuşuna basın.
 
-     Visual Studio'nun deneysel örneği açılır.
+     Visual Studio 'nun deneysel örneği açılır.
 
-2. Deneysel örneğinde üzerinde **Araçları** menüsünde tıklatın **seçenekleri**.
+2. Deneysel örnekte, **Araçlar** menüsünde **Seçenekler**' e tıklayın.
 
-3. İçinde **ortam** düğümünü tıklatın **başlangıç**ve ardından **başlangıç sayfasını Özelleştir** listesinden **[yüklü uzantı] Kaydet My ayarlarını başlangıç sayfası** .
+3. **Ortam** düğümünde, **Başlangıç**' a tıklayın ve ardından **Başlangıç sayfası Özelleştir** listesinde **[yüklü uzantı] Ayarlarımı Kaydet başlangıç sayfası**' nı seçin.
 
-     **Tamam**'ı tıklatın.
+     **Tamam**'a tıklayın.
 
-4. Başlangıç sayfası açıksa ve ardından kapatın **görünümü** menüsünde tıklatın **başlangıç sayfası**.
+4. Açık ise başlangıç sayfasını kapatın ve ardından **Görünüm** menüsünde, **Başlangıç sayfası**' nı tıklatın.
 
-5. Başlangıç sayfasında tıklayın **Denetimim** sekmesi.
+5. Başlangıç sayfasında, **MyControl** sekmesine tıklayın.
 
-6. Metin kutusuna **Cat**ve ardından **Kaydet My ayarı**.
+6. Metin kutusuna **Cat**yazın ve sonra **ayarımı kaydet**' e tıklayın.
 
 7. Başlangıç sayfasını kapatın ve yeniden açın.
 
-     Metin kutusuna "Cat" sözcüğü görüntülenmesi gerekir.
+     "Cat" sözcüğünün metin kutusunda görüntülenmesi gerekir.
 
-8. "Cat" sözcük "Köpek" sözcüğüyle değiştirin. Düğmesine tıklamayın.
+8. "Cat" sözcüğünü "köpek" kelimesiyle değiştirin. Düğmeye tıklamayın.
 
 9. Başlangıç sayfasını kapatın ve yeniden açın.
 
-     Visual Studio araç pencereleri, bellekte tuttuğu bile Visual Studio'nun kendisi kapatana kadar bunlar kapalı olduğundan ayarı kaydetmediyseniz olsa bile "Köpek" sözcük metin kutusuna görüntülenmesi gerekir.
+     "Köpek" sözcüğünün metin kutusunda görüntülenmesi gerekir, çünkü Visual Studio kapalı olsalar bile, Visual Studio tarafından kapanana kadar araç pencerelerini bellekte tutar.
 
-10. Visual Studio'nun deneysel örneği kapatın.
+10. Visual Studio 'nun Deneysel örneğini kapatın.
 
-11. Tuşuna **F5** deneysel örneğinde yeniden açmak için.
+11. Deneysel örneği yeniden açmak için **F5** 'e basın.
 
-12. Metin kutusuna "Cat" sözcüğü görüntülenmesi gerekir.
+12. "Cat" sözcüğünün metin kutusunda görüntülenmesi gerekir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kaydedip almak ve ayarlamak için farklı değerleri farklı olay işleyicileri'ı kullanarak herhangi bir sayıda özel ayarları almak için bu kullanıcı denetimi değiştirebilirsiniz `SettingsStore` özelliği. Farklı bir kullandığınız sürece `propertyName` her çağrı için parametre <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A>, değerleri başka bir kayıt defterinde üzerine yazmayın.
+@No__t_0 özelliğini almak ve ayarlamak için farklı olay işleyicilerinden farklı değerler kullanarak istediğiniz sayıda özel ayarı kaydetmek ve almak için bu kullanıcı denetimini değiştirebilirsiniz. Her <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore.SetString%2A> çağrısı için farklı bir `propertyName` parametresi kullandığınız sürece, değerler kayıt defterindeki bir diğerinin üzerine yazmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:EnvDTE80.DTE2?displayProperty=fullName>
-- [Visual Studio komutları için bir başlangıç sayfası ekleme](../extensibility/adding-visual-studio-commands-to-a-start-page.md)
+- [Başlangıç sayfasına Visual Studio komutları ekleme](../extensibility/adding-visual-studio-commands-to-a-start-page.md)

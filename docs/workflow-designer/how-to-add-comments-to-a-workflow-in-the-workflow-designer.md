@@ -1,26 +1,26 @@
 ---
-title: 'İş Akışı Tasarımcısı - nasıl yapılır: Bir iş akışına açıklama ekleme'
+title: 'İş Akışı Tasarımcısı-nasıl yapılır: bir iş akışına açıklama ekleme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
 - System.Activities.Presentation.Annotations.Annotation.UI
 - Annotation
 ms.assetid: 9aa0e8d6-8129-4438-8389-d460611581a7
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: c7eb15c6d19ab40df6913dd67466dc20012492b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: a627f5076c78747d86b0b96e4a6e9208b0191273
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950376"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650377"
 ---
-# <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında bir iş akışına açıklama ekleme
+# <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısı bir iş akışına açıklama ekleme
 
-Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak için .NET Framework 4.5 öğesi Tasarımcısı'nda aşağıdaki türden ek açıklamalar eklemek Geliştirici sağlar:
+Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak için .NET Framework 4,5, geliştiricinin tasarımcı içindeki aşağıdaki öğe türlerine ek açıklamalar eklemesine izin verir:
 
 - <xref:System.Activities.Activity>
 
@@ -28,63 +28,63 @@ Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak iç
 
 - <xref:System.Activities.Statements.Transition>
 
-- Türetilmiş sınıflar <xref:System.Activities.Statements.FlowNode>
+- @No__t_0 türetilen sınıflar
 
 - <xref:System.Activities.Variable>
 
 - <xref:System.Activities.Argument>
 
 > [!IMPORTANT]
-> Ek açıklamanın içeriğini iş akışıyla ilişkilendirilmiş XAML dosyasına düz metin olarak kaydedilir ve başkaları tarafından potansiyel olarak okunamadı. Bir ek açıklama hassas bilgileri girerek oluştururken dikkatli olun.
+> Ek açıklamanın içerikleri, iş akışıyla ilişkili XAML dosyasına düz metin olarak kaydedilir ve başkaları tarafından okunabilir. Hassas bilgileri bir ek açıklamaya girerken dikkatli olun.
 
-## <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>Bir etkinlik Tasarımcısı'nda bir ek açıklama ekleme
+## <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>Tasarımcıda bir etkinliğe ek açıklama ekleme
 
-1. İş Akışı Tasarımcısı'nda iş akışı Tasarımcısı ve seçim içindeki bir öğeyi sağ **ek açıklamaları**, **ek açıklama Ekle**.
+1. İş akışı tasarımcısında, iş akışı tasarımcısında bir öğeye sağ tıklayın ve **ek** **Açıklama Ekle**' yi seçin.
 
-1. Ek açıklamanın metin sağlanan alana ekleyin.
+1. Ek açıklamanın metnini, girilen alana ekleyin.
 
-   Öğe bir ek açıklama simgesini gösterir. Ek açıklama simgenin üzerine geldiğinizde, ek açıklama metni görüntüler.
+   Öğe bir ek açıklama simgesi gösterir. Ek açıklama simgesinin üzerine gelindiğinde ek açıklamanın metni görüntülenir.
 
-## <a name="displaying-an-annotation-in-an-activitys-designer"></a>Ek açıklamanın bir etkinliğin tasarımcıda görüntüleme
+## <a name="displaying-an-annotation-in-an-activitys-designer"></a>Etkinliğin tasarımcısında ek açıklama görüntüleme
 
-1. Bir ek açıklama dışında etkinlik görüntüleme olan bir etkinlik Tasarımcısı ile tıklayın **PIN** ek açıklama donatıcı simgesi.
+1. Etkinliğin dışında görüntülenen ek açıklamasına sahip bir etkinlik Tasarımcısı ile ek açıklama donatıcının **sabitleme** simgesine tıklayın.
 
-   Ek açıklama etkinlik Tasarımcısı'nda görüntülenir. Aşağıdaki ekran görüntüsünde, ek açıklama "Başlangıç etkinliği iş akışı" etkinlik Tasarımcısı'nda görüntülenir.
+   Ek açıklama etkinliğin tasarımcısında görüntülenir. Aşağıdaki ekran görüntüsünde, Etkinlik tasarımcısında "iş akışında başlangıç etkinliği" ek açıklaması görüntülenir.
 
-   ![Etkinlik Tasarımcısı'nda gösterilen ek açıklaması](../workflow-designer/media/annotationindesigner.png)
+   ![Etkinlik tasarımcısında gösterilen ek açıklama](../workflow-designer/media/annotationindesigner.png)
 
-2. Ek açıklama etkinlik Tasarımcısı dışında görüntülemek için etkinlik Tasarımcısı'nda ek açıklama alanı üzerine gelin ve tıklayın **Unpın** simgesi
+2. Ek açıklamayı etkinliğin tasarımcısının dışında göstermek için etkinliğin tasarımcısında ek açıklama alanının üzerine gelin ve **Ayır** simgesine tıklayın
 
-   ![Ek açıklama görüntülenen dışında bir etkinlik Tasarımcısı](../workflow-designer/media/annotationoutsidedesigner.png)
+   ![Etkinliğin tasarımcısının dışında görünen ek açıklama](../workflow-designer/media/annotationoutsidedesigner.png)
 
-## <a name="showing-or-hiding-all-annotations"></a>Tüm ek açıklamaları gizleme veya gösterme
+## <a name="showing-or-hiding-all-annotations"></a>Tüm ek açıklamaları gösterme veya gizleme
 
-1. Ek açıklamanın sahip bir etkinliğe sağ tıklayın. Seçin **ek açıklamaları**, **tüm ek açıklamaları Göster**.
+1. Ek açıklamasına sahip bir etkinliğe sağ tıklayın. **Ek açıklamaları**seç, **tüm ek açıklamaları göster**.
 
-   Tüm ek açıklamaları etkinliğin tasarımcılarda görüntülenir.
+   Tüm ek açıklamalar etkinliğin tasarımcıları içinde görüntülenir.
 
-1. Etkinlik tasarımcıları dışında tüm ek açıklamaları görüntülemek için etkinliği sağ tıklatın ve **ek açıklamaları**, **tüm ek açıklamaları Gizle**.
+1. Etkinliğin tasarımcıları dışındaki tüm ek açıklamaları göstermek için, etkinliğe sağ tıklayın ve **ek açıklamalar**' ı seçin, **tüm ek açıklamaları gizleyin**.
 
-## <a name="editing-or-deleting-an-annotation-for-an-activity"></a>Bir etkinlik için ek açıklamanın silinmesi veya düzenleme
+## <a name="editing-or-deleting-an-annotation-for-an-activity"></a>Etkinlik için ek açıklama ekleme veya silme
 
-1. Ek açıklamanın sahip bir etkinliği sağ tıklatın.
+1. Ek açıklamasına sahip bir etkinliğe sağ tıklayın.
 
-1. Seçin **ek açıklamaları**, **Düzenle ek açıklama** veya **açıklamayı Sil**.
+1. **Ek açıklamaları**seç, **ek açıklamayı Düzenle** veya **ek açıklamayı Sil**.
 
-   Ek açıklama düzenlenmek üzere açıldıktan ya da silinir.
+   Ek açıklama, düzenlenmek veya silinmek üzere açıldı.
 
-1. Tüm ek açıklamaları tek seferde silmek için iş akışı Tasarımcısı ve select sağ **ek açıklama**, **tüm ek açıklamaları silme**.
+1. Tüm ek açıklamaları aynı anda silmek için, iş akışı tasarımcısına sağ tıklayın ve **ek açıklama**' yı seçin, **tüm ek açıklamaları silin**.
 
-## <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>Ekleme, düzenleme ve bir değişkene veya bağımsız bir ek açıklamayı silme
+## <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>Bir değişken veya bağımsız değişken için ek açıklama ekleme, düzenlememe ve silme
 
-1. Bir değişken veya bağımsız değişken üzerinde sağ tıklayın ve ek açıklama Ekle'ı seçin.
+1. Bir değişkene veya bağımsız değişkene sağ tıklayın ve ek açıklama ekle ' yi seçin.
 
-1. Ek Açıklama metnini girin. Değişken veya bağımsız değişken bir ek açıklama simgesi görüntüler.
+1. Ek açıklamanın metnini girin. Değişken veya bağımsız değişken bir ek açıklama simgesi görüntüler.
 
-1. Bir değişkeni veya bir ek açıklama sahip bağımsız değişken üzerinde sağ tıklayın. Ek Açıklama Düzenle.
+1. Ek açıklamasına sahip bir değişkene veya bağımsız değişkene sağ tıklayın. Ek açıklamayı Düzenle ' yi seçin.
 
-   Ek açıklama düzenleme için açılır.
+   Ek açıklama düzenlenmek üzere açıldı.
 
-1. Bir değişkeni veya bir ek açıklama sahip bağımsız değişken üzerinde sağ tıklayın. Ek Açıklama Sil'i seçin.
+1. Ek açıklamasına sahip bir değişkene veya bağımsız değişkene sağ tıklayın. Ek açıklamayı Sil ' i seçin.
 
-   Ek açıklama silindi.
+   Ek açıklama silinir.

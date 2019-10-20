@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Toolbox, HTML tab
 - HTML Designer, setting options
 - HTML tab in Toolbox
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72492b984e7f47b87ea326fe8ebcce414ee978ec
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: ed46bdb9b5562b38f37129d69e7f075e425588b0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926055"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644778"
 ---
 # <a name="toolbox-html-tab"></a>Araç kutusu, HTML sekmesi
 
@@ -34,13 +34,13 @@ Aşağıdaki araçlar HTML sekmesinde varsayılan olarak kullanılabilir.
 
 ![ASP.NET Mobile Designer HTMLpage Işaretçisi](../../ide/reference/media/vxpointer.gif)
 
-Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Silinemez. İşaretçi, nesneleri Tasarım görünümü yüzeyi üzerine sürüklemenize, yeniden boyutlandırmanıza ve sayfa ya da form üzerinde yeniden konumlandırmanıza olanak sağlar. Daha fazla bilgi için [araç kutusu](../../ide/reference/toolbox.md).
+Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Silinemez. İşaretçi, nesneleri Tasarım görünümü yüzeyi üzerine sürüklemenize, yeniden boyutlandırmanıza ve sayfa ya da form üzerinde yeniden konumlandırmanıza olanak sağlar. Daha fazla bilgi için bkz. [araç kutusu](../../ide/reference/toolbox.md).
 
 **Giriş (düğme)**
 
 ![HTML Web sayfası düğmesi](../../ide/reference/media/vxbutton.gif)
 
-`input` Öğesi`type="button"`ekler. Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Button1"` ilk `id="Button2"` düğme için, ikincisi, vb. için eklenmiştir.
+@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Button1"` ilk düğme için eklenir, ikincisi için `id="Button2"` ve bu şekilde devam eder.
 
 **Giriş (düğme)** Tasarım görünümü yüzeyine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -52,7 +52,7 @@ Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Si
 
 ![HTMLpageResetButton ekran görüntüsü](../../ide/reference/media/vxreset.gif)
 
-`input` Öğesi`type="reset"`ekler. Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Reset1"` ilk sıfırlama `id="Reset2"` düğmesine, ikincisi için eklenir ve bu şekilde devam eder.
+@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Reset1"` ilk sıfırlama düğmesine eklenir, ikincisi için `id="Reset2"` ve bu şekilde devam eder.
 
 **Girişi (sıfırlama)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -64,7 +64,7 @@ Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Si
 
 ![HTMLpageToolbarSubmitButton ekran görüntüsü](../../ide/reference/media/vxsubmit.gif)
 
-`input` Öğesi`type="submit"`ekler. Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Submit1"` ilk gönder `id="Submit2"` düğmesine, ikincisi için eklenir ve bu şekilde devam eder.
+@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Submit1"` ilk Gönder düğmesine eklenir, ikincisi için `id="Submit2"` ve bu şekilde devam eder.
 
 **Girişi (Gönder)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -76,7 +76,7 @@ Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Si
 
 ![HTMLpageToolbarTextField ekran görüntüsü](../../ide/reference/media/vxtextfield.gif)
 
-Belgenize bir `input` `type="text"` öğesi ekler. Görüntülenen varsayılan metni değiştirmek için `value` özniteliği düzenleyin. Varsayılan olarak, `id="Text1"` ikinci `id="Text2"` için ilk metin alanı için eklenir ve bu şekilde devam eder.
+Belgenize `type="text"` `input` öğesi ekler. Görüntülenen varsayılan metni değiştirmek için `value` özniteliğini düzenleyin. Varsayılan olarak, `id="Text1"` ilk metin alanı için eklenir, ikincisi için `id="Text2"` ve bu şekilde devam eder.
 
 **Girişi (metin)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -91,7 +91,7 @@ Belgenize bir `input` `type="text"` öğesi ekler. Görüntülenen varsayılan m
 
 ![HTML sayfa dosyası alanı](../../ide/reference/media/vxfilefield.gif)
 
-Belgenize bir `input` `type="file"` öğesi ekler. Varsayılan olarak, `id="File1"` ikinci `id="File2"` için ilk dosya alanı için eklenir ve bu şekilde devam eder.
+Belgenize `type="file"` `input` öğesi ekler. Varsayılan olarak, `id="File1"` ilk dosya alanı için eklenir, ikincisi için `id="File2"` ve bu şekilde devam eder.
 
 **Giriş (dosya)** Tasarım görünümü yüzeyine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -106,7 +106,7 @@ Belgenize bir `input` `type="file"` öğesi ekler. Varsayılan olarak, `id="File
 
 ![Visual Studio parolası alanı](../../ide/reference/media/vxpassword.gif)
 
-`input` Öğesi`type="password"`ekler. Varsayılan olarak, `id="Password1"` ilk parola `id="Password2"` alanı için, ikincisi için eklenir ve bu şekilde devam eder.
+@No__t_1 bir `input` öğesi ekler. Varsayılan olarak, `id="Password1"` ilk parola alanı için eklenir, ikincisi için `id="Password2"` ve bu şekilde devam eder.
 
 **Giriş (parola)** Tasarım görünümü yüzeyine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -121,7 +121,7 @@ Belgenize bir `input` `type="file"` öğesi ekler. Varsayılan olarak, `id="File
 
 ![HTML Web sayfası araç kutusu seçeneği](../../ide/reference/media/vxcheckbox.gif)
 
-`input` Öğesi`type="checkbox"`ekler. Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Checkbox1"` ilk onay `id="Checkbox2"` kutusu için, ikincisi için eklenmiştir ve bu şekilde devam eder.
+@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Checkbox1"` ilk onay kutusu için eklenir, ikincisi için `id="Checkbox2"` ve bu şekilde devam eder.
 
 **Girişi (onay kutusu)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -133,7 +133,7 @@ Belgenize bir `input` `type="file"` öğesi ekler. Varsayılan olarak, `id="File
 
 ![VisualStudioHTMLpageRadioButton ekran görüntüsü](../../ide/reference/media/vxradio.gif)
 
-`input` Öğesi`type="radio"`ekler. Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Radio1"` ilk radyo `id="Radio2"` düğmesine, ikincisi için eklenir ve bu şekilde devam eder.
+@No__t_1 bir `input` öğesi ekler. Görüntülenen metni değiştirmek için `name` özelliğini düzenleyin. Varsayılan olarak, `id="Radio1"` ilk radyo düğmesi için eklenir, ikincisi için `id="Radio2"` ve bu şekilde devam eder.
 
 **Girişi (radyo)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -145,7 +145,7 @@ Belgenize bir `input` `type="file"` öğesi ekler. Varsayılan olarak, `id="File
 
 ![HTML sayfası gizli öğesi](../../ide/reference/media/vxhidden.gif)
 
-`input` Öğesi`type="hidden"`ekler. Varsayılan olarak, `id="Hidden1"` ilk gizli `id="Hidden2"` alan için, ikincisi için eklenir ve bu şekilde devam eder.
+@No__t_1 bir `input` öğesi ekler. Varsayılan olarak, `id="Hidden1"` ilk gizli alan için eklenir, ikincisi için `id="Hidden2"` ve bu şekilde devam eder.
 
 **Girişi (gizli)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -157,7 +157,7 @@ Belgenize bir `input` `type="file"` öğesi ekler. Varsayılan olarak, `id="File
 
 ![HTMLpage araç çubuğu metin alanı](../../ide/reference/media/vxtextarea.gif)
 
-Bir `textarea` öğesi ekler. Metin alanını yeniden boyutlandırabilir veya görüntüleme alanının ötesinde genişleyen metni görüntülemek için kaydırma çubuklarını kullanabilirsiniz. Görüntülenen varsayılan metni değiştirmek için `value` özniteliği düzenleyin. Varsayılan `id="textarea1"` olarak, ikinci `id=" textarea 2"` için ilk metin alanı eklenir ve bu şekilde devam eder.
+Bir `textarea` öğesi ekler. Metin alanını yeniden boyutlandırabilir veya görüntüleme alanının ötesinde genişleyen metni görüntülemek için kaydırma çubuklarını kullanabilirsiniz. Görüntülenen varsayılan metni değiştirmek için `value` özniteliğini düzenleyin. Varsayılan olarak, `id="textarea1"` ilk metin alanının eklendiği, ikincisi için `id=" textarea 2"` ve bu şekilde devam eder.
 
 **Textarea** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
 
@@ -184,7 +184,7 @@ Bir `table` öğesi ekler.
 
 ![HTML sayfası resim öğesi](../../ide/reference/media/vximage.gif)
 
-Bir `img` öğesi ekler. `src` Kendi`alt` metnini belirtmek için bu öğeyi düzenleyin.
+Bir `img` öğesi ekler. @No__t_0 ve `alt` metnini belirtmek için bu öğeyi düzenleyin.
 
 **Görüntüyü** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
 
@@ -196,7 +196,7 @@ Bir `img` öğesi ekler. `src` Kendi`alt` metnini belirtmek için bu öğeyi dü
 
 ![HTML sayfası araç kutusu açılan kutusu](../../ide/reference/media/vxdropdown.gif)
 
-Bir açılan `select` öğe ekler ( `size` özniteliği olmadan). Varsayılan olarak, `id="select1"` ilk liste `id="select2"` kutusu için, ikinci için eklenmiştir ve bu şekilde devam eder.
+Bir açılan `select` öğesi ekler (`size` özniteliği olmadan). Varsayılan olarak, `id="select1"` ilk liste kutusu için eklenir, ikincisi için `id="select2"` ve bu şekilde devam eder.
 
 **Seçimi** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKILER gibi HTML biçimlendirmesi eklenir:
 
@@ -204,13 +204,13 @@ Bir açılan `select` öğe ekler ( `size` özniteliği olmadan). Varsayılan ol
 <select id="select1" name="select1"><option selected></option></select>
 ```
 
-Boyut özelliğinin değerini artırarak çok satırlı `select` bir öğe oluşturabilirsiniz.
+Boyut özelliğinin değerini artırarak çok satırlı `select` öğesi oluşturabilirsiniz.
 
 **Yatay kural**
 
 ![HTML sayfası yatay kural öğesi](../../ide/reference/media/vxhorizontal.gif)
 
-Bir `hr` öğesi ekler. Çizginin kalınlığını artırmak için `size` özniteliği düzenleyin.
+Bir `hr` öğesi ekler. Çizginin kalınlığını artırmak için `size` özniteliğini düzenleyin.
 
 **Yatay kuralı** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
@@ -222,7 +222,7 @@ Bir `hr` öğesi ekler. Çizginin kalınlığını artırmak için `size` öznit
 
 ![HTML sayfa etiketi](../../ide/reference/media/vxlabel.gif)
 
-Özniteliği içeren bir `div` öğesi ekler. `ms_positioning="FlowLayout"` Genişlik ve Yükseklik dışında, bu öğe bir akış düzeni paneliyle aynıdır. `div` Öğe içinde bulunan metni biçimlendirmek için, açma etiketine bir `class="stylename"` öznitelik ekleyin.
+Bir `ms_positioning="FlowLayout"` özniteliği içeren bir `div` öğesi ekler. Genişlik ve Yükseklik dışında, bu öğe bir akış düzeni paneliyle aynıdır. @No__t_0 öğesi içinde bulunan metni biçimlendirmek için, açma etiketine bir `class="stylename"` özniteliği ekleyin.
 
 **Div** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
 

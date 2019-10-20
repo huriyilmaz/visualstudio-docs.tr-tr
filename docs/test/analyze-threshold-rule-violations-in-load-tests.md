@@ -1,5 +1,5 @@
 ---
-title: Yük testlerindeki eşik kuralı ihlallerini çözümleme
+title: Yük testlerinde eşik kuralı Ihlallerini çözümleme
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,70 +12,70 @@ helpviewer_keywords:
 - load test results, analyzing threshold violations
 - thresholds in load tests
 ms.assetid: 969ed346-cf2e-4d48-82b3-edb3e075e1c0
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 011b010eaad5def8943fd18a84da9fefdb01eff5
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 7ffff5818c5d3c7085ef3bebcc29c31a363a09b9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918632"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665339"
 ---
-# <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>Yük testi çözümleyicisini kullanarak Yük testlerindeki eşik kuralı ihlallerini çözümleme
+# <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>Yük Testi Çözümleyicisini kullanarak yük testlerinde eşik kuralı ihlallerini çözümleme
 
-Eşik kuralları belirli bir performans sayaçları ile ilişkili olan ve bir performans sayacı aşıldı veya set değerin altına altına düştü ihlallerini gösterir. Bir yük testi çalıştırdığınızda, daha önce ayarladığınız eşik kuralları için oluşan ihlallerini analiz edebilirsiniz.
+Eşik kuralları belirli performans sayaçlarıyla ilişkilendirilir ve ihlaller bir performans sayacının bir küme değerinin altında aşıldığını ya da ihlal olduğunu gösterir. Bir yük testi çalıştırdığınızda, daha önce ayarladığınız eşik kuralları için oluşan ihlalleri çözümleyebilirsiniz.
 
-Herhangi bir ihlal oluştuysa, bir **Eşik ihlallerini** köprü bulunur **Yük Testi Çözümleyicisi** durum çubuğu ve oluşan ihlallerinin sayısını belirtir. Eşik ihlalleri tablosunu görüntülemek için köprüyü seçin. Ayrıca Eşik ihlallerini görüntüleyebilirsiniz **sayaçları** penceresinde ve grafik üzerinde.
+Herhangi bir ihlal oluştuysa, **Yük Testi Çözümleyicisi** durum çubuğunda bir **eşik ihlalleri** Köprüsü görüntülenir ve oluşan ihlallerin sayısını belirtir. Eşik ihlalleri tablosunu göstermek için köprüyü seçersiniz. Eşik ihlallerini **Sayaçlar** penceresinde ve grafikte da görüntüleyebilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="view-threshold-violations-in-the-table"></a>Eşik ihlallerini Tablo görünümü
+## <a name="view-threshold-violations-in-the-table"></a>Tablodaki Eşik ihlallerini görüntüleme
 
-Eşik ihlalleri tablosunu ilk 1.000 ihlalleri görüntüler. Aşağıdaki tablo şu sütunları içerir:
+Eşik ihlalleri tablosu ilk 1.000 ihlallerini görüntüler. Aşağıdaki tablo şu sütunları içerir:
 
-|Sütun|Açıklama|Varsayılan olarak görünür|
+|Sütunuyla|Açıklama|Varsayılan olarak görünür|
 |-|-|-|
-|Zaman|İhlalin gerçekleştiği süre boyunca yük test edin.|Evet|
-|Bilgisayar|İhlalin gerçekleştiği test edilen bilgisayar adı. **Not:**  Bu, yük testlerini Rig 'ler üzerinde çalıştırdığınızda önemlidir.|Evet|
-|Kategori|İhlalin gerçekleştiği performans sayacı kategorisi.|Evet|
+|Zaman|Yük testi sırasında ihlalin gerçekleştiği zaman.|Evet|
+|Bilgisayar|İhlalin gerçekleştiği test altındaki bilgisayarın adı. **Note:**  Bu, yük testlerini Rig 'ler üzerinde çalıştırdığınızda önemlidir.|Evet|
+|Kategori|İhlalin gerçekleştiği performans sayacının kategorisi.|Evet|
 |Sayaç|İhlalin gerçekleştiği performans sayacının adı.|Evet|
-|Örnek|Performans sayacı örneği üzerinde ihlali oluştu.|Evet|
-|İleti|Eşik ihlali açıklayan ileti. Örneğin, **Kritik Eşik değeri 0 5 değerini aşıyor**.|Evet|
+|Örnek|İhlalin gerçekleştiği performans sayacı örneği.|Evet|
+|İleti|Eşik ihlalini açıklayan bir ileti. Örneğin, **5 değeri 0 ' ın kritik eşik değerini aşıyor**.|Evet|
 
 > [!NOTE]
-> Tablo, sütun üst bilgilerini seçerek sıralayabilirsiniz.
+> Sütun üstbilgilerini seçerek tabloyu sıralayabilirsiniz.
 
-Daha fazla bilgi için [yük testi sonuçlarını ve hatalarını Tablo görünümünde çözümlemek](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Daha fazla bilgi için bkz. [Tablolar görünümünde Yük testi sonuçlarını ve hatalarını çözümleme](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
-## <a name="view-threshold-violations-in-the-counters-panel"></a>Eşik ihlallerini Sayaçlar panelini görüntüle
+## <a name="view-threshold-violations-in-the-counters-panel"></a>Sayaç panelinde Eşik ihlallerini görüntüleme
 
-Eşik ihlallerini görüntüleyebilirsiniz **sayaçları** panelinde Yük testiniz için performans sayaçları listeler ağaç. Simgeleri **sayaçları** paneli iletişim Eşik ihlalleri. Simgesi aşağıdakilerden biri olabilir:
+Eşik ihlallerini, **sayaç** panelinde, yük testiniz için performans sayaçlarını listeleyen ağaçta görüntüleyebilirsiniz. **Sayaçlar** panelindeki simgeler eşik ihlallerine iletişim kurar. Simge aşağıdakilerden biri olacaktır:
 
-Simgesi aşağıdakilerden biri olabilir:
+Simge aşağıdakilerden biri olacaktır:
 
 ![Eşik ihlali yok](../test/media/icon_ltest_1.gif) Eşik ihlali yok.
 
-![Kritik Eşik ihlalinin son aralığı](../test/media/icon_ltest_2.gif) Son aralıkta bir Kritik Eşik ihlali oluştu.
+![Son aralıkta kritik eşik ihlali](../test/media/icon_ltest_2.gif) Son aralıkta kritik bir eşik ihlali oluştu.
 
-![Önceki bir aralıkta bir Kritik Eşik ihlali](../test/media/icon_ltest_3.gif) Önceki bir aralıkta bir Kritik Eşik ihlali oluştu.
+![Önceki aralıkta kritik eşik ihlali](../test/media/icon_ltest_3.gif) Önceki aralıkta kritik bir eşik ihlali oluştu.
 
-![Uyarı eşiği ihlalinin son aralığı](../test/media/icon_ltest_4.gif) Uyarı eşiği ihlalinin son aralıkta oluştu.
+![Son aralıkta bir uyarı eşiği ihlali](../test/media/icon_ltest_4.gif) Son aralıkta bir uyarı eşiği ihlali oluştu.
 
-![Uyarı eşiği ihlalinin önceki aralığı](../test/media/icon_ltest_5.gif) Önceki bir aralıkta bir uyarı eşik ihlali oluştu.
+![Önceki aralıkta bir uyarı eşiği ihlali](../test/media/icon_ltest_5.gif) Önceki aralıkta bir uyarı eşiği ihlali oluştu.
 
-İsteğe bağlı olarak, Eşik ihlalleri grafikte de görüntülenebilir. Eşik ihlali gerçekleştiği veri noktasının yanındaki grafik üzerindeki eşik simgesi görünür.
+İsteğe bağlı olarak, eşik ihlalleri grafik üzerinde de görüntülenebilir. Eşik simgesi, eşik ihlalinin gerçekleştiği veri noktasının yanındaki grafikte görüntülenir.
 
-Sayaç ağaçta kök düğümü kadar belirli bir sayaç düğümünden eşik ihlali simgesine yayılır. Bu bir ihlali nedeniyle ağaç genişletilmemiş ağaçta görünür olmayabilir sayacı uyarır.
+Sayaç ağacında, eşik ihlali simgesi belirli sayaç düğümünden kök düğüme kadar yayılır. Bu, ağaç genişletilmediği için ağaçta görünemeyen bir sayaca karşı sizi uyarır.
 
-## <a name="view-threshold-violations-on-the-graph"></a>Grafikte Eşik ihlallerini görüntüle
+## <a name="view-threshold-violations-on-the-graph"></a>Grafikteki Eşik ihlallerini görüntüleme
 
-Eşik İhlallerini Grafikte görüntüleyebilirsiniz. Benzer şekilde **sayaçları** paneli, simgeler grafikte Eşik ihlallerini iletişim kurar. Grafikte eşik ihlali gerçekleştiği veri noktasının yanındaki simge görünür. Grafikte görünmeyen bir sayaçta eşik ihlali meydana gelirse, bu grafiğe ondan sürükleyerek ekleyebileceğiniz **sayaçları** grafiğe paneli.
+Eşik ihlallerini grafik üzerinde görüntüleyebilirsiniz. **Sayaçlar** paneline benzer şekilde, simgeler grafikteki Eşik ihlallerini de birbirleriyle iletişim kurar. Simgeler, eşik ihlalinin gerçekleştiği veri noktasının yanındaki grafikte görüntülenir. Grafikte görünmeyen bir sayaca bir eşik ihlali oluşursa, bu öğeyi **Sayaçlar** panelinden grafiğe sürükleyerek grafiğe ekleyebilirsiniz ().
 
-Daha fazla bilgi için [Çözümle yük testi sonuçlarını grafik görünümünde](../test/analyze-load-test-results-in-the-graphs-view.md).
+Daha fazla bilgi için bkz. [Grafik görünümünde Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-in-the-graphs-view.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sayaç kümelerini ve eşik kurallarını bilgisayarlar için bir yük testi içinde belirtme](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [Yük testi sonuçlarını ve hatalarını Tablo görünümünde çözümleyin](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
+- [Yük testinde bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtme](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Tablolar görünümünde Yük testi sonuçlarını ve hatalarını çözümleme](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)

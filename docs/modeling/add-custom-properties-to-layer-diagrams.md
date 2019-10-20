@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, adding custom properties
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3ef03b3833f30c1376bd3b2787f4ca773c992ef
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 58a52983b1a3def85d5785d0aa3f7abf99e0317c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870666"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652304"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel özellikler ekleme
 
@@ -22,7 +22,7 @@ Bağımlılık diyagramları için uzantı kodu yazdığınızda, değerleri bir
 
 ## <a name="non-visible-properties"></a>Görünür olmayan özellikler
 
-Yalnızca kodunuzun bir bağımlılık diyagramında herhangi bir öğeye değer iliştirmek istiyorsanız, MEF bileşeni tanımlamanız gerekmez. [ILayerElement](/previous-versions/ff644511(v=vs.140))içinde adlı `Properties` bir sözlük var. Yalnızca herhangi bir katman öğesinin sözlüğüne sıralanabilecek değerleri eklemeniz yeterlidir. Bu, bağımlılık diyagramının bir parçası olarak kaydedilir.
+Yalnızca kodunuzun bir bağımlılık diyagramında herhangi bir öğeye değer iliştirmek istiyorsanız, MEF bileşeni tanımlamanız gerekmez. [ILayerElement](/previous-versions/ff644511(v=vs.140))içinde `Properties` adlı bir sözlük var. Yalnızca herhangi bir katman öğesinin sözlüğüne sıralanabilecek değerleri eklemeniz yeterlidir. Bu, bağımlılık diyagramının bir parçası olarak kaydedilir.
 
 ## <a name="editable-properties"></a>Düzenlenebilir özellikler
 
@@ -63,9 +63,9 @@ public class MyProperty : PropertyExtension<ILayerElement>
 
 [ILayerElement](/previous-versions/ff644511(v=vs.140)) veya türetilmiş sınıflarından herhangi birini içeren özellikleri tanımlayabilirsiniz:
 
-- `ILayerModel`-Model
+- `ILayerModel`-model
 
-- `ILayer`-Her katman
+- `ILayer`-her katman
 
 - `ILayerDependencyLink`-Katmanlar arasındaki bağlantılar
 
@@ -75,7 +75,7 @@ public class MyProperty : PropertyExtension<ILayerElement>
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod tipik bir özel özellik tanımlayıcısıdır. Kullanıcının özel bir doğrulama yöntemi için değer sağlamasına imkan tanıyan`ILayerModel`katman modelinde () bir Boole özelliği tanımlar.
+Aşağıdaki kod tipik bir özel özellik tanımlayıcısıdır. Katman modelinde (`ILayerModel`), kullanıcının özel doğrulama yöntemi için değer sağlamasına imkan tanıyan bir Boole özelliği tanımlar.
 
 ```csharp
 using System;

@@ -1,56 +1,56 @@
 ---
-title: Hata ayıklama sırasında bir XPath ifadesini değerlendirme
+title: Hata ayıklama sırasında bir XPath ifadesini değerlendir
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1585b54d084e3471583f9388d63f5c17e65fc3a7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 523c89af70c762f0cd0e31519c8c862c440c79eb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002077"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654282"
 ---
-# <a name="evaluate-xpath-expressions"></a>XPath ifadelerini değerlendirme
+# <a name="evaluate-xpath-expressions"></a>XPath ifadelerini değerlendir
 
-XPath ifadeleri kullanarak değerlendirebilirsiniz **QuickWatch** hata ayıklama sırasında penceresi. XPath ifadesi W3C XPath 1.0 öneri göre geçerli olmalıdır. Geçerli XSLT bağlam (diğer bir deyişle, `self::node()` düğümünde **Yereller** pencere) için XPath ifadesini değerlendirme bağlamı sağlar.
+Hata ayıklama sırasında **hızlı izleme** penceresini kullanarak XPath ifadelerini değerlendirebilirsiniz. XPath ifadesi W3C XPath 1,0 önerisine göre geçerli olmalıdır. Geçerli XSLT bağlamı (diğer bir deyişle, **Yereller** penceresindeki `self::node()` düğümü) XPath ifadesi için değerlendirme bağlamını sağlar.
 
 Bir XPath ifadesi değerlendirilirken:
 
 - Yerleşik XPath işlevleri desteklenir.
 
-- Yerleşik XSLT işlevleri ve kullanıcı tanımlı işlevleri desteklenmez.
+- Yerleşik XSLT işlevleri ve Kullanıcı tanımlı işlevler desteklenmez.
 
 > [!NOTE]
-> XSLT hata ayıklama yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
+> XSLT hata ayıklaması yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
 
 ## <a name="evaluate-an-xpath-expression"></a>XPath ifadesini değerlendirme
 
-Aşağıdaki yordam kullanır *average.xsl aşağıda* ve *books.xml* dosyalarını [izlenecek yol: Bir XSLT stil sayfasında hata ayıklama](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md#sample-files) sayfası.
+Aşağıdaki yordam [Izlenecek yol: XSLT stil sayfası hata ayıklaması](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md#sample-files) sayfasında *below-Average. xsl* ve *Books. xml* dosyalarını kullanır.
 
-1. Bir kesme noktasında Ekle `xsl:if` başlangıç etiketi.
+1. @No__t_0 başlangıç etiketine bir kesme noktası ekleyin.
 
-2. Hata ayıklama başlatmak için **XML** > **XSLT hata ayıklamayı Başlat** menü çubuğunda (veya basın **Alt**+**F5** ).
+2. Hata ayıklamayı başlatmak için, menü çubuğunda**XSLT hata ayıklamayı Başlat** ' a  >  **XML** ' yi seçin (veya **alt** +**F5**tuşuna basın).
 
-   Hata ayıklayıcıyı başlatır ve üzerinde sonları `xsl:if` etiketi.
+   Hata ayıklayıcı başlatılır ve `xsl:if` etiketinde kesilir.
 
-3. Sağ tıklayıp **QuickWatch**.
+3. Sağ tıklayın ve **hızlı gözcü**' ı seçin.
 
    **QuickWatch** penceresi açılır.
 
-4. Girin `./price/text()` içinde **ifade** alanını **QuickWatch** iletişim kutusuna ve ardından **yeniden değerlendir**.
+4. **QuickWatch** Iletişim kutusunun **ifade** alanına `./price/text()` girin ve sonra yeniden değerlendir ' **i seçin.**
 
-   Geçerli kitap düğümün fiyatı görünür **değer** kutusu.
+   Geçerli kitap düğümünün fiyatı **değer** kutusunda görünür.
 
-   ![Quickwatch penceresinde bir XPath ifadesini değerlendirme](media/quickwatch-price.png)
+   ![Hızlı Gözcü penceresinde bir XPath ifadesini değerlendirme](media/quickwatch-price.png)
 
-5. XPath ifadesi değiştirme `./price/text() < $bookAverage` tıklatıp **yeniden değerlendir**.
+5. XPath ifadesini `./price/text() < $bookAverage` olarak değiştirin ve yeniden değerlendir **' e**tıklayın.
 
-   **Değer** kutusu gösterir XPath ifadesi olarak değerlendirilen `true`.
+   **Değer** kutusunda XPath ifadesinin `true` olarak değerlendirildiği gösterilmektedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

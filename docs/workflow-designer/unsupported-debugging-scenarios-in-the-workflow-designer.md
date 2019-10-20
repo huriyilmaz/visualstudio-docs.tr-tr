@@ -3,49 +3,49 @@ title: İş Akışı Tasarımcısında desteklenmeyen hata ayıklama senaryolar�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 6adbe379-41d0-4681-9cd0-b91f187c3c2c
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 9cda710a3a2f4945e96e706479996da0a1fa7e12
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+author: jillre
+ms.openlocfilehash: bfc4e0995a9abb88f73ff27186ed4e0d1dc81648
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825730"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649784"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>İş Akışı Tasarımcısında desteklenmeyen hata ayıklama senaryoları
 
-İş Akışı Tasarımcısı aşağıdaki hata ayıklama senaryoları desteklemez:
+İş Akışı Tasarımcısı aşağıdaki hata ayıklama senaryolarını desteklemez:
 
-- Kodu düzenlenmiş sonra yürütülmesine devam ettirilemez.
+- Kod düzenlendikten sonra yürütme devam ettirilemez.
 
-- Yürütme iş akışının (sonraki ayarlayın) içindeki rastgele bir noktadan devam ettirilemez.
+- Yürütme, iş akışında rastgele bir noktadan (bir sonraki küme) devam ettirilemez.
 
-- İmleç (imlece kadar Çalıştır) ulaşılana kadar yürütmeyi devam ettirilemez.
+- İmleçle ulaşılana kadar yürütme devam ettirilemez (Imlece Çalıştır).
 
-- İş Akışı Tasarımcısı, tasarımcıyı kullanmadan kodda oluşturulan iş akışlarında hata ayıklamak için kullanılamaz.
+- İş akışı Tasarımcısı, tasarımcı kullanımı olmadan kodda oluşturulan iş akışlarının hatalarını ayıklamak için kullanılamaz.
 
-- .NET Framework 4 veya sonraki bir sürümünde oluşturulan önceki sürümlerinde Windows Workflow Foundation (WF) iş akışı hata ayıklanamıyor.
+- Windows Workflow Foundation (WF) daha önceki sürümlerinde oluşturulan iş akışları .NET Framework 4 veya sonraki sürümlerde ayıklanamaz.
 
-- Kesme noktaları, etkinlikleri arasındaki bağlantıları tanımlanamıyor veya <xref:System.Activities.Statements.Flowchart> düğümleri.
+- Kesme noktaları, etkinlikler veya <xref:System.Activities.Statements.Flowchart> düğümleri arasındaki bağlantılarda tanımlanamaz.
 
 - Pano hata ayıklama sırasında kullanılamaz.
 
-- Etkinlikleri kopyalandığında veya yapıştırdığınız kesme noktaları korunmaz.
+- Etkinlikler kopyalandığında veya yapıştırılırken kesme noktaları korunmaz.
 
-- İş akışı kesme noktaları, çağrı yığını penceresinde olacak şekilde ayarlanamaz.
+- Çağrı yığını penceresinde iş akışı kesme noktaları ayarlanamaz.
 
-- Kesme noktaları Tasarımcısı'nda oluştururken **satırı** ve **karakter** ayarlarında **yeni kesme noktası** iletişim kullanılmaz.
+- Tasarımcıda kesme noktaları oluştururken, **Yeni kesme noktası** Iletişim kutusundaki **çizgi** ve **karakter** ayarları kullanılmaz.
 
-- Kesme noktası penceresi ya da kısayol menüsünde aşağıdaki sütunları veya seçenekler iş akışı hata ayıklama için desteklemez:
+- Kesme noktası penceresi veya kısayol menüsü, iş akışı hata ayıklaması için aşağıdaki sütunları veya seçenekleri desteklemez:
 
   - Koşul
 
   - İsabet sayısı
 
-  - İsabet edildiğinde
+  - Isabet edildiğinde
 
   - İşlev
 
@@ -53,4 +53,4 @@ ms.locfileid: "67825730"
 
   - İşlem
 
-  - Ayrıştırma için Git
+  - Ayrıştırılmış koda git

@@ -8,54 +8,54 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.RoamingSettings
 ms.assetid: a3d2ea29-be5d-4012-9820-44b06adbb7dd
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ed6e544378089222cb69c491b0cd473544e05220
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6459b6f65fd1e29fbadb01f6aa2fc51520b726b8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825660"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646821"
 ---
 # <a name="synchronized-settings-in-visual-studio"></a>Visual Studio'da Eşitlenmiş Ayarlar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio için birden çok bilgisayarda oturum açmak için aynı kişiselleştirme hesabı kullandığınızda, varsayılan olarak ayarlarınız tüm bilgisayarlarda eşitlenir.
+Aynı kişiselleştirme hesabını birden çok bilgisayarda Visual Studio 'da oturum açmak için kullandığınızda, varsayılan olarak ayarlarınız tüm bilgisayarlarda eşitlenir.
 
 ## <a name="synchronized-settings"></a>Eşitlenmiş ayarlar
- Varsayılan olarak, şu ayarlar eşitlenir.
+ Varsayılan olarak, aşağıdaki ayarlar eşitlenir.
 
-- Geliştirme Ayarları (bir ayar kümesi seçmeniz gerekir. ilk kez Visual Studio'yu çalıştırın, ancak zaman seçimi değiştirebilirsiniz. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).)
+- Geliştirme ayarları (Visual Studio 'Yu ilk kez çalıştırdığınızda bir ayar kümesi seçmeniz gerekir, ancak seçimi dilediğiniz zaman değiştirebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).)
 
-- Aşağıdaki seçenekleri **Araçları &#124; seçenekleri** sayfalar:
+- **Araçlar &#124; seçenekler** sayfalarında aşağıdaki seçenekler:
 
-  - **Tema** ve menü çubuğu üzerinde ayarları, büyük/küçük harfleri **ortam**, **genel** Seçenekleri sayfası
+  - **Tema** ve menü çubuğu büyük/küçük harf ayarları, **ortam**, **genel** Seçenekler sayfası
 
-  - Tüm ayarlar **ortam**, **yazı tipleri ve renkler** Seçenekleri sayfası
+  - **Ortam**, **yazı tipleri ve renkler** seçenekleri sayfasındaki tüm ayarlar
 
-  - Tüm klavye kısayolları **ortam**, **klavye** Seçenekleri sayfası
+  - **Ortam**, **klavye** seçenekleri sayfasındaki tüm klavye kısayolları
 
-  - Tüm ayarlar **ortamı, sekmeler ve Windows** Seçenekleri sayfası
+  - **Ortamdaki, sekmelerin ve Windows** seçenekleri sayfasındaki tüm ayarlar
 
-  - Tüm ayarlar **ortam**, **başlangıç** Seçenekleri sayfası
+  - **Ortamdaki**tüm ayarlar, **Başlangıç** seçenekleri sayfası
 
-  - Tüm ayarlar **metin düzenleyici** seçenekler sayfaları
+  - **Metin düzenleyici** seçenekleri sayfalarındaki tüm ayarlar
 
-- XAML Tasarımcısı'ndaki tüm ayarlar seçenekler sayfaları
+- XAML Tasarımcısı seçenekleri sayfalarındaki tüm ayarlar
 
-- Kullanıcı tanımlı komut diğer adları. Komut diğer adlarını tanımlama hakkında daha fazla bilgi için bkz. [Visual Studio komut diğer adları](../ide/reference/visual-studio-command-aliases.md).
+- Kullanıcı tanımlı komut diğer adları. Komut diğer adlarının nasıl tanımlanacağı hakkında daha fazla bilgi için bkz. [Visual Studio komut diğer adları](../ide/reference/visual-studio-command-aliases.md).
 
-- Kullanıcı tanımlı pencere düzenleri **penceresi &#124; pencere düzenlerini Yönet** sayfası
+- Pencere içindeki kullanıcı tanımlı pencere düzenleri **pencere &#124; düzenlerini yönetme** sayfası
 
-## <a name="turning-synchronized-settings-off-for-a-particular-computer"></a>Belirli bir bilgisayar için açma eşitlenmiş ayarları devre dışı
- Eşitlenmiş ayarlar Visual Studio için varsayılan olarak açık olabilir. Eşitlenmiş ayarlar bir bilgisayara giderek kapatabilirsiniz **Araçları &#124; seçenekleri &#124; ortam &#124; eşitlenmiş ayarlar** sayfası ve onay kutusunun seçilirliği kaldırıldığında.  Örneğin, bir bilgisayarda Visual Studio'nun ayarlarını eşitlemek karar verirseniz, herhangi bir ayarı değişiklik yapılan bilgisayarda Bilgisayar B görünmüyor do veya bilgisayar c bilgisayar B ve C birbiriyle, ancak bilgisayar A'ya eşitlenecek sürdürür
+## <a name="turning-synchronized-settings-off-for-a-particular-computer"></a>Belirli bir bilgisayar için eşitlenmiş ayarları kapatma
+ Visual Studio için eşitlenmiş ayarlar varsayılan olarak açıktır. Bir bilgisayardaki eşitlenmiş ayarları, **Araçlar &#124; Seçenekler &#124; &#124; ortam eşitlenmiş ayarlar** sayfasına gidip onay kutusunun işaretini kaldırarak devre dışı bırakabilirsiniz.  Örneğin, A bilgisayarında Visual Studio 'nun ayarlarını eşitlememeye karar verirseniz, A bilgisayarında yapılan herhangi bir ayar değişikliği, B veya bilgisayar C 'de görünmez. B ve C bilgisayarı, bilgisayar A 'ya değil birbirleriyle eşitlemeye devam edecektir.
 
-## <a name="synchronizing-settings-across-visual-studio-family-products-and-editions"></a>Visual Studio ailesi ürünler ve sürümleri ayarları eşitleme
- Visual Studio 2015 Express ve topluluk sürümleri dahil olmak üzere, herhangi bir sürümünü ayarları eşitlenebilir. Ayarları ayrıca Blend gibi Visual Studio ailesi ürünler arasında eşitlenir. Ancak, her biri bu ailesi ürünler Visual Studio ile paylaşılmayan kendi ayarlarına sahip olabilir. Bilgisayar b Blend ile ancak bilgisayar A veya b Visual Studio ile değil bilgisayarındaki Blend için özel ayarları gibi paylaşılır
+## <a name="synchronizing-settings-across-visual-studio-family-products-and-editions"></a>Visual Studio ailesi ürünleri ve sürümleri arasında ayarları eşitleme
+ Ayarlar, Express ve Community sürümleri dahil olmak üzere herhangi bir Visual Studio 2015 sürümü arasında eşitlenebilir. Ayrıca ayarlar, Blend gibi Visual Studio ailesi ürünleri arasında da eşitlenir. Ancak, bu aile ürünlerinin her biri Visual Studio ile paylaşılmayan kendi ayarlarına sahip olabilir. Örneğin, A bilgisayarındaki Blend 'e özgü ayarlar, bilgisayar B 'de Blend ile paylaşılır, ancak A veya B bilgisayarında Visual Studio ile birlikte kullanılamaz.
 
 > [!WARNING]
-> Ayarlar, Visual Studio 2015 ve Visual Studio 2013 arasında eşitlenmez. Visual Studio 2015'te, ilk açtığınızda, ayarlarınızı Visual Studio 2013'ten geçirilir, ancak Visual Studio 2013 için geri bundan sonra geçirilemezler.
+> Ayarlar Visual Studio 2013 ve Visual Studio 2015 arasında eşitlenmez. Visual Studio 2015 ' i ilk açışınızda Visual Studio 2013 ayarları geçirilir, ancak bundan sonra Visual Studio 2013 geri geçirilemez.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [IDE’yi Kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md)

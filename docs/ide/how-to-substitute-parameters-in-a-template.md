@@ -1,40 +1,40 @@
 ---
-title: Proje ve öğe şablonlarını Name parametreleri ekleme
+title: Proje ve öğe şablonlarına ad parametreleri ekleyin
 ms.date: 01/02/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - template parameters
 - template parameters, substituting
 - Visual Studio templates, using parameters
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cf9a990be3f5e87180967a4f9f274ec79fbc357e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 09d86c52fcd9ddce3c986e0bfa6c9c96f746c663
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946888"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656559"
 ---
-# <a name="how-to-substitute-parameters-in-a-template"></a>Nasıl yapılır: Bir şablonda parametreleri ikame etme
+# <a name="how-to-substitute-parameters-in-a-template"></a>Nasıl yapılır: şablonda parametreleri değiştirme
 
-Şablon parametreleri bir şablondan bir dosya oluşturulduğunda tanımlayıcıları sınıf adları ve ad alanları gibi değiştirmenizi sağlar. Şablon parametreleri için var olan şablonları ekleyin veya şablon parametreleri ile kendi şablonlarınızı oluşturabilirsiniz.
+Şablon parametreleri, şablondan bir dosya oluşturulduğunda sınıf adları ve ad alanları gibi tanımlayıcıları değiştirmenize olanak sağlar. Mevcut şablonlara şablon parametreleri ekleyebilir veya şablon parametreleriyle kendi şablonlarınızı oluşturabilirsiniz.
 
-Şablon parametreleri biçimi $ yazılır*parametre*$. Şablon parametreleri tam bir listesi için bkz. [şablon parametreleri](../ide/template-parameters.md).
+Şablon parametreleri $*Parameter*$ biçiminde yazılır. Şablon parametrelerinin tüm listesi için bkz. [şablon parametreleri](../ide/template-parameters.md).
 
-Aşağıdaki bölümde "güvenli proje adı" ile bir ad alanı adını değiştirmek için bir şablonu nasıl değiştireceğiniz gösterilmektedir.
+Aşağıdaki bölümde, bir ad alanının adını "güvenli proje adı" ile değiştirmek için bir şablonu nasıl değiştireceğiniz gösterilmektedir.
 
-## <a name="example---namespace-name"></a>Örnek - ad alanı adı
+## <a name="example---namespace-name"></a>Örnek-ad alanı adı
 
-1. Bir veya daha fazla kod dosyaları şablonda parametre ekleyin. Örneğin:
+1. Parametreyi şablondaki bir veya daha fazla kod dosyasına ekleyin. Örneğin:
 
     ```csharp
     namespace $safeprojectname$
     ```
 
-1. İçinde *vstemplate* dosya şablonu, bulun `ProjectItem` bu dosyayı içeren öğe.
+1. Şablonun *vstemplate* dosyasında, bu dosyayı içeren `ProjectItem` öğesini bulun.
 
-1. Ayarlama `ReplaceParameters` özniteliğini `true` için `ProjectItem` öğesi:
+1. @No__t_0 özniteliğini `ProjectItem` öğesi için `true` olarak ayarlayın:
 
     ```xml
     <ProjectItem ReplaceParameters="true">Class1.cs</ProjectItem>

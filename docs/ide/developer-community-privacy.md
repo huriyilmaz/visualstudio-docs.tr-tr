@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - developer community privacy
 - privacy, developer community
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a40cbc30850edc96b569bd8d716b14b5d2035089
-ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
+ms.openlocfilehash: d1856d6421dc61ada2f3040e4fdeed880a6ab201
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273406"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652476"
 ---
 # <a name="developer-community-data-privacy"></a>Geliştirici Topluluğu veri gizliliği
 
@@ -71,7 +71,7 @@ Visual Studio 'dan **bir sorun rapor** başlatılmışsa, aşağıdaki veri tür
 - Varsa Windows Forms günlükleri
 
 - Bir ekran görüntüsü, eklemeyi tercih ederseniz
-  
+
 - Verileri kaydetme, aşağıdakileri içeren bir kayıt eklemeyi tercih ederseniz:
 
   - Sorunu yeniden oluşturma adımları
@@ -81,9 +81,9 @@ Visual Studio 'dan **bir sorun rapor** başlatılmışsa, aşağıdaki veri tür
   - Döküm dosyası
 
 > [!NOTE]
-> Günlük dosyaları, ekran görüntüleri ve kayıt verileri yalnızca dahil oldukları sorun raporunu göndererek izin sağladığınızda Microsoft 'a gönderilir. ' Sorun bildir ' penceresinin ' Özet ' adımında hangi dosyaların ekleneceğini görebilirsiniz (Bu notta yer alan ekran görüntüsüne bakın). Toplanan Günlükler ve dosyalar% temp% klasöründe depolanır ve her yükleme işleminden sonra düzenli olarak temizlenir. Sorun raporunuza bir günlük eklemek istemiyorsanız, raporu göndermeden önce dosyayı% Temp% klasöründen silin.  
-  > ![Sorun bildirme-toplanan günlüklerin Özeti](media/report-a-problem-logs-collected.png)
- 
+> Günlük dosyaları, ekran görüntüleri ve kayıt verileri yalnızca dahil oldukları sorun raporunu göndererek izin sağladığınızda Microsoft 'a gönderilir. ' Sorun bildir ' penceresinin ' Özet ' adımında hangi dosyaların ekleneceğini görebilirsiniz (Bu notta yer alan ekran görüntüsüne bakın). Toplanan Günlükler ve dosyalar% temp% klasöründe depolanır ve her yükleme işleminden sonra düzenli olarak temizlenir. Sorun raporunuza bir günlük eklemek istemiyorsanız, raporu göndermeden önce dosyayı% Temp% klasöründen silin.
+  > Sorun ![Report-toplanan günlüklerin Özeti ](media/report-a-problem-logs-collected.png)
+
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

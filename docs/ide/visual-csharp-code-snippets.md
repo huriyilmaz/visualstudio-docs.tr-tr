@@ -7,23 +7,23 @@ helpviewer_keywords:
 - code snippets [C#]
 - Code Snippet Inserter [C#]
 - C#, code snippets
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7a785623ea36fe25833f24f760c29f49ca40b459
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e06e825779476489414ff200aba9cd43fce96e2f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918665"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647257"
 ---
 # <a name="c-code-snippets"></a>C#kod parçacıkları
 
-Kod parçacıkları, kodunuza hızlı bir şekilde ekleyebileceğiniz kod parçacıklarında kullanıma sunulur. Örneğin, `for` kod parçacığı boş `for` bir döngü oluşturur. Bazı kod parçacıkları, kod satırları seçmenize olanak tanıyan kod parçacıkları ile çevredir ve seçilen kod satırlarını içeren bir kod parçacığı seçer. Örneğin, kod satırları ' nı seçip `for` kod parçacığını etkinleştirdikten sonra, bu kod satırlarıyla döngü bloğu içinde bir `for` döngü oluşturur. Kod parçacıkları program kodunu daha hızlı, daha kolay ve daha güvenilir bir şekilde yazmayı kolaylaştırabilir.
+Kod parçacıkları, kodunuza hızlı bir şekilde ekleyebileceğiniz kod parçacıklarında kullanıma sunulur. Örneğin, `for` kod parçacığı boş bir `for` döngüsü oluşturur. Bazı kod parçacıkları, kod satırları seçmenize olanak tanıyan kod parçacıkları ile çevredir ve seçilen kod satırlarını içeren bir kod parçacığı seçer. Örneğin, kod satırları ' nı seçip `for` kod parçacığını etkinleştirdiğinizde, döngü bloğunda bu kod satırlarıyla bir `for` döngüsü oluşturur. Kod parçacıkları program kodunu daha hızlı, daha kolay ve daha güvenilir bir şekilde yazmayı kolaylaştırabilir.
 
-İmleç konumuna bir kod parçacığı ekleyebilir veya şu anda seçili olan kodun çevresine bir surround kod parçacığı ekleyebilirsiniz. Kod parçacığı eklenebilir kod **parçacığı ekleme** veya **IntelliSense** menüsündeki komutlarla **çevreleme** veya **CTRL**+**K**,**X** ya da **CTRL** klavyekısayollarınıkullanarakçağrılır+ Sırasıyla **K**.
+İmleç konumuna bir kod parçacığı ekleyebilir veya şu anda seçili olan kodun çevresine bir surround kod parçacığı ekleyebilirsiniz. Kod parçacığı eklenebilir kod **parçacığı ekleme** veya **IntelliSense** menüsündeki komutlarla **çevreleme** veya **ctrl** +**K**,**X** veya **CTRL** + klavye kısayolları kullanılarak çağrılırSırasıyla K .
 
 **Kod parçacığı Inserter** , tüm kullanılabilir kod parçacıkları için kod parçacığı adını görüntüler. Kod parçacığı Inserter, kod parçacığının adını veya kod parçacığı adının bir bölümünü girebileceğiniz bir giriş iletişim kutusu da içerir. Kod parçacığı Inserter, bir kod parçacığı adına en yakın eşleşmeyi vurgular. İstediğiniz zaman **Tab** tuşuna basıldığında kod parçacığı eklenebilir ve şu anda seçili kod parçacığı işaretlenir. Kod Düzenleyicisi 'nde **ESC** tuşuna basmak veya fareye tıklamak, kod parçacığı eklemeden kod parçacığı ınsertıkesini kapatabilir.
 
@@ -36,16 +36,16 @@ Varsayılan olarak, için aşağıdaki kod parçacıkları Visual Studio için C
 |#if|Bir [#if](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if) yönergesi ve [#endif](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endif) yönergesi oluşturur.|Yerdeki.|
 |#region|Bir [#region](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region) yönergesi ve [#endregion](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endregion) yönergesi oluşturur.|Yerdeki.|
 |~|İçerilen sınıf için bir [Sonlandırıcı](/dotnet/csharp/programming-guide/classes-and-structs/destructors) (yıkıcı) oluşturur.|Bir sınıf içinde.|
-|özniteliği|Öğesinden <xref:System.Attribute>türetilen bir sınıf için bir bildirim oluşturur.|Bir ad alanı içinde (genel ad alanı dahil), bir sınıf veya yapı.|
+|özniteliği|@No__t_0 türetilen bir sınıf için bir bildirim oluşturur.|Bir ad alanı içinde (genel ad alanı dahil), bir sınıf veya yapı.|
 |checked|[Denetlenen](/dotnet/csharp/language-reference/keywords/checked) bir blok oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |sınıf|Bir sınıf bildirimi oluşturur.|Bir ad alanı içinde (genel ad alanı dahil), bir sınıf veya yapı.|
 |'u|İçerilen sınıf için bir Oluşturucu oluşturur.|Bir sınıf içinde.|
-|cw|Öğesine <xref:System.Console.WriteLine%2A>bir çağrı oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
-|do|[](/dotnet/csharp/language-reference/keywords/do) Do`while` döngüsü oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
+|fiili|@No__t_0 için bir çağrı oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
+|do|[Do](/dotnet/csharp/language-reference/keywords/do) `while` döngüsü oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |else|[Else](/dotnet/csharp/language-reference/keywords/if-else) bloğu oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |enum|Bir [sabit listesi](/dotnet/csharp/language-reference/keywords/enum) bildirimi oluşturur.|Bir ad alanı içinde (genel ad alanı dahil), bir sınıf veya yapı.|
-|eşittir|Sınıfında<xref:System.Object> tanımlanan <xref:System.Object.Equals%2A> yöntemi geçersiz kılan bir yöntem bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
-|duruma|Özel durumdan türetilen bir sınıf için bir bildirim oluşturur (<xref:System.Exception> varsayılan olarak).|Bir ad alanı içinde (genel ad alanı dahil), bir sınıf veya yapı.|
+|eşittir|@No__t_1 sınıfında tanımlanmış <xref:System.Object.Equals%2A> yöntemini geçersiz kılan bir yöntem bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
+|duruma|Özel durumdan türetilen bir sınıf için bildirim oluşturur (varsayılan olarak <xref:System.Exception>).|Bir ad alanı içinde (genel ad alanı dahil), bir sınıf veya yapı.|
 |for|[For](/dotnet/csharp/language-reference/keywords/for) döngüsü oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |foreach|Bir [foreach](/dotnet/csharp/language-reference/keywords/foreach-in) döngüsü oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |Öğrencilerinize|Her yinelemeden sonra döngü değişkenini azaltır bir [for](/dotnet/csharp/language-reference/keywords/for) döngüsü oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
@@ -56,16 +56,16 @@ Varsayılan olarak, için aşağıdaki kod parçacıkları Visual Studio için C
 |iterator|Bir yineleyici oluşturur.|Bir sınıf veya yapı içinde.|
 |yinedizin|İç içe bir sınıf kullanarak "adlandırılmış" yineleyici ve Dizin Oluşturucu çifti oluşturur.|Bir sınıf veya yapı içinde.|
 |lock|Bir [kilit](/dotnet/csharp/language-reference/keywords/lock-statement) bloğu oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
-|MBOX|Öğesine <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName>bir çağrı oluşturur. *System. Windows. Forms. dll*' ye bir başvuru eklemeniz gerekebilir.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
+|MBOX|@No__t_0 için bir çağrı oluşturur. *System. Windows. Forms. dll*' ye bir başvuru eklemeniz gerekebilir.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |ad alanı|Bir [ad alanı](/dotnet/csharp/language-reference/keywords/namespace) bildirimi oluşturur.|Bir ad alanı içinde (genel ad alanı dahil).|
 |Prop|[Otomatik uygulanan bir özellik](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
-|propfull|`get` Ve`set` erişimcileri ile bir özellik bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
-|propg|Özel`set` erişimcisi olan salt okunurdur bir [Otomatik uygulanmış özellik](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) oluşturur.|Bir sınıf veya yapı içinde.|
+|propfull|@No__t_0 ve `set` erişimcileri ile bir özellik bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
+|propg|Özel bir `set` erişimcisi ile salt okunurdur [Otomatik uygulanan bir özellik](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) oluşturur.|Bir sınıf veya yapı içinde.|
 |SIM|Statik bir [](/dotnet/csharp/language-reference/keywords/static) [int](/dotnet/csharp/language-reference/keywords/int) Main yöntemi bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
 |struct|Bir [struct](/dotnet/csharp/language-reference/keywords/struct) bildirimi oluşturur.|Bir ad alanı içinde (genel ad alanı dahil), bir sınıf veya yapı.|
-|svm|[Statik](/dotnet/csharp/language-reference/keywords/static) [void](/dotnet/csharp/language-reference/keywords/void) Main yöntemi bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
+|SVM|[Statik](/dotnet/csharp/language-reference/keywords/static) [void](/dotnet/csharp/language-reference/keywords/void) Main yöntemi bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
 |anahtarı|Bir [anahtar](/dotnet/csharp/language-reference/keywords/switch) bloğu oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
-|deneyin|[Try-catch](/dotnet/csharp/language-reference/keywords/try-catch) bloğu oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
+|almaya|[Try-catch](/dotnet/csharp/language-reference/keywords/try-catch) bloğu oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |tryf|[Try-finally](/dotnet/csharp/language-reference/keywords/try-finally) bloğu oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |unchecked|[Denetlenmemiş](/dotnet/csharp/language-reference/keywords/unchecked) bir blok oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |unsafe|[Güvenli olmayan](/dotnet/csharp/language-reference/keywords/unsafe) bir blok oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
@@ -77,4 +77,4 @@ Varsayılan olarak, için aşağıdaki kod parçacıkları Visual Studio için C
 - [Kod parçacığı işlevleri](../ide/code-snippet-functions.md)
 - [Kod parçacıkları](../ide/code-snippets.md)
 - [Şablon parametreleri](../ide/template-parameters.md)
-- [Nasıl yapılır: Kod parçacıkları ile surround kullanma](../ide/how-to-use-surround-with-code-snippets.md)
+- [Nasıl yapılır: kod parçacıkları ile surround kullanma](../ide/how-to-use-surround-with-code-snippets.md)

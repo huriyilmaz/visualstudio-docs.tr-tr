@@ -16,61 +16,52 @@ helpviewer_keywords:
 - Text Editor Options dialog box, IntelliSense
 ms.assetid: 3466dedb-e5f4-424c-8dd8-e4941b2f4fc2
 caps.latest.revision: 30
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dc4d918f3eae9088e2b36b7bebbb69ce130e26d9
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 1e3f4df9a7a885245e40f7e9fec1b0da207ada39
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674148"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662292"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Seçenekler, Metin Düzenleyici, C#, IntelliSense
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kullanım **IntelliSense** Visual C# için IntelliSense'in davranışını etkileyen ayarları değiştirmek için özellik sayfası. Erişebildiğiniz **IntelliSense** tıklayarak özellik sayfasını **seçenekleri** üzerinde **Araçları** menüsü, ardından **C#** içinde**Metin düzenleyici** klasörünü ve ardından **IntelliSense.**  
-  
+IntelliSense 'in görsel C#için davranışını etkileyen ayarları değiştirmek için IntelliSense özellik sayfasını kullanın. **IntelliSense** Özellik sayfasına, **Araçlar** menüsünde **C#** **Seçenekler** ' i ve ardından **metin düzenleyici** klasörü ' ne tıklayıp IntelliSense ' e tıklayarak erişebilirsiniz **.**
+
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
- **IntelliSense** özellik sayfası, aşağıdaki özellikleri içerir:  
-  
-## <a name="completion-lists"></a>Tamamlanma listeleri  
- **Bir karakter girildikten sonra Tamamlama listesini göster**  
- Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense tamamlanma listesi otomatik olarak görüntüler. Bu seçenek seçilmezse, IntelliSense tamamlama hala kullanılabilir **IntelliSense** menüsünü veya CTRL + boşluk tuşlarına basarak.  
-  
- **Anahtar sözcükleri tamamlama listelerine Yerleştir**  
- Bu seçenek belirlendiğinde, IntelliSense C# anahtar sözcükleri, örneğin, ekler [sınıfı](https://msdn.microsoft.com/library/b95d8815-de18-4c3f-a8cc-a0a53bdf8690), tamamlanma listesi.  
-  
- **Kod parçacıklarını tamamlama listelerine Yerleştir**  
- Bu seçenek belirlendiğinde, IntelliSense, C# kod parçacıkları için diğer adlar tamamlanma listesine ekler. Kod parçacığı diğer ad olduğu bir anahtar sözcüğü ile aynı örneğin, durumda [sınıfı](https://msdn.microsoft.com/library/b95d8815-de18-4c3f-a8cc-a0a53bdf8690), anahtar sözcüğü kısayol tarafından değiştirilir. Daha fazla bilgi için [Visual C# kod parçacıkları](../../ide/visual-csharp-code-snippets.md).  
-  
-## <a name="selection-in-completion-lists"></a>Tamamlanma listeleri seçimi  
- **Aşağıdaki karakterleri yazarak işleyen:**  
- Bunlar yazılan sonra tamamlama listesinde seçilen öğe için IntelliSense otomatik tamamlama yürütülen tüm karakterleri belirtir.  
-  
- **Boşluk çubuğuna basarak işlendi**  
- Seçili öğe için IntelliSense otomatik tamamlama tamamlanma listesine dâhil yürütmek için Ara çubuğuna basarak eylemi içermesini belirtir.  
-  
- **Yeni bir satır eklemek, tam yazılmış kelimenin sonuna enter**  
- Tamamlama listesinde bir girişi tüm karakterleri yazdıktan sonra ENTER tuşuna basın, yeni bir satır otomatik olarak oluşturulur ve imleç yeni satıra taşır belirtir.  
-  
- Örneğin, `else` ve ardından aşağıdaki Düzenleyicisi'nde belirir ENTER tuşuna basın:  
-  
- `else`  
-  
- `|` (imleç konumu)  
-  
- Ancak, yalnızca yazarsanız `el` ve ardından aşağıdaki Düzenleyicisi'nde belirir ENTER tuşuna basın:  
-  
- `else|` (imleç konumu)  
-  
-## <a name="intellisense-member-selection"></a>IntelliSense üye seçimi  
- **Öncesi seçer üye en son kullanılan**  
- Bu seçenek belirlendiğinde, IntelliSense, kısa süre önce geçerli oturumunuzu tümleşik geliştirme ortamında (IDE) sırasında otomatik nesne adı tamamlama açılır liste üyelerini kutusunda seçtiğiniz üyeleri önceden seçer. En son kullanılan üyeler geçmişi, her oturum IDE içindeki arasında temizlenir. Daha fazla bilgi için [son kullanılan üyeler için IntelliSense](../../misc/intellisense-for-most-recently-used-members.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel, ortam, Seçenekler iletişim kutusu](../../ide/reference/general-environment-options-dialog-box.md)   
- [XML belge açıklamaları](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199)   
- [IntelliSense Kullanma](../../ide/using-intellisense.md)
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+
+ **IntelliSense** Özellik sayfası aşağıdaki özellikleri içerir:
+
+## <a name="completion-lists"></a>Tamamlanma listeleri
+ **Bir karakter yazıldıktan sonra tamamlanma listesini göster** Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense, tamamlanma listesini otomatik olarak görüntüler. Bu seçenek seçili olmadığında, IntelliSense tamamlanmasında **IntelliSense** menüsünde veya Ctrl + Space tuşlarına basarak yine de kullanılabilir.
+
+ **Anahtar sözcükleri tamamlanma listelerine yerleştir** Bu seçenek belirlendiğinde, IntelliSense, örneğin, C# bir [sınıf](https://msdn.microsoft.com/library/b95d8815-de18-4c3f-a8cc-a0a53bdf8690)gibi anahtar sözcükleri tamamlama listesine ekler.
+
+ **Kod parçacıklarını tamamlama listelerine yerleştir** Bu seçenek belirlendiğinde, IntelliSense, kod parçacıkları için C# tamamlama listesine diğer adlar ekler. Kod parçacığı diğer adının bir anahtar sözcükle aynı olduğu durumda (örneğin, [sınıfı](https://msdn.microsoft.com/library/b95d8815-de18-4c3f-a8cc-a0a53bdf8690)), anahtar sözcüğü kısayol ile değiştirilmiştir. Daha fazla bilgi için bkz [. C# görsel kod parçacıkları](../../ide/visual-csharp-code-snippets.md).
+
+## <a name="selection-in-completion-lists"></a>Tamamlanma listelerinde seçim
+ **Aşağıdaki karakterler yazılarak işlendi:** Tüm seçili öğe için IntelliSense otomatik tamamlamayı, bu değerler yazıldıktan sonra çalıştıran tüm karakterleri belirtir.
+
+ **Boşluk çubuğuna basılarak kararlıdır** Tamamlanma listesindeki seçili öğe için IntelliSense otomatik tamamlamayı yürütmek üzere boşluk çubuğuna basmak için eylemin ekleneceğini belirtir.
+
+ **Tam yazılmış kelimenin sonunda ENTER 'a yeni satır ekle** Tamamlama listesindeki bir girdinin tüm karakterlerini yazıp ENTER tuşuna basarsanız, otomatik olarak yeni bir satır oluşturulur ve imleç yeni satıra gider.
+
+ Örneğin, `else` yazıp ENTER tuşuna basarsanız, düzenleyicide aşağıdakiler görüntülenir:
+
+ `else`
+
+ `|` (imleç konumu)
+
+ Ancak, yalnızca `el` yazıp ENTER tuşuna basarsanız, düzenleyicide aşağıdakiler görüntülenir:
+
+ `else|` (imleç konumu)
+
+## <a name="intellisense-member-selection"></a>IntelliSense üye seçimi
+ **En son kullanılan üyeyi önceden seçer** Bu seçenek belirlendiğinde, IntelliSense, tümleşik geliştirme ortamında (IDE) geçerli oturumunuz sırasında otomatik nesne adı tamamlama için açılan liste üyeleri kutusunda son zamanlarda seçtiğiniz üyeleri önceden seçer. En son kullanılan üyelerin geçmişi, IDE içindeki her oturum arasında temizlenir. Daha fazla bilgi için bkz. [en son kullanılan Üyeler Için IntelliSense](../../misc/intellisense-for-most-recently-used-members.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [IntelliSense kullanarak](../../ide/using-intellisense.md) [Genel, ortam, Seçenekler Iletişim kutusu](../../ide/reference/general-environment-options-dialog-box.md) [XML belgeleri açıklamaları](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199)

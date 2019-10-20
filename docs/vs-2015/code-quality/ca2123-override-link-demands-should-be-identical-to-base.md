@@ -1,5 +1,5 @@
 ---
-title: 'CA2123: Geçersiz kılma bağlantı talepleri taban ile özdeş | Microsoft Docs'
+title: 'CA2123: geçersiz kılma bağlantısı talepleri temel ile özdeş olmalıdır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - CA2123
 ms.assetid: 4538ecd5-fc6f-4480-ab00-90b2ce4730db
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 338d61db9c24972b7fef656498abd43f8ea0b976
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: bec8f129c094f94ba3eb4021092c402e8263812b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65687218"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660253"
 ---
 # <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: Geçersiz kılan bağlantı talepleri taban ile özdeş olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,21 +33,21 @@ ms.locfileid: "65687218"
 |Yeni Değişiklik|Yeni|
 
 ## <a name="cause"></a>Sebep
- Ortak türde ortak veya korumalı bir yöntem bir yöntemini geçersiz kılan veya bir arabirim uygular ve aynı yok [bağlantı talepleri](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) arabirimi veya sanal bir yöntem.
+ Ortak bir türdeki ortak veya korumalı yöntem bir yöntemi geçersiz kılar veya arabirimini uygular ve arabirim ya da sanal yöntemle aynı [bağlantı taleplerine](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) sahip değildir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, arabirim ya da başka bir türdeki sanal yöntem olan temel yöntem ile başka bir yöntemi eşleştirir ve sonra her bir bağlantı talebini inceler. Bir ihlali, yöntemi veya taban yöntemi bağlantı talebi ve diğer yok bildirilir.
+ Bu kural, arabirim ya da başka bir türdeki sanal yöntem olan temel yöntem ile başka bir yöntemi eşleştirir ve sonra her bir bağlantı talebini inceler. Bir ihlal, yöntemin veya temel yöntemin bir bağlantı talebi varsa ve diğeri değilse bildirilir.
 
- Bu kural ihlal edilirse kötü niyetli arayan yalnızca güvenli olmayan bir yöntem çağırarak bağlantı talebi atlayabilirsiniz.
+ Bu kural ihlal edilirse, kötü niyetli bir çağıran yalnızca güvenli olmayan yöntemi çağırarak bağlantı talebini atlayabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için aynı bağlantı talebi geçersiz kılma yöntemi veya uygulama için geçerlidir. Bu mümkün değilse tam talep yöntemi işaretlemek veya öznitelik tamamen kaldırın.
+ Bu kural ihlalini onarmak için, overide yöntemine veya uygulamasına aynı bağlantı talebini uygulayın. Bu mümkün değilse, yöntemi bir tam talep ile işaretleyin ya da özniteliği tamamen kaldırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, çeşitli bu kural ihlalleri gösterir.
+ Aşağıdaki örnekte, bu kuralın çeşitli ihlalleri gösterilmektedir.
 
  [!code-csharp[FxCop.Security.OverridesAndSecurity#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.OverridesAndSecurity/cs/FxCop.Security.OverridesAndSecurity.cs#1)]
 

@@ -11,55 +11,57 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f438297a51e5b091ea8b80cf587586919d00798
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7ee669d2acd5bc69c7268b19ad04e9fa7b506e11
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352423"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72633412"
 ---
 # <a name="add-a-tool-window"></a>Araç penceresi ekleme
-Bu kılavuzda bir araç penceresi oluşturun ve aşağıdaki yollarla Visual Studio ile tümleştirme hakkında bilgi edinin:
 
-- Bir denetim için araç penceresini ekleyin.
+Bu kılavuzda, bir araç penceresi oluşturmayı ve Visual Studio ile nasıl tümleştirileceğini aşağıdaki yollarla öğreneceksiniz:
 
-- Araç penceresine araç çubuğu ekleyin.
+- Araç penceresine bir denetim ekleyin.
 
-- Araç çubuğuna komut ekleme.
+- Araç penceresine bir araç çubuğu ekleyin.
 
-- Komutlar uygulayın.
+- Araç çubuğuna bir komut ekleyin.
 
-- Araç penceresi için varsayılan konum olarak ayarlayın.
+- Komutları uygulayın.
 
-## <a name="prerequisites"></a>Önkoşullar
-Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+- Araç penceresi için varsayılan konumu ayarlayın.
+
+## <a name="prerequisites"></a>Prerequisites
+
+Visual Studio SDK, Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-tool-window"></a>Araç penceresi oluşturma
 
-1. Adlı bir proje oluşturma **FirstToolWin** VSIX şablonuyla ve adlı bir özel araç penceresi öğesi şablonu ekleme **FirstToolWindow**.
+1. VSıX şablonunu kullanarak **Firsttoolwin** adlı bir proje oluşturun ve **FirstToolWindow**adlı özel bir araç penceresi öğesi şablonu ekleyin.
 
     > [!NOTE]
-    > Araç penceresi içeren bir uzantı oluşturma hakkında daha fazla bilgi için bkz. [araç penceresi içeren bir uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
+    > Araç penceresiyle uzantı oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-## <a name="add-a-control-to-the-tool-window"></a>Denetim için araç penceresi ekleme
+## <a name="add-a-control-to-the-tool-window"></a>Araç penceresine denetim ekleme
 
-1. Varsayılan Denetim kaldırın. Açık *FirstToolWindowControl.xaml* ve silme **Me tıklayın!** düğmesi.
+1. Varsayılan denetimi kaldırın. *FirstToolWindowControl. xaml* ' i açın ve **Click ' i silin!** Bu.
 
-2. İçinde **araç kutusu**, genişletme **tüm WPF denetimleri** bölümünde ve sürükleyin **medya öğesi** denetimini **FirstToolWindowControl** formu. İstediğiniz denetimi seçin ve **özellikleri** penceresinde, bu öğe adı **mediaElement1**.
+2. **Araç kutusunda** **tüm WPF denetimleri** bölümünü genişletin ve **medya öğesi** denetimini **FirstToolWindowControl** formuna sürükleyin. Denetimi seçin ve **Özellikler** penceresinde bu öğeyi **mediaElement1**olarak adlandırın.
 
-## <a name="add-a-toolbar-to-the-tool-window"></a>Araç penceresine araç çubuğu ekleme
-Aşağıdaki şekilde bir araç çubuğu ekleyerek, renkler ve gradyanlar IDE geri kalanı ile tutarlı olduğunu garanti.
+## <a name="add-a-toolbar-to-the-tool-window"></a>Araç penceresine bir araç çubuğu ekleyin
+Aşağıdaki şekilde bir araç çubuğu ekleyerek, degradelerinin ve renklerinin IDE 'nin geri kalanı ile tutarlı olmasını güvence altına alırsınız.
 
-1. İçinde **Çözüm Gezgini**açın *FirstToolWindowPackage.vsct*. *.Vsct* dosya grafik kullanıcı arabirimi (GUI) öğelerini tanımlar, araç penceresinde XML kullanarak.
+1. **Çözüm Gezgini**' de *FirstToolWindowPackage. vsct*öğesini açın. *. Vsct* dosyası, XML kullanarak araç pencerenizde grafik kullanıcı ARABIRIMI (GUI) öğelerini tanımlar.
 
-2. İçinde `<Symbols>` bölümünde, bulma `<GuidSymbol>` düğümü olan `name` özniteliği `guidFirstToolWindowPackageCmdSet`. Aşağıdaki iki ekleme `<IDSymbol>` listesi öğelerine `<IDSymbol>` bir araç çubuğu ve araç çubuğu grubu tanımlamak için bu düğümünde öğeleri.
+2. @No__t_0 bölümünde `name` özniteliği `guidFirstToolWindowPackageCmdSet` olan `<GuidSymbol>` düğümünü bulun. Bir araç çubuğu ve bir araç çubuğu grubu tanımlamak için aşağıdaki iki `<IDSymbol>` öğesini bu düğümdeki `<IDSymbol>` öğe listesine ekleyin.
 
     ```xml
     <IDSymbol name="ToolbarID" value="0x1000" />
     <IDSymbol name="ToolbarGroupID" value="0x1001" />
     ```
 
-3. Yukarıdaki `<Buttons>` bölümünde, oluşturun bir `<Menus>` bu benzer bölümü:
+3. @No__t_0 bölümünün hemen üstünde şuna benzer bir `<Menus>` bölümü oluşturun:
 
     ```xml
     <Menus>
@@ -73,11 +75,11 @@ Aşağıdaki şekilde bir araç çubuğu ekleyerek, renkler ve gradyanlar IDE ge
     </Menus>
     ```
 
-    Menü birkaç farklı tür vardır. Bu menü tarafından tanımlanan bir araç çubuğunda bir araç penceresi olup kendi `type` özniteliği. `guid` Ve `id` ayarları yapmak araç çubuğunun tam kimliği. Genellikle, `<Parent>` menüsü içeren grubudur. Ancak, bir araç kendi üst öğe olarak tanımlanır. Bu nedenle, aynı tanımlayıcı için kullanılan `<Menu>` ve `<Parent>` öğeleri. `priority` Özniteliktir sadece ' 0'.
+    Birçok farklı menü türü vardır. Bu menü, `type` özniteliğiyle tanımlanan bir araç penceresi araç çubuğudur. @No__t_0 ve `id` ayarları, araç çubuğunun tam nitelikli KIMLIĞINI yapar. Genellikle, bir menünün `<Parent>` içeren grup vardır. Ancak, bir araç çubuğu kendi üst öğesi olarak tanımlanır. Bu nedenle, `<Menu>` ve `<Parent>` öğeleri için aynı tanımlayıcı kullanılır. @No__t_0 özniteliği yalnızca ' 0 '.
 
-4. Araç çubukları, menüler birçok yönden benzer. Örneğin, menü komutları grupları yalnızca olabilir gibi araç çubukları ayrıca gruplarınız olabilir. (Menülerde, komut gruplarını yatay çizgilerle ayrılır. Araç çubukları gruplar tarafından visual Bölücü ayrılmış değil.)
+4. Araç çubukları birçok şekilde menülere benzer. Örneğin, tıpkı bir menü, komut gruplarına sahip olabileceğinden, araç çubuklarının grupları da olabilir. (Menülerde, komut grupları yatay çizgilerle ayrılır. Araç çubuklarında, gruplar görsel bölücüler tarafından ayrılmaz.)
 
-    Ekleme bir `<Groups>` içeren bölümü bir `<Group>` öğesi. Bu kimliği içinde bildirilen grubu tanımlar `<Symbols>` bölümü. Ekleme `<Groups>` hemen sonrasına bölümünde `<Menus>` bölümü.
+    @No__t_1 öğesi içeren bir `<Groups>` bölümü ekleyin. Bu, KIMLIĞINI `<Symbols>` bölümünde bildirdiğiniz grubu tanımlar. @No__t_1 bölümünden hemen sonra `<Groups>` bölümünü ekleyin.
 
     ```xml
     <Groups>
@@ -87,19 +89,20 @@ Aşağıdaki şekilde bir araç çubuğu ekleyerek, renkler ve gradyanlar IDE ge
     </Groups>
     ```
 
-    Üst GUID ve ID GUID ve ID araç için ayarlayarak, Grup araç çubuğuna ekleyin.
+    Ana GUID ve KIMLIĞI araç çubuğunun GUID 'sine ve KIMLIĞINE ayarlayarak, grubu araç çubuğuna eklersiniz.
 
 ## <a name="add-a-command-to-the-toolbar"></a>Araç çubuğuna komut ekleme
- Bir düğme olarak görüntülenen araç, bir komut ekleyin.
 
-1. İçinde `<Symbols>` bölümünde, aşağıdaki Idsymbol öğeleri yalnızca araç çubuğu ve araç sonra Grup bildirimleri bildirin.
+Araç çubuğuna düğme olarak görünen bir komut ekleyin.
+
+1. @No__t_0 bölümünde, araç çubuğu ve araç çubuğu grup bildirimlerinin hemen ardından aşağıdaki IDSymbol öğelerini bildirin.
 
     ```xml
     <IDSymbol name="cmdidWindowsMedia" value="0x0100" />
     <IDSymbol name="cmdidWindowsMediaOpen" value="0x132" />
     ```
 
-2. Bir Button öğesi içinde Ekle `<Buttons>` bölümü. Bu öğe ile araç penceresi araç çubuğunda görünür bir **arama** simgesi (Büyüteç).
+2. @No__t_0 bölümünün içine bir Button öğesi ekleyin. Bu öğe, araç penceresindeki araç çubuğunda **arama** (Büyüteç Camı) simgesiyle görüntülenir.
 
     ```xml
     <Button guid="guidFirstToolWindowPackageCmdSet" id="cmdidWindowsMediaOpen" priority="0x0101" type="Button">
@@ -112,7 +115,7 @@ Aşağıdaki şekilde bir araç çubuğu ekleyerek, renkler ve gradyanlar IDE ge
     </Button>
     ```
 
-3. Açık *FirstToolWindowCommand.cs* ve sonra yalnızca varolan alanların sınıfında aşağıdaki satırları ekleyin.
+3. *FirstToolWindowCommand.cs* ' i açın ve varolan alanlardan hemen sonra sınıfına aşağıdaki satırları ekleyin.
 
     ```csharp
     public const string guidFirstToolWindowPackageCmdSet = "00000000-0000-0000-0000-0000";  // get the GUID from the .vsct file
@@ -121,12 +124,12 @@ Aşağıdaki şekilde bir araç çubuğu ekleyerek, renkler ve gradyanlar IDE ge
     public const int ToolbarID = 0x1000;
     ```
 
-    Bunun yapılması komutlarınızı kodda kullanılabilir hale getirir.
+    Bunu yaptığınızda, komutlarınız kodda kullanılabilir hale gelir.
 
-## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>İçin FirstToolWindowControl MediaPlayer özellik ekleme
-Araç çubuğu denetimleri için olay işleyicilerindeki kodunuzu FirstToolWindowControl sınıfı alt Media Player denetimi erişebilir olması gerekir.
+## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>FirstToolWindowControl 'a MediaPlayer özelliği ekleyin
+Araç çubuğu denetimlerinin olay işleyicilerinden, kodunuzun FirstToolWindowControl sınıfının bir alt öğesi olan Media Player denetimine erişebilmesi gerekir.
 
-İçinde **Çözüm Gezgini**, sağ *FirstToolWindowControl.xaml*, tıklayın **kodu görüntüle**ve FirstToolWindowControl sınıfa aşağıdaki kodu ekleyin.
+**Çözüm Gezgini**, *FirstToolWindowControl. xaml*öğesine sağ tıklayın, **kodu görüntüle**' ye tıklayın ve aşağıdaki kodu FirstToolWindowControl sınıfına ekleyin.
 
 ```csharp
 public System.Windows.Controls.MediaElement MediaPlayer
@@ -135,10 +138,10 @@ public System.Windows.Controls.MediaElement MediaPlayer
 }
 ```
 
-## <a name="instantiate-the-tool-window-and-toolbar"></a>Araç çubuğu ve araç penceresi örneği
-Bir araç ve çağıran bir menü komutu eklemek **açık dosya** iletişim ve seçilen ortam dosyasını yürütür.
+## <a name="instantiate-the-tool-window-and-toolbar"></a>Araç penceresini ve araç çubuğunu oluşturma
+**Dosya Aç** iletişim kutusunu çağıran ve seçilen medya dosyasını oynatan bir araç çubuğu ve bir menü komutu ekleyin.
 
-1. Açık *FirstToolWindow.cs* ve aşağıdakileri ekleyin `using` deyimleri.
+1. *FirstToolWindow.cs* açın ve aşağıdaki `using` yönergeleri ekleyin:
 
     ```csharp
     using System.ComponentModel.Design;
@@ -146,20 +149,20 @@ Bir araç ve çağıran bir menü komutu eklemek **açık dosya** iletişim ve s
     using Microsoft.VisualStudio.Shell.Interop;
     ```
 
-2. FirstToolWindow sınıf içinde FirstToolWindowControl denetim genel bir başvuru ekleyin.
+2. FirstToolWindow sınıfının içinde, FirstToolWindowControl denetimine ortak bir başvuru ekleyin.
 
     ```csharp
     public FirstToolWindowControl control;
     ```
 
-3. Oluşturucu sonunda, yeni oluşturulan denetime bu denetim değişkeni ayarlayın.
+3. Oluşturucunun sonunda, bu denetim değişkenini yeni oluşturulan denetim olarak ayarlayın.
 
     ```csharp
     control = new FirstToolWindowControl();
     base.Content = control;
     ```
 
-4. Oluşturucu içinde araç örneği oluşturur.
+4. Oluşturucunun içindeki Araç çubuğunu oluşturun.
 
     ```csharp
     this.ToolBar = new CommandID(new Guid(FirstToolWindowCommand.guidFirstToolWindowPackageCmdSet),
@@ -167,7 +170,7 @@ Bir araç ve çağıran bir menü komutu eklemek **açık dosya** iletişim ve s
     this.ToolBarLocation = (int)VSTWT_LOCATION.VSTWT_TOP;
     ```
 
-5. Bu noktada FirstToolWindow Oluşturucusu şu şekilde görünmelidir:
+5. Bu noktada, FirstToolWindow Oluşturucusu şöyle görünmelidir:
 
     ```csharp
     public FirstToolWindow() : base(null)
@@ -183,13 +186,13 @@ Bir araç ve çağıran bir menü komutu eklemek **açık dosya** iletişim ve s
     }
     ```
 
-6. Araç çubuğuna menü komutunu ekleyin. FirstToolWindowCommand.cs sınıfında, aşağıdaki ekleyin using deyimi
+6. Araç çubuğuna menü komutunu ekleyin. FirstToolWindowCommand.cs sınıfında, aşağıdaki using yönergesini ekleyin:
 
     ```csharp
     using System.Windows.Forms;
     ```
 
-7. FirstToolWindowCommand sınıfında ShowToolWindow() yönteminin sonunda aşağıdaki kodu ekleyin. Sonraki bölümde ButtonHandler komut uygulanacaktır.
+7. FirstToolWindowCommand sınıfında, ShowToolWindow () yönteminin sonuna aşağıdaki kodu ekleyin. ButtonHandler komutu sonraki bölümde uygulanacak.
 
     ```csharp
     // Create the handles for the toolbar command.
@@ -203,15 +206,15 @@ Bir araç ve çağıran bir menü komutu eklemek **açık dosya** iletişim ve s
 
 ### <a name="to-implement-a-menu-command-in-the-tool-window"></a>Araç penceresinde bir menü komutu uygulamak için
 
-1. Çağıran bir ButtonHandler yöntemi FirstToolWindowCommand sınıfta ekleyin **açık dosya** iletişim. Bir dosyayı seçili olduğunda, medya dosyası yürütülür.
+1. FirstToolWindowCommand sınıfında **Dosya Aç** iletişim kutusunu çağıran bir ButtonHandler yöntemi ekleyin. Bir dosya seçildiğinde, medya dosyası oynatılır.
 
-2. FirstToolWindowCommand sınıfında FirstToolWindow pencerenin FindToolWindow() yönteminde oluşturulan özel bir başvuru ekleyin.
+2. FirstToolWindowCommand sınıfında, FindToolWindow () yönteminde oluşturulan FirstToolWindow penceresine özel bir başvuru ekleyin.
 
     ```csharp
     private FirstToolWindow window;
     ```
 
-3. Yukarıda tanımlanan (ButtonHandler komut işleyici pencere denetime erişebilirsiniz. böylece penceresini ayarlamak için ShowToolWindow() yöntemi Değiştir Tam ShowToolWindow() yöntemi aşağıda verilmiştir.
+3. Yukarıda tanımladığınız pencereyi ayarlamak için ShowToolWindow () yöntemini değiştirin (ButtonHandler komut işleyicisinin pencere denetimine erişebilmesi için). Burada, ShowToolWindow () yöntemi tamamlanmıştır.
 
     ```csharp
     private void ShowToolWindow(object sender, EventArgs e)
@@ -234,7 +237,7 @@ Bir araç ve çağıran bir menü komutu eklemek **açık dosya** iletişim ve s
     }
     ```
 
-4. ButtonHandler yöntemi ekleyin. Oynatmak için medya dosyasını belirtmek bir kullanıcı için bir OpenFileDialog oluşturur ve sonra seçilen dosyayı yürütür.
+4. ButtonHandler metodunu ekleyin. Kullanıcının oynatacak medya dosyasını belirtmesi için bir OpenFileDialog oluşturur ve sonra seçili dosyayı yürütür.
 
     ```csharp
     private void ButtonHandler(object sender, EventArgs arguments)
@@ -248,10 +251,11 @@ Bir araç ve çağıran bir menü komutu eklemek **açık dosya** iletişim ve s
     }
     ```
 
-## <a name="set-the-default-position-for-the-tool-window"></a>Araç penceresi için varsayılan konumu ayarlayın
- Ardından, araç penceresi için IDE'de varsayılan konumu belirtin. Araç penceresi için yapılandırma bilgilerini konusu *FirstToolWindowPackage.cs* dosya.
+## <a name="set-the-default-position-for-the-tool-window"></a>Araç penceresi için varsayılan konumu ayarlama
 
-1. İçinde *FirstToolWindowPackage.cs*, bulma <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> özniteliği `FirstToolWindowPackage` sınıfını FirstToolWindow oluşturucuya geçirir. Varsayılan konumu belirtmek için aşağıdaki örnekte oluşturucuya daha fazla parametre eklemeniz gerekir.
+Ardından, araç penceresi için IDE 'de varsayılan bir konum belirtin. Araç penceresi için yapılandırma bilgileri *FirstToolWindowPackage.cs* dosyasında bulunur.
+
+1. *FirstToolWindowPackage.cs*Içinde, FirstToolWindow türünü oluşturucuya geçiren `FirstToolWindowPackage` sınıfında <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> özniteliğini bulun. Varsayılan bir konum belirtmek için, aşağıdaki örnekteki oluşturucuya daha fazla parametre eklemeniz gerekir.
 
     ```csharp
     [ProvideToolWindow(typeof(FirstToolWindow),
@@ -259,22 +263,22 @@ Bir araç ve çağıran bir menü komutu eklemek **açık dosya** iletişim ve s
         Window = "3ae79031-e1bc-11d0-8f78-00a0c9110057")]
     ```
 
-    İlk adlandırılmış parametre `Style` ve değeri `Tabbed`, yani pencere varolan pencereye bir sekmede olacaktır. Yerleştirme konumunu tarafından belirtilen `Window` parametresi, bu durumda, n GUID **Çözüm Gezgini**.
+    İlk adlandırılmış parametre `Style` ve değeri `Tabbed` ve bu, pencerenin varolan bir pencerede bir sekme olacağı anlamına gelir. Yerleştirme konumu `Window` parametresi tarafından belirtilir, n Bu durumda, **Çözüm Gezgini**GUID 'si.
 
     > [!NOTE]
-    > IDE'de pencereleri türleri hakkında daha fazla bilgi için bkz. <xref:EnvDTE.vsWindowType>.
+    > IDE 'deki pencere türleri hakkında daha fazla bilgi için bkz. <xref:EnvDTE.vsWindowType>.
 
-## <a name="test-the-tool-window"></a>Araç penceresi test
+## <a name="test-the-tool-window"></a>Araç penceresini test etme
 
-1. Tuşuna **F5** Visual Studio Deneysel derlemesi yeni bir örneğini açın.
+1. Visual Studio deneysel yapısının yeni bir örneğini açmak için **F5** tuşuna basın.
 
-2. Üzerinde **görünümü** menüsünde **diğer Windows** ve ardından **ilk araç penceresi**.
+2. **Görünüm** menüsünde **diğer pencereler** ' in üzerine gelin ve ardından **ilk araç penceresi**' ne tıklayın.
 
-    Media player araç penceresi aynı konumda açılmalıdır **Çözüm Gezgini**. Hala öncekiyle aynı konumda görüntüleniyorsa, pencere düzenini Sıfırla (**penceresi / pencere düzenini Sıfırla**).
+    Media Player araç penceresi **Çözüm Gezgini**aynı konumda açılmalıdır. Daha önceki ile aynı konumda görünüyorsa pencere mizanpajını sıfırlayın (pencere **/pencere düzeni düzeni**).
 
-3. Düğmesine tıklayın (sahip **arama** simgesi) araç penceresindeki. Örneğin, desteklenen bir ses veya video dosyası seçin *C:\windows\media\chimes.wav*, tuşuna **açık**.
+3. Araç penceresinde ( **arama** simgesine sahiptir) düğmesine tıklayın. Desteklenen bir ses veya video dosyası seçin, örneğin *C:\Windows\Media\chimes.exe*, sonra **Aç**' a basın.
 
-    Çan sesi duymak.
+    CHIME sesini duymalısınız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

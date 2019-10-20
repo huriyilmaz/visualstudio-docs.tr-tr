@@ -1,5 +1,5 @@
 ---
-title: Yönetilen Genişletilebilirlik Çerçevesi Düzenleyicisi | Microsoft Docs
+title: Düzenleyicide Managed Extensibility Framework | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,46 +10,46 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65731a905c157737ca4c01416f9d76fdecba30d0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f376a43b6d59ba494db2ad4e5ef26b260d91f6ad
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351040"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72632616"
 ---
-# <a name="managed-extensibility-framework-in-the-editor"></a>Genişletilebilirlik Çerçevesi Düzenleyicisi'nde yönetilen
-Düzenleyici, Yönetilen Genişletilebilirlik Çerçevesi (MEF) bileşenleri kullanılarak oluşturulmuştur. Kod Düzenleyicisi bileşenleri kullanabilir ve kendi MEF bileşenlerini düzenleyicisini genişletmek için oluşturabilirsiniz.
+# <a name="managed-extensibility-framework-in-the-editor"></a>Düzenleyicide Managed Extensibility Framework
+Düzenleyici, Managed Extensibility Framework (MEF) bileşenleri kullanılarak oluşturulur. Düzenleyiciyi genişletmek için kendi MEF bileşenlerinizi oluşturabilirsiniz ve kodunuz da düzenleyici bileşenlerini kullanabilir.
 
-## <a name="overview-of-the-managed-extensibility-framework"></a>Yönetilen Genişletilebilirlik Çerçevesi'ne genel bakış
- MEF ekleyin ve bir uygulama veya bileşen MEF programlama modeli izleyen özelliklerini değiştirmenize olanak tanıyan bir .NET kitaplıktır. Visual Studio Düzenleyicisi sağlar hem MEF Bileşeni bölümleri kullanın.
+## <a name="overview-of-the-managed-extensibility-framework"></a>Managed Extensibility Framework genel bakış
+ MEF, MEF programlama modelini izleyen bir uygulamanın veya bileşenin özelliklerini eklemenize ve değiştirmenize olanak tanıyan bir .NET kitaplığıdır. Visual Studio Düzenleyicisi, MEF bileşen parçalarını sağlayabilir ve kullanabilir.
 
- .NET Framework sürüm 4 MEF yer alan *System.ComponentModel.Composition.dll* derleme.
+ MEF, .NET Framework sürüm 4 *System. ComponentModel. Composition. dll* derlemesinde bulunur.
 
- MEF hakkında daha fazla bilgi için bkz: [Yönetilen Genişletilebilirlik Çerçevesi (MEF)](/dotnet/framework/mef/index).
+ MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
 
-### <a name="component-parts-and-composition-containers"></a>Bileşen parçalarına ve kapsayıcıları oluşturma
- Bir sınıf veya bir (veya her ikisi) birini yapmak için bir sınıf üyesi bir bileşenin bir parçasıdır:
+### <a name="component-parts-and-composition-containers"></a>Bileşen parçaları ve bileşim kapsayıcıları
+ Bileşen bölümü, aşağıdakilerden birini (veya her ikisini de) yapan bir sınıf veya sınıf üyesidir:
 
-- Başka bir bileşeni kullanma
+- Başka bir bileşen tüketme
 
-- Başka bir bileşen tarafından tüketilen
+- Başka bir bileşen tarafından tüketilmelidir
 
-  Örneğin, bir ambar envanteri bileşeni tarafından sağlanan ürün kullanılabilirlik verileri bağlı olduğu bir giriş üretilmekte olan alışveriş bir uygulama düşünün. MEF bağlamında, Envanter bölümü için *dışarı* ürün kullanılabilirlik verileri ve sipariş girişi bölümü can *alma* veri. Sipariş girişi ve envanter bölümlerini diğer hakkında bilmeniz gerekmez; *kapsayıcının* (konak uygulama tarafından sağlanan) dışarı aktarmaları kümesi bakımını yapma ve dışarı aktarmaları çözümleme sorumludur ve içeri aktarır.
+  Örneğin, bir ambar envanteri bileşeni tarafından sunulan ürün kullanılabilirliği verilerine bağlı bir sipariş girişi bileşeni olan bir alışveriş uygulamasını düşünün. MEF koşullarında, envanter bölümü ürün kullanılabilirlik verilerini *dışa aktarabilir* ve sipariş girişi bölümü verileri *içeri aktarabilir* . Order entry bölümü ve stok bölümünün birbirleriyle ilgili bilmeleri gerekmez; *birleştirme kapsayıcısı* (konak uygulama tarafından sağlanır), dışarı aktarmalar kümesini korumadan ve dışarı aktarmaları ve içeri aktarmaları çözümlemeden sorumludur.
 
-  Kapsayıcının <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>, genellikle ana bilgisayar tarafından sahiplenilir. Kapsayıcının tutan bir *Kataloğu* dışarı aktarılan bileşen bölümleri.
+  @No__t_0 bileşim kapsayıcısı, genellikle ana bilgisayara aittir. Bileşim kapsayıcısı, dışarıya aktarılmış bileşen bölümlerinin *kataloğunu* tutar.
 
-### <a name="export-and-import-component-parts"></a>Bileşen parçalarına alma ve verme
- Bir ortak sınıf ya da genel bir sınıf (özellik veya yöntem) üyesi uygulanan sürece, herhangi bir işlevi dışa aktarabilirsiniz. Bileşen Bölümü'nden türetilen gerekmez <xref:System.ComponentModel.Composition.Primitives.ComposablePart>. Bunun yerine, eklemelisiniz bir <xref:System.ComponentModel.Composition.ExportAttribute> özniteliği sınıf veya dışarı aktarmak istediğiniz sınıf üyesi. Bu öznitelik belirtir *sözleşme* hangi başka bir bileşen tarafından bölümü işlevinizi içeri aktarabilirsiniz.
+### <a name="export-and-import-component-parts"></a>Bileşen parçalarını dışarı ve içeri aktarma
+ Bir genel sınıf veya bir sınıfın genel üyesi (özellik veya yöntem) olarak uygulandığı sürece tüm işlevleri dışarı aktarabilirsiniz. Bileşen parçasını <xref:System.ComponentModel.Composition.Primitives.ComposablePart> türetmeniz gerekmez. Bunun yerine, dışarı aktarmak istediğiniz sınıfa veya sınıf üyesine bir <xref:System.ComponentModel.Composition.ExportAttribute> özniteliği eklemeniz gerekir. Bu öznitelik, başka bir bileşen bölümünün işlevselliği içeri aktarabileceği *sözleşmeyi* belirtir.
 
-### <a name="the-export-contract"></a>Dışarı aktarma Sözleşmesi
- <xref:System.ComponentModel.Composition.ExportAttribute> Dışarı aktarılan varlık (bir sınıf, arabirim veya yapısı) tanımlar. Genellikle, dışarı aktarma öznitelik verme türünü belirten bir parametre alır.
+### <a name="the-export-contract"></a>Sözleşmeyi dışarı aktar
+ @No__t_0, dışarıya aktarılmakta olan varlığı (sınıf, arabirim veya yapı) tanımlar. Genellikle, Export özniteliği dışa aktarma türünü belirten bir parametre alır.
 
 ```
 [Export(typeof(ContentTypeDefinition))]
 class TestContentTypeDefinition : ContentTypeDefinition {   }
 ```
 
- Varsayılan olarak, <xref:System.ComponentModel.Composition.ExportAttribute> özniteliği verilirken sınıf türünde bir sözleşme tanımlar.
+ Varsayılan olarak, <xref:System.ComponentModel.Composition.ExportAttribute> özniteliği dışa aktarma sınıfının türü olan bir sözleşmeyi tanımlar.
 
 ```
 [Export]
@@ -58,9 +58,9 @@ class TestContentTypeDefinition : ContentTypeDefinition {   }
 class TestAdornmentLayerDefinition : AdornmentLayerDefinition {   }
 ```
 
- Örnekte, varsayılan `[Export]` özniteliktir eşdeğer `[Export(typeof(TestAdornmentLayerDefinition))]`.
+ Örnekte, varsayılan `[Export]` özniteliği `[Export(typeof(TestAdornmentLayerDefinition))]` eşdeğerdir.
 
- Aşağıdaki örnekte gösterildiği gibi bir özellik veya yöntem de verebilirsiniz.
+ Ayrıca, aşağıdaki örnekte gösterildiği gibi bir özelliği veya yöntemi de dışarı aktarabilirsiniz.
 
 ```
 [Export]
@@ -69,38 +69,38 @@ class TestAdornmentLayerDefinition : AdornmentLayerDefinition {   }
 public AdornmentLayerDefinition scarletLayerDefinition;
 ```
 
-### <a name="import-a-mef-export"></a>MEF dışarı aktarma
- MEF dışarı aktarma kullanmasını istediğinizde, dışarı aktarılan ve ekleme sözleşmenin (genellikle türü) bilmeniz gerekir bir <xref:System.ComponentModel.Composition.ImportAttribute> bu değere sahip bir öznitelik. Varsayılan olarak, içeri aktarma öznitelik değiştirdiği sınıf türünde bir parametre alır. Kod alma aşağıdaki satırları <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService> türü.
+### <a name="import-a-mef-export"></a>MEF dışarı aktarmayı içeri aktarma
+ Bir MEF dışarı aktarma kullanmak istediğinizde, (genellikle türü), dışarı aktarılırken sözleşmeyi bilmeniz ve bu değere sahip bir <xref:System.ComponentModel.Composition.ImportAttribute> özniteliği eklemeniz gerekir. Varsayılan olarak, içeri aktarma özniteliği, değiştirdiği sınıfın türü olan bir parametre alır. Aşağıdaki kod satırları <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService> türünü içeri aktarır.
 
 ```
 [Import]
 internal IClassificationTypeRegistryService ClassificationRegistry;
 ```
 
-## <a name="get-editor-functionality-from-a-mef-component-part"></a>Düzenleyici işlevselliği bir MEF Bileşeni bölümünden alın
- Mevcut kodunuzu bir MEF Bileşeni parçasıysa, düzenleyici bileşen parçalarına kullanmak için MEF meta verileri kullanabilirsiniz.
+## <a name="get-editor-functionality-from-a-mef-component-part"></a>MEF bileşeni bölümünden düzenleyici işlevselliği al
+ Mevcut kodunuz bir MEF bileşeni parçasıysa, düzenleyici bileşen parçalarını kullanmak için MEF meta verilerini kullanabilirsiniz.
 
-#### <a name="to-consume-editor-functionality-from-a-mef-component-part"></a>Bir MEF Bileşeni bölümünden Düzenleyici işlevselliği kullanmak için
+#### <a name="to-consume-editor-functionality-from-a-mef-component-part"></a>Bir MEF bileşeni bölümünden düzenleyici işlevlerini kullanmak için
 
-1. Başvuruları Ekle *System.Composition.ComponentModel.dll*, genel derleme önbelleğinde (GAC) ve düzenleyici derlemelere olan.
+1. Genel derleme önbelleğinde (GAC) ve düzenleyici derlemelerindeki *System. Composition. ComponentModel. dll*' ye başvurular ekleyin.
 
-2. İlgili ekleme using deyimleri.
+2. İlgili using yönergelerini ekleyin.
 
     ```
     using System.ComponentModel.Composition;
     using Microsoft.VisualStudio.Text;
     ```
 
-3. Ekleme `[Import]` hizmeti arabirimine özniteliğini aşağıdaki gibi.
+3. @No__t_0 özniteliğini aşağıdaki gibi hizmet arayüzüne ekleyin.
 
     ```
     [Import]
     ITextBufferFactoryService textBufferService;
     ```
 
-4. Hizmet edindiğinizde, bileşenlerinden herhangi birini kullanabilir.
+4. Hizmeti edindiğinizde, bileşenlerinden birini kullanabilirsiniz.
 
-5. Ne zaman, önceleri derlendiği böyle derlemenizi *... \Common7\IDE\Components\* Visual Studio yüklemenizin klasör.
+5. Derlemenizi derledikten sonra *... Visual Studio yüklemenizin \Common7\IDE\Components \* klasörü.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Dil hizmeti ve düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md)
+- [Dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md)

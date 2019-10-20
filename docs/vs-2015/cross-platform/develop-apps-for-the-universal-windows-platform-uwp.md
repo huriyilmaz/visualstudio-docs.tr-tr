@@ -1,62 +1,62 @@
 ---
-title: Evrensel Windows Platformu (UWP) uygulamaları geliştirin | Microsoft Docs
+title: Evrensel Windows Platformu için uygulama geliştirme (UWP) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
 ms.topic: conceptual
 ms.assetid: eac59cb6-f12e-4a77-9953-6d62b164a643
 caps.latest.revision: 50
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8af5414b1c775a17421b87b9c18d58c34f544405
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ed601f6b3bfeba4d7aebed5955b340fb28908c74
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65698648"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660203"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Evrensel Windows Platformu (UWP) için uygulama geliştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Evrensel Windows platformu ve bizim bir Windows çekirdek ile aynı uygulama tüm Windows 10 cihazlarda phone'lardan masaüstlerine çalıştırabilirsiniz. Visual Studio 2015 ile Evrensel Windows uygulaması geliştirme araçları bu evrensel Windows uygulamaları oluşturun.  
-  
- ![Evrensel Windows platformu](../cross-platform/media/uwp-coreextensions.png "UWP_CoreExtensions")  
-  
- Uygulamanızı Windows 10 telefonda, Windows 10 Masaüstü veya Xbox üzerinde çalıştırın. Bu, aynı uygulama paketi kullanılır! Windows 10 tek, birleştirilmiş çekirdek sunulmasıyla birlikte, tüm platformlardaki bir uygulama paketini çalıştırabilecek. Çeşitli platformları platform belirli davranışlardan faydalanmak için uygulamanızı ekleyebileceğiniz olan uzantı Sdk'lerine vardır. Örneğin, mobil cihazlar için bir uzantı SDK'sı, Windows phone'da basıldığında geri düğmesini işler. Projenizde bir uzantı SDK'sına başvuran, yalnızca, SDK bu platform üzerinde kullanılabilir olup olmadığını test etmek için çalışma zamanı denetimleri ekleyin. Her platform için aynı uygulama paketi nasıl sahip olmasıdır!  
-  
- **Windows Çekirdek nedir?**  
-  
- İlk kez Windows tüm Windows 10 platformlardaki ortak bir çekirdek için düzenlendi. Bir ortak kaynak, bir ortak Windows çekirdek, bir dosya g/ç yığını ve bir uygulama modeli yoktur. Kullanıcı Arabirimi için yalnızca bir XAML kullanıcı Arabirimi çerçevesi ve bir HTML kullanıcı Arabirimi çerçevesi yoktur. Bu nedenle uygulamanızın farklı Windows 10 cihazlarda çalıştırmak kolay kolaylaştırdık için harika bir uygulama oluşturmaya odaklanabilirsiniz.  
-  
- **Evrensel Windows platformu tam olarak nedir?**  
-  
- Bu yalnızca, sözleşmeler ve sürümleri koleksiyonudur. Bunlar, uygulamanızın çalıştırdığı hedef izin verir. Artık bir işletim sistemini hedef. Şimdi uygulamanıza bir veya daha fazla cihaz aileleri hedefleyin. Bu daha ayrıntılı bilgi edinin [platform Kılavuzu](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx).  
-  
-## <a name="requirements"></a>Gereksinimler  
- Evrensel Windows uygulaması geliştirme araçları, uygulamanızın farklı cihazlarda nasıl göründüğünü görmek için kullanabileceğiniz öykünücü ile birlikte gelir. Bu öykünücü kullanmak istiyorsanız, bu yazılımın bir fiziksel makineye yüklemeniz gerekir. Fiziksel makinenin Windows 8.1 (x64) Professional sürümü çalıştırmalıdır veya sonraki bir sürümünü ve istemci Hyper-V ve ikinci düzey adres çevirisi (SLAT) destekleyen bir işlemci. Visual Studio bir sanal makinede yüklü olduğunda öykünücüleri kullanılamaz.  
-  
- Gereken yazılım listesi aşağıda verilmiştir:  
-  
-- [Windows 10](http://windows.microsoft.com/windows/downloads)  
-  
-- [Visual Studio 2015](http://go.microsoft.com/fwlink/p/?LinkId=526725). Evrensel Windows uygulama geliştirme araçları isteğe bağlı özellikler listesinden seçili olduğundan emin olun. Bu araçlar olmasaydı, Evrensel uygulamaları oluşturmak mümkün olmayacaktır.  
-  
-  Bu yazılımı yükledikten sonra yapmanız [Windows 10 Cihazınızı etkinleştirme](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx) geliştirme için. (Artık bir geliştirici lisansı her Windows 10 cihaz için ihtiyacınız.)  
-  
-  **Windows 8.1 ve Windows 7 desteği**  
-  
-  Windows 10 dışındaki bir platformda Visual Studio 2015 ile Evrensel Windows uygulamaları geliştirme kullanmayı tercih ederseniz kısıtlamaları şunlardır:  
-  
-- Windows 8.1: Uygulamayı yerel olarak (yalnızca bir uzak Windows 10 cihazında) çalıştıramazsınız. Visual Studio, ancak simülatörü değil öykünücüleri kullanabilirsiniz.  
-  
-- Windows 7: Uygulamayı yerel olarak (yalnızca bir uzak Windows 10 cihazında) çalıştıramazsınız. Visual Studio öykünücü veya simülatör ya da kullanamazsınız.  
-  
-  Geliştirme platformunuzu Windows 10 ise yalnızca XAML Tasarımcısı'nı kullanabilirsiniz.  
-  
-## <a name="universal-windows-apps"></a>Evrensel Windows uygulamaları  
- Tercih edilen geliştirme dilini C#, Visual Basic, C++ veya JavaScript arasından [Windows 10 cihazları için bir evrensel Windows uygulaması oluşturma](https://msdn.microsoft.com/library/windows/apps/xaml/dn609832.aspx#target_win10). Veya, watch [bu başlangıç videosu](http://channel9.msdn.com/Series/ConnectOn-Demand/229).  
-  
- Mevcut Windows Store 8.1 uygulamaları, Windows Phone 8.1 uygulamaları ve evrensel Windows uygulamaları Visual Studio 2015 RC ile oluşturulmuş varsa [mevcut uygulamaları bu bağlantı noktası](https://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) en yeni evrensel Windows platformu kullanılacak.  
-  
- Evrensel Windows uygulamanızı oluşturduktan sonra yapmanız gerekenler [uygulamanızı paketleme](https://msdn.microsoft.com/library/windows/apps/hh454036.aspx) bir Windows 10 cihazına yükleyebiliyorum veya Windows Store için gönderin.
+Evrensel Windows Platformu ve tek bir Windows çekirdeğiyle aynı uygulamayı telefonlardan masaüstü bilgisayarlardan herhangi bir Windows 10 cihazında çalıştırabilirsiniz. Bu Evrensel Windows uygulamalarını Visual Studio 2015 ve Evrensel Windows uygulama geliştirme araçları ile oluşturun.
+
+ ![Evrensel Windows Platformu](../cross-platform/media/uwp-coreextensions.png "UWP_CoreExtensions")
+
+ Uygulamanızı bir Windows 10 Phone, Windows 10 Masaüstü veya Xbox üzerinde çalıştırın. Aynı uygulama paketidir! Windows 10 tek ve birleştirilmiş çekirdeği kullanıma sunulmasıyla birlikte, tek bir uygulama paketi tüm platformlarda çalıştırılabilir. Birkaç platformda, platforma özgü davranışlardan yararlanmak üzere uygulamanıza ekleyebileceğiniz Uzantı SDK 'Ları vardır. Örneğin, mobil için bir uzantı SDK 'Sı, bir Windows Phone 'a basıldığında geri düğmesini işler. Projenizde bir uzantı SDK 'sına başvurdıysanız, bu SDK 'nın o platformda kullanılabilir olup olmadığını test etmek için yalnızca çalışma zamanı denetimleri ekleyin. Her platform için aynı uygulama paketine sahip olabilirsiniz!
+
+ **Windows çekirdeği nedir?**
+
+ İlk kez Windows 10 ' un tüm Windows 10 platformlarındaki ortak bir çekirdeğe sahip olması yeniden düzenlenmiş. Tek bir ortak kaynak, bir ortak Windows çekirdeği, bir dosya g/ç yığını ve bir uygulama modeli vardır. Kullanıcı arabirimi için yalnızca bir XAML kullanıcı arabirimi çerçevesi ve bir HTML UI çerçevesi vardır. Böylece uygulamanızın farklı Windows 10 cihazlarında çalışmasını kolaylaştıran harika bir uygulama oluşturmaya odaklanabilirsiniz.
+
+ **Evrensel Windows Platformu tam olarak nedir?**
+
+ Bu, yalnızca bir sözleşme ve sürüm koleksiyonudur. Bu, uygulamanızın çalıştırılacağı yeri hedeflemesini sağlar. Artık bir işletim sistemini hedeflemiyor. Şimdi uygulamanızı bir veya daha fazla cihaz ailesinden hedefleyebilirsiniz. Bu [Platform kılavuzundaki](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx)ayrıntılar hakkında daha fazla bilgi edinin.
+
+## <a name="requirements"></a>Gereksinimler
+ Evrensel Windows uygulama geliştirme araçları, uygulamanızın farklı cihazlarda nasıl göründüğünü görmek için kullanabileceğiniz öykünücülerle gelir. Bu öykünücüleri kullanmak istiyorsanız, bu yazılımı bir fiziksel makineye yüklemeniz gerekir. Fiziksel makinenin Windows 8.1 (x64) Professional sürümü veya üstünü çalıştırması ve Istemci Hyper-V ve Ikinci düzey adres çevirisi 'ni (SLAT) destekleyen bir işlemcisi olması gerekir. Sanal makineye Visual Studio yüklendiğinde Öykünücüler kullanılamaz.
+
+ İhtiyacınız olan yazılımın listesi aşağıda verilmiştir:
+
+- [Windows 10](http://windows.microsoft.com/windows/downloads)
+
+- [Visual Studio 2015](http://go.microsoft.com/fwlink/p/?LinkId=526725). Evrensel Windows uygulaması geliştirme araçlarının isteğe bağlı özellikler listesinden seçildiğinden emin olun. Bu araçlar olmadan evrensel uygulamalarınızı oluşturmayacağız.
+
+  Bu yazılımı yükledikten sonra, [Windows 10 cihazınızı](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx) geliştirme için etkinleştirmeniz gerekir. (Artık her Windows 10 cihazı için bir geliştirici lisansına ihtiyacınız yoktur.)
+
+  **Windows 8.1 ve Windows 7 desteği**
+
+  Windows 10 dışındaki bir platformda, Visual Studio 2015 ile Evrensel Windows uygulamaları geliştirmeyi tercih ederseniz bunlar kısıtlamalardır:
+
+- Windows 8.1: uygulamayı yerel olarak çalıştıramazsınız (yalnızca uzak bir Windows 10 cihazında). Öykünücüleri Visual Studio 'da kullanabilirsiniz, ancak benzeticiyi değildir.
+
+- Windows 7: uygulamayı yerel olarak çalıştıramazsınız (yalnızca uzak bir Windows 10 cihazında). Visual Studio 'da öykünücüleri veya benzeticiyi kullanamazsınız.
+
+  XAML tasarımcısını yalnızca geliştirme platformunuzun Windows 10 olması durumunda kullanabilirsiniz.
+
+## <a name="universal-windows-apps"></a>Evrensel Windows uygulamaları
+ C# [Windows 10 cihazları Için bir Evrensel Windows uygulaması oluşturmak](https://msdn.microsoft.com/library/windows/apps/xaml/dn609832.aspx#target_win10)üzere, Visual Basic C++ veya JavaScript 'ten tercih ettiğiniz geliştirme dilini seçin. Ya da [Bu Başlarken videosunu](http://channel9.msdn.com/Series/ConnectOn-Demand/229)izleyin.
+
+ Mevcut Windows Mağazası 8,1 uygulamalarınız varsa Windows Phone 8,1 uygulamaları veya Visual Studio 2015 RC ile oluşturulmuş Evrensel Windows uygulamaları varsa, [Bu mevcut uygulamaların](https://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) en son Evrensel Windows platformu kullanması için bağlantı noktası oluşturabilirsiniz.
+
+ Evrensel Windows uygulamanızı oluşturduktan sonra uygulamanızı bir Windows 10 cihazına yüklemek veya Windows Mağazası 'na göndermek için [paketlemeyi](https://msdn.microsoft.com/library/windows/apps/hh454036.aspx) yapmanız gerekir.
