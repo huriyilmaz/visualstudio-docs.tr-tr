@@ -3,52 +3,52 @@ title: XML Belge Özellikleri, Özellik Penceresi
 ms.date: 03/05/2019
 ms.topic: reference
 ms.assetid: 9dbb34d9-02ea-4201-b445-c98a0eb0d6db
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 679ac529708a49d18025672ce8f880c4f7710471
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 99102248a9456de3a2b3aeba28e54de4299fae40
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808138"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604152"
 ---
-# <a name="xml-document-properties-properties-window"></a>XML belge özellikleri, özellik penceresi
+# <a name="xml-document-properties-properties-window"></a>XML belgesi özellikleri, Özellikler penceresi
 
-**Özellikleri** penceresi XML Düzenleyicisi'nde etkin belgeyi hakkında temel bilgiler sağlar. Kullanılabilir özellikler şu anda etkin olan bir XML belgesi türüne bağlı olarak değişir.
+**Özellikler** PENCERESI, XML düzenleyicisinde etkin olan belge hakkında temel bilgiler sağlar. Kullanılabilir özellikler, şu anda etkin olan XML belgesinin türüne bağlı olarak değişir.
 
 > [!NOTE]
-> Çözümdeki tüm XML belge özellikleri kaydedilir. Sonuç olarak, çözüm bir sonraki açışınızda bu değerleri girmek gerekmez.
+> Tüm XML belgesi özellikleri çözüme kaydedilir. Sonuç olarak, çözümü bir sonraki açışınızda bu değerleri yeniden girmeniz gerekmez.
 
-**Kodlama**
+**Şifreleme**
 
-Dosya için kodlama karakter. Bu özellik değişiklikleri kodlama özniteliği XML bildirimi ve tam tersi de değiştiriliyor. Yeni kodlama dosyasını kaydettiğinizde dosyanın kodlamak için kullanılır.
+Dosya için karakter kodlaması. Bu özelliğin değiştirilmesi, XML bildiriminde kodlama özniteliğini de değiştirir ve tam tersi de geçerlidir. Yeni kodlama dosyayı kaydettiğinizde dosyayı kodlamak için kullanılır.
 
 **Giriş**
 
-XSLT stil sayfası ile ilişkili giriş belgesi. Tarafından kullanılan **Başlat XSLT** komutlar, örneğin, **XML** > **XSLT hata ayıklama olmadan Başlat**. Gözat'ı kullanarak bir belge seçilebilir (**...** ) düğmesi.
+XSLT stil sayfasıyla ilişkili giriş belgesi. **Başlangıç XSLT** komutları tarafından kullanılır, örneğin, **XML**  > ,**XSLT 'yi hata ayıklama olmadan başlatır**. Bir belge, gezinme ( **...** ) düğmesi kullanılarak seçilebilir.
 
-Bu özellik, yalnızca bir XSLT dosya düzenleyicide açıkken görülebilir.
+Bu özellik yalnızca düzenleyicide bir XSLT dosyası açıkken görünür.
 
 **Output**
 
-XML belge dönüştürme çalıştırdığınızda oluşturulan dosya.
+Bir XML belgesi dönüştürülürken oluşturulan dosya.
 
-Bir dosya belirtilmezse, varsayılan dosya adı temel alınarak oluşturulur `method` özniteliği `xsl:output` öğesinin dosya uzantısı belirler. Varsayılan dosya, geçerli kullanıcının geçici dizininde bulunur.
+Bir dosya belirtilmemişse, dosya uzantısını belirleyen `xsl:output` öğesindeki `method` özniteliğe göre varsayılan bir dosya adı oluşturulur. Varsayılan dosya, geçerli kullanıcının geçici dizininde bulunur.
 
 **Şemaları**
 
-Doğrulama yapmak için kullanılan şemalar. Düğme açar **XSD şemaları** iletişim kutusunda, kullanılacak şemaları seçmek için kullanılabilir.
+Doğrulama için kullanılacak şemalar. Düğme, kullanılacak şemaları seçmek için kullanılabilecek **xsd şemaları** iletişim kutusunu açar.
 
-Şema yolunu da girebilirsiniz. Birden çok şema belirtilmezse, her şema çift tırnak içine alınmalıdır.
+Ayrıca, şemaların yolunu da girebilirsiniz. Birden çok şema belirtilirse, her şema yolunun çift tırnak içine alınması gerekir.
 
-**Stil sayfası**
+**Larýnda**
 
-Belgeyi dönüştürmek için kullanılan XSLT dosyası olduğunda **XSLT hata ayıklamayı Başlat** ve **XSLT hata ayıklama olmadan Başlat** komutları kullanılır. Bu alan boş bırakılırsa, sağlanan değer Düzenleyicisi kullanan `xml-stylesheet` işleme yönergesi belgenin veya sizden için bir dosya adı.
+**XSLT hata ayıklamayı Başlat** ve **XSLT 'yi hata ayıklama komutları olmadan Başlat** kullanıldığında BELGEYI dönüştürmek için kullanılan XSLT dosyası kullanılır. Bu alan boşsa, düzenleyici belgenin `xml-stylesheet` işleme yönergesinde belirtilen değeri kullanır veya bir dosya adı ister.
 
-Farklı bir stil sayfası olması gerektiğini belirtmek için bir XSLT dosyası düzenlenirken, bu özellik kullanılabilir olduğunda kullanılabilir **XSLT hata ayıklamayı Başlat** veya **XSLT hata ayıklama olmadan Başlat** seçili komutu. Örneğin, bir üst stil sayfasında bulunan bir stil sayfası düzenlerken bunu yapmak isteyebilirsiniz.
+XSLT dosyası düzenlenirken, bu özellik, **XSLT hata ayıklamayı Başlat** veya **XSLT 'yi hata ayıklama komutu olmadan Başlat** seçiliyken farklı bir stil sayfasının kullanılması gerektiğini belirtmek için kullanılabilir. Örneğin, bir üst stil sayfasına dahil olan bir stil sayfasını düzenlediğinizde bunu yapmak isteyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
