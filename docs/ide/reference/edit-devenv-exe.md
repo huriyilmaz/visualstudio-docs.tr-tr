@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Devenv, /Edit switch
 - /Edit Devenv switch
 ms.assetid: 02b3d6e7-a2b1-4d83-a747-aa8c2fb758b7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f0eb7cab3b1bc764f663cd647811928510281e8
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: 37d49dd7d191ad470639debc50fbed23d5066233
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432006"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654481"
 ---
 # <a name="edit-devenvexe"></a>/Edit (devenv.exe)
 
-Belirtilen dosya mevcut bir Visual Studio örneğini açar.
+Belirtilen dosyayı Visual Studio 'nun mevcut bir örneğinde açar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,25 +31,25 @@ devenv /Edit [File1[ FileN]...]
 
 ## <a name="arguments"></a>Arguments
 
-- *Fıle1'de*
+- *FILE1*
 
-  İsteğe bağlı. Mevcut bir Visual Studio örneğini dosyayı açın. Visual Studio örneği varsa, yeni bir örneği bir Basitleştirilmiş pencere düzeni ile oluşturulur ve aracı açılır *dosya1* yeni örneğinde.
+  İsteğe bağlı. Visual Studio 'nun mevcut bir örneğinde açılacak dosya. Visual Studio 'nun bir örneği yoksa, Basitleştirilmiş bir pencere düzeniyle yeni bir örnek oluşturulur ve araç yeni örnekte *FILE1* öğesini açar.
 
 - *Dosyan*
 
-  İsteğe bağlı. Visual Studio'nun var olan örnekte açmak için bir veya daha fazla ek dosyalar.
+  İsteğe bağlı. Visual Studio 'nun mevcut örneğinde açmak için bir veya daha fazla ek dosya.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir dosya belirtilmediğinde, mevcut bir Visual Studio örneği odağı alır. Visual Studio örneği hiçbir dosya belirtilir ve varsa aracı ile Basitleştirilmiş pencere düzenini örneği oluşturur.
+Bir dosya belirtilmediğinde, var olan bir Visual Studio örneği odağı alır. Hiçbir dosya belirtilmemişse ve hiçbir Visual Studio örneği yoksa, araç Basitleştirilmiş pencere düzenine sahip bir örnek oluşturur.
 
-Var olan bir Visual Studio örneğini kalıcı bir durumda ise, Visual Studio kalıcı çıktığında dosya var olan örnekte açılır. Örneğin, bu durum ortaya çıkabilir, [Seçenekler iletişim kutusu](../../ide/reference/options-dialog-box-visual-studio.md) açıktır.
+Mevcut Visual Studio örneği kalıcı durumdaysa, Visual Studio kalıcı durumdan çıktığında dosya mevcut örnekte açılır. Örneğin, [Seçenekler iletişim kutusu](../../ide/reference/options-dialog-box-visual-studio.md) açık olduğunda bu durum oluşabilir.
 
-Visual Studio'nun birden fazla örneği açık değilse, dosyanın en son açılan örneği açılır.
+Visual Studio 'nun birden fazla örneği açıksa, dosya en son açılan örnekte açılır.
 
 ## <a name="example"></a>Örnek
 
-İlk örnek dosyayı açar `MyFile.cs` varolan bir Visual Studio örneğinde. Visual Studio örneği mevcut değilse, araç dosyayı yeni bir örneğinde açar. İkinci örnek, üç dosyayı yerine yalnızca bir dosya açılır dışında benzerdir.
+İlk örnek dosya `MyFile.cs` Visual Studio 'nun mevcut bir örneğinde açar. Bir Visual Studio örneği yoksa, araç dosyayı yeni bir örnekte açar. İkinci örnek, tek bir dosya yerine üç dosya açılmasının dışında benzerdir.
 
 ```shell
 devenv /edit MyFile.cs
