@@ -11,6 +11,8 @@
           href: container-tools.md
         - name: Kapsayıcı içinde React.js Tek Sayfalı Uygulama
           href: container-tools-react.md
+        - name: Azure Dev Spaces ile Kubernetes geliştirmesi >>
+          href: /azure/dev-spaces/quickstart-netcore-visualstudio
     - name: Öğreticiler
       expanded: true
       items:

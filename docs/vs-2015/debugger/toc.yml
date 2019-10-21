@@ -155,7 +155,7 @@
         - name: Yönetilen Nesnelerin Özel Görünümlerini Oluşturma
           items:
             - name: Yönetilen Nesnelerin Özel Görünümlerini Oluşturma
-              href: create-custom-views-of-dot-managed-objects.md
+              href: create-custom-views-of-managed-objects.md
             - name: DebuggerTypeProxy Özniteliğini Kullanma
               href: using-debuggertypeproxy-attribute.md
             - name: DebuggerDisplay Özniteliğini Kullanma
@@ -682,9 +682,9 @@
                       href: how-to-enable-debugging-for-aspnet-applications.md
                     - name: Bir Kullanıcı Hesabı Altında Çalışan İşlemini Çalıştırma
                       href: how-to-run-the-worker-process-under-a-user-account.md
-                - name: Uzak Hata Ayıklama Web Uygulamaları Önkoşulları
+                - name: Uzaktan Hata Ayıklama Web Uygulamaları Önkoşulları
                   items:
-                    - name: Uzak Hata Ayıklama Web Uygulamaları Önkoşulları
+                    - name: Uzaktan Hata Ayıklama Web Uygulamaları Önkoşulları
                       href: prerequistes-for-remote-debugging-web-applications.md
                     - name: ASP.NET İşleminin Adını Bulma
                       href: how-to-find-the-name-of-the-aspnet-process.md

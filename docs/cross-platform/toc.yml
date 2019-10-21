@@ -31,29 +31,29 @@
       href: change-log-visual-studio-tools-for-unity-mac.md
     - name: Unity Uygulamaları ile DevOps
       href: application-lifecycle-management-alm-with-unity-apps.md
-- name: Çoklu Platform Mobil Uygulama Geliştirme için Visual C++
+- name: C++ ile platformlar arası mobil geliştirme
   items:
-    - name: Çoklu Platform Mobil Uygulama Geliştirme için Visual C++
+    - name: C++ ile platformlar arası mobil geliştirme
       href: visual-cpp-for-cross-platform-mobile-development.md
-    - name: Çoklu Platform Mobil Uygulama Geliştirme için Visual C++’ı yükleme
+    - name: C++ ile platformlar arası mobil geliştirmeyi yükleme
       items:
-        - name: Çoklu Platform Mobil Uygulama Geliştirme için Visual C++’ı yükleme
+        - name: C++ ile platformlar arası mobil geliştirmeyi yükleme
           href: install-visual-cpp-for-cross-platform-mobile-development.md
-        - name: iOS Kullanarak Derlemeye Yönelik Araçları Yükleme ve Yapılandırma
+        - name: iOS kullanarak derlemeye yönelik araçları yükleme ve yapılandırma
           href: install-and-configure-tools-to-build-using-ios.md
-    - name: Android Yerel Etkinlik Uygulaması Oluşturma
+    - name: Android Yerel Etkinlik Uygulaması oluşturma
       href: create-an-android-native-activity-app.md
-    - name: Android ve iOS Üzerinde OpenGL ES Uygulaması Oluşturma
+    - name: Android ve iOS Üzerinde OpenGL ES uygulaması oluşturma
       href: build-an-opengl-es-application-on-android-and-ios.md
-    - name: Bir XCode Projesini İçeri Aktarma
+    - name: Xcode projesini içeri aktarma
       href: import-an-xcode-project.md
-    - name: XCode ve Visual Studio Arasındaki Eşitleme Değişiklikleri
+    - name: Xcode ve Visual Studio arasındaki eşitleme değişiklikleri
       href: sync-changes-between-xcode-and-visual-studio.md
-    - name: Platformlar Arası Mobil Geliştirme Örnekleri
+    - name: Platformlar arası mobil geliştirme örnekleri
       href: cross-platform-mobile-development-examples.md
-    - name: C++ Platformlar Arası Proje Özellikleri
+    - name: C++ platformlar arası özellik sayfası başvurusu
       items:
-        - name: C++ Platformlar Arası Proje Özellikleri
+        - name: C++ platformlar arası özellik sayfası başvurusu
           href: cross-platform-prop-pages.md
         - name: Genel Proje Özellikleri (Android C++)
           href: general-android-prop-page.md
