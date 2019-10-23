@@ -105,6 +105,10 @@
 ### [Klavye ile Gezinmeyi Kullanma](accessibility-keyboard.md)
 ### [VoiceOver kullanma](accessibility-voiceover.md)
 
+# Video öğreticiler
+## [Mac için Visual Studio’da ASP.NET Core kullanmaya başlama](tutorial-aspnet-core-vsmac-getting-started.md)
+## [Mevcut bir ASP.NET Core web uygulamasını genişletme](tutorial-aspnet-core-vsmac-extending.md)
+
 # [Windows Kullanıcılarına yönelik Mac için Visual Studio](vsmac-for-windows-users.md)
 
 # Sorun giderme
