@@ -6,36 +6,36 @@ ms.technology: vs-ide-modeling
 ms.topic: conceptual
 ms.assetid: 07e133be-92ab-4936-a02b-45d2012bd0a6
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bd45a2345e6e5b28b74cb27fac226514c3f92a04
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 447001a8aefa22fe15bce9158eddeb0cdb26e4e8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68159073"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654716"
 ---
 # <a name="adding-extensions-to-dsl-definitions"></a>DSL Tanımlarına Uzantılar Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-DSL tanımı uzantısı, uzantı bir etki alanına özgü dil (DSL) için bir paket oluşturmanıza olanak sağlar. Bir DSL aynı şekilde bir kullanıcının bilgisayarında bulunan bir Visual Studio Tümleştirme Uzantısı'na (VSIX) DSL uzantısının yüklenebilir. Ek özellikleri dinamik olarak etkin ve çalışma zamanında devre dışı. DSL uzantısı açıkça tasarlanmış olması gerekmez ve uzantıları daha sonra veya üçüncü tarafların genişletilmiş DSL değiştirmeden tasarlanabilir.  
-  
- Ek özellikler şunları içerebilir:  
-  
-- Model ve sunu öğelerinin özellikleri  
-  
-- Dekoratörler için şekilleri ve bağlayıcıları  
-  
-- Sınıfları, ilişkilerini, şekiller ve bağlayıcılar  
-  
-- Doğrulama kısıtlamaları  
-  
-- Araç kutusu öğeleri ve sekmeler  
-  
-  Genişletilmiş bir DSL kullanıcısı oluşturun ve ek özellikler örneklerini içeren bir modeli kaydedin ve bunlar uygun uzantısı yüklü diğer kullanıcılar tarafından okunabilir. Uzantı yüklü olmayan kullanıcılar, ek özellikleri kullanamaz, ancak güncelleştirin ve ek özellikler kaybetmeden bir modeli kaydedin.  
-  
-  Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz: [Visual Studio Görselleştirme ve modelleme SDK'sı](http://go.microsoft.com/fwlink/?LinkID=186128) Web sitesi.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio Görselleştirme ve modelleme SDK'sı](http://go.microsoft.com/fwlink/?LinkID=186128)
+DSL tanımı uzantısı, etki alanına özgü dil (DSL) için Uzantı paketi oluşturmanıza olanak sağlar. Bir Visual Studio Tümleştirme Uzantısı 'nda (VSıX) bulunan DSL uzantısı, bir kullanıcının bilgisayarına DSL ile aynı şekilde yüklenebilir. Ek özellikler dinamik olarak etkinleştirilebilir ve çalışma zamanında devre dışı bırakılabilir. DSLs 'in uzantı için açıkça tasarlanmaları gerekmez ve uzantılar, genişletilmiş DSL 'yi değiştirmeksizin daha sonra veya üçüncü taraflarca tasarlanabilir.
+
+ Ek özellikler şunlar olabilir:
+
+- Model ve sunum öğelerinin özellikleri
+
+- Şekiller ve bağlayıcılar için dekoratörler
+
+- Sınıflar, ilişkiler, şekiller ve bağlayıcılar
+
+- Doğrulama kısıtlamaları
+
+- Araç kutusu öğeleri ve sekmeleri
+
+  Genişletilmiş bir DSL kullanıcısı ek özelliklerin örneklerini içeren bir model oluşturup kaydedebilir ve bunlar uygun uzantıyı yüklemiş olan diğer kullanıcılar tarafından okunabilir. Uzantıyı yüklememiş kullanıcılar ek özellikleri kullanamaz, ancak ek özellikleri kaybetmeden bir modeli güncelleştirebilir ve kaydedebilir.
+
+  Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. [Visual Studio görselleştirme ve modelleme SDK](http://go.microsoft.com/fwlink/?LinkID=186128) Web sitesi.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+ [Visual Studio görselleştirme ve modelleme SDK](http://go.microsoft.com/fwlink/?LinkID=186128)

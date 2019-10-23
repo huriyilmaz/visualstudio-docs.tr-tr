@@ -12,47 +12,47 @@ helpviewer_keywords:
 - line break characters
 - Visual Studio, line break characters
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59ed38c28c6818fb618156450d47c05b4f35d63d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8fd37547d8107cf35991aab684313dbff37adda0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978178"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650888"
 ---
 # <a name="encodings-and-line-endings"></a>Kodlamalar ve satır sonları
 
-Visual Studio'da satır sonlarını olarak şu karakterleri yorumlanır:
+Aşağıdaki karakterler, Visual Studio 'da satır sonları olarak yorumlanır:
 
-- CR LF: Satır başı ve satır besleme, 000 D + 000A Unicode karakterler
+- CR LF: Satır başı + satır besleme, Unicode karakter 000D + 000A
 
-- LF: Satır besleme, Unicode karakter 000A
+- LF Satır besleme, Unicode karakter 000A
 
-- NEL: Sonraki satır, Unicode karakter 0085
+- NEL Sonraki satır, Unicode karakteri 0085
 
-- LS: Unicode karakter 2028 satır ayırıcı
+- ÇIKAR Satır ayırıcı, Unicode karakter 2028
 
-- PS: Paragraf ayırıcı, Unicode karakter 2029
+- PS Paragraf ayırıcı, Unicode karakter 2029
 
-Diğer uygulamalardan kopyaladığınız metin orijinal kodlama ve satır sonu karakterleri korur. Örneğin, Not Defteri'nden metni kopyalayın ve Visual Studio'da bir metin dosyasına yapıştırın, metni Not Defteri'nde olduğu aynı ayarları içerir.
+Diğer uygulamalardan kopyalanmış olan metin özgün kodlamayı ve satır sonu karakterlerini tutar. Örneğin, Not defteri 'nden metin kopyaladığınızda ve Visual Studio 'daki bir metin dosyasına yapıştırdığınızda, metin Notepad 'de bulunan aynı ayarlara sahiptir.
 
-Farklı satır sonu karakterleri olan bir dosyayı açtığınızda, tutarsız satır sonu karakterleri normalleştirilmeli ve seçmek için hangi tür satır sonları olup olmadığını soran bir iletişim kutusu görebilirsiniz.
+Farklı satır sonu karakterleri olan bir dosyayı açtığınızda tutarsız çizgi kesme karakterlerinin normalleştirilip normalleştirilmeyeceğini ve hangi tür satır sonlarını seçeceğini soran bir iletişim kutusu görebilirsiniz.
 
-## <a name="advanced-save-options"></a>Gelişmiş sakla seçenekleri
+## <a name="advanced-save-options"></a>Gelişmiş kaydetme seçenekleri
 
-Kullanabileceğiniz **dosya** > **Gelişmiş kaydetme seçenekleri** istediğiniz satır sonu karakterleri türünü belirlemek için iletişim kutusu. Ayrıca, aynı ayarlarla bir dosyanın kodlamasını değiştirebilirsiniz.
+İstediğiniz satır sonu karakterlerinin türünü öğrenmek için **dosya**  > **Gelişmiş kaydetme seçenekleri** iletişim kutusunu kullanabilirsiniz. Aynı ayarlarla bir dosyanın kodlamasını de değiştirebilirsiniz.
 
-![Gelişmiş Kaydetme Seçenekleri iletişim kutusu](media/line_endings.png)
+![Gelişmiş kaydetme seçenekleri iletişim kutusu](media/line_endings.png)
 
 > [!NOTE]
-> Görmüyorsanız **Gelişmiş kaydetme seçenekleri** üzerinde **dosya** menüsünde, ekleyebilir. Seçin **Araçları**, **Özelleştir**ve ardından **komutları** sekmesi. İçinde **menü çubuğu** aşağı açılan listesinde **dosya**, ardından **Add Command** düğmesi. İçinde **Add Command** iletişim kutusunun **kategorileri**, seçin **dosya**ve ardından **komutları** listesinde  **Gelişmiş sakla seçenekleri**. Seçin **Tamam** seçip **Aşağı Taşı** komutu menüde herhangi bir yere taşımak için düğme. Seçin **kapatmak** kapatmak için **Özelleştir** iletişim kutusu. Daha fazla bilgi için [menüleri ve araç çubuklarını özelleştirme](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu).
+> **Dosya** menüsünde **Gelişmiş Kaydet seçeneklerini** görmüyorsanız, ekleyebilirsiniz. **Araçlar**' ı ve **Özelleştir**' i seçin ve ardından **Komutlar** sekmesini seçin. **Menü çubuğu** açılır listesinde **Dosya**' yı ve ardından **Ekle komut** düğmesini seçin. **Komut Ekle** iletişim kutusunda, **Kategoriler**altında **Dosya**' yı seçin ve ardından **Komutlar** listesinden **Gelişmiş Kaydet seçeneklerini**belirleyin. **Tamam** ' ı seçin ve ardından menüyü menüdeki herhangi bir yere taşımak Için **aşağı taşı** düğmesini seçin. **Özelleştir** iletişim kutusunu kapatmak için **Kapat** ' ı seçin. Daha fazla bilgi için bkz. [menüleri ve araç çubuklarını özelleştirme](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu).
 >
-> Alternatif olarak, erişebileceğiniz **Gelişmiş kaydetme seçenekleri** iletişim kutusunu **dosya** > **Kaydet \<dosya\> olarak**. İçinde **dosyayı farklı Kaydet** iletişim kutusunda, açılır üçgeni seçin **Kaydet** düğmesini tıklatın ve seçin **kodlamayla kaydetme**.
+> Alternatif olarak, **dosya**  >  **\<file \> olarak kaydet**' i seçerek **Gelişmiş kaydetme seçenekleri** iletişim kutusuna erişebilirsiniz. **Dosyayı farklı kaydet** Iletişim kutusunda **Kaydet** düğmesinin yanındaki aşağı açılan üçgeni seçin ve **kodlamayla kaydet**' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)

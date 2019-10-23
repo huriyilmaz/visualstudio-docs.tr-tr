@@ -1,47 +1,47 @@
 ---
-title: C++ için veri araçları
+title: İçin veri araçlarıC++
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
 - CPP
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 5157f1d6a851e0784e79dfbfe5b94aef0490a026
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 33c91a7c21a04624d71692d12b7a7f15a16e1d67
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62565244"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72639512"
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C++ için Visual Studio veri araçları
 
-Veri kaynaklarına erişirken yerel C++ genellikle en hızlı performans sağlar. Ancak, veri Visual Studio'da C++ uygulamaları için Araçlar, .NET uygulamaları için olduğu gibi zengin değil. Örneğin, **veri kaynakları** penceresi, sürükle ve bırak C++ tasarım yüzeyine veri kaynakları için kullanılamaz. Bir nesne ilişkisel katmanı gerekiyorsa, kendi yazmak veya bir üçüncü taraf ürün kullanım gerekecektir. Microsoft Foundation Class kitaplığını kullanan uygulamaları bellekte veri depolamak ve kullanıcıya göstermek için belgeler ve görünümler, birlikte bazı veritabanı sınıfları kullanabilirsiniz, ancak aynı veri bağlama işlevselliği için geçerlidir. Daha fazla bilgi için [Visual C++'da veri erişimi](/cpp/data/data-access-in-cpp).
+Yerel C++ , veri kaynaklarına erişirken genellikle en hızlı performansı sağlayabilir. Ancak, Visual Studio 'daki uygulamalar C++ için veri araçları, .NET uygulamaları için olduğu kadar zengin değildir. Örneğin, veri **kaynakları** penceresi C++ tasarım yüzeyine veri kaynaklarını sürükleyip bırakmak için kullanılamaz. Nesne ilişkisel bir katmana ihtiyacınız varsa, kendi kendinize yazmanız veya bir üçüncü taraf ürünü kullanmanız gerekecektir. Aynı değer, veri bağlama işlevselliği için de geçerlidir, ancak Microsoft Foundation Class kitaplığını kullanan uygulamalar, verileri bellekte depolamak ve kullanıcıya göstermek için belgeler ve görünümler ile birlikte bazı veritabanı sınıflarını kullanabilir. Daha fazla bilgi için bkz. [Visual C++'te veri erişimi ](/cpp/data/data-access-in-cpp).
 
-SQL veritabanlarına bağlanmak için yerel C++ uygulamaları, ODBC ve OLE DB sürücüleri ve Windows ile birlikte ADO sağlayıcıyı kullanabilirsiniz. Bunlar, bu arabirimleri destekleyen herhangi bir veritabanına bağlanabilirsiniz. ODBC sürücüsü standardıdır. OLE DB, geriye dönük uyumluluk için sağlanır. Bu veri teknolojileri hakkında daha fazla bilgi için bkz. [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85)).
+Yerel C++ uygulamalar, SQL veritabanlarına bağlanmak için ODBC ve OLE DB sürücülerini ve Windows ile bırlıkte gelen ADO sağlayıcısını kullanabilir. Bunlar, bu arabirimleri destekleyen herhangi bir veritabanına bağlanabilir. ODBC sürücüsü standarttır. OLE DB geriye dönük uyumluluk için sağlanır. Bu veri teknolojileri hakkında daha fazla bilgi için bkz. [Windows veri erişim bileşenleri](/previous-versions/windows/desktop/ms692897(v=vs.85)).
 
-SQL Server 2005'te özel işlevsellikten yararlanmak ve daha sonra kullanmak üzere [SQL Server yerel istemcisi](/sql/relational-databases/native-client/sql-server-native-client). Yerel istemci ayrıca SQL Server ODBC sürücüsünü ve SQL Server OLE DB sağlayıcısı bir yerel dinamik bağlantı kitaplığı (DLL) içerir. Bu, Microsoft SQL Server için yerel kodlu API'ler (ODBC, OLE DB ve ADO) kullanan uygulamaları destekler. SQL Server veri araçları ile SQL Server Native Client yükler. Programlama Kılavuzu şu şekildedir: [SQL Server yerel istemcisi programlama](/sql/relational-databases/native-client/sql-server-native-client-programming).
+SQL Server 2005 ve sonraki sürümlerde özel işlevlerden faydalanmak için, [SQL Server yerel istemcisini](/sql/relational-databases/native-client/sql-server-native-client)kullanın. Yerel istemci Ayrıca, tek bir yerel dinamik bağlantı kitaplığı 'nda (DLL) SQL Server ODBC sürücüsünü ve SQL Server OLE DB sağlayıcısını da içerir. Bu, Microsoft SQL Server için yerel kod API 'Leri (ODBC, OLE DB ve ADO) kullanan uygulamaları destekler. SQL Server Native Client SQL Server Veri Araçları yüklenir. Programlama Kılavuzu şu şekildedir: [Yerel istemci programlama SQL Server](/sql/relational-databases/native-client/sql-server-native-client-programming).
 
-## <a name="to-connect-to-localdb-through-odbc-and-sql-native-client-from-a-c-application"></a>Bir C++ uygulamasından localDB ODBC ve SQL Native Client aracılığıyla bağlanmak için
+## <a name="to-connect-to-localdb-through-odbc-and-sql-native-client-from-a-c-application"></a>ODBC aracılığıyla localDB 'ye bağlanmak ve bir C++ uygulamadan SQL Native Client için
 
-1. SQL Server veri Araçları'nı yükleyin.
+1. SQL Server Veri Araçları 'i yükler.
 
-2. Örnek SQL veritabanına bağlanmak için gerekiyorsa, Northwind veritabanı indirin ve yeni bir konuma sıkıştırmasını açın.
+2. Bağlanılacak örnek bir SQL veritabanına ihtiyacınız varsa, Northwind veritabanını indirin ve yeni bir konuma ayıklayın.
 
-3. Sıkıştırması açılmış eklemek için SQL Server Management Studio'yu kullanın *Northwind.mdf* localDB dosyasına. SQL Server Management Studio başlatıldığında (localdb) \MSSQLLocalDB bağlanın.
+3. Sıkıştırılmış *Northwind. mdf* dosyasını LocalDB 'ye iliştirmek için SQL Server Management Studio kullanın. SQL Server Management Studio başladığında, (LocalDB) \Mssqllocaldbdizinine bağlanın.
 
-   ![İletişim SSMS bağlanma](../data-tools/media/raddata-ssms-connect-dialog.png)
+   ![SSMS Bağlan iletişim kutusu](../data-tools/media/raddata-ssms-connect-dialog.png)
 
-   Ardından localdb düğümü sol bölmede sağ tıklatın ve seçin **iliştirme**.
+   Ardından sol bölmedeki LocalDB düğümüne sağ tıklayın ve **Ekle**' yi seçin.
 
-   ![Veritabanını SSMS ekleyin](../data-tools/media/raddata-ssms-attach-database.png)
+   ![SSMS veritabanı Ekle](../data-tools/media/raddata-ssms-attach-database.png)
 
-4. ODBC Windows SDK örneği indirin ve yeni bir konuma sıkıştırmasını açın. Bu örnek, bir veritabanı ve çıkış sorguları ve komutları bağlanmak için kullanılan temel ODBC komutları gösterir. Bu işlevler hakkında daha fazla bilgi [Microsoft açık veritabanı bağlantısı (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc). (Bu, C++ klasöründe bulunur) çözümü ilk kez yüklediğinizde, Visual Studio çözümü Visual Studio'nun geçerli sürümüne yükseltme olanağı sunar. **Evet**'i tıklayın.
+4. ODBC Windows SDK örneğini indirin ve yeni bir konuma ayıklayın. Bu örnek, bir veritabanına bağlanmak ve sorguları ve komutları vermek için kullanılan temel ODBC komutlarını gösterir. Bu işlevler hakkında daha fazla bilgi için bkz. [Microsoft açık veritabanı bağlantısı (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc). Çözümü C++ ilk kez yüklediğinizde, Visual Studio çözümü Visual Studio 'nun geçerli sürümüne yükseltmeyi sağlar. **Evet**'i tıklayın.
 
-5. Yerel istemci kullanmak için gerekir, *üstbilgi* dosya ve *LIB* dosya. Bu dosyalar, İşlevler ve sql.h içinde tanımlanan ODBC işlevleri ötesinde SQL Server'a özel tanımları içerir. İçinde **proje** > **özellikleri** > **VC ++ dizinleri**, aşağıdakileri içeren dizin ekleyin:
+5. Yerel istemciyi kullanmak için *üst bilgi* dosyası ve *LIB* dosyasına ihtiyacınız vardır. Bu dosyalar, SQL. h içinde tanımlanan ODBC işlevlerinin ötesinde SQL Server özgü işlevler ve tanımlar içerir. **Project**  > **Özellikler**  > **VC + + dizinleri**' nde aşağıdaki içerme dizinini ekleyin:
 
    **%ProgramFiles%\Microsoft SQL Server\110\SDK\Include**
 
@@ -49,24 +49,24 @@ SQL Server 2005'te özel işlevsellikten yararlanmak ve daha sonra kullanmak üz
 
    **%ProgramFiles%\Microsoft SQL Server\110\SDK\Lib**
 
-6. Bu satırları ekleyin *odbcsql.cpp*. #Define ilgisiz OLE DB tanımları derlenen engeller.
+6. Bu satırları *odbcsql. cpp*öğesine ekleyin. #Define, ilgisiz OLE DB tanımlarının derlenmelerini engeller.
 
    ```cpp
    #define _SQLNCLI_ODBC_
    #include <sqlncli.h>
    ```
 
-    Önceki adımlarda, derlemek ve çalıştırmak için gerekli değildir. Bu nedenle örnek gerçekten yerel istemci işlevleri kullanımda bulunmadığını unutmayın. Ancak, proje artık bu işlevselliği kullanmak için yapılandırılır. Daha fazla bilgi için [SQL Server Native Client programlama](/sql/relational-databases/native-client/sql-server-native-client).
+    Örnek aslında yerel istemci işlevlerinin hiçbirini kullanmaz, bu nedenle önceki adımların derlenmesi ve çalışması için gerekli değildir. Ancak proje artık bu işlevselliği kullanabilmeniz için yapılandırılmıştır. Daha fazla bilgi için bkz. [SQL Server Native Client programlama](/sql/relational-databases/native-client/sql-server-native-client).
 
-7. ODBC alt sistemi kullanmak üzere hangi sürücüyü belirtin. Örnek sürücü bağlantı dizesi özniteliği, bir komut satırı bağımsız değişkeni geçirir. İçinde **proje** > **özellikleri** > **hata ayıklama**, bu komut bağımsız değişkeni ekleyin:
+7. ODBC alt sisteminde kullanılacak sürücüyü belirtin. Örnek, içindeki sürücü bağlantı dizesi özniteliğini bir komut satırı bağımsız değişkeni olarak geçirir. **Proje**  > **Özellikler**  > **hata ayıklama**' da bu komut bağımsız değişkenini ekleyin:
 
    ```cpp
    DRIVER="SQL Server Native Client 11.0"
    ```
 
-8. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın. Sürücüsünden bir veritabanı girmenizi isteyen bir iletişim kutusu görmeniz gerekir. Girin `(localdb)\MSSQLLocalDB`ve **güvenilir bağlantı kullan**. Tuşuna **Tamam**. Başarılı bir bağlantı iletileri konsoluyla görmeniz gerekir. Ayrıca SQL deyiminde girebileceğiniz bir komut istemini görmeniz gerekir. Aşağıdaki ekranda bir örnek sorgu ve sonuçları gösterir:
+8. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın. Sürücüden bir veritabanı girmenizi isteyen bir iletişim kutusu görmeniz gerekir. @No__t_0 girin ve **güvenilir bağlantıyı kullan**' ı işaretleyin. **Tamam**'a basın. Başarılı bir bağlantı olduğunu belirten iletilerle bir konsol görmeniz gerekir. Ayrıca, bir SQL ifadesine yazabileceğiniz bir komut istemi de görmeniz gerekir. Aşağıdaki ekranda örnek bir sorgu ve sonuçlar gösterilmektedir:
 
-   ![ODBC örnek sorgu çıktısı](../data-tools/media/raddata-odbc-sample-query-output.png)
+   ![ODBC örnek sorgu çıkışı](../data-tools/media/raddata-odbc-sample-query-output.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
