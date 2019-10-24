@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_locationtype | Microsoft Docs
+title: 'IDiaSymbol:: get_locationType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: add36da660b9ab8130884db0a4088b693af18a6d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b10668a4767d411f48df213c79ae6508e7c0bf28
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64785665"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739849"
 ---
-# <a name="idiasymbolgetlocationtype"></a>IDiaSymbol::get_locationType
-Bir veri sembolü konum türünü alır.
+# <a name="idiasymbolget_locationtype"></a>IDiaSymbol::get_locationType
+Bir veri sembolünün konum türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,14 +33,14 @@ HRESULT get_locationType ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir değer döndürür [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) gibi bir veri simgenin konumu türünü belirten numaralandırma `static` veya `local`.
+dışı @No__t_1 veya `local` gibi bir veri sembolünün konum türünü belirten [LocationType sabit](../../debugger/debug-interface-access/locationtype.md) listesi numaralandırmasından bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType Numaralandırması](../../debugger/debug-interface-access/locationtype.md)

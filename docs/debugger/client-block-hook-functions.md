@@ -1,5 +1,5 @@
 ---
-title: İstemci blok kanca işlevleri | Microsoft Docs
+title: İstemci blok kanca Işlevleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,33 +21,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 900e8db238ee26e0a7015c2acc1741a1917c8cb3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5b7b0ef177922f09239c8925ced1ca013e966c0e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564079"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745714"
 ---
 # <a name="client-block-hook-functions"></a>İstemci Blok Kanca İşlevleri
-Doğrulama veya depolanan veriler içeriğini rapor istiyorsanız `_CLIENT_BLOCK` engeller, özellikle bu amaç için bir işlev yazabilirsiniz. Yazdığınız işlevi CRTDBG içinde tanımlanan bir prototip aşağıdakine benzer olması gerekir. Y:
+@No__t_0 blokları içinde depolanan verilerin içeriğini doğrulamak veya raporlamak istiyorsanız, bu amaçla özel olarak bir işlev yazabilirsiniz. Yazdığınız işlev, CRTDBG içinde tanımlandığı şekilde aşağıdakine benzer bir prototipi içermelidir. Olsun
 
 ```cpp
 void YourClientDump(void *, size_t)
 ```
 
- Diğer bir deyişle, kanca işlevini kabul etmelidir bir **void** işaretçi ile birlikte ayırma bloğunun başlangıcına bir **size_t** ayırma boyutunu belirten bir değer yazın ve dönüş`void`. İçeriği size bağlıdır.
+ Diğer bir deyişle, kanca işleviniz, ayırma bloğunun başlangıcına, ayırma boyutunu belirten bir **size_t** türü değeriyle birlikte **void** bir işaretçi kabul etmelidir ve `void` döndürür. Bunun dışında, içeriği size ait.
 
- Kanca işlevini kullanarak yükledikten sonra [_CrtSetDumpClient](/cpp/c-runtime-library/reference/crtsetdumpclient), her zaman çağrılacağı bir `_CLIENT_BLOCK` blok yazılan. Ardından [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype) türü veya alt Dökümü alınan bloğu hakkında bilgi edinmek için.
+ [_Crtsetdumpclient](/cpp/c-runtime-library/reference/crtsetdumpclient)kullanarak kanca işlevinizi yükledikten sonra, `_CLIENT_BLOCK` bir blok her döküşinizde çağrılır. Daha sonra, döküklerden oluşan tür veya alt türü hakkında bilgi almak için [_Crtreportblocktype](/cpp/c-runtime-library/reference/crtreportblocktype) kullanabilirsiniz.
 
- Geçirdiğiniz, işlev işaretçisi `_CrtSetDumpClient` türünde **_crt_dump_clıent**CRTDBG içinde tanımlanan gibi. Y:
+ @No__t_0 'e geçirdiğiniz işlevinizin işaretçisi, CRTDBG içinde tanımlanan **_CRT_DUMP_CLIENT**türüdür. Olsun
 
 ```cpp
 typedef void (__cdecl *_CRT_DUMP_CLIENT)
    (void *, size_t);
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama Kanca İşlevi Yazma](../debugger/debug-hook-function-writing.md)
-- [crt_dbg2 örnek](https://msdn.microsoft.com/library/21e1346a-6a17-4f57-b275-c76813089167)
+- [crt_dbg2 örneği](https://msdn.microsoft.com/library/21e1346a-6a17-4f57-b275-c76813089167)
 - [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)

@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_length | Microsoft Docs
+title: 'IDiaLineNumber:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 896e26075780c0cbd7bf0b1762da141d5ba7d2d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2f803fac1439d384133f0819859f2917072a8790
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828459"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743191"
 ---
-# <a name="idialinenumbergetlength"></a>IDiaLineNumber::get_length
-Bir blok içinde bayt sayısını alır.
+# <a name="idialinenumberget_length"></a>IDiaLineNumber::get_length
+Bir bloktaki bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_length ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir bloğu içinde bulunan bayt sayısını döndürür.
+dışı Bir bloktaki bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Blok kaynak kod satırı tarafından temsil edilen uzunluğudur [Idialinenumber](../../debugger/debug-interface-access/idialinenumber.md) nesne.
+ Blok, [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnesi tarafından temsil edilen satırdaki kaynak kodunun uzunluğudur.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

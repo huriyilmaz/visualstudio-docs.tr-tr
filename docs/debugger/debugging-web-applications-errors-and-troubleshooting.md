@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama Web uygulamaları - hatalar ve sorun giderme
+title: Web uygulamalarında hata ayıklama-hatalar ve sorun giderme
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -27,15 +27,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b1c8bb5e7f6ea8e0c68ec444bc5a1995bac4277
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bb84da1c75da968f9f89417cc48deec5310bc270
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851620"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738050"
 ---
-# <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web uygulamalarında hata ayıklama: Hatalar ve sorun giderme
-Web uygulamalarında hata ayıklama çalışırken hatalarla karşılaşabilirsiniz.
+# <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme
+Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla karşılaşabilirsiniz.
 
 - [Sorun giderme](../debugger/debugging-web-applications-troubleshooting.md)
 
@@ -55,6 +55,6 @@ Web uygulamalarında hata ayıklama çalışırken hatalarla karşılaşabilirsi
 
 - [Hata: Web Sunucusunda Hata Ayıklama Başlatılamıyor](../debugger/error-unable-to-start-debugging-on-the-web-server.md)
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
 - [Web Uygulamalarında ve Betikte Hata Ayıklama](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)

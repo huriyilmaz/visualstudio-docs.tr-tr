@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles::Next | Microsoft Docs
+title: 'IDiaEnumSourceFiles:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29424c2b12884cae7f803a46e15f7183d9690d96
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 526c857acbe1283e16312355c181c56c67e19883
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829634"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744077"
 ---
 # <a name="idiaenumsourcefilesnext"></a>IDiaEnumSourceFiles::Next
-Belirtilen bir sabit listesi sırası kaynak dosyalarında sayısını alır.
+Sabit Listesi dizisinde belirtilen sayıda kaynak dosyası alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Alınacak Numaralandırıcı kaynak dosya sayısı.
+'ndaki Alınacak numaralandırıcıdaki kaynak dosya sayısı.
 
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp
+ rgelt
 
-[out] İle doldurulacak bir dizi [Idiasourcefile](../../debugger/debug-interface-access/idiasourcefile.md) istenen kaynak dosyalarını temsil eden nesneleri.
+dışı İstenen kaynak dosyalarını temsil eden [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) nesneleriyle doldurulacak bir dizi.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Kaynak dosyalarının getirilen bir numaralandırıcı döndürür.
+dışı Getirilen Numaralandırıcı içindeki kaynak dosyalarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` daha fazla kaynak dosya yoksa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Daha fazla kaynak dosyası yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

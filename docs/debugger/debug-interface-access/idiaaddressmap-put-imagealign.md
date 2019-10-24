@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::put_imagealign | Microsoft Docs
+title: IDiaAddressMap::p ut_imageAlign | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e07bdd71300ed485862a4a95f1f9cbc06b32772
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2b1a6bf037dc87d84fab21622571158fb0682f60
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63402644"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745055"
 ---
-# <a name="idiaaddressmapputimagealign"></a>IDiaAddressMap::put_imageAlign
+# <a name="idiaaddressmapput_imagealign"></a>IDiaAddressMap::put_imageAlign
 Resim hizalamasını ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -33,19 +33,19 @@ HRESULT put_imageAlign ( 
 #### <a name="parameters"></a>Parametreler
  NewVal
 
-[in] Yürütülebilir dosya için yeni görüntü hizalama değeri.
+'ndaki Yürütülebilir dosya için yeni resim hizalama değeri.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Belirtilen bellek sınırlarını için görüntüleri (yüklenen yürütülebilir dosyalar) hizalanır. Bu hizalama, geçerli sistem mimarisi ve derleme ve bağlama zamanı seçenekleri tarafından etkilenebilir. Resmi hizalaması bayt sınırlarda her zaman olur. Aşağıdaki görüntü hizalama değerler geçerlidir: 1, 2, 4, 8, 16, 32 ve 64 baytlık sınırlar.
+ Görüntüler (yüklenen yürütülebilir dosyalar) belirtilen bellek sınırlarına hizalanır. Bu hizalama, geçerli sistem mimarisinden ve derleme ve bağlama zaman seçenekleriyle etkilenebilir. Görüntü hizalaması her zaman bayt sınırlarında. Şu resim hizalama değerleri geçerli: 1, 2, 4, 8, 16, 32 ve 64 bayt sınırları.
 
- Bir çağrı ile geçerli görüntü hizalama alınabilir [Idiaaddressmap::get_imagealign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) yöntemi.
+ Geçerli görüntü hizalaması [IDiaAddressMap:: get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) yöntemi çağrısıyla alınabilir.
 
 > [!NOTE]
-> Bu yöntem zamanında resmi zaten yüklü. `put_imageAlign` Yöntemi genellikle görüntünün taşınmış veya değiştirilmiş ve yeni bir hizalama gerekli olduğunda kullanılır.
+> Görüntü, bu yöntemin çağrılabilecek zaman tarafından zaten yüklenmiş. @No__t_0 yöntemi genellikle görüntü taşındığında veya değiştirildiğinde ve yeni bir hizalama gerektiğinde kullanılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 - [IDiaAddressMap::get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)

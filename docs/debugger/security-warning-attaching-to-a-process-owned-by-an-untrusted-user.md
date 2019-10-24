@@ -1,5 +1,5 @@
 ---
-title: 'Güvenlik Uyarısı: Güvenilmeyen bir kullanıcının sahip olduğu işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler kuşkulu görünüyorsa ya da emin değilseniz, bu işleme eklemeyin. | Microsoft Docs'
+title: 'Güvenlik Uyarısı: Güvenilmeyen bir kullanıcının sahip olduğu işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme eklemeyin | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,29 +15,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f44c429dad42a0a46fe2c00f9b6a82dfcdb92b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 05b78ea0ca06a0ba9670e61cc065cf539ea21ebc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929774"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729771"
 ---
 # <a name="security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process"></a>Güvenlik Uyarısı: Güvenilmeyen bir kullanıcının sahip olduğu işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler kuşkulu görünüyorsa ya da emin değilseniz, bu işleme eklemeyin
-Kısmen güvenilen kodu içerir veya hemen bağlama gerçekleşmeden önce güvenilmeyen bir kullanıcının sahip olduğu bir işleme eklediğinizde, bu uyarı iletişim kutusu görüntülenir. Kötü amaçlı kod içeren bir güvenilmeyen işlemi hata ayıklamada bilgisayar zarar verme olasılığı vardır. İşlem güvenmeyecekleri nedeniniz sonra tıklatmanız gerekir **iptal** hata ayıklama önlemek için.
+Bu uyarı iletişim kutusu, kısmen güvenilen kod içeren bir işleme iliştirdiyseniz ya da iliştirme gerçekleşmeden hemen önce güvenilmeyen bir kullanıcıya aitse görüntülenir. Kötü amaçlı kod içeren güvenilmeyen bir işlemin, hata ayıklamayı yapan bilgisayara zarar verme olasılığı vardır. İşleme güvenmediğiniz bir nedeniniz varsa, hata ayıklamayı engellemek için **iptal** ' e tıklamanız gerekir.
 
- Yasal bir senaryo hata ayıklama sırasında bu uyarının gösterilmemesi için Visual Studio'yu kapatın ve bu kayıt defteri anahtarı değerini 1 olarak ayarlayın: `HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\<version>\Debugger\DisableAttachSecurityWarning`ve sonra Visual Studio'yu yeniden başlatın. Hata ayıklama senaryoyu tamamladıktan sonra değerini 0 olarak ayarlamak ve Visual Studio'yu yeniden başlatın.
+ Yasal bir senaryoda hata ayıklarken bu uyarıyı bastırmak için, Visual Studio 'yu kapatın ve bu kayıt defteri anahtarının değerini 1: `HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\<version>\Debugger\DisableAttachSecurityWarning` olarak ayarlayın ve ardından Visual Studio 'Yu yeniden başlatın. Senaryoda hata ayıklamayı tamamladıktan sonra değeri 0 olarak sıfırlayın ve Visual Studio 'Yu yeniden başlatın.
 
- "Kullanıcıların güvenilen" dahil kendiniz artı genellikle .NET Framework gibi yüklü olan bilgisayarlarda tanımlanan standart kullanıcı kümesini `aspnet`, `localsystem`, `networkservice`, ve `localservice`.
+ "Güvenilen kullanıcılar" kendi kendinize ve `aspnet`, `localsystem`, `networkservice` ve `localservice` gibi .NET Framework yüklü bilgisayarlarda genellikle tanımlanan bir dizi standart Kullanıcı içerir.
 
 ## <a name="uielement-list"></a>UIElement Listesi
- Hata ayıklamak için istenen derleme adı
+ Hata ayıklamada istenen derlemenin ad adı
 
- Geçerli kullanıcı
+ Kullanıcı geçerli Kullanıcı
 
- Ekleyerek hatalarını ayıklamaya devam etmek için ENTER tuşuna ekleme
+ Ekleyerek hata ayıklamaya devam etmek için bas ekleyin
 
- Ekleme yapmak işleme yoksa değil mi
+ Iliştirmeyin işleme iliştirme
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)

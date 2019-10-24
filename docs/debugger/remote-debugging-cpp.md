@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9cd6f120d5699464c9e7311721898a727bf47e
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 0173ed557afa47129e0cc92d9ef9b2d94a7b198f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450430"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730319"
 ---
 # <a name="remote-debugging-a-c-project-in-visual-studio"></a>Visual Studio 'da C++ bir projede uzaktan hata ayıklama
 Farklı bir bilgisayardaki Visual Studio uygulamasında hata ayıklamak için, uygulamanızı dağıtacağınız bilgisayara Uzak araçları yükleyip çalıştırın, projenizi Visual Studio 'dan uzak bilgisayara bağlanacak şekilde yapılandırın ve ardından uygulamanızı dağıtıp çalıştırın.
@@ -57,7 +57,7 @@ Uzaktan hata ayıklayıcı, Windows 7 ve Windows Server 2008 Service Pack 2 ' de
 
 1. **Mymfc** ADLı bir MFC uygulaması oluşturun.
 
-2. @No__t-1 ' in başında, örneğin **MainFrm. cpp**içinde, kolayca ulaşılan uygulamada bir kesme noktası ayarlayın.
+2. @No__t_1 başlangıcında **MainFrm. cpp**gibi kolayca erişilen uygulamada herhangi bir yere bir kesme noktası ayarlayın.
 
 3. Çözüm Gezgini, projeye sağ tıklayın ve **Özellikler**' i seçin. **Hata ayıklama** sekmesini açın.
 
@@ -106,7 +106,7 @@ Uzaktan hata ayıklayıcı, Windows 7 ve Windows Server 2008 Service Pack 2 ' de
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio’da hata ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Windows Güvenlik Duvarı’nı Uzaktan Hata Ayıklama İçin Yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)

@@ -12,72 +12,72 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48809f0e8dd65c5a6ecd47f2874498ebba694a2a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 51487b35686da9676f201a157ddb8e47afb75ce8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341520"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72725054"
 ---
 # <a name="property-pages"></a>Özellik Sayfaları
-Kullanıcılar, görüntüleyin ve özellik sayfalarını kullanma proje yapılandırma bağımlı ve - bağımsız özelliklerini değiştirin. A **özellik sayfaları** düğmesi etkin **özellikleri** penceresi veya bir özellik sayfası görünümü seçili nesnenin sağlayan nesneleri için Çözüm Gezgini araç çubuğu. Özellik sayfaları ortamı tarafından oluşturulur ve çözümler ve projeler için kullanılabilir. Ancak, aynı zamanda olabilirler oluşturan Proje öğeleri yapılandırmaya bağlı özelliklerinin kullanımı için kullanılabilir. Dosyaları bir proje içinde düzgün bir şekilde oluşturmak farklı bir derleyici anahtarı ayarları gerektirdiğinde bu özellik kullanılabilir.
+Kullanıcılar, özellik sayfalarını kullanarak proje yapılandırmasına bağımlı ve bağımsız özellikleri görüntüleyebilir ve değiştirebilir. **Özellikler** penceresinde veya seçili nesnenin özellik sayfası görünümünü sağlayan nesneler için Çözüm Gezgini araç çubuğunda **Özellik sayfaları** düğmesi etkinleştirilir. Özellik sayfaları, ortam tarafından oluşturulur ve çözümler ve projeler için kullanılabilir. Bununla birlikte, yapılandırma bağımlı özelliklerden oluşan proje öğeleri için de kullanılabilir hale getirilebilir. Bu özellik bir proje içindeki dosyalar doğru bir şekilde derlemek için farklı derleyici anahtarı ayarları gerektirdiğinde kullanılabilir.
 
 ## <a name="using-property-pages"></a>Özellik sayfalarını kullanma
- Özellik sayfası zaten görüntüleniyor ve (örneğin, bir çözümden bir proje için) Seçimi değiştirir bilgileri yeni seçime özelliklerini görüntülemek için değişiklikleri sayfalarında görüntülenir. Özellik sayfaları destekleyen hiçbir nesne özellikleri varsa, özellik sayfası boş olur.
+ Bir özellik sayfası zaten görüntüleniyorsa ve seçim değişirse (örneğin, bir çözümden bir projeden), sayfalarda görüntülenen bilgiler yeni seçimin özelliklerini görüntüleyecek şekilde değişir. Nesne üzerinde özellik sayfalarını destekleyen bir özellik yoksa, özellik sayfası boştur.
 
- Birden fazla nesne seçili değilse, tüm seçili öğe özelliklerini kesişimi özellik sayfasını görüntüler. Seçilen öğeyi yapılandırma bağımlı özellikler içermiyorsa ve **özellik sayfaları** Çözüm Gezgini araç çubuğundaki düğmesine tıklandığında, odak değiştikçe ve Özellikler penceresinde. Özellikler penceresinde ve seçimi ile ilgili daha fazla bilgi için bkz. [genişletme özellikleri](../../extensibility/internals/extending-properties.md).
+ Birden çok nesne seçilirse, özellik sayfası seçili tüm öğelerin özelliklerinin kesişimini görüntüler. Seçilen öğe yapılandırmaya bağımlı özellikler içermiyorsa ve Çözüm Gezgini araç çubuğunda **Özellik sayfaları** düğmesine tıklandıysanız, odak, Özellikler penceresi değişir. Özellikler penceresi ve seçimle ilgili daha fazla bilgi için bkz. [özellikleri genişletme](../../extensibility/internals/extending-properties.md).
 
- Birden çok nesne için özellikleri görüntülenir ve özellik sayfasında bir değer değiştirirseniz tüm nesneler için değerleri, başlangıçta farklı ve bağımsız bir nesnenin özelliklerinde görüntülendiğinde sayfası boş olsa bile yeni değere ayarlanır.
+ Özellikler birden çok nesne için görüntüleniyorsa ve bir özellik sayfasında bir değeri değiştirirseniz, nesneler için tüm değerler, başlangıçta farklı olsalar ve tek bir nesnenin özellikleri görüntülenirken sayfanın boş olması durumunda bile yeni değere ayarlanır.
 
- İki genel tür vardır **ProjectProperty sayfaları** iletişim kutuları bulunan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Visual Basic projeleri için ilk olarak, örneğin, özellik sayfaları bir alan biçimini kullanarak aşağıdaki ekran görüntüsünde gösterildiği gibi görüntülenir. İkinci, daha sonra bu bölümde, özellik sayfası ana özellikler Kılavuzu benzer şekilde, Özellikler penceresinde bulunan gösterilir.
+ @No__t_1 ' de kullanılabilen iki genel tür **ProjectProperty sayfası** iletişim kutusu vardır. İlk olarak, Visual Basic projeleri için, örneğin, aşağıdaki ekran görüntüsünde gösterildiği gibi, özellik sayfaları bir alan biçimi kullanılarak görüntülenir. İkincisi, bu bölümün ilerleyen kısımlarında gösterilen özellik sayfası, Özellikler penceresinde bulunan şuna benzer bir Özellikler Kılavuzu barındırır.
 
- ![Visual Basic özellik sayfaları](../../extensibility/internals/media/vsvbproppages.gif "vsVBPropPages") alanı biçimi ve ağaç yapısı ile proje özellik sayfaları iletişim kutusu
+ ![Visual Basic Özellik sayfaları](../../extensibility/internals/media/vsvbproppages.gif "vsVBPropPages") Alan biçimi ve ağaç yapısıyla proje özellik sayfaları iletişim kutusu
 
- Özellik sayfaları iletişim kutusunda ağaç yapısını kullanarak yerleşik olmayan <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>. Ortam tarafından geçirilen düzeyi adı temel <xref:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage> arabirimleri, onu oluşturur.
+ Özellik sayfaları iletişim kutusundaki ağaç yapısı, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> kullanılarak oluşturulmamış. Ortam, <xref:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage> arabirimleri tarafından kendisine geçirilen düzey adına göre oluşturulur.
 
- Yalnızca iki en üst düzey kategorilerini kullanılabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] özellik sayfaları:
+ @No__t_0 özellik sayfalarında kullanılabilen yalnızca iki üst düzey kategori vardır:
 
-- Ortak özellikler, seçili nesne veya nesneler bağımsız yapılandırma bilgilerini görüntüler. Ortak Özellikler alt kategorilerinin birini seçili olduğunda, sonuç olarak, yapılandırma, Platform ve Configuration Manager Seçenekler iletişim kutusunun üst kısmındaki kullanılabilir değil.
+- Seçili nesne veya nesneler için yapılandırma bağımsız bilgilerini görüntüleyen ortak özellikler. Sonuç olarak, ortak özellikler alt kategorilerinden biri seçildiğinde, iletişim kutusunun üst kısmında yapılandırma, platform ve Configuration Manager seçenekleri kullanılamaz.
 
-- Yapılandırma özellikleri, hata ayıklama, iyileştirme ve derleme parametreleri çözüm veya proje için ilgili yapılandırma bağımlı bilgileri içeren.
+- Çözüm veya proje için hata ayıklama, Iyileştirme ve derleme parametreleriyle ilgili yapılandırma bağımlı bilgileri içeren yapılandırma özellikleri.
 
-  Herhangi bir ek en üst düzey kategorilerini oluşturamazsınız ancak birini uygulamanızda göstermek seçebileceğiniz `IVsPropertyPage`. Örneğin, herhangi bir bağımsız yapılandırma özelliği için bir nesneyi görüntülemek için erişiminiz yok, ortak özellikler kategori görüntülemeyecek şekilde seçebilirsiniz. Ortak özellikler, görüntü `ISpecifyPropertyPages` öğenin Gözat nesne ve yapılandırma özellikleri, uyguladığınızda uygulanan `ISpecifyPropertyPages` yapılandırma nesnesinde (nesneyi uygulama `IVsCfg`, `IVsProjectCfg`ve ilgili arabirimleri).
+  Herhangi bir ek üst düzey kategori oluşturamazsınız, ancak `IVsPropertyPage` uygulamanızda bir veya diğerini görüntülememe seçeneğini belirleyebilirsiniz. Örneğin, bir nesne için görüntülenecek yapılandırmadan bağımsız bir özellik yoksa, ortak özellikler kategorisini görüntülememe seçeneğini belirleyebilirsiniz. Yapılandırma nesnesinde `ISpecifyPropertyPages` uyguladığınızda (`IVsCfg`, `IVsProjectCfg` ve ilgili arabirimleri uygulayan nesne) öğenin nesne ve yapılandırma özelliklerinden `ISpecifyPropertyPages` uygulanmışsa ortak özellikleri görüntüleyebilirsiniz.
 
-  Bir üst düzey kategori altında görüntülenen her kategoriyi ayrı özellik sayfasını temsil eder. Kategori ve alt kategori girdileri kullanılabilir iletişim kutusunda, uygulamanız tarafından belirlenir `ISpecifyPropertyPages` ve `IVsPropertyPage`.
+  Üst düzey kategori altında görünen her kategori ayrı bir özellik sayfasını temsil eder. İletişim kutusunda bulunan kategori ve alt kategori girdileri, `ISpecifyPropertyPages` ve `IVsPropertyPage` uygulamanız tarafından belirlenir.
 
-  `IDispatch` özellik sayfaları uygulama üzerinde görüntülenecek özelliklerine sahip seçimi kapsayıcı öğeleri için nesnelerini `ISpecifyPropertyPages` sınıfı kimliklerinin listesini numaralandırılamadı. Sınıf kimliği için değişkenleri olarak geçirilir `ISpecifyPropertyPages` ve özellik sayfaları oluşturmak için kullanılır. Sınıf kimlikleri listesini de geçirilir `IVsPropertyPage` iletişim kutusunun sol tarafında ağaç yapısı oluşturmak için. Özellik sayfaları sonra geçişi bilgi tekrar `IDispatch` uygulayan nesne `ISpecifyPropertyPages` ve her sayfası bilgilerini girer.
+  seçim kapsayıcısında, özellik sayfalarında görüntülenecek özellikleri olan öğelerin `IDispatch` nesneleri, sınıf kimliklerinin bir listesini numaralandırmak için `ISpecifyPropertyPages` uygular. Sınıf kimlikleri, `ISpecifyPropertyPages` değişken olarak geçirilir ve özellik sayfalarını oluşturmak için kullanılır. Ayrıca, iletişim kutusunun solunda ağaç yapısını oluşturmak için `IVsPropertyPage` sınıf kimliklerinin listesi de geçirilir. Özellik sayfaları daha sonra bilgileri `ISpecifyPropertyPages` uygulayan `IDispatch` nesnesine geri iletir ve her sayfanın bilgisini doldurur.
 
-  Göz atma nesnenin özelliklerini kullanarak alınır `IDispatch` seçimi kapsayıcıdaki her nesne için.
+  Tarama nesnesinin özellikleri, seçim kapsayıcısındaki her bir nesne için `IDispatch` kullanılarak alınır.
 
-  Uygulama `Help::DisplayTopicFromF1Keyword` içinde VSPackage'ı için Yardım düğmesini işlevlerini sağlar.
+  VSPackage içinde `Help::DisplayTopicFromF1Keyword` uygulamak, Yardım düğmesi için işlevsellik sağlar.
 
-  Daha fazla bilgi için bkz: `IDispatch` ve `ISpecifyPropertyPages`MSDN Kitaplığı'nda.
+  Daha fazla bilgi için bkz. MSDN Kitaplığı `IDispatch` ve `ISpecifyPropertyPages`in.
 
-  Özellik sayfaları ikinci türü örnekleri ana bilgisayarları aşağıdaki ekran görüntüsünde gösterildiği gibi özellikler Kılavuzu, bir form görüntülenir.
+  Örneklerde gösterilen özellik sayfalarının ikinci türü, aşağıdaki ekran görüntüsünde gösterildiği gibi bir özellikler kılavuzunun bir biçimini barındırır.
 
-  ![VC özellik sayfaları](../../extensibility/internals/media/vsvcproppages.gif "vsVCPropPages") özellikler Kılavuzu özellik sayfaları iletişim kutusu
+  ![VC Özellik sayfaları](../../extensibility/internals/media/vsvcproppages.gif "vsVCPropPages") Özellikler kılavuzundan Özellik sayfaları iletişim kutusu
 
-  Arabirimler `IVSMDPropertyBrowser` ve `IVSMDPropertyGrid` (vsmanaged.h içinde bildirilen) oluşturun ve bir iletişim kutusu veya penceresi içinde özellik Kılavuzu doldurmak için kullanılır.
+  @No__t_0 ve `IVSMDPropertyGrid` arabirimleri (vsmanaged. h içinde belirtilen), bir iletişim kutusu veya pencere içinde Özellikler kılavuzunu oluşturmak ve doldurmak için kullanılır.
 
-  Projeleri mimarisi, geçmiş sürümlerinden önemli ölçüde değişti [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Özellikle, proje kavramı etkin olduğu değişti. İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], etkin bir proje kavramı yoktur. Önceki geliştirme ortamlarında, derleme ve dağıtma komutları proje bağlamı bağımsız olarak varsayılan etkin proje oluştu. Şimdi, çözüm denetler ve derleme ve dağıtma komutları istemlerde hangi projeler için geçerlidir.
+  Projelerin mimarisi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geçmiş sürümlerinden önemli ölçüde değiştirilmiştir. Özellikle, hangi projenin etkin olduğu kavramı değişmiştir. @No__t_0, etkin bir proje kavramı yoktur. Önceki geliştirme ortamlarında etkin proje, oluşturma ve dağıtma komutlarının, bağlamdan bağımsız olarak varsayılan olarak olduğu projgelidir. Artık çözüm, hangi projeler için hangi derleme ve dağıtım komutlarının uygulanacağını denetler ve dağıtır.
 
-  Daha önce etkin bir proje neydi artık üç farklı şekilde kapsanır.
+  Daha önce etkin bir proje üç farklı yönden birinde yakalanır:
 
 - Başlangıç projesi
 
-   Bir projede veya projelerde kullanıcı F5 tuşuna bastığında veya derle menüsünde Çalıştır'ı seçer, başlatılacak çözümün özellik sayfasından belirtebilirsiniz. Bu, eski etkin proje adı kalın yazı tipiyle Çözüm Gezgini'nde gösterilen anlamında benzer şekilde çalışır.
+   Kullanıcı F5 tuşuna bastığında veya Build menüsünden Çalıştır ' a tıkladığında başlatılacak çözüm özellik sayfasından bir proje veya proje belirtebilirsiniz. Bu, adının kalın yazı tipiyle Çözüm Gezgini gösterildiği gibi, eski etkin projeye benzer şekilde çalışıyor.
 
-   Çağırarak Otomasyon modelinde bir özellik olarak başlangıç projesi alabilirsiniz `DTE.Solution.SolutionBuild.StartupProjects`. VSPackage içinde çağırırsınız <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A> veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A> yöntemleri. `IVsSolutionBuildManager` bir hizmet tarafından sağlanan `QueryService` SID_SVsSolutionBuildManager üzerinde. Daha fazla bilgi için [proje yapılandırması nesnesi](../../extensibility/internals/project-configuration-object.md) ve [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md).
+   @No__t_0 çağırarak, başlangıç projesini otomasyon modelinde bir özellik olarak alabilirsiniz. VSPackage içinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A> veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A> yöntemlerini çağırabilirsiniz. `IVsSolutionBuildManager`, SID_SVsSolutionBuildManager üzerinde `QueryService` tarafından bir hizmet olarak kullanılabilir. Daha fazla bilgi için bkz. [Proje yapılandırma nesnesi](../../extensibility/internals/project-configuration-object.md) ve [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md).
 
-- Etkin çözüm yapı yapılandırması
+- Etkin çözüm derleme yapılandırması
 
-   [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uygulama tarafından Otomasyon modelinde kullanılabilir bir etkin çözüm yapılandırmasına sahip `DTE.Solution.SolutionBuild.ActiveConfiguration`. Bir çözüm yapılandırması (her proje birden çok yapılandırmada farklı adlara sahip birden çok platformda olabilir) çözümde her proje için bir proje yapılandırması içeren bir koleksiyondur. Çözümün özellik sayfalarına ilişkin daha fazla bilgi için bkz. [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md).
+   [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], `DTE.Solution.SolutionBuild.ActiveConfiguration` uygulayarak otomasyon modelinde kullanılabilen etkin bir çözüm yapılandırmasına sahiptir. Çözüm yapılandırması, çözümdeki her proje için bir proje yapılandırması içeren bir koleksiyondur (her proje birden çok platformda, farklı adlara sahip birden fazla yapılandırmaya sahip olabilir). Çözümün özellik sayfalarıyla ilgili daha fazla bilgi için bkz. [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md).
 
-- Şu anda seçili proje
+- Proje şu anda seçili
 
-   Uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCurrentSelection%2A> proje hiyerarşisi ve proje öğesi veya seçilen öğeleri almak için yöntemi. DTE, kullanacağınız `SelectedItems.SelectedItem.Project` ve `SelectedItems.SelectedItem.ProjectItem` yöntemleri. Örnek kod bu başlıklar temel altında [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] belgeleri.
+   Proje hiyerarşisini ve seçili proje öğesi ya da öğeleri almak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCurrentSelection%2A> yöntemini uygulayın. DTE 'den `SelectedItems.SelectedItem.Project` ve `SelectedItems.SelectedItem.ProjectItem` yöntemlerini kullanırsınız. Temel [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] belgelerindeki Bu başlıklar altında örnek kod vardır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage>
 - [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)
 - [Proje Yapılandırması Nesnesi](../../extensibility/internals/project-configuration-object.md)

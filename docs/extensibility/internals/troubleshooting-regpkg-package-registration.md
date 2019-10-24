@@ -10,31 +10,31 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 219a21eac296daa442fc2f705eb2758790777333
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 386a1a17c036207d122e4b3c7cb142a628dcfe38
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344746"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722273"
 ---
 # <a name="troubleshooting-regpkg-package-registration"></a>RegPkg Paket Kaydı Sorunlarını Giderme
 > [!NOTE]
-> Visual Studio'da paketleri kaydetmek için tercih edilen yol, .pkgdef dosyaları kullanmaktır. Bu uzantı dağıtım için sistem kayıt defterine erişmek zorunda kalmadan sağlar. Pkgdef dosyaları kullanılarak oluşturulan [CreatePkgDef yardımcı programı](../../extensibility/internals/createpkgdef-utility.md).
+> Visual Studio 'da paketleri kaydetmek için tercih edilen yol. pkgdef dosyalarını kullanmaktır. Bu, sistem kayıt defterine erişmek zorunda kalmadan uzantı dağıtımına izin verir. Pkgdef dosyaları [CreatePkgDef yardımcı programı](../../extensibility/internals/createpkgdef-utility.md)kullanılarak oluşturulur.
 
- Bir paket içinde RegPkg kullanarak kaydetmek için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], paketiniz için uygun olan RegPkg sürümünü kullanmanız gerekir.
+ @No__t_0 'de RegPkg kullanarak bir paketi kaydetmek için, paketinize uygun olan RegPkg sürümünü kullanmanız gerekir.
 
-## <a name="regpkg-versions-related-to-package-versions"></a>Paket sürümleri için ilgili RegPkg sürümleri
- RegPkg iki sürümü vardır. Bir sürüm eklenir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Bu sürüm aşağıdaki derlemeleri kullanarak oluşturulan paketler kaydetmek için kullanın:
+## <a name="regpkg-versions-related-to-package-versions"></a>Paket sürümleriyle Ilgili RegPkg sürümleri
+ İki RegPkg sürümü vardır. @No__t_0 bir sürüm bulunmaktadır. Aşağıdaki derlemelerden biri kullanılarak oluşturulmuş paketleri kaydetmek için bu sürümü kullanın:
 
-1. Microsoft.VisualStudioShell.9.0.dll
+1. Microsoft. VisualStudioShell. 9.0. dll
 
-2. Microsoft.VisualStudioShell.10.0.dll
+2. Microsoft. VisualStudioShell. 10.0. dll
 
-3. Microsoft.VisualStudioShell.11.0.dll
+3. Microsoft. VisualStudioShell. 11.0. dll
 
-   Bu, önceki Microsoft.VisualStudio.Shell.dll derlemeyi kullanarak oluşturulan paketler kaydedilemiyor.
+   Daha önceki Microsoft. VisualStudio. Shell. dll derlemesi kullanılarak oluşturulmuş paketleri kaydedemez.
 
-   RegPkg önceki sürümünü Microsoft.VisualStudio.Shell.dll derlemeyi kullanarak oluşturulan paketler kaydedebilirsiniz. Ancak, bu derlemenin daha yeni sürümleri kullanılarak oluşturulan paketler kayda alınamıyor.
+   RegPkg 'in önceki sürümü, Microsoft. VisualStudio. Shell. dll derlemesi kullanılarak oluşturulmuş paketleri kaydedebilir. Ancak, bu derlemenin sonraki sürümleri kullanılarak oluşturulan paketleri kaydedemez.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’lar](../../extensibility/internals/vspackages.md)

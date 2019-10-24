@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualbasetabletype | Microsoft Docs
+title: 'IDiaSymbol:: get_virtualBaseTableType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edbd1d8ae66e58611ab538cf0bfe695cb22b3412
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: aaddb8b71ba96511af3682b442c1e5c8e84a409c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64793043"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738834"
 ---
-# <a name="idiasymbolgetvirtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
-Bir sanal temel tablo işaretçi türünü alır.
+# <a name="idiasymbolget_virtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
+Bir sanal temel tablo işaretçisinin türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,25 +34,25 @@ HRESULT get_virtualBaseTableType(
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`pRetVal`|[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesini temel tablo türünü belirtir.|
+|`pRetVal`|dışı Temel tablo türünü belirten bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.|
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir sanal temel tablo işaretçi (`vbtptr`), gizli bir işaretçi bir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] devralma sanal temel sınıflardan işleme vtable. A `vbtptr` devralınan sınıflar bağlı olarak farklı boyutlarda olabilir.
+ Sanal temel tablo işaretçisi (`vbtptr`), sanal temel sınıflardan devralmayı işleyen bir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable 'da gizli bir işaretçidir. @No__t_0 devralınan sınıflara bağlı olarak farklı boyutlara sahip olabilir.
 
- Bu yöntem döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) vbtptr boyutunu belirlemek için kullanılan nesne.
+ Bu yöntem, vbtptr boyutunu belirlemekte kullanılabilecek bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

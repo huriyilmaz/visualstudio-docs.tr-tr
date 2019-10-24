@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Transact-SQL yürütmesi hata ayıklama olmadan bitti | Microsoft Docs'
+title: 'Hata: Transact-SQL yürütmesi hata ayıklama olmadan sonlandırıldı | Microsoft Docs'
 ms.date: 11/08/2018
 ms.topic: troubleshooting
 f1_keywords:
@@ -15,40 +15,40 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 71d1f14bef8eb69fa6c6fc4d9c3f669826079c99
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 94ced2902becc2e988cde5198eff28911864dcbb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850169"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736944"
 ---
 # <a name="error-transact-sql-execution-ended-without-debugging"></a>Hata: Transact-SQL yürütmesi hata ayıklaması yapılmadan sonlandı
 
-SQLCLR yordam ya da Transact-SQL hata ayıklama çalıştığınız ve hata ayıklayıcı hata ayıklama iletilerini SQL Server'dan almaz. Bu hata oluşur.
+Bu hata, bir Transact-SQL veya SQLCLR yordamını hata ayıklamaya çalışırken ve hata ayıklayıcı SQL Server hata ayıklama mesajları almadığında oluşur.
 
-SQL Server'da sorunları veya ağ sorunları nedeniyle bu bir sorun olabilir, ancak en olası nedeni izinlerle ilgili bir sorun.
+Bu sorun, ağ sorunlarından veya SQL Server sorunlarından kaynaklanıyor olabilir, ancak olası nedeni bir izin sorunudur.
 
-Kullanılan iki hesap vardır:
+Dahil olmak üzere iki hesap vardır:
 
-- Kullanıcı hesabı uygulama hesabıdır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] olarak çalışıyor.
+- Uygulama hesabı, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çalıştığı kullanıcı hesabıdır.
 
-- Bağlantı hesabı SQL Server'a bağlantı kurmak için kullanılan kimliktir. Bu hesap mutlaka bağlantı SQL kimlik doğrulaması kullanıyorsanız gibi Visual Studio çalıştıran kimliğin ile aynı değildir.
+- Bağlantı hesabı, SQL Server bağlantısını yapmak için kullanılan kimliktir. Bu hesap, bağlantı SQL kimlik doğrulaması kullanıyor gibi, Visual Studio 'Nun çalıştırdığı kimlikle aynı değildir.
 
-  SQL hata ayıklama, uygulama hesabı bağlantı hesapla eşleşmesi gerekir veya sysadmin olmanız gerekir.
+  SQL hata ayıklaması, uygulama hesabının bağlantı hesabıyla eşleşmesi veya bir sysadmin olması gerekir.
 
-  SQL hesabı adları gibi sa kullanıyorsanız, uygulama hesabının SQL Server'da sysadmin olarak ayarlanması gerekir. Varsayılan olarak, SQL server çalıştıran makinede SQL Server Sistem yöneticilerdir.
+  Sa gibi bir SQL hesap adı kullanıyorsanız, uygulama hesabının SQL Server sysadmin olarak ayarlanması gerekir. Varsayılan olarak, SQL Server 'ın üzerinde çalıştığı makinedeki Yöneticiler SQL Server sysadmins ' dir.
 
-  Bu hatayı düzeltmek için ihtiyacınız olabilecek:
+  Bu hatayı düzeltmek için şunları yapmanız gerekebilir:
 
-  - İzinleri ayarlarınızı doğrulayın. Daha fazla bilgi için [nasıl yapılır: Hata ayıklama için SQL Server izinleri ayarla](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414).
+  - İzin ayarlarınızı doğrulayın. Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama için SQL Server Izinleri ayarlama](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414).
 
-  - SQL hata ayıklamayı'ı doğru bir şekilde ayarlandığından emin olun.
+  - Doğru ayarlandıysa SQL hata ayıklamanın bulunduğundan emin olun.
 
-  - Ağ veya veritabanı yöneticinize başvurun.
+  - Ağınız veya veritabanı yöneticinizle görüşün.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL hata ayıklamayı kurma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100))
-- [Nasıl yapılır: Hata ayıklama için SQL Server izinleri ayarlayın](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)
+- [SQL hata ayıklamayı ayarlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100))
+- [Nasıl yapılır: hata ayıklama için SQL Server Izinleri ayarlama](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)
 - [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)
 - [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

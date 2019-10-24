@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadULONGLONG | Microsoft Docs
+title: 'IDiaPropertyStorage:: ReadULONGLONG | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f365578aba73ed94bdcd1d87801fc53030cfecdb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dde2f111e468b8ccf6c1d91440f06d3e7048a0f6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828379"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742860"
 ---
 # <a name="idiapropertystoragereadulonglong"></a>IDiaPropertyStorage::ReadULONGLONG
-Okur `ULONGLONG` değerlerde özellik kümesi.
+Bir özellik kümesindeki `ULONGLONG` değerleri okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,17 +34,17 @@ HRESULT ReadULONGLONG ( 
 #### <a name="parameters"></a>Parametreler
  `id`
 
-[in] Okunacak özellik tanımlayıcısı (`PROPID` WTypes.h tanımlanan bir `ULONG`).
+'ndaki Okunacak özelliğin tanımlayıcısı (`PROPID` `ULONG` olarak WTypes. h içinde tanımlanmıştır).
 
  `pValue`
 
-[out] Özellik değeri döndürür.
+dışı Özellik değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_INVALIDARG` özelliği türü değilse `ULONGLONG`.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde bir hata kodu döndürür. Özellik `ULONGLONG` türünde değilse `E_INVALIDARG` döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- A `ULONGLONG` Windows 64-bit işaretsiz tamsayı olarak tanımlanır.
+ @No__t_0, Windows tarafından 64 bitlik işaretsiz tamsayı olarak tanımlanır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

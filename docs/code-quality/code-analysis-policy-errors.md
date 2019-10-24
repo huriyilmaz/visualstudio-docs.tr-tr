@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3c1f6761c6cef968c965a7f0d766d3b7da6183e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9e6ff6000f0eab60e17642bf2bd8257154e54a9d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622611"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745951"
 ---
 # <a name="code-analysis-policy-errors"></a>Kod Analiz İlkesi Hataları
 
@@ -73,6 +73,6 @@ Bu hata [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projelerine ve
 
 Bu hata, yönetilmeyen projeler için geçerlidir. Kod Analizi ilkesi, C/C++Için kod analizi gerektiriyor, ancak istemcideki geçerli projede etkin değil.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod Çözümleme Uygulama Hataları](../code-quality/code-analysis-application-errors.md)

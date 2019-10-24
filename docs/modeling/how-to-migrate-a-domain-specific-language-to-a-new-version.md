@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9678bf0c98774a504f17e9ea74197f82d9ba7ad
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6be4a8205935d131d880923e721e342ea904134d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605364"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747547"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>Nasıl yapılır: Etki Alanına Özgü Dili Yeni Sürüme Geçirme
 @No__t_2 ile dağıtılan [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] sürümünden [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] için, etki alanına özgü dili tanımlayan ve kullanan projeleri geçirebilirsiniz.
@@ -84,6 +84,6 @@ ms.locfileid: "72605364"
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [İlgili blog gönderileri](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)

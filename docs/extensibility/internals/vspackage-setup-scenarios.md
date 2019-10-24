@@ -1,5 +1,5 @@
 ---
-title: VSPackage Kurulum senaryoları | Microsoft Docs
+title: VSPackage kurulum senaryoları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,74 +9,74 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 433819e269e546b224dd34cf47b2f127ea9813aa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: eddfc0aa9b8f5b3a169ce87b31a2221983f57aaa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332705"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722181"
 ---
 # <a name="vspackage-setup-scenarios"></a>VSPackage Kurulum Senaryoları
 
-VSPackage yükleyicinizi esneklik tasarlamak önemlidir. Örneğin, bir güvenlik düzeltme eki gelecekte serbest bırakmanız gerekebilir veya kapsamlı yan yana sürüm oluşturma desteği gerektiren işletme stratejisinin değişebilir.
+Bir esneklik için VSPackage yükleyicinizi tasarlamak önemlidir. Örneğin, gelecekte bir güvenlik düzeltme ekini serbest bırakmanız veya kapsamlı yan yana sürüm desteği gerektiren bir iş stratejisini değiştirmeniz gerekebilir.
 
-İçinde [destekleyen birden çok Versions of Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md), avantajlar ve yan yana yüklemeleri destekleme sorunlar hakkında bilgi edinebilirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , VSPackage paylaşılan veya yan yana yüklemeleri ile. Kısacası, yan yana VSPackages yeni özellikleri desteklemek için en fazla esnekliği size [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+[Visual Studio 'Nun birden çok sürümünü destekleyerek](../../extensibility/supporting-multiple-versions-of-visual-studio.md), VSPackage 'ın paylaşılan veya yan yana yüklemeleri ile [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yan yana yüklemelerini desteklemeye yönelik avantajlar ve sorunlar hakkında bilgi edinebilirsiniz. Kısa bir yandan yan yana VSPackages, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yeni özelliklerini desteklemek için size en fazla esneklik sağlar.
 
-Bu konuda tartışılan senaryoların yalnızca seçimlerinizi değildir ancak onlara önerilen en iyi yöntemler olarak gösterilir.
+Bu konuda tartışılan senaryolar yalnızca Seçimlerinizden değildir, ancak önerilen en iyi uygulamalar olarak sunulur.
 
-## <a name="components-privacy-and-sharing"></a>Bileşenler, gizlilik ve paylaşma
+## <a name="components-privacy-and-sharing"></a>Bileşenler, gizlilik ve paylaşım
 
-### <a name="make-your-components-independent"></a>Bileşenlerinizin bağımsız olun
+### <a name="make-your-components-independent"></a>Bileşenlerinizi bağımsız hale getirme
 
-Tanımlamak ve doldurmak bir bileşen sonra Ata bir `GUID`ve bileşen dağıtmak, kendi bileşim değiştiremezsiniz. Bir bileşenin bileşim değiştirirseniz, yeni bir bileşen yeni bir sonuç bileşeni olmalıdır `GUID`. Bu bilgiler verildiğinde, her bileşen birimini bağımsız ve kendi sağlayarak en büyük sürüm oluşturma esnekliği gösterilen. Bileşenleri yöneten kurallar hakkında daha fazla bilgi için bkz: [bileşeni kodunun değiştirilmesi](/windows/desktop/Msi/changing-the-component-code) ve [ne olur bileşen kuralları bozuk olduğu?](/windows/desktop/Msi/what-happens-if-the-component-rules-are-broken).
+Bir bileşeni tanımlayıp doldurduktan sonra bir `GUID` atayıp bileşeni dağıttıktan sonra, kompozisyonunu değiştiremezsiniz. Bir bileşenin kompozisyonunu değiştirirseniz, sonuçta elde edilen bileşen yeni bir `GUID` yeni bir bileşen olmalıdır. Bu olgular verildiğinde, en büyük sürüm oluşturma esnekliği, her bileşene bağımsız, kendine bağlı birim yapılarak gerçekleştirilir. Bileşenleri yöneten kurallar hakkında daha fazla bilgi için bkz. [bileşen kodunu değiştirme](/windows/desktop/Msi/changing-the-component-code) ve [bileşen kuralları bozulur ne olur?](/windows/desktop/Msi/what-happens-if-the-component-rules-are-broken).
 
-### <a name="do-not-mix-shared-and-private-resources-in-a-component"></a>Bir bileşen içinde paylaşılan ve özel kaynakları karıştırmamanızı
+### <a name="do-not-mix-shared-and-private-resources-in-a-component"></a>Bir bileşende paylaşılan ve özel kaynakları karıştırma
 
-Başvuru sayımı, bileşen düzeyinde gerçekleşir. Sonuç olarak, paylaşılan ve özel kaynakların bir bileşende karıştırma olanaksız bir yürütülebilir dosya gibi özel kaynaklar da paylaşılan kaynakları yazmadan güncelleştirme yapar. Bu senaryo, geriye dönük uyumluluk sorunları oluşturur ve yan yana özellik oluşturmaktan kısıtlar.
+Başvuru sayımı bileşen düzeyinde oluşur. Sonuç olarak, paylaşılan ve özel kaynakları tek bir bileşende karıştırmak, paylaşılan kaynakların üzerine yazmadan yürütülebilir bir dosya gibi özel kaynakların güncelleştirilmesini olanaksız hale getirir. Bu senaryo, geriye dönük uyumluluk sorunları oluşturur ve yan yana yetenek oluşturma işlemini kısıtlar.
 
-Örneğin, kayıt defteri değerlerini kullanılan, VSPackage ile kaydetmek için [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] bir bileşen, bir Visual Studio ile VSPackage'ı kaydetmek için kullanılan ayrı olarak tutulmalıdır. Paylaşılan dosyalar veya kayıt defteri değerlerini başka bir bileşenin gidin.
+Örneğin, VSPackage 'ı [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] kaydetmek için kullanılan kayıt defteri değerleri, VSPackage 'ı Visual Studio ile kaydetmek için kullanılan bir bileşende ayrı bir bileşende tutulmalıdır. Paylaşılan dosyalar veya kayıt defteri değerleri, başka bir bileşeni de daha sonra gider.
 
-## <a name="scenario-1-shared-vspackage"></a>Senaryo 1: Paylaşılan VSPackage'ı
+## <a name="scenario-1-shared-vspackage"></a>Senaryo 1: Paylaşılan VSPackage
 
-Bu senaryoda, Paylaşılan VSPackage (Visual Studio'nun birden çok sürümünü destekleyen tek bir ikili bir Windows yükleyici paketinde sevk edilir. Visual Studio'nun her sürümü ile kaydetme, kullanıcı tarafından seçilebilen özellikleri tarafından denetlenir. Ayrıca özellikleri ayırmak için atandığında, her bir bileşeni ayrı ayrı yüklenmesi ve kaldırılması, kullanıcı denetimi VSPackage'nün farklı sürümlerini tümleştirme koymak için seçilebileceğini gösterir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. (Bkz [Windows Yükleyici'nin özellikleri](/windows/desktop/Msi/windows-installer-features) Windows yükleyici paketinde özelliklerini kullanma hakkında daha fazla bilgi için.)
+Bu senaryoda, paylaşılan bir VSPackage (Visual Studio 'nun birden çok sürümünü destekleyen tek bir ikili dosya Windows Installer bir pakette gönderilir. Visual Studio 'nun her bir sürümüyle kaydolmak, Kullanıcı tarafından seçilebilen özelliklerle denetlenir. Ayrıca, ayrı özelliklere atandığında her bir bileşen yükleme veya kaldırma için tek tek seçilebileceği anlamına gelir. Bu, kullanıcıyı VSPackage 'ı farklı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sürümleriyle tümleştirme denetimine yerleştiriyor. (Windows Installer paketlerindeki özellikleri kullanma hakkında daha fazla bilgi için bkz. [Windows Installer özellikleri](/windows/desktop/Msi/windows-installer-features) .)
 
-![VS Paylaşılan VSPackage yükleyici](../../extensibility/internals/media/vs_sharedpackage.gif "VS_SharedPackage")
+![VS Paylaşılan VSPackage yükleyicisi](../../extensibility/internals/media/vs_sharedpackage.gif "VS_SharedPackage")
 
-Çizimde gösterildiği gibi paylaşılan bileşenler her zaman yüklü Feat_Common özelliğinin bir parçası olarak yapılır. Feat_VS2002 ve Feat_VS2003 özellikleri görünür hale getirerek kullanıcıların Visual Studio'nun hangi sürümlere istedikleri VSPackage'ı tümleştirmek için yükleme sırasında seçebilirsiniz. Kullanıcılar, Windows Installer Bakım modu eklemek veya özellikleri, bu durumda ekler veya VSPackage kayıt bilgilerini farklı Visual Studio sürümlerinden kaldırır kaldırmak için de kullanabilirsiniz.
+Çizimde gösterildiği gibi, paylaşılan bileşenler her zaman yüklenen Feat_Common özelliğinin bir parçası haline getirilir. Feat_VS2002 ve Feat_VS2003 özelliklerini görünür hale getirerek, kullanıcılar, VSPackage 'ın hangi Visual Studio sürümlerine tümleştirileceğini istediğini bir kez seçebilirler. Kullanıcılar ayrıca, özellikleri eklemek veya kaldırmak için Windows Installer bakım modunu da kullanabilir. Bu durumda, Visual Studio 'nun farklı sürümlerindeki VSPackage kayıt bilgilerini ekler veya kaldırır.
 
 > [!NOTE]
-> Bir özelliğin görüntü sütunu 0 olarak ayarlanması gizler. 1 gibi bir alt düzey sütun değeri her zaman yüklenecek sağlar. Daha fazla bilgi için [INSTALLLEVEL özelliği](/windows/desktop/Msi/installlevel) ve [özellik tablosu](/windows/desktop/Msi/feature-table).
+> Özelliğin görüntüleme sütununun 0 olarak ayarlanması onu gizler. 1 gibi düşük düzey bir sütun değeri, her zaman yüklenmesini sağlar. Daha fazla bilgi için bkz. [INSTALLLEVEL özelliği](/windows/desktop/Msi/installlevel) ve [özellik tablosu](/windows/desktop/Msi/feature-table).
 
-## <a name="scenario-2-shared-vspackage-update"></a>Senaryo 2: Paylaşılan VSPackage'ı güncelleştirme
+## <a name="scenario-2-shared-vspackage-update"></a>Senaryo 2: Paylaşılan VSPackage güncelleştirmesi
 
-Bu senaryoda, Senaryo 1 VSPackage yükleyicide güncelleştirilmiş bir sürümünü sevk edilir. Tartışma için güncelleştirme Visual Studio için destek ekler, ancak de daha basit bir güvenlik düzeltme eki olabilir veya hata-hizmet paketi düzeltmesi. Zaten sistemde değişmeden bileşenleri değil yeniden yeni bileşenleri yüklemek için Windows Installer'ın kuralları zorunlu kılar. Bu durumda, sürüm 1.0 zaten sistemiyle güncelleştirilen bileşenin Comp_MyVSPackage.dll üzerine ve kullanıcıların kendi bileşeniyle Comp_VS2005_Reg Feat_VS2005 yeni özellik eklemek seçin.
+Bu senaryoda, senaryo 1 ' de VSPackage yükleyicisinin güncelleştirilmiş bir sürümü gönderilir. Bu tartışma için, güncelleştirme Visual Studio için destek ekler, ancak daha basit bir güvenlik düzeltme eki veya hata düzeltme hizmet paketi de olabilir. Windows Installer daha yeni bileşenleri yükleme kuralları, sistemde zaten değiştirilmemiş bileşenlerin yeniden kopyalanmadığını gerektirir. Bu durumda, sürüm 1,0 olan bir sistem zaten var olan Comp_MyVSPackage. dll ' nin üzerine yazar ve kullanıcıların yeni özellik Feat_VS2005 ' i Component Comp_VS2005_Reg ile eklemesini sağlar.
 
 > [!CAUTION]
-> VSPackage birden çok sürümünü arasında paylaşılan her [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], VSPackage'ı sonraki sürümlerini Visual Studio'nun önceki sürümleriyle geriye dönük uyumluluk sağlamak önemlidir. Geriye dönük uyumluluk koruyamadığını burada yan yana, özel VSPackages kullanmanız gerekir. Daha fazla bilgi için [destekleyen birden çok Versions of Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md).
+> @No__t_0 birden çok sürümü arasında bir VSPackage paylaşıldığında, VSPackage sonraki sürümlerinin, Visual Studio 'nun önceki sürümleriyle geriye dönük uyumluluk sağlamak önemlidir. Geriye dönük uyumluluğu koruyabileceğiniz yerlerde yan yana, özel VSPackages kullanmanız gerekir. Daha fazla bilgi için bkz. [Visual Studio 'Nun birden çok sürümünü destekleme](../../extensibility/supporting-multiple-versions-of-visual-studio.md).
 
-![VS VS paket güncelleştirmesi paylaşılan yükleyici](../../extensibility/internals/media/vs_sharedpackageupdate.gif "VS_SharedPackageUpdate")
+![VS Paylaşılan VS paketi güncelleştirme yükleyicisi](../../extensibility/internals/media/vs_sharedpackageupdate.gif "VS_SharedPackageUpdate")
 
-Bu senaryo yeni bir VSPackage yükleyici, küçük yükseltmeler için Windows Installer'ın destek avantajlarını sunar. Kullanıcılar yalnızca sürüm 1.1 yükleyin ve sürüm 1.0 yükseltir. Ancak, sistemdeki sürüm 1.0 gerekli değildir. Aynı Yükleyici sürüm 1.1, 1.0 sürümü olmadan bir sistemde yükler. Bu şekilde Küçük yükseltmeler sağlamayı avantajı, bir yükseltme yükleyici ve bir tam ürün yükleyicisi geliştirme iş gitmek gerekli değildir, ' dir. Bir yükleyici, her iki iş yapar. Bir güvenlik düzeltme ya da hizmet paketi kaybolabileceğini bunun yerine Windows Installer düzeltme eklerinin avantajlarından yararlanın. Daha fazla bilgi için [düzeltme eki uygulama ve yükseltmeler](/windows/desktop/Msi/patching-and-upgrades).
+Bu senaryo, küçük yükseltme desteğinin Windows Installer avantajlarından yararlanarak yeni bir VSPackage yükleyicisi sunmaktadır. Kullanıcılar yalnızca sürüm 1,1 ' ü yükler ve BT sürüm 1,0 ' i yükseltir. Ancak sistemde sürüm 1,0 ' ün olması gerekmez. Aynı Yükleyici sürüm 1,1 ' i sürüm 1,0 olmadan bir sisteme yükler. Bu şekilde küçük yükseltmeler sağlamanın avantajı, bir yükseltme yükleyicisi geliştirme ve tam ürün yükleyicisi geliştirme çalışmalarından faydalanmak için gerekli değildir. Bir yükleyici her iki işi de yapar. Bunun yerine bir güvenlik düzeltme veya hizmet paketi Windows Installer düzeltme eklerinden faydalanabilir. Daha fazla bilgi için bkz. [düzeltme eki uygulama ve yükseltme](/windows/desktop/Msi/patching-and-upgrades).
 
-## <a name="scenario-3-side-by-side-vspackage"></a>Senaryo 3: Yan yana VSPackage'ı
+## <a name="scenario-3-side-by-side-vspackage"></a>Senaryo 3: yan yana VSPackage
 
-Bu senaryo iki VSPackage yükleyici sunar — bir Visual Studio .NET 2003 ve Visual Studio'nun her sürümü için. Her bir yükleyici, yan yana veya özel, VSPackage'ı (özel olarak oluşturduğu ve belirli bir Visual Studio sürümü için yüklü bir) yükler. Her VSPackage'ı kendi bileşenidir. Sonuç olarak, her tek tek düzeltme ekleri veya bakım ile hizmet verilebilir serbest bırakır. VSPackage DLL artık sürüme özgü olduğundan, aynı bileşeni DLL olarak kayıt bilgileri dahil güvenlidir.
+Bu senaryo, Visual Studio .NET 2003 ve Visual Studio 'nun her sürümü için bir tane olmak üzere iki VSPackage yükleyicisi sunar. Her yükleyici, yan yana veya özel bir VSPackage (Visual Studio 'nun belirli bir sürümü için özel olarak oluşturulmuş ve yüklenmiş bir) yüklenir. Her VSPackage kendi bileşenidir. Sonuç olarak, her biri düzeltme ekleri veya bakım yayımları ile tek tek hizmet verebilir. VSPackage DLL 'SI artık sürüme özgü olduğundan, kayıt bilgilerini DLL ile aynı bileşene eklemek güvenlidir.
 
-![VS Yan Yana VS Package Installer](../../extensibility/internals/media/vs_sbys_package.gif "VS_SbyS_Package")
+![VS yan yana VS paketi yükleyicisi](../../extensibility/internals/media/vs_sbys_package.gif "VS_SbyS_Package")
 
-Her yükleyicisi Ayrıca iki yükleyici arasında paylaşılan kod içerir. Hem .msi dosyaları yüklendiğinde paylaşılan kodun bir ortak konuma yüklediyseniz, paylaşılan kod yalnızca bir kez yüklenir. İkinci yükleyici, yalnızca bir bileşene başvuru sayısını artırır. Başvuru sayısı VSPackages birini kaldırdığınızda, paylaşılan kodun bir VSPackage için kalmasını sağlar. İkinci VSPackage de kaldırılırsa, paylaşılan kod kaldırılacak.
+Her yükleyici Ayrıca iki yükleyici arasında paylaşılan kod içerir. Paylaşılan kod ortak bir konuma yüklenirse, hem. msi dosyalarını yüklemek paylaşılan kodu yalnızca bir kez yükler. İkinci yükleyici, bileşen üzerindeki bir başvuru sayısını artırır. Başvuru sayısı, VSPackages 'tan birinin kaldırılması durumunda, paylaşılan kodun diğer VSPackage için de kalacağını sağlar. İkinci VSPackage da kaldırılırsa, paylaşılan kod kaldırılır.
 
-## <a name="scenario-4-side-by-side-vspackage-update"></a>Senaryo 4: Yan yana VSPackage'ı güncelleştirme
+## <a name="scenario-4-side-by-side-vspackage-update"></a>Senaryo 4: yan yana VSPackage güncelleştirmesi
 
-Bu senaryoda, VSPackage'ı Visual Studio için bir güvenlik açığını çalışmaya başlayamıyorsa ve bir güncelleştirme vermeniz gerekir. Senaryo 2 olduğu gibi güncelleştirmeleri yanı sıra güvenlik düzeltme ekini içeren yeni yüklemeleri yerinde zaten güvenlik düzeltme ile dağıtmak için mevcut bir yüklemesi yeni bir .msi dosyasını oluşturabilirsiniz.
+Bu senaryoda, Visual Studio için VSPackage bir güvenlik güvenlik açığıyla karşılaştı ve bir güncelleştirme yapmanız gerekiyor. Senaryo 2 ' de olduğu gibi, güvenlik düzeltmesini dahil etmek için mevcut bir yüklemeyi güncelleştiren ve güvenlik düzeltmesinin zaten bulunduğu yeni yüklemeleri dağıtan yeni bir. msi dosyası oluşturabilirsiniz.
 
-Bu durumda, genel derleme önbelleğinde (GAC) yüklü yönetilen VSPackage VSPackage olur. Güvenlik düzeltme ekini içerecek şekilde yeniden derlerken, derleme sürüm numarasının düzeltme numarası bölümünü değiştirmeniz gerekir. Kayıt bilgileri yeni derleme sürüm numarası, önceki sürümü üzerine yazar için neden [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sabit derlemesi yüklenemiyor.
+Bu durumda, VSPackage, genel derleme önbelleğinde (GAC) yüklü bir yönetilen VSPackage ' dır. Güvenlik düzeltmesini dahil etmek için onu yeniden oluşturduğunuzda, derleme sürüm numarasının düzeltme numarası bölümünü değiştirmeniz gerekir. Yeni derleme sürüm numarası için kayıt bilgileri önceki sürümün üzerine yazılır ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sabit derlemeyi yüklemesine neden olur.
 
-![VS Yan Yana VS paket güncelleştirme yükleyicisi](../../extensibility/internals/media/vs_sbys_packageupdate.gif "VS_SbyS_PackageUpdate")
+![VS yan yana VS paketi güncelleştirme yükleyicisi](../../extensibility/internals/media/vs_sbys_packageupdate.gif "VS_SbyS_PackageUpdate")
 
-Yan yana derlemelerin dağıtımı hakkında daha fazla bilgi için bkz. [dağıtım basitleştirme ve .NET Framework ile çözme DLL cehennemi](https://msdn.microsoft.com/library/ms973843.aspx).
+Yan yana derlemelerin dağıtımı hakkında daha fazla bilgi için bkz. [.NET Framework dağıtım ve çözme dll Hell](https://msdn.microsoft.com/library/ms973843.aspx).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Installer](/windows/desktop/Msi/windows-installer-portal)
 - [Visual Studio'nun Birden Çok Sürümünü Destekleme](../../extensibility/supporting-multiple-versions-of-visual-studio.md)

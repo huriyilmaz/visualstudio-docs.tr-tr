@@ -1,5 +1,5 @@
 ---
-title: UWP uygulamalarında önceden getirilmiş içeriğin kullanarak hata ayıklama | Microsoft Docs
+title: UWP uygulamalarında önceden getirilen içeriği kullanarak hata ayıklama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,32 +12,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 03ae7ecaf9998646d1dc13c4a93bbf34b53f5e47
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 28a73974a71df7fa652e4b246043e901df76e94c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408604"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730567"
 ---
-# <a name="debug-uwp-apps-using-prefetched-content-in-visual-studio"></a>UWP uygulamalarında önceden getirilmiş içeriğin Visual Studio kullanarak hata ayıklama
+# <a name="debug-uwp-apps-using-prefetched-content-in-visual-studio"></a>Visual Studio 'da önceden getirilen içeriği kullanarak UWP uygulamalarında hata ayıklama
 
- UWP uygulamanızın daha iyi yanıt vermesi için web sayfalarını veya resimleri, gibi bazı web içeriği uygulamanın önceden yüklemek için Windows isteyebilir [WinINet](/windows/desktop/WinInet/about-wininet) önbellek. Önceden getiriliyor bu işlev çağrılır. Başlatmada kullanılan içerik için özellikle etkili ancak çok sık kullanılan diğer içeriklere hazırlık. Yöntemlerinin [Windows.Networking.BackgroundTransfer.ContentPrefetcher](/uwp/api/Windows.Networking.BackgroundTransfer.ContentPrefetcher) sınıfı dağıtılacak istediğiniz içeriğin bir URI'leri belirtmenize olanak tanır. Bkz. Windows SDK'sı [içeriği önceden getirme örnek](https://code.msdn.microsoft.com/windowsapps/ContentPrefetcher-Sample-432c8309) uygulamanıza ContentPrefetcher işlevselliği ekleme örnekleri için.
+ UWP uygulamanızı daha hızlı hale getirmek için, Windows 'u, Web sayfaları veya resimler gibi bazı Web içeriklerini uygulamanın [Winınet](/windows/desktop/WinInet/about-wininet) önbelleğine yüklemek üzere isteyebilirsiniz. Bu işlevselliğe ön getirme denir. Başlangıçta kullanılan içerik için özellikle etkilidir, ancak sık kullanılan diğer içerikleri de önceden getirebilirsiniz. [Windows. Networking. BackgroundTransfer. ContentPrefetcher](/uwp/api/Windows.Networking.BackgroundTransfer.ContentPrefetcher) sınıfının yöntemleri, önyüklemek Istediğiniz Içeriğin URI 'lerini belirtmenize olanak tanır. Uygulamanıza ContentPrefetcher işlevselliği ekleme örnekleri için Windows SDK [içerik önceden getirme örneğine](https://code.msdn.microsoft.com/windowsapps/ContentPrefetcher-Sample-432c8309) bakın.
 
- Windows zaman ve önceden getiriliyor gerçekleşmesi gerektiğini belirlemek için buluşsal yöntemler ve hangi kaynakların indirilecek kullanır. Buluşsal yöntemler, hesap sistem ağ ve güç koşulları, kullanıcı uygulama kullanım geçmişi ve önceki önceden getirme girişimleri sonuçlarını alın. Visual Studio'da kullanabileceğiniz **tetikleyici Windows Store uygulaması hazırlık** ContentPrefetcher buluşsal yöntemler yoksaymak ve tüm belirtilen web içeriğin önceden yüklenmesi için Windows zorlamak için komutu. Bu, uygulamanın davranışı veya içeriği (yüklenen veya yüklü değil) bilinen bir durumda önceden getirme ile performansı test etmek istiyorsanız yararlı olabilir.
+ Windows, ön alma işleminin ne zaman ve ne zaman yapılacağını ve hangi kaynakların indirileceğini belirleyen buluşsal yöntemler kullanır. Buluşsal yöntemler, sistem ağ ve güç koşulları, Kullanıcı uygulaması kullanım geçmişi ve önceki önceden getirme girişimlerinin sonuçlarını alır. Visual Studio 'da, Windows **Mağazası uygulaması önceden getirme komutunu tetikleyip** Windows 'un ContentPrefetcher buluşsal yöntemlerini yoksaymasını ve belirtilen Web içeriğinin tümünün önyük iadesini sağlayabilirsiniz. Bu, uygulamanın davranışını veya performansını bilinen bir durumda (yüklenmiş veya yüklü değil) önceden ayarlanabilir içerikle test etmek istiyorsanız yararlı olabilir.
 
-## <a name="to-force-preloading-of-contentprefetcher-specified-resources"></a>ContentPrefetcher önceden yüklenmesini zorlamak için kaynakları belirtilen
- Bu yordam, zaten ContentPrefetcher işlevselliği ayarlayın ve içerik bir URI'leri uygulaması projenizde önceden yükleme için belirtilen olduğunu varsayar. Belirtilen kaynaklar yeni veya değiştirilmiş bir içeriği önceden yüklenmesini zorlamak için seçtiğiniz önce uygulamayı durdurmak ve başlatmak sahip **tetikleyici Windows Store uygulaması hazırlık** komutu. Önce bir URI'leri kaydetmek için uygulamayı çalıştırın. **Tetikle Windows Store App** komutu sonra içerik indirmek ve önbelleğine eklemek için ContentPrefetcher zorlar. Uygulamayı sonraki çalıştırmalarında içeriği önceden yüklenmiş olduğunu varsayabilirsiniz.
+## <a name="to-force-preloading-of-contentprefetcher-specified-resources"></a>ContentPrefetcher belirtilen kaynakları önceden yüklemeye zorlamak için
+ Bu yordamda, ContentPrefetcher işlevini önceden ayarlamış olduğunuzu ve içerik URI 'Lerini uygulama projenizde önyüklemeye belirttiğinizi varsaymış olursunuz. Belirtilen kaynaklar yeni veya değiştirildiğinde içeriği önceden yüklemeye zorlamak için, **Windows Mağazası uygulamasını zorla önceden getirme** komutunu seçmeden önce uygulamayı başlatıp durdurmanız gerekir. URI 'Leri kaydettirmek için önce uygulamayı çalıştırın. **Windows Mağazası uygulamasını önceden getirme komutunu tetikleyin** , sonra ContentPrefetcher içeriği indirmeye ve önbelleğe eklemeye zorlar. Uygulamanın sonraki çalıştırmalarından içeriğin önceden yüklenmiş olduğunu varsayabilirsiniz.
 
-1. Önceden getirme içerik URI'leri uygulamayı kaydetmek için uygulamayı başlatın. Üzerinde **hata ayıklama** menüsünde seçin **hata ayıklamayı Başlat** (klavye kısayolu: F5).
+1. Uygulamayı, önceden getirme içerik URI 'Lerini uygulamayla kaydetmek için başlatın. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat** ' ı seçin (klavye kısayolu: F5).
 
-2. Üzerinde **hata ayıklama** menüsünde seçin **hata ayıklamayı Durdur** (klavye kısayolu: Shift + F5).
+2. **Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur** ' u seçin (klavye kısayolu: SHIFT + F5).
 
-3. Üzerinde **hata ayıklama** menüsünde seçin **diğer hata ayıklama hedefleri** seçip **tetikleyici Windows Store uygulaması hazırlık**.
+3. **Hata** Ayıkla menüsünde, **diğer hata ayıklama hedefleri** ' ni seçin ve ardından **Windows Mağazası uygulamasını önceden getirme**' yi seçin.
 
-   Artık, hata ayıklama, test veya önceden getirilmiş web kaynakları uygulamanızla analiz edin.
+   Artık uygulamanızı önceden getirilen Web kaynaklarıyla ayıklayabilirsiniz, test edebilir veya çözümleyebilirsiniz.
 
 > [!NOTE]
-> Belirtilen web içerik eklediğinizde veya zaman bu adımları yineleyin.
+> Belirtilen Web içeriğini her eklediğinizde veya değiştirdiğinizde bu adımları yineleyin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [Blog postası: Visual Studio 2013 güncelleştirme 2'de Windows Store uygulamaları için tetikleme önceden getirme](https://devblogs.microsoft.com/devops/triggering-prefetch-for-windows-store-apps-in-visual-studio-2013-update-2/)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Blog gönderisi: Visual Studio 2013 güncelleştirme 2 ' de Windows Mağazası uygulamaları için önceden getirme tetikleniyor](https://devblogs.microsoft.com/devops/triggering-prefetch-for-windows-store-apps-in-visual-studio-2013-update-2/)

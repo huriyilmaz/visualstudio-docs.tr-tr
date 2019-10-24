@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findInlineeLines | Microsoft Docs
+title: 'IDiaSession:: findInlineeLines | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aeed8047cd04e3cfedb5a3beed8dc42c87b551e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5103a881b1b046479a1a3156f06038e230f5063e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827782"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742248"
 ---
 # <a name="idiasessionfindinlineelines"></a>IDiaSession::findInlineeLines
-Satır numarası bilgisi tüm işlevlerin satır içine alınmış, doğrudan veya dolaylı olarak, belirtilen üst simgesiyle yinelemek bir istemci sağlayan bir sabit listesi alır.
+Bir istemcinin, belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır içi tüm işlevlerin satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,16 +32,16 @@ HRESULT findInlineeLines ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-[in] Bir `IDiaSymbol` üst temsil eden nesne.
+'ndaki Üst öğeyi temsil eden `IDiaSymbol` nesne.
 
  `ppResult`
 
-[out] Tutan bir `IDiaEnumLineNumbers` alınan satır numaraları listesi içeren nesne.
+dışı Alınan satır numaralarının listesini içeren `IDiaEnumLineNumbers` nesnesini barındırır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

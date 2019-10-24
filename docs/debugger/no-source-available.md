@@ -17,25 +17,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d1d1307a119fa23bf7ba015130ab9c7b6f69d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f08ed499e61e54ffbc6508bc8353ea955d9a20c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905225"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730867"
 ---
 # <a name="no-source-available"></a>Kullanılabilir Kaynak Yok
-Projenizin kaynak kodunu görüntülemeye çalıştığınız kod içermiyor. Olağan sebep, kaynak kodu olmayan bir modül çift **çağrı yığını penceresinde** veya **iş parçacıkları penceresi**. Hata ayıklamak, devam edebilirsiniz, ancak kaynak penceresinde kesme noktaları ayarlamak ve bu konumdaki diğer eylemleri gerçekleştirmek için kullanamazsınız. Bir kesme noktası ayarlamak ihtiyacınız varsa, **ayrıştırma penceresi** yerine.
+Projeniz, görüntülemeye çalıştığınız kodun kaynak kodunu içermiyor. Bunun nedeni, **çağrı yığını penceresinde** veya **iş parçacıkları penceresinde**kaynak kodu olmayan bir modüle çift tıklanıdır. Hata ayıklamaya devam edebilir, ancak kesme noktaları ayarlamak ve bu konumda diğer eylemleri gerçekleştirmek için kaynak pencereyi kullanamazsınız. Bir kesme noktası ayarlamanız gerekiyorsa, bunun yerine **ayrıştırma penceresini** kullanın.
 
- Çözüm özellik sayfaları'nda hata ayıklayıcı kaynakları dosyalarını nerede arar dizinleri değiştirin ve seçili kaynak dosyaları yoksaymak için hata ayıklayıcının işlemi durdurmasını. Bkz: [kaynak dosyaları, ortak özellikler, çözüm özellik sayfaları iletişim kutusu için hata ayıklama](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md).
+ Çözüm özelliği sayfalarında, hata ayıklayıcının kaynak dosyalarını aradığı dizinleri değiştirebilir ve hata ayıklayıcıya seçili kaynak dosyaları yoksaymasını söyleyebilirsiniz. Bkz. [hata ayıklama kaynak dosyaları, ortak özellikler, çözüm Özellik sayfaları Iletişim kutusu](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md).
 
- **Kaynak kodu bulmak için Gözat** Burada, göz kaynak kodunu bulmak için bir iletişim kutusunu açmak için bu bağlantıya tıklayın.
+ **Kaynak kodunu bulmak Için gidin** Kaynak kodunu bulmak için gözatabileceğiniz bir iletişim kutusu açmak için bu bağlantıya tıklayın.
 
- **Ayrıştırılmış Kodu Göster** başlatır **ayrıştırma penceresi**.
+ **Ayrıştırılmış kodu göster** **Ayrıştırma penceresini**başlatır.
 
- **Eksik kaynak dosyaların ayrıştırmasını her zaman göster** görüntülemek için bu seçeneği belirleyin **ayrıştırma penceresi** otomatik olarak kaynak olduğunda kullanılabilir. Bu ayar, ayrıca değiştirilebilir **seçenekleri** iletişim kutusu, **hata ayıklama** kategori **genel** seçerek veya temizleyerek sayfasında, **ayrıştırılmış Kodu Göster, Kaynak kullanılamıyor**.
+ **Eksik kaynak dosyaları Için her zaman ayrıştırılmış kodu göster** Kaynak kullanılabilir olmadığında **ayrıştırma penceresini** otomatik olarak göstermek için bu seçeneği belirleyin. Bu ayar ayrıca **Seçenekler** iletişim kutusunda, **hata ayıklama** kategorisinde, **genel** sayfasında, **Kaynak kullanılamıyorsa ayrıştırılmış derlemeyi göster**' i seçerek veya temizleyerek da değiştirilebilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Dosyalarda Hata Ayıklama, Ortak Özellikler, Çözüm Özellik Sayfaları İletişim Kutusu](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)
 - [Simge (.pdb) ve Kaynak Dosyaları Belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [SOS.dll (SOS Hata Ayıklama Uzantısı)](/dotnet/framework/tools/sos-dll-sos-debugging-extension)

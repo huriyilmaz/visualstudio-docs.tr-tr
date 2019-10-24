@@ -23,43 +23,43 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6c821c63354ec1b7cc83e302a3c2682982696e2
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 05340b4922262eb134aca8fef4bf215342e5a997
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387683"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734026"
 ---
-# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Nasıl yapılır: Düzen ile kesme modunda düzenlemeleri uygulayın ve devam et (Visual Basic)
-Düzenle ve devam et, kesme modunda kodunuzu düzenleyin ve ardından durdurup yeniden başlatmadan yürütme devam etmek için kullanabilirsiniz.
+# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Nasıl yapılır: Düzenle ve devam et ile kesme modunda düzenleme uygulama (Visual Basic)
+Kodunuzu kesme modunda düzenlemek için Düzenle ve devam et ' i kullanabilir ve sonra yürütmeyi durdurup yeniden başlatmadan devam edebilirsiniz.
 
-Hata ayıklarken Düzenle ve Devam Et'i kullanma ile ilgili kısıtlamalar için bkz: [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
+Hata ayıklama sırasında Düzenle ve devam et ile ilgili sınırlamalar için bkz. [desteklenen kodC# değişiklikleri (ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
 
-### <a name="to-edit-code-in-break-mode"></a>Kesme modunda kod düzenlemek için
+### <a name="to-edit-code-in-break-mode"></a>Kodu kesme modunda düzenlemek için
 
-1. Aşağıdakilerden birini yaparak Kesme moduna girin:
+1. Aşağıdakilerden birini yaparak kesme moduna girin:
 
-    - Kodunuzda bir kesme noktası ayarlayın ve ardından **hata ayıklamayı Başlat** gelen **hata ayıklama** menü ve kesme noktasına isabet uygulamaya tamamlanmasını bekleyin.
-
-         veya
-
-    - Hata ayıklamayı başlatın ve ardından **tümünü Kes** gelen **hata ayıklama** menüsü.
+    - Kodunuzda bir kesme noktası ayarlayın, ardından **Hata Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin ve uygulamanın kesme noktasına gelmesini bekleyin.
 
          veya
 
-    - Bir özel durum oluştuğunda seçin **düzenlemeyi etkinleştir** üzerinde **özel durum Yardımcısı'nı**.
+    - Hata ayıklamayı başlatın ve **Hata Ayıkla** menüsünden **Tümünü kes** ' i seçin.
 
-2. İstenen ve desteklenen kod değişiklikleri yapın.
+         veya
 
-     Daha fazla bilgi için [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
+    - Bir özel durum oluştuğunda, **özel durum Yardımcısı**üzerinde **düzenlemesi etkinleştir** ' i seçin.
+
+2. İstediğiniz ve desteklenen kod değişikliklerini yapın.
+
+     Daha fazla bilgi için bkz. [desteklenen kod değişiklikleriC# (ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
 
     > [!NOTE]
-    > Bir kod bu değişikliği yapmak için Düzenle ve devam et tarafından izin verilmiyor dener düzenlemeniz tarafından mor dalgalı çizgi altı çizili olacaktır ve bir görev görev listesinde görünür. Geçersiz kod değişikliği geri sürece kod yürütülmesine devam etmek mümkün olmayacaktır.
+    > Düzenle ve devam et tarafından izin verilmeyen bir kod değişikliği yapmaya çalışırsanız, düzenlemeniz mor dalgalı bir çizgiyle altı çizili olur ve Görev Listesi bir görev görüntülenir. Geçersiz kod değişikliğini geri yüklemediğiniz takdirde kod yürütmeye devam edemeyeceksiniz.
 
-3. Üzerinde **hata ayıklama** menüsünde tıklatın **devam** yürütme devam etmek için.
+3. **Hata Ayıkla** menüsünde, yürütmeyi sürdürmek için **devam** ' a tıklayın.
 
-     Kodunuz artık projeye dahil uygulanan düzenlemeleriniz ile yürütür.
+     Kodunuz artık projeye eklenen ve uygulanan düzenlemelerinizle yürütülür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md)
 - [Düzenle ve Devam Et (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)

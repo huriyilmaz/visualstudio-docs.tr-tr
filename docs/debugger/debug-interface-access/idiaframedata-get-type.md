@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_type | Microsoft Docs
+title: 'IDiaFrameData:: get_type | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 90a7096550dc3de67ba38058c4029a6bd3c30ca4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a4af060a4a0c36067a07a78166d1cf9cbc62e90e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830242"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743477"
 ---
-# <a name="idiaframedatagettype"></a>IDiaFrameData::get_type
-Derleyici özel çerçeve türünü alır.
+# <a name="idiaframedataget_type"></a>IDiaFrameData::get_type
+Derleyiciye özgü çerçeve türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,11 +33,11 @@ HRESULT get_type ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir değer döndürür [StackFrameTypeEnum numaralandırması](../../debugger/debug-interface-access/stackframetypeenum.md) derleyici özgü çerçeve türünü belirten sabit listesi.
+dışı , Derleyiciye özgü çerçeve türünü gösteren [StackFrameTypeEnum numaralandırma](../../debugger/debug-interface-access/stackframetypeenum.md) numaralandırmasından bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [StackFrameTypeEnum Numaralandırması](../../debugger/debug-interface-access/stackframetypeenum.md)

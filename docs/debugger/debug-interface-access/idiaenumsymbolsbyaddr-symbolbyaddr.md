@@ -1,5 +1,5 @@
 ---
-title: IDiaEnumSymbolsByAddr::symbolByAddr | Microsoft Docs
+title: 'IDiaEnumSymbolsByAddr:: symbolByAddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8620dcf7367914e25411fad7ac54a34a5bac54c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b0891cc5eb244b781b69e231d4282b92aa064b91
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833330"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743843"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyaddr"></a>IDiaEnumSymbolsByAddr::symbolByAddr
-Numaralandırıcı görüntü bölüm numarası ve uzaklığı bir arama yaparak yerleştirir.
+Görüntü bölüm numarasına ve uzaklığa göre arama gerçekleştirerek numaralandırıcıyı konumlandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,21 +33,21 @@ HRESULT symbolByAddr ( 
 ```
 
 #### <a name="parameters"></a>Parametreler
- isect
+ ICT
 
-[in] Görüntü bölüm sayısı.
+'ndaki Görüntü bölümü numarası.
 
  offsect
 
-[in] Bölümünde uzaklığı.
+'ndaki Bölümdeki konum.
 
  ppsymbol
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) found sembol temsil eden nesne.
+dışı Bulunan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` , sembol bulunamadı. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Sembol bulunamazsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

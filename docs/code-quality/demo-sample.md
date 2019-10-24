@@ -11,16 +11,16 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 648d00cd59d056e0874c91338a39667088d93e2e
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 071c16267486e1dda1e183cad3c488345974a3cc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018438"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745917"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>Kod C++ analizi için örnek proje
 
-Aşağıdaki yordamlarda [Izlenecek yolu için örneğin nasıl oluşturulacağı gösterilmektedir: Hatalar için CC++ /kodu çözümleyin @ no__t-1. Şu yordamları oluşturun:
+Aşağıdaki yordamlarda Izlenecek yol için örneğin nasıl oluşturulacağı gösterilmektedir [: hatalar Için CC++ /kod çözümleme](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Şu yordamları oluşturun:
 
 - CppDemo adlı bir Visual Studio çözümü.
 
@@ -34,7 +34,7 @@ Yordamlar ayrıca statik kitaplıklar için üst bilgi ve *. cpp* dosyaları iç
 
 1. **Dosya** menüsüne tıklayın, **Yeni**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.
 
-2. **Proje türleri** ağaç listesinde, Visual C++ varsayılan diliniz, vs genişletme **diğer dillerde**değilse.
+2. **Proje türleri** ağaç LISTESINDE, C++ vs genişletme **diğer dillerde**varsayılan diliniz değilse.
 
 3. **Görsel C++** ' i genişletin ve ardından **genel**' e tıklayın.
 

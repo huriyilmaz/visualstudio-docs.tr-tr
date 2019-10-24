@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccb6e8d938bbb807211d0d555294c94948705240
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 70e58883e671dea242e0c69aee0ce6cf8b911371
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653873"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747593"
 ---
 # <a name="develop-tests-from-a-model"></a>Model aracılığıyla test geliştirme
 Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenize yardımcı olur ve gereksinimler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı olur. @No__t_0 kullanıyorsanız, modeller ve testler arasındaki bağlantıları da tutabilirsiniz.
@@ -155,7 +155,7 @@ Assert (countAfter == countBefore = 1);
 
 3. Test paketine, model öğesinde ifade edilen gereksinimi doğrulayan test çalışmalarına ekleyin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md)
 - [Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)

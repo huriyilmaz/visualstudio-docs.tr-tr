@@ -12,18 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37786442124eafea719454ac94c704984f1703f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aac055930e9d1b016bbdc4949cbbdbee798cfaa2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554980"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745312"
 ---
-# <a name="cvhrege"></a>CV_HREG_e
+# <a name="cv_hreg_e"></a>CV_HREG_e
 Bir hedef kayıt belirtir.
 
 > [!NOTE]
-> Çünkü `CV_HREG_e` numaralandırma burada sunabilen çoğaltmak için çok büyük olduğu gibi bir kısaltılmış bir başvuru olarak sağlanır. Eksik girdiler italik gösterilen. Tam numaralandırma cvconst.h üstbilgi dosyasında kullanılabilir.
+> @No__t_0 numaralandırması burada tümüyle çoğaltılamayacak kadar büyük olduğundan, kısaltılmış bir sürüm başvuru olarak sağlanır. Eksik girişler italik olarak oluşturulur. Tüm sabit listesi, cvconst. h üstbilgi dosyasında bulunur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -408,33 +408,33 @@ enum CV_HREG_e {
 } CV_HREG_e;
 ```
 
-## <a name="elements"></a>Öğeleri
-CV_REG_ * Intel 80 x 86 ve ix86 işlemciler ve p-code tarafından kullanılan kaydeder.
+## <a name="elements"></a>Öğeler
+CV_REG_ *, Intel 80x86 ve ix86 işlemcileri ve p kodu tarafından kullanılan Yazmaçları.
 
-CV_R68_ * 68 K işlemcisi tarafından kullanılan kaydeder.
+CV_R68_ * 68K işlemcisi tarafından kullanılan kayıt.
 
-CV_M4_ * MIPS 4000 serisi işlemcisi tarafından kullanılan kaydeder.
+CV_M4_ * kayıt dizilerini MIPS 4000 serisi işlemcisi tarafından kullanılır.
 
-CV_ALPHA_ * dijital ekipman Corporation alfa AXP serisi işlemcisi tarafından kullanılan kaydeder.
+CV_ALPHA_ * dijital ekipman Corporation Alpha AıXP serisi işlemcisi tarafından kullanılan yazmaçlardır.
 
-CV_PPC_ * Motorola/IBM PowerPC işlemci tarafından kullanılan kaydeder.
+CV_PPC_ * Yazmaçları/IBM PowerPC işlemcisi tarafından kullanılan kayıt.
 
-CV_SH3_ * ve CV_SH_\* Hitachi SH3 ve Hitachi SH serisi işlemcisi tarafından kullanılan kaydeder.
+CV_SH3_ * ve CV_SH_ \*, Hitachi SH3 ve Hitachi SH Serisi işlemcisi tarafından kullanılan Yazmaçları.
 
-CV_ARM_ * Gelişmiş RISC makinesi (ARM) işlemcileri tarafından kullanılan kaydeder.
+CV_ARM_ * kayıtları gelişmiş RıSC makinesi (ARM) işlemcileri tarafından kullanılır.
 
-CV_IA64_ * Intel IA64 serisi işlemcileri tarafından kullanılan kaydeder.
+Intel ıA64 serisi işlemciler tarafından kullanılan CV_IA64_ * Yazmaçları.
 
-CV_TRI_ * Infineon teknolojileri TriCore işlemcisi tarafından kullanılan kaydeder.
+CV_TRI_ * kayıt, Infineon teknolojileri tarafından daha karmaşık bir işlemci tarafından kullanılır.
 
-Kayıtları CV_AM33_ * Matsushita/Panasonic AM33 tarafından kullanılan ve işlemciler ilgili.
+CV_AM33_ * kayıtları, Matsushita/Panasonic AM33 ve ilgili işlemciler tarafından kullanılır.
 
-CV_M32R_ * Mitsubishi M32R işlemcisi tarafından kullanılan kaydeder.
+CV_M32R_ *, Mitsubishi M32R işlemcisi tarafından kullanılan yazmaçlardır.
 
 ## <a name="remarks"></a>Açıklamalar
-Her işlemci türü kendi benzersiz yazmaç kümesini kullanır.
+Her işlemci türü kendi benzersiz kayıt kümesini kullanır.
 
-Bu numaralandırma değerleri için aşağıdaki yöntemlerden geçirilir:
+Bu Numaralandırmadaki değerler aşağıdaki yöntemlere geçirilir:
 
 - [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)
 
@@ -446,10 +446,10 @@ Bu numaralandırma değerleri için aşağıdaki yöntemlerden geçirilir:
 
 - [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)
 
-## <a name="requirements"></a>Gereksinimler:
-Üstbilgi: cvconst.h
+## <a name="requirements"></a>Gereklilik
+Üst bilgi: cvconst. h
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)
 - [IDiaStackWalkFrame::put_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)

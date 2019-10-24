@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_restrictedType | Microsoft Docs
+title: 'IDiaSymbol:: get_restrictedType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8929414c0e36983d378ea2a801803321f3aa88c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: eac7e512d2fbfb5367725b3878d292444961b6de
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835532"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739403"
 ---
-# <a name="idiasymbolgetrestrictedtype"></a>IDiaSymbol::get_restrictedType
-Belirtir olup olmadığını `this` işaretçi bayrak eklenmiş gibi kısıtlı.
+# <a name="idiasymbolget_restrictedtype"></a>IDiaSymbol::get_restrictedType
+@No__t_0 işaretçisinin kısıtlı olarak işaretlenip işaretlenmediğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,10 +30,10 @@ HRESULT get_restrictedType(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir işaretçi bir `BOOL` belirtir olup olmadığını `this` işaretçi bayrak eklenmiş gibi kısıtlı.
+dışı @No__t_1 işaretçisinin kısıtlı olarak işaretlenip işaretlenmediğini belirten `BOOL` işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

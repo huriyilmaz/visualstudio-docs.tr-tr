@@ -10,30 +10,30 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65f212496d152236579e63ba037fe351a4dd3370
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1a9ae5f2704d625da2212e92626c33fb384ebbc5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349216"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726559"
 ---
 # <a name="model-for-source-control-packages"></a>Kaynak Denetimi Paketleri için Model
-Şu model, bir kaynak denetim uygulaması örneğini temsil eder. Modelde, uygulamanız gereken arabirimleri ve çağırmalısınız Ortam Hizmetleri bakın. Tüm hizmetleri gibi aslında hizmeti yoluyla elde belirli bir arabirim yöntemlerini çağırın. Sınıfların adlarını, kaynak denetimi nasıl gerçekleştirildiği görmeyi kolaylaştırmak için tanımlanır.
+Aşağıdaki model, kaynak denetimi uygulamasına bir örnek temsil eder. Modelinde, uygulamanız gereken arabirimleri ve çağırmanız gereken ortam hizmetlerini görürsünüz. Tüm hizmetler gibi, aslında hizmet yoluyla elde ettiğiniz belirli bir arabirimin yöntemlerini çağırabilirsiniz. Sınıfların adları, kaynak denetiminin nasıl yapıldığını görmeyi kolaylaştırmak için tanımlanır.
 
- ![SCC&#95;Kurulum örnekler](../../extensibility/internals/media/scc_tup.gif "SCC_TUP") örnek kaynak denetimi projesi
+ ![SCC&#95;önyükleme örnekleri](../../extensibility/internals/media/scc_tup.gif "SCC_TUP") Örnek kaynak denetimi projesi
 
 ## <a name="interfaces"></a>Arabirimler
- Aşağıdaki tabloda gösterilen arabirimlerin listesini kullanarak Visual Studio'da, yeni proje türleri için kaynak denetimi uygulayabilirsiniz.
+ Aşağıdaki tabloda gösterilen arabirimlerin listesini kullanarak Visual Studio 'da yeni proje türleriniz için kaynak denetimi uygulayabilirsiniz.
 
 |Arabirim|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
 |---------------|---------|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>|Projeler ve düzenleyiciler önce bunlar kaydetme ya da değişiklik (değişiklik içeriyor) dosyaları tarafından çağrılır. Bu arabirim kullanılarak erişilen <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> hizmeti.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>|Ekleme, kaldırma veya bir dosya veya dizin yeniden adlandırma izni istemek için projeleri tarafından çağrılır. Bu arabirim, onaylanmış bir ekleme kaldırdığınızda veya yeniden adlandırma eylemi ortam tamamlandıktan bildirmek için projeleri tarafından olarak da adlandırılır. Kullanılarak erişilen <xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments> hizmeti.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>|Projeleri eklediğinizde, bildirim almak için kaydeden herhangi bir varlık tarafından gerçekleştirilen, yeniden adlandırmak veya bir dosya veya dizin kaldırın. Olay bildirimi için kaydolmak için çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2.AdviseTrackProjectDocumentsEvents%2A>.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>|Projeler kaynak denetimi paketi kaydetmek için ve kaynak denetimi durumu hakkında bilgi edinmek için tarafından çağrılır. Bu arabirim kullanılarak erişilen <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager> hizmeti.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>|Dosyalar hakkında bilgi için kaynak denetimi isteklerine yanıt ve kaynak denetim ayarları için proje dosyasını gerekli edinmek için proje tarafından uygulanır.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>|Dosyalar kaydedilmeden veya değiştirmeden önce projeler ve düzenleyicilerle çağırılır. Bu arabirime <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> hizmeti kullanılarak erişilir.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>|Bir dosya veya dizin ekleme, kaldırma veya yeniden adlandırma izni istemek için projeler tarafından çağırılır. Bu arabirim, bir onaylanan ekleme, kaldırma veya yeniden adlandırma eylemi tamamlandığında ortamı bilgilendirmek için projeler tarafından da çağrılır. @No__t_0 hizmeti kullanılarak erişilir.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2>|Projeler bir dosya veya dizin ekler, yeniden adlandırdığınızda veya kaldırırken bildirim almak üzere kaydeden herhangi bir varlık tarafından uygulanır. Olay bildirimine kaydolmak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2.AdviseTrackProjectDocumentsEvents%2A> çağırın.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>|Kaynak denetim paketiyle kaydolmak ve kaynak denetimi durumu hakkında bilgi almak için projeler tarafından çağırılır. Bu arabirime <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager> hizmeti kullanılarak erişilir.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>|Dosyalar hakkında bilgi edinmek ve proje dosyası için gereken kaynak denetimi ayarlarını almak için proje tarafından uygulanır.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>

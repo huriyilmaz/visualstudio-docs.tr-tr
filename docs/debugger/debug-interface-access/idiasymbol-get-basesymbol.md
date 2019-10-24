@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_baseSymbol | Microsoft Docs
+title: 'IDiaSymbol:: get_baseSymbol | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fd03eaead008c4014b10f9390610c7e103a4a6c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 307358522609659a8a95b94a0adf037026f5b948
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62837855"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740950"
 ---
-# <a name="idiasymbolgetbasesymbol"></a>IDiaSymbol::get_baseSymbol
-İşaretçi temel aldığı simgeyi alır.
+# <a name="idiasymbolget_basesymbol"></a>IDiaSymbol::get_baseSymbol
+İşaretçinin dayandığı simgeyi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,11 +30,11 @@ HRESULT get_baseSymbol(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] İşaretçi temel aldığı sembol için bir işaretçi.
+dışı İşaretçinin temel aldığı simgenin işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_baseSymbolId](../../debugger/debug-interface-access/idiasymbol-get-basesymbolid.md)

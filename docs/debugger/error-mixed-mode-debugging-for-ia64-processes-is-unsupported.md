@@ -1,5 +1,5 @@
 ---
-title: 'Hata: IA64 işlemleri için karışık mod hata ayıklaması desteklenmiyor | Microsoft Docs'
+title: 'Hata: ıA64 işlemlerinde karışık modda hata ayıklama desteklenmiyor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -14,19 +14,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c4414651249aa7622e7f7be59e6150a4925f1b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0bddbb1572bd0258eae2052eb34dfa3d0d67a134
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850869"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737632"
 ---
 # <a name="error-mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>Hata: IA64 işlemleri için karışık mod hata ayıklaması desteklenmiyor
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Hata ayıklayıcı Itanium tabanlı bir işlemde karma yerel ve yönetilen kod hata ayıklamayı desteklemiyor.
+@No__t_0 hata ayıklayıcı, Itanium tabanlı bir işlemde karışık yerel ve yönetilen kod hatalarını ayıklamayı desteklemez.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- Hata ayıklama için uygulamanızın bir 32-bit sürümünü oluşturun.
+- Hata ayıklama için uygulamanızın 32 bitlik bir sürümünü oluşturun.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

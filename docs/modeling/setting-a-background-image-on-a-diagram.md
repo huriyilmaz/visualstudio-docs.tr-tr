@@ -2,62 +2,62 @@
 title: Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e79a7fd37bd5f2d5298bda6dca7568c6ba4db6ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5f8806571939cb057852ddd9cca971f9415339ca
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62824028"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748246"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
-Visual Studio Görselleştirme ve modelleme SDK'sı, özel kod kullanılarak oluşturulan bir tasarımcı için arka plan görüntüsü ayarlayabilirsiniz.
+Visual Studio görselleştirme ve modelleme SDK 'da, özel kod kullanarak oluşturulan tasarımcı için arka plan resmini ayarlayabilirsiniz.
 
-## <a name="setting-the-background-image"></a>Arka plan görüntüsü ayarlama
+## <a name="setting-the-background-image"></a>Arka plan görüntüsünü ayarlama
 
-#### <a name="to-set-a-background-image-for-a-generated-designer"></a>İçin oluşturulan bir tasarımcının arka plan görüntüsü ayarlama
+#### <a name="to-set-a-background-image-for-a-generated-designer"></a>Oluşturulmuş bir tasarımcı için arka plan görüntüsü ayarlamak için
 
-1. Diyagram arkaplanı olarak Dsl\Resources dizine geçerli proje için kullanmak istediğiniz görüntü dosyasını kopyalayın.
+1. Diyagramın arka planı olarak kullanmak istediğiniz resim dosyasını geçerli proje için Dsl\Resources dizinine kopyalayın.
 
-2. İçinde **Çözüm Gezgini**, Dsl\Resources klasöre sağ tıklayın, fareyle **Ekle**ve ardından **var olan öğe**.
+2. **Çözüm Gezgini**, Dsl\Resources klasörüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **var olan öğe**' ye tıklayın.
 
-3. İçinde **varolan öğeyi Ekle** iletişim kutusunda, Dsl\Resources klasöre gidin.
+3. **Varolan öğe Ekle** iletişim kutusunda Dsl\Resources klasörüne göz atın.
 
-4. İçinde **dosya türü** listesinde **görüntü dosyaları**.
+4. **Dosya türü** listesinde, **görüntü dosyaları**' na tıklayın.
 
-5. Kopyaladığınız dizine görüntü dosyasına tıklayın ve ardından **Ekle**.
+5. Dizine kopyaladığınız görüntü dosyasına tıklayın ve ardından **Ekle**' ye tıklayın.
 
-6. DSL sağ tıklayın ve **özellikleri** Dsl proje özelliklerini açın.
+6. DSL ' ye sağ tıklayın ve **Özellikler** ' e tıklayarak DSL projesinin özelliklerini açın.
 
-7. Üzerinde **kaynakları** sekmesinde **bu projenin varsayılan kaynak dosyası içermiyor. Oluşturmak için buraya tıklayın.**
+7. **Kaynaklar** sekmesinde, **Bu proje varsayılan bir kaynak dosyası içermez öğesine tıklayın. Bir tane oluşturmak için buraya tıklayın.**
 
-8. Resim sürükleyerek resim dosyası kaynak dosyaya ekleyin **Çözüm Gezgini** kaynakları penceresine.
+8. Resmi **Çözüm Gezgini** kaynak dosyasına sürükleyerek, resim dosyasını kaynak dosyasına ekleyin.
 
-9. Dosya menüsünü açın ve proje özelliklerini Kaydet seçeneğine tıklayın.
+9. Dosya menüsünü açın ve proje özelliklerini kaydetmek için seçeneğe tıklayın.
 
-10. Dsl\Properties\Resources.resx dosya var ve ' % s'dosyası Resources.Designer.cs altındaki sahip olduğunu doğrulayın.
+10. Dsl\Properties\Resources.resx dosyasının var olduğunu ve Resources.Designer.cs dosyasına sahip olduğunu doğrulayın.
 
-11. Resources.Designer.cs eksikse, dosyaya Resources.resx tıklayın, **Çözüm Gezgini**.
+11. Resources.Designer.cs eksikse **Çözüm Gezgini**' de resources. resx dosyasına tıklayın.
 
-12. İçinde **özellikleri** penceresinde `Custom Tool` özelliğini `ResXFileCodeGenerator`.
+12. **Özellikler** penceresinde `Custom Tool` özelliğini `ResXFileCodeGenerator` olarak ayarlayın.
 
-13. İçinde **Çözüm Gezgini**, Dsl projesini sağ tıklayın, fareyle **Ekle**, tıklatıp **yeni klasör**.
+13. **Çözüm Gezgini**, DSL projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' e tıklayın.
 
-14. Klasör adı **özel**.
+14. Klasörü **özel**olarak adlandırın.
 
-15. Özel klasörü sağ tıklatın, **Ekle**, tıklatıp **yeni öğe**.
+15. Özel klasöre sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni öğe**' ye tıklayın.
 
-16. İçinde **Yeni Öğe Ekle** iletişim kutusundaki **şablonları** listesinde **kod dosyası**.
+16. **Yeni öğe Ekle** iletişim kutusunda, **Şablonlar** listesinde, **kod dosyası**' na tıklayın.
 
-17. İçinde **adı** kutusuna `BackgroundImage.cs`, tıklatıp **Ekle**.
+17. **Ad** kutusuna `BackgroundImage.cs` yazın ve **Ekle**' ye tıklayın.
 
-18. Ad alanı, diyagramı sınıf adı ve resim dosyası kaynak adını ayarlama BackgroundImage.cs dosyaya aşağıdaki kodu kopyalayın.
+18. Aşağıdaki kodu BackgroundImage.cs dosyasına kopyalayın, ad alanı, diyagram sınıf adı ve görüntü dosyası kaynak adı ' nı ayarlama.
 
-     "MyDiagramClass" Dsl\GeneratedCode\Diagrams.cs içinde tanımlanan diyagram kısmi sınıf adıyla değiştirin. Bu gibi durumlarda, doğru ad alanı da Dsl\GeneratedCode\Diagrams.cs dosyadan alabilirsiniz.
+     "MyDiagramClass" ifadesini, Dsl\GeneratedCode\Diagrams.cs. içinde tanımlanan diyagram parçalı sınıfının adıyla değiştirin Ayrıca, Dsl\GeneratedCode\Diagrams.cs. dosyasından doğru ad alanını alabilirsiniz
 
     ```csharp
     using System;
@@ -98,9 +98,9 @@ Visual Studio Görselleştirme ve modelleme SDK'sı, özel kod kullanılarak olu
     }
     ```
 
-     Program kodunda modeli özelleştirme hakkında daha fazla bilgi için bkz. [gezinme ve güncelleştirme Program kodundaki modeli](../modeling/navigating-and-updating-a-model-in-program-code.md).
+     Modeli program kodu ile özelleştirme hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Şekiller ve Bağlayıcıları Tanımlama](../modeling/defining-shapes-and-connectors.md)
 - [Metin ve Görüntü Alanlarını Özelleştirme](../modeling/customizing-text-and-image-fields.md)

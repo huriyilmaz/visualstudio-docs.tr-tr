@@ -1,5 +1,5 @@
 ---
-title: Idiasegment::get_length | Microsoft Docs
+title: 'IDiaSegment:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7f559c76bdaf4ca363a374566f4f820cc47dc14
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 74b4e0d96013504a0fd03b7350c58f1987903ad0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839491"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742413"
 ---
-# <a name="idiasegmentgetlength"></a>IDiaSegment::get_length
+# <a name="idiasegmentget_length"></a>IDiaSegment::get_length
 Kesimdeki bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -33,10 +33,10 @@ HRESULT get_ length ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Kesimdeki bayt sayısını döndürür.
+dışı Kesimdeki bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

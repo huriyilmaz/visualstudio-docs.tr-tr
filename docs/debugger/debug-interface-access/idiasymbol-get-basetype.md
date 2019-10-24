@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_basetype | Microsoft Docs
+title: 'IDiaSymbol:: get_baseType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1d38e39fd7687de3ff87737b49972cb389187aa
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 0a3d1bb8b2f3095fd35488c47f823e7b3603995b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62837613"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740912"
 ---
-# <a name="idiasymbolgetbasetype"></a>IDiaSymbol::get_baseType
-Bu simgenin temel türünü alır<em>.</em>
+# <a name="idiasymbolget_basetype"></a>IDiaSymbol::get_baseType
+Bu sembolün temel türünü alır<em>.</em>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,16 +33,16 @@ HRESULT get_baseType (
 #### <a name="parameters"></a>Parametreler
 `pRetVal`
 
-[out] Bir değer döndürür [BasicType numaralandırması](../../debugger/debug-interface-access/basictype.md) sembol temel türünü belirten sabit listesi.
+dışı Simgenin temel türünü belirten [BasicType numaralandırma](../../debugger/debug-interface-access/basictype.md) numaralandırmasından bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
-Temel türü bir sembol için öncelikle sembol türü alma ve türü temel tür için döndürülen interrogating tarafından belirlenebilir. Bazı simgeleri bir taban türü olmayabilir Not — Örneğin, bir yapı adı.
+Bir simgenin temel türü, ilk olarak simgenin türü ve sonra temel tür için döndürülen tür için bir alan tarafından belirlenebilir. Bazı sembollerin temel bir tür (örneğin, bir yapı adı) olamayacağını unutmayın.
 
 ## <a name="example"></a>Örnek
 
@@ -63,10 +63,10 @@ if (pType->get_type( &pBaseType ) == S_OK)
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [BasicType Numaralandırması](../../debugger/debug-interface-access/basictype.md)
 - [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)

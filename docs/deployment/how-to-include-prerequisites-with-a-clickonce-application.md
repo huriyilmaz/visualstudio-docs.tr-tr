@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ClickOnce uygulamasına Önkoşullar dahil etme | Microsoft Docs'
+title: 'Nasıl yapılır: ClickOnce uygulaması ile önkoşulları dahil etme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c66bf0a5-8c93-4e68-a224-3b29ac36fe4d
@@ -8,46 +8,46 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47142e63976a743166e5211631e77a0c0878ad9c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: c6826ae1f957778ac6eea556fdbbe9589ab3390b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63406959"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727901"
 ---
-# <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulamasına Önkoşullar dahil etme
-Önkoşul yazılımı dağıtmadan önce bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulaması gerekir indirmeniz olan yükleme paketlerini geliştirme bilgisayarınıza bu Önkoşullar. Ne zaman bir uygulamayı yayımlamak ve seçin **Uygulamamla aynı konumdan önkoşulları karşıdan**, eğer yükleyici paketleri olmayan bir hata meydana gelir **paketleri** klasör.
+# <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları dahil etme
+Önkoşul yazılımlarını bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayla dağıtabilmeniz için önce bu önkoşulların yükleyici paketlerini geliştirme bilgisayarınıza indirmeniz gerekir. Bir uygulamayı yayımladığınızda ve Uygulamam **ile aynı konumdan önkoşulları indir**' i seçtiğinizde, yükleyici paketleri **paketler** klasöründe değilse bir hata oluşur.
 
 > [!NOTE]
-> .NET Framework için bir yükleyici paket eklemek için bkz [geliştiriciler için .NET Framework Dağıtım Kılavuzu](/dotnet/framework/deployment/deployment-guide-for-developers).
+> .NET Framework için bir yükleyici paketi eklemek için, bkz. [geliştiriciler için .NET Framework dağıtım kılavuzu](/dotnet/framework/deployment/deployment-guide-for-developers).
 
-## <a name="Package"></a> Package.xml kullanarak bir yükleyici paket eklemek için
+## <a name="Package"></a>Package. xml kullanarak bir yükleyici paketi eklemek için
 
-1. Dosya Gezgini'nde Aç **paketleri** klasör.
+1. Dosya Gezgini 'nde **paketler** klasörünü açın.
 
-    Varsayılan olarak, yoludur `%ProgramFiles(x86)%\Microsoft SDKs\ClickOnce Bootstrapper\Packages\`.
+    Varsayılan olarak, yol `%ProgramFiles(x86)%\Microsoft SDKs\ClickOnce Bootstrapper\Packages\`.
 
-2. Eklemek istediğiniz ön koşul için klasörü açın ve ardından'ın yüklü sürümü için dil klasörü açın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (örneğin, **tr** İngilizce).
+2. Eklemek istediğiniz önkoşul için klasörü açın ve ardından [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklü sürümünüz için dil klasörünü açın (örneğin, **en** İngilizce).
 
-3. Not Defteri'nde açın *Package.xml* dosya.
+3. Not defteri 'nde *Package. xml* dosyasını açın.
 
-4. Bulun **adı** öğesini içeren **http://go.microsoft.com/fwlink** ve URL'yi kopyalayın. Dahil **LinkId** bölümü.
+4. **@No__t_2**içeren **ad** öğesini bulun ve URL 'yi kopyalayın. **LinkId** bölümünü dahil edin.
 
    > [!NOTE]
-   > Hayır ise **adı** ögesinin **http://go.microsoft.com/fwlink** açın **Product.xml** bulun ve ön koşul için kök klasöründeki dosya **fwlink** dize.
+   > **Ad** öğesi **http://go.microsoft.com/fwlink** içermiyorsa, önkoşul için kök klasörde **Product. xml** dosyasını açın ve **fwlink** dizesini bulun.
 
    > [!IMPORTANT]
-   > Bazı ön koşullar (örneğin, 32-bit veya 64-bit sistemler için) birden çok yükleme paketine sahiptirler. Birden çok **adı** öğeleri içeren **fwlink**, bunların her biri için kalan adımları yinelemeniz gerekir.
+   > Bazı ön koşullar (örneğin, 32-bit veya 64-bit sistemler için) birden çok yükleme paketine sahiptirler. Birden çok **ad** öğesi **fwlink**içeriyorsa, her biri için kalan adımları tekrarlamanız gerekir.
 
-5. Tarayıcınızın adres çubuğuna URL'yi yapıştırın ve ardından, çalıştırmanız veya kaydetmeniz istendiğinde **Kaydet**.
+5. URL 'YI tarayıcınızın adres çubuğuna yapıştırın ve sonra çalıştırmanız veya kaydetmeniz istendiğinde **Kaydet**' i seçin.
 
     Bu adım, yükleyici dosyasını bilgisayarınıza yükler.
 
 6. Dosyayı ön koşul için kök klasörüne kopyalayın.
 
-    Örneğin, Windows Installer 4.5 ön için dosyaya kopyalayın *\Packages\WindowsInstaller4_5* klasör.
+    Örneğin, Windows Installer 4,5 önkoşulu için, dosyayı *\Packages\ınstaller4_5* klasörüne kopyalayın.
 
     Şimdi, yükleyici paketi uygulamanız ile dağıtabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları işaretli yükleyin](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
+- [Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları yüklemek](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)

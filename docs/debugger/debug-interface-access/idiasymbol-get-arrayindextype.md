@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_arrayındextype | Microsoft Docs
+title: 'IDiaSymbol:: get_arrayIndexType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a89afb7eb7d16f95ab5212d8cc081ac1cd84521
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 94a1ff47ce7ad6436f74f648edd27e02f98e54a6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64813946"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741049"
 ---
-# <a name="idiasymbolgetarrayindextype"></a>IDiaSymbol::get_arrayIndexType
-Symbol arabirimi simgenin dizi dizini türünde alır.
+# <a name="idiasymbolget_arrayindextype"></a>IDiaSymbol::get_arrayIndexType
+Simgenin dizi dizin türünün sembol arabirimini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,23 +33,23 @@ HRESULT get_arrayIndexType ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) simgenin dizi dizini türünü temsil eden nesne.
+dışı Simgenin dizi dizin türünü temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bazı diller, bir dizi için bir dizin olarak kullanılan türünü belirtebilirsiniz. Bu yöntemin döndürdüğü simge türü belirtir.
+ Bazı diller bir diziye dizin olarak kullanılan türü belirtebilir. Bu yöntemden döndürülen simge bu türü belirtir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

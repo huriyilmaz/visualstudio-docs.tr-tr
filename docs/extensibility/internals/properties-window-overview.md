@@ -10,44 +10,44 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05c772365c42037bfd97a2a31b80efc2f5f1a48b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 61887844e06a88cab9eaa8ca8be7a89c124e2340
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347809"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72725079"
 ---
 # <a name="properties-window-overview"></a>Özellikler Penceresine Genel Bakış
-**Özellikleri** windows bulunan iki ana tür seçili nesnelerin özelliklerini görüntülemek için kullanılan pencere [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamı (IDE). Bu iki windows türleri şunlardır:
+**Özellikler** penceresi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ORTAMıNDA (IDE) kullanılabilen iki ana Windows türünde seçilen nesneler için özellikleri göstermek üzere kullanılır. Bu iki tür pencere şunlardır:
 
-- Çözüm Gezgini, sınıf görünümü ve nesne tarayıcısı gibi araç pencereleri
+- Çözüm Gezgini, Sınıf Görünümü ve nesne tarayıcısı gibi araç pencereleri
 
-- Bu tür düzenleyiciler ve tasarımcılar Form Tasarımcısı, XML Düzenleyicisi'ni ve HTML düzenleyicisi içeren belge pencereleri
+- Form Tasarımcısı, XML Düzenleyicisi ve HTML Düzenleyicisi olarak böyle düzenleyiciler ve tasarımcıları içeren belge pencereleri
 
 ## <a name="using-the-properties-window"></a>Özellikler penceresini kullanma
- **Özellikleri** penceresi tek veya birden çok Seçili öğelerin özelliklerini görüntüler. Birden çok öğe seçili değilse, seçilen tüm nesneler için tüm özellikleri kesişimi görüntülenir.
+ **Özellikler** penceresi, seçilen tek veya birden çok öğenin özelliklerini görüntüler. Birden çok öğe seçilirse, seçilen tüm nesneler için tüm özelliklerin kesişimi görüntülenir.
 
- Bir form Tasarım penceresinde veya COM + meta verileri kullanarak HTML düzenleyicisi içinde seçili bir nesne için ilgili olayları görüntülenir **özellikleri** penceresi. Örneğin, bir düğmeyi seçin ve onun ilişkili olayları görüntüleyen bir `OnClick` olayı için bu düğmeyi bağlanabilir.
+ Form Tasarım penceresi veya COM+ meta verilerini kullanan HTML Düzenleyicisi içindeki seçili nesneyle ilgili olaylar, **Özellikler** penceresinde görüntülenir. Örneğin, bir düğme seçebilir ve bu düğmeye bağlanabilen `OnClick` olayı gibi ilişkili olaylarını görüntüleyebilirsiniz.
 
- Görüntülenen olayları **özellikleri** penceresi öncelikle koda bağlı olan nesneleri ile kullanılır. Kod ile yapmak için hiçbir şey yüklü olmayan bir dosya biçimi düzenliyorsanız, meydana gelen olayları için yapmayacağınız. Olayları yalnızca görüntülenir **özellikleri** arasında kod ve belirli nesneleri ile ilişkili belirli olaylar çalışan bir bağlama olduğunda penceresi. Buna örnek olarak, bu nesne etkinleştirildiğinde yürüten seçili nesnenin arka plan kod olacaktır.
+ **Özellikler** penceresinde görüntülenen olaylar öncelikle koda bağlanan nesnelerle birlikte kullanılır. Kodla ilgili hiçbir şey olmayan bir dosya biçimini düzenliyorsanız, herhangi bir olayınıza sahip olursunuz. Olaylar yalnızca çalışan kod ve belirli nesnelerle ilişkili belirli olaylar arasında bir bağlama olduğunda **Özellikler** penceresinde görüntülenir. Bu nesnenin bir örneği, nesne etkinleştirildiğinde yürütülen seçili bir nesnenin arkasında kod olabilir.
 
- Aşağıdaki tabloda tarafından kullanılan birincil arabirimi **özellikleri** penceresi.
+ Aşağıdaki tabloda, **Özellikler** penceresi tarafından kullanılan birincil arabirimler listelenmektedir.
 
 |Arabirim adı|Açıklama|
 |--------------------|-----------------|
-|<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|Kategoriler bir listesini sağlar **özellikleri** penceresi ve her bir özellik için bir kategori eşler.|
-|[IDispatch arabirimi](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)|Bir nesnenin yöntemleri ve programlama Araçlar ve Otomasyon destekleyen diğer uygulamalar için özellikler sunar.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>|Olarak adlandırılan üç nokta (...) düğmeleri sağlar *oluşturucular* nesne tarafından uygulanan kalıcı iletişim kutusu windows açın. Değer bir kolayca metin alanında kullanıcı tarafından değil yazıldığında kullanılır. Örneğin, sizin için RGB değeri belirleyen bir renk seçiciyi açmak için kullanılabilir.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|Görüntülenen bilgileri güncelleştirmek için kullanılan nesneleri erişim sağlayan **özellikleri** penceresi. <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> VSPackage'ları tarafından görüntülenecek ilgili özellikleri ile seçilebilir nesneleri içeren her bir pencere için uygulanır.|
-|<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>|Bir arabirim ve alanların bir yapının yöntemleri gibi bir nesne türü hakkında bilgi sağlar.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>|VSPackage seçimi olayları bildirim alacak ve geçerli proje hiyerarşisi, öğe, öğe değeri ve komut UI bağlamı hakkında bilgi almak için etkinleştirir.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect>|Birden çok seçimin erişimi olan bir ortam sağlar.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>|Bazı özellikler görüntülenen yerelleştirilmiş adlar sağlamak için kullanılan **özellikleri** penceresi.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents>|Geçerli seçimi, öğe değeri ya da komut UI bağlamı değişikliklerinin kayıtlı VSPackages bildirir.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>|Ortam geçerli seçim içindeki bir değişikliği bildirir ve yeni seçime ilgili hiyerarşi ve öğe bilgilerine erişim sağlar.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|**Özellikler** penceresine kategorilerin bir listesini sağlar ve her bir özelliği bir kategoriye eşler.|
+|[IDispatch arabirimi](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)|Programlama araçları ve otomasyonu destekleyen diğer uygulamalar için bir nesnenin yöntemlerini ve özelliklerini gösterir.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>|Nesnenin kendisi tarafından uygulanan kalıcı iletişim kutusu pencerelerini açan *oluşturucular* adlı üç nokta (...) düğmelerini sağlar. Bir değer bir metin alanındaki Kullanıcı tarafından kolayca yazılmadığından kullanılır. Örneğin, sizin için RGB değerini belirleyen bir renk seçici açmak için kullanılabilir.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|**Özellikler** penceresinde görüntülenecek bilgileri güncelleştirmek için kullanılan nesnelere erişim sağlar. <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>, ilgili özelliklerle birlikte seçilebilir nesneler içeren her bir pencere için VSPackages tarafından uygulanır.|
+|<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>|Bir arabirimin yöntemleri ve bir yapı alanları gibi bir nesnenin türü hakkında bilgi sağlar.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>|VSPackages 'in seçim olaylarının bildirimini almasını ve geçerli proje hiyerarşisi, öğe, öğe değeri ve komut UI bağlamı hakkında bilgi almasını sağlar.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect>|Çoklu seçimlere erişimi olan ortamı sağlar.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>|**Özellikler** penceresinde görünen bazı özelliklerde yerelleştirilmiş adlar sağlamak için kullanılır.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents>|Geçerli seçim, öğe değeri veya komut Kullanıcı arabirimi bağlamındaki değişiklikleri kayıtlı VSPackages 'e bildirir.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>|Geçerli seçimdeki bir değişikliğin ortamına bildirir ve yeni seçimle ilgili hiyerarşi ve öğe bilgilerine erişim sağlar.|
 
- Daha fazla bilgi için `IDispatch`, MSDN Kitaplığı'na bakın.
+ @No__t_0 hakkında daha fazla bilgi için MSDN Kitaplığı ' na bakın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Özellikleri Genişletme](../../extensibility/internals/extending-properties.md)
 - [Özellikler Penceresi Alanları ve Arabirimleri](../../extensibility/internals/properties-window-fields-and-interfaces.md)

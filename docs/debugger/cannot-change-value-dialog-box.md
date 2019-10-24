@@ -1,5 +1,5 @@
 ---
-title: Değer iletişim kutusu değiştiremezsiniz | Microsoft Docs
+title: Değer değiştirilemez Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,22 +18,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f8f9dafe8ada8914591426dea9abc867de2236f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 97f057edefefd590c37b49d709ecf8a6e029b905
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564157"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745737"
 ---
 # <a name="cannot-change-value-dialog-box"></a>Değer Değiştirilemez İletişim Kutusu
 ## <a name="error"></a>Hata
- `The value of this variable cannot be changed` &#124;`The name` *adı* `does not exist in the current context` &#124; *çeşitli başka iletiler*
+ &#124; *diğer diğer iletiler* `does not exist in the current context` &#124; `The value of this variable cannot be changed` `The name` *adı*
 
- Hata ayıklayıcı penceresindeki (Otomatikler, izleme veya yerel öğeler windows) veya QuickWatch iletişim kutusundaki geçersiz bir değer için bir değişken içeriğini değiştirmeye çalıştığınızda bu ileti kutusu görünür. Örneğin, bir karakter dizesindeki bir tamsayı değişkeninin değeri ayarlamaya çalışırsanız, bu ileti kutusu görünür.
+ Bu ileti kutusu, bir değişkenin içeriğini bir hata ayıklayıcı penceresinde (Oto, Izleme veya Yereller Windows) veya QuickWatch iletişim kutusunda geçersiz bir değerle değiştirmeye çalıştığınızda görüntülenir. Örneğin, bir tamsayı değişkeninin değerini bir karakter dizesine ayarlamaya çalışırsanız bu ileti kutusu görünür.
 
 ## <a name="solution"></a>Çözüm
- Hata ayıklayıcı pencereye yazın giriş olduğundan emin olun veya QuickWatch iletişim kutusu ayarlamaya çalıştığınız değişken için geçerli bir değeri temsil eder.
+ Hata ayıklayıcı penceresinde veya QuickWatch iletişim kutusunda yazdığınız girişin ayarlamaya çalıştığınız değişken için geçerli bir değeri temsil ettiğini doğrulayın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklayıcısındaki İfadeler](../debugger/expressions-in-the-debugger.md)

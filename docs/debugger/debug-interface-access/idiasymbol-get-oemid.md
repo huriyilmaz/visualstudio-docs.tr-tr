@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_oemıd | Microsoft Docs
+title: 'IDiaSymbol:: get_oemId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91d6097fd558ee3fd4e61485eb53cd25a0b7c6a2
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: d417b0c75db1b2153e9a43eb2e45f3d9550971d1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796047"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739600"
 ---
-# <a name="idiasymbolgetoemid"></a>IDiaSymbol::get_oemId
-Sembolün orijinal ekipman üreticisi (OEM) kimliği değerini alır.
+# <a name="idiasymbolget_oemid"></a>IDiaSymbol::get_oemId
+Simgenin özgün ekipman üreticisi (OEM) KIMLIĞI değerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,17 +33,17 @@ HRESULT get_oemId ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] OEM tanımlayan benzersiz bir değer döndürür.
+dışı Bir OEM tanımlayan benzersiz bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik yalnızca sembolleriyle uygulanır bir [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) tür `SymTagCustomType`.
+ Bu özellik yalnızca [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) türü `SymTagCustomType` olan semboller için geçerlidir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

@@ -18,12 +18,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c19f436eddb3311e3bba70420dba6067ce2a8dca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 502bb7b1ab6236fd88c7c6dbc789737e50686d89
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645280"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747738"
 ---
 # <a name="shell-command"></a>Kabuk Komutu
 @No__t_0 içinden çalıştırılabilir programları başlatır.
@@ -84,7 +84,7 @@ Aşağıdaki komut, dosya `MyText.txt` `Text` klasöre kopyalamak için xcopy. e
 >Tools.Shell /o /c xcopy.exe c:\MyText.txt c:\Text\MyText.txt
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)

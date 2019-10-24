@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Spy ++ görünümlerini görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: Spy + + görünümlerini görüntüleme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,16 +10,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 230834e7915114e2a647b21834b4e90b12c54a64
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f56a57a347b6cd8892a264070a3ee022ffb7853
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894267"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733556"
 ---
-# <a name="how-to-display-spy-views"></a>Nasıl yapılır: Spy ++ görünümlerini görüntüleme
-Spy ++ başladığında, açılır [Windows görünümü](../debugger/windows-view.md), tüm windows ve makinenizde kullanılabilir denetimleri ağaç görünümü. Bu kök pencerenin belirlenmiş "Windows 1." Ayrıca üç diğer Spy ++ görünümleri kullanılabilen vardır: [İletiler görünümünü](../debugger/messages-view.md), [işler görünümü](../debugger/processes-view.md), ve [iş parçacıkları görünümü](../debugger/threads-view.md). İstenen görünümünden görüntüleyebilirsiniz **Spy** menüsü. Daha fazla bilgi için [Spy ++ görünümleri](../debugger/spy-increment-views.md).
+# <a name="how-to-display-spy-views"></a>Nasıl Yapılır: Spy++ Görünümlerini Görüntüleme
+Spy + + başladığında, makinenizde bulunan tüm pencerelerin ve denetimlerin ağaç görünümü [Windows görünümü](../debugger/windows-view.md)'nde açılır. Bu kök pencere, "Windows 1" şeklinde açıklamalı. Ayrıca üç farklı Spy + + görünümü mevcuttur: [Iletiler görünümü](../debugger/messages-view.md), [süreçler görünümü](../debugger/processes-view.md)ve [iş parçacıkları görünümü](../debugger/threads-view.md). **Spy** menüsünden istediğiniz görünümü görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [Spy + + görünümleri](../debugger/spy-increment-views.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Spy++ kullanma](../debugger/using-spy-increment.md)
 - [Spy++ Başvurusu](../debugger/spy-increment-reference.md)

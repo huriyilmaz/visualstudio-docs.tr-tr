@@ -1,5 +1,5 @@
 ---
-title: 'Uyarı: Betik hata ayıklaması devre dışı | Microsoft Docs'
+title: 'Uyarı: betik hata ayıklaması devre dışı | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,33 +15,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50fe457e2b66a4c1ddafc9fc24658f58f6f753d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 91875a370f6d072cf2dd69807f516b8f1a808461
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901029"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728205"
 ---
-# <a name="warning-script-debugging-disabled"></a>Uyarı: Betik hata ayıklaması devre dışı
-Internet Explorer'da betik hata ayıklama şu anda devre dışı
+# <a name="warning-script-debugging-disabled"></a>Uyarı: Betik Hata Ayıklaması Devre Dışı
+Internet Explorer 'da betik hata ayıklaması Şu anda devre dışı
 
- Internet Explorer'da betik hata ayıklamasını etkinleştirmeden betik hata ayıklama çalıştığınızda bu uyarı oluşur. Güvenlik nedenleriyle, Internet Explorer varsayılan betik hata ayıklamasını devre dışı bırakır.
+ Bu uyarı, Internet Explorer 'da betik hata ayıklamasını etkinleştirmeden betiği hata ayıklamaya çalıştığınızda oluşur. Güvenlik nedenleriyle, Internet Explorer betik hata ayıklamasını varsayılan olarak devre dışı bırakır.
 
-### <a name="to-enable-script-debugging-in-internet-explorer"></a>Internet Explorer'da betik hata ayıklamasını etkinleştirmek için
+### <a name="to-enable-script-debugging-in-internet-explorer"></a>Internet Explorer 'da betik hata ayıklamasını etkinleştirmek için
 
-1. Internet Explorer **Araçları** menüsünde seçin **Internet Seçenekleri**.
+1. Internet Explorer **araçları** menüsünde **Internet seçenekleri**' ni seçin.
 
 2. **İnternet Seçenekleri** iletişim kutusunda **Gelişmiş** ’e tıklayın.
 
-3. Üzerinde **Gelişmiş** sekmesinde, konum **ayarları** kutusunda **gözatma** kategorisi.
+3. **Gelişmiş** sekmesinde, **Ayarlar** kutusu, **Gözatma** kategorisi ' ne bakın.
 
-4. NET **devre dışı bırak (Internet Explorer) ayıklamasını**.
+4. **Betik hata ayıklamayı devre dışı bırak (Internet Explorer)** seçimini kaldırın.
 
-5. **Tamam**'ı tıklatın.
+5. **Tamam**'a tıklayın.
 
-6. Çıkmak ve Internet Explorer'ı yeniden başlatın.
+6. Çık ve Internet Explorer 'ı yeniden Başlat.
 
-     Yeni ayarlar artık uygulanmaz.
+     Yeni ayarlar artık etkin olacak.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [Nasıl yapılır: Betiğe Ekleme](../debugger/how-to-attach-to-script.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl Yapılır: Betiğe Ekleme](../debugger/how-to-attach-to-script.md)

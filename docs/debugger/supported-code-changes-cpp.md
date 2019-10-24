@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e38123be6b780aa9f37dc2b329ec36e3f18e793
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: b93c9cfa6767aea83d941cbc8684b27517c8f911
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72430576"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729560"
 ---
 # <a name="supported-code-changes-c"></a>Desteklenen Kod Değişiklikleri (C++)
 Projeler için C++ Düzenle ve devam et çoğu kod değişikliği türünü işler. Ancak, bazı değişiklikler program yürütmesi sırasında uygulanamaz. Bu değişiklikleri uygulamak için yürütmeyi durdurmanız ve kodun yeni bir sürümünü oluşturmanız gerekir.
@@ -66,7 +66,7 @@ Projeler için C++ Düzenle ve devam et çoğu kod değişikliği türünü işl
 
 - /Zo ile derlenen yerel uygulamalarda hata ayıklama [(Iyileştirilmiş hata ayıklamayı geliştirme)](/cpp/build/reference/zo-enhance-optimized-debugging)
 
-- Visual Studio 'nun Visual Studio 2015 güncelleştirme 1 ' den önceki sürümlerinde UWP uygulamalarında veya bileşenlerinde hata ayıklaması yapın. Visual Studio 2015 güncelleştirme 1 ' den başlayarak, artık `/bigobj` anahtarıyla @no__t- C++ 1 derleyici anahtarını DESTEKLEDIĞINDEN, UWP uygulamaları ve DirectX uygulamalarında Düzenle ve devam et ' i kullanabilirsiniz. Ayrıca, `/FASTLINK` anahtarıyla derlenen ikili dosyalarla Düzenle ve devam et ' i kullanabilirsiniz.
+- Visual Studio 'nun Visual Studio 2015 güncelleştirme 1 ' den önceki sürümlerinde UWP uygulamalarında veya bileşenlerinde hata ayıklaması yapın. Visual Studio 2015 güncelleştirme 1 ' den başlayarak, artık `/bigobj` anahtarıyla `/ZI` derleyici anahtarını desteklediğinden C++ , UWP uygulamalarında Düzenle ve devam et ' i kullanabilirsiniz. Ayrıca, `/FASTLINK` anahtarıyla derlenen ikili dosyalarla Düzenle ve devam et ' i kullanabilirsiniz.
 
 - Windows 98 ' de hata ayıklama.
 
@@ -136,5 +136,5 @@ Projeler için C++ Düzenle ve devam et çoğu kod değişikliği türünü işl
 ## <a name="BKMK_IDL_Attribute_Limitations"></a>IDL özniteliği sınırlamaları
  Düzenle ve devam et, arabirim tanımı (IDL) dosyalarını yeniden oluşturmaz. Bu nedenle, hata ayıklarken IDL özniteliklerinde yapılan değişiklikler yansıtılmayacaktır. IDL özniteliklerinin değişikliklerinin sonucunu görmek için, hata ayıklamayı durdurup uygulamanızı yeniden oluşturmanız gerekir. Düzenle ve devam et, IDL öznitelikleri değiştiyse bir hata veya uyarı oluşturmaz. Daha fazla bilgi için bkz. [IDL öznitelikleri](/cpp/windows/idl-attributes).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Düzenle ve devam etC++()](../debugger/edit-and-continue-visual-cpp.md)

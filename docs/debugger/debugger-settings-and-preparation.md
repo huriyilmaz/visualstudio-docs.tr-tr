@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6603ca7ffc39ecc819fb2e54024776760ccfa60
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 2704f4e73b1077f14c89e377453a858d341a2738
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536056"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738274"
 ---
 # <a name="debugger-settings-and-preparation"></a>Hata Ayıklayıcısı Ayarları ve Hazırlığı
 Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı ile programınızda hata ayıklaması yapmak için gereken hazırlık açıklanmaktadır. Programınızı proje şablonlarını kullanarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturursanız, bu ayarlar hata ayıklama yapılandırmasında sizin için doğru şekilde ayarlanır.
@@ -46,7 +46,7 @@ Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve [!INCLUDE[vsprv
 
  [Nasıl yapılır: hata ayıklama için eski bir .NET Framework sürümünü belirtme](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md) Hangi sürümün kullanılacağını hata ayıklayıcı olarak göstermek için bir kayıt defteri anahtarının nasıl ayarlanacağını açıklar.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
 - [Visual Studio’da hata ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

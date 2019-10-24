@@ -1,5 +1,5 @@
 ---
-title: Yerel kod hata ayıklaması SSS | Microsoft Docs
+title: Yerel kod SSS hatalarını ayıklama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,25 +20,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28942594abb6291a7b0103b8abf1736ca68346e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 15a94d20ade7bfe3e5aaac2c90bb3ba452ef4330
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851667"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738181"
 ---
 # <a name="debugging-native-code-faqs"></a>Yerel Kod Hata Ayıklaması SSS
 Aşağıdaki konular, bazı sık sorulan soruların yanıtlarını içerir:
 
-- [My Program tek başına çalıştırırken erişim İhlallerinde nasıl Ayıklayabilirim?](../debugger/how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger-q.md)
+- [Programımı tek başına çalıştırırken erişim Ihlallerinde nasıl hata ayıklayabilirim?](../debugger/how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger-q.md)
 
 - [Erişim İhlalinde Nasıl Hata Ayıklayabilirim?](../debugger/how-can-i-debug-an-access-violation-q.md)
 
-- [Ben kendi İşaretçilerimin bellek adresini bozan varsa bozmadığını nasıl?](../debugger/how-can-i-find-out-if-my-pointers-corrupt-a-memory-address-q.md)
+- [Işaretçilerimin bellek adresini bozuyor olup olmadığını nasıl öğrenebilirim?](../debugger/how-can-i-find-out-if-my-pointers-corrupt-a-memory-address-q.md)
 
 - [Kimin Yanlış Parametre Değeri Geçirdiğini Nasıl Bulabilirim?](../debugger/how-can-i-find-out-who-is-passing-a-wrong-parameter-value-q.md)
 
-- [Bir ' % s'işlevi yüzlerce kaç kez başarısız çağrı çağırırken?](../debugger/when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed-q.md)
+- [Bir Işlevi yüzlerce kez çağırırken çağrı başarısız oldu mu?](../debugger/when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed-q.md)
 
 - [Win32 Hata Kodlarına Nereden Bakabilirim?](../debugger/where-can-i-look-up-win32-error-codes-q.md)
 
@@ -46,8 +46,8 @@ Aşağıdaki konular, bazı sık sorulan soruların yanıtlarını içerir:
 
 - [Ön Plan Programında Hata Ayıklarken Hata Ayıklayıcı Penceresini Nasıl Kullanabilirim?](../debugger/how-can-i-use-debugger-windows-while-debugging-a-foreground-program-q.md)
 
-- [Nasıl MFC'de durdurulduysa MFC'yi çağıran işleve geri elde?](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)
+- [MFC 'de durdurulmuşsa, MFC 'yi çağıran Işleve nasıl geri alabilirim?](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

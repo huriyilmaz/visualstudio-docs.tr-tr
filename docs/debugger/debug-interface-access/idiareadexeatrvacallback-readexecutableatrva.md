@@ -1,5 +1,5 @@
 ---
-title: Idiareadexeatrvacallback::readexecutableatrva | Microsoft Docs
+title: 'Idiareadexeatrboş Allback:: ReadExecutableAtRVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf423ddc91926fb04adac849783b7c26b4c4f720
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ca1b1ec2bea56ad167951ad8b60cf849bd22e315
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828482"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742795"
 ---
 # <a name="idiareadexeatrvacallbackreadexecutableatrva"></a>IDiaReadExeAtRVACallback::ReadExecutableAtRVA
-Bayt belirtilen göreli sanal adres (RVA) yürütülebilir dosyasından başlayarak belirtilen sayıda okur.
+Yürütülebilir dosyadan belirtilen göreli sanal adresten (RVA) başlayarak belirtilen bayt sayısını okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,23 +36,23 @@ HRESULT ReadExecutableAtRVA ( 
 #### <a name="parameters"></a>Parametreler
  `relativeVirtualAddress`
 
-[in] Okumanın başlatılacağı RVA yürütülebilir dosya.
+'ndaki Okumaya başlamak için çalıştırılabilir dosyadaki RVA.
 
  `cbData`
 
-[in] Okunacak bayt sayısı.
+'ndaki Okunacak bayt sayısı.
 
  `pcbData`
 
-[out] Okunan bayt sayısını döndürür.
+dışı Okunan bayt sayısını döndürür.
 
  `data[]`
 
-[out içinde] Dosyadan okunan bayt ile doldurulmuş bir dizi.
+[in, out] Dosyadan okunan bayt ile doldurulmuş bir dizi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bir göreli sanal adres kullanarak bir çalıştırılabilir dosyadan veri baytı yüklenecek DIA destek kod tarafından çağrılır. Support, bu yöntem çağrılır [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) yöntemi.
+ Bu yöntem, bir sanal adresi kullanarak bir yürütülebilir dosyadan veri baytları yüklemek için ÇYA destek kodu tarafından çağırılır. Bu yöntem, [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu desteklemek için çağrılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)

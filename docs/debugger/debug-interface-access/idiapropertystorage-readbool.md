@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadBOOL | Microsoft Docs
+title: 'IDiaPropertyStorage:: ReadBOOL | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5cc189283d6e9910b0b01d3d3e1ca28165bf500
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d776e37bab189e61d0264f4cbda24f89cb4501ce
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839699"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742934"
 ---
 # <a name="idiapropertystoragereadbool"></a>IDiaPropertyStorage::ReadBOOL
-Okur `BOOL` değerlerde özellik kümesi.
+Bir özellik kümesindeki `BOOL` değerleri okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,17 +34,17 @@ HRESULT ReadBOOL ( 
 #### <a name="parameters"></a>Parametreler
  `id`
 
-[in] Okunacak özellik tanımlayıcısı (`PROPID` WTypes.h tanımlanan bir `ULONG`).
+'ndaki Okunacak özelliğin tanımlayıcısı (`PROPID` `ULONG` olarak WTypes. h içinde tanımlanmıştır).
 
  `pValue`
 
-[out] Özellik değeri döndürür.
+dışı Özellik değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_INVALIDARG` özelliği türü değilse `BOOL`.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde bir hata kodu döndürür. Özellik `BOOL` türünde değilse `E_INVALIDARG` döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Tutarlı sonuçlar için yorumlar `BOOL` sıfır olmayan değerler olacak şekilde değeri `TRUE` ve sıfır `FALSE`.
+ Tutarlı sonuçlar için `BOOL` değerini, sıfır dışı değerlerin `TRUE` ve sıfır `FALSE` olacak şekilde yorumlayın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

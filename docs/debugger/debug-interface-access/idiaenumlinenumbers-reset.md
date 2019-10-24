@@ -1,5 +1,5 @@
 ---
-title: Idiaenumlinenumbers::reset | Microsoft Docs
+title: 'IDiaEnumLineNumbers:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb1ed8a531e7302bd184490b8017679712ef131a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d13040c3a35b1a41d3d03641194e563abc80e6de
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833540"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744378"
 ---
 # <a name="idiaenumlinenumbersreset"></a>IDiaEnumLineNumbers::Reset
-Bir numaralandırma sıralı başlangıç durumuna sıfırlar.
+Bir numaralandırma dizisini başlangıca sıfırlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,7 +29,7 @@ HRESULT Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Döndürür `S_OK`.
+ @No__t_0 döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

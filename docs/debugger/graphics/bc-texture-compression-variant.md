@@ -1,5 +1,5 @@
 ---
-title: BC doku sıkıştırma çeşidi | Microsoft Docs
+title: BC doku sıkıştırma varyantı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
@@ -8,39 +8,39 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a25411449c1b13b12f05819061847c252a76c9c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c5faf19632d746105deed3a36af6943627594175
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848699"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736157"
 ---
 # <a name="bc-texture-compression-variant"></a>BC Doku Sıkıştırma Çeşidi
-Etkinleştirir sıkıştırma B8G8R8X8, B8G8R8A8 veya R8G8B8A8 çeşididir bir piksel biçimi dokular hakkında engelleyin.
+B8G8R8X8, B8G8R8A8 veya R8G8B8A8 çeşitlemesi olan bir piksel biçimi olan dokuların blok sıkıştırmasını sunar.
 
-## <a name="interpretation"></a>Yorumu
- Blok tabanlı sıkıştırma biçimleri BC1, BC2, ister ve BC3 görüntü biçimlerini sıkıştırılmamış ve bu nedenle önemli ölçüde daha az bellek bant genişliği kullanmak daha önemli ölçüde daha az bellek kaplar. Piksel başına 32 bit kullanan sıkıştırılmamış biçime karşılaştırıldığında 8:1 sıkıştırma (eski adıyla DXT1 da bilinir) BC1 ulaşır ve 4:1 (önceki adıyla DXT5 da bilinir) BC3 ulaşır. BC1 BC3 arasındaki fark, blok sıkıştırılmış bir alfa kanalı BC3 desteklese de BC1 bir alfa kanalı desteklemiyor ' dir. Yüksek sıkıştırma oranlarına rağmen görüntü kalitesini tipik dokular için küçük bir düşüş yoktur. Ancak, belirli türde bir doku sıkıştırma block — Örneğin, önemli olanlar küçük bir alanı varyasyonu rengi — kabul edilemez sonuçları olabilir.
+## <a name="interpretation"></a>Korunur
+ BC1, BC2 ve BC3 gibi blok tabanlı sıkıştırma biçimleri, sıkıştırılmamış görüntü biçimlerinden önemli ölçüde daha az bellek kaplar ve bu nedenle önemli ölçüde daha az bellek bant genişliği tüketir. Piksel başına 32 bit kullanan sıkıştırılmamış bir biçime kıyasla, BC1 (eski adıyla DXT1) 8:1 Compression ve BC3 (eski adıyla, daha önce DXT5 olarak bilinirdi) 4:1. BC1 ve BC3 arasındaki fark BC1 bir alfa kanalını desteklemekte olsa da, BC3 blok ile sıkıştırılmış bir alfa kanalını destekler. Yüksek sıkıştırma oranlarına rağmen, tipik dokuların görüntü kalitesinde yalnızca küçük bir azalma vardır. Bununla birlikte, belirli dokuların (örneğin, küçük bir alanda önemli renk çeşitlemelerine sahip olanlar) sıkıştırılması, kabul edilemez sonuçlara neden olabilir.
 
- Dokular, blok tabanlı sıkıştırma için uygundur ve renk uygunluk mükemmel yoksa, daha az bant genişliği tüketebilir ve bellek kullanımını azaltmak için bir blok sıkıştırılmış biçimi kullanarak göz önünde bulundurun.
+ Dokularınız blok tabanlı sıkıştırma için uygun ise ve kusursuz renge uygunluk gerekmiyorsa, bellek kullanımını azaltmak ve daha az bant genişliği kullanmak için blok ile sıkıştırılmış bir biçim kullanmayı düşünün.
 
 ## <a name="remarks"></a>Açıklamalar
- Yapılan her çağrı bir blok tabanlı sıkıştırma biçimini kullanarak doku sıkıştırma `ID3DDevice::CreateTexture2D` kaynak doku oluşturur. Özellikle, doku sıkıştırılmış olduğunda:
+ Bir kaynak dokusu oluşturan `ID3DDevice::CreateTexture2D` her çağrıda blok tabanlı bir sıkıştırma biçimi kullanarak dokuları sıkıştırın. Özellikle, dokular şu durumlarda sıkıştırılır:
 
-- `D3D11_TEXTURE2D_DESC` Geçirilen nesne `pDesc` olan değişmeyen bir gölgelendirici kaynak; açıklar:
+- @No__t_1 geçirilen `D3D11_TEXTURE2D_DESC` nesne, değişmeyen bir gölgelendirici kaynağını açıklar; Yani:
 
-  - Yalnızca D3D11_BIND_SHADER_RESOURCE bayrağı ayarlanmış BindFlags üye var.
+  - BindFlags üyesinin yalnızca D3D11_BIND_SHADER_RESOURCE bayrağı kümesi vardır.
 
-  - Kullanım üye D3D11_USAGE_DEFAULT ya da D3D11_USAGE_IMMUTABLE ayarlanır.
+  - Kullanım üyesi D3D11_USAGE_DEFAULT ya da D3D11_USAGE_IMMUTABLE olarak ayarlanır.
 
-  - CPUAccessFlags üyesi (CPU erişim yok) 0 olarak ayarlanır.
+  - CPUAccessFlags üyesi 0 olarak ayarlanır (CPU erişimi yok).
 
-  - (Hiçbir çok örnekli düzgünleştirme (MSAA)) 1 olarak ayarlayın, sayım üyesi SamplerDesc üye var.
+  - SamplerDesc üyesinin Count üyesi 1 olarak ayarlanmış (çok örnekli bir kenar yumuşatma (MSAA)).
 
-- İlk veri çağrısına sağlanan `CreateTexture2D`.
+- İlk veriler `CreateTexture2D` çağrısına sağlanır.
 
-  Desteklenen kaynak biçimleri ve bunların blok sıkıştırılmış biçimlerden aşağıda verilmiştir.
+  Desteklenen kaynak biçimleri ve blok sıkıştırılmış biçimleri aşağıda verilmiştir.
 
-|Özgün biçiminde (Başlangıç)|Sıkıştırılmış biçimi (Bitiş)|
+|Özgün biçim (başlangıç)|Sıkıştırılmış biçim (için)|
 |------------------------------|------------------------------|
 |`DXGI_FORMAT_B8G8R8X8_UNORM`|BC1 (eski adıyla DXT1)|
 |`DXGI_FORMAT_B8G8R8X8_UNORM_SRGB`|BC1|
@@ -52,13 +52,13 @@ Etkinleştirir sıkıştırma B8G8R8X8, B8G8R8A8 veya R8G8B8A8 çeşididir bir p
 |`DXGI_FORMAT_R8G8B8A8_UNORM_SRGB`|BC3|
 |`DXGI_FORMAT_R8G8B8A8_TYPELESS`|BC3|
 
- Listede olmayan bir biçimde, doku varsa doku değiştirilmez.
+ Dokuınızın listede bulunmayan bir biçimi varsa doku değiştirilmez.
 
 ## <a name="restrictions-and-limitations"></a>Kısıtlamalar ve sınırlamalar
- Bazen B8G8R8A8 veya R8G8B8A8 görüntü biçimlerini çeşitlemesi ile oluşturulan dokular alfa kanalı gerçekte kullanmadığınız, ancak veya kullanılan olup olmadığını bilmek değişken için bir yolu yoktur. Alfa kanalını kullanılır durumda doğruluğunu sağlamak için değişken her zaman daha az verimli BC3 biçime şu biçimlerden kodlar. Grafik çerçevesi analizi değişken daha etkili BC1 biçimi kullanabilmesi için alfa kanalı kullanmadığınızda B8G8R8X8 görüntü biçimi çeşitlemesi kullanarak uygulamanızın olası işleme performansını Bu değişken ile daha iyi anlamanıza yardımcı olabilir.
+ Bazen B8G8R8A8 veya R8G8B8A8 görüntü biçimlerinin bir çeşitlemesi ile oluşturulan dokular, gerçekte alfa kanalını kullanmaz, ancak değişkenin kullanılıp kullanılmadığını bilmeleri için bir yol yoktur. Alfa kanalının kullanıldığı durumda, değişken her zaman bu biçimleri daha az etkin BC3 biçimine kodluyor. Bu değişkenle, değişkenin daha verimli BC1 biçimini kullanabilmesi için alfa kanalını kullanmadığınız durumlarda B8G8R8X8 görüntü biçiminin bir varyasyonunu kullanarak, uygulamanızın olası işleme performansını daha iyi anlamanıza yardımcı olabilirsiniz Grafik Çerçeve Çözümlemesi.
 
 ## <a name="example"></a>Örnek
- Bu değişken blok-dokular çağırmadan önce çalışma zamanında sıkıştırır `CreateTexture2D`. Bu yaklaşım üretim kodu için karşı daha fazla disk alanı sıkıştırılmamış dokular tükettiği için ve blok tabanlı sıkıştırma önemli gerektirdiğinden ek adım uygulamanız yükleme sürelerini önemli ölçüde artırabildiğinden öneririz kodlanacak hesaplama kaynaklarını sağlar. Bunun yerine, bir Resim Düzenleyicisi'ni veya derleme işlem hattınızı parçası olan görüntü işlemci kullanarak çevrimdışı, doku sıkıştırma öneririz. Bu yaklaşımların disk alanı gereksinimlerini azaltmak, çalışma zamanı uygulamanızda ek yükü ortadan kaldırır ve daha fazla işleme süresi en iyi görüntü kalitesini tutabildiğiniz göze.
+ Bu değişken bloğu-`CreateTexture2D` çağrısından önce, çalışma zamanında dokuları sıkıştırır. Sıkıştırılmamış dokular daha fazla disk alanı tükettiğinden ve blok tabanlı sıkıştırma için önemli bir değer gerektirdiğinden ek adım uygulamanızdaki yükleme sürelerini önemli ölçüde artırabildiğinden, üretim kodu için bu yaklaşıma önerilir Kodlanacak kaynakları hesaplama. Bunun yerine, yapı işlem hattınızın bir parçası olan bir görüntü Düzenleyicisi veya görüntü işlemcisi kullanarak dokularınızı çevrimdışına sıkıştırmanız önerilir. Bu yaklaşımlar, disk alanı gereksinimlerini azaltır, uygulamanızdaki çalışma zamanı ek yükünü ortadan kaldırır ve en iyi görüntü kalitesini sürdürebilmeniz için daha fazla işleme süresine sahiptir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Yarı/Çeyrek Doku Boyutları Çeşidi](half-quarter-texture-dimensions-variant.md)

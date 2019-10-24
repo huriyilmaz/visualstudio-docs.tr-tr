@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e1b958b9226a0a8ded0f886af81efc3b1b5aaf9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f8d097f76bcdb419be56d7fd1501fb93e872b1b9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670742"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748231"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Modelleri paylaşma ve diyagramları dışarı aktarma
 Visual Studio 'da, iş arkadaşlarınızla modelleri ve diyagramları çeşitli yollarla paylaşabilirsiniz.
@@ -49,6 +49,6 @@ Visual Studio 'da, iş arkadaşlarınızla modelleri ve diyagramları çeşitli 
 |[Diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md)|Diyagramların parçalarını PowerPoint veya Word gibi uygulamalara kopyalayabilir veya bir XPS dosyasına diyagram yazdırabilirsiniz.|
 |[Mimariyi Çözümleme ve Mimarinin Modelini Oluşturma](../modeling/analyze-and-model-your-architecture.md)|Modellere ve diyagramlarına genel bakış.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Geliştirme sürecinizde modelleri kullanma](../modeling/use-models-in-your-development-process.md)

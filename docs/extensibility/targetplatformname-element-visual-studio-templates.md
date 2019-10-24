@@ -9,15 +9,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c307a52b8f252f5059f2d4009e98fc4d497f616e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f22fb5d94b0f8c5147f014abdb973a23b1b9e24e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316702"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718913"
 ---
 # <a name="targetplatformname-element-visual-studio-templates"></a>TargetPlatformName Öğesi (Visual Studio Şablonları)
-Platformunu belirtir, proje şablonu hedefler. Bu öğe bir proje şablonu oluşturmak için kullanıldığını belirtmek için kullanılan [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] uygulamalar.
+Proje şablonunun hedeflediği platformu belirtir. Bu öğe, bir proje şablonunun [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] uygulamalar oluşturmak için kullanıldığını belirtmek için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,22 +37,22 @@ Platformunu belirtir, proje şablonu hedefler. Bu öğe bir proje şablonu oluş
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|İşletim sistemi sürümünü belirtir, proje şablonu hedefler.|
+|[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|Proje şablonunun hedeflediği işlem sisteminin sürümünü belirtir.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Metin olmalıdır **Windows**.
+ Metin **Windows**olmalıdır.
 
 ## <a name="example"></a>Örnek
- Bu örnekte belirten proje şablonunun hedeflediği [!INCLUDE[win8](../debugger/includes/win8_md.md)] veya üzeri.
+ Bu örnek, proje şablonunun [!INCLUDE[win8](../debugger/includes/win8_md.md)] veya üstünü hedeflediğini belirtir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
@@ -64,6 +64,6 @@ Platformunu belirtir, proje şablonu hedefler. Bu öğe bir proje şablonu oluş
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Proje ve Öğe Şablonları Oluşturma](../ide/creating-project-and-item-templates.md)
 - [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)

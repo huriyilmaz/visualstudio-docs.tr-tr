@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_length | Microsoft Docs
+title: 'IDiaSectionContrib:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cd7b349cd3b048d68adf21aa11f89c33e7a05f5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f4d77854ca3c7b2d7edb8e1917927462af19dc31
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839569"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742608"
 ---
-# <a name="idiasectioncontribgetlength"></a>IDiaSectionContrib::get_length
+# <a name="idiasectioncontribget_length"></a>IDiaSectionContrib::get_length
 Bir bölümdeki bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -33,10 +33,10 @@ HRESULT get_length ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir bölümde bulunan bayt sayısını döndürür.
+dışı Bir bölümdeki bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

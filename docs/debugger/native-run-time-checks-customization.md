@@ -1,5 +1,5 @@
 ---
-title: Yerel çalışma zamanı denetimleri özelleştirme | Microsoft Docs
+title: Yerel çalışma zamanı denetimleri özelleştirmesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,39 +22,39 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66591308c2b0c59cf310d3957131f80191cc51c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: db7cc513c4c96a8b60cc6471280bb837a7b9a248
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905492"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730897"
 ---
 # <a name="native-run-time-checks-customization"></a>Yerel Çalışma Zamanı Denetimlerini Özelleştirme
-Derleme yaptığınızda **/RTC** (çalışma zamanı denetimleri) veya `runtime_checks` pragması, C çalışma zamanı kitaplığı, yerel çalışma zamanı denetimleri sağlar. Bazı durumlarda, çalışma zamanı denetimi özelleştirmek isteyebilirsiniz:
+**/RTC** (çalışma zamanı denetimleri) ile derlerken veya `runtime_checks` pragma kullandığınızda, C çalışma zamanı kitaplığı yerel çalışma zamanı denetimleri sağlar. Bazı durumlarda, çalışma zamanı denetimini özelleştirmek isteyebilirsiniz:
 
-- Bir dosya ya da varsayılan dışındaki hedef çalışma zamanı denetimi iletileri yönlendirmek için.
+- Çalışma zamanı denetim iletilerini varsayılan dışında bir dosya veya hedefe yönlendirmek için.
 
-- Hedef çalışma zamanı için bir çıktı belirtmek için üçüncü taraf hata ayıklayıcı altında iletileri denetleyin.
+- Üçüncü taraf bir hata ayıklayıcı altındaki çalışma zamanı denetimi iletileri için çıkış hedefi belirtmek için.
 
-- Çalışma zamanı denetimi iletileri yayın sürümü C çalışma zamanı kitaplığı ile derlenmiş bir programdan bildirmek için. Kitaplık sürümleri kullanmayın `_CrtDbgReportW` çalışma zamanı hatalarını raporlamak için. Bunun yerine, görüntüledikleri bir **Assert** her bir çalışma zamanı hata iletişim kutusu.
+- C çalışma zamanı kitaplığının yayın sürümü ile derlenen bir programdan çalışma zamanı denetim iletilerini raporlamak için. Kitaplığın yayın sürümleri, çalışma zamanı hatalarını raporlamak için `_CrtDbgReportW` kullanmaz. Bunun yerine, her bir çalışma zamanı hatası için bir onay **iletişim kutusu görüntüler** .
 
-  Çalışma zamanı hata denetimi özelleştirmek için şunları yapabilirsiniz:
+  Çalışma zamanı hata denetimini özelleştirmek için şunları yapabilirsiniz:
 
-- Çalışma zamanı hata raporlama işlevi yazma. Daha fazla bilgi için [nasıl yapılır: Bir çalışma zamanı hata raporlama işlevi yazma](../debugger/how-to-write-a-run-time-error-reporting-function.md).
+- Çalışma zamanı hata raporlama işlevi yazın. Daha fazla bilgi için bkz. [nasıl yapılır: çalışma zamanı hata raporlama Işlevi yazma](../debugger/how-to-write-a-run-time-error-reporting-function.md).
 
-- Hata iletisi hedef özelleştirin.
+- Hata iletisi hedefini özelleştirin.
 
-- Sorgu çalıştırma hakkında bilgi için hataları kontrol edin.
+- Çalışma zamanı denetimi hataları hakkında bilgi sorgula.
 
-## <a name="customize-the-error-message-destination"></a>Hata iletisi hedef özelleştirme
- Kullanırsanız `_CrtDbgReportW` hatalarını raporlamak için kullanabileceğiniz `_CrtSetReportMode` hata iletileri hedefini belirlemek için.
+## <a name="customize-the-error-message-destination"></a>Hata Iletisi hedefini özelleştirme
+ Hataları raporlamak için `_CrtDbgReportW` kullanırsanız, hata iletilerinin hedefini belirtmek için `_CrtSetReportMode` kullanabilirsiniz.
 
- Özel bir raporlama işlevini kullanıyorsanız `_RTC_SetErrorType` bir hata rapor türü ile ilişkilendirilecek.
+ Özel bir raporlama işlevi kullanıyorsanız, bir hatayı rapor türüyle ilişkilendirmek için `_RTC_SetErrorType` kullanın.
 
-## <a name="query-for-information-about-run-time-checks"></a>Sorgu için çalışma zamanı denetimleri hakkında bilgi
- `_RTC_NumErrors` çalışma zamanı hata denetimleri tarafından algılanan hata türlerinin sayısını döndürür. Her hata kısa bir açıklamasını almak için 0'dan dönüş değeri olarak döngüye girer `_RTC_NumErrors`, yineleme değeri geçirme `_RTC_GetErrDesc` her döngüde. Daha fazla bilgi için [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors) ve [_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc).
+## <a name="query-for-information-about-run-time-checks"></a>Çalışma zamanı denetimleri hakkında bilgi sorgula
+ `_RTC_NumErrors`, çalışma zamanı hata denetimleri tarafından algılanan hata türlerinin sayısını döndürür. Her bir hatanın kısa bir açıklamasını almak için, 0 ' dan `_RTC_NumErrors` dönüş değerine döngü yapabilirsiniz, yineleme değerini her bir döngüde `_RTC_GetErrDesc` geçirirsiniz. Daha fazla bilgi için bkz. [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors) and [_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc).
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [Nasıl yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma](../debugger/how-to-use-native-run-time-checks.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl Yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma](../debugger/how-to-use-native-run-time-checks.md)
 - [runtime_checks](/cpp/preprocessor/runtime-checks)
 - [_CrtDbgReport, _CrtDbgReportW](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)

@@ -37,12 +37,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cef755721a9c5b917b080fa10f1819055a18ed7
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 954cf8436a9f0653685b41920cad84698ae50abb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72430562"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732152"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>Nasıl Yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma
 Visual Studio C++ projesinde, yerel [runtime_checks](/cpp/preprocessor/runtime-checks) kullanarak şu yaygın çalışma zamanı hatalarını yakalayabilirsiniz:
@@ -75,9 +75,9 @@ Visual Studio C++ projesinde, yerel [runtime_checks](/cpp/preprocessor/runtime-c
 
 ### <a name="to-modify-native-run-time-check-behavior"></a>Yerel çalışma zamanı denetimi davranışını değiştirmek için
 
-- @No__t-0 pragma kullanın.
+- @No__t_0 pragma kullanın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio’da hata ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [runtime_checks](/cpp/preprocessor/runtime-checks)

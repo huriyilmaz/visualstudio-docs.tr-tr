@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles::Skip | Microsoft Docs
+title: 'IDiaEnumSourceFiles:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b80a2a0f270ccd76d052d4c7863170448648e138
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d7aef3ea724bbb50f0342032a62e0044a1f0eb30
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833369"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744046"
 ---
 # <a name="idiaenumsourcefilesskip"></a>IDiaEnumSourceFiles::Skip
-Bir numaralandırma sıralı kaynak dosyalarında belirtilen sayıda atlar.
+Sabit Listesi dizisinde belirtilen sayıda kaynak dosyasını atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Sabit listesi sırası atlamak için kaynak dosya sayısı.
+'ndaki Atlanacak numaralandırma dizisindeki kaynak dosya sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` atlamak için daha fazla kaynak dosya yoksa.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, atlanacak daha fazla kaynak dosyası yoksa `S_FALSE` döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)

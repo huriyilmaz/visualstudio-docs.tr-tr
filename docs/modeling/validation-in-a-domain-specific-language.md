@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9737c9f02f9231aae5d20bd22321024fcfd7fd69
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fb059a9175c61c238abf0881cd96e4179fcf6f65
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663727"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748175"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>Etki Alanına Özgü bir Dilde Doğrulama
 Etki alanına özgü dilin (DSL) yazarı olarak, Kullanıcı tarafından oluşturulan modelin anlamlı olduğunu doğrulamak için doğrulama kısıtlamaları tanımlayabilirsiniz. Örneğin, DSL 'niz kullanıcıların bir kişi ve üst öğelerinden oluşan aile ağacını çizmesini sağlamasına izin veriyorsa, alt öğelerinden sonra Doğum tarihleri olmasını sağlayan bir kısıtlama yazabilirsiniz.
@@ -334,7 +334,7 @@ validationController.ValidateCustom
 > [!WARNING]
 > Kullanıcının değişikliğin ayarlandığını veya geri alındı olduğunu bildiğinden emin olun. Örneğin, `System.Windows.Forms.MessageBox.Show("message").` kullanın
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Program Kodunda Modeli Gezinme ve Güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Değişiklikleri Modelin Dışına Yayan Olay İşleyicileri](../modeling/event-handlers-propagate-changes-outside-the-model.md)

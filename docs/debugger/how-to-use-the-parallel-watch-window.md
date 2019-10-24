@@ -1,5 +1,5 @@
 ---
-title: Paralel iş parçacıklarında değişkenleri bir izleme ayarlayın | Microsoft Docs
+title: Paralel Iş parçacıklarında değişkenler için bir Izleme ayarlama | Microsoft Docs
 ms.date: 04/25/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,74 +17,74 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6026ab6d0d59fb3a8f945e554fda26f10d98f952
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 0628e75c54cf0da10dc5aecdf243ae1dda3485fb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388468"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732010"
 ---
-# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Visual Studio'da paralel iş parçacıklarında değişkenleri bir izleme ayarlayın (C#, Visual Basic, C++)
-Paralel İzleme penceresinde aynı anda birden çok iş parçacığında bir ifade tutan değerleri görüntüleyebilirsiniz. Her satır bir uygulama içinde çalışan bir iş parçacığını temsil eder, ancak bir iş parçacığı içinde birden çok satır gösterilebilir. Daha açık belirtmek gerekirse her satır, işlev imzası geçerli yığın çerçevesinde işlevi eşleşen bir işlev çağrısını temsil eder. Sıralama, yeniden sıralama, kaldırmak ve sütunları olan öğeleri gruplayın. Bayrak, işaretsiz dondurma, (askıya) ve (devam) iş parçacıklarını çözme. Aşağıdaki sütunlar görüntülenir **paralel izleme** penceresi:
+# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Visual Studio 'da paralel Iş parçacıklarında değişkenler için bir Izleme ayarlamaC#(, Visual Basic C++,)
+Paralel izleme penceresi, bir ifadenin birden çok iş parçacığında tuttuğu değerleri aynı anda görüntüleyebilirsiniz. Her satır bir uygulamada çalışan bir iş parçacığını temsil eder, ancak bir iş parçacığı birden çok satırda gösterilebilir. Daha belirgin olarak, her satır, işlev imzası geçerli yığın çerçevesindeki işlevle eşleşen bir işlev çağrısını temsil eder. Sütunlardaki öğeleri sıralayabilir, yeniden sıralayabilir, kaldırabilir ve gruplandırabilirsiniz. İş parçacıklarını bayrak, unbayrak, dondurma (askıya al) ve çözme (devam etme). **Paralel izleme** penceresinde aşağıdaki sütunlar görüntülenir:
 
-- Özel dikkat edilmesi gereken istediğiniz bir iş parçacığını işaretle Bayrak sütunu.
+- Özel dikkat etmek istediğiniz bir iş parçacığını işaretleyecek bayrak sütunu.
 
-- Sarı bir ok geçerli iş parçacığı gösterir geçerli iş parçacığı sütunu (kıvrık kuyruklu yeşil bir ok, geçerli olmayan bir iş parçacığı geçerli hata ayıklayıcı bağlam olduğunu gösterir).
+- Sarı bir okun geçerli iş parçacığını gösterdiği geçerli iş parçacığı sütunu (küme ayracı içeren yeşil bir ok, geçerli olmayan bir iş parçacığının geçerli hata ayıklayıcı içeriğine sahip olduğunu gösterir).
 
-- Makine, işlem, döşeme, görev ve iş parçacığı görüntüleyebilirsiniz yapılandırılabilir bir sütun.
+- Makine, işlem, kutucuk, görev ve iş parçacığını görüntüleyebilen yapılandırılabilir bir sütun.
 
   > [!TIP]
-  > Görev bilgileri görüntülenecek **paralel izleme** penceresinde ilk açmanız gerektiğini **görev** penceresi.
+  > Görev bilgilerini **paralel izleme** penceresinde göstermek için, önce **görev** penceresini açmanız gerekir.
 
-- Boş *izleme Ekle* izlemek için ifadeleri, girebileceğiniz sütun.
+- Görüntülenecek ifadeleri girebileceğiniz, boş *ekleme izleme* sütunları.
 
   [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-### <a name="to-display-the-parallel-watch-window"></a>Paralel İzleme penceresini görüntülemek için
+### <a name="to-display-the-parallel-watch-window"></a>Paralel izleme penceresi görüntüleme
 
 1. Kodda bir kesme noktası ayarlayın.
 
-2. Menü çubuğunda, **hata ayıklama**, **hata ayıklamayı Başlat**. Uygulama kesme noktasına ulaşmak bekler.
+2. Menü çubuğunda **Hata Ayıkla**, **hata ayıklamayı Başlat**' ı seçin. Uygulamanın kesme noktasına ulaşmasını bekleyin.
 
-3. Menü çubuğunda, **hata ayıklama**, **Windows**, **paralel izleme**, Gözcü penceresi seçin. Dört adede kadar windows açabilirsiniz.
+3. Menü çubuğunda **Hata Ayıkla**, **Windows**, **paralel izleme**' yi seçin ve ardından bir Gözcü penceresi seçin. Dört tane pencere açabilirsiniz.
 
-### <a name="to-add-a-watch-expression"></a>Bir Gözcü ifadesini eklemek için
+### <a name="to-add-a-watch-expression"></a>Bir Gözcü ifadesi eklemek için
 
-- Boş birini *izleme Ekle* sütunları ve ardından bir Gözcü ifadesini girin.
+- Boş bir *Gözcü Ekle* sütunlarından birini seçin ve ardından bir Gözcü ifadesi girin.
 
-### <a name="to-flag-or-unflag-a-thread"></a>Bir iş parçacığını işaretleme veya işaretini kaldırma için
+### <a name="to-flag-or-unflag-a-thread"></a>Bir iş parçacığını işaretlemek veya bayrak kaldırmak için
 
-- Satır için bayrak sütunu seçin (ilk sütun) veya iş parçacığı için kısayol menüsünü açın ve seçin **bayrağı** veya **Unflag**.
+- Satır için bayrak sütununu seçin (ilk sütun) veya iş parçacığının kısayol menüsünü açın ve **bayrak** ya da **Unflag**' ı seçin.
 
-### <a name="to-display-only-flagged-threads"></a>Yalnızca bayraklı iş parçacıklarını görüntülemek için
+### <a name="to-display-only-flagged-threads"></a>Yalnızca bayraklı iş parçacıklarını göstermek için
 
-- Seçin **Göster bayrağı yalnızca** sol alt köşesindeki düğme **paralel izleme** penceresi.
+- **Paralel izleme** penceresinin sol üst köşesindeki **yalnızca bayraklı bayrağı göster** düğmesini seçin.
 
 ### <a name="to-switch-to-another-thread"></a>Başka bir iş parçacığına geçiş yapmak için
 
-- Geçerli iş parçacığı sütunu çift tıklayın (ikinci sütun). (Klavye: Satırı seçin ve Enter tuşuna basın.)
+- Geçerli iş parçacığı sütununa (ikinci sütun) çift tıklayın. (Klavye: satırı seçin ve ENTER tuşuna basın.)
 
 ### <a name="to-sort-a-column"></a>Bir sütunu sıralamak için
 
-- Sütun başlığı seçin.
+- Sütun başlığını seçin.
 
-### <a name="to-group-threads"></a>İş parçacıklarını gruplandırma
+### <a name="to-group-threads"></a>İş parçacıklarını gruplandırmak için
 
-- Paralel İzleme penceresi kısayol menüsünü açın, **Group By**ve ardından uygun alt öğeyi seçin.
+- Paralel izleme penceresi için kısayol menüsünü açın, **Gruplandır**' ı seçin ve ardından uygun alt menü öğesini seçin.
 
-### <a name="to-freeze-or-thaw-threads"></a>Dondurma veya çözme iş parçacığı
+### <a name="to-freeze-or-thaw-threads"></a>İş parçacıklarını dondurmak veya çözme
 
-- Satır için kısayol menüsünü açın ve seçin **dondurma** veya **çözme**.
+- Satır için kısayol menüsünü açın ve **dondurma** veya **çözme**seçeneğini belirleyin.
 
-### <a name="to-export-the-data-in-the-parallel-watch-window"></a>Paralel İzleme penceresinde verileri dışarı aktarmak için
+### <a name="to-export-the-data-in-the-parallel-watch-window"></a>Verileri paralel izleme penceresi dışarı aktarmak için
 
-- Seçin **Excel'de Aç** düğmesine ve ardından **Excel'de Aç** veya **CSV'ye aktar**.
+- **Excel 'de aç** düğmesini seçin ve sonra **Excel 'de aç** veya **CSV 'ye aktar**' ı seçin.
 
-### <a name="to-filter-by-a-boolean-expression"></a>Bir Boole ifadesine göre filtre uygulamak için
+### <a name="to-filter-by-a-boolean-expression"></a>Boole ifadesine göre filtrelemek için
 
-- Bir Boole ifadesi girin **Boole ifadesine göre filtrele** kutusu. Hata ayıklayıcı, her iş parçacığı bağlamı için ifadeyi hesaplar. Değeri satır `true` görüntülenir.
+- **Boole ifadesine göre filtrele** kutusuna bir Boole ifadesi girin. Hata ayıklayıcı, her bir iş parçacığı bağlamı için ifadeyi değerlendirir. Yalnızca değerin `true` görüntülendiği satırlar görüntülenir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Çok İş Parçacıklı Uygulamaların Hatalarını Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [Nasıl yapılır: GPU İş Parçacıkları Penceresini Kullanma](../debugger/how-to-use-the-gpu-threads-window.md)
+- [Nasıl Yapılır: GPU İş Parçacıkları Penceresini Kullanma](../debugger/how-to-use-the-gpu-threads-window.md)
 - [İzlenecek yol: C++ AMP Uygulamasında Hata Ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)

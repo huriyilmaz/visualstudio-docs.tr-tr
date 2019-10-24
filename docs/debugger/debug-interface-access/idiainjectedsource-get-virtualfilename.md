@@ -1,5 +1,5 @@
 ---
-title: Idiaınjectedsource::get_virtualfilename | Microsoft Docs
+title: 'IDiaInjectedSource:: get_virtualFilename | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ad241532454cf1a086f8e85c4f2e16c29c76b26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d60a8c46c4a9e6f17e0123554ac25cb14bbf430b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828408"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743294"
 ---
-# <a name="idiainjectedsourcegetvirtualfilename"></a>IDiaInjectedSource::get_virtualFilename
-Dosya olmayan kaynak koduna verilen ad alır; diğer bir deyişle, eklendi kod.
+# <a name="idiainjectedsourceget_virtualfilename"></a>IDiaInjectedSource::get_virtualFilename
+Dosya olmayan kaynak koda verilen adı alır; diğer bir deyişle, eklenen kod.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_virtualFilename ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Eklenen dosya olmayan kaynak koda verilen adı döndürür.
+dışı Eklenmiş dosya olmayan kaynak koduna verilen adı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)
