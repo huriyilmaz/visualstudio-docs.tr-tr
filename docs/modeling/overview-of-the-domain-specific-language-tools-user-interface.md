@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9a99eef692eb776908c6b8c4a32eb361092855a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8aacaa43dc9a95faee886440623fb4238abf9be5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658302"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748350"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Etki Alanına Özgü Dil Araçları Kullanıcı Arabirimine Genel Bakış
 Visual Studio 'da ilk olarak bir Alana Özgü Dil Araçları (DSL araçları) çözümü açtığınızda, Kullanıcı arabirimi aşağıdaki resme benzeyecektir.
@@ -46,7 +46,7 @@ Visual Studio 'da ilk olarak bir Alana Özgü Dil Araçları (DSL araçları) ç
 |Şekiller ve bağlayıcılar|Şekiller, model öğelerinin bir DSL diyagramında nasıl görüntüleneceğini belirtir. bağlayıcılar, ilişkileri göstermek için kullanılabilecek bir DSL diyagramında çizgiler belirler.<br /><br /> Bir şekil veya bağlayıcı oluşturmak için, aracı diyagram **öğeleri** tarafına sürükleyin.|
 |Şekil haritaları|Şekil eşlemesi, etki alanı modeli diyagramında bir çizgi olarak görünür, bir şekli görüntülediği etki alanı sınıfına ya da görüntülediği etki alanı ilişkisine bir bağlayıcı ile bağlantılandırın.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Etki Alanına Özgü Dil Araçlarına Genel Bakış](../modeling/overview-of-domain-specific-language-tools.md)
 - [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

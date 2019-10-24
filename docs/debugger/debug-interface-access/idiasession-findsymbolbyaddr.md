@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbyaddr | Microsoft Docs
+title: 'IDiaSession:: findSymbolByAddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fcbe9e97eb429fa7427ae0e3da4dce77281b40a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ae0bab8ec0561b65c22890c0e0bbfeb461364b5c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839283"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742058"
 ---
 # <a name="idiasessionfindsymbolbyaddr"></a>IDiaSession::findSymbolByAddr
-İçeriyor veya belirtilen bir adres için en yakın olan bir belirtilen simge türü alır.
+Belirtilen bir adrese sahip veya en yakın olan, belirtilen bir sembol türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,22 +36,22 @@ HRESULT findSymbolByAddr ( 
 #### <a name="parameters"></a>Parametreler
  `isect`
 
-[in] Bölüm bileşeni adresi belirtir.
+'ndaki Adresin bölüm bileşenini belirtir.
 
  `offset`
 
-[in] Adres uzaklık bileşeni belirtir.
+'ndaki Adresin konum bileşenini belirtir.
 
  `symtag`
 
-[in] Bulunacak simge türü. Değerleri verilerinden alınır [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) sabit listesi.
+'ndaki Bulunan sembol türü. Değerler [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından alınır.
 
  `ppSymbol`
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) sembol temsil eden bir nesne alındı.
+dışı Alınan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 
@@ -60,7 +60,7 @@ IDiaSymbol* pFunc;
 pSession->findSymbolByAddr( isect, offset, SymTagFunction, &pFunc );
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

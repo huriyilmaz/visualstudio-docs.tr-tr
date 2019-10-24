@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 091619353adacaeb9c6996653ac64a0bcd84bb5c
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: d56d173d715258153f284c55d9bac80c06a50002
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72568960"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728727"
 ---
 # <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>Hata ayıklayıcıya DebuggerTypeProxy özniteliği (C#, Visual Basic, C++/CLI) kullanarak ne tür gösterileceğini söyleyin
 
@@ -65,7 +65,7 @@ Visual Basic açık tür sözdizimine sahip olmadığından, Visual Basic aynı 
 
 `"Namespace.TypeName'2"`
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [DebuggerDisplay Özniteliğini Kullanma](../debugger/using-the-debuggerdisplay-attribute.md)
 - [Yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-managed-objects.md)

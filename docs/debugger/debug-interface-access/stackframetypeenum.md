@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44f715c4f74d9b120b324e2d68417a24c9b42684
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 20b0c9dd106e5744a369ddaa6cb870788f7464d3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62854823"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738547"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
 Yığın çerçeve türünü belirtir.
@@ -35,25 +35,25 @@ enum StackFrameTypeEnum {
 };
 ```
 
-## <a name="elements"></a>Öğeleri
-`FrameTypeFPO` Çerçeve işaretçisini; atlanmış FPO bilgisi yok.
+## <a name="elements"></a>Öğeler
+`FrameTypeFPO` çerçeve işaretçisi atlandı; Mi bilgileri kullanılabilir.
 
-`FrameTypeTrap` Çekirdek yakalama çerçevesi.
+Çekirdek tuzak çerçevesini `FrameTypeTrap`.
 
-`FrameTypeTSS` Çekirdek yakalama çerçevesi.
+Çekirdek tuzak çerçevesini `FrameTypeTSS`.
 
-`FrameTypeStandard` Standart EBP yığın çerçevesi.
+Standart EBP yığın çerçevesini `FrameTypeStandard`.
 
-`FrameTypeFrameData` Çerçeve işaretçisini; atlanmış Çerçeve veri bilgileri kullanılabilir.
+`FrameTypeFrameData` çerçeve işaretçisi atlandı; Çerçeve veri bilgileri kullanılabilir.
 
-`FrameTypeUnknown` Çerçeve herhangi bir hata ayıklama bilgisi yok.
+herhangi bir hata ayıklama bilgisi olmayan `FrameTypeUnknown` çerçeve.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu numaralandırma değerleri için yapılan bir çağrı tarafından döndürülen [Idiastackframe::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) yöntemi.
+Bu Numaralandırmadaki değerler, [IDiaStackFrame:: get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) yöntemi çağrısıyla döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: cvconst.h
+Üst bilgi: cvconst. h
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)

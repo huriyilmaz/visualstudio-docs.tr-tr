@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_ishotpatchable | Microsoft Docs
+title: 'IDiaSymbol:: get_isHotpatchable | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ac1547228be6312126bb48602e3a77fed0b3c25
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 27218a2814e14e0a1ec30bd7fb4dc4840589251c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64811195"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740226"
 ---
-# <a name="idiasymbolgetishotpatchable"></a>IDiaSymbol::get_isHotpatchable
-Modül ile derlenen olup olmadığını belirten bir bayrak alır [/hotpatch (düzeltme eki eklenebilen görüntü oluşturma)](/cpp/build/reference/hotpatch-create-hotpatchable-image) derleyici anahtarı.
+# <a name="idiasymbolget_ishotpatchable"></a>IDiaSymbol::get_isHotpatchable
+Modülün [/hotpatch (düzeltme eki uygulanmış görüntü oluşturma)](/cpp/build/reference/hotpatch-create-hotpatchable-image) derleyici anahtarı ile derlendiğini belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,24 +33,24 @@ HRESULT get_isHotpatchable(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] Döndürür `TRUE` modülü, aksi takdirde anında düzeltme eki eklenebilen döndürür `FALSE`.
+dışı Modül Hot-patchable ise `TRUE` döndürür. Aksi takdirde, `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik kullanılabilir `SymTagCompilandDetails` sembol türü (bkz [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)).
+ Bu özellik `SymTagCompilandDetails` sembol türünden kullanılabilir (bkz. [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)).
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)

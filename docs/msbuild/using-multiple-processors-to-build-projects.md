@@ -1,5 +1,5 @@
 ---
-title: Projeleri derlemek için birden çok işlemci kullanma | Microsoft Docs
+title: Projeleri derlemek için birden çok Işlemci kullanma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,33 +11,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af67aa3961b92b55abfdcf7a811daef284ca523
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 065b11b689189f5ad833ce642cfcfc94da06f83d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970841"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747196"
 ---
 # <a name="use-multiple-processors-to-build-projects"></a>Projeleri derlemek için birden çok işlemci kullanma
-MSBuild, birden çok işlemci veya birden çok çekirdekli işlemcilere sahip sistemler yararlanabilirsiniz. Bir yapı işlemi için kullanılabilir her işlemci oluşturulur. Sistem dört işlemci varsa, örneğin, ardından dört yapı işlemlerini oluşturulur. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Bu yapılar aynı anda işleyebilir ve bu nedenle genel derleme süresi azalır. Ancak, paralel yapı, yapı işlemlerini nasıl ortaya bazı değişiklikler ortaya çıkarır. Bu konu, bu değişiklikleri açıklamaktadır.
+MSBuild, birden çok işlemciyi veya birden çok çekirdekli işlemciyi olan sistemlerden yararlanabilir. Kullanılabilir her işlemci için ayrı bir yapı işlemi oluşturulur. Örneğin, sistemde dört işlemci varsa dört yapı işlemi oluşturulur. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], bu yapıları aynı anda işleyebilir ve bu nedenle genel derleme süresi azaltılır. Ancak paralel oluşturma, derleme işlemlerinin oluşma biçiminde bazı değişiklikler sunar. Bu konuda bu değişiklikler ele alınmaktadır.
 
 ## <a name="project-to-project-references"></a>Projeden projeye başvurular
- Zaman [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] yalnızca bir kez başvuru yapıların karşılaşıyorsa, bir projeyi derlemek için paralel kullanırken bir projeden projeye (P2P) başvuru oluşturur. İki proje aynı P2P başvurusu varsa, başvuru her proje için yeniden değil. Bunun yerine, yapı altyapısının aynı bağımlı her iki proje P2P başvuru döndürür. Gelecekteki isteklerde oturum aynı hedef için aynı P2P başvuru sağlanır.
+ @No__t_0 bir proje oluşturmak için paralel derlemeler kullanırken bir projeden projeye (P2P) başvurusuyla karşılaştığında, başvuruyu yalnızca bir kez oluşturur. İki proje aynı P2P başvurusuna sahip ise, başvuru her bir proje için yeniden derlenmez. Bunun yerine, derleme altyapısı, kendisine bağımlı olan projelere aynı P2P başvurusunu döndürür. Aynı hedefe yönelik oturumdaki gelecekteki isteklere aynı P2P başvurusu sunulmaktadır.
 
-## <a name="cycle-detection"></a>Döngü algılama
- Döngü algılama İşlevler, aynı, önceden olduğu gibi [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0, tek farkı, artık [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] farklı bir saat veya yapı içinde döngüsü algılanması bildirebilirsiniz.
+## <a name="cycle-detection"></a>Döngüyü algılama
+ Cycle Detection, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2,0 ' de olduğu gibi çalışır, ancak artık [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] farklı bir zamanda veya derlemede bir döngüdeki algılamayı rapor edebilir.
 
-## <a name="errors-and-exceptions-during-parallel-builds"></a>Hatalar ve özel durumlar paralel yapılar sırasında
- Paralel yapılar hatalar ve özel durumlar farklı zamanlarda, paralel olmayan bir derlemede yapın ve bir proje değil oluşturduğunuzda bir proje yapılarında devam ortaya çıkabilir. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] başarısız bir paralel derleme herhangi bir proje yapı durdurmaz. Diğer projeler bunların başarılı veya başarısız kadar oluşturmaya devam edin. Ancak, varsa <xref:Microsoft.Build.Framework.IBuildEngine.ContinueOnError%2A> hata oluşması durumunda hiçbir derleme durur etkinleştirildi.
+## <a name="errors-and-exceptions-during-parallel-builds"></a>Paralel derlemeler sırasında hatalar ve özel durumlar
+ Paralel derlemelerde, hatalar ve özel durumlar, paralel olmayan bir derlemede olduklarından farklı zamanlarda ve bir proje oluşturmadığı zaman, diğer proje de devam eder. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], başarısız olan ve paralel olarak oluşturmakta olan herhangi bir proje derlemesini durdurmayacak. Diğer projeler, başarılı veya başarısız olana kadar derlenmeye devam eder. Ancak, <xref:Microsoft.Build.Framework.IBuildEngine.ContinueOnError%2A> etkinleştirildiyse bir hata oluşsa bile hiçbir derleme durdurulur.
 
-## <a name="visual-c-project-vcproj-and-solution-sln-files"></a>Visual C++ projesi (.vcproj) ve çözüm (.sln) dosyaları
- Her ikisi de [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projeleri (*.vcproj*) ve çözüm (*.sln*) dosyaları geçilebilir [MSBuild görevi](../msbuild/msbuild-task.md). İçin [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] projeleri VCWrapperProject çağrılır, ardından iç [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Proje oluşturulur. İçin [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] çözümleri, bir SolutionWrapperProject oluşturulur ve ardından dahili [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Proje oluşturulur. Her iki durumda da elde edilen proje değerlendirilir diğer aynı [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] proje.
+## <a name="c-project-vcxproj-and-solution-sln-files"></a>C++Proje (. vcxproj) ve çözüm (. sln) dosyaları
+ @No__t_0 projeler ( *. vcxproj*) ve çözüm ( *. sln*) dosyaları [MSBuild görevine](../msbuild/msbuild-task.md)geçirilebilir. @No__t_0 projeler için, VCWrapperProject çağrılır ve sonra iç [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesi oluşturulur. @No__t_0 çözümleri için bir SolutionWrapperProject oluşturulur ve sonra iç [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesi oluşturulur. Her iki durumda da, sonuçta elde edilen proje diğer [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projesiyle aynı şekilde değerlendirilir.
 
-## <a name="multi-process-execution"></a>Birden çok işlem yürütme
- Neredeyse tüm derlemeyle ilgili etkinlikler, geçerli dizin yolu ile ilgili hataları önlemek için derleme işlem süresince sabit kalması gerekir. Bu nedenle, farklı iş parçacıkları üzerinde projeleri çalıştırılamaz [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] çünkü birden çok dizin oluşturulmasına neden olur.
+## <a name="multi-process-execution"></a>Çok işlem yürütme
+ Neredeyse tüm derleme ile ilgili etkinlikler, yol ile ilgili hataları engellemek için derleme işlemi boyunca geçerli dizinin sabit kalmasını gerektirir. Bu nedenle, birden çok dizinlerin oluşturulmasına neden olacağından [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projeler farklı iş parçacıkları üzerinde çalıştırılamaz.
 
- Bu sorundan kaçınmak, ancak yine de çok işlemcili yapılar etkinleştirmek için [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] "işleminin kullandığı yalıtım." İşlem yalıtım kullanarak [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] en fazla oluşturabilirsiniz `n` işlemleri, burada `n` sistemde kullanılabilir işlemci sayısına eşittir. Örneğin, varsa [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] derlemeleri yapı süreçlerini, yapı yalnızca iki sonra iki işlemciye sahip bir sistemde bir çözüm oluşturulur. Bu işlemler Çözümdeki tüm projeleri derlemek için yeniden kullanılır.
+ Bu sorundan kaçınmak, ancak çok işlemcili derlemelerin yine de etkinleştirilmesi için, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] "işlem yalıtımı" kullanır. @No__t_0, işlem yalıtımı kullanarak, `n` sistemde kullanılabilen işlemcilerin sayısına eşit olan en fazla `n` işlem oluşturabilir. Örneğin, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] iki işlemcili bir sistemde bir çözüm oluşturduğunda, yalnızca iki derleme işlemi oluşturulur. Bu süreçler Çözümdeki tüm projeleri oluşturmak için yeniden kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Paralel olarak birden çok proje derleme](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
+- [Paralel olarak birden çok proje oluşturun](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
 - [Görevler](../msbuild/msbuild-tasks.md)

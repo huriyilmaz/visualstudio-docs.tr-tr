@@ -1,5 +1,5 @@
 ---
-title: Sorgu düzenleme sorgu kaydetme (kaynak denetimi VSPackage'ı) | Microsoft Docs
+title: Sorgu düzenleme sorgu kaydetme (kaynak denetimi VSPackage) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,28 +12,28 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3bffdac79a9f4274fbd6465c33e8659caf9d1f6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: be12297bdaeb112d7421b02da1153ed62d6d14f8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341457"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724765"
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>Sorgu Düzenleme Sorgu Kaydetme (Kaynak Denetimi VSPackage’ı)
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Sorgu düzenleme sorgu kaydetme (QEQS) olayları düzenleyicileri yayınlayabilirsiniz. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Alıcı QEQS olayların olmasını kaynak denetimi saplama QEQS hizmet uygular. Bu olaylar, ardından şu anda etkin kaynak denetimi VSPackage'ı verilmiş. Etkin kaynak denetimi VSPackage'ı uygulayan <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> ve yöntemleri. Yöntemlerinin `IVsQueryEditQuerySave2` arabirimi genellikle ilk kez ve hemen bir belge kaydedilmeden önce bir belge düzenlenemez hemen önce çağrılır.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] düzenleyiciler, sorgu düzenleme sorgusu kaydetme (QEQS) olaylarını yayınlayabilir. Kaynak denetimi saplaması [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] QEQS hizmetini uygular, bu sayede QEQS olaylarının alıcısı olur. Bu olaylar daha sonra şu anda etkin kaynak denetimi VSPackage için temsilci olarak atanır. Etkin kaynak denetimi VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> ve yöntemlerini uygular. @No__t_0 arabiriminin yöntemleri, genellikle bir belge ilk kez düzenlenirken ve bir belge kaydedilmeden hemen önce çağrılır.
 
-## <a name="queryeditquerysave-events"></a>QueryEditQuerySave Events
- Kaynak denetimi VSPackage'ı uygulayarak QEQS olayları işlemelidir `IVsQueryEditQuerySave2` arabirimi ve gerekli yöntemleri. VSPackage'ı en azından uygulamalıdır iki yöntem kısa bir açıklaması aşağıdadır. Gerçek uygulamalar kaynak denetimi modeli mantığına uygun olarak olmalıdır.
+## <a name="queryeditquerysave-events"></a>QueryEditQuerySave olayları
+ Kaynak denetimi VSPackage, `IVsQueryEditQuerySave2` arabirimini ve gerekli yöntemleri uygulayarak QEQS olaylarını işlemelidir. Aşağıda, VSPackage 'ın en az bir olarak uygulanması gereken iki yöntemin kısa bir açıklaması verilmiştir. Gerçek uygulamanın, kaynak denetimi modelinin mantığına uygun olması gerekir.
 
 ### <a name="queryeditfiles-method"></a>QueryEditFiles yöntemi
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> Bir dosyayı değiştirmek herhangi bir proje veya Düzenleyicisi istediğinde çağrılır. İdeal olarak, bu yöntem çağrılır *önce* dosyasını değiştirdikten ve bir dosya kaydedildiğinde. Çağrıldığında `IVsQueryEditQuerySave2::QueryEditFiles` yöntemi, belirli dosyalar kaynak denetimi altında olup kullanıma alınması için ihtiyaçları ve yoksa bunlar yeniden yüklenebilir denetler. Koşullar dosyalar düzenlenebilir olmasını engellemek, `IVsQueryEditQuerySave2::QueryEditFiles` yöntemi düzenlemeyi iptal etmek için çağırma program söyler. Ayrıca, arayanın çağırma modu belirtmek de mümkündür. Yalnızca, herhangi bir UI görünmesine neden olmazsa, "sessiz" modunda, bu yöntem eylem alır. UI kaçınılmaz ise bir bayrak sorun belirtmek için iade edilmesi gerekir.
+ @No__t_0, herhangi bir proje veya düzenleyici bir dosyayı değiştirmek istediğinde çağrılır. İdeal olarak, bu yöntem dosya değiştirilmeden *önce* ve bir dosya kaydedildiğinde çağırılır. Çağrıldığında `IVsQueryEditQuerySave2::QueryEditFiles` yöntemi, verilen dosyaların kaynak denetimi altında olup olmadığını, kullanıma alınması gerekip gerekmediğini ve yeniden yüklenip yüklenmeyeceğini denetler. Koşullar dosyaların düzenlenebilmesini engelliyorsa `IVsQueryEditQuerySave2::QueryEditFiles` yöntemi çağıran programa düzenlemeyi iptal edip etmeyeceğini söyler. Çağıranın bir çağırma modu belirtmesi de mümkündür. "Sessiz" modda, bu yöntem yalnızca herhangi bir UI 'nin görünmesine neden değilse işlem yapar. Kullanıcı arabirimine kaçınılmaz ise, sorunu belirtmek için bir bayrak döndürülmelidir.
 
- Yöntemi, işlemsel bir şekilde davranır; diğer bir deyişle, tek bir dosya düzenlemeyi iptal edilirse, düzenleme için tüm dosyaları iptal edildi. Buna karşılık, Düzen izin verilirse, tüm dosyaları için kullanılabilir. Bu yöntem bir kez belirli bir dosya kümesi için düzenleme izin veriyorsa, arka arkaya çağrı aynı dosya kümesi için düzenleme her zaman izin gerekir. Dosyaları kapalı, kaydedilen ve yeniden kadar izin ver-düzenleme döngü devam eder; öznitelikleri (Özellikler) değiştirene kadar; veya kaynak denetim paketi değiştirilene kadar. Uygulama dikkate alınması gereken durumlarda `IVsQueryEditQuerySave2::QueryEditFiles` yöntemi birden çok dosyaları, özel dosyaları içerir, kullanıcı ve bellek içi düzenlemeler iptal edin.
+ Yöntemi işlem halinde davranır; diğer bir deyişle, düzenleme tek bir dosyada iptal edilirse, tüm dosyalar için düzenleme iptal edilir. Buna karşılık, düzenlemeye izin veriliyorsa tüm dosyalar için izin verilir. Bu yöntem, belirli bir dosya kümesi için bir kez düzenlenmesine izin veriyorsa, aynı dosya kümesi için sonraki çağrıların düzenlenmesine her zaman izin vermelidir. İzin ver-Düzenle döngüsü, dosyalar kapatılana, kaydedilene ve yeniden yüklenene kadar devam eder; öznitelikleri (Özellikler) değişene kadar; kaynak denetim paketi değiştirilene kadar. @No__t_0 yöntemi uygularken dikkate alınması gereken durumlar, birden çok dosya, özel dosya, kullanıcının iptali ve bellek içi düzenlemelerde yer alır.
 
 ### <a name="querysavefiles-method"></a>QuerySaveFiles yöntemi
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A> Dosyaları kaydetmek herhangi bir proje veya Düzenleyicisi gerektiğinde çağırılır. Çağrıldığında `IVsQueryEditQuerySave2::QuerySaveFiles` yöntemi, belirli dosyalar salt okunursa ve bunların kaynak denetimi altında olup olmadığını denetler. Dosyaları kullanıma alınması gerekiyorsa, arama için kaynak denetim paketi temsilci. Koşullar kaydedilmiş dosyaları engelliyorsa `IVsQueryEditQuerySave2::QuerySaveFiles` yöntemi kaydetme işlemini iptal etmek için Düzenleyicisi söylemeniz gerekir. Olduğu gibi `IVsQueryEditQuerySave2::QueryEditFiles` yöntemi mümkündür arayan bir çağırma modu belirtmek. Yalnızca, herhangi bir UI görünmesine neden olmazsa, "sessiz" modunda, bu yöntem eylem alır. UI kaçınılmaz ise bir bayrak sorun belirtmek için iade edilmesi gerekir.
+ @No__t_0, herhangi bir proje ya da düzenleyicinin bir dosya kümesini kaydetmesi gerektiğinde çağrılır. Çağrıldığında `IVsQueryEditQuerySave2::QuerySaveFiles` Yöntemi verilen dosyaların salt okunurdur ve kaynak denetimi altında olup olmadığını denetler. Dosyaların kullanıma alınması gerekiyorsa, çağrı kaynak denetim paketi için temsilci olarak oluşturulur. Koşullar dosyaların kaydedilmesini engelliyorsa `IVsQueryEditQuerySave2::QuerySaveFiles` yöntemi, düzenleyiciye kaydetme işlemini iptal etmek için düzenleyiciyi anlatmalıdır. @No__t_0 yönteminde olduğu gibi, çağıranın bir çağırma modu belirtmesi mümkündür. "Sessiz" modda, bu yöntem yalnızca herhangi bir UI 'nin görünmesine neden değilse işlem yapar. Kullanıcı arabirimine kaçınılmaz ise, sorunu belirtmek için bir bayrak döndürülmelidir.
 
- Bu yöntem, işlemsel bir şekilde davranmalıdır; diğer bir deyişle, tek bir dosya kaydetme iptal edilirse, kaydetme tüm dosyalar için iptal edildi. Kaydetme izin verilirse, buna karşılık, onu tüm dosyalara izin verilmesi gerekir. Olduğu gibi `IVsQueryEditQuerySave2::QueryEditFiles` yöntemi, uygulamada dikkate alınması gereken durumlarda `IVsQueryEditQuerySave2::QuerySaveFiles` yöntemi birden çok dosyaları, özel dosyaları içerir, kullanıcı ve bellek içi düzenlemeler iptal edin.
+ Bu yöntem işlemsel bir şekilde davranmalıdır; diğer bir deyişle, tek bir dosyada kaydet iptal edilirse, tüm dosyalar için kaydetme iptal edilir. Buna karşılık, kaydetmeye izin veriliyorsa tüm dosyalar için izin verilmelidir. @No__t_0 yönteminde olduğu gibi, `IVsQueryEditQuerySave2::QuerySaveFiles` metodunu uygularken dikkate alınması gereken durumlar, birden çok dosya, özel dosya, kullanıcıdan iptal etme ve bellek içi düzenlemelerde yer alır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>

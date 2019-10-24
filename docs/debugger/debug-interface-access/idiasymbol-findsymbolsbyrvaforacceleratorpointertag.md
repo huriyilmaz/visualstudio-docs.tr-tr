@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag | Microsoft Docs
+title: 'IDiaSymbol:: Findsymbolsbyrvaforivatorpointertag | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 673ca8137244fed933df0be3fa0221115951a9c1
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f0d05946db816e6bd209e364e11d5091163941a4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62839003"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741150"
 ---
 # <a name="idiasymbolfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag
-Karşılık gelen bir etiket değeri verildiğinde, bu yöntem bu saplama işlevinde belirtilen göreli sanal adresten bulunan simgeleri bir sabit listesi döndürür.
+Karşılık gelen bir etiket değeri verildiğinde, bu yöntem, belirtilen bir göreli sanal adresteki bu saplama işlevinde bulunan simgelerin bir listesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,22 +32,22 @@ HRESULT findSymbolsByRVAForAcceleratorPointerTag (
 #### <a name="parameters"></a>Parametreler
  `tagValue`
 
-[in] İşaretçi etiket değeri için pointee sembol kayıtların bulunduğu.
+'ndaki Pointee sembol kayıtlarının bulunduğu işaretçi etiketi değeri.
 
  `rva`
 
-[in] Belirtilen etiket değeri ile pointee değişkenine karşılık gelen simgeleri filtrelemek üzere kullanılan rva.
+'ndaki Belirtilen etiket değeriyle pointee değişkenine karşılık gelen sembolleri filtrelemek için kullanılan RVA.
 
  `ppResult`
 
-[out] Bir işaretçi bir `IDiaEnumSymbols` arabirim işaretçisini, bir sonuç ile başlatılır.
+dışı Sonuçla başlatılan `IDiaEnumSymbols` arabirimi işaretçisine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Yalnızca bu yöntemi çağıran bir `IDiaSymbol` karşılık gelen bir Hızlandırıcı saplama işlevi için arabirim.
+ Bu yöntemi yalnızca bir Hızlandırıcı saplama işlevine karşılık gelen bir `IDiaSymbol` arabiriminde çağırın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

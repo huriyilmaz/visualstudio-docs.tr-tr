@@ -1,5 +1,5 @@
 ---
-title: Idiasourcefile::get_uniqueıd | Microsoft Docs
+title: 'IDiaSourceFile:: get_uniqueId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4a204e04c1c99dcbe8c6ba6d5e3457ca875dde4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 30a210c12384cbde55dafe6f3410b8fc840e8507
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832259"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741787"
 ---
-# <a name="idiasourcefilegetuniqueid"></a>IDiaSourceFile::get_uniqueId
-Bu görüntü için benzersiz olan bir basit tamsayı anahtar değeri alır.
+# <a name="idiasourcefileget_uniqueid"></a>IDiaSourceFile::get_uniqueId
+Bu görüntü için benzersiz bir basit tamsayı anahtar değeri alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_uniqueId ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bu görüntü için benzersiz olan bir basit tamsayı anahtar değeri döndürür.
+dışı Bu görüntü için benzersiz olan bir basit tamsayı anahtar değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Dizeleri satır numarası işleme hızlandırabilir yerine anahtarları karşılaştırma.
+ Dizeler yerine anahtarları karşılaştırma, satır numarası işlemeyi hızlandırabilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

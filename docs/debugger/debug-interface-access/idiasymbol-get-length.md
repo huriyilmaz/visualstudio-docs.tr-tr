@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_length | Microsoft Docs
+title: 'IDiaSymbol:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b1a583a9afd2a43d48399d5e2787369ab9bef95
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 114d9f7b00bbe5d322e7b6893e96fbbabec9d002
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64858113"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739978"
 ---
-# <a name="idiasymbolgetlength"></a>IDiaSymbol::get_length
-Bu simge ile temsil edilen nesne tarafından kullanılan belleğin bayt bit sayısını alır.
+# <a name="idiasymbolget_length"></a>IDiaSymbol::get_length
+Bu sembol tarafından temsil edilen nesne tarafından kullanılan bit veya bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,16 +33,16 @@ HRESULT get_length ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bayt sayısı veya bu simge ile temsil edilen nesne tarafından kullanılan bellek BITS döndürür.
+dışı Bu sembol tarafından temsil edilen nesne tarafından kullanılan bayt veya bellek bitlerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Varsa [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) simgesi olan `LocIsBitField`, bu yöntem tarafından döndürülen bit uzunluğunda; Aksi takdirde diğer konum türleri için bayt cinsinden uzunluk olur.
+ Simgenin [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) `LocIsBitField`, bu yöntemin döndürdüğü uzunluk bit içinde olur; Aksi takdirde, uzunluk diğer tüm konum türleri için bayt cinsinden olur.
 
 ## <a name="example"></a>Örnek
 
@@ -56,9 +56,9 @@ pSymbol->get_length( &length );
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType Numaralandırması](../../debugger/debug-interface-access/locationtype.md)

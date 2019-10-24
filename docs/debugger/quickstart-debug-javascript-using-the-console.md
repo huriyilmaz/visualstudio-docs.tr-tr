@@ -16,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b61147467ff27ec8b69e1a2fddfcd00138065fa
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 2a92daf09f033da020fe54369a20483686c72f81
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589052"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730425"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio 'da Konsolu kullanarak JavaScript hata ayıklama
 
@@ -249,7 +249,7 @@ Aşağıdaki çizimde JavaScript Konsol penceresinde hedef liste gösterilmekted
 
 Ayrıca, `cd` komutunu kullanarak yürütme bağlamını geçirebilirsiniz, ancak diğer yürütme bağlamının adını bilmeniz ve kullandığınız başvurunun kapsamda olması gerekir. **Hedef** liste, diğer yürütme bağlamlarına daha iyi erişim sağlar.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio’da uygulamaların hatalarını ayıklama](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
 - [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017)
 - [Uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md)

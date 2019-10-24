@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_offsetınudt | Microsoft Docs
+title: 'IDiaSymbol:: get_offsetInUdt | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14832698e186e23b33862ccb1c9f22f3792a6300
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f0eeffba743d7fae1d473c45eb350fbfc8bcd0b9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64793775"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739566"
 ---
-# <a name="idiasymbolgetoffsetinudt"></a>IDiaSymbol::get_offsetInUdt
-Bir kullanıcı tanımlı tür (UDT) üyesi udt'de başlangıcına uzaklık alır.
+# <a name="idiasymbolget_offsetinudt"></a>IDiaSymbol::get_offsetInUdt
+UDT içindeki bir üyenin Kullanıcı tanımlı türünün (UDT) başlangıcına olan sapmayı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,23 +33,23 @@ HRESULT get_offsetInUdt( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Sembol konumunun bayt uzaklığını döndürür.
+dışı Sembol konumunun bayt cinsinden sapmasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlev yalnızca yerel kayıt en iyi duruma getirilmiş bir yapı içinde kullanılır.
+ Bu işlev, iyileştirilmiş bir derlemede yalnızca yerel kayıtlarda kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: dia2.h
+ Üstbilgi: dia2. h
 
- Kitaplık: diaguids.lib
+ Kitaplık: diaguid. lib
 
- DLL: msdia100.dll
+ DLL: msdia100. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

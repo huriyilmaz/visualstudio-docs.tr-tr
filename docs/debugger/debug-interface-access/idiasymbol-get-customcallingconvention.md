@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_customcallingconvention | Microsoft Docs
+title: 'IDiaSymbol:: get_customCallingConvention | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 733c18fd9fceaad6c976ab47a85420a27982cfbd
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 01fb33108c9952b8543d36b64b7743f4c0531be5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64858483"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740731"
 ---
-# <a name="idiasymbolgetcustomcallingconvention"></a>IDiaSymbol::get_customCallingConvention
-İşlev özel bir çağırma kuralı olup olmadığını belirten bir bayrak alır.
+# <a name="idiasymbolget_customcallingconvention"></a>IDiaSymbol::get_customCallingConvention
+İşlevin özel bir çağırma kuralına sahip olup olmadığını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,20 +33,20 @@ HRESULT get_customCallingConvention(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] Döndürür `TRUE` işlev özel bir çağırma kuralı; varsa döndürür, aksi takdirde, `FALSE`, bilinen bir çağırma kuralı işlevi vardır.
+dışı İşlevin özel bir çağırma kuralına sahip olması halinde `TRUE` döndürür; Aksi takdirde, işlevin bilinen bir çağırma kuralına sahip `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

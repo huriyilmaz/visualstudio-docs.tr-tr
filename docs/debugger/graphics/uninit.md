@@ -1,5 +1,5 @@
 ---
-title: Başlatmış | Microsoft Docs
+title: Başlatma geri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4cd4fc0b-974a-4e61-9ea8-0aaa1a0c52ea
@@ -8,15 +8,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8165b2e1993a6ea52127536a058f662e1a3d92cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef809b646a0af58e46b8c68dc5a8cf7633692bcc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848726"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734813"
 ---
 # <a name="uninit"></a>UnInit
-Grafik günlük dosyasını sonlandırır kapatılır ve uygulama, etkin bir şekilde grafik bilgilerini kaydetme sırasında kullanılan kaynakları serbest bırakır.
+Grafik günlük dosyasını sonlandırır, kapatır ve uygulama grafik bilgilerini etkin bir şekilde kaydederken kullanılan kaynakları serbest bırakır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -25,9 +25,9 @@ void UnInit();
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- `UnInit` örneği otomatik olarak çağrılır `VsgDbg` sınıfı yok edildiğinde. Varsa `VsgDbg` örneği etkin bir şekilde kaydetmediğiniz grafik bilgilerini, bu etkiye sahip değildir.
+ `VsgDbg` sınıfının bir örneği yok edildiğinde `UnInit` otomatik olarak çağrılır. @No__t_0 örneği grafik bilgilerini etkin bir şekilde kaydetmediği takdirde, bu, hiçbir etkiye sahip değildir.
 
- Sonra `UnInit` örneği üzerinde çağrıldıktan `VsgDbg` sınıfının yeni bir grafik günlük dosyasını çağırarak oluşturulabilir `Init` ve çağrı sonlandırılır `UnInit`. Bu kadar çok kez aynı kullanmak istediğiniz gibi yineleyebilirsiniz `VsgDbg` çeşitli bağımsız grafik günlük dosyaları oluşturmak için örneği.
+ @No__t_0 `VsgDbg` sınıfının bir örneğinde çağrıldıktan sonra, `UnInit` çağırarak `Init` ve sonlandırıldığında çağırarak yeni bir grafik günlük dosyası oluşturulabilir. Birkaç bağımsız grafik günlük dosyası oluşturmak için aynı `VsgDbg` örneğini kullanmak istediğiniz kadar bunu yineleyebilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Init](init.md)

@@ -1,5 +1,5 @@
 ---
-title: Uzaktan hata ayıklama iletişim kutusu için güvenlik duvarını | Microsoft Docs
+title: Uzaktan hata ayıklama için güvenlik duvarını yapılandırma Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,27 +20,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75342630e347eaabe6854498c43294599afae5a5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8a2511fc2adfa63ff28f8459f48cbdf4b4623ff5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563740"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745657"
 ---
 # <a name="configure-firewall-for-remote-debugging-dialog-box"></a>Uzaktan Hata Ayıklama İçin Güvenlik Duvarını Yapılandır İletişim Kutusu
-Windows Güvenlik Duvarı, ağ üzerinden bilgi almasını hata ayıklayıcı engellediğinde bu iletişim kutusu görüntülenir. Uzaktan hata ayıklamaya devam etmek için hata ayıklayıcı bilgi alabilir. böylece delik Güvenlik Duvarı'nda açmanız gerekir.
+Windows Güvenlik Duvarı hata ayıklayıcının ağ üzerinden bilgi almasını engelliyorsa, bu iletişim kutusu görüntülenir. Uzaktan hata ayıklamaya devam etmek için, hata ayıklayıcının bilgi alabilmesi için güvenlik duvarında bir delik açmanız gerekir.
 
 > [!CAUTION]
-> Güvenlik Duvarı'nda delik açma makinenize bir güvenlik duvarı tehditleri engellemek için tasarlanmış güvenlik getirebilir. Uzaktan hata ayıklama delik açma 4020 ve Visual Studio 2015'te 4021 bağlantı noktalarını engellemesini kaldırır. Visual Studio'nun diğer sürümlerinde de diğer bağlantı noktası numaralarını kullanılır. Daha fazla bilgi için [uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md). Ayrıca, ek bağlantı noktalarını açmak hata ayıklayıcı sağlar. Daha fazla bilgi için [uzaktan hata ayıklama için Windows Güvenlik Duvarı Yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
+> Güvenlik duvarında bir delik açmak, makinenizi güvenlik duvarının engellemek için tasarlandığı güvenlik tehditlerine maruz bırakabilir. Uzaktan hata ayıklama için bir delik açmak Visual Studio 2015 4020 ve 4021 bağlantı noktalarını kaldırır. Visual Studio 'nun diğer sürümlerinde diğer bağlantı noktası numaraları kullanılır. Daha fazla bilgi için bkz. [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md). Ayrıca, hata ayıklayıcının ek bağlantı noktalarını açmasına izin verir. Daha fazla bilgi için bkz. [Uzaktan hata ayıklama Için Windows güvenlik duvarını yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
 
 ## <a name="uielement-list"></a>UIElement Listesi
- **Uzaktan hata ayıklama iptal** uzaktan hata ayıklama denemesi iptal eder. Makinenizin güvenlik ayarlarını değişmeden kalır.
+ **Uzaktan hata ayıklamayı Iptal et** Uzaktan hata ayıklama girişimini iptal eder. Makinenizin güvenlik ayarları bozulmadan kalır.
 
- **Yerel ağa (alt ağ) bilgisayarlarda uzaktan hata ayıklamasını engellemesini** yerel alt ağınız makinelerde uzaktan hata ayıklamasını etkinleştirir. Bu güvenlik açıkları, yerel alt ağdaki makinelere açabilir, ancak bilgi alt ağın dışına geldiğini engellemek güvenlik duvarı devam eder.
+ **Yerel ağdaki bilgisayarların uzaktan hata ayıklamasını engellemeyi kaldır (alt ağ)** Yerel alt ağınızdaki makinelerin uzaktan hata ayıklamasını sağlar. Bu, yerel alt ağınızdaki makinelere yönelik güvenlik açıklarını açabilir, ancak güvenlik duvarı alt ağ dışından gelen bilgileri engellemeye devam eder.
 
- **Herhangi bir bilgisayarda uzaktan hata ayıklama engellemesini** ağ herhangi bir yere makinelerde uzaktan hata ayıklamasını etkinleştirir. Bu ayar, en az güvenli seçenektir.
+ **Uzaktan hata ayıklamayı herhangi bir bilgisayardan engellemeyi kaldır** Ağ üzerinde herhangi bir yerde makinelerde uzaktan hata ayıklamayı sağlar. Bu ayar en az güvenli seçenektir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
 - [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

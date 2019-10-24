@@ -10,109 +10,109 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 042eebc6d672000aa43425a30e96a8ac41bcd8af
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1d697313289bbf00234764cc04603b7bc256f174
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388534"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735474"
 ---
 # <a name="graphics-pipeline-stages"></a>Grafik Ardışık Düzen Aşamaları
-Grafik ardışık düzen Aşamaları penceresinde bir bağımsız çizim çağrısı Direct3D grafik Ardışık düzenin her aşaması tarafından nasıl dönüştürdüğünü anlamanıza yardımcı olur.
+Grafik ardışık düzen Aşamaları penceresi, tek bir çizim çağrısının Direct3D grafik işlem hattının her aşamasına göre nasıl dönüştürüleceğini anlamanıza yardımcı olur.
 
- Bu ardışık düzen Aşamaları penceresinde.
+ Bu işlem hattı aşamaları penceresidir:
 
- ![Bir 3B nesneyi ardışık düzen aşamaları gider.](media/gfx_diag_demo_pipeline_stages_orientation.png)
+ ![3B nesne, işlem hattı aşamaları boyunca gider.](media/gfx_diag_demo_pipeline_stages_orientation.png)
 
-## <a name="understanding-the-graphics-pipeline-stages-window"></a>Grafik ardışık düzen Aşamaları penceresinde anlama
- Ardışık Düzen Aşamaları penceresinde grafik ardışık düzeninin her aşamasında sonucu, her bir çizim çağrısı için ayrı ayrı görselleştirir. Normalde, bir işleme sorunuyla başlatıldığı bildirmek zorlaştıran ortasında ardışık düzen aşamaları sonuçlarını gizlidir. Her aşama ayrı olarak görselleştirerek ardışık düzen Aşamaları penceresinde sorunun başladığı görmeyi kolaylaştırır — Örneğin, kolayca köşe gölgelendirici aşaması beklenmedik bir şekilde off-screen çizilecek nesneyi sebep olduğunda görebilirsiniz.
+## <a name="understanding-the-graphics-pipeline-stages-window"></a>Grafik ardışık düzen aşamaları penceresini anlama
+ Ardışık düzen Aşamaları penceresi, her çizim çağrısıyla ilgili olarak her bir grafik ardışık düzeninin her aşamasının sonucunu görselleştirir. Normalde, işlem hattının ortasında aşamaların sonuçları gizlidir, böylece bir işleme sorununun nerede başlatıldığını söylemeniz zordur. Her aşamayı ayrı olarak görselleştirerek, ardışık düzen Aşamaları penceresi sorunun başladığı yeri görmeyi kolaylaştırır. Örneğin, köşe gölgelendirici aşamasının beklenmedik bir şekilde bir nesnenin ekran dışına çizilmesini neden olduğunu kolayca görebilirsiniz.
 
- Sorunun oluştuğu aşama tanımladıktan sonra verileri nasıl yorumlandığını veya dönüştürülmüş incelemek için bir grafik Çözümleyicisi araçları kullanabilirsiniz. Ardışık Düzen aşamaları görünen işleme sorunlarını çoğunlukla ilgili yanlış köşe biçim tanımlayıcıları, çalışmalarında gölgelendirici program veya yanlış yapılandırılmış durum olur.
+ Sorunun gerçekleştiği aşamayı tanımladıktan sonra, verilerin nasıl yorumlandığını veya dönüştürüleceğini incelemek için diğer grafik Çözümleyicisi araçlarını kullanabilirsiniz. Ardışık düzen aşamalarında görüntülenen işleme sorunları genellikle hatalı köşe biçimi tanımlayıcıları, önemlidir Shader programları veya yanlış yapılandırılmış durum ile ilgilidir.
 
-### <a name="links-to-related-graphics-objects"></a>İlişkili grafik nesneleri bağlantılar
- Neden bir çizim çağrısı belirli bir şekilde grafik ardışık düzen ile etkileşime giren belirlemek için bazen ek bağlam gerekir. Bu ek bağlam bulmayı kolaylaştırmak için grafik işlem hattında neler grafik ardışık düzen Aşamaları penceresinde bağlantılar ek bağlam sağlamak veya daha fazla nesne ilişkili.
+### <a name="links-to-related-graphics-objects"></a>İlgili grafik nesnelerine bağlantılar
+ Bazen çizim çağrısının grafik ardışık düzenine göre belirli bir şekilde etkileşim kurduğunu tespit etmek için ek bağlam gerekir. Bu ek bağlamın daha kolay bulunmasını kolaylaştırmak için grafik ardışık düzen Aşamaları penceresi, grafik ardışık düzeninde olanlar ile ilgili ek bağlam sağlayan bir veya daha fazla nesneye bağlanır.
 
-- Direct3D 12'deki bu nesne, genellikle komut listesi alır.
+- Direct3D 12 ' de bu nesne genellikle bir komut listesidir.
 
-- Direct3D 11'de bu nesne, genellikle bir grafik cihaz bağlamı olur.
+- Direct3D 11 ' de bu nesne genellikle bir grafik cihaz bağlamıdır.
 
-  Bu bağlantıların grafik ardışık düzen aşamaları penceresinin sol alt köşesinde bulunan geçerli grafik olay imzası bir parçasıdır. Herhangi bir nesne hakkında daha ayrıntılı incelemek için bu bağlantıları izleyin.
+  Bu bağlantılar, grafik ardışık düzen aşamaları penceresinin sol üst köşesinde bulunan geçerli grafik olay imzasının bir parçasıdır. Nesneyle ilgili ek ayrıntıları incelemek için bu bağlantılardan herhangi birini izleyin.
 
-### <a name="viewing-and-debugging-shader-code"></a>Görüntüleme ve gölgelendirici kodunda hata ayıklama
- İnceleyin ve ardışık düzen Aşamaları penceresinde ilgili kendi aşamaları alttaki denetimleri kullanarak köşe, kabuk, etki alanı, geometri ve piksel gölgelendiricilerini kod hata ayıklama.
+### <a name="viewing-and-debugging-shader-code"></a>Gölgelendirici kodunu görüntüleme ve hata ayıklama
+ Ardışık düzen aşamaları penceresinde ilgili aşamaların altındaki denetimleri kullanarak köşe, Hull, etki alanı, geometri ve Piksel gölgelendiricileri için kodu inceleyebilir ve hata ayıklayabilirsiniz.
 
-#### <a name="to-view-a-shaders-source-code"></a>Gölgelendiricinin kaynak kodunu görüntülemek için
+#### <a name="to-view-a-shaders-source-code"></a>Gölgelendirici kaynak kodunu görüntülemek için
 
-- İçinde **grafik ardışık düzen aşamaları** penceresinde gölgelendirici için karşılık gelen gölgelendirici aşamasını bulun incelemeniz gerekebilir. Daha sonra Önizleme görüntüsünü gölgelendirici aşaması odkaz na nadpis izleyin — Örneğin, bağlantıyı izleyerek **köşe gölgelendiricisi obj:30** köşe gölgelendirici kaynak kodunu görüntülemek için.
+- **Grafik ardışık düzen aşamaları** penceresinde, incelemek istediğiniz gölgelendiriciye karşılık gelen gölgelendirici aşamasını bulun. Ardından, önizleme görüntüsünün altında, gölgelendirici aşaması başlık bağlantısını izleyin. Örneğin, köşe gölgelendirici kaynak kodunu görüntülemek için, bkz. bağlantı **köşe gölgelendirici obj: 30** .
 
     > [!TIP]
-    > Nesne sayısı **obj:30**, olduğu gibi nesne tablosu ve piksel geçmişini penceresi gibi grafik Çözümleyicisi arabirimi içinde bu gölgelendiriciyi tanımlar.
+    > Nesne numarası, **obj: 30**, bu gölgelendiriciyi nesne tablosu ve piksel geçmişi penceresinde olduğu gibi grafik Çözümleyicisi arabirimi boyunca tanımlar.
 
-#### <a name="to-debug-a-shader"></a>Gölgelendirici hata ayıklamak için
+#### <a name="to-debug-a-shader"></a>Gölgelendiricide hata ayıklamak için
 
-- İçinde **grafik ardışık düzen aşamaları** penceresinde gölgelendirici için karşılık gelen gölgelendirici aşamasını bulun, hata ayıklamak istediğiniz. Önizleme görüntüsü seçin **hata ayıklamayı Başlat**. Bu giriş noktasına karşılık gelen aşamanın gölgelendirici ilk çağrıya HLSL hata ayıklayıcısı varsayılanlara — diğer bir deyişle, ilk piksel, Tepe veya temel nesne bu çizim çağrısı sırasında gölgelendirici tarafından işlenir. Bu belirli piksel veya köşe gölgelendiricisi çağrıları üzerinden erişilebilir **grafik piksel geçmişi**.
+- **Grafik ardışık düzen aşamaları** penceresinde, hata ayıklamak istediğiniz gölgelendiriciye karşılık gelen gölgelendirici aşamasını bulun. Ardından, önizleme görüntüsünün altında, **hata ayıklamayı Başlat**' ı seçin. Bu giriş noktası, HLSL hata ayıklayıcısına karşılık gelen aşama için gölgelendiriciye ait ilk çağrıya (yani, bu çizim çağrısı sırasında gölgelendirici tarafından işlenen ilk piksel, köşe veya ilkel) göre varsayılan olarak ayarlanır. Belirli bir piksel veya köşe için bu gölgelendirici çağırmaları **Grafik piksel geçmişi**aracılığıyla erişilebilir.
 
-### <a name="the-pipeline-stages"></a>Ardışık Düzen aşamaları
- Ardışık Düzen Aşamaları penceresinde yalnızca çizim çağrısı sırasında etkin ardışık düzen aşamaları görselleştirir. Grafik ardışık düzeninin her aşamasında, önceki aşamaya girişten dönüştürür ve sonuç sonraki aşamaya geçer. İlk aşama — giriş derleyici — dizin ve köşe verileri uygulamanızdan; giriş olarak alır son aşama — çıkış Birleştiricisi — yeni piksel framebuffer geçerli içerikle birlikte çizilir veya işleme hedefi çıktısı, ekranda gördüğünüz son görüntü üretmek için olarak birleştirir.
-
-> [!NOTE]
-> Hesaplayıcı gölgelendiricilerde desteklenmez **grafik ardışık düzen aşamaları** penceresi.
-
- **Giriş Birleştiricisi** giriş derleyicisi, uygulamanız tarafından belirtilen dizin ve köşe verileri okur ve için grafik donanımının birleştirir.
-
- Ardışık Düzen Aşamaları penceresinde giriş Assembler çıkışı Tel Çerçeve model olarak görselleştirilir. Sonuç birine daha yakından bakalım için seçin **giriş Assembler** içinde **grafik ardışık düzen aşamaları** tam 3B Model Düzenleyicisi'ni kullanarak içinde birleştirilmiş köşeleri görüntülemek üzere penceresi.
+### <a name="the-pipeline-stages"></a>İşlem hattı aşamaları
+ Ardışık düzen Aşamaları penceresi, yalnızca çizim çağrısı sırasında etkin olan işlem hattının aşamalarını görselleştirir. Grafik işlem hattının her aşaması, bir önceki aşamadaki girişi dönüştürür ve sonucu sonraki aşamaya geçirir. İlk aşamada, giriş derleyicisi, giriş olarak uygulamanızdan dizin ve köşe verileri alır; Son aşama — çıktı Merger —, ekranınızda gördüğünüz son görüntüyü oluşturmak için, yeni işlenmiş pikselleri, kendi çıktısı olarak framebuffer veya render Target ile birlikte birleştirir.
 
 > [!NOTE]
-> Varsa `POSITION` anlam giriş derleyici çıktısında mevcut değil ve hiçbir şey görüntülenen **giriş derleyici** aşaması.
+> İşlem gölgelendiricileri **grafik ardışık düzen aşamaları** penceresinde desteklenmez.
 
- **Köşe gölgelendirici** köşe gölgelendirici aşaması skinning ve ışık dönüşüm gibi işlemleri genellikle köşeleri işler. Köşe gölgelendirici oluşturmak, alan köşeler aynı sayıda girdi olarak.
+ **Giriş assembler** Giriş derleyicisi, uygulamanız tarafından belirtilen dizin ve köşe verilerini okur ve bunu grafik donanımı için birleştirir.
 
- Ardışık Düzen Aşamaları penceresinde, köşe gölgelendiricisi çıkışı bir Tel Çerçeve ızgara görüntüsü olarak görselleştirilir. Sonuç birine daha yakından bakalım için seçin **köşe gölgelendiricisi** içinde **grafik ardışık düzen aşamaları** Resim Düzenleyicisi'nde işlenen köşeleri görüntülemek üzere windows.
+ Ardışık düzen aşamaları penceresinde, giriş derleyici çıkışı bir tel çerçeve modeli olarak görselleştirilir. Sonuca daha yakından bakmak için **grafik ardışık düzen aşamaları** penceresinde **giriş assembler** ' yı seçin. böylece, Model Düzenleyicisi 'ni kullanarak tam 3B olarak birleştirilmiş köşeleri görüntüleyin.
 
 > [!NOTE]
-> Varsa `POSITION` veya `SV_POSITION` köşe gölgelendiricisi çıkışı semantiği bulunmaz ve hiçbir şey görüntülenen **köşe gölgelendiricisi** aşaması.
+> @No__t_0 anlam, giriş assembler çıktısında yoksa, **giriş assembler** aşamasında hiçbir şey görüntülenmez.
 
- **Kabuk gölgelendiricisi** (Direct3D 11 ve Direct3D 12) tanımlayan bir satır, üçgen veya dört gibi düşük düzey yüzey denetim noktaları Kabuk gölgelendirici aşaması işler. Çıktı olarak daha yüksek sıralı geometri düzeltme eki ve düzeltme eki sabitleri, sabit işlevi Mozaik döşeme aşaması için geçirilen oluşturur.
+ **Köşe gölgelendiricisi** Köşe gölgelendirici aşaması, genellikle dönüşüm, kaplama ve aydınlatma gibi işlemleri gerçekleştirerek köşeleri işler. Köşe gölgelendiriciler, giriş olarak aldıkları köşeleri aynı sayıda oluşturur.
 
- Kabuk gölgelendirici aşaması ardışık düzen Aşamaları penceresinde görünür değil.
+ Ardışık düzen aşamaları penceresinde, köşe gölgelendirici çıkışı bir tel çerçeve tarama görüntüsü olarak görselleştirilir. Sonuca daha yakından bakmak için **grafik ardışık düzen aşamaları** penceresinde **köşe gölgelendiricisi** ' ni seçerek görüntü düzenleyicisinde işlenen köşeleri görüntüleyin.
 
- **Tessellator aşama** (Direct3D 11 ve Direct3D 12) önceden işler Kabuk gölgelendiricisi çıkışı tarafından temsil edilen etki alanı sabit işlev (programlanabilir olmayan) bir donanım birim tessellator aşamasıdır. Çıktı olarak bir etki alanının örnekleme desen ve daha küçük ilkel bir dizi oluşturur — noktaları, satırlar, üçgen — bu örnekleri bağlanın.
+> [!NOTE]
+> @No__t_0 veya `SV_POSITION` semantiği köşe gölgelendirici çıktısında yoksa, **köşe gölgelendirici** aşamasında hiçbir şey görüntülenmez.
 
- Tessellator aşaması ardışık düzen Aşamaları penceresinde görünür değil.
+ **Kabuk gölgelendirici** (yalnızca Direct3D 11 ve Direct3D 12) kabuk gölgelendirici aşaması, çizgi, üçgen veya dörtlü gibi düşük sıralı bir yüzeyi tanımlayan denetim noktalarını işler. Çıktı olarak, sabit işlev mozaik döşeme aşamasına geçirilen daha yüksek sıralı bir geometri düzeltme eki ve düzeltme eki sabitleri üretir.
 
- **Etki alanı gölgelendiricisi** (Direct3D 11 ve Direct3D 12) etki alanı gölgelendirici aşaması birlikte Mozaik faktörler hesaplanabilir Mozaik döşeme aşaması'dan daha yüksek sıralı geometri düzeltme ekleri Hull gölgelendiricisi, gelen işler. Mozaik faktörler olabilir tessellator giriş faktörü dahil yanı sıra Etkenler çıktı. Çıktı olarak bir noktadaki tessellator faktörlere göre çıkış düzeltme eki köşe konumunu hesaplar.
+ Kabuk gölgelendirici aşaması, ardışık düzen aşamaları penceresinde görselleştirilmemiş.
 
- Etki alanı gölgelendirici aşaması ardışık düzen Aşamaları penceresinde görünür değil.
+ **Tessellatör aşaması** (yalnızca Direct3D 11 ve Direct3D 12) tessellatör aşaması, kabuk gölgelendiricisinin çıkışıyla temsil edilen etki alanını önceden işleyen sabit bir işlev (programlanabilir olmayan) donanım birimidir. Çıktı olarak, etki alanının bir örnekleme modelini ve bu örnekleri bağlayan daha küçük temel elemanlar (noktaları, çizgiler, üçgenler) oluşturur.
 
- **Geometri gölgelendiricisi** geometri gölgelendirici aşaması tüm temelleri işler — noktaları, çizgiler veya üçgenler — edge bitişik temelleri için isteğe bağlı köşe verileriyle birlikte. Köşe gölgelendiricileri aksine geometri gölgelendirici daha oluşturabilir veya olarak aldıkları daha az temelleri giriş.
+ Tessellatör aşaması, ardışık düzen aşamaları penceresinde görselleştirilmemiş.
 
- Ardışık Düzen Aşamaları penceresinde geometri gölgelendiricisi çıkışı bir Tel Çerçeve ızgara görüntüsü olarak görselleştirilir. Sonuç birine daha yakından bakalım için seçin **geometri gölgelendiricisi** içinde **grafik ardışık düzen aşamaları** işlenen temelleri Resim Düzenleyicisi'nde görüntülemek için pencere.
+ **Etki alanı gölgelendirici** (yalnızca Direct3D 11 ve Direct3D 12) etki alanı gölgelendirici aşaması, ıull gölgelendiriciden daha yüksek sıralı geometri düzeltme eklerini, mozaik döşeme aşamasından mozaik döşeme çarpanlarına birlikte işler. Mozaik döşeme faktörleri, tessellatör giriş faktörleri ve çıkış faktörleri dahil olabilir. Çıkış olarak, çıkış yaması üzerindeki bir noktanın köşe konumunu tessellatör faktörlerine göre hesaplar.
 
- **Stream çıkış aşama** akış çıkışı aşama dönüştürülmüş temelleri tarama önce ıntercept ve bellek yazmak; buradan verileri önceki grafik ardışık düzen aşamaları giriş olarak recirculated veya CPU tarafından okunur.
+ Etki alanı gölgelendirici aşaması, ardışık düzen aşamaları penceresinde görselleştirilmemiş.
 
- Akış çıkış aşaması ardışık düzen Aşamaları penceresinde görselleştirilir değil.
+ **Geometri gölgelendiricisi** Geometri gölgelendirici aşaması, kenar bitişik temel elemanlar için isteğe bağlı köşe verileriyle birlikte, tüm temelleri (punto, çizgi veya üçgen) işler. Köşe gölgelendiricilerinin aksine, geometri gölgelendiriciler girdi olarak aldıkları daha fazla veya daha az temel üretebilir.
 
- **Tarayıcısını aşama** vektör temelleri dönüştürür bir sabit işlev (programlanabilir olmayan) bir donanım birim tarayıcısını aşamadır — noktaları, satırlar, üçgen — satır içi tarama dönüştürme gerçekleştirerek bir ızgara görüntüsü. Tarama sırasında köşeler homojen küçük-alanı dönüştürülür ve kırpılır. Çıktı olarak piksel gölgelendiricileri eşlenir ve her köşe öznitelikleri arasında temel ilişkilendirilmiş ve piksel gölgelendiricisi için hazır hale getirdik.
+ Ardışık düzen aşamaları penceresinde, geometri gölgelendirici çıkışı bir tel çerçeve tarama görüntüsü olarak görselleştirilir. Sonuca daha yakından bakmak için **grafik ardışık düzen aşamaları** penceresinde **geometri gölgelendirici** ' ni seçerek görüntü düzenleyicisinde işlenen temelleri görüntüleyin.
 
- Tarayıcısını aşaması ardışık düzen Aşamaları penceresinde görselleştirilir değil.
+ **Akış çıkış aşaması** Akış çıkış aşaması, Rasterleştirmeye ve bunları belleğe yazmaya başlamadan önce dönüştürülmüş temel elemanlara müdahale edebilir; verilerin buradan grafik işlem hattının önceki aşamalarına giriş olarak yeniden gezilecek veya CPU tarafından geri okunmuş olabilir.
 
- **Piksel gölgelendirici** piksel gölgelendirici aşaması renk ve derinlik gibi piksel başına değerler oluşturmak için taranmış temelleri birlikte ilişkilendirilmiş köşe verileri işler.
+ Akış çıkış aşaması, ardışık düzen aşamaları penceresinde görselleştirilmemiş.
 
- Ardışık Düzen Aşamaları penceresinde piksel gölgelendirici çıkış rengi tam tarama görüntü olarak görselleştirilir. Sonuç birine daha yakından bakalım için seçin **piksel gölgelendiricisi** içinde **grafik ardışık düzen aşamaları** işlenen temelleri Resim Düzenleyicisi'nde görüntülemek için pencere.
+ **Tarama aşaması** Tarayıcı aşaması, tarama satırı dönüştürmesi gerçekleştirerek vektör temel çizgilerini, noktaları, çizgileri ve üçgenler bir raster görüntüsüne dönüştüren sabit bir işlev (programlanabilir olmayan) donanım birimidir. Rasterleştirme köşeler sırasında hogenou klip-alanına dönüştürülüp kırpıldı. Çıktı olarak, Piksel gölgelendiricileri eşlenir ve köşe başına öznitelikler temel öğe genelinde enterpoladır ve piksel gölgelendiricide kullanıma sunulur.
 
- **Birleşme çıkış** çıkış birleşme aşama karşılık gelen arabelleklerini mevcut içeriği ile birlikte yeni işlenen piksel etkisini birleştirir; renk ve derinlik kalıbı — bu arabellekleri yeni değerler oluşturmak için.
+ Tarama aşaması, ardışık düzen aşamaları penceresinde görselleştirilmemiş.
 
- Ardışık Düzen Aşamaları penceresinde çıkış birleşme çıkış rengi tam tarama görüntü olarak görselleştirilir. Sonuçları birine daha yakından bakalım için seçin **çıkış Birleştiricisi** içinde **grafik ardışık düzen aşamaları** birleştirilmiş framebuffer görüntülemek için pencere.
+ **Piksel gölgelendiricisi** Pixel gölgelendirici aşaması, renk ve derinlik gibi piksel başına değerler oluşturmak için, enterpolasyonlu köşe verileriyle birlikte bulunan temel verileri birlikte oluşturur.
 
-### <a name="vertex-and-geometry-shader-preview"></a>Köşe ve geometri gölgelendiricisi Önizleme
- Köşe veya geometri gölgelendiricisi aşamasında seçtiğinizde **ardışık düzen aşamaları** penceresinde görüntüleyebilirsiniz girişleri ve çıkışları gölgelendirici altındaki panel içinde.  Burada, bunlar tarafından giriş derleyici aşamasının birleştirilmiş sonra gölgelendiriciler için sağlanan köşe listesi hakkındaki ayrıntıları bulabilirsiniz.
+ Ardışık düzen aşamaları penceresinde, piksel gölgelendirici çıkışı tam renkli bir raster görüntüsü olarak görselleştirilir. Sonuca daha yakından bakmak için **grafik ardışık düzen aşamaları** penceresinde **piksel gölgelendiricisi** ' ni seçerek görüntü düzenleyicisinde işlenen temelleri görüntüleyin.
+
+ **Çıktı Merger** Çıktı birleşme aşaması, yeni oluşturulan piksellerin, bu arabelleklerde yeni değerler oluşturmak için karşılık gelen arabelleklerinin (renk, derinlik ve kalıp) var olan içeriğiyle birlikte etkisini birleştirir.
+
+ Ardışık düzen aşamaları penceresinde, çıktı birleşme çıkışı tam renkli bir raster görüntüsü olarak görselleştirilir. Sonuçlara daha yakından bakmak için **grafik ardışık düzen aşamaları** penceresinde **çıktı Merger** ' yi seçerek birleştirilmiş framebuffer 'ı görüntüleyin.
+
+### <a name="vertex-and-geometry-shader-preview"></a>Köşe ve geometri gölgelendirici önizlemesi
+ **Ardışık düzen aşamaları** penceresinde köşe veya geometri gölgelendirici aşamasını seçtiğinizde, aşağıdaki panelde yer alarak gölgelendiriciye yönelik giriş ve çıkış işlemleri görüntüleyebilirsiniz.  Burada, giriş assembler aşaması tarafından derlendikten sonra gölgelendiriciler için sağlanan köşelerin listesi hakkındaki ayrıntıları bulacaksınız.
 
  ![Köşe gölgelendirici aşaması giriş arabelleği Görüntüleyicisi](media/gfx_diag_vertex_shader_inbuffers.png)
 
- Köşe gölgelendirici aşamasının sonucu görüntülemek için Kafes sonra biri tam boyutlu, bir taranmış Tel Çerçeve görüntülemek için köşe gölgelendirici aşaması küçük resim seçin, edilmiş köşe gölgelendiricisi tarafından dönüştürülür.
+ Köşe gölgelendirici aşamasının sonucunu görüntülemek için, köşe gölgelendiricisi tarafından dönüştürüldükten sonra, kafesin tam boyutlu, rasterleştirilmiş bir tel kafes değerini görüntülemek için köşe gölgelendirici aşaması küçük resmini seçin.
 
- ![Köşe gölgelendirici aşaması sonuç önizlemesi](media/gfx_diag_vertex_shader_preview.png)
+ ![Köşe gölgelendirici aşaması sonuç önizleme](media/gfx_diag_vertex_shader_preview.png)
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [İzlenecek yol: Köşe Gölgeleme Nedeniyle Eksik Nesneler](walkthrough-missing-objects-due-to-vertex-shading.md)
-- [İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İzlenecek Yol: Köşe Gölgeleme Nedeniyle Nesnelerin Eksikliği](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [İzlenecek Yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)

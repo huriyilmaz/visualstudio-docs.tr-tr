@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Web sunucusu kilitli ve DEBUG fiilini engelliyor | Microsoft Docs'
+title: 'Hata: Web sunucusu kilitli ve hata ayıklama fiilini engelliyor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,38 +16,38 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22a564da1de8a7f375209ff4c02236a3e2baca8f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9564f077a5379f44d2beb4d7851453dd6b35fa48
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850667"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736948"
 ---
-# <a name="error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb"></a>Hata: Web sunucusu kilitli ve DEBUG fiilini engelliyor
-Bir Web uygulaması veya XML Web hizmeti içine Adımlama, IIS Kilitleme aracını çalıştırın ve URLScan yüklü ve etkin olduğundan başarısız oldu. Bu durum, IIS DEBUG fiilini almasını engeller.
+# <a name="error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb"></a>Hata: Web Sunucusu Kilitli ve DEBUG Fiilini Engelliyor
+Web uygulamasına veya XML Web hizmetine adımlamak, IIS Kilitleme Aracı çalıştırıldığı ve URLScan yüklenmiş ve etkinleştirilmiş olduğundan başarısız oldu. Bu koşul, IIS 'nin hata ayıklama fiilini almasını engeller.
 
- URLScan IIS Web sitesi yöneticilerinin gereksiz özelliklerini Kapat ve sunucu işleyecek HTTP istek türlerini kısıtlamak olanağı vermek için IIS Kilitleme Aracı ile birlikte çalışan bir güvenlik aracıdır. URLScan güvenlik aracı, belirli HTTP isteklerini engelleyerek, sunucuya ulaşmadan ve zarar görmesine neden zararlı olabilecek istekleri engeller.
+ URLScan, IIS Web sitesi yöneticilerine gereksiz özellikleri kapatma ve sunucunun işleyeceğini HTTP isteklerinin türünü kısıtlama yeteneği sağlamak için IIS kilitleme aracı ile birlikte çalışan bir güvenlik aracıdır. URLScan güvenlik aracı, belirli HTTP isteklerini engelleyerek, zararlı olabilecek isteklerin sunucuya ulaşmasını ve hasar vermesine neden olur.
 
- Uygulamanızı IIS 6.0, Windows Server 2003 çalıştırıyorsa, çünkü IIS 6.0 aynı işlevselliği sağlar, IIS Kilitleme aracını çalıştırmamanız.
+ Uygulamanız Windows Server 2003 üzerinde IIS 6,0 üzerinde çalışıyorsa, IIS 6,0 aynı işlevselliği sağladığından IIS Kilitleme Aracı 'nı çalıştırmanız gerekir.
 
-### <a name="to-enable-debugging-on-a-web-server-with-urlscan-installed"></a>Bir Web sunucusunda yüklü URLScan ile hata ayıklamayı etkinleştirmek için
+### <a name="to-enable-debugging-on-a-web-server-with-urlscan-installed"></a>URLScan yüklü bir Web sunucusunda hata ayıklamayı etkinleştirmek için
 
-1. Urlscan.ini dosyasını bulun. Normalde, şuna benzer bir dizinde bulacaksınız:
+1. URLScan. ini dosyasını bulun. Normalde, bunu şuna benzer bir dizinde bulacaksınız:
 
      C:\WINNT\System32\Inetsrv\urlscan
 
-2. Dosyanın bir kopyasını oluşturun ve adlandırın **Urlscan.old**.
+2. Dosyanın bir kopyasını oluşturun ve bunu **URLScan. old**olarak adlandırın.
 
-3. Özgün kopyasını Urlscan.ini dosyasını Not Defteri'nde veya tercih ettiğiniz metin düzenleyiciyi kullanarak açın.
+3. Not defteri 'Ni veya seçtiğiniz metin düzenleyicisini kullanarak URLScan. ini dosyasının özgün kopyasını açın.
 
-4. URLScan.ini içinde [AllowVerbs] bölümünü bulun. Hata ayıklama [AllowVerbs] bölümüne ekleyin. Görürseniz; [AllowVerbs] bölümünde hata AYIKLAMAK için noktalı fiili açıklamasını kaldırın.
+4. URLScan. ini dosyasında [AllowVerbs] bölümünü bulun. [AllowVerbs] bölümüne hata ayıklama ekleyin. [AllowVerbs] bölümünde EBUG;D görürseniz, fiilin açıklama eklemek için noktalı virgülü kaldırın.
 
-5. [DenyVerbs] bölümünü bulun. Hata ayıklama [DenyVerbs] bölümünde görünüyorsa, bunu kaldırın.
+5. [DenyVerbs] bölümünü bulun. [DenyVerbs] bölümünde hata ayıklama görüntülenirse, kaldırın.
 
 6. Dosyayı kaydedin.
 
-7. Sunucuyu yeniden başlatın veya IIS'yi yeniden başlatın.
+7. Sunucuyu yeniden başlatın veya IIS 'yi yeniden başlatın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
 - [Hata: Web Sunucusu İstenen Kaynağı Bulamadı](../debugger/error-the-web-server-could-not-find-the-requested-resource.md)

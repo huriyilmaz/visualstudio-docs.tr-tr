@@ -1,5 +1,5 @@
 ---
-title: Windows API işlevlerinde hata ayıklama | Microsoft Docs
+title: Windows API işlevlerinde hata ayıkla | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,26 +22,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cac0524c0d4421c034ebfd6dfa6f61a0e9b589fc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e7b5f3842160f4ffc6cecd41e65dd05ab7566dd0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894931"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734356"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>Windows API İşlevlerinde Nasıl Hata Ayıklayabilirim?
-NT sembolleri yüklü olan bir Windows API işlev hata ayıklamak istiyorsanız, aşağıdakileri yapmanız gerekir.
+Yüklü NT sembolleri olan bir Windows API işlevinde hata ayıklamak istiyorsanız, aşağıdakileri yapmanız gerekir.
 
-### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>NT sembolleri ile bir Windows API işlevi üzerinde bir kesme noktası ayarlamak için yüklendi
+### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>NT sembolleri yüklenmiş bir Windows API işlevi üzerinde bir kesme noktası ayarlamak için
 
-- İşlevin yer aldığı DLL adı ile birlikte bir işlev adı girin. 32-bit kod içinde düzenlenmiş formu işlev adını kullanın. Bir kesme noktası ayarlamak için **MessageBeep**, örneğin, aşağıdaki girmeniz gerekir.
+- İşlev adını, işlevin bulunduğu DLL adı ile birlikte girin. 32 bitlik kodda, işlev adının düzenlenmiş formunu kullanın. Örneğin, **Messagebip**üzerinde bir kesme noktası ayarlamak için, şunu girmeniz gerekir.
 
     ```cpp
     {,,USER32.DLL}_MessageBeep@4
     ```
 
-     Düzenlenmiş adı almak için bkz: [düzenlenmiş adları görüntüleme](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0).
+     Düzenlenmiş adı almak için bkz. [düzenlenmiş adları görüntüleme](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Yerel Kodda Hata Ayıklama SSS](../debugger/debugging-native-code-faqs.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

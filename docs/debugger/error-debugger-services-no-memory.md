@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklayıcı, bellek yetersiz çalışan hizmetler | Microsoft Docs
+title: Hata ayıklayıcı Hizmetleri belleği azalıyor | Microsoft Docs
 ms.date: 07/10/2019
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,21 +16,21 @@ ms.author: isgarcia
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 05664ffd056f69215e6fb00d6d49a59382a3692f
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.openlocfilehash: 12215f9c740e68c4f2749a51b06c09a1385dae1a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861173"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737837"
 ---
-# <a name="debugger-services-running-out-of-memory"></a>Hata ayıklayıcı, bellek yetersiz çalışan hizmetleri
-Hata Ayıklama Hizmetleri bellek yetersiz ve hata ayıklama oturumu sonlandırma neden oldu.
+# <a name="debugger-services-running-out-of-memory"></a>Belleği Dolan Hata Ayıklayıcı Hizmetleri
+Hata ayıklama hizmetlerinin belleği tükendi ve hata ayıklama oturumunun sonlandırmasına neden oldu.
 
-## <a name="to-investigate-this-error-on-windows"></a>Windows üzerinde bu hatayı incelemek için
-- İşlem bellek grafikte denetleyebilirsiniz **tanılama araçları** hedef uygulamanın bellek büyük büyüme karşılaşıp penceresini. Bu durumda, kullanın **bellek kullanımı** aracının ne tanılamak için altta yatan sorunu için bkz. [bellek kullanımını analiz etme](../profiling/memory-usage.md).
+## <a name="to-investigate-this-error-on-windows"></a>Windows 'da bu hatayı araştırmak için
+- Hedef uygulamanın bellekte çok büyük büyümeye mi karşılaşmadığını görmek için **Tanılama araçları** penceresinde işlem belleği grafiğini kontrol edebilirsiniz. Bu durumda, temel alınan sorunun ne olduğunu tanılamak için **bellek kullanımı** aracını kullanın, bkz. [bellek kullanımını analiz etme](../profiling/memory-usage.md).
 
-- Hedef uygulama, çok miktarda bellek kullanan görünmüyor kullanırsanız **Görev Yöneticisi'ni** penceresi için bellek kullanımını Visual Studio (devenv.exe) çalışan işleminden (msvsmon.exe) veya VS Code (vsdbg.exe/vsdbg-ui.exe) denetlemek için hata ayıklayıcı ile ilgili bir sorun olup olmadığını belirler. Bellek yetersiz çalışan işlemi devenv.exe ise, Visual Studio uzantıları çalışan sayısını azaltmayı göz önünde bulundurun.
+- Hedef uygulama çok miktarda bellek tüketmezse, Visual Studio 'nun bellek kullanımını (devenv. exe), çalışan işlemini (Msvsmon. exe) veya VS Code (vsdbg. exe/vsdbg-ui. exe) kullanarak bu **görevin** bir şekilde kullanıma hazır olup olmadığını denetleyin. hata ayıklayıcı sorunu. Belleğin tükenme işlemi devenv. exe ise, çalışan Visual Studio uzantılarının sayısını azaltmayı göz önünde bulundurun.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [Blog postası: Hata ayıklama sırasında CPU ve bellek çözümleme](https://devblogs.microsoft.com/visualstudio/analyze-cpu-memory-while-debugging/)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Blog gönderisi: hata ayıklarken CPU ve belleği çözümleme](https://devblogs.microsoft.com/visualstudio/analyze-cpu-memory-while-debugging/)
 - [Bellek yönetimi hakkında](/windows/win32/memory/about-memory-management)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::getSrcLineOnTypeDefn | Microsoft Docs
+title: 'IDiaSymbol:: getSrcLineOnTypeDefn | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd81117c11eb42dbccf22e55ee5e294ad9c3c96a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 9f28dc5e60343cc6aacdf456d5475afbfc7db5e9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62834370"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738789"
 ---
 # <a name="idiasymbolgetsrclineontypedefn"></a>IDiaSymbol::getSrcLineOnTypeDefn
-Belirtilen bir kullanıcı tanımlı tür tanımlandığı belirtmek kaynak dosya ve satır numarasını alır.
+Belirtilen kullanıcı tanımlı türün nerede tanımlandığını belirten kaynak dosya ve satır numarasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,11 +30,11 @@ HRESULT getSrcLineOnTypeDefn(
 #### <a name="parameters"></a>Parametreler
  `ppResult`
 
-[out] A `IDiaLineNumber` kaynak dosya ve satır numarası içeren nesne burada kullanıcı tanımlı.
+dışı Kullanıcı tanımlı olan kaynak dosyayı ve satır numarasını içeren `IDiaLineNumber` nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

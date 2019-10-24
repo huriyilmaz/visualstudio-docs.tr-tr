@@ -1,5 +1,5 @@
 ---
-title: Idiasession::put_loadaddress | Microsoft Docs
+title: IDiaSession::p ut_loadAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01d004491feedff26c350cd7d40c544bc6b6de0f
-ms.sourcegitcommit: 208395bc122f8d3dae3f5e5960c42981cc368310
+ms.openlocfilehash: 39db3bc0e0107e734f5de3f6902a2ca0fcc55bb0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "64783735"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741897"
 ---
-# <a name="idiasessionputloadaddress"></a>IDiaSession::put_loadAddress
-Yükleme adresine karşılık gelen yürütülebilir dosyası için sembolleri bu sembol deposu içerisinde ayarlar.
+# <a name="idiasessionput_loadaddress"></a>IDiaSession::put_loadAddress
+Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT put_loadAddress ( 
 #### <a name="parameters"></a>Parametreler
  `NewVal`
 
-[in] Yürütülebilir dosya için adres yükleyin.
+'ndaki Yürütülebilir dosya için yükleme adresi.
 
 ## <a name="remarks"></a>Açıklamalar
- Sembol sanal adres (VA) özellikleri, bu yöntem değeri kullanılarak hesaplanır. Bu özellik sıfır olmayan ayarlanmadığı sürece sanal adresleri hesaplanmaz.
+ Sembol sanal adresi (VA) özellikleri bu yöntemin değeri kullanılarak hesaplanır. Bu özellik sıfır dışında bir değer olarak ayarlanmadığı takdirde sanal adresler hesaplanmaz.
 
 > [!NOTE]
-> Aldığınızda, bu yöntemi çağırmanız gerekir [Idiasession](../../debugger/debug-interface-access/idiasession.md) başlamadan önce sanal özellikler üzerinde sembolleri kullanmanız gerekiyorsa nesneyi kullanmayı ve nesne.
+> Bu yöntemi, [IDiaSession](../../debugger/debug-interface-access/idiasession.md) nesnesini alırken ve semboller üzerinde herhangi bir sanal özelliği kullanmanız gerekiyorsa nesneyi kullanmaya başlamadan önce çağırmanız gerekir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

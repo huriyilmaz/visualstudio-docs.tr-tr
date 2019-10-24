@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_backendmajor | Microsoft Docs
+title: 'IDiaSymbol:: get_backEndMajor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc62c81a1a57b9e9921b6df658d05e8a0a541da0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: bae33cf32bc86ad77fa03fab9f940c9fec25194a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830378"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740994"
 ---
-# <a name="idiasymbolgetbackendmajor"></a>IDiaSymbol::get_backEndMajor
-Derleyici arka uç ana sürüm numarasını alır.
+# <a name="idiasymbolget_backendmajor"></a>IDiaSymbol::get_backEndMajor
+Derleyicinin arka uç ana sürüm numarasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,25 +33,25 @@ HRESULT get_backEndMajor ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Arka uç ana sürüm numarasını döndürür. Açıklamalara bakın.
+dışı Arka uç ana sürüm numarasını döndürür. Bkz. açıklamalar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir derleyici genellikle birincil iki öğeden oluşur: bir ara forma kaynak kodu ayrıştırma işleyen ön uç (ayrıştırıcının) ve derlemeye Ara formun dönüştüren bir arka uç (Kod Oluşturucu). Arka uçtan farklı bir sürüm ön uç için sık karşılaşılan bir durum değil.
+ Derleyici genellikle iki birincil öğeden oluşur: kaynak kodu bir ara forma ayrıştırmayı işleyen ön uç (Ayrıştırıcı) ve ara formu derlemeye dönüştüren bir arka uç (kod Oluşturucu). Ön uç için arka uçtan farklı bir sürüme sahip olması seyrek değildir.
 
- Ön uç veya arka uç sürüm numarası, üç bölümden oluşur: \<ana >.\< küçük >. \<Yapı >, burada \<ana > ana sürüm numarası \<küçük > alt sürüm numarası ve \<Yapı > yapı numarasıdır. Örneğin, 13.10.3077.
+ Ön uç veya arka uç sürüm numarası üç bölümden oluşur: \<major >. \<minor >. \<build >, \<major > Ana sürüm numarasıdır, \<minor > ikincil sürüm numarasıdır ve \<build > yapı numarasıdır. Örneğin, 13.10.3077.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

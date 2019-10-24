@@ -16,57 +16,57 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- MSBUILD (Visual C++), MT task
-- MT task (MSBuild (Visual C++))
+- MSBUILD (C++), MT task
+- MT task (MSBuild (C++))
 ms.assetid: bb94913c-1042-4968-9f08-b394518e899f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7afdf40c660a7433c51d2fa1130ef5f2cca616bd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 11395230ac3721bbcef13b85aa1f0d244c19c6eb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437832"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748053"
 ---
 # <a name="mt-task"></a>MT görevi
-Microsoft bildirim aracı, sarmalar *mt.exe*. Daha fazla bilgi için [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).
+Microsoft bildirim aracı olan *mt. exe*' yi kaydırır. Daha fazla bilgi için bkz. [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).
 
 ## <a name="parameters"></a>Parametreler
- Parametreleri aşağıdaki tabloda açıklanmıştır **MT** görev. Çoğu görev parametreleri ve parametrelerin birkaç kümeleri bir komut satırı seçeneğine karşılık gelir.
+ Aşağıdaki tabloda, **MT** görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.
 
 > [!NOTE]
-> *Mt.exe* belgeler kullanan bir tire (**-**) komut satırı seçenekleri, ancak bu konu için ön ek bir eğik çizgi kullanır (**/**). Ya da kabul edilebilir önekidir.
+> *Mt. exe* belgeleri komut satırı seçeneklerinin ön eki olarak bir tire işareti ( **-** ) kullanır, ancak bu konu eğik çizgi ( **/** ) kullanır. Her iki önek de kabul edilebilir.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**AdditionalManifestFiles**|İsteğe bağlı **String []** parametresi.<br /><br /> Bir veya daha fazla bildirim dosyalarının adını belirtir.<br /><br /> Daha fazla bilgi için **/MANIFEST** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**AdditionalOptions**|İsteğe bağlı **dize** parametresi.<br /><br /> Komut satırı seçeneklerinin listesi. Örneğin, /\<Seçenek1 > /\<Seçenek2 > /\<seçeneği #>. Diğer tarafından temsil edilmez komut satırı seçeneklerini belirtmek için bu parametreyi kullanın **MT** görev parametresi.<br /><br /> Daha fazla bilgi için [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**assemblyIdentity**|İsteğe bağlı **dize** parametresi.<br /><br /> Öznitelik değerleri belirtir **assemblyIdentity** bildirimin öğesi. İlk bileşen değeri olduğu bir virgülle ayrılmış listesini belirtin `name` özniteliği, formu içeren bir veya daha fazla ad/değer çiftleri tarafından izlenen  *\<öznitelik adı > = < attribute_value >*.<br /><br /> Daha fazla bilgi için **/identity** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**ComponentFileName**|İsteğe bağlı **dize** parametresi.<br /><br /> Yapıdan düşündüğünüz dinamik bağlantı kitaplığının adı belirtir *.rgs* veya *.tlb* dosyaları. Bu parametreyi belirtirseniz gereklidir **RegistrarScriptFile** veya **TypeLibraryFile** MT görevi parametreleri.<br /><br /> Daha fazla bilgi için **/dll** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**DependencyInformationFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Bildirim aracına ait derleme bağımlılık bilgilerini izlemek için Visual Studio tarafından kullanılan bağımlılık bilgi dosyasını belirtir.|
-|**EmbedManifest**|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `true`, bildirim dosyası derlemeye gömer. Varsa `false`, tek başına bir bildirim dosyası oluşturur.|
-|**EnableDPIAwareness**|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `true`, uygulamayı DPI kullanan olarak işaretleyen bildirim bilgileri ekler. DPI kullanan uygulama yazma, çok çeşitli yüksek DPI görüntü ayarları arasında tutarlı bir şekilde iyi görünen bir kullanıcı arabirimi sağlar.<br /><br /> Daha fazla bilgi için [yüksek DPI](https://docs.microsoft.com/windows/desktop/win7devguide/high-dpi).|
-|**GenerateCatalogFiles**|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `true`, kataloğu tanımı oluşturur (*.cdf*) dosyaları.<br /><br /> Daha fazla bilgi için **/makecdfs** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**GenerateCategoryTags**|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `true`, Kategori etiketlerinin oluşturulmasını sağlar. Bu parametre `true`, **ManifestFromManagedAssemblyMT** görev parametresi de belirtilmelidir.<br /><br /> Daha fazla bilgi için **/Category** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**InputResourceManifests**|İsteğe bağlı **dize** parametresi.<br /><br /> Bir belirtilen tanımlayıcıya sahip rt_manıfest türü kaynağı bildirim girişi. Formunun bir kaynak belirtin \<Dosya > [; [ #]\<resource_id >], isteğe bağlı \<resource_id > parametresi, negatif olmayan, 16-bit bir sayı.<br /><br /> Hayır ise `resource_id` belirtilirse, CREATEPROCESS_MANIFEST_RESOURCE varsayılan değeri (1) kullanılır.<br /><br /> Daha fazla bilgi için **/inputresource** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**ManifestFromManagedAssembly**|İsteğe bağlı **dize** parametresi.<br /><br /> Belirtilen yönetilen derlemeden bir bildirim oluşturur.<br /><br /> Daha fazla bilgi için **/managedassemblyname** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**ManifestToIgnore**|İsteğe bağlı **dize** parametresi.<br /><br /> (Kullanılmıyor.)|
-|**OutputManifestFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Çıkış bildirimi adını belirtir. Bu parametre atlanırsa ve yalnızca bir bildirim üzerinde işlem yapılan, bu bildirim bir yerde değiştirildi.<br /><br /> Daha fazla bilgi için **/out** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**OutputResourceManifests**|İsteğe bağlı **dize** parametresi.<br /><br /> Bir belirtilen tanımlayıcıya sahip rt_manıfest türü kaynağı bildirim çıkışı. Kaynak, biçimindedir \<Dosya > [; [ #]\<resource_id >], isteğe bağlı \<resource_id > parametresi, negatif olmayan, 16-bit bir sayı.<br /><br /> Hayır ise `resource_id` belirtilirse, CREATEPROCESS_MANIFEST_RESOURCE varsayılan değeri (1) kullanılır.<br /><br /> Daha fazla bilgi için **/outputresource** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**RegistrarScriptFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Kaydedici betik adını belirtir (*.rgs*) kayıt gerektirmeyen COM bildirim desteği için kullanılacak dosya.<br /><br /> Daha fazla bilgi için **/rgs** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**ReplacementsFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Kaydedici betik değiştirilebilir dizelerin değerlerini içeren dosyayı belirtir (*.rgs*) dosyası.<br /><br /> Daha fazla bilgi için **/replacements** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**AdditionalManifestFiles**|İsteğe bağlı **dize []** parametresi.<br /><br /> Bir veya daha fazla bildirim dosyasının adını belirtir.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/MANIFEST** seçeneğine bakın.|
+|**AdditionalOptions**|İsteğe bağlı **dize** parametresi.<br /><br /> Komut satırı seçeneklerinin listesi. Örneğin,/\<option1 >/\<option2 >/\<option # >. Başka bir **MT** görev parametresi tarafından temsil edilmeyen komut satırı seçeneklerini belirtmek için bu parametreyi kullanın.<br /><br /> Daha fazla bilgi için bkz. [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**AssemblyIdentity**|İsteğe bağlı **dize** parametresi.<br /><br /> Bildirimin **assemblyIdentity** öğesinin öznitelik değerlerini belirtir. İlk bileşenin `name` özniteliğin değeri olduğu, ardından bir veya daha fazla ad/değer çifti olan, *\<attribute adı > = < attribute_value >* olan virgülle ayrılmış bir liste belirtin.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/Identity** seçeneğine bakın.|
+|**ComponentFileName**|İsteğe bağlı **dize** parametresi.<br /><br /> *. Rgs* veya *. tlb* dosyalarından oluşturmayı düşündüğünüz dinamik bağlantı kitaplığının adını belirtir. **RegistrarScriptFile** veya **TypeLibraryFile** MT görev parametrelerini belirtirseniz bu parametre gereklidir.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/DLL** seçeneğine bakın.|
+|**Dependencyınformationfile**|İsteğe bağlı **dize** parametresi.<br /><br /> Bildirim aracına yönelik derleme bağımlılığı bilgilerini izlemek için Visual Studio tarafından kullanılan bağımlılık bilgi dosyasını belirtir.|
+|**EmbedManifest**|İsteğe bağlı `Boolean` parametresi.<br /><br /> @No__t_0, bildirim dosyasını derlemeye gömer. @No__t_0, tek başına bildirim dosyası olarak oluşturulur.|
+|**Enabledpitanıma**|İsteğe bağlı `Boolean` parametresi.<br /><br /> @No__t_0, uygulamayı DPı kullanan olarak işaretleyen bildirim bilgilerine ekler. DPı kullanan bir uygulama yazmak, bir kullanıcı arabiriminin çok çeşitli yüksek DPı ekran ayarları boyunca sürekli olarak iyi görünmesini sağlar.<br /><br /> Daha fazla bilgi için bkz. [yüksek DPI](https://docs.microsoft.com/windows/desktop/win7devguide/high-dpi).|
+|**GenerateCatalogFiles**|İsteğe bağlı `Boolean` parametresi.<br /><br /> @No__t_0, Katalog tanımı ( *. cdf*) dosyaları oluşturur.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/makecdfs** seçeneğine bakın.|
+|**GenerateCategoryTags**|İsteğe bağlı `Boolean` parametresi.<br /><br /> @No__t_0, kategori etiketlerinin oluşturulmasına neden olur. Bu parametre `true`, **ManifestFromManagedAssemblyMT** görev parametresinin de belirtilmesi gerekir.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/category** seçeneğine bakın.|
+|**Inputresourcebildirimleri**|İsteğe bağlı **dize** parametresi.<br /><br /> Belirtilen tanımlayıcıya sahip RT_MANIFEST türünde bir kaynaktan bildirim girin. Form kaynağını belirtin, \<file > [; [ #] isteğe bağlı \<resource_id > parametresinin negatif olmayan, 16 bit bir sayı olduğu >] \<resource_id.<br /><br /> @No__t_0 belirtilmemişse, CREATEPROCESS_MANIFEST_RESOURCE varsayılan değeri (1) kullanılır.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/ınputresource** seçeneğine bakın.|
+|**ManifestFromManagedAssembly**|İsteğe bağlı **dize** parametresi.<br /><br /> Belirtilen yönetilen derlemeden bir bildirim oluşturur.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/managedassemblyname** seçeneğine bakın.|
+|**Manifesttoıgnore**|İsteğe bağlı **dize** parametresi.<br /><br /> (Kullanılmıyor.)|
+|**OutputManifestFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Çıkış bildiriminin adını belirtir. Bu parametre atlanırsa ve üzerinde yalnızca bir bildirim işletilebilir, bu bildirim yerinde değiştirilir.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/Out** seçeneğine bakın.|
+|**Outputresourcebildirimleri**|İsteğe bağlı **dize** parametresi.<br /><br /> Bildirimi, belirtilen tanımlayıcıya sahip RT_MANIFEST türünde bir kaynağa çıkış. Kaynak, \<file > [; [ #] isteğe bağlı \<resource_id > parametresinin negatif olmayan, 16 bit bir sayı olduğu >] \<resource_id.<br /><br /> @No__t_0 belirtilmemişse, CREATEPROCESS_MANIFEST_RESOURCE varsayılan değeri (1) kullanılır.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/outputresource** seçeneğine bakın.|
+|**RegistrarScriptFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Kayıtsız COM bildirim desteği için kullanılacak kaydedici betiği ( *. rgs*) dosyasının adını belirtir.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/r GS** seçeneğine bakın.|
+|**ReplacementsFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Kaydedici betiği ( *. rgs*) dosyasındaki değiştirilebilen dizelerin değerlerini içeren dosyayı belirtir.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/değiştirmeleri** seçeneğine bakın.|
 |**ResourceOutputFileName**|İsteğe bağlı **dize** parametresi.<br /><br /> Bildirimi proje çıkışına katıştırmak için kullanılan çıkış kaynakları dosyasını belirtir.|
-|**Kaynakları**|İsteğe bağlı `ITaskItem[]` parametresi.<br /><br /> Bildirim kaynak dosyaları boşlukla ayrılmış listesini belirtir.<br /><br /> Daha fazla bilgi için **/MANIFEST** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**SuppressDependencyElement**|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `true`, bağımlılık öğeler olmadan bir bildirim oluşturur. Bu parametre `true`, ayrıca belirtin **ManifestFromManagedAssemblyMT** görev parametresi.<br /><br /> Daha fazla bilgi için **/nodependency** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**SuppressStartupBanner**|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini engeller.<br /><br /> Daha fazla bilgi için **/nologo** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**TrackerLogDirectory**|İsteğe bağlı `String` parametresi.<br /><br /> Bu görev için izleme günlüklerinin depolandığı Ara dizini belirtir.|
-|**TypeLibraryFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Tür kitaplığının adını belirtir (*.tlb*) dosyası. Bu parametreyi belirtirseniz, aynı zamanda belirtin **ComponentFileNameMT** görev parametresi.<br /><br /> Daha fazla bilgi için **/TLB** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
-|**UpdateFileHashes**|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `true`, dosyaları tarafından belirtilen yolda karma değerini hesaplar **UpdateFileHashesSearchPathMT** görev parametresi ve değerini güncelleştirir. **karma** özniteliği**dosya** hesaplanan değeri kullanarak bildirimin öğesi.<br /><br /> Daha fazla bilgi için **/hashupdate** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe). Ayrıca bkz: **UpdateFileHashesSearchPath** bu tablodaki parametresi.|
-|**UpdateFileHashesSearchPath**|İsteğe bağlı `String` parametresi.<br /><br /> Dosya karmalarının güncellenmesinin kullanılacak arama yolunu belirtir. İle bu parametreyi kullanın **UpdateFileHashesMT** görev parametresi.<br /><br /> Daha fazla bilgi için **UpdateFileHashes** bu tablodaki parametresi.|
-|**VerboseOutput**|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `true`, ayrıntılı hata ayıklama bilgilerini görüntüler.<br /><br /> Daha fazla bilgi için **/ verbose** seçeneğini [Mt.exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe).|
+|**Ğına**|İsteğe bağlı `ITaskItem[]` parametresi.<br /><br /> Boşluklarla ayrılmış bildirim kaynak dosyalarının bir listesini belirtir.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/MANIFEST** seçeneğine bakın.|
+|**SuppressDependencyElement**|İsteğe bağlı `Boolean` parametresi.<br /><br /> @No__t_0, bağımlılık öğeleri olmayan bir bildirim oluşturur. Bu parametre `true` ise, **ManifestFromManagedAssemblyMT** görev parametresini de belirtin.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/nodependency** seçeneğine bakın.|
+|**SuppressStartupBanner**|İsteğe bağlı `Boolean` parametresi.<br /><br /> @No__t_0, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/nologo** seçeneğine bakın.|
+|**TrackerLogDirectory**|İsteğe bağlı `String` parametresi.<br /><br /> Bu görev için İzleme günlüklerinin depolandığı ara dizini belirtir.|
+|**TypeLibraryFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Tür kitaplığı ( *. tlb*) dosyasının adını belirtir. Bu parametreyi belirtirseniz, **ComponentFileNameMT** görev parametresini de belirtin.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/tlb** seçeneğine bakın.|
+|**Updatefilekarmaları**|İsteğe bağlı `Boolean` parametresi.<br /><br /> @No__t_0, **UpdateFileHashesSearchPathMT** görev parametresi tarafından belirtilen yoldaki dosyaların karma değerini hesaplar ve ardından Hesaplanan değeri kullanarak bildirimin **Dosya** öğesinin **karma** özniteliğinin değerini günceller .<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/hashupdate** seçeneğine bakın. Ayrıca bkz. bu tablodaki **UpdateFileHashesSearchPath** parametresi.|
+|**UpdateFileHashesSearchPath**|İsteğe bağlı `String` parametresi.<br /><br /> Dosya karmaları güncelleştirilirken kullanılacak arama yolunu belirtir. **UpdateFileHashesMT** görev parametresiyle bu parametreyi kullanın.<br /><br /> Daha fazla bilgi için bu tablodaki **Updatefilekarmaları** parametresine bakın.|
+|**VerboseOutput**|İsteğe bağlı `Boolean` parametresi.<br /><br /> @No__t_0, ayrıntılı hata ayıklama bilgilerini görüntüler.<br /><br /> Daha fazla bilgi için, [mt. exe](https://docs.microsoft.com/windows/desktop/SbsCs/mt-exe)' de **/verbose** seçeneğine bakın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

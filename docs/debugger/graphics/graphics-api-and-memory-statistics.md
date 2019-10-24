@@ -1,5 +1,5 @@
 ---
-title: Grafik API'si ve bellek istatistikleri | Microsoft Docs
+title: Grafik API 'SI ve bellek Istatistikleri | Microsoft Docs
 ms.date: 03/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -11,36 +11,36 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7810889d4af411477573c71aa694d797a90763f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fa808e76e6655c5d57108c923b19794d0398b80c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62896025"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735571"
 ---
-# <a name="graphics-api-and-memory-statistics"></a>Grafik API'si ve bellek istatistikleri
+# <a name="graphics-api-and-memory-statistics"></a>Grafik API 'SI ve bellek Istatistikleri
 <!-- VERSIONLESS -->
-Visual Studio 2017 ve daha büyük destek grafik API istatistikleri ve bellek istatistikleri araçları.  Bu iki Araçlar GPU bellek tüketimi çeşitli kaynakların yanı sıra Direct3D API kullanımı hakkında bilgi çeşitli bitlerini görüntülemenize olanak sağlar.
+Visual Studio 2017 ve üzeri grafik API Istatistiklerini ve bellek Istatistikleri araçlarını destekler.  Bu iki araç, Direct3D API kullanımıyla ilgili çeşitli bilgileri ve çeşitli kaynakların GPU bellek tüketimini görüntülemenize olanak sağlar.
 
-## <a name="graphics-api-statistics"></a>Grafik API istatistikleri
-Visual Studio grafik tanılama grafik API'si istatistiklerin tüm yapılan Direct3D çağrıları ve her çağrı sayısı görüntülemenize olanak tanır.  Penceresini görüntülemek için seçin **Görüntüle > API istatistikleri** menü öğesi.
+## <a name="graphics-api-statistics"></a>Grafik API Istatistikleri
+Visual Studio 'daki grafik API Istatistikleri Grafik Tanılama, yapılan tüm Direct3D çağrılarını ve her çağrının sayısını görüntülemenizi sağlar.  Pencereyi görüntülemek için **> API istatistikleri** menü öğesini görüntüle ' yi seçin.
 
-![API istatistikleri](media/gfx_diag_api_statistics.png)
+![API Istatistikleri](media/gfx_diag_api_statistics.png)
 
-Bu araç DirectX çağrılarına, sizin fark ettiğinizden değil yapıyorsanız bulma veya çok sık yaptığınız çağrılar kullanışlı olabilir.
+Bu araç, yaptığınız fark etmeyebilirsiniz ya da çok sık yaptığınız çağrılar için DirectX çağrılarını keşfetmekle kullanışlı olabilir.
 
-Penceresinde kopyalama tüm verileri ayrıntılı analiz için Excel gibi bir şeyi yapıştırılabilir CSV, olarak sağ tıklayabilirsiniz.
+Tüm verileri, daha fazla analiz için Excel gibi bir şeye yapıştırılabilecek CSV olarak kopyalamak için pencereye sağ tıklayabilirsiniz.
 
-## <a name="memory-statistics"></a>Bellek istatistikleri
-Bu araç, ne kadar bellek, grafik sürücüsü, kaynaklar için ayrılırken bir çerçeve içinde oluşturduğunuz görüntülenir.  Bu pencereyi görüntülemek için seçin **Görüntüle > bellek istatistikleri** menü öğesi.
+## <a name="memory-statistics"></a>Bellek Istatistikleri
+Bu araç, grafik sürücüsünün bir çerçevede oluşturduğunuz kaynaklar için ne kadar bellek ayırıyor olduğunu gösterir.  Bu pencereyi görüntülemek için **> bellek Istatistiklerini görüntüle** menü öğesini seçin.
 
-![Bellek istatistikleri](media/gfx_diag_memory_statistics.png)
+![Bellek Istatistikleri](media/gfx_diag_memory_statistics.png)
 
-**GPU ayırma** sütun görüntülenen olay tarafından kullanılan bellek miktarını görüntüler **olay** sütun.  İzle simgesini de seçebilirsiniz ![izleme simgesi](media/gfx_watch.png) görüntülemek için [kaynak geçmişi](graphics-event-list.md#resource-history) seçili olay için.
+**GPU ayırma** sütunu **olay sütununda görüntülenen olay tarafından** kullanılan bellek miktarını görüntüler.  Ayrıca, seçilen olaya ait [kaynak geçmişini](graphics-event-list.md#resource-history) görüntülemek için, izleme simgesini ![watch simgesini ](media/gfx_watch.png) seçebilirsiniz.
 
-API istatistikleri aracıyla olduğu gibi, penceresinde kopyalama tüm verileri ayrıntılı analiz için Excel gibi bir şeyi yapıştırılabilir CSV, olarak sağ tıklayabilirsiniz.
+API Istatistikleri aracında olduğu gibi, tüm verileri daha fazla analiz için Excel gibi bir tabloya yapıştırılabilecek CSV olarak kopyalamak için pencereye sağ tıklayabilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Grafik Tanılama (DirectX Grafiklerinde Hata Ayıklama)](visual-studio-graphics-diagnostics.md)
 - [Kaynak geçmişi](graphics-event-list.md#resource-history)
 <!-- /VERSIONLESS -->

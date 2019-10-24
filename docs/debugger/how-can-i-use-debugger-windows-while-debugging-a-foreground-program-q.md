@@ -1,5 +1,5 @@
 ---
-title: Ön plan uygulama hata ayıklama sırasında hata ayıklayıcı pencerelerini kullanma | Microsoft Docs
+title: Ön plan uygulamasında hata ayıklarken hata ayıklayıcı pencerelerini kullanma | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,20 +22,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11bd61cda8c92721fb42c640b0b5100b8054acdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 759d9a6a3beb55bf72a0f41a93cb26c8c15b0c5e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894872"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734048"
 ---
 # <a name="how-can-i-use-debugger-windows-while-debugging-a-foreground-program"></a>Ön Plan Programında Hata Ayıklarken Hata Ayıklayıcı Penceresini Nasıl Kullanabilirim?
 ## <a name="problem-description"></a>Sorun açıklaması
- Bir ekran boyama sorunu çözmeye hale getirmeye çalışıyorum. Bu sorunu gözlemlemek için kendi programımı hata ayıklama windows erişim sahip değil anlamına gelir ön bulundurun sorgulamam gerekiyor. Ne yapabilirim?
+ Bir ekran boyama sorununa hata ayıklamaya çalışıyorum. Bu sorunu gözlemlemek için, programımı ön planda tutdum, yani hata ayıklama pencerelerini erişimim yok. Ne yapabilirim?
 
 ## <a name="solution"></a>Çözüm
- İkinci bir bilgisayar varsa, uzaktan hata ayıklama kullanabilirsiniz. İki bilgisayarlı kurulum ile hata ayıklayıcı konakta çalışır durumdayken uzak bilgisayardaki ekran boyama izleyebilirsiniz. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [uzaktan hata ayıklama](../debugger/remote-debugging.md).
+ İkinci bir bilgisayarınız varsa, uzaktan hata ayıklamayı kullanabilirsiniz. İki bilgisayarlı bir kurulumla, ana bilgisayarda hata ayıklayıcıyı çalıştırırken uzak bilgisayar üzerinde ekran boyamayı izleyebilirsiniz. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Yerel Kodda Hata Ayıklama SSS](../debugger/debugging-native-code-faqs.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

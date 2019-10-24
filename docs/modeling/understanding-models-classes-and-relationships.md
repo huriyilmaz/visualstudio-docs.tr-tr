@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42cbc0ea5694e462faf6d3995bc68723a3f522e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 391dff6540bcea26f63d8ea88f344455722b742a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605850"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748230"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Modelleri, Sınıfları ve İlişkileri Anlama
 Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodları ile birlikte DSL tanım dosyası tarafından tanımlanır. DSL çözümünde program kodunun çoğu bu dosyadan oluşturulur.
@@ -148,6 +148,6 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
 
  Türetilmiş bir ilişki, temel ilişkisini uzmanlaşmış hale getirir. Bağlandığı etki alanı sınıfları, temel ilişkiyle bağlantılı sınıflarla aynı veya ondan türetilmelidir. Türetilmiş ilişkinin bir bağlantısı modelde oluşturulduğunda, hem türetilmiş hem de temel ilişkilerin bir örneğidir. Program kodu ' nda, temel ya da türetilmiş sınıf tarafından oluşturulan özellikleri kullanarak bağlantının ters ucuna gidebilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

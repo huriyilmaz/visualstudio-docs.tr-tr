@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::Execute | Microsoft Docs
+title: 'IDiaFrameData:: Execute | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 78440c703ece2aa54e54594d57156dbb17848915
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 88c9af8293dfc6a35e5f0e42d9596494d74b10aa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832681"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743690"
 ---
 # <a name="idiaframedataexecute"></a>IDiaFrameData::execute
-Yığın geriye doğru izleme gerçekleştirir ve sonuçları yığın ilerlemesi çerçeve arabiriminde döndürür.
+Yığın geri sarma gerçekleştirir ve sonuçları bir yığın ilerleme çerçevesi arabiriminde döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,21 +33,21 @@ HRESULT execute ( 
 #### <a name="parameters"></a>Parametreler
  `frame`
 
-[in] Bir [Idiastackwalkframe](../../debugger/debug-interface-access/idiastackwalkframe.md) çerçeve yazmaçların durumu tutan nesne.
+'ndaki Çerçeve yazmaçlarının durumunu tutan bir [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Aşağıdaki tabloda, bu yöntem olası dönüş değerleri gösterir.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|E_DIA_INPROLOG|Giriş kodundaki yığın çerçevesi yürütülemiyor.|
-|E_DIA_SYNTAX|Ayrıştırma hatası çerçeve programında karşılaşıldı.|
-|E_DIA_FRAME_ACCESS|Erişim kayıtları veya bellek alınamıyor.|
-|E_DIA_VALUE|Bir değerin (örneğin, sıfıra bölünme) hesaplama hatası.|
+|E_DIA_INPROLOG|Prolog kodu sırasında yığın çerçevesi yürütülemiyor.|
+|E_DIA_SYNTAX|Çerçeve programında ayrıştırma hatasıyla karşılaşıldı.|
+|E_DIA_FRAME_ACCESS|Kayıt defterlerine veya belleğe erişilemiyor.|
+|E_DIA_VALUE|Değerin hesaplamasında hata oluştu (örneğin, sıfıra bölme).|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, yığın geriye doğru izleme hata ayıklama sırasında çağrılır. [Idiastackwalkframe](../../debugger/debug-interface-access/idiastackwalkframe.md) nesne kayıtlar için güncelleştirmeleri almak ve tarafından kullanılan yöntemleri sağlaması için istemci uygulaması tarafından gerçekleştirilir `execute` yöntemi.
+ Bu yöntem, yığın geri yüklenirken hata ayıklama sırasında çağrılır. [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) nesnesi, kayıt güncelleştirmelerini almak ve `execute` yöntemi tarafından kullanılan yöntemleri sağlamak için istemci uygulama tarafından uygulanır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

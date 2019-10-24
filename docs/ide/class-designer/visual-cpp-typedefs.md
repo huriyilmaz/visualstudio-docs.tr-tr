@@ -1,5 +1,5 @@
 ---
-title: Sınıf Tasarımcısında Visual C++ Typedefs
+title: C++Sınıf Tasarımcısı 'de Typedefs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf886aedc27b6e702637b84bbe919971baec9e3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 94dc4a6687a2aaede7fc901884c5d3acc6fbf56f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647580"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748003"
 ---
-# <a name="visual-c-typedefs-in-class-designer"></a>Sınıf Tasarımcısı C++ 'de görsel tür tanımları
+# <a name="c-typedefs-in-class-designer"></a>C++Sınıf Tasarımcısı 'de tür tanımları
 
 [Typedef](/cpp/cpp/aliases-and-typedefs-cpp#typedefs) deyimleri, bir ad ve temel alınan türü arasında bir veya daha fazla yöneltme katmanı oluşturur. **Sınıf Tasarımcısı** , C++ anahtar sözcüğü `typedef` ile belirtilen typedef türlerini destekler, örneğin:
 
@@ -84,5 +84,5 @@ typedef class coord
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel C++ kodla çalışma](working-with-visual-cpp-code.md)
+- [C++ Kodla çalışma](working-with-visual-cpp-code.md)
 - [Tür tanımları](/cpp/cpp/aliases-and-typedefs-cpp#typedefs)

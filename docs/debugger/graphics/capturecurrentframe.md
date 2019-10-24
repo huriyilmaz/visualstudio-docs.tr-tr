@@ -8,15 +8,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec67013b41a5ec8876866044355534c42bfe2ee0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b9967d776845088e707035c7b1c56855ac80af82
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848714"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736130"
 ---
 # <a name="capturecurrentframe"></a>CaptureCurrentFrame
-Geçerli kare grafik günlük dosyasına geri kalanında yakalar.
+Geçerli çerçevenin kalan kısmını grafik günlük dosyasına yakalar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -25,10 +25,10 @@ void CaptureCurrentFrame();
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Şu anda başka bir yakalama devam ediyor durumunda — tarafından başlatılan bir yakalama gibi `BeginCapture` işlevi — söz konusu yakalama tamamlandı ve ayrı bir kare olarak grafik günlüğüne kaydedilmiş. Daha sonra farklı bir çerçeve olarak da kaydedilir geçerli çerçeve geri kalanında yakalama grafik tanılama başlar hemen. Geçerli çerçevenin son sunmak için bir çağrı tarafından işaretlenir.
+ Şu anda başka bir yakalama devam ediyorsa — `BeginCapture` işlevi tarafından başlatılan yakalama gibi), yakalama tamamlanır ve grafik günlüğüne ayrı bir çerçeve olarak kaydedilir. Daha sonra, grafik tanılama, aynı zamanda farklı bir çerçeve olarak kaydedilen geçerli çerçevenin kalanını yakalamaya başlar. Geçerli çerçevenin bitişi, var olan bir çağrı tarafından işaretlenmiş.
 
- Bir kareyi yakalamak için yakalama ve grafik bilgilerini kaydetmek için uygulamanızı hazırlama — diğer bir deyişle, çağrısı yapmanız gerekir [Init](init.md) örneği üzerinden `VsgDbg` çağırmadan önce sınıfı `CaptureCurrentFrame`.
+ Bir çerçeveyi yakalamak için, uygulamanızı grafik bilgilerini yakalamak ve kaydetmek üzere hazırlamanız gerekir — Yani, `CaptureCurrentFrame` çağırmadan önce `VsgDbg` sınıfının bir örneğinden [Init](init.md) olarak adlandırmanız gerekir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Init](init.md)
 - [BeginCapture](begincapture.md)

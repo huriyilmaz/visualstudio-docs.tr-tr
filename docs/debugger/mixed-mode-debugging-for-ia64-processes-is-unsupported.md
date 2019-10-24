@@ -15,39 +15,39 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0130ba9e893d5a4036df9ee1bc2ab22c8e18008
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c85c31cff5920ba3dc4b9356a1865d0db2323b2d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929873"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731098"
 ---
 # <a name="mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>IA64 işlemleri için karışık mod hata ayıklaması desteklenmiyor.
-Visual Studio, karma mod IA64 işlemleri yönetilen ve yerel kodda hata ayıklamayı desteklemiyor. Bu, yerel kod için yönetilen kod veya yerel koda yönetilen kod için hata ayıklama sırasında girilemiyor olduğunu anlamına gelir.
+Visual Studio, IA64 işlemlerinde yönetilen ve yerel kodda karışık modda hata ayıklamayı desteklemez. Diğer bir deyişle, hata ayıklama sırasında yönetilen koddan yerel koda veya yerel koddan yönetilen koda ilerlenemez.
 
-### <a name="workarounds"></a>Geçici Çözümler
+### <a name="workarounds"></a>Çözümlerin
 
-- Yönetilen ve yerel kodunuzu ayrı hata ayıklama oturumlarında hata ayıklayın.
+- Yönetilen ve yerel kodunuzda ayrı hata ayıklama oturumlarında hata ayıklayın.
 
-     -veya-
+     veya
 
-     Karma kodunuzu bir 32 bitlik işlem olarak, aşağıdaki yordamlarda açıklandığı gibi hata ayıklayın.
+     Aşağıdaki yordamlarda açıklandığı gibi, karma kodunuzda 32 bitlik bir işlem olarak hata ayıklayın.
 
-### <a name="to-change-the-platform-to-32-bit-visual-basic-or-c"></a>Platform 32-bit (Visual Basic veya C#) değiştirileceğini
+### <a name="to-change-the-platform-to-32-bit-visual-basic-or-c"></a>Platformu 32-bit (Visual Basic veya C#) olarak değiştirmek için
 
-1. İçinde **Çözüm Gezgini**, projenize sağ tıklayın ve ardından tıklayın **özellikleri** kısayol menüsünde.
+1. **Çözüm Gezgini**, projenize sağ tıklayın ve ardından kısayol menüsünde **Özellikler** ' e tıklayın.
 
-2. Özellik Sayfaları'nda tıklatın **derleme** veya **hata ayıklama** sekmesi.
+2. Özellik sayfalarında, **Derle** veya **Hata Ayıkla** sekmesine tıklayın.
 
-3. Tıklayın **Platform** x86 platformlar listesinden seçin.
+3. **Platform** ' a tıklayın ve platformlar listesinden x86 ' yı seçin.
 
-     Varsayılan olarak, Visual Basic ve C# Derleyicileri varsayılan herhangi bir CPU üzerinde çalıştırmak için kod üretir. Bu ikili dosyalar, bir 64 bit bilgisayarda 64 bit işlem çalıştırın. Bir 32 bit işlemde çalıştırmak için seçmelisiniz **Win32**değil **AnyCPU**.
+     Varsayılan olarak, Visual Basic ve C# derleyiciler varsayılan olarak HERHANGI bir CPU üzerinde çalıştırılacak kodu üretir. 64 bitlik bir bilgisayarda bu ikili dosyalar 64 bit işlem olarak çalışır. 32 bitlik bir işlemde çalıştırmak için, **anycpu**değil, **Win32**öğesini seçmeniz gerekir.
 
-### <a name="to-change-the-platform-to-32-bit-cc"></a>32-bit (C/C++) için Platform değiştirmek için
+### <a name="to-change-the-platform-to-32-bit-cc"></a>Platformu 32-bit (C/C++) olarak değiştirmek için
 
-1. İçinde **Çözüm Gezgini**, projenize sağ tıklayın ve ardından tıklayın **özellikleri** kısayol menüsünde.
+1. **Çözüm Gezgini**, projenize sağ tıklayın ve ardından kısayol menüsünde **Özellikler** ' e tıklayın.
 
-2. Özellik Sayfaları'nda tıklatın **Platform** ve Win32 platformları listesinden seçin.
+2. Özellik sayfalarında **Platform** ' a tıklayın ve platformlar listesinden Win32 öğesini seçin,
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [64 Bit Uygulamalarda Hata Ayıklama](../debugger/debug-64-bit-applications.md)

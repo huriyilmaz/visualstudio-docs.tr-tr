@@ -10,28 +10,28 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30211d773036bbe12c0e807e3be18f13793360b7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 164c404f3bce6b8216092635e3489843039fb1eb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388626"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735296"
 ---
 # <a name="hlsl-shader-debugger"></a>HLSL Gölgelendirici Hata Ayıklayıcısı
-Visual Studio grafik Çözümleyicisi, HLSL hata ayıklayıcısı, HLSL gölgelendirici kodunun uygulamanızın gerçek koşullar altında nasıl çalıştığını anlamanıza yardımcı olur.
+Visual Studio Grafik Çözümleyicisi içindeki HLSL hata ayıklayıcı, HLSL gölgelendirici kodunuzun uygulamanızın gerçek koşullarında nasıl çalıştığını anlamanıza yardımcı olur.
 
  HLSL hata ayıklayıcısı şudur:
 
- ![HLSL hata ayıklama kullanarak izleyin ve çağrı yığını windows. ](media/gfx_diag_demo_hlsl_debugger_orientation.png "gfx_diag_demo_hlsl_debugger_orientation")
+ ![İzleme ve çağrı yığını pencerelerini kullanarak HLSL hatalarını ayıklama.](media/gfx_diag_demo_hlsl_debugger_orientation.png "gfx_diag_demo_hlsl_debugger_orientation")
 
 ## <a name="understanding-the-hlsl-debugger"></a>HLSL hata ayıklayıcısını anlama
- HLSL hata ayıklayıcısı, gölgelendirici kodunuzda ortaya çıkan sorunları anlamanıza yardımcı olur. HLSL kodunda hata ayıklama [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] diğer dillerde yazılmış kodlarda hata ayıklamaya benzer — Örneğin, C++, C# veya Visual Basic. Aynı diğer dillere hata ayıklaması yaparken olduğu gibi, değişkenlerin içeriğini inceleyebilir, kesim noktaları ayarlayabilir, kodda adım adım ilerleyebilir ve çağrı yığınına yaklaşabilirsiniz.
+ HLSL hata ayıklayıcısı, gölgelendirici kodunuzda ortaya çıkan sorunları anlamanıza yardımcı olur. @No__t_0 'de HLSL kodu hata ayıklaması diğer dillerde yazılmış hata ayıklama koduna benzer — örneğin C++ C#,, veya Visual Basic. Aynı diğer dillere hata ayıklaması yaparken olduğu gibi, değişkenlerin içeriğini inceleyebilir, kesim noktaları ayarlayabilir, kodda adım adım ilerleyebilir ve çağrı yığınına yaklaşabilirsiniz.
 
- Gpu'lar yüzlerce iş parçacığı üzerinde eşzamanlı olarak gölgelendirici kod çalıştırarak yüksek performans elde etmek için ancak HLSL hata ayıklayıcısı tüm bu bilgileri anlamlı yardımcı olacak şekilde sunmak için diğer grafik Çözümleyicisi araçları ile birlikte çalışacak şekilde tasarlanmıştır . Grafik Çözümleyicisi, bir grafik günlüğüne kaydedilmiş bilgileri kullanarak yakalanan kareleri yeniden oluşturur; HLSL hata ayıklayıcısı, gölgelendirici kod çalıştırması gibi GPU yürütmesini gerçek zamanlı olarak izlemez. Graf günlüğü çıktının herhangi bir bölümünü yeniden oluşturmak için yeterli bilgi içerdiğinden ve grafik analizi sağladığından tam piksel ve bir hatanın oluştuğu yerde olay yardımcı olabilecek Araçlar saptamak için HLSL hata ayıklayıcısı yalnızca tam gölgelendirici benzetimini yapması gerekir İlgilendiğiniz iş parçacığı. Başka bir deyişle, gölgelendiricinin çalışması, iç çalışmalarının tam görünümde olduğu CPU üzerinde benzetilebilir. Bu da, HLSL hata ayıklayıcısına CPU benzeri bir hata ayıklama deneyimi kazandırır.
+ Ancak, GPU 'Lar yüzlerce iş parçacığı üzerinde aynı anda gölgelendirici kodu çalıştırarak yüksek performans elde ettiğinden, HLSL hata ayıklayıcısı diğer grafik Çözümleyicisi araçlarıyla birlikte çalışarak bu bilgilerin tümünü anlamlı hale getirmenize yardımcı olacak şekilde sunar. içerdiği. Grafik Çözümleyicisi, yakalanan kareleri bir grafik günlüğüne kaydedilmiş bilgileri kullanarak yeniden oluşturur; HLSL hata ayıklayıcı, gölgelendirici kodu çalıştırdığı için GPU yürütmesini gerçek zamanlı olarak izlemez. Bir grafik günlüğü çıktının herhangi bir bölümünü yeniden oluşturmak için yeterli bilgi içerdiğinden ve grafik analizi bir hatanın gerçekleştiği tam pikseli ve olayı belirlemenize yardımcı olabilecek araçlar sağladığından, HLSL hata ayıklayıcısında yalnızca tam gölgelendiriciye benzeme yapmak gerekir İlgilendiğiniz iş parçacığı. Başka bir deyişle, gölgelendiricinin çalışması, iç çalışmalarının tam görünümde olduğu CPU üzerinde benzetilebilir. Bu da, HLSL hata ayıklayıcısına CPU benzeri bir hata ayıklama deneyimi kazandırır.
 
  Ancak, HLSL hata ayıklayıcısı şu an için aşağıdaki bakımlardan sınırlıdır:
 
-- HLSL hata ayıklayıcısı Düzenle ve devam et modunu desteklemez, ancak için gölgelendirici değişiklikleri yapın ve ardından sonuçları görmek için bir çerçeve yeniden oluşturun.
+- HLSL hata ayıklayıcısı düzenleme ve devam etmeyi desteklemez, ancak gölgelendiricilerde değişiklik yapıp sonuçları görmek için çerçeveyi yeniden oluşturabilirsiniz.
 
 - Bir uygulamanın ve gölgelendirici kodunun hatalarını aynı anda ayıklamak mümkün değildir. Ancak, bunlar arasında geçiş yapabilirsiniz.
 
@@ -39,40 +39,40 @@ Visual Studio grafik Çözümleyicisi, HLSL hata ayıklayıcısı, HLSL gölgele
 
   Yine de, HLSL hata ayıklayıcısı başka bir yöntemle sağlanabilecek olandan daha iyi ve daha CPU benzeri bir hata ayıklama deneyimi sağlar.
 
-## <a name="hlsl-shader-edit--apply"></a>HLSL gölgelendirici Düzenle ve Uygula
- HLSL gölgelendirici hata ayıklayıcısı Düzenle ve devam et CPU hata ayıklayıcı alınmasına izin durumu gölgelendirici GPU yürütme modeli sağlamasına izin yapan aynı şekilde desteklemiyor. Bunun yerine, HLSL hata ayıklayıcısı, HLSL kaynak dosyaları düzenleyin ve ardından sağlayan Uygula & Düzenle destekler **Uygula** değişikliklerinizin etkisini görmek için bir çerçeve yeniden oluşturmak. Değiştirilen gölgelendirici kodunuz projenizin özgün HLSL kaynak dosya bütünlüğünü korumak için ayrı bir dosyada depolanır, ancak Değişikliklerinizi yaptıktan sonra seçebileceğiniz **kopyalayın...**  değişiklikleri projenize kopyalamak için. Bu özelliği kullanarak hızlı bir şekilde hataları içeren gölgelendirici kodunda gezinmek ve pahalı yeniden oluşturma ve yakalama adımlarını iş akışı hata ayıklama, HLSL ortadan kaldırın.
+## <a name="hlsl-shader-edit--apply"></a>HLSL gölgelendirici düzenleme & Uygula
+ HLSL gölgelendirici hata ayıklayıcısı, GPU yürütme modeli gölgelendirici durumunun geri alınamadığı için, CPU hata ayıklayıcısı tarafından aynı şekilde devam et & ' u desteklemiyor. Bunun yerine, HLSL hata & ayıklayıcısı, HLSL kaynak dosyalarını düzenlemenizi ve ardından **Uygula** ' yı seçerek değişikliklerinizin etkisini görmenizi sağlar. Değiştirdiğiniz Gölgelendirici kodunuz, projenizin orijinal HLSL kaynak dosyasının bütünlüğünü korumak için ayrı bir dosyada depolanır, ancak yaptığınız değişikliklerden memnun kaldığınızda, değişiklikleri projenize kopyalamak için **Kopyala..** . seçeneğini belirleyebilirsiniz. Bu özelliği kullanarak, hata içeren gölgelendirici kodunu hızla yineleyebilir ve HLSL hata ayıklama iş akışınızın maliyetli yeniden oluşturma ve yakalama adımlarını ortadan kaldırabilirsiniz.
 
-## <a name="hlsl-disassembly"></a>HLSL ayrıştırma
- HLSL gölgelendirici hata ayıklayıcısı, HLSL kaynak kod listenin sağındaki HLSL gölgelendirici derleme listesini sağlar.
+## <a name="hlsl-disassembly"></a>HLSL ayrıştırılmış derleme
+ HLSL gölgelendirici hata ayıklayıcısı, HLSL kaynak kodu listesinin sağında HLSL gölgelendirici derlemesinin bir listesini sağlar.
 
 ## <a name="debugging-hlsl-code"></a>HLSL kodunda hata ayıklama
- HLSL hata ayıklayıcısı ardışık düzen aşamaları veya piksel geçmişi windows erişebilirsiniz.
+ HLSL hata ayıklayıcısına işlem hattı aşamaları veya piksel geçmişi pencerelerini kullanabilirsiniz.
 
 #### <a name="to-start-the-hlsl-debugger-from-the-graphics-pipeline-stages-window"></a>HLSL hata ayıklayıcısını Grafik Ardışık Düzen Aşamaları penceresinden başlatmak için
 
-1. İçinde **grafik ardışık düzen aşamaları** penceresi, hata ayıklamak istediğiniz gölgelendirici ile ilişkili ardışık düzen aşamasını bulun.
+1. **Grafik ardışık düzen aşamaları** penceresinde, hata ayıklamak istediğiniz gölgelendirici ile ilişkili ardışık düzen aşamasını bulun.
 
-2. Ardışık Düzen aşamasının başlığının altındaki seçin **hata ayıklamayı Başlat**, küçük yeşil bir ok görünür.
+2. Ardışık düzen aşamasının başlığının altında, küçük yeşil ok olarak görünen **hata ayıklamayı Başlat**' ı seçin.
 
     > [!NOTE]
-    > HLSL hata ayıklayıcısına bu giriş noktası, karşılık gelen aşamanın yalnızca ilk gölgelendirici iş parçacığında (yani işlenen ilk köşe veya piksel) hata ayıklar. Piksel geçmişi bu gölgelendirici aşamalarının diğer iş parçacıklarına erişmek için kullanabilirsiniz.
+    > HLSL hata ayıklayıcısına bu giriş noktası, karşılık gelen aşamanın yalnızca ilk gölgelendirici iş parçacığında (yani işlenen ilk köşe veya piksel) hata ayıklar. Bu gölgelendirici aşamalarının diğer iş parçacıklarına erişmek için piksel geçmişi kullanabilirsiniz.
 
 #### <a name="to-start-the-hlsl-debugger-from-the-graphics-pixel-history"></a>HLSL hata ayıklayıcısını Grafik Piksel Geçmişi'nden başlatmak için
 
-1. İçinde **grafik piksel geçmişi** penceresi, hata ayıklamak istediğiniz gölgelendirici ile ilişkili çizim çağrısını genişletin. Her bir çizim çağrısı birden fazla temel öğeye karşılık gelebilir.
+1. **Grafik piksel geçmişi** penceresinde, hata ayıklamak istediğiniz gölgelendirici ile ilişkili çizim çağrısını genişletin. Her bir çizim çağrısı birden fazla temel öğeye karşılık gelebilir.
 
 2. Çizim çağrısı ayrıntılarında, elde edilen renk katkısı gölgelendirici kodunda bir hata olduğunu gösteren bir temel öğeyi genişletin. Hata olduğunu ortaya koyan birden fazla temel öğe varsa, soruna tanı koymayı zorlaştırabilecek hata birikiminden kaçınmak için bu duruma işaret eden ilk temel öğeyi seçin.
 
-3. Hata ayıklamak temel öğe ayrıntılarında yüklememeyi **köşe gölgelendiricisi** veya **piksel gölgelendiricisi**. Piksel gölgelendiricisinin doğru olduğu, ancak köşe gölgelendiricisinin kendisine yanlış sabitler aktarması nedeniyle yanlış renk katkısı ürettiğinden şüphelendiğiniz durumlarda, köşe gölgelendiricisi için hata ayıklama uygulayın. Aksi durumlarda piksel gölgelendiricisi için hata ayıklama uygulayın.
+3. İlkel ayrıntılarda, **köşe gölgelendiricide** mi yoksa **piksel gölgelendiricide**mi hata ayıklama yapılıp yapılmayacağını seçin. Piksel gölgelendiricisinin doğru olduğu, ancak köşe gölgelendiricisinin kendisine yanlış sabitler aktarması nedeniyle yanlış renk katkısı ürettiğinden şüphelendiğiniz durumlarda, köşe gölgelendiricisi için hata ayıklama uygulayın. Aksi durumlarda piksel gölgelendiricisi için hata ayıklama uygulayın.
 
-    Seçilen gölgelendiricinin sağında, seçin **hata ayıklamayı Başlat**, küçük yeşil bir ok görünür.
+    Seçilen gölgelendiricinin sağında, küçük yeşil ok olarak görünen **hata ayıklamayı Başlat**' ı seçin.
 
    > [!NOTE]
    > HLSL hata ayıklayıcısına bu giriş noktası, ya seçilen çizim çağrısına, temel öğeye ve seçtiğiniz piksele karşılık gelen piksel gölgelendiricisi iş parçacığına ya da sonuçları çizim çağrısı, temel öğe ve seçmiş olduğunuz piksel tarafından ilişkilendirilen köşe gölgelendiricisi iş parçacıklarına hata ayıklama uygular. Köşe gölgelendiricileri durumunda, köşe gölgelendiricisi ayrıntılarını genişleterek giriş noktasını belirli bir köşeye kadar iyice daraltabilirsiniz.
 
-   HLSL hata ayıklayıcısı, gölgelendirici hatalarını ayıklamaya yönelik kullanma hakkında daha fazla örnek için bkz: [örnekler](graphics-diagnostics-examples.md) veya izlenecek yollar bağlantılı ayrıca bölümünde.
+   HLSL hata ayıklayıcının gölgelendirici hatalarını ayıklamak için nasıl kullanılacağına ilişkin örnekler için [, bkz.](graphics-diagnostics-examples.md) Ayrıca bkz. bölümünde bağlantılı izlenecek yollar
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [İzlenecek yol: Köşe Gölgeleme Nedeniyle Eksik Nesneler](walkthrough-missing-objects-due-to-vertex-shading.md)
-- [İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)
-- [İzlenecek yol: Hesaplayıcı Gölgelendiricisinde Hata Ayıklamak İçin Grafik Tanılamayı Kullanma](walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İzlenecek Yol: Köşe Gölgeleme Nedeniyle Nesnelerin Eksikliği](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [İzlenecek Yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)
+- [İzlenecek Yol: Hesaplayıcı Gölgelendiricisinde Hata Ayıklamak İçin Grafik Tanılamayı Kullanma](walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md)

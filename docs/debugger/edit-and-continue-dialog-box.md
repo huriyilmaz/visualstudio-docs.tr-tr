@@ -1,5 +1,5 @@
 ---
-title: Düzenle ve devam et iletişim kutusu | Microsoft Docs
+title: Düzenle ve devam et Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,18 +17,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fdf515e5ca4aeb20cd9fce0b2a2ea829ad3d2e10
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9de4e43346c0c7261bbd834349f09619b262e17
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851324"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737936"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Düzenle ve Devam Et İletişim Kutusu
-(Yalnızca yerel) Hata ayıklarken, kodu düzenledikten sonra bu iletişim kutusu açılır ve **Düzenle ve devam et** kod değişiklikleri uygulayabilirsiniz tanır. Daha fazla bilgi için [Düzenle ve devam et](../debugger/edit-and-continue.md).
+(Yalnızca yerel) Bu iletişim kutusu hata ayıklama sırasında kodu düzenlediyseniz ve **Düzenle ve devam et** işlevinin kod değişikliklerini uygulayabileceğini algıladığında görüntülenir. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
 
- **Bana bu iletişim kutusunu bir daha gösterme** bu onay kutusunu seçerseniz **Düzenle ve devam et** kod değişikliklerini gelecekteki izin istemeden uygulanır. Bu uyarıyı yeniden giderek etkinleştirebilirsiniz **seçenekleri** açma iletişim kutusu, **hata ayıklama** klasörüne tıklayarak, **Düzenle ve devam et** sayfasında ve seçerek**Hata ayıklama komutları tarafından çağrılan** ve **önce sor**.
+ **Bu iletişim kutusunu hiçbir daha gösterme** Bu onay kutusunu seçerseniz, **Düzenle ve devam et** daha sonra izin istemeden kod değişikliklerini uygular. **Seçenekler** iletişim kutusuna gidip **hata ayıklama** klasörünü açıp, **Düzenle ve devam et** sayfasına tıklayıp, **hata ayıklama komutları tarafından çağırılır** ve **ilk olarak sor**seçeneğini belirleyerek bu uyarıyı yeniden açabilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
-- [Düzenle ve devam et, hata ayıklama, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)
+- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)

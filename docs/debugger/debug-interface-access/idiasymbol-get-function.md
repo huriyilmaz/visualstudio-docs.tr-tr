@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_function | Microsoft Docs
+title: 'IDiaSymbol:: get_function | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4702b121161bd73639d580faa13f502e89d8be3d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6154ff287f39f723ba84bf977d38bcce4d9b88f6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64806691"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740625"
 ---
-# <a name="idiasymbolgetfunction"></a>IDiaSymbol::get_function
-Ortak sembol bir işleve başvuran olup olmadığını belirten bir bayrak alır.
+# <a name="idiasymbolget_function"></a>IDiaSymbol::get_function
+Genel simgenin bir işleve başvurmayacağını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,20 +33,20 @@ HRESULT get_function ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür bir `TRUE` sembolü bir işlev için; başvuruyorsa döndürür, aksi takdirde, `FALSE`.
+dışı Sembol bir işleve başvuruyorsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

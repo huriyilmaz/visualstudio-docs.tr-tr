@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findAcceleratorInlineesByName | Microsoft Docs
+title: 'IDiaSession:: findAcceleratorInlineesByName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb3caa5574605864a0dd16b59b6f451530b8e631
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 007477d3f0de3767b0c5ef0af977f969505884ed
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827792"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742306"
 ---
 # <a name="idiasessionfindacceleratorinlineesbyname"></a>IDiaSession::findAcceleratorInlineesByName
-Belirtilen satır içi işlev adına karşılık gelen satır içi çerçeveler için semboller numaralandırmasını döndürür.
+Belirtilen satır içi işlev adına karşılık gelen satır içi çerçeveler için simgelerin bir listesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,23 +33,23 @@ HRESULT findAcceleratorInlineeLinesByName ( 
 #### <a name="parameters"></a>Parametreler
  `name`
 
-[in] Aranacak toplandığı için satır içi işlev adı.
+'ndaki Aranacak ınlinee işlev adı.
 
  `option`
 
-[in] Çerçeveler için satır içi arama yapılırken kullanılacak adı arama seçeneklerini karşılık `name`. Daha fazla bilgi için [NameSearchOptions numaralandırması](../../debugger/debug-interface-access/namesearchoptions.md).
+'ndaki @No__t_0 karşılık gelen satır içi çerçeveler aranırken kullanılacak ad arama seçenekleri. Daha fazla bilgi için bkz. [NameSearchOptions numaralandırması](../../debugger/debug-interface-access/namesearchoptions.md).
 
  `ppResult`
 
-[out] Bir işaretçi bir `IDiaEnumSymbols` sonucu ile başlatılmış bir arabirim işaretçisi.
+dışı Sonuçla başlatılan `IDiaEnumSymbols` arabirimi işaretçisine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlev yalnızca içinde Hızlandırıcı saplama işlevleri inlinees arar. Yerel C++ yordamı kayıtları yoksayar.
+ Bu işlev, yalnızca Hızlandırıcı saplama işlevleri içindeki ınlinees 'yi arar. Yerel C++ yordam kayıtlarını yoksayar.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: OnStart metodunda hata ayıklama | Microsoft Docs'
+title: 'Nasıl yapılır: OnStart yönteminde hata ayıklama | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,17 +19,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fc5e8a7e0bbc80fd7fa0aa2d242239a9be6a219
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 107ce6d5ca2b327d77fe588e1ac7ffda10a0a3a3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894423"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733623"
 ---
-# <a name="how-to-debug-the-onstart-method"></a>Nasıl yapılır: OnStart metodunda hata ayıklama
-Bir Windows hizmeti, hizmete ve hata ayıklayıcı hizmet işlemine iliştirme ayıklayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). Ancak, hata ayıklamak için <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> yöntemi bir Windows hizmetinin ayıklayıcısından yöntemi içinde başlatmak gerekir.
+# <a name="how-to-debug-the-onstart-method"></a>Nasıl Yapılır: OnStart Yönteminde Hata Ayıklama
+Hizmeti başlatarak ve hata ayıklayıcıyı hizmet sürecine ekleyerek bir Windows hizmetinde hata ayıklaması yapabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). Ancak, bir Windows hizmetinin <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> yönteminde hata ayıklamak için, hata ayıklayıcıyı yöntemin içinden başlatmanız gerekir.
 
-1. Bir çağrı ekleyin <xref:System.Diagnostics.Debugger.Launch%2A> başındaki `OnStart()`yöntemi.
+1. @No__t_1method başına <xref:System.Diagnostics.Debugger.Launch%2A> bir çağrı ekleyin.
 
     ```csharp
     protected override void OnStart(string[] args)
@@ -38,20 +38,20 @@ Bir Windows hizmeti, hizmete ve hata ayıklayıcı hizmet işlemine iliştirme a
     }
     ```
 
-2. Hizmeti Başlat (kullanabilirsiniz `net start`, ya da başlatın **Hizmetleri** pencere).
+2. Hizmeti başlatın (`net start` kullanabilir veya **Hizmetler** penceresinde başlatabilirsiniz).
 
-    Bir iletişim kutusu aşağıdaki gibi görmeniz gerekir:
+    Aşağıdakine benzer bir iletişim kutusu görmeniz gerekir:
 
     ![OnStartDebug](../debugger/media/onstartdebug.png "OnStartDebug")
 
-3. Seçin **Evet, hata ayıklama \<hizmet adı >.**
+3. **Evet, hata ayıkla \<service adı > seçin.**
 
 4. Tam zamanında hata ayıklayıcı penceresinde, hata ayıklama için kullanmak istediğiniz Visual Studio sürümünü seçin.
 
-    ![JustInTimeDebugger](../debugger/media/justintimedebugger.png "JustInTimeDebugger")
+    ![Ettintimedebugger](../debugger/media/justintimedebugger.png "Ettintimedebugger")
 
-5. Yeni bir örneğini Visual Studio başlatılır ve yürütme sırasında durduruldu `Debugger.Launch()` yöntemi.
+5. Visual Studio 'nun yeni bir örneği başlar ve `Debugger.Launch()` yönteminde yürütme durdurulur.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isVirtualInheritance | Microsoft Docs
+title: 'IDiaSymbol:: get_isVirtualInheritance | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5d1630b46ca2203e9f935517e96b11856b273b9
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 7716d9688677eb12d603b208decc0f737bb1c6ca
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62842130"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740005"
 ---
-# <a name="idiasymbolgetisvirtualinheritance"></a>IDiaSymbol::get_isVirtualInheritance
-Belirtir olup olmadığını `this` işaretçi sanal devralma ile veri üyesine işaret eder.
+# <a name="idiasymbolget_isvirtualinheritance"></a>IDiaSymbol::get_isVirtualInheritance
+@No__t_0 işaretçisinin sanal devralmayla bir veri üyesine işaret ettiğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,10 +30,10 @@ HRESULT get_isVirtualInheritance(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir işaretçi bir `BOOL` belirtir olup olmadığını `this` işaretçi sanal devralma ile veri üyesine işaret eder.
+dışı @No__t_1 işaretçisinin sanal devralmayla bir veri üyesine işaret ettiğini belirten `BOOL` işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

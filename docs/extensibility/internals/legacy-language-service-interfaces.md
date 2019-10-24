@@ -1,5 +1,5 @@
 ---
-title: Eski dil Hizmeti Arabirimleri | Microsoft Docs
+title: Eski dil hizmeti arabirimleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +11,22 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a626111fc1f2eb8790cdfe2a146f63eba7fbab3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 065ef972709ca78b516a9acc5f4a737d2963e4b7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333489"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726855"
 ---
 # <a name="legacy-language-service-interfaces"></a>Eski Dil Hizmeti Arabirimleri
-Belirli bir programlama dili için aynı anda bir dil hizmeti yalnızca bir örneği olabilir. Ancak, bir tek dil hizmeti birden fazla Düzenleyicisi görebilir.
+Belirli programlama dilleri için aynı anda bir dil hizmetinin yalnızca bir örneği olabilir. Ancak, tek bir dil hizmeti birden fazla düzenleyiciye hizmet verebilir.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Dil hizmeti herhangi belirli bir düzenleyici ile ilişkilendirmez. Bu nedenle, bir dil hizmeti işlemi istediğinizde, parametre olarak uygun Düzenleyici belirlemeniz gerekir.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], bir dil hizmetini belirli düzenleyiciyle ilişkilendirmez. Bu nedenle, bir dil hizmeti işlemi istediğinizde uygun düzenleyiciyi parametre olarak tanımlamalısınız.
 
-## <a name="common-interfaces-associated-with-language-services"></a>Dil Hizmetleri ile ilişkili ortak arabirimi
- Çağırarak, dil hizmeti düzenleyicinin alır <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> uygun VSPackage'ı üzerinde. Hizmet kimliği (SID) bu çağrıda geçirilen istenen dil hizmeti tanımlar.
+## <a name="common-interfaces-associated-with-language-services"></a>Dil hizmetleriyle Ilişkili ortak arabirimler
+ Düzenleyici, uygun VSPackage üzerinde <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> çağırarak dil hizmetinizi alır. Bu çağrıda geçirilen hizmet KIMLIĞI (SID), istenen dil hizmetini tanımlar.
 
- Ayrı sınıfları herhangi bir sayıda çekirdek dil hizmeti arabirimleri uygulayabilir. Ancak, yaygın bir yaklaşım tek bir sınıfta aşağıdaki arayüzleri uygulamak yazmaktır:
+ Çekirdek dil hizmeti arabirimlerini istediğiniz sayıda ayrı sınıfa uygulayabilirsiniz. Ancak, yaygın bir yaklaşım, aşağıdaki arabirimlerin tek bir sınıfta uygulanması olur:
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>
 
@@ -36,20 +36,20 @@ Belirli bir programlama dili için aynı anda bir dil hizmeti yalnızca bir örn
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageBlock> (isteğe bağlı)
 
-  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> Tüm dil hizmetlerinde arabirimi uygulanır. Dil hizmeti ve nasıl bir Renklendirici almak ilişkili dosya adı uzantıları dil yerelleştirilmiş adı gibi dil hizmeti hakkında bilgi sağlar.
+  @No__t_0 arabiriminin tüm dil hizmetlerinde uygulanması gerekir. Dil hizmetiniz hakkında, dilin yerelleştirilmiş adı, dil hizmetiyle ilişkilendirilmiş dosya adı uzantıları ve bir Colorizer alma gibi bilgiler sağlar.
 
-## <a name="additional-language-service-interfaces"></a>Ek dil Hizmeti Arabirimleri
- Diğer arabirimleri dil hizmetinizle sağlanabilir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] metin arabelleğinin her örneği için bu arabirimler ayrı bir örneğini ister. Bu nedenle, bu arabirimlerin her biri kendi nesne üzerinde uygulamalıdır. Aşağıdaki tabloda, metin arabelleği örneği başına tek örnek gerekli arabirimleri gösterir.
+## <a name="additional-language-service-interfaces"></a>Ek dil hizmeti arabirimleri
+ Dil hizmetinize başka arabirimler de sağlayabilirsiniz. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], metin arabelleğinin her örneği için bu arabirimlerin ayrı bir örneğini ister. Bu nedenle, bu arabirimlerin her birini kendi nesnesi üzerinde uygulamalısınız. Aşağıdaki tabloda, metin arabelleği örneği başına bir örnek gerektiren arabirimler gösterilmektedir.
 
 |Arabirim|Açıklama|
 |---------------|-----------------|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Aşağı açılan çubuğu gibi kod penceresinde Kenarlıklar yönetir. Bu arabirim kullanarak alabilirsiniz <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> yöntemi. Bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> kod penceresi başına.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>|Dil anahtar sözcükleri ve sınırlayıcıları renklendirmesi. Bu arabirim kullanarak alabilirsiniz <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> yöntemi. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> Boya zaman çağrılır. Hesaplama yoğunluklu iş içinde önlemek <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> veya performans düşebilir.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>|IntelliSense parametresi araç ipuçları sağlar. Dil hizmeti bu yöntemi verileri gösteren bir karakter olmalıdır tanıdığında, bir açık parantez gibi görüntülenen çağırdığı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> görüntüleme metni için yöntemi bir parametre bilgisi araç ipucunu görüntülemek dil hizmeti hazır. Metin görünümünü daha sonra tekrar içine dil hizmeti tarafından yöntemleri kullanılarak yapılan çağrılar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> araç ipucunu görüntülemek için gerekli bilgileri almak için arabirim.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>|IntelliSense deyim tamamlamada sağlar. Dil hizmeti tamamlanma listesini görüntülemek hazır olduğunda, çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metni görünümü yöntemi. Metin görünümünü daha sonra tekrar içine dil hizmeti tarafından yöntemleri kullanarak yapılan çağrılar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> nesne.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter>|Komut işleyici kullanarak metin görüntüleme için değiştirilmesini sağlar. İçinde uygulama sınıfı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> arabirimi de uygulanmalı <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi. Metin görünümünü alır <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> sorgulanırken nesne <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> yöntemlere geçirilen nesne <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> yöntemi. Olmalıdır bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> her görünüm için nesne.|
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Kullanıcı kodu penceresine türleri komutları kesintiye uğratır. İzleme çıktısı, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> özel tamamlama bilgileri sağlayın ve değişikliği görmek için uygulama<br /><br /> Geçirmek için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> metni görünümü veya çağrı nesnesine <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A>.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Açılan çubuk gibi kod penceresi dontiğini yönetir. Bu arabirimi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> yöntemini kullanarak alabilirsiniz. Kod penceresi başına bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> vardır.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>|Dil anahtar sözcüklerini ve sınırlandırıcıları renklendirir. Bu arabirimi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> yöntemini kullanarak alabilirsiniz. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>, boyama sırasında çağrılır. @No__t_0 içinde hesaplama yoğun çalışmaktan kaçının veya performans düşebilir.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>|IntelliSense parametre araç ipuçları sağlar. Dil hizmeti, açık bir parantez gibi Yöntem verilerinin gösterilmesi gerektiğini belirten bir karakter algıladığında, dil hizmetinin bir parametre bilgisi araç Ipucunu görüntülemeye hazırlandığını metin görünümüne bildirmek için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> yöntemini çağırır. Metin görünümü daha sonra araç ipucunu görüntülemek için gerekli bilgileri almak üzere <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> arabiriminin yöntemlerini kullanarak dil hizmetine geri çağrı yapılır.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>|IntelliSense ifadesinin tamamlanmasını sağlar. Dil hizmeti bir tamamlanma listesini görüntülemeye hazırsa, metin görünümünde <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> yöntemini çağırır. Metin görünümü daha sonra <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> nesnesindeki yöntemleri kullanarak dil hizmetine geri çağrı yapılır.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter>|Komut işleyicisini kullanarak metin görünümü değişikliğine izin verir. @No__t_0 arabirimini uyguladığınız sınıf <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimini de uygulamalıdır. Metin görünümü <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> yöntemine geçirilen <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> nesnesini sorgulayarak <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> nesnesini alır. Her görünüm için bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> nesnesi olmalıdır.|
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Kullanıcının kod penceresine yazdığında komutları keser. Özel tamamlanma bilgileri sağlamak ve değişiklik görüntülemek için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> uygulamanızdaki çıktıyı izleyin<br /><br /> @No__t_0 nesneniz metin görünümüne geçirmek için, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> çağırın.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Eski Dil Hizmeti Geliştirme](../../extensibility/internals/developing-a-legacy-language-service.md)
-- [Yapılacaklar listesi: Eski Dil Hizmeti Oluşturma](../../extensibility/internals/checklist-creating-a-legacy-language-service.md)
+- [Denetim Listesi: Eski Dil Hizmeti Oluşturma](../../extensibility/internals/checklist-creating-a-legacy-language-service.md)

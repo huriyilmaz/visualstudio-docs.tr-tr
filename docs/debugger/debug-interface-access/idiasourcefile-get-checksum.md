@@ -1,5 +1,5 @@
 ---
-title: Idiasourcefile::get_checksum | Microsoft Docs
+title: 'IDiaSourceFile:: get_checksum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dc866cf392d2464756fc4e5cb19bfd02fcdea58
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8f4367a7862dabe248dfbe08e64c45598abe3679
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838073"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741840"
 ---
-# <a name="idiasourcefilegetchecksum"></a>IDiaSourceFile::get_checksum
-Sağlama toplamı bayt sayısını alır.
+# <a name="idiasourcefileget_checksum"></a>IDiaSourceFile::get_checksum
+Sağlama toplamı baytlarını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,26 +35,26 @@ HRESULT get_checksum ( 
 #### <a name="parameters"></a>Parametreler
  `cbData`
 
-[in] Veri arabelleğin bayt cinsinden boyutu.
+'ndaki Veri arabelleğinin bayt cinsinden boyutu.
 
  `pcbData`
 
-[out] Sağlama toplamı bayt sayısını döndürür. Bu parametre olamaz `NULL`.
+dışı Sağlama toplamı baytlarının sayısını döndürür. Bu parametre `NULL` olamaz.
 
  `data`
 
-[out içinde] Sağlama toplamı bayt ile doldurulmuş bir arabellek. Bu parametre `NULL`, ardından `pcbData` gereken bayt sayısını döndürür.
+[in, out] Sağlama toplamı baytları ile doldurulmuş bir arabellek. Bu parametre `NULL`, `pcbData` gereken bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Sağlama toplamı bayt oluşturmak için kullanılan sağlama toplamı algoritma türünü belirlemek için çağrı [Idiasourcefile::get_checksumtype](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md) yöntemi.
+ Sağlama toplamı baytları oluşturmak için kullanılan sağlama toplamı algoritmasının türünü öğrenmek için [IDiaSourceFile:: get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md) yöntemini çağırın.
 
- Kaynak dosyadaki değişiklikler değişiklikleri sağlama toplamı bayt yansıtılması için sağlama toplamı genellikle kaynak dosyasının görüntüden oluşturulur. Sağlama toplamı bayt eşleşmiyorsa, dosyanın düşünülmesi gereken sonra dosya yüklenen görüntüden oluşturulan bir sağlama toplamı zarar görmüş veya değiştirilmiş.
+ Sağlama toplamı genellikle kaynak dosyanın görüntüsünden oluşturulur, böylece kaynak dosyadaki değişiklikler sağlama toplamı baytlarında değişikliklere yansıtılır. Sağlama toplamı baytları dosyanın yüklü görüntüsünden oluşturulmuş bir sağlama toplamıyla eşleşmiyorsa, dosyanın hasar görmüş veya ile oynanmış olarak kabul edilmesi gerekir.
 
- Tipik sağlama toplamları hiçbir zaman boyutu 32 bayttan fazla olduğu ancak bir sağlama toplamı en büyük boyutu olan varsaymayın. Ayarlama `data` parametresi `NULL` sağlama toplamını almak için gereken bayt sayısını almak için. Ardından uygun boyutta bir arabellek ayırın ve bir kez daha yeni bir arabellek bu yöntemi çağırın.
+ Tipik sağlama toplamı 32 bayttan fazla değil, ancak bir sağlama toplamı en büyük boyut olduğunu varsaymaz. Sağlama toplamını almak için gereken bayt sayısını almak için `data` parametresini `NULL` olarak ayarlayın. Ardından uygun boyutun bir arabelleğini ayırın ve bu yöntemi yeni arabellekle bir kez daha çağırın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 - [IDiaSourceFile::get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md)

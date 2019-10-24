@@ -16,12 +16,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 571a92adf4ebbdce12ec8ea45866835e3f6a6772
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c0e65b47baba985012dccad0c838c65d2d8bf2ef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666915"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748140"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>DSL Tanım Diyagramı ile Çalışma
 @No__t_0 tanımının diyagramı, etki alanına özgü dili tanımlamaya yönelik önemli bir araçtır. Etki alanı modelinize öğeler ekleyebilir ve diyagramda ilişkiler tanımlayabilir ve diyagramın yerleşimini daha okunabilir hale getirmek için değiştirebilirsiniz.
@@ -70,6 +70,6 @@ ms.locfileid: "72666915"
 ### <a name="show-as-class"></a>Sınıf Olarak Göster
  Bir etki alanı ilişkisinde türetilmiş ilişkiler varsa veya diğer etki alanı ilişkileri ile katıştırma veya başvuru ilişkisi varsa, ilişkiye sağ tıklayıp **sınıf olarak göster**' e tıklayarak ilişkiyi bir sınıf olarak görüntüleyebilirsiniz. İlişki, bir **etki alanı özellikleri** bölmesi ile birlikte görüntülenir ve devralma ve ilişki ağaçlarını gösterir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_uavSlot | Microsoft Docs
+title: 'IDiaSymbol:: get_uavSlot | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b139bd9abdb8266acce9bab4d82a8c59b60623a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 077a0a7895e93714bfe7b64b658c59f4d38ead4e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835332"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739044"
 ---
-# <a name="idiasymbolgetuavslot"></a>IDiaSymbol::get_uavSlot
-Uav yuvası alır.
+# <a name="idiasymbolget_uavslot"></a>IDiaSymbol::get_uavSlot
+Uıav yuvasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,10 +30,10 @@ HRESULT get_uavSlot(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir işaretçi bir `DWORD` uav yuvası tutan.
+dışı Uıav yuvasını tutan `DWORD` için bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 12dfad3c0a1197161925ca1f59b865975a42b4d4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8d3684ac79ce0dde8641e11a455238d927f2adb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666570"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748513"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Kod Oluşturma ve T4 Metin Şablonları
 
@@ -94,6 +94,6 @@ Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı k
 
 Metin şablonu dönüştürme özelliği *T4*olarak adlandırılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)

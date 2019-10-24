@@ -1,5 +1,5 @@
 ---
-title: SccRemove işlevi | Microsoft Docs
+title: SccRemove Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +12,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70413c2e446f8ed226a58eb8ddfe62ede4a1d61f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7ff7299868b96aedb7cc096b4e939a0f8015aeb8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338629"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720781"
 ---
 # <a name="sccremove-function"></a>SccRemove İşlevi
 Bu işlev, kaynak denetim sisteminden dosyaları siler.
@@ -39,48 +39,48 @@ SCCRTN SccRemove(
 #### <a name="parameters"></a>Parametreler
  pvContext
 
-[in] Kaynak Denetimi Eklentisi bağlam yapısı.
+'ndaki Kaynak denetimi eklentisi bağlam yapısı.
 
- hWnd
+ lendiği
 
-[in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.
+'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
 
- nFiles
+ Nkarşıya
 
-[in] Belirtilen dosya sayısı `lpFileNames` dizisi.
+'ndaki @No__t_0 dizisinde belirtilen dosya sayısı.
 
- lpFileNames
+ lpDosyaAdı
 
-[in] Dosyaların kaldırılması için tam yerel yol adları dizisi.
+'ndaki Kaldırılacak dosyaların tam nitelikli yerel yol adları dizisi.
 
- lpComment
+ lpComment açıklaması
 
-[in] Kaldırılmakta olan her dosyaya uygulanacak açıklama.
+'ndaki Kaldırılmakta olan her bir dosyaya uygulanacak yorum.
 
  fOptions
 
-[in] Komut bayrakları (kullanılmayan).
+'ndaki Komut bayrakları (kullanılmamış).
 
  pvOptions
 
-[in] Kaynak denetimi fişi özel seçenekleri.
+'ndaki Kaynak denetimi eklentisi özel seçenekleri.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Temizleme başarılı oldu.|
+|SCC_OK|Kaldırma başarılı oldu.|
 |SCC_E_FILENOTCONTROLLED|Seçili dosya kaynak denetimi altında değil.|
 |SCC_E_OPNOTSUPPORTED|Kaynak denetim sistemi bu işlemi desteklemiyor.|
-|SCC_E_ISCHECKEDOUT|Bir dosya, bir kullanıcı şu anda kullanıma sahip olduğundan kaldırılamıyor.|
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu.|
-|SCC_E_NOTAUTHORIZED|Kullanıcı bu işlemi gerçekleştirmek için izin verilmiyor.|
-|SCC_E_NONSPECIFICERROR|Belirli olmayan hata; Dosya kaldırılmadı.|
+|SCC_E_ISCHECKEDOUT|Bir Kullanıcı şu anda kullanıma alındığından dosya kaldırılamıyor.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu.|
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata; dosya kaldırılmadı.|
 |SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan önce iptal edildi.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlev, kaynak denetim sisteminden dosyaları kaldırır ancak kullanıcının yerel disk sürücünüzden silinmez.
+ Bu işlev, dosyaları kaynak denetim sisteminden kaldırır ancak kullanıcının yerel sabit sürücüsünden silmez.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

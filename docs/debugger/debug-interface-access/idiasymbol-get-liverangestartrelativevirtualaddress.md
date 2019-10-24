@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_liveRangeStartRelativeVirtualAddress | Microsoft Docs
+title: 'IDiaSymbol:: get_liveRangeStartRelativeVirtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 338775a2c36415d471d0d59176ce38f6df1827bb
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ea82e9d1dee4b82e78ea3f6409acfdcfc30b2a27
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64806868"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739888"
 ---
-# <a name="idiasymbolgetliverangestartrelativevirtualaddress"></a>IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
-Yerel sembol geçerli adres aralığını başlangıcını döndürür.
+# <a name="idiasymbolget_liverangestartrelativevirtualaddress"></a>IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
+Yerel simgenin geçerli olduğu adres aralığının başlangıcını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,22 +33,22 @@ HRESULT get_liveRangeStartRelativeVirtualAddress ( 
 #### <a name="parameters"></a>Parametreler
  `address`
 
-[out] Adres aralığı başlangıcını döndürür.
+dışı Adres aralığının başlangıcını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürülen göreli sanal adres simgenin geçerli aralığın başlangıcıdır.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür. Döndürülen göreli sanal adres, simgenin geçerli olduğu aralığın başlangıcıdır.
 
 > [!NOTE]
-> Döndürülen hata kodu sembol Canlı aralığı bilgisi yok anlamına gelir.
+> Döndürülen bir hata kodu, simgenin canlı Aralık bilgilerine sahip olmadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: dia2.h
+ Üstbilgi: dia2. h
 
- Kitaplık: diaguids.lib
+ Kitaplık: diaguid. lib
 
- DLL: msdia100.dll
+ DLL: msdia100. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

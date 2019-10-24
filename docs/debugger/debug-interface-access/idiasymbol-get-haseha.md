@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_haseha | Microsoft Docs
+title: 'IDiaSymbol:: get_hasEHa | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95df7b4a5783ce858a4c3c13352ae9140f40f201
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6f010fee3243a9ce202451fc9cc5cff1ed908118
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64826906"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740526"
 ---
-# <a name="idiasymbolgethaseha"></a>IDiaSymbol::get_hasEHa
-İşlev (yapılandırılmış) zaman uyumsuz özel durum işlemeyi içerip içermediğini belirten bir bayrak alır.
+# <a name="idiasymbolget_haseha"></a>IDiaSymbol::get_hasEHa
+İşlevin zaman uyumsuz (yapılandırılmış) özel durum işleme içerip içermediğini belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,23 +33,23 @@ HRESULT get_hasEHa(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] Döndürür `TRUE` hiç bir zaman uyumsuz özel durum işleme; işlevi varsa, aksi halde döndürür `FALSE`.
+dışı İşlevde zaman uyumsuz özel durum işleme varsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Uyumlu veya zaman uyumsuz yapılandırılmış özel durum işlemeyi C++ stili özel durum işleme ile karıştırmak mümkündür, ancak belirli bir derleyici anahtarı, etkinleştirmek için/eha gerektirir.
+ Stil özel durum işleme ile C++zaman uyumsuz veya yapılandırılmış özel durum işlemeyi karıştırmak mümkündür, ancak etkinleştirmek için özel bir derleyici anahtarı (/EHA) gerekir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

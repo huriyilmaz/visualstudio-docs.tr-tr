@@ -1,5 +1,5 @@
 ---
-title: Bir C++ erişim ihlali hata ayıklama | Microsoft Docs
+title: C++ Erişim ihlalinde hata ayıklama | Microsoft Docs
 ms.custom: seodec18
 ms.date: 02/05/2019
 ms.topic: conceptual
@@ -19,24 +19,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be6c13e2a3c83d31540399dd3387addb08e8686
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eebbdfd7774018ecf49801c6b01b5867b7bd3408
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62895136"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734551"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>Nasıl bir C++ erişim ihlali hata Ayıklayabilirim?
+# <a name="how-can-i-debug-a-c-access-violation"></a>C++ Erişim ihlalinde nasıl hata ayıklayabilirim?
 
 ## <a name="problem-description"></a>Sorun açıklaması
 
-Kendi programımı bir erişim ihlali üretir. Bu sorunu nasıl ayıklayabilirim?
+Programımı bir erişim ihlali oluşturuyor. Bu, nasıl hata ayıklayabilirim?
 
 ## <a name="solution"></a>Çözüm
 
-Birden çok işaretçi başvuru kod satırında bir erişim ihlali alırsanız, hangi işaretçi erişim ihlaline neden olduğunu bulmak zor olabilir. Visual Studio 2015 güncelleştirme 1'de başlayarak, özel durum iletişim kutusunda artık açıkça erişim ihlaline neden işaretçi adları.
+Birden çok işaretçiye giden bir kod satırı üzerinde erişim ihlali alırsanız, hangi işaretçinin erişim ihlaline neden olduğunu bulmak zor olabilir. Visual Studio 2015 güncelleştirme 1 ' den başlayarak, özel durum iletişim kutusu artık erişim ihlaline neden olan işaretçiyi açıkça adlandırır.
 
-Örneğin, aşağıdaki kodu göz önünde bulundurulduğunda, bir erişim ihlali almanız gerekir:
+Örneğin, aşağıdaki kod verildiğinde bir erişim ihlali almanız gerekir:
 
 ```C++
 #include <iostream>
@@ -73,11 +73,11 @@ int main() {
 }
 ```
 
-Visual Studio 2015 güncelleştirme 1'de bu kodu çalıştırırsanız, aşağıdaki özel durum iletişim kutusunu görmeniz gerekir:
+Bu kodu Visual Studio 2015 güncelleştirme 1 ' de çalıştırırsanız, aşağıdaki özel durum iletişim kutusunu görmeniz gerekir:
 
 ![AccessViolationCPlus](../debugger/media/accessviolationcplus.png "AccessViolationCPlus")
 
-İşaretçi erişim ihlaline neden neden belirleyemiyorsa, soruna işaretçi doğru şekilde atandığını emin olmak için kod boyunca izleme.  Bir parametre olarak geçirilir, doğru geçirilir ve yanlışlıkla oluşturma olmayan emin bir [yüzeysel kopya](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy). Ardından değerlerini istemeden yere programda veri kesme noktası işaretçisi, başka bir yerde programda değiştirilen olmadığından emin olmak için söz konusu oluşturarak değiştirilmekte olan değil olduğunu doğrulayın. Veri kesme noktaları hakkında daha fazla bilgi için bkz: veri kesme noktası bölümünde [kullanılarak kesme noktaları](../debugger/using-breakpoints.md).
+İşaretçinin erişim ihlaline neden neden olduğunu belirleyemediğiniz takdirde, soruna neden olan işaretçinin doğru şekilde atandığından emin olmak için kodu izleyin.  Parametre olarak geçirildiyse, doğru şekilde geçirildiğinden ve yanlışlıkla [basit bir kopya](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)oluşturmadığınızdan emin olun. Daha sonra, söz konusu işaretçinin programın başka bir yerinde değiştirilmediğinden emin olmak için söz konusu işaretçi için bir veri kesme noktası oluşturarak, bu değerlerin programda bir yerde yanlışlıkla değiştirilmediğini doğrulayın. Veri kesme noktaları hakkında daha fazla bilgi için [kesme noktaları kullanma](../debugger/using-breakpoints.md)içindeki veri kesme noktası bölümüne bakın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Yerel Kodda Hata Ayıklama SSS](../debugger/debugging-native-code-faqs.md)

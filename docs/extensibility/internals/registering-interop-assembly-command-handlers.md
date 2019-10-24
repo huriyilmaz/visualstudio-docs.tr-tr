@@ -1,5 +1,5 @@
 ---
-title: Birlikte çalışma bütünleştirilmiş kodu komut işleyicilerini kaydetme | Microsoft Docs
+title: Birlikte çalışma bütünleştirilmiş kodu komut Işleyicilerini kaydetme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,30 +11,30 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3e90ffc6b065b6d69bbe09bfe1887764ccc9955
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cbc0d162a11df034bec4d1f357ef8abd106da401
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353326"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724698"
 ---
 # <a name="registering-interop-assembly-command-handlers"></a>Birlikte Çalışma Bütünleştirilmiş Kodu Komut İşleyicilerini Kaydetme
-VSPackage ile kaydetmelisiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] böylece tümleşik geliştirme ortamı (IDE) komutlarının düzgün bir şekilde yönlendirir.
+Tümleşik geliştirme ortamı (IDE), komutlarının düzgün şekilde yönlendirilebilmesi için bir VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaydedilmelidir.
 
- Kayıt defterini düzenleyerek el ile veya kayıt şirketi (.rgs) dosyası kullanılarak güncelleştirilebilir. Daha fazla bilgi için [Kaydedici betikleri oluşturma](/cpp/atl/creating-registrar-scripts).
+ Kayıt defteri el ile düzenlemeyle veya bir kaydedici (. RGS) dosyası kullanılarak güncelleştirilebilen olabilir. Daha fazla bilgi için bkz. [kaydedici betikleri oluşturma](/cpp/atl/creating-registrar-scripts).
 
- Yönetilen paket Framework (MPF) aracılığıyla bu işlevselliği sağlar <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> sınıfı.
+ Yönetilen paket çerçevesi (MPF), bu işlevselliği <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> sınıfı aracılığıyla sağlar.
 
-- [Komut tablosu biçimi başvurusu](https://msdn.microsoft.com/library/09e9c6ef-9863-48de-9483-d45b7b7c798f) yönetilmeyen Uydu DLL'leri UI kaynakları bulunur.
+- [Komut tablosu biçimi başvuru](https://msdn.microsoft.com/library/09e9c6ef-9863-48de-9483-d45b7b7c798f) kaynakları, YÖNETILMEYEN uydu UI dll 'lerinde bulunur.
 
-## <a name="command-handler-registration-of-a-vspackage"></a>Komut işleyici VSPackage kaydı
- Kullanıcı Arabirimi (UI) için bir işleyici olarak davranan bir VSPackage-tabanlı komutları gerektirir sonra VSPackage'ı adlı bir kayıt defteri girişi `GUID`. Bu kayıt defteri girdisi VSPackage'nın kullanıcı Arabirimi kaynak dosyası ve bu dosyaya menüsü kaynak konumunu belirtir. Kayıt defteri girdisini hkey_local_machıne\software\microsoft\visualstudio altında bulunan\\ *\<sürüm >* \Menus, burada  *\<sürüm >* sürümü [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], örneğin 9.0.
+## <a name="command-handler-registration-of-a-vspackage"></a>VSPackage komut Işleyicisi kaydı
+ Kullanıcı arabirimi (UI) tabanlı komutlar için işleyici olarak davranan bir VSPackage, VSPackage `GUID` sonra adlı bir kayıt defteri girişi gerektirir. Bu kayıt defteri girdisi, VSPackage 'un Kullanıcı arabirimi kaynak dosyasının ve bu dosya içindeki menü kaynağının konumunu belirtir. Kayıt defteri girişinin kendisi HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio \\ *\<Version >* \menülerinin altında bulunur, burada *\<Version >* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sürümüdür, örneğin 9,0.
 
 > [!NOTE]
-> Kök yolu hkey_local_machıne\software\microsoft\visualstudio\\ *\<sürüm >* bir alternatif ile geçersiz kılınabilir ne zaman kök [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kabuk başlatılır. Kök yolu hakkında daha fazla bilgi için bkz: [yükleme VSPackage'ları ile Windows Installer](../../extensibility/internals/installing-vspackages-with-windows-installer.md).
+> @No__t_3 kabuğu başlatıldığında, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ *\<Version >* kök yolu alternatif bir kökle geçersiz kılınabilir. Kök yolu hakkında daha fazla bilgi için, [Windows Installer Ile VSPackages yükleme](../../extensibility/internals/installing-vspackages-with-windows-installer.md)bölümüne bakın.
 
 ### <a name="the-ctmenu-resource-registry-entry"></a>CTMENU kaynak kayıt defteri girdisi
- Kayıt defteri girdisi yapıdır:
+ Kayıt defteri girişinin yapısı:
 
 ```
 HKEY_LOCAL_MACHINE\Software\VisualStudio\<Version>\
@@ -42,22 +42,22 @@ HKEY_LOCAL_MACHINE\Software\VisualStudio\<Version>\
     <GUID> = <Resource Information>
 ```
 
- \<*GUID*> olan `GUID` {XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX} biçimde Vspackage'i biri.
+ \<*guıd*>, {xxxxxx-XXXX-XXXX-XXXX-xxxxxxxxx} biçiminde VSPackage 'ın `GUID`.
 
- *\<Kaynak bilgileri >* virgülle ayrılmış üç öğelerden oluşur. Sırayla bu öğeler şunlardır:
+ *\<Resource bilgi >* , virgülle ayrılmış üç öğeden oluşur. Bu öğeler sırasıyla:
 
- \<*Kaynak DLL yolu*>, \< *menüsü kaynak kimliği*>, \< *menü sürümü*>
+ *kaynak DLL > yolu*\< \<*menü kaynak kimliği*>, \<*Menu sürümü* >
 
- Aşağıdaki tablo alanlarını açıklar \< *kaynak bilgileri*>.
+ Aşağıdaki tabloda > \<*kaynak bilgileri*alanları açıklanmaktadır.
 
 | Öğe | Açıklama |
 |---------------------------| - |
-| \<*Kaynak DLL yolu*> | Bu kaynağın menü kaynağı içeren DLL tam yolunu veya bu VSPackage'nın kaynak kullanılacak DLL olduğunu belirten, boş bırakılır (VSPackage kayıtlı olduğu paketleri alt belirtildiği gibi).<br /><br /> Bu alanı boş bırakın uygulamadır. |
-| \<*Menü kaynak kimliği*> | Bu kaynak kimliği olan `CTMENU` gelen derlenmiş gibi tüm kullanıcı Arabirimi öğeleri için VSPackage'ı içeren kaynak bir [.vsct](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) dosya. |
-| \<*Menü sürümü*> | Bir sürüm olarak kullanılan birkaç budur `CTMENU` kaynak. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] içeriğini remerge gerekip gerekmediğini belirlemek için bu değeri kullanır `CTMENU` önbelleğinde tüm kaynakla `CTMENU` kaynakları. Bir remerge devenv Kurulum komutu yürüterek tetiklenir.<br /><br /> Bu değer başlangıçta 1 olarak verilecek ve her değişiminin artırılır `CTMENU` kaynak ve remerge gerçekleşmeden önce. |
+| *kaynak dll 'Nin yolunu* \< > | Bu, menü kaynağını içeren kaynak DLL 'inin tam yoludur veya boş bırakılır. Bu, VSPackage 'un kaynak DLL 'sinin, VSPackage 'un kaydedildiği paket alt anahtarında belirtildiği gibi) kullanılacağını gösterir.<br /><br /> Bu alanı boş bırakmak önemlidir. |
+| \<*menü kaynak kimliği* > | Bu, bir [. vsct](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) dosyasından derlenen VSPackage için tüm Kullanıcı arabirimi öğelerini içeren `CTMENU` KAYNAĞıNıN kaynak kimliğidir. |
+| \<*menü sürümü* > | Bu, `CTMENU` kaynağın sürümü olarak kullanılan bir sayıdır. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], `CTMENU` kaynağın içeriğini tüm `CTMENU` kaynakları önbelleğiyle yeniden birleştirmesi gerekip gerekmediğini öğrenmek için bu değeri kullanır. Yeniden birleştirme, devenv Kurulum komutu çalıştırılarak tetiklenir.<br /><br /> Bu değer başlangıçta 1 olarak ayarlanmalıdır ve `CTMENU` kaynaktaki her değişiklikten sonra yeniden birleştirme gerçekleşmeden önce arttırılır. |
 
 ### <a name="example"></a>Örnek
- Kaynak girdilerinin birkaç örneği aşağıda verilmiştir:
+ Aşağıda birkaç kaynak girişi örneği verilmiştir:
 
 ```
 HKEY_LOCAL_MACHINE\Software\VisualStudio\9.0Exp\
@@ -66,6 +66,6 @@ HKEY_LOCAL_MACHINE\Software\VisualStudio\9.0Exp\
     {1b027a40-8f43-11d0-8d11-00a0c91bc942} = , 10211, 3
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’ların Kullanıcı Arabirimi Öğeleri Eklemesi](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Birlikte Çalışma Bütünleştirilmiş Kodları Kullanan Komutlar ve Menüler](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)

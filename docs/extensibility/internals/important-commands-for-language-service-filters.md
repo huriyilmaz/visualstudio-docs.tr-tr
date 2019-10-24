@@ -1,5 +1,5 @@
 ---
-title: Önemli komutlar için dil hizmeti filtreleri | Microsoft Docs
+title: Dil hizmeti filtreleri için önemli komutlar | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,32 +11,32 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73ecbad3578c356ed9f82f79cdf9144d4c2bd32d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d0e2e605a0725c2f88922d3e3ce899263171bc4d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335080"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726924"
 ---
 # <a name="important-commands-for-language-service-filters"></a>Dil Hizmeti Filtreleri için Önemli Komutlar
-Tam özellikli dil hizmeti filtresi oluşturmak istiyorsanız, aşağıdaki komutları işleme göz önünde bulundurun. Tam komut tanımlayıcıları listesini tanımlanan <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> numaralandırması yönetilen kod ve Stdidcmd.h üstbilgi dosyası yönetilmeyen [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] kod. Stdidcmd.h dosyasında bulabilirsiniz *Visual Studio SDK yükleme yolunu*\VisualStudioIntegration\Common\Inc.
+Tam özellikli bir dil hizmeti filtresi oluşturmak istiyorsanız aşağıdaki komutları işlemeyi göz önünde bulundurun. Komut tanımlayıcılarının tam listesi, yönetilen kod için <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> numaralandırmasında ve yönetilmeyen [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] kodu için Stdidcmd. h üstbilgi dosyasında tanımlanmıştır. Stdidcmd. h dosyasını *Visual STUDIO SDK yükleme yolu*\VisualStudioIntegration\Common\Inc. ' de bulabilirsiniz.
 
-## <a name="commands-to-handle"></a>Komutları işlemek için
+## <a name="commands-to-handle"></a>Işlenecek komutlar
 
 > [!NOTE]
-> Aşağıdaki tabloda her komut için filtre uygulamak için zorunlu değildir.
+> Aşağıdaki tabloda her komutun filtreleneceği zorunlu değildir.
 
 |Komut|Açıklama|
 |-------------|-----------------|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı tıkladığında Gönder. Bu komut, bir kısayol menüsü sağlamak için zaman olduğunu gösterir. Bu komut işleyemez, metin düzenleyici olmadan herhangi bir dile özgü komut varsayılan kısayol menüsü sağlar. Bu menüde kendi komutları eklemek için komutu işlemek ve kendiniz bir kısayol menüsünü görüntüleyin.|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|CTRL + J kullanıcı türleri genellikle gönderilir. Çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodunda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> deyim tamamlama kutusunu göstermek için.|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı bir karakter yazdığında gönderilir. Bu komut, bir tetikleyici karakteri yazdıldığında ve deyimi sağlamak için tamamlama yöntemi ipuçları ve söz dizimi renklendirme gibi metin işaretçileri Ayraç eşleştirme belirlerken ve hata işaretçileri izleyin. Çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodunda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> için deyim tamamlama ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> metodunda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> yöntemi ipuçları için. Metin işaretçileri desteklemek için yazılan karakter, işaretçileri güncelleştirme gerekip gerekmediğini belirlemek için bu komutu izleyin.|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı Enter tuşunu yazdığında gönderilir. Çağırarak yöntemi ipucu penceresini kapatmak ne zaman belirlemek için bu komut izleme <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> metodunda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>. Varsayılan olarak, bu komut metni görünümü işler.|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı Geri tuşu yazdığında gönderilir. Çağırarak yöntemi ipucu penceresini kapatmak ne zaman belirlemek için İzleyici <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> metodunda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>. Varsayılan olarak, bu komut metni görünümü işler.|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Bir menü ya da bir kısayol tuşu Gönder. Çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> metodunda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> ipucu penceresi ile parametre bilgileri güncelleştirilecek.|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı değişkeninden önce gelir veya bir değişken üzerinde imleç yerleştirir ve seçer gönderilen **hızlı bilgi** gelen **IntelliSense** içinde **Düzenle** menüsü. Çağırarak bir ipucu dönüş türü değişkeni <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> metodunda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>. Hata ayıklama etkin olursa, ipucu ayrıca değişkenin değerini göstermelidir.|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|CTRL + Ara çubuğu kullanıcı türleri genellikle gönderilir. Bu komut çağırmak için dil hizmeti bildirir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodunda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID><br /><br /> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Genellikle bir menüden gönderilen **yorum seçimi** veya **seçimi işletilir satıra çevir** gelen **Gelişmiş** içinde **Düzenle** menüsü. <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> kullanıcının seçili metin düzenini açıklama istediğini gösterir. <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> kullanıcı seçili metin açıklamasını istediğini gösterir. Bu komutlar, yalnızca dil hizmeti tarafından uygulanabilir.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı sağ tıkladığı zaman gönderilir. Bu komut, bir kısayol menüsü sağlamak için zaman olduğunu gösterir. Bu komutu tutamadıysanız, metin düzenleyici dile özgü komutlar olmadan varsayılan bir kısayol menüsü sağlar. Bu menüye kendi komutlarınızı eklemek için, komutu işleyin ve kendiniz bir kısayol menüsü görüntüleyin.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Genellikle kullanıcı CTRL + J yazdığında gönderilir. Deyimin tamamlanma kutusunu göstermek için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> yöntemi çağırın.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı bir karakter yazdığında gönderilir. Bir tetikleyici karakterinin ne zaman yazıldığı ve ifade tamamlama, yöntem ipuçları ve sözdizimi renklendirme, küme ayracı eşleştirme ve hata işaretçileri gibi metin işaretçileri sağlamak için bu komutu izleyin. For ifadesinin tamamlanması için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> yöntemi ve yöntem ipuçları için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> yöntemi çağırın. Metin işaretçilerini desteklemek için, yazılan karakterin işaretçilerin güncelleştirilmesini gerektirip gerektirmediğini öğrenmek için bu komutu izleyin.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı Enter tuşunu yazdığında gönderilir. @No__t_1 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> yöntemini çağırarak bir yöntem ipucu penceresinin ne zaman durdurulacağını öğrenmek için bu komutu izleyin. Varsayılan olarak, metin görünümü bu komutu işler.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı geri al anahtarını yazdığında gönderilir. @No__t_1 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> yöntemini çağırarak bir yöntem ipucu penceresinin ne zaman durdurulacağını belirleme İzleyicisi. Varsayılan olarak, metin görünümü bu komutu işler.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Bir menü veya kısayol anahtarından gönderilir. İpucu penceresini parametre bilgileriyle güncelleştirmek için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> yöntemi çağırın.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Kullanıcı bir değişkenin üzerine gittiğinde veya imleci bir değişkende konumlandırdığında veya **Düzenle** menüsünde **IntelliSense** 'den **hızlı bilgi** ' yı seçtiğinde gönderilir. @No__t_1 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> yöntemini çağırarak bir ipucunda değişkenin türünü döndürün. Hata ayıklama etkinse, ipucu değişkenin değerini de göstermelidir.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Genellikle kullanıcı CTRL + Ara çubuğu yazdığında gönderilir. Bu komut, dil hizmetinin <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> yöntemini çağırmasını söyler.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID><br /><br /> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Bir menüden gönderilir, genellikle **düzenleme** menüsünde Seçimi Açıklama **veya** **Gelişmiş** ' i Açıklama Ekle ' yi **seçerek** . <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>, kullanıcının seçili metni açıklama eklemek istediğini belirtir;  <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>, kullanıcının seçili metinde açıklama eklemek istediğini gösterir. Bu komutlar yalnızca dil hizmeti tarafından uygulanabilir.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Eski Dil Hizmeti Geliştirme](../../extensibility/internals/developing-a-legacy-language-service.md)

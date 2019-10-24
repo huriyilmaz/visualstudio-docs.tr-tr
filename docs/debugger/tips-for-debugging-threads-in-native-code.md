@@ -1,5 +1,5 @@
 ---
-title: Yerel kod iş parçacıklarında hata ayıklama ipuçları | Microsoft Docs
+title: Yerel koddaki Iş parçacıkları hata ayıklama ipuçları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,22 +16,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ee1f1f2f2029325e3d3b87ca44d05d800a62c07
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7dde94e28f378f0630a78f32ae5e58533729ce0f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901881"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729002"
 ---
 # <a name="tips-for-debugging-threads-in-native-code"></a>Yerel Kod İş Parçacıklarında Hata Ayıklama İpuçları
-Yerel kod iş parçacıklarında hata ayıklama sırasında kullanabileceğiniz bazı ipuçları şunlardır:
+Yerel koddaki iş parçacıklarında hata ayıklarken kullanabileceğiniz bazı ipuçları şunlardır:
 
-- Yazarak iş parçacığı bilgileri bloğu içeriğini görüntüleyebilirsiniz `@TIB` içinde **Watch** penceresi veya **QuickWatch** iletişim kutusu.
+- **İzleme** penceresinde veya **QuickWatch** Iletişim kutusunda `@TIB` yazarak iş parçacığı bilgi bloğunun içeriğini görüntüleyebilirsiniz.
 
-- Geçerli iş parçacığı için son hata kodunu girerek görüntüleyebileceğiniz `@Err` içinde **Watch** penceresi veya **QuickWatch** iletişim kutusu.
+- **İzleme** penceresinde veya **QuickWatch** iletişim kutusunda `@Err` girerek geçerli iş parçacığının son hata kodunu görüntüleyebilirsiniz.
 
-- C çalışma zamanı kitaplıkları (CRT) işlevleri, çok iş parçacıklı uygulamada hata ayıklama için yararlı olabilir. Daha fazla bilgi için [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg).
+- C çalışma zamanı kitaplıkları (CRT) işlevleri, çok iş parçacıklı bir uygulamada hata ayıklamak için yararlı olabilir. Daha fazla bilgi için bkz. [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Çok İş Parçacıklı Uygulamaların Hatalarını Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

@@ -1,5 +1,5 @@
 ---
-title: Grafik Çerçeve doğrulama | Microsoft Docs
+title: Grafik çerçeve doğrulaması | Microsoft Docs
 ms.date: 03/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -10,29 +10,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce283e5cbab30b612a02ec447113ad11e206a7f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 49248c6209f9e56e51551f6cd3d4af66ecac8b56
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62895876"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735493"
 ---
-# <a name="graphics-frame-validation"></a>Grafik Çerçeve doğrulama
+# <a name="graphics-frame-validation"></a>Grafik çerçeve doğrulaması
 <!-- VERSIONLESS -->
-Visual Studio 2017 ve daha büyük Destek **çerçeve doğrulama** aracı.  Çerçeve doğrulama penceresi, hataları ve olay listesi ile ilişkili uyarıları görüntüler.  Bu pencereyi görüntülemek için seçin **Görüntüle > Çerçeve doğrulama** menüsü.
+Visual Studio 2017 ve üzeri **çerçeve doğrulama** aracını destekler.  Çerçeve doğrulama penceresinde olay listesiyle ilişkili hatalar ve uyarılar görüntülenir.  Bu pencereyi görüntülemek için **> çerçeve doğrulama menüsünü görüntüle** ' yi seçin.
 
 ![Çerçeve Doğrulama](media/gfx_diag_frame_validation.png)
 
-Tıklayın **doğrulama çalışması** analiz başlatmak için sol üst köşedeki düğmesini.  Bu çerçeve karmaşıklığına bağlı olarak tamamlanması birkaç dakika sürebilir.  İki farklı kaynaktan gelen bir birleşimini aşağıdadır görüntülenen verileri: iletileri bu D3D kendisini ne zaman yayar [SDK katmanları](/windows/desktop/direct3d11/overviews-direct3d-11-devices-layers) etkinleştirilmiş ve İzleme Aracı'nın kendi iç durumu toplanan verileri. İşlem tamamlandıktan sonra birkaç veri sütunlarının görürsünüz:
+Analizi başlatmak için sol üst köşedeki **doğrulama Çalıştır** düğmesine tıklayın.  Çerçevenin karmaşıklığına bağlı olarak tamamlanması birkaç dakika sürebilir.  Burada görüntülenen veriler iki kaynaktan bir birleşimidir: Bu, D3D 'nın kendisini [SDK katmanları](/windows/desktop/direct3d11/overviews-direct3d-11-devices-layers) etkinken ve aracın kendi iç durum izlemesiyle toplanan verileri yayar. İşlem tamamlandıktan sonra birkaç veri sütunu görürsünüz:
 
-| **Sütun** | **Açıklama** |
+| **Sütunuyla** | **Açıklama** |
 |------------| - |
-| Olay Kimliği | İçindeki bir girdiye eşleştiren kimliği [olay listesi](graphics-event-list.md) penceresi. |
-| Önem Derecesi | Bozulma, hata, uyarı, bilgi veya ileti. |
-| Kategori | Tanımlanmış, çeşitli uygulama başlatma, temizleme, derleme, durum oluşturma, durumu ayarı, durum alma, yürütme, kaynak düzenlemesi, gölgelendirici, gereksiz ve kullanılmayan. |
+| Olay kimliği | [Olay listesi](graphics-event-list.md) penceresindeki bir GIRDIYLE eşlenen kimlik. |
+| Önem Derecesi | Bozulma, hata, uyarı, bilgi veya Ileti. |
+| Kategori | Uygulama tanımlı, çeşitli, başlatma, Temizleme, derleme, durum oluşturma, durum ayarı, durum alma, yürütme, kaynak Işleme, gölgelendirici, yedekli ve kullanılmıyor. |
 | İleti | Olayla ilişkili ileti. |
-| Olay | Hata veya uyarı ile ilişkili olay. |
+| Olay | Hata veya uyarıyla ilişkili olay. |
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 [Grafik Tanılama (DirectX Grafiklerinde Hata Ayıklama)](visual-studio-graphics-diagnostics.md)
 <!-- /VERSIONLESS -->

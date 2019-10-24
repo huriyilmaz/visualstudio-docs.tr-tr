@@ -25,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1380cf2cfd4d1ffe729fdd4a6ce9cfb2ba7d9ab6
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: dd4a481a8d4f283204b99cfef4a07106d3e479cb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435652"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731289"
 ---
 # <a name="mfc-debugging-techniques"></a>MFC Hata Ayıklama Teknikleri
 MFC programında hata ayıklaması yapıyorsanız, bu hata ayıklama teknikleri yararlı olabilir.
@@ -75,14 +75,14 @@ _asm int 3
 
 Diğer platformlarda `AfxDebugBreak` yalnızca `DebugBreak` ' i çağırır.
 
-Yayın derlemesi oluştururken `AfxDebugBreak` deyimlerini kaldırdığınızdan emin olun veya onları çevrelemek için `#ifdef _DEBUG` kullanın.
+Bir yayın derlemesi oluştururken `AfxDebugBreak` deyimlerini kaldırmayı unutmayın ya da bunları çevrelemek için `#ifdef _DEBUG` kullanın.
 
 [Bu konuda](#BKMK_In_this_topic)
 
 ## <a name="BKMK_The_TRACE_macro"></a>TRACE makrosu
 Hata ayıklayıcı [çıktı penceresinde](../ide/reference/output-window.md)programınızdaki iletileri göstermek Için, [ATLTRACE](https://msdn.microsoft.com/Library/c796baa5-e2b9-4814-a27d-d800590b102e) makrosunu veya MFC [Trace](https://msdn.microsoft.com/Library/7b6f42d8-b55a-4bba-ab04-c46251778e6f) makrosunu kullanabilirsiniz. [Onaylamalar](../debugger/c-cpp-assertions.md)gibi, izleme makroları yalnızca programınızın hata ayıklama sürümünde etkindir ve yayın sürümünde derlendiğinde kaybolur.
 
-Aşağıdaki örneklerde, **izleme** makrosunu kullanabileceğiniz bazı yollar gösterilmektedir. @No__t-0 gibi, **izleme** makrosu bir dizi bağımsız değişkeni işleyebilir.
+Aşağıdaki örneklerde, **izleme** makrosunu kullanabileceğiniz bazı yollar gösterilmektedir. @No__t_0 gibi, **izleme** makrosu bir dizi bağımsız değişkeni işleyebilir.
 
 ```cpp
 int x = 1;
@@ -97,7 +97,7 @@ TRACE( "x = %d and y = %d\n", x, y );
 TRACE( "x = %d and y = %x and z = %f\n", x, y, z );
 ```
 
-TRACE makrosu hem char @ no__t-0 hem de wchar_t @ no__t-1 parametrelerini uygun şekilde işler. Aşağıdaki örneklerde, farklı dize parametresi türleriyle birlikte Izleme makrosunun kullanımı gösterilmektedir.
+TRACE makrosu hem char \* hem de wchar_t \* parametrelerini uygun şekilde işler. Aşağıdaki örneklerde, farklı dize parametresi türleriyle birlikte Izleme makrosunun kullanımı gösterilmektedir.
 
 ```cpp
 TRACE( "This is a test of the TRACE macro that uses an ANSI string: %s %d\n", "The number is:", 2);
@@ -115,17 +115,17 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
 MFC, ayrılan ancak serbest bırakılmakta olan belleği algılamaya yönelik sınıfları ve işlevleri sağlar.
 
 ### <a name="BKMK_Tracking_memory_allocations"></a>Bellek ayırmalarını izleme
-MFC 'de, bellek sızıntılarını bulmaya yardımcı olması için **Yeni** Işlecin yerine [DEBUG_NEW](https://msdn.microsoft.com/Library/9b379344-4093-4bec-a3eb-e0d8a63ada9d) makrosunu kullanabilirsiniz. Programınızın hata ayıklama sürümünde, `DEBUG_NEW`, ayırdığı her nesne için dosya adını ve satır numarasını izler. Programınızın bir yayın sürümünü derlerken, `DEBUG_NEW` dosya adı ve satır numarası bilgisi olmadan basit bir **Yeni** işlem olarak çözümlenir. Bu nedenle, programınızın yayın sürümünde hiçbir hızda ceza puanı ödeyin.
+MFC 'de, bellek sızıntılarını bulmaya yardımcı olması için **Yeni** Işlecin yerine [DEBUG_NEW](https://msdn.microsoft.com/Library/9b379344-4093-4bec-a3eb-e0d8a63ada9d) makrosunu kullanabilirsiniz. Programınızın hata ayıklama sürümünde `DEBUG_NEW`, ayırdığı her bir nesne için dosya adını ve satır numarasını izler. Programınızın bir yayın sürümünü derlerken, `DEBUG_NEW` dosya adı ve satır numarası bilgisi olmadan basit bir **Yeni** işleme çözümlenir. Bu nedenle, programınızın yayın sürümünde hiçbir hızda ceza puanı ödeyin.
 
-**Yeni**bir yerinde `DEBUG_NEW` kullanmak üzere tüm programınızı yeniden yazmak istemiyorsanız, bu makroyu kaynak dosyalarınızda tanımlayabilirsiniz:
+Tüm programınızı **Yeni**yerine `DEBUG_NEW` kullanacak şekilde yeniden yazmak istemiyorsanız, bu makroyu kaynak dosyalarınızda tanımlayabilirsiniz:
 
 ```cpp
 #define new DEBUG_NEW
 ```
 
-Bir [nesne dökümü](#BKMK_Taking_object_dumps)gerçekleştirdiğinizde, `DEBUG_NEW` ile ayrılan her nesne, ayrılan dosya ve satır numarasını gösterir ve bellek sızıntıları kaynaklarını bulmanızı sağlar.
+Bir [nesne dökümü](#BKMK_Taking_object_dumps)gerçekleştirdiğinizde, `DEBUG_NEW` ile ayrılan her nesne, ayrılan dosya ve satır numarasını gösterir ve bu da bellek sızıntıları kaynaklarını bulmanızı sağlar.
 
-MFC çerçevesinin hata ayıklama sürümü otomatik olarak `DEBUG_NEW` kullanır, ancak kodunuz değildir. @No__t avantajlarından yararlanmak istiyorsanız, yukarıda gösterildiği gibi `DEBUG_NEW` ' i açıkça veya **#define yeni** kullanmanız gerekir.
+MFC çerçevesinin hata ayıklama sürümü otomatik olarak `DEBUG_NEW` kullanır, ancak kodunuz değildir. @No__t_0 avantajlarından yararlanmak istiyorsanız, yukarıda gösterildiği gibi `DEBUG_NEW` açıkça veya **#define yeni** kullanmanız gerekir.
 
 [Bu konuda](#BKMK_In_this_topic)
 
@@ -227,7 +227,7 @@ Nesne olmayan bloklar `new` ile ayrılmış dizileri ve yapıları içerir. Bu d
 [Bu konuda](#BKMK_In_this_topic)
 
 ### <a name="BKMK_Taking_object_dumps"></a>Nesne dökümlerini alma
-Bir MFC programında, yığın üzerinde serbest bırakılmayan tüm nesnelerin bir açıklamasının dökümünü almak için [CMemoryState::D umpallobjectssince](/cpp/mfc/reference/cmemorystate-structure#dumpallobjectssince) kullanabilirsiniz. `DumpAllObjectsSince`, son [CMemoryState:: Checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint)öğesinden bu yana ayrılan tüm nesneleri döker. @No__t-0 çağrısı gerçekleştiğinden, `DumpAllObjectsSince` Şu anda bellekte bulunan tüm nesneleri ve olmayan nesneleri döker.
+Bir MFC programında, yığın üzerinde serbest bırakılmayan tüm nesnelerin bir açıklamasının dökümünü almak için [CMemoryState::D umpallobjectssince](/cpp/mfc/reference/cmemorystate-structure#dumpallobjectssince) kullanabilirsiniz. `DumpAllObjectsSince`, son [CMemoryState:: Checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint)öğesinden bu yana ayrılan tüm nesneleri döker. @No__t_0 çağrısı gerçekleşmiyor, `DumpAllObjectsSince` tüm nesneleri ve şu anda bellekte olmayan nesneleri döker.
 
 > [!NOTE]
 > MFC nesne dökümünü kullanabilmeniz için, [Tanılama izlemeyi etkinleştirmeniz](#BKMK_Enabling_memory_diagnostics)gerekir.
@@ -264,9 +264,9 @@ Phone #: 581-0215
 
 Çoğu satır başındaki küme ayraçları içindeki sayılar, nesnelerin ayrıldığı sırayı belirtir. En son ayrılan nesne en yüksek sayıya sahiptir ve dökümün en üstünde görünür.
 
-Bir nesne dökümünden en fazla bilgi miktarını almak için, nesne dökümünü özelleştirmek üzere herhangi bir @no__t -1 ile türetilmiş nesnenin `Dump` üye işlevini geçersiz kılabilirsiniz.
+Bir nesne dökümünden en fazla bilgi miktarını almak için, nesne dökümünü özelleştirmek üzere `CObject` türetilmiş herhangi bir nesnenin `Dump` üye işlevini geçersiz kılabilirsiniz.
 
-@No__t-0 genel değişkenini küme ayraçları içinde gösterilen sayıya ayarlayarak, belirli bir bellek ayırma üzerinde bir kesme noktası ayarlayabilirsiniz. Programı yeniden çalıştırırsanız, bu ayırma gerçekleştiğinde hata ayıklayıcı yürütmeyi keser. Ardından, programınızın bu noktaya nasıl kullanıldığını görmek için çağrı yığınına bakabilirsiniz.
+Genel değişkeni `_afxBreakAlloc` küme ayraçları içinde gösterilen sayıya ayarlayarak, belirli bir bellek ayırma üzerinde bir kesme noktası ayarlayabilirsiniz. Programı yeniden çalıştırırsanız, bu ayırma gerçekleştiğinde hata ayıklayıcı yürütmeyi keser. Ardından, programınızın bu noktaya nasıl kullanıldığını görmek için çağrı yığınına bakabilirsiniz.
 
 C çalışma zamanı kitaplığı, C çalışma zamanı ayırmaları için kullanabileceğiniz benzer bir [_Crtsetbreakkalloc](/cpp/c-runtime-library/reference/crtsetbreakalloc)işlevine sahiptir.
 
@@ -297,7 +297,7 @@ CString s("This is a frame variable");
 CPerson* p = new CPerson( "Smith", "Alan", "581-0215" );
 ```
 
-@No__t-0 Oluşturucusu, `CString` üye değişkenlerini başlatmak için kullanılan `char` işaretçileri olan üç bağımsız değişken alır. Bellek dökümünde, `CPerson` nesnesini üç nesne olmayan blok (3, 4 ve 5) ile birlikte görebilirsiniz. Bunlar `CString` üye değişkenlerinin karakterlerini tutar ve `CPerson` nesne yıkıcısı çağrıldığında silinmez.
+@No__t_0 Oluşturucu, `CString` üye değişkenlerini başlatmak için kullanılan `char` işaretçileri olan üç bağımsız değişken alır. Bellek dökümünde, `CPerson` nesnesini üç nesne olmayan blok (3, 4 ve 5) ile birlikte görebilirsiniz. Bunlar `CString` üye değişkenlerinin karakterlerini tutar ve `CPerson` nesne yıkıcısı çağrıldığında silinmez.
 
 Blok numarası 2 `CPerson` nesnesinin kendisidir. `$51A4`, bloğun adresini temsil eder ve [DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure#dumpallobjectssince)tarafından çağrıldığında `CPerson`:: `Dump` tarafından çıktı olan nesnenin içerikleri tarafından izlenir.
 
@@ -358,11 +358,11 @@ Ancak yığında ayrılan nesneler için, bir bellek sızıntısını engellemek
 #### <a name="BKMK_Customizing_object_dumps"></a>Nesne dökümlerini özelleştirme
 [CObject](/cpp/mfc/reference/cobject-class)'ten bir sınıf türettiğinizde, [DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure#dumpallobjectssince) kullandığınızda [Çıkış penceresinde](../ide/reference/output-window.md)nesneleri dökmek için `Dump` üye işlevini geçersiz kılabilirsiniz.
 
-@No__t-0 işlevi, bir döküm bağlamına ([CDumpContext](/cpp/mfc/reference/cdumpcontext-class)) nesnenin üye değişkenlerinin metinsel gösterimini yazar. Döküm bağlamı bir g/ç akışına benzer. @No__t-2 ' ye veri göndermek için Append işlecini ( **<<** ) kullanabilirsiniz.
+@No__t_0 işlevi, bir döküm bağlamına ([CDumpContext](/cpp/mfc/reference/cdumpcontext-class)) nesnenin üye değişkenlerinin metinsel gösterimini yazar. Döküm bağlamı bir g/ç akışına benzer. Bir `CDumpContext` veri göndermek için ekleme işlecini ( **<<** ) kullanabilirsiniz.
 
-@No__t-0 işlevini geçersiz kıldığınızda, temel sınıf nesnesinin içeriğinin dökümünü yapmak için önce `Dump` ' in temel sınıf sürümünü çağırmanız gerekir. Ardından, türetilmiş sınıfınızın her bir üye değişkeni için bir metinsel açıklama ve değer çıkışı yapın.
+@No__t_0 işlevini geçersiz kıldığınızda, önce temel sınıf nesnesinin içeriğinin dökümünü yapmak için `Dump` temel sınıf sürümünü çağırmanız gerekir. Ardından, türetilmiş sınıfınızın her bir üye değişkeni için bir metinsel açıklama ve değer çıkışı yapın.
 
-@No__t-0 işlevinin bildirimi şöyle görünür:
+@No__t_0 işlevi bildirimi şöyle görünür:
 
 ```cpp
 class CPerson : public CObject
@@ -430,7 +430,7 @@ MFC hata ayıklama kitaplıklarıyla seçili modüllerin oluşturulması, bu mod
 
 3. İlk olarak yeni bir proje yapılandırması oluşturacaksınız.
 
-   1. **@No__t-1Proje > Özellik sayfaları** iletişim kutusunda **Configuration Manager** düğmesine tıklayın.
+   1. **@No__t_1Project > Özellik sayfaları** iletişim kutusunda **Configuration Manager** düğmesine tıklayın.
 
    2. [Configuration Manager iletişim kutusunda](/previous-versions/visualstudio/visual-studio-2010/t1hy4dhz(v=vs.100)), kılavuzdaki projenizi bulun. **Yapılandırma** sütununda **\<new... öğesini seçin. >** .
 
@@ -472,7 +472,7 @@ MFC hata ayıklama kitaplıklarıyla seçili modüllerin oluşturulması, bu mod
 
    6. Hata ayıklama **bilgileri biçim** ayarlarına tıklayın ve hata ayıklama bilgileri için istediğiniz seçeneği (genellikle **/Zi**) seçin.
 
-   7. Uygulama Sihirbazı tarafından oluşturulan bir uygulama kullanıyorsanız veya önceden derlenmiş üstbilgilere sahipseniz, önceden derlenmiş üstbilgileri kapatmanız veya diğer modülleri derlerken önce yeniden derlemeniz gerekir. Aksi takdirde, uyarı C4650 ve hata iletisi C2855 alırsınız. **@No__t-2proje > Özellikler** iletişim kutusundaki **önceden derlenmiş üst bilgileri oluştur/kullan** ayarını değiştirerek (**yapılandırma özellikleri** klasörü, **C/C++**  alt klasörü, **önceden derlenmiş), önceden derlenmiş üst bilgileri devre dışı bırakabilirsiniz. Üst bilgiler** kategorisi).
+   7. Uygulama Sihirbazı tarafından oluşturulan bir uygulama kullanıyorsanız veya önceden derlenmiş üstbilgilere sahipseniz, önceden derlenmiş üstbilgileri kapatmanız veya diğer modülleri derlerken önce yeniden derlemeniz gerekir. Aksi takdirde, uyarı C4650 ve hata iletisi C2855 alırsınız. **@No__t_2Project > Özellikleri** iletişim kutusundaki **önceden derlenmiş üst bilgileri oluştur/kullan** ayarını değiştirerek (**yapılandırma özellikleri** klasörü, **C/C++**  alt klasörü, **önceden derlenmiş), önceden derlenmiş üstbilgileri kapatabilirsiniz Üst bilgiler** kategorisi).
 
 7. **Oluşturma** menüsünde, güncel olmayan proje dosyalarını yeniden derlemek için **Oluştur** ' u seçin.
 
@@ -480,5 +480,5 @@ MFC hata ayıklama kitaplıklarıyla seçili modüllerin oluşturulması, bu mod
 
    [Bu konuda](#BKMK_In_this_topic)
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

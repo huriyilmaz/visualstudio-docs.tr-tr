@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreams::Next | Microsoft Docs
+title: 'IDiaEnumDebugStreams:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a1b7819c90804933795c220c4d47f288d29abfe1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 63b66729192c9c976ecd226ab21aad73b94bf9f2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838304"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744723"
 ---
 # <a name="idiaenumdebugstreamsnext"></a>IDiaEnumDebugStreams::Next
-Belirtilen bir sabit listesi sırası hata ayıklama akış sayısını alır.
+Sabit Listesi dizisinde belirtilen sayıda hata ayıklama akışı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,18 +35,18 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Alınacak Numaralandırıcı hata ayıklama akış sayısı.
+'ndaki Alınacak Numaralandırıcı içindeki hata ayıklama akışlarının sayısı.
 
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp
+ rgelt
 
-[out] Bir dizi döndürür [Idiaenumdebugstreamdata](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) hata ayıklama temsil eden nesneleri akışları alınıyor.
+dışı Alınmakta olan hata ayıklama akışlarını temsil eden [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnelerinin bir dizisini döndürür.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Hata ayıklama akış döndürülen sayısını döndürür.
+dışı Döndürülen hata ayıklama akışlarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` daha fazla akış varsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Daha fazla akış yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

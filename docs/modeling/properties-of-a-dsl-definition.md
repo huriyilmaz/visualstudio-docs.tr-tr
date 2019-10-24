@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c7ff2be87a91e6c01ec275bcff1d77aa6481df1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1ae26dc54c8f57348ed00196d86629e3515a1835
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658283"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748345"
 ---
 # <a name="properties-of-a-dsl-definition"></a>DSL Tanımının Özellikleri
 DslDefinition özellikleri, sürüm numaralandırması gibi, *etki alanına özgü dil* tanımı özelliklerini tanımlar. *Alana özgü dil Tasarımcısı*diyagramın açık bir alanına tıkladığınızda DslDefinition özellikleri **Özellikler** penceresinde görünür.
@@ -42,6 +42,6 @@ DslDefinition özellikleri, sürüm numaralandırması gibi, *etki alanına özg
 |İkincil sürüm|Bu etki alanına özgü dil tanımı için artımlı küçük derleme numarası.|0|
 |uncaya|Bu etki alanına özgü dil tanımı için artımlı düzeltme derleme numarası.|0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

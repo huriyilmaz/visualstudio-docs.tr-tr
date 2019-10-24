@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findSymbolsForAcceleratorPointerTag | Microsoft Docs
+title: 'IDiaSymbol:: Findsymbolsforivatorpointertag | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bf55f372b9beb0a4cb0feda0dc5869ee9eb7c5f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 1544471bd4ff9166d4c8f4c10f48840db6f576f3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62827736"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741125"
 ---
 # <a name="idiasymbolfindsymbolsforacceleratorpointertag"></a>IDiaSymbol::findSymbolsForAcceleratorPointerTag
-Hızlandırıcı işaretçi etiket sayısı, bir C++ AMP saplama işlevde döndürür.
+Bir C++ amp saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,15 +31,15 @@ HRESULT findSymbolsForAccleratorPointerTag (
 #### <a name="parameters"></a>Parametreler
  `tagValue`
 
-[in] İşaretçi etiket değeri için pointee sembol kayıtların bulunduğu.
+'ndaki Pointee sembol kayıtlarının bulunduğu işaretçi etiketi değeri.
 
  `ppResult`
 
-[out] Bir işaretçi bir `IDiaEnumSymbols` arabirim işaretçisini, bir sonuç ile başlatılır.
+dışı Sonuçla başlatılan `IDiaEnumSymbols` arabirimi işaretçisine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

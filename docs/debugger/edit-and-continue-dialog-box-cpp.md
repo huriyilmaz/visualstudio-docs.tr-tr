@@ -1,5 +1,5 @@
 ---
-title: Düzenle ve devam et iletişim kutusu (C++) | Microsoft Docs
+title: Düzenle ve devam et Iletişim kutusuC++() | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,17 +19,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7183845e9c0b9b50b8feaedf9e6327b06678ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d708b4f74777fb40eccc2fef9b782689f830e092
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851425"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737966"
 ---
-# <a name="edit-and-continue-dialog-box-c"></a>Düzenle ve devam et iletişim kutusu (C++)
-Düzenle ve devam yerel koda yapılan değişiklikleri uygulanamadı. Bu geçici bir durum olabilir. Bazen Düzenle ve devam et yerel kod değişikliklerini hemen uygulanamaz, ancak bunları daha sonra (örneğin, tamamlandıktan sonra artık çalıştırma yordamı için geçerli çağrının) hata ayıklama oturumu sırasında uygulayabilirsiniz. Daha fazla bilgi için [Düzenle ve devam et](../debugger/edit-and-continue.md).
+# <a name="edit-and-continue-dialog-box-c"></a>Düzenle ve Devam Et İletişim Kutusu (C++)
+Düzenle ve devam et, yerel kodunuzda yaptığınız değişiklikleri uygulayamadı. Bu geçici bir durum olabilir. Bazen Düzenle ve devam et yerel kod değişikliklerini hemen uygulayamaz, ancak hata ayıklama oturumu sırasında daha sonra (örneğin, şu anda yürütülmekte olan yordama yapılan geçerli çağrının tamamlanmasından sonra) uygulanabilir. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
 
- Yine de hata ayıklama sırasında hatayı düzeltin, hata ayıklamayı durdurmak ve kod düzeltmesi veya hatasını görmezden Gel ve hata ayıklamaya devam etmek için kodu düzenleyebilirsiniz. Düzeltmesi yapmadan devam ederseniz, kod değişiklikleriniz hemen uygulanmaz.
+ Hata ayıklarken hatayı gidermek için kodu düzenleyebilir, hata ayıklamayı durdurup kodu düzeltemedi veya hatayı yoksayıp hata ayıklamaya devam edebilirsiniz. Bu çözümü yapmadan devam ederseniz, kod değişiklikleriniz hemen uygulanmaz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [Düzenle ve devam et, hata ayıklama, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)

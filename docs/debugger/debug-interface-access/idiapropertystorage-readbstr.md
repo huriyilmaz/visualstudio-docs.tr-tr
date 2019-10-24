@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadBSTR | Microsoft Docs
+title: 'IDiaPropertyStorage:: ReadBSTR | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0bff81499fe8ea66ce5d4f50616adfec44d3002
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef0b5bac11a1bf3da7e8081f7ae24b6a7a6f1a71
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839634"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742926"
 ---
 # <a name="idiapropertystoragereadbstr"></a>IDiaPropertyStorage::ReadBSTR
-Okur `BSTR` değerlerde özellik kümesi.
+Bir özellik kümesindeki `BSTR` değerleri okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,17 +34,17 @@ HRESULT ReadBSTR ( 
 #### <a name="parameters"></a>Parametreler
  `id`
 
-[in] Okunacak özellik tanımlayıcısı (`PROPID` WTypes.h tanımlanan bir `ULONG`).
+'ndaki Okunacak özelliğin tanımlayıcısı (`PROPID` `ULONG` olarak WTypes. h içinde tanımlanmıştır).
 
  `pValue`
 
-[out] Özellik değeri döndürür.
+dışı Özellik değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_INVALIDARG` özelliği türü değilse `BSTR`.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde bir hata kodu döndürür. Özellik `BSTR` türünde değilse `E_INVALIDARG` döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- A `BSTR` Windows geniş karakter sıfır ile sonlandırılmış dize olarak tanımlanır.
+ @No__t_0, Windows tarafından sıfır ile sonlandırılmış geniş karakter dizesi olarak tanımlanır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

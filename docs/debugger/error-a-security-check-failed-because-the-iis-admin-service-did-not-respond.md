@@ -1,5 +1,5 @@
 ---
-title: 'Hata: IIS Yönetici Hizmeti yanıt vermediğinden güvenlik denetimi başarısız oldu | Microsoft Docs'
+title: 'Hata: IIS Yönetici hizmeti yanıt vermediğinden bir güvenlik denetimi başarısız oldu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,33 +16,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ae97ae0594b06e9b35ac3bdd61eacf852968889
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f668de3d7c7e9a8bd075beb972199cf849feea65
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851027"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737881"
 ---
-# <a name="error-a-security-check-failed-because-the-iis-admin-service-did-not-respond"></a>Hata: IIS Yönetici Hizmeti yanıt vermediğinden güvenlik denetimi başarısız oldu.
-IIS Yönetici Hizmeti yanıt vermiyor, bu hata oluşur. Bu, genellikle IIS yükleme ile ilgili bir sorun olduğunu gösterir. İlk olarak kullanarak hizmetinin çalıştığını doğrulayın. **Hizmetleri** gelen aracı **Yönetimsel Araçlar**.
+# <a name="error-a-security-check-failed-because-the-iis-admin-service-did-not-respond"></a>Hata: IIS Yönetici Hizmeti Yanıt Vermediğinden Güvenlik Denetimi Başarısız
+Bu hata, IIS Yönetim hizmeti yanıt vermezse oluşur. Bu, genellikle IIS yüklemesiyle ilgili bir sorun olduğunu gösterir. İlk olarak, hizmetin **yönetim araçlarından** **Hizmetler** aracını kullanarak çalıştığını doğrulayın.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- IIS kullanarak yeniden **Program Ekle veya Kaldır** Denetim Masası.
+- **Program Ekle veya Kaldır** denetim MASASıNı kullanarak IIS 'yi yeniden yükleyin.
 
-- -veya-
+- veya
 
-- Program Ekle veya Kaldır Denetim Masası'nı kullanarak makinenizden IIS kaldırın. IIS kaldırmış ve hala sorunlarla, kayıt defterini denetleyin ve bu anahtar artık mevcut olduğundan emin olun:
+- Program Ekle veya Kaldır denetim masasını kullanarak IIS 'yi makinenizden kaldırın. IIS 'yi kaldırdıysanız ve sorun yaşamaya devam ediyorsanız, kayıt defterini denetleyin ve bu anahtarın artık mevcut olmadığından emin olun:
 
     `HKEY_CLASSES_ROOT\CLSID\{A9E69610-B80D-11D0-B9B9-00A0C922E750}`
 
-     -veya-
+     veya
 
-- Yönetimsel Araçlar Denetim Masası'nı kullanarak IIS Yönetici Hizmeti devre dışı bırakın. Bu IIS makinenizde devre dışı bırakır.
+- Yönetim Araçları denetim masasını kullanarak IIS Yönetim hizmetini devre dışı bırakın. Bu, makinenizde IIS 'yi devre dışı bırakır.
 
-     Bu üç adımlardan herhangi biri gerçekleştirildikten sonra bilgisayarınızı yeniden başlatın.
+     Bu üç adımdan herhangi birini gerçekleştirdikten sonra makinenizi yeniden başlatın.
 
-     Ek bilgi için IIS belgelerine bakın.
+     Daha fazla bilgi için bkz. IIS belgeleri.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

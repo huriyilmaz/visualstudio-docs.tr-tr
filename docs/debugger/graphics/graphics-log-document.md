@@ -12,98 +12,98 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aed2acd4dbf921d99bcefe2e74575401fc01c7d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d9bdfdb23d199c50b8d7ec6520964043dee8aa6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62895986"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735528"
 ---
 # <a name="graphics-log-document"></a>Grafik Günlük Belgesi
-Grafik günlük belgesi uygulamanızı grafik Tanılama oturumu altında çalışırken oluşan bir grafik olaylarını kaydıdır. Kaydedilen sonra Visual Studio grafik Çözümleyicisi aygıtını işleme ve performans sorunlarını tanılama günlüğüne inceleyebilirsiniz.
+Grafik günlüğü belgesi, uygulamanız bir grafik Tanılama oturumu altında çalışırken gerçekleşen grafik olaylarının kaydıdır. Kaydedildikten sonra, işleme ve performans sorunlarını tanılamak için Visual Studio Grafik Çözümleyicisi oturum açma durumunu inceleyebilirsiniz.
 
- Bu grafik Çözümleyicisi'nde göründüğünü hangi bir grafik günlük belgesi.
+ Grafik Çözümleyicisi 'nde grafik günlüğü belgesi şöyle görünür:
 
- ![İki yakalanan kareleri içeren bir grafik günlüğü. ](media/gfx_diag_demo_graphics_log_orientation.png "gfx_diag_demo_graphics_log_orientation")
+ ![Yakalanan iki kare içeren grafik günlüğü.](media/gfx_diag_demo_graphics_log_orientation.png "gfx_diag_demo_graphics_log_orientation")
 
-## <a name="understanding-graphics-log-documents"></a>Belgeler anlama grafik oturumu
- Grafik günlük belgesi incelemek için grafik Çözümleyicisi'ni kullanarak, yakalama sırasında oluşan işleme hedefi Direct3D olayları etkilerini görselleştirebilirsiniz. İşleme hedefinin beklenmeyen çıkış içeren bölgeler saptayabilirler. Etkilenen bölgede bir piksel seçtiğinizde, kendi gölgelendiricileri, etkilenen Direct3D olayları, bu olayları için yönetilen uygulama çağrı yığını ve bu olayları destekleyen DirectX nesneleri incelemek için grafik tanılama kullanabilirsiniz. Oyunlarda veya uygulamalarda işleme sorunları tanılamak için bu bilgileri kullanabilirsiniz.
+## <a name="understanding-graphics-log-documents"></a>Grafik günlüğü belgelerini anlama
+ Grafik bir günlük belgesini incelemek için grafik Çözümleyicisi 'ni kullanarak, yakalama sırasında oluşan işleme hedefinde Direct3D olaylarının etkilerini görselleştirebilirsiniz. İşlem hedefinin, beklenmeyen bir çıkış içeren bölgelerini işleyebilirsiniz. Etkilenen bölgede bir piksel seçtiğinizde, bunu incelemek için Grafik Tanılama, gölgelendiriciler, etkilenen Direct3D olayları, bu olaylara işaret eden uygulama çağrı yığını ve bu olayları destekleyen DirectX nesneleri için kullanabilirsiniz. Bu bilgileri, oyununuzda veya uygulamanızda işleme sorunlarını tanılamak için kullanabilirsiniz.
 
- Pencerenin üst kısmında (**grafik Experiment.vsglog**) geçerli işleme hedefi çıktısı Seçilen çerçevenin alt bölümü görüntüler ve görüntüler bir **çerçeve listesi** küçük resim görüntülerini içerir yakalanan çerçeve.
+ Pencerenin üst bölümü (**Graphics denemeler. vsglog**) seçili çerçevenin geçerli işleme hedefi çıkışını görüntüler ve alt bölüm yakalanan çerçevelerin küçük resimlerini Içeren bir **Çerçeve listesi** görüntüler.
 
 #### <a name="to-inspect-a-frame"></a>Bir çerçeveyi incelemek için
 
-- İçinde **çerçeve listesi**, incelemek istediğiniz çerçeveyi seçin. İşleme hedefi çıktısı grafik günlük belgesi üst kısmında seçilen çerçevenin görüntülemek için güncelleştirilir.
+- **Çerçeve listesinde**, incelemek istediğiniz çerçeveyi seçin. Grafik günlüğü belgesinin en üst kısmındaki işleme hedefi çıktısı seçili çerçeveyi görüntüleyecek şekilde güncelleştirilir.
 
-#### <a name="to-inspect-a-pixel"></a>Bir pikselin incelemek için
+#### <a name="to-inspect-a-pixel"></a>Bir pikseli denetlemek için
 
-- Grafik günlük belgesi üst kısmında, işleme hedefi çıktısı istediğiniz piksel seçin. Bir pikselin seçildiğinde, kullanabileceğiniz **grafik piksel geçmişi** seçilen piksel hakkında ayrıntılı bilgi görüntülemek için pencere. Daha fazla bilgi için [piksel geçmişi](graphics-pixel-history.md).
+- Grafik günlüğü belgesinin en üst kısmında, işleme hedefi çıktısından istediğiniz pikseli seçin. Bir piksel seçildiğinde, seçilen pikselle ilgili ayrıntılı bilgileri görüntülemek için **Grafik piksel geçmişi** penceresini kullanabilirsiniz. Daha fazla bilgi için bkz. [piksel geçmişi](graphics-pixel-history.md).
 
 ## <a name="playback-machine"></a>Kayıttan yürütme makinesi
- Ayrıca sağ üst köşesinde görüntülenen **çerçeve listesi** olduğu **kayıttan yürütme makinesi**. Kayıttan yürütme makinesi, bir makine ya da grafik olaylarını bir grafik günlüğü dosyasından daha yeni bir grafik Tanılama oturumu sırasında kayıttan yürütmek için kullanılan cihaz ' dir. Yakalanan olaylar kayıttan yürütmek için geliştirme makinenizi yerine farklı bir cihaz kullanarak tarafından sorun oluştuğu yürütme ortamı daha doğru bir şekilde üretebileceği — Örneğin, farklı grafik donanımının veya sürücüleri olan bir makine kullanabilirsiniz. Geliştirme makinenizde kullanan olanları veya diğer tür cihazlar, bir tablet ARM tabanlı Windows RT veya Windows Phone cihazı gibi.
+ **Çerçeve listesinin** sağ üst köşesinde da bir **oynatma makinesi**de görüntülenir. Kayıttan yürütme makinesi, daha sonraki bir grafik tanılama oturumunda grafik olaylarını bir grafik günlük dosyasından çalmak için kullanılan bir makine veya cihazdır. Yakalanan olayları çalmak için geliştirme makineniz yerine farklı bir cihaz kullanarak, sorunun gerçekleştiği yürütme ortamını daha doğru bir şekilde yeniden oluşturabilirsiniz — örneğin, farklı grafik donanımına veya sürücülere sahip bir makine kullanabilirsiniz geliştirme makinenizin kullandığından veya ARM tabanlı Windows RT tablet veya Windows Phone cihazı gibi diğer cihaz türleri.
 
- Kayıttan yürütme makinesi belirtme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Grafik tanılama kayıttan yürütme makinesini değiştirme](how-to-change-the-graphics-diagnostics-playback-machine.md).
+ Kayıttan yürütme makinesi belirtme hakkında daha fazla bilgi için bkz. [nasıl yapılır: grafik tanılama kayıttan yürütme makinesini değiştirme](how-to-change-the-graphics-diagnostics-playback-machine.md).
 
-## <a name="graphics-log-summary-information"></a>Grafik günlük özet bilgileri
- Grafik günlük dosyası etkin belgede olduğunda **özellikleri** penceresi, grafik tanılama yakalama oturumu barındırılan ortamıyla ilgili bilgileri görüntüler. Bilgi çeşitli kategorilerde görüntülenir.
+## <a name="graphics-log-summary-information"></a>Grafik günlüğü Özet bilgileri
+ Grafik günlük dosyası etkin belge olduğunda, **Özellikler** penceresi Grafik tanılama yakalama oturumunu barındıran ortamla ilgili bilgileri görüntüler. Birkaç bilgi kategorisi görüntülenir.
 
- **Direct3D bilgileri** görüntü bağdaştırıcısının yakalama oturumu sırasında kullanılan donanım ve sürücü özellikleri hakkında bilgileri listeler.
+ **Direct3D bilgileri** Yakalama oturumu sırasında kullanılan görüntü bağdaştırıcısının donanım ve sürücü özellikleriyle ilgili bilgileri listeler.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**10-bit XR yüksek renk biçimi**|**Doğru** 10-bit XR yüksek renk biçimi desteklenen; Aksi takdirde ise **False**.|
-|**DirectCompute CS 4.x**|**Doğru** Compute gölgelendirici 4.0 ise, desteklenen; Aksi takdirde **False**.|
-|**Çift duyarlık gölgelendiricileri**|**Doğru** çift duyarlıklı kayan nokta değerleri (64-bit); görüntü bağdaştırıcısı destekliyorsa, aksi takdirde, **False**.|
-|**Sürücü komut listeleri**|**Doğru** sürücü komut listeleri; destekliyorsa, aksi takdirde, **False**.|
-|**Sürücü eşzamanlı oluşturmaları**|**Doğru** sürücü eşzamanlı (uyumsuz) oluşturma; destekliyorsa, aksi takdirde, **False**.|
-|**Genişletilmiş biçimler (BGRA, vs.)**|**Doğru** BGRA gibi genişletilmiş biçimler, desteklenen; Aksi takdirde **False**.|
-|**Maksimum donanım özelliği düzeyi**|Görüntü bağdaştırıcısı tarafından desteklenen en yüksek özellik düzeyini görüntüler.|
+|**10 bit XR yüksek renk biçimi**|10 bit XR yüksek renk biçimi destekleniyorsa **true** ; Aksi takdirde, **false**.|
+|**DirectCompute CS 4. x**|Işlem gölgelendirici 4,0 destekleniyorsa, **doğru** ; Aksi takdirde, **false**.|
+|**Çift duyarlık gölgelendiricileri**|Görüntüleme bağdaştırıcısı çift duyarlıklı (64-bit) kayan nokta değerlerini destekliyorsa **doğru** . Aksi takdirde, **false**.|
+|**Sürücü komut listeleri**|Sürücü komut listelerini destekliyorsa, **doğru** . Aksi takdirde, **false**.|
+|**Sürücü eşzamanlı oluşturur**|Sürücü eşzamanlı (zaman uyumsuz) oluşturmayı destekliyorsa **doğru** . Aksi takdirde, **false**.|
+|**Genişletilmiş biçimler (BGRA, vb.)**|BGRA gibi genişletilmiş biçimler destekleniyorsa **doğru** ; Aksi takdirde, **false**.|
+|**En fazla HW Feature düzeyi**|Görüntü bağdaştırıcısının desteklediği en yüksek özellik düzeyini görüntüler.|
 
- **Bilgi görüntüle** yakalama oturumu sırasında kullanılan görüntü bağdaştırıcısı bilgilerini listeler.
+ **Görüntüleme bilgileri** Yakalama oturumu sırasında kullanılan görüntü bağdaştırıcısı hakkındaki bilgileri listeler.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
 |**Açıklama**|Görüntü bağdaştırıcısı açıklama dizesi.|
-|**Görüntüleme belleği**|Grafik bağdaştırıcıda yüklü bellek miktarı.|
-|**Sürücü adı**|Grafik bağdaştırıcısı sürücü adı.|
-|**Sürücü sürümü**|Grafik Bağdaştırıcısı Sürücüsü sürümü.|
+|**Görüntüleme belleği**|Grafik bağdaştırıcısında yüklü bellek miktarı.|
+|**Sürücü adı**|Grafik bağdaştırıcı sürücüsünün adı.|
+|**Sürücü sürümü**|Grafik bağdaştırıcı sürücüsünün sürümü.|
 |**Ad**|Grafik bağdaştırıcısının adı.|
 
- **Dosya deneme** yakalama oturumla ilişkili deneme dosya hakkındaki bilgileri listeler.
+ **Deneme dosyası** Yakalama oturumuyla ilişkili olan deneme dosyası hakkındaki bilgileri listeler.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**Yolu**|.Vsglog dosyasının yolu. **Not:**  Eski yakalama altında bu özellik kullanılmıyor.|
+|**Yolun**|. Vsglog dosyasının yolu. **Note:**  Eski yakalama altında bu özellik kullanılmaz.|
 
- **Modül bilgilerini** yakalama oturumu sırasında uygulama tarafından yüklenmiş dinamik bağlantı kitaplıklarını (DLL'ler) sürümünü ve adını listeler.
+ **Modül bilgileri** Yakalama oturumu sırasında uygulama tarafından yüklenen dinamik bağlantı kitaplıklarının (dll 'Ler) adını ve sürümünü listeler.
 
- **Sistem bilgileri** yakalama oturumu sırasında uygulama barındırılan bir işletim sistemi ve donanım bilgilerini listeler.
+ **Sistem bilgileri** Yakalama oturumu sırasında uygulamayı barındıran donanım ve işletim sistemiyle ilgili bilgileri listeler.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**Bellek**|Bilgisayarda yüklü bellek miktarı.|
-|**İşletim sistemi mimarisi**|Hedef işletim sisteminin CPU mimarisi.|
+|**Bellek**|Bilgisayarda yüklü olan bellek miktarı.|
+|**İşletim sistemi mimarisi**|İşletim sisteminin hedef CPU mimarisi.|
 |**İşletim sistemi sürümü**|İşletim sistemi sürümü.|
-|**İşlemci**|Bilgisayarda yüklü olan işlemci.|
-|**Hedef uygulama yapısı**|Hedef CPU mimarisi uygulama. Bu farklı olabilir **işletim sistemi mimarisi**.|
+|**İsiyle**|Bilgisayarda yüklü olan işlemci.|
+|**Hedef uygulama mimarisi**|Uygulamanın hedef CPU mimarisi. Bu, **Işletim sistemi mimarisinden**farklı olabilir.|
 
- **Hedef uygulama** yakalama oturumu konusu bu uygulama hakkında bilgileri listeler.
+ **Hedef uygulama** Yakalama oturumunun konusu olan uygulamayla ilgili bilgileri listeler.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**Son değiştirilme tarihi/saati**|Uygulamanın oluşturulduğu saat ve tarihi.|
-|**Yolu**|Uygulama yolu.|
-|**İşlem kimliği**|Uygulamaya verilen işlem kimliği.|
+|**Son değiştirilme tarihi/saati**|Uygulamanın oluşturulduğu tarih ve saat.|
+|**Yolun**|Uygulamanın yolu.|
+|**İşlem KIMLIĞI**|Uygulamaya verilen işlem KIMLIĞI.|
 |**Sürüm**|Uygulama sürümü.|
 
- **VSG günlük dosyası** grafik günlük belgesi hakkındaki bilgiler listelenir.
+ **VSG günlük dosyası** Grafik günlüğü belgesi hakkındaki bilgileri listeler.
 
 | Özellik | Açıklama |
 |------------------------| - |
-| **Tarafından oluşturulan** | Grafik oluşturulan bir uygulama adı, belge oturum açın. Örneğin, yakalama oturumu başlatıldığına [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (el ile yakalama) Bu özellik değeri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
-| **Oturum başlangıç saati** | Yakalama oturumunu başladığı saat ve tarihi. |
-| **Boyutu** | Grafik günlük belgesi boyutu. |
+| **Oluşturan** | Grafik günlüğü belgesini oluşturan uygulamanın adı. Örneğin, yakalama oturumu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] başlatıldığında (el ile yakalama), bu özelliğin değeri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
+| **Oturum başlangıç saati** | Yakalama oturumunun başladığı tarih ve saat. |
+| **Boyutla** | Grafik günlüğü belgesinin boyutu. |
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [İzlenecek yol: Köşe Gölgeleme Nedeniyle Eksik Nesneler](walkthrough-missing-objects-due-to-vertex-shading.md)
-- [İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İzlenecek Yol: Köşe Gölgeleme Nedeniyle Nesnelerin Eksikliği](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [İzlenecek Yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](walkthrough-debugging-rendering-errors-due-to-shading.md)

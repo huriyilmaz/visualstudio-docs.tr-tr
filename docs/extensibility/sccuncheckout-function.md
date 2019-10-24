@@ -1,5 +1,5 @@
 ---
-title: SccUncheckout işlevi | Microsoft Docs
+title: SccUncheckout Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d50b321f96b6759d95a6d923222e5e0a92b2ee3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e35d7287d8fc12100da9ba3b8383d8e92cee73d4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338466"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720527"
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout İşlevi
-Bu işlev, böylece içeriğini seçilen dosyayı veya dosyaları kullanıma alma önce durumu geri önceki bir kullanıma alma işlemi iptal eder. Kullanıma alma beri dosyada yapılan tüm değişiklikler kaybolur.
+Bu işlev önceki bir kullanıma alma işlemini geri alır ve böylece seçilen dosya veya dosyaların içeriğini kullanıma almadan önceki duruma geri yükler. Kullanıma alma işleminden bu yana dosyada yapılan tüm değişiklikler kayboldu.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,44 +38,44 @@ SCCRTN SccUncheckout (
 #### <a name="parameters"></a>Parametreler
  pvContext
 
-[in] Kaynak Denetimi Eklentisi bağlam yapısı.
+'ndaki Kaynak denetimi eklentisi bağlam yapısı.
 
- hWnd
+ lendiği
 
-[in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.
+'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
 
- nFiles
+ Nkarşıya
 
-[in] Belirtilen dosya sayısı `lpFileNames` dizisi.
+'ndaki @No__t_0 dizisinde belirtilen dosya sayısı.
 
- lpFileNames
+ lpDosyaAdı
 
-[in] Bir kullanıma almayı geri almak istediğiniz dosyaların tam yerel yol adları dizisi.
+'ndaki Bir kullanıma alma işlemini geri almak için gereken dosyaların tam nitelikli yerel yol adları dizisi.
 
  fOptions
 
-[in] Komut bayrakları (kullanılmaz).
+'ndaki Komut bayrakları (kullanılmıyor).
 
  pvOptions
 
-[in] Kaynak denetimi fişi özel seçenekleri.
+'ndaki Kaynak denetimi eklentisi özel seçenekleri.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Kullanıma almayı geri al başarılı oldu.|
+|SCC_OK|Kullanıma alma başarıyla geri alındı.|
 |SCC_E_FILENOTCONTROLLED|Seçili dosya kaynak kodu denetimi altında değil.|
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu. Bir yeniden deneme önerilir.|
-|SCC_E_NONSPECIFICERROR|Belirli olmayan hata oluştu. Geri alma kullanıma alma başarısız oldu.|
-|SCC_E_NOTCHECKEDOUT|Kullanıcının kullanıma alınmış dosyası yok.|
-|SCC_E_NOTAUTHORIZED|Kullanıcı bu işlemi gerçekleştirmek için izin verilmiyor.|
-|SCC_E_PROJNOTOPEN|Projeyi kaynak denetiminden açılmadı.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata. Kullanıma alma başarıyla geri alınamıyor.|
+|SCC_E_NOTCHECKEDOUT|Kullanıcının dosyası kullanıma alınmamış.|
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|
+|SCC_E_PROJNOTOPEN|Proje, kaynak denetiminden açılmamış.|
 |SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan önce iptal edildi.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlem sonrasında `SCC_STATUS_CHECKEDOUT` ve `SCC_STATUS_MODIFIED` bayrakları hem de işaretinin kaldırılması dosyaları kullanıma almayı geri al gerçekleştirildi.
+ Bu işlemden sonra, `SCC_STATUS_CHECKEDOUT` ve `SCC_STATUS_MODIFIED` bayrakları, geri alma işleminin gerçekleştirildiği dosyalar için temizlenir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

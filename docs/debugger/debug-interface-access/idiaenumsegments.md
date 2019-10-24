@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsegments | Microsoft Docs
+title: IDiaEnumSegments | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 255c55dff0dab0c7b36f5029de9e688db949a1fe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eff457d539317d2f8c7d77dfc85eb16063650c14
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833434"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744153"
 ---
 # <a name="idiaenumsegments"></a>IDiaEnumSegments
-Veri kaynağında bulunan çeşitli parçaları numaralandırır.
+Veri kaynağında bulunan çeşitli kesimleri numaralandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,26 +28,26 @@ Veri kaynağında bulunan çeşitli parçaları numaralandırır.
 IDiaEnumSegments : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
-Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDiaEnumSegments`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+Aşağıdaki tabloda `IDiaEnumSegments` yöntemleri gösterilmektedir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumSegments::get__NewEnum](../../debugger/debug-interface-access/idiaenumsegments-get-newenum.md)|Alır [IEnumVARIANT arabirimi](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) bu Numaralandırıcının sürümü.|
-|[IDiaEnumSegments::get_Count](../../debugger/debug-interface-access/idiaenumsegments-get-count.md)|Parça sayısını alır.|
-|[IDiaEnumSegments::Item](../../debugger/debug-interface-access/idiaenumsegments-item.md)|Bir segmenti yoluyla dizin alır.|
-|[IDiaEnumSegments::Next](../../debugger/debug-interface-access/idiaenumsegments-next.md)|Belirtilen bir numaralandırma sıralı segmentleri sayısını alır.|
-|[IDiaEnumSegments::Skip](../../debugger/debug-interface-access/idiaenumsegments-skip.md)|Bir numaralandırma sıralı segmentleri belirtilen sayıda atlar.|
-|[IDiaEnumSegments::Reset](../../debugger/debug-interface-access/idiaenumsegments-reset.md)|Bir numaralandırma sıralı başlangıç durumuna sıfırlar.|
-|[IDiaEnumSegments::Clone](../../debugger/debug-interface-access/idiaenumsegments-clone.md)|Geçerli Numaralandırıcı aynı numaralandırma duruma içeren bir numaralandırıcı oluşturur.|
+|[IDiaEnumSegments::get__NewEnum](../../debugger/debug-interface-access/idiaenumsegments-get-newenum.md)|Bu Numaralandırıcının [IEnumVARIANT arabirimi](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) sürümünü alır.|
+|[IDiaEnumSegments::get_Count](../../debugger/debug-interface-access/idiaenumsegments-get-count.md)|Segmentlerin sayısını alır.|
+|[IDiaEnumSegments::Item](../../debugger/debug-interface-access/idiaenumsegments-item.md)|Bir segmenti bir dizin aracılığıyla alır.|
+|[IDiaEnumSegments::Next](../../debugger/debug-interface-access/idiaenumsegments-next.md)|Sabit Listesi dizisinde belirtilen sayıda segment alır.|
+|[IDiaEnumSegments::Skip](../../debugger/debug-interface-access/idiaenumsegments-skip.md)|Bir numaralandırma dizisinde belirtilen sayıda parçayı atlar.|
+|[IDiaEnumSegments::Reset](../../debugger/debug-interface-access/idiaenumsegments-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
+|[IDiaEnumSegments::Clone](../../debugger/debug-interface-access/idiaenumsegments-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim çağırarak elde `QueryInterface` metodunda bir [Idiatable](../../debugger/debug-interface-access/idiatable.md) nesne. Ayrıntılar için örneğe bakın.
+Bir [IDiaTable](../../debugger/debug-interface-access/idiatable.md) nesnesi üzerinde `QueryInterface` yöntemini çağırarak bu arabirimi elde edin. Ayrıntılar için örneğe bakın.
 
 ## <a name="example"></a>Örnek
-Bu örnek nasıl alınacağını gösterir `IDiaEnumSections` arabiriminden bir tablo. Kesimleri kullanarak bir tam örnek için bkz [Idiasegment](../../debugger/debug-interface-access/idiasegment.md) arabirimi.
+Bu örnek, bir tablodan `IDiaEnumSections` arabiriminin nasıl alınacağını gösterir. Segmentleri kullanma hakkında daha ayrıntılı bir örnek için bkz. [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) arabirimi.
 
 ```C++
 void ShowSegments(IDiaTable *pTable, IDiaSession *pSession)
@@ -65,13 +65,13 @@ void ShowSegments(IDiaTable *pTable, IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: dia2.h
+Üstbilgi: dia2. h
 
-Kitaplık: diaguids.lib
+Kitaplık: diaguid. lib
 
-DLL: msdia80.dll
+DLL: Msdia80. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

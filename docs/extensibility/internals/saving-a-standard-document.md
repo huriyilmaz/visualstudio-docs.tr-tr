@@ -1,5 +1,5 @@
 ---
-title: Standart belge kaydetme | Microsoft Docs
+title: Standart bir belge kaydetme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,50 +12,50 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f46d63e9f1145711bd3a32f6fd24e7b61814922
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: df93813d339a45689845b82fe4f5a185301b6c74
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318671"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724092"
 ---
 # <a name="saving-a-standard-document"></a>Standart Belge Kaydetme
-Ortam, kaydetme, Farklı Kaydet ve Tümünü Kaydet komutları işler. Bir kullanıcı seçtiğinde **Kaydet**, **Kaydet**, veya **Tümünü Kaydet** gelen **dosya** menüsü ya da sonuçta çözümü kapatır bir  **Tümünü Kaydet**, aşağıdaki süreç gerçekleşir.
+Ortam Kaydet, farklı Kaydet ve Tümünü Kaydet komutlarını işler. Kullanıcı **Kaydet**, **farklı kaydet**veya **Dosya** menüsünden **Tümünü** Kaydet ' i seçtiğinde veya çözümü kapatdığında, bir **bütün kaydetme**işlemine neden olur.
 
- ![Standart Düzenleyici](../../extensibility/internals/media/public.gif "genel") kaydetme, Farklı Kaydet ve Tümünü Kaydet komut işleme için standart bir düzenleyici
+ ![Standart düzenleyici](../../extensibility/internals/media/public.gif "Ortak") Standart bir düzenleyici için Kaydet, farklı Kaydet ve tüm komut işlemesini Kaydet
 
- Bu işlem aşağıdaki adımları ayrıntılı olarak verilmiştir:
+ Bu işlem aşağıdaki adımlarda ayrıntılı olarak verilmiştir:
 
-1. Zaman **Kaydet** ve **Kaydet** ortamı kullanır, komutları seçili <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> etkin belge penceresini belirlemek için hizmet ve böylece hangi öğeler kaydedilmelidir. Etkin belge penceresini tanındıktan sonra ortam öğe tanımlayıcısı (öğe kimliği) ve hiyerarşi işaretçi çalıştırılan Belge tablosu belgede bulur. Daha fazla bilgi için [çalıştırılan Belge tablosu](../../extensibility/internals/running-document-table.md).
+1. **Kaydet** ve **farklı kaydet** komutları seçildiğinde, ortam, etkin belge penceresini ve bu nedenle hangi öğelerin kaydedilmesi gerektiğini belirlemek için <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> hizmetini kullanır. Etkin belge penceresi bilindiğinde ortam, çalışan belge tablosundaki belge için hiyerarşi işaretçisini ve öğe tanımlayıcısını (ItemId) bulur. Daha fazla bilgi için bkz. [çalışma belge tablosu](../../extensibility/internals/running-document-table.md).
 
-    Zaman **Tümünü Kaydet** komutu seçilene, ortam bilgileri kaydetmek için tüm öğelerin listesini derlemek için çalışan belge tablosunda kullanır.
+    **Tümünü Kaydet** komutu seçildiğinde, ortam, kaydedilecek tüm öğelerin listesini derlemek için çalışan belge tablosundaki bilgileri kullanır.
 
-2. Çözüm aldığında bir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> çağrı, seçilen öğeleri dizi aracılığıyla yinelenir (diğer bir deyişle, tarafından kullanıma sunulan birden çok seçimin <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> hizmeti).
+2. Çözüm bir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> çağrısı aldığında, seçilen öğeler kümesi (yani, <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> hizmeti tarafından sunulan çoklu seçimler) boyunca yinelenir.
 
-3. Seçimdeki her bir öğede çözüm çağırmak için hiyerarşi işaretçi kullanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> belirlemek için yöntemi olup olmadığını **Kaydet** menü komutu etkinleştirilmelidir. Kirli, bir veya daha fazla öğe varsa sonra **Kaydet** komut etkin. Hiyerarşi Standart Düzenleyici kullanıyorsa, ardından sorgulama hiyerarşi temsilcileri Düzenleyicisi durumuna çağırarak kirli <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A> yöntemi.
+3. Seçimdeki her öğe için çözüm, **Kaydet** menü komutunun etkinleştirilip etkinleştirilmeyeceğini anlamak üzere <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> yöntemini çağırmak için hiyerarşi işaretçisini kullanır. Bir veya daha fazla öğe kirli olursa **Kaydet** komutu etkinleştirilir. Hiyerarşi standart bir düzenleyici kullanıyorsa, hiyerarşi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A> yöntemini çağırarak, bu durumda, durumu düzenleyiciye için kirli durum sorgulama temsilcileri sağlar.
 
-4. Kirli her seçili öğe üzerinde çözüm çağırmak için hiyerarşi işaretçi kullanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> uygun hiyerarşilerindeki yöntemi.
+4. Kirli olan her seçili öğe için, çözüm uygun hiyerarşilerde <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> yöntemini çağırmak için hiyerarşi işaretçisini kullanır.
 
-    Belgeyi düzenlemek için standart bir düzenleyici kullanmak hiyerarşi için yaygın bir durumdur. Bu düzenleyici desteklemesi için bu durumda, belge verileri nesne <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> arabirimi. Alma bağlı <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> yöntemi çağrısı, proje bildirin belge çağırarak kaydediliyor Düzenleyicisi <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.SaveDocData%2A> belge veri nesnesi üzerinde yöntemi. Düzenleyici işlemek için ortamı izin verebilirsiniz **Kaydet** çağırarak iletişim kutusu, `Query Service` için <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> arabirimi. Bu bir işaretçi döndürür <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> arabirimi. Düzenleyici ardından çağırmalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A> yöntemi, bir işaretçi düzenleyicinin geçirme <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> uygulama yoluyla `pPersistFile` parametresi. Ortamı daha sonra kaydetme işlemi gerçekleştirir ve sağlar **Kaydet** iletişim kutusu Düzenleyicisi için. Ortamı daha sonra geri Düzenleyicisi ile çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>.
+    Hiyerarşinin belgeyi düzenlemek için standart bir düzenleyici kullanması yaygındır. Bu durumda, Bu düzenleyicinin belge veri nesnesi <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> arabirimini desteklemelidir. @No__t_0 yöntemi çağrısını aldıktan sonra, proje, belge verileri nesnesinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.SaveDocData%2A> metodunu çağırarak düzenleyiciyi belgenin kaydedildiğini bilgilendirmelidir. Düzenleyici, <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> arabirimi için `Query Service` çağırarak, ortamın **farklı kaydet** iletişim kutusunu işlemesine izin verebilir. Bu, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> arabirimine bir işaretçi döndürür. Daha sonra düzenleyici, `pPersistFile` parametresi aracılığıyla düzenleyicinin <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> uygulamasına bir işaretçi geçirerek <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A> yöntemini çağırmalıdır. Daha sonra ortam, Kaydet işlemini gerçekleştirir ve düzenleyici için **farklı kaydet** iletişim kutusunu sağlar. Daha sonra ortam, <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> ile düzenleyiciye geri çağrı yapılır.
 
-5. Kullanıcı adsız bir belge (diğer bir deyişle, daha önce kaydedilmemiş bir belge) kaydetmeye çalışıyor, gerçekten Farklı Kaydet komutu gerçekleştirilir.
+5. Kullanıcı adsız bir belgeyi (yani, daha önce kaydedilmemiş bir belgeyi) kaydetmeye çalışıyorsa, aslında farklı Kaydet komutu gerçekleştirilir.
 
-6. Farklı Kaydet komutu için kullanıcıdan bir dosya adı için Farklı Kaydet iletişim kutusunda, ortam görüntüler.
+6. Farklı Kaydet komutu için, ortamda farklı Kaydet iletişim kutusu görüntülenir ve kullanıcıdan bir dosya adı istenir.
 
-    Dosya adı değişmişse sonra bilgileri çağırarak önbelleğe belge çerçeve güncelleştirmek için hiyerarşi sorumludur <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.SetProperty%2A>(VSFPROPID_MkDocument).
+    Dosyanın adı değiştiyse, hiyerarşi <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.SetProperty%2A> (VSFPROPID_MkDocument) çağırarak belge çerçevesinin önbelleğe alınmış bilgilerini güncelleştirmekten sorumludur.
 
-   Varsa **Kaydet** komut belgesinin konumunu taşır ve hiyerarşi için belge konumunu duyarlıdır ve hiyerarşideki başka bir hiyerarşide açık belge penceresi sahipliğini teslim etme için sorumludur. Proje dosyası proje ile ilgili bir iç veya dış dosya (çeşitli dosya) olup olmadığını izler, örneğin, bu oluşur. Çeşitli dosyalar projeye bir dosya sahipliğini değiştirmek için aşağıdaki yordamı kullanın.
+   **Farklı kaydet** komutu belgenin konumunu taşıdıkça ve hiyerarşi belge konumuna duyarlıysa, bu durumda açık belge penceresinin sahipliğini başka bir hiyerarşiye teslim etmek için hiyerarşi sorumludur. Örneğin, proje, dosyanın proje ile bağlantılı olarak bir iç veya dış dosya (çeşitli dosya) olup olmadığını izliyorsa bu durum oluşur. Bir dosyanın sahipliğini çeşitli dosyalar projesine değiştirmek için aşağıdaki yordamı kullanın.
 
 ## <a name="changing-file-ownership"></a>Dosya sahipliğini değiştirme
 
-#### <a name="to-change-file-ownership-to-the-miscellaneous-files-project"></a>Çeşitli dosyalar projeleri için dosya sahipliğini değiştirmek için
+#### <a name="to-change-file-ownership-to-the-miscellaneous-files-project"></a>Dosya sahipliğini çeşitli dosyalar projesiyle değiştirmek için
 
-1. Hizmet için sorgu <xref:Microsoft.VisualStudio.Shell.Interop.SVsExternalFilesManager> arabirimi.
+1. @No__t_0 arabirimi için sorgu hizmeti.
 
-     Bir işaretçi <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2> döndürülür.
+     @No__t_0 bir işaretçi döndürülür.
 
-2. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A> (`pszMkDocumentNew`, `punkWindowFrame`) yeni hiyerarşiye belge aktarmak için yöntemi. Farklı Kaydet komutu yürüttükten hiyerarşi bu yöntemi çağırır.
+2. Belgeyi yeni hiyerarşiye aktarmak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A> (`pszMkDocumentNew`, `punkWindowFrame`) metodunu çağırın. Farklı Kaydet komutunu gerçekleştiren hiyerarşi bu yöntemi çağırır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - [Proje Öğelerini Açma ve Kaydetme](../../extensibility/internals/opening-and-saving-project-items.md)

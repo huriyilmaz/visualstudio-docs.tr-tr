@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Betik belgelerini görüntüleme | Microsoft Docs'
+title: 'Nasıl yapılır: betik belgelerini görüntüleme | Microsoft Docs'
 ms.date: 01/08/2019
 ms.topic: conceptual
 dev_langs:
@@ -15,35 +15,35 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 821e3bc4abc379f0ed7fc1343867f88fefe54b17
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7696122cc9f0d431f310b8d6efb10819af995823
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906092"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731860"
 ---
-# <a name="how-to-view-script-documents-javascript"></a>Nasıl yapılır: Betik belgelerini görüntüleme (JavaScript)
+# <a name="how-to-view-script-documents-javascript"></a>Nasıl yapılır: betik belgelerini görüntüleme (JavaScript)
 
-Sunucu tarafı komut dosyası Çözüm Gezgini'nde görünür. Yalnızca hata ayıklama modunda veya kesme modunda olduğunda istemci tarafı betiklerinin görülebilir. İstemci tarafı betiklerinin görünür **betik belgelerini** düğümü.
+Sunucu tarafı betik dosyaları Çözüm Gezgini görünür. İstemci tarafı betik dosyaları yalnızca hata ayıklama modundayken veya kesme modundayken görülebilir. İstemci tarafı betik dosyaları, **betik belgeleri** düğümünde görünür.
 
 > [!NOTE]
-> Önceki [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)], sunucu tarafı betiğinden oluşturulan istemci tarafı komut dosyaları betik Gezgini penceresinde görüntülenmektedir.
+> @No__t_0 ' den önceki, sunucu tarafı komut dosyasından oluşturulan istemci tarafı betik dosyaları komut dosyası Gezgini penceresinde göründü.
 
-### <a name="to-view-a-server-side-script-document"></a>Bir sunucu tarafı komut dosyası belgesini görüntülemek için
+### <a name="to-view-a-server-side-script-document"></a>Sunucu tarafı betik belgesini görüntülemek için
 
-1. İçinde **Çözüm Gezgini**açın  **\<Web sitesi Pathname >** düğümü.
+1. **Çözüm Gezgini**' de, **\<Website PathName >** düğümünü açın.
 
-2. Görüntülemek istediğiniz komut dosyasına çift tıklayın.
+2. Görüntülemek istediğiniz betik dosyasına çift tıklayın.
 
-     Sunucu tarafı komut dosyası, bir kaynak penceresinde açılır.
+     Sunucu tarafı betik dosyası bir kaynak penceresinde açılır.
 
-### <a name="to-view-a-client-side-script-document"></a>İstemci tarafı komut dosyası belgeyi görüntülemek için
+### <a name="to-view-a-client-side-script-document"></a>İstemci tarafı betik belgesini görüntülemek için
 
-1. İçinde **Çözüm Gezgini**açın **betik belgelerini** düğümü.
+1. **Çözüm Gezgini**, **komut dosyası belgeleri** düğümünü açın.
 
-2. Görüntülemek istediğiniz komut dosyasına çift tıklayın.
+2. Görüntülemek istediğiniz betik dosyasına çift tıklayın.
 
-     İstemci tarafı komut dosyası, bir kaynak penceresinde açılır.
+     İstemci tarafı betik dosyası bir kaynak penceresinde açılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklayıcıda Verileri Görüntüleme](../debugger/viewing-data-in-the-debugger.md)

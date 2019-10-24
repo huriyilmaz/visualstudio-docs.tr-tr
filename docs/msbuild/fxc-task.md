@@ -1,5 +1,5 @@
 ---
-title: FXC görev | Microsoft Docs
+title: FXC görevi | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -11,53 +11,53 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- MSBuild (Visual C++), FXC task
-- FXC task (MSBuild (Visual C++))
+- MSBuild (C++), FXC task
+- FXC task (MSBuild (C++))
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - multiple
-ms.openlocfilehash: 65819f1625477effab024055828301b26ab5804a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 766a3dc35d72e21fc0aca9436ebff25dc3193a2e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931476"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747332"
 ---
 # <a name="fxc-task"></a>FXC görevi
 
-HLSL gölgelendirici derleyicileri, yapı işleminde kullanın.
+Yapı sürecinde HLSL gölgelendirici derleyicileri kullanın.
 
 ## <a name="parameters"></a>Parametreler
 
-Parametreleri aşağıdaki tabloda açıklanmıştır **FXC** görev.
+Aşağıdaki tabloda **fxc** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**AdditionalIncludeDirectories**|İsteğe bağlı **string []** parametresi.<br/><br/>Ekleme yoluna eklenecek bir veya daha fazla dizin belirtir; birden fazla ise noktalı virgülle ayırın.<br/><br/>Kullanım `/I[path]`.|
+|**AdditionalIncludeDirectories**|İsteğe bağlı **dize []** parametresi.<br/><br/>Ekleme yoluna eklenecek bir veya daha fazla dizin belirtir; birden fazlaysa noktalı virgülle ayırın.<br/><br/>@No__t_0 kullanın.|
 |**AdditionalOptions**|İsteğe bağlı **dize** parametresi.|
-|**AllResourcesBound**|İsteğe bağlı **bool** parametresi.<br/><br/>Derleyici, gölgelendiricinin tüm kaynaklar sınırlı ve iyi durumda olduğundan gölgelendirici yürütme süresi boyunca varsayar. Gölgelendirici modeli 5.1 ve üzeri kullanılabilir.<br/><br/>Kullanım `/all_resources_bound`.|
-|**AssemblerOutput**|İsteğe bağlı **dize** parametresi.<br/><br/>Assembly dili çıkış dosyasının içeriğini belirtir.<br/><br/>Kullanım `/Fc, /Fx`.<br/><br/>**NoListing**<br/>**AssemblyCode**, kullanın `Fc`.<br/>**AssemblyCodeAndHex**, kullanın `Fx`.|
-|**AssemblerOutputFile**|İsteğe bağlı **dize** parametresi.<br/><br/>Derleme kodu liste dosyasının adını belirtir.|
-|**CompileD2DCustomEffect**|İsteğe bağlı **bool** parametresi.<br/><br/>Piksel gölgelendiricileri içeren bir Direct2D özel efekti derleyin. Olmayan bir köşe için kullanabilir veya özel efekti.|
-|**ConsumeExportFile**|İsteğe bağlı **dize** parametresi.|
-|**DisableOptimizations**|İsteğe bağlı **bool** parametresi.<br/><br/>İyileştirmeleri devre dışı bırakın.<br/><br/>`/Od` gelir `/Gfp` çıkış aynı olmasa da `/Od /Gfp`.|
-|**EnableDebuggingInformation**|İsteğe bağlı **bool** parametresi.<br/><br/>Hata ayıklamayı etkinleştir bilgileri.|
-|**EnableUnboundedDescriptorTables**|İsteğe bağlı **bool** parametresi.<br/><br/>Derleyici, gölgelendiricinin Sınırlanmamış aralığa sahip bir kaynak dizisi bildirimi içerebileceği bildirin. Gölgelendirici modeli 5.1 ve üzeri kullanılabilir.<br/><br/>Kullanım `/enable_unbounded_descriptor_tables`.|
-|**EntryPointName**|İsteğe bağlı **dize** parametresi.<br/><br/>Gölgelendirici için giriş noktası adını belirtir.<br/><br/>Kullanım `/E[name]`.|
+|**Allresourcesbağlanmadı**|İsteğe bağlı **bool** parametresi.<br/><br/>Derleyici, bir gölgelendiricinin başvurabileceğinizden tüm kaynakların bağlandığını ve gölgelendirici yürütme süresi boyunca iyi durumda olduğunu varsayacaktır. Gölgelendirici modeli 5,1 ve üzeri için kullanılabilir.<br/><br/>@No__t_0 kullanın.|
+|**Lerçıktıyı birleştirin**|İsteğe bağlı **dize** parametresi.<br/><br/>Derleme dili çıkış dosyasının içeriğini belirtir.<br/><br/>@No__t_0 kullanın.<br/><br/>**NoList**<br/>**Assemblycode**, `Fc` kullanın.<br/>**Assemblycodeandhex**, `Fx` kullanın.|
+|**Lerçıktıdosyası**|İsteğe bağlı **dize** parametresi.<br/><br/>Derleme kodu liste dosyası için dosya adını belirtir.|
+|**CompileD2DCustomEffect**|İsteğe bağlı **bool** parametresi.<br/><br/>Piksel gölgelendiricileri içeren bir Direct2D özel efekti derleyin. Köşe veya işlem özel efekti için kullanmayın.|
+|**Tüketimeexportfile**|İsteğe bağlı **dize** parametresi.|
+|**Disableiyileştirmeleri**|İsteğe bağlı **bool** parametresi.<br/><br/>İyileştirmeleri devre dışı bırakın.<br/><br/>`/Od`, çıktı `/Od /Gfp` ile aynı olamaz `/Gfp` anlamına gelir.|
+|**EnableDebuggingInformation**|İsteğe bağlı **bool** parametresi.<br/><br/>Hata ayıklama bilgilerini etkinleştirin.|
+|**EnableUnboundedDescriptorTables**|İsteğe bağlı **bool** parametresi.<br/><br/>Bir gölgelendiriciye, sınırlandırılmamış aralığa sahip bir kaynak dizisinin bildirimini içerdiğini bildirin. Gölgelendirici modeli 5,1 ve üzeri için kullanılabilir.<br/><br/>@No__t_0 kullanın.|
+|**EntryPointName**|İsteğe bağlı **dize** parametresi.<br/><br/>Gölgelendirici için giriş noktasının adını belirtir.<br/><br/>@No__t_0 kullanın.|
 |**GenerateExportFile**|İsteğe bağlı **dize** parametresi.|
 |**GenerateExportShaderProfile**|İsteğe bağlı **dize** parametresi.|
-|**HeaderFileOutput**|İsteğe bağlı **dize** parametresi.<br/><br/>Nesne kodunu içeren üst bilgi dosyasının adını belirtir.<br/><br/>Kullanım `/Fh [name]`.|
-|**ObjectFileOutput**|İsteğe bağlı **dize** parametresi.<br/><br/>Nesne dosyası adını belirtir.<br/><br/>Kullanım `/Fo [name]`.|
-|**PreprocessorDefinitions**|İsteğe bağlı **string []** parametresi.<br/><br/>Kaynak dosyanız için ön işleme sembollerini tanımlar.|
-|**SetRootSignature**|İsteğe bağlı **dize** parametresi.<br/><br/>Gölgelendirici bytecode'una kök imzasını iliştirin. Gölgelendirici modeli 5.0 ve üzeri kullanılabilir.<br/><br/>Kullanım `/setrootsignature`.|
-|**ShaderModel**|İsteğe bağlı **dize** parametresi.<br/><br/>Gölgelendirici modelini belirtir. Bazı gölgelendirici türleri yalnızca yeni gölgelendirici modelleriyle birlikte kullanılabilir.<br/><br/>Kullanım `/T [type]_[model]`.|
-|**ShaderType**|İsteğe bağlı **dize** parametresi.<br/><br/>Gölgelendirici türünü belirtir.<br/><br/>Kullanım `/T [type]_[model]`.<br/><br/>**Etkili**, kullanın `fx`.<br/>**Köşe**, kullanın `vs`.<br/>**Piksel**, kullanın `ps`.<br/>**Geometri**, kullanın `gs`.<br/>**Kabuk**, kullanın `hs`.<br/>**Etki alanı**, kullanın `ds`.<br/>**İşlem**, kullanın `cs`.<br/>**Kitaplık**, kullanın `lib`.<br/>**RootSignature**, kök imza nesnesi oluştur.|
-|**Kaynak**|Gerekli **Itaskıtem** parametresi.|
-|**SuppressStartupBanner**|İsteğe bağlı **bool** parametresi.<br/><br/>Başlangıç başlığının ve bilgi iletilerinin görüntülenmesini bastırır.<br/><br/>Kullanım `/nologo`.|
+|**HeaderFileOutput**|İsteğe bağlı **dize** parametresi.<br/><br/>Nesne kodu içeren üstbilgi dosyası için bir ad belirtir.<br/><br/>@No__t_0 kullanın.|
+|**ObjectFileOutput**|İsteğe bağlı **dize** parametresi.<br/><br/>Nesne dosyası için bir ad belirtir.<br/><br/>@No__t_0 kullanın.|
+|**PreprocessorDefinitions**|İsteğe bağlı **dize []** parametresi.<br/><br/>Kaynak dosyanız için ön işleme sembollerini tanımlar.|
+|**SetRootSignature**|İsteğe bağlı **dize** parametresi.<br/><br/>Gölgelendirici bytecode 'a kök imzası iliştirin. Gölgelendirici modeli 5,0 ve üzeri için kullanılabilir.<br/><br/>@No__t_0 kullanın.|
+|**ShaderModel**|İsteğe bağlı **dize** parametresi.<br/><br/>Gölgelendirici modelini belirtir. Bazı gölgelendirici türleri yalnızca son gölgelendirici modelleriyle kullanılabilir.<br/><br/>@No__t_0 kullanın.|
+|**ShaderType**|İsteğe bağlı **dize** parametresi.<br/><br/>Gölgelendirici türünü belirtir.<br/><br/>@No__t_0 kullanın.<br/><br/>**Efekt**, `fx` kullanın.<br/>**Köşe**, `vs` kullanın.<br/>**Piksel**, `ps` kullanın.<br/>**Geometri**, `gs` kullanın.<br/>**Hull**, `hs` kullanın.<br/>**Etki alanı**`ds` kullanın.<br/>**İşlem**, `cs` kullanın.<br/>**Kitaplığı**`lib` kullanın.<br/>**Rootsignature**, kök imza nesnesi oluştur.|
+|**Kaynaktaki**|Gerekli **ıtaskitem** parametresi.|
+|**SuppressStartupBanner**|İsteğe bağlı **bool** parametresi.<br/><br/>Başlangıç başlığının ve bilgi iletisinin görüntülenmesini önler.<br/><br/>@No__t_0 kullanın.|
 |**TrackerLogDirectory**|İsteğe bağlı **dize** parametresi.|
-|**TreatWarningAsError**|İsteğe bağlı **bool** parametresi.<br/><br/>Tüm Derleyici uyarılarını hata olarak değerlendirir.<br/><br/>Yeni bir proje için en iyi yöntem olabilir `/WX` tüm derlemelerde; tüm uyarıların çözümlenmesi en az sayıda olası bulunur zor kod kusurlarını sağlayacaktır.|
-|**Değişkenadı**|İsteğe bağlı **dize** parametresi.<br/><br/>Üstbilgi dosyasında değişken adı için bir ad belirtir.<br/><br/>Kullanım `/Vn [name]`.|
+|**TreatWarningAsError**|İsteğe bağlı **bool** parametresi.<br/><br/>Tüm derleyici uyarılarını hata olarak değerlendirir.<br/><br/>Yeni bir proje için tüm derlemelerde `/WX` kullanılması en iyi yöntem olabilir; Tüm uyarıların çözümlenmesi, en az olası bulma kod kusurlarını güvence altına alacak.|
+|**VariableName**|İsteğe bağlı **dize** parametresi.<br/><br/>Üstbilgi dosyasındaki değişken adı için bir ad belirtir.<br/><br/>@No__t_0 kullanın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

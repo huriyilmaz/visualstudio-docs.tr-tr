@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreamdata | Microsoft Docs
+title: IDiaEnumDebugStreamData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2865dbf3da103610407cd33eeeaf934caba3c7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f5929f6f36c183d3a580ab605d313695cb584664
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838343"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744846"
 ---
 # <a name="idiaenumdebugstreamdata"></a>IDiaEnumDebugStreamData
-Hata ayıklama veri akışı kayıtlara erişim sağlar.
+Hata ayıklama veri akışındaki kayıtlara erişim sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,28 +28,28 @@ Hata ayıklama veri akışı kayıtlara erişim sağlar.
 IDiaEnumDebugStreamData : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
-Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDiaEnumDebugStreamData`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+Aşağıdaki tabloda `IDiaEnumDebugStreamData` yöntemleri gösterilmektedir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumDebugStreamData::get__NewEnum](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-newenum.md)|Alır [IEnumVARIANT arabirimi](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) bu Numaralandırıcının sürümü.|
-|[IDiaEnumDebugStreamData::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)|Hata ayıklama veri akışında kayıt sayısını alır.|
-|[IDiaEnumDebugStreamData::get_name](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-name.md)|Hata ayıklama veri akışını adını alır.|
+|[IDiaEnumDebugStreamData::get__NewEnum](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-newenum.md)|Bu Numaralandırıcının [IEnumVARIANT arabirimi](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) sürümünü alır.|
+|[IDiaEnumDebugStreamData::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)|Hata ayıklama veri akışındaki kayıt sayısını alır.|
+|[IDiaEnumDebugStreamData::get_name](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-name.md)|Hata ayıklama veri akışının adını alır.|
 |[IDiaEnumDebugStreamData::Item](../../debugger/debug-interface-access/idiaenumdebugstreamdata-item.md)|Belirtilen kaydı alır.|
-|[IDiaEnumDebugStreamData::Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)|Belirtilen kayıt sayısı numaralandırılmış dizisinden alır.|
-|[IDiaEnumDebugStreamData::Skip](../../debugger/debug-interface-access/idiaenumdebugstreamdata-skip.md)|Kayıtları numaralandırılmış bir dizisinde belirtilen sayıda atlar.|
-|[IDiaEnumDebugStreamData::Reset](../../debugger/debug-interface-access/idiaenumdebugstreamdata-reset.md)|Numaralandırılan sıralı başlangıç durumuna sıfırlar.|
-|[IDiaEnumDebugStreamData::Clone](../../debugger/debug-interface-access/idiaenumdebugstreamdata-clone.md)|Geçerli Numaralandırıcı aynı numaralandırılmış dizi içeren bir numaralandırıcı oluşturur.|
+|[IDiaEnumDebugStreamData::Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)|Numaralandırılmış dizideki belirtilen sayıda kaydı alır.|
+|[IDiaEnumDebugStreamData::Skip](../../debugger/debug-interface-access/idiaenumdebugstreamdata-skip.md)|Numaralandırılmış bir dizide belirtilen sayıda kaydı atlar.|
+|[IDiaEnumDebugStreamData::Reset](../../debugger/debug-interface-access/idiaenumdebugstreamdata-reset.md)|Numaralandırılmış sırayı başlangıca sıfırlar.|
+|[IDiaEnumDebugStreamData::Clone](../../debugger/debug-interface-access/idiaenumdebugstreamdata-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırılmış sırayı içeren bir Numaralandırıcı oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu arabirim, hata ayıklama veri akışında kayıt akışını temsil eder. Boyutu ve her kaydı yorumu kaydı geldiği veri akışını bağımlı. Bu arabirim, etkili bir şekilde sembol dosyası ham veri baytları erişim sağlar.
+Bu arabirim bir hata ayıklama veri akışındaki kayıt akışını temsil eder. Her kaydın boyutu ve yorumu, kaydın geldiği veri akışına bağımlıdır. Bu arabirim, sembol dosyasındaki ham veri baytlarına etkin bir şekilde erişim sağlar.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Çağrı [Idiaenumdebugstreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md) veya [Idiaenumdebugstreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md) edinmek için bir `IDiaEnumDebugStreamData` nesne.
+@No__t_2 nesnesini almak için [IDiaEnumDebugStreams:: Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md) veya [IDiaEnumDebugStreams:: Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md) yöntemlerini çağırın.
 
 ## <a name="example"></a>Örnek
- Bu örnek, bir tek veri akışını ve kayıtlarını nasıl gösterir.
+ Bu örnekte, tek bir veri akışına ve kayıtlarına nasıl erişebileceğiniz gösterilmektedir.
 
 ```C++
 void PrintStreamData(IDiaEnumDebugStreamData* pStream)
@@ -103,13 +103,13 @@ void PrintStreamData(IDiaEnumDebugStreamData* pStream)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: dia2.h
+Üstbilgi: dia2. h
 
-Kitaplık: diaguids.lib
+Kitaplık: diaguid. lib
 
-DLL: msdia80.dll
+DLL: Msdia80. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)
 - [IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)

@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 776ee35e57b62463d47fc6f7fa26133f507f16f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1de2d6c9700dcb7b1106c3693d855bb1d8ae2cfa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62854441"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738506"
 ---
-# <a name="thunkordinal"></a>THUNK_ORDINAL
+# <a name="thunk_ordinal"></a>THUNK_ORDINAL
 Dönüştürücü türlerini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -38,27 +38,27 @@ typedef enum THUNK_ORDINAL {
 } THUNK_ORDINAL;
 ```
 
-## <a name="elements"></a>Öğeleri
+## <a name="elements"></a>Öğeler
 THUNK_ORDINAL_NOTYPE standart dönüştürücü.
 
-THUNK_ORDINAL_ADJUSTOR A `this` adjustor dönüştürücü.
+THUNK_ORDINAL_ADJUSTOR `this` bir dönüştürücü Dönüştürücüsü.
 
 THUNK_ORDINAL_VCALL sanal çağrı dönüştürücü.
 
-THUNK_ORDINAL_PCODE P-code dönüştürücü.
+THUNK_ORDINAL_PCODE P-kod dönüştürücü.
 
-THUNK_ORDINAL_LOAD gecikme yükü dönüştürücü.
+THUNK_ORDINAL_LOAD gecikme yükleme Dönüştürücüsü.
 
-THUNK_ORDINAL_TRAMP_INCREMENTAL artımlı trampoline dönüştürücü (trampoline dönüştürücü çağrıları bir bellek alanından Sıçrama için kullanılır).
+THUNK_ORDINAL_TRAMP_INCREMENTAL artımlı trampoline dönüştürücü (bir trampoline dönüştürücü, bir bellek alanından diğerine yapılan çağrıları sıçramalar için kullanılır).
 
 THUNK_ORDINAL_TRAMP_BRANCHISLAND dal noktası trampoline dönüştürücü.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu sabit listesi değerleri çağrısından döndürülen [Idiasymbol::get_thunkordinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) yöntemi.
+Bu Numaralandırmadaki değerler, [IDiaSymbol:: get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) yöntemine yapılan çağrıdan döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: cvconst.h
+Üst bilgi: cvconst. h
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)

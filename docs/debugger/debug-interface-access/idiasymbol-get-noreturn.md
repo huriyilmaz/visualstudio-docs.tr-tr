@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_noreturn | Microsoft Docs
+title: 'IDiaSymbol:: get_noReturn | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0857939289091d22aaafb5dc5bb009d4af0e00bb
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 68a1be922df32de2100c22a15b1656b451a603ef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830287"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739730"
 ---
-# <a name="idiasymbolgetnoreturn"></a>IDiaSymbol::get_noReturn
-İşlevi ile hiçbir zaman döndüren olarak işaretlenmiş olup olmadığını belirten bir bayrak alır [noreturn](/cpp/cpp/noreturn) özniteliği.
+# <a name="idiasymbolget_noreturn"></a>IDiaSymbol::get_noReturn
+İşlevin [noreturn](/cpp/cpp/noreturn) özniteliğiyle hiçbir şekilde döndürülmediği olarak işaretlenip işaretlenmediğini belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,21 +33,21 @@ HRESULT get_noReturn(
 #### <a name="parameters"></a>Parametreler
  pFlag
 
-[out] Döndürür `TRUE` işlevi ile hiçbir zaman döndüren olarak bildirilmiş ise `noreturn` özniteliği; Aksi halde döndürür `FALSE`.
+dışı İşlev `noreturn` özniteliğiyle hiçbir şekilde döndürülmemişse `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [noreturn](/cpp/cpp/noreturn)

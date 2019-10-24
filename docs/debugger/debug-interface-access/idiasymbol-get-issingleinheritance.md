@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isSingleInheritance | Microsoft Docs
+title: 'IDiaSymbol:: get_isSingleInheritance | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -8,15 +8,15 @@ ms.assetid: 46cde656-059b-4c20-9476-3ca68ccc9912
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f8b245879a6b574c3f82b12d14b4fab637c2ecd7
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 96a8ce072fc57dc236dd2025b8ea3c9c5a4b9b79
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836303"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740065"
 ---
-# <a name="idiasymbolgetissingleinheritance"></a>IDiaSymbol::get_isSingleInheritance
-Belirtir olup olmadığını `this` işaretçi tek devralma ile veri üyesine işaret eder.
+# <a name="idiasymbolget_issingleinheritance"></a>IDiaSymbol::get_isSingleInheritance
+@No__t_0 işaretçisinin tek devralma ile veri üyesine işaret ettiğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,10 +28,10 @@ HRESULT get_isSingleInheritance(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir işaretçi bir `BOOL` belirtir olup olmadığını `this` işaretçi tek devralma ile veri üyesine işaret eder.
+dışı @No__t_1 işaretçisinin tek devralma ile bir veri üyesine işaret ettiğini belirten `BOOL` işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

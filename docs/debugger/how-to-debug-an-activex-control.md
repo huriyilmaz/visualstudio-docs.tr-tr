@@ -24,23 +24,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1d02cb4d581a7234ad2dd950fa51f46a5d128b2
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 75abf76516d3827a748e1b896d4c2e8c93bb34da
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211089"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733877"
 ---
-# <a name="how-to-debug-an-activex-control"></a>Nasıl yapılır: ActiveX Denetiminde Hata Ayıklama
+# <a name="how-to-debug-an-activex-control"></a>Nasıl Yapılır: ActiveX Denetiminde Hata Ayıklama
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden Içeri ve dışarı aktarma ayarları ' nı seçin. Daha fazla bilgi için [ayarlarına](../ide/environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden Içeri ve dışarı aktarma ayarları ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
 
 ActiveX denetimi hata ayıklaması yapmak için denetimin içinde çalışacağı bir kapsayıcı (yürütülebilir) belirtmeniz gerekir.
 
 ## <a name="to-specify-a-container-for-the-debug-session"></a>Hata ayıklama oturumu için bir kapsayıcı belirtmek için
 
-1. Çözüm Gezgini'nde projeyi seçin.
+1. Çözüm Gezgini, projeyi seçin.
 
 2. **Görünüm** menüsünde **Özellik sayfaları**' nı seçin.
 
@@ -50,13 +50,13 @@ ActiveX denetimi hata ayıklaması yapmak için denetimin içinde çalışacağ�
 
 5. Kapsayıcının yol adını belirtin. Örneğin, C:\Program Files\Explorer\IEXPLORE. EXE.
 
-6. Kapsayıcı olarak Internet Explorer 'ı belirtirseniz ve etkin masaüstü kullanıyorsanız, **komut bağımsız değişkenleri** kutusuna yazın `/new` .
+6. Kapsayıcı olarak Internet Explorer 'ı belirtirseniz ve etkin masaüstü kullanıyorsanız, **komut bağımsız değişkenleri** kutusuna `/new` yazın.
 
-7. **Tamam**'ı tıklatın.
+7. **Tamam**'a tıklayın.
 
      **Proje özellik sayfaları** iletişim kutusunda bir kapsayıcı belirtmezseniz, hata ayıklamaya başladığınızda kapsayıcıyı belirtebilirsiniz. Hata ayıklamayı başlatmak için bir yürütme komutu seçtiğinizde, [hata ayıklama oturumu Için yürütülebilir Iletişim kutusu](../debugger/executable-for-debugging-session-dialog-box.md) görüntülenir. İletişim kutusunda kapsayıcının yol adını belirtin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ActiveX Denetimleri](/cpp/mfc/activex-controls)
 - [Test Kapsayıcısı ile Özellikleri ve Olayları Test Etme](/cpp/mfc/testing-properties-and-events-with-test-container)

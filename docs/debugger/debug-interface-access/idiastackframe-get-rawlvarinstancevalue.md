@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_rawlvarınstancevalue | Microsoft Docs
+title: 'IDiaStackFrame:: get_rawLVarInstanceValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8ad236307360a96f64999313764424305980fc9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0b1118517988f6a790cd4f6732eba3bc8a9fc25a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838125"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741628"
 ---
-# <a name="idiastackframegetrawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
-Bu yöntem, ham bayt olarak belirlenen yerel değişkenin değerini alır.
+# <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
+Bu yöntem belirtilen yerel değişkenin değerini ham bayt olarak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,22 +36,22 @@ HRESULT get_rawLVarInstanceValue(
 #### <a name="parameters"></a>Parametreler
  `pInstance`
 
-[in] Bir `IDiaLVarInstance` değerini almak için yerel değişken bir örneğini temsil eden nesne.
+'ndaki Değerini almak için bir yerel değişken örneğini temsil eden bir `IDiaLVarInstance` nesnesi.
 
  `cbDataMax`
 
-[in] Arabellekteki bayt sayısı tarafından işaret edilen `pbData`. Bu, en fazla 8 bayt olabilir (`sizeof(ULONGLONG)`).
+'ndaki Arabellekteki `pbData` tarafından işaret edilen en fazla bayt sayısı. Bu en fazla 8 bayt (`sizeof(ULONGLONG)`) olabilir.
 
  `pcbData`
 
-[out] Gerçek arabellekteki depolanan bayt sayısını döndürür.
+dışı Arabellekte depolanan gerçek bayt sayısını döndürür.
 
  `pbData`
 
-[out] Veri ile doldurulacak bir arabellek. Bu olamaz `NULL`.
+dışı Verilerle doldurulacak bir arabellek. Bu `NULL` olamaz.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

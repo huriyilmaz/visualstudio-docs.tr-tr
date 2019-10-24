@@ -24,12 +24,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: ac3d6225bc765ec404784589d2faa06f155265ab
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 93c6826f2903f30fbbdcb9c40ec5f695df32ac05
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446290"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747057"
 ---
 # <a name="annotating-structs-and-classes"></a>Yapıları ve Sınıfları Yorumlama
 
@@ -39,19 +39,19 @@ Struct ve Class üyelerine, ınvarıant gibi davranan ek açıklamaları kullana
 
 - `_Field_range_(low, high)`
 
-     Alan, `low` ile `high` arasında (dahil) aralığıdır.  İlgili ön veya gönderi koşulları kullanılarak açıklamalı nesneye uygulanan `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` ' a eşdeğerdir.
+     Alan, `low` ile `high` arasında (dahil) aralığıdır.  İlgili ön koşul veya gönderi koşulları kullanılarak açıklamalı nesneye uygulanan `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` eşdeğerdir.
 
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
 
-     @No__t-0 ile belirtilen öğeler (veya bayt) içinde yazılabilir boyutu olan bir alan.
+     @No__t_0 tarafından belirtilen öğeler (veya bayt) içinde yazılabilir boyutu olan bir alan.
 
 - `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`, `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
 
-     @No__t-0 tarafından belirtilen öğeler (veya bayt) ve okunabilir olan bu öğelerin (bayt) `count` ' de, yazılabilir boyutu olan bir alan.
+     @No__t_0 tarafından belirtilen öğeler (veya bayt) ve okunabilir olan öğelerin (bayt) `count`.
 
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
 
-     @No__t-0 tarafından belirtilen öğelerde (veya baytların) hem okunabilir hem de yazılabilir boyuta sahip bir alan.
+     @No__t_0 tarafından belirtilen öğeler (veya bayt) içinde hem okunabilir hem de yazılabilir boyuta sahip bir alan.
 
 - `_Field_z_`
 
@@ -71,7 +71,7 @@ Struct ve Class üyelerine, ınvarıant gibi davranan ek açıklamaları kullana
 
     ```
 
-     @No__t-1 türündeki `pM` parametresinin bayt cinsinden arabellek boyutu şu şekilde yapılır:
+     @No__t_1 türündeki bir parametre `pM` arabellek boyutu daha sonra şu şekilde alınır:
 
     ```cpp
     min(pM->nSize, sizeof(MyStruct))
@@ -106,11 +106,11 @@ struct MyBuffer
 
 Bu örneğe ilişkin notlar:
 
-- `_Field_z_` `_Null_terminated_` ' e eşdeğerdir.  ad alanı için `_Field_z_`, ad alanının null ile sonlandırılmış bir dize olduğunu belirtir.
-- `bufferSize` için `_Field_range_` `bufferSize` değerinin 1 ile `MaxBufferSize` (her ikisi de dahil) arasında olması gerektiğini belirtir.
-- @No__t-0 ve `_Field_size_` ek açıklamaların nihai sonuçları eşdeğerdir. Benzer düzeni olan yapılar veya sınıflar için `_Field_size_` ' ı okumak ve sürdürmek daha kolaydır, çünkü eşdeğer `_Struct_size_bytes_` ek açıklamasına göre daha az başvuru ve hesaplamalar vardır. `_Field_size_` ' ın bayt boyutuna dönüştürülmesi gerekmez. Bayt boyutu tek seçenektir, örneğin, void işaretçi alanı için `_Field_size_bytes_` kullanılabilir. Hem `_Struct_size_bytes_` hem de `_Field_size_` varsa, her ikisi de araçlar tarafından kullanılabilir. Bu, iki ek açıklama kabul eterif durumunda ne yapmanız gerektiğini araca kadar olur.
+- `_Field_z_` `_Null_terminated_` eşdeğerdir.  ad alanı için `_Field_z_`, ad alanının null ile sonlandırılmış bir dize olduğunu belirtir.
+- `bufferSize` için `_Field_range_`, `bufferSize` değerinin 1 ve `MaxBufferSize` (her ikisi de dahil) arasında olması gerektiğini belirtir.
+- @No__t_0 ve `_Field_size_` ek açıklamaların nihai sonuçları eşdeğerdir. Benzer düzeni olan yapılar veya sınıflar için `_Field_size_` daha kolay bir şekilde daha `_Struct_size_bytes_` fazla başvuru ve hesaplamalar içerdiğinden, daha kolay okunabilir ve bakımı vardır. `_Field_size_` bayt boyutuna dönüştürme gerektirmez. Bayt boyutu tek seçenektir, örneğin, void işaretçi alanı için `_Field_size_bytes_` kullanılabilir. Hem `_Struct_size_bytes_` hem de `_Field_size_` varsa, her ikisi de araçlar tarafından kullanılabilir. Bu, iki ek açıklama kabul eterif durumunda ne yapmanız gerektiğini araca kadar olur.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C/C++ Kod Hatalarını Azaltmak için SAL Ek Açıklamalarını Kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [SAL'yi Anlama](../code-quality/understanding-sal.md)

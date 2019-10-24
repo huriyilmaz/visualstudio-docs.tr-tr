@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_typeıd | Microsoft Docs
+title: 'IDiaSymbol:: get_typeId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 007dd4ad4d7c0c06abf3c235753ec55febf3bcc3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3f0249f4e228327666e03e1a402f7f9cf69ee929
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64800060"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739083"
 ---
-# <a name="idiasymbolgettypeid"></a>IDiaSymbol::get_typeId
-Simgenin türü tanımlayıcısını alır.
+# <a name="idiasymbolget_typeid"></a>IDiaSymbol::get_typeId
+Simgenin tür tanımlayıcısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,16 +33,16 @@ HRESULT get_typeId ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Simgenin türü Kimliğini döndürür.
+dışı Simgenin tür KIMLIĞINI döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Tanımlayıcı, tüm sembolleri benzersiz olarak işaretlemek için DIA SDK'sı tarafından oluşturulan benzersiz bir değerdir.
+ Tanımlayıcı, tüm sembolleri benzersiz olarak işaretlemek için DIA SDK tarafından oluşturulan benzersiz bir değerdir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

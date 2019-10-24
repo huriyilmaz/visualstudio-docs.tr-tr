@@ -1,5 +1,5 @@
 ---
-title: Idiasegment | Microsoft Docs
+title: IDiaSegment | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8dfb0330f08dab158c298bbc944d8dc6410f719f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 855b40f3d35d884a366e8fdc36ed1ec4f2bef85a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839439"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742333"
 ---
 # <a name="idiasegment"></a>IDiaSegment
-Bölüm numarası verilerden adres alanının kesimlerine eşler.
+Bölüm numarasından verileri adres alanının kesimlerine eşler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,29 +28,29 @@ Bölüm numarası verilerden adres alanının kesimlerine eşler.
 IDiaSegment : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
-Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDiaSegment`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+Aşağıdaki tabloda `IDiaSegment` yöntemleri gösterilmektedir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[IDiaSegment::get_frame](../../debugger/debug-interface-access/idiasegment-get-frame.md)|Segment numarasını alır.|
-|[IDiaSegment::get_offset](../../debugger/debug-interface-access/idiasegment-get-offset.md)|Bölüm başladığı kesimlerinde uzaklığını alır.|
+|[IDiaSegment::get_offset](../../debugger/debug-interface-access/idiasegment-get-offset.md)|Bölümün başladığı Dilimlerdeki sapmayı alır.|
 |[IDiaSegment::get_length](../../debugger/debug-interface-access/idiasegment-get-length.md)|Kesimdeki bayt sayısını alır.|
-|[IDiaSegment::get_read](../../debugger/debug-interface-access/idiasegment-get-read.md)|Segment okunup okunamayacağını gösteren bir bayrak alır.|
-|[IDiaSegment::get_write](../../debugger/debug-interface-access/idiasegment-get-write.md)|Segment değiştirilebilir olup olmadığını gösteren bir bayrak alır.|
-|[IDiaSegment::get_execute](../../debugger/debug-interface-access/idiasegment-get-execute.md)|Segment yürütülebilir olup olmadığını belirten bir bayrak alır.|
-|[IDiaSegment::get_addressSection](../../debugger/debug-interface-access/idiasegment-get-addresssection.md)|Bu kesimin için eşler bölüm numarası alır.|
-|[IDiaSegment::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasegment-get-relativevirtualaddress.md)|Bölümün başlayan göreli sanal adres (RVA) alır.|
-|[IDiaSegment::get_virtualAddress](../../debugger/debug-interface-access/idiasegment-get-virtualaddress.md)|Bölüm başına sanal adresini (VA) alır.|
+|[IDiaSegment::get_read](../../debugger/debug-interface-access/idiasegment-get-read.md)|Segmentin okunup okunamayacağını gösteren bir bayrak alır.|
+|[IDiaSegment::get_write](../../debugger/debug-interface-access/idiasegment-get-write.md)|Segmentin değiştirilip değiştirilemeyeceğini belirten bir bayrak alır.|
+|[IDiaSegment::get_execute](../../debugger/debug-interface-access/idiasegment-get-execute.md)|Segmentin yürütülebilir olup olmadığını gösteren bir bayrak alır.|
+|[IDiaSegment::get_addressSection](../../debugger/debug-interface-access/idiasegment-get-addresssection.md)|Bu segmentle eşleşen bölüm numarasını alır.|
+|[IDiaSegment::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasegment-get-relativevirtualaddress.md)|Bölümün başlangıcının göreli sanal adresini (RVA) alır.|
+|[IDiaSegment::get_virtualAddress](../../debugger/debug-interface-access/idiasegment-get-virtualaddress.md)|Bölümün başlangıcının sanal adresini (VA) alır.|
 
 ## <a name="remarks"></a>Açıklamalar
-DIA SDK'sı zaten çevirileri bölüm uzaklığı göreli sanal adreslerine gerçekleştirdiğinden, çoğu uygulama değil olun segmenti eşlemesinin bilgileri kullanın.
+DIA SDK, göreli sanal adreslere göre Bölüm uzaklığına zaten Çeviriler gerçekleştirdiğinden, çoğu uygulama segment eşlemesindeki bilgilerden bu bilgileri kullanmaz.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim çağırarak elde [Idiaenumsegments::Item](../../debugger/debug-interface-access/idiaenumsegments-item.md) veya [Idiaenumsegments::Next](../../debugger/debug-interface-access/idiaenumsegments-next.md) yöntemleri. Ayrıntılar için örneğe bakın.
+[IDiaEnumSegments:: Item](../../debugger/debug-interface-access/idiaenumsegments-item.md) veya [IDiaEnumSegments:: Next](../../debugger/debug-interface-access/idiaenumsegments-next.md) yöntemlerini çağırarak bu arabirimi elde edin. Ayrıntılar için örneğe bakın.
 
 ## <a name="example"></a>Örnek
-Bu işlev bir tablo ve en yakın simgenin tüm parçaları adresini görüntüler.
+Bu işlev, bir tablodaki tüm segmentlerin adresini ve en yakın simgeyi görüntüler.
 
 ```C++
 void ShowSegments(IDiaTable *pTable, IDiaSession *pSession)
@@ -94,13 +94,13 @@ void ShowSegments(IDiaTable *pTable, IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: dia2.h
+Üstbilgi: dia2. h
 
-Kitaplık: diaguids.lib
+Kitaplık: diaguid. lib
 
-DLL: msdia80.dll
+DLL: Msdia80. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumSegments::Item](../../debugger/debug-interface-access/idiaenumsegments-item.md)
 - [IDiaEnumSegments::Next](../../debugger/debug-interface-access/idiaenumsegments-next.md)

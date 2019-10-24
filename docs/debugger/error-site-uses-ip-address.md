@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Sitesinin kullandığı IP adresi | Microsoft Docs'
+title: 'Hata: Site IP adresini kullanıyor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,25 +16,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 468cb2c85be088213bc865122a790408c6c992b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 96786efad0349dec7c9e8e9a02cca40af3668341
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850422"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737495"
 ---
-# <a name="error-site-uses-ip-address"></a>Hata: Site IP adresi kullanıyor
-Hata ayıklayıcı bir IP adresi kullanarak bir Web uygulaması için otomatik iliştirme çalıştığında bu hata oluşur. Değiştirirseniz böyle **Web sitesi kimliği** için **belirli IP adreslerini kullanan** IIS'de.
+# <a name="error-site-uses-ip-address"></a>Hata: Site IP Adresi Kullanıyor
+Hata ayıklayıcı bir IP adresi kullanan bir Web uygulamasına otomatik olarak iliştirmeye çalıştığında bu hata oluşur. Bu durum, **Web sitesi KIMLIĞINI** IIS 'de **belirli IP adresini kullanacak** şekilde değiştirirseniz oluşur.
 
- İçin otomatik çalışmaya iliştirme, projeyi yalnızca makine adı yerine belirli bir IP adresi ile oluşturmanız gerekir. Aksi takdirde, hata ayıklayıcı makine adı için IIS debug fiilini göndermek bir hata neden olacak localhost değişecektir.
+ Otomatik iliştirme 'nin çalışması için, projeyi yalnızca makine adı yerine belirli bir IP adresi ile oluşturmanız gerekir. Aksi takdirde, hata ayıklayıcı makine adını localhost olarak değiştirecek, bu da hata ayıklama fiilini IIS 'e gönderememesine neden olur.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-1. Kullanım el ile eklemek yerine (hata ayıklama menüsünden **iliştirme**).
+1. Yerine el ile iliştirme kullanın (hata ayıklama menüsünden **Işleme İliştir**' i seçin).
 
      —veya—
 
-2. Değişiklik **IIS Web sitesi kimliği** ayarı.
+2. **IIS Web sitesi kimlik** ayarını değiştirin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

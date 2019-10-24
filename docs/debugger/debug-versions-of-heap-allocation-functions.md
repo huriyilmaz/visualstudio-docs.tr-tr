@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama yığın ayırma işlevleri sürümleri | Microsoft Docs
+title: Yığın ayırma Işlevlerinin hata ayıklama sürümleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,30 +23,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d00ea299ae7cebea5d6ad1a09837dc75e10568aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d0fde776e9f2bd48aca92c7ba6d7f1fe1e23f01a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852792"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738367"
 ---
 # <a name="debug-versions-of-heap-allocation-functions"></a>Öbek Atama İşlevleri Hata Ayıklama Sürümleri
-C çalışma zamanı kitaplığı, özel öbek atama işlevleri hata ayıklama sürümlerini içerir. Bu işlevler sürümle aynı ada sahip sürümleri _dbg eklenir. Bu konuda bir CRT işlevini sürümü _dbg sürümü arasındaki farkları açıklar kullanarak `malloc` ve `_malloc_dbg` örnekler.
+C çalışma zamanı kitaplığı, yığın ayırma işlevlerinin özel hata ayıklama sürümlerini içerir. Bu işlevler, _dbg öğesine eklenen sürüm sürümleriyle aynı ada sahiptir. Bu konu, örnek olarak `malloc` ve `_malloc_dbg` kullanarak bir CRT işlevinin yayın sürümü ve _dbg sürümü arasındaki farkları açıklamaktadır.
 
- Zaman [_DEBUG](/cpp/c-runtime-library/debug) olan tanımlanan, CRT tüm eşler [malloc](/cpp/c-runtime-library/reference/malloc) çağrılar [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg). Bu nedenle, kodu kullanarak yeniden gerekmez `_malloc_dbg` yerine `malloc` hata ayıklama sırasında avantajlardan yararlanabilir.
+ [_Hata ayıklama](/cpp/c-runtime-library/debug) TANıMLANDıĞıNDA, CRT tüm [malloc](/cpp/c-runtime-library/reference/malloc) çağrılarını [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)öğesine eşler. Bu nedenle, hata ayıklarken avantajları almak için `malloc` yerine `_malloc_dbg` kullanarak kodunuzu yeniden yazmanız gerekmez.
 
- Çağırmak isteyebilirsiniz `_malloc_dbg` açıkça ancak. Çağırma `_malloc_dbg` açıkça bazı avantajları eklemiştir:
+ Ancak `_malloc_dbg` açıkça çağırmak isteyebilirsiniz. @No__t_0 açıkça çağırmak bazı ek avantajlara sahiptir:
 
-- İzleme `_CLIENT_BLOCK` ayırmaları yazın.
+- @No__t_0 türü ayırmaları izleniyor.
 
-- Ayırma isteği gerçekleştiği kaynak dosya ve satır numarası depolama.
+- Kaynak dosya ve ayırma isteğinin gerçekleştiği satır numarası depolanıyor.
 
-  Dönüştürmek istemiyorsanız, `malloc` çağrılar `_malloc_dbg`, tanımlayarak, kaynak dosya bilgileri edinebilirsiniz [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc), tüm çağrıları doğrudan önişlemci harita neden `malloc` için`_malloc_dbg` çevresinde bir sarmalayıcı güvenmek yerine `malloc`.
+  @No__t_0 çağrılarınızı `_malloc_dbg` dönüştürmek istemiyorsanız, [_Crtdbg_map_poal](/cpp/c-runtime-library/crtdbg-map-alloc)' ı tanımlayarak kaynak dosya bilgilerini elde edebilirsiniz. Bu, Önişlemci 'nin bir sarmalayıcı temelinde `malloc` tüm çağrıları doğrudan `_malloc_dbg` 'e eşlemesine neden olur.  `malloc`.
 
-  İstemci bloklarında ayırmaları ayrı türlerini izlemek için çağırmalıdır `_malloc_dbg` doğrudan ve `blockType` parametresi `_CLIENT_BLOCK`.
+  İstemci bloklarında ayrı ayırma türlerini izlemek için `_malloc_dbg` doğrudan çağırmanız ve `blockType` parametresini `_CLIENT_BLOCK` olarak ayarlamanız gerekir.
 
-  _DEBUG tanımlı değil, çağrılar `malloc` değil etkilenir, çağrılar `_malloc_dbg` için çözümlendiği `malloc`, tanımını [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc) göz ardı edilir ve kaynak dosya bilgileri saklamanıza ayırma isteği belirtilmedi. Çünkü `malloc` blok türü parametresi yok, için istekleri `_CLIENT_BLOCK` türler standart ayırmaları kabul edilir.
+  _HATA ayıklama tanımlanmadığında, `malloc` çağrıları olumsuz olmaz, `_malloc_dbg` çağrıları `malloc` olarak çözümlenir, [_Crtdbg_map_allocation](/cpp/c-runtime-library/crtdbg-map-alloc) tanımı yok sayılır ve ayırma isteğiyle ilgili kaynak dosya bilgileri sağlanmaz. @No__t_0 bir blok türü parametresine sahip olmadığından, `_CLIENT_BLOCK` türleri için istekler standart ayırma olarak kabul edilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [CRT Hata Ayıklama Teknikleri](../debugger/crt-debugging-techniques.md)

@@ -1,5 +1,5 @@
 ---
-title: İç içe projeler için sihirbaz desteği | Microsoft Docs
+title: Iç Içe projeler için sihirbaz desteği | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa1dedebab95e1c1b74e1705f3a8b39a1ebe3616
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5e498f21499f4b07bf77bb79829fc6d92227f1f2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66312923"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721429"
 ---
 # <a name="wizard-support-for-nested-projects"></a>İç içe Projeler için Sihirbaz Desteği
-IDE ana proje iç içe projeler için uygulayabileceğiniz iki sihirbazları çalıştırır: **yeni proje** Sihirbazı ve **Öğe Ekle** Sihirbazı.
+IDE, iç içe projeler için üst projenin uygulayamayacağı iki sihirbaz çalıştırır: **Yeni proje** Sihirbazı ve **öğe ekleme** Sihirbazı.
 
- Bir kullanıcı başlarsa **yeni proje** seçerek Sihirbazı **Proje Ekle** tıklayıp **yeni proje** Dosya menüsünden veya seçerek **Ekle** sağ **yeni proje** IDE Çözüm Gezgini'nde çalışan **AddProject** komut ve üst projenin uygulaması **AddProject**komut ya da bir şablon proje dosyası veya bir dizi bağlam parametreleri içeren bir sihirbaz (.vsz) dosyası döndürür.
+ Bir Kullanıcı **Yeni proje** sihirbazını, Dosya menüsünde **Proje Ekle** ve **Yeni proje** ' ye tıklayarak ya da **Ekle** ' yi seçip çözüm GEZGINI **Yeni proje** ' yi seçerek başlarsa, IDE **AddProject 'i çalıştırır** komut ve üst projenin **AddProject** komutunun uygulanması, bir şablon proje dosyası ya da bağlam parametreleri kümesine sahip bir sihirbaz (. vsz) dosyası döndürür.
 
- Benzer şekilde, bir üst projenin uygulaması **addItem** sihirbazları farklı bir bağlam parametreleri kümesini içeren bir .vsz dosyası döndürür.
+ Benzer şekilde, bir üst projenin **AddItem** sihirbazları 'nın uygulanması, farklı bağlam parametreleri kümesine sahip bir. vsz dosyası döndürür.
 
- Sihirbazları hakkında daha fazla bilgi için bkz: [Sihirbazı (. Vsz) dosya](../../extensibility/internals/wizard-dot-vsz-file.md), [bağlam parametreleri](../../extensibility/internals/context-parameters.md) ve [proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md).
+ Sihirbazlar hakkında daha fazla bilgi için bkz [. sihirbaz (. Vsz) dosyası](../../extensibility/internals/wizard-dot-vsz-file.md), [Bağlam parametreleri](../../extensibility/internals/context-parameters.md) ve [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>
 - [Projeleri İç İçe Geçirme](../../extensibility/internals/nesting-projects.md)
