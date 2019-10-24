@@ -11,23 +11,23 @@ helpviewer_keywords:
 - command aliases
 - alias command
 ms.assetid: bdf857df-b5d5-450f-8c10-a6fd4dccc130
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 396db6e08da211a801361328416d97622ee3eac8
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 8fdcc816510642c7800b6fbeacfa3fcdeff5e0b3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926334"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748793"
 ---
 # <a name="alias-command"></a>Diğer Ad Komutu
 Tüm komut, komut ve bağımsız değişkenler ya da başka bir diğer ad için yeni bir diğer ad oluşturur.
 
 > [!TIP]
-> Bağımsız `>alias` değişken olmadan yazmak, diğer adların ve tanımlarının geçerli listesini görüntüler.
+> Bağımsız değişken olmadan `>alias` yazmak, diğer adların ve bunların tanımlarının geçerli listesini görüntüler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,16 +37,16 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 
 ## <a name="arguments"></a>Arguments
 `aliasname`\
-İsteğe bağlı. Yeni diğer ad için ad. İçin `aliasname`hiçbir değer sağlanmazsa, geçerli diğer adların ve tanımlarının bir listesi görüntülenir.
+İsteğe bağlı. Yeni diğer ad için ad. @No__t_0 için hiçbir değer sağlanmazsa, geçerli diğer adların ve tanımlarının bir listesi görüntülenir.
 
 `aliasstring`\
-İsteğe bağlı. Tüm komut adı veya var olan diğer ad ve diğer ad olarak oluşturmak istediğiniz parametreler. İçin `aliasstring`değer sağlanmazsa, belirtilen diğer ad için diğer ad ve diğer ad dizesi görüntülenir.
+İsteğe bağlı. Tüm komut adı veya var olan diğer ad ve diğer ad olarak oluşturmak istediğiniz parametreler. @No__t_0 için bir değer sağlanmadığında, belirtilen diğer ad için diğer ad ve diğer ad dizesi görüntülenir.
 
 ## <a name="switches"></a>Anahtarlar
 /DELETE veya/del&lt ya da/d\
 İsteğe bağlı. Belirtilen diğer adı siler ve otomatik tamamlamayı kaldırır.
 
-/Reset süpürmeden\
+/Reset süpürmeden
 İsteğe bağlı. Önceden tanımlanmış diğer adların listesini orijinal ayarlarına sıfırlar. Diğer bir deyişle, önceden tanımlanmış tüm diğer adları geri yükler ve Kullanıcı tanımlı tüm diğer adları kaldırır.
 
 ## <a name="remarks"></a>Açıklamalar
@@ -54,16 +54,16 @@ Diğer adlar komutları temsil ettiğinden, bunlar komut satırının başlangı
 
 Bu komutu verirken, diğer adlarla değil, anahtardan hemen sonra gelen anahtarları eklemeniz gerekir, aksi takdirde anahtar, diğer ad dizesinin bir parçası olarak dahil edilir.
 
-Bu `/reset` anahtar, diğer adlar geri yüklenmeden önce onay ister. İçin kısa bir `/reset`biçim yoktur.
+@No__t_0 anahtarı, diğer adlar geri yüklenmeden önce onay ister. @No__t_0 kısa bir biçimi yoktur.
 
 ## <a name="examples"></a>Örnekler
-Bu örnek, tüm komut Edit. `upper`makebüyük komutu için yeni bir diğer ad oluşturur.
+Bu örnek, `upper` için yeni bir diğer ad oluşturur. Makebüyük komutu.
 
 ```cmd
 >Tools.Alias upper Edit.MakeUpperCase
 ```
 
-Bu örnek, diğer adı siler `upper`,.
+Bu örnek, `upper` diğer adı siler.
 
 ```cmd
 >Tools.alias /delete upper
@@ -75,7 +75,7 @@ Bu örnek, tüm geçerli diğer adlar ve tanımlar listesini görüntüler.
 >Tools.Alias
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)

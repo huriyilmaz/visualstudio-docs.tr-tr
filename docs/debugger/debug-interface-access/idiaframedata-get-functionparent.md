@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_functionparent | Microsoft Docs
+title: 'IDiaFrameData:: get_functionParent | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20f9dac750f9ff9723e4f3669f9e9a124d728a9a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 809de8589302ddc35a14e2ea0663248a163176e6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830350"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743618"
 ---
-# <a name="idiaframedatagetfunctionparent"></a>IDiaFrameData::get_functionParent
-Kapsayan işlevin bir çerçeve veri arabirimi alır.
+# <a name="idiaframedataget_functionparent"></a>IDiaFrameData::get_functionParent
+Kapsayan işlev için bir çerçeve verileri arabirimi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_functionParent ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür bir [Idiaframedata](../../debugger/debug-interface-access/idiaframedata.md) kapsayan işlev nesnesi.
+dışı Kapsayan işlev için bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

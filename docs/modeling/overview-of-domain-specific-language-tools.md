@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 899fc041df3f7118de6be97309e8ce971235d178
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 82bccbd9558a5dad87e9fe13f9ed7136a5d77d8a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658318"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747519"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>Etki Alanına Özgü Dil Araçlarına Genel Bakış
 Visual Studio 'da barındırılan Alana Özgü Dil Araçları (DSL araçları), etki alanına özgü bir dil tasarlamanızı ve ardından kullanıcıların dile göre modeller oluşturmak için sahip olmaları gereken her şeyi oluşturmanıza imkan tanır.
@@ -74,7 +74,7 @@ Visual Studio 'da barındırılan Alana Özgü Dil Araçları (DSL araçları), 
 
  Visual Studio 'da DSL araçları çözümünü oluşturup çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği, etki alanına özgü dilin dilin kullanıcısına nasıl göründüğünü gösterir. Her şeyin düzgün çalıştığını doğruladıktan sonra, bulacağınız `.vsix` dosyasını DslPackage projesinin Build klasöründe dağıtabilirsiniz. Bu dosya, DSL 'yi bir Visual Studio uzantısı olarak diğer bilgisayarlara yüklemek için kullanılabilir.  Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Deneysel Örnek](../extensibility/the-experimental-instance.md)
 - [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

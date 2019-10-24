@@ -1,5 +1,5 @@
 ---
-title: Sınıf Tasarımcısında Visual C++ Numaralandırmaları
+title: C++Sınıf Tasarımcısı numaralandırmalar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5df17176839dccf0fbe0c42f164bde6b3e39f56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a514d5eb4b7f79e2fd193c79de670b6dd9c14cb5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631131"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747989"
 ---
-# <a name="visual-c-enumerations-in-class-designer"></a>Sınıf Tasarımcısı C++ görsel numaralandırmalar
+# <a name="c-enumerations-in-class-designer"></a>C++Sınıf Tasarımcısı numaralandırmalar
 
 **Sınıf Tasarımcısı** `enum` C++ ve kapsamlı `enum class` türlerini destekler. Aşağıda bir örnek verilmiştir:
 
@@ -44,5 +44,5 @@ Bir C++ sınıf diyagramındaki sabit listesi şekli bir yapı şekli gibi gör�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual C++ Kodu ile Çalışma](working-with-visual-cpp-code.md)
+- [C++ Kodla çalışma](working-with-visual-cpp-code.md)
 - [Sabit Listeleri](/cpp/cpp/enumerations-cpp)

@@ -1,5 +1,5 @@
 ---
-title: Idiaımagedata::get_imagebase | Microsoft Docs
+title: 'IDiaImageData:: get_imageBase | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de8c333391530cd86c6fc66a8e6c36ce8cfecd5f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7887fea30b04f4ebb6605169c58551122eccf73d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829065"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743445"
 ---
-# <a name="idiaimagedatagetimagebase"></a>IDiaImageData::get_imageBase
-Görüntü tabanlı burada bellek konumunu alır.
+# <a name="idiaimagedataget_imagebase"></a>IDiaImageData::get_imageBase
+Görüntünün dayanmanız gereken bellek konumunu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_imageBase ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Önerilen görüntü temel değeri döndürür.
+dışı Önerilen görüntü taban değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Yüklendiğinde görüntü temel çakışmalar nedeniyle görüntü otomatik olarak bir kullanılmayan bellek konumuna ReBase işlemi gerçekleştirildi. Bu yöntem, derleme zamanında modülünde depolanmış temel İpucu (önerilen bellek konumu) döndürür.
+ Görüntü tabanı çakışmaları nedeniyle, bir görüntü yüklendiğinde kullanılmayan bellek konumuna otomatik olarak yeniden dayalı olabilir. Bu yöntem, derleme zamanında modülünde depolanan temel ipucunu (önerilen bellek konumu) döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

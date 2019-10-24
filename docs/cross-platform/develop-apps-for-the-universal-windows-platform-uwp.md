@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d526d5df8ba03374fd26ceb870d4b240b6fc2fa4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c3c5d648a5880da43d96e6741656da1023f7cf7f
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648955"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777758"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Evrensel Windows Platformu (UWP) için uygulama geliştirme
 
@@ -40,7 +40,7 @@ Evrensel Windows uygulama geliştirme araçları, uygulamanızın farklı cihazl
 
 ::: moniker range="vs-2017"
 
-- [Windows 10](http://windows.microsoft.com/windows/downloads). Visual Studio 2017, yalnızca Windows 10 ' da UWP geliştirmeyi destekler. Daha ayrıntılı bilgi için bkz. Visual Studio [Platform hedefleme](/visualstudio/productinfo/vs2017-compatibility-vs) ve [sistem gereksinimleri](/visualstudio/productinfo/vs2017-system-requirements-vs).
+- [Windows 10](https://support.microsoft.com/help/17777/downloads-for-windows). Visual Studio 2017, yalnızca Windows 10 ' da UWP geliştirmeyi destekler. Daha ayrıntılı bilgi için bkz. Visual Studio [Platform hedefleme](/visualstudio/productinfo/vs2017-compatibility-vs) ve [sistem gereksinimleri](/visualstudio/productinfo/vs2017-system-requirements-vs).
 
 - [Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download). Ayrıca, isteğe bağlı Evrensel Windows Platformu geliştirme iş yüküne da ihtiyacınız olacaktır.
 
@@ -50,7 +50,7 @@ Evrensel Windows uygulama geliştirme araçları, uygulamanızın farklı cihazl
 
 ::: moniker range="vs-2019"
 
-- [Windows 10](http://windows.microsoft.com/windows/downloads). Visual Studio 2019, yalnızca Windows 10 ' da UWP geliştirmeyi destekler. Daha ayrıntılı bilgi için bkz. Visual Studio [Platform hedefleme](/visualstudio/releases/2019/compatibility/) ve [sistem gereksinimleri](/visualstudio/releases/2019/system-requirements/).
+- [Windows 10](https://support.microsoft.com/help/17777/downloads-for-windows). Visual Studio 2019, yalnızca Windows 10 ' da UWP geliştirmeyi destekler. Daha ayrıntılı bilgi için bkz. Visual Studio [Platform hedefleme](/visualstudio/releases/2019/compatibility/) ve [sistem gereksinimleri](/visualstudio/releases/2019/system-requirements/).
 
 - [Visual Studio](https://visualstudio.microsoft.com/downloads). Ayrıca, isteğe bağlı Evrensel Windows Platformu geliştirme iş yüküne da ihtiyacınız olacaktır.
 

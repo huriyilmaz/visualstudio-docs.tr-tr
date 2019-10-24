@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findInlineFramesByAddr | Microsoft Docs
+title: 'IDiaSession:: Findınlineframesbyaddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e0f35f845642089a8ee2b14c6047e809d525e5bc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4839f19979da472c9a5515f0b8535464be8d92db
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827538"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742162"
 ---
 # <a name="idiasessionfindinlineframesbyaddr"></a>IDiaSession::findInlineFramesByAddr
-Bir istemci belirli bir adresi satır içi karelerden tümünün üzerinden yinelemek sağlayan bir sabit listesi alır.
+Bir istemcinin belirli bir adresteki tüm satır içi çerçeveler üzerinde yineleme yapmasına izin veren bir sabit listesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,24 +33,24 @@ HRESULT findInlineFramesByAddr ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-[in] Bir `IDiaSymbol` üst temsil eden nesne.
+'ndaki Üst öğeyi temsil eden `IDiaSymbol` nesne.
 
  `isect`
 
-[in] Bölüm bileşeni adresi belirtir.
+'ndaki Adresin bölüm bileşenini belirtir.
 
  `offset`
 
-[in] Adres uzaklık bileşeni belirtir.
+'ndaki Adresin konum bileşenini belirtir.
 
  `ppResult`
 
-[out] Tutan bir `IDiaEnumSymbols` alınır çerçeveler içeren nesne.
+dışı Alınan çerçevelerin listesini içeren `IDiaEnumSymbols` nesnesini barındırır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

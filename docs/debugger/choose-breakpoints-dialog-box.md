@@ -1,5 +1,5 @@
 ---
-title: Kesme noktaları iletişim kutusu seçin | Microsoft Docs
+title: Kesme noktaları Seç Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,22 +21,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50547507bf37eb22346bcbf3f48585c9cb0b26b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fdec8c8d1b53f87e14700f5c14099cf0d2e6e392
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564788"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745725"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>Kesme Noktaları Seç İletişim Kutusu
-**Kesme noktalarını Seç** iletişim kutusu açılır, belirsiz girişten bir kesme noktası ayarlamak çalıştığınızda **yeni kesme noktası** iletişim kutusu. Belirsiz girişe ortak bir örnek aşırı yüklenmiş işlev adıdır.
+**Yeni kesme noktası** iletişim kutusunda belirsiz girişten bir kesme noktası ayarlamaya çalıştığınızda **kesme noktaları Seç** iletişim kutusu açılır. Belirsiz girişin ortak bir örneği, aşırı yüklenmiş bir işlev adıdır.
 
- **Kesme noktaları** üzerinde belirsiz girişe dayalı olarak ayarlanabilen olası kesme noktalarını listeler. Ayarlanacak bir veya daha fazla kesme noktası seçebilirsiniz.
+ **Kesme noktaları** Belirsiz girişe göre ayarlanabilen olası kesme noktalarını listeler. Ayarlanacak bir veya daha fazla kesme noktası seçebilirsiniz.
 
- **Tüm** listelenen tüm kesme noktalarını seçer **kesme noktaları** kutusu.
+ **Tümü** **Kesme noktaları** kutusunda listelenen tüm kesme noktalarını seçer.
 
- **Hiçbiri** listelenen tüm kesme noktalarını temizler **kesme noktaları** kutusu.
+ **Hiçbiri** **Kesme noktaları** kutusunda listelenen tüm kesme noktalarını temizler.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kesme Noktalarını Kullanma](../debugger/using-breakpoints.md)

@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7e58f65f174c549f6992e9218d7ad692634e20d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 20aeee220bec600c2232286d18600b04201ad03b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435875"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745616"
 ---
 # <a name="crt-debug-library-use"></a>CRT Hata Ayıklama Kitaplığı Kullanımı
 C çalışma zamanı kitaplığı kapsamlı hata ayıklama desteği sağlar. CRT hata ayıklama kitaplıklarından birini kullanmak için [/Debug](/cpp/build/reference/debug-generate-debug-info) ile bağlantı oluşturmanız ve **/MDD**, **/MTD**veya **/LDD**ile derlemeniz gerekir.
@@ -45,7 +45,7 @@ C çalışma zamanı kitaplığı kapsamlı hata ayıklama desteği sağlar. CRT
 
  Kullanabileceğiniz çeşitli çalışma zamanı kitaplıkları hakkında daha fazla bilgi için bkz. [C çalışma zamanı kitaplıkları](/cpp/c-runtime-library/crt-library-features).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [CRT Hata Ayıklama Teknikleri](../debugger/crt-debugging-techniques.md)
 - [/MD, /MT, /LD (Çalışma Zamanı Kitaplığını Kullan)](/cpp/build/reference/md-mt-ld-use-run-time-library)

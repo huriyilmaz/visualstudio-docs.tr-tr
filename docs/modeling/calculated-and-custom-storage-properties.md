@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc7d4ef8e281cd56b7a585d516cd5d48028a00f8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: def432c5c2861716b4b3fb6e2f93f20a93a54a28
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653701"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748533"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Hesaplanan ve Özel Depolama Özellikleri
 Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagramda ve dil gezgininizde kullanıcıya görüntülenebilir ve program kodu tarafından erişilebilir. Ancak özellikler, değerlerinin depolandığı şekilde farklılık gösterir.
@@ -84,7 +84,7 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
 ## <a name="setters"></a>İşlemler ve özel ayarlayıcılar
  Özel depolama özelliğinin set yönteminde bir işlem açmanız gerekmez, çünkü Yöntem genellikle etkin bir işlem içinde çağırılır.
 
- Ancak, Kullanıcı geri alma veya yeniden yapma işlemini çağrılırsa veya bir işlem geri alınırsa set yöntemi de çağrılabilir. @No__t_0 true olduğunda, set yönteminiz aşağıdaki gibi davranır:
+ Ancak, Kullanıcı geri alma veya yeniden yapma işlemini çağrılırsa veya bir işlem geri alınırsa set yöntemi de çağrılabilir. <xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A> true olduğunda, set yönteminiz aşağıdaki gibi davranır:
 
 - Diğer etki alanı özelliklerine değer atama gibi, depoda değişiklik yapmamalıdır. Geri alma Yöneticisi, değerlerini ayarlayacaktır.
 
@@ -107,7 +107,7 @@ void SetAgeValue(int value)
 
  İşlemler hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Program Kodunda Modeli Gezinme ve Güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Etki Alanı Özelliklerinin Özellikleri](../modeling/properties-of-domain-properties.md)

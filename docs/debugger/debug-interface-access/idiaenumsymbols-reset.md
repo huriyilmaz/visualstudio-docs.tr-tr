@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbols::reset | Microsoft Docs
+title: 'IDiaEnumSymbols:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96ce674e9bfc15913c8b7c142ee36780bf74c7ea
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 36575e0d671aeaf3b0968da64a325d1e4df0751a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833356"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743927"
 ---
 # <a name="idiaenumsymbolsreset"></a>IDiaEnumSymbols::Reset
-Bir numaralandırma sıralı başlangıç durumuna sıfırlar.
+Bir numaralandırma dizisini başlangıca sıfırlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,7 +29,7 @@ HRESULT Reset ();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Döndürür `S_OK`.
+ `S_OK`döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

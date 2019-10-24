@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: debf263fa18d2a6af8e95ee959002686540e2c06
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 44fcc45191d6c1e42256a503e98f753b54535e5f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658198"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748312"
 ---
 # <a name="properties-of-domain-properties"></a>Etki Alanı Özelliklerinin Özellikleri
 Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğidir. Örneğin, `Person` etki alanı sınıfı, `Name` ve `BirthDate` özelliklerine sahip olabilir. DSL tanımında etki alanı özellikleri, diyagramdaki etki alanı sınıfı kutusunda ve DSL Gezgini 'ndeki etki alanı sınıfında listelenir. Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
@@ -48,6 +48,6 @@ Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğid
 |**Ayarlayıcı erişim değiştiricisi**|Ayarlayıcı için erişim değiştiricisi. Bu, program kodunun özelliği ayarlayabileceği kapsamı denetler.|`public`|
 |**Türüyle**|Özelliğin türü. Kullanılabilir türler listesine eklemek için DSL Gezgini 'ndeki DSL köküne sağ tıklayın ve **dış tür Ekle**' ye tıklayın.|`String`|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

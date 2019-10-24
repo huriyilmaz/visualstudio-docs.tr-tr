@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccb87fef9ff91c77c926d5bca40a5e5ec08c3720
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 411452ba0cf8f8625ee67bca51c2f3735f6dc924
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622022"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747689"
 ---
 # <a name="watch-command"></a>İzle Komutu
 Bir **Gözcü** penceresinin belirtilen bir örneğini oluşturur ve açar. Değişkenler, ifadeler ve yazmaçların değerlerini hesaplamak, bu değerleri düzenlemek ve sonuçları kaydetmek için bir **Gözcü** penceresi kullanabilirsiniz.
@@ -44,7 +44,7 @@ Gerekli. İzleme penceresinin örnek numarası.
 >Debug.Watch1
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Otomatikler ve Yereller Pencereleri](../../debugger/autos-and-locals-windows.md)
 - [Visual Studio 'da gözcü ve hızlı gözcü pencerelerini kullanarak değişkenlerde bir Izleme ayarlayın](../../debugger/watch-and-quickwatch-windows.md)

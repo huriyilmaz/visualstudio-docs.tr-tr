@@ -42,12 +42,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c33ccbaa21008ab3fa3d1122847c5e18708f9fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 22ab23911baab30c7617525d318795b1be708bb9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666358"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747844"
 ---
 # <a name="options-dialog-box-text-editor--all-languages"></a>Seçenekler iletişim kutusu: tüm diller \> metin Düzenleyicisi
 
@@ -124,7 +124,7 @@ Bu ayarın, bir satır boş olmadığında kopyalama veya kesme üzerinde hiçbi
 > [!TIP]
 > Boşluk, sekme ve satır uçları göstergelerini görüntülemek ve bu nedenle girintili çizgileri tamamen boş olan satırlardan ayırt etmek için, **Düzenle** menüsünden **Gelişmiş** ' i seçin ve **boşluğu görüntüle**' yi seçin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler](../../ide/reference/options-text-editor-all-languages-tabs.md)
 - [Genel, Ortam, Seçenekler İletişim Kutusu](../../ide/reference/general-environment-options-dialog-box.md)

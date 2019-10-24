@@ -1,5 +1,5 @@
 ---
-title: Idiaenumtables::Next | Microsoft Docs
+title: 'IDiaEnumTables:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15a9ebbd3a3993568e4b6496e04661a63290399e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 688652fe3915e1974d5d0e1d04fb1ac075863d8c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832751"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743734"
 ---
 # <a name="idiaenumtablesnext"></a>IDiaEnumTables::Next
-Belirtilen bir sabit listesi sırası tablolarında sayısını alır.
+Sabit Listesi dizisinde belirtilen sayıda tabloyu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,19 +35,19 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametreler
  `celt`
 
-[in] Alınacak Numaralandırıcı tablo sayısı.
+'ndaki Numaralandırıcıda alınacak olan tablo sayısı.
 
  `rgelt`
 
-[out] İle doldurulacak bir dizi [Idiatable](../../debugger/debug-interface-access/idiatable.md) istediğiniz tabloları temsil eden nesneleri.
+dışı İstenen tabloları temsil eden [IDiaTable](../../debugger/debug-interface-access/idiatable.md) nesneleriyle doldurulacak bir dizi.
 
  `pceltFetched`
 
-[out] Tablo sayısı getirilen bir numaralandırıcı döndürür.
+dışı Getirilen Numaralandırıcı içindeki tablo sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` daha fazla tablo varsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Daha fazla tablo yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

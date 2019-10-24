@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 801423ee8ad5bb9a63ebb4f970d9c53e5fe8c1e4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 13d943b8d86bd9ca912816e0f19993959ca303c1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605703"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748397"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>Uygulamanızı modeller aracılığıyla oluşturma ve yapılandırma
 Bir modelden uygulamanızın parçalarını oluşturabilir veya yapılandırabilirsiniz.
@@ -70,7 +70,7 @@ Bir modelden uygulamanızın parçalarını oluşturabilir veya yapılandırabil
 
      Örneğin, bir UML sınıf diyagramı, kutular ve okların bir koleksiyonudur; Bu gösterimle, teorik olarak herhangi bir şeyi tanımlayabilir. Ancak, bir tür kümesini açıkladığınız durumlar haricinde sınıf diyagramını kullanmanızı önermiyoruz. Örneğin, farklı Web sayfası türlerini tanımlamaya yönelik sınıf diyagramlarını uyarlayabilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)
 - [Nasıl yapılır: Program Kodunda Dosyadan Model Açma](../modeling/how-to-open-a-model-from-file-in-program-code.md)

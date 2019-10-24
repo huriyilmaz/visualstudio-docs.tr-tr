@@ -1,5 +1,5 @@
 ---
-title: Idiasegment::get_addresssection | Microsoft Docs
+title: 'IDiaSegment:: get_addressSection | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e098f1e2367395f201abf6f44554f1699400b12
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9114a1d97dc9c25aa9c2bfe84dc96b63051b92d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827802"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742434"
 ---
-# <a name="idiasegmentgetaddresssection"></a>IDiaSegment::get_addressSection
-Bu kesimin için eşler bölüm numarası alır.
+# <a name="idiasegmentget_addresssection"></a>IDiaSegment::get_addressSection
+Bu segmentle eşleşen bölüm numarasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_addressSection ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bu kesim için eşlenen bölüm sayısını döndürür.
+dışı Bu segmentle eşleşen bölüm numarasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

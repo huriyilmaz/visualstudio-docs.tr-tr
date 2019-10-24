@@ -1,5 +1,5 @@
 ---
-title: Idiaenumınjectedsources::Skip | Microsoft Docs
+title: 'IDiaEnumInjectedSources:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 807ed82a68089cb656f68c8cc1881dce683bb8a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e2c7ca67581916ad0c68d7eb1b49fd1c15cf9eaf
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829725"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744454"
 ---
 # <a name="idiaenuminjectedsourcesskip"></a>IDiaEnumInjectedSources::Skip
-Bir numaralandırma sıralı eklenen kaynakları belirtilen sayıda atlar.
+Bir numaralandırma dizisinde belirtilen sayıda eklenen kaynağı atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Eklenen kaynakları atlamak için numaralandırma sıralı sayısı.
+'ndaki Atlanacak numaralandırma dizisindeki eklenen kaynak sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` atlamak için artık eklenen kaynakları varsa.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, atlanacak daha fazla kaynak yoksa `S_FALSE` döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
