@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 620300d1727adc41d5655bd33dde87ad592bba1c
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: f4c82836f5a80fae421a30721d8c3ee4c3d6893d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252984"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735390"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>Yarı/Çeyrek Doku Boyutları Çeşidi
 İşleme hedefi olmayan dokuların doku boyutlarını azaltır.
@@ -28,7 +28,7 @@ ms.locfileid: "71252984"
  Dokularınız kullanılabilir olandan daha fazla GPU belleği kapladığında dokuların boyutunu azaltmayı göz önünde bulundurun, ancak yalnızca uygun dokuları sıkıştırmayı düşünün. Küçük dokular gibi, sıkıştırılan dokular daha az bellek kaplar ve sistem belleğine sayfa ihtiyacını azaltır, ancak renk uygunluğuna düşürülür. Sıkıştırma, içeriğine bağlı olarak tüm dokuların (örneğin, küçük bir alanda önemli renk varyasyonlarına sahip olanlar) uygun değildir, ancak birçok dokuda sıkıştırma, boyutlarını azaltmadan daha iyi genel görüntü kalitesini koruyabilir.
 
 ## <a name="remarks"></a>Açıklamalar
- Doku boyutları, kaynak dokusu oluşturan her çağrıda `ID3D11Device::CreateTexture2D` azaltılır. Özellikle, geçirilen `pDesc` D3D11_TEXTURE2D_DESC nesnesi işlemede kullanılan bir dokuyu açıkladığı zaman doku boyutları azaltılır; bu:
+ Doku boyutları, kaynak dokusu oluşturan `ID3D11Device::CreateTexture2D` her çağrıda azalır. Özellikle, `pDesc` geçirilen D3D11_TEXTURE2D_DESC nesnesi işlemede kullanılan bir dokuyu açıkladığı zaman doku boyutları azaltılır. Yani:
 
 - BindFlags üyesinin yalnızca D3D11_BIND_SHADER_RESOURCE bayrağı kümesi vardır.
 
@@ -41,8 +41,8 @@ ms.locfileid: "71252984"
   Doku için MIP eşlemeleri etkinleştirilmişse, varyant, MIP düzeylerinin sayısını buna uygun şekilde azaltır; çeyrek boyutuna ölçeklendirirken yarı boyutlu veya iki daha az ölçeklendirirken bir daha az.
 
 ## <a name="example"></a>Örnek
- Bu varyant, çağrısından `CreateTexture2D`önce çalışma zamanında dokuları yeniden boyutlandırır. Tam boyutlu dokular daha fazla disk alanı kullandığından ve özellikle de önemli bir işlem gerektiren sıkıştırılmış dokular için, ek adım uygulamanızda yükleme sürelerini artırabildiğinden, üretim kodu için bu yaklaşıma önerilir Kodlanacak kaynaklar. Bunun yerine, yapı işlem hattınızın bir parçası olan bir görüntü Düzenleyicisi veya görüntü işlemcisi kullanarak dokularınızı çevrimdışı olarak yeniden boyutlandırmanızı öneririz. Bu yaklaşımlar, disk alanı gereksinimlerini azaltır ve uygulamanızda çalışma zamanı ek yükünü ortadan kaldırır ve dokularınızı küçülterek veya sıkıştırırken en iyi görüntü kalitesini sürdürebilmeniz için daha fazla işleme süresi elde edebilir.
+ Bu varyant, `CreateTexture2D`çağrısından önce çalışma zamanında dokuları yeniden boyutlandırır. Tam boyutlu dokular daha fazla disk alanı kullandığından ve özellikle de önemli bir işlem gerektiren sıkıştırılmış dokular için, ek adım uygulamanızda yükleme sürelerini artırabildiğinden, üretim kodu için bu yaklaşıma önerilir Kodlanacak kaynaklar. Bunun yerine, yapı işlem hattınızın bir parçası olan bir görüntü Düzenleyicisi veya görüntü işlemcisi kullanarak dokularınızı çevrimdışı olarak yeniden boyutlandırmanızı öneririz. Bu yaklaşımlar, disk alanı gereksinimlerini azaltır ve uygulamanızda çalışma zamanı ek yükünü ortadan kaldırır ve dokularınızı küçülterek veya sıkıştırırken en iyi görüntü kalitesini sürdürebilmeniz için daha fazla işleme süresi elde edebilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Mip-map Oluşturma Çeşidi](mip-map-generation-variant.md)
 - [BC Doku Sıkıştırma Çeşidi](bc-texture-compression-variant.md)

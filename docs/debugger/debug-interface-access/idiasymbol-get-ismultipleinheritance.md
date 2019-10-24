@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isMultipleInheritance | Microsoft Docs
+title: 'IDiaSymbol:: get_isMultipleInheritance | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a353f9fc3605d1f2d26248b3ce907fb76b947c68
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4eb6e1509a46c4e584e98403439188581df97c10
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836622"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740174"
 ---
-# <a name="idiasymbolgetismultipleinheritance"></a>IDiaSymbol::get_isMultipleInheritance
-Belirtir olup olmadığını `this` işaretçi birden çok devralma ile veri üyesine işaret eder.
+# <a name="idiasymbolget_ismultipleinheritance"></a>IDiaSymbol::get_isMultipleInheritance
+`this` işaretçisinin birden çok devralmayla bir veri üyesine işaret ettiğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,10 +30,10 @@ HRESULT get_isMultipleInheritance(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir işaretçi bir `BOOL` belirtir olup olmadığını `this` işaretçi birden çok devralma ile veri üyesine işaret eder.
+dışı `this` işaretçisinin birden çok devralmayla bir veri üyesine işaret ettiğini belirten `BOOL` işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

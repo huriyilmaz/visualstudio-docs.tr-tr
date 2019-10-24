@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_compilandıd | Microsoft Docs
+title: 'IDiaLineNumber:: get_compilandId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9874dec57c873164ec1875f31fd15c817781bb7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9ab4776029f13a68746a6b4d6ca0343450f477a9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839933"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743213"
 ---
-# <a name="idialinenumbergetcompilandid"></a>IDiaLineNumber::get_compilandId
-Bu satırı katkıda derlenecek için benzersiz bir tanımlayıcı alır.
+# <a name="idialinenumberget_compilandid"></a>IDiaLineNumber::get_compilandId
+Bu satıra katkıda bulunan compiland için benzersiz bir tanımlayıcı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_compilandId ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `DWORD` bu satırı katkıda derlenecek için benzersiz tanımlayıcısını içermektedir.
+dışı Bu satıra katkıda bulunan compiland için benzersiz tanımlayıcıyı içeren `DWORD` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

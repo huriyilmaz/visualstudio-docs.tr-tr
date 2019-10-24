@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_nostackordering | Microsoft Docs
+title: 'IDiaSymbol:: get_noStackOrdering | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d36a934fe9475613e916d51290ac6f8960a6b42
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: a9c93119ee89355c9aae5c91caa185c9a1a6bb5d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64792003"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739719"
 ---
-# <a name="idiasymbolgetnostackordering"></a>IDiaSymbol::get_noStackOrdering
-Bu işlev, yığın sıralama yok yığın arabelleği denetimi bir parçası olarak yapılıyordu olup olmadığını gösteren bir bayrak alır ([/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) derleyici seçeneği).
+# <a name="idiasymbolget_nostackordering"></a>IDiaSymbol::get_noStackOrdering
+Bu işlev, yığın arabelleği denetiminin ([/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) derleyici seçeneği) bir parçası olarak yığın sıralaması yapılıp yapılmayacağını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,21 +33,21 @@ HRESULT get_noStackOrdering(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` hiçbir yığın sıralama, yığın arabelleği denetimi; bir parçası olarak yapılıyordu Aksi halde döndürür `FALSE`.
+dışı Yığın arabelleği denetiminin parçası olarak yığın sıralaması yapılamadığını `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> `S_FALSE` dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [/GS (Arabellek Güvenlik Denetimi)](/cpp/build/reference/gs-buffer-security-check)

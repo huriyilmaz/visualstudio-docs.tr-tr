@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkhelper::imageforva | Microsoft Docs
+title: 'IDiaStackWalkHelper:: ımageforva | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56f71364f28bec56c058a52f5a9e79c6bba298b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 609a9370181937323f2bc3e8ca0a0765cd1f4a12
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837959"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741380"
 ---
 # <a name="idiastackwalkhelperimageforva"></a>IDiaStackWalkHelper::imageForVA
-Bellek bir sanal adres yere yürütülebilir dosyası bellek alanında belirtilen bir yürütülebilir dosyası görüntü başlangıcını döndürür.
+Yürütülebilir dosyanın bellek alanında bir sanal adres verildiğinde, bir yürütülebilir dosyanın belleğindeki görüntüsünün başlangıcını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,14 +34,14 @@ HRESULT imageForVA(
 #### <a name="parameters"></a>Parametreler
  `vaContext`
 
-[in] Yere yürütülebilir dosyası alanda bulunan sanal adres.
+'ndaki Yürütülebilir dosyanın alanında bir yerde yer alan sanal adres.
 
  `pvaImageStart`
 
-[out] Yürütülebilir dosyası görüntüsünün sanal başlangıç adresini döndürür.
+dışı Yürütülebilir dosyanın başlangıç sanal adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

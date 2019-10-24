@@ -1,5 +1,5 @@
 ---
-title: Idiaenumtables::Skip | Microsoft Docs
+title: 'IDiaEnumTables:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24232878452082dd1769c9bc9f1cd22d081968f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48e4da48699bc9797c7ccbfb0f21bb0b2007c752
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832699"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743713"
 ---
 # <a name="idiaenumtablesskip"></a>IDiaEnumTables::Skip
-Bir numaralandırma sıralı tablolarda belirtilen sayıda atlar.
+Sabit Listesi dizisinde belirtilen sayıda tabloyu atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>Parametreler
  `celt`
 
-[in] Atlamak için sabit listesi sırası tablo sayısı.
+'ndaki Atlanacak numaralandırma dizisindeki tablo sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` atlamak için daha fazla tablo varsa.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, atlanacak tablo yoksa `S_FALSE` döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

@@ -14,12 +14,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64641ebf47e5a5c91b7e20f1ddafe9490649ec9a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d9e260bc6d290729ae470ca906e9ab5c3d219112
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622393"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748558"
 ---
 # <a name="visual-basic-defaults-projects-options-dialog-box"></a>Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu
 Visual Basic proje seçenekleri için varsayılan ayarları belirtir. Yeni bir proje oluşturulduğunda, belirtilen seçenek deyimleri kod düzenleyicisinde proje başlığına eklenecektir. Seçenekler tüm Visual Basic projelerine uygulanır.
@@ -42,6 +42,6 @@ Dize karşılaştırmaları için derleyici varsayılanını ayarlar: ikili (bü
 
 Yerel tür çıkarımı için varsayılan derleyicisini ayarlar. Varsayılan olarak, **seçenek çıkarımı** yeni oluşturulan projeler için **Açık** olarak ayarlanır ve Visual Basic önceki sürümlerinde oluşturulan geçirilmiş projeler için **devre dışı bırakır** . Daha fazla bilgi için bkz. [/optionfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çözümler ve Projeler](../../ide/solutions-and-projects-in-visual-studio.md)

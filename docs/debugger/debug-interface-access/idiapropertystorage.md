@@ -1,5 +1,5 @@
 ---
-title: Idiapropertystorage | Microsoft Docs
+title: IDiaPropertyStorage | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81d1a256b4300510ed31c163d92cea89df884aac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2de57f0d3bd44e4d46f19ee74484380bf0e6f2ae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832752"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742839"
 ---
 # <a name="idiapropertystorage"></a>IDiaPropertyStorage
-DIA özellik kümesi kalıcı özelliklerini okumanıza izin verir.
+Bir DIA özellik kümesinin kalıcı özelliklerini okumanızı sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,25 +28,25 @@ DIA özellik kümesi kalıcı özelliklerini okumanıza izin verir.
 IDiaPropertyStorage : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
-Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDiaPropertyStorage`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+Aşağıdaki tabloda `IDiaPropertyStorage`yöntemleri gösterilmektedir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaPropertyStorage::Enum](../../debugger/debug-interface-access/idiapropertystorage-enum.md)|Bir işaretçi özellikleri bu kümesi içinde numaralandırıcıyı alır.|
-|[IDiaPropertyStorage::ReadBOOL](../../debugger/debug-interface-access/idiapropertystorage-readbool.md)|Okur `BOOL` değerlerde özellik kümesi.|
-|[IDiaPropertyStorage::ReadBSTR](../../debugger/debug-interface-access/idiapropertystorage-readbstr.md)|Okur `BSTR` değerlerde özellik kümesi.|
-|[IDiaPropertyStorage::ReadDWORD](../../debugger/debug-interface-access/idiapropertystorage-readdword.md)|Okur `DWORD` değerlerde özellik kümesi.|
-|[IDiaPropertyStorage::ReadLONG](../../debugger/debug-interface-access/idiapropertystorage-readlong.md)|Okur `LONG` değerlerde özellik kümesi.|
-|[IDiaPropertyStorage::ReadMultiple](../../debugger/debug-interface-access/idiapropertystorage-readmultiple.md)|Bir özellik kümesi özellik değerlerini okur.|
-|[IDiaPropertyStorage::ReadPropertyNames](../../debugger/debug-interface-access/idiapropertystorage-readpropertynames.md)|Dize adları için karşılık gelen alır, özellik tanımlayıcıları verilir.|
-|[IDiaPropertyStorage::ReadULONGLONG](../../debugger/debug-interface-access/idiapropertystorage-readulonglong.md)|Okur `ULONGLONG` değerlerde özellik kümesi.|
+|[IDiaPropertyStorage::Enum](../../debugger/debug-interface-access/idiapropertystorage-enum.md)|Bu küme içindeki özellikler için bir Numaralandırıcı işaretçisi alır.|
+|[IDiaPropertyStorage::ReadBOOL](../../debugger/debug-interface-access/idiapropertystorage-readbool.md)|Bir özellik kümesindeki `BOOL` değerleri okur.|
+|[IDiaPropertyStorage::ReadBSTR](../../debugger/debug-interface-access/idiapropertystorage-readbstr.md)|Bir özellik kümesindeki `BSTR` değerleri okur.|
+|[IDiaPropertyStorage::ReadDWORD](../../debugger/debug-interface-access/idiapropertystorage-readdword.md)|Bir özellik kümesindeki `DWORD` değerleri okur.|
+|[IDiaPropertyStorage::ReadLONG](../../debugger/debug-interface-access/idiapropertystorage-readlong.md)|Bir özellik kümesindeki `LONG` değerleri okur.|
+|[IDiaPropertyStorage::ReadMultiple](../../debugger/debug-interface-access/idiapropertystorage-readmultiple.md)|Özellik kümesindeki özellik değerlerini okur.|
+|[IDiaPropertyStorage::ReadPropertyNames](../../debugger/debug-interface-access/idiapropertystorage-readpropertynames.md)|Verilen özellik tanımlayıcıları için karşılık gelen dize adlarını alır.|
+|[IDiaPropertyStorage::ReadULONGLONG](../../debugger/debug-interface-access/idiapropertystorage-readulonglong.md)|Bir özellik kümesindeki `ULONGLONG` değerleri okur.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bir özellik kümesi içindeki her bir özellik bir özellik tanımlayıcısı (ID), dört baytlık tanımlanır `ULONG` küme için benzersiz bir değer. Aracılığıyla kullanıma sunulan özellikleri `IDiaPropertyStorage` arabirimi üst arabiriminde özellikleri karşılık gelir. Örneğin, özelliklerini [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) arabirimi adıyla erişilebilir `IDiaPropertyStorage` arabirimi (ancak özelliği erişilebilir olsa da, bu özelliği için geçerli gelmez olduğunu unutmayın bir belirli `IDiaSymbol` nesne).
+Bir özellik kümesi içindeki her özellik, bir özellik tanımlayıcısı (ID) tarafından tanımlanır ve dört `ULONG` baytlık bir değer, bu küme için benzersizdir. `IDiaPropertyStorage` arabirimi aracılığıyla kullanıma sunulan özellikler, üst arabirimde bulunan özelliklere karşılık gelir. Örneğin, [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) arabiriminin özelliklerine `IDiaPropertyStorage` arabirimi aracılığıyla ad ile erişilebilir (ancak, özelliğin erişilebilir olabileceği halde, özelliğin belirli bir `IDiaSymbol` nesnesi için geçerli olduğu anlamına gelmez).
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim çağırarak elde `QueryInterface` başka bir arabirimdeki yöntem. İçin aşağıdaki arabirimlerinden sorgulanabilir `IDiaPropertyStorage` arabirimi:
+Başka bir arabirimdeki `QueryInterface` yöntemini çağırarak bu arabirimi elde edin. `IDiaPropertyStorage` arabirimi için aşağıdaki arabirimler sorgulanabilir:
 
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
 
@@ -63,7 +63,7 @@ Bu arabirim çağırarak elde `QueryInterface` başka bir arabirimdeki yöntem. 
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 
 ## <a name="example"></a>Örnek
-Bu örnek tarafından kullanıma sunulan tüm özellikleri görüntüleyen bir işlev göstermektedir `IDiaPropertyStorage` nesne. Bkz: [Idiaenumınjectedsources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) örneği nasıl arabirimi `IDiaPropertyStorage` arabirimi öğesinden alınan [Idiaınjectedsource](../../debugger/debug-interface-access/idiainjectedsource.md) arabirimi.
+Bu örnek, `IDiaPropertyStorage` nesnesi tarafından kullanıma sunulan tüm özellikleri görüntüleyen bir işlevi gösterir. `IDiaPropertyStorage` arabiriminin [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) arabiriminden nasıl elde edilildiği hakkında bir örnek için bkz. [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimi.
 
 ```C++
 void PrintPropertyStorage(IDiaPropertyStorage* pPropertyStorage)
@@ -120,13 +120,13 @@ void PrintPropertyStorage(IDiaPropertyStorage* pPropertyStorage)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: dia2.h
+Üstbilgi: dia2. h
 
-Kitaplık: diaguids.lib
+Kitaplık: diaguid. lib
 
-DLL: msdia80.dll
+DLL: Msdia80. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

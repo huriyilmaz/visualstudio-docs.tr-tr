@@ -1,5 +1,5 @@
 ---
-title: Idiaınjectedsource | Microsoft Docs
+title: IDiaInjectedSource | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e8956fb7da61519ed9d0939da087ce8a4181ac1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 994f454372883f2516d1eab03bf1152693969b16
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839881"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743316"
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
-Erişim eklenen DIA veri kaynağında depolanan kaynak kodu.
+, DIA veri kaynağında depolanan eklenmiş kaynak koduna erişir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,27 +28,27 @@ Erişim eklenen DIA veri kaynağında depolanan kaynak kodu.
 IDiaInjectedSource : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
-Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDiaInjectedSource`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+Aşağıdaki tabloda `IDiaInjectedSource`yöntemleri gösterilmektedir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaInjectedSource::get_crc](../../debugger/debug-interface-access/idiainjectedsource-get-crc.md)|Kaynak kodunun bayt hesaplanan bir Döngüsel artıklık denetimi (CRC) alır.|
-|[IDiaInjectedSource::get_length](../../debugger/debug-interface-access/idiainjectedsource-get-length.md)|Kod bayt sayısını alır.|
-|[IDiaInjectedSource::get_filename](../../debugger/debug-interface-access/idiainjectedsource-get-filename.md)|Kaynak dosya adını alır.|
-|[IDiaInjectedSource::get_filename](../../debugger/debug-interface-access/idiainjectedsource-get-objectfilename.md)|Kaynak için derlenen nesne dosyası adını alır.|
-|[IDiaInjectedSource::get_virtualFilename](../../debugger/debug-interface-access/idiainjectedsource-get-virtualfilename.md)|Dosya olmayan kaynak koduna verilen ad alır; diğer bir deyişle, eklendi kod.|
-|[IDiaInjectedSource::get_sourceCompression](../../debugger/debug-interface-access/idiainjectedsource-get-sourcecompression.md)|Kullanılan kaynak sıkıştırma göstergesi alır.|
-|[IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)|Kaynak kodu bayt alır.|
+|[IDiaInjectedSource::get_crc](../../debugger/debug-interface-access/idiainjectedsource-get-crc.md)|Kaynak kodun baytlarından hesaplanan Döngüsel artıklık denetimi (CRC) alır.|
+|[IDiaInjectedSource::get_length](../../debugger/debug-interface-access/idiainjectedsource-get-length.md)|Kodun bayt sayısını alır.|
+|[IDiaInjectedSource::get_filename](../../debugger/debug-interface-access/idiainjectedsource-get-filename.md)|Kaynak için dosya adını alır.|
+|[IDiaInjectedSource::get_filename](../../debugger/debug-interface-access/idiainjectedsource-get-objectfilename.md)|Kaynağın derlendiği nesne dosya adını alır.|
+|[IDiaInjectedSource::get_virtualFilename](../../debugger/debug-interface-access/idiainjectedsource-get-virtualfilename.md)|Dosya olmayan kaynak koda verilen adı alır; diğer bir deyişle, eklenen kod.|
+|[IDiaInjectedSource::get_sourceCompression](../../debugger/debug-interface-access/idiainjectedsource-get-sourcecompression.md)|Kullanılan kaynak sıkıştırma göstergesini alır.|
+|[IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)|Kaynak kodu baytlarını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
-Eklenen kaynak derleme sırasında eklenen metindir. Önişlemci gelmez `#include` C++ içinde kullanılır.
+Eklenen kaynak, derleme sırasında eklenen metindir. Bu, ' de C++kullanılan Önişlemci `#include` anlamına gelmez.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim çağırarak elde [Idiaenumınjectedsources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) veya [Idiaenumınjectedsources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) yöntemleri. Bkz: [Idiaenumınjectedsources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimi alma örneği `IDiaInjectedSource` arabirimi.
+[IDiaEnumInjectedSources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) veya [IDiaEnumInjectedSources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) yöntemlerini çağırarak bu arabirimi elde edin. `IDiaInjectedSource` arabirimini alma örneği için bkz. [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimi.
 
 ## <a name="example"></a>Örnek
-Bu örnekte, kullanılabilir verileri görüntüler `IDiaInjectedSource` arabirimi. Bir alternatif bir yaklaşım kullanarak için [Idiapropertystorage](../../debugger/debug-interface-access/idiapropertystorage.md) arabirim, örneğe bakın [Idiaenumınjectedsources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimi.
+Bu örnek `IDiaInjectedSource` arabiriminden kullanılabilir verileri görüntüler. [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) arabirimini kullanan alternatif bir yaklaşım Için, [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimindeki örneğe bakın.
 
 ```C++
 void PrintInjectedSource(IDiaInjectedSource* pSource)
@@ -113,13 +113,13 @@ void PrintInjectedSource(IDiaInjectedSource* pSource)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: dia2.h
+Üstbilgi: dia2. h
 
-Kitaplık: diaguids.lib
+Kitaplık: diaguid. lib
 
-DLL: msdia80.dll
+DLL: Msdia80. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)
 - [IDiaEnumInjectedSources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)

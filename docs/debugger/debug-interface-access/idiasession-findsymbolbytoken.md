@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbytoken | Microsoft Docs
+title: 'IDiaSession:: findSymbolByToken | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f342efce1c05e305a3e55d6372d1862b04b1197
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 098d84d6c7c79fee5fea5e5b2b36136bf7b55b26
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827321"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742017"
 ---
 # <a name="idiasessionfindsymbolbytoken"></a>IDiaSession::findSymbolByToken
-Belirtilen meta veri belirteci içeren simgeyi alır.
+Belirtilen meta veri belirtecini içeren simgeyi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,18 +35,18 @@ HRESULT findSymbolByToken ( 
 #### <a name="parameters"></a>Parametreler
  `token`
 
-[in] Belirteç belirtir.
+'ndaki Belirteci belirtir.
 
  `symtag`
 
-[in] Bulunacak simge türü. Değerleri verilerinden alınır [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) sabit listesi.
+'ndaki Bulunan sembol türü. Değerler [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından alınır.
 
  `ppSymbol`
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) sembol temsil eden bir nesne alındı.
+dışı Alınan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 
@@ -55,7 +55,7 @@ IDiaSymbol* pFunc;
 pSession->findSymbolByToken( token, SymTagFunction, &pFunc );
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

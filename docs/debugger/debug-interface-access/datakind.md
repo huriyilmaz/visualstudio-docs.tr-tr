@@ -1,5 +1,5 @@
 ---
-title: DataKind | Microsoft Docs
+title: Veri türü | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21630bea3022769d18748190c2a2d24c0e519a3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 31be0615fd7d1da279ecf414260af21cb8239dc8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554928"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745282"
 ---
 # <a name="datakind"></a>DataKind
-Veri değeri belirli kapsamını belirtir.
+Bir veri değerinin belirli kapsamını gösterir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,33 +39,33 @@ enum DataKind {
 };
 ```
 
-## <a name="elements"></a>Öğeleri
-DataIsUnknown veri sembol belirlenemiyor.
+## <a name="elements"></a>Öğeler
+Dataısunknown veri simgesi belirlenemiyor.
 
-Yerel bir değişken DataIsLocal veri öğesidir.
+Dataıslocal veri öğesi yerel bir değişkendir.
 
-Statik bir yerel değişken DataIsStaticLocal veri öğesidir.
+Dataısstaticlocal veri öğesi statik bir yerel değişkendir.
 
-Biçimsel parametre DataIsParam veri öğesidir.
+DataIsParam veri öğesi biçimsel bir parametredir.
 
-DataIsObjectPtr veri öğesi olan bir nesne işaretçisi (`this`).
+DataIsObjectPtr veri öğesi bir nesne işaretçisidir (`this`).
 
-DataIsFileStatic veri öğesi dosya kapsamlı bir değişkendir.
+Dataısfilestatic veri öğesi, dosya kapsamlı bir değişkendir.
 
-DataIsGlobal veri öğesi genel bir değişkendir.
+Dataısglobal veri öğesi genel bir değişkendir.
 
-Bir nesne üye değişkeni DataIsMember veri öğesidir.
+DataIsMember veri öğesi bir nesne üyesi değişkenidir.
 
-Bir sınıfın statik değişken DataIsStaticMember veri öğesidir.
+Dataısstaticmember veri öğesi bir sınıf statik değişkenidir.
 
-DataIsConstant veri öğesi, bir sabit değerdir.
+DataIsConstant veri öğesi sabit bir değerdir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu sabit listesi değerleri tarafından döndürülen [Idiasymbol::get_datakind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) yöntemi.
+Bu Numaralandırmadaki değerler [IDiaSymbol:: get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) yöntemi tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: cvconst.h
+Üst bilgi: cvconst. h
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)

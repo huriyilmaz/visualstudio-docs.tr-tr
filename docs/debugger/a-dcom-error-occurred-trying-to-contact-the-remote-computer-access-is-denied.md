@@ -20,35 +20,35 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75d1c9f9c23df04ca19f68dada718fba12dc51f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ffc9cae027a078a62b1ef7bab16994a418d76763
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564697"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745838"
 ---
 # <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>Uzak bilgisayara erişilmeye çalışılırken DCOM hatası oluştu. Erişim reddedildi.
 Uzaktan hata ayıklama, aşağıdaki durumlarda yerel ve uzak bilgisayarlar arasında iletişim kurmak için DCOM kullanır:
 
-- Hata ayıklayıcısını ayarlamak **yerel uyumluluk modu** veya **yönetilen uyumluluk modu** iade **Araçlar > Seçenekler > hata ayıklama** sayfası
+- Hata ayıklayıcı **Yerel uyumluluk moduna** ayarlı veya **yönetilen uyumluluk modu** **Araçlar > Seçenekler > hata ayıklama** sayfasında işaretlendi
 
-- Hata ayıklama yönetilen C++ (C++/CLI) kodu.
+- Yönetilen C++ (C++/CLI) koddan hata ayıklaması yapıyorsanız.
 
-- Visual Studio 2013'te zaman **yerel Düzenle ve Devam Et'i etkinleştir** iade **Araçlar > Seçenekler > hata ayıklama** sayfası
+- Visual Studio 2013, **Yerel Düzenle ve devam et** ' i etkinleştir **araçlar > Seçenekler > hata ayıklama** sayfasında işaretlenir
 
 - Bazı üçüncü taraf hata ayıklama senaryoları
 
-  Visual Studio işlemini kendi kimlik doğrulaması yapamaz (veya sağlanan kimlik bilgilerinin yeterli kabul zaman) Bu hata oluşur. DCOM üzerinden uzaktan hata ayıklayıcı işleme. Bir veya daha fazla aşağıdaki geçici çözümlerden sorunu çözebilir:
+  Bu hata, Visual Studio işleminin kimlik doğrulaması yapamadığında (veya sağlanan kimlik bilgileri yetersiz olduğu kabul edildiğinde) DCOM üzerinden uzaktan hata ayıklayıcı işlemi için oluşur. Aşağıdaki geçici çözümlerden biri veya birkaçı sorunu çözebilir:
 
-- Devre dışı **yerel uyumluluk modu** ve **yönetilen uyumluluk modu**.
+- **Yerel uyumluluk modunu** ve **yönetilen uyumluluk modunu**kapatın.
 
-- Visual Studio 2013'te kapatmak **yerel Düzenle ve Devam Et'i etkinleştir**.
+- Visual Studio 2013, **yerel düzenlemeyi etkinleştir ve devam et**' i kapatın.
 
-- Her iki bilgisayar yeniden başlatın.
+- Her iki bilgisayarı da yeniden başlatın.
 
-- Uzaktan hata ayıklama kimlik bilgilerinin girilmesi gerekir, kimlik bilgilerini kaydetme seçeneğini denetleyin.
+- Uzaktan hata ayıklama kimlik bilgilerini girmeyi gerektiriyorsa, kimlik bilgilerini kaydetme seçeneğini işaretleyin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

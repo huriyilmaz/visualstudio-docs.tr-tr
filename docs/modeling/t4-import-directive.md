@@ -7,16 +7,16 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74181ea3bb086688893749850adb697c75b6eac1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1165a966a532dcb9f07bbc1e46f08a1cb26de161
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606437"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748199"
 ---
 # <a name="t4-import-directive"></a>T4 İçe Aktarma Yönergesi
 
-Visual Studio T4 metin şablonunun kod blokları ' nda, `import` yönergesi, başka bir ad alanındaki öğelere tam nitelikli bir ad sağlamadan başvurabileceğiniz bir öğe sağlar. Bu, [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] içinde C# veya `imports` `using` eşdeğerdir.
+Visual Studio T4 metin şablonunun kod blokları ' nda, `import` yönergesi, başka bir ad alanındaki öğelere tam nitelikli bir ad sağlamadan başvurabileceğiniz bir öğe sağlar. Bu,[!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]içinde C# veya`imports``using` eşdeğerdir.
 
 T4 Metin şablonları yazma hakkında genel bir bakış için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
 
@@ -49,6 +49,6 @@ The file contains: <#=  fileContent #>
 
 - DSL ad alanı
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [T4 Derleme Yönergesi](../modeling/t4-assembly-directive.md)

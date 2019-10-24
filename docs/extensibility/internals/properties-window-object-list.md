@@ -10,24 +10,24 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 751339d0e9f8d4dd6d43a1f786e08b57d0ac7555
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e50b3fe46edb8d14cad9a03a45bc8650cb9713ab
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347806"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72725182"
 ---
 # <a name="properties-window-object-list"></a>Özellikler Penceresi Nesne Listesi
-Nesne listesinde **özellikleri** bir veya daha fazla seçili pencereleri içinde kullanılabilir olan diğer nesnelerin seçimini değiştirmek izin veren bir açılır listede bir penceredir. Bu listede farklı bir nesne seçmek için bir çağrı tetikler <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> yeni bir nesne seçili ortam bildirmek için. Görüntülenen bilgileri **özellikleri** penceresi yeni seçilen bir nesneyle ilişkili özellikleri görüntülemek için sonra değiştirilir.
+**Özellikler** penceresindeki nesne listesi, seçimi bir veya daha fazla seçili pencerede bulunan diğer nesnelerle değiştirmenize olanak tanıyan bir açılan liste listesidir. Bu listenin içinden farklı bir nesne seçilmesi, ortama yeni bir nesnenin seçili olduğunu bildirmek için <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> bir çağrı tetikler. **Özellikler** penceresinde görünen bilgiler daha sonra yeni seçilen nesneyle ilişkili özellikleri gösterecek şekilde değiştirilir.
 
 ## <a name="the-object-list"></a>Nesne listesi
- Nesne listesine iki alandan oluşur: nesne adı (kalın olarak gösterilir) ve nesne türü.
+ Nesne listesi iki alandan oluşur: nesne adı (kalın olarak gösterilir) ve nesne türü.
 
- Soldaki kalın nesne türü için görüntülenen nesne adı nesnesinden alınır kullanarak `Name` özelliği tarafından sağlanan <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> arabirimi. <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo.GetClassInfo%2A>, yalnızca metottaki <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>, döndürür <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo> o arabirimin coclass'ı için. **Özellikleri** penceresi kullanan <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> aşağı açılan listesinde nesne adı olarak gösterilen coclass adı.
+ Kalın yazı tipiyle nesne türünün solunda görünen nesne adı, <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> arabirimi tarafından sunulan `Name` özelliği kullanılarak nesnenin kendisinden alınır. <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo.GetClassInfo%2A>, <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>tek yöntemi, bu arabirimin coclass 'ı için <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo> döndürür. **Özellikler** penceresi, açılan listede nesne adı olarak görünen coclass 'ın adını almak için <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo> kullanır.
 
- Nesne yoksa bir `Name` özelliği, bir ad nesne listesinin adı alanında görüntülenmez. Nesne listesinde görüntülenen adını isterseniz nesnesine Name özelliği ekleyebilirsiniz.
+ Nesnenin `Name` bir özelliği yoksa, nesne listesinin ad alanında bir ad görüntülenmez. Adı nesne listesinde görüntülenmesini istiyorsanız nesnesine bir ad özelliği ekleyebilirsiniz.
 
- COM nesnesi uygulamazsa <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>, **özellikleri** penceresinde, listenin sol tarafında arabirim adını nesne adının yerine görüntülenir.
+ COM nesnesi <xref:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo>uygulamadıysa, **Özellikler** penceresi, listenin sol tarafındaki nesne adı yerine arabirim adını görüntüler.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Özellikleri Genişletme](../../extensibility/internals/extending-properties.md)

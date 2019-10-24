@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_numberOfAcceleratorPointerTags | Microsoft Docs
+title: 'IDiaSymbol:: get_numberOfAcceleratorPointerTags | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 283533b20614ea727be620669ea5ab66cf00e5ed
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 47c5827348c7b7cb450017a0e6176d71f555c841
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835780"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739695"
 ---
-# <a name="idiasymbolgetnumberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
-Hızlandırıcı işaretçi etiket sayısı, bir C++ AMP saplama işlevde döndürür.
+# <a name="idiasymbolget_numberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
+Bir C++ amp saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,13 +30,13 @@ HRESULT get_numberOfAcceleratorPointerTags(
 #### <a name="parameters"></a>Parametreler
  `count`
 
-[out] Bir işaretçi bir `DWORD` işaretçi etiketleri Hızlandırıcı sayısını içeren bir C++ AMP saplama işlevi.
+dışı Bir C++ amp saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını tutan `DWORD` işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem üzerinde çağrılır bir `IDiaSymbol` karşılık gelen bir C++ AMP Hızlandırıcısı saplama işlevi için arabirim.
+ Bu yöntem, bir C++ amp Hızlandırıcısı saplama işlevine karşılık gelen bir `IDiaSymbol` arabiriminde çağrılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

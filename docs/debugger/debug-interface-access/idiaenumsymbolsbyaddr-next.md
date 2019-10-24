@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbolsbyaddr::Next | Microsoft Docs
+title: 'IDiaEnumSymbolsByAddr:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e52567eddcbb6c4f372256e66b7b723bc7aa7394
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 424924f3fab62cf862420d58c947bba16343141d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833447"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743878"
 ---
 # <a name="idiaenumsymbolsbyaddrnext"></a>IDiaEnumSymbolsByAddr::Next
-Sonraki simgeleri sırayla adresine göre alır.
+Sıradaki simgeleri adrese göre alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,22 +35,22 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Alınacak Numaralandırıcı sembolleri sayısı.
+'ndaki Numaralandırıcıda alınacak olan simgelerin sayısı.
 
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp
+ rgelt
 
-[out] İle doldurulacak bir dizi [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) istenen simgeleri temsil eden nesne.
+dışı İstenen sembolleri temsil eden [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesiyle doldurulacak bir dizi.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Simgelerin sayısını getirilen bir numaralandırıcı döndürür.
+dışı Getirilen Numaralandırıcı içindeki simgelerin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` daha fazla sembol varsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Daha fazla sembol yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, numaralandırıcı konumu alınan öğelerin sayısı ile güncelleştirir.
+ Bu yöntem, Numaralandırıcı konumunu getirilen öğe sayısına göre güncelleştirir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

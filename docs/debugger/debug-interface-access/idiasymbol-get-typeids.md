@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_typeıds | Microsoft Docs
+title: 'IDiaSymbol:: get_typeIds | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7b32ab5b1965ea7a641cfac470addd2aae0ede0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4db7c1d7e3ed19268d94b28a7f0500788f7d21f5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64791771"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739068"
 ---
-# <a name="idiasymbolgettypeids"></a>IDiaSymbol::get_typeIds
-Bu simgenin derleyici özel tür tanımlayıcı değerleri dizisini alır.
+# <a name="idiasymbolget_typeids"></a>IDiaSymbol::get_typeIds
+Bu simge için derleyiciye özgü tür tanımlayıcı değerlerinin dizisini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,21 +35,21 @@ HRESULT get_typeIds ( 
 #### <a name="parameters"></a>Parametreler
  `cTypeIds`
 
-[in] Verileri tutmak için arabellek boyutu.
+'ndaki Verilerin tutulacağı arabelleğin boyutu.
 
  `pcTypeIds`
 
-[out] Sayısını döndürür `typeIds` yazılan veya `typeIds` olduğu `NULL`, ardından tip tanımlayıcıları kullanılabilir toplam sayısı.
+dışı Yazılan `typeIds` sayısını döndürür veya `typeIds` `NULL`ise, bulunan toplam tür tanımlayıcısı sayısıdır.
 
  `typeIds[]`
 
-[out] Oturum türü tanımlayıcılar doldurulması için bir dizi.
+dışı Tür tanımlayıcılarıyla doldurulacak bir dizi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

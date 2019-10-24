@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_maxstack | Microsoft Docs
+title: 'IDiaFrameData:: get_maxStack | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b609ba9357e96d8e7ece4459e33991a599b47ee7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fc5eaa20c5167897ccb19d5e142656ed314a91e6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839972"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743537"
 ---
-# <a name="idiaframedatagetmaxstack"></a>IDiaFrameData::get_maxStack
-En büyük yığın çerçevesinde üzerinde gönderilen bayt sayısını alır.
+# <a name="idiaframedataget_maxstack"></a>IDiaFrameData::get_maxStack
+Çerçevedeki yığına gönderilen en fazla bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,14 +33,14 @@ HRESULT get_maxStack ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Yığına en büyük bayt sayısını döndürür.
+dışı Yığına gönderilen en fazla bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından döndürülen değer, genellikle bir programı dizenin yorumu kullanılır (bkz [Idiaframedata::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) yöntemi bir program dize tanımı için).
+ Bu yöntemin döndürdüğü değer genellikle program dizesinin yorumu içinde kullanılır (program dizesinin tanımı için [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) metoduna bakın).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)

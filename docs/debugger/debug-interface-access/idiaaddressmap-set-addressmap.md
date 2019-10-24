@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::set_addressmap | Microsoft Docs
+title: 'IDiaAddressMap:: set_addressMap | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 963ee64b639780bae60a4c2655db8b666d87c702
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8414788af44d78943088b78b2d3e42a5a8d8c50b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554254"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745022"
 ---
-# <a name="idiaaddressmapsetaddressmap"></a>IDiaAddressMap::set_addressMap
-Görüntü düzen çevirileri desteklemek için bir adres Haritası sağlar.
+# <a name="idiaaddressmapset_addressmap"></a>IDiaAddressMap::set_addressMap
+Görüntü düzeni çevirilerini desteklemek için bir adres haritası sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,23 +35,23 @@ HRESULT set_addressMap ( 
 #### <a name="parameters"></a>Parametreler
  `cbData`
 
-[in] İçindeki öğelerin sayısını `data` parametresi.
+'ndaki `data` parametresindeki öğelerin sayısı.
 
  `data[]`
 
-[in] Bir dizi [DiaAddressMapEntry yapısı](../../debugger/debug-interface-access/diaaddressmapentry.md) çevirisi eşlemesini tanımlayan yapılar.
+'ndaki Çeviri eşlemesini tanımlayan [DiaAddressMapEntry yapı](../../debugger/debug-interface-access/diaaddressmapentry.md) yapılarının dizisi.
 
  `imagetoSymbols`
 
-[in] `TRUE` varsa `data` parametre (hata ayıklama sembolleri tarafından açıklandığı gibi) yeni görüntü düzen bir eşlemden özgün düzene tanımlar. `FALSE` varsa `data` özgün düzenden yapılan yeni görüntü düzen haritasıdır.
+[in] `data` parametresi yeni görüntü düzeninden özgün düzene (hata ayıklama sembolleri tarafından açıklandığı gibi) bir harita tanımlıyorsa `TRUE`. `data` özgün düzenden alınan yeni görüntü düzenine bir eşleme ise `FALSE`.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Genellikle, DIA adres çevirisi haritalar program veritabanı (.pdb) dosyasından alır. Bu değerleri eksikse [Idiaaddressmap::set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemi iki kez çağrılır kez `imagetoSymbols` parametresini `TRUE` ve bir kez `imagetoSymbols` parametresini `FALSE`. Adres eşlemesi çevirileri kullanarak etkinleştirilemez [Idiaaddressmap::put_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) yöntemi sürece her iki çeviri haritalar sağlanır.
+ Bu, genellikle, program veritabanı (. pdb) dosyasındaki adres çevirisi haritalarını alır. Bu değerler eksikse, [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemi iki kez çağrılır, `imagetoSymbols` parametresi `TRUE` ve bir kez `imagetoSymbols` parametresi `FALSE`olarak ayarlanır. Her iki çeviri eşlemesi sağlanmamışsa, [IDiaAddressMap::P ut_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) yöntemi kullanılarak adres Haritası çevirileri etkinleştirilemez.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [DiaAddressMapEntry Yapısı](../../debugger/debug-interface-access/diaaddressmapentry.md)
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 - [IDiaAddressMap::put_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)

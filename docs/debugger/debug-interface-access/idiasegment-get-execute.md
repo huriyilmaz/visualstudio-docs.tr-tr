@@ -1,5 +1,5 @@
 ---
-title: Idiasegment::get_execute | Microsoft Docs
+title: 'IDiaSegment:: get_execute | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7851d379793ee21562b2993c89442a7fb728ec00
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4a2673880b80f229b05f5efba5c5dfb708aec0f7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839403"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742457"
 ---
-# <a name="idiasegmentgetexecute"></a>IDiaSegment::get_execute
-Segment yürütülebilir olup olmadığını belirten bir bayrak alır.
+# <a name="idiasegmentget_execute"></a>IDiaSegment::get_execute
+Segmentin yürütülebilir olup olmadığını gösteren bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_execute ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` kesim olarak çalıştırılabilir; Aksi takdirde işaretlenmişse döndürür `FALSE`.
+dışı Segment çalıştırılabilir olarak işaretlenmişse `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

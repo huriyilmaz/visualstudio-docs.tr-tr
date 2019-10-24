@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findInlineeLines | Microsoft Docs
+title: 'IDiaSymbol:: findInlineeLines | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2f5f38205770b7b7574a37b700b3c9b23b4fe90
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4876c3fe5d44ae35a26da2b68765eacc01ccfba9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62832443"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741228"
 ---
 # <a name="idiasymbolfindinlineelines"></a>IDiaSymbol::findInlineeLines
-Satır numarası bilgisi tüm işlevlerin satır içine alınmış, doğrudan veya dolaylı olarak bu sembol yinelemek bir istemci sağlayan bir sabit listesi alır.
+Bir istemcinin, Bu sembolde doğrudan veya dolaylı olarak, satır numarası bilgileri üzerinden yineleme yapmasına izin veren bir sabit listesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,12 +31,12 @@ HRESULT findInlineeLines ( 
 #### <a name="parameters"></a>Parametreler
  `ppResult`
 
-[out] Tutan bir `IDiaEnumLineNumbers` alınan satır numaraları listesi içeren nesne.
+dışı Alınan satır numaralarının listesini içeren `IDiaEnumLineNumbers` nesnesini barındırır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

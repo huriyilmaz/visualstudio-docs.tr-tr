@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_bitposition | Microsoft Docs
+title: 'IDiaSymbol:: get_bitPosition | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7752e5f6bc7cb09fb80668aed8c3f8bc2bbeb312
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 709bb7e57ee6260ffcd7d8b1421526d3dd41052a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64813744"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740902"
 ---
-# <a name="idiasymbolgetbitposition"></a>IDiaSymbol::get_bitPosition
-Konum bit konumunu alır. Kullanılabilir [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olduğu `LocIsBitField`.
+# <a name="idiasymbolget_bitposition"></a>IDiaSymbol::get_bitPosition
+Konumun bit konumunu alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) `LocIsBitField`olduğunda kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,21 +33,21 @@ HRESULT get_bitPosition ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Konumun bit konumunu döndürür.
+dışı Konumun bit konumunu döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType Numaralandırması](../../debugger/debug-interface-access/locationtype.md)

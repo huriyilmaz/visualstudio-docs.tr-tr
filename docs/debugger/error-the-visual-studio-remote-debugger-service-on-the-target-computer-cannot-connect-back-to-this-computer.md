@@ -16,64 +16,64 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c07557fa64f86349a3baf8956d99b937ceab9f5a
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: 695c4c9e84ce9eb851a551dc9821bff00123a35c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043432"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737401"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Hata: Hedef bilgisayardaki Visual Studio Uzaktan Hata Ayıklayıcı hizmeti geriye bu bilgisayara bağlanamıyor
-Bu hata, uzaktan hata ayıklayıcı hizmeti hata ayıklaması yaptığınız bilgisayarda bağlanmayı denediğinde doğrulayamayan bir kullanıcı hesabı altında çalıştığından emin anlamına gelir. Uzak olduğunda eski hata ayıklama altyapısı kullanılarak hata ayıklama bu hata oluşabilir ve uzaktan hata ayıklayıcıyı bir hizmet olarak çalışıyor.
+Bu hata, uzaktan hata ayıklayıcı hizmetinin hata ayıklaması yaptığınız bilgisayara bağlanmayı denediğinde kimlik doğrulayamayan bir kullanıcı hesabı altında çalıştığı anlamına gelir. Bu hata, eski hata ayıklama altyapısı kullanılarak uzaktan hata ayıklanırken ve uzaktan hata ayıklayıcı bir hizmet olarak çalışırken oluşabilir.
 
- Aşağıdaki tabloda neler hesapları erişeceği gösterilmektedir bilgisayar:
+ Aşağıdaki tabloda, bilgisayara hangi hesapların erişebileceği gösterilmektedir:
 
 |||||
 |-|-|-|-|
-||LocalSystem hesabı|Etki alanı hesabı|Her iki bilgisayarda aynı kullanıcı adı ve parola sahip yerel hesaplar|
-|Her iki bilgisayar aynı etki alanında|Evet|Evet|Evet|
-|Her iki bilgisayarda çift yönlü güven bulunan etki alanları|Hayır|Hayır|Evet|
-|Bir çalışma grubunda bir veya her iki bilgisayar|Hayır|Hayır|Evet|
-|Farklı etki alanlarında bilgisayarları|Hayır|Hayır|Evet|
+||LocalSystem hesabı|Etki alanı hesabı|Her iki bilgisayarda da aynı Kullanıcı adı ve parolaya sahip yerel hesaplar|
+|Aynı etki alanındaki her iki bilgisayar|Evet|Evet|Evet|
+|İki yönlü güvene sahip etki alanlarındaki her iki bilgisayar|Hayır|Hayır|Evet|
+|Bir çalışma grubundaki bilgisayarlardan biri veya her ikisi|Hayır|Hayır|Evet|
+|Farklı etki alanlarındaki bilgisayarlar|Hayır|Hayır|Evet|
 
  Bunlara ek olarak:
 
-- Herhangi bir işlem hata ayıklama Visual Studio uzaktan hata ayıklayıcı hizmetin altında çalışacağı hesabın uzak bilgisayarda bir yönetici olmalıdır.
+- Visual Studio Uzaktan Hata Ayıklayıcı hizmetini çalıştırdığınız hesabın, uzak bilgisayarda bir yönetici olması gerekir, böylece herhangi bir işlemde hata ayıklayabilirler.
 
-- Hesabın ayrıca verilecek sahip `Log on as a service` kullanan uzak bilgisayardaki ayrıcalığını **yerel güvenlik ilkesi** yönetim aracı.
+- Hesaba Ayrıca **yerel güvenlik ilkesi** yönetim aracını kullanan uzak bilgisayarda `Log on as a service` ayrıcalığı verilmelidir.
 
-- Bir yerel hesap erişim bilgisayarı kullanıyorsanız, yerel bir hesap altında Visual Studio uzaktan hata ayıklayıcı hizmeti çalıştırmanız gerekir.
+- Bilgisayara erişim yerel bir hesap kullanıyorsanız, Visual Studio Uzaktan Hata Ayıklayıcı hizmetini yerel bir hesap altında çalıştırmanız gerekir.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-1. Visual Studio uzaktan hata ayıklayıcı hizmeti uzak bilgisayarda doğru ayarlandığından emin olun. Daha fazla bilgi için [uzaktan hata ayıklama](../debugger/remote-debugging.md).
+1. Visual Studio Uzaktan Hata Ayıklayıcı hizmetinin uzak bilgisayarda doğru şekilde ayarlandığından emin olun. Daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
-2. Hata ayıklayıcısı ana bilgisayar erişimi olan bir hesabı altında uzaktan hata ayıklayıcı hizmeti, önceki tabloda gösterildiği gibi çalıştırın.
+2. Uzaktan hata ayıklayıcı hizmetini, önceki tabloda gösterildiği gibi, hata ayıklayıcı ana bilgisayarına erişebilen bir hesap altında çalıştırın.
 
 ### <a name="to-add-log-on-as-a-service-privilege"></a>"Hizmet olarak oturum aç" ayrıcalığı eklemek için
 
-1. Üzerinde **Başlat** menüsünde seçin **Denetim Masası**.
+1. **Başlat** menüsünde, **Denetim Masası**' nı seçin.
 
-2. Denetim Masası'ndaki seçin **Klasik Görünüm**, gerekirse.
+2. Denetim Masası 'nda, gerekirse **Klasik Görünüm**' ü seçin.
 
 3. **Yönetim Araçları**'na çift tıklayın.
 
-4. Yönetimsel Araçlar penceresinde, **yerel güvenlik ilkesi**.
+4. Yönetimsel Araçlar penceresinde **yerel güvenlik ilkesi**' ne çift tıklayın.
 
-5. İçinde **yerel güvenlik ayarları** penceresini genişletin **yerel ilkeler** klasör.
+5. **Yerel güvenlik ayarları** penceresinde, **Yerel ilkeler** klasörünü genişletin.
 
-6. Tıklayın **kullanıcı hakları ataması**.
+6. **Kullanıcı hakları ataması**' na tıklayın.
 
-7. İçinde **ilke** sütunu, çift tıklayın **hizmet olarak oturum açın** geçerli yerel Grup İlkesi atamalarını görüntülemek için **hizmet oturum açma** iletişim kutusu.
+7. **İlke** sütununda **, hizmet olarak oturum aç iletişim kutusunda** geçerli yerel Grup İlkesi atamalarını görüntülemek için **hizmet olarak oturum** aç ' a çift tıklayın.
 
-8. Yeni kullanıcı eklemek için tıklatın **kullanıcı veya Grup Ekle** düğmesi.
+8. Yeni kullanıcılar eklemek için **Kullanıcı veya Grup Ekle** düğmesine tıklayın.
 
-9. Kullanıcı ekleme işlemini tamamladığınızda, tıklayın **Tamam**.
+9. Kullanıcı ekleme işiniz bittiğinde **Tamam**' a tıklayın.
 
-### <a name="to-work-around-this-error"></a>Bu hatayı çözmek için
+### <a name="to-work-around-this-error"></a>Bu hatayı geçici olarak çözmek için
 
-- Hizmet yerine bir uygulama olarak uzaktan hata ayıklama İzleyicisi'ni çalıştırın.
+- Uzaktan Hata Ayıklama İzleyicisi bir hizmet yerine uygulama olarak çalıştırın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

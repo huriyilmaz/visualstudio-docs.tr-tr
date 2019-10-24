@@ -17,12 +17,12 @@ ms.assetid: 0ee89c58-c900-48fc-a6a2-65ace00e8bab
 author: Joe-Sewell-PreEmptive
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 88578e75906585e8649025522e5b9835b7d2f8c3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 249c039070246f27669f3a808cf607a649db1e59
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652439"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747934"
 ---
 # <a name="capabilities-of-dotfuscator"></a>Dotfuscator Özellikleri
 
@@ -58,7 +58,7 @@ Ya da uygulamanın geçersiz kullanımlarını işlemek üzere kod yazmamayı te
 
 Bu yöntemlerin birçoğu, değerlendirme veya deneme yazılımı için [yaşam süresi son tarihleri][shelflife] zorlamak üzere de kullanılabilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 [Tam Dotfuscator topluluk Kullanıcı Kılavuzu 'ndaki bu konu][full]
 

@@ -1,5 +1,5 @@
 ---
-title: Veri kümesi görselleştiricisi iletişim kutusu | Microsoft Docs
+title: Veri kümesi görselleştiricisi Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,22 +19,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4086c473270befcf2213f003e516128b45c4227
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1e215d4a52965b4e89bc3a01b15da57fc8919437
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563552"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745598"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>Veri Kümesi Görselleştiricisi İletişim Kutusu
-Veri kümesi görselleştiricisi, bir veri kümesi, DataTable, DataView veya DataViewManager nesnenin içeriğini görüntülemenizi sağlar. Bu Görselleştirici hata ayıklayıcı değişken penceresinde veya DataTip, söz konusu nesnelerin değeri yanında Büyüteç simgesine tıklayarak erişebilirsiniz.
+DataSet Visualizer, bir DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemenizi sağlar. Hata ayıklayıcı değişkenleri penceresinde veya bir veri Ipucunda bu nesnelerden birinin değerinin yanında görünen büyüteç simgesine tıklayarak bu Görselleştirici 'a erişebilirsiniz.
 
- Bu Görselleştirici nesneleri için değişiklik yapabilirsiniz. Bir satır işleme hemen sonra değişiklikler kaydedilecek.
+ Bu Görselleştirici içindeki nesnelerde değişiklik yapabilirsiniz. Bir satırı işlemenizden hemen sonra değişiklikler kaydedilir.
 
 ## <a name="uielement-list"></a>UIElement Listesi
- Tabloyu tablo görselleştirmek istediğiniz veri kümesi içinde seçmek için bu açılan liste kullanın.
+ Tablo bu açılan listeyi kullanarak görselleştirmek istediğiniz veri kümesi içinde bir tablo seçin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)

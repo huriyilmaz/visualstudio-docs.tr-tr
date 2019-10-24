@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_volatiletype | Microsoft Docs
+title: 'IDiaSymbol:: get_volatileType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cef843a2e214dbf66107a5ac7462ae6a2672fafe
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5967a13596b5fad99f0f14277ea0e9505e222a41
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64798868"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738795"
 ---
-# <a name="idiasymbolgetvolatiletype"></a>IDiaSymbol::get_volatileType
-Kullanıcı tanımlı veri türü (UDT) geçici olup olmadığını belirten bir bayrak alır.
+# <a name="idiasymbolget_volatiletype"></a>IDiaSymbol::get_volatileType
+Kullanıcı tanımlı veri türünün (UDT) geçici olup olmadığını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,16 +33,16 @@ HRESULT get_volatileType ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` UDT, aksi takdirde geçici döndürür `FALSE`.
+dışı UDT geçici ise `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- C++'da bir UDT ile işaretlenebilir `volatile` içeriğinin bir erişimden sonraki bulunması kabul edilemez belirten bir anahtar sözcüğü,.
+ ' C++De, bir udt`volatile`anahtar sözcüğüyle işaretlenebilir ve bu, içeriğinin bir sonrakine bir erişimden kabul edilemez olduğunu gösterir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

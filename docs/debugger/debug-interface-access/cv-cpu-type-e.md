@@ -12,18 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d3d1df772dc6fa4b1ad6e38a319532bea111e97
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: ccc83062427ac2ecd3f340d6e1dbbe4d988ab0af
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66431734"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745330"
 ---
-# <a name="cvcputypee"></a>CV_CPU_TYPE_e
-Hedef işlemci belirtir.
+# <a name="cv_cpu_type_e"></a>CV_CPU_TYPE_e
+Hedef işlemciyi belirtir.
 
 > [!NOTE]
-> İşlemci numaralandırma öğeden sonra tanımlanır `CV_CFL_*` önek.
+> İşlemci, `CV_CFL_*` ön eki sonrasında Enumeration öğesinde tanımlanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -96,11 +96,11 @@ typedef enum CV_CPU_TYPE_e {
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Bu numaralandırma değerleri için yapılan bir çağrı tarafından döndürülen [Idiasymbol::get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md) yöntemi.
+Bu Numaralandırmadaki değerler [IDiaSymbol:: get_Platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md) yöntemi çağrısıyla döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: cvconst.h
+Üst bilgi: cvconst. h
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)

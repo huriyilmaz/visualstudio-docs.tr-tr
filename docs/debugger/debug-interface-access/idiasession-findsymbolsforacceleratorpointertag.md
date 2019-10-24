@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findSymbolsForAcceleratorPointerTag | Microsoft Docs
+title: 'IDiaSession:: Findsymbolsforivatorpointertag | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72510e9e82c1ec6983075880d4335dee8c0ad23c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da795770ad0f6f57697bc17a4ee8cf936cfc1183
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839244"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741969"
 ---
 # <a name="idiasessionfindsymbolsforacceleratorpointertag"></a>IDiaSession::findSymbolsForAcceleratorPointerTag
-Belirtilen etiket değeri karşılık gelen değişkeni için semboller numaralandırması üst Hızlandırıcı saplama işlevi döndürür.
+Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık geldiği değişken için bir sembol numaralandırması döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,19 +33,19 @@ HRESULT findSymbolsForAcceleratorPointerTag ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-[in] Aranacak Hızlandırıcı saplama işlevi karşılık gelen bir Idiasymbol.
+'ndaki Aranmak üzere Hızlandırıcı saplama işlevine karşılık gelen bir IDiaSymbol.
 
  `tagValue`
 
-[in] İşaretçi etiket değeri.
+'ndaki İşaretçi etiketi değeri.
 
  `ppResult`
 
-[out] Bir işaretçi bir `IDiaEnumSymbols` sonucu ile başlatılmış bir arabirim işaretçisi.
+dışı Sonuçla başlatılan `IDiaEnumSymbols` arabirimi işaretçisine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_nested | Microsoft Docs
+title: 'IDiaSymbol:: get_nested | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 864a57b7adb8c77c342367ad5652fb2d839861de
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 16bbc876f3fcafea0c542daec02dbc8a108f203a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796094"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739776"
 ---
-# <a name="idiasymbolgetnested"></a>IDiaSymbol::get_nested
-Kullanıcı tanımlı veri türü iç içe yerleştirilmiş olup olmadığını belirten bir bayrak alır.
+# <a name="idiasymbolget_nested"></a>IDiaSymbol::get_nested
+Kullanıcı tanımlı veri türünün iç içe olup olmadığını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_nested ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` kullanıcı tanımlı veri türü iç içe; Aksi halde döndürür `FALSE`.
+dışı Kullanıcı tanımlı veri türü iç içe ise `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> `S_FALSE` dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

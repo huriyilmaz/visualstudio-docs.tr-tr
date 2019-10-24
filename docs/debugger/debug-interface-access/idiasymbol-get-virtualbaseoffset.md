@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualbaseoffset | Microsoft Docs
+title: 'IDiaSymbol:: get_virtualBaseOffset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f1cb4a34f9947d2f5ee50488876d44042b4cb228
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: c72c605b47a5f34542b46cae9943b03c7072b1f5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830836"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738859"
 ---
-# <a name="idiasymbolgetvirtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
-Sanal işlev tablosuna bir sanal işlev uzaklığını alır.
+# <a name="idiasymbolget_virtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
+Sanal bir işlevin sanal işlev tablosundaki sapmayı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_virtualBaseOffset ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Uzaklık, bir sanal işlev içinde sanal işlev tablosunu döndürür.
+dışı Sanal bir işlevin sanal işlev tablosundaki sapmayı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

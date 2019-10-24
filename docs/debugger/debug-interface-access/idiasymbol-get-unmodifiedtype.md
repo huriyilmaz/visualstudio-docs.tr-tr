@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_unmodifiedtype | Microsoft Docs
+title: 'IDiaSymbol:: get_unmodifiedType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e609f59e0d72628be4233be52738ff244c6acca
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 47841f5fe4abeafe7c522784db337b1960081439
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64806765"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738977"
 ---
-# <a name="idiasymbolgetunmodifiedtype"></a>IDiaSymbol::get_unmodifiedType
-Bu simgenin özgün türünü alır. Şu durumlarda kullanın [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) türüne ayarlanır.
+# <a name="idiasymbolget_unmodifiedtype"></a>IDiaSymbol::get_unmodifiedType
+Bu sembolün orijinal türünü alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) bir türe ayarlandığında kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,23 +33,23 @@ HRESULT get_unmodifiedType( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) bu simgenin özgün türünü temsil eden nesne.
+dışı Bu sembolün orijinal türünü temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Geçerli türü, döndürülen özgün türün bir değişikliktir. Özgün türü bir sembol için öncelikle sembol türü alma ve özgün türü için tür döndürülen interrogating tarafından belirlenebilir. Bazı simgeleri özgün türün bir değiştirilmiş türü sahip olmayabileceğini unutmayın.
+ Geçerli tür, döndürülen özgün türün bir değişimdir. Bir simgenin özgün türü, ilk olarak simgenin türü ve sonra özgün tür için döndürülen tür için bir alan tarafından belirlenebilir. Bazı sembollerin özgün türde değiştirilmiş bir türü olamayacağını unutmayın.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: dia2.h
+ Üstbilgi: dia2. h
 
- Kitaplık: diaguids.lib
+ Kitaplık: diaguid. lib
 
- DLL: msdia100.dll
+ DLL: msdia100. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

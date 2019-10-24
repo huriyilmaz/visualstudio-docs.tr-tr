@@ -1,5 +1,5 @@
 ---
-title: Idiasession::symsareequiv | Microsoft Docs
+title: 'IDiaSession:: Symsareequıv | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0253104cf29e86825fadc8c8bd18133e0d3cf593
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 61cfc582f11670af8c956c3334681284ce5172a6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839081"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741863"
 ---
 # <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
-İki simge eşdeğer olup olmadığını denetler.
+İki sembolün eşdeğer olup olmadığını denetler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,15 +34,15 @@ HRESULT symsAreEquiv ( 
 #### <a name="parameters"></a>Parametreler
  `symbolA`
 
-[in] İlk [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) Karşılaştırmada kullanılan nesne.
+'ndaki Karşılaştırmada kullanılan ilk [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi.
 
  `symbolB`
 
-[in] İkinci `IDiaSymbol` Karşılaştırmada kullanılan nesne.
+'ndaki Karşılaştırmada kullanılan ikinci `IDiaSymbol` nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Simgeleri eşdeğer ise döndürür `S_OK`; Aksi halde döndürür `S_FALSE`, simgeler eşdeğer değildir. Aksi takdirde bir hata kodunu döndürür.
+ Semboller eşdeğer ise `S_OK`döndürür; Aksi takdirde, `S_FALSE`döndürür, semboller eşit değildir. Aksi takdirde, bir hata kodu döndürün.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

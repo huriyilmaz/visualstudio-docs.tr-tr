@@ -1,5 +1,5 @@
 ---
-title: SccWillCreateSccFile işlevi | Microsoft Docs
+title: SccWillCreateSccFile Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1dc7b9f5b298260b2bcca88c75087059bd8f0065
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2ac7657258b79b2e53bee8138bc5b2728f618eac
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338459"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720113"
 ---
 # <a name="sccwillcreatesccfile-function"></a>SccWillCreateSccFile İşlevi
-Bu işlev, kaynak denetimi eklentisi MSSCCPRJ oluşturulmasını destekleyip desteklemediğini belirler. SCC dosyası belirli dosyaların her biri için.
+Bu işlev, kaynak denetimi eklentisinin MSSCCPRJ oluşturulmasını destekleyip desteklemediğini belirler. Verilen dosyaların her biri için SCC dosyası.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,32 +36,32 @@ SCCRTN SccWillCreateSccFile(
 #### <a name="parameters"></a>Parametreler
  pContext
 
-[in] Kaynak Denetimi Eklentisi bağlam işaretçisi.
+'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.
 
- nFiles
+ Nkarşıya
 
-[in] Dosya adlarını dahil sayısını `lpFileNames` dizi uzunluğu yanı sıra `pbSccFiles` dizisi.
+'ndaki `lpFileNames` dizisine dahil edilen dosya adı sayısı ve `pbSccFiles` dizisinin uzunluğu.
 
- lpFileNames
+ lpDosyaAdı
 
-[in] Bir dizi kontrol etmek için tam olarak nitelenmiş dosya adını (dizisi gerekir ayrılan çağıran tarafından).
+'ndaki Denetlenecek tam dosya adları dizisi (dizi arayan tarafından ayrılmalıdır).
 
  pbSccFiles
 
-[out içinde] Sonuçları depolanacağı dizisi.
+[in, out] Sonuçların kaydedileceği dizi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Başarılı.|
 |SCC_E_INVALIDFILEPATH|Dizideki yollardan biri geçersiz.|
-|SCC_E_NONSPECIFICERROR|Belirli olmayan hata oluştu.|
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlev, kaynak denetimi eklentisi MSSCCPRJ desteği sağlayıp sağlamadığını belirlemek için dosyaların listesiyle birlikte çağrılır. SCC dosya her belirli dosyaları (MSSCCPRJ hakkında daha fazla bilgi. SCC dosya bkz [MSSCCPRJ. SCC dosya](../extensibility/mssccprj-scc-file.md)). Kaynak denetimi eklentileri MSSCCPRJ oluşturma yeteneğine sahip olup olmadığını bildirebilir. SCC dosyaları bildirme `SCC_CAP_SCCFILE` başlatma sırasında. Eklenti döndürür `TRUE` veya `FALSE` dosya başına `pbSccFiles` MSSCCPRJ sahip olduğu belirli dosyaları belirtmek için bir dizi. SCC desteği. Eklenti, işlevden bir başarı kodu döndürürse, dönüş dizideki değerleri dikkate alınır. Hata durumunda, dizi göz ardı edilir.
+ Bu işlev, kaynak denetimi eklentisinin MSSCCPRJ 'de destek sağladığını öğrenmek için bir dosya listesi ile çağırılır. Belirli dosyaların her biri için SCC dosyası (MSSCCPRJ hakkında daha fazla bilgi için. SCC dosyası, bkz [. Mssccprj. SCC dosyası](../extensibility/mssccprj-scc-file.md)). Kaynak denetimi eklentileri, MSSCCPRJ oluşturma yeteneğine sahip olup olmadığını bildirebilir. Başlatma sırasında `SCC_CAP_SCCFILE` bildiren SCC dosyaları. Eklenti, `pbSccFiles` dizisindeki dosya başına `TRUE` veya `FALSE`, belirtilen dosyaların hangisinin MSSCCPRJ olduğunu göstermek için döndürür. SCC desteği. Eklenti işlevinden bir başarı kodu döndürürse, dönüş dizisindeki değerler kabul edilir. Hatada, dizi yok sayılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)
 - [MSSCCPRJ.SCC Dosyası](../extensibility/mssccprj-scc-file.md)

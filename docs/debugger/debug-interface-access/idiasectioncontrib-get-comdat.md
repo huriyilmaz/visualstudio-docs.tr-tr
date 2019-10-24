@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_comdat | Microsoft Docs
+title: 'IDiaSectionContrib:: get_comdat | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 49502c0d693c7a309da9756f73c34df361b7d7bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef38d5c4afcb065f7a095501e2bf5d95ee493789
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832532"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742723"
 ---
-# <a name="idiasectioncontribgetcomdat"></a>IDiaSectionContrib::get_comdat
-Bölüm COMDAT kayıt olup olmadığını belirten bir bayrak alır.
+# <a name="idiasectioncontribget_comdat"></a>IDiaSectionContrib::get_comdat
+Bölümün bir COMDAT kaydı olup olmadığını gösteren bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_comdat ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` bölümü COMDAT kayıt; Aksi halde döndürür `FALSE`.
+dışı Bölüm bir COMDAT kaydı ise `TRUE` döndürür. Aksi takdirde, `FALSE`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Paketlenmiş işlevler bağlayıcı için görünür kılan bir ortak nesne dosyası biçimi (COFF) kaydı COMDAT kaydıdır.
+ COMDAT kaydı, paketlenmiş işlevleri bağlayıcıya görünür hale getiren ortak bir nesne dosyası biçimi (COFF) kaydıdır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

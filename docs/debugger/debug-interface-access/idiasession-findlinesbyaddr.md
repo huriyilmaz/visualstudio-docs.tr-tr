@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbyaddr | Microsoft Docs
+title: 'IDiaSession:: findLinesByAddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 730793d2b9f2e02d7e5665777f8df4d245b0ddf6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 328589df0e662ca27db634017005344d44491275
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827684"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742117"
 ---
 # <a name="idiasessionfindlinesbyaddr"></a>IDiaSession::findLinesByAddr
-Belirtilen adres içeren belirtilen derlenecek satırları alır.
+Belirtilen bir adresi içeren belirtilen bir compiland içindeki satırları alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,25 +36,25 @@ HRESULT findLinesByAddr (
 #### <a name="parameters"></a>Parametreler
 `seg`
 
-[in] Belirli bir adresi bölüm bileşeni belirtir.
+'ndaki Belirli bir adresin bölüm bileşenini belirtir.
 
 `offset`
 
-[in] Belirli bir adresi uzaklık bileşeni belirtir.
+'ndaki Belirli bir adresin konum bileşenini belirtir.
 
 `length`
 
-[in] Bu sorguyu kapsayacak şekilde adres aralığını bayt sayısını belirtir.
+'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığının bayt sayısını belirtir.
 
 `ppResult`
 
-[out] Döndürür bir [Idiaenumlinenumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) tüm satır listesini içeren nesne belirtilen adres aralığını kapsayan numaralandırır.
+dışı Belirtilen adres aralığını kapsayan tüm satır numaralarının listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Bu örnek, tüm satır numaralarını işlevin adresi ve uzunluğu kullanarak bir işlev içinde yer alan bir işlev gösterir.
+Bu örnek, işlevin adresini ve uzunluğunu kullanarak bir işlevde bulunan tüm satır numaralarını elde eden bir işlevi gösterir.
 
 ```C++
 IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,
@@ -75,7 +75,7 @@ IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findLinesByVA](../../debugger/debug-interface-access/idiasession-findlinesbyva.md)

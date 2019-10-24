@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Grafik bilgilerini yakalama | Microsoft Docs'
+title: 'İzlenecek yol: grafik bilgilerini yakalama | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 48f12f6e-57b4-48ec-a145-89fa71a42424
@@ -8,55 +8,55 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd7136367bfb883cfc5d962a1373fec738413fc6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aab86d42cd158ad64ebb16497b8d2d9f5a7002df
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62897670"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734734"
 ---
-# <a name="walkthrough-capturing-graphics-information"></a>İzlenecek yol: Grafik Bilgilerini Yakalama
-Bu izlenecek yolda nasıl kullanılacağını gösterir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] el ile bir Direct3D uygulamadan grafik bilgilerini yakalamak için grafik tanılama.
+# <a name="walkthrough-capturing-graphics-information"></a>İzlenecek Yol: Grafik Bilgilerini Yakalama
+Bu izlenecek yol, grafik bilgilerini Direct3D uygulamasından el ile yakalamak için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Grafik Tanılama nasıl kullanacağınızı gösterir.
 
- Bu örneklerde bu görevler gösterilir:
+ Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Grafik tanılama uygulamanıza takma
+- Uygulamanıza Grafik Tanılama birleştirme
 
 - Graf bilgilerini yakalama
 
 ## <a name="capturing-graphics-information"></a>Graf bilgilerini yakalama
- Grafik tanılama araçlarını kullanmak için öncelikle kullanır grafik bilgilerini yakalama olması. Yakalama özelliğini etkinleştirmek için kullanın **tanılamayı Başlat** başladığında uygulamanızı grafik tanılama yeteneklerinizi komutu.
+ Grafik Tanılama araçlarını kullanmak için önce temel aldığı grafik bilgilerini yakalamanız gerekir. Yakalamayı etkinleştirmek için, başlatıldığında Grafik Tanılama uygulamanıza bağlamak için **Tanılamayı Başlat** komutunu kullanın.
 
-#### <a name="to-enable-the-capture-of-graphics-information-after-a-project-or-solution-is-loaded"></a>Bir proje veya çözüm sonra grafik bilgilerini yakalama etkinleştirmek için yüklenir
+#### <a name="to-enable-the-capture-of-graphics-information-after-a-project-or-solution-is-loaded"></a>Bir proje veya çözüm yüklendikten sonra grafik bilgilerinin yakalanmasını etkinleştirmek için
 
-1. İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], grafik bilgilerini yakalamak istediğiniz uygulama için bir proje veya çözüm dosya yükleyin.
+1. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]' de, grafik bilgilerini yakalamak istediğiniz uygulama için bir proje veya çözüm dosyası yükleyin.
 
-2. Grafik tanılama araç çubuğunda **tanılamayı Başlat**.
+2. Grafik Tanılama araç çubuğunda **Tanılamayı Başlat**' ı seçin.
 
-#### <a name="to-enable-the-capture-of-graphics-information-without-loading-a-project-or-solution"></a>Bir proje veya çözüm yüklemeden grafik bilgilerini yakalamayı etkinleştirme
+#### <a name="to-enable-the-capture-of-graphics-information-without-loading-a-project-or-solution"></a>Bir proje veya çözüm yüklemeden grafik bilgilerinin yakalanmasını etkinleştirmek için
 
-1. Menü çubuğunda, **dosya**, **açık**, **proje/çözüm**. **Açık proje** iletişim kutusu görüntülenir.
+1. Menü çubuğunda **Dosya**, **Aç**, **Proje/çözüm**' ü seçin. **Proje Aç** iletişim kutusu görüntülenir.
 
-2. Yürütülebilir dosya, grafik bilgilerini yakalamak ve ardından istediğiniz uygulama için bir proje veya çözüm dosyası yerine belirtin **açık**.
+2. Proje veya çözüm dosyası yerine, grafik bilgilerini yakalamak istediğiniz uygulamanın yürütülebilir dosyasını belirtin ve **Aç**' ı seçin.
 
-3. Menü çubuğunda, **hata ayıklama**, **grafik**, **tanılamayı Başlat**.
+3. Menü çubuğunda **Hata Ayıkla**, **grafikler**, **Tanılamayı Başlat**' ı seçin.
 
-   Uygulamayı başlatın ve işleme çerçeveler olduktan sonra grafik bilgilerini yakalayabilir.
+   Uygulamayı başlattıktan ve çerçeveleri işleme aldıktan sonra grafik bilgilerini yakalayabilirsiniz.
 
 #### <a name="to-capture-graphics-information"></a>Grafik bilgilerini yakalamak için
 
-- Grafik tanılama araç çubuğunda **yakalama** düğmesi. ![Grafik yakalama düğmesinin simgesi](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")
+- Grafik Tanılama araç çubuğunda **yakala** düğmesini seçin. ![Grafik yakalama düğmesi simgesi](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")
 
-   -veya-
+   veya
 
-   Odak uygulamayla basın **Print Screen**.
+   Uygulamadaki uygulamayla birlikte **PRINT Screen**tuşuna basın.
 
-  Her zaman bir kare hakkında bilgi yakalama grafik tanılama Direct3D olayları ve ilişkili durumu kaydeder ve bu verileri bir grafik günlüğüne ekler. Yeni bir grafik günlüğü, her bir grafik Tanılama oturumu için oluşturulur. Grafik günlükleri hakkında daha fazla bilgi için bkz: [genel bakış](overview-of-visual-studio-graphics-diagnostics.md).
+  Bir çerçeve hakkındaki bilgileri her yakaladığınızda, Grafik Tanılama Direct3D olaylarını ve ilişkili durumunu kaydeder ve bu verileri bir grafik günlüğüne ekler. Her bir Grafik Tanılama oturumu için yeni bir grafik günlüğü oluşturulur. Grafik günlükleri hakkında daha fazla bilgi için bkz. [genel bakış](overview-of-visual-studio-graphics-diagnostics.md).
 
 ## <a name="next-steps"></a>Sonraki Adımlar
- Bu izlenecek yol, grafik bilgilerini elle yakalama gösterilmiştir. Sonraki adım olarak, bu seçenek göz önünde bulundurun:
+ Bu kılavuzda grafik bilgilerinin el ile nasıl yakalanacağı gösterilmiştir. Sonraki adım olarak bu seçeneği göz önünde bulundurun:
 
-- Grafik tanılama araçlarını kullanarak yakalanan grafik bilgileri analiz etmeyi öğrenin. Bkz: [genel bakış](overview-of-visual-studio-graphics-diagnostics.md).
+- Grafik Tanılama araçlarını kullanarak yakalanan grafik bilgilerini çözümlemeyi öğrenin. Bkz. [genel bakış](overview-of-visual-studio-graphics-diagnostics.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Grafik Bilgilerini Yakalama](capturing-graphics-information.md)

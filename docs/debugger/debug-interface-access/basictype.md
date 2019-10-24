@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 03e82a8c17b33aa085b4ed64b9ba609bee183e1d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3fff76abdecdd8613a462225278053ef4f6d9694
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829738"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745487"
 ---
 # <a name="basictype"></a>BasicType
 Simgenin temel türünü belirtir.
@@ -49,50 +49,50 @@ enum BasicType {
 };
 ```
 
-## <a name="elements"></a>Öğeleri
-btNoType hiçbir temel türü belirtildi.
+## <a name="elements"></a>Öğeler
+btNoType temel tür belirtilmedi.
 
-btVoid temel türü olan bir `void`.
+btVoid temel türü bir `void`.
 
-btChar temel türü olan bir `char` (C/C++ türü).
+btChar temel türü bir `char` (C/C++ tür).
 
-btWChar temel türü olan geniş karakter (Unicode) (`WCHAR`).
+btWChar temel türü, geniş bir (Unicode) karakterdir (`WCHAR`).
 
-btInt temel türü olan `signed int` (C/C++ türü).
+btInt temel türü `signed int` (C/C++ Type).
 
-btUInt temel türü olan `unsigned int` (C/C++ türü).
+Btuınt temel türü `unsigned int` (C/C++ Type).
 
-btFloat temel türü olan bir kayan noktalı sayı (`FLOAT`).
+btFloat temel türü bir kayan noktalı sayıdır (`FLOAT`).
 
-ikili dosya kodlanmış bir ondalık btBCD temel türü olduğundan (`BCD`).
+btBCD temel türü ikili kodlanmış bir Decimal (`BCD`).
 
-btBool temel türü olan bir Boole değeri (`BOOL`).
+btBool temel türü bir Boole değeri (`BOOL`).
 
-btLong temel türü olan bir `long int` (C/C++ türü).
+btLong temel türü bir `long int` (C/C++ tür).
 
-btULong temel türü olan bir `unsigned long int` (C/C++ türü).
+btULong temel türü bir `unsigned long int` (C/C++ tür).
 
-para birimi btCurrency temel birimidir.
+btCurrency temel türü para birimidir.
 
-btDate temel türü olan tarih/saat (`DATE`).
+btDate temel türü tarih/saat (`DATE`).
 
-btVariant temel türü olan bir değişken türü yapısı (`VARIANT`).
+btVariant temel türü bir değişken türü yapısıdır (`VARIANT`).
 
 btComplex temel türü karmaşık bir sayıdır.
 
-bir bit btBit temel türü.
+btBit temel türü bir bittir.
 
-btBSTR temel türü olan temel ya da ikili bir dize (`BSTR`).
+btBSTR temel türü temel veya ikili dizedir (`BSTR`).
 
-btHresult temel türü olan bir `HRESULT`.
+btHresult temel türü `HRESULT`.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu sabit listesi değerleri tarafından döndürülen [Idiasymbol::get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) yöntemi.
+Bu Numaralandırmadaki değerler [IDiaSymbol:: get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) yöntemi tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: cvconst.h
+Üst bilgi: cvconst. h
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)
 - [IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)

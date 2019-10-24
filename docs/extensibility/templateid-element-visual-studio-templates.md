@@ -1,5 +1,5 @@
 ---
-title: Templateıd öğesi (Visual Studio şablonları) | Microsoft Docs
+title: TemplateId öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,17 +14,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8207b72d7bb818a5d153abdd56914fd6b2a3f08
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c0e404921d1ed74db2a1f23117242f49a07206c2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316548"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718735"
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID Öğesi (Visual Studio Şablonları)
-Bir gruba öğe şablonları tarafından kategorilere ayrılmıştır bir öğe şablonu için bir tanımlayıcı belirtir [Templategroupıd](../extensibility/templategroupid-element-visual-studio-templates.md) öğesi.
+[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) öğesi tarafından bir öğe şablonları grubuna kategorize edilmiş bir öğe şablonu için tanımlayıcıyı belirtir.
 
- \<VSTemplate > \<TemplateData > \<Templateıd >
+ \<VSTemplate > \<TemplateData > \<TemplateId >
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,18 +45,18 @@ Bir gruba öğe şablonları tarafından kategorilere ayrılmıştır bir öğe 
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
- A `string` temsil eden öğe şablonları tarafından bir grup halinde kategorilere ayrılmıştır bir öğe şablonu için bir tanımlayıcı `TemplateGroupID` öğesi.
+ `TemplateGroupID` öğesi tarafından bir öğe şablonları grubuna kategorize edilen bir öğe şablonu için tanımlayıcıyı temsil eden bir `string`.
 
 ## <a name="remarks"></a>Açıklamalar
- `TemplateID` İsteğe bağlı bir öğedir.
+ `TemplateID`, isteğe bağlı bir öğedir.
 
- .Vstemplate dosyası çıkarırsa `TemplateID` öğesi, ardından [adı](../extensibility/name-element-visual-studio-templates.md) öğe şablonu tanımlayıcı olarak kullanılır.
+ Bir. vstemplate dosyası `TemplateID` öğesini atladığında, [Name](../extensibility/name-element-visual-studio-templates.md) öğesi şablon için tanımlayıcı olarak kullanılır.
 
- Değerini `TemplateID` öğesi, proje sistemi kaydı ile birlikte kullanılır (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects\\) görünen filtre şablonlarına **Add New Item** iletişim kutusu.
+ `TemplateID` öğesinin değeri, **Yeni öğe Ekle** iletişim kutusunda görünen şablonları filtrelemek için proje sistem kaydı (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects\\) ile birlikte kullanılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve Öğe Şablonları Oluşturma](../ide/creating-project-and-item-templates.md)

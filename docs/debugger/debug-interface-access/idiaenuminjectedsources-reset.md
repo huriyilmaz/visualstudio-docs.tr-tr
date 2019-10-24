@@ -1,5 +1,5 @@
 ---
-title: Idiaenumınjectedsources::reset | Microsoft Docs
+title: 'IDiaEnumInjectedSources:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 450e4811513bcd7c28ea25a26f5e30c03f3b2bc3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 25cfc11bb0a7d44a36071c4eb7b4ca68c6d5603d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829839"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744475"
 ---
 # <a name="idiaenuminjectedsourcesreset"></a>IDiaEnumInjectedSources::Reset
-Bir numaralandırma sıralı başlangıç durumuna sıfırlar.
+Bir numaralandırma dizisini başlangıca sıfırlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,7 +29,7 @@ HRESULT Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Döndürür `S_OK`.
+ `S_OK`döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

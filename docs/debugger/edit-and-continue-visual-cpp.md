@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ebe31267ee666250fbaeda73f1678051f1d4727
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: c2d92477e37b4918e0601bf163e07f5a8492136c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435850"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737908"
 ---
-# <a name="edit-and-continue-c"></a>Düzenle ve devam etC++()
+# <a name="edit-and-continue-c"></a>Düzenle ve Devam Et (C++)
 Projelerde Düzenle ve devam et ' C++ i kullanabilirsiniz. Düzenle ve devam et sınırlamaları hakkında daha fazla bilgi için bkz. [desteklenen kod değişiklikleriC++()](../debugger/supported-code-changes-cpp.md) .
 
 Visual Studio 2015 güncelleştirme 3 geliştirmeleri hakkında daha fazla bilgi için bkz [ C++ . Visual Studio 2015 güncelleştirme 3 ' te Düzenle ve devam et](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/).
@@ -79,5 +79,5 @@ Visual Studio 2015 güncelleştirme 3 geliştirmeleri hakkında daha fazla bilgi
 
  Bu gibi durumlarda, değişiklikler uygulanana kadar hata ayıklayıcı orijinal kodu yürütmeye devam eder. Eski kod, `enc25.tmp` gibi bir başlık ile ayrı bir kaynak penceresinde geçici bir kaynak dosya penceresi olarak görünür. Düzenlenen kaynak özgün kaynak penceresinde görünmeye devam eder. Eski kodu düzenlemeye çalışırsanız bir uyarı iletisi görüntülenir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Desteklenen Kod Değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md)

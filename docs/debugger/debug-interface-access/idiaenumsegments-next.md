@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsegments::Next | Microsoft Docs
+title: 'IDiaEnumSegments:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9b0f0d06ae5303277c296fd56e36e60b9a6f022
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 34062b654cbaccec053c5ac50bfb041d37a0f4e6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829647"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744197"
 ---
 # <a name="idiaenumsegmentsnext"></a>IDiaEnumSegments::Next
-Belirtilen bir numaralandırma sıralı segmentleri sayısını alır.
+Sabit Listesi dizisinde belirtilen sayıda segment alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,19 +35,19 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Alınacak numaralandırıcıyı kesimleri sayı.
+'ndaki Alınmayacak Numaralandırıcı içindeki parçaların sayısı.
 
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp
+ rgelt
 
-[out] İstenen ile doldurulacak bir dizi [Idiasegment](../../debugger/debug-interface-access/idiasegment.md) segmentleri temsil eden nesneleri.
+dışı Segmentleri temsil eden istenen [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesneleriyle doldurulacak bir dizi.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Segment sayısı getirilen bir numaralandırıcı döndürür.
+dışı Getirilen Numaralandırıcı içindeki segmentlerin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` daha fazla segment varsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Daha fazla kesim yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

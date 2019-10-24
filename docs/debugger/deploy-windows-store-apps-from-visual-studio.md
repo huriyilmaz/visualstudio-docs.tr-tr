@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: b2fa0bd62b88602ee5a4d5091821e2c2a18f6374
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d902403b111e92f302ff907a29eaaa99ee181058
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72430768"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737999"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio’dan UWP uygulamaları dağıtma
 
@@ -98,7 +98,7 @@ Başlangıç projesinin hata ayıklama özelliği sayfasında aşağıdaki dağ�
 
 **Ağ geri döngüsüne izin ver**
 
-Güvenlik nedenleriyle, standart biçimde yüklenen bir UWP veya [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] uygulamasının yüklü olduğu cihaza ağ çağrıları yapmasına izin verilmez. Varsayılan olarak, Visual Studio dağıtımı, dağıtılan uygulama için bu kuraldan bir istisna oluşturur. Bu istisna, iletişim yordamlarını tek bir makinede test etmenizi sağlar. Uygulamanızı [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] ' a göndermeden önce, uygulamanızı muafiyet olmadan test etmelisiniz.
+Güvenlik nedenleriyle, standart biçimde yüklenen bir UWP veya [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] uygulamasının üzerinde yüklü olduğu cihaza ağ çağrıları yapmasına izin verilmez. Varsayılan olarak, Visual Studio dağıtımı, dağıtılan uygulama için bu kuraldan bir istisna oluşturur. Bu istisna, iletişim yordamlarını tek bir makinede test etmenizi sağlar. Uygulamanızı [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]göndermeden önce, uygulamanızı muafiyet olmadan test etmelisiniz.
 
 Uygulamadan ağ geri döngü muafiyetini kaldırmak için:
 
@@ -114,7 +114,7 @@ Dağıtımı, uygulama başlatıldığında otomatik olarak bir hata ayıklama o
 
 - C++ Hata ayıklama özelliği sayfasında, **Uygulamayı Başlat** değerini **Evet**olarak ayarlayın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gelişmiş uzak dağıtım seçenekleri](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
 - [Yüklü uygulama paketinin hatalarını ayıklama](../debugger/debug-installed-app-package.md)

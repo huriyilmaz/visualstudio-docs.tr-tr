@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_countLiveRanges | Microsoft Docs
+title: 'IDiaSymbol:: get_countLiveRanges | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8cd86edee72f3d25763fd3d19dd9c789e152ed6
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 990673afdb01b1471ad75d65036610c486e735c4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62837469"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740754"
 ---
-# <a name="idiasymbolgetcountliveranges"></a>IDiaSymbol::get_countLiveRanges
-Geçerli adres aralıkları yerel simgeyle ilişkilendirilen sayısını alır.
+# <a name="idiasymbolget_countliveranges"></a>IDiaSymbol::get_countLiveRanges
+Yerel sembolüyle ilişkili geçerli adres aralıklarının sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,17 +33,17 @@ HRESULT get_countLiveRanges ( 
 #### <a name="parameters"></a>Parametreler
  `count`
 
-[out] Adres aralıkları sayısını döndürür.
+dışı Adres aralıklarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: dia2.h
+ Üstbilgi: dia2. h
 
- Kitaplık: diaguids.lib
+ Kitaplık: diaguid. lib
 
- DLL: msdia100.dll
+ DLL: msdia100. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

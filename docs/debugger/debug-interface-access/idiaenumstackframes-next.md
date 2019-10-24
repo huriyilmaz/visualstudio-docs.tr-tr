@@ -1,5 +1,5 @@
 ---
-title: Idiaenumstackframes::Next | Microsoft Docs
+title: 'IDiaEnumStackFrames:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9cf220c65cf11836e64a7e1f4c0142c89669f4b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ffde40e221823d9656c4b6414b14067ac9d0537a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833317"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744034"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
-Yığın çerçeve öğelerin belirtilen bir sayı sabit listesi dizisinden alır.
+Sabit Listesi dizisinden belirtilen sayıda yığın çerçevesi öğesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,19 +35,19 @@ HRESULT Next( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Alınacak Numaralandırıcı stackframe öğeleri sayısı.
+'ndaki Alınacak numaralandırıcıdaki StackFrame öğelerinin sayısı.
 
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp
+ rgelt
 
-[out] İstenen ile doldurulacak bir dizi [Idiastackframe](../../debugger/debug-interface-access/idiastackframe.md) nesneleri.
+dışı İstenen [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) nesneleriyle doldurulacak bir dizi.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Yığın çerçeve öğeleri getirilen bir numaralandırıcı döndürür.
+dışı Getirilen Numaralandırıcı içindeki yığın çerçevesi öğelerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa daha fazla yığın çerçevesi yok. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Daha fazla yığın çerçevesi yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

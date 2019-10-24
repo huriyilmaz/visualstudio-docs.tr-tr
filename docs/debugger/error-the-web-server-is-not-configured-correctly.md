@@ -16,37 +16,37 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc0c61b766b6f93fd1321b15861000d7c628f124
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: be5db0a08a287e2611c29396e96e72719b5106a7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850404"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736924"
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>Hata: Web sunucusu doğru yapılandırılmamış
 
-Bu sorunu çözmek için burada ayrıntıları verilen adımlar aldıktan sonra ve hata ayıklamak yeniden denemeden önce IIS'yi sıfırlayın gerekebilir. Bir yönetici komut istemi'ni açıp yazarak bunu yapabilirsiniz `iisreset`.
+Sorunu çözmek için buradaki adımları ayrıntılandırdıktan sonra ve hata ayıklamayı yeniden denemeden önce, IIS 'yi de sıfırlamanız gerekebilir. Bunu, bir yönetici komut istemi açıp `iisreset`yazarak yapabilirsiniz.
 
-Bu sorunu çözmek için aşağıdaki adımları gerçekleştirin:
+Bu sorunu çözmek için şu adımları uygulayın:
 
-1. Sunucu üzerinde barındırılan web uygulaması olarak yapılandırılmışsa, bir yayın yapısı hata ayıklama derlemesi yeniden yayımlamanız ve web.config dosyasını içerdiğini doğrulayın `debug=true` derleme öğesinde. IIS ve yeniden deneme sıfırlayın.
+1. Sunucuda barındırılan Web uygulaması bir yayın derlemesi olarak yapılandırılmışsa, hata ayıklama derlemesi olarak yeniden yayımlayın ve Web. config dosyasının derleme öğesinde `debug=true` içerdiğini doğrulayın. IIS 'i sıfırlayın ve yeniden deneyin.
 
-    Örneğin, bir yayın yapısı için bir yayımlama profili kullanıyorsanız, hata ayıklama değiştirin ve yeniden yayımlayın. Aksi takdirde, hata ayıklama özniteliği olarak ayarlanır `false` yayımladığınızda.
+    Örneğin, bir yayın derlemesi için bir yayımlama profili kullanıyorsanız, bunu hata ayıklama ve yeniden yayımlama için değiştirin. Aksi halde, yayımlarken hata ayıklama özniteliği `false` olarak ayarlanır.
 
-2. (IIS) Fiziksel yolun doğru olduğundan emin olun. IIS, bu ayarda bulduğunuz **temel ayarları > fiziksel yolu** (veya **Gelişmiş ayarlar** IIS eski sürümlerinde).
+2. ISS Fiziksel yolun doğru olduğundan emin olun. IIS 'de bu ayarı, **fiziksel ayarlar > fiziksel yol** (veya daha eski IIS sürümlerindeki **Gelişmiş ayarlar** ) içinde bulabilirsiniz.
 
-    Web uygulamasını farklı bir makineye kopyaladığınız, el ile yeniden adlandırıldı veya taşındı fiziksel yolu yanlış olabilir. IIS ve yeniden deneme sıfırlayın.
+    Web uygulaması farklı bir makineye kopyalanmışsa, el ile yeniden adlandırılırsa veya taşındığında fiziksel yol yanlış olabilir. IIS 'i sıfırlayın ve yeniden deneyin.
 
-3. Visual Studio'da yerel olarak hata ayıklaması yapıyorsanız doğru sunucu özelliklerinde seçili olduğunu doğrulayın. (Açık **özellikleri > Web > sunucuları** veya **özellikleri > hata ayıklama** proje türüne bağlı olarak. Bir Web formları projesi için açık **özellik sayfaları > Başlat Seçenekleri > sunucu**).
+3. Visual Studio 'da yerel olarak hata ayıklaması yapıyorsanız, özelliklerde doğru sunucunun seçildiğini doğrulayın. (Proje türüne bağlı olarak **hata ayıklama >** **Web > sunucuları veya özellikleri > Özellikler** açın. Web Forms bir proje için, özellik sayfaları ' nı açın **> Başlat seçenekler > sunucu**).
 
-    IIS gibi harici bir (özel) sunucusu kullanıyorsanız, URL'nin doğru olması gerekir. Aksi takdirde, IIS Express ve Yeniden Dene'yi seçin.
+    IIS gibi bir dış (özel) sunucu kullanıyorsanız, URL 'nin doğru olması gerekir. Aksi takdirde IIS Express seçin ve yeniden deneyin.
 
-4. (IIS) ASP.NET doğru sürümü sunucuda yüklü olduğundan emin olun.
+4. ISS Sunucuda doğru ASP.NET sürümünün yüklü olduğundan emin olun.
 
-    ASP.NET IIS ve Visual Studio projenize eşleşmeyen sürümleri, bu soruna neden olabilir. Framework sürümü web.config dosyasında ayarlamanız gerekebilir. IIS üzerinde ASP.NET yüklemek için kullanın [Web Platformu Yükleyicisi (Webpı)](https://www.microsoft.com/web/downloads/platform.aspx). Ayrıca bkz [IIS 8.0 kullanarak ASP.NET 3.5 ve ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) veya ASP.NET Core [IIS ile Windows Konağında](https://docs.asp.net/en/latest/publishing/iis.html).
+    IIS 'de ve Visual Studio projenizde eşleşmeyen ASP.NET sürümleri bu soruna neden olabilir. Web. config 'de Framework sürümünü ayarlamanız gerekebilir. IIS 'de ASP.NET yüklemek için [Web Platformu Yükleyicisi (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)kullanın. Ayrıca bkz. [ASP.NET 3,5 ve ASP.NET 4,5 kullanarak ııs 8,0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) veya ASP.NET Core, [Windows üzerinde IIS ile barındırma](https://docs.asp.net/en/latest/publishing/iis.html).
 
-4. Varsa `maxConnection` IIS sınırı çok düşük ve bağlantı sayısı çok fazla olması, gerekebilir [bağlantı sınırını artırmak](/iis/configuration/system.applicationhost/sites/sitedefaults/limits).
+4. IIS 'deki `maxConnection` sınırı çok düşükse ve çok fazla bağlantınız varsa, [bağlantı sınırını artırmanız](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)gerekebilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Uzak IIS Bilgisayarında Uzaktan ASP.NET ile Hata Ayıklama](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)
 - [Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

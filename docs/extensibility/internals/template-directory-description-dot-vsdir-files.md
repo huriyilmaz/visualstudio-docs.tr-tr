@@ -12,56 +12,56 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad06428905f924e0e339882057ee4e657da47e8a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fb20a1fbc8d5edd9783521fa933dbddc74ac2a22
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331111"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722820"
 ---
 # <a name="template-directory-description-vsdir-files"></a>Şablon Dizin Açıklaması (.Vsdir) Dosyaları
-Bir şablon dizin açıklaması (.vsdir) tümleşik geliştirme ortamı (IDE) klasörleri, sihirbaz .vsz dosyasına ve iletişim kutularında projenizle ilişkili şablon dosyaları görüntülemek için etkinleştiren bir metin dosyası dosyasıdır. İçeriği, her dosya veya klasör için bir kayıt içerir. Tüm .vsdir dosyalarını başvurulan bir konumda, yalnızca bir .vsdir dosyası birden çok klasör, sihirbazlar veya şablon dosyalarını tanımlamak için genellikle bulunmakla birleştirilir.
+Şablon dizin açıklama dosyası (. vsdir), tümleşik geliştirme ortamının (IDE), iletişim kutularındaki projenizle ilişkili klasörleri, sihirbaz. vsz dosyalarını ve şablon dosyalarını görüntülemesini sağlayan bir metin dosyasıdır. İçerikler dosya veya klasör başına bir kayıt içerir. Başvurulan bir konumdaki tüm. VSDir dosyaları birleştirilir, ancak birden çok klasörü, Sihirbazı veya şablon dosyasını anlatmak için genellikle yalnızca bir. vsdir dosyası sağlanır.
 
- Klasörleri (alt dizin) .vsdir dosya ve .vsdir dosyasında başvurulan dosyaların tümünü aynı dizinde bulunur. IDE ne zaman bir Sihirbazı çalıştıran veya bir klasörü veya dosyayı görüntüler **yeni proje** veya **Yeni Öğe Ekle** iletişim kutuları, IDE inceler .vsdir dosyanın olup olmadığını belirlemek için yürütülen dosyalarını içeren dizin mevcut. .Vsdir dosya bulunamazsa, IDE yürütülen veya görüntülenen bir klasör veya dosya için bir giriş içerip içermediğini belirlemek için okur. Bir giriş bulunması durumunda, IDE Sihirbazı yürütme veya içeriği görüntüleme bilgileri kullanır.
+ Klasörler (alt dizinler),. vsdir dosyasında başvurulan dosyalar ve. vsdir dosyası aynı dizinde bulunur. IDE bir sihirbaz çalıştırdığında veya **Yeni proje** veya **Yeni öğe Ekle** iletişim kutularında bir klasör veya dosya görüntülediğinde, IDE, bir. vsdir dosyasının mevcut olup olmadığını anlamak için yürütülen dosyaları içeren dizini inceler. Bir. vsdir dosyası bulunursa, IDE onu yürütülen veya görüntülenmiş klasör ya da dosya için bir giriş içerip içermediğini anlamak üzere okur. Bir giriş bulunursa IDE, sihirbazın yürütüldüğü veya içeriğin görüntülendiği bilgileri kullanır.
 
- Aşağıdaki kod örneği SourceFiles.vsdir dosyasındandır içinde \<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems\Source_Files kayıt defteri anahtarı:
+ Aşağıdaki kod örneği \<EnvSDK > \Bscprj\bscprj\bscprjprojectıtems\source_files kayıt defteri anahtarındaki SourceFiles. vsdir dosyasından verilmiştir:
 
 ```
 HeaderFile.h|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#125|130|#126|0|0|0|#127
 SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
 ```
 
- Bu durumda, iki kayıt bir dosyasındadır. Her bir kayıt (satır başı karakteri) yeni bir satıra ayırır. Her satırı farklı bir dosya türü temsil eder. Bir kanal (&#124;) karakter her kayıttaki alanlar ayırır. Farklı dosya adlarına sahip birden çok .vsdir dosyalarını tek bir dizin içerebilir veya her dosya türü için bir .vsdir dosyası olabilir.
+ Bu durumda, iki kayıt tek bir dosyadır. Yeni bir satır (satır başı karakter) her kaydı ayırır. Her satır, farklı bir dosya türünü temsil eder. Bir pipe (&#124;) karakteri her kayıttaki alanları ayırır. Tek bir dizin, farklı dosya adlarına sahip birden fazla. vsdir dosyası içerebilir veya her dosya türü için bir. vsdir dosyasına sahip olabilirsiniz.
 
 ## <a name="fields"></a>Alanlar
- Aşağıdaki tabloda, her kayıt için belirtilen alanları listeler.
+ Aşağıdaki tabloda her kayıt için belirtilen alanlar listelenmektedir.
 
 | Alan | Açıklama |
 | - | - |
-| Göreli yol adını (RelPathName) | HeaderFile.h veya MyWizard.vsz gibi klasör, şablonu veya .vsz dosyasının adı. Bu alan ayrıca bir klasörü temsil etmek için kullanılan bir ad olabilir. |
-| {clsidPackage} | VSPackage'nın uydu dinamik bağlantı kitaplığı (DLL) kaynakları LocalizedName, açıklama, IconResourceId ve SuggestedBaseName, gibi yerelleştirilmiş dizeler erişim sağlayan VSPackage GUİD'si. DLLPath sağlanmıyorsa IconResourceId geçerlidir. **Not:**  Bir veya daha önceki alanların bir kaynak tanımlayıcısı olmadığı sürece bu alan isteğe bağlıdır. Bu alan için metin yerelleştiriyor musunuz üçüncü taraf sihirbazlara karşılık gelen .vsdir dosyalarını genellikle boş bırakılır. |
-| LocalizedName | Şablon dosyasında ya da Sihirbazı yerelleştirilmiş adı. Bu alan, "#ResID" formunun bir kaynak tanımlayıcısı veya bir dize olabilir. Bu ad görüntülenen **Yeni Öğe Ekle** iletişim kutusu. **Not:**  Bir kaynak tanımlayıcısı LocalizedName ise {clsidPackage} gereklidir. |
-| SortPriority | Bu şablon dosyasında ya da Sihirbazı göreli önceliğini temsil eden bir tamsayı. Bu öğe 1 değeri varsa, örneğin, ardından bu öğe 1 ve 2 veya daha büyük bir sıralama değeri olan tüm öğeleri önüne bir değere sahip diğer öğeleri yanında görüntülenir.<br /><br /> Öğeler aynı dizine göre sıralama önceliğe sahiptir. Aynı dizinde birden fazla .vsdir dosyası olabilir. Bu durumda, tüm öğeleri <em>.</em> vsdir dosyaları dizindeki birleştirilir. Aynı önceliğe sahip öğeler görüntülenen ad büyük/küçük harfe sözlük sırasına göre listelenir. `_wcsicmp` İşlevi öğeleri sıralamak için kullanılır.<br /><br /> .Vsdir dosyalarını açıklanmayan öğeler .vsdir dosyalarını içinde listelenen en yüksek öncelikli sayısından büyük bir öncelik numarası içerir. Bu öğelerin adlarına bağımsız olarak görüntülenen listeyi sonunda olduğundan sonucudur. |
-| Açıklama | Şablon dosyasında ya da Sihirbazı yerelleştirilmiş açıklaması. Bu alan, "#ResID" formunun bir kaynak tanımlayıcısı veya bir dize olabilir. Bu dize görünür **yeni proje** veya **Yeni Öğe Ekle** öğesi seçildiğinde iletişim kutusu. |
-| DLLPath veya {clsidPackage} | Şablon dosyasında ya da Sihirbazı için bir simge yüklemek için kullanılır. Simge IconResourceId kullanarak bir .dll veya .exe dosyasının dışına bir kaynak olarak yüklenir. Bu .dll veya .exe dosyasının tam yolu kullanarak ya da bir VSPackage GUİD'sini kullanarak belirlenebilir. VSPackage'ı DLL'SİNİN uygulama simgesini (değil uydu DLL) yüklemek için kullanılır. |
-| IconResourceId | Uygulamada DLL veya VSPackage görüntülemek üzere simgeyi belirleyen DLL kaynak tanımlayıcısı. |
-| Bayrakları (<xref:Microsoft.VisualStudio.Shell.Interop.__VSDIRFLAGS>) | Devre dışı bırakmak veya etkinleştirmek için kullanılan **adı** ve **konumu** alanlarını **Yeni Öğe Ekle** iletişim kutusu. Değerini **bayrakları** gerekli bit bayrakları birleşimi ondalık denk bir alandır.<br /><br /> Bir kullanıcı seçtiğinde bir öğe üzerinde **yeni** sekmesi, proje belirler ad alanı ve konum alanı ne zaman gösterilip gösterilmeyeceğini **Yeni Öğe Ekle** iletişim kutusu ilk görüntülenir. Bir öğe .vsdir dosyası aracılığıyla, yalnızca öğe seçildiğinde alanları devre dışı etkin olup olmadığını denetleyebilirsiniz. |
-| SuggestedBaseName | Dosya, sihirbaz veya şablonu varsayılan adını temsil eder. Bu, "#ResID" formunun bir kaynak tanımlayıcısı veya bir dize alanıdır. IDE, öğe için bir varsayılan ad sağlamak için bu değeri kullanır. Bu taban değer adı MyFile21.asp gibi benzersiz hale getirmek için bir tamsayı değeri olan eklenir.<br /><br /> Önceki listede açıklaması, DLLPath, IconResourceId, bayrakları ve SuggestedBaseNumber yalnızca şablon ve Sihirbazı dosyalar için geçerlidir. Bu alanlar klasörlere geçerli değildir. Bu olgu BscPrjProjectItems dosyasında kodda gösterilmiştir \<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems kayıt defteri anahtarı. Bu dosya, üç kayıtlarla (her klasör için bir tane) her kayıt için dört alan içerir: RelPathName, {clsidPackage} LocalizedName ve SortPriority.<br /><br /> `General&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#110&#124;100`<br /><br /> `Source_Files&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#111&#124;110`<br /><br /> `Env&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#112&#124;120` |
+| Göreli yol adı (RelPathName) | Üstbilgi dosyası. h veya MyWizard. vsz gibi klasör, şablon veya. vsz dosyasının adı. Bu alan ayrıca bir klasörü temsil etmek için kullanılan bir ad olabilir. |
+| {clsidPackage} | VSPackage 'in uydu dinamik bağlantı kitaplığı (DLL) kaynaklarında LocalizedName, Description, ıresourceıd ve SuggestedBaseName gibi yerelleştirilmiş dizelere erişim sağlayan VSPackage GUID 'SI. DLLPath sağlanmazsa, ıresourceıd geçerlidir. **Note:**  Önceki alanlardan biri veya daha fazlası kaynak tanımlayıcısı değilse bu alan isteğe bağlıdır. Bu alan, kendi metinlerini yerelleştirmez üçüncü taraf sihirbazlarıyla karşılık gelen. VSDir dosyaları için genellikle boştur. |
+| LocalizedName | Şablon dosyasının veya sihirbazının yerelleştirilmiş adı. Bu alan, "#ResID" biçiminde bir dize veya kaynak tanımlayıcısı olabilir. Bu ad, **Yeni öğe Ekle** iletişim kutusunda görüntülenir. **Note:**  LocalizedName bir kaynak tanımsıdır, {clsidPackage} gerekir. |
+| SortPriority | Bu şablon dosyasının veya sihirbazının göreli önceliğini temsil eden bir tamsayı. Örneğin, bu öğenin değeri 1 ise bu öğe, 1 değerine sahip diğer öğelerin yanında görüntülenir ve 2 veya daha büyük bir sıralama değeri olan tüm öğelerin ilerisindedir.<br /><br /> Sıralama önceliği, aynı dizindeki öğelere göre belirlenir. Aynı dizinde birden fazla. vsdir dosyası olabilir. Bu durumda, tüm öğeleri <em>.</em> Bu dizindeki VSDir dosyaları birleştirilir. Aynı önceliğe sahip öğeler görüntülenen adının büyük/küçük harf duyarsız lexicographic sırasıyla listelenir. `_wcsicmp` işlevi öğeleri sıralamak için kullanılır.<br /><br /> . Vsdir dosyalarında açıklanmayan öğeler,. vsdir dosyalarında listelenen en yüksek öncelik numarasından daha büyük bir öncelik numarası içerir. Sonuç, bu öğelerin, adından bağımsız olarak görüntülenen listenin sonunda olması olur. |
+| Açıklama | Şablon dosyasının veya sihirbazının yerelleştirilmiş açıklaması. Bu alan, "#ResID" biçiminde bir dize veya kaynak tanımlayıcısı olabilir. Bu dize, öğe seçildiğinde **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünür. |
+| DLLPath veya {clsidPackage} | Şablon dosyası veya sihirbazına yönelik bir simge yüklemek için kullanılır. Simge, ıresourceıd kullanılarak bir. dll veya. exe dosyasından kaynak olarak yüklenir. Bu. dll veya. exe dosyası, tam yol kullanılarak veya VSPackage 'un GUID 'SI kullanılarak belirlenebilir. VSPackage 'ın uygulama DLL 'SI, simgenin (uydu DLL değil) yüklenmesi için kullanılır. |
+| Iresourceıd | DLL veya VSPackage uygulama DLL dosyasında görüntülenecek simgeyi belirleyen kaynak tanımlayıcısı. |
+| Bayraklar (<xref:Microsoft.VisualStudio.Shell.Interop.__VSDIRFLAGS>) | **Yeni öğe Ekle** Iletişim kutusundaki **ad** ve **konum** alanlarını devre dışı bırakmak veya etkinleştirmek için kullanılır. **Flags** alanının değeri, gerekli bit bayrakları birleşiminin ondalık eşdeğeridir.<br /><br /> Kullanıcı **Yeni** sekmede bir öğe seçtiğinde proje, **Yeni öğe Ekle** Iletişim kutusu ilk görüntülendiğinde ad alanının ve konum alanının gösterilip gösterilmeyeceğini belirler. Bir. vsdir dosyası aracılığıyla, öğe seçildiğinde yalnızca alanların etkin ve devre dışı olarak devre dışı bırakılıp bırakılmadığını kontrol edebilir. |
+| SuggestedBaseName | Dosya, sihirbaz veya şablon için varsayılan adı temsil eder. Bu alan, "#ResID" formunun bir dize veya kaynak tanımlayıcısıdır. IDE, öğe için varsayılan bir ad sağlamak üzere bu değeri kullanır. Bu taban değeri, MyFile21. asp gibi benzersiz bir tamsayı değeri olacak şekilde eklenir.<br /><br /> Önceki listede, Description, DLLPath, ıresourceıd, Flags ve Mülatedbasenumarası yalnızca şablon ve sihirbaz dosyaları için geçerlidir. Bu alanlar klasörler için geçerlidir. Bu olgu \<EnvSDK > \Bscprj\bscprj\bscprjprojectıtems kayıt defteri anahtarındaki BscPrjProjectItems dosyasındaki kodda gösterilmiştir. Bu dosya, her bir kayıt için dört alan içeren üç kayıt (her bir klasör için bir adet) içerir: RelPathName, {Clsıdpackage}, LocalizedName ve SortPriority.<br /><br /> `General&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#110&#124;100`<br /><br /> `Source_Files&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#111&#124;110`<br /><br /> `Env&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#112&#124;120` |
 
- Sihirbaz dosyası oluşturduğunuzda, aşağıdaki sorunları dikkate almanız gereken.
+ Bir sihirbaz dosyası oluşturduğunuzda, aşağıdaki sorunları da göz önünde bulundurmanız gerekir.
 
-- Kendisi için anlamlı veri bulunmayan gerekli olmayan alan yer tutucu olarak 0 (sıfır) içermelidir.
+- Anlamlı veri olmayan hiçbir gerekli olmayan alan, yer tutucu olarak 0 (sıfır) içermelidir.
 
-- Yerelleştirilmiş adı sağlanmazsa, göreli yol adı sihirbaz dosyasında kullanılır.
+- Yerelleştirilmiş ad sağlanmazsa, ilgili yol adı sihirbaz dosyasında kullanılır.
 
-- DLLPath clsidPackage simge konumu için geçersiz kılar.
+- DLLPath, simge konumu için Clsıdpackage 'i geçersiz kılar.
 
-- Herhangi bir simge tanımlanmazsa, IDE yerine bu uzantıya sahip bir dosya için varsayılan simgeyi koyar.
+- Hiçbir simge tanımlanmamışsa, IDE bu uzantıya sahip bir dosya için varsayılan simgenin yerini alır.
 
-- Önerilen taban adı verilmezse, 'Project' kullanılır.
+- Önerilen temel ad sağlanmazsa, ' proje ' kullanılır.
 
-- .Vsz dosyaları, klasörleri ve şablon dosyalarını silerseniz, aynı zamanda ilişkili kayıtlarını .vsdir dosyasından kaldırmanız gerekir.
+- . Vsz dosyalarını, klasörlerini veya şablon dosyalarını silerseniz, ilişkili kayıtlarını. vsdir dosyasından de kaldırmanız gerekir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Sihirbazlar](../../extensibility/internals/wizards.md)
 - [Sihirbaz (.Vsz) Dosyası](../../extensibility/internals/wizard-dot-vsz-file.md)

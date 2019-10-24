@@ -11,17 +11,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7bd4e9a650bee4f5f13f1aeab39a59a1c04a253c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f571fbd0a68ddbf56b637071ac250159461f61d1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330905"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721539"
 ---
 # <a name="wizard-interface-idtwizard"></a>Sihirbaz Arabirimi (IDTWizard)
-Tümleşik geliştirme ortamı (IDE) kullanan <xref:EnvDTE.IDTWizard> sihirbazları ile iletişim kurmak için arabirim. Sihirbazlar, IDE'de yüklenmesi için bu arabirimi uygulamalıdır.
+Tümleşik geliştirme ortamı (IDE) sihirbazları ile iletişim kurmak için <xref:EnvDTE.IDTWizard> arabirimini kullanır. Sihirbazlar IDE 'ye yüklenebilmek için bu arabirimi uygulamalıdır.
 
- <xref:EnvDTE.IDTWizard.Execute%2A> Yöntemi ile ilişkili tek yöntemdir <xref:EnvDTE.IDTWizard> arabirimi. Sihirbaz bu yöntemi uygulaması ve IDE arabirimi yöntemini çağırır. Aşağıdaki örnekte, yöntem imzasını gösterir.
+ <xref:EnvDTE.IDTWizard.Execute%2A> yöntemi, <xref:EnvDTE.IDTWizard> arabirimiyle ilişkili tek yöntemdir. Sihirbazlar bu yöntemi uygular ve IDE, yöntemi arayüzde çağırır. Aşağıdaki örnek, yönteminin imzasını gösterir.
 
 ```
 /* IDTWizard Method */
@@ -34,27 +34,27 @@ STDMETHOD(Execute)(THIS_
    );
 ```
 
- Başlangıç mekanizması için her ikisi de benzer **yeni proje** ve **Yeni Öğe Ekle** sihirbazları. Ya da başlamak için çağrı <xref:EnvDTE.IDTWizard> Dteinternal.h içinde tanımlanan arabirimi. Tek fark, bağlam ve arabirimi çağrıldığında arabirimine geçirilen özel parametreleri kümesidir.
+ Başlangıç mekanizması her iki **Yeni proje** için benzerdir ve **Yeni öğe sihirbazları ekler** . Her birini başlatmak için, Dteınternal. h içinde tanımlanan <xref:EnvDTE.IDTWizard> arabirimini çağırın. Tek fark, arabirim çağrıldığında arabirime geçirilen bağlam ve özel parametrelerin kümesidir.
 
- Aşağıdaki bilgiler açıklar <xref:EnvDTE.IDTWizard> sihirbazları çalışacak şekilde uygulamalıdır arabirimi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE. IDE çağrıları <xref:EnvDTE.IDTWizard.Execute%2A> aşağıdaki Geçirme Sihirbazı, yöntemi:
+ Aşağıdaki bilgiler, sihirbazların [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 'de çalışmak için uygulaması gereken <xref:EnvDTE.IDTWizard> arabirimini açıklamaktadır. IDE, sihirbazda <xref:EnvDTE.IDTWizard.Execute%2A> yöntemini çağırarak, aşağıdakileri geçirerek:
 
 - DTE nesnesi
 
-     DTE nesnesi Otomasyon modeli köküdür.
+     DTE nesnesi otomasyon modelinin köküdür.
 
-- Kod kesimi içinde gösterildiği pencere iletişim kutusu için bir tanıtıcı `hwndOwner ([in] long)`.
+- Kod kesiminde gösterildiği gibi pencere iletişim kutusunun tutamacı `hwndOwner ([in] long)`.
 
-     Bu sihirbaz kullanır `hwndOwner` Sihirbazı iletişim kutusu için üst öğe olarak.
+     Sihirbaz bu `hwndOwner` sihirbaz iletişim kutusu için üst öğe olarak kullanır.
 
-- Bağlam parametreleri geçirilen arabirimi değişken için bir SAFEARRAY'i kod kesimi gösterildiği `[in] SAFEARRAY (VARIANT)* ContextParams`.
+- Bağlam parametreleri, kod kesiminde gösterildiği gibi SAFEARRAY için değişken olarak geçildi. `[in] SAFEARRAY (VARIANT)* ContextParams`.
 
-     Bağlam parametreleri Başlatılmakta olan sihirbaz türü için belirli değerler dizisi ve proje geçerli durumunu içerir. IDE bağlam parametreleri Sihirbazına geçirir. Daha fazla bilgi için [bağlam parametreleri](../../extensibility/internals/context-parameters.md).
+     Bağlam parametreleri, başlatılmakta olan sihirbaz türüne ve projenin geçerli durumuna özgü bir değer dizisi içerir. IDE, bağlam parametrelerini sihirbaza geçirir. Daha fazla bilgi için bkz. [Bağlam parametreleri](../../extensibility/internals/context-parameters.md).
 
-- Özel Parametreler geçirilen arabirimi bir değişken için bir SAFEARRAY'i kod kesimi gösterildiği gibi `[in] SAFEARRAY (VARIANT)* CustomParams`.
+- Kod kesiminde gösterildiği gibi, bir SAFEARRAY için bir değişken olarak arabirime geçirilen özel parametreler `[in] SAFEARRAY (VARIANT)* CustomParams`.
 
-     Özel Parametreler, kullanıcı tarafından tanımlanan parametre dizisi içerir. .Vsz dosyası IDE özel parametrelerini geçirir. Değerler tarafından belirlenir `Param=` deyimleri. Daha fazla bilgi için [özel parametreler](../../extensibility/internals/custom-parameters.md).
+     Özel parametreler, Kullanıcı tanımlı parametrelerin dizisini içerir. Bir. vsz dosyası, IDE 'ye özel parametreler geçirir. Değerler `Param=` deyimleri tarafından belirlenir. Daha fazla bilgi için bkz. [özel parametreler](../../extensibility/internals/custom-parameters.md).
 
-- Arabirim dönüş değerleri
+- Arabirim için dönüş değerleri
 
     ```
     wizardResultSuccess = -1,
@@ -63,7 +63,7 @@ STDMETHOD(Execute)(THIS_
     wizardResultBackout = 2
     ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Bağlam Parametreleri](../../extensibility/internals/context-parameters.md)
 - [Özel Parametreler](../../extensibility/internals/custom-parameters.md)
 - [Sihirbazlar](../../extensibility/internals/wizards.md)

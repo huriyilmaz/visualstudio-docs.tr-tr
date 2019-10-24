@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findInlineesByName | Microsoft Docs
+title: 'IDiaSession:: Findınlineesbyname | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cb665e3c0965a2e85c8d28202114c95928988d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a7fd74707284e32471bad1da27e288139ea617a1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839309"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742178"
 ---
 # <a name="idiasessionfindinlineesbyname"></a>IDiaSession::findInlineesByName
-Belirtilen adla eşleşen tüm satır içine alınmış işlevlerin satır numarası bilgisi yineleme yapmak bir istemci sağlayan bir sabit listesi alır.
+Bir istemcinin, belirtilen bir adla eşleşen tüm satır numarası işlevlerinin satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,20 +33,20 @@ HRESULT findInlineesByName ( 
 #### <a name="parameters"></a>Parametreler
  `name`
 
-[in] Karşılaştırma için kullanılacak adını belirtir.
+'ndaki Karşılaştırma için kullanılacak adı belirtir.
 
  `option`
 
-[in] Ad arama uygulanan karşılaştırma seçeneklerini belirtir. Değerlerini [NameSearchOptions numaralandırması](../../debugger/debug-interface-access/namesearchoptions.md) numaralandırma, tek başına veya birlikte kullanılabilir.
+'ndaki Ad aramaya uygulanan karşılaştırma seçeneklerini belirtir. [NameSearchOptions numaralandırma](../../debugger/debug-interface-access/namesearchoptions.md) numaralandırmasındaki değerler tek başına veya birlikte kullanılabilir.
 
  `ppResult`
 
-[out] Döndürür bir [Idiaenumlinenumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) alınan satır numaralarının listesini içeren nesne.
+dışı Alınan satır numaralarının bir listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

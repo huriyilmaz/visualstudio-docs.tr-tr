@@ -1,5 +1,5 @@
 ---
-title: IDiaStackFrame::get_functionStart | Microsoft Docs
+title: 'IDiaStackFrame:: get_functionStart | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56a1c700b2a98b51f846e5f1136ef45c67fd5f99
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b9900b6301388479fc71f1b257113974056aeb3b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832082"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741720"
 ---
-# <a name="idiastackframegetfunctionstart"></a>IDiaStackFrame::get_functionStart
-Blok bir işlev giriş noktası içerip içermediğini gösteren bir bayrak alır.
+# <a name="idiastackframeget_functionstart"></a>IDiaStackFrame::get_functionStart
+Bloğun bir işlevin giriş noktasını içerip içermediğini gösteren bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_functionStart ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` yığın çerçevesi bir işlev; giriş noktası içeriyorsa döndürür, aksi takdirde, `FALSE`.
+dışı Yığın çerçevesi bir işlevin giriş noktasını içeriyorsa `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` özelliği desteklenmiyorsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

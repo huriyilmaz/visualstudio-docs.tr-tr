@@ -19,37 +19,37 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7a58b2c8f14f1dff241b7f3c7d783460a83b7bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 256dadfeea4108f12e24864017b6e1752ece25a5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852365"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738199"
 ---
 # <a name="debugging-linq"></a>LINQ'de Hata Ayıklama
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Tümleşik hata ayıklama dilini destekler, bazı kısıtlamalarla (LINQ) kodunda sorgulayın. Hata ayıklama özelliklerinin çoğu LINQ deyimleriyle Adımlama, kesme noktaları ayarlama ve sonuçları hata ayıklayıcı pencerelerinde görüntüleme dahil olmak üzere çalışın. Bu konu LINQ hata ayıklamanın önemli sınırlamalarını açıklar.
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], dil ile tümleşik sorgu (LINQ) kodunda hata ayıklamayı destekler, bazı sınırlamalar vardır. Çoğu hata ayıklama özelliğinin adım adım, kesme noktaları ayarlama ve sonuçları hata ayıklayıcı penceresinde görüntüleme dahil olmak üzere LINQ deyimleriyle birlikte çalışır. Bu konu, LINQ hata ayıklamanın başlıca sınırlamalarını açıklamaktadır.
 
-## <a name="BKMK_ViewingLINQResults"></a> LINQ sonuçlarını görüntüleme
- DataTips, izleme penceresi ve QuickWatch iletişim kutusunu kullanarak, bir LINQ ifadesini sonucunu görüntüleyebilirsiniz. Bir kaynak penceresi kullandığınızda, kaynak penceresinde bir sorgunun işaretçisini duraklatabilirsiniz ve bir DataTip görünür. Bir LINQ değişkenini kopyalayıp İzle penceresine veya QuickWatch iletişim kutusuna yapıştırın.
+## <a name="BKMK_ViewingLINQResults"></a>LINQ sonuçlarını görüntüleme
+ DataTips, izleme penceresi ve QuickWatch iletişim kutusunu kullanarak bir LINQ deyimin sonucunu görüntüleyebilirsiniz. Kaynak penceresi kullandığınızda, kaynak penceredeki bir sorgu üzerindeki işaretçiyi duraklatabilir ve bir DataTip belirir. Bir LINQ değişkenini kopyalayabilir ve izleme penceresi veya QuickWatch iletişim kutusuna yapıştırabilirsiniz.
 
- LINQ içinde bir sorgu oluşturulduğunda veya bildirildiğinde ancak sorgu kullanılmadıysa değerlendirilmez. Bu nedenle sorgu değerlendirilene kadar bir değeri yok. Sorgu oluşturmaya ve değerlendirmeye tam bir açıklaması için bkz [(C#) LINQ sorgularına giriş](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries) veya [bilgisayarınızı ilk LINQ sorgusu yazma](/dotnet/visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query).
+ LINQ içinde, bir sorgu oluşturulduğunda veya bildirildiğinde, ancak yalnızca sorgu kullanıldığında değerlendirilmez. Bu nedenle, sorgu değerlendirilene kadar bir değere sahip değildir. Sorgu oluşturma ve değerlendirme hakkında tam bir açıklama için bkz. [LINQ Sorgularına GirişC#()](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries) veya [ilk LINQ sorgunuzu yazma](/dotnet/visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query).
 
- Bir sorgunun sonucu görüntülemek için hata ayıklayıcı sorguyu değerlendirmelidir. Hata ayıklayıcıda LINQ Sorgu sonucu görüntülediğinizde oluşan bu örtülü değerlendirme, düşünmeniz gereken bazı etkilere sahiptir:
+ Bir sorgunun sonucunu göstermek için, hata ayıklayıcı tarafından değerlendirilmelidir. Hata ayıklayıcıda bir LINQ sorgu sonucu görüntülediğinizde oluşan bu örtük değerlendirme, dikkate almanız gereken bazı etkilere sahiptir:
 
-- Her değerlendirme sorgusunun zaman alır. Sonuç düğümlerinin genişletilmesi zaman alır. Bazı sorgular için yinelenen değerlendirme belirgin bir performans düşüşüyle sonuçlanabilir.
+- Sorgunun her değerlendirmesi zaman alır. Sonuçlar düğümünü genişletme zaman alır. Bazı sorgular için yinelenen değerlendirme, fark edilebilir bir performans cezasına neden olur.
 
-- Bir sorgunun değerlendirilmesi verilerin değerinde veya programınızın durumunu yapılan değişiklikler etkilere neden olabilir. Tüm sorguların yan etkisi yoktur. Bir sorgu yan etkileri olmadan güvenli bir şekilde değerlendirilebilir olup olmadığını belirlemek için sorguyu uygulayan kodu anlamanız gerekir.
+- Bir sorguyu değerlendirmek, verilerin değerinde veya programınızın durumunda yapılan değişiklikler olan yan etkilere neden olabilir. Tüm sorguların yan etkileri yoktur. Bir sorgunun yan etkileri olmadan güvenle değerlendirilemeyeceğini anlamak için sorguyu uygulayan kodu anlamanız gerekir.
 
-## <a name="BKMK_SteppingAndLinq"></a> Adımlama ve LINQ
- LINQ kodunu ayıklarken Adımlama hakkında bilmeniz gereken belirli davranış farkları vardır.
+## <a name="BKMK_SteppingAndLinq"></a>Adımlama ve LINQ
+ LINQ Code hata ayıklarken, adımlamayı bilmeniz gereken bazı davranış farklılıkları vardır.
 
 ### <a name="linq-to-sql"></a>LINQ - SQL
- İçinde bir LINQ to SQL sorgularında koşul kodu hata ayıklayıcının denetimi dışında ' dir. Bu nedenle, doğrulama koduna geçemezsiniz. Bir ifade ağacına derleyen herhangi bir sorgu hata ayıklayıcının denetimi dışında kod oluşturur.
+ LINQ to SQL sorgularda, koşul kodu hata ayıklayıcı denetiminin ötesinde olur. Bu nedenle, koşul koduna ilerlenemez. Bir ifade ağacına derlenen herhangi bir sorgu, hata ayıklayıcının denetiminin ötesinde bir kod üretir.
 
-### <a name="stepping-in-visual-basic"></a>Visual Basic'de Adımlama
- Bir Visual Basic programını adımladığınızda ve hata ayıklayıcı bir sorgu bildirimiyle karşılaştığında bildirime girmez ancak bildirimin tamamını tek bir deyim olarak vurgular. Bu davranış, sorgu çağrılana kadar değerlendirilmediğinden oluşur. Daha fazla bilgi için [Visual Basic'te LINQ'e giriş](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq).
+### <a name="stepping-in-visual-basic"></a>Visual Basic adımla
+ Bir Visual Basic programı aracılığıyla adımlarken ve hata ayıklayıcı bir sorgu bildirimiyle karşılaştığında, bildirime adımla, ancak tüm bildirimi tek bir ifade olarak vurgular. Bu davranış, sorgu çağrılana kadar değerlendirilmediği için oluşur. Daha fazla bilgi için bkz. [VISUAL BASIC LINQ 'e giriş](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq).
 
- Aşağıdaki örnek kodda gezinirseniz, hata ayıklayıcı sorgu bildirimini veya sorgu oluşturmayı tek bir deyim olarak vurgular.
+ Aşağıdaki örnek kodda ilerederseniz, hata ayıklayıcı sorgu bildirimini veya sorgu oluşturmayı tek bir ifade olarak vurgular.
 
 ```vb
 Function MyFunction(ByVal x As Char)
@@ -69,10 +69,10 @@ Sub Main()
 End Sub
 ```
 
- Yeniden adımladığınızda hata ayıklayıcısı vurgular `For Each cur In x`. İsteğe bağlı olarak sonraki adımında, işleve adımları `MyFunction`. Doğruluk sonra `MyFunction`, gezindikten `Console.WriteLine(cur.ToSting())`. Hata ayıklayıcı bu kodu değerlendirse bile herhangi bir noktada, sorgu bildirimindeki koşul kodu adım adım.
+ Bir kez daha adım hata ayıklayıcı `For Each cur In x`vurgular. Sonraki adımda `MyFunction`işlev adımları. `MyFunction`adımladıktan sonra `Console.WriteLine(cur.ToSting())`geri atlar. Herhangi bir noktada, hata ayıklayıcı kodu değerlendirse de sorgu bildirimindeki koşul kodunda adım adım ilerlemez.
 
-### <a name="replacing-a-predicate-with-a-function-to-enable-stepping-visual-basic"></a>Koşulu Adımlamaya (Visual Basic) etkinleştirmek için bir işlevle değiştirme
- Varsa, hata ayıklama amacıyla koşul kodu üzerinden adımlamak için koşulu orijinal koşul kodunu içeren bir işlev çağrısıyla değiştirebilirsiniz. Örneğin, bu kod olduğunu varsayalım:
+### <a name="replacing-a-predicate-with-a-function-to-enable-stepping-visual-basic"></a>Bir koşulu adımlamayı etkinleştirmek için bir Işlevle değiştirme (Visual Basic)
+ Hata ayıklama amacıyla koşul kodu ' nu adım adım yapmanız gerekirse, koşulu özgün koşul kodunu içeren bir işlev çağrısıyla değiştirebilirsiniz. Örneğin, bu koda sahip olduğunuzu varsayalım:
 
 ```vb
 Dim items() as integer ={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
@@ -85,7 +85,7 @@ For each item in query
 Next
 ```
 
- Koşul kodu adlı yeni bir işleve taşıyabilirsiniz `IsEven`:
+ Koşul kodunu `IsEven`adlı yeni bir işleve taşıyabilirsiniz:
 
 ```vb
 Dim items () as integer ={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
@@ -102,14 +102,14 @@ Function IsEven(item As =Integer) as Boolean
 End Function
 ```
 
- Düzeltilmiş sorgu çağrıları işlev `IsEven` her geçişte `items`. Her öğenin belirtilen koşulu karşılayıp ve kodda adım adım olup olmadığını görmek için hata ayıklayıcı penceresini kullanabilirsiniz `IsEven`. Bu örnekteki koşul oldukça basittir. Ancak, hata ayıklama yapmanızı daha zor bir karşılaştırmanız varsa bu teknik çok kullanışlı olabilir.
+ Düzeltilen sorgu, `items`her geçişte işlev `IsEven` çağırır. Hata ayıklayıcı pencerelerini her bir öğenin belirtilen koşulu karşılayıp karşılamadığını görmek için kullanabilir ve `IsEven`kodda ilerlemeyeceğinizi görebilirsiniz. Bu örnekteki koşul oldukça basittir. Ancak, hata ayıklaması yapmanız için daha zor bir koşul varsa, bu teknik çok faydalı olabilir.
 
-## <a name="BKMK_EditandContinueNotSupportedforLINQ"></a> Düzenle ve devam et LINQ için desteklenmiyor
- Düzenle ve devam et, LINQ sorgularında kısıtlamalarla yapılan değişiklikleri destekler. Ayrıntılar için bkz [EnC desteklenen değişiklikleri](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))
+## <a name="BKMK_EditandContinueNotSupportedforLINQ"></a>Düzenle ve devam et LINQ için desteklenmiyor
+ Düzenle ve devam et, LINQ sorgularında yapılan değişiklikleri sınırlamalara göre destekler. Ayrıntılar için bkz. [ENC tarafından desteklenen değişiklikler](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL hata ayıklama](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6\(v\=vs.100\))
+- [SQL hatalarını ayıklama](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6\(v\=vs.100\))
 - [Özel Durumları Hata Ayıklayıcısı ile Yönetme](../debugger/managing-exceptions-with-the-debugger.md)
-- [LINQ sorguları (C#) giriş](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
-- [Visual Basic'de LINQ'e giriş](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq)
+- [LINQ Sorgularına Giriş (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
+- [Visual Basic LINQ 'e giriş](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq)

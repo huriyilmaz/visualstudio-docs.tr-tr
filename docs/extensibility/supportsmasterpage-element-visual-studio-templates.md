@@ -14,15 +14,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba409c831dd508dae796bca1ea2837674459690d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 02c3915be318e7c4b3d82965f6d4640069f7a0c4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316692"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72719390"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage Öğesi (Visual Studio Şablonları)
-Belirtir veya olmadığını **ana sayfa seçin** onay kutusunu etkin **Yeni Öğe Ekle** iletişim kutusu.
+**Yeni öğe Ekle** Iletişim kutusunda **Ana sayfa seç** onay kutusunun etkin olup olmadığını belirtir.
 
  \<VSTemplate > \<TemplateData > \<SupportsMasterPage >
 
@@ -45,20 +45,20 @@ Belirtir veya olmadığını **ana sayfa seçin** onay kutusunu etkin **Yeni Ö�
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve içinde biçimini tanımlar verileri belirtir **yeni proje** veya **yeni öğe** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
- Metin olmalıdır `true` veya `false`gösteren olup olmadığını **ana sayfa seçin** onay kutusunu etkin **Yeni Öğe Ekle** iletişim kutusu.
+ Metin, **Yeni öğe Ekle** Iletişim kutusunda **Ana sayfa seç** onay kutusunun etkin olup olmadığını gösteren `true` veya `false`olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `SupportsMasterPage` İsteğe bağlı bir öğedir. Varsayılan değer `false` şeklindedir.
+ `SupportsMasterPage`, isteğe bağlı bir öğedir. Varsayılan değer `false` şeklindedir.
 
- `SupportsMasterPage` Öğesi, yalnızca Web öğesi şablonları için kullanılabilir.
+ `SupportsMasterPage` öğesi yalnızca Web öğesi şablonları için kullanılabilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir ana sayfa desteği içeren bir Web projesi için meta verileri gösterir.
+ Aşağıdaki örnek, bir ana sayfa için destek içeren bir Web projesinin meta verilerini gösterir.
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"
@@ -82,6 +82,6 @@ Belirtir veya olmadığını **ana sayfa seçin** onay kutusunu etkin **Yeni Ö�
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve Öğe Şablonları Oluşturma](../ide/creating-project-and-item-templates.md)

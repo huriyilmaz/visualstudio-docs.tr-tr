@@ -1,5 +1,5 @@
 ---
-title: Karışık modda hata ayıklama yalnızca Microsoft .NET Framework 2.0 veya 3.0 sürümü kullanılırken desteklenir | Microsoft Docs
+title: Karışık modda hata ayıklama yalnızca Microsoft .NET Framework 2,0 veya 3,0 ' i kullanırken desteklenir | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,43 +15,43 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 827d3c5fcc625601019d6cbf61cdbf7c771b63b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b20ef6b81e4d7162fd230d9d0c3437fe1b5232c1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929865"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730925"
 ---
 # <a name="mixed-mode-debugging-is-only-supported-when-using-microsoft-net-framework-20-or-30"></a>Karışık Modda Hata Ayıklama Yalnızca Microsoft .NET Framework 2.0 veya 3.0 Sürümü Kullanılırken Desteklenir
-Daha önce Microsoft .NET Framework sürümleri 2.0 64-bit işlemlerinin karışık mod hata ayıklama için destek sağlıyor musunuz. Bu, hata ayıklama sırasında yerel kod için yönetilen kod veya yönetilen koda yerel koddan girilemiyor anlamına gelir.
+2,0 ' den önceki Microsoft .NET Framework sürümleri, 64 bit işlemlerde karışık modda hata ayıklama desteği sağlamaz. Bu, hata ayıklarken yönetilen koddan yerel koda veya yerel koddan yönetilen koda ilerlenemez.
 
- Bu sorunu gidermek için şunları yapabilirsiniz:
+ Bu sorunu geçici olarak çözmek için şunları yapabilirsiniz:
 
-- Microsoft .NET Framework 2.0 veya 3.0 kullanmak için projenizin güncelleştirin.
+- Projenizi Microsoft .NET Framework 2,0 veya 3,0 ' ü kullanacak şekilde güncelleştirin.
 
-- Yönetilen ve yerel kodunuzu ayrı hata ayıklama oturumlarında hata ayıklayın.
+- Yönetilen ve yerel kodunuzda ayrı hata ayıklama oturumlarında hata ayıklayın.
 
-- Karma kodunuzu bir 32 bitlik işlem olarak, aşağıdaki yordamlarda açıklandığı gibi hata ayıklayın.
+- Aşağıdaki yordamlarda açıklandığı gibi, karma kodunuzda 32 bitlik bir işlem olarak hata ayıklayın.
 
-### <a name="to-change-the-operating-system-to-32-bit-visual-basic-or-c"></a>İşletim sistemi 32 bit (Visual Basic veya C#) değiştirileceğini
+### <a name="to-change-the-operating-system-to-32-bit-visual-basic-or-c"></a>İşletim sistemini 32-bit (Visual Basic veya C#) olarak değiştirmek için
 
-1. İçinde **Çözüm Gezgini**, projenize sağ tıklayın ve ardından **özellikleri** kısayol menüsünde.
+1. **Çözüm Gezgini**, projenize sağ tıklayın ve ardından kısayol menüsünde **Özellikler** ' e tıklayın.
 
-2. Özellik Sayfaları'nda tıklatın **derleme** veya **hata ayıklama** sekmesi.
+2. Özellik sayfalarında, **Derle** veya **Hata Ayıkla** sekmesine tıklayın.
 
-3. Tıklayın **Platform**ve ardından **x86** platformlar listesinden.
+3. **Platform**' ı tıklatın ve ardından platformlar listesinden **x86** ' yı seçin.
 
-     Varsayılan olarak, Visual Basic ve C# Derleyicileri herhangi bir CPU üzerinde çalıştırmak için kod üretir. Bu ikili dosyalar, bir 64 bit bilgisayarda 64 bit işlem çalıştırın. Bir 32 bit işlemde çalıştırmak için seçmelisiniz **Win32**değil **AnyCPU**.
+     Visual Basic ve C# derleyiciler, varsayılan olarak HERHANGI bir CPU üzerinde çalışacak kodu üretir. 64 bitlik bir bilgisayarda bu ikili dosyalar 64 bit işlem olarak çalışır. 32 bitlik bir işlemde çalıştırmak için, **anycpu**değil, **Win32**öğesini seçmeniz gerekir.
 
-### <a name="to-change-the-operating-system-to-32-bit-cc"></a>İşletim sistemi 32-bit (C/C++) değiştirileceğini
+### <a name="to-change-the-operating-system-to-32-bit-cc"></a>İşletim sistemini 32-bit (C/C++) olarak değiştirmek için
 
-1. İçinde **Çözüm Gezgini**, projenize sağ tıklayın ve ardından **özellikleri** kısayol menüsünde.
+1. **Çözüm Gezgini**, projenize sağ tıklayın ve ardından kısayol menüsünde **Özellikler** ' e tıklayın.
 
-     Özellik Sayfaları'nda tıklatın **Platform**ve ardından **Win32** platformlar listesinden.
+     Özellik sayfalarında **Platform**' a tıklayın ve ardından platformlar listesinden **Win32** öğesini seçin.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- Bkz: [SQL hata ayıklamayı kurma](/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100)).
+- Bkz. [SQL hata ayıklamayı ayarlama](/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100)).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [64 Bit Uygulamalarda Hata Ayıklama](../debugger/debug-64-bit-applications.md)

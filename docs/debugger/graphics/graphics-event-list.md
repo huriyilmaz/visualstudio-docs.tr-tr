@@ -10,108 +10,108 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 710cc8cae2b1974529be1eded6c5148eedd1211e
-ms.sourcegitcommit: 283f2dbce044a18e9f6ac6398f6fc78e074ec1ed
+ms.openlocfilehash: 9fe890d5a2c88ea9d4d35a6bd01f6012d97e6ce0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65805309"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735543"
 ---
 # <a name="graphics-event-list"></a>Grafik Olay Listesi
-Grafik olay listesi oyunlarda veya uygulamalarda karesi işlenirken kaydedilmiş Direct3D olayları keşfetmek için Visual Studio grafik Çözümleyicisi'nde kullanın.
+Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D olaylarını araştırmak için Visual Studio Grafik Çözümleyicisi 'deki grafik olay listesini kullanın.
 
- Bu olay listesi.
+ Bu olay listesidir:
 
- ![Adında "Index" olan olaylar listesi. ](media/gfx_diag_demo_event_list_orientation.png "gfx_diag_demo_event_list_orientation")
+ ![Adında "Index" olan olayların listesi.](media/gfx_diag_demo_event_list_orientation.png "gfx_diag_demo_event_list_orientation")
 
-## <a name="using-the-event-list"></a>Olay listesi kullanma
- Olay listesi, bunu diğer grafik analizi araçları tarafından görüntülenen bilgileri yansıtılan bir olay seçtiğinizde, Bu diğer araçlar ile uyumlu bir şekilde olay listesi kullanılarak bir işleme sorunun nedenini belirlemek için ayrıntılı inceleyebilirsiniz. Olay listesi diğer grafik analizi araçları ile birlikte kullanarak işleme sorunları nasıl çözebileceğiniz hakkında daha fazla bilgi için bkz: [örnekler](graphics-diagnostics-examples.md).
+## <a name="using-the-event-list"></a>Olay listesini kullanma
+ Olay listesinden bir olay seçtiğinizde, bu, diğer grafik çözümleme araçları tarafından görüntülenen bilgilere yansıtılır; diğer araçlarla konser içindeki olay listesini kullanarak, nedenini öğrenmek için işleme sorununu ayrıntılı olarak inceleyebilirsiniz. Olay listesini diğer grafik analizi araçlarıyla birlikte kullanarak işleme sorunlarını nasıl çözebileceğiniz hakkında daha fazla bilgi için bkz. [örnekler](graphics-diagnostics-examples.md).
 
- Olay listesi özelliklerinin etkili bir şekilde kullanarak, binlerce olayın içerebilir karmaşık çerçevelerinin çevresinde almak için önemlidir. Olay listesi verimli bir şekilde kullanma, görünüm sizin için en uygun seçin, arama olay listesini filtrelemek için bir olayla ilişkili olan Direct3D nesneleri hakkında daha fazla bilgi edinmek için bağlantıları izleyin ve oku çağrıları arasında taşımak için düğmeler hızla çizin.
+ Olay listesinin özelliklerinin etkili bir şekilde kullanılması, binlerce olay içerebilecek karmaşık çerçevelerin etrafında alınması açısından önemlidir. Olay listesini etkin bir şekilde kullanmak için, görünümü sizin için en uygun şekilde kullanın, olay listesini filtrelemek için arama 'yı kullanın, bir olayla ilişkili Direct3D nesneleri hakkında daha fazla bilgi edinmek için bağlantıları izleyin ve çizim çağrıları arasında hızlıca geçiş yapmak için ok düğmelerini kullanın.
 
-### <a name="color-coded-events-in-direct3d-12"></a>Direct3D 12 renk kodlu olaylar
- Direct3D 12 farklı donanım işlevselliği için karşılık gelen birden fazla kuyruk kullanıma sunar. Bir Direct3D 12 uygulama yakalama ile çalışırken, bir Direct3D 12 belirli grafik olay ile ilişkili kuyruk belirlemenize yardımcı olması için olayları Olay listesindeki kendi sıra göre renk kodludur.
+### <a name="color-coded-events-in-direct3d-12"></a>Direct3D 12 ' de renk kodlu olaylar
+ Direct3D 12, farklı donanım işlevlerine karşılık gelen birden çok sırayı gösterir. Direct3D 12 ' deki belirli bir grafik olayı ile ilişkili sırayı belirlemek için, bir Direct3D 12 uygulaması yakalamayla çalışırken, olaylar, kuyruğuna göre olay listesinde renk kodludur.
 
-|Direct3D 12 sırası|Renk|
+|Direct3D 12 kuyruğu|Renk|
 |-----------------------|-----------|
-|Kuyruk oluştur|Yeşil|
-|Kuyruk işlem|Sarı|
-|Kopyalama kuyruğu|Turuncu|
+|İşleme kuyruğu|renkli|
+|İşlem kuyruğu|renkle|
+|Kopyalama kuyruğu|Al|
 
- Direct3D 11 birden fazla kuyruk kullanıma sunmak değil, Direct3D 11 uygulamasının bir yakalama ile çalışırken olayları renk kodlu kalmayacak bir olay listesi.
+ Direct3D 11 birden çok kuyruğu kullanıma sunmadığından, bir Direct3D 11 uygulaması yakalamayla çalışırken olay listesinde olaylar renk kodlanmamış.
 
-### <a name="event-list-views"></a>Olay liste görünümleri
- Olay listesi, grafik olaylarını düzenleme iş akışı ve tercihlerinizi desteklemek için farklı şekilde iki farklı görünümleri destekler. İlk görünümdür *GPU iş görünümü* hangi düzenler olayları ve durumlarını ilişkili hiyerarşik olarak. İkinci görünüm *zaman çizelgesi görünümü* hangi düzenler olayların kronolojik, düz bir liste.
+### <a name="event-list-views"></a>Olay listesi görünümleri
+ Olay listesi, grafik olaylarını, iş akışınızı ve tercihlerinizi desteklemeye yönelik farklı yollarla düzenleyen iki farklı görünümü destekler. İlk görünüm, olayları ve bunlarla ilişkili durumlarını hiyerarşik olarak düzenleyen *GPU iş görünümüdür* . İkinci görünüm, olayları kronolojik olarak düz bir listede düzenleyen *zaman çizelgesi görünümüdür* .
 
- **GPU işi** görüntüler yakalanan olayları ve durumlarını bir hiyerarşide görünümü. Hiyerarşinin üst düzey olayları gibi çizim çağrıları, temizler, mevcut ve görünümler ile de oluşur. Olay listesi, çizim çağrılarını çizim çağrısı zaman güncel olan cihaz durumunu görüntülemek için genişletebilirsiniz; ve her tür değerlerini belirleyen olayları görüntülemek için durumları daha da genişletebilirsiniz. Bu düzey, önceki bir çerçeve içinde belirli bir duruma ayarlanmış olup olmadığını ya da son çizim çağrısı bu yana kereden fazla ayarlandı da görebilirsiniz.
+ **GPU iş** görünümü yakalanan olayları ve bunların durumlarını bir hiyerarşide görüntüler. Hiyerarşinin en üst düzeyi, çizim çağrıları, Temizleme, sunma ve görünümlerle ilgilenme gibi olaylardan oluşur. Olay listesinde, çizim çağrıları ' nı genişleterek arama sırasında geçerli olan cihaz durumunu görüntüleyebilirsiniz; Ayrıca, değerlerinin ayarlandığı olayları göstermek için her bir durum türünü daha da genişletebilirsiniz. Bu düzeyde, belirli bir durumun önceki çerçevede ayarlanmış olup olmadığını veya son çizim çağrısından bu yana birden çok kez ayarlandığını da görebilirsiniz.
 
- **Zaman çizelgesi** görünüm kronolojik sırayla her yakalanan olay görüntüler. Olay listesi düzenleme bu şekilde Visual Studio'nun önceki sürümlerinde olduğu gibi aynı olur.
+ **Zaman çizelgesi** görünümü yakalanan her olayı kronolojik sırada görüntüler. Olay listesini düzenlemenin bu yolu, Visual Studio 'nun önceki sürümlerindeki ile aynıdır.
 
-##### <a name="to-change-the-event-list-view-mode"></a>Olay listesi görünümü modu değiştirmek için
+##### <a name="to-change-the-event-list-view-mode"></a>Olay listesi görünüm modunu değiştirmek için
 
-- İçinde **grafik olay listesi** penceresinde, olayların listesinin üst bulun **görünümü** açılır ve seçeneğini **zaman çizelgesi** görünümü veya **GPUişi** görünümü.
+- **Grafik olay listesi** penceresinde, olay listesinin üstünde, **Görünüm** açılır menüsünü bulun ve **zaman çizelgesi** görünümünü ya da **GPU iş** görünümünü seçin.
 
 ### <a name="filtering-events"></a>Olayları filtreleme
- Arama kutusunu kullanabilirsiniz — sağ üst köşesinde bulunan **grafik olay listesi** penceresi — yalnızca adında belirli anahtar sözcükler olayları dahil etmek için olayları listeyi filtrelemek için. İster tek anahtar sözcükleri belirtebilirsiniz `Vertex`— önceki resimde gösterildiği gibi — veya noktalı virgülle ayrılmış bir liste kullanarak birden çok anahtar sözcükleri `Draw;Primitive`— ya da sahip olayları eşleşen `Draw` veya `Primitive` adlarında. Aramalar için boşluk hassas — Örneğin, `VSSet` ve `VS Set` farklı aramalar — böylece form aramaları için dikkatli bir şekilde sağlayın.
+ Olaylar listesini yalnızca adları belirli anahtar sözcükleri içeren olayları içerecek şekilde filtrelemek için, **grafik olay listesi** penceresinin sağ üst köşesinde bulunan arama kutusunu kullanabilirsiniz. Önceki çizimde gösterildiği gibi `Vertex`gibi tek bir anahtar sözcük veya `Draw;Primitive`gibi noktalı virgülle ayrılmış bir liste kullanarak birden çok anahtar sözcük belirtebilirsiniz. Bu, adlarında `Draw` ya da `Primitive` olan olaylarla eşleşir. Aramalar, boşluk ile duyarlıdır — Örneğin, `VSSet` ve `VS Set` farklı aramalardır; bu nedenle, aramaları dikkatle ayarladığınızdan emin olun.
 
-### <a name="moving-between-draw-calls"></a>Çizim çağrıları arasında taşıma
- İnceleme çünkü `Draw` çağrıdır kullanabileceğiniz özellikle önemli **sonraki Git çizim çağrısı** ve **Git önceki çizim çağrısı** düğmeleri — solüstköşesindebulunan**Grafik olay listesi** penceresi — bulup çizim çağrıları arasında kolayca taşıyın.
+### <a name="moving-between-draw-calls"></a>Çizim çağrıları arasında dolaşma
+ `Draw` çağrılarının incelenmesi özellikle önemli olduğundan, bir **sonraki çizim çağrısına git** ' i kullanabilir ve çizim Için **grafik olay listesi** penceresinin sol üst köşesinde bulunan **önceki çizim çağrı düğmelerine gidebilirsiniz** — hızlı bir şekilde çağırır.
 
-### <a name="links-to-graphics-objects"></a>Grafik nesneleri bağlantılar
- Belirli grafik olaylarını anlamak için bir olay tarafından başvurulan Direct3D nesneleri veya Direct3D geçerli durumu hakkında ek bilgi gerekebilir. Çok sayıda olay daha fazla ayrıntı için izleyebileceğiniz bu bilgilere bağlantılar sağlar.
+### <a name="links-to-graphics-objects"></a>Grafik nesnelerine bağlantılar
+ Belirli grafik olaylarını anlamak için, Direct3D 'nin geçerli durumu veya olay tarafından başvurulan Direct3D nesneleri hakkında ek bilgilere ihtiyaç duyabilirsiniz. Birçok olay, daha fazla ayrıntı için izleyebileceğiniz bu bilgilere bağlantılar sağlar.
 
-## <a name="kinds-of-events-and-event-markers"></a>Olaylar ve olay işaretçileri tür
- Liste düzenlenir olay dört kategoriye görüntülenen olayları: genel olaylar, olaylar, olay kullanıcı tanımlı grupları ve kullanıcı tanımlı olay işaretçileri çizin. Genel olaylar dışında her olay ait olduğu kategoriyi belirten bir simge ile birlikte görüntülenir.
+## <a name="kinds-of-events-and-event-markers"></a>Olay ve olay işaretçileri türleri
+ Olay listesinde görüntülenen olaylar dört kategoride düzenlenmiştir: genel olaylar, çizim olayları, Kullanıcı tanımlı olay grupları ve Kullanıcı tanımlı olay işaretçileri. Genel olaylar hariç her olay, ait olduğu kategoriyi gösteren bir simgeyle birlikte görüntülenir.
 
 |Simge|Olay açıklaması|
 |----------|-----------------------|
-|(simge yok)|Genel olay<br /> Değil kullanıcı tanımlı olay, kullanıcı tanımlı olay grubu veya olay çizmek herhangi bir olay.|
-|![Çizim olay simgesi](media/vsg_eventlist_icon_draw.png "vsg_eventlist_icon_draw")|Çizim olayından<br /> Yakalanan karede bir çizim olayından işaretler.|
-|![Kullanıcı&#45;olay işaret simgesi tanımlanan](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay grubu<br /> Grupları, uygulama tarafından tanımlanan olayları, ilgili.|
-|![Kullanıcı&#45;olay işaret simgesi tanımlanan](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay işaretçisi<br /> Belirli bir konuma uygulama tarafından tanımlanan olarak işaretler.|
+|(simge yok)|Genel olay<br /> Kullanıcı tanımlı olay, Kullanıcı tanımlı olay grubu veya çizim olayı olmayan herhangi bir olay.|
+|![Çizim olayı simgesi](media/vsg_eventlist_icon_draw.png "vsg_eventlist_icon_draw")|Çizim olayı<br /> Yakalanan çerçeve sırasında oluşan bir çizim olayını işaretler.|
+|![Kullanıcı&#45;tanımlı olay işaret simgesi](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay grubu<br /> Uygulama tarafından tanımlanan şekilde ilgili olayları gruplandırır.|
+|![Kullanıcı&#45;tanımlı olay işaret simgesi](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay işaretleyicisi<br /> Uygulama tarafından tanımlanan belirli bir konumu işaretler.|
 
-## <a name="marking-user-defined-events-in-your-app"></a>Uygulamanızda işaretlenmesi kullanıcı tanımlı olayları
- Kullanıcı tanımlı olaylar, uygulamanıza özgü niteliktedir. Grafik olay listesi olayları ile uygulamanızda gerçekleşen önemli olayları ilişkilendirmek için bunları kullanabilirsiniz. Örneğin, ilgili olaylar düzenlemek için kullanıcı tanımlı olay gruplar oluşturabilirsiniz — Bu, kullanıcı arabirimini oluşturmak gibi — olay listesi daha kolayca göz atabilir veya belirli bir türdeki nesneler, işaretçileri oluşturabilirsiniz böylece grupları veya Hiyerarşiler olan çizilen. böylece, grafik olaylarını Olay listesi kolayca bulabilirsiniz.
+## <a name="marking-user-defined-events-in-your-app"></a>Uygulamanızda Kullanıcı tanımlı olayları işaretleme
+ Kullanıcı tanımlı olaylar uygulamanıza özeldir. Bunları, uygulamanızda, grafik olay listesindeki olaylarla oluşan önemli olayları ilişkilendirmek için kullanabilirsiniz. Örneğin, olay listesine daha kolay gözatabilmeniz için, Kullanıcı tanımlı olay gruplarını gruplar veya hiyerarşiler halinde düzenlemek üzere Kullanıcı tanımlı olay grupları oluşturabilirsiniz veya belirli nesne türleri olduğunda işaretçiler oluşturabilirsiniz. grafik olaylarını olay listesinde kolayca bulabilmeniz için çizilir.
 
- Gruplar ve işaretçileri, uygulamanızı oluşturmak için diğer Direct3D tarafından hata ayıklama araçları kullanmak için Direct3D sağlayan API'leri kullanın. Bu API'ler, bazen Direct3D sürümleri arasında değiştirmek, ancak temel işlevleri aynıdır.
+ Uygulamanızda gruplar ve işaretçiler oluşturmak için, Direct3D 'nin diğer Direct3D hata ayıklama araçları tarafından kullanılması için sağladığı API 'Leri kullanın. Bu API 'Ler bazen Direct3D sürümleri arasında değişir ancak temel işlevler aynıdır.
 
-### <a name="user-defined-events-in-direct3d-12"></a>Kullanıcı tanımlı olayları, Direct3D 12
- Direct3D 12'deki gruplar ve işaretçileri oluşturmak için bu bölümde açıklanan API'leri kullanın. Aşağıdaki tabloda, bir komut kuyruğuna olaylar işaretleme veya liste komut bağlı olarak kullanabileceğiniz API'ler özetler.
+### <a name="user-defined-events-in-direct3d-12"></a>Direct3D 12 ' de Kullanıcı tanımlı olaylar
+ Direct3D 12 ' de gruplar ve işaretçiler oluşturmak için bu bölümde açıklanan API 'Leri kullanın. Aşağıdaki tabloda, olayları bir komut kuyruğu veya komut listesine işaret ettiğinize bağlı olarak kullanabileceğiniz API 'Ler özetlenmektedir.
 
-|API tanımı|[ID3D12CommandQueue](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue)|[ID3D12GraphicsCommandList](/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist)|
+|API açıklaması|[ID3D12CommandQueue](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue)|[ID3D12GraphicsCommandList](/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist)|
 |---------------------| - | - |
-|Kullanıcı tanımlı olay kullanılabilirliğini denetle|[PIXGetStatus](/previous-versions//dn788637(v=vs.85))|[PIXGetStatus](/previous-versions//dn788637(v=vs.85))|
-|Olay grubu başlayın|[PIXBeginEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-beginevent)|[PIXBeginEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-beginevent)|
-|Son olay grubu|[PIXEndEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-endevent)|[PIXEndEvent](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-endevent)|
-|Bir olay işaretçisi oluşturma|[PIXSetMarker](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-setmarker)|[PIXSetMarker](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setmarker)|
+|Kullanıcı tanımlı olay kullanılabilirliğini denetle|[Pikselgetstatus](/previous-versions//dn788637(v=vs.85))|[Pikselgetstatus](/previous-versions//dn788637(v=vs.85))|
+|Bir olay grubuna başla|[Piksellerle Beginevent](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-beginevent)|[Piksellerle Beginevent](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-beginevent)|
+|Bir olay grubunu Sonlandır|[Pikselendevent](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-endevent)|[Pikselendevent](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-endevent)|
+|Olay işaretleyicisi oluşturma|[Pikselsetişaretleyicisi](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-setmarker)|[Pikselsetişaretleyicisi](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setmarker)|
 
-### <a name="user-defined-events-in-direct3d-11-and-earlier"></a>Direct3D 11'de ve önceki kullanıcı tanımlı olayları
- Grupları ve Direct3D 11 veya önceki işaretçileri oluşturmak için bu bölümde açıklanan API'leri kullanın. Aşağıdaki tabloda farklı sürümlerini Direct3D 11 ve Direct3D önceki sürümleri için kullanabileceğiniz API'ler özetler.
+### <a name="user-defined-events-in-direct3d-11-and-earlier"></a>Direct3D 11 ve önceki sürümlerde Kullanıcı tanımlı olaylar
+ Direct3D 11 veya daha önceki sürümlerde gruplar ve işaretçiler oluşturmak için bu bölümde açıklanan API 'Leri kullanın. Aşağıdaki tabloda, Direct3D 11 ve daha önceki Direct3D sürümlerinin farklı sürümleri için kullanabileceğiniz API 'Ler özetlenmektedir.
 
-|API tanımı|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11.2)|[ID3DUserDefinedAnnotation](http://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11.1)|D3DPerf_ API ailesi (Direct3D 11.0 ve daha önceki)|
+|API açıklaması|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11,2)|[ID3DUserDefinedAnnotation](http://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11,1)|D3DPerf_ API ailesi (Direct3D 11,0 ve öncesi)|
 |---------------------| - | - | - |
-|Olay grubu başlayın|`BeginEventInt`|`BeginEvent`|`D3DPerf_BeginEvent`|
-|Son olay grubu|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|
-|Bir olay işaretçisi oluşturma|`SetMarkerInt`|`SetMarker`|`D3DPerf_SetMarker`|
+|Bir olay grubuna başla|`BeginEventInt`|`BeginEvent`|`D3DPerf_BeginEvent`|
+|Bir olay grubunu Sonlandır|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|
+|Olay işaretleyicisi oluşturma|`SetMarkerInt`|`SetMarker`|`D3DPerf_SetMarker`|
 
- Direct3D sürümünüz destekleyen bu API dilediğinizi kullanabilirsiniz — Direct3D 11.1 API hedefliyorsanız, örneğin, kullanabilirsiniz `SetMarker` veya `D3DPerf_SetMarker` bir olay işaretçisi değil oluşturmak için `SetMarkerInt` çünkü Direct3D, yalnızca kullanılabilir 11.2 — ve Direct3D'ün farklı sürümlerini birlikte aynı uygulamada destekleyen olanlar bile karıştırabilirsiniz.
+ Direct3D sürümünüzün desteklediği bu API 'lerden herhangi birini kullanabilirsiniz. Örneğin, Direct3D 11,1 API 'sini hedefliyorsanız, bir olay işaretleyicisi oluşturmak için `SetMarker` ya da `D3DPerf_SetMarker` kullanabilirsiniz, ancak yalnızca Direct3D 11.2 'de kullanılabilir olduğundan `SetMarkerInt` değil, aynı uygulamada farklı Direct3D sürümlerini destekleenler de karışıyor.
 
 <!-- VERSIONLESS -->
 <a name="resource-history"></a>
 ## <a name="resource-history"></a>Kaynak geçmişi
-Visual Studio 2017 ve daha sonraki sürümleri içeren **kaynak geçmişi** penceresi.  İzle simgesini seçerek ![izleme simgesi](media/gfx_watch.png) bir girişi yanındaki **olay listesi** pencere ortaya çıkarmak **kaynak geçmişi** aşağıda gösterilen penceresi:
+Visual Studio 2017 ve üzeri, **kaynak geçmişi** penceresini içerir.  **Olay listesi** penceresindeki bir girdinin yanındaki izle simgesini](media/gfx_watch.png) ![izle simgesini seçtiğinizde aşağıda gösterilen **kaynak geçmişi** penceresi görüntülenir:
 
 ![Kaynak geçmişi](media/gfx_diag_resource_history.png)
 
-Bu pencere, olay listedeki seçili öğenin geçmişini görüntülemek sağlar.  Üstteki açılan geçmişini görüntülemek için diğer öğeleri seçmek için kullanılabilir.  Pencerenin üst kısmında içeren **çerçeve Kurulumu olayları**.  Bunlar yer alacağı olayları *Oluştur* kategori yazın ve genellikle başlatmak ve kaynak oluşturma çağrıları.  Pencerenin yarısını içeren alt **çerçeve olayları** bölümü.  Bunlar normal okuma ve yazma sırasında kaynak kullanımını meydana gelen olayları.
+Bu pencere, etkinlik listesindeki seçili öğenin geçmişini görüntülemenize olanak sağlar.  Üstteki açılan menü, geçmişini görüntülemek için diğer öğeleri seçmek üzere kullanılabilir.  Pencerenin üst yarısında **çerçeve kurulum olayları**bulunur.  Bunlar, *oluşturma* türü kategorisine giren olaylardır ve genellikle kaynağı başlatıp oluşturan çağrılardır.  Pencerenin alt yarısında **çerçeve olayları** bölümü bulunur.  Bunlar, kaynağın kullanımı sırasında oluşan normal okuma ve yazma olaylardır.
 
-| Sütun | Açıklama |
+| Sütunuyla | Açıklama |
 |-----------| - |
-| **Tür** | Giriş türü genellikle gösterilir *Oluştur*, *okuma* ve *yazma*. |
-| **Görünümü** | Zaman içinde o anda bir küçük resim kaynağının adını gösterir.  Küçük resim o anda bir kaynak Ayrıntıları görünümünü açmak için çift tıklayın. |
-| **Event** | Oluştuğu yöntem çağrısının gösterir olay oluşturulur.  Bireysel öğeleri üzerinde başka bir geçmiş İzle simgesini seçerek görüntülenebilir ![izleme simgesi](media/gfx_watch.png) uygun satırda.  Ayrıca, mavi renkte gibi çizilir hiçbir öğe `m_commandList` daha fazla ayrıntı için yukarıdaki ekran görüntüsünde, seçilebilir. |
+| **Türüyle** | Girişin türünü gösterir, genellikle *oluşturun*, *okuyun* ve *yazın*. |
+| **Görünümü** | Bu anda kaynağın bir küçük resmini gösterir.  Söz konusu zamanda kaynağın Ayrıntılar görünümünü açmak için küçük resme çift tıklayın. |
+| **Event** | Olayı oluşturan oluşan yöntem çağrısını gösterir.  Her öğe için herhangi bir ek geçmiş, uygun satıra ![izle simgesi](media/gfx_watch.png) izleme simgesi seçilerek görüntülenebilir.  Ayrıca, yukarıdaki ekran görüntüsünde `m_commandList` gibi mavi metinde çizilen herhangi bir öğe daha fazla ayrıntı için seçilebilir. |
 
 <!-- /VERSIONLESS -->
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler](walkthrough-missing-objects-due-to-device-state.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İzlenecek Yol: Cihaz Durumu Nedeniyle Nesnelerin Eksikliği](walkthrough-missing-objects-due-to-device-state.md)

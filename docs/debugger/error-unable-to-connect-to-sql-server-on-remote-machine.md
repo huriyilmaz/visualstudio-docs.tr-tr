@@ -1,5 +1,5 @@
 ---
-title: "Hata: Uzak makinede SQL Server'a bağlanılamıyor | Microsoft Docs"
+title: 'Hata: uzak makinedeki SQL Server bağlantı kurulamıyor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -15,19 +15,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4038f1f65d688ee8d9bbf9ad01eb1698b811bee5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1ecee2a2dbf7c849549ed6f5e844714cbb88bfda
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850109"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736819"
 ---
 # <a name="error-unable-to-connect-to-sql-server-on-remote-machine"></a>Hata: Uzak makinede SQL Server'a bağlanılamıyor
-Uzak makinede SQL Server'a bağlanılamıyor *adı*. Erişim reddedildi. Uzak makinede uzaktan hata ayıklayıcı yüklediğinizden emin olun. Uzak makine bir etki alanında değilse veya Visual Studio yerel hesabı olarak çalışıyorsa uzak makinede yerel hesap olarak bir hesapla aynı kullanıcı adı ve parola olmalıdır.
+Uzak makine *adında*SQL Server ile bağlantı kurulamıyor. Erişim engellendi. Uzak makinede uzaktan hata ayıklayıcıyı yüklediğinizi doğrulayın. Uzak makine etki alanında değilse veya Visual Studio yerel hesap olarak çalışıyorsa, uzak makinenin yerel hesapla aynı Kullanıcı adı ve parolaya sahip bir hesabı olması gerekir.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- Bkz: [uzaktan hata ayıklama](../debugger/remote-debugging.md).
+- Bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [SQL hata ayıklama](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))
+## <a name="see-also"></a>Ayrıca bkz.
+- [SQL hatalarını ayıklama](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))

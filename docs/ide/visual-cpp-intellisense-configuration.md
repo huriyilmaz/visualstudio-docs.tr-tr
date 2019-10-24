@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c95990eb875c52a66cd0efa5579c9d39eab5469
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.openlocfilehash: b0a909c25af3de22019327bb890da9e26bcce1c8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154911"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748587"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>IntelliSense için bir C++ projesi yapılandırma
 
@@ -38,7 +38,7 @@ Yapılarınızı Visual Studio IDE dışında çalıştırırsanız, yapıların
 
 ![VC + + Içerme dizinleri](media/vcpp-intellisense-include-paths.png)
 
-**VC_IncludePath**gibi derleme makrolarının geçerli değerlerini görmek Için dizinleri Ekle satırını seçin ve sağdaki aşağı açılan listeye tıklayın. Sonra  **\<> Düzenle** ' yi seçin ve **makrolar** düğmesine tıklayın.
+**VC_IncludePath**gibi derleme makrolarının geçerli değerlerini görmek Için dizinleri Ekle satırını seçin ve sağdaki aşağı açılan listeye tıklayın. **\<> Düzenle** ' yi seçin ve **makrolar** düğmesine tıklayın.
 
 ### <a name="makefile-projects"></a>Derleme görevleri dosyası projeleri
 
@@ -74,7 +74,7 @@ Etiket Ayrıştırıcı hataları **hata listesi** penceresinde görüntülenir.
 
 ## <a name="validate-project-settings-with-diagnostic-logging"></a>Tanılama günlüğü ile proje ayarlarını doğrulama
 
-IntelliSense derleyicisinin Içerme ve Önişlemci makroları dahil doğru derleyici seçeneklerini kullanıp kullanmadığını denetlemek için **araçlar > seçenekler > metin düzenleyicisi > C/C++ > Gelişmiş > gibi IntelliSense komut satırlarının tanılama günlüğünü açın Tanılama günlüğü**. Günlüğe kaydetmeyi doğru, **günlük düzeyini** 5 ' e (en ayrıntılı) ve **günlük filtresini** 8 ' e (IntelliSense günlüğü) ayarlayın.
+IntelliSense derleyicisinin Içerme ve Önişlemci makroları dahil doğru derleyici seçeneklerini kullanıp kullanmadığını denetlemek için **araçlar > seçenekler > metin düzenleyicisi > C/C++ > Gelişmiş > gibi IntelliSense komut satırlarının tanılama günlüğünü açın Tanılama günlüğü**. Günlüğe **kaydetmeyi doğru** , **günlük düzeyini** 5 ' e (en ayrıntılı) ve **günlük filtresini** 8 ' e (IntelliSense günlüğü) ayarlayın.
 
 Çıkış Penceresi artık IntelliSense derleyicisine geçirilen komut satırlarını gösterir. Örnek bir çıktı aşağıda verilmiştir:
 
@@ -120,6 +120,6 @@ TRACEDESIGNTIME ortam değişkenini true olarak ayarlarsanız ve Visual Studio '
 
 TRACEDESIGNTIME ortam değişkeni hakkında daha fazla bilgi edinmek için bkz. [Roslyn](https://github.com/dotnet/roslyn/wiki/Diagnosing-Project-System-Build-Errors) ve [ortak proje sistemi](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md). Bu makalelerdeki bilgiler C++ projelerle ilgilidir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual C++ IntelliSense](visual-cpp-intellisense.md)

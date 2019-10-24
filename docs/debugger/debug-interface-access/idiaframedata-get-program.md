@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_program | Microsoft Docs
+title: 'IDiaFrameData:: get_program | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6b893a40172bfd806130bef663da8676b513042
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 135f2b0a042dd74b573a0746831a48fb27e7c2a9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832844"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743513"
 ---
-# <a name="idiaframedatagetprogram"></a>IDiaFrameData::get_program
-Geçerli işlevi çağırmadan önce ayarlanmış kayıt hesaplamak için kullanılan program dizesini alır.
+# <a name="idiaframedataget_program"></a>IDiaFrameData::get_program
+Geçerli işleve yapılan çağrıdan önce kayıt kümesini hesaplamak için kullanılan program dizesini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,23 +33,23 @@ HRESULT get_program ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Program dizeyi döndürür.
+dışı Program dizesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Program dize prolog kurulabilmesi yorumlanır makroları dizisidir. Örneğin, tipik bir yığın çerçevesi program dize kullanabilirsiniz `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`. Burada işleçler işlenenlerin izleyin, ters Lehçe gösterimi biçimidir. `T0` geçici bir değişkende temsil eder. Bu örnek, aşağıdaki adımları gerçekleştirir:
+ Program dizesi, bir prolog oluşturmak için yorumlanan bir makro dizisidir. Örneğin, tipik bir yığın çerçevesi `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`Program dizesini kullanabilir. Biçim, işleçlerin işlenenleri izlediği ters Lehçe gösterimidir. `T0` yığındaki geçici bir değişkeni temsil eder. Bu örnek aşağıdaki adımları gerçekleştirir:
 
-1. Kaydının içeriğini taşımak `ebp` için `T0`.
+1. Kayıt `ebp` içeriğini `T0`taşıyın.
 
-2. Ekleme `4` değerine `T0` bir adresi üretmek, adresten değeri Al ve kayıttaki değeri depolamak için `eip`.
+2. Adres oluşturmak için `T0` değerine `4` ekleyin, bu adresten değeri alın ve kayıt `eip`değeri depolayın.
 
-3. Depolanan adresinden değer elde `T0` ve kayıttaki değeri depola `ebp`.
+3. `T0` depolanan adresten değeri alın ve bu değeri yazmaç `ebp`olarak depolayın.
 
-4. Ekleme `8` değerine `T0` ve kayıttaki değeri depola `esp`.
+4. `T0` değerine `8` ekleyin ve bu değeri yazmaç `esp`olarak depolayın.
 
-   Program dize CPU ve geçerli yığın çerçevesi tarafından temsil edilen işlev için ayarlanan çağırma kuralı için özel olduğunu unutmayın.
+   Program dizesinin CPU 'ya ve geçerli yığın çerçevesi tarafından temsil edilen işlev için ayarlanan çağırma kuralına özel olduğunu unutmayın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

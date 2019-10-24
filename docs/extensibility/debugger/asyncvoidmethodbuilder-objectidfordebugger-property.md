@@ -1,5 +1,5 @@
 ---
-title: Asyncvoidmethodbuilder.objectıdfordebugger özelliği | Microsoft Docs
+title: AsyncVoidMethodBuilder. ObjectIdForDebugger özelliği | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,21 +10,21 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0f4e7fe2a61d2277884920045e3bfce80dd26be
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: dc396a40dd90b33d43d5c0857213551bfe8fd242
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350959"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727769"
 ---
-# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>Asyncvoidmethodbuilder.objectıdfordebugger özelliği
-Hata ayıklayıcı bu oluşturucuya benzersiz şekilde tanımlamak için kullanılan nesneyi alır.
+# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>AsyncVoidMethodBuilder. ObjectIdForDebugger özelliği
+Bu oluşturucuyu hata ayıklayıcıya benzersiz bir şekilde tanımlamak için kullanılabilecek bir nesne alır.
 
- **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
+ **Ad alanı:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll içinde)
+ **Bütünleştirilmiş kod:** mscorlib (mscorlib. dll içinde)
 
- .NET Framework'den bu iç üye erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.
+ Bu iç üyeye .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,6 +32,6 @@ Hata ayıklayıcı bu oluşturucuya benzersiz şekilde tanımlamak için kullan�
 private object ObjectIdForDebugger
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>
-- [.NET Framework için paralel uzantı dahili bileşenleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework için paralel uzantı iç işlevleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

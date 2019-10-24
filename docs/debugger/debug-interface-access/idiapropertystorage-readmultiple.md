@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadMultiple | Microsoft Docs
+title: 'IDiaPropertyStorage:: ReadMultiple | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ec66de4feea1a59ca1ef71f48bae49ed5ac2232
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9cd1e419e1d08120274fc627a672eb52331ca50f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839543"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742879"
 ---
 # <a name="idiapropertystoragereadmultiple"></a>IDiaPropertyStorage::ReadMultiple
-Okuma özellikleri geçerli özellik kümesinden belirtildi.
+Geçerli özellik kümesinden belirtilen özellikleri okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,21 +35,21 @@ HRESULT ReadMultiple( 
 #### <a name="parameters"></a>Parametreler
  `cpspec`
 
-[in] Belirtilen özellikleri sayısı `rgpspec` dizisi. Sıfır ise, yöntem hiçbir özellik döndürür ancak iade `S_OK` bir başarı kodu olarak.
+'ndaki `rgpspec` dizisinde belirtilen özellik sayısı. Sıfır ise, yöntem hiçbir özellik döndürmez, ancak `S_OK` başarı kodu olarak döndürür.
 
  `rgpspec`
 
-[in] Okunacak özellikleri dizisi. Özellikler, bir özellik kimliği veya isteğe bağlı dize adı belirtilebilir. Dizideki herhangi belirli bir sırada özelliklerini belirtmek gerekli değildir. Dizi basit özellikleri için döndürülecek yinelenen özellik değerlerini bunun sonucunda yinelenen özellikler içerebilir. Basit olmayan özellikler, bunları ikinci kez açmak için bir denemede erişim reddedildi döndürmelidir. Dizi özelliği kimlikleri ve dize bir karışımını içerebilir. Bu dizi en az olmalıdır `cpspec` özellik değerlerini sayısı.
+'ndaki Okunacak özellikler dizisi. Özellikler, bir özellik KIMLIĞIYLE ya da isteğe bağlı bir dize adı ile belirtilebilir. Dizide belirli bir sırada özellikleri belirtmek gerekli değildir. Dizi yinelenen özellikler içerebilir ve basit özellikler için dönüşte yinelenen özellik değerlerine neden olur. Basit olmayan özellikler, bu dosyaları ikinci kez açma girişiminde erişim engellendi olarak döndürmelidir. Dizi, özellik kimliklerinin ve dize kimliklerinin bir karışımını içerebilir. Bu dizide en az sayıda özellik değeri olmalıdır `cpspec`.
 
  `rgvar`
 
-[out içinde] Bir dizi `PROPVARIANT` yapıları (Microsoft.VisualStudio.OLE.Interop ad alanında) her bir özellik için değerlerle doldurulacak. Dizi en az olmalıdır `cpspec` öğeleri boyutu. Çağıranın dizideki değerleri başlatma gerekmez.
+[in, out] Her bir özellik için değerlerle doldurulacak `PROPVARIANT` yapıları dizisi (Microsoft. VisualStudio. OLE. Interop ad alanında). Dizi en az `cpspec` öğe boyutunda olmalıdır. Çağıranın dizideki değerleri başlatması gerekmez.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` , bir veya daha fazla özellik bulunamadı. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Bir veya daha fazla özellik bulunmazsa `S_FALSE` döndürür. Aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir özellik bulunamadı varsa, karşılık gelen bir giriş `rgvar` dizi içeren bir `VARIANT` türüyle `VT_EMPTY`.
+ Bir özellik bulunmazsa, `rgvar` dizisindeki karşılık gelen giriş `VT_EMPTY`türünde bir `VARIANT` içerir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

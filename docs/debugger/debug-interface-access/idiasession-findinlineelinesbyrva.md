@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findInlineeLinesByRVA | Microsoft Docs
+title: 'IDiaSession:: findInlineeLinesByRVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 900680fe58ab5061d3f8cca07fa1906cf34f7e5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6cf587d9e369ac32c72df5e1fd7a9005ef417177
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839335"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742203"
 ---
 # <a name="idiasessionfindinlineelinesbyrva"></a>IDiaSession::findInlineeLinesByRVA
-Satır numarası bilgisi tüm işlevlerin satır içine alınmış, doğrudan veya dolaylı olarak, belirtilen üst simgesiyle yinelemek bir istemci sağlar ve belirtilen göreli sanal adres içinde (RVA) bulunan bir sabit listesi alır.
+Bir istemcinin, belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır numarası bilgileri üzerinden yineleyebilir ve belirtilen göreli sanal adres (RVA) içinde yer alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,24 +34,24 @@ HRESULT findInlineeLinesByRVA ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-[in] Bir `IDiaSymbol` üst temsil eden nesne.
+'ndaki Üst öğeyi temsil eden `IDiaSymbol` nesne.
 
  `rva`
 
-[in] Bir RVA adresini belirtir.
+'ndaki Adresi RVA olarak belirtir.
 
  `length`
 
-[in] Adres aralığı, bu sorguyu kapsayacak şekilde bayt sayısını belirtir.
+'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığını bayt cinsinden belirtir.
 
  `ppResult`
 
-[out] Tutan bir `IDiaEnumLineNumbers` alınan satır numaraları listesi içeren nesne.
+dışı Alınan satır numaralarının listesini içeren `IDiaEnumLineNumbers` nesnesini barındırır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

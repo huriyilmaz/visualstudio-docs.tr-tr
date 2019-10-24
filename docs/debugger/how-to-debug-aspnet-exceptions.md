@@ -17,17 +17,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 3289fd82f8a3b99bf49ee796e49a285ffb93793c
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 9f8391d355b2f540db4e38486b8992d940336464
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536016"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733794"
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>Nasıl Yapılır: ASP.NET Özel Durumlarında Hata Ayıklama
 Hata ayıklama özel durumları, güçlü bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulaması geliştirmesinin önemli bir parçasıdır. Özel durumların hata ayıklamasına ilişkin genel bilgiler [hata ayıklayıcı Ile özel durumları yönetmektir](../debugger/managing-exceptions-with-the-debugger.md).
 
- İşlenmeyen [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] özel durumların hatalarını ayıklamak için, hata ayıklayıcının onlar için durdurduğundan emin olmanız gerekir. @No__t_0 çalışma zamanının en üst düzey bir özel durum işleyicisi vardır. Bu nedenle, hata ayıklayıcı varsayılan olarak işlenmemiş özel durumları hiçbir şekilde koparmazlar. Bir özel durum oluştuğunda hata ayıklayıcıya bölmek için, özel **durumlar** iletişim kutusunda özel durum ayarı için **bir özel** durum olduğunda kes ' i seçmeniz gerekir.
+ İşlenmeyen [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] özel durumların hatalarını ayıklamak için, hata ayıklayıcının onlar için durdurduğundan emin olmanız gerekir. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] çalışma zamanının en üst düzey bir özel durum işleyicisi vardır. Bu nedenle, hata ayıklayıcı varsayılan olarak işlenmemiş özel durumları hiçbir şekilde koparmazlar. Bir özel durum oluştuğunda hata ayıklayıcıya bölmek için, özel **durumlar** iletişim kutusunda özel durum ayarı için **bir özel** durum olduğunda kes ' i seçmeniz gerekir.
 
  Yalnızca kendi kodum etkinleştirdiyseniz, **bir özel durum oluştuğunda kes:** bir .net yönteminde veya diğer sistem kodunda bir özel durum oluşturulursa hata ayıklayıcının hemen kesilmesine neden olmaz. Bunun yerine, yürütme hata ayıklayıcı sistem dışı koda isabetyana kadar devam eder ve ardından kesilir. Sonuç olarak, bir özel durum oluştuğunda sistem kodunda ilerlemeyin.
 
@@ -47,5 +47,5 @@ Hata ayıklama özel durumları, güçlü bir [!INCLUDE[vstecasp](../code-qualit
 
 - Kod etrafında `try ... catch` blokları, tahmin ettiğiniz ve nasıl işleneceğini bildiğiniz özel durumlar oluşturabilecek şekilde yerleştirin. Örneğin, uygulama bir XML Web hizmetine ya da doğrudan bir SQL Server çağrılar yapıyor, bu kod TRY içinde olmalıdır **...** oluşabilecek çok sayıda özel durum olduğundan catch blokları.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [ASP.NET uygulamalarında hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasegment::get_virtualaddress | Microsoft Docs
+title: 'IDiaSegment:: get_virtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a7daec26817638be5338eb10dce83b59a1283d15
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 94958fb51f6742bf07cc5a4cd34da059c05adc23
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839413"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742367"
 ---
-# <a name="idiasegmentgetvirtualaddress"></a>IDiaSegment::get_virtualAddress
-Bölüm başına sanal adresini (VA) alır.
+# <a name="idiasegmentget_virtualaddress"></a>IDiaSegment::get_virtualAddress
+Bölümün başlangıcının sanal adresini (VA) alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_virtualAddress ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] VA bölümü başlangıcını döndürür.
+dışı Bölümün başlangıcının VA değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

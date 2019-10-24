@@ -1,5 +1,5 @@
 ---
-title: Özel (hata ayıklama arabirimi Erişim SDK'sı) | Microsoft Docs
+title: Özel (hata ayıklama arabirimi erişim SDK 'Sı) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15e0d58c49a66416371c7e66e12f469e6d224c91
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b3e3300eb416df3a3af7fd628f784397b77beeb4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62555149"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745387"
 ---
 # <a name="custom-debug-interface-access-sdk"></a>Özel (Arabirim Erişimi SDK'sında Hata Ayıklama)
-Bazı derleyiciler herhangi standart sözcük Simge türlerinin tanımlanmamış sembol tanıtır. Bu simgeleri tarafından tanımlanan bir `SymTagCustom` etiketi.
+Bazı derleyiciler, standart sözlü sembol türlerinden herhangi biri tarafından tanımlanmayan semboller sunar. Bu semboller bir `SymTagCustom` etiketiyle tanımlanır.
 
 ## <a name="properties"></a>Özellikler
- Aşağıdaki tabloda bu sembol türü için geçerli olan özellikleri gösterir.
+ Aşağıdaki tabloda, bu sembol türü için geçerli olan özellikler gösterilmektedir.
 
 |Özellik|Veri türü|Açıklama|
 |--------------|---------------|-----------------|
-|[IDiaSymbol::get_dataBytes](../../debugger/debug-interface-access/idiasymbol-get-databytes.md)|`BYTE`|Simgeyle ilişkilendirilen veri dizisi.|
-|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Sembol, dizin kimliği.|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagCustom` (biri [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) değerler).|
+|[IDiaSymbol::get_dataBytes](../../debugger/debug-interface-access/idiasymbol-get-databytes.md)|`BYTE`|Sembolle ilişkili veri dizisi.|
+|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Simgenin dizin KIMLIĞI.|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|`SymTagCustom` döndürür ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Simge Türlerinin Sözcük Hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

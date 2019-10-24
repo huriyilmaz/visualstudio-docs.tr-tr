@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findfile | Microsoft Docs
+title: 'IDiaSession:: findFile | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 729b3c323ce2128b18af516ecbffb7b5157f0274
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d9751127007b4e7823cf6d2ae35ed2fe80cb83b8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839374"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742289"
 ---
 # <a name="idiasessionfindfile"></a>IDiaSession::findFile
-Derlenecek dosya ve ada göre kaynak dosyaları alır.
+Kaynak dosyalarını compiland ve adına göre alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,22 +36,22 @@ HRESULT findFile ( 
 #### <a name="parameters"></a>Parametreler
  `pCompiland`
 
-[in] Bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) arama bağlamı olarak kullanılacak derlenecek temsil eden nesne. Bu parametre kümesine `NULL` kaynak dosyaları tüm derleme bulunamıyor.
+'ndaki Arama için bağlam olarak kullanılacak compiland 'yi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi. Tüm uygulamalarda kaynak dosyaları bulmak için bu parametreyi `NULL` olarak ayarlayın.
 
  `name`
 
-[in] Alınacak kaynak dosyasının adını belirtir. Bu parametre kümesine `NULL` tüm kaynak dosyaları alınacak.
+'ndaki Alınacak kaynak dosyanın adını belirtir. Tüm kaynak dosyalarının alınabilmesi için bu parametreyi `NULL` olarak ayarlayın.
 
  `option`
 
-[in] Ad arama uygulanan karşılaştırma seçeneklerini belirtir. Değerlerini [NameSearchOptions numaralandırması](../../debugger/debug-interface-access/namesearchoptions.md) numaralandırma, tek başına veya birlikte kullanılabilir.
+'ndaki Ad aramaya uygulanan karşılaştırma seçeneklerini belirtir. [NameSearchOptions numaralandırma](../../debugger/debug-interface-access/namesearchoptions.md) numaralandırmasındaki değerler tek başına veya birlikte kullanılabilir.
 
  `ppResult`
 
-[out] Döndürür bir [Idiaenumsourcefiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) kaynak dosyaların listesini içeren bir nesne alındı.
+dışı Alınan kaynak dosyalarının listesini içeren bir [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 
@@ -60,7 +60,7 @@ IDiaEnumSourceFiles* pEnum;
 pSession->findFile( NULL, L"sourcefile.cpp", nsFNameExt, &pEnum );
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

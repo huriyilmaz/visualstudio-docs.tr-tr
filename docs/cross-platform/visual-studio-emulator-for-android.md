@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f51489b888a0b85b53856e413eb4704d24161b6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 7ac1a2812cb86108d32d769595affd53fc402ff4
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925731"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777719"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Android için Visual Studio Öykünücüsü
 
@@ -77,7 +77,7 @@ Android için Visual Studio öykünücüsü, Android cihazına öykünen bir mas
 
  Visual Studio 2015 ' de, öykünücü yöneticisi 'Ni kullanarak cihaz profillerini yükleyebilir, kaldırabilir ve başlatabilirsiniz. **Araçlar**' ı ve ardından **Android Için Visual Studio öykünücüsü**' nü seçerek öykünücü yöneticisine erişin.
 
- ![Android Için Visual Studio öykünücüsü yöneticisi](../cross-platform/media/android_emu_manager.png "Android_Emu_Manager")
+ ![Android için Visual Studio öykünücüsü yöneticisi](../cross-platform/media/android_emu_manager.png "Android_Emu_Manager")
 
  Varsayılan olarak, beyaz metin ve simgelerle gösterildiği gibi önceden yüklenmiş dört cihaz profili (KitKat ve Lollipop telefonu/5 "ve tablet/7" yapılandırması) vardır. **Profil yükleme** düğmesini seçinceye ve yükleme tamamlanıncaya kadar listedeki diğer profiller gri görünür. Listeyi API düzeyine göre filtreleyebilir ve tam yapılandırma ayrıntılarını görüntülemek için bir profilin sağ alt tarafındaki Ayrıntılar okuna tıklayabilirsiniz.
 
@@ -87,7 +87,7 @@ Android için Visual Studio öykünücüsü, Android cihazına öykünen bir mas
  Öykünücüde test edebilirsiniz özellikleri hakkında ayrıntılı bilgi için bu [blog gönderisine](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/)bakın.
 
 ## <a name="FeaturesNonTest"></a>Öykünücüde test etemiyorum Özellikler
- Aşağıdaki liste, öykünücü içinde test etemen Android platformunun özelliklerini açıklar. Bu özellikleri fiziksel bir cihazda test etmeniz gerekir.
+ Aşağıdaki liste, öykünücü içinde test **etemen** Android platformunun özelliklerini açıklar. Bu özellikleri fiziksel bir cihazda test etmeniz gerekir.
 
 - Pusula
 
@@ -98,11 +98,11 @@ Android için Visual Studio öykünücüsü, Android cihazına öykünen bir mas
 - Parlaklığı. Öykünücünün parlaklık düzeyini değiştirmek, cihazın ekranınızda görünme biçimini görsel olarak etkilemez.
 
 ## <a name="Support"></a>Destek kaynakları
- Ana bilgisayarınızın sistem gereksinimlerini karşıladığından ve bu sorun giderme Kılavuzu'nda ele alınmayan bir sorunla karşılaşırsanız varsa:
+ Ana bilgisayarınız sistem gereksinimlerini karşılıyorsa ve bu sorun giderme kılavuzunda kapsanmayan bir sorunla karşılaşırsanız:
 
-- [Android-Emulator](http://stackoverflow.com/questions/tagged/android-emulator) ve Visual-Studio etiketini kullanarak StackOverflow 'de soru sorun.
+- [Android-Emulator](https://stackoverflow.com/questions/tagged/android-emulator) ve Visual-Studio etiketini kullanarak StackOverflow 'de soru sorun.
 
-- Visual Studio'da veya öykünücü Yöneticisi'nde gönderme gülümseme aracını kullanarak bir sorun bildirin.
+- Visual Studio 'da veya öykünücü yöneticisinde gülümseme Gönder aracını kullanarak bir sorun bildirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Android Için Visual Studio öykünücüsü sistem gereksinimleri](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) [Android Için Visual Studio öykünücüsü sorunlarını giderme](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
+ Android için Visual Studio öykünücüsü için [sistem gereksinimleri](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) [Android Için Visual Studio öykünücüsü sorunlarını giderme](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)

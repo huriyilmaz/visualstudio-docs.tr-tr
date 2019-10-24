@@ -1,5 +1,5 @@
 ---
-title: C çalışma zamanı kitaplığını kullanmadan çalışma zamanı kullanarak denetler | Microsoft Docs
+title: C çalışma zamanı kitaplığı olmadan çalışma zamanı denetimlerini kullanma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,17 +23,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2d9d97b9ba8a93864ec9af6ff02df7b20bbb35e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 029aafa634ba0e6837cdc7d4304d0419420dd912
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929645"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728657"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>C Çalışma Zamanı Kitaplığını Kullanmadan Çalışma Zamanı Denetimlerini Kullanma
-Programınızın C çalışma zamanı kitaplığı olmadan kullanıyorsa **/nodefaultlıb**ve çalışma zamanı denetimlerini kullanmak istiyorsanız, RunTmChk.lib ile bağlanmanız gerekir.
+Programınızı, **/nodefaultlib**kullanarak C çalışma zamanı kitaplığı olmadan bağlantılandırdıysanız ve çalışma zamanı denetimlerini kullanmak Istiyorsanız RunTmChk. lib ile bağlantı oluşturmanız gerekir.
 
-`_RTC_Initialize` programınızın çalışma zamanı denetimleri başlatır. C çalışma zamanı kitaplığı ile bağlamazsanız, programınızın çalışma zamanı hata denetimleri çağırmadan önce ile derlenmiş olup olmadığını görmek için denetlemelisiniz `_RTC_Initialize`gibi:
+`_RTC_Initialize` programınızı çalışma zamanı denetimleri için başlatır. C çalışma zamanı kitaplığıyla bağlantı yapmazsanız, aşağıdaki gibi `_RTC_Initialize`çağrılmadan önce programınızın çalışma zamanı hata denetimleriyle derlenip derlenmediğini denetlemeniz gerekir:
 
 ```cpp
 #ifdef __MSVC_RUNTIME_CHECKS
@@ -41,7 +41,7 @@ Programınızın C çalışma zamanı kitaplığı olmadan kullanıyorsa **/node
 #endif
 ```
 
-C çalışma zamanı kitaplığı ile bağlamazsanız, çağrılan işlev ayrıca tanımlamalısınız `_CRT_RTC_INITW`. `_CRT_RTC_INITW` Kullanıcı tanımlı işlevinizi varsayılan hata raporlama işlevi, şu şekilde yükler:
+C çalışma zamanı kitaplığıyla bağlantı yapmazsanız, `_CRT_RTC_INITW`adlı bir işlev da tanımlamanız gerekir. `_CRT_RTC_INITW`, Kullanıcı tanımlı işlevinizi varsayılan hata raporlama işlevi olarak aşağıdaki gibi yüklenir:
 
 ```cpp
 // C version:
@@ -61,7 +61,7 @@ extern "C" _RTC_error_fnW __cdecl _CRT_RTC_INITW(
 }
 ```
 
-Varsayılan hata raporlama işlevi yükledikten sonra ek hata raporlama işlevleri ile yükleyebileceğiniz `_RTC_SetErrorFuncW`. Daha fazla bilgi için [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw).
+Varsayılan hata raporlama işlevini yükledikten sonra, `_RTC_SetErrorFuncW`ek hata raporlama işlevlerini yükleyebilirsiniz. Daha fazla bilgi için bkz. [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw).
 
-## <a name="see-also"></a>Ayrıca Bkz.
-[Nasıl yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma](../debugger/how-to-use-native-run-time-checks.md)
+## <a name="see-also"></a>Ayrıca bkz.
+[Nasıl Yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma](../debugger/how-to-use-native-run-time-checks.md)

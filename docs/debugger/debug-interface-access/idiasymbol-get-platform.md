@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_platform | Microsoft Docs
+title: 'IDiaSymbol:: get_Platform | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6df21b974489004a27847e307089b1a65715b076
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3a86e7b6b75e0689ccd98a2cab2ed9ef93188312
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64813425"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739499"
 ---
-# <a name="idiasymbolgetplatform"></a>IDiaSymbol::get_platform
-Derlenecek en iyi duruma derlenen platform türünü alır.
+# <a name="idiasymbolget_platform"></a>IDiaSymbol::get_platform
+Compiland 'in derlendiği Platform türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,14 +33,14 @@ HRESULT get_platform ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir değer döndürür [CV_CPU_TYPE_e numaralandırması](../../debugger/debug-interface-access/cv-cpu-type-e.md) platform belirten sabit listesi türü derlenecek derlenmiş durumdadır.
+dışı [CV_CPU_TYPE_e sabit](../../debugger/debug-interface-access/cv-cpu-type-e.md) listesi numaralandırmasından, compiland 'in derlendiği Platform türünü belirten bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> `S_FALSE` dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [CV_CPU_TYPE_e Numaralandırması](../../debugger/debug-interface-access/cv-cpu-type-e.md)

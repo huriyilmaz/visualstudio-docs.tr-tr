@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_cplusplusexceptionhandling | Microsoft Docs
+title: 'IDiaStackFrame:: get_cplusplusExceptionHandling | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f0c2e07b5c9141b8cf31511405939fc65be6446
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d78a4c73d7954f48c87c1eafec4d0b35fc1292ef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839068"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741756"
 ---
-# <a name="idiastackframegetcplusplusexceptionhandling"></a>IDiaStackFrame::get_cplusplusExceptionHandling
-C++ özel durum işleme etkin olup olmadığını gösteren bir bayrak alır.
+# <a name="idiastackframeget_cplusplusexceptionhandling"></a>IDiaStackFrame::get_cplusplusExceptionHandling
+Özel durum işlemenin etkin olup olmadığını C++ gösteren bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,16 +33,16 @@ HRESULT get_cplusplusExceptionHandling ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` varsa C++ özel durum işleme için bu çerçeve etkilidir; Aksi halde döndürür `FALSE`.
+dışı Bu çerçeve için C++ özel durum işleme etkin ise `TRUE` döndürür; Aksi takdirde,`FALSE`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` özelliği desteklenmiyorsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- C++ özel durum işleme, yapılandırılmış aynı veya sistem özel durum işleme değil.
+ C++özel durum işleme, yapılandırılmış veya sistem özel durum işlemeyle aynı değil.
 
- Yapılandırılmış özel durum işleme etkindir belirlemek için çağrı [IDiaStackFrame::get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md) yöntemi.
+ Yapılandırılmış özel durum işlemenin geçerli olup olmadığını anlamak için, [IDiaStackFrame:: get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md) yöntemini çağırın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
 - [IDiaStackFrame::get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md)

@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5f54a2b50447125b0abffd8cc62ba9c2a1d2b37
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 44881035da14483c3ddf1f4c48cb3957a1ce8b50
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887779"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729085"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Desteklenen kod değişiklikleri (C# ve Visual Basic)
 Düzenle ve devam et, yöntem gövdelerinde birçok kod değişikliği türünü işler. Ancak Yöntem gövdelerinin dışındaki değişiklikler ve Yöntem gövdelerinin içindeki birkaç değişiklik, hata ayıklama sırasında uygulanamaz. Bu desteklenmeyen değişiklikleri uygulamak için, hata ayıklamayı durdurmanız ve kodun yeni bir sürümüyle yeniden başlatmanız gerekir.
@@ -32,11 +32,11 @@ Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sıras�
 
 |Dil öğesi/özelliği|Desteklenen düzenleme işlemi|Sınırlamalar|
 |-|-|-|
-|Türler|Yöntemler, alanlar, oluşturucular, et al|[Evet](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|Türler|Yöntemler, alanlar, oluşturucular, et al|[Yes](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |Yineleyiciler|Ekleme veya değiştirme|Hayır|
-|zaman uyumsuz/await ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|zaman uyumsuz/await ifadeleri|Ekleme veya değiştirme|[Yes](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |Dinamik nesneler|Ekleme veya değiştirme|Hayır|
-|lambda ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|lambda ifadeleri|Ekleme veya değiştirme|[Yes](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |LINQ ifadeleri|Ekleme veya değiştirme|[Lambda ifadeleriyle aynı](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 
 > [!NOTE]
@@ -55,7 +55,7 @@ Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sıras�
 
 |Dil öğesi/özelliği|Desteklenmeyen düzenleme işlemi|
 |-|-|
-|Tüm kod öğeleri|Yeniden adlandırma|
+|Tüm kod öğeleri|Adlandırıl|
 |Ad Alanları|Ekle|
 |Ad alanları, türler, Üyeler|Sil|
 |Genel Türler|Ekleme veya değiştirme|
@@ -79,7 +79,7 @@ Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sıras�
 |Yineleyiciler|.NET Framework 4 ve daha düşük bir projede bir yineleyiciyi değiştirme ( [ayrıntılara](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)bakın)|
 
 ## <a name="unsafe-code"></a>Güvenli olmayan kod
- Güvenli olmayan koddaki değişiklikler, güvenli koddaki değişikliklerle aynı sınırlamalara sahiptir ve bir ek kısıtlamadır: Düzenle ve devam et `stackalloc` işleci içeren bir yöntem içinde çıkış olmayan, güvenli olmayan koda yapılan değişiklikleri desteklemez.
+ Güvenli olmayan koddaki değişiklikler, güvenli koddaki değişikliklerle aynı sınırlamalara sahiptir ve bir ek kısıtlama sağlar: Düzenle ve devam et, `stackalloc` işlecini içeren bir yöntem içinde çıkış olmayan güvenli olmayan koddaki değişiklikleri desteklemez.
 
 ## <a name="unsupported-app-scenarios"></a>Desteklenmeyen uygulama senaryoları
 
@@ -95,7 +95,7 @@ Desteklenmeyen uygulamalar ve platformlar şunlardır ASP.NET 5, Silverlight 5 v
 
 - SQL hata ayıklaması.
 
-- Dr hata ayıklama. Watson dökümü.
+- Dr. Watson dökümünü hata ayıklama.
 
 - Gömülü çalışma zamanı uygulamasında hata ayıklama.
 
@@ -105,6 +105,6 @@ Desteklenmeyen uygulamalar ve platformlar şunlardır ASP.NET 5, Silverlight 5 v
 
 - Derleme hataları nedeniyle yeni bir sürüm derlenemedi sonra kodunuzun eski bir sürümünde hata ayıklama işlemi başarısız oldu.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Düzenle ve Devam Et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)
-- [Nasıl yapılır: Düzenle ve Devam Et’i Kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
+- [Nasıl Yapılır: Düzenle ve Devam Et'i Kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)

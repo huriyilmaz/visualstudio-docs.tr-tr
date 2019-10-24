@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_addresssection | Microsoft Docs
+title: 'IDiaLineNumber:: get_addressSection | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56a79ea8ba7c4e5622ee468cec8fe6cb53dd197c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2458ee3eb26bed46c8699c9fe41dadbde091bfad
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839868"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743276"
 ---
-# <a name="idialinenumbergetaddresssection"></a>IDiaLineNumber::get_addressSection
-Bir blok başladığı bellek adresi bölüm parçası alır.
+# <a name="idialinenumberget_addresssection"></a>IDiaLineNumber::get_addressSection
+Bir bloğun başladığı bellek adresinin bölüm kısmını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_addressSection ( 
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-[out] Bir blok başladığı bellek adresi bölüm bölümünü döndürür.
+dışı Bir bloğun başladığı bellek adresinin bölüm bölümünü döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 
@@ -46,6 +46,6 @@ DWORD seg;
 pLine->get_addressSection( &seg );
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 - [IDiaLineNumber::get_addressOffset](../../debugger/debug-interface-access/idialinenumber-get-addressoffset.md)

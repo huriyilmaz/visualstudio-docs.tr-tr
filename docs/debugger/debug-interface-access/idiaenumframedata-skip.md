@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::Skip | Microsoft Docs
+title: 'IDiaEnumFrameData:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d747149e18f831b9f57249503a64c37141c4daa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c49aaf1f648a52e1701088b6579eda55cde6c355
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833604"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744566"
 ---
 # <a name="idiaenumframedataskip"></a>IDiaEnumFrameData::Skip
-Belirtilen sayıda bir numaralandırma sıralı çerçeve veri öğeleri atlar.
+Bir numaralandırma dizisindeki belirtilen sayıda çerçeve verisi öğesini atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Veri öğeleri atlamak için sabit listesi sırası çerçeve sayısı.
+'ndaki Atlanacak numaralandırma dizisindeki çerçeve verisi öğelerinin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` atlamak için daha fazla kayıt varsa.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, atlanacak daha fazla kayıt yoksa `S_FALSE` döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_hassetjump | Microsoft Docs
+title: 'IDiaSymbol:: get_hasSetJump | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d560cbff64a5134fa58ade4d562cb9fb073af48f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ac344c97c7e79ea0cd92cce743848f0ac6e7f99f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64785880"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740447"
 ---
-# <a name="idiasymbolgethassetjump"></a>IDiaSymbol::get_hasSetJump
-İşlev bir kullanımını içerip içermediğini belirten bir bayrak alır [setjmp](/cpp/c-runtime-library/reference/setjmp) komut (ile eşleştirilmiş [longjmp](/cpp/c-runtime-library/reference/longjmp) komutu, C stili yöntemi özel durum işleme gelerek).
+# <a name="idiasymbolget_hassetjump"></a>IDiaSymbol::get_hasSetJump
+İşlevin [setjmp](/cpp/c-runtime-library/reference/setjmp) komutunun bir kullanımını içerip içermediğini belirten bir bayrak alır (Bu, [longjmp](/cpp/c-runtime-library/reference/longjmp) komutuyla eşleştirilmiş, bu, özel durum işlemenin C stili yöntemini oluşturur).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,22 +33,22 @@ HRESULT get_hasSetJump(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] Döndürür `TRUE` işlevi içeriyorsa bir `setjmp` komut; Aksi halde döndürür `FALSE`.
+dışı İşlev bir `setjmp` komutu içeriyorsa `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_hasLongJump](../../debugger/debug-interface-access/idiasymbol-get-haslongjump.md)
 - [longjmp](/cpp/c-runtime-library/reference/longjmp)

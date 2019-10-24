@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbyva | Microsoft Docs
+title: 'IDiaSession:: findSymbolByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ecb0db40f1179722b5ca315853dc3953a105b45b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cf73c47234bb680ee107a2703e77b9259fb00040
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827264"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742011"
 ---
 # <a name="idiasessionfindsymbolbyva"></a>IDiaSession::findSymbolByVA
-İçeriyor veya belirtilen bir sanal adres için en yakın bir belirtilen simge türü alır.
+Belirtilen bir sanal adresi içeren veya en yakın olan, belirtilen bir sembol türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,18 +35,18 @@ HRESULT findSymbolByVA ( 
 #### <a name="parameters"></a>Parametreler
  `va`
 
-[in] Sanal adres belirtir.
+'ndaki Sanal adresi belirtir.
 
  `symtag`
 
-[in] Bulunacak simge türü. Değerleri verilerinden alınır [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) sabit listesi.
+'ndaki Bulunan sembol türü. Değerler [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından alınır.
 
  `ppSymbol`
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) sembol temsil eden bir nesne alındı.
+dışı Alınan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 
@@ -55,7 +55,7 @@ IDiaSymbol* pFunc;
 pSession->findSymbolByVA( va, SymTagFunction, &pFunc );
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

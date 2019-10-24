@@ -18,23 +18,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6bd788124927de759558392cfe36194632c0996
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 5e0f9b0fc0f2f4cd7c441f5f88e4220216c8d964
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211103"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738031"
 ---
 # <a name="debugging-web-applications"></a>Web Uygulamalarında Hata Ayıklama
 Bu bölümde birçok Web uygulaması türünün nasıl ayıklanacağı açıklanmaktadır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Istemci tarafı betik hata ayıklaması](../debugger/client-side-script-debugging.md) [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Sayfalardaki betikleri ve istemci tarafı betikleri test etmeyi açıklar.
+ [Istemci tarafı betik hata ayıklaması](../debugger/client-side-script-debugging.md) [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] sayfalarında betikleri ve istemci tarafı betikleri test etmeyi açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [ASP.NET uygulamalarında hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md) [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Uygulamalarda hata ayıklamayı etkinleştirmek için gereken adımları açıklar.
+ [ASP.NET uygulamalarında hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md) [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamalarında hata ayıklamayı etkinleştirmek için gereken adımları açıklar.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Web Uygulamalarında ve Betikte Hata Ayıklama](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)
 - [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

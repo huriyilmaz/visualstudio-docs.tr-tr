@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_upperboundıd | Microsoft Docs
+title: 'IDiaSymbol:: get_upperBoundId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7711073319a5381a205672ae8023699a725b8936
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 640bce657df53bec66ab75575f35fcd68131a82a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64803480"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738946"
 ---
-# <a name="idiasymbolgetupperboundid"></a>IDiaSymbol::get_upperBoundId
-FORTRAN dizi boyutu üst sınırı sembol tanımlayıcısını alır.
+# <a name="idiasymbolget_upperboundid"></a>IDiaSymbol::get_upperBoundId
+Bir FORTRAN dizi boyutunun üst sınırının sembol tanımlayıcısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,16 +32,16 @@ HRESULT get_upperBoundId ( 
 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
-- [out] FORTRAN dizi boyutu üst sınırı temsil eden simge Kimliğini döndürür.
+- [Out,] Bir FORTRAN dizi boyutunun üst sınırını temsil eden simgenin KIMLIĞINI döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Tanımlayıcı, tüm sembolleri benzersiz olarak işaretlemek için DIA SDK'sı tarafından oluşturulan benzersiz bir değerdir.
+ Tanımlayıcı, tüm sembolleri benzersiz olarak işaretlemek için DIA SDK tarafından oluşturulan benzersiz bir değerdir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

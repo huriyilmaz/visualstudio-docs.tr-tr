@@ -1,5 +1,5 @@
 ---
-title: Kullanıcı arabirimini güncelleştirme | Microsoft Docs
+title: Kullanıcı arabirimi güncelleştiriliyor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,25 +11,25 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2cec2e3a1049f59fa585e4f3a7b0bd608740ccfa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bf41a41e68aa73e07bdcafe8bcdcd335fff6e6eb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316355"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718794"
 ---
 # <a name="updating-the-user-interface"></a>Kullanıcı Arabirimini Güncelleştirme
-Bir komut uyguladıktan sonra yeni komutlarınızı durumuyla kullanıcı arabirimini güncelleştirmek için kod ekleyebilirsiniz.
+Bir komut uyguladıktan sonra, Kullanıcı arabirimini yeni komutlarınızın durumuyla güncelleştirmek için kod ekleyebilirsiniz.
 
- Tipik bir Win32 uygulaması komut kümesi sürekli olarak yoklanabilir ve bunları kullanıcı görünümleri gibi tek tek komutlarla durumunu ayarlanabilir. Ancak, çünkü [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Kabuk VSPackages sınırsız sayıda barındırabilir, kapsamlı yoklama arasında birlikte çalışma bütünleştirilmiş kodları com ile yönetilen kod arasındaki özellikle yoklama yanıt verme hızını Azalt
+ Tipik bir Win32 uygulamasında, komut kümesi sürekli olarak yoklanabilir ve Kullanıcı bunları görüntülediğinde tek tek komutların durumu ayarlanabilir. Ancak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kabuğu sınırsız sayıda VSPackages barındırabildiğinden, kapsamlı yoklama, özellikle de yönetilen kod ve COM arasındaki birlikte çalışma derlemelerinde yoklama hızını düşürebilir.
 
 ### <a name="to-update-the-ui"></a>Kullanıcı arabirimini güncelleştirmek için
 
 1. Aşağıdaki adımlardan birini uygulayın:
 
-    - Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> yöntemi.
+    - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> yöntemini çağırın.
 
-         Bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> arabirimi elde edilebilir gelen <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> hizmeti, aşağıdaki gibi.
+         Bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> arabirimi, <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> hizmetinden aşağıdaki gibi elde edilebilir.
 
         ```csharp
         void UpdateUI(Microsoft.VisualStudio.Shell.ServiceProvider sp)
@@ -44,12 +44,12 @@ Bir komut uyguladıktan sonra yeni komutlarınızı durumuyla kullanıcı arabir
 
         ```
 
-         Varsa parametresi <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> sıfır değil (`TRUE`), güncelleştirme, zaman uyumlu ve hemen gerçekleştirilir. Sıfır geçmesini öneririz (`FALSE`) iyi bir performans sağlamak Bu parametre için. Önbelleğe alma önlemek istiyorsanız, geçerli `DontCache` .vsct dosyası içinde komut oluşturduğunuzda bayrak. Bununla birlikte, bayrağı dikkatli ya da performans düşebilir. Komut bayrakları hakkında daha fazla bilgi için bkz: [Command Flag öğesi](../extensibility/command-flag-element.md) belgeleri.
+         <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> parametresi sıfır olmayan (`TRUE`), güncelleştirme zaman uyumlu olarak ve anında gerçekleştirilir. İyi performans sağlanmasına yardımcı olması için bu parametre için sıfır (`FALSE`) geçişi yapmanızı öneririz. Önbelleğe almayı önlemek istiyorsanız,. vsct dosyasında komutu oluştururken `DontCache` bayrağını uygulayın. Bununla birlikte, bu bayrağı dikkatli bir şekilde kullanın veya performans azalabilir. Komut bayrakları hakkında daha fazla bilgi için bkz. [komut bayrağı öğe](../extensibility/command-flag-element.md) belgeleri.
 
-    - Bir pencere içinde yerinde etkinleştirme modeli kullanarak bir ActiveX denetimini barındırmak Vspackage'larda kullanmak daha kullanışlı olabilir <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A> yöntemi. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> Yönteminde <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> arabirimi ve <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A> yönteminde <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> arabirimi işlevsel olarak eşdeğerdir. Her ikisi de yeniden tüm komutları durumunu sorgulamak için ortamı neden. Genellikle, bir güncelleştirmeyi hemen gerçekleştirilmez. Bunun yerine, bir güncelleştirme boşta kalma süresi kadar geciktirilir. Kabuk komut durumu iyi bir performans sağlamak için önbelleğe alır. Önbelleğe alma önlemek istiyorsanız, geçerli `DontCache` .vsct dosyası içinde komut oluşturduğunuzda bayrak. Bununla birlikte, performansı düşürebilir, çünkü bayrağı dikkatli kullanın.
+    - Bir pencerede yerinde etkinleştirme modelini kullanarak bir ActiveX denetimi barındıran VSPackages içinde, <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A> yönteminin kullanımı daha uygun olabilir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> arabirimindeki <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> yöntemi ve <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> arabirimindeki <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A> yöntemi işlevsel olarak eşdeğerdir. Her ikisi de ortamın tüm komutların durumunu yeniden sorgulayamasına neden olur. Genellikle, bir güncelleştirme hemen gerçekleştirilmez. Bunun yerine, bir güncelleştirme, boşta kalma süresine kadar gecikir. Kabuk, iyi performans sağlanmasına yardımcı olması için komut durumunu önbelleğe alır. Önbelleğe almayı önlemek istiyorsanız,. vsct dosyasında komutu oluştururken `DontCache` bayrağını uygulayın. Yine de, performans azalabileceğinden, bu bayrağı dikkatle kullanın.
 
-         Edinebileceğiniz bildirimi <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> çağırarak arabirim `QueryInterface` metodunda bir <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager> nesne veya arabirimden'göre edinme <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> hizmet.
+         <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> arabirimini, bir <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager> nesnesi üzerinde `QueryInterface` yöntemini çağırarak veya <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> hizmetinden arabirimini alarak elde edebilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’ların Kullanıcı Arabirimi Öğeleri Eklemesi](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Uygulama](../extensibility/internals/command-implementation.md)

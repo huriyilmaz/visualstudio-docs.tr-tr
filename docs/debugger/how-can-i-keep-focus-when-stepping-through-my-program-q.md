@@ -1,5 +1,5 @@
 ---
-title: Odağı Uygulamam Adımlama olduğunda tutma | Microsoft Docs
+title: Uygulamamda adımla odağı koruyun | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -21,21 +21,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a409ee1e8d1b633689a0c33e39e300071b9b4d83
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48c4bd882dd1704099b24f07f744a1615cf7d412
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848071"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734179"
 ---
-# <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>Uygulamam Adımlama olduğunda odak nasıl engelleyebilirim?
+# <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>Uygulamamda adımlarken odağı nasıl devam edebilirim?
 ## <a name="description"></a>Açıklama
- Kendi programımı penceresi etkinleştirme sorunlu. Hata ayıklayıcısı ile adımlarken odağı programımı kaybeden tutar çünkü sorunu yeniden oluşturmak için benim özelliği sayesinde karışıklığa neden olabilir. Bunu önlemek için herhangi bir yolu var mı?
+ Programımın bir pencere etkinleştirme sorunu vardır. Program, odağı kaybettiğinden, hata ayıklayıcı ile program aracılığıyla atlama sorunu yeniden üretme imkanını kesintiye uğratır. Bunu önlemenin herhangi bir yolu var mı?
 
 ## <a name="solution"></a>Çözüm
- İkinci bir bilgisayar varsa, uzaktan hata ayıklamayı kullanın. Konakta hata ayıklayıcı çalıştırırken, programınızın uzak bilgisayarda çalışabilir. Daha fazla bilgi için [nasıl yapılır: Uzak bilgisayar seçme](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100)).
+ İkinci bir bilgisayarınız varsa, uzaktan hata ayıklamayı kullanın. Hata ayıklayıcıyı konakta çalıştırırken, programınızı uzak bilgisayarda çalıştırabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: uzak bilgisayar seçme](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100)).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Yerel Kodda Hata Ayıklama SSS](../debugger/debugging-native-code-faqs.md)
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

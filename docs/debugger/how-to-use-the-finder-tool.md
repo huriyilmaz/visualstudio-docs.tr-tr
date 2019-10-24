@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bulucu Aracı kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: Bulucu aracını kullanma | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,46 +10,46 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bf3fcf00486ebb8ec54f2d692d483a7f9cf18d7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: f96fe87137c6b14e32fb2648e93c54a1c5b094a0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387662"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732171"
 ---
-# <a name="how-to-use-the-finder-tool"></a>Nasıl yapılır: Bulucu aracını kullanma
-Bulucu Aracı kullanabileceğiniz **Bul penceresi** penceresi özellikleri ve iletileri görüntülemek için iletişim kutusu. Bulucu aracını da devre dışı bırakılmış bir alt öğe pencerelerini bulun ve varsa vurgulamak için hangi pencerenin alt pencereler çakışıyorsa devre dışı keşfedilir.
+# <a name="how-to-use-the-finder-tool"></a>Nasıl yapılır: Bulucu Aracı Kullanma
+Pencere özelliklerini veya iletilerini göstermek için **pencereyi bul** Iletişim kutusunda Bulucu aracını kullanabilirsiniz. Finder aracı devre dışı bırakılan alt pencereleri de bulabilir ve devre dışı bırakılan alt pencereler çakıştığında, hangi pencerenin vurgulanmasını ayırt edebilir.
 
- ![Spy&#43; &#43; Bul penceresi iletişim kutusu](../debugger/media/icon_spy--_find.png "Icon_Spy ++ _Find") pencere Bul iletişim kutusunda Bulucu Aracı
+ ![&#43; Spy&#43; pencereyi bul iletişim kutusu](../debugger/media/icon_spy--_find.png "Icon_Spy + + _Bul") Pencereyi bul iletişim kutusunda Bulucu aracı
 
- Yukarıdaki şekilde, aşağıdaki 3 adımı sonra pencere Bul iletişim kutusunu gösterir.
+ Yukarıdaki şekilde, aşağıdaki adım 3 ' ten sonra pencere bul iletişim kutusu gösterilmektedir.
 
-### <a name="to-display-window-properties-or-messages"></a>Pencere özellikleri ve iletileri görüntülemek için
+### <a name="to-display-window-properties-or-messages"></a>Pencere özelliklerini veya iletilerini görüntüleme
 
-1. Spy ++ hem hedef penceresi görünür, böylece windows düzenleyin.
+1. Windows 'larınızı hem Spy + + hem de hedef pencere görünür olacak şekilde düzenleyin.
 
-2. Gelen **Spy** menüsünde seçin **Bul penceresi**.
+2. **Spy** menüsünde **pencereyi bul**' u seçin.
 
-    [Bul penceresi iletişim kutusu](../debugger/find-window-dialog-box.md) açılır.
+    [Pencereyi bul Iletişim kutusu](../debugger/find-window-dialog-box.md) açılır.
 
-3. Sürükleme **Bulucu Aracı** hedef aralığında.
+3. **Bulucu aracını** hedef pencerenin üzerine sürükleyin.
 
-    Aracı sürüklerken **Bul penceresi** iletişim kutusunda seçili penceresinde ayrıntılarını görüntüler.
+    Aracı sürüklerken, **pencereyi bul** iletişim kutusu seçili penceredeki ayrıntıları görüntüler.
 
-   - veya -
+   - veya
 
-     (Örneğin, hata ayıklayıcı'dan kopyalanan) incelemek istediğiniz pencere tanıtıcısı varsa, içine yazın **işlemek** metin kutusu.
+     İncelemek istediğiniz pencerenin işleyicisine sahipseniz (örneğin, hata ayıklayıcıdan kopyalanmış), bunu **tanıtıcı** metin kutusuna yazın.
 
    > [!TIP]
-   > Ekranda kapladığı alanı azaltmak için seçin **Gizle Spy** seçeneği. Bu seçenek yalnızca bırakarak ana Spy ++ penceresini gizler **Bul penceresi** iletişim kutusu, diğer uygulamalar üzerinde görünür. Spy ++ ana pencereyi geri tıkladığınızda **Tamam** veya **iptal**, veya kaldırdığınızda **Gizle Spy ++** seçeneği.
+   > Ekran dağınıklığını azaltmak için Spy 'ı **Gizle** seçeneğini belirleyin. Bu seçenek, ana Spy + + penceresini gizleme ve yalnızca diğer uygulamalarınızın üzerine görünen **pencereyi bul** iletişim kutusunu bırakır. **Tamam** ' ı veya **iptal**' i tıklattığınızda veya **Spy + +** seçeneğini belirlediğinizde, Spy + + ana penceresi geri yüklenir.
 
-4. Altında **Göster**, şunlardan birini seçin **özellikleri** veya **iletileri**.
+4. **Göster**altında **Özellikler** veya **iletiler**' i seçin.
 
-5. Tuşuna **Tamam**.
+5. **Tamam**'a basın.
 
-    Seçtiyseniz **özellikleri**, [pencere Özellikleri iletişim kutusu](../debugger/window-properties-dialog-box.md) açılır. Seçtiyseniz **iletileri**, [iletiler görünümünü](../debugger/messages-view.md) penceresi açılır.
+    **Özellikler**' i seçtiyseniz [Pencere özellikleri iletişim kutusu](../debugger/window-properties-dialog-box.md) açılır. **İletiler**' i seçtiyseniz, bir [iletiler görünümü](../debugger/messages-view.md) penceresi açılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Spy++ Görünümleri](../debugger/spy-increment-views.md)
 - [Spy++ kullanma](../debugger/using-spy-increment.md)
 - [Spy++ Başvurusu](../debugger/spy-increment-reference.md)

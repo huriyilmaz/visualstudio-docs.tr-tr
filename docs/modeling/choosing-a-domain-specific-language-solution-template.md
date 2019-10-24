@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d5eac08833c534e9da3a998687992cca6bc47c2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 110d357bd113913ab73990b8e3cfa12e4dd1cdae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653676"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748519"
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>Etki Alanına Özgü Dil Çözümü Şablonu Seçme
 Alana özgü dil çözümü oluşturmak için Alana Özgü Dil Tasarımcısı sihirbazında bulunan çözüm şablonlarından birini seçin. Oluşturmak istediğiniz dile en yakından benzeyen şablonu seçerek, başlangıç çözümünde yapmanız gereken değişiklikleri en aza indirmenize olanak sağlayabilirsiniz.
@@ -31,6 +31,6 @@ Alana özgü dil çözümü oluşturmak için Alana Özgü Dil Tasarımcısı si
 |En az WPF Tasarımcısı|-Küçük bir model<br />-Modeli görüntüleyen bir Windows Presentation Foundation Kullanıcı arabirimi|Bir DSL 'nin grafik tasarlayıcısı yerine WPF Kullanıcı arabirimine bağlandığı bir uygulama oluşturmak istiyorsanız bu şablonu kullanın.<br /><br /> Kullanıcı arabirimine yönelik tasarımcı Dsl\uiklasöründedir.<br /><br /> UI tasarımcısını açmadan önce projeyi derlemeniz gerekir.<br /><br /> Daha fazla bilgi için bkz. [WPF tabanlı etki alanına özgü dil oluşturma](../modeling/creating-a-wpf-based-domain-specific-language.md).|
 |DSL kitaplığı|-En az bir kitaplık|Diğer DSL tanımlarına aktarılabilecek kısmi bir DSL tanımı oluşturmak istiyorsanız bu şablonu kullanın.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Etki Alanına Özgü Dil Araçlarına Genel Bakış](../modeling/overview-of-domain-specific-language-tools.md)

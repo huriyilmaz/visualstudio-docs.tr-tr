@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_localbasepointerregisterıd | Microsoft Docs
+title: 'IDiaSymbol:: get_localBasePointerRegisterId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2c556d67ca8823ce54da19de51c934181465807
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5f9ad47a37c2d9306cc4f087719bfef7a52be308
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64803581"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739879"
 ---
-# <a name="idiasymbolgetlocalbasepointerregisterid"></a>IDiaSymbol::get_localBasePointerRegisterId
-Yerel değişkenler yığında için temel bir işaretçi tutan kayıt Kimliğini alır. Şu durumlarda kullanın [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) ayarlanır `SymTagFunction`.
+# <a name="idiasymbolget_localbasepointerregisterid"></a>IDiaSymbol::get_localBasePointerRegisterId
+Yığındaki yerel değişkenlere bir taban işaretçisi tutan kaydın KIMLIĞINI alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) `SymTagFunction` olarak ayarlandığında kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,22 +33,22 @@ HRESULT get_localBasePointerRegisterId ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Yerel değişkenler yığında için temel bir işaretçi tutan kayıt Kimliğini döndürür.
+dışı Yığındaki yerel değişkenlere bir taban işaretçisi tutan kaydın KIMLIĞINI döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: dia2.h
+ Üstbilgi: dia2. h
 
- Kitaplık: diaguids.lib
+ Kitaplık: diaguid. lib
 
- DLL: msdia100.dll
+ DLL: msdia100. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: Proje yapı yapılandırmasını | Microsoft Docs
+title: Derleme için proje yapılandırması | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,51 +11,51 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd9464105d777c0d488175ad67e1481022caa2d1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 956449d1207a9831f9dd04a707fffe4b9b5a4221
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328533"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726041"
 ---
 # <a name="project-configuration-for-building"></a>Derleme için Proje Yapılandırması
-Belirli bir çözüm için çözüm yapılandırmaları listesi çözüm yapılandırmaları iletişim kutusu tarafından yönetilir.
+Belirli bir çözüme yönelik çözüm yapılandırmalarının listesi, çözüm yapılandırması iletişim kutusu tarafından yönetilir.
 
- Ek çözüm yapılandırmalarının her biri kendi benzersiz bir ada sahip bir kullanıcı oluşturabilirsiniz. Kullanıcı yeni bir çözüm yapılandırması oluşturduğunda, karşılık gelen ad varsa IDE projeleri veya hata ayıklama karşılık gelen yapılandırma adı olur. Kullanıcı Seçimi gerekirse belirli gereksinimleri karşılayacak şekilde değiştirebilirsiniz. Bu davranışı tek istisnası, projeye yeni çözüm yapılandırması adıyla eşleşen bir yapılandırma destekler andır. Örneğin, bir çözüm Project1 ve Project2 içerdiğini varsayalım. Proje yapılandırması hata ayıklama, perakende ve MyConfig1 Project1 sahiptir. Proje yapılandırması hata ayıklama, perakende ve MyConfig2 Project2 sahiptir.
+ Bir Kullanıcı, her biri kendi benzersiz adına sahip ek çözüm konfigürasyonları oluşturabilir. Kullanıcı yeni bir çözüm yapılandırması oluşturduğunda, IDE, projelerde karşılık gelen yapılandırma adını varsayılan olarak alır veya karşılık gelen bir ad yoksa hata ayıklayın. Kullanıcı, gerekirse belirli gereksinimleri karşılamak üzere seçimi değiştirebilir. Bu davranışın tek istisnası, proje yeni çözüm yapılandırmasının adıyla eşleşen bir yapılandırmayı desteklediğinde olur. Örneğin, bir çözümün Project1 ve Project2 içerdiğini varsayalım. Project1, hata ayıklama, perakende ve MyConfig1 proje yapılandırmalarına sahiptir. Project2, hata ayıklama, perakende ve MyConfig2 proje yapılandırmalarına sahiptir.
 
- Kullanıcı MyConfig2 adlı yeni bir çözüm yapılandırması oluşturursa, Project1 için çözüm yapılandırması hata ayıklama yapılandırmasını varsayılan olarak bağlar. Project2 ayrıca MyConfig2 yapılandırmasıyla çözüm yapılandırması için varsayılan olarak bağlar.
-
-> [!NOTE]
-> Bağlama büyük/küçük harfe duyarsızdır.
-
- Kullanıcı seçtiğinde **çoklu seçim** öğesi yapılandırma aşağı açılan listeden ortamı kullanılabilir yapılandırmaların listesi sunan bir iletişim kutusu görüntüler.
-
- ![Birden çok yapılandırma](../../extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs") birden çok yapılandırma
-
- Bu iletişim kutusu içinde bir veya birden fazla Yapılandırması kullanıcı seçebilirsiniz. Sonra seçili yapılandırmalar için değerlerinin kesişimini özellik sayfaları iletişim kutusu üzerinde görüntülenen özellik değerleri yansıtır.
-
- Bkz: [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md) ekleme ve çözümler ve projeler için yapılandırmaları yeniden adlandırma ile ilgili bilgi için.
-
- Proje bağımlılıkları ve derleme sırası olan bağımsız bir çözüm yapılandırması: diğer bir deyişle, yalnızca tüm Çözümdeki projeler için bir bağımlılık ağacı ayarlayabilirsiniz. Çözüm veya projeyi sağ tıklayıp ya da **proje bağımlılıkları** veya **Proje yapı siparişi** açılır seçenek **proje bağımlılıkları** iletişim kutusu. Gelen de açılabilir **proje** menüsü.
-
- ![Proje bağımlılıkları](../../extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies") proje bağımlılıkları
-
- Proje bağımlılıkları, Proje yapı sırasını belirler. Derleme sırası sekmesini iletişim kutusunda, bir çözüm içindeki projelerin derleme ve yapılandırma sırasını değiştirmek için bağımlılıklar sekmesini kullanın tam sırayı görüntülemek için kullanın.
+ Kullanıcı MyConfig2 adlı yeni bir çözüm yapılandırması oluşturmışsa, Project1 hata ayıklama yapılandırmasını varsayılan olarak çözüm yapılandırmasına bağlar. Project2 Ayrıca, MyConfig2 yapılandırmasını varsayılan olarak çözüm yapılandırmasına bağlar.
 
 > [!NOTE]
-> Tarafından belirtilen özel bağımlılıklar nedeniyle ortama göre kendi onay kutularını seçili ancak gri görünüyorsa projeleri listesinde eklenmiştir <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> arabirimleri ve değiştirilemez. Örneğin, bir proje başvuru ekleyerek bir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] proje başka bir projeye başvuru silerek yalnızca kaldırılabilir bir derleme bağımlılığı otomatik olarak ekler. Bunun yapılması bir bağımlılık döngüsü oluşturabileceğinden projeleri olan onay kutularını temizleyin ve gri görünüyorsa seçilemez (örneğin, Project1 Project2 bağımlı olacaktır ve Project2 Project1 bağımlı olur), hangi derleme kabin.
+> Bağlama büyük/küçük harfe duyarlıdır.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Yapı işlemleri tipik derleme ve tek bir derleme komutla çağrılan bağlantı işlemlerini içerir. Diğer iki yapı işlemlerini de desteklenebilir: önceki bir yapıdan ve bir çıkış öğesi yapılandırmasında değişip değişmediğini belirlemek için bir güncellik denetimi tüm çıkış öğelerini silmek için temizleme işlemi.
+ Kullanıcı, yapılandırma açılan listesinde **birden çok seçim** öğesini seçtiğinde, ortam kullanılabilir yapılandırmaların listesini sağlayan bir iletişim kutusu görüntüler.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> nesneler döndürmeye karşılık gelen <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> (döndürüldüğü <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>) yapı işlemlerini yönetmek için. Yapılandırmalar, gerçekleştirildiği sırada bir yapı işleminin durumunu bildirmek için çağrı yapmak <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback>, arabirimin uygulanan ortamı tarafından ve herhangi bir nesne derleme durumu olayları ilgileniyor.
+ ![Birden çok yapılandırma](../../extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs") Birden çok yapılandırma
 
- Bir kez oluşturulduktan sonra yapılandırma ayarları hata ayıklayıcının denetiminin altında çalıştırılabilir olup olmadığını belirlemek için kullanılabilir. Yapılandırmalar uygulamanız <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> hata ayıklamayı desteklemek için.
+ Bu iletişim kutusunda, Kullanıcı bir veya daha fazla yapılandırmayı seçebilir. Seçildiğinde, özellik sayfaları iletişim kutusunda görünen özellik değerleri, seçili yapılandırmaların değerlerinin kesişmesini yansıtır.
 
- Proje bağımlılıkları uyguladıktan sonra otomasyon modeli aracılığıyla bağımlılıkları programlı olarak yönetebilirsiniz. Çağırmanızı <xref:EnvDTE.SolutionBuild.BuildDependencies%2A> otomasyon modeli. Çözüm derleme Yöneticisi yapılandırmaları ve özellikleri doğrudan işlemeye izin kullanılabilir VSIP API düzeyi arabirimlerine yok.
+ Çözümler ve projeler için yapılandırmaları ekleme ve yeniden adlandırma ile ilgili bilgi için bkz. [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md) .
 
- Ayrıca, proje bağımlılıkları penceresinde bir kılavuz sağlar. Daha fazla bilgi için [özellikler görüntü Kılavuzu](../../extensibility/internals/properties-display-grid.md).
+ Proje bağımlılıkları ve derleme sırası çözüm yapılandırması bağımsızdır: Yani, Çözümdeki tüm projeler için yalnızca bir bağımlılık ağacı ayarlayabilirsiniz. Çözüme veya projeye sağ tıklayıp **Proje bağımlılıkları** ya da **proje derleme sırası** seçeneğini belirleyerek **Proje bağımlılıkları** iletişim kutusu açılır. Ayrıca, **Proje** menüsünden de açılabilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+ ![Proje bağımlılıkları](../../extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies") Proje bağımlılıkları
+
+ Proje bağımlılıkları, projelerin hangi sırada derleyeceğini belirleme. Bir çözümdeki projelerin derolacağı tam sırayı görüntülemek için iletişim kutusundaki derleme sırası sekmesini kullanın ve yapı sırasını değiştirmek için bağımlılıklar sekmesini kullanın.
+
+> [!NOTE]
+> Listede onay kutuları seçili, ancak <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> arabirimleri tarafından belirtilen açık bağımlılıklar nedeniyle bu ortam tarafından soluk görünen projeler, değiştirilemez ve değiştirilemez. Örneğin, bir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projesinden başka bir projeye bir proje başvurusu eklemek, yalnızca başvuru silinerek kaldırılabileceği bir yapı bağımlılığı ekler. Onay kutuları açık ve soluk olarak görünen projeler bir bağımlılık döngüsü oluşturabileceğinden (örneğin, Project1 Project2 'e bağımlı olur ve Project2, Project1 'e bağımlı olur) ve derlemeyi temizler.
+
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yapı işlemleri, tek bir yapı komutuyla çağrılan tipik derleme ve bağlantı işlemlerini içerir. Diğer iki derleme işlemi de desteklenebilir: önceki bir derlemeden tüm çıkış öğelerini silmek için temiz bir işlem ve bir yapılandırmadaki çıkış öğesi değişip değişmediğini tespit etmek için güncel denetim.
+
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> nesneler, derleme süreçlerini yönetmek için karşılık gelen bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> (<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>'den döndürülen) döndürür. Bir yapı işleminin durumunu oluştuğu sırada raporlamak için, yapılandırma <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback>, ortam tarafından uygulanan bir arabirim ve derleme durumu olayları ile ilgilenen diğer herhangi bir nesne için çağrılar yapar.
+
+ Oluşturulduktan sonra yapılandırma ayarları, hata ayıklayıcının denetimi altında çalıştırılıp çalıştırılamayacağını anlamak için kullanılabilir. Yapılandırma, hata ayıklamayı desteklemek için <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> uygular.
+
+ Proje bağımlılıklarını uyguladıktan sonra, otomasyon modeli aracılığıyla bağımlılıkları programlı bir şekilde değiştirebilirsiniz. Otomasyon modelinde <xref:EnvDTE.SolutionBuild.BuildDependencies%2A> çağırın. Çözüm yapı Yöneticisi yapılandırmalarının ve bunların özelliklerinin doğrudan işlemesine izin veren kullanılabilir bir VSıP API düzeyi arabirimi yoktur.
+
+ Ayrıca, Proje bağımlılıkları penceresinde bir ızgara sağlayabilirsiniz. Daha fazla bilgi için bkz. [Özellikler görüntüleme Kılavuzu](../../extensibility/internals/properties-display-grid.md).
+
+## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)
 - [Dağıtımı Yönetmek için Proje Yapılandırması](../../extensibility/internals/project-configuration-for-managing-deployment.md)
 - [Çıkış için Proje Yapılandırması](../../extensibility/internals/project-configuration-for-output.md)

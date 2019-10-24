@@ -1,5 +1,5 @@
 ---
-title: Kaynak dosyaları/ortak özellikler/çözüm özellik sayfaları hata ayıklama
+title: Kaynak dosyaları/ortak özellikler/çözüm özellik sayfalarında hata ayıkla
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,23 +22,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 631ec8ed4f6b5cd410b3af51c55fa87935b9cddf
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 735432db485277e2265479e625f5e8acaa2cc2e3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263140"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738396"
 ---
 # <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>Kaynak Dosyalarda Hata Ayıklama, Ortak Özellikler, Çözüm Özellik Sayfaları İletişim Kutusu
-Bu özellik sayfası, burada hata ayıklayıcı kaynak dosyaları için hata ayıklama çözümü görüneceğini belirtir.
+Bu özellik sayfası, çözüm hata ayıkladığında hata ayıklayıcının kaynak dosyaları arayacağı yeri belirtir.
 
- Erişim için **kaynak dosyalarında Hata Ayıkla** özellik sayfası, çözümünüzde sağ **Çözüm Gezgini** seçip **özellikleri** kısayol menüsünden. Genişletin **ortak özellikler** klasör seçeneğine tıklayıp **kaynak dosyalarında Hata Ayıkla** sayfası.
+ **Kaynak dosyalarını hata ayıkla** Özellik sayfasına erişmek için, **Çözüm Gezgini** ' de çözümünüze sağ tıklayın ve kısayol menüsünden **Özellikler** ' i seçin. **Ortak özellikler** klasörünü genişletin ve **kaynak dosyalarını hata ayıkla** sayfasına tıklayın.
 
- **Kaynak kodu içeren dizinler** , hata ayıklayıcı kaynak dosyaları arar çözüm hata ayıklama sırasında dizinlerin bir listesini içerir. Ayrıca, belirtilen dizinlerin alt dizinler aranır.
+ **Kaynak kodu Içeren dizinler** Hata ayıklayıcının, çözümde hata ayıklarken kaynak dosyaları arayacağı dizinlerin listesini içerir. Belirtilen dizinlerin alt dizinleri de aranır.
 
- **Bu kaynak dosyaları arama** okumak için hata ayıklayıcı istemediğiniz tüm dosyaların adlarını girin. Hata ayıklayıcı bu dosyalardan biri yukarıda belirtilen dizinlerde birini bulursa, onu yoksayar. Varsa **kaynağı Bul** hata ayıklama ve tıkladığınız sırada iletişim kutusu açıldığında **iptal**, aradığınız dosya hata ayıklayıcı bu dosya için aramaya devam etmeyecek, böylece bu listeye eklenmesine.
+ **Bu kaynak dosyaları arama** Hata ayıklayıcının okumasını istemediğiniz dosyaların adlarını girin. Hata ayıklayıcı yukarıda belirtilen dizinlerden birinde bu dosyalardan birini bulursa, yok sayacaktır. Hata ayıklama sırasında **kaynak bul** iletişim kutusu geliyorsa ve **iptal**' e tıkladığınızda, aradığınız dosya bu listeye eklenir, böylece hata ayıklayıcı bu dosyayı aramaya devam etmez.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
 - [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)

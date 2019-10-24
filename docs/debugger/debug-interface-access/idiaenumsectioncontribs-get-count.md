@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsectioncontribs::get_Count | Microsoft Docs
+title: 'IDiaEnumSectionContribs:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7cd47426e08cf9dfbf0ceb7abe166e35499856c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1d12bf9190e8413d12998df24d95d2b14c1222a6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62553968"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744338"
 ---
-# <a name="idiaenumsectioncontribsgetcount"></a>IDiaEnumSectionContribs::get_Count
-Bölüm Katkıları sayısını alır.
+# <a name="idiaenumsectioncontribsget_count"></a>IDiaEnumSectionContribs::get_Count
+Bölüm katkılarının sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,11 +33,11 @@ HRESULT get_Count ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bölüm Katkıları sayısını döndürür.
+dışı Bölüm katkılarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)
 - [IDiaEnumSectionContribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)

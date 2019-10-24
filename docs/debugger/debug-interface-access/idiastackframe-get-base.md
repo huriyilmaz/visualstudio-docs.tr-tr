@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_base | Microsoft Docs
+title: 'IDiaStackFrame:: get_base | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f72c39e7cbfe9589d2fdf6ed8d1b8f25dee99936
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6802737a69467fb823fb2df8df8160f459e739f1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838164"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741742"
 ---
-# <a name="idiastackframegetbase"></a>IDiaStackFrame::get_base
-Çerçevenin temel adresi alır.
+# <a name="idiastackframeget_base"></a>IDiaStackFrame::get_base
+Çerçevenin taban adresini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_base ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Taban adresi döndürür.
+dışı Temel adresi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` özelliği desteklenmiyorsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK`döndürür. Özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

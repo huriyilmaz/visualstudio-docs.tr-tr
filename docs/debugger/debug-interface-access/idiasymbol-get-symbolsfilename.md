@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_symbolsfilename | Microsoft Docs
+title: 'IDiaSymbol:: get_symbolsFileName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eced26fe8316966807dab68c5361535cb551f5d1
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f282f7eeae0dd4def8468322bf73e192503ceef1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796083"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739254"
 ---
-# <a name="idiasymbolgetsymbolsfilename"></a>IDiaSymbol::get_symbolsFileName
-İçinden simgeleri yüklenen dosyanın adını alır.
+# <a name="idiasymbolget_symbolsfilename"></a>IDiaSymbol::get_symbolsFileName
+Simgelerin yüklendiği dosyanın adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,17 +33,17 @@ HRESULT get_symbolsFileName ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] İçinden simgeleri yüklenen dosya adını döndürür.
+dışı Simgelerin yüklendiği dosyanın adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik yalnızca olan semboller için geçerli bir [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) değerini `SymTagExe` genel kapsam da vardır.
+ Bu özellik yalnızca genel kapsama sahip `SymTagExe` bir [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değeri olan semboller için geçerlidir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

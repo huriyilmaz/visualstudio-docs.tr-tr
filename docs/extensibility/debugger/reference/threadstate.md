@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 50f487b3d44fc1b871b00348ec28693b36c49685
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d86baeeab046a7e605979d3af2d6329998f796ba
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316138"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727504"
 ---
 # <a name="threadstate"></a>THREADSTATE
-İş parçacığı durumunu belirtir.
+İş parçacığının durumunu belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -50,30 +50,30 @@ public enum enum_THREADSTATE { 
 
 ## <a name="fields"></a>Alanlar
  `THREADSTATE_RUNNING`\
- İş parçacığı çalıştığını gösterir.
+ İş parçacığının çalıştığını gösterir.
 
  `THREADSTATE_STOPPED`\
- İş parçacığı bir kesme noktası nedeniyle durdurulduğunu gösterir.
+ Bir kesme noktası nedeniyle iş parçacığının durdurulduğunu belirtir.
 
  `THREADSTATE_FRESH`\
- İş parçacığı oluşturuldu, ancak henüz kod çalışmıyor gösterir.
+ İş parçacığının oluşturulduğunu, ancak henüz kod çalışmadığını gösterir.
 
  `THREADSTATE_DEAD`\
- İş parçacığı geçersiz olduğunu gösterir.
+ İş parçacığının ölü olduğunu gösterir.
 
  `THREADSTATE_FROZEN`\
- İş parçacığı'nın dondurulmuş olup olmadığını gösterir (hiçbir yürütme gerçekleştirilebilir).
+ İş parçacığının dondurulmuş olduğunu belirtir (yürütme yapılamaz).
 
 ## <a name="remarks"></a>Açıklamalar
- İçin kullanılan `dwThreadState` alanını [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısı.
+ [Threadproperties](../../../extensibility/debugger/reference/threadproperties.md) yapısının `dwThreadState` alanı için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft. VisualStudio. Debugger. Interop. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)

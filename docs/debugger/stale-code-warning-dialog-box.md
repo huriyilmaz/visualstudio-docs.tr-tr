@@ -1,5 +1,5 @@
 ---
-title: Kod Uyarısı iletişim kutusu getirse | Microsoft Docs
+title: Eski kod uyarısı Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,22 +20,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9173563239084b8367d9815b46f28d0626ebe04a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dba38e5b5d9f7a2be710cad58d6f2297dd03a412
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62902497"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729540"
 ---
 # <a name="stale-code-warning-dialog-box"></a>Eski Kod Uyarısı İletişim Kutusu
 
-Kodu yerel değişiklikleri yaptıktan sonra bu iletişim kutusu görünür **Düzenle ve devam et** değil hemen uygulayabilirsiniz. Geçerli yığın çerçevesi bazı yerel kodda bir sonuç artık güncel olduğundan, diğer bir deyişle, getirse. Daha fazla bilgi için [Düzenle ve devam et (C++)](edit-and-continue-visual-cpp.md).
+Bu iletişim kutusu, yerel kodda **düzenleme ve devam etme işleminin** hemen uygulanmadığından değişiklikler yaptığınızda görüntülenir. Sonuç olarak, geçerli yığın çerçevesindeki bazı yerel kodlar artık güncel değil, yani eski. Daha fazla bilgi için bkz. [Düzenle ve devamC++et ()](edit-and-continue-visual-cpp.md).
 
 **Bu iletişim kutusunu bir daha gösterme**
 
-Bu onay kutusunu seçerseniz, Düzenle ve devam et kod değişikliklerini gelecekteki izin istemeden uygulanır. Bu uyarıyı yeniden giderek etkinleştirebilirsiniz **seçenekleri** açma iletişim kutusu, **hata ayıklama** klasörüne tıklayarak, **Düzenle ve devam et** sayfasında ve seçerek**Eski kod hakkında uyar**.
+Bu onay kutusunu seçerseniz, Düzenle ve devam et daha sonra izin istemeden kod değişikliklerini uygular. **Seçenekler** iletişim kutusuna gidip **hata ayıklama** klasörünü açıp, **Düzenle ve devam et** sayfasına tıklayıp **eski kod hakkında uyar**' ı seçerek bu uyarıyı yeniden açabilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Desteklenen Kod Değişiklikleri (C++)](supported-code-changes-cpp.md)
-- [Düzenle ve devam et, hata ayıklama, Seçenekler iletişim kutusu](edit-and-continue.md)
+- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](edit-and-continue.md)

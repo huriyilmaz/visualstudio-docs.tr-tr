@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28757580b7f45e3d63cba1782f17283ad01f26c6
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 318ab9263b530ac283d210f59aa8ca29733c6e8d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211061"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738064"
 ---
 # <a name="debugging-user-interface-reference"></a>Kullanıcı Arabirim Başvurusunda Hata Ayıklama
 Uygulamanızda hata ayıklarken aşağıdaki iletişim kutularıyla karşılaşabilirsiniz.
@@ -42,7 +42,7 @@ Uygulamanızda hata ayıklarken aşağıdaki iletişim kutularıyla karşılaşa
 
 - [Hataları Ayıklama ve Uyarı İletişim Kutuları](../debugger/debugging-errors-and-warning-dialog-boxes.md)
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio’da hata ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Komut Penceresi](../ide/reference/command-window.md)

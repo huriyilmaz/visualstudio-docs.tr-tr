@@ -20,12 +20,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d871a6aa8cff6e06f02e61407d2c9e59e03cd65
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ace7da233f135aa795d73d43a5e10e411c0d646f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654045"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748476"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>DGML dosyalarını düzenleyerek kod haritalarını özelleştirme
 
@@ -304,7 +304,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
     \<MethodArgs >:: = \<Expression > &#124; \<Expression > "," \<MethodArgs > &#124; \<empty >
 
-    \<Identifier >:: = [^. ]*
+    \<tanımlayıcı >:: = [^. ]*
 
     \<Literal >:: = tek veya çift tırnaklı dize sabit değeri
 
@@ -638,7 +638,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 5. Başvurulan kod öğesini veya kod öğelerini haritadan görüntülemek için, kod öğesi veya bağlantı için kısayol menüsünü açın. **Başvuruya git** ' i ve ardından kod öğesini seçin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)
 - [Uygulamalarınızda hata ayıklamak için kod haritalarını kullanma](../modeling/use-code-maps-to-debug-your-applications.md)

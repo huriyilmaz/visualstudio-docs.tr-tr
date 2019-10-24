@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_issplitted | Microsoft Docs
+title: 'IDiaSymbol:: get_isSplitted | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee91134997dad5f5361de6b07af1a99dfc420f5e
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 9511551a2f3530adc14bee0f6eec3cf360b41c03
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64794588"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740046"
 ---
-# <a name="idiasymbolgetissplitted"></a>IDiaSymbol::get_isSplitted
-Veri simgesi bir toplama veya diğer semboller koleksiyonu bölünmüş olup olmadığını belirten bir bayrak alır; bunlar gerçekten daha büyük bir simge bir parçası olmasına rağmen derleyici sembolleri ayrı varlıklar olarak değerlendirir.
+# <a name="idiasymbolget_issplitted"></a>IDiaSymbol::get_isSplitted
+Veri sembolünün diğer sembollerin toplama veya toplama göre bölünmeyeceğini belirten bir bayrak alır; Derleyici, sembolleri büyük bir sembolün gerçekten bir parçası olsalar bile ayrı varlıklar olarak değerlendirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,24 +33,24 @@ HRESULT get_isSplitted(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] Döndürür `TRUE` sembol simgeleri; toplama ayırırsanız, aksi takdirde döndürür `FALSE`.
+dışı Sembol bir sembol toplamasına bölündüğünde `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- [Idiasymbol::get_isaggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) yöntemi döndürür `TRUE` bölünmüş sembol parçası olan tüm sembolleri için.
+ [IDiaSymbol:: get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) yöntemi, bölünmüş bir simgenin parçası olan tüm semboller için `TRUE` döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)

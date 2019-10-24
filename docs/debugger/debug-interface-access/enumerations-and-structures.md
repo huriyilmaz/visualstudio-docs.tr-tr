@@ -1,5 +1,5 @@
 ---
-title: Sabit listeleri ve yapıları | Microsoft Docs
+title: Numaralandırmalar ve yapılar | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,16 +15,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8a38138b5688d0c6573b18f3b0d875abcf627c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6769af8a417c111de6c8dfc68cd7cda548eaa24c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554941"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745219"
 ---
 # <a name="enumerations-and-structures"></a>Numaralandırmalar ve Yapılar
 
-DIA SDK'sı tarafından kullanılan yapılar ve numaralandırmalar şunlardır.
+Bunlar, DIA SDK tarafından kullanılan numaralandırmalar ve yapılardır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
@@ -36,19 +36,19 @@ DIA SDK'sı tarafından kullanılan yapılar ve numaralandırmalar şunlardır.
 
 - [CV_access_e Numaralandırması](../../debugger/debug-interface-access/cv-access-e.md)
 
- Görünürlüğü (erişim düzeyi) üye işlevleri ve değişkenler kapsamını belirtir.
+ Üye işlevlerinin ve değişkenlerinin görünürlük kapsamını (erişim düzeyi) belirtir.
 
 - [CV_call_e Numaralandırması](../../debugger/debug-interface-access/cv-call-e.md)
 
- Bir işlev çağırma kuralını belirtir.
+ Bir işlev için çağırma kuralını belirtir.
 
 - [CV_CFL_LANG Numaralandırması](../../debugger/debug-interface-access/cv-cfl-lang.md)
 
- Bağlantılı modül ve uygulama kaynak kod dilini belirtir.
+ Uygulamanın veya bağlı modülün kaynak kodu dilini belirtir.
 
 - [CV_CPU_TYPE_e Numaralandırması](../../debugger/debug-interface-access/cv-cpu-type-e.md)
 
- Hedef işlemci belirtir.
+ Hedef işlemciyi belirtir.
 
 - [CV_HREG_e Numaralandırması](../../debugger/debug-interface-access/cv-hreg-e.md)
 
@@ -56,15 +56,15 @@ DIA SDK'sı tarafından kullanılan yapılar ve numaralandırmalar şunlardır.
 
 - [DataKind Numaralandırması](../../debugger/debug-interface-access/datakind.md)
 
- Veri değeri belirli kapsamını belirtir.
+ Bir veri değerinin belirli kapsamını gösterir.
 
 - [LocationType Numaralandırması](../../debugger/debug-interface-access/locationtype.md)
 
- Konum bilgilerini bir sembol içinde yer alan türünü gösterir.
+ Bir sembolde bulunan konum bilgilerinin türünü gösterir.
 
 - [MemoryTypeEnum Numaralandırması](../../debugger/debug-interface-access/memorytypeenum.md)
 
- Bellek erişim türünü belirtir.
+ Erişmek için bellek türünü belirtir.
 
 - [NameSearchOptions Numaralandırması](../../debugger/debug-interface-access/namesearchoptions.md)
 
@@ -84,24 +84,24 @@ DIA SDK'sı tarafından kullanılan yapılar ve numaralandırmalar şunlardır.
 
 - [UdtKind Numaralandırması](../../debugger/debug-interface-access/udtkind.md)
 
- Kullanıcı tanımlı tür (UDT) çeşitli açıklar.
+ Kullanıcı tanımlı farklı tür (UDT) açıklanmaktadır.
 
 ### <a name="structures"></a>Yapılar
 
 [DiaAddressMapEntry Yapısı](../../debugger/debug-interface-access/diaaddressmapentry.md)
 
-Bir adres eşlemesi bir girişe açıklar.
+Adres eşlemesindeki bir girişi açıklar.
 
 ### <a name="related-sections"></a>İlgili Bölümler
 
 [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 
-DIA SDK'sı tarafından sağlanan arabirimleri belirtir.
+DIA SDK tarafından belirtilen arabirimleri belirtir.
 
 [Sabitler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
 
-DIA SDK içinde kullanılabilir olan sabitlerini belirtir.
+DIA SDK kullanılabilir sabitleri belirtir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başvuru](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)
