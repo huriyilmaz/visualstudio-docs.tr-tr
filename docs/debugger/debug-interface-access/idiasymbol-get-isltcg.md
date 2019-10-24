@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isltcg | Microsoft Docs
+title: 'IDiaSymbol:: get_isLTCG | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f5fe47d8575c47756cce8fd1580ced5f3036766
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 1d3fa97d5612b61151d9c435b91f500c87af0b23
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64785725"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740210"
 ---
-# <a name="idiasymbolgetisltcg"></a>IDiaSymbol::get_isLTCG
-Belirten bir bayrak alır olmadığını [derlenecek](../../debugger/debug-interface-access/compiland.md) bağlayıcı anahtarıyla bağlı [/LTCG (bağlama zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation), bütün program iyileştirmesi kolaylık sağlar. Bu anahtar yalnızca yönetilen kod için geçerlidir.
+# <a name="idiasymbolget_isltcg"></a>IDiaSymbol::get_isLTCG
+[Compiland](../../debugger/debug-interface-access/compiland.md) 'ın, tüm program iyileştirmesine yardımcı olan [/LTCG (bağlama zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation)bağlayıcı anahtarıyla bağlanıp bağlanmadığını belirten bir bayrak alır. Bu anahtar yalnızca yönetilen kod için geçerlidir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,20 +33,20 @@ HRESULT get_iSLTCG(
 #### <a name="parameters"></a>Parametreler
  pFlag
 
-[out] Döndürür `TRUE` varsa `compiland` /LTCG bağlayıcı anahtarıyla bağlantılı; Aksi halde döndürür `FALSE`.
+dışı @No__t_1/LTCG bağlayıcı anahtarıyla bağlanmışsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

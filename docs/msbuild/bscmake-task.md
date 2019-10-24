@@ -12,38 +12,38 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- MSBuild (Visual C++), tasks
-- BscMake task (MSBuild (Visual C++))
+- MSBuild (C++), tasks
+- BscMake task (MSBuild (C++))
 ms.assetid: bb98fc67-cad8-43a7-9598-60df6d734db2
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27315682c26769ea5c529ceb21c99458c86f0220
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: acf9c0df17ec0e1bb97c1426d5d312f616de0a8e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63385809"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747379"
 ---
 # <a name="bscmake-task"></a>BscMake görevi
 > [!IMPORTANT]
-> BscMake artık Visual Studio IDE tarafından kullanılır. Visual Studio 2008'den itibaren gözatma bilgilerini otomatik olarak depolanan bir *.sdf* dosyası *çözüm* klasör.
+> BscMake artık Visual Studio IDE tarafından kullanılmıyor. Visual Studio 2008 ' den itibaren, tarama bilgileri *çözüm* klasöründeki bir *. sdf* dosyasında otomatik olarak depolanır.
 
- Microsoft gözatma bilgisi bakım Yardımcısı aracı sarmalar (*bscmake.exe'yi*).  *Bscmake.exe'yi* aracı gözatma bilgisi dosyası oluşturur (*.bsc*) öğesinden kaynak tarayıcı dosyaları (*.sbr*) derleme sırasında oluşturulur. Kullanım **Nesne Tarayıcısı** görüntülemek için bir *.bsc* dosya. Daha fazla bilgi için [BSCMAKE başvurusu](/cpp/build/reference/bscmake-reference).
+ Microsoft tarayıcı bilgi Bakımı yardımcı programı aracını (*bscmake. exe*) sarar.  *Bscmake. exe* Aracı, derleme sırasında oluşturulan kaynak tarayıcı dosyalarından (.*SBR*) bir gözatma bilgi dosyası ( *. bsc*) oluşturur. Bir *. bsc* dosyasını görüntülemek için **nesne tarayıcısı** kullanın. Daha fazla bilgi için bkz. [BSCMAKE başvurusu](/cpp/build/reference/bscmake-reference).
 
 ## <a name="parameters"></a>Parametreler
- Parametreleri aşağıdaki tabloda açıklanmıştır **BscMake** görev. Çoğu görev parametreleri bir komut satırı seçeneğine karşılık gelir.
+ Aşağıdaki tabloda **BSCMAKE** görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi bir komut satırı seçeneğine karşılık gelir.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**AdditionalOptions**|İsteğe bağlı **dize** parametresi.<br /><br /> Komut satırında belirtilen seçeneklerin bir listesi. Örneğin, /\<Seçenek1 > /\<Seçenek2 > /\<seçeneği #>. Diğer tarafından temsil edilmez seçeneklerini belirtmek için bu parametreyi kullanın **BscMake** görev parametresi.<br /><br /> Daha fazla bilgi için bkz. seçenekleri [BSCMAKE seçenekleri](/cpp/build/reference/bscmake-options).|
-|**OutputFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Varsayılan çıkış dosyası adını geçersiz kılan bir dosya adını belirtir.<br /><br /> Daha fazla bilgi için **/o** seçeneğini [BSCMAKE seçenekleri](/cpp/build/reference/bscmake-options).|
-|**PreserveSBR**|İsteğe bağlı **Boole** parametresi.<br /><br /> Varsa `true`, artımlı olmayan bir derleme zorlar. Tam ve artımlı olmayan bir derleme olup olmamasına bakılmaksızın gerçekleşir bir *.bsc* dosyanın var olduğundan ve engeller *.sbr* kesilmesini dosyaları.<br /><br /> Daha fazla bilgi için **/n** seçeneğini [BSCMAKE seçenekleri](/cpp/build/reference/bscmake-options).|
-|**Kaynakları**|İsteğe bağlı **Itaskıtem []** parametresi.<br /><br /> Tüketilen ve görevler tarafından yayılan MSBuild kaynak dosya öğeleri bir dizisi tanımlanmaktadır.|
-|**SuppressStartupBanner**|İsteğe bağlı **Boole** parametresi.<br /><br /> Varsa `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini engeller.<br /><br /> Daha fazla bilgi için **/nologo** seçeneğini [BSCMAKE seçenekleri](/cpp/build/reference/bscmake-options).|
-|**TrackerLogDirectory**|İsteğe bağlı **dize** parametresi.<br /><br /> İzleyici günlüğü dizini belirtir.|
+|**AdditionalOptions**|İsteğe bağlı **dize** parametresi.<br /><br /> Komut satırında belirtilen seçeneklerin listesi. Örneğin,/\<option1 >/\<option2 >/\<option # >. Başka bir **BSCMAKE** görev parametresi tarafından temsil edilmeyen seçenekleri belirtmek için bu parametreyi kullanın.<br /><br /> Daha fazla bilgi için [BSCMAKE seçeneklerindeki](/cpp/build/reference/bscmake-options)seçeneklere bakın.|
+|**Çıktı**|İsteğe bağlı **dize** parametresi.<br /><br /> Varsayılan çıkış dosyası adını geçersiz kılan bir dosya adı belirtir.<br /><br /> Daha fazla bilgi için [BSCMAKE seçeneklerinde](/cpp/build/reference/bscmake-options) **/o** seçeneğine bakın.|
+|**PreserveSBR**|İsteğe bağlı **Boolean** parametresi.<br /><br /> @No__t_0, artımlı olmayan bir derlemeyi zorlar. Tam, artımlı olmayan bir derleme, bir *. bsc* dosyasının var olup olmadığına bakılmaksızın oluşur ve *. sbr* dosyalarının kesilmelerini engeller.<br /><br /> Daha fazla bilgi için [BSCMAKE seçeneklerinde](/cpp/build/reference/bscmake-options) **/n** seçeneğine bakın.|
+|**Ğına**|İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Görevler tarafından tüketilen ve yayılmakta olabilecek bir MSBuild kaynak dosya öğeleri dizisini tanımlar.|
+|**SuppressStartupBanner**|İsteğe bağlı **Boolean** parametresi.<br /><br /> @No__t_0, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.<br /><br /> Daha fazla bilgi için [BSCMAKE seçeneklerinde](/cpp/build/reference/bscmake-options) **/nologo** seçeneğine bakın.|
+|**TrackerLogDirectory**|İsteğe bağlı **dize** parametresi.<br /><br /> İzleyici günlüğü için dizini belirtir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

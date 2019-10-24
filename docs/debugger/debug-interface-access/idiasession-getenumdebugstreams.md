@@ -1,5 +1,5 @@
 ---
-title: Idiasession::getenumdebugstreams | Microsoft Docs
+title: 'IDiaSession:: getEnumDebugStreams | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c962a9bbdebe10b97c47b67b6ce0597027f2c25b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2bc097330e1585e34f308288f1933c2fa2d5b524
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832351"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741942"
 ---
 # <a name="idiasessiongetenumdebugstreams"></a>IDiaSession::getEnumDebugStreams
-Hata ayıklama veri akışlarını numaralandırılmış bir dizisini alır.
+Hata ayıklama veri akışlarının numaralandırılmış bir dizisini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,11 +33,11 @@ HRESULT getEnumDebugStreams ( 
 #### <a name="parameters"></a>Parametreler
  `ppEnumDebugStreams`
 
-[out] Döndürür bir [Idiaenumdebugstreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md) hata ayıklama akışları listesini içeren nesne.
+dışı Hata ayıklama akışlarının listesini içeren bir [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

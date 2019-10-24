@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_ınlspec | Microsoft Docs
+title: 'IDiaSymbol:: get_InlSpec | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8860668452a22413db8c6fc3d0fdc664c7ba36dd
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5675239e35ab3bef809e3d54544d87d7a9e8bb75
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64835385"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740390"
 ---
-# <a name="idiasymbolgetinlspec"></a>IDiaSymbol::get_InlSpec
-Bu işlev, işlev satır içi olarak işaretlenmiş olup olmadığını belirten bir bayrak alır (birini kullanarak [satır içi, __inline, \__forceinline](/cpp/cpp/inline-functions-cpp) öznitelikleri).
+# <a name="idiasymbolget_inlspec"></a>IDiaSymbol::get_InlSpec
+Bu işlev, işlevin satır içi olarak işaretlenip işaretlenmediğini belirten bir bayrak alır ( [satır içi, __inline, \__forceinline](/cpp/cpp/inline-functions-cpp) özniteliklerinden birini kullanarak).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,21 +33,21 @@ HRESULT get_inlSpec(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` işlev; satır içi olarak işaretlenmişse döndürür, aksi takdirde, `FALSE`.
+dışı İşlev satır içi olarak işaretlenmişse `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-- [inline, __inline, \__forceinline](/cpp/cpp/inline-functions-cpp)
+- [satır içi, __inline, \__forceinline](/cpp/cpp/inline-functions-cpp)

@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_registervalue | Microsoft Docs
+title: 'IDiaStackFrame:: get_registerValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a819293863b658f6e12609b2c1cd83c37532e02d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d270b9b177367c9a15c2b64f6f8bc5607c5a459d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832111"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741617"
 ---
-# <a name="idiastackframegetregistervalue"></a>IDiaStackFrame::get_registerValue
-Yığın çerçevesi içinde depolanmış olarak belirtilen bir kayıt değeri alır.
+# <a name="idiastackframeget_registervalue"></a>IDiaStackFrame::get_registerValue
+Belirtilen kaydın değerini yığın çerçevesinde saklanan şekilde alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,15 +34,15 @@ HRESULT get_registerValue(
 #### <a name="parameters"></a>Parametreler
  `registerIndex`
 
-[in] Aşağıdakilerden birini [CV_HREG_e numaralandırması](../../debugger/debug-interface-access/cv-hreg-e.md) sabit listesi değerleri.
+'ndaki [CV_HREG_e sabit](../../debugger/debug-interface-access/cv-hreg-e.md) listesi numaralandırma değerlerinden biri.
 
  `pRetVal`
 
-[out] Kayıt defterinde depolanan değer.
+dışı Kasada depolanan değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
 - [CV_HREG_e Numaralandırması](../../debugger/debug-interface-access/cv-hreg-e.md)

@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_memorySpaceKind | Microsoft Docs
+title: 'IDiaSymbol:: get_memorySpaceKind | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb6fca61dfaf4577f4818c84e1570739c6d63149
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5d146df46defd0b0d052e0d65d5c40ae58a404d6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835964"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739796"
 ---
-# <a name="idiasymbolgetmemoryspacekind"></a>IDiaSymbol::get_memorySpaceKind
+# <a name="idiasymbolget_memoryspacekind"></a>IDiaSymbol::get_memorySpaceKind
 Bellek alanı türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -30,10 +30,10 @@ HRESULT get_memorySpaceKind(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir işaretçi bir `DWORD` , bellek alanı türü tutar.
+dışı Bellek alanı türünü tutan `DWORD` için bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

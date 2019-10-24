@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualaddress | Microsoft Docs
+title: 'IDiaSymbol:: get_virtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3aa09e0e40250d1e7d40ec0f85adca617852919f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ee1c5e989c4e4d9937fad4ba23c261437b4009b4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64786518"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738904"
 ---
-# <a name="idiasymbolgetvirtualaddress"></a>IDiaSymbol::get_virtualAddress
-Konumun sanal adres (VA) alır. Şu durumlarda kullanın [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) ayarlanır `LocIsStatic`.
+# <a name="idiasymbolget_virtualaddress"></a>IDiaSymbol::get_virtualAddress
+Konumun sanal adresini (VA) alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) `LocIsStatic` olarak ayarlandığında kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,14 +33,14 @@ HRESULT get_virtualAddress ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Sanal adres konumunu döndürür.
+dışı Konumun sanal adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType Numaralandırması](../../debugger/debug-interface-access/locationtype.md)

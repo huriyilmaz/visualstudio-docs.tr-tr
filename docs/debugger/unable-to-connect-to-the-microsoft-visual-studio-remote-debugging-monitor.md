@@ -15,22 +15,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c42cdfc5c3f3c0267fdcbdfca8ddc4bb30663384
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 872f7c594344af2c59ebe7f8d1fbd1a640dd2190
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924536"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728821"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne Bağlanılamıyor.
 Bu ileti, uzaktan hata ayıklama İzleyicisi uzak makinede düzgün şekilde ayarlanmadığından veya ağ sorunları veya bir güvenlik duvarının varlığı nedeniyle uzak makineye erişilemediğinden oluşabilir.
 
 > [!IMPORTANT]
-> Bir ürün hatası nedeniyle bu iletiyi aldığınızı düşünüyorsanız lütfen [Bu sorunu](../ide/how-to-report-a-problem-with-visual-studio.md) Visual Studio 'ya bildirin. Daha fazla yardıma ihtiyacınız varsa bkz [konuşmak bize](../ide/talk-to-us.md) yollarını Microsoft ile iletişime geçin.
+> Bir ürün hatası nedeniyle bu iletiyi aldığınızı düşünüyorsanız lütfen [Bu sorunu](../ide/how-to-report-a-problem-with-visual-studio.md) Visual Studio 'ya bildirin. Daha fazla yardıma ihtiyacınız varsa bkz. Microsoft 'a başvurmanın yolları için [bize](../ide/talk-to-us.md) danışın.
 
 ## <a name="specificerrors"></a>Ayrıntılı hata iletisi nedir?
 
-`Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor` İleti geneldir. Genellikle, hata dizesinde daha belirli bir ileti bulunur ve sorunun nedenini belirlemenize yardımcı olabilir veya daha kesin bir çözüm arayın. Ana hata iletisine eklenen daha yaygın hata iletilerinin bazıları aşağıda verilmiştir:
+@No__t_0 iletisi geneldir. Genellikle, hata dizesinde daha belirli bir ileti bulunur ve sorunun nedenini belirlemenize yardımcı olabilir veya daha kesin bir çözüm arayın. Ana hata iletisine eklenen daha yaygın hata iletilerinin bazıları aşağıda verilmiştir:
 
 - [Hata ayıklayıcı uzak bilgisayara bağlanamıyor. Hata ayıklayıcı belirtilen bilgisayar adını çözümleyemedi](#cannot_connect)
 - [Bağlantı isteği uzaktan hata ayıklayıcı tarafından reddedildi](#rejected)
@@ -111,7 +111,7 @@ Bu, Windows XP ve Windows 7 ' ye özgü eski bir sorun olabilir. Bu [bilgilere](
 
 ### <a name="dns"></a>Uzak makineye ulaşılamıyor
 
-Uzak bilgisayar adını kullanarak bağlanamıyorsanız, bunun yerine IP adresini kullanmayı deneyin. IPv4 adresini almak `ipconfig` için uzak bilgisayardaki bir komut satırında kullanabilirsiniz. Bir HOSTS dosyası kullanıyorsanız, bunun doğru şekilde yapılandırıldığını doğrulayın.
+Uzak bilgisayar adını kullanarak bağlanamıyorsanız, bunun yerine IP adresini kullanmayı deneyin. IPv4 adresini almak için, uzak bilgisayardaki bir komut satırında `ipconfig` kullanabilirsiniz. Bir HOSTS dosyası kullanıyorsanız, bunun doğru şekilde yapılandırıldığını doğrulayın.
 
 Bu başarısız olursa, uzak bilgisayarın ağ üzerinden erişilebilir olduğunu doğrulayın (uzak makineye[ping gönderin](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee624059(v=ws.10)) ). Internet üzerinden uzaktan hata ayıklama, bazı Microsoft Azure senaryolar haricinde desteklenmez.
 
@@ -128,7 +128,7 @@ Sunucu adı doğruysa, virüsten koruma yazılımınız veya üçüncü taraf g�
 
 Uzaktan hata ayıklayıcı varsayılan olarak yalnızca uzaktan hata ayıklayıcıyı Başlatan kullanıcıdan gelen bağlantıları ve Yöneticiler grubunun üyelerini kabul eder. Ek kullanıcılara açıkça izin verilmesi gerekir.
 
-Bu aşağıdaki yollardan biriyle çözebilirsiniz:
+Bunu, aşağıdaki yollarla çözebilirsiniz:
 
 - Visual Studio kullanıcısını uzaktan hata ayıklayıcı 'nın izinlerine ekleyin (uzaktan hata ayıklayıcı penceresinde **araçlar > izinler**' i seçin).
 
@@ -137,32 +137,32 @@ Bu aşağıdaki yollardan biriyle çözebilirsiniz:
     > [!NOTE]
     > Uzaktan hata ayıklayıcı 'yı uzak bir sunucuda çalıştırıyorsanız, uzaktan hata ayıklayıcı uygulamasına sağ tıklayın ve **yönetici olarak çalıştır** ' ı seçin (veya uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırabilirsiniz). Uzak bir sunucuda çalıştırmıyorsanız, normal olarak başlatmanız yeterlidir.
 
-- Uzaktan hata ayıklayıcıyı komut satırından **/Allow \<Kullanıcı adı >** parametresiyle başlatabilirsiniz:. `msvsmon /allow <username@computer>`
+- Uzaktan hata ayıklayıcıyı **/Allow \<username >** parametresi: `msvsmon /allow <username@computer>` ile komut satırından başlatabilirsiniz.
 
-- Alternatif olarak, herhangi bir kullanıcının uzaktan hata ayıklama yapmasına izin verebilirsiniz. Uzaktan hata ayıklayıcı penceresinde Git **Araçlar > Seçenekler** iletişim. Seçtiğinizde, **kimlik doğrulaması yok**, daha sonra kontrol edebilirsiniz **tüm kullanıcıların hata ayıklamasına izin**. Ancak, bu seçeneği yalnızca diğer seçenekler başarısız olursa veya özel bir ağınız üzerinde olduğunuzda denemeniz gerekir.
+- Alternatif olarak, herhangi bir kullanıcının uzaktan hata ayıklama yapmasına izin verebilirsiniz. Uzaktan hata ayıklayıcı penceresinde, **araçlar > seçenekleri** iletişim kutusuna gidin. **Kimlik doğrulaması yok**' u seçtiğinizde, **herhangi bir kullanıcının hata ayıklamasına izin ver**' i kontrol edebilirsiniz. Ancak, bu seçeneği yalnızca diğer seçenekler başarısız olursa veya özel bir ağınız üzerinde olduğunuzda denemeniz gerekir.
 
 ### <a name="firewall"></a>Uzak makinedeki güvenlik duvarı uzaktan hata ayıklayıcıya gelen bağlantılara izin vermiyor
- Visual Studio makinede güvenlik duvarı ve güvenlik duvarı uzak makinede Visual Studio uzaktan hata ayıklayıcı arasındaki iletişime izin verecek şekilde yapılandırılması gerekir. Uzaktan hata ayıklayıcıyı kullanarak bağlantı noktaları hakkında daha fazla bilgi için bkz: [uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md). Windows Güvenlik duvarını yapılandırma hakkında daha fazla bilgi için bkz: [uzaktan hata ayıklama için Windows Güvenlik Duvarı Yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
+ Visual Studio makinesindeki güvenlik duvarının ve uzak makinedeki güvenlik duvarının, Visual Studio ile uzaktan hata ayıklayıcı arasında iletişime izin verecek şekilde yapılandırılması gerekir. Uzaktan hata ayıklayıcı tarafından kullanılan bağlantı noktaları hakkında daha fazla bilgi için bkz. [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md). Windows Güvenlik Duvarı 'nı yapılandırma hakkında daha fazla bilgi için bkz. [Uzaktan hata ayıklama Için Windows güvenlik duvarını yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
 
-### <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>Uzaktan hata ayıklayıcı sürümü Visual Studio sürümü ile eşleşmiyor
- Visual Studio'nun sürümü yerel olarak çalışan uzak makine üzerinde çalışan uzaktan hata ayıklama İzleyicisi sürümüyle eşleşmesi gerekir. Bu sorunu gidermek için indirin ve uzaktan hata ayıklama İzleyicisi'nın eşleşen sürümünün yükleyin. Uzaktan hata ayıklayıcının doğru sürümünü almak için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
+### <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>Uzaktan hata ayıklayıcının sürümü Visual Studio sürümü ile eşleşmiyor
+ Yerel olarak çalıştırdığınız Visual Studio sürümünün, uzak makinede çalışan uzaktan hata ayıklama izleyicisinin sürümüyle eşleşmesi gerekir. Bu hatayı gidermek için, uzaktan hata ayıklama izleyicisinin eşleşen sürümünü indirip yükleyin. Uzaktan hata ayıklayıcının doğru sürümünü almak için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
-### <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>Yerel ve uzak makineler sahip farklı bir kimlik doğrulama modları
- Yerel ve uzak makineler aynı kimlik doğrulama modunu kullanmanız gerekir. Bu sorunu gidermek için her iki makine aynı kimlik doğrulama modu kullandığınızdan emin olun. Kimlik doğrulama modunu değiştirebilirsiniz. Uzaktan hata ayıklayıcı penceresinde, **araçlar > seçenekleri** iletişim kutusuna gidin.
+### <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>Yerel ve uzak makineler farklı kimlik doğrulama modlarına sahiptir
+ Yerel ve uzak makinelerin aynı kimlik doğrulama modunu kullanması gerekir. Bu hatayı onarmak için her iki makinenin da aynı kimlik doğrulama modunu kullanmasını sağlayın. Kimlik doğrulama modunu değiştirebilirsiniz. Uzaktan hata ayıklayıcı penceresinde, **araçlar > seçenekleri** iletişim kutusuna gidin.
 
  Kimlik doğrulama modları hakkında daha fazla bilgi için bkz. [Windows kimlik doğrulamasına genel bakış](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831472(v=ws.11)).
 
-### <a name="anti-virus-software-is-blocking-the-connections"></a>Virüsten koruma yazılımının bağlantıları engelliyor
- Uzaktan hata ayıklayıcı bağlantıları Windows virüsten koruma yazılımının sağlar, ancak bazı üçüncü taraf virüsten koruma yazılımının engelliyor olabilir. Bu bağlantılara izin verecek şekilde nasıl öğrenmek, virüsten koruma yazılımınızın belgelerine bakın.
+### <a name="anti-virus-software-is-blocking-the-connections"></a>Virüsten koruma yazılımı bağlantıları engelliyor
+ Windows Anti-Virus yazılımı, uzaktan hata ayıklayıcı bağlantılarına izin verir, ancak bazı üçüncü taraf virüsten koruma yazılımları bunları engelleyebilir. Bu bağlantılara nasıl izin verbileceğinizi öğrenmek için virüsten koruma yazılımınızın belgelerini denetleyin.
 
-### <a name="network-security-policy-is-blocking-communication-between-the-remote-machine-and-visual-studio"></a>Ağ güvenlik ilkesi uzak makinede Visual Studio arasındaki iletişimi engelliyor
- İletişimi engellemediğinden emin olmak için ağ güvenliği gözden geçirin. Windows ağ güvenlik ilkesi hakkında daha fazla bilgi için bkz: [güvenliği ilke ayarları](/windows/device-security/security-policy-settings/security-policy-settings).
+### <a name="network-security-policy-is-blocking-communication-between-the-remote-machine-and-visual-studio"></a>Ağ güvenlik ilkesi, uzak makine ve Visual Studio arasındaki iletişimi engelliyor
+ İletişimi engellemediğinden emin olmak için ağ güveninizi gözden geçirin. Windows ağ güvenlik ilkesi hakkında daha fazla bilgi için bkz. [güvenlik ilkesi ayarları](/windows/device-security/security-policy-settings/security-policy-settings).
 
-### <a name="the-network-is-too-busy-to-support-remote-debugging"></a>Ağ uzaktan hata ayıklamayı desteklemek için çok meşgul
- Farklı bir zamanda uzaktan hata ayıklama yapın veya farklı bir saat için ağ üzerinde işi yeniden zamanlayabilir gerekebilir.
+### <a name="the-network-is-too-busy-to-support-remote-debugging"></a>Ağ, uzaktan hata ayıklamayı desteklemeye yönelik çok meşgul
+ Uzaktan hata ayıklamayı farklı bir zamanda yapmanız veya ağdaki çalışmayı farklı bir süre için yeniden zamanlamanız gerekebilir.
 
 ## <a name="more-help"></a>Daha fazla yardım
  Daha fazla uzaktan hata ayıklayıcı yardımı almak için, uzaktan hata ayıklayıcının yardım sayfasını açın (**yardım > kullanımı** uzaktan hata ayıklayıcıda).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

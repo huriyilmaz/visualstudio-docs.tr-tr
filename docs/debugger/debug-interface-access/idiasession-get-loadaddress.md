@@ -1,5 +1,5 @@
 ---
-title: Idiasession::get_loadaddress | Microsoft Docs
+title: 'IDiaSession:: get_loadAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fed7653b5f1a270d2e297cdd2b59366b5b563c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2b23aff5cd5d2b94a44e3e9139ff4c97acb2225d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839192"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741937"
 ---
-# <a name="idiasessiongetloadaddress"></a>IDiaSession::get_loadAddress
-Bu sembol deposu sembolleri karşılık gelen bir yürütülebilir dosya için yük adresi alır.
+# <a name="idiasessionget_loadaddress"></a>IDiaSession::get_loadAddress
+Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,14 +33,14 @@ HRESULT get_loadAddress ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir .exe veya .dll dosyası yüklendiği bir sanal adres (VA) döndürür.
+dışı Bir. exe dosyasının veya. dll dosyasının yüklendiği bir sanal adres (VA) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Yük döndürülen her zaman sıfır sürece adresidir özellikle kullanılarak ayarlanan [Idiasession::put_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemi.
+ Açıkça [IDiaSession::P ut_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemi kullanılarak ayarlanmamışsa döndürülen yükleme adresi her zaman sıfırdır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)

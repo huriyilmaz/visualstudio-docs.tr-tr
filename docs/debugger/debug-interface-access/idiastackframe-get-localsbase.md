@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_localsbase | Microsoft Docs
+title: 'IDiaStackFrame:: get_localsBase | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbe6dd1d5b72faea57ecb015b0da294798527c0b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4ae3f83469e14e826802ca82d3d58686a340d9e0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838213"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741659"
 ---
-# <a name="idiastackframegetlocalsbase"></a>IDiaStackFrame::get_localsBase
-Çerçeve yerel değişkenleri temel adresini alır.
+# <a name="idiastackframeget_localsbase"></a>IDiaStackFrame::get_localsBase
+Çerçeve için yerel değişkenlerin temel adresini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_localsBase ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Yerel değişkenler temel adresini döndürür.
+dışı Yerel değişkenlerin taban adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` özelliği desteklenmiyorsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

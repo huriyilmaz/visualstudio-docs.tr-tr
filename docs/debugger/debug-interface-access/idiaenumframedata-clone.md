@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::Clone | Microsoft Docs
+title: 'IDiaEnumFrameData:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5c86d9f4f8eb02b0389e7ea28b5858f8576f6c6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 47f6119eac1d48a7819f67bc57660c53e6b93b54
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838408"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744661"
 ---
 # <a name="idiaenumframedataclone"></a>IDiaEnumFrameData::Clone
-Geçerli Numaralandırıcı aynı numaralandırma duruma içeren bir numaralandırıcı oluşturur.
+Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,12 +31,12 @@ HRESULT Clone( 
 ```
 
 #### <a name="parameters"></a>Parametreler
- ppenum
+ ppEnum
 
-[out] Döndürür bir [Idiaenumframedata](../../debugger/debug-interface-access/idiaenumframedata.md) Numaralandırıcı bir kopyasını içeren nesne. Yinelenen çerçevenin verileri değil, yalnızca Numaralandırıcı.
+dışı Numaralandırıcı yinelenen içeren bir [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) nesnesi döndürür. Çerçeve verileri çoğaltılamaz, yalnızca Numaralandırıcı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

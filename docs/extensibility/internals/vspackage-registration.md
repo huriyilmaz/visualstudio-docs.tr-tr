@@ -11,22 +11,22 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c4b68d23211b0a6e1847c7cd22a79b44327e4aa6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 44114ccdc4a0873887d48c3d191506f10cc3eaf3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924196"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721996"
 ---
 # <a name="vspackage-registration"></a>VSPackage Kaydı
-VSPackages, yüklü [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] olmaları ve yüklenmesi gerektiğini tavsiye etmelidir. Bu işlem, kayıt defterine bilgi yazılarak gerçekleştirilir. Bu, bir yükleyicinin tipik bir işidir.
+VSPackages, yüklendikleri ve yüklenmesi gereken [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] öneri vermelidir. Bu işlem, kayıt defterine bilgi yazılarak gerçekleştirilir. Bu, bir yükleyicinin tipik bir işidir.
 
 > [!NOTE]
-> Bu, VSPackage geliştirme sırasında kendi kendine kayıt kullanımı için kabul edilen bir uygulamadır. Ancak, [!INCLUDE[vsipprvsip](../../extensibility/includes/vsipprvsip_md.md)] iş ortakları, kurulum kapsamında kendi ürünlerini kendi kendine kayıt kullanarak teslim edemez.
+> Bu, VSPackage geliştirme sırasında kendi kendine kayıt kullanımı için kabul edilen bir uygulamadır. Ancak, [!INCLUDE[vsipprvsip](../../extensibility/includes/vsipprvsip_md.md)] iş ortakları ürünlerini kurulum kapsamında kendi kendine kayıt kullanarak teslim edemez.
 
  Windows Installer paketteki kayıt defteri girdileri genellikle kayıt defteri tablosunda yapılır. Dosya uzantılarını kayıt defteri tablosuna da kaydedebilirsiniz. Ancak, Windows Installer programlı tanımlayıcı (ProgID), sınıf, uzantı ve fiil tabloları aracılığıyla yerleşik destek sağlar. Daha fazla bilgi için bkz. [veritabanı tabloları](/windows/desktop/Msi/database-tables).
 
- Kayıt defteri girdlarınızın seçtiğiniz yan yana stratejiniz için uygun olan bileşenle ilişkili olduğundan emin olun. Örneğin, paylaşılan bir dosya için kayıt defteri girişleri, bu dosyanın Windows Installer bileşeniyle ilişkilendirilmelidir. Benzer şekilde, sürüme özgü bir dosyanın kayıt defteri girişlerine bu dosyanın bileşeniyle ilişkilendirilmesi gerekir. Aksi halde, VSPackage 'ı bir sürümüne [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yüklemek veya kaldırmak, VSPackage 'ı diğer sürümlerde bozabilir. Daha fazla bilgi için [destekleyen birden çok Versions of Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md).
+ Kayıt defteri girdlarınızın seçtiğiniz yan yana stratejiniz için uygun olan bileşenle ilişkili olduğundan emin olun. Örneğin, paylaşılan bir dosya için kayıt defteri girişleri, bu dosyanın Windows Installer bileşeniyle ilişkilendirilmelidir. Benzer şekilde, sürüme özgü bir dosyanın kayıt defteri girişlerine bu dosyanın bileşeniyle ilişkilendirilmesi gerekir. Aksi takdirde, bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sürümü için VSPackage yükleme veya kaldırma, VSPackage 'ı diğer sürümlerde bozabilir. Daha fazla bilgi için bkz. [Visual Studio 'Nun birden çok sürümünü destekleme](../../extensibility/supporting-multiple-versions-of-visual-studio.md).
 
 > [!NOTE]
 > Kayıt yönetmenin en kolay yolu, hem geliştirici kaydı hem de yüklenme zamanı kaydı için aynı dosyalardaki verileri kullanmaktır. Örneğin, bazı yükleyici geliştirme araçları derleme zamanında dosyayı. reg biçiminde kullanabilir. Geliştiriciler kendi günlük geliştirme ve hata ayıklama için. reg dosyalarını korumadığında, aynı dosyalar yükleyiciye otomatik olarak dahil edilebilir. Kayıt verilerini otomatik olarak paylaşadıysanız, yükleyicinin kayıt verileri kopyasının güncel olduğundan emin olmanız gerekir.
@@ -47,7 +47,7 @@ VSPackages, yüklü [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]
 
 - Yükleme, kaldırma, yükleme geri alma ve kaldırma geri alma işlemlerini doğru şekilde desteklemek için, RegPkg çağırarak kendinden kaydeden her yönetilen VSPackage için dört özel eylem yazmanızı gerektirir.
 
-- Yan yana desteğe yaklaşımda, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]desteklenen her sürümü Için regsvr32 veya RegPkg komutunu çağıran dört özel eylem yazarınızın olması gerekebilir.
+- Yan yana desteğe yaklaşımda, desteklenen her [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sürümünde RegSvr32 veya RegPkg komutunu çağıran dört özel eylemi yazmanız gerekebilir.
 
 - Kendi kendine kayıtlı anahtarların başka bir özellik veya uygulama tarafından kullanıldığını söyleyen bir yöntem olmadığından, kendi kendine kayıtlı modüllerle yükleme güvenli bir şekilde geri alınamaz.
 
@@ -55,6 +55,6 @@ VSPackages, yüklü [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]
 
 - Bir bileşen hem kaynak olarak çalıştır hem de SelfReg tablosunda listeleniyorsa, kendi kendine kayıt kodu tür kitaplıkları gibi ağ kaynaklarına erişimi reddedilebilir. Bu, bileşen yüklemesinin yönetim yüklemesi sırasında başarısız olmasına neden olabilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Windows Installer](/windows/desktop/Msi/windows-installer-portal)
 - [Yönetilen paket kaydı](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)

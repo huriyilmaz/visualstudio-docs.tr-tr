@@ -1,5 +1,5 @@
 ---
-title: Idiaenumınjectedsources::Next | Microsoft Docs
+title: 'IDiaEnumInjectedSources:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aea793f33eb78ee1637d7f22eb46ba34514e0e8f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 84dd3e1d107b8e55d5e94979627d1c1586534127
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554046"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744491"
 ---
 # <a name="idiaenuminjectedsourcesnext"></a>IDiaEnumInjectedSources::Next
-Belirtilen bir numaralandırma sıralı eklenen kaynakları sayısını alır.
+Sabit Listesi dizisinde belirtilen sayıda eklenen kaynağı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,19 +35,19 @@ HRESULT Next ( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Alınacak Numaralandırıcı eklenen kaynakları sayısı.
+'ndaki Alınacak Numaralandırıcı içindeki eklenen kaynak sayısı.
 
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp
+ rgelt
 
-[out] Bir dizi döndürür [Idiaınjectedsource](../../debugger/debug-interface-access/idiainjectedsource.md) istenen eklenen kaynakları temsil eden nesneleri.
+dışı İstenen eklenmiş kaynakları temsil eden [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnelerinin bir dizisini döndürür.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Eklenen kaynakları getirilen bir numaralandırıcı döndürür.
+dışı Getirilen Numaralandırıcı içindeki eklenen kaynak sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` artık eklenen kaynakları varsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Daha fazla eklenen kaynak yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

@@ -1,5 +1,5 @@
 ---
-title: GetOutOfDateItems görev | Microsoft Docs
+title: GetOutOfDateItems görevi | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -11,36 +11,36 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- MSBuild (Visual C++), GetOutOfDateItems task
-- GetOutOfDateItems task (MSBuild (Visual C++))
+- MSBuild (C++), GetOutOfDateItems task
+- GetOutOfDateItems task (MSBuild (C++))
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - multiple
-ms.openlocfilehash: e3393dd7e81fa98c49dd09a32457171286f88f18
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d3dc343c595606faf5bd31d7f087f7ba8d95f69e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977496"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747315"
 ---
-# <a name="getoutofdateitems-task"></a>GetOutOfDateItems task
+# <a name="getoutofdateitems-task"></a>GetOutOfDateItems görevi
 
-Eski tlogs okuyan Yardımcısı görev yeni tlogs yazar ve güncel olmayan öğeleri kümesini döndürür.
+Eski tgünlükleri okuyan yardımcı görev, yeni tlogs yazma ve güncel olmayan öğe kümesi döndürür.
 
 ## <a name="parameters"></a>Parametreler
 
-Parametreleri aşağıdaki tabloda açıklanmıştır **GetOutOfDateItems** görev.
+Aşağıdaki tabloda **GetOutOfDateItems** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**CheckForInterdependencies**|İsteğe bağlı **bool** parametresi.|
+|**Denetim bağımlılıkları**|İsteğe bağlı **bool** parametresi.|
 |**CommandMetadataName**|İsteğe bağlı **dize** parametresi.|
-|**DependenciesMetadataName**|İsteğe bağlı **dize** parametresi.|
-|**HasInterdependencies**|İsteğe bağlı **bool** çıkış parametresi.|
-|**OutOfDateSources**|İsteğe bağlı **Itaskıtem []** çıkış parametresi.|
+|**Bağımlılıkları Cıesmetadataname**|İsteğe bağlı **dize** parametresi.|
+|**Hasınterdependencies**|İsteğe bağlı **bool** çıkış parametresi.|
+|**OutOfDateSources**|İsteğe bağlı **ıtaskitem []** çıkış parametresi.|
 |**OutputsMetadataName**|Gerekli **dize** parametresi.|
-|**Kaynakları**|İsteğe bağlı **Itaskıtem []** parametresi.|
+|**Ğına**|İsteğe bağlı **ıtaskitem []** parametresi.|
 |**TLogDirectory**|Gerekli **dize** parametresi.|
 |**TLogNamePrefix**|Gerekli **dize** parametresi.|
 

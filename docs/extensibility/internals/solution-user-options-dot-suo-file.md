@@ -1,5 +1,5 @@
 ---
-title: Çözüm kullanıcı seçenekleri (. Suo) dosyası | Microsoft Docs
+title: Çözüm Kullanıcı seçenekleri (. Suo) dosyası | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,28 +14,28 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e54f89b9f231e4ae18e200718a5cc25cb3f3ceb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6f21e4a4a6530692709247e64b0d84aa7b06eb3a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322619"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723808"
 ---
 # <a name="solution-user-options-suo-file"></a>Çözüm Kullanıcı Seçenekleri (.Suo) Dosyası
-Çözüm kullanıcı seçenekleri (. suo) dosyası kullanıcı çözüm seçenekleri içerir. Bu dosya kaynak kodu denetimine iade.
+Çözüm Kullanıcı seçenekleri (. suo) dosyası, Kullanıcı başına çözüm seçeneklerini içerir. Bu dosya kaynak kodu denetimine iade edilmelidir.
 
- Çözüm kullanıcı seçenekleri (. suo) dosyası, bir yapılandırılmış depolama veya bileşik, ikili biçimde depolanmış dosyasının örneğidir. Kullanıcı bilgilerini akışları .suo dosya bilgileri tanımlamak için kullanılan anahtarı olan akış adıyla kaydedin. Çözüm kullanıcı seçenekleri dosyası kullanıcı tercih ayarlarını depolamak için kullanılır ve Visual Studio çözüm kaydettiğinde otomatik olarak oluşturulur.
+ Çözüm Kullanıcı seçenekleri (. suo) dosyası, bir ikili biçimde depolanan yapılandırılmış bir depolama veya bileşik bir dosyadır. Kullanıcı bilgilerini,. suo dosyasındaki bilgileri tanımlamak için kullanılacak anahtar olan akışın adı ile akışlara kaydedersiniz. Çözüm Kullanıcı seçenekleri dosyası, Kullanıcı tercihi ayarlarını depolamak için kullanılır ve Visual Studio bir çözüm kaydettiğinde otomatik olarak oluşturulur.
 
- Ortam .suo dosya açıldığında, tüm yüklü VSPackages numaralandırır. VSPackage uyguluyorsa <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> arabirimi sonra ortamı çağrıları <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.LoadUserOptions%2A> VSPackage onu isteyen tüm verilerini .suo dosyasından yükleme yöntemi.
+ Ortam bir. suo dosyası açtığında, o anda yüklü olan tüm VSPackages 'leri numaralandırır. Bir VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> arabirimini uyguluyorsa, ortam, tüm verilerini. suo dosyasından yüklemesini isteyen VSPackage üzerinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.LoadUserOptions%2A> yöntemini çağırır.
 
- Bu, ne akışları bilmek VSPackage'nın sorumluluk .suo dosyasına yazılmış olur. Yazdığı her akış için VSPackage çağrılar geri ortamı üzerinden <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> Akış adı olan anahtar tarafından tanımlanan belirli bir akış yüklenemedi. Ortamı daha sonra geri akış adını geçirerek bu belirli akışını okumak için VSPackage çağırır ve bir `IStream` işaretçisine <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> yöntemi.
+ Bu,. suo dosyasına hangi akışların yazıldığını bilmeyen VSPackage 'ın sorumluluğundadır. Yazdığı her akış için, VSPackage, akışın adı olan anahtar tarafından tanımlanan belirli bir akışı yüklemek için <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> aracılığıyla ortama geri çağrı yapılır. Daha sonra ortam, akışın adını ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> yöntemine `IStream` işaretçiyi geçiren belirli bir akışı okumak için VSPackage 'a geri çağrı yapılır.
 
- Bu noktada, başka bir çağrı yapılır `LoadUserOptions` .suo dosyasının okunması gereken başka bir bölüme olup olmadığını görmek için. Bu işlem, tüm veri akışlarını .suo dosya okunan ve ortamı tarafından işlenen kadar devam eder.
+ Bu noktada,. suo dosyasının okunması gereken başka bir bölümü olup olmadığını görmek için `LoadUserOptions` başka bir çağrı yapılır. Bu işlem,. suo dosyasındaki tüm veri akışları ortam tarafından okunana ve işlenene kadar devam eder.
 
- Çözüm zaman kaydedilmez veya kapalı, ortam çağrıları <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.SavePackageSolutionProps%2A> yöntemi için bir işaretçi ile <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.SaveUserOptions%2A> yöntemi. Bir `IStream` kaydedilecek ikili bilgiyi içeren geçirildiğinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.WriteUserOptions%2A> çağrıları ve .suo dosya bilgileri ardından yazan yöntemi `SaveUserOptions` yeniden başka bir akış yazmak için .suo bilgilerinin olup olmadığını görmek için yöntemi dosya.
+ Çözüm kaydedildiğinde veya kapatıldığında, ortam, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.SaveUserOptions%2A> yöntemine yönelik bir işaretçi ile <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.SavePackageSolutionProps%2A> yöntemini çağırır. Kaydedilecek ikili bilgileri içeren bir `IStream` <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.WriteUserOptions%2A> yöntemine geçirilir ve bu, bilgileri. suo dosyasına yazar ve. suo dosyasına yazılacak başka bir bilgi akışı olup olmadığını görmek için `SaveUserOptions` yöntemini yeniden çağırır.
 
- Bu iki yöntem `SaveUserOptions` ve `WriteUserOptions`, .suo dosya işaretçisi olarak geçirerek, kaydedilecek bilgi her akış için yinelemeli olarak adlandırılan `IVsSolutionPersistence`. Bunlar, .suo dosya için birden çok akış yazılmasını izin vermek için yinelemeli olarak adlandırılır. Bu şekilde, kullanıcı bilgilerini çözümde kalıcı hale ve çözüm bir sonraki açılışında olması garanti edilir.
+ Bu iki yöntem `SaveUserOptions` ve `WriteUserOptions`, `IVsSolutionPersistence` işaretçiye geçerek. suo dosyasına kaydedilecek her bilgi akışı için yinelemeli olarak çağırılır. Birden çok akışının. suo dosyasına yazılmasına izin vermek için yinelemeli olarak adlandırılırlar. Bu şekilde, Kullanıcı bilgileri çözümle kalıcı hale getirilir ve çözüm bir dahaki sefer açıldığında garanti edilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>
 - [Çözümler](../../extensibility/internals/solutions-overview.md)

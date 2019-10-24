@@ -1,5 +1,5 @@
 ---
-title: Simgeler ve simge etiketleri | Microsoft Docs
+title: Semboller ve sembol etiketleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,34 +12,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6affc24a84ef4d008ece5f95e45a11eb70f33b4e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5d2281a82926dabfde88b8d4bb9096f0e9624211
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62854715"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738527"
 ---
 # <a name="symbols-and-symbol-tags"></a>Simgeler ve Simge Etiketleri
-Derlenmiş bir program hata ayıklama bilgilerini program veritabanı (.pdb) dosyası hata ayıklama arabirimi erişim (DIA) SDK'sı API'leri kullanılarak erişilebilen simgeler olarak depolanır. Tüm sembolleri bir [Idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) ve [Idiasymbol::get_symındexıd](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md) özelliği. `symTag` Özelliği tarafından tanımlanan sembol türü gösterir [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) sabit listesi. `symIndexId` Özelliği bir `DWORD` içeren bir sembolü her örneği için benzersiz tanımlayıcı değeri.
+Derlenmiş bir programla ilgili hata ayıklama bilgileri, program veritabanı (. pdb) dosyasında hata ayıklama arabirimi erişimi (DIA) SDK API 'Leri kullanılarak erişilebilen semboller olarak depolanır. Tüm semboller bir [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) ve bir [IDiaSymbol:: get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md) özelliğine sahiptir. @No__t_0 özelliği, [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırması tarafından tanımlanan simgenin türünü gösterir. @No__t_0 özelliği, bir simgenin her örneği için benzersiz tanımlayıcıyı içeren bir `DWORD` değeridir.
 
- Semboller çoğunlukla sembol yanı sıra diğer sembol başvuruları hakkında ek bilgi belirten özelliği de bir [Idiasymbol::get_lexicalparent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md) veya [Idiasymbol::get_classparent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md). Başvuru içeren bir özellik sorguladığınızda, başvuru olarak döndürülür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) nesne. Gibi özellikleri her zaman başka bir özellik ile aynı ada ancak "Id" ile sonekli tarafından Örneğin, eşleştirilmelidir [Idiasymbol::get_lexicalparentıd](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md) ve [Idiasymbol::get_classparentıd](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md). Tablolardaki [simge konumları](../../debugger/debug-interface-access/symbol-locations.md), [sözcük hiyerarşisi sembol türleri](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md), ve [sınıf hiyerarşisi sembol türleri](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md) özellikleri her bir tür için anahat, simgeler. Bu özellikler, ilgili bilgileri veya diğer semboller başvuruları olabilir. Çünkü `*Id` özellikleri yalnızca sayısal sıralı tanımlayıcılar, ilgili özellikleri, daha fazla tartışma göz ardı edilir. Bunlar, parametre açıklama için yalnızca gerekli yerlerde denir.
+ Semboller ayrıca, simgenin yanı sıra diğer simgelere yönelik başvurular ve genellikle bir [IDiaSymbol:: get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md) ya da [IDiaSymbol:: get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)ile ilgili ek bilgi belirten özelliklere sahiptir. Başvuru içeren bir özelliği sorguladığınızda, başvuru bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi olarak döndürülür. Bu tür özellikler her zaman aynı ada sahip başka bir özellikle eşleştirilir, ancak "ID" ile (örneğin, [IDiaSymbol:: get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md) ve [IDiaSymbol:: get_classParentId](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md)). [Sembol konumlarındaki](../../debugger/debug-interface-access/symbol-locations.md)tablolar, [simge türlerinin sözcük hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)ve [sembol türlerinin sınıf hiyerarşisi](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md) , her farklı sembol türünün özelliklerini özetler. Bu özelliklerde ilgili bilgiler veya diğer simgelere başvurular olabilir. @No__t_0 özellikleri, ilişkili özelliklerinin yalnızca sayısal sıra tanımlayıcıları olduğundan, bunlar daha fazla tartışmalardan çıkarılır. Bunlara yalnızca parametre açıklaması için gerektiğinde başvurulur.
 
- Özellik, herhangi bir hata oluşursa ve sembol özelliği bir değer atanmadan erişmeye çalışırken, özelliğin "yöntemi Al" `S_OK`. Dönüş değeri `S_FALSE` özelliği için geçerli simge geçerli olmadığını gösterir.
+ Özelliğe erişmeye çalışırken, hiçbir hata oluşmazsa ve symbol özelliğine bir değer atanmışsa, özelliğin "Get" metodu `S_OK` döndürür. @No__t_0 dönüş değeri, özelliğin geçerli simge için geçerli olmadığını gösterir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
 [Simge Konumları](../../debugger/debug-interface-access/symbol-locations.md)
 
-Bir sembol olabilir konumları farklı türlerde açıklar.
+Bir sembolün sahip olduğu farklı konum türlerini açıklar.
 
 [Simge Türlerinin Sözcük Hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 
-Dosyaları, modüller ve işlevleri gibi sözcük temelli hiyerarşileri form sembol türleri açıklanmaktadır.
+Dosyalar, modüller ve işlevler gibi sözcük hiyerarşileri biçimli sembol türlerini açıklar.
 
 [Simge Türlerinin Sınıf Hiyerarşisi](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)
 
-Sınıflar, diziler ve işlev dönüş türleri gibi farklı dil öğesine karşılık gelen sembol türleri açıklanmaktadır.
+Sınıflar, diziler ve işlev dönüş türleri gibi farklı dil öğelerine karşılık gelen sembol türlerini açıklar.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Arabirim Erişimi SDK'sında Hata Ayıklama](../../debugger/debug-interface-access/debug-interface-access-sdk.md)

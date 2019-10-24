@@ -1,5 +1,5 @@
 ---
-title: HTML ve CSS örnek kod hatalarını ayıklama | Microsoft Docs
+title: Hata ayıklama HTML ve CSS örnek kodu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -14,19 +14,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 10fda5038ab1c69a27e79406167c69adcc560658
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 460419d976211747c44f156a5821b88b75aa2e6b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563480"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745542"
 ---
 # <a name="debug-html-and-css-sample-code"></a>HTML ve CSS örnek kod hatalarını ayıklama
 
-Örnek dosyası için bu konudaki koddur [hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md). Bu hızlı başlangıçta tasarım gereği mevcut hataları kodun bu sürümünde düzeltilen.
+Bu konudaki kod [hızlı başlangıç: hata AYıKLA HTML ve CSS](../debugger/quickstart-debug-html-and-css.md)için örnek dosyadır. Hızlı başlangıçta tasarımda bulunan hatalar kodun bu sürümünde düzeltilmiştir.
 
-## <a name="sample-code"></a>Örnek Kod
-Aşağıdaki HTML kodu kullanılıyor \<gövdesi > Hızlı Başlangıç etiketi.
+## <a name="sample-code"></a>Örnek kod
+Aşağıdaki HTML kodu hızlı başlangıçtaki \<body > etiketinde kullanılır.
 
 ```html
 <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -40,7 +40,7 @@ Aşağıdaki HTML kodu kullanılıyor \<gövdesi > Hızlı Başlangıç etiketi.
 </div>
 ```
 
-Aşağıdaki CSS default.css için yapılan eklemeleri gösterir.
+Aşağıdaki CSS, default. css ' ye yapılan eklemeleri gösterir.
 
 ```css
 #fView {
@@ -50,7 +50,7 @@ Aşağıdaki CSS default.css için yapılan eklemeleri gösterir.
 }
 ```
 
-Aşağıdaki kod örneği, tüm JavaScript kod içinde default.js gösterir. WinJS ad alanları için bu kod şablonun default.html dosyasındaki başvurusudur.
+Aşağıdaki kod örneği, default. js ' deki tüm JavaScript kodunu gösterir. Bu kod için WinJS ad alanlarına başvurular, şablonun default. HTML dosyasında yer almalardır.
 
 ```javascript
 (function () {
@@ -101,5 +101,5 @@ Aşağıdaki kod örneği, tüm JavaScript kod içinde default.js gösterir. Win
 })();
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [Hızlı Başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)

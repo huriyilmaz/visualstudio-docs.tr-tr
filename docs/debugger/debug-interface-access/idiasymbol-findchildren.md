@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::findchildren | Microsoft Docs
+title: 'IDiaSymbol:: findChildren | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5199be7307fdaa607f5aa6a5f554d9fcc82f452d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f3c62271f6324e50a68de393cfa668c69ba4a935
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62837829"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741295"
 ---
 # <a name="idiasymbolfindchildren"></a>IDiaSymbol::findChildren
-Alt simge alır.
+Simgenin alt öğelerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,27 +36,27 @@ HRESULT findChildren ( 
 #### <a name="parameters"></a>Parametreler
  `symtag`
 
-[in] Alınacak, alt simge etiketleri sınıfında tanımlandığı gibi belirtir [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md). Kümesine `SymTagNull` alınacak tüm alt öğeleri için.
+'ndaki [SymTagEnum numaralandırmasında](../../debugger/debug-interface-access/symtagenum.md)tanımlandığı şekilde alınacak alt öğelerin sembol etiketlerini belirtir. Tüm alt öğelerin alınabilmesi için `SymTagNull` olarak ayarlayın.
 
  `name`
 
-[in] Alınacak alt adını belirtir. Kümesine `NULL` alınacak tüm alt öğeleri için.
+'ndaki Alınacak alt öğelerin adını belirtir. Tüm alt öğelerin alınabilmesi için `NULL` olarak ayarlayın.
 
  `compareFlags`
 
-[in] Ad eşleştirme için uygulanan karşılaştırma seçeneklerini belirtir. Değerlerini [NameSearchOptions numaralandırması](../../debugger/debug-interface-access/namesearchoptions.md) numaralandırma, tek başına veya birlikte kullanılabilir.
+'ndaki Ad eşleştirme için uygulanan karşılaştırma seçeneklerini belirtir. [NameSearchOptions numaralandırma](../../debugger/debug-interface-access/namesearchoptions.md) numaralandırmasındaki değerler tek başına veya birlikte kullanılabilir.
 
  `ppResult`
 
-[out] Döndürür bir [Idiaenumsymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) alt simge listesini içeren bir nesne alındı.
+dışı Alınan alt simgelerin listesini içeren bir [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Döndürür `S_OK` simgenin en az bir alt öğe bulunamadı ya da döndürür `S_FALSE` alt öğe bulundu; Aksi takdirde bir hata kodu döndürür.
+ Simgenin en az bir alt öğesi bulunursa `S_OK` döndürür veya alt öğe bulunmazsa `S_FALSE` döndürür; Aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağırmakla aynıdır [Idiasession::findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md) yöntemi ile birinci parametre olarak bu sembol.
+ Bu yöntem, ilk parametre olarak bu sembolle [IDiaSession:: findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md) yöntemini çağırmaya benzer.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

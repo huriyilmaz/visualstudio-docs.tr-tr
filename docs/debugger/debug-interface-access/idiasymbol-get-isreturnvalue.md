@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isReturnValue | Microsoft Docs
+title: 'IDiaSymbol:: get_isReturnValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14ae065f16c2d047311308d63da7680a61fa22ad
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 7bf9d94cd090fdf3993f84147f43a7b2f70dc7e2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836474"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740093"
 ---
-# <a name="idiasymbolgetisreturnvalue"></a>IDiaSymbol::get_isReturnValue
-Değişkeni dönüş değeri taşıyan olup olmadığını belirtir.
+# <a name="idiasymbolget_isreturnvalue"></a>IDiaSymbol::get_isReturnValue
+Değişkenin bir dönüş değeri içerip içermediğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,10 +30,10 @@ HRESULT get_isReturnValue(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir işaretçi bir `BOOL` değişkeni dönüş değeri taşıyan olup olmadığını belirtir.
+dışı Değişkenin bir dönüş değeri içerip içermediğini belirten `BOOL` işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

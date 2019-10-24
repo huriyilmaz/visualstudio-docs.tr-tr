@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_lengthlocals | Microsoft Docs
+title: 'IDiaStackFrame:: get_lengthLocals | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 742d4fe295ae21d6ba6df1feaabab5ab483e8d55
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e408f7a6341685394731ea65ceaa926351587a9e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838086"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741708"
 ---
-# <a name="idiastackframegetlengthlocals"></a>IDiaStackFrame::get_lengthLocals
-Yerel değişkenler yığına itildi bayt sayısını alır.
+# <a name="idiastackframeget_lengthlocals"></a>IDiaStackFrame::get_lengthLocals
+Yığına gönderilen yerel değişkenlerin bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_lengthLocals ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Yerel değişkenlerin bayt sayısını döndürür.
+dışı Yerel değişkenlerin bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` özelliği desteklenmiyorsa. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

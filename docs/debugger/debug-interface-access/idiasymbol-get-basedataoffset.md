@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_baseDataOffset | Microsoft Docs
+title: 'IDiaSymbol:: get_baseDataOffset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33967e2e3fd241bae772e1ec208f42f7c9ac7419
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 298903e4e76c34fe1013b0f26729fb900c7b3fea
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62837626"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740977"
 ---
-# <a name="idiasymbolgetbasedataoffset"></a>IDiaSymbol::get_baseDataOffset
-Temel veri uzaklığı alır.
+# <a name="idiasymbolget_basedataoffset"></a>IDiaSymbol::get_baseDataOffset
+Taban veri konumunu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,10 +30,10 @@ HRESULT get_baseDataOffset(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir işaretçi bir `DWORD` , temel veri uzaklığı tutar.
+dışı Temel veri sapmasını tutan `DWORD` için bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

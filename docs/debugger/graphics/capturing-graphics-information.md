@@ -12,72 +12,72 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d435ff9970748e8debe5edfd15514cde4f531b86
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b38dd994eca30bfee071f00431f3b111c2ea444a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63389703"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736200"
 ---
 # <a name="capturing-graphics-information"></a>Grafik Bilgilerini Yakalama
-İşleme sorunlarını ve performans sorunlarını tanılamak için Visual Studio grafik Çözümleyicisi kullanabilirsiniz, böylece Direct3D uygulamanızdan grafik bilgilerini yakalama.
+Oluşturma sorunlarını ve performans sorunlarını tanılamak için Visual Studio Grafik Çözümleyicisi kullanabilmeniz için Direct3D uygulamanızdan grafik bilgilerini yakalayın.
 
 ## <a name="capturing-graphics-information"></a>Graf bilgilerini yakalama
  Graf bilgilerini yakalama iki adımlı bir işlemdir. Önce uygulamanızı Grafik Tanılama altında çalıştırın ve sonra ayrıntılı bilgilerini yakalamak üzere bir veya daha fazla kare belirtin.
 
 ### <a name="to-run-your-app-under-graphics-diagnostics"></a>Uygulamanızı Grafik Tanılama altında çalıştırmak için
 
-- Menü çubuğunda, **hata ayıklama**, **grafik**, **grafik hata ayıklamayı Başlat**. (Klavye: Alt + F5 tuşlarına basın)
+- Menü çubuğunda **Hata Ayıkla**, **grafikler**, **grafik hata ayıklamayı Başlat**' ı seçin. (Klavye: Alt+F5 tuşlarına basın)
 
-- Üzerinde **grafik** araç seçin **grafik hata ayıklamayı Başlat** düğmesi.
+- **Grafik** araç çubuğunda **grafik hata ayıklamayı Başlat** düğmesini seçin.
 
   Bir uygulama Grafik Tanılama altında çalışırken, belirli grafik bilgisi türleri sürekli olarak yakalanır; bunlar cihaz kurulumu, takas zincirinin oluşturulması, grafik nesnelerinin ve kaynakların oluşturulması ve birden fazla kareyi etkileyen diğer önemli olayları içerir. Aynı zamanda, belirli kareler hakkında ayrıntılı bilgiler yakalayabilirsiniz; Direct3D nesneleri ve bunları destekleyen kaynaklar ile birlikte çizim çağrıları ve hesaplayıcı-gölgelendirici sevkleri buna dahildir.
 
 ### <a name="to-capture-a-frame"></a>Bir kareyi yakalamak için
 
-- Visual Studio'da üzerinde **grafik** araç çubuğunda tıklatın **kare Yakala** düğmesi ![grafik yakalama düğmesinin simgesi](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics").
+- Visual Studio 'da, **grafik** araç çubuğunda, **çerçeve** yakala düğmesi ![grafik yakala düğme simgesine](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")tıklayın.
 
-- Klavyede Print Screen tuşuna basın.
+- Klavyede PRINT Screen tuşuna basın.
 
   > [!NOTE]
-  > Bir uygulama altında çalışırken **grafik tanılama**, Print Screen tuşu yalnızca grafik bilgisi karesi yakalamak için kullanılabilir; normal işlevini gerçekleştirmez. Başka bir uygulama odakta olsa bile, grafik bilgilerini yakalamayı durduruncaya kadar (genellikle hata ayıklamayı durdurarak veya uygulamadan normal yolla çıkarak) bu durum devam eder.
+  > Bir uygulama **Grafik tanılama**altında çalışırken, yazdırma ekranı anahtarı yalnızca bir grafik bilgileri çerçevesini yakalamak için kullanılabilir; normal işlevini gerçekleştirmez. Başka bir uygulama odakta olsa bile, grafik bilgilerini yakalamayı durduruncaya kadar (genellikle hata ayıklamayı durdurarak veya uygulamadan normal yolla çıkarak) bu durum devam eder.
 
-- Visual Studio yakalama arabiriminde seçtiğiniz **kare Yakala** düğmesi bulunan aşağıdaki **Tanılama oturumu** zaman çizelgesi veya büyük seçin **kare Yakala** düğmesi Aşağıda bulunan **Saniyedeki** yüzme kulvarı ve daha önce yakalanan çerçeve sağındaki. Her iki düğme, aşağıdaki resimde vurgulanmıştır.
+- Visual Studio yakalama arabiriminde, **Tanılama oturumu** zaman çizelgesinin altında bulunan **Çerçeve yakala** düğmesini seçin veya **saniye başına** yüze-Lane ve sağ tarafında bulunan büyük **yakalama çerçevesi** düğmesini seçin daha önce yakalanan çerçeveler. Aşağıdaki görüntüde her iki düğme de vurgulanır.
 
-   ![GPU kullanımı aracı kullanarak çerçevelerini yakalayın.](media/pix_gpu_usage_tool_capture_frame.png)
+   ![GPU kullanımı aracını kullanarak çerçeveleri yakalayın.](media/pix_gpu_usage_tool_capture_frame.png)
 
-   Çerçeveleri incelemek hazır olduğunuzda, yakalanan, başlangıç **Visual Studio grafik Çözümleyicisi** izleyerek **çerçeve...**  bağlantı görüntü küçük resimleri yukarıda veya küçük resme çift tıklayın.
+   Yakaladığınız çerçeveleri incelemek için hazırsanız, görüntü küçük resimlerinin üzerindeki **çerçeve...** bağlantısını izleyerek veya küçük resme çift tıklayarak **Visual Studio grafik Çözümleyicisi** başlatın.
 
-  Gerçekten bir yakalama başlattığınızda, kaydedilen sonraki kare grafik bilgileri, bu nedenle, yalnızca tam kareler yakalanabilir. Kayıt, yakalama işlemini başlattığınız kare sunulduktan hemen sonra başlar ve yakalanan kare sunulduğunda sona erer. Uygulama Grafik Tanılama altında çalışırken istediğiniz sayıda kare yakalayabilirsiniz. Hiçbir kare yakalamazsanız, grafik günlüğü atılır.
+  Yalnızca tüm çerçeveler yakalanabilir, bu nedenle bir yakalama başlattığınızda, kaydedilen bir sonraki çerçevede grafik bilgileri aslında yer alabilir. Kayıt, yakalama işlemini başlattığınız kare sunulduktan hemen sonra başlar ve yakalanan kare sunulduğunda sona erer. Uygulama Grafik Tanılama altında çalışırken istediğiniz sayıda kare yakalayabilirsiniz. Hiçbir kare yakalamazsanız, grafik günlüğü atılır.
 
-  Çerçeve yakalama sırasında Visual Studio Tanılama oturumu (.diagsession) penceresinde görüntüler. Bu pencereyi kapatın, hata ayıklamayı durdurmak veya uygulamayı kapatmak, bu günlüğe başka kareler yakalayamazsınız. Daha fazla grafik bilgisi yakalamak için uygulamayı yeni bir tanılama oturumu yeniden başlatmak için grafik tanılama altında çalıştırmak sahip.
+  Çerçeveleri yakalarken, Visual Studio Tanılama oturumu (. diagsession) penceresini görüntüler. Bu pencereyi kapatır, hata ayıklamayı durdurur veya uygulamayı kapatırsanız, bu günlüğe daha fazla kare yakalayamazsınız. Daha fazla grafik bilgisi yakalamak için, yeni bir Tanılama oturumu başlatmak üzere uygulamayı yeniden Grafik Tanılama altında çalıştırmanız gerekir.
 
-### <a name="graphics-diagnostics-capture-options"></a>Grafik tanılama yakalama seçenekleri
- Tüm grafik olaylarını veya sınırlı bir alt kümesi için çağrı yığınlarını Topla, baş üstü, yakalama devre dışı bırakma ve etkinleştirme veya devre dışı yakalama uyumluluk modu yakalama özelliğini yapılandırabilirsiniz.
+### <a name="graphics-diagnostics-capture-options"></a>Grafik Tanılama yakalama seçenekleri
+ Yakalama 'yı tüm grafik olayları veya sınırlı bir alt küme için çağrı yığınları toplayacak, yakalama HUD 'yi devre dışı bırakarak ve yakalama uyumluluk modunu etkinleştirebilir veya devre dışı bırakacak şekilde yapılandırabilirsiniz.
 
-#### <a name="to-configure-graphics-diagnostics-capture-options"></a>Grafik tanılama yakalama seçeneklerini yapılandırmak için
+#### <a name="to-configure-graphics-diagnostics-capture-options"></a>Grafik Tanılama yakalama seçeneklerini yapılandırmak için
 
-1. Menü çubuğunda, Araçlar, Seçenekler'i seçin. Seçenekler iletişim kutusu görünür.
+1. Menü çubuğunda Araçlar, Seçenekler ' i seçin. Seçenekler iletişim kutusu görüntülenir.
 
-2. Sol taraftaki seçenekleri Kategori listesinden, grafik Tanılama'yı seçin ve sonra istediğiniz grafik tanılama seçenekleri yapılandırın.
+2. Soldaki Seçenekler Kategori listesinde Grafik Tanılama ' yi seçin ve sonra istediğiniz Grafik Tanılama seçeneklerini yapılandırın.
 
-     **Yakalama sırasında çağrı yığınlarını TOPLA (yakalamayı yavaşlatır)** çağrı yığınlarını Topla için bu kutuyu işaretleyin. Varsayılan olarak, çağrı yığını toplanmadı. Çağrı yığınlarını yakalamak için emin **toplama çağrı yığınları yakalama sırasında (yakalamayı yavaşlatır** toplamayı etkinleştirin ve ardından ya da ayarlamak için onay kutusuna olarak **çizim,gönderme,mevcutveperformansişaretleyicileriiçin**yalnızca en önemli çağrı yığınlarını, toplanacak (varsayılan) seçeneğini veya **her şeyi** seçeneği tüm çağrı yığınlarını topla. Çağrı yığınlarını sonraki toplamayı durdurmak için temizleyin **toplama çağrı yığınları yakalama sırasında (yakalamayı yavaşlatır** onay kutusu.
+     **Yakalama sırasında çağrı yığınlarını topla (yakalamayı yavaşlatır)** Çağrı yığınlarını toplamak için bu kutuyu işaretleyin. Varsayılan olarak, çağrı yığınları toplanmaz. Çağrı yığınlarını yakalamak için **yakalama sırasında çağrı yığınlarının birikmesini sağlayın (daha yavaş yakala** onay kutusunun toplamayı etkinleştirmek için ayarlandığından ve sonra yalnızca şunu toplamak için **Çizim, dağıtım, sunma ve performans işaretçileri** seçeneğini (varsayılan) en önemli çağrı yığınları veya tüm çağrı yığınlarını toplamak için **her şey için** seçeneği. Daha sonra çağrı yığınlarını toplamayı durdurmak için **yakalama sırasında çağrı yığınlarını topla (daha yavaş yakala** onay kutusunu temizleyin.
 
-     **Yakalama sırasında oyun içi HUD'yi devre dışı bırak** baş üstü devre dışı bırakmak için bu kutuyu yardımcı olan bir uygulama grafik tanılama altında genellikle görüntüler çalışmaya denetleyin. Baş üstü katmana görüntülemek için onay işaretini kaldırın.
+     **Yakalama sırasında oyun ıçı HUD 'Yi devre dışı bırakma** Grafik tanılama altında çalışan bir uygulamanın genellikle görüntülediği HUD kaplamasını devre dışı bırakmak için bu kutuyu işaretleyin. HUD kaplamasını göstermek için işaretini kaldırın.
 
-     **Uyumluluk modunda yakalayın** uyumluluk modunda grafik bilgilerini yakalamak için bu onay kutusunu işaretleyin. Uyumluluk modunda yakalama varsayılandır. Uyumluluk modunda, Direct3D GPU ötesinde bir temel özellik düzeyinde tanımlanan diğer ek özellikleri desteklediğini rapor olmaz. Bu uygulama üzerinde GPU, yakalanan donanıma özgü uzantıları kullanılarak yakalanan engeller ve grafik günlüğü geri aynı veya daha yüksek özellik düzeyini destekleyen herhangi bir GPU kullanılarak çalınabilir sağlar. Uyumluluk modunu devre dışı bırakmak için bu kutunun işaretini kaldırın; Uyumluluk modu devre dışı yakalanan günlükleri, yakalama sırasında uygulama tarafından kullanılan aynı ek özellikleri desteklemeyen herhangi bir GPU üzerinde yürütme işlemi başarısız olur.
+     **Uyumluluk modunda yakala** Grafik bilgilerini uyumluluk modunda yakalamak için bu kutuyu işaretleyin. Uyumluluk modunda yakalama varsayılandır. Uyumluluk modu ' nun altında Direct3D, GPU 'nun temel özellik düzeyinde tanımlananların ötesinde ek özellikleri desteklediğini raporlamaz. Bu, yakalanan uygulamanın, üzerinde yakalanan GPU 'nun donanıma özgü uzantılarını kullanmasını önler ve grafik günlüğünün aynı veya daha yüksek özellik düzeyini destekleyen herhangi bir GPU kullanılarak yürütülebilmesini sağlar. Uyumluluk modunu devre dışı bırakmak için bu kutunun işaretini kaldırın; Uyumluluk modu devre dışı ile yakalanan Günlükler, yakalama sırasında uygulama tarafından kullanılan ek özellikleri desteklemeyen hiçbir GPU üzerinde oynatılamaz.
 
-     **SDK katmanı hatası bulunursa Yakalamayı Durdur** bir hatayla karşılaşılmazsa yakalama hemen durdurmak için bu onay kutusunu işaretleyin.
+     **Herhangi BIR SDK katmanı hatası bulunursa yakalamayı durdur** Hatalarla karşılaşıldığında hemen yakalamayı durdurmak için bu kutuyu işaretleyin.
 
 ## <a name="capturing-graphics-information-remotely"></a>Graf bilgilerini uzaktan yakalama
- Grafik bilgileri, yerel makinede ya da uzak bir makine veya cihazda çalışan bir uygulamadan yakalanabilir. Uzaktan yakalama için desteklenen [!INCLUDE[winblue_client_2](../includes/winblue_client_2_md.md)] makineler ve [!INCLUDE[winblue_winrt_2](../includes/winblue_winrt_2_md.md)] cihazlar. Uzakta çalışan bir uygulamadan grafik bilgilerini yakalamak için, projenizi uzaktan hata ayıklama için yapılandırın ve sonra uygulamanızı, daha önce açıklandığı gibi, Grafik Tanılama altında çalıştırın. Uygulama uzak makinede çalışır ve yakalanan grafik bilgileri geliştirme makinenizde kaydedilir.
+ Grafik bilgileri, yerel makinede ya da uzak bir makine veya cihazda çalışan bir uygulamadan yakalanabilir. Uzaktan yakalama, [!INCLUDE[winblue_client_2](../includes/winblue_client_2_md.md)] makineler ve [!INCLUDE[winblue_winrt_2](../includes/winblue_winrt_2_md.md)] cihazlar için desteklenir. Uzakta çalışan bir uygulamadan grafik bilgilerini yakalamak için, projenizi uzaktan hata ayıklama için yapılandırın ve sonra uygulamanızı, daha önce açıklandığı gibi, Grafik Tanılama altında çalıştırın. Uygulama uzak makinede çalışır ve yakalanan grafik bilgileri geliştirme makinenizde kaydedilir.
 
- Projenizi uzaktan hata ayıklama için yapılandırma şekliniz, geliştirmekte olduğunuz uygulamanın türüne ve kullandığınız programlama diline göre değişir. Bir UWP uygulaması için uzaktan hata ayıklamayı yapılandırma hakkında daha fazla bilgi için bkz: [uzak bir makinede çalıştırmak UWP uygulamaları](../run-windows-store-apps-on-a-remote-machine.md). Bir Windows masaüstü uygulaması için uzaktan hata ayıklamayı yapılandırma hakkında daha fazla bilgi için bkz: [uzaktan hata ayıklama](../remote-debugging.md).
+ Projenizi uzaktan hata ayıklama için yapılandırma şekliniz, geliştirmekte olduğunuz uygulamanın türüne ve kullandığınız programlama diline göre değişir. UWP uygulaması için uzaktan hata ayıklamayı yapılandırma hakkında daha fazla bilgi için bkz. [uzak MAKINEDE UWP uygulamaları çalıştırma](../run-windows-store-apps-on-a-remote-machine.md). Bir Windows masaüstü uygulaması için uzaktan hata ayıklamayı yapılandırma hakkında daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../remote-debugging.md).
 
- Daha sonra, bilgilerin yakalandığı yerden bağımsız olarak, grafik bilgilerini kayıttan yürütmek için bir uzak makine veya cihaz kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Grafik tanılama kayıttan yürütme makinesini değiştirme](how-to-change-the-graphics-diagnostics-playback-machine.md).
+ Daha sonra, bilgilerin yakalandığı yerden bağımsız olarak, grafik bilgilerini kayıttan yürütmek için bir uzak makine veya cihaz kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: grafik tanılama kayıttan yürütme makinesini değiştirme](how-to-change-the-graphics-diagnostics-playback-machine.md).
 
 ## <a name="capturing-graphics-information-from-the-command-line"></a>Komut satırından grafik bilgilerini yakalama
- Bir komut satırı aracını kullanarak bir uygulamadan grafik bilgilerini yakalanabilir. Bu araç, DXCap.exe, hızlı bir şekilde yakalayın ve Visual Studio ya da programlı yakalama kullanmadan grafik bilgilerini kayıttan yürütme. Özellikle, otomasyon için veya bir test ortamında DXCap.exe kullanabilirsiniz. DXCap.exe hakkında daha fazla bilgi için bkz: [komut satırı Yakalama aracı](command-line-capture-tool.md)
+ Grafik bilgileri, bir komut satırı aracı kullanılarak bir uygulamadan yakalanabilir. Bu araç olan DXCap. exe, Visual Studio veya programlı yakalama kullanmadan grafik bilgilerini hızlıca yakalayabilir ve kayıttan yürütebilir. Özellikle, otomasyon için veya test ortamında DXCap. exe ' yi kullanabilirsiniz. DXCap. exe hakkında daha fazla bilgi için bkz. [komut satırı yakalama aracı](command-line-capture-tool.md)
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [İzlenecek yol: Grafik Bilgilerini Yakalama](walkthrough-capturing-graphics-information.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [İzlenecek Yol: Grafik Bilgilerini Yakalama](walkthrough-capturing-graphics-information.md)

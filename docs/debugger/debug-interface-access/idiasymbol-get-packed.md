@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_packed | Microsoft Docs
+title: 'IDiaSymbol:: get_packed | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91e99da7832bb2a0e067de6eb3c09f90255eaf32
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 420ba5b56342b4b1d5b8e4c2756aa828e5fe53b4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64785838"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739532"
 ---
-# <a name="idiasymbolgetpacked"></a>IDiaSymbol::get_packed
-Kullanıcı tanımlı veri türü (UDT) paketlenmiş olup olmadığını belirten bir bayrak alır.
+# <a name="idiasymbolget_packed"></a>IDiaSymbol::get_packed
+Kullanıcı tanımlı veri türünün (UDT) paketlenemeyeceğini belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,16 +33,16 @@ HRESULT get_packed ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` UDT paketlenmiş; Aksi halde döndürür `FALSE`.
+dışı UDT paketlense `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.
+> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bellek sınırları hizalamak için araya giren hiçbir doldurma ile UDT tüm üyelerinin, mümkün olduğunca birbirine yakın konumlandırılır anlamına gelir donatılmıştır.
+ Paketlenmiş tüm UDT üyeleri, bellek sınırlarına hizalamak için araya giren bir doldurma olmadan mümkün olduğunca yakın şekilde konumlandırılır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

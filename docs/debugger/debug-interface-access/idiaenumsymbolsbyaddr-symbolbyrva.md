@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbolsbyaddr::symbolbyrva | Microsoft Docs
+title: 'IDiaEnumSymbolsByAddr:: symbolByRVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38d7b0cb8564743ab35cac20cdcb352cdbca48d3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b4c34ce4105da6d50dc2bc9a0554f9539c1b2177
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830278"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743826"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyrva"></a>IDiaEnumSymbolsByAddr::symbolByRVA
-Numaralandırıcı göreli sanal adres (RVA) göre arama gerçekleştirerek yerleştirir.
+Göreli sanal adres (RVA) ile bir arama gerçekleştirerek numaralandırıcısı konumlandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,16 +34,16 @@ HRESULT symbolByRVA ( 
 #### <a name="parameters"></a>Parametreler
  relativeVirtualAddress
 
-[in] Görüntüsü başlatmak için göreceli adresi.
+'ndaki Görüntünün başlangıcına göre adres.
 
  ppsymbol
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) found sembol temsil eden nesne.
+dışı Bulunan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` , sembol bulunamadı. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Sembol bulunamazsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 - [IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

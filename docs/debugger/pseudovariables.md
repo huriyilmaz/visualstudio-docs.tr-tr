@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b6856517a680809ccc802c02dc880b6349eadc5
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: e328e85f58e69ef1d579fd979f629c59b90caf3e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535954"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730515"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında sahte değişkenler
 Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **QuickWatch** iletişim kutusunda göstermek için kullanılan terimlerdir. Bir sözde değişkeni, normal bir değişkene girebileceğiniz şekilde girebilirsiniz. Ancak sözde değişkenler, değişken değildir ve programınızdaki değişken adlarına karşılık gelmez.
@@ -67,6 +67,6 @@ Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **Quick
 |`$` *N* `#`|Nesne KIMLIĞIYLE birlikte *N*değerine eşit olan nesneyi görüntüler.|
 |`$dynamic`|@No__t_1 uygulayan bir nesne için özel **Dinamik görünüm** düğümünü görüntüler. Arayüz. Söz dizimi `$dynamic,` *nesnesidir*. Bu özellik yalnızca .NET Framework sürüm 4 veya üstünü kullanan kod için geçerlidir.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)
 - [Değişken pencereleri](../debugger/debugger-windows.md)

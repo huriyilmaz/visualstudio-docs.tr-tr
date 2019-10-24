@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_numberOfRows | Microsoft Docs
+title: 'IDiaSymbol:: get_numberOfRows | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9d87445592db3cc566744151ea207bbb64c4906
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 257a667d8c2347394abaaa3282b37201d443ed97
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836077"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739642"
 ---
-# <a name="idiasymbolgetnumberofrows"></a>IDiaSymbol::get_numberOfRows
-Matris satır sayısını alır.
+# <a name="idiasymbolget_numberofrows"></a>IDiaSymbol::get_numberOfRows
+Matristeki satır sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,10 +30,10 @@ HRESULT get_numberOfRows(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir işaretçi bir `DWORD` matriste, satır sayısını tutar.
+dışı Matriste satır sayısını tutan `DWORD` için bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

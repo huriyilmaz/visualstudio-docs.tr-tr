@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 229ee7f4384c5ab93a329104ecbe165e0e1136a4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 894d425d934043b7ed06b29bc3d6fa19115ccf17
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666451"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748680"
 ---
 # <a name="my-extensions-page-project-designer-visual-basic"></a>My Extensions Sayfası, Proje Tasarımcısı (Visual Basic)
 Projenizde `My` ad alanı uzantılarını yönetmek için **Proje Tasarımcısı** ' nın **uzantılarım** sayfasını kullanın. `My` ad alanı uzantıları, kendi özel üyelerinizi eklemek için `My` ad alanını özelleştirmenizi sağlar. Özel `My` ad alanı uzantıları oluşturma hakkında daha fazla bilgi için, bkz. [Visual Basic ad alanını genişletme](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace).
@@ -40,7 +40,7 @@ Projenize yüklü bir `My` ad alanı uzantısı eklemek için bu düğmeye tıkl
 
 **My Namespace Extensions** listesindeki bir veya daha fazla başvuruyu seçin ve ardından bu düğmeye tıklayarak `My` ad alanı uzantısını projeden kaldırın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic ad alanını genişletme](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)
 - [My Uzantılarını Paketleme ve Dağıtma](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions)

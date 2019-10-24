@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkhelper::searchforreturnaddressstart | Microsoft Docs
+title: 'IDiaStackWalkHelper:: searchForReturnAddressStart | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a311b10f2fc5b53daff58e93feec3a9cd6077d14
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b0753cfe2d9ef8b08606185a5f57a3951f54e7de
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831988"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741330"
 ---
 # <a name="idiastackwalkhelpersearchforreturnaddressstart"></a>IDiaStackWalkHelper::searchForReturnAddressStart
-Belirtilen yığın çerçevesinin dönüş adresi veya belirtilen yığın adresi yakın arar.
+Belirtilen yığın adresinde veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,19 +35,19 @@ HRESULT searchForReturnAddressStart( 
 #### <a name="parameters"></a>Parametreler
  `frame`
 
-[in] Bir [Idiaframedata](../../debugger/debug-interface-access/idiaframedata.md) geçerli yığın çerçevesini temsil eden nesne.
+'ndaki Geçerli yığın çerçevesini temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi.
 
  `startAddress`
 
-[in] Bir sanal bellek adres aramaya başlanacak.
+'ndaki Aramanın başlatılacağı bir sanal bellek adresi.
 
  `ReturnAddress`
 
-[out] En yakın işlevi dönüş adresi döndürür `startAddress`.
+dışı @No__t_0 için en yakın işlev dönüş adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

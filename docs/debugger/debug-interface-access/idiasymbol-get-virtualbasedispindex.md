@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualbasedispındex | Microsoft Docs
+title: 'IDiaSymbol:: get_virtualBaseDispIndex | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 435957fed1d6805adb8e1c982368d9b16ca76885
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b42c735c110208d563f908baef90a3bd0699fbe8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796499"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738873"
 ---
-# <a name="idiasymbolgetvirtualbasedispindex"></a>IDiaSymbol::get_virtualBaseDispIndex
-Sanal Taban öteleme tablosundaki simgenin dizinini alır.
+# <a name="idiasymbolget_virtualbasedispindex"></a>IDiaSymbol::get_virtualBaseDispIndex
+Sanal taban öteleme tablosundaki simgenin dizinini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_virtualBaseDispIndex (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Sanal Taban öteleme tabloya indisini döndürür.
+dışı Dizini sanal taban öteleme tablosuna döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

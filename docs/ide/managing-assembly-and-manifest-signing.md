@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3add6e3e4f38b5ba73cd5154720d7b283189526e
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 8cf721e9880ce7f0b7c3191f73f16366637f0704
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461495"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748869"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>Derleme ve bildirim imzalamayı yönetme
 
@@ -29,7 +29,7 @@ Güçlü bir ad, derlemenin kimliğinden (basit metin adı, sürüm numarası ve
 
 Visual Basic ve C# projelerdeki derlemeleri imzalama hakkında daha fazla bilgi için bkz. [tanımlayıcı adlı derlemeler oluşturma ve kullanma](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
 
-Visual C++ projelerinde derlemeleri imzalama hakkında daha fazla bilgi için bkz. [Strong-adlandırılmış derlemelerC++(/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli).
+Projelerde derlemeleri imzalama hakkında daha fazla bilgi için bkz. [Strong-adlandırılmış derlemelerC++(/CLI).](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli) C++
 
 > [!NOTE]
 > Tanımlayıcı ad imzalama, derlemenin ters mühendisine karşı koruma sağlamaz. Ters mühendisliğe karşı korunmak için bkz. [Dotfuscator topluluğu](dotfuscator/index.md).
@@ -48,7 +48,7 @@ Visual C++ projelerinde derlemeleri imzalama hakkında daha fazla bilgi için bk
 
 Aşağıdaki varlık türlerini imzalayın:
 
-1. Derlemeleri genel derleme önbelleği 'ne (GAC) dağıtmak istiyorsanız.
+1. derlemeleri genel derleme önbelleği 'ne (GAC) dağıtmak istiyorsanız.
 
 2. ClickOnce uygulaması ve dağıtım bildirimleri. Visual Studio bu uygulamalar için varsayılan olarak imzalama imkanı sunar.
 
@@ -67,9 +67,9 @@ Bir anahtar dosyası belirtin. Yeni bir anahtar dosyası oluşturmayı seçersen
 
 Ayrıca zaten oluşturmuş olduğunuz bir anahtara işaret edebilirsiniz. Anahtar oluşturma hakkında daha fazla bilgi için bkz. [genel-özel anahtar çifti oluşturma](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair).
 
-Yalnızca bir ortak anahtara erişiminiz varsa, anahtarın atanmasını ertelerseniz gecikme imzalamayı kullanabilirsiniz. **Yalnızca gecikmeli imzala** onay kutusunu seçerek gecikmeli imzalamayı etkinleştirin. Gecikmeli imzalanmış bir proje çalıştırılmaz ve hata ayıklayamazsınız. Ancak, ile `-Vr` [sn. exe tanımlayıcı adı aracını](/dotnet/framework/tools/sn-exe-strong-name-tool) kullanarak geliştirme sırasında doğrulamayı atlayabilirsiniz.
+Yalnızca bir ortak anahtara erişiminiz varsa, anahtarın atanmasını ertelerseniz gecikme imzalamayı kullanabilirsiniz. **Yalnızca gecikmeli imzala** onay kutusunu seçerek gecikmeli imzalamayı etkinleştirin. Gecikmeli imzalanmış bir proje çalıştırılmaz ve hata ayıklayamazsınız. Ancak, `-Vr` seçeneğiyle [sn. exe tanımlayıcı adı aracını](/dotnet/framework/tools/sn-exe-strong-name-tool) kullanarak geliştirme sırasında doğrulamayı atlayabilirsiniz.
 
-Bildirimleri imzalama hakkında daha fazla bilgi için [bkz. nasıl yapılır: Uygulama ve dağıtım bildirimlerini](../ide/how-to-sign-application-and-deployment-manifests.md)imzalayın.
+Bildirimleri imzalama hakkında daha fazla bilgi için bkz. [nasıl yapılır: uygulama ve dağıtım bildirimlerini](../ide/how-to-sign-application-and-deployment-manifests.md)imzalama.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

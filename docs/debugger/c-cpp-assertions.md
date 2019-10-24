@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154abe3d73fa71ac897f0442697196cd859f32bd
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 9e2e6d69e4c621d6be81a00a61482b71199bc0fc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435898"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745753"
 ---
 # <a name="cc-assertions"></a>C/C++ Onayları
 Bir onaylama deyimi, programınızdaki bir noktada doğru olması beklenen bir koşulu belirtir. Bu koşul doğru değilse, onaylama başarısız olur, programınızın yürütülmesi kesintiye uğrar ve [onaylama başarısız iletişim kutusu](../debugger/assertion-failed-dialog-box.md) görüntülenir.
@@ -90,7 +90,7 @@ Kodunuza onaylama eklediğinizde, onayların yan etkileri olmadığından emin o
 ASSERT(nM++ > 0); // Don't do this!
 ```
 
-@No__t-0 ifadesi programınızın yayın sürümünde değerlendirilmediği için, `nM`, hata ayıklama ve sürüm sürümlerinde farklı değerlere sahip olur. MFC 'deki bu sorundan kaçınmak için `ASSERT` yerine [VERIFY](/cpp/mfc/reference/diagnostic-services#verify) makrosunu kullanabilirsiniz. `VERIFY`, ifadeyi tüm sürümlerde değerlendirir ancak yayın sürümündeki sonucu denetlemez.
+@No__t_0 ifadesi programınızın yayın sürümünde değerlendirilmediği için, `nM` hata ayıklama ve sürüm sürümlerinde farklı değerlere sahip olur. MFC 'deki bu sorundan kaçınmak için `ASSERT` yerine [VERIFY](/cpp/mfc/reference/diagnostic-services#verify) makrosunu kullanabilirsiniz. `VERIFY`, ifadeyi tüm sürümlerde değerlendirir ancak yayın sürümündeki sonucu denetlemez.
 
 Bir işlevin değerlendirilmesi beklenmeyen yan etkilere sahip olabileceğinden, özellikle onaylama deyimlerinde işlev çağrıları kullanma konusunda dikkatli olun.
 
@@ -99,7 +99,7 @@ ASSERT ( myFnctn(0)==1 ) // unsafe if myFnctn has side effects
 VERIFY ( myFnctn(0)==1 ) // safe
 ```
 
-`myFnctn`, hem hata ayıklama hem de sürüm sürümlerinde  ' i çağırır, bu nedenle kullanılması kabul edilebilir. Ancak, @no__t 0 ' ı kullanmak, yayın sürümündeki gereksiz bir işlev çağrısının ek yükünü uygular.
+`myFnctn`, hem hata ayıklama hem de sürüm sürümlerinde  ' i çağırır, bu nedenle kullanılması kabul edilebilir. Ancak `VERIFY` kullanmak, yayın sürümündeki gereksiz bir işlev çağrısının ek yükünü uygular.
 
 [Bu konuda](#BKMK_In_this_topic)
 
@@ -108,12 +108,12 @@ CRTDBG. H üst bilgi dosyası [_onaylama ve _ASSERTE makrolarını](/cpp/c-runti
 
 | Makroya | Sonuç |
 |------------| - |
-| `_ASSERT` | Belirtilen ifade FALSE olarak değerlendirilirse, `_ASSERT` ' ın dosya adı ve satır numarası. |
-| `_ASSERTE` | @No__t-0 ile aynı ve onaylanan ifadenin dize temsili. |
+| `_ASSERT` | Belirtilen ifade FALSE olarak değerlendirilirse, `_ASSERT` dosya adı ve satır numarası. |
+| `_ASSERTE` | @No__t_0 ile aynı ve uygulanan ifadenin dize temsili. |
 
-`_ASSERTE`, yanlış olarak açılan onaylanan ifadeyi raporladığından daha güçlüdür. Bu, kaynak koda başvurulmadan sorunu belirlemek için yeterli olabilir. Ancak, uygulamanızın hata ayıklama sürümü, `_ASSERTE` kullanılarak onaylanan her bir ifade için bir dize sabiti içerecektir. Çok sayıda `_ASSERTE` makrosu kullanıyorsanız, bu dize ifadeleri önemli miktarda bellek alır. Bu, bir sorun olduğunu kanıtlar, belleği kaydetmek için `_ASSERT` kullanın.
+`_ASSERTE`, yanlış olarak kapatılmış olan onaylanan ifadeyi bildirdiğinden daha güçlüdür. Bu, kaynak koda başvurulmadan sorunu belirlemek için yeterli olabilir. Ancak, uygulamanızın hata ayıklama sürümü, `_ASSERTE` kullanılarak onaylanan her bir ifade için bir dize sabiti içerecektir. Birçok `_ASSERTE` makro kullanıyorsanız, bu dize ifadeleri önemli miktarda bellek alır. Bu, bir sorun olduğunu kanıtlar, bellek kazanmak için `_ASSERT` kullanın.
 
-@No__t-0 tanımlandığında, `_ASSERTE` makrosu aşağıdaki gibi tanımlanır:
+@No__t_0 tanımlandığında, `_ASSERTE` makrosu aşağıdaki gibi tanımlanır:
 
 ```cpp
 #define _ASSERTE(expr) \
@@ -124,7 +124,7 @@ CRTDBG. H üst bilgi dosyası [_onaylama ve _ASSERTE makrolarını](/cpp/c-runti
     } while (0)
 ```
 
-Onaylanan ifade FALSE olarak değerlendirilirse, onaylama hatasını raporlamak için [_Crtdbgreport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) çağırılır (varsayılan olarak bir ileti iletişim kutusu kullanarak). İleti iletişim kutusunda **yeniden dene** ' yi seçerseniz `_CrtDbgReport` 1 döndürür ve `_CrtDbgBreak` `DebugBreak` aracılığıyla hata ayıklayıcısını çağırır.
+Onaylanan ifade FALSE olarak değerlendirilirse, onaylama hatasını raporlamak için [_Crtdbgreport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) çağırılır (varsayılan olarak bir ileti iletişim kutusu kullanarak). İleti iletişim kutusunda **yeniden dene** ' yi seçerseniz `_CrtDbgReport` 1 döndürür ve `_CrtDbgBreak` hata ayıklayıcıyı `DebugBreak` çağırır.
 
 ### <a name="checking-for-heap-corruption"></a>Yığın bozulması denetleniyor
 Aşağıdaki örnek, yığın bozulmasını denetlemek için [_Crtcheckmemory](/cpp/c-runtime-library/reference/crtcheckmemory) kullanır:
@@ -156,7 +156,7 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
 [Bu konuda](#BKMK_In_this_topic)
 
 ## <a name="BKMK_MFC_assertions"></a>MFC onayları
-MFC, onaylama denetimi için [onaylama](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) makrosunu tanımlar. Ayrıca, @no__t -2-türetilmiş bir nesnenin iç durumunu denetlemek için `MFC ASSERT_VALID` ve `CObject::AssertValid` yöntemlerini tanımlar.
+MFC, onaylama denetimi için [onaylama](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) makrosunu tanımlar. Ayrıca, `CObject` türetilmiş bir nesnenin iç durumunu denetlemek için `MFC ASSERT_VALID` ve `CObject::AssertValid` yöntemlerini tanımlar.
 
 MFC `ASSERT` makrosunun bağımsız değişkeni sıfır veya false olarak değerlendirilirse, makro program yürütmesini durdurur ve kullanıcıyı uyarır; Aksi takdirde, yürütme devam eder.
 
@@ -175,10 +175,10 @@ ASSERT(x >= 0);   //  Assertion fails if x is negative
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
 ```
 
-@No__t-0 makrosu yayın sürümünde kod üretmez. Yayın sürümündeki ifadeyi değerlendirmeniz gerekiyorsa, onaylama yerine [VERIFY](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) makrosunu kullanın.
+@No__t_0 makro yayın sürümünde kod üretmez. Yayın sürümündeki ifadeyi değerlendirmeniz gerekiyorsa, onaylama yerine [VERIFY](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) makrosunu kullanın.
 
 ### <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a>MFC ASSERT_VALID ve CObject:: AssertValid
-[CObject:: AssertValid](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#assertvalid) yöntemi, bir nesnenin iç durumunun çalışma zamanı denetimleri sağlar. @No__t-1 ' den sınıfınızı türettiğinizde `AssertValid` ' ı geçersiz kılmanız gerekli olmasa da, bunu yaparak sınıfınızı daha güvenilir hale getirebilirsiniz. `AssertValid` ' ın geçerli değerler içerdiğini doğrulamak için tüm nesnenin üye değişkenlerinin üzerinde onaylama işlemleri gerçekleştirmesi gerekir. Örneğin, işaretçi üye değişkenlerinin NULL olmadığını denetlemelidir.
+[CObject:: AssertValid](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#assertvalid) yöntemi, bir nesnenin iç durumunun çalışma zamanı denetimleri sağlar. @No__t_0 sınıfınızı `CObject` türettiğinizde geçersiz kılmanız gerekli olmasa da, bunu yaparak sınıfınızı daha güvenilir hale getirebilirsiniz. `AssertValid` ' ın geçerli değerler içerdiğini doğrulamak için tüm nesnenin üye değişkenlerinin üzerinde onaylama işlemleri gerçekleştirmesi gerekir. Örneğin, işaretçi üye değişkenlerinin NULL olmadığını denetlemelidir.
 
 Aşağıdaki örnek, `AssertValid` işlevinin nasıl bildirilemeyeceğini göstermektedir:
 
@@ -197,7 +197,7 @@ public:
 };
 ```
 
-@No__t-0 ' ı geçersiz kıldığınızda, kendi kontrollerinizi gerçekleştirmeden önce `AssertValid` ' in temel sınıf sürümünü çağırın. Ardından, burada gösterildiği gibi, türetilmiş sınıfınıza özgü üyeleri denetlemek için onay makrosunu kullanın:
+@No__t_0 geçersiz kıldığınızda, kendi kontrollerinizi gerçekleştirmeden önce `AssertValid` temel sınıf sürümünü çağırın. Ardından, burada gösterildiği gibi, türetilmiş sınıfınıza özgü üyeleri denetlemek için onay makrosunu kullanın:
 
 ```cpp
 #ifdef _DEBUG
@@ -215,9 +215,9 @@ void CPerson::AssertValid() const
 #endif
 ```
 
-Üye değişkenlerinizin herhangi biri nesneleri depoladıysanız, iç geçerliliğini test etmek için `ASSERT_VALID` makrosunu kullanabilirsiniz (sınıfları `AssertValid` ' i geçersiz kıldıysanız).
+Üye değişkenlerinizin herhangi biri nesneleri depoladıysanız, iç geçerliliğini sınamak için `ASSERT_VALID` makrosunu kullanabilirsiniz (sınıfları `AssertValid` geçersiz kılar).
 
-Örneğin, bir [CObList](/cpp/mfc/reference/coblist-class) öğesini üye değişkenlerinden birinde depolayan bir sınıf @no__t (0) düşünün. @No__t-0 değişkeni, `m_DataList`, `CPerson` nesnelerinin bir koleksiyonunu saklar. @No__t-0 ' ın kısaltılmış bildirimi şuna benzer:
+Örneğin, bir sınıf `CMyData` göz önünde bulundurun. Bu, bir [CObList](/cpp/mfc/reference/coblist-class) öğesini üye değişkenlerinden birinde depolar. @No__t_0 değişkeni `m_DataList`, `CPerson` nesnelerinin bir koleksiyonunu depolar. @No__t_0 kısaltılmış bildirimi şöyle görünür:
 
 ```cpp
 class CMyData : public CObject
@@ -235,7 +235,7 @@ class CMyData : public CObject
 };
 ```
 
-@No__t-1 ' deki `AssertValid` geçersiz kılma şuna benzer:
+@No__t_0 geçersiz kılma `CMyData` şöyle görünür:
 
 ```cpp
 #ifdef _DEBUG
@@ -250,11 +250,11 @@ void CMyData::AssertValid( ) const
 #endif
 ```
 
-`CMyData`, veri üyesinde depolanan nesnelerin geçerliliğini sınamak için `AssertValid` mekanizmasını kullanır. @No__t-1 @no__t geçersiz kılma, kendi m_pDataList üye değişkeni için `ASSERT_VALID` makrosunu çağırır.
+`CMyData`, veri üyesinde depolanan nesnelerin geçerliliğini sınamak için `AssertValid` mekanizmasını kullanır. @No__t_1 `AssertValid` geçersiz kılma, kendi m_pDataList member değişkeni için `ASSERT_VALID` makrosunu çağırır.
 
-@No__t-0 sınıfı aynı zamanda `AssertValid` ' i geçersiz kıldığından, geçerlilik testi bu düzeyde durmaz. Bu geçersiz kılma, listenin iç durumunda ek geçerlilik testi gerçekleştirir. Bu nedenle, `CMyData` nesnesi üzerindeki bir geçerlilik testi, depolanan `CObList` liste nesnesinin iç durumları için ek geçerlilik testlerine yol açar.
+@No__t_0 sınıfı aynı zamanda `AssertValid` geçersiz kıldığından, geçerlilik testi bu düzeyde durmaz. Bu geçersiz kılma, listenin iç durumunda ek geçerlilik testi gerçekleştirir. Bu nedenle, `CMyData` nesnesi üzerindeki bir geçerlilik testi, depolanan `CObList` liste nesnesinin iç durumları için ek geçerlilik testlerine yol açar.
 
-Daha fazla iş sayesinde, listede depolanan `CPerson` nesnelerine yönelik geçerlilik testleri de ekleyebilirsiniz. @No__t-0 `CObList` ' den bir sınıf türetebilir ve `AssertValid` ' y i geçersiz kılabilirsiniz. Geçersiz kılmada `CObject::AssertValid` ' ı çağırır ve sonra listede `AssertValid` ' i çağırarak listede depolanan her bir @no__t 2 nesnesi üzerinde. Bu konunun başında gösterilen `CPerson` sınıfı zaten `AssertValid` ' i geçersiz kılar.
+Daha fazla iş sayesinde, listede depolanan `CPerson` nesnelerine yönelik geçerlilik testleri de ekleyebilirsiniz. @No__t_1 bir sınıf `CPersonList` türetebilir ve `AssertValid` geçersiz kılabilirsiniz. Geçersiz kılmada `CObject::AssertValid` çağırır ve sonra listede saklanan her bir `CPerson` nesnesi üzerinde `AssertValid` çağırarak listeyi yineleyebilirsiniz. Bu konunun başında gösterilen `CPerson` sınıfı zaten `AssertValid` ' i geçersiz kılar.
 
 Bu, hata ayıklama için derleme yaparken güçlü bir mekanizmadır. Daha sonra yayın için derleme yaptığınızda mekanizma otomatik olarak kapatılır.
 
@@ -303,7 +303,7 @@ ASSERT(iMols<=numMols); // MFC version
 _ASSERT(iMols<=numMols); // CRT version
 ```
 
-@No__t-0 ile sayılan motacules sayısı, her zaman motacules, `numMols` ' in toplam sayısından küçük veya eşit olmalıdır. Döngünün görsel denetlemesi bunun durum olarak olduğunu göstermez, bu nedenle bu koşul için test etme döngüsünden sonra bir onaylama deyimi kullanılır.
+@No__t_0 tarafından sayılan motacules sayısı, her zaman motacules, `numMols` sayısından küçük veya buna eşit olmalıdır. Döngünün görsel denetlemesi bunun durum olarak olduğunu göstermez, bu nedenle bu koşul için test etme döngüsünden sonra bir onaylama deyimi kullanılır.
 
 [Bu konuda](#BKMK_In_this_topic)
 
@@ -320,7 +320,7 @@ ASSERT(!myErr); -- MFC version
 _ASSERT(!myErr); -- CRT version
 ```
 
-Hata işleme kodu düzgün çalışıyorsa, onaylamaya ulaşılmadan önce hatanın işlenmesi ve `myErr` ' ı sıfıra sıfırlanması gerekir. @No__t-0 başka bir değere sahipse onaylama başarısız olur, program çöktüler ve [onaylama başarısız Iletişim kutusu](../debugger/assertion-failed-dialog-box.md) görüntülenir.
+Hata işleme kodu düzgün çalışıyorsa, onaylamaya ulaşılmadan önce hatanın işlenmesi ve `myErr` ' ı sıfıra sıfırlanması gerekir. @No__t_0 başka bir değer varsa, onaylama başarısız olur, program çöktüler ve [onaylama başarısız Iletişim kutusu](../debugger/assertion-failed-dialog-box.md) görüntülenir.
 
 Ancak, onaylama deyimleri hata işleme kodu için bir değiştirme değildir. Aşağıdaki örnek, son sürüm kodundaki sorunlara yol açabilecek bir onaylama deyimi gösterir:
 
@@ -337,7 +337,7 @@ Bu kod, hata koşulunu işlemek için assertion deyimine bağımlıdır. Sonuç 
 
 [Bu konuda](#BKMK_In_this_topic)
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

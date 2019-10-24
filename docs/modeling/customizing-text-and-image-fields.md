@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04cd8d1eb94ba488b621fb30f9ac598ce9c71722
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9d3a3e1995dbc36b02d90da6343e8cc9a6d48eba
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653988"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748446"
 ---
 # <a name="customizing-text-and-image-fields"></a>Metin ve Görüntü Alanlarını Özelleştirme
 Bir şekildeki metin dekoratörü tanımladığınızda, bir TextField tarafından temsil edilir. TextFields ve diğer şekil alanlarının başlatılmasının örnekleri için DSL çözümünüzdeki Dsl\GeneratedCode\Shapes.cs inceleyin.
@@ -261,7 +261,7 @@ partial class ExampleShape
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Şekiller ve Bağlayıcıları Tanımlama](../modeling/defining-shapes-and-connectors.md)
 - [Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama](../modeling/setting-a-background-image-on-a-diagram.md)

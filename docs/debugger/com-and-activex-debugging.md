@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 701a0096e89123fc9c5445805bb43777735c0924
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: f6dc69a18aa09536e5735431aa451bc2dd3933ee
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435921"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745690"
 ---
 # <a name="com-and-activex-debugging"></a>COM ve ActiveX Hata Ayıklaması
 Bu bölümde, COM uygulamalarında ve ActiveX denetimlerinde hata ayıklama hakkında ipuçları verilmektedir.
@@ -41,7 +41,7 @@ Bu bölümde, COM uygulamalarında ve ActiveX denetimlerinde hata ayıklama hakk
 ## <a name="related-sections"></a>İlgili Bölümler
  [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md) Hata ayıklama belgelerinin daha büyük bölümlerine bağlantılar sağlar. Bilgiler şunları içerir: hata ayıklayıcıdaki yenilikler, ayarlar ve hazırlık, kesme noktaları, özel durumları işleme, düzenleme ve devam etme, yönetilen kodda C++ hata ayıklama, hata ayıklama, hata ayıklama, SQL ve ActiveX, hata ayıklama dll 'leri ve Kullanıcı arabirim başvuruları.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
 - [COM’a Giriş](/cpp/atl/introduction-to-com)

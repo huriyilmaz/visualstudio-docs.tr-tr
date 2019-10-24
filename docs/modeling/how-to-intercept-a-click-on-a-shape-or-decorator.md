@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f372d42869bf533b598f3e2aba9e60e34e47144d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1443cacd6d2e7c8f980e0bf423832d9b013e560f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605285"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748377"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>Nasıl yapılır: Şekil veya Dekoratörde bir Click için Araya Girme
 Aşağıdaki yordamlarda, bir şekle veya bir simge dekoratmasına tıklamanın nasıl ele alınacağını gösterilmektedir. Tıklama, Çift tıklama, sürükme ve diğer hareketleri yakalayabilir ve öğenin yanıt vermesini sağlayabilirsiniz.
@@ -393,7 +393,7 @@ namespace Company.CompartmentDrag
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Değişikliklere Yanıt Verme ve Değişiklikleri Yayma](../modeling/responding-to-and-propagating-changes.md)
 - [Dekoratörlerin Özellikleri](../modeling/properties-of-decorators.md)

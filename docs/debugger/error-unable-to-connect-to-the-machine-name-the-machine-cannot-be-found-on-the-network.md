@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Makineye bağlanılamıyor &lt;adı&gt;. Makine ağ üzerinde bulunamadı. | Microsoft Docs'
+title: 'Hata: &lt;name &gt; makineye bağlanılamıyor. Makine ağ üzerinde bulunamadı. | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,34 +16,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8eebd082df031161604bd04afe61d1aca652f6a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7d0f820156714a726d506d8871d4e42a8dc12a23
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850066"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736830"
 ---
-# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Hata: Makineye bağlanılamıyor &lt;adı&gt;. Makine ağ üzerinde bulunamadı.
-Bu davranış, aşağıdaki koşullardan biri doğru ise oluşur:
+# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Hata: &lt;name &gt; makineye bağlanılamıyor. Makine ağ üzerinde bulunamadı.
+Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:
 
 - Uzak bilgisayarla bağlantınız kesildi.
 
-- Kullanıcı hesabınızın uzak bilgisayarda devre dışıdır.
+- Uzak bilgisayardaki kullanıcı hesabınız devre dışı bırakıldı.
 
 - Uzak bilgisayardaki parolanızın süresi doldu.
 
-### <a name="to-resolve-this-behavior"></a>Bu davranışı düzeltmek için
+### <a name="to-resolve-this-behavior"></a>Bu davranışı çözümlemek için
 
-- Yerel bilgisayarda ve uzak bilgisayar aynı ağda olduğundan emin olun. Bunu yapmak için uzak bilgisayara erişmeye denemek için Microsoft Windows Explorer'ı (veya dosya Gezgini) kullanın.
+- Yerel bilgisayarın ve uzak bilgisayarın aynı ağda bulunduğundan emin olun. Bunu yapmak için, uzak bilgisayara erişmeyi denemek üzere Microsoft Windows Explorer (veya dosya Gezgini) kullanın.
 
-     — ve —
+     '
 
-- Uzak bilgisayara bağlanmak için kullandığınız kullanıcı hesabının etkin olduğundan emin olun.
+- Uzak bilgisayara bağlanmak için kullandığınız kullanıcı hesabının etkinleştirildiğinden emin olun.
 
-     — ve —
+     '
 
-- Uzak bilgisayara bağlanmak için kullandığınız parolayı geçerlidir ve süresi geçmemiş olduğundan emin olun.
+- Uzak bilgisayara bağlanmak için kullandığınız parolanın geçerli olduğundan ve süresi dolmadığından emin olun.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
 - [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)

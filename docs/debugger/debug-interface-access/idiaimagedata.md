@@ -1,5 +1,5 @@
 ---
-title: Idiaımagedata | Microsoft Docs
+title: IDiaImageData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1e3dd8c395c59bc3255c1c9ee55837466c1cef7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 75a81ae23db90b06915e7090a9f2918be3ff18ae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828516"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743401"
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
-Modülün veya görüntü temel konum ve bellek uzaklıkları ayrıntılarını sunar.
+Modülün veya görüntünün temel konumunun ve bellek uzaklarının ayrıntılarını gösterir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,23 +28,23 @@ Modülün veya görüntü temel konum ve bellek uzaklıkları ayrıntılarını 
 IDiaImageData : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
-Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDiaImageData`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+Aşağıdaki tabloda `IDiaImageData` yöntemleri gösterilmektedir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|Uygulama göreli modül sanal bellekte konumunu alır.|
-|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|Görüntü sanal bellekte konumunu alır.|
-|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Görüntü tabanlı burada bellek konumunu alır.|
+|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|Modülün sanal belleğindeki konumunu uygulamaya göre alır.|
+|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|Görüntünün sanal belleğindeki konumunu alır.|
+|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Görüntünün dayanmanız gereken bellek konumunu alır.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bazı hata ayıklama akışları (XDATA, PDATA), ayrıca görüntüde depolanan verilerin kopyalarını içerir. Bu nesneler için sorgulanabilir veri akışı `IDiaImageData` arabirimi. Ayrıntılar için bu konudaki "Arayanlar için Notlar" bölümüne bakın.
+Bazı hata ayıklama akışları (XDATA, PDATA) de görüntüde depolanan verilerin kopyalarını içerir. Bu akış veri nesneleri `IDiaImageData` arabirimi için sorgulanabilir. Ayrıntılar için bu konudaki "çağıranlar için Notlar" bölümüne bakın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim çağırarak elde `QueryInterface` üzerinde bir [Idiaenumdebugstreamdata](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesne. Tüm hata ayıklama Not akışları Destek `IDiaImageData` arabirimi. Örneğin, şu anda yalnızca XDATA ve PDATA akışlarını destekleyen `IDiaImageData` arabirimi.
+Bir [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnesinde `QueryInterface` çağırarak bu arabirimi elde edin. Tüm hata ayıklama akışlarının `IDiaImageData` arabirimini desteklemediğini unutmayın. Örneğin, şu anda yalnızca XDATA ve PDATA akışları `IDiaImageData` arabirimini destekler.
 
 ## <a name="example"></a>Örnek
-Bu örnekte tüm destekleyen herhangi bir akışı için hata ayıklama akışı arama `IDiaImageData` arabirimi. Böyle bir akış bulunursa, bu akış hakkında bazı bilgiler görüntülenir.
+Bu örnek, `IDiaImageData` arabirimini destekleyen her türlü akış için hata ayıklama akışlarını arar. Böyle bir akış bulunursa, bu akış hakkında bazı bilgiler görüntülenir.
 
 ```C++
 void ShowImageData(IDiaSession *pSession)
@@ -111,12 +111,12 @@ void ShowImageData(IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: dia2.h
+Üstbilgi: dia2. h
 
-Kitaplık: diaguids.lib
+Kitaplık: diaguid. lib
 
-DLL: msdia80.dll
+DLL: Msdia80. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

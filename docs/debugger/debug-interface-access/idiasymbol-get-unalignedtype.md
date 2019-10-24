@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_unalignedtype | Microsoft Docs
+title: 'IDiaSymbol:: get_unalignedType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ddd5d6a99f0d5e2f0eb3bab87bbe7805b7d8588a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 92d849860d4c91557f01a26f107782772c508caa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830736"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739017"
 ---
-# <a name="idiasymbolgetunalignedtype"></a>IDiaSymbol::get_unalignedType
-Kullanıcı tanımlı veri türü hizalanmamış olup olmadığını belirten bir bayrak alır.
+# <a name="idiasymbolget_unalignedtype"></a>IDiaSymbol::get_unalignedType
+Kullanıcı tanımlı veri türünün hizalanmamış olup olmadığını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_unalignedType ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür `TRUE` kullanıcı tanımlı veri türü, aksi takdirde hizalanmamış döndürür `FALSE`.
+dışı Kullanıcı tanımlı veri türü hizalanmamış ise `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

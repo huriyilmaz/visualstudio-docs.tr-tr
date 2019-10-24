@@ -1,5 +1,5 @@
 ---
-title: Simge yükleme bilgileri iletişim kutusu | Microsoft Docs
+title: Sembol yükleme bilgileri Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,20 +15,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5606101d4c4a790db57f2a5b051bc128ea50c684
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c6bc7a795d45caf712b837f7d59e3ce6a0f9c8aa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901934"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729006"
 ---
 # <a name="symbol-load-information-dialog-box"></a>Simge Yükleme Bilgileri İletişim Kutusu
-**Sembol yükleme bilgisi** iletişim kutusu açılır, üzerinde sağ tıklattığınızda **modülleri** penceresi ve **sembol yükleme bilgisi**.
+**Sembol yükleme bilgileri** iletişim kutusu, **modüller** penceresine sağ tıklayıp **sembol yükleme bilgileri**' ni seçtiğinizde açılır.
 
 ## <a name="uielement-list"></a>UIElement Listesi
- **Bilgi** ayarları ve sembol Ayarları'nda yaptığınız değişiklikler temel Visual Studio sembol dosyalarının (PDB dosyaları) yüklemek için Aranan dizinleri gösterir **seçenekleri** iletişim kutusu.
+ **Bilgi** Visual Studio Install ayarlarına ve **Seçenekler** iletişim kutusunda sembol ayarlarına yaptığınız değişikliklere dayalı olarak sembol dosyaları (pdb dosyaları) için aranan dizinleri gösterir.
 
- **Sembol ayarları** sembol ayarları değiştirmek için bu düğmeye tıklayın **seçenekleri** iletişim kutusu (**hata ayıklama** kategori **sembolleri** sayfası). Bu sayfada eklemek veya kaldırmak simge konumları, bir sembol sunucusu kullanıyorsanız ve ne zaman simge konumları aranır denetimi yerel önbellek konumu belirtin.
+ **Sembol ayarları** **Seçenekler** iletişim kutusundaki (**hata ayıklama** kategorisi, **semboller** sayfası) sembol ayarlarını değiştirmek için bu düğmeye tıklayın. Bu sayfada, sembol konumları ekleyebilir veya kaldırabilir, bir sembol sunucusu kullanıyorsanız yerel bir önbellek konumu belirtebilir ve sembol konumlarının ne zaman arandığını denetleyebilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Simge (.pdb) ve Kaynak Dosyaları Belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

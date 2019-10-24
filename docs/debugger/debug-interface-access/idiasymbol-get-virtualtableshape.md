@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualtableshape | Microsoft Docs
+title: 'IDiaSymbol:: get_virtualTableShape | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef18d56bb993ee5761bb59dcf5fb0758d44f4d61
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: bcbbf5463486c0c4bb2417793d3f37bee2d121c2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64822713"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738830"
 ---
-# <a name="idiasymbolgetvirtualtableshape"></a>IDiaSymbol::get_virtualTableShape
-Symbol arabirimi sanal tablo kullanıcı tanımlı bir tür için tür alır.
+# <a name="idiasymbolget_virtualtableshape"></a>IDiaSymbol::get_virtualTableShape
+Kullanıcı tanımlı bir tür için sanal tablo türünün sembol arabirimini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_virtualTableShape ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) kullanıcı tanımlı bir tür için sanal tablosunu temsil eden nesne.
+dışı Kullanıcı tanımlı bir tür için sanal tabloyu temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.
+> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

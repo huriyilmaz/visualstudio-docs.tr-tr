@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Görselleştiriciyi yükleme | Microsoft Docs'
+title: 'Nasıl yapılır: Görselleştirici yüklemesi | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,33 +17,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9b09bc837cae4eaad2c0dbcb2bb82a7daa248eb
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 3c9c2fa8a8fb300c3b7eb702ae3efd216e17141a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63389314"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733102"
 ---
-# <a name="how-to-install-a-visualizer"></a>Nasıl yapılır: Görselleştiriciyi yükleme
-Görselleştirici oluşturduktan sonra kullanıma sunulacak böylece görselleştiricisi yüklemelisiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Görselleştirici yükleme basit bir işlemdir.
+# <a name="how-to-install-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Yükleme
+Görselleştirici oluşturduktan sonra, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ' de kullanılabilmesi için Görselleştiriciyi yüklemelisiniz. Görselleştirici yüklenmesi basit bir işlemdir.
 
 > [!NOTE]
-> UWP uygulamalarında, yalnızca standart metin, HTML, XML ve JSON görselleştiriciler desteklenir. Özel (kullanıcı tarafından oluşturulmuş) görselleştiriciler desteklenmez.
+> UWP uygulamalarında yalnızca standart metin, HTML, XML ve JSON Görselleştiriciler desteklenir. Özel (Kullanıcı tarafından oluşturulan) Görselleştiriciler desteklenmez.
 
 ### <a name="to-install-a-visualizer"></a>Görselleştirici yüklemek için
 
-1. Derlediğiniz görselleştiricisi içeren DLL bulun.
+1. Derleyecek Görselleştiriciyi içeren DLL 'i bulun.
 
-2. DLL aşağıdaki konumlardan birini kopyalayın:
+2. DLL 'yi aşağıdaki konumlardan birine kopyalayın:
 
     - *VisualStudioInstallPath* `\Common7\Packages\Debugger\Visualizers`
 
     - `My Documents\` *VisualStudioVersion* `\Visualizers`
 
-3. Uzaktan hata ayıklama için yönetilen Görselleştirici kullanmak istiyorsanız, DLL uzak bilgisayarda aynı yoluna kopyalayın.
+3. Uzaktan hata ayıklama için yönetilen bir Görselleştirici kullanmak istiyorsanız, uzak bilgisayardaki aynı yola DLL 'yi kopyalayın.
 
 4. Hata ayıklama oturumunu yeniden başlatın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)
-- [Nasıl yapılır: Görselleştirici Yazma](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [Nasıl Yapılır: Görselleştirici Yazma](/visualstudio/debugger/create-custom-visualizers-of-data)

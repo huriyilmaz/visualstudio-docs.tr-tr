@@ -1,5 +1,5 @@
 ---
-title: Kaynak denetimi eklentisi bulmak için anahtar olarak kullanılan dizeler | Microsoft Docs
+title: Kaynak denetimi eklentisini bulmak için anahtar olarak kullanılan dizeler | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,19 +10,19 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31c2b30fb41976cdbbab13fa22d438c63bddbbef
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 07962ff9e0f9371b1fc308a35600a6819602b4f5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331714"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72719448"
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>Kaynak Denetimi Eklentisi Bulmak için Anahtar Olarak Kullanılan Dizeler
-Eklenti kaynak denetimi hakkında bilgi bulmak için kayıt defteri erişim tuşları dizelerdir.
+Aşağıdaki dizeler, kaynak denetimi eklentisi hakkındaki bilgileri bulmak için kayıt defterine erişim anahtarlardır.
 
- `STR_SCC_PROVIDER_REG_LOCATION`, `STR_PROVIDERREGKEY`, `STR_SCCPROVIDERPATH`, ve `STR_SCCPROVIDERNAME` kayıt defteri anahtarlarını ya da bir DLL için Visual Studio kaynak denetimi eklentisi kaydetmek için kullanılan değerler.
+ `STR_SCC_PROVIDER_REG_LOCATION`, `STR_PROVIDERREGKEY`, `STR_SCCPROVIDERPATH` ve `STR_SCCPROVIDERNAME` kayıt defteri anahtarları veya bir DLL 'yi Visual Studio için kaynak denetimi eklentisi olarak kaydetmek için kullanılan değerlerdir.
 
- `SCC_PROJECTNAME_KEY`, `SCC_PROJECTAUX_KEY`, `SCC_KEY, SCC_FILE_SIGNATURE`, ve `SCC_STATUS_FILE` MSSCCPRJ biçimini tanımlamak için kullanılır. SCC dosyası.
+ `SCC_PROJECTNAME_KEY`, `SCC_PROJECTAUX_KEY`, `SCC_KEY, SCC_FILE_SIGNATURE` ve `SCC_STATUS_FILE`, MSSCCPRJ biçimini tanımlamakta kullanılır. SCC dosyası.
 
 ## <a name="string-keys-and-values"></a>Dize anahtarları ve değerleri
 
@@ -36,17 +36,17 @@ Eklenti kaynak denetimi hakkında bilgi bulmak için kayıt defteri erişim tuş
 |`STR_SCC_INI_KEY`|SourceCodeControlProvider|
 |`SCC_PROJECTNAME_KEY`|SCC_Project_Name|
 |`SCC_PROJECTAUX_KEY`|SCC_Aux_Path|
-|`SCC_STATUS_FILE`|MSSCCPRJ.SCC|
+|`SCC_STATUS_FILE`|Mssccprj. SCC|
 |`SCC_KEY`|SCC|
-|`SCC_FILE_SIGNATURE`|Bir kaynak kodu denetim dosyası|
-|`SCC_NSE`|Namespace uzantısı|
-|`SCC_NSE_PREFIX`|İletişim kuralı ön eki|
+|`SCC_FILE_SIGNATURE`|Kaynak kodu denetim dosyası|
+|`SCC_NSE`|Ad alanı uzantısı|
+|`SCC_NSE_PREFIX`|Protocal öneki|
 |`SCC_NSE_DisableOpenSCC`|DisableOpenFromSourceControl|
 |`STR_SCCHELPCOLLECTION`|HelpCollection|
 |`STR_UI_LANGUAGE`|UILanguage|
 |`STR_SRCSAFE_ROOT_KEY`|Software\Microsoft\SourceSafe|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentileri](../extensibility/source-control-plug-ins.md)
-- [Nasıl yapılır: Kaynak Denetimi Eklentisi Yükleme](../extensibility/internals/how-to-install-a-source-control-plug-in.md)
+- [Nasıl Yapılır: Kaynak Denetimi Eklentisi Yükleme](../extensibility/internals/how-to-install-a-source-control-plug-in.md)
 - [MSSCCPRJ.SCC Dosyası](../extensibility/mssccprj-scc-file.md)

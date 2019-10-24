@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51173fcf2e8f6785b61bfd348178a59b5fb933dc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 27d8672ea94cf2a1547904f313ac36509f111462
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654011"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748455"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Dosya Depolama ve XML Serileştirmeyi Özelleştirme
 
@@ -306,7 +306,7 @@ Rol veri düğümleri kaynak sınıfı düğümleri altında bulunur.
 |Rol öğesi adı|Kaynak rolünden türetilmiş XML öğesinin adını belirtir. Varsayılan değer rol özelliği adıdır.|
 |Tam form kullan|True ise, her hedef öğe veya bilinen ad ilişkiyi temsil eden bir XML düğümü içine alınmıştır. İlişkinin kendi etki alanı özellikleri varsa, bu true olarak ayarlanmalıdır.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Program Kodunda Modeli Gezinme ve Güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)

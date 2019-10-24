@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Betiğe ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: betiğe Iliştirme | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,55 +18,55 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 993d1b3b6b4db6b435064a873142f563a950f4db
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 9e4668cc991c4b46fb69d7ec6973ab4d8630e14b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387852"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733953"
 ---
-# <a name="how-to-attach-to-script"></a>Nasıl yapılır: Betiğe ekleme
-Bu konuda, bir komut dosyası hata ayıklama için Visual Studio hata ayıklayıcısını el ile ekleme açıklanmaktadır.
+# <a name="how-to-attach-to-script"></a>Nasıl Yapılır: Betiğe Ekleme
+Bu konu, Visual Studio hata ayıklayıcısının hata ayıklama için bir komut dosyasına nasıl el ile iliştiriceğinizi açıklar.
 
 ### <a name="to-attach-to-a-running-process"></a>Çalışan bir işleme iliştirmek için
 
-1. Üzerinde **hata ayıklama** menüsünde seçin **iliştirme**. (Hiçbir proje açıksa seçin **iliştirme** üzerinde **Araçları** menü.)
+1. **Hata Ayıkla** menüsünde, **İşleme İliştir**' i seçin. (Proje açık değilse, **Araçlar** menüsünde **İşleme İliştir** ' i seçin.)
 
-2. İçinde **iliştirme** iletişim kutusu, göz **kullanılabilir işlemler** listesi ve bulma komut dosyası işleme iliştirmek istediğiniz. Betik işlemleri bakarak belirleyebilirsiniz **türü** sütun.
+2. **Işleme İliştir** iletişim kutusunda, **kullanılabilir işlemler** listesine bakın ve eklemek istediğiniz komut dosyası işlemini bulun. Komut dosyası süreçlerini **tür** sütununa bakarak tanımlayabilirsiniz.
 
-   1. Hata ayıklama yapmak istediğiniz işlemi başka bir bilgisayarda çalışıyorsa, uzak bilgisayarın seçmeniz gerekir.
+   1. Hata ayıklamak istediğiniz işlem başka bir bilgisayarda çalışıyorsa, önce uzak bilgisayarı seçmeniz gerekir.
 
-   2. İşlemi farklı bir kullanıcı hesabı altında çalışıyorsa, seçin **tüm kullanıcıların işlemlerini göster** onay kutusu.
+   2. İşlem farklı bir kullanıcı hesabı altında çalışıyorsa, **tüm kullanıcılardan Işlemleri göster** onay kutusunu seçin.
 
-   3. Aracılığıyla bağlanırsanız **Uzak Masaüstü Bağlantısı**seçin **tüm oturumlardaki işlemleri göster** onay kutusu.
+   3. **Uzak Masaüstü bağlantısı**aracılığıyla bağlandıysanız, **tüm oturumlarda işlem göster** onay kutusunu seçin.
 
-3. Eklemek istediğiniz işlemi tıklayın.
+3. Eklemek istediğiniz işleme tıklayın.
 
-4. İçinde **ekleme** kutusunda, görmelisiniz **betik kodu** veya **otomatik: Betik kodu**. Başka bir şey görürseniz, aşağıdaki adımları izleyin:
+4. **İliştirme** kutusunda, **betik kodu** veya **Otomatik: betik kodu**görmeniz gerekir. Başka bir şey görürseniz, aşağıdaki adımları izleyin:
 
-   1. Tıklayın **seçin**.
+   1. **Seç**' e tıklayın.
 
-   2. İçinde **kod türünü seç** iletişim kutusu, tıklayın **bu tür kodlarda hata ayıklama** seçip **betik**.
+   2. **Kod türünü seç** iletişim kutusunda, **Bu kod türlerinde hata ayıkla** ' ya tıklayın ve **komut dosyası**' nı seçin.
 
-   3. **Tamam**'ı tıklatın.
+   3. **Tamam**'a tıklayın.
 
-5. Tıklayın **ekleme**.
+5. **Ekle**' ye tıklayın.
 
-    Bu noktada, komut dosyası hata ayıklaması Internet Explorer'da devre dışı bırakıldığını belirten bir uyarı görebilirsiniz. Bu meydana gelirse, bkz. [uyarısı: Betik hata ayıklaması devre dışı](../debugger/warning-script-debugging-disabled.md).
+    Bu noktada, Internet Explorer 'da betik hata ayıklamanın devre dışı bırakıldığını bildiren bir uyarı görebilirsiniz. Böyle bir durumla karşılaşırsanız bkz. [Uyarı: betik hata ayıklaması devre dışı](../debugger/warning-script-debugging-disabled.md).
 
-   **Kullanılabilir işlemler** listesi açıldığında otomatik olarak görüntüleniyor **işlemleri** iletişim kutusu. İşlemler başlatabilir ve iletişim kutusu açıkken arka planda durdurabilirsiniz. Bu nedenle, içeriği her zaman güncel olmayabilir. Listenin tuşlarına basarak işlemlerin geçerli listesini görmek için herhangi bir zamanda yenileyebilirsiniz **Yenile** düğmesi.
+   **İşler** iletişim kutusunu açtığınızda **kullanılabilir süreçler** listesi otomatik olarak görüntülenir. İletişim kutusu açıkken, işlem arka planda başlayabilir ve durabilir. Bu nedenle, içerikler her zaman güncel olmayabilir. **Yenile** düğmesine basarak, geçerli işlem listesini görmek için istediğiniz zaman listeyi yenileyebilirsiniz.
 
-   Birden çok programları için hata ayıklama, ancak herhangi bir anda yalnızca bir programı hata ayıklayıcıda etkin eklenebilir. Hata ayıklama konumu araç çubuğunda etkin programı ayarlayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Geçerli süreci Ayarla](/previous-versions/visualstudio/visual-studio-2010/d5d4sxdw(v=vs.100)).
+   Hata ayıklarken birden çok programa iliştirilebilir, ancak herhangi bir zamanda hata ayıklayıcıda yalnızca bir program etkin hale getirebilirsiniz. Hata ayıklama konumu araç çubuğunda etkin programı ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: geçerli Işlemi ayarlama](/previous-versions/visualstudio/visual-studio-2010/d5d4sxdw(v=vs.100)).
 
-   Tüm **hata ayıklama** yürütme komutlarını etkin programı etkiler. Herhangi bir hata ayıklaması yapılan programa işlemleri iletişim kutusundan bozabilir. Bkz: [kesme noktalarını kullanma](../debugger/using-breakpoints.md).
+   Tüm **hata ayıklama** menüsü yürütme komutları etkin programı etkiler. Herhangi bir hata ayıklama programını süreçler iletişim kutusundan kesebilirsiniz. Bkz. [kesme noktaları kullanma](../debugger/using-breakpoints.md).
 
 > [!NOTE]
-> Güvenilmeyen bir kullanıcı tarafından sahip olunan bir işlem eklemeye çalışırsanız, bir güvenlik uyarısı iletişim kutusu onayı görünecektir. Daha fazla bilgi için [güvenlik uyarısı: Güvenilmeyen bir kullanıcının sahip olduğu işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler kuşkulu görünüyorsa ya da emin değilseniz, bu işleme eklemeyin](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md).
+> Güvenilmeyen bir kullanıcı hesabına ait olan bir işleme iliştirmeye çalışırsanız, bir güvenlik uyarısı iletişim kutusu onayı görüntülenir. Daha fazla bilgi için bkz [. güvenlik uyarısı: güvenilmeyen bir kullanıcının sahip olduğu bir Işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)eklemeyin.
 
- Bazı durumlarda, bir Terminal Hizmetleri (Uzak Masaüstü) oturumunda hata ayıklaması yapıyorsanız kullanılabilir işlemler listesi kullanılabilir tüm işlemleri görüntülemez. Üzerinde [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] veya sonraki sürümleri, Visual Studio sınırlı bir kullanıcı olarak çalıştırıyorsanız kullanılabilir işlemler listesi gösterilmez Hizmetleri için kullanılan oturum 0'da çalışan işlemler ve w3wp.exe dahil olmak üzere diğer sunucu işlemleri. Visual Studio'yu bir yönetici hesabı altında çalışan veya Visual Studio, bir Terminal Hizmetleri oturumu yerine sunucu konsolunun çalıştırarak sorunu çözebilirsiniz. Bu geçici çözümlerden biri Mümkünse, üçüncü seçenek olmasına vsjitdebugger.exe yazarak işlemine eklemek için Windows komut satırınalodctr ProcessId -p. Tlist.exe kullanarak işlem kimliğini belirleyebilirsiniz. Tlist.exe'yi edinmek için indirme ve hata ayıklama araçları için Windows, kullanılabilir yükleme [Windows Donanım Geliştirme Merkezi](/windows-hardware/drivers/dashboard/).
+ Bazı durumlarda, bir Terminal Hizmetleri (Uzak Masaüstü) oturumunda hata ayıklarken, kullanılabilir süreçler listesinde tüm kullanılabilir süreçler görüntülenmez. @No__t_0 veya sonraki sürümlerde, Visual Studio 'Yu sınırlı bir kullanıcı olarak çalıştırıyorsanız, kullanılabilir süreçler listesi, W3wp. exe dahil olmak üzere Hizmetler ve diğer sunucu işlemlerinde kullanılan oturum 0 ' da çalışan işlemlerin gösterilmeyecektir. Visual Studio 'Yu bir yönetici hesabı altında veya bir Terminal Hizmetleri oturumu yerine sunucu konsolundan çalıştırarak sorunu çözebilirsiniz. Bu geçici çözümlerin hiçbiri mümkün değilse, Windows komut satırında vsjıtdebugger. exe-p Işlem kimliği yazarak işleme eklemek üçüncü bir seçenektir. İşlem kimliğini Tlist. exe ' yi kullanarak belirleyebilirsiniz. Tlist. exe ' yi edinmek için Windows [donanım Geliştirici Merkezi](/windows-hardware/drivers/dashboard/)' nde bulunan Windows Için hata ayıklama araçları 'nı indirip yükleyin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [İstemci Tarafı Betikte Hata Ayıklama](../debugger/client-side-script-debugging.md)
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
-- [Güvenlik Uyarısı: Güvenilmeyen bir kullanıcının sahip olduğu işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler kuşkulu görünüyorsa ya da emin değilseniz, bu işleme eklemeyin.](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)
+- [Güvenlik Uyarısı: güvenilmeyen bir kullanıcının sahip olduğu bir işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme eklemeyin](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)

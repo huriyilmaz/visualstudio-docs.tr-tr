@@ -1,5 +1,5 @@
 ---
-title: Verileri karşıya yüklemeye, depolamaya Gözat
+title: Verileri karşıya yüklemek için depolamaya gözatamıyorum
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -7,29 +7,29 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 8990252f78a9e89b9bdaa825d5443e4d38d2ae89
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7d0f2522117f4c5a5b85e99e2779d10cffcb7f22
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62548238"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777406"
 ---
-# <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>Karşıya veri yükleme veya modelleri ve günlükleri indirmek için depolamaya Gözat
+# <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>Verileri karşıya yüklemek veya modelleri ve günlükleri indirmek için depolamaya gözatamıyorum
 
-Uzak makinede veya karşıya yükleme verileri veya yükleme modelleri ve günlükleri etkinleştirmek için Azure dosya paylaşımı tüm depolama göz atabilirsiniz. Ya da günlükleri ve belirli bir işin iş çıktıları erişmek istiyorsanız, bunu da iş tarayıcıda yapabilirsiniz.
+Verileri karşıya yüklemeyi veya modelleri ve günlükleri indirmeyi sağlamak için uzak makinedeki veya Azure dosya paylaşımındaki tüm depolamaya gözatabilmeniz gerekir. Ya da, belirli bir iş için günlüklere ve iş çıktılarına erişmek istiyorsanız, bu işlemi iş tarayıcısına de yapabilirsiniz.
 
-## <a name="to-access-all-data-on-the-remote-machine-or-file-share"></a>Uzaktan kumandanın tüm verilere erişmek için makine veya dosya paylaşımından
+## <a name="to-access-all-data-on-the-remote-machine-or-file-share"></a>Uzak makinedeki veya dosya paylaşımındaki tüm verilere erişmek için
 
-1. Açık **Sunucu Gezgini**.
-2. Uzak makine ya da işlem bağlamını Batch AI'ı genişletin.
-3. Sağ **depolama**;'a tıklayarak **Gözat**.
+1. **Sunucu Gezgini**açın.
+2. Uzak makineyi veya Batch AI işlem bağlamını genişletin.
+3. **Depolama alanı**' na sağ tıklayın; ardından, **Araştır**' a tıklayın.
 
     ![depolama](media/manage-storage/browse-storage.png)
 
-## <a name="to-access-job-specific-data-on-the-remote-machine-or-file-share"></a>Uzak iş özel verilere erişmek için makine veya dosya paylaşımından
+## <a name="to-access-job-specific-data-on-the-remote-machine-or-file-share"></a>Uzak makinedeki veya dosya paylaşımındaki işe özgü verilere erişmek için
 
-1. Açık [iş geçmişi](job-details.md)
+1. [Iş geçmişini](job-details.md) açın
 2. İşi seçin.
-3. Tıklayın **çalışma klasörü** veya **StdOut / Stderr** hızlı erişim için bu önemli bir günlük dosyaları.
+3. Bu önemli günlük dosyalarına hızlı erişim için **çalışma klasörü** ' ne veya **stdout/stderr** ' e tıklayın.
 
     ![depolama](media/manage-storage/job-workingfolder.png)

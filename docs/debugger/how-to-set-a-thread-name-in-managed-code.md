@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yönetilen kodda iş parçacığı adı ayarlama | Microsoft Docs'
+title: 'Nasıl yapılır: yönetilen kodda Iş parçacığı adı ayarlama | Microsoft Docs'
 ms.date: 04/27/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d0954ffadd1bb1b09d7294be673f961ca2f18058
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cf05c0eea2ec05f04c1c792145218f570c4bce96
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906462"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732775"
 ---
-# <a name="how-to-set-a-thread-name-in-managed-code"></a>Nasıl yapılır: Yönetilen kodda iş parçacığı adı ayarlama
-İş parçacığı adlandırma herhangi bir sürümünü Visual Studio mümkündür. İş parçacığı adlandırma, iş parçacığı izlemek için kullanışlıdır **iş parçacıkları** penceresi.
+# <a name="how-to-set-a-thread-name-in-managed-code"></a>Nasıl Yapılır: Yönetilen Kodda İş Parçacığı Adı Ayarlama
+Visual Studio 'nun herhangi bir sürümünde iş parçacığı adlandırması mümkündür. İş parçacığı adlandırması **, iş parçacıkları penceresinde iş** parçacıklarını izlemek için yararlıdır.
 
- Yönetilen kodda iş parçacığı adı ayarlamak için kullanın <xref:System.Threading.Thread.Name%2A> özelliği.
+ Yönetilen kodda bir iş parçacığı adı ayarlamak için <xref:System.Threading.Thread.Name%2A> özelliğini kullanın.
 
 ## <a name="example"></a>Örnek
 
@@ -75,6 +75,6 @@ Sub Main()
 End Sub
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [DDebug çok iş parçacıklı uygulamalar](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [Nasıl yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama](../debugger/how-to-set-a-thread-name-in-native-code.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Nasıl Yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama](../debugger/how-to-set-a-thread-name-in-native-code.md)

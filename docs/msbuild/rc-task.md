@@ -14,41 +14,41 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- RC task (MSBuild (Visual C++))
-- MSBuild (Visual C++), RC task
+- RC task (MSBuild (C++))
+- MSBuild (C++), RC task
 ms.assetid: 2fd26c75-a056-4dda-9f7e-2f90d3748d88
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a69649a7babacb0fe08b483380214f17f2e582f8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d217ba46f7b50851c8fe19f420195dcf9ee698a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974663"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748046"
 ---
 # <a name="rc-task"></a>RC görevi
-Microsoft Windows Kaynak Derleyicisi aracı sarmalar *rc.exe*. **RC** görev derler imleçler, simgeler, bit eşlemler, iletişim kutuları ve yazı tipleri gibi kaynakları bir kaynağa (*.res*) dosyası. Daha fazla bilgi için [kaynak derleyici](https://docs.microsoft.com/windows/desktop/menurc/resource-compiler).
+Microsoft Windows Kaynak derleyicisi aracı *rc. exe*' yi sarmalanmış. **RC** görevi, imleçler, simgeler, bit eşlemler, iletişim kutuları ve yazı tipleri gibi kaynakları bir kaynak ( *. res*) dosyasına derler. Daha fazla bilgi için bkz. [kaynak derleyicisi](https://docs.microsoft.com/windows/desktop/menurc/resource-compiler).
 
 ## <a name="parameters"></a>Parametreler
- RC görevi parametreleri aşağıdaki tabloda açıklanmaktadır. Çoğu görev parametreleri ve parametrelerin birkaç kümeleri bir komut satırı seçeneğine karşılık gelir.
+ Aşağıdaki tabloda RC görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**AdditionalIncludeDirectories**|İsteğe bağlı **String []** parametresi.<br /><br /> Bir dizin dahil etme dosyaları için Aranan dizinleri listesine ekler.<br /><br /> Daha fazla bilgi için **/I** seçeneğini [RC kullanma (RC komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730).|
-|**AdditionalOptions**|İsteğe bağlı **dize** parametresi.<br /><br /> Komut satırı seçeneklerinin listesi; Örneğin, /\<Seçenek1 > /\<Seçenek2 > /\<seçeneği #>. Diğer tarafından temsil edilmez komut satırı seçeneklerini belirtmek için bu parametreyi kullanın **RC** görev parametresi.<br /><br /> Daha fazla bilgi için bkz. seçenekleri [RC kullanma (RC komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730).|
-|**Kültür**|İsteğe bağlı **dize** parametresi.<br /><br /> Kaynaklarda kullanılan kültürü temsil eden bir yerel ayar Kimliğini belirtir.<br /><br /> Daha fazla bilgi için **/l** seçeneğini [RC kullanma (RC komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730).|
-|**IgnoreStandardIncludePath**|İsteğe bağlı **Boole** parametresi.<br /><br /> Varsa `true`, kaynak derleyicisi, üst bilgi veya kaynak dosyalar için aradığında, INCLUDE ortam değişkeni iade etmesini engeller.<br /><br /> Daha fazla bilgi için **/x** seçeneğini [RC kullanma (RC komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730).|
-|**NullTerminateStrings**|İsteğe bağlı **Boole** parametresi.<br /><br /> Varsa `true`, tüm dizeler dize tablosu boş sonlandırır.<br /><br /> Daha fazla bilgi için **/n** seçeneğini [RC kullanma (RC komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730).|
-|**PreprocessorDefinitions**|İsteğe bağlı **String []** parametresi.<br /><br /> Kaynak derleyicisi için bir veya daha çok önişlemci sembolleri tanımlayın. Makro sembolleri bir listesini belirtin.<br /><br /> Daha fazla bilgi için **/d** seçeneğini [RC kullanma (RC komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730). Ayrıca bkz: **UndefinePreprocessorDefinitions** bu tablodaki.|
-|**ResourceOutputFileName**|İsteğe bağlı **dize** parametresi.<br /><br /> Kaynak dosyasının adını belirtir. Bir kaynak dosya adı belirtin.<br /><br /> Daha fazla bilgi için **/fo** seçeneğini [RC kullanma (RC komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730).|
-|**ShowProgress**|İsteğe bağlı **Boole** parametresi.<br /><br /> Varsa `true`, derleyici, ilerleme üzerinde rapor iletilerini görüntüler.<br /><br /> Daha fazla bilgi için **/v** seçeneğini [RC kullanma (RC komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730).|
-|**Kaynak**|Gerekli `ITaskItem[]` parametresi.<br /><br /> Tüketilen ve görevler tarafından yayılan MSBuild kaynak dosya öğeleri bir dizisi tanımlanmaktadır.|
-|**SuppressStartupBanner**|İsteğe bağlı **Boole** parametresi.<br /><br /> Varsa `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini engeller.<br /><br /> Daha fazla bilgi için **/?** komut satırı seçeneğini ve ardından bakın **/nologo** seçeneği.|
-|**TrackerLogDirectory**|İsteğe bağlı **dize** parametresi.<br /><br /> İzleme günlüğü dizini belirtir.|
-|**UndefinePreprocessorDefinitions**|Önişlemci simge tanımlarını Kaldır.<br /><br /> Daha fazla bilgi için **/u** seçeneğini [RC kullanma (RC komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730). Ayrıca bkz: **PreprocessorDefinitions** bu tablodaki.|
+|**AdditionalIncludeDirectories**|İsteğe bağlı **dize []** parametresi.<br /><br /> İçerme dosyaları için aranan dizinler listesine bir dizin ekler.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730)içindeki **/i** seçeneğine bakın.|
+|**AdditionalOptions**|İsteğe bağlı **dize** parametresi.<br /><br /> Komut satırı seçeneklerinin listesi; Örneğin,/\<option1 >/\<option2 >/\<option # >. Başka bir **RC** görev parametresi tarafından temsil edilmeyen komut satırı seçeneklerini belirtmek için bu parametreyi kullanın.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730)içindeki seçeneklere bakın.|
+|**Ayarı**|İsteğe bağlı **dize** parametresi.<br /><br /> Kaynaklarda kullanılan kültürü temsil eden bir yerel ayar KIMLIĞI belirtir.<br /><br /> Daha fazla bilgi için RC kullanma bölümündeki **/l** SEÇENEĞINE [(rc komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730)bakın.|
+|**Ignorestandardincludepath**|İsteğe bağlı **Boolean** parametresi.<br /><br /> @No__t_0, Kaynak derleyicinin üstbilgi dosyalarını veya kaynak dosyalarını ararken ıNCLUDE ortam değişkenini denetlemesini önler.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730)içindeki **/x** seçeneğine bakın.|
+|**NullTerminateStrings**|İsteğe bağlı **Boolean** parametresi.<br /><br /> @No__t_0, null-dize tablosundaki tüm dizeleri sonlandırır.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730)içindeki **/n** seçeneğine bakın.|
+|**PreprocessorDefinitions**|İsteğe bağlı **dize []** parametresi.<br /><br /> Kaynak derleyicisi için bir veya daha fazla önişlemci sembolü tanımlayın. Makro sembolleri listesini belirtin.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730)içindeki **/d** seçeneğine bakın. Ayrıca bu tablodaki **UndefinePreprocessorDefinitions** bölümüne bakın.|
+|**ResourceOutputFileName**|İsteğe bağlı **dize** parametresi.<br /><br /> Kaynak dosyasının adını belirtir. Bir kaynak dosyası adı belirtin.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730)içindeki **/fo** seçeneğine bakın.|
+|**ShowProgress**|İsteğe bağlı **Boolean** parametresi.<br /><br /> @No__t_0, derleyicinin ilerlemesini rapor eden iletileri görüntüler.<br /><br /> Daha fazla bilgi için RC kullanma içindeki **/v** SEÇENEĞINE [(rc komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730)bakın.|
+|**Kaynaktaki**|Gerekli `ITaskItem[]` parametresi.<br /><br /> Görevler tarafından tüketilen ve yayılmakta olabilecek bir MSBuild kaynak dosya öğeleri dizisini tanımlar.|
+|**SuppressStartupBanner**|İsteğe bağlı **Boolean** parametresi.<br /><br /> @No__t_0, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.<br /><br /> Daha fazla bilgi için **/?** yazın. komut satırı seçeneği ve sonra **/nologo** seçeneğine bakın.|
+|**TrackerLogDirectory**|İsteğe bağlı **dize** parametresi.<br /><br /> İzleyici günlük dizinini belirtir.|
+|**UndefinePreprocessorDefinitions**|Önişlemci sembolünü tanımlama.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](http://go.microsoft.com/fwlink/?LinkId=155730)içindeki **/u** seçeneğine bakın. Ayrıca bkz. bu tablodaki **PreprocessorDefinitions** .|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

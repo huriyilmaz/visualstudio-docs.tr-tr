@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c08ae19ee6e1238d412e2df2f3a4ebe544bca851
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 683a65ab0c25a5daeb002a4eb3106006655a1b00
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658788"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748820"
 ---
 # <a name="add-new-item-command"></a>Yeni Öğe Ekle Komutu
 Geçerli çözüme. htm,. css,. txt veya FRAMESET gibi yeni bir çözüm öğesi ekler ve onu açar.
@@ -63,7 +63,7 @@ Bu örnek, geçerli çözüme MyHTMLpg adlı yeni bir çözüm öğesi ekler.
 >File.AddNewItem MyHTMLpg /t:"General\HTML Page"
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)

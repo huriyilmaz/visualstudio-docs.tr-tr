@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Web hizmetlerinde hata ayıklama sırasında zaman aşımı | Microsoft Docs'
+title: 'Hata: Web hizmetlerinde hata ayıklanırken zaman aşımı | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 dev_langs:
@@ -15,15 +15,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9979f723a342aaefee80f9410c28aa68047b5e57
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5aba4fef3e1c787651eb961f80b3507090f250a2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850209"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736885"
 ---
-# <a name="error-timeout-while-debugging-web-services"></a>Hata: Web hizmetlerinde hata ayıklama sırasında zaman aşımı
-Çağrıldığı koddan bir XML Web hizmeti adımladığınızda, hata ayıklama devam edemiyor emin olmasına çağrı bazen sonuç zaman aşımı olabilir. Bunun gibi bir hata iletisi görebilirsiniz.
+# <a name="error-timeout-while-debugging-web-services"></a>Hata: Web Hizmetlerinde Hata Ayıklarken Zaman Aşımı
+Çağıran koddan bir XML Web hizmetine adımlıyorsanız, çağrı bazen zaman aşımına uğrar ve bu da hata ayıklamaya devam edemeyebilirsiniz. Bunun gibi bir hata iletisi görebilirsiniz.
 
 ```cmd
 An unhandled exception of type 'System.Net.WebException' occurred in
@@ -32,12 +32,12 @@ Additional information: The operation has timed-out.
 ```
 
 ## <a name="solution"></a>Çözüm
- Bu sorunu önlemek için XML Web hizmeti çağrısı için zaman aşımı değeri sonsuz olarak, bu örnekte gösterilen şekilde ayarlayın:
+ Bu sorundan kaçınmak için, XML Web hizmeti çağrısının zaman aşımı değerini, bu örnekte gösterildiği gibi sonsuz olarak ayarlayın:
 
 ```csharp
 Service1 obj = new Service1();
 obj.TimeOut = -1; // infinite time out.
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

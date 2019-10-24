@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreamdata::Skip | Microsoft Docs
+title: 'IDiaEnumDebugStreamData:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61c33ab75ebac94ec69d772ae23476df28bdb31d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f2f331d7a91e9dbc6dbf0dea2e8a5b91f08de584
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838369"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744835"
 ---
 # <a name="idiaenumdebugstreamdataskip"></a>IDiaEnumDebugStreamData::Skip
-Kayıtları numaralandırılmış bir dizisinde belirtilen sayıda atlar.
+Numaralandırılmış bir dizide belirtilen sayıda kaydı atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>Parametreler
  celt
 
-[in] Numaralandırılan sıralı atlanacak kayıt sayısı.
+'ndaki Numaralandırılmış dizide atlanacak kayıt sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` atlamak için daha fazla kayıt varsa.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, atlanacak daha fazla kayıt yoksa `S_FALSE` döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

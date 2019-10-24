@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Uzak bilgisayardaki Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi farklı kullanıcı olarak çalışıyor'
+title: 'Hata: Uzak bilgisayardaki Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi farklı kullanıcı olarak çalışıyor.'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
@@ -21,27 +21,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 607369b4b10a98e9464a0ede15e2f9dce5fac5a9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b5ff383b279bbdac85ce85de6e65b857cec6a8e7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63399155"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737485"
 ---
-# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user"></a>Hata: Uzak bilgisayardaki Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi farklı kullanıcı olarak çalışıyor
+# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user"></a>Hata: Uzak bilgisayardaki Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi farklı kullanıcı olarak çalışıyor.
 Uzaktan hata ayıklama yapmaya çalışırken, aşağıdaki hata iletisini alabilirsiniz:
 
- Microsoft Visual Studio uzaktan hata ayıklama İzleyicisi uzak bilgisayardaki farklı bir kullanıcı olarak çalışıyor.
+ Uzak bilgisayardaki Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi farklı bir kullanıcı olarak çalışıyor.
 
 ## <a name="cause"></a>Sebep
- Bu ileti, kimlik doğrulaması yok modunda hata ayıklama ve msvsmon başlatan kullanıcının Visual Studio çalıştıran kullanıcının olmadığında oluşur.
+ Bu ileti, kimlik doğrulama modunda hata ayıklarken ve msvsmon Başlatan Kullanıcı Visual Studio çalıştıran kullanıcı olmadığında oluşur.
 
 ## <a name="solution"></a>Çözüm
- Güvenli ve en iyi çözümü uzak bir hata ayıklama İzleyicisi (msvsmon.exe) Visual Studio aynı kullanıcı hesabı altında çalıştırmaktır. Bu işlemi yapamazsınız ile başka bir hesap altında uzaktan hata ayıklama İzleyicisi çalıştırabilirsiniz **tüm kullanıcıların hata ayıklamasına izin** seçeneği uzak hata ayıklama İzleyicisi'nde seçili **seçenekleri** iletişim kutusu.
+ En güvenli ve en iyi çözüm, Visual Studio ile aynı kullanıcı hesabı altında Uzaktan Hata Ayıklama İzleyicisi (Msvsmon. exe) çalıştırmalıdır. Bunu yapmazsanız, Uzaktan Hata Ayıklama İzleyicisi **seçenekleri** iletişim kutusunda **herhangi bir kullanıcının hata ayıklamasına izin ver** seçeneğiyle diğer hesap altında uzaktan hata ayıklama İzleyicisi çalıştırabilirsiniz.
 
 > [!CAUTION]
-> Diğer kullanıcıların bağlanma izni verme yanlışlıkla yanlış uzaktan hata ayıklama oturumu için bağlanma olanağı sağlar. Hata ayıklama **kimlik doğrulaması yok** modu hiçbir zaman güvendedir ve dikkatli kullanılmalıdır.
+> Diğer kullanıcıların bağlanmasına izin verilmesi, yanlışlıkla yanlış uzaktan hata ayıklama oturumuna bağlanma olasılığa izin verir. **Kimlik doğrulama** modunda hata ayıklama hiçbir şekilde güvende değildir ve dikkatli kullanılmalıdır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

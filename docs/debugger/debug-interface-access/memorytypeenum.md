@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19776c8d4ef72149c575d6835e9265e9cdb33727
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e0710ec5cdfcfcb59407d18b43b885603f017fdb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855123"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738629"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
-Bellek erişim türünü belirtir.
+Erişmek için bellek türünü belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +34,20 @@ enum MemoryTypeEnum {
 ```
 
 #### <a name="parameters"></a>Parametreler
-`MemTypeCode` Erişim yalnızca bellek kod.
+`MemTypeCode` yalnızca kod belleğine erişir.
 
-`MemTypeData` Veri veya yığın bellek erişir.
+`MemTypeData` veriye veya yığın belleğine erişir.
 
-`MemTypeStack` Erişim yalnızca bellek yığını.
+`MemTypeStack` yalnızca yığın belleğine erişir.
 
-`MemTypeAny` Herhangi bir türden bellek erişir.
+`MemTypeAny` her türlü belleğe erişir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu sabit listesi değerleri geçirilen [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) farklı türde bellek erişimini sınırlamak için yöntemi.
+Bu Numaralandırmadaki değerler, farklı bellek türlerine erişimi sınırlandırmak için [IDiaStackWalkHelper:: readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) yöntemine geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: cvconst.h
+Üst bilgi: cvconst. h
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md)

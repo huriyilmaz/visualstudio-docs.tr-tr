@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7892abc258f323629cbc6b2fb8535b1a40aded13
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 25342f86c545752a263d295550222e14c2aa7866
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667032"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748768"
 ---
 # <a name="find-in-files-command"></a>Dosyalarda Bul Komutu
 **Bul ve Değiştir** penceresinin **dosyalarda bul** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak dosyaları arayın.
@@ -84,7 +84,7 @@ Bu örnek, "My Visual Studio Projects" klasöründe bulunan tüm. CLS dosyaları
 >Edit.FindinFiles btnCancel /lookin:"c:/My Visual Studio Projects" /ext:*.cls /text2
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dosyalarda Bul](../../ide/find-in-files.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)

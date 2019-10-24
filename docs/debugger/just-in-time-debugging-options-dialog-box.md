@@ -1,5 +1,5 @@
 ---
-title: Yalnızca hata ayıklama, zamanında, iletişim kutusu seçenekleri | Microsoft Docs
+title: Tam zamanında, hata ayıklama, Seçenekler Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,41 +20,41 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23a285cf0ce017130a5fe76171c50082362e4856
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c27ec66c8165995c6877b9a9e65802813140c7f2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905951"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731603"
 ---
 # <a name="just-in-time-debugging-options-dialog-box"></a>Tam Zamanında, Hata Ayıklama, Seçenekler İletişim Kutusu
-Erişim için **Just-ın-Time** sayfasında, Git **Araçları** menüsüne ve ardından **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **hata ayıklama** düğümünü seçip alt **Just-ın-Time**. Bu sayfa, Just-ın-yönetilen kod, yerel kod ve betik hata ayıklama Time etkinleştirmenize izin verir. Daha fazla bilgi için [tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md).
+**Tam zamanında** sayfasına erişmek için **Araçlar** menüsüne gidin ve **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **hata ayıklama** düğümünü genişletin ve **tam zamanında**' ı seçin. Bu sayfa, yönetilen kod, yerel kod ve komut dosyası için tam zamanında hata ayıklamayı etkinleştirmenizi sağlar. Daha fazla bilgi için bkz. [tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md).
 
- Tam zamanında hata ayıklama Bu program türleri için etkinleştirebilirsiniz:
+ Bu program türleri için tam zamanında hata ayıklamayı etkinleştirebilirsiniz:
 
-- Yönetilen
+- lebilmesi
 
 - Yerel
 
 - Komut Dosyası
 
-  Just-In-Time hata ayıklama dışında başlatılan bir program hata ayıklama için bir yöntem olan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Oluşturulan bir programı çalıştırdığınız [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dışında [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ortam. Tam zamanında hata ayıklama etkinleştirilirse, bir kilitlenme hatalarını ayıklama isteyip istemediğinizi soran bir iletişim kutusu görüntülenir.
+  Tam zamanında hata ayıklama, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dışında başlatılan bir programda hata ayıklamaya yönelik bir tekniktir. @No__t_1 ortamının dışında [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturulan bir programı çalıştırabilirsiniz. Tam zamanında hata ayıklamayı etkinleştirdiyseniz, kilitlenme hata ayıklamak isteyip istemediğinizi soran bir iletişim kutusu görüntüler.
 
-## <a name="associated-warnings"></a>İlişkili uyarıları
- Bu sayfa, ziyaret ettiğinizde **seçenekleri** iletişim kutusu, şöyle bir uyarı iletisi görebilirsiniz:
+## <a name="associated-warnings"></a>İlişkili uyarılar
+ **Seçenekler** iletişim kutusunun bu sayfasını ziyaret ettiğinizde şöyle bir uyarı iletisi görebilirsiniz:
 
- **Başka bir hata ayıklayıcı kendisini Just-ın-Time kaydettiği hata ayıklayıcı. Onarmak için Just-ın-hata ayıklama veya Visual Studio onarmayı çalıştırın Time etkinleştirin.**
+ **Başka bir hata ayıklayıcı kendisini tam zamanında hata ayıklayıcı olarak kaydettirdi. Onarmak için, tam zamanında hata ayıklamayı etkinleştirin veya Visual Studio onarımı 'nı çalıştırın.**
 
- Başka bir hata ayıklayıcı, büyük olasılıkla eski bir sürümü varsa, bu ileti oluşur [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Just-ın-Time ayarlanmış bir hata ayıklayıcı, hata ayıklayıcı.
+ Bu ileti, büyük olasılıkla [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı daha eski bir sürümü olan, tam zamanında hata ayıklayıcı olarak ayarlanan başka bir hata ayıklayıcıya sahipseniz oluşur.
 
- Görebileceğiniz başka bir ileti aşağıdaki gibidir:
+ Görebileceğiniz başka bir ileti şu şekildedir:
 
- **Just-In-Time hata ayıklama kaydı hataları algılandı. Onarmak için Just-ın-hata ayıklama veya Visual Studio onarmayı çalıştırın Time etkinleştirin.**
+ **Tam zamanında hata ayıklama kayıt hataları algılandı. Onarmak için, tam zamanında hata ayıklamayı etkinleştirin veya Visual Studio onarımı 'nı çalıştırın.**
 
- Bu uyarı, biri tam zamanında hata ayıklama görürseniz [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] sorunu düzelttik kadar yönetici ayrıcalıkları gerektirir. Hemen etkinleştirmeye çalışırsanız-yönetici olmayan bu koşullar altında aşağıdaki hata iletisini görürsünüz:
+ Bu uyarılardan birini görürseniz, [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] ile tam zamanında hata ayıklama, sorunu düzeltene kadar yönetici ayrıcalıklarına sahip olmasını gerektirir. Bu koşullarda yönetici olmayan tek olarak etkinleştirmeyi denerseniz, aşağıdaki hata iletisini görürsünüz:
 
- **Erişim reddedildi. Sahip bir yönetici Just-ın-Time hata ayıklamasını etkinleştirmek veya Visual Studio yüklemenizi onarın.**
+ **Erişim reddedildi. Bir yöneticiye tam zamanında hata ayıklamayı etkinleştirme veya Visual Studio yüklemenizi onarma.**
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/debugging-options-dialog-box.md)
-- [Nasıl yapılır: Hata Ayıklayıcısı Ayarlarını Belirtme](../debugger/how-to-specify-debugger-settings.md)
+- [Nasıl Yapılır: Hata Ayıklayıcısı Ayarlarını Belirtme](../debugger/how-to-specify-debugger-settings.md)

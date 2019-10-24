@@ -1,7 +1,7 @@
 ---
-title: Yerel olarak tensorflow modeli eğitme
-description: Tensorflow modeli yapay ZEKA araçları Visual Studio için yerel olarak çalıştırın.
-keywords: yapay zeka, visual studio, tensorflow, yerel
+title: TensorFlow modelini yerel olarak eğitme
+description: Visual Studio için AI araçları 'nda yerel olarak bir TensorFlow modeli çalıştırma
+keywords: AI, Visual Studio, TensorFlow, yerel
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -10,22 +10,22 @@ ms.topic: quickstart
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: 26668247bf993da3eb3f2803abaf9288e566ffee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 43ce126baeb96efcaab3c40bac912274ee1cd8c7
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62555467"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777438"
 ---
-# <a name="train-a-tensorflow-model-locally"></a>Yerel olarak TensorFlow modeli eğitme
+# <a name="train-a-tensorflow-model-locally"></a>TensorFlow modelini yerel olarak eğitme
 
-Bu hızlı başlangıçta biz TensorFlow modeliyle eğitme [MNIST](http://yann.lecun.com/exdb/mnist/) yerel olarak yapay ZEKA için Visual Studio Araçları veri kümesi.
+Bu hızlı [Başlangıçta, Visual Studio Tools for AI](http://yann.lecun.com/exdb/mnist/) içinde yerel olarak bir TensorFlow modeli kullanarak bir mamici veri kümesiyle eğeceğiz.
 
-MNIST veritabanını 60.000 örnekler Eğitim kümesi ve el yazısı basamak 10.000 örnekleri test kümesi vardır.
+MNIST veritabanı, 60.000 örnek bir eğitim kümesine ve el yazısı rakamlarının bir dizi 10.000 örneklerine sahiptir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-Başlamadan önce aşağıdakilerin yüklü olduğundan emin olun:
+Başlamadan önce, aşağıdakilerin yüklü olduğundan emin olun:
 
 ### <a name="google-tensorflow"></a>Google TensorFlow
 
@@ -35,29 +35,29 @@ Bir terminalde aşağıdaki komutu çalıştırın:
 C:\>pip.exe install tensorflow
 ```
 
-### <a name="numpy-and-scipy"></a>NumPy ve SciPy
-Yükleme [NumPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy) ve [SciPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy).
+### <a name="numpy-and-scipy"></a>Sayısal tuş takımı ve SciPy
+[Sayısal tuş, y](https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy) ve [SciPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy)'yi yükler.
 
-### <a name="download-sample-code"></a>Örnek kodu indirin
-Bu indirme [GitHub deposu](https://github.com/Microsoft/samples-for-ai) TensorFlow, CNTK, Theano ve daha fazlası arasında derin öğrenme ile çalışmaya başlama örnekler içeren.
+### <a name="download-sample-code"></a>Örnek kodu indir
+TensorFlow, CNTK, Theano ve daha fazlası arasında derin öğrenime Başlarken örnekleri içeren bu [GitHub deposunu](https://github.com/Microsoft/samples-for-ai) indirin.
 
-## <a name="open-solution-and-train-model"></a>Modeli eğitmek ve çözümü açın
+## <a name="open-solution-and-train-model"></a>Çözüm açın ve modeli eğitme
 
-- Visual Studio'yu başlatın ve seçin **Dosya > Aç > Proje/çözüm**.
+- Visual Studio 'Yu başlatın ve **> projesi/çözümü açmak > dosya**' yı seçin.
 
-- Seçin **Tensorflow örnekler** klasörü açık ve indirilen örnek deposundan **TensorflowExamples.sln** dosya.
+- İndirilen örnek deposundan **TensorFlow örnekleri** klasörünü seçin ve **tensorflowexamples. sln** dosyasını açın.
 
-   ![Projeyi açma](media/tensorflow-local/open-project.png)
+   ![Projeyi aç](media/tensorflow-local/open-project.png)
 
-   ![Çözüm Aç](media/tensorflow-local/open-solution.png)
+   ![Çözümü aç](media/tensorflow-local/open-solution.png)
 
-- MNIST projede bulma **Çözüm Gezgini**seçin ve sağ tıklatıp **başlangıç projesi olarak ayarla**.
+- **Çözüm Gezgini**içindeki mnist projesini bulun, sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
 - **Başlat**'a tıklayın.
 
-- Çıkış konsolda yazdırılır.
+- Çıktı konsolunda yazdırılır.
 
-   ![Örnek konsol çıktısı](media/tensorflow-local/console-output.png)
+   ![Konsoldan örnek çıkış](media/tensorflow-local/console-output.png)
 
 > [!div class="nextstepaction"]
 > [Bulutta bir TensorFlow modeli eğitme](tensorflow-vm.md)

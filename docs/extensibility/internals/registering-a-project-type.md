@@ -1,5 +1,5 @@
 ---
-title: Proje türü kaydetme | Microsoft Docs
+title: Proje türünü kaydetme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b950ea6dde73ecb7f20ef45e945106e8711aefb0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c71756259574827924babc16d6933e642b8299ef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353357"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724730"
 ---
 # <a name="registering-a-project-type"></a>Proje Türü Kaydetme
-Yeni bir proje türü oluşturduğunuzda, sağlayan kayıt defteri girdileri oluşturmanız gerekir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tanınması ve proje türünüz ile çalışır. Genellikle bir kayıt defteri (.rgs) komut dosyası kullanarak bu kayıt defteri girdilerini oluşturun.
+Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tanımak ve proje türüyle çalışmak için kayıt defteri girişleri oluşturmanız gerekir. Genellikle bu kayıt defteri girdilerini bir kayıt defteri betiği (. RGS) dosyası kullanarak oluşturursunuz.
 
- Aşağıdaki örnekte, kayıt defterinden deyimleri varsayılan yollarını sağlar ve veri uygunsa girişlerinden for each deyimi kayıt betiği içeren bir tablo ardından. Tabloları, komut dosyası girişleri ve deyimler hakkında ek bilgiler sağlar.
+ Aşağıdaki örnekte, kayıt defterindeki deyimler varsayılan yolları ve verileri sağlar ve ardından her deyimin kayıt defteri betiğinin girdilerini içeren bir tablo gelir. Tablolar, komut dosyası girişlerini ve deyimleriyle ilgili ek bilgileri sağlar.
 
 > [!NOTE]
-> Aşağıdaki kayıt defteri bilgileri, örnek türü ve girişleri, proje türünü kaydetmek için yazacaksınız kayıt defteri betiklerdeki amaçları olması amaçlanmıştır. Gerçek girişlerinizi ve kullanımları proje türünüz belirli gereksinimlerine bağlı olarak değişebilir. Geliştirdiğiniz projenin türünü çok benzeyen bir bulmak kullanılabilir örneklerin gözden geçirin ve sonra bu örnek için kayıt betiği gözden geçirin.
+> Aşağıdaki kayıt defteri bilgileri, proje türünü kaydetmek için yazmakta olduğunuz kayıt defteri betiklerinde bulunan girişlerin türüne ve amaçlarına bir örnek olarak tasarlanmıştır. Gerçek girdlarınız ve kullanımları, proje türünün belirli gereksinimlerine göre değişiklik gösterebilir. Geliştirmekte olduğunuz projenin türüne yakından benzeyen bir tane bulmak için mevcut örnekleri gözden geçirmeniz ve ardından bu örneğe ait kayıt defteri betiğini gözden geçirmeniz gerekir.
 
- HKEY_CLASSES_ROOT verilebilir.
+ Aşağıdaki örnekler HKEY_CLASSES_ROOT.
 
 ## <a name="example"></a>Örnek
 
@@ -47,16 +47,16 @@ Yeni bir proje türü oluşturduğunuzda, sağlayan kayıt defteri girdileri olu
    @="devenv.exe \"%1\""
 ```
 
-|Ad|Tür|Veri|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`FigPrjFile`|Ad ve açıklama projenin uzantısı .figp sahip dosyaları yazın.|
+|`@`|REG_SZ|`FigPrjFile`|. Figp uzantısına sahip proje türü dosyalarının adı ve açıklaması.|
 |`Content Type`|REG_SZ|`Text/plain`|Proje dosyaları için içerik türü.|
 |`NullFile`|REG_SZ|`Null`||
-|`@`|REG_SZ|`%MODULE%,-206`|Bu tür bir proje için kullanılan varsayılan simge. % MODULE % deyimi, DLL proje türünün varsayılan konumu için kayıt defterindeki tamamlanır.|
-|`@`|REG_SZ|`&Open in Visual Studio`|Varsayılan uygulama, bu proje türü açılır.|
-|`@`|REG_SZ|`devenv.exe "%1"`|Bu tür bir proje açıldığında çalıştırılacak varsayılan komutu.|
+|`@`|REG_SZ|`%MODULE%,-206`|Bu türün projesi için varsayılan simge kullanıldı. % MODULE% deyimleri kayıt defterinde proje türü DLL 'sinin varsayılan konumuna tamamlanır.|
+|`@`|REG_SZ|`&Open in Visual Studio`|Bu proje türünün açıldığı varsayılan uygulama.|
+|`@`|REG_SZ|`devenv.exe "%1"`|Bu türden bir proje açıldığında çalıştırılacak varsayılan komut.|
 
- Aşağıdaki örnek HKEY_LOCAL_MACHINE ' ve kayıt defteri anahtarı [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages] altında yer alır.
+ Aşağıdaki örnekler HKEY_LOCAL_MACHINE ' den ve [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages] anahtarı altındaki kayıt defterinde bulunur.
 
 ## <a name="example"></a>Örnek
 
@@ -79,21 +79,21 @@ Yeni bir proje türü oluşturduğunuzda, sağlayan kayıt defteri girdileri olu
    "FigProjectItemsEvents"="Returns the FigProjectItemsEvents Object"
 ```
 
-|Ad|Tür|Veri|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
-|`@` (Varsayılan)|REG_SZ|`FigPrj Project VSPackage`|Bu yerelleştirilebilir adıdır VSPackage'ı (proje türü) kayıtlı.|
-|`InprocServer32`|REG_SZ|`%MODULE%`|Proje türü DLL yolu. IDE bu DLL'yi yükler ve VSPackage CLSID değerine geçirir `DllGetClassObject` almak için <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> oluşturulacağını <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> nesne.|
-|`CompanyName`|REG_SZ|`Microsoft`|Proje türü geliştirilen şirketin adı.|
+|`@` (varsayılan)|REG_SZ|`FigPrj Project VSPackage`|Bu kayıtlı VSPackage 'ın yerelleştirilebilir adı (proje türü).|
+|`InprocServer32`|REG_SZ|`%MODULE%`|Proje türü DLL dosyasının yolu. IDE bu DLL 'yi yükler ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> nesnesini oluşturmak için <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> almak üzere VSPackage CLSID 'sini `DllGetClassObject` geçirir.|
+|`CompanyName`|REG_SZ|`Microsoft`|Proje türünü geliştiren şirketin adı.|
 |`ProductName`|REG_SZ|`Figure Project Sample`|Proje türünün adı.|
-|`ProductVersion`|REG_SZ|`9.0`|Proje türü sürüm numarasını bırakın.|
-|`MinEdition`|REG_SZ|`professional`|Kaydedilmekte VSPackage sürümü.|
-|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|Paket anahtar ' % s'projesi VSPackage'ı yükleyin. Anahtar, ortam başlatıldıktan sonra bir proje yüklendiğinde doğrulanır.|
-|`DllName`|REG_SZ|`%RESOURCE_DLL%`|Uydu proje türü için yerelleştirilmiş kaynaklar içeren DLL dosya adı.|
+|`ProductVersion`|REG_SZ|`9.0`|Proje türü sürümünün sürüm numarası.|
+|`MinEdition`|REG_SZ|`professional`|Kaydedilen VSPackage sürümü.|
+|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|Proje VSPackage için paket yükleme anahtarı. Bu anahtar, bir proje, ortam başladıktan sonra yüklendiğinde onaylanır.|
+|`DllName`|REG_SZ|`%RESOURCE_DLL%`|Proje türü için yerelleştirilmiş kaynakları içeren uydu DLL dosyasının adı.|
 |`Path`|REG_SZ|`%RESOURCE_PATH%`|Uydu DLL yolu.|
-|`FigProjectsEvents`|REG_SZ|Değerin açıklamasına bakın.|Bu Otomasyon olay için döndürülen metin dizesini belirler.|
-|`FigProjectItemsEvents`|REG_SZ|Değerin açıklamasına bakın.|Bu Otomasyon olay için döndürülen metin dizesini belirler.|
+|`FigProjectsEvents`|REG_SZ|Değer için bkz.|Bu Otomasyon olayı için döndürülen metin dizesini belirler.|
+|`FigProjectItemsEvents`|REG_SZ|Değer için bkz.|Bu Otomasyon olayı için döndürülen metin dizesini belirler.|
 
- Aşağıdaki örnekler kayıt defteri anahtarı [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] altında yer alır.
+ Aşağıdaki örneklerin tümü kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] anahtarı altında bulunur.
 
 ## <a name="example"></a>Örnek
 
@@ -130,34 +130,34 @@ Yeni bir proje türü oluşturduğunuzda, sağlayan kayıt defteri girdileri olu
    "SortPriority"=dword:00000064
 ```
 
-|Ad|Tür|Veri|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`FigPrj Project`|Bu tür projeler varsayılan adı.|
-|`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|Uydu DLL alınacak adı kaynak Kimliğini paketleri altında kayıtlı.|
-|`Package`|REG_SZ|`%CLSID_Package%`|VSPackage'ı sınıfı kimliği paketleri altında kayıtlı.|
-|`ProjectTemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Proje şablonu dosyaları varsayılan yolu. Bu, yeni bir proje şablonu tarafından gösterilen dosyalarıdır.|
-|`ItemTemplatesDir`|REG_SZ|`%TEMPLATE_PATH% \FigPrjProjectItems`|Proje öğesi şablon dosyaları varsayılan yolu. Yeni Öğe Ekle şablon tarafından görüntülenen dosyalar şunlardır.|
-|`DisplayProjectFileExtensions`|REG_SZ|`#%IDS_DISPLAY_PROJ_FILE_EXT%`|Uygulamak IDE sağlayan **açık** iletişim kutusu.|
-|`PossibleProjectExtensions`|REG_SZ|`figp`|IDE tarafından açılması projenin bu proje türü (Proje fabrikası) işlenip işlenmediğini belirlemek için kullanılır. Birden fazla giriş biçimini noktalı virgülle ayrılmış listesidir. Örneğin "vdproj; vdp".|
-|`DefaultProjectExtension`|REG_SZ|`.figp`|IDE tarafından Kaydet işlemi için varsayılan dosya adı uzantısı olarak kullanılır.|
-|`Filter Settings`|REG_DWORD|Çeşitli, ifadeler ve tablodan sonraki açıklamaları bakın.|Bu ayarlar, kullanıcı Arabirimi iletişim kutularında dosyaları görüntülemek için çeşitli filtreleri ayarlamak için kullanılır.|
-|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|Öğe Ekle şablonları için kaynak kimliği.|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|Yolu için iletişim kutusunda görüntülenen proje öğelerinin **Yeni Öğe Ekle** şablonu.|
-|`SortPriority`|REG_DWORD|`100 (vcprx64)`|Ağaç düğümünde görüntülenen dosyaların sıralama düzeni belirler **Yeni Öğe Ekle** iletişim kutusu.|
+|`@`|REG_SZ|`FigPrj Project`|Bu türdeki projelerin varsayılan adı.|
+|`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|Paketler altında kayıtlı olan uydu DLL 'sinden alınacak adın kaynak KIMLIĞI.|
+|`Package`|REG_SZ|`%CLSID_Package%`|Paketler altına kaydedilen VSPackage sınıf KIMLIĞI.|
+|`ProjectTemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Proje şablonu dosyalarının varsayılan yolu. Bunlar, yeni proje şablonu tarafından görüntülenen dosyalardır.|
+|`ItemTemplatesDir`|REG_SZ|`%TEMPLATE_PATH% \FigPrjProjectItems`|Proje öğesi şablon dosyalarının varsayılan yolu. Bunlar, yeni öğe Ekle şablonu tarafından görüntülenen dosyalardır.|
+|`DisplayProjectFileExtensions`|REG_SZ|`#%IDS_DISPLAY_PROJ_FILE_EXT%`|IDE 'nin **Aç** iletişim kutusunu uygulamasına olanak sağlar.|
+|`PossibleProjectExtensions`|REG_SZ|`figp`|IDE tarafından, açılmakta olan projenin bu proje türü (proje fabrikası) tarafından işlenip işlenmediğini tespit etmek için kullanılır. Birden fazla girdinin biçimi noktalı virgülle ayrılmış bir liste. Örneğin, "VDPROJ; VDP".|
+|`DefaultProjectExtension`|REG_SZ|`.figp`|Farklı Kaydet işlemi için varsayılan dosya adı uzantısı olarak IDE tarafından kullanılır.|
+|`Filter Settings`|REG_DWORD|Çeşitli, bkz. tablolar ve Yorumlar aşağıdaki tablo.|Bu ayarlar, Kullanıcı arabirimi iletişim kutularında dosya görüntülemek için çeşitli filtreleri ayarlamak üzere kullanılır.|
+|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|Öğe şablonları eklemek için kaynak KIMLIĞI.|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|**Yeni öğe Ekle** şablonu için iletişim kutusunda görünen proje öğelerinin yolu.|
+|`SortPriority`|REG_DWORD|`100 (vcprx64)`|**Yeni öğe Ekle** iletişim kutusunda gösterilecek dosyaların ağaç düğümündeki sıralama düzenini belirler.|
 
- Aşağıdaki tablo, önceki kod kesimi içinde filtre seçenekleri gösterir.
+ Aşağıdaki tabloda, önceki kod segmentinde bulunan filtre seçenekleri gösterilmektedir.
 
 |Filtre seçeneği|Açıklama|
 |-------------------|-----------------|
-|`CommonFindFilesFilter`|Filtre ortak filtrelere biri olduğunu gösterir **dosyalarda Bul** iletişim kutusu. Ortak Filtrelere genel'olarak işaretlenmemiş filtreleri önce Filtre listesinde listelenir.|
-|`CommonOpenFilesFilter`|Filtre ortak filtrelere biri olduğunu gösterir **açık dosya** iletişim kutusu. Ortak Filtrelere genel'olarak işaretlenmemiş filtreleri önce Filtre listesinde listelenir.|
-|`FindInFilesFilter`|Filtre filtrelerden biri olacağını belirtir **dosyalarda Bul** iletişim kutusunu ve sonra ortak filtrelere listelenir.|
-|`NotOpenFileFilter`|Filtre kullanılacak değil olduğunu gösteren **açık dosya** iletişim kutusu.|
-|`NotAddExistingItemFilter`|Filtre Ekle kullanılmayacak gösterir **var olan öğe** iletişim kutusu.|
+|`CommonFindFilesFilter`|Filtrenin **dosyalarda bul** iletişim kutusunda ortak filtrelerden biri olduğunu gösterir. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|
+|`CommonOpenFilesFilter`|Filtrenin **Dosya Aç** iletişim kutusundaki ortak filtrelerden biri olduğunu gösterir. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|
+|`FindInFilesFilter`|Filtrenin **dosyalarda bul** iletişim kutusunda filtrelerden biri olacağını ve ortak filtrelerden sonra listelenmeyeceğini gösterir.|
+|`NotOpenFileFilter`|Filtrenin **Dosya Aç** iletişim kutusunda kullanılmayacağını gösterir.|
+|`NotAddExistingItemFilter`|Filtrenin **Varolan öğe** Ekle iletişim kutusunda kullanılmayacağını gösterir.|
 
- Varsayılan olarak, bir filtre yok ya da daha fazlası bayrakları kümesini filtre kullanılır **varolan öğeyi Ekle** iletişim kutusu ve **açık dosya** ortak filtreler listelenmiştir sonra iletişim kutusu. Filtre kullanılmaz **dosyalarda Bul** iletişim kutusu.
+ Varsayılan olarak, bir filtre bu bayrak kümesinden bir veya daha fazla yoksa, filtre **Varolan öğe Ekle** iletişim kutusunda ve **Dosya Aç** iletişim kutusunda ortak filtreler listelendikten sonra kullanılır. Filtre, **dosyalarda bul** iletişim kutusunda kullanılmaz.
 
- Aşağıdaki örnekler kayıt defteri anahtarı [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] altında yer alır.
+ Aşağıdaki örneklerin tümü kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] anahtarı altında bulunur.
 
 ## <a name="example"></a>Örnek
 
@@ -170,14 +170,14 @@ Yeni bir proje türü oluşturduğunuzda, sağlayan kayıt defteri girdileri olu
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|Ad|Tür|Veri|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|Yeni proje şablonları kaynak kimliği.|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Varsayılan yolu kayıtlı proje türü projeler için.|
-|`SortPriority`|REG_DWORD|`41 (x29)`|Sıralama projelerinin yeni projeler Sihirbazı iletişim kutusunda görüntülenen ayarlar.|
-|`NewProjectDialogOnly`|REG_DWORD|`0`|0, bu tür projeleri yalnızca yeni proje iletişim kutusunda görüntülendiğini gösterir.|
+|`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|Yeni proje şablonları için kaynak KIMLIĞI.|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Kayıtlı proje türünün projeleri için varsayılan yol.|
+|`SortPriority`|REG_DWORD|`41 (x29)`|Yeni projeler Sihirbazı iletişim kutusunda görünen projelerin sıralama sırasını ayarlar.|
+|`NewProjectDialogOnly`|REG_DWORD|`0`|0, bu türdeki projelerin yalnızca yeni proje iletişim kutusunda görüntülendiğini belirtir.|
 
- Aşağıdaki örnekler kayıt defteri anahtarı [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] altında yer alır.
+ Aşağıdaki örneklerin tümü kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] anahtarı altında bulunur.
 
 ## <a name="example"></a>Örnek
 
@@ -191,14 +191,14 @@ Yeni bir proje türü oluşturduğunuzda, sağlayan kayıt defteri girdileri olu
    "SortPriority"=dword:00000064
 ```
 
-|Ad|Tür|Veri|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|Yok.|Çeşitli dosyalar projeleri girişleri aşağıdaki girişleri gösterir varsayılan değeri.|
-|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|Yeni öğe ekleme şablon dosyaları için kaynak kimliği değeri.|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|Varsayılan yol olarak görüntülenen öğelerin **Yeni Öğe Ekle** iletişim kutusu.|
-|`SortPriority`|REG_DWORD|`100 (vcprx64)`|Ağaç düğümünde görüntülemek için sıralama düzeni oluşturur **Yeni Öğe Ekle** iletişim kutusu.|
+|`@`|REG_SZ|Yok.|Diğer dosyalar proje girdileri için aşağıdaki girdilerin olduğunu gösteren varsayılan değer.|
+|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|Yeni öğe Ekle şablon dosyaları için kaynak KIMLIĞI değeri.|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|**Yeni öğe Ekle** iletişim kutusunda görüntülenecek olan öğelerin varsayılan yolu.|
+|`SortPriority`|REG_DWORD|`100 (vcprx64)`|**Yeni öğe Ekle** iletişim kutusunun ağaç düğümünde görüntülenmek üzere sıralama düzeni oluşturur.|
 
- Aşağıdaki örnek, kayıt defteri anahtarı [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus] altında bulunur.
+ Aşağıdaki örnek kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus] anahtarı altında bulunur.
 
 ## <a name="example"></a>Örnek
 
@@ -206,25 +206,25 @@ Yeni bir proje türü oluşturduğunuzda, sağlayan kayıt defteri girdileri olu
 "{ACEF4EB2-57CF-11D2-96F4-000000000000}"=",1000,1"
 ```
 
- IDE menüsü girişi menü bilgilerini almak için kullanılan kaynağına işaret eder. Bu veriler menü veritabanına birleştirilmiştir, aynı anahtarı kayıt defteri MenusMerged bölümünde eklenir. VSPackage'ı MenusMerged bölümünde herhangi bir şey doğrudan değiştirmeniz gerekir. Aşağıdaki tabloda veri alanında üç virgülle ayrılmış-alanları vardır. İlk alanı menüsü kaynak dosyasının tam yol tanımlar:
+ Menü girişi, IDE 'yi menü bilgilerini almak için kullanılan kaynağa yönlendirir. Bu veriler menü veritabanıyla birleştirildiğinde, kayıt defterinin MenusMerged bölümüne aynı anahtar eklenecektir. VSPackage, MenusMerged bölümünün altındaki herhangi bir şeyi doğrudan değiştirmemelidir. Aşağıdaki tabloda yer alan veri alanında, virgülle ayrılmış üç alan vardır. İlk alan, bir menü kaynak dosyasının tam yolunu tanımlar:
 
-- İlk alan atlanırsa, menü kaynağı uydu DLL VSPackage GUID ile tanımlanan'ndan yüklenir.
+- İlk alan atlanırsa, menü kaynağı VSPackage GUID 'i tarafından tanımlanan uydu DLL 'den yüklenir.
 
-  İkinci alan CTMENU türünde bir menü kaynak kimliği tanımlar:
+  İkinci alan, CTMENU türünde bir menü kaynak KIMLIĞI tanımlar:
 
-- Kaynak Kimliği belirtilmiş ve dosya yolu ilk parametre tarafından sağlanan, menü kaynağı tam dosya yolundan yüklenir.
+- Kaynak KIMLIĞI belirtilmişse ve dosya yolu ilk parametre tarafından sağlandıysa, tam dosya yolundan bir menü kaynağı yüklenir.
 
-- Kaynak Kimliği sağlanırsa ancak dosya yolu değil, menü kaynağı uydu DLL yüklenir.
+- Kaynak KIMLIĞI sağlanmışsa ancak dosya yolu yoksa, menü kaynağı uydu DLL 'sinden yüklenir.
 
-- Tam dosya yolunu sağlanır ve kaynak kimliği atlanırsa, yüklenecek dosyanın CTO dosyası olması beklenir.
+- Tam dosya yolu sağlanmışsa ve kaynak KIMLIĞI atlanırsa, yüklenecek dosyanın bir CTO dosyası olması beklenir.
 
-  Son alan CTMENU kaynak için sürüm numarasını belirtir. Sürüm numarası değiştirerek menüsünün yeniden birleştirebilirsiniz.
+  Son alan, CTMENU kaynağı için sürüm numarasını tanımlar. Sürüm numarasını değiştirerek menüyü bir kez daha birleştirebilirsiniz.
 
-|Ad|Tür|Veri|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
 |%CLSID_Package%|REG_SZ|`,1000,1`|Menü bilgilerini almak için kaynak.|
 
- Aşağıdaki örnekler kayıt defteri anahtarı [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates] altında yer alır.
+ Aşağıdaki örneklerin tümü kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates] anahtarı altında bulunur.
 
 ```
 \TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1                (CLSID for Figures Project projects)
@@ -234,14 +234,14 @@ Yeni bir proje türü oluşturduğunuzda, sağlayan kayıt defteri girdileri olu
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|Ad|Tür|Veri|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|Kaynak Kimliği değeri rakamları proje yeni proje şablonları.|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Yeni Proje dizini varsayılan yolu. Bu dizinin öğeleri içinde görüntülenecektir **yeni proje sihirbazını** iletişim kutusu.|
-|`SortPriority`|REG_DWORD|`41 (x29)`|Hangi projelerin görüntülenir ağaç düğümünde sırayla kurar **yeni proje** iletişim kutusu.|
-|`NewProjectDialogOnly`|REG_DWORD|`0`|0, bu tür projeleri yalnızca görüntülendiğini gösterir **yeni proje** iletişim kutusu.|
+|`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|Şekil projesi yeni proje şablonlarının kaynak KIMLIĞI değeri.|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Yeni projeler dizininin varsayılan yolu. Bu dizindeki öğeler, **Yeni proje Sihirbazı** iletişim kutusunda görüntülenir.|
+|`SortPriority`|REG_DWORD|`41 (x29)`|**Projenin yeni proje** iletişim kutusunun ağaç düğümünde gösterileceği sırayı belirler.|
+|`NewProjectDialogOnly`|REG_DWORD|`0`|0, bu türdeki projelerin yalnızca **Yeni proje** iletişim kutusunda görüntülendiğini belirtir.|
 
- Aşağıdaki örnek, kayıt defteri anahtarı [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts] altında bulunur.
+ Aşağıdaki örnek kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts] anahtarı altında bulunur.
 
 ```
 \FiguresProductSample
@@ -249,22 +249,22 @@ Yeni bir proje türü oluşturduğunuzda, sağlayan kayıt defteri girdileri olu
    "UseInterface"=dword:00000001
 ```
 
-|Ad|Tür|Veri|Açıklama|
+|Name|Tür|Veri|Açıklama|
 |----------|----------|----------|-----------------|
-|`Package`|REG_SZ|`%CLSID_Package%`|Kayıtlı VSPackage sınıfı kimliği.|
-|`UseInterface`|REG_DWORD|`1`|1 kullanıcı Arabirimi bu proje ile etkileşim kurmak için kullanılacağını gösterir. 0, herhangi bir kullanıcı Arabirimi arabirim olduğunu gösterir.|
+|`Package`|REG_SZ|`%CLSID_Package%`|Kayıtlı VSPackage sınıf KIMLIĞI.|
+|`UseInterface`|REG_DWORD|`1`|1 Kullanıcı arabiriminin bu proje ile etkileşim kurmak için kullanılacağını gösterir. 0, UI arabirimi olmadığını gösterir.|
 
- Yeni proje türleri sık denetleyen The.vsz dosyaları relatıve_path giriş içerir. Bu yol, aşağıdaki kurulum anahtarı proje türünde \ProductDir girdisini altında belirtilen yolun göreli şöyledir:
+ Yeni proje türlerini denetleyen. vsz dosyaları sıklıkla bir RELATIVE_PATH girişi içerir. Bu yol, aşağıdaki kurulum anahtarında proje türünün \ProductDir girişinde belirtilen yola göredir:
 
  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup
 
- Örneğin, Kurumsal çerçeve proje şablonları, aşağıdaki kayıt defteri girdilerini ekleyin:
+ Örneğin, kurumsal çerçeveler proje şablonları aşağıdaki kayıt defteri girdilerini ekler:
 
- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\ =
+ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\
 
- Yani bir PROJECT_TYPE içerip içermediğini = EF girişi .vsz dosyasında, .vsz dosyaları daha önce belirtilen ProductDir dizinde ortam bulur.
+ Yani,. vsz dosyasına bir PROJECT_TYPE = EF girişi eklerseniz, ortam daha önce belirtilen ProductDir dizinindeki. vsz dosyalarınızı bulur.
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [Yapılacaklar listesi: Yeni Proje Türleri Oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Denetim Listesi: Yeni Proje Türleri Oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Proje Modeli Öğeleri](../../extensibility/internals/elements-of-a-project-model.md)
 - [Proje Üreteçlerini Kullanarak Proje Örnekleri Oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)

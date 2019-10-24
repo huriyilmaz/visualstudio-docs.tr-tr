@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_datacrc | Microsoft Docs
+title: 'IDiaSectionContrib:: get_dataCrc | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c652460e401396a8f7316b5ef300b3c2915f2e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8287202efaf1f60743969007b432829940441a22
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828249"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742683"
 ---
-# <a name="idiasectioncontribgetdatacrc"></a>IDiaSectionContrib::get_dataCrc
-Bölümünde veri Döngüsel artıklık denetimi (CRC) alır.
+# <a name="idiasectioncontribget_datacrc"></a>IDiaSectionContrib::get_dataCrc
+Bölümündeki verilerin Döngüsel artıklık denetimini (CRC) alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_dataCrc ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Verilerin CRC bölümünde döndürür.
+dışı Bölümdeki verilerin CRC 'sini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

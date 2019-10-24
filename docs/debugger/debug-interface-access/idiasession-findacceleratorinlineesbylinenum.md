@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findAcceleratorInlineesByLinenum | Microsoft Docs
+title: 'IDiaSession:: findAcceleratorInlineesByLinenum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 12a2f23c42de99e0ea9a9d6c50e2d9aabed589d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d08168a83b9bb635fd6a0e22dc22f91a454001f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839465"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742318"
 ---
 # <a name="idiasessionfindacceleratorinlineesbylinenum"></a>IDiaSession::findAcceleratorInlineesByLinenum
-Belirtilen kaynak konum için karşılık gelen satır içi çerçeveler için semboller numaralandırmasını döndürür.
+Belirtilen kaynak konumuna karşılık gelen satır içi çerçeveler için simgelerin bir listesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,28 +35,28 @@ HRESULT findAcceleratorInlineeLinesByName ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-[in] Bir `IDiaSymbol` aranacak gereken Hızlandırıcı saplama işlevi karşılık gelir.
+'ndaki Aranması gereken Hızlandırıcı saplama işlevine karşılık gelen bir `IDiaSymbol`.
 
  `file`
 
-[in] `IDiaSourceFile` Kaynak konum.
+'ndaki Kaynak konumun `IDiaSourceFile`.
 
  `linenum`
 
-[in] Kaynak konumun satır numarası.
+'ndaki Kaynak konumun satır numarası.
 
  `colnum`
 
-[in] Kaynak konumun sütun numarası.
+'ndaki Kaynak konumun sütun numarası.
 
  `ppResult`
 
-[out] Bir işaretçi bir `IDiaEnumLineNumbers` sonucu ile başlatılmış bir arabirim işaretçisi.
+dışı Sonuçla başlatılan `IDiaEnumLineNumbers` arabirimi işaretçisine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

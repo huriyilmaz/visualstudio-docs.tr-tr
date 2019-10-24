@@ -1,5 +1,5 @@
 ---
-title: Sınıf Tasarımcısında Visual C++ Sınıfları
+title: C++Sınıf Tasarımcısı sınıflar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,14 +12,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 596d7a41b9f63179a0469840d948430ed0294b56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 84fc10a3f62ea4bef82a466b2d76c46e73eb7e6e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647645"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748923"
 ---
-# <a name="visual-c-classes-in-class-designer"></a>Sınıf Tasarımcısı C++ 'de görsel sınıflar
+# <a name="c-classes-in-class-designer"></a>C++Sınıf Tasarımcısı sınıflar
 
 **Sınıf Tasarımcısı** sınıfları C++ destekler ve Visual Basic ve C++ C# sınıf şekilleriyle aynı şekilde yerel sınıfları görselleştirir, ancak C++ sınıfların birden fazla devralma ilişkisi olabilir. Sınıfında daha fazla alan ve yöntem göstermek için sınıf şeklini genişletebilir veya alanı korumak için daraltabilirsiniz.
 
@@ -174,7 +174,7 @@ Aşağıdaki tabloda, kurallı özelleştirilmiş sınıf bağlantısının baz�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual C++ Kodu ile Çalışma](working-with-visual-cpp-code.md)
+- [C++ Kodla çalışma](working-with-visual-cpp-code.md)
 - [Sınıflar ve Yapılar](/cpp/cpp/classes-and-structs-cpp)
 - [Anonim Sınıf Türleri](/cpp/cpp/anonymous-class-types)
 - [Birden çok devralma](https://msdn.microsoft.com/library/6td5yws2.aspx)

@@ -1,5 +1,5 @@
 ---
-title: Eski dil hizmetinde kesme noktalarını doğrulama | Microsoft Docs
+title: Eski dil hizmetinde kesme noktaları doğrulanıyor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,32 +11,32 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 177b0bb3fddebab6518a851bf8ce4c4d34d43897
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e7c46473610c96779d0c54e06e82cf884216b13b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324570"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722018"
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Kesme Noktalarını Doğrulama
-Bir kesme noktası programın yürütülmesi belirli bir noktada bir hata ayıklayıcıda çalıştırılırken durması gerektiğini belirtir. Düzenleyicisi bir kesme noktası için geçerli bir konum nelerden, hiçbir bilgiye sahip olduğundan kullanıcı kaynak dosya her satırda bir kesme noktası yerleştirebilirsiniz. Hata ayıklayıcı başlatıldığında, tüm işaretli kesme noktaları (kesme noktaları olarak adlandırılır) çalışan bir program içindeki uygun konumuna bağlıdır. Kesme noktaları doğrulandığından emin olmak için aynı anda bunlar geçerli kod konumlarını işaretler. Örneğin, kaynak kodunda bu konumda hiçbir kod olduğundan açıklama üzerinde bir kesme noktası geçerli değil. Hata ayıklayıcı geçersiz kesme noktalarını devre dışı bırakır.
+Bir kesme noktası, program yürütmenin bir hata ayıklayıcıda çalıştırılırken belirli bir noktada durması gerektiğini belirtir. Düzenleyici, bir kesme noktası için geçerli bir konum oluşturduğunu hiçbir bilgisine sahip olmadığından, bir Kullanıcı, kaynak dosyadaki herhangi bir satıra bir kesme noktası yerleştirebilir. Hata ayıklayıcı başlatıldığında, işaretlenmiş kesme noktaları (bekleyen kesme noktaları olarak adlandırılır), çalışan programdaki uygun konuma bağlanır. Aynı zamanda, kesme noktaları geçerli kod konumlarını işaretdıklarından emin olmak için onaylanır. Örneğin, kaynak kodda bu konumda kod bulunmadığından, bir yorum üzerinde bir kesme noktası geçerli değildir. Hata ayıklayıcı geçersiz kesme noktalarını devre dışı bırakır.
 
- Dil hizmeti görüntülenmesini kaynak kodu hakkında bilmesi olduğundan, hata ayıklayıcı başlatılmadan önce kesme noktaları doğrulayabilirsiniz. Geçersiz kılabilirsiniz <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> bir kesme noktası için geçerli bir konum belirten bir yayılma döndürmek için yöntemi. Kesme noktası konumu, hata ayıklayıcı tarafından başlatılan, ancak kullanıcı hata ayıklayıcının için beklemenize gerek kalmadan geçersiz kesme bilgilendirilir hala doğrulanır.
+ Dil hizmeti, görüntülenmekte olan kaynak kodu öğrendiğinden, hata ayıklayıcı başlatılmadan önce kesme noktalarını doğrulayabilir. Kesme noktası için geçerli bir konum belirten bir yayma döndürmek için <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> yöntemini geçersiz kılabilirsiniz. Hata ayıklayıcı başlatıldığında kesme noktası konumu hala doğrulanıyor, ancak kullanıcıya hata ayıklayıcının yüklenmesini beklemeden geçersiz kesme noktaları bildirilir.
 
-## <a name="implementing-support-for-validating-breakpoints"></a>Kesme noktaları doğrulamak için desteği sağlama
+## <a name="implementing-support-for-validating-breakpoints"></a>Kesme noktalarını doğrulama desteği uygulama
 
-- <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> Yöntemi, bir kesme noktası konumu verilir. Uygulamanız konumun geçerli olduğunu ve bu kodu tanımlayan bir metin aralığını döndürerek kesme noktası satır konumu ile ilişkili belirtmek olup olmadığına karar vermeniz gerekir.
+- @No__t_0 yöntemine kesme noktasının konumu verilir. Uygulamanızın, konumun geçerli olup olmadığına karar vermeniz ve bu işlemi, kesme noktası konumuyla ilişkili kodu tanımlayan bir metin yayılımını belirterek göstermek gerekir.
 
-- Dönüş <xref:Microsoft.VisualStudio.VSConstants.S_OK> konumu geçerliyse, veya <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> geçerli değilse.
+- Konum geçerliyse <xref:Microsoft.VisualStudio.VSConstants.S_OK> veya geçerli değilse <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> döndürün.
 
-- Kesme noktası geçerli ise metin aralığı birlikte kesme noktası vurgulanır.
+- Kesme noktası geçerliyse, metin aralığı kesme noktasıyla birlikte vurgulanır.
 
-- Kesme noktası geçersizse, bir hata iletisi durum çubuğunda görünür.
+- Kesme noktası geçersizse durum çubuğunda bir hata iletisi görüntülenir.
 
 ### <a name="example"></a>Örnek
- Bu örnekte uygulanışı gösterilmektedir <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> belirtilen konumda kod kapsamı (varsa) almak için ayrıştırıcı çağıran yöntemi.
+ Bu örnek, belirtilen konumdaki kodun (varsa) yayılmasını elde etmek için Ayrıştırıcıyı çağıran <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> yönteminin bir uygulamasını gösterir.
 
- Bu örnek, eklediğinizi varsayar bir `GetCodeSpan` yönteme <xref:Microsoft.VisualStudio.Package.AuthoringSink> döndürür ve metin aralığı doğrulayan sınıfı `true` geçerli kesme noktası konumu ise.
+ Bu örnek, metin aralığını doğrulayan ve geçerli bir kesme noktası konumu ise `true` döndüren <xref:Microsoft.VisualStudio.Package.AuthoringSink> sınıfına bir `GetCodeSpan` yöntemi eklediğinizi varsayar.
 
 ```csharp
 using Microsoft VisualStudio;
@@ -98,5 +98,5 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Eski Dil Hizmeti Özellikleri](../../extensibility/internals/legacy-language-service-features1.md)

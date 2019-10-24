@@ -1,5 +1,5 @@
 ---
-title: '[Content_types] .xml dosyasının yapısı | Microsoft Docs'
+title: '[Content_Types]. xml dosyasının yapısı | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,78 +13,78 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ef77c610bd310347c7ba60048bda342e997da33
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5cc42a5346498c04f759956b2ca00094ac1df119
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316411"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718723"
 ---
-# <a name="the-structure-of-the-contenttypesxml-file"></a>[Content_types].xml Dosyasının Yapısı
-Bir VSIX paketi, içerik türleri hakkındaki bilgileri içerir. Visual Studio paketi yüklemek için [Content_Types] .xml dosyasını kullanır, ancak dosyayı yüklemez.
+# <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types].xml Dosyasının Yapısı
+VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paketi yüklemek için [Content_Types]. xml dosyasını kullanır, ancak dosyanın kendisini yüklemez.
 
 > [!NOTE]
-> Bu konuda, VSIX paketinde kullanılan [Content_Type] .xml dosyaları için geçerli olsa da, [Content_Types] .xml dosya türü parçasıdır *açık paketleme kuralları (OPC)* standart. Daha fazla bilgi için [OPC: Bir yeni standart için paketleme verilerinizi](http://go.microsoft.com/fwlink/?LinkID=148207) MSDN Web sitesinde.
+> Bu konu yalnızca VSıX paketlerinde kullanılan [Content_Type]. xml dosyaları için geçerli olsa da, [Content_Types]. xml dosya türü *Açık paketleme kuralları (OPC)* standardının bir parçasıdır. Daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](http://go.microsoft.com/fwlink/?LinkID=148207) .
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler
- Kök öğe ve öznitelikler ve alt öğeler aşağıdaki bölümlerde açıklanmaktadır.
+ Aşağıdaki bölümlerde kök öğe ve öznitelikleri ve alt öğeleri açıklanır.
 
 ### <a name="root-element"></a>Kök öğe
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`Types`|VSIX paketini dosya türlerini listeleme alt öğeleri içerir.|
+|`Types`|VSıX paketindeki dosya türlerini numaralandırmanızı sağlayan alt öğeleri içerir.|
 
 ### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Xmlns`|(Gerekli) Bu [Content_Types] .xml dosyası için kullanılan şema konumu.|
+|`Xmlns`|(Gerekli.) Bu [Content_Types]. xml dosyası için kullanılan şemanın konumu.|
 
-### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliği
+### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliğe
 
 | Değer | Açıklama |
 | - | - |
-| http://schemas.openformats.org/package/2006/content-types | İçerik türleri şema konumu. |
+| http://schemas.openformats.org/package/2006/content-types | İçerik türleri şemasının konumu. |
 
 ### <a name="child-elements"></a>Alt Öğeler
- `Types` Herhangi bir sayıda öğe içerebilir `Default` öğeleri.
+ @No__t_0 öğesi herhangi bir sayıda `Default` öğesi içerebilir.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`Default`|VSIX paketinde bir içerik türü açıklar. Paketteki her dosya türü kendi olmalıdır `Default` öğesi.|
+|`Default`|VSıX paketindeki bir içerik türünü açıklar. Paketteki her dosya türünün kendi `Default` öğesi olmalıdır.|
 
 ### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Extension`|VSIX paketini bir dosyanın dosya adı uzantısı.|
-|`ContentType`|Dosya adı uzantısıyla ilişkili olan içerik türünü açıklar.|
+|`Extension`|VSıX paketindeki bir dosyanın dosya adı uzantısı.|
+|`ContentType`|Dosya adı uzantısıyla ilişkili içerik türünü açıklar.|
 
-### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliği
- Visual Studio aşağıdaki tanır `ContentType` ilişkili değerleri `Extension` türleri.
+### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliğe
+ Visual Studio, ilişkili `Extension` türleri için aşağıdaki `ContentType` değerlerini tanır.
 
-|Dahili numara|contentType|
+|uzantının|contentType|
 |---------------|-----------------|
 |txt|metin/düz|
 |pkgdef|metin/düz|
-|xml|metin/xml|
-|vsixmanifest|metin/xml|
-|htm veya html|metin/html|
-|RTF|Uygulama/rtf|
-|PDF|Uygulama/pdf|
-|GIF|Görüntü/gif|
-|JPG veya jpeg|Görüntü/jpg|
-|TIFF|Görüntü/TIFF|
-|vsix|Uygulama/zip'i|
-|zip|Uygulama/zip'i|
-|dll|Uygulama/octet-akış|
-|diğer tüm dosya türleri|Uygulama/octet-akış|
+|'Sini|metin/XML|
+|vsixmanifest|metin/XML|
+|htm veya HTML|metin/html|
+|biçimindeki|Uygulama/RTF|
+|belgesini|uygulama/PDF|
+|gif|resim/GIF|
+|jpg veya JPEG|resim/jpg|
+|dosyalarında|resim/TIFF|
+|vsix|Uygulama/zip|
+|zip|Uygulama/zip|
+|dosyasını|Uygulama/sekizli-akış|
+|diğer tüm dosya türleri|Uygulama/sekizli-akış|
 
 ## <a name="example"></a>Örnek
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki [Content_Types] .xml dosyasının tipik bir VSIX paketi açıklar.
+ Aşağıdaki [Content_Types]. xml dosyası tipik bir VSıX paketini açıklar.
 
 ### <a name="code"></a>Kod
 
@@ -99,7 +99,7 @@ Bir VSIX paketi, içerik türleri hakkındaki bilgileri içerir. Visual Studio p
 </Types>
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Bir VSIX Paketinin Anatomisi](../extensibility/anatomy-of-a-vsix-package.md)
-- [VSIX Uzantı Şeması 1.0 başvurusu](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
-- [OPC: Verilerinizi paketleme için yeni bir standart](http://go.microsoft.com/fwlink/?LinkID=148207)
+- [VSıX uzantı şeması 1,0 başvurusu](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
+- [OPC: verilerinizi paketlemeye yönelik yeni bir standart](http://go.microsoft.com/fwlink/?LinkID=148207)

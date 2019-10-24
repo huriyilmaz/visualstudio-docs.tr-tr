@@ -1,5 +1,5 @@
 ---
-title: SccRunScc işlevi | Microsoft Docs
+title: SccRunScc Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec6f430b4fee28e0bd1a9d5b1c64f9e8d95b2a97
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e577af3ce70280b81681cb72295c3511dd3ab4a4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338696"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720549"
 ---
 # <a name="sccrunscc-function"></a>SccRunScc İşlevi
-Bu işlev, kaynak denetimi Yönetim Aracı'nı başlatır.
+Bu işlev, kaynak denetimi yönetim aracını çağırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,42 +36,42 @@ SCCRTN SccRunScc(
 #### <a name="parameters"></a>Parametreler
  pvContext
 
-[in] Kaynak Denetimi Eklentisi bağlam yapısı.
+'ndaki Kaynak denetimi eklentisi bağlam yapısı.
 
- hWnd
+ lendiği
 
-[in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.
+'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
 
- nFiles
+ Nkarşıya
 
-[in] Belirtilen dosya sayısı `lpFileNames` dizisi.
+'ndaki @No__t_0 dizisinde belirtilen dosya sayısı.
 
- lpFileNames
+ lpDosyaAdı
 
-[in] Seçili dosya adları dizisi.
+'ndaki Seçili dosya adlarından oluşan dizi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Kaynak denetimi Yönetim Aracı'nı başarıyla çağrıldı.|
+|SCC_OK|Kaynak denetimi yönetim aracı başarıyla çağrıldı.|
 |SCC_I_OPERATIONCANCELED|İşlem iptal edildi.|
 |SCC_E_INITIALIZEFAILED|Kaynak denetim sistemi başlatılamadı.|
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu.|
-|SCC_E_CONNECTIONFAILURE|Kaynak Denetim sistemine bağlanmak başarısız oldu.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu.|
+|SCC_E_CONNECTIONFAILURE|Kaynak denetim sistemine bağlanılamadı.|
 |SCC_E_FILENOTCONTROLLED|Seçili dosya kaynak denetimi altında değil.|
-|SCC_E_NONSPECIFICERROR|Belirli olmayan hata oluştu.|
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlevi çağıran bir dış yönetim aracı ile çeşitli kaynak denetim sistemi özelliklerine erişmek izin verir. Kaynak denetim sistemi herhangi bir kullanıcı arabirimi varsa, kaynak denetimi eklentisi gerekli yönetim işlevleri gerçekleştirmek için bir arabirim uygulayabilir.
+ Bu işlev, çağıranın bir dış yönetim aracı aracılığıyla kaynak denetim sisteminin tüm özelliklerine erişmesine olanak tanır. Kaynak denetim sisteminde kullanıcı arabirimi yoksa, kaynak denetimi eklentisi gerekli yönetim işlevlerini gerçekleştirmek için bir arabirim uygulayabilir.
 
- Bu işlev, bir sayı ve şu anda seçili dosya için dosya adları dizisi ile çağrılır. Yönetim Aracı'nı destekliyorsa, dosyaların listesini SCP'si yönetim arabirimi dosyaları için kullanılabilir; Aksi takdirde, listeye göz ardı edilebilir.
+ Bu işlev, şu anda seçili dosyalar için bir sayı ve dosya adı dizisiyle çağrılır. Yönetim Aracı destekliyorsa, dosya listesi yönetim arabirimindeki dosyaları önceden seçmek için kullanılabilir; Aksi takdirde, liste yok sayılabilir.
 
- Bu işlevin genellikle kullanıcı seçtiğinde çağrılır **başlatma \<kaynak denetim sunucusuna >** gelen **dosya** -> **kaynak denetimi** menüsü. Bu **başlatma** menü seçeneği her zaman devre dışı veya hatta bir kayıt defteri girişi ayarlayarak gizli. Bkz: [nasıl yapılır: Kaynak Denetimi Eklentisi yükleme](../extensibility/internals/how-to-install-a-source-control-plug-in.md) Ayrıntılar için. Bu işlev, yalnızca aşağıdaki durumlarda çağrılır [Sccınitialize](../extensibility/sccinitialize-function.md) döndürür `SCC_CAP_RUNSCC` yeteneği biti (bkz [özellik bayrakları](../extensibility/capability-flags.md) bu ve diğer özellik BITS hakkında ayrıntılı bilgi için).
+ Bu işlev genellikle Kullanıcı **dosya**  -> **kaynak denetimi** menüsünden **> \<Source denetim sunucusunu Başlat** ' a seçtiğinde çağrılır. Bu **başlatma** menü seçeneği, bir kayıt defteri girişi ayarlanarak her zaman devre dışı bırakılabilir veya gizlenebilir. Ayrıntılar için bkz. [nasıl yapılır: kaynak denetim eklentisi yüklemesi](../extensibility/internals/how-to-install-a-source-control-plug-in.md) . Bu işlev yalnızca, [SccInitialize](../extensibility/sccinitialize-function.md) `SCC_CAP_RUNSCC` yetenek bitini döndürürse çağrılır (Bu ve diğer yetenek bitleri hakkındaki ayrıntılar için bkz. [yetenek bayrakları](../extensibility/capability-flags.md) ).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)
-- [Nasıl yapılır: Kaynak Denetimi Eklentisi Yükleme](../extensibility/internals/how-to-install-a-source-control-plug-in.md)
+- [Nasıl Yapılır: Kaynak Denetimi Eklentisi Yükleme](../extensibility/internals/how-to-install-a-source-control-plug-in.md)
 - [Özellik Bayrakları](../extensibility/capability-flags.md)
 - [SccInitialize](../extensibility/sccinitialize-function.md)

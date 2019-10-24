@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_compiland | Microsoft Docs
+title: 'IDiaSectionContrib:: get_compiland | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b920a9f1c3191bfea580df510c7a44c2b7929e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d9a398d7cc0ff8efc9dacc726205cd0d8fa02473
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828262"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742712"
 ---
-# <a name="idiasectioncontribgetcompiland"></a>IDiaSectionContrib::get_compiland
-Bu bölümde katkıda derlenecek dosya simgesi bir başvuru alır.
+# <a name="idiasectioncontribget_compiland"></a>IDiaSectionContrib::get_compiland
+Bu bölüme katkıda bulunan compiland simgesine bir başvuru alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,11 +33,11 @@ HRESULT get_compiland ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) Bu bölümde katkıda derlenecek temsil eden nesne.
+dışı Bu bölüme katkıda bulunan compiland öğesini temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

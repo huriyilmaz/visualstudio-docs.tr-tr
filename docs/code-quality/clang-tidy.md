@@ -8,12 +8,12 @@ author: frozenpandaman
 ms.author: efessler
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d0e271f83332f7163c9c0c947f96756ca7a7d
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: e226ac6c83839474b9d8ac6be7fb57e376de4a4f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72165194"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745986"
 ---
 # <a name="using-clang-tidy-in-visual-studio"></a>Visual Studio 'da Clang-Tidy kullanma
 
@@ -28,29 +28,29 @@ Clang-Tidy başarıyla derlemeden sonra çalışır; Clang-Tidy sonuçlarını a
 
 ## <a name="msbuild"></a>MSBuild
 
-Clang-Tidy ' i hem kod analizinin parçası olarak, hem de proje Özellikler penceresi **kod analizi** > **genel** sayfası altında çalışacak şekilde yapılandırabilirsiniz. Aracı yapılandırma seçenekleri, Clang-Tıdy alt menüsünde bulunabilir.
+Clang-Tidy ' i hem kod analizinin bir parçası olarak, hem de proje Özellikler penceresi **kod analizi**  > **genel** sayfası altında çalışacak şekilde yapılandırabilirsiniz. Aracı yapılandırma seçenekleri, Clang-Tıdy alt menüsünde bulunabilir.
 
-Daha fazla bilgi için [nasıl yapılır: C/C++ Projects @ no__t-1 Için kod analizi özelliklerini ayarlayın.
+Daha fazla bilgi için bkz. [nasıl yapılır: C/C++ projeleri Için kod analizi özelliklerini ayarlama](../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md).
 
 ## <a name="cmake"></a>CMake
 
 CMake projelerinde, `CMakeSettings.json` içinde Clang-Tidy denetimlerini yapılandırabilirsiniz. Açıldıktan sonra CMake proje ayarları Düzenleyicisi 'nin sağ üst köşesindeki "JSON 'u Düzenle" düğmesine tıklayın. Aşağıdaki anahtarlar tanınmalıdır:
 
-- `enableMicrosoftCodeAnalysis`: Microsoft Kod analizini sunar
-- `enableClangTidyCodeAnalysis`: Clang-Tidy analizini etkinleştirilir
-- `clangTidyChecks`: Virgülle ayrılmış bir liste olarak belirtilen Clang-Tidy yapılandırması, etkin veya devre dışı bırakılacağını denetler
+- `enableMicrosoftCodeAnalysis`: Microsoft Kod analizini etkinleştirilir
+- `enableClangTidyCodeAnalysis`: Clang-Tıdy analizini etkinleştirilir
+- `clangTidyChecks`: bir virgülle ayrılmış liste olarak belirtilen Clang-Tidy yapılandırması, etkin veya devre dışı bırakılacağını denetler
 
 "Etkinleştir" seçeneklerinin hiçbiri belirtilmediyse, Visual Studio kullanılan platform araç takımı ile eşleşen analiz aracını seçer.
 
 ## <a name="warning-display"></a>Uyarı görüntüleme
 
-Clang-tidy, Hata Listesi ve kodun ilgili bölümlerinin altında düzenleyici dalgalı çizgiler olarak görüntülenmiş uyarılarla sonuçlanır. Clang-Tıdy uyarılarını sıralamak ve düzenlemek için Hata Listesi "Category" sütununu kullanın. **Araçlar** > **seçenekleri**altındaki "Kod analizini devre dışı bırak" ayarını değiştirerek düzenleyici uyarılarını yapılandırabilirsiniz.
+Clang-tidy, Hata Listesi ve kodun ilgili bölümlerinin altında düzenleyici dalgalı çizgiler olarak görüntülenmiş uyarılarla sonuçlanır. Clang-Tıdy uyarılarını sıralamak ve düzenlemek için Hata Listesi "Category" sütununu kullanın. **Araçlar**  > **seçenekleri**altındaki "Kod analizini devre dışı bırak" ayarını değiştirerek düzenleyici uyarılarını yapılandırabilirsiniz.
 
 ## <a name="clang-tidy-configuration"></a>Clang-Tidy yapılandırması
 
 Clang-Tidy 'ın, **Clang-Tidy denetimleri** seçeneği aracılığıyla Visual Studio içinde çalıştığı denetimleri yapılandırabilirsiniz. Bu giriş, aracının **--denetimler** bağımsız değişkenine sağlanır. Daha fazla yapılandırma özel **. Clang-Tidy** dosyalarına dahil edilebilir. Daha fazla bilgi için [LLVM.org adresindeki Clang-Tidy belgelerine](https://clang.llvm.org/extra/clang-tidy/) bakın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild projeleri için Clang/LLVM desteği](https://aka.ms/cpp/clangmsbuild)
 - [CMake projeleri için Clang/LLVM desteği](https://aka.ms/cpp/clangcmake)

@@ -1,5 +1,5 @@
 ---
-title: SccQueryChanges işlevi | Microsoft Docs
+title: SccQueryChanges Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e2b1e504bef3ec9507afcddf4f75bc5f697e843
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 617f07a11f92ab65f079c7d1b41773494e3d0c8b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353514"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720861"
 ---
 # <a name="sccquerychanges-function"></a>SccQueryChanges İşlevi
-Bu işlev, dosyalar, bir geri çağırma işlevi aracılığıyla her dosya için ad değişiklikleri hakkında bilgi sağlayan belirli bir listesini numaralandırır.
+Bu işlev, bir geri çağırma işlevi aracılığıyla her bir dosya için ad değişiklikleri hakkında bilgi sağlayan belirli bir dosya listesini numaralandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,38 +37,38 @@ SCCRTN SccQueryChanges(
 #### <a name="parameters"></a>Parametreler
  pContext
 
-[in] Kaynak Denetimi Eklentisi bağlam işaretçisi.
+'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.
 
- nFiles
+ Nkarşıya
 
-[in] Dosya sayısı `lpFileNames` dizisi.
+'ndaki @No__t_0 dizisindeki dosya sayısı.
 
- lpFileNames
+ lpDosyaAdı
 
-[in] Hakkında bilgi almak için dosya adları dizisi.
+'ndaki Hakkında bilgi almak için dosya adları dizisi.
 
  pfnCallback
 
-[in] Listedeki her bir dosya adı için çağrılacak bir geri çağırma işlevi (bkz [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) Ayrıntılar için).
+'ndaki Listedeki her dosya adı için çağrı yapılacak geri çağırma işlevi (Ayrıntılar için bkz. [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) ).
 
  pvCallerData
 
-[in] Geri çağırma işlevine geçirilen değer değişmedi.
+'ndaki Geri çağırma işlevine değiştirilmeden geçirilecek değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Sorgu işlemi başarıyla tamamlandı.|
-|SCC_E_PROJNOTOPEN|Proje, kaynak denetiminde açılmadı.|
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu.|
-|SCC_E_NONSPECIFICERROR|Belirtilmemiş veya genel bir hata oluştu.|
+|SCC_E_PROJNOTOPEN|Proje kaynak denetiminde açılmadı.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu.|
+|SCC_E_NONSPECIFICERROR|Belirtilmeyen veya genel bir hata oluştu.|
 
 ## <a name="remarks"></a>Açıklamalar
- İçin sorgulanan ad alanına değişiklikler: Bu özellikle, yeniden adlandırma, ekleme ve kaldırma bir dosya.
+ İçin sorgulanmakta olan değişiklikler ad alanı: özel olarak, bir dosyayı yeniden adlandırma, ekleme ve kaldırma.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)
 - [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md)
 - [Hata Kodları](../extensibility/error-codes.md)

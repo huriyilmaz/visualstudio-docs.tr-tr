@@ -16,12 +16,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac67e89ebf04979f8aec55f100e2b1138e9feb22
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f56161e1fd89ce29924368b6029ee12c17e75a65
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622255"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747708"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Komut Diğer Adları
 
@@ -118,14 +118,14 @@ Aşağıdaki tablo, önceden tanımlanmış Visual Studio komut diğer adların�
 |Araç kutusu penceresi|araç kutusu|View.Toolbox|
 |[Ayrıştırılmış Kodu Listele Komutu](../../ide/reference/list-disassembly-command.md)|u|Debug. ListDisassembly|
 |Büyük harf yap|UCase|Edit.MakeUppercase|
-|Komutunu|komutunu|Edit.Undo|
+|Komutunu|Komutunu|Edit.Undo|
 |Seçimi Kaldır|Sekme olmaktan kaldır|. Untabifi seçimini Düzenle|
 |Gözcü penceresi|Servisi|Debug. WatchN|
 |Sözcük kaydırmayı aç|WordWrap|Edit.ToggleWordWrap|
 |Işlem listeleme|&#124;|Debug. ListProcesses|
 |[İş Parçacıklarını Listele Komutu](../../ide/reference/list-threads-command.md)|~ ~ * k ~ \*kb|Debug. ListThreads hata ayıklama. ListTheads/AllThreads|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)

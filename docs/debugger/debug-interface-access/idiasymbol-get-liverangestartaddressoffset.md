@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_liveRangeStartAddressOffset | Microsoft Docs
+title: 'IDiaSymbol:: get_liveRangeStartAddressOffset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0312571b0a96b080949398618888b05c2704d3ca
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b39bf1e73d8b056c1cfcbfafd41dcbbb464c40ce
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64808950"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739917"
 ---
-# <a name="idiasymbolgetliverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
-Yerel sembol geçerli aralığın başlangıç adresi uzaklık bölümünü döndürür.
+# <a name="idiasymbolget_liverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
+Yerel sembolün geçerli olduğu aralığın başlangıç adresinin konum kısmını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,25 +33,25 @@ HRESULT get_liveRangeStartAddressOffset ( 
 #### <a name="parameters"></a>Parametreler
  `offset`
 
-[out] Başlangıç adresi aralığı uzaklık bölümünü döndürür.
+dışı Başlangıç adres aralığının konum parçasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 > [!NOTE]
-> Döndürülen hata kodu sembol Canlı aralığı bilgisi yok anlamına gelir.
+> Döndürülen bir hata kodu, simgenin canlı Aralık bilgilerine sahip olmadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Uzaklık ve bölümü doğru biçimlendirilmiş bir adres simgenin geçerli aralığın başlangıcıdır.
+ Bölüm ve konum tarafından oluşturulan adres, simgenin geçerli olduğu aralığın başlangıcıdır.
 
- Adres bölüm parçası almak için kullanın [IDiaSymbol::get_liveRangeStartAddressSection](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddresssection.md).
+ Adresin bölüm bölümünü almak için [IDiaSymbol:: get_liveRangeStartAddressSection](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddresssection.md)kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: dia2.h
+ Üstbilgi: dia2. h
 
- Kitaplık: diaguids.lib
+ Kitaplık: diaguid. lib
 
- DLL: msdia100.dll
+ DLL: msdia100. dll
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

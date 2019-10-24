@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFields::Next | Microsoft Docs
+title: 'IEnumDebugFields:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ee2cc5273b5ec47f99916a308312f6d26c718033
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 216ce9d49ba9de33307ad692787d6e6d36ee15c3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350432"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727658"
 ---
 # <a name="ienumdebugfieldsnext"></a>IEnumDebugFields::Next
-Bu yöntem, sabit listesinden alınmış sonraki öğe kümesini döndürür.
+Bu yöntem, Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,17 +45,17 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Alınacak öğelerin sayısı. Ayrıca en büyük boyutunu belirtir `rgelt` dizisi.
+'ndaki Alınacak öğe sayısı. Ayrıca `rgelt` dizisinin en büyük boyutunu belirtir.
 
 `rgelt`\
-[out içinde] Dizi [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) doldurulacak öğeleri.
+[in, out] Doldurulacak [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) öğelerinin dizisi.
 
 `pceltFetched`\
-[out] Gerçekte döndürülen öğe sayısını döndürür `rgelt`.
+dışı @No__t_0 ' de gerçekten döndürülen öğe sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` istenen öğelerin sayısından daha az döndürülebilen; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. İstenen sayıda öğeden daha az döndürülürse `S_FALSE` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

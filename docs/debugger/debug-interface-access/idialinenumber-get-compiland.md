@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_compiland | Microsoft Docs
+title: 'IDiaLineNumber:: get_compiland | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25d990ab019c01daf1f977464211fb72838275a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d6ae842d4717bdc0bd989327f07d9566d1161b8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829049"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743237"
 ---
-# <a name="idialinenumbergetcompiland"></a>IDiaLineNumber::get_compiland
-Görüntü metnin bayt katkıda derlenecek dosya simgesi bir başvuru alır.
+# <a name="idialinenumberget_compiland"></a>IDiaLineNumber::get_compiland
+Görüntü metninin baytlarına katkıda bulunan compiland sembolü için bir başvuru alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,10 +33,10 @@ HRESULT get_compiland ( 
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) nesne için görüntü metnin bayt katkıda derlenecek.
+dışı Görüntü metninin baytlarına katkıda bulunan compiland için bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 665e778fc0881ac05e165c85700d15285622c762
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: a4d11875a7ab2ca3f21f364308580a732b7516e6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186362"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737926"
 ---
 # <a name="edit-and-continue-visual-c"></a>Düzenle ve Devam Et (Visual C#)
  Düzenle ve devam et ile C#, hata ayıklama sırasında kodunuzda kesme modunda değişiklikler yapabilirsiniz. Değişiklikler hata ayıklama oturumunu durdurup yeniden başlatmaya gerek kalmadan uygulanabilir. Çalışma modunda, kaynak Düzenleyici salt okunurdur.
@@ -36,9 +36,9 @@ ms.locfileid: "71186362"
 
  Düzenle ve devam et etkinleştirildiğinde, bir hata ayıklayıcı yürütme komutunu kullandığınızda, **devam et**, **adımla**, **sonraki ifadeyi ayarla**veya bir hata ayıklayıcı penceresinde işlev değerlendirmesi gerçekleştirme gibi desteklenen değişiklikler otomatik olarak uygulanır.
 
- Daha fazla bilgi için [nasıl yapılır: Düzenle ve devam et (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)kullanın.
+ Daha fazla bilgi için bkz. [nasıl yapılır: Düzenle ve devam etC#() kullanma](../debugger/how-to-use-edit-and-continue-csharp.md).
 
-## <a name="see-also"></a>Ayrıca Bkz.
-- [Nasıl yapılır: Düzenle ve Devam Et’i Kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
+## <a name="see-also"></a>Ayrıca bkz.
+- [Nasıl Yapılır: Düzenle ve Devam Et'i Kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
 - [Desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md)
 - [Visual Studio 'da XAML etkin yeniden yüklemesine sahip XAML kodunu yazma ve hata ayıklama](../debugger/xaml-hot-reload.md)

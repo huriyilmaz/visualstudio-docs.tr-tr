@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Hangi DLL'de kilitlendiğini programınızın bulma | Microsoft Docs"
+title: "Nasıl yapılır: programınızın hangi DLL 'de kilitlendiğini bulma | Microsoft Docs"
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,33 +22,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7a9421af9e0caf085feb1afb27b53befe837668
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bff4f164e16a65efe4ec3d1f057025168eab8cd2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894053"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733279"
 ---
-# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Nasıl yapılır: Hangi DLL'de kilitlendiğini programınızın bulma (C#, C++, Visual Basic F#)
+# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Nasıl yapılır: programınızın hangi dll 'de kilitlendiğini bulma (C#, C++, Visual Basic, F#)
 
- Uygulamanızı bir sistem DLL'i veya başka birisinin kodu çağrısı sırasında kilitleniyor bulmak kilitlenme oluştuğunda hangi DLL etkindi gerekirse. Kendi programımı dışında bir DLL içindeki bir kilitlenme karşılaşırsanız, konumu şunu kullanarak belirleyebilirsiniz **modülleri** penceresi.
+ Uygulamanız bir sistem DLL 'SI veya başka birinin kodu çağrısı sırasında kilitlenirse, kilitlenme oluştuğunda hangi DLL 'nin etkin olduğunu bulmanız gerekir. Kendi programınızın dışında bir DLL 'de kilitlenmeyle karşılaşırsanız, bu konumu **modüller** penceresini kullanarak belirleyebilirsiniz.
 
-### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Modüller penceresini kullanarak bir kilitlenme burada bulmak için oluştu
+### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Modüller penceresini kullanarak bir kilitlenmenin nerede oluştuğunu bulmak için
 
-1. Kilitlenme durumu oluştuğu adresini not edin.
+1. Çökmenin gerçekleştiği adresi aklınızda edin.
 
-    Hata iletisinde adresi gösterilmez, DLL tanımlamak için alternatif yöntemler kullanmayı gerekebilir. Bir sistem DLL'i şüpheleniyorsanız yapabilecekleriniz [yük sembolleri](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) Microsoft sembol sunucularından hata ayıklama sırasında. Aksi takdirde, gerekebilir [bir döküm dosyası oluşturma](../debugger/using-dump-files.md) yığın yerine bilgi olduğu. Çeşitli [Araçları](https://blogs.msdn.microsoft.com/andrehal/2009/12/31/what-is-a-dump-and-how-do-i-create-one/) döküm dosyalarını oluşturmak kullanılabilir.
+    Adres hata iletisinde gösterilmiyorsa, DLL 'yi tanımlamak için alternatif yöntemler kullanmanız gerekebilir. Bir sistem DLL 'inin şüpheli olması halinde, hata ayıklama sırasında Microsoft sembol sunucularından [sembolleri](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) yükleyebilirsiniz. Aksi takdirde, bunun yerine yığın bilgileriyle [bir döküm dosyası oluşturmanız](../debugger/using-dump-files.md) gerekebilir. Döküm dosyaları oluşturmak için çeşitli [Araçlar](https://blogs.msdn.microsoft.com/andrehal/2009/12/31/what-is-a-dump-and-how-do-i-create-one/) mevcuttur.
 
-2. Üzerinde **hata ayıklama** menüsünde seçin **Windows**, tıklatıp **modülleri**.
+2. **Hata Ayıkla** menüsünde **Windows**' u seçin ve **modüller**' e tıklayın.
 
-3. İçinde **modülleri** penceresinde Bul **adresi** sütun. Bunu görmek için kaydırma çubuğunu kullanmanız gerekebilir.
+3. **Modüller** penceresinde **Adres** sütununu bulun. Bunu görmek için kaydırma çubuğunu kullanmanız gerekebilir.
 
-4. Tıklayın **adresi** DLL'leri adresine göre sıralamak için sütunun üstünde düğme.
+4. Dll 'Leri adrese göre sıralamak için sütunun en üstündeki **Adres** düğmesine tıklayın.
 
-5. Sıralanmış listenin kilitlenme konumu adresi aralığı içeren DLL bulmak için tarayın.
+5. Adres aralığı kilitlenme konumunu içeren DLL 'yi bulmak için sıralanmış listeyi tarayın.
 
-6. Bakmak **adı** ve **yolu** DLL adı ve yolu görmek için sütun.
+6. DLL adını ve yolunu görmek için **ad** ve **yol** sütunlarına bakın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [DLL Projelerinde Hata Ayıklama](../debugger/debugging-dll-projects.md)
-- [Nasıl yapılır: Modüller Penceresini Kullanma](../debugger/how-to-use-the-modules-window.md)
+- [Nasıl Yapılır: Modüller Penceresini Kullanma](../debugger/how-to-use-the-modules-window.md)

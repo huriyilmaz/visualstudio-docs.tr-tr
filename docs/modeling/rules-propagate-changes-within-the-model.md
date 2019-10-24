@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 808eecab2b4f468b730b6c58cce32d08ca523d0d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 74d64b4fe0c0aa5293e11daad13f632c4a487736
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660318"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747413"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>Değişiklikleri Modelin İçinde Yayan Kurallar
 Bir değişikliği bir öğeden diğerine, görselleştirme ve modelleme SDK 'sını (VMSDK) yaymak için bir depolama kuralı oluşturabilirsiniz. Depodaki herhangi bir öğe için bir değişiklik olduğunda, genellikle en dıştaki işlem işlendiği zaman, kurallar yürütülmek üzere zamanlanır. Farklı türlerde olaylar için bir öğe ekleme veya silme gibi farklı türde kurallar vardır. Belirli öğe, şekil veya diyagram türlerine kurallar ekleyebilirsiniz. Birçok yerleşik özellik kurallar tarafından tanımlanır: Örneğin, kurallar model değiştiğinde bir diyagramın güncelleştirildiğinden emin olur. Kendi kurallarınızı ekleyerek, etki alanına özgü dilinizi özelleştirebilirsiniz.
@@ -207,6 +207,6 @@ namespace Company.TaskRuleExample
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Değişiklikleri Modelin Dışına Yayan Olay İşleyicileri](../modeling/event-handlers-propagate-changes-outside-the-model.md)

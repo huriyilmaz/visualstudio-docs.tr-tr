@@ -1,15 +1,15 @@
 ---
-title: Visual C++ Kodu ile Çalışma (Sınıf Tasarımcısı)
+title: C++ Kodla çalışma (sınıf Tasarımcısı)
 ms.date: 06/21/2017
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.cpplimitation
 helpviewer_keywords:
-- Visual C++, Class Designer
-- Class Designer, Visual C++ support
+- C++, Class Designer
+- Class Designer, C++ support
 - Class Designer, limitations
-- Class Designer, tasks in Visual C++
-- Visual C++, class diagrams
+- Class Designer, tasks in C++
+- C++, class diagrams
 - C++, class diagrams
 - C++, Class Designer
 ms.assetid: f5b40921-2ef7-4de0-b595-45b44c79ffa6
@@ -18,14 +18,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2252b5e6d8da9f81fbcca9b856222a3230cd080
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e59ee1305c0c482686505959aac7187902906086
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647567"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748903"
 ---
-# <a name="work-with-visual-c-code-in-class-designer"></a>Sınıf Tasarımcısı 'de görsel C++ kodla çalışma
+# <a name="work-with-c-code-in-class-designer"></a>Sınıf Tasarımcısı C++ kodla çalışma
 
 **Sınıf Tasarımcısı** , projenizdeki kod öğelerinin görsel gösterimini sağlayan *sınıf diyagramı* adlı bir görsel tasarım yüzeyi görüntüler. Bir projedeki sınıfları ve diğer türleri tasarlamak ve görselleştirmek için sınıf diyagramlarını kullanabilirsiniz.
 
@@ -56,7 +56,7 @@ ms.locfileid: "72647567"
 
 ### <a name="update-and-performance-issues"></a>Güncelleştirme ve performans sorunları
 
-Visual C++ projelerinde, kaynak dosyadaki bir değişikliğin sınıf diyagramında görünmesi 30 ila 60 saniye sürebilir. Bu gecikme **, seçimde hiçbir tür bulunamamış**bir hata **Sınıf Tasarımcısı** oluşturulmasına da neden olabilir. Bunun gibi bir hata alırsanız hata iletisindeki **iptal** ' e tıklayın ve kod öğesinin **sınıf görünümü**görünmesini bekleyin. Bunu yaptıktan sonra, **Sınıf Tasarımcısı** türü görüntüleyebilmelidir.
+Projeler C++ için, kaynak dosyadaki bir değişikliğin sınıf diyagramında görünmesi 30 ila 60 saniye sürebilir. Bu gecikme **, seçimde hiçbir tür bulunamamış**bir hata **Sınıf Tasarımcısı** oluşturulmasına da neden olabilir. Bunun gibi bir hata alırsanız hata iletisindeki **iptal** ' e tıklayın ve kod öğesinin **sınıf görünümü**görünmesini bekleyin. Bunu yaptıktan sonra, **Sınıf Tasarımcısı** türü görüntüleyebilmelidir.
 
 Bir sınıf diyagramı kodda yaptığınız değişikliklerle güncelleştirmezse, diyagramı kapatıp yeniden açmanız gerekebilir.
 
@@ -88,11 +88,11 @@ Microsoft Developer Network (MSDN) ortak forumlarında sorun giderme hatalarıyl
 
 ## <a name="limitations-for-c-code-elements"></a>Kod öğeleri C++ için sınırlamalar
 
-- Bir görsel C++ proje yüklendiğinde, **Sınıf Tasarımcısı** işlevleri salt okunurdur. Sınıf diyagramını değiştirebilirsiniz, ancak sınıf diyagramından değişiklikleri kaynak koda geri kaydedemezsiniz.
+- Bir C++ proje yüklendiğinde, **Sınıf Tasarımcısı** işlevleri salt okunurdur. Sınıf diyagramını değiştirebilirsiniz, ancak sınıf diyagramından değişiklikleri kaynak koda geri kaydedemezsiniz.
 
-- **Sınıf Tasarımcısı** yalnızca yerel C++ semantiğini destekler. Yönetilen koda C++ derlenen görsel projeler için **Sınıf Tasarımcısı** yalnızca yerel türler olan kod öğelerini görselleştirilecek. Bu nedenle, bir projeye sınıf diyagramı ekleyebilirsiniz, ancak **Sınıf Tasarımcısı** `IsManaged` özelliğinin `true` (yani, değer türleri ve başvuru türleri) olarak ayarlandığı öğeleri görselleştirmenize izin vermez.
+- **Sınıf Tasarımcısı** yalnızca yerel C++ semantiğini destekler. Yönetilen C++ koda derlenmiş projeler için **Sınıf Tasarımcısı** yalnızca yerel türler olan kod öğelerini görselleştirir. Bu nedenle, bir projeye sınıf diyagramı ekleyebilirsiniz, ancak **Sınıf Tasarımcısı** `IsManaged` özelliğinin `true` (yani, değer türleri ve başvuru türleri) olarak ayarlandığı öğeleri görselleştirmenize izin vermez.
 
-- Görsel C++ projeler için **Sınıf Tasarımcısı** yalnızca türün tanımını okur. Örneğin, bir üstbilgi (. h) dosyasında bir tür tanımladığınızı ve üyelerini bir uygulama (. cpp) dosyasında tanımladığınızı varsayalım. Uygulama (. cpp) dosyasında "Görünüm sınıf diyagramını" çağırırsanız **Sınıf Tasarımcısı** hiçbir şey görüntülemez. Başka bir örnek olarak, diğer dosyaları dahil etmek için `#include` bir ifade kullanan ancak gerçek sınıf tanımları içermeyen bir. cpp dosyasında "Görünüm sınıf diyagramını" çağırırsanız, **Sınıf Tasarımcısı** hiçbir şey göstermez.
+- Projeler C++ için **Sınıf Tasarımcısı** yalnızca türün tanımını okur. Örneğin, bir üstbilgi (. h) dosyasında bir tür tanımladığınızı ve üyelerini bir uygulama (. cpp) dosyasında tanımladığınızı varsayalım. Uygulama (. cpp) dosyasında "Görünüm sınıf diyagramını" çağırırsanız **Sınıf Tasarımcısı** hiçbir şey görüntülemez. Başka bir örnek olarak, diğer dosyaları dahil etmek için `#include` bir ifade kullanan ancak gerçek sınıf tanımları içermeyen bir. cpp dosyasında "Görünüm sınıf diyagramını" çağırırsanız, **Sınıf Tasarımcısı** hiçbir şey göstermez.
 
 - COM arabirimlerini ve tür kitaplıklarını tanımlayan IDL (. IDL) dosyaları, yerel C++ koda derlenmedikleri takdirde diyagramlarda görüntülenmez.
 
@@ -112,7 +112,7 @@ Microsoft Developer Network (MSDN) ortak forumlarında sorun giderme hatalarıyl
 
 - [Sınıfları ve Türleri Tasarlama ve Görüntüleme (Sınıf Tasarımcısı)](designing-and-viewing-classes-and-types.md)
 - [Sınıf Tasarımcısı Hataları Hakkında Ek Bilgiler](additional-information-about-errors.md)
-- [Sınıf Tasarımcısında Visual C++ Sınıfları](visual-cpp-classes.md)
-- [Sınıf Tasarımcısında Visual C++ Yapılandırmaları](visual-cpp-structures.md)
-- [Sınıf Tasarımcısında Visual C++ Numaralandırmaları](visual-cpp-enumerations.md)
-- [Sınıf Tasarımcısında Visual C++ Typedefs](visual-cpp-typedefs.md)
+- [C++Sınıf Tasarımcısı sınıflar](visual-cpp-classes.md)
+- [C++Sınıf Tasarımcısı yapılar](visual-cpp-structures.md)
+- [C++Sınıf Tasarımcısı numaralandırmalar](visual-cpp-enumerations.md)
+- [C++Sınıf Tasarımcısı 'de Typedefs](visual-cpp-typedefs.md)

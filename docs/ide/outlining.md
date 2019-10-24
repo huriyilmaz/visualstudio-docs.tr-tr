@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61772ead029dccaff9b1090a469865fcc3742df6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 791663c04d1c1e79eebaed39d339d8d118ffeaae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666815"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748861"
 ---
 # <a name="outlining"></a>Anahat Oluşturma
 
@@ -48,8 +48,8 @@ Aşağıdaki**komutlar  >  ana** hattı **Düzenle** alt menüsünde bulunabilir
 |Anahat oluşturmayı durdur|(**Ctrl** +**M**, **CTRL** +**P**)-tüm belgeye ilişkin tüm ana hat bilgilerini kaldırır.|
 |Geçerli gizlemeyi durdur|(**Ctrl** +**M**, **CTRL** +**U**)-Şu anda seçili olan Kullanıcı tanımlı bölgenin ana hat bilgilerini kaldırır. Visual Basic ' de kullanılamaz.|
 |Tanımlara Daralt|(**Ctrl** +**M**, **CTRL** +**O**)-tüm türlerin üyelerini daraltır.|
-|Engellemeyi daralt: \<logical sınır >|(Görsel C++) İşlevde ekleme noktasını içeren bir bölgeyi daraltır. Örneğin, ekleme noktası bir döngü içinde yer alıyorsa, döngü gizlenir.|
-|Tüm içinde daralt: \<logical yapıları >|(Görsel C++) İşlev içindeki tüm yapıları daraltır.|
+|Engellemeyi daralt: \<logical sınır >|(C++) Ekleme noktasını içeren işlevdeki bir bölgeyi daraltır. Örneğin, ekleme noktası bir döngü içinde yer alıyorsa, döngü gizlenir.|
+|Tüm içinde daralt: \<logical yapıları >|(C++), İşlev içindeki tüm yapıları daraltır.|
 
 Genişletmek veya daraltmak istediğiniz metin bölgelerini tanımlamak için Visual Studio SDK 'sını de kullanabilirsiniz. Bkz. [Izlenecek yol: Ana hat](../extensibility/walkthrough-outlining.md).
 

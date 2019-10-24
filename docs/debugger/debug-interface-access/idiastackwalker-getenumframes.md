@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalker::getEnumFrames | Microsoft Docs
+title: 'Idiastackdenetçisi:: getEnumFrames | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9011f0becd893fa4ca966c40013844b0be47e46d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cd6f5219edf9426067a4431936caa2186604e1cc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832026"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741546"
 ---
 # <a name="idiastackwalkergetenumframes"></a>IDiaStackWalker::getEnumFrames
-Bir yığın çerçevesi Numaralandırıcı x86 için alır platformlar.
+X86 platformları için bir yığın çerçeve numaralandırıcısı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,19 +34,19 @@ HRESULT getEnumFrames( 
 #### <a name="parameters"></a>Parametreler
  `pHelper`
 
-[in] Yardımcı [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) nesne.
+'ndaki Yardımcı [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) nesnesi.
 
  `ppEnum`
 
-[out] Döndürür bir [Idiaenumstackframes](../../debugger/debug-interface-access/idiaenumstackframes.md) listesini içeren nesne [Idiastackframe](../../debugger/debug-interface-access/idiastackframe.md) nesneleri.
+dışı [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) nesnelerinin bir listesini Içeren bir [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Diğer herhangi bir platformda yığın çerçeve listesini almak için arama [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) yöntemi.
+ Başka herhangi bir platformda yığın çerçeve listesi almak için, [ıdiastackdenetçisi:: getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) yöntemini çağırın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

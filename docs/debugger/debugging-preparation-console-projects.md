@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ddfc17d4f9bcb1f4f2585aa91319f06be6936e6f
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: e92e27b123102cb45069c47ebf9de3971039801d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72431462"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738142"
 ---
 # <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>Hata Ayıklama Hazırlığı: Konsol projeleriC#( C++,, Visual Basic F#,)
 
@@ -57,7 +57,7 @@ Tüm proje özellikleri gibi, bu bağımsız değişkenler hata ayıklama oturum
 
   Visual Studio 'dan bir konsol uygulaması başlattığınızda, **konsol** penceresi bazen Visual Studio penceresinin arkasında görünür. Konsol uygulamanızı Visual Studio 'dan başlatmaya çalışırsanız ve hiçbir şey gerçekleşmezse, Visual Studio penceresini taşımayı deneyin.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)
 - [Projelerde hata ayıklama C++ hazırlığı](../debugger/debugging-preparation-visual-cpp-project-types.md)

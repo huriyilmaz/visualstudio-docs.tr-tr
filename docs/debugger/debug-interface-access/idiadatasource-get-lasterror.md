@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource::get_lasterror | Microsoft Docs
+title: 'IDiaDataSource:: get_lastError | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34954cd32b350a7c5f9c176deffd9943f8e05100
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48595dda70560f555533a1857f73db4d7bd20a86
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554202"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744969"
 ---
-# <a name="idiadatasourcegetlasterror"></a>IDiaDataSource::get_lastError
+# <a name="idiadatasourceget_lasterror"></a>IDiaDataSource::get_lastError
 Son yükleme hatası için dosya adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -33,10 +33,10 @@ HRESULT get_lastError (
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-[out] Son yükleme hatayla ilişkili .pdb dosyasının adını içeren bir dize döndürür.
+dışı Son yükleme hatasıyla ilişkili. pdb dosya adını içeren bir dize döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bir yükleme işlemi nedeniyle son hata kodunu döndürür. Döndürür `E_INVALIDARG` varsa `pRetVal` parametresi `NULL`.
+ Yükleme işleminin neden olduğu son hata kodunu döndürür. @No__t_1 parametresi `NULL` `E_INVALIDARG` döndürür.
 
 ## <a name="example"></a>Örnek
 
@@ -45,5 +45,5 @@ BSTR    fileName;
 HRESULT errorCode = pSource->get_lastError( &fileName );
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

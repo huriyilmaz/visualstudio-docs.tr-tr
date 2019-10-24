@@ -1,5 +1,5 @@
 ---
-title: Vspackage'lardaki kaynaklar | Microsoft Docs
+title: VSPackages 'teki kaynaklar | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,43 +12,43 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3abcfebb7bbcc0eaa6a05760de4531f020b41ddb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 07e1e19f802203b9770764330ea894b7d0eb98b8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318723"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724164"
 ---
 # <a name="resources-in-vspackages"></a>VSPackage’lardaki Kaynaklar
-Yerel Uydu DLL'leri kullanıcı Arabirimi, yönetilen Uydu DLL'leri, veya bir yönetilen VSPackage yerelleştirilmiş kaynaklar ekleyebilirsiniz.
+Yerelleştirilmiş kaynakları yerel uydu UI dll 'Lerine, yönetilen uydu dll 'Lerine veya yönetilen bir VSPackage 'a ekleyebilirsiniz.
 
- Bazı kaynaklar Vspackage'larda eklenemiyor. Aşağıdaki yönetilen türler eklenebilir:
+ Bazı kaynaklar VSPackages içine Katıştırılamaz. Aşağıdaki yönetilen türler gömülebilir:
 
 - Dizeler
 
-- (Bu da dizelerdir) paket yük anahtarları
+- Paket yükleme anahtarları (Ayrıca dizeler)
 
 - Araç penceresi simgeleri
 
-- Derlenmiş komutu tablo çıktı (CTO) dosyaları
+- Derlenen komut tablosu çıkışı (CTO) dosyaları
 
 - CTO bit eşlemler
 
-- Komut satırı Yardımı
+- Komut satırı yardımı
 
-- Hakkında iletişim kutusu verileri
+- İletişim kutusu verileri hakkında
 
-  Yönetilen paket kaynakları kaynak kimliğine göre seçilir. Bir özel durum CTMENU adlandırılmalıdır CTO dosyasıdır. CTO dosyanın kaynak tabloda yer görünmelidir bir `byte[]`. Diğer tüm kaynak öğelerini türe göre tanımlanır.
+  Yönetilen paketteki kaynaklar kaynak KIMLIĞI tarafından seçilir. Özel durum, CTMENU adlı bir CTO dosyasıdır. CTO dosyası kaynak tablosunda bir `byte[]` olarak görünmelidir. Diğer tüm kaynak öğeleri türe göre tanımlanır.
 
-  Kullanabileceğiniz <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> belirtmek için özniteliği [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yönetilen kaynaklar kullanılabilir.
+  Yönetilen kaynakların kullanılabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] olduğunu göstermek için <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> özniteliğini kullanabilirsiniz.
 
   [!code-csharp[VSSDKResources#1](../../extensibility/internals/codesnippet/CSharp/resources-in-vspackages_1.cs)]
   [!code-vb[VSSDKResources#1](../../extensibility/internals/codesnippet/VisualBasic/resources-in-vspackages_1.vb)]
 
-  Ayarı <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> bu şekilde bildiren [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yönetilmeyen Uydu DLL'leri, kaynaklar için örneğin, kullanarak ararken sayılmalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>. Varsa [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] aynı kaynak Kimliğine sahip iki veya daha fazla kaynak karşılaştığında bulduğu ilk kaynak kullanır.
+  Bu şekilde <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> ayarlanması, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], örneğin <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A> kullanarak, kaynak ararken yönetilmeyen uydu dll 'Lerini yoksayması gerektiğini belirtir. @No__t_0 aynı kaynak KIMLIĞINE sahip iki veya daha fazla kaynakla karşılaşırsa, bulduğu ilk kaynağı kullanır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir araç penceresi simge yönetilen bir gösterimidir.
+ Aşağıdaki örnek bir araç penceresi simgesinin yönetilen bir gösterimidir.
 
 ```
 <data name="1001"
@@ -64,7 +64,7 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>
 ```
 
- Aşağıdaki örnek CTMENU adlandırılmalıdır CTO bayt dizisi ekleme gösterir.
+ Aşağıdaki örnek, CTMENU 'nin adlandırılması gereken CTO bayt dizisinin nasıl ekleneceğini gösterir.
 
 ```
 <data name="CTMENU"
@@ -80,11 +80,11 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>
 ```
 
-## <a name="implementation-notes"></a>Uygulama Notları
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] mümkün olduğunda VSPackages yüklenmesini gecikmeler. VSPackage'ı CTO dosya ekleme bir sonuç [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] birleştirilmiş komut tablosu oluşturduğunda, Kurulum sırasında tüm bu tür bellek Vspackage'larda yüklemeniz gerekir. Kaynaklar meta verileri inceleyerek VSPackage içinde kod çalıştırmadan VSPackage ayıklanabilir. VSPackage'ı en düşük performans kaybı, bu nedenle şu anda başlatılamadı.
+## <a name="implementation-notes"></a>Uygulama notları
+ mümkün olduğunda VSPackages yükleme gecikmeleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. CTO dosyasını VSPackage 'a gömmenin bir sonucu, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], birleştirilmiş bir komut tablosu oluşturduğunda, kurulum sırasında bellekte bulunan tüm VSPackages 'leri yüklemesi gerekir. Kaynak, VSPackage 'da kod çalıştırmadan meta verileri inceleyerek VSPackage 'dan ayıklanabilir. VSPackage Şu anda başlatılmaz, bu nedenle performans kaybı en düşük düzeydedir.
 
- Zaman [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage'ı Kur tamamlandıktan sonra kaynaktan isteği, bu paket zaten yüklü ve başlatılmış, olası performans kaybı en az olacak şekilde.
+ @No__t_0 kurulumdan sonra bir VSPackage kaynağından bir kaynak istediğinde, bu paketin daha önce yüklenmiş ve başlatılmış olması, dolayısıyla performans kaybı en düşük olasılıktır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’ları Yönetme](../../extensibility/managing-vspackages.md)
 - [MFC Uygulamalarında Yerelleştirilmiş Kaynaklar: Uydu DLL'leri](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)

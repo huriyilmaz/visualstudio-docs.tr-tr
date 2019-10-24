@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_lengthprolog | Microsoft Docs
+title: 'IDiaFrameData:: get_lengthProlog | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad162a8a29bd9432424ce64d00e820a0bfde1dd9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00b85d1db996487d76d396d6e4df9ea557e6aae5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839959"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743555"
 ---
-# <a name="idiaframedatagetlengthprolog"></a>IDiaFrameData::get_lengthProlog
-Bloğu içindeki kod prolog bayt sayısını alır.
+# <a name="idiaframedataget_lengthprolog"></a>IDiaFrameData::get_lengthProlog
+Bloktaki prolog kodunun bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,13 +33,13 @@ HRESULT get_lengthProlog ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Prolog kodunun bayt sayısını döndürür.
+dışı Prolog kodunun bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Yazmaçları korur, CPU durumu ayarlar ve işlev için yığını kurar bir dizi yönergeleri prolog kodudur.
+ Prolog kodu, kayıtları koruyan, CPU durumunu ayarlayan ve işlevin yığınını oluşturan yönergelerin bir dizisidir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

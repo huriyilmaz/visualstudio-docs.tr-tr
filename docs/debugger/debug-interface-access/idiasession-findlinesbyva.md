@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbyva | Microsoft Docs
+title: 'IDiaSession:: findLinesByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29f3f714cdcbe529dac98948f6568934a6f508af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2513825fd2b6f4e6035f9f23295f0c9f00385d0a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832412"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742071"
 ---
 # <a name="idiasessionfindlinesbyva"></a>IDiaSession::findLinesByVA
-Belirtilen sanal adres (VA) aralığında bulunan satırlar için satır numarası bilgisi alır.
+Belirtilen sanal adres (VA) aralığında yer alan satırlar için satır numarası bilgilerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,18 +35,18 @@ HRESULT findLinesByVA (
 #### <a name="parameters"></a>Parametreler
 `va`
 
-[in] Bir VA. adresini belirtir
+'ndaki Adresi bir VA olarak belirtir.
 
 `length`
 
-[in] Bu sorguyu kapsayacak şekilde adres aralığını bayt sayısını belirtir.
+'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığının bayt sayısını belirtir.
 
 `ppResult`
 
-[out] Döndürür bir [Idiaenumlinenumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) tüm satır listesini içeren nesne belirtilen adres aralığını kapsayan numaralandırır.
+dışı Belirtilen adres aralığını kapsayan tüm satır numaralarının listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.
 
 ## <a name="example"></a>Örnek
-Bu örnek, sanal işlevin adresi ve uzunluğu kullanarak bir işlev içinde yer alan tüm satır numaralarını alır bir işlev gösterir.
+Bu örnek, işlevin sanal adresini ve uzunluğunu kullanarak bir işlevde bulunan tüm satır numaralarını elde eden bir işlevi gösterir.
 
 ```C++
 IDiaEnumLineNumbers *GetLineNumbersByVA(IDiaSymbol *pFunc, IDiaSession *pSession)
@@ -64,6 +64,6 @@ IDiaEnumLineNumbers *GetLineNumbersByVA(IDiaSymbol *pFunc, IDiaSession *pSession
 }
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

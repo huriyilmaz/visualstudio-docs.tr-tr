@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findInlineeLinesByAddr | Microsoft Docs
+title: 'IDiaSymbol:: Findınlineelinesbyaddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ede156a5416ca065a5271ae87abfcfd621f02b26
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 1709120dfa8e115f4b14a4ee4e2d1c7ffb293329
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62837998"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741217"
 ---
 # <a name="idiasymbolfindinlineelinesbyaddr"></a>IDiaSymbol::findInlineeLinesByAddr
-Bir istemci doğrudan veya dolaylı olarak bu sembol belirtilen adres aralığındaki satır içine alınmış, bulunan tüm işlevlerin satır numarası bilgisi yinelemek sağlayan bir sabit listesi alır.
+Bir istemcinin, belirtilen adres aralığı içinde Bu sembolde bulunan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemek için bir sabit listesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,24 +34,24 @@ HRESULT findInlineeLinesByAddr ( 
 #### <a name="parameters"></a>Parametreler
  `isect`
 
-[in] Bölüm bileşeni adresi belirtir.
+'ndaki Adresin bölüm bileşenini belirtir.
 
  `offset`
 
-[in] Adres uzaklık bileşeni belirtir.
+'ndaki Adresin konum bileşenini belirtir.
 
  `length`
 
-[in] Adres aralığı, bu sorguyu kapsayacak şekilde bayt sayısını belirtir.
+'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığını bayt cinsinden belirtir.
 
  `ppResult`
 
-[out] Tutan bir `IDiaEnumLineNumbers` alınan satır numaraları listesi içeren nesne.
+dışı Alınan satır numaralarının listesini içeren `IDiaEnumLineNumbers` nesnesini barındırır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

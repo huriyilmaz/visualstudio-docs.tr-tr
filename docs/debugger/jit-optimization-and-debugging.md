@@ -1,5 +1,5 @@
 ---
-title: JIT iyileştirmesi ve hata ayıklama | Microsoft Docs
+title: JıT Iyileştirme ve hata ayıklama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,37 +16,37 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7346b6fd8fbd483021437638f9e134ead88a0b93
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 12752acf75da70fa30666f9b1780256c94bde859
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62846329"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731616"
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT İyileştirmesi ve Hata Ayıklaması
-**En iyi duruma getirme,. NET'te nasıl:** Kod hatalarını ayıklamak çalışıyorsanız, bu kod olduğunu daha kolay olduğunda **değil** en iyi duruma getirilmiş. Kodun en iyilenmesi, böylece daha hızlı çalışır ancak özgün kaynak kodu doğrudan bir eşlemeye sahip derleyici ve çalışma zamanı yayılan CPU koda değişiklik olmasıdır. Başka bir deyişle, hata ayıklayıcıları yerel değişkenlerin değerini söyleyin ve kod atlama sık belirleyemiyoruz ve kesme noktaları beklediğiniz gibi çalışmayabilir.
+**İyileştirmeler .net 'Te nasıl çalışır:** Kodda hata ayıklamaya çalışıyorsanız, bu kod en iyi duruma **getirilmeyen** daha kolay olur. Bunun nedeni, kodun en iyi duruma getirilmesi, derleyicinin ve çalışma zamanının, daha hızlı çalışması için, ancak özgün kaynak koda daha az doğrudan eşlenmesi için, oluşturulan CPU kodunda değişiklikler yapması. Bu, hata ayıklayıcıların genellikle yerel değişkenlerin değerini bildiremediği, kod adımlaması ve kesme noktaları istediğiniz gibi çalışmayabilir.
 
-Normalde en iyi duruma getirilmiş kod sürüm yapı yapılandırmasını oluşturur ve hata ayıklama yapısı yapılandırması yok. `Optimize` MSBuild özelliği, derleyici kodu en iyi duruma getirme bildirilir olup olmadığını denetler.
+Normalde yayın derleme yapılandırması iyileştirilmiş kod oluşturuyor ve hata ayıklama derleme yapılandırması değil. @No__t_0 MSBuild özelliği, derleyicinin kodu iyileştirip söyetkinleştirilmeyeceğini denetler.
 
-.NET ekosisteminde, iki adımlı bir işlem CPU yönergeleri için kaynak kod etkinleştirilir: ilk C# derleyici, yazdığınız metni MSIL olarak adlandırılan bir ara ikili biçimine dönüştürür ve .dll dosyaları için bu yazıyor. Daha sonra .NET çalışma zamanı bu MSIL yönergeleri CPU dönüştürür. Her iki adım bir dereceye kadar en iyi duruma getirebilirsiniz, ancak daha önemli iyileştirmeler .NET çalışma zamanı tarafından gerçekleştirilen ikinci adım gerçekleştirir.
+.NET ekosisteminde, kod iki adımlı bir işlemde kaynaktan CPU yönergelerine açıktır: ilk olarak, C# derleyici YAZDıĞıNıZ metni MSIL adlı bir ara ikili biçime dönüştürür ve bunu. dll dosyalarına yazar. Daha sonra, .NET çalışma zamanı bu MSIL 'yi CPU yönergelerine dönüştürür. Her iki adım da bir ölçüde iyileştirebilirler, ancak .NET çalışma zamanı tarafından gerçekleştirilen ikinci adım daha önemli iyileştirmeleri gerçekleştirir.
 
-**'Modül yükleme (sadece yönetilen) JIT iyileştirmesini' seçeneği:** Hata ayıklayıcı hedef işlemin içinde iyileştirmeler derlenmiş DLL yüklendiğinde ne olduğunu denetleyen bir seçenek sunar. Bu seçenek işaretli değilse (varsayılan durumu), .NET çalışma zamanı, MSIL kodu CPU koda derlediğinde, iyileştirmeler bırakır. daha sonra. Bu seçenek işaretlenirse, hata ayıklayıcı iyileştirmeleri devre dışı bırakılmasını ister.
+**' Modül YÜKLEMESINDE JIT iyileştirmesini bastır (yalnızca yönetilen) ' seçeneği:** Hata ayıklayıcı, hedef işlemin içinde iyileştirmeler etkinken derlenen bir DLL yüklendiğinde ne olacağını denetleyen bir seçenek sunar. Bu seçenek işaretli değilse (varsayılan durum), .NET çalışma zamanı MSIL kodunu CPU koduna derlediğinde, iyileştirmeler etkin kalır. Seçenek işaretliyse, hata ayıklayıcı iyileştirmelerin devre dışı bırakıldığını ister.
 
-Bulunacak **Modül yükleme (sadece yönetilen) JIT iyileştirmesini** seçeneği için **Araçları** > **seçenekleri**ve ardından  **Genel** altındaki **hata ayıklama** düğümü.
+**Modül YÜKLEMESINDE JIT iyileştirmesini gösterme (yalnızca yönetilen)** seçeneğini bulmak için **Araçlar**  > **Seçenekler**' i seçin ve ardından **hata ayıklama** düğümünün altındaki **genel** sayfasını seçin.
 
-**Olduğunda bu seçeneği işaretleyin:** Bir nuget paketi gibi başka bir kaynaktan DLL'leri indirdiğiniz ve bu DLL kodda hata ayıklama istediğinizde bu seçeneği işaretleyin. Bunun çalışması sırada bu DLL için Sembol (.pdb) dosyası da bulmanız gerekir.
+**Bu seçeneği ne zaman denetlemeniz gerekir:** Bu seçeneği, bir NuGet paketi gibi başka bir kaynaktan dll 'Leri karşıdan yüklerken ve bu DLL 'deki kodda hata ayıklamak istediğinizde işaretleyin. Bunun çalışması için bu DLL için simge (. pdb) dosyasını da bulmanız gerekir.
 
-Yalnızca yerel olarak oluşturmakta olduğunuz kod hata ayıklamaya ilgileniyorsanız, bazı durumlarda, bu seçeneğin etkinleştirilmesi önemli ölçüde hata ayıklama aşağı yavaşlatır gibi bu seçeneği işaretlemeyin en iyisidir. Yavaşlama bunun iki nedeni vardır:
+Yalnızca yerel olarak oluşturmakta olduğunuz kodun hatalarını ayıklamakla ilgileniyorsanız, bazı durumlarda bu seçeneğin etkinleştirilmesi, hata ayıklamanın önemli ölçüde yavaşlamasına neden olur. Bu yavaşlamaya iki neden vardır:
 
-* En iyi duruma getirilmiş kod daha hızlı çalışır. Çok sayıda kod iyileştirmeleri kapatarak, performans etkisini ekleyebilirsiniz.
-* Yalnızca kendi kodum varsa, hata ayıklayıcı bile deneyin ve iyileştirilmiş DLL'leri için sembolleri. Sembol bulma uzun sürebilir.
+* İyileştirilmiş kod daha hızlı çalışır. Birçok kod için iyileştirmeleri devre dışı bırakırsanız, performans etkisi eklenebilir.
+* Yalnızca kendi kodum etkinse, hata ayıklayıcı, iyileştirilmiş dll 'Ler için sembolleri denemez ve yüklemez. Sembolleri bulma uzun zaman alabilir.
 
-**Bu seçenek sınırlamaları:** Burada bu seçeneği olacak iki durum vardır **değil** çalışır:
+**Bu seçeneğin sınırlamaları:** Bu **seçeneğin çalışmacağı** iki durum vardır:
 
-1. Burada hata ayıklayıcı zaten çalışan bir işleme iliştirmekte olduğunuz durumlarda, hata ayıklayıcı iliştirilmiş olduğu sırada zaten yüklenmiş olan modülleri üzerinde hiçbir etkisi bu seçeneğine sahip olursunuz.
-2. Bu seçenek silinmiş DLL'leri üzerinde etkiye sahip değildir (a.k.a Ngen) yerel kod için önceden derlenmiş. Ancak, önceden derlenmiş kod kullanımını '1' değişkeni 'COMPlus_ZapDisable' olarak ayarlanan ortam işlem başlayarak devre dışı bırakabilirsiniz.
+1. Hata ayıklayıcıyı zaten çalışan bir işleme iliştirmekte olduğunuz durumlarda, bu seçeneğin hata ayıklayıcı eklendiği sırada zaten yüklenmiş modüller üzerinde hiçbir etkisi olmayacaktır.
+2. Bu seçeneğin yerel koda önceden derlenmiş (a. k. a NGen) dll 'Leri üzerinde hiçbir etkisi yoktur. Ancak, ' COMPlus_ZapDisable ' ortam değişkeniyle ' 1 ' olarak ayarlanmış işlemi başlatarak önceden derlenmiş kodun kullanımını devre dışı bırakabilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)
 - [Hata Ayıklayıcısı ile Kodlarda gezinme](../debugger/navigating-through-code-with-the-debugger.md)
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)

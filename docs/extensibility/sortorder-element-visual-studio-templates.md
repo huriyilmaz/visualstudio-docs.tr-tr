@@ -14,15 +14,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: edab3547a16f32f3a8177b3efa7a342c4aae5955
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2875bcb4583c1d2ec47a935d1a8bb4f0de109a92
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331854"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72719919"
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder Öğesi (Visual Studio Şablonları)
-Ya da göründüğü gibi aynı kategoride bulunan diğer şablonlar arasında şablonunu düzenlemek için kullanılan bir değer belirtir **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.
+**Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda göründüğü gibi, şablonu düzenlemek için kullanılan bir değeri belirtir.
 
  \<VSTemplate > \<TemplateData > \<SortOrder >
 
@@ -45,22 +45,22 @@ Ya da göründüğü gibi aynı kategoride bulunan diğer şablonlar arasında �
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
- Bir `integer` sıralama sıra değeri temsil eden.
+ Sıralama düzeni değerini temsil eden bir `integer`.
 
 ## <a name="remarks"></a>Açıklamalar
- `SortOrder` İsteğe bağlı bir öğedir. Varsayılan değer 100'dür ve tüm değerlerin 10'ın katları olmalıdır.
+ `SortOrder`, isteğe bağlı bir öğedir. Varsayılan değer 100 ' dir ve tüm değerler 10 ' un katları olmalıdır.
 
- `SortOrder` Öğesi, kullanıcı tarafından oluşturulan şablonlarını için yoksayılır. Tüm kullanıcı tarafından oluşturulan şablonlarını alfabetik olarak sıralanır.
+ @No__t_0 öğesi, Kullanıcı tarafından oluşturulan şablonlar için yok sayılır. Kullanıcı tarafından oluşturulan tüm şablonlar alfabetik olarak sıralanır.
 
- Düşük sıralama sipariş değerleri olan şablonlar görünür ya da **yeni proje** veya **Yeni Öğe Ekle** yüksek sıralama sipariş değerleri olan şablonları önce iletişim kutusu.
+ Düşük sıralama düzeni değerleri olan şablonlar, yüksek sıralama düzeni değerlerine sahip şablonlardan önce **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünür.
 
 ## <a name="example"></a>Örnek
- Standart için meta veriler aşağıdaki örnekte [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıf şablonu.
+ Aşağıdaki örnek, bir standart [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] sınıf şablonu için meta verileri gösterir.
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -79,8 +79,8 @@ Ya da göründüğü gibi aynı kategoride bulunan diğer şablonlar arasında �
 </VSTemplate>
 ```
 
- Bu örnekte, `SortOrder` öğedir görece yüksek. Büyük olasılıkla diğer [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] öğe şablonları sahip olacak bir `SortOrder` tutardan değeri `290` ve bu şablonda önce görünür **yeni öğe** iletişim kutusu.
+ Bu örnekte `SortOrder` öğesi nispeten yüksektir. Diğer [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] öğesi şablonlarının `290` daha düşük bir `SortOrder` değeri olabilir ve **Yeni öğe** iletişim kutusunda Bu şablondan önce görünecektir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve Öğe Şablonları Oluşturma](../ide/creating-project-and-item-templates.md)

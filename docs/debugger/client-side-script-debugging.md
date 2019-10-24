@@ -1,5 +1,5 @@
 ---
-title: İstemci tarafı betikte hata ayıklama | Microsoft Docs
+title: İstemci tarafı betik hata ayıklaması | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,53 +16,53 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1501cd0243d6dc17cc627715eda85e755aec4502
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f9f66d757f5f46530619be1424eb0810ce546ff5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564092"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745707"
 ---
 # <a name="client-side-script-debugging"></a>İstemci Tarafı Betikte Hata Ayıklama
-Visual Studio hata ayıklayıcı, bulma ve ASP.NET sayfaları istemci tarafı betiklerde hataları düzeltmek için kapsamlı bir hata ayıklama ortamı sağlar.
+Visual Studio hata ayıklayıcı, ASP.NET sayfalarındaki istemci tarafı betiklerdeki hataları bulmak ve düzeltmek için kapsamlı bir hata ayıklama ortamı sağlar.
 
-## <a name="opening-script-documents"></a>Komut dosyası belgeleri açma
-Sunucu tarafı ve istemci tarafı komut dosyası belgeleri listesini görebilirsiniz **Çözüm Gezgini** görüntülemek için. Herhangi bir betik belgeden açabileceğiniz **Çözüm Gezgini**. Daha fazla bilgi için [nasıl yapılır: Betik belgelerini görüntüleme](../debugger/how-to-view-script-documents.md).
+## <a name="opening-script-documents"></a>Betik belgelerini açma
+Görüntülenecek **Çözüm Gezgini** sunucu tarafı ve istemci tarafı komut dosyası belgelerinin listesini görebilirsiniz. **Çözüm Gezgini**herhangi bir betik belgesini açabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: betik belgelerini görüntüleme](../debugger/how-to-view-script-documents.md).
 
 ## <a name="breakpoint-mapping"></a>Kesme noktası eşleme
- Visual Studio'da, sunucu tarafı kodu doğrudan hata ayıklaması yapılamıyor, ancak bir sunucu tarafı dosyasında bir kesme noktası ayarlayabilirsiniz. Visual Studio otomatik olarak istemci tarafındaki dosyada karşılık gelen bir konuma kesme noktası eşler ve istemci tarafındaki kodda eşlenmiş bir kesme noktası oluşturur.
+ Visual Studio 'da, sunucu tarafı kodunda doğrudan hata ayıklayamazsınız, ancak sunucu tarafı dosyasında bir kesme noktası ayarlayabilirsiniz. Visual Studio, kesme noktasını istemci tarafı dosyasında karşılık gelen bir konumla otomatik olarak eşler ve istemci tarafı kodunda eşlenmiş bir kesme noktası oluşturur.
 
-## <a name="manually-or-automatically-attaching-to-script"></a>El ile veya otomatik olarak komut dosyasına ekleme
- Betikte hata ayıklamayı başlatmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], hata ayıklayıcının hata ayıklamak istediğiniz komut dosyasına iliştirilmesi gerekir. El ile veya otomatik olarak bu durum oluşabilir.
+## <a name="manually-or-automatically-attaching-to-script"></a>El ile veya otomatik olarak betiğe Iliştirme
+ @No__t_0 betiği hata ayıklamaya başlamak için, hata ayıklayıcının hata ayıklamak istediğiniz betiğe eklemesi gerekir. Bu, el ile veya otomatik olarak gerçekleşebilir.
 
- Kullanarak el ile ekleyebilirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] eklemek istediğiniz çalışan bir komut dosyası işlemini seçmek için hata ayıklayıcı arabirim. Daha fazla bilgi için [nasıl yapılır: Betiğe ekleme](../debugger/how-to-attach-to-script.md).
+ Eklemek istediğiniz çalışan bir betik işlemini seçmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı arabirimini kullanarak el ile iliştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: betiğe iliştirme](../debugger/how-to-attach-to-script.md).
 
- Aşağıdaki şeylerden biri meydana geldiğinde hata ayıklayıcı komut dosyasına otomatik olarak ekler:
+ Aşağıdaki işlemlerden biri gerçekleştiğinde hata ayıklayıcı otomatik olarak betiğe iliştirir:
 
-- Komut dosyasında bir kesme noktasına gidersiniz.
+- Komut dosyasında ayarlanmış bir kesme noktasına ulaşırsınız.
 
-- Bir VBScript `Stop` deyimi veya JScript `debugger` betik kodunuzu deyiminde.
+- Betik kodunuzda bir VBScript `Stop` ifadesine veya JScript `debugger` ifadesine ulaşırsınız.
 
-- Tarayıcı veya sunucu bir söz dizimi karşılaşır veya betiğinizde çalıştırma hatası. Bu durumda, bir iletişim kutusu görünür ve hata ayıklamayı başlatmak için seçeneğiniz vardır.
+- Tarayıcı veya sunucu, betikte bir sözdizimi veya çalışma zamanı hatasıyla karşılaşır. Bu gerçekleştiğinde, bir iletişim kutusu görünür ve hata ayıklamaya Başla seçeneğini vardır.
 
-  El ile betiğe ekleme, betik işlem şekilde durduruluncaya kadar çalışmaya devam eder. Seçerek durdurabilirsiniz **sonu** üzerinde **hata ayıklama** menüsü.
+  Betiğe el ile iliştirtiğinizde, komut dosyası işlemi bir şekilde durduruluncaya kadar çalışmaya devam eder. **Hata Ayıkla** menüsünde **Kes** ' i seçerek bunu kesebilirsiniz.
 
-  Hata ayıklayıcı otomatik olarak ekler, satırında komut dosyası yürütme durdurulur nerede kesme noktası `Stop` deyimi veya `debugger` ifadesinin veya hatanın oluştuğu veya Internet Explorer'da hata ayıklamayı başlatmayı seçtiğiniz noktada.
+  Hata ayıklayıcı otomatik olarak eklendiğinde, komut dosyası yürütme, kesme noktası, `Stop` deyimin veya `debugger` deyimin ya da Hatanın gerçekleştiği veya Internet Explorer 'da hata ayıklamayı başlatmayı seçtiğiniz noktada durdurulur.
 
-  Bu noktada, hata ayıklamayı başlatmak için normal hata ayıklayıcı tesislerini kullanabilirsiniz. Örneğin, kullanabileceğiniz **adım** satır satır kodunuzu yürütmeye devam etmek için komutları. Kullanabileceğiniz **çağrı yığını** komut akışını görüntülemek ve denetlemek için penceresi. Değişken pencerelerini kullanabilirsiniz veya **hemen** penceresi değişkenleri ve özellikleri görüntülemek veya değiştirmek için.
+  Bu noktada, hata ayıklamaya başlamak için normal hata ayıklayıcı tesislerini kullanabilirsiniz. Örneğin, kod satırlarınızı satıra göre yürütmeye devam etmek için **adım** komutlarını kullanabilirsiniz. Betik akışını görüntülemek ve denetlemek için **çağrı yığını** penceresini kullanabilirsiniz. Değişkenleri ve özellikleri görüntülemek veya değiştirmek için Windows veya **hemen** değişken penceresi kullanabilirsiniz.
 
-## <a name="enhanced-error-messages-for-script-debugging"></a>Betik hata ayıklama için geliştirilmiş hata iletileri
- Visual Studio genel betik hata ayıklama sorunları için Gelişmiş hata iletileri sağlar. Internet Explorer'ı el ile eklemediğiniz sürece bu iletiler görüntülenmez. Internet Explorer otomatik olarak açıldığında bir hata koşuluyla karşılaşırsanız, hata iletilerini görebilmeniz için el ile eklemeyi deneyin.
+## <a name="enhanced-error-messages-for-script-debugging"></a>Betik hata ayıklaması için geliştirilmiş hata Iletileri
+ Visual Studio, yaygın betik hata ayıklama sorunları için gelişmiş hata iletileri sağlar. Internet Explorer 'a el ile iliştirmediğiniz sürece bu iletiler görüntülenmez. Internet Explorer otomatik olarak açıldığında bir hata durumuyla karşılaşırsanız, hata iletilerini görebilmeniz için el ile ekleme yapmayı deneyin.
 
-## <a name="debugging-ajax-script-applications"></a>AJAX komut dosyası uygulamalarının hatalarını ayıklama
- AJAX etkinleştirilmiş Web uygulamaları, komut dosyası kodunu yoğun kullanmasına ve özel hata ayıklama zorluklarına neden olur. AJAX hata ayıklama teknikleri hakkında daha fazla bilgi için bkz.
+## <a name="debugging-ajax-script-applications"></a>AJAX betik uygulamalarında hata ayıklama
+ AJAX özellikli Web uygulamaları, komut dosyası kodunun yoğun bir şekilde kullanılmasını sağlar ve özel hata ayıklama zorluklarını yapar. AJAX hata ayıklama teknikleri hakkında daha fazla bilgi için bkz.
 
- [Hata ayıklama ve Ajax uygulamalara genel bakış izleme](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375).
+ [Ajax uygulamalarına genel bakış ve hata ayıklama ve izleme](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375).
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [ASP.NET ve AJAX Uygulamalarında Hata Ayıklama](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)
 - [Betik Hata Ayıklama Sınırlamaları](../debugger/limitations-on-script-debugging.md)
-- [Değişken Windows](../debugger/debugger-windows.md)
+- [Değişken pencereleri](../debugger/debugger-windows.md)
 - [Komut Penceresi](../ide/reference/immediate-window.md)
-- [Hata ayıklama ve izleme Ajax uygulamalara genel bakış](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375)
+- [Ajax uygulamalarında hata ayıklama ve Izleme genel bakış](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375)

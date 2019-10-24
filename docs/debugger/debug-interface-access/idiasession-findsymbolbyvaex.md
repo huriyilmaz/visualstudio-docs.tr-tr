@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbyvaex | Microsoft Docs
+title: 'IDiaSession:: findSymbolByVAEx | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16b62c5efb520e90606d6311b60a839404359720
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56dd91e76380bb4f43fae4f26d4124b2f9bc3ebf
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832369"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741980"
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
-İçeriyor veya belirtilen sanal adres (VA) ve uzaklığı için en yakın olan bir belirtilen simge türü alır.
+Belirtilen bir sanal adresi (VA) ve sapmayı içeren veya en yakın olan belirtilen bir sembol türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,22 +36,22 @@ HRESULT findSymbolByVAEx ( 
 #### <a name="parameters"></a>Parametreler
  `va`
 
-[in] VA. belirtir
+'ndaki VA 'yı belirtir.
 
  `symtag`
 
-[in] Bulunacak simge türü. Değerleri verilerinden alınır [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) sabit listesi.
+'ndaki Bulunan sembol türü. Değerler [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından alınır.
 
  `ppSymbol`
 
-[out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) sembol temsil eden bir nesne alındı.
+dışı Alınan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
  `displacement`
 
-[out] Sanal adres tarafından verilen bir uzaklığı belirten bir değer döndürür `va`.
+dışı @No__t_0 tarafından verilen sanal adresten bir konum belirten bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 
@@ -61,7 +61,7 @@ LONG disp = 0;
 pSession->findSymbolByVAEx( va, SymTagFunction, &pFunc, &disp );
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)
 - [IDiaSession::findSymbolByVA](../../debugger/debug-interface-access/idiasession-findsymbolbyva.md)
