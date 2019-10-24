@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65ea2f4bc06ee1db5042219d1dd3b4bb38f0a80e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 02f6872ef2acaef65bf6ef1b7631bb06c89518ab
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666469"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747869"
 ---
 # <a name="new-file-command"></a>Yeni Dosya Komutu
 Yeni bir dosya oluşturur ve açar. Dosya, Miscellaneous Files klasörünün altında görünür.
@@ -66,7 +66,7 @@ Bu örnekte, "test1. htm" yeni bir Web sayfası oluşturulur ve kaynak kodu düz
 >File.NewFile test1 /t:"General\HTML Page" /e:"Source Code (text) Editor"
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)

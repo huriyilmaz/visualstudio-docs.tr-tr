@@ -1,5 +1,5 @@
 ---
-title: Mevcut koddan bir yapay ZEKA projesi oluşturma
+title: Mevcut koddan bir AI projesi oluşturma
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -7,39 +7,39 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 57003538072c372ce877c40db76922d6eed7397d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0981a276a21e1b3f816c6a182df29f1c4adb0d1c
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62433818"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777450"
 ---
-# <a name="create-an-ai-project-from-existing-code"></a>Mevcut koddan bir yapay ZEKA projesi oluşturma
+# <a name="create-an-ai-project-from-existing-code"></a>Mevcut koddan bir AI projesi oluşturma
 
-Kaydederler [yapay ZEKA için Visual Studio Araçları yüklü](installation.md), varolan bir Python kodu bir Visual Studio projesine getirmek kolaydır.
+[Visual Studio Tools for AI](installation.md)yükledikten sonra, var olan Python kodunu bir Visual Studio projesine getirmek kolaydır.
 
 > [!Important]
-> Burada açıklanan işlemi taşıma veya kopyalama orijinal kaynak dosyalarına desteklemez. Bir kopya ile çalışmak istiyorsanız, klasörü ilk çoğaltma.
+> Burada açıklanan işlem özgün kaynak dosyalarını taşımaz veya kopyalamaz. Bir kopyalama ile çalışmak istiyorsanız önce klasörü çoğaltın.
 
-1. Visual Studio'yu başlatın ve seçin **Dosya > Yeni > Proje**.
+1. Visual Studio 'Yu başlatın ve **dosya > yeni > proje**' yi seçin.
 
-2. İçinde **yeni proje** iletişim, arama "**yapay ZEKA Araçları**" seçin "**alanından mevcut Python kodu**" Şablon, proje adını ve konumunu verin ve seçin**Tamam**.
+2. **Yeni proje** iletişim kutusunda, "**AI araçları**" araması yapın, "**var olan Python kodundan**" şablonu seçin, projeye bir ad ve konum verin ve **Tamam**' ı seçin.
 
-   ![Yeni Proje varolan koddan 1. adım](media/create-project-existing/new-ai-project.png)
+   ![Mevcut koddan yeni proje, 1. adım](media/create-project-existing/new-ai-project.png)
 
-3. Görüntülenen sihirbazında, mevcut kodunuzu yolunu ayarlama, dosya türleri için bir filtre ayarlayın ve projenize gerektirir ve ardından arama yolları belirtin **Tamam**. Hangi arama yolları bilmiyorsanız, bu alanı boş bırakın.
+3. Görüntülenen sihirbazda, mevcut kodunuzun yolunu ayarlayın, dosya türleri için bir filtre ayarlayın ve projenizin gerektirdiği arama yollarını belirtin ve ardından **Tamam**' ı seçin. Hangi arama yollarının olduğunu bilmiyorsanız, bu alanı boş bırakın.
 
-   ![Yeni Proje varolan koddan 2. adım](media/create-project-existing/azurebatch-newproject.png)
+   ![Mevcut koddan yeni proje, adım 2](media/create-project-existing/azurebatch-newproject.png)
 
-   Mevcut kodunuzu Azure Machine Learning projesinin bir parçasıysa denetleyin **olan Azure Machine Learning klasör** deneme gibi önemli Azure Machine Learning yapılandırma ayrıntıları başarıyla dönüştürülmesini sağlamak için Hesap, işlem bağlamları kullanmak için çalışma alanı ve daha fazlası.
+   Mevcut kodunuz bir Azure Machine Learning projesinin parçasıysa, deneme hesabı, çalışma alanı gibi önemli Azure Machine Learning yapılandırma ayrıntılarının başarılı bir şekilde dönüştürülmesini sağlamak için **Azure Machine Learning klasörünü** kontrol edin. kullanım için işlem bağlamları ve daha fazlası.
 
-4. Bir başlangıç dosyası ayarlamak için dosyada bulun **Çözüm Gezgini**, sağ tıklatın ve seçin **başlangıç dosyası olarak ayarla**.
+4. Bir başlangıç dosyası ayarlamak için **Çözüm Gezgini**dosyasında dosyayı bulun, sağ tıklayın ve **başlangıç dosyası olarak ayarla**' yı seçin.
 
-5. Tuşlarına basarak programı çalıştırın **Ctrl**+**F5** veya seçerek **hata ayıklama > hata ayıklama olmadan Başlat**.
+5. Programı, **Ctrl** +**F5** tuşuna basarak veya hata ayıklama **> hata ayıklama olmadan Başlat**' a seçerek çalıştırın.
 
 > [!div class="nextstepaction"]
-> [Öğretici: Visual Studio'da Python ile çalışma](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
+> [Öğretici: Visual Studio 'da Python ile çalışma](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [El ile bir Python ortamı tanımlayın](../python/managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
+- [Mevcut bir Python ortamını el ile tanımla](../python/managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)

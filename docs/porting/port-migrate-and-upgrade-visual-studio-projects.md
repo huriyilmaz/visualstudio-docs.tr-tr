@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 7a348693dcae89c7d27b12f80dd4e21534a7bdec
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 139eb491304e1c83c579919781a6cd24bdf6e1eb
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574143"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777824"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Visual Studio için proje geçiş ve yükseltme başvurusu
 
@@ -47,7 +47,7 @@ Burada listelenen bir proje veya dosya türü görmüyorsanız, bu [makalenin Vi
 
 | Proje Türü | Destek |
 | --- | --- |
-| .NET Core projeleri (xproj) | Visual Studio 2015 ile oluşturulan projeler, bir xproj proje dosyası içeren Önizleme araçları ile birlikte kullanılır.<br/><br/>Visual Studio 2017: xproj biçimi csproj biçimine geçiş için dışında desteklenmez. Bir xproj dosyası açtığınızda dosyayı SDK stili csproj biçimine geçirmeniz istenir. (Xproj dosyasının bir yedeklemesi yapılır.) SDK stili csproj projeleri Visual Studio 2015 ve önceki sürümlerde desteklenmez. <br/><br/>Visual Studio 2019: sürüm 16,3 ve sonraki sürümlerde xproj projelerini yükleyemez veya geçiremezsiniz. Daha fazla bilgi için bkz. [.NET Core projelerini csproj biçimine geçirme](/dotnet/core/migration/#visual-studio).|
+| .NET Core projeleri (xproj) | Visual Studio 2015 ile oluşturulan projeler, bir xproj proje dosyası içeren Önizleme araçları ile birlikte kullanılır. Visual Studio 2017 ' de, xproj biçimi csproj biçimine geçiş için dışında desteklenmez. Bir xproj dosyası açtığınızda dosyayı SDK stili csproj biçimine geçirmeniz istenir. (Xproj dosyasının bir yedeklemesi yapılır.) SDK stili csproj projeleri Visual Studio 2015 ve önceki sürümlerde desteklenmez. Daha fazla bilgi için bkz. [.NET Core projelerini csproj biçimine geçirme](/dotnet/core/migration/#visual-studio).|
 | Application Insights etkin ASP.NET Web uygulaması ve ASP.NET Core Web uygulaması | Her Visual Studio kullanıcısı için, kaynak bilgileri Kullanıcı örneği başına kayıt defterinde depolanır. Bu bilgiler, bir kullanıcı açık bir projesi olmadığında ve Azure Application Insights verilerinde arama yapmak istediğinde kullanılır. Visual Studio 2015, Visual Studio 2017 ' den farklı kayıt defteri konumunu kullanır ve çakışmaz.<br/><br/>Bir Kullanıcı bir ASP.NET Web uygulaması veya ASP.NET Core Web uygulaması oluşturduğunda, kaynak. suo dosyasında depolanır. Kullanıcı Visual Studio 2015 veya 2017 ' de projeyi açabilir ve kaynak bilgileri her iki sürümde de kullanılan projeleri ve çözümleri desteklediği sürece her ikisi için de kullanılır. Kullanıcıların her üründe bir kez kimlik doğrulaması yapması gerekir. Örneğin, bir proje Visual Studio 2015 ile oluşturulduysa ve Visual Studio 2017 ' de açılırsa, kullanıcının Visual Studio 2017 üzerinde kimlik doğrulaması yapması gerekir. |
 | C#/Visual Basic Webform veya Windows Form | Projeyi Visual Studio 2017 ve Visual Studio 2015 ' de açabilirsiniz. |
 | Veritabanı birim testi projeleri (csproj,. vbproj) | Daha eski veri birimi testi projeleri Visual Studio 2017 ' ye yüklenir, ancak bağımlılıkların GAC sürümünü kullanır. Birim testi projesini en son bağımlılıkları kullanacak şekilde yükseltmek için, Çözüm Gezgini ' de projeye sağ tıklayın ve **SQL Server birim testi projesine Dönüştür**' ü seçin... |
@@ -125,11 +125,11 @@ Bu makalede, Visual Studio 2019 ' nin geçirebileceğiniz proje türleri için a
 
 Aşağıdaki listede, Visual Studio 2019 ' de daha önceki sürümlerde oluşturulmuş projeler için destek açıklanmaktadır.
 
-Burada listelenen bir proje veya dosya türü görmüyorsanız, [Bu makalenin Visual Studio 2017 sürümüne](port-migrate-and-upgrade-visual-studio-projects.md) başvurun ve bu sayfanın altındaki  > **Bu sayfayla** **ilgili geri bildirim gönder** düğmesini kullanın. Proje. (Anonim ' i kullanırsanız "Bu sayfa yardımcı olur mu?" Denetim, geri bildiriminiz için yanıt veremedik.)
+Burada listelenen bir proje veya dosya türü görmüyorsanız, [Bu makalenin Visual Studio 2017 sürümüne](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2017)başvurun. Projenizin ayrıntılarını sağlamak için bu sayfanın en altındaki**Bu sayfaya**  >  **hakkında geri bildirim gönder** düğmesini de kullanabilirsiniz. (Anonim ' i kullanırsanız "Bu sayfa yardımcı olur mu?" Denetim, geri bildiriminiz için yanıt veremedik.)
 
 | Proje Türü | Destek |
 | --- | --- |
-| .NET Core projeleri (xproj) | Visual Studio 2015 ile oluşturulan projeler, bir xproj proje dosyası içeren Önizleme araçları ile birlikte kullanılır. Visual Studio 2019 ile bir xproj dosyası açtığınızda dosyayı csproj biçimine geçirmeniz istenir (xproj dosyasının bir yedeklemesi yapılır). .NET Core projeleri için bu csproj biçimi Visual Studio 2015 ve önceki sürümlerde desteklenmez.  Xproj biçimi, Visual Studio 2017 ve üzeri sürümlerde, csproj 'a geçiş için dışında desteklenmez. Daha fazla bilgi için bkz. [.NET Core projelerini csproj biçimine geçirme](/dotnet/core/migration/#visual-studio).|
+| .NET Core projeleri (xproj) | Visual Studio 2015 ile oluşturulan projeler, bir xproj proje dosyası içeren Önizleme araçları ile birlikte kullanılır.<br/><br/>Visual Studio 2017: xproj biçimi csproj biçimine geçiş için dışında desteklenmez. Bir xproj dosyası açtığınızda dosyayı SDK stili csproj biçimine geçirmeniz istenir. (Xproj dosyasının bir yedeklemesi yapılır.) SDK stili csproj projeleri Visual Studio 2015 ve önceki sürümlerde desteklenmez. <br/><br/>Visual Studio 2019: sürüm 16,3 ve sonraki sürümlerde xproj projelerini yükleyemez veya geçiremezsiniz. Daha fazla bilgi için bkz. [.NET Core projelerini csproj biçimine geçirme](/dotnet/core/migration/#visual-studio).|
 | Application Insights etkin ASP.NET Web uygulaması ve ASP.NET Core Web uygulaması | Her Visual Studio kullanıcısı için, kaynak bilgileri Kullanıcı örneği başına kayıt defterinde depolanır. Bu bilgiler, bir kullanıcı açık bir projesi olmadığında ve Azure Application Insights verilerinde arama yapmak istediğinde kullanılır. Visual Studio 2015, Visual Studio 2017 ve Visual Studio 2019 'dan farklı bir kayıt defteri konumu kullanır ve çakışmaz.<br/><br/>Bir Kullanıcı bir ASP.NET Web uygulaması veya ASP.NET Core Web uygulaması oluşturduğunda, kaynak. suo dosyasında depolanır. Kullanıcı Visual Studio 2015, Visual Studio 2017 veya Visual Studio 2019 ' de projeyi açabilir ve Visual Studio her iki sürümde de kullanılan projeleri ve çözümleri desteklediği sürece her biri için kaynak bilgileri kullanılır. Kullanıcıların her üründe bir kez kimlik doğrulaması yapması gerekir. Örneğin, bir proje Visual Studio 2017 ile oluşturulduysa ve Visual Studio 2019 ' de açılırsa, kullanıcının Visual Studio 2019 üzerinde kimlik doğrulaması yapması gerekir. |
 | C#/Visual Basic Webform veya Windows Form | Projeyi Visual Studio 2019, Visual Studio 2017 ve Visual Studio 2015 ' de açabilirsiniz. |
 | Kodlanmış UI testi | Otomatik UI tabanlı işlevsel test için kodlanmış UI testi, Visual Studio 2019 ' de kullanım dışıdır. <br/><br/>Visual Studio 2019, kodlanmış UI testi için son sürüm olacaktır. Web uygulamalarını test etmek için Selenium ve Masaüstü ve UWP uygulamalarını test etmek için WinAppDriver kullanmanız önerilir. |

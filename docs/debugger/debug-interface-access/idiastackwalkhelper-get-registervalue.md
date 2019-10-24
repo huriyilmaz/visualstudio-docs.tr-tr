@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::get_registerValue | Microsoft Docs
+title: 'IDiaStackWalkHelper:: get_registerValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 275941aaf3a1eb2cab6554b18c6d9aa66605121a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bfb3e219012effe47a2352f7c22c6cf51b4617f9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831838"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741413"
 ---
-# <a name="idiastackwalkhelpergetregistervalue"></a>IDiaStackWalkHelper::get_registerValue
-Bir kayıt değeri alır.
+# <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
+Bir kaydın değerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,18 +34,18 @@ HRESULT get_registerValue ( 
 #### <a name="parameters"></a>Parametreler
  `index`
 
-[in] Bir değer [CV_HREG_e numaralandırması](../../debugger/debug-interface-access/cv-hreg-e.md) hangi değerin alınacağı kaydetme belirten sabit listesi.
+'ndaki [CV_HREG_e sabit](../../debugger/debug-interface-access/cv-hreg-e.md) listesi numaralandırmasından değeri hangi kaydın alınacağını belirten bir değer.
 
  `pRetVal`
 
-[out] Kayıt geçerli değerini döndürür.
+dışı Kaydın geçerli değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Boyutu rağmen `pRetVal` parametresi, bir uygulama yalnızca ne kasa normalde tutan depolamanız gerekir. Örneğin, yalnızca düşük 8 bitlik verilen değer 8-bit kayıt tutar. Bu 8-bit değeri, 64-bit Bu yöntemden döndürülen genişletilir.
+ @No__t_0 parametresinin boyutuna rağmen, bir uygulama yalnızca kaydın normal olarak tuttuğu şeyi depolamalıdır. Örneğin, 8 bitlik bir kayıt yalnızca verilen değerin en düşük 8 bitini barındırır. Bu yöntemden döndürülen bu 8 bitlik değer 64-bit olarak genişletilir.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [CV_HREG_e Numaralandırması](../../debugger/debug-interface-access/cv-hreg-e.md)

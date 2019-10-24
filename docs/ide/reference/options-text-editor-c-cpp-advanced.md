@@ -14,12 +14,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5399411998f4a03468f2dedccfd660eaf8de11
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: cbdbadd93eec07c43aba99e40072cb6173e0e83d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461815"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747839"
 ---
 # <a name="options-text-editor-cc-advanced"></a>Seçenekler, Metin Düzenleyici, C/C++, Gelişmiş
 
@@ -52,7 +52,7 @@ Kod gözatma veritabanı bir projede belirtilmemiş dosyalar için veri toplamaz
 
 **Örtük temizlemeyi devre dışı bırak**
 
-Kod gözatma veritabanı artık başvurulmayan örtük dosyaları temizleyemiyor. Bu seçenek, artık kullanıldıklarında örtük dosyaların veritabanından kaldırılmasını önler. Örneğin, kaynak dosyalarından birine MAPI. `#include` h ' ye başvuran bir yönerge eklerseniz, MAPI. h bulunur ve dizine alınır. #İnclude kaldırırsanız ve dosyaya başka bir yerde başvurulmazsa, bu seçeneği seçmediğiniz takdirde onunla ilgili bilgiler silinir. ( **Çözüm aralığını yeniden Tara** seçeneğine bakın.) Çözümü açıkça yeniden taradığınızda Bu seçenek göz ardı edilir.
+Kod gözatma veritabanı artık başvurulmayan örtük dosyaları temizleyemiyor. Bu seçenek, artık kullanıldıklarında örtük dosyaların veritabanından kaldırılmasını önler. Örneğin, kaynak dosyalarınızın birine yönelik MAPI. h öğesine başvuran bir `#include` yönergesi eklerseniz, MAPI. h bulunur ve dizine alınır. #İnclude kaldırırsanız ve dosyaya başka bir yerde başvurulmazsa, bu seçeneği seçmediğiniz takdirde onunla ilgili bilgiler silinir. ( **Çözüm aralığını yeniden Tara** seçeneğine bakın.) Çözümü açıkça yeniden taradığınızda Bu seçenek göz ardı edilir.
 
 **Dış bağımlılıklar klasörlerini devre dışı bırak**
 
@@ -144,11 +144,11 @@ IntelliSense istekleri için herhangi bir anda etkin tutulacak en fazla çeviri 
 
 **#İnclude otomatik tamamlamayı devre dışı bırak**
 
-`#include` Deyimlerin otomatik tamamlamayı devre dışı bırakır.
+@No__t_0 deyimlerinin otomatik tamamlamayı devre dışı bırakır.
 
 **#İnclude otomatik olarak eğik çizgi kullan**
 
-"/" Kullanıldığında `#include` deyimlerin otomatik tamamlamayı tetikler. Varsayılan sınırlayıcı ters eğik çizgi '\'dir. Derleyici her ikisini de kabul edebilir, bu nedenle kod tabanınızı kullanıp kullanmadığını belirtmek için bu seçeneği kullanın.
+"/" Kullanıldığında `#include` deyimlerinin otomatik tamamlanmasını tetikler. Varsayılan sınırlayıcı ters eğik çizgi ' \'. Derleyici her ikisini de kabul edebilir, bu nedenle kod tabanınızı kullanıp kullanmadığını belirtmek için bu seçeneği kullanın.
 
 **Agresif üye listesini devre dışı bırak**
 
@@ -156,7 +156,7 @@ IntelliSense istekleri için herhangi bir anda etkin tutulacak en fazla çeviri 
 
 **Üye listesi anahtar sözcüklerini devre dışı bırak**
 
-,,,,,,, Üye listesi önerilerinde görünmüyor. `void` `class` `switch`
+@No__t_0, `class` `switch` gibi dil anahtar sözcükleri üye listesi önerilerinde görünmez.
 
 **Üye listesi kod parçacıklarını devre dışı bırak**
 
@@ -164,7 +164,7 @@ Kod parçacıkları üye listesi önerilerinde görünmez.
 
 **Üye listesi filtre modu**
 
-Eşleşen algoritmanın türünü ayarlar. Benzer ancak özdeş olan eşleşmeleri bulmak için yazım denetimcisine benzer bir algoritma kullandığından, benzer en olası **eşleşmeleri bulur.** **Akıllı filtreleme** bir sözcüğün başlangıcında olmasalar bile alt dizelerdeki eşleşir. **Ön ek** yalnızca sözcüğün başlangıcında başlayan özdeş alt dizeler üzerinde eşleşir.
+Eşleşen algoritmanın türünü ayarlar. Benzer ancak özdeş olan eşleşmeleri bulmak için yazım denetimcisine benzer bir algoritma kullandığından **, benzer en olası eşleşmeleri bulur.** **Akıllı filtreleme** bir sözcüğün başlangıcında olmasalar bile alt dizelerdeki eşleşir. **Ön ek** yalnızca sözcüğün başlangıcında başlayan özdeş alt dizeler üzerinde eşleşir.
 
 **Anlam renklendirmeyi devre dışı bırak**
 
@@ -206,6 +206,6 @@ Etkinleştirilirse, metin düzenleyicisine ' {' yazarak seçili metni küme ayra
 
 Etkinleştirilirse, metin düzenleyicisine ' (' yazarak seçili metni parantezlerle çevrelemeyi seçebilirsiniz.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dile Özgü Düzenleyici Seçeneklerini Ayarlama](../../ide/reference/setting-language-specific-editor-options.md)

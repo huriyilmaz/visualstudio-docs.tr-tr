@@ -14,12 +14,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6309396877a32233bfe05fff1d2173d1f8765ebb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d7a2e4c789f4bd2637cd4da79d66071cc94d697f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645195"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748606"
 ---
 # <a name="symbol-path-command"></a>Sembol Yolu Komutu
 Hata ayıklayıcının simge araması için dizinlerin listesini ayarlar.
@@ -52,7 +52,7 @@ Bu örnek, geçerli sembol yollarının noktalı virgülle ayrılmış bir liste
 Debug.SymbolPath
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Komut Penceresi](../../ide/reference/command-window.md)
 - [Visual Studio Komutları](../../ide/reference/visual-studio-commands.md)

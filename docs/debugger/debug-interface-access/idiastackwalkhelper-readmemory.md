@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::readMemory | Microsoft Docs
+title: 'IDiaStackWalkHelper:: readMemory | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 530b6c3f6873724f8a8ca06ea4228b017de281f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 57afd033b2d969a4ed57dc713b2c4266e0ead632
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831812"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741355"
 ---
 # <a name="idiastackwalkhelperreadmemory"></a>IDiaStackWalkHelper::readMemory
-Bir veri bloğu bellek yürütülebilir dosyası görüntüden okur.
+Bellek içindeki yürütülebilir dosyanın görüntüsünden bir veri bloğunu okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,27 +37,27 @@ HRESULT readMemory( 
 #### <a name="parameters"></a>Parametreler
  `type`
 
-[in] Bir değer [MemoryTypeEnum numaralandırması](../../debugger/debug-interface-access/memorytypeenum.md) okumak için bellek türünü belirten sabit listesi.
+'ndaki Okunan bellek türünü belirten [MemoryTypeEnum numaralandırma](../../debugger/debug-interface-access/memorytypeenum.md) numaralandırmasından bir değer.
 
- va
+ ka
 
-[in] Sanal adres okumaya başlayacağı görüntüde.
+'ndaki Okumaya başlamak için görüntüdeki sanal adres.
 
  `cbData`
 
-[in] Veri arabelleğin bayt cinsinden boyutu.
+'ndaki Veri arabelleğinin bayt cinsinden boyutu.
 
  `pcbData`
 
-[out] Aslında okunan bayt sayısını döndürür. Varsa `pbData` olduğu `NULL`, sonra bu verilerin kullanılabilir bayt sayısı.
+dışı Gerçekten okunan bayt sayısını döndürür. @No__t_0 `NULL`, bu, kullanılabilir veri baytlarının toplam sayısıdır.
 
  `pbData`
 
-[out içinde] Okuma bellek ile doldurulmuş bir arabellek.
+[in, out] Okunan bellek ile doldurulmuş bir arabellek.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [MemoryTypeEnum Numaralandırması](../../debugger/debug-interface-access/memorytypeenum.md)

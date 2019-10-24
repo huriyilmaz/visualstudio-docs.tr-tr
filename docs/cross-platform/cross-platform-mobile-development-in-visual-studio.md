@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e82828296234b13e36b7d3eabf071071ebb708d
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 7d3df97bf8e180eae99e6ba27466fbde7a8466ad
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589011"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777779"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 'da platformlar arası mobil geliştirme
 
@@ -33,7 +33,7 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
 |**Daha fazla bilgi edinin**|
 |--------------------|
-|[Visual Studio 'yu](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com) yükler|
+|[Visual Studio 'yu](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com) yükler|
 |[Visual Studio 'Da Xamarin hakkında bilgi edinin](https://visualstudio.microsoft.com/xamarin/) (VisualStudio.com)|
 |[Xamarin mobil uygulama geliştirme belgeleri](/xamarin/) |
 |[Xamarin uygulamalarıyla DevOps](/xamarin/tools/ci/devops/) |
@@ -108,9 +108,9 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
 |**Daha fazla bilgi edinin**|
 |--------------------|
-|[Visual Studio 'yu](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com) yükler|
+|[Visual Studio 'yu](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com) yükler|
 |[Apache Cordova için Visual Studio Araçları kullanmaya başlama](/visualstudio/cross-platform/tools-for-cordova/)|
-|[Android Için Visual Studio öykünücüsü (VisualStudio.com) hakkında bilgi edinin](http://visualstudio.microsoft.com/explore/msft-android-emulator-vs)|
+|[Android Için Visual Studio öykünücüsü (VisualStudio.com) hakkında bilgi edinin](https://visualstudio.microsoft.com/vs/msft-android-emulator/)|
 
 ::: moniker-end
 
@@ -140,7 +140,7 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 
 |**Daha fazla bilgi edinin**|
 |--------------------|
-|[Visual Studio 'Yu indirin](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com)|
+|[Visual Studio 'Yu indirin](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
 |[İle platformlar arası mobil geliştirmeC++](install-visual-cpp-for-cross-platform-mobile-development.md)|
 |[Birden çok platformu hedeflemek C++ için kullanma hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
 |[İhtiyaç duyduğunuz şeyi yükler ve ardından Android için yerel bir etkinlik uygulaması oluşturun](create-an-android-native-activity-app.md)|
@@ -163,10 +163,10 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 |[Unity için Visual Studio Araçları hakkında daha fazla bilgi edinin](../cross-platform/visual-studio-tools-for-unity.md) |
 |[Unity için Visual Studio Araçları kullanmaya başlayın](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) |
 |[Unity için Visual Studio Araçları 2,0 önizlemesine yönelik en son geliştirmeler hakkında bilgi edinin](https://devblogs.microsoft.com/visualstudio/visual-studio-tools-for-unity-2-0-preview/) (Visual Studio blogu)|
-|[Unity için Visual Studio Araçları 2,0 önizlemesine bir video tanıtımı izleyin](http://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) (video)|
-|[Unity hakkında bilgi edinin](http://unity3d.com/) (Unity Web sitesi)|
+|[Unity için Visual Studio Araçları 2,0 önizlemesine bir video tanıtımı izleyin](https://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) (video)|
+|[Unity hakkında bilgi edinin](https://unity.com/) (Unity Web sitesi)|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio projesine Office 365 API 'Leri ekleme](https://docs.microsoft.com/office/developer-program/office-365-developer-program)
 - [Azure Uygulama Hizmetleri-Mobile Apps](https://azure.microsoft.com/services/app-service/mobile/)

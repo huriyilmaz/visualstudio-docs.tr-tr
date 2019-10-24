@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8343f3a417c0c435711fb1df337d47c3a747905
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 37255345c1d394130872dc65a8568309a3091347
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653802"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747570"
 ---
 # <a name="domain-path-syntax"></a>Etki Alanı Yolu Sözdizimi
 DSL tanımları bir modeldeki belirli öğeleri bulmak için XPath benzeri bir sözdizimi kullanır.
@@ -35,6 +35,6 @@ DSL tanımları bir modeldeki belirli öğeleri bulmak için XPath benzeri bir s
 
  Öğe-bağlantı atlama için kullandığınız ad, rol `Property Name` değeridir. Öğe bağlantısı atlaması için kullandığınız ad, hedef rol adıdır.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Modelleri, Sınıfları ve İlişkileri Anlama](../modeling/understanding-models-classes-and-relationships.md)

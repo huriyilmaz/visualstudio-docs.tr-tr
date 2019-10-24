@@ -9,12 +9,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: a81c1869bf7587aa30dbc02f0e9aec4c97776e5f
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: fb296346d54b0774bdd9a738581ee28fe99b1de0
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918037"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777478"
 ---
 # <a name="installation"></a>Yükleme
 
@@ -26,7 +26,7 @@ Bu uzantı, Visual Studio 2015 ve Visual Studio 2017, Community Edition veya üz
 
 Araçları [Visual Studio Market](https://aka.ms/vstoolsforai)veya Visual Studio içinden indirebilirsiniz:
 
-1. **Araçlar** > **Uzantılar ve Güncelleştirmeler '** i seçin.
+1. **Araçlar**  > **Uzantılar ve Güncelleştirmeler '** i seçin.
 
    ![Visual Studio 'da Uzantılar ve güncelleştirmeler menüsü](media/installation/extensions.png)
 
@@ -44,7 +44,7 @@ Yerel bilgisayarınızdaki derinlemesine öğrenme modellerini öğreticmadan ö
 
 ### <a name="nvidia-gpu-driver"></a>NVıDıA GPU sürücüsü
 
-Derin öğrenme çerçeveleri, makinelerin bir hız, doğruluk ve gerçek yapay zeka doğru ölçeklenebilmesini sağlamak için NVıDıA GPU avantajlarından yararlanır. Bilgisayarınızda NVıDıA GPU kartları varsa bkz. [NVIDIA sürücü indirmeleri](http://www.nvidia.com/Download/index.aspx) veya en son sürücüyü yüklemek için bir işletim sistemi güncelleştirmesi deneyin.
+Derin öğrenme çerçeveleri, makinelerin bir hız, doğruluk ve gerçek yapay zeka doğru ölçeklenebilmesini sağlamak için NVıDıA GPU avantajlarından yararlanır. Bilgisayarınızda NVıDıA GPU kartları varsa bkz. [NVIDIA sürücü indirmeleri](https://www.nvidia.com/Download/index.aspx) veya en son sürücüyü yüklemek için bir işletim sistemi güncelleştirmesi deneyin.
 
 ### <a name="cuda"></a>CUDA
 
@@ -60,7 +60,7 @@ CUDA 'yi yüklemek için
 
 ### <a name="cudnn"></a>cuDNN
 
-[Cudnn](https://developer.nvidia.com/cudnn) (CUDA derin sinir ağ kitaplığı), NVıDıA tarafından derin sinir ağlarının temel elemanlarına yönelik GPU hızlandırmalı bir kitaplıktır. cuDNN V6, en son derin öğrenme çerçeveleri için gereklidir.
+[Cudnn](https://developer.nvidia.com/cudnn) (CUDA derin sinir ağ kitaplığı), NVIDIA tarafından derin sinir ağlarının temel ELEMANLARıNA yönelik GPU hızlandırmalı bir kitaplıktır. cuDNN V6, en son derin öğrenme çerçeveleri için gereklidir.
 
 CuDNN 'yi yüklemek için:
 
@@ -82,7 +82,7 @@ Python, derin öğrenme uygulamaları için birincil programlama dilidir. **64 b
 
 Derin öğrenme çerçeveleri kendi yüklemeleri için PIP kullanır.
 
-![Windows üzerinde Python'ı yükleyin](media/installation/install_python_win.png)
+![Windows 'a Python 'u yükler](media/installation/install_python_win.png)
 
 Daha sonra, Python 3,5 ' in doğru yüklenip yüklenmediğini doğrulamanız ve bir terminalde aşağıdaki komutları yürüterek PIP 'yi en son sürüme yükseltmek gerekir:
 
@@ -128,7 +128,7 @@ pip3.5 install -U numpy scipy
 ```
 
 > [!NOTE]
-> Yukarıdaki komut, var olan eski veya resmi olmayan (örneğin, Windows http://www.lfd.uci.edu/~gohlke/pythonlibs/ için üçüncü taraf paketleri) sayısal tuş a ve SciPy 'yi en son resmi olanlara yükseltir.
+> Yukarıdaki komut, var olan eski veya resmi olmayan (örneğin, Windows için http://www.lfd.uci.edu/~gohlke/pythonlibs/ üçüncü taraf paketleri) sayısal tuş a ve SciPy 'yi en son resmi olanlara yükseltir.
 
 ### <a name="microsoft-cognitive-toolkit-cntk"></a>Microsoft Cognitive Toolkit (CNTK)
 
@@ -156,7 +156,7 @@ Kaynak koddan derlemek için [burayı](https://caffe2.ai/docs/getting-started.ht
 
 ### <a name="mxnet"></a>MXNet
 
-[Apache MXNet (ınubating)](https://mxnet.incubator.apache.org/) , verimlilik ve esneklik için tasarlanan derin bir öğrenme çerçevesidir. Verimliliği ve verimliliği en üst düzeye çıkarmak için [sembolik ve kesinlik temelli programlama](http://mxnet.io/architecture/index.html#deep-learning-system-design-concepts) karışmanızı sağlar.
+[Apache MXNet (ınubating)](https://mxnet.incubator.apache.org/) , verimlilik ve esneklik için tasarlanan derin bir öğrenme çerçevesidir. Verimliliği ve verimliliği en üst düzeye çıkarmak için [sembolik ve kesinlik temelli programlama](http://mxnet.io/architecture/index.html#deep-learning-system-design-concepts) **karışmanızı** sağlar.
 
 MXNet ' i yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
 
@@ -184,7 +184,7 @@ pip3.5 install Keras==2.0.9
 
 ### <a name="theano"></a>Theano
 
-[](http://deeplearning.net/software/theano/) Bu, çok boyutlu dizileri verimli bir şekilde tanımlamanıza, iyileştirmenize ve değerlendirmenize olanak tanıyan bir Python kitaplığıdır.
+Bu [, çok](http://deeplearning.net/software/theano/) boyutlu dizileri verimli bir şekilde tanımlamanıza, iyileştirmenize ve değerlendirmenize olanak tanıyan bir Python kitaplığıdır.
 
 Ano yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
 
@@ -194,7 +194,7 @@ pip3.5 install Theano==0.9.0
 
 ### <a name="pytorch"></a>PyTorch
 
-[Pytorch](http://pytorch.org/) , iki üst düzey Özellik sağlayan bir Python paketidir:
+[Pytorch](https://pytorch.org/) , iki üst düzey Özellik sağlayan bir Python paketidir:
 
 - Güçlü GPU hızlandırma ile Tensor hesaplaması (sayısal tuş takımı gibi)
 - Bant tabanlı bir oto sistem sisteminde oluşturulan derin sinir ağları
@@ -222,7 +222,7 @@ PyTorch 'yi yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
   > [!NOTE]
   > macOS ikilileri CUDA 'yi desteklemez, CUDA gerekliyse kaynaktan yüklenir
 
-- **Linux**
+- **'Un**
 
   ```bash
   pip3.5 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl

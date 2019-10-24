@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3395e0c3c2eb47e1e8c1a0c393b822f70de0c7ed
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7f62852550c161566832a7ab78d4058d1d14028f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72610912"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748718"
 ---
 # <a name="list-call-stack-command"></a>Çağrı Yığınını Listele Komutu
 Geçerli çağrı yığınını görüntüler.
@@ -108,7 +108,7 @@ geçerli yığın çerçevesini ikinci çerçeveye ayarlamak için.
 >Debug.CallStack /Count:4 /ShowTypes:yes
 ```
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ayrıştırılmış Kodu Listele Komutu](../../ide/reference/list-disassembly-command.md)
 - [İş Parçacıklarını Listele Komutu](../../ide/reference/list-threads-command.md)

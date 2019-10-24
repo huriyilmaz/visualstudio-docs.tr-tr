@@ -12,47 +12,47 @@ dev_langs:
 - C++
 - jsharp
 helpviewer_keywords:
-- XSD task (MSBuild (Visual C++))
-- MSBuild (Visual C++), XSD task
+- XSD task (MSBuild (C++))
+- MSBuild (C++), XSD task
 ms.assetid: 15c99f5c-7124-4bbc-bc03-70c7bcce8893
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6e96325edd3a17a09437e093590cc02a55504a5
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ec51406aec9aec8981e5517480e4cd07bc80ffb1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825824"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748020"
 ---
 # <a name="xsd-task"></a>XSD görevi
-XML şema tanımı aracı sarmalar (*XSD.exe'nin*), bir kaynaktan şema ya da sınıf dosyaları oluşturur.
+Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracı 'nı (*XSD. exe*) sarmalanmış olarak kaydırır.
 
 > [!NOTE]
-> Visual Studio 2017'den itibaren C++ proje desteği *XSD.exe'nin* kullanım dışı bırakılmıştır. Kullanmaya devam edebilirsiniz **Microsoft.VisualC.CppCodeProvider** el ile ekleyerek API'leri *CppCodeProvider.dll* GAC'ye.
+> Visual Studio 2017 ' den başlayarak C++ , *XSD. exe* için proje desteği kullanım dışıdır. *Cppcodeprovider. dll dosyasını* el ile GAC 'ye ekleyerek **Microsoft. VisualC. cppcodeprovider** API 'lerini kullanmaya devam edebilirsiniz.
 
 ## <a name="parameters"></a>Parametreler
- Parametreleri aşağıdaki tabloda açıklanmıştır **XSD** görev.
+ Aşağıdaki tabloda, **XSD** görevinin parametreleri açıklanmaktadır.
 
 - **AdditionalOptions**
 
      İsteğe bağlı **dize** parametresi.
 
-     Komut satırında belirtilen seçeneklerin bir listesi. Örneğin, /\<Seçenek1 > /\<Seçenek2 > /\<seçeneği #>. Diğer tarafından temsil edilmez seçeneklerini belirtmek için bu parametreyi kullanın **XSD** görev parametresi.
+     Komut satırında belirtilen seçeneklerin listesi. Örneğin,/\<option1 >/\<option2 >/\<option # >. Başka bir **XSD** görev parametresi tarafından temsil edilmeyen seçenekleri belirtmek için bu parametreyi kullanın.
 
 - **GenerateFromSchema**
 
   İsteğe bağlı **dize** parametresi.
 
-  Belirtilen şemadan oluşturulan türler belirtir.
+  Belirtilen şemadan oluşturulan türleri belirtir.
 
-  Her biri bir XSD seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.
+  Her biri bir XSD seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **sınıflar** -   **/sınıfları**
+  - **sınıflar**  -  **/Classes**
 
-  - **veri kümesi** -   **/DataSet**
+  - **veri kümesi**  -  **/DataSet**
 
 - **Dil**
 
@@ -60,31 +60,31 @@ XML şema tanımı aracı sarmalar (*XSD.exe'nin*), bir kaynaktan şema ya da s�
 
      Oluşturulan kod için kullanılacak programlama dilini belirtir.
 
-     Aralarından seçim **CS** (C#, varsayılan değerdir), **VB** (Visual Basic) veya **JS** (JScript). Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.
+     **CS** C#(varsayılan olan), **vb** (Visual Basic) veya **js** (JScript) arasından seçim yapın. Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.
 
-- **Namespace**
+- **Uzayına**
 
      İsteğe bağlı **dize** parametresi.
 
      Oluşturulan türleri için çalışma zamanı ad alanını belirtir.
 
-- **Kaynakları**
+- **Ğına**
 
      Gerekli `ITaskItem[]` parametresi.
 
-     Tüketilen ve görevler tarafından yayılan MSBuild kaynak dosya öğeleri bir dizisi tanımlanmaktadır.
+     Görevler tarafından tüketilen ve yayılmakta olabilecek bir MSBuild kaynak dosya öğeleri dizisini tanımlar.
 
 - **SuppressStartupBanner**
 
-     İsteğe bağlı **Boole** parametresi.
+     İsteğe bağlı **Boolean** parametresi.
 
-     Varsa `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini engeller.
+     @No__t_0, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.
 
 - **TrackerLogDirectory**
 
      İsteğe bağlı **dize** parametresi.
 
-     İzleyici günlüğü dizini belirtir.
+     İzleyici günlüğü için dizini belirtir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
