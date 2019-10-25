@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 53b87ce39f0eb5b1455f0a38b2aea7cc6b604342
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6efcd0ca4e8274df7667b5a5b2b75020def8c358
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648523"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807020"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio 'da Entity Framework Tools
 
@@ -39,9 +39,9 @@ Visual Studio 'da Entity Framework araçları oluşturan özel araçlar şunlard
 - Temel veritabanında değişiklik yapıldığında kavramsal modelinizi, depolama modelinizi ve eşlemelerinizi güncelleştirmek için **model güncelleştirme sihirbazını** kullanabilirsiniz.
 
   > [!NOTE]
-  > Visual Studio 2010 ' den başlayarak Entity Framework araçları [!INCLUDE[ss2k](../data-tools/includes/ss2k_md.md)] desteklemez.
+  > Visual Studio 2010 ' den başlayarak Entity Framework araçları [!INCLUDE[ss2k](../data-tools/includes/ss2k_md.md)]desteklemez.
 
-Araçlar bir *. edmx* dosyası oluşturur veya değiştirir. Bu *. edmx* dosyası kavramsal modeli, depolama modelini ve bunlar arasındaki eşlemeleri açıklayan bilgiler içerir. Daha fazla bilgi için bkz. [edmx](https://docs.microsoft.com/ef/ef6/).
+Araçlar bir *. edmx* dosyası oluşturur veya değiştirir. Bu *. edmx* dosyası kavramsal modeli, depolama modelini ve bunlar arasındaki eşlemeleri açıklayan bilgiler içerir. Daha fazla bilgi için bkz. [edmx](/ef/ef6/).
 
 [Entity Framework güç araçları](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4) , varlık veri modeli kullanan uygulamalar oluşturmanıza yardımcı olur. Güç araçları kavramsal model oluşturabilir, var olan bir modeli doğrulayabilir, kavramsal modeli temel alan nesne sınıfları içeren kaynak kodu dosyaları üretebilir ve modelin oluşturduğu görünümleri içeren kaynak kodu dosyaları üretebilir. Ayrıntılı bilgi için bkz. [önceden oluşturulmuş eşleme görünümleri](https://docs.microsoft.com/ef/ef6/fundamentals/performance/pre-generated-views).
 
@@ -50,8 +50,8 @@ Araçlar bir *. edmx* dosyası oluşturur veya değiştirir. Bu *. edmx* dosyas�
 | Başlık | Açıklama |
 | - | - |
 | [ADO.NET Entity Framework](/dotnet/framework/data/adonet/ef/index) | Uygulamaları oluşturmak için [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)] sağladığı [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] araçların nasıl kullanılacağını açıklar. |
-| [Varlık Veri Modeli](/dotnet/framework/data/adonet/entity-data-model) | @No__t_0 oluşturulan uygulamalar tarafından kullanılan verilerle çalışmaya yönelik bağlantılar ve bilgiler sağlar. |
-| [Entity Framework (EF) belgeleri)](https://docs.microsoft.com/ef/ef6/get-started) | Entity Framework en iyi duruma getirmenize yardımcı olmak için bir videolar, öğreticiler ve gelişmiş belge dizini sağlar. |
+| [Varlık Veri Modeli](/dotnet/framework/data/adonet/entity-data-model) | [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]oluşturulan uygulamalar tarafından kullanılan verilerle çalışmaya yönelik bağlantılar ve bilgiler sağlar. |
+| [Entity Framework (EF) belgeleri)](/ef/ef6/get-started) | Entity Framework en iyi duruma getirmenize yardımcı olmak için bir videolar, öğreticiler ve gelişmiş belge dizini sağlar. |
 | [ASP.NET 5 uygulamasını yeni veritabanına](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html) | Entity Framework 7 kullanarak yeni bir ASP.NET 5 uygulamasının nasıl oluşturulduğunu açıklar. |
 
 ## <a name="see-also"></a>Ayrıca bkz.

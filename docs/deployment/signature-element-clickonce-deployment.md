@@ -1,5 +1,5 @@
 ---
-title: '&lt;İmza&gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+title: '&lt;Signature&gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c636a4178cf278c2bb0ad75f4e78b94758dda30
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f69dcec6bbee5358184b74a71274cb26e4de60b3
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62927495"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806837"
 ---
-# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;İmza&gt; öğesi (ClickOnce dağıtımı)
-Bu dağıtım bildirimi dijital olarak imzalamak için gereken bilgileri içerir.
+# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Signature&gt; öğesi (ClickOnce dağıtımı)
+Bu dağıtım bildirimini dijital olarak imzalamak için gereken bilgileri içerir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,12 +34,12 @@ Bu dağıtım bildirimi dijital olarak imzalamak için gereken bilgileri içerir
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Zarf imza kullanarak bir dağıtım bildirimi imzalama isteğe bağlıdır ancak önerilir. World Wide Web Consortium anlatıldığı öneri, "Podpisu XML sözdizimi ve işleme," XML dosyalarını imzalama hakkında daha fazla bilgi için bkz. [ http://www.w3.org/TR/xmldsig-core/ ](http://www.w3.org/TR/xmldsig-core/).
+ Bir zarf imzasını kullanarak bir dağıtım bildirimini imzalama isteğe bağlıdır, ancak önerilir. XML dosyalarını imzalama hakkında daha fazla bilgi için, [http://www.w3.org/TR/xmldsig-core/](https://www.w3.org/TR/xmldsig-core/)açıklanan World Wide Web Konsorsiyumu önerisi, "XML imzası sözdizimi ve işleme" başlığına bakın.
 
- Bildiriminizdeki oturum açmak istiyorsanız, tüm dosyalar için karmaları sağlanmalıdır. Kullanıcılar bütün dosyalarının içeriğini doğrulayamadığı için karma olmayan dosyaları içeren bir bildirimi imzalanamıyor.
+ Bildiriminizi imzalamak istiyorsanız tüm dosyalar için karmaların sağlanması gerekir. Karma olmayan dosyaları olan bir bildirim, kullanıcılar karma olmayan dosyaların içeriğini doğrulayamadığından imzalanamıyor.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneğinde gösterilmiştir bir `Signature` kullanılan bir dağıtım bildirimi öğesinde bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım.
+ Aşağıdaki kod örneği, bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımında kullanılan bir dağıtım bildiriminde bir `Signature` öğesi gösterir.
 
 ```xml
 <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">

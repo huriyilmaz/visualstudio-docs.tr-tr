@@ -1,6 +1,6 @@
 ---
 title: Derleme Olayları Sayfası, Proje Tasarımcısı (C#)
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology: vs-ide-compile
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba429c116d44a5d79d935fe3a1ad07b6d5f36f79
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: cca0ec0491d7a2c513f8bc52acaadf7c80d7fd22
+ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461846"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72789833"
 ---
 # <a name="build-events-page-project-designer-c"></a>Derleme Olayları Sayfası, Proje Tasarımcısı (C#)
 
-Yapı yapılandırma yönergelerini belirtmek için **Proje Tasarımcısı** ' nın **Olayları oluştur** sayfasını kullanın. Ayrıca, herhangi bir oluşturma sonrası olayının çalıştırıldığı koşulları belirtebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Derleme olaylarını (C#)](../../ide/how-to-specify-build-events-csharp.md)ve [nasıl yapılacağını belirtin: Derleme olaylarını belirtin (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md).
+Yapı yapılandırma yönergelerini belirtmek için **Proje Tasarımcısı** ' nın **Olayları oluştur** sayfasını kullanın. Ayrıca, herhangi bir oluşturma sonrası olayının çalıştırıldığı koşulları belirtebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: derleme olaylarını belirtmeC#()](../../ide/how-to-specify-build-events-csharp.md) ve [nasıl yapılır: derleme olaylarını belirtme (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md).
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
@@ -49,7 +49,7 @@ Yapı başlamadan önce yürütülecek komutları belirtir. Uzun komutları yazm
 Yapı bittikten sonra yürütülecek komutları belirtir. Uzun komutları yazmak için derleme sonrası **olay/oluşturma sonrası olay komut satırı Iletişim kutusunu**göstermek üzere **derlemeyi Düzenle** ' ye tıklayın.
 
 > [!NOTE]
-> . Bat `call` dosyalarını çalıştıran tüm derleme sonrası komutlarının önüne bir ifade ekleyin. Örneğin, `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat`.
+> . Bat dosyalarını çalıştıran tüm derleme sonrası komutları önüne bir `call` ekstresi ekleyin. Örneğin, `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat`.
 
 **Oluşturma sonrası olayını Çalıştır**
 
@@ -57,13 +57,40 @@ Aşağıdaki tabloda gösterildiği gibi, oluşturma sonrası olayının çalı�
 
 |Seçenek|Sonuç|
 |------------|------------|
-|**Her zaman**|Oluşturma sonrası olay, yapılandırmanın başarılı olup olmamasına bakılmaksızın çalışacaktır.|
+|**Her**|Oluşturma sonrası olay, yapılandırmanın başarılı olup olmamasına bakılmaksızın çalışacaktır.|
 |**Başarılı derleme üzerinde**|Oluşturma sonrası olay, derleme başarılı olursa çalışır. Bu nedenle, derleme başarılı olduğu sürece olay, güncel olan bir proje için de çalışır.|
 |**Derleme proje çıkışını güncelleştirdiğinde**|Oluşturma sonrası olay, yalnızca derleyicinin çıkış dosyası (. exe veya. dll) önceki derleyici çıkış dosyasından farklı olduğunda çalışır. Bu nedenle, bir proje güncel ise, derleme sonrası bir olay çalıştırılmaz.|
 
+## <a name="in-the-project-file"></a>Proje dosyasında
+
+Visual Studio 'nun önceki sürümlerinde, IDE 'deki **PreBuildEvent** veya **PostBuildEvent** ayarını değiştirdiğinizde, Visual studio proje dosyasına bir `PreBuildEvent` veya `PostBuildEvent` özelliği ekler. Örneğin, IDE 'deki **PreBuildEvent** komut satırı ayarınız aşağıdaki gibidir:
+
+```input
+"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"
+```
+
+ardından proje dosyası ayarı:
+
+```xml
+<PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)" />
+</PropertyGroup>
+```
+
+Visual Studio 2019 (ve daha yeni güncelleştirmelerde Visual Studio 2017) **PreBuildEvent** ve **PostBuildEvent** ayarları için `PreBuild` veya `PostBuild` adlı bir MSBuild hedefi ekler. Örneğin, önceki örnekte, Visual Studio artık aşağıdaki kodu oluşturuyor:
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+```
+
+> [!NOTE]
+> Bu proje dosyası değişiklikleri SDK stili projelerini desteklemek için yapılmıştır. Eski biçimden bir proje dosyasını SDK stili biçimine el ile geçiriyorsanız, `PreBuildEvent` ve `PostBuildEvent` özelliklerini silip önceki kodda gösterildiği gibi `PreBuild` ve `PostBuild` hedeflerle değiştirmelisiniz. Projenizin SDK stili bir proje olup olmadığını nasıl söyleyeceğinizi öğrenmek için bkz. [Proje biçimini denetle](/nuget/resources/check-project-format).
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Derleme Olayları Belirtme (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
-- [Nasıl yapılır: Derleme Olayları Belirtme (C#)](../../ide/how-to-specify-build-events-csharp.md)
+- [Nasıl Yapılır: Derleme Olayları Belirtme (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
+- [Nasıl Yapılır: Derleme Olayları Belirtme (C#)](../../ide/how-to-specify-build-events-csharp.md)
 - [Proje Özellikleri Başvurusu](../../ide/reference/project-properties-reference.md)
 - [Derleme ve Oluşturma](../../ide/compiling-and-building-in-visual-studio.md)

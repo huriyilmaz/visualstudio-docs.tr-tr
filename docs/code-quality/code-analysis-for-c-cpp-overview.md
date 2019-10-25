@@ -21,16 +21,16 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a20637b7c7c3afcf594d1498b6030c685e4be72
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 515b9b7eb1b1a4d2dbee6329be782386b8370338
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163059"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806314"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ Overview için kod analizi
 
-C/C++ Code çözümleme aracı, c/C++ kaynak kodunuzda olası arızaların bilgilerini sağlar. Araç tarafından bildirilen yaygın kodlama hataları, arabellek taşmaları, Başlatılmamış bellek, null işaretçi başvurusu ve bellek ve kaynak sızıntılarını içerir. Araç ayrıca [ C++ temel yönergelere](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)karşı denetimleri de çalıştırabilir.
+C/C++ Code çözümleme aracı, c/C++ kaynak kodunuzda olası arızaların bilgilerini sağlar. Araç tarafından bildirilen yaygın kodlama hataları, arabellek taşmaları, Başlatılmamış bellek, null işaretçi başvurusu ve bellek ve kaynak sızıntılarını içerir. Araç ayrıca [ C++ temel yönergelere](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)karşı denetimleri de çalıştırabilir.
 
 ## <a name="ide-integrated-development-environment-integration"></a>IDE (tümleşik geliştirme ortamı) Tümleştirmesi
 
@@ -50,7 +50,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>#pragma desteği
 
-Uyarıları hata olarak değerlendirmek için `#pragma` yönergesini kullanabilirsiniz; uyarıları etkinleştirin veya devre dışı bırakın ve tek satırlık kod satırları için uyarıları gizleyin. Daha fazla bilgi için bkz. [pragma yönergeleri ve __Pragma Anahtar sözcüğü](https://docs.microsoft.com/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
+Uyarıları hata olarak değerlendirmek için `#pragma` yönergesini kullanabilirsiniz; uyarıları etkinleştirin veya devre dışı bırakın ve tek satırlık kod satırları için uyarıları gizleyin. Daha fazla bilgi için bkz. [pragma yönergeleri ve __Pragma Anahtar sözcüğü](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
 
 ## <a name="annotation-support"></a>Ek açıklama desteği
 
@@ -62,12 +62,12 @@ Tüm kaynak kodu iadelerinin belirli ilkeleri karşıladıklarından emin olmak 
 
 ## <a name="team-build-integration"></a>Takım derlemesi tümleştirmesi
 
-@No__t-0 derleme işleminin bir adımı olarak kod analizi aracını çalıştırmak için derleme sisteminin tümleşik özelliklerini kullanabilirsiniz. Daha fazla bilgi için [Azure işlem hatları](/azure/devops/pipelines/index?view=vsts).
+[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] yapı işleminin bir adımı olarak kod analizi aracını çalıştırmak için derleme sisteminin tümleşik özelliklerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Azure Pipelines](/azure/devops/pipelines/index?view=vsts).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı Başlangıç: C/C++@no__t için kod analizi-1
-- [İzlenecek yol: Hatalar için CC++ /kodu çözümle @ no__t-1
+- [Hızlı başlangıç: C/için kod analiziC++](quick-start-code-analysis-for-c-cpp.md)
+- [İzlenecek yol: hatalar içinC++ C/kod çözümleme](walkthrough-analyzing-c-cpp-code-for-defects.md)
 - [C/C++ İçin Kod Analizi Uyarıları](code-analysis-for-c-cpp-warnings.md)
 - [C++ Temel Yönergeleri denetleyicilerini kullanma](using-the-cpp-core-guidelines-checkers.md)
 - [C++Temel kılavuz denetleyicisi başvurusu](code-analysis-for-cpp-corecheck.md)

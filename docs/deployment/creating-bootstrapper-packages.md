@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3dc22b775af048cc3138d6930a835a00c9d97b2a
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.openlocfilehash: 0f84f91ebedd47df8c0804adee35dcbec18d8551
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533334"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806938"
 ---
 # <a name="create-bootstrapper-packages"></a>Önyükleyici paketleri oluşturma
 Kurulum programı, Windows Installer ( *. msi*) dosyaları ve yürütülebilir programlar gibi yeniden dağıtılabilir bileşenleri tespit etmek ve yüklemek için yapılandırılabilecek genel bir yükleyicidir. Yükleyici, önyükleyici olarak da bilinir. Bileşenin yüklenmesini yönetmek için meta verileri belirten bir XML bildirimleri kümesi aracılığıyla programlanır.  ClickOnce için **Önkoşullar** iletişim kutusunda görünen her yeniden dağıtılabilir bileşen veya önkoşul, bir önyükleyici paketidir. Önyükleyici paketi, önkoşulun nasıl yükleneceğini tanımlayan bildirim dosyalarını içeren bir dizin ve dosya grubudur.
@@ -33,13 +33,13 @@ Kurulum programı, Windows Installer ( *. msi*) dosyaları ve yürütülebilir p
 Önyükleyici önce önkoşullardan birinin zaten yüklü olup olmadığını algılar. Önkoşullar yüklü değilse, ilk olarak önyükleyici lisans sözleşmelerini gösterir. İkincisi, son kullanıcı lisans sözleşmelerini kabul ettikten sonra, yükleme önkoşulları için başlar. Aksi takdirde, önkoşullardan bazıları algılanırsa önyükleyici yalnızca uygulama yükleyicisini başlatır.
 
 ## <a name="create-custom-bootstrapper-packages"></a>Özel önyükleyici paketleri oluşturma
-Önyükleyici bildirimlerini Visual Studio 'daki XML düzenleyicisini kullanarak oluşturabilirsiniz. Önyükleyici paketi oluşturma örneği hakkında bir örnek görmek için bkz [. İzlenecek yol: Gizlilik istemiyle](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)özel bir önyükleyici oluşturun.
+Önyükleyici bildirimlerini Visual Studio 'daki XML düzenleyicisini kullanarak oluşturabilirsiniz. Önyükleyici paketi oluşturma örneği hakkında bir örnek görmek için bkz. [Izlenecek yol: Gizlilik istemiyle özel önyükleyici oluşturma](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md).
 
 Bir önyükleyici paketi oluşturmak için bir ürün bildirimi ve bir bileşenin yerelleştirilmiş her sürümü için bir paket bildirimi oluşturmanız gerekir.
 
-* Ürün bildirimi, *Product. xml*, paket için dilden bağımsız meta veriler içerir. Bu, yeniden dağıtılabilir bileşenin tüm yerelleştirilmiş sürümlerinde ortak olan meta verileri içerir.  Bu dosyayı oluşturmak için bkz [. nasıl yapılır: Ürün bildirimi](../deployment/how-to-create-a-product-manifest.md)oluşturun.
+* Ürün bildirimi, *Product. xml*, paket için dilden bağımsız meta veriler içerir. Bu, yeniden dağıtılabilir bileşenin tüm yerelleştirilmiş sürümlerinde ortak olan meta verileri içerir.  Bu dosyayı oluşturmak için bkz. [nasıl yapılır: Ürün bildirimi oluşturma](../deployment/how-to-create-a-product-manifest.md).
 
-* Package *. xml*paket bildirimi dile özgü meta veriler içerir; genellikle yerelleştirilmiş hata iletileri içerir. Bir bileşen, bu bileşenin yerelleştirilmiş her sürümü için en az bir paket bildirimine sahip olmalıdır. Bu dosyayı oluşturmak için bkz [. nasıl yapılır: Paket bildirimi](../deployment/how-to-create-a-package-manifest.md)oluşturun.
+* Package *. xml*paket bildirimi dile özgü meta veriler içerir; genellikle yerelleştirilmiş hata iletileri içerir. Bir bileşen, bu bileşenin yerelleştirilmiş her sürümü için en az bir paket bildirimine sahip olmalıdır. Bu dosyayı oluşturmak için bkz. [nasıl yapılır: paket bildirimi oluşturma](../deployment/how-to-create-a-package-manifest.md).
 
 Bu dosyalar oluşturulduktan sonra, ürün bildirim dosyasını özel önyükleyici için adlı bir klasöre koyun. Paket bildirim dosyası, yerel ayar için adlı bir klasöre gider. Örneğin, Paket bildirim dosyası Ingilizce yeniden dağıtım için ise, dosyayı en-adlı bir klasöre koyun. Bu işlemi her yerel ayar için (Japonca için ja ve Almanca için de) yineleyin. Son özel önyükleyici paketi aşağıdaki klasör yapısına sahip olabilir.
 
@@ -58,7 +58,7 @@ CustomBootstrapperPackage
     package.xml
 ```
 
-Sonra, yeniden dağıtılabilir dosyaları önyükleyici klasörü konumuna kopyalayın. Daha fazla bilgi için [nasıl yapılır: Yerelleştirilmiş bir önyükleyici paketi](../deployment/how-to-create-a-localized-bootstrapper-package.md)oluşturun.
+Sonra, yeniden dağıtılabilir dosyaları önyükleyici klasörü konumuna kopyalayın. Daha fazla bilgi için bkz. [nasıl yapılır: yerelleştirilmiş önyükleyici paketi oluşturma](../deployment/how-to-create-a-localized-bootstrapper-package.md).
 
 ```
 *\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper*
@@ -109,7 +109,7 @@ Yeniden dağıtılabilir dosyaların Kurulum projelerinde dağıtılmasını eng
 
 `%ProgramFiles%\Microsoft.NET\RedistList`
 
-Yeniden dağıtılabilir liste, aşağıdaki biçimi kullanarak ad almanız gereken bir XML dosyasıdır: *Şirket adı >.\< \< Bileşen adı >. RedistList. xml*. Bu nedenle, örneğin, bileşen Acme tarafından yapılan veri öğeleri olarak çağrılırsa, *Acme. Datapencere öğeleri. RedistList. xml*kullanın. Yeniden dağıtılabilir listenin içeriğine bir örnek şuna benzeyebilir:
+Yeniden dağıtılabilir liste, şu biçimi kullanarak ad almanız gereken bir XML dosyasıdır: *\<şirket adı >.\<bileşen adı >. RedistList. xml*. Bu nedenle, örneğin, bileşen Acme tarafından yapılan veri öğeleri olarak çağrılırsa, *Acme. Datapencere öğeleri. RedistList. xml*kullanın. Yeniden dağıtılabilir listenin içeriğine bir örnek şuna benzeyebilir:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -119,7 +119,7 @@ Yeniden dağıtılabilir liste, aşağıdaki biçimi kullanarak ad almanız gere
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: ClickOnce uygulaması ile önkoşulları yükler](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
+- [Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları yüklemek](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
 - [Önkoşullar iletişim kutusu](../ide/reference/prerequisites-dialog-box.md)
 - [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)
-- [Yüklemeyi başlatmak için Visual Studio 2005 önyükleyici kullanın](http://go.microsoft.com/fwlink/?LinkId=107537)
+- [Yüklemeyi başlatmak için Visual Studio 2005 önyükleyici kullanın](https://msdn.microsoft.com/magazine/cc163899.aspx)

@@ -25,7 +25,7 @@
 ### [Abonelik yöneticinize başvurma](contact-my-admin.md)
 ### Yararları
 #### Araçlar
-##### [Azure kredisi](vs-azure.md)
+##### [Azure DevTest bireysel kredisi](vs-azure.md)
 ##### [Azure DevOps](vs-azure-devops.md)
 ##### [Azure Kullandıkça Öde](vs-azure-payg.md)
 ##### [CAST Highlight](vs-cast.md)

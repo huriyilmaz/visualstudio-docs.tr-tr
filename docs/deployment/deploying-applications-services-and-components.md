@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 02e8beae03dc2828d81b80813325300fe31b3cea
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 006ecdffd7b109c32f7063fee5f454e43c6c4597
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128150"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806921"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio 'da dağıtıma ilk bakış
 
@@ -40,7 +40,7 @@ Adım adım dağıtım yönergeleri için hızlı başlangıç ve öğreticiler 
 
 Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için başka bir aracın kullanıldığı hazırlanmış bir dağıtıma başlamak için kullanılır.
 
-- **ASP.net**, **ASP.NET Core**, **Node. js**, **Python**ve. **NET Core**: Yerel bir klasöre dağıtmak için Yayımla aracını kullanın. Kullanılabilecek tam seçenekler, uygulama türüne bağlıdır. Çözüm Gezgini, projenize sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırmadıysanız, **Yeni Profil oluştur**' a tıklamanız gerekir.) Sonra **klasör**' ü seçin. Daha fazla bilgi için bkz. [yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
+- **ASP.net**, **ASP.NET Core**, **Node. js**, **Python**ve. **NET Core**: yerel bir klasöre dağıtmak için Yayımla aracını kullanın. Kullanılabilecek tam seçenekler, uygulama türüne bağlıdır. Çözüm Gezgini, projenize sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırmadıysanız, **Yeni Profil oluştur**' a tıklamanız gerekir.) Sonra **klasör**' ü seçin. Daha fazla bilgi için bkz. [yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
 
     ![Yayımla ' yı seçin](../deployment/media/quickstart-publish.png)
 
@@ -48,9 +48,9 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
 ## <a name="publish-to-azure"></a>Azure'a Yayımlama
 
-- **ASP.net**, **ASP.NET Core**, **Python**ve **Node. js**: Aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Linux Azure App Service (kapsayıcılar kullanarak) yayımlayın.
+- **ASP.net**, **ASP.NET Core**, **Python**ve **Node. js**: aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Azure App Service Linux 'ta (kapsayıcılar kullanarak) yayımlayın.
 
-  - Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops)Ile Azure DevOps kullanın.
+  - Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops)Ile Azure DevOps kullanın.
 
   - Uygulamaların tek seferlik (veya el ile) dağıtımı için, Visual Studio 'da **Yayımla** aracını kullanın.
 
@@ -73,7 +73,7 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
 ## <a name="publish-to-web-or-deploy-to-network-share"></a>Web 'de yayımlama veya ağ paylaşımında dağıtma
 
-- **ASP.net**, **ASP.NET Core**, **Node. js**ve **Python**: FTP veya Web Dağıtımı kullanarak bir Web sitesine dağıtmak için Yayımla aracını kullanabilirsiniz. Daha fazla bilgi için bkz. [Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
+- **ASP.net**, **ASP.NET Core**, **Node. js**ve **Python**: FTP veya Web dağıtımı kullanarak bir Web sitesine dağıtmak için Yayımla aracını kullanabilirsiniz. Daha fazla bilgi için bkz. [Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
 
     Çözüm Gezgini, projeye sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırdıysanız **Yeni Profil oluştur**' a tıklamanız gerekir.) Yayımla aracında istediğiniz seçeneği belirleyin ve yapılandırma adımlarını izleyin.
 
@@ -81,7 +81,7 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
     Visual Studio 'da bir yayımlama profilini içeri aktarma hakkında bilgi için bkz. [Yayımlama ayarlarını Içeri aktarma ve IIS 'e dağıtma](../deployment/tutorial-import-publish-settings-iis.md).
 
-    Ayrıca, ASP.NET uygulamalarını ve hizmetlerini çeşitli yollarla dağıtabilirsiniz. Daha fazla bilgi için bkz. [ASP.NET Web uygulamaları ve hizmetleri dağıtma](http://www.asp.net/aspnet/overview/deployment).
+    Ayrıca, ASP.NET uygulamalarını ve hizmetlerini çeşitli yollarla dağıtabilirsiniz. Daha fazla bilgi için bkz. [ASP.NET Web uygulamaları ve hizmetleri dağıtma](/aspnet/mvc/overview/deployment/).
 
 - **Windows Masaüstü** ClickOnce dağıtımını kullanarak bir Windows masaüstü uygulamasını bir Web sunucusuna veya ağ dosya paylaşımında yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için bkz. [ClickOnce kullanarak masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# ve Visual Basic). /CLI C++için bkz. [ClickOnce kullanarak yerel uygulama dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++için bkz. [Kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
@@ -89,11 +89,11 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
 Visual Studio 'dan Microsoft Store dağıtım için uygulama paketleri oluşturabilirsiniz.
 
-- **UWP**: Uygulamanızı paketleyebilir ve menü öğelerini kullanarak dağıtabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio kullanarak UWP uygulaması paketleme](/windows/uwp/packaging/packaging-uwp-apps).
+- **UWP**: uygulamanızı paketleyebilir ve menü öğelerini kullanarak dağıtabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio kullanarak UWP uygulaması paketleme](/windows/uwp/packaging/packaging-uwp-apps).
 
     ![Uygulama paketi oluşturma](../deployment/media/feature-tour-create-app-package.jpg)
 
-- **Windows Masaüstü**: Visual Studio 2017 sürüm 15,4 ' den başlayarak Microsoft Store dağıtım yapabilirsiniz. Bunu yapmak için, bir Windows uygulama paketleme projesi oluşturarak başlayın. Daha fazla bilgi için bkz. [Microsoft Store için bir masaüstü uygulaması paketleme](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
+- **Windows Masaüstü**: Microsoft Store Visual Studio 2017 sürüm 15,4 ' den başlayarak dağıtım yapabilirsiniz. Bunu yapmak için, bir Windows uygulama paketleme projesi oluşturarak başlayın. Daha fazla bilgi için bkz. [Microsoft Store için bir masaüstü uygulaması paketleme](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
 
     ![Masaüstü uygulaması paketleme](../deployment/media/feature-tour-desktop-bridge.png)
 
@@ -118,7 +118,7 @@ Bir cihazda test için UWP uygulaması dağıtıyorsanız bkz. [Visual Studio 'd
    Visual Studio 2019 için [Wix araç takımı Visual Studio 2019 uzantısını](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2019Extension)alın.
    ::: moniker-end
 
-- Esnek dönem yazılımından [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) KULLANıLARAK bir MSI veya exe yükleyici paketi oluşturulabilir. InstallShield, Visual Studio 2017 ve sonraki sürümlerle kullanılabilir (Community Edition desteklenmiyor). InstallShield Limited Edition 'ın artık Visual Studio 'Ya dahil edilmediğini ve Visual Studio 2017 ve sonraki sürümlerinde desteklenmediğini unutmayın; gelecekteki kullanılabilirlik hakkında [Esnek dönem yazılımlarla](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) görüşün.
+- Esnek dönem yazılımından [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) KULLANıLARAK bir MSI veya exe yükleyici paketi oluşturulabilir. InstallShield, Visual Studio 2017 ve sonraki sürümlerle kullanılabilir (Community Edition desteklenmiyor). InstallShield Limited Edition 'ın artık Visual Studio 'Ya dahil edilmediğini ve Visual Studio 2017 ve sonraki sürümlerinde desteklenmediğini unutmayın; gelecekteki kullanılabilirlik hakkında [Esnek dönem yazılımlarla](https://info.flexerasoftware.com/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) görüşün.
 
 - Bir MSI veya EXE yükleyici paketi, bir kurulum projesi (VDPROJ) kullanılarak oluşturulabilir. Bu seçeneği kullanmak için [Visual Studio yükleyicisi projeleri uzantısını](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects#overview)yükler.
 

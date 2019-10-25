@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4abe5047bd7d6f17bb0dc23f4d92a1a842ee273a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 15a34fdc4486a013999a6b53e34117008396c955
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648761"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807017"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Bir WCF veri hizmetine WPF denetimleri bağlama
 
@@ -46,13 +46,13 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 - Visual Studio
 
-- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](http://go.microsoft.com/fwlink/?linkid=87843)indirebilirsiniz.
+- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://archive.codeplex.com/?p=SqlServerSamples)indirebilirsiniz.
 
 Aşağıdaki kavramların önceki bilgileri de yararlı olmakla kalmaz, izlenecek yolu tamamlamak için gerekli değildir:
 
 - [WCF veri Hizmetleri](/dotnet/framework/data/wcf/wcf-data-services-overview).
 
-- @No__t_0 veri modelleri.
+- [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]veri modelleri.
 
 - Varlık veri modelleri ve ADO.NET Entity Framework. Daha fazla bilgi için bkz. [Entity Framework genel bakış](/dotnet/framework/data/adonet/ef/overview).
 
@@ -254,7 +254,7 @@ Kullanıcıların **\<** ve **>** düğmelerini kullanarak satış kayıtları a
 
      Visual Studio, arka plan kod dosyasını açar ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı için yeni bir `saveButton_Click` olay işleyicisi oluşturur.
 
-2. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin.
+2. `saveButton_Click` olay işleyicisine aşağıdaki kodu ekleyin.
 
      [!code-csharp[Data_WPFWCF#5](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_5.cs)]
      [!code-vb[Data_WPFWCF#5](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_5.vb)]

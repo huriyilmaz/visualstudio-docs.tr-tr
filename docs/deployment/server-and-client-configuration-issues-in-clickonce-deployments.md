@@ -17,68 +17,68 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 71b9df9a8422d1b24a3e5476005942113356c353
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 794b53a71a0a8215ae6bc9af47f9fe2a0ff911b5
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747418"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806883"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce dağıtımlarında sunucu ve istemci yapılandırma sorunları
-Windows Server Internet Information Services (IIS) kullanın ve dağıtımınız Windows tanımadığı bir dosya içeriyorsa, bir Microsoft Word dosyası gibi dosya aktarmak IIS reddeder ve dağıtımınızın başarılı olmaz.
+Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağıtımınız Windows 'un tanımadığı bir dosya türünü içeriyorsa (örneğin, Microsoft Word dosyası), IIS bu dosyayı aktarmayı reddeder ve dağıtımınız başarılı olmaz.
 
- Ayrıca, bazı Web sunucuları ve uygulama yazılımı gibi Web [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], dosyaların listesini içeren ve dosya karşıdan yükleyemiyor türleri. Örneğin, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] tüm indirilmesini engeller *Web.config* dosyaları. Bu dosyalar, kullanıcı adları ve parolalar gibi hassas bilgiler içerebilir.
+ Ayrıca, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]gibi bazı Web sunucuları ve Web uygulaması yazılımları indirebileceğiniz dosya ve dosya türlerinin bir listesini içerir. Örneğin, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] tüm *Web. config* dosyalarının indirilmesini engeller. Bu dosyalar, Kullanıcı adları ve parolalar gibi hassas bilgiler içerebilir.
 
- Bu kısıtlama çekirdek bir soruna neden olmaz ancak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bildirimleri ve derlemeler gibi dosyaları, bu kısıtlama engelleyebilir parçası olarak dahil edilen veri dosyaları indirmesini, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama. İçinde [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], IIS Yapılandırma Yöneticisi'nden tür dosyaların karşıdan yüklenmesini yasaklar işleyici kaldırarak bu hatayı çözebilirsiniz. Ek ayrıntılar için IIS sunucusu belgelerine bakın.
+ Bu kısıtlama, bildirimler ve derlemeler gibi çekirdek [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dosyalarını indirmek için herhangi bir sorun olmamasına rağmen, bu kısıtlama [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamanızın bir parçası olarak dahil edilen veri dosyalarını indirmeyi engelleyebilir. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], IIS Yapılandırma Yöneticisi 'nden bu tür dosyaların indirilmesini önleyen işleyiciyi kaldırarak bu hatayı çözebilirsiniz. Daha fazla bilgi için IIS sunucu belgelerine bakın.
 
- Bazı Web sunucuları gibi uzantılara sahip dosyalar engelleyebilecek *.dll*, *.config*, ve *.mdf*. Windows tabanlı uygulamaları genellikle bazı uzantılara sahip dosyaları içerir. Bir kullanıcı çalıştırmayı denerse bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] erişen bir Web sunucusunda engellenen bir dosya uygulama hataya neden olur. Tüm dosya uzantıları, kaldırma yerine [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] yayımlar her uygulama dosyasını bir *.deploy* varsayılan dosya uzantısı. Bu nedenle, yöneticinin yalnızca aşağıdaki üç dosya uzantılarını engelini kaldırmak için Web sunucusunu yapılandırma gerekir:
+ Bazı Web sunucuları *. dll*, *. config*ve *. mdf*gibi uzantılara sahip dosyaları engelleyebilirler. Windows tabanlı uygulamalar genellikle bu uzantılara ait dosyaları içerir. Bir Kullanıcı bir Web sunucusundaki engellenen bir dosyaya erişen [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamasını çalıştırmayı denerse bir hata olur. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tüm dosya uzantılarının engellemesini kaldırmaktansa, varsayılan olarak her uygulama dosyasını bir *. deploy* dosya uzantısıyla yayınlar. Bu nedenle, yöneticinin yalnızca aşağıdaki üç dosya uzantısının engellemesini kaldırmak için Web sunucusunu yapılandırması gerekir:
 
-- *.Application*
+- *. Application*
 
-- *.manifest*
+- *. manifest*
 
-- *.deploy*
+- *. deploy*
 
-  Ancak, bu seçeneğin işaretini kaldırarak devre dışı bırakabilirsiniz **".deploy" dosya uzantısı** seçeneğini [Yayımlama Seçenekleri iletişim kutusu](/previous-versions/visualstudio/visual-studio-2010/7z83t16a(v=vs.100)), bu durumda, tüm dosya uzantılarını engelini kaldırmak için Web sunucusu yapılandırmanız gerekir uygulamada kullanılır.
+  Ancak, [Yayımlama seçenekleri Iletişim kutusundaki](/previous-versions/visualstudio/visual-studio-2010/7z83t16a(v=vs.100)) **". deploy" dosya uzantısını kullan** seçeneğini temizleyerek bu seçeneği devre dışı bırakabilirsiniz, bu durumda Web sunucusunu uygulamada kullanılan tüm dosya uzantılarının engellemesini kaldırmak için yapılandırmanız gerekir.
 
-  Yapılandırmanız gerekecektir *.manifest*, *.application*, ve *.deploy*, örneğin, IIS olmayan yüklü .NET Framework kullanıyorsa, veya başka bir Web sunucusu (örn. Apache) kullanıyor.
+  Örneğin, .NET Framework yüklemediyseniz veya başka bir Web sunucusu (örneğin, Apache) kullanıyorsanız, IIS kullanıyorsanız *. manifest*, *. Application*ve *. deploy*'u yapılandırmanız gerekecektir.
 
 ## <a name="clickonce-and-secure-sockets-layer-ssl"></a>ClickOnce ve Güvenli Yuva Katmanı (SSL)
- A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama düzgün çalışır, SSL üzerinden SSL sertifikası hakkında bir istem zaman Internet Explorer görüntülemesi dışında. Bir zaman site adları eşleşmiyor gibi sertifika veya sertifika ile bu sorun süresi dolmuş olduğunda istemi yükseltilebilir. Yapmak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir SSL bağlantısı üzerinden çalışma, sertifikanın güncel olduğunu ve site verileri eşleşen sertifika veri emin olun.
+ Internet Explorer 'ın SSL sertifikası hakkında bir istem oluştururken, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir uygulama SSL üzerinde iyi çalışacaktır. İstem, sertifika ile ilgili bir sorun olduğunda (örneğin, site adlarının eşleşmemesi veya sertifikanın süresi dolduğunda) gerçekleştirilebilir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir SSL bağlantısı üzerinden çalışmasını sağlamak için, sertifikanın güncel olduğundan ve sertifika verilerinin site verileriyle eşleştiğinden emin olun.
 
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce ve proxy kimlik doğrulaması
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET Framework 3. 5 ' başlayarak Windows tümleşik Ara sunucu kimlik doğrulaması için destek sağlar. Özel machine.config yönergeleri gereklidir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Temel veya Özet gibi diğer kimlik doğrulama protokolleri için destek sağlamaz.
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], .NET Framework 3,5 ' den başlayarak Windows tümleşik proxy kimlik doğrulaması desteği sağlar. Belirli bir makine yok. yapılandırma yönergeleri gerekli değildir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], temel veya Özet gibi diğer kimlik doğrulama protokolleri için destek sağlamaz.
 
- Bu özelliği etkinleştirmek için .NET Framework 2.0 için bir düzeltme de uygulayabilirsiniz. Daha fazla bilgi için bkz. http://go.microsoft.com/fwlink/?LinkId=158730.
+ Bu özelliği etkinleştirmek için .NET Framework 2,0 ' a bir düzeltme de uygulayabilirsiniz. Daha fazla bilgi için bkz. http://go.microsoft.com/fwlink/?LinkId=158730.
 
- Daha fazla bilgi için [ \<defaultProxy > öğesi (ağ ayarları)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).
+ Daha fazla bilgi için bkz. [\<defaultProxy > öğesi (ağ ayarları)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).
 
 ## <a name="clickonce-and-web-browser-compatibility"></a>ClickOnce ve Web tarayıcı uyumluluğu
- Şu anda [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] yüklemeler yalnızca dağıtım bildirimini URL, Internet Explorer'ı kullanarak açıldığında başlatılır. Yalnızca Internet Explorer varsayılan Web tarayıcısı ayarlanırsa URL'si Microsoft Office Outlook gibi başka bir uygulamadan başlatılan bir dağıtım başarılı bir şekilde başlatılır.
+ Şu anda, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] yüklemeleri yalnızca dağıtım bildiriminin URL 'SI Internet Explorer kullanılarak açılırsa başlatılır. URL 'SI, Microsoft Office Outlook gibi başka bir uygulamadan başlatılan bir dağıtım, yalnızca Internet Explorer varsayılan Web tarayıcısı olarak ayarlandıysa başarıyla başlatılır.
 
 > [!NOTE]
-> Mozilla Firefox, dağıtım sağlayıcısı boş veya Microsoft .NET Framework Assistant uzantı yüklü değilse desteklenir. Bu uzantı, .NET Framework 3.5 SP1 ile paketlenmiştir. XBAP desteği NPWPF eklentisi gerektiğinde etkinleştirilir.
+> Dağıtım sağlayıcısı boş değilse veya Microsoft .NET Framework Yardımcısı uzantısı yüklüyse Mozilla Firefox desteklenir. Bu uzantı .NET Framework 3,5 SP1 ile paketlenmiştir. XBAP desteği için, gerektiğinde NPWPF eklentisi etkinleştirilir.
 
-## <a name="activate-clickonce-applications-through-browser-scripting"></a>ClickOnce uygulamaları tarayıcı betikler aracılığıyla etkinleştirme
- Geliştirilmiş başlatan özel bir Web sayfası, bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] etkin komut dosyası kullanarak uygulamanın uygulama bazı makinelerde başlatmaz bulabilirsiniz. Internet Explorer olarak adlandırılan bir ayar içeriyor **Dosya indirmeleri için otomatik olarak sor**, bu davranışı etkiler. Bu ayar, üzerinde kullanılabilir **güvenlik** sekmesinde kendi **seçenekleri** bu davranışı etkiler menüsü. Çağrıldığı **Dosya indirmeleri için otomatik olarak sor**, ve altında listelenen **indirir** kategorisi. Özellik kümesine **etkinleştirme** intranet Web sayfaları ve için varsayılan **devre dışı** Internet Web sayfaları için varsayılan olarak. Bu ayar ayarlandığında **devre dışı**, yapmaya etkinleştirmek bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama program aracılığıyla (örneğin, gerçekleşen tarafından `document.location` özelliği) engellenir. Bu durumda, kullanıcıların yalnızca kullanıcı tarafından başlatılan bir indirme aracılığıyla uygulamaları gibi uygulamanın URL'sine ayarlayın bir köprüyü tıklatarak başlatabilirsiniz.
+## <a name="activate-clickonce-applications-through-browser-scripting"></a>Tarayıcı komut dosyası aracılığıyla ClickOnce uygulamalarını etkinleştirme
+ Etkin komut dosyası kullanan bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulaması Başlatan özel bir Web sayfası geliştirdiyseniz, uygulamanın bazı makinelerde başlalemeyeceğini fark edebilirsiniz. Internet Explorer, bu davranışı etkileyen **Dosya indirmeleri Için otomatik istem**olarak adlandırılan bir ayar içerir. Bu ayar, bu davranışı etkileyen **Seçenekler** menüsündeki **güvenlik** sekmesinde bulunur. **Dosya indirmeleri Için otomatik istem**olarak adlandırılır ve **indirmeler** kategorisinin altında listelenir. Özelliği, intranet Web sayfaları için varsayılan olarak **etkinleştirilecek** ve varsayılan olarak Internet Web sayfaları Için **devre dışı bırakılacak** şekilde ayarlanır. Bu ayar **devre dışı**olarak ayarlandığında, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı programlı bir şekilde etkinleştirmeye çalışır (örneğin, URL 'sini `document.location` özelliğine atayarak) engellenecektir. Bu durumda, kullanıcılar uygulamaları yalnızca Kullanıcı tarafından başlatılan bir indirerek başlatabilir (örneğin, uygulamanın URL 'sine ayarlanmış bir köprüye tıklayarak).
 
 ## <a name="additional-server-configuration-issues"></a>Ek sunucu yapılandırma sorunları
 
-##### <a name="administrator-permissions-required"></a>Yönetici izinleri gerekir
- HTTP ile yayımlıyorsanız hedef sunucuda yönetici izinleri olmalıdır. IIS bu izin düzeyini gerektirir. HTTP kullanarak yayımladığınız değil, yalnızca hedef yolunda izin yazmanız gerekir.
+##### <a name="administrator-permissions-required"></a>Yönetici izinleri gerekiyor
+ HTTP ile yayımlıyorsanız hedef sunucuda yönetici izinlerine sahip olmanız gerekir. IIS bu izin düzeyini gerektirir. HTTP kullanarak yayımlıyorsanız, hedef yolunda yalnızca yazma izninizin olması gerekir.
 
 ##### <a name="server-authentication-issues"></a>Sunucu kimlik doğrulama sorunları
- "Anonim erişimi devre dışı" olduğundan bir uzak sunucuya yayımladığınızda, aşağıdaki uyarıyı alırsınız:
+ "Anonim erişim" kapalı bir uzak sunucuya yayımladığınızda, aşağıdaki uyarıyı alırsınız:
 
 ```
 "The files could not be downloaded from http://<remoteserver>/<myapplication>/.  The remote server returned an error: (401) Unauthorized."
 ```
 
 > [!NOTE]
-> Site için varsayılan kimlik bilgilerinizi dışında kimlik bilgileri ister ve tıkladığınız güvenlik iletişim kutusunda, NTLM (NT sınama-yanıt) kimlik doğrulaması yapabilir **Tamam** sorulduğunda sağlanan kaydetmek istiyorsanız sonraki oturumlarda kimlik bilgileri. Ancak, bu çözüm için temel kimlik doğrulaması çalışmaz.
+> Site, varsayılan kimlik bilgileriniz dışında kimlik bilgileri isterse, NTLM (NT Challenge-Response) kimlik doğrulamasını yapabilir ve güvenlik iletişim kutusunda, sağlanan kimlik bilgilerini kaydetmek isteyip istemediğiniz sorulduğunda **Tamam** ' a tıklayabilirsiniz. gelecek oturumlar. Ancak, bu geçici çözüm temel kimlik doğrulaması için çalışmaz.
 
-## <a name="use-third-party-web-servers"></a>Üçüncü taraf Web sunucuları kullanın
- Dağıtıyorsanız bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulaması dışında bir IIS Web sunucusundan, sorun yaşayabilirsiniz sunucu anahtarı için hatalı içerik türü döndürmesi durumunda [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım bildirimini ve uygulama bildirimi gibi dosyaları. Bu sorunu çözmek için Web sunucunuzun Yardım belgeleri sunucuya yeni içerik türlerini ekleyin ve tüm dosya adı uzantısı eşlemeler aşağıdaki tabloda listelenen emin hakkında mevcut olduğunu doğrulama bakın.
+## <a name="use-third-party-web-servers"></a>Üçüncü taraf Web sunucuları kullanma
+ IIS dışında bir Web sunucusundan [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulaması dağıtıyorsanız, sunucu dağıtım bildirimi ve uygulama bildirimi gibi anahtar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dosyaları için yanlış içerik türü döndürüyorsa bir sorunla karşılaşabilirsiniz. Bu sorunu çözmek için, Web sunucunuzun sunucuya yeni içerik türleri ekleme hakkında yardım belgelerine bakın ve aşağıdaki tabloda listelenen tüm dosya adı uzantısı eşlemelerinin yerinde olduğundan emin olun.
 
 |Dosya adı uzantısı|İçerik türü|
 |-------------------------|------------------|
@@ -88,51 +88,51 @@ Windows Server Internet Information Services (IIS) kullanın ve dağıtımınız
 |`.msu`|`application/octet-stream`|
 |`.msp`|`application/octet-stream`|
 
-## <a name="clickonce-and-mapped-drives"></a>ClickOnce ve eşlenen sürücüler
- ClickOnce uygulaması yayımlama için Visual Studio kullanıyorsanız, eşlenmiş sürücü yükleme konumu olarak belirtemezsiniz. Ancak, eşlenmiş sürücüden Düzenleyicisi (Mage.exe ve MageUI.exe) ve Bildirim Oluşturucusu kullanarak yüklemek için ClickOnce uygulaması değiştirebilirsiniz. Daha fazla bilgi için [Mage.exe (bildirim üretme ve düzenleme aracı)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) ve [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
+## <a name="clickonce-and-mapped-drives"></a>ClickOnce ve eşlenmiş sürücüler
+ ClickOnce uygulaması yayımlamak için Visual Studio kullanıyorsanız, yükleme konumu olarak eşlenmiş bir sürücü belirtemezsiniz. Bununla birlikte, bildirim oluşturucuyu ve düzenleyicisini (Mage. exe ve MageUI. exe) kullanarak eşlenmiş bir sürücüden yüklemek üzere ClickOnce uygulamasını değiştirebilirsiniz. Daha fazla bilgi için bkz. [Mage. exe (bildirim oluşturma ve düzenleme aracı)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) ve [MageUI. exe (bildirim oluşturma ve düzenleme aracı, grafik istemci)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
 
-## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP protokolünü uygulamaları yüklemek için desteklenmiyor
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] herhangi bir HTTP 1.1 Web sunucusu veya dosya sunucusu uygulamaları yüklemeyi destekler. FTP gibi Dosya Aktarım Protokolü, uygulamaları yüklemek için desteklenmiyor. Yalnızca uygulamaları yayımlamak için FTP kullanabilirsiniz. Aşağıdaki tabloda bu farklılıklar özetlenmiştir:
+## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP protokolü, uygulamaları yüklemek için desteklenmez
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], herhangi bir HTTP 1,1 Web sunucusundan veya dosya sunucusundan uygulama yüklemeyi destekler. FTP, Dosya Aktarım Protokolü, uygulamaları yüklemek için desteklenmez. FTP 'yi yalnızca uygulamaları yayımlamak için kullanabilirsiniz. Aşağıdaki tabloda bu farklılıklar özetlenmektedir:
 
 | URL türü | Açıklama |
 |----------| - |
-| FTP: / / | Yayımlayabilmek için bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bu protokolü kullanarak uygulama. |
-| http:// | Yükleyebileceğiniz bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bu protokolü kullanarak uygulama. |
-| https:// | Yükleyebileceğiniz bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bu protokolü kullanarak uygulama. |
-| File:// | Yükleyebileceğiniz bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bu protokolü kullanarak uygulama. |
+| ftp:// | Bu protokolü kullanarak bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulaması yayımlayabilirsiniz. |
+| http:// | Bu protokolü kullanarak bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulaması yükleyebilirsiniz. |
+| https:// | Bu protokolü kullanarak bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulaması yükleyebilirsiniz. |
+| file:// | Bu protokolü kullanarak bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulaması yükleyebilirsiniz. |
 
 ## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP SP2: Windows Güvenlik Duvarı
- Varsayılan olarak, Windows XP SP2, Windows Güvenlik Duvarı'nı etkinleştirir. Windows XP yüklü olduğu bir bilgisayarda uygulama geliştiriyorsanız, yayımlama ve çalıştırmak koruyabilmeyi [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] IIS çalıştıran sunucunun yerel uygulamalar. Ancak, Windows Güvenlik Duvarı açık değilse, IIS çalıştıran başka bir bilgisayardan o sunucuya erişemez. Windows Güvenlik Duvarı'nı yönetme hakkında yönergeler için Windows yardımına bakın.
+ Varsayılan olarak, Windows XP SP2, Windows güvenlik duvarını sunar. Uygulamanızı Windows XP 'nin yüklü olduğu bir bilgisayarda geliştiriyorsanız, hala IIS çalıştıran yerel sunucudan [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamaları yayımlayabilir ve çalıştırabilirsiniz. Ancak, Windows güvenlik duvarını açmadığınız takdirde, IIS çalıştıran sunucuya başka bir bilgisayardan erişemezsiniz. Windows Güvenlik Duvarı 'nı yönetme yönergeleri için bkz. Windows Yardımı.
 
-## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server için: FrontPage sunucu uzantılarını etkinleştir
- Microsoft FrontPage Server Extensions HTTP kullanan bir Windows Web sunucusundaki uygulama yayımlama için gereklidir.
+## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server: FrontPage Sunucu uzantılarını etkinleştir
+ Microsoft 'un FrontPage Server Extensions, HTTP kullanan bir Windows Web sunucusuna uygulama yayımlamak için gereklidir.
 
- Varsayılan olarak, FrontPage Server Extensions yüklü Windows Server yok. Kullanmak istiyorsanız [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] FrontPage Server Extensions ile HTTP kullanan bir Windows Server Web sunucusuna yayımlamak için FrontPage Server Extensions önce yüklemelisiniz. Windows Server'da sunucunuzu yönetin Yönetim Aracı'nı kullanarak yükleme gerçekleştirebilirsiniz.
+ Varsayılan olarak, Windows Server 'da FrontPage Server Extensions yüklü değildir. FrontPage Server Extensions ile HTTP kullanan bir Windows Server Web sunucusunda yayımlamak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kullanmak istiyorsanız, önce FrontPage Server Extensions 'ı yüklemeniz gerekir. Yüklemeyi, Windows Server 'daki sunucu yönetme yönetim aracını kullanarak gerçekleştirebilirsiniz.
 
-## <a name="windows-server-locked-down-content-types"></a>Windows Server için: Kilitlenmiş içerik türleri
- IIS üzerinde [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] kilitler bilinen belirli içerik türlerini hariç tüm dosya türleri (örneğin, *.htm*, *.html*, *.txt*, vb.). Dağıtımını etkinleştirmek için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bu sunucuyu kullanan uygulamalar, dosya türü yüklenmesine izin verecek IIS ayarlarını değiştirmeniz gerekir. *.application*, *.manifest*ve herhangi bir özel dosya türleri uygulamanız tarafından kullanılan.
+## <a name="windows-server-locked-down-content-types"></a>Windows Server: kilitli içerik türleri
+ [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] IIS, belirli bilinen içerik türleri hariç tüm dosya türlerini kilitler (örneğin, *. htm*, *. html*, *. txt*, vb.). Bu sunucuyu kullanarak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalarının dağıtımını etkinleştirmek için IIS ayarlarını, uygulamanız tarafından kullanılan *. Application*, *. manifest*ve diğer özel dosya türlerinde dosyaların indirilmesine izin verecek şekilde değiştirmeniz gerekir.
 
- Bir IIS sunucusu kullanarak dağıtırsanız, çalıştırma *inetmgr.exe* ve varsayılan Web sayfası için yeni bir dosya türü ekleyin:
+ Bir IIS sunucusu kullanarak dağıtıyorsanız, *inetmgr. exe* ' yi çalıştırın ve varsayılan Web sayfası Için yeni dosya türleri ekleyin:
 
-- İçin *.application* ve *.manifest* uzantıları, MIME türü "application/x-ms-application." olmalıdır Diğer dosya türleri için MIME türü "application/octet-stream." olmalıdır.
+- *. Application* ve *. manifest* uzantıları için, MIME türü "application/x-MS-Application" olmalıdır. Diğer dosya türleri için, MIME türü "Application/sekizli-Stream" olmalıdır.
 
-- Bir MIME türü uzantı oluşturursanız "<em>" ve MIME türü "application/octet-stream" yüklenmek üzere engellenmemiş dosya türlerinin sağlayacaktır. (Ancak, engellenen dosya türleri gibi *.aspx</em> ve *.asmx* karşıdan yüklenemiyor.)
+- "<em>" Uzantısı ve "Application/sekizli-Stream" MIME türünde BIR MIME türü oluşturursanız, engellenmemiş dosya türü dosyalarının indirilmesine izin verir. (Ancak, *. aspx</em> ve *. asmx* gibi engellenen dosya türleri indirilemez.)
 
-  Microsoft Bilgi Bankası makalesine KB326965 özel yönergeler Windows Server'da MIME türleri yapılandırılıyor başvurmak için "IIS 6.0 bilinmeyen MIME türlerine adresindeki sunmuyor." [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965).
+  Windows Server 'da MIME türlerini yapılandırmaya ilişkin belirli yönergeler için, Microsoft Bilgi Bankası makalesi KB326965 ' e bakın, "IIS 6,0, [http://support.microsoft.com/default.aspx?scid=kb; en-US; 326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965)konumunda Bilinmeyen MIME türlerine sahip değildir.
 
 ## <a name="content-type-mappings"></a>İçerik türü eşlemeleri
- HTTP üzerinden içerik türü (MIME türü olarak da bilinir) için yayımlarken *.application* dosyası olmalıdır. "application/x-ms-application." Sunucuda yüklü .NET Framework 2.0 varsa, bu sizin için otomatik olarak ayarlanır. Bu yüklü değil ve ardından bir MIME türü ilişkilendirmesini oluşturmak için ihtiyacınız varsa [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama vroot (veya tüm sunucu).
+ HTTP üzerinden yayımlarken, *. Application* dosyası için içerik türü (MIME türü olarak da bilinir) "application/x-MS-Application" olmalıdır. Sunucuda .NET Framework 2,0 yüklüyse, bu sizin için otomatik olarak ayarlanır. Bu yüklü değilse, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama vroot (veya tüm sunucu) için bir MIME türü ilişkilendirmesi oluşturmanız gerekir.
 
- Bir IIS sunucusu kullanarak dağıtırsanız, çalıştırma <em>inetmgr.</em> exe ve yeni bir içerik türü "application/x-ms-uygulama" add *.application* uzantısı.
+ Bir IIS sunucusu kullanarak dağıtıyorsanız, inetmgr ' i çalıştırın <em>.</em> exe ve *. Application* uzantısı için "application/x-MS-Application" yeni bir içerik türü ekleyin.
 
-## <a name="http-compression-issues"></a>HTTP sıkıştırması sorunları
- İle [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], gerçekleştirebilirsiniz HTTP sıkıştırması kullanan indirmeler, akış istemciye göndermeden önce veri akışını sıkıştırmak için GZIP algoritma kullanan bir Web sunucusu teknolojisi. İstemci — bu durumda, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]— dosyaları okumadan önce akışı açar.
+## <a name="http-compression-issues"></a>HTTP sıkıştırma sorunları
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ile, akışı istemciye göndermeden önce bir veri akışını sıkıştırmak için GZIP algoritmasını kullanan bir Web sunucusu teknolojisi olan HTTP sıkıştırması kullanan İndirmeleri gerçekleştirebilirsiniz. İstemci — bu durumda [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]— dosyaları okumadan önce akışı açar.
 
- IIS kullanıyorsanız, HTTP sıkıştırma kolayca etkinleştirebilirsiniz. HTTP sıkıştırmasını etkinleştirmek, ancak yalnızca belirli dosya türleri için etkin — yani, HTML ve metin dosyaları. Derlemeler için sıkıştırmayı etkinleştirmek için ( *.dll*), XML ( *.xml*), dağıtım bildirimleri ( *.application*) ve uygulama bildirimleri ( *.manifest*), bu dosya türleri için IIS'nin sıkıştırmasını türleri listesine eklemeniz gerekir. Yalnızca metin ve HTML dosyaları, dosya türlerini dağıtıma ekleme kadar sıkıştırılır.
+ IIS kullanıyorsanız, HTTP sıkıştırmasını kolayca etkinleştirebilirsiniz. Ancak, HTTP sıkıştırmasını etkinleştirdiğinizde yalnızca belirli dosya türleri için (yani, HTML ve metin dosyaları) etkinleştirilir. Derlemeler ( *. dll*), XML ( *. xml*), dağıtım bildirimleri (.*Application*) ve uygulama bildirimleri ( *. manifest*) IÇIN sıkıştırmayı etkinleştirmek üzere, bu dosya türlerini IIS için, sıkıştırmak üzere tür listesine eklemeniz gerekir. Dosya türlerini dağıtımınıza ekleyene kadar, yalnızca metin ve HTML dosyaları sıkıştırılır.
 
- IIS hakkında ayrıntılı yönergeler için bkz. [HTTP sıkıştırma için ek belge türlerini belirtmek nasıl](http://go.microsoft.com/fwlink/?LinkId=178459).
+ IIS hakkında ayrıntılı yönergeler için bkz. [HTTP sıkıştırması için ek belge türleri belirtme](https://support.microsoft.com/help/234497).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ClickOnce dağıtım sorunlarını giderme](../deployment/troubleshooting-clickonce-deployments.md)
-- [ClickOnce dağıtım stratejisini seçin](../deployment/choosing-a-clickonce-deployment-strategy.md)
+- [ClickOnce dağıtımları sorunlarını giderme](../deployment/troubleshooting-clickonce-deployments.md)
+- [ClickOnce dağıtım stratejisi seçin](../deployment/choosing-a-clickonce-deployment-strategy.md)
 - [Uygulama dağıtımının önkoşulları](../deployment/application-deployment-prerequisites.md)

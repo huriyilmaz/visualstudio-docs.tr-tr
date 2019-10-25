@@ -12,12 +12,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b7d17b90ab195e41a5b3dacb3b2ab4985dce245
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 506e8516c7a7bbc0ccc610b843763017ae90f547
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72448739"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807066"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>C/C++ Kod Hatalarını Azaltmak için SAL Ek Açıklamalarını Kullanma
 SAL, Microsoft kaynak kodu ek açıklama dilidir. Kaynak kodu ek açıklamalarını kullanarak, kodunuzun arkasındaki amacı kesin hale getirebilirsiniz. Bu ek açıklamalar Ayrıca, kodunuzun daha doğru bir şekilde analiz edilmesi için otomatik statik analiz araçlarının büyük ölçüde daha az yanlış pozitif ve yanlış negatifler sağlar.
@@ -57,7 +57,7 @@ Belgelerinin bu bölümündeki makaleler SAL 'un yönlerini tartışmaktadır, S
      SAL ek açıklamalarını nasıl kullanacağınızı gösteren örnekler sağlar. Ayrıca, genel sınırları da açıklar.
 
 ## <a name="related-resources"></a>İlgili Kaynaklar
-[Kod Analizi ekip blogu](http://go.microsoft.com/fwlink/?LinkId=251197)
+[Kod Analizi ekip blogu](https://blogs.msdn.microsoft.com/codeanalysis/)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Windows sürücüleri için SAL 2,0 ek açıklamaları](http://go.microsoft.com/fwlink/?LinkId=250979)
+[Windows sürücüleri için SAL 2,0 ek açıklamaları](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers)

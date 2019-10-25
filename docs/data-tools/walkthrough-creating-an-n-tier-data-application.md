@@ -14,12 +14,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 944825c00e55fcdb3a1a8f1f0c11d3a37a25025c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8fad79423465ac3d90c426862f93f09d721c7df3
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639407"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806983"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>İzlenecek yol: n katmanlı veri uygulaması oluşturma
 *N katmanlı* veri uygulamaları, verilere erişen ve birden çok mantıksal katmana veya katmana ayrılan *uygulamalardır.* Uygulama bileşenlerini farklı katmanlara ayırmak uygulamanızın yönetilebilirliğini ve ölçeklenebilirliğini artırır. Bunu, tüm çözümü yeniden tasarlamanıza gerek kalmadan tek bir katmana uygulanabilen yeni teknolojilerin daha kolay benimsenmesini sağlayarak yapar. N katmanlı mimaride bir sunu katmanı, bir orta katman ve bir veri katmanı bulunur. Orta katmanda genellikle bir veri erişim katmanı, iş mantığı katmanı ve kimlik doğrulaması ve doğrulama gibi paylaşılan bileşenler bulunur. Veri katmanında ilişkisel bir veritabanı vardır. N katmanlı uygulamalar hassas bilgileri orta katmanın veri erişimi katmanında depolayarak sunu katmanına erişimi olan son kullanıcılardan uzakta tutulmasını sağlar. Daha fazla bilgi için bkz. [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md).
@@ -48,7 +48,7 @@ Bu izlenecek yol sırasında aşağıdaki adımları gerçekleştirirsiniz:
 
 - Veri tablolarını doldurmak için kod yazma.
 
-Bu konunun video sürümü Için video ](../data-tools/media/playvideo.gif) ![link bkz. [video nasıl yapılır: n katmanlı veri uygulaması oluşturma](http://go.microsoft.com/fwlink/?LinkId=115188).
+Bu konunun video sürümü Için video](../data-tools/media/playvideo.gif) bağlantı ![, bkz. [video nasıl yapılır: n katmanlı veri uygulaması oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc178916(v=vs.90)).
 
 ## <a name="prerequisites"></a>Prerequisites
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
@@ -342,7 +342,7 @@ Hizmet başvurusunu veri hizmetine ekledikten sonra, **veri kaynakları** pencer
 
 6. Formda boş bir alanı çift tıklayarak bir `Form1_Load` olay işleyicisi oluşturun.
 
-7. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin.
+7. `Form1_Load` olay işleyicisine aşağıdaki kodu ekleyin.
 
     ```vb
     Dim DataSvc As New ServiceReference1.Service1Client

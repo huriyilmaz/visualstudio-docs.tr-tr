@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 94ce946f7c14706b57618f3d9aeb90cc207fcf04
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dd469f955a24c6d3c2fb5e438d81e6b8a2db8458
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648300"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807003"
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio için uyumlu veritabanı sistemleri
 
@@ -35,19 +35,19 @@ SQL Server, Microsoft flaggeme veritabanı sunumudur. SQL Server 2016, performan
 
 ## <a name="oracle"></a>Oracle
 
-Oracle teknolojisinin ücretli veya ücretsiz bir sürümünü [Oracle Technology Network](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index-092322.html) sayfasından indirebilirsiniz. Entity Framework ve TableAdapters için tasarım zamanı desteği için, [Visual Studio Için Oracle geliştirici araçları](http://www.oracle.com/technetwork/developer-tools/visual-studio/overview/index.html)gerekir. Oracle Instant Client dahil diğer resmi Oracle ürünleri, NuGet Paket Yöneticisi aracılığıyla kullanılabilir. Oracle [Online belgelerindeki](http://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm)yönergeleri izleyerek Oracle örnek şemaları indirebilirsiniz.
+Oracle teknolojisinin ücretli veya ücretsiz bir sürümünü [Oracle Technology Network](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) sayfasından indirebilirsiniz. Entity Framework ve TableAdapters için tasarım zamanı desteği için, [Visual Studio Için Oracle geliştirici araçları](https://www.oracle.com/database/technologies/developer-tools/visual-studio/)gerekir. Oracle Instant Client dahil diğer resmi Oracle ürünleri, NuGet Paket Yöneticisi aracılığıyla kullanılabilir. Oracle [Online belgelerindeki](https://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm)yönergeleri izleyerek Oracle örnek şemaları indirebilirsiniz.
 
 ## <a name="mysql"></a>MySQL
 
-MySQL, kurumlar ve web sitelerinde yaygın olarak kullanılan, popüler bir açık kaynaklı veritabanı sistemidir. MySQL için karşıdan yüklemeler, Visual Studio için MySQL ve ilgili ürünler [Windows üzerinde MySQL](http://www.mysql.com/why-mysql/windows/)'de yer alır. Üçüncü taraflar, MySQL için çeşitli Visual Studio uzantıları ve tek başına yönetim uygulamaları sunar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**araçlar**  > **nuget Paket Yöneticisi**  > **çözüm için NuGet paketlerini yönetmek**).
+MySQL, kurumlar ve web sitelerinde yaygın olarak kullanılan, popüler bir açık kaynaklı veritabanı sistemidir. MySQL için karşıdan yüklemeler, Visual Studio için MySQL ve ilgili ürünler [Windows üzerinde MySQL](https://www.mysql.com/why-mysql/windows/)'de yer alır. Üçüncü taraflar, MySQL için çeşitli Visual Studio uzantıları ve tek başına yönetim uygulamaları sunar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**araçlar**  > **nuget Paket Yöneticisi**  > **çözüm için NuGet paketlerini yönetmek**).
 
 ## <a name="postgresql"></a>PostgreSQL
 
-PostgreSQL, ücretsiz, açık kaynaklı bir nesne ilişkisel veritabanı sistemidir. Windows 'a yüklemek için [PostgreSQL indirme sayfasından](http://www.postgresql.org/download/windows/)indirebilirsiniz. Kaynak koddan PostgreSQL de oluşturabilirsiniz. PostgreSQL çekirdek sistemi bir C dili arabirimi içerir. Birçok üçüncü taraf, .NET uygulamalarından PostgreSQL kullanmaya yönelik NuGet paketleri sağlar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**araçlar**  > **nuget Paket Yöneticisi**  > **çözüm için NuGet paketlerini yönetmek**). Belki de en popüler paket, [npgsql.org](http://www.npgsql.org)tarafından sağlanır.
+PostgreSQL, ücretsiz, açık kaynaklı bir nesne ilişkisel veritabanı sistemidir. Windows 'a yüklemek için [PostgreSQL indirme sayfasından](https://www.postgresql.org/download/windows/)indirebilirsiniz. Kaynak koddan PostgreSQL de oluşturabilirsiniz. PostgreSQL çekirdek sistemi bir C dili arabirimi içerir. Birçok üçüncü taraf, .NET uygulamalarından PostgreSQL kullanmaya yönelik NuGet paketleri sağlar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**araçlar**  > **nuget Paket Yöneticisi**  > **çözüm için NuGet paketlerini yönetmek**). Belki de en popüler paket, [npgsql.org](http://www.npgsql.org)tarafından sağlanır.
 
 ## <a name="sqlite"></a>SQLite
 
-SQLite, uygulamanın kendi sürecinde çalışan gömülü bir SQL veritabanı altyapısıdır. Bunu, [SQLite indirme sayfasından](http://www.sqlite.org/download.html)indirebilirsiniz. SQLite için birçok üçüncü taraf NuGet paketi de mevcuttur. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**araçlar**  > **nuget Paket Yöneticisi**  > **çözüm için NuGet paketlerini yönetmek**).
+SQLite, uygulamanın kendi sürecinde çalışan gömülü bir SQL veritabanı altyapısıdır. Bunu, [SQLite indirme sayfasından](https://www.sqlite.org/download.html)indirebilirsiniz. SQLite için birçok üçüncü taraf NuGet paketi de mevcuttur. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**araçlar**  > **nuget Paket Yöneticisi**  > **çözüm için NuGet paketlerini yönetmek**).
 
 ## <a name="firebird"></a>Firebird
 
@@ -56,4 +56,4 @@ Firebird açık kaynaklı bir SQL veritabanı sistemidir. Bunu, [Firebird indirm
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)
-- [SQL Server ve bileşenlerinin sürümü ve sürümü nasıl belirlenir](http://support.microsoft.com/kb/321185)
+- [SQL Server ve bileşenlerinin sürümü ve sürümü nasıl belirlenir](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)

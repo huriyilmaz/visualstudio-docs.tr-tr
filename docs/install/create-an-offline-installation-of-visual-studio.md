@@ -1,7 +1,7 @@
 ---
 title: Çevrimdışı yükleme oluşturma
 description: Güvenilir olmayan bir internet bağlantınız veya düşük bant genişliğiniz olduğunda Visual Studio 'Yu çevrimdışı yüklemeyi öğrenin.
-ms.date: 10/11/2019
+ms.date: 10/22/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b9c8b60914e814ab6957ee9ec9307b12d9c3d1ba
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: c8b59ce38657bab157b966a25e0cd27109510215
+ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516889"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72789992"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun çevrimdışı yüklemesini oluşturma
 
@@ -180,6 +180,8 @@ Yüklemeyi çalıştırmak için bu komutu kullanın:
 ```cmd
 c:\vslayout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
 ```
+
+[Komut satırı parametrelerinin](use-command-line-parameters-to-install-visual-studio.md)nasıl kullanılacağına ilişkin daha fazla örnek için bkz. [Visual Studio için komut satırı parametresi örnekleri yükleme](command-line-parameter-examples.md) sayfası. 
 
 > [!NOTE]
 > İmzanın geçersiz olduğunu belirten bir hata alırsanız, güncelleştirilmiş sertifikaları yüklemelisiniz. Çevrimdışı önbelleğinizin Sertifikalar klasörünü açın. Sertifika dosyalarının her birine çift tıklayın ve ardından Sertifika Yöneticisi Sihirbazı ' na tıklayın. Parola istenirse boş bırakın.

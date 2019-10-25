@@ -10,55 +10,55 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: d1703fb5386c7b29446b621d2e83f9486e93dd3d
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 4bbff0c2d149afddc355afe5f6c93e9d0aea54c0
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679271"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806904"
 ---
-# <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Visual Studio kullanarak Azure App Service'e bir Web uygulaması yayımlama
+# <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Visual Studio 'Yu kullanarak Azure App Service Web uygulaması yayımlama
 
-Azure App Service veya Azure App Service (kapsayıcılar kullanarak) Linux ASP.NET, ASP.NET Core, Node.js ve .NET Core uygulamaları yayımlayın aşağıdaki yöntemlerden birini kullanarak.
+ASP.NET, ASP.NET Core, Node. js ve .NET Core uygulamaları için aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Azure App Service Linux (kapsayıcılar kullanarak) yayımlayın.
 
-* Azure DevOps ile sürekli (veya otomatik) dağıtımı uygulamalar için kullanmak [Azure işlem hatları](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops).
+* Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops)Ile Azure DevOps kullanın.
 
-* Tek seferlik (veya elle) dağıtımı uygulamalar için kullanmak **Yayımla** Azure App Service veya App Service (kapsayıcılar kullanarak) Linux için ASP.NET, ASP.NET Core, Node.js ve .NET Core uygulamaları dağıtmak için Visual Studio araç. Python uygulamaları için adımları takip edin [Python - Azure App Service'e yayımlama](../python/publishing-python-web-applications-to-azure-from-visual-studio.md).
+* Uygulamaların tek seferlik (veya el ile) dağıtımı için, ASP.NET, ASP.NET Core, Node. js ve .NET Core uygulamalarını Linux için Azure App Service veya App Service dağıtmak üzere Visual Studio 'daki **Yayımla** aracını kullanın (kapsayıcılar kullanarak). Python uygulamaları için, [Azure App Service Python-Publish](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)üzerindeki adımları izleyin.
 
-Bu makalede nasıl kullanılacağını **Yayımla** tek seferlik bir dağıtım için aracı.
+Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullanılacağı açıklanır.
 
 [!INCLUDE [quickstart-prereqs-azure](includes/quickstart-prereqs-azure.md)]
 
 ## <a name="publish-to-azure-app-service"></a>Azure App Service’e yayımlama
 
-1. Çözüm Gezgini'nde projeye sağ tıklayıp seçin **Yayımla** (veya **derleme** > **Yayımla** menü öğesi).
+1. Çözüm Gezgini, projeye sağ tıklayın ve **Yayımla** ' yı seçin (veya **derleme** > **Yayımla** menü öğesini kullanın).
 
-    ![Çözüm Gezgini'nde proje bağlam menüsünde Yayımla komutunu](../deployment/media/quickstart-publish.png "seçin yayımlama")
+    ![Çözüm Gezgini içindeki proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla ' yı seçin")
 
-1. Tüm yayımlama profilleri, daha önce yapılandırdıysanız **Yayımla** bölmesi görünür, büyük/küçük harf hangi seçin **yeni profil oluşturma**.
+1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** bölmesi görüntülenir ve bu durumda **Yeni Profil oluştur**' u seçin.
 
-1. İçinde **yayımlama hedefi seçin** iletişim kutusunda **App Service**.
+1. **Bir yayımlama hedefi seç** iletişim kutusunda **App Service**' yi seçin.
 
-    ![Azure uygulama hizmeti seçin](../deployment/media/quickstart-publish-azure.png "Azure uygulama hizmeti seçin")
+    ![Azure App Service seçin](../deployment/media/quickstart-publish-azure.png "Azure App Service seçin")
 
-1. **Yayımla**’yı seçin. **App Service Oluştur** iletişim kutusu görüntülenir. Gerekirse, ardından varsayılan uygulama hizmeti ayarlarını alanları doldurun, size Azure hesabıyla oturum açın.
+1. **Yayımla**' yı seçin. **App Service oluştur** iletişim kutusu görüntülenir. Gerekirse Azure hesabınızla oturum açın, ardından varsayılan App Service ayarları alanları doldurun.
 
-    ![App Service Oluştur](../deployment/media/quickstart-publish-settings-app-service.png "Azure App Service oluştur")
+    ![App Service oluştur](../deployment/media/quickstart-publish-settings-app-service.png "Azure App Service oluştur")
 
-1. **Oluştur**’u seçin. Visual Studio için Azure App Service uygulama dağıtır ve tarayıcınızda web uygulaması yükler. Proje özelliklerini **Yayımla** site URL'sini ve diğer ayrıntıları bölmesi gösterir.
+1. **Oluştur**' u seçin. Visual Studio uygulamayı Azure App Service dağıtır ve Web uygulaması tarayıcınıza yüklenir. Proje özellikleri **Yayımlama** bölmesi, site URL 'sini ve diğer ayrıntıları gösterir.
 
-    ![Yayımlama profili Özet gösteren özellik bölmesi](../deployment/media/quickstart-publish-app-service-summary.png)
+    ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-app-service-summary.png)
 
-## <a name="clean-up-resources"></a>Kaynakları temizleme
+## <a name="clean-up-resources"></a>Kaynakları Temizleme
 
-Önceki adımlarda, Azure kaynaklarını bir kaynak grubunda oluşturuldu. Gelecekte bu kaynaklara ihtiyaç duymayacağınızı düşünüyorsanız, kaynak grubunu silerek bunları silebilir.
-Azure portalında sol menüden seçim yapın **kaynak grupları** seçip **myResourceGroup**.
-Kaynak grubunuzun sayfasında, listelenen kaynakları silmek istediğiniz kaynaklar olduğundan emin olun.
-Seçin **Sil**, türü **myResourceGroup** metin kutusuna ve ardından **Sil**.
+Yukarıdaki adımlarda, bir kaynak grubunda Azure kaynakları oluşturdunuz. Gelecekte bu kaynaklara ihtiyaç duymazsanız, kaynak grubunu silerek bunları silebilirsiniz.
+Azure portal sol menüden **kaynak grupları** ' nı seçin ve ardından **myresourcegroup**' ı seçin.
+Kaynak grubu sayfasında, listelenen kaynakların silmek istedikleriniz olduğundan emin olun.
+**Sil**' i seçin, metin kutusuna **myresourcegroup** yazın ve ardından **Sil**' i seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu hızlı başlangıçta, azure'a dağıtım için bir yayımlama profili oluşturmak için Visual Studio kullanmayı öğrendiniz. Ayrıca bir yayımlama yapılandırabilirsiniz alarak profili, Azure App Service ayarlarını yayımlayın.
+Bu hızlı başlangıçta, Azure 'a dağıtım için bir yayımlama profili oluşturmak üzere Visual Studio 'Yu nasıl kullanacağınızı öğrendiniz. Ayrıca, Azure App Service yayımlama ayarlarını içeri aktararak bir yayımlama profili de yapılandırabilirsiniz.
 
 > [!div class="nextstepaction"]
 > [Yayımlama ayarlarını içeri aktarma ve Azure’a dağıtma](tutorial-import-publish-settings-azure.md)

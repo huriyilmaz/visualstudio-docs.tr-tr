@@ -14,12 +14,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f2a33a0090be980c221ebfbe7f3116cdfef7b23b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07c7c9db37a951b689e28e87a02c7f41a667685b
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648979"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807053"
 ---
 # <a name="access-data-in-visual-studio"></a>Visual Studio'da verilere erişime
 
@@ -94,7 +94,7 @@ Azure hizmetlerine bağlanıyorsanız en son [Azure SDK araçlarını](https://a
 
 ### <a name="data-providers"></a>Veri sağlayıcıları
 
-Bir veritabanının ADO.NET 'de tüketilebilir olması için, özel bir *ADO.NET veri sağlayıcısına* sahip olması veya bir ODBC veya OLE DB arabirimini kullanıma sunması gerekir. Microsoft, SQL Server ürünlerin yanı sıra ODBC ve OLE DB sağlayıcıları için [ADO.NET veri sağlayıcılarının bir listesini](https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview) sağlar.
+Bir veritabanının ADO.NET 'de tüketilebilir olması için, özel bir *ADO.NET veri sağlayıcısına* sahip olması veya bir ODBC veya OLE DB arabirimini kullanıma sunması gerekir. Microsoft, SQL Server ürünlerin yanı sıra ODBC ve OLE DB sağlayıcıları için [ADO.NET veri sağlayıcılarının bir listesini](/dotnet/framework/data/adonet/ado-net-overview) sağlar.
 
 ### <a name="data-modeling"></a>Veri modelleme
 
@@ -144,9 +144,9 @@ Veri bağlantılı uygulamaların ve veritabanlarının tasarımını, araştır
 
 [ADO.net](/dotnet/framework/data/adonet/index) , ADO.NET mimarisini ve uygulama verilerini yönetmek ve veri KAYNAKLARıYLA ve XML ile etkileşime geçmek için ADO.net sınıflarının nasıl kullanılacağını &mdash;Describes.
 
-[ADO.NET Entity Framework](https://docs.microsoft.com/ef/ef6/) , geliştiricilerin doğrudan ilişkisel bir veritabanına karşı kavramsal bir modelde programlama yapmasına izin veren veri uygulamaları oluşturma &mdash;Describes.
+[ADO.NET Entity Framework](/ef/ef6/) , geliştiricilerin doğrudan ilişkisel bir veritabanına karşı kavramsal bir modelde programlama yapmasına izin veren veri uygulamaları oluşturma &mdash;Describes.
 
-[WCF Veri Hizmetleri 4,5](/dotnet/framework/data/wcf/index) &mdash;Describes Web 'de veya [Açık Veri Protokolü 'nü (OData)](https://www.odata.org/)uygulayan bir intranette veri hizmetleri dağıtmak için [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] kullanma.
+[WCF Veri Hizmetleri 4,5](/dotnet/framework/data/wcf/index)&mdash;Web 'de veya [Açık Veri Protokolü 'nü (OData)](https://www.odata.org/)uygulayan bir intranette veri hizmetleri dağıtmak Için [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] nasıl kullanılacağını açıklar.
 
 [Office çözümlerinde veriler](../vsto/data-in-office-solutions.md) , Office çözümlerinde verilerin nasıl çalıştığını açıklayan konuların bağlantılarını &mdash;Contains. Burada şema tabanlı programlama, verileri önbelleğe alma ve sunucu tarafında veri erişimi hakkında bilgiler bulunur.
 
