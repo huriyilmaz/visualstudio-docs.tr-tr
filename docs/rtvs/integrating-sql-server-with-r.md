@@ -1,6 +1,6 @@
 ---
 title: SQL Server R ile tümleştirme
-description: Visual Studio, oluşturma ve R SQL sorguları ve depolanan yordamlarla çalışma R özelliği destekler.
+description: Visual Studio, R 'den SQL sorguları oluşturmayı ve çalıştırmayı ve R 'nin Saklı yordamlarla çalışma özelliğini destekler.
 ms.date: 06/25/2018
 ms.topic: conceptual
 author: kraigb
@@ -8,78 +8,78 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: f15c785658b5c4cd5a6b158b05eb67ff9a4e4c2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 10b5dfee629b5b6e67ab544ca0bdd905ed2a120a
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62814445"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888452"
 ---
 # <a name="work-with-sql-server-and-r"></a>SQL Server ve R ile çalışma
 
-SQL Server için mükemmel destek Visual Studio'nun veri bilimcileri, R ve SQL veritabanlarını oluşturma ve SQL sorguları çalıştırmak ve depolanan yordamlarla çalışma olanağı ile çalışmak yardımcı olur.
+Visual Studio 'nun SQL Server için mükemmel bir desteği, veri bilimcilerinin SQL sorguları oluşturup çalıştırma ve saklı yordamlarla çalışma yeteneği aracılığıyla R ve SQL veritabanları ile çalışmasına yardımcı olur.
 
 > [!Note]
-> SQL ve R ile birlikte çalışmak için SQL Server veri araçları yüklü olması gerekir:
-> - Visual Studio 2017: Visual Studio Yükleyicisi'ni çalıştırın ve veri depolama ve SQL Server veri Araçları'nı içeren, işleme iş yükünü seçin.
-> - Visual Studio 2015: yönergelerini izleyin [SQL Server veri araçları indirin](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).
+> SQL ve R ile birlikte çalışmak için SQL Server Veri Araçları yüklü olmalıdır:
+> - Visual Studio 2017: Visual Studio yükleyicisi 'ni çalıştırın ve veri depolama ve işleme iş yükünü (SQL Server veri araçları dahil) seçin.
+> - Visual Studio 2015: [indirme SQL Server veri araçları](/sql/ssdt/download-sql-server-data-tools-ssdt)yönergeleri izleyin.
 
 |   |   |
 |---|---|
-| ![video kamera simgesini film](../install/media/video-icon.png "bir video izleyin") | [(Youtube.com) videoyu](https://www.youtube.com/watch?v=n4AYr0QIwdQ) SQL Server ve R (3 m 03s) genel bakış. |
+| ![video için film kamerası simgesi](../install/media/video-icon.png "Video izleyin") | SQL Server ve R (3M 03s) genel bakışı için [bir video (YouTube.com) izleyin](https://www.youtube.com/watch?v=n4AYr0QIwdQ) . |
 
-## <a name="create-and-run-sql-queries"></a>SQL sorguları oluşturun ve çalıştırın
+## <a name="create-and-run-sql-queries"></a>SQL sorguları oluşturma ve çalıştırma
 
-RTVS, aradığınız sonuçları alana kadar yinelemeli olarak ayrı bir bağlamda SQL sorguları geliştirmenize imkan sağlayan, R projelere ekleme SQL sorgularını destekler.
+RTVS, R projelerine SQL sorguları eklemeyi destekler. böylece, aradığınız sonuçları elde edene kadar SQL sorgularını ayrı bir bağlamda bir şekilde geliştirebilirsiniz.
 
-SQL sorgu dosyası eklemek için projeyi seçin Çözüm Gezgini'nde sağ **Ekle** > **yeni öğe**seçip **SQL sorgusu** dosya türü:
+Bir SQL sorgu dosyası eklemek için Çözüm Gezgini ' de projeye sağ tıklayın, > **Yeni öğe** **Ekle** ' yi seçin ve **SQL sorgu** dosyası türünü seçin:
 
-![SQL sorgu öğesi bir projeye ekleyin.](media/sql-add-item.png)
+![Projeye SQL sorgu öğesi ekleme](media/sql-add-item.png)
 
-Bu komut dosyasının tam IntelliSense SQL ve sorguları çalıştırma olanağı sağlayan, Visual Studio'nun Transact-SQL Düzenleyicisi'nde açılır. Bir sorgu çalıştırmayı deneyin veya düzenleyici araç çubuğunda Bağlan düğmesini kullanarak bir veritabanına bağlanmak gereken bu özellikleri çalışacak şekilde (**Ctrl**+**Shift**+**E** , ayrıca çalıştığı seçimine göre). Her iki durumda da, bağlantı iletişim kutusunu açar:
+Bu komut, Visual Studio 'nun Transact-SQL düzenleyicisinde, SQL için tam IntelliSense sağlayan ve sorguları çalıştırabilme olanağı sunan dosyayı açar. Bu özelliklerin çalışması için, düzenleyicinin araç çubuğundaki Bağlan düğmesini kullanarak bir veritabanına bağlanmanız veya bir sorgu çalıştırmayı denemeniz gerekir (aynı zamanda bir seçimde da çalışan) (**Ctrl**+**SHIFT**+**E** Her iki yöntem de bağlantı iletişim kutusunu getirir:
 
-![SQL bağlantı iletişim kutusu](media/sql-connection-dialog.png)
+![SQL bağlantısı iletişim kutusu](media/sql-connection-dialog.png)
 
-Bağlantı kurulduktan sonra sorguları çalıştırmak ve sonuçları bakın:
+Bağlantı kurulduktan sonra sorguları çalıştırabilir ve sonuçları görebilirsiniz:
 
-![SQL penceresinin sorgu sonuçları](media/sql-query-results.png)
+![SQL penceresi sorgu sonuçları](media/sql-query-results.png)
 
-Transact-SQL Düzenleyicisi, sorgu ve sorgu hata ayıklayıcı yürütme planı görüntüleme gibi diğer özellikleri çeşitli destekler.
-Daha fazla bilgi için [Transact-SQL Düzenleyicisi'ni kullanma düzenleme ve komut dosyaları yürütme](https://msdn.microsoft.com/library/hh272706.aspx).
+Transact-SQL Düzenleyicisi, sorgu için yürütme planını ve sorgu hata ayıklayıcısını görüntüleme gibi diğer birçok özelliği destekler.
+Daha fazla bilgi için bkz. [komut dosyalarını düzenlemek ve yürütmek Için Transact-SQL düzenleyicisini kullanma](https://msdn.microsoft.com/library/hh272706.aspx).
 
-## <a name="work-with-sql-server-stored-procedures"></a>SQL Server saklı yordamlarla çalışın
+## <a name="work-with-sql-server-stored-procedures"></a>SQL Server saklı yordamlarla çalışma
 
-[SQL Server R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services) saklı yordamı ekleyin ve bir T-SQL R kodunu çalıştırın (SQL Server 2016 ve üzeri) sağlar. SQL Server yüklü bir bilgisayara R kodu çalıştırmak, bir SQL sorgusunun döndürdüğü veri çubuğunda çalıştırmak ve daha fazla SQL tarafından işlendiği veya istemciye döndürülen bir SQL sonuç kümesi oluşturur.
+[SQL Server R Services](/sql/advanced-analytics/r/sql-server-r-services) (SQL Server 2016 ve üzeri) bir T-SQL saklı yordamından R kodu eklemenizi ve çalıştırmanızı sağlar. R kodunu bir SQL Server bilgisayarda çalıştırabilir, bir SQL sorgusundan döndürülen veriler üzerinde çalışabilir ve daha fazla SQL tarafından işlenebilecek veya istemciye geri döndürülebilecek bir SQL sonuç kümesi oluşturabilirsiniz.
 
-Aşağıdaki bölümlerde açıklandığı gibi RTVS tek bir SQL deyimi içinde SQL ve R kodu birleştirme aksi zahmetli ve hatalara işlemini basitleştirir:
+RTVS, SQL ve R Code 'u aşağıdaki bölümlerde açıklandığı gibi tek bir SQL deyimindeki birleştirmek için, aksi durumda ve hataya açık bir işlemi basitleştirir:
 
-- [Veritabanı Bağlantısı Ekle](#add-a-database-connection)
-- [Yazın ve bir SQL saklı yordamı test edin](#write-and-test-a-sql-stored-procedure)
-- [SQL saklı yordamı yayımlama](#publish-a-sql-stored-procedure)
+- [Veritabanı bağlantısı ekleme](#add-a-database-connection)
+- [Bir SQL saklı yordamını yazma ve test etme](#write-and-test-a-sql-stored-procedure)
+- [Bir SQL saklı yordamı yayımlama](#publish-a-sql-stored-procedure)
 
 |   |   |
 |---|---|
-| ![video kamera simgesini film](../install/media/video-icon.png "bir video izleyin") | [(Youtube.com) videoyu](https://www.youtube.com/watch?v=dFKIT2OitWQ) bakış R ve SQL saklı yordamları (6 milyon 09s) için. |
+| ![video için film kamerası simgesi](../install/media/video-icon.png "Video izleyin") | R ve SQL saklı yordamlarına (6m 09s) genel bakış için [bir video (YouTube.com) izleyin](https://www.youtube.com/watch?v=dFKIT2OitWQ) . |
 
-### <a name="add-a-database-connection"></a>Veritabanı Bağlantısı Ekle
+### <a name="add-a-database-connection"></a>Veritabanı bağlantısı ekleme
 
-1. Seçin **R Araçları** > **veri** > **veritabanı bağlantı Ekle** ortaya çıkarmak için **bağlantı özellikleri** iletişim kutusu. Burada belirttiğiniz (Bu durumda SQL Server) veri kaynağının adı, sunucu kimlik doğrulama modu ve veritabanının adı adı. Seçin **Test Bağlantısı** iletişim kutusunu kapatmadan önce girişinizi doğrulayın.
+1. **R araçları** > **veri** > **veritabanı bağlantısı ekle** ' yi seçerek **bağlantı özellikleri** iletişim kutusunu açın. Burada, veri kaynağının adını (Bu durumda SQL Server), sunucunun adını, kimlik doğrulama modunu ve veritabanının adını belirtirsiniz. İletişim kutusunu kapatmadan önce girişinizi doğrulamak için **Bağlantıyı Sına** ' yı seçin.
 
-    ![SQL bağlantı iletişim kutusu](media/sql-connection-string-dialog.png)
+    ![SQL bağlantısı Iletişim kutusu](media/sql-connection-string-dialog.png)
 
-1. Seçtiğinizde **Tamam** geçerli bir bağlantı ile Visual Studio adlı bir bağlantı dizesi oluşturur. `dbConnection` yeni *ayarları. R* dosya. RTVS kaynakları otomatik olarak (çalışır) Bu dosya, R betikleri bağlantısından hemen kullanabilirsiniz:
+1. Geçerli bir bağlantıyla **Tamam** ' ı seçtiğinizde, Visual Studio yeni ayarlarda `dbConnection` adlı bir bağlantı dizesi oluşturur *. R* dosyası. RTVS, bu dosyayı otomatik olarak kaynaklar (çalıştırır). böylece, R betiklerinden gelen bağlantıyı hemen kullanabilirsiniz:
 
-![SQL Settings.R dosyası](media/sql-settings-dot-r.png)
+![SQL Settings. R dosyası](media/sql-settings-dot-r.png)
 
-### <a name="write-and-test-a-sql-stored-procedure"></a>Yazın ve bir SQL saklı yordamı test edin
+### <a name="write-and-test-a-sql-stored-procedure"></a>Bir SQL saklı yordamını yazma ve test etme
 
-Yeni bir SQL saklı yordamı eklemek için projenize sağ tıklayın, **Ekle** > **yeni öğe**seçin **SQL saklı yordamı R ile** şablonları listesinden dosyaya bir ad verin ve seçin **Tamam**. Varsayılan dosya adı *SqlSProc.R*; kolay okunması, dosya adı için *StoredProcedure.R* bu bölümün geri kalanında kullanılır. Birden çok saklı yordam varsa, her dosyanın benzersiz bir dosya adı olmalıdır.
+Yeni bir SQL saklı yordamı eklemek için projenize sağ tıklayın, > **Yeni öğe** **Ekle** ' yi seçin, şablon listesinden **R ile SQL saklı yordamı** ' nı seçin, dosyaya bir ad verin ve **Tamam**' ı seçin. Varsayılan dosya adı *Sqlsproc. R*; okumayı kolaylaştırmak için, bu bölümün geri kalanında *StoredProcedure. R* dosya adı kullanılır. Birden çok saklı yordamdıysanız, her dosyanın benzersiz bir dosya adı olması gerekir.
 
-Saklı yordam için üç dosyayı RTVS oluşturur: bir *. R* dosya R kodunuz için bir *. Query.SQL* SQL kod dosyası ve bir *. Template.SQL* ikisi bir araya getiren dosya. Bunlar alt öğe olarak iki görünür Çözüm Gezgini'nde ikinci *. R* dosyası:
+RTVS, saklı yordam için üç dosya oluşturur: a *.* R kodunuz için r dosyası, a *. SQL kodu için Query. SQL* dosyası ve bir *. İkisini birleştiren Template. SQL* dosyası. Bunlar ikinci ikisi, ' ın alt öğesi olarak Çözüm Gezgini görünür *. R* dosyası:
 
-![Çözüm Gezgini görünümü SQL saklı yordamı R ile genişletilmiş](media/sql-solution-explorer-expanded.png)
+![R ile SQL saklı yordamının genişletilmiş görünümünü Çözüm Gezgini](media/sql-solution-explorer-expanded.png)
 
-*. R* dosyası (*StoredProcedure.R* Bu örnekte) burada, R kod yazdığınız yerdedir. Varsayılan içeriklerini şunlardır:
+*. R dosyası* (*StoredProcedure. r* Bu örnek), r kodunu yazdığınız yerdir. Varsayılan içerikler şunlardır:
 
 ```R
 # @InputDataSet: input data frame, result of SQL query execution
@@ -94,24 +94,24 @@ Saklı yordam için üç dosyayı RTVS oluşturur: bir *. R* dosya R kodunuz iç
 OutputDataSet <- InputDataSet
 ```
 
-Kısaca, kod olarak adlandırılan bir R dataframe alır `InputDataSet` ve kendi sonuçları `OutputDataSet`, çıkış girişi kopyalamakla şablon kod ile.
+Tek bir deyişle, kod `InputDataSet` adlı bir R dataframe alır ve `OutputDataSet`sonucunu, şablon kodu yalnızca çıktıyı çıkışa kopyalayarak geri döndürür.
 
 > [!Note]
-> Bu veri çerçevelerini adlarını denetlediği `@input_data_1_name` ve `@output_data_1_name` parametreleri çağrısında `sp_execute_external_script` sistem saklı yordamı. Bu çağırma kuralı tasarımını hakkında daha fazla ayrıntı ve kullanımı ile ilgili bazı örnekler için bkz: [sp_execute_external_script (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+> Bu veri çerçevelerinin adları, `sp_execute_external_script` sistemi saklı yordamına yapılan çağrıda `@input_data_1_name` ve `@output_data_1_name` parametreleri tarafından denetlenir. Bu çağırma kuralının tasarımıyla ilgili daha ayrıntılı bilgi ve bunların kullanımına ilişkin bazı örnekler için bkz. [sp_execute_external_script (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
-Diğer üretilen kodda (açıklamaları) kullanan bir küçük test betiği sağlar [RODBC paket](https://cran.r-project.org/web/packages/RODBC/index.html) bir SQL deyimi SQL sunucusuna aktarmak için çalıştırın ve almak, sonucu bir R veri çerçevesi ayarlayın. SQL Server'dan alma etkileşimli olarak R kodunuzu sonucu yazmak için bu test kodu ayarlamak açıklama durumundan çıkarabilirsiniz.
+Oluşturulan diğer kod (açıklamalarda), bir SQL deyimini iletmek için SQL Server, çalıştırmak için [Rodbc paketini](https://cran.r-project.org/web/packages/RODBC/index.html) kullanan küçük bir test betiği sağlar ve sonuç kümesini bir R veri çerçevesi olarak alır. SQL Server aldığınız sonuç kümesine göre R kodunuzu etkileşimli olarak yazmak için bu test kodunun açıklamasını kaldırabilirsiniz.
 
-*. Query.SQL* dosyası (*StoredProcedure.Query.sql* Bu örnekte), yazma ve test için veri üreten SQL sorgu `InputDataSet`. Bu *.sql* dosya Düzenleyicisi tüm olağan Transact-SQL özellikleri sağlar.
+*. Query. SQL* dosyası (Bu örnekteki*StoredProcedure. Query. sql* ) `InputDataSet`IÇIN veri üreten SQL sorgusunu yazdığınızda ve test edersiniz. Bu *. SQL* dosyası ile düzenleyici, tüm olağan Transact-SQL özelliklerini size sağlar.
 
-SQL kodunuzla memnun olduğunuzda sürükleyerek, R kodu ile tümleştirmek *.sql* için açık düzenleyiciye dosyasını *. R* dosya. Aşağıdaki görüntüde *StoredProcedure.Query.sql* noktasına sürüklediğiniz *StoredProcedure.R* virgülle sonra `sqlQuery(channel, )`:
+SQL kodunuzun kutlu olsun, *. SQL* dosyasını ' a yönelik açık düzenleyiciye sürükleyerek R kodunuzla tümleştirin *. R* dosyası. Aşağıdaki görüntüde, *StoredProcedure. Query. SQL* , `sqlQuery(channel, )`virgülden sonra *StoredProcedure. R* içindeki noktaya sürüklenmiştir:
 
-![R dize değişkenine SQL dosyası okuma](media/sql-reference-sql-file-from-r.png)
+![SQL dosyası R dize değişkenine okunuyor](media/sql-reference-sql-file-from-r.png)
 
-Gördüğünüz gibi bu basit adım R kodunu açmak için otomatik olarak oluşturur. *.sql* dosya içeriğini bir dizeye okumak ve SQL Server için göndermeden RODBC paketini geçirebilirsiniz.
+Gördüğünüz gibi bu basit adım, *. SQL* dosyasını açmak, içeriğini bir dizeye okumak ve SQL Server göndermek için rodbc paketine geçirmek üzere R kodu otomatik olarak oluşturur.
 
-Etkileşimli olarak işleyen kod yazma R artık `InputDataSet` istediğiniz gibi veri çerçevesi. R Kod Düzenleyicisi yalnızca ve göndermeden unutmayın [etkileşimli pencere](interactive-repl-for-r-in-visual-studio.md) tuşuna basarak **Ctrl**+**Enter**.
+Artık `InputDataSet` veri çerçevesini istediğiniz şekilde işleyen R kodunu etkileşimli olarak yazabilirsiniz. Düzenleyicide yalnızca R kodunu seçip **Ctrl**+**ENTER**tuşlarına basarak [etkileşimli pencereye](interactive-repl-for-r-in-visual-studio.md) gönderebilirsiniz.
 
-*. Template.SQL* dosyası (*StoredProcedure.Template.sql* Bu örnekte), son olarak, SQL saklı yordamı oluşturmak için şablon içerir:
+*. Şablon. SQL* dosyası (Bu örnekteki*StoredProcedure. Template. SQL* ), son olarak SQL saklı yordamınız oluşturmaya yönelik şablonu içerir:
 
 ```sql
 CREATE PROCEDURE [StoredProcedure]
@@ -125,30 +125,30 @@ EXEC sp_execute_external_script @language = N'R'
 END;
 ```
 
-- `_RCODE_` Yer tutucu içeriğine göre değiştirilir *. R* dosya (örneğin, *StoredProcedure.R*).
-- `_INPUT_QUERY_` Yer tutucu içeriğine göre değiştirilir *. Query.SQL* dosya (örneğin, *StoredProcedure.Query.sql*).
-- Düzen `WITH RESULT SETS` yan tümcesi, sonuç kümesi saklı yordamdan döndürülen şemasını tanımlamak için. Özellikle sütunları belirlemek `OutputDataSet` saklı yordamın çağırana döndürmek istediğiniz veri çerçevesi.
+- `_RCODE_` yer tutucusu, ' nin içeriğiyle değiştirilmiştir *. R* dosyası (örneğin, *StoredProcedure. R*).
+- `_INPUT_QUERY_` yer tutucusu, ' nin içeriğiyle değiştirilmiştir *. Sorgu. SQL* dosyası (örneğin, *StoredProcedure. Query. SQL*).
+- Saklı yordamda döndürülen sonuç kümesinin şemasını tanımlayacak `WITH RESULT SETS` yan tümcesini düzenleyin. Saklı yordamın çağıranına döndürmek istediğiniz `OutputDataSet` veri çerçevesindeki sütunları özel olarak belirler.
 
-Örneğin, aşağıdaki sorguyu için:
+Örneğin, aşağıdaki sorgu için:
 
 ```sql
 SELECT TOP 100 medallion, hack_license FROM nyctaxi_sample
 ```
 
-Aşağıdaki kullanacağınız `WITH RESULT SETS` yan tümcesi dönüş değerlerinin veri türlerini belirtmek için:
+Dönüş değerlerinin veri türlerini belirtmek için aşağıdaki `WITH RESULT SETS` yan tümcesini kullanacaksınız:
 
 ```sql
 WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 ```
 
-### <a name="publish-a-sql-stored-procedure"></a>SQL saklı yordamı yayımlama
+### <a name="publish-a-sql-stored-procedure"></a>Bir SQL saklı yordamı yayımlama
 
-1. Seçin **R Araçları** > **veri** > **yayımlama seçeneği ile** menü komutu.
-1. Görüntülenen iletişim kutusunda, değiştirmek **yayımlama:** için **veritabanı**, hedef belirtin, seçin **Yayımla**, RTVS oluşturur ve saklı yordam yayımlar ve:
+1. Seçenekler menü komutuyla **yayımla** > **veri** > **R araçları** ' nı seçin.
+1. Görüntülenen iletişim kutusunda, **Yayımla olarak değiştir:** **veritabanına**, hedefi belirtin, **Yayımla**' yı seçin ve rtvs derlemeleri ve saklı yordamı yayımlar:
 
-    ![Saklı yordam iletişim yayımlama](media/sql-publish-with-options.png)
+    ![Saklı yordam Yayımla iletişim kutusu](media/sql-publish-with-options.png)
 
-1. Bir projedeki tüm depolanmış yordamları yayımlamak için kullanabileceğiniz **R Araçları** > **veri** > **saklı yordamları Yayımla** de komutu Çözüm Gezgini'nde projeye sağ tıklayın, kullanılabilir.
+1. Bir projedeki tüm saklı yordamları yayımlamak için, Çözüm Gezgini ' de projeye sağ tıkladığınızda da kullanılabilir olan **R araçları** > **verileri** > **saklı yordamları Yayımla** komutunu kullanabilirsiniz.
 
 > [!Tip]
-> SQL Server Nesne Gezgini Visual Studio'da açın varsa, yayımlanan depolanmış yordamınızdaki görünür **programlama** > **saklı yordamlar** veritabanınızın klasör. Ayrıca, nesne Gezgini'nde sağ tıklatıp seçerek çalıştırabileceğiniz **yordamı Yürüt**, veya etkileşimli olarak buradan çağırarak bir *.sql* sorgu penceresi.
+> Visual Studio 'da SQL Server Nesne Gezgini açıksa, yayımlanmış saklı yordamınız veritabanınızın **programlama** > **saklı yordamları** klasöründe görüntülenir. Ayrıca, yordamı Çalıştır ' ı sağ tıklayıp, **yordamı**Çalıştır ' ı seçerek veya bir *. SQL* sorgu penceresinden etkileşimli olarak çağırarak nesne Gezgini de çalıştırabilirsiniz.

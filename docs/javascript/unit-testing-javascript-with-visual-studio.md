@@ -1,6 +1,6 @@
 ---
 title: JavaScript ve TypeScript birim testi
-description: Visual Studio, Visual Studio için Node. js araçlarını kullanarak JavaScript ve TypeScript kodu desteği sağlar
+description: Visual Studio, Visual Studio için Node.js Araçları kullanarak JavaScript ve TypeScript kodu desteği sağlar
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.devlang: javascript
@@ -11,23 +11,23 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: b1ef763295db7673896189ce000ed59d5da5becf
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 90a440ce88690c12792c17729e93f9fa287dabb6
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787985"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888639"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Visual Studio 'da JavaScript ve TypeScript ile birim testi
 
 Visual Studio Için Node. js Araçları, bir komut istemine geçiş yapmanıza gerek kalmadan daha popüler JavaScript çerçevelerinden bazılarını kullanarak birim testleri yazmanızı ve çalıştırmanızı sağlar.
 
 Desteklenen çerçeveler şunlardır:
-* Mocha ([mochajs.org](http://mochajs.org/))
-* Jasmine ([Jasmine.github.io](https://jasmine.github.io/))
-* Bant ([github.com/substack/tape](https://github.com/substack/tape))
+* Mocha ([mochajs.org](https://mochajs.org/))
+* Jasmine ([Jasmine.GitHub.io](https://jasmine.github.io/))
+* Bant ([GitHub.com/substack/Tape](https://github.com/substack/tape))
 * Jest ([jestjs.io](https://jestjs.io/))
-* Çalıştırıcısı dışarı aktar (Bu Framework, Visual Studio için Node. js araçlarına özeldir)
+* Çalıştırıcısı dışarı aktar (Bu Framework Visual Studio için Node.js Araçları özeldir)
 
 > [!WARNING]
 > Banttaki bir sorun şu anda bant testlerinin çalıştırılmasını engelliyor. [PR #361](https://github.com/substack/tape/pull/361) birleştirildiğinde, sorun çözümlenmelidir.
@@ -70,12 +70,12 @@ Proje özelliklerinde birim testi seçeneklerini ayarlamadıysanız, **Özellikl
 > [!Note]
 > Birim testi seçenekleri tek tek dosyalar için ayarlar üzerinde tercih edilir.
 
-Test Gezgini'ni açtıktan sonra (seçin **Test** > **Windows** > **Test Gezgini**), Visual Studio bulur ve testleri görüntüler. Testler başlangıçta gösterilmiyorsa, Listeyi yenilemek için projeyi yeniden derleyin.
+Test Gezgini 'ni açtıktan sonra ( **test** > **Windows** > **Test Gezgini**' ni seçin), Visual Studio Testleri bulur ve görüntüler. Testler başlangıçta gösterilmiyorsa, Listeyi yenilemek için projeyi yeniden derleyin.
 
 ![Test Gezgini](../javascript/media/UnitTestsDiscoveryMocha.png)
 
 > [!NOTE]
-> Test Gezgini, TypeScript `outdir` dosyalarında `outfile` birim testlerinizi bulamayacağından *tsconfig. JSON*içinde or seçeneğini kullanmayın.
+> *Tsconfig. JSON*içinde `outdir` veya `outfile` seçeneğini kullanmayın, çünkü test Gezgini TypeScript dosyalarında birim testlerinizi bulamaz.
 
 ## <a name="run-tests"></a>Testleri çalıştırma
 
@@ -86,7 +86,7 @@ Testleri Visual Studio 2017 ' de veya komut satırından çalıştırabilirsiniz
 Testleri test Gezgini içindeki **Tümünü Çalıştır** bağlantısına tıklayarak çalıştırabilirsiniz. Ya da, bir veya daha fazla test veya grup seçerek, sağ tıklayıp ve **Seçilen testleri** kısayol menüsünden Çalıştır ' ı seçerek testleri çalıştırabilirsiniz. Testler arka planda çalışır ve test Gezgini sonuçları otomatik olarak güncelleştirir ve gösterir. Ayrıca, seçili testlerde hata **Ayıkla seçili testleri**seçerek de hata ayıklaması yapabilirsiniz.
 
 > [!Warning]
-> Düğüm 8 + kullanan birim testlerinde hata ayıklama Şu anda yalnızca JavaScript test dosyaları için çalışır, TypeScript test dosyaları isabet kesme noktalarına başarısız olur. Geçici bir çözüm olarak, `debugger` anahtar sözcüğünü kullanır.
+> Düğüm 8 + kullanan birim testlerinde hata ayıklama Şu anda yalnızca JavaScript test dosyaları için çalışır, TypeScript test dosyaları isabet kesme noktalarına başarısız olur. Geçici bir çözüm olarak `debugger` anahtar sözcüğünü kullanır.
 
 > [!NOTE]
 > Profil oluşturma testlerini veya kod kapsamını Şu anda desteklemiyoruz.
@@ -141,7 +141,7 @@ Bu klasör, aşağıdaki iki işlevi dışarı aktaran aynı ada sahip bir JavaS
 * `find_tests`
 * `run_tests`
 
-`find_tests` Ve uygulamalarınayönelikiyibirörnekiçin,içindekiMochabirimitestçerçevesininuygulamasınabakın:`run_tests`
+`find_tests` ve `run_tests` uygulamalarına ilişkin iyi bir örnek için, içindeki Mocha birim testi çerçevesinin uygulamasına bakın:
 
 `<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter\TestFrameworks\mocha\mocha.js`
 

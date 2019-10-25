@@ -1,5 +1,5 @@
 ---
-title: JavaScript ve TypeScript, Visual Studio 2019
+title: Visual Studio 2019 ' de JavaScript ve TypeScript
 ms.date: 03/27/2019
 ms.technology: vs-javascript
 ms.topic: conceptual
@@ -11,35 +11,35 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 3000510c6bb6079629a3df05909417593569c932
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3412e1d27a365a6c6302c56ada865f33a436b639
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62553261"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888614"
 ---
-# <a name="javascript-and-typescript-in-visual-studio-2019"></a>JavaScript ve TypeScript, Visual Studio 2019
+# <a name="javascript-and-typescript-in-visual-studio-2019"></a>Visual Studio 2019 ' de JavaScript ve TypeScript
 
-## <a name="overview"></a>Genel Bakış
+## <a name="overview"></a>Genel bakış
 
-Visual Studio 2019 sağlar JavaScript kullanarak doğrudan hem de kullanarak JavaScript geliştirme için zengin Destek [programlama dilini TypeScript](http://www.typescriptlang.org), daha verimli ve eğlenceli bir JavaScript sağlamak için geliştirilmiş Özellikle, uygun ölçekte projeleri geliştirirken geliştirme deneyimi. Birçok uygulama türleri ve hizmetler için Visual Studio'da JavaScript veya TypeScript kodu yazabilirsiniz.
+Visual Studio 2019, JavaScript geliştirme ve ayrıca daha üretken ve keyifli JavaScript geliştirme sağlamak üzere geliştirilen [TypeScript programlama dilini](http://www.typescriptlang.org/)kullanarak JavaScript geliştirmesi için zengin destek sağlar Özellikle de projeler ölçekli olarak geliştirilirken deneyim. Birçok uygulama türü ve hizmeti için, Visual Studio 'da JavaScript veya TypeScript kodu yazabilirsiniz.
 
 ## <a name="javascript-language-service"></a>JavaScript Dil Servisi
 
-Visual Studio 2019 JavaScript deneyim TypeScript desteği sağlayan aynı altyapısı ile desteklenmektedir. Bu, daha iyi özellik desteği, zenginlik ve hemen,-hazır tümleştirme sağlar.
+Visual Studio 2019 ' deki JavaScript deneyimi, TypeScript desteği sağlayan altyapıda desteklenir. Bu, daha iyi özellik desteği, zenginlik ve tümleştirme özelliklerinin hemen kullanıma hazır olmasını sağlar.
 
-Eski JavaScript language Service'a geri yükleme seçeneği artık kullanılabilir. Kullanıcılar, artık yeni JavaScript dil hizmeti,-hazır vardır. Yeni dil hizmetini yalnızca statik analiz tarafından desteklenen TypeScript dil hizmeti temel alır. Bu JavaScript kodunuzun daha zengin IntelliSense tür tanımlarını temel alarak yararlanabilir, böylece daha iyi araç kullanımı ile sağlamamız sağlar. Yeni hizmet, basit ve kendi kod ölçekler olarak daha iyi performans sağlayan eski hizmet, daha az bellek tüketir. Ayrıca daha büyük projeler işlemek için dil Hizmeti performansını geliştirdik.
+Eski JavaScript dil hizmetine geri yükleme seçeneği artık kullanılamıyor. Kullanıcılar artık yeni JavaScript dil hizmeti kullanıma hazır. Yeni dil hizmeti yalnızca, statik analizler tarafından desteklenen TypeScript dil hizmetini temel alır. Bu, size daha iyi araçlar sağlamamızı sağlar, bu sayede JavaScript kodunuz tür tanımlarına göre daha zengin IntelliSense 'den faydalanabilir. Yeni hizmet hafif ve eski hizmetten daha az bellek tüketir ve bu da kodunuzun ölçeklendirilmesine göre daha iyi performans sağlar. Ayrıca, daha büyük projeleri işlemek için dil hizmetinin performansını de geliştirdik.
 
 ## <a name="typescript-support"></a>TypeScript desteği
 
-Visual Studio 2019 projenizde TypeScript derleme tümleştirmeye yönelik çeşitli seçenekler sunar:
+Visual Studio 2019, TypeScript derlemesini projenize tümleştirmek için çeşitli seçenekler sunar:
 
-* [TypeScript NuGet paketini](https://www.nuget.org/packages/Microsoft.TypeScript.MSBuild). TypeScript 3.2 veya üzeri NuGet paketini projenize yüklendiğinde, karşılık gelen TypeScript dil hizmeti sürümü Düzenleyicisi'nde yüklenen.
-* Varsayılan olarak, bir tek başına SDK'sı indirilerek yanı sıra, Visual Studio yükleyicisi TypeScript SDK [VS Market'te](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-331-vs2017).
-* [TypeScript npm paket](https://www.npmjs.com/package/typescript). TypeScript 2.1 veya üzeri bir npm paketi projenize yüklendiğinde, karşılık gelen TypeScript dil hizmeti sürümü Düzenleyicisi'nde yüklenen.
+* [TypeScript NuGet paketi](https://www.nuget.org/packages/Microsoft.TypeScript.MSBuild). TypeScript 3,2 veya üzeri için NuGet paketi projenize yüklendiğinde, TypeScript dil hizmeti 'nin karşılık gelen sürümü düzenleyicide yüklenir.
+* Visual Studio yükleyicisi 'nde varsayılan olarak kullanılabilen TypeScript SDK ve [vs Market](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-331-vs2017)'ten tek başına SDK indirmesi.
+* [TypeScript NPM paketi](https://www.npmjs.com/package/typescript). TypeScript 2,1 veya üzeri için NPM paketi projenize yüklendiğinde, TypeScript dil hizmeti 'nin karşılık gelen sürümü düzenleyicide yüklenir.
 
-Visual Studio 2019 içinde geliştirilen projeleri için TypeScript NuGet ve npm paketleri farklı platformlar ve ortamlar arasında büyük taşınabilirlik için kullanmanızı öneririz.
+Visual Studio 2019 ' de geliştirilen projeler için, farklı platformlar ve ortamlarda daha fazla taşınabilirlik sağlamak üzere TypeScript NuGet ve NPM paketlerini kullanmanızı öneririz.
 
 ## <a name="projects"></a>Projeler
 
-UWP JavaScript uygulamaları artık Visual Studio 2019’da desteklenmemektedir. Oluşturun veya açın JavaScript UWP projeleri (uzantısına sahip dosyaların *.jsproj*). Belgelerimizi daha kullanarak öğrenebilirsiniz [aşamalı Web uygulamaları (PWAs) oluşturma](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started) de Windows üzerinde çalışan.
+UWP JavaScript uygulamaları artık Visual Studio 2019’da desteklenmemektedir. JavaScript UWP projeleri oluşturamaz veya açamazsınız ( *. JSProj*uzantılı dosyalar). Windows üzerinde iyi çalışan [aşamalı Web Apps (PWAs) oluşturma](/microsoft-edge/progressive-web-apps/get-started) hakkındaki belgelerimizi kullanarak daha fazla bilgi edinebilirsiniz.

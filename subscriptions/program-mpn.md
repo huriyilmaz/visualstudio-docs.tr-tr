@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: Hangi aboneliklerin sunulmakta olduğuna, hangi kuralların uygulanacağını ve MPN ' de kaç abonelik sunulacağı hakkında ayrıntılar.
-ms.openlocfilehash: 063c0348af226f0cbe06256426352edac7124b11
-ms.sourcegitcommit: b761a4a457646d04adfda510c8837734ee4d8f17
+ms.openlocfilehash: e32ae547327c4e51b7d49f6dffe9130afa843c49
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929749"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816574"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft İş Ortağı Ağı (MPN) iş ortaklarına sunulan Visual Studio abonelikleri
 
@@ -57,7 +57,7 @@ Eylem Paketi, iş ortağı **3 Visual Studio Professional (MPN) abonelikleri**ka
 
 Visual Studio Professional (MPN) aboneleri Ayrıca, SQL Server Developer sürümü de dahil olmak üzere geliştirme için yazılım indirebilir ve kullanabilir.
 
-Visual Studio Professional (MPN) aboneliği, sunulan Visual Studio abonelikleriyle sunulan Azure DevOps Services avantajları, aylık Azure kredileri, teknik destek, eğitim veya diğer abonelik avantajlarını içermez edinme.
+Visual Studio Professional (MPN) aboneliği, Visual Studio abonelikleriyle birlikte sunulan Azure DevOps Services avantajları, Azure DevTest individiaul kredisi, teknik destek, eğitim veya diğer abonelik avantajlarını içermez. ticari olarak sunulur.
 
 ## <a name="internal-use-only-restriction"></a>Yalnızca iç kullanım kısıtlaması
 

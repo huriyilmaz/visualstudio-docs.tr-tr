@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: WPF ağacı Görselleştiricisini kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: WPF Ağacı Görselleştiricisini Kullanma | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,51 +16,54 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e005c1b41d2c563c5b47f358e87912cba64bf7f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: bbc705a20f8d878d85dc6aba14c64178c76041ac
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821385"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888395"
 ---
-# <a name="how-to-use-the-wpf-tree-visualizer"></a>Nasıl yapılır: WPF Ağacı Görselleştiricisini kullanma
-WPF ağacı görselleştiricisini WPF nesne görsel ağacını keşfedin ve o ağaç içinde bulunan nesneler için WPF bağımlılık özellikleri görüntülemek için kullanabilirsiniz. Görsel ağacı hakkında daha fazla bilgi için bkz: [WPF içinde ağaçlar](/dotnet/framework/wpf/advanced/trees-in-wpf). Bağımlılık özellikleri hakkında daha fazla bilgi için bkz: [bağımlılık özelliklerine genel bakış](/dotnet/framework/wpf/advanced/dependency-properties-overview).
+# <a name="how-to-use-the-wpf-tree-visualizer"></a>Nasıl Yapılır: WPF Ağacı Görselleştiricisini Kullanma
+WPF nesnesinin görsel ağacını araştırmak ve söz konusu ağaçta yer alan nesneler için WPF bağımlılık özelliklerini görüntülemek için WPF ağacı görselleştiricisi ' ni kullanabilirsiniz. Görsel ağaçlar hakkında daha fazla bilgi için bkz. [WPF Içindeki ağaçlar](/dotnet/framework/wpf/advanced/trees-in-wpf). Bağımlılık özellikleri hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](/dotnet/framework/wpf/advanced/dependency-properties-overview).
 
- WPF ağacı görselleştiricisini açtığınızda, iki bölme görürsünüz: **görsel ağacı** soldaki ve **özelliklerini** _adı_ **:**  _Tür_ sağ bölmesinde. Herhangi bir nesne seçin **görsel ağacı** bölmesinde ve **özelliklerini** _adı_ **:** _türü_ bölmesi Bu nesne özelliklerini göstermek için otomatik olarak güncelleştirilir.
+ WPF ağaç görselleştiricisi öğesini açtığınızda, iki bölme _görürsünüz: sol_taraftaki **görsel ağaç** ve sağdaki **Özellikler** **:** _tür_ bölmesi. **Görsel ağaç** bölmesindeki herhangi bir nesneyi seçin ve _ad_ **:** _tür_ bölmesi **özellikleri** , bu nesnenin özelliklerini gösterecek şekilde otomatik olarak güncelleştirilir.
 
-### <a name="to-open-the-wpf-tree-visualizer"></a>WPF ağacı görselleştiricisini açmak için
+ > [!NOTE]
+ > Ayrıca, [canlı görsel ağacı ve canlı Özellik Gezgini '](../xaml-tools/inspect-xaml-properties-while-debugging.md) nı kullanarak WPF nesnelerinin görsel ağacını inceleyebilirsiniz. WPF ağacı görselleştiricisi eski bir özelliktir ve etkin geliştirme aşamasındadır.
 
-1. Bir DataTip içinde **Watch** penceresinde **Otolar** penceresinde veya **Yereller** penceresinde, bir WPF nesne adının yanındaki oka bitişik için büyüteç simgesini tıklayın.
+### <a name="to-open-the-wpf-tree-visualizer"></a>WPF Ağacı Görselleştiricisini açmak için
 
-     Görselleştiriciler listesi görüntülenir.
+1. Bir veri Ipucunda, bir WPF nesnesi adının yanındaki bir veri **İpucu, bir** **pencere penceresi veya** **Yereller** penceresinde, büyüteç simgesine bitişik olan oka tıklayın.
 
-2. Tıklayın **WPF ağacı Görselleştiricisini**.
+     Görselleştiricilerin bir listesi görüntülenir.
+
+2. **WPF ağaç görselleştiricisi**öğesine tıklayın.
 
 ### <a name="to-search-the-visual-tree"></a>Görsel ağacı aramak için
 
-- İçinde **görsel ağacı** bölmesinde, içinde arama yapmak istediğiniz dizeyi yazın **arama** kutusu.
+- **Görsel ağaç** bölmesinde, **arama** kutusuna arama yapmak istediğiniz dizeyi yazın.
 
-  WPF ağacı görselleştiricisini, yazdığınız dizesiyle eşleşen görsel ağaçta ilk nesnenin hemen bulur. Daha fazla karakter daha doğru bir eşleşme bulmak için yazın.
+  WPF ağacı görselleştiricisi, görsel ağaçtaki yazdığınız dizeyle eşleşen ilk nesneyi hemen bulur. Daha doğru bir eşleşme bulmak için daha fazla karakter yazın.
 
-  - Sonraki eşleşmeye görsel ağacı içinde gitmek için tıklayın **sonraki**.
+  - Görsel ağaç içindeki bir sonraki eşleştirmeye gitmek için **İleri**' ye tıklayın.
 
-  - Önceki eşleşmeye geri gitmek için tıklayın **önceki**.
+  - Önceki eşleştirmeye geri dönmek **için önceki ' ye tıklayın.**
 
-  - Arama ölçütlerini temizlemek için tıklatın **Temizle**.
+  - Arama ölçütlerini temizlemek için **Temizle**' ye tıklayın.
 
-### <a name="to-search-the-properties-list"></a>Özellikler listesinde aramak için
+### <a name="to-search-the-properties-list"></a>Özellikler listesinde arama yapmak için
 
-- İçinde **özelliklerini** _adı_ **:** _türü_ bölmesinde, içinde arama yapmak istediğiniz dizeyi yazın **filtre**kutusu.
+- _Ad_ **:** _tür_ **bölmesine,** **filtre** kutusunda arama yapmak istediğiniz dizeyi yazın.
 
-  WPF ağacı görselleştiricisini hemen yazdığınız dizeyi eşleştir özelliklerini bulur; Artık, listede yalnızca yazdığınız dize eşleşen özellikler görüntülenir. Daha fazla karakter daha doğru bir eşleşme bulmak için yazın.
+  WPF ağaç görselleştiricisi, yazdığınız dizeyle eşleşen özellikleri hemen bulur; artık listede, yalnızca yazdığınız dizeyle eşleşen özellikler görüntülenir. Daha doğru bir eşleşme bulmak için daha fazla karakter yazın.
 
-  - Arama ölçütlerini temizlemek için tıklatın **Temizle**.
+  - Arama ölçütlerini temizlemek için **Temizle**' ye tıklayın.
 
-### <a name="to-close-the-visualizer"></a>Görselleştirici kapatmak için
+### <a name="to-close-the-visualizer"></a>Görselleştiriciyi kapatmak için
 
-- Tıklayın **Kapat** iletişim kutusunun sağ alt köşesindeki simgeyi.
+- İletişim kutusunun sağ üst köşesindeki **Kapat** simgesine tıklayın.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)
 - [WPF İçinde Ağaçlar](/dotnet/framework/wpf/advanced/trees-in-wpf)
 - [Bağımlılık Özelliklerine Genel Bakış](/dotnet/framework/wpf/advanced/dependency-properties-overview)

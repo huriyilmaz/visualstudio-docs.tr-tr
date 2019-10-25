@@ -1,6 +1,6 @@
 ---
 title: R Markdown
-description: Yüksek kaliteli raporları, sunumları ve panolar oluşturmak için Visual Studio'da R Markdown belgeleri oluşturma
+description: Yüksek kaliteli raporlar, sunular ve panolar oluşturmak için Visual Studio 'da R Markdown belgeleri oluşturma.
 ms.date: 11/16/2017
 ms.topic: conceptual
 author: kraigb
@@ -8,25 +8,25 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: b8f87f831c8076b22a61d7032d16be8d13f21b62
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 32cfabfe61a8c1dc8f04cd2d024b07a92b1eb7e2
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62998626"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888565"
 ---
 # <a name="create-r-markdown-documents"></a>R Markdown belgeleri oluşturma
 
-[R Markdown](https://rmarkdown.rstudio.com/) yüksek kalitede belgeler, raporlar, sunular ve panolar R analizi dönüştüren bir belge biçimidir.
+[R Markdown](https://rmarkdown.rstudio.com/) , R 'deki Analizi yüksek kaliteli belgeler, raporlar, sunular ve panolar halinde etkinleştiren bir belge biçimidir.
 
-R araçları için Visual Studio (RTVS) R Markdown öğe şablonu sağlar, Düzenleyici (IntelliSense dahil olmak üzere Düzenleyicisi içinde R kod için), dosya oluşturma özellikleri destekler ve Canlı Önizleme.
+Visual Studio için R Araçları (RTVS), R Markdown bir öğe şablonu, düzenleyici desteği (düzenleyici içindeki R kodu için IntelliSense dahil), dosya oluşturma özellikleri ve Canlı önizleme sağlar.
 
 ## <a name="using-r-markdown"></a>R Markdown kullanma
 
 1. Visual Studio’yu kapatın.
-1. (Yalnızca bir kez) Yükleme `pandoc` gelen [pandoc.org](http://pandoc.org/installing.html).
-1. Pandoc yüklemesini seçmelisiniz Visual Studio'yu yeniden başlatın.
-1. Yükleme `knitr` ve `rmarkdown` bunu yapabilirsiniz paketleri [etkileşimli pencere](interactive-repl-for-r-in-visual-studio.md):
+1. (Yalnızca bir kez) [Pandoc.org](https://pandoc.org/installing.html)adresinden `pandoc`.
+1. Visual Studio 'yu yeniden başlatarak pandoc yüklemesini seçin.
+1. [Etkileşimli pencereden](interactive-repl-for-r-in-visual-studio.md)yapabileceğiniz `knitr` ve `rmarkdown` paketlerini yükleyebilirsiniz:
 
     ```R
     install.packages("knitr")
@@ -34,9 +34,9 @@ R araçları için Visual Studio (RTVS) R Markdown öğe şablonu sağlar, Düze
 
     ```
 
-1. Yeni bir R Markdown dosyası kullanarak oluşturmak **dosya** > **yeni** > **dosya** menü komutu ve seçerek **R**  >  **R Markdown** listeden. Bir proje bağlamında, Çözüm Gezgini'nde projeye sağ tıklayıp **ekleyin R Markdown** (veya **Ekle** > **yeni öğe** seçerek**R Markdown** listeden).
+1. **Dosya > ** **Yeni** > **Dosya** menü komutunu kullanarak yeni bir R Markdown dosyası oluşturun ve listeden **R** > **R Markdown** ' i seçin. Bir proje bağlamında Çözüm Gezgini projeye sağ tıklayın ve **R Markdown Ekle** ' yi seçin (veya > **Yeni öğe** **ekleyin** ve listeden **R Markdown** seçeneğini belirleyin).
 
-1. Yeni dosyasının varsayılan içeriklerini aşağıdaki gibidir:
+1. Yeni dosyanın varsayılan içeriği aşağıdaki gibidir:
 
     ~~~markdown
     ---
@@ -64,8 +64,8 @@ R araçları için Visual Studio (RTVS) R Markdown öğe şablonu sağlar, Düze
 
 ## <a name="previews"></a>Önizlemeler
 
-Visual Studio 2017 sürüm 15.5 ve daha sonra otomatik olarak R Markdown için Canlı Önizleme sağlar. Düzenleyici ve önizleme arasında otomatik eşitlemeyi etkinleştirmek için işaretleyin **R Araçları** > **Markdown** > **otomatik eşitleme** ( **CTRL**+**Shift**+**Y**). Otomatik eşitleme kullanmıyorsanız, preview kullanarak yenileyebilirsiniz **R Araçları** > **Markdown** > **yeniden R Markdown önizlemesi**.
+Visual Studio 2017 sürüm 15,5 ve üzeri otomatik olarak R Markdown için Canlı önizleme sağlar. Düzenleyici ve önizleme arasındaki otomatik eşitlemeyi etkinleştirmek için **R araçları** > **Markaşağı** > **Otomatik eşitleme** (**CTRL**+**SHIFT**+**Y**) seçeneğini belirleyin. Otomatik eşitleme kullanmıyorsanız, **R araçları** ' nı kullanarak önizlemeyi yenileyebilirsiniz > **Markaşağı** > **yeniden yükleme R Markdown önizleme**' yi kullanabilirsiniz.
 
-Microsoft Word biçimleri Düzenleyicisi'nde sağ tıklatın ve aşağıdakilerden birini seçerek ve dosyanın PDF, HTML biçimindeki de önizleyebilirsiniz **Önizleme** komutları. Aynı komutları da kullanılabilir **R Araçları** > **Markdown** menüsü. (Bu komutlar Visual Studio'nun önceki sürümlerinde bulunan **R Araçları** > **Yayımla** menü.)
+Ayrıca, düzenleyicide sağ tıklayıp **Önizleme** komutlarından birini seçerek dosyayı HTML, PDF ve Microsoft Word biçimlerinde da önizleyebilirsiniz. Ayrıca, **R araçları** > **markaşağı** menüsünde aynı komutlar da mevcuttur. (Visual Studio 'nun önceki sürümlerinde bu komutlar **R araçları** > **Yayımla** menüsünde bulunur.)
 
-![RMarkdown Canlı Önizleme ve diğer Önizleme menü komutları](media/rmarkdown-live-preview.png)
+![Rmarkaşağı canlı önizleme ve diğer önizleme menü komutları](media/rmarkdown-live-preview.png)

@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
-ms.openlocfilehash: ef59a45bd3dd5b3ab2f3e5219d6674c8e7b095e2
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: 493e03ecd2a10d7cd9e81467d5886f863cd7229b
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108073"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888589"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne Giriş
 
@@ -21,7 +21,7 @@ Azure işlevleri, altyapıyı açıkça sağlamak veya yönetmek zorunda kalmada
 
 Azure Işlev araçları, **Mac için Visual Studio 7,5** ve daha yeni bir sürüme dahildir.
 
-İşlevleri oluşturup dağıtmak için, ' den [https://azure.com/free](https://azure.com/free)ücretsiz olarak kullanılabilen bir Azure aboneliğine de ihtiyacınız vardır.
+İşlevleri oluşturup dağıtmak için, [https://azure.com/free](https://azure.com/free)ücretsiz olarak kullanılabilen bir Azure aboneliğine de ihtiyacınız vardır.
 
 ## <a name="creating-your-first-azure-functions-project"></a>İlk Azure Işlevleri projenizi oluşturma
 
@@ -36,7 +36,7 @@ Azure Işlev araçları, **Mac için Visual Studio 7,5** ve daha yeni bir sürü
 
     > [!TIP]
     > Paketlenmiş Azure Işlevleri çalışma zamanı ve şablonları (CLı) mümkün olduğunca güncel tutulurken, kaçınılmaz olarak güncelliğini yitirmiş. Yeni bir Işlevler projesi oluştururken, Mac için Visual Studio CLı güncelleştirmelerini denetler ve aşağıdaki görüntüde gösterildiği gibi size bildirir. Güncelleştirilmiş şablonları indirmek için düğmeye tıklamanız yeterlidir.
-    > ![Azure işlevleri güncelleştirmelerini gösteren yeni proje iletişim kutusu kullanılabilir](media/azure-functions-update.png)
+    > ![Azure işlevlerini gösteren yeni proje iletişim kutusu güncelleştirmeleri kullanılabilir](media/azure-functions-update.png)
 
     Seçtiğiniz işlevin türüne bağlı olarak, sonraki sayfada aşağıdaki görüntüde gösterildiği gibi erişim hakları gibi ayrıntılar girmeniz istenir:
 
@@ -72,7 +72,7 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
     Çıktıdan URL 'YI kopyalayın.
 
-3. HTTP isteğinin URL 'sini tarayıcınızın adres çubuğuna yapıştırın. Sorgu dizesini `?name=<yourname>` URL 'nin sonuna ekleyin ve isteği yürütün. Aşağıdaki görüntüde, bu işlevin döndürdüğü yerel GET isteğine tarayıcıda yapılan yanıt gösterilmektedir:
+3. HTTP isteğinin URL 'sini tarayıcınızın adres çubuğuna yapıştırın. `?name=<yourname>` sorgu dizesini URL 'nin sonuna ekleyin ve isteği yürütün. Aşağıdaki görüntüde, bu işlevin döndürdüğü yerel GET isteğine tarayıcıda yapılan yanıt gösterilmektedir:
 
     ![tarayıcıda http isteği](media/azure-functions-httpreq.png)
 
@@ -94,16 +94,16 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
 ## <a name="publish-to-azure"></a>Azure'a Yayımlama
 
-1. Proje adına sağ tıklayın ve **yayımla > Azure 'Da Yayımla**' yı seçin:  ![Azure 'da Yayımla menü seçeneği](media/azure-functions-image5.png)
+1. Proje adına sağ tıklayın ve **yayımla > Azure**'da Yayımla ' yı seçin: Azure 'da Yayımla menü seçeneğini ![](media/azure-functions-image5.png)
 2. Azure hesabınızı Mac için Visual Studio için zaten bağladıysanız, kullanılabilir uygulama hizmetlerinin bir listesi görüntülenir. Oturum açmadıysanız bunu yapmanız istenir.
 3. **Azure App Service Yayımla** iletişim kutusunda, var olan bir uygulama hizmetini seçebilir veya **Yeni**' ye tıklayarak yeni bir tane oluşturabilirsiniz.
-4. **Yeni App Service oluştur** iletişim kutusunda, ayarlarınızı girin:  ![Azure 'da Yayımla menü seçeneği](media/azure-functions-image7.png)
+4. **Yeni App Service oluştur** iletişim kutusunda ayarlarınızı girin: ![Azure 'a Yayımla menü seçeneği](media/azure-functions-image7.png)
 
     |Ayar  |Açıklama  |
     |---------|---------|
     |**App Service adı**|Yeni işlev uygulamanızı tanımlayan genel olarak benzersiz bir ad.|
-    |**Abonelik**|Kullanılacak Azure aboneliği.|
-    |**[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)**|İşlev uygulamanızın oluşturulacağı kaynak grubunun adı. Yeni **+** bir kaynak grubu oluşturmayı seçin.|
+    |**Aboneliğiniz**|Kullanılacak Azure aboneliği.|
+    |**[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)**|İşlev uygulamanızın oluşturulacağı kaynak grubunun adı. Yeni bir kaynak grubu oluşturmak için **+** seçin.|
     |**[Hizmet planı](/azure/azure-functions/functions-scale)**|Mevcut bir planı seçin veya özel bir plan oluşturun. Size yakın bir bölgede veya işlevlerinizin erişebileceği diğer hizmetlere yakın bir konum seçin.|
 
 5. Bir depolama hesabı oluşturmak için **İleri** ' ye tıklayın. Işlevler çalışma zamanı için bir Azure depolama hesabı gereklidir. Genel amaçlı bir depolama hesabı oluşturmak için **özel** ' e tıklayın veya var olan birini kullanın:
@@ -120,7 +120,7 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
 Yerel. Settings. JSON içine eklediğiniz tüm ayarlar ayrıca Azure 'daki işlev uygulamasına eklenmelidir. Projeyi yayımladığınızda bu ayarlar otomatik olarak karşıya yüklenemez.
 
-Uygulama ayarlarınıza erişmek için Azure portal [https://ms.portal.azure.com/](https://ms.portal.azure.com/)gidin. **Işlevler uygulamalar**' ın altında **işlev uygulamaları** ' nı seçin ve işlevinizin adını vurgulayın:
+Uygulama ayarlarınıza erişmek için [https://ms.portal.azure.com/](https://ms.portal.azure.com/)Azure Portal gidin. **Işlevler uygulamalar**' ın altında **işlev uygulamaları** ' nı seçin ve işlevinizin adını vurgulayın:
 
 ![Azure işlevleri menüsü](media/azure-functions-image9.png)
 
@@ -132,7 +132,7 @@ Buradan, yeni uygulama ayarları ekleyebileceğiniz veya var olanları değişti
 
 ![Azure portal uygulama ayarları alanı](media/azure-functions-image11.png)
 
-Ayarlamanız gerekebilmeniz gereken önemli bir ayardır `FUNCTIONS_EXTENSION_VERSION`. Mac için Visual Studio yayımlarken, bu değer **Beta**olarak ayarlanmalıdır.
+Ayarlamanız gerekebilecek önemli bir ayar `FUNCTIONS_EXTENSION_VERSION`. Mac için Visual Studio yayımlarken, bu değer **Beta**olarak ayarlanmalıdır.
 
 ## <a name="available-function-templates"></a>Kullanılabilir işlev şablonları
 
@@ -158,4 +158,4 @@ Ayarlamanız gerekebilmeniz gereken önemli bir ayardır `FUNCTIONS_EXTENSION_VE
 
 - **Görüntü Resizer** – bu işlev, bir kapsayıcıya bir blob eklendiğinde yeniden boyutlandırılmış görüntüler oluşturur. Şablon, tetikleyici için yol ve bağlantı dizesi, küçük bir görüntü çıkışı ve orta görüntü çıkışı alır.
 
-- **SAS belirteci** – bu işlev, belirli bir Azure depolama kapsayıcısı ve BLOB adı IÇIN bir SAS belirteci oluşturur. Bu şablon, işlev adının yanı sıra bir yol ve bağlantı özelliği de alır. Path özelliği, depolama hesabınızda tetikleyicinin izleyecektir. Bağlantı hesabı, depolama hesabı Bağlantı dizenizi içeren uygulama ayarının adıdır. **Erişim haklarının** de ayarlanması gerekir. Yetkilendirme düzeyi, işlevin bir API anahtarı gerektirip gerektirmediğini ve hangi anahtarın kullanılacağını denetler; İşlev bir işlev anahtarı kullanır; Yönetici ana anahtarınızı kullanır. Daha fazla bilgi için bkz. [ C# SAS belirteçleri oluşturma örneği için Azure işlevi](https://azure.microsoft.com/resources/samples/functions-dotnet-sas-token/) .
+- **SAS belirteci** – bu işlev, belirli bir Azure depolama kapsayıcısı ve BLOB adı IÇIN bir SAS belirteci oluşturur. Bu şablon, işlev adının yanı sıra bir yol ve bağlantı özelliği de alır. Path özelliği, depolama hesabınızda tetikleyicinin izleyecektir. Bağlantı hesabı, depolama hesabı Bağlantı dizenizi içeren uygulama ayarının adıdır. **Erişim haklarının** de ayarlanması gerekir. Yetkilendirme düzeyi, işlevin bir API anahtarı gerektirip gerektirmediğini ve hangi anahtarın kullanılacağını denetler; İşlev bir işlev anahtarı kullanır; Yönetici ana anahtarınızı kullanır. Daha fazla bilgi için bkz. [ C# SAS belirteçleri oluşturma örneği için Azure işlevi](https://github.com/Azure-Samples/functions-dotnet-sas-token/) .

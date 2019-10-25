@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d306103ff0e63c852d72275d60c3025074cbf15
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a61504e46198a971cb3231bb6a4fd1e0f4132f22
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72633527"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888410"
 ---
 # <a name="wpf-data-binding-with-linq-to-xml-overview"></a>LINQ to XML ile WPF Verilerini Bağlamaya Genel Bakış
 
@@ -63,11 +63,11 @@ WPF 'de veri bağlama hakkında daha fazla bilgi için bkz. [veri bağlama (WPF)
 Bu dinamik özellikler, <xref:System.Xml.Linq.XAttribute> ve <xref:System.Xml.Linq.XElement> sınıflarında mevcut yöntemlerin ve özelliklerin işlevselliğini yineleyen özel çalışma zamanı özellikleridir. Bunlar bu sınıflara yalnızca WPF için dinamik veri kaynakları görevi görmesini sağlamak için eklenmiştir. Bu gereksinimi karşılamak için, tüm bu dinamik özellikler değişiklik bildirimlerini uygular. Bu dinamik özelliklere yönelik ayrıntılı bir başvuru, bir sonraki bölümde verilmiştir [LINQ to XML dinamik özellikler](../designers/linq-to-xml-dynamic-properties.md).
 
 > [!NOTE]
-> @No__t_0 ad alanındaki çeşitli sınıflarda bulunan standart ortak özelliklerin birçoğu, tek seferlik veri bağlama için kullanılabilir. Ancak, ne kaynak ne de hedefin bu şema altında dinamik olarak güncelleştirileceğini unutmayın.
+> <xref:System.Xml.Linq> ad alanındaki çeşitli sınıflarda bulunan standart ortak özelliklerin birçoğu, tek seferlik veri bağlama için kullanılabilir. Ancak, ne kaynak ne de hedefin bu şema altında dinamik olarak güncelleştirileceğini unutmayın.
 
 ### <a name="accessing-dynamic-properties"></a>Dinamik özelliklere erişme
 
-@No__t_0 ve <xref:System.Xml.Linq.XElement> sınıflarında dinamik özelliklere standart özellikler gibi erişilemez. Örneğin, gibi CLR uyumlu dillerde C#şu olamaz:
+<xref:System.Xml.Linq.XAttribute> ve <xref:System.Xml.Linq.XElement> sınıflarında dinamik özelliklere standart özellikler gibi erişilemez. Örneğin, gibi CLR uyumlu dillerde C#şu olamaz:
 
 - Doğrudan derleme zamanında erişilir. Dinamik özellikler derleyiciye ve Visual Studio IntelliSense 'e görünmez.
 
@@ -97,4 +97,4 @@ WPF dinamik bağlamayı uygulamak için dinamik özellikler, <xref:System.Window
 - [LINQ to XML Dinamik Özellikleri](../designers/linq-to-xml-dynamic-properties.md)
 - [WPF'de XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [Veri bağlama (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [Iş akışı Işaretlemesini kullanma](http://go.microsoft.com/fwlink/?LinkId=98685)
+- [Iş akışı Işaretlemesini kullanma](/previous-versions/dotnet/netframework-3.5/ms735921(v=vs.90))
