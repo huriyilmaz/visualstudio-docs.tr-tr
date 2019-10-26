@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f921ce292e34147d54af977567373634610becfd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8b7794b4dd300cf66ea894227f9346e80ee68085
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72637286"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924503"
 ---
 # <a name="get-started-with-wpf"></a>WPF kullanmaya başlama
 
@@ -27,12 +27,13 @@ Bu bölümde WPF ile çalışmaya başlamanıza yardımcı olan konular yer alı
 |-|-|
 |Hemen hızlı bir şekilde geçmek istiyorum...|[İzlenecek Yol: İlk WPF masaüstü uygulamam](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |XAML tasarım araçlarını karşılaştırmak istiyorum...|[Visual Studio ve Visual Studio için Blend XAML tasarlama](../designers/designing-xaml-in-visual-studio.md)|
-|.NET ile yeni misiniz?|[.NET 'e genel bakış](/dotnet/framework/get-started/overview)<br /><br /> [Uygulama Temelleri](/dotnet/standard/application-essentials)<br /><br /> [Visual C# ve Visual Basic kullanmaya başlayın](../ide/quickstart-visual-basic-console.md)|
-|WPF hakkında daha fazla bilgi ver...|[WPF genel bakış](../designers/introduction-to-wpf.md)<br /><br /> [XAML 'ye Genel Bakış (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br /> [Denetimler](/dotnet/framework/wpf/controls/)<br /><br /> [Veri Bağlamaya Genel Bakış](/dotnet/framework/wpf/data/data-binding-overview)<br /><br /> [LINQ to XML ile WPF verilerini bağlama](../designers/wpf-data-binding-with-linq-to-xml-overview.md)|
-|Windows Forms geliştirici misiniz?|[Windows Forms denetimleri ve eşdeğer WPF denetimleri](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br /> [WPF ve Windows Forms birlikte çalışma ile desteklenen senaryolar](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
+|.NET ile yeni misiniz?|[.NET kılavuzu](/dotnet/standard/)<br /><br />[Uygulama Temelleri](/dotnet/standard/application-essentials)<br /><br />[Görsele başlayınC#](../ide/quickstart-csharp-console.md)|
+|WPF hakkında daha fazla bilgi ver...|[WPF genel bakış](/dotnet/framework/wpf/introduction-to-wpf)<br /><br />[XAML 'ye Genel Bakış (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br />[Denetimler](/dotnet/framework/wpf/controls/)<br /><br />[Veri Bağlamaya Genel Bakış](/dotnet/desktop-wpf/data/data-binding-overview)<br /><br />[LINQ to XML ile WPF verilerini bağlama](/dotnet/framework/wpf/data/wpf-data-binding-with-linq-to-xml-overview)|
+|Windows Forms geliştirici misiniz?|[Windows Forms denetimleri ve eşdeğer WPF denetimleri](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br />[WPF ve Windows Forms birlikte çalışma ile desteklenen senaryolar](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [WPF için masaüstü Kılavuzu](/dotnet/desktop-wpf/overview/index)
 - [Sınıf kitaplığı (WPF)](/dotnet/framework/wpf/class-library-wpf)
 - [WPF topluluk kaynakları](/dotnet/framework/wpf/getting-started/community-feedback)
 - [Uygulama geliştirmeye genel bakış](/dotnet/framework/wpf/app-development/index)

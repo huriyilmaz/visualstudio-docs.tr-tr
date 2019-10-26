@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d24fc2fa1ee34567e0c32859eeccf6af62813a20
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 65fa8b823a49644110dc773eb614da6022f4e8f5
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648714"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924512"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Bir Access veritabanındaki verilere bağlanma
 
@@ -109,7 +109,7 @@ Aşağıdaki yordamı kullanarak Access 2000-2003 ile oluşturulan veritabanlar�
 
 Yeni oluşturduğunuz veri kümesi **veri kaynakları** penceresinde kullanılabilir. Artık aşağıdaki görevlerden herhangi birini gerçekleştirebilirsiniz:
 
-- **Veri kaynakları** penceresinde öğeleri seçin ve bunları formunuza veya tasarım yüzeyine sürükleyin (Windows Forms bkz. [Visual Studio 'da verileri verilere](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) bağlama veya [WPF veri bağlamaya genel bakış](/dotnet/framework/wpf/data/data-binding-overview)).
+- **Veri kaynakları** penceresinde öğeleri seçin ve bunları formunuza veya tasarım yüzeyine sürükleyin (Windows Forms bkz. [Visual Studio 'da verileri verilere](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) bağlama veya [WPF veri bağlamaya genel bakış](/dotnet/desktop-wpf/data/data-binding-overview)).
 
 - Veri kümesini oluşturan nesneleri eklemek veya düzenlemek için **veri kümesi Tasarımcısı** veri kaynağını açın.
 

@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 56c49f0d3cef6dbb054c8d7d97b4e875b83cb518
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 68ffb040e7d642fc2bf285f0510850edc343a5ce
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648812"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924541"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Bir veri kümesine WPF denetimleri bağlama
 
@@ -50,7 +50,7 @@ Aşağıdaki kavramların önceki bilgileri de yararlı olmakla kalmaz, izlenece
 
 - Veri kümeleri ve TableAdapters. Daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md) ve [TableAdapters](../data-tools/create-and-configure-tableadapters.md).
 
-- WPF veri bağlama. Daha fazla bilgi için bkz. [veri bağlamaya genel bakış](/dotnet/framework/wpf/data/data-binding-overview).
+- WPF veri bağlama. Daha fazla bilgi için bkz. [veri bağlamaya genel bakış](/dotnet/desktop-wpf/data/data-binding-overview).
 
 ## <a name="create-the-project"></a>Projeyi oluşturma
 
@@ -110,13 +110,13 @@ Veriye dayalı denetimler oluşturabilmeniz için önce uygulamanız için bir v
 
 8. **Son**'a tıklayın.
 
-   Visual Studio, projeye yeni bir `AdventureWorksLTDataSet.xsd` dosyası ekler ve **veri kaynakları** penceresine karşılık gelen bir **AdventureWorksLTDataSet** öğesi ekler. @No__t_0 dosyası, `AdventureWorksLTDataSet` adlı türü belirtilmiş bir veri kümesini ve `ProductTableAdapter` adlı TableAdapter 'ı tanımlar. Bu izlenecek yolda daha sonra, veri kümesini verilerle birlikte doldurmanız ve değişiklikleri veritabanına geri kaydetmek için `ProductTableAdapter` kullanacaksınız.
+   Visual Studio, projeye yeni bir `AdventureWorksLTDataSet.xsd` dosyası ekler ve **veri kaynakları** penceresine karşılık gelen bir **AdventureWorksLTDataSet** öğesi ekler. `AdventureWorksLTDataSet.xsd` dosyası, `AdventureWorksLTDataSet` adlı türü belirtilmiş bir veri kümesini ve `ProductTableAdapter`adlı TableAdapter 'ı tanımlar. Bu izlenecek yolda daha sonra, veri kümesini verilerle birlikte doldurmanız ve değişiklikleri veritabanına geri kaydetmek için `ProductTableAdapter` kullanacaksınız.
 
 9. Projeyi oluşturun.
 
 ## <a name="edit-the-default-fill-method-of-the-tableadapter"></a>TableAdapter 'ın varsayılan Fill metodunu düzenleme
 
-Veri kümesini verilerle birlikte doldurmanız için `ProductTableAdapter` `Fill` yöntemini kullanın. @No__t_0 yöntemi, varsayılan olarak, ürün tablosundaki tüm veri satırlarıyla `AdventureWorksLTDataSet` `ProductDataTable` doldurur. Bu yöntemi, yalnızca satırların bir alt kümesini döndürecek şekilde değiştirebilirsiniz. Bu izlenecek yol için `Fill` yöntemini yalnızca fotoğrafların bulunduğu ürünlerin satırlarını döndürecek şekilde değiştirin.
+Veri kümesini verilerle birlikte doldurmanız için `ProductTableAdapter` `Fill` yöntemini kullanın. `Fill` yöntemi, varsayılan olarak, ürün tablosundaki tüm veri satırlarıyla `AdventureWorksLTDataSet` `ProductDataTable` doldurur. Bu yöntemi, yalnızca satırların bir alt kümesini döndürecek şekilde değiştirebilirsiniz. Bu izlenecek yol için `Fill` yöntemini yalnızca fotoğrafların bulunduğu ürünlerin satırlarını döndürecek şekilde değiştirin.
 
 1. **Çözüm Gezgini**, The *AdventureWorksLTDataSet. xsd* dosyasını çift tıklayın.
 
@@ -158,7 +158,7 @@ WPF Tasarımcısında XAML 'yi değiştirerek pencereye birkaç düğme ekleyin.
 
 ## <a name="create-data-bound-controls"></a>Veri bağlantılı denetimler oluşturma
 
-@No__t_0 tablosunu **veri kaynakları** penceresinden WPF tasarımcısına sürükleyerek müşteri kayıtlarını görüntüleyen denetimler oluşturun.
+`Product` tablosunu **veri kaynakları** penceresinden WPF tasarımcısına sürükleyerek müşteri kayıtlarını görüntüleyen denetimler oluşturun.
 
 1. **Veri kaynakları** penceresinde, **ürün** düğümünün açılan menüsüne tıklayın ve **Ayrıntılar**' ı seçin.
 
@@ -197,19 +197,19 @@ Kullanıcıların, **\<** ve **>** düğmelerini kullanarak ürün kayıtları a
 
      Visual Studio, arka plan kod dosyasını açar ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı için yeni bir `backButton_Click` olay işleyicisi oluşturur.
 
-2. @No__t_0 olay işleyicisini değiştirin, böylece `ProductViewSource`, `AdventureWorksLTDataSet` ve `AdventureWorksLTDataSetProductTableAdapter` yönteminin dışında ve formun tamamına erişilebilir. Yalnızca form için genel olacak şekilde bildirme ve bunları şuna benzer `Window_Loaded` olay işleyicisi içinde atama:
+2. `Window_Loaded` olay işleyicisini değiştirin, böylece `ProductViewSource`, `AdventureWorksLTDataSet`ve `AdventureWorksLTDataSetProductTableAdapter` yönteminin dışında ve formun tamamına erişilebilir. Yalnızca form için genel olacak şekilde bildirme ve bunları şuna benzer `Window_Loaded` olay işleyicisi içinde atama:
 
      [!code-csharp[Data_WPFDATASET#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_1.cs)]
      [!code-vb[Data_WPFDATASET#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_1.vb)]
 
-3. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin:
+3. `backButton_Click` olay işleyicisine aşağıdaki kodu ekleyin:
 
      [!code-csharp[Data_WPFDATASET#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_2.cs)]
      [!code-vb[Data_WPFDATASET#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_2.vb)]
 
 4. Tasarımcıya dönün ve **>** düğmesine çift tıklayın.
 
-5. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin:
+5. `nextButton_Click` olay işleyicisine aşağıdaki kodu ekleyin:
 
      [!code-csharp[Data_WPFDATASET#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_3.cs)]
      [!code-vb[Data_WPFDATASET#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_3.vb)]
@@ -222,7 +222,7 @@ Kullanıcıların, **\<** ve **>** düğmelerini kullanarak ürün kayıtları a
 
      Visual Studio, arka plan kod dosyasını açar ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı için yeni bir `saveButton_Click` olay işleyicisi oluşturur.
 
-2. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin:
+2. `saveButton_Click` olay işleyicisine aşağıdaki kodu ekleyin:
 
      [!code-csharp[Data_WPFDATASET#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_4.cs)]
      [!code-vb[Data_WPFDATASET#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_4.vb)]
@@ -262,4 +262,4 @@ Bu yönergeyi tamamladıktan sonra, aşağıdaki ilgili görevleri deneyebilirsi
 
 - [Visual Studio'da verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [Visual Studio'daki veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md)
-- [Veri Bağlamaya Genel Bakış](/dotnet/framework/wpf/data/data-binding-overview)
+- [Veri Bağlamaya Genel Bakış](/dotnet/desktop-wpf/data/data-binding-overview)
