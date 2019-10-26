@@ -28,12 +28,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d2fe684f4b10e3570e96a88c34d1e1c08c7388da
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: de1c6c5ec6c5639cc8a9e036bcc674c407c1ac8f
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631905"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919052"
 ---
 # <a name="class-designer-errors"></a>Sınıf Tasarımcısı hataları
 
@@ -44,7 +44,7 @@ ms.locfileid: "72631905"
 Aşağıdaki kaynaklarda diğer hatalar ve uyarılarla ilgili yardım bulabilirsiniz:
 
 - [Görsel C++ kodla çalışma,](working-with-visual-cpp-code.md) bir sınıf diyagramında görüntüleme C++ ile ilgili sorun giderme bilgilerini içerir.
-- [Visual Studio Sınıf Tasarımcısı Forumu](http://go.microsoft.com/fwlink/?LinkId=160754) , **Sınıf Tasarımcısı**hakkında sorularınız için bir forum sağlar.
+- [Visual Studio Sınıf Tasarımcısı Forumu](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsclassdesigner) , **Sınıf Tasarımcısı**hakkında sorularınız için bir forum sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

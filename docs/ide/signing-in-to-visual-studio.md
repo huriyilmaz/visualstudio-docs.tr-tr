@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a949c8b8e5956f9a606195671c0453bbb3689701
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: f4f12aafa8296914461e647dddc3400e399770c0
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018871"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919174"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio’da oturum açma
 
@@ -30,7 +30,7 @@ Oturum açtığınızda, Visual Studio deneyiminizi zenginleştirin. Örneğin, 
 
 İşte, oturum açtıktan sonra neleri beklediklerinize ilişkin tam bir liste aşağıda verilmiştir:
 
-- **Visual Studio Dev Essentials programına erişim** -bu program ücretsiz yazılım teklifleri, eğitim, destek ve daha fazlasını içerir. Bkz: [Visual Studio Dev Essentials](https://aka.ms/vsdevhelp) daha fazla bilgi için.
+- **Visual Studio Dev Essentials programına erişim** -bu program ücretsiz yazılım teklifleri, eğitim, destek ve daha fazlasını içerir. Daha fazla bilgi için bkz. [Visual Studio Dev Essentials](https://aka.ms/vsdevhelp) .
 
 - **Visual Studio ayarlarınızı eşitler** -anahtar bağlamaları, pencere düzeni ve renk teması gibi özelleştirdiğiniz ayarlar, Visual Studio 'da herhangi bir cihazda oturum açtığınızda hemen uygulanır. Bkz. [Visual Studio 'Da Eşitlenen ayarlar](../ide/synchronized-settings-in-visual-studio.md).
 
@@ -42,21 +42,21 @@ Oturum açtığınızda, Visual Studio deneyiminizi zenginleştirin. Örneğin, 
 
 - Aynı hesapta kimlik bilgileri için yeniden sormadan **Azure ve Azure DevOps Services gibi hizmetlere otomatik olarak bağlanın** .
 
-## <a name="how-to-sign-in-to-visual-studio"></a>Visual Studio'ya oturum açma
+## <a name="how-to-sign-in-to-visual-studio"></a>Visual Studio 'da oturum açma
 
-Visual Studio 'Yu ilk kez açtığınızda, oturum açmanız ve bazı temel kayıt bilgilerini sağlamanız istenir. Bir Microsoft hesabı ya da en iyisi, temsil eden bir iş veya Okul hesabı seçmeniz gerekir. Bu hesapların yoksa, ücretsiz bir Microsoft hesabı oluşturabilirsiniz. Bkz: [nasıl oturum açabilirim bir Microsoft hesabı için mi?](http://windows.microsoft.com/windows-live/sign-up-create-account-how)
+Visual Studio 'Yu ilk kez açtığınızda, oturum açmanız ve bazı temel kayıt bilgilerini sağlamanız istenir. Sizi en iyi şekilde temsil eden bir Microsoft hesabı veya bir iş veya okul hesabı seçmelisiniz. Bu hesaplardan herhangi biri yoksa, ücretsiz olarak bir Microsoft hesabı oluşturabilirsiniz. [Bir Microsoft hesabı kaydolmak nasıl yaparım?](https://support.microsoft.com/help/4026324/microsoft-account-how-to-create) .
 
-Daha sonra, Visual Studio'da kullanmak istediğiniz kullanıcı arabirimi ayarlarını ve renk temasını seçin. Visual Studio, bu ayarları hatırlar ve bunları tüm Visual Studio ortamlardaki oturum açmanızdan eşitler. Eşitlenen ayarların listesi için bkz. [Eşitlenmiş Ayarlar](../ide/synchronized-settings-in-visual-studio.md). Visual Studio 'da **araçlar** > **Seçenekler** menüsünü açarsanız ayarları daha sonra değiştirebilirsiniz.
+Daha sonra, Visual Studio'da kullanmak istediğiniz kullanıcı arabirimi ayarlarını ve renk temasını seçin. Visual Studio bu ayarları anımsar ve oturum açtığınız tüm Visual Studio ortamlarında eşitlenir. Eşitlenen ayarların listesi için bkz. [Eşitlenmiş Ayarlar](../ide/synchronized-settings-in-visual-studio.md). Visual Studio 'da **araçlar** > **Seçenekler** menüsünü açarsanız ayarları daha sonra değiştirebilirsiniz.
 
-Ayarları yaptıktan sonra Visual Studio başlatılır, oturumunuz açılır ve başlamaya hazır olursunuz. Oturum açmadıysanız olup olmadığını doğrulamak için Visual Studio ortamının sağ üst köşedeki adınızı arayın.
+Ayarları yaptıktan sonra Visual Studio başlatılır, oturumunuz açılır ve başlamaya hazır olursunuz. Oturum açmış olup olmadığını doğrulamak için, Visual Studio ortamının sağ üst köşesinde adınızı arayın.
 
 ![VS2017 'de Şu anda oturum açmış olan Kullanıcı](../ide/media/vs2017_username.png)
 
-Oturumu kapatmadığınız takdirde, Visual Studio 'Yu her başlattığınızda otomatik olarak oturum açtınız ve eşitlenmiş ayarlarda yapılan değişiklikler otomatik olarak uygulanır. Oturumu kapatmak için, Visual Studio ortamının sağ üst köşesindeki profil adınızın yanındaki aşağı oku seçin, **Hesap ayarları** komutunu seçin ve ardından **oturumu** kapat bağlantısını seçin. Yeniden oturum açmak için seçin **oturum** Visual Studio ortamının sağ üst köşedeki komutu.
+Oturumu kapatmadığınız takdirde, Visual Studio 'Yu her başlattığınızda otomatik olarak oturum açtınız ve eşitlenmiş ayarlarda yapılan değişiklikler otomatik olarak uygulanır. Oturumu kapatmak için, Visual Studio ortamının sağ üst köşesindeki profil adınızın yanındaki aşağı oku seçin, **Hesap ayarları** komutunu seçin ve ardından **oturumu** kapat bağlantısını seçin. Yeniden oturum açmak için Visual Studio ortamının sağ üst köşesindeki **oturum aç** komutunu seçin.
 
 ## <a name="to-change-your-profile-information"></a>Profil bilginizi değiştirmek için
 
-1. **Dosya** > **Hesap ayarları** ' na gidin ve **Visual Studio profilini Yönet** bağlantısını seçin.
+1. **Dosya** > **hesabı ayarları** ' na gidin ve **Visual Studio profilini Yönet** bağlantısını seçin.
 
 1. Tarayıcı penceresinde **Profili Düzenle** ' yi seçin ve istediğiniz ayarları değiştirin.
 
@@ -69,6 +69,6 @@ Oturum açarken herhangi bir sorunla karşılaşırsanız, yardım almak için l
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio 'Nun kilidini açma](../ide/how-to-unlock-visual-studio.md)
-* [Visual Studio IDE'ye genel bakış](../get-started/visual-studio-ide.md)
+* [Visual Studio IDE 'ye Genel Bakış](../get-started/visual-studio-ide.md)
 * [Oturum aç (Mac için Visual Studio)](/visualstudio/mac/signing-in)
 * [Etkinleştirme (Mac için Visual Studio)](/visualstudio/mac/activation)

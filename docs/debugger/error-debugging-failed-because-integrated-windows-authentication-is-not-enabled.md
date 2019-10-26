@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca4b4ee5bb254f952fb6eb02e255320a337f657c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c508951a3b54a7f84f142c5029b5305c8ef579ea
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737809"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911543"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Hata: Tümleşik Windows Kimlik Doğrulaması Etkinleştirilmediğinden Hata Ayıklama Başarısız
 Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğrulama hatası nedeniyle engellendi. Bu durum, bir Web uygulamasına veya bir XML Web hizmetine adım adım çalışırken oluşabilir. Bu hatanın bir nedeni tümleşik Windows kimlik doğrulamasının etkinleştirilmemesine neden olur. Etkinleştirmek için "tümleşik Windows kimlik doğrulamasını etkinleştirmek Için" bölümündeki adımları izleyin.
@@ -115,5 +115,5 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
-- [Microsoft Digest kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkId=77938)
+- [Microsoft Digest kimlik doğrulaması](/windows/win32/secauthn/microsoft-digest-authentication)
 - [IIS 7,0 ve Visual Studio ile Windows Vista 'da Web uygulamaları çalıştırma](https://msdn.microsoft.com/Library/262a82ac-dd0e-4096-86c6-fb463e88be66)

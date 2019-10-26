@@ -93,12 +93,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2741e86bdc8e59434472242210cd6de2ffa8cee9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c71b281a89d0465ac80f04de868b16cc5468429a
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655548"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919072"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Tümleşik geliştirme ortamı hatalarında sorun giderme kaynakları
 
@@ -119,7 +119,7 @@ Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile 
 
 ## <a name="product-support"></a>Ürün desteği
 
-Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft desteği](http://go.microsoft.com/fwlink/?linkid=1782) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. Bölgenizde sunulan ürün desteği hakkında bilgi için bkz. [Visual Studio geri bildirim seçenekleri](../../ide/feedback-options.md) sayfası.
+Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft desteği](https://support.microsoft.com/en-us) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. Bölgenizde sunulan ürün desteği hakkında bilgi için bkz. [Visual Studio geri bildirim seçenekleri](../../ide/feedback-options.md) sayfası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

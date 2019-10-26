@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1e9109493ea78542afaedabbcce3841e3eac0e7
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 913984bcc5f9546589421d66d95b6bfb2740b870
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128126"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72912023"
 ---
 # <a name="concurrency-visualizer"></a>Eşzamanlılık Görselleştiricisi
 
@@ -29,7 +29,7 @@ ms.locfileid: "71128126"
 >
 > - [Visual Studio 2017 uzantısı Için eşzamanlılık görselleştiricisi](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ConcurrencyVisualizer2017#overview) indirin.
 > - [Visual Studio 2015 uzantısı Için eşzamanlılık görselleştiricisi](https://marketplace.visualstudio.com/items?itemName=Diagnostics.ConcurrencyVisualizerforVisualStudio2015) indirin.
-> - [Visual Studio 2015 Için eşzamanlılık görselleştiricisi koleksiyon araçlarını](http://www.microsoft.com/download/details.aspx?id=49103)indirin.
+> - [Visual Studio 2015 Için eşzamanlılık görselleştiricisi koleksiyon araçlarını](https://www.microsoft.com/download/details.aspx?id=49103)indirin.
 >
 > [Eşzamanlılık görselleştiricisi komut satırı yardımcı programı (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md) , komut satırından, Visual Studio 2015 Için eşzamanlılık görselleştiricisi içinde görüntüleyebileceğiniz izlemeleri toplamanıza olanak tanır. Araç, Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.
 
@@ -38,7 +38,7 @@ ms.locfileid: "71128126"
 > [!NOTE]
 > Eşzamanlılık görselleştiricisi Web projelerini desteklemez.
 
-Eşzamanlılık görselleştiricisi, [Windows Için olay izleme](http://go.microsoft.com/fwlink/?LinkId=234579) işlevselliğine bağımlıdır.
+Eşzamanlılık görselleştiricisi, [Windows Için olay izleme](/windows/win32/etw/event-tracing-portal) işlevselliğine bağımlıdır.
 
 ## <a name="related-topics"></a>İlgili Konular
 
@@ -48,12 +48,12 @@ Eşzamanlılık görselleştiricisi, [Windows Için olay izleme](http://go.micro
 |[İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)|Programınızdaki iş parçacıkları arasındaki etkileşimlerin nasıl analiz edileceğini açıklar.|
 |[Çekirdekler Görünümü](../profiling/cores-view.md)|Çekirdekler arasında iş parçacığı geçişinin nasıl analiz edileceğini açıklar.|
 |[Hatalı davranan çok iş parçacıklı uygulamalar için ortak desenler](../profiling/common-patterns-for-poorly-behaved-multithreaded-applications.md)|Birçok ortak deseni açıklar ve bunların eşzamanlılık görselleştiricisi içinde nasıl göründüğünü gösterir.|
-|[Visual Studio blogda paralel geliştirme](http://go.microsoft.com/fwlink/?LinkId=235385)|Eşzamanlılık görselleştiricisi için ipuçları ve en iyi uygulamalar sağlar.|
+|[Visual Studio blogda paralel geliştirme](https://blogs.msdn.microsoft.com/visualizeparallel/)|Eşzamanlılık görselleştiricisi için ipuçları ve en iyi uygulamalar sağlar.|
 |[Performans Raporu Görünümleri](../profiling/performance-report-views.md)|Visual Studio Profil Oluşturma Araçları raporları ve görünümleri için başvuru bilgileri sağlar.|
 |[Eşzamanlılık Görselleştiricisi SDK](../profiling/concurrency-visualizer-sdk.md)|Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için kaynak kodunuzun nasıl ekleneceğini açıklar.|
 |[Eşzamanlılık görselleştiricisi komut satırı yardımcı programı (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|Visual Studio olmayan makinelerde izlemeleri toplamak ve işlemek için eşzamanlılık görselleştiricisi komut satırı yardımcı programı 'nın (CVCollectionCmd. exe) nasıl kullanılacağını açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio profil oluşturma](../profiling/index.yml)
-- [Araçlar profil oluşturmaya ilk bakış](../profiling/profiling-feature-tour.md)
+- [Visual Studio 'da profil oluşturma](../profiling/index.yml)
+- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

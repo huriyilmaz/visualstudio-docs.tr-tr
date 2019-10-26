@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c54983ee9025cf3e1c4df0161a6be55ebf9b2fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2283da7c212102ac948ea368bb95315344d2274e
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631989"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919108"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio 'nun özellikleri
 
@@ -68,7 +68,7 @@ Daha fazla bilgi için bkz. [Visual Studio ve Azure ile buluta geçme](https://v
 
 ## <a name="create-apps-for-the-web"></a>Web için uygulamalar oluşturma
 
-Web sürücüleri modern dünyayı ve Visual Studio BT için uygulama yazmanıza yardımcı olabilir. ASP.NET, Node. js, Python, JavaScript ve TypeScript kullanarak Web Apps oluşturabilirsiniz. Visual Studio, angular, jQuery, Express ve daha fazlası gibi Web çerçevelerini anlamıştır. ASP.NET Core ve .NET Core, Windows, Mac ve Linux işletim sistemlerinde çalışır. [ASP.NET Core](http://www.asp.net/core/overview) , MVC, Webapı ve SignalR için önemli bir güncelleştirmedir ve Windows, Mac ve Linux üzerinde çalışır.  ASP.NET Core, baştan sona, modern bulut tabanlı Web uygulamaları ve hizmetleri oluşturmaya yönelik yalın ve birleştirilebilir bir .NET yığını sunmak üzere tasarlanmıştır.
+Web sürücüleri modern dünyayı ve Visual Studio BT için uygulama yazmanıza yardımcı olabilir. ASP.NET, Node. js, Python, JavaScript ve TypeScript kullanarak Web Apps oluşturabilirsiniz. Visual Studio, angular, jQuery, Express ve daha fazlası gibi Web çerçevelerini anlamıştır. ASP.NET Core ve .NET Core, Windows, Mac ve Linux işletim sistemlerinde çalışır. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) , MVC, Webapı ve SignalR için önemli bir güncelleştirmedir ve Windows, Mac ve Linux üzerinde çalışır.  ASP.NET Core, baştan sona, modern bulut tabanlı Web uygulamaları ve hizmetleri oluşturmaya yönelik yalın ve birleştirilebilir bir .NET yığını sunmak üzere tasarlanmıştır.
 
 Daha fazla bilgi için bkz. [Modern Web araçları](https://visualstudio.microsoft.com/vs/modern-web-tooling/).
 

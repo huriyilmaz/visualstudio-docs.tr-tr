@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 849862f98fb90cdd742e1794ecb57c35a9aaca73
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3a805942e85540b776ceacd972a09a71bb80cbb4
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745590"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911580"
 ---
 # <a name="debug-64-bit-applications"></a>64 Bit Uygulamalarda Hata Ayıklama
 Yerel bilgisayarda veya uzak bir bilgisayarda çalışan 64 bitlik bir uygulamada hata ayıklaması yapabilirsiniz.
@@ -54,7 +54,7 @@ Yerel bilgisayarda veya uzak bir bilgisayarda çalışan 64 bitlik bir uygulamad
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [64 bit Uygulamalar](https://docs.microsoft.com/dotnet/framework/64-bit-apps)
+- [64 bit Uygulamalar](/dotnet/framework/64-bit-apps)
 - [64 bit için programları yapılandırma](/cpp/build/configuring-programs-for-64-bit-visual-cpp)
 - [Visual Studio IDE 64 Bit Desteği](../ide/visual-studio-ide-64-bit-support.md)
 - [Döküm Dosyalarını Kullanma](../debugger/using-dump-files.md)

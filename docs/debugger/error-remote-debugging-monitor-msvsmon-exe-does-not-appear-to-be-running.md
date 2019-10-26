@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b908e4fe9ed0087abaf5f1390bb8faf5cc12bdaa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 27e551132e66ef0cb380b56441d19b1436d19df2
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737567"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911529"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Hata: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi (MSVSMON.EXE) uzak bilgisayar üzerinde çalışıyor görünmüyor.
 Bu hata iletisi, Visual Studio 'nun uzak bilgisayarda doğru Visual Studio Uzaktan Hata Ayıklama İzleyicisi örneğini bulamadığı anlamına gelir. Uzaktan hata ayıklamanın çalışması için Visual Studio Uzaktan Hata Ayıklama İzleyicisi yüklü olmalıdır. Uzaktan hata ayıklayıcıyı indirme ve ayarlama hakkında daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
@@ -41,7 +41,7 @@ Bu hata iletisi, Visual Studio 'nun uzak bilgisayarda doğru Visual Studio Uzakt
  Uzak makineye [ping işlemi](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee624059(v=ws.10)) yapmayı deneyin. Ping komutuna yanıt vermezse uzak Araçlar bağlanamaz. Uzak makineyi yeniden başlatmayı deneyin, aksi takdirde ağda doğru yapılandırıldığından emin olun.
 
 ## <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>Uzaktan hata ayıklayıcının sürümü Visual Studio sürümü ile eşleşmiyor
- Yerel olarak çalıştırdığınız Visual Studio sürümünün, uzak makinede çalışan uzaktan hata ayıklama izleyicisinin sürümüyle eşleşmesi gerekir. Bu hatayı gidermek için, uzaktan hata ayıklama izleyicisinin eşleşen sürümünü indirip yükleyin. Uzaktan hata ayıklayıcının doğru sürümünü bulmak için [Indirme merkezi](http://www.microsoft.com/en-us/download) 'ne gidin.
+ Yerel olarak çalıştırdığınız Visual Studio sürümünün, uzak makinede çalışan uzaktan hata ayıklama izleyicisinin sürümüyle eşleşmesi gerekir. Bu hatayı gidermek için, uzaktan hata ayıklama izleyicisinin eşleşen sürümünü indirip yükleyin. Uzaktan hata ayıklayıcının doğru sürümünü bulmak için [Indirme merkezi](https://www.microsoft.com/download) 'ne gidin.
 
 ## <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>Yerel ve uzak makineler farklı kimlik doğrulama modlarına sahiptir
  Yerel ve uzak makinelerin aynı kimlik doğrulama modunu kullanması gerekir. Bu hatayı onarmak için her iki makinenin da aynı kimlik doğrulama modunu kullanmasını sağlayın. Kimlik doğrulama modları hakkında daha fazla bilgi için bkz. [Windows kimlik doğrulamasına genel bakış](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831472(v=ws.11)).
@@ -70,7 +70,7 @@ Bu hata iletisi, Visual Studio 'nun uzak bilgisayarda doğru Visual Studio Uzakt
  Uzaktan hata ayıklamayı farklı bir zamanda yapmanız veya ağdaki çalışmayı farklı bir süre için yeniden zamanlamanız gerekebilir.
 
 ## <a name="more-help"></a>Daha fazla yardım
- Komut satırı anahtarları dahil olmak üzere daha fazla uzaktan hata ayıklayıcı yardımı almak için, uzaktan hata ayıklayıcı penceresinde **yardım > kullanımı** ' na tıklayın. Açık değilse, aşağıdaki satırı bir **Dosya Gezgini** penceresine kopyalayarak Web sayfasına bakabilirsiniz. (@No__t_0Visual Studio yükleme dizini >, Visual Studio yüklemenizin konumuyla değiştirmeniz gerekir.)
+ Komut satırı anahtarları dahil olmak üzere daha fazla uzaktan hata ayıklayıcı yardımı almak için, uzaktan hata ayıklayıcı penceresinde **yardım > kullanımı** ' na tıklayın. Açık değilse, aşağıdaki satırı bir **Dosya Gezgini** penceresine kopyalayarak Web sayfasına bakabilirsiniz. (Visual Studio yükleme dizini > \<Visual Studio yüklemenizin konumuyla değiştirmeniz gerekir.)
 
  res:// *\<Visual Studio yükleme dizini >* \ COMMON7 \ IDE \ Remote %2 0 Debugger \ x64 \ Msvsmon. exe/help. htm
 

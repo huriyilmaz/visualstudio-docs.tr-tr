@@ -1,6 +1,6 @@
 ---
-title: Azure depolama bağlı hizmetlerini kullanarak ekleyin | Microsoft Docs
-description: Azure depolama, Visual Studio bağlı Hizmetleri Ekle iletişim kutusunu kullanarak uygulamanıza ekleme
+title: Bağlı hizmetler 'i kullanarak Azure depolama ekleme | Microsoft Docs
+description: Visual Studio bağlı hizmetler Ekle iletişim kutusunu kullanarak uygulamanıza Azure Storage ekleme
 author: ghogen
 manager: jillfra
 assetId: 521ec044-ad4b-4828-8864-01decde2e758
@@ -9,72 +9,72 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: 649f99911726e562f9602fe6697591ec6cfb96eb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ca65086ce7ce09a1ca288c2f5cd04c31e00f8e95
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62561032"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911894"
 ---
-# <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Visual Studio bağlı Hizmetler'i kullanarak Azure depolama ekleme
+# <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure depolama ekleme
 
-Visual Studio ile aşağıdakilerden herhangi birini Azure Depolama'ya kullanarak bağlanabilirsiniz **bağlı hizmet Ekle** iletişim:
+Visual Studio ile, **bağlı hizmetler Ekle** iletişim kutusunu kullanarak aşağıdakilerden herhangi birini Azure depolama 'ya bağlayabilirsiniz:
 
-- C# bulut hizmeti
-- .NET arka uç mobil hizmet
-- ASP.NET Web sitesi veya hizmet
+- C#bulut hizmeti
+- .NET arka uç mobil hizmeti
+- ASP.NET Web sitesi veya hizmeti
 - ASP.NET Core hizmeti
-- Azure Web işi hizmeti
+- Azure WebJob hizmeti
 
-Bağlı hizmet işlevselliğinin tüm gerekli başvuruları ve bağlantı kodunu projenize ekler ve yapılandırma dosyalarını uygun şekilde değiştirir.
+Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodlarını projenize ekler ve yapılandırma dosyalarınızı uygun şekilde değiştirir.
 
-Tamamlandıktan sonra **bağlı hizmet Ekle** iletişim kutusu otomatik olarak açıklayan belgeleri bulacağı kuyrukları, blob depolama ile çalışmaya başlamak için gereken adımları görüntüler ve tablolar.
+Tamamlandıktan sonra, **bağlı hizmetler Ekle** iletişim kutusu, BLOB depolama, kuyruklar ve tablolarla çalışmaya başlamak için gereken adımlarla ilgili belgelerde otomatik olarak görüntülenir.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz: [Mac için Visual Studio'da Hizmetleri bağlı](/visualstudio/mac/connected-services).
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
 
-## <a name="connect-to-azure-storage-using-the-connected-services-dialog"></a>Bağlı hizmetler iletişim kutusunu kullanarak Azure Depolama'ya Bağlan
+## <a name="connect-to-azure-storage-using-the-connected-services-dialog"></a>Bağlı hizmetler iletişim kutusunu kullanarak Azure depolama 'ya bağlanma
 
-1. Projenizi Visual Studio'da açın.
+1. Projenizi Visual Studio 'da açın
 
-1. İçinde **Çözüm Gezgini**, sağ **bağlı hizmetler** düğümünün ve bağlam menüsünden ve Seç **bağlı hizmet Ekle**.
+1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne ve bağlam menüsünden sağ tıklayın ve **bağlı hizmet ekle**' yi seçin.
 
-    ![Azure'ı ekleme bağlı hizmeti](./media/vs-azure-tools-connected-services-storage/IC796702.png)
+    ![Azure bağlı hizmeti Ekle](./media/vs-azure-tools-connected-services-storage/IC796702.png)
 
-1. İçinde **bağlı hizmetler** sayfasında **Azure depolama ile bulut depolama**.
+1. **Bağlı hizmetler** sayfasında, **Azure depolama ile bulut depolama**' yı seçin.
 
     ![Azure depolama ekleme](./media/vs-azure-tools-connected-services-storage/add-azure-storage.png)
 
-1. İçinde **Azure depolama** iletişim kutusu, mevcut bir depolama hesabını seçin ve Seç **Ekle**.
+1. **Azure depolama** iletişim kutusunda, var olan bir depolama hesabını seçin ve **Ekle**' yi seçin.
 
-    Bir depolama hesabı oluşturmanız gerekiyorsa, sonraki adıma gidin. Aksi takdirde, 6. adıma atlayın.
+    Bir depolama hesabı oluşturmanız gerekiyorsa, bir sonraki adıma gidin. Aksi takdirde, adım 6 ' ya atlayın.
 
-    ![Mevcut depolama hesabını projeye Ekle](./media/vs-azure-tools-connected-services-storage/select-azure-storage-account.png)
+    ![Var olan depolama hesabını projeye Ekle](./media/vs-azure-tools-connected-services-storage/select-azure-storage-account.png)
 
-1. Bir depolama hesabı oluşturmak için:
+1. Depolama hesabı oluşturmak için:
 
-   1. Seçin **yeni depolama hesabı oluşturma** iletişim kutusunun alt kısmındaki.
+   1. İletişim kutusunun alt kısmında **Yeni bir depolama hesabı oluştur** ' u seçin.
 
-   1. Doldurun **depolama hesabı oluştur** iletişim ve select **Oluştur**.
+   1. **Depolama hesabı oluştur** iletişim kutusunu doldurun ve **Oluştur**' u seçin.
 
        ![Yeni Azure depolama hesabı](./media/vs-azure-tools-connected-services-storage/create-storage-account.png)
 
-   1. Zaman **Azure depolama** iletişim kutusu görüntülendiğinde, yeni depolama hesabı listesinde görünür. Yeni depolama hesabı listesinde seçip **Ekle**.
+   1. **Azure depolama** iletişim kutusu görüntülendiğinde, yeni depolama hesabı listede görüntülenir. Listeden yeni depolama hesabı ' nı seçin ve **Ekle**' yi seçin.
 
-1. Bağlı hizmet altında görünür depolama **hizmet başvuruları** projenizin düğümü.
+1. Depolama bağlı hizmeti, projenizin **hizmet başvuruları** düğümünün altında görüntülenir.
 
-## <a name="how-your-project-is-modified"></a>Projenizi nasıl değiştirilir
+## <a name="how-your-project-is-modified"></a>Projenizin nasıl değiştirildiği
 
-İletişim bitirdikten sonra Visual Studio başvuruları ekler ve belirli yapılandırma dosyalarını değiştirir. Belirli değişiklikleri proje türüne bağlıdır:
+İletişim kutusunu tamamladığınızda, Visual Studio başvuruları ekler ve belirli yapılandırma dosyalarını değiştirir. Belirli değişiklikler proje türüne bağlıdır:
 
-- ASP.NET projesi - [ne olduğunu – ASP.NET projeleri](http://go.microsoft.com/fwlink/p/?LinkId=513126)
-- ASP.NET Core projesi - [ne olduğunu – ASP.NET 5 projeleri](http://go.microsoft.com/fwlink/p/?LinkId=513124)
-- Bulut hizmeti projesi (web rolleri ve çalışan rolleri) - [ne olduğunu – bulut hizmeti projeleri](http://go.microsoft.com/fwlink/p/?LinkId=516965)
-- Web işi projesi - [ne olduğunu - WebJob projeleri](/azure/visual-studio/vs-storage-webjobs-what-happened)
+- ASP.NET projesi- [ne oldu – ASP.NET projeleri](/azure/visual-studio/vs-storage-aspnet-getting-started-blobs)
+- ASP.NET Core projesi- [ne oldu – ASP.NET 5 proje](/azure/visual-studio/vs-storage-aspnet5-getting-started-blobs)
+- Bulut hizmeti projesi (Web rolleri ve çalışan rolleri)- [ne oldu – bulut hizmeti projeleri](/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
+- WebJob projesi- [ne oldu-WebJob projeleri](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSDN forumu: Azure depolama](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
-- [Microsoft Azure depolama ekibi blogu](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Azure Depolama belgeleri](https://docs.microsoft.com/azure/storage/)
+- [MSDN Forumu: Azure depolama](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
+- [Ekip Blogu Microsoft Azure Depolama](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Azure depolama belgeleri](/azure/storage/)
 - [Bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)

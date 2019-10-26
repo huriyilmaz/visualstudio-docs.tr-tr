@@ -14,26 +14,26 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b91cc92abca856e3a23e7b1154e378c99923fcf
-ms.sourcegitcommit: 8a699df154464387f327691dce507d7c3d0e2aab
+ms.openlocfilehash: dbca6429c1cc1669345cda465ec9ecfe3af0ed06
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70060377"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919183"
 ---
 # <a name="accessibility-features-of-visual-studio"></a>Visual Studio 'nun erişilebilirlik özellikleri
 
 Windows 'daki erişilebilirlik özelliklerine ve yardımcı programlarına ek olarak, aşağıdaki özellikler Visual Studio 'Yu Engelli kişiler için daha erişilebilir hale getirir:
 
-- Araç çubuğu düğme ve metin büyütme
+- Araç çubuğu düğmesi ve metin büyütme
 
-- Metin düzenleyicilerde boyut seçenekleri
+- Düzenleyicilerde metin boyutu seçenekleri
 
-- Düzenleyicilerde özelleştirme rengi
+- Düzenleyicilerde renk özelleştirmesi
 
-- Klavye kısayolunu özelleştirme
+- Klavye kısayolu özelleştirmesi
 
-- Yöntem ve parametreler için otomatik tamamlama
+- Yöntemler ve parametreler için otomatik tamamlama
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio Için erişilebilirlik](/visualstudio/mac/accessibility).
@@ -42,16 +42,16 @@ Daha fazla bilgi için aşağıdaki konulara bakın:
 
 - [Nasıl yapılır: IDE erişilebilirlik seçeneklerini ayarlama](../../ide/reference/how-to-set-ide-accessibility-options.md)
 
-- [Nasıl yapılır: Klavyeyi özel olarak kullanma](../../ide/reference/how-to-use-the-keyboard-exclusively.md)
+- [Nasıl yapılır: klavyeyi özel olarak kullanma](../../ide/reference/how-to-use-the-keyboard-exclusively.md)
 
 - [Varsayılan klavye kısayolları](../../ide/default-keyboard-shortcuts-in-visual-studio.md)
 
 - [Erişilebilirlik ipuçları ve püf noktaları](../../ide/reference/accessibility-tips-and-tricks.md)
 
-- [Nasıl yapılır: Yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
+- [Nasıl yapılır: yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
 
 > [!IMPORTANT]
-> Bu sayfadaki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, Microsoft Destek Hizmetleri telefon numaralarının ve adreslerinin bir listesi için [Microsoft Erişilebilirlik](http://go.microsoft.com/fwlink/?LinkId=8431) Web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler de diğer dillerde kullanılabilir.
+> Bu sayfadaki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, Microsoft Destek Hizmetleri telefon numaralarının ve adreslerinin bir listesi için [Microsoft Erişilebilirlik](https://www.microsoft.com/accessibility/) Web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler de diğer dillerde kullanılabilir.
 
 ::: moniker range="vs-2017"
 

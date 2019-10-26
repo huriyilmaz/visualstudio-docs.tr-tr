@@ -7,16 +7,16 @@ helpviewer_keywords:
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cab93bcf60c5a4fb5034bfdfd7601e4f846996d0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7cbb8c9be8ed56294d865d2612a8d79fcdb39df8
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652622"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919128"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig ile taşınabilir, özel düzenleyici ayarları oluşturma
 
-Kod tabanında çalıştırılan herkes için tutarlı kodlama stillerini zorlamak üzere projenize veya kod tabanınıza bir [Editorconfig](http://editorconfig.org/) dosyası ekleyebilirsiniz. EditorConfig ayarları, Global Visual Studio metin Düzenleyicisi ayarlarından önceliklidir. Bu, her kod temelini o projeye özel metin düzenleyici ayarlarını kullanmak üzere uyarlayabileceğiniz anlamına gelir. Visual Studio **seçenekleri** iletişim kutusunda kendi kişisel düzenleyici tercihlerinizi ayarlamaya devam edebilirsiniz. Bu ayarlar, *. editorconfig* dosyası olmayan bir kod tabanında her çalıştığınızda veya *. editorconfig* dosyası belirli bir ayarı geçersiz kılmazsa geçerlidir. Bu tür bir tercihe örnek, girinti stili &mdash;tabs veya boşluklardan oluşur.
+Kod tabanında çalıştırılan herkes için tutarlı kodlama stillerini zorlamak üzere projenize veya kod tabanınıza bir [Editorconfig](https://editorconfig.org/) dosyası ekleyebilirsiniz. EditorConfig ayarları, Global Visual Studio metin Düzenleyicisi ayarlarından önceliklidir. Bu, her kod temelini o projeye özel metin düzenleyici ayarlarını kullanmak üzere uyarlayabileceğiniz anlamına gelir. Visual Studio **seçenekleri** iletişim kutusunda kendi kişisel düzenleyici tercihlerinizi ayarlamaya devam edebilirsiniz. Bu ayarlar, *. editorconfig* dosyası olmayan bir kod tabanında her çalıştığınızda veya *. editorconfig* dosyası belirli bir ayarı geçersiz kılmazsa geçerlidir. Bu tür bir tercihe örnek, girinti stili &mdash;tabs veya boşluklardan oluşur.
 
 EditorConfig ayarları, Visual Studio da dahil olmak üzere çok sayıda kod Düzenleyicisi ve Ides tarafından desteklenir. Bu, kodunuzla taşınan taşınabilir bir bileşendir ve Visual Studio dışında bile kodlama stillerini uygulayabilir.
 
@@ -50,21 +50,21 @@ EditorConfig dosyalarındaki ayarlar, kullandığınız düzenleyiciden veya IDE
 
 Kişisel projeleriniz üzerinde kullandığınız kodlama kuralları, takımınızın projelerinde kullanılanlardan farklı olabilir. Örneğin, kodlama yaparken, girintileme bir sekme karakteri ekliyor seçeneğini tercih edebilirsiniz. Ancak ekibiniz, girintileme 'nin bir sekme karakteri yerine dört boşluk karakteri eklemesine tercih edebilir. EditorConfig dosyaları, her senaryo için bir yapılandırmanıza izin vererek bu sorunu çözer.
 
-Ayarlar kod temelindeki bir dosyada bulunduğundan, bu kod temeli ile birlikte seyahat ederler. Kod dosyasını bir EditorConfig uyumlu düzenleyicide açtığınız sürece, metin düzenleyici ayarları uygulanır. EditorConfig dosyaları hakkında daha fazla bilgi için bkz. [EditorConfig.org](http://editorconfig.org/) Web sitesi.
+Ayarlar kod temelindeki bir dosyada bulunduğundan, bu kod temeli ile birlikte seyahat ederler. Kod dosyasını bir EditorConfig uyumlu düzenleyicide açtığınız sürece, metin düzenleyici ayarları uygulanır. EditorConfig dosyaları hakkında daha fazla bilgi için bkz. [EditorConfig.org](https://editorconfig.org/) Web sitesi.
 
 > [!NOTE]
 > Bir EditorConfig dosyasında ayarlanan kurallar, derleme hataları veya uyarılar olarak bir CI/CD ardışık düzeninde zorlanamaz. Stil sapmaları yalnızca Visual Studio düzenleyicisinde ve **hata listesi**görünür.
 
 ## <a name="supported-settings"></a>Desteklenen ayarlar
 
-Visual Studio 'daki düzenleyici, [Editorconfig özelliklerinin](http://editorconfig.org/#supported-properties)çekirdek kümesini destekler:
+Visual Studio 'daki düzenleyici, [Editorconfig özelliklerinin](https://editorconfig.org/#supported-properties)çekirdek kümesini destekler:
 
 - indent_style
 - indent_size
 - tab_width
-- Son \_of_line
+- Son\_of_line
 - karakter
-- kırpma \_trailing_whitespace
+- \_trailing_whitespace Kırp
 - \_final_newline Ekle
 - kök
 
@@ -145,7 +145,7 @@ Beklenen şekilde, sonraki satırdaki **sekme** tuşuna basmak, dört ek boşluk
 
 ![EditorConfig kullanmadan önce kod](../ide/media/vside_editorconfig_before.png)
 
-Projeye, aşağıdaki içerikle *. editorconfig* adlı yeni bir dosya ekleyin. @No__t_0 ayarı, bu değişikliğin yalnızca projedeki kod dosyaları için C# geçerli olduğu anlamına gelir.
+Projeye, aşağıdaki içerikle *. editorconfig* adlı yeni bir dosya ekleyin. `[*.cs]` ayarı, bu değişikliğin yalnızca projedeki kod dosyaları için C# geçerli olduğu anlamına gelir.
 
 ```ini
 # Top-most EditorConfig file
@@ -182,6 +182,6 @@ Deponuzın kökündeki *. editorconfig* dosyasında ya da projenizin bulunduğu 
 
 - [.NET kodu stil kuralları](../ide/editorconfig-code-style-settings-reference.md)
 - [Dil hizmeti için EditorConfig destekleme](../extensibility/supporting-editorconfig.md)
-- [EditorConfig.org](http://editorconfig.org/)
+- [EditorConfig.org](https://editorconfig.org/)
 - [Kod düzenleyicisinin özellikleri](writing-code-in-the-code-and-text-editor.md)
 - [EditorConfig (Mac için Visual Studio)](/visualstudio/mac/editorconfig)

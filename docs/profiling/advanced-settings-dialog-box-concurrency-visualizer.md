@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae0507e75a84f18350817a33abe25d3e59fa9aa2
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: fa9d6658ae14c4b84aae9361f73e4701e758f975
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926321"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911218"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Gelişmiş ayarlar iletişim kutusu (eşzamanlılık görselleştiricisi)
 Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu kullanarak, izlemelerin nasıl toplandığını kontrol edebilirsiniz.  İletişim kutusunda semboller, Yalnızca kendi kodum, arabelleğe alma, filtreleme, CLR olayları, işaretçiler, sağlayıcılar ve dosyalar için sekmeler bulunur.
@@ -29,7 +29,7 @@ Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu
  Öğesinin yolları. *exe* ve. izleme toplandığında *DLL* dosyaları izleme dosyasında depolanır.  Bu ayarın değiştirilmesi, daha önce toplanan izlemeleri etkilemez.
 
 ## <a name="buffering"></a>Ara
- Eşzamanlılık görselleştiricisi bir izleme toplarken Windows için olay Izleme (ETW) kullanır.  ETW, olayları depolayan gibi çeşitli arabellekler kullanır.  Varsayılan ETW arabellek ayarları her durumda en uygun olmayabilir ve bazı durumlarda kayıp olayları gibi sorunlara neden olabilir.  ETW arabelleği ayarlarını yapılandırmak için arabelleğe alma sekmesini kullanabilirsiniz. Daha fazla bilgi için bkz. [olay izleme](http://go.microsoft.com/fwlink/?LinkId=234579) ve [EVENT_TRACE_PROPERTIES yapısı](http://go.microsoft.com/fwlink/?LinkId=234580).
+ Eşzamanlılık görselleştiricisi bir izleme toplarken Windows için olay Izleme (ETW) kullanır.  ETW, olayları depolayan gibi çeşitli arabellekler kullanır.  Varsayılan ETW arabellek ayarları her durumda en uygun olmayabilir ve bazı durumlarda kayıp olayları gibi sorunlara neden olabilir.  ETW arabelleği ayarlarını yapılandırmak için arabelleğe alma sekmesini kullanabilirsiniz. Daha fazla bilgi için bkz. [olay izleme](/windows/win32/etw/event-tracing-portal) ve [EVENT_TRACE_PROPERTIES yapısı](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties).
 
 ## <a name="filter"></a>Filtrele
  Filtre sekmesinde, eşzamanlılık görselleştiricisi tarafından toplanan olay kümesini seçebilirsiniz. Olayların bir alt kümesini seçmek raporlarda görüntülenen veri türlerini sınırlar, her izlemenin boyutunu azaltır ve izlemeleri işlemek için gereken süreyi azaltır.
@@ -56,11 +56,11 @@ Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu
  **İşaretleyiciler** sekmesinde, eşzamanlılık görselleştiricisi içinde işaret olarak gösterilen etw sağlayıcıları kümesini yapılandırabilirsiniz.  Ayrıca, Işaret koleksiyonunu önem düzeyi ve ETW kategorisine göre filtreleyebilirsiniz.  [Eşzamanlılık Görselleştiricisi SDK 'sını](../profiling/concurrency-visualizer-sdk.md) kullanıyorsanız ve kendi işaretleyici sağlayıcınızı kullanıyorsanız, Iş parçacıkları görünümünde görünmesi için buraya kaydolabilirsiniz.
 
 ### <a name="add-a-new-provider"></a>Yeni Sağlayıcı Ekle
- Kodunuz [Eşzamanlılık Görselleştiricisi SDK 'sını](../profiling/concurrency-visualizer-sdk.md) kullanıyorsa veya <xref:System.Diagnostics.Tracing.EventSource> kuralı izleyen ETW olayları oluşturursa, bu olayları bu iletişim kutusuna kaydederek eşzamanlılık görselleştiricisi içinde görüntüleyebilirsiniz.
+ Kodunuz [Eşzamanlılık Görselleştiricisi SDK 'sını](../profiling/concurrency-visualizer-sdk.md) kullanıyorsa veya <xref:System.Diagnostics.Tracing.EventSource> KURALıNı izleyen ETW olayları oluşturursa, bu olayları bu iletişim kutusuna kaydederek eşzamanlılık görselleştiricisi içinde görüntüleyebilirsiniz.
 
  **Ad** alanına sağlayıcı tarafından oluşturulan olay türlerini açıklayan bir ad girin.  **GUID** alanına, bu sağlayıcıyla ilişkili GUID değerini girin. (Bir GUID, her ETW sağlayıcısıyla ilişkilendirilir.)
 
- İsteğe bağlı olarak, Bu sağlayıcıdan, kategoriye veya önem düzeyine göre olayların filtreleneceğini belirtebilirsiniz.  Eşzamanlılık Görselleştiricisi SDK kategorilerine göre filtrelemek için kategori alanını kullanabilirsiniz.  Bunu yapmak için, bir dizi kategori veya kategori aralığı girin.  Bu, geçerli sağlayıcıdaki gösterilecek olay kategorilerini belirtir.  <xref:System.Diagnostics.Tracing.EventSource> Sağlayıcı ekliyorsanız, ETW anahtar sözcüğüne göre filtrelemek için kategori alanını kullanabilirsiniz.  Anahtar sözcüğü bir bit maskesi olduğundan, maskede hangi bitlerin ayarlandığını belirtmek için virgülle ayrılmış tamsayılar dizesini kullanabilirsiniz. Örneğin, "1, 2" ilk ve ikinci bitleri ayarlar ve bu, ondalık olarak 6 ' ya çevirir.
+ İsteğe bağlı olarak, Bu sağlayıcıdan, kategoriye veya önem düzeyine göre olayların filtreleneceğini belirtebilirsiniz.  Eşzamanlılık Görselleştiricisi SDK kategorilerine göre filtrelemek için kategori alanını kullanabilirsiniz.  Bunu yapmak için, bir dizi kategori veya kategori aralığı girin.  Bu, geçerli sağlayıcıdaki gösterilecek olay kategorilerini belirtir.  <xref:System.Diagnostics.Tracing.EventSource> sağlayıcısı ekliyorsanız, ETW anahtar sözcüğüne göre filtrelemek için kategori alanını kullanabilirsiniz.  Anahtar sözcüğü bir bit maskesi olduğundan, maskede hangi bitlerin ayarlandığını belirtmek için virgülle ayrılmış tamsayılar dizesini kullanabilirsiniz. Örneğin, "1, 2" ilk ve ikinci bitleri ayarlar ve bu, ondalık olarak 6 ' ya çevirir.
 
  Önem düzeyi listesini, önemli veya ETW düzeyi belirtilen değerden daha az olan olayları filtrelemek için kullanabilirsiniz.
 

@@ -1,9 +1,9 @@
 ---
 title: Hata ayıklayıcıya ilk bakış
 description: Visual Studio hata ayıklayıcısını kullanarak uygulamaları hata ayıklamaya başlama
-ms.custom: seoapril2019
+ms.custom: ''
 ms.date: 04/08/2019
-ms.topic: quickstart
+ms.topic: conceptual
 helpviewer_keywords:
 - debugger
 ms.assetid: c763d706-3213-494f-b4d2-990b6e1ec456
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06665aa6a30d67e27f654e92029dcbd3d2aea2ef
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 40b7a097f0544459083b5217e6ad97f2b3f31bfa
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72349744"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911631"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısına ilk bakış
 
@@ -77,7 +77,7 @@ Hata ayıklayıcı sırasında, **tıklayana** kadar Çalıştır (yürütmeyi b
 ![Tıklama için Çalıştır](../debugger/media/dbg-tour-run-to-click-2.png "Tıklanan Satıra Kadar Çalıştır")
 
 > [!NOTE]
-> **Tıklama** (yürütmeyi buraya kadar Çalıştır) düğmesi, [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] başlayarak kullanılabilir.
+> **Tıklama** (yürütmeyi buraya kadar Çalıştır) düğmesi, [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]başlayarak kullanılabilir.
 
 **Çalıştırmak Için Çalıştır** ' a tıklayın (yürütmeyi buraya kadar Çalıştır) düğmesine tıklayın. Hata ayıklayıcı, tıklattığınız kod satırına ilerler.
 
@@ -198,7 +198,7 @@ Bu örnekte `DirectoryInfo` çağrısı, `value` değişkeninde depolanan boş d
 Özel durum Yardımcısı, hata ayıklamanıza yardımcı olabilecek harika bir özelliktir. Hata ayrıntılarını görüntüle ve özel durum Yardımcısı 'ndan bir izleme ekleme gibi işlemler de yapabilirsiniz. Ya da gerekirse, belirli bir özel durumu oluşturma koşullarını değiştirebilirsiniz. Kodunuzda özel durumların nasıl işleneceği hakkında daha fazla bilgi için bkz. [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md).
 
 > [!NOTE]
-> Özel durum Yardımcısı, [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] başladığı özel durum yardımcısını değiştirdi.
+> Özel durum Yardımcısı, [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]başladığı özel durum yardımcısını değiştirdi.
 
 Bu özel durum türünün nasıl işleneceği hakkında daha fazla seçenek görmek için **özel durum ayarları** düğümünü genişletin, ancak bu tur için herhangi bir şeyi değiştirmeniz gerekmez!
 

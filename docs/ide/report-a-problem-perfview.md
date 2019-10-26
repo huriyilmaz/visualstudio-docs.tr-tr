@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Use perfview.exe to collect ETL traces for troubleshooting issues with Visual Studio
-ms.openlocfilehash: ca2e44c41952a251d747f80fe27732c1d9dbd18b
-ms.sourcegitcommit: 16175e0cea6af528e9ec76f0b94690faaf1bed30
+ms.openlocfilehash: c1e8a0ca18a857a71fb9cfb6b79a18fef40191a4
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71481945"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919159"
 ---
 # <a name="collect-an-etl-trace-with-perfview"></a>PerfView ile ETL izlemesi toplama
 
@@ -42,4 +42,4 @@ PerfView öğesini [GitHub](https://github.com/Microsoft/perfview/blob/master/do
 
 PerfView yalnızca kendi arabelleğine sığan en son verileri saklayabilir. Bu nedenle, Visual Studio Donmadan veya yavaşlamaya başladıktan sonra toplamayı en kısa sürede durdurmayı deneyin. Bir sorunla karşılaşmadan 30 saniyeden uzun süre toplanmayın.
 
-Daha fazla bilgi için bkz. [Channel9 üzerinde PerfView öğreticisi](http://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-1-Collecting-data-with-the-Run-command).
+Daha fazla bilgi için bkz. [Channel9 üzerinde PerfView öğreticisi](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-1-Collecting-data-with-the-Run-command).

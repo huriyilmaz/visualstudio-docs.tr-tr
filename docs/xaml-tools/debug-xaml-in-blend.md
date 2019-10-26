@@ -9,12 +9,12 @@ manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: c9a89155b81b88f46f4849ce8d739772fd6760fe
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
-ms.translationtype: MT
+ms.openlocfilehash: a9e111f904f0c017dbbe4487401e8e3c363931ac
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451187"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919212"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 
@@ -37,7 +37,7 @@ XAML sözdizimi hatalarının bazı yaygın nedenleri şunlardır:
 
 - XAML öğesi, izin verilmeyen bir konumda bulunmaktadır.
 
-Ortak XAML sözdizimi hakkında daha fazla bilgi için bkz. [temel xaml sözdizimi Kılavuzu](http://go.microsoft.com/fwlink/?LinkId=329942).
+Ortak XAML sözdizimi hakkında daha fazla bilgi için bkz. [temel xaml sözdizimi Kılavuzu](/previous-versions/windows/apps/hh700351(v=win.10)).
 
 Ayrıca Blend 'de basit kod hataları, derleme hataları ve çalışma zamanı hataları tanımlayabilir ve bunları çözebilirsiniz. Ancak, Visual Studio 'da kodun arkasındaki hataların tanımlanması ve çözümlenmesi daha kolay olabilir.
 
@@ -101,15 +101,15 @@ XAML hataları algılandığında tasarım yüzeyi, projenizin geçersiz biçiml
 
 #### <a name="to-resolve-the-xaml-errors"></a>XAML hatalarını çözümlemek için
 
-1. Listedeki ilk hataya çift tıklayın. Açıklama "< ' değeri özniteliğinde geçerli değildir." Hatayı çift tıklattığınızda, işaretçi kodda karşılık gelen konumu bulur. @No__t-0 ' dan önceki `Button` geçerli değildir ve hata iletisinde önerildiği şekilde bir öznitelik değildir. Yukarıdaki kod satırına baktığınızda, `Top` özniteliği için kapatma tırnak işaretlerinin eksik olduğunu fark edeceksiniz. Kapanış tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesinin değişikliklerinizi yansıtacak şekilde güncelleştiğine dikkat edin.
+1. Listedeki ilk hataya çift tıklayın. Açıklama "< ' değeri özniteliğinde geçerli değildir." Hatayı çift tıklattığınızda, işaretçi kodda karşılık gelen konumu bulur. Önceki `Button` `<`, hata iletisinde önerildiği şekilde bir öznitelik değil, geçerlidir. Yukarıdaki kod satırına baktığınızda, `Top` özniteliği için kapatma tırnak işaretlerinin eksik olduğunu fark edeceksiniz. Kapanış tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesinin değişikliklerinizi yansıtacak şekilde güncelleştiğine dikkat edin.
 
-2. "' 0" açıklamasına çift tıklayarak bir adın başlangıcında geçerli değildir. " `Margin="0,149,0,0"` düzgün biçimde düzenlenmiş görünüyor. Ancak, `Margin` ' ın renk kodlamasının koddaki `Margin` ' in diğer örnekleriyle eşleşmediğinden emin olun. Önceki ad/değer çiftinde (`VerticalAlignment="Top`) kapanış tırnak işaretleri eksik olduğundan, `Margin="` önceki özniteliğin değerinin bir parçası olarak okunurdur ve 0 bir ad/değer çiftinin başlangıcı olarak okunurdur. @No__t-0 için kapanan tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesi, yaptığınız değişiklikleri yansıtacak şekilde güncelleştirilir.
+2. "' 0" açıklamasına çift tıklayarak bir adın başlangıcında geçerli değildir. " `Margin="0,149,0,0"` düzgün biçimde düzenlenmiş görünüyor. Ancak, `Margin` ' ın renk kodlamasının koddaki `Margin` ' in diğer örnekleriyle eşleşmediğinden emin olun. Önceki ad/değer çiftinde (`VerticalAlignment="Top`) kapanış tırnak işaretleri eksik olduğundan, `Margin="` önceki özniteliğin değerinin bir parçası olarak okunurdur ve 0 bir ad/değer çiftinin başlangıcı olarak okunurdur. `Top`için kapanan tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesi, yaptığınız değişiklikleri yansıtacak şekilde güncelleştirilir.
 
-3. Kalan hataya çift tıklayın, "kapanış XML etiketi ' Button ' eşleşmiyor." İşaretçi, hatanın `Grid` nesnesinin içinde olması için kapanış **kılavuz** etiketinde (`</Grid>`) bulunur. İkinci `Button` nesnesinde kapanış etiketinin eksik olduğuna dikkat edin. Kapanış @no__t ekledikten sonra, **sonuçlar** paneli listesi güncellenir. Artık bu ilk hatalar çözümlendiğinden, iki ek hata belirlenmiştir.
+3. Kalan hataya çift tıklayın, "kapanış XML etiketi ' Button ' eşleşmiyor." İşaretçi, hatanın `Grid` nesnesinin içinde olması için kapanış **kılavuz** etiketinde (`</Grid>`) bulunur. İkinci `Button` nesnesinde kapanış etiketinin eksik olduğuna dikkat edin. Kapanış `/`ekledikten sonra **sonuçlar** paneli listesi güncellenir. Artık bu ilk hatalar çözümlendiğinden, iki ek hata belirlenmiştir.
 
-4. "Üye ' içerik ' tanınmıyor veya erişilebilir değil" seçeneğine çift tıklayın. @No__t-1 ' deki @no__t 0 büyük harfle yazılmalıdır. "C" alt durumunu "c" büyük harfle değiştirin.
+4. "Üye ' içerik ' tanınmıyor veya erişilebilir değil" seçeneğine çift tıklayın. `content` `c` büyük harfle yazılmalıdır. "C" alt durumunu "c" büyük harfle değiştirin.
 
-5. ' @No__t-0 ' ad alanında "mame" özelliği yok. " "Mame" içindeki "d", "N" olmalıdır. "D" değerini bir "N" ile değiştirin. Artık XAML ayrıştırılabilmesine göre, uygulama tasarım yüzeyinde görünür.
+5. "'<http://schemas.microsoft.com/winfx/2006/xaml>' ad alanında" mame "özelliği yok." "Mame" içindeki "d", "N" olmalıdır. "D" değerini bir "N" ile değiştirin. Artık XAML ayrıştırılabilmesine göre, uygulama tasarım yüzeyinde görünür.
 
     ![Visual Studio için Blend XAML hatalarını ayıklama](../debugger/media/blend_debugartboard_xaml.png "blend_debugArtboard_XAML")
 
@@ -119,8 +119,8 @@ XAML hataları algılandığında tasarım yüzeyi, projenizin geçersiz biçiml
 
 Uygulamanızda kodda daha kolay hata ayıklaması yapmak için, Visual Studio 'da Blend projelerini açabilirsiniz. Visual Studio 'da bir Blend projesi açmak için **Projeler** panelinde projeye sağ tıklayın ve ardından **Visual Studio 'da Düzenle**' ye tıklayın. Visual Studio 'da hata ayıklama oturumunuzu tamamladıktan sonra, tüm değişikliklerinizi kaydetmek için CTRL + SHIFT + S tuşlarına basın ve ardından Blend 'e geri dönün. Projeyi yeniden yüklemeniz istenecektir. Blend 'de çalışmaya devam etmek için **Tümüne Evet** ' e tıklayın.
 
-Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'DA UWP uygulamalarında hata ayıklama](http://go.microsoft.com/fwlink/?LinkId=329944).
+Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'DA UWP uygulamalarında hata ayıklama](/visualstudio/debugger/debug-store-apps-in-visual-studio?view=vs-2015&redirectedfrom=MSDN).
 
 ## <a name="get-help"></a>Yardım alın
 
-Blend uygulamanızda hata ayıklama konusunda daha fazla yardıma ihtiyacınız varsa, sorun veya soru göndermek için [UWP uygulama topluluğu forumlarında](http://go.microsoft.com/fwlink/?LinkId=280308) arama yapabilirsiniz.
+Blend uygulamanızda hata ayıklama konusunda daha fazla yardıma ihtiyacınız varsa, sorun veya soru göndermek için [UWP uygulama topluluğu forumlarında](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) arama yapabilirsiniz.

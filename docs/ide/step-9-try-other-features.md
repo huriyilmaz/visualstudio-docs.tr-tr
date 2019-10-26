@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5af132efde0c1a49e5404fa602363aab0554e6f
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 07c0a3e24ac089bf29501dfd4e101baef73318fb
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572470"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919135"
 ---
 # <a name="step-9-try-other-features"></a>9\. Adım: diğer özellikleri deneme
 Daha fazla bilgi edinmek için simgeleri ve renkleri değiştirmeyi, oyun zamanlayıcısı ve sesler eklemeyi deneyin. Oyunu daha zorlu hale getirmek için tahtayı büyütmeyi ve zamanlayıcıyı ayarlamayı deneyin.
@@ -37,7 +37,7 @@ Daha fazla bilgi edinmek için simgeleri ve renkleri değiştirmeyi, oyun zamanl
 - Oyuncu bir eşleşme bulduğunda çalacak bir ses, eşleşmeyen iki simgeyi açtığında çalacak başka bir ses ve program simgeleri yeniden gizlediğinde çalacak üçüncü bir ses ekleyin.
 
     > [!TIP]
-    > Ses çalmak için <xref:System.Media> ad alanını kullanabilirsiniz. Daha fazla bilgi için bkz. [Windows FormsC#uygulamasında ses yürütme ()](http://youtu.be/qOh4ooHg1UU) veya [Visual Basic ses yürütme](http://youtu.be/-4oPDeQrtMs) .
+    > Ses çalmak için <xref:System.Media> ad alanını kullanabilirsiniz. Daha fazla bilgi için bkz. [Windows FormsC#uygulamasında ses yürütme ()](https://www.youtube.com/watch?v=qOh4ooHg1UU&feature=youtu.be) veya [Visual Basic ses yürütme](https://www.youtube.com/watch?v=-4oPDeQrtMs&feature=youtu.be) .
 
 - Oyun tahtasını büyüterek oyunu zorlaştırın.
 

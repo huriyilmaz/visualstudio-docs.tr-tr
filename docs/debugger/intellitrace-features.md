@@ -20,18 +20,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 852070c74a7e7171525a5feaa6cc7617fe83c00d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bcdb1b2b6dc4b64d180eb03fc76b26b4ef16e9d0
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925356"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911411"
 ---
 # <a name="intellitrace-features-c-visual-basic-c"></a>IntelliTrace Özellikleri (C#, Visual Basic, C++)
 
-Uygulamanızı kaydetmek için IntelliTrace 'i kullanabilirsiniz. bu sayede, durumunu (çağrı yığını ve yerel değişken değerleri) yürütmenin farklı noktalarında incelemenizi sağlayabilirsiniz. Her zamanki gibi hata ayıklamaya başlamanız yeterlidir. IntelliTrace varsayılan olarak açıktır ve bilgi IntelliTrace 'in, **Olaylar** sekmesinin altındaki yeni **Tanılama araçları** penceresinde kayıt olduğunu görebilirsiniz. Bu olay için kaydedilen çağrı yığınını ve yerelleri görmek için bir olay seçin ve **geçmiş hata ayıklamayı etkinleştir** ' e tıklayın.
+Uygulamanızı kaydetmek için IntelliTrace 'i kullanabilirsiniz. bu sayede, durumunu (çağrı yığını ve yerel değişken değerleri) yürütmenin farklı noktalarında incelemenizi sağlayabilirsiniz. Her zamanki gibi hata ayıklamaya başlamanız yeterlidir. IntelliTrace varsayılan olarak açıktır ve bilgi IntelliTrace 'in, **Olaylar** sekmesinin altındaki yeni **Tanılama araçları** penceresinde kayıt olduğunu görebilirsiniz. bir olay seçin ve **geçmiş hata ayıklamayı etkinleştir ' e tıklayın** bu olay için kaydedilen çağrı yığınını ve yerelleri görmek için.
 
-Adım adım bir açıklama için bkz [. İzlenecek yol: IntelliTrace](../debugger/walkthrough-using-intellitrace.md)kullanma.
+Adım adım bir açıklama için bkz. [Izlenecek yol: IntelliTrace kullanma](../debugger/walkthrough-using-intellitrace.md).
 
 IntelliTrace Visual Studio Enterprise sürümünde kullanılabilir, ancak Visual Studio Professional veya topluluk sürümlerinde bulunmaz.
 
@@ -123,7 +123,7 @@ IntelliTrace verilerini dosyaya kaydettiğinizde, IntelliTrace 'in topladığı 
 
 ## <a name="forums"></a>Forumlar
 
-[Visual Studio Debugger](http://go.microsoft.com/fwlink/?LinkId=262263)
+[Visual Studio hata ayıklayıcısı](https://social.msdn.microsoft.com/Forums/en-US/home)
 
 ## <a name="videos"></a>Videolar
 

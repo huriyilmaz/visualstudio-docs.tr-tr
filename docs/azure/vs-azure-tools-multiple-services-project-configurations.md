@@ -9,19 +9,19 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 5314e92065cb29691aca75d424a331d10284a558
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 7b9df8c5609c92a6b6631d1ed9fdda8d65e9b605
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253430"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911804"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Visual Studio'da Azure projenizi birden çok hizmet yapılandırması kullanacak şekilde yapılandırma
 
 Visual Studio 'da bir Azure bulut hizmeti projesi üç yapılandırma dosyası içerir: `ServiceDefinition.csdef`, `ServiceConfiguration.Local.cscfg`ve `ServiceConfiguration.Cloud.cscfg`:
 
-- `ServiceDefinition.csdef`, bulut hizmeti ve rollerinin gereksinimlerini ve tüm örneklere uygulanan ayarları sağlamak üzere Azure 'a dağıtılır. Ayarlar, Azure hizmeti barındırma çalışma zamanı API 'SI kullanılarak çalışma zamanında okunabilir. Bu dosya, Azure 'da yalnızca bulut hizmeti durdurulduğunda güncelleştirilir.
-- `ServiceConfiguration.Local.cscfg`ve `ServiceConfiguration.Cloud.cscfg` tanım dosyasındaki ayarlar için değerler sağlayın ve her bir rol için çalıştırılacak örneklerin sayısını belirtin. "Yerel" dosya, yerel hata ayıklamada kullanılan değerleri içerir; "bulut" dosyası Azure 'a olarak `ServiceConfiguration.cscfg` dağıtılır ve sunucu ortamı için ayarları sağlar. Bu dosya, bulut hizmetiniz Azure 'da çalışırken güncelleştirilemeyebilir.
+- `ServiceDefinition.csdef`, bulut hizmeti ve rollerinin gereksinimlerini ve tüm örneklere uygulanan ayarları sağlamak için Azure 'a dağıtılır. Ayarlar, Azure hizmeti barındırma çalışma zamanı API 'SI kullanılarak çalışma zamanında okunabilir. Bu dosya, Azure 'da yalnızca bulut hizmeti durdurulduğunda güncelleştirilir.
+- `ServiceConfiguration.Local.cscfg` ve `ServiceConfiguration.Cloud.cscfg`, tanım dosyasındaki ayarlar için değerler sağlar ve her bir rol için çalıştırılacak örneklerin sayısını belirtir. "Yerel" dosya, yerel hata ayıklamada kullanılan değerleri içerir; "bulut" dosyası Azure 'a `ServiceConfiguration.cscfg` olarak dağıtılır ve sunucu ortamı için ayarlar sağlar. Bu dosya, bulut hizmetiniz Azure 'da çalışırken güncelleştirilemeyebilir.
 
 Yapılandırma ayarları, geçerli rolün Özellik sayfaları kullanılarak Visual Studio 'da yönetilir ve değiştirilir (Role sağ tıklayıp **Özellikler**' i seçin ya da role çift tıklayın). Değişiklikler, **hizmet yapılandırması** açılır penceresinde hangi yapılandırmanın seçiltiğine göre kapsamlandırılır. Web ve çalışan rollerinin özellikleri, aşağıdaki bölümlerde açıklananlar dışında benzerdir.
 
@@ -33,7 +33,7 @@ Hizmet tanımı ve hizmet yapılandırma dosyaları için temel alınan şemalar
 
 ### <a name="service-configuration"></a>Hizmet yapılandırması
 
-Hangi `ServiceConfiguration.*.cscfg` dosyanın değişikliklerden etkilendiğini seçer. Varsayılan olarak, yerel ve bulut çeşitleri vardır ve yapılandırma dosyalarını kopyalamak, yeniden adlandırmak ve kaldırmak için **Yönet...** komutunu kullanabilirsiniz. Bu dosyalar, bulut hizmeti projenize eklenir ve **Çözüm Gezgini**görüntülenir. Ancak, yapılandırmaların yeniden adlandırılması veya kaldırılması yalnızca bu denetimden yapılabilir.
+Değişikliklerden etkilenen `ServiceConfiguration.*.cscfg` dosyasını seçer. Varsayılan olarak, yerel ve bulut çeşitleri vardır ve yapılandırma dosyalarını kopyalamak, yeniden adlandırmak ve kaldırmak için **Yönet...** komutunu kullanabilirsiniz. Bu dosyalar, bulut hizmeti projenize eklenir ve **Çözüm Gezgini**görüntülenir. Ancak, yapılandırmaların yeniden adlandırılması veya kaldırılması yalnızca bu denetimden yapılabilir.
 
 ### <a name="instances"></a>Örnekler
 
@@ -55,7 +55,7 @@ Varsayılan olarak, Web rolü için tanılama etkindir. Azure bulut hizmeti proj
 
 ## <a name="settings-page"></a>Ayarlar sayfası
 
-**Ayarlar** sayfasında bir yapılandırmaya ad-değer çiftleri olarak ayarlar ekleyebilirsiniz. Rol içinde çalışan kod, [Azure yönetilen Kitaplığı](http://go.microsoft.com/fwlink?LinkID=171026)tarafından sunulan sınıfları (özellikle [Getconfigurationsettingvalue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) yöntemi) kullanarak çalışma zamanında yapılandırma ayarlarınızın değerlerini okuyabilir.
+**Ayarlar** sayfasında bir yapılandırmaya ad-değer çiftleri olarak ayarlar ekleyebilirsiniz. Rol içinde çalışan kod, [Azure yönetilen Kitaplığı](/previous-versions/azure/dn602775(v=azure.11))tarafından sunulan sınıfları (özellikle [Getconfigurationsettingvalue](/previous-versions/azure/reference/ee772857(v=azure.100)) yöntemi) kullanarak çalışma zamanında yapılandırma ayarlarınızın değerlerini okuyabilir.
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>Depolama hesabı için bağlantı dizesi yapılandırma
 
@@ -70,7 +70,7 @@ Bir bağlantı dizesi oluşturmak için **Ayar ekle** ' yi seçin ve **türü** 
 
 Yeni veya mevcut bağlantı dizeleri için... seçeneğini belirleyin **.** * **depolama bağlantı dizesi oluştur** iletişim kutusunu açmak için **değer** alanının sağında:
 
-1. **Kullanarak bağlan**altında, aboneliğinizden bir depolama hesabı seçmek için **abonelik** seçeneğini belirleyin. Daha sonra Visual Studio, depolama hesabı kimlik bilgilerini `.publishsettings` dosyadan otomatik olarak alır.
+1. **Kullanarak bağlan**altında, aboneliğinizden bir depolama hesabı seçmek için **abonelik** seçeneğini belirleyin. Daha sonra Visual Studio, depolama hesabı kimlik bilgilerini `.publishsettings` dosyasından otomatik olarak alır.
 1. **El ile girilen kimlik bilgilerinin** seçilmesi, Azure Portal bilgileri kullanarak doğrudan hesap adı ve anahtarı belirtmenize olanak tanır. Hesap anahtarını kopyalamak için:
     1. Azure portal depolama hesabına gidin ve **anahtarları Yönet**' i seçin.
     1. Hesap anahtarını kopyalamak için Azure portal depolama hesabına gidin, **ayarlar > erişim anahtarları**' nı seçin ve ardından Kopyala düğmesini kullanarak birincil erişim anahtarını panoya kopyalayın.
@@ -95,7 +95,7 @@ Bir rol için bir veya daha fazla yerel depolama kaynağı ayırmak üzere **yer
 
 ## <a name="certificates-page"></a>Sertifikalar sayfası
 
-**Sertifikalar** Özellik sayfası, hizmet yapılandırmanıza sertifikalarınızı hakkında bilgi ekler. Sertifikalarınızın hizmetinize paketlenmemiş olduğunu unutmayın; [Azure Portal](http://portal.azure.com)aracılığıyla sertifikalarınızı Azure 'a ayrı olarak yüklemeniz gerekir.
+**Sertifikalar** Özellik sayfası, hizmet yapılandırmanıza sertifikalarınızı hakkında bilgi ekler. Sertifikalarınızın hizmetinize paketlenmemiş olduğunu unutmayın; [Azure Portal](https://portal.azure.com)aracılığıyla sertifikalarınızı Azure 'a ayrı olarak yüklemeniz gerekir.
 
 Buraya bir sertifika eklendiğinde, hizmet yapılandırmanıza sertifikanız hakkında bilgiler eklenir. Sertifikalar, hizmetle paketlenmez; sertifikalarınızı Azure portal aracılığıyla ayrı olarak yüklemeniz gerekir.
 

@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16b46d47ec5850a79d78667671c7eb671d859f3e
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 56ecf4cb1d777362daf381646094c20f82f30f85
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128227"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72910355"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Hata ayıklayıcı olmadan bellek kullanımını analiz etme
 
@@ -36,7 +36,7 @@ ms.locfileid: "71128227"
 
 1. Visual Studio C# 'da bir evrensel WINDOWS (UWP) projesi açın.
 
-1. Menü çubuğunda, **Hata Ayıkla** > **performans profil oluşturucusu**' nu seçin.
+1. Menü çubuğunda, **hata ayıkla** > **Performance Profiler**' ı seçin.
 
 1. **Bellek kullanımı**' nı seçin ve ardından **Başlat**' ı seçin.
 
@@ -143,12 +143,12 @@ Anlık görüntü ayrıntıları raporundaki **yönetilen yığın** ağacı aş
 
 **Kök ağaç yollarındaki** bir tür Için, **başvuru sayısı** sütununda bu türe başvuru tutan nesne sayısı görüntülenir.
 
-![Türler Için kök ağacına yönelik yollar](../profiling/media/memuse_snapshotdetails_type_pathstoroottree.png "Türler Için kök ağacına yönelik yollar")
+![Türler için kök ağacına yönelik yollar](../profiling/media/memuse_snapshotdetails_type_pathstoroottree.png "Türler için kök ağacına yönelik yollar")
 
 ### <a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a>Başvurulan türler veya başvurulan nesneler ağacı (anlık görüntü ayrıntıları raporları)
 **Başvurulan türler** veya **başvurulan nesneler** ağacı, seçilen türün veya Örneğin başvurduğu nesneleri gösterir.
 
-![Örnekler Için başvurulan nesneler ağacı](../profiling/media/memuse_snapshotdetails_referencedobjects_instance.png "Örnekler Için başvurulan nesneler ağacı")
+![Örnekler için başvurulan nesneler ağacı](../profiling/media/memuse_snapshotdetails_referencedobjects_instance.png "Örnekler için başvurulan nesneler ağacı")
 
 Bir anlık görüntü ayrıntıları raporundaki **başvurulan türler** ağacı aşağıdaki sütunlara sahiptir. **Başvurulan bir nesne** ağacının **başvuru sayısı** sütunu yok.
 
@@ -172,7 +172,7 @@ Her iki bağlantı de aynı raporu açar. Tek fark, rapordaki **yönetilen yığ
 
  **Yönetilen yığın** ağacı bellekte tutulan nesne türlerini listeler. Türün en büyük on örneğini görüntülemek için bir tür adını genişletebilirsiniz, boyuta göre sıralanır. Seçili öğe için köke ve **başvurulan nesne** ağaçlarına **yönelik yolları** göstermek için bir tür veya örnek seçin.
 
- ![Fark raporundaki bir tür Için yönetilen yığın ağacı](../profiling/media/memuse_snapshotdiff_type_heap.png "Fark raporundaki bir tür Için yönetilen yığın ağacı")
+ ![Fark raporundaki bir tür için yönetilen yığın ağacı](../profiling/media/memuse_snapshotdiff_type_heap.png "Fark raporundaki bir tür için yönetilen yığın ağacı")
 
 Anlık görüntü farkı raporundaki **yönetilen yığın** ağacı aşağıdaki sütunlara sahiptir:
 
@@ -216,7 +216,7 @@ Bir anlık görüntü farkı raporundaki **başvurulan türler** ağacı aşağ�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [JavaScript belleği](../profiling/javascript-memory.md)
-- [Visual Studio profil oluşturma](../profiling/index.yml)
-- [Araçlar profil oluşturmaya ilk bakış](../profiling/profiling-feature-tour.md)
-- [C++, C# ve Visual Basic kullanarak UWP uygulamaları için en iyi performans](/previous-versions/windows/apps/hh750313\(v\=win.10\))
-- [Visual Studio 'da yeni bellek kullanımı aracı ile bellek sorunlarını tanılama](http://go.microsoft.com/fwlink/p/?LinkId=394706)
+- [Visual Studio 'da profil oluşturma](../profiling/index.yml)
+- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)
+- [, C++ C#Ve Visual Basic kullanarak UWP uygulamaları için en iyi performans uygulamaları](/previous-versions/windows/apps/hh750313\(v\=win.10\))
+- [Visual Studio 'da yeni bellek kullanımı aracı ile bellek sorunlarını tanılama](https://devblogs.microsoft.com/devops/diagnosing-memory-issues-with-the-new-memory-usage-tool-in-visual-studio/)

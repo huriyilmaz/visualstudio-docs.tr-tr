@@ -30,12 +30,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2241daa50a35a9714fd66b10966298279bc37fe
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 98bf3e143a3fcb6613752362acf83f5c2441b98b
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747286"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911256"
 ---
 # <a name="link-task"></a>Bağlantı görevi
 Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı aracı ortak nesne dosyası biçimi (COFF) nesne dosyalarını ve kitaplıklarını, yürütülebilir ( *. exe*) dosya veya dinamik bağlantı KITAPLıĞı (dll) oluşturmak için bağlar. Daha fazla bilgi için bkz. [bağlayıcı seçenekleri](/cpp/build/reference/linker-options).
@@ -65,7 +65,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   Bildirim dosyasının `dependency` bölümüne yerleştirilecek öznitelikleri belirtir.
 
-  Daha fazla bilgi için bkz. [/Manifestdependency (Bildirim Bağımlılıklarını Belirt)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies). Ayrıca bkz. [Yayımcı yapılandırma dosyaları](https://docs.microsoft.com/windows/desktop/SbsCs/publisher-configuration-files).
+  Daha fazla bilgi için bkz. [/Manifestdependency (Bildirim Bağımlılıklarını Belirt)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies). Ayrıca bkz. [Yayımcı yapılandırma dosyaları](/windows/desktop/SbsCs/publisher-configuration-files).
 
 - **AdditionalOptions**
 
@@ -467,7 +467,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   İsteğe bağlı **Boolean** parametresi.
 
-  @No__t_0, proje bağımlılıklarındaki kitaplık çıktılarının otomatik olarak bağlandığını belirtir.
+  `true`, proje bağımlılıklarındaki kitaplık çıktılarının otomatik olarak bağlandığını belirtir.
 
   Bu parametre bir bağlayıcı seçeneğine karşılık gelmiyor.
 
@@ -785,7 +785,7 @@ Microsoft C++ bağlayıcı aracı *LINK. exe*' yi sarmalanmış. Bağlayıcı ar
 
   İsteğe bağlı **Boolean** parametresi.
 
-  @No__t_0, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.
+  `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.
 
   Daha fazla bilgi için bkz. [/nologo (başlangıç başlığını gösterme) (bağlayıcı)](/cpp/build/reference/nologo-suppress-startup-banner-linker).
 

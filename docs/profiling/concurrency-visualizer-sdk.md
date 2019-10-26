@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33b8f0215e09dd43c265c7eb8ba08613132fabbc
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: cb48733f84dcf484d2c2d7ffb18e838faae07ab0
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870303"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911191"
 ---
 # <a name="concurrency-visualizer-sdk"></a>Eşzamanlılık Görselleştiricisi SDK
-Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzamanlılık Görselleştiricisi SDK 'sını kullanarak kaynak kodunuzu gösterebilirsiniz. Ek verileri kodunuzda aşamalar ve olaylarla ilişkilendirebilirsiniz. Bu ek görselleştirmeler *işaretçiler*olarak bilinir.  Tanıtım amaçlı bir anlatım için bkz. [Eşzamanlılık Görselleştiricisi SDK 'Sını tanıtma](http://go.microsoft.com/fwlink/?LinkId=235405).
+Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzamanlılık Görselleştiricisi SDK 'sını kullanarak kaynak kodunuzu gösterebilirsiniz. Ek verileri kodunuzda aşamalar ve olaylarla ilişkilendirebilirsiniz. Bu ek görselleştirmeler *işaretçiler*olarak bilinir.  Tanıtım amaçlı bir anlatım için bkz. [Eşzamanlılık Görselleştiricisi SDK 'Sını tanıtma](https://blogs.msdn.microsoft.com/visualizeparallel/2011/10/17/introducing-the-concurrency-visualizer-sdk/).
 
 ## <a name="properties"></a>Özellikler
  Bayraklar, yayılma ve mesajlar her biri iki özelliğe sahiptir: Kategori ve önem derecesi. [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunda, görüntülenen işaretçiler kümesini filtrelemek için bu özellikleri kullanabilirsiniz. Ayrıca, bu özellikler işaretçiler görsel gösterimini etkiler. Örneğin, önemli olduğunu göstermek için bayrakların boyutu kullanılır. Ayrıca, kategori göstermek için renk kullanılır.
@@ -46,7 +46,7 @@ Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzam
     ```
 
 ### <a name="c"></a>C++
- İçinde C++, bir [marker_series Class](../profiling/marker-series-class.md) nesnesi oluşturun ve işlevleri çağırmak için kullanın.  Sınıfı, işaretçiler oluşturmak için üç işlev sunar, [marker_series:: write_flag yöntemi](../profiling/marker-series-write-flag-method.md), [marker_series:: write_message yöntemi](../profiling/marker-series-write-message-method.md)ve [marker_series:: write_alert yöntemi.](../profiling/marker-series-write-alert-method.md) `marker_series`
+ İçinde C++, bir [marker_series Class](../profiling/marker-series-class.md) nesnesi oluşturun ve işlevleri çağırmak için kullanın.  `marker_series` sınıfı, işaretçiler oluşturmak için üç işlev sunar, [marker_series:: Write_flag yöntemi](../profiling/marker-series-write-flag-method.md), [marker_series:: write_message yöntemi](../profiling/marker-series-write-message-method.md)ve [marker_series:: write_alert yöntemi](../profiling/marker-series-write-alert-method.md).
 
 ##### <a name="to-add-sdk-support-to-a-c-or-c-project"></a>Bir C++ veya C projesine SDK desteği eklemek için
 
@@ -54,7 +54,7 @@ Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzam
 
 2. SDK 'ya erişmek istediğiniz projeyi seçin ve ardından **Seçili proje IÇIN SDK Ekle** düğmesini seçin.
 
-3. İçin C++, dahil `cvmarkersobj.h`. C için dahil `cvmarkers.h`edin.
+3. İçin C++`cvmarkersobj.h`ekleyin. C için `cvmarkers.h`ekleyin.
 
 4. Kodunuza bir using deyimleri ekleyin.
 
@@ -62,7 +62,7 @@ Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzam
     using namespace Concurrency::diagnostic;
     ```
 
-5. Bir `marker_series` nesne oluşturun ve `span` oluşturucuya geçirin.
+5. `marker_series` nesne oluşturun ve `span` oluşturucusuna geçirin.
 
     ```C++
 
@@ -82,7 +82,7 @@ Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzam
 
 #### <a name="to-use-a-new-marker-provider-in-a-c-or-c-project"></a>Bir C++ veya C projesinde yeni bir işaretleyici sağlayıcı kullanmak için
 
-1. Bir PCV_PROVIDER başlatmak için işlevinikullanın.`CvInitProvider`  Oluşturucu bir GUID * ve PCV_PROVIDER\*alır.
+1. Bir PCV_PROVIDER başlatmak için `CvInitProvider` işlevini kullanın.  Oluşturucu bir GUID * ve PCV_PROVIDER\*alır.
 
 2. Sağlayıcıyı kaydetmek için [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunu açın.  **İşaretleyiciler** sekmesini seçin ve ardından **Yeni Sağlayıcı Ekle** düğmesini seçin. Bu iletişim kutusunda, sağlayıcıyı oluşturmak için kullanılan GUID 'yi ve sağlayıcının açıklamasını girin.
 
@@ -102,7 +102,7 @@ Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzam
 
 #### <a name="to-use-a-marker-series-in-a-c-project"></a>Bir C++ projede işaretleyici serisi kullanmak için
 
-1. Bir `marker_series` nesne oluşturun.  Bu yeni seriden olay oluşturabilirsiniz.
+1. `marker_series` nesnesi oluşturun.  Bu yeni seriden olay oluşturabilirsiniz.
 
     ```scr
     marker_series series;
@@ -111,7 +111,7 @@ Eşzamanlılık görselleştiricisi içinde ek bilgileri göstermek için Eşzam
 
 #### <a name="to-use-a-marker-series-in-a-c-project"></a>Bir C projesinde işaretleyici serisini kullanmak için
 
-1. Bir PCV_MARKERSERIES oluşturmak için işlevinikullanın.`CvCreateMarkerSeries`
+1. Bir PCV_MARKERSERIES oluşturmak için `CvCreateMarkerSeries` işlevini kullanın.
 
     ```C++
     PCV_MARKERSERIES series;

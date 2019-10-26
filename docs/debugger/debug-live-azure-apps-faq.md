@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ceda2dd4e85c8db5b66ef753a748977204b8caab
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 5e0d8839daac2d470f4275257bfcfbc83fc7a62f
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211218"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911400"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 'da anlık görüntü hata ayıklaması için sık sorulan sorular
 
@@ -125,7 +125,7 @@ Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uza
 
    - Sunucu sertifikası
       - Karşılık gelen sunucu sertifikası parmak izi, Azure Keykasasında gizli dizi olarak dağıtılır. VS, sanal makine veya sanal makine ölçek kümeleri kaynağına karşılık gelen bölgede MSVSAZ * önekiyle bir Keykasası bulmayı veya oluşturmayı dener. Bu bölgeye dağıtılan tüm sanal makine veya sanal makine ölçek kümeleri kaynakları aynı anahtar kasasını paylaşır.
-      - Sunucu sertifikası parmak izi gizli anahtarını silmek için Azure portal gidin ve parolanızı barındıran bölgede MSVSAZ * Keykasasını bulun. Etiketlenmesi gereken gizli anahtarı sil`remotedebugcert<<ResourceName>>`
+      - Sunucu sertifikası parmak izi gizli anahtarını silmek için Azure portal gidin ve parolanızı barındıran bölgede MSVSAZ * Keykasasını bulun. Etiketlenmesi gereken gizli anahtarı silin `remotedebugcert<<ResourceName>>`
       - Ayrıca, PowerShell aracılığıyla kaynağından sunucu parolasını da silmeniz gerekir.
 
       Sanal makineler için:
@@ -181,7 +181,7 @@ Snapshot Debugger devre dışı bırakmak için birkaç yol vardır:
 
 - Azure portal > sanal makineniz/sanal makine ölçek kümesi kaynak dikey penceresi > Uzantıları > Microsoft. Insights. VMDiagnosticsSettings uzantısını kaldır
 
-- [Az PowerShell](https://docs.microsoft.com/powershell/azure/overview) 'Den PowerShell cmdlet 'leri
+- [Az PowerShell](/powershell/azure/overview) 'Den PowerShell cmdlet 'leri
 
    Sanal makine:
 
@@ -199,7 +199,7 @@ Snapshot Debugger devre dışı bırakmak için birkaç yol vardır:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio’da hata ayıklama](../debugger/index.yml)
-- [Snapshot Debugger'ı kullanarak canlı ASP.NET uygulamalarının hatalarını ayıklama](../debugger/debug-live-azure-applications.md)
+- [Snapshot Debugger kullanarak canlı ASP.NET uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md)
 - [Snapshot Debugger kullanarak canlı ASP.NET Azure sanal makine ölçek kümelerinde hata ayıkla](../debugger/debug-live-azure-virtual-machines.md)
 - [Snapshot Debugger kullanarak canlı ASP.NET Azure Kubernetes hatalarını ayıklama](../debugger/debug-live-azure-kubernetes.md)
 - [Anlık görüntü hata ayıklaması için sorun giderme ve bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md)

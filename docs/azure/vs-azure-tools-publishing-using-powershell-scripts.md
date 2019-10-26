@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: cd19c619eca4505eab4c332783a678bf5e7ba87a
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 6ed003df875f7fdc75278210dc3010e93d280186
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179784"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911743"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Windows PowerShell betiklerini kullanarak geliştirme ve test ortamlarına yayımlama
 
@@ -22,15 +22,15 @@ Visual Studio 'da bir Web uygulaması oluşturduğunuzda, daha sonra Web siteniz
 
 Bu betikleri kullanarak, geçici kullanım için sitenizin özelleştirilmiş sürümlerini (geliştirme ve test ortamları olarak da bilinir) sağlayabilirsiniz. Örneğin, bir Azure sanal makinesinde veya bir Web sitesindeki hazırlama yuvasında bir test paketini çalıştırmak, bir hatayı yeniden oluşturmak, bir hata düzeltmesini test etmek, önerilen bir değişikliği denemek veya bir demo ya da sunum için özel bir ortam ayarlamak üzere Web sitenizin belirli bir sürümünü kurabilirsiniz. Projenizi yayımlayan bir betik oluşturduktan sonra, komut dosyasını gerektiği gibi yeniden çalıştırarak özdeş ortamları yeniden oluşturabilir veya test için özel bir ortam oluşturmak üzere betiği kendi Web uygulamanızın derlemesi ile çalıştırabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 * **Azure iş yükü** yüklü olan veya Visual Studio 2013 ve azure SDK 2,3 veya sonraki bir sürümünü Içeren Visual Studio 2015 veya üzeri. Bkz. [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads). (Web projelerine yönelik betikleri oluşturmak için Azure SDK 'ya ihtiyacınız yoktur. Bu özellik, bulut hizmetlerinde Web rolleri değil Web projelerine yöneliktir.)
 * Azure PowerShell 0.7.4 veya üzeri. Bkz. [Azure PowerShell nasıl yüklenir ve yapılandırılır](/powershell/azure/overview).
-* [Windows PowerShell 3,0](http://go.microsoft.com/?linkid=9811175) veya üzeri.
+* [Windows PowerShell 3,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)) veya üzeri.
 
 ## <a name="additional-tools"></a>Ek araçlar
 
-Azure geliştirme için Visual Studio 'da PowerShell ile çalışmaya yönelik ek araçlar ve kaynaklar mevcuttur. Bkz. [PowerShell Tools for Visual Studio](http://go.microsoft.com/fwlink/?LinkId=404012).
+Azure geliştirme için Visual Studio 'da PowerShell ile çalışmaya yönelik ek araçlar ve kaynaklar mevcuttur. Bkz. [PowerShell Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AdamRDriscoll.PowerShellToolsforVisualStudio2015).
 
 ## <a name="generating-the-publish-scripts"></a>Yayımlama betikleri oluşturuluyor
 
@@ -140,21 +140,21 @@ Bir sanal makine oluşturduğunuzda, JSON yapılandırma dosyası aşağıdakine
 }
 ```
 
-Yayımlama betiklerini çalıştırdığınızda ne olacağını değiştirmek için JSON yapılandırmasını düzenleyebilirsiniz. Ve bölümleri gereklidir, ancak gerekmiyorsa bölümünü silebilirsiniz. `databases` `cloudService` `virtualMachine` Visual Studio 'Nun oluşturduğu varsayılan yapılandırma dosyasında boş olan özellikler isteğe bağlıdır; Varsayılan yapılandırma dosyasında değerleri olan özellikler gereklidir.
+Yayımlama betiklerini çalıştırdığınızda ne olacağını değiştirmek için JSON yapılandırmasını düzenleyebilirsiniz. `cloudService` ve `virtualMachine` bölümleri gereklidir, ancak gerekmiyorsa `databases` bölümünü silebilirsiniz. Visual Studio 'Nun oluşturduğu varsayılan yapılandırma dosyasında boş olan özellikler isteğe bağlıdır; Varsayılan yapılandırma dosyasında değerleri olan özellikler gereklidir.
 
-Azure 'da tek bir üretim sitesi yerine birden çok dağıtım ortamına (yuva olarak bilinir) sahip bir Web siteniz varsa, yuva adını JSON yapılandırma dosyasına Web sitesinin adına ekleyebilirsiniz. Örneğin, **sitem** adlı bir Web siteniz ve **Test** adlı BT için bir yuva varsa, URI olur `mysite-test.cloudapp.net`, ancak yapılandırma dosyasında kullanılacak doğru ad sitem (test) olur. Bunu yalnızca, Web sitesi ve yuvaları aboneliğinizde zaten mevcutsa yapabilirsiniz. Mevcut değilse, yuvası belirtmeden betiği çalıştırarak Web sitesini oluşturun, ardından [Azure Portal](https://portal.azure.com/)yuvasını oluşturun ve ardından betiği değiştirilen Web sitesi adıyla çalıştırın. Web Apps için dağıtım yuvaları hakkında daha fazla bilgi için, bkz. [Azure App Service Web Apps için hazırlama ortamlarını ayarlama](/azure/app-service/web-sites-staged-publishing).
+Azure 'da tek bir üretim sitesi yerine birden çok dağıtım ortamına (yuva olarak bilinir) sahip bir Web siteniz varsa, yuva adını JSON yapılandırma dosyasına Web sitesinin adına ekleyebilirsiniz. Örneğin, **sitem** adlı bir Web siteniz ve BT adı **Test** ADLı bir yuva varsa URI `mysite-test.cloudapp.net`, ancak yapılandırma dosyasında kullanılacak doğru ad sitem (test) olur. Bunu yalnızca, Web sitesi ve yuvaları aboneliğinizde zaten mevcutsa yapabilirsiniz. Mevcut değilse, yuvası belirtmeden betiği çalıştırarak Web sitesini oluşturun, ardından [Azure Portal](https://portal.azure.com/)yuvasını oluşturun ve ardından betiği değiştirilen Web sitesi adıyla çalıştırın. Web Apps için dağıtım yuvaları hakkında daha fazla bilgi için, bkz. [Azure App Service Web Apps için hazırlama ortamlarını ayarlama](/azure/app-service/web-sites-staged-publishing).
 
 ## <a name="how-to-run-the-publish-scripts"></a>Yayımlama betikleri nasıl çalıştırılır
 
 Daha önce bir Windows PowerShell betiği çalıştırmadıysanız, önce komut dosyalarının çalıştırılmasını sağlamak için yürütme ilkesini ayarlamanız gerekir. İlke, kullanıcıların komut dosyalarını yürütmeyi içeren kötü amaçlı yazılımlara veya virüslere karşı savunmasız olmaları durumunda Windows PowerShell betikleri çalıştırmasını engelleyen bir güvenlik özelliğidir.
 
-### <a name="run-the-script"></a>Betiği çalıştırın
+### <a name="run-the-script"></a>Betiği Çalıştır
 
 1. Projeniz için Web Dağıtımı paketini oluşturun. Web Dağıtımı Paket, Web sitenize veya sanal makinenize kopyalamak istediğiniz dosyaları içeren sıkıştırılmış bir arşivdir (. zip dosyasıdır). Herhangi bir Web uygulaması için Visual Studio 'da Web Dağıtımı paketleri oluşturabilirsiniz.
 
    ![Web Dağıtımı Paketi Oluştur](./media/vs-azure-tools-publishing-using-powershell-scripts/IC767885.png)
 
-   Daha fazla bilgi için [nasıl yapılır: Visual Studio](https://msdn.microsoft.com/library/dd465323.aspx)'Da bir Web dağıtım paketi oluşturun. Ayrıca, [Yayımlama betiklerini özelleştirme ve genişletme](#customizing-and-extending-the-publish-scripts)bölümünde açıklandığı gibi Web dağıtımı paketinizin oluşturulmasını otomatik hale getirebilirsiniz.
+   Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Web dağıtım paketi oluşturma](https://msdn.microsoft.com/library/dd465323.aspx). Ayrıca, [Yayımlama betiklerini özelleştirme ve genişletme](#customizing-and-extending-the-publish-scripts)bölümünde açıklandığı gibi Web dağıtımı paketinizin oluşturulmasını otomatik hale getirebilirsiniz.
 
 1. **Çözüm Gezgini**' de, betiğin bağlam menüsünü açın ve ardından **PowerShell ISE ile aç**' ı seçin.
 1. Bu bilgisayarda ilk kez Windows PowerShell betikleri çalıştırıyorsanız, yönetici ayrıcalıklarıyla bir komut istemi penceresi açın ve aşağıdaki komutu yazın:
@@ -171,7 +171,7 @@ Daha önce bir Windows PowerShell betiği çalıştırmadıysanız, önce komut 
 
     İstendiğinde, Kullanıcı adınızı ve parolanızı girin.
 
-    Betiği otomatikleştirdiğiniz zaman, Azure kimlik bilgilerini sağlamaya yönelik bu yöntem işe yaramadığını unutmayın. Bunun yerine, kimlik bilgilerini sağlamak `.publishsettings` için dosyasını kullanmanız gerekir. Yalnızca bir kez, dosyayı Azure 'dan indirmek için **Get-Azuikinci dosya SettingsFile** komutunu kullanın ve bundan sonra dosyayı içeri aktarmak için **Import-Azuyeniden yayımcı SettingsFile** komutunu kullanın. Ayrıntılı yönergeler için bkz. [Azure PowerShell nasıl yüklenir ve yapılandırılır](/powershell/azure/overview).
+    Betiği otomatikleştirdiğiniz zaman, Azure kimlik bilgilerini sağlamaya yönelik bu yöntem işe yaramadığını unutmayın. Bunun yerine, kimlik bilgilerini sağlamak için `.publishsettings` dosyasını kullanmanız gerekir. Yalnızca bir kez, dosyayı Azure 'dan indirmek için **Get-Azuikinci dosya SettingsFile** komutunu kullanın ve bundan sonra dosyayı içeri aktarmak için **Import-Azuyeniden yayımcı SettingsFile** komutunu kullanın. Ayrıntılı yönergeler için bkz. [Azure PowerShell nasıl yüklenir ve yapılandırılır](/powershell/azure/overview).
 
 1. Seçim Web uygulamanızı yayımlamadan sanal makine, veritabanı ve Web sitesi gibi Azure kaynakları oluşturmak istiyorsanız, **Publish-WebApplication. ps1** komutunu **-CONFIGURATION** bağımsız değişkeniyle JSON yapılandırma dosyasına ayarlanmış şekilde kullanın . Bu komut satırı, hangi kaynakların oluşturulacağını belirleyen JSON yapılandırma dosyasını kullanır. Diğer komut satırı bağımsız değişkenleri için varsayılan ayarları kullandığından, kaynakları oluşturur, ancak Web uygulamanızı yayımlamaz. – Verbose seçeneği, neler olduğu hakkında daha fazla bilgi sağlar.
 
@@ -208,11 +208,11 @@ Daha önce bir Windows PowerShell betiği çalıştırmadıysanız, önce komut 
 
 Yayımlama betiğini ve JSON yapılandırma dosyasını özelleştirebilirsiniz. **AzureWebAppPublishModule. Psm1** Windows PowerShell modülündeki işlevlerin değiştirilmesi amaçlanmamaktadır. Yalnızca farklı bir veritabanı belirtmek veya sanal makinenin bazı özelliklerini değiştirmek istiyorsanız, JSON yapılandırma dosyasını düzenleyin. Projenizin oluşturulmasını ve test edilmesini otomatikleştirmek için betiğin işlevlerini genişletmek istiyorsanız, **Publish-WebApplication. ps1**' de işlev saplamaları uygulayabilirsiniz.
 
-Projenizi oluşturmaya otomatik hale getirmek için, bu kod örneğinde gösterildiği gibi `New-WebDeployPackage` MSBuild 'i çağıran kodu ekleyin. MSBuild komutunun yolu, yüklediğiniz Visual Studio sürümüne bağlı olarak farklılık açmış. Doğru yolu almak için, **Get-MSBuildCmd**işlevini Bu örnekte gösterildiği gibi kullanabilirsiniz.
+Projenizi oluşturmaya otomatik hale getirmek için, bu kod örneğinde gösterildiği gibi MSBuild 'i çağıran kodu ekleyin `New-WebDeployPackage`. MSBuild komutunun yolu, yüklediğiniz Visual Studio sürümüne bağlı olarak farklılık açmış. Doğru yolu almak için, **Get-MSBuildCmd**işlevini Bu örnekte gösterildiği gibi kullanabilirsiniz.
 
 ### <a name="to-automate-building-your-project"></a>Projenizi oluşturmaya otomatik hale getirmek için
 
-1. `$ProjectFile` Parametresini genel param bölümüne ekleyin.
+1. Genel param bölümüne `$ProjectFile` parametresini ekleyin.
 
     ```powershell
     [Parameter(Mandatory = $false)]
@@ -221,7 +221,7 @@ Projenizi oluşturmaya otomatik hale getirmek için, bu kod örneğinde gösteri
     $ProjectFile,
     ```
 
-1. İşlevi `Get-MSBuildCmd` betik dosyanıza kopyalayın.
+1. İşlev `Get-MSBuildCmd` betik dosyanıza kopyalayın.
 
     ```powershell
     function Get-MSBuildCmd
@@ -242,7 +242,7 @@ Projenizi oluşturmaya otomatik hale getirmek için, bu kod örneğinde gösteri
     }
     ```
 
-1. Aşağıdaki `New-WebDeployPackage` kodla değiştirin ve satır oluşturulurken `$msbuildCmd`yer tutucuları değiştirin. Bu kod, Visual Studio 2019 içindir. Visual Studio 2017 kullanıyorsanız, **VisualStudioVersion** özelliğini, Visual Studio 2015 için ' `15.0`14,0 ' veya `12.0` Visual Studio 2013) olarak değiştirin.
+1. `New-WebDeployPackage` aşağıdaki kodla değiştirin ve satırdaki yer tutucuları değiştirin `$msbuildCmd`. Bu kod, Visual Studio 2019 içindir. Visual Studio 2017 kullanıyorsanız, **VisualStudioVersion** özelliğini `15.0`, visual Studio 2015 için ' 14,0 ' `12.0` veya Visual Studio 2013) olarak değiştirin.
 
     ```powershell
     function New-WebDeployPackage
@@ -250,7 +250,7 @@ Projenizi oluşturmaya otomatik hale getirmek için, bu kod örneğinde gösteri
         #Write a function to build and package your web application
     ```
 
-    Web uygulamanızı derlemek için MsBuild. exe ' yi kullanın. Yardım için bkz. MSBuild komut satırı başvurusu:[http://go.microsoft.com/fwlink/?LinkId=391339](http://go.microsoft.com/fwlink/?LinkId=391339)
+    Web uygulamanızı derlemek için MsBuild. exe ' yi kullanın. Yardım için bkz. MSBuild komut satırı başvurusu: [http://go.microsoft.com/fwlink/?LinkId=391339](../msbuild/msbuild-command-line-reference.md)
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'
@@ -284,7 +284,7 @@ return $WebDeployPackage
 }
 ```
 
-1. Bu satırdan önce `$Config = Read-ConfigFile $Configuration` `$Config = Read-ConfigFile $Configuration -HasWebDeployPackage:([Bool]$WebDeployPackage)` işlevi çağırın: Web uygulamaları veya sanal makineler için. `New-WebDeployPackage`
+1. Bu satırdan önce `New-WebDeployPackage` işlevini çağırın: Web uygulamaları için `$Config = Read-ConfigFile $Configuration` veya sanal makineler için `$Config = Read-ConfigFile $Configuration -HasWebDeployPackage:([Bool]$WebDeployPackage)`.
 
     ```powershell
     if($ProjectFile)
@@ -293,7 +293,7 @@ return $WebDeployPackage
     }
     ```
 
-1. Aşağıdaki örnekte gösterildiği gibi `$Project` bağımsız değişkeni geçirerek komut satırından özelleştirilmiş betiği çağırın:
+1. Aşağıdaki örnekte olduğu gibi `$Project` bağımsız değişkenini geçirerek komut satırından özelleştirilmiş betiği çağırın:
 
     ```powershell
     .\Publish-WebApplicationVM.ps1 -Configuration .\Configurations\WebApplication5-VM-dev.json `
@@ -303,10 +303,10 @@ return $WebDeployPackage
     -Verbose
     ```
 
-    Uygulamanızın testini otomatik hale getirmek için kod `Test-WebApplication`ekleyin. **Publish-WebApplication. ps1** içinde bu işlevlerin çağrıldığı satırların açıklamasını kaldırın. Uygulama sağlamazsanız, projenizi Visual Studio ile el ile oluşturabilir ve ardından yayımlama betiğini çalıştırarak Azure 'da yayımlayabilirsiniz.
+    Uygulamanızın testini otomatik hale getirmek için `Test-WebApplication`kod ekleyin. **Publish-WebApplication. ps1** içinde bu işlevlerin çağrıldığı satırların açıklamasını kaldırın. Uygulama sağlamazsanız, projenizi Visual Studio ile el ile oluşturabilir ve ardından yayımlama betiğini çalıştırarak Azure 'da yayımlayabilirsiniz.
 
 ## <a name="publishing-function-summary"></a>Yayımlama işlevi Özeti
-Windows PowerShell komut isteminde kullanabileceğiniz işlevler hakkında yardım almak için komutunu `Get-Help function-name`kullanın. Yardım, parametre yardımını ve örnekleri içerir. Aynı yardım metni, **AzureWebAppPublishModule. psm1** ve **Publish-WebApplication. ps1**komut dosyası kaynak dosyalarında de bulunur. Betik ve yardım, Visual Studio dilinizde yerelleştirilmiştir.
+Windows PowerShell komut isteminde kullanabileceğiniz işlevler hakkında yardım almak için `Get-Help function-name`komutunu kullanın. Yardım, parametre yardımını ve örnekleri içerir. Aynı yardım metni, **AzureWebAppPublishModule. psm1** ve **Publish-WebApplication. ps1**komut dosyası kaynak dosyalarında de bulunur. Betik ve yardım, Visual Studio dilinizde yerelleştirilmiştir.
 
 **AzureWebAppPublishModule**
 
@@ -317,22 +317,22 @@ Windows PowerShell komut isteminde kullanabileceğiniz işlevler hakkında yard�
 | Add-AzureVM |Bir Azure sanal makinesi oluşturur ve dağıtılan VM 'nin URL 'sini döndürür. İşlevi önkoşulları ayarlar ve yeni bir sanal makine oluşturmak için **New-AzureVM** Işlevini (Azure modülü) çağırır. |
 | Add-AzureVMEndpoints |Bir sanal makineye yeni giriş uç noktaları ekler ve sanal makineyi yeni uç noktayla döndürür. |
 | Add-AzureVMStorage |Geçerli abonelikte yeni bir Azure depolama hesabı oluşturur. Hesabın adı "DevTest" ile başlar ve ardından benzersiz bir alfasayısal dize gelir. İşlevi, yeni depolama hesabının adını döndürür. Yeni depolama hesabı için bir konum ya da benzeşim grubu belirtin. |
-| Add-AzureWebsite |Belirtilen ad ve konuma sahip bir Web sitesi oluşturur. Bu işlev, Azure modülündeki **New-AzureWebsite** işlevini çağırır. Abonelik, belirtilen ada sahip bir Web sitesini zaten içermiyorsa, bu işlev Web sitesini oluşturur ve bir Web sitesi nesnesi döndürür. Aksi takdirde, döndürür `$null`. |
-| Yedekleme-abonelik |Geçerli Azure aboneliğini `$Script:originalSubscription` betik kapsamındaki değişkene kaydeder. Bu işlev, geçerli Azure aboneliğini (tarafından `Get-AzureSubscription -Current`alındığı şekilde) ve depolama hesabını ve bu komut dosyası (değişkende `$UserSpecifiedSubscription`depolanan) ve depolama hesabını komut dosyası kapsamında değiştiren aboneliği kaydeder. Değerleri kaydederek, geçerli durum değiştiyse orijinal geçerli aboneliği ve depolama hesabını geçerli `Restore-Subscription`duruma geri yüklemek için gibi bir işlevi kullanabilirsiniz. |
+| Add-AzureWebsite |Belirtilen ad ve konuma sahip bir Web sitesi oluşturur. Bu işlev, Azure modülündeki **New-AzureWebsite** işlevini çağırır. Abonelik, belirtilen ada sahip bir Web sitesini zaten içermiyorsa, bu işlev Web sitesini oluşturur ve bir Web sitesi nesnesi döndürür. Aksi takdirde, `$null`döndürür. |
+| Yedekleme-abonelik |Geçerli Azure aboneliğini betik kapsamındaki `$Script:originalSubscription` değişkenine kaydeder. Bu işlev, geçerli Azure aboneliğini (`Get-AzureSubscription -Current`tarafından alınan) ve depolama hesabını ve bu komut dosyası tarafından değiştirilen aboneliği (`$UserSpecifiedSubscription`değişkeninde depolanır) ve depolama hesabını komut dosyası kapsamında kaydeder. Değerleri kaydederek, geçerli durum değiştiyse özgün geçerli aboneliği ve depolama hesabını geçerli duruma geri yüklemek için `Restore-Subscription`gibi bir işlevi kullanabilirsiniz. |
 | Find-AzureVM |Belirtilen Azure sanal makinesini alır. |
 | Format-DevTestMessageWithTime |Bir iletinin tarihini ve saatini önüne ekleyin. Bu işlev, hataya ve ayrıntılı akışlara yazılan iletiler için tasarlanmıştır. |
 | Get-Azuressqldatabaseconnectionstring |Bir Azure SQL veritabanına bağlanmak için bir bağlantı dizesi ayrıştırır. |
-| Get-AzureVMStorage |Belirtilen konum veya benzeşim grubundaki "DevTest *" (büyük/küçük harf duyarsız) adlı ilk depolama hesabının adını döndürür. "DevTest*" depolama hesabı konum veya benzeşim grubuyla eşleşmezse, işlev onu yoksayar. Bir konum ya da benzeşim grubu belirtin. |
+| Get-AzureVMStorage |*Belirtilen konum veya benzeşim grubundaki "DevTest" (büyük/küçük harf duyarsız) adlı ilk depolama hesabının adını döndürür. "DevTest*" depolama hesabı konum veya benzeşim grubuyla eşleşmezse, işlev onu yoksayar. Bir konum ya da benzeşim grubu belirtin. |
 | Get-MSDeployCmd |MsDeploy. exe aracını çalıştırmak için bir komut döndürür. |
 | New-AzureVMEnvironment |Abonelikte JSON yapılandırma dosyasındaki değerlerle eşleşen bir sanal makine bulur veya oluşturur. |
 | Yayımla-WebPackage |MsDeploy. exe ' yi ve bir Web yayımlama paketini kullanır. Bir Web sitesine kaynak dağıtmak için zip dosyası. Bu işlev herhangi bir çıktı oluşturmaz. MSDeploy. exe çağrısı başarısız olursa, işlev bir özel durum atar. Daha ayrıntılı çıkış almak için **-verbose** seçeneğini kullanın. |
 | Publish-WebPackageToVM |Parametre değerlerini doğrular ve ardından **Publish-WebPackage** işlevini çağırır. |
 | Okuma-ConfigFile |JSON yapılandırma dosyasını doğrular ve seçilen değerlerin bir karma tablosu döndürür. |
 | Geri yükleme-abonelik |Geçerli aboneliği orijinal aboneliğe sıfırlar. |
-| Test-AzureModule |Yüklü `$true` Azure modülü sürümü 0.7.4 veya daha yeni bir sürümse döndürür. Modül `$false` yüklü değilse veya önceki bir sürümse döndürür. Bu işlevin parametresi yok. |
-| Test-Azuremodutaversion |Azure `$true` modülünün sürümünün 0.7.4 veya sonraki bir sürümü olup olmadığını döndürür. Modül `$false` yüklü değilse veya önceki bir sürümse döndürür. Bu işlevin parametresi yok. |
-| Test-HttpsUrl |Giriş URL 'sini bir System. Uri nesnesine dönüştürür. URL `$True` mutlak ise ve düzeni https ise döndürür. URL `$false` göreli ise, düzeninin https olmaması veya giriş dizesinin bir URL 'ye dönüştürülemediği, döndürür. |
-| Test-üye |Bir `$true` özellik veya yöntemin nesnenin üyesi olup olmadığını döndürür. Aksi takdirde, `$false`döndürür. |
+| Test-AzureModule |Yüklü Azure modülü sürümü 0.7.4 veya daha yeni bir sürümse `$true` döndürür. Modül yüklü değilse veya önceki bir sürümse `$false` döndürür. Bu işlevin parametresi yok. |
+| Test-Azuremodutaversion |Azure modülünün sürümü 0.7.4 veya üzeri ise `$true` döndürür. Modül yüklü değilse veya önceki bir sürümse `$false` döndürür. Bu işlevin parametresi yok. |
+| Test-HttpsUrl |Giriş URL 'sini bir System. Uri nesnesine dönüştürür. URL mutlak ise ve düzeni https ise `$True` döndürür. URL göreli ise, düzeni HTTPS değil veya giriş dizesi bir URL 'ye dönüştürülemiyorsa `$false` döndürür. |
+| Test-üye |Bir özellik veya yöntem nesnenin üyesiyse `$true` döndürür. Aksi takdirde, `$false`döndürür. |
 | Write-ErrorWithTime |Geçerli zamana ön eki eklenmiş bir hata iletisi yazar. Bu işlev, iletiyi hata akışına yazmadan önce saati sonuna eklemek için **Format-DevTestMessageWithTime** işlevini çağırır. |
 | Write-HostWithTime |Geçerli zamanı ön eki olan ana bilgisayar programına (**yazma ana bilgisayar**) bir ileti yazar. Ana bilgisayar programına yazma etkisi değişir. Windows PowerShell 'i barındıran çoğu program, bu iletileri standart çıktıya yazar. |
 | Write-VerboseWithTime |Geçerli zamanı ön eki olan ayrıntılı bir ileti yazar. **Write-Verbose**' i çağırdığı için ileti yalnızca komut dosyası **verbose** parametresiyle çalıştırıldığında veya **VerbosePreference** tercihi **devam**olarak ayarlandığında görüntülenir. |
@@ -343,7 +343,7 @@ Windows PowerShell komut isteminde kullanabileceğiniz işlevler hakkında yard�
 | --- | --- |
 | New-AzureWebApplicationEnvironment |Bir Web sitesi veya sanal makine gibi Azure kaynakları oluşturur. |
 | New-WebDeployPackage |Bu işlev uygulanmadı. Projenizi derlemek için bu işleve komutlar ekleyebilirsiniz. |
-| Publish-AzureWebApplication |Bir Web uygulamasını Azure 'da yayımlar. |
+| Yayımla-AzureWebApplication |Bir Web uygulamasını Azure 'da yayımlar. |
 | Yayımla-WebApplication |Visual Studio Web projesi için Web Apps, sanal makineler, SQL veritabanları ve depolama hesapları oluşturur ve dağıtır. |
 | Test-WebApplication |Bu işlev uygulanmadı. Uygulamanızı test etmek için bu işlevde komutlar ekleyebilirsiniz. |
 

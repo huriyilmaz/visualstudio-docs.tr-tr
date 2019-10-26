@@ -1,6 +1,6 @@
 ---
-title: Emulator Express için Azure bulut hizmeti yerel kutusundaki Çalıştır/Hata Ayıkla
-description: Çalıştırın ve bir bulut hizmeti yerel bir makinede hata ayıklamak için emulator Express'i kullanma
+title: Yerel kutuda Azure Cloud Service 'i çalıştırmak/hata ayıklamak için öykünücü Express
+description: Öykünücü Express kullanarak yerel bir makinede bir bulut hizmetini çalıştırma ve hata ayıklama
 author: mikejo5000
 manager: jillfra
 ms.assetid: 73108f98-a552-4817-b7a1-551367b71906
@@ -8,44 +8,44 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 03/06/2017
 ms.author: mikejo
-ms.openlocfilehash: 86ec00f5fdd80f4c42fdaf1d7c5c44e6008983de
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 2c9c4470d51718f5c7d4fa3f903fdcc063aa8d80
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260671"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911825"
 ---
 # <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>Emulator Express kullanarak Azure bulut hizmetini yerel makinede çalıştırma ve hatalarını ayıklama
-Emulator Express kullanarak sınamak ve Visual Studio'yu yönetici olarak çalıştırarak olmadan bir bulut hizmeti hata ayıklama. Emulator Express veya tam öykünücü, bulut hizmetinizin gereksinimlerine bağlı olarak kullanmak üzere proje ayarlarınız ayarlayabilirsiniz. Tam öykünücü hakkında daha fazla bilgi için bkz: [işlem öykünücüsü'nde bir Azure uygulama çalıştırmak](/azure/storage/common/storage-use-emulator).
+Öykünücü Express 'i kullanarak, Visual Studio 'Yu yönetici olarak çalıştırmadan bir bulut hizmetini test edebilir ve hatalarını ayıklayabilirsiniz. Bulut hizmetinizin gereksinimlerine bağlı olarak, proje ayarlarınızı öykünücü Express ya da tam öykünücü kullanacak şekilde ayarlayabilirsiniz. Tam öykünücü hakkında daha fazla bilgi için bkz. [Işlem öykünücüsünde Azure uygulaması çalıştırma](/azure/storage/common/storage-use-emulator).
 
-## <a name="using-emulator-express-in-visual-studio"></a>Visual Studio emulator Express'i kullanma
-Azure SDK 2.3 veya üstü bir Azure projesi oluşturduğunuzda, Emulator Express'i otomatik olarak kullanılır. Azure SDK'ın önceki bir sürümü ile oluşturulmuş var olan projeleri için Emulator Express'i seçmek için aşağıdaki adımları kullanın:
+## <a name="using-emulator-express-in-visual-studio"></a>Visual Studio 'da öykünücü Express 'ı kullanma
+Azure SDK 2,3 veya sonraki sürümlerde bir Azure projesi oluşturduğunuzda, öykünücü Express otomatik olarak kullanılır. Azure SDK 'sının önceki bir sürümüyle oluşturulmuş mevcut projeler için, öykünücü Express ' i seçmek için aşağıdaki adımları kullanın:
 
-1. Oluşturun veya bir Azure bulut hizmeti projesini Visual Studio'da açın.
+1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. İçinde **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden seçin **özellikleri**.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
 
-1. Proje özellik sayfaları'nda seçin **Web** sekmesi.
+1. Projeler Özellikler sayfasında, **Web** sekmesini seçin.
 
-    ![Bir Azure bulut hizmeti projesi için özellikleri](./media/vs-azure-tools-emulator-express-debug-run/web-properties.png)
+    ![Azure bulut hizmeti projesi özellikleri](./media/vs-azure-tools-emulator-express-debug-run/web-properties.png)
 
-1. Altında **yerel geliştirme sunucusu**seçin **IIS Express kullan seçeneği**.
+1. **Yerel geliştirme sunucusu**altında **IIS Express seçeneğini kullan**' ı seçin.
 
-1. Altında **öykünücü**seçin **kullanım Emulator Express**.
+1. **Öykünücü**bölümünde **öykünücü hızlı kullan**' ı seçin.
 
-1. Emulator Express başlatmak için komut isteminde aşağıdaki komutu çalıştırın:
+1. Öykünücü Express 'i başlatmak için komut isteminde aşağıdaki komutu çalıştırın:
 
     ```
     csrun.exe /useemulatorexpress
     ```
 
-## <a name="emulator-express-limitations"></a>Emulator Express sınırlamaları
-Emulator Express sınırlamaları aşağıdaki sorunlar bilinmektedir:
+## <a name="emulator-express-limitations"></a>Öykünücü hızlı sınırlamaları
+Aşağıdaki sorunlar öykünücü Express 'in bilinen sınırlamalarıdır:
 
-- Emulator Express, IIS Web sunucusu ile uyumlu değil.
-- Bulut hizmetinizin çoklu roller bulunabilir, ancak her rol için bir örnek sınırlıdır.
-- Bağlantı noktası numaralarını 1000 aşağıda erişemez. Bir bağlantı noktası 1000 aşağıda normalde kullanan bir kimlik doğrulama sağlayıcısı kullanıyorsanız, 1000'in üzerinde bir bağlantı noktası numarası için bu değeri değiştirmeniz gerekebilir.
-- Azure işlem öykünücüsü için geçerli olan sınırlamalar Emulator Express için de geçerlidir. Örneğin, dağıtım başına 50'den fazla rol örneği olamaz. Azure işlem öykünücüsü hakkında daha fazla bilgi için bkz: [işlem öykünücüsü'nde bir Azure uygulama çalıştırmak](http://go.microsoft.com/fwlink/p/?LinkId=623050).
+- Öykünücü Express IIS Web sunucusuyla uyumlu değil.
+- Bulut hizmetiniz birden çok rol içerebilir, ancak her rol bir örnekle sınırlıdır.
+- 1000 numaralı bağlantı noktası numaralarına erişemezsiniz. Normalde 1000 altında bir bağlantı noktası kullanan bir kimlik doğrulama sağlayıcısı kullanırsanız, bu değeri 1000 ' nin üzerindeki bir bağlantı noktası numarasıyla değiştirmeniz gerekebilir.
+- Azure Işlem öykünücüsü için uygulanan sınırlamalar, öykünücü Express için de geçerlidir. Örneğin, dağıtım başına en fazla 50 rol örneğine sahip olabilirsiniz. Azure Işlem öykünücüsü hakkında daha fazla bilgi için bkz. [Işlem öykünücüsünde Azure uygulaması çalıştırma](vs-azure-tools-performance-profiling-cloud-services.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Azure bulut hizmetlerinde hata ayıklama](vs-azure-tools-debugging-cloud-services-overview.md)
