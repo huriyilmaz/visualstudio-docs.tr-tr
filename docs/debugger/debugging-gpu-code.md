@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db053317b3678cfaa7ee0ed6061074b156359d2f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cec341df3cfe81f339322f5e7c584151d9030490
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738222"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911569"
 ---
 # <a name="debugging-gpu-code"></a>GPU Kodunda Hata Ayıklama
 Grafik işleme birimi C++ (GPU) üzerinde çalışan kodda hata ayıklama yapabilirsiniz. Visual Studio 'da GPU hata ayıklama desteği, yarış algılama, işlem başlatma ve bunlara ekleme ve hata ayıklama pencerelerini tümleştirme içerir.
 
 ## <a name="supported-platforms"></a>Desteklenen Platformlar
- @No__t_0, [!INCLUDE[win8](../debugger/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)] ve [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] üzerinde hata ayıklama desteklenir. Yazılım öykünücüsünde hata ayıklama için, [!INCLUDE[win8](../debugger/includes/win8_md.md)] veya [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] gereklidir. Donanımda hata ayıklama için, grafik kartınızın sürücülerini yüklemelisiniz. Tüm donanım satıcıları tüm hata ayıklayıcı özelliklerini uygulamaz. Sınırlamalar için satıcı belgelerine bakın.
+ [!INCLUDE[win7](../debugger/includes/win7_md.md)], [!INCLUDE[win8](../debugger/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)]ve [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)]üzerinde hata ayıklama desteklenir. Yazılım öykünücüsünde hata ayıklama için, [!INCLUDE[win8](../debugger/includes/win8_md.md)]veya [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] gereklidir. Donanımda hata ayıklama için, grafik kartınızın sürücülerini yüklemelisiniz. Tüm donanım satıcıları tüm hata ayıklayıcı özelliklerini uygulamaz. Sınırlamalar için satıcı belgelerine bakın.
 
 > [!NOTE]
 > Visual Studio 'da GPU hata ayıklamayı desteklemek isteyen bağımsız donanım satıcıları, VSD3DDebug arabirimini uygulayan ve kendi sürücülerini hedefleyen bir DLL oluşturmanız gerekir.
@@ -77,9 +77,9 @@ Grafik işleme birimi C++ (GPU) üzerinde çalışan kodda hata ayıklama yapabi
  Uzak bir bılgısayarda hata ayıklaması yapıyorsanız bu hata oluşur. Hata ayıklayıcı, sürücülerin uzak BILGISAYARA yüklenip yüklenmediğine bakılmaksızın çalışma zamanına kadar belirleyemez. Sürücüler, grafik kartının üreticisinden kullanılabilir.
 
 ### <a name="error-timeout-detection-and-recovery-tdr-must-be-disabled-at-the-remote-site"></a>Hata: uzak sitede zaman aşımı algılama ve kurtarma (TDR) devre dışı bırakılmalıdır.
- C++ Amp hesaplamaları, Windows zaman aşımı algılama ve kurtarma işlemi (TDR) tarafından ayarlanan varsayılan zaman aralığını aşacak şekilde mümkündür. Bu durumda, hesaplama iptal edilir ve veriler kaybolur. Daha fazla bilgi için bkz. [amp 'Da C++ TDRs işleme](http://go.microsoft.com/fwlink/p/?LinkId=249154).
+ C++ Amp hesaplamaları, Windows zaman aşımı algılama ve kurtarma işlemi (TDR) tarafından ayarlanan varsayılan zaman aralığını aşacak şekilde mümkündür. Bu durumda, hesaplama iptal edilir ve veriler kaybolur. Daha fazla bilgi için bkz. [amp 'Da C++ TDRs işleme](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/06/handling-tdrs-in-c-amp/).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: C++ AMP Uygulamasında Hata Ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
 - [C++ Hata Ayıklama Yapılandırması Proje Ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
-- [Visual Studio 'da GPU hata ayıklamayı başlatma](http://go.microsoft.com/fwlink/p/?LinkId=255381)
+- [Visual Studio 'da GPU hata ayıklamayı başlatma](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/17/start-gpu-debugging-in-visual-studio-2012/)
