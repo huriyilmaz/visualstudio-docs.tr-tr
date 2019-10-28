@@ -7,17 +7,17 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: ccb18a704c2e8a2c185d3751483736631b0bba68
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: eb95e793421ecede6d4583d8d7f4730eb56df1a0
+ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72448638"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72789788"
 ---
 # <a name="best-practices-and-examples-sal"></a>En İyi Yöntemler ve Örnekler (SAL)
 Kaynak kodu ek açıklama dilinden (SAL) en iyi şekilde yararlanmak ve bazı yaygın sorunlardan kaçınmak için bazı yollar aşağıda verilmiştir.
 
-## <a name="_in_"></a>\_In @ no__t-1
+## <a name="_in_"></a>\_ \_
 
 İşlevin öğesine yazılması gerekiyorsa, `_In_` yerine `_Inout_` kullanın. Bu özellikle, eski makrolardan SAL 'a otomatik dönüştürme gibi durumlar için geçerlidir. SAL 'dan önce pek çok programcı, makroları açıklama olarak kullanıyordu — `IN`, `OUT`, `IN_OUT` veya bu adların çeşitleri olarak adlandırılan makrolar. Bu makroları SAL 'a dönüştürmenizi öneririz; ancak, özgün prototip yazıldığı ve eski makro artık kodun ne yaptığını yansıtmadığından, bu makroları dönüştürme işlemi için de dikkatli olabilirsiniz. Genellikle yanlış bir şekilde yerleştirildiğinden `OPTIONAL` yorum makrosu hakkında dikkatli olun. Örneğin, bir virgülden sonra yanlış bir kenar üzerinde.
 
@@ -42,7 +42,7 @@ void Func2(_Inout_ PCHAR p1)
 }
 ```
 
-## <a name="_opt_"></a>\_opt @ no__t-1
+## <a name="_opt_"></a>\_opt\_
 
 Çağıranın null bir işaretçiye geçmesine izin verilmiyorsa, `_In_opt_` veya `_Out_opt_` yerine `_In_` veya `_Out_` kullanın. Bu, parametrelerini denetleyen ve olmaması gerektiğinde NULL olduğunda bir hata döndüren bir işlev için de geçerlidir. Bir işleve sahip olmak, parametresini beklenmeyen NULL için kontrol edin ve düzgün bir savunma kodlama uygulaması olsa da, parametre ek açıklamanın isteğe bağlı bir tür (`_*Xxx*_opt_`) olabilir.
 
@@ -61,11 +61,11 @@ void Func2(_Out_ int *p1)
 }
 ```
 
-## <a name="_pre_defensive_-and-_post_defensive_"></a>\_Pre @ no__t-1savunlayıcı @ no__t-2 ve \_Post @ no__t-4savunlayıcı @ no__t-5
+## <a name="_pre_defensive_-and-_post_defensive_"></a>Önceden\_savunma\_ \_ve \_\_savunma sonrası\_
 
 Bir işlev güven sınırında görünürse, `_Pre_defensive_` ek açıklamasını kullanmanızı öneririz.  "Savunma" değiştiricisi belirli ek açıklamaları değiştirerek, çağrı noktasında arabirimin kesinlikle denetlenmesi gerektiğini, ancak uygulama gövdesinde yanlış parametrelerin geçirildiğine yönelik olduğunu varsaymalıdır. Bu durumda, `_In_ _Pre_defensive_` ' ı bir güven sınırında tercih edilir, ancak bir arayan, NULL geçirmeye çalışırsa bir hata gerçekleşse de, işlev gövdesi parametre NULL olabilir ve işaretçiye ilk olarak yeniden başvuru yapmaya çalışır. NULL için işaretlemek işaretlenir.  Güvenilen tarafın arayan olarak kabul edildiği ve güvenilmeyen kodun çağrılan kod olduğu geri aramalarda kullanılmak üzere `_Post_defensive_` ek açıklaması da kullanılabilir.
 
-## <a name="_out_writes_"></a>\_Out @ no__t-1yazmaları @ no__t-2
+## <a name="_out_writes_"></a>\_\_yazmaları\_
 
 Aşağıdaki örnek `_Out_writes_` ' ın ortak bir kötüye kullanımını gösterir.
 
@@ -77,7 +77,7 @@ void Func1(_Out_writes_(size) CHAR *pb,
 );
 ```
 
-@No__t-0 ek açıklaması, bir arabelleğe sahip olduğunuz anlamına gelir. Çıkış sırasında ilk bayt başlatıldığında `cb` bayt ayrılmış. Bu ek açıklama kesinlikle yanlış değildir ve ayrılan boyutu ifade etmek faydalı olur. Ancak, işlev tarafından kaç öğe başlatıldığını söylemez.
+Ek açıklama `_Out_writes_`, bir arabelleğe sahip olduğunuz anlamına gelir. Çıkış sırasında ilk bayt başlatıldığında `cb` bayt ayrılmış. Bu ek açıklama kesinlikle yanlış değildir ve ayrılan boyutu ifade etmek faydalı olur. Ancak, işlev tarafından kaç öğe başlatıldığını söylemez.
 
 Sonraki örnekte, arabelleğin başlatılmış bölümünün tam boyutunu tam olarak belirtmek için üç doğru yol gösterilmektedir.
 
@@ -98,9 +98,9 @@ void Func3(_Out_writes_(size) PSTR pb,
 );
 ```
 
-## <a name="_out_-pstr"></a>\_Out @ no__t-1 PSTR
+## <a name="_out_-pstr"></a>\_\_ PSTR
 
-@No__t-0 kullanımı neredeyse her zaman yanlıştır. Bu, bir karakter arabelleğini işaret eden bir çıkış parametresine sahip olarak yorumlanır ve NULL olarak sonlandırılır.
+`_Out_ PSTR` kullanımı neredeyse her zaman yanlıştır. Bu, bir karakter arabelleğini işaret eden bir çıkış parametresine sahip olarak yorumlanır ve NULL olarak sonlandırılır.
 
 ```cpp
 
@@ -111,9 +111,9 @@ void Func1(_Out_ PSTR pFileName, size_t n);
 void Func2(_Out_writes_(n) PSTR wszFileName, size_t n);
 ```
 
-@No__t-0 gibi bir ek açıklama yaygın ve kullanışlı bir seçenektir. @No__t-0 önkoşulunu NULL ile sonlandırılmış bir dizenin tanınmasını sağladığından, NULL sonlandırmasına sahip bir giriş dizesini işaret eder.
+`_In_ PCSTR` gibi bir ek açıklama yaygın ve kullanışlı bir seçenektir. `_In_` önkoşulu NULL ile sonlandırılmış bir dizenin tanınmasını sağladığından, NULL sonlandırmasına sahip bir giriş dizesini işaret eder.
 
-## <a name="_in_-wchar-p"></a>\_In @ no__t-1 WCHAR * p
+## <a name="_in_-wchar-p"></a>\_ WCHAR * p Içinde \_
 
 `_In_ WCHAR* p`, bir karakteri işaret eden bir giriş işaretçisi olduğunu belirtir `p`. Ancak çoğu durumda bu, amaçlanan belirtim olabilir. Bunun yerine, büyük olasılıkla amaçlanan, NULL ile sonlandırılmış bir dizinin belirtimidir; Bunu yapmak için `_In_ PWSTR` ' ı kullanın.
 
@@ -143,7 +143,7 @@ BOOL StrEquals2(_In_ PSTR p1, _In_ PSTR p2)
 }
 ```
 
-## <a name="_out_range_"></a>\_Out @ no__t-1range @ no__t-2
+## <a name="_out_range_"></a>\_\_aralığı\_
 
 Parametresi bir işaretçisiyse ve işaretçi tarafından işaret edilen öğe değerinin aralığını ifade etmek istiyorsanız, `_Out_range_` yerine `_Deref_out_range_` kullanın. Aşağıdaki örnekte, * Pcbdoldurulmuş aralığı, Pcbdoldurulmuş değil ifade edilir.
 
@@ -166,7 +166,7 @@ void Func2(
 
 `_Deref_out_range_(0, cbSize)`, `_Out_writes_to_(cbSize,*pcbFilled)` ' den çıkarsanabileceğinden bazı araçlar için kesinlikle gerekli değildir, ancak bu, tamamlanma açısından burada gösterilmiştir.
 
-## <a name="wrong-context-in-_when_"></a>@No__t-0Olduğunda yanlış bağlam, @ no__t-1
+## <a name="wrong-context-in-_when_"></a>\_ \_yanlış bağlam
 
 Diğer bir yaygın hata, ön koşullar için durum sonrası değerlendirme kullanmaktır. Aşağıdaki örnekte, `_Requires_lock_held_` bir önkoşuludur.
 
@@ -181,22 +181,21 @@ _When_(flag == 0, _Requires_lock_held_(p->cs))
 int Func2(_In_ MyData *p, int flag);
 ```
 
-@No__t-0 ifadesi, ön durumda kullanılamayan bir durum değeri anlamına gelir.
+İfade `result`, ön durumda kullanılamayan bir durum değeri anlamına gelir.
 
-## <a name="true-in-_success_"></a>@No__t-0Success @ no__t-1 ' de TRUE
+## <a name="true-in-_success_"></a>\_başarılı\_ doğru
 
-Dönüş değeri sıfır olmadığında işlev başarılı olursa, `return == TRUE` yerine başarı koşulu olarak `return != 0` kullanın. Sıfır olmayan değer, derleyicinin `TRUE` için sağladığı gerçek değere eşdeğer bir anlamına gelmez. @No__t-0 ' a yönelik parametre bir ifadedir ve aşağıdaki ifadeler eşdeğer olarak değerlendirilir: `return != 0`, `return != false`, `return != FALSE` ve `return` parametre veya karşılaştırmalar yok.
+Dönüş değeri sıfır olmadığında işlev başarılı olursa, `return == TRUE` yerine başarı koşulu olarak `return != 0` kullanın. Sıfır olmayan değer, derleyicinin `TRUE` için sağladığı gerçek değere eşdeğer bir anlamına gelmez. `_Success_` parametresi bir ifadedir ve aşağıdaki ifadeler, parametre veya karşılaştırmalar olmadan eşdeğer: `return != 0`, `return != false`, `return != FALSE`ve `return` olarak değerlendirilir.
 
 ```cpp
-
 // Incorrect
-_Success_(return == TRUE, _Acquires_lock_(*lpCriticalSection))
+_Success_(return == TRUE) _Acquires_lock_(*lpCriticalSection)
 BOOL WINAPI TryEnterCriticalSection(
   _Inout_ LPCRITICAL_SECTION lpCriticalSection
 );
 
 // Correct
-_Success_(return != 0, _Acquires_lock_(*lpCriticalSection))
+_Success_(return != 0) _Acquires_lock_(*lpCriticalSection)
 BOOL WINAPI TryEnterCriticalSection(
   _Inout_ LPCRITICAL_SECTION lpCriticalSection
 );
@@ -204,7 +203,7 @@ BOOL WINAPI TryEnterCriticalSection(
 
 ## <a name="reference-variable"></a>Başvuru değişkeni
 
-Bir başvuru değişkeni için, SAL 'un önceki sürümü, kapsanan işaretçiyi ek açıklama hedefi olarak kullandı ve bir başvuru değişkenine eklenen ek açıklamaların @no__t 0 ' ın eklenmesini gerektiriyordu. Bu sürüm nesnenin kendisini kullanır ve ek @no__t (0) gerektirmez.
+Bir başvuru değişkeni için, SAL 'un önceki sürümü, kapsanan işaretçiyi ek açıklama hedefi olarak kullandı ve bir başvuru değişkenine eklenen ek açıklamaların `__deref` eklenmesini gerektirir. Bu sürüm nesnenin kendisini kullanır ve ek `_Deref_`gerektirmez.
 
 ```cpp
 

@@ -32,12 +32,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 2460ca1c76eb43bdff89c87c880f405cdce12b48
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 26c788319331d0da4024844b50b4c495ed2c3a37
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446320"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806759"
 ---
 # <a name="annotating-locking-behavior"></a>Kilitlenme Davranışını Yorumlama
 Çok iş parçacıklı programınızda eşzamanlılık hatalarından kaçınmak için, her zaman uygun bir tane disiplin ve SAL ek açıklamalarını kullanın.
@@ -68,16 +68,16 @@ Aşağıdaki tabloda kilitleme ek açıklamaları listelenmektedir.
 |----------------|-----------------|
 |`_Acquires_exclusive_lock_(expr)`|Bir işlevi bir işleve açıklama ve işlevin, `expr` tarafından adlandırılan kilit nesnesinin dışlamalı kilit sayısıyla bir şekilde artırdığını gösterir.|
 |`_Acquires_lock_(expr)`|Bir işlevi bir işleve açıklama ve işlevin, `expr` tarafından adlandırılan kilit nesnesinin kilit sayısıyla bir artış olduğunu gösterir.|
-|`_Acquires_nonreentrant_lock_(expr)`|@No__t-0 tarafından adlandırılan kilit elde edilir.  Kilit zaten tutuluyorsa bir hata bildirilir.|
+|`_Acquires_nonreentrant_lock_(expr)`|`expr` tarafından adlandırılan kilit elde edilir.  Kilit zaten tutuluyorsa bir hata bildirilir.|
 |`_Acquires_shared_lock_(expr)`|Bir işlevi bir işleve açıklama ve işlevin, `expr` tarafından adlandırılan kilit nesnesinin paylaşılan kilit sayısıyla bir şekilde artırdığını gösterir.|
-|`_Create_lock_level_(name)`|@No__t-0 ' ını bir kilit düzeyi olacak şekilde bildiren,-1 ve `_Lock_level_order_` @no__t ek açıklamalarda kullanılabilmesi için bir ifade.|
+|`_Create_lock_level_(name)`|Ek açıklamaların `_Has_Lock_level_` ve `_Lock_level_order_`kullanılabilmesi için simgeyi `name` bir kilit düzeyi olarak bildiren bir ifade.|
 |`_Has_lock_kind_(kind)`|Bir kaynak nesnesinin tür bilgilerini iyileştirmek için herhangi bir nesneye Açıklama Ekle. Bazen, farklı türlerde kaynaklar için ortak bir tür kullanılır ve aşırı yüklenmiş tür çeşitli kaynaklar arasındaki anlam gereksinimlerini ayırt etmek için yeterli değildir. Önceden tanımlanmış `kind` parametrelerinin listesi aşağıda verilmiştir:<br /><br /> `_Lock_kind_mutex_`<br /> Zaman uyumu sağlayıcılar için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_event_`<br /> Olaylar için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_semaphore_`<br /> Semaforlar için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_spin_lock_`<br /> Döndürme kilitleri için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_critical_section_`<br /> Kritik bölümler için kilit türü KIMLIĞI.|
 |`_Has_lock_level_(name)`|Bir kilit nesnesine açıklama koyun ve `name` ' ın kilit düzeyini verir.|
-|`_Lock_level_order_(name1, name2)`|@No__t-0 ve `name2` arasında kilit sıralaması sağlayan bir ifade.|
+|`_Lock_level_order_(name1, name2)`|`name1` ve `name2`arasında kilit sıralaması sağlayan bir ifade.|
 |`_Post_same_lock_(expr1, expr2)`|Bir işlevi bir işleve açıklama ve gönderi durumunda `expr1` ve `expr2` olmak üzere iki kilit aynı kilit nesnesi gibi değerlendirildiğini belirtir.|
 |`_Releases_exclusive_lock_(expr)`|Bir işlevi daha fazla açıklama olarak gösterir ve işlevin, `expr` tarafından adlandırılan kilit nesnesinin özel kilit sayısına göre azaltır.|
 |`_Releases_lock_(expr)`|Bir işlevi bir işleve açıklama ve işlevin, `expr` tarafından adlandırılan kilit nesnesinin kilit sayısına göre ne kadar azaltır olduğunu gösterir.|
-|`_Releases_nonreentrant_lock_(expr)`|@No__t-0 tarafından adlandırılan kilit serbest bırakılır. Kilit Şu anda tutulmadığında bir hata bildirilir.|
+|`_Releases_nonreentrant_lock_(expr)`|`expr` tarafından adlandırılan kilit serbest bırakılır. Kilit Şu anda tutulmadığında bir hata bildirilir.|
 |`_Releases_shared_lock_(expr)`|Bir işlevi bir işleve açıklama ve işlevin, `expr` tarafından adlandırılan kilit nesnesinin paylaşılan kilit sayısına göre ne kadar azaltır olduğunu gösterir.|
 |`_Requires_lock_held_(expr)`|Bir işlevi bir işleve açıklama ve ön durum ' a `expr` tarafından adlandırılan nesnenin kilit sayısının en az bir tane olduğunu gösterir.|
 |`_Requires_lock_not_held_(expr)`|Bir işlevi bir işleve açıklama ve ön durum ' a `expr` tarafından adlandırılan nesnenin kilit sayısının sıfır olduğunu gösterir.|
@@ -112,12 +112,12 @@ Akıllı kilitler genellikle yerel kilitleri sarın ve ömrünü yönetir. Aşa�
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|Çözümleyiciye bir akıllı kilit elde edilen olduğunu varsaymasını söyler. Bu ek açıklama, parametresi olarak bir başvuru kilit türü bekliyor.|
 |`_Analysis_assume_smart_lock_released_`|Çözümleyiciye, akıllı bir kilidin bırakıldığını varsaymasını söyler. Bu ek açıklama, parametresi olarak bir başvuru kilit türü bekliyor.|
-|`_Moves_lock_(target, source)`|Kilit durumunu `source` nesnesinden `target` ' ye aktaran `move constructor` işlemini açıklar. @No__t-0 yeni oluşturulmuş bir nesne olarak değerlendirilir, bu nedenle önce sahip olduğu herhangi bir durum kaybedilir ve `source` durumu ile değiştirilmez. @No__t-0 Ayrıca kilit sayısı veya diğer ad hedefi olmayan temiz bir duruma sıfırlanır, ancak ona işaret eden diğer adlar değişmeden kalır.|
+|`_Moves_lock_(target, source)`|Kilit durumunu `source` nesnesinden `target` ' ye aktaran `move constructor` işlemini açıklar. `target` yeni oluşturulmuş bir nesne olarak kabul edilir, bu nedenle önce sahip olduğu tüm durumları kaybolur ve `source` durumuna göre değiştirilmez. `source` Ayrıca kilit sayısı veya diğer ad hedefi olmayan temiz bir duruma sıfırlanır, ancak ona işaret eden diğer adlar değişmeden kalır.|
 |`_Replaces_lock_(target, source)`|Durumu kaynaktan aktarmadan önce hedef kilidinin serbest bırakıldığı `move assignment operator` semantiğini açıklar. Bu, `_Moves_lock_(target, source)` ' dan önce `_Releases_lock_(target)` ' in bir birleşimi olarak kabul edilebilir.|
-|`_Swaps_locks_(left, right)`|@No__t-1 ve `right` nesnelerinin durumunu @no__t olduğunu varsayan standart-0 davranışını açıklar. Değiştirilen durum, varsa kilit sayısını ve diğer ad hedefini içerir. @No__t-0 ve `right` nesnelerine işaret eden diğer adlar değişmeden kalır.|
+|`_Swaps_locks_(left, right)`|Nesneleri `left` ve `right` durumunu değiş tokuş eden standart `swap` davranışını tanımlar. Değiştirilen durum, varsa kilit sayısını ve diğer ad hedefini içerir. `left` ve `right` nesnelerine işaret eden diğer adlar değişmeden kalır.|
 |`_Detaches_lock_(detached, lock)`|Bir kilit sarmalayıcı türünün içerdiği kaynakla ilişkilendirmesini geri almasına izin verdiği bir senaryoyu açıklar. Bu, `std::unique_ptr` ' ın iç işaretçiyle çalışmasına benzer: programcıların işaretçiyi ayıklamasına ve akıllı işaretçi kapsayıcısını temiz bir durumda bırakmasını sağlar. Benzer mantık `std::unique_lock` tarafından desteklenir ve özel kilit sarmalayıcılarını uygulanabilir. Ayrılmış kilit, kendi diğer adlarını korurken, bu nesnenin durumunu (varsa kilit sayısı ve diğer ad hedefi) korur. Kilit sayıları üzerinde hiçbir işlem yoktur (serbest bırakma ve alma). Bu ek açıklama, ayrılmış bağımsız değişkenin `this` yerine `return` olması dışında, tam olarak `_Moves_lock_` olarak davranır.|
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C/C++ Kod Hatalarını Azaltmak için SAL Ek Açıklamalarını Kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [SAL'yi Anlama](../code-quality/understanding-sal.md)
@@ -127,4 +127,4 @@ Akıllı kilitler genellikle yerel kilitleri sarın ve ömrünü yönetir. Aşa�
 - [Açıklamanın Ne Zaman ve Nereye Uygulanacağını Belirtme](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 - [İç İşlevler](../code-quality/intrinsic-functions.md)
 - [En İyi Yöntemler ve Örnekler](../code-quality/best-practices-and-examples-sal.md)
-- [Kod Analizi ekip blogu](http://go.microsoft.com/fwlink/p/?LinkId=251197)
+- [Kod Analizi ekip blogu](https://blogs.msdn.microsoft.com/codeanalysis/)
