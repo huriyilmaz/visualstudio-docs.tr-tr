@@ -751,6 +751,8 @@
                   href: ca5397.md
                 - name: 'CA5398: Sabit kodlanmış SslProtocols değerlerini kullanmaktan kaçının'
                   href: ca5398.md
+                - name: 'CA5403: Sertifikayı sabit olarak kodlamayın'
+                  href: ca5403.md
             - name: Kullanım uyarıları
               items:
                 - name: Genel Bakış
