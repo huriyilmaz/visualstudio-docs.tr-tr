@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c0fe4061fe6aefc1e6849bddea1dbab9551b9884
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: a98164488d548a15c07e67b9a02cad2341f7300b
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551367"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985644"
 ---
 # <a name="registry-entries-for-vsto-add-ins"></a>VSTO eklentileri için kayıt defteri girişleri
   Visual Studio kullanılarak oluşturulan VSTO Eklentilerini dağıtırken belirli bir kayıt defteri girişi kümesi oluşturmanız gerekir. Bu kayıt defteri girdileri, Microsoft Office uygulamasının VSTO eklentisini bulmasını ve yüklemesini sağlayan bilgiler sağlar.
@@ -49,7 +49,7 @@ ms.locfileid: "69551367"
 ### <a name="microsoft-office-version"></a>Microsoft Office sürümü
  Office uygulamaları, **HKEY_LOCAL_MACHINE** veya **HKEY_CURRENT_USER**altında kayıtlı VSTO Eklentilerini yükleyebilir.
 
- **HKEY_LOCAL_MACHINE**ALTıNA kayıtlı VSTO Eklentilerini yüklemek için bilgisayarlarda güncelleştirme paketi 976477 ' ün yüklü olması gerekir. Daha fazla bilgi için bkz. [http://go.microsoft.com/fwlink/?LinkId=184923](http://go.microsoft.com/fwlink/?LinkId=184923).
+ **HKEY_LOCAL_MACHINE**ALTıNA kayıtlı VSTO Eklentilerini yüklemek için bilgisayarlarda güncelleştirme paketi 976477 ' ün yüklü olması gerekir. Daha fazla bilgi için bkz. [http://go.microsoft.com/fwlink/?LinkId=184923](https://support.microsoft.com/help/976811/a-2007-office-system-application-does-not-load-an-add-in-that-is-devel).
 
 ### <a name="deployment-type"></a>Dağıtım türü
  VSTO eklentisini dağıtmak için ClickOnce kullanırsanız, VSTO eklentisi yalnızca geçerli kullanıcı için kaydedilebilir. Bunun nedeni, ClickOnce 'ın yalnızca **HKEY_CURRENT_USER**altında anahtar oluşturulmasını destekler. Bir bilgisayarda bir VSTO eklentisini bir bilgisayardaki tüm kullanıcılara kaydetmek istiyorsanız, VSTO eklentisini dağıtmak için Windows Installer kullanmanız gerekir. Bu dağıtım türleri hakkında daha fazla bilgi için bkz. Windows Installer kullanarak [bir Office çözümünü ClickOnce kullanarak dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md) ve [Office çözümünü dağıtma](../vsto/deploying-an-office-solution-by-using-windows-installer.md).
@@ -61,15 +61,15 @@ ms.locfileid: "69551367"
 
 |Office sürümü|Yapılandırma yolu|
 |--------------------|------------------------|
-|32 bit:|*Kök*\software\microsoft\office\\*uygulama adı*\eklentiler\\*eklenti kimliği*|
-|64 bit|*Kök*\software\wow6432node\microsoft\office\\*uygulama adı*\addıns\\*eklenti kimliği*|
+|32 bit:|*Kök*\software\microsoft\office\\*uygulama adı*\ADDıNS\\*eklenti kimliği*|
+|64 bit|*Kök*\Software\wow6432node\microsoft\office\\*uygulama adı*\ADDıNS\\*eklenti kimliği*|
 
  **\\**
 
 |Office sürümü|Yapılandırma yolu|
 |--------------------|------------------------|
-|32 bit:|*Kök*\software\microsoft\visio\addıns\\*eklenti kimliği*|
-|64 bit|*Kök*\software\wow6432node\visio\addıns\\*eklenti kimliği*|
+|32 bit:|*Kök*\Software\microsoft\visio\addıns\\*eklentisi kimliği*|
+|64 bit|*Kök*\Software\wow6432node\visio\addıns\\*eklentisi kimliği*|
 
  Aşağıdaki tabloda bu kayıt defteri anahtarı altındaki girdiler listelenmektedir.
 
@@ -77,24 +77,24 @@ ms.locfileid: "69551367"
 |-----------|----------|-----------|
 |**Açıklama**|REG_SZ|Gerekli. VSTO eklentisinin kısa bir açıklaması.<br /><br /> Bu açıklama, Kullanıcı Microsoft Office uygulamasındaki **Seçenekler** Iletişim kutusunun **Eklentiler** bölmesindeki VSTO eklentisini seçtiğinde görüntülenir.|
 |**FriendlyName**|REG_SZ|Gerekli. Microsoft Office uygulamasındaki **com eklentileri** iletişim kutusunda görüntülenen VSTO eklentisinin açıklayıcı bir adı. Varsayılan değer VSTO eklenti KIMLIĞIDIR.|
-|**LoadBehavior**|REG_DWORD|Gerekli. Uygulamanın VSTO eklentisini yükleme girişiminde bulunduğunu ve VSTO eklentisinin geçerli durumunu (yüklenen veya yüklenmeyen) belirten bir değer.<br /><br /> Varsayılan olarak, bu girdi 3 olarak ayarlanır ve bu, VSTO eklentisinin başlangıçta yüklendiğini belirtir. Daha fazla bilgi için bkz. [LoadBehavior değerleri](#LoadBehavior). **Not:**  Bir kullanıcı VSTO eklentisini devre dışı bırakırsa, bu eylem **HKEY_CURRENT_USER** kayıt defteri kovanında **LoadBehavior** değerini değiştirir. Her bir kullanıcı için, HKEY_CURRENT_USER kovanındaki **LoadBehavior** değerinin değeri, **HKEY_LOCAL_MACHINE** Hive içinde tanımlanan varsayılan **LoadBehavior** 'yi geçersiz kılar.|
-|**Bildirimi**|REG_SZ|Gerekli. VSTO eklentisinin dağıtım bildiriminin tam yolu. Yol, yerel bilgisayarda, bir ağ paylaşımında (UNC) veya bir Web sunucusu 'nda (HTTP) bir konum olabilir.<br /><br /> Çözümü dağıtmak için Windows Installer kullanırsanız, **bildirim** yoluna **File:///** önekini eklemeniz gerekir. Ayrıca, bu yolun sonuna  **&#124;vstolocal** (diğer bir deyişle, bu kanal karakteri **&#124;** , **vstolocal**tarafından izlenen) dizesini de eklemeniz gerekir. Bu, çözümünüzün ClickOnce önbelleği yerine yükleme klasöründen yüklenmesini sağlar. Daha fazla bilgi için bkz. [Windows Installer kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-windows-installer.md). **Not:**  Geliştirme bilgisayarında bir VSTO eklentisi yapılandırdığınızda, Visual Studio bu kayıt defteri girişine  **&#124;vstolocal** dizesini otomatik olarak ekler.|
+|**LoadBehavior**|REG_DWORD|Gerekli. Uygulamanın VSTO eklentisini yükleme girişiminde bulunduğunu ve VSTO eklentisinin geçerli durumunu (yüklenen veya yüklenmeyen) belirten bir değer.<br /><br /> Varsayılan olarak, bu girdi 3 olarak ayarlanır ve bu, VSTO eklentisinin başlangıçta yüklendiğini belirtir. Daha fazla bilgi için bkz. [LoadBehavior değerleri](#LoadBehavior). **Note:**  Bir kullanıcı VSTO eklentisini devre dışı bırakırsa, bu eylem **HKEY_CURRENT_USER** kayıt defteri kovanında **LoadBehavior** değerini değiştirir. Her bir kullanıcı için, HKEY_CURRENT_USER kovanındaki **LoadBehavior** değerinin değeri, **HKEY_LOCAL_MACHINE** Hive içinde tanımlanan varsayılan **LoadBehavior** 'yi geçersiz kılar.|
+|**Bildirim**|REG_SZ|Gerekli. VSTO eklentisinin dağıtım bildiriminin tam yolu. Yol, yerel bilgisayarda, bir ağ paylaşımında (UNC) veya bir Web sunucusu 'nda (HTTP) bir konum olabilir.<br /><br /> Çözümü dağıtmak için Windows Installer kullanırsanız, **bildirim** yoluna **File:///** önekini eklemeniz gerekir. Ayrıca, bu yolun sonuna  **&#124;vstolocal** (diğer bir deyişle, bu kanal karakteri **&#124;** , **vstolocal**tarafından izlenen) dizesini de eklemeniz gerekir. Bu, çözümünüzün ClickOnce önbelleği yerine yükleme klasöründen yüklenmesini sağlar. Daha fazla bilgi için bkz. [Windows Installer kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-windows-installer.md). **Note:**  Geliştirme bilgisayarında bir VSTO eklentisi yapılandırdığınızda, Visual Studio bu kayıt defteri girişine  **&#124;vstolocal** dizesini otomatik olarak ekler.|
 
 ### <a name="OutlookEntries"></a>Outlook form bölgeleri için kayıt defteri girişleri
  Outlook için VSTO eklentisi içinde özel bir form bölgesi oluşturursanız, form bölgesini Outlook 'a kaydetmek için ek kayıt defteri girişleri kullanılır. Bu girdiler, form bölgesinin desteklediği her ileti sınıfı için farklı bir kayıt defteri anahtarı altında oluşturulur. Bu kayıt defteri anahtarları, *kökün* **HKEY_CURRENT_USER** veya **HKEY_LOCAL_MACHINE**olduğu aşağıdaki konumdadır.
 
- *Kök*\software\microsoft\office\outlook\formregion\\*ileti sınıfı*
+ *Kök*\Software\microsoft\office\outlook\formregion\\*ileti sınıfı*
 
  Tüm VSTO eklentileri tarafından paylaşılan diğer kayıt defteri girdileri gibi, Visual Studio, projenizi oluştururken geliştirme bilgisayarında form bölgesi kayıt defteri girişlerini oluşturur. VSTO eklentisini dağıtmak için ClickOnce kullanırsanız, kayıt defteri girdileri son kullanıcı bilgisayarında otomatik olarak oluşturulur. VSTO eklentisini dağıtmak için Windows Installer kullanıyorsanız, InstallShield Limited Edition projesini Son Kullanıcı bilgisayarında kayıt defteri girişlerini oluşturacak şekilde yapılandırmanız gerekir.
 
  Form bölgesi kayıt defteri girişleri hakkında daha fazla bilgi için bkz. [özel bir formda form bölgesinin konumunu belirtme](/office/vba/outlook/Concepts/Creating-Form-Regions/specify-the-location-of-a-form-region-in-a-custom-form). Outlook form bölgeleri hakkında daha fazla bilgi için bkz. [Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md).
 
 ## <a name="LoadBehavior"></a>LoadBehavior değerleri
- *Kök*\software\microsoft\office\\*uygulama adı*\addıns\\*Add-In ID* anahtarı altındaki **LoadBehavior** girdisi, çalışma zamanı davranışını belirten değerlerin bit düzeyinde bir birleşimini içerir. VSTO eklentisi. En düşük sıra biti (değerler 0 ve 1) VSTO eklentisinin Şu anda yüklü olup olmadığını belirtir. Diğer bitler, uygulamanın VSTO eklentisini yükleme girişiminde bulunduğunu gösterir.
+ *Kök*\software\microsoft\office\\*uygulama adı*\addıns\\*Add-In ID* anahtarı altındaki **LoadBehavior** girişi, VSTO eklentisinin çalışma süresi davranışını belirten bit düzeyinde bir değer birleşimini içerir. En düşük sıra biti (değerler 0 ve 1) VSTO eklentisinin Şu anda yüklü olup olmadığını belirtir. Diğer bitler, uygulamanın VSTO eklentisini yükleme girişiminde bulunduğunu gösterir.
 
  Genellikle, bir VSTO eklentisi son kullanıcı bilgisayarlarına yüklendiğinde, **LoadBehavior** girişinin 0, 3 veya 16 (ondalık olarak) olarak ayarlanması amaçlanmıştır. Varsayılan olarak, Visual Studio, VSTO eklentisinin, derleme veya yayımladığınızda 3 ' e yönelik **LoadBehavior** girişini ayarlar.
 
- Aşağıdaki tabloda, **LoadBehavior** girişinin tüm olası değerleri listelenmektedir. Bu tablodaki bazı açıklamalar, VSTO eklentisinin el ile veya program aracılığıyla yüklenmesine başvurur. VSTO eklentisini el ile yüklemek için, uygulamadaki **com eklentileri** ILETIŞIM kutusunda VSTO eklentisinin yanındaki onay kutusunu işaretleyin. Bir VSTO eklentisini programlı olarak yüklemek için, VSTO eklentisini temsil <xref:Microsoft.Office.Core.COMAddIn.Connect%2A> eden <xref:Microsoft.Office.Core.COMAddIn> nesnenin özelliğini **doğru**olarak ayarlayın.
+ Aşağıdaki tabloda, **LoadBehavior** girişinin tüm olası değerleri listelenmektedir. Bu tablodaki bazı açıklamalar, VSTO eklentisinin el ile veya program aracılığıyla yüklenmesine başvurur. VSTO eklentisini el ile yüklemek için, uygulamadaki **com eklentileri** ILETIŞIM kutusunda VSTO eklentisinin yanındaki onay kutusunu işaretleyin. Bir VSTO eklentisini programlı olarak yüklemek için, VSTO eklentisini temsil eden <xref:Microsoft.Office.Core.COMAddIn> nesnesinin <xref:Microsoft.Office.Core.COMAddIn.Connect%2A> özelliğini **true**olarak ayarlayın.
 
 |Değer (ondalık)|VSTO eklentisi durumu|VSTO eklenti yükleme davranışı|Açıklama|
 |--------------------------|-------------------------|--------------------------------|-----------------|

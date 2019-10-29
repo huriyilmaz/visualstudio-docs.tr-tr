@@ -1,5 +1,5 @@
 ---
-title: Çözüme dosyaları dahil etmek için modül kullanma | Microsoft Docs
+title: Çözümdeki dosyaları dahil etmek için modülleri kullanma | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,20 +14,20 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 569f1027163d5651d184254b4e6f57a02df2a39a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4f8f2aa6c5d86af2424a811b6167829cefdb6fb5
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007847"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985303"
 ---
-# <a name="use-modules-to-include-files-in-the-solution"></a>Çözüme dosyaları dahil etmek için modül kullanma
-  Ne zaman dosyalarını yeni ana sayfalar gibi dosya türlerinin bakılmaksızın SharePoint sunucusuna dağıtmak isteyebilirsiniz zamanlar olabilir. Bunu yapmak için kullanabileceğiniz *modülleri* (ile karıştırılmamalıdır [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] kod modülleri). Modüller, dosyaları bir SharePoint çözümünü kapsayıcılardır. Çözüm dağıtılırken, modül dosyalarında SharePoint sunucusundaki belirtilen klasöre kopyalanır.
+# <a name="use-modules-to-include-files-in-the-solution"></a>Çözümdeki dosyaları dahil etmek için modülleri kullanma
+  Dosyaları, yeni ana sayfalar gibi dosya türlerine bakılmaksızın SharePoint sunucusuna dağıtmak isteyebileceğiniz zamanlar olabilir. Bunu yapmak için *modüller* ([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] kod modülleriyle karıştırılmamalıdır) kullanabilirsiniz. Modüller bir SharePoint çözümündeki dosyalar için kapsayıcılardır. Çözüm dağıtıldığında, modüldeki dosyalar SharePoint sunucusundaki belirtilen klasörlere kopyalanır.
 
 ## <a name="module-items-and-elements"></a>Modül öğeleri ve öğeleri
- Bir modülü oluşturmak için bir projeye seçim yaparak ekleme **Yeni Öğe Ekle** iletişim kutusu. Ardından, değiştirme, *Elements.xml* dosya sisteminde nerede ve SharePoint sunucusuna kopyalanması gereken dağıtmak istediğiniz dosyaların adını içerecek şekilde.
+ Bir modül oluşturmak için bunu **Yeni öğe Ekle** iletişim kutusunda seçerek bir projeye ekleyin. Daha sonra, kendi *Elements. xml* dosyasını, dağıtmak istediğiniz dosyaların adlarını içerecek şekilde değiştirin, burada sistemde bulunur ve SharePoint sunucusuna kopyalanmaları gerekir.
 
- İşte bir örnek *Elements.xml* dosya bir modül için:
+ Modül için *Elements. xml* dosyasına bir örnek aşağıda verilmiştir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -43,22 +43,22 @@ ms.locfileid: "63007847"
 
 |Dosya Adı|Açıklama|
 |---------------|-----------------|
-|*Elements.XML*|Modül için tanım dosyasını.|
-|*Örnek.txt*|Modüldeki bir dosyayı bir örnek olarak hizmet veren bir yer tutucu dosyası.|
+|*Elements. xml*|Modülün tanım dosyası.|
+|*Sample. txt*|Modüldeki bir dosyaya örnek olarak hizmet veren bir yer tutucu dosyası.|
 
- *Elements.xml* dosyası aşağıdaki öğeleri içerir:
+ *Elements. xml* dosyası aşağıdaki öğeleri içerir:
 
 |Öğe adı|Açıklama|
 |------------------|-----------------|
-|Öğeleri|Modülde tanımlanmış tüm öğeleri içerir.|
-|Modül|Tek bir öznitelik modülü öğesinin *adı*, modülün adını şu biçimde belirtir `<Module Name="Module1">`.<br /><br /> Modülün adını değiştirirseniz unutmayın (veya kendi *klasör adı* özelliği), modül öğesi adı el ile güncelleştirmeniz gerekir.<br /><br /> Modül öğesinde bir alt dosya veya dosyalar için belirtirseniz [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] (WSS) otomatik olarak oluşturur eşleşen bir dizin yapısı için.|
-|Dosya|İki parametre dosyası öğesinin *yolu* ve *Url*.<br /><br /> -Path: SharePoint çözüm dosyasının konumunu ve adını. Biçimidir `Path="Module1\Sample.txt"`.<br /><br /> -Url: Dosyanın SharePoint sunucusuna dağıtılacağı konumu. Biçimidir `Url="Module1/Sample.txt"`.<br /><br /> -Type: Bir isteğe bağlı öznitelik iki ayarı vardır: *GhostableInLibrary* ve *Ghostable*. Biçimidir `Type="GhostableInLibrary"`. Belirtme *GhostableInLibrary* dosyası, bir SharePoint belge kitaplığına kitaplığına eklendiğinde, dosyayı eşlik edecek bir liste öğesi birlikte eklenecek anlamına gelir. Belirtme *Ghostable* için SharePoint belge kitaplığı dışında eklenmesi için dosyayı neden olur.|
+|Öğeler|Modülde tanımlanan tüm öğeleri içerir.|
+|Modül|Module öğesi, `<Module Name="Module1">`biçimindeki modülün adını belirten tek bir özniteliğe, *adına*sahiptir.<br /><br /> Modülün adını (veya *klasör adı* özelliğini) değiştirirseniz, bu adı modül öğesinde el ile güncelleştirmeniz gerektiğini unutmayın.<br /><br /> Modül öğesinde dosya (ler) için bir alt dizin belirtirseniz, [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] (WSS) otomatik olarak bu kendileri için eşleşen bir dizin yapısı oluşturur.|
+|Dosya|Dosya öğesinin iki parametresi, *yolu* ve *URL 'si*vardır.<br /><br /> -Path: SharePoint çözümündeki dosyanın adı ve konumu. Biçim, `Path="Module1\Sample.txt"`.<br /><br /> -URL: dosyanın SharePoint sunucusunda dağıtılacağı konum. Biçim, `Url="Module1/Sample.txt"`.<br /><br /> -Type: iki ayarı olan isteğe bağlı bir öznitelik: *GhostableInLibrary* ve *Ghostable*. Biçim, `Type="GhostableInLibrary"`. *GhostableInLibrary* belirtme, dosyanın kitaplığa eklendiği sırada dosyaya eşlik eden bir liste öğesiyle birlikte SharePoint 'teki bir belge kitaplığına eklenebileceği anlamına gelir. *Ghostable* belirtme, dosyanın belge kitaplığı dışından SharePoint 'e eklenmesine neden olur.|
 
- Dağıtmak istediğiniz her dosya için ayrı bir gerekli `<File>` öğenin girişte *Elements.xml*.
+ Dağıtmak istediğiniz her dosya *Elements. xml*içinde ayrı bir `<File>` öğe girişi gerektirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir modül kullanarak dosyaları içerme](../sharepoint/how-to-include-files-by-using-a-module.md)
-- [Nasıl Yapılır: Bir dosya sağlayın](http://go.microsoft.com/fwlink/?LinkID=144271)
-- [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)
+- [Nasıl yapılır: modül kullanarak dosyaları Içerme](../sharepoint/how-to-include-files-by-using-a-module.md)
+- [Nasıl yapılır: dosya sağlama](/previous-versions/office/developer/sharepoint-2010/ms441170(v=office.14))
+- [SharePoint çözümlerini geliştirme](../sharepoint/developing-sharepoint-solutions.md)
 - [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)
-- [Paketleme ve SharePoint çözümlerini dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

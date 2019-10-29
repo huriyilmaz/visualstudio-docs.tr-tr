@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Belgelere yönetilen kod uzantıları ekleme'
+title: 'Nasıl yapılır: belgelere yönetilen kod uzantıları Iliştirme'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,44 +13,42 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f56d51817491726e6011e965bfd6d68630bb0dbf
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8fb212f9c5441d697cfa92feee7dc18fab9270d2
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441797"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985971"
 ---
-# <a name="how-to-attach-managed-code-extensions-to-documents"></a>Nasıl yapılır: Belgelere yönetilen kod uzantıları ekleme
-  Bir mevcut Microsoft Office Word belgesi veya Microsoft Office Excel çalışma kitabını özelleştirme bütünleştirilmiş kodu ekleyebilirsiniz. Belge veya çalışma kitabı Microsoft Office projeleri ve Visual Studio geliştirme araçları tarafından desteklenen herhangi bir dosya biçiminde olabilir. Daha fazla bilgi için [belge düzeyi özelleştirmeler mimarisi](../vsto/architecture-of-document-level-customizations.md).
+# <a name="how-to-attach-managed-code-extensions-to-documents"></a>Nasıl yapılır: belgelere yönetilen kod uzantıları Iliştirme
+  Varolan bir Microsoft Office Word belgesine veya Microsoft Office Excel çalışma kitabına bir özelleştirme derlemesi ekleyebilirsiniz. Belge veya çalışma kitabı, Visual Studio 'daki Microsoft Office projeleri ve geliştirme araçları tarafından desteklenen herhangi bir dosya biçiminde olabilir. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md).
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Bir Word veya Excel belgesi için bir özelleştirme eklemek için kullanın <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> yöntemi <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfı. Çünkü <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfı Microsoft Office'in yüklü olmayan bir bilgisayarda çalıştırılması için tasarlanmıştır, bu yöntem doğrudan Microsoft Office geliştirme (örneğin, bir konsolu veya Windows Forms uygulaması) için ilgili olmayan çözümleri kullanabilirsiniz.
+ Bir Word veya Excel belgesine özelleştirme eklemek için <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfının <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> yöntemini kullanın. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfı Microsoft Office yüklü olmayan bir bilgisayarda çalışacak şekilde tasarlandığından, bu yöntemi, doğrudan Microsoft Office geliştirmeyle ilgili olmayan çözümlerde (konsol veya Windows Forms uygulaması gibi) kullanabilirsiniz.
 
 > [!NOTE]
-> Özelleştirme kodunu belirtilen belgeyi sahip olmayan denetimleri bekliyorsa yüklenmesi başarısız olur.
+> Kod, belirtilen belgenin sahip olmadığı denetimleri bekliyorsa, özelleştirme yükleme başarısız olur.
 
- ![video bağlantı](../vsto/media/playvideo.gif "video bağlantı") ilgili video gösterimi için bkz. [nasıl yaparım? Ekleme veya bir Word belgesi VSTO derlemesinden ayırma? ](http://go.microsoft.com/fwlink/?LinkId=136782).
+### <a name="to-attach-managed-code-extensions-to-a-document"></a>Yönetilen kod uzantılarını bir belgeye eklemek için
 
-### <a name="to-attach-managed-code-extensions-to-a-document"></a>Yönetilen kod uzantıları belgeye eklemek için
+1. Konsol uygulaması veya Windows Forms projesi gibi Microsoft Office gerektirmeyen bir projede, *Microsoft. VisualStudio. Tools. Applications. ServerDocument. dll* dosyasına bir başvuru ekleyin ve  *Microsoft. VisualStudio. Tools. Applications. Runtime. dll* derlemeleri.
 
-1. Bir konsol uygulaması veya Windows Forms projesi gibi Microsoft Office gerektirmeyen bir proje başvurusu Ekle *Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll* ve  *Microsoft.VisualStudio.Tools.Applications.Runtime.dll* derlemeler.
-
-2. Aşağıdaki **içeri aktarmalar** veya **kullanarak** kod dosyanızın üstüne deyimleri.
+2. Aşağıdaki **Içeri aktarmaları** veya **using** deyimlerini, kod dosyanızın en üstüne ekleyin.
 
      [!code-csharp[Trin_VstcoreDeployment#4](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#4)]
      [!code-vb[Trin_VstcoreDeployment#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#4)]
 
-3. Statik çağrı <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> yöntemi.
+3. Statik <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> yöntemini çağırın.
 
-     Aşağıdaki kod örneğinde <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> aşırı yükleme. Bu aşırı yükleme belgenin tam yolunu alır ve bir <xref:System.Uri> özelleştirmeleri için belgenin iliştirmek istediğiniz dağıtım bildiriminin konumunu belirtir. Bu örnek, bir Word belgesi adlı olduğunu varsayar **WordDocument1.docx** Masaüstü ve dağıtım bildirimini adlı bir klasörde bulunan **Yayımla** olan da masaüstünde.
+     Aşağıdaki kod örneği <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> aşırı yüklemeyi kullanır. Bu aşırı yükleme, belgenin tam yolunu ve belgeye iliştirmek istediğiniz özelleştirme için dağıtım bildiriminin konumunu belirten bir <xref:System.Uri> alır. Bu örnekte, **WordDocument1. docx** adlı bir Word belgesinin masaüstünde olduğu ve dağıtım bildiriminin de aynı zamanda masaüstündeki **Yayımla** adlı bir klasörde bulunduğu varsayılmaktadır.
 
      [!code-csharp[Trin_VstcoreDeployment#3](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#3)]
      [!code-vb[Trin_VstcoreDeployment#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#3)]
 
-4. Projeyi oluşturmak ve uygulamayı özelleştirme iliştirmek istediğiniz bilgisayarda çalıştırın. Bilgisayarda Office yüklü çalışma zamanı için Visual Studio 2010 Araçları yüklü olmalıdır.
+4. Projeyi derleyin ve özelleştirmeyi eklemek istediğiniz bilgisayarda uygulamayı çalıştırın. Bilgisayarda Office Runtime için Visual Studio 2010 Araçları yüklü olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ServerDocument sınıfını kullanarak bir sunucu üzerinde belgeleri yönetme](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)
-- [Nasıl yapılır: Belgelerden yönetilen kod uzantılarını kaldırma](../vsto/how-to-remove-managed-code-extensions-from-documents.md)
+- [ServerDocument sınıfını kullanarak bir sunucudaki belgeleri yönetme](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)
+- [Nasıl yapılır: belgelerden yönetilen kod uzantılarını kaldırma](../vsto/how-to-remove-managed-code-extensions-from-documents.md)
 - [Office çözümlerinde uygulama ve dağıtım bildirimleri](../vsto/application-and-deployment-manifests-in-office-solutions.md)

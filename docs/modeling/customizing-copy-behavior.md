@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcbe7a132f7e2f6f7d72cfd2ba210e5edba21b57
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e33ab59660263a5053642c95ec62ab36663f8e7b
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654091"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984298"
 ---
 # <a name="customizing-copy-behavior"></a>Kopyalama Davranışını Özelleştirme
 Visual Studio görselleştirme ve modelleme SDK 'Sı ile oluşturulan, etki alanına özgü bir dilde (DSL), kullanıcı öğeleri kopyaladığında ve yapıştırdığında ne olacağını değiştirebilirsiniz.
@@ -53,7 +53,7 @@ Etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve birleştirm
 
  \- veya-
 
- @No__t_0 geçersiz kılarak öğeleri yapıştırmadan önce diyagramı seçin. Bu kodu DslPackage projesindeki özel bir dosyaya ekleyin:
+ `ClipboardCommandSet.ProcessOnPasteCommand()`geçersiz kılarak öğeleri yapıştırmadan önce diyagramı seçin. Bu kodu DslPackage projesindeki özel bir dosyaya ekleyin:
 
 ```csharp
 namespace Company.MyDsl {
@@ -86,7 +86,7 @@ DslPackage projesindeki *MyDSL* `ClipboardCommandSet.ProcessOnMenuCopyCommand()`
 DslPackage projesindeki *MyDSL* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` geçersiz kılın.
 
  **Kopyala ve Yapıştır ile şekil yerleşimini koruyun.**
-Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](http://go.microsoft.com/fwlink/?LinkId=213879)örnekle gösterilmiştir.
+Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)örnekle gösterilmiştir.
 
  Bu etkiyi elde etmek için şekilleri ve bağlayıcıları kopyalanmış ElementGroupPrototype öğesine ekleyin. Geçersiz kılınacak en kullanışlı Yöntem ElementOperations. CreateElementGroupPrototype (). Bunu yapmak için DSL projesine aşağıdaki kodu ekleyin:
 
@@ -142,7 +142,7 @@ partial class MyDslDiagram // EDIT NAME
 ```
 
  **Şekilleri seçili bir konuma (örneğin, geçerli imleç konumu) yapıştırın.**
-Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](http://go.microsoft.com/fwlink/?LinkId=213879)örnekle gösterilmiştir.
+Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)örnekle gösterilmiştir.
 
  Bu etkiyi elde etmek için `ClipboardCommandSet.ProcessOnMenuPasteCommand()` `ElementOperations.Merge()` konuma özgü sürümünü kullanacak şekilde geçersiz kılın. Bunu yapmak için DslPackage projesine aşağıdaki kodu ekleyin:
 
@@ -229,7 +229,7 @@ Bkz. [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-
   Yaptığınız değişiklikler hem öğeleri hem de kopyalanmış görüntüyü etkiler.
 
 ## <a name="programming-copy-and-paste-behavior"></a>Kopyalama ve yapıştırma davranışını programlama
- Bir DSL 'nin nesnelerin kopyalama, yapıştırma, oluşturma ve silme ile ilgili davranışı birçok yönü, diyagrama bağlanmış bir <xref:Microsoft.VisualStudio.Modeling.ElementOperations> örneğine tabidir. @No__t_0 ' den kendi sınıfınızı türeterek ve diyagram sınıfınızın <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> özelliğini geçersiz kılarak DSL davranışını değiştirebilirsiniz.
+ Bir DSL 'nin nesnelerin kopyalama, yapıştırma, oluşturma ve silme ile ilgili davranışı birçok yönü, diyagrama bağlanmış bir <xref:Microsoft.VisualStudio.Modeling.ElementOperations> örneğine tabidir. <xref:Microsoft.VisualStudio.Modeling.ElementOperations> ' den kendi sınıfınızı türeterek ve diyagram sınıfınızın <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> özelliğini geçersiz kılarak DSL davranışını değiştirebilirsiniz.
 
 > [!TIP]
 > Program kodunu kullanarak modeli özelleştirme hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
@@ -556,6 +556,6 @@ namespace Company.MyDsl
 
 - [Öğe Oluşturma ve Hareketini Özelleştirme](../modeling/customizing-element-creation-and-movement.md)
 - [Nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md)
-- [Örnek: VMSDK devre şemaları örneği](http://go.microsoft.com/fwlink/?LinkId=213879)
+- [Örnek: VMSDK devre şemaları örneği](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

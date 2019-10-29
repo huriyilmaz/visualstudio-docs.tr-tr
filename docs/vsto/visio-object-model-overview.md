@@ -17,28 +17,28 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1ca692e85396b11647c507b18c95ca095b3f8072
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 88695511d22e38262dc969d66e469441c9c3ac47
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438766"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985475"
 ---
 # <a name="visio-object-model-overview"></a>Visio nesne modeline genel bakış
-  Office çözümleri geliştirmek için Microsoft Office Visio için Visio nesne modeli ile etkileşim kurabilir. Bu nesne modeli sınıfları ve arabirimleri Visio için birincil birlikte çalışma derlemesi olarak sağlanır ve tanımlanan oluşur `Microsoft.Office.Interop.Visio` ad alanı.
+  Microsoft Office Visio için Office çözümleri geliştirmek üzere Visio nesne modeliyle etkileşim kurabilirsiniz. Bu nesne modeli, Visio için birincil birlikte çalışma derlemesinde sunulan sınıflardan ve arabirimlerden oluşur ve `Microsoft.Office.Interop.Visio` ad alanında tanımlanır.
 
- Bu konu, Visio nesne modeline kısa bir genel bakış sağlar. Visio nesne modeline Office projelerinde görevleri gerçekleştirmek için kullanma hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+ Bu konuda Visio nesne modeline kısa bir genel bakış sunulmaktadır. Office projelerinde görevleri gerçekleştirmek için Visio nesne modelini kullanma hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
 - [Visio belgeleriyle çalışma](../vsto/working-with-visio-documents.md)
 
 - [Visio şekilleri ile çalışma](../vsto/working-with-visio-shapes.md)
 
 ## <a name="understand-the-visio-object-model"></a>Visio nesne modelini anlama
- Visio birçok nesne ile etkileşim sağlar. Kullanıcı arabirimi yakından takip eden bir hiyerarşide bu nesneleri düzenlenir. Hiyerarşisinin en üstünde olan [Microsoft.Office.Interop.Visio.Application](/office/vba/api/Visio.Application) nesne. Bu nesne, Visio'nün geçerli örneğini temsil eder. `Microsoft.Office.Interop.Visio.Application` Nesnesini içeren `Microsoft.Office.Interop.Visio.Document` ve `Microsoft.Office.Interop.Visio.Page` nesnelerin yanı sıra `Microsoft.Office.Interop.Visio.Documents` ve `Microsoft.Office.Interop.Visio.Pages` koleksiyonları. Her bu nesneleri ve koleksiyonları, birçok yöntem ve ve onunla etkileşime için erişebileceği özellikler vardır.
+ Visio, etkileşime girebilmeniz için birçok nesne sağlar. Bu nesneler, Kullanıcı arabirimini yakından takip eden bir hiyerarşide düzenlenir. Hiyerarşinin en üstünde [Microsoft. Office. Interop. Visio. Application](/office/vba/api/Visio.Application) nesnesi bulunur. Bu nesne, geçerli Visio örneğini temsil eder. `Microsoft.Office.Interop.Visio.Application` nesnesi `Microsoft.Office.Interop.Visio.Document` ve `Microsoft.Office.Interop.Visio.Page` nesnelerini ve `Microsoft.Office.Interop.Visio.Documents` ve `Microsoft.Office.Interop.Visio.Pages` koleksiyonlarını içerir. Bu nesnelerin ve koleksiyonların her birinde, işleme ve bunlarla etkileşime geçmek için erişebileceğiniz birçok yöntem ve özellik vardır.
 
- Daha fazla bilgi için bkz: VBA başvuru belgelerine [Microsoft.Office.Interop.Visio.Application](/office/vba/api/Visio.Application), [Microsoft.Office.Interop.Visio.Document](/office/vba/api/Visio.Document), ve [ Microsoft.Office.Interop.Visio.Page](/office/vba/api/Visio.Page) nesneleri ve ayrıca [Microsoft.Office.Interop.Visio.Documents](/office/vba/api/Visio.Documents) ve [Microsoft.Office.Interop.Visio.Pages](/office/vba/api/Visio.Pages) koleksiyon.
+ Daha fazla bilgi için bkz [. Microsoft. Office. Interop. Visio. Application](/office/vba/api/Visio.Application), [Microsoft. Office. Interop. Visio. Document](/office/vba/api/Visio.Document), ve [Microsoft. Office. Interop. Visio. Page](/office/vba/api/Visio.Page) nesneleri ve ayrıca [ Microsoft. Office. Interop. Visio. Documents](/office/vba/api/Visio.Documents) ve [Microsoft. Office. Interop. Visio. Pages](/office/vba/api/Visio.Pages) koleksiyonları.
 
- Aşağıdaki bölümlerde, en üst düzey nesnelerin ve birbiriyle nasıl etkileşim kurduklarını kısaca açıklanmaktadır. Bu nesneler, aşağıdaki nesneler içerir:
+ Aşağıdaki bölümler en üst düzey nesneleri ve birbirleriyle nasıl etkileşime gireceğini kısaca açıklamaktadır. Bu nesneler aşağıdaki nesneleri içerir:
 
 - Uygulama nesnesi
 
@@ -47,34 +47,34 @@ ms.locfileid: "63438766"
 - Sayfa nesnesi
 
 ### <a name="application-object"></a>Uygulama nesnesi
- Microsoft.Office.Interop.Visio.Application nesnesi, Visio uygulamasını temsil eder ve tüm diğer nesnelerin üst. Üyeleri, Visio genellikle bir bütün olarak uygular. Özellikleri ve yöntemleri Microsoft.Office.Interop.Visio.Application kullanabilirsiniz ve `Microsoft.Office.Interop.Visio.ApplicationSettings` Visio ortam denetlemek için nesneleri.
+ Microsoft. Office. Interop. Visio. Application nesnesi, Visio uygulamasını temsil eder ve diğer tüm nesnelerin üst öğesidir. Üyeleri genellikle Visio için bir bütün olarak uygulanır. Visio ortamını denetlemek için Microsoft. Office. Interop. Visio. Application ve `Microsoft.Office.Interop.Visio.ApplicationSettings` nesnelerinin özelliklerini ve yöntemlerini kullanabilirsiniz.
 
- VSTO eklentisi projelerinde Microsoft.Office.Interop.Visio.Application nesnesi kullanarak erişebilirsiniz `Application` alanını `ThisAddIn` sınıfı. Daha fazla bilgi için [programlama VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
+ VSTO eklenti projelerinde, `ThisAddIn` sınıfının `Application` alanını kullanarak Microsoft. Office. Interop. Visio. Application nesnesine erişebilirsiniz. Daha fazla bilgi için bkz. [VSTO Eklentilerini Programlama](../vsto/programming-vsto-add-ins.md).
 
 ### <a name="document-object"></a>Belge nesnesi
- Programlama Visio'ya merkezi Microsoft.Office.Interop.Visio.Document nesnedir. Çizim, şablon veya şablon dosyasını temsil eder. Bir Visio belgesini açın veya yeni bir belge oluşturun, Microsoft.Office.Interop.Visio.Application nesnesi Microsoft.Office.Interop.Visio.Documents koleksiyonuna eklenen yeni bir Microsoft.Office.Interop.Visio.Document nesne oluşturma .
+ Microsoft. Office. Interop. Visio. Document nesnesi, Visio programlamasında orta. Bir çizim, kalıp veya şablon dosyasını temsil eder. Bir Visio belgesi açtığınızda veya yeni bir belge oluşturduğunuzda, Microsoft. Office. Interop. Visio. Application nesnesinin Microsoft. Office. Interop. Visio. Documents koleksiyonuna eklenen yeni bir Microsoft. Office. Interop. Visio. Document nesnesi oluşturursunuz .
 
- Odağı olan belgeyi etkin belgeyi çağrılır. Tarafından temsil edilen `Microsoft.Office.Interop.Visio.Application.ActiveDocument` Microsoft.Office.Interop.Visio.Application nesnesinin özelliği.
+ Odağa sahip belgeye etkin belge denir. Microsoft. Office. Interop. Visio. Application nesnesinin `Microsoft.Office.Interop.Visio.Application.ActiveDocument` özelliği tarafından temsil edilir.
 
 ### <a name="page-object"></a>Sayfa nesnesi
- Microsoft.Office.Interop.Visio.Page nesne bir ön plan veya arka plan sayfası çizim alanını temsil eder. Kullanabileceğiniz `Microsoft.Office.Interop.Visio.Page.Background` özellik sayfa ön plan veya arka plan sayfa olup olmadığını belirlemek için.
+ Microsoft. Office. Interop. Visio. Page nesnesi bir ön plan sayfasının veya bir arka plan sayfasının çizim alanını temsil eder. Bir sayfanın ön plan veya arka plan sayfası olduğunu anlamak için `Microsoft.Office.Interop.Visio.Page.Background` özelliğini kullanabilirsiniz.
 
- Şekil oluşturmak için içeren yöntemleri kullanabilirsiniz `Microsoft.Office.Interop.Visio.Page.DrawSpline` ve `Microsoft.Office.Interop.Visio.Page.DrawOval` yöntemleri. Ayrıca, kalıp örnekleri alabilir ve kullanarak bir sayfada şekilleri Yerleştir `Microsoft.Office.Interop.Visio.Page.Drop` veya `Microsoft.Office.Interop.Visio.Page.DropMany` yöntemleri.
+ Şekil oluşturmak için, `Microsoft.Office.Interop.Visio.Page.DrawSpline` ve `Microsoft.Office.Interop.Visio.Page.DrawOval` yöntemlerini içeren yöntemleri kullanabilirsiniz. Ayrıca, kalıplardan ana bilgisayarlar alabilir ve `Microsoft.Office.Interop.Visio.Page.Drop` veya `Microsoft.Office.Interop.Visio.Page.DropMany` yöntemlerini kullanarak şekilleri sayfaya yerleştirebilirsiniz.
 
-## <a name="use-the-visio-object-model-documentation"></a>Visio nesne modeli belgeleri kullanın
- Visio nesne modeli hakkında tam bilgi için Visio VBA nesne modeli başvurusu başvurabilir. Visual Basic for Applications (VBA) kodundaki sunulur şekilde VBA nesne modeli başvurusu Visio nesne modeline listelenmiştir. Daha fazla bilgi için [Visio 2010 nesne modeli başvurusu](http://go.microsoft.com/fwlink/?LinkId=199775).
+## <a name="use-the-visio-object-model-documentation"></a>Visio nesne modeli belgelerini kullanma
+ Visio nesne modeli hakkında tüm bilgiler için Visio VBA nesne modeli başvurusuna başvurabilirsiniz. VBA nesne modeli başvurusu, Visio nesne modelini Visual Basic for Applications (VBA) koduna açık olarak belgeler. Daha fazla bilgi için bkz. [Visio nesne modeli başvurusu](/office/vba/api/overview/visio/object-model).
 
- Tüm nesnelerin ve üyelerin VBA nesne modeli başvurusu türlerine ve üyelerine Visio birincil birlikte çalışma derlemesi (PIA) karşılık gelir. Örneğin, `Document` VBA nesne modeli başvurusu nesnesinde Visio PIA Microsoft.Office.Interop.Visio.Document türü karşılık gelir. VBA nesne modeli başvurusu çoğu özellikleri, yöntemleri ve olayları için kod örnekleri sağlasa da bu başvuru Visual Basic veya Visual VBA kodu çevir C# bunları kullanarak oluşturduğunuz bir Visio VSTO eklenti projesinde kullanmak istiyorsanız Visual Studio.
+ VBA nesne modeli başvurusundaki tüm nesneler ve Üyeler, Visio birincil birlikte çalışma derlemesindeki (PIA) türlere ve üyelere karşılık gelir. Örneğin, VBA nesne modeli başvurusundaki `Document` nesnesi, Visio PIA içindeki Microsoft. Office. Interop. Visio. Document türüne karşılık gelir. VBA nesne modeli başvurusu birçok özellik, yöntem ve olay için kod örnekleri sağlasa da, bunları kullanarak oluşturduğunuz bir Visio VSTO eklentisi projesinde kullanmak istiyorsanız bu başvurudaki VBA kodunu Visual Basic C# veya görsele çevirmeniz gerekir Visual Studio.
 
 > [!NOTE]
-> Şu anda Visio birincil birlikte çalışma derlemesi için başvuru belgeleri yoktur.
+> Şu anda, Visio birincil birlikte çalışma derlemesi için başvuru belgesi yoktur.
 
- İlgili kod örnekleri ve Visio çözümleri oluşturmak için ek araçlar için bkz: [Visio 2010 Yazılım Geliştirme Seti](http://go.microsoft.com/fwlink/?LinkId=196501).
+ İlgili kod örnekleri ve Visio çözümleri oluşturmaya yönelik ek araçlar için bkz. [visio 2010 yazılım geliştirme seti](https://www.microsoft.com/download/details.aspx?id=12365).
 
-### <a name="additional-types-in-primary-interop-assemblies"></a>Ek birincil birlikte çalışma bütünleştirilmiş kodlar içindeki türleri
- Uygulama farklar nedeniyle VBA'ya görünür olmayan birincil birlikte çalışma bütünleştirilmiş kodlarında türler bulabilirsiniz. VBA yalnızca nesneleri ve doğrudan kullanabileceğiniz üyeleri içerir Visio nesne modeline genel bir görünümünü sağlar. Birincil birlikte çalışma derlemeleri, aynı nesne modelini kullanıma sunar, ancak bunlar diğer arabirimler, sınıflar ve yönetilen koda COM nesne modelinde Çevir üyeleri de içerir. Bu ek öğeler kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+### <a name="additional-types-in-primary-interop-assemblies"></a>Birincil birlikte çalışma derlemelerindeki ek türler
+ Uygulama farklılıkları nedeniyle, VBA 'da görünmeyen birincil birlikte çalışma derlemelerindeki türleri bulabilirsiniz. VBA, Visio nesne modelinin yalnızca doğrudan kullanabileceğiniz nesneleri ve üyeleri içeren bir görünümünü sağlar. Birincil birlikte çalışma derlemeleri aynı nesne modelini sunar, ancak aynı zamanda COM nesne modelindeki nesneleri yönetilen koda çeviren diğer arabirimleri, sınıfları ve üyeleri de kapsar. Bu ek öğelerin doğrudan kodunuzda kullanılması amaçlanmamaktadır.
 
- Daha fazla bilgi için [sınıflar ve arabirimler Office birincil birlikte çalışma derlemelerindeki genel bakış](http://go.microsoft.com/fwlink/?LinkId=189592) ve [Office birincil birlikte çalışma derlemelerini](../vsto/office-primary-interop-assemblies.md).
+ Daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](/previous-versions/office/office-12/ms247299(v=office.12)) ve [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visio çözümleri](../vsto/visio-solutions.md)

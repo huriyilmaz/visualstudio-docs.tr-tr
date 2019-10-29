@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: dfdbe972034920869908c1bac1cb349c98d96d3f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2efea8f23e42b9f4839c8a1ae0d74248738b9cf4
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650719"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985345"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET Türüne Gözat ve Seç İletişim Kutusu
 
@@ -28,10 +28,10 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı
 
 - Genel etkinlik için bir tür seçerken.
 
-- @No__t_0 etkinliğine bir catch eklenirken.
+- <xref:System.Activities.Statements.TryCatch> etkinliğine bir catch eklenirken.
 
 > [!NOTE]
-> Tür tarayıcısı Visual Basic basit dizi türleri görüntüleyebilir, ancak çok boyutlu dizi türleri gösterebilir. Ayrıntılar için bkz. [pürüzlü Diziler](http://go.microsoft.com/fwlink/?LinkId=195226) ve [çok boyutlu diziler](http://go.microsoft.com/fwlink/?LinkId=195227) .
+> Tür tarayıcısı Visual Basic basit dizi türleri görüntüleyebilir, ancak çok boyutlu dizi türleri gösterebilir. Ayrıntılar için bkz. [pürüzlü Diziler](/previous-versions/visualstudio/visual-studio-2008/hkhhsz9t(v=vs.90)) ve [çok boyutlu diziler](/previous-versions/visualstudio/visual-studio-2008/d2de1t93(v=vs.90)) .
 
 ## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>Tür tarayıcısından bir değer veya başvuru türü seçme
 
@@ -65,9 +65,9 @@ Tür tarayıcısındaki türler, etkinlik Tasarımcısı geliştiricilerine gör
 
 Örneğin:
 
-1. Yazma **işlemi** <xref:System.OperationCanceledException> eşleşir, ancak <xref:System.InvalidOperationException> eşleşmez. @No__t_0 eşleştirmek için, System. ı veya geçersiz yazmaya başlayın.
+1. Yazma **işlemi** <xref:System.OperationCanceledException> eşleşir, ancak <xref:System.InvalidOperationException> eşleşmez. <xref:System.InvalidOperationException>eşleştirmek için, System. ı veya geçersiz yazmaya başlayın.
 
-2. **Genel** eşleşmeler yazmak <xref:System.GenericUriParser>, <xref:System.Collections.Generic> ad alanındaki türleri değil. @No__t_0 ad alanındaki türleri aramak için ad alanının tam adını yazın.
+2. **Genel** eşleşmeler yazmak <xref:System.GenericUriParser>, <xref:System.Collections.Generic> ad alanındaki türleri değil. <xref:System.Collections.Generic> ad alanındaki türleri aramak için ad alanının tam adını yazın.
 
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>Tarayıcı türü iletişim kutusunu kullanarak bir hizmet sözleşmesi seçme
 

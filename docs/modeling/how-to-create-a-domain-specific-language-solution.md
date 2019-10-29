@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 93e51a1daee6e9635305f4d8a5d275106af7947e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f6d4a19143ccde160a455a8247d10e5cc391e78c
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609389"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985122"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma
 Özel bir Visual Studio çözümü kullanılarak, etki alanına özgü dil (DSL) oluşturulur.
@@ -114,7 +114,7 @@ Bu, varsayılan olarak şirketinizden ve ürün adınızdan oluşan bir addır.
 
  **Mevcut tanımlayıcı ad anahtarını kullan** DSL 'nizi başka bir derlemeyle bütünleştirmek istiyorsanız bu seçeneği kullanın.
 
- Tanımlayıcı adlandırma hakkında daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](http://go.microsoft.com/fwlink/?LinkId=186073).
+ Tanımlayıcı adlandırma hakkında daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](/dotnet/standard/assembly/create-use-strong-named).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Proje öğelerinde paketleme ve dağıtım bilgileri
+title: Proje öğelerinde & dağıtım bilgilerini paketleme
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -24,15 +24,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a9af945ff377b30925a51875db205bcd882f4585
-ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
+ms.openlocfilehash: db805c308fd245554824997b24236eb2e2d80e62
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177705"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984208"
 ---
-# <a name="provide-packaging-and-deployment-information-in-project-items"></a>Proje öğelerinde paketleme ve dağıtım bilgileri sağlayın
-  Tüm SharePoint Proje öğeleri [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] için SharePoint projesi dağıtıldığında ek veri sağlamak için kullanabileceğiniz özelliklere sahiptir. Bu özellikler aşağıdaki gibidir:
+# <a name="provide-packaging-and-deployment-information-in-project-items"></a>Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] içindeki tüm SharePoint proje öğeleri, proje SharePoint 'e dağıtıldığında ek veri sağlamak için kullanabileceğiniz özelliklere sahiptir. Bu özellikler aşağıdaki gibidir:
 
 - Özellik özellikleri
 
@@ -42,54 +42,54 @@ ms.locfileid: "66177705"
 
 - Güvenli denetim girdileri
 
-  Bu özellikler görünür **özellikleri** penceresi.
+  Bu özellikler **Özellikler** penceresinde görünür.
 
 ## <a name="feature-properties"></a>Özellik özellikleri
- Kullanım **özellik özellikleri** özelliğini kullanan verilerini belirtmek için özellik. Özellik özellikleri veri SharePoint'te dağıtıldığında bir özellikle birlikte eklenen değer, (anahtar/değer çifti olarak saklanır) değerler kümesidir. Özellik dağıtıldıktan sonra kodunuzdaki özellik değerlerine erişebilirsiniz.
+ Özelliğin kullandığı verileri belirtmek için **özellik özellikleri** özelliğini kullanın. Özellik özellikleri verileri, SharePoint 'e dağıttığında bir özelliğe dahil edilen bir değerler kümesidir (anahtar/değer çiftleri olarak saklanır). Özellik dağıtıldıktan sonra, kodunuzda özellik değerlerine erişebilirsiniz.
 
- Proje öğesinin özelliğini özellik değer eklediğinizde, değeri öğenin özellik bildirimindeki bir öğe olarak eklenir. Bir iş verileri bağlantısı (BDC) modeli projesi ModelFileName özellik olarak gibi görünür:
+ Bir proje öğesine Özellik özelliği değeri eklediğinizde, değer öğenin özelliğinin bildirimine bir öğe olarak eklenir. Bir Iş verileri bağlantısı (BDC) modeli projesinde, örneğin ModelFileName özelliği özelliği şöyle görünür:
 
 ```xml
 <Property Key="ModelFileName" Value="BdcModel1\BdcModel1.bdcm" />
 ```
 
- Bir özellik değeri ayarladıktan sonra bir projenin FeatureProperty öğesi olarak eklenir *.spdata* dosya. SharePoint özelliklerine erişme hakkında daha fazla bilgi için bkz: [SPFeaturePropertyCollection sınıfı](http://go.microsoft.com/fwlink/?LinkId=177391).
+ Özellik özellik değerini ayarladıktan sonra, projenin *. spdata* dosyasına bir FeatureProperty öğesi olarak eklenir. SharePoint içindeki özelliklere erişme hakkında daha fazla bilgi için bkz. [SPFeaturePropertyCollection sınıfı](/previous-versions/office/sharepoint-server/ms461895(v=office.15)).
 
- Tüm proje öğeleri aynı özellik özellik değerleri özellik bildiriminde birlikte birleştirilir. Ancak, iki farklı proje öğeleri eşleşmeyen değerlerle aynı özellik özellik anahtarı belirtirseniz, bir doğrulama hatası oluşur.
+ Tüm proje öğelerinden özdeş Özellik özelliği değerleri, özellik bildiriminde birlikte birleştirilir. Ancak, iki farklı proje öğesi, eşleşmeyen değerlerle aynı özellik özelliği anahtarını belirtursa, bir doğrulama hatası oluşur.
 
- Özellik özellikleri doğrudan özellik dosyasına eklemek için (*.feature*), çağrı [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint nesne modeli yöntemi <xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A>. Bu yöntemi kullanırsanız, aynı özellik özellik değerlerini özellik özelliklerinde ekleme hakkında daha fazla aynı kuralın de doğrudan özellik dosyasına eklenen özelliklerin uygulandığını unutmayın.
+ Özellik dosyasını doğrudan özellik dosyasına ( *. feature*) eklemek için, <xref:Microsoft.VisualStudio.SharePoint.Features.IPropertyCollection.Add%2A>[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint nesne modeli yöntemini çağırın. Bu yöntemi kullanırsanız, özellik özelliklerinde aynı özellik özelliği değerlerini eklemekle aynı kuralın aynı zamanda doğrudan özellik dosyasına eklenen özellikler için de geçerli olduğunu unutmayın.
 
 ## <a name="feature-receiver"></a>Özellik alıcısı
- Özellik alıcıları özelliği içeren bir proje öğesine belirli olaylar meydana geldiğinde yürütülen kodu var. Örneğin, özellik yüklü, etkinleştirilmiş veya yükseltilmiş yürütülen özellik alıcıları tanımlayabilirsiniz. Özellik alıcısı açıklandığı bir özelliği eklemek için eklemek için tek yönlü [izlenecek yol: Özellik Olay alıcıları ekleme](../sharepoint/walkthrough-add-feature-event-receivers.md). Özellik alıcısının sınıf adı ve derlemeye başvurmak için başka bir yoludur **özellik alıcısı** özelliği.
+ Özellik alıcıları, bir proje öğesinin içeren özelliği için belirli olaylar gerçekleştiğinde yürütülen koddur. Örneğin, özellik yüklendiğinde, etkinleştirildiğinde veya yükseltildiğinde yürütülen Özellik alıcılarını tanımlayabilirsiniz. Özellik alıcısı eklemenin bir yolu, bunu [Izlenecek yol: özellik Olay alıcıları ekleme](../sharepoint/walkthrough-add-feature-event-receivers.md)bölümünde açıklandığı gibi doğrudan bir özelliğe eklemektir. Başka bir yöntem **de özellik alıcısı özelliğindeki bir** özellik alıcısı sınıf adına ve derlemesine başvurulmanız.
 
-### <a name="direct-method"></a>Doğrudan yöntem
- Bir özellik ile doğrudan bir özellik alıcısı eklediğinizde bir kod dosyası altına yerleştirilir **özellik** Çözüm Gezgininde. SharePoint çözümünüzü oluşturduğunuzda, kod bir derleme içine derler ve SharePoint'e dağıtır. Varsayılan olarak, özellik özellikleri **alıcısı bütünleştirilmiş kodu** ve **alıcı sınıfı** derleme ve sınıf adını başvuru.
+### <a name="direct-method"></a>Direct yöntemi
+ Bir özelliğe doğrudan bir özellik alıcısı eklediğinizde, bir kod dosyası Çözüm Gezgini **özellik** düğümünün altına yerleştirilir. SharePoint Çözümünüzü oluşturduğunuzda, kod bir derlemede derlenir ve SharePoint 'e dağıtılır. Varsayılan olarak, özellik özellikleri **alıcı derleme** ve **alıcı sınıfı** , sınıf adına ve derlemeye başvurur.
 
 ### <a name="reference-method"></a>Reference yöntemi
- Özellik alıcısı eklemek için başka bir yolu kullanmaktır **özellik alıcısı** özellik alıcısı bütünleştirilmiş kodu başvurmak için bir proje öğesinin özellik. Özellik alıcısı özellik değerini iki alt özellikler vardır: **Derleme** ve **sınıf adı**. Derleme, tam olarak nitelenmiş kullanmalıdır, "tanımlayıcı" ada ve sınıf adı tam tür adı olmalıdır. Daha fazla bilgi için [Strong-Named derlemeleri](http://go.microsoft.com/fwlink/?LinkID=169573). SharePoint çözümü dağıtıldıktan sonra özellik başvurulan özellik alıcısı özellik olaylarını işlemek için kullanır.
+ Özellik alıcısı eklemenin başka bir yolu da bir özellik alıcısı derlemesine başvurmak için bir proje öğesinin **özellik alıcısı** özelliğini kullanmaktır. Özellik alıcısı Özellik değeri iki alt özelliğe sahiptir: **derleme** ve **sınıf adı**. Derlemenin tam olarak nitelenmiş, "Strong" adını kullanması ve sınıf adının tam tür adı olması gerekir. Daha fazla bilgi için bkz. [Strong-adlandırılmış derlemeler](/previous-versions/dotnet/netframework-4.0/wd40t7ad(v=vs.100)). Çözümü SharePoint 'e dağıttıktan sonra, Özellik olayları işlemek için başvurulan özellik alıcısını kullanır.
 
- Çözümü derleme zamanı, özellik alıcısı özellik değerlerini özelliği ve projeleri SharePoint çözümünün özellik bildiriminde özellik öğesi ReceiverAssembly ve ReceiverClass özniteliklerini ayarlanacak birleştirmek (*.wsp* ) dosyası. Derleme ve sınıf adını özellik değerlerini bir proje öğesi bir özelliği ve her ikisi de belirtilirse, bu nedenle, proje öğesi ve özellik özelliği değerlerin eşleşmesi gerekir. Değerler eşleşmiyorsa, bir doğrulama hatası alırsınız. Bir proje öğesi istiyorsanız dışındaki bir özellik alıcısı bütünleştirilmiş kodu başvurmak için kendi özellik kullanır, başka bir özelliğe taşıyın.
+ Çözüm derleme zamanında, özellikte ve projelerinde özellik alıcı özelliği değerleri, SharePoint çözümü ( *. wsp*) dosyasının özellik bildiriminde özellik öğesinin ReceiverAssembly ve ReceiverClass özniteliklerini ayarlamak için birlikte birleştirilir. Bu nedenle, bir proje öğesi ve bir özelliğin derleme ve sınıf adı özellik değerleri belirtilirse, proje öğesi ve özellik özelliği değerleri eşleşmelidir. Değerler eşleşmiyorsa, bir doğrulama hatası alırsınız. Bir proje öğesinin özelliği tarafından kullanılan bir özellik alıcısı derlemesine başvurması istiyorsanız, onu başka bir özelliğe taşıyın.
 
- Sunucuda olmayan bir özellik alıcısı bütünleştirilmiş kodu başvuruda bulunursanız, derleme dosyası pakette de içermelidir; [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] eklemez, sizin için. Özellik dağıttığınızda, derleme dosyası ya da sistemin için kopyalanan [!INCLUDE[TLA#tla_gac](../sharepoint/includes/tlasharptla-gac-md.md)] veya SharePoint fiziksel dizini depo klasörü. Daha fazla bilgi için bkz: nasıl yapılır: [Nasıl yapılır: Ek derlemeler ekleyip](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
+ Zaten sunucuda olmayan bir özellik alıcısı derlemesine başvuru yaparsanız, derleme dosyasının kendisini pakete da dahil etmeniz gerekir; [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sizin için eklemez. Özelliği dağıttığınızda, derleme dosyası, sistem [!INCLUDE[TLA#tla_gac](../sharepoint/includes/tlasharptla-gac-md.md)] veya SharePoint fiziksel dizinindeki bin klasörüne kopyalanır. Daha fazla bilgi için bkz. nasıl yapılır: [nasıl yapılır: ek derlemeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
 
- Özellik alıcıları hakkında daha fazla bilgi için bkz: [özellik olayı alıcısını](http://go.microsoft.com/fwlink/?LinkID=169574) ve [özellik olayları](http://go.microsoft.com/fwlink/?LinkID=169575).
+ Özellik alıcıları hakkında daha fazla bilgi için bkz. [özellik olay alıcısı](/previous-versions/office/developer/sharepoint-2007/bb862634(v=office.12)) ve [Özellik olayları](/previous-versions/office/developer/sharepoint-2010/ms469501(v=office.14)).
 
 ## <a name="project-output-references"></a>Proje çıktısı başvuruları
- Proje çıktı başvuruları özelliği gibi proje öğenizin çalıştırması gereken bir derleme, bir bağımlılık belirtir. Örneğin, çözümünüze bir BDC projesi ve bir sınıf projesi olduğunu varsayalım. BDC projesi tarafından sınıfı proje çıkış bütünleştirilmiş kod üzerinde bir bağımlılık varsa, İVB projenin proje çıktı başvuruları özelliğini derlemeye başvurabilir. BDC projesi paketlendiğinde bağımlı derleme paketine dahildir.
+ Proje çıktısı başvuruları özelliği, proje öğesinin çalıştırması gereken bir derleme gibi bir bağımlılık belirtir. Örneğin, çözümünüzün bir BDC projesi ve bir sınıf projesi olduğunu varsayalım. IVB projesinde, sınıf projesi tarafından çıktı olan derlemeye bir bağımlılık varsa, BDC projesinin proje çıktı başvuruları özelliğindeki derlemeye başvurabilirsiniz. IVB projesi paketlenmişse, bağımlı derleme pakete dahil edilir.
 
- Proje çıktı başvuruları genellikle derlemeleri, ancak bazı durumlarda (örneğin, Silverlight projeleri) diğer dosya türleri olabilir.
+ Proje çıktı başvuruları genellikle derlemelerdir, ancak bazı durumlarda (örneğin, Silverlight projeleri) diğer dosya türleri olabilir.
 
- Daha fazla bilgi için [nasıl yapılır: Proje çıktı başvurusu ekleme](../sharepoint/how-to-add-a-project-output-reference.md).
+ Daha fazla bilgi için bkz. [nasıl yapılır: proje çıktı başvurusu ekleme](../sharepoint/how-to-add-a-project-output-reference.md).
 
 ## <a name="safe-control-entries"></a>Güvenli denetim girdileri
- SharePoint için belirli denetimler güvenilmeyen kullanıcıların erişimini sınırlamak için güvenli denetim girişleri olarak adlandırılan bir güvenlik mekanizması sağlar. Tasarım gereği, SharePoint, SharePoint sunucusunda ASPX sayfaları oluşturma ve karşıya yükleme güvenilmeyen kullanıcıların sağlar. Bu kullanıcılar ASPX sayfaları için güvenli olmayan kod eklemesini engellemek için SharePoint, erişimi sınırlar *güvenli denetimler*. Güvenli denetimler ASPX denetimleri ve Web Bölümleri güvenli olarak belirlenmiş ve sitenizde herhangi bir kullanıcı tarafından kullanılabilir. Daha fazla bilgi için [4. adım: Web Bölümünüzün güvenli denetimler listeye eklemek](http://go.microsoft.com/fwlink/?LinkID=171014).
+ SharePoint, güvenilmeyen kullanıcıların erişimini belirli denetimlere sınırlamak için güvenli denetim girişleri adlı bir güvenlik mekanizması sağlar. Tasarım, SharePoint 'e güvenilmeyen kullanıcıların, SharePoint sunucusunda ASPX sayfaları yüklemesine ve oluşturmalarına olanak tanır. Bu kullanıcıların ASPX sayfalarına güvenli olmayan kod eklemesini engellemek için, SharePoint *güvenli denetimlere*erişimini sınırlandırır. Güvenli denetimler, sitenizdeki herhangi bir kullanıcı tarafından kullanılabilen ve güvenli olarak belirlenmiş olan ASPX denetimleridir ve Web bölümleridir. Daha fazla bilgi için bkz. [4. Adım: Web bölümünü güvenli denetimler listesine ekleme](/previous-versions/office/developer/sharepoint-2007/ms581321(v=office.12)).
 
- Her bir SharePoint Proje öğe [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adlı bir özelliğe sahiptir **güvenli denetim girdileri** iki Boolean hakkına sahip: **Güvenli** ve **betiğe karşı güvenli**. Güvenli özellik güvenilmeyen kullanıcıların bir denetim erişip erişemeyeceğini belirtir. Güvenilmeyen kullanıcıların görüntüleyebilir ve bir denetimin özelliklerini değiştirmek isteyip karşı güvenli betik alan özelliği belirtir.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] içindeki her SharePoint proje öğesi, iki Boolean alt özelliğine sahip olan **Güvenli denetim girişleri** adlı bir özelliğe sahiptir: **betikte** **güvenli** ve güvenlidir. Safe özelliği, güvenilmeyen kullanıcıların bir denetime erişip erişemeyeceğini belirtir. Betik özelliği açısından güvenli, güvenilmeyen kullanıcıların bir denetimin özelliklerini görüntüleyip değiştiremeyeceğini belirtir.
 
- Güvenli denetim girdileri, bir derleme olarak başvurulur. Proje öğesinin girerek projenin derleme için güvenli denetim girdileri eklemek **güvenli denetim girdileri** özelliği. Ancak, aynı zamanda güvenli denetim girdileri bir projenin derleme ekleyebileceğiniz **Gelişmiş** sekmesinde **paket Tasarımcısı** eklediğinizde bir ek bütünleştirilmiş kod paketi. Daha fazla bilgi için [nasıl yapılır: Denetimleri güvenli denetim olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md) veya [güvenli denetim olarak bir Web Bölümü derlemeyi Kaydettirdikten](http://go.microsoft.com/fwlink/?LinkID=171013).
+ Güvenli denetim girişlerine bir derleme temelinde başvurulur. Proje öğesinin **Güvenli denetim girişleri** özelliğine girerek bir projenin derlemesine güvenli denetim girişleri eklersiniz. Ancak, pakete ek bir derleme eklediğinizde, **paket Tasarımcısı** ' nda **Gelişmiş** sekmesi aracılığıyla bir projenin derlemesine güvenli denetim girişleri de ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: denetimleri güvenli denetim olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md) veya [bir Web Bölümü derlemesini güvenli denetim olarak kaydetme](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11)).
 
 ### <a name="xml-entries-for-safe-controls"></a>Güvenli denetimler için XML girdileri
- Bir proje öğesi veya proje derlemesi için bir güvenli denetim girişi eklediğinizde, paket bildirimi aşağıdaki biçimde bir başvuru yazılır:
+ Bir proje öğesine veya projenin derlemesine bir güvenli denetim girişi eklediğinizde, paket bildirimine aşağıdaki biçimde bir başvuru yazılır:
 
 ```xml
 <Assemblies>
@@ -106,6 +106,6 @@ ms.locfileid: "66177705"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Paket ve SharePoint çözümlerini dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
-- [Çözüme dosyaları dahil etmek için modül kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md)
+- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [Çözümdeki dosyaları dahil etmek için modülleri kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md)
 - [SharePoint paketleme ve dağıtımını genişletme](../sharepoint/extending-sharepoint-packaging-and-deployment.md)

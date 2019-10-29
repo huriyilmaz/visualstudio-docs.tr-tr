@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6650edfc3c953d54578b800e213ee27092045e56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9d24a2ea1b614cb0ca82bdcf1c4954aba9a9174c
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666930"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984414"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>Metin Şablonları kullanarak Kod Oluşturma
 
@@ -28,7 +28,7 @@ System. xml ad alanı, bir XML belgesi yüklemeye ve sonra bellekte ücretsiz ol
 Bu örnek projede, bir şablon örnek bir XML dosyası okur ve her bir düğüm türüne karşılık gelen sınıflar oluşturur. El ile yazılmış kodda, XML dosyasında gezinmek için bu sınıfları kullanabilirsiniz. Uygulamanızı aynı düğüm türlerini kullanan başka herhangi bir dosya üzerinde de çalıştırabilirsiniz. Örnek XML dosyasının amacı, uygulamanızın ilgilenmesi için istediğiniz tüm düğüm türlerine örnekler sağlamaktır.
 
 > [!NOTE]
-> Visual Studio ile birlikte gelen [XSD. exe](http://go.microsoft.com/fwlink/?LinkId=178765)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
+> Visual Studio ile birlikte gelen [XSD. exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
 
 Örnek dosya aşağıda verilmiştir:
 
@@ -201,15 +201,15 @@ Kod bloğu sınırlayıcılarının `<#...#>` dikkat edin. Bu sınırlayıcılar
 
 Uygulamanız için kaynak kodu üreten bir şablon yazarken, iki ayrı program metni ile ilgilenolursunuz. Kod bloğu sınırlayıcılarının içindeki program, şablonu her kaydettiğinizde veya odağı başka bir pencereye taşıdığınızda çalışır. Oluşturduğu metin, sınırlayıcılar dışında görünen metin oluşturulan dosyaya kopyalanır ve uygulama kodunuzun bir parçası haline gelir.
 
-@No__t_0 yönergesi bir başvuru gibi davranır ve derlemeyi şablon kodu için kullanılabilir hale getirir. Şablon tarafından görülen derlemelerin listesi, uygulama projesindeki başvuruların listesinden ayrıdır.
+`<#@assembly#>` yönergesi bir başvuru gibi davranır ve derlemeyi şablon kodu için kullanılabilir hale getirir. Şablon tarafından görülen derlemelerin listesi, uygulama projesindeki başvuruların listesinden ayrıdır.
 
-@No__t_0 yönergesi `using` bir ifade gibi davranır ve içeri aktarılan ad alanındaki sınıfların kısa adlarını kullanmanıza olanak sağlar.
+`<#@import#>` yönergesi `using` bir ifade gibi davranır ve içeri aktarılan ad alanındaki sınıfların kısa adlarını kullanmanıza olanak sağlar.
 
 Ne yazık ki bu şablon kod üretse de, örnek XML dosyasındaki her düğüm için bir sınıf bildirimi oluşturur, böylece `<song>` düğümünün birkaç örneği varsa, sınıf şarkının çeşitli bildirimleri görünür.
 
 ### <a name="read-the-model-file-then-generate-the-code"></a>Model dosyasını okuyun, sonra kodu oluşturun
 
-Birçok metin şablonu, şablonun ilk bölümünün kaynak dosyayı okuduğunu ve ikinci bölüm şablonu oluşturduğu bir kalıbı izler. İçerdiği düğüm türlerini özetlemek için örnek dosyanın tümünü okudum ve sonra sınıf bildirimleri oluşturacaktır. @No__t_1 kullanabilmemiz için başka bir `<#@import#>` gerekir
+Birçok metin şablonu, şablonun ilk bölümünün kaynak dosyayı okuduğunu ve ikinci bölüm şablonu oluşturduğu bir kalıbı izler. İçerdiği düğüm türlerini özetlemek için örnek dosyanın tümünü okudum ve sonra sınıf bildirimleri oluşturacaktır. `Dictionary<>:` kullanabilmemiz için başka bir `<#@import#>` gerekir
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -270,7 +270,7 @@ Alt düğümlerin, özniteliklerin ve iç metnin özellikleri gibi ayrıntılar 
 
 ### <a name="access-the-visual-studio-api"></a>Visual Studio API 'sine erişme
 
-@No__t_1 yönergesinin `hostspecific` özniteliği ayarlandığında, şablonun Visual Studio API 'sine erişimi elde etmesine izin verir. Şablon, Şablon kodunda mutlak bir dosya yolu kullanmaktan kaçınmak için bunu proje dosyalarının konumunu almak için kullanabilir.
+`<#@template#>` yönergesinin `hostspecific` özniteliği ayarlandığında, şablonun Visual Studio API 'sine erişimi elde etmesine izin verir. Şablon, Şablon kodunda mutlak bir dosya yolu kullanmaktan kaçınmak için bunu proje dosyalarının konumunu almak için kullanabilir.
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>

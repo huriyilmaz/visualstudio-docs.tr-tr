@@ -12,52 +12,52 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 512dfda8c95ecd56fe44eb6878e6abc0d942a782
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bf943f9df4499b30e294e4d7e8bf48b25aa52eab
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62826738"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985982"
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme
-  Kullanarak bir Şeritteki özel sekmelerin sırasını değiştirebilirsiniz **Sekme Derlemi Düzenleyicisi**. Önce veya sonra Şeritteki yerleşik bir sekmeyi özel sekmeler konumlandırabilirsiniz. Yerleşik bir sekmeyi bir Microsoft Office uygulamasının Şerit üzerinde zaten var olan bir sekmedir. Örneğin, **veri** Excel yerleşik bir sekmede sekmesidir.
+  Bir Şeritteki özel sekmelerin sırasını **sekme koleksiyonu düzenleyicisini**kullanarak değiştirebilirsiniz. Şeritteki yerleşik bir sekmeden önce veya sonra özel sekmeler yerleştirebilirsiniz. Yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel 'deki yerleşik bir sekmedir.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
-### <a name="to-change-the-order-of-tabs-on-the-ribbon"></a>Şeritteki sekmeler sırasını değiştirmek için
+### <a name="to-change-the-order-of-tabs-on-the-ribbon"></a>Şeritteki sekmelerin sırasını değiştirmek için
 
-1. Şerit kod dosyasını seçin (*.vb* veya *.cs* dosya) içinde **Çözüm Gezgini**.
+1. **Çözüm Gezgini**içindeki Şerit kod dosyasını ( *. vb* veya *. cs* dosyası) seçin.
 
-2. Üzerinde **görünümü** menüsünde tıklatın **Tasarımcısı**.
+2. **Görünüm** menüsünde **Tasarımcı**' ya tıklayın.
 
-3. Şerit Tasarımcısını sağ tıklayın ve ardından **özellikleri**.
+3. Şerit Tasarımcısına sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-4. İçinde **özellikleri** penceresinde **sekmeleri** özelliği ve ardından üç nokta düğmesini (![ASP.NET Mobil Tasarımcısı elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcı elips")).
+4. **Özellikler** penceresinde, **Sekmeler** özelliğini seçin ve ardından üç nokta düğmesini (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) tıklatın.
 
-     **Sekme Derlemi Düzenleyicisi** görünür.
+     **Sekme Koleksiyonu Düzenleyicisi** görünür.
 
-5. İçinde **Sekme Derlemi Düzenleyicisi**, **üyeleri** listesinde, istediğiniz Taşı ve yukarı veya aşağı okları sekme sırasını değiştirmek için sekmesinde seçin.
+5. **Sekme koleksiyonu düzenleyicisinde**, **Üyeler** listesinde, taşımak istediğiniz sekmeyi seçin ve sekme sırasını değiştirmek için yukarı veya aşağı oklara tıklayın.
 
-### <a name="to-position-a-tab-before-or-after-a-built-in-tab-on-the-ribbon"></a>Bir sekme önce veya sonra Şeritteki yerleşik bir sekmeyi konumlandırmak için
+### <a name="to-position-a-tab-before-or-after-a-built-in-tab-on-the-ribbon"></a>Şeritteki yerleşik bir sekmeden önce veya sonra bir sekmeyi konumlandırmak için
 
-1. Şerit Tasarımcısı'nda bir özel sekmesini seçin.
+1. Şerit tasarımcısında özel bir sekme seçin.
 
-2. İçinde **özellikleri** penceresini genişletin **ControlId** özelliği ve ardından emin olun değerini **ControlIdType** özelliği **özel**.
+2. **Özellikler** penceresinde **ControlID** özelliğini genişletin ve **ControlIdType** özelliğinin değerinin **özel**olarak ayarlandığından emin olun.
 
-3. İçinde **özellikleri** penceresini genişletin **konumu** özelliği.
+3. **Özellikler** penceresinde, **konum** özelliğini genişletin.
 
-4. Ayarlama **PositionType** uygun değere özelliği:
+4. **PositionType** özelliğini uygun değer olarak ayarlayın:
 
-    - **BeforeOfficeId** grubu belirtilen yerleşik bir sekmeyi önce konumlandırır.
+    - **BeforeOfficeId** , belirtilen yerleşik bir sekmeden önce grubu konumlandırır.
 
-    - **AfterOfficeId** gruptan sonra belirtilen yerleşik bir sekmeyi konumlandırır.
+    - **AfterOfficeId** , belirtilen yerleşik bir sekmeden sonra grubu konumlandırır.
 
-5. Ayarlama **OfficeId** yerleşik bir sekmeyi denetim kimliği özelliği.
+5. **OfficeId** özelliğini yerleşik bir SEKMENIN denetim kimliği olarak ayarlayın.
 
-     Denetim kimliklerinin bir listesi için bkz. [Office 2010 Yardım dosyaları: Office fluent kullanıcı arabirimi denetimi tanımlayıcıları](http://go.microsoft.com/fwlink/?LinkID=181052).
+     Denetim kimliklerinin bir listesi için bkz. [office 2010 Yardım dosyaları: ofis akıcı Kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=6627).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Şerite Genel Bakış](../vsto/ribbon-overview.md)
+- [Şerite genel bakış](../vsto/ribbon-overview.md)
 - [Şerit Tasarımcısı](../vsto/ribbon-designer.md)
 - [Şerit XML](../vsto/ribbon-xml.md)
 - [İzlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)

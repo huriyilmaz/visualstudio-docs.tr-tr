@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Bulucu metoduna filtre tanımlayıcısı ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: bir Bulucu yöntemine filtre tanımlayıcısı ekleme | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,62 +15,62 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fceb6270aea9da5af1a53adf7560df7dd3702349
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f9dd853142d970cd14de20f4782accb3ce3e17eb
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63418300"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986246"
 ---
-# <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>Nasıl yapılır: Bir Bulucu metoduna filtre tanımlayıcısı ekleme
-  Filtre tanımlayıcıları, yürütmeden önce değerleri yöntemlere geçirmek model tüketicilerinin etkinleştirin. Daha fazla bilgi için [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
+# <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>Nasıl yapılır: bir Bulucu yöntemine filtre tanımlayıcısı ekleme
+  Filtre tanımlayıcıları, modelin tüketicilerini yürütmeden önce yöntemlere geçmesini sağlar. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
- Sık karşılaşılan senaryolardan biri, kullanıcıların SharePoint dış içerik türü'nın bazı ölçütlerle eşleşen örneğini almak istediğiniz ' dir. Bu senaryo bir Bulucu yöntemine filtre tanımlayıcısı ekleyerek destekler.
+ Yaygın olarak kullanılan bir senaryo, SharePoint 'teki kullanıcıların, bazı ölçütlerle eşleşen bir dış içerik türünün örneklerini almak istiyor. Bu senaryoyu bir Bulucu yöntemine filtre tanımlayıcısı ekleyerek destekleyebilirsiniz.
 
-### <a name="to-add-a-filter-descriptor-to-a-finder-method"></a>Bir Bulucu metoduna filtre tanımlayıcısı ekleme
+### <a name="to-add-a-filter-descriptor-to-a-finder-method"></a>Bir Bulucu yöntemine filtre tanımlayıcısı eklemek için
 
-1. İçinde **BDC yöntem ayrıntıları** penceresinde bir Bulucu yöntemi düğümünü genişletin, **parametreleri** düğümünü ve ardından giriş parametresi ekleyin. Daha fazla bilgi için [nasıl yapılır: Bir yönteme parametre eklemek](../sharepoint/how-to-add-a-parameter-to-a-method.md).
+1. **BDC Yöntem ayrıntıları** penceresinde, bir bulucu yönteminin düğümünü genişletin, **Parameters** düğümünü genişletin ve ardından bir giriş parametresi ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: bir yönteme parametre ekleme](../sharepoint/how-to-add-a-parameter-to-a-method.md).
 
-2. İçinde **metot ayrıntıları** penceresinde, parametrenin tür tanımlayıcısını seçin.
+2. **Yöntem ayrıntıları** penceresinde, parametrenin tür tanımlayıcısını seçin.
 
-3. Menü çubuğunda, **görünümü** > **Özellikler penceresi**.
+3. Menü çubuğunda > **Özellikler penceresini** **görüntüle** ' yi seçin.
 
-4. İçinde **özellikleri** penceresinde **tür adı** özellik filtresi için uygun bir veri türü.
+4. **Özellikler** penceresinde, **tür adı** özelliğini filtreye uygun bir veri türü olarak ayarlayın.
 
-     Örneğin, bir filtre, sipariş tarihi yöntem tarafından döndürülen satış siparişleri sayısını sınırlamak için kullanabilirsiniz. Bu filtre desteklemek için **tür adı** tür tanımlayıcısı özelliği ayarlanmalıdır **System.DateTime**.
+     Örneğin, bir filtre, yöntemi tarafından döndürülen satış siparişlerinin sayısını sınırlandırmak için bir sipariş tarihi kullanabilir. Bu filtreyi desteklemek için, tür tanımlayıcısının **tür adı** özelliği **System. DateTime**olarak ayarlanmalıdır.
 
-5. İçinde **metot ayrıntıları** penceresini genişletin **filtre tanımlayıcıları** düğümü.
+5. **Yöntem ayrıntıları** penceresinde, **filtre tanımlayıcıları** düğümünü genişletin.
 
-6. İçinde **filtre tanımlayıcısı ekleme** listesinde **filtre tanımlayıcısı oluştur**.
+6. **Filtre tanımlayıcısı Ekle** listesinde, **filtre tanımlayıcısı oluştur**' u seçin.
 
-     Yeni filtre tanımlayıcısı düğmesinin altında görünür **filtre tanımlayıcıları** düğümü.
+     **Filtre tanımlayıcıları** düğümünün altında yeni bir filtre tanımlayıcısı görüntülenir.
 
-7. Menü çubuğunda, **görünümü** > **Özellikler penceresi**.
+7. Menü çubuğunda > **Özellikler penceresini** **görüntüle** ' yi seçin.
 
-8. İçinde **özellikleri** penceresinde seçin **türü** özelliği.
+8. **Özellikler** penceresinde **tür** özelliğini seçin.
 
-9. İçin görüntülenen listedeki **türü** özelliğini istediğiniz filtre deseni seçin.
+9. **Tür** özelliği için görüntülenen listede, istediğiniz filtreleme modelini seçin.
 
-     Örneğin, sipariş tarihi bir Bulucu yöntemi döndürülen satış siparişleri sayısını sınırlamak için kullandığı bir filtre oluşturmak için tercih **karşılaştırma**. Bir Bulucu yöntemi belirli bir koşulu karşılayan örneklerini döndüren bir karşılaştırma filtresi sağlar. Her filtre desen hakkında daha fazla bilgi için bkz: [, filtre tarafından desteklenen türleri İVB](http://go.microsoft.com/fwlink/?LinkId=169287).
+     Örneğin, bir bulucu yönteminde döndürülen satış siparişlerinin sayısını sınırlamak üzere bir sıra tarihi kullanan bir filtre oluşturmak için **karşılaştırma**' yı seçin. Bir karşılaştırma filtresi, bir bulucu yönteminin yalnızca belirli bir koşulu karşılayan örnekleri döndürdüğünden emin olmanızı sağlar. Her filtreleme deseninin hakkında daha fazla bilgi için bkz. [BDC tarafından desteklenen filtre türleri](/previous-versions/office/developer/sharepoint-2010/ee556392(v=office.14)).
 
-10. İçinde **özellikleri** penceresinde seçin **ilişkili tür tanımlayıcısı** özelliği.
+10. **Özellikler** penceresinde, **ilişkili tür tanımlayıcıları** özelliğini seçin.
 
-11. İçin görüntülenen listedeki **ilişkili tür tanımlayıcısı** özelliği, bu yordamda daha önce oluşturduğunuz tür tanımlayıcısını seçin. Bu Bulucu metodunu giriş parametresi için filtre ilişkilendirir.
+11. **Ilişkili tür tanımlayıcıları** özelliği için görüntülenen listede, bu yordamda daha önce oluşturduğunuz tür tanımlayıcısını seçin. Bu, filtreyi Finder yönteminin giriş parametresine ilişkilendirir.
 
-12. Veri döndüren Bulucu yöntemine kod ekleyin. Select sorgusunda koşulu olarak giriş parametresini kullanabilirsiniz.
+12. Veri döndüren Bulucu yöntemine kod ekleyin. Giriş parametresini bir SELECT sorgusunda koşul olarak kullanabilirsiniz.
 
-     Aşağıdaki örnek belirtilen bir sipariş tarihi olan satış siparişlerini döndürür.
+     Aşağıdaki örnek, belirtilen sipariş tarihi olan satış siparişlerini döndürür.
 
     > [!NOTE]
-    > Değiştirin `ServerName` alanını sunucunuzun adıyla.
+    > `ServerName` alanının değerini sunucunuzun adıyla değiştirin.
 
      [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]
      [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
-- [Nasıl yapılır: Belirli bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)
-- [Nasıl yapılır: Bir yönteme bir parametre ekleyin](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Nasıl yapılır: Bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
+- [Nasıl yapılır: Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
+- [Nasıl yapılır: belirli bir bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)
+- [Nasıl yapılır: bir yönteme parametre ekleme](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [İş verilerini SharePoint ile tümleştirme](../sharepoint/integrating-business-data-into-sharepoint.md)

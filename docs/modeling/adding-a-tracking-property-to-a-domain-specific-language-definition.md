@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0fd1fb2bc6440b02e0aad163ee55a7a7f86807a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9843e881ddfa202778321dc2e1510c2e121095db
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652285"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984168"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>Alana Özgü Dil Tanımına İzleme Özelliği ekleme
 
@@ -48,13 +48,13 @@ Bu yönergeyi başlatabilmeniz için önce şu bileşenleri yüklemeniz gerekir:
 
 | | |
 |-|-|
-| Visual Studio | [http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579) |
-| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580) |
-| [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185581](http://go.microsoft.com/fwlink/?LinkID=185581) |
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkID=185579](https://visualstudio.microsoft.com/) |
+| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts) |
+| [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185581](https://code.msdn.microsoft.com/site/search?query=%22Modeling%20SDK%22&f%5B0%5D.Value=%22Modeling%20SDK%22&f%5B0%5D.Type=SearchText&ac=5) |
 
 ## <a name="create-the-project"></a>Projeyi oluşturma
 
-1. Alana Özgü Dil Tasarımcısı projesi oluşturun. @No__t_0 adlandırın.
+1. Alana Özgü Dil Tasarımcısı projesi oluşturun. `TrackingPropertyDSL`adlandırın.
 
 2. **Alana özgü dil Tasarımcısı sihirbazında**, aşağıdaki seçenekleri ayarlayın:
 
@@ -238,10 +238,10 @@ HelperClasses.cs dosyasına `TrackingHelper` ve `CriticalException` sınıfları
 
 ## <a name="add-custom-code-for-the-custom-type-descriptor"></a>Özel tür tanımlayıcısı için özel kod ekleme
 
-@No__t_1 etki alanı sınıfı için tür tanımlayıcısı için `GetCustomProperties` yöntemini uygulayın.
+`ExampleModel` etki alanı sınıfı için tür tanımlayıcısı için `GetCustomProperties` yöntemini uygulayın.
 
 > [!NOTE]
-> @No__t_0 çağrıları için özel tür tanımlayıcısı için DSL araçlarının üretme kodu `GetCustomProperties`; ancak DSL araçları yöntemi uygulayan kod oluşturmaz.
+> `ExampleModel` çağrıları için özel tür tanımlayıcısı için DSL araçlarının üretme kodu `GetCustomProperties`; ancak DSL araçları yöntemi uygulayan kod oluşturmaz.
 
 Bu yöntemin tanımlanması, ad alanı izleme özelliği için izleme özelliği tanımlayıcısı oluşturur. Ayrıca, izleme özelliğinin özniteliklerini sağlamak **Özellikler** penceresinin özelliği doğru görüntülemesini sağlar.
 
@@ -334,12 +334,12 @@ Oluşturulan kod, ExampleElement alanı sınıfı için bir tür açıklaması s
 
 ## <a name="add-custom-code-for-the-model"></a>Model için özel kod ekleme
 
-@No__t_1 etki alanı sınıfı için `GetCustomElementsValue` yöntemini uygulayın.
+`ExampleModel` etki alanı sınıfı için `GetCustomElementsValue` yöntemini uygulayın.
 
 > [!NOTE]
 > DSL araçlarının `ExampleModel` çağrıları için üretme kodu `GetCustomElementsValue`; ancak DSL araçları yöntemi uygulayan kod oluşturmaz.
 
-@No__t_0 yönteminin tanımlanması, `ExampleModel` 'ın CustomElements hesaplanan özelliğine yönelik mantığı sağlar. Bu yöntem, Kullanıcı tarafından güncelleştirilmiş bir değere sahip bir ad alanı izleme özelliğine sahip `ExampleElement` etki alanı sınıflarının sayısını sayar ve bu sayıyı modeldeki toplam öğelerin bir oranı olarak temsil eden bir dize döndürür.
+`GetCustomElementsValue` yönteminin tanımlanması, `ExampleModel`'ın CustomElements hesaplanan özelliğine yönelik mantığı sağlar. Bu yöntem, Kullanıcı tarafından güncelleştirilmiş bir değere sahip bir ad alanı izleme özelliğine sahip `ExampleElement` etki alanı sınıflarının sayısını sayar ve bu sayıyı modeldeki toplam öğelerin bir oranı olarak temsil eden bir dize döndürür.
 
 Ayrıca, `ExampleModel` bir `OnDefaultNamespaceChanged` yöntemi ekleyin ve `ExampleModel` çağırmak için `DefaultNamespacePropertyHandler` iç içe sınıfının `OnValueChanged` yöntemini geçersiz kılın.
 
@@ -412,7 +412,7 @@ DefaultNamespace özelliği ad alanı izleme özelliğini hesaplamak için kulla
 
 ## <a name="add-custom-code-for-the-tracking-property"></a>Izleme özelliği için özel kod ekleme
 
-@No__t_1 etki alanı sınıfına bir `CalculateNamespace` yöntemi ekleyin.
+`ExampleElement` etki alanı sınıfına bir `CalculateNamespace` yöntemi ekleyin.
 
 Bu yöntemin tanımlanması `ExampleModel` CustomElements 'ın hesaplanan özelliğine yönelik mantığı sağlar. Bu yöntem, Kullanıcı durumunda bir ad alanı izleme özelliğine sahip `ExampleElement` etki alanı sınıflarının sayısını sayar ve bu sayıyı modeldeki toplam öğelerin bir oranı olarak temsil eden bir dize döndürür.
 
@@ -720,7 +720,7 @@ Sonraki adım, izleme özelliğinin doğru çalıştığını doğrulayabilmeniz
 
 2. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
 
-    @No__t_0 deneysel derlemesi, boş bir test dosyası içeren **hata ayıklama** çözümünü açar.
+    [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] deneysel derlemesi, boş bir test dosyası içeren **hata ayıklama** çözümünü açar.
 
 3. **Çözüm Gezgini**, test. trackingPropertyDsl dosyasına çift tıklayarak tasarımcı içinde açın ve tasarım yüzeyine tıklayın.
 

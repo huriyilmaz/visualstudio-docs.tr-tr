@@ -12,37 +12,25 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f572405b6246619dac8b567283696319d65211bc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8bea9faa315fbd6ec41c667836dac7216f1f8f81
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62953194"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986272"
 ---
 # <a name="additional-resources-to-develop-office-solutions"></a>Office çözümleri geliştirmek için ek kaynaklar
-  Visual Studio'da Microsoft Office geliştirici araçları yalnızca bir Office uygulamalarını genişletmek için birçok yol gösterir. Office uygulamaları, ayrıca Open XML Visual Studio ya da bu belgeleri Office geliştirici araçları tarafından kapsanmayan biçimleri gibi bazı yerleşik özellikler vardır.
+  Visual Studio 'daki Microsoft Office geliştirici araçları, Office uygulamalarını genişletmenin pek çok yolunu temsil eder. Office uygulamalarında, Visual Studio 'da Office geliştirici araçları veya bu belgeler kapsamında olmayan Open XML biçimleri gibi bazı yerleşik özellikler de vardır.
 
- Microsoft Office ve Visual Studio Office geliştirici araçları tarafından sunulan olanaklar hakkında daha fazla bilgi edinmek istiyorsanız, bu kaynakları kullanmaya alırsınız.
+ Visual Studio 'da Microsoft Office ve Office geliştirici araçları tarafından sunulan olasılıklar hakkında daha fazla bilgi edinmek istiyorsanız, bu kaynaklar başlamanıza olanak sağlar.
 
-[Visual Studio Geliştirici Merkezi ile Microsoft Office geliştirme](http://go.microsoft.com/fwlink/?LinkId=149752)
+[Office Geliştirici Merkezi](https://developer.microsoft.com/office/docs)
 
-Son makaleler, videolar, forumlar, bloglar ve Visual Studio Office geliştirici araçları için diğer kaynaklar için Yönetim Portalı.
+Merkezi Portal, Office geliştiricileri için en son kaynaklara yöneliktir (Visual Studio kullanarak Office geliştirmeye özgü değildir).
 
-[Office Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=83467)
+[MSDN Kitaplığı 'nın Microsoft Office geliştirme bölümü](/previous-versions/office/office-12/bb726434(v=office.12))
 
-(Visual Studio kullanarak Office geliştirmeye özgü olmayan) Office geliştiriciler için en son kaynaklar için Yönetim Portalı.
-
-[MSDN Kitaplığı'nın Microsoft Office geliştirme bölümü](http://go.microsoft.com/fwlink/?LinkId=149870)
-
-Burada makaleler bulun ve başvuru belgeleri (Visual Studio kullanarak Office geliştirmeye özgü olmayan) Office'in bazı sürümleri için çözümleri geliştirme hakkında MSDN Kitaplığı'nın alan.
-
-[Office business uygulamaları Geliştirici Portalı](http://go.microsoft.com/fwlink/?LinkId=99125)
-
-Office Business Applications (OBU) hakkında bilgi için Yönetim Portalı. OBU satır, iş kolu (LOB) sistemleri, yenilikçi yöntemlerle kaynaklarınızı birleştirerek üzerinde var olan BT yatırımlarınızı genişletebilirsiniz. Bu nedenle, Microsoft Office uygulamaları aracılığıyla bunları kullanan kişilere bağlanın.
-
-[Visual Studio blogu ile Office geliştirme](http://go.microsoft.com/fwlink/?LinkId=149748)
-
-Blog, Visual Studio için Office geliştirici araçları oluşturan Microsoft ekibi tarafından korunur.
+MSDN Kitaplığı 'nın çeşitli Office sürümleri (Visual Studio kullanarak Office geliştirmeye özgü değil) için çözümler geliştirme hakkında makaleler ve başvuru belgeleri bulabileceğiniz alanı.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümlerindeki hatalar için ek destek](../vsto/additional-support-for-errors-in-office-solutions.md)
+- [Office çözümlerinde hatalar için ek destek](../vsto/additional-support-for-errors-in-office-solutions.md)

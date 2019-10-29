@@ -18,17 +18,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5067a52fb9d6a0b6d8991b68a2fce8cdbae987c9
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 668517705caa7ba6baef0b85305bf4470bc3b26b
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255936"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985607"
 ---
 # <a name="ribbon-overview"></a>Şerite genel bakış
   Şerit, daha kolay bulabilmeniz için ilgili komutları düzenlemenin bir yoludur. Komutlar şeritte denetimler olarak görünür. Denetimler, bir uygulama penceresinin üst kenarındaki yatay bir şerit üzerinde *gruplar* halinde düzenlenir. İlgili gruplar sekmeler üzerinde düzenlenmiştir.
 
- Microsoft Office sisteminin önceki sürümlerindeki menüler ve araç çubukları kullanılarak erişilen özelliklerin çoğuna artık şerit kullanılarak erişilebilir. Daha fazla bilgi için, [2007 Microsoft Office sistemine yönelik kullanıcı arabirimine yönelik teknik makale geliştiricisine genel bakış](http://go.microsoft.com/fwlink/?LinkID=70860)makalesine bakın.
+ Microsoft Office sisteminin önceki sürümlerindeki menüler ve araç çubukları kullanılarak erişilen özelliklerin çoğuna artık şerit kullanılarak erişilebilir. Daha fazla bilgi için, [2007 Microsoft Office sistemine yönelik kullanıcı arabirimine yönelik teknik makale geliştiricisine genel bakış](/previous-versions/office/developer/office-2007/aa338198(v=office.12))makalesine bakın.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -81,12 +81,12 @@ ms.locfileid: "71255936"
 
  Ayrıca, değiştirilmemiş varsayılan özellik değerleri, sonuçta elde edilen Şerit XML dosyasında görünmez.
 
- Şeriti XML 'e aktarma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Şerit Tasarımcısından Şerit XML](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)'ine bir şerit dışarı aktarın.
+ Şeriti XML 'e aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Şerit Tasarımcısından ŞERIT XML 'ine nasıl bir şerit dışarı aktarma](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md).
 
 ### <a name="update-the-code"></a>Kodu güncelleştirme
- **Çözüm Gezgini**yeni bir Şerit kod dosyası eklenir. Bu dosya Ribbon XML sınıfını içerir. Bir düğmeye tıklanması gibi kullanıcı eylemlerini `Ribbon Callbacks` işlemek için bu sınıfın bölgesinde geri çağırma yöntemleri oluşturmanız gerekir. Olay işleyicilerindeki kodunuzu bu geri çağırma yöntemlerine taşıyın ve şerit genişletilebilirliği (RibbonX) programlama modeliyle çalışmak için kodu değiştirin. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
+ **Çözüm Gezgini**yeni bir Şerit kod dosyası eklenir. Bu dosya Ribbon XML sınıfını içerir. Bir düğmeye tıklanması gibi kullanıcı eylemlerini işlemek için bu sınıfın `Ribbon Callbacks` bölgesinde geri çağırma yöntemleri oluşturmanız gerekir. Olay işleyicilerindeki kodunuzu bu geri çağırma yöntemlerine taşıyın ve şerit genişletilebilirliği (RibbonX) programlama modeliyle çalışmak için kodu değiştirin. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
 
- Ayrıca `ThisAddIn`, yöntemigeçersizkılan,`CreateRibbonExtensibilityObject` `ThisDocument` `ThisWorkbook`veya sınıfına kod eklemeniz gerekir ve Office uygulamasına Şerit XML sınıfını geri döndürür.
+ Ayrıca, `CreateRibbonExtensibilityObject` yöntemini geçersiz kılan ve Şerit XML sınıfını Office uygulamasına döndüren `ThisAddIn`, `ThisWorkbook`veya `ThisDocument` sınıfa kod eklemeniz gerekir.
 
  Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
 
@@ -103,7 +103,7 @@ ms.locfileid: "71255936"
 ### <a name="select-which-ribbons-to-display-at-run-time"></a>Çalışma zamanında görüntülenecek şeritleri seçin
  Bir proje birden fazla şerit içerebildiğinden, çalışma zamanında görüntülenecek Şeriti seçebilirsiniz.
 
- Çalışma zamanında görüntülenecek bir Şerit seçmek için, projenizin `CreateRibbonExtensibilityObject` , veya `ThisDocument` sınıfındaki yöntemini `ThisAddin` `ThisWorkbook`geçersiz kılın ve göstermek istediğiniz şeridi döndürün. Aşağıdaki örnek, adlı `myCondition` bir alanın değerini denetler ve uygun şeridi döndürür.
+ Çalışma zamanında görüntülenecek bir Şerit seçmek için, projenizin `ThisAddin`, `ThisWorkbook`veya `ThisDocument` sınıfında `CreateRibbonExtensibilityObject` yöntemi geçersiz kılın ve göstermek istediğiniz şeridi döndürün. Aşağıdaki örnek, `myCondition` adlı bir alanın değerini denetler ve uygun şeridi döndürür.
 
 > [!NOTE]
 > Bu örnekte kullanılan sözdizimi, **Şerit (görsel Tasarımcı)** öğesi kullanılarak oluşturulmuş bir şerit döndürüyor. **Şerit (XML)** öğesi kullanılarak oluşturulan bir şeridi döndürme için sözdizimi biraz farklıdır. **Şerit (XML)** öğesi döndürme hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md).
@@ -121,12 +121,12 @@ ms.locfileid: "71255936"
 |[Şerit Tasarımcısı](../vsto/ribbon-designer.md)|Bir Microsoft Office uygulamasının şeritlerine özel sekmeler, gruplar ve denetimler eklemek için şerit tasarımcısını nasıl kullanabileceğinizi açıklar.|
 |[İzlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)|Şerit Tasarımcısını kullanarak özel bir şerit sekmesi oluşturmayı gösterir. Özel sekmeye denetim eklemek ve bunları konumlandırmak için şerit tasarımcısını kullanabilirsiniz.|
 |[Şerit nesne modeline genel bakış](../vsto/ribbon-object-model-overview.md)|Çalışma zamanında Şerit denetimlerinin özelliklerini almak ve ayarlamak için kullanabileceğiniz, türü kesin belirlenmiş nesne modeline genel bir bakış sağlar.|
-|[İzlenecek yol: Çalışma zamanında Şeritteki denetimleri güncelleştirme](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)|Şerit 'i Office uygulamasına yükledikten sonra Şeritteki denetimleri güncelleştirmek için şerit nesne modelinin nasıl kullanılacağını gösterir.|
+|[İzlenecek yol: çalışma zamanında Şeritteki denetimleri güncelleştirme](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)|Şerit 'i Office uygulamasına yükledikten sonra Şeritteki denetimleri güncelleştirmek için şerit nesne modelinin nasıl kullanılacağını gösterir.|
 |[Outlook için şerit özelleştirme](../vsto/customizing-a-ribbon-for-outlook.md)|Microsoft Office Outlook 'ta şeridi özelleştirmeye yönelik rehberlik sağlar.|
 |[InfoPath için bir şeridi özelleştirme](../vsto/customizing-a-ribbon-for-infopath.md)|Microsoft Office InfoPath 'te Şeriti özelleştirmeye yönelik rehberlik sağlar.|
 |[Çalışma zamanında Şerite erişin](../vsto/accessing-the-ribbon-at-run-time.md)|Şerit 'in nasıl gösterileceğini, gizleneceğini ve değiştirileceğini gösterir ve kullanıcıların kodu özel bir görev bölmesinde, Eylemler bölmesinde veya Outlook form bölgesindeki denetimlerden çalıştırmasına olanak tanır.|
 |[Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)|Şeritteki sekmelerin sırasının nasıl değiştirileceğini gösterir.|
-|[Nasıl yapılır: Yerleşik bir sekmeyi özelleştirme](../vsto/how-to-customize-a-built-in-tab.md)|Yerleşik bir sekmeye grupların ve denetimlerin nasıl ekleneceğini gösterir.|
+|[Nasıl yapılır: yerleşik bir sekmeyi özelleştirme](../vsto/how-to-customize-a-built-in-tab.md)|Yerleşik bir sekmeye grupların ve denetimlerin nasıl ekleneceğini gösterir.|
 |[Nasıl yapılır: Backstage görünümüne denetimler ekleme](../vsto/how-to-add-controls-to-the-backstage-view.md)|**Dosyaya**tıkladığınızda açılan menüye denetimlerin nasıl ekleneceğini gösterir.|
 |[Nasıl yapılır: Şerit grubuna iletişim kutusu Başlatıcısı Ekleme](../vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)|Şeritteki herhangi bir gruba bir iletişim kutusu Başlatıcısı ekleneceğini gösterir.|
 |[Nasıl yapılır: Şerit Tasarımcısından Şerit XML 'ine şerit aktarma](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)|Şeriti tasarımcıdan Şerit XML 'ine dışa aktararak, şeridin gelişmiş yollarla nasıl özelleştirileceğini gösterir.|

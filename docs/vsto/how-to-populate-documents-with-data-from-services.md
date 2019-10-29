@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Belgeleri hizmet verileriyle doldurma'
+title: 'Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,49 +14,47 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6239bc351872dc7a945c3fbff8ad1ed13817c3ef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4f53000f7d6aa8bdd8261bbe5658607918b6b449
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967790"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985864"
 ---
-# <a name="how-to-populate-documents-with-data-from-services"></a>Nasıl yapılır: Belgeleri hizmet verileriyle doldurma
+# <a name="how-to-populate-documents-with-data-from-services"></a>Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma
 
-Windows Forms projelerinde olduğu gibi veri erişimi için Microsoft Office belge düzeyinde projelerde aynı şekilde çalışır. Çözümünüze verileri getirmek için aynı araçları ve kodu kullanın ve verileri görüntülemek için Windows Forms denetimleri bile kullanabilirsiniz. Ayrıca, olayları ve veri bağlama özelliğiyle ile zenginleştirilmiştir yerel nesneler Microsoft Office Excel ve Microsoft Office Word konak kontrollerinden yararlanabilir. Daha fazla bilgi için [konak öğelerini ve denetimlerine genel bakış için ana bilgisayar](../vsto/host-items-and-host-controls-overview.md).
+Veri erişimi, Windows Forms projelerinde olduğu gibi Microsoft Office için belge düzeyi projelerde aynı şekilde çalışacaktır. Verileri çözümünüze getirmek için aynı araçları ve kodu kullanırsınız, hatta verileri görüntülemek için Windows Forms denetimleri de kullanabilirsiniz. Ayrıca, Microsoft Office Excel 'de yerel nesneler olan ve olaylar ve veri bağlama özelliğiyle geliştirilmiş Word Microsoft Office, ana bilgisayar denetimleri adlı denetimlerin avantajlarından yararlanabilirsiniz. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
-Aşağıdaki örnek, verilere bağlı denetimler, tasarım zamanında belgelere ekleme gösterilmektedir. Verilere bağlı denetimler, çalışma zamanında VSTO eklentiler ekleme örneği için bkz: [izlenecek yol: Bir VSTO eklenti projesinde bir hizmetten verilere bağlama](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md).
+Aşağıdaki örnek, tasarım zamanında belgelere veriye dayalı denetimlerin nasıl ekleneceğini gösterir. Çalışma zamanında VSTO Eklentilerindeki veriye bağlı denetimlerin nasıl ekleneceği hakkında bir örnek için bkz. [Izlenecek yol: VSTO eklenti projesindeki bir hizmetten veriye bağlama](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md).
 
-![video bağlantı](../vsto/media/playvideo.gif "video bağlantı") ilgili video gösterimi için bkz. [nasıl yaparım? Microsoft Excel web Hizmetleri ile etkileşim? ](http://go.microsoft.com/fwlink/?LinkID=130284).
+## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>Belge düzeyindeki bir projeyi bir Web hizmetindeki verilerle doldurmak için
 
-## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>Bir belge düzeyi projesi bir web hizmetinden veri ile doldurmak için
+1. **Veri kaynakları** penceresini açın ve projeniz için bir hizmet veri kaynağı oluşturun. Daha fazla bilgi için bkz. [Yeni veri kaynakları ekleme](../data-tools/add-new-data-sources.md).
 
-1. Açık **veri kaynakları** penceresi ve projeniz için bir veri kaynağı hizmeti oluşturun. Daha fazla bilgi için [yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md).
+2. **Veri kaynakları** penceresinden istediğiniz tabloyu veya alanı belgenize sürükleyin.
 
-2. Tablo veya istediğiniz alanı sürükleyin **veri kaynakları** belgenize penceresi.
+     Belgede bir denetim oluşturulur, projenizdeki nesne sınıfına bağlı bir <xref:System.Windows.Forms.BindingSource> oluşturulur ve hizmet için sınıflar oluşturulur.
 
-     Bir denetim, belgede oluşturulur bir <xref:System.Windows.Forms.BindingSource> oluşturulan nesne sınıfı, projenizdeki bağlanır ve sınıflar, hizmet için oluşturulur.
+3. Kodunuzda, 1. adımda ' ye bağladığınız Web hizmeti sınıfının bir örneğini oluşturun.
 
-3. Kodunuzda, 1. adımda bağlandığı web hizmeti sınıfının bir örneğini oluşturun.
+4. Web hizmetiyle iletişim için gereken özellikler varsa, bu özelliklerin örneklerini oluşturun.
 
-4. Web hizmeti ile iletişim için gerekli olan özellikleri varsa, bu özellikleri bir örneğini oluşturun.
+5. Web hizmeti tarafından sunulan yöntemleri ve 4. adımda oluşturduğunuz tüm özellik örneklerini kullanarak bir veri isteği oluşturun ve gönderin.
 
-5. Oluşturun ve 4. adımda oluşturduğunuz Web hizmeti ve herhangi bir özellik örnekleri tarafından kullanıma sunulan yöntemleri kullanarak veri isteği gönderin.
+     Kullandığınız yöntemler Web hizmetinin sunduğu yöntemlere bağlıdır.
 
-     Kullandığınız yöntem, web hizmeti sunduğuna bağlıdır.
+6. Web hizmetinden veri yanıtını <xref:System.Windows.Forms.BindingSource><xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliğine atayın.
 
-6. Web hizmetine veri yanıtını atamayı <xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliği <xref:System.Windows.Forms.BindingSource>.
-
-Projeyi çalıştırdığınızda, denetimler, veri kaynağındaki ilk kaydı görüntüler. Nesneleri kullanarak para birimi olaylarını işleme göre kayıtlar arasında kaydırma etkinleştirebilirsiniz <xref:System.Windows.Forms.BindingSource>.
+Projeyi çalıştırdığınızda, denetimler veri kaynağındaki ilk kaydı görüntüler. <xref:System.Windows.Forms.BindingSource>nesneleri kullanarak para birimi olaylarını işleyerek kayıtlarda gezinmeyi etkinleştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)
 - [Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
-- [Nasıl yapılır: Çalışma sayfalarını veritabanı verileriyle doldurma](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
-- [Nasıl yapılır: Belgeleri nesne verileriyle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)
-- [Nasıl yapılır: Belgeleri veritabanı verileriyle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
-- [Nasıl yapılır: Bir konak kontrolü verileriyle veri kaynağını güncelleme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [Nasıl yapılır: çalışma sayfalarını bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
+- [Nasıl yapılır: belgeleri nesnelerden verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)
+- [Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
+- [Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)

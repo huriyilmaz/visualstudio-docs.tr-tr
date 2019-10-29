@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Varlıklar arasında ilişkilendirme oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: varlıklar arasında Ilişkilendirme oluşturma | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -21,56 +21,56 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ce6d0bad9da4f11b5fae1daf93657c6908cf5e95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cba9d712e2bcfa90ae37d47e3c518697f10b6add
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966802"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981842"
 ---
-# <a name="how-to-create-an-association-between-entities"></a>Nasıl yapılır: Varlıklar arasında ilişkilendirme oluşturma
-  İlişkilendirmeleri oluşturarak iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasında ilişkiler tanımlayabilirsiniz. Visual Studio model tüketicilerinin her ilişkilendirmesi hakkında bilgi sağlayan yöntemler oluşturur. Bu yöntemler, SharePoint web bölümleri, liste veya bir kullanıcı arabirimi (UI) veri ilişkileri görüntülemek için özel uygulamaları tarafından kullanılabilecek.
+# <a name="how-to-create-an-association-between-entities"></a>Nasıl yapılır: varlıklar arasında ilişkilendirme oluşturma
+  İlişkiler oluşturarak Iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasında ilişkiler tanımlayabilirsiniz. Visual Studio, her ilişki hakkında bilgi içeren modelin tüketicilerini sağlayan yöntemler oluşturur. Bu yöntemler, veri ilişkilerini bir kullanıcı arabiriminde (UI) göstermek için SharePoint Web bölümleri, listeleri veya özel uygulamalar tarafından kullanılabilir.
 
- İki tür ilişkilerini BDC tasarımcısında oluşturabilirsiniz: yabancı anahtar tabanlı ilişkilendirmeleri ve yabancı anahtarsız ilişkileri. Daha fazla bilgi için [varlıklar arasında ilişkilendirme oluşturma](../sharepoint/creating-an-association-between-entities.md).
+ İVB tasarımcısında iki tür ilişki oluşturabilirsiniz: yabancı anahtar tabanlı ilişkilendirmeler ve yabancı anahtarsız ilişkilendirmeleri. Daha fazla bilgi için bkz. [varlıklar arasında Ilişkilendirme oluşturma](../sharepoint/creating-an-association-between-entities.md).
 
-### <a name="to-create-an-association-between-entities"></a>Varlıklar arasında ilişkilendirme oluşturma
+### <a name="to-create-an-association-between-entities"></a>Varlıklar arasında bir ilişkilendirme oluşturmak için
 
-1. Üzerinde **BusinessDataConnectivity** sekmesinde **araç kutusu**, seçin **ilişkilendirme** öğesi.
+1. **Araç kutusunun** **BusinessDataConnectivity** sekmesinde **ilişkilendirme** öğesini seçin.
 
-2. İVB Tasarımcısı kaynak varlık seçin ve ardından hedef varlık seçin.
+2. IVB tasarımcısında, kaynak varlığı seçin ve ardından hedef varlığı seçin.
 
-     **İlişkilendirme Düzenleyicisi** görünür.
+     **Ilişkilendirme Düzenleyicisi** görünür.
 
-3. Bir yabancı anahtar tabanlı ilişki oluşturmak isteyip istemediğinizi seçin **yabancı anahtar ilişkilendirmesi olduğundan** onay kutusu.
+3. Yabancı anahtar tabanlı bir ilişki oluşturmak istiyorsanız, **yabancı anahtar Ilişkilendirmesi olan** onay kutusunu seçin.
 
-    1. İçinde **kaynak kimliği** sütununun **tanımlayıcı eşlemesi** tablo, tanımlayıcı yanında görünen eşleşen her tür tanımlayıcısını seçin **alan** sütun.
+    1. **Tanımlayıcı eşleme** tablosunun **kaynak kimliği** sütununda, **alan** sütununda görüntülenen her eşleşen tür tanımlayıcısının yanındaki tanımlayıcıyı seçin.
 
-         Örneğin, **kaynak kimliği** sütunundaki `ContactID` yanındaki `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` tür tanımlayıcısı ve `ReadItem.salesOrder.SalesOrder.ContactID` tür tanımlayıcısı.
+         Örneğin, **kaynak kimliği** sütununda `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` tür tanımlayıcısının yanındaki `ContactID` ' ı ve `ReadItem.salesOrder.SalesOrder.ContactID` tür tanımlayıcısını seçin.
 
-4. Bir yabancı anahtarsız ilişkilendirmesini oluşturmak istiyorsanız, Temizle **yabancı anahtar ilişkilendirmesi olduğundan** onay kutusu.
+4. Yabancı bir keyıgn Association oluşturmak istiyorsanız, **yabancı anahtar Ilişkilendirmesi olan** onay kutusunu temizleyin.
 
-5. Seçin **Tamam** düğmesi.
+5. **Tamam** düğmesini seçin.
 
-6. İVB Tasarımcısı üzerinde kaynak varlık ve hedef varlık ilişkiyi temsil eden bir çizgi görünür.
+6. IVB tasarımcısında, kaynak varlık ve hedef varlık arasında ilişkiyi temsil eden bir çizgi görünür.
 
-     Visual Studio bir hizmet sınıfı, hedef varlık ve hizmet sınıfı, kaynak varlık ilişkisi Gezgin yöntemi ekler. İlişkilendirme Gezinti yöntemleri hakkında daha fazla bilgi için bkz. [desteklenen işlemler](http://go.microsoft.com/fwlink/?LinkId=169286).
+     Visual Studio, hedef varlığın hizmet sınıfına ve kaynak varlığın hizmet sınıfına bir Ilişkilendirme gezgin yöntemi ekler. Ilişkilendirme gezinti yöntemleri hakkında daha fazla bilgi için bkz. [desteklenen işlemler](/previous-versions/office/developer/sharepoint-2010/ee557363(v=office.14)).
 
-7. Kaynak varlık ilişkisi Gezgin yönteminde bir hedef varlık koleksiyonunu döndüren kod ekleyin.
+7. Kaynak varlığın Ilişkilendirme gezgin yönteminde, hedef varlıkların koleksiyonunu döndüren kodu ekleyin.
 
-8. Hedef varlık ilişkisi Gezgin yönteminde, ilişkili kaynak varlık döndüren kod ekleyin.
+8. Hedef varlığın Ilişkilendirme gezgin yönteminde ilgili kaynak varlığı döndüren kodu ekleyin.
 
-     İlişkilendirme Gezgin yöntemleri örnekleri için bkz. [varlıklar arasında ilişkilendirme oluşturma](../sharepoint/creating-an-association-between-entities.md).
+     Ilişkilendirme Gezgini yöntemlerine ilişkin örnekler için bkz. [varlıklar arasında Ilişkilendirme oluşturma](../sharepoint/creating-an-association-between-entities.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Varlıklar arasında ilişkilendirme oluşturma](../sharepoint/creating-an-association-between-entities.md)
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)
-- [Nasıl yapılır: Bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
-- [Nasıl yapılır: Belirli bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)
-- [Nasıl yapılır: Bir yaratıcı metodu ekleme](../sharepoint/how-to-add-a-creator-method.md)
-- [Nasıl yapılır: Silici metodu ekleme](../sharepoint/how-to-add-a-deleter-method.md)
-- [Nasıl yapılır: Bir güncelleyici metodu ekleme](../sharepoint/how-to-add-an-updater-method.md)
-- [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md)
-- [Nasıl yapılır: Bir yönteme bir parametre ekleyin](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Nasıl yapılır: Metot örneği tanımlama](../sharepoint/how-to-define-a-method-instance.md)
-- [Nasıl yapılır: Bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
-- [İzlenecek yol: İş verileri kullanarak SharePoint'te dış liste oluşturma](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)
+- [Nasıl yapılır: Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
+- [Nasıl yapılır: belirli bir bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)
+- [Nasıl yapılır: bir Oluşturucu yöntemi ekleme](../sharepoint/how-to-add-a-creator-method.md)
+- [Nasıl yapılır: bir silici yöntemi ekleme](../sharepoint/how-to-add-a-deleter-method.md)
+- [Nasıl yapılır: Güncelleştirici yöntemi ekleme](../sharepoint/how-to-add-an-updater-method.md)
+- [IVB modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md)
+- [Nasıl yapılır: bir yönteme parametre ekleme](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Nasıl yapılır: Yöntem örneği tanımlama](../sharepoint/how-to-define-a-method-instance.md)
+- [Nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
+- [İzlenecek yol: iş verileri kullanarak SharePoint 'te dış liste oluşturma](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)

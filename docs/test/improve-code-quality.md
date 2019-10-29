@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: jillre
-ms.openlocfilehash: b68793e512cdb367375cc9f27d61ae5a85e4f078
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e57feede5963b9efc04f98f4c7ba3adfb1eb49b1
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653273"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984641"
 ---
 # <a name="testing-tools-in-visual-studio"></a>Visual Studio'daki test etme araçları
 
@@ -68,7 +68,7 @@ Kod kapsamı analizi, hem yönetilen hem de yönetilmeyen (yerel) koda uygulanab
 Test yöntemlerini Test Gezgini'ni kullanarak çalıştırdığınızda kod kapsamı bir seçenektir. Sonuçlar tablosu, her derleme sınıfı ve yöntemi içinde çalışan kod yüzdesini gösterir. Ayrıca, kaynak düzenleyici hangi kodun test edildiğini gösterir.
 
 * [Ne kadar kodun test edildiğini öğrenmek için kod kapsamını kullanın](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
-* [Visual Studio (Lab) ile birim testi, kod kapsamı ve kod kopyası Analizi](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Unit%20Testing,%20Code%20Coverage%20and%20Code%20Clone%20Analysis%20with%20Visual%20Studio%202015.docx)
+* [Visual Studio (Lab) ile birim testi, kod kapsamı ve kod kopyası Analizi](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
 * [Kod kapsamı analizini özelleştirme](customizing-code-coverage-analysis.md)
 
 ## <a name="microsoft-fakes"></a>Microsoft Fakes
@@ -86,7 +86,7 @@ Selenium ile, en iyi kodlanmış UI testlerini veya genel tarayıcı tabanlı UI
 * [UI otomasyonunu kullanarak kodunuzu test etme](use-ui-automation-to-test-your-code.md)
 * [Kodlanmış UI testi oluşturmaya, düzenlemesine ve sürdürme ile çalışmaya başlama](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 * [Kodlanmış UI Testleriyle UWP uygulamalarını test etme](test-uwp-app-with-coded-ui-test.md)
-* [Visual Studio Enterprise (Lab) ile kodlanmış UI testlerine giriş](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Introduction%20to%20Coded%20UI%20Tests%20with%20Visual%20Studio%20Enterprise%202015.docx)
+* [Visual Studio Enterprise (Lab) ile kodlanmış UI testlerine giriş](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
 
 ## <a name="load-testing"></a>Yük testi
 

@@ -20,126 +20,126 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 245a6c994d87ecfa9c5ef877563b70100e5eef6f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 825e985820ac7a4d72bf321133491e312adb0a0e
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438989"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981947"
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>SharePoint projesi ve proje öğesi şablonları
-  Aşağıdaki bölümlerde kullanılabilir SharePoint Proje açıklamak ve proje öğesi şablonları ve bunların nasıl kullanıldığı.
+  Aşağıdaki bölümlerde, kullanılabilir SharePoint projesi ve proje öğesi şablonları ve bunların nasıl kullanıldığı açıklanır.
 
-## <a name="project-and-project-item-templates-overview"></a>Proje ve proje öğesi şablonları genel bakış
- Visual Studio'da yeni bir SharePoint projesi oluşturduğunuzda, bir SharePoint projesi çözüme tüm proje türü tarafından gerekli proje öğelerinin birlikte eklenir. Örneğin, bir Silverlight Web Bölümü projesi oluşturursanız, Visual Studio bir görsel Web Bölümü proje öğesi ve bu proje öğeleri tarafından gerekli olan tüm dosyaların yanı sıra bir Silverlight uygulaması proje öğesi içeren bir çözüm oluşturur. Proje öğesi şablonları, bir olay alıcısı, site sütunu veya liste ekleme gibi bir var olan SharePoint projesi, proje öğeleri eklemek için kullanılır.
+## <a name="project-and-project-item-templates-overview"></a>Proje ve proje öğesi şablonlarına genel bakış
+ Visual Studio 'da yeni bir SharePoint projesi oluşturduğunuzda, bu proje türü için gereken tüm proje öğeleriyle birlikte çözüme bir SharePoint projesi eklenir. Örneğin, bir Silverlight Web Bölümü projesi oluşturursanız, Visual Studio bir Visual Web Bölümü proje öğesi ve bir Silverlight uygulaması proje öğesi içeren bir çözüm oluşturur ve bu proje öğeleri için gereken tüm dosyaları içerir. Proje öğesi şablonları, varolan bir SharePoint projesine bir olay alıcısı, site sütunu veya liste ekleme gibi proje öğeleri eklemek için kullanılır.
 
- SharePoint ile ilgili temel bilgiler hakkında daha fazla bilgi için bkz. [SharePoint Foundation yapı taşlarını](http://go.microsoft.com/fwlink/?LinkId=179404). İleri düzey kullanıcılar özel Proje ve proje öğesi şablonları oluşturabilirsiniz. Daha fazla bilgi için [SharePoint Proje sistemini genişletmek](../sharepoint/extending-the-sharepoint-project-system.md).
+ SharePoint temelleri hakkında daha fazla bilgi için bkz. [SharePoint Foundation yapı taşları](/previous-versions/office/developer/sharepoint-2010/ee534971(v=office.14)). Gelişmiş kullanıcılar, özel proje ve proje öğesi şablonları oluşturabilir. Daha fazla bilgi için bkz. [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md).
 
 ## <a name="project-templates"></a>Proje şablonları
- SharePoint proje şablonları listesi aşağıdadır. Visual Studio'da SharePoint proje şablonları görüntülemek için **yeni proje** iletişim kutusunda **SharePoint** ya da düğümünde **Visual C#**  veya  **Visual Basic**ve ardından **2010**.
+ Aşağıda SharePoint proje şablonlarının bir listesi verilmiştir. Visual Studio 'da SharePoint proje şablonlarını görüntülemek için, **Yeni proje** iletişim kutusunda, **Visual C#**  veya **Visual Basic**altındaki **SharePoint** düğümünü genişletin ve ardından **2010**öğesini seçin.
 
 ### <a name="sharepoint-2010-project"></a>SharePoint 2010 projesi
- İçeriği bir *SharePoint 2010 projesi* her SharePoint projesi şablonu içine dahil edilir. SharePoint 2010 projesi içerir:
+ *Sharepoint 2010 projesinin* Içeriği her SharePoint proje şablonuna dahil edilmiştir. Bir SharePoint 2010 projesi şunları içerir:
 
 - Bir proje dosyası.
 
-- Proje özellikleri sayfasında.
+- Proje Özellikleri sayfası.
 
-- A **başvuruları** tüm derleme başvurularını projedeki listeleyen bir klasör.
+- Projedeki tüm derleme başvurularını listeleyerek **Başvurular** klasörü.
 
-- A **özellikleri** içeren klasörü bir *.feature* özellik SharePoint sunucusuna dağıtmak için kullanılan yapılandırma dosyası.
+- Özellikleri SharePoint Server 'a dağıtmak için kullanılan *. feature* yapılandırma dosyasını Içeren bir **Özellikler** klasörü.
 
-- A **paket** içeren klasörü bir *Package.package* SharePoint'e çözümü dağıtmak için kullanılan dosya,.
+- Çözümü SharePoint 'e dağıtmak için kullanılan *Package. Package* dosyasını Içeren bir **paket** klasörü.
 
-- Gelişmiş güvenlik için derlemeyi bir katı adla imzalamak için kullanılan bir key.snk (tanımlayıcı ad anahtarı) dosyası.
+- Gelişmiş güvenlik için derlemeyi güçlü bir adla imzalamak için kullanılan Key. snk (tanımlayıcı-ad anahtarı) dosyası.
 
-### <a name="sharepoint-2010-silverlight-web-part"></a>SharePoint 2010 Silverlight web bölümü
- *SharePoint 2010 Silverlight Web Bölümü* projeleri olanak oluştur web bölümleri için Silverlight uygulamaları görüntülemek için SharePoint. Bu proje oluşturduğunuzda, ona yeni bir Silverlight uygulaması eklemek veya mevcut bir başvuru belirtebilirsiniz. Daha fazla bilgi için [için SharePoint web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md) ve [izlenecek yol: SharePoint için OData görüntüleyen bir Silverlight web bölümü oluşturma](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md).
+### <a name="sharepoint-2010-silverlight-web-part"></a>SharePoint 2010 Silverlight Web Bölümü
+ *Sharepoint 2010 Silverlight Web Bölümü* projeleri, Silverlight uygulamalarını görüntüleyen SharePoint için Web bölümleri oluşturmanızı sağlar. Bu projeyi oluştururken, buna yeni bir Silverlight uygulaması eklenip eklenmeyeceğini veya var olan bir projeye başvurulacağını belirtebilirsiniz. Daha fazla bilgi için bkz. [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md) ve [Izlenecek yol: SharePoint için OData görüntüleyen bir Silverlight Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md).
 
-### <a name="sharepoint-2010-visual-web-part"></a>SharePoint 2010 görsel web bölümü
- A *SharePoint 2010 Visual Web Bölümü* proje içeren bir *Elements.xml* tanım dosyasını bir **Web Bölümü** öğesi ve bir **kullanıcı denetimi** öğesi . Görsel web bölümü görünümünü sürükleyerek ya da kullanıcı denetiminin yüzeyine Visual Studio araç kutusundan denetimleri kopyalama tasarlayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Tasarımcı kullanarak bir SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) ve [yapı taşı: Web Bölümleri](http://go.microsoft.com/fwlink/?LinkId=179438).
+### <a name="sharepoint-2010-visual-web-part"></a>SharePoint 2010 Visual Web Bölümü
+ Bir *SharePoint 2010 Visual Web Bölümü* projesi bir *Elements. xml* tanım dosyası, bir **Web Bölümü** öğesi ve bir **Kullanıcı denetim** öğesi içerir. Görsel web bölümünün görünümünü, Visual Studio araç kutusu ' ndan Kullanıcı denetimi yüzeyine sürükleyip bırakarak veya kopyalayarak tasarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: tasarımcı ve yapı bloğu kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) [: Web bölümleri](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
 
-### <a name="import-sharepoint-2010-solution-package"></a>SharePoint 2010 çözüm paketini İçeri Aktar
- *SharePoint 2010 çözüm paketini içeri aktarma* projeleri, mevcut bir SharePoint 2010 site, bir SharePoint çözüm dışarı aktarılan bir kısmını veya tamamını içeri aktarmanıza olanak tanır (*.wsp*) dosyasına Visual Studio. Visual Studio'ya içeri sonra öğelerinden özelleştirebilir ve bunları yeniden dağıtın. Daha fazla bilgi için [mevcut bir SharePoint sitesinden öğeleri içeri aktarma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).
+### <a name="import-sharepoint-2010-solution-package"></a>SharePoint 2010 çözüm paketini içeri aktar
+ *Içeri aktarma sharepoint 2010 çözüm paketi* projeleri bir SharePoint çözüm ( *. wsp*) dosyasına dışarı aktarılan mevcut bir SharePoint 2010 sitesinin tamamını veya bir kısmını Visual Studio 'ya aktarmanıza olanak tanır. Visual Studio 'ya aktarıldıktan sonra öğelerini özelleştirebilir ve yeniden dağıtabilirsiniz. Daha fazla bilgi için bkz. [mevcut bir SharePoint sitesinden öğeleri Içeri aktarma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).
 
-### <a name="import-reusable-sharepoint-2010-workflow"></a>Yeniden kullanılabilir SharePoint 2010 iş akışını içeri aktarma
- *Yeniden kullanılabilir SharePoint 2010 iş akışını içe* projeleri Visual Studio'da SharePoint Designer 2010'da oluşturulan yeniden kullanılabilir, bildirim temelli bir iş akışını içeri aktarmanıza olanak tanır. İş akışı SharePoint sitesinden dışarı aktarılan bir *.wsp* dosya. Visual Studio'ya içeri sonra özelleştirebilir, kodu ekleyin ve ardından bir SharePoint sitesine dağıtma. Daha fazla bilgi için [izlenecek yol: Bir SharePoint Tasarımcısı yeniden kullanılabilir iş akışını Visual Studio'ya içeri aktarma](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md).
+### <a name="import-reusable-sharepoint-2010-workflow"></a>Yeniden kullanılabilir SharePoint 2010 iş akışını içeri aktar
+ Yeniden *kullanılabilir sharepoint 2010 Iş akışı projelerini Içeri aktarma işlemi* , sharepoint designer 2010 ' de oluşturulan yeniden kullanılabilir, bildirime dayalı bir Iş akışını Visual Studio 'ya İş akışı SharePoint sitesinden bir *. wsp* dosyası olarak verilir. Visual Studio 'ya aktarıldıktan sonra, onu özelleştirebilir, kod ekleyebilir ve bir SharePoint sitesine dağıtabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: SharePoint Designer yeniden kullanılabilir iş akışını Visual Studio 'Ya aktarma](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md).
 
 ## <a name="project-item-templates"></a>Proje öğesi şablonları
- SharePoint proje öğesi şablonları listesi aşağıdadır. Proje öğesi şablonları için site sütunları, listeler ve içerik türleri gibi SharePoint işlevleri desteklemek için SharePoint çözüm dosyaları ekleyin. Örneğin, çözümünüz için bir site sütunu ekleme içeren bir site sütunu proje ekler bir *Elements.xml* tanım dosyası. Bir görsel web bölümü ekleme, bir görsel web bölümü projesi içeren çözümünüze ekler bir *Elements.xml* dosya, bir kullanıcı denetimi öğesi ve bir görsel web bölümü öğesi.
+ Aşağıda SharePoint proje öğesi şablonlarının bir listesi verilmiştir. Proje öğesi şablonları, site sütunları, listeler ve içerik türleri gibi SharePoint işlevlerini desteklemek için SharePoint çözümüne dosya ekler. Örneğin, çözümünüze bir site sütunu eklemek, *Elements. xml* tanım dosyası içeren bir site sütunu projesi ekler. Visual Web Bölümü eklemek, çözümünüze bir *Elements. xml* dosyası, bir kullanıcı denetim öğesi ve bir görsel web bölümü öğesi içeren bir görsel web bölümü projesi ekler.
 
- SharePoint proje öğesi şablonları görüntülemek için **Çözüm Gezgini**, bir SharePoint projesi için kısayol menüsünü açın ve ardından **Ekle**, **yeni öğe**. Genişletin **SharePoint** ya da düğümünde **Visual C#**  veya **Visual Basic**ve ardından **2010**.
+ SharePoint proje öğesi şablonlarını görüntülemek için, **Çözüm Gezgini**' de bir SharePoint projesinin kısayol menüsünü açın ve **Ekle**, **Yeni öğe**' yi seçin. **Visual C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010**öğesini seçin.
 
 ### <a name="application-page-farm-solution-only"></a>Uygulama sayfası (yalnızca Grup çözümü)
- Bir **uygulama sayfası (yalnızca Grup çözümü)** öğesi tasarlamanızı sağlar bir [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] bir SharePoint sitesi için web sayfası. Uygulama sayfaları yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesi sadece grup çözümlerini ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Uygulama sayfası oluşturma](../sharepoint/how-to-create-an-application-page.md) ve [Application _layouts sayfa türü](http://go.microsoft.com/fwlink/?LinkId=179434).
+ Bir **uygulama sayfası (yalnızca Grup çözümü)** öğesi, bir SharePoint sitesi için [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] Web sayfası tasarlamanıza olanak sağlar. Uygulamalar sayfaları yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesini yalnızca Grup çözümlerine ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: uygulama oluşturma sayfası](../sharepoint/how-to-create-an-application-page.md) ve [uygulama _layouts sayfa türü](/previous-versions/office/aa979604(v=office.14)).
 
-### <a name="business-data-connectivity-model-farm-solution-only"></a>İş Verileri Bağlantı Modeli (yalnızca Grup çözümü)
- A **iş verileri bağlantı modeli (yalnızca Grup çözümü)** öğesi sağlar için tümleştirme iş verilerini SharePoint ile. İş verileri yeniden ziyaret edebilir, arka uç sunucu uygulamalarından gibi [!INCLUDE[ssNoVersion](../sharepoint/includes/ssnoversion-md.md)], Siebel ve hizmet reklam Protokolü (SAP). İş Verileri Bağlantısı modelleri sadece grup çözümlerini kullanılabilir. Bu proje öğesi sadece grup çözümlerini ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md), [nasıl yapılır: Yerelleştirilmiş adlar, özellikler ve izinleri belirtmek için bir kaynak dosyası kullanma](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md), ve [yenilikler: İş Bağlantı Hizmetleri](/previous-versions/office/developer/sharepoint-2010/ee534979(v=office.14)).
+### <a name="business-data-connectivity-model-farm-solution-only"></a>İş verileri bağlantı modeli (yalnızca Grup çözümü)
+ **Iş verileri bağlantı modeli (yalnızca Grup çözümü)** öğesi, Iş verilerini SharePoint ile tümleştirmenize olanak sağlar. İş verileri [!INCLUDE[ssNoVersion](../sharepoint/includes/ssnoversion-md.md)], Siebel ve hizmet reklam Protokolü (SAP) gibi arka uç sunucu uygulamalarından gelebilir. İş verileri bağlantı modelleri yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesini yalnızca Grup çözümlerine ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md), [nasıl yapılır: Yerelleştirilmiş adlar, Özellikler ve Izinleri belirtmek Için kaynak dosyası kullanma](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)ve yenilikler [: iş bağlantı Hizmetleri](/previous-versions/office/developer/sharepoint-2010/ee534979(v=office.14)).
 
 ### <a name="content-type"></a>İçerik türü
- *İçerik türü* öğeleri, bir belge, duyuru veya bir görev gibi mevcut (Temel) içerik türüne göre özel içerik türleri oluşturmanıza olanak sağlar. Özel bir içerik türü tanımlarsınız sitesi sütunlar (alanlar) ile birlikte temel içerik türü olarak aynı öznitelikleri ve alanlar sağlar. Örneğin, SharePoint'te gelen temel kişi içerik türü temel alan özel bir içerik kişi türü oluşturabilirsiniz. İçerik türü var olan site sütunlarını değiştirme ya da daha fazla site sütunları temel içerik türü zaten bulunan ekleyerek özelleştirebilirsiniz.
+ *Içerik türü* öğeleri, bir belge, duyuru veya bir görev gibi var olan (temel) içerik türünü temel alan özel içerik türleri oluşturmanızı sağlar. Özel bir içerik türü, tanımladığınız tüm site sütunları (alanları) ile birlikte temel içerik türüyle aynı öznitelikleri ve alanları sağlar. Örneğin, SharePoint 'te yer alan temel kişi içerik türünü temel alan özel bir Iletişim içeriği türü oluşturabilirsiniz. Varolan site sütunlarını değiştirerek veya temel içerik türüne dahil olan olanlara daha fazla site sütunu ekleyerek içerik türünü özelleştirebilirsiniz.
 
 > [!NOTE]
-> Bir SharePoint sınırlama nedeniyle, bir korumalı çözüm içerik türüne göre grup çözümü içerik türü oluşturulamıyor.
+> SharePoint sınırlaması nedeniyle, Korumalı çözüm içerik türünü temel alan bir Grup çözümü içerik türü oluşturamazsınız.
 
- Daha fazla bilgi için [izlenecek yol: SharePoint için site sütunu, içerik türü ve liste oluşturma](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) ve [yapı taşı: İçerik türü](http://go.microsoft.com/fwlink/?LinkId=179413).
+ Daha fazla bilgi için bkz. [Izlenecek yol: site sütunu, içerik türü ve SharePoint ve yapı bloğu için liste oluşturma](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) [: içerik türü](/previous-versions/office/developer/sharepoint-2010/ee535063(v=office.14)).
 
 ### <a name="empty-element"></a>Boş öğe
- *Boş öğeler* çoğunlukla bir proje veya proje öğesi şablonu Visual Studio'da sahip SharePoint Proje öğeleri tanımlamak için kullanılır. Projenize boş bir öğe eklediğinizde, bir düğüm adlı EmptyElement [x](where [x] is a unique number\) is created. [X] EmptyElement içeren tek dosya başka bir deyişle adlandırılmış *Elements.xml.* Kullanım [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] istenen öğeleri tanımlamak için deyimleri *Elements.xml*.
+ *Boş öğeler* , Visual Studio 'da proje veya proje öğesi şablonu bulunmayan SharePoint proje öğelerini tanımlamak için en sık kullanılan öğeleri kullanır. Projenize boş bir öğe eklediğinizde, EmptyElement [x] adlı bir düğüm (burada [x] benzersiz bir sayıdır\) oluşturulur. EmptyElement [x], *Elements. xml* adlı tek bir dosya içerir. *Elements. xml*dosyasında istenen öğeleri tanımlamak için [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] deyimlerini kullanın.
 
 ### <a name="event-receiver"></a>Olay alıcısı
- *Olay alıcıları* bir listesine bir öğe eklendiğinde, bir web öğesi silindiğinde veya bir iş akışı başladığında gibi SharePoint sitesindeki öğeleri için olayları işleme. Olay alıcısı proje öğesi şablon işlemenize olanak tanır.
+ *Olay alıcıları* , SharePoint sitesindeki öğelerin (örneğin, bir listeye bir öğe eklendiğinde, bir Web öğesi silindiğinde veya bir iş akışı başladığında) olayları işler. Olay alıcısı proje öğesi şablonu, idare etmenizi sağlar
 
-- Liste etkinlikleri
+- Olayları listeleme
 
-- Liste öğesi etkinlikleri
+- Öğe olaylarını listeleme
 
-- Liste e-posta etkinlikleri
+- E-posta olaylarını listeleme
 
 - Web olayları
 
-- Liste iş akışı etkinlikleri
+- İş akışı olaylarını listeleme
 
-  Olay alıcısı proje öğesi oluşturur bir **olay alıcısı** projeyi oluştururken belirttiğiniz tüm olayları için olay işleyicileri içeren tek bir sınıf dosyası klasörü **SharePoint özelleştirme Sihirbaz**. Olay alıcısı sınıfına dosyaları, alanlar, öğeleri, listeler, ekleri, web bölümleri ve iş akışları gibi öğeleri eklendiğinde, güncelleştirilmiş, silindi, kaldırıldı veya SharePoint sitesinde meydana gelen olayları işleyebilir. Daha fazla bilgi için [nasıl yapılır: Olay alıcısı oluşturma](../sharepoint/how-to-create-an-event-receiver.md) ve [yapı taşı: Olay işleme](http://go.microsoft.com/fwlink/?LinkId=179416).
+  Olay alıcısı proje öğesi, **SharePoint Özelleştirme sihirbazında**projeyi oluştururken belirttiğiniz tüm olaylar için olay işleyicileri içeren tek bir sınıf dosyası Içeren bir **olay alıcısı** klasörü oluşturur. Olay alıcısı sınıfı, dosyalar, alanlar, öğeler, listeler, ekler, Web bölümleri ve iş akışları gibi öğeler eklendiğinde, güncelleştirilirken, silindiğinde veya kaldırıldığında SharePoint sitesinde gerçekleşen olayları işleyebilir. Daha fazla bilgi için bkz. [nasıl yapılır: olay alıcısı oluşturma](../sharepoint/how-to-create-an-event-receiver.md) ve [derleme bloğu: olay işleme](/previous-versions/office/developer/sharepoint-2010/ee535057(v=office.14)).
 
 ### <a name="list"></a>List
- Bir liste, bir yeniden kullanılabilir temel SharePoint liste tanımı, bir takvim veya görev listesi'gibi bir örneğidir. Çözümünüze bir liste eklendikten sonra liste Tasarımcı site sütunları listesine ekleyin ve özel listesi sütunları oluşturmanıza olanak sağlar. Bu içerik türünden site sütunları içerir. Belirtebileceğiniz *görünümü* listesi için listede görünür sütunlar belirler. Daha fazla bilgi için [izlenecek yol: SharePoint için site sütunu, içerik türü ve liste oluşturma](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) ve [yapı taşı: Listeleri ve belge kitaplıklarını](http://go.microsoft.com/fwlink/?LinkId=179421).
+ Liste, takvim veya görev listesi gibi yeniden kullanılabilir bir temel SharePoint liste tanımının örneğidir. Çözümünüze bir liste eklendikten sonra liste Tasarımcısı, listeye site sütunları eklemenize ve özel liste sütunları oluşturmanıza olanak sağlar. Bu, içerik türlerinden site sütunları içerir. Liste için, listede görünecek sütunları belirleyen *görünümü* belirtebilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: site sütunu, içerik türü ve SharePoint ve yapı bloğu için liste oluşturma](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) [: listeler ve belge kitaplıkları](/previous-versions/office/developer/sharepoint-2010/ee534985(v=office.14)).
 
 ### <a name="module"></a>Modül
- *Modüller* (ile karıştırılmamalıdır [!include[vbprvb](../sharepoint/includes/vbprvb-md.md)] modülleri) görüntü veya notları gibi SharePoint sunucusuna dağıtmak istediğiniz tüm dosyaları içerir. Modül proje öğesi içeren bir **Modülü** düğümü. İki proje öğesi şablonları modülü düğüm içerir: modül için bir bildirim görür, bir XML tanım dosyası ve bir *örnek.txt* dosya, bir yer tutucu dosyası. Daha fazla bilgi için [Çözümdeki dosyalar dahil kullanım modüllerine](../sharepoint/using-modules-to-include-files-in-the-solution.md) ve [modülleri](http://go.microsoft.com/fwlink/?LinkId=179425).
+ *Modüller* ([!include[vbprvb](../sharepoint/includes/vbprvb-md.md)] modüllerle karıştırılmamalıdır), SharePoint sunucusuna dağıtmak istediğiniz resimler veya notlar gibi tüm dosyaları içerir. Modül proje öğesi bir **Modül** düğümü içerir. Modül düğümü iki proje öğesi şablonu içerir: modül için bildirim olarak davranan bir XML tanım dosyası ve bir *örnek. txt* dosyası, yer tutucu dosyası. Daha fazla bilgi için bkz. çözüm ve [modüllerde](/previous-versions/office/developer/sharepoint-2010/ms453137(v=office.14)) [dosya eklemek için modülleri kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md) .
 
 ### <a name="sequential-workflow-farm-solution-only"></a>Sıralı iş akışı (yalnızca Grup çözümü)
- A *sıralı iş akışı* iş mantığı adımlar, son adım tamamlanana kadar sırayla gerçekleştirilen bir dizi. Sıralı iş akışı içeren SharePoint öğeleri listeler ve belgeler gibi işlemleri yönetmek için kullanılır. Site düzeyinde (Genel) iş akışları ya da liste düzeyini (yerel) iş akışları oluşturabilir ve bir iş akışı otomatik olarak veya el ile başlayıp başlamadığı seçebilirsiniz. Bu proje öğesi, yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesi sadece grup çözümlerini ekleyebilirsiniz. Daha fazla bilgi için [oluşturma SharePoint iş akışı çözümleri](../sharepoint/creating-sharepoint-workflow-solutions.md), [SharePoint Server 2010 iş akışlarında](http://go.microsoft.com/fwlink/?LinkId=260555), ve [yenilikler: İş akışı iyileştirmeleri](/previous-versions/office/developer/sharepoint-2010/ee537015(v=office.14)).
+ *Sıralı bir iş akışı* , son adım tamamlanana kadar sırayla gerçekleştirilen bir dizi iş mantığı adımıdır. Sıralı iş akışları, listeler ve belgeler gibi SharePoint öğelerini içeren süreçler yönetmek için kullanılır. Site düzeyi (genel) iş akışları veya liste düzeyi (yerel) iş akışları oluşturabilir ve bir iş akışının otomatik olarak mı yoksa el ile mi başlayacağını belirleyebilirsiniz. Bu proje öğesi yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesini yalnızca Grup çözümlerine ekleyebilirsiniz. Daha fazla bilgi için bkz. [SharePoint iş akışı çözümleri oluşturma](../sharepoint/creating-sharepoint-workflow-solutions.md), [SharePoint Server 2010 iş akışları](/previous-versions/office/developer/sharepoint-2010/ms549489(v=office.14))ve yenilikler [: iş akışı geliştirmeleri](/previous-versions/office/developer/sharepoint-2010/ee537015(v=office.14)).
 
-### <a name="silverlight-web-part"></a>Silverlight web bölümü
- *Silverlight web bölümü* proje öğeleri olanak oluştur web bölümleri için Silverlight uygulamaları görüntülemek için SharePoint. Bu proje öğesi çözümünüze eklediğiniz zaman, yeni bir Silverlight uygulamasını eklemek veya mevcut bir daha sonra başvurmak seçebilirsiniz. Daha fazla bilgi için [için SharePoint web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md) ve [izlenecek yol: SharePoint için OData görüntüleyen bir Silverlight web bölümü oluşturma](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md).
+### <a name="silverlight-web-part"></a>Silverlight Web Bölümü
+ *Silverlight Web Bölümü* proje öğeleri, SharePoint için Silverlight uygulamalarını görüntüleyen Web bölümleri oluşturmanızı sağlar. Çözümünüze bu proje öğesini eklediğinizde, yeni bir Silverlight uygulaması eklenip eklenmeyeceğini veya daha sonra var olan bir sürüme başvurulacağını seçebilirsiniz. Daha fazla bilgi için bkz. [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md) ve [Izlenecek yol: SharePoint için OData görüntüleyen bir Silverlight Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md).
 
 ### <a name="site-column"></a>Site sütunu
- A *site sütunu*olarak da bilinen bir *alan*, bir SharePoint projesine ekleyebilirsiniz en temel öğeleri biridir. Bir site sütunu, bir telefon numarası, metin açıklama ya da bir kişi listesini kişi şehir adı gibi bir veri türünü temsil eder. Daha fazla bilgi için [SharePoint için site sütunları, içerik türleri ve listeler oluşturma](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md) ve [sütunları](http://go.microsoft.com/fwlink/?LinkId=226840).
+ *Alan*olarak da bilinen bir *site sütunu*, bir SharePoint projesine ekleyebileceğiniz en temel öğelerden biridir. Bir site sütunu, telefon numarası, metin yorumu veya iletişim listesindeki kişinin şehir adı gibi bir veri türünü temsil eder. Daha fazla bilgi için bkz. SharePoint ve [sütunlar](/previous-versions/office/developer/sharepoint-2010/ms196085(v=office.14)) [için site sütunları, içerik türleri ve listeler oluşturma](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md) .
 
 ### <a name="site-definition-farm-solution-only"></a>Site tanımı (yalnızca Grup çözümü)
- *Site tanımı* proje öğeleri içeren aşağıdaki dosyaları içeren bir site tanımı klasörü:
+ *Site tanımı* proje öğeleri, aşağıdaki dosyaları içeren bir site tanımı klasörü içerir:
 
-- Site için varsayılan web sayfası olarak kullanılan bir varsayılan .aspx sayfası.
+- Site için varsayılan Web sayfası olarak kullanılan default. aspx sayfası.
 
-- Bir *onet.xml* site bileşenlerini tanımlayan dosya.
+- Sitenin bileşenlerini tanımlayan bir *onet. xml* dosyası.
 
-- Görünen site tanımı yapılandırmaları belirten bir webtemp xml dosyası **Şablon Seçimi** bölümünü **yeni SharePoint sitesi** sayfası.
+- **Yeni SharePoint sitesi** sayfasının **şablon seçimi** bölümünde görünen site tanımı yapılandırmasını belirten bir WebTemp XML dosyası.
 
-  Bir site tanımı ekledikten sonra kod ve işlevleri tanıtmak için dosyaları ekleyin. Bu proje öğesi, yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesi sadece grup çözümlerini ekleyebilirsiniz. Daha fazla bilgi için [SharePoint için site tanımları oluşturma](../sharepoint/creating-site-definitions-for-sharepoint.md) ve [Site tanımları ve yapılandırmaları](http://go.microsoft.com/fwlink/?LinkId=260554).
+  Bir site tanımı ekledikten sonra işlevselliği tanıtmak için kod ve dosyaları eklersiniz. Bu proje öğesi yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesini yalnızca Grup çözümlerine ekleyebilirsiniz. Daha fazla bilgi için bkz. SharePoint ve [site tanımları ve yapılandırma](/previous-versions/office/developer/sharepoint-2010/aa978512(v=office.14)) [Için site tanımları oluşturma](../sharepoint/creating-site-definitions-for-sharepoint.md) .
 
 ### <a name="state-machine-workflow-farm-solution-only"></a>Durum makinesi iş akışı (yalnızca Grup çözümü)
- A *Durum makinesi iş akışı* iş mantığı durumları, geçişleri ve eylemleri kümesidir. Bir Durum makinesi iş akışı adımları sırayla gerçekleştirilmez; Bunun yerine, Eylemler ve durumlar tarafından tetiklenir. Sıralı iş akışı gibi durum makine iş akışları listeler ve belgeler gibi SharePoint öğeleri ile ilişkilidir. Bir kez daha, site düzeyinde (Genel) iş akışları veya liste düzeyini (yerel) iş akışları oluşturabilirsiniz. Bir iş akışı otomatik olarak veya el ile başlayıp başlamadığı de seçebilirsiniz. Bu proje öğesi, yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesi sadece grup çözümlerini ekleyebilirsiniz. Daha fazla bilgi için [oluşturma SharePoint iş akışı çözümleri](../sharepoint/creating-sharepoint-workflow-solutions.md), [SharePoint Server 2010 iş akışlarında](http://go.microsoft.com/fwlink/?LinkId=260555), ve [yenilikler: İş akışı iyileştirmeleri](/previous-versions/office/developer/sharepoint-2010/ee537015(v=office.14)).
+ Bir *durum makinesi iş akışı* , iş mantığı durumları, geçişler ve eylemler kümesidir. Bir durum makinesi iş akışındaki adımlar sırayla gerçekleştirilmez; Bunun yerine, Eylemler ve durumlar tarafından tetiklenir. Sıralı bir iş akışı gibi, durum makine iş akışları listeler ve belgeler gibi SharePoint öğeleriyle ilişkilendirilir. Bir kez daha, site düzeyi (genel) iş akışları veya liste düzeyi (yerel) iş akışları oluşturabilirsiniz. Ayrıca, bir iş akışının otomatik olarak mı yoksa el ile mi başlayacağını seçebilirsiniz. Bu proje öğesi yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesini yalnızca Grup çözümlerine ekleyebilirsiniz. Daha fazla bilgi için bkz. [SharePoint iş akışı çözümleri oluşturma](../sharepoint/creating-sharepoint-workflow-solutions.md), [SharePoint Server 2010 iş akışları](/previous-versions/office/developer/sharepoint-2010/ms549489(v=office.14))ve yenilikler [: iş akışı geliştirmeleri](/previous-versions/office/developer/sharepoint-2010/ee537015(v=office.14)).
 
 ### <a name="user-control-farm-solution-only"></a>Kullanıcı denetimi (yalnızca Grup çözümü)
- A *kullanıcı denetimi* olduğu ekleyebileceğiniz diğer ASP.NET denetimleri ve SharePoint denetimleri yeniden kullanılabilir, özel bir denetim. Kullanıcı denetimi uygulama sayfaları ve SharePoint'te çalışan web bölümleri eklenebilir. Bu proje öğesi, yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesi sadece grup çözümlerini ekleyebilirsiniz. Daha fazla bilgi için [Web Bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](http://go.microsoft.com/fwlink/?LinkId=226841).
+ *Kullanıcı denetimi* , diğer ASP.net denetimlerini ve SharePoint denetimlerini ekleyebileceğiniz özel, yeniden kullanılabilir bir denetimdir. Kullanıcı denetimi, SharePoint 'te çalışan uygulama sayfalarına ve Web bölümlerine eklenebilir. Bu proje öğesi yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesini yalnızca Grup çözümlerine ekleyebilirsiniz. Daha fazla bilgi için bkz. [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](/visualstudio/sharepoint/creating-reusable-controls-for-web-parts-or-application-pages&view=vs-2019).
 
 ### <a name="visual-web-part"></a>Görsel web bölümü
- Bir *görsel web bölümü* proje öğesi içeren bir *Elements.xml* tanım dosyası bir **Web Bölümü** öğesi ve bir **kullanıcı denetimi** öğesi. Görsel web bölümü görünümünü sürükleyerek ya da kullanıcı denetiminin yüzeyine Visual Studio araç kutusundan denetimleri kopyalama tasarlayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Tasarımcı kullanarak bir SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) ve [yapı taşı: Web Bölümleri](http://go.microsoft.com/fwlink/?LinkId=179438).
+ *Visual Web Bölümü* proje öğesi, bir *Elements. xml* tanım dosyası, bir **Web Bölümü** öğesi ve bir **Kullanıcı denetim** öğesi içerir. Görsel web bölümünün görünümünü, Visual Studio araç kutusu ' ndan Kullanıcı denetimi yüzeyine sürükleyip bırakarak veya kopyalayarak tasarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: tasarımcı ve yapı bloğu kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) [: Web bölümleri](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
 
 ### <a name="web-part"></a>Web kısmı
- A *web bölümü* sayfa bir Web Bölümü sayfası olarak adlandırılan özel bir tür içinde çalışan bir sunucu tarafı denetimidir. Bunlar bir SharePoint sitesinde görünen sayfaların yapı taşlarıdır. Web bölümü öğesi, bir SharePoint sitesi için bir web bölümü tasarlamak etkinleştirdiğiniz dosyaları sağlar. Daha fazla bilgi için [nasıl yapılır: Bir SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md) ve [yapı taşı: Web Bölümleri](http://go.microsoft.com/fwlink/?LinkId=179438).
+ *Web Bölümü* , Web Bölümü sayfası adlı özel bir sayfa türünün içinde çalışan bir sunucu tarafı denetimidir. Bunlar, SharePoint sitesinde görünen sayfaların yapı taşlarıdır. Web Bölümü öğesi, bir SharePoint sitesi için bir Web Bölümü tasarlamanıza olanak sağlayan dosyalar sağlar. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md) ve [derleme bloğu: Web bölümleri](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)
-- [SharePoint Ürünleri ve teknolojileri](http://go.microsoft.com/fwlink/?LinkId=178818)
+- [SharePoint ürünleri ve teknolojileri](/previous-versions/office/developer/sharepoint-2010/dd776256(v=office.12))

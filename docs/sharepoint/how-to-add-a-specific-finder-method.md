@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Belirli bir Bulucu yöntemi ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: belirli bir bulucu yöntemi ekleme | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,80 +17,80 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8fdd467f2b3a06398198f6fd8452c6a548bf0872
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 732921b021d7887faf31dd3f602f5400c1d06a59
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431275"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985256"
 ---
-# <a name="how-to-add-a-specific-finder-method"></a>Nasıl yapılır: Belirli bir Bulucu yöntemi ekleme
-  Tek varlık örneğini oluşturarak döndürebilir bir *belirli Bulucu* yöntemi. Bir kullanıcı, bir iş verileri web bölümü veya dış listedeki bir varlık seçtiğinde belirli Bulucu metodunu İş Verileri Bağlantısı (BDC) hizmeti yürütür. Daha fazla bilgi için [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
+# <a name="how-to-add-a-specific-finder-method"></a>Nasıl yapılır: belirli bir bulucu yöntemi ekleme
+  *Belirli bir bulucu* yöntemi oluşturarak tek bir varlık örneği döndürebilirsiniz. Iş verileri bağlantısı (BDC) hizmeti, bir kullanıcı iş verileri Web bölümünde veya dış listede bir varlık seçtiğinde belirli Bulucu yöntemini yürütür. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-### <a name="to-create-a-specific-finder-method"></a>Belirli bir Bulucu yöntemi oluşturmak için
+### <a name="to-create-a-specific-finder-method"></a>Belirli bir bulucu yöntemi oluşturmak için
 
-1. Üzerinde **İVB Tasarımcısı**, varlık seçin.
+1. **IVB tasarımcısında**bir varlık seçin.
 
-    Bir varlık ekleme hakkında daha fazla bilgi için **İVB Tasarımcısı** Visual Studio'da görmek [nasıl yapılır: Modele bir varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md).
+    Visual Studio 'da **BDC tasarımcısına** bir varlık ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: modele varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. Menü çubuğunda, **görünümü** > **diğer Windows**, **BDC yöntem ayrıntıları**.
+2. Menü çubuğunda, **diğer Windows**, **BDC Yöntem ayrıntıları** > **görüntüle** ' yi seçin.
 
-    **BDC yöntem ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli Tasarım araçları genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
+    **IVB yöntemi ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
-3. İçinde **bir yöntem ekleyin** listesinde **belirli Bulucu metodu Oluştur**.
+3. **Yöntem Ekle** listesinde, **belirli bulucu yöntemi oluştur**' u seçin.
 
-    Visual Studio modele aşağıdaki öğeleri ekler. Bu öğelerin görünür **BDC yöntem ayrıntıları** penceresi.
+    Visual Studio, modele aşağıdaki öğeleri ekler. Bu öğeler **BDC Yöntem ayrıntıları** penceresinde görüntülenir.
 
-   - Bir yöntem.
+   - Bir yöntemi.
 
-   - Yöntemi giriş parametresi.
+   - Yöntemi için bir giriş parametresi.
 
-   - Yöntemin bir dönüş parametresi.
+   - Yöntemi için bir dönüş parametresi.
 
-   - Her parametre için bir tür tanımlayıcı.
+   - Her parametre için bir tür tanımlayıcısı.
 
-   - Yöntemi için yöntem örneği.
+   - Yöntemi için bir yöntem örneği.
 
-     Daha fazla bilgi için [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
+     Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-4. Visual Studio'yu açın **özellikleri** penceresi.
+4. Visual Studio **Özellikler** penceresini açın.
 
-5. Dönüş parametrenin tür tanımlayıcısını bir varlık türü tanımlayıcısı yapılandırın. Bir varlık türü tanımlayıcısı oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
-
-   > [!NOTE]
-   > Varlığa bir Bulucu yöntemi eklediyseniz, bu adımı gerçekleştirmeniz gerekmez. Visual Studio Bulucu yönteminde tanımlanan tür tanımlayıcısını kullanır.
+5. Dönüş parametresinin tür tanımlayıcısını bir varlık türü tanımlayıcısı olarak yapılandırın. Bir varlık türü tanımlayıcısı oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
 
    > [!NOTE]
-   > Varlık türünün tanımlayıcı alanı otomatik olarak oluşturulan bir veritabanı tablosundaki bir alanı temsil ediyorsa, ayarlama **salt okunur** özelliği tanımlayıcı alanı **True**.
+   > Varlığa bir bulucu yöntemi eklediyseniz bu adımı gerçekleştirmeniz gerekmez. Visual Studio, Finder yönteminde tanımladığınız tür tanımlayıcısını kullanır.
 
-6. İçinde **metot ayrıntıları** penceresinde yöntemi yöntemi örneğini seçin.
+   > [!NOTE]
+   > Varlık türünün tanımlayıcı alanı, otomatik olarak oluşturulan bir veritabanı tablosundaki bir alanı temsil ediyorsa, tanımlayıcı alanının **salt okunurdur** özelliğini **true**olarak ayarlayın.
 
-7. İçinde **Özellikler penceresi**ayarlayın **dönüş parametresi adı** özelliğini yönteminin dönüş parametresinin adı. Yöntem örneği özellikleri hakkında daha fazla bilgi için bkz. [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282).
+6. **Yöntem ayrıntıları** penceresinde, yönteminin Yöntem örneğini seçin.
 
-8. İçinde **Çözüm Gezgini**, oluşturulan hizmet kodu dosyası varlık için kısayol menüsünü açın ve ardından **kodu görüntüle**.
+7. **Özellikler penceresinde**, **dönüş parametresi adı** özelliğini yöntemin dönüş parametresinin adı olarak ayarlayın. Yöntem örneği özellikleri hakkında daha fazla bilgi için bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 
-    Varlık hizmeti kod dosyasını Kod düzenleyicisinde açılır. Varlık hizmeti kodu dosyası hakkında daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
+8. **Çözüm Gezgini**' de, varlık için oluşturulan hizmet kodu dosyasının kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
+
+    Varlık hizmeti kod dosyası kod düzenleyicisinde açılır. Varlık hizmeti kod dosyası hakkında daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
 
 9. Belirli Bulucu yöntemine kod ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
-   - Bir veri kaynağındaki bir kaydı alır.
+   - Bir veri kaynağından bir kayıt alır.
 
-   - BDC hizmeti için bir varlık döndürür.
+   - BDC hizmetine bir varlık döndürür.
 
-     Aşağıdaki örnekte, AdventureWorks örnek veritabanındaki SQL Server için bir kişi döndürür.
+     Aşağıdaki örnek, SQL Server için AdventureWorks örnek veritabanından bir kişi döndürür.
 
      > [!NOTE]
-     > Değiştirin `ServerName` alanını sunucunuzun adıyla.
+     > `ServerName` alanının değerini sunucunuzun adıyla değiştirin.
 
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)
-- [Nasıl yapılır: Bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
-- [Nasıl yapılır: Bir yaratıcı metodu ekleme](../sharepoint/how-to-add-a-creator-method.md)
-- [Nasıl yapılır: Silici metodu ekleme](../sharepoint/how-to-add-a-deleter-method.md)
-- [Nasıl yapılır: Bir güncelleyici metodu ekleme](../sharepoint/how-to-add-an-updater-method.md)
-- [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md)
-- [Nasıl yapılır: Bir yönteme bir parametre ekleyin](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Nasıl yapılır: Metot örneği tanımlama](../sharepoint/how-to-define-a-method-instance.md)
+- [Nasıl yapılır: Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
+- [Nasıl yapılır: bir Oluşturucu yöntemi ekleme](../sharepoint/how-to-add-a-creator-method.md)
+- [Nasıl yapılır: bir silici yöntemi ekleme](../sharepoint/how-to-add-a-deleter-method.md)
+- [Nasıl yapılır: Güncelleştirici yöntemi ekleme](../sharepoint/how-to-add-an-updater-method.md)
+- [IVB modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md)
+- [Nasıl yapılır: bir yönteme parametre ekleme](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Nasıl yapılır: Yöntem örneği tanımlama](../sharepoint/how-to-define-a-method-instance.md)

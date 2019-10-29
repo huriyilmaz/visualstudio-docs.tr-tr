@@ -12,16 +12,16 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e43c2b38d1da055a1a0a4533acc61cb3b8e6760
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ea408640b47b04041e99b9a4bff2605b6231a92f
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348293"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981227"
 ---
 # <a name="visual-studio-debugging-samples"></a>Visual Studio hata ayıklama örnekleri
-İki örnek, Visual Studio hata ayıklayıcısını kullanarak genişletme Göster [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)].
+İki örnek [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]kullanarak Visual Studio hata ayıklayıcıyı genişletmeyi gösterir.
 
-- Yönetilen diller için hata ayıklayıcı ifade değerlendirici örnek yer aldığı [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]. İçinde [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] penceresinde tıklayın **örnekleri** sekmesinde **tüm** veya **C#** diller ve ardından listesinde **hata ayıklayıcı**.
+- Yönetilen diller için hata ayıklayıcı Ifade değerlendirici örneği [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]eklenmiştir. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] penceresinde, **örnekler** sekmesine tıklayın, diller listesinde **Tümü** **C#** ' ne tıklayın ve ardından **hata ayıklayıcı ' ya**tıklayın.
 
-- Visual Studio hata ayıklama altyapısı örneği, yerel diller için MSDN Kod Galerisi üzerinde kullanılabilir. Daha fazla bilgi için [Visual Studio hata ayıklama altyapısı örneği](http://go.microsoft.com/fwlink/?LinkId=150236) Microsoft Web sitesinde.
+- Yerel diller için Visual Studio hata ayıklama altyapısı örneği, MSDN Kod Galerisi 'nde kullanılabilir. Daha fazla bilgi için bkz. Microsoft Web sitesindeki [Visual Studio hata ayıklama altyapısı örneği](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e) .

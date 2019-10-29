@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 860f322724618ddb99bd9ab39eeefa488d9a71c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: df653dbd449429b6995c987328a401866751fd5e
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666887"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981246"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 Metin Şablonu Yazma
 Bir metin şablonu, bundan oluşturulacak metni içerir. Örneğin, bir Web sayfası oluşturan bir şablon "\<html >..." içerecektir HTML sayfasının diğer tüm standart parçaları. Şablona eklenen, program kodu parçaları olan *Denetim bloklarıdır*. Denetim blokları, değişen değerler sağlar ve metnin bölümlerinin koşullu ve yinelenebilir olmasını sağlar.
@@ -53,7 +53,7 @@ Hello
 ```
 
 ## <a name="control-blocks"></a>Denetim blokları
- Denetim blokları, şablonları dönüştürmek için kullanılan program kodunun bölümleridir. Varsayılan dil C#, ancak [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kullanmak için, bu yönergeyi dosyanın başına yazabilirsiniz:
+ Denetim blokları, şablonları dönüştürmek için kullanılan program kodunun bölümleridir. Varsayılan dil C#, ancak[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]kullanmak için, bu yönergeyi dosyanın başına yazabilirsiniz:
 
 ```
 <#@ template language="VB" #>
@@ -207,7 +207,7 @@ private void WriteSquareLine(int i)
  Daha fazla bilgi için bkz. [T4 Içeri aktarma yönergesi](../modeling/t4-import-directive.md).
 
 ### <a name="Include"></a>Kod ve metin ekleme
- @No__t_0 yönergesi başka bir şablon dosyasından metin ekler. Örneğin, bu yönerge `test.txt` içeriğini ekler.
+ `include` yönergesi başka bir şablon dosyasından metin ekler. Örneğin, bu yönerge `test.txt` içeriğini ekler.
 
 ```
 <#@ include file="c:\test.txt" #>
@@ -236,12 +236,12 @@ private void WriteSquareLine(int i)
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **Bir dosyayı gezinebilir model olarak yükleyin**. Daha güçlü bir yöntem, metin şablonu kodunuzun gezinebileceği bir model olarak verileri okumalıdır. Örneğin, bir XML dosyası yükleyebilir ve XPath ifadeleriyle gidebilirsiniz. Ayrıca, XML verilerini okuyabilmeniz için bir sınıf kümesi oluşturmak üzere [XSD. exe](http://go.microsoft.com/fwlink/?LinkId=178765) ' yi de kullanabilirsiniz.
+ **Bir dosyayı gezinebilir model olarak yükleyin**. Daha güçlü bir yöntem, metin şablonu kodunuzun gezinebileceği bir model olarak verileri okumalıdır. Örneğin, bir XML dosyası yükleyebilir ve XPath ifadeleriyle gidebilirsiniz. Ayrıca, XML verilerini okuyabilmeniz için bir sınıf kümesi oluşturmak üzere [XSD. exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) ' yi de kullanabilirsiniz.
 
  **Model dosyasını diyagram veya formda düzenleyin.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], bir modeli diyagram veya Windows formu olarak düzenlemenize olanak sağlayan araçlar sağlar. Bu, modeli oluşturulan uygulamanın kullanıcılarıyla tartışmanızı kolaylaştırır. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Ayrıca, modelin yapısını yansıtan türü kesin belirlenmiş sınıflar kümesi de oluşturur. Daha fazla bilgi için bkz. [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>Tasarım zamanı şablonlarındaki göreli dosya yolları
- [Tasarım zamanı metin şablonunda](../modeling/design-time-code-generation-by-using-t4-text-templates.md), metin şablonuna göre konumdaki bir dosyaya başvurmak istiyorsanız `this.Host.ResolvePath()` kullanın. @No__t_1 yönergesinde `hostspecific="true"` de ayarlamanız gerekir:
+ [Tasarım zamanı metin şablonunda](../modeling/design-time-code-generation-by-using-t4-text-templates.md), metin şablonuna göre konumdaki bir dosyaya başvurmak istiyorsanız `this.Host.ResolvePath()` kullanın. `template` yönergesinde `hostspecific="true"` de ayarlamanız gerekir:
 
 ```
 <#@ template hostspecific="true" language="C#" #>

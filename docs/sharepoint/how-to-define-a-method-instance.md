@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Metot örneği tanımlama | Microsoft Docs'
+title: 'Nasıl yapılır: bir yöntem örneği tanımlama | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,33 +15,33 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 318744ec1a1a9214ce0385fc56fb1c0cf340339b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0e21900e87278ad500ee8497d1dd0c49350695d1
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62814117"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981806"
 ---
-# <a name="how-to-define-a-method-instance"></a>Nasıl yapılır: Metot örneği tanımlama
-  Her yöntem için en az bir metot örneği modelinizde tanımlamanız gerekir.
+# <a name="how-to-define-a-method-instance"></a>Nasıl yapılır: Yöntem örneği tanımlama
+  Modelinizdeki her yöntem için en az bir yöntem örneği tanımlamanız gerekir.
 
- Kullanarak bir metot örneği Ekle **BDC yöntem ayrıntıları** penceresi. Metot örneği eklediğinizde, Visual Studio ekler bir `<MethodInstance>` model dosyası projenize XML öğesi. Öznitelikleri hakkında daha fazla bilgi için bir `<MethodInstance>` öğesi bkz [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282).
+ **IVB yöntemi ayrıntıları** penceresini kullanarak bir yöntem örneği ekleyin. Yöntem örneğini eklediğinizde, Visual Studio projenizdeki model dosyasının XML dosyasına bir `<MethodInstance>` öğesi ekler. Bir `<MethodInstance>` öğesinin öznitelikleri hakkında daha fazla bilgi için bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 
-### <a name="to-define-a-method-instance"></a>Metot örneği tanımlamak için
+### <a name="to-define-a-method-instance"></a>Bir yöntem örneği tanımlamak için
 
-1. İçinde **BDC yöntem ayrıntıları** penceresinde bir yöntemin düğümünü genişletin ve ardından **örnekleri** düğümü.
+1. **BDC Yöntem ayrıntıları** penceresinde, bir yöntemin düğümünü genişletin ve ardından **örnekler** düğümünü genişletin.
 
-2. İçinde **metot örneği Ekle** listesinde **Bulucu örneği oluştur**.
+2. **Yöntem örneği Ekle** listesinde, **Bulucu örneği oluştur**' u seçin.
 
-     Yeni metot örneği altında görünür **örnekleri** düğümü.
+     **Örnekler** düğümünün altında yeni bir yöntem örneği görüntülenir.
 
-3. Menü çubuğunda, **görünümü** > **Özellikler penceresi**.
+3. Menü çubuğunda > **Özellikler penceresini** **görüntüle** ' yi seçin.
 
-4. İçinde **özellikleri** penceresinde metot örneği özelliklerini ayarlayın. Her bir özellik hakkında daha fazla bilgi için bkz: [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282).
+4. **Özellikler** penceresinde, yöntem örneğinin özelliklerini ayarlayın. Her özellik hakkında daha fazla bilgi için bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md)
-- [Nasıl yapılır: Modele bir varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md)
-- [Nasıl yapılır: Bir yönteme bir parametre ekleyin](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Nasıl yapılır: Bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
+- [IVB modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md)
+- [Nasıl yapılır: modele varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md)
+- [Nasıl yapılır: bir yönteme parametre ekleme](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)

@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4932a20fbcaee4d5aef6aac03252ee6062fbd035
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 410bc879ff4822f19436794d3cb99732be9d413e
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606203"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983698"
 ---
 # <a name="t4-template-directive"></a>T4 Şablon Yönergesi
 
@@ -26,7 +26,7 @@ Metin şablonları yazma hakkında genel bir bakış için bkz. [T4 metin şablo
 <#@ template [language="VB"] [compilerOptions="options"] [culture="code"] [debug="true"] [hostspecific="true"] [inherits="templateBaseClass"] [visibility="internal"] [linePragmas="false"] #>
 ```
 
-@No__t_0 yönergesinin, dönüşümün farklı yönlerini belirtmenizi sağlayan birkaç özniteliği vardır. Tüm öznitelikler isteğe bağlıdır.
+`template` yönergesinin, dönüşümün farklı yönlerini belirtmenizi sağlayan birkaç özniteliği vardır. Tüm öznitelikler isteğe bağlıdır.
 
 ## <a name="compileroptions-attribute"></a>compilerOptions özniteliği
 
@@ -40,7 +40,7 @@ Tüm geçerli derleyici seçenekleri.
 
 Çalışma zamanı (önceden işlenmiş) şablonları için yok sayılır.
 
-Bu seçenekler, şablon [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] veya [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] dönüştürüldüğünde uygulanır ve sonuçta elde edilen kod derlenir.
+Bu seçenekler, şablon [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] veya [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]dönüştürüldüğünde uygulanır ve sonuçta elde edilen kod derlenir.
 
 ## <a name="culture-attribute"></a>culture özniteliği
 
@@ -70,7 +70,7 @@ Geçerli değerler:
 
 `false` (varsayılan)
 
-@No__t_0 özniteliği `true` ise, ara kod dosyası, hata ayıklayıcının, şablonunuzda bir kesmenin veya özel durumun gerçekleştiği konumu daha doğru belirlemesine olanak tanıyan bilgiler içerir.
+`debug` özniteliği `true`ise, ara kod dosyası, hata ayıklayıcının, şablonunuzda bir kesmenin veya özel durumun gerçekleştiği konumu daha doğru belirlemesine olanak tanıyan bilgiler içerir.
 
 Tasarım zamanı şablonlarında, ara kod dosyası **% Temp%** dizininize yazılır.
 
@@ -96,7 +96,7 @@ Bu özniteliğin değerini `true` olarak ayarlarsanız, metin şablonunuz taraf�
 
 Bu özelliğin türü ana bilgisayarın türüne bağlı olduğundan, yalnızca belirli bir ana bilgisayar ile çalışan bir metin şablonu yazıyorsanız faydalıdır. [Tasarım zamanı şablonları](../modeling/design-time-code-generation-by-using-t4-text-templates.md), ancak [çalışma zamanı şablonları](../modeling/run-time-text-generation-with-t4-text-templates.md)için geçerlidir.
 
-@No__t_0 `true` ve Visual Studio kullanıyorsanız, Visual Studio özelliklerine erişmek için `this.Host` IServiceProvider 'a çevirebilirsiniz. Projedeki bir dosyanın mutlak yolunu almak için `Host.ResolvePath(filename)` de kullanabilirsiniz. Örneğin:
+`hostspecific` `true` ve Visual Studio kullanıyorsanız, Visual Studio özelliklerine erişmek için `this.Host` IServiceProvider 'a çevirebilirsiniz. Projedeki bir dosyanın mutlak yolunu almak için `Host.ResolvePath(filename)` de kullanabilirsiniz. Örneğin:
 
 ```csharp
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -118,7 +118,7 @@ Content of myFile is:
 <#= myFile #>
 ```
 
-@No__t_0 ve `hostspecific` özniteliklerini birlikte kullanırsanız, türetilmiş sınıfta Host = "trueFromBase" ve taban sınıfta Host = "true" değerini belirtin. Bu, oluşturulan koddaki `Host` özelliğinin çift tanımını önler.
+`inherits` ve `hostspecific` özniteliklerini birlikte kullanırsanız, türetilmiş sınıfta Host = "trueFromBase" ve taban sınıfta Host = "true" değerini belirtin. Bu, oluşturulan koddaki `Host` özelliğinin çift tanımını önler.
 
 ## <a name="language-attribute"></a>language özniteliği
 
@@ -132,7 +132,7 @@ Geçerli değerler:
 
 `VB`
 
-@No__t_0 özniteliği, deyim ve ifade blokları içindeki kaynak kodu için kullanılacak dili ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] veya [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]) belirtir. Çıktının oluşturulmasında kullanılan ara kod dosyası bu dili kullanır. Bu dil, şablonunuzun oluşturduğu ve herhangi bir türdeki bir metin olabilecek dille ilişkili değildir.
+`language` özniteliği, deyim ve ifade blokları içindeki kaynak kodu için kullanılacak dili ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] veya [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]) belirtir. Çıktının oluşturulmasında kullanılan ara kod dosyası bu dili kullanır. Bu dil, şablonunuzun oluşturduğu ve herhangi bir türdeki bir metin olabilecek dille ilişkili değildir.
 
 Örneğin:
 
@@ -227,15 +227,15 @@ Temel ve türetilmiş sınıfları farklı projelerde oluşturabilirsiniz. Temel
 Ayrıca sıradan bir elle yazılmış sınıfı taban sınıf olarak kullanabilirsiniz. Taban sınıfın, türetilmiş sınıf tarafından kullanılan yöntemleri sağlaması gerekir.
 
 > [!WARNING]
-> @No__t_0 ve `hostspecific` özniteliklerini birlikte kullanıyorsanız, ana sınıfta hostspecific = "trueFromBase" değerini türetilmiş sınıfta ve Host = "true" olarak belirtin. Bu, oluşturulan koddaki `Host` özelliğinin çift tanımını önler.
+> `inherits` ve `hostspecific` özniteliklerini birlikte kullanıyorsanız, ana sınıfta hostspecific = "trueFromBase" değerini türetilmiş sınıfta ve Host = "true" olarak belirtin. Bu, oluşturulan koddaki `Host` özelliğinin çift tanımını önler.
 
 ### <a name="inheritance-in-a-design-time-text-template"></a>Tasarım zamanı metin şablonunda devralma
 
-Tasarım zamanı metin şablonu, **özel aracın** **TextTemplatingFileGenerator**olarak ayarlandığı bir dosyadır. Şablon, Visual Studio projenizin bir kısmını oluşturan kod veya metin çıkış dosyası oluşturur. Çıktı dosyasını oluşturmak için, şablon ilk olarak genellikle görmediğiniz bir ara program kod dosyasına çevrilir. @No__t_0 özniteliği bu ara kodun temel sınıfını belirtir.
+Tasarım zamanı metin şablonu, **özel aracın** **TextTemplatingFileGenerator**olarak ayarlandığı bir dosyadır. Şablon, Visual Studio projenizin bir kısmını oluşturan kod veya metin çıkış dosyası oluşturur. Çıktı dosyasını oluşturmak için, şablon ilk olarak genellikle görmediğiniz bir ara program kod dosyasına çevrilir. `inherits` özniteliği bu ara kodun temel sınıfını belirtir.
 
 Tasarım zamanı metin şablonu için <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> türetilen herhangi bir temel sınıfı belirtebilirsiniz. Temel sınıfı içeren derlemeyi veya projeyi yüklemek için `<#@assembly#>` yönergesini kullanın.
 
-Daha fazla bilgi için, [Gareth Jones ' bloguna "metin şablonlarına devralma"](http://go.microsoft.com/fwlink/?LinkId=208373)konusuna bakın.
+Daha fazla bilgi için, [Gareth Jones ' bloguna "metin şablonlarına devralma"](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/)konusuna bakın.
 
 ## <a name="linepragmas-attribute"></a>linePragmas özniteliği
 

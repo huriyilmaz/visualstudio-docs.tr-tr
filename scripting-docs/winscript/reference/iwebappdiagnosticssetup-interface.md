@@ -13,23 +13,23 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 71d4501fff04b62abe392c6684a4a0551dea9ee8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1e9bb3905da6227b978bc27b96493500f8d6d2ff
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443655"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984536"
 ---
 # <a name="iwebappdiagnosticssetup-interface"></a>IWebAppDiagnosticsSetup Arabirimi
-Bu arabirim PDM hata ayıklama uygulama ayıklanmakta olan işlemde COM nesneleri oluşturma ve web tanılamayı etkinleştirmeyi tarafından uygulanır. Uygulama nesnesi uygulayan PDM hatalarını ayıklıyorsanız [IObjectWithSite](http://go.microsoft.com/fwlink/?LinkId=232438), Internet Explorer'ı çağırır [SetSite](http://go.microsoft.com/fwlink/?LinkId=232439) oluşturulduktan sonra ve bir başvuru geçirir [Iwebbrowser2](http://go.microsoft.com/fwlink/?LinkId=232449). WWA uygulama çağrıları [SetSite](http://go.microsoft.com/fwlink/?LinkId=232439) ve WWA geçişlerinde IWebApplicationHost bunun yerine arabirimi. Varsa [SetSite](http://go.microsoft.com/fwlink/?LinkId=232439) NULL olmayan bir değer ile çağırıldı [IWebAppDiagnosticsSetup::DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md) true değerini döndürür. Değilse, false değerini döndürür ve çağrılar [IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md) başarısız.  
+Bu arabirim, hata ayıklanan işlemde COM nesneleri oluşturmak ve Web tanılamayı etkinleştirmek için bir PDM hata ayıklama uygulaması tarafından uygulanır. PDM hata ayıklama uygulama nesnesi [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)uygularsa, Internet Explorer oluşturulduktan sonra, bir [denetiminden IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127(v=vs.85))başvurusunda geçiş yapıldıktan sonra [SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) çağırır. Bir WWA uygulaması [SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) çağırır ve bunun yerine WWA arabirim ıwebapplicationhost içinde geçirir. [SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) null olmayan bir değerle çağrılırsa [ıwebappdiagnosticssetup::D ıagnohossupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md) doğru döndürür. Aksi takdirde, false döndürür ve [ıwebappdiagnosticssetup:: CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md) Fail öğesine çağrı yapılır.  
   
 > [!IMPORTANT]
-> `IWebAppDiagnosticsSetup` PDM v11.0 ve büyük uygulanır. activdbg100.h içinde bulunur.  
+> `IWebAppDiagnosticsSetup`, PDM v 11.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="methods"></a>Yöntemler  
- Bu arabirim, aşağıdaki yöntemi kullanıma sunar.  
+ Bu arabirim aşağıdaki yöntemleri sunar.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md)|Belirtilen filtre tarafından gizlenen metin belgeleri alır.|  
-|[IWebAppDiagnosticsSetup::DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md)|Belirtilen belge bu düğümün alt düğümleri birine ait olup olmadığını belirler.|
+|[IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp](../../winscript/reference/iwebappdiagnosticssetup-createobjectwithsiteatwebapp.md)|Belirtilen filtreyle gizlenen metin belgelerini alır.|  
+|[IWebAppDiagnosticsSetup::DiagnosticsSupported](../../winscript/reference/iwebappdiagnosticssetup-diagnosticssupported.md)|Belirtilen belgenin bu düğümün alt düğümlerinden birine ait olup olmadığını belirler.|

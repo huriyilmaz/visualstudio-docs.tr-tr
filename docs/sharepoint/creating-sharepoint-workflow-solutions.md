@@ -1,5 +1,5 @@
 ---
-title: SharePoint iş akışı çözümleri oluşturma | Microsoft Docs
+title: SharePoint Iş akışı çözümleri oluşturma | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -20,130 +20,130 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d78d82a51f88bfaf076b56692629e801689e103e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f4139760995d655dbeb4e1c76d164f21949a9b50
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443532"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984571"
 ---
 # <a name="create-sharepoint-workflow-solutions"></a>SharePoint iş akışı çözümleri oluşturma
 
-[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir SharePoint Web sitesinde liste öğelerini ve belgeleri yaşam döngüsünü yönetme özel iş akışları oluşturmanıza yardımcı olacak araçlar sağlar. Sağlanan öğe, Tasarımcı, bir dizi etkinlik denetimi ve gerekli derleme başvurularını içerir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca içerir **SharePoint Özelleştirme Sihirbazı**, oluşturma ve iş akışlarını yapılandırma yardımcı olmak için.
+[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], bir SharePoint Web sitesindeki belgelerin yaşam döngüsünü ve liste öğelerini yöneten özel iş akışları oluşturmanıza yardımcı olacak araçlar sağlar. Belirtilen öğeler bir tasarımcı, etkinlik denetimleri kümesi ve gerekli derleme başvuruları içerir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], iş akışlarını oluşturmaya ve yapılandırmaya yardımcı olması için **SharePoint Özelleştirme Sihirbazı**'nı da içerir.
 
-SharePoint ile ilgili daha fazla bilgi için bkz. [Microsoft SharePoint Ürünleri ve teknolojileri](http://go.microsoft.com/fwlink/?LinkId=178470).
+SharePoint hakkında daha fazla bilgi için bkz. [Microsoft SharePoint ürünleri ve teknolojileri](/sharepoint/dev/).
 
-## <a name="workflows-in-sharepoint"></a>SharePoint iş akışlarında
- Bir iş akışı için bir SharePoint kitaplığına veya liste eklediğinizde, bir iş sürecini kitaplık veya liste tüm öğelerde uygular. Bir iş akışının düzenlenmesi ve gözden öğesi gönderme gibi her öğe üzerinde sistem veya kullanıcıların gerçekleştirmesi gereken eylemleri açıklar. Bu eylemler olarak da bilinen, *etkinlikleri*, iş akışının yapı taşlarıdır.
+## <a name="workflows-in-sharepoint"></a>SharePoint 'te iş akışları
+ Bir SharePoint kitaplığına veya listesine bir iş akışı eklediğinizde, kitaplıktaki veya listedeki tüm öğelerde bir iş işlemini zorunlu kılabilirsiniz. Bir iş akışı, sistem veya kullanıcıların her öğe üzerinde gerçekleştirmesi gereken eylemleri (düzenlenecek öğeyi gönderme ve gözden geçirilmesi gibi) açıklar. *Etkinlik*olarak bilinen bu eylemler, iş akışının yapı taşlarıdır.
 
- SharePoint iş akışlarında oluşturabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve bir SharePoint Web sitesine dağıtın. SharePoint için bir iş akışı dağıtıldıktan sonra bunu bir kitaplık veya liste ile ilişkilendirebilirsiniz. Bunun ardından otomatik olarak bir işlem tarafından veya el ile bir kullanıcı tarafından başlatılabilir. İş akışı işlemi hakkında daha fazla bilgi için bkz: [Visual Studio kullanarak SharePoint geliştirme iş akışları](https://docs.microsoft.com/sharepoint/dev/general-development/develop-sharepoint-workflows-using-visual-studio).
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ' de SharePoint iş akışları oluşturabilir ve bunları bir SharePoint Web sitesine dağıtabilirsiniz. Bir iş akışı SharePoint 'e dağıtıldıktan sonra, bunu bir kitaplık veya liste ile ilişkilendirirsiniz. Daha sonra otomatik olarak, bir işlem veya el ile bir kullanıcı tarafından başlatılabilir. İş akışı işlemi hakkında daha fazla bilgi için bkz. [Visual Studio kullanarak SharePoint iş akışlarını geliştirme](/sharepoint/dev/general-development/develop-sharepoint-workflows-using-visual-studio).
 
-## <a name="create-custom-sharepoint-workflows"></a>Özel bir SharePoint iş akışları oluşturun
- İki SharePoint iş akışı projeleri de kullanılabilir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]: **Sıralı iş akışı** ve **Durum makinesi iş akışı**.
+## <a name="create-custom-sharepoint-workflows"></a>Özel SharePoint iş akışları oluşturma
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]iki SharePoint iş akışı projesi kullanılabilir: **sıralı Iş akışı** ve **durum makinesi iş akışı**.
 
- A *sıralı iş akışı* bir dizi adımı temsil eder. Son Etkinlik tamamlanana kadar adımları birbiri ardına gerçekleştirilir. Sıralı iş akışı her zaman kendi yürütme kesinlikle sıralıdır. Çünkü bunlar dış olaylarını almak ve paralel mantık akışları dahil tam yürütme sırası değişebilir. Aşağıdaki çizimde, bir sıralı iş akışı örneği gösterilmektedir.
+ *Sıralı bir iş akışı* , bir dizi adımı temsil eder. Adımlar, son etkinlik tamamlanana kadar bir sonraki bir kez gerçekleştirilir. Sıralı iş akışları her zaman yürütmesinde tamamen sıralıdır. Dış olayları alabilecekleri ve paralel Logic akışları içerebildiğinden, yürütmenin tam sırası farklılık gösterebilir. Aşağıdaki çizimde sıralı bir iş akışı örneği gösterilmektedir.
 
- ![Sıralı iş akışı](../sharepoint/media/sp-sequential.png "sıralı iş akışı")
+ ![Sıralı Iş akışı](../sharepoint/media/sp-sequential.png "Sıralı Iş akışı")
 
- A *Durum makinesi iş akışı* durumları, geçişleri ve eylemleri kümesini temsil eder. Zaman uyumsuz olarak bir Durum makinesi iş akışı adımları yürütün. Bu kişiler mutlaka birbiri ardına gerçekleştirilmediğinden ancak bunun yerine Eylemler ve durumlar tarafından tetiklenen anlamına gelir. Bir durum başlangıç durumu atanır ve ardından, olay tabanlı, geçiş başka bir duruma yapılır. Durum makinesi iş akışı sonuna belirten bir son duruma sahip olabilir. Aşağıdaki diyagramda bir Durum makinesi iş akışı örneği gösterilmektedir.
+ Bir *durum makinesi iş akışı* bir durumlar, geçişler ve eylemler kümesini temsil eder. Durum makinesi iş akışındaki adımlar zaman uyumsuz olarak yürütülür. Bu, bunlardan sonra bir tane gerçekleştirilmeyeceği anlamına gelir, bunun yerine eylemler ve durumlar tarafından tetiklenir. Bir durum başlangıç durumu olarak atanır ve sonra bir olaya bağlı olarak başka bir duruma geçiş yapılır. Durum makinesi, iş akışının sonunu belirleyen son bir duruma sahip olabilir. Aşağıdaki diyagramda bir durum makinesi iş akışı örneği gösterilmektedir.
 
- ![Durum makinesi iş akışı](../sharepoint/media/sp-state.png "Durum makinesi iş akışı")
+ ![Durum makinesi Iş akışı](../sharepoint/media/sp-state.png "Durum makinesi Iş akışı")
 
- İş akışı türleri hakkında daha fazla bilgi için bkz. [iş akışı türlerini](http://go.microsoft.com/fwlink/?LinkId=178995).
+ İş akışı türleri hakkında daha fazla bilgi için bkz. [Iş akışı türleri](/previous-versions/office/developer/sharepoint-2010/ms468447(v=office.14)).
 
-### <a name="use-the-wizard"></a>Sihirbazı'nı kullanma
- Bir SharePoint iş akışı projesinde oluşturduğunuzda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], önce kendi ayarlarında belirttiğiniz **SharePoint Özelleştirme Sihirbazı**. Sihirbazı, bir proje oluşturmak için bu ayarları kullanır. **Çözüm Gezgini**. Bu proje bir kod dosyası, iş akışı dağıtmak için kullanılan birkaç dosyaları içerir ve özel bir SharePoint iş akışı oluşturmak için gereken derlemelere başvurur.
+### <a name="use-the-wizard"></a>Sihirbazı kullanma
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]' de bir SharePoint iş akışı projesi oluşturduğunuzda, önce **SharePoint Özelleştirme Sihirbazı**'nda ayarlarını belirtirsiniz. Sihirbaz bu ayarları **Çözüm Gezgini**bir proje oluşturmak için kullanır. Bu proje, bir kod dosyası, iş akışını dağıtmak için kullanılan birkaç dosya ve özel bir SharePoint iş akışı oluşturmak için gereken derlemelere başvurular içerir.
 
- İş akışını oluşturduktan sonra özelliklerini Özellikler penceresinde değiştirebilirsiniz. Çoğu iş akışı özelliklerini Özellikler penceresinde doğrudan değiştirilebilir rağmen bazı, üç nokta düğmesine tıklamanız gerekir (![ASP.NET Mobil Tasarımcısı elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcısı elips")) için bunların değerlerini değiştirin. Bu düğmeyi yeniden **SharePoint Özelleştirme Sihirbazı**. Özelliği öğesini değer değişiklikleri yaptıktan sonra **son** bunları sonlandırmak için düğme.
+ İş akışını oluşturduktan sonra, Özellikler penceresi özelliklerini değiştirebilirsiniz. İş akışı özelliklerinin çoğu doğrudan Özellikler penceresi değiştirilebilse de, bazıları değerlerini değiştirmek için üç nokta düğmesini (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) tıklamanızı gerektirir. Bu düğme **SharePoint Özelleştirme Sihirbazı 'nı**yeniden başlatır. Özellik değeri değiştirildikten sonra, **son** düğmesini seçerek bunları sonlandırın.
 
 > [!NOTE]
-> **İş akışı türü** özelliği salt okunurdur ve değiştirilemez. İş akışı türü değiştirmek istiyorsanız, başka bir iş akışı oluşturmanız gerekir.
+> **Iş akışı türü** özelliği salt okunurdur ve değiştirilemez. İş akışı türünü değiştirmek isterseniz, başka bir iş akışı oluşturmanız gerekir.
 
-## <a name="design-a-sharepoint-workflow"></a>Bir SharePoint iş akışı tasarlayın
- İş süreci içinde tüm adımları tanımladıktan sonra kullanın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint iş akışı tasarlamak için iş akışı Tasarımcısı. Tasarımcısını açmak için çift tıklayın Workflow1.cs veya içinde Workflow1.vb **Çözüm Gezgini**, ya da bu dosyalar için kısayol menüsünü açın ve ardından **açın**.
+## <a name="design-a-sharepoint-workflow"></a>SharePoint iş akışı tasarlama
+ İş işlemindeki tüm adımları tanımladıktan sonra, SharePoint iş akışını tasarlamak için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışı tasarımcısını kullanın. Tasarımcıyı açmak için **Çözüm Gezgini**içinde Workflow1.cs veya Workflow1. vb öğesine çift tıklayın veya bu dosyalardan herhangi biri için kısayol menüsünü açın ve **Aç**öğesini seçin.
 
 ### <a name="activities"></a>Etkinlikler
- Bir iş akışı tasarlamak için etkinlikler ekleme **araç kutusu** için bir *iş akışı zamanlama* Tasarımcı üzerinde. Bir iş akışı zamanlama bunlar gerçekleştirilmesini sırada etkinlik dizisini içerir.
+ Bir iş akışı tasarlamak için, **araç kutusundan** tasarımcı 'daki bir *iş akışı çizelgesine* etkinlik ekleyin. Bir iş akışı zamanlaması, etkinlik sırasını, gerçekleştirilmesi gereken sırada içerir.
 
  İki tür etkinlik vardır:
 
-- *Basit etkinlikleri* iş, "1 gün için gecikme" veya "Web hizmeti başlatılamıyor." gibi tek bir birim
+- *Basit etkinlikler* , "1 gün için gecikme" veya "Web Hizmeti Başlat" gibi tek bir iş birimi gerçekleştirir.
 
-- *Bileşik etkinlikleri* diğer etkinlikleri içerir; örneğin, bir koşullu etkinlik iki dalı içerebilir.
+- *Bileşik etkinlikler* diğer etkinlikleri içerir; Örneğin, koşullu bir etkinlik iki dal içerebilir.
 
-  Her iki tür etkinlik mevcuttur **araç kutusu**.
+  **Araç kutusunda**her iki etkinlik türü de mevcuttur.
 
-  Etkinlikler, özellikleri, yöntemleri ve olayları olabilir. Kullanım **özellikleri** penceresinde etkinliğin özelliklerini ayarlamak için.
+  Etkinliklerin özellikleri, yöntemleri ve olayları olabilir. Bir etkinliğin özelliklerini ayarlamak için **Özellikler** penceresini kullanın.
 
-  Ayrıca, özel bir etkinlik oluşturabilirsiniz. Daha fazla bilgi için [izlenecek yol: Özel site iş akışı faaliyeti oluşturma](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md).
+  Özel bir etkinlik da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: özel site iş akışı etkinliği oluşturma](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md).
 
-  Etkinlikler, aşağıdaki sekmeleri düzenlenir **araç kutusu**:
+  Etkinlikler **araç kutusu**'ndaki aşağıdaki sekmelerde düzenlenmiştir:
 
-- **SharePoint iş akışı**
+- **SharePoint Iş akışı**
 
-- **Windows iş akışı v3.0**
+- **Windows Workflow v 3.0**
 
-- **Windows iş akışı v3.5**
+- **Windows Workflow v 3.5**
 
-  Tüm temel iş akışı etkinlikleri, SharePoint tarafından desteklenir. Daha fazla bilgi için [iş akışı etkinlikleri için Windows SharePoint Services Genel Bakış](http://go.microsoft.com/fwlink/?LinkID=156094).
+  Tüm temel iş akışı etkinlikleri SharePoint tarafından desteklenmez. Daha fazla bilgi için bkz. [Windows SharePoint hizmetlerine genel bakış Için Iş akışı etkinlikleri](/previous-versions/office/developer/sharepoint-2010/ms446847(v=office.14)).
 
 #### <a name="sharepoint-workflow-activities"></a>SharePoint iş akışı etkinlikleri
- **SharePoint iş akışı** sekmeler içeren özel etkinlikleri kullanmak için [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]. Bu etkinlikler basitleştirebilir ve geliştirmeye yönelik belge yaşam döngüsü iş akışları. Listelenen etkinlikleri hakkında daha fazla bilgi için **SharePoint iş akışı** sekmesinde bkz [iş akışı etkinlikleri için Windows SharePoint Services Genel Bakış](http://go.microsoft.com/fwlink/?LinkID=156094).
+ **SharePoint Iş akışı** sekmeleri [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]kullanımı için özel etkinlikler içerir. Bu etkinlikler belge yaşam döngüsü iş akışlarının geliştirilmesini basitleştirir ve kolaylaştırır. **SharePoint Iş akışı** sekmesinde listelenen etkinlikler hakkında daha fazla bilgi için bkz. [Windows SharePoint Services Için Iş akışı etkinlikleri genel bakış](/previous-versions/office/developer/sharepoint-2010/ms446847(v=office.14)).
 
 #### <a name="windows-workflow-activities"></a>Windows iş akışı etkinlikleri
- **Windows iş akışı** sekmeler içeren tarafından sağlanan etkinlikler [!INCLUDE[TLA#tla_workflow](../sharepoint/includes/tlasharptla-workflow-md.md)]. Bu etkinlikler, her türden bir Windows iş akışı uygulama için iş akışı tabloları oluşturmak için kullanabilirsiniz.
+ **Windows Iş akışı** sekmeleri [!INCLUDE[TLA#tla_workflow](../sharepoint/includes/tlasharptla-workflow-md.md)]tarafından sunulan etkinlikleri içerir. Bu etkinlikleri, herhangi bir tür Windows iş akışı uygulamasının iş akışı zamanlamalarını oluşturmak için kullanabilirsiniz.
 
- Listelenen etkinlikleri hakkında daha fazla bilgi için **Windows iş akışları** sekmesinde bkz [Windows Workflow Foundation etkinlikleri](http://go.microsoft.com/fwlink/?LinkID=156096). Windows Workflow Foundation hakkında daha fazla bilgi için bkz: [Windows Workflow Foundation'a genel bakış](http://go.microsoft.com/fwlink/?LinkID=128632).
+ **Windows Iş akışları** sekmesinde listelenen etkinlikler hakkında daha fazla bilgi için bkz. [Windows Workflow Foundation etkinlikleri](/previous-versions/dotnet/netframework-3.5/ms733615(v=vs.90)). Windows Workflow Foundation hakkında daha fazla bilgi için bkz. [Windows Workflow Foundation genel bakış](/previous-versions/dotnet/netframework-3.5/ms734631(v=vs.90)).
 
-### <a name="work-with-activities-in-the-designer"></a>Tasarımcı etkinliklerle çalışma
- Windows iş akışı etkinlikleri ve SharePoint iş akışı etkinlikleri iş akışı zamanlamanızı içerebilir.
+### <a name="work-with-activities-in-the-designer"></a>Tasarımcıda etkinliklerle çalışma
+ İş akışı zamanlamanız, Windows Iş akışı etkinlikleri ve SharePoint Iş akışı etkinliklerinin bir birleşimini içerebilir.
 
- Tasarımcı getirin ve etkinlikleri doğru şekilde yapılandırmanıza yardımcı olması için görsel ipuçları gösterir. Sürükleyin ya da kopyalama iş akışı zamanlama üzerine bir etkinliği Tasarımcı iş akışı bu etkinlik için geçerli konumları gösteren yeşil artı işaretini (+) simgeleri görüntüler. Bir etkinlik ise, geçerli olacağı olmayan bir konumda yerleştiremezsiniz. Örneğin, bir dinleme etkinlik dalda bir gönderme etkinlik ilk etkinlik olarak yerleştiremezsiniz. Daha fazla bilgi için [SharePoint Tasarımcı Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=178476).
+ Tasarımcı, etkinlikleri doğru bir şekilde konumlandırmanıza ve yapılandırmanıza yardımcı olacak görsel ipuçları görüntüler. Bir etkinliği iş akışı zamanlaması üzerine sürüklediğinizde veya kopyaladığınızda Tasarımcı, iş akışındaki bu etkinlik için geçerli konumları gösteren yeşil artı işareti (+) simgelerini görüntüler. Bir etkinliği geçerli olmadığı bir konuma yerleştirebilirsiniz. Örneğin, bir Send etkinliğini bir dinleme etkinlik dalında ilk etkinlik olarak konumlandıramezsiniz. Daha fazla bilgi için bkz. [SharePoint Designer Geliştirici Merkezi](https://developer.microsoft.com/office/docs).
 
-## <a name="collect-information-during-the-workflow"></a>İş akışı sırasında bilgi toplamak
- Kullanıcılardan bilgi toplamak isteyebileceğiniz, önceden tanımlanmış zamanlarda iş akışı. Forms veya öğe özelliklerini kullanarak bilgi toplayabilirsiniz.
+## <a name="collect-information-during-the-workflow"></a>İş akışı sırasında bilgi toplama
+ İş akışında önceden tanımlanmış zamanlarda kullanıcılardan bilgi toplamak isteyebilirsiniz. Formları veya öğe özelliklerini kullanarak bilgi toplayabilirsiniz.
 
 ### <a name="forms"></a>Formlar
- Forms içeren sorular ve yanıtlar vermek üzere kullanıcılar için yollar sağlar, iletişim kutularını gibidir.
+ Formlar, sorular içeren iletişim kutularına benzer ve kullanıcıların yanıt vermesi için yollar sağlar.
 
- Bir iş akışında kullanılabilecek forms dört tür vardır:
+ Bir iş akışında kullanılabilen dört tür form vardır:
 
-- İlişkilendirme
+- Kaldırma
 
-- Başlatma
+- Başlatmak
 
 - Değişiklik
 
 - Görev
 
-  Bu, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ilişki ve başlatma formları için öğe şablonları içerir. Örneği bir *ilişkilendirme formu* yükleme iş akışı Yöneticisi sağlayan bir girin bir harcama iş akışı için bir harcama sınırına gibi iş akışı ile ilgili parametreler. Örneği bir *başlatma formu* bir iş akışına harcadıkları süre girin kullanıcının bir iş akışının gider olanak sağlar. Bu form türleri hakkında daha fazla bilgi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
+  Bu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], ilişkilendirme ve başlatma formları için öğe şablonları içerir. *İlişki formu* örneği, iş akışını yükleyen yöneticinin bir gider iş akışı için harcama limiti gibi iş akışıyla ilişkili parametreleri girmelerini sağlayan bir örnektir. Bir *başlatma formu* örneği, bir gider iş akışının kullanıcısına iş akışına harcadıkları miktarı girebilmenizi sağlayan bir örnektir. Bu tür formlar hakkında daha fazla bilgi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
 ### <a name="item-properties"></a>Öğe özellikleri
- SharePoint kitaplığına veya listedeki bir öğe özelliklerini kullanarak kullanıcıların bilgilerini de toplayabilir. Ana kod dosyası (Workflow1.cs veya Workflow1.vb) adlı Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties.WorkflowProperties sınıfının bir örneğini bildirir `workflowProperties`. Kullanım `workflowProperties` kitaplık veya liste kodda özelliklerine erişmek için nesne. Bir örnek için bkz [izlenecek yol: Oluşturma ve bir SharePoint iş akışı çözümü hata ayıklama](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md).
+ Ayrıca, SharePoint kitaplığındaki veya listesindeki bir öğenin özelliklerini kullanarak kullanıcılardan bilgi toplayabilirsiniz. Ana kod dosyası (Workflow1.cs veya Workflow1. vb), `workflowProperties`adlı Microsoft. SharePoint. Workflow. SPWorkflowActivationProperties. WorkflowProperties sınıfının bir örneğini bildirir. Kod içindeki kitaplığın veya listenin özelliklerine erişmek için `workflowProperties` nesnesini kullanın. Bir örnek için bkz. [Izlenecek yol: SharePoint iş akışı çözümü oluşturma ve hata ayıklama](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md).
 
-## <a name="debug-a-sharepoint-workflow-template"></a>Bir SharePoint iş akışı şablonu hata ayıklama
- Diğer hata ayıklama sırasında bir SharePoint iş akışı projesine aynı hataları [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Web tabanlı bir proje. Başladığınızda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklayıcı, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] belirttiğiniz ayarları kullanan **SharePoint Özelleştirme Sihirbazı** uygun SharePoint Web sitesini açın ve otomatik olarak iş akışı şablonunu ilişkilendirmek için uygun bir kitaplık veya liste ile. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca ekler [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] için hata ayıklayıcı [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] adlı işlem *w3wp.exe*.
+## <a name="debug-a-sharepoint-workflow-template"></a>SharePoint iş akışı şablonunda hata ayıklama
+ SharePoint iş akışı projesinde hata ayıkladığınızda, diğer [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Web tabanlı projelerde hata ayıklaması yapabilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklayıcıyı başlattığınızda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], **SharePoint Özelleştirme Sihirbazı** 'nda belirttiğiniz ayarları kullanarak uygun SharePoint Web sitesini açar ve iş akışı şablonunu uygun kitaplıkla otomatik olarak ilişkilendirir veya Listele. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklayıcısını *W3wp. exe*adlı [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] işlemine ekler.
 
- İş akışı test etmek için onu el ile başlatmanız gerekir. Daha fazla bilgi için bkz: "İş akışı hata ayıklama" bölümünde [SharePoint çözümlerinde hata ayıklama](../sharepoint/debugging-sharepoint-solutions.md). Hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Web uygulamasında hata ayıklama, bkz: [web uygulamalarında ve betikte hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md).
+ İş akışını test etmek için el ile başlatmanız gerekir. Daha fazla bilgi için [SharePoint Çözümlerinde hata ayıklama](../sharepoint/debugging-sharepoint-solutions.md)konusunun "hata ayıklama iş akışları" bölümüne bakın. Web uygulaması hata ayıklaması [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hakkında daha fazla bilgi için bkz. [Web uygulamalarında hata ayıklama ve betik](../debugger/how-to-enable-debugging-for-aspnet-applications.md).
 
-## <a name="deploy-a-sharepoint-workflow-template"></a>Bir SharePoint iş akışı şablonu dağıtma
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint iş akışı projeleri yalnızca diğer gibi dağıtma [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint projeleri. Daha fazla bilgi için [paketleme ve dağıtma SharePoint çözümleri](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).
+## <a name="deploy-a-sharepoint-workflow-template"></a>SharePoint iş akışı şablonu dağıtma
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint iş akışı projeleri, diğer [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint projeleriyle aynı şekilde dağıtılır. Daha fazla bilgi için bkz. [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).
 
-## <a name="import-globally-reusable-workflows"></a>Genel olarak yeniden kullanılabilir iş akışlarını içeri aktarma
- Siteye yeniden kullanılabilir iş akışlarını oluşturmaya ek olarak, SharePoint Designer oluşturmanızı sağlayan *genel olarak yeniden kullanılabilir iş akışlarını*, herhangi bir SharePoint sitesinin kullanılabilir iş akışlarını olduğu. Yeniden kullanılabilir iş akışını içeri aktarma projede [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] genel olarak yeniden kullanılabilir iş akışları şu anda içeri aktarmaz. Ancak, genel olarak yeniden kullanılabilir iş akışı bir yeniden kullanılabilir iş akışına dönüştürmek için SharePoint Designer'ı kullanın veya iş akışı Dönüştürülmeyen bildirim temelli bir iş akışı olarak alın. Daha fazla bilgi için [var olan bir SharePoint sitesinden öğeleri içeri aktarma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).
+## <a name="import-globally-reusable-workflows"></a>Genel yeniden kullanılabilir iş akışlarını içeri aktar
+ SharePoint Designer, siteye özgü yeniden kullanılabilir iş akışları oluşturmanın yanı sıra, herhangi bir SharePoint sitesi tarafından kullanılabilecek iş akışları olan *küresel olarak yeniden kullanılabilir iş akışları*oluşturmanıza olanak sağlar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ' deki yeniden kullanılabilir Iş akışı projesi şu anda genel olarak kullanılabilir iş akışlarını içeri aktarmıyor. Ancak, genel olarak yeniden kullanılabilir bir iş akışını yeniden kullanılabilir bir iş akışına dönüştürmek ya da iş akışını Dönüştürülmeyen bir bildirim temelli iş akışı olarak içeri aktarmak için SharePoint Designer 'ı kullanabilirsiniz. Daha fazla bilgi için bkz. [mevcut bir SharePoint sitesinden öğeleri Içeri aktarma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[İzlenecek yol: Oluşturma ve bir SharePoint iş akışı çözümü hata ayıklama](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)|Oluşturma ve basit bir hata ayıklama ile adım adım müşteri adayları [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışı.|
-|[İzlenecek yol: İlişki ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)|Bir daha tam özellikli oluşturmak için adım adım müşteri adayları [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ilişki ve başlatma formları ile iş akışını tamamlayın.|
-|[İzlenecek yol: Bir uygulama sayfasını bir iş akışına ekleme](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|Konuyla ilgili derlemeleri [izlenecek yol: İlişki ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) ek ekleyerek *.aspx* iş akışınıza girdi veri çubuğunda raporları bir uygulama sayfası.|
-|[İzlenecek yol: Özel site iş akışı faaliyeti oluşturma](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md)|İki anahtar görevlerin nasıl gerçekleştirileceğini gösterir: site düzeyinde bir iş akışı oluşturma ve bir özel iş akışı etkinliği oluşturun.|
-|[İzlenecek yol: Bir SharePoint Tasarımcısı yeniden kullanılabilir iş akışını Visual Studio'ya içeri aktarma](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)|SharePoint Designer 2010 içinde oluşturulan yeniden kullanılabilir bildirim temelli iş akışlarını içeri aktarma gösteren bir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint Proje.|
+|[İzlenecek yol: SharePoint iş akışı çözümü oluşturma ve hatalarını ayıklama](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)|Basit bir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışı oluşturma ve hata ayıklama konusunda size adım adım yol gösterir.|
+|[İzlenecek yol: ilişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)|Ilişkilendirme ve başlatma formlarıyla eksiksiz bir tam özellikli [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışı oluşturmak için adım adım size yol gösterir.|
+|[İzlenecek yol: bir uygulama sayfasını bir iş akışına ekleme](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|Konu başlığı altında derlemeler: iş akışına girilen verileri raporlayan ek bir *. aspx* uygulama sayfası ekleyerek [ilişkilendirme ve başlatma formları Ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) .|
+|[İzlenecek yol: özel site iş akışı etkinliği oluşturma](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md)|İki temel görevin nasıl gerçekleştirileceğini gösterir: site düzeyinde iş akışı oluşturma ve özel bir iş akışı etkinliği oluşturma.|
+|[İzlenecek yol: SharePoint Designer yeniden kullanılabilir iş akışını Visual Studio 'ya aktarma](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)|SharePoint Designer 2010 ' de oluşturulan yeniden kullanılabilir bildirim temelli iş akışlarının [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir SharePoint projesine nasıl içeri aktarılacağını gösterir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)
-- [Derleme ve SharePoint çözümlerinde hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
 - [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md)

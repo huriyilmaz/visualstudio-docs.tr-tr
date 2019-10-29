@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çalışma sayfalarını veritabanı verileriyle doldurma'
+title: 'Nasıl yapılır: çalışma sayfalarını bir veritabanındaki verilerle doldurma'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,69 +14,65 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 67c12843d00bf8d5af51fa7af3175077527afa58
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a1e01f5c9fc1372cda4d7d31f8ba56b90e166e7
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967767"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985855"
 ---
-# <a name="how-to-populate-worksheets-with-data-from-a-database"></a>Nasıl yapılır: Çalışma sayfalarını veritabanı verileriyle doldurma
+# <a name="how-to-populate-worksheets-with-data-from-a-database"></a>Nasıl yapılır: çalışma sayfalarını bir veritabanındaki verilerle doldurma
 
-Windows Forms projeleri verilere erişmek, aynı şekilde, belge düzeyinde Office projelerinde veri erişebilirsiniz. Çözümünüze verileri getirmek için aynı araçları ve kodu kullanın ve verileri görüntülemek için Windows Forms denetimleri bile kullanabilirsiniz. Ayrıca, Microsoft Office Excel olayları ve veri bağlama özelliğiyle Gelişmiş yerel nesneler olan konak kontrollerinden yararlanabilir. Daha fazla bilgi için [konak öğelerini ve denetimlerine genel bakış için ana bilgisayar](../vsto/host-items-and-host-controls-overview.md).
+Belge düzeyindeki Office projelerinin verilerine Windows Forms projelerindeki verilere erişirken aynı şekilde erişebilirsiniz. Verileri çözümünüze getirmek için aynı araçları ve kodu kullanırsınız, hatta verileri görüntülemek için Windows Forms denetimleri de kullanabilirsiniz. Ayrıca, Microsoft Office Excel 'de olaylar ve veri bağlama özelliğiyle geliştirilmiş yerel nesneler olan konak denetimleri adlı denetimlerden yararlanabilirsiniz. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
-Aşağıdaki örnek, bir tasarımcı kullanarak belge düzeyinde projelerde verilere bağlı denetimler eklemek gösterilmektedir. Verilere bağlı denetimler, çalışma zamanında uygulama düzeyi projelerine ekleme örneği için bkz: [izlenecek yol: VSTO eklenti projesinde karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md).
+Aşağıdaki örnek, tasarımcı kullanarak belge düzeyi projelerde veri bağlantılı denetimlerin nasıl ekleneceğini gösterir. Çalışma zamanında uygulama düzeyi projelerde veriye bağlama denetimleri ekleme hakkında bir örnek için bkz. [Izlenecek yol: VSTO eklentisi projesinde karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md).
 
-![video bağlantı](../vsto/media/playvideo.gif "video bağlantı") ilgili video gösterimi için bkz. [nasıl yaparım? Verileri bir Excel çalışma sayfasına aktarabilir? ](http://go.microsoft.com/fwlink/?LinkID=130277), ve [nasıl yaparım? Veritabanı verileri Excel'de mı tüketiliyor? ](http://go.microsoft.com/fwlink/?LinkID=130287).
+## <a name="add-a-data-bound-control-to-a-worksheet-at-design-time"></a>Tasarım zamanında çalışma sayfasına veri bağlantılı denetim ekleme
 
-## <a name="add-a-data-bound-control-to-a-worksheet-at-design-time"></a>Veriye bağlı denetim tasarım zamanında çalışma sayfasına ekleme
+### <a name="to-populate-a-worksheet-with-data-from-a-database"></a>Çalışma sayfasını bir veritabanındaki verilerle doldurmak için
 
-### <a name="to-populate-a-worksheet-with-data-from-a-database"></a>Bir çalışma sayfasına bir veritabanındaki verilerle doldurmak için
+1. Visual Studio 'da çalışma sayfası tasarımcıda açık olan bir Excel belge düzeyi projesi açın.
 
-1. Excel belge düzeyi projesi çalışma açıkken tasarımcıda Visual Studio'da açın.
+2. **Veri kaynakları** penceresini açın ve projeniz için bir veri kaynağı oluşturun. Daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
 
-2. Açık **veri kaynakları** penceresi ve projeniz için bir veri kaynağı oluşturun. Daha fazla bilgi için [yeni bağlantı ekleme](../data-tools/add-new-connections.md).
+3. **Veri kaynakları** penceresinden istediğiniz alanı veya tabloyu çalışma sayfanıza sürükleyin.
 
-3. İstediğiniz tablo ve alan sürükleyin **veri kaynakları** çalışma penceresine.
+Çalışma sayfasında aşağıdaki denetimlerden biri oluşturuldu:
 
-Aşağıdaki denetimlerden birini çalışma sayfasında oluşturulur:
+- Bir alanı sürüklerseniz, çalışma sayfasında bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi oluşturulur. Daha fazla bilgi için bkz. [NamedRange denetimi](../vsto/namedrange-control.md).
 
-- Bir alanı sürüklediğinizde bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi, çalışma sayfasında oluşturulur. Daha fazla bilgi için [NamedRange denetimi](../vsto/namedrange-control.md).
+- Bir tablo sürüklerseniz, çalışma sayfasında bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi oluşturulur. Daha fazla bilgi için bkz. [ListObject denetimi](../vsto/listobject-control.md).
 
-- Bir tablo sürüklerseniz bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi, çalışma sayfasında oluşturulur. Daha fazla bilgi için [ListObject denetimine](../vsto/listobject-control.md).
+**Veri kaynakları** penceresinde tablo veya alanı seçerek ve ardından açılan listeden farklı bir denetim seçerek farklı bir denetim ekleyebilirsiniz.
 
-Tabloyu seçerek farklı denetim ekleme ya da, alan **veri kaynakları** penceresini açın ve ardından açılır listeden farklı bir denetim seçme.
+## <a name="objects-in-the-project"></a>Projedeki nesneler
 
-## <a name="objects-in-the-project"></a>Projesindeki nesneleri
+Denetime ek olarak, aşağıdaki verilerle ilgili nesneler projenize otomatik olarak eklenir:
 
-Denetimin yanı sıra aşağıdaki verilerle ilgili nesneleri otomatik olarak projenize eklenir:
+- Veritabanına bağladığınız veri tablolarını kapsülleyen türü belirtilmiş bir veri kümesi. Daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
 
-- Veritabanına bağlı veri tablolarının kapsülleyen bir türü belirtilmiş veri kümesi. Daha fazla bilgi için [Visual Studio'daki veri kümesi Araçları](../data-tools/dataset-tools-in-visual-studio.md).
+- Denetimi türü belirtilmiş veri kümesine bağlayan bir <xref:System.Windows.Forms.BindingSource>. Daha fazla bilgi için bkz. [BindingSource Bileşenine Genel Bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
-- A <xref:System.Windows.Forms.BindingSource> , Denetim türü belirtilmiş veri kümesine bağlanır. Daha fazla bilgi için [BindingSource bileşenine genel bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview).
+- Türü belirtilmiş veri kümesini veritabanına bağlayan bir TableAdapter. Daha fazla bilgi için bkz. [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
-- Bir TableAdapter veritabanına yazılan veri kümesi bağlar. Daha fazla bilgi için [TableAdapter genel bakışı](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
+- Hiyerarşik güncelleştirmeleri etkinleştirmek için veri kümesindeki tablo bağdaştırıcılarını koordine etmek üzere kullanılan bir TableAdapterManager. Daha fazla bilgi için bkz. [sıradüzensel Update](../data-tools/hierarchical-update.md) ve [TableAdapterManager Reference](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
 
-- Hiyerarşik güncelleştirmeleri etkinleştirmek için veri kümesinde tablo bağdaştırıcıları koordine etmek için kullanılan bir TableAdapterManager. Daha fazla bilgi için [hiyerarşik güncelleştirme](../data-tools/hierarchical-update.md) ve [TableAdapterManager başvuru](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
+Projeyi çalıştırdığınızda, denetim veri kaynağındaki ilk kaydı görüntüler. Kullanıcıların kayıtlarda gezinme olanağı sağlamak için <xref:System.Windows.Forms.BindingSource> kullanabilirsiniz.
 
-Projeyi çalıştırdığınızda, denetim veri kaynağındaki ilk kaydı görüntüler. Kullanabileceğiniz <xref:System.Windows.Forms.BindingSource> kayıtlarda gezinin olanağı.
+### <a name="to-scroll-through-the-records"></a>Kayıtlar arasında gezinmek için
 
-### <a name="to-scroll-through-the-records"></a>Kayıtlarda gezinmek için
+- <xref:System.Windows.Forms.BindingSource.MoveNext%2A> ve <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>gibi <xref:System.Windows.Forms.BindingSource> yöntemler kullanın.
 
-- Kullanım <xref:System.Windows.Forms.BindingSource> gibi yöntemler <xref:System.Windows.Forms.BindingSource.MoveNext%2A> ve <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
-
-Güncelleştirmeleri yazılmış veri kümesi ve veritabanına gönderme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir konak kontrolü verileriyle veri kaynağını güncelleme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
+Yazılan veri kümesine ve veritabanına güncelleştirmelerin gönderilmesi hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)
 - [Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
-- [Nasıl yapılır: Belgeleri nesne verileriyle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)
-- [Nasıl yapılır: Belgeleri veritabanı verileriyle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
-- [Nasıl yapılır: Belgeleri hizmet verileriyle doldurma](../vsto/how-to-populate-documents-with-data-from-services.md)
-- [Nasıl yapılır: Bir konak kontrolü verileriyle veri kaynağını güncelleme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
-- [Nasıl Yaparım Bir Excel çalışma sayfasına veri aktarımı](http://go.microsoft.com/fwlink/?LinkID=130277)
-- [Nasıl Yaparım Veritabanı verileri Excel'de mı tüketiliyor?](http://go.microsoft.com/fwlink/?LinkID=130287)
+- [Nasıl yapılır: belgeleri nesnelerden verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)
+- [Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
+- [Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-services.md)
+- [Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)

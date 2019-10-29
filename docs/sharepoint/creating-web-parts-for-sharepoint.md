@@ -1,5 +1,5 @@
 ---
-title: SharePoint için Web bölümleri oluşturma | Microsoft Docs
+title: SharePoint için Web Bölümleri oluşturuluyor | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -23,96 +23,96 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1105e6c68e1ec9083fd790ad8a38b09870345af2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 82e0d860f21f0fe2744c8c05c4ebeb3590be68fc
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62580960"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984473"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>SharePoint için Web bölümleri oluşturma
-  Web Bölümleri'ni kullanarak, içeriğini, görünümünü ve davranışını bir SharePoint sitesi sayfalarının bir tarayıcı kullanarak değiştirebilirsiniz. Web Bölümleri olan bir web bölümü sayfasının içinde çalışan sunucu tarafı denetimleri: bir SharePoint sitesinde görünen sayfaların yapı taşları oldukları. Bkz: [yapı taşı: Web Bölümleri](http://go.microsoft.com/fwlink/?LinkID=182097).
+  Web bölümleri 'ni kullanarak bir SharePoint sitesinin sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak değiştirebilirsiniz. Web bölümleri, bir Web Bölümü sayfası içinde çalışan sunucu tarafı denetimleridir: bir SharePoint sitesinde görünen sayfaların yapı taşlarıdır. Bkz. [Yapı bloğu: Web bölümleri](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
 
- Oluşturun ve Visual Studio şablonlarını kullanarak bir SharePoint sitesinde web bölümleri hata ayıklayın.
+ Visual Studio 'daki şablonları kullanarak bir SharePoint sitesinde Web bölümleri oluşturabilir ve hata ayıklayabilirsiniz.
 
-## <a name="create-a-web-part-in-visual-studio"></a>Visual Studio'da bir web bölümü oluşturma
- Ekleyerek bir web bölümü oluşturma bir **Web Bölümü** herhangi bir SharePoint projesine öğesi. Kullanabileceğiniz bir **Web Bölümü** bir korumalı çözüm veya grup çözümünde öğe.
+## <a name="create-a-web-part-in-visual-studio"></a>Visual Studio 'da Web Bölümü oluşturma
+ Herhangi bir SharePoint projesine **Web Bölümü** öğesi ekleyerek bir Web bölümü oluşturun. Bir korumalı çözüm veya grup çözümünde bir **Web Bölümü** öğesi kullanabilirsiniz.
 
- Görsel Tasarımcı kullanarak bir web bölümü tasarlamak istiyorsanız oluşturma bir **görsel Web Bölümü** ekleyin veya proje **görsel Web Bölümü** herhangi bir SharePoint projesine öğesi. Kullanabileceğiniz bir **görsel Web Bölümü** yalnızca Grup çözümünde öğesi.
+ Tasarımcı kullanarak bir Web bölümünü görsel olarak tasarlamak istiyorsanız, bir **Visual Web Bölümü** projesi oluşturun veya herhangi bir SharePoint projesine **Visual Web Bölümü** öğesi ekleyin. Yalnızca bir grup çözümünde bir **görsel web bölümü** öğesini kullanabilirsiniz.
 
 ### <a name="web-part-item"></a>Web Bölümü öğesi
- A **Web Bölümü** öğesi, bir SharePoint sitesi için bir web bölümü tasarlamak için kullanabileceğiniz dosyaları sağlar. Eklediğinizde bir **Web Bölümü** öğesi, Visual Studio projenize bir klasör oluşturur ve ardından çeşitli dosyalar klasörüne ekler. Aşağıdaki tabloda her dosya açıklanmaktadır.
+ **Web Bölümü** öğesi, bir SharePoint sitesi için bir Web Bölümü tasarlamak üzere kullanabileceğiniz dosyalar sağlar. Bir **Web Bölümü** öğesi eklediğinizde, Visual Studio projenizde bir klasör oluşturur ve sonra klasöre birkaç dosya ekler. Aşağıdaki tabloda her bir dosya açıklanmaktadır.
 
 |Dosya|Açıklama|
 |----------|-----------------|
-|*Elements.XML*|Projenizdeki Özellik tanım dosyasının web bölümünü dağıtmak için kullandığı bilgileri içerir.|
-|.WebPart dosyası|SharePoint web bölümü, bir web bölümü galerisinde görüntülemesi gereken bilgileri sağlar.|
-|Kod dosyası|Web bölümüne denetimler ekleyen ve web bölümü içinde özel içerik oluşturan yöntemleri içerir.|
+|*Elements. xml*|Projenizdeki Özellik tanım dosyasının Web bölümünü dağıtmak için kullandığı bilgileri içerir.|
+|. WebPart dosyası|Web Bölümü galerisinde, SharePoint 'in Web bölümünü görüntülemesi için gereken bilgileri sağlar.|
+|Kod dosyası|Web bölümüne denetimler ekleyen ve Web Bölümü içinde özel içerik üreten yöntemleri içerir.|
 
- Daha fazla bilgi için [nasıl yapılır: Bir SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md).
+ Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md).
 
-### <a name="visual-web-part-item"></a>Visual web bölümü öğesi
- Bir görsel web bölümü, Visual Studio'da Visual Web Developer Tasarımcısını kullanarak oluşturduğunuz bir web bölümüdür. Bir görsel web bölümü herhangi bir web bölümü olarak aynı şekilde çalışır. Bir web bölümüne düğme ve metin kutuları gibi denetimler eklemek için bir XML dosyası için kodu ekleyin. Ancak, denetimleri bir görsel web bölümü için sürükleyerek ya da Visual Studio içindeki web parçalarına kopyalayarak eklediğiniz **araç kutusu**. Tasarımcı, sonra gerekli kodu XML dosyasında oluşturur. Bkz: [nasıl yapılır: Bir tasarımcı kullanarak SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).
+### <a name="visual-web-part-item"></a>Görsel web bölümü öğesi
+ Görsel web bölümü, Visual Studio 'da Visual Web Developer Designer kullanarak oluşturduğunuz bir Web bölümüdür. Görsel web bölümü, diğer Web bölümleri ile aynı şekilde çalışır. Bir Web bölümüne düğmeler ve metin kutuları gibi denetimler eklemek için bir XML dosyasına kod eklersiniz. Ancak, Visual Studio **araç kutusu**'ndan web bölümüne sürükleyip yapıştırarak bir görsel web bölümüne denetimler eklersiniz. Tasarımcı daha sonra gerekli kodu XML dosyasında oluşturur. Bkz. [nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).
 
 ## <a name="sharepoint-controls"></a>SharePoint denetimleri
- Visual Studio, uygulama sayfaları gibi SharePoint sayfaları oluşturmak için bazı denetimler sunar. Bu denetimlerin görünür **araç kutusu** altında **SharePoint denetimleri**. Bu denetimlerin işlevleri türetildiği [Microsoft.SharePoint.WebControls](http://go.microsoft.com/fwlink/?LinkId=235315) SharePoint site ve liste sayfalarında kullanılan ASP.NET sunucu denetimlerini içeren ad alanı.
+ Visual Studio, uygulama sayfaları gibi SharePoint sayfaları oluşturmaya yönelik bazı denetimler sağlar. Bu denetimler, **SharePoint denetimleri**altındaki **araç kutusunda** görünür. Bu denetimlerin işlevselliği, SharePoint sitesinde ve liste sayfalarında kullanılan ASP.NET sunucu denetimlerini içeren [Microsoft. SharePoint. WebControls](/previous-versions/office/sharepoint-server/ms413880(v=office.15)) ad alanından türetilir.
 
 |Denetim adı|Açıklama|
 |------------------|-----------------|
-|[AspMenu](http://go.microsoft.com/fwlink/?LinkId=235307)|ASP menüsü ekler. Daha fazla bilgi için [Menü denetimine genel bakış](http://go.microsoft.com/fwlink/?LinkId=235316).|
-|[CssLink](http://go.microsoft.com/fwlink/?LinkId=235308)|Ekler bir **bağlantı** öğesine *.aspx* tarafından tanımlanan bir veya daha fazla dış stil sayfasını uygular ve sayfa **CssRegistration**.|
-|[DateTimeControl](http://go.microsoft.com/fwlink/?LinkId=235306)|Bir DateTime denetimine ekler *.aspx* sayfası.|
-|[FormDigest](http://go.microsoft.com/fwlink/?LinkId=235309)|İçine bir güvenlik doğrulaması ekler *.aspx* sayfası|
-|[ListProperty](http://go.microsoft.com/fwlink/?LinkId=235310)|Belirtilen bir listenin bir özelliğini döndürür.|
-|[ProjectProperty](http://go.microsoft.com/fwlink/?LinkId=235311)|Geçerli Web sitesinin genel bir özelliğini döndürür.|
-|[RssLink](http://go.microsoft.com/fwlink/?LinkId=235312)|İçine bir RSS bağlantısını ekler *.aspx* sayfası.|
-|[ScriptLink](http://go.microsoft.com/fwlink/?LinkId=235313)|Özellikler ve sayfa işlendiğinde bunlar istenebilir bir sayfadaki komut dosyaları gibi kaynakları kaydetme için yöntemler sağlar.|
-|[Tema](http://go.microsoft.com/fwlink/?LinkId=235314)|Bir tema uygular *.aspx* sayfası.|
+|[AspMenu](/previous-versions/office/sharepoint-server/ms454108(v=office.15))|Bir ASP menüsü ekler. Daha fazla bilgi için bkz. [menü denetimine genel bakış](/previous-versions/ecs0x9w5(v=vs.140)).|
+|[CssLink](/previous-versions/office/sharepoint-server/ms439048(v=office.15))|*. Aspx* sayfasına bir **bağlantı** öğesi ekler ve **CssRegistration**tarafından tanımlanan bir veya daha fazla dış stil sayfası uygular.|
+|[DateTimeControl](/previous-versions/office/sharepoint-server/ms414993(v=office.15))|*. Aspx* sayfasına bir tarih saat denetimi ekler.|
+|[FormDigest](/previous-versions/office/sharepoint-server/ms416616(v=office.15))|*. Aspx* sayfasına bir güvenlik doğrulaması ekler|
+|[ListProperty](/previous-versions/office/sharepoint-server/ms455032(v=office.15))|Belirtilen listenin bir özelliğini döndürür.|
+|[ProjectProperty](/previous-versions/office/sharepoint-server/ms478990(v=office.15))|Geçerli Web sitesinin genel bir özelliğini döndürür.|
+|[RssLink](/previous-versions/office/sharepoint-server/ms457574(v=office.15))|*. Aspx* sayfasına RSS akışına bir bağlantı ekler.|
+|[ScriptLink](/previous-versions/office/sharepoint-server/ms411959(v=office.15))|Sayfa işlendiğinde istenmeleri için komut dosyaları gibi kaynakları bir sayfaya kaydetmek için özellikler ve yöntemler sağlar.|
+|[Tema](/previous-versions/office/sharepoint-server/ms460735(v=office.15))|*. Aspx* sayfasına bir tema uygular.|
 
-## <a name="debug-a-web-part"></a>Bir web bölümü hata ayıklama
- Yalnızca, diğer Visual Studio projelerinde yaptığınız gibi bir web bölümü içeren bir SharePoint Proje hata ayıklama yapabilirsiniz. Visual Studio hata ayıklayıcısını başlattığınızda, Visual Studio SharePoint sitesi açılır.
+## <a name="debug-a-web-part"></a>Web bölümünde hata ayıklama
+ Web bölümünü içeren bir SharePoint projesinde, diğer Visual Studio projelerinde hata ayıklaması yaptığınız gibi hata ayıklayabilirsiniz. Visual Studio hata ayıklayıcısını başlattığınızda, Visual Studio SharePoint sitesini açar.
 
- Kodunuzda hata ayıklamayı başlatmak için web bölümünü bir SharePoint web bölümü sayfasına ekleyin.
+ Kodunuzda hata ayıklamaya başlamak için Web bölümünü SharePoint 'teki bir Web Bölümü sayfasına ekleyin.
 
- SharePoint projelerinde hata ayıklama hakkında daha fazla bilgi için bkz: [sorun giderme SharePoint çözümleri](../sharepoint/troubleshooting-sharepoint-solutions.md).
+ SharePoint projelerinde hata ayıklama hakkında daha fazla bilgi için bkz. [SharePoint Çözümlerinde Sorun giderme](../sharepoint/troubleshooting-sharepoint-solutions.md).
 
-## <a name="visual-web-part-limitations"></a>Visual web bölümü sınırlamaları
- Visual Studio'da başlatarak, korumalı SharePoint çözümlerine ve Grup çözümlerine görsel web bölümleri ekleyebilirsiniz. Ancak görsel web parçaları şu sınırlamalara sahiptir:
+## <a name="visual-web-part-limitations"></a>Görsel web bölümü sınırlamaları
+ Visual Studio 'dan başlayarak, korumalı SharePoint çözümlerine ve grup çözümlerine görsel Web bölümleri ekleyebilirsiniz. Ancak, Visual Web bölümleri aşağıdaki sınırlamalara sahiptir:
 
-- Görsel web bölümleri değiştirilebilir parametreleri desteklemez. Daha fazla bilgi için [değiştirilebilir parametreler](../sharepoint/replaceable-parameters.md).
+- Görsel Web bölümleri değiştirilebilir parametreleri desteklemez. Daha fazla bilgi için bkz. [değiştirilebilen parametreler](../sharepoint/replaceable-parameters.md).
 
-- Kullanıcı denetimleri veya görsel web bölümlerine sürüklenip ve bırakılan veya olamaz görsel web bölümlerine kopyalanır. Bu eylem, bir derleme hatasına neden olur.
+- Kullanıcı denetimleri veya görsel Web bölümleri, görsel Web bölümlerine sürüklenemez ve bırakılamaz veya kopyalanamaz. Bu eylem, derleme hatasına neden olur.
 
-- Görsel web bölümleri $SPUrl gibi SharePoint sunucu belirteçlerini doğrudan desteklemez. Daha fazla bilgi için "Belirteci kısıtlamaları içinde Sandboxed Visual Web Bölümleri" bölümüne bakın. [sorun giderme SharePoint çözümleri](../sharepoint/troubleshooting-sharepoint-solutions.md).
+- Görsel Web bölümleri $SPUrl gibi SharePoint Server belirteçlerini doğrudan desteklemez. Daha fazla bilgi için [SharePoint çözümlerinin sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-solutions.md)konusundaki "korumalı Visual Web bölümleri 'Da belirteç kısıtlamaları" konusuna bakın.
 
-- Bir korumalı çözüm içindeki görsel web bölümleri bazen alma hatası, "korumalı kod ana bilgisayar hizmeti isteği işleyemeyecek kadar meşgul olduğundan korumalı kod yürütme isteği reddedildi." Bu gönderide bu hata hakkında daha fazla bilgi için bkz. [SharePoint Developer Team Blog](http://go.microsoft.com/fwlink/?LinkId=225932).
+- Bir korumalı çözüm içindeki Visual Web bölümleri bazen hata alır, "korumalı kod ana bilgisayar hizmeti isteği işleyemeyecek kadar meşgul olduğu için korumalı kod yürütme isteği reddedildi." Bu hata hakkında daha fazla bilgi için [SharePoint Geliştirici ekibi bloguna](https://blogs.msdn.microsoft.com/sharepointdev/2011/02/08/error-the-sandboxed-code-execution-request-was-refused-because-the-sandboxed-code-host-service-was-too-busy-to-handle-the-request-ricky-kirkham/#10149157)bu gönderisine bakın.
 
-- Sunucu tarafı JavaScript hata ayıklama Visual Studio'da desteklenmez ancak istemci tarafı JavaScript hata ayıklama desteklenir.
+- Sunucu tarafı JavaScript hata ayıklaması Visual Studio 'da desteklenmez, ancak istemci tarafı JavaScript hata ayıklaması desteklenir.
 
-   Satır içi JavaScript'i sunucu taraflı bir biçimlendirme dosyasına ekleyebilirsiniz, ancak biçimlendirmeye eklenen kesme noktaları için hata ayıklama desteği sunulmaz. JavaScript hata ayıklama için başvurusu için biçimlendirme dosyasında harici bir JavaScript dosyasına ve ardından JavaScript dosyasında kesme noktaları ayarlayın.
+   Bir sunucu tarafı biçimlendirme dosyasına satır içi JavaScript ekleyebilseniz de, İşaretlemede eklenen kesme noktaları için hata ayıklama desteklenmez. JavaScript hata ayıklaması yapmak için, biçimlendirme dosyasında bir dış JavaScript dosyasına başvurun ve sonra JavaScript dosyasındaki kesme noktalarını ayarlayın.
 
-- Satır içi hata ayıklama [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] kod biçimlendirme dosyası yerine üretilen kod dosyasında yapılmalıdır.
+- Satır içi [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] kodunun hata ayıklaması, biçimlendirme dosyası yerine oluşturulan kod dosyasında yapılmalıdır.
 
-- Görsel web bölümleri kullanımını desteklemez `<@ Assembly Src=` yönergesi.
+- Görsel Web bölümleri `<@ Assembly Src=` yönergesinin kullanımını desteklemez.
 
-- SharePoint web denetimleri ve bazı [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] denetimleri SharePoint korumalı ortamında desteklenmez. Hata, bir korumalı çözüm içindeki bir görsel web bölümü üzerinde desteklenmeyen denetimler kullanılıyorsa "'Theme' ad alanı 'Microsoft.SharePoint.WebControls' içinde yok. tür veya ad alanı adı" görünür.
+- SharePoint Web denetimleri ve bazı [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] denetimleri, SharePoint korumalı ortamında desteklenmez. Korumalı bir çözümde Visual Web bölümü üzerinde desteklenmeyen denetimler kullanılıyorsa, "' Microsoft. SharePoint. WebControls '" ad alanında "tür veya ad alanı adı ' teması ' yok" hatası görüntülenir.
 
-  Korumalı çözümler hakkında daha fazla bilgi için bkz. [korumalı arasındaki farklar ve Grup çözümleri](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).
+  Korumalı çözümler hakkında daha fazla bilgi için bkz. [korumalı ve Grup çözümleri arasındaki farklılıklar](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).
 
-## <a name="create-older-style-sharepoint-based-web-parts"></a>Eski stil SharePoint tabanlı web bölümleri oluşturma
- Özel oluşturmak için Visual Studio içindeki şablonları kullanabilirsiniz [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] için SharePoint web bölümleri. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web bölümleri, üst kısmındaki yerleşiktir [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] web bölümü yapısı ve yeni projeler için önerilen türdür.
+## <a name="create-older-style-sharepoint-based-web-parts"></a>Eski stil SharePoint tabanlı Web bölümleri oluşturma
+ SharePoint için özel [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web bölümleri oluşturmak üzere Visual Studio 'daki şablonları kullanabilirsiniz. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web bölümleri, [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] Web Bölümü altyapısının üzerine kurulmuştur ve yeni projeler için önerilen türdür.
 
- Çok az durumda, eski stilde SharePoint tabanlı web bölümü kullanarak bir web bölümü oluşturmanız gerekebilir. Bu türde web bölümleri oluşturmak için Visual Studio'yu kullanabilirsiniz, ancak Visual Studio özellikle bunları oluşturmanıza yardımcı olmak üzere tasarlanmış şablonlar içermez.
+ Çok az durumda, daha eski stil SharePoint tabanlı Web bölümünü kullanarak bir Web bölümü oluşturmanız gerekebilir. Bu Web bölümleri türlerini oluşturmak için Visual Studio 'Yu kullanabilirsiniz, ancak Visual Studio, özel olarak bunları oluşturmanıza yardımcı olmak için tasarlanan herhangi bir şablon sağlamaz.
 
- Ne zaman eski stilde SharePoint tabanlı web bölümü oluşturmak isteyebilirsiniz hakkında daha fazla bilgi için bkz. [Windows SharePoint Services Web Bölümü altyapısı](http://go.microsoft.com/fwlink/?LinkId=169290). Eski stilde SharePoint tabanlı web bölümü kullanarak bir web bölümü oluşturma hakkında daha fazla bilgi için bkz. [basit bir SharePoint Web Bölümü oluşturma için izlenecek yol](http://go.microsoft.com/fwlink/?LinkId=169288).
+ Eski stil bir SharePoint tabanlı Web bölümü oluşturmak isteyebileceğiniz zaman hakkında daha fazla bilgi için bkz. [Windows SharePoint Services 'de Web Bölümü altyapısı](/previous-versions/office/developer/sharepoint-2010/ms415560(v=office.14)). Eski stil SharePoint tabanlı Web bölümünü kullanarak bir Web Bölümü oluşturma hakkında daha fazla bilgi için bkz. [temel bir SharePoint Web Bölümü oluşturma Izlenecek yol](/previous-versions/office/ms452873(v=office.14)).
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Nasıl yapılır: Bir SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md)|SharePoint sayfaları için web bölümleri oluşturma işlemi gösterilmektedir.|
-|[Nasıl yapılır: Tasarımcı kullanarak bir SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)|Bir görsel tasarım yüzeyini kullanarak SharePoint için web bölümleri oluşturma işlemi gösterilmektedir.|
-|[Nasıl yapılır: Bir SharePoint uygulama sayfası veya web bölümü için bir kullanıcı denetimi oluşturma](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|Uygulama sayfaları ve SharePoint'te çalışan web bölümleri tarafından kullanılabilen özel, yeniden kullanılabilir denetimler oluşturma işlemi gösterilmektedir.|
-|[İzlenecek yol: SharePoint için bir web bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)|SharePoint için bir web bölümü tasarlamak açıklar.|
-|[İzlenecek yol: Tasarımcı kullanarak SharePoint için bir web bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)|Denetimleri bir görsel tasarım yüzeyine sürükleyerek, SharePoint için bir web bölümü tasarlamak açıklar.|
-|[İzlenecek yol: SharePoint için OData görüntüleyen bir Silverlight web bölümü oluşturma](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md)|Bir Silverlight uygulamasını barındıran ve SharePoint listelerinden veri görüntüleyen bir SharePoint için bir web bölümü tasarlamak açıklar.|
+|[Nasıl yapılır: SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md)|SharePoint sayfaları için nasıl Web bölümleri oluşturacağınız gösterilir.|
+|[Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)|Görsel tasarım yüzeyi kullanarak SharePoint için nasıl Web bölümleri oluşturacağınız gösterilir.|
+|[Nasıl yapılır: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|SharePoint 'te çalışan uygulama sayfaları ve Web bölümleri tarafından tüketilen özel, yeniden kullanılabilir denetimler oluşturmayı gösterir.|
+|[İzlenecek yol: SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)|SharePoint için bir Web bölümünün nasıl tasarlanacağını açıklar.|
+|[İzlenecek yol: tasarımcı kullanarak SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)|Denetimleri görsel tasarım yüzeyine sürükleyerek SharePoint için bir Web bölümünün nasıl tasarlanacağını açıklar.|
+|[İzlenecek yol: SharePoint için OData görüntüleyen Silverlight Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md)|Bir Silverlight uygulaması barındıran ve SharePoint listelerindeki verileri görüntüleyen SharePoint için bir Web bölümünün nasıl tasarlanacağını açıklar.|

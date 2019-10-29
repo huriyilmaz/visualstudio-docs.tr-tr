@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Modele bir varlık ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: modele varlık ekleme | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,39 +17,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c7d74b731bd1857330c40a7929d84efe40a03201
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b1a7ec1eab5cdcf2e415a4803c51c9da91be29c9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431242"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985250"
 ---
-# <a name="how-to-add-an-entity-to-a-model"></a>Nasıl yapılır: Modele bir varlık ekleme
-  Bir varlık oluşturmak için Visual Studio'dan bir varlık denetimi ekleme **araç kutusu** İş Verileri Bağlantısı (BDC) tasarımcıya.
+# <a name="how-to-add-an-entity-to-a-model"></a>Nasıl yapılır: modele varlık ekleme
+  Bir varlık oluşturmak için, Visual Studio **araç kutusundan** Iş verileri BAĞLANTıSı (BDC) Tasarımcısı üzerine bir varlık denetimi ekleyin.
 
 ### <a name="to-add-an-entity-to-the-model"></a>Modele bir varlık eklemek için
 
-1. Bir BDC projesi oluşturmak veya mevcut bir BDC projesi açın. Daha fazla bilgi için [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
+1. Bir BDC projesi oluşturun veya var olan bir BDC projesini açın. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
 
-2. İçinde **araç kutusu**, gelen **BusinessDataCatalog** grubunda, ekleme bir **varlık** tasarımcıya denetim.
+2. **Araç kutusunda**, **BusinessDataCatalog** grubundan tasarımcı üzerine bir **varlık** denetimi ekleyin.
 
-     Yeni varlık tasarımcısında görüntülenir. Visual Studio ekler bir `<Entity>` projenizdeki bir BDC modeli dosyası XML öğesi. Bir varlık öğe öznitelikleri hakkında daha fazla bilgi için bkz. [varlık](http://go.microsoft.com/fwlink/?LinkId=169296).
+     Yeni varlık tasarımcıda görünür. Visual Studio, projenizdeki BDC modeli dosyasının XML dosyasına bir `<Entity>` öğesi ekler. Bir varlık öğesinin öznitelikleri hakkında daha fazla bilgi için bkz. [varlık](/previous-versions/office/developer/sharepoint-2010/ee558325(v=office.14)).
 
-3. Tasarımcıda varlık için kısayol menüsünü açın, **Ekle**ve ardından **tanımlayıcı**.
+3. Tasarımcıda varlık için kısayol menüsünü açın, **Ekle**' yi seçin ve **tanımlayıcı**' yı seçin.
 
-     Yeni bir tanımlayıcı varlık üzerinde görünür.
+     Varlıkta yeni bir tanımlayıcı belirir.
 
     > [!NOTE]
-    > Varlık ve tanımlayıcı adını değiştirebilirsiniz **özellikleri** penceresi.
+    > Varlık adını ve tanımlayıcıyı **Özellikler** penceresinde değiştirebilirsiniz.
 
-4. Varlık alanlarını bir sınıfta tanımlayın. Projeye yeni bir sınıf ekleyin veya Object Relational Designer (O/R Tasarımcısı) gibi diğer araçları kullanarak oluşturduğunuz var olan bir sınıfı kullanın. Aşağıdaki örnek, kişi adlı bir varlık sınıfı gösterir.
+4. Bir sınıftaki varlık alanlarını tanımlayın. Projeye yeni bir sınıf ekleyebilir veya Nesne İlişkisel Tasarımcısı (O/R Designer) gibi diğer araçları kullanarak oluşturulan mevcut bir sınıfı kullanabilirsiniz. Aşağıdaki örnek, Contact adlı bir varlık sınıfını gösterir.
 
      [!code-csharp[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs#1)]
      [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir yaratıcı metodu ekleme](../sharepoint/how-to-add-a-creator-method.md)
-- [Nasıl yapılır: Silici metodu ekleme](../sharepoint/how-to-add-a-deleter-method.md)
-- [Nasıl yapılır: Bir güncelleyici metodu ekleme](../sharepoint/how-to-add-an-updater-method.md)
-- [Nasıl yapılır: Bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
-- [Nasıl yapılır: Belirli bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)
+- [Nasıl yapılır: bir Oluşturucu yöntemi ekleme](../sharepoint/how-to-add-a-creator-method.md)
+- [Nasıl yapılır: bir silici yöntemi ekleme](../sharepoint/how-to-add-a-deleter-method.md)
+- [Nasıl yapılır: Güncelleştirici yöntemi ekleme](../sharepoint/how-to-add-an-updater-method.md)
+- [Nasıl yapılır: Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
+- [Nasıl yapılır: belirli bir bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)

@@ -28,12 +28,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c294ce3c6dcf3a880cf5f57ca825064366e08e2b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 736b203feb5b1a640d7865b92a6d3ad191397d26
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668226"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985043"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio'da hata ayıklarken çağrı yığınında eşleştirme yöntemleri
 
@@ -59,7 +59,7 @@ Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod har
 
   Bkz.
 
-- [Video: kod Haritası hata ayıklayıcısı tümleştirmesiyle görsel olarak hata ayıklayın (Kanal 9)](http://go.microsoft.com/fwlink/?LinkId=293418)
+- [Video: kod Haritası hata ayıklayıcısı tümleştirmesiyle görsel olarak hata ayıklayın (Kanal 9)](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012Debug-visually-with-Code-Map-debugger-integration)
 
 - [Çağrı yığınını eşleme](#MapStack)
 
@@ -130,7 +130,7 @@ Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod har
 
  Kodunuzu görselleştirmeniz, hataları daha hızlı şekilde bulmanıza yardımcı olabilir. Örneğin, bir çizim programında bir hata araştırdığınızı varsayalım. Bir çizgi çizip geri almayı denediğinizde, başka bir çizgi çizinceye kadar hiçbir şey olmaz.
 
- @No__t_0, `undo` ve `Repaint` yöntemlerinde kesme noktaları ayarlayın, hata ayıklamayı başlatın ve bunun gibi bir eşleme oluşturun:
+ `clear`, `undo`ve `Repaint` yöntemlerinde kesme noktaları ayarlayın, hata ayıklamayı başlatın ve bunun gibi bir eşleme oluşturun:
 
  ![Kod eşlemesine başka bir çağrı yığını ekleyin](../debugger/media/debuggermap_addpaintobjectcallstack.png)
 
@@ -178,7 +178,7 @@ Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod har
 
 - **Nasıl yaparım? haritanın otomatik olarak yeni çağrı yığınları eklemesini mi durdurun?**
 
-   @No__t_0Button &#45; eşleme araç çubuğunda çağrı yığınını otomatik olarak ](../debugger/media/debuggermap_automaticupdateicon.gif) göster ' i seçin. Geçerli çağrı yığınını haritaya el ile eklemek için, **Ctrl**  + **SHIFT**  +  **`** tuşlarına basın.
+   Harita araç çubuğunda &#45; ![düğme otomatik](../debugger/media/debuggermap_automaticupdateicon.gif)olarak kod eşlemesinde çağrı yığınını göster ' i seçin. Geçerli çağrı yığınını haritaya el ile eklemek için, **Ctrl**  + **SHIFT**  +  **`** tuşlarına basın.
 
    Eşleme, hata ayıklama sırasında Haritadaki mevcut çağrı yığınlarını vurgulamaya devam edecektir.
 

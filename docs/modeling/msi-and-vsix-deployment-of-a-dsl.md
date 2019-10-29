@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9e42b5156ced1c01995882e3250c7243c18d24d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 73c81d88f055ea7a585e3d14ab4a0086d9236938
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658372"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984445"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL'nin MSI ve VSIX Dağıtımı
 Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil yükleyebilirsiniz. Visual Studio 'Nun hedef bilgisayarda zaten yüklü olması gerekir.
@@ -47,7 +47,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
     **Visual Studio Uzantı Yükleyicisi** açılır ve uzantıyı yüklüyor.
 
-4. @No__t_0 başlatın veya yeniden başlatın.
+4. [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]başlatın veya yeniden başlatın.
 
 5. DSL 'yi test etmek için Visual Studio 'Yu kullanarak DSL 'niz için tanımladığınız uzantıya sahip yeni bir dosya oluşturun.
 
@@ -68,7 +68,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
  MSI dosyaları ve diğer dağıtım seçenekleri hakkında daha fazla bilgi için bkz. [uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md).
 
- Bir MSI oluşturmak için, Visual Studio çözümünüze bir kurulum projesi eklersiniz. Bir kurulum projesi oluşturmanın en kolay yöntemi, [VMSDK sitesinden](http://go.microsoft.com/fwlink/?LinkID=186128)indirebileceğiniz CreateMsiSetupProject.tt şablonunu kullanmaktır.
+ Bir MSI oluşturmak için, Visual Studio çözümünüze bir kurulum projesi eklersiniz. Bir kurulum projesi oluşturmanın en kolay yöntemi, [VMSDK sitesinden](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)indirebileceğiniz CreateMsiSetupProject.tt şablonunu kullanmaktır.
 
 ### <a name="to-deploy-a-dsl-in-an-msi"></a>MSI içinde DSL dağıtmak için
 
@@ -76,7 +76,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
    1. Açık DslPackage\source.extension.tt
 
-   2. @No__t_0 önce aşağıdaki satırı ekleyin:
+   2. `<SupportedProducts>`önce aşağıdaki satırı ekleyin:
 
        ```xml
        <InstalledByMsi>true</InstalledByMsi>
@@ -96,7 +96,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
    - **Yapı** menüsünde **Configuration Manager**açın ve derlemek istediğiniz yapılandırmayı (örneğin, **yayın** veya **hata ayıklama**) seçin.
 
-4. [Görselleştirme ve modelleme SDK 'sı giriş sayfasına](http://go.microsoft.com/fwlink/?LinkID=186128)gidin ve **indirmeler** sekmesinden **CreateMsiSetupProject.tt**indirin.
+4. [Görselleştirme ve modelleme SDK 'sı giriş sayfasına](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)gidin ve **indirmeler** sekmesinden **CreateMsiSetupProject.tt**indirin.
 
 5. DSL projenize **CreateMsiSetupProject.tt** ekleyin.
 
@@ -126,7 +126,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
     - Dosyaya çift tıkladığınızda, Visual Studio başlar ve DSL Düzenleyicisi 'ndeki DSL dosyasını açar.
 
-    İsterseniz, Kurulum projesini metin şablonunu kullanmak yerine el ile oluşturabilirsiniz. Bu yordamı içeren bir anlatım için [görselleştirme ve modelleme SDK laboratuvarının](http://go.microsoft.com/fwlink/?LinkId=208878)5. bölümüne bakın.
+    İsterseniz, Kurulum projesini metin şablonunu kullanmak yerine el ile oluşturabilirsiniz. Bu yordamı içeren bir anlatım için [görselleştirme ve modelleme SDK laboratuvarının](https://code.msdn.microsoft.com/DSLToolsLab/Release/ProjectReleases.aspx?ReleaseId=4207)5. bölümüne bakın.
 
 ### <a name="to-uninstall-a-dsl-that-was-installed-from-an-msi"></a>MSI 'dan yüklenmiş bir DSL 'yi kaldırmak için
 

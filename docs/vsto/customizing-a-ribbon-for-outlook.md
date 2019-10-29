@@ -16,17 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 646192baa6caaa33410b1dd8d17d1983f7d27e30
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 2865bd89da3b59a24208e07739e8c56254959c88
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255545"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986101"
 ---
 # <a name="customize-a-ribbon-for-outlook"></a>Outlook için şerit özelleştirme
   Microsoft Office Outlook 'ta Şeriti özelleştirdiğinizde, özel şeritlerinizin uygulamada nerede görüneceğini göz önünde bulundurmanız gerekir. Outlook, ana uygulama kullanıcı arabiriminde (UI) ve kullanıcılar e-posta iletileri oluşturma gibi belirli görevleri gerçekleştirirken açık olan Windows 'da şeridi görüntüler. Bu uygulama pencereleri Inspectors olarak adlandırılmıştır.
-
- ![video bağlantısı](../vsto/media/playvideo.gif "video bağlantısı") İlgili video gösterimi için bkz [. nasıl yaparım?: Outlook 'taki şeridi özelleştirmek için şerit tasarımcısını kullanın? ](http://go.microsoft.com/fwlink/?LinkID=130312).
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -38,20 +36,20 @@ ms.locfileid: "71255545"
 
  **Şerit (görsel Tasarımcı)** öğesini kullanıyorsanız, **Özellikler** penceresinde şeridin **RibbonType** özelliğine tıklayın ve ardından değerler listesinden bir veya daha fazla şerit kimliği seçin.
 
- Projeye birden fazla şerit ekleyebilirsiniz. Birden fazla şerit bir Şerit kimliğini paylaşıyorsa, çalışma zamanında hangi Şeritin görüntüleneceğini belirtmek `ThisAddin` için projenizin sınıfındaki `CreateRibbonExtensibilityObject` yöntemi geçersiz kılın. Daha fazla bilgi için bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md). Her şerit türü hakkında daha fazla bilgi için bkz. [Outlook 2007 'Deki şeridi özelleştirme](/previous-versions/office/developer/office-2007/bb226712(v=office.12))teknik makalesi.
+ Projeye birden fazla şerit ekleyebilirsiniz. Birden fazla şerit bir şerit KIMLIĞINI paylaşıyorsa, çalışma zamanında hangi Şeritin görüntüleneceğini belirtmek için projenizin `ThisAddin` sınıfındaki `CreateRibbonExtensibilityObject` yöntemini geçersiz kılın. Daha fazla bilgi için bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md). Her şerit türü hakkında daha fazla bilgi için bkz. [Outlook 2007 'Deki şeridi özelleştirme](/previous-versions/office/developer/office-2007/bb226712(v=office.12))teknik makalesi.
 
 ## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>Şerit XML kullanarak Şerit türünü belirtme
- **Şerit (XML)** öğesini kullanıyorsanız, <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> yöntemindeki *ribbonID* parametresinin değerini kontrol edin ve uygun Şeriti döndürün.
+ **Şerit (XML)** öğesini kullanıyorsanız, <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> yönteminde *ribbonID* parametresinin değerini kontrol edin ve uygun Şeriti döndürün.
 
- <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> Yöntemi, Visual Studio tarafından Şerit kod dosyasında otomatik olarak oluşturulur. *RibbonID* parametresi, Gezgin 'i veya belirli bir Inspector türünü tanımlayan bir dizedir. *RibbonID* parametresinin olası değerlerinin tüm listesi için bkz. [Outlook 2007 'deki şeridi özelleştirme](/previous-versions/office/developer/office-2007/bb226712(v=office.12))teknik makalesi.
+ <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> yöntemi, Visual Studio tarafından Şerit kod dosyasında otomatik olarak oluşturulur. *RibbonID* parametresi, Gezgin 'i veya belirli bir Inspector türünü tanımlayan bir dizedir. *RibbonID* parametresinin olası değerlerinin tüm listesi için bkz. [Outlook 2007 'deki şeridi özelleştirme](/previous-versions/office/developer/office-2007/bb226712(v=office.12))teknik makalesi.
 
- Aşağıdaki kod örneği, özel bir şeridin yalnızca `Microsoft.Outlook.Mail.Compose` Inspector 'da nasıl görüntüleneceğini gösterir. Bu, Kullanıcı yeni bir e-posta iletisi oluşturduğunda açılan Inspector ' dır. Görüntülenecek Şerit, `GetResourceText()` **Şerit** sınıfında oluşturulan yönteminde belirtilir. **Şerit** sınıfı hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md).
+ Aşağıdaki kod örneği, yalnızca `Microsoft.Outlook.Mail.Compose` denetçisinde özel bir şeridin nasıl görüntüleneceğini gösterir. Bu, Kullanıcı yeni bir e-posta iletisi oluşturduğunda açılan Inspector ' dır. Görüntülenecek Şerit, **Şerit** sınıfında oluşturulan `GetResourceText()` yönteminde belirtilir. **Şerit** sınıfı hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md).
 
  [!code-csharp[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#1)]
  [!code-vb[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma zamanında Şerite erişin](../vsto/accessing-the-ribbon-at-run-time.md)
-- [Şerite Genel Bakış](../vsto/ribbon-overview.md)
+- [Şerite genel bakış](../vsto/ribbon-overview.md)
 - [Şerit Tasarımcısı](../vsto/ribbon-designer.md)
 - [Şerit XML](../vsto/ribbon-xml.md)

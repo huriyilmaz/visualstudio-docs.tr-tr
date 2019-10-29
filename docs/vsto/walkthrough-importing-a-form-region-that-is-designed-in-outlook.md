@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Outlook 'ta tasarlanan form bölgesini içeri aktarma"
+title: "İzlenecek yol: Outlook 'ta tasarlanan form bölgesini Içeri aktarma"
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,14 +13,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cb4e57d1186b42ac1ed4807faf150d1af9090c69
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 23d058e7bdbbe3f12ef4521318236e939e1b22f2
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255573"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985446"
 ---
-# <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>İzlenecek yol: Outlook 'ta tasarlanan form bölgesini içeri aktarma
+# <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>İzlenecek yol: Outlook 'ta tasarlanan form bölgesini Içeri aktarma
   Bu izlenecek yol, Outlook Microsoft Office bir form bölgesinin nasıl tasarlanacağını ve **Yeni form bölgesi** Sihirbazı 'nı kullanarak form bölgesini BIR Outlook VSTO eklentisi projesine aktarmayı gösterir. Form bölgesini Outlook 'ta tasarlamak, Outlook verilerine bağlanan form bölgesine yerel Outlook denetimleri eklemenize olanak tanır. Form bölgesini içeri aktardıktan sonra her bir denetimin olaylarını işleyebilirsiniz.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
@@ -35,19 +35,18 @@ ms.locfileid: "71255573"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)]veya [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)].
+- [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] veya [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)].
 
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
- ![video bağlantısı](../vsto/media/playvideo.gif "video bağlantısı") İlgili video gösterimi için bkz [. nasıl yaparım?: Visual Studio 2008 kullanarak Outlook form bölgeleri oluşturun mi? ](http://go.microsoft.com/fwlink/?LinkID=130305).
 ## <a name="design-a-form-region-by-using-the-form-region-designer-in-outlook"></a>Outlook 'ta form bölgesi tasarımcısını kullanarak form bölgesi tasarlama
- Bu adımda Outlook 'ta bir form bölgesi tasarlayacaksınız. Daha sonra formu içine [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]aktarabilmeniz için form bölgesini kolay bulunacak bir konuma kaydedin.
+ Bu adımda Outlook 'ta bir form bölgesi tasarlayacaksınız. Daha sonra form bölgesini [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]içine aktarabilmeniz için kolay bir konuma kaydedebilirsiniz.
 
  Bu örnek form bölgesi, normal görev formunun tamamen yerini alır. Ana görev gerçekleştirilmeden önce tamamlanması gereken tüm görevlerin ilerlemesini izlemek için bir yol sağlar (önkoşul görevleri). Form bölgesi, önkoşul görevlerinin bir listesini görüntüler ve listedeki her görevin tamamlanma durumunu gösterir. Kullanıcılar listeye görev ekleyebilir ve bunları kaldırabilir. Ayrıca, her görevin tamamlanma durumunu yenileyebilirler.
 
@@ -55,7 +54,7 @@ ms.locfileid: "71255573"
 
 1. Outlook Microsoft Office başlatın.
 
-2. Outlook 'ta, **Geliştirici** sekmesinde **Form Tasarla**' ya tıklayın. Daha fazla bilgi için [nasıl yapılır: Şeritte](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)Geliştirici sekmesini görüntüleyin.
+2. Outlook 'ta, **Geliştirici** sekmesinde **Form Tasarla**' ya tıklayın. Daha fazla bilgi için bkz. [nasıl yapılır: Şeritte Geliştirici sekmesini gösterme](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
 
 3. **Tasarım formu** kutusunda **görev**' i ve sonra **Aç**' ı tıklatın.
 
@@ -118,13 +117,13 @@ ms.locfileid: "71255573"
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>Yeni bir Outlook VSTO eklentisi projesi oluşturmak için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], **taskaddin**adlı bir Outlook VSTO eklentisi projesi oluşturun.
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]' de, **Taskaddin**adlı BIR Outlook VSTO eklentisi projesi oluşturun.
 
 2. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur**' u seçin.
 
 3. Projeyi varsayılan proje dizinine kaydedin.
 
-     Daha fazla bilgi için [nasıl yapılır: Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)'da Office projeleri oluşturun.
+     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
 ## <a name="import-the-form-region"></a>Form bölgesini içeri aktarma
  Outlook 'ta tasarladığınız form bölgesini Outlook VSTO eklenti projesinde **Yeni Outlook form bölgesi** Sihirbazı ' nı kullanarak içeri aktarabilirsiniz.
@@ -152,9 +151,9 @@ ms.locfileid: "71255573"
      Projenize bir *TaskFormRegion.cs* veya *TaskFormRegion. vb* dosyası eklenir.
 
 ## <a name="handle-the-events-of-controls-on-the-form-region"></a>Form bölgesindeki denetimlerin olaylarını işleme
- Artık projede form bölgesine sahip olduğunuza göre, Outlook 'ta form bölgesine eklediğiniz düğmenin `Microsoft.Office.Interop.Outlook.OlkCommandButton.Click` olayını işleyen bir kod ekleyebilirsiniz.
+ Artık projede form bölgesine sahip olduğunuza göre, Outlook 'taki form bölgesine eklediğiniz düğmenin `Microsoft.Office.Interop.Outlook.OlkCommandButton.Click` olayını işleyen bir kod ekleyebilirsiniz.
 
- Ayrıca, form bölgesi göründüğünde form <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> bölgesindeki denetimleri güncelleştiren olaya kod ekleyin.
+ Ayrıca, form bölgesi göründüğünde form bölgesindeki denetimleri güncelleştiren <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> olayına kod ekleyin.
 
 ### <a name="to-handle-the-events-of-controls-on-the-form-region"></a>Form bölgesindeki denetimlerin olaylarını işlemek için
 
@@ -162,43 +161,43 @@ ms.locfileid: "71255573"
 
     Kod düzenleyicisinde *TaskFormRegion.cs* veya *TaskFormRegion. vb* açılır.
 
-2. `TaskFormRegion` Sınıfına aşağıdaki kodu ekleyin. Bu kod, form bölgesindeki Birleşik giriş kutusunu Outlook Tasks klasöründeki her görevin konu satırıyla doldurur.
+2. Aşağıdaki kodu `TaskFormRegion` sınıfına ekleyin. Bu kod, form bölgesindeki Birleşik giriş kutusunu Outlook Tasks klasöründeki her görevin konu satırıyla doldurur.
 
     [!code-csharp[Trin_Outlook_FR_Import#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Import/TaskFormRegion.cs#1)]
     [!code-vb[Trin_Outlook_FR_Import#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Import_O12/TaskFormRegion.vb#1)]
 
-3. `TaskFormRegion` Sınıfına aşağıdaki kodu ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
+3. Aşağıdaki kodu `TaskFormRegion` sınıfına ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
-   - Yardımcıyöntemini`FindTaskBySubjectName` çağırarak ve istenen görevin konusunu geçirerek Görevler klasörünü bulur. `Microsoft.Office.Interop.Outlook.TaskItem` Sonraki adımda `FindTaskBySubjectName` yardımcı yöntemi ekleyeceksiniz.
+   - `FindTaskBySubjectName` yardımcı yöntemini çağırarak ve istenen görevin konusunu geçirerek görevler klasöründeki `Microsoft.Office.Interop.Outlook.TaskItem` bulur. Sonraki adımda `FindTaskBySubjectName` Yardımcısı yöntemini ekleyeceksiniz.
 
-   - Bağımlı görev liste `Microsoft.Office.Interop.Outlook.TaskItem.PercentComplete` kutusuna vedeğerleriniekler.`Microsoft.Office.Interop.Outlook.TaskItem.Subject`
+   - Bağımlı görev listesi kutusuna `Microsoft.Office.Interop.Outlook.TaskItem.Subject` ve `Microsoft.Office.Interop.Outlook.TaskItem.PercentComplete` değerlerini ekler.
 
    - Görev konusunu form bölgesindeki gizli alana ekler. Gizli alan bu değerleri Outlook öğesinin bir parçası olarak depolar.
 
      [!code-csharp[Trin_Outlook_FR_Import#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Import/TaskFormRegion.cs#2)]
      [!code-vb[Trin_Outlook_FR_Import#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Import_O12/TaskFormRegion.vb#2)]
 
-4. `TaskFormRegion` Sınıfına aşağıdaki kodu ekleyin. Bu kod, önceki adımda açıklanan `FindTaskBySubjectName` yardımcı yöntemi sağlar.
+4. Aşağıdaki kodu `TaskFormRegion` sınıfına ekleyin. Bu kod, önceki adımda açıklanan `FindTaskBySubjectName` yardımcı yöntemi sağlar.
 
     [!code-csharp[Trin_Outlook_FR_Import#3](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Import/TaskFormRegion.cs#3)]
     [!code-vb[Trin_Outlook_FR_Import#3](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Import_O12/TaskFormRegion.vb#3)]
 
-5. `TaskFormRegion` Sınıfına aşağıdaki kodu ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
+5. Aşağıdaki kodu `TaskFormRegion` sınıfına ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
    - Form bölgesindeki liste kutusunu, her bağımlı görevin geçerli tamamlanma durumuyla yeniler.
 
-   - Her bağımlı görevin konusunu almak için gizli metin alanını ayrıştırır. Ardından, her biri `Microsoft.Office.Interop.Outlook.TaskItem` `FindTaskBySubjectName` yardımcı yöntemini çağırarak ve her görevin konusunu geçirerek *Görevler* klasöründeki her birini bulur.
+   - Her bağımlı görevin konusunu almak için gizli metin alanını ayrıştırır. Ardından, `FindTaskBySubjectName` yardımcı yöntemini çağırarak ve her görevin konusunu geçirerek *Görevler* klasöründeki her bir `Microsoft.Office.Interop.Outlook.TaskItem` bulur.
 
-   - Bağımlı görev liste `Microsoft.Office.Interop.Outlook.TaskItem.PercentComplete` kutusuna vedeğerleriniekler.`Microsoft.Office.Interop.Outlook.TaskItem.Subject`
+   - Bağımlı görev listesi kutusuna `Microsoft.Office.Interop.Outlook.TaskItem.Subject` ve `Microsoft.Office.Interop.Outlook.TaskItem.PercentComplete` değerlerini ekler.
 
      [!code-csharp[Trin_Outlook_FR_Import#4](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Import/TaskFormRegion.cs#4)]
      [!code-vb[Trin_Outlook_FR_Import#4](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Import_O12/TaskFormRegion.vb#4)]
 
-6. `TaskFormRegion_FormRegionShowing` Olay işleyicisini aşağıdaki kodla değiştirin. Bu kod aşağıdaki görevleri gerçekleştirir:
+6. `TaskFormRegion_FormRegionShowing` olay işleyicisini aşağıdaki kodla değiştirin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
    - Form bölgesi göründüğünde form bölgesindeki Birleşik giriş kutusunu görev konularıyla doldurur.
 
-   - Form bölgesi göründüğünde yardımcı yöntemini çağırır. `RefreshTaskListBox` Bu, öğe daha önce açıldığında liste kutusuna eklenen bağımlı görevleri görüntüler.
+   - Form bölgesi göründüğünde `RefreshTaskListBox` yardımcı yöntemini çağırır. Bu, öğe daha önce açıldığında liste kutusuna eklenen bağımlı görevleri görüntüler.
 
      [!code-csharp[Trin_Outlook_FR_Import#5](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Import/TaskFormRegion.cs#5)]
      [!code-vb[Trin_Outlook_FR_Import#5](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Import_O12/TaskFormRegion.vb#5)]
@@ -228,7 +227,7 @@ ms.locfileid: "71255573"
 
 8. **Bağımlı görevler listesine eklemek için bir görev seçin** Birleşik giriş kutusunda **bağımlı görev**' i seçin ve ardından **bağımlı görev ekle**' ye tıklayın.
 
-     **% 0 tam--bu görevde bağımlı görev** görünür **ve aşağıdaki görevler** liste kutusuna bağlıdır. Bu, düğmenin `Microsoft.Office.Interop.Outlook.OlkCommandButton.Click` olayını başarıyla işlebileceğinizi gösterir.
+     **%0 tam--bu görevde bağımlı görev** görünür **ve aşağıdaki görevler** liste kutusuna bağlıdır. Bu, düğmenin `Microsoft.Office.Interop.Outlook.OlkCommandButton.Click` olayını başarıyla işlebileceğinizi gösterir.
 
 9. **Birincil görev** öğesini kaydedin ve kapatın.
 
@@ -240,12 +239,12 @@ ms.locfileid: "71255573"
 
 13. Outlook 'taki **birincil görev** öğesini yeniden açın.
 
-     **% 50 tam--bu görevde bağımlı görev** görüntülenir ve **aşağıdaki görevler** liste kutusuna bağlıdır.
+     **%50 tam--bu görevde bağımlı görev** görüntülenir ve **aşağıdaki görevler** liste kutusuna bağlıdır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
  Aşağıdaki konulardan bir Outlook uygulamasının Kullanıcı arabirimini nasıl özelleştireceğiniz hakkında daha fazla bilgi edinebilirsiniz:
 
-- Yönetilen denetimleri bir görsel tasarımcıya sürükleyerek form bölgesinin görünümünü tasarlama hakkında daha fazla bilgi edinmek için bkz [. İzlenecek yol: Outlook form bölgesi](../vsto/walkthrough-designing-an-outlook-form-region.md)tasarlayın.
+- Yönetilen denetimleri bir görsel tasarımcıya sürükleyerek form bölgesinin görünümünü tasarlama hakkında daha fazla bilgi edinmek için bkz. [Izlenecek yol: Outlook form bölgesi tasarlama](../vsto/walkthrough-designing-an-outlook-form-region.md).
 
 - Outlook öğesinin şeritlerini nasıl özelleştireceğiniz hakkında bilgi edinmek için bkz. [Outlook için bir şeridi özelleştirme](../vsto/customizing-a-ribbon-for-outlook.md).
 
@@ -259,4 +258,4 @@ ms.locfileid: "71255573"
 - [Nasıl yapılır: Outlook eklenti projesine form bölgesi ekleme](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
 - [Form bölgesini Outlook ileti sınıfıyla ilişkilendirme](../vsto/associating-a-form-region-with-an-outlook-message-class.md)
 - [Outlook form bölgelerindeki özel eylemler](../vsto/custom-actions-in-outlook-form-regions.md)
-- [Nasıl yapılır: Outlook 'un form bölgesi görüntülemesini engelle](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)
+- [Nasıl yapılır: Outlook 'un form bölgesini görüntülemesini engelleme](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)

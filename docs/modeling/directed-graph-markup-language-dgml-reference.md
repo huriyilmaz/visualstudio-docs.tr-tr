@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b038acd9527cae197223e288349e431e81ea6dd6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3b5405afbcea1f80d19e3985da3d0781cd459e43
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748402"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985107"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Yönlendirilmiş Grafik Biçimlendirme Dili (DGML) başvurusu
 
@@ -21,7 +21,7 @@ Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullan
 Visual Studio 'nun bazı sürümlerinin yalnızca DGML özellikleri alt kümesini desteklediğine, bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Bir .dgml dosyasını düzenlerken, IntelliSense her öğe için kullanılabilen öznitelikleri ve değerlerini belirlemenize yardımcı olur. Bir öznitelikte renk belirlemek için "Mavi" gibi genel renklerin adlarını veya "#ffa0b1c3" gibi ARGB onaltılık değerlerini kullanın. DGML Windows Presentation Foundation (WPF) renk tanımı biçimlerinin küçük bir alt kümesini kullanır. Daha fazla bilgi için bkz. [renkler sınıfı](http://go.microsoft.com/fwlink/?LinkId=182345).
+> Bir .dgml dosyasını düzenlerken, IntelliSense her öğe için kullanılabilen öznitelikleri ve değerlerini belirlemenize yardımcı olur. Bir öznitelikte renk belirlemek için "Mavi" gibi genel renklerin adlarını veya "#ffa0b1c3" gibi ARGB onaltılık değerlerini kullanın. DGML Windows Presentation Foundation (WPF) renk tanımı biçimlerinin küçük bir alt kümesini kullanır. Daha fazla bilgi için bkz. [renkler sınıfı](/dotnet/api/system.windows.media.colors&view=netframework-4.8).
 
 ## <a name="DGML"></a>DGML sözdizimi
 
@@ -86,7 +86,7 @@ Aşağıdaki tabloda DGML 'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Node/>`
 
-   Bu öğe tek bir düğümü tanımlar. @No__t_0 öğesi listesi içinde görünür.
+   Bu öğe tek bir düğümü tanımlar. `<Nodes><Nodes/>` öğesi listesi içinde görünür.
 
    Bu öğenin öznitelikleri şunlardır:
 
@@ -102,9 +102,9 @@ Aşağıdaki tabloda DGML 'de kullanılan öğelerin türleri açıklanmaktadır
 
    `Property`-aynı özellik değerine sahip öğeleri tanımlayan bir özelliğin adı. Daha fazla bilgi için `<Property/>` öğesine bakın.
 
-   `Group`-düğüm diğer düğümleri içeriyorsa, içeriğini göstermek veya gizlemek için bu özniteliği `Expanded` veya `Collapsed` olarak ayarlayın. @No__t_1 özniteliğini içeren bir `<Link/>` öğesi olmalıdır ve kaynak düğüm ve alt düğüm olarak ana düğümü hedef düğüm olarak belirtir. Bkz. [grup kodu öğeleri](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes).
+   `Group`-düğüm diğer düğümleri içeriyorsa, içeriğini göstermek veya gizlemek için bu özniteliği `Expanded` veya `Collapsed` olarak ayarlayın. `Category="Contains"` özniteliğini içeren bir `<Link/>` öğesi olmalıdır ve kaynak düğüm ve alt düğüm olarak ana düğümü hedef düğüm olarak belirtir. Bkz. [grup kodu öğeleri](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes).
 
-   `Visibility`-bu özniteliği `Visible`, `Hidden` veya `Collapsed` olarak ayarlayın. @No__t_0 kullanır. Bkz. [düğümleri ve bağlantıları gizleme veya gösterme](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
+   `Visibility`-bu özniteliği `Visible`, `Hidden` veya `Collapsed` olarak ayarlayın. `System.Windows.Visibility`kullanır. Bkz. [düğümleri ve bağlantıları gizleme veya gösterme](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
 
    `Reference`-bu özniteliği bir belge veya URL bağlantısı olacak şekilde ayarlayın. Bkz. [belge veya URL 'leri kod öğelerine ve bağlantılarına bağlama](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences).
 
@@ -146,7 +146,7 @@ Aşağıdaki tabloda DGML 'de kullanılan öğelerin türleri açıklanmaktadır
 
 - `<Link/>`
 
-   Bu öğe, bir kaynak düğümünü hedef düğüme bağlayan tek bir bağlantıyı tanımlar. @No__t_0 öğesi listesi içinde görünür.
+   Bu öğe, bir kaynak düğümünü hedef düğüme bağlayan tek bir bağlantıyı tanımlar. `<Links></Links>` öğesi listesi içinde görünür.
 
   > [!NOTE]
   > Bu öğe tanımsız bir düğüme başvuruyorsa, eşleme belgesi, varsa belirtilen özniteliklere sahip bir düğümü otomatik olarak oluşturur.

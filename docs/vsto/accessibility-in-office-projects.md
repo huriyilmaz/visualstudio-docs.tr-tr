@@ -15,16 +15,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7b80db6f8f54c897a370d53db56773ad8296f6e
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 6159cd2afc5788e12a836c138ddcc1ea967a5381
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255788"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986333"
 ---
 # <a name="accessibility-in-office-projects"></a>Office projelerinde erişilebilirlik
 
-Microsoft Visual Studio ve Microsoft Office, standart erişilebilirlik gereksinimlerini karşılayan özel çözümler oluşturmanıza olanak sağlayan birçok erişilebilirlik özelliği içerir. Microsoft, Web üzerinde erişilebilirlik için kılavuz yayınlar. Ayrıntılar için [Erişilebilirlik Web sitesine](http://go.microsoft.com/fwlink/?LinkID=37113)bakın.
+Microsoft Visual Studio ve Microsoft Office, standart erişilebilirlik gereksinimlerini karşılayan özel çözümler oluşturmanıza olanak sağlayan birçok erişilebilirlik özelliği içerir. Microsoft, Web üzerinde erişilebilirlik için kılavuz yayınlar. Ayrıntılar için [Erişilebilirlik Web sitesine](https://www.microsoft.com/accessibility/)bakın.
 
 Çoğu durumda, Visual Studio 'daki Office projeleri erişilebilirlik standartlarını karşılar veya çözümlerinizi erişilebilir hale getirmek için ayarlayabileceğiniz özellikleri sunar. Ancak, sınırlı erişilebilirliği olan bazı özellikler vardır.
 
@@ -48,7 +48,7 @@ Microsoft Visual Studio ve Microsoft Office, standart erişilebilirlik gereksini
 
      Değişikliğin etkili olması için Visual Studio 'Yu yeniden başlatmanız gerektiğini belirten bir ileti görüntülenir.
 
-4. **Tamam**'ı tıklatın.
+4. **Tamam**'a tıklayın.
 
 5. Visual Studio 'Yu yeniden başlatın ve projenizi yeniden açın.
 
@@ -65,7 +65,7 @@ Microsoft Visual Studio ve Microsoft Office, standart erişilebilirlik gereksini
 
 - Bir denetimden diğerine Tab yükleyemezsiniz.
 
-- Belgenin yakınlaştırma ayarını% 100 dışında bir şeye değiştirdiğinizde belgedeki denetimler devre dışı bırakılır.
+- Belgenin yakınlaştırma ayarını %100 dışında bir şeye değiştirdiğinizde belgedeki denetimler devre dışı bırakılır.
 
   Belgelerde Windows Forms denetimlerinin sınırlamaları hakkında daha fazla bilgi için bkz. [Office belgelerindeki Windows Forms denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).
 
@@ -78,7 +78,7 @@ Microsoft Visual Studio ve Microsoft Office, standart erişilebilirlik gereksini
 
 Visual Studio, görüntüleme modlarıyla ilgili aşağıdaki sınırlamalara sahiptir:
 
-- Bir Word belgesi veya Excel çalışma sayfasındaki denetimler, belgenin yakınlaştırma ayarını% 100 dışında bir şeye değiştirdiğinizde devre dışı bırakılır.
+- Bir Word belgesi veya Excel çalışma sayfasındaki denetimler, belgenin yakınlaştırma ayarını %100 dışında bir şeye değiştirdiğinizde devre dışı bırakılır.
 
 - **Yeni proje** iletişim kutusu, bir Kullanıcı bilgisayarın erişilebilirlik seçeneklerini **yüksek karşıtlık kullanacak**şekilde değiştirirse, denetimleri doğru görüntülemez.
 
@@ -89,4 +89,4 @@ Bu kısıtlamaları aşmak için büyüteci kullanabilirsiniz. Büyüteç, ekran
 - [Office çözümleri geliştirme](../vsto/developing-office-solutions.md)
 - [Office belgelerindeki denetimler](../vsto/controls-on-office-documents.md)
 - [Engelli kişiler için erişilebilirlik](../ide/reference/accessibility-for-people-with-disabilities.md)
-- [Visual Studio'nun erişilebilirlik özellikleri](../ide/reference/accessibility-features-of-visual-studio.md)
+- [Visual Studio 'nun erişilebilirlik özellikleri](../ide/reference/accessibility-features-of-visual-studio.md)

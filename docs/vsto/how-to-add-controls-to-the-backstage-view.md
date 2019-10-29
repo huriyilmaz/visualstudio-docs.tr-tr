@@ -20,31 +20,31 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c4241464fe8a43af882fbdbad0f898838e8fd897
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87cea877928baf52b0442ed9b0d952fcf649f155
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62826788"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986019"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>Nasıl yapılır: Backstage görünümüne denetimler ekleme
-  Şerit Tasarımcısı tıkladığınızda açılan menüye denetimler eklemek için kullanabileceğiniz **dosya** sekmesi. Eklediğiniz denetimler uygulama çalıştırıldığında **dosya** sekmesinde görünen adlı bir grubu **eklentileri**.
+  **Dosya** sekmesine tıkladığınızda açılan menüye denetim eklemek Için şerit tasarımcısını kullanabilirsiniz. Uygulamayı çalıştırdığınızda, **Dosya** sekmesine eklediğiniz denetimler, **Eklentiler**adlı bir grup görünür.
 
- Visual Studio'da Şerit Tasarımcısını kullanarak, önce veya sonra yerleşik denetimlerin denetimler yerleştiremezsiniz. Yerleşik denetim, Backstage görünümünde önceden görüntülenen bir denetimdir. Önce veya sonra yerleşik denetimlerin yerleştirmenize istiyorsanız Şerit XML kullanmalısınız. Hakkında daha fazla bilgi için **Ribbon (XML)**, bkz: [Ribbon XML](../vsto/ribbon-xml.md). Backstage görünümünü özelleştirme hakkında daha fazla bilgi için bkz. [geliştiriciler için Office 2010 Backstage görünümüne giriş](http://go.microsoft.com/fwlink/?LinkId=182189) ve [geliştiriciler için Office 2010 Backstage görünümünü özelleştirme](http://go.microsoft.com/fwlink/?LinkId=182188).
+ Visual Studio 'daki şerit tasarımcısını kullanarak yerleşik denetimlerden önce veya sonra Denetim konumlandırabilirsiniz. Yerleşik denetim, Backstage görünümünde zaten görüntülenen bir denetimdir. Denetimleri yerleşik denetimlerden önce veya sonra konumlandırmak istiyorsanız, Şerit XML kullanmanız gerekir. **Şerit (XML)** hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md). Backstage görünümünü özelleştirme hakkında daha fazla bilgi için bkz. [geliştiriciler Için office 2010 Backstage görünümüne giriş](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) ve [geliştiriciler Için Office 2010 Backstage görünümünü özelleştirme](/previous-versions/office/developer/office-2010/ee815851(v=office.14)).
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
-### <a name="to-add-controls-to-backstage-view"></a>Backstage görünümüne denetimler ekleme
+### <a name="to-add-controls-to-backstage-view"></a>Backstage görünümüne denetimler eklemek için
 
-1. Şerit öğesi Tasarım Görünümü'nde açın.
+1. Tasarım görünümü içindeki şerit öğesini açın.
 
-     Ekleme hakkında daha fazla bilgi için bir **Şerit (Görsel Tasarımcı)** öğesi projeniz için bkz: [nasıl yapılır: Şerit özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md).
+     Projenize **Şerit (görsel Tasarımcı)** öğesi ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
-2. Şerit Tasarımcısı'nda tıklatın **dosya** sekmesi.
+2. Şerit tasarımcısında **Dosya** sekmesine tıklayın.
 
-     Menü Tasarımcısı görüntülenir. Bu tasarım yüzeyine denetimler içermiyor.
+     Bir menü Tasarımcısı görüntülenir. Bu tasarım yüzeyi herhangi bir denetim içermiyor.
 
-3. Gelen **Office Şerit denetimleri** sekmesinde **araç kutusu**, aşağıdaki denetimleri menü tasarımcının üzerine sürükleyin:
+3. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden, aşağıdaki denetimlerden herhangi birini menü tasarımcısına sürükleyin:
 
     - Düğme
 
@@ -60,11 +60,11 @@ ms.locfileid: "62826788"
 
     - ToggleButton
 
-4. Bunları yeni konumlarına menüsünde taşımak için denetimleri sürükleyin.
+4. Denetimleri menüdeki yeni konumlara taşımak için sürükleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Şerite Genel Bakış](../vsto/ribbon-overview.md)
+- [Şerite genel bakış](../vsto/ribbon-overview.md)
 - [Şerit Tasarımcısı](../vsto/ribbon-designer.md)
 - [Şerit XML](../vsto/ribbon-xml.md)
-- [Nasıl yapılır: Başlama Şerit özelleştirme](../vsto/how-to-get-started-customizing-the-ribbon.md)
+- [Nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md)
 - [İzlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)

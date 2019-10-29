@@ -1,5 +1,5 @@
 ---
-title: EditorConfig desteği için dil hizmeti genişletin
+title: Dil hizmetini, EditorConfig 'i destekleyecek şekilde Genişlet
 ms.date: 11/22/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,40 +10,40 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c6974c7943a751f50cafb0b141ba9c1dfc85677
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 663a87ba15121896edcb4c049e7adc6b5c38492a
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353491"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983102"
 ---
-# <a name="supporting-editorconfig-for-your-language-service"></a>Dil hizmetiniz için Editorconfig'i destekleme
+# <a name="supporting-editorconfig-for-your-language-service"></a>Dil hizmetiniz için EditorConfig 'i destekleme
 
-[EditorConfig](http://editorconfig.org/) dosyaları, proje başına temelinde girinti boyutu gibi ortak metin düzenleyici seçenekleri tanımlamak etkinleştirin. EditorConfig dosyaları için Visual Studio desteği hakkında daha fazla bilgi için bkz: [EditorConfig kullanarak taşınabilir bir düzenleyici ayarları oluşturma](../ide/create-portable-custom-editor-options.md).
+[Editorconfig](https://editorconfig.org/) dosyaları, girinti boyutu gibi ortak metin düzenleyicisi seçeneklerini proje başına temelinde açıklamanıza olanak sağlar. Visual Studio 'nun EditorConfig dosyaları desteği hakkında daha fazla bilgi edinmek için bkz. [editorconfig kullanarak taşınabilir düzenleyici ayarları oluşturma](../ide/create-portable-custom-editor-options.md).
 
-Çoğu durumda, bir Visual Studio dil hizmeti uyguladığınızda hiçbir ek iş EditorConfig Evrensel özellikleri desteklemek için gereklidir. Çekirdek düzenleyici otomatik olarak bulur ve kullanıcıların dosyaları açmak ve uygun metin arabelleği ve görünüm seçeneklerini ayarlar .editorconfig dosyasındaki okur. Ancak, sekmeler ve boşluk gibi düzenlemeler için genel ayarları kullanmak yerine bir ilgili bağlamsal metni Görüntüle seçeneği kullanmak için bazı dil Hizmetleri iyileştirilmiş. Bu durumlarda, dil hizmeti EditorConfig dosyaları destekleyecek şekilde güncelleştirilmesi gerekir.
+Çoğu durumda, Visual Studio Language hizmetini uyguladığınızda, EditorConfig Universal özelliklerini desteklemek için ek bir iş gerekmez. Çekirdek Düzenleyici, kullanıcılar dosyaları açtıklarında. editorconfig dosyasını otomatik olarak bulur ve okur ve uygun metin arabelleğini ve görüntüleme seçeneklerini ayarlar. Ancak, sekmeler ve boşluklar gibi düzenlemeler için, bazı dil Hizmetleri Genel ayarları kullanmak yerine uygun bağlamsal metin görünümü seçeneğini kullanmayı tercih edebilir. Bu durumlarda, dil hizmetinin EditorConfig dosyalarını desteklemesi için güncelleştirilmeleri gerekir.
 
-Genel bir değiştirerek EditorConfig dosyaları desteklemek için bir dil hizmeti güncelleştirmek için gereken değişiklikleri şunlardır _dile özgü_ seçeneğini bir _bağlamsal_ seçeneği:
+Aşağıda, genel _dile özgü_ bir seçeneği _bağlamsal_ seçenekle değiştirerek, editorconfig dosyalarını desteklemek üzere bir dil hizmetini güncelleştirmek için gereken değişiklikler aşağıda verilmiştir:
 
-## <a name="indent-style"></a>Stil Girintile
+## <a name="indent-style"></a>Girinti stili
 
-Dile özgü seçenekleri | Bağlamsal seçenekleri
+Dile özgü seçenekler | Bağlamsal seçenekler
 -------|--------
-Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.fInsertTabs<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs|!textBufferOptions.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)<br/>!textView.Options.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId)
+Microsoft. VisualStudio. TextManager. Interop. LANGPREFERENCES. fInsertTabs<br/>Microsoft. VisualStudio. Package. LanguagePreferences. ınsertsekmeleri|! textBufferOptions. GetOptionValue (DefaultOptions. Converttabstospacesoptionıd)<br/>! textView. Options. GetOptionValue (DefaultOptions. Converttabstospacesoptionıd)
 
-## <a name="indent-size"></a>Girinti boyutu
+## <a name="indent-size"></a>Boyut Girintile
 
-Dile özgü seçenekleri | Bağlamsal seçenekleri
+Dile özgü seçenekler | Bağlamsal seçenekler
 -------|--------
-Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uIndentSize<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.IndentSize|textBufferOptions.GetOptionValue(DefaultOptions.IndentSizeOptionId)<br/>textView.Options.GetOptionValue(DefaultOptions.IndentSizeOptionId)
+Microsoft. VisualStudio. TextManager. Interop. LANGPREFERENCES. Ugirintileme tsize<br/>Microsoft. VisualStudio. Package. LanguagePreferences. InsertTab. girintileme tsize|textBufferOptions. GetOptionValue (DefaultOptions. ınttrsizeoptionıd)<br/>textView. Options. GetOptionValue (DefaultOptions. ınttrsizeoptionıd)
 
 ## <a name="tab-size"></a>Sekme boyutu
 
-Dile özgü seçenekleri | Bağlamsal seçenekleri
+Dile özgü seçenekler | Bağlamsal seçenekler
 -------|--------
-Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uTabSize<br/>Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.TabSize|textBufferOptions.GetOptionValue(DefaultOptions.TabSizeOptionId)<br/>textView.Options.GetOptionValue(DefaultOptions.TabSizeOptionId)
+Microsoft. VisualStudio. TextManager. Interop. LANGPREFERENCES. Uıtabsize<br/>Microsoft. VisualStudio. Package. LanguagePreferences. InsertTab. TabSize|textBufferOptions. GetOptionValue (DefaultOptions. Tabsizeoptionıd)<br/>textView. Options. GetOptionValue (DefaultOptions. Tabsizeoptionıd)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [EditorConfig kullanarak taşınabilir bir düzenleyici ayarları oluşturma](../ide/create-portable-custom-editor-options.md)
+- [EditorConfig kullanarak taşınabilir düzenleyici ayarları oluşturma](../ide/create-portable-custom-editor-options.md)
 - [Düzenleyici ve dil hizmetlerini genişletme](../extensibility/extending-the-editor-and-language-services.md)

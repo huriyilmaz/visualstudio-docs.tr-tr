@@ -19,12 +19,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a2b972c3c275f3e43819220532ac0a3c4a597e3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9fc852b4d5003cf809248c72ca3ac42ad3a6bf23
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662932"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981127"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>Bağımlılık diyagramları ile kod doğrulama
 
@@ -52,7 +52,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'da ba
 
 Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-Kodu, Visual Studio 'da veya bir komut isteminden açık bir bağımlılık diyagramından el ile doğrulayabilirsiniz. Ayrıca, yerel derlemeleri veya Azure Pipelines yapılarını çalıştırırken kodu otomatik olarak doğrulayabilirsiniz. Bkz. [Channel 9 videosu: bağımlılık diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](http://go.microsoft.com/fwlink/?LinkID=252073).
+Kodu, Visual Studio 'da veya bir komut isteminden açık bir bağımlılık diyagramından el ile doğrulayabilirsiniz. Ayrıca, yerel derlemeleri veya Azure Pipelines yapılarını çalıştırırken kodu otomatik olarak doğrulayabilirsiniz. Bkz. [Channel 9 videosu: bağımlılık diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture).
 
 > [!IMPORTANT]
 > Team Foundation Server (TFS) kullanarak katman doğrulaması çalıştırmak istiyorsanız, Yapı sunucunuza aynı Visual Studio sürümünü de yüklemelisiniz.

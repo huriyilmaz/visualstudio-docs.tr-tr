@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 73a1c6458bf6afc5d6fce34208dd8c2c3ddda37f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fecf0d146c1116e6ec6376ffd9ad929cc9179d1c
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748211"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985217"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
@@ -20,7 +20,7 @@ Bir geliştirme projesinde modelleri etkin bir şekilde kullanmak için, takım 
 
 Bir projede veya alt projede hızlı bir şekilde başlamak için, seçtiğiniz proje yapısını izleyen bir proje şablonu olması yararlı olur. Bu konu, böyle bir şablonun nasıl oluşturulacağını ve kullanılacağını açıklar.
 
-Bu konu, birkaç takım üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığınızı ve belki de birçok takıma sahip olduğunu varsayar. Projenin kodu ve modelleri [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] gibi bir kaynak denetimi sisteminde depolanır. En az bazı takım üyeleri, model geliştirmek için Visual Studio kullanır ve diğer takım üyeleri diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilir.
+Bu konu, birkaç takım üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığınızı ve belki de birçok takıma sahip olduğunu varsayar. Projenin kodu ve modelleri [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]gibi bir kaynak denetimi sisteminde depolanır. En az bazı takım üyeleri, model geliştirmek için Visual Studio kullanır ve diğer takım üyeleri diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilir.
 
 Hangi Visual Studio sürümlerinin her bir aracı ve modelleme özelliğini desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -30,7 +30,7 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
 ### <a name="to-divide-an-application-into-layers"></a>Bir uygulamayı katmanlara bölmek için
 
-1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](http://go.microsoft.com/fwlink/?LinkId=196681)bölümünde açıklanmaktadır.
+1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](/previous-versions/msp-n-p/ee658107(v=pandp.10))bölümünde açıklanmaktadır.
 
 2. Mimari çözümünü çağıracağımız bir Visual Studio çözümü oluşturun. Bu çözüm, sistemin genel tasarımını oluşturmak için kullanılacaktır. Modeller içerir, ancak kod içermez.
 
@@ -92,7 +92,7 @@ Uygulamada, tüm Visual Studio çözümlerinizi aynı anda oluşturmaz, ancak pr
 
 ### <a name="to-create-a-solution-template"></a>Bir çözüm şablonu oluşturmak için
 
-1. [Şablonu dışarı aktarma sihirbazını indirin ve yükleyin](http://go.microsoft.com/fwlink/?LinkId=196686).
+1. [Şablonu dışarı aktarma sihirbazını indirin ve yükleyin](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ExportTemplateWizard).
 
 2. Gelecekteki projeler için başlangıç noktası olarak kullanmak istediğiniz çözüm yapısını oluşturun.
 

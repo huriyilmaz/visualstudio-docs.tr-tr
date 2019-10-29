@@ -1,5 +1,5 @@
 ---
-title: SharePoint iş akışı çözümü hata ayıklama & Oluştur
+title: SharePoint iş akışı çözümü oluştur & Hata Ayıkla
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,163 +16,163 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 51682ba54d6a6ae0698ade6bb52d5972cd63111f
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 0e62226147fc160c6d967115fbd3aaa52dd69995
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401053"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985059"
 ---
-# <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>İzlenecek yol: Oluşturma ve bir SharePoint iş akışı çözümü hata ayıklama
-  Bu izlenecek yol, temel sıralı iş akışı şablonunun nasıl oluşturulacağını gösterir. İş akışı, bir belgeyi gözden olup olmadığını belirlemek için paylaşılan belge kitaplığı özelliğini denetler. Belgeyi gözden, iş akışı tamamlanır.
+# <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>İzlenecek yol: SharePoint iş akışı çözümü oluşturma ve hatalarını ayıklama
+  Bu izlenecek yol, temel sıralı bir iş akışı şablonunun nasıl oluşturulacağını göstermektedir. İş akışı, bir belgenin gözden geçirilip geçirilmediğini anlamak için paylaşılan belge kitaplığının bir özelliğini denetler. Belge incelenip iş akışı tamamlanır.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Bir SharePoint liste tanımını sıralı iş akışı projesi oluşturma [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]' de bir SharePoint liste tanımı sıralı iş akışı projesi oluşturuluyor.
 
 - İş akışı etkinlikleri oluşturuluyor.
 
-- İşleme iş akışı etkinlik olayları.
+- İş akışı etkinlik olaylarını işleme.
 
 > [!NOTE]
-> Bu kılavuzda bir sıralı iş akışı projesi kullansa da, bir Durum makinesi iş akışı projesi için işlem aynıdır.
+> Bu kılavuzda sıralı bir iş akışı projesi kullanılıyorsa, işlem durum makinesi iş akışı projesi için de aynıdır.
 >
-> Ayrıca, bilgisayarınız Visual Studio kullanıcı bazıları için farklı adlar veya konumlar arabirimi öğeleri aşağıdaki yönergelerde yer gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Ayrıca bilgisayarınız, aşağıdaki yönergelerde yer alarak Visual Studio Kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- Microsoft Windows ve SharePoint sürümleri desteklenir.
+- Desteklenen Microsoft Windows ve SharePoint sürümleri.
 
 - Visual Studio.
 
-## <a name="add-properties-to-the-sharepoint-shared-documents-library"></a>SharePoint paylaşılan belge kitaplığı'na özellikleri ekleyin
- Belgelerde durumunu izlemek için **paylaşılan belgeler** kitaplığı, biz oluşturacaktır paylaşılan belgeler için üç yeni özellik SharePoint sitemize: `Status`, `Assignee`, ve `Review Comments`. Bu özellikleri tanımlarız **paylaşılan belgeler** kitaplığı.
+## <a name="add-properties-to-the-sharepoint-shared-documents-library"></a>SharePoint paylaşılan belgeler kitaplığına özellikler ekleme
+ **Paylaşılan belgeler** kitaplığındaki belgelerin gözden geçirme durumunu Izlemek için SharePoint sitemizdeki paylaşılan belgeler için üç yeni özellik oluşturacağız: `Status`, `Assignee`ve `Review Comments`. Bu özellikleri **paylaşılan belgeler** kitaplığında tanımladık.
 
-#### <a name="to-add-properties-to-the-sharepoint-shared-documents-library"></a>Paylaşılan SharePoint özelliklerini eklemek için kitaplığı belgeleri
+#### <a name="to-add-properties-to-the-sharepoint-shared-documents-library"></a>SharePoint paylaşılan belgeler kitaplığına özellikler eklemek için
 
-1. Http:// gibi bir SharePoint sitesine açın\<sistem adı > / bir Web tarayıcısında SitePages/Home.aspx.
+1. Bir Web tarayıcısında http://\<sistem adı >/SitePages/Home.aspx gibi bir SharePoint sitesi açın.
 
-2. Hızlı Başlat çubuğunda **SharedDocuments**.
+2. Hızlı Başlat çubuğunda **Shareddocuments**' i seçin.
 
-3. Seçin **Kitaplığı** üzerinde **Kütüphane Araçları** Şerit ve ardından **sütun oluşturma** yeni bir sütun oluşturmak için Şeritteki düğme.
+3. **Kitaplık araçları** şeridinde **kitaplık** ' ı seçin ve ardından Şeritteki **sütun oluştur** düğmesini seçerek yeni bir sütun oluşturun.
 
-4. Sütun adı **belge durumu**, kendi tür kümesine **seçenek (arasından menü)** , aşağıdaki üç seçenek belirtin ve ardından **Tamam** düğmesi:
+4. Sütun **belgesi durumunu**adlandırın, türünü seçenek olarak ayarlayın **(arasından seçim yapmak için menü)** , aşağıdaki üç seçeneği belirtin ve ardından **Tamam** düğmesini seçin:
 
-    - **Gözden geçirme gerekli**
+    - **Gözden geçirme gerekiyor**
 
-    - **Gözden geçirme tamamlandı**
+    - **İnceleme Tamam**
 
-    - **İstenen değişiklikler**
+    - **Değişiklikler Istendi**
 
-5. İki sütun daha oluşturun ve bunları **atanan** ve **gözden geçirme**. Tek metin satırı olarak atanan sütun türü ve gözden geçirme sütun türü birden çok metin satırı ayarlayın.
+5. İki sütun daha oluşturun ve bunları **atanan** şekilde adlandırın ve **açıklamaları gözden geçirin**. Atanan sütun türünü tek satırlık metin olarak ayarlayın ve yorumları gözden geçir sütunu birden çok satırlık metin olarak yazın.
 
-## <a name="enable-documents-to-be-edited-without-requiring-a-check-out"></a>Bir kullanıma gerek kalmadan düzenlenecek belgelere etkinleştir
- İş akışı şablonu belgeleri gözden geçirin gerek kalmadan düzenleyebileceğiniz, test etmek daha kolaydır. Sonraki yordamda, etkinleştirmek için SharePoint sitesi yapılandırın.
+## <a name="enable-documents-to-be-edited-without-requiring-a-check-out"></a>Kullanıma alma gerekmeden belgelerin düzenlenmesini etkinleştir
+ Belgeleri kullanıma almak zorunda kalmadan düzenleyebilmeniz için iş akışı şablonunu test etmek daha kolaydır. Bir sonraki yordamda, SharePoint sitesini bunu etkinleştirecek şekilde yapılandırırsınız.
 
-#### <a name="to-enable-documents-to-be-edited-without-checking-them-out"></a>Kullanıma almadan düzenlenecek belgeleri etkinleştirmek için
+#### <a name="to-enable-documents-to-be-edited-without-checking-them-out"></a>Belgelerin kullanıma almadan düzenlenmesini sağlamak için
 
-1. Hızlı Başlat çubuğunda **paylaşılan belgeler** bağlantı.
+1. Hızlı Başlat çubuğunda, **paylaşılan belgeler** bağlantısını seçin.
 
-2. Üzerinde **Kütüphane Araçları** şeridinden **Kitaplığı** sekmesine ve ardından **kitaplık ayarları** görüntülemek için düğmeyi **belge kitaplığı ayarlarını** sayfası.
+2. **Kitaplık araçları** şeridinde **kitaplık** sekmesini seçin ve ardından **kitaplık ayarları** düğmesini seçerek **belge kitaplığı ayarları** sayfasını görüntüleyin.
 
-3. İçinde **genel ayarlar** bölümünde, seçin **sürüm oluşturma ayarları** görüntülemek için bağlantıyı **sürüm oluşturma ayarları** sayfası.
+3. **Genel ayarlar** bölümünde **sürüm oluşturma ayarları bağlantısını seçerek** **sürüm oluşturma ayarları** sayfasını görüntüleyin.
 
-4. Doğrulayın ayarı **düzenlenmeden önce kullanıma alınması belgelerin gerektir** olduğu **Hayır**. Yüklü değilse, değiştirmek **Hayır** seçip **Tamam** düğmesi.
+4. **Belgelerin düzenlenmeden önce kullanıma alınmasını iste** seçeneğinin **Hayır**olduğunu doğrulayın. Değilse, **Hayır** olarak değiştirin ve **Tamam** düğmesini seçin.
 
 5. Tarayıcıyı kapatın.
 
-## <a name="create-a-sharepoint-sequential-workflow-project"></a>Bir SharePoint sıralı iş akışı projesi oluşturma
- Bir sıralı iş akışı son etkinlik tamamlanana kadar sırayla yürüten adımları kümesidir. Bu yordamda, paylaşılan belgeler listemize uygulanacak bir sıralı iş akışı oluşturacağız. İş akışı Sihirbazı iş akışı site tanımını veya liste tanımı ile ilişkilendirmenizi sağlar ve iş akışını başlatacak belirlerken olanak tanır.
+## <a name="create-a-sharepoint-sequential-workflow-project"></a>SharePoint sıralı iş akışı projesi oluşturma
+ Sıralı bir iş akışı, son etkinlik bitene kadar sırayla yürütülen bir adım kümesidir. Bu yordamda, paylaşılan belgeler listemize uygulanacak sıralı bir iş akışı oluşturacağız. İş akışı Sihirbazı, iş akışını site tanımı veya liste tanımıyla ilişkilendirmenize olanak tanır ve iş akışının ne zaman başlatılacağını belirlemenizi sağlar.
 
-#### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>Bir SharePoint sıralı iş akışı projesi oluşturma
+#### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>SharePoint sıralı iş akışı projesi oluşturmak için
 
-1. Başlangıç [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]başlatın.
 
-2. Menü çubuğunda, **dosya** > **yeni** > **proje** görüntülenecek **yeni proje** iletişim kutusu.
+2. **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda **dosya**  > **Yeni**  > **Proje** ' yi seçin.
 
-3. Genişletin **SharePoint** ya da düğümünde **Visual C#** veya **Visual Basic**ve ardından **2010** düğümü.
+3. **Visual C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-4. İçinde **şablonları** bölmesinde seçin **SharePoint 2010 projesi** şablonu.
+4. **Şablonlar** bölmesinde, **SharePoint 2010 proje** şablonunu seçin.
 
-5. İçinde **adı** kutusuna **MySharePointWorkflow** seçip **Tamam** düğmesi.
+5. **Ad** kutusuna **MySharePointWorkflow** yazın ve **Tamam** düğmesini seçin.
 
-     **SharePoint Özelleştirme Sihirbazı** görünür.
+     **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
-6. İçinde **hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında **Grup çözümü olarak Dağıt** seçenek düğmesini ve ardından **son** kabul etmek için düğme güven düzeyi ve varsayılan site.
+6. **Hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında, **Grup çözümü olarak dağıt** seçenek düğmesini seçin ve ardından güven düzeyini ve varsayılan siteyi kabul etmek için **son** düğmesini seçin.
 
-     Bu adım çözümünün güven düzeyi Grup çözümü iş akışı projeleri için kullanılabilir tek seçenek olarak ayarlar. Daha fazla bilgi için [korumalı çözümle ilgili konular](../sharepoint/sandboxed-solution-considerations.md).
+     Bu adım, iş akışı projeleri için kullanılabilir tek seçenek olan çözüm için güven düzeyini Grup çözümü olarak ayarlar. Daha fazla bilgi için bkz. [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md).
 
-7. İçinde **Çözüm Gezgini**, proje düğümünü seçin ve ardından, menü çubuğunda, **proje** > **Yeni Öğe Ekle**.
+7. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda **Proje** > **Yeni öğe Ekle**' yi seçin.
 
-8. Ya da altında **Visual C#** veya **Visual Basic**, genişletme **SharePoint** düğümünü seçip **2010** düğümü.
+8. **Görsel C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-9. İçinde **şablonları** bölmesinde seçin **sıralı iş akışı (yalnızca Grup çözümü)** şablonu seçip **Ekle** düğmesi.
+9. **Şablonlar** bölmesinde, **sıralı iş akışı (yalnızca Grup çözümü)** şablonunu seçin ve ardından **Ekle** düğmesini seçin.
 
-     **SharePoint Özelleştirme Sihirbazı** görünür.
+     **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
-10. İçinde **hata ayıklama için iş akışı adını** sayfasında, varsayılan adı kabul edin (**MySharePointWorkflow - Workflow1**). Varsayılan iş akışı şablonu türü değeri tutun **liste iş akışı**ve ardından **sonraki** düğmesi.
+10. **Hata ayıklama için iş akışı adını belirtin** sayfasında, varsayılan adı (**MySharePointWorkflow-Workflow1**) kabul edin. Varsayılan iş akışı şablonu tür değerini tutun, **Iş akışını listeleyin**ve sonra **İleri** düğmesini seçin.
 
-11. İçinde **otomatik olarak hata ayıklama oturumunda iş akışını ilişkilendirmek için Visual Studio ister misiniz?** sayfasında **sonraki** tüm varsayılan ayarları kabul etmek için düğme.
+11. **Visual Studio 'nun bir hata ayıklama oturumunda iş akışını otomatik olarak ilişkilendirilmesini ister misiniz?** sayfasında, tüm varsayılan ayarları kabul etmek için **İleri** düğmesini seçin.
 
-     Bu adım, otomatik olarak iş akışı paylaşılan belgeler kitaplığı ile ilişkilendirir.
+     Bu adım iş akışını paylaşılan belgeler kitaplığıyla otomatik olarak ilişkilendirir.
 
-12. İçinde **iş akışınızın başlama koşullarını belirtin** sayfasında, varsayılan seçenekleri seçili bırakın **nasıl iş akışı başlatmak için istediğinize?** seçin ve bölüm **Son** düğmesi.
+12. **İş akışınızın başlatılma koşullarını belirtin** sayfasında, **Iş akışının başlamasını nasıl başlatmak istiyorsunuz?** bölümünde varsayılan seçenekleri seçili bırakın ve **son** düğmesini seçin.
 
-     Bu sayfa, iş akışı başladığında belirtmenize olanak sağlar. Bir kullanıcı el ile SharePoint veya iş akışının ilişkili olduğu bir öğe oluşturulduğunda başladığında varsayılan olarak, iş akışı otomatik olarak ya da başlar.
+     Bu sayfa, iş akışınızın ne zaman başlayacağını belirtmenizi sağlar. Varsayılan olarak, iş akışı, bir kullanıcı SharePoint 'te el ile başlatıldığında veya iş akışının ilişkilendirildiği bir öğe oluşturulduğunda başlatılır.
 
-## <a name="create-workflow-activities"></a>İş akışı etkinlikleri oluşturun
- İş akışı içeren bir veya daha fazla *etkinlikleri* gerçekleştirilecek eylemler temsil eder. Bir iş akışı etkinlikleri düzenlemek için iş akışı Tasarımcısı'nı kullanın. Bu yordamda, iş akışına iki etkinliği ekleyeceğiz: HandleExternalEventActivity ve OnWorkFlowItemChanged. Bu etkinlikler belgeleri gözden geçirme durumu izleme **paylaşılan belgeler** listesi
+## <a name="create-workflow-activities"></a>İş akışı etkinlikleri oluşturma
+ İş akışları gerçekleştirilecek eylemleri temsil eden bir veya daha fazla *etkinlik* içerir. İş akışı için etkinlikleri düzenlemek üzere iş akışı tasarımcısını kullanın. Bu yordamda, iş akışına iki etkinlik ekleyeceğiz: Handleexternaliventactivity ve Onworkflowwitemchanged. Bu etkinlikler, **paylaşılan belgeler** listesindeki belgelerin gözden geçirme durumunu izler
 
 #### <a name="to-create-workflow-activities"></a>İş akışı etkinlikleri oluşturmak için
 
-1. İş akışı iş akışı Tasarımcısı'nda görüntülenmesi gerekir. Yüklü değilse, ya da açık **Workflow1.cs** veya **Workflow1.vb** içinde **Çözüm Gezgini**.
+1. İş akışı, iş akışı Tasarımcısı 'nda görüntülenmelidir. Değilse, **Çözüm Gezgini**içinde **Workflow1.cs** veya **Workflow1. vb** dosyasını açın.
 
-2. Tasarımcısı'nda **OnWorkflowActivated1** etkinlik.
+2. Tasarımcıda **onWorkflowActivated1** etkinliğini seçin.
 
-3. İçinde **özellikleri** penceresinde girin **onWorkflowActivated** yanındaki **çağrılan** özelliği ve ardından Enter tuşuna basın.
+3. **Özellikler** penceresinde, **çağrılan** özelliğin yanına **onWorkflowActivated** yazın ve ardından Enter tuşunu seçin.
 
-     Kod Düzenleyicisi açılır ve onWorkflowActivated adlı bir olay işleyicisi yöntemi Workflow1 kod dosyasına eklenir.
+     Kod Düzenleyicisi açılır ve Workflow1 kod dosyasına onWorkflowActivated adlı bir olay işleyicisi yöntemi eklenir.
 
-4. Geçiş iş akışı tasarımcıya geri dönün, araç kutusunu açın ve ardından **Windows iş akışı v3.0** düğümü.
+4. İş akışı tasarımcısına geri dönün, araç kutusunu açın ve ardından **Windows Workflow v 3.0** düğümünü genişletin.
 
-5. İçinde **Windows iş akışı v3.0** düğümünün **araç kutusu**, aşağıdaki adımlardan birini gerçekleştirin:
+5. **Araç kutusunun** **Windows Workflow v 3.0** düğümünde aşağıdaki adım kümelerinden birini gerçekleştirin:
 
-    1. Kısayol menüsünü açın **sırada** etkinliğini seçip **kopyalama**. İş Akışı Tasarımcısı'nda altındaki kısayol menüsünü açın **onWorkflowActivated1** etkinliğini seçip **Yapıştır**.
+    1. **While** etkinliğinin kısayol menüsünü açın ve **Kopyala**' yı seçin. İş akışı tasarımcısında, **onWorkflowActivated1** etkinliğinin altındaki satır için kısayol menüsünü açın ve **Yapıştır**' ı seçin.
 
-    2. Sürükle **sırada** etkinliğinden **araç kutusu** iş akışı Tasarımcısı için etkinlik altındaki bağlanın **onWorkflowActivated1** etkinlik.
+    2. **While** etkinliğini **araç kutusundan** iş akışı tasarımcısına sürükleyin ve etkinliği **onWorkflowActivated1** etkinliğinin altındaki satıra bağlayın.
 
-6. Seçin **WhileActivity1** etkinlik.
+6. **WhileActivity1** etkinliğini seçin.
 
-7. İçinde **özellikleri** penceresinde **koşul** kod koşulu.
+7. **Özellikler** penceresinde **koşulu** kod koşulu olarak ayarlayın.
 
-8. Genişletin **koşul** özelliği girin **isWorkflowPending** alt yanındaki **koşul** özelliği ve ardından Enter tuşuna basın.
+8. **Koşul** özelliğini genişletin, alt **koşul** özelliğinin yanına **ısworkflowpending** yazın ve Enter tuşunu seçin.
 
-     Kod Düzenleyicisi açılır ve isWorkflowPending adlı bir yöntem Workflow1 kod dosyasına eklenir.
+     Kod Düzenleyicisi açılır ve Workflow1 kod dosyasına ıworkflowpending adlı bir yöntem eklenir.
 
-9. Geçiş iş akışı tasarımcıya geri dönün, araç kutusunu açın ve ardından **SharePoint iş akışı** düğümü.
+9. İş akışı tasarımcısına geri dönün, araç kutusunu açın ve ardından **SharePoint Iş akışı** düğümünü genişletin.
 
-10. İçinde **SharePoint iş akışı** düğümünün **araç kutusu**, aşağıdaki adımlardan birini gerçekleştirin:
+10. **Araç kutusunun** **SharePoint iş akışı** düğümünde aşağıdaki adım kümelerinden birini gerçekleştirin:
 
-    - Kısayol menüsünü açın **OnWorkflowItemChanged** etkinliğini seçip **kopyalama**. İş Akışı Tasarımcısı'nda içinde satır için kısayol menüsünü açın **whileActivity1** etkinliğini seçip **Yapıştır**.
+    - **Onworkflowwitemchanged** etkinliğinin kısayol menüsünü açın ve **Kopyala**' yı seçin. İş akışı tasarımcısında, **whileActivity1** etkinliğinin içindeki satır için kısayol menüsünü açın ve **Yapıştır**' ı seçin.
 
-    - Sürükleme **OnWorkflowItemChanged** etkinliğinden **araç kutusu** iş akışı Tasarımcısı için satır içinde etkinlik bağlanın **whileActivity1** etkinlik.
+    - **Onworkflowwitemchanged** etkinliğini **araç kutusundan** iş akışı tasarımcısına sürükleyin ve etkinliği **whileActivity1** etkinliğinin içindeki satıra bağlayın.
 
-11. Seçin **onWorkflowItemChanged1** etkinlik.
+11. **OnWorkflowItemChanged1** etkinliğini seçin.
 
-12. İçinde **özellikleri** penceresinde, aşağıdaki tabloda gösterildiği gibi özellikleri ayarlayın.
+12. **Özellikler** penceresinde, aşağıdaki tabloda gösterildiği gibi özellikleri ayarlayın.
 
     |Özellik|Değer|
     |--------------|-----------|
     |**CorrelationToken**|**workflowToken**|
-    |**Çağrılır**|**onWorkflowItemChanged**|
+    |**Tanımladığınızda**|**Onworkflowwitemchanged**|
 
-## <a name="handle-activity-events"></a>Etkinlik olayları işleme
- Son olarak, belge her etkinlik durumunu denetleyin. Belgeyi gözden, iş akışı sona erer.
+## <a name="handle-activity-events"></a>Etkinlik olaylarını işle
+ Son olarak, her etkinlikten belgenin durumunu kontrol edin. Belge incelenip, iş akışı tamamlanmıştır.
 
-#### <a name="to-handle-activity-events"></a>Etkinlik olayları işlemek için
+#### <a name="to-handle-activity-events"></a>Etkinlik olaylarını işlemek için
 
-1. İçinde *Workflow1.cs* veya *Workflow1.vb*, aşağıdaki alan üst kısmına ekleyin `Workflow1` sınıfı. Bu alan, bir etkinlik iş akışı tamamlanıp tamamlanmadığını belirlemek için kullanılır.
+1. *Workflow1.cs* veya *Workflow1. vb*' de, `Workflow1` sınıfının en üstüne aşağıdaki alanı ekleyin. Bu alan, iş akışının tamamlanıp bitmediğini tespit etmek için bir etkinlikte kullanılır.
 
     ```vb
     Dim workflowPending As Boolean = True
@@ -182,7 +182,7 @@ ms.locfileid: "66401053"
     Boolean workflowPending = true;
     ```
 
-2. Aşağıdaki yöntemi ekleyin `Workflow1` sınıfı. Bu yöntem değeri kontrol `Document Status` belgeyi gözden olup olmadığını belirlemek için belgeler listesi özelliği. Varsa `Document Status` özelliği `Review Complete`, ardından `checkStatus` yöntemi kümeleri `workflowPending` alanı **false** iş akışını tamamlamak hazır olduğunu göstermek için.
+2. Aşağıdaki yöntemi `Workflow1` sınıfına ekleyin. Bu yöntem, belgenin gözden geçirilip geçirilmediğini anlamak için belgeler listesindeki `Document Status` özelliğinin değerini denetler. `Document Status` özelliği `Review Complete`olarak ayarlanırsa `checkStatus` yöntemi, iş akışının bitmek üzere hazırlandığını göstermek için `workflowPending` alanını **false** olarak ayarlar.
 
     ```vb
     Private Sub checkStatus()
@@ -200,7 +200,7 @@ ms.locfileid: "66401053"
     }
     ```
 
-3. Aşağıdaki kodu ekleyin `onWorkflowActivated` ve `onWorkflowItemChanged` yöntemleri çağırmak için `checkStatus` yöntemi. İş akışı başladığında, `onWorkflowActivated` yöntem çağrılarını `checkStatus` belge zaten gözden olup olmadığını belirlemek için yöntemi. Bu gözden geçirilmemiştir varsa, iş akışı devam eder. Belge kaydedildiğinde `onWorkflowItemChanged` yöntem çağrılarını `checkStatus` yeniden belgeyi gözden olup olmadığını belirlemek için yöntemi. Sırada `workflowPending` ayarlanmış **true**, iş akışı çalışmaya devam eder.
+3. `checkStatus` yöntemini çağırmak için `onWorkflowActivated` ve `onWorkflowItemChanged` yöntemlerine aşağıdaki kodu ekleyin. İş akışı başladığında `onWorkflowActivated` yöntemi, belgenin önceden gözden geçirilip geçirilmediğini anlamak için `checkStatus` yöntemini çağırır. Gözden geçirilmeyen iş akışı devam eder. Belge kaydedildiğinde `onWorkflowItemChanged` yöntemi, belgenin gözden geçirilip geçirilmediğini anlamak için `checkStatus` yöntemini yeniden çağırır. `workflowPending` alanı **true**olarak ayarlandığında iş akışı çalışmaya devam eder.
 
     ```vb
     Private Sub onWorkflowActivated(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ExternalDataEventArgs)
@@ -226,7 +226,7 @@ ms.locfileid: "66401053"
     }
     ```
 
-4. Aşağıdaki kodu ekleyin `isWorkflowPending` durumunu denetlemek için yöntem `workflowPending` özelliği. Belge kaydedildiğinde, her zaman **whileActivity1** etkinlik çağrıları `isWorkflowPending` yöntemi. Bu yöntem inceler <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> özelliği <xref:System.Workflow.Activities.ConditionalEventArgs> belirlemek için nesne olup olmadığını **WhileActivity1** etkinliği devam veya son. Özellik ayarlanmışsa **true**, etkinlik devam eder. Aksi takdirde, etkinlik tamamlanır ve iş akışı tamamlanır.
+4. `workflowPending` özelliğinin durumunu denetlemek için `isWorkflowPending` yöntemine aşağıdaki kodu ekleyin. Belge her kaydedildiğinde, **whileActivity1** etkinliği `isWorkflowPending` yöntemini çağırır. Bu yöntem, **whileActivity1** etkinliğinin devam edip etmeyeceğini veya bitmeyeceğini anlamak için <xref:System.Workflow.Activities.ConditionalEventArgs> nesnesinin <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> özelliğini inceler. Özelliği **true**olarak ayarlanırsa etkinlik devam eder. Aksi takdirde, etkinlik sonlanır ve iş akışı sonlanır.
 
     ```vb
     Private Sub isWorkflowPending(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ConditionalEventArgs)
@@ -243,51 +243,51 @@ ms.locfileid: "66401053"
 
 5. Projeyi kaydedin.
 
-## <a name="test-the-sharepoint-workflow-template"></a>SharePoint iş akışı şablonu test
- Hata ayıklayıcıyı başlattığınızda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışı şablonu SharePoint sunucusuna dağıtır ve iş akışı ile ilişkilendirir **paylaşılan belgeler** listesi. İş akışı test etmek için bir belgedeki bir iş akışı örneği başlatın **paylaşılan belgeler** listesi.
+## <a name="test-the-sharepoint-workflow-template"></a>SharePoint iş akışı şablonunu test etme
+ Hata ayıklayıcıyı başlattığınızda, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışı şablonunu SharePoint sunucusuna dağıtır ve iş akışını **paylaşılan belgeler** listesiyle ilişkilendirir. İş akışını test etmek için, **paylaşılan belgeler** listesindeki bir belgeden iş akışının bir örneğini başlatın.
 
-#### <a name="to-test-the-sharepoint-workflow-template"></a>SharePoint iş akışı şablonu test etmek için
+#### <a name="to-test-the-sharepoint-workflow-template"></a>SharePoint iş akışı şablonunu test etmek için
 
-1. İçinde *Workflow1.cs* veya *Workflow1.vb*, yanında bir kesme noktası ayarlamak **onWorkflowActivated** yöntemi.
+1. *Workflow1.cs* veya *Workflow1. vb*' de, **onWorkflowActivated** yönteminin yanında bir kesme noktası ayarlayın.
 
-2. Seçin **F5** anahtarı oluşturun ve çözümü çalıştırın.
+2. Çözümü derlemek ve çalıştırmak için **F5** tuşunu seçin.
 
      SharePoint sitesi görüntülenir.
 
-3. SharePoint'te Gezinti bölmesinde **paylaşılan belgeler** bağlantı.
+3. SharePoint 'teki gezinti bölmesinde, **paylaşılan belgeler** bağlantısını seçin.
 
-4. İçinde **paylaşılan belgeler** sayfasında **belgeleri** bağlantısını **Kütüphane Araçları** sekmesine ve ardından **belge Yükle** düğmesi .
+4. **Paylaşılan belgeler** sayfasında, **kitaplık araçları** sekmesindeki **Belgeler** bağlantısını seçin ve ardından **belgeyi karşıya yükle** düğmesini seçin.
 
-5. İçinde **belge Yükle** iletişim kutusunda **Gözat** düğmesi, herhangi bir belge dosya seçin, **açık** düğmesine ve ardından **Tamam** düğmesi.
+5. **Belgeyi karşıya yükle** iletişim kutusunda, **Gözden** geçirme düğmesini seçin, herhangi bir belge dosyasını seçin, **Aç** düğmesini seçin ve **Tamam** düğmesini seçin.
 
-     Bu seçili belgeye yükler **paylaşılan belgeler** listelemek ve iş akışı başlatır.
+     Bu, Seçili belgeyi **paylaşılan belgeler** listesine yükler ve iş akışını başlatır.
 
-6. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], hata ayıklayıcı yanındaki kesme noktasında durduğunu doğrulayın `onWorkflowActivated` yöntemi.
+6. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], hata ayıklayıcının `onWorkflowActivated` yönteminin yanındaki kesme noktasında durduğunu doğrulayın.
 
-7. Seçin **F5** yürütme devam etmek için anahtarı.
+7. Yürütmeye devam etmek için **F5** tuşunu seçin.
 
-8. Belge burada ayarlarını değiştirebilirsiniz, ancak bunları varsayılan değerlerinde seçerek şimdilik bırakın **Kaydet** düğmesi.
+8. Burada belge için ayarları değiştirebilirsiniz, ancak **Kaydet** düğmesini seçerek bunları varsayılan değerlerde bırakabilirsiniz.
 
-     Bu size döndürür **paylaşılan belgeler** varsayılan SharePoint Web sitesi sayfası.
+     Bu, sizi varsayılan SharePoint Web sitesinin **paylaşılan belgeler** sayfasına döndürür.
 
-9. İçinde **paylaşılan belgeler** sayfasında, değerin altında **MySharePointWorkflow - Workflow1** sütun ayarlanmış **sürüyor**. Bu iş akışı devam ediyor ve belgenin gözden geçirme bekliyor gösterir.
+9. **Paylaşılan belgeler** sayfasında, **MySharePointWorkflow-Workflow1** sütununun altındaki değerin **devam ediyor**olarak ayarlandığını doğrulayın. Bu, iş akışının devam ettiğini ve belgenin gözden geçirme beklediğini gösterir.
 
-10. İçinde **paylaşılan belgeler** sayfasında, bir belge seçin, görünür ve sonra oka **özelliklerini Düzenle** menü öğesi.
+10. **Paylaşılan belgeler** sayfasında belgeyi seçin, görüntülenen oku seçin ve ardından **Özellikleri Düzenle** menü öğesini seçin.
 
-11. Ayarlama **belge durumu** için **gözden geçirme tamamlandı**ve ardından **Kaydet** düğmesi.
+11. **Belge durumunu** **Gözden geçirme Tamam**olarak ayarlayın ve ardından **Kaydet** düğmesini seçin.
 
-     Bu size döndürür **paylaşılan belgeler** varsayılan SharePoint Web sitesi sayfası.
+     Bu, sizi varsayılan SharePoint Web sitesinin **paylaşılan belgeler** sayfasına döndürür.
 
-12. İçinde **paylaşılan belgeler** sayfasında, değerin altında **belge durumu** sütun ayarlanmış **gözden geçirme tamamlandı**. Yenileme **paylaşılan belgeler** doğrulayın ve sayfa değerin altında **MySharePointWorkflow - Workflow1** sütun ayarlanmış **tamamlandı**. Gösterir iş akışı tamamlandığında ve belgenin gözden geçirildi.
+12. **Paylaşılan belgeler** sayfasında, **belge durumu** sütununun altındaki değerin **İnceleme Tamam**olarak ayarlandığını doğrulayın. **Paylaşılan belgeler** sayfasını yenileyin ve **MySharePointWorkflow-Workflow1** sütununun altındaki değerin **tamamlandı**olarak ayarlandığını doğrulayın. Bu, iş akışının tamamlandığını ve belgenin incelendiğini gösterir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Aşağıdaki konulardan iş akışı şablonları oluşturma hakkında daha fazla bilgi edinebilirsiniz:
+ Aşağıdaki konulardan iş akışı şablonlarının nasıl oluşturulacağı hakkında daha fazla bilgi edinebilirsiniz:
 
-- SharePoint iş akışı etkinlikleri hakkında daha fazla bilgi için bkz: [iş akışı etkinlikleri, SharePoint Foundation için](http://go.microsoft.com/fwlink/?LinkId=178992).
+- SharePoint iş akışı etkinlikleri hakkında daha fazla bilgi edinmek için bkz. [SharePoint Foundation Için Iş akışı etkinlikleri](/previous-versions/office/developer/sharepoint-2010/ms446847(v=office.14)).
 
-- Windows Workflow Foundation etkinlikleri hakkında daha fazla bilgi için bkz: [System.Workflow.Activities Namespace](http://go.microsoft.com/fwlink/?LinkId=178993).
+- Windows Workflow Foundation etkinlikleri hakkında daha fazla bilgi edinmek için bkz. [System. Workflow. Activities ad alanı](/dotnet/api/system.workflow.activities&view=netframework-4.8).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint iş akışı çözümleri oluşturma](../sharepoint/creating-sharepoint-workflow-solutions.md)
 - [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md)
-- [Derleme ve SharePoint çözümlerinde hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)

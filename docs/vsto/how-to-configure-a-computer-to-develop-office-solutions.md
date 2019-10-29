@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Office çözümleri geliştirmek için bilgisayarı yapılandırma'
+title: 'Nasıl yapılır: Office çözümleri geliştirmek için bir bilgisayarı yapılandırma'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,28 +13,28 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b1f87b9548aceab58e1a8e1c6178a1dca759c312
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eb29dc4151bc457eb60ce836986817bc1b0137c9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825995"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985957"
 ---
-# <a name="how-to-configure-a-computer-to-develop-office-solutions"></a>Nasıl yapılır: Office çözümleri geliştirmek için bilgisayarı yapılandırma
-  Visual Studio'da Microsoft Office geliştirici araçları kullanabilmesi için bir geliştirme bilgisayarı yapılandırmak için bu konudaki yönergeleri izleyin. Bu adımları gerçekleştirmek için geliştirme bilgisayarında yönetici ayrıcalıkları olmalıdır.
+# <a name="how-to-configure-a-computer-to-develop-office-solutions"></a>Nasıl yapılır: Office çözümleri geliştirmek için bir bilgisayarı yapılandırma
+  Visual Studio 'da Microsoft Office geliştirici araçları 'nı kullanabilmeniz için bir geliştirme bilgisayarı yapılandırmak için bu konudaki yönergeleri izleyin. Bu adımları gerçekleştirmek için geliştirme bilgisayarında yönetici ayrıcalıklarına sahip olmanız gerekir.
 
 ### <a name="to-configure-the-development-computer"></a>Geliştirme bilgisayarını yapılandırmak için
 
-1. Office geliştirici araçlarını içeren Visual Studio sürümünü yükleyin. Office geliştirici araçları varsayılan olarak yüklenir. Yüklenecek özellikleri seçerek Visual Studio yüklemesini özelleştirirseniz, emin **Microsoft Office geliştirici araçları** kurulumu sırasında seçilir. Office geliştirici araçlarını içeren Visual Studio sürümleri hakkında daha fazla bilgi için bkz. [Office çözümleri geliştirmek için bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md).
+1. Visual Studio 'nun Office geliştirici araçlarını içeren bir sürümünü yükler. Office geliştirici araçları varsayılan olarak yüklenir. Yüklenecek özellikleri seçerek Visual Studio yüklemesini özelleştirirseniz, kurulum sırasında **Microsoft Office geliştirici araçları** seçildiğinden emin olun. Office geliştirici araçlarını içeren Visual Studio sürümleri hakkında daha fazla bilgi için bkz. [Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md).
 
-2. Visual Studio Office geliştirici araçları tarafından desteklenen Office sürümünü yükleyin. Daha fazla bilgi için [Office çözümleri geliştirmek için bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md).
+2. Visual Studio 'da Office geliştirici araçları tarafından desteklenen bir Office sürümünü yükler. Daha fazla bilgi için bkz. [Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md).
 
-     Yüklediğiniz Office sürümü için PIA'ların de yüklediğinizden emin olun. PIA'ların Office ile varsayılan olarak yüklenir. Office kurulumunu değiştirirseniz emin **.NET programlama desteğinin** özellik hedeflemek istediğiniz uygulamalar için seçili.
+     Yüklediğiniz Office sürümü için de PIA 'leri yüklediğinizden emin olun. PIA 'ler varsayılan olarak Office ile yüklenir. Office kurulumunu değiştirirseniz hedeflemek istediğiniz uygulamalar için **.NET programlama desteği** özelliğinin seçildiğinden emin olun.
 
-3. Visual Studio'nun İngilizce sürümünü sahip, ancak İngilizce olmayan ayarlarını kullanmak için Windows yükleyebileceğiniz [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] görmek için dil paketi [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Windows ile aynı dilde iletileri. Visual Studio'nun İngilizce olmayan sürümleri, otomatik olarak dil paketini yükleyin. Dil paketi kullanılabilir [Microsoft İndirme Merkezi](http://go.microsoft.com/fwlink/?LinkId=140386).
+3. Visual Studio 'nun Ingilizce sürümüne sahipseniz ancak Windows için Ingilizce olmayan ayarları kullanıyorsanız, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] iletilerini Windows ile aynı dilde görmek için [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] dil paketini yükleyebilirsiniz. Visual Studio 'nun Ingilizce olmayan sürümleri dil paketini otomatik olarak yükler. Dil paketi [Microsoft İndirme Merkezi](https://www.microsoft.com/download/details.aspx?id=54246)' nden edinilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlama &#40;Visual Studio'da Office geliştirme&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
-- [Nasıl yapılır: Office çalışma zamanı yeniden dağıtılabilir için Visual Studio Araçları yükleme](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
-- [Nasıl yapılır: Office birincil birlikte çalışma derlemelerini yükleme](../vsto/how-to-install-office-primary-interop-assemblies.md)
+- [Visual Studio &#40;'da Office geliştirme ile çalışmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Nasıl yapılır: Office çalışma zamanı yeniden dağıtılabilir için Visual Studio Araçları yüklemesi](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
+- [Nasıl yapılır: Office birincil birlikte çalışma derlemelerini yüklemek](../vsto/how-to-install-office-primary-interop-assemblies.md)

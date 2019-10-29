@@ -1,5 +1,5 @@
 ---
-title: IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp | Microsoft Docs
+title: 'Iwebappdiagnosticssetup:: CreateObjectWithSiteAtWebApp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 42f92cfe9245a5e3a6342c31fc996ae2db50ef70
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 253b995c200566868ac9ccc06b259e0a152e1676
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443703"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984601"
 ---
 # <a name="iwebappdiagnosticssetupcreateobjectwithsiteatwebapp"></a>IWebAppDiagnosticsSetup::CreateObjectWithSiteAtWebApp
-Bu yöntem birlikte kimliği ile geçirdiğiniz sınıfı oluşturur `rclsid` kullanarak `dwClsContext`. Bu şekilde benzer [IRemoteDebugApplication::CreateInstanceAtApplication](../../winscript/reference/iremotedebugapplication-createinstanceatapplication.md) durumunda hariç çalıştığı `CreateObjectWithSiteAtWebApp` nesne web uygulamasının kullanıcı Arabirimi iş parçacığında zaman uyumsuz olarak oluşturulur. Sınıf kimliği tarafından belirtilen nesnede uygulamalıdır [Iwebappdiagnosticsobjectınitialization arabirimi](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md). Nesne oluşturulduktan sonra [IWebAppDiagnosticsObjectInitialization::Initialize](../../winscript/reference/iwebappdiagnosticsobjectinitialization-initialize.md) PDM hata ayıklama uygulama başvurusuyla çağrılır ve `hPassToObject` parametresinin `CreateObjectWithSiteAtWebApp`. Uygulamaya bir tanıtıcı kullanarak kopyaladığınız anonim bir kanala geçirmek için bu yöntemi kullanabilirsiniz [DuplicateHandle](http://go.microsoft.com/fwlink/?LinkId=232450).  
+Bu yöntem, kimliği `rclsid` `dwClsContext`kullanarak, kimliğini içine geçirdiğiniz sınıfı birlikte oluşturur. Bu, [IRemoteDebugApplication:: Createınstanceatapplication](../../winscript/reference/iremotedebugapplication-createinstanceatapplication.md) çalışmasına benzer. bunun dışında, nesne `CreateObjectWithSiteAtWebApp` olması durumunda Web uygulamasının Kullanıcı arabirimi iş parçacığında zaman uyumsuz olarak oluşturulur. Sınıf KIMLIĞI tarafından belirtilen nesne [ıwebappdiagnosticsobjectınitialization arabirimini](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md)uygulamalıdır. Nesne oluşturulduktan sonra, [ıwebappdiagnosticsobjectınitialization:: Initialize](../../winscript/reference/iwebappdiagnosticsobjectinitialization-initialize.md) , PDM hata ayıklama uygulamasına yönelik bir başvuru ve `CreateObjectWithSiteAtWebApp``hPassToObject` parametresi ile çağırılır. Bu yöntemi, [DuplicateHandle](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)kullanarak kopyaladığınız anonim bir kanala yönelik bir tanıtıcı uygulamaya geçirmek için kullanabilirsiniz.  
   
 > [!IMPORTANT]
-> [Iwebappdiagnosticssetup arabirimi](../../winscript/reference/iwebappdiagnosticssetup-interface.md) PDM v11.0 tarafından uygulanan ve büyük. activdbg100.h içinde bulunur.  
+> [Iwebappdiagnosticssetup ARABIRIMI](../../winscript/reference/iwebappdiagnosticssetup-interface.md) PDM v 11.0 ve üzeri tarafından uygulanır. activdbg100.h içinde bulunur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,13 +34,13 @@ HRESULT CreateObjectWithSiteAtWebApp(        [in] REFCLSID rclsid,         [in] 
   
 #### <a name="parameters"></a>Parametreler  
  `rclsid`  
- Sınıf kimliği oluşturma sınıf.  
+ Oluşturulacak sınıfın sınıf KIMLIĞI.  
   
  `dwClsContext`  
- Kod çalıştırılacağı bağlamı. Çoğu durumda bu CLSCTX_INPROC_SERVER olur.  
+ Kodun çalıştırılacağı bağlam. Çoğu durumda, CLSCTX_INPROC_SERVER olur.  
   
  `riid`  
  Kullanılmadı.  
   
  `hPassToObject`  
- UI iş parçacığı üzerinde oluşturulduktan sonra nesne uygulayan nesnesine geçirilen bir değeri [Iwebappdiagnosticsobjectınitialization arabirimi](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md).
+ Nesnesi [ıwebappdiagnosticsobjectınitialization arabirimini](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md)UYGULUYORSA, UI iş parçacığında oluşturulduktan sonra nesnesine geçirilecek bir değer.

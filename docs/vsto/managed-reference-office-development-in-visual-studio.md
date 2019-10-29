@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: da10833f8340d5308321038bb0500ca8408b40bb
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 137031202075d1c646cc7415042dd8d6eab72b78
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551773"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985761"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>Yönetilen başvuru (Visual Studio 'da Office geliştirme)
-  Bu bölüm, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]veya ' i hedefleyen Office projelerinde kullanılan ad alanları ve türleri için API başvuru belgelerini içerir. .NET Framework 3,5 ' i hedefleyen Office projelerinde kullanılan ad alanları ve türler hakkında API başvuru belgeleri için, Visual Studio belgelerindeki aşağıdaki başvuru bölümüne bakın: [http://go.microsoft.com/fwlink/?LinkId=160658](http://go.microsoft.com/fwlink/?LinkId=160658).
+  Bu bölüm, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya [!INCLUDE[net_v45](includes/net-v45-md.md)]hedefleyen Office projelerinde kullanılan ad alanları ve türleri için API başvuru belgelerini içerir. .NET Framework 3,5 ' i hedefleyen Office projelerinde kullanılan ad alanları ve türler hakkında API başvuru belgeleri için, Visual Studio belgelerindeki şu başvuru bölümüne bakın: [yönetilen başvuru (Visual Studio 'Da Office geliştirme )](managed-reference-office-development-in-visual-studio.md).
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
@@ -56,22 +56,22 @@ ms.locfileid: "69551773"
 
  <xref:Microsoft.VisualStudio.Tools.Applications>
 
- <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> Sınıfı ve ilgili önbelleğe alınmış veri sınıfları kümesini içerir. Bu sınıflar, Microsoft Office yüklü olmayan bilgisayarlardaki belge düzeyi özelleştirmelerinin bazı yönlerini değiştirmek için kullanılabilir.
+ <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfını ve bir dizi ilgili önbelleğe alınmış veri sınıflarını içerir. Bu sınıflar, Microsoft Office yüklü olmayan bilgisayarlardaki belge düzeyi özelleştirmelerinin bazı yönlerini değiştirmek için kullanılabilir.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Deployment>
 
- Arabirimi (bir Office çözümü için *dağıtım sonrası eylemi* oluşturmak için uygulayabileceğiniz), bir Office çözümü yüklenirken oluşturulabilecek özel durumlar ve Visual Studio altyapısının parçası olan diğer API 'leri içerir. <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction>
+ <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> arabirimini (bir Office çözümü için *dağıtım sonrası eylemi* oluşturmak için uygulayabileceğiniz), bir Office çözümünü yüklerken oluşturulabilecek özel durumları ve Visual Studio altyapısının parçası olan diğer API 'leri içerir.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Runtime>
 
- , Belge düzeyi özelleştirmelerde ve Visual Studio altyapısının parçası olan diğer [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]API 'lerde verileri önbelleğe almak için kullanılabilen birkaç sınıf tarafından oluşturulabilecek özel durumların çoğunu içerir.
+ [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)]tarafından oluşturulabilecek özel durumların çoğunu, belge düzeyi özelleştirmelerde verileri ve Visual Studio altyapısının parçası olan diğer API 'Leri önbelleğe almak için kullanılabilecek birkaç sınıfı içerir.
 
  <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks>
 
  Office projeleri oluşturmak için kullanılan MSBuild görev sınıflarını içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çalışma zamanına genel bakış için Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md)
-- [Visual Studio &#40;'da Office geliştirme ile çalışmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
-- [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
-- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
+- [Office çalışma zamanına genel bakış için Visual Studio Araçları](visual-studio-tools-for-office-runtime-overview.md)
+- [Visual Studio &#40;'da Office geliştirme ile çalışmaya başlama&#41;](getting-started-office-development-in-visual-studio.md)
+- [Office geliştirme örnekleri ve izlenecek yollar](office-development-samples-and-walkthroughs.md)
+- [Office çözümleri tasarlama ve oluşturma](designing-and-creating-office-solutions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Okuma ve yazma için belge özellikleri'
+title: 'Nasıl yapılır: belge özelliklerinden okuma ve yazma'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,72 +15,70 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ac0d81c9e42a5c3aa22a09d59f346e6127b1284f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 71a4b1a84c4544f4dc2b359e391f3c9f768e8eee
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961572"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985806"
 ---
-# <a name="how-to-read-from-and-write-to-document-properties"></a>Nasıl yapılır: Okuma ve yazma için belge özellikleri
-  Bir belge yanı sıra belge özellikleri depolayabilirsiniz. Office uygulamaları birkaç yazar, başlık ve konu gibi yerleşik özellikler sağlar. Bu konu, Microsoft Office Excel ve Microsoft Office Word belgesi özelliklerini ayarlamak gösterilmektedir.
-
- ![video bağlantı](../vsto/media/playvideo.gif "video bağlantı") ilgili video gösterimi için bkz. [nasıl yaparım? Erişim ve Microsoft Word özel belge özelliklerini değiştirmek mi? ](http://go.microsoft.com/fwlink/?LinkId=136772).
+# <a name="how-to-read-from-and-write-to-document-properties"></a>Nasıl yapılır: belge özelliklerinden okuma ve yazma
+  Belge özelliklerini bir belge ile birlikte saklayabilirsiniz. Office uygulamaları yazar, başlık ve konu gibi çeşitli yerleşik özellikler sağlar. Bu konuda, Excel ve Microsoft Office Word Microsoft Office belge özelliklerinin nasıl ayarlanacağı gösterilmektedir.
 
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]
 
-## <a name="set-document-properties-in-excel"></a>Excel belge özelliklerini ayarlama
- Yerleşik özellikler Excel'de çalışmak için aşağıdaki özellikleri kullanın:
+## <a name="set-document-properties-in-excel"></a>Excel 'de belge özelliklerini ayarlama
+ Excel 'deki yerleşik özelliklerle çalışmak için aşağıdaki özellikleri kullanın:
 
-- Bir belge düzeyi projede kullanmak <xref:Microsoft.Office.Tools.Excel.Workbook.BuiltinDocumentProperties%2A> özelliği `ThisWorkbook` sınıfı.
+- Belge düzeyi projesinde, `ThisWorkbook` sınıfının <xref:Microsoft.Office.Tools.Excel.Workbook.BuiltinDocumentProperties%2A> özelliğini kullanın.
 
-- Bir VSTO eklenti projesinde kullanmak <xref:Microsoft.Office.Interop.Excel._Workbook.BuiltinDocumentProperties%2A> özelliği bir <xref:Microsoft.Office.Interop.Excel.Workbook> nesne.
+- VSTO eklenti projesinde, bir <xref:Microsoft.Office.Interop.Excel.Workbook> nesnesinin <xref:Microsoft.Office.Interop.Excel._Workbook.BuiltinDocumentProperties%2A> özelliğini kullanın.
 
-  Bu özellikleri döndürür bir <xref:Microsoft.Office.Core.DocumentProperties> bir koleksiyon nesne, <xref:Microsoft.Office.Core.DocumentProperty> nesneleri. Kullanabileceğiniz `Item` adı veya dizin koleksiyonundaki belirli bir özelliği almak için koleksiyonun özelliği.
+  Bu özellikler, <xref:Microsoft.Office.Core.DocumentProperty> nesnelerinin bir koleksiyonu olan <xref:Microsoft.Office.Core.DocumentProperties> nesnesini döndürür. Koleksiyonun `Item` özelliğini, belirli bir özelliği ada veya koleksiyon içindeki dizine göre almak için kullanabilirsiniz.
 
-  Aşağıdaki kod örneği, yerleşik değiştirileceği gösterilmektedir **düzeltme numarası** bir belge düzeyi projede özelliği.
+  Aşağıdaki kod örneği, belge düzeyindeki bir projedeki yerleşik **düzeltme numarası** özelliğinin nasıl değiştirileceğini gösterir.
 
-### <a name="to-change-the-revision-number-property-in-excel"></a>Özelliğindeki düzeltme numarasını değiştirmek için
+### <a name="to-change-the-revision-number-property-in-excel"></a>Excel 'de düzeltme numarası özelliğini değiştirmek için
 
-1. Yerleşik belge özellikleri, bir değişkene atayın.
+1. Yerleşik belge özelliklerini bir değişkene atayın.
 
      [!code-vb[Trin_VstcoreProgramming#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#7)]
      [!code-csharp[Trin_VstcoreProgramming#7](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#7)]
 
-2. Artırma `Revision Number` bir özellik.
+2. `Revision Number` özelliğini bir artırın.
 
      [!code-vb[Trin_VstcoreProgramming#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#8)]
      [!code-csharp[Trin_VstcoreProgramming#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#8)]
 
-## <a name="set-document-properties-in-word"></a>Word'de belge özelliklerini ayarlama
- Word yerleşik özellikleri ile çalışmak için aşağıdaki özellikleri kullanın:
+## <a name="set-document-properties-in-word"></a>Word 'de belge özelliklerini ayarla
+ Word 'de yerleşik özelliklerle çalışmak için aşağıdaki özellikleri kullanın:
 
-- Bir belge düzeyi projede kullanmak <xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A> özelliği `ThisDocument` sınıfı.
+- Belge düzeyi projesinde, `ThisDocument` sınıfının <xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A> özelliğini kullanın.
 
-- Bir VSTO eklenti projesinde kullanmak <xref:Microsoft.Office.Interop.Word._Document.BuiltInDocumentProperties%2A> özelliği bir <xref:Microsoft.Office.Interop.Word.Document> nesne.
+- VSTO eklenti projesinde, bir <xref:Microsoft.Office.Interop.Word.Document> nesnesinin <xref:Microsoft.Office.Interop.Word._Document.BuiltInDocumentProperties%2A> özelliğini kullanın.
 
-  Bu özellikleri döndürür bir <xref:Microsoft.Office.Core.DocumentProperties> bir koleksiyon nesne, <xref:Microsoft.Office.Core.DocumentProperty> nesneleri. Kullanabileceğiniz `Item` adı veya dizin koleksiyonundaki belirli bir özelliği almak için koleksiyonun özelliği.
+  Bu özellikler, <xref:Microsoft.Office.Core.DocumentProperty> nesnelerinin bir koleksiyonu olan <xref:Microsoft.Office.Core.DocumentProperties> nesnesini döndürür. Koleksiyonun `Item` özelliğini, belirli bir özelliği ada veya koleksiyon içindeki dizine göre almak için kullanabilirsiniz.
 
-  Aşağıdaki kod örneği, yerleşik değiştirileceği gösterilmektedir **konu** bir belge düzeyi projede özelliği.
+  Aşağıdaki kod örneği, belge düzeyindeki bir projede yerleşik **Konu** özelliğinin nasıl değiştirileceğini gösterir.
 
 ### <a name="to-change-the-subject-property"></a>Konu özelliğini değiştirmek için
 
-1. Yerleşik belge özellikleri, bir değişkene atayın.
+1. Yerleşik belge özelliklerini bir değişkene atayın.
 
      [!code-csharp[Trin_VstcoreProgrammingWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingWordCS/ThisDocument.cs#1)]
      [!code-vb[Trin_VstcoreProgrammingWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingWordVB/ThisDocument.vb#1)]
 
-2. Değişiklik `Subject` "Teknik" özelliği.
+2. `Subject` özelliğini "teknik Inceleme" olarak değiştirin.
 
      [!code-csharp[Trin_VstcoreProgrammingWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingWordCS/ThisDocument.cs#2)]
      [!code-vb[Trin_VstcoreProgrammingWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingWordVB/ThisDocument.vb#2)]
 
 ## <a name="robust-programming"></a>Güçlü programlama
- Örnekler kod yazmış olduğunuz varsayılır `ThisWorkbook` Excel için belge düzeyi projesinde sınıfı ve `ThisDocument` Word için belge düzeyi projesinde sınıfı.
+ Örneklerde, Excel için belge düzeyindeki bir projede `ThisWorkbook` sınıfında ve Word için belge düzeyindeki bir projede bulunan `ThisDocument` sınıfında kod yazdığınızı varsaymaktadır.
 
- Microsoft Office, Word ve Excel ve nesneleri ile çalışmanıza rağmen kullanılabilir yerleşik belge özelliklerinin listesini sağlar. Tanımlanmamış bir özelliğe erişmeye çalışırken bir özel durum oluşturur.
+ Word ve Excel ve nesneleriyle çalışabilseniz de Microsoft Office kullanılabilir yerleşik belge özellikleri listesini sağlar. Tanımsız bir özelliğe erişme girişimi bir özel durum oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSTO eklentilerini programlama](../vsto/programming-vsto-add-ins.md)
-- [Belge düzeyi özelleştirmelerini programlama](../vsto/programming-document-level-customizations.md)
-- [Nasıl yapılır: Özel belge özelliklerini oluşturma ve değiştirme](../vsto/how-to-create-and-modify-custom-document-properties.md)
+- [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
+- [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md)
+- [Nasıl yapılır: özel belge özelliklerini oluşturma ve değiştirme](../vsto/how-to-create-and-modify-custom-document-properties.md)

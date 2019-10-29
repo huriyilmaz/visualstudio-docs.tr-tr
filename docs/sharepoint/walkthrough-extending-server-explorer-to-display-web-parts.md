@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Sunucu gezginini Web bölümlerini görüntülemek üzere genişletme | Microsoft Docs'
+title: 'İzlenecek yol: Web Bölümleri göstermek için Sunucu Gezgini genişletme | Microsoft Docs'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,108 +15,108 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1c84cfcde4a5ffac1e1563a4d2b141bd6240b772
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 46c19edd02988f4d9cbd5263d8d3490bb3576426
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821993"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983771"
 ---
-# <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>İzlenecek yol: Sunucu Gezgini, web bölümlerini görüntülemek üzere genişletme
-  Visual Studio'da kullanabileceğiniz **SharePoint bağlantıları** düğümünün **Sunucu Gezgini** bileşenleri SharePoint sitelerinde görüntülemek için. Ancak, **Sunucu Gezgini** bazı bileşenler varsayılan olarak görüntülemez. Bu kılavuzda, genişletme **Sunucu Gezgini** böylece Web Bölümü Galerisi'ne görüntüler her SharePoint sitesine bağlı.
+# <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>İzlenecek yol: Sunucu Gezgini Web bölümlerini görüntüleyecek şekilde genişletme
+  Visual Studio 'da SharePoint sitelerindeki bileşenleri görüntülemek için **Sunucu Gezgini** **SharePoint bağlantıları** düğümünü kullanabilirsiniz. Ancak **Sunucu Gezgini** , bazı bileşenleri varsayılan olarak göstermez. Bu kılavuzda, her bağlı SharePoint sitesinde Web Bölümü galerisini görüntüleyecek şekilde **Sunucu Gezgini** genişleteceksiniz.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Visual Studio uzantısı oluşturma genişletir **Sunucu Gezgini** aşağıdaki yollarla:
+- Aşağıdaki yollarla **Sunucu Gezgini** genişleten bir Visual Studio uzantısı oluşturma:
 
-  - Uzantı ekler bir **Web Bölümü Galerisi'ne** içindeki her bir SharePoint sitesi düğümün altında düğüm **Sunucu Gezgini**. Bu yeni düğüm her Web Bölümünü Web Bölümü galerisinde sitesinde temsil eden alt düğümleri içerir.
+  - Uzantı, **Sunucu Gezgini**Içindeki her SharePoint site düğümünün altına bir **Web Bölümü Galerisi** düğümü ekler. Bu yeni düğüm, sitede Web Bölümü galerisinde her bir Web bölümünü temsil eden alt düğümleri içerir.
 
-  - Uzantının yeni bir Web Bölümü örneğinin temsil eden bir düğüm türünü tanımlar. Bu yeni düğüm türü altındaki Yeni alt düğümleri temelini **Web Bölümü Galerisi'ne** düğümü. Yeni Web Bölümü düğüm türü bilgilerini görüntüler **özellikleri** penceresi hakkında temsil ettiği bir Web Bölümü. Düğüm türü için Web Bölümü ile ilgili diğer görevleri gerçekleştirmek için bir başlangıç noktası olarak kullanabileceğiniz bir özel kısayol menü öğesi de içerir.
+  - Uzantı, bir Web bölümü örneğini temsil eden yeni bir düğüm türü tanımlar. Bu yeni düğüm türü, yeni **Web Bölümü Galerisi** düğümü altındaki alt düğümlerin temelini oluşturur. Yeni Web Bölümü düğüm türü, **Özellikler** penceresinde temsil ettiği Web Bölümü hakkındaki bilgileri görüntüler. Düğüm türü Ayrıca, Web bölümüyle ilgili diğer görevleri gerçekleştirmek için bir başlangıç noktası olarak kullanabileceğiniz özel bir kısayol menü öğesi de içerir.
 
-- Uzantı derlemesini çağıran iki özel SharePoint komutu oluşturun. SharePoint komutları için SharePoint sunucusu nesne modelinde API'lerini kullanmayı uzantısı derlemeler tarafından çağrılan yöntemlerdir. Bu kılavuzda, yerel geliştirme bilgisayarında SharePoint sitesinde Web bölümü bilgilerini almak komutları oluşturun. Daha fazla bilgi için [SharePoint nesne modellerini çağırma](../sharepoint/calling-into-the-sharepoint-object-models.md).
+- Uzantı derlemesinin çağırdığı iki özel SharePoint komutu oluşturun. SharePoint komutları, SharePoint için sunucu nesne modelinde API 'Leri kullanmak için uzantı derlemeleri tarafından çağrılabilen yöntemlerdir. Bu izlenecek yolda, geliştirme bilgisayarındaki yerel SharePoint sitesinden Web bölümü bilgilerini alan komutlar oluşturacaksınız. Daha fazla bilgi için bkz. [SharePoint nesne modellerine çağrı](../sharepoint/calling-into-the-sharepoint-object-models.md).
 
-- Uzantıyı dağıtmak için Visual Studio Uzantısı (VSIX) paketini derleme.
+- Uzantıyı dağıtmak için bir Visual Studio uzantısı (VSıX) paketi oluşturma.
 
-- Hata ayıklama ve uzantıyı test etme.
+- Uzantı hatalarını ayıklama ve test etme.
 
 > [!NOTE]
-> İstemci nesne modelini SharePoint için bunun yerine sunucu nesne modeli kullanır. Bu kılavuzda alternatif bir sürümü için bkz: [izlenecek yol: Sunucu Gezgini uzantısında SharePoint istemcisi nesne modelini çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md).
+> Bu izlenecek yolun sunucu nesne modeli yerine SharePoint için istemci nesne modelini kullanan alternatif bir sürümü için, bkz. [Izlenecek yol: SharePoint istemci nesne modelini bir Sunucu Gezgini uzantısında çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md).
 
-## <a name="prerequisites"></a>Önkoşullar
- Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenler ihtiyacınız vardır:
+## <a name="prerequisites"></a>Prerequisites
+ Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- Windows, SharePoint ve Visual Studio'nun desteklenen sürümleri.
+- Desteklenen Windows, SharePoint ve Visual Studio sürümleri.
 
-- The Visual Studio SDK. Bu izlenecek yolda **VSIX projesi** proje öğesini dağıtmak üzere bir VSIX paketi oluşturmak için SDK'sı şablonunda. Daha fazla bilgi için [Visual Studio'da SharePoint araçlarını genişletmek](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).
+- Visual Studio SDK 'Sı. Bu izlenecek yol, Proje öğesini dağıtmak üzere bir VSıX paketi oluşturmak için SDK 'daki **VSIX proje** şablonunu kullanır. Daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçlarını genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).
 
-  Aşağıdaki kavramları bilgisi yardımcı, ancak gerekli değildir, bu izlenecek yolu tamamlamak için:
+  İzlenecek yolu tamamlamak için aşağıdaki kavramların bilgisi yararlıdır, ancak gerekli değildir:
 
-- Sunucu nesne modeli için SharePoint kullanma. Daha fazla bilgi için [SharePoint Foundation Sunucu tarafı nesne modeli kullanarak](http://go.microsoft.com/fwlink/?LinkId=177796).
+- SharePoint için sunucu nesne modelini kullanma. Daha fazla bilgi için bkz. [SharePoint Foundation sunucu tarafı nesne modelini kullanma](/previous-versions/office/developer/sharepoint-2010/ee538251(v=office.14)).
 
-- SharePoint çözümlerinde Web Bölümleri. Daha fazla bilgi için [Web bölümlerine genel bakış](http://go.microsoft.com/fwlink/?LinkId=177803).
+- SharePoint Çözümlerinde Web Bölümleri. Daha fazla bilgi için bkz. [Web bölümleri genel bakış](/previous-versions/office/ms432401(v=office.14)).
 
 ## <a name="create-the-projects"></a>Projeleri oluşturma
- Bu izlenecek yolu tamamlamak için üç projeleri oluşturmanız gerekir:
+ Bu yönergeyi tamamlamak için üç proje oluşturmanız gerekir:
 
-- Uzantıyı dağıtmak için VSIX paketi oluşturmak amacıyla bir VSIX projesi.
+- Uzantıyı dağıtmak için VSıX paketini oluşturmak üzere bir VSıX projesi.
 
-- Uzantısını uygulayan sınıf kitaplığı projesi. Bu projenin .NET Framework 4.5 hedeflemesi gerekir.
+- Uzantıyı uygulayan bir sınıf kitaplığı projesi. Bu projenin .NET Framework 4,5 ' i hedeflemesi gerekir.
 
-- Özel SharePoint komutları tanımlayan bir sınıf kitaplığı projesi. Bu projenin.NET Framework 3.5 hedeflemesi gerekir.
+- Özel SharePoint komutlarını tanımlayan bir sınıf kitaplığı projesi. Bu proje the.NET Framework 3,5 ' i hedeflemelidir.
 
-  İzlenecek yol, proje oluşturmaya başlayın.
+  Projeleri oluşturarak yönergeyi başlatın.
 
-#### <a name="to-create-the-vsix-project"></a>VSIX projesi oluşturmak için
+#### <a name="to-create-the-vsix-project"></a>VSıX projesi oluşturmak için
 
-1. Başlangıç [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]başlatın.
 
-2. Menü çubuğunda, **dosya** > **yeni** > **proje**.
+2. Menü çubuğunda **dosya**  > **Yeni**  > **Proje**' yi seçin.
 
-3. İçinde **yeni proje** iletişim kutusunda **Visual C#** veya **Visual Basic** düğümler ve ardından **genişletilebilirlik** düğümü.
+3. **Yeni proje** iletişim kutusunda,  **C# Visual** veya **Visual Basic** düğümlerini genişletin ve ardından **genişletilebilirlik** düğümünü seçin.
 
     > [!NOTE]
-    > **Genişletilebilirlik** düğümüdür yalnızca, Visual Studio SDK yüklenmiş ise kullanılabilir. Daha fazla bilgi için bu konudaki Önkoşullar bölümüne bakın.
+    > **Genişletilebilirlik** düğümü yalnızca Visual Studio SDK 'sını yüklediğinizde kullanılabilir. Daha fazla bilgi için bu konunun önceki kısımlarında bulunan Önkoşullar bölümüne bakın.
 
-4. İletişim kutusunun en üstünde **.NET Framework 4.5** .NET Framework sürümleri listesinde.
+4. İletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **.NET Framework 4,5** ' ı seçin.
 
-5. Seçin **VSIX projesi** şablon, proje adı **WebPartNode**ve ardından **Tamam** düğmesi.
+5. **VSIX proje** şablonu ' nu seçin, proje **WebPartNode**olarak adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ekler **WebPartNode** için proje **Çözüm Gezgini**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], **WebPartNode** projesini **Çözüm Gezgini**ekler.
 
 #### <a name="to-create-the-extension-project"></a>Uzantı projesini oluşturmak için
 
-1. İçinde **Çözüm Gezgini**, çözüm düğümü için kısayol menüsünü açın, **Ekle**ve ardından **yeni proje**.
+1. **Çözüm Gezgini**, çözüm düğümü için kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni proje**' yi seçin.
 
-2. İçinde **yeni proje** iletişim kutusunda **Visual C#** düğümü veya **Visual Basic** düğümünü ve ardından seçin **Windows** düğümü.
+2. **Yeni proje** iletişim kutusunda,  **C# görsel** düğümü veya **Visual Basic** düğümünü genişletin ve ardından **Windows** düğümünü seçin.
 
-3. İletişim kutusunun en üstünde **.NET Framework 4.5** .NET Framework sürümleri listesinde.
+3. İletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **.NET Framework 4,5** ' ı seçin.
 
-4. Proje şablonları listesinde seçin **sınıf kitaplığı**, projeyi adlandırın **WebPartNodeExtension**ve ardından **Tamam** düğmesi.
+4. Proje şablonları listesinde, **sınıf kitaplığı**' nı seçin, projeyi **WebPartNodeExtension**olarak adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ekler **WebPartNodeExtension** çözüme ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], **WebPartNodeExtension** projesini çözüme ekler ve varsayılan Class1 kod dosyasını açar.
 
-5. Projeden Class1 kod dosyasını silin.
+5. Class1 kod dosyasını projeden silin.
 
-#### <a name="to-create-the-sharepoint-commands-project"></a>SharePoint komutları projeyi oluşturmak için
+#### <a name="to-create-the-sharepoint-commands-project"></a>SharePoint komutları projesi oluşturmak için
 
-1. İçinde **Çözüm Gezgini**, çözüm düğümü için kısayol menüsünü açın, **Ekle**ve ardından **yeni proje**.
+1. **Çözüm Gezgini**, çözüm düğümü için kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni proje**' yi seçin.
 
-2. İçinde **yeni proje** iletişim kutusunda **Visual C#** düğümü veya **Visual Basic** düğümünü seçip **Windows** düğümü.
+2. **Yeni proje** iletişim kutusunda,  **C# görsel** düğümü veya **Visual Basic** düğümünü genişletin ve ardından **Windows** düğümünü seçin.
 
-3. İletişim kutusunun en üstünde **.NET Framework 3.5** .NET Framework sürümleri listesinde.
+3. İletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **.NET Framework 3,5** ' ı seçin.
 
-4. Proje şablonları listesinde seçin **sınıf kitaplığı**, projeyi adlandırın **WebPartCommands**ve ardından **Tamam** düğmesi.
+4. Proje şablonları listesinde, **sınıf kitaplığı**' nı seçin, projeyi **WebPartCommands**olarak adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ekler **WebPartCommands** çözüme ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], **WebPartCommands** projesini çözüme ekler ve varsayılan Class1 kod dosyasını açar.
 
-5. Projeden Class1 kod dosyasını silin.
+5. Class1 kod dosyasını projeden silin.
 
 ## <a name="configure-the-projects"></a>Projeleri yapılandırma
- Uzantısını oluşturmak için kod yazmadan önce kod dosyaları ve derleme başvurularını ekleyin ve proje ayarlarını yapılandırmanız gerekir.
+ Uzantıyı oluşturmak için kod yazmadan önce kod dosyalarını ve derleme başvurularını eklemeniz ve proje ayarlarını yapılandırmanız gerekir.
 
-#### <a name="to-configure-the-webpartnodeextension-project"></a>WebPartNodeExtension projeyi yapılandırmak için
+#### <a name="to-configure-the-webpartnodeextension-project"></a>WebPartNodeExtension projesini yapılandırmak için
 
-1. WebPartNodeExtension projesinde aşağıdaki adlara sahip dört kod dosyaları ekleyin:
+1. WebPartNodeExtension projesinde, aşağıdaki adlara sahip dört kod dosyası ekleyin:
 
     - SiteNodeExtension
 
@@ -126,251 +126,251 @@ ms.locfileid: "67821993"
 
     - WebPartCommandIds
 
-2. Kısayol menüsünü açın **WebPartNodeExtension** proje ve ardından **Başvuru Ekle**.
+2. **WebPartNodeExtension** projesi için kısayol menüsünü açın ve ardından **Başvuru Ekle**' yi seçin.
 
-3. İçinde **başvuru Yöneticisi - WebPartNodeExtension** iletişim kutusunda **Framework** sekmesini ve ardından her biri aşağıdaki derlemeler için onay kutusunu seçin:
+3. **Başvuru Yöneticisi-WebPartNodeExtension** Iletişim kutusunda **Framework** sekmesini seçin ve ardından aşağıdaki derlemelerin her biri için onay kutusunu seçin:
 
-    - System.ComponentModel.Composition
+    - System. ComponentModel. Composition
 
-    - System.Windows.Forms
+    - System. Windows. Forms
 
-4. Seçin **uzantıları** sekmesinde Microsoft.VisualStudio.SharePoint derleme için onay kutusunu işaretleyin ve ardından **Tamam** düğmesi.
+4. **Uzantılar** sekmesini seçin, Microsoft. VisualStudio. SharePoint derlemesinin onay kutusunu seçin ve **Tamam** düğmesini seçin.
 
-5. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **WebPartNodeExtension** proje düğümünü ve ardından **özellikleri**.
-
-     **Proje Tasarımcısı** açılır.
-
-6. Seçin **uygulama** sekmesi.
-
-7. İçinde **varsayılan ad alanı** kutusu (C#) veya **kök ad alanı** kutusunu ([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]), girin **ServerExplorer.SharePointConnections.WebPartNode**.
-
-#### <a name="to-configure-the-webpartcommands-project"></a>Webpartcommands projeyi yapılandırmak için
-
-1. WebPartCommands projesinde WebPartCommands adlı bir kod dosyası ekleyin.
-
-2. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **WebPartCommands** projesinin düğüm **Ekle**ve ardından **var olan öğe**.
-
-3. İçinde **varolan öğeyi Ekle** iletişim kutusunda, WebPartNodeExtension proje için kod dosyaları içeren klasöre gidin ve ardından WebPartNodeInfo ve WebPartCommandIds kod dosyaları seçin.
-
-4. Yanındaki oku seçin **Ekle** düğmesine ve ardından **bağlantı olarak ekleme** menüde görünür.
-
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kod dosyaları bağlantı olarak WebPartCommands projeye ekler. Sonuç olarak, kod dosyaları WebPartNodeExtension projede bulunur, ancak kod dosyalarında WebPartCommands projede da derlenir.
-
-5. Kısayol menüsünü açın **WebPartCommands** yeniden projesini ve ardından **Başvuru Ekle**.
-
-6. İçinde **başvuru Yöneticisi - WebPartCommands** iletişim kutusunda **uzantıları** sekmesi, her biri aşağıdaki derlemeler için onay kutusunu işaretleyin ve ardından **Tamam** Düğme:
-
-    - Microsoft.SharePoint
-
-    - Microsoft.VisualStudio.SharePoint.Commands
-
-7. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **WebPartCommands** yeniden proje ve ardından **özellikleri**.
+5. **Çözüm Gezgini**, **WebPartNodeExtension** proje düğümünün kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
      **Proje Tasarımcısı** açılır.
 
-8. Seçin **uygulama** sekmesi.
+6. **Uygulama** sekmesini seçin.
 
-9. İçinde **varsayılan ad alanı** kutusu (C#) veya **kök ad alanı** kutusunu ([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]), girin **ServerExplorer.SharePointConnections.WebPartNode**.
+7. **Varsayılan ad alanı** kutusuna (C#) veya **kök ad alanı** kutusuna ([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]) **ServerExplorer. SharePointConnections. WebPartNode**yazın.
 
-## <a name="create-icons-for-the-new-nodes"></a>Simgeler için yeni düğümler oluşturma
- Oluşturmak için iki simgeyi **Sunucu Gezgini** uzantısı: yeni bir simge **Web Bölümü Galerisi'ne** düğüm ve her bir alt Web Bölümü düğümün altında başka bir simge **Web Bölümü Galerisi'ne** düğüm. Bu kılavuzda daha sonra bu simgeleri düğümleri ile ilişkilendiren kod yazacaksınız.
+#### <a name="to-configure-the-webpartcommands-project"></a>WebPartCommands projesini yapılandırmak için
+
+1. WebPartCommands projesinde, WebPartCommands adlı bir kod dosyası ekleyin.
+
+2. **Çözüm Gezgini**, **WebPartCommands** proje düğümünün kısayol menüsünü açın, **Ekle**' yi ve ardından **Varolan öğe**' yi seçin.
+
+3. **Varolan öğe Ekle** iletişim kutusunda, WebPartNodeExtension projesi için kod dosyalarını içeren klasöre gidin ve ardından WebPartNodeInfo ve WebPartCommandIds kod dosyalarını seçin.
+
+4. **Ekle** düğmesinin yanındaki oku seçin ve açılan menüden **bağlantı olarak ekle** ' yi seçin.
+
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kod dosyalarını, bağlantı olarak WebPartCommands projesine ekler. Sonuç olarak, kod dosyaları WebPartNodeExtension projesinde bulunur, ancak dosyalardaki kod de WebPartCommands projesinde derlenir.
+
+5. **WebPartCommands** projesinin kısayol menüsünü yeniden açın ve **Başvuru Ekle**' yi seçin.
+
+6. **Başvuru Yöneticisi-WebPartCommands** iletişim kutusunda, **Uzantılar** sekmesini seçin, aşağıdaki derlemelerin her biri için onay kutusunu seçin ve ardından **Tamam** düğmesini seçin:
+
+    - Microsoft. SharePoint
+
+    - Microsoft. VisualStudio. SharePoint. Commands
+
+7. **Çözüm Gezgini**, **WebPartCommands** projesinin kısayol menüsünü yeniden açın ve ardından **Özellikler**' i seçin.
+
+     **Proje Tasarımcısı** açılır.
+
+8. **Uygulama** sekmesini seçin.
+
+9. **Varsayılan ad alanı** kutusuna (C#) veya **kök ad alanı** kutusuna ([!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]) **ServerExplorer. SharePointConnections. WebPartNode**yazın.
+
+## <a name="create-icons-for-the-new-nodes"></a>Yeni düğümler için simgeler oluşturma
+ **Sunucu Gezgini** uzantısı için iki simge oluşturun: yeni **Web Bölümü Galerisi** düğümü Için bir simge ve **Web Bölümü Galerisi** düğümü altındaki her bir alt Web bölümü düğümü için başka bir simge. Bu izlenecek yolda daha sonra bu simgeleri düğümlerle ilişkilendiren kodu yazacaksınız.
 
 #### <a name="to-create-icons-for-the-nodes"></a>Düğümler için simgeler oluşturmak için
 
-1. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **WebPartNodeExtension** proje ve ardından **özellikleri**.
+1. **Çözüm Gezgini**, **WebPartNodeExtension** projesi için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
 2. **Proje Tasarımcısı** açılır.
 
-3. Seçin **kaynakları** sekmesine ve ardından **bu projenin varsayılan kaynak dosyası içermiyor. Oluşturmak için buraya tıklayın** bağlantı.
+3. **Kaynaklar** sekmesini seçin ve ardından **Bu proje varsayılan bir kaynak dosyası içermez öğesini seçin. Bir bağlantı oluşturmak için buraya tıklayın** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir kaynak dosyası oluşturur ve tasarımcıda açılır.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir kaynak dosyası oluşturur ve tasarımcıda açar.
 
-4. En üstünde Tasarımcısı'nın yanındaki oku seçin **kaynak Ekle** menü komutunu ve ardından **yeni Simge Ekle** menüde görünür.
+4. Tasarımcının üst kısmında, **Kaynak Ekle** menü komutunun yanındaki oku seçin ve açılan menüden **Yeni simge Ekle** ' yi seçin.
 
-5. İçinde **yeni kaynak Ekle** iletişim kutusunda, yeni simgesine adı **WebPartsNode**ve ardından **Ekle** düğmesi.
+5. **Yeni Kaynak Ekle** iletişim kutusunda, yeni simgeyi **WebPartsNode**olarak adlandırın ve ardından **Ekle** düğmesini seçin.
 
-     İçinde yeni simge açıldıktan **Resim Düzenleyicisi**.
+     Yeni simge **görüntü düzenleyicisinde**açılır.
 
-6. Simgenin 16 x 16 sürümü kolayca tanıyacak bir tasarıma sahip olacak şekilde düzenleyin.
+6. Simgenin 16x16 sürümünü, kolayca tanıyabileceğiniz bir tasarıma sahip olacak şekilde düzenleyin.
 
-7. Simgenin 32 x 32 sürümü için kısayol menüsünü açın ve ardından **Sil görüntü türü**.
+7. Simgenin 32x32 sürümüne ait kısayol menüsünü açın ve ardından **görüntü türünü sil**' i seçin.
 
-8. İkinci simgeyi Proje kaynakları eklemek için 8 ile 5 arasındaki adımları yineleyin ve bu simgeyi ad **WebPart**.
+8. Proje kaynaklarına ikinci bir simge eklemek ve bu simge **Web bölümünü**adlandırmak için 5 ' ten 8 ' e kadar olan adımları yineleyin.
 
-9. İçinde **Çözüm Gezgini**altında **kaynakları** klasör **WebPartNodeExtension** ilişkin kısayol menüsünü açın, proje **WebPartsNode.ico**.
+9. **Çözüm Gezgini**, **WebPartNodeExtension** projesi için **kaynaklar** klasörü altında, **WebPartsNode. ico**için kısayol menüsünü açın.
 
-10. İçinde **özellikleri** penceresinde yanındaki oku seçin **derleme eylemi**ve ardından **gömülü kaynak** menüsünde görünür.
+10. **Özellikler** penceresinde, **derleme eylemi**' nin yanındaki oku seçin ve açılan menüden **gömülü kaynak** ' ı seçin.
 
-11. Son iki adımı yineleyin **WebPart.ico**.
+11. **WebPart. ico**için son iki adımı tekrarlayın.
 
-## <a name="add-the-web-part-gallery-node-to-server-explorer"></a>Sunucu Gezginine Web Bölümü Galerisi'ne düğüm ekleme
- Ekleyen yeni bir sınıf oluşturmanız **Web Bölümü Galerisi'ne** her SharePoint sitesi düğüme düğüm. Sınıf uygular yeni düğümü eklemek için <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> arabirimi. Mevcut bir düğümün davranışını genişletmek istediğinizde bu arabirimi uygulayan **Sunucu Gezgini**, bir düğüm için bir alt düğüm ekleme gibi.
+## <a name="add-the-web-part-gallery-node-to-server-explorer"></a>Web Bölümü Galerisi düğümünü Sunucu Gezgini ekleyin
+ Yeni **Web Bölümü Galerisi** düğümünü her bir SharePoint site düğümüne ekleyen bir sınıf oluşturun. Yeni düğümü eklemek için, sınıfı <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> arabirimini uygular. Bir düğüme alt düğüm ekleme gibi **Sunucu Gezgini**var olan bir düğümün davranışını her genişletmek istediğinizde bu arabirimi uygulayın.
 
-#### <a name="to-add-the-web-part-gallery-node-to-server-explorer"></a>Sunucu Gezgini Web Bölümü Galerisi'ne düğümü eklemek için
+#### <a name="to-add-the-web-part-gallery-node-to-server-explorer"></a>Web Bölümü Galerisi düğümünü Sunucu Gezgini eklemek için
 
-1. WebPartNodeExtension proje SiteNodeExtension kod dosyasını açın ve ardından aşağıdaki kodu yapıştırın.
+1. WebPartNodeExtension projesinde, SiteNodeExtension kod dosyasını açın ve ardından aşağıdaki kodu içine yapıştırın.
 
     > [!NOTE]
-    > Ne zaman bu kodu ekleyin, proje bazı derleme hataları olacaktır, ancak bunlar kaybolur sonra sonraki adımlarda kod ekleyin.
+    > Bu kodu ekledikten sonra, projede bazı derleme hataları olacaktır, ancak sonraki adımlarda kod eklediğinizde bu işlemler kaybolur.
 
      [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#1](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/sitenodeextension.cs#1)]
      [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#1](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/sitenodeextension.vb#1)]
 
-## <a name="define-a-node-type-that-represents-a-web-part"></a>Bir web bölümü temsil eden bir düğüm türünü tanımlayın
- Yeni bir Web Bölümü temsil eden bir düğüm türünü tanımlayan bir sınıf oluşturun. Visual Studio altında alt düğümler görüntülemek için bu yeni düğüm türü kullanır **Web Bölümü Galerisi'ne** düğümü. Her alt düğümü SharePoint sitesindeki tek bir Web Bölümü temsil eder.
+## <a name="define-a-node-type-that-represents-a-web-part"></a>Bir Web bölümünü temsil eden bir düğüm türü tanımlama
+ Bir Web bölümünü temsil eden yeni bir düğüm türünü tanımlayan bir sınıf oluşturun. Visual Studio, **Web Bölümü Galerisi** düğümünün altında alt düğümleri göstermek için bu yeni düğüm türünü kullanır. Her alt düğüm, SharePoint sitesindeki tek bir Web bölümünü temsil eder.
 
- Yeni bir düğüm türü, sınıfın uyguladığı tanımlamak için <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> arabirimi. Düğümünde yeni bir tür tanımlamak istediğinizde bu arabirimi uygulayan **Sunucu Gezgini**.
+ Yeni düğüm türünü tanımlamak için, sınıfı <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> arabirimini uygular. **Sunucu Gezgini**yeni bir düğüm türü tanımlamak istediğinizde bu arabirimi uygulayın.
 
-#### <a name="to-define-the-web-part-node-type"></a>Web bölümü düğüm türü tanımlamak için
+#### <a name="to-define-the-web-part-node-type"></a>Web Bölümü düğüm türünü tanımlamak için
 
-1. WebPartNodeExtension proje WebPartNodeTypeProvder kod dosyasını açın ve ardından aşağıdaki kodu yapıştırın.
+1. WebPartNodeExtension projesinde, WebPartNodeTypeProvder kod dosyasını açın ve ardından aşağıdaki kodu buraya yapıştırın.
 
      [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#2](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartnodetypeprovider.vb#2)]
      [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#2](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/webpartnodetypeprovider.cs#2)]
 
-## <a name="define-the-web-part-data-class"></a>Web bölümü veri sınıfı tanımlayın
- Tek bir Web Bölümü SharePoint sitesinde hakkında veri içeren bir sınıfı tanımlar. Bu kılavuzda daha sonra sitedeki her bir Web Bölümü ilişkin verileri alır ve ardından verileri için bu sınıfın örneklerinin atayan özel bir SharePoint komutu oluşturacaksınız.
+## <a name="define-the-web-part-data-class"></a>Web bölümü veri sınıfını tanımlama
+ SharePoint sitesindeki tek bir Web Bölümü hakkında veri içeren bir sınıf tanımlayın. Bu kılavuzda daha sonra, sitedeki her bir Web Bölümü hakkında verileri alan ve ardından verileri bu sınıfın örneklerine atayan özel bir SharePoint komutu oluşturacaksınız.
 
 #### <a name="to-define-the-web-part-data-class"></a>Web bölümü veri sınıfını tanımlamak için
 
-1. WebPartNodeExtension proje WebPartNodeInfo kod dosyasını açın ve ardından aşağıdaki kodu yapıştırın.
+1. WebPartNodeExtension projesinde, WebPartNodeInfo kod dosyasını açın ve ardından aşağıdaki kodu buraya yapıştırın.
 
      [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#3](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartnodeinfo.vb#3)]
      [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#3](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/webpartnodeinfo.cs#3)]
 
-## <a name="define-the-ids-for-the-sharepoint-commands"></a>SharePoint komutları için kimlikleri tanımlayın
- Özel SharePoint komutları tanımlamak birkaç dizeyi tanımlar. Bu kılavuzda daha sonra şu komutları uygular.
+## <a name="define-the-ids-for-the-sharepoint-commands"></a>SharePoint komutlarının kimliklerini tanımlama
+ Özel SharePoint komutlarını tanımlayan birkaç dize tanımlayın. Bu komutları daha sonra Bu izlenecek yolda uygulayacaksınız.
 
-#### <a name="to-define-the-command-ids"></a>Komut kimlikleri tanımlamak için
+#### <a name="to-define-the-command-ids"></a>Komut kimliklerini tanımlamak için
 
-1. WebPartNodeExtension proje WebPartCommandIds kod dosyasını açın ve ardından aşağıdaki kodu yapıştırın.
+1. WebPartNodeExtension projesinde, WebPartCommandIds kod dosyasını açın ve ardından aşağıdaki kodu buraya yapıştırın.
 
      [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#4](../sharepoint/codesnippet/CSharp/WebPartNode/webpartnodeextension/webpartcommandids.cs#4)]
      [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#4](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartcommandids.vb#4)]
 
-## <a name="create-the-custom-sharepoint-commands"></a>Özel SharePoint komutları oluşturma
- SharePoint sitesinde Web bölümleri hakkında veri almak SharePoint sunucusu nesne modeline çağrı özel komutlar oluşturur. Her bir komuttur olan bir yönteme <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> uygulanmış.
+## <a name="create-the-custom-sharepoint-commands"></a>Özel SharePoint komutlarını oluşturma
+ SharePoint sitesindeki Web Bölümleri ilgili verileri almak için SharePoint sunucu nesne modeline çağıran özel komutlar oluşturun. Her komut, <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> uygulanan bir yöntemdir.
 
-#### <a name="to-define-the-sharepoint-commands"></a>SharePoint komutları tanımlamak için
+#### <a name="to-define-the-sharepoint-commands"></a>SharePoint komutlarını tanımlamak için
 
-1. WebPartCommands proje WebPartCommands kod dosyasını açın ve ardından aşağıdaki kodu yapıştırın.
+1. WebPartCommands projesinde, WebPartCommands kod dosyasını açın ve ardından aşağıdaki kodu buraya yapıştırın.
 
      [!code-csharp[SPExtensibility.SPExplorer.WebPartNodeWithCommands#6](../sharepoint/codesnippet/CSharp/WebPartNode/WebPartCommands/WebPartCommands.cs#6)]
      [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#6](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartcommands/webpartcommands.vb#6)]
 
-## <a name="checkpoint"></a>Checkpoint
- İzlenecek yol için tüm kod içinde bu noktada **Web Bölümü Galerisi'ne** düğüm ve SharePoint komutlarını kullanıma projeleri. Hem projede hata olmadan derleme emin olmak için çözümü oluşturun.
+## <a name="checkpoint"></a>Mak
+ Bu noktada, **Web Bölümü Galerisi** düğümü ve SharePoint komutları için tüm kodlar artık projelerde bulunur. Her iki projenin hatasız derlendiğinden emin olmak için çözümü oluşturun.
 
-#### <a name="to-build-the-solution"></a>Çözümü derlemek için
+#### <a name="to-build-the-solution"></a>Çözümü oluşturmak için
 
-1. Menü çubuğunda, **derleme** > **Çözümü Derle**.
+1. Menü çubuğunda **derleme**  > **Build Solution**' ı seçin.
 
     > [!WARNING]
-    > Bu noktada, VSIX bildirim dosyası yazma için bir değer olmadığından WebPartNode proje derleme hatası olabilir. Sonraki adımlarda bir değer eklediğinizde, bu hata kaybolur.
+    > Bu noktada, VSıX bildirim dosyası yazar için bir değere sahip olmadığından WebPartNode projesinde bir yapı hatası olabilir. Sonraki adımlarda bir değer eklediğinizde bu hata geçer.
 
-## <a name="create-a-vsix-package-to-deploy-the-extension"></a>Uzantıyı dağıtmak için VSIX paketi oluşturma
- Uzantıyı dağıtmak için VSIX paketi oluşturmak için çözümünüzdeki VSIX projesi kullanın. İlk olarak, VSIX projesinde source.extension.vsixmanifest dosyasını değiştirerek VSIX paketini yapılandırın. Ardından çözümü oluşturarak VSIX paketini oluşturun.
+## <a name="create-a-vsix-package-to-deploy-the-extension"></a>Uzantıyı dağıtmak için bir VSıX paketi oluşturma
+ Uzantıyı dağıtmak için, çözümünüzdeki VSıX projesini kullanarak bir VSıX paketi oluşturun. İlk olarak, VSıX projesinde kaynak. Extension. valtmanifest dosyasını değiştirerek VSıX paketini yapılandırın. Ardından, çözümü oluşturarak VSıX paketini oluşturun.
 
-#### <a name="to-configure-the-vsix-package"></a>VSIX paketini yapılandırmak için
+#### <a name="to-configure-the-vsix-package"></a>VSıX paketini yapılandırmak için
 
-1. İçinde **Çözüm Gezgini**, WebPartNode projesi altında açın **source.extension.vsixmanifest** bildirim düzenleyicisini dosyasında.
+1. **Çözüm Gezgini**, WebPartNode projesi altında, bildirim düzenleyicisinde **Source. Extension. valtmanifest** dosyasını açın.
 
-     Source.extension.vsixmanifest dosyası, tüm VSIX paketleri gerektiren extension.vsixmanifest dosyasının temelidir. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX Uzantı Şeması 1.0 başvurusu](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     Source. Extension. valtmanifest dosyası, tüm VSıX paketlerinin gerektirdiği uzantı. valtmanifest dosyasının temelini oluşturur. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
 
-2. İçinde **ürün adı** kutusuna **Sunucu Gezgini için Web Bölümü Galerisi düğümü**.
+2. **Ürün adı** kutusuna **Sunucu Gezgini Için Web Bölümü Galerisi düğümünü**girin.
 
-3. İçinde **Yazar** kutusuna **Contoso**.
+3. **Yazar** kutusuna **contoso**girin.
 
-4. İçinde **açıklama** kutusuna **Sunucu Gezgininde SharePoint bağlantıları için özel bir Web Bölümü Galerisi'ne düğümü ekler. Bu uzantı, sunucu nesne modeline çağrı için özel bir SharePoint komutu kullanır.**
+4. **Açıklama** kutusuna, **Sunucu Gezgini SharePoint bağlantıları düğümüne özel bir Web Bölümü Galerisi düğümü ekler yazın. Bu uzantı sunucu nesne modeline çağırmak için özel bir SharePoint komutu kullanır.**
 
-5. Seçin **varlıklar** Düzenleyici sekmesini ve ardından **yeni** düğmesi.
-
-     **Yeni varlık Ekle** iletişim kutusu görüntülenir.
-
-6. İçinde **türü** listesinde **Microsoft.VisualStudio.MefComponent**.
-
-    > [!NOTE]
-    > Bu değer karşılık gelen `MefComponent` extension.vsixmanifest dosyasındaki öğesi. Bu öğe VSIX paketinde bir uzantı derlemesinin adını belirtir. Daha fazla bilgi için [MEFComponent öğesi (VSX şema)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
-
-7. İçinde **kaynak** listesinde **mevcut çözümde bir proje**.
-
-8. İçinde **proje** listesinde **WebPartNodeExtension** seçip **Tamam** düğmesi.
-
-9. Bildirim düzenleyicisinde seçin **yeni** düğmesini tekrar.
+5. Düzenleyicinin **varlıklar** sekmesini seçin ve ardından **Yeni** düğmesini seçin.
 
      **Yeni varlık Ekle** iletişim kutusu görüntülenir.
 
-10. İçinde **türü** kutusuna **SharePoint.Commands.v4**.
+6. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
 
     > [!NOTE]
-    > Bu öğe, Visual Studio Uzantısı'nda dahil etmek istediğiniz özel bir uzantı belirtir. Daha fazla bilgi için [varlık öğesi (VSX şema)](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737).
+    > Bu değer, Extension. valtmanifest dosyasındaki `MefComponent` öğesine karşılık gelir. Bu öğe VSıX paketindeki bir uzantı derlemesinin adını belirtir. Daha fazla bilgi için bkz. [MefComponent öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
-11. İçinde **kaynak** listesinde **mevcut çözümde bir proje** liste öğesi.
+7. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
 
-12. İçinde **proje** listesinde **WebPartCommands**ve ardından **Tamam** düğmesi.
+8. **Proje** listesinde, **WebPartNodeExtension** ' ı ve sonra **Tamam** düğmesini seçin.
 
-13. Menü çubuğunda, **derleme** > **Çözümü Derle**ve ardından çözüm hata olmadan derlediğinden emin olun.
+9. Bildirim düzenleyicisinde **Yeni** düğmesini yeniden seçin.
 
-14. WebPartNode projesi yapı çıkış klasöründe artık WebPartNode.vsix dosyası içerdiğinden emin olun.
+     **Yeni varlık Ekle** iletişim kutusu görüntülenir.
 
-     Varsayılan olarak, derleme çıktısı klasörü olduğu... \bin\Debug klasörüne proje dosyanızı içeren klasörün altında.
+10. **Tür** kutusuna **SharePoint. Commands. v4**yazın.
 
-## <a name="test-the-extension"></a>Uzantıyı test etmek
- Yeni test etmek artık hazırsınız **Web Bölümü Galerisi'ne** düğümünde **Sunucu Gezgini**. İlk olarak, Visual Studio'nun Deneysel örneğindeki uzantıyı hatalarını ayıklamaya başlayın. Ardından, yeni kullanın **Web Bölümleri** deneysel örneğinde düğümünde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+    > [!NOTE]
+    > Bu öğe, Visual Studio uzantısına eklemek istediğiniz özel bir uzantıyı belirtir. Daha fazla bilgi için bkz. [varlık öğesi (VSX şeması)](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737).
 
-#### <a name="to-start-debugging-the-extension"></a>Uzantı hata ayıklamasını başlatmak için
+11. **Kaynak** listesinde, geçerli çözüm listesi öğesinde **bir proje** seçin.
 
-1. Yeniden [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] yönetici kimlik bilgilerini ve WebPartNode çözümü açın.
+12. **Proje** listesinde, **WebPartCommands**' i ve sonra **Tamam** düğmesini seçin.
 
-2. WebPartNodeExtension projesinde SiteNodeExtension kod dosyasını açın ve ardından ilk kod satırına bir kesme noktası ekleyin `NodeChildrenRequested` ve `CreateWebPartNodes` yöntemleri.
+13. Menü çubuğunda **derleme** > **Oluştur çözüm**' ü seçin ve ardından çözümün hatasız derlendiğinden emin olun.
 
-3. Seçin **F5** hata ayıklamayı başlatmak için anahtar.
+14. WebPartNode projesi için derleme çıkış klasörünün şimdi WebPartNode. vsix dosyasını içerdiğinden emin olun.
 
-     Visual Studio için sunucu Explorer\1.0 %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Web Bölümü Galerisi düğüm uzantısı için uzantıyı yükleyen ve Visual Studio'nun deneysel örneği başlar. Proje öğesi bu Visual Studio örneğinde test edeceksiniz.
+     Varsayılan olarak, yapı çıktı klasörü... proje dosyanızı içeren klasörün altındaki \bin\Debug klasörü.
+
+## <a name="test-the-extension"></a>Uzantıyı test etme
+ Artık **Sunucu Gezgini**yeni **Web Bölümü Galerisi** düğümünü test etmeye hazırsınız. İlk olarak, Visual Studio 'nun deneysel örneğinde uzantının hata ayıklamasını başlatın. Sonra, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]deneysel örneğinde yeni **Web bölümleri** düğümünü kullanın.
+
+#### <a name="to-start-debugging-the-extension"></a>Uzantının hatalarını ayıklamaya başlamak için
+
+1. Yönetici kimlik bilgileriyle [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] yeniden başlatın ve ardından WebPartNode çözümünü açın.
+
+2. WebPartNodeExtension projesinde, SiteNodeExtension kod dosyasını açın ve sonra `NodeChildrenRequested` ve `CreateWebPartNodes` yöntemlerinde ilk kod satırına bir kesme noktası ekleyin.
+
+3. Hata ayıklamayı başlatmak için **F5** tuşunu seçin.
+
+     Visual Studio, uzantısı, Server Explorer\1.0 için%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Web Bölümü Galerisi düğüm uzantısına ve Visual Studio 'nun deneysel bir örneğini başlatır. Bu Visual Studio örneğinde Proje öğesini test edersiniz.
 
 #### <a name="to-test-the-extension"></a>Uzantıyı test etmek için
 
-1. Deneysel örneğinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], menü çubuğunda, **görünümü** > **Sunucu Gezgini**.
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]deneysel örneğinde, menü çubuğunda, **görünüm** > **Sunucu Gezgini**' yı seçin.
 
-2. Test etmek için kullanmak istediğiniz SharePoint sitesi altında görünmüyorsa, aşağıdaki adımları gerçekleştirin **SharePoint bağlantıları** düğümünde **Sunucu Gezgini**:
+2. Test için kullanmak istediğiniz SharePoint sitesi **Sunucu Gezgini**' deki **SharePoint bağlantıları** düğümü altında görünmezse aşağıdaki adımları gerçekleştirin:
 
-    1. İçinde **Sunucu Gezgini**, kısayol menüsünü açın **SharePoint bağlantıları**ve ardından **Bağlantı Ekle**.
+    1. **Sunucu Gezgini**' de **SharePoint bağlantıları**için kısayol menüsünü açın ve ardından **bağlantı ekle**' yi seçin.
 
-    2. İçinde **SharePoint bağlantısı ekleme** iletişim kutusunda, bağlanmak ve ardından istediğiniz SharePoint sitesi için URL'yi girin **Tamam** düğmesi.
+    2. **SharePoint bağlantısı ekle** iletişim kutusunda, bağlanmak istediğiniz SharePoint sitesinin URL 'sini girin ve **Tamam** düğmesini seçin.
 
-         Geliştirme bilgisayarınızda SharePoint sitesini belirtmek için girin **http://localhost** .
+         Geliştirme bilgisayarınızda SharePoint sitesini belirtmek için **http://localhost** girin.
 
-3. (Site URL'sini görüntüleyen) site bağlantı düğümü genişletin ve ardından bir alt site düğümünü genişletin (örneğin, **ekip sitesi**).
+3. Site bağlantısı düğümünü (sitenizin URL 'sini gösterir) genişletin ve sonra bir alt site düğümünü (örneğin, **ekip sitesi**) genişletin.
 
-4. Doğrulayın diğer örneğindeki kodun [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] daha önce ayarladığınız kesme noktasında durur `NodeChildrenRequested` yöntemi ve ardından **F5** proje hatalarını ayıklamaya devam etmek için.
+4. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] diğer örneğindeki kodun, `NodeChildrenRequested` yönteminde daha önce ayarladığınız kesme noktasında durduğunu doğrulayın ve sonra projede hata ayıklamaya devam etmek için **F5** ' i seçin.
 
-5. Visual Studio'nun deneysel örneğinde adlı yeni bir düğüm doğrulayın **Web Bölümü Galerisi'ne** en üst düzey sitesi düğümünde görünür ve genişletin **Web Bölümü Galerisi'ne** düğümü.
+5. Visual Studio 'nun deneysel örneğinde, en üst düzey site düğümü altında **Web Bölümü Galerisi** adlı yeni bir düğümün göründüğünü doğrulayın ve ardından **Web Bölümü Galerisi** düğümünü genişletin.
 
-6. Visual Studio'nun diğer örneğindeki kodun daha önce ayarladığınız kesme noktasına durduğunu doğrulayın `CreateWebPartNodes` yöntemini seçip **F5** proje hatalarını ayıklamaya devam etmek için anahtarı.
+6. Visual Studio 'nun diğer örneğindeki kodun, `CreateWebPartNodes` yönteminde daha önce ayarladığınız kesme noktasında durduğunu doğrulayın ve ardından projede hata ayıklamaya devam etmek için **F5** tuşunu seçin.
 
-7. Visual Studio'nun deneysel örneğinde bağlı sitesindeki tüm Web Bölümleri altında göründüğünü doğrulayın. **Web Bölümü Galerisi'ne** düğümünde **Sunucu Gezgini**.
+7. Visual Studio 'nun deneysel örneğinde, bağlantılı sitedeki tüm Web Bölümleri **Sunucu Gezgini** **Web Bölümü Galerisi** düğümünün altında göründüğünü doğrulayın.
 
-8. İçinde **Sunucu Gezgini**, Web Bölümleri biri için kısayol menüsünü açın ve ardından **özellikleri**.
+8. **Sunucu Gezgini**' de, Web bölümleri biri için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
-9. Örneğinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ayıkladığınız, Web bölümünü ayrıntılarını göründüğünü doğrulayın **özellikleri** penceresi.
+9. Hata ayıkladığınızı [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] örneğinde, Web Bölümü ayrıntılarının **Özellikler** penceresinde göründüğünü doğrulayın.
 
-## <a name="uninstall-the-extension-from-visual-studio"></a>Visual Studio'dan uzantıyı kaldırın
- Uzantısını denetlemeniz bittikten sonra Visual Studio'dan uzantıyı kaldırın.
+## <a name="uninstall-the-extension-from-visual-studio"></a>Uzantıyı Visual Studio 'dan kaldırma
+ Uzantıyı sınamayı bitirdikten sonra, uzantıyı Visual Studio 'dan kaldırın.
 
 #### <a name="to-uninstall-the-extension"></a>Uzantıyı kaldırmak için
 
-1. Deneysel örneğinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], menü çubuğunda, **Araçları** > **Uzantılar ve güncelleştirmeler**.
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]deneysel örneğinde, menü çubuğunda **araçlar** > **Uzantılar ve güncelleştirmeler**' i seçin.
 
      **Uzantılar ve güncelleştirmeler** iletişim kutusu açılır.
 
-2. Uzantılar listesinde seçin **Web Bölümü Galerisi düğüm uzantısı için Sunucu Gezgini**ve ardından **kaldırma** düğmesi.
+2. Uzantılar listesinde, **Sunucu Gezgini Için Web Bölümü Galerisi düğüm uzantısı**' nı seçin ve ardından **Kaldır** düğmesini seçin.
 
-3. Görünen iletişim kutusunda **Evet** uzantıyı kaldırın ve ardından istediğinizi onaylamak için düğmeyi **şimdi yeniden Başlat** kaldırma işlemini tamamlamak için düğme.
+3. Görüntülenen iletişim kutusunda, uzantıyı kaldırmak istediğinizi onaylamak için **Evet** düğmesini seçin ve ardından kaldırma işlemini gerçekleştirmek Için **Şimdi yeniden Başlat** düğmesini seçin.
 
-4. (Deneysel örneği ve Visual Studio'nun WebPartNode çözüm açık olduğu örneği) Visual Studio'nun her iki örneklerini kapatın.
+4. Her iki Visual Studio örneğini kapatın (WebPartNode çözümünün açık olduğu deneysel örnek ve Visual Studio örneği).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sunucu Gezgininde SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [İzlenecek yol: Sunucu Gezgini uzantısında SharePoint istemcisi nesne modelini çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)
+- [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [İzlenecek yol: Sunucu Gezgini uzantısında SharePoint istemci nesne modelini çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)
 - [Simgeler için Görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons)
-- [Simge veya başka görüntü oluşturma &#40;simgeler için görüntü Düzenleyicisi&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)
+- [Simgeler için simge veya diğer görüntü &#40;resmi Düzenleyicisi oluşturma&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)

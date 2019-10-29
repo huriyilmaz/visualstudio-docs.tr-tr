@@ -1,6 +1,6 @@
 ---
-title: Boost.Test için C++ kullanma
-description: Visual Studio'da birim testleri oluşturmak için Boost.Test kullanın.
+title: İçin Boost. test kullanmaC++
+description: Visual Studio 'da birim testleri oluşturmak için Boost. test kullanın.
 ms.date: 05/06/2019
 ms.topic: conceptual
 author: mikeblome
@@ -8,64 +8,64 @@ ms.author: mblome
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf962ec4ecade1bb88d9e301d62eb6ab8a5131cf
-ms.sourcegitcommit: 6196d0b7fdcb08ba6d28a8151ad36b8d1139f2cc
+ms.openlocfilehash: 966983fa15b60db33f11645b25561a74ad5fadbe
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65226093"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983440"
 ---
-# <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio'da C++ için Boost.Test kullanma
+# <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio C++ 'da Boost. test kullanma
 
-Visual Studio 2017 ve sonraki sürümlerinde, Boost.Test test bağdaştırıcısı olarak Visual Studio IDE'ye tümleşik **ile masaüstü geliştirme C++**  iş yükü.
+Visual Studio 2017 ve üzeri sürümlerde, Boost. test test bağdaştırıcısı, iş yüküyle **Masaüstü geliştirmenin C++**  bir bileşeni olarak Visual Studio IDE ile tümleşiktir.
 
-![Boost.Test için test bağdaştırıcısı](media/cpp-boost-component.png)
+![Boost. test için test bağdaştırıcısı](media/cpp-boost-component.png)
 
-Öğeniz yoksa **ile masaüstü geliştirme C++**  iş yükü yüklenmiş, açık **Visual Studio yükleyicisi**. Seçin **C++ ile masaüstü geliştirme** iş yükü, ardından **Değiştir** düğmesi.
+İş yükü yüklü **masaüstü geliştirmesi C++**  yoksa **Visual Studio yükleyicisi**açın. İş yüküyle **Masaüstü geliştirmeyi C++**  seçin, sonra **Değiştir** düğmesini seçin.
 
-## <a name="install-boost"></a>Boost yükleyin
+## <a name="install-boost"></a>Yükseltme yüklemesi
 
-Boost.Test gerektirir [Boost](http://www.boost.org/)! Boost yüklü değilse, Vcpkg Paket Yöneticisi'ni kullanmanızı öneririz.
+Boost. test için [Boost](https://www.boost.org/)! Yükseltme yüklü değilse, Vcpkg paket yöneticisini kullanmanızı öneririz.
 
-1. Konumundaki yönergeleri [Vcpkg: C++ Paket Yöneticisi Windows için](/cpp/vcpkg) vcpkg yükleme (Bu yoksa).
+1. Vcpkg 'daki yönergeleri izleyin: vcpkg 'yi yüklemek için [bir C++ Windows Paket Yöneticisi](/cpp/vcpkg) (henüz yoksa).
 
-1. Boost.Test dinamik veya statik Kitaplığı'nı yükleyin:
+1. Boost. test dinamik veya statik kitaplığını yükler:
 
-    - Çalıştırma **vcpkg yükleme boost test** Boost.Test dinamik kitaplığını yüklemek için.
+    - Boost. test dinamik kitaplığını yüklemek için **vcpkg Install Boost-test** ' i çalıştırın.
 
-       -VEYA-
+       Veya
 
-    - Çalıştırma **vcpkg boost yükleyin-test: x 86 windows statik** Boost.Test statik kitaplığı yüklemek için.
+    - **Vcpkg Install Boost-test: x86-Windows-static** ' i çalıştırarak Boost. test statik kitaplığını yüklemek için.
 
-1. Çalıştırma **vcpkg tümleştirme yükleme** Visual Studio şu kitaplıkla yapılandırıp yolları Boost üst bilgiler ve ikili dosyalarını içerir.
+1. Visual Studio 'Yu kitaplıkla yapılandırmak için **vcpkg tümleştirin Install** komutunu çalıştırın ve yükseltme üst bilgilerine ve ikili dosyalarına yollar ekleyin.
 
-## <a name="add-the-item-template-visual-studio-2017-version-156-and-later"></a>(Visual Studio 2017 sürüm 15.6 ve üzeri) öğe şablonu Ekle
+## <a name="add-the-item-template-visual-studio-2017-version-156-and-later"></a>Öğe şablonunu ekleme (Visual Studio 2017 sürüm 15,6 ve üstü)
 
-1. Oluşturmak için bir *.cpp* 'nde proje düğümüne sağ tıklayın, testleriniz için dosya **Çözüm Gezgini** ve **Yeni Öğe Ekle**.
+1. Testleriniz için bir *. cpp* dosyası oluşturmak üzere **Çözüm Gezgini** içindeki proje düğümüne sağ tıklayın ve **Yeni öğe Ekle**' yi seçin.
 
-   ![Boost.Test öğe şablonu](media/boost_test_item_template.png)
+   ![Boost. test öğesi şablonu](media/boost_test_item_template.png)
 
-1. Örnek test yöntemi yeni bir dosya içerir. Etkinleştirmek için projenizi derleyin **Test Gezgini** yöntemi bulunacak.
+1. Yeni dosya bir örnek test yöntemi içerir. **Test Gezgini** 'nin yöntemi bulmasını sağlamak için projenizi derleyin.
 
-Boost.Test tek üstbilgi çeşidini öğesi şablonu kullanır ancak değiştirebilirsiniz #include tek başına kitaplığı değişken kullanılacak yol. Daha fazla bilgi için [Ekle ekleme yönergelerini](#add-include-directives).
+Öğe şablonu, Boost. test öğesinin tek üst bilgi çeşidini kullanır, ancak tek başına kitaplık türevini kullanmak için #include yolunu değiştirebilirsiniz. Daha fazla bilgi için bkz. [içerme yönergeleri ekleme](#add-include-directives).
 
-## <a name="create-a-test-project"></a>Bir test projesi oluşturma
+## <a name="create-a-test-project"></a>Test projesi oluşturma
 
-Visual Studio 2017 sürüm 15.5, önceden yapılandırılmış test proje veya öğe şablonları Boost.Test için kullanılabilir. Bu nedenle, oluşturun ve testlerinizi tutmak için bir konsol uygulama projesi yapılandırmanız gerekir.
+Visual Studio 2017 sürüm 15,5 ' de, Boost. test için önceden yapılandırılmış test projesi veya öğe şablonları yoktur. Bu nedenle, testlerinizi tutmak için bir konsol uygulaması projesi oluşturmanız ve yapılandırmanız gerekir.
 
-1. İçinde **Çözüm Gezgini**çözüm düğümüne sağ tıklayın ve seçin **Ekle** > **yeni proje**.
+1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın ve > **Yeni proje** **Ekle** ' yi seçin.
 
-1. Sol bölmede seçin **Visual C++** > **Windows Masaüstü**ve ardından **Windows konsol uygulaması** şablonu.
+1. Sol bölmede, **Windows Masaüstü** > **seçin C++**  ve ardından **Windows konsol uygulaması** şablonunu seçin.
 
-1. Projeye bir ad verin ve seçin **Tamam**.
+1. Projeye bir ad verin ve **Tamam**' ı seçin.
 
-1. Silme `main` işlevi *.cpp* dosya.
+1. *. Cpp* dosyasındaki `main` işlevini silin.
 
-1. Boost.Test tek üst bilgi veya dinamik kitaplık sürümünü kullanıyorsanız, Git [Ekle ekleme yönergelerini](#add-include-directives). Statik kitaplık sürümünü kullanıyorsanız, bazı ek yapılandırmalar yapmanız gerekir:
+1. Boost. test ' in tek üstbilgi veya dinamik kitaplık sürümünü kullanıyorsanız [ekleme yönergeleri Ekle](#add-include-directives)' ye gidin. Statik kitaplık sürümünü kullanıyorsanız, bazı ek yapılandırmalar gerçekleştirmeniz gerekir:
 
-   a. Projeyi dosyasını düzenlemek için önce bunu kaldırın. İçinde **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve seçin **projeyi**. Ardından proje düğümünü sağ tıklatın ve seçin **Düzenle < adı\>.vcxproj**.
+   a. Proje dosyasını düzenlemek için önce onu kaldırın. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Projeyi Kaldır**' ı seçin. Ardından, proje düğümüne sağ tıklayın ve **\>. vcxproj < adı Düzenle**' yi seçin.
 
-   b. İçin iki satırı ekleyin **Globals** burada gösterildiği gibi özellik grubu:
+   b. **Genel** Özellikler grubuna burada gösterildiği gibi iki satır ekleyin:
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -75,37 +75,37 @@ Visual Studio 2017 sürüm 15.5, önceden yapılandırılmış test proje veya �
     </PropertyGroup>
     ```
 
-   c. Kaydet ve Kapat  *\*.vcxproj* dosyasını bulun ve ardından projeyi yeniden yükleyin.
+   ,. *\*. vcxproj* dosyasını kaydedip kapatın ve ardından projeyi yeniden yükleyin.
 
-   d. Açmak için **özellik sayfaları**, proje düğümüne sağ tıklayın ve seçin **özellikleri**.
+   TID. **Özellik sayfalarını**açmak için, proje düğümüne sağ tıklayın ve **Özellikler**' i seçin.
 
-   d. Genişletin **C/C++** > **kod oluşturma**ve ardından **çalışma zamanı kitaplığı**. Seçin **/mtd** için hata ayıklama statik çalışma zamanı kitaplığı veya **/MT** yayın statik çalışma zamanı kitaplığı.
+   TID. **CC++ /**  > **kod üretimini**genişletin ve sonra **çalışma zamanı kitaplığı**' nı seçin. Statik çalışma zamanı kitaplığı hata ayıklaması için **/MTD** 'yi, sürüm statik çalışma zamanı kitaplığı için **/MT** seçin.
 
-   f. Genişletin **bağlayıcı** > **sistem**. Doğrulayın **alt** ayarlanır **konsol**.
+   vadeli. **Bağlayıcı** > **sistem**' i genişletin. **Alt sistemin** **konsol**olarak ayarlandığını doğrulayın.
 
-   g. Seçin **Tamam** özellik sayfalarını kapatmak için.
+   Acil. Özellik sayfalarını kapatmak için **Tamam ' ı** seçin.
 
-## <a name="add-include-directives"></a>Ekleme yönergelerinde
+## <a name="add-include-directives"></a>İçerme yönergeleri ekleme
 
-1. Testinizde *.cpp* dosya, gerekli ekleyin `#include` programınızın türleri ve işlevleri test kodu görünür yapmak için yönergeleri. Genellikle, bir düzey klasör hiyerarşisindeki bir programdır. Yazarsanız `#include "../"`, IntelliSense penceresi görünür ve üst bilgi dosyasının tam yolu seçmenize olanak sağlar.
+1. Test *. cpp* dosyanızda, programınızın türlerini ve işlevlerini test koduna görünür hale getirmek için gerekli `#include` yönergelerini ekleyin. Genellikle, program klasör hiyerarşisinde bir düzey yukarı açılır. `#include "../"`yazarsanız, bir IntelliSense penceresi görünür ve üst bilgi dosyasının tam yolunu seçmenizi sağlar.
 
-   ![Ekle #include](media/cpp-gtest-includes.png)
+   ![#İnclude yönergeleri ekleme](media/cpp-gtest-includes.png)
 
-   Tek başına kitaplığı ile kullanabilirsiniz:
+   Tek başına kitaplığı ile birlikte kullanabilirsiniz:
 
    ```cpp
    #include <boost/test/unit_test.hpp>
    ```
 
-   Veya, tek üst bilgi sürümüyle kullanın:
+   Ya da, ile tek üst bilgi sürümünü kullanın:
 
    ```cpp
    #include <boost/test/included/unit_test.hpp>
    ```
 
-   Daha sonra tanımlamak `BOOST_TEST_MODULE`.
+   Ardından `BOOST_TEST_MODULE`tanımlayın.
 
-Aşağıdaki örnek olarak bulunabilir olması test için yeterliyse **Test Gezgini**:
+Test **Gezgini**'nde, testin keşfedilebilir olması için aşağıdaki örnek yeterlidir:
 
 ```cpp
 #define BOOST_TEST_MODULE MyTest
@@ -124,10 +124,10 @@ BOOST_AUTO_TEST_CASE(my_boost_test)
 }
 ```
 
-## <a name="write-and-run-tests"></a>Yazma ve testleri çalıştırma
+## <a name="write-and-run-tests"></a>Testleri yazma ve çalıştırma
 
-Artık yazmak ve Boost testleri çalıştırmak hazırsınız. Bkz: [Boost test kitaplığı belgeleri](http://www.boost.org/doc/libs/release/libs/test/doc/html/index.html) test makrolar hakkında daha fazla bilgi için. Bkz: [Test Gezgini ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md) kullanarak testlerinizi gruplandırma bulma ve çalıştırma hakkında bilgi için **Test Gezgini**.
+Artık yükseltme testleri yazmaya ve çalıştırmaya hazırsınız. Test makroları hakkında bilgi için bkz. [Test kitaplığını destekleme belgeleri](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html) . **Test Gezgini**'ni kullanarak testlerinizi bulma, çalıştırma ve gruplandırma hakkında bilgi için bkz. [Test Gezgini Ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md)
+- [C/için birim testleri yazmaC++](writing-unit-tests-for-c-cpp.md)

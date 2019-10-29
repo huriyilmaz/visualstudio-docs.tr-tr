@@ -8,12 +8,12 @@ author: jillre
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 5a6ae8bf090f1e3a06dc83cf619f691e8d51f4c0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e4a59cb4e3372e16634cddde2a163ac94ca73d24
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659743"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982806"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Birim testi için uygulamanızı yalıtmak üzere dolgular kullanma
 
@@ -76,7 +76,7 @@ using (ShimsContext.Create()) {
 
 ### <a name="use-shimscontext"></a>ShimsContext kullanma
 
-Bir birim testi çerçevesinde dolgu türleri kullanırken, parçalarınızın ömrünü denetlemek için test kodunu bir `ShimsContext` sarın. Aksi takdirde, parça AppDomain 'in kapanması için en son bir durum olur. @No__t_0 oluşturmanın en kolay yolu, aşağıdaki kodda gösterildiği gibi statik `Create()` yöntemini kullanmaktır:
+Bir birim testi çerçevesinde dolgu türleri kullanırken, parçalarınızın ömrünü denetlemek için test kodunu bir `ShimsContext` sarın. Aksi takdirde, parça AppDomain 'in kapanması için en son bir durum olur. `ShimsContext` oluşturmanın en kolay yolu, aşağıdaki kodda gösterildiği gibi statik `Create()` yöntemini kullanmaktır:
 
 ```csharp
 //unit test code
@@ -155,7 +155,7 @@ Dolgu sınıfı adları, özgün tür adına `Fakes.Shim` önüne eklenerek yap�
 
 Test edilen uygulamanın koduna *deturlar* ekleyerek parça çalışır. Özgün yöntemin bir çağrısının gerçekleştiği her yerde, Fakes sistemi bir deturtur, böylece gerçek yöntemi çağırmak yerine, dolgu kodunuz çağırılır.
 
-Çalışma zamanında deturlar oluşturulup silindiğine dikkat edin. @No__t_0 yaşam süresi içinde her zaman bir tur oluşturmanız gerekir. Bırakıldığında, etkin durumdayken oluşturduğunuz tüm parçalar kaldırılır. Bunu yapmanın en iyi yolu `using` deyimin içindedir.
+Çalışma zamanında deturlar oluşturulup silindiğine dikkat edin. `ShimsContext`yaşam süresi içinde her zaman bir tur oluşturmanız gerekir. Bırakıldığında, etkin durumdayken oluşturduğunuz tüm parçalar kaldırılır. Bunu yapmanın en iyi yolu `using` deyimin içindedir.
 
 Fakes ad alanının mevcut olmadığını belirten bir yapı hatası görebilirsiniz. Bu hata bazen başka derleme hataları olduğunda görüntülenir. Diğer hataları düzeltemedi ve bu işlem açılır.
 
@@ -446,7 +446,7 @@ ShimsBehaviors.Current = ShimsBehaviors.DefaultValue;
 
 ## <a name="detect-environment-accesses"></a>Ortam erişimlerini Algıla
 
-@No__t_0 davranışını ilgili Dolgu türünün statik `Behavior` özelliğine atayarak, belirli bir türdeki statik yöntemler dahil olmak üzere tüm üyelere bir davranış eklemek mümkündür:
+`ShimsBehaviors.NotImplemented` davranışını ilgili Dolgu türünün statik `Behavior` özelliğine atayarak, belirli bir türdeki statik yöntemler dahil olmak üzere tüm üyelere bir davranış eklemek mümkündür:
 
 ```csharp
 // unit test code
@@ -503,7 +503,7 @@ ShimFile.WriteAllTextStringString = shim;
 
 ## <a name="systemenvironment"></a>System. Environment
 
-@No__t_0 dolgusu için, **derleme** öğesinden sonra mscorlib. Fakes dosyasına aşağıdaki içeriği ekleyin:
+<xref:System.Environment?displayProperty=fullName>dolgusu için, **derleme** öğesinden sonra mscorlib. Fakes dosyasına aşağıdaki içeriği ekleyin:
 
 ```xml
 <ShimGeneration>
@@ -525,4 +525,4 @@ Shims, .NET temel sınıf kitaplığı **mscorlib** ve **sistem**içindeki tüm 
 
 - [Microsoft Fakes ile test edilen kodu yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md)
 - [Peter Provost blogu: Visual Studio 2012 dolgular](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)
-- [Video (1h16): Visual Studio 2012 'de Fakes ile unstable kodu test etme](http://go.microsoft.com/fwlink/?LinkId=261837)
+- [Video (1h16): Visual Studio 2012 'de Fakes ile unstable kodu test etme](https://channel9.msdn.com/Events/TechEd/Europe/2012/DEV411)

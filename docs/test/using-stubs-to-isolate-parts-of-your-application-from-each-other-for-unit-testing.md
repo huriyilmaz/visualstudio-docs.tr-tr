@@ -10,12 +10,12 @@ author: jillre
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: cbb47e07bbe3697f905a28d9771cf55fe6fcc74c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6c980ab2d920a80e49450f6ffe4a9433f490b412
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659733"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982842"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma
 
@@ -35,7 +35,7 @@ Saplamalar bu yolla kodunuzun yapısına güveneceğinden genellikle saplamalar�
 
 ### <a name="design-for-dependency-injection"></a>Tasarım için bağımlılık ekleme
 
-Saptamaları kullanmak için uygulamanızın farklı bileşenlerini değil birbirlerine bağımlı ancak arabirim tanımlarının yalnızca bağımlı olmasını sağlamak için tasarlanır. Derleme zamanında bağlanmak yerine, bileşenler çalışma zamanında bağlıdır. Bu model yazılımın güncellemesinin güçlü ve kolay yapılmasına yardımcı olur çünkü değişiklikler bileşen sınırları boyunca yayılmaz. Saplamalar kullanmıyor olsanız bile bunu yapmanızı öneririz. Yeni kod yazıyorsanız, [bağımlılık ekleme](http://en.wikipedia.org/wiki/Dependency_injection) düzeninin izlenmesi kolaydır. Varolan yazılım için testler yazıyorsanız, yeniden düzenlemeniz gerekebilir. Pratik olursa, yerine dolgu verileri kullanmayı düşünebilirsiniz.
+Saptamaları kullanmak için uygulamanızın farklı bileşenlerini değil birbirlerine bağımlı ancak arabirim tanımlarının yalnızca bağımlı olmasını sağlamak için tasarlanır. Derleme zamanında bağlanmak yerine, bileşenler çalışma zamanında bağlıdır. Bu model yazılımın güncellemesinin güçlü ve kolay yapılmasına yardımcı olur çünkü değişiklikler bileşen sınırları boyunca yayılmaz. Saplamalar kullanmıyor olsanız bile bunu yapmanızı öneririz. Yeni kod yazıyorsanız, [bağımlılık ekleme](https://en.wikipedia.org/wiki/Dependency_injection) düzeninin izlenmesi kolaydır. Varolan yazılım için testler yazıyorsanız, yeniden düzenlemeniz gerekebilir. Pratik olursa, yerine dolgu verileri kullanmayı düşünebilirsiniz.
 
 Bu tartışmayı diyagramda bir mücadele örneği ile başlaalım. Sınıf StockAnalyzer fiyatları paylaşmayı okur ve bazı ilginç sonuçlar üretir. Test etmek istediğimiz bazı ortak yöntemler vardır. Şeyleri basit tutmak için, belirli bir paylaşımın geçerli fiyatını raporlayan çok basit bir yöntem olan bu yöntemlerden birine göz atalım. Bu yöntemin bir birim testini yazmak istiyoruz. Bir testin ilk taslağı aşağıda verilmiştir:
 
@@ -350,7 +350,7 @@ interface IWithEvents
 }
 ```
 
-@No__t_0 olayını yükseltmek için, yalnızca yedekleme temsilcisini çağırdık:
+`Changed` olayını yükseltmek için, yalnızca yedekleme temsilcisini çağırdık:
 
 ```csharp
 // unit test code
@@ -371,7 +371,7 @@ interface IGenericMethod
 }
 ```
 
-@No__t_0 örneğini oluşturan bir test yazabilirsiniz:
+`GetValue<int>` örneğini oluşturan bir test yazabilirsiniz:
 
 ```csharp
 // unit test code

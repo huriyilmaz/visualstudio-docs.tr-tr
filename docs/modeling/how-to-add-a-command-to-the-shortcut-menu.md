@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kısayol Menüsüne Komut Ekleme'
+title: 'Nasıl yapılır: kısayol menüsüne komut ekleme'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f7d873a3401e37a18b938cb5785f33eb0bc9b8fb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e476f1db1e30a04e67e6b53f593f55ee3867fae2
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666716"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985124"
 ---
-# <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Nasıl yapılır: Kısayol Menüsüne Komut Ekleme
+# <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Nasıl yapılır: kısayol menüsüne komut ekleme
 
 Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için, etki alanına özgü dilinize (DSL) menü komutları ekleyebilirsiniz. Kullanıcılar diyagrama sağ tıkladığınızda, komutlar bağlam (kısayol) menüsünde görünür. Yalnızca belirli koşullarda menüde görünmesi için bir komut tanımlayabilirsiniz. Örneğin, komutu yalnızca Kullanıcı belirli türde öğe veya belirli durumlarda öğeler ' i tıklattığında görünür hale getirebilirsiniz.
 
@@ -28,8 +28,6 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
 2. [Package.tt içinde paket sürüm numarasını güncelleştirin](#version). Komutları her değiştirdiğinizde bunu yapmanız gerekir. vsct
 
 3. Komutu görünür hale getirmek ve komutun ne yapmasını istediğinizi tanımlamak için [CommandSet sınıfına Yöntemler yazın](#CommandSet) .
-
-   Örnekler için [görselleştirme ve modelleme SDK Web sitesine](http://go.microsoft.com/fwlink/?LinkID=185579)bakın.
 
 > [!NOTE]
 > Ayrıca, kes, Yapıştır, Tümünü Seç ve CommandSet.cs içindeki yöntemleri geçersiz kılarak Yazdır gibi bazı mevcut komutların davranışını değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
@@ -61,7 +59,7 @@ Aşağıdaki durumlarda bu konudaki yöntemini kullanın:
 
 1. **Çözüm Gezgini**, **DslPackage** projesi altında Commands. vsct öğesini açın.
 
-2. @No__t_0 öğesinde bir veya daha fazla düğme ve grup tanımlayın. *Düğme* , menüdeki bir öğedir. Bir *Grup* , menüdeki bir bölümdür. Bu öğeleri tanımlamak için aşağıdaki öğeleri ekleyin:
+2. `Commands` öğesinde bir veya daha fazla düğme ve grup tanımlayın. *Düğme* , menüdeki bir öğedir. Bir *Grup* , menüdeki bir bölümdür. Bu öğeleri tanımlamak için aşağıdaki öğeleri ekleyin:
 
     ```xml
     <!-- Define a group - a section in the menu -->
@@ -102,7 +100,7 @@ Aşağıdaki durumlarda bu konudaki yöntemini kullanın:
     </VisibilityConstraints>
     ```
 
-4. GUID 'ler ve kimlikler için kullandığınız adları tanımlayın. Bunu yapmak için, `Commands` öğesinden sonra `CommandTable` öğesinde bir `Symbols` öğesi ekleyin.
+4. GUID 'Ler ve kimlikler için kullandığınız adları tanımlayın. Bunu yapmak için, `Commands` öğesinden sonra `CommandTable` öğesinde bir `Symbols` öğesi ekleyin.
 
     ```xml
     <Symbols>
@@ -115,7 +113,7 @@ Aşağıdaki durumlarda bu konudaki yöntemini kullanın:
     </Symbols>
     ```
 
-5. @No__t_0, gruplarınızı ve menü öğelerinizi tanımlayan bir GUID ile değiştirin. Yeni bir GUID almak için, **Araçlar** menüsünde **GUID oluştur** aracını kullanın.
+5. `{000...000}`, gruplarınızı ve menü öğelerinizi tanımlayan bir GUID ile değiştirin. Yeni bir GUID almak için, **Araçlar** menüsünde **GUID oluştur** aracını kullanın.
 
     > [!NOTE]
     > Daha fazla grup veya menü öğesi eklerseniz, aynı GUID 'yi kullanabilirsiniz. Ancak, `IDSymbols` için yeni değerler kullanmanız gerekir.
@@ -139,7 +137,7 @@ Aşağıdaki durumlarda bu konudaki yöntemini kullanın:
 
 1. **Çözüm Gezgini**, **DslPackage** projesinde, **GeneratedCode** klasöründe, Package.tt dosyasını açın.
 
-2. @No__t_0 özniteliğini bulun.
+2. `ProvideMenuResource` özniteliğini bulun.
 
 3. İkinci parametre olan özniteliğin `version` parametresini artırın. İsterseniz, size amacını hatırlatmak için parametre adını açıkça yazabilirsiniz. Örneğin:
 
@@ -361,9 +359,9 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Etki Alanına Özgü Dili Özelleştirmek için Kod Yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)
-- [Nasıl Yapılır: Standart Menü Komutunu Değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)
-- [Etki Alanına Özgü Dil Çözümlerini Dağıtma](msi-and-vsix-deployment-of-a-dsl.md)
+- [Etki alanına özgü dili özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)
+- [Etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md)
 - [Örnek kod: devre şemaları](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

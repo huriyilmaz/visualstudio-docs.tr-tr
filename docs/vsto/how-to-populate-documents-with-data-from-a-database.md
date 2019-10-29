@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Belgeleri veritabanı verileriyle doldurma'
+title: 'Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,65 +13,65 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4ec56ae4345405cfc704a97ec624f9c2e4d96a5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 907b3deeadd0a56f9e47a6e17a40579a0c9ffa64
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967917"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985878"
 ---
-# <a name="how-to-populate-documents-with-data-from-a-database"></a>Nasıl yapılır: Belgeleri veritabanı verileriyle doldurma
+# <a name="how-to-populate-documents-with-data-from-a-database"></a>Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma
 
-Aynı şekilde, Windows Forms projeleri verilere erişmek için Microsoft Office belge düzeyi projelere verilerine erişebilir. Çözümünüze bir veritabanından verileri getirmek için aynı araçları ve kodu kullanın ve verileri görüntülemek için Windows Forms denetimleri kullanabilirsiniz.
+Microsoft Office, Windows Forms projelerindeki verilere erişirken kullandığınız şekilde, belge düzeyi projelerdeki verilere erişebilirsiniz. Aynı araçları ve kodu kullanarak verileri bir veritabanından çözümünüze taşıyın ve verileri görüntülemek için Windows Forms denetimleri kullanabilirsiniz.
 
-Ayrıca, konak denetimleri kullanarak verileri görüntüleyebilirsiniz. Konak denetimleri, olayları ve veri bağlama özelliğiyle ile zenginleştirilmiştir yerel Microsoft Office Word nesnelerdir. Daha fazla bilgi için [konak öğelerini ve denetimlerine genel bakış için ana bilgisayar](../vsto/host-items-and-host-controls-overview.md).
+Bunlara ek olarak, konak denetimlerini kullanarak verileri görüntüleyebilirsiniz. Konak denetimleri, Microsoft Office Word 'de olaylar ve veri bağlama özelliğiyle geliştirilmiş yerel nesnelerdir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
-Aşağıdaki örnek, bir tasarımcı kullanarak belge düzeyinde projelerde verilere bağlı denetimler eklemek gösterilmektedir. Çalışma zamanında VSTO eklenti projesinde verilere bağlı denetimler eklemek nasıl bir örnek için bkz [izlenecek yol: VSTO eklenti projesinde basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md).
+Aşağıdaki örnek, tasarımcı kullanarak belge düzeyi projelerde veri bağlantılı denetimlerin nasıl ekleneceğini gösterir. Çalışma zamanında VSTO eklenti projelerinde veriye bağlama denetimleri ekleme hakkında bir örnek için bkz. [Izlenecek yol: VSTO eklenti projesinde basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md).
 
-![video bağlantısı](../vsto/media/playvideo.gif "video bağlantı") ilgili video gösterimi için bkz. [Word 2007 içerik veri bağlama denetimleri kullanarak Visual Studio Araçları Office sistemi (3.0) için](http://go.microsoft.com/fwlink/?LinkId=136785).
+![video bağlantısı](../vsto/media/playvideo.gif "video bağlantısı") İlgili video gösterimi için bkz. [Office sistemi için Visual Studio araçları kullanarak verileri Word 2007 içerik denetimlerine bağlama (3,0)](/previous-versions/office/developer/office-2007/bb967663(v=office.12)).
 
-## <a name="add-a-control-to-a-document-at-design-time"></a>Denetim belgeye çalışma zamanında ekleme
+## <a name="add-a-control-to-a-document-at-design-time"></a>Belgeye tasarım zamanında bir denetim ekleme
 
-### <a name="to-populate-a-document-with-data-from-a-database"></a>Bir belge bir veritabanındaki verilerle doldurmak için
+### <a name="to-populate-a-document-with-data-from-a-database"></a>Belgeyi bir veritabanındaki verilerle doldurmak için
 
-1. Word belge düzeyi projede açın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], belge tasarımcıda açık.
+1. Belgeyi tasarımcıda açık olacak şekilde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]bir Word belge düzeyi projesi açın.
 
-2. Açık **veri kaynakları** penceresi ve bir veritabanından bir veri kaynağı oluşturun. Daha fazla bilgi için [yeni bağlantı ekleme](../data-tools/add-new-connections.md).
+2. **Veri kaynakları** penceresini açın ve veritabanından bir veri kaynağı oluşturun. Daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
 
-3. İstediğiniz alanı sürükleyin **veri kaynakları** belgenize penceresi.
+3. **Veri kaynakları** penceresinden istediğiniz alanı belgenize sürükleyin.
 
-Bir içerik denetimi, belgeye eklenir. İçerik denetimi türü, seçtiğiniz alan, veri türüne göre değişir. Daha fazla bilgi için [içerik denetimleri](../vsto/content-controls.md).
+Belgeye bir içerik denetimi eklenir. İçerik denetiminin türü, seçtiğiniz alanın veri türüne bağlıdır. Daha fazla bilgi için bkz. [içerik denetimleri](../vsto/content-controls.md).
 
-Veri alanını seçerek farklı bir denetim ekleyebilirsiniz **veri kaynakları** penceresini açın ve ardından açılır listeden farklı bir denetim seçme.
+**Veri kaynakları** penceresinde veri alanını seçip açılan listeden farklı bir denetim seçerek farklı bir denetim ekleyebilirsiniz.
 
-## <a name="objects-in-the-project"></a>Projesindeki nesneleri
+## <a name="objects-in-the-project"></a>Projedeki nesneler
 
-Denetimin yanı sıra aşağıdaki verilerle ilgili nesneleri otomatik olarak projenize eklenir:
+Denetime ek olarak, aşağıdaki verilerle ilgili nesneler projenize otomatik olarak eklenir:
 
-- Veritabanına bağlı veri tablolarının kapsülleyen bir türü belirtilmiş veri kümesi. Daha fazla bilgi için [Visual Studio'daki veri kümesi Araçları](../data-tools/dataset-tools-in-visual-studio.md).
+- Veritabanına bağladığınız veri tablolarını kapsülleyen türü belirtilmiş bir veri kümesi. Daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
 
-- A <xref:System.Windows.Forms.BindingSource> , Denetim türü belirtilmiş veri kümesine bağlanır. Daha fazla bilgi için [BindingSource bileşenine genel bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview).
+- Denetimi türü belirtilmiş veri kümesine bağlayan bir <xref:System.Windows.Forms.BindingSource>. Daha fazla bilgi için bkz. [BindingSource Bileşenine Genel Bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
-- Bir TableAdapter veritabanına yazılan veri kümesi bağlar. Daha fazla bilgi için [oluştur ve TableAdapter yapılandırma](../data-tools/create-and-configure-tableadapters.md).
+- Türü belirtilmiş veri kümesini veritabanına bağlayan bir TableAdapter. Daha fazla bilgi için bkz. [TableAdapters oluşturma ve yapılandırma](../data-tools/create-and-configure-tableadapters.md).
 
-- Hiyerarşik güncelleştirmeleri etkinleştirmek için veri kümesinde tablo bağdaştırıcıları koordine etmek için kullanılan bir TableAdapterManager. Daha fazla bilgi için [hiyerarşik güncelleştirme](../data-tools/hierarchical-update.md) ve [TableAdapterManager başvuru](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
+- Hiyerarşik güncelleştirmeleri etkinleştirmek için veri kümesindeki tablo bağdaştırıcılarını koordine etmek üzere kullanılan bir TableAdapterManager. Daha fazla bilgi için bkz. [sıradüzensel Update](../data-tools/hierarchical-update.md) ve [TableAdapterManager Reference](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
 
-Projeyi çalıştırdığınızda, denetim veri kaynağındaki ilk kaydı görüntüler. Kullanabileceğiniz <xref:System.Windows.Forms.BindingSource> kayıtlarda gezinin olanağı.
+Projeyi çalıştırdığınızda, denetim veri kaynağındaki ilk kaydı görüntüler. Kullanıcıların kayıtlarda gezinme olanağı sağlamak için <xref:System.Windows.Forms.BindingSource> kullanabilirsiniz.
 
-### <a name="to-scroll-through-the-records"></a>Kayıtlarda gezinmek için
+### <a name="to-scroll-through-the-records"></a>Kayıtlar arasında gezinmek için
 
-- Kullanım <xref:System.Windows.Forms.BindingSource> gibi yöntemler <xref:System.Windows.Forms.BindingSource.MoveNext%2A> ve <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
+- <xref:System.Windows.Forms.BindingSource.MoveNext%2A> ve <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>gibi <xref:System.Windows.Forms.BindingSource> yöntemler kullanın.
 
-Güncelleştirmeleri yazılmış veri kümesi ve veritabanına gönderme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir konak kontrolü verileriyle veri kaynağını güncelleme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
+Yazılan veri kümesine ve veritabanına güncelleştirmelerin gönderilmesi hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)
 - [Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
-- [Nasıl yapılır: Belgeleri nesne verileriyle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)
-- [Nasıl yapılır: Bir konak kontrolü verileriyle veri kaynağını güncelleme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
-- [Office çözümlerine genel bakış yerel veritabanı dosyaları kullanma](../vsto/using-local-database-files-in-office-solutions-overview.md)
-- [BindingSource bileşenine genel bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview)
+- [Nasıl yapılır: belgeleri nesnelerden verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)
+- [Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış](../vsto/using-local-database-files-in-office-solutions-overview.md)
+- [BindingSource Bileşenine Genel Bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview)

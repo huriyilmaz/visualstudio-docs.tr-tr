@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Bir çalışma kitabından bir sunucuda önbelleğe alınmış verileri alma'
+title: 'İzlenecek yol: sunucudaki çalışma kitabından önbelleğe alınmış verileri alma'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,284 +16,284 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d0bcf3f299d1d2d10b3b043b772fca832a505278
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b70283e63a2f71c0c85bf26a24f2e6f4a3492880
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826129"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985415"
 ---
-# <a name="walkthrough-retrieve-cached-data-from-a-workbook-on-a-server"></a>İzlenecek yol: Bir çalışma kitabından bir sunucuda önbelleğe alınmış verileri alma
-  Bu kılavuzda bir Microsoft Office Excel çalışma kitabını Excel kullanarak başlatmadan önbelleğe alınan bir veri kümesinden veri almayı gösterir <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfı.
+# <a name="walkthrough-retrieve-cached-data-from-a-workbook-on-a-server"></a>İzlenecek yol: sunucudaki çalışma kitabından önbelleğe alınmış verileri alma
+  Bu izlenecek yol, Excel 'i <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfını kullanarak başlatmadan Microsoft Office bir Excel çalışma kitabında önbelleğe alınmış bir veri kümesinden verilerin nasıl alınacağını gösterir.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Verileri içeren bir veri kümesi tanımlayarak *AdventureWorksLT* veritabanı.
+- *AdventureWorksLT* veritabanından veri içeren bir veri kümesi tanımlama.
 
-- Veri kümesinin örnekleri, bir Excel çalışma kitabı projesi ve bir konsol uygulama projesi oluşturma.
+- Excel çalışma kitabı projesinde ve konsol uygulaması projesinde veri kümesinin örneklerini oluşturma.
 
-- Oluşturma bir <xref:Microsoft.Office.Tools.Excel.ListObject> çalışma kitabındaki veri kümesine bağlı ve doldurulurken <xref:Microsoft.Office.Tools.Excel.ListObject> verilerle çalışma kitabı açılır.
+- Çalışma kitabındaki veri kümesine bağlanan <xref:Microsoft.Office.Tools.Excel.ListObject> oluşturma ve çalışma kitabı açıldığında <xref:Microsoft.Office.Tools.Excel.ListObject> verilerle doldurma.
 
-- Veri kümesini çalışma kitabında veri önbelleğine ekleniyor.
+- Çalışma kitabındaki veri kümesini veri önbelleğine ekleme.
 
-- Excel başlatmadan konsol uygulamasında, veri kümesine önbelleğe alınan veri kümesindeki verileri okuma.
+- Önbelleğe alınmış veri kümesinden verileri, Excel 'i başlatmadan konsol uygulamasındaki veri kümesine okuma.
 
-  Bu izlenecek yol, geliştirme bilgisayarınızda kodun çalıştığını varsayar olsa da, bu izlenecek yol gösterilen kod Excel yüklü olmayan bir sunucu üzerinde kullanılabilir.
+  Bu izlenecek yol, geliştirme bilgisayarınızda kodu çalıştırdığınız varsayılmaktadır, ancak bu izlenecek yol tarafından gösterilen kod, Excel yüklü olmayan bir sunucuda kullanılabilir.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
-- Microsoft SQL Server veya Microsoft SQL Server bağlı AdventureWorksLT örnek veritabanı olan Express çalışan örneğine erişim. AdventureWorksLT veritabanı indirebileceğiniz [CodePlex Web sitesinde](http://go.microsoft.com/fwlink/?linkid=87843). Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+- AdventureWorksLT örnek veritabanının eklendiği Microsoft SQL Server veya Microsoft SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://archive.codeplex.com/?p=SqlServerSamples)indirebilirsiniz. Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
-  - SQL Server Management Studio veya SQL Server Management Studio Express kullanarak bir veritabanı eklemek için bkz: [nasıl yapılır: Veritabanı (SQL Server Management Studio) ekleme](/sql/relational-databases/databases/attach-a-database).
+  - SQL Server Management Studio veya SQL Server Management Studio Express kullanarak bir veritabanı eklemek için bkz. [nasıl yapılır: veritabanı iliştirme (SQL Server Management Studio)](/sql/relational-databases/databases/attach-a-database).
 
-  - Komut satırını kullanarak bir veritabanı eklemek için bkz: [nasıl yapılır: SQL Server Express için bir veritabanı dosyası iliştirmek](/previous-versions/sql/).
+  - Komut satırını kullanarak bir veritabanı eklemek için, bkz. [nasıl yapılır: SQL Server Express veritabanı dosyası iliştirme](/previous-versions/sql/).
 
-## <a name="create-a-class-library-project-that-defines-a-dataset"></a>Bir veri kümesini tanımlayan bir sınıf kitaplığı projesi oluşturun
- Bir Excel çalışma kitabı projesi ve bir konsol uygulaması aynı veri kümesini kullanmak için ayrı bir derleme hem de bu proje tarafından başvurulan dataset tanımlamanız gerekir. Bu kılavuz için bir sınıf kitaplığı projesinde veri kümesi tanımlarsınız.
+## <a name="create-a-class-library-project-that-defines-a-dataset"></a>Veri kümesini tanımlayan bir sınıf kitaplığı projesi oluşturma
+ Bir Excel çalışma kitabı projesinde ve bir konsol uygulamasında aynı veri kümesini kullanmak için, veri kümesini bu projelerin her ikisi tarafından başvurulan ayrı bir derlemede tanımlamanız gerekir. Bu izlenecek yol için bir sınıf kitaplığı projesinde veri kümesini tanımlayın.
 
-### <a name="create-the-class-library-project"></a>Sınıf kitaplığı projesi oluşturun
+### <a name="create-the-class-library-project"></a>Sınıf kitaplığı projesi oluşturma
 
-1. Başlangıç [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]başlatın.
 
-2. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**ve ardından **Windows**.
+3. Şablonlar bölmesinde,  **C# görsel** veya **Visual Basic**öğesini genişletin ve ardından **Windows**' a tıklayın.
 
-4. Proje şablonları listesinde seçin **sınıf kitaplığı**.
+4. Proje şablonları listesinde, **sınıf kitaplığı**' nı seçin.
 
-5. İçinde **adı** kutusuna **AdventureWorksDataSet**.
+5. **Ad** kutusuna **AdventureWorksDataSet**yazın.
 
-6. Tıklayın **Gözat**, gidin, *%UserProfile%\My belgeleri* (Windows XP ve önceki sürümler) veya *%UserProfile%\Documents* (için Windows Vista) klasörünü ve ardından **Klasör Seç**.
+6. **Araştır**' a tıklayın, *%USERPROFILE%\My BELGELERINIZE* (Windows XP ve önceki sürümler için) veya *%UserProfile%\Documents* (Windows Vista Için) klasörüne gidin ve ardından **Klasör Seç**' e tıklayın.
 
-7. İçinde **yeni proje** iletişim kutusunda **çözüm için dizin oluştur** onay kutusu seçilmez.
+7. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur** onay kutusunun seçili olmadığından emin olun.
 
-8.           **Tamam**'ı tıklatın.
+8. **Tamam**'a tıklayın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ekler **AdventureWorksDataSet** için proje **Çözüm Gezgini** ve açılır *Class1.cs* veya *Class1.vb* kod dosyası.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], **Çözüm Gezgini** için **AdventureWorksDataSet** projesini ekler ve *Class1.cs* veya *Class1. vb* kod dosyasını açar.
 
-9. İçinde **Çözüm Gezgini**, sağ *Class1.cs* veya *Class1.vb*ve ardından **Sil**. Bu kılavuz için bu dosyayı gerekmez.
+9. **Çözüm Gezgini**' de, *Class1.cs* veya *Class1. vb*öğesine sağ tıklayın ve ardından **Sil**' e tıklayın. Bu izlenecek yol için bu dosyaya ihtiyacınız yoktur.
 
-## <a name="define-a-dataset-in-the-class-library-project"></a>Sınıf kitaplığı projesinde bir veri kümesi tanımlayın
- SQL Server 2005'te AdventureWorksLT veritabanında verileri içeren bir türü belirtilmiş veri kümesi tanımlayın. Bu kılavuzda daha sonra bu veri kümesi, bir Excel çalışma kitabı projesi ve bir konsol uygulama projesi başvurur.
+## <a name="define-a-dataset-in-the-class-library-project"></a>Sınıf kitaplığı projesinde bir veri kümesi tanımlama
+ SQL Server 2005 için AdventureWorksLT veritabanından veri içeren bir türü belirtilmiş veri kümesi tanımlayın. Bu izlenecek yolda daha sonra, bu veri kümesine bir Excel çalışma kitabı projesinden ve konsol uygulaması projesinden başvurabileceksiniz.
 
- Veri kümesi bir *yazılan veri kümesi* AdventureWorksLT veritabanı ürün tablodaki verileri temsil eden. Türü belirtilmiş veri kümeleri hakkında daha fazla bilgi için bkz. [Visual Studio'daki veri kümesi Araçları](../data-tools/dataset-tools-in-visual-studio.md).
+ Veri kümesi, AdventureWorksLT veritabanının Product tablosundaki verileri temsil eden *türsüz bir veri* kümesidir. Türü belirtilmiş veri kümeleri hakkında daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
 
-### <a name="define-a-typed-dataset-in-the-class-library-project"></a>Sınıf kitaplığı projesinde bir türü belirtilmiş veri kümesi tanımlayın
+### <a name="define-a-typed-dataset-in-the-class-library-project"></a>Sınıf kitaplığı projesinde bir türü belirtilmiş veri kümesi tanımlama
 
-1. İçinde **Çözüm Gezgini**, tıklayın **AdventureWorksDataSet** proje.
+1. **Çözüm Gezgini**' de, **AdventureWorksDataSet** projesine tıklayın.
 
-2. Varsa **veri kaynakları** penceresi görünür değilse, bunu, menü çubuğundan seçme görüntüleyebilir **görünümü** > **diğer Windows**  >   **Veri kaynakları**.
+2. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **diğer Windows** > **veri kaynaklarını** **görüntüle** > ' yi seçerek görüntüleyin.
 
-3. Seçin **yeni veri kaynağı Ekle** başlatmak için **veri kaynağı Yapılandırma Sihirbazı**.
+3. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-4. Tıklayın **veritabanı**ve ardından **sonraki**.
+4. **Veritabanı**' na ve ardından **İleri**' ye tıklayın.
 
-5. AdventureWorksLT veritabanında var olan bir bağlantınız varsa bu bağlantıyı seçin ve tıklayın **sonraki**.
+5. AdventureWorksLT veritabanına mevcut bir bağlantınız varsa, bu bağlantıyı seçin ve **İleri**' ye tıklayın.
 
-    ' A tıklayıp **yeni bağlantı**ve **Bağlantı Ekle** yeni bir bağlantı oluşturmak için iletişim kutusu. Daha fazla bilgi için [yeni bağlantı ekleme](../data-tools/add-new-connections.md).
+    Aksi takdirde, **Yeni bağlantı**' ya tıklayın ve yeni bağlantıyı oluşturmak Için **bağlantı ekle** iletişim kutusunu kullanın. Daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
 
-6. İçinde **bağlantı dizesini uygulama yapılandırma dosyasına Kaydet** sayfasında **sonraki**.
+6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri**' ye tıklayın.
 
-7. İçinde **veritabanı nesnelerinizi seçin** sayfasında **tabloları** seçip **ürün (SalesLT)** .
+7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** ' ı genişletin ve **ürün (SalesLT)** öğesini seçin.
 
-8.           **Son**'a tıklayın.
+8. **Son**'a tıklayın.
 
-    *AdventureWorksLTDataSet.xsd* dosya eklendiğinde **AdventureWorksDataSet** proje. Bu dosya, aşağıdakileri tanımlar:
+    *AdventureWorksLTDataSet. xsd* dosyası, **AdventureWorksDataSet** projesine eklenir. Bu dosya aşağıdaki öğeleri tanımlar:
 
-   - Adlı bir türü belirtilmiş veri kümesi `AdventureWorksLTDataSet`. Bu veri kümesi Product tablosunda AdventureWorksLT veritabanında içeriğini temsil eder.
+   - `AdventureWorksLTDataSet`adlı türü belirtilmiş bir veri kümesi. Bu veri kümesi AdventureWorksLT veritabanındaki ürün tablosunun içeriğini temsil eder.
 
-   - Adlı bir TableAdapter `ProductTableAdapter`. Bu TableAdapter okuyup veri yazmak için kullanılan `AdventureWorksLTDataSet`. Daha fazla bilgi için [TableAdapter genel bakışı](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
+   - `ProductTableAdapter`adlı bir TableAdapter. Bu TableAdapter, `AdventureWorksLTDataSet`veri okumak ve yazmak için kullanılabilir. Daha fazla bilgi için bkz. [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
-     Bu izlenecek yolda, bu nesnelerin her ikisi de kullanır.
+     Bu iki nesneyi daha sonra Bu izlenecek yolda kullanacaksınız.
 
-9. İçinde **Çözüm Gezgini**, sağ **AdventureWorksDataSet** tıklatıp **yapı**.
+9. **Çözüm Gezgini**, **AdventureWorksDataSet** öğesine sağ tıklayın ve **Oluştur**' a tıklayın.
 
-     Projenin hatasız oluşturulduğunu doğrulayın.
+     Projenin hata olmadan yapılandırıldığını doğrulayın.
 
-## <a name="create-an-excel-workbook-project"></a>Bir Excel çalışma kitabı projesi oluşturma
- Arabirimi için verileri bir Excel çalışma kitabı projesi oluşturun. Bu kılavuzda daha sonra oluşturacağınız bir <xref:Microsoft.Office.Tools.Excel.ListObject> verileri görüntüleyen ve çalışma kitabının veri önbelleğindeki bir örnek veri kümesi ekleyeceksiniz.
+## <a name="create-an-excel-workbook-project"></a>Excel çalışma kitabı projesi oluşturma
+ Veri arabirimi için bir Excel çalışma kitabı projesi oluşturun. Bu izlenecek yolda daha sonra, verileri görüntüleyen bir <xref:Microsoft.Office.Tools.Excel.ListObject> oluşturacaksınız ve veri kümesinin bir örneğini çalışma kitabındaki veri önbelleğine ekleyeceksiniz.
 
 ### <a name="create-the-excel-workbook-project"></a>Excel çalışma kitabı projesi oluşturma
 
-1. İçinde **Çözüm Gezgini**, sağ **AdventureWorksDataSet** çözümü noktasına **Ekle**ve ardından **yeni proje**.
+1. **Çözüm Gezgini**, **AdventureWorksDataSet** çözümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.
 
-2. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**ve ardından **Office/SharePoint**.
+2. Şablonlar bölmesinde, **Visual C#**  veya **Visual Basic**öğesini genişletin ve ardından **Office/SharePoint**' i genişletin.
 
-3. Genişletilmiş altında **Office/SharePoint** düğümünü **Office eklentilerini** düğümü.
+3. Genişletilmiş **Office/SharePoint** düğümü altında **Office eklentileri** düğümünü seçin.
 
-4. Proje şablonları listesinde seçin **Excel 2010 Çalışma kitabı** veya **Excel 2013'ün çalışma kitabı** proje.
+4. Proje şablonları listesinde, **excel 2010 çalışma** kitabı veya **Excel 2013 çalışma kitabı** projesini seçin.
 
-5. İçinde **adı** kutusuna **AdventureWorksReport**. Konumunu değiştirmeyin.
+5. **Ad** kutusuna **AdventureWorksReport**yazın. Konumu değiştirmeyin.
 
-6.           **Tamam**'ı tıklatın.
+6. **Tamam**'a tıklayın.
 
-     **Office Project Sihirbazı için Visual Studio Araçları** açılır.
+     **Office proje sihirbazı Visual Studio Araçları** açılır.
 
-7. Emin **yeni belge oluşturma** seçilir ve tıklayın **Tamam**.
+7. **Yeni bir belge oluştur** ' un seçili olduğundan emin olun ve **Tamam**' ı tıklatın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] açılır **AdventureWorksReport** çalışma kitabını tasarımcıda ve ekler **AdventureWorksReport** için proje **Çözüm Gezgini**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **AdventureWorksReport** çalışma kitabını tasarımcıda açar ve **Çözüm Gezgini**için **AdventureWorksReport** projesini ekler.
 
-## <a name="add-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Excel çalışma kitabı projesi raporu veri kaynakları için veri kümesi Ekle
- Excel çalışma kitabında veri kümesini görüntülemeden önce Excel çalışma kitabı projesi raporu veri kaynakları için ilk veri kümesini eklemeniz gerekir.
+## <a name="add-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Veri kümesini Excel çalışma kitabı projesindeki veri kaynaklarına ekleme
+ Veri kümesini Excel çalışma kitabında görüntüleyebilmeniz için önce Excel çalışma kitabı projesindeki veri kaynaklarına veri kümesini eklemeniz gerekir.
 
-1. İçinde **Çözüm Gezgini**, çift *Sheet1.cs* veya *Sheet1.vb* altında **AdventureWorksReport** proje.
+1. **Çözüm Gezgini**, **AdventureWorksReport** projesi altındaki *Sheet1.cs* veya *Sheet1. vb* öğesine çift tıklayın.
 
-     Çalışma kitabını tasarımcıda açılır.
+     Çalışma kitabı tasarımcıda açılır.
 
-2. Üzerinde **veri** menüsünü tıklatın **yeni veri kaynağı Ekle**.
+2. **Veri** menüsünde **Yeni veri kaynağı Ekle**' ye tıklayın.
 
      **Veri kaynağı Yapılandırma Sihirbazı** açılır.
 
-3. Tıklayın **nesne**ve ardından **sonraki**.
+3. **Nesne**' ye ve ardından **İleri**' ye tıklayın.
 
-4. İçinde **bağlamak istediğiniz nesneyi seçin** sayfasında için **Başvuru Ekle**.
+4. **Bağlamak Istediğiniz nesneyi seçin** sayfasında, **Başvuru Ekle**' ye tıklayın.
 
-5. Üzerinde **projeleri** sekmesinde **AdventureWorksDataSet** ve ardından **Tamam**.
+5. **Projeler** sekmesinde, **AdventureWorksDataSet** ' e ve ardından **Tamam**' a tıklayın.
 
-6. Altında **AdventureWorksDataSet** ad **AdventureWorksDataSet** derlemesi tıklayın **AdventureWorksLTDataSet** ve ardından **son** .
+6. **AdventureWorksDataSet** derlemesinin **AdventureWorksDataSet** ad alanı altında, **AdventureWorksLTDataSet** ' e ve ardından **son**' a tıklayın.
 
-     **Veri kaynakları** penceresi açılır ve **AdventureWorksLTDataSet** veri kaynaklarının listesine eklenir.
+     **Veri kaynakları** penceresi açılır ve **AdventureWorksLTDataSet** veri kaynakları listesine eklenir.
 
-## <a name="create-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>Veri kümesi örneğine bağlı ListObject oluşturma
- Çalışma kitabında veri kümesini görüntülemek için oluşturun bir <xref:Microsoft.Office.Tools.Excel.ListObject> dataset örneğine bağlı. Denetimlere veri bağlama hakkında daha fazla bilgi için bkz: [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).
+## <a name="create-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>Veri kümesinin örneğine bağlanan bir ListObject oluşturma
+ Veri kümesini çalışma kitabında göstermek için, veri kümesinin örneğine bağlanan bir <xref:Microsoft.Office.Tools.Excel.ListObject> oluşturun. Verilere yönelik bağlama denetimleri hakkında daha fazla bilgi için bkz. [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).
 
-1. İçinde **veri kaynakları** penceresini genişletin **AdventureWorksLTDataSet** düğümünde **AdventureWorksDataSet**.
+1. **Veri kaynakları** penceresinde, **AdventureWorksDataSet**altındaki **AdventureWorksLTDataSet** düğümünü genişletin.
 
-2. Seçin **ürün** düğümünde görünür ve seçin, aşağı açılan oku tıklatın **ListObject** aşağı açılan listesinde.
+2. **Ürün** düğümünü seçin, görüntülenen aşağı açılan oka tıklayın ve açılan listeden **ListObject** ' i seçin.
 
-     Açılan liste okunu görünmüyorsa, çalışma kitabını tasarımcıda açık olduğundan emin olun.
+     Aşağı açılan ok görünmezse, çalışma kitabının tasarımcıda açık olduğunu onaylayın.
 
-3. Sürükleme **ürün** A1 hücresine tablo.
+3. **Ürün** tablosunu a1 hücresine sürükleyin.
 
-     A <xref:Microsoft.Office.Tools.Excel.ListObject> adlı Denetim `productListObject` çalışma A1 hücresine başlayarak oluşturulur. Aynı anda, adlı bir veri kümesi nesnesi `adventureWorksLTDataSet` ve <xref:System.Windows.Forms.BindingSource> adlı `productBindingSource` projeye eklenir. <xref:Microsoft.Office.Tools.Excel.ListObject> Bağlı <xref:System.Windows.Forms.BindingSource>, sırayla bağlı dataset nesnesine.
+     `productListObject` adlı <xref:Microsoft.Office.Tools.Excel.ListObject> denetim, A1 hücresinden başlayarak çalışma sayfasında oluşturulur. Aynı zamanda, `adventureWorksLTDataSet` adlı bir veri kümesi nesnesi ve `productBindingSource` adlı bir <xref:System.Windows.Forms.BindingSource> projeye eklenir. <xref:Microsoft.Office.Tools.Excel.ListObject> <xref:System.Windows.Forms.BindingSource>bağlanır, bu da DataSet nesnesine bağlanır.
 
-## <a name="add-the-dataset-to-the-data-cache"></a>Veri önbelleğe veri kümesi Ekle
- Çalışma kitabındaki veri kümesine erişim Excel çalışma kitabı projesi dışındaki kod etkinleştirmek için veri kümesine veri önbelleğine eklemeniz gerekir. Veri önbelleği hakkında daha fazla bilgi için bkz. [veri belge düzeyi özelleştirmelerdeki önbelleğe alınmış](../vsto/cached-data-in-document-level-customizations.md) ve [veriyi önbelleğe alma](../vsto/caching-data.md).
+## <a name="add-the-dataset-to-the-data-cache"></a>Veri kümesini veri önbelleğine ekleme
+ Excel çalışma kitabı projesi dışındaki kodun çalışma kitabındaki veri kümesine erişmesini sağlamak için veri kümesini veri önbelleğine eklemeniz gerekir. Veri önbelleği hakkında daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerde önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md) ve [Önbellek verileri](../vsto/caching-data.md).
 
-1. Tasarımcıda **adventureWorksLTDataSet**.
+1. Tasarımcıda **AdventureWorksLTDataSet**' e tıklayın.
 
-2. İçinde **özellikleri** penceresinde **değiştiriciler** özelliğini **genel**.
+2. **Özellikler** penceresinde **değiştiriciler** özelliğini **Public**olarak ayarlayın.
 
-3. Ayarlama **CacheInDocument** özelliğini **True**.
+3. **CacheInDocument** özelliğini **true**olarak ayarlayın.
 
-## <a name="initialize-the-dataset-in-the-workbook"></a>Çalışma kitabındaki veri kümesini Başlat
- Konsol uygulaması kullanarak önbelleğe alınmış veri kümesinden veri almadan önce önbelleğe alınmış veri kümesini verilerle doldurmanız gerekir.
+## <a name="initialize-the-dataset-in-the-workbook"></a>Çalışma kitabındaki veri kümesini başlatma
+ Konsol uygulamasını kullanarak önbelleğe alınmış veri kümesinden verileri almak için önce önbelleğe alınmış veri kümesini verilerle doldurmanız gerekir.
 
-1. İçinde **Çözüm Gezgini**, sağ *Sheet1.cs* veya *Sheet1.vb* tıklayın ve dosya **Kodu Görüntüle**.
+1. **Çözüm Gezgini**, *Sheet1.cs* veya *Sheet1. vb* dosyasını sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
 
-2. Değiştirin `Sheet1_Startup` aşağıdaki kod ile olay işleyicisi. Bu kod örneğini kullanan `ProductTableAdapter` tanımlanan sınıfı **AdventureWorksDataSet** şu anda boş ise, önbellekteki veri kümesini verilerle doldurmak için proje.
+2. `Sheet1_Startup` olay işleyicisini aşağıdaki kodla değiştirin. Bu kod, şu anda boşsa, verileri önbelleğe alınmış veri kümesini dolduracak şekilde, **AdventureWorksDataSet** projesinde tanımlanan `ProductTableAdapter` sınıfının bir örneğini kullanır.
 
      [!code-csharp[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs#8)]
      [!code-vb[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb#8)]
 
-## <a name="checkpoint"></a>Checkpoint
- Oluşturup derler ve hatasız çalışan emin olmak için Excel çalışma kitabı projesi çalıştırın. Bu işlem ayrıca önbellekteki veri kümesini doldurur ve verileri çalışma kitabında kaydeder.
+## <a name="checkpoint"></a>Mak
+ Hatasız derlendiğinden ve çalıştığından emin olmak için Excel çalışma kitabı projesini derleyin ve çalıştırın. Bu işlem, önbelleğe alınmış veri kümesini de doldurur ve verileri çalışma kitabına kaydeder.
 
-### <a name="build-and-run-the-project"></a>Derleme ve proje çalıştırma
+### <a name="build-and-run-the-project"></a>Projeyi derleyin ve çalıştırın
 
-1. İçinde **Çözüm Gezgini**, sağ **AdventureWorksReport** projesinin **hata ayıklama**ve ardından **yeni örnek Başlat**.
+1. **Çözüm Gezgini**, **AdventureWorksReport** projesine sağ tıklayın, **Hata Ayıkla**' yı seçin ve ardından **Yeni örnek Başlat**' ı tıklatın.
 
-     Proje oluşturulur ve Excel çalışma kitabı açılır. Aşağıdakileri doğrulayın:
+     Proje oluşturulmuştur ve çalışma kitabı Excel 'de açılır. Aşağıdakileri doğrulayın:
 
-    - <xref:Microsoft.Office.Tools.Excel.ListObject> Verilerle doldurur.
+    - <xref:Microsoft.Office.Tools.Excel.ListObject> veriyle doldurur.
 
-    - Değer **ListPrice** ilk satır için sütun <xref:Microsoft.Office.Tools.Excel.ListObject> 1431.5. Bu kılavuzda daha sonra bir konsol uygulaması değerleri değiştirmek için kullanacağı **ListPrice** sütun.
+    - <xref:Microsoft.Office.Tools.Excel.ListObject> ilk satırı için **ListPrice** sütunundaki değer 1431,5 ' dir. Bu izlenecek yolda daha sonra, **ListPrice** sütunundaki değerleri değiştirmek için bir konsol uygulaması kullanacaksınız.
 
-2. Çalışma kitabını kaydedin. Dosya adı veya çalışma kitabını konumunu değiştirmeyin.
+2. Çalışma kitabını kaydedin. Dosya adını veya çalışma kitabının konumunu değiştirmeyin.
 
-3. Excel'i kapatın.
+3. Excel 'i kapatın.
 
-## <a name="create-a-console-application-project"></a>Bir konsol uygulama projesi oluşturma
- Önbellekteki veri kümesini çalışma kitabındaki verileri değiştirmek için bir konsol uygulama projesi oluşturun.
+## <a name="create-a-console-application-project"></a>Konsol uygulaması projesi oluşturma
+ Çalışma kitabındaki önbelleğe alınmış veri kümesindeki verileri değiştirmek için kullanılacak bir konsol uygulaması projesi oluşturun.
 
-1. İçinde **Çözüm Gezgini**, sağ **AdventureWorksDataSet** çözümü noktasına **Ekle**ve ardından **yeni proje**.
+1. **Çözüm Gezgini**, **AdventureWorksDataSet** çözümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.
 
-2. İçinde **proje türleri** bölmesini genişletin **Visual C#** veya **Visual Basic**ve ardından **Windows**.
+2. **Proje türleri** bölmesinde,  **C# Visual** veya **Visual Basic**öğesini genişletin ve ardından **Windows**' a tıklayın.
 
-3. İçinde **şablonları** bölmesinde **konsol uygulaması**.
+3. **Şablonlar** bölmesinde **konsol uygulaması**' nı seçin.
 
-4. İçinde **adı** kutusuna **DataReader**. Konumunu değiştirmeyin.
+4. **Ad** kutusuna **DataReader**yazın. Konumu değiştirmeyin.
 
-5.           **Tamam**'ı tıklatın.
+5. **Tamam**'a tıklayın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ekler **DataReader** için proje **Çözüm Gezgini** ve açılır *Program.cs* veya *Module1.vb* kod dosyası.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], **DataReader** projesini **Çözüm Gezgini** ekler ve *program.cs* veya *Module1. vb* kod dosyasını açar.
 
-## <a name="retrieve-data-from-the-cached-dataset-by-using-the-console-application"></a>Konsol uygulaması kullanarak önbelleğe alınmış veri kümesinden veri alın
- Kullanım <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfı yerel verileri okumak için konsol uygulamasındaki `AdventureWorksLTDataSet` nesne. Yerel veri kümesi önbelleğe alınan veri kümesine ilişkin verilerin başlatıldı onaylamak için uygulamayı yerel veri kümesindeki satır sayısını görüntüler.
+## <a name="retrieve-data-from-the-cached-dataset-by-using-the-console-application"></a>Konsol uygulamasını kullanarak önbelleğe alınmış veri kümesinden verileri alma
+ Verileri yerel bir `AdventureWorksLTDataSet` nesnesine okumak için konsol uygulamasındaki <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfını kullanın. Yerel veri kümesinin, önbelleğe alınmış veri kümesindeki verilerle başlatıldığını onaylamak için, uygulama yerel veri kümesindeki satır sayısını görüntüler.
 
-### <a name="retrieve-data-from-the-cached-dataset"></a>Önbelleğe alınmış veri kümesinden veri alın
+### <a name="retrieve-data-from-the-cached-dataset"></a>Önbelleğe alınmış veri kümesinden verileri alma
 
-1. İçinde **Çözüm Gezgini**, sağ **DataReader** projesine **Başvuru Ekle**.
+1. **Çözüm Gezgini**, **DataReader** projesine sağ tıklayın ve **Başvuru Ekle**' ye tıklayın.
 
-2. Üzerinde **.NET** sekmesinde **Microsoft.VisualStudio.Tools.Applications.ServerDocument**.
+2. **.Net** sekmesinde, **Microsoft. VisualStudio. Tools. Applications. ServerDocument**öğesini seçin.
 
-3.           **Tamam**'ı tıklatın.
+3. **Tamam**'a tıklayın.
 
-4. İçinde **Çözüm Gezgini**, sağ **DataReader** projesine **Başvuru Ekle**.
+4. **Çözüm Gezgini**, **DataReader** projesine sağ tıklayın ve **Başvuru Ekle**' ye tıklayın.
 
-5. Üzerinde **projeleri** sekmesinde **AdventureWorksDataSet**, tıklatıp **Tamam**.
+5. **Projeler** sekmesinde, **AdventureWorksDataSet**' i seçin ve **Tamam**' ı tıklatın.
 
-6. Açık *Program.cs* veya *Module1.vb* dosyasını Kod düzenleyicisinde.
+6. Kod düzenleyicisinde *program.cs* veya *Module1. vb* dosyasını açın.
 
-7. Aşağıdaki **kullanarak** (için C#) veya **içeri aktarmalar** (Visual Basic için) kod dosyasının en üstüne deyimi.
+7. Aşağıdaki **using** (for C#) veya **Imports** (for Visual Basic) ifadesini kod dosyasının en üstüne ekleyin.
 
     [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]
     [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]
 
-8. Aşağıdaki kodu ekleyin `Main` yöntemi. Bu kod, aşağıdaki nesneleri bildirir:
+8. `Main` yöntemine aşağıdaki kodu ekleyin. Bu kod aşağıdaki nesneleri bildirir:
 
-   - Örneği `AdventureWorksLTDataSet` içinde tanımlanan tür **AdventureWorksDataSet** proje.
+   - **AdventureWorksDataSet** projesinde tanımlanan `AdventureWorksLTDataSet` türünün bir örneği.
 
-   - Derleme klasöründe AdventureWorksReport çalışma kitabı yolu **AdventureWorksReport** proje.
+   - **AdventureWorksReport** projesinin Build klasöründeki AdventureWorksReport çalışma kitabının yolu.
 
-   - A <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> çalışma kitabındaki verileri önbelleğe erişmek için kullanılacak nesne.
+   - Çalışma kitabındaki veri önbelleğine erişmek için kullanılacak bir <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> nesnesi.
 
      > [!NOTE]
-     > Aşağıdaki kodu kullanarak, çalışma kitabını kaydettiğiniz varsayar *.xlsx* uzantısı. Projenizdeki çalışma kitabının farklı bir uzantısı varsa, yol gerekli olarak değiştirin.
+     > Aşağıdaki kod, çalışma kitabının *. xlsx* uzantısı kullanılarak kaydedildiğini varsayar. Projenizdeki çalışma kitabının farklı bir uzantısı varsa, yolu gereken şekilde değiştirin.
 
      [!code-csharp[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#10)]
      [!code-vb[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#10)]
 
-9. Aşağıdaki kodu ekleyin `Main` yöntemi, önceki adımda eklediğiniz koddan sonra. Bu kod aşağıdaki görevleri gerçekleştirir:
+9. Önceki adımda eklediğiniz koddan sonra, `Main` yöntemine aşağıdaki kodu ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
-   - Kullandığı <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> özelliği <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> çalışma kitabında önbelleğe alınan veri kümesine erişmesine izin sınıfı.
+   - Çalışma kitabındaki önbelleğe alınmış veri kümesine erişmek için <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfının <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> özelliğini kullanır.
 
-   - Önbelleğe alınmış veri kümesinden verileri yerel kümesine okur.
+   - Önbelleğe alınmış veri kümesindeki verileri yerel veri kümesine okur.
 
-   - Satır sayısı, veri olduğunu doğrulamak için yerel veri kümesini görüntüler.
+   - Verilerin olduğunu doğrulamak için yerel veri kümesindeki satır sayısını görüntüler.
 
      [!code-csharp[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#11)]
      [!code-vb[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#11)]
 
-10. Üzerinde **derleme** menüsünde tıklatın **Build DataReader**.
+10. **Yapı** menüsünde, **derleme DataReader**' ı tıklatın.
 
-## <a name="test-the-project"></a>Test projesi
+## <a name="test-the-project"></a>Projeyi test etme
  Konsol uygulamasını çalıştırdığınızda, yerel veri kümesindeki satır sayısını görüntüler.
 
-### <a name="test-the-workbook"></a>Çalışma kitabını test
+### <a name="test-the-workbook"></a>Çalışma kitabını test etme
 
-1. İçinde **Çözüm Gezgini**, sağ **DataReader** proje, işaret **hata ayıklama**ve ardından **yeni örnek Başlat**.
+1. **Çözüm Gezgini**, **DataReader** projesine sağ tıklayın, **Hata Ayıkla**' nın üzerine gelin ve ardından **Yeni örnek Başlat**' a tıklayın.
 
-     Uygulama yerel veri kümesi 295 satır olduğunu bildirir doğrulayın.
+     Uygulamanın, yerel veri kümesinin 295 satırı olduğunu rapor ettiğini doğrulayın.
 
-2. Tuşuna **Enter** uygulamayı kapatmak için.
+2. Uygulamayı kapatmak için **ENTER** tuşuna basın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bu konu başlıkları önbelleğe alınan verilerle çalışma hakkında daha fazla bilgi edinebilirsiniz:
+ Aşağıdaki konulardan önbelleğe alınmış verilerle çalışma hakkında daha fazla bilgi edinebilirsiniz:
 
-- Önbelleğe alınan bir veri kümesindeki verileri Excel başlatmadan değiştirme. Daha fazla bilgi için [izlenecek yol: Çalışma kitabında bir sunucuda önbelleğe alınmış verileri değiştirme](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md).
+- Excel 'i başlatmadan önbelleğe alınmış veri kümesindeki verileri değiştirme. Daha fazla bilgi için bkz. [Izlenecek yol: bir sunucudaki çalışma kitabındaki önbelleğe alınmış verileri değiştirme](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Bir sunucudaki çalışma kitabına veri ekleme](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)
-- [İzlenecek yol: Çalışma kitabında bir sunucuda önbelleğe alınmış verileri değiştirme](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)
+- [İzlenecek yol: sunucudaki çalışma kitabına veri ekleme](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)
+- [İzlenecek yol: sunucudaki çalışma kitabında bulunan önbelleğe alınmış verileri değiştirme](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)

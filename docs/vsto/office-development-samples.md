@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5cc00d56b0abf02f99c7ab320ab0353d1b4b2317
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: b9e20f0d14b2940fdbe8096442848f38183b1db7
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63447148"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985722"
 ---
 # <a name="office-development-samples"></a>Office geliştirme örnekleri
-  Visual Studio, Microsoft Office geliştirici araçları Office çözümleri oluşturmak için nasıl kullanılacağını gösteren örnek uygulamalar içerir. Bu örnek kod söz dizimi yapısı ve Office çözümleri oluşturmak için kullanılan teknikleri gösterir.
+  Visual Studio, Microsoft Office Geliştirici araçlarının Office çözümlerini oluşturmak için nasıl kullanılacağını gösteren örnek uygulamalar içerir. Bu örneklerdeki kod, Office çözümleri oluşturmak için kullanılan söz dizimi, yapıyı ve teknikleri gösterir.
 
- En geçerli örnekler için bkz. [MSDN geliştirici örnekleri: Kodlardan öğrenin](http://go.microsoft.com/fwlink/?LinkID=248199) Microsoft Web sitesinde.
+ En güncel örnekler için bkz. [MSDN geliştirici örnekleri: Microsoft Web sitesinde kod aracılığıyla öğrenme](https://code.msdn.microsoft.com/site/search?query=vsto&f%5B1%5D.Value=vsto&f%5B1%5D.Type=SearchText&f%5B0%5D.Value=11.0&f%5B0%5D.Type=VisualStudioVersion&f%5B0%5D.Text=Visual%20Studio%2011&ac=8) .
 
  [!INCLUDE[note_security_multiplesample](../vsto/includes/note-security-multiplesample-md.md)]
 
@@ -30,15 +30,15 @@ ms.locfileid: "63447148"
 
 |Örnek|Açıklama|
 |------------|-----------------|
-|Excel ana ayrıntı veri örneği|Bir ilişkisel veritabanı veya XML dosyasından veri alın ve bu verileri Excel'de kullanma işlemi gösterilmektedir.|
-|Excel belge koruma teknikleri örneği|Çalışma sayfası denetimlerini yanlışlıkla silme ya da aksi takdirde, çözüm belgenizin önemli bölümleri değiştirme kullanıcıları engellemek için yapısal bileşenler korumak için kullanabileceğiniz çeşitli teknikleri gösterir.|
-|Excel veri analizi örneği|List nesneleri, Özet Tablolar ve grafikler kullanarak Excel'de veri analizi görevlerini yürüten bir stok yönetim uygulaması gösterir.|
-|Word görev bölmesi örneği|Word için basit bir özel görev bölmesi oluşturma işlemini gösterir.|
-|Word içerik denetimleri örneği|Veritabanı alanlarına Word içerik denetimleri bağlama işlemi gösterilmektedir.|
-|Outlook Form Bölgesi RSS Okuyucu örneği|Outlook form bölgeleri RSS akışındaki makaleleri tam içeriğini görüntülemek için nasıl kullanılacağını gösterir.|
-|Şerit denetimleri örneği|Bu örnek, bir Excel çalışma sayfasına Şerit üzerinde görüntülenen özel sekme oluşturma işlemini gösterir. Bu Şerit çoğu Visual Studio araç Office Şerit denetimleri grubunda kullanılabilir denetimleri gösterir.|
-|Kullanıcı Arabirimi Manager örneği|Şeridi özelleştirme, bir özel görev bölmesi ve özel form bölgesini Outlook için VSTO eklentisi içinde genişletilebilirlik arabirimlerini uygulayarak oluşturma gösterilmektedir. Her Şerit, görev bölmesi ve form bölgesi örneğini doğru bir şekilde birbiriyle iletişim kurabilir.|
-|VBA ve VSTO birlikte çalışabilirlik örneği|Bir yöntem belge düzeyi özelleştirmesinde Excel için Visual Basic for Applications (VBA) kodu çalışma kitabı nasıl çağrılacağını gösterir.<br /><br /> Bu örnek yalnızca çevrimiçi kullanılabilir.|
+|Excel Master ayrıntı verileri örneği|İlişkisel bir veritabanından veya XML dosyasından verilerin nasıl alınacağını ve bu verilerin Excel 'de nasıl kullanılacağını gösterir.|
+|Excel belge koruma teknikleri örneği|, Kullanıcıların yanlışlıkla denetimleri silmesini veya çözüm belgenizin önemli bölümlerini değiştirmelerini önlemeye yardımcı olmak üzere bir çalışma sayfasının yapısal bileşenlerini korumak için kullanabileceğiniz çeşitli teknikleri gösterir.|
+|Excel veri analizi örneği|Liste nesneleri, pivot tabloları ve grafikleri kullanarak Excel 'de veri analizi görevlerini yürüten bir envanter yönetimi uygulamasını gösterir.|
+|Word görev bölmesi örneği|Word için basit bir özel görev bölmesi oluşturmayı gösterir.|
+|Word Içerik denetimleri örneği|Word içerik denetimlerinin veritabanı alanlarına nasıl bağlanacağını gösterir.|
+|Outlook form bölgesi RSS okuyucu örneği|Bir RSS akışından makalelerin tüm içeriğini göstermek için Outlook form bölgelerini nasıl kullanacağınızı gösterir.|
+|Şerit denetimleri örneği|Bu örnek, bir Excel çalışma sayfasının şeridinde görünen özel bir sekme oluşturmayı gösterir. Bu özel şeritte, Visual Studio araç kutusu 'nun Office Şerit denetimleri grubunda bulunan denetimlerin çoğu gösterilmektedir.|
+|UI Yöneticisi örneği|Bir VSTO eklentisinin içindeki genişletilebilirlik arabirimlerini uygulayarak bir Şerit özelleştirmesi, özel görev bölmesi ve Outlook için özel form bölgesi oluşturmayı gösterir. Şerit, görev bölmesi ve form bölgesinin her bir örneği birbirleriyle doğru iletişim kurabilir.|
+|VBA ve VSTO birlikte çalışabilirlik örneği|Excel için belge düzeyi özelleştirmesindeki bir yöntemin çalışma kitabındaki Visual Basic for Applications (VBA) kodundan nasıl çağrılacağını gösterir.<br /><br /> Bu örnek yalnızca çevrimiçi olarak kullanılabilir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office programlarındaki ortak görevler](../vsto/common-tasks-in-office-programming.md)
+- [Office programlamada ortak görevler](../vsto/common-tasks-in-office-programming.md)

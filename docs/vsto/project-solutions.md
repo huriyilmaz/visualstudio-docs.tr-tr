@@ -17,17 +17,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f2158918aa6c2487719043abd797eb9d5e8f3f2e
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 84dfe7cf86df2139b06a320d1c6441665a08a1b1
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551388"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985633"
 ---
 # <a name="project-solutions"></a>Proje çözümleri
-  [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)], Microsoft Office projesi için VSTO eklentileri oluşturmak için kullanabileceğiniz proje şablonları sağlar. Projeyi otomatikleştirmek, proje özelliklerini genişletmek veya proje Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz.
+  [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)], Microsoft Office projesi için VSTO eklentileri oluşturmak üzere kullanabileceğiniz proje şablonları sağlar. Projeyi otomatikleştirmek, proje özelliklerini genişletmek veya proje Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz.
 
- VSTO eklentileri hakkında daha fazla bilgi için bkz. VSTO eklentileri ve VSTO eklentilerinin [mimarisi](../vsto/architecture-of-vsto-add-ins.md) [programlamasına](../vsto/getting-started-programming-vsto-add-ins.md) başlama. Microsoft Office ile programlama konusunda yeni başladıysanız bkz. [Visual Studio&#41;'da &#40;çalışmaya başlama Office geliştirme](../vsto/getting-started-office-development-in-visual-studio.md).
+ VSTO eklentileri hakkında daha fazla bilgi için bkz. VSTO eklentileri ve VSTO eklentilerinin [mimarisi](../vsto/architecture-of-vsto-add-ins.md) [programlamasına](../vsto/getting-started-programming-vsto-add-ins.md) başlama. Microsoft Office ile programlama konusunda yeni [başladıysanız bkz. Visual Studio &#40;&#41;'da çalışmaya başlama Office geliştirme](../vsto/getting-started-office-development-in-visual-studio.md).
 
  [!INCLUDE[appliesto_projallapp](../vsto/includes/appliesto-projallapp-md.md)]
 
@@ -36,14 +36,14 @@ ms.locfileid: "69551388"
 ## <a name="automate-project-by-using-the-project-object-model"></a>Proje nesne modelini kullanarak projeyi otomatikleştirin
  Proje nesnesi modeli, projeyi otomatikleştirmek için kullanabileceğiniz birçok türü ortaya koyar. Bu türler, bir projedeki görevleri programlı bir şekilde oluşturma ve değiştirme gibi genel görevleri gerçekleştirmek için kod yazmanıza olanak tanır.
 
- Bir VSTO eklentisinin proje nesne modeline erişmek için, projenizdeki `Application` `ThisAddIn` sınıfının alanını kullanın. Alan, projenin geçerli `Microsoft.Office.Interop.MsProject.Application` örneğini temsil eden bir nesne döndürür. `Application` Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
+ Bir VSTO eklentisinin proje nesne modeline erişmek için, projenizdeki `ThisAddIn` sınıfının `Application` alanını kullanın. `Application` alanı, projenin geçerli örneğini temsil eden bir `Microsoft.Office.Interop.MsProject.Application` nesnesi döndürür. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
 
  Proje nesne modeli ' ne çağırdığınızda, proje için birincil birlikte çalışma derlemesinde sunulan türleri kullanırsınız. Birincil birlikte çalışma derlemesi, VSTO eklentisinin içindeki yönetilen kod ile projedeki COM nesne modelinde bir köprü görevi görür. Proje birincil birlikte çalışma derlemesindeki tüm türler `Microsoft.Office.Interop.MSProject` ad alanında tanımlanır. Birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için bkz. [Office çözümleri &#40;geliştirmeye&#41; genel bakış VSTO](../vsto/office-solutions-development-overview-vsto.md) ve [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md).
 
 ## <a name="use-the-project-object-model-documentation"></a>Proje nesne modeli belgelerini kullanın
- Proje nesne modeli hakkında tüm bilgiler için, proje VBA nesne modeli başvurusuna başvurabilirsiniz. VBA nesne modeli başvurusu, proje nesne modelini Visual Basic for Applications (VBA) koduna açık olarak belgeler. Daha fazla bilgi için bkz. [proje 2010 nesne modeli başvurusu](http://go.microsoft.com/fwlink/?LinkId=199771).
+ Proje nesne modeli hakkında tüm bilgiler için, proje VBA nesne modeli başvurusuna başvurabilirsiniz. VBA nesne modeli başvurusu, proje nesne modelini Visual Basic for Applications (VBA) koduna açık olarak belgeler. Daha fazla bilgi için bkz. [proje nesne modeli başvurusu](/office/vba/api/project.object).
 
- VBA nesne modeli başvurusundaki tüm nesneler ve Üyeler, proje birincil birlikte çalışma derlemesindeki (PIA) türlere ve üyelere karşılık gelir. Örneğin, VBA nesne modeli başvurusundaki takvim nesnesi, proje PIA içindeki `Microsoft.Office.Interop.MSProject.Calendar` türe karşılık gelir. VBA nesne modeli başvurusu birçok özellik, yöntem ve olay için kod örnekleri sağlasa da, bunları tarafından oluşturduğunuz bir proje VSTO eklentisi projesinde kullanmak istiyorsanız bu başvurudaki VBA kodunu Visual Basic C# veya görsele çevirmeniz gerekir Visual Studio 'Yu kullanma.
+ VBA nesne modeli başvurusundaki tüm nesneler ve Üyeler, proje birincil birlikte çalışma derlemesindeki (PIA) türlere ve üyelere karşılık gelir. Örneğin, VBA nesne modeli başvurusundaki takvim nesnesi, proje PIA içindeki `Microsoft.Office.Interop.MSProject.Calendar` türüne karşılık gelir. VBA nesne modeli başvurusu birçok özellik, yöntem ve olay için kod örnekleri sağlasa da, bunları tarafından oluşturduğunuz bir proje VSTO eklentisi projesinde kullanmak istiyorsanız bu başvurudaki VBA kodunu Visual Basic C# veya görsele çevirmeniz gerekir Visual Studio 'Yu kullanma.
 
 > [!NOTE]
 > Şu anda, proje birincil birlikte çalışma derlemesi için başvuru belgesi yoktur.
@@ -51,19 +51,19 @@ ms.locfileid: "69551388"
 ### <a name="infrastructure-types-in-the-project-primary-interop-assembly"></a>Proje birincil birlikte çalışma derlemesindeki altyapı türleri
  Projeyi PIA kullanan bir kod yazdığınızda, VBA başvurusunda açıklanmayan birçok tür fark edebilirsiniz. Bu ek türler, projenin COM tabanlı nesne modelindeki nesneleri yönetilen koda çevirmeye yardımcı olur, doğrudan kodunuzda kullanılmaya yönelik değildir.
 
- Daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](http://go.microsoft.com/fwlink/?LinkId=189592).
+ Daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](/previous-versions/office/office-12/ms247299(v=office.12)).
 
 ## <a name="customize-the-user-interface-of-project"></a>Projenin Kullanıcı arabirimini özelleştirme
  Aşağıdaki yollarla proje Kullanıcı arabirimini özelleştirebilirsiniz.
 
 |Görev|Daha fazla bilgi için|
 |----------|--------------------------|
-|Projedeki Şerite özel sekmeler ekleme|[Şerite Genel Bakış](../vsto/ribbon-overview.md)|
+|Projedeki Şerite özel sekmeler ekleme|[Şerite genel bakış](../vsto/ribbon-overview.md)|
 
  Projenin ve diğer Microsoft Office uygulamalarının Kullanıcı arabirimini özelleştirme hakkında daha fazla bilgi için bkz. [OFFICE UI özelleştirmesi](../vsto/office-ui-customization.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Proje için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)
+- [İzlenecek yol: proje için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)
 - [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
 - [Office çözümleri geliştirmesine genel &#40;bakış VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [VSTO Eklentileri Mimarisi](../vsto/architecture-of-vsto-add-ins.md)
@@ -72,4 +72,4 @@ ms.locfileid: "69551388"
 - [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md)
 - [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md)
 - [Office UI özelleştirmesi](../vsto/office-ui-customization.md)
-- [Office geliştirmede proje 2010 ve Project Server 2010](http://go.microsoft.com/fwlink/?LinkId=199016)
+- [Office geliştirmede proje 2010 ve Project Server 2010](/previous-versions/office/developer/office-2010/ee758031(v=office.14))

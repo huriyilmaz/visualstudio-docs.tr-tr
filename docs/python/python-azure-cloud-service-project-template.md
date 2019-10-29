@@ -1,6 +1,6 @@
 ---
-title: Python için Azure bulut hizmeti projesi şablonu
-description: Visual Studio, Azure cloud services rol dağıtımı, bağımlılıkları, dahil etme ve sorun giderme Python'da yazılmış için şablonlar sağlar.
+title: Python için Azure bulut hizmeti proje şablonu
+description: Visual Studio, rol dağıtımı, bağımlılıklar ve sorun giderme dahil olmak üzere Python 'da yazılmış Azure bulut hizmetleri için şablonlar sağlar.
 ms.date: 11/12/2018
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,96 +11,96 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 81dbe6189557f38daa23983a100c295654299a5d
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.openlocfilehash: 4d205ee2bbc0a6e9c44c34f3b0487abb4f22283e
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154864"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983657"
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python için Azure bulut hizmeti projeleri
 
-Visual Studio, Python kullanarak Azure bulut hizmetleri oluşturmaya yardımcı olması için şablonlar başlama sağlar.
+Visual Studio, Python kullanarak Azure Cloud Services oluşturmaya başlamanıza yardımcı olacak şablonlar sağlar.
 
-A [bulut hizmeti](https://docs.microsoft.com/azure/cloud-services/) oluşur herhangi bir sayıda *çalışan rolleri* ve *web rolleri*, her biri kavramsal olarak ayrı bir görev gerçekleştiren ancak için ayrı olarak çoğaltılabilir arasında ölçeklendirme için gerektiği şekilde sanal makineler. Web rolleri için ön uç web uygulamalarını barındırmak sağlar. Bu tür bir uygulama yazmak için Python ilgili olduğu WSGI destekleyen herhangi bir web çerçevesi kullanılabilir (tarafından desteklenen [Web projesi şablonu](python-web-application-project-templates.md)). Çalışan rolleri, doğrudan kullanıcılar ile etkileşimde uzun süre çalışan işlemler için tasarlanmıştır. Bunlar genellikle olun ile birlikte yüklenir "azure" paketin içindeki paketleri kullanımı [ `pip install azure` ](https://pypi.org/project/azure).
+[Bulut hizmeti](/azure/cloud-services/) herhangi bir sayıda *çalışan rolünden* ve *web rolünden*oluşur ve her biri kavramsal olarak ayrı bir görev gerçekleştirir, ancak ölçeklendirme için gerektiğinde sanal makinelerde ayrı olarak çoğaltılabilirler. Web rolleri, ön uç Web uygulamaları için barındırma sağlar. Python 'un ilgilendiğinde, WSGI 'yi destekleyen herhangi bir Web çerçevesi bu tür bir uygulamayı yazmak için kullanılabilir ( [Web projesi şablonu](python-web-application-project-templates.md)tarafından desteklenir). Çalışan rolleri, kullanıcılarla doğrudan etkileşimde bulunmayan uzun süre çalışan işlemlere yöneliktir. Genellikle, [`pip install azure`](https://pypi.org/project/azure)ile yüklenen "Azure" paketindeki paketleri kullanırlar.
 
-Bu makalede, Visual Studio 2017 ve üzeri sürümlerde proje şablonu ve diğer destek ile ilgili ayrıntılar yer almaktadır (önceki sürümler benzerdir ancak bazı farklardır). Python'dan Azure ile çalışma hakkında daha fazla bilgi için ziyaret [Azure Python Geliştirici Merkezi](https://docs.microsoft.com/azure/python/).
+Bu makalede, Visual Studio 2017 ve üzeri sürümlerde proje şablonu ve diğer destek ile ilgili ayrıntılar yer almaktadır (önceki sürümler benzerdir ancak bazı farklardır). Python 'dan Azure ile çalışma hakkında daha fazla bilgi için [Azure Python Geliştirici Merkezi](/azure/python/)' ni ziyaret edin.
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-1. Yükleme [Visual Studio için Azure .NET SDK'sı](https://visualstudio.microsoft.com/vs/azure-tools/), bulut hizmeti şablonu kullanmak için gereklidir.
-1. Visual Studio'da **dosya** > **yeni** > **proje**seçin ve ardından "Azure Python" için arama **Azure bulut Hizmet** listesinden:
+1. Bulut hizmeti şablonunu kullanmak için gerekli olan [Visual Studio Için Azure .NET SDK 'sını](https://visualstudio.microsoft.com/vs/azure-tools/)yükler.
+1. Visual Studio 'da **dosya** > **Yeni** > **Proje**' yi seçin, ardından "Azure Python" araması yapın ve listeden **Azure Cloud Service** ' i seçin:
 
-    ![Python için Azure bulut projesi şablonu](media/template-azure-cloud-project.png)
+    ![Python için Azure bulut proje şablonu](media/template-azure-cloud-project.png)
 
-1. Eklenecek bir veya daha fazla rol seçin. Bulut projeleri en uygun dilde kolayca uygulamanızı her bir parçasının yazabilmesi farklı dillerde yazılmış rollerini birleştirmeniz. Bu iletişim kutusunu tamamladıktan sonra yeni rolleri projeye eklemek için sağ **rolleri** içinde **Çözüm Gezgini** ve altındaki öğeleri seçin **Ekle**.
+1. Dahil edilecek bir veya daha fazla rol seçin. Bulut projeleri farklı dillerde yazılmış rolleri birleştirebilir, böylece uygulamanızın her bölümünü en uygun dilde kolayca yazabilirsiniz. Bu iletişim kutusunu tamamladıktan sonra projeye yeni roller eklemek için **Çözüm Gezgini** **Roller** ' e sağ tıklayın ve **Ekle**' nin altındaki öğelerden birini seçin.
 
     ![Azure bulut proje şablonunda rol ekleme](media/template-azure-cloud-service-project-wizard.png)
 
-1. Tek tek rol projeleri oluşturulduğunda bunlardan birini kullanan bir rolü seçtiyseniz, Django, Bottle veya Flask çerçeveleri gibi ek Python paketlerini yüklemek için istenebilir.
+1. Tek tek rol projeleri oluşturulduğunda, bunlardan birini kullanan bir rol seçtiyseniz Docgo, şişe veya Flask çerçeveleri gibi ek Python paketleri kurmanız istenebilir.
 
-1. Yeni bir rol projenize ekledikten sonra yapılandırma yönergeleri görünür. Yapılandırma değişiklikleri genellikle gereksizdir, ancak gelecekte projelerinizi özelleştirme için yararlı olabilir. Aynı anda birden çok rol eklerken, yalnızca son rolü yönergeleri açık kalmasını unutmayın. Diğer roller için kendi ilgili yönergeler ve sorun giderme ipuçları ancak bulabilirsiniz *readme.mht* rolün kök veya bulunan dosyaları *bin* klasör.
+1. Projenize yeni bir rol eklendikten sonra, yapılandırma yönergeleri görünür. Yapılandırma değişiklikleri genellikle gereksizdir, ancak projelerinizi daha sonra özelleştirmek için faydalı olabilir. Aynı anda birden çok rol eklenirken, yalnızca son rolün yönergelerinin açık kalacağını unutmayın. Bununla birlikte, ilgili *Benioku. mht* dosyalarındaki diğer roller için, rol kökünde veya *bin* klasöründe bulunan yönergeler ve sorun giderme ipuçları bulabilirsiniz.
 
-1. Bir projenin *bin* klasör da Python, tüm yükleme dahil olmak üzere uzaktan sanal makineyi yapılandırmak için kullanılan bir veya iki PowerShell betikleri içerir [ *requirements.txt* ](#dependencies) dosya projenizde ve gerekirse IIS ayarı. En yaygın seçenekler başka yöntemlerle de yönetilebilir, ancak dağıtımınız için bu dosyaları istediğiniz gibi düzenleyebilirsiniz (bkz [rol dağıtımı yapılandırma](#configure-role-deployment) aşağıda). Eski yapılandırma betiğini dosyaları kullanılabilir durumda değilse, bunun yerine kullanıldığı gibi bu dosyaları kaldırma öneririz değil.
+1. Bir projenin *bin* klasörü, Python yükleme, projenizdeki tüm [*gereksinimler. txt*](#dependencies) dosyası ve gerekirse IIS 'yi ayarlama dahil olmak üzere uzak sanal makineyi yapılandırmak için kullanılan bir veya iki PowerShell komut dosyasını da içerir. En yaygın seçeneklerin diğer yollarla yönetilebilmesi için, bu dosyaları dağıtımınıza istediğiniz şekilde düzenleyebilirsiniz (bkz. aşağıdaki [rol dağıtımını yapılandırma](#configure-role-deployment) ). Dosyalar kullanılabilir değilse, eski bir yapılandırma betiği kullanıldığından, bu dosyaları kaldırmayı önermiyor.
 
     ![Çalışan rolü destek dosyaları](media/template-azure-cloud-service-worker-role-support-files.png)
 
-    Bu yapılandırma betiklerini yeni bir projeye eklemek için projeye sağ tıklayın, **Ekle** > **yeni öğe**, ya da seçin **Web rolü destek dosyalarını** veya **Çalışan rolü destek dosyalarını**.
+    Bu yapılandırma betiklerini yeni bir projeye eklemek için projeye sağ tıklayın, > **Yeni öğe** **Ekle** ' yi seçin ve **Web rolü destek dosyaları** ya da **çalışan rolü destek dosyaları**' nı seçin.
 
-## <a name="configure-role-deployment"></a>Rol dağıtımı yapılandırma
+## <a name="configure-role-deployment"></a>Rol dağıtımını yapılandırma
 
-PowerShell betikleri rol projenin *bin* klasörü bu role dağıtımını kontrol ve yapılandırmasını özelleştirmek için düzenlenebilir:
+Bir rol projesinin *bin* klasöründeki PowerShell betikleri, bu rolün dağıtımını denetler ve yapılandırmayı özelleştirmek için düzenlenebilir.
 
-- *ConfigureCloudService.ps1* web ve çalışan rolleri için genellikle yükleyin ve Python sürümünü ayarlama bağımlılıkları yapılandırmak için kullanılır.
-- *Launchworker.ps1'i* yalnızca çalışan rolleri için kullanılır ve başlangıç davranışını değiştirmek, komut satırı bağımsız değişkenlerini ekleyin veya ortam değişkenleri eklemek için kullanılır.
+- *Configurechoparlör Service. ps1* , genellikle bağımlılıkları yükleyip yapılandırmak ve Python sürümünü ayarlamak için Web ve çalışan rolleri için kullanılır.
+- *Launchworker. ps1* yalnızca çalışan rolleri için kullanılır ve başlangıç davranışını değiştirmek, komut satırı bağımsız değişkenleri eklemek veya ortam değişkenleri eklemek için kullanılır.
 
-Her iki dosya özelleştirme için yönergeler içerir. Temel bulut hizmeti proje için başka bir görev ekleyerek kendi Python sürümünü yükleyebilirsiniz *ServiceDefinition.csdef* ayarı dosyası `PYTHON` değişkenini kendi yüklü *python.exe*(veya eşdeğer) yolu. Zaman `PYTHON` olan ayarlayın, Python Nuget'ten yüklü değil.
+Her iki dosya de özelleştirmeye yönelik yönergeler içerir. Ayrıca, ana bulut hizmeti projesinin *ServiceDefinition. csdef* dosyasına başka bir görev ekleyerek, Python 'un kendi sürümünüzü yükleyebilirsiniz. `PYTHON` değişkenini yüklü *Python. exe* (veya eşdeğer) yoluna ayarlayabilirsiniz. `PYTHON` ayarlandığında, Python, NuGet 'ten yüklenmez.
 
-Ek yapılandırma şu şekilde gerçekleştirilebilir:
+Ek yapılandırma aşağıdaki şekilde gerçekleştirilebilir:
 
-1. Kullanarak paketleri yüklemeniz `pip` güncelleştirerek *requirements.txt* projenizin kök dizindeki dosya. *ConfigureCloudService.ps1* betik dağıtımı bu dosyayı yükler.
-1. Ortam değişkenlerini ayarlama değiştirerek, *web.config* dosyası (web rolleri) veya `Runtime` bölümünü, *ServiceDefinition.csdef* dosyası (çalışan rolleri).
-1. Komut ve komut satırında değiştirerek bir çalışan rolü için kullanılacak değişkenleri belirtin `Runtime/EntryPoint` bölümünü, *ServiceDefinitions.csdef* dosya.
-1. Ana işleyicisi komut dosyası bir web rolü için *web.config* dosya.
+1. Projenizin kök dizinindeki *requirements. txt* dosyasını güncelleştirerek `pip` kullanarak paket yükler. *Configurechoparlör Service. ps1* betiği bu dosyayı dağıtıma yüklenir.
+1. *Web. config* dosyanızı (Web rolleri) veya *ServiceDefinition. csdef* dosyanızın (çalışan rolleri) `Runtime` bölümünü değiştirerek ortam değişkenlerini ayarlayın.
+1. *Servicedefinitions. csdef* dosyanızın `Runtime/EntryPoint` bölümündeki komut satırını değiştirerek bir çalışan rolü için kullanılacak betiği ve bağımsız değişkenleri belirtin.
+1. Web *. config* dosyası aracılığıyla bir Web rolü için ana işleyici betiği ayarlayın.
 
-## <a name="test-role-deployment"></a>Rol dağıtımı test etme
+## <a name="test-role-deployment"></a>Test rolü dağıtımı
 
-Rollerinizi yazılırken, bulut hizmeti öykünücüsü kullanarak yerel olarak bulut projenizi test edebilirsiniz. Öykünücü ile Azure SDK Tools dahil edilmiştir ve Azure'a, bulut hizmetinizin yayımlandığında kullanılan ortam sınırlı bir sürümüdür.
+Rollerinizi yazarken, bulut hizmeti öykünücüsünü kullanarak bulut projenizi yerel olarak test edebilirsiniz. Öykünücü Azure SDK Tools dahildir ve bulut hizmetiniz Azure 'da yayımlandığında kullanılan ortamın sınırlı bir sürümüdür.
 
-Öykünücü başlatmak için önce bulut projenizi olduğundan çözümünüzdeki başlangıç projesine sağ tıklatıp seçerek olun **başlangıç projesi olarak ayarla**. Ardından **hata ayıklama** > **hata ayıklamayı Başlat** (**F5**) veya **hata ayıklama** > **olmadan Başlat Hata ayıklama** (**Ctrl**+**F5**).
+Öykünücüyü başlatmak için önce bulut projenizin çözümünüzdeki başlangıç projesi olduğundan emin olun ve **Başlangıç projesi olarak ayarla**' yı seçin. Ardından hata ayıklamayı **Başlat** (**F5** **) veya hata ayıklama > ** hata **ayıklama olmadan başlat** ' ı ** > seçin (** **CTRL**+**F5**).
 
-Öykünücü sınırlamaları nedeniyle bu, Python kodunda hata ayıklama mümkün olmadığını unutmayın. Bu nedenle önerilir debug rolleri bağımsız olarak çalıştırarak ve daha sonra öykünücü yayımlanmadan önce test tümleştirmesi için.
+Öykünücüdeki sınırlamalar nedeniyle Python kodunuzda hata ayıklama mümkün olmadığı unutulmamalıdır. Bu nedenle, rolleri bağımsız olarak çalıştırarak hata ayıklamanızı ve yayımlamadan önce tümleştirme testi için öykünücüyü kullanmanızı öneririz.
 
-## <a name="deploy-a-role"></a>Bir rol dağıtın
+## <a name="deploy-a-role"></a>Rol dağıtma
 
-Açmak için **Yayımla** rolü projesi Sihirbazı'nı seçin **Çözüm Gezgini** seçip **derleme** > **Yayımla** gelen ana menü veya projeye sağ tıklayıp seçin **Yayımla**.
+**Yayımla** Sihirbazı 'nı açmak için **Çözüm Gezgini** ' de rol projesi seçin ve ana menüden **derleme** > **Yayımla** ' yı seçin veya projeye sağ tıklayıp **Yayımla**' yı seçin.
 
-Yayımlama işlemi iki aşama gerektirir. İlk olarak, Visual Studio bulut hizmetiniz için tüm rolleri içeren tek bir paket oluşturur. Bu, her rol için bir veya daha fazla sanal makine başlatır ve kaynak dağıtır Azure'a dağıtılan bir pakettir.
+Yayımlama işlemi iki aşamadan oluşur. İlk olarak, Visual Studio bulut hizmetiniz için tüm rolleri içeren tek bir paket oluşturur. Bu paket, her rol için bir veya daha fazla sanal makine başlatan ve kaynağı dağıtan Azure 'a dağıtılır.
 
-Her sanal makineyi etkinleştirir olarak yürütülmeden *ConfigureCloudService.ps1* betik ve tüm bağımlılıklarını yükler. Varsayılan olarak bu betik Python'dan en güncel sürümünü yükler [NuGet](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) ve belirtilen herhangi bir paket bir *requirements.txt* dosya.
+Her sanal makine etkinleştiğinde *Configurechoparlör Service. ps1* betiğini yürütür ve tüm bağımlılıkları kurar. Bu komut dosyası varsayılan olarak, [NuGet](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) 'den en son Python sürümünü ve *requirements. txt* dosyasında belirtilen paketleri kurar.
 
-Son olarak, çalışan rolleri yürütme *Launchworker.ps1'i*, başladığı Python betiğinizi çalıştırmak; rolleri başlatma IIS web ve web isteklerini işleme başlayın.
+Son olarak, çalışan rolleri, Python betiğinizi çalıştırmaya başlayan *Launchworker. ps1*öğesini yürütür; Web rolleri IIS 'yi başlatır ve Web isteklerini işlemeye başlar.
 
-## <a name="dependencies"></a>Bağımlılıkları
+## <a name="dependencies"></a>Bağımlılıklar
 
-Cloud Services *ConfigureCloudService.ps1* betik `pip` Python bağımlılıklar kümesini yüklemek için. Bağımlılıklar adlı bir dosyaya belirtilmelidir *requirements.txt* (değiştirerek özelleştirilebilir *ConfigureCloudService.ps1*). Dosya ile yürütülür `pip install -r requirements.txt` başlatmanın parçası.
+Cloud Services için *Configurechoparlör Service. ps1* betiği bir Python bağımlılıkları kümesini yüklemek için `pip` kullanır. Bağımlılıklar, *requirements. txt* adlı bir dosyada belirtilmelidir ( *Configurechoparlör Service. ps1*' i değiştirerek özelleştirilebilir). Dosya, başlatmanın bir parçası olarak `pip install -r requirements.txt` ile yürütülür.
 
-Önceden derlenmiş ikili dosyaları C uzantıları ile tüm kitaplıkları sağlamalısınız bulut hizmeti örnekleri C derleyiciler içermez unutmayın.
+Bulut hizmeti örneklerinin C derleyicileri içermiyorsa, bu nedenle C uzantılarına sahip tüm kitaplıkların önceden derlenmiş ikili dosyalar sağlaması gerekir.
 
-pip ve bağımlılıklarını yanı sıra, paketleri *requirements.txt*, otomatik olarak yüklenir ve ücrete tabi bant genişliği kullanımı say. Bkz: [gerekli paketleri yönetme](managing-required-packages-with-requirements-txt.md) yönetme ile ilgili ayrıntılar için *requirements.txt* dosyaları.
+PIP ve bağımlılıkları ve *gereksinimleri. txt*içindeki paketler otomatik olarak indirilir ve Borçlandırılabilir bant genişliği kullanımı olarak sayılabilir. *Requirements. txt* dosyalarını yönetme hakkında ayrıntılı bilgi için bkz. [gerekli paketleri yönetme](managing-required-packages-with-requirements-txt.md) .
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Dağıtımdan sonra web veya çalışan rolü doğru şekilde davranmaz, aşağıdakileri denetleyin:
+Web veya çalışan rolünüzün dağıtımdan sonra düzgün davranması durumunda, aşağıdakileri denetleyin:
 
-- Python projenizi içeren bir *bin\\*  klasörle (en az):
+- Python projeniz, (en az) içeren bir *bin\\* klasörü içerir:
 
-  - *ConfigureCloudService.ps1*
-  - *Launchworker.ps1'i* (çalışan rolleri için)
-  - *PS.cmd*
+  - *Configurecses hizmeti. ps1*
+  - *Launchworker. ps1* (çalışan rolleri için)
+  - *PS. cmd*
 
-- Python projenizi içeren bir *requirements.txt* tüm bağımlılıkları (veya alternatif olarak, bir tekerlek dosyaları koleksiyonunu) listeleme dosyası.
-- Bulut hizmetinizde uzak masaüstünü etkinleştirme ve günlük dosyalarını inceleyin.
-- Günlüklerinde *ConfigureCloudService.ps1* ve *Launchworker.ps1'i* depolanır *C:\Resources\Directory\%Roleıd %. DiagnosticStore\LogFiles* uzak bilgisayardaki klasör.
-- Web rolleri yazma ek günlükler yapılandırılmış bir yola *web.config*, yani yolunda `WSGI_LOG` appSetting. Çoğu normal IIS veya Fastcgı günlüğünü de çalışır.
-- Şu anda *LaunchWorker.ps1.log* çıkış veya Python çalışanı rolünüz tarafından görüntülenen hataları görüntülemek için tek yolu bir dosyadır.
+- Python projeniz, tüm bağımlılıkları (veya alternatif olarak bir tekerlek dosyaları koleksiyonunu) listelemek için bir *requirements. txt* dosyası içerir.
+- Bulut hizmetinizde uzak masaüstü 'Nü etkinleştirin ve günlük dosyalarını araştırın.
+- *Configurechoparlör Service. ps1* ve *launchworker. ps1* günlükleri *C:\resources\directory\%RoleID% yolunda depolanır. Uzak bilgisayardaki DiagnosticStore\LogFiles* klasörü.
+- Web rolleri, *Web. config*' de yapılandırılmış bir yola ek Günlükler yazabilir, yani `WSGI_LOG` AppSetting yolunda yer alabilir. Çoğu normal IIS veya FastCGI günlüğü de geçerlidir.
+- Şu anda, Python Worker rolünüzde görüntülenen çıktıyı veya hataları görüntülemenin tek yolu, *launchworker. ps1. log* dosyasıdır.

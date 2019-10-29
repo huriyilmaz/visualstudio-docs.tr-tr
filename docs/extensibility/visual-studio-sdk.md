@@ -14,12 +14,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41bffbc248d9004248a3552f335dccefaba72cca
-ms.sourcegitcommit: 90c3187d804ad7544367829d07ed4b47d3f8a72d
+ms.openlocfilehash: 4803fbb0887deaf140836263ca82d772b29112f7
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822151"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981694"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK, Visual Studio özelliklerini genişletmenize veya yeni özellikleri Visual Studio 'da tümleştirmenize yardımcı olur. Uzantılarınızın yanı sıra Visual Studio Market diğer kullanıcılara da dağıtabilirsiniz. Aşağıda, Visual Studio 'Yu genişletebilmeniz için bazı yollar verilmiştir:
@@ -41,7 +41,7 @@ Visual Studio SDK, Visual Studio özelliklerini genişletmenize veya yeni özell
   Daha önce hiç bir Visual Studio uzantısı yazmadıysanız, bu özellikler hakkında daha fazla bilgi ve [Visual Studio uzantıları geliştirmeye Başlarken](../extensibility/starting-to-develop-visual-studio-extensions.md)hakkında daha fazla bilgi bulmanız gerekir.
 
 ## <a name="install-the-visual-studio-sdk"></a>Visual Studio SDK’yı Yükleme
- Visual Studio SDK, Visual Studio kurulumunda isteğe bağlı bir özelliktir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio SDK, Visual Studio kurulumunda isteğe bağlı bir özelliktir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>Visual Studio 2017 SDK 'daki yenilikler
  Visual Studio SDK, VSıX v3 biçimi gibi bazı yeni özelliklerin yanı sıra uzantınızı güncelleştirmenizi gerektirebilecek büyük değişiklikler içerir. Daha fazla bilgi için bkz. [Visual Studio 2017 SDK 'daki](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)yenilikler.
@@ -67,16 +67,16 @@ Visual Studio SDK, Visual Studio özelliklerini genişletmenize veya yeni özell
 
  [VSX Arcana bloguna](https://blogs.msdn.microsoft.com/vsx/) daha fazla bilgi ve Microsoft MVP 'leri tarafından yazılmış çok sayıda blog bulabilirsiniz:
 
-- [Sık kullanılan Visual Studio uzantıları](http://geekswithblogs.net/sdorman/archive/2014/10/05/favorite-visual-studio-extensions.aspx)
+- [Sık kullanılan Visual Studio uzantıları](https://scottdorman.blog/2014/10/05/favorite-visual-studio-extensions/)
 
 - [Visual Studio genişletilebilirliği](http://www.visualstudioextensibility.com/overview/vs/)
 
-- [Visual Studio 'Yu genişletme](http://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)
+- [Visual Studio 'Yu genişletme](https://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
-- [Nasıl yapılır: Genişletilebilirlik projelerini Visual Studio 2017 'ye geçirme](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-- [SSS: Eklentileri VSPackage uzantılarına dönüştürme](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)
+- [Nasıl yapılır: genişletilebilirlik projelerini Visual Studio 2017 'ye geçirme](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
+- [SSS: eklentileri VSPackage uzantılarına dönüştürme](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)
 - [Yönetilen kodda birden çok iş parçacığını yönetme](../extensibility/managing-multiple-threads-in-managed-code.md)
 - [Menüleri ve komutları Genişlet](../extensibility/extending-menus-and-commands.md)
 - [Araç çubuklarına komut ekleme](../extensibility/adding-commands-to-toolbars.md)

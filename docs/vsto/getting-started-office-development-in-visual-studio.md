@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7a8a49f2b72745dac18a46fe8567578bca090834
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 1439bef59c621523b74f0e0634cd809deea1f3ee
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551500"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986071"
 ---
 # <a name="get-started-office-development-in-visual-studio"></a>Kullanmaya başlayın (Visual Studio 'da Office geliştirme)
   Bu bölümde, Visual Studio 'da Microsoft Office geliştirici araçlarını kullanmaya başlamanıza yardımcı olacak konular yer almaktadır.
@@ -33,7 +33,7 @@ ms.locfileid: "69551500"
 
 - [.NET Framework 4 ' ü veya .NET Framework 4,5 ' i hedefleyen Office projelerinin tasarımında yapılan değişiklikler](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
 
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] Veya sonraki sürümlerini hedefleyen Office projelerinin yeni tasarımını açıklar ve Office projelerinde [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha sonraki bir sürümüne geçiş yaptığınız koda yapılan değişiklikleri listeler.
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki sürümlerini hedefleyen Office projelerinin yeni tasarımını açıklar ve [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki sürümlere geçirebileceğiniz Office projelerindeki koda yapılan son değişiklikleri listeler.
 
 - [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)
 
@@ -74,7 +74,7 @@ ms.locfileid: "69551500"
 
 - [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
 
- Office projesi oluşturma ve projenizi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]yapılandırma hakkında bilgi sağlar.
+ Office projesi oluşturma ve [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]içinde projenizi yapılandırma hakkında bilgi sağlar.
 
 - [Office çözümleri geliştirme](../vsto/developing-office-solutions.md)
 
@@ -88,4 +88,4 @@ ms.locfileid: "69551500"
 
  Kullanıcılarınız için Office çözümlerini nasıl kullanabileceğiniz hakkında bilgi sağlar ve bir dağıtım yöntemi seçip güvenliği ayarladığınızda göz önünde bulundurmanız gereken başlıca sorunları açıklar.
 
-- [Office teknik makaleleri ve görsel nasıl yapılır konusunda Visual Studio Araçları](http://go.microsoft.com/fwlink/?LinkID=106640) Visual Studio kullanılarak oluşturulan Office çözümleriyle ilgili videolar ve teknik makalelere bağlantılar içerir.
+- [Office teknik makaleleri ve görsel nasıl yapılır konusunda Visual Studio Araçları](/previous-versions/office/developer/office-2007/bb871648(v=office.12)) Visual Studio kullanılarak oluşturulan Office çözümleriyle ilgili videolar ve teknik makalelere bağlantılar içerir.

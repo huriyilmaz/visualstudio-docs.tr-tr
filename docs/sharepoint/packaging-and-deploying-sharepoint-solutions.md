@@ -14,93 +14,93 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c187865518c9556d63d9e5e632ec5c658fc3e0f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 45815e03d887f4d22f2559acf741f612cab34c49
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62953510"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986212"
 ---
-# <a name="package-and-deploy-sharepoint-solutions"></a>Paketleme ve SharePoint çözümlerini dağıtma
-  Genellikle, bir SharePoint çözüm, bir çözüm paketi (.wsp) dosyası kullanarak bir SharePoint sunucusuna dağıtılır. Visual Studio, SharePoint Proje öğeleri özelliklerini düzenlemek ve SharePoint özelliklerinizi dağıtmak için bir paket oluşturmak için kullanabilirsiniz.
+# <a name="package-and-deploy-sharepoint-solutions"></a>SharePoint çözümlerini paketleme ve dağıtma
+  Genellikle, bir SharePoint çözümü bir SharePoint sunucusuna bir çözüm paketi (. wsp) dosyası kullanılarak dağıtılır. SharePoint proje öğelerinizi Özellikler halinde organize etmek ve SharePoint özelliklerinizi dağıtmak üzere bir paket oluşturmak için Visual Studio 'Yu kullanabilirsiniz.
 
  Bu konuda, aşağıdaki bilgiler sağlanmaktadır:
 
-- [Özellikler ve paketler oluşturun](#create-features-and-packages)
+- [Özellik ve paket oluşturma](#create-features-and-packages)
 
-- [Özellik ve paketleme araç desteği](#feature-and-packaging-tool-support)
+- [Özellik ve paketleme aracı desteği](#feature-and-packaging-tool-support)
 
 - [SharePoint çözümlerini dağıtma](#deploy-sharepoint-solutions)
 
-- [Dosyaları SharePoint çözümlerini dağıtma](#deploy-files-in-sharepoint-solutions)
+- [SharePoint Çözümlerinde dosya dağıtma](#deploy-files-in-sharepoint-solutions)
 
-## <a name="create-features-and-packages"></a>Özellikler ve paketler oluşturun
- Visual Studio ile ilgili SharePoint öğeleri gruplandırmak için kullanabileceğiniz bir *özellik*. Örneğin, bir kişi liste tanımı için bir özellik liste örneği ve liste tanımını içerebilir. Dağıtım amaçları için tek bir özelliği bu iki öğenin birleştirebilirsiniz. Özellikler hakkında daha fazla bilgi için bkz. [yapı taşı: Özellikleri](http://go.microsoft.com/fwlink/?LinkID=169183).
+## <a name="create-features-and-packages"></a>Özellik ve paket oluşturma
+ İlgili SharePoint öğelerini bir *özellik*halinde gruplamak Için Visual Studio 'yu kullanabilirsiniz. Örneğin, bir kişiler liste tanımına yönelik bir özellik liste örneğini ve liste tanımını içerebilir. Bu iki öğeyi, dağıtım amacıyla tek bir özellikte birleştirebilirsiniz. Özellikler hakkında daha fazla bilgi için bkz. [Yapı bloğu: Özellikler](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)).
 
- Ardından, bir SharePoint çözüm paketini oluşturabilirsiniz (*.wsp*) birden çok özellik paketi için site tanımları, derlemeleri ve diğer dosyaları bir biçimde SharePoint tarafından dosyaları dağıtmak için gereken dosyaları depolayan tek bir pakette Sunucu. Daha fazla bilgi için [yapı taşı: Çözümleri](http://go.microsoft.com/fwlink/?LinkID=169186).
+ Daha sonra, birden çok özelliği, site tanımlarını, derlemeleri ve diğer dosyaları tek bir pakete dağıtmak için bir SharePoint çözüm paketi ( *. wsp*) oluşturabilirsiniz. Bu, dosyaları sunucuya dağıtmak üzere SharePoint 'in gerektirdiği bir biçimde depolar. Daha fazla bilgi için bkz. [Yapı bloğu: çözümler](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14)).
 
-## <a name="feature-and-packaging-tool-support"></a>Özellik ve paketleme araç desteği
- Visual Studio'da SharePoint geliştirme araçları, hızla özellikleri ve daha kolay dağıtım için çözüm paketleri SharePoint dosyalarınızı düzenlemek için kullanabilirsiniz. Özellik ve çözüm paketini yapılandırmak için aşağıdaki araçları kullanabilirsiniz.
+## <a name="feature-and-packaging-tool-support"></a>Özellik ve paketleme aracı desteği
+ Daha kolay dağıtım için SharePoint dosyalarınızı Özellikler ve çözüm paketleri halinde hızlıca düzenlemek üzere Visual Studio 'da SharePoint geliştirme araçları 'nı kullanabilirsiniz. Özelliği ve çözüm paketini yapılandırmak için aşağıdaki araçları kullanabilirsiniz.
 
 - Özellik Tasarımcısı ve paket Tasarımcısı.
 
-- Paketleme Gezgini, bir araç penceresi.
+- Paketleme Gezgini, bir araç penceresidir.
 
 - Çözüm Gezgini.
 
 ### <a name="feature-designer-and-package-designer"></a>Özellik Tasarımcısı ve paket Tasarımcısı
- Özellikler oluşturmak, kapsamı ayarla ve diğer özellikleri, özellik Tasarımcısı kullanarak bağımlılıkları olarak işaretleyin. Tasarımcı, ayrıca her bir özellik tanımlayan son XML dosyasını görüntüler. Daha fazla bilgi için [oluşturma SharePoint özelliklerini](../sharepoint/creating-sharepoint-features.md).
+ Özellik tasarımcısını kullanarak Özellikler oluşturabilir, kapsamları ayarlayabilir ve diğer özellikleri bağımlılıklar olarak işaretleyebilirsiniz. Tasarımcı Ayrıca her bir özelliği açıklayan son XML dosyasını da görüntüler. Daha fazla bilgi için bkz. [SharePoint özellikleri oluşturma](../sharepoint/creating-sharepoint-features.md).
 
- Özelliği bir özel Web sitesi veya Web sitelerinin gruba ayarlayarak geçerli kendi *kapsam* özellik Tasarımcısı'nda. Tek bir Web sitesi için bir özelliği etkinleştirilmişse, özellik, yalnızca bu belirli bir Web sitede çalışır. Bir site koleksiyonu için bir özelliği etkinleştirilmişse, özellik öğeleri tüm site koleksiyonuna uygulayın. Daha fazla bilgi için [öğe kapsamı](http://go.microsoft.com/fwlink/?LinkID=169189).
+ Özellik tasarımcısında *kapsamını* ayarlayarak, özelliği belirli bir Web sitesine veya Web siteleri grubuna uygulayın. Tek bir Web sitesi için bir özellik etkinleştirilirse, özellik yalnızca söz konusu web sitesinde çalışmaktadır. Bir site koleksiyonu için bir özellik etkinleştirilirse, özelliğindeki öğeler tüm site koleksiyonu için geçerlidir. Daha fazla bilgi için bkz. [öğe kapsamı](/previous-versions/office/developer/sharepoint-2010/ms476615(v=office.14)).
 
- Diğer özelliklerini özelliğinizi kullanır, ayarlayabileceğiniz bir *özellik etkinleştirme bağımlılığı* bağımlı özellikler özelliğinizi kullanılabilir duruma getirmeden önce işaretlenecek. Özellik etkinleştirme bağımlılığı bağımlı özellikler bu kapsamda zaten etkin değilse denetler. Daha fazla bilgi için [etkinleştirme bağımlılıkları ve kapsam](http://go.microsoft.com/fwlink/?LinkID=169190).
+ Özelliği diğer özellikleri kullanıyorsa, özelliğinizi kullanabilmeniz için bağımlı özellikleri işaretlemek üzere bir *özellik etkinleştirme bağımlılığı* ayarlayabilirsiniz. Özellik etkinleştirme bağımlılığı, bağımlı özelliklerin o kapsamda zaten etkin olup olmadığını denetler. Daha fazla bilgi için bkz. [etkinleştirme bağımlılıkları ve kapsamı](/previous-versions/office/developer/sharepoint-2010/aa543162(v=office.14)).
 
- Paket Tasarımcısı'nda tek bir çözüm pakete SharePoint öğeleri gruplayın ve dağıtım sırasında Web sunucusu sıfırlandığında yapılandırın. Dağıtım sunucusu türü ayarlamak için kullanın **özellikleri** penceresi. Tasarımcı, paket içeriğini tanımlayan XML dosyasını da oluşturur. Daha fazla bilgi için [oluşturma SharePoint çözüm paketleri](../sharepoint/creating-sharepoint-solution-packages.md).
+ Paket tasarımcısında, SharePoint öğelerini tek bir çözüm paketine gruplandırabilir ve dağıtım sırasında Web sunucusunun sıfırlanıp sıfırlanmayacağını yapılandırabilirsiniz. Dağıtım sunucusu türünü ayarlamak için **Özellikler** penceresini kullanın. Tasarımcı Ayrıca paket içeriğini açıklayan XML dosyasını da oluşturur. Daha fazla bilgi için bkz. [SharePoint çözüm paketleri oluşturma](../sharepoint/creating-sharepoint-solution-packages.md).
 
- Dağıtım sırasında SharePoint sunucusuna çözüm dosyalarını kopyalamak için Internet Information Services (IIS) hizmeti durduruldu. Visual Studio'da paket Tasarımcısını kullanarak, Web sunucusunun yeniden başlatılması gerekiyor yoksa seçebilirsiniz. Çözüm bir ön uç Web sunucusuna ya da bir uygulama sunucusu dağıtılırsa yapılandırmak için kullanın **özellikleri** penceresi. Daha fazla bilgi için [çözüm öğesi (Çözüm)](http://go.microsoft.com/fwlink/?LinkID=169191).
+ Dağıtım sırasında, Internet Information Services (IIS) hizmeti, çözüm dosyalarını SharePoint sunucusuna kopyalamak için durdurulur. Visual Studio 'da paket tasarımcısını kullanarak, Web sunucusunun yeniden başlatılması gerekip gerekmediğini belirleyebilirsiniz. Çözümün bir ön uç Web sunucusuna veya bir uygulama sunucusuna dağıtılıp dağıtılmadığını yapılandırmak için **Özellikler** penceresini kullanın. Daha fazla bilgi için bkz. [çözüm öğesi (çözüm)](/previous-versions/office/developer/sharepoint-2010/ms412929(v=office.14)).
 
 ### <a name="packaging-explorer"></a>Paketleme Gezgini
- Paket Tasarımcısı ve özellik Tasarımcısı'nı tamamlamak için SharePoint dosyalarınızı özellikleri ve paketler halinde gruplandırmak için paketleme Gezgini'ni kullanabilirsiniz. Buna paket, özellikleri, SharePoint Proje hiyerarşik görünümünü görebilirsiniz öğeleri ve dosyaları. Paketleme Gezgini, aşağıdaki görevleri tamamlamak için kullanabileceğiniz bir araç penceresidir:
+ Özellik tasarımcısını ve paket tasarımcısını tamamlamak için paketleme Gezgini 'ni kullanarak SharePoint dosyalarınızı Özellikler ve paketler halinde gruplandırabilirsiniz. Ayrıca, paketin, özelliklerin, SharePoint proje öğelerinin ve dosyaların hiyerarşik görünümünü görebilirsiniz. Paketleme Gezgini, aşağıdaki görevleri gerçekleştirmek için kullanabileceğiniz bir araç penceresidir:
 
-- SharePoint Proje öğeleri ve dosyalarını açın.
+- SharePoint proje öğelerini ve dosyalarını açın.
 
-- Sürükleyip SharePoint Proje öğeleri bir özellikten bırakın.
+- SharePoint proje öğelerini bir özellikten diğerine sürükleyip bırakın.
 
-- Sürükleyip SharePoint Proje öğeleri ve özellikleri bir paketten diğerine bırakın.
+- SharePoint proje öğelerini ve özelliklerini bir paketten diğerine sürükleyip bırakın.
 
-- Bir pakete yeni bir özellik ekleyin.
+- Pakete yeni bir özellik ekleyin.
 
-- Bir özellik veya paket Tasarımcısı'nı açın.
+- Bir özellik veya paket Tasarımcısı açın.
 
-- Özellikleriniz ve paketleriniz doğrulayın.
+- Özellikleri ve paketleri doğrulayın.
 
-  Visual Studio'da SharePoint geliştirme araçları, Çözüm paketinin düzgün biçimlendirildiğini sağlamaya yardımcı olmak için doğrulama kuralları vardır. Ayrıca, kurallar doğrulayın *.wsp* çözüm dosyası başarılı bir şekilde dağıtılabilir ve bir SharePoint sunucusuna etkinleştirildi. Özellikler için XML şeması hakkında daha fazla bilgi için bkz. [özellik şemaları](http://go.microsoft.com/fwlink/?LinkID=169192).
+  Visual Studio 'daki SharePoint geliştirme araçları, çözüm paketinin doğru biçimlendirildiğinden emin olmak için doğrulama kurallarına sahiptir. Ayrıca, kurallar *. wsp* çözüm dosyasının bir SharePoint sunucusunda başarıyla dağıtılıp etkinleştiribildiğini doğrular. Özelliklerle ilgili XML şeması hakkında daha fazla bilgi için bkz. [özellik şemaları](/previous-versions/office/developer/sharepoint-2010/ms414322(v=office.14)).
 
-  SharePoint Proje sistemi için özel özellik ve paket doğrulama kuralları ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Özel özellik ve paket doğrulama kuralları için SharePoint çözümleri oluşturma](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
+  Özel özellik ve paket doğrulama kurallarını SharePoint proje sistemine ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint çözümleri için özel özellik ve paket doğrulama kuralları oluşturma](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
 
-  Paketleme Gezgini hakkında daha fazla bilgi için bkz: [nasıl yapılır: Ekleme ve paketleme Gezgini'ni kullanarak, özellikler ve öğeler pakete kaldırma](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md).
+  Paketleme Gezgini hakkında daha fazla bilgi için bkz. [nasıl yapılır: paketleme Gezgini 'ni kullanarak bir pakete Özellikler ve öğeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md).
 
 ### <a name="solution-explorer"></a>Çözüm Gezgini
- Gidin ve SharePoint proje dosyalarını açmak için Çözüm Gezgini'ni kullanabilirsiniz. Özellik Olay alıcıları özellikleri eklemek için Çözüm Gezgini'nde bağlam menüsünü kullanın ve kaynakları özellik. Ayrıca, özelliği tasarımcılar ve paket tasarımcıları için dağıtım paketlerini ve özellikleri yapılandırmak için açabilirsiniz.
+ SharePoint projesinin dosyalarını açmak ve açmak için Çözüm Gezgini kullanabilirsiniz. Özellikler, özellik Olay alıcıları ve özellik kaynakları eklemek için Çözüm Gezgini bağlam menüsünü kullanın. Ayrıca, dağıtım için özellikleri ve paketleri yapılandırmak üzere özellik tasarımcıları ve paket tasarımcıları ' nı açabilirsiniz.
 
 ## <a name="deploy-sharepoint-solutions"></a>SharePoint çözümlerini dağıtma
- Özellikler ve Visual Studio'da paket özelleştirdikten sonra oluşturabileceğiniz bir *.wsp* dosyasını SharePoint sunucularına dağıtın. Visual Studio hata ayıklama ve test etmek için kullanabilirsiniz. *wsp* yalnızca geliştirme bilgisayarında SharePoint sunucusunda. İçin uzak bir SharePoint server, SharePoint çözümlerini dağıtma hakkında daha fazla bilgi için bkz. [bir çözüm dağıtma](http://go.microsoft.com/fwlink/?LinkID=169194).
+ Visual Studio 'da özellikleri ve paketi özelleştirdikten sonra, SharePoint sunucularına dağıtmak üzere bir *. wsp* dosyası oluşturabilirsiniz. Hatalarını ayıklamak ve test etmek için Visual Studio 'Yu kullanabilirsiniz. *wsp* yalnızca geliştirme bilgisayarındaki SharePoint sunucusunda yer alır. SharePoint çözümlerinizi uzak bir SharePoint sunucusuna dağıtma hakkında daha fazla bilgi için bkz. [çözüm dağıtma](/previous-versions/office/developer/sharepoint-2010/aa544500(v=office.14)).
 
- Dağıtım adımlarına geliştirme bilgisayarında de özelleştirebilirsiniz. Daha fazla bilgi için [dağıtma, yayımlama ve yükseltme SharePoint çözüm paketleri](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md).
+ Geliştirme bilgisayarındaki dağıtım adımlarını da özelleştirebilirsiniz. Daha fazla bilgi için bkz. [SharePoint çözüm paketlerini dağıtma, yayımlama ve yükseltme](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md).
 
-## <a name="deploy-files-in-sharepoint-solutions"></a>Dosyaları SharePoint çözümlerini dağıtma
- SharePoint çözümünüz için bir SharePoint proje öğesi eklediğinizde, genellikle tüm dosyaları dahil gereklidir. Derlenmiş olabilecek dosyalar (kod dosyaları) çözümünün çıktı derlemesine üretip oluşturulur. Ancak, ayrıca derlenebilir olmayan dosyaları ekleme olabilir *.xml*, *.txt*, veya bir SharePoint projesi için kaynak dosyaları. Bu dosyalar otomatik olarak çözümünüzde paketlenmiş değil. Paketlenmiş emin olmak için ya da dosyaları eşlenmiş bir klasöre veya bir SharePoint proje öğesi ekleyin.
+## <a name="deploy-files-in-sharepoint-solutions"></a>SharePoint Çözümlerinde dosya dağıtma
+ Genellikle, SharePoint çözümünüze bir SharePoint proje öğesi eklediğinizde, gerekli tüm dosyalar dahil edilir. Derlenebilecek dosyalar (kod dosyaları) çözümün çıktı derlemesine yerleşik olarak bulunur. Ancak, örneğin, *. xml*, *. txt*veya kaynak dosyaları gibi derlenebilir olmayan dosyaları bir SharePoint projesine eklemeniz de gerekebilir. Bu dosyalar çözümünüzde otomatik olarak paketlenemez. Paketlendiklerinden emin olmak için, dosyaları eşlenmiş bir klasöre veya SharePoint proje öğesine ekleyin.
 
- Çözüm dağıtılırken eşlenmiş bir klasöre eklenen dosyaları otomatik olarak SharePoint hive için kopyalanır. Bir SharePoint projesine eklenen dosyalar, belirtilen konuma dağıtılır **dağıtım konumu** kısmen ayarlanır her dosya için özelliğini temel alarak **dağıtım türü** özelliği. Varsayılan olarak, **dağıtım türü** özellik değeri **NoDeployment**, yani dosya çözümle birlikte dağıtılmaz. Dosyanın pakete eklemek bir özellik için başka bir değer ayarlamanız gerekir.
+ Eşlenmiş klasörlere eklenen dosyalar, çözüm dağıtıldığında otomatik olarak SharePoint Hive 'e kopyalanır. Bir SharePoint proje öğesine eklenen dosyalar, dağıtım **türü** özelliğine göre kısmen ayarlanan her dosya Için **dağıtım konumu** özelliğinde belirtilen konuma dağıtılır. Varsayılan olarak, **dağıtım türü** Özellik değeri **NoDeployment**olur, bu da dosyanın çözümle birlikte dağıtılmadığı anlamına gelir. Özelliği paketini pakete dahil etmek için başka bir değer ayarlamanız gerekir.
 
- Örneğin, eklemek için bir *.xml* dosyasını bir SharePoint projesine, bu eylemlerden birini gerçekleştirin:
+ Örneğin, bir SharePoint projesine bir *. xml* dosyası eklemek için şu eylemlerden birini gerçekleştirin:
 
-- Bir SharePoint "Düzenler" eşlenen klasörü projenize ekleyin. Bu oluşturur **Çözüm Gezgini** adlı bir klasör **düzenleri** bir alt klasör proje için sahip. Ekleme *.xml* dosyasına yeni bir alt klasör. Varsayılan olarak, SharePoint dosya sisteminde dosya dağıtılır *... \TEMPLATE\LAYOUTS\\\<klasör adı >*. Eşlenmiş klasörler ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
+- Projenize bir SharePoint "düzenleri" eşlenmiş klasör ekleyin. Bu, proje için alt klasörü olan **düzenler** adlı bir klasör **Çözüm Gezgini** oluşturur. *. Xml* dosyasını yeni alt klasöre ekleyin. Varsayılan olarak, dosya altında SharePoint dosya sistemine dağıtılır *. \TEMPLATE\MIZANPAJLAR\<klasör adı >\\* . Eşlenmiş klasörler ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: eşlenmiş klasör ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
-- Ekleme *.xml* dosyasını bir SharePoint proje öğesi klasörüne ve ardından değiştirmek **dağıtım türü** özelliği *.xml* dosya **NoDeployment**  gibi başka bir ayarlamanın **RootFile** veya **ElementFile**. Uygun **dağıtım türü** ayarı, dosya ve proje üzerinde bağlıdır. Hakkında daha fazla bilgi için **dağıtım türü** özelliği belirleyebilmesini [geliştirme SharePoint çözümleri](../sharepoint/developing-sharepoint-solutions.md).
+- *. Xml* dosyasını bir SharePoint proje öğesinin klasörüne ekleyin ve ardından *. xml* dosyasının **dağıtım türü** özelliğini **NoDeployment** iken **RootFile** veya **ElementFile**gibi başka bir ayara değiştirin. Uygun **dağıtım türü** ayarı dosya ve projeye bağlıdır. **Dağıtım türü** özelliği ayarları hakkında daha fazla bilgi için bkz. [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md).
 
-  Çözümdeki belirli hiçbir projeye eklenen bir dosyayı geçerli değilse boş bir SharePoint projesi çözümünüze ekleyin ve ardından ek dosyalar ekleyin. Dosyaları SharePoint'te, özellikle içerik veritabanını dağıtmak için başka bir projeye bir modül eklemek ve Modülü dosyaları eklemek için alternatiftir. Daha fazla bilgi için [çözüme dosyaları dahil etmek için modül kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md).
+  Eklenen bir dosya çözümdeki belirli bir proje için uygulanmayabilir, çözümünüze boş bir SharePoint projesi ekleyebilir ve ardından ek dosyaları ekleyebilirsiniz. SharePoint 'e, özellikle de içerik veritabanına dosya dağıtmaya yönelik başka bir alternatif, projeye bir modül eklemek ve ardından dosyaları modüle eklemektir. Daha fazla bilgi için bkz. [çözümdeki dosyaları dahil etmek için modülleri kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)
-- [Derleme ve SharePoint çözümlerinde hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)

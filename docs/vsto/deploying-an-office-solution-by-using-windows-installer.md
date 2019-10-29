@@ -18,16 +18,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 20df85952b4e76e60d6e93067c1f1e7838b692cd
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: a44781c6fea0ecf75dcdb8a5ab2e2b3bed8e52e9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69551721"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986146"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Windows Installer kullanarak bir Office çözümünü dağıtma
 
-@No__t_0 kullanarak Office çözümünüz için Windows Installer oluşturma hakkında bilgi edinin.
+[!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]kullanarak Office çözümünüz için Windows Installer oluşturma hakkında bilgi edinin.
 
 Windows Installer oluşturmak için Visual Studio 'yu kullanarak, son kullanıcının bilgisayarında yönetici erişimi gerektiren bir Office çözümünü dağıtabilirsiniz. Örneğin, bir bilgisayarın tüm kullanıcıları için bir çözümü yalnızca bir kez yüklemek üzere bu tür bir dosyayı kullanabilirsiniz. ClickOnce kullanarak bir Office çözümü de dağıtabilirsiniz, ancak bu çözümün bilgisayarın her kullanıcısı için ayrı olarak yüklenmesi gerekir.
 
@@ -59,15 +59,15 @@ Windows Installer oluşturmak için Visual Studio 'yu kullanarak, son kullanıc�
 
 ClickOnce kullanarak bir Office çözümünü dağıtma hakkında daha fazla bilgi için bkz. [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md).
 
-@No__t_0 kullanarak Windows Installer dosyası oluşturma hakkında daha fazla bilgi için, bkz. [Windows Installer kullanarak Office Için Visual Studio 2010 araçları 'Nı dağıtma](http://go.microsoft.com/fwlink/?LinkId=201807).
+[!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]kullanarak Windows Installer dosyası oluşturma hakkında daha fazla bilgi için, bkz. [Windows Installer kullanarak Office Için Visual Studio 2010 araçları 'Nı dağıtma](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10)).
 
 ## <a name="Download"></a>Örnekleri indir
 Bu konu, aşağıdaki indirilebilir örneklere başvurur.
 
 |Örnek<br /><br />|Açıklama<br /><br />|
 |----------|---------------|
-|[ExcelAddIn](http://go.microsoft.com/fwlink/?LinkID=275492)<br /><br />|Office 'in 32-bit veya 64 bit sürümünü çalıştıran bir bilgisayara yükleyebileceğiniz bir Excel VSTO eklentisi.<br /><br />|
-|[EX](http://go.microsoft.com/fwlink/?LinkID=275493)<br /><br />|Office 'in 32-bit veya 64 bit sürümünü çalıştıran bir bilgisayara yükleyebileceğiniz bir Excel belge düzeyi özelleştirmesi.<br /><br />|
+|[ExcelAddIn](https://code.msdn.microsoft.com/VSTO-Deploy-an-Office-fbcc09ad)<br /><br />|Office 'in 32-bit veya 64 bit sürümünü çalıştıran bir bilgisayara yükleyebileceğiniz bir Excel VSTO eklentisi.<br /><br />|
+|[EX](https://code.msdn.microsoft.com/VSTO-Deploy-a-Customization-f70fae33)<br /><br />|Office 'in 32-bit veya 64 bit sürümünü çalıştıran bir bilgisayara yükleyebileceğiniz bir Excel belge düzeyi özelleştirmesi.<br /><br />|
 
 ## <a name="ApplySecurity"></a>Çözüme nasıl güven verilileceğine karar verme
 Bir çözümün kullanıcı bilgisayarlarında çalışması için, aşağıdaki yollarla güven sağlamanız gerekir, aksi durumda kullanıcılar çözümü yüklerken bir güven istemine yanıt vermelidir.
@@ -103,7 +103,7 @@ Visual Studio 'Yu yükledikten sonra ücretsiz olan InstallShield Limited Editio
 
 ## <a name="Create"></a>Kurulum projesi oluşturma
 
-1. @No__t_0, dağıtmak istediğiniz Office projesini açın.
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], dağıtmak istediğiniz Office projesini açın.
 
    Bu konuyla ilişkili VSTO eklenti örnekleri, **ExcelAddIn**adlı bir proje içerir. Belge düzeyi özelleştirme örnekleri, **ExcelWorkbook**adlı bir proje içerir. Bu konu, bu iki adlardan birini kullanarak çözümünüzdeki Office projesine başvuracaktır.
 
@@ -173,7 +173,7 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 3. Yeniden dağıtılabilir bileşenler listesinde, çözümünüzün hedeflediği .NET Framework sürümü için uygun onay kutusunu seçin.
 
-   Örneğin, çözümünüz [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] hedefliyorsa, **Microsoft .NET Framework 4,5 Full** onay kutusunu seçin. Bir önkoşul olarak bileşen ekleyebilmeniz için önce InstallShield 'un gerektirdiği yeniden dağıtılabilir bileşeni yüklemek isteyip istemediğinizi soran bir iletişim kutusu görünür. Bu iletişim kutusu görüntülenmezse, bileşen bilgisayarınızda zaten bulunur.
+   Örneğin, çözümünüz [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]hedefliyorsa, **Microsoft .NET Framework 4,5 Full** onay kutusunu seçin. Bir önkoşul olarak bileşen ekleyebilmeniz için önce InstallShield 'un gerektirdiği yeniden dağıtılabilir bileşeni yüklemek isteyip istemediğinizi soran bir iletişim kutusu görünür. Bu iletişim kutusu görüntülenmezse, bileşen bilgisayarınızda zaten bulunur.
 
 4. Bu iletişim kutusu görüntülenirse **Hayır** düğmesini seçin.
 
@@ -231,9 +231,9 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 10. **Masaüstü** klasörünüzden, *Office Runtime. prq dosyasını Visual Studio 2010 araçları* 'nı bilgisayarınızdaki aşağıdaki dizinlerden birine kopyalayın.
 
-   32 bit işletim sistemleri için: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\*
+   32 bit işletim sistemleri için: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites\\*
 
-   64 bit işletim sistemleri için: *% ProgramFiles (x86)% \ 2013LE \ Setupönkoşullarını \\*
+   64 bit işletim sistemleri için: *% ProgramFiles (x86)% \ 2013LE \ Setupönkoşullarını\\*
 
 11. InstallShield projesinin **yeniden dağıtılabilir** sayfasında, aşağıdaki çizimde gösterildiği gibi yeniden dağıtılabilir bileşenlerin listesini yenilemek için **Yenile** düğmesini seçin.
 
@@ -510,4 +510,4 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 - [Özel belge özelliklerine genel bakış](../vsto/custom-document-properties-overview.md)
 - [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md)
 - [Belgelere güven verme](../vsto/granting-trust-to-documents.md)
-- [Windows Installer kullanarak Office çözümü için Visual Studio 2010 araçları dağıtma](http://go.microsoft.com/fwlink/?LinkId=201807)
+- [Windows Installer kullanarak Office çözümü için Visual Studio 2010 araçları dağıtma](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10))

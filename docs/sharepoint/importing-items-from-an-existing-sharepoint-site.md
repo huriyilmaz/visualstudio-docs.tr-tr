@@ -18,23 +18,23 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 58f4dd6df35b9101ed3cd2a45943efc8078229f8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 820e7c6f2ac7ea3e65e2156f33464bec96fce091
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444368"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982577"
 ---
-# <a name="import-items-from-an-existing-sharepoint-site"></a>Mevcut bir SharePoint sitesinden öğeleri içeri aktarma
-  SharePoint çözüm paketini İçeri Aktar proje şablonu sayesinde yeni bir içerik türleri ve alanlarını mevcut SharePoint siteleri gibi öğeleri yeniden [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint çözüm. İçeri aktarılan çözümleri değişiklik yapılmadan en çalıştırabilirsiniz, ancak olup olmadığını belirli kısıtlamalar ve dikkate alınması gereken sorunları özellikle içeri aktardıktan sonra tüm öğeleri değiştirin.
+# <a name="import-items-from-an-existing-sharepoint-site"></a>Mevcut bir SharePoint sitesinden öğeleri içeri aktar
+  SharePoint çözüm paketi Içeri aktarma projesi şablonu, yeni bir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint çözümünde mevcut SharePoint sitelerinden içerik türleri ve alanlar gibi öğeleri yeniden kullanmanıza olanak sağlar. Çoğu içeri aktarılan çözümü değişiklik yapmadan çalıştırabilmenize karşın, özellikle de herhangi bir öğeyi içe aktardıktan sonra değiştirirseniz dikkate alınması gereken bazı kısıtlamalar ve sorunlar vardır.
 
 > [!NOTE]
-> Yeniden kullanılabilir iş akışlarını içeri aktarmak için yeniden kullanılabilir iş akışını içe proje şablonu kullanın. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [Yeniden kullanılabilir iş akışlarını içeri aktarma yönergeleri](../sharepoint/guidelines-for-importing-reusable-workflows.md).
+> Yeniden kullanılabilir iş akışlarını içeri aktarmak için, yeniden kullanılabilir Iş akışı proje şablonunu Içeri aktarın. yeniden [kullanılabilir iş akışlarını içeri aktarma yönergeleri](../sharepoint/guidelines-for-importing-reusable-workflows.md)[!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)].
 
 ## <a name="supported-sharepoint-solutions"></a>Desteklenen SharePoint çözümleri
- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] tam olarak oluşturulmuş çözümler alma destekleyen [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] ve [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)].
+ [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)], [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] ve [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]oluşturulan çözümlerin içeri aktarılmasını tam olarak destekler.
 
- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] Aşağıdaki uygulamalarda oluşturulmuş çözümler almayı desteklemiyor:
+ [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)], aşağıdaki uygulamalarda oluşturulan çözümlerin içeri aktarılmasını desteklemez:
 
 - [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)]
 
@@ -46,95 +46,95 @@ ms.locfileid: "63444368"
 
 - [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]
 
-  Bu uygulamaları tarafından oluşturulan çözümleri genellikle başarıyla içeri aktarabilirsiniz ancak bu işlevselliği test ve desteklenmiyor.
+  Genellikle bu uygulamalar tarafından oluşturulan çözümleri başarılı bir şekilde içeri aktarabilirsiniz, ancak bu işlev sınanmamıştır ve desteklenmez.
 
 ## <a name="item-import-restrictions"></a>Öğe içeri aktarma kısıtlamaları
- Mevcut bir SharePoint öğelerin çoğu alınabilir ancak *.wsp* dosya, aşağıdaki öğeler desteklenmez ve düzgün çalışması için değişiklik gerektirebilir:
+ Birçok SharePoint öğesi var olan bir *. wsp* dosyasından içeri aktarılabilir, ancak aşağıdaki öğeler desteklenmez ve değişikliklerin doğru şekilde çalışması gerekebilir:
 
-- İVB varlıklar
+- BDC varlıkları
 
-- İş akışı ilişkilendirmesi öğelerini kod
+- Kod iş akışı ilişkilendirme öğeleri
 
 - Kod iş akışları
 
-- Visual Web Bölümü (.ascx)
+- Görsel Web bölümleri (. ascx)
 
-- Web Hizmetleri (*.asmx*)
+- Web Hizmetleri ( *. asmx*)
 
 - İçerik türü bağlamaları
 
 - Olay alıcıları
 
-- Liste tanımları (şablon)
+- Liste tanımları (şablonlar)
 
 - Site tanımları
 
-  Bir çözümü dışarı aktardığınızda [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] veya [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)], bu öğeler otomatik olarak verilerinden dışlanan *.wsp* dosya. Ancak, diğer *.wsp* desteklenmeyen Araçları'ndan oluşturulan dosyalar, bu öğeler içerebilir. (Bu konuda daha önce "Desteklenen SharePoint çözümleri" bakın.)
+  [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] veya [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]bir çözümü dışarı aktardığınızda, bu öğeler otomatik olarak *. wsp* dosyasından çıkarılır. Ancak, desteklenmeyen araçlardan oluşturulan diğer *. wsp* dosyaları bu öğeleri içerebilir. (Bu konunun önceki kısımlarında "desteklenen SharePoint çözümleri" bölümüne bakın.)
 
-## <a name="what-happens-when-you-import-a-solution"></a>Çözümü içeri aktarma ne olur
- SharePoint çözüm paketini içeri aktarma şablonu ile bir çözüm içeri aktardığınızda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] tüm içeriğini kopyalar *.wsp* dosya ve mutabık ve çok ilişkileri ve başvuruları arasında korumak için çalışır öğeleri ve bunların dosyaları mümkün olduğunca.
+## <a name="what-happens-when-you-import-a-solution"></a>Bir çözümü içeri aktardığınızda ne olur?
+ Içeri aktarma SharePoint çözüm paketi şablonuyla bir çözümü içeri aktardığınızda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] *. wsp* dosyasının tüm içeriğini kopyalar ve içeri aktarılan öğeler ve bunların dosyaları arasında çok sayıda ilişkilendirmeyi ve başvuruyu aynı şekilde tutmaya çalışır üç.
 
- Tüm içeri aktarılan öğeleri kopyala karşılık gelen klasörlerde **Çözüm Gezgini**. Örneğin, içerik türleri klasörün altında görünür **içerik türlerine** ve liste örneklerini altında görünen **liste örnekleri**. İçeri aktarılan bir öğeyle ilişkili dosyalar da öğenin klasörüne kopyalanır. Örneğin, bir içeri aktarılan liste örneği, modüller, formlar ve ASPX sayfaları içerir.
+ Tüm içeri aktarılan öğeler **Çözüm Gezgini**içindeki ilgili klasörlere kopyalar. Örneğin, içerik türleri klasör **içerik türleri** altında görünür ve liste örnekleri **liste örnekleri**altında görünür. İçeri aktarılan bir öğeyle ilişkili dosyalar da öğenin klasörüne kopyalanır. Örneğin, içeri aktarılan bir liste örneği modüller, formlar ve ASPX sayfalarını içerir.
 
 ### <a name="dependent-items"></a>Bağımlı öğeler
- SharePoint çözüm paketini İçeri Aktar Sihirbazı'nı, ancak onun bağımlı öğeleri bir öğe seçin, bir ileti kutusu bağımlı öğeler de içeri aktarmadan önce seçilmelidir olduğunu bildirir.
+ SharePoint çözüm paketini Içeri aktarma Sihirbazı ' nda bir öğe seçerseniz ancak bağımlı öğeler ' i seçerseniz, bir ileti kutusu, içeri aktarmadan önce bağımlı öğelerin de seçili olması gerektiğini bildirir.
 
 ### <a name="what-are-features"></a>Özellikler nelerdir?
- SharePoint Designer kullanıcı adlı beklenmeyen dosya karşılaşabilirsiniz *özellikleri*, içeri aktarılan çözümleri görünür **Çözüm Gezgini.** SharePoint Designer çözümündeki özellikleri olsa da, bunlar görünümünden gizlenmiş. Özellik görünür kullanıma [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+ SharePoint Designer kullanıcıları Çözüm Gezgini ' de içeri aktarılan çözümlerde *Özellikler*olarak adlandırılan beklenmeyen dosyaları görebilir **.** Özellikler SharePoint Designer çözümünde var olsa da, bunlar görünümden gizleniyor. Özellikler artık [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]görünür.
 
- Özellikler, SharePoint öğeleri için kapsayıcılardır. Her bir özellik gibi içerik türleri ve içerdiği liste tanımları her öğeye bir başvuru tutar. Çözümünüzü içeri aktardığınızda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] alınan tüm öğeleri için özellikleri ayarlar ve özellik öğe ilişkileri dosyaları korumak çalışır. Herhangi bir dosya olan başvuruları çözümlenemedi put **diğer içeri aktarılan dosyaları** klasör.
+ Özellikler, SharePoint öğeleri için kapsayıcılardır. Her bir özellik, içerdiği içerik türleri ve liste tanımları gibi her öğe için bir başvuru tutar. Çözümünüzü içeri aktardığınızda, tüm içeri aktarılan öğelerin özelliklerini ayarlar ve dosyalar için özellik-öğe ilişkilerini sürdürme girişimleri [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Başvuruları çözülemeyen dosyalar **diğer Içeri aktarılan dosyalar** klasörüne konur.
 
- Özellikler hakkında daha fazla bilgi için bkz. [geliştirme SharePoint çözümleri](../sharepoint/developing-sharepoint-solutions.md) ve [özelliklerle çalışma](http://go.microsoft.com/fwlink/?LinkID=147704).
+ Özellikler hakkında daha fazla bilgi için bkz. [SharePoint çözümlerini geliştirme](../sharepoint/developing-sharepoint-solutions.md) ve [özelliklerle çalışma](/previous-versions/office/developer/sharepoint-2010/ms460318(v=office.14)).
 
-### <a name="handle-special-cases"></a>Özel durumları işleme
- Bazı durumlarda, Visual Studio ile bağımlı dosyalarından öğeyi uyumlu hale getirilemiyor. Tüm dosyalar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] değil çözümlenemiyor klasörün altında görünür **diğer içeri aktarılan dosyaları**. Ayrıca, kendi **DeploymentType** özelliklerinin **NoDeployment** böylece çözümle birlikte dağıtılmaz.
+### <a name="handle-special-cases"></a>Özel durumları işle
+ Bazı durumlarda, Visual Studio bir öğeyi bağımlı dosyalarla mutabık hale alamaz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözemeyebilir tüm dosyalar, **Içeri aktarılan diğer dosyaların**klasörü altında görünür. Bunlara ek olarak, **DeploymentType** özellikleri **NoDeployment** olarak ayarlanır, böylece çözümle birlikte dağıtılmazlar.
 
- Liste tanımı ExpenseForms içe aktarırsanız, örneğin, bu ada sahip bir liste tanımı altında görünür **liste tanımları** klasöründe **Çözüm Gezgini** ile birlikte kendi  *Elements.xml* ve *Schema.xml* dosyaları. Ancak, kendi ilişkili ASPX ve HTML formlarına adlı bir klasöre yerleştirilmiş olabilir **ExpenseForms** altında **diğer içeri aktarılan dosyaları** klasör. İçeri aktarma işlemini tamamlamak için bu dosyaları ExpenseForms listesi tanımında altında taşıma **Çözüm Gezgini** değiştirip **DeploymentType** özelliği için her bir dosyadan **NoDeployment** için **ElementFile**.
+ Örneğin, liste tanımı ExpenseForms 'u içeri aktarırsanız, bu ada sahip bir liste tanımı, *öğeleri. xml* ve *Schema. xml* dosyaları Ile birlikte **Çözüm Gezgini** içindeki **liste tanımları** klasörü altında görüntülenir. Ancak, ilişkili ASPX ve HTML formları, **diğer Içeri aktarılan dosyalar** klasörü altında **ExpenseForms** adlı bir klasöre yerleştirilebilir. İçeri aktarmayı gerçekleştirmek için, bu dosyaları **Çözüm Gezgini** ' deki ExpenseForms liste tanımı altında taşıyın ve **NoDeployment** öğesinden **ElementFile**öğesine her bir dosya için **DeploymentType** özelliğini değiştirin.
 
- Olay alıcıları içeri aktarılırken *Elements.xml* dosyası doğru konuma kopyalanır, ancak çözümle birlikte dağıtır, çözüm paketinde derlemeyi el ile içermelidir. [!INCLUDE[crabout](../sharepoint/includes/crabout-md.md)] Bunu yapmak için bkz [nasıl yapılır: Ek derlemeler ekleyip](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
+ Olay alıcılarını içeri aktarırken, *Elements. xml* dosyası doğru konuma kopyalanır, ancak çözümle birlikte dağıtım için derlemeyi çözüm paketine el ile eklemeniz gerekir. Bunun nasıl yapılacağını [!INCLUDE[crabout](../sharepoint/includes/crabout-md.md)], bkz. [nasıl yapılır: ek derlemeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
 
- İş akışlarını içeri aktarma, InfoPath formlarını kopyalanıp **diğer içeri aktarılan dosyaları** klasör. Varsa *.wsp* dosyasını içeren bir Web şablonu, başlangıç sayfası olarak ayarla **Çözüm Gezgini**.
+ İş akışları içeri aktarılırken, InfoPath formları **diğer Içeri aktarılan dosyalar** klasörüne kopyalanır. *. Wsp* dosyası bir Web şablonu içeriyorsa, **Çözüm Gezgini**başlangıç sayfası olarak ayarlanır.
 
 ## <a name="import-fields-and-property-bags"></a>İçeri aktarma alanları ve özellik paketleri
- Birden fazla alana sahip bir çözüm içeri aktardığınızda, ayrı alan tanımları tümünün tek bir birleştirilmiş *Elements.xml* dosya bir düğümünde **Çözüm Gezgini** adlı **alanları** . Benzer şekilde, tüm özellik paketi girişleri birleştirilir bir *Elements.xml* dosya adında bir düğüm altında **PropertyBags**.
+ Birden çok alan içeren bir çözümü içeri aktardığınızda, tüm ayrı alan tanımları **Çözüm Gezgini** **alanları**içindeki bir düğüm altında tek bir *öğeler. xml* dosyasında birleştirilir. Benzer şekilde, tüm özellik paketi girdileri, **PropertyBag**adlı bir düğüm altında bulunan bir *Elements. xml* dosyasında birleştirilir.
 
- SharePoint alanlarına bir metin, Boole veya arama gibi belirtilen veri türünde sütunlar var. Daha fazla bilgi için [yapı taşı: Sütunları ve alan türleri](http://go.microsoft.com/fwlink/?LinkId=182304). Özellik paketleri bir gruba bir SharePoint sitesindeki bir liste kadar her şeyi SharePoint nesnelere özellikler eklemenize imkan tanır. Özellik paketleri özellik adlarını ve değerlerini karma tablosu uygulanır. Daha fazla bilgi için [yönetme SharePoint Yapılandırması](http://go.microsoft.com/fwlink/?LinkId=182296) veya [SharePoint özellik paketi ayarları](http://go.microsoft.com/fwlink/?LinkId=182297).
+ SharePoint 'teki alanlar, metin, Boolean veya arama gibi belirtilen bir veri türünün sütunlarıdır. Daha fazla bilgi için bkz. [Yapı bloğu: sütunlar ve alan türleri](/previous-versions/office/developer/sharepoint-2010/ee535893(v=office.14)). Özellik paketleri SharePoint 'teki nesnelere, bir gruptan SharePoint sitesindeki bir listeye özellikler eklemenize olanak tanır. Özellik paketleri, özellik adları ve değerlerinin karma tablosu olarak uygulanır. Daha fazla bilgi için bkz. [SharePoint yapılandırması](/previous-versions/msp-n-p/ff647766(v=pandp.10)) veya [SharePoint özellik paketi ayarlarını](https://archive.codeplex.com/?p=pbs)yönetme.
 
-## <a name="delete-items-in-the-project"></a>Proje öğeleri sil
- SharePoint çözümleri içindeki öğelerin çoğu, bir veya daha fazla bağımlı öğeleri var. Örneğin, liste örnekleri içerik türlerine bağlıdır ve alanlarda içerik türlerine bağlıdır. Bir SharePoint çözümünü içeri aktardıktan sonra [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüm dağıtmayı denemeden kadar çözüm içindeki bir öğeyi, ancak değil, bağımlı öğeleri silerseniz, tüm başvuru sorunları bilgilendirmez. Örneğin, bir içerik türüne bağlı bir liste örneği içeri aktarılan bir çözümü varsa, ve o içerik türünü Sil dağıtımda bir hata oluşabilir. Bağımlı öğenin SharePoint sunucusu üzerinde mevcut değilse, hata oluşur. Benzer şekilde, silinmiş bir öğeyi de ilgili özellik paketi yoksa, ardından özellik paketi girişler silme **PropertyBags** *Elements.xml* dosya. Bu nedenle, içeri aktarılan bir çözümden öğeleri silin ve dağıtım hataları alırsanız bağımlı öğeler de silinecek gerekip gerekmediğini denetleyin.
+## <a name="delete-items-in-the-project"></a>Projedeki öğeleri silme
+ SharePoint Çözümlerinde birçok öğenin bir veya daha fazla bağımlı öğesi vardır. Örneğin, liste örnekleri içerik türlerine ve içerik türlerine göre değişir. Bir SharePoint çözümünü içeri aktardıktan sonra, çözümü dağıtmaya çalışana kadar çözümdeki bir öğeyi silmeniz durumunda değil, çözüm sorunlarından haberdar değildir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Örneğin, içeri aktarılan bir çözümün bir içerik türüne bağımlı bir liste örneği varsa ve bu içerik türünü silerseniz, dağıtımda bir hata oluşabilir. Bu hata, bağımlı öğe SharePoint sunucusunda yoksa oluşur. Benzer şekilde, silinen bir öğenin ilgili bir özellik paketi de varsa, bu özellik paketi girdilerini **propertytorler** *Elements. xml* dosyasından silin. Bu nedenle, içeri aktarılan bir çözümden herhangi bir öğeyi siler ve dağıtım hataları alırsanız, herhangi bir bağımlı öğenin da silinip silinmediğini denetleyin.
 
-## <a name="restore-missing-feature-attributes"></a>Eksik özellik öznitelikleri geri yükleme
- Çözümler içe aktarırken, bazı isteğe bağlı özellik öznitelikleri içeri aktarılan özellik bildiriminden göz ardı edilir. Yeni özellik dosyası içinde bu özniteliklerin geri yüklemek istiyorsanız, yeni özellik bildiriminde özgün özellik dosyasına karşılaştırarak eksik öznitelikler tanımlamak ve konusundaki yönergeleri izleyin [nasıl yapılır: Bir SharePoint özelliğini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-feature.md).
+## <a name="restore-missing-feature-attributes"></a>Eksik özellik özniteliklerini geri yükleme
+ Çözümleri içeri aktarırken, içeri aktarılan özellik bildiriminde bazı isteğe bağlı özellik öznitelikleri atlanır. Bu öznitelikleri yeni özellik dosyasına geri yüklemek istiyorsanız, özgün özellik dosyasını yeni özellik bildirimiyle karşılaştırarak eksik öznitelikleri tanımlayabilir ve [nasıl yapılır: bir SharePoint özelliğini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-feature.md)konusundaki yönergeleri izleyin.
 
-## <a name="deployment-conflict-detection-is-not-performed-on-built-in-list-instances"></a>Dağıtım çakışma algılaması yerleşik liste örnekleri üzerinde gerçekleştirilmez
- [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] Dağıtım çakışma algılaması yerleşik liste örnekleri (SharePoint ile gelen diğer bir deyişle, varsayılan liste örnekleri) gerçekleştirmez. Çakışma algılaması gerçekleştirme değil, SharePoint üzerinde yerleşik liste örnekleri üzerine yazılmasını önlemek için yapılır. Yerleşik liste hala örnekleridir dağıtılan veya güncelleştirildi, ancak hiçbir zaman silineceğini veya üzerine. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint paketleme ve dağıtım sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md).
+## <a name="deployment-conflict-detection-is-not-performed-on-built-in-list-instances"></a>Dağıtım çakışması algılaması yerleşik liste örneklerinde gerçekleştirilmez
+ [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)], yerleşik liste örneklerinde (SharePoint ile birlikte gelen varsayılan liste örnekleri) dağıtım çakışması algılamayı gerçekleştirmez. SharePoint 'teki yerleşik liste örneklerinin üzerine yazılmasını önlemek için çakışma algılama işlemi yapılmaz. Yerleşik liste örnekleri hala dağıtılır veya güncellenir, ancak hiçbir şekilde silinmez veya üzerine yazılmaz. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint paketleme ve dağıtım sorunlarını giderin](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md).
 
 ## <a name="import-sharepoint-server-2010-workflows"></a>SharePoint Server 2010 iş akışlarını içeri aktarma
- İçinde oluşturulan bir iş akışını içeri aktarırsanız [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)], dağıttıktan sonra düzgün çalışmaz. Belirli bütünleştirilmiş kodların eksik olduğundan iş akışının düzgün çalışmaz ve [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] iş akışı içinde şu anda desteklenmeyen InfoPath formlarını içeren [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışı çözümleri. Ancak, içeri aktarılan [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] başvurularını ekleme gibi bazı öğeler düzelttikten sonra düzgün çalışması için iş akışlarını yapılabilir [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] derlemeler ve InfoPath formlarını yeniden bağlanıyor. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint Server 2010 iş akışlarını içeri aktarma](http://go.microsoft.com/fwlink/?LinkId=182226).
+ [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]oluşturulan bir iş akışını içeri aktarırsanız, dağıttıktan sonra düzgün çalışmaz. Bazı derlemeler olmadığından ve [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] iş akışları, şu anda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışı çözümlerinde desteklenmeyen InfoPath formları içerdiğinden iş akışı düzgün çalışmaz. Ancak, içeri aktarılan [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] iş akışları, [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] derlemelerine başvuru ekleme ve InfoPath formlarını yeniden bağlama gibi bazı öğeleri düzelttikten sonra düzgün şekilde çalışabilir. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint Server 2010 Iş akışlarını Içeri aktarma](/sharepoint/dev/).
 
 ## <a name="item-name-character-limit"></a>Öğe adı karakter sınırı
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Proje ve yol dahil, proje öğe adlarını 260 toplam karakterlik bir sınırı vardır. Bir öğe adı bu sınırı aşarsa, bir çözüm içeri aktarılırken hata iletisi:
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], proje ve proje öğesi adları için yol dahil 260 toplam karakter sınırı vardır. Bir çözümü içeri aktarırken, bir öğe adı bu sınırı aşarsa, şu hatayı alırsınız:
 
- **Belirtilen yol, dosya adı veya her ikisi çok uzun olabilir. Tam dosya adı 260 karakterden az olmalıdır ve dizin adı 248 karakterden kısa olmalıdır.**
+ **Belirtilen yol, dosya adı veya her ikisi çok uzun. Tam dosya adı 260 karakterden az olmalıdır ve dizin adı 248 karakterden az olmalıdır.**
 
- Bu hatayı alırsınız, öğe oluşturulmaz. Bu sorun genellikle içeri aktarılan modüllerle oluşur. Bu sorunu önlemek için aşağıdakileri yapın:
+ Bu hatayı aldığınızda, öğe oluşturulmaz. Bu sorun çoğu zaman içeri aktarılan modüllerle oluşur. Bu sorundan kaçınmak için şunları yapın:
 
-- Onları girerken, projeniz için kısa adlar kullanın **Yeni Proje Ekle** iletişim kutusu.
+- Projeniz için **Yeni Proje Ekle** iletişim kutusuna girdiğiniz kısa adları kullanın.
 
-- Kök klasör yolu kısaltmak için mümkün olduğunca yakın bir konuma projesi oluşturun.
+- Yolu kısaltmak için, bir konumda kök klasöre yakın bir yerde oluşturun.
 
 ## <a name="the-sharepointproductversion-attribute"></a>SharePointProductVersion özniteliği
- Gibi SharePoint önceki bir sürümde oluşturulmuş bir çözümü içeri aktarırsanız [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] veya [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)], 12.0 için paket bildirimi SharePointProductVersion öznitelik değeri değiştirin veya betik manager denetim tüm içeri aktarılan Web ekleme sayfalar ve bırakın SharePointProductVersion 14.0 için ayarlayın. Aksi takdirde, içeri aktarılan Web forms SharePoint'te görüntülenmez.
+ SharePoint 'in daha önceki bir sürümünde oluşturulan [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] veya [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)]gibi bir çözümü içeri aktarırsanız, paket bildirimindeki SharePointProductVersion öznitelik değerini 12,0 olarak değiştirin ya da tüm içeri aktarılan Web sayfalarına bir betik Yöneticisi denetimi ekleyin ve şu komutu bırakın SharePointProductVersion 14,0 olarak ayarlanmıştır. Aksi takdirde, içeri aktarılan Web formları SharePoint 'te görüntülenmez.
 
 ### <a name="background"></a>Arka Plan
- Çözümleri [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] ve [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] SharePointProductVersion adlı bir öznitelik ekleyin. Bu öznitelik, SharePoint çözüm için tasarlanmış SharePoint sürümünü belirlemek için paket Bildirimlerde kullanır. İki 12.0 ve geçerli 14.0 değerlerdir. Öğe için tasarlanmıştır 12.0 değeri gösterir [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] veya [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)]; 14.0 değeri öğe için tasarlandığını gösterir [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] veya [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)].
+ [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] ve [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] çözümleri, SharePointProductVersion adlı bir öznitelik içerir. SharePoint, çözüm için tasarlanan SharePoint sürümünü belirlemekte bu özniteliği paket bildirimlerinde kullanır. İki geçerli değer 12,0 ve 14,0 ' dir. 12,0 değeri, öğenin [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] veya [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)]için tasarlandığını belirtir; 14,0 değeri, öğenin [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] veya [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]için tasarlandığını gösterir.
 
- ASPX sayfaları işlenirken Gelişmiş Güvenlik [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] ve [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] tüm ASPX veya ana sayfalar içeren bir betik manager denetim gerektirir. Komut Yöneticisi hakkında daha fazla bilgi için bkz. [ScriptManager denetimine genel bakış](http://go.microsoft.com/fwlink/?LinkID=169399). Betik manager denetim kullanılabilir olmadığından [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] ve [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)], bir eklenmelidir herhangi [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] veya [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] sürümüne yükseltilir sayfa [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] veya [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]. Bir standart ana sayfaya zaten eklendiğinden, standart bir ana sayfa kullanan ASPX sayfaları betik manager denetim gerektirmez. Ana sayfa kullanmayın veya özel bir ana sayfa kullanan ASPX sayfaları çalışmak için bir betik denetimi ancak eklemelisiniz [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] veya [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)].
+ ASPX sayfalarını işlerken gelişmiş güvenlik için, [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] ve [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] tüm ASPX veya ana sayfaların bir betik Yöneticisi denetimi içermesini gerektirir. Betik Yöneticisi hakkında daha fazla bilgi için bkz. [ScriptManager denetimine genel bakış](/previous-versions/bb398863(v=vs.140)). Betik Yöneticisi denetimi [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] ve [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)]' de kullanılamadığından, bir [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] veya [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] sayfasına [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] veya [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]yükseltilmelidir. Standart ana sayfa kullanan ASPX sayfaları, zaten standart ana sayfaya eklenmiş olduğundan bir betik Yöneticisi denetimi gerektirmez. Ancak, ana sayfa kullanmayan veya özel ana sayfa kullanan ASPX sayfaları [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] veya [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]çalışmak için bir betik denetimi eklememelidir.
 
- Bir betik manager denetim olmaması içeri aktarırken bir sorun olabilir bir [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] veya [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] içine proje [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)], tüm yeni projeler SharePointProductVersion öznitelik 14.0 için ayarlanır. Bir komut Yöneticisi olmadan Web formu olan yükseltilmiş projenin dağıtırsanız, formun SharePoint'te görüntülenmez.
+ Tüm yeni projelerin SharePointProductVersion özniteliği 14,0 olarak ayarlandığından, bir [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] veya [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] projesini [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]aktardığınızda bir betik Yöneticisi denetiminin yokluğu bir sorun olabilir. Bir Web formu olan yükseltilen bir projeyi bir betik Yöneticisi olmadan dağıtırsanız, form SharePoint 'te görüntülenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Mevcut bir SharePoint sitesinden öğeleri içeri aktarma](../sharepoint/walkthrough-import-items-from-an-existing-sharepoint-site.md)
+- [İzlenecek yol: mevcut bir SharePoint sitesinden öğeleri Içeri aktarma](../sharepoint/walkthrough-import-items-from-an-existing-sharepoint-site.md)
 - [Yeniden kullanılabilir iş akışlarını içeri aktarma yönergeleri](../sharepoint/guidelines-for-importing-reusable-workflows.md)
-- [İzlenecek yol: Bir SharePoint Tasarımcısı yeniden kullanılabilir iş akışını Visual Studio'ya içeri aktarma](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)
-- [Nasıl yapılır: Bir SharePoint projesine mevcut bir BDC modeli dosyası ekleme](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
+- [İzlenecek yol: SharePoint Designer yeniden kullanılabilir iş akışını Visual Studio 'ya aktarma](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)
+- [Nasıl yapılır: bir SharePoint projesine mevcut bir BDC modeli dosyası ekleme](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)

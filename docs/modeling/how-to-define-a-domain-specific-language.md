@@ -16,17 +16,17 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f117b2c50bfb3a50f794236505fe02ffd8e2395b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1823fb808985d27a02dc2cac34859ea1fbca44b6
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748430"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985151"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama
 Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan bir Visual Studio çözümü oluşturursunuz. Çözümün anahtar bölümü DslDefinition. dsl ' de depolanan DSL tanımı diyagramıdır. DSL tanımı, DSL 'nin sınıflarını ve şekillerini tanımlar. Bu öğelere değiştirdikten ve ekledikten sonra, DSL 'yi daha ayrıntılı şekilde özelleştirmek için program kodu ekleyebilirsiniz.
 
-DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [görselleştirme ve modelleme SDK 'sı](http://go.microsoft.com/fwlink/?LinkID=186128)
+DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [görselleştirme ve modelleme SDK 'sı](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
 ## <a name="templates"></a>Şablon çözümü seçme
 
@@ -543,7 +543,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
  Bağlantı noktalarını kullanan bir örneği görmek için yeni bir DSL çözümü oluştururken **bileşen diyagramı** şablonunu seçin. Bu örnek, bağlantı noktalarını tanımlarken göz önünde bulundurmanız gereken ana noktaları gösterir:
 
-- @No__t_0 bağlantı noktaları kapsayıcısını temsil eden bir etki alanı sınıfı vardır.
+- `Component`bağlantı noktaları kapsayıcısını temsil eden bir etki alanı sınıfı vardır.
 
 - Bağlantı noktalarını temsil eden bir etki alanı sınıfı vardır. Örnekte bu `ComponentPort`.
 
@@ -607,7 +607,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
  Ayrıca bkz. [nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).
 
 ## <a name="trouble"></a>Sorunu
- Aşağıdaki tabloda, bir DSL tasarlarken karşılaşılan en yaygın sorunların bazıları, çözümüne yönelik önerilerle birlikte listelenmiştir. [Görselleştirme araçları genişletilebilirlik forumundan](http://go.microsoft.com/fwlink/?LinkId=186074)daha fazla öneri bulabilirsiniz.
+ Aşağıdaki tabloda, bir DSL tasarlarken karşılaşılan en yaygın sorunların bazıları, çözümüne yönelik önerilerle birlikte listelenmiştir. [Görselleştirme araçları genişletilebilirlik forumundan](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)daha fazla öneri bulabilirsiniz.
 
 | Gidermek | Öneri |
 |-|-|
@@ -618,7 +618,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 | DSL için Gezgininde öğeler yalnızca tür adlarıyla gösterilir. | DSL tanımında, sınıfının bir etki alanı özelliğini seçin ve Özellikler penceresi, **öğe adı** ' nı true ' olarak ayarlayın. |
 | DSL her zaman XML düzenleyicisinde açılır. | Dosya okunurken bir hata nedeniyle bu durum oluşabilir. Ancak, bu hatayı düzelttikten sonra bile düzenleyiciyi DSL tasarımcısı olarak açıkça sıfırlamanız gerekir.<br /><br /> Proje öğesine sağ tıklayın, **birlikte Aç** ' a tıklayın ve * YourLanguage ***Tasarımcı (varsayılan)** seçeneğini belirleyin. |
 | Derleme adlarını değiştirdikten sonra DSL 'nin araç kutusu görünmüyor. | İnceleme ve güncelleştirme **DslPackage\GeneratedCode\Package.tt** daha fazla bilgi için bkz. [nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md). |
-| DSL araç kutusu görünmüyor, ancak derleme adını değiştirdim.<br /><br /> Ya da bir uzantı yükleme başarısızlığını bildiren bir ileti kutusu görüntülenir. | Deneysel örneği sıfırlayın ve çözümünüzü yeniden derleyin.<br /><br /> 1. Windows Başlat menüsünde, **tüm programlar**altında [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] ve ardından **Araçlar**' ı genişletin ve **Microsoft Visual Studio deneysel örneği Sıfırla**' ya tıklayın.<br />2. **Yapı** menüsünde **çözümü yeniden derle**' ye tıklayın. |
+| DSL araç kutusu görünmüyor, ancak derleme adını değiştirdim.<br /><br /> Ya da bir uzantı yükleme başarısızlığını bildiren bir ileti kutusu görüntülenir. | Deneysel örneği sıfırlayın ve çözümünüzü yeniden derleyin.<br /><br /> 1. Windows Başlat menüsünde, **tüm programlar**altında [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]ve ardından **Araçlar**' ı genişletin ve **Microsoft Visual Studio deneysel örneği Sıfırla**' ya tıklayın.<br />2. **Yapı** menüsünde **çözümü yeniden derle**' ye tıklayın. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

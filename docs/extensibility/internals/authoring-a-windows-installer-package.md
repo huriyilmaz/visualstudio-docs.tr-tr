@@ -1,5 +1,5 @@
 ---
-title: Bir Windows Installer paketi yazma | Microsoft Docs
+title: Windows Installer paketi yazma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,43 +11,43 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: da68fa0a6c115a09ba2050f8c84ea6700ee4fc76
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: aa967b5f23ff9f4e5afa67b9b1cb4e83707616c6
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315784"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982236"
 ---
-# <a name="author-a-windows-installer-package"></a>Bir Windows Installer paketi yazma
-Windows Installer model veri sürücülerinde. Dosyaları kopyalayın ve kayıt defteri girdilerini Yaz için bir yordam betik yazmak yerine, örneğin, dosya ve kayıt defteri verileri içeren veritabanı tabloları içindeki satırları ve sütunları yazar.
+# <a name="author-a-windows-installer-package"></a>Windows Installer paketi yazma
+Veri sürücüleri Windows Installer modeli. Dosyaları kopyalamak ve kayıt defteri girişlerini yazmak için bir yordamsal betik yazmak yerine, dosya ve kayıt defteri verilerini içeren veritabanı tablolarında satır ve sütun yazarınız.
 
-## <a name="database-entries"></a>Veritabanı girişleri
-VSPackage'ı yüklemek için bir Windows Installer paketi aşağıdaki görevleri gerçekleştirmek için veritabanı girişleri içermelidir:
+## <a name="database-entries"></a>Veritabanı girdileri
+Bir VSPackage yüklemek için, bir Windows Installer paketi aşağıdaki görevleri gerçekleştirmek üzere veritabanı girdileri içermelidir:
 
-- Sistem sürümlerini bulmak için arama [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (AppSearch, CompLocator RegLocator DrLocator ve imza içeren Windows Installer tabloları kullanarak), VSPackage'ı destekler.
+- VSPackage 'ın desteklediği [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sürümlerini bulmak için sistemi arayın (AppSearch, CompLocator, RegLocator, DrLocator ve Signature içeren Windows Installer tabloları kullanarak).
 
-- Hiçbir desteklenen bir sürümü yüklemeyi iptal [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yüklenir veya başka bir sistem gereksinimi VSPackage'ı (LaunchCondition tabloyu kullanarak) karşılanmazsa.
+- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] desteklenen bir sürümü yüklü değilse veya VSPackage 'ın başka bir sistem gereksinimi karşılanmazsa (LaunchCondition tablosu kullanılarak) yüklemeyi iptal edin.
 
-- Bağımlı dosyaları (dizin bileşeni ve dosya tabloları kullanarak) ve VSPackage'ı yükleyin.
+- VSPackage ve bağımlı dosyaları (Dizin, bileşen ve dosya tablolarını kullanarak) yükler.
 
-- VSPackage için uygun bilgileri (kayıt defteri tabloyu kullanarak) kayıt defterine ekleyin.
+- Kayıt defterine VSPackage için uygun bilgileri ekleyin (kayıt defteri tablosunu kullanarak).
 
-- VSPackage'ı, tümleştirme [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] çağırarak **devenv.exe/Setup** (özel tabloyu kullanarak).
+- **Devenv. exe/Setup** öğesini çağırarak (CustomAction tablosunu kullanarak) [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage 'ı tümleştirin.
 
-Daha fazla bilgi için [Windows Installer](/windows/desktop/Msi/windows-installer-portal).
+Daha fazla bilgi için bkz. [Windows Installer](/windows/desktop/Msi/windows-installer-portal).
 
-## <a name="setup-tools"></a>Kurulum Araçları
-Çeşitli üçüncü taraf kurulum araçları, Windows Installer paketleri için bir geliştirme ortamı sağlar. Aşağıdaki ücretsiz araçlar mevcuttur:
+## <a name="setup-tools"></a>Kurulum araçları
+Çeşitli üçüncü taraf kurulum araçları, Windows Installer paketlerine yönelik bir geliştirme ortamı sağlar. Aşağıdaki ücretsiz araçlar kullanılabilir:
 
-- InstallShield limited edition
+- InstallShield Limited sürümü
 
-   Visual Studio aracılığıyla sınırlı bir InstallShield sürümünü edinebilirsiniz **yeni proje** iletişim. Genişletin **diğer proje türleri** seçip **Kurulum ve dağıtım**. InstallShield şablonu seçin.
+   Visual Studio **Yeni proje** iletişim kutusunu kullanarak, InstallShield 'ın sınırlı bir sürümünü edinebilirsiniz. **Diğer proje türleri** ' ni genişletin ve ardından **Kurulum ve dağıtım '** ı seçin. InstallShield şablonunu seçin.
 
 - Windows Installer XML araç takımı
 
-   Windows Installer XML (WiX) araç takımı XML kaynak dosyalarından Windows Installer paketleri oluşturur. WiX araç takımı, Microsoft açık kaynak projesidir. Yürütülebilir dosyalar ve kaynak kodunu indirebilirsiniz [Wix toolset](http://sourceforge.net/projects/wix).
+   Windows Installer XML (WiX) araç takımı, XML kaynak dosyalarından Windows Installer paketleri oluşturur. WiX araç takımı, Microsoft açık kaynaklı bir projem. [WX araç](https://sourceforge.net/projects/wix/)takımından kaynak kodu ve yürütülebilir dosyaları indirebilirsiniz.
 
-   Tümleştirin ticari ürünleri için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanarak [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], bkz: [Visual Studio Market](https://marketplace.visualstudio.com/).
+   [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]kullanarak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ile tümleştirilen ticari ürünler için bkz. [Visual Studio Market](https://marketplace.visualstudio.com/).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Installer ile VSPackage yükleme](../../extensibility/internals/installing-vspackages-with-windows-installer.md)
+- [Windows Installer Ile VSPackages 'ı yükler](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

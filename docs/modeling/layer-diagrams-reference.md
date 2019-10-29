@@ -20,12 +20,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7711d0b0f369f43cc7becf92cbdcfc986cd3a6a8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07cba8f8ae813ae223ef3da110a046f65c81b091
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661489"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984081"
 ---
 # <a name="dependency-diagrams-reference"></a>Bağımlılık diyagramları: başvuru
 
@@ -48,7 +48,7 @@ Aşağıdaki görevleri gerçekleştirmenize yardımcı olması için bir bağı
 
 - İade etme ve oluşturma işlemlerinizin doğrulanmasını ekleyerek kodunuzun geliştirilmesi ve bakımı sırasında amaçlanan mimariyi güçle zorlayın.
 
-Bu konu başlığı altında, bir bağımlılık diyagramında kullanabileceğiniz öğeler açıklanmaktadır. Bağımlılık diyagramları oluşturma ve çizme hakkında daha ayrıntılı bilgi için bkz. [bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md). Katman desenleri hakkında daha fazla bilgi için, [desenler & uygulamalar sitesini](http://go.microsoft.com/fwlink/?LinkId=145794)ziyaret edin.
+Bu konu başlığı altında, bir bağımlılık diyagramında kullanabileceğiniz öğeler açıklanmaktadır. Bağımlılık diyagramları oluşturma ve çizme hakkında daha ayrıntılı bilgi için bkz. [bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md). Katman desenleri hakkında daha fazla bilgi için, [desenler & uygulamalar sitesini](https://archive.codeplex.com/?p=apparch)ziyaret edin.
 
 ## <a name="reading-dependency-diagrams"></a>Bağımlılık diyagramlarını okuma
 

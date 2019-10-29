@@ -10,12 +10,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 79f1c4a55321a1b039cc2702b1040e2ab9d4ac9d
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 564672e01eeffbdcb53bf1af08f329d2f6bf218f
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255636"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985782"
 ---
 # <a name="improve-the-performance-of-a-vsto-add-in"></a>VSTO eklentisinin performansını iyileştirme
   Office uygulamaları için oluşturduğunuz VSTO Eklentilerini en iyi duruma getirerek daha iyi bir deneyim verebilirsiniz. bu sayede, öğeleri hızlı bir şekilde başlatabilir, kapatabilir, açık öğeler açabilir ve diğer görevleri gerçekleştirebilirsiniz. VSTO eklentisi Outlook için ise, VSTO eklentisinin kötü performans nedeniyle devre dışı bırakılabilme olasılığını da azaltabilirsiniz. Aşağıdaki stratejileri uygulayarak VSTO eklentisinin performansını artırabilirsiniz:
@@ -28,7 +28,7 @@ ms.locfileid: "71255636"
 
 - [Ayrı bir yürütme iş parçacığında pahalı Işlemler gerçekleştirin](#Perform).
 
-  Outlook VSTO eklentisinin nasıl iyileştirileceği hakkında daha fazla bilgi için bkz. [VSTO Eklentilerini etkin tutmak Için performans ölçütleri](http://go.microsoft.com/fwlink/?LinkID=266503).
+  Outlook VSTO eklentisinin nasıl iyileştirileceği hakkında daha fazla bilgi için bkz. [VSTO Eklentilerini etkin tutmak Için performans ölçütleri](/previous-versions/office/jj228679(v=office.15)#ol15WhatsNew_AddinDisabling).
 
 ## <a name="Load"></a>VSTO Eklentilerini isteğe bağlı olarak yükle
  Bir VSTO eklentisini yalnızca aşağıdaki koşullarda yüklenecek şekilde yapılandırabilirsiniz:
@@ -43,7 +43,7 @@ ms.locfileid: "71255636"
 
 1. **Çözüm Gezgini**, proje düğümünü seçin.
 
-2. Menü çubuğunda, **görünümü** > **özellik sayfaları**.
+2. Menü çubuğunda **görünüm**  > **Özellik sayfaları**' nı seçin.
 
 3. **Yayımla** sekmesinde **Seçenekler** düğmesini seçin.
 
@@ -51,13 +51,13 @@ ms.locfileid: "71255636"
 
 ### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>VSTO Eklentilerini isteğe bağlı olarak yüklemek üzere bir Windows Installer çözümü yapılandırmak için
 
-1. Kayıt defterinde `LoadBehavior` **_kök_\software\microsoft\office\\_ApplicationName_\addıns\\_eklenti kimliği_** anahtarının girdisini **0x10**olarak ayarlayın.
+1. Kayıt defterinde **_kök_\Software\microsoft\office\\_ApplicationName_\ addıns\\_eklenti kimliği_** anahtarının `LoadBehavior` girdisini **0x10**' a ayarlayın.
 
      Daha fazla bilgi için bkz. [VSTO eklentileri Için kayıt defteri girişleri](../vsto/registry-entries-for-vsto-add-ins.md).
 
 ### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>Çözümde hata ayıklarken VSTO Eklentilerini isteğe bağlı olarak yüklemek üzere bir çözüm yapılandırmak için
 
-1. `LoadBehavior`  **_Kök_\software\microsoft\office ApplicationName \eklentileri\\eklenti kimliği anahtarının 0x10 ' a girişini ayarlayan bir betik oluşturun.\\**
+1. **_Kök_\Software\microsoft\office\\_ApplicationName_\ addıns\\_eklentisinin kimlik_** anahtarının `LoadBehavior` girdisini **0x10**' a ayarlayan bir betik oluşturun.
 
      Aşağıdaki kod bu betiğin bir örneğini gösterir.
 
@@ -79,9 +79,9 @@ ms.locfileid: "71255636"
 
     ```
 
-     Bir C# projede oluşturma sonrası olay oluşturma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Derleme &#40;olaylarını belirtin C&#35;&#41;](../ide/how-to-specify-build-events-csharp.md).
+     Bir C# projede oluşturma sonrası olay oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: derleme &#40;olaylarını belirtme C&#35;](../ide/how-to-specify-build-events-csharp.md).
 
-     Visual Basic projesinde oluşturma sonrası bir olay oluşturma hakkında bilgi için bkz [. nasıl yapılır: Derleme olaylarını &#40;belirtin Visual Basic&#41;](../ide/how-to-specify-build-events-visual-basic.md).
+     Visual Basic projesinde oluşturma sonrası bir olay oluşturma hakkında bilgi için bkz. [nasıl yapılır: derleme &#40;olaylarını belirtme Visual Basic&#41;](../ide/how-to-specify-build-events-visual-basic.md).
 
 ## <a name="Publish"></a>Windows Installer kullanarak Office çözümlerini yayımlama
  Çözümünüzü Windows Installer kullanarak yayımlarsanız, Office çalışma zamanı için Visual Studio 2010 araçları, VSTO eklentisi yüklenirken aşağıdaki adımları atlar.
@@ -98,9 +98,9 @@ ms.locfileid: "71255636"
   Daha fazla bilgi için bkz. [Windows Installer kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-windows-installer.md).
 
 ## <a name="Bypass"></a>Şerit yansımasını atla
- Kullanarak [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]bir çözüm oluşturursanız, çözüm dağıtırken kullanıcılarınızın Office çalışma zamanı için Visual Studio 2010 araçları 'nın en son sürümünü yüklediğinizden emin olun. VSTO çalışma zamanının daha eski sürümleri, şerit özelleştirmelerini bulmak için çözüm derlemelerine yansıtılır. Bu işlem, VSTO eklentisinin daha yavaş yüklenmesine neden olabilir.
+ [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]kullanarak bir çözüm oluşturursanız, çözümünüzü dağıtırken kullanıcılarınızın Office çalışma zamanı için Visual Studio 2010 araçları 'nın en son sürümünü yüklediğinizden emin olun. VSTO çalışma zamanının daha eski sürümleri, şerit özelleştirmelerini bulmak için çözüm derlemelerine yansıtılır. Bu işlem, VSTO eklentisinin daha yavaş yüklenmesine neden olabilir.
 
- Alternatif olarak, Office çalışma zamanı için Visual Studio 2010 araçlarının herhangi bir sürümünün, şerit özelleştirmelerini belirlemek için yansıma kullanmasını engelleyebilirsiniz. Bu stratejiyi takip etmek için `CreateRibbonExtensibility` yöntemini geçersiz kılın ve doğrudan şerit nesnelerini döndürün. VSTO eklentileriniz hiçbir Şerit özelleştirmesi içermiyorsa, yönteminin içine dönün `null` .
+ Alternatif olarak, Office çalışma zamanı için Visual Studio 2010 araçlarının herhangi bir sürümünün, şerit özelleştirmelerini belirlemek için yansıma kullanmasını engelleyebilirsiniz. Bu stratejiyi izlemek için `CreateRibbonExtensibility` yöntemini geçersiz kılın ve doğrudan şerit nesnelerini döndürün. VSTO eklentileriniz hiçbir Şerit özelleştirmesi içermiyorsa, yönteminin içinde `null` döndürün.
 
  Aşağıdaki örnek, bir alanın değerine göre bir şerit nesnesi döndürür.
 

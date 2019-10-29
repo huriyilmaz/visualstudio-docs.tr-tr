@@ -1,5 +1,5 @@
 ---
-title: Python geliştiricileri için Visual Studio'nun genel bakış
+title: Python geliştiricileri için Visual Studio 'ya genel bakış
 titleSuffix: ''
 ms.date: 03/13/2019
 ms.topic: conceptual
@@ -11,141 +11,141 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 690ffff0aa31b90cea58997c982406a900299550
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3b01d088618c07f1a3ff24aff2386584ebfad060
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826163"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983694"
 ---
-# <a name="welcome-to-the-visual-studio-ide--python"></a>Visual Studio IDE Hoş Geldiniz | Python
+# <a name="welcome-to-the-visual-studio-ide--python"></a>Visual Studio IDE 'ye hoş geldiniz | Python
 
-Visual Studio *tümleşik geliştirme ortamı* bir yaratıcı launching düzenleme, hata ayıklama ve kod test etme ve ardından bir uygulama yayımlama için kullanabileceğiniz Python (ve diğer diller) için bir ortamdır. Bir tümleşik geliştirme ortamı (IDE) birçok yönüyle yazılım geliştirme için kullanılabilen zengin bir programdır. Standart Düzenleyici ve hata ayıklayıcı sağladığımız çoğu IDE'ler sağlamanızı, Visual Studio kod tamamlama içerir, etkileşimli REPL ortamları, araçları ve diğer özellikleri yazılım geliştirme işlemini kolaylaştırmak için.
+Visual Studio *Tümleşik geliştirme ortamı* , Python (ve diğer diller) için kod düzenlemek, hatalarını ayıklamak ve test etmek ve ardından bir uygulama yayımlamak için kullanabileceğiniz bir yaratıcı başlatma tablası. Tümleşik geliştirme ortamı (IDE), yazılım geliştirmenin birçok yönü için kullanılabilen özellik açısından zengin bir programdır. En çok kullanılan standart düzenleyici ve hata ayıklayıcı üzerinde ve üzerinde, Visual Studio, yazılım geliştirme sürecini kolaylaştırmak için kod tamamlama araçları, etkileşimli REPL ortamları ve diğer özellikleri içerir.
 
-[![Visual Studio ile Python projesi](media/tour-ide-overview.png)](media/tour-ide-overview.png#lightbox)
+[Visual Studio 'Yu bir Python projesiyle![](media/tour-ide-overview.png)](media/tour-ide-overview.png#lightbox)
 
-Bu görüntü, büyük olasılıkla kullanacağınız birkaç anahtar araç pencereleri ve Python Proje Aç ile Visual Studio gösterir:
+Bu görüntüde, açık bir Python projesiyle Visual Studio ve büyük olasılıkla kullanabileceksiniz birçok anahtar araç penceresi gösterilmektedir:
 
-- [**Çözüm Gezgini** ](../ide/solutions-and-projects-in-visual-studio.md) (sağ üstte) görüntüleyin, gidin ve kodu dosyalarınızdaki dosyalardan yönetmenize olanak tanır. **Çözüm Gezgini** dosyalarına gruplandırarak kodunuzu düzenleme şeklinizdir yardımcı olabilecek [çözümler ve projeler](/visualstudio/get-started/tutorial-projects-solutions).
-  - Yanı sıra **Çözüm Gezgini** olduğu [ **Python ortamları**](managing-python-environments-in-visual-studio.md), bilgisayarınızda yüklü olan farklı Python yorumlayıcılarını yönettiği yerdir.
+- [**Çözüm Gezgini**](../ide/solutions-and-projects-in-visual-studio.md) (sağ üst) kod dosyalarınızı görüntülemenize, gezinmenize ve yönetmenize olanak sağlar. **Çözüm Gezgini** , dosyaları [çözümler ve projelerle](/visualstudio/get-started/tutorial-projects-solutions)gruplayarak kodunuzun düzenlenmesine yardımcı olabilir.
+  - **Çözüm Gezgini** yanı sıra, bilgisayarınızda yüklü farklı Python yorumlayıcıları yönettiğiniz [**Python ortamlardır**](managing-python-environments-in-visual-studio.md).
 
   ::: moniker range=">=vs-2019"
-  - Visual Studio'nun proje ve çözüm dosyaları oluşturmadan bir klasör de açık ve çalışma Python kodu kullanabilirsiniz. Daha fazla bilgi için [hızlı başlangıç: Açın ve bir klasörde Python kodunu çalıştırma](quickstart-05-python-visual-studio-open-folder.md).
+  - Ayrıca, Visual Studio proje ve çözüm dosyaları oluşturmadan bir klasörde Python kodu açabilir ve çalıştırabilirsiniz. Daha fazla bilgi için bkz. [hızlı başlangıç: Python kodunu bir klasörde açma ve çalıştırma](quickstart-05-python-visual-studio-open-folder.md).
   ::: moniker-end
 
-- [Düzenleyicisi penceresi](../ide/writing-code-in-the-code-and-text-editor.md) (Merkezi), büyük olasılıkla, zamanınızın çoğunu geçireceksiniz burada dosya içeriğini görüntüler. Burada, [Python kodunu Düzenle](editing-python-code-in-visual-studio.md)içinde kod yapınızı gidin ve hata ayıklama oturumları sırasında kesme noktaları ayarlayın. Python ile ayrıca kodu seçin ve bu kodu çalıştırmak için Ctrl + Enter tuşlarına basın bir [etkileşimli REPL penceresini](python-interactive-repl-in-visual-studio.md).
+- Büyük olasılıkla zaman harcamanız gereken [Düzenleyici penceresi](../ide/writing-code-in-the-code-and-text-editor.md) (Center), dosya içeriklerini görüntüler. Bu, [Python kodunu düzenlediğiniz](editing-python-code-in-visual-studio.md), kod yapınız içinde gezinmeniz ve hata ayıklama oturumları sırasında kesme noktaları ayarlamanız yerdir. Python ile kod seçip CTRL + ENTER tuşlarına basarak bu kodu [etkileşimli BIR REPL penceresinde](python-interactive-repl-in-visual-studio.md)çalıştırabilirsiniz.
 
-- [Çıkış penceresine](../ide/reference/output-window.md) (alt Merkezi), burada Visual Studio hata ayıklama ve hata iletileri, uyarılar, yayımlama durum iletilerini ve diğer bildirimleri gönderir. Her ileti kaynağı kendi sekmesi vardır.
-  - A [Python etkileşimli REPL penceresini](python-interactive-repl-in-visual-studio.md) çıkış penceresi olarak aynı alanda görüntülenir.
+- [Çıkış penceresi](../ide/reference/output-window.md) (alt orta), Visual Studio 'nun hata ayıklama ve hata iletileri, uyarılar, yayımlama durumu iletileri ve daha fazlası gibi bildirimler gönderdiği yerdir. Her ileti kaynağının kendi sekmesi vardır.
+  - Bir [Python ETKILEŞIMLI REPL penceresi](python-interactive-repl-in-visual-studio.md) , çıkış penceresiyle aynı alanda görüntülenir.
 
-- [Takım Gezgini](/azure/devops/user-guide/work-team-explorer?view=vsts) (sağ alt) sağlar, iş öğelerini izlemek ve kod başkalarıyla paylaşmak gibi sürüm denetimi teknolojileri kullanarak [Git](https://git-scm.com/) ve [Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts).
+- [Takım Gezgini](/azure/devops/user-guide/work-team-explorer?view=vsts) (sağ alt) [Git](https://git-scm.com/) ve [Team Foundation sürüm denetimi (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts)gibi sürüm denetimi teknolojilerini kullanarak iş öğelerini izlemenize ve kodu başkalarıyla paylaşmanıza olanak sağlar.
 
 ## <a name="editions"></a>Sürümler
 
-Windows ve Mac için Visual Studio kullanılabilir; Ancak, yalnızca Visual Studio için Windows üzerinde Python desteği sunulmaktadır.
+Visual Studio, Windows ve Mac için kullanılabilir; Ancak, Python desteği yalnızca Windows için Visual Studio 'da kullanılabilir.
 
-Windows üzerinde Visual Studio'nun üç sürüm bulunur: Community, Professional ve Enterprise. Bkz: [karşılaştırma Visual Studio Ide'leri](https://visualstudio.microsoft.com/vs/compare/) her iki sürümünde desteklenen hangi özellikler hakkında bilgi edinmek için.
+Windows üzerinde Visual Studio 'nun üç sürümü vardır: Community, Professional ve Enterprise. Her sürümde hangi özelliklerin desteklendiği hakkında bilgi edinmek için bkz. [Visual Studio Ides 'ı karşılaştırın](https://visualstudio.microsoft.com/vs/compare/) .
 
 ## <a name="popular-productivity-features"></a>Popüler üretkenlik özellikleri
 
-Visual Studio yazılım geliştirme sırasında daha üretken olmanıza yardımcı olan popüler özelliklerinden bazıları şunlardır:
+Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı olan popüler özelliklerden bazıları şunlardır:
 
 - [IntelliSense](editing-python-code-in-visual-studio.md#intellisense)
 
-   IntelliSense, doğrudan düzenleyicide kod hakkında bilgi görüntüler ve bazı durumlarda, küçük kod parçalarını sizin için yazma özellikleri kümesi için kullanılan bir terimdir. Bu temel belgeleri satır içi başka bir yerde türü bilgi aramak zorunda kalmaktan kurtarır düzenleyicisinde gibidir. IntelliSense özellikleri, dile göre değişiklik gösterir ve [düzenleme Python kodu](editing-python-code-in-visual-studio.md#intellisense) makalede, Python için ayrıntılar bulunur. Aşağıdaki çizimde, IntelliSense üye listesi bir türü için nasıl görüntülediğini gösterir:
+   IntelliSense, kodunuzla ilgili bilgileri doğrudan düzenleyicide görüntüleyen özellikler kümesi için bir terimdir ve bazı durumlarda, sizin için küçük bit kod yazın. Temel belgeleri düzenleyicide satır içine almak gibidir, bu da tür bilgilerini başka bir yerde aramak zorunda kalmanızı sağlar. IntelliSense özellikleri dile göre farklılık gösterir ve [Python kodunu Düzenle](editing-python-code-in-visual-studio.md#intellisense) makalesinde Python için ayrıntılar bulunur. Aşağıdaki çizimde, IntelliSense 'in bir tür için üye listesini nasıl görüntüleyeceği gösterilmektedir:
 
-   ![Visual Studio IntelliSense üye tamamlama](media/code-editing-completions-simple.png)
+   ![Visual Studio IntelliSense ile üye Tamamlama](media/code-editing-completions-simple.png)
 
-- [Yeniden Düzenleme](refactoring-python-code.md)
+- [Yeniden Düzenle](refactoring-python-code.md)
 
-   Kod ve seçerek bir parçasına sağ tıklanarak **hızlı Eylemler ve yeniden düzenlemeler**, Visual Studio sağlar akıllı değişkenleri, yeniden adlandırma gibi işlemler ile değiştirerek yeni bir yönteme bir veya daha fazla kod satırlarını ayıklanıyor Yöntem parametreleri ve daha fazlasını sırası.
+   Kod parçasına sağ tıklayıp **Hızlı Eylemler ve yeniden düzenlemeler**' i seçerek, Visual Studio size değişkenlerin akıllı yeniden adlandırılması, bir veya daha fazla kod satırını yeni bir yönteme ayıklayarak yöntemin sırasını değiştirme gibi işlemler sağlar parametreleri ve daha fazlasını yapın.
 
    ![Visual Studio'da yeniden düzenleme](media/tour-ide-refactor-extract-method.png)
 
 - [Lint uygulama](refactoring-python-code.md)
 
-   Hatalar ve yaygın sorunlar, kodlama desenleri iyi Python ile teşvik Python kodunuzu linting denetler.
+   Python kodunuzda hata ve yaygın sorunlar olup olmadığını denetler, size iyi Python kodlama desenleri teşvik.
 
-   ![Python projeleri için bağlam menüsünde PyLint komutu](media/code-pylint-command.png)
+   ![Python projeleri için bağlam menüsünde Pylınt komutu](media/code-pylint-command.png)
 
 - Arama kutusu
 
-   Visual Studio zamanlarda sürü menüleri, seçenekleri ve özellikleri ile zor görünebilir. Arama kutusuna, Visual Studio'da aradığınızı hızla bulmak için harika bir yoludur. Aradığınız bir şey adını yazmaya başladığınızda, Visual Studio tam olarak gitmek gerek duyduğunuz aldığınız sonuçları listeler. Örneğin, ek bir programlama dili için destek eklemek Visual Studio işlevselliği eklemek gerekiyorsa arama kutusuna bir iş yükü veya ayrı ayrı bileşen yüklemek için Visual Studio yükleyicisini açın sonuçları sağlar.
+   Visual Studio çok sayıda menü, seçenek ve özellik ile zaman içinde yoğun görünebilir. Arama kutusu, Visual Studio 'da gerekenleri hızlı bir şekilde bulmanın harika bir yoludur. Aradığınız bir şeyin adını yazmaya başladığınızda, Visual Studio size tam olarak gitmeniz gereken yere sahip olan sonuçları listeler. Visual Studio 'ya işlevsellik eklemeniz gerekiyorsa, örneğin ek bir programlama dili için destek eklemek istiyorsanız, arama kutusu, bir iş yükünü veya tek bir bileşeni yüklemek için Visual Studio Yükleyicisi açan sonuçlar sağlar.
 
-   ![Visual Studio'da arama kutusu](media/tour-ide-quick-launch.png)
+   ![Visual Studio 'da arama kutusu](media/tour-ide-quick-launch.png)
 
-- Dalgalı çizgiler ve [hızlı Eylemler](../ide/quick-actions.md)
+- Dalgalı çizgiler ve [hızlı eylemler](../ide/quick-actions.md)
 
-   Siz yazarken, hatalar veya kodunuzdaki olası sorunlar için uyarı dalgalı alt çizgiler dalgalı çizgiler var. Bu görsel ipuçları hata derleme sırasında veya programı çalıştırdığınızda bulunmak beklenmeden hemen sorunları düzeltmek etkinleştirin. Bir dalgalı çizgi gelin, hatayla ilgili ek bilgileri görürsünüz. Hatayı düzeltmek için hızlı Eylemler bilinen eylemlerle sol kenar boşluğunda bir ampul de görünebilir.
+   Dalgalı çizgiler, siz yazarken kodunuzda hataları veya olası sorunları uyaran dalgalı alt çizgiler. Bu görsel ipuçları, hata oluşturma sırasında veya programı çalıştırdığınızda hatanın bulunmasını beklemeden sorunları anında çözmenizi sağlar. Dalgalı bir çizgi üzerine geldiğinizde, hatayla ilgili ek bilgileri görürsünüz. Ayrıca, bir ampulü, hızlı eylemler olarak bilinen eylemlerle birlikte, hatayı düzelrebilir.
 
-   ![Visual Studio'da dalgalı çizgiler](media/tour-ide-squiggles.png)
+   ![Visual Studio 'da dalgalı çizgiler](media/tour-ide-squiggles.png)
 
-- [Git ve Özet tanımı](../ide/go-to-and-peek-definition.md)
+- [Git ve açıklama Özeti](../ide/go-to-and-peek-definition.md)
 
-   **Tanıma** özelliği doğrudan bir işlev veya tür tanımlandığı konumuna götürür. **Özet tanımları** komut görüntüler tanımı bir pencere içinde ayrı bir dosyayı açmaya gerek kalmadan. **Tüm başvuruları Bul** komut da burada verilen herhangi bir tanımlayıcı hem tanımlandığını ve kullanıldığını keşfetmek için kullanışlı bir yol sağlar.
+   **Tanıma Git** özelliği sizi doğrudan bir işlevin veya türün tanımlandığı konuma götürür. **Tanımları göz atma** komutu, tanımı ayrı bir dosya açmadan bir pencerede görüntüler. **Tüm başvuruları bul** komutu ayrıca, verilen ve kullanılan her bir tanımlayıcının nerede tanımlanmakta olduğunu bulmanın yararlı bir yolunu sağlar.
 
    ![Kod Gezinti komutları](media/tour-ide-navigation-commands.png)
 
 ## <a name="powerful-features-for-python"></a>Python için güçlü özellikler
 
 ::: moniker range=">=vs-2019"
-- [Kod proje olmadan çalıştırın](quickstart-05-python-visual-studio-open-folder.md)
+- [Kodu proje olmadan çalıştırma](quickstart-05-python-visual-studio-open-folder.md)
 
-    Visual Studio 2019 ' başlayarak, IntelliSense ve kod için Visual Studio projesi oluşturmak zorunda kalmadan hata ayıklama gibi özelliklerden faydalanmak için Python kodu içeren bir klasörün açabilirsiniz.
+    Visual Studio 2019 ' den başlayarak, kod için bir Visual Studio projesi oluşturmak zorunda kalmadan IntelliSense ve hata ayıklama gibi özelliklerden yararlanabilmek için Python kodu içeren bir klasörü açabilirsiniz.
 ::: moniker-end
 
-- [Visual Studio’yu kullanarak işbirliği yapma](https://docs.microsoft.com/visualstudio/liveshare/use/vs)
+- [Visual Studio’yu kullanarak işbirliği yapma](/visualstudio/liveshare/use/vs)
   
-    Visual Studio Live Share, işbirliğine dayalı bir şekilde düzenleyin ve diğer kullanıcılarla hangi kullandığınız programlama dili veya uygulama türleri oluşturduğunuz bağımsız olarak, gerçek zamanlı hata ayıklama sağlar. 
+    Visual Studio Live Share, kullandığınız programlama diline veya oluşturmakta olduğunuz uygulama türlerine bakılmaksızın diğer kişilerle gerçek zamanlı olarak birlikte düzenleme ve hata ayıklama yapmanızı sağlar. 
 
 - [Python etkileşimli REPL](python-interactive-repl-in-visual-studio.md)
 
-    Visual Studio, her biri ile alma REPL üzerine artırır, Python ortamları için bir etkileşimli okuma değerlendirmek yazdırma döngü (REPL) penceresi sağlar *python.exe* komut satırında. İçinde **etkileşimli** penceresi rastgele Python kodu girin ve sonuçları hemen görün.
+    Visual Studio, Python ortamlarınızın her biri için etkileşimli bir okuma-değerlendirme-yazdırma döngüsü (REPL) penceresi sağlar. Bu, komut satırında *Python. exe* Ile aldığınız REPL 'u geliştirir. **Etkileşimli** pencerede, rastgele Python kodu girebilir ve anında sonuçlara bakabilirsiniz.
 
     ![Python etkileşimli penceresi](media/interactive-window.png)
 
 - [Hata Ayıklama](debugging-python-in-visual-studio.md)
 
-    Visual Studio, Python, çalışan işlemlere, ekleme dahil olmak üzere, ifadeleri değerlendirme için kapsamlı bir hata ayıklama deneyimi sunar **Watch** ve **hemen** windows, yerel inceleniyor değişkenleri, kesme noktaları, / out/üzerinden deyimleri adım **sonraki deyimi Ayarla**ve daha fazlası. Linux bilgisayarlar üzerinde çalışan uzaktan Python kod hata ayıklaması yapabilirsiniz.
+    Visual Studio, çalışan işlemlere ekleme, **izleme** ve **anında** Windows 'da ifadeleri değerlendirme, yerel değişkenleri İnceleme, kesme noktaları, adımla/dışarı/çıkış/kapatma dahil olmak üzere Python için kapsamlı bir hata ayıklama deneyimi sağlar deyimler, **sonraki deyimi ayarla**ve daha fazlası. Ayrıca, Linux bilgisayarlarda çalışan uzaktan Python kodunda hata ayıklayabilirsiniz.
 
-    ![Visual Studio'da Python hata ayıklama](media/remote-debugging-breakpoint-hit.png)
+    ![Visual Studio 'da Python 'da hata ayıklama](media/remote-debugging-breakpoint-hit.png)
 
-- [C++ ile etkileşim kurma](working-with-c-cpp-python-in-visual-studio.md)
+- [İle etkileşimC++](working-with-c-cpp-python-in-visual-studio.md)
 
-    Python için oluşturulan birçok kitaplıklarının en iyi performans için C++ dilinde yazılır. Visual Studio gibi C++ uzantıları geliştirmeye yönelik zengin olanakları sağlar [karışık mod hata ayıklama](debugging-mixed-mode-c-cpp-python-in-visual-studio.md).
+    Python için oluşturulan birçok kitaplık, en iyi C++ performans için ' de yazılmıştır. Visual Studio, C++ [karışık modda hata ayıklama](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)da dahil olmak üzere Uzantılar geliştirmek için zengin olanaklar sunar.
 
-    ![Python ile birlikte C++ karışık mod hata ayıklama](media/mixed-mode-debugging.png)
+    ![Python ve C++ birlikte karışık modda hata ayıklama](media/mixed-mode-debugging.png)
 
 - [Profil Oluşturma](profiling-python-code-in-visual-studio.md)
 
-    CPython tabanlı bir yorumlayıcı kullanırken, Visual Studio'da Python kodunuzun performansını değerlendirebilirsiniz.
+    Bir Cpithon tabanlı yorumlayıcı kullanırken, Visual Studio içinde Python kodunuzun performansını değerlendirebilirsiniz.
 
     ![Profil oluşturma performans raporu](media/profiling-results.png)
 
 - [Birim Testi](unit-testing-python-in-visual-studio.md)
 
-    Tüm IDE bağlamında hata ayıklama birim testleri ve Visual Studio tümleşik destek bulmak, sağlar çalışır.
+    Visual Studio, IDE bağlamında birim testlerini bulmak, çalıştırmak ve hata ayıklamak için tümleşik destek sağlar.
 
-    ![Birim testi başarısız test durumu gösteriliyor](media/unit-test-A-fail.png)
+    ![Başarısız test durumunu gösteren birim testi](media/unit-test-A-fail.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Aşağıdaki hızlı başlangıçlarını veya öğreticilerini birini izleyerek daha fazla Visual Studio'da Python'ı keşfedin:
+Aşağıdaki hızlı başlangıçlardan veya öğreticilerden birini izleyerek Visual Studio 'da Python 'u daha fazla inceleyin:
 
 > [!div class="nextstepaction"]
-> [Hızlı Başlangıç: Flask ile web uygulaması oluşturma](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)
+> [Hızlı başlangıç: Flask ile Web uygulaması oluşturma](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)
 
 > [!div class="nextstepaction"]
-> [Visual Studio'da Python ile çalışma](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [Visual Studio 'da Python ile çalışma](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 > [!div class="nextstepaction"]
-> [Visual Studio'da Django web çerçevesi ile çalışmaya başlama](learn-django-in-visual-studio-step-01-project-and-solution.md)
+> [Visual Studio 'da Docgo Web çerçevesini kullanmaya başlama](learn-django-in-visual-studio-step-01-project-and-solution.md)
 
 > [!div class="nextstepaction"]
-> [Visual Studio'da Flask web çerçevesi ile çalışmaya başlama](learn-flask-visual-studio-step-01-project-solution.md)
+> [Visual Studio 'da Flask Web çerçevesi ile çalışmaya başlama](learn-flask-visual-studio-step-01-project-solution.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- Bulma [daha fazla Visual Studio özellikleri](../ide/advanced-feature-overview.md)
-- Ziyaret [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
-- Okuma [Visual Studio blogu](https://devblogs.microsoft.com/visualstudio/)
+- [Daha fazla Visual Studio özelliği](../ide/advanced-feature-overview.md) bulun
+- [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/) ziyaret edin
+- [Visual Studio blogunu](https://devblogs.microsoft.com/visualstudio/) okuyun

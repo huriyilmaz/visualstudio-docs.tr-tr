@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b27abf8470527e4e5de5c05ca3438a8471b7c80e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9b5a0ad18c7b1472e8c08ccc2902cade7714f2b9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667772"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985274"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>Visual Studio ModelBus kullanarak modelleri tümleştirme
 
@@ -36,15 +36,13 @@ Ek bilgi ve örnek kod için bkz.:
 
 ### <a name="expose"></a>Bir DSL tanımını model veri yoluna göstermek için
 
-1. Visual Studio Model veri yolu uzantısı 'nı henüz yüklemediyseniz, yükleyin ve yükleyin. Daha fazla bilgi için bkz. [görselleştirme ve modelleme SDK](http://go.microsoft.com/fwlink/?LinkID=185579).
+1. DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın.
 
-2. DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın.
+2. İletişim kutusunda **Bu DSL 'Yi ModelBus**' a göstermek istiyorum ' u seçin. Bu DSL 'nin modellerini sergilemesini ve diğer DSLs başvurularını kullanmasını istiyorsanız her iki seçeneği de belirleyebilirsiniz.
 
-3. İletişim kutusunda **Bu DSL 'Yi ModelBus**' a göstermek istiyorum ' u seçin. Bu DSL 'nin modellerini sergilemesini ve diğer DSLs başvurularını kullanmasını istiyorsanız her iki seçeneği de belirleyebilirsiniz.
+3. **Tamam**'a tıklayın. DSL çözümüne yeni bir "ModelBusAdapter" projesi eklenir.
 
-4. **Tamam**'a tıklayın. DSL çözümüne yeni bir "ModelBusAdapter" projesi eklenir.
-
-5. DSL 'ye bir metin şablonundan erişmek istiyorsanız, yeni projedeki AdapterManager.tt öğesini değiştirmeniz gerekir. DSL 'ye komutlar ve olay işleyicileri gibi diğer koddan erişmek istiyorsanız bu adımı atlayın. Daha fazla bilgi için bkz. [bir metin şablonunda Visual Studio ModelBus kullanma](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
+4. DSL 'ye bir metin şablonundan erişmek istiyorsanız, yeni projedeki AdapterManager.tt öğesini değiştirmeniz gerekir. DSL 'ye komutlar ve olay işleyicileri gibi diğer koddan erişmek istiyorsanız bu adımı atlayın. Daha fazla bilgi için bkz. [bir metin şablonunda Visual Studio ModelBus kullanma](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
 
    1. AdapterManagerBase Taban sınıfını [VsTextTemplatingModelingAdapterManager](/previous-versions/ee844317(v=vs.140))olarak değiştirin.
 
@@ -56,13 +54,13 @@ Ek bilgi ve örnek kod için bkz.:
 
       DSL 'ye hem metin şablonlarından hem de diğer koddan erişmek istiyorsanız, biri değiştirilmiş ve bir değiştirilmemiş iki bağdaştırıcıya ihtiyacınız vardır.
 
-6. **Tüm Şablonları Dönüştür**' e tıklayın.
+5. **Tüm Şablonları Dönüştür**' e tıklayın.
 
-7. Çözümü yeniden derleyin.
+6. Çözümü yeniden derleyin.
 
    Bu, artık ModelBus 'in bu DSL örneklerini açmasını olanaklı hale gelir.
 
-   @No__t_0 klasörü, `Dsl` projesi ve `ModelBusAdapters` projesi tarafından oluşturulan derlemeleri içerir. Bu DSL 'yi başka bir DSL 'ye başvurmak için bu derlemeleri içeri aktarmanız gerekir.
+   `ModelBusAdapters\bin\*` klasörü, `Dsl` projesi ve `ModelBusAdapters` projesi tarafından oluşturulan derlemeleri içerir. Bu DSL 'yi başka bir DSL 'ye başvurmak için bu derlemeleri içeri aktarmanız gerekir.
 
 ### <a name="ensure-that-elements-can-be-referenced"></a>Öğelerin başvurulduğundan emin olun
 
@@ -76,7 +74,7 @@ Visual Studio ModelBus bağdaştırıcılar, varsayılan olarak onu tanımlamak 
 
 3. Model veri yolu başvuruları oluşturmak istediğiniz her sınıf için:
 
-    Sınıf düğümüne tıklayın ve Özellikler penceresi **seri hale getirme kimliğinin** `true` olarak ayarlandığından emin olun.
+    Sınıf düğümüne tıklayın ve Özellikler penceresi **seri hale GETIRME kimliğinin** `true`olarak ayarlandığından emin olun.
 
    Alternatif olarak, GUID yerine öğeleri tanımlamak için öğe adlarını kullanmak istiyorsanız, oluşturulan bağdaştırıcıların parçalarını geçersiz kılabilirsiniz. Bağdaştırıcı sınıfında aşağıdaki yöntemleri geçersiz kılın:
 
@@ -124,7 +122,7 @@ Bir DSL 'yi başka bir DSL 'ye yönelik başvuruları kullanmak üzere etkinleş
 
 2. Uygun **türde ModelBusReference**: bir modele veya bir modelin içindeki bir öğeye tıklayın.
 
-3. Dosya iletişim kutusu filtre dizesinde, `Family Tree files |*.ftree` gibi bir dize girin. Subsitute, sunulan DSL 'nin dosya uzantısını.
+3. Dosya iletişim kutusu filtre dizesinde, `Family Tree files |*.ftree` gibi bir dize girin. Sunulan DSL 'nin dosya uzantısını yerine koyun.
 
 4. Modeldeki bir öğeye başvuru yapmayı seçerseniz, kullanıcının seçebileceğiniz türlerin bir listesini ekleyebilirsiniz, örneğin Company. FamilyTree. Person.
 
@@ -236,7 +234,7 @@ using (FamilyTreeAdapter adapter =
 } // Dispose adapter
 ```
 
-@No__t_0 daha sonra kullanmak istiyorsanız, bunu dış tür `ModelBusReference` sahip bir etki alanı özelliğinde saklayabilirsiniz:
+`modelReference` daha sonra kullanmak istiyorsanız, bunu dış tür `ModelBusReference`sahip bir etki alanı özelliğinde saklayabilirsiniz:
 
 ```csharp
 using Transaction t = this.Store.TransactionManager
@@ -259,7 +257,7 @@ ModelBusReference personReference =
   adapter.GetElementReference(person);
 ```
 
-@No__t_0 daha sonra kullanmak istiyorsanız, bunu dış tür `ModelBusReference` sahip bir etki alanı özelliğinde saklayabilirsiniz. Kullanıcıların düzenleme yapmasına izin vermek için düzenleyici özniteliğinde parametresi olarak `ModelElementReferenceEditor` kullanın. Daha fazla bilgi için bkz. [kullanıcının bir başvuruyu düzenlemesine Izin verme](#editRef).
+`elementReference` daha sonra kullanmak istiyorsanız, bunu dış tür `ModelBusReference`sahip bir etki alanı özelliğinde saklayabilirsiniz. Kullanıcıların düzenleme yapmasına izin vermek için düzenleyici özniteliğinde parametresi olarak `ModelElementReferenceEditor` kullanın. Daha fazla bilgi için bkz. [kullanıcının bir başvuruyu düzenlemesine Izin verme](#editRef).
 
 ### <a name="resolving-references"></a>Başvuruları çözme
 
@@ -358,7 +356,7 @@ Bu şekilde seri hale getirilen bir MBR bağlamdan bağımsızdır. Basit dosya 
 
 ### <a name="serializing-relative-to-a-specified-file-path"></a>Belirtilen dosya yoluna göre serileştirme
 
-@No__t_0, içinde serileştirilmesi gereken dosya yolu gibi bilgileri depolayabilmeniz için bir sözlük olan `ReferenceContext` içerir.
+`ModelBusReference`, içinde serileştirilmesi gereken dosya yolu gibi bilgileri depolayabilmeniz için bir sözlük olan `ReferenceContext`içerir.
 
 Bir yola göre seri hale getirmek için:
 
@@ -382,7 +380,7 @@ ModelBusReference elementReferenceRestored =
 ### <a name="modelbusreferences-created-by-other-adapters"></a>Diğer bağdaştırıcılar tarafından oluşturulan ModelBusReferences
  Kendi bağdaştırıcınızı oluşturmak istiyorsanız aşağıdaki bilgiler yararlı olur.
 
- @No__t_0 (MBR) iki bölümden oluşur: model veri yolu tarafından seri durumdan çıkarılan MBR üst bilgisi ve belirli bağdaştırıcı Yöneticisi tarafından işlenen bağdaştırıcıya özel. Bu, kendi bağdaştırıcı serileştirme biçiminizi sağlamanıza olanak tanır. Örneğin, bir dosya yerine bir veritabanına başvurabilirsiniz veya bağdaştırıcı başvurusunda ek bilgi saklayabilirsiniz. Kendi bağdaştırıcınız `ReferenceContext` daha fazla bilgi yerleştirebilir.
+ `ModelBusReference` (MBR) iki bölümden oluşur: model veri yolu tarafından seri durumdan çıkarılan MBR üst bilgisi ve belirli bağdaştırıcı Yöneticisi tarafından işlenen bağdaştırıcıya özel. Bu, kendi bağdaştırıcı serileştirme biçiminizi sağlamanıza olanak tanır. Örneğin, bir dosya yerine bir veritabanına başvurabilirsiniz veya bağdaştırıcı başvurusunda ek bilgi saklayabilirsiniz. Kendi bağdaştırıcınız `ReferenceContext` daha fazla bilgi yerleştirebilir.
 
  MBR 'yi serisini kaldırdığınızda, daha sonra MBR nesnesinde depolanan bir ReferenceContext sağlamalısınız. Bir MBR 'yi seri hale getirerek, depolanan ReferenceContext bağdaştırıcı tarafından, dizeyi oluşturmaya yardımcı olmak için kullanılır. Seri durumdan çıkarılan dize, ReferenceContext içindeki tüm bilgileri içermiyor. Örneğin, basit dosya tabanlı bağdaştırıcıda ReferenceContext, serileştirilmiş MBR dizesinde depolanmayan bir kök dosya yolu içerir.
 
@@ -512,7 +510,7 @@ DSL tanımı diyagramına sağ tıkladıktan sonra ModelBus 'ı etkinleştir ' e
 
 - Çözüme yeni bir proje `ModelBusAdapter` eklenir.
 
-- @No__t_0 bir başvuru `DslPackage` projesine eklenir. `ModelBusAdapter`, `Dsl` projesine bir başvuru içerir.
+- `ModelBusAdapter` bir başvuru `DslPackage` projesine eklenir. `ModelBusAdapter`, `Dsl` projesine bir başvuru içerir.
 
 - **DslPackage\source.Extention.tt**' de, `|ModelBusAdapter|` MEF bileşeni olarak eklenir.
 

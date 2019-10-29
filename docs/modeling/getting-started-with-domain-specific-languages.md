@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfdd1e1eb040960032cc04f8c47f3f28e929b678
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c86383ddc833a6b76affa451f21180ed4941ad14
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667292"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985045"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>Alana Özgü Dilleri Kullanmaya Başlama
 
@@ -21,7 +21,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 > [!NOTE]
 > Metin şablonu dönüştürme SDK 'Sı ve Visual Studio modelleme SDK 'Sı, Visual Studio 'nun belirli özelliklerini yüklediğinizde otomatik olarak yüklenir. Daha ayrıntılı bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)bakın.
 
-DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [görselleştirme ve modelleme SDK 'sı](http://go.microsoft.com/fwlink/?LinkID=186128)
+DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [görselleştirme ve modelleme SDK 'sı](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>Etki alanına özgü dille ne yapabilirsiniz?
 
@@ -43,8 +43,8 @@ Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 
 | | |
 |-|-|
-| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579) |
-| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580) |
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
+| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
 | Visual Studio için modelleme SDK 'Sı | |
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
@@ -153,7 +153,7 @@ Visual Studio 'nun hata ayıklama örneğinde gezgin 'i göremiyorsanız, **Gör
 
 DSL 'niz, DSL örnekleri olan modelleri okumanızı ve güncelleştirmenizi sağlayan bir API oluşturur. API 'nin bir uygulaması, bir modelden metin dosyaları üretmesidir. Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
-Hata ayıklama çözümünde ". tt" uzantılı şablon dosyalarını açın. Bu örneklerde modellerden nasıl metin oluşturabileceğiniz ve DSL 'nizin API 'sini test etmeniz için nasıl izin oluşturabileceğiniz gösterilmektedir. Örneklerden biri, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] diğer [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] yazılır.
+Hata ayıklama çözümünde ". tt" uzantılı şablon dosyalarını açın. Bu örneklerde modellerden nasıl metin oluşturabileceğiniz ve DSL 'nizin API 'sini test etmeniz için nasıl izin oluşturabileceğiniz gösterilmektedir. Örneklerden biri, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]diğer [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]yazılır.
 
 Her şablon dosyası altında oluşturduğu dosyadır. Çözüm Gezgini şablon dosyasını genişletin ve oluşturulan dosyayı açın.
 
@@ -333,7 +333,7 @@ Var olan etki alanı sınıflarını ve ilişkileri yeniden adlandırın. Örne�
 
     1. **DSL Gezgini**' nde **Düzenleyici** ve **araç kutusu sekmeleri**' ni genişletin.
 
-    2. *@No__t_1your DSL >* öğesine sağ tıklayın ve ardından **Yeni öğe Ekle aracı**' na tıklayın.
+    2. *DSL >\<* sağ tıklayın ve sonra **Yeni öğe Ekle aracı**' na tıklayın.
 
     3. Yeni aracının **Name** özelliğini ayarlayın ve **sınıf** özelliğini Town olarak ayarlayın.
 
@@ -341,7 +341,7 @@ Var olan etki alanı sınıflarını ve ilişkileri yeniden adlandırın. Örne�
 
 7. Kasabalarında şubeleri ve kişiler arasında bağlantı oluşturmak için bir bağlayıcı aracı oluşturun.
 
-    1. *@No__t_1your DSL >* öğesine sağ tıklayın ve ardından **yeni bağlayıcı aracı ekle**' ye tıklayın.
+    1. *DSL >\<* sağ tıklayın ve sonra **yeni bağlayıcı aracı ekle**' ye tıklayın.
 
     2. Yeni aracın ad özelliğini ayarlayın.
 

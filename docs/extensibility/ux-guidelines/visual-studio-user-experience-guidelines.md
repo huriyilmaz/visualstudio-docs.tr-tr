@@ -8,19 +8,19 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f01ddcd75aa02a9444f014898efd114ebdcd59d6
-ms.sourcegitcommit: 57866dd72fd0e15ce61128df70729b427a2d02eb
+ms.openlocfilehash: 28cf2f0542cc76e5045dbf0780e9899983084760
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68315116"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982387"
 ---
 # <a name="visual-studio-user-experience-guidelines"></a>Visual Studio Kullanıcı Deneyimi Yönergeleri
 Visual Studio için yeni özellikler tasarlarsanız, Visual Studio Kullanıcı deneyimi yönergelerini izleyin. Bu yönergeler, yeni kullanıcı arabirimi (UI) tasarımcılarının geliştirme ortamında sorunsuz ve tutarlı kullanıcı deneyimleri oluşturabilmesi için ortak Kullanıcı modelleri ve etkileşim desenleri hakkında bilgiler içerir.
 
 Microsoft ürünleri için yazılım geliştirirseniz, bu kaynakları kullanmayı öğrenin:
 
-- [Windows Kullanıcı deneyimi etkileşim yönergeleri](https://docs.microsoft.com/windows/win32/uxguide/guidelines) , Windows Masaüstü davranışı ve görünümü için temel bilgiler içerir.
+- [Windows Kullanıcı deneyimi etkileşim yönergeleri](/windows/win32/uxguide/guidelines) , Windows Masaüstü davranışı ve görünümü için temel bilgiler içerir.
 
 - Bu Visual Studio yönergeleri, ortamınız için uygun olan genel Windows talimatlarını yerine geçen platforma özel yönergeler olan bu Visual Studio kılavuzlarından biri.
 

@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 859944c51be0abf2e6a326a06a5e4432a69ee4ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bd2e42f48a6881b533a2f098e47ac92511b85aa3
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655932"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984833"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>İzlenecek yol: SharePoint için OData görüntüleyen bir Silverlight Web Bölümü oluşturma
-  SharePoint 2010, liste verilerini OData aracılığıyla gösterir. SharePoint 'te OData hizmeti, Reststaservıce ListData. svc tarafından uygulanır. Bu izlenecek yol, bir Silverlight uygulaması barındıran SharePoint Web Bölümü oluşturmayı gösterir. Silverlight uygulaması, ListData. svc kullanarak SharePoint duyuru listesi bilgilerini görüntüler. Daha fazla bilgi için bkz. [SharePoint FOUNDATION Rest arabirimi](http://go.microsoft.com/fwlink/?LinkId=225999) ve [Açık Veri Protokolü](http://go.microsoft.com/fwlink/?LinkId=226000).
+  SharePoint 2010, liste verilerini OData aracılığıyla gösterir. SharePoint 'te OData hizmeti, Reststaservıce ListData. svc tarafından uygulanır. Bu izlenecek yol, bir Silverlight uygulaması barındıran SharePoint Web Bölümü oluşturmayı gösterir. Silverlight uygulaması, ListData. svc kullanarak SharePoint duyuru listesi bilgilerini görüntüler. Daha fazla bilgi için bkz. [SharePoint FOUNDATION Rest arabirimi](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)) ve [Açık Veri Protokolü](https://www.odata.org/).
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -123,7 +123,7 @@ ms.locfileid: "72655932"
     DataServiceCollection<AnnouncementsItem> announcements = new DataServiceCollection<AnnouncementsItem>();
     ```
 
-11. @No__t_0 yordamını aşağıdaki kodla değiştirin.
+11. `UserControl_Loaded` yordamını aşağıdaki kodla değiştirin.
 
     ```vb
     Private Sub UserControl_Loaded_1(sender As Object, e As RoutedEventArgs)
@@ -228,7 +228,7 @@ ms.locfileid: "72655932"
      Silverlight Web Bölümü artık SharePoint sitesinden bildiri verileri görüntülüyor olmalıdır. Varsayılan olarak, sayfa SharePoint 'teki site sayfaları listesinde depolanır.
 
     > [!NOTE]
-    > Etki alanları arasında Silverlight 'taki verilere erişirken, Web uygulamalarından yararlanmak için kullanılabilecek güvenlik açıklarına karşı Silverlight koruyucuları. Silverlight 'taki uzak verilere erişirken sorunlarla karşılaşırsanız bkz. [bir hizmeti etki alanı sınırları genelinde kullanılabilir hale getirme](http://go.microsoft.com/fwlink/?LinkId=223276).
+    > Etki alanları arasında Silverlight 'taki verilere erişirken, Web uygulamalarından yararlanmak için kullanılabilecek güvenlik açıklarına karşı Silverlight koruyucuları. Silverlight 'taki uzak verilere erişirken sorunlarla karşılaşırsanız bkz. [bir hizmeti etki alanı sınırları genelinde kullanılabilir hale getirme](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc197955(v=vs.95)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)

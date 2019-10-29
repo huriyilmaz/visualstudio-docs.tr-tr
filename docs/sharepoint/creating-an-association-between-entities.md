@@ -1,5 +1,5 @@
 ---
-title: Varlıklar arasında ilişkilendirme oluşturma | Microsoft Docs
+title: Varlıklar arasında Ilişkilendirme oluşturma | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -21,61 +21,61 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c285b699487bd761447e5fbdf6ccd77987a8c0a8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ee767ded0687baa09653bd82785b68bee7fa0ebd
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62952899"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981086"
 ---
 # <a name="create-an-association-between-entities"></a>Varlıklar arasında ilişkilendirme oluşturma
-  İlişkilendirmeleri oluşturarak iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasında ilişkiler tanımlayabilirsiniz. Visual Studio model tüketicilerinin her ilişkilendirmesi hakkında bilgi sağlayan yöntemler oluşturur. Bu yöntemler, SharePoint web bölümleri, liste veya bir kullanıcı arabirimi (UI) veri ilişkileri görüntülemek için özel uygulamaları tarafından kullanılabilecek.
+  İlişkiler oluşturarak Iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasında ilişkiler tanımlayabilirsiniz. Visual Studio, her ilişki hakkında bilgi içeren modelin tüketicilerini sağlayan yöntemler oluşturur. Bu yöntemler, veri ilişkilerini bir kullanıcı arabiriminde (UI) göstermek için SharePoint Web bölümleri, listeleri veya özel uygulamalar tarafından kullanılabilir.
 
-## <a name="create-an-association"></a>İlişkilendirme oluşturma
- Seçerek ilişkilendirme oluşturun **ilişkilendirme** denetimi Visual Studio'da **araç kutusu**, (kaynak varlık olarak adlandırılır) ilk varlık seçerek ve sonra ikinci bir varlık seçerek (çağırılır Hedef varlık). İlişkilendirmeyi ayrıntılarını tanımlayabilirsiniz **ilişkilendirme Düzenleyicisi**. Daha fazla bilgi için [nasıl yapılır: Varlıklar arasında ilişkilendirme oluşturma](../sharepoint/how-to-create-an-association-between-entities.md).
+## <a name="create-an-association"></a>İlişki oluşturma
+ Visual Studio **araç kutusunda** **ilişki** denetimini seçip ilk varlığı (kaynak varlık olarak adlandırılır) seçip ikinci varlığı (hedef varlık olarak adlandırılır) seçerek bir ilişki oluşturun. İlişki **Düzenleyicisi**' nde ilişkilendirmenin ayrıntılarını tanımlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: varlıklar arasında Ilişkilendirme oluşturma](../sharepoint/how-to-create-an-association-between-entities.md).
 
-## <a name="association-methods"></a>İlişkilendirme metotları
- SharePoint iş verileri web bölümlerini gibi uygulamalar, bir varlığın Hizmet sınıfında yöntemleri çağırarak ilişkilerini kullanır. Bunları seçerek bir varlık hizmeti sınıfındaki yöntemleri ekleyebilirsiniz **ilişkilendirme Düzenleyicisi**.
+## <a name="association-methods"></a>İlişkilendirme yöntemleri
+ SharePoint iş verileri Web bölümleri gibi uygulamalar, bir varlığın hizmet sınıfındaki yöntemleri çağırarak ilişkilendirmeleri kullanır. **Ilişki düzenleyicisinde**seçerek bir varlığın hizmet sınıfına Yöntemler ekleyebilirsiniz.
 
- Varsayılan olarak, **ilişkilendirme Düzenleyicisi** ilişkilendirme Gezinti yöntemi için kaynak ve hedef varlık ekler. Kullanıcıları bir hedef Varlık listesini almak bir kaynak varlık ilişkisi Gezinti yöntemi sağlar. Tüketiciler için bir hedef varlık ilişkili kaynak varlık almak bir hedef varlık ilişkisi Gezinti yöntemi sağlar.
+ Varsayılan olarak, **Ilişkilendirme Düzenleyicisi** kaynak ve hedef varlıklara bir ilişkilendirme gezinti yöntemi ekler. Kaynak varlıktaki bir Ilişkilendirme gezinti yöntemi, tüketicilerin hedef varlıkların bir listesini almasını sağlar. Hedef varlıktaki bir Ilişkilendirme gezinti yöntemi, tüketicilerin bir hedef varlıkla ilgili kaynak varlığı almasını sağlar.
 
- İlgili bilgileri döndürmek için bu yöntemlerin her biri için kod eklemeniz gerekir. Ayrıca, daha gelişmiş senaryoları desteklemek için yöntemler diğer tür ekleyebilirsiniz. Bu yöntemlerin her biri hakkında daha fazla bilgi için bkz: [desteklenen işlemler](http://go.microsoft.com/fwlink/?LinkId=169286).
+ Uygun bilgileri döndürmek için bu yöntemlerin her birine kodu eklemeniz gerekir. Daha gelişmiş senaryolar desteklemek için diğer yöntem türleri de ekleyebilirsiniz. Bu yöntemlerin her biri hakkında daha fazla bilgi için bkz. [desteklenen işlemler](/previous-versions/office/developer/sharepoint-2010/ee557363(v=office.14)).
 
-## <a name="types-of-associations"></a>Tür ilişkileri
- İki tür ilişkilerini BDC tasarımcısında oluşturabilirsiniz: yabancı anahtar tabanlı ilişkilendirmeleri ve yabancı anahtarsız ilişkileri.
+## <a name="types-of-associations"></a>İlişki türleri
+ İVB tasarımcısında iki tür ilişki oluşturabilirsiniz: yabancı anahtar tabanlı ilişkilendirmeler ve yabancı anahtarsız ilişkilendirmeleri.
 
 ### <a name="foreign-key-based-association"></a>Yabancı anahtar tabanlı ilişkilendirme
- Kaynak varlıktaki tür tanımlayıcıları hedef varlıktaki tanımlanmış tanımlayıcının ilişkilendirilerek bir yabancı anahtar tabanlı ilişkilendirmesi oluşturabilirsiniz. Bu ilişki, kullanıcıları için Gelişmiş bir kullanıcı Arabirimi sağlamak tüketiciler modeli sağlar. Örneğin, kullanıcının açılan listede müşteriler görüntüleyen bir satış siparişi oluşturmasını sağlayan Outlook formunda; veya, bir müşteri için bir profil sayfasını açmak kullanıcıların sağlayan SharePoint satış siparişlerinin listesi.
+ Kaynak varlıktaki bir tanımlayıcıyı hedef varlıkta tanımlanan tür tanımlayıcılarıyla ilişkilendirerek, yabancı anahtar tabanlı bir ilişki oluşturabilirsiniz. Bu ilişki, modelin tüketicilerinin kullanıcıları için gelişmiş bir kullanıcı arabirimi sağlamasına olanak sağlar. Örneğin, Outlook 'ta, bir kullanıcının bir açılan listede müşterileri görüntüleyebilen bir satış siparişi oluşturmasını sağlayan bir form; veya SharePoint 'te, kullanıcıların bir müşteri için bir profil sayfası açmasını sağlayan satış siparişlerinin bir listesi.
 
- Bir yabancı anahtar tabanlı ilişkisi oluşturmak için tanımlayıcılar ilgilidir ve aynı ada ve türe paylaşan tanımlayıcıları yazın. Örneğin, arasında bir yabancı anahtar tabanlı ilişkilendirmesi oluşturabilirsiniz bir `Contact` varlık ve `SalesOrder` varlık. `SalesOrder` Varlık döndürür bir `ContactID` tanımlayıcısı Bulucu veya belirli bir Bulucu yöntemi dönüş parametresinin bir parçası olarak yazın. Her iki tür tanımlayıcısı görünür **ilişkilendirme Düzenleyicisi**. Arasında bir yabancı anahtar tabanlı ilişki oluşturmak için `Contact` varlık ve `SalesOrder` varlığı seçin `ContactID` bu alanların her biri yanındaki tanımlayıcısı.
+ Yabancı anahtar tabanlı bir ilişki oluşturmak için, aynı adı ve türü paylaşan tanımlayıcıları ve tür tanımlayıcılarını ilişkilendirin. Örneğin, bir `Contact` varlık ve bir `SalesOrder` varlık arasında yabancı anahtar tabanlı bir ilişki oluşturabilirsiniz. `SalesOrder` varlığı, Finder veya belirli Bulucu yöntemlerinin dönüş parametresinin bir parçası olarak bir `ContactID` tür tanımlayıcısı döndürür. Her iki tür tanımlayıcısı da **Ilişkilendirme düzenleyicisinde**görünür. `Contact` varlık ve `SalesOrder` varlık arasında yabancı anahtar tabanlı bir ilişki oluşturmak için, bu alanların her birinin yanındaki `ContactID` tanımlayıcıyı seçin.
 
- Hedef varlık koleksiyonunu döndürür. kaynak varlık ilişkisi Gezgin yöntemine kod ekleyin. Aşağıdaki örnek, bir kişi için satış siparişleri döndürür.
+ Hedef varlıkların koleksiyonunu döndüren kaynak varlığın Ilişkilendirme gezgin yöntemine kod ekleyin. Aşağıdaki örnek, bir kişinin satış siparişlerini döndürür.
 
  [!code-csharp[SP_BDC#7](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#7)]
  [!code-vb[SP_BDC#7](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#7)]
 
- Kaynak varlık döndüren bir hedef varlık ilişkisi Gezgin yöntemine kod ekleyin. Aşağıdaki örnek satış siparişi için ilgili kişi döndürür.
+ Kaynak varlık döndüren hedef varlığın Ilişkilendirme gezgin yöntemine kod ekleyin. Aşağıdaki örnek, satış siparişiyle ilgili olan kişiyi döndürür.
 
  [!code-csharp[SP_BDC#8](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#8)]
  [!code-vb[SP_BDC#8](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#8)]
 
-### <a name="foreign-keyless-association"></a>Yabancı anahtarsız ilişkilendirmesini
- Tanımlayıcıları alanı tür tanımlayıcısı için eşleme olmadan bir ilişki oluşturabilirsiniz. Hedef varlık ile doğrudan bir ilişki kaynak varlık sahip olmadığında bu tür bir ilişki oluşturun. Örneğin, bir `SalesOrderDetail` tablosu birincil anahtarında eşleyen bir yabancı anahtar yok bir `Contact` tablo.
+### <a name="foreign-keyless-association"></a>Yabancı anahtarsız ilişkilendirmesi
+ Tanımlayıcıları alan türü tanımlayıcılarıyla eşleştirmeden bir ilişkilendirme oluşturabilirsiniz. Kaynak varlığın hedef varlıkla doğrudan bir ilişkisi olmadığında, bu tür bir ilişki oluşturun. Örneğin, bir `SalesOrderDetail` tablo, bir `Contact` tablosundaki birincil anahtarla eşleşen yabancı anahtara sahip değildir.
 
- Bilgileri görüntülenecek istiyorsanız `SalesOrderDetail` ilişkili tablo bir `Contact`, arasındaki bir yabancı anahtarsız ilişkilendirmesini oluşturabilirsiniz `Contact` varlık ve `SalesOrderDetail` varlık.
+ `SalesOrderDetail` tabloda `Contact`ilgili bilgileri göstermek istiyorsanız, `Contact` varlık ve `SalesOrderDetail` varlığı arasında yabancı bir anahtarsız ilişkisi oluşturabilirsiniz.
 
- İlişkilendirme Gezinti yöntemi içinde `Contact` varlık, dönüş `SalesOrderDetail` varlıkları tabloları birleştirme ya da bir saklı yordamı çağırma.
+ `Contact` varlığının Ilişkilendirme gezinti yönteminde, tabloları birleştirerek veya saklı yordamı çağırarak `SalesOrderDetail` varlıklarını döndürün.
 
- Aşağıdaki örnek, tabloları katılarak tüm satış siparişleri ayrıntılarını döndürür.
+ Aşağıdaki örnek, tabloları birleştirerek tüm satış siparişlerinin ayrıntılarını döndürür.
 
  [!code-csharp[SP_BDC#9](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#9)]
  [!code-vb[SP_BDC#9](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#9)]
 
- İlişkilendirme Gezinti yöntemi içinde `SalesOrderDetail` varlık, ilgili dönüş `Contact`. Aşağıdaki örnekte bu gösterir.
+ `SalesOrderDetail` varlığının Ilişkilendirme gezinti yönteminde ilgili `Contact`döndürün. Aşağıdaki örnek bunu gösterir.
 
  [!code-csharp[SP_BDC#10](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs#10)]
  [!code-vb[SP_BDC#10](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb#10)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)
-- [Nasıl yapılır: Varlıklar arasında ilişkilendirme oluşturma](../sharepoint/how-to-create-an-association-between-entities.md)
+- [Nasıl yapılır: varlıklar arasında ilişkilendirme oluşturma](../sharepoint/how-to-create-an-association-between-entities.md)
