@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf2b8669fe9b516f3150829612d6999895cc69f8
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: a891f6d18657bad65a1cf087da975849642b7aec
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306244"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72912043"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>MSBuild 15 için mevcut bir uygulamayı güncelleştirme
 
@@ -38,11 +38,11 @@ Merkezi bir konumdan MSBuild 'in yüklenmesini önlemek için projenizi değişt
 
 #### <a name="use-nuget-packages-preferred"></a>NuGet paketlerini kullan (tercih edilen)
 
-Bu yönergelerde, [Packagereference stili NuGet başvurularını](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files)kullandığınız varsayılır.
+Bu yönergelerde, [Packagereference stili NuGet başvurularını](/nuget/consume-packages/package-references-in-project-files)kullandığınız varsayılır.
 
-Proje dosyanızı NuGet paketlerinden MSBuild derlemelerine başvuracak şekilde değiştirin. NuGet 'in yalnızca derleme zamanında gerekli olduğunu ve çıkış dizinine kopyalanmayacağını bildirmek için `ExcludeAssets=runtime` belirtin.
+Proje dosyanızı NuGet paketlerinden MSBuild derlemelerine başvuracak şekilde değiştirin. NuGet 'e derlemelerin yalnızca derleme zamanında gerekli olduğunu ve çıkış dizinine kopyalanmayacağını bildirmek için `ExcludeAssets=runtime` belirtin.
 
-MSBuild paketlerinin büyük ve küçük sürümü, desteklemek istediğiniz Visual Studio 'nun en düşük sürümüne eşit veya ondan daha az olmalıdır. Örneğin, Visual Studio 2017 ve sonraki sürümlerini desteklemek istiyorsanız, @no__t paket sürümü-0 ' a başvurun.
+MSBuild paketlerinin büyük ve küçük sürümü, desteklemek istediğiniz Visual Studio 'nun en düşük sürümüne eşit veya ondan daha az olmalıdır. Örneğin, Visual Studio 2017 ve sonraki sürümlerini desteklemek istiyorsanız, başvuru paketi sürümüne `15.1.548`.
 
 Örneğin, bu XML 'yi kullanabilirsiniz:
 
@@ -55,7 +55,7 @@ MSBuild paketlerinin büyük ve küçük sürümü, desteklemek istediğiniz Vis
 
 #### <a name="use-extension-assemblies"></a>Uzantı derlemelerini kullanma
 
-NuGet paketlerini kullanamıyoruz, Visual Studio ile dağıtılan MSBuild derlemelerine başvurabilirsiniz. MSBuild 'e doğrudan başvurdıysanız, `Copy Local` ' ı `False` ' i ayarlayarak çıkış dizininize kopyalanmadığından emin olun. Proje dosyasında, bu ayar aşağıdaki kodla aynı şekilde görünür:
+NuGet paketlerini kullanamıyoruz, Visual Studio ile dağıtılan MSBuild derlemelerine başvurabilirsiniz. MSBuild 'e doğrudan başvurdıysanız, `Copy Local` `False`ayarlayarak çıkış dizininize kopyalanmadığından emin olun. Proje dosyasında, bu ayar aşağıdaki kodla aynı şekilde görünür:
 
 ```xml
     <Reference Include="Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -69,7 +69,7 @@ Uygulamanızın 15.1.0.0 sürümüne gereken bağlama yeniden yönlendirmelerini
 
 ### <a name="ensure-output-is-clean"></a>Çıktının temiz olduğundan emin olun
 
-Bir sonraki adımda eklenen Microsoft. Build. *Locator. dll*dışında *Microsoft. Build. @no__t -1. dll* derlemelerini içermediğinden emin olmak için projenizi derleyin ve çıkış dizinini inceleyin.
+Bir sonraki adımda eklenen Microsoft. Build. *Locator. dll*dışında *Microsoft. Build.\*. dll* derlemelerini içermediğinden emin olmak için projenizi derleyin ve çıkış dizinini inceleyin.
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>Microsoft. Build. Locator için paket başvurusu Ekle
 
@@ -95,4 +95,4 @@ MSBuildLocator.RegisterDefaults();
 
 uygulamanızın başlangıç kodunda.
 
-MSBuild yüklemesi üzerinde daha ayrıntılı denetim isterseniz, `MSBuildLocator.RegisterInstance()` ' e el ile geçirmek için @no__t bir sonuç seçebilirsiniz, ancak bu genellikle gerekli değildir.
+MSBuild yüklemesi üzerinde daha ayrıntılı denetim isterseniz, `MSBuildLocator.RegisterInstance()` el ile geçirilecek `MSBuildLocator.QueryVisualStudioInstances()` sonucunu seçebilirsiniz, ancak bu genellikle gerekli değildir.
