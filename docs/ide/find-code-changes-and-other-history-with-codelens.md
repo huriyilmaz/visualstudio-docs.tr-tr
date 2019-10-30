@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da45af92a11cfe61d5027d0710304e57ad657e48
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f4b9f55f0dc7d2b0a9fb57fa6177cd8a250f6f62
+ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653843"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024830"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens ile kod değişikliklerini ve diğer geçmişi bulma
 
@@ -217,7 +217,7 @@ C# **Test Gezgini**'ni açmadan, veya Visual Basic kodunuz için var olan birim 
 
 1. İlişkili [birim test koduna](../test/unit-test-your-code.md)sahip uygulama koduna gidin.
 
-2. Henüz yapmadıysanız CodeLens test göstergelerini yüklemek için uygulamanızı derleyin. [Oluşturulan derlemeler tarafından bulmanın](../test/test-explorer-faq.md#assembly-based-discovery) açık olduğundan emin olun.
+2. Henüz yapmadıysanız CodeLens test göstergelerini yüklemek için uygulamanızı derleyin. 
 
 3. **Alt** +**3**tuşlarına basarak kodun testlerini gözden geçirin.
 
@@ -231,7 +231,7 @@ C# **Test Gezgini**'ni açmadan, veya Visual Basic kodunuz için var olan birim 
 
      ![CodeLens-birim testi tanımına git](../ide/media/codelens-unit-test-definition.png)
 
-6. Testin sonuçlarını gözden geçirmek için, test durumu göstergesini seçin (![test başarısız simgesi ](../ide/media/codelenstestfailedicon.png) veya ![test ](../ide/media/codelenstestpassedicon.png)) veya **Alt** +**1**tuşlarına basın.
+6. Testin sonuçlarını gözden geçirmek için test durum göstergesini seçin (![test başarısız simgesi](../ide/media/codelenstestfailedicon.png) veya ![testi geçti simgesi](../ide/media/codelenstestpassedicon.png)) veya **Alt**+**1**' e basın.
 
      ![CodeLens-bkz. birim test sonucu](../ide/media/codelens-unit-test-result.png)
 
@@ -322,7 +322,7 @@ Klavyeyi kullanmak için:
 
 ### <a name="q-can-i-move-the-codelens-heads-up-display"></a>S: CodeLens ekran göstergesi görüntüsünü taşıyabilir miyim?
 
-Y **:** Evet, CodeLens 'i pencere olarak yerleştirmek için ![Dock simge ](../ide/media/codelensdockwindow.png) seçin.
+Y **:** Evet, CodeLens 'i pencere olarak yerleştirmek için ![dock simgesini](../ide/media/codelensdockwindow.png) seçin.
 
 ![CodeLens gösterge penceresinde Dock düğmesi](../ide/media/codelensselectdockwindow.png)
 
@@ -352,8 +352,7 @@ Y **:** Yes. Kodunuz TFS 'de ise, [TFS Config komutuyla](/tfs/server/ref/command
 
 ### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>S: çözümmi ilk kez açtığımda CodeLens test göstergeleri artık dosyada görünmüyor. Bunları nasıl yükleyebilirim?
 
-Y **:** Dosyanıza yüklenecek CodeLens test göstergeleri almak için projenizi yeniden derleyin. [Oluşturulan derlemeler tarafından bulmanın](../test/test-explorer-faq.md#assembly-based-discovery
-) açık olduğundan emin olun. Performansı artırmak için, Visual Studio artık kod dosyaları yüklendiğinde test göstergeleri için kaynak bilgilerini getirmayacaktır. Test göstergeleri, bir derlemeden sonra yüklenir veya test **Gezgini**'nde çift tıklayarak teste gidebilirsiniz.
+Y **:** Dosyanıza yüklenecek CodeLens test göstergeleri almak için projenizi yeniden derleyin. Performansı artırmak için, Visual Studio artık kod dosyaları yüklendiğinde test göstergeleri için kaynak bilgilerini getirmayacaktır. Test göstergeleri, bir derlemeden sonra yüklenir veya test **Gezgini**'nde çift tıklayarak teste gidebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

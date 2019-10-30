@@ -10,12 +10,12 @@ ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 18d2364794eef2177c4cfc607ecc6da38143ba54
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: a353ac12f7477bf40393f83de5fe41ede4d9aa95
+ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911866"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024579"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Visual Studio 'da bir Azure bulut hizmetinde veya sanal makinede hata ayıklama
 
@@ -49,7 +49,7 @@ Bir bulut hizmetinde uzak bir makineden hata ayıklamak için, bulut hizmetinizi
 Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirirseniz, performans düşebilir veya ek ücret uygulanır. Hizmeti kullanan istemciler olumsuz yönde etkilenmediğinden, bir üretim hizmetinde uzaktan hata ayıklama kullanmayın.
 
 > [!NOTE]
-> Visual Studio 'dan bir bulut hizmeti yayımladığınızda, söz konusu hizmette .NET Framework 4 ' ü veya .NET Framework 4,5 ' i hedefleyen herhangi bir rol için **IntelliTrace** 'i etkinleştirebilirsiniz. **IntelliTrace**kullanarak, geçmişte bir rol örneğinde gerçekleşen olayları inceleyebilir ve bu zamandan bağlamı yeniden oluşturabilirsiniz. Bkz. [IntelliTrace ve Visual Studio ile yayımlanmış bir bulut hizmetinde hata ayıklama](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md) ve [IntelliTrace kullanma](/debugger/intellitrace).
+> Visual Studio 'dan bir bulut hizmeti yayımladığınızda, söz konusu hizmette .NET Framework 4 ' ü veya .NET Framework 4,5 ' i hedefleyen herhangi bir rol için **IntelliTrace** 'i etkinleştirebilirsiniz. **IntelliTrace**kullanarak, geçmişte bir rol örneğinde gerçekleşen olayları inceleyebilir ve bu zamandan bağlamı yeniden oluşturabilirsiniz. Bkz. [IntelliTrace ve Visual Studio ile yayımlanmış bir bulut hizmetinde hata ayıklama](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md) ve [IntelliTrace kullanma](../debugger/intellitrace.md).
 
 ### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirmek için
 
