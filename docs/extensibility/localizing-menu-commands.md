@@ -15,12 +15,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2b42143c2971bcbb172958b8da42a1e887e4699
-ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
+ms.openlocfilehash: 94f71014440c55da0151d0ebd817aac9f5d2c7ed
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252634"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186281"
 ---
 # <a name="localize-menu-commands"></a>Yerelleştirmek menü komutları
 
@@ -136,9 +136,9 @@ Yerelleştirilmiş kaynakları birleştirmek için *Assemblyinfo.cs* dosyasını
 
      Bu, Windows Presentation Foundation (WPF) denetimleri için varsayılan UI kültürü olarak Ingilizce 'yi ayarlar.
 
-6. @No__t-1 öğelerini içeren `ItemGroup` öğesini bulun.
+6. `EmbeddedResource` öğeleri içeren `ItemGroup` öğesini bulun.
 
-7. *VSPackage. en-US. resx*' i çağıran `EmbeddedResource` öğesinde, `ManifestResourceName` öğesini `VSPackage.en-US.Resources` olarak ayarlanan `LogicalName` öğesiyle değiştirin:
+7. *VSPackage. en-US. resx*' i çağıran `EmbeddedResource` öğesinde, `ManifestResourceName` öğesini aşağıdaki gibi `VSPackage.en-US.Resources`ayarlanmış bir `LogicalName` öğesiyle değiştirin:
 
     ```xml
     <EmbeddedResource Include="VSPackage.en-US.resx">
@@ -147,9 +147,9 @@ Yerelleştirilmiş kaynakları birleştirmek için *Assemblyinfo.cs* dosyasını
     </EmbeddedResource>
     ```
 
-8. Her yerelleştirilmiş dil için, `VsPackage.en-US` için `EmbeddedResource` öğesini kopyalayın ve kopyanın **Include** özniteliğini ve **LogicalName** öğesini hedef yerel ayara ayarlayın.
+8. Her yerelleştirilmiş dil için, `VsPackage.en-US`için `EmbeddedResource` öğesini kopyalayın ve kopyanın **Include** özniteliğini ve **LogicalName** öğesini hedef yerel ayara ayarlayın.
 
-9. Her yerelleştirilmiş `VSCTCompile` öğesi için, aşağıdaki örnekte gösterildiği gibi `Menus.ctmenu` ' ye işaret eden bir `ResourceName` öğesi ekleyin:
+9. Her yerelleştirilmiş `VSCTCompile` öğesi için, aşağıdaki örnekte gösterildiği gibi `Menus.ctmenu`işaret eden bir `ResourceName` öğesi ekleyin:
 
     ```xml
     <ItemGroup>
@@ -166,6 +166,6 @@ Yerelleştirilmiş kaynakları birleştirmek için *Assemblyinfo.cs* dosyasını
      Bu, her dil için bir ana derleme ve kaynak derlemeleri oluşturur. Dağıtım işlemini yerelleştirme hakkında daha fazla bilgi için bkz. [Yerel VSIX paketleri](../extensibility/localizing-vsix-packages.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Menüleri ve komutları Genişlet](../extensibility/extending-menus-and-commands.md)
-- [MenuCommands ile OleMenuCommands @ no__t-0
 - [Uygulamaları globalize ve yerelleştirme](../ide/globalizing-and-localizing-applications.md)

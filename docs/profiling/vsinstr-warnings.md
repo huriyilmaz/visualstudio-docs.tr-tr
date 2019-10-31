@@ -1,5 +1,5 @@
 ---
-title: Vsınstr uyarıları | Microsoft Docs
+title: VSInstr uyarıları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,34 +14,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b03b1350b4125262bedfd7fa5284c13d6d38a2e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 259b4089e4a54dbde4cc8b30a3da2899ad37a85a
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822917"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189301"
 ---
-# <a name="vsinstr-warnings"></a>Vsınstr uyarıları
-Aşağıdaki tabloda tarafından verilen uyarılar *VSInstr.exe* aracı. Uyarıyı görüntülenmesini engellemek için uyarı numaralarını NOWARN seçeneğiyle kullanabilirsiniz.
+# <a name="vsinstr-warnings"></a>VSInstr uyarıları
+Aşağıdaki tabloda, *vsinstr. exe* aracı tarafından verilen uyarılar listelenmektedir. Uyarının görünmesini engellemek için uyarı numaralarıyla birlikte NOWARN seçeneğini kullanabilirsiniz.
 
 |Uyarı numarası|Açıklama|
 |--------------------|-----------------|
-|**VSP1026**|Kapsamı MSCorLib başvurma kitaplıklar üzerinde desteklenmiyor. Bu genellikle taşınabilir kitaplıklar için geçerlidir.<br /><br />[/Enablecodecoverage](/visualstudio/test/vstest-console-options) için .NET Core komut satırı seçeneği gereklidir.|
-|**VSP2000**|İç Hata. Bu yürütülebilir dosya için modülün dosya adı alınamıyor.|
-|**VSP2001**|\<derleme adı > kesin adlandırılmış bir derlemedir. Yürütülmek üzere önce onu yeniden imzalanması gerekir.<br /><br /> İmzalı bir derleme işaretlenmiş durumda olduğunda bu uyarı oluşur. Kullanabileceğiniz *sn.exe* aracı ikili çekilmeye veya geçici olarak devre dışı tanımlayıcı ad gereksinim kapatmak için. Daha fazla bilgi için [Sn.exe (tanımlayıcı ad aracı)](/dotnet/framework/tools/sn-exe-strong-name-tool).|
-|**VSP2002**|İşlevi bulunamadı \<funcname > dosyasındaki \<dosya adı ><br /><br /> Bir işlev içinde belirtilen dosya bulunamıyorsa, bu uyarı oluşur.|
-|**VSP2003**|Çapraz atlama işlevi bulunamadı \<funcname > dosyasındaki \<dosya adı >.<br /><br /> Vsınstr silinmez olamaz, bu uyarı, çapraz atlar meydana gelir. Çapraz atlama kodu iyileştirme için kullanılır.|
-|**VSP2004**|İşlev \<funcname > EXCLUDE komut satırı anahtarı kullanılarak dışlandı ancak çapraz atlama içerdiği için gerekli.<br /><br /> İşlevi, hariç TUTMA seçeneğini kullanarak dışlandı ancak izleme işlemi sırasında gerekli bu uyarı oluşur. Profil Oluşturucu otomatik olarak gerekli işlevi içerir.|
-|**VSP2005**|İç izleme hatası \<hata metni ><br /><br /> İzleme gerçekleştirdiyseniz, bu uyarı görüntülenir. Bunu düzeltilebilir olup olmadığını belirlemek için hata metni gözden geçirin.|
-|**VSP2006**|İçin PDB bulunamadı \<adı ><br /><br /> PDB dosyası arama yolunda yok veya ikili ile eşlemiyor değilse bu uyarı oluşur.|
-|**VSP2007**|\<Dosya adı > hiçbir izlenebilir kod içermiyor.<br /><br /> Bu uyarı, İşlevler ikili dosyadaki tüm dışlanan veya belirtilen dosya yalnızca kaynaklar içeriyorsa görüntülenir.|
-|**VSP2008**|Güvenlik öznitelikleri alınamıyor \<adı >. Hata kodu \<kod ><br /><br /> Kullanıcı READ_DAC iznine sahip değilse bu uyarı oluşur. İzleme işlemi sırasında profil oluşturucu için ikili dosya özgün DACL korumak çalışır. Özgün ikiliyi yeni bir ikili dosya ile değiştirilir olduğundan, özgün ikilinin DACL kopyalanır ve yeni ikili için uygulanır. Kullanıcı özgün iki READ_DAC erişim olmaması durumunda başarısız olabilir.|
-|**VSP2009**|Güvenlik öznitelikleri ayarlanamadı \<adı >. Hata kodu \<hata numarası ><br /><br /> Kullanıcı WRITE_DAC iznine sahip değilse bu uyarı oluşur. İzleme işlemi sırasında profil oluşturucu için ikili dosya özgün DACL korumak çalışır. Özgün ikiliyi yeni bir ikili dosya ile değiştirilir olduğundan, özgün ikilinin DACL kopyalanır ve yeni ikili için uygulanır. Kullanıcı yeni ikili dosya WRITE_DAC erişim olmaması durumunda başarısız olabilir.|
-|**VSP2010**|Hiçbir işlevlerdir özellikle /-EXCLUDE seçenekleri nedeniyle, - izleme için seçili içerir|
-|**VSP2011**|İçerme/dışlama funcspec \<adı > tüm işlevleri eşleşmiyor|
-|**VSP2012**|Görüntü için kod kapsamı izleme eklenmiş herhangi bir kod içermiyor.<br /><br /> Profiler, aşağıdaki kodun türünü izleme değil:<br /><br /> -Statik CRT işlevleri<br />-Yönetilen yöntemleri ile NonUserCodeAttribute öznitelikli<br />-DebuggerHiddenAttribute ile öznitelikli yönetilen yöntemleri<br />-MASM blokları<br /><br /> Bu filtreleme sonrasında, varsa, kod sol bu uyarı oluşturulur.|
-|**VSP2013**|Bu görüntüyü izlemek 32-bit işlem olarak çalıştırmayı gerektirir. CLR üst bilgi bayrakları bunu yansıtmak için güncelleştirildi.<br /><br /> Profil Oluşturucu, 64-bit işletim sistemlerinde WOW64 öykünücüsünde 32-bit işlem açabilmek ikili değiştirir. Var olan bir 64 bit işlemde yüklü olmaları durumunda kitaplıkları (DLL'ler) için bu başarısız olabilir. Bu uyarı, bağımlılık kullanıcıya bildirir.|
-|**VSP2014**|Elde edilen izleme eklenmiş görüntü geçersiz görünüyor ve çalışmayabilir.<br /><br /> Geçersiz PE üst bilgisi son kullanılan derleme sahip olduğunda bu ileti oluşur.|
+|**VSP1026**|MSCorLib 'e başvurmayan kitaplıklarda kapsam desteklenmez. Bu durum genellikle taşınabilir kitaplıklar için de kullanılır.<br /><br />.NET Core için [/Enablecodecoverage](../test/vstest-console-options.md) komut satırı seçeneği gereklidir.|
+|**VSP2000**|İç Hata. Bu yürütülebilir dosya için modül dosyası adı alınamıyor.|
+|**VSP2001**|\<bütünleştirilmiş kod adı > kesin adlandırılmış bir derlemedir. Yürütülebilmesi için önce yeniden imzalanması gerekir.<br /><br /> Bu uyarı, imzalanmış bir derleme gösterildiğinde oluşur. İkiliyi bırakmak veya tanımlayıcı ad gereksinimini geçici olarak kapatmak için *sn. exe* aracını kullanabilirsiniz. Daha fazla bilgi için bkz. [sn. exe (tanımlayıcı ad aracı)](/dotnet/framework/tools/sn-exe-strong-name-tool).|
+|**VSP2002**|Dosya \<dosya adı içinde \<funcname > işlevi bulunamadı ><br /><br /> Bu uyarı, bir işlev belirtilen dosyada bulunamıyorsa oluşur.|
+|**VSP2003**|Dosya \<dosya adı > \<funcname > işlevine herhangi bir çapraz atlama bulunamadı.<br /><br /> VSInstr çapraz atlamaları null olarak belirtmezseniz bu uyarı oluşur. Çapraz atlamaları kod iyileştirmesi için kullanılır.|
+|**VSP2004**|\<funcname > işlevi, harıç tutma komut satırı anahtarı kullanılarak dışlandı, ancak çapraz bir geçiş içerdiğinden gerekiyordu.<br /><br /> Bu uyarı, işlev DıŞLAMA seçeneği kullanılarak dışlandıysa ve izleme işlemi sırasında gerekliyse oluşur. Profil Oluşturucu, gerekli işlevi otomatik olarak ekler.|
+|**VSP2005**|İç Izleme hatası \<hata metni ><br /><br /> Bu uyarı, izleme gerçekleştirilemediği takdirde verilir. Hata metnini inceleyerek düzelmediğini tespit edin.|
+|**VSP2006**|\<adı için PDB bulunamadı ><br /><br /> Bu uyarı PDB dosyası arama yolunda yoksa veya ikiliye eşleşmezse oluşur.|
+|**VSP2007**|\<filename > hiçbir ınstrumentable kodu içermiyor.<br /><br /> Bu uyarı, ikili dosyadaki işlevlerin hepsi dışlanmışsa veya belirtilen dosya yalnızca kaynaklar içeriyorsa verilir.|
+|**VSP2008**|\<ad > Güvenlik öznitelikleri alınamıyor. Kod \<hata kodu ><br /><br /> Bu uyarı, kullanıcının READ_DAC izni yoksa oluşur. İzleme işlemi sırasında, profil oluşturucu ikili için özgün DACL 'yi korumaya çalışır. Özgün ikilinin yeni bir ikiliyle değiştirildiği için, özgün ikiliden DACL 'nin kopyalanması ve yeni ikiliye uygulanması gerekir. Bu, kullanıcının özgün ikilide READ_DAC erişimi yoksa başarısız olabilir.|
+|**VSP2009**|\<ad > Güvenlik öznitelikleri ayarlanamıyor. Hata kodu \<hata numarası ><br /><br /> Bu uyarı, kullanıcının WRITE_DAC izni yoksa oluşur. İzleme işlemi sırasında, profil oluşturucu ikili için özgün DACL 'yi korumaya çalışır. Özgün ikilinin yeni bir ikiliyle değiştirildiği için, özgün ikiliden DACL 'nin kopyalanması ve yeni ikiliye uygulanması gerekir. Bu, kullanıcının yeni ikili üzerinde WRITE_DAC erişimi yoksa başarısız olabilir.|
+|**VSP2010**|-INCLUDE/-EXCLUDE seçenekleri nedeniyle izleme için hiçbir işlev özel olarak seçilmedi|
+|**VSP2011**|\<> adı ekleme/dışlama funcspec, hiçbir işlev ile eşleşmiyor|
+|**VSP2012**|Görüntü, kod kapsamı için belgelenmiş bir kod içermez.<br /><br /> Profiler aşağıdaki kod türünü denetlemez:<br /><br /> -Static CRT işlevleri<br />-Kullanıcıdışı CodeAttribute öznitelikli yönetilen Yöntemler<br />-Hata Gerhiddenattribute özniteliğine sahip yönetilen Yöntemler<br />-MASı blokları<br /><br /> Bu uyarı, bu filtrelemeden sonra bir kod ayrıldıysa oluşturulur.|
+|**VSP2013**|Bu görüntüyü işaretleme, bunun 32 bitlik bir işlem olarak çalışmasını gerektirir. CLR üstbilgi bayrakları bunu yansıtacak şekilde güncelleştirildi.<br /><br /> Profil Oluşturucu ikiliyi değiştirir, böylece 64 bit işletim sistemleri WOW64 öykünücüsü 'nde 32 bit işlemi açabilir. Kitaplıklar (dll 'Ler) için, var olan 64 bitlik bir işlemde yükleniyorsa bu durum başarısız olabilir. Bu uyarı kullanıcıya bağımlılığı bildirir.|
+|**VSP2014**|Elde edilen belgelenmiş görüntü geçersiz görünüyor ve çalışmayabilir.<br /><br /> Bu ileti, son belgelenmiş derlemede geçersiz bir PE üstbilgisi olduğunda oluşur.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSInstr](../profiling/vsinstr.md)

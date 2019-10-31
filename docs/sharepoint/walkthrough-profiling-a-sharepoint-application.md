@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d001edcd281a0c21d244704f0a068850804b8762
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4d3afc8ff48355c74544edf123689495bfde1302
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981153"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189130"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>İzlenecek yol: SharePoint uygulaması profili oluşturma
   Bu izlenecek yol, bir SharePoint uygulamasının performansını iyileştirmek için Visual Studio 'da profil oluşturma araçlarının nasıl kullanılacağını gösterir. Örnek uygulama, özellik olay alıcısının performansını düşürür bir boşta kalma döngüsü içeren bir SharePoint özellik olay alıcıdır. Visual Studio Profiler, projenin *etkin yol*olarak da bilinen en pahalı (en yavaş performanslı) kısmını bulmanıza ve ortadan kaldırmanıza olanak sağlar.
@@ -197,7 +197,7 @@ ms.locfileid: "72981153"
 
 2. **Performans sihirbazından**biri sayfasında, profil oluşturma yöntemini **CPU örneklemesi** olarak bırakın ve **İleri** düğmesini seçin.
 
-     Diğer profil oluşturma yöntemleri, daha gelişmiş profil oluşturma durumlarında kullanılabilir. Daha fazla bilgi için bkz. [performans toplama yöntemlerini anlama](/visualstudio/profiling/understanding-performance-collection-methods).
+     Diğer profil oluşturma yöntemleri, daha gelişmiş profil oluşturma durumlarında kullanılabilir. Daha fazla bilgi için bkz. [performans toplama yöntemlerini anlama](../profiling/understanding-performance-collection-methods.md).
 
 3. **Performans sihirbazının**ikinci sayfasında profil hedefini **ProfileTest** olarak bırakın ve **İleri** düğmesini seçin.
 
@@ -273,7 +273,7 @@ ms.locfileid: "72981153"
      Boşta döngüsü çağrısının ortadan kaldırıldığına göre özelliğin çok daha hızlı bir şekilde etkinleştirilmesi gerekir. Örnek profil oluşturma raporu bunu yansıtmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Performans Gezgini](/visualstudio/profiling/performance-explorer)
-- [Performans Oturumuna Genel Bakış](/visualstudio/profiling/performance-session-overview)
-- [Performans Profili Oluşturma Başlangıç Kılavuzu](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [Performans Gezgini](../profiling/performance-explorer.md)
+- [Performans Oturumuna Genel Bakış](../profiling/performance-session-overview.md)
+- [Performans Profili Oluşturma Başlangıç Kılavuzu](../profiling/beginners-guide-to-performance-profiling.md)
 - [Visual Studio Profiler ile uygulama darboğazlarını bulma](https://msdn.microsoft.com/magazine/cc337887.aspx)

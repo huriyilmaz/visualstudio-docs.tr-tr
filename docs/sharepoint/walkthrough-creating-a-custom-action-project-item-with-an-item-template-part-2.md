@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a873d00e1befc9126f4fe89b05a66a8331853ac2
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: ae9c686e46bf6a956d58ac22b823dcc36c2aacce
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984971"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189157"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>İzlenecek yol: öğe şablonu, Bölüm 2 ile özel bir eylem proje öğesi oluşturma
   Özel bir SharePoint proje öğesi türü tanımladıktan ve Visual Studio 'daki bir öğe şablonuyla ilişkilendirdikten sonra, şablon için bir sihirbaz sağlamak isteyebilirsiniz. Bir projeye proje öğesinin yeni bir örneğini eklemek için şablonunuzu kullandıklarında kullanıcılardan bilgi toplamak için Sihirbazı kullanabilirsiniz. Topladığınız bilgiler Proje öğesini başlatmak için kullanılabilir.
@@ -79,7 +79,7 @@ ms.locfileid: "72984971"
 
 2. **Proje tasarımcısında**, hedef framework 'ün .NET Framework 4,5 olarak ayarlandığından emin olun.
 
-     Görsel C# projelerde, bu değeri **uygulama** sekmesinde ayarlayabilirsiniz. Visual Basic projeler için, bu değeri **Derle** sekmesinde ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/how-to-target-a-version-of-the-dotnet-framework.md).
+     Görsel C# projelerde, bu değeri **uygulama** sekmesinde ayarlayabilirsiniz. Visual Basic projeler için, bu değeri **Derle** sekmesinde ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md).
 
 3. **ItemTemplateWizard** projesinde, projeye bir **pencere (WPF)** öğesi ekleyin ve ardından Item **WizardWindow**' u adlandırın.
 
@@ -130,7 +130,7 @@ ms.locfileid: "72984971"
      [!code-xml[SPExtensibility.ProjectItem.CustomAction#9](../sharepoint/codesnippet/Xaml/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml#9)]
 
     > [!NOTE]
-    > Bu XAML 'de oluşturulan pencere <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> temel sınıfından türetilir. Visual Studio 'ya özel bir WPF iletişim kutusu eklediğinizde, bu sınıftan iletişim kutusunu, Visual Studio 'daki diğer iletişim kutularıyla tutarlı bir stil elde etmek ve kalıcı iletişim kutularında oluşabilecek sorunları önlemek için türetmenizi öneririz. Daha fazla bilgi için bkz. [kalıcı Iletişim kutuları oluşturma ve yönetme](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes).
+    > Bu XAML 'de oluşturulan pencere <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> temel sınıfından türetilir. Visual Studio 'ya özel bir WPF iletişim kutusu eklediğinizde, bu sınıftan iletişim kutusunu, Visual Studio 'daki diğer iletişim kutularıyla tutarlı bir stil elde etmek ve kalıcı iletişim kutularında oluşabilecek sorunları önlemek için türetmenizi öneririz. Daha fazla bilgi için bkz. [kalıcı Iletişim kutuları oluşturma ve yönetme](../extensibility/creating-and-managing-modal-dialog-boxes.md).
 
 3. Visual Basic bir proje geliştiriyorsanız, `Window` öğesinin `x:Class` özniteliğinde `WizardWindow` sınıf adından `ItemTemplateWizard` ad alanını kaldırın. Bu öğe, XAML 'in ilk satıröğesidir. İşiniz bittiğinde, ilk satır aşağıdaki koda benzemelidir:
 
@@ -206,7 +206,7 @@ ms.locfileid: "72984971"
     </WizardExtension>
     ```
 
-     `WizardExtension` öğesi hakkında daha fazla bilgi için bkz. [Wizardexgeri &#40;öğesi Visual Studio&#41;şablonları](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).
+     `WizardExtension` öğesi hakkında daha fazla bilgi için bkz. [Wizardexgeri &#40;öğesi Visual Studio&#41;şablonları](../extensibility/wizardextension-element-visual-studio-templates.md).
 
 3. Dosyayı kaydedin ve kapatın.
 
@@ -345,6 +345,6 @@ ms.locfileid: "72984971"
 - [İzlenecek yol: öğe şablonu, Bölüm 1 ile özel bir eylem proje öğesi oluşturma](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
 - [Özel SharePoint proje öğesi türlerini tanımlama](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
-- [Visual Studio Şablon Şeması Başvurusu](/visualstudio/extensibility/visual-studio-template-schema-reference)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Nasıl Yapılır: Sihirbazları Proje Şablonlarıyla Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)
 - [Varsayılan özel eylem konumları ve kimlikleri](/previous-versions/office/developer/sharepoint-2010/bb802730(v=office.14))

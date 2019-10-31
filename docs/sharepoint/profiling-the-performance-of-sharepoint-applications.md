@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fc337b1ac753c214ad2484c26c9149e9a1a6ca04
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 72739cd1063298a2dafc71976fd45360bc2d6ec2
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981195"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189207"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>SharePoint uygulamalarının performansını profil halinde
 
@@ -55,7 +55,7 @@ Web performans testleri, son kullanıcının bir SharePoint uygulamasıyla nası
 
 ## <a name="test-user-interfaces"></a>Test Kullanıcı arabirimleri
 
-Kodlanmış UI testleri, SharePoint uygulamanızı Kullanıcı arabirimi (UI) üzerinden otomatik olarak ister. Bu sınamalar, doğru şekilde çalıştıklarından emin olmak için düğme ve menü gibi UI denetimlerini kapsar. Bu tür bir test, Kullanıcı arabiriminde (örneğin, bir Web sayfasında) doğrulama veya başka bir mantık gerçekleştirildiğinde özellikle yararlıdır. Ayrıca, el ile testleri otomatikleştirmek için kodlanmış UI testleri de kullanabilirsiniz. SharePoint uygulamalarınız için kodlanmış UI testleri, diğer uygulama türleri için testler oluştururken aynı şekilde oluşturulur. Daha fazla bilgi için bkz. [KODLANMıŞ UI Testleriyle SharePoint 2010 uygulamalarını test etme](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md).
+Kodlanmış UI testleri, SharePoint uygulamanızı Kullanıcı arabirimi (UI) üzerinden otomatik olarak ister. Bu sınamalar, doğru şekilde çalıştıklarından emin olmak için düğme ve menü gibi UI denetimlerini kapsar. Bu tür bir test, Kullanıcı arabiriminde (örneğin, bir Web sayfasında) doğrulama veya başka bir mantık gerçekleştirildiğinde özellikle yararlıdır. Ayrıca, el ile testleri otomatikleştirmek için kodlanmış UI testleri de kullanabilirsiniz. SharePoint uygulamalarınız için kodlanmış UI testleri, diğer uygulama türleri için testler oluştururken aynı şekilde oluşturulur. Daha fazla bilgi için bkz. [KODLANMıŞ UI Testleriyle SharePoint 2010 uygulamalarını test etme](/visualstudio/test/testing-sharepoint-2010-applications-with-coded-ui-tests?view=vs-2015).
 
 ## <a name="related-topics"></a>İlgili konular
 
@@ -64,7 +64,7 @@ Kodlanmış UI testleri, SharePoint uygulamanızı Kullanıcı arabirimi (UI) ü
 |[İzlenecek yol: SharePoint uygulaması profili oluşturma](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|Bir SharePoint uygulamasında örnekleme profili analizinin nasıl gerçekleştirileceğini gösterir.|
 |[Uygulamadan önce uygulamanızı performans testi](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts)|Test SharePoint uygulamalarını vurgulamada yardımcı olan yük testlerinin nasıl oluşturulduğunu açıklar.|
 |[Kodunuza Birim Testi Uygulama](../test/unit-test-your-code.md)|Birim testlerini kullanarak kodunuzda mantık hatalarının nasıl bulunacağını açıklar.|
-|[Kodlanmış UI Testleriyle SharePoint 2010 Uygulamalarını Test Etme](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)|SharePoint uygulamalarınızın Kullanıcı arabiriminin nasıl test edileceğini açıklar.|
+|[Kodlanmış UI Testleriyle SharePoint 2010 Uygulamalarını Test Etme](/visualstudio/test/testing-sharepoint-2010-applications-with-coded-ui-tests?view=vs-2015)|SharePoint uygulamalarınızın Kullanıcı arabiriminin nasıl test edileceğini açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

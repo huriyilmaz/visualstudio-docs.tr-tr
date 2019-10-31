@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e406fb5ba9f221fa22faadfecaa8f0baaefebf75
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1c8be1cff099a713413957cfa5f8b3f383ca4bae
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72727341"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186339"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>Proje Sistemlerini Genişletmeye Yönelik IDE Tanımlı Komutlar
 Proje sistemlerini genişletmek istediğinizde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE tarafından sunulan komutları ve komut gruplarını kullanabilirsiniz.
@@ -70,6 +70,6 @@ Proje sistemlerini genişletmek istediğinizde, [!INCLUDE[vsprvs](../../code-qua
 |IDG_VS_CTXT_PROJECT_PROPERTIES|**Proje özellikleri** iletişim kutusuna erişim sağlayan komutlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [VSPackage’ların Kullanıcı Arabirimi Öğeleri Eklemesi](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [MenuCommands ve OleMenuCommands karşılaştırması](../../extensibility/menucommands-vs-olemenucommands.md)
 - [Yeniden Kullanılabilir Düğme Grupları Oluşturma](../../extensibility/creating-reusable-groups-of-buttons.md)

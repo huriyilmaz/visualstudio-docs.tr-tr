@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Örnekleme kullanarak komut satırı profili oluşturma | Microsoft Docs'
+title: 'İzlenecek yol: örnekleme kullanarak komut satırı profili oluşturma | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,45 +11,45 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c76fd1d18b41073bf92ed18dadeeeb3a90c9209
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 20804e6ada568828ea1850ae249d9bf0d24855e0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433608"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189265"
 ---
-# <a name="walkthrough-command-line-profiling-using-sampling"></a>İzlenecek yol: Komut satırı kullanarak örnekleme profili oluşturma
+# <a name="walkthrough-command-line-profiling-using-sampling"></a>İzlenecek yol: örnekleme kullanarak komut satırı profili oluşturma
 
-Bu yönerge, nasıl bir uygulama komut satırı araçlarını kullanarak ve performans sorunlarını belirlemek için örnekleme profili gösterir.
+Bu izlenecek yol, performans sorunlarını belirlemek için komut satırı araçları ve örnekleme kullanarak bir uygulamanın profilini oluşturmayı gösterir.
 
-Bu kılavuzda komut satırı araçlarını kullanarak yönetilen bir uygulama profili oluşturma işlemi adım adım ve uygulamada performans sorunlarını belirlemek ve ayırmak için örnekleme kullanın.
+Bu kılavuzda, komut satırı araçlarını kullanarak yönetilen bir uygulamanın profilini oluşturmaya ve uygulamadaki performans sorunlarını yalıtmak ve tanımlamak için örnekleme kullanmayı öğreneceksiniz.
 
-Bu kılavuzda, aşağıdaki adımları izler:
+Bu kılavuzda, aşağıdaki adımları izleyeceğinizi göreceksiniz:
 
-- Bir uygulamayı, komut satırı araçlarını kullanarak ve örnekleme profil.
-- Performans sorunlarını bulun ve örneklenen profil oluşturma sonuçları analiz edin.
+- Komut satırı araçlarını ve örneklemesi kullanarak bir uygulama profili oluşturma.
+- Performans sorunlarını bulmak ve gidermek için örneklenmiş profil oluşturma sonuçlarını çözümleyin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-- Ara anlayış [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)]
-- Komut satırı araçları ile çalışma anlama Ara
-- Bir kopyasını [PeopleTrax örneği](/visualstudio/profiling/performance-explorer)
-- Profil oluşturma tarafından sağlanan bilgiler ile çalışmak için hata ayıklama sembol bilgisi kullanılabilir olması en iyisidir.
+- [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)] ara anlama
+- Komut satırı araçlarıyla çalışmanın ara anlama
+- [PeopleTrax örneğinin](performance-explorer.md) bir kopyası
+- Profil oluşturma tarafından sağlanan bilgilerle çalışmak için, hata ayıklama sembol bilgilerinin kullanılabilir olması en iyisidir.
 
 ## <a name="command-line-profiling-using-the-sampling-method"></a>Örnekleme yöntemini kullanarak komut satırı profili oluşturma
 
-Örnekleme tarafından belirli bir işlem düzenli aralıklarla etkin işlev belirlemek için yoklanabileceği bir profil oluşturma yöntemidir. Sonuçta elde edilen veriler işlem örneklendiğinde ne sıklıkta işlev çağrı yığının en üstünde olan sayısına sağlar.
+Örnekleme, belirli bir işlemin etkin işlevi belirlemede düzenli aralıklarla yokladığı profil oluşturma yöntemidir. Elde edilen veriler, işlemin örneklendiği sırada işlevin çağrı yığınının en üstünde ne sıklıkta olduğunu gösteren bir sayı sağlar.
 
 > [!NOTE]
-> Profil oluşturma araçları için olan yolu almak için bkz: [komut satırı araçları yolunu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). 64-bit bilgisayarlarda araçların 64-bit hem 32-bit sürümleri kullanılabilir. Profil oluşturucu komut satırı araçlarını kullanmak için Araçlar yolunu komut istemi penceresinin PATH ortam değişkenine ekleyin veya komutun kendisine eklemeniz gerekir.
+> Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). 64 bit bilgisayarlarda, araçların her ikisi de 64-bit ve 32 bit sürümleri mevcuttur. Profil oluşturucu komut satırı araçlarını kullanmak için araçlar yolunu komut Istemi penceresinin PATH ortam değişkenine eklemeniz ya da komutun kendisine eklemeniz gerekir.
 
-### <a name="to-profile-the-peopletrax-application-by-using-the-sampling-method"></a>Örnekleme yöntemini kullanarak PeopleTrax uygulama profiline
+### <a name="to-profile-the-peopletrax-application-by-using-the-sampling-method"></a>PeopleTrax uygulamasını örnekleme yöntemini kullanarak profili eklemek için
 
-1. PeopleTrax örneği uygulamayı yüklemek ve uygulamanın yayın sürümünü oluşturun.
+1. PeopleTrax örnek uygulamasını yükleyip uygulamanın yayın sürümünü oluşturun.
 
-2. Bir komut istemi penceresi açın ve profil oluşturma araçları dizini için yerel yol ortam değişkenine ekleyin.
+2. Bir komut istemi penceresi açın ve Profil Oluşturma Araçları dizinini yerel yol ortam değişkenine ekleyin.
 
-3. Çalışma dizini PeopleTrax ikili dosyaları içeren dizine geçin.
+3. Çalışma dizinini PeopleTrax ikililerini içeren dizin olarak değiştirin.
 
 4. Uygun ortam değişkenlerini ayarlamak için aşağıdaki komutu yazın:
 
@@ -57,21 +57,21 @@ Bu kılavuzda, aşağıdaki adımları izler:
     VSPerfCLREnv /sampleon
     ```
 
-5. Çalıştırarak profilini oluşturmaya başla *VSPerfCmd.exe*, profil oluşturucu denetleyen komut satırı aracı. Aşağıdaki komut, uygulama ve profil oluşturucu örnekleme modunda başlatır:
+5. Profil oluşturucuyu denetleyen komut satırı aracı olan *VSPerfCmd. exe*' yi çalıştırarak profil oluşturmayı başlatın. Aşağıdaki komut, örnekleme modunda uygulamayı ve profil oluşturucuyu başlatır:
 
     ```cmd
     VsPerfCmd /start:sample /output:PeopleTraxReport.vsp /launch:PeopleTrax.exe
     ```
 
-     Profil Oluşturucu işlemiyle başlar ve ekler *PeopleTrax.exe* işlem. Rapor dosyasına toplanan profil oluşturma verilerini yazmak profil oluşturucu işlemi başlatır.
+     Profil Oluşturucu işlemi başlar ve *PeopleTrax. exe* işlemine ekler. Profil Oluşturucu işlemi, toplanan profil oluşturma verilerini rapor dosyasına yazmaya başlar.
 
-6. Tıklayın **kişileri Al**.
+6. **Kişi al**seçeneğine tıklayın.
 
-7. Tıklayın **ExportData**.
+7. **ExportData**öğesine tıklayın.
 
-     Notepad açılır ve dışarı aktarılan verileri içeren yeni bir dosya görüntüler **PeopleTrax**.
+     Not Defteri açılır ve **PeopleTrax**adresinden dışarıya aktarılmış verileri içeren yeni bir dosya görüntüler.
 
-8. Not Defteri'ni kapatın ve ardından kapatın **PeopleTrax** uygulama.
+8. Not defteri 'ni kapatın ve sonra **PeopleTrax** uygulamasını kapatın.
 
 9. Profil oluşturucuyu kapatın. Şu komutu yazın:
 
@@ -79,19 +79,19 @@ Bu kılavuzda, aşağıdaki adımları izler:
     VSPerfCmd /shutdown
     ```
 
-10. Ortam değişkenleri sıfırlamak için aşağıdaki komutu kullanın:
+10. Ortam değişkenlerini sıfırlamak için aşağıdaki komutu kullanın:
 
     ```cmd
     VSPerfCLREnv /sampleoff
     ```
 
-11. Profil oluşturma verilerini depolanır. *vsp* dosya, aşağıdaki yöntemlerden birini kullanarak sonuçları analiz edin:
+11. Profil oluşturma verileri içinde depolanır. *VSP* dosyası aşağıdaki yöntemlerden birini kullanarak sonuçları çözümleyin:
 
-    - Açık. *vsp* Visual Studio IDE dosyasında.
+    - Öğesini açın. Visual Studio IDE 'de *VSP* dosyası.
 
-         — veya —
+         veya
 
-    - Virgülle ayrılmış bir değer oluşturur (. *CSV*) komut satırı aracını kullanarak dosya *VSPerfReport.exe*. Dışında kullanım için raporlar üretmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE, aşağıdaki komutu kullanın:
+    - Virgülle ayrılmış bir değer (. *CSV*) dosyasını kullanarak *VSPerfReport. exe*komut satırı aracını kullanın. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE dışında kullanılmak üzere raporlar oluşturmak için aşağıdaki komutu kullanın:
 
         ```cmd
         VSPerfReport <dir> PeopleTraxReport.vsp /output:<dir> /summary:all
@@ -99,8 +99,8 @@ Bu kılavuzda, aşağıdaki adımları izler:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Performans oturumuna genel bakış](../profiling/performance-session-overview.md)
-[komut satırından profil](../profiling/using-the-profiling-tools-from-the-command-line.md)
+
 [VSPerfCmd](../profiling/vsperfcmd.md)
-[örnekleme verileri anlama değerleri](../profiling/understanding-sampling-data-values.md)
-[performans raporu görünümleri](../profiling/performance-report-views.md)
+[komut satırından](../profiling/using-the-profiling-tools-from-the-command-line.md) [performans oturumuna genel bakış](../profiling/performance-session-overview.md)
+profili [örnekleme veri değerlerini anlama](../profiling/understanding-sampling-data-values.md)
+[Performans raporu görünümleri](../profiling/performance-report-views.md)

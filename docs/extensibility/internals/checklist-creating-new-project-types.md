@@ -1,5 +1,5 @@
 ---
-title: 'Yapılacaklar listesi: Yeni proje türleri oluşturma | Microsoft Docs'
+title: 'Denetim listesi: yeni proje türleri oluşturma | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,53 +11,53 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64e00c452f01c95046b4dc669dbd3bdd1517d287
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 048f2f61e080230113cd303a202c3819d2c58710
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309210"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186614"
 ---
-# <a name="checklist-create-new-project-types"></a>Yapılacaklar listesi: Yeni proje türleri oluşturma
-Yeni bir proje türü oluşturmak için birkaç görevi tamamlamanız gerekir. Aşağıdaki denetim listesinde, bu görevleri için bir kılavuz sağlar:
+# <a name="checklist-create-new-project-types"></a>Denetim listesi: yeni proje türleri oluşturma
+Yeni bir proje türü oluşturmak için birkaç görevi gerçekleştirmeniz gerekir. Aşağıdaki denetim listesi, bu görevlere rehberlik sağlar:
 
-1. Yeni Proje türünüz için işlevsellik tasarlayın. Daha fazla bilgi için [proje türü tasarım kararları](../../extensibility/internals/project-type-design-decisions.md).
+1. Yeni proje türü için işlevselliği tasarlayın. Daha fazla bilgi için bkz. [Proje türü tasarım kararları](../../extensibility/internals/project-type-design-decisions.md).
 
-2. Hangi düzenleyicileri, kod ve diğer proje öğeleri için kullanıldığını belirleyebilirsiniz. Temel veya standart düzenleyicileri kullanabilirsiniz ya da oluşturabilir ve projeye özgü düzenleyicileri kullanır. Daha fazla bilgi için [özel düzenleyiciler ve tasarımcılar oluşturma](../../extensibility/creating-custom-editors-and-designers.md) ve [nasıl yapılır: Projeye özgü düzenleyicileri açma](../../extensibility/how-to-open-project-specific-editors.md).
+2. Hangi düzenleyicilerin kod ve diğer proje öğeleri için kullanıldığını belirleme. Çekirdek veya standart düzenleyicilerini kullanabilir veya projeye özgü düzenleyiciler oluşturup kullanabilirsiniz. Daha fazla bilgi için bkz. [özel düzenleyiciler ve tasarımcılar oluşturma](../../extensibility/creating-custom-editors-and-designers.md) ve [nasıl yapılır: projeye özgü düzenleyiciler açma](../../extensibility/how-to-open-project-specific-editors.md).
 
-3. Proje öğelerinizi olacaktır katılım düzeyini belirlemek **sınıf görünümü** ve **Nesne Tarayıcısı**. Daha fazla bilgi için [sembol tarama araçlarını destekleyen](../../extensibility/internals/supporting-symbol-browsing-tools.md).
+3. Proje öğelerinizin **sınıf görünümü** ve **nesne tarayıcısı**sahip olacağı katılım düzeyini saptayın. Daha fazla bilgi için bkz. [support symbol-gözatma araçları](../../extensibility/internals/supporting-symbol-browsing-tools.md).
 
-4. Proje ve proje öğeleri için daha önce yapılan tasarım kararlarına göre yeni bir sınıf türetin.
+4. Daha önce projeniz ve proje öğeleriniz için yaptığınız tasarım kararlarını temel alarak yeni sınıflar türetirsiniz.
 
-5. Aşağıdaki proje türü bileşenler için kodu yazın:
+5. Aşağıdaki proje türü bileşenleri için kodu yazın:
 
-    - Yeni proje oluşturma ve mevcut projeleri açma yönetmek için proje üreteci. Daha fazla bilgi için [proje üreteçlerini kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md).
+    - Proje fabrikası, yeni proje oluşturmayı ve var olan projeleri açmayı yönetmek için. Daha fazla bilgi için bkz. [Proje fabrikalarını kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md).
 
-    - Proje hiyerarşisi ve komut işleme. Daha fazla bilgi için [bir proje türü (C++) uygulamak için kullanım HierUtil7 proje sınıfları](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346), [proje modeli öğeleri](../../extensibility/internals/elements-of-a-project-model.md), [proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md)ve [ MenuCommands vs. OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md).
+    - Proje hiyerarşisi ve komut işleme. Daha fazla bilgi için bkz [. HierUtil7 proje sınıflarını kullanarak bir proje türüC++()](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346), [proje modeli öğeleri](../../extensibility/internals/elements-of-a-project-model.md), [proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md)ve [MenuCommands vs. OleMenuCommands](/visualstudio/extensibility/menucommands-vs-olemenucommands?view=vs-2015).
 
-    - Proje öğeleri yönetimi, projenize ekleme dahil olmak üzere **yeni proje** iletişim kutusu. Daha fazla bilgi için [proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md) ve [proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md).
+    - Proje öğeleri yönetimi, projenizi **Yeni proje** iletişim kutusuna ekleme da dahil. Daha fazla bilgi için bkz. [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md) ve [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md).
 
-    - Kalıcılık proje durumu ve tek tek öğeleri. Daha fazla bilgi için [açık proje öğeleri kaydedip](../../extensibility/internals/opening-and-saving-project-items.md). Çözüm bilgileri kalıcılığını bkz [çözümleri](../../extensibility/internals/solutions-overview.md).
+    - Proje durumunun ve bireysel öğelerinin kalıcılığı. Daha fazla bilgi için bkz. [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md). Çözüm bilgilerinin sürekliliği için bkz. [çözümler](../../extensibility/internals/solutions-overview.md).
 
-    - Özellikler penceresinde görüntülemek için yapılandırma bağımsız Özellikleri'ni kullanın. Daha fazla bilgi için [özellikleri genişletmenize](../../extensibility/internals/extending-properties.md).
+    - Özellikler penceresi görüntülenecek yapılandırmadan bağımsız Özellikler. Daha fazla bilgi için bkz. [özellikleri genişletme](../../extensibility/internals/extending-properties.md).
 
-    - Bağımlı yapılandırma özelliklerini göstermek için özellik sayfaları'nda uygulandığı şekilde proje yapılandırma özellikleri. Daha fazla bilgi için [yapılandırma seçeneklerini yönetme](../../extensibility/internals/managing-configuration-options.md).
+    - Yapılandırma bağımlı özellikleri göstermek için özellik sayfalarında uygulanan proje yapılandırma özellikleri. Daha fazla bilgi için bkz. [yapılandırma seçeneklerini yönetme](../../extensibility/internals/managing-configuration-options.md).
 
-    - Dağıtım için çıktı numaralandırma. Daha fazla bilgi için [çıkış için proje yapılandırması](../../extensibility/internals/project-configuration-for-output.md).
+    - Dağıtım için çıktılar numaralandırılıyor. Daha fazla bilgi için bkz. [çıktı Için proje yapılandırması](../../extensibility/internals/project-configuration-for-output.md).
 
-    - Proje başlangıç Hizmetleri. Daha fazla bilgi için [proje modeli öğeleri](../../extensibility/internals/elements-of-a-project-model.md) ve [proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md).
+    - Project Başlangıç Hizmetleri. Daha fazla bilgi için bkz. [proje modeli](../../extensibility/internals/elements-of-a-project-model.md) ve [proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md)öğeleri.
 
-    - Nesneleri veya türetilmiş sınıflar `IDispatch`, otomasyon için kullanılabilir.
+    - `IDispatch`türetilen nesneler veya sınıflar otomasyon için kullanılabilir.
 
-    - XML komut tablosu ( *.vsct*) dosyaları. Daha fazla bilgi için [Visual Studio komut tablosu (.vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+    - XML komut tablosu ( *. vsct*) dosyaları. Daha fazla bilgi için bkz. [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
-6. Test, hata ayıklama ve başlatma, proje türü.
+6. Proje türünü test edin, hata ayıklayın ve başlatın.
 
-7. Projenizde görüntülemek **proje** sekmesinde **Başvuru Ekle** ayarlayarak iletişim kutusu `VARIANT_TRUE` değeri olarak `VSHPROPID_ShowProjInSolutionPage`. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>.
+7. `VARIANT_TRUE` `VSHPROPID_ShowProjInSolutionPage`değer olarak ayarlayarak, projenizi **Başvuru Ekle** Iletişim kutusunun **Proje** sekmesinde görüntüleyin. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>.
 
-8. Microsoft Installer oluşturun ( *.msi*), VSPackage yükleme dosyası. Daha fazla bilgi için [Windows Installer ile VSPackage yükleme](../../extensibility/internals/installing-vspackages-with-windows-installer.md), [bir proje türü kaydetme](../../extensibility/internals/registering-a-project-type.md), ve [VSPackages](../../extensibility/internals/vspackages.md).
+8. VSPackages 'yi yüklemek için Microsoft Installer ( *. msi*) dosyasını oluşturun. Daha fazla bilgi için bkz. [Windows Installer Ile VSPackages](../../extensibility/internals/installing-vspackages-with-windows-installer.md)'yi, [bir proje türünü](../../extensibility/internals/registering-a-project-type.md)ve [VSPackages](../../extensibility/internals/vspackages.md)'yi kaydetme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio’da Hiyerarşiler](../../extensibility/internals/hierarchies-in-visual-studio.md)
-- [Proje türleri oluşturma zamanı](../../extensibility/internals/when-to-create-project-types.md)
-- [Proje türleri oluşturma](../../extensibility/internals/creating-project-types.md)
+- [Proje türleri ne zaman oluşturulur](../../extensibility/internals/when-to-create-project-types.md)
+- [Proje türleri oluştur](../../extensibility/internals/creating-project-types.md)

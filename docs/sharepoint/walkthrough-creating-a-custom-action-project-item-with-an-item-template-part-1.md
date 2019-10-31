@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2a9370fbbd5c806bd3978e3c642da8a6dbd79fd1
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4a114345363deb9c5ddd0f5a4141cd7d99f0ac1c
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984981"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189184"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>İzlenecek yol: öğe şablonu, Bölüm 1 ile özel bir eylem proje öğesi oluşturma
   Visual Studio 'da SharePoint proje sistemini, kendi proje öğesi türlerinizi oluşturarak genişletebilirsiniz. Bu kılavuzda, bir SharePoint sitesinde özel bir eylem oluşturmak için bir SharePoint projesine eklenebilen bir proje öğesi oluşturacaksınız. Özel eylem, SharePoint sitesinin **Site eylemleri** menüsüne bir menü öğesi ekler.
@@ -218,7 +218,7 @@ ms.locfileid: "72984981"
     </VSTemplate>
     ```
 
-     Bu dosya, öğe şablonunun içeriğini ve davranışını tanımlar. Bu dosyanın içeriği hakkında daha fazla bilgi için bkz. [Visual Studio Şablon Şeması Başvurusu](/visualstudio/extensibility/visual-studio-template-schema-reference).
+     Bu dosya, öğe şablonunun içeriğini ve davranışını tanımlar. Bu dosyanın içeriği hakkında daha fazla bilgi için bkz. [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md).
 
 4. **Çözüm Gezgini**, **ItemTemplate** projesinin kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni öğe**' yi seçin.
 
@@ -455,6 +455,6 @@ ms.locfileid: "72984981"
 - [Özel SharePoint proje öğesi türlerini tanımlama](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
 - [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md)
-- [Visual Studio Şablon Şeması Başvurusu](/visualstudio/extensibility/visual-studio-template-schema-reference)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Simgeler için Görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons)
 - [Simgeler için simge veya diğer görüntü &#40;resmi Düzenleyicisi oluşturma&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)

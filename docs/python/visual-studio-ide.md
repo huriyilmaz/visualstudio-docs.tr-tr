@@ -11,22 +11,22 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3b01d088618c07f1a3ff24aff2386584ebfad060
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 91f80d648450447a6ba0e80f10e5c39764445cef
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983694"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189312"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Visual Studio IDE 'ye hoş geldiniz | Python
 
 Visual Studio *Tümleşik geliştirme ortamı* , Python (ve diğer diller) için kod düzenlemek, hatalarını ayıklamak ve test etmek ve ardından bir uygulama yayımlamak için kullanabileceğiniz bir yaratıcı başlatma tablası. Tümleşik geliştirme ortamı (IDE), yazılım geliştirmenin birçok yönü için kullanılabilen özellik açısından zengin bir programdır. En çok kullanılan standart düzenleyici ve hata ayıklayıcı üzerinde ve üzerinde, Visual Studio, yazılım geliştirme sürecini kolaylaştırmak için kod tamamlama araçları, etkileşimli REPL ortamları ve diğer özellikleri içerir.
 
-[Visual Studio 'Yu bir Python projesiyle![](media/tour-ide-overview.png)](media/tour-ide-overview.png#lightbox)
+[Visual Studio 'Yu bir Python projesiyle ![](media/tour-ide-overview.png)](media/tour-ide-overview.png#lightbox)
 
 Bu görüntüde, açık bir Python projesiyle Visual Studio ve büyük olasılıkla kullanabileceksiniz birçok anahtar araç penceresi gösterilmektedir:
 
-- [**Çözüm Gezgini**](../ide/solutions-and-projects-in-visual-studio.md) (sağ üst) kod dosyalarınızı görüntülemenize, gezinmenize ve yönetmenize olanak sağlar. **Çözüm Gezgini** , dosyaları [çözümler ve projelerle](/visualstudio/get-started/tutorial-projects-solutions)gruplayarak kodunuzun düzenlenmesine yardımcı olabilir.
+- [**Çözüm Gezgini**](../ide/solutions-and-projects-in-visual-studio.md) (sağ üst) kod dosyalarınızı görüntülemenize, gezinmenize ve yönetmenize olanak sağlar. **Çözüm Gezgini** , dosyaları [çözümler ve projelerle](../get-started/tutorial-projects-solutions.md)gruplayarak kodunuzun düzenlenmesine yardımcı olabilir.
   - **Çözüm Gezgini** yanı sıra, bilgisayarınızda yüklü farklı Python yorumlayıcıları yönettiğiniz [**Python ortamlardır**](managing-python-environments-in-visual-studio.md).
 
   ::: moniker range=">=vs-2019"

@@ -12,62 +12,62 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aed5a91a819658fb141abb4301b9b9499ed602c6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3a53b0a4e83b9d8a20efcec20f1362ba5c6647b0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311156"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186695"
 ---
 # <a name="commands-menus-and-toolbars"></a>Komutlar, menüler ve araç çubukları
-Menüleri ve araç çubuklarını, VSPackage komutlarında kullanıcıların erişimi olan. Yazdırma, bir görünümü yenileme veya yeni bir dosya oluşturmak gibi görevleri gerçekleştirmek işlevleri komutlardır. Menüleri ve araç çubuklarını komutlarınızı sunmak için uygun grafik yöntemlerdir. Genellikle, ilgili komutları birlikte aynı menü veya araç çubuğunda kümelenir.
+Menüler ve araç çubukları, kullanıcıların VSPackage içindeki komutlara erişme yöntemidir. Komutlar, bir belge yazdırmak, bir görünümü yenilemek veya yeni bir dosya oluşturmak gibi görevleri gerçekleştiren işlevlerdir. Menüler ve araç çubukları, komutlarınızı kullanıcılara sunmak için kullanışlı grafiksel yollardır. Genellikle, ilgili komutlar aynı menü ya da araç çubuğunda birlikte kümelenir.
 
-- Menüleri, genellikle bir satırda tümleşik geliştirme ortamı (IDE) veya bir araç penceresinin üst kısmındaki kümelenmiş Tek sözcüklü dizeler olarak görüntülenir. Menüler ayrıca sağ tıklama olay sonucu olarak görüntülenir ve bu bağlamda kısayol menüleri olarak adlandırılır. Tıklandığında, menüler, bir veya daha fazla komut görüntülemek için genişletin. Tıklandığında, komutları, görevleri gerçekleştirmek veya ek komutlar içeren alt menüler başlatın. Bazı iyi bilinen menü adları **dosya**, **Düzenle**, **görünümü**, ve **penceresi**. Daha fazla bilgi için [genişletmek menüler ve komutlar](../../extensibility/extending-menus-and-commands.md).
+- Menüler genellikle tümleşik geliştirme ortamı (IDE) veya araç penceresinin en üstündeki bir satırda kümelenmiş tek sözcüklü dizeler olarak görüntülenir. Menüler, sağ tıklama olayının sonucu olarak da görüntülenebilir ve bu bağlamda kısayol menüleri olarak adlandırılır. Tıklandığında, menüler bir veya daha fazla komut görüntüleyecek şekilde genişler. Tıklandığı komutlar, görev gerçekleştirebilir veya ek komutlar içeren alt menüleri başlatabilir. Bazı iyi bilinen menü adları **Dosya**, **düzenleme**, **görüntüleme**ve **pencere**. Daha fazla bilgi için bkz. [menüleri ve komutları genişletme](../../extensibility/extending-menus-and-commands.md).
 
-- Araç çubukları, düğmeler ve birleşik giriş kutuları, liste kutuları, metin kutuları ve menü denetleyicisi gibi başka denetimler satırlarını genellikle cihazlardır. Tüm araç çubuğu denetimleri komutları ile ilişkilidir. Araç çubuğu düğmesini tıkladığınızda ilişkilendirilmiş, komut etkin hale gelir. Araç çubuğu düğmeleri, genellikle bir yazıcıya yazdırma komutu gibi temel alınan komutlar öneren simgeleri olur. Bir açılan liste denetiminde listedeki her öğeyi başka bir komut ile ilişkilidir. Araç çubuğu düğmesi denetimi bir tarafı olduğunu ve diğer tarafında tıklandığında ek komutlar görüntüleyen bir aşağı oka olan karma bir menü denetleyicisidir. Daha fazla bilgi için [araç çubuğuna menü denetleyicisi ekleme](../../extensibility/adding-a-menu-controller-to-a-toolbar.md).
+- Araç çubukları genellikle düğme satırları ve Birleşik giriş kutuları, liste kutuları, metin kutuları ve menü denetleyicileri gibi diğer denetimlerdir. Tüm araç çubuğu denetimleri komutlarla ilişkilendirilir. Bir araç çubuğu düğmesine tıkladığınızda, ilişkili komutu etkinleştirilir. Araç çubuğu düğmeleri genellikle Yazdır komutu için bir yazıcı gibi temel komutları öneren simgelere sahiptir. Açılan liste denetiminde, listedeki her öğe farklı bir komutla ilişkilendirilir. Bir menü denetleyicisi, denetimin bir tarafındaki bir araç çubuğu düğmesi ve diğer kenar, tıklandığında ek komutları görüntüleyen aşağı bir oktur. Daha fazla bilgi için bkz. [bir araç çubuğuna menü denetleyicisi ekleme](../../extensibility/adding-a-menu-controller-to-a-toolbar.md).
 
-- Bir komut oluşturduğunuzda, aynı zamanda bir olay işleyicisi için oluşturmanız gerekir. Olay işleyicisi belirler komutu görünür veya etkin olduğunda, metin değiştirme olanak tanır ve komut uygun şekilde yanıt vermesini sağlar ("etkinleştirildiğinde rotaları"). Çoğu durumda, IDE kullanarak komutları işleyen <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi. İçindeki komutlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yerel seçim temel alınarak ve genel seçime göre en dıştaki bağlamı geçmeden en içteki komut bağlamı ile başlayarak, hiyerarşik bir şekilde rota. Ana menüye eklenen komutlar, komut dosyası için hemen kullanılabilir. Daha fazla bilgi için [MenuCommands vs. OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md) ve [seçim bağlamı nesneleri](../../extensibility/internals/selection-context-objects.md).
+- Bir komut oluşturduğunuzda, bunun için de bir olay işleyicisi oluşturmanız gerekir. Olay işleyicisi, komutun görünür veya etkin olduğunu belirler, metnini değiştirmenize olanak sağlar ve etkinleştirildiğinde komutun uygun şekilde ("rotalar") yanıt vermesini sağlar. Çoğu örnekte, IDE <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimini kullanarak komutları işler. Yerel seçime göre ve en dıştaki içeriğe devam eden genel seçime bağlı olarak, en içteki komut bağlamından başlayarak, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rota içindeki komutlar hiyerarşik bir şekilde. Ana menüye eklenen komutlar, komut dosyası oluşturma için hemen kullanılabilir. Daha fazla bilgi için bkz. [menuıcommands vs. OleMenuCommands](/visualstudio/extensibility/menucommands-vs-olemenucommands?view=vs-2015) ve [seçim bağlamı nesneleri](../../extensibility/internals/selection-context-objects.md).
 
-  Yeni menüleri ve araç çubuklarını tanımlamak için bunları Visual Studio komut tablosu içinde açıklamanız gerekir ( *.vsct*) dosyası. Bu dosya, için hangi komutları, araç çubukları ve şablonda seçili düzenleyicileri desteklemek için gerekli öğeler ile birlikte Visual Studio Paket şablon oluşturur. Alternatif olarak, kendi yazabileceğiniz *.vsct* dosya, burada açıklanan XML şeması kullanarak: [VSCT XML Şeması Başvurusu](../../extensibility/vsct-xml-schema-reference.md).
+  Yeni menüleri ve araç çubuklarını tanımlamak için bunları bir Visual Studio komut tablosu ( *. vsct*) dosyasında açıklamanız gerekir. Visual Studio paket şablonu, bu dosyayı sizin için oluşturur ve şablonda seçtiğiniz komutları, araç çubuklarını ve düzenleyicileri desteklemek için gerekli öğeleri sağlar. Alternatif olarak, burada açıklanan XML şemasını kullanarak kendi *. vsct* dosyanızı yazabilirsiniz: [VSCT XML şema başvurusu](../../extensibility/vsct-xml-schema-reference.md).
 
-  İle çalışma hakkında daha fazla bilgi için *.vsct* dosyaları görmek [Visual Studio komut tablosu (.vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+  *. Vsct* dosyaları ile çalışma hakkında daha fazla bilgi için bkz. [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
-  Bu bölümdeki konularda, komutlar, menüler ve araç çubukları Vspackage'larda nasıl çalıştığı açıklanmaktadır.
+  Bu bölümdeki konularda, komut, menü ve araç çubuklarının VSPackages 'te nasıl çalıştığı açıklanmaktadır.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages Kullanıcı arabirimi öğeleri ekleme](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 
- Komut tablosu biçim belirtimi ayrıntılı bir açıklaması.
+ Komut tablosu biçim belirtiminin derinlemesine bir açıklaması.
 
-- [Visual Studio komut tablosu (.vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 
- Bir XML tabanlı sözdizimi ve derleyicisi komut tablolar için açıklar.
+ Komut tabloları için XML tabanlı sözdizimi ve derleyicisini açıklar.
 
-- [Varsayılan komut, Grup ve araç çubuğu yerleştirme](../../extensibility/internals/default-command-group-and-toolbar-placement.md)
+- [Varsayılan komut, Grup ve araç çubuğu yerleşimi](../../extensibility/internals/default-command-group-and-toolbar-placement.md)
 
- Önceden tanımlanmış komutları, grupları, menüleri ve araç çubukları açıklar.
+ Önceden tanımlanmış komutlar, gruplar, menüler ve araç çubuklarını açıklar.
 
 - [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)
 
- Önceden tanımlanmış menüler, komutlar ve komut grubu tarafından kullanılmak üzere yok belirtir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE tarafından kullanılabilen önceden tanımlanmış menüleri, komutları ve komut gruplarını belirtir.
 
 - [Komut tasarımı](../../extensibility/internals/command-design.md)
 
- Komutları tasarım açıklanmaktadır.
+ Komutların nasıl tasarlanacağını açıklar.
 
-- [Menü ve araç çubuğu komutlarını en iyi duruma getirme](../../extensibility/internals/optimizing-menu-and-toolbar-commands.md)
+- [Menüyü ve araç çubuğu komutlarını iyileştirme](../../extensibility/internals/optimizing-menu-and-toolbar-commands.md)
 
- Komutları için yönergeler sağlar.
+ Komutlar için yönergeler sağlar.
 
 - [Komutları kullanılabilir yap](../../extensibility/internals/making-commands-available.md)
 
- Komutları için Visual Studio tarafından kullanılabilmesini açıklanmaktadır.
+ Komutların Visual Studio için nasıl kullanılabilir yapılacağını açıklar.
 
-- [Komutlar ve menüler birlikte çalışma bütünleştirilmiş kodları kullanın](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)
+- [Birlikte çalışma derlemelerini kullanan komutlar ve menüler](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)
 
- Birlikte çalışma bütünleştirilmiş kodları kullanan komutlar uygulanacağını açıklar.
+ Birlikte çalışma derlemelerini kullanan komutların nasıl uygulanacağını açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Vspackage'larda komut yönlendirme](../../extensibility/internals/command-routing-in-vspackages.md)
+- [VSPackages 'de komut yönlendirme](../../extensibility/internals/command-routing-in-vspackages.md)
 
- Vspackage'larda komut yönlendirme açıklar.
+ VSPackages 'de komut yönlendirmeyi açıklar.

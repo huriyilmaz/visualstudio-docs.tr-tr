@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a42651792848ffd4de9eccb40c2949d113b10b4
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: bb5442d12899436076f6b60e8fd7e807b19e4f82
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911879"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189341"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 ve Windows Server 2012 uygulamalarında performans araçları
 
@@ -37,7 +37,7 @@ UWP uygulamalarının profili oluşturulurken Bu profil oluşturma özellikleri 
 
 UWP uygulamalarının profilini oluşturma hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Yerel makinede UWP uygulamaları çalıştırma](/visualstudio/debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml)
+- [Yerel makinede UWP uygulamaları çalıştırma](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)
 - [Uzak makinede UWP uygulamaları çalıştırma](../debugger/run-windows-store-apps-on-a-remote-machine.md)
 - [Profil oluşturma araçlarına ilk bakış](profiling-feature-tour.md)
 - [JavaScript belleği](../profiling/javascript-memory.md)

@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9e53cc877a4e462a458f3bfd455ed222c3b2e17b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: c3b2fc34807be6ae03fe5aacab64439c918a0f5e
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984664"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189143"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>İzlenecek yol: proje şablonu, Bölüm 2 ile bir site sütunu proje öğesi oluşturma
   Özel bir SharePoint proje öğesi türü tanımladıktan ve Visual Studio 'daki bir proje şablonuyla ilişkilendirdikten sonra, şablon için bir sihirbaz de sağlamak isteyebilirsiniz. Sihirbazı kullanarak, Proje öğesini içeren yeni bir proje oluşturmak için şablonunuzu kullandıklarında kullanıcılardan bilgi toplayabilirsiniz. Topladığınız bilgiler Proje öğesini başlatmak için kullanılabilir.
@@ -116,7 +116,7 @@ ms.locfileid: "72984664"
 
 3. Hedef Framework 'ün .NET Framework 4,5 Istemci profiline değil .NET Framework 4,5 ' e ayarlandığından emin olun.
 
-     Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/how-to-target-a-version-of-the-dotnet-framework.md).
+     Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md).
 
 4. **ProjectTemplateWizard** projesinin kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni öğe**' yi seçin.
 
@@ -233,7 +233,7 @@ ms.locfileid: "72984664"
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml#10)]
 
     > [!NOTE]
-    > Bu XAML 'de oluşturulan pencere <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> temel sınıfından türetilir. Visual Studio 'ya özel bir WPF iletişim kutusu eklediğinizde, diğer Visual Studio iletişim kutuları ile tutarlı bir Stillendirme ve aksi takdirde oluşabilecek kalıcı iletişim sorunlarından kaçınmak için iletişim kutusunu bu sınıftan türetmenizi öneririz. Daha fazla bilgi için bkz. [kalıcı Iletişim kutuları oluşturma ve yönetme](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes).
+    > Bu XAML 'de oluşturulan pencere <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> temel sınıfından türetilir. Visual Studio 'ya özel bir WPF iletişim kutusu eklediğinizde, diğer Visual Studio iletişim kutuları ile tutarlı bir Stillendirme ve aksi takdirde oluşabilecek kalıcı iletişim sorunlarından kaçınmak için iletişim kutusunu bu sınıftan türetmenizi öneririz. Daha fazla bilgi için bkz. [kalıcı Iletişim kutuları oluşturma ve yönetme](../extensibility/creating-and-managing-modal-dialog-boxes.md).
 
 3. Visual Basic bir proje geliştiriyorsanız, `Window` öğesinin `x:Class` özniteliğinde `WizardWindow` sınıf adından `ProjectTemplateWizard` ad alanını kaldırın. Bu öğe, XAML 'in ilk satıröğesidir. İşiniz bittiğinde, ilk satır aşağıdaki örnekteki gibi görünmelidir.
 
@@ -403,7 +403,7 @@ ms.locfileid: "72984664"
     </WizardExtension>
     ```
 
-     `WizardExtension` öğesi hakkında daha fazla bilgi için bkz. [Wizardexgeri &#40;öğesi Visual Studio&#41;şablonları](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).
+     `WizardExtension` öğesi hakkında daha fazla bilgi için bkz. [Wizardexgeri &#40;öğesi Visual Studio&#41;şablonları](../extensibility/wizardextension-element-visual-studio-templates.md).
 
 3. Dosyayı kaydedin ve kapatın.
 
@@ -536,11 +536,11 @@ ms.locfileid: "72984664"
 
 4. Visual Studio 'nun Deneysel örneğini ve CustomActionProjectItem çözümünün açık olduğu örneğini kapatın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] uzantılarının nasıl dağıtılacağı hakkında bilgi için bkz. [Visual Studio uzantılarını gönderme](/visualstudio/extensibility/shipping-visual-studio-extensions).
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] uzantılarının nasıl dağıtılacağı hakkında bilgi için bkz. [Visual Studio uzantılarını gönderme](../extensibility/shipping-visual-studio-extensions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu proje öğesi oluşturma](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)
 - [Özel SharePoint proje öğesi türlerini tanımlama](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [SharePoint Proje Öğeleri için Öğe Şablonları ve Proje Şablonları Oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
-- [Visual Studio Şablon Şeması Başvurusu](/visualstudio/extensibility/visual-studio-template-schema-reference)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Nasıl Yapılır: Sihirbazları Proje Şablonlarıyla Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)

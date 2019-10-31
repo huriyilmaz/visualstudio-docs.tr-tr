@@ -11,15 +11,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ae53481b773cfdad5d4ac70f90202fcfd9d1ad4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 34fddd6513aad612398c700b935c6d1d3ee72b59
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334318"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186268"
 ---
 # <a name="register-a-tool-window"></a>Araç penceresi kaydetme
-Kullanarak, araç pencerelerini kaydedebilirsiniz <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> ve <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>.
+<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> ve <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>kullanarak araç pencerelerini kaydedebilirsiniz.
 
 ## <a name="example"></a>Örnek
 
@@ -35,4 +35,4 @@ public class PackageToolWindow : Package
 {
 ```
 
- Yukarıdaki kodda <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> kaydeder `PersistedWindowPane` ve `DynamicWindowPane` araç penceresi Visual Studio ile. Kalıcı araç penceresi yerleştirilmiş ve ile sekmeli **Çözüm Gezgini**, ve dinamik pencerenin başlangıç konumu ve boyutu varsayılan verilir. Dinamik pencerenin başlangıç oluşturulmaz belirten geçici yapılır. Bu Yazar bir `DontForceCreate` değerini `ToolWindows` sistem kayıt defterinde anahtar. Daha fazla bilgi için [araç penceresi ekran yapılandırması](../extensibility/tool-window-display-configuration.md).
+ Yukarıdaki kodda <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>, Visual Studio ile `PersistedWindowPane` ve `DynamicWindowPane` araç pencerelerini kaydeder. Kalıcı araç penceresi **Çözüm Gezgini**ve sekmeli bir şekilde yerleşiktir ve dinamik pencereye varsayılan başlangıç konumu ve boyutu verilir. Dinamik pencere, başlangıçta oluşturulmadığını belirten geçici hale getirilir. Bu, sistem kayıt defterindeki `ToolWindows` anahtarına bir `DontForceCreate` değeri yazar. Daha fazla bilgi için bkz. [araç penceresi görüntü yapılandırması](/visualstudio/extensibility/tool-window-display-configuration?view=vs-2015).
