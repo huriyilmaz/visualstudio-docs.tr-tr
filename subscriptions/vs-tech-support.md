@@ -6,18 +6,18 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Visual Studio aboneliğinizle birlikte sunulan teknik destek avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 6474cf3322b878055053eaaf1f1943ebc546b206
-ms.sourcegitcommit: 02acadb912faced7eaffe27c2c19104bf0428bcd
+ms.openlocfilehash: 6d76fa3bdff63a31598fb9a977f6ed024d214af1
+ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70936901"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061153"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde teknik destek avantajını etkinleştirin ve kullanın
 Visual Studio aboneliklerinde teknik destek avantajı, hala [destek yaşam döngüsünün](https://support.microsoft.com/lifecycle/search)temel destek aşamasında olan ürünlere yönelik **Üretim dışı ortamlarda** onarım sorunlarını çözmeye yöneliktir. Visual Studio Enterprise standart ve yıllık bulut abonelikleri dört olay alır, Visual Studio Professional ancak standart ve yıllık bulut abonelikleri, avantajı etkinleştirmede 1 yıla kadar olmak üzere iki olay alır. Abonelik geçerli olduğunda avantajı etkinleştirme gerçekleşmelidir.
 
 > [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, https://visualstudio.microsoft.com/vs/pricing/ Visual Studio abonelikleri satın almaya yönelik farklı seçeneklere göz atın.
+> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, Visual Studio abonelikleri satın almaya yönelik farklı seçenekleri araştırmak için https://visualstudio.microsoft.com/vs/pricing/ gitmesi önerilir.
 
 > [!NOTE]
 > Belirli bir düzeydeki tüm abonelikler destek olayları almaya uygun değildir. FTE, NFR, MPN, MCT ve diğer programlar aracılığıyla edinilen abonelikler destek olaylarını almaz. Aboneliğiniz, teknik destek olayları almaya uygun değilse, teknik destek kutucuğu kullanılabilir avantajlarda görünmez.
@@ -29,12 +29,12 @@ Visual Studio IDE ve Azure DevOps Server gibi Geliştirici Araçları, Visual St
 
 Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Windows, SharePoint gibi) yalnızca temel destek için uygundur. Bu ürünler yalnızca uygulamaları tasarlamak, geliştirmek, test etmek veya göstermek için geliştirme ortamları için lisanslanır. Bu ürünler üretim ortamları için lisanslanmaz.
 
-Ürün düzeyi açıklamaları-destek planı belirtilen üründe (kod: 8) destek için kullanılamaz durumdaysa, **kullanılamayan destek planlarını** genişletin. Destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
+Ürün düzeyi açıklamaları: **kullanılamayan destek planlarını**genişletin. **Belirtilen ürüne (kod: 8) destek için destek planı kullanılmıyorsa**, destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
 
 ## <a name="how-to-activate-the-benefit"></a>Avantajı etkinleştirme
-1. Git ' https://my.visualstudio.com/Benefits e gidin, destek bölümüne gidin ve teknik destek kutucuğunda **etkinleştirmek için sohbet**' e tıklayın.
+1. https://my.visualstudio.com/Benefits gidin, destek bölümüne gidin ve teknik destek kutucuğunda **etkinleştirmek Için sohbet**' e tıklayın.
     > [!div class="mx-imgBorder"]
-    > ![Teknik destek avantajı kutucuğu](_img/vs-tech-support/vs-tech-support-tile.png)
+    > ![teknik destek avantajı kutucuğu](_img/vs-tech-support/vs-tech-support-tile.png)
 2. Bu, **sözleşme kimliği** ve **erişim kimliğiniz** oluşturabileceğiniz bir temsilciyle sohbet oturumu başlatır ve bunları sizin kayıtlarınızda olacak şekilde e-posta yoluyla size sağlayabilir.
 
 3. Bu işlemi gerçekleştirmek için temsilciyle birlikte sağlamanız gerekir:
@@ -46,7 +46,7 @@ Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Wi
    - [Abonelikler](https://my.visualstudio.com/subscriptions) sekmesinde bulunan abonelik kimliği.
 
    > [!div class="mx-imgBorder"]
-   > ![Teknik destek avantajı abonelik KIMLIĞINI bulun](_img/vs-tech-support/vs-tech-support-subID-cropped.png)
+   > ![teknik destek avantajı abonelik KIMLIĞINI bulun](_img/vs-tech-support/vs-tech-support-subID-cropped.png)
 
 4. İşlem tamamlandıktan sonra, bir destek olayı oluştururken kullanacağınız **sözleşme kimliğini** ve **erişim Kimliğinizi** içeren bir e-posta alırsınız.  Ayrıca, yeni erişim KIMLIĞINIZI ve sözleşme KIMLIĞINIZI kullanarak destek olaylarını göndermek için yönergeler sağlar. 
 
@@ -60,7 +60,7 @@ Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Wi
 Bir olayı çevrimiçi olarak gönderirken öncelikle oturum açmanız istenir. Bildiğiniz hesapla oturum açarak, sözleşmenin KIMLIĞI ve erişim KIMLIĞINIZ ile ilişkilendirilir. Hesabınızla ilişkili mevcut destek planı avantajınız, destek iş akışında 3. adımda görünür. Bu planı seçmeniz ve servis talebinizi göndermeye devam etmeniz yeterlidir. Olayları planda belirtilen sınıra kadar veya planın sona erme tarihine kadar, hangisi önce gelirse gönderebilirsiniz. Kalan olaylar "0" öğesini gösterir veya planınız sona erdiğinde, artık etkin değildir.
 
    > [!div class="mx-imgBorder"]
-   > ![Teknik destek avantajı olay gönderimi adım 3](_img/vs-tech-support/vs-tech-support-step3.png)
+   > ![teknik destek avantajı olay gönderimi adım 3](_img/vs-tech-support/vs-tech-support-step3.png)
 
 ### <a name="using-your-contract-id-and-access-id-when-submitting-an-incident-initial-use"></a>Bir olayı gönderirken sözleşme KIMLIĞINIZI ve erişim KIMLIĞINIZI kullanma (ilk kullanım)
 
@@ -70,27 +70,27 @@ Bir olayı çevrimiçi olarak gönderirken öncelikle oturum açmanız istenir. 
 1. Destek için gereken ürünü seçtikten sonra **İleri**' ye tıklayın.
 
    > [!div class="mx-imgBorder"]
-   > ![Teknik destek avantajı olay gönderimi adım 1-ürün](_img/vs-tech-support/vs-tech-support-step1.png)
+   > ![teknik destek avantajı olay gönderimi adım 1-ürün](_img/vs-tech-support/vs-tech-support-step1.png)
 
 2. Sorununuzu tanıtın ve **İleri**' ye tıklayın.
 
    > [!div class="mx-imgBorder"]
-   > ![Teknik destek avantajı olay gönderimi adım 2-sorun](_img/vs-tech-support/vs-tech-support-step2.png)
+   > ![teknik destek avantajı olay gönderimi adım 2-sorun](_img/vs-tech-support/vs-tech-support-step2.png)
 
 3. "Destek planı" sayfasında, **bir destek planı eklemek veya satın**almak için aşağı kaydırın, sağdaki oku kullanarak genişletin ve **sözleşme Ekle**' ye tıklayın.
 
    > [!div class="mx-imgBorder"]
-   > ![Teknik destek avantajı olay gönderimi-sözleşme ekleme](_img/vs-tech-support/vs-tech-support-add-contract.png)
+   > Teknik destek avantajı olay gönderimi ![, sözleşme ekleme](_img/vs-tech-support/vs-tech-support-add-contract.png)
 
 4. **ERIŞIM kimliğinizi** ve **sözleşme kimliğinizi**girin.  **Ekle**'yi tıklatın.
 
    > [!div class="mx-imgBorder"]
-   > ![Teknik destek avantajı olay gönderimi-sözleşme KIMLIĞI Ekle](_img/vs-tech-support/vs-tech-support-add-contract-id.png)
+   > Teknik destek avantajı olay gönderimi ![-sözleşme KIMLIĞI ekleme](_img/vs-tech-support/vs-tech-support-add-contract-id.png)
 
 5. Sözleşmeniz eklendikten sonra, en üstteki **bir destek planı seçin** altında görünür. Planınız, başlıkta "MSDN" terimini içerecektir. Seçin, aşağı kaydırın ve **İleri**' ye tıklayın.
 
    > [!div class="mx-imgBorder"]
-   > ![Teknik destek avantajı olay gönderimi-plan seçin](_img/vs-tech-support/vs-tech-support-choose-plan.png)
+   > ![teknik destek avantajı olay gönderimi-plan seçin](_img/vs-tech-support/vs-tech-support-choose-plan.png)
 
    > [!NOTE]
    > Destek planınızı görmüyorsanız önceki sayfaya dönün ve **İleri** ' ye tıklayın.  Bu, destek planını görüntülemezse, destek sorununun metnini panonuza kopyalayın, sayfayı yenileyin ve destek sorununu yeniden oluşturun.
@@ -103,7 +103,7 @@ Telefonda bir destek olayı oluşturmak istiyorsanız lütfen ülkeniz için [M�
 #### <a name="submit-an-incident-within-the-azure-portal"></a>Azure portal içinde bir olay Gönder
 Azure ile ilgili sorunlar için Visual Studio aboneliğiniz teknik destek avantajını kullanabilmeniz için, sözleşme KIMLIĞINIZI ve erişim KIMLIĞINIZI Azure aboneliğinize bağlamanız gerekir.
 
-1. Ziyaret https://portal.azure.com edin ve oturum açın
+1. https://portal.azure.com ziyaret edin ve oturum açın
 2. Sol taraftaki gezinmede **Yardım ve destek** ' e tıklayın.
 3. "Destek" altında **Yeni destek isteği** ' ne tıklayın.
 
@@ -118,8 +118,8 @@ Azure ile ilgili sorunlar için Visual Studio aboneliğiniz teknik destek avanta
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Yok                                                           |Yok|
 ||
 
-<sup></sup> 1*şunları içerir: Imagine Premium, BizSpark. Tutar For the satıl (NFR), Visual Studio sektör ortağı (VSıP), Microsoft İş Ortağı Ağı (MPN), FTE, MCT Software & Services geliştiricisi, Imagine Standard, en değerli profesyonel (MVP), bölgesel yönetmen (RD), MCT yazılım & Hizmetleri için değil.*
+<sup>1</sup> *şunları Içerir: Imagine Premium, BizSpark. Hariç tutar: for satıl (NFR), Visual Studio Endüstri ortağı (VSıP), Microsoft İş Ortağı Ağı (MPN), FTE, MCT Software & Services Geliştirici, Imagine Standard, en değerli profesyonel (MVP), bölgesel yönetmen (RD), MCT yazılım & Hizmetleri.*
 
-<sup></sup> 2*şunları içerir: Imagine standart.*
+<sup>2</sup> *şunları Içerir: Imagine standart.*
 
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresinize atanan tüm abonelikleri görmek [içinbağlantısınıyapın. https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresinize atanan tüm abonelikleri görmek için [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) bağlanın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.

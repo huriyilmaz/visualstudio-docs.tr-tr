@@ -1,6 +1,6 @@
 ---
-title: '2. Adım: İlk ASP.NET Core Web uygulamanızı oluşturma'
-description: Bu video öğreticide ve adım adım yönergeleri ile ilk ASP.NET Core Web uygulamanızı oluşturun.
+title: '2\. Adım: Ilk ASP.NET Core Web uygulamanızı oluşturma'
+description: Bu video öğreticisiyle ilk ASP.NET Core Web uygulamanızı oluşturun ve adım adım yönergeleri uygulayın.
 ms.custom: get-started
 ms.date: 03/31/2019
 ms.technology: vs-ide-general
@@ -16,64 +16,67 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 740d6336ab4258d3111dd6708de859108e22365e
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 21959c4a0cc2b961eca43ab9724369c7aea8444b
+ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402064"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061122"
 ---
-# <a name="step-2-create-your-first-aspnet-core-web-app"></a>2. Adım: İlk ASP.NET Core web uygulamanızı oluşturma
+# <a name="step-2-create-your-first-aspnet-core-web-app"></a>2\. Adım: ilk ASP.NET Core Web uygulamanızı oluşturma
 
-Bu video öğreticide ve adım adım yönergeleri ile ilk ASP.NET Core Web uygulamanızı oluşturun.
+Bu video öğreticisiyle ilk ASP.NET Core Web uygulamanızı oluşturun ve adım adım yönergeleri uygulayın.
 
-_Bu video ve bunların ilk ASP.NET Core uygulamanızı oluşturmak için izleme izleyin._
+_İlk ASP.NET Core uygulamanızı oluşturmak için bu videoyu izleyin ve takip edin._
 
 > [!VIDEO https://www.youtube.com/embed/-79RkpyFB6E]
 
-## <a name="start-visual-studio-2019-and-create-a-new-project"></a>Visual Studio 2019'ı başlatın ve yeni bir proje oluşturun
+## <a name="start-visual-studio-2019-and-create-a-new-project"></a>Visual Studio 2019 'yi başlatın ve yeni bir proje oluşturun
 
-Visual Studio 2019 başlatır ve **yeni proje oluştur**. Seçin **ASP.NET Core Web uygulaması**. Seçin **Web uygulaması** şablonu ve canlı varsayılan proje adı ve konumu. **Oluştur**'u tıklatın. Daha ayrıntılı yönergeler için bkz [Bu öğretici serisinin önceki videoda](tutorial-aspnet-core-ef-step-01.md).
+Visual Studio 2019 ' u başlatın ve **Yeni proje oluştur**' a tıklayın. **ASP.NET Core Web uygulaması**' nı seçin. **Web uygulaması** şablonunu seçin ve varsayılan proje adını ve konumunu tutun. ASP.NET Core sürümüyle açılan menüde, **ASP.NET Core 2,1** veya **ASP.NET Core 2,2**' i seçin. **Oluştur**'u tıklatın. Daha ayrıntılı yönergeler için [Bu öğretici serisinde önceki videoya](tutorial-aspnet-core-ef-step-01.md)bakın.
 
-![Visual Studio 2019 ASP.NET Core proje seçenekleri seçin](media/vs-2019/vs2019-choose-aspnetcore-project.png)
+![Visual Studio 2019 ASP.NET Core projesi seçeneklerini belirleyin](media/vs-2019/vs2019-choose-aspnetcore-project.png)
 
-## <a name="explore-the-new-project"></a>Yeni Proje keşfedin
+> [!WARNING]
+> ASP .NET Core 2,1 veya ASP.NET Core 2,2 ' i seçtiğinizden emin olun. Bu öğretici ASP.NET Core 3. x ile uyumlu değildir.
 
-Çözüm Gezgini penceresinde, sağ taraftaki yeni projenin içeriğini görüntüleyebilirsiniz. Bunlar burada açıklanan.
+## <a name="explore-the-new-project"></a>Yeni projeyi keşfet
+
+Sağ taraftaki Çözüm Gezgini penceresinde, yeni projenin içeriğini görebilirsiniz. Burada açıklanırlar.
 
 ![Visual Studio 2019 ASP.NET Core projesi](media/vs-2019/vs2019-solution-explorer.png)
 
-### <a name="wwwroot"></a>wwwroot
+### <a name="wwwroot"></a>Wwwroot
 
-*Wwwroot* klasör web uygulamasından genel olarak erişilebilir olan statik dosyalar tutar. Genellikle, stil sayfaları, istemci tarafı komut dosyası ve görüntü de içerir.
+*Wwwroot* klasörü, Web uygulamasından herkese açık olarak erişilebilen statik dosyaları barındırır. Genellikle stil sayfaları, istemci tarafı betik dosyaları ve görüntüleri barındırır.
 
 ### <a name="pages"></a>Sayfalar
 
-*Sayfaları* klasör sitenin Razor sayfaları içerir. Varsayılan şablon dahil olmak üzere çeşitli sayfalar sağlar *Index.cshtml* uygulama giriş sayfası, de olarak hakkında her şey sayfası, kişi ve benzeri.
+*Sayfalar* klasörü, sitenin Razor Pages barındırır. Varsayılan şablon, uygulama giriş sayfası olan *Index. cshtml* sayfası ve hakkında, ilgili olarak, vb. dahil olmak üzere çeşitli sayfalar sağlar.
 
-### <a name="appsettingsjson"></a>appsettings.json
+### <a name="appsettingsjson"></a>appSettings. JSON
 
-Bu dosya JSON biçiminde bir site için yapılandırma ayarlarını içerir.
+Bu dosya, JSON biçiminde site için yapılandırma ayarlarını barındırır.
 
 ### <a name="programcs"></a>Program.cs
 
-Bu dosya, uygulama için giriş noktası olarak görev yapar. Uygulama çalıştırıldığında, kendi ana yöntemi çalıştırılır ve uygulamayı içerecek Web ana bilgisayarı oluşturmaktan sorumlu olan ilk yöntemidir.
+Bu dosya, uygulama için giriş noktası işlevi görür. Uygulama çalıştırıldığında, ana yöntemi çalıştırılan ilk yöntemdir ve uygulamayı içerecek olan Web konağını oluşturmaktan sorumludur.
 
 ### <a name="startupcs"></a>Startup.cs
 
-Web ana bilgisayarı oluşturulan *Program.cs* başlangıç sınıfı atıfta bulunan ve uygulamayı yapılandırmak için onun yöntemlerini çağırır. Createservicereplicalisteners() yöntemi, hizmetlerin uygulama kullanır ayarlamaktan sorumludur. `Configure` Yöntemi, uygulamanın HTTP istek işlem hattı ayarlar. Her parça ile etkileşim kurma, bu işlem hattı aracılığıyla her isteğin gittiğini *ara yazılım* olarak bunu yapar.
+*Program.cs* Içinde oluşturulan Web ana bilgisayarı başlangıç sınıfına başvurur ve uygulamayı yapılandırmak için yöntemlerini çağırır. ConfigureServices yöntemi, uygulamanın kullanacağı Hizmetleri ayarlamaktan sorumludur. `Configure` yöntemi, uygulamanın HTTP isteği ardışık düzenini ayarlar. Her istek bu işlem hattından geçerek her bir *Ara yazılım* ile etkileşime girer.
 
-### <a name="indexcshtml"></a>Index.cshtml
+### <a name="indexcshtml"></a>Index. cshtml
 
-Site için giriş sayfası, bazı HTML İşaretleme ve bazı sunucu tarafı Razor kodu içerir. Razor sayfa modeli belirtmek için kullandığı `IndexModel`, bulunduğu ilişkili *Index.cshtml.cs* dosya. Ayrıca, ViewData içinde bir değer ayarlayarak sayfa başlığının da ayarlar. Bu ViewData değeri okunan  *\_Layout.cshtml* dosyası, paylaşılan klasörün içinden sayfalar klasöründe bulunan. Düzen dosyası, birçok Razor sayfaları tarafından paylaşılan ve uygulama için genel görünümü sağlar. Her sayfanın içeriğinin düzenini dosyanın HTML içinde işlenir.
+Sitenin ana sayfası, bazı HTML biçimlendirmeleri ve bazı sunucu tarafı Razor kodlarını içerir. İlişkili *Index.cshtml.cs* dosyasında bulunan `IndexModel`sayfa modelini belirtmek için Razor kullanır. Ayrıca, ViewData içindeki bir değeri ayarlayarak sayfa başlığını ayarlar. Bu ViewData değeri, sayfalar klasörünün içindeki paylaşılan klasörde bulunan *\_Layout. cshtml* dosyasında okundu. Düzen dosyası pek çok Razor Pages paylaşılır ve uygulama için ortak görünüm sağlar. Her sayfanın içeriği, düzen dosyasının HTML 'si içinde işlenir.
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Şimdi uygulamayı çalıştırın ve tarayıcıda görüntüleyebilirsiniz. Kullanarak uygulamayı çalıştırabilirsiniz **Ctrl**+**F5** seçerek veya **hata ayıklama** > **hata ayıklama olmadan Başlat**Visual Studio menüsünde.
+Şimdi uygulamayı çalıştırın ve tarayıcıda görüntüleyin. Uygulamayı **Ctrl**+**F5** kullanarak veya Visual Studio 'nun menüsünden hata ayıklama ** > ** **Başlat** ' a seçerek çalıştırabilirsiniz.
 
 ## <a name="customize-the-application"></a>Uygulamayı özelleştirme
 
-Bir özellik ekleyin *Index.cshtml.cs* dosyasını açıp değeri geçerli zamana Ayarla `OnGet` işleyicisi:
+*Index.cshtml.cs* dosyasına bir özellik ekleyin ve değerini `OnGet` işleyicisinde geçerli zamana ayarlayın:
 
 ```csharp
 public string Time { get; set; }
@@ -83,25 +86,25 @@ public void OnGet()
 }
 ```
 
-Değiştirin `<div>` içeriği *Index.cshtml* bu işaretleme ile:
+*Index. cshtml* 'deki `<div>` içeriğini bu biçimlendirme ile değiştirin:
 
 ```cshtml
 <h2>It's @Model.Time right now on the server!</h2>
 ```
 
-Uygulamayı yeniden çalıştırın. Sayfa artık geçerli zamanı görüntüler, ancak her zaman gece yarısıdır görmeniz gerekir! Bu doğru değil.
+Uygulamayı yeniden çalıştırın. Sayfanın şimdi geçerli saati görüntülediğini görmeniz gerekir, ancak her zaman gece yarısı! Bu doğru değildir.
 
-![Visual Studio 2019 ASP.NET Core projesi tarayıcıda](media/vs-2019/vs2019-app-in-browser.png)
+![Visual Studio 2019 ASP.NET Core tarayıcıda proje](media/vs-2019/vs2019-app-in-browser.png)
 
 ## <a name="debug-the-application"></a>Uygulamada hata ayıklama
 
-Bir kesme noktasına ekleme `OnGet` yöntemi burada biz atamak için bir değer `Time` ve uygulamada hata ayıklama bu zaman başlangıcı.
+`Time` bir değer atadığımızda `OnGet` yöntemine bir kesme noktası ekleyin ve bu kez uygulamada hata ayıklamayı başlatın.
 
-Çizgi ve yürütme duruyor, görebilirsiniz `DateTime.Today` tarihi içerir ancak zaman zaman veri içermediği için her zaman gece yarısıdır. 
+Yürütme satırda duraklar ve `DateTime.Today` tarihi de içerdiğini görebilirsiniz, ancak saat verisi içermediğinden saat her zaman gece yarısı olur. 
 
-![Visual Studio 2019 ASP.NET Core projesi tarayıcıda](media/vs-2019/vs2019-breakpoint.png)
+![Visual Studio 2019 ASP.NET Core tarayıcıda proje](media/vs-2019/vs2019-breakpoint.png)
 
-Bunu kullanmak için değiştirmeniz `DateTime.Now` ve yürütme devam edin. Yeni kod için `OnGet` olmalıdır:
+`DateTime.Now` kullanacak şekilde değiştirin ve yürütülmeye devam edin. `OnGet` için yeni kod şu olmalıdır:
 
 ```csharp
 public void OnGet()
@@ -110,19 +113,19 @@ public void OnGet()
 }
 ```
 
-Uygulamada gezindiğinizde artık gerçek sunucu zaman tarayıcıda görmeniz gerekir.
+Uygulamaya gittiğinizde, şimdi tarayıcıda gerçek sunucu saatini görmeniz gerekir.
 
 > [!NOTE]
-> Geçerli kültürü ayarını ToShortDateTimeString çıkış biçimi bağlı olduğundan, çıkış görüntüden farklı olabilir. Bkz. <xref:System.DateTime.ToShortTimeString>.
+> ToShortDateTimeString 'in çıkış biçimi geçerli kültür ayarına bağlı olduğundan, çıktınızın görüntüsü farklılık gösterebilir. Bkz. <xref:System.DateTime.ToShortTimeString>.
 
-![Visual Studio 2019 ASP.NET Core projesi tarayıcıda](media/vs-2019/vs2019-app-fixed-in-browser.png)
+![Visual Studio 2019 ASP.NET Core tarayıcıda proje](media/vs-2019/vs2019-app-fixed-in-browser.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Sonraki videoda, veri desteğini uygulamanıza nasıl ekleyeceğinizi öğreneceksiniz.
+Bir sonraki videoda, uygulamanıza veri desteği eklemeyi öğreneceksiniz.
 
-[Öğretici: ASP.NET Core uygulamanızı verilerle çalışma](tutorial-aspnet-core-ef-step-03.md)
+[Öğretici: ASP.NET Core uygulamanızdaki verilerle çalışma](tutorial-aspnet-core-ef-step-03.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: ASP.NET Core Razor sayfaları web uygulaması oluşturma](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1)
+- [Öğretici: ASP.NET Core bir Razor Pages Web uygulaması oluşturma](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1)

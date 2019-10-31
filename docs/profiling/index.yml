@@ -1,6 +1,6 @@
 ### YamlMime:Landing
-title: Visual Studio'da uygulama performansını ölçmeye
-summary: Profil oluşturma ve tanılama araçları bellek ve CPU kullanımı ve diğer uygulama düzeyi sorunları tanılamanıza yardımcı olur. Bu araçlarla, uygulamanızı çalıştırırken performans verileri birikmesini sağlayabilirsiniz.
+title: Visual Studio 'da uygulama performansını ölçme
+summary: Profil oluşturma ve tanılama araçları, bellek ve CPU kullanımı ile diğer uygulama düzeyi sorunlarını tanılamanıza yardımcı olur. Bu araçlarla, uygulamanızı çalıştırırken performans verileri birikmesini sağlayabilirsiniz.
 metadata:
   title: Visual Studio 'da ölçüm performansı
   description: Profil oluşturma araçlarını kullanarak performansı ölçmek için Visual Studio 'Yu nasıl kullanacağınızı öğrenin.
@@ -9,12 +9,12 @@ metadata:
   ms.author: mikejo
   manager: jillfra
   ms.date: 09/17/2019
-  ms.openlocfilehash: fcb3e40870d6f916cf754368359a90215ce1b665
-  ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+  ms.openlocfilehash: b0fb7ff139ce91e981fa5fd5a9c43d1e335a1525
+  ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/19/2019
-  ms.locfileid: "71130643"
+  ms.lasthandoff: 10/30/2019
+  ms.locfileid: "73061106"
 landingContent:
 - title: Profil oluşturma hakkında
   linkLists:
@@ -41,7 +41,7 @@ landingContent:
     - text: CPU kullanımını çözümlemeye başlama
       url: beginners-guide-to-performance-profiling.md
     - text: Bellek kullanımını ölçmeye başlama
-      url: beginners-guide-to-performance-profiling.md
+      url: memory-usage.md
 - title: Diğer performans araçları
   linkLists:
   - linkListType: how-to-guide

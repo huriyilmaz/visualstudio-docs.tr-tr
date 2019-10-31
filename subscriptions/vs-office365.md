@@ -6,16 +6,19 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: Bazı Visual Studio aboneliklerine dahil edilen Office 365 avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 65a071cbfcdc31ca2ef8a36ac5a779fc99467c17
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 58bfed3de99e3a3fa0a46e084ea566ae0451c47f
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816468"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144709"
 ---
 # <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Office 365 ProPlus
 
 En iyi çalışmanızı oluşturun. Her zaman güncelleştirilmiş uygulamalarla her yerde çalışın. Office 365 ProPlus, Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Access (yalnızca bılgısayarda bulunan yayımcı ve erişim) gibi Premium uygulamalarla birlikte gelen bir abonelikdir. Uygulamalar, bilgisayarlar, Mac 'Ler, Ipilanları, IPhone, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilir. Bir abonelikle, uygulamaların en son sürümlerini alır ve bunlar gerçekleştiğinde otomatik olarak güncelleştirmeleri alırsınız.
+
+> [!NOTE]
+> Visual Studio aboneliğiniz, üretim kullanımı için Office 365 ' i kullanmanızı sahibine.  
 
 ## <a name="getting-started-with-office-365-proplus"></a>Office 365 ProPlus ile çalışmaya başlama
 
@@ -42,10 +45,6 @@ Office 365 ProPlus 'ı indirmek ve etkinleştirmek için şu adımları izleyin:
    > ![Office 365 ürün anahtarını girin](_img/vs-office365/vs-office365-enter-key.png)
 0. **İleri** ' ye tıklayın.
 0. Office uygulamalarını yüklemek için **yükler** ' e tıklayın.
-
-## <a name="next-steps"></a>Sonraki adımlar
-
-Office için uygulama geliştirmeyi planlıyorsanız, [Office geliştirici aboneliğinizi](vs-office-dev.md) etkinleştirmek isteyeceksiniz
 
 ## <a name="eligibility"></a>Önceliği
 
@@ -75,4 +74,4 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresi
 Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avantajları etkinleştirdiğinizden emin olun:
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
-- [Azure DevTest bireysel kredisi](vs-azure.md)
+- [Azure DevTest bireysel kredisi](vs-azure.md) Office için uygulama geliştirmeyi planlıyorsanız, [Office geliştirici aboneliğinizi](vs-office-dev.md) etkinleştirmek isteyeceksiniz

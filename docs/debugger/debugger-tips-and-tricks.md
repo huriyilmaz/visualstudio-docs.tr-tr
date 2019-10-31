@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92d1c327c168bfd2881ad014b7f9ab87f771b95d
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
-ms.translationtype: MT
+ms.openlocfilehash: 70276b8ba4efb08b0a6a57dc48716bd608f0429a
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72536072"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144750"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio 'da hata ayıklayıcı için üretkenlik Ipuçları ve püf noktaları öğrenin
 
@@ -140,6 +140,7 @@ Hata ayıklayıcı, işlenmeyen özel durumlarla kodunuzda sizi sonlandırır. A
 
     Ayrıca, iş parçacıklarının konumunu [Paralel Yığınlar penceresinde](../debugger/get-started-debugging-multithreaded-apps.md)görüntüleyebilirsiniz.
 
+::: moniker range="vs-2017"
 ## <a name="examine-payloads-for-web-services-and-network-resources-uwp"></a>Web Hizmetleri ve ağ kaynakları için yükleri İnceleme (UWP)
 
 UWP uygulamalarında, `Windows.Web.Http` API kullanarak gerçekleştirilen ağ işlemlerini çözümleyebilirsiniz. Bu aracı, Web Hizmetleri ve ağ kaynaklarında hata ayıklamanıza yardımcı olması için kullanabilirsiniz. Aracı kullanmak için **> performans profil oluşturucu hata ayıkla**' yı seçin. **Ağ**' ı seçin ve ardından **Başlat**' ı seçin. Uygulamanızda, `Windows.Web.Http` kullanan senaryoya gidin ve sonra raporu oluşturmak için **koleksiyonu durdur** ' u seçin.
@@ -151,6 +152,7 @@ Daha fazla ayrıntı görüntülemek için Özet görünümünde bir işlem seç
 ![Ağ kullanımı aracında ayrıntılı bilgiler](../profiling/media/prof-tour-network-usage-details.png "DetailedViewNetworkUsage")
 
 Daha fazla bilgi için bkz. [ağ kullanımı](../profiling/network-usage.md).
+::: moniker-end
 
 ## <a name="modules_window"></a>Hata ayıklayıcının uygulamanıza nasıl ilişi hakkında daha fazla bilgi edinin (C#, C++, Visual Basic, F#)
 

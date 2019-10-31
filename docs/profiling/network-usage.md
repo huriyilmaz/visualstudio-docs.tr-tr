@@ -9,12 +9,13 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d1b81e35cdf08aef82c6e9c070d7127cb2debd5
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+monikerRange: vs-2017
+ms.openlocfilehash: 16c17c6f39980b115b34869fdc6b4912ca94ab0b
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911903"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144691"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP uygulamalarında ağ kullanımını analiz etme
 Visual Studio **ağ** Tanılama Aracı, [Windows. Web. http API 'si](/uwp/api/windows.web.http)kullanılarak gerçekleştirilen ağ işlemleriyle ilgili verileri toplar. Verilerin çözümlenmesi, erişim ve kimlik doğrulama sorunları, yanlış önbellek kullanımı ve kötü ekran ve indirme performansı gibi sorunları çözmenize yardımcı olabilir.

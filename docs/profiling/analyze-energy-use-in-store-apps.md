@@ -13,12 +13,13 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 1259f92b89fc6d83bb0b7296cc07844bf25df705
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+monikerRange: vs-2017
+ms.openlocfilehash: 0fc78a84d0c2f86e8db6c4703cc7404a32508d72
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144737"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP uygulamalarında enerji kullanımını analiz etme
 
@@ -54,12 +55,12 @@ Enerji tüketimi Profil Oluşturucusu, bu *Güç* ve *enerji*tanımlarını kull
 
  **C#, Visual Basic, C++ koda işaretler ekleme**
 
- Bir kullanıcı işareti C#eklemek için, Visual Basic, C++ önce bir <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=fullName> nesne oluşturun. Ardından, kodunuzda işaretlemek <xref:Windows.Foundation.Diagnostics.LoggingChannel.LogMessage%2A?displayProperty=nameWithType> istediğiniz noktalarda çağrılar ekleyin. Çağrılarındaki [LoggingLevel. Information](xref:Windows.Foundation.Diagnostics.LoggingLevel) kullanın.
+ Visual Basic, C# C++ koduna kullanıcı işareti eklemek için, önce bir <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=fullName> nesnesi oluşturun. Sonra, kodunuzda işaretlemek istediğiniz noktalarda <xref:Windows.Foundation.Diagnostics.LoggingChannel.LogMessage%2A?displayProperty=nameWithType> yöntemlere çağrılar ekleyin. Çağrılarındaki [LoggingLevel. Information](xref:Windows.Foundation.Diagnostics.LoggingLevel) kullanın.
 
  Yöntem yürütüldüğünde, profil oluşturma verilerine bir iletiyle birlikte bir kullanıcı işareti eklenir.
 
 > [!NOTE]
-> - <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=nameWithType>arabirimini uygular (içinde <xref:System.IDisposable?displayProperty=nameWithType> C# olarak tasarlanan ve vb.). <xref:Windows.Foundation.IClosable?displayProperty=nameWithType> İşletim sistemi kaynaklarının sızmasını önlemek için, <xref:Windows.Foundation.Diagnostics.LoggingChannel.Close%2A?displayProperty=nameWithType> bir<xref:Windows.Foundation.Diagnostics.LoggingChannel.Dispose%2A?displayProperty=nameWithType> günlük C# kanalı ile işiniz bittiğinde çağırın (ın ve vb.).
+> - <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=nameWithType> <xref:Windows.Foundation.IClosable?displayProperty=nameWithType> arabirimini uygular (tasarlanan <xref:System.IDisposable?displayProperty=nameWithType> C# ve vb olarak). İşletim sistemi kaynaklarının sızmasını önlemek için, bir günlük kanalı ile C# işiniz bittiğinde <xref:Windows.Foundation.Diagnostics.LoggingChannel.Close%2A?displayProperty=nameWithType> (<xref:Windows.Foundation.Diagnostics.LoggingChannel.Dispose%2A?displayProperty=nameWithType> ve vb.) çağırın.
 > - Her açık günlük kanalının benzersiz bir adı olması gerekir. Aktiften çıkarılan bir kanalla aynı ada sahip yeni bir günlük kanalı oluşturmaya çalışırsanız, bir özel durum oluşturulur.
 
 Örnek kod için Windows SDK örnek [LoggingSession örneğine](https://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336)bakın.
@@ -95,7 +96,7 @@ if (performance && performance.mark) {
 2. **Enerji tüketimini** seçin ve ardından **Başlat**' ı seçin.
 
     > [!NOTE]
-    > **Enerji tüketimi** profil oluşturucuyu başlattığınızda, *Vsetwcollector. exe*' yi çalıştırmak Için Izninizi ısteyen bir **Kullanıcı hesabı denetim** penceresi görebilirsiniz. Seçin **Evet**.
+    > **Enerji tüketimi** profil oluşturucuyu başlattığınızda, *Vsetwcollector. exe*' yi çalıştırmak Için Izninizi ısteyen bir **Kullanıcı hesabı denetim** penceresi görebilirsiniz. **Evet**' i seçin.
 
 3. Veri toplamak için uygulamanızda alıştırma yapın.
 
@@ -139,7 +140,7 @@ if (performance && performance.mark) {
 ## <a name="optimize-energy-use"></a>Enerji kullanımını en iyi duruma getirme
  Ağ bağlantılarında veri aktarmaktan başka, bağlantı başlatma, sürdürme ve kapatma ile ilgili enerji maliyetleri de vardır. Bazı ağlar veri gönderildikten veya alındıktan sonra, tek bağlantı üzerinden daha fazla veri iletimine olanak sağlamak için bağlantıyı bir süre daha sürdürür. Uygulamanızın bağlantıyla etkileşim kurma şeklini incelemek için **kaynaklar (açık/kapalı)** bölmesini kullanabilirsiniz.
 
- ![Kapalı kaynaklar &#40;&#41; &#47;](../profiling/media/energyprof_resources.png "ENERGYPROF_Resources")
+ ![&#47;Kapalı &#40;&#41; Kaynaklar bölmesi](../profiling/media/energyprof_resources.png "ENERGYPROF_Resources")
 
  **Ağ** ve **veri aktarımı** çubuklar, bir dizi küçük veri paketini zaman zaman aktarmak için bağlantının açık olduğunu gösterip, verileri tek bir iletime göndermek için toplu olarak kullanabilir, ağın açık olduğu süreyi azaltabilir ve bu nedenle enerji maliyetlerini tasarruf edin.
 
@@ -157,5 +158,5 @@ if (performance && performance.mark) {
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio profil oluşturma](../profiling/index.yml)
-- [Araçlar profil oluşturmaya ilk bakış](../profiling/profiling-feature-tour.md)
+- [Visual Studio 'da profil oluşturma](../profiling/index.yml)
+- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)
