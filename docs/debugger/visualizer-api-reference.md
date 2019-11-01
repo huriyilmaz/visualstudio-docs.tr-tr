@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efcba8397ce766409715f24e184b3c77aad53eea
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d8479343634ca8afc647edde61eb8b1106954c83
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728648"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187218"
 ---
 # <a name="visualizer-api-reference"></a>Görselleştirici API Başvurusu
 
@@ -43,5 +43,5 @@ Görselleştirici API 'Leri, Visual Studio hata ayıklayıcısı için Görselle
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzlenecek Yol: C# ile Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
-- [Nasıl Yapılır: Görselleştirici Yazma](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [Nasıl Yapılır: Görselleştirici Yazma](create-custom-visualizers-of-data.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)

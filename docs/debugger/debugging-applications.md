@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 159f641b1ae5d05233e997d8dc41513a484eae75
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: baa028029081ee1c9c88b75aac416b634632b21a
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018789"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188376"
 ---
 # <a name="debugging-applications"></a>Uygulamalarda Hata Ayıklama
 Aşağıdaki bölümler, belirli türde uygulamalar için hata ayıklama ile ilgilenir. Farklı uygulama türleri ve farklı diller, farklı ayarlar ve teknikler gerektirir ve hataları ayıklanmanız gereken farklı sorunlar sunar.
@@ -31,7 +31,7 @@ Aşağıdaki bölümler, belirli türde uygulamalar için hata ayıklama ile ilg
 |[Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md)|Yönetilen kodun hata ayıklamanın nasıl yapılacağını açıklar C#(Visual, F#Visual Basic, C++ve/CLI).|
 |[Yerel kodda hata ayıklama](../debugger/debugging-native-code.md)|Farklı türdeki yerel C++ uygulamalardaki hataları nasıl ayıklayacağınız açıklanmaktadır.|
 |[GPU kodunda hata ayıklama](../debugger/debugging-gpu-code.md)|Grafik işleme birimi ( C++ GPU) üzerinde çalışan kodun nasıl ayıklanılacağını açıklar.|
-|[Grafik Tanılama (DirectX grafik hatalarını ayıklama)](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)|DirectX grafiklerinin nasıl ayıklanılacağını açıklar.|
+|[Grafik Tanılama (DirectX grafik hatalarını ayıklama)](graphics/visual-studio-graphics-diagnostics.md)|DirectX grafiklerinin nasıl ayıklanılacağını açıklar.|
 |[ASP.NET uygulamalarında hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|ASP.NET uygulamalarında hata ayıklamayı açıklar.|
 |[Python kodunda hata ayıklama](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)|Python kodu hata ayıklamanın nasıl yapılacağını açıklar|
 |[JavaScript ve TypeScript uygulamalarında hata ayıklama](../javascript/debug-nodejs.md)|JavaScript, TypeScript ve Node. js uygulamalarında hata ayıklamayı açıklar|

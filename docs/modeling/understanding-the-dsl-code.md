@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 017c28af68efa98507286e8acdc2b4d694353aa1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 44f66ed25ab43db2d08db3cb93263bd61ac3a907
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747391"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189452"
 ---
 # <a name="understanding-the-dsl-code"></a>DSL Kodunu Anlama
 
@@ -39,7 +39,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
  DSL 'yi anlamanıza yardımcı olması için üretilen kodu incelemenizi öneririz. Oluşturulan dosyaları görmek için Çözüm Gezgini içindeki *. tt dosyalarını genişletin.
 
- @No__t_0. tt dosyaları çok az üretilen kod içerir. Bunun yerine, paylaşılan şablon dosyalarını eklemek için `<#include>` yönergeleri kullanırlar. Paylaşılan dosyalar **\Program Files\Microsoft Visual Studio 10.0 \ Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates** dizininde bulunabilir
+ \*. tt dosyaları çok az üretilen kod içerir. Bunun yerine, paylaşılan şablon dosyalarını eklemek için `<#include>` yönergeleri kullanırlar. Paylaşılan dosyalar **\Program Files\Microsoft Visual Studio 10.0 \ Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates** dizininde bulunabilir
 
  Kendi program kodunuzu DSL çözümüne eklediğinizde, oluşturulan kod klasörünün dışında ayrı bir dosyaya ekleyin. **Özel bir kod** klasörü oluşturmak isteyebilirsiniz. (Özel bir klasöre yeni bir kod dosyası eklediğinizde, ilk kod isketadaki ad alanını düzeltmeyi unutmayın.)
 
@@ -92,7 +92,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
  `Diagram.cs`
 
- Diyagramı tanımlayan sınıfı içerir. @No__t_0 türetilir.
+ Diyagramı tanımlayan sınıfı içerir. <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>türetilir.
 
  Çalışma zamanında rengi ve diğer stil özellikleri değişkenlerini yapmak için, DSL tanımı diyagramında sınıfa sağ tıklayın ve **sunulan Ekle**' ye gelin.
 
@@ -106,7 +106,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
  `DomainClasses.cs`
 
- Soyut sınıflar ve model kök sınıfı dahil, tanımladığınız etki alanı sınıflarının uygulamaları. @No__t_0 türetilir.
+ Soyut sınıflar ve model kök sınıfı dahil, tanımladığınız etki alanı sınıflarının uygulamaları. <xref:Microsoft.VisualStudio.Modeling.ModelElement>türetilir.
 
  Her etki alanı sınıfı şunları içerir:
 
@@ -128,7 +128,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
   `DomainModel.cs`
 
-  Etki alanı modelini temsil eden sınıf. @No__t_0 türetilir.
+  Etki alanı modelini temsil eden sınıf. <xref:Microsoft.VisualStudio.Modeling.DomainModel>türetilir.
 
 > [!NOTE]
 > Bu, modelin kök sınıfıyla aynı değildir.
@@ -192,7 +192,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
  `CommandSet.cs`
 
- Diyagramda görünür olan sağ tıklama menü komutları. Bu kümeyi uyarlayabilir veya ekleyebilirsiniz. Bu dosya, komutların kodunu içerir. Menülerde komutların konumu Commands. vsct dosyası tarafından belirlenir. Daha fazla bilgi için bkz. [Kullanıcı komutları ve eylemleri yazma](../modeling/writing-user-commands-and-actions.md).
+ Diyagramda görünür olan sağ tıklama menü komutları. Bu kümeyi uyarlayabilir veya ekleyebilirsiniz. Bu dosya, komutların kodunu içerir. Menülerde komutların konumu Commands. vsct dosyası tarafından belirlenir. Daha fazla bilgi için bkz. [Kullanıcı komutları ve eylemleri yazma](how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
  `Constants.cs`
 
@@ -278,11 +278,11 @@ namespace Company.EmbedInForm
 
  `EditorFactory.cs`
 
- @No__t_0 ve `DocView` örnekleyen. DSL paketiniz başlatıldığında, Visual Studio 'Nun bir düzenleyiciyi açmak için kullandığı standart bir arabirimi karşılar. Package.cs içinde `ProvideEditorFactory` özniteliğinde başvurulur
+ `DocData` ve `DocView`örnekleyen. DSL paketiniz başlatıldığında, Visual Studio 'Nun bir düzenleyiciyi açmak için kullandığı standart bir arabirimi karşılar. Package.cs içinde `ProvideEditorFactory` özniteliğinde başvurulur
 
  `GeneratedVSCT.vsct`
 
- Menülerde sağ tıklama (bağlam) menüsü, **düzenleme** menüsü gibi menülerde standart menü komutlarını bulur. Komutların kodu CommandSet.cs ' dir. Standart komutları yeniden konumlandıralabilir veya değiştirebilir ve kendi komutlarınızı ekleyebilirsiniz. Daha fazla bilgi için bkz. [Kullanıcı komutları ve eylemleri yazma](../modeling/writing-user-commands-and-actions.md).
+ Menülerde sağ tıklama (bağlam) menüsü, **düzenleme** menüsü gibi menülerde standart menü komutlarını bulur. Komutların kodu CommandSet.cs ' dir. Standart komutları yeniden konumlandıralabilir veya değiştirebilir ve kendi komutlarınızı ekleyebilirsiniz. Daha fazla bilgi için bkz. [Kullanıcı komutları ve eylemleri yazma](how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
  `ModelExplorer.cs`
 

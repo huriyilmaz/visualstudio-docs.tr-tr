@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40b7a097f0544459083b5217e6ad97f2b3f31bfa
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 8741d0815aa3e5478a7dcf93585fc0be6e266ae0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911631"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188711"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısına ilk bakış
 
@@ -124,7 +124,7 @@ Visual Studio 'nun desteklediği çoğu dilde kodunuzu bir hata ayıklama oturum
 
 Özelliği ve özellik sınırlamalarını kullanma hakkında daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
 
-Bir hata ayıklama oturumu sırasında XAML kodunu değiştirmek için bkz. xaml [üzerinde çalışan xaml kodunu yazma ve hata ayıklama xaml çalışırken yeniden yükleme](xaml-hot-reload.md).
+Bir hata ayıklama oturumu sırasında XAML kodunu değiştirmek için bkz. xaml [üzerinde çalışan xaml kodunu yazma ve hata ayıklama xaml çalışırken yeniden yükleme](../xaml-tools/xaml-hot-reload.md).
 
 ## <a name="inspect-variables-with-data-tips"></a>Veri ipuçları ile değişkenleri inceleyin
 

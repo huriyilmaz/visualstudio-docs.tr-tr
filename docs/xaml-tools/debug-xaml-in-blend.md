@@ -9,12 +9,12 @@ manager: jillfra
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 0c785be0002a1e6d4fd1934e559743502611f5fb
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: 5d6f0e54c37c394fce464b07440daa99b4dd7d5e
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924494"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188900"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 
@@ -119,7 +119,7 @@ XAML hataları algılandığında tasarım yüzeyi, projenizin geçersiz biçiml
 
 Uygulamanızda kodda daha kolay hata ayıklaması yapmak için, Visual Studio 'da Blend projelerini açabilirsiniz. Visual Studio 'da bir Blend projesi açmak için **Projeler** panelinde projeye sağ tıklayın ve ardından **Visual Studio 'da Düzenle**' ye tıklayın. Visual Studio 'da hata ayıklama oturumunuzu tamamladıktan sonra, tüm değişikliklerinizi kaydetmek için CTRL + SHIFT + S tuşlarına basın ve ardından Blend 'e geri dönün. Projeyi yeniden yüklemeniz istenecektir. Blend 'de çalışmaya devam etmek için **Tümüne Evet** ' e tıklayın.
 
-Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'DA UWP uygulamalarında hata ayıklama](../debugger/debug-store-apps-in-visual-studio.md).
+Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'DA UWP uygulamalarında hata ayıklama](../debugger/debugging-windows-store-and-windows-universal-apps.md).
 
 ## <a name="get-help"></a>Yardım alın
 

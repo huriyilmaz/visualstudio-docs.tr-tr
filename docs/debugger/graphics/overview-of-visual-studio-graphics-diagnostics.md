@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae62a380e4e0feb23a901a4fc6a2628fcd8c6a0c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0bf8cbcc699f015cae954400744d9bd724d70c57
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734921"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187920"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama’ya Genel Bakış
 Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performans sorunlarını kaydetmek ve analiz etmek için bir araç kümesidir. Grafik Tanılama, Windows bilgisayarınızda veya uzak bir bılgısayarda ya da cihazda yerel olarak çalışan uygulamalarda kullanılabilir.
@@ -21,7 +21,7 @@ Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performa
 ## <a name="using-graphics-diagnostics-to-debug-rendering-problems"></a>İşleme sorunlarında hata ayıklamak için Grafik Tanılama'yı kullanma
  Grafik açısından zengin bir uygulamada işleme sorunları hatalarının ayıklanması, hata ayıklayıcıyı başlatıp herhangi bir kodda adım adım ilerlemek kadar basit işlem değildir. Her kare içinde, her biri karmaşık bir durum, veri, parametre ve kod kümesine göre olmak üzere yüz binlerce benzersiz piksel üretilirken, tanılamaya çalıştığınız sorunu bunlar arasında belki de yalnızca birkaç piksel sergileyecektir. He bir pikseli üreten kodun, yüzlerce pikseli paralel olarak işlemden geçiren özel amaçlı donanımlarda yürütülmesi meseleyi daha da karmaşık bir hale getirir. Çok fazla veriyle karşı karşıya kalındığında, iş parçacıklarının yoğun olmadığı kodlarda bile yarar sağlanması zor olan geleneksel hata ayıklama araçları ve teknikleri etkisiz kalmaktadır.
 
- @No__t_0 Grafik Tanılama araçları, sorunu belirten görsel yapıtlardan başlayıp yalnızca ilgili gölgelendirici kodunda, ardışık düzen aşamalarıyla odaklanarak sorunun kaynağına geri dönerek işleme sorunlarını bulmanıza yardımcı olmak üzere tasarlanmıştır. uygulamanın kendi kaynak kodunda çağrılar, kaynaklar ve cihaz durumu çizin.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Grafik Tanılama araçları, sorunu belirten görsel yapıtlarla başlayıp yalnızca ilgili gölgelendirici kodu, işlem hattı aşamaları üzerine odaklanarak sorunun kaynağına geri dönerek işleme sorunlarını bulmanıza yardımcı olmak üzere tasarlanmıştır. , uygulamanın kendi kaynak kodunda çağrılar, kaynaklar ve cihaz durumu çizin.
 
 ## <a name="directx-version-compatibility"></a>DirectX sürümü uyumluluğu
  Grafik Tanılama, Direct3D 10 veya üzerini kullanan uygulamaları destekler ve Direct2D kullanan uygulamalar için sınırlı destek sağlar. Direct3D, DirectDraw veya diğer grafik API'lerinin önceki sürümlerini kullanan uygulamaları desteklemez.
@@ -52,7 +52,7 @@ Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performa
 ### <a name="gpu-usage"></a>GPU Kullanımı
  Grafik Tanılama Ayrıca Direct3D uygulamanızın performansını da düzenleyebilir. Profil oluşturma verileri grafik olaylarının ayrıntıları kaydederek çarpılacağından, bu, grafik Çözümleyicisi ile incelenerek kullanılacak çerçeveleri yakalamaktan farklıdır.
 
- Daha fazla bilgi için bkz. [GPU kullanımı](/visualstudio/profiling/gpu-usage) .
+ Daha fazla bilgi için bkz. [GPU kullanımı](../../profiling/gpu-usage.md) .
 
 ### <a name="directx-control-panel"></a>DirectX denetim masası
  DirectX denetim masası, DirectX'in davranış şeklini değiştirmek için kullanabileceğiniz bir DirectX bileşenidir; örneğin, DirectX çalışma zamanı bileşenlerinin hata ayıklama sürümünü etkinleştirebilir, raporlanan hata ayıklama iletilerinin türünü seçebilir ve daha düşük kapasiteli donanımlara öykünmek için belirli grafik donanımı yeteneklerinin kullanılmasına izin vermeyebilirsiniz. DirectX üzerinde bu düzeyde bir denetim DirectX uygulamanızda hata ayıklamanıza ve uygulamayı test etmenize yardımcı olabilir. DirectX denetim masasına Visual Studio'dan erişebilirsiniz.

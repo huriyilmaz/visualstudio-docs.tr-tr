@@ -23,17 +23,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a314634766618340e3fb69052bc896cae700d4b4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 25fb7bc54899d8c9a079d3f2706065d690904540
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731135"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187543"
 ---
 # <a name="mixed-code-and-missing-information-in-the-call-stack-window"></a>Çağrı Yığını Penceresinde Karışık Kod ve Eksik Bilgiler
 Yönetilen ve yerel kod için çağrı yığınları arasındaki farklılıklar nedeniyle, kod türü karışımında hata ayıklayıcı her zaman tüm çağrı yığınını gösteremez. Yerel kod yönetilen kodu çağırdığında, **çağrı yığını** penceresinde aşağıdaki tutarsızlıkları fark edebilirsiniz:
 
-- Yönetilen kodun hemen üzerindeki yerel çerçeve **çağrı yığını** penceresinde eksik olabilir. Daha fazla bilgi için bkz. [nasıl yapılır: yerel çerçeveler çağrı yığını penceresinde olmadığında yönetilen kodun dışına adım atın](../debugger/how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window.md).
+- Yönetilen kodun hemen üzerindeki yerel çerçeve **çağrı yığını** penceresinde eksik olabilir. Daha fazla bilgi için bkz. [nasıl yapılır: yerel çerçeveler çağrı yığını penceresinde olmadığında yönetilen kodun dışına adım atın](how-to-use-the-call-stack-window.md).
 
 - Hata ayıklayıcı dışında başlatılan karma mod uygulamaları için **çağrı yığını** penceresi yalnızca yönetilen kodu görüntüleyebilir ve yerel çerçevelerin hiçbiri görünür olmayacaktır.
 

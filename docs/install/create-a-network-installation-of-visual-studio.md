@@ -1,7 +1,7 @@
 ---
 title: Ağ tabanlı yükleme oluşturma
 description: Visual Studio 'Yu bir kuruluş içinde dağıtmak için bir ağ yüklemesi noktası oluşturmayı öğrenin.
-ms.date: 10/11/2019
+ms.date: 10/29/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fcc4a3d3d99deab62971c40b26c9a4252367438f
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: ca393af528abc7f685ceca83ac4c59ebb75dedfe
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516326"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189497"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Visual Studio 'nun ağ yüklemesi oluşturma
 
@@ -88,8 +88,9 @@ Bu adımı tamamlayabilmeniz için bir internet bağlantınızın olması gereki
 
 ## <a name="modify-the-responsejson-file"></a>Response. json dosyasını değiştirme
 
-Setup çalıştırıldığında kullanılan varsayılan değerleri ayarlamak için Response. json ' a değişiklik yapabilirsiniz.  Örneğin, otomatik olarak seçilen belirli bir iş yükü kümesini seçmek için `response.json` dosyasını yapılandırabilirsiniz.
-Ayrıntılar için bkz. [Visual Studio yüklemesini bir yanıt dosyasıyla otomatikleştirin](automated-installation-with-response-file.md) .
+Setup çalıştırıldığında kullanılan varsayılan değerleri ayarlamak için Response. json ' a değişiklik yapabilirsiniz.  Örneğin, otomatik olarak seçilen belirli bir iş yükü kümesini seçmek için `response.json` dosyasını yapılandırabilirsiniz. Ayrıntılar için bkz. [Visual Studio yüklemesini bir yanıt dosyasıyla otomatikleştirin](automated-installation-with-response-file.md) .
+
+Ayrıca, Visual Studio önyükleyici ile bir yanıt. JSON dosyasıyla eşleştirdiğimde hata oluşturan bir sorunla karşılaşırsanız, [görseli yüklerken veya kullandığınızda ağla ilgili hatalarda sorun giderme konusunun "üst IŞLEMDEN kimlik ayrıştırılamadı" bölümüne bakın. ](troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process)Daha fazla bilgi için stüdyo sayfasına gidin.
 
 ## <a name="copy-the-layout-to-a-network-share"></a>Düzeni bir ağ paylaşımında kopyalama
 
@@ -122,7 +123,7 @@ xcopy /e c:\VSLayout \\server\products\VS2019
 
 Ağ düzeninizi özelleştirmek için kullanabileceğiniz çeşitli seçenekler vardır. Yalnızca belirli bir [dil yerel](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)ayarı, [iş yükleri, bileşenler ve önerilen ya da isteğe bağlı bağımlılıklarını](workload-and-component-ids.md)içeren kısmi bir düzen oluşturabilirsiniz. Bu, istemci iş istasyonlarına yalnızca bir iş yükü alt kümesini dağıtacağınızı biliyorsanız yararlı olabilir. Düzeni özelleştirmeye yönelik tipik komut satırı parametreleri şunları içerir:
 
-* [iş yükünü veya bileşen kimliklerini](workload-and-component-ids.md)belirtmek için `--add`. <br>@No__t_0 kullanılırsa, yalnızca `--add` ile belirtilen iş yükleri ve bileşenler indirilir.  @No__t_0 kullanılmazsa, tüm iş yükü ve bileşenler indirilir.
+* [iş yükünü veya bileşen kimliklerini](workload-and-component-ids.md)belirtmek için `--add`. <br>`--add` kullanılırsa, yalnızca `--add` ile belirtilen iş yükleri ve bileşenler indirilir.  `--add` kullanılmazsa, tüm iş yükü ve bileşenler indirilir.
 * Belirtilen iş yükü kimlikleri için önerilen tüm bileşenleri dahil etmek için `--includeRecommended`
 * `--includeOptional`, belirtilen iş yükü kimlikleri için tüm önerilen ve isteğe bağlı bileşenleri içerir.
 * [dil yerel ayarlarını](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)belirtmek için `--lang`.
@@ -219,13 +220,13 @@ Yöneticiler, Visual Studio 'Yu bir yükleme betiğinin parçası olarak istemci
 
 > [!IMPORTANT]
 > Bir hatayı engellemek için, tam düzen yolunuz 80 karakterden az olduğundan emin olun.
->
+
 > [!TIP]
 > Bir toplu iş dosyasının parçası olarak yürütüldüğünde `--wait` seçeneği, `vs_enterprise.exe` işleminin, yükleme tamamlanmadan önce, bir çıkış kodu döndürene kadar bekleyip beklememesini sağlar.
 >
 > Bu, bir Kurumsal Yönetici tamamlanmış bir yüklemede daha fazla eylem gerçekleştirmek isterse (örneğin, [başarılı bir yüklemeye bir ürün anahtarı uygulamak](automatically-apply-product-keys-when-deploying-visual-studio.md)için), ancak yüklemenin tamamlanması için işlemin tamamlanmasını beklemesi gereken yüklemesinden.
 >
-> @No__t_0 kullanmıyorsanız, yükleme tamamlanmadan önce `vs_enterprise.exe` işlemi çıkar ve yükleme işleminin durumunu temsil etmeyen yanlış bir çıkış kodu döndürür.
+> `--wait`kullanmıyorsanız, yükleme tamamlanmadan önce `vs_enterprise.exe` işlemi çıkar ve yükleme işleminin durumunu temsil etmeyen yanlış bir çıkış kodu döndürür.
 >
 
 ::: moniker range="vs-2019"
@@ -234,14 +235,14 @@ Yöneticiler, Visual Studio 'Yu bir yükleme betiğinin parçası olarak istemci
 >
 ::: moniker-end
 
-Bir düzenden yüklerken, yüklenen içerik düzenden alınır. Ancak, düzende olmayan bir bileşeni seçerseniz, internet 'ten elde edilir.  Visual Studio kurulumunun düzeninizde eksik olan içeriği indirmasını engellemek istiyorsanız `--noWeb` seçeneğini kullanın. @No__t_0 kullanılıyorsa ve mizanpajda yüklenmek üzere seçilen içerik eksikse, kurulum başarısız olur.
+Bir düzenden yüklerken, yüklenen içerik düzenden alınır. Ancak, düzende olmayan bir bileşeni seçerseniz, internet 'ten elde edilir.  Visual Studio kurulumunun düzeninizde eksik olan içeriği indirmasını engellemek istiyorsanız `--noWeb` seçeneğini kullanın. `--noWeb` kullanılıyorsa ve mizanpajda yüklenmek üzere seçilen içerik eksikse, kurulum başarısız olur.
 
 > [!IMPORTANT]
-> @No__t_0 seçeneği, Visual Studio kurulumunun güncelleştirmeleri denetlemesini durdurmaz. Daha fazla bilgi için bkz. [ağ tabanlı Visual Studio dağıtımlarının güncelleştirmelerini denetleme](controlling-updates-to-visual-studio-deployments.md) sayfası.
+> `--noWeb` seçeneği, Visual Studio kurulumunun güncelleştirmeleri denetlemesini durdurmaz. Daha fazla bilgi için bkz. [ağ tabanlı Visual Studio dağıtımlarının güncelleştirmelerini denetleme](controlling-updates-to-visual-studio-deployments.md) sayfası.
 
 ### <a name="error-codes"></a>Hata kodları
 
-@No__t_0 parametresini kullandıysanız, işlem sonucuna bağlı olarak, `%ERRORLEVEL%` ortam değişkeni aşağıdaki değerlerden birine ayarlanır:
+`--wait` parametresini kullandıysanız, işlem sonucuna bağlı olarak, `%ERRORLEVEL%` ortam değişkeni aşağıdaki değerlerden birine ayarlanır:
 
 [!INCLUDE[install-error-codes-md](includes/install-error-codes-md.md)]
 
@@ -287,6 +288,7 @@ Diğer destek seçenekleri de mevcuttur. Bir liste için bkz. [geri bildirim](..
 
 - [Visual Studio Yönetici Kılavuzu](visual-studio-administrator-guide.md)
 - [Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md)
+- [Visual Studio 'Yu yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md)
 - [Ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
 - [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)
 - [Bakım temeliyle Visual Studio 'Yu güncelleştirme](update-servicing-baseline.md)

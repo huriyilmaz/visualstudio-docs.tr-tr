@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: f40111e59aa97180c98f0fc12d6b8eeb5d06ecec
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1b5fb79430b081986764f0ee1789f68471667498
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647864"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189070"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Kod düzenleyicisini kullanmayı öğrenin
 
@@ -68,11 +68,11 @@ Yeni bir dosya oluşturarak ve buna kod ekleyerek başlayın.
 
 ## <a name="use-code-snippets"></a>Kod parçacıkları kullanma
 
-Visual Studio, yaygın olarak kullanılan kod bloklarını hızlı ve kolay bir şekilde oluşturmak için kullanabileceğiniz yararlı *kod parçacıkları* sağlar. [Kod parçacıkları](../../ide/code-snippets.md) , Visual Basic ve C# C++dahil farklı programlama dilleri için kullanılabilir. C# @No__t_1 kod parçacığını dosyanıza ekleyelim.
+Visual Studio, yaygın olarak kullanılan kod bloklarını hızlı ve kolay bir şekilde oluşturmak için kullanabileceğiniz yararlı *kod parçacıkları* sağlar. [Kod parçacıkları](../../ide/code-snippets.md) , Visual Basic ve C# C++dahil farklı programlama dilleri için kullanılabilir. C# `void Main` kod parçacığını dosyanıza ekleyelim.
 
 1. İmlecinizi, dosyadaki son kapanış ayracın üzerine yerleştirin **}** ve `svm` karakterleri yazın (ne anlama geldiğini bilmiyorsanız bu `static void Main` &mdash;don merak eden çok fazla).
 
-   @No__t_0 kod parçacığı hakkında bilgi içeren bir açılır iletişim kutusu görüntülenir.
+   `svm` kod parçacığı hakkında bilgi içeren bir açılır iletişim kutusu görüntülenir.
 
    ![Visual Studio 'da kod parçacığı için IntelliSense](../media/tutorial-intellisense-snippet.png)
 
@@ -116,11 +116,11 @@ Visual Studio 'daki menü çubuğu altındaki düğmelerin satırı olan araç �
                                 select word;
     ```
 
-1. @No__t_0 değişkenini kullanmıyoruz, ancak bunu daha sonra tamamen silmek istemediğimiz için kullanabiliriz. Bunun yerine, bu satırları açıklamaya bakalım. Sağ noktalı virgülle `morewords` tüm tanımını seçin ve ardından araç çubuğundaki **Seçili çizgiler** düğmesini seçin. Klavyeyi kullanmayı tercih ediyorsanız **ctrl** +**K**, **CTRL** +**C**tuşlarına basın.
+1. `morewords` değişkenini kullanmıyoruz, ancak bunu daha sonra tamamen silmek istemediğimiz için kullanabiliriz. Bunun yerine, bu satırları açıklamaya bakalım. Sağ noktalı virgülle `morewords` tüm tanımını seçin ve ardından araç çubuğundaki **Seçili çizgiler** düğmesini seçin. Klavyeyi kullanmayı tercih ediyorsanız **ctrl** +**K**, **CTRL** +**C**tuşlarına basın.
 
    ![Açıklama dışarı düğmesi](../media/tutorial-comment-out.png)
 
-   @No__t_1 C# Açıklama karakterleri, kodu açıklama eklemek için her seçili satırın başına eklenir.
+   `//` C# Açıklama karakterleri, kodu açıklama eklemek için her seçili satırın başına eklenir.
 
 ## <a name="collapse-code-blocks"></a>Kod bloklarını Daralt
 
@@ -132,11 +132,11 @@ Kod bloğu yalnızca ilk satırı ve ardından üç nokta (`...`) ile daraltır.
 
 ## <a name="view-symbol-definitions"></a>Sembol tanımlarını görüntüle
 
-Visual Studio Düzenleyicisi bir tür, yöntem vb. tanımlamayı incelemenizi kolaylaştırır. Bir yol, tanımı içeren dosyaya gitmeniz, örneğin **Tanıma Git** ' i seçerek veya sembolün başvurduğu her yerde **F12** tuşuna basarak. Odağı, üzerinde çalıştığınız dosyadan uzağa taşımayın, [göz atma tanımını](../../ide/go-to-and-peek-definition.md#peek-definition)kullanmaktır. @No__t_0 türünün tanımına göz atalım.
+Visual Studio Düzenleyicisi bir tür, yöntem vb. tanımlamayı incelemenizi kolaylaştırır. Bir yol, tanımı içeren dosyaya gitmeniz, örneğin **Tanıma Git** ' i seçerek veya sembolün başvurduğu her yerde **F12** tuşuna basarak. Odağı, üzerinde çalıştığınız dosyadan uzağa taşımayın, [göz atma tanımını](../../ide/go-to-and-peek-definition.md#peek-definition)kullanmaktır. `string` türünün tanımına göz atalım.
 
 1. Herhangi bir `string` oluşumuna sağ tıklayın ve içerik menüsünden **Açıklama Özeti** ' ni seçin. Ya da **Alt** +**F12**tuşuna basın.
 
-   @No__t_0 sınıfının tanımına sahip bir açılır pencere görüntülenir. Açılır pencere içinde kaydırma yapabilir veya atılamıyor kodundan başka bir türün tanımına de göz atın.
+   `String` sınıfının tanımına sahip bir açılır pencere görüntülenir. Açılır pencere içinde kaydırma yapabilir veya atılamıyor kodundan başka bir türün tanımına de göz atın.
 
    ![Tanım penceresi Özeti](../media/tutorial-peek-definition.png)
 
@@ -146,7 +146,7 @@ Visual Studio Düzenleyicisi bir tür, yöntem vb. tanımlamayı incelemenizi ko
 
 Kodlamadan [IntelliSense](../../ide/using-intellisense.md) , değerli bir kaynaktır. Bir türün kullanılabilir üyeleri hakkında bilgi veya bir yöntemin farklı aşırı yüklemeleri için parametre ayrıntıları gösterebilir. IntelliSense 'i, ayırt etmek için yeterince karakter yazdıktan sonra bir sözcüğü yazarak tamamlamayı de kullanabilirsiniz. Düzenli dizeleri konsol penceresine yazdırmak için bir kod satırı ekleyelim, bu da programdan git 'in çıkış için standart yer.
 
-1. @No__t_0 değişkeninin altında aşağıdaki kodu yazmaya başlayın:
+1. `query` değişkeninin altında aşağıdaki kodu yazmaya başlayın:
 
    ```csharp
    foreach (string str in qu
@@ -169,9 +169,9 @@ Kodlamadan [IntelliSense](../../ide/using-intellisense.md) , değerli bir kaynak
 
 ## <a name="refactor-a-name"></a>Bir adı yeniden düzenleme
 
-Hiç kimse ilk kez kod alır ve değiştirmeniz gerekebilecek işlemlerden biri bir değişkenin veya yöntemin adıdır. @No__t_1 değişkenini `words` olarak yeniden adlandırmak için Visual Studio 'nun yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) işlevini deneyelim.
+Hiç kimse ilk kez kod alır ve değiştirmeniz gerekebilecek işlemlerden biri bir değişkenin veya yöntemin adıdır. `_words` değişkenini `words`olarak yeniden adlandırmak için Visual Studio 'nun yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) işlevini deneyelim.
 
-1. İmlecinizi `_words` değişkeninin tanımına yerleştirin ve sağ tıklama ya da bağlam menüsünden **Yeniden Adlandır** ' ı seçin veya **CTRL** +**r**, **CTRL** +**r**tuşlarına basın.
+1. İmlecinizi `_words` değişkeninin tanımına yerleştirin ve sağ tıklama ya da bağlam menüsünden **Yeniden Adlandır** ' ı seçin veya **CTRL**+**r**, **CTRL**+**r**tuşlarına basın.
 
    Düzenleyicinin sağ üst köşesinde bir açılır pencere **yeniden adlandırma** iletişim kutusu görüntülenir.
 
@@ -181,12 +181,12 @@ Hiç kimse ilk kez kod alır ve değiştirmeniz gerekebilecek işlemlerden biri 
 
 1. **ENTER**tuşuna basın.
 
-   @No__t_0 tekrarlarının her ikisi de yeniden adlandırıldı ve kod açıklamasında `words` başvurusu.
+   `words` tekrarlarının her ikisi de yeniden adlandırıldı ve kod açıklamasında `words` başvurusu.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Projeler ve çözümler hakkında bilgi edinin](tutorial-projects-solutions.md)
+> [Projeler ve çözümler hakkında bilgi edinin](../tutorial-projects-solutions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a92daf09f033da020fe54369a20483686c72f81
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ad037a0e71bc2156fe1c604d183a5e02ae914688
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730425"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187556"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio 'da Konsolu kullanarak JavaScript hata ayıklama
 
@@ -44,7 +44,7 @@ JavaScript Konsolu penceresi şunları yapmanıza olanak sağlar:
 > [!TIP]
 > JavaScript Konsolu penceresi kapalıysa, yeniden açmak için > **Windows**  > **JavaScript konsolundaki** **Hata Ayıkla** ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
 
-JavaScript Konsol penceresini kullanarak, hata ayıklayıcıyı durdurup yeniden başlatmadan uygulamanız ile etkileşime geçebilirsiniz. Daha fazla bilgi için bkz. [uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md). DOM Gezginini kullanma ve kesme noktaları ayarlama gibi diğer JavaScript hata ayıklama özellikleri hakkında bilgi için bkz. [hızlı başlangıç: Visual Studio 'DA HTML ve CSS](../debugger/quickstart-debug-html-and-css.md) ve [hata ayıklama uygulamalarında](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)hata ayıklama.
+JavaScript Konsol penceresini kullanarak, hata ayıklayıcıyı durdurup yeniden başlatmadan uygulamanız ile etkileşime geçebilirsiniz. Daha fazla bilgi için bkz. [uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md). DOM Gezginini kullanma ve kesme noktaları ayarlama gibi diğer JavaScript hata ayıklama özellikleri hakkında bilgi için bkz. [hızlı başlangıç: Visual Studio 'DA HTML ve CSS](../debugger/quickstart-debug-html-and-css.md) ve [hata ayıklama uygulamalarında](debugging-windows-store-and-windows-universal-apps.md)hata ayıklama.
 
 ## <a name="InteractiveConsole"></a>JavaScript Konsol penceresini kullanarak hata ayıklama
 Aşağıdaki adımlar bir `FlipView` uygulaması oluşturur ve bir JavaScript kodlama hatasının etkileşimli olarak nasıl ayıklanalınacağını gösterir.
@@ -144,9 +144,9 @@ Aşağıdaki adımlar bir `FlipView` uygulaması oluşturur ve bir JavaScript ko
 
     Uygulama çalışıyor ancak resimler eksik. JavaScript Konsol penceresinde APPHOST hataları görüntülerin eksik olduğunu gösterir.
 
-9. @No__t_0 uygulama çalışırken, konsol penceresi giriş istemine `Data.items` yazın ("> >" simgesinin yanına) ve ENTER tuşuna basın.
+9. `FlipView` uygulama çalışırken, konsol penceresi giriş istemine `Data.items` yazın ("> >" simgesinin yanına) ve ENTER tuşuna basın.
 
-    @No__t_0 nesnesi için Görselleştirici konsol penceresinde görüntülenir. Bu, `items` nesnesinin örneği oluşturulan ve geçerli betik bağlamında kullanılabilir olduğunu gösterir. Konsol penceresinde, özellik değerlerini görüntülemek için bir nesnenin düğümlerine tıklayabilirsiniz (veya ok tuşlarını kullanabilirsiniz). @No__t_0 nesnesine tıklarsanız, bu çizimde gördüğünüz gibi, görüntü kaynağı başvurularının beklendiği gibi yanlış olduğunu fark edeceksiniz. Varsayılan görüntüler (logo. png) hala nesnede mevcuttur ve beklenen görüntülerle birlikte eksik görüntüler vardır.
+    `items` nesnesi için Görselleştirici konsol penceresinde görüntülenir. Bu, `items` nesnesinin örneği oluşturulan ve geçerli betik bağlamında kullanılabilir olduğunu gösterir. Konsol penceresinde, özellik değerlerini görüntülemek için bir nesnenin düğümlerine tıklayabilirsiniz (veya ok tuşlarını kullanabilirsiniz). `items._data` nesnesine tıklarsanız, bu çizimde gördüğünüz gibi, görüntü kaynağı başvurularının beklendiği gibi yanlış olduğunu fark edeceksiniz. Varsayılan görüntüler (logo. png) hala nesnede mevcuttur ve beklenen görüntülerle birlikte eksik görüntüler vardır.
 
     ![JavaScript konsol penceresi](../debugger/media/js_console_window.png "JS_Console_Window")
 
@@ -176,7 +176,7 @@ Aşağıdaki adımlar bir `FlipView` uygulaması oluşturur ve bir JavaScript ko
     ```
 
     > [!TIP]
-    > @No__t_1 yerine `pages` nesnesini kullanmak istiyorsanız, `pages` nesnesini kapsamda tutmak için kodunuzda bir kesme noktası ayarlamanız gerekir.
+    > `Data.items`yerine `pages` nesnesini kullanmak istiyorsanız, `pages` nesnesini kapsamda tutmak için kodunuzda bir kesme noktası ayarlamanız gerekir.
 
 13. Betiği çalıştırmak için yeşil ok simgesini seçin.
 
@@ -229,7 +229,7 @@ Bir program kesme modundayken JavaScript Konsol penceresini kullanarak geçerli 
 
     Kod satırını satıra göre ilerlemek istiyorsanız, F11 tuşuna basın veya program yürütmeye devam etmek için F5 tuşuna basın.
 
-8. Program yürütmeye devam etmek için F5 tuşuna basın. @No__t_0 uygulama görüntülenir ve bundan böyle dört sayfa varsayılan olmayan görüntülerden birini gösterir.
+8. Program yürütmeye devam etmek için F5 tuşuna basın. `FlipView` uygulama görüntülenir ve bundan böyle dört sayfa varsayılan olmayan görüntülerden birini gösterir.
 
     Visual Studio 'ya geri dönmek için F12 veya Alt + Tab tuşlarına basın.
 
@@ -250,7 +250,7 @@ Aşağıdaki çizimde JavaScript Konsol penceresinde hedef liste gösterilmekted
 Ayrıca, `cd` komutunu kullanarak yürütme bağlamını geçirebilirsiniz, ancak diğer yürütme bağlamının adını bilmeniz ve kullandığınız başvurunun kapsamda olması gerekir. **Hedef** liste, diğer yürütme bağlamlarına daha iyi erişim sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio’da uygulamaların hatalarını ayıklama](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+- [Visual Studio’da uygulamaların hatalarını ayıklama](debugging-windows-store-and-windows-universal-apps.md)
 - [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017)
 - [Uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)

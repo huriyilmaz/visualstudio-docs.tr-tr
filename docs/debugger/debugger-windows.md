@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91df84c92761ae75ce9f26bddefad57c6dc8bc2c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3c27d2b4436fc5defedcda44c4f7840760018ade
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738306"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188547"
 ---
 # <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>Visual Studio 'da hata ayıklayıcı pencerelerini kullanarak verileri İnceleme
 
@@ -39,7 +39,7 @@ Programınızda hata ayıklarken çoğu hata ayıklayıcı penceresini açabilir
 |Görevler|MRK: + SHıFT + D, K|[Görevleri Penceresini Kullanma](../debugger/using-the-tasks-window.md)|
 |Python hata ayıklama etkileşimli|SHIFT + ALT + ı|[Python etkileşimli REPL](../python/python-interactive-repl-in-visual-studio.md)|
 |JavaScript Konsolu|CTRL + ALT + V, C|[Hızlı Başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md)|
-|DOM Gezgini|CTRL + ALT + V, D|[DOM Gezgini'ni kullanarak düzen hatalarını ayıklama](/visualstudio/debugger/quickstart-debug-html-and-css)|
+|DOM Gezgini|CTRL + ALT + V, D|[DOM Gezgini'ni kullanarak düzen hatalarını ayıklama](quickstart-debug-html-and-css.md)|
 |Canlı görsel ağaç|-|[Hata ayıklama sırasında XAML özelliklerini denetleme](../xaml-tools/inspect-xaml-properties-while-debugging.md)|
 |Canlı Özellik Gezgini|-|[Hata ayıklama sırasında XAML özelliklerini denetleme](../xaml-tools/inspect-xaml-properties-while-debugging.md)|
 |İşlemler|CTRL + ALT + Z|[İş Parçacıklarında ve İşlemlerde Hata Ayıklama](../debugger/debug-threads-and-processes.md)|

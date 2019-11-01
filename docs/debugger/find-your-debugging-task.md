@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4667fc630d86691d95e9dc9cd205b29f7b0f525
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: 8467463b5a97c5bf7de1c3864ee6a5e5fc4681d1
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349701"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188102"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>Visual Studio 'da hata ayıklama görevinizi bulma
 
@@ -43,11 +43,15 @@ Aksi takdirde, C# ve F# IÇIN, bir [nesne kimliğini koşullu kesme noktasıyla 
 
 ### <a name="pause-code-inside-a-loop-at-a-certain-iteration"></a>Belirli bir yinelemede döngü içindeki kodu duraklatma
 
-**İsabet sayısı** ' nı koşul olarak kullanarak bir kesme noktası ayarlayın. Daha fazla bilgi için bkz. [isabet sayısı](using-breakpoints.md#hit-count).
+**İsabet sayısı** ' nı koşul olarak kullanarak bir kesme noktası ayarlayın. Daha fazla bilgi için bkz. [isabet sayısı](using-breakpoints.md#set-a-hit-count-condition).
 
 ### <a name="pause-code-at-the-start-of-a-function-when-you-know-the-function-name-but-not-its-location"></a>İşlev adını bildiğiniz ancak konumunu not ettiğinizde bir işlevin başlangıcında kodu duraklatma
 
 Bunu bir işlev kesme noktası ile yapabilirsiniz. Daha fazla bilgi için bkz. [işlev kesme noktalarını ayarlama](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file).
+
+### <a name="pause-code-at-the-start-of-multiple-functions-with-the-same-name"></a>Aynı ada sahip birden çok işlevin başlangıcında kodu Duraklat
+
+Aynı ada sahip birden fazla işleviniz varsa (farklı projelerde aşırı yüklenmiş işlevler veya işlevler), bir [işlev kesme noktası](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)kullanabilirsiniz.
 
 ### <a name="manage-and-keep-track-of-your-breakpoints"></a>Kesme noktalarınızı yönetin ve izleyin
 
@@ -101,11 +105,15 @@ Hata ayıklayıcı seçeneklerini ve hata ayıklayıcı proje ayarlarını yapı
 
 ### <a name="edit-code-during-a-debugging-session"></a>Hata ayıklama oturumu sırasında kodu düzenleme
 
-[Düzenle ve devam et ' i](edit-and-continue.md)kullanın. XAML için [xaml etkin yeniden yükleme](xaml-hot-reload.md)kullanın.
+[Düzenle ve devam et ' i](edit-and-continue.md)kullanın. XAML için [xaml etkin yeniden yükleme](../xaml-tools/xaml-hot-reload.md)kullanın.
 
 ### <a name="send-messages-to-the-output-window-without-modifying-code"></a>Kod değiştirmeden çıkış penceresine ileti gönderme
 
 İzleme noktası ayarlayın. Daha fazla bilgi için bkz. [izleme noktalarını kullanma](using-tracepoints.md).
+
+## <a name="view-the-order-in-which-functions-are-called"></a>İşlevlerin çağrıldığı sırayı görüntüleme
+
+Bkz. [çağrı yığınını görüntüleme](how-to-use-the-call-stack-window.md).
 
 ### <a name="debug-on-remote-machines"></a>Uzak makinelerde hata ayıkla
 

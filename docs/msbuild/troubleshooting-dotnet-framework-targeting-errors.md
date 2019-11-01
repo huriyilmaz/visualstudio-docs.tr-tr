@@ -1,5 +1,5 @@
 ---
-title: .NET Framework hedefleme hatalarının sorunlarını giderme | Microsoft Docs
+title: .NET Framework Hedefleme hatalarını giderme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -17,45 +17,45 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 465952fa41eab7d112ca839be2940cded3d69b33
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 36401e2ac002a74cdab6e9c19373354f4eb6fb1e
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744621"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189428"
 ---
-# <a name="troubleshoot-net-framework-targeting-errors"></a>.NET Framework hedefleme hatalarının sorunlarını giderme
-Bu konuda başvurusu nedeniyle oluşabilecek MSBuild hataları açıklanır sorunlar ve bu hataların nasıl çözebilirsiniz.
+# <a name="troubleshoot-net-framework-targeting-errors"></a>.NET Framework Hedefleme hatalarını giderme
+Bu konuda, başvuru sorunları ve bu hataları nasıl giderebileceğinizi belirten MSBuild hataları açıklanmaktadır.
 
-## <a name="you-have-referenced-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>Bir proje ya da farklı bir .NET Framework sürümünü hedefleyen derlemeye başvuru
- Projelere veya .NET Framework'ün farklı sürümlerini hedefleyen derlemelere başvuran uygulamalar oluşturabilirsiniz. Örneğin, .NET Framework 2. 0'ı hedefleyen bir derlemeye başvuruyor ancak için .NET Framework 4 istemci Profili'ni hedefleyen bir uygulama oluşturabilirsiniz. .NET Framework'ün önceki bir sürümünü hedefleyen bir proje oluşturursanız, projeye bir proje ya da .NET Framework 4 veya .NET Framework 4 kendisi için istemci Profili'ni hedefleyen derlemeye başvuru ayarlanamaz. Hatayı gidermek için uygulamanızın bir profil veya projelere veya derlemelere göre uygulamanızı başvuran hedeflenen profiliyle uyumlu olan profilleri hedefler emin olun.
+## <a name="you-have-referenced-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>.NET Framework farklı bir sürümünü hedefleyen bir proje veya derlemeye başvurmuş olabilirsiniz
+ .NET Framework farklı sürümlerini hedefleyen projelere veya derlemelere başvuran uygulamalar oluşturabilirsiniz. Örneğin, .NET Framework 4 için istemci profilini hedefleyen bir uygulama oluşturabilir, ancak .NET Framework 2,0 ' i hedefleyen bir derlemeye başvuru yapabilirsiniz. Ancak, .NET Framework önceki bir sürümünü hedefleyen bir proje oluşturursanız, bu projedeki bir başvuruyu, .NET Framework 4 veya .NET Framework 4 ' e ait istemci profilini hedefleyen bir proje veya derlemeye ayarlayamazsınız. Hatayı gidermek için uygulamanızın, uygulamanızın başvurduğu projeler veya derlemeler tarafından hedeflenen profille uyumlu bir profili veya profilleri hedeflediğinden emin olun.
 
-## <a name="you-have-re-targeted-a-project-to-a-different-version-of-the-net-framework"></a>Bir proje .NET Framework'ün farklı bir sürüme yeniden hedeflenen
- Uygulamanız için .NET Framework hedef sürümü değiştirme, Visual Studio bazı başvuruları değiştirir, ancak bazı başvuruları el ile güncelleştirmeniz gerekebilir. Hedef uygulama değiştirirseniz, örneğin, bir durum önceden bahsedilmiş hatalarla oluşabilir [!INCLUDE[net_v35SP1_long](../msbuild/includes/net_v35sp1_long_md.md)] ve uygulama veya kaynaklar için .NET Framework 4 istemci profili üzerinde kullanan ayarları vardır.
+## <a name="you-have-re-targeted-a-project-to-a-different-version-of-the-net-framework"></a>Bir projeyi .NET Framework farklı bir sürümüne yeniden hedeflediniz
+ Uygulamanız için .NET Framework hedef sürümünü değiştirirseniz, Visual Studio bazı başvuruları değiştirir ancak bazı başvuruları el ile güncelleştirmeniz gerekebilir. Örneğin, bir uygulamayı [!INCLUDE[net_v35SP1_long](../msbuild/includes/net_v35sp1_long_md.md)] hedefleyecek şekilde değiştirirseniz ve bu uygulamanın .NET Framework 4 ' e ait istemci profilini kullanan kaynakları veya ayarları varsa, daha önce bahsedilen hatalardan biri oluşabilir.
 
- Uygulama ayarlarını geçici olarak çözmek için açık **Çözüm Gezgini**, seçin **tüm dosyaları göster**ve ardından düzenleme *app.config* dosyasını Visual Studio XML düzenleyicisinde. Sürümü .NET Framework'ün uygun sürümünü eşleştirmek için ayarları değiştirin. Örneğin, 4.0.0.0 2.0.0.0 için sürüm ayarını değiştirebilirsiniz. Benzer şekilde, uygulamanın her zaman kaynakları eklemiştir açın **Çözüm Gezgini**, seçin **tüm dosyaları göster** sırasıyla, düğme **Projem** (Visual Basic) veya **Özellikleri** (C#) ve ardından düzenleme *Resources.resx* dosyasını Visual Studio XML düzenleyicisinde. Sürüm ayarı 4.0.0.0 2.0.0.0 için değiştirin.
+ Uygulama ayarlarını geçici olarak çözmek için **Çözüm Gezgini**açın, **tüm dosyaları göster**' i seçin ve ardından Visual Studio 'nun XML düzenleyicisinde *app. config* dosyasını düzenleyin. Ayarlarınızdaki sürümü .NET Framework uygun sürümüyle eşleşecek şekilde değiştirin. Örneğin, 4.0.0.0 olan sürüm ayarını 2.0.0.0 olarak değiştirebilirsiniz. Benzer şekilde, kaynakları ekleyen bir uygulama için **Çözüm Gezgini**açın, **tüm dosyaları göster** düğmesini seçin, **projem** (Visual Basic) veya **Properties** (C#) öğesini genişletin ve ardından *Resources. resx* dosyasını düzenleyin. Visual Studio 'nun XML düzenleyicisinde dosyası. 4\.0.0.0 olan sürüm ayarını 2.0.0.0 olarak değiştirin.
 
- Uygulamanızın simgeleri veya bit eşlemleri gibi kaynaklara veya veri bağlantı dizeleri gibi ayarları varsa, ayrıca hata üzerinde tüm öğeleri kaldırarak çözebilirsiniz **ayarları** sayfasının **Proje Tasarımcısı**ve ardından gereken ayarları yeniden ekleme.
+ Uygulamanızın simgeler veya bit eşlemler veya veri bağlantı dizeleri gibi ayarlar gibi kaynakları varsa, **Proje Tasarımcısı** 'nın **Ayarlar** sayfasındaki tüm öğeleri kaldırarak ve ardından gerekli ayarları yeniden ekleyerek hatayı çözebilirsiniz.
 
-## <a name="you-have-re-targeted-a-project-to-a-different-version-of-the-net-framework-and-references-do-not-resolve"></a>Bir proje .NET Framework'ün farklı bir sürüme yeniden hedeflenmiş ve başvuruları çözümlenmiyor
- Bir proje farklı bir .NET Framework sürümü için hedefi yeniden belirlerseniz, başvurularınızı düzgün bazı durumlarda çözülemiyor olabilir. Açık tam derlemelere başvuruları genellikle bu soruna neden ancak çözümlenmiyor başvurularının kaldırılması ve sonra bunları projeye geri ekleyerek çözebilirsiniz. Alternatif olarak, başvuruları değiştirmek için proje dosyasını düzenleyebilirsiniz. İlk olarak, aşağıdaki biçimde başvuruları kaldırın:
+## <a name="you-have-re-targeted-a-project-to-a-different-version-of-the-net-framework-and-references-do-not-resolve"></a>Bir projeyi .NET Framework farklı bir sürümüne yeniden hedeflediniz ve başvurular çözümlenmiyor
+ Bir projeyi .NET Framework farklı bir sürümüne yeniden hedeflemeniz durumunda, başvurularınız bazı durumlarda düzgün şekilde çözümlenmeyebilir. Derlemelere yönelik açık tam başvurular genellikle bu soruna neden olur, ancak çözümlenmez olan başvuruları kaldırarak ve ardından projeye geri ekleyerek çözümü çözebilirsiniz. Alternatif olarak, başvuruları değiştirmek için proje dosyasını düzenleyebilirsiniz. İlk olarak, aşağıdaki formun başvurularını kaldırırsınız:
 
 ```xml
 <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
 ```
 
- Ardından, bunları basit form ile değiştirin:
+ Daha sonra bunları basit formla değiştirirsiniz:
 
 ```xml
 <Reference Include="System.ServiceModel" />
 ```
 
 > [!NOTE]
-> Projenizi kapatıp sonra ayrıca tüm başvuruları doğru çözümleyemiyorsa emin olmak için yeniden oluşturmalısınız.
+> Projenizi kapatıp yeniden açtıktan sonra tüm başvuruların doğru şekilde çözümlendiğinden emin olmak için yeniden oluşturmanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: .NET Framework sürümü hedefleme](../ide/how-to-target-a-version-of-the-dotnet-framework.md)
-- [.NET framework istemci profili](/dotnet/framework/deployment/client-profile)
-- [Framework hedefleme genel bakış](../ide/visual-studio-multi-targeting-overview.md)
+- [Nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md)
+- [.NET Framework istemci profili](/dotnet/framework/deployment/client-profile)
+- [Çerçeve hedefleme genel bakış](../ide/visual-studio-multi-targeting-overview.md)
 - [Çoklu Sürüm Desteği](../msbuild/msbuild-multitargeting-overview.md)

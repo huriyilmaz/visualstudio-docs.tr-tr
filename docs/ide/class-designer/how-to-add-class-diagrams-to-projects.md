@@ -11,18 +11,18 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cd898f2c4d7a84c9526ca9f56ce65a9b706f11d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 37f7a909196a3b345b39c006e9bf7cd6a52c9bde
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647774"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188991"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>Nasıl yapılır: projelere sınıf diyagramları ekleme
 
 Sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden düzenlemek için, Visual Basic veya C# C++ projenize bir sınıf diyagramı ekleyin. Projedeki kodun farklı kısımlarını görselleştirmek için projeye birden çok sınıf diyagramı ekleyin.
 
-Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları oluşturamazsınız. UML sınıf diyagramları oluşturmak için bkz. [UML modelleme projeleri ve diyagramları oluşturma](../../modeling/create-uml-modeling-projects-and-diagrams.md).
+Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları oluşturamazsınız. UML sınıf diyagramları oluşturmak için bkz. [UML modelleme projeleri ve diyagramları oluşturma](../../modeling/what-s-new-for-design-in-visual-studio.md).
 
 ## <a name="install-the-class-designer-component"></a>Sınıf Tasarımcısı bileşenini yükler
 

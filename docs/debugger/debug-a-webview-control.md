@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 2ce889f83c4d21a8b2464cab108fa165e1144791
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 15c9a2b489aeb091224536bfb87398197f6e4f62
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745569"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188659"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>UWP uygulamasında bir WebView denetiminde hata ayıklama
 
@@ -52,15 +52,15 @@ ms.locfileid: "72745569"
 
 2. Henüz yapmadıysanız, uygulamanıza bir `WebView` denetimi ekleyin ve hata ayıklamayı başlatmak için F5 'e basın.
 
-3. @No__t_0 denetimleri içeren sayfaya gidin.
+3. `Webview` denetimleri içeren sayfaya gidin.
 
 4. **Hata Ayıkla**, **Windows**, **Dom gezgini**ve ardından denetlemek istediğiniz `WebView` URL 'Sini seçerek `WebView` denetimine yönelik DOM Gezgini penceresini açın.
 
      ![DOM Gezgini 'ni açma](../debugger/media/js_dom_webview.png "JS_DOM_WebView")
 
-     @No__t_0 ilişkili DOM Gezgini, Visual Studio 'da yeni bir sekme olarak görünür.
+     `WebView` ilişkili DOM Gezgini, Visual Studio 'da yeni bir sekme olarak görünür.
 
-5. [DOM Gezgini 'ni kullanarak CSS stillerinde hata ayıklama](/visualstudio/debugger/quickstart-debug-html-and-css)bölümünde açıklandığı gıbı canlı Dom ÖĞELERINI ve CSS stillerini görüntüleyin ve değiştirin.
+5. [DOM Gezgini 'ni kullanarak CSS stillerinde hata ayıklama](quickstart-debug-html-and-css.md)bölümünde açıklandığı gıbı canlı Dom ÖĞELERINI ve CSS stillerini görüntüleyin ve değiştirin.
 
 ### <a name="use-the-javascript-console-window-to-inspect-and-debug-a-webview-control"></a>WebView denetimini incelemek ve hatalarını ayıklamak için JavaScript Konsol penceresini kullanın
 
@@ -72,7 +72,7 @@ ms.locfileid: "72745569"
 
      JavaScript konsol penceresi görüntülenir.
 
-4. @No__t_0 denetimleri içeren sayfaya gidin.
+4. `Webview` denetimleri içeren sayfaya gidin.
 
 5. Konsol penceresinde, **hedef** listedeki `WebView` denetimi tarafından görüntülenmiş Web sayfasını veya `iFrame` seçin.
 

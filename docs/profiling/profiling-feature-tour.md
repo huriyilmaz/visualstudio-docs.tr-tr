@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c78c56d00f087bdef7733ee1ef2cbf90afd9638
-ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
-ms.translationtype: HT
+ms.openlocfilehash: 9cc8ab1ac26f4aa01342d9949243772edd3de91f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144764"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189417"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>Hızlı başlangıç: profil oluşturma araçlarına Ilk bakış
 
@@ -111,7 +111,7 @@ Daha fazla bilgi için bkz. [uygulama zaman çizelgesi](../profiling/application
 
 ## <a name="analyze-gpu-usage-direct3d"></a>GPU kullanımını analiz etme (Direct3D)
 
-Direct3D uygulamalarında (Direct3D bileşenleri içinde C++OLMALıDıR) GPU 'daki etkinliği inceleyebilir ve performans sorunlarını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [GPU kullanımı](../debugger/gpu-usage.md). Aracı kullanmak için performans Profilcisi ' nde **GPU kullanımı** ' nı seçin ve ardından **Başlat**' ı seçin. Uygulamanızda, profil oluşturma konusunda ilgilendiğiniz senaryoya gidin ve ardından bir rapor oluşturmak için **toplamayı durdur** ' u seçin.
+Direct3D uygulamalarında (Direct3D bileşenleri içinde C++OLMALıDıR) GPU 'daki etkinliği inceleyebilir ve performans sorunlarını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [GPU kullanımı](/visualstudio/debugger/graphics/gpu-usage). Aracı kullanmak için performans Profilcisi ' nde **GPU kullanımı** ' nı seçin ve ardından **Başlat**' ı seçin. Uygulamanızda, profil oluşturma konusunda ilgilendiğiniz senaryoya gidin ve ardından bir rapor oluşturmak için **toplamayı durdur** ' u seçin.
 
 Grafiklerde bir zaman aralığı seçip **Ayrıntıları görüntüle**' yi seçtiğinizde, alt bölmede ayrıntılı bir görünüm görüntülenir. Ayrıntılı görünümde, her CPU ve GPU üzerinde ne kadar etkinlik olduğunu inceleyebilirsiniz. Zaman çizelgesinde açılan pencereleri almak için en düşük bölmedeki olayları seçin. Örneğin, **var** olan çağrı açılan pencere görüntülenecek **olan olayı seçin** . (Açık gri dikey vsync çizgileri, belirli bir **mevcut** çağrının vsync kaçırılmadığını anlamak için başvuru olarak kullanılabilir. Uygulamanın artmasıyla ile 60 FPS 'e kadar olması için her iki VNET arasında bir tane **mevcut** çağrı olması gerekir.)
 
@@ -162,7 +162,7 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 |----------------------|---------------------|-------------|-------------|
 |[CPU Kullanımı](../profiling/cpu-usage.md)|Yes|Yes|Yes|
 |[Bellek Kullanımı](../profiling/memory-usage.md)|Yes|Yes|Yes|
-|[GPU Kullanımı](../debugger/gpu-usage.md)|Yes|Yes|eşleşen|
+|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|Yes|Yes|eşleşen|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|Yes|Yes|eşleşen|
 |[PerfTips](../profiling/perftips.md)|Yes|XAML için Evet, HTML için Hayır|Yes|
 |[Performans Gezgini](../profiling/performance-explorer.md)|Yes|eşleşen|Yes|
@@ -174,7 +174,7 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 |----------------------|---------------------|-------------|-------------|
 |[CPU Kullanımı](../profiling/cpu-usage.md)|Yes|Yes|Yes|
 |[Bellek Kullanımı](../profiling/memory-usage.md)|Yes|Yes|Yes|
-|[GPU Kullanımı](../debugger/gpu-usage.md)|Yes|Yes|eşleşen|
+|[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|Yes|Yes|eşleşen|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|Yes|Yes|eşleşen|
 |[PerfTips](../profiling/perftips.md)|Yes|XAML için Evet, HTML için Hayır|Yes|
 |[Performans Gezgini](../profiling/performance-explorer.md)|Yes|eşleşen|Yes|
@@ -186,4 +186,4 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugger-feature-tour)
+- [Visual Studio’da hata ayıklama](../debugger/debugger-feature-tour.md)

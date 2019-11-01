@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d53df0bc83e2068488c8a7c919f8b76258ad827
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c1c18ec84a6a62da6cd564c69ef4b83ea76bcfd6
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728376"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187152"
 ---
 # <a name="visualizer-security-considerations"></a>Görselleştirici Güvenlik Konuları
 Görselleştiricisi yazmak olası güvenlik tehditlerini içerir. Bu olası tehditler için şu anda bilinen bir Exploit yok, ancak geliştiriciler bunların farkında olmalıdır ve gelecekte aşağıda açıklandığı gibi uygun güvenlik önlemleri almalıdır.
@@ -39,6 +39,6 @@ Görselleştiricisi yazmak olası güvenlik tehditlerini içerir. Bu olası tehd
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görselleştirici Mimarisi](../debugger/visualizer-architecture.md)
-- [Nasıl Yapılır: Görselleştirici Yazma](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [Nasıl Yapılır: Görselleştirici Yazma](create-custom-visualizers-of-data.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)
 - [Hata Ayıklayıcıda Verileri Görüntüleme](../debugger/viewing-data-in-the-debugger.md)

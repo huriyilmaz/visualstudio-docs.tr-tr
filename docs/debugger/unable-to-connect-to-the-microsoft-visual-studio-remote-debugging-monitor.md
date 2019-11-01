@@ -15,22 +15,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 872f7c594344af2c59ebe7f8d1fbd1a640dd2190
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a2a3f4429341ecdba26dab2f95415332f9cb2eca
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728821"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187271"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne Bağlanılamıyor.
 Bu ileti, uzaktan hata ayıklama İzleyicisi uzak makinede düzgün şekilde ayarlanmadığından veya ağ sorunları veya bir güvenlik duvarının varlığı nedeniyle uzak makineye erişilemediğinden oluşabilir.
 
 > [!IMPORTANT]
-> Bir ürün hatası nedeniyle bu iletiyi aldığınızı düşünüyorsanız lütfen [Bu sorunu](../ide/how-to-report-a-problem-with-visual-studio.md) Visual Studio 'ya bildirin. Daha fazla yardıma ihtiyacınız varsa bkz. Microsoft 'a başvurmanın yolları için [bize](../ide/talk-to-us.md) danışın.
+> Bir ürün hatası nedeniyle bu iletiyi aldığınızı düşünüyorsanız lütfen [Bu sorunu](../ide/how-to-report-a-problem-with-visual-studio.md) Visual Studio 'ya bildirin. Daha fazla yardıma ihtiyacınız varsa bkz. Microsoft 'a başvurmanın yolları için [bize](../ide/feedback-options.md) danışın.
 
 ## <a name="specificerrors"></a>Ayrıntılı hata iletisi nedir?
 
-@No__t_0 iletisi geneldir. Genellikle, hata dizesinde daha belirli bir ileti bulunur ve sorunun nedenini belirlemenize yardımcı olabilir veya daha kesin bir çözüm arayın. Ana hata iletisine eklenen daha yaygın hata iletilerinin bazıları aşağıda verilmiştir:
+`Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor` iletisi geneldir. Genellikle, hata dizesinde daha belirli bir ileti bulunur ve sorunun nedenini belirlemenize yardımcı olabilir veya daha kesin bir çözüm arayın. Ana hata iletisine eklenen daha yaygın hata iletilerinin bazıları aşağıda verilmiştir:
 
 - [Hata ayıklayıcı uzak bilgisayara bağlanamıyor. Hata ayıklayıcı belirtilen bilgisayar adını çözümleyemedi](#cannot_connect)
 - [Bağlantı isteği uzaktan hata ayıklayıcı tarafından reddedildi](#rejected)

@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad427c058265694205444c3ade04e317e407072
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 571ba2a0c015d6d3a3c8757c25a0058d8e3ad8e1
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649571"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188819"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
@@ -67,7 +67,7 @@ Kural KIMLIĞI | Başlık
 [CA1063](ca1063-implement-idisposable-correctly.md) | IDisposable 'ı doğru uygulayın
 [CA1064](ca1064-exceptions-should-be-public.md) | Özel durumlar genel olmalıdır
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | Beklenmeyen konumlarda özel durum harekete geçirmeyin
-CA1066 | @No__t_0, eşit olarak geçersiz kılındığından, IEquatable \<T > uygulamalıdır
+CA1066 | {0}, IEquatable\<T > uygulamalıdır çünkü bu eşit değerleri geçersiz kılıyor
 CA1067 | IEquatable \<T uygularken Object. Equals (nesne) öğesini geçersiz kıl >
 [CA1068](ca1068.md) | CancellationToken parametreleri en sonda olmalıdır
 CA1200 | cref etiketlerini ön ek ile kullanmaktan kaçının
@@ -287,7 +287,7 @@ Aşağıdaki FxCop eski analiz kuralları kullanım dışıdır ve çözümleyic
 - [CA1504](ca1504-review-misleading-field-names.md)
 - [CA1701](ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 - [CA1702](ca1702-compound-words-should-be-cased-correctly.md)
-- [CA1703](ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1703](ca1703.md)
 - [CA1800](ca1800.md)
 - [CA1809](ca1809.md)
 - [CA1901](ca1901.md)

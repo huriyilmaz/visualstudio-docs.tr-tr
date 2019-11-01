@@ -18,34 +18,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0428ecf21da525b8f77334e57547c8f10da7cdf5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7df95eae689f7c3abbb0d75a7557ce749bdceee5
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851642"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188229"
 ---
 # <a name="edit-and-continue-error-message"></a>Düzenle ve devam et hata iletisi
 
-**Düzenle ve devam et** Düzenle ve devam et destekleyen bir kod dili ayıklanırken hata ileti kutusu görünür, ancak Düzenle ve devam et yaptığınız kod değişiklikleri için kullanılabilir değildir. Hata iletisi daha ayrıntılı bir açıklama sağlar. İletişim kutusuna yanıt vermek için seçin **Tamam** iletişim kutusunu kapatmak ve düzenleme denemesi iptal etmek için.
+Düzenle ve devam et 'i destekleyen bir kod dilinde hata ayıklaması yaparken **Düzenle ve devam et** hata iletisi kutusu görüntülenir, ancak yaptığınız kod değişiklikleri için Düzenle ve devam et kullanılamaz. Hata mesajı daha ayrıntılı bir açıklama sağlar. İletişim kutusunu yanıtlamak için, iletişim kutusunu kapatmak için **Tamam** ' ı seçin ve düzenleme girişimini iptal edin.
 
-Bu hata iletisi için olası nedenler şunlardır:
+Bu hata iletisinin olası nedenleri şunlardır:
 
-- SQL Server kod düzenlemek çalışıyor.
-- En iyi duruma getirilmiş kod düzenlemek çalışıyor. Yayın derleme için hata ayıklama derlemesi geçmeniz gerekebilir.
-- Çalışırken, kod düzenlemeye çalışmak yerine hata ayıklayıcıda duraklatıldığı sırada. Deneyin [bir kesme noktası ayarlamak](../debugger/using-breakpoints.md)ve duraklatıldığı sırada kod düzenleme.
-- Yalnızca yönetilmeyen hata ayıklama etkinleştirildiğinde, yönetilen kod düzenlemek çalışıyor. Düzenle ve devam et ile çalışmıyor [karışık mod hata ayıklama](../debugger/how-to-debug-in-mixed-mode.md).
-- Düzenle ve devam et tarafından bir kod, değişikliği yapmadan programlama diliniz desteklenmez. Daha fazla bilgi için bkz: makaleler [C# ' de desteklenen kod değişiklikleri](supported-code-changes-csharp.md), [desteklenmeyen düzenlemeler, Visual Basic Düzenle ve devam et](/visualstudio/debugger/supported-code-changes-csharp), ve [desteklenen kod değişiklikleri C++](supported-code-changes-cpp.md).
-- Bağlı için hata ayıklamayı başlatma yerine uygulama kodları düzenlemeye çalıştığınız **hata ayıklama** menüsü.
-- Bir Dr hata ayıklarken kod düzenlemek çalışıyor. Watson dökümü.
-- İşlenmeyen bir özel durum oluştuktan sonra kod düzenlemeye çalıştığınız ve seçeneği **işlenmemiş özel durumlarda çağrı yığınını geriye doğru izleme** seçilmez.
-- Kod katıştırılmış çalışma zamanı uygulamasında hata ayıklaması sırasında düzenlemek çalışıyor.
-- .NET Framework sürüm 4.5.1'den önceki bir 64 bit uygulama hedefle kullanarak yönetilen kod düzenlemek çalışıyor. Düzenle ve devam et için .NET Framework 4.5.1'den önceki kullanmak için hedef ayarlanmış **x86** içinde  **\<ProjectName >**  > **özellikleri**  >  **Derleme** sekmesinde **Gelişmiş derleyici** ayarı.
-- Hata ayıklama sırasında değiştirildi ve yeniden yüklendi bütünleştirilmiş kodu düzenleme çalışılıyor.
-- Yüklenmemiş bir derleme kodu düzenleme çalışılıyor.
-- Derleme hataları en son sürüme sahip olduğu bir uygulama eski bir sürümü hata ayıklamayı başlatma.
+- SQL Server kodu düzenlenmeye çalışılıyor.
+- En iyileştirilmiş kod düzenlenmeye çalışılıyor. Bir yayın derlemeden bir hata ayıklama derlemesine geçmeniz gerekebilir.
+- Hata ayıklayıcıda duraklalarken, çalışırken kodu düzenlemeye çalışılıyor. [Kesme noktası ayarlamayı](../debugger/using-breakpoints.md)ve duraklalarken kodu düzenlemenizi deneyin.
+- Yalnızca yönetilmeyen hata ayıklama etkinleştirildiğinde yönetilen kodu düzenlemeye çalışılıyor. Düzenle ve devam et [karışık modda hata ayıklama](../debugger/how-to-debug-in-mixed-mode.md)ile çalışmaz.
+- Programlama dilinizde Düzenle ve devam et tarafından desteklenmeyen bir kod değişikliği yapılıyor. Daha fazla bilgi için, [içinde C#desteklenen kod değişiklikleri ](supported-code-changes-csharp.md), [Visual Basic Düzenle ve devam et ' de desteklenmeyen düzenlemeler](supported-code-changes-csharp.md)ve [desteklenen C++ kod değişiklikleri](supported-code-changes-cpp.md)hakkındaki makalelere bakın.
+- **Hata** ayıklama menüsünden hata ayıklama başlatmak yerine, bağlı olduğunuz bir uygulamadaki kodu düzenlemeye çalışılıyor.
+- Dr. Watson dökümünden hata ayıklarken kodu düzenlemeye çalışılıyor.
+- İşlenmeyen bir özel durum oluştuktan sonra kodu düzenlemeye çalışılıyor ve **işlenmemiş özel durumlarla çağrı yığınını bırakma** seçeneği seçili değil.
+- Gömülü çalışma zamanı uygulamasında hata ayıklarken kodu düzenlemeye çalışılıyor.
+- 64 bit uygulama hedefi ile 4.5.1 'ten önceki bir .NET Framework sürümünü kullanarak yönetilen kodu düzenlemeye çalışılıyor. 4\.5.1 ' den önceki .NET Framework Düzenle ve devam et özelliğini kullanmak için, **\<ProjectName >**  > **Özellikler** > **derleme** sekmesi, **Gelişmiş derleyici** ayarında hedefi **x86** olarak ayarlayın.
+- Hata ayıklama sırasında değiştirilmiş ve yeniden yüklenmiş bir derlemede kod düzenlemeye çalışılıyor.
+- Yüklenemeyen bir derlemede kod düzenlemeye çalışılıyor.
+- En son sürümde derleme hataları olduğundan, uygulamanın eski bir sürümünde hata ayıklama işlemi başlatılıyor.
 
 Daha fazla bilgi için bkz.:
-- [C++ Düzenle ve devam et blog gönderisini](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/)
+- [C++Düzenle ve devam et blog gönderisi](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/)
 - [Desteklenen kod değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md)
 - [Düzenle ve Devam Et](../debugger/edit-and-continue.md)

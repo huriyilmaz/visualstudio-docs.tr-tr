@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 78967c93a990aaef0d5863446433c286bdcf46b7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 26435db42e3214bb19438226faba0db0e5ac0f4f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649603"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188828"
 ---
 # <a name="rule-scope-options-for-fxcop-analyzers"></a>FxCop çözümleyicileri için kural kapsamı seçenekleri
 
@@ -21,9 +21,9 @@ Bazı FxCop çözümleyici kuralları, kod tabanınızın hangi bölümlerinin u
 Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketinin 2.6.3 sürümünden başlayarak kullanılabilir.
 
 > [!TIP]
-> Fxcopçözümleyiciler paketinin belirli bir sürümü için kullanılabilen seçeneklerin tam listesini görmek için, paketin *Belgeler* klasöründeki *Analyzer Configuration.MD* dosyasına bakın. Dosya *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \Belgei\analyzer Configuration.MD*konumunda bulunuyor. Bu yapılandırma belge dosyası, sürüm 2.6.5 'den başlayarak paketin her bir sürümüne dahildir. Bir seçeneğin *çözümleyici Configuration.MD* dosyasında nasıl belgelendiği hakkında bir örnek aşağıda verilmiştir:
+> Fxcopçözümleyiciler paketinin belirli bir sürümü için kullanılabilen seçeneklerin tam listesini görmek için, paketin *Belgeler* klasöründeki *Analyzer Configuration.MD* dosyasına bakın. Dosya *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<sürüm\>\Belgesı\analyzer Configuration.MD*konumunda bulunuyor. Bu yapılandırma belge dosyası, sürüm 2.6.5 'den başlayarak paketin her bir sürümüne dahildir. Bir seçeneğin *çözümleyici Configuration.MD* dosyasında nasıl belgelendiği hakkında bir örnek aşağıda verilmiştir:
 >
-> Seçenek adı: `sufficient_IterationCount_for_weak_KDF_algorithm` \
+> Seçenek adı: `sufficient_IterationCount_for_weak_KDF_algorithm`\
 > Seçenek değerleri: tam sayı değerleri \
 > Varsayılan değer: her yapılandırılabilir kurala (' 100000 ' varsayılan olarak çoğu kural için) özeldir \
 > Örnek: `dotnet_code_quality.CA5387.sufficient_IterationCount_for_weak_KDF_algorithm = 100000`
@@ -38,10 +38,10 @@ Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler]
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Değer döndürmeyen zaman uyumsuz yöntemlerin yoksayılıp yoksayılmayacağı | `true`<br/>`false` | `false` | [CA2007](ca2007-do-not-directly-await-task.md) |
+| Değer döndürmeyen zaman uyumsuz yöntemlerin yoksayılıp yoksayılmayacağı | `true`<br/>`false` | `false` | [CA2007](ca2007.md) |
 
 > [!NOTE]
-> 2\.6.3 sürümü ve çözümleyici paketinin önceki bölümlerinde, bu seçenek `skip_async_void_methods` olarak adlandırılmıştır.
+> 2\.6.3 sürümü ve çözümleyici paketinin önceki bölümlerinde, bu seçenek `skip_async_void_methods`olarak adlandırılmıştır.
 
 ## <a name="exclude_single_letter_type_parameters"></a>exclude_single_letter_type_parameters
 
@@ -50,10 +50,10 @@ Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler]
 | Kuraldan tek karakterlik [tür parametrelerinin](/dotnet/csharp/programming-guide/generics/generic-type-parameters) dışarıda bırakılıp bırakılmayacağını belirtir, örneğin, `Collection<S>` içinde `S` | `true`<br/>`false` | `false` | [CA1715](ca1715-identifiers-should-have-correct-prefix.md) |
 
 > [!NOTE]
-> 2\.6.3 sürümü ve çözümleyici paketinin önceki bölümlerinde, bu seçenek `allow_single_letter_type_parameters` olarak adlandırılmıştır.
+> 2\.6.3 sürümü ve çözümleyici paketinin önceki bölümlerinde, bu seçenek `allow_single_letter_type_parameters`olarak adlandırılmıştır.
 
 ## <a name="output_kind"></a>output_kind
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Bu tür derlemeyi üreten bir projedeki kodun analiz edilmesi gerektiğini belirtir | @No__t_0 numaralandırmasının bir veya daha fazla alanı<br/><br/>Birden çok değeri virgülle ayırın (,) | Tüm çıktı türleri | [CA2007](ca2007-do-not-directly-await-task.md) |
+| Bu tür derlemeyi üreten bir projedeki kodun analiz edilmesi gerektiğini belirtir | <xref:Microsoft.CodeAnalysis.OutputKind> numaralandırmasının bir veya daha fazla alanı<br/><br/>Birden çok değeri virgülle ayırın (,) | Tüm çıktı türleri | [CA2007](ca2007.md) |

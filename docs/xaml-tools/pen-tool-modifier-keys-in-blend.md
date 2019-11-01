@@ -9,16 +9,16 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 801ccc48f913b36366ac27292abd472d6ea11207
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7213bd271b5c690d78443339039d09bf14163e91
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668812"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189610"
 ---
 # <a name="pen-tool-modifier-keys-in-blend-for-visual-studio"></a>Visual Studio için Blend kalem aracı değiştirici tuşları
 
-Aşağıdaki tabloda, ](../designers/media/d514358f-185a-412f-a55d-36633b25dc8a.png) **kalem** aracı ![Pen aracı ile oluştururken bir yolu değiştirmek için kullanabileceğiniz kısayollar listelenmektedir. **Kalem** aracını, varolan bir yola işaret eklemek veya kaldırmak ya da varolan iki yolu birleştirmek için de kullanabilirsiniz.
+Aşağıdaki tabloda bir yolu, **kalem** aracı ![kalem aracı](../designers/media/d514358f-185a-412f-a55d-36633b25dc8a.png)ile oluştururken değiştirmek için kullanabileceğiniz kısayollar listelenmektedir. **Kalem** aracını, varolan bir yola işaret eklemek veya kaldırmak ya da varolan iki yolu birleştirmek için de kullanabilirsiniz.
 
 |Bu eylemi yapmak için|Bunu yapın|Çağrısı|
 | - |-------------|-------------|
@@ -40,4 +40,4 @@ Aşağıdaki tabloda, ](../designers/media/d514358f-185a-412f-a55d-36633b25dc8a.
 
 - [Çalışma yüzeyi değiştirici tuşları](../designers/artboard-modifier-keys-in-blend.md)
 - [Doğrudan Seçim aracı değiştirici tuşları](../designers/direct-selection-tool-modifier-keys-in-blend.md)
-- [Şekiller ve yollar çizme](../designers/draw-shapes-and-paths.md)
+- [Şekiller ve yollar çizme](draw-shapes-and-paths.md)

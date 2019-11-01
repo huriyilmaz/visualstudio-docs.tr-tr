@@ -14,46 +14,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bb8cf959d5f1d915f5614dc2b92d74a603493f7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a5f0b85acfd45996dd00208aae820b24265be9f5
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955982"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189686"
 ---
 # <a name="data-in-office-solutions"></a>Office çözümlerindeki veriler
-  Office çözümlerini almak veya verileri değiştirme olanağı verir. Visual Studio kullanarak Office çözümleri oluşturma, verilerle çalışmak birkaç farklı yolu vardır.
+  Birçok Office çözümü, kullanıcıların verileri almasına veya değiştirmesine olanak tanır. Visual Studio kullanarak Office çözümleri oluşturduğunuzda, verilerle çalışmanın birkaç farklı yolu vardır.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 
- Office çözümlerinde denetimlere veri bağlama işlemini açıklamaktadır.
+ Office çözümlerinde verilerin denetimlere nasıl bağlanacağını açıklar.
 
 - [Özel XML bölümlerine genel bakış](../vsto/custom-xml-parts-overview.md)
 
- Office çözümlerindeki veriler ile çalışmak için özel XML bölümleri kullanmayı açıklar.
+ Office çözümlerinde verilerle çalışmak için özel XML bölümlerinin nasıl kullanılacağını açıklar.
 
-- [Belge düzeyi özelleştirmelerdeki önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md)
+- [Belge düzeyi Özelleştirmelerdeki önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md)
 
- Office uygulamasını başlatmadan erişilebilir bir katıştırılmış veri adası içinde verileri depolamak açıklar.
+ Office uygulamasını başlatmadan erişilebilen, ekli bir veri adasında veri depolamayı açıklar.
 
-- [XML şemaları ve belge düzeyi özelleştirmelerdeki veriler](../vsto/xml-schemas-and-data-in-document-level-customizations.md)
+- [Belge düzeyi özelleştirmelerde XML şemaları ve verileri](../vsto/xml-schemas-and-data-in-document-level-customizations.md)
 
- XML verilere bağlı denetimler oluşturmak için belge düzeyi özelleştirmelerde XML şemaları kullanılacağını açıklar.
+ XML verilerine bağlanan denetimler oluşturmak için belge düzeyi özelleştirmelerde XML şemaları kullanmayı açıklar.
 
-- [Office çözümlerine genel bakış yerel veritabanı dosyaları kullanma](../vsto/using-local-database-files-in-office-solutions-overview.md)
+- [Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış](../vsto/using-local-database-files-in-office-solutions-overview.md)
 
- Projelerinizi ve çevrimdışı kullanım için verileri önbelleğe alabilir, veritabanı dosyalarını içe aktarmayı açıklar.
+ Projelerinize veritabanı dosyalarının nasıl içeri aktarılacağını ve çevrimdışı kullanım için verileri ne zaman önbellekte kullanabileceğinizi açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 - [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)
 
- Visual Studio'da verilerle nasıl çalışılacağını konuları listeler.
+ Visual Studio 'da verilerle çalışmayı gösteren konuları listeler.
 
-- [Verileri kaydetme](../data-tools/saving-data.md)
+- [Verileri kaydetme](../data-tools/save-data-back-to-the-database.md)
 
- Veri kaynağına değişiklikler yazma ve bir veri kümesindeki verileri değiştirme dahil olmak üzere, veri kümeleri ile çalışma hakkındaki konulara bağlantılar yedekleme sağlar.
+ Bir veri kümesindeki verileri değiştirme ve değişiklikleri veri kaynağına yazma dahil olmak üzere veri kümeleriyle çalışma hakkındaki konuların bağlantılarını sağlar.
 
-- [Office çözümleri oluşturma ve tasarlama](../vsto/designing-and-creating-office-solutions.md)
+- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
 
  Visual Studio kullanarak Office projeleri oluşturmaya başlama hakkında bilgi için bağlantılar sağlar.

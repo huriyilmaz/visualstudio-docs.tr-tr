@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c4cc5b43880df06752cbce79d58ec71921817a4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 37f208421079f77cadaf85556e00a8f8548c6182
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649403"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188796"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: kod ölçümleri verileri oluşturma
 
@@ -33,7 +33,7 @@ Kod ölçümleri verilerini üç şekilde oluşturabilirsiniz:
 [Fxcopçözümleyiciler NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) çeşitli kod ölçümleri [Çözümleyicisi](roslyn-analyzers-overview.md) kuralları içerir:
 
 - [CA1501](ca1501-avoid-excessive-inheritance.md)
-- [CA1502](ca1502-avoid-excessive-complexity.md)
+- [CA1502](ca1502.md)
 - [CA1505](ca1505-avoid-unmaintainable-code.md)
 - [CA1506](ca1506-avoid-excessive-class-coupling.md)
 
@@ -60,7 +60,7 @@ FxCop çözümleyicileri paketindeki kod ölçümü kurallarının tetikleneceğ
    CA1502: 10
    ```
 
-   Bu örnekte, [CA1502](ca1502-avoid-excessive-complexity.md) kuralı, yöntemin döngüsel karmaşıklığı 10 ' dan büyük olduğunda tetikleneceği şekilde yapılandırılmıştır.
+   Bu örnekte, [CA1502](ca1502.md) kuralı, yöntemin döngüsel karmaşıklığı 10 ' dan büyük olduğunda tetikleneceği şekilde yapılandırılmıştır.
 
 3. Visual Studio 'nun **Özellikler** penceresinde veya proje dosyasında, yapılandırma dosyasının yapı eylemini [**AdditionalFiles**](../ide/build-actions.md#build-action-values)olarak işaretleyin. Örneğin:
 
@@ -134,7 +134,7 @@ Build succeeded.
     0 Error(s)
 ```
 
-@No__t_0 belirterek çıkış dosyası adını geçersiz kılabilirsiniz. Ayrıca, `/p:LEGACY_CODE_METRICS_MODE=true` belirterek [eski stil](#previous-versions) kod ölçümleri verilerini de alabilirsiniz. Örneğin:
+`/p:MetricsOutputFile=<filename>`belirterek çıkış dosyası adını geçersiz kılabilirsiniz. Ayrıca, `/p:LEGACY_CODE_METRICS_MODE=true`belirterek [eski stil](#previous-versions) kod ölçümleri verilerini de alabilirsiniz. Örneğin:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics /p:LEGACY_CODE_METRICS_MODE=true /p:MetricsOutputFile="Legacy.xml"
@@ -259,9 +259,9 @@ Yeni komut satırı kod ölçümleri Aracı, çözüm ve proje yüklenebilse de,
 
 #### <a name="metric-value-differences"></a>Ölçüm değeri farkları
 
-@No__t_0 ölçümü yeni komut satırı kod ölçümleri aracında daha doğru ve güvenilir. Bu, herhangi bir codegen farkından bağımsızdır ve araç takımı veya çalışma zamanı değiştiğinde değişmez. Yeni araç, boş satırlar ve açıklamalar dahil olmak üzere gerçek kod satırlarını sayar.
+`LinesOfCode` ölçümü yeni komut satırı kod ölçümleri aracında daha doğru ve güvenilir. Bu, herhangi bir codegen farkından bağımsızdır ve araç takımı veya çalışma zamanı değiştiğinde değişmez. Yeni araç, boş satırlar ve açıklamalar dahil olmak üzere gerçek kod satırlarını sayar.
 
-@No__t_0 ve `MaintainabilityIndex` gibi diğer ölçümler, *ölçüm. exe*' nin önceki sürümleriyle aynı formülleri kullanır, ancak yeni araç ara DIL (IL) yönergeleri yerine `IOperations` (mantıksal kaynak yönergeleri) sayısını sayar. Sayılar, Visual Studio IDE tarafından oluşturulan ve *ölçüm. exe*' nin önceki sürümleri tarafından oluşturulanlar için biraz farklı olacaktır.
+`CyclomaticComplexity` ve `MaintainabilityIndex` gibi diğer ölçümler, *ölçüm. exe*' nin önceki sürümleriyle aynı formülleri kullanır, ancak yeni araç ara DIL (IL) yönergeleri yerine `IOperations` (mantıksal kaynak yönergeleri) sayısını sayar. Sayılar, Visual Studio IDE tarafından oluşturulan ve *ölçüm. exe*' nin önceki sürümleri tarafından oluşturulanlar için biraz farklı olacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

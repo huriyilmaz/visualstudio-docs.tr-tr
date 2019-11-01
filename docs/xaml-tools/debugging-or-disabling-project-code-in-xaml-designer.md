@@ -6,12 +6,12 @@ ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bac142e413e1fdfcd088585a139019f26b041d98
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e6426479012ba950f261286323b166da695e9cc5
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650959"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189595"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>XAML Tasarımcısı’nda proje kodu hatalarını ayıklama veya proje kodunu devre dışı bırakma
 
@@ -98,4 +98,4 @@ Denetim görüntüleme seçeneklerini değiştirmek için, tasarımcı penceresi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio ve Visual Studio için Blend XAML tasarlama](../designers/designing-xaml-in-visual-studio.md)
+- [Visual Studio ve Visual Studio için Blend XAML tasarlama](designing-xaml-in-visual-studio.md)

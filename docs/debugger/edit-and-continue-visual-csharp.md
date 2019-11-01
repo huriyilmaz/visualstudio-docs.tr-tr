@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4d11875a7ab2ca3f21f364308580a732b7516e6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5d54673ee46c594bd1a4bea2990d3b9bbe90ce1f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737926"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188195"
 ---
 # <a name="edit-and-continue-visual-c"></a>Düzenle ve Devam Et (Visual C#)
  Düzenle ve devam et ile C#, hata ayıklama sırasında kodunuzda kesme modunda değişiklikler yapabilirsiniz. Değişiklikler hata ayıklama oturumunu durdurup yeniden başlatmaya gerek kalmadan uygulanabilir. Çalışma modunda, kaynak Düzenleyici salt okunurdur.
@@ -41,4 +41,4 @@ ms.locfileid: "72737926"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl Yapılır: Düzenle ve Devam Et'i Kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
 - [Desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md)
-- [Visual Studio 'da XAML etkin yeniden yüklemesine sahip XAML kodunu yazma ve hata ayıklama](../debugger/xaml-hot-reload.md)
+- [Visual Studio 'da XAML etkin yeniden yüklemesine sahip XAML kodunu yazma ve hata ayıklama](../xaml-tools/xaml-hot-reload.md)

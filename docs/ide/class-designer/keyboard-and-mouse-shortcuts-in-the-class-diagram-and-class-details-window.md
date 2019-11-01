@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fa62baf020751a175b24f47a93b3e7280fb76fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a755de4df0cd7402debbc964d2f3f9c54802eb85
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647658"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188976"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>Sınıf diyagramı ve Sınıf Ayrıntıları penceresinde klavye ve fare kısayolları
 
@@ -93,7 +93,7 @@ Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 |**,** (virgül)|İmleç bir parametre satırdaysa, bir virgül yazıldığında, imleç sonraki parametrenin ad alanına getirilir. İmleç bir yöntemin son parametre satırdaysa, imleci yeni bir parametre oluşturmak için kullanabileceğiniz \<add parametresi > alanına taşır.<br /><br /> İmleç, **Sınıf Ayrıntıları** penceresinde başka bir yerse, bir virgül yazıldığında geçerli alana bir virgül eklenir.|
 |**;** (noktalı virgül) veya **)** (parantez kapatma)|İmleci, **Sınıf Ayrıntıları** penceresi kılavuzundaki sonraki üye satırının ad alanına taşıyın.|
 |**Sekmesinde**|İmleci bir sonraki alana taşır, önce sola ve sonra yukarıdan aşağıya doğru hareket eder. İmleç metin yazdığınız bir alandan taşıyor ise, **Sınıf Ayrıntıları** bu metni işler ve bir hata oluşturmuyorsa onu depolar.<br /><br /> İmleç \<add parametresi > gibi boş bir alanda yer alıyorsa Tab, sonraki satırın ilk alanına gider.|
-|**'Nu**|İmleci bir sonraki alana taşır, önce sola ve sonra yukarıdan aşağıya doğru hareket eder. İmleç \<add parametresi > gibi boş bir alanda yer alıyorsa, sonraki satırdaki ilk alana gider. @No__t_0space > virgülden hemen sonra yazılmış olduğunu unutmayın.<br /><br /> İmleç Özet alanında ise, boşluk yazıldığında boşluk karakteri eklenir.<br /><br /> İmleç belirli bir satırın gizleme sütunundayken, bir boşluk yazıldığında gizleme onay kutusunun değeri geçer.|
+|**'Nu**|İmleci bir sonraki alana taşır, önce sola ve sonra yukarıdan aşağıya doğru hareket eder. İmleç \<add parametresi > gibi boş bir alanda yer alıyorsa, sonraki satırdaki ilk alana gider. \<boşluk > virgülden hemen sonra yazılmış olduğunu unutmayın.<br /><br /> İmleç Özet alanında ise, boşluk yazıldığında boşluk karakteri eklenir.<br /><br /> İmleç belirli bir satırın gizleme sütunundayken, bir boşluk yazıldığında gizleme onay kutusunun değeri geçer.|
 |**Ctrl**+**sekmesi**|Başka bir belge penceresine geç. Örneğin, **Sınıf Ayrıntıları** penceresinden açık bir kod dosyasına geçiş yapın.|
 |**Larına**|Bir alana metin yazmaya başladıysanız ESC tuşuna basmak geri alma anahtarı olarak davranır ve alanın içeriğini önceki değerine geri alır. Sınıf Detayları Penceresi genel odağa sahipse ancak belirli bir hücre odağa sahip değilse, ESC tuşuna basmak, **Sınıf Ayrıntıları** penceresinden odağı uzağa kaydırır.|
 |**Yukarı ok** ve **aşağı ok**|Bu anahtarlar, **Sınıf Ayrıntıları** penceresi kılavuzunda imleci satırdan satıra taşır.|
@@ -105,4 +105,4 @@ Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 - [Tür üyeleri oluşturma ve yapılandırma](creating-and-configuring-type-members.md)
 - [Klavye kullanımı özel](../reference/how-to-use-the-keyboard-exclusively.md)
 - [Visual Studio 'da varsayılan klavye kısayolları](../default-keyboard-shortcuts-in-visual-studio.md)
-- [Blend’de klavye kısayolları](../../designers/keyboard-shortcuts-in-blend.md)
+- [Blend’de klavye kısayolları](../../xaml-tools/keyboard-shortcuts-in-blend.md)

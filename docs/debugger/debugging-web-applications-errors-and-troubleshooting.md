@@ -27,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb84da1c75da968f9f89417cc48deec5310bc270
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f4cb60f4d378daab829713cb4bbbb670ef8ed25a
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738050"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188342"
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme
 Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla karşılaşabilirsiniz.
@@ -57,4 +57,4 @@ Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla kar�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
-- [Web Uygulamalarında ve Betikte Hata Ayıklama](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)
+- [Web Uygulamalarında ve Betikte Hata Ayıklama](how-to-enable-debugging-for-aspnet-applications.md)

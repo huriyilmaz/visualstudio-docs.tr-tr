@@ -8,12 +8,12 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: 45397ddf21f1ea1d735c2753864e5954850a4d98
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 8b6aef437519a4fe92f11a3b21546b3dda9981bb
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179855"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188765"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio Kubernetes araçlarını kullanmaya başlama
 
@@ -21,7 +21,7 @@ Visual Studio Kubernetes araçları, Kubernetes 'i hedefleyen Kapsayıcılı uyg
 
 Bu öğreticide, bir projeye Kubernetes desteği eklemek ve AKS 'de yayımlamak için Visual Studio kullanımı ele alınmaktadır. Birincil olarak [Azure dev Spaces](https://aka.ms/get-azds) kullanarak projenizi hata ayıklamakta ve test etmek için kullanmak istiyorsanız, bunun yerine [Azure dev Spaces öğreticiye](/azure/dev-spaces/get-started-netcore-visualstudio) atlayabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bu yeni işlevsellikten yararlanmak için şunlar gerekir:
 
@@ -38,11 +38,11 @@ Bu yeni işlevsellikten yararlanmak için şunlar gerekir:
 
     1. [Aks yayımlama araçları](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes), ayrı bir indirme olarak kullanılabilir.
 
-    1. Azure Kubernetes hizmeti kümesi. Daha fazla bilgi için bkz. [AKS kümesi oluşturma](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster). Geliştirme iş istasyonunuzdan [kümeye bağlandığınızdan](/azure/aks/kubernetes-walkthrough#connect-to-the-cluster) emin olun.
+    1. Bir Azure Kubernetes hizmet kümesi. Daha fazla bilgi için bkz. [AKS kümesi oluşturma](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster). Geliştirme iş istasyonunuzdan [kümeye bağlandığınızdan](/azure/aks/kubernetes-walkthrough#connect-to-the-cluster) emin olun.
 
     1. Geliştirme iş istasyonunuza yüklenen Held CLı. Daha fazla bilgi için bkz. [Held 'Yi yükleme](https://github.com/kubernetes/helm/blob/master/docs/install.md).
 
-    1. `helm init` Komutunu kullanarak aks kümenize göre yapılandırılmış helk. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [Held 'yi yapılandırma](/azure/aks/kubernetes-helm#configure-helm).
+    1. `helm init` komutunu kullanarak AKS kümenize göre yapılandırılmış helk. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [Held 'yi yapılandırma](/azure/aks/kubernetes-helm#configure-helm).
 ::: moniker-end
 
 ## <a name="create-a-new-kubernetes-project"></a>Yeni bir Kubernetes projesi oluşturma
@@ -81,7 +81,7 @@ Sonra, oluşturulacak ASP.NET Core Web uygulaması türünü seçebilirsiniz. **
 
 ## <a name="add-kubernetes-support-to-an-existing-project"></a>Var olan bir projeye Kubernetes desteği ekleme
 
-Alternatif olarak, var olan bir ASP.NET Core Web uygulaması projesine Kubernetes desteği ekleyebilirsiniz. Bunu yapmak için projeye sağ tıklayın ve**kapsayıcı Orchestrator desteği** **Ekle** > ' yi seçin.
+Alternatif olarak, var olan bir ASP.NET Core Web uygulaması projesine Kubernetes desteği ekleyebilirsiniz. Bunu yapmak için projeye sağ tıklayın ve > **kapsayıcı Orchestrator desteği** **Ekle** ' yi seçin.
 
 ::: moniker range="vs-2017"
 
@@ -119,7 +119,7 @@ Eklenen dosyalar şunlardır:
 
    ![Build Docker Image seçeneğinin ekran görüntüsü](media/tutorial-kubernetes-tools/k8s-tools-build-docker-image.png)
 
-- HELI grafiği ve bir *grafik* klasörü. Bu YAML dosyaları, uygulama için Kubernetes 'e dağıtmak için kullanabileceğiniz helk grafiğini yapar. Held hakkında daha fazla bilgi için bkz [https://www.helm.sh](https://www.helm.sh).
+- HELI grafiği ve bir *grafik* klasörü. Bu YAML dosyaları, uygulama için Kubernetes 'e dağıtmak için kullanabileceğiniz helk grafiğini yapar. Held hakkında daha fazla bilgi için bkz. [https://www.helm.sh](https://www.helm.sh).
 
 - *AZD. YAML*. Bu, Azure Kubernetes hizmetinde hızlı ve yinelemeli bir hata ayıklama deneyimi sağlayan Azure Dev Spaces için ayarları içerir. Daha fazla bilgi için [Azure dev Spaces belgelerine](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)bakın.
 
@@ -137,7 +137,7 @@ Bunu yapmak için ilk olarak, AKS 'de yayımlama için öğenin altındaki [Önk
 
    ![Yayımla menü öğesinin ekran görüntüsü](media/tutorial-kubernetes-tools/k8s-tools-publish-project.png)
 
-2. **Yayımla** ekranında, Yayımla hedefi olarak **Container Registry** öğesini seçin ve kapsayıcı kayıt defterinizi seçmek için istemleri izleyin. Henüz bir kapsayıcı kayıt defteriniz yoksa, Visual Studio 'dan bir tane oluşturmak için **yeni Azure Container Registry oluştur** ' u seçin. Daha fazla bilgi için bkz. [Azure Container Registry kapsayıcınızı yayımlama](vs-azure-tools-docker-hosting-web-apps-in-docker.md).
+2. **Yayımla** ekranında, Yayımla hedefi olarak **Container Registry** öğesini seçin ve kapsayıcı kayıt defterinizi seçmek için istemleri izleyin. Henüz bir kapsayıcı kayıt defteriniz yoksa, Visual Studio 'dan bir tane oluşturmak için **yeni Azure Container Registry oluştur** ' u seçin. Daha fazla bilgi için bkz. [Azure Container Registry kapsayıcınızı yayımlama](hosting-web-apps-in-docker.md).
 
    ![Bir Yayımla hedefi seç ekranının ekran görüntüsü](media/tutorial-kubernetes-tools/k8s-tools-publish-to-acr.png)
 
@@ -165,7 +165,7 @@ Bunu yapmak için ilk olarak, AKS 'de yayımlama için öğenin altındaki [Önk
 
 ::: moniker-end
 
-Tebrikler! Artık tüm Kubernetes uygulama geliştirme için Visual Studio 'nun tam gücünden yararlanabilirsiniz.
+Mühendisi! Artık tüm Kubernetes uygulama geliştirme için Visual Studio 'nun tam gücünden yararlanabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

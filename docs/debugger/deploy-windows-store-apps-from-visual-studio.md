@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d902403b111e92f302ff907a29eaaa99ee181058
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4c58dbb32ef0a476ac7e22a840e27e389c710f97
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737999"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188287"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio’dan UWP uygulamaları dağıtma
 
@@ -118,4 +118,4 @@ Dağıtımı, uygulama başlatıldığında otomatik olarak bir hata ayıklama o
 
 - [Gelişmiş uzak dağıtım seçenekleri](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
 - [Yüklü uygulama paketinin hatalarını ayıklama](../debugger/debug-installed-app-package.md)
-- [Visual Studio’dan uygulamaları çalıştırma](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+- [Visual Studio’dan uygulamaları çalıştırma](debugging-windows-store-and-windows-universal-apps.md)

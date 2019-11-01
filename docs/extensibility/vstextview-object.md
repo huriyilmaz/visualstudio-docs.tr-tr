@@ -13,17 +13,18 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5d3983dcefd515a43d573166c9bd772fd23bf0a
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 927bbee8bde62ff24396ea7b50e55e901b8cff06
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924151"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189012"
 ---
 # <a name="vstextview-object"></a>VSTextView nesnesi
-Metin görünümü, kullanıcıların metin arabelleğinin Unicode metnini görüntülemesine ve düzenlemesine izin veren bir penceredir. Esas olarak görünüm, çoğu kullanıcının düzenleyici olarak başvurduğu şeydir. Görünüm, çeşitli metin katmanları (sözcük kaydırması, anahat metni vb.) tarafından arabelleğinden ayrıldığından, bu görünümün arabellekteki metnin tam bir gösterimi olması garanti edilmez. Metin görünümü hakkında daha fazla bilgi için, bkz. [eskı API kullanarak metin görünümüne erişme](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md).
 
- Aşağıdaki tabloda, <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> nesnesindeki arabirimler gösterilmektedir.
+Metin görünümü, kullanıcıların metin arabelleğinin Unicode metnini görüntülemesine ve düzenlemesine izin veren bir penceredir. Esas olarak görünüm, çoğu kullanıcının düzenleyici olarak başvurduğu şeydir. Görünüm, çeşitli metin katmanları (sözcük kaydırması, anahat metni vb.) tarafından arabelleğinden ayrıldığından, bu görünümün arabellekteki metnin tam bir gösterimi olması garanti edilmez. Metin görünümü hakkında daha fazla bilgi için, bkz. [eskı API kullanarak metin görünümüne erişme](/visualstudio/extensibility/accessing-thetext-view-by-using-the-legacy-api?view=vs-2015).
+
+Aşağıdaki tabloda <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> nesnesindeki arabirimler gösterilmektedir.
 
 |Arabirim|Açıklama|
 |---------------|-----------------|
@@ -32,12 +33,12 @@ Metin görünümü, kullanıcıların metin arabelleğinin Unicode metnini gör�
 |<xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite>|Standart OLE arabirimi.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Standart OLE arabirimi.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|Bileşik eylemlerin (yani, tek bir geri alma/yineleme biriminde gruplanmış eylemler) oluşturulmasına izin vermez.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|, Görünümü yönetmek ve bunlara erişmek için temel yöntemleri sağlar. `IVsTextView`iş parçacıklı güvenli değildir.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|, Görünümü yönetmek ve bunlara erişmek için temel yöntemleri sağlar. `IVsTextView` iş parçacıklı güvenli değildir.|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Bir pencere bölmesi oluşturur ve yönetir.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>|Metin katmanlarla etkileşime girer.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsThreadSafeTextView>|Farklı bir iş parçacığından görünüm üzerinde işlemler gerçekleştirir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Şekil düzenleme](https://www.microsoft.com/download/details.aspx?id=55984)
 - [VSTextBuffer nesnesi](../extensibility/vstextbuffer-object.md)
-- [Eski API kullanarak metin görünümüne erişme](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)

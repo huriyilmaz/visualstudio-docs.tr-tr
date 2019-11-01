@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9f66d757f5f46530619be1424eb0810ce546ff5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9f0ac06712810e39432f1d19c250c3e7976f4a01
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745707"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188704"
 ---
 # <a name="client-side-script-debugging"></a>İstemci Tarafı Betikte Hata Ayıklama
 Visual Studio hata ayıklayıcı, ASP.NET sayfalarındaki istemci tarafı betiklerdeki hataları bulmak ve düzeltmek için kapsamlı bir hata ayıklama ortamı sağlar.
@@ -33,7 +33,7 @@ Görüntülenecek **Çözüm Gezgini** sunucu tarafı ve istemci tarafı komut d
  Visual Studio 'da, sunucu tarafı kodunda doğrudan hata ayıklayamazsınız, ancak sunucu tarafı dosyasında bir kesme noktası ayarlayabilirsiniz. Visual Studio, kesme noktasını istemci tarafı dosyasında karşılık gelen bir konumla otomatik olarak eşler ve istemci tarafı kodunda eşlenmiş bir kesme noktası oluşturur.
 
 ## <a name="manually-or-automatically-attaching-to-script"></a>El ile veya otomatik olarak betiğe Iliştirme
- @No__t_0 betiği hata ayıklamaya başlamak için, hata ayıklayıcının hata ayıklamak istediğiniz betiğe eklemesi gerekir. Bu, el ile veya otomatik olarak gerçekleşebilir.
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]betiği hata ayıklamaya başlamak için, hata ayıklayıcının hata ayıklamak istediğiniz betiğe eklemesi gerekir. Bu, el ile veya otomatik olarak gerçekleşebilir.
 
  Eklemek istediğiniz çalışan bir betik işlemini seçmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı arabirimini kullanarak el ile iliştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: betiğe iliştirme](../debugger/how-to-attach-to-script.md).
 
@@ -61,7 +61,7 @@ Görüntülenecek **Çözüm Gezgini** sunucu tarafı ve istemci tarafı komut d
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ASP.NET ve AJAX Uygulamalarında Hata Ayıklama](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)
+- [ASP.NET ve AJAX Uygulamalarında Hata Ayıklama](how-to-enable-debugging-for-aspnet-applications.md)
 - [Betik Hata Ayıklama Sınırlamaları](../debugger/limitations-on-script-debugging.md)
 - [Değişken pencereleri](../debugger/debugger-windows.md)
 - [Komut Penceresi](../ide/reference/immediate-window.md)

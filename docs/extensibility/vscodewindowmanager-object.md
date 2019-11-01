@@ -13,21 +13,19 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1da94495019d30a8ba3df8bdaa7df0ccf2ae4d6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c67fb719c6ec87e7707a406e2e7f67cd71569b39
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322929"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189041"
 ---
 # <a name="vscodewindowmanager-object"></a>VSCodeWindowManager nesnesi
-Dil hizmeti, kod penceresi Yöneticisi uygular ve Kenarlıklar (örneğin, aşağı açılan çubuk) yönetmekten sorumludur. Daha fazla bilgi için [eski API'yi kullanarak kod Windows özelleştirme](../extensibility/customizing-code-windows-by-using-the-legacy-api.md).
 
- Aşağıdaki tabloda, arabirimler gösterilir `VSCodeWindowManager` nesne.
+Dil hizmeti, kod penceresi yöneticisini uygular ve donatılabilen (örneğin, açılan çubuğun) yönetilirken sorumludur. Daha fazla bilgi için bkz. [eskı API 'Yi kullanarak kod pencerelerini özelleştirme](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015).
+
+Aşağıdaki tabloda `VSCodeWindowManager` nesnesindeki arabirimler gösterilmektedir.
 
 |Arabirim|Açıklama|
 |---------------|-----------------|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Kenarlıklar (örneğin, aşağı açılan çubuk), eklenen veya kaldırılan bir kod penceresinden imkan tanır.|
-
-## <a name="see-also"></a>Ayrıca bkz.
-- [Eski API'sini kullanarak kod windows özelleştirme](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Donatılabilen (açılan çubuklar gibi) bir kod penceresine eklenmesine veya kaldırılmasına izin verir.|

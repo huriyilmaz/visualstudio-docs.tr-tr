@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 52235ab4770f5267de8507ff67fcda0aa1370392
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 12f66658cd8069f58355a96b2c3b3031a4cb6808
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730561"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187569"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio 'da UWP uygulamalarında HTML ve CSS hatalarını ayıklama
 
@@ -30,7 +30,7 @@ JavaScript uygulamaları için, Visual Studio, Internet Explorer ve Visual Studi
 
 DOM inceleme araçları tarafından sunulan etkileşimli hata ayıklama modelini kullanarak, işlenmiş HTML ve CSS kodunu görüntüleyebilir ve değiştirebilirsiniz. Bunu, hata ayıklayıcıyı durdurup yeniden başlatmadan yapabilirsiniz.
 
-JavaScript Konsol penceresini kullanma ve kesme noktaları ayarlama gibi diğer JavaScript hata ayıklama özellikleri hakkında bilgi için bkz. [hızlı başlangıç:](../debugger/quickstart-debug-javascript-using-the-console.md) [Visual Studio 'Da](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)JavaScript ve hata ayıklama uygulamaları.
+JavaScript Konsol penceresini kullanma ve kesme noktaları ayarlama gibi diğer JavaScript hata ayıklama özellikleri hakkında bilgi için bkz. [hızlı başlangıç:](../debugger/quickstart-debug-javascript-using-the-console.md) [Visual Studio 'Da](debugging-windows-store-and-windows-universal-apps.md)JavaScript ve hata ayıklama uygulamaları.
 
 ## <a name="InspectingDOM"></a>Canlı DOM inceleniyor
 DOM Gezgini, işlenmiş sayfanın bir görünümünü gösterir ve DOM Gezgini 'ni kullanarak değerleri değiştirebilir ve sonuçları hemen görebilirsiniz. Bu, hata ayıklayıcıyı durdurup yeniden başlatmadan değişiklikleri test etmenizi sağlar. Bu yöntemi kullanarak sayfayla etkileşim kurarken, projenizdeki kaynak kodu değişmez, bu nedenle istenen kod düzeltmelerini bulduğunuzda, kaynak kodunuzda değişiklikler yaparsınız.
@@ -51,7 +51,7 @@ DOM Gezgini 'ni kullanarak şunları yapabilirsiniz:
 > [!TIP]
 > DOM Gezgini penceresi kapalıysa, yeniden açmak için**Windows**  > **DOM Gezgini** > **Hata Ayıkla** ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
 
-Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli olarak hata ayıklama işlemini öğreneceksiniz. @No__t_0 denetimi kullanan ve sonra hata ayıkladığımız bir uygulama oluşturacağız. Uygulama birkaç hata içeriyor.
+Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli olarak hata ayıklama işlemini öğreneceksiniz. `FlipView` denetimi kullanan ve sonra hata ayıkladığımız bir uygulama oluşturacağız. Uygulama birkaç hata içeriyor.
 
 > [!WARNING]
 > Aşağıdaki örnek uygulama bir UWP uygulamasıdır. Cordova için aynı özellikler desteklenir, ancak uygulama farklı olabilir.
@@ -171,7 +171,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
     Bu sekme, seçilen DOM öğesinin her bir özelliği için hesaplanan veya son değeri gösterir.
 
-12. Yükseklik CSS kuralını açın. 100 piksel olarak ayarlanmış bir satır içi stil olduğuna dikkat edin. Bu, `#fView` CSS Seçicisi için ayarlanan %100 ' lik yükseklik değeriyle tutarsız bir şekilde görünür. @No__t_0 seçicinin üstü çizili metni, satır içi stilin bu stille öncelikli olduğunu gösterir.
+12. Yükseklik CSS kuralını açın. 100 piksel olarak ayarlanmış bir satır içi stil olduğuna dikkat edin. Bu, `#fView` CSS Seçicisi için ayarlanan %100 ' lik yükseklik değeriyle tutarsız bir şekilde görünür. `#fView` seçicinin üstü çizili metni, satır içi stilin bu stille öncelikli olduğunu gösterir.
 
     Aşağıdaki çizimde, **hesaplanan** sekmesi gösterilmektedir.
 
@@ -182,7 +182,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 14. Ana pencerede `width: 100px;height: 100px;` ' a çift tıklayın, **Delete** tuşuna basın ve ardından **ENTER**tuşuna basın. ENTER tuşuna bastıktan sonra, hata ayıklama oturumunuzu durdurmadığınız halde yeni değerler uygulamaya hemen yansıtılır.
 
     > [!IMPORTANT]
-    > DOM Gezgini penceresinde öznitelikleri güncelleştirebilmeniz için, **Stiller**, **hesaplanan**ve **Düzen** sekmelerinde görüntülenen değerleri de güncelleştirebilirsiniz. Daha fazla bilgi için bkz. DOM Gezginini kullanarak [CSS stillerinde hata ayıklama](../debugger/debug-css-styles-using-dom-explorer.md) ve [DOM Gezgini kullanarak hata ayıklama düzeni](../debugger/debug-layout-using-dom-explorer.md).
+    > DOM Gezgini penceresinde öznitelikleri güncelleştirebilmeniz için, **Stiller**, **hesaplanan**ve **Düzen** sekmelerinde görüntülenen değerleri de güncelleştirebilirsiniz. Daha fazla bilgi için bkz. DOM Gezginini kullanarak [CSS stillerinde hata ayıklama](../debugger/debug-css-styles-using-dom-explorer.md) ve [DOM Gezgini kullanarak hata ayıklama düzeni](quickstart-debug-html-and-css.md).
 
 15. Uygulamayı seçerek veya alt + TAB tuşlarını kullanarak uygulamaya geçiş yapın.
 
@@ -255,7 +255,7 @@ Bir uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 > Öğelerin üzerine gelindiğinde vurgulanması yalnızca Windows Phone öykünücüsünde kısmen desteklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio’da uygulamaların hatalarını ayıklama](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+- [Visual Studio’da uygulamaların hatalarını ayıklama](debugging-windows-store-and-windows-universal-apps.md)
 - [Uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [WebView denetiminde hata ayıklama](../debugger/debug-a-webview-control.md)
 - [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)

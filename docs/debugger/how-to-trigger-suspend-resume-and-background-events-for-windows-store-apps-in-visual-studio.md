@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d12c9848409f57b16c733b587edff193311bcfdd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: da634246bfa9f800779c761458028f55b9317f6f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732270"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187623"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>Visual Studio 'da UWP uygulamalarında hata ayıklama sırasında askıya alma, sürdürülme ve arka plan olaylarını tetikleme
 
@@ -110,7 +110,7 @@ Işlem ömrü yönetimi ve arka plan görevleri hakkında daha fazla bilgi için
 4. **Tanılama** günlüğünü seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio ile UWP uygulamalarını test etme](../test/testing-store-apps-with-visual-studio.md)
-- [Visual Studio’da uygulamaların hatalarını ayıklama](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+- [Visual Studio ile UWP uygulamalarını test etme](/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio)
+- [Visual Studio’da uygulamaların hatalarını ayıklama](debugging-windows-store-and-windows-universal-apps.md)
 - [Uygulama yaşam döngüsü](/windows/uwp/launch-resume/app-lifecycle)
 - [Başlatma, sürdürme ve çoklu görev](/windows/uwp/launch-resume/index)

@@ -14,30 +14,30 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 729fafd1f6dfdf889293c9686f455be8de5a81fc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b9531f0495bd0dc0a9f095ff71fdfd84fc8d1380
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970383"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189783"
 ---
 # <a name="migrate-office-solutions-to-the-net-framework-4-or-later"></a>Office çözümlerini .NET Framework 4 veya sonraki sürümlere geçirme
-  Bir Office projesi hedef Framework'ü değiştirilirse [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya önceki .NET Framework sürümünden bazı ek adımlar daha sonra çözümü geliştirme ve son kullanıcı bilgisayarlarında çalıştırmaya devam etmek için gerekli olabilir. Daha fazla bilgi için [gerekli .NET Framework 4 veya .NET Framework 4.5 için geçirdiğiniz Office projelerini çalıştırmak için değişiklikler](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md).
+  Bir Office projesinin hedef çatısı, .NET Framework önceki bir sürümünden [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki bir sürümde değiştirilirse, çözümü geliştirme ve son kullanıcı bilgisayarlarında çalıştırmaya devam etmek için bazı ek adımlar gerekebilir. Daha fazla bilgi için, [.NET Framework 4 ' e veya .NET Framework 4,5 ' a geçirebileceğiniz Office projelerini çalıştırmak Için gereken değişiklikler](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)konusuna bakın.
 
- Ayrıca, proje artık derleme. Office projeleri özelliklerinden bazıları için .NET Framework'ün farklı sürümlerini farklı programlama modellerine sahip. Ne zaman bir Office projesi hedef Framework'ü değiştiğinde [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ya da daha önceki .NET Framework sürümünden, aşağıdaki kod değişikliklerini projeye vermeniz gerekir:
+ Ayrıca, proje artık derlenmeyebilir. Office projelerinin bazı özelliklerinin .NET Framework farklı sürümleri için farklı programlama modelleri vardır. Bir Office projesinin hedef çatısı, .NET Framework önceki bir sürümünden [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki bir sürümde değiştirildiğinde, projede aşağıdaki kod değişikliklerini yapmanız gerekir:
 
-- [.NET Framework 4 veya .NET Framework 4.5 için geçirdiğiniz Excel ve Word projelerini güncelleştirme](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
+- [.NET Framework 4 ' e veya .NET Framework 4,5 ' ye geçirebileceğiniz Excel ve Word projelerini güncelleştirme](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
 
-- [.NET Framework 4 veya .NET Framework 4.5 için geçirdiğiniz Office projelerindeki Şerit Özelleştirmelerini Güncelleştirme](/visualstudio/vsto/update-ribbon-customizations-in-office-projects-to-migrate-to-dotnet-framework-4-or-4-5)
+- [.NET Framework 4 ' e veya .NET Framework 4,5 ' ye geçirebileceğiniz Office Projelerindeki Şerit özelleştirmelerini güncelleştirme](update-ribbon-customizations-in-office-projects-to-migrate-to-dotnet-framework-4-or-4-5.md)
 
-- [.NET Framework 4 veya .NET Framework 4.5 için geçirdiğiniz Outlook projelerindeki form bölgelerini güncelleştirme](../vsto/updating-form-regions-in-outlook-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
+- [.NET Framework 4 ' e veya .NET Framework 4,5 ' ye geçirebileceğiniz Outlook Projelerindeki Form bölgelerini güncelleştirme](../vsto/updating-form-regions-in-outlook-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
 
-  Bu projeyi Visual Studio'nun önceki bir sürümden yükseltme yaptığınızda, bir Office projesi hedef Framework'ü değiştirir. Daha fazla bilgi için [yükseltme ve Office çözümlerini geçirme](../vsto/upgrading-and-migrating-office-solutions.md).
+  Projeyi Visual Studio 'nun önceki bir sürümünden yükselttiğinizde bir Office projesinin hedef çatısı değişir. Daha fazla bilgi için bkz. [Office çözümlerini yükseltme ve geçirme](../vsto/upgrading-and-migrating-office-solutions.md).
 
-  Hedef nedeni hakkında daha fazla bilgi için Office projelerinde bazı özellikler farklı bir programlama modeli sahip [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha sonra bkz [.NET Framework 4 veya .NET Framework 4.5hedefleyenOfficeprojelerindetasarımınıdeğiştirir](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md) ve [Office çalışma zamanına genel bakış için Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
+  Office projelerindeki bazı özelliklerin neden farklı bir programlama modeline sahip olduğuna ilişkin daha fazla bilgi için, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ve [.NET Framework 4 ' ü veya 4,5 .NET Framework ' yı hedefleyen Office projelerinin tasarımındaki değişikliklere](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md) bakın. [ Office çalışma zamanına genel bakış için stüdyo araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümleri oluşturma ve tasarlama](../vsto/designing-and-creating-office-solutions.md)
-- [Nasıl yapılır: .NET Framework sürümü hedefleme](../ide/how-to-target-a-version-of-the-dotnet-framework.md)
-- [Office çözümleri hatalarında sorun giderme](../vsto/troubleshooting-errors-in-office-solutions.md)
-- [Office çözümlerindeki hatalar için ek destek](../vsto/additional-support-for-errors-in-office-solutions.md)
+- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
+- [Nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md)
+- [Office çözümlerinde hata giderme sorunları](../vsto/troubleshooting-errors-in-office-solutions.md)
+- [Office çözümlerinde hatalar için ek destek](../vsto/additional-support-for-errors-in-office-solutions.md)

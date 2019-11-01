@@ -14,26 +14,26 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: eb0bbc0cdf7aff548053c813cdf1b29ed1fed080
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 9606b02cb26e8e0ad37f490e330e7d81f3089e27
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913303"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189003"
 ---
-# <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Öğretici: Visual Studio 'da Visual Basic kullanmaya başlama
+# <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Öğretici: Visual Studio 'da Visual Basic kullanmaya başlayın
 
 Visual Basic (VB) için bu öğreticide, Visual Studio 'Yu kullanarak birkaç farklı konsol uygulaması oluşturup çalıştırabilir ve bunu yaparken [Visual Studio tümleşik geliştirme ortamının (IDE)](visual-studio-ide.md) bazı özelliklerini keşfedebilirsiniz.
 
 ::: moniker range="vs-2017"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) ücretsiz yüklemek için sayfa.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
@@ -43,9 +43,9 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 ::: moniker range="vs-2017"
 
-1. Visual Studio 2017'yi açın.
+1. Visual Studio 2017 ' i açın.
 
-2. Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
+2. Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
 
 3. Sol bölmedeki **Yeni proje** iletişim kutusunda **Visual Basic**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından projeyi *WhatIsYourName*olarak adlandırın.
 
@@ -55,28 +55,28 @@ Visual Studio henüz yüklemediyseniz, Git [Visual Studio indirmeleri](https://v
 
 **Konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **.NET Core platformlar arası geliştirme** iş yükünü ekleyerek buna ulaşabilirsiniz. Makinenizde hangi Visual Studio 2017 güncelleştirmelerinin yüklü olduğuna bağlı olarak, aşağıdaki iki şekilde bu iş yükünü ekleyebilirsiniz.
 
-#### <a name="option-1-use-the-new-project-dialog-box"></a>Seçenek 1: Yeni proje iletişim kutusunu kullan
+#### <a name="option-1-use-the-new-project-dialog-box"></a>Seçenek 1: yeni proje iletişim kutusunu kullanma
 
 1. **Yeni proje** iletişim kutusunun sol bölmesindeki **Aç Visual Studio yükleyicisi** bağlantısına tıklayın.
 
    ![Yeni proje iletişim kutusundan Visual Studio Yükleyicisi aç bağlantısına tıklayın](../media/vs-open-visual-studio-installer-generic.png)
 
-1. Visual Studio Yükleyicisi'ni başlatır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+1. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
    ![Visual Studio Yükleyicisi .NET Core platformlar arası geliştirme iş yükü](../media/tutorial-aspnet-workload.png)
 
-#### <a name="option-2-use-the-tools-menu-bar"></a>Seçenek 2: Araçlar menü çubuğunu kullanma
+#### <a name="option-2-use-the-tools-menu-bar"></a>2\. seçenek: Araçlar menü çubuğunu kullanma
 
-1. **Yeni proje** iletişim kutusunu iptal edin ve üst menü çubuğundan **Araçlar** > **Araçlar ve Özellikler al**' ı seçin.
+1. **Yeni proje** iletişim kutusunu iptal edin ve üst menü çubuğundan Araçlar **ve Özellikler al**> **Araçlar** ' ı seçin.
 
-1. Visual Studio Yükleyicisi'ni başlatır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+1. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Bu öğreticideki ekran görüntülerinin bazıları koyu temayı kullanır. Koyu tema kullanmayan ancak öğrenmek istiyorsanız [Düzenleyicisi ve Visual Studio IDE'yi kişiselleştirme](../../ide/quickstart-personalize-the-ide.md) öğrenmek için sayfa nasıl.
+> Bu öğreticideki ekran görüntülerinin bazıları koyu temayı kullanır. Koyu tema kullanmıyorsanız, ancak isterseniz, nasıl yapılacağını öğrenmek için [Visual STUDIO IDE ve düzenleyici 'Yi kişiselleştirme](../../ide/quickstart-personalize-the-ide.md) sayfasına bakın.
 
 1. Visual Studio 2019 ' i açın.
 
@@ -117,7 +117,7 @@ Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat 
 
 1. Zaten açık değilse *WhatIsYourName* projenizi açın.
 
-1. `Sub Main(args As String())` Satırı`End Sub` izleyen açılış ayracından hemen sonra aşağıdaki Visual Basic kodu girin:
+1. Aşağıdaki Visual Basic kodunu, `Sub Main(args As String())` satırını izleyen ve `End Sub` satırından önce gelen köşeli ayracından hemen sonra girin:
 
      ```vb
      Console.WriteLine(vbCrLf + "What is your name? ")
@@ -128,7 +128,7 @@ Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat 
      Console.ReadKey(True)
     ```
 
-    Bu kod, var olan <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>ve <xref:System.Console.ReadKey%2A> deyimlerinin yerini alır.
+    Bu kod, mevcut <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>ve <xref:System.Console.ReadKey%2A> deyimlerinin yerini alır.
 
    ![Ad kodunuzun ne olduğunu gösteren kod penceresi](./media/vs-2019/vb-codewindow-what-name-dark.png)
 
@@ -142,18 +142,18 @@ Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat 
 
 ::: moniker range="vs-2019"
 
-1. *WhatIsYourName* projesinde, `Sub Main(args As String())` `End Sub` satırı izleyen açılış ayracından hemen sonra aşağıdaki Visual Basic kodu girin:
+1. *WhatIsYourName* projesinde, aşağıdaki Visual Basic kodunu, `Sub Main(args As String())` satırını izleyen ve `End Sub` satırından önce olan açılış ayracından hemen sonra girin:
 
      ```vb
      Console.WriteLine(vbCrLf + "What is your name? ")
      Dim name = Console.ReadLine()
      Dim currentDate = DateTime.Now
-     Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}")
+     Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")
      Console.Write(vbCrLf + "Press any key to exit... ")
      Console.ReadKey(True)
     ```
 
-    Bu kod, var olan <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>ve <xref:System.Console.ReadKey%2A> deyimlerinin yerini alır.
+    Bu kod, mevcut <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A>ve <xref:System.Console.ReadKey%2A> deyimlerinin yerini alır.
 
    ![Ad kodunuzun ne olduğunu gösteren kod penceresi](./media/vs-2019/vb-codewindow-what-name-dark.png)
 
@@ -169,11 +169,11 @@ Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat 
 
 ::: moniker range="vs-2017"
 
-1. Visual Studio 2017 ' i açın ve üst menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
+1. Visual Studio 2017 ' i açın ve üst menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin.
 
 1. Sol bölmedeki **Yeni proje** iletişim kutusunda **Visual Basic**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Sonra dosyayı *CalculateThis*olarak adlandırın.
 
-1. `Module Program` Çizgi ve`End Module` satır arasına aşağıdaki kodu girin:
+1. `Module Program` satırı ve `End Module` satırı arasına aşağıdaki kodu girin:
 
    ```vb
    Public num1 As Integer
@@ -208,9 +208,9 @@ Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat 
 
 1. Dil ve platform filtrelerini uyguladıktan sonra **konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-   Ardından, **yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusuna *WhatIsYourName* yazın veya girin. Sonra **Oluştur**' u seçin.
+   Ardından, **yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusuna *CalculateThis* yazın veya girin. Sonra **Oluştur**' u seçin.
 
-1. `Module Program` Çizgi ve`End Module` satır arasına aşağıdaki kodu girin:
+1. `Module Program` satırı ve `End Module` satırı arasına aşağıdaki kodu girin:
 
    ```vb
    Public num1 As Integer
@@ -259,7 +259,7 @@ Konsol uygulaması giriş alır ve çıktıyı bir komut satırı penceresinde g
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticiyi tamamlamak Tebrikler! Daha da fazla bilgi edinmek için aşağıdaki öğreticiye bakın.
+Tebrikler, bu öğreticiyi tamamlama! Daha da fazla bilgi edinmek için aşağıdaki öğreticiye bakın.
 
 > [!div class="nextstepaction"]
 > [Visual Studio 'da Visual Basic ve .NET Core SDK ile kitaplık oluşturma](/dotnet/core/tutorials/vb-library-with-visual-studio)

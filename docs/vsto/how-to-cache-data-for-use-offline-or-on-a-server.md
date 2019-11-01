@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çevrimdışı veya sunucuda kullanmak için verileri önbelleğe'
+title: 'Nasıl yapılır: çevrimdışı veya sunucuda kullanmak üzere verileri önbelleğe alma'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,51 +17,51 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 510d923d2503aeb6e07859813537c9094fe25b09
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 551d27cf8d40f2e6e9c996b031fa6c4e0a233355
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419699"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189571"
 ---
-# <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Nasıl yapılır: Çevrimdışı veya sunucuda kullanmak için verileri önbelleğe
-  Böylece kullanılabilir bir veri öğesi belgede önbelleğe alınacak çevrimdışı olarak işaretleyebilirsiniz. Bu ayrıca, belgeyi bir sunucuda depolandığında başka kod tarafından değiştirilmesine belgedeki verileri mümkün kılar.
+# <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Nasıl yapılır: çevrimdışı veya sunucuda kullanmak üzere verileri önbelleğe alma
+  Çevrimdışı kullanılabilir olması için bir veri öğesini belgede önbelleğe alınacak şekilde işaretleyebilirsiniz. Bu, belge bir sunucuda depolandığında belgedeki verilerin diğer kodla değiştirilmesini de olanaklı kılar.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Veri öğesi kodunuzda bildirildiği veya kullanıyorsanız önbelleğe alınacak bir veri öğesi işaretleyebilirsiniz bir <xref:System.Data.DataSet>, bir özelliği ayarlayarak **özellikleri** penceresi. Olmayan bir veri öğesi önbellek, bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable>, belgede önbelleğe alınmasını ölçütleri karşıladığından emin olun. Daha fazla bilgi için [veriyi önbelleğe alma](../vsto/caching-data.md).
+ Veri öğesi kodunuzda bildirildiği sırada veya bir <xref:System.Data.DataSet>kullanıyorsanız, **Özellikler** penceresinde bir özelliği ayarlayarak önbelleğe alınacak bir veri öğesini işaretleyebilirsiniz. <xref:System.Data.DataSet> veya <xref:System.Data.DataTable>olmayan bir veri öğesini önbelleğe alırsanız, belgede önbelleğe alma ölçütlerini karşıladığından emin olun. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
 
 > [!NOTE]
-> Olarak işaretlenmiş bir Visual Basic kullanılarak oluşturulan veri kümelerini **önbelleğe alınan** ve **WithEvents** (gelen sürüklediğiniz veri kümeleri dahil olmak üzere **veri kaynakları** penceresi veya **Araç kutusu** sahip **CacheInDocument** özelliğini **True**) önbelleğinde adları alt çizgi öneklerine sahiptir. Örneğin, bir veri kümesi oluşturun ve adlandırın **müşteriler**, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> ad **_Customers** önbelleğinde. Kullanırken <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> önbelleğe alınan bu öğeye erişmek için belirtmelisiniz **_Customers** yerine **müşteriler**.
+> **Önbelleğe alınmış** ve **WithEvents** olarak işaretlenen Visual Basic kullanılarak oluşturulan veri kümeleri ( **veri kaynakları** penceresinden veya **CacheInDocument** özelliği true olarak ayarlanan **araç kutusundan** sürüklenen veri kümeleri dahil)) önbellekte adlarının önüne bir alt çizgi sahiptir. Örneğin, bir veri kümesi oluşturup **müşterileri**olarak ayarlarsanız, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> adı önbellekteki **müşteriler** olur. Bu önbelleğe alınmış öğeye erişmek için <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> kullandığınızda, **müşteriler**yerine **_müşteriler** belirtmeniz gerekir.
 
-### <a name="to-cache-data-in-the-document-using-code"></a>Kod kullanarak belgede veriyi önbelleğe almak için
+### <a name="to-cache-data-in-the-document-using-code"></a>Kodu kullanarak belgedeki verileri önbelleğe almak için
 
-1. Bir ortak alan veya özellik veri öğesi için projenizdeki ana bilgisayar öğesi sınıfının bir üyesi olarak gibi bildirin `ThisDocumen`Word projesindeki t sınıfı veya `ThisWorkbook` Excel projesinde sınıfı.
+1. Veri öğesi için, bir Word projesinde `ThisDocumen`t sınıfı veya bir Excel projesindeki `ThisWorkbook` sınıfı gibi, projenizdeki bir konak öğesi sınıfının bir üyesi olarak bir ortak alan veya özellik bildirin.
 
-2. Uygulama <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> veri öğesinin belgenin verilerini önbelleğinde depolanan işaretlemek için üye özniteliği. Aşağıdaki örnekte bu öznitelik için bir alan bildirimi için geçerlidir. bir <xref:System.Data.DataSet>.
+2. Veri öğesini belgenin veri önbelleğinde depolanacak şekilde işaretlemek için <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> özniteliğini üyeye uygulayın. Aşağıdaki örnek, bir <xref:System.Data.DataSet>için bu özniteliği bir alan bildirimine uygular.
 
      [!code-csharp[Trin_VstcoreDataExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#11)]
      [!code-vb[Trin_VstcoreDataExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#11)]
 
-3. Veri öğesinin bir örneğini oluşturmak için kod ekleyin ve, varsa, veritabanından yükleyin.
+3. Veri öğesinin bir örneğini oluşturmak için kod ekleyin ve varsa onu veritabanından yükleyin.
 
-     Veri öğesi, yalnızca ilk oluşturulduğunda yüklenir; Bundan sonra önbellek belgeyle kalır ve güncelleştirmek için diğer kod yazmanız gerekir.
+     Veri öğesi yalnızca ilk oluşturulduğunda yüklenir; Bundan sonra, önbellek belgeyle kalır ve güncelleştirmek için başka kod yazmanız gerekir.
 
-### <a name="to-cache-a-dataset-in-the-document-by-using-the-properties-window"></a>Özellikler penceresini kullanarak bir veri kümesi belgedeki önbelleğe almak için
+### <a name="to-cache-a-dataset-in-the-document-by-using-the-properties-window"></a>Özellikler penceresi kullanarak belgedeki bir veri kümesini önbelleğe almak için
 
-1. Örneğin, Visual Studio tasarımcısı araçları kullanarak projenize bir veri kaynağı ekleyerek kullanarak veri kümesini projeye ekleyin **veri kaynakları** penceresi.
+1. Visual Studio tasarımcısında araçları kullanarak veri kümesini projeye ekleyin, örneğin, **veri kaynakları** penceresini kullanarak projenize bir veri kaynağı ekleyin.
 
-2. Henüz yoksa ve örnek Tasarımcısı'nda seçerseniz veri kümesi örneği oluşturun.
+2. Henüz bir tane yoksa veri kümesinin bir örneğini oluşturun ve tasarımcıdaki örneği seçin.
 
-3. İçinde **özellikleri** penceresinde **CacheInDocument** özelliğini **True**.
+3. **Özellikler** penceresinde **CacheInDocument** özelliğini **true**olarak ayarlayın.
 
-     Daha fazla bilgi için [Office projelerinde Özellikler](../vsto/properties-in-office-projects.md).
+     Daha fazla bilgi için bkz. [Office projelerindeki Özellikler](../vsto/properties-in-office-projects.md).
 
-4. İçinde **özellikleri** penceresinde **değiştiriciler** özelliğini **genel** (Bu varsayılan **dahili**).
+4. **Özellikler** penceresinde, **değiştiriciler** özelliğini **Public** (varsayılan olarak **dahili**) olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Verileri önbelleğe](../vsto/caching-data.md)
-- [Nasıl yapılır: Bir Office belgesi bir veri kaynağını programlamayla önbelleğe alma](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
-- [Nasıl yapılır: Bir parola korumalı belgede veriyi önbelleğe alma](../vsto/how-to-cache-data-in-a-password-protected-document.md)
-- [Sunucudaki belgelerde verilere](../vsto/accessing-data-in-documents-on-the-server.md)
-- [Verileri kaydetme](../data-tools/saving-data.md)
+- [Önbellek verileri](../vsto/caching-data.md)
+- [Nasıl yapılır: bir Office belgesinde program aracılığıyla veri kaynağını önbelleğe alma](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
+- [Nasıl yapılır: parola korumalı bir belgedeki verileri önbelleğe alma](../vsto/how-to-cache-data-in-a-password-protected-document.md)
+- [Sunucudaki belgelerdeki verilere erişin](../vsto/accessing-data-in-documents-on-the-server.md)
+- [Verileri kaydetme](../data-tools/save-data-back-to-the-database.md)

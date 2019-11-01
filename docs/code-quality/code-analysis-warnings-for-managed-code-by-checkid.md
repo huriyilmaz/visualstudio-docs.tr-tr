@@ -263,12 +263,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d8700d058c694afbea551e5b117a0e4a0461f2e8
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 2811c905650f215272b650bff955b7264f56d4b5
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806173"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188844"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>CheckId tarafından yönetilen kod için kod analizi uyarıları
 
@@ -276,7 +276,7 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 
 | CheckId | Uyarı | Açıklama |
 |---------| - | - |
-| CA2007 | [CA2007: bir görevi doğrudan bekleme](ca2007-do-not-directly-await-task.md) | Zaman uyumsuz bir yöntem <xref:System.Threading.Tasks.Task> ' i doğrudan [bekler](/dotnet/csharp/language-reference/keywords/await) . Zaman uyumsuz bir yöntem doğrudan bir <xref:System.Threading.Tasks.Task> ' ı bekleliyorsa, devam eden aynı iş parçacığında devamlılık oluşur. Bu davranış, performans açısından maliyetli olabilir ve Kullanıcı arabirimi iş parçacığında kilitlenmeye neden olabilir. Devamlılığını sağlamak için <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> ' i çağırmayı düşünün. |
+| CA2007 | [CA2007: bir görevi doğrudan bekleme](ca2007.md) | Zaman uyumsuz bir yöntem <xref:System.Threading.Tasks.Task> ' i doğrudan [bekler](/dotnet/csharp/language-reference/keywords/await) . Zaman uyumsuz bir yöntem doğrudan bir <xref:System.Threading.Tasks.Task> ' ı bekleliyorsa, devam eden aynı iş parçacığında devamlılık oluşur. Bu davranış, performans açısından maliyetli olabilir ve Kullanıcı arabirimi iş parçacığında kilitlenmeye neden olabilir. Devamlılığını sağlamak için <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> ' i çağırmayı düşünün. |
 | CA1000 | [CA1000: Genel türlerde statik üyeleri belirtme](../code-quality/ca1000.md) | Genel türün statik üyesi çağrıldığında tür bağımsız değişkeni tür için belirlenmelidir. Destek çıkarımı desteklenmeyen genel örnek üyesi çağrıldığında tür bağımsız değişkeni üye için belirlenmelidir. Bu iki durumda tür bağımsız değişkenini belirleyen sözdizimi farklıdır ve kolaylıkla karıştırılır. |
 | CA1001 | [CA1001: Atılabilir alanlara sahip olan türler atılabilir olmalıdır](../code-quality/ca1001.md) | Bir sınıf System.IDisposable tipi örnek alanını derler ve uygular ve sınıf IDisposable'ı uygulamaz. IDisposable alanını derleyen sınıf, yönetilmeyen kaynağı dolaylı yoldan sahiplenir ve IDisposable arayüzünü uygulamalıdır. |
 | CA1002 | [CA1002: Genel listeleri gösterme](../code-quality/ca1002.md) | System. Collections. Generic. List < (\< (T >) >), devralma değil, performans için tasarlanan genel bir koleksiyondur. Bu nedenle, Liste herhangi bir sanal üyeyi içermiyor. Bunun yerine devralma için tasarlanmış genel koleksiyonlar maruz kalmalıdır. |

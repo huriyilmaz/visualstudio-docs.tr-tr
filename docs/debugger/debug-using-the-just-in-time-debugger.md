@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32a3ebd6e9047271a21425ac5b7eaaf715955b61
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: b842fa4ce7c75e061a58d980cefe5648094c2ef7
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911386"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188674"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual Studio 'da tam zamanında hata ayıklayıcı kullanarak hata ayıklayın
 
@@ -104,7 +104,7 @@ Bu örnek, bir uygulama hata oluşturduğunda tam zamanında hata ayıklama işl
 
 Bu örnekte, Visual Studio 'da bir C# [NullReferenceException](/dotnet/api/system.nullreferenceexception)' i oluşturan bir konsol uygulaması oluşturacaksınız.
 
-1. Visual Studio 'da, *ThrowsNullException*adlı C# bir konsol uygulaması (**Dosya** > **Yeni** > **Proje** >  **C# Visual** > **konsol uygulaması**) oluşturun. Visual Studio 'da proje oluşturma hakkında daha fazla bilgi için bkz. [Izlenecek yol: basit bir uygulama oluşturma](/visualstudio/get-started/csharp/tutorial-wpf).
+1. Visual Studio 'da, *ThrowsNullException*adlı C# bir konsol uygulaması (**Dosya** > **Yeni** > **Proje** >  **C# Visual** > **konsol uygulaması**) oluşturun. Visual Studio 'da proje oluşturma hakkında daha fazla bilgi için bkz. [Izlenecek yol: basit bir uygulama oluşturma](../get-started/csharp/tutorial-wpf.md).
 
 1. Proje Visual Studio 'da açıldığında, *program.cs* dosyasını açın. Main () yöntemini bir satırı konsola yazdıran aşağıdaki kodla değiştirin ve ardından bir NullReferenceException şunu oluşturur:
 

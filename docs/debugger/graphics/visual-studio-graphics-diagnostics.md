@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 875c2578d5f8cc1aa68cc624adc0a6e2a1713472
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: e69d88bb5764836d82232cec26606009eaf694d7
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911358"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187741"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama
 Visual Studio*Grafik tanılama* , Direct3D uygulamalarında işleme ve performans sorunlarını kaydetmek ve analiz etmek için bir araç kümesidir. Grafik Tanılama, Windows bilgisayarınızda, Windows cihaz öykünücüsünde veya uzak bir bılgısayarda veya cihazda yerel olarak çalışan uygulamalarda kullanılabilir.
@@ -38,7 +38,7 @@ Visual Studio*Grafik tanılama* , Direct3D uygulamalarında işleme ve performan
 
  [Grafik bilgilerini yakalama](capturing-graphics-information.md) Uygulamanızda bir işleme sorununu incelemek üzere Grafik Tanılama kullanmak için, önce uygulamanın DirectX kullanma hakkında bilgi kaydedersiniz. Kayıt oturumu sırasında, uygulamanız normal şekilde çalıştığı sırada ilgilendiğiniz çerçeveleri *yakalar* (yani, seçersiniz). Yakalamalar, çerçevelerin nasıl işlendiği hakkında ayrıntılı bilgiler içerir. Yakalanan bilgileri, daha sonra incelemek veya takımınızın diğer üyeleriyle paylaşmak için bir grafik günlüğü belgesi olarak kaydedebilirsiniz.
 
- [GPU kullanımı](gpu-usage.md) Uygulamanızı profile Grafik Tanılama kullanmak için GPU kullanımı aracını kullanın. GPU kullanımı, uygulamanızın performans sorunlarına katkıda bulunma gerektirebilecek CPU ve GPU etkinliklerini ilişkilendirmek için CPU kullanımı gibi diğer profil oluşturma araçlarıyla birlikte kullanılabilir.
+ [GPU kullanımı](../../profiling/gpu-usage.md) Uygulamanızı profile Grafik Tanılama kullanmak için GPU kullanımı aracını kullanın. GPU kullanımı, uygulamanızın performans sorunlarına katkıda bulunma gerektirebilecek CPU ve GPU etkinliklerini ilişkilendirmek için CPU kullanımı gibi diğer profil oluşturma araçlarıyla birlikte kullanılabilir.
 
  [Grafik günlük belgesi](graphics-log-document.md) Kayıtlı bir grafik günlüğünün incelemesini başlatmak için, yakalanan bir çerçeveyi (veya belirli bir pikseli) seçmek üzere grafik günlüğü belgesi penceresini kullanın. böylece, bunu etkileyen *olayları* (yanı DirectX API çağrısı) ayrıntılı olarak inceleyebilirsiniz.
 
@@ -66,5 +66,5 @@ Visual Studio*Grafik tanılama* , Direct3D uygulamalarında işleme ve performan
 
 | Başlık | Açıklama |
 | - | - |
-| [Hata ayıklayıcı Özellik turu](/visualstudio/debugger/debugger-feature-tour) | [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]hata ayıklama işlevini tanıtır. |
+| [Hata ayıklayıcı Özellik turu](../debugger-feature-tour.md) | [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]hata ayıklama işlevini tanıtır. |
 | [DirectX grafik ve oyun](/windows/win32/directx) | DirectX grafik teknolojilerini tartışan makaleler sağlar. |

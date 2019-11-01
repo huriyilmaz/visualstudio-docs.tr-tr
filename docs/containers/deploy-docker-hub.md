@@ -8,14 +8,14 @@ ms.devlang: dotnet
 ms.topic: article
 ms.date: 07/23/2019
 ms.author: ghogen
-ms.openlocfilehash: 267e0c1ed1ac3911aad2161f186bf4a482f069b6
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: b033825bbe8facbeae3dcdee6a5b563461921522
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68886405"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188754"
 ---
-# <a name="deploy-to-docker-hub"></a>Docker Hub 'a dağıt
+# <a name="deploy-to-docker-hub"></a>Docker Hub’a dağıtma
 
 Docker Hub, görüntü depolarınız için uygun bir barındırma hizmeti sağlar. Visual Studio 'dan el ile Docker Hub 'ına kolayca dağıtım yapabilirsiniz.
 
@@ -45,11 +45,11 @@ Docker Hub deponuz yoksa, [Docker Hub](https://hub.docker.com/)'da bir tane olu�
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Azure Container Registry dağıtım](vs-azure-tools-docker-hosting-web-apps-in-docker.md)konumundaki adımları izleyerek [Azure Container Registry](/azure/container-registry/) yayımlayın.
+[Azure Container Registry dağıtım](hosting-web-apps-in-docker.md)konumundaki adımları izleyerek [Azure Container Registry](/azure/container-registry/) yayımlayın.
 
 [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops)ile sürekli tümleştirme ve teslım (CI/CD) ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[](deploy-app-service.md)
-[Visual Studio kapsayıcı araçlarına](/visualstudio/containers/)Azure App Service dağıtın.
+[Visual Studio kapsayıcı araçlarına](/visualstudio/containers/) [Azure App Service
+dağıtın](deploy-app-service.md) .

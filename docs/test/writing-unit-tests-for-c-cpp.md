@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 9d69c91af316c755b2dcf4f339d8f47d49096b6a
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 824b928c9f89b98f9026059b824fce84969bf69a
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982907"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189107"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio 'da C/C++ için birim testleri yazma
 
@@ -79,7 +79,7 @@ Test kodunuzun test edilecek projedeki işlevlere erişmesini sağlamak için, t
 
 ### <a name="link-to-object-or-library-files"></a>Nesne veya kitaplık dosyalarına bağlantı
 
-Test kodu test etmek istediğiniz işlevleri dışa aktarmazsa, output. obj veya. lib dosyalarını test projesinin bağımlılıklarına ekleyebilirsiniz. [Testleri nesne veya kitaplık dosyalarına bağlamak için](unit-testing-existing-cpp-applications-with-test-explorer.md)bkz.
+Test kodu test etmek istediğiniz işlevleri dışa aktarmazsa, output. obj veya. lib dosyalarını test projesinin bağımlılıklarına ekleyebilirsiniz. [Testleri nesne veya kitaplık dosyalarına bağlamak için](how-to-use-microsoft-test-framework-for-cpp.md)bkz.
 
 ### <a name="add-include-directives-for-header-files"></a>Üst bilgi dosyaları için #include yönergeleri ekleme
 

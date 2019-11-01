@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: ca48b0510c36bd0d5528cda5d4514f12763ee243
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4a8ea7977f73be2a38a8ac7a417c6794b567e600
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72632854"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189116"
 ---
 # <a name="welcome-to-the-visual-studio-ide--c"></a>Visual Studio IDE 'ye hoş geldiniz | C \#
 
@@ -46,7 +46,7 @@ Aşağıdaki tanıtım makaleleriyle birlikte Visual Studio 'Yu daha ayrıntıl�
 > [Kod düzenleyicisini kullanmayı öğrenin](tutorial-editor.md)
 
 > [!div class="nextstepaction"]
-> [Projeler ve çözümler hakkında bilgi edinin](tutorial-projects-solutions.md)
+> [Projeler ve çözümler hakkında bilgi edinin](../tutorial-projects-solutions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

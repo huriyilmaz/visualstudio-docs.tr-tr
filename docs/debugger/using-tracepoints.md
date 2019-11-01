@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklayıcıda izleme noktalarını kullanma | Microsoft Docs
-ms.date: 9/17/2019
+title: İzleme noktalarıyla bilgileri günlüğe kaydet | Microsoft Docs
+ms.date: 10/28/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - tracepoints, about tracepoints
@@ -9,16 +9,16 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 263657213f1720eaca7a0462bb31585adaacf9bb
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: fcc9f01315d3783af1a1f124785cd74fafb215bf
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72516397"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187304"
 ---
-# <a name="use-tracepoints-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında izlenesel noktaları kullanma
+# <a name="log-info-to-the-output-window-using-tracepoints-in-visual-studio"></a>Visual Studio 'da izleme noktalarını kullanarak çıkış penceresinde bilgi günlük kaydı
 
-İzleneme noktaları, kodunuzu değiştirmeden veya durdurmadan, yapılandırılabilir koşullar altındaki çıkış penceresine bilgi günlüğizin verir. Bu özellik hem yönetilen hem de yerel kod için, JavaScript ve C#gibi çeşitli diller için desteklenir.
+İzleneme noktaları, kodunuzu değiştirmeden veya durdurmadan, yapılandırılabilir koşullar altındaki çıkış penceresine bilgi günlüğizin verir. Bu özellik hem yönetilen diller (C#, Visual Basic, F#) hem de yerel kod Için ve JavaScript ve Python gibi diller için desteklenir.
 
 ## <a name="let39s-take-an-example"></a>&#39;Bir örnek alalım
 
@@ -75,9 +75,9 @@ Daha belirli bilgileri göstermek için özel anahtar sözcükler de kullanabili
 | $CALLER | İşlev adı çağırma |
 | $CALLSTACK | Çağrı yığını |
 | $FUNCTION | Geçerli işlev adı |
-| $PID | İşlem kimliği |
+| $PID | İşlem KIMLIĞI |
 | $PNAME | İşlem adı |
-| $TID | İş parçacığı kimliği |
+| $TID | İş parçacığı KIMLIĞI |
 | $TNAME   | İş parçacığı adı |
 | $TICK | Değer sayısı (Windows GetTickCount 'tan) |
 
@@ -92,7 +92,7 @@ Koşullu ifadeler için, izleme noktasını, belirli bir koşul doğru olduğund
 
 ![Koşullu Ifade doğru](../debugger/media/conditionalexpressionistrue.png "Koşullu Ifade doğru")
 
-@No__t_0 döngüsünün yinelemesi değiştiğinde sayacın değerini yazdırmak isterseniz, ileti metin kutusuna **ne zaman değiştirildi** seçeneğini belirleyin ve `i` yazın.
+`for` döngüsünün yinelemesi değiştiğinde sayacın değerini yazdırmak isterseniz, ileti metin kutusuna **ne zaman değiştirildi** seçeneğini belirleyin ve `i` yazın.
 
 ![Değiştirildiğinde koşullu Ifade](../debugger/media/conditionalexpressionwhenchanged.png "Değiştirildiğinde koşullu Ifade")
 
@@ -111,7 +111,7 @@ Koşulları ayarlarken kullanabileceğiniz geçerli ifadelere daha kapsamlı bir
 ![Koşullu Ifade Isabet sayısı](../debugger/media/conditionalexpressionhitcount.png "Koşullu Ifade Isabet sayısı")
 
 ### <a name="filter"></a>Filtrele
-Filtre koşulu için, hangi cihazların, işlemlerin veya iş parçacıklarının çıkışın gösterildiğini belirtin.
+Bir filtre koşulu için, hangi cihaz, işlem veya iş parçacığı çıktısının gösterildiğini belirtin.
 
 ![Koşullu Ifade filtresi](../debugger/media/conditionalexpressionfilter.png "Koşullu Ifade filtresi")
 
@@ -123,13 +123,13 @@ Filtre ifadeleri listesi:
 - ThreadID = değer
 - ThreadName = "ad"
 
-Dizeleri (adlar gibi) çift tırnak içine alın. Değerler tırnak işareti olmadan girilebilir. @No__t_0 (`AND`), `||` (`OR`), `!` (`NOT`) ve parantezleri kullanarak yan tümceleri birleştirebilirsiniz.
+Dizeleri (adlar gibi) çift tırnak içine alın. Değerler tırnak işareti olmadan girilebilir. `&` (`AND`), `||` (`OR`), `!` (`NOT`) ve parantezleri kullanarak yan tümceleri birleştirebilirsiniz.
 
 ## <a name="considerations"></a>Dikkat Edilecekler
 
 İzleme noktaları, temizleyici ve daha sorunsuz bir deneyimde hata ayıklamaya yönelik olarak düşünülirken, bunları kullanmaya ne zaman geldiğini bilmeniz gereken bazı noktalar vardır.
 
-Bazen bir nesnenin bir özelliğini veya özniteliğini incelemenize sonra değeri değişebilir. Bu, izleme noktası özelliğinin kendisinden kaynaklanan bir hata değildir, ancak nesneleri incelemek için izleme noktaları kullanmanın bu yanlışlıkla yapılan değişikliklerden kaçının.
+Bazen bir nesnenin bir özelliğini veya özniteliğini incelemenize sonra değeri değişebilir. İnceleme sırasında değer değişirse, izleme noktası özelliğinin kendisinden kaynaklanan bir hata değildir. Ancak, nesneleri denetlemek için izlenenoktaları kullanmak bu yanlışlıkla yapılan değişikliklerden kaçının.
 
 Deyim **eylem** ileti kutusunda değerlendirilme yöntemi, geliştirme için kullanmakta olduğunuz dilden farklı olabilir. Örneğin, bir dizeyi çıkarmak için normalde `Debug.WriteLine()` veya `console.log()` kullanırken bile bir iletiyi tırnak içine almanız gerekmez. Ayrıca, çıkış ifadelerine küme ayracı sözdizimi (`{ }`), geliştirme dilinizde değer çıktısı için olan kurala göre de farklı olabilir. (Ancak, küme ayraçları içindeki içerikler (`{ }`), hala geliştirme dili sözdizimi kullanılarak yazılmalıdır.
 

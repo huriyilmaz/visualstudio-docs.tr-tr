@@ -10,12 +10,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4302f463d93776d17be0251e6194375c15adc19
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a62fd7a8ab0673d6a6020fb7d73f04488ff23485
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72718761"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188849"
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>Özel Düzenleyicilerde Söz Dizimi Renklendirmesi
 Temel düzenleyici dahil Visual Studio ortamı SDK düzenleyicileri, belirli sözdizimsel öğeleri tanımlamak ve belirli bir belge görünümü için belirtilen renklerle görüntülemek için dil hizmetlerini kullanın.
@@ -52,7 +52,7 @@ Temel düzenleyici dahil Visual Studio ortamı SDK düzenleyicileri, belirli sö
 3. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> tarafından döndürülen renklendirme bilgilerini kullanarak metnini yeniden boyamak ve görüntüleyin.
 
 > [!NOTE]
-> Bir dil hizmetinin Colorizer 'ı kullanmanın yanı sıra, VSPackage, genel amaçlı Visual Studio ortamı SDK 'Sı metin renklendirme mekanizmasını kullanmayı seçebilir. Bu mekanizma hakkında daha fazla bilgi için bkz. [yazı tiplerini ve renkleri kullanma](../extensibility/using-fonts-and-colors.md).
+> Bir dil hizmetinin Colorizer 'ı kullanmanın yanı sıra, VSPackage, genel amaçlı Visual Studio ortamı SDK 'Sı metin renklendirme mekanizmasını kullanmayı seçebilir. Bu mekanizma hakkında daha fazla bilgi için bkz. [yazı tiplerini ve renkleri kullanma](/visualstudio/extensibility/using-fonts-and-colors?view=vs-2015).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
