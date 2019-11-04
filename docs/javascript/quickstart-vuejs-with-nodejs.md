@@ -1,11 +1,10 @@
 ---
 title: 'Hızlı başlangıç: ilk Vue. js uygulamanızı oluşturma'
 description: Bu hızlı başlangıçta, Visual Studio için Node.js Araçları kullanarak Visual Studio 'da bir Vue. js uygulaması oluşturacaksınız
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: ''
+ms.date: 10/31/2019
 ms.topic: quickstart
 ms.devlang: javascript
-ms.assetid: b0e4ebed-1a01-41ef-aad1-4d8465ce5322
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
@@ -13,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ba1f403cd722b4d3dd1860c4a8b135c87b80bb4d
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 5f7b877d825a573b935a9bf0f2c907ec2ce6f808
+ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189475"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73428766"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>Hızlı başlangıç: ilk Vue. js uygulamanızı oluşturmak için Visual Studio 'Yu kullanma
 
@@ -104,9 +103,13 @@ Visual Studio tümleşik geliştirme ortamına (IDE) bu 5-10 dakikalık bir giri
 
 1. (Yalnızca TypeScript Projesi) Visual Studio 'da **derleme** > **Temizleme çözümü**' ni seçin.
 
+    ::: moniker range=">=vs-2019"
+    Visual Studio 2019 ' de bulunan TypeScript şablonunda, bu adımı atlayın.
+    ::: moniker-end
+
 1. Sonra, projeyi derlemek için **build** > **Build Solution** öğesini seçin. Derleme sonuçlarını görmek için **Çıkış** penceresini kontrol edin ve **çıktıyı göster** listesinden **Oluştur** ' u seçin.
 
-    Vue. js proje şablonu, derleme sonrası olayını yapılandırarak `build` NPM betiğini kullanır. Bu ayarı değiştirmek istiyorsanız, proje dosyasını ( *\<projectname\>. njsproj*) Windows Gezgini 'nden açın ve şu kod satırını bulun:
+    JavaScript Vue. js proje şablonu (ve TypeScript şablonunun eski sürümleri) derleme sonrası olayını yapılandırarak `build` NPM betiğini kullanır. Bu ayarı değiştirmek istiyorsanız, proje dosyasını ( *\<projectname\>. njsproj*) Windows Gezgini 'nden açın ve şu kod satırını bulun:
 
     ```xml
     <PostBuildEvent>npm run build</PostBuildEvent>
@@ -119,6 +122,8 @@ Visual Studio tümleşik geliştirme ortamına (IDE) bu 5-10 dakikalık bir giri
    Konsolunda, *geliştirme sunucusunu Başlatan*bir ileti görürsünüz.
 
    Ardından, uygulama bir tarayıcıda açılır.
+   
+   Çalışan uygulamayı görmüyorsanız, sayfayı yenileyin.
 
    ![Tarayıcıda çalışan Vue. js uygulaması](../javascript/media/vuejs-running-app.png)
 
