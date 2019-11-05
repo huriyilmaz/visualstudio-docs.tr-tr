@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac04f7ef5d7ad445bec470b3d019418a3bec1f7b
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 4ceea00a3fa77a9c1106f24f28ac1d5890437b41
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188888"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568962"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio için renkler ve stil oluşturma
 
@@ -269,7 +269,7 @@ protected override void Dispose(bool disposing)
 
 ## <a name="BKMK_ChoosingHighContrastColors"></a>Yüksek Karşıtlık renkleri seçme
 
-### <a name="overview"></a>Genel bakış
+### <a name="overview"></a>Genel Bakış
 
 Windows, metnin, arka planların ve görüntülerin renk kontrastını artıran birkaç yüksek karşıtlıklı sistem düzeyi teması kullanır ve öğelerin ekranda daha belirgin görünmesini sağlama. Erişilebilirlik nedenleriyle, kullanıcılar Yüksek Karşıtlık temaya geçiş yaparken Visual Studio Interface öğelerinin doğru bir şekilde yanıt vermesi önemlidir.
 
@@ -332,7 +332,7 @@ Birçok ortak kullanıcı arabirimi öğesinin tanımlı Yüksek Karşıtlık re
 
 ## <a name="BKMK_ExposingColorsForEndUsers"></a>Son kullanıcılar için renkleri gösterme
 
-### <a name="overview"></a>Genel bakış
+### <a name="overview"></a>Genel Bakış
 
 Bazen, bir kod Düzenleyicisi veya tasarım yüzeyi oluştururken olduğu gibi son kullanıcının Kullanıcı arabirimini özelleştirmesine izin vermek isteyebilirsiniz. Bunu yapmanın en yaygın yolu, **araçlar &gt; seçenekleri** iletişim kutusunu kullanmaktır. Özel denetimler gerektiren çok özelleştirilmiş bir kullanıcı arabirimi yoksa, özelleştirmeyi kullanmanın en kolay yolu, iletişim kutusunun **ortam** bölümündeki **yazı tipi ve renkler** sayfasıdır. Özelleştirme için sergilek ettiğiniz her öğe için, Kullanıcı ön plan rengini, arka plan rengini veya her ikisini de değiştirmeyi seçebilir.
 
@@ -340,7 +340,7 @@ Bazen, bir kod Düzenleyicisi veya tasarım yüzeyi oluştururken olduğu gibi s
 
 VSPackage, yazı tiplerini ve renkleri özel kategoriler aracılığıyla denetleyebilir ve yazı tipleri ve renkler Özellik sayfasında öğeleri görüntüler. Bu mekanizmayı kullanırken VSPackages [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) arabirimini ve ilişkili arabirimlerini uygulamalıdır.
 
-Bu mekanizma, var olan tüm görüntüleme öğelerini ve bunları içeren kategorileri değiştirmek için kullanılabilir. Ancak, metin düzenleyici kategorisini veya görüntüleme öğelerini değiştirmek için kullanılmamalıdır. Metin düzenleyici kategorisi hakkında daha fazla bilgi için bkz. [yazı tipi ve renge genel bakış](../font-and-color-overview.md).
+Bu mekanizma, var olan tüm görüntüleme öğelerini ve bunları içeren kategorileri değiştirmek için kullanılabilir. Ancak, metin düzenleyici kategorisini veya görüntüleme öğelerini değiştirmek için kullanılmamalıdır. Metin düzenleyici kategorisi hakkında daha fazla bilgi için bkz. [yazı tipi ve renge genel bakış](/visualstudio/extensibility/font-and-color-overview?view=vs-2015).
 
 Özel kategoriler uygulamak veya öğeleri göstermek için bir VSPackage gerekir:
 
@@ -358,7 +358,7 @@ Bu mekanizma, var olan tüm görüntüleme öğelerini ve bunları içeren kateg
 
 Kayıt defterini iki değerle doldurun:
 
-| Name | Tür | Veri | Açıklama |
+| Ad | Tür | Veri | Açıklama |
 | --- | --- | --- | --- |
 | Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulmuş bir GUID |
 | Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID 'SI |
@@ -371,7 +371,7 @@ Kayıt defterini iki değerle doldurun:
 
 Kayıt defterini iki değerle doldurun:
 
-| Name | Tür | Veri | Açıklama |
+| Ad | Tür | Veri | Açıklama |
 |--- | --- | --- | --- |
 | Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulmuş bir GUID |
 | Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID 'SI |

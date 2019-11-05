@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08d9ee33d49985fed8e8c0180fa652aed39b25d9
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 7a6cb0d70566eaabb2ba37cb209041e03684c958
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73186811"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568872"
 ---
 # <a name="create-custom-editors-and-designers"></a>Özel düzenleyiciler ve tasarımcılar oluşturma
 
@@ -59,7 +59,7 @@ Visual Studio çekirdek Düzenleyicisi hakkında daha fazla bilgi için bkz. [d�
 
 - Düzenleyicinizde ActiveX denetimleri barındırmı gerekiyor?
 
-   Düzenleyiciniz ActiveX denetimleri barındırıyorsa, yerinde [etkinleştirme](../extensibility/in-place-activation.md)' de açıklandığı gibi bir yerinde etkinleştirme Düzenleyicisi uygulayın. ActiveX denetimlerini barındırmadığından, Basitleştirilmiş bir katıştırma düzenleyicisi kullanın veya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] varsayılan düzenleyiciyi özelleştirin.
+   Düzenleyiciniz ActiveX denetimleri barındırıyorsa, yerinde [etkinleştirme](/visualstudio/misc/in-place-activation?view=vs-2015)' de açıklandığı gibi bir yerinde etkinleştirme Düzenleyicisi uygulayın. ActiveX denetimlerini barındırmadığından, Basitleştirilmiş bir katıştırma düzenleyicisi kullanın veya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] varsayılan düzenleyiciyi özelleştirin.
 
 - Düzenleyiciniz birden fazla görünümü destekliyor mu? Düzenleyicinizdeki görünümlerin varsayılan düzenleyiciyle aynı anda görünür olmasını istiyorsanız birden çok görünümü desteklemeniz gerekir.
 

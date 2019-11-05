@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 12f66658cd8069f58355a96b2c3b3031a4cb6808
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 75bdfe55d516deb34872007a9461a286b4d742e0
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187569"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568910"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio 'da UWP uygulamalarında HTML ve CSS hatalarını ayıklama
 
@@ -49,7 +49,7 @@ DOM Gezgini 'ni kullanarak şunları yapabilirsiniz:
   Uygulamalarda hata ayıklarken, genellikle DOM Gezgini 'nde öğe seçmeniz gerekir. Bir öğe seçtiğinizde, DOM Gezgini 'nin sağ tarafındaki sekmelerde görüntülenen değerler, DOM Gezgini 'nde seçilen öğeyi yansıtacak şekilde otomatik olarak güncelleşilir. Sekmeler şunlardır: **Stiller**, **hesaplanan**, **Düzen**. UWP uygulamaları ayrıca **olayları** ve **değişiklik** sekmelerini destekler. Öğe seçme hakkında daha fazla bilgi için bkz. [öğeleri seçme](#SelectingElements).
 
 > [!TIP]
-> DOM Gezgini penceresi kapalıysa, yeniden açmak için**Windows**  > **DOM Gezgini** > **Hata Ayıkla** ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
+> DOM Gezgini penceresi kapalıysa, yeniden açmak için **Windows** > **DOM Gezgini**>**Hata Ayıkla** ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
 
 Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli olarak hata ayıklama işlemini öğreneceksiniz. `FlipView` denetimi kullanan ve sonra hata ayıkladığımız bir uygulama oluşturacağız. Uygulama birkaç hata içeriyor.
 
@@ -58,11 +58,11 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
 #### <a name="to-debug-by-inspecting-the-live-dom"></a>Canlı DOM 'ı inceleyerek hata ayıklamak için
 
-1. **Yeni proje** >  **Dosya** ' yı seçerek Visual Studio 'da yeni bir çözüm oluşturun.
+1. **Yeni proje** > **Dosya** ' yı seçerek Visual Studio 'da yeni bir çözüm oluşturun.
 
-2. **Windows evrensel** >  **JavaScript** ' i seçin ve ardından **WinJS uygulaması**' nı seçin.
+2. **Windows evrensel** > **JavaScript** ' i seçin ve ardından **WinJS uygulaması**' nı seçin.
 
-3. Proje için `FlipViewApp` gibi bir ad yazın ve uygulamayı oluşturmak için **Tamam** ' ı seçin.
+3. Proje için `FlipViewApp`gibi bir ad yazın ve uygulamayı oluşturmak için **Tamam** ' ı seçin.
 
 4. İndex. html ' nin BODY öğesinde şu kodu ekleyin:
 
@@ -149,7 +149,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
     ![Hata ayıklama hedef listesini seçin](../debugger/media/js_select_target.png "JS_Select_Target")
 
-8. Hata**ayıklamayı başlatmak** >  **Hata Ayıkla** ' yı seçin veya F5 ' e basarak uygulamanızı hata ayıklama modunda çalıştırın.
+8. Hata **ayıklamayı başlatmak** > **Hata Ayıkla** ' yı seçin veya F5 ' e basarak uygulamanızı hata ayıklama modunda çalıştırın.
 
     Bu, uygulamayı çalıştırır, ancak stil içinde birkaç hata olduğu için çoğunlukla boş bir ekran görürsünüz. İlk `FlipView` görüntüsü, ekranın ortasında küçük bir karede görünür.
 
@@ -158,7 +158,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
     > [!TIP]
     > Visual Studio ile çalışan uygulama arasında geçiş yapmak için Alt + Tab veya F12 tuşlarına basabilirsiniz.
 
-10. DOM Gezgini penceresinde, KIMLIĞI `"fView"` olan bölüm için DIV öğesini seçin. Doğru DIV öğesini görüntülemek ve seçmek için ok tuşlarını kullanın. (Sağ ok tuşu, bir öğenin alt öğelerini görüntülemenize olanak sağlar.)
+10. DOM Gezgini penceresinde, KIMLIĞI `"fView"`olan bölüm için DIV öğesini seçin. Doğru DIV öğesini görüntülemek ve seçmek için ok tuşlarını kullanın. (Sağ ok tuşu, bir öğenin alt öğelerini görüntülemenize olanak sağlar.)
 
     ![DOM Gezgini](../debugger/media/js_dom_explorer.png "JS_DOM_Explorer")
 
@@ -179,10 +179,10 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
 13. Ana DOM Gezgini penceresinde, `fView` DIV öğesinin yükseklik ve genişlik için satır içi stile çift tıklayın. Artık değerleri burada düzenleyebilirsiniz. Bu senaryoda, bunları tamamen kaldırmak istiyoruz.
 
-14. Ana pencerede `width: 100px;height: 100px;` ' a çift tıklayın, **Delete** tuşuna basın ve ardından **ENTER**tuşuna basın. ENTER tuşuna bastıktan sonra, hata ayıklama oturumunuzu durdurmadığınız halde yeni değerler uygulamaya hemen yansıtılır.
+14. Ana pencerede `width: 100px;height: 100px;`' a çift tıklayın, **Delete** tuşuna basın ve ardından **ENTER**tuşuna basın. ENTER tuşuna bastıktan sonra, hata ayıklama oturumunuzu durdurmadığınız halde yeni değerler uygulamaya hemen yansıtılır.
 
     > [!IMPORTANT]
-    > DOM Gezgini penceresinde öznitelikleri güncelleştirebilmeniz için, **Stiller**, **hesaplanan**ve **Düzen** sekmelerinde görüntülenen değerleri de güncelleştirebilirsiniz. Daha fazla bilgi için bkz. DOM Gezginini kullanarak [CSS stillerinde hata ayıklama](../debugger/debug-css-styles-using-dom-explorer.md) ve [DOM Gezgini kullanarak hata ayıklama düzeni](quickstart-debug-html-and-css.md).
+    > DOM Gezgini penceresinde öznitelikleri güncelleştirebilmeniz için, **Stiller**, **hesaplanan**ve **Düzen** sekmelerinde görüntülenen değerleri de güncelleştirebilirsiniz.
 
 15. Uygulamayı seçerek veya alt + TAB tuşlarını kullanarak uygulamaya geçiş yapın.
 
@@ -255,6 +255,7 @@ Bir uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 > Öğelerin üzerine gelindiğinde vurgulanması yalnızca Windows Phone öykünücüsünde kısmen desteklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Studio’da uygulamaların hatalarını ayıklama](debugging-windows-store-and-windows-universal-apps.md)
 - [Uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [WebView denetiminde hata ayıklama](../debugger/debug-a-webview-control.md)

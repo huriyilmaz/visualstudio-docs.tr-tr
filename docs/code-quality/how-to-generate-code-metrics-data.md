@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37f208421079f77cadaf85556e00a8f8548c6182
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 55f9904c95be45c7f293355340c814faafb5de2b
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188796"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568848"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: kod ölçümleri verileri oluşturma
 
@@ -24,7 +24,7 @@ Kod ölçümleri verilerini üç şekilde oluşturabilirsiniz:
 
 - [FxCop çözümleyicileri](#fxcop-analyzers-code-metrics-rules) yükleyerek ve içerdiği dört kod ölçümü (bakım) kurallarını etkinleştirerek.
 
-- Visual Studio içindeki [ **kod ölçümlerini  >  hesapla** ](#calculate-code-metrics-menu-command) menü komutunu seçerek.
+- Visual Studio içindeki [ **kod ölçümlerini > hesapla** ](#calculate-code-metrics-menu-command) menü komutunu seçerek.
 
 - Ve Visual Basic projeler için C# [komut satırından](#command-line-code-metrics) .
 
@@ -35,7 +35,7 @@ Kod ölçümleri verilerini üç şekilde oluşturabilirsiniz:
 - [CA1501](ca1501-avoid-excessive-inheritance.md)
 - [CA1502](ca1502.md)
 - [CA1505](ca1505-avoid-unmaintainable-code.md)
-- [CA1506](ca1506-avoid-excessive-class-coupling.md)
+- [CA1506](ca1506.md)
 
 Bu kurallar varsayılan olarak devre dışıdır, ancak bunları [**Çözüm Gezgini**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) veya bir [kural kümesi](using-rule-sets-to-group-code-analysis-rules.md) dosyasında etkinleştirebilirsiniz. Örneğin, kural CA1502 bir uyarı olarak etkinleştirmek için,. RuleSet dosyanız aşağıdaki girişi içerir:
 
@@ -72,13 +72,13 @@ FxCop çözümleyicileri paketindeki kod ölçümü kurallarının tetikleneceğ
 
 ## <a name="calculate-code-metrics-menu-command"></a>Kod ölçümlerini hesapla menü komutu
 
-**Kod ölçümlerini hesapla** menüsünü **Çözümle**  > , IDE 'deki açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
+**Kod ölçümlerini hesapla** menüsünü **Çözümle** > , IDE 'deki açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>Tüm çözüm için kod ölçümleri sonuçları oluşturma
 
 Tüm çözüm için aşağıdaki yollarla kod ölçümleri sonuçları oluşturabilirsiniz:
 
-- Menü çubuğundan **çözümle**  > **kod ölçümlerini  >  hesapla** ' yı seçin.
+- Menü çubuğundan **çözümle** > **kod ölçümlerini > hesapla** ' yı seçin.
 
 - **Çözüm Gezgini**, çözüme sağ tıklayın ve ardından **kod ölçümlerini hesapla**' yı seçin.
 
@@ -90,7 +90,7 @@ Sonuçlar oluşturulur ve **Kod ölçümleri sonuçları** penceresi görüntül
 
 1. **Çözüm Gezgini**, bir veya daha fazla proje seçin.
 
-1. **Seçili proje (ler) için**, menü çubuğundan **analiz**  > **kod ölçümlerini hesapla  >  hesapla** ' yı seçin.
+1. **Seçili proje (ler) için**, menü çubuğundan **analiz** > **kod ölçümlerini hesapla > hesapla** ' yı seçin.
 
 Sonuçlar oluşturulur ve **Kod ölçümleri sonuçları** penceresi görüntülenir. Sonuç ayrıntılarını görüntülemek için **hiyerarşideki**ağacı genişletin.
 

@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 19a6149e60e61cad347dda9bf8b2a75be7b1885d
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: b60e5df4d94c290ca8aa7bf56471b5fed6c1879a
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188740"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568901"
 ---
 # <a name="container-tools-in-visual-studio"></a>Visual Studio’da Kapsayıcı Araçları
 
@@ -19,7 +19,7 @@ Kapsayıcılarla geliştirmeye yönelik Visual Studio 'ya dahil olan araçların
 
 ::: moniker range="vs-2017"
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web geliştirme**, **Azure Araçları** iş yükü ve/veya **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
@@ -40,7 +40,7 @@ Visual Studio 2017 ile Docker Compose ve Service Fabric kapsayıcı düzenleme h
 
 ::: moniker range=">=vs-2019"
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web geliştirme**, **Azure Araçları** iş yükü ve/veya **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -148,6 +148,6 @@ Kubernetes için bkz. [Azure Kubernetes hizmetine Docker kapsayıcı uygulaması
 
 Hizmetler uygulamasıyla ve kapsayıcılarla çalışma için Visual Studio araçlarının kullanımına ilişkin daha fazla bilgi için aşağıdaki makaleleri okuyun:
 
-[Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama](vs-azure-tools-docker-edit-and-refresh.md)
+[Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama](edit-and-refresh.md)
 
 [Visual Studio 'Yu kullanarak bir kapsayıcı kayıt defterine ASP.NET kapsayıcısını dağıtma](hosting-web-apps-in-docker.md)
