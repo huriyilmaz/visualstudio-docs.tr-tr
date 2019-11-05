@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: dd34d0afa9f1b83a3795a9bccd0578d88c585ffa
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: c5f3c4a0a2acdf73aae96c5cb5629252e712da64
+ms.sourcegitcommit: ee9c55616a22addc89cf1cf1942bf371d73e2e11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73569026"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618116"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Öğretici: Visual Studio 'da Node. js ve tepki verme uygulaması oluşturma
 
@@ -55,18 +55,18 @@ JSX, genellikle UI öğelerini tanımlamaya tepki vererek kullanılan bir JavaSc
 
 Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde paketler. Ayrıca diğer kaynakları ve varlıkları dönüştürebilir veya paketleyebilir. Genellikle Babel veya TypeScript gibi bir derleyicinin basit JavaScript 'e derleyin JSX veya TypeScript kodunu belirtmek için kullanılır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 * Visual Studio yüklü ve Node. js geliştirme iş yüküne sahip olmanız gerekir.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
+    Visual Studio 2019 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/)  page gidin ve ücretsiz olarak yüklemek için bu dosyayı açın.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleyebilirsiniz.
+    Visual Studio 2017 ' ü henüz yüklemediyseniz [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/)  page gidin ve ücretsiz olarak yüklemek için bu dosyayı açın.
     ::: moniker-end
 
-    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan **Araçlar ve Özellikler al** > **Araçlar** ' a gidin. **Node. js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa, Visual Studio Yükleyicisi açılan**Araçlar ve Özellikler al** >  **Araçlar** ' a gidin. **Node. js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
     ![VS yükleyicisinde Node. js iş yükü](../ide/media/quickstart-nodejs-workload.png)
 
@@ -88,7 +88,7 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
     Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node. js**yazın ve **boş Node. js web uygulaması** (JavaScript) öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **dosya** > **Yeni** > **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **JavaScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede **boş Node. js web uygulaması**' nı seçin, **Nodejswebappblank**adını yazın ve ardından **Tamam**' ı seçin.
+    Üstteki menü çubuğundan **dosya**  > **Yeni**  > **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **JavaScript**' i genişletin ve **Node. js**' yi seçin. Orta bölmede **boş Node. js web uygulaması**' nı seçin, **Nodejswebappblank**adını yazın ve ardından **Tamam**' ı seçin.
     ::: moniker-end
     **Boş Node. js web uygulaması** proje şablonunu görmüyorsanız **Node. js geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
 
@@ -172,7 +172,7 @@ Bu adımlarda, projenize dört yeni dosya eklersiniz.
 
 Bu basit uygulama için, proje köküne yeni proje dosyaları eklersiniz. (Çoğu uygulamalarda, genellikle dosyaları alt klasörlere ekler ve göreli yol başvurularını uygun şekilde ayarlayabilirsiniz.)
 
-1. Çözüm Gezgini ' de proje **Nodejswebappblank** öğesine sağ tıklayın ve > **Yeni öğe** **Ekle** ' yi seçin.
+1. Çözüm Gezgini ' de proje **Nodejswebappblank** öğesine sağ tıklayın ve  > **Yeni öğe** **Ekle** ' yi seçin.
 
 1. **Yeni öğe Ekle** Iletişim kutusunda **TypeScript JSX dosyası**' nı seçin, *app. TSX*adını yazın ve **Ekle** veya **Tamam**' ı seçin.
 
@@ -310,7 +310,7 @@ Bu basit uygulama için, proje köküne yeni proje dosyaları eklersiniz. (Çoğ
 
     Yukarıdaki çıkış yerine herhangi bir hata görürseniz, uygulamanızın çalışması için önce bu hataları çözmeniz gerekir. NPM paket sürümleriniz Bu öğreticide gösterilen sürümlerden farklıysa, bu bir hata kaynağı olabilir. Hataları gidermenin bir yolu, önceki adımlarda gösterilen sürümlerin aynısını kullanmaktır. Ayrıca, bu paket sürümlerinden bir veya daha fazlası kullanım dışı bırakılmış ve bir hatayla sonuçlanmışsa, hataları onarmak için daha yeni bir sürüm yüklemeniz gerekebilir. NPM paket sürümlerini denetlemek için *Package. JSON* kullanma hakkında daha fazla bilgi için bkz. [Package. JSON Configuration](../javascript/configure-packages-with-package-json.md).
 
-1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve > **var olan klasörü** **Ekle** ' yi seçin, sonra da *Dist* klasörünü seçip **Klasör Seç**' i seçin.
+1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve  > **var olan klasörü** **Ekle** ' yi seçin, sonra da *Dist* klasörünü seçip **Klasör Seç**' i seçin.
 
     Visual Studio, *App-Bundle. js* ve *App-Bundle. js. Map*içeren proje için *Dist* klasörünü ekler.
 
@@ -352,7 +352,7 @@ Visual Studio 2019 ' den başlayarak bir derleme betiği gereklidir. Transpiling
     Makinenizde Chrome varsa, ancak bir seçenek olarak görünmüyorsa **Web tarayıcısı (BrowserName)** hata ayıklama hedefi açılır listesinden **Google Chrome** > seçin ve varsayılan tarayıcı hedefi olarak **Chrome** ' ı seçin.
     ::: moniker-end
 
-1. Uygulamayı çalıştırmak için **F5** tuşuna**basın (hata ayıklama** > **başlangıç hata ayıklaması**) veya yeşil ok düğmesi.
+1. Uygulamayı çalıştırmak için **F5** tuşuna**basın (hata ayıklama**  > **başlangıç hata ayıklaması**) veya yeşil ok düğmesi.
 
     Hata ayıklayıcının dinlediği bağlantı noktasını gösteren bir Node. js konsol penceresi açılır.
 
@@ -372,7 +372,7 @@ Visual Studio 2019 ' den başlayarak bir derleme betiği gereklidir. Transpiling
 
     Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu askıya alması gerektiğini gösterir; böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
 
-1. Uygulamayı çalıştırmak için **F5** tuşuna basın (**hata** ayıklama > hata **ayıklamayı Başlat**).
+1. Uygulamayı çalıştırmak için **F5** tuşuna basın (**hata** ayıklama  >  hata**ayıklamayı Başlat**).
 
     Hata ayıklayıcı ayarladığınız kesme noktasında duraklatılır (geçerli ifade sarı olarak işaretlenir). Artık, şu anda kapsamda olan değişkenlerin üzerine giderek, **Yereller** ve **izleme** pencereleri gibi hata ayıklayıcı pencereleri kullanarak uygulamanızın durumunu inceleyebilirsiniz.
 
@@ -395,7 +395,11 @@ Bu senaryo için Chrome ' ı kullanın.
 
 1. Hedef tarayıcı için tüm pencereleri kapatın.
 
-   Diğer tarayıcı örnekleri, hata ayıklayıcının iliştirmesini engelleyebilir.
+   Diğer tarayıcı örnekleri tarayıcının hata ayıklama etkinken açılmasını önleyebilir. (Tarayıcı uzantıları çalışıyor olabilir ve tam hata ayıklama modunu engelleyebilir, bu nedenle beklenmedik Chrome örneklerini bulmak için Görev Yöneticisi 'Ni açmanız gerekebilir.)
+
+   ::: moniker range=">=vs-2019"
+   Microsoft Edge (Kmıum) için tüm Chrome örneklerini de kapatın. Her iki tarayıcı de kmıum Code tabanını paylaştığından, bu en iyi sonuçları verir.
+   ::: moniker-end
 
 2. Windows **Başlat** düğmesinden **Çalıştır** komutunu açın (sağ tıklayıp **Çalıştır**' ı seçin) ve şu komutu girin:
 
@@ -417,19 +421,44 @@ Bu senaryo için Chrome ' ı kullanın.
 
     Uygulama henüz çalışmıyor, bu nedenle boş bir tarayıcı sayfası alırsınız.
 
-3. Visual Studio 'ya geçin ve aşağıdaki çizimde gösterildiği gibi `render()` işlevindeki *App-Bundle. js* kodunda bir kesme noktası ayarlayın:
+3. Visual Studio 'ya geçin ve kaynak kodunuzda *App-Bundle. js* ya da *app. TSX*olarak bir kesme noktası ayarlayın.
+
+    *App-Bundle. js*için, aşağıdaki çizimde gösterildiği gibi `render()` işlevindeki kesme noktasını ayarlayın:
 
     ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
-    *App-Bundle. js*' de `render()` işlevini bulmak için **CTRL**+**F** (**Düzenle** > **Bul ve Değiştir** > **hızlı bul**) kullanın.
+    Transpiled *App-Bundle. js* dosyasında `render()` işlevini bulmak için **CTRL**+**F** (**Düzenle** > **Bul ve Değiştir** > **hızlı bul**) kullanın.
 
-4. Visual Studio 'da hata ayıklama hedefi olarak hedef tarayıcınızı seçin, ardından uygulamayı tarayıcıda çalıştırmak için **Ctrl**+**F5** tuşuna**basın (hata ayıklama > ** **başlatın**).
+    *App. TSX*için, `return` deyimindeki `render()` işlevinin içinde kesme noktası ayarlayın.
+
+    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
+
+4. Kesme noktasını *. TSX* dosyasında ( *App-Bundle. js*yerine) ayarlıyorsanız, *WebPack-config. js*' yi güncelleştirmeniz gerekir. Aşağıdaki kodu değiştirin:
+
+    ```javascript
+    output: {
+        filename: "./app-bundle.js",
+    },
+    ```
+
+    Şu kodla:
+
+    ```javascript
+    output: {
+        filename: "./app-bundle.js",
+        devtoolModuleFilenameTemplate: '[resource-path]'  // removes the webpack:/// prefix
+    },
+    ```
+
+    Bu, Visual Studio 'da hata ayıklamayı etkinleştirmek için yalnızca geliştirme bir ayardır. Bu ayar, uygulamayı oluştururken *App-Bundle. js. Map*olan kaynak eşlemesi dosyasında oluşturulan başvuruları geçersiz kılmanıza olanak tanır. Varsayılan olarak, kaynak eşlemesi dosyasındaki WebPack başvuruları, Visual Studio 'nun *app. TSX*kaynak dosyasını bulmasını önleyen *WebPack:///* önekini içerir. Özellikle, bu değişikliği yaptığınızda, *app. TSX*kaynak dosyasına yönelik başvuru, hata ayıklamayı sağlayan *WebPack:///./app.TSX* olarak *./app. TSX*olarak değiştirilir.
+
+5. Visual Studio 'da hata ayıklama hedefi olarak hedef tarayıcınızı seçin, ardından uygulamayı tarayıcıda çalıştırmak için **Ctrl**+**F5** tuşuna**basın (hata ayıklama > ** **başlatın**).
 
     Uygulama yeni bir tarayıcı sekmesinde açılır.
 
-5. **Işleme eklemek** > **Hata Ayıkla** ' yı seçin.
+6. **Işleme eklemek** >  **Hata Ayıkla** ' yı seçin.
 
-6. **Işleme İliştir** iletişim kutusunda, ekleyebileceğiniz tarayıcı örneklerinin filtrelenmiş bir listesini alın.
+7. **Işleme İliştir** iletişim kutusunda, ekleyebileceğiniz tarayıcı örneklerinin filtrelenmiş bir listesini alın.
 
     ::: moniker range=">=vs-2019"
     Visual Studio 2019 ' de, **Ekle** alanında doğru hedef tarayıcı, **JavaScript (Chrome)** veya **JavaScript (Microsoft Edge-kmıum)** seçeneğini belirleyin, arama sonuçlarını filtrelemek için filtre kutusuna **Chrome** veya **Edge** yazın. Kolay ada sahip bir tarayıcı yapılandırması oluşturduysanız bunun yerine bunu seçin.
@@ -438,7 +467,7 @@ Bu senaryo için Chrome ' ı kullanın.
     Visual Studio 2017 ' de, **Ekle** alanına **WebKit Code** ' u seçin, arama sonuçlarını filtrelemek için filtre kutusuna **Chrome** yazın.
     ::: moniker-end
 
-7. Doğru ana bilgisayar bağlantı noktasıyla (Bu örnekte localhost) tarayıcı işlemini seçin ve **Ekle**' yi seçin.
+8. Doğru ana bilgisayar bağlantı noktasıyla (Bu örnekte localhost) tarayıcı işlemini seçin ve **Ekle**' yi seçin.
 
     Doğru tarayıcı örneğini seçmenize yardımcı olması için, **başlık** alanında bağlantı noktası (1337) de görünebilir.
 
@@ -456,20 +485,24 @@ Bu senaryo için Chrome ' ı kullanın.
     > [!TIP]
     > Hata ayıklayıcı iliştirilemez ve "işleme iliştirilemiyor" iletisini görürsünüz. İşlem geçerli durumda geçerli değil. ", tarayıcı hata ayıklama modunda başlatılmadan önce hedef tarayıcının tüm örneklerini kapatmak için Görev Yöneticisi 'Ni kullanın. Tarayıcı uzantıları çalışıyor ve tam hata ayıklama modu engelleniyor olabilir.
 
-8. Kesme noktası olan kod zaten yürütüldüğünden, kesme noktasına isabet etmek için tarayıcı sayfanızı yenileyin.
+9. Kesme noktası olan kod zaten yürütüldüğünden, kesme noktasına isabet etmek için tarayıcı sayfanızı yenileyin.
 
     Hata ayıklayıcıda duraklalarken, değişkenlerin üzerine giderek ve hata ayıklayıcı pencerelerini kullanarak uygulamanızın durumunu inceleyebilirsiniz. Kod aracılığıyla (**F5**, **F10**ve **F11**) hata ayıklayıcıyı ilerleyebilirsiniz.
 
-    Ortamınıza ve tarayıcı durumunuza bağlı olarak, *App-Bundle. js* ya da *app. TSX*içindeki eşleştirilmiş konumunda kesme noktasına ulaşırsınız. Her iki durumda da kodun içinde ilerleyebileceğiniz değişkenleri inceleyebilirsiniz.
+    Daha önce, ortamınız ve tarayıcı durumlarınızla birlikte, daha önce izlediğiniz adımlara bağlı olarak, *App-Bundle. js* ya da *app. TSX*içindeki eşleştirilmiş konumunda kesme noktasına ulaşırsınız. Her iki durumda da kodun içinde ilerleyebileceğiniz değişkenleri inceleyebilirsiniz.
 
-   * *App. TSX* içindeki koda ayırmanız ve bunu yapamaması gerekiyorsa, hata ayıklayıcıyı iliştirmek için önceki adımlarda açıklandığı gibi **işlemek için İliştir** ' i kullanın. Ardından, **uygulama. tsx** > **betik belgelerini** açıp bir kesme noktası ayarlayın ve tarayıcınızdaki sayfayı yenilemek için Çözüm Gezgini dinamik olarak oluşturulan *app. TSX* dosyasını açın (izin veren bir kod satırında kesme noktasını ayarlayın) `return` bildirimi veya `var` bildirimi gibi kesme noktaları).
+   * *App. TSX* içindeki koda ayırmanız ve bunu yapamaması gerekiyorsa, hata ayıklayıcıyı iliştirmek için önceki adımlarda açıklandığı gibi **işlemek için İliştir** ' i kullanın. Ortamınızın doğru ayarlandığından emin olun:
 
-       Alternatif olarak, *app. TSX* içindeki koda kesmeniz ve bunu yapamazsanız, *app. tsx*'teki `debugger;` Ifadesini kullanmayı deneyin veya Chrome Geliştirici Araçları (veya Microsoft Edge için F12 araçları) kesme noktaları ayarlayın. WebPack tarafından oluşturulan kaynak eşlemesi dosyaları için, tarayıcı araçları (**F12**) genellikle hata ayıklama için en iyi şekilde çalışır.
+      * Tarayıcıyı hata ayıklama modunda çalıştırabilmeniz için Chrome uzantıları da dahil olmak üzere tüm tarayıcı örneklerini kapattınız (Görev Yöneticisi kullanılarak). Tarayıcıyı hata ayıklama modunda başlattığınızdan emin olun.
+
+      * Kaynak eşlemesi dosyanızın, Visual Studio hata ayıklayıcısının *app. TSX*' i bulmasını önleyen *./app.exe* ( *WebPack:///./app.TSX*değil) öğesine bir başvuru içerdiğinden emin olun.
+
+       Alternatif olarak, *app. TSX* içindeki koda kesmeniz ve bunu yapamazsanız, *app. tsx*'teki `debugger;` Ifadesini kullanmayı deneyin veya Chrome Geliştirici Araçları (veya Microsoft Edge için F12 araçları) kesme noktaları ayarlayın.
 
    * *App-Bundle. js* ' deki kodu kesmeniz gerekiyorsa ve bunu yapamadığından, *App-Bundle. js. map*kaynak eşlemesi dosyasını kaldırın.
 
      > [!TIP]
-     > Bu adımları izleyerek işleme ilk kez iliştirdikten sonra, **hata ayıkla** > **işleme yeniden iliştir**' i seçerek Visual Studio 2017 ' de aynı işleme hızlıca yeniden iliştirebilirsiniz.
+     > Bu adımları izleyerek işleme ilk kez iliştirdikten sonra, **hata ayıkla**  > **işleme yeniden iliştir**' i seçerek Visual Studio 2017 ' de aynı işleme hızlıca yeniden iliştirebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

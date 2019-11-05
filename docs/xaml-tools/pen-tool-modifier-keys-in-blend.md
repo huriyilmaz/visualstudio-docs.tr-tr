@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7213bd271b5c690d78443339039d09bf14163e91
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 255b3de916215759615384dce26c5affbc07a995
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189610"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73569098"
 ---
 # <a name="pen-tool-modifier-keys-in-blend-for-visual-studio"></a>Visual Studio için Blend kalem aracı değiştirici tuşları
 
@@ -39,5 +39,5 @@ Aşağıdaki tabloda bir yolu, **kalem** aracı ![kalem aracı](../designers/med
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalışma yüzeyi değiştirici tuşları](../designers/artboard-modifier-keys-in-blend.md)
-- [Doğrudan Seçim aracı değiştirici tuşları](../designers/direct-selection-tool-modifier-keys-in-blend.md)
+- [Doğrudan Seçim aracı değiştirici tuşları](direct-selection-tool-modifier-keys-in-blend.md)
 - [Şekiller ve yollar çizme](draw-shapes-and-paths.md)
