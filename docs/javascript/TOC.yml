@@ -44,5 +44,5 @@
   items:
     - name: package.json yapılandırması
       href: configure-packages-with-package-json.md
-    - name: JavaScript ve TypeScript için Wiki belgeleri
-      href: 'https://github.com/Microsoft/nodejstools/wiki'
+    - name: JavaScript ve TypeScript belgeleri deposu
+      href: 'https://github.com/Microsoft/JSTSdocs'
