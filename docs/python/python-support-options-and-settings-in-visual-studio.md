@@ -1,6 +1,6 @@
 ---
-title: Seçenekler ve Python için ayarlar
-description: Visual Studio'da Python kodunu ve projeleri ile ilgili çeşitli ayarlar için bir başvuru.
+title: Python için seçenekler ve ayarlar
+description: Visual Studio 'da Python kodu ve projelerle ilgili çeşitli ayarlara yönelik bir başvuru.
 ms.date: 03/13/2019
 ms.topic: reference
 f1_keywords:
@@ -17,162 +17,162 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d917f0211a0888fa2a712b0c010cf6177823c223
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 08501d71400a0df139022f04e68573d0dd1449d1
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62431036"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661917"
 ---
-# <a name="options-for-python-in-visual-studio"></a>Visual Studio'da Python için seçenekleri
+# <a name="options-for-python-in-visual-studio"></a>Visual Studio 'da Python seçenekleri
 
-Python seçenekleri görüntülemek için kullanın **Araçları** > **seçenekleri** menü komutu, emin **tüm ayarları göster** seçilir ve ardından gidin  **Python**:
+Python seçeneklerini görüntülemek için **araçlar** > **Seçenekler** menü komutunu kullanın, **tüm ayarları göster** ' in seçili olduğundan emin olun ve ardından **Python**' a gidin:
 
 ::: moniker range="vs-2017"
-![Python Seçenekleri iletişim kutusu, Genel sekmesi](media/options-general.png)
+![Python seçenekleri iletişim kutusu, Genel sekmesi](media/options-general.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Python Seçenekleri iletişim kutusu, Genel sekmesi](media/options-general-2019.png)
+![Python seçenekleri iletişim kutusu, Genel sekmesi](media/options-general-2019.png)
 ::: moniker-end
 
-Vardır ayrıca ek Python özgü seçenekler **metin düzenleyici** > **Python** > **Gelişmiş** sekmesinde ve  **Ortam** > **yazı tipleri ve renkler** sekmesindeki **metin düzenleyici** grubu.
+Ayrıca **metin düzenleyicisi** > **Python** > **Gelişmiş** sekmesinde ve **metin düzenleyici** grubundaki **ortam** > **yazı tipleri ve renkler** sekmesinde ek Python 'a özgü seçenekler de vardır.
 
 > [!Note]
-> **Deneysel** grubu olan özellikler hala geliştirme aşamasındadır ve burada belgelenmeyen seçenekleri içerir. Bunlar genellikle gönderilerinde üzerinde açıklanmıştır [Microsoft blog Python Mühendisliği](https://devblogs.microsoft.com/python/).
+> **Deneysel** Grup, hala geliştirme aşamasında olan ve burada açıklanmayan özellikler için seçenekler içerir. Bunlar genellikle [Microsoft blogu 'Ndaki Python mühendisliğinde](https://devblogs.microsoft.com/python/)gönderilerde ele alınmıştır.
 
 ## <a name="general-options"></a>Genel Seçenekler
 
-(**Araçları** > **seçenekleri** > **Python** sekmesini.)
+(**Araçlar** > **Seçenekler** > **Python** sekmesi.)
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Sanal ortamlar oluşturulurken çıkış penceresini göster**| Açık | Clear önlemek için **çıkış** görüntülenmesini penceresi. |
-| **Yüklerken veya paketlerini kaldırma çıkış penceresini göster** | Açık | Clear önlemek için **çıkış** görüntülenmesini penceresi. |
-| **Ortamlar oluşturmak için bildirimler çubuğunu göster** | Açık | *Yalnızca Visual Studio 2019.* Ne zaman bu seçeneği belirleyin ve kullanıcı içeren bir proje açılır bir *requirements.txt* veya *environment.yml* dosya, Visual Studio, bir bilgi çubuğu ile bir sanal oluşturma önerilerinde bulunma görüntüler ortam ya da conda ortam varsayılan genel ortam kullanmak yerine sırasıyla. |
-| **Paketleri yüklemek için bildirimler çubuğunu göster** | Açık | *Yalnızca Visual Studio 2019.* Ne zaman bu seçeneği belirleyin ve kullanıcı içeren bir proje açılır bir *requirements.txt* dosya (ve varsayılan genel ortam kullanmıyor) Visual Studio, geçerli yüklü paketleri ile bu gereksinimleri karşılaştırır ortam. Herhangi bir paket yoksa, Visual Studio bu bağımlılıkların yüklemek için bir istem görüntüler. |
-| **Her zaman paket yöneticileri, yönetici olarak çalıştır** | Kapalı | Her zaman yükseltir `pip install` ve tüm ortamlara benzer Paket Yöneticisi işlemleri. Ortamı gibi bir dosya sistemi korumalı alanda yer alıyorsa paketleri yüklenirken, Visual Studio için yönetici ayrıcalıkları ister *c:\Program dosyaları*. Bu komut isteminde yükleme komutunu yalnızca bir bu ortam için her zaman yükseltmesine seçebilirsiniz. Bkz: [paketleri sekmesinde](python-environments-window-tab-reference.md#packages-tab). |
-| **Tamamlanma veritabanı ilk kullanımında otomatik olarak oluştur** | Açık | *Visual Studio 2017 sürüm 15.5 ve önceki ve sonraki sürümler için IntelliSense veritabanı kullanılırken geçerlidir.* Bunu kullanan kod yazarken tamamlama için bir kitaplık veritabanı önceliklendirir. Daha fazla bilgi için [IntelliSense sekmesini](python-environments-window-tab-reference.md#intellisense-tab). |
-| **Sistem genelinde ise PYTHONPATH değişkenleri yoksay** | Açık | Visual Studio ortamları ve projeleri arama yollarını belirtmek için daha doğrudan bir yolu sağladığından ise PYTHONPATH varsayılan olarak sayılır. Bkz: [arama yolları](search-paths.md) Ayrıntılar için. |
-| **Bağlantılı dosyaları eklerken güncelleştirme arama yolları** | Açık | Ayarlanırsa, ekleme, bir [bağlı dosya](managing-python-projects-in-visual-studio.md#linked-files) projeye güncelleştirmeleri [arama yolları](search-paths.md) böylece IntelliSense tamamlanma veritabanına bağlı dosya klasörünün içeriğini içerebilir. İçeriklerin tamamlama veritabanından hariç tutmak için bu seçeneği temizleyin. |
-| **İçeri aktarılan uyar, modül bulunamıyor** | Açık | Temiz bir içeri aktarılan modül bildiğinizde uyarıları bastırmak için bu seçeneği şu anda kullanılamıyor ancak Aksi takdirde kodu işlemi etkilemez. |
-| **Rapor olarak tutarsız girinti** | **Uyarıları** | Python yorumlayıcısı kapsamını belirlemek için uygun girintisini yoğun bir şekilde bağlı olduğundan, varsayılan olarak Visual Studio kodlama hatalar gösterebilir tutarsız girintileri algıladığında uyarı verir. Kümesine **hataları** daha katı olacak şekilde, programın bu gibi durumlarda, çıkmak neden olur. Bu davranış tamamen devre dışı bırakmak için seçin **yoksa**. |
-| **Anket/haber denetle** | **Haftada bir** | *Visual Studio 2017 ve önceki sürümleri.* Varsa bir web sayfasıyla Python ilgili anketler ve haber öğelerini içeren bir pencere açmak Visual Studio izin sıklığını ayarlar. Seçenekler **hiçbir zaman**, **günde bir kez**, **haftada bir kez**, ve **ayda bir kez**. |
-| **Tüm gizli kalıcı iletişim kutuları sıfırlama** düğmesi | yok | Farklı iletişim kutularını sağlayan seçenekleri gibi **bunu bir daha gösterme**. Bu seçenekleri temizleyin ve yeniden açmak için iletişim kutularını neden için bu düğmeyi kullanın. |
+| **Sanal ortamlar oluştururken Çıkış Penceresi göster**| Açık | **Çıkış** penceresinin görünmesini engellemek için işaretini kaldırın. |
+| **Paketleri yüklerken veya kaldırırken Çıkış Penceresi göster** | Açık | **Çıkış** penceresinin görünmesini engellemek için işaretini kaldırın. |
+| **Ortam oluşturmak için bildirim çubuğunu göster** | Açık | *Yalnızca Visual Studio 2019.* Bu seçenek ayarlandığında ve Kullanıcı *requirements. txt* veya *Environment. yıml* dosyası içeren bir proje açtığında, Visual Studio sırasıyla sanal ortam veya Conda ortamı oluşturma önerilerini içeren bir bilgi çubuğu görüntüler. Varsayılan genel ortamı kullanmak yerine. |
+| **Paketleri yüklemek için bildirim çubuğunu göster** | Açık | *Yalnızca Visual Studio 2019.* Bu seçenek ayarlandığında ve Kullanıcı *requirements. txt* dosyasını içeren bir proje açtığında (ve varsayılan genel ortamı kullanmıyorsanız), Visual Studio bu gereksinimleri geçerli ortamda yüklü paketlerle karşılaştırır. Herhangi bir paket eksikse, Visual Studio bu bağımlılıkları yüklemek için bir istem görüntüler. |
+| **Paket yöneticilerini her zaman yönetici olarak çalıştır** | Kapalı | Tüm ortamlarda `pip install` ve benzer Paket Yöneticisi işlemlerini her zaman yükseltir. Paketler yüklenirken, ortam dosya sisteminin *C:\Program Files*gibi korumalı bir alanında yer alıyorsa, Visual Studio yönetici ayrıcalıkları ister. Bu istem içinde, yalnızca bir ortam için install komutunu her zaman yükseltmeyi seçebilirsiniz. Bkz. [Paketler sekmesi](python-environments-window-tab-reference.md#packages-tab). |
+| **İlk kullanımda tamamlanma DB 'yi otomatik olarak oluştur** | Açık | *Bir IntelliSense veritabanı kullanılırken Visual Studio 2017 sürüm 15,5 ve önceki sürümleri ve sonraki sürümler için geçerlidir.* Onu kullanan kodu yazdığınızda, bir kitaplık için veritabanının tamamlanmasını önceliklendirir. Daha fazla bilgi için bkz. [IntelliSense sekmesi](python-environments-window-tab-reference.md?view=vs-2017#intellisense-tab). |
+| **Sistem genelinde PYTHONPATH değişkenlerini yoksay** | Açık | PYTHONPATH varsayılan olarak yok sayılır, çünkü Visual Studio ortamlar ve projelerde arama yolları belirtmek için daha doğrudan bir yol sağlar. Ayrıntılar için bkz. [arama yolları](search-paths.md) . |
+| **Bağlı dosyalar eklenirken arama yollarını Güncelleştir** | Açık | Ayarlandığında, bir projeye [bağlı dosya](managing-python-projects-in-visual-studio.md#linked-files) eklemek, IntelliSense 'in bağlantılı dosyanın klasörünün içeriğini tamamlanma veritabanına dahil edebilmesi için [arama yollarına](search-paths.md) ekler. Bu tür içerikleri tamamlama veritabanından dışlamak için bu seçeneği temizleyin. |
+| **İçeri aktarılan modül bulunamadığında uyar** | Açık | İçeri aktarılan bir modülün Şu anda kullanılabilir olmadığını bildiğiniz halde kod işlemini etkilemediği durumlarda uyarıları bastırmak için bu seçeneği temizleyin. |
+| **Tutarsız Girintiyi şöyle raporla** | **Uyarılarına** | Python yorumlayıcı kapsamı belirlemek için uygun girintide büyük ölçüde bağlı olduğundan, Visual Studio varsayılan olarak, kodlama hatalarını gösterebilen tutarsız girintili girintiler algıladığında uyarılar verir. Bu tür durumlarda programın çıkmasına neden olan, daha sıkı olması için **hatalara** ayarlanır. Bu davranışı tamamen devre dışı bırakmak için **değil**' i seçin. |
+| **Anketi/haberleri denetle** | **Haftada bir kez** | *Visual Studio 2017 ve öncesi.* Visual Studio 'Nun, varsa Python ile ilgili anketler ve haber öğeleriyle Web sayfası içeren bir pencere açmasına izin verilen sıklığı ayarlar. Seçenekler **hiçbir**şekilde, **günde bir**kez, **haftada**bir ve **ayda bir**kez. |
+| **Kalıcı olarak gizli iletişim kutularını Sıfırla** düğmesi | yok | Farklı iletişim kutuları **bunu bir daha gösterme**gibi seçenekler sağlar. Bu seçenekleri temizlemek ve iletişim kutularının yeniden görüntülenmesine neden olmak için bu düğmeyi kullanın. |
 
 ::: moniker range="vs-2017"
-![Python Seçenekleri iletişim kutusu, Genel sekmesi](media/options-general.png)
+![Python seçenekleri iletişim kutusu, Genel sekmesi](media/options-general.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Python Seçenekleri iletişim kutusu, Genel sekmesi](media/options-general-2019.png)
+![Python seçenekleri iletişim kutusu, Genel sekmesi](media/options-general-2019.png)
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 ## <a name="conda-options"></a>Conda seçenekleri
 
-(**Araçları** > **seçenekleri** > **Python** > **Conda** sekmesini.)
+(**Araçlar** > **seçenekler** > **Python** > **Conda** Tab.)
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Conda yürütülebilir dosya yolu** | (boş) | Bir tam yolunu belirtir *conda.exe* Python iş yüküyle eklenmiştir. varsayılan Miniconda yükleme güvenmek yerine yürütülebilir. Burada başka bir yol belirtilmezse, varsayılan yükleme ve kayıt defterinde belirtilen diğer conda.exe yürütülebilir üzerinde öncelik kazanır. El ile Anaconda veya Miniconda daha yeni bir sürümünü yükleyin veya varsayılan 64-bit distro yerine bir 32-bit distro kullanmak istiyorsanız bu ayarı değiştirebilirsiniz. |
+| **Conda çalıştırılabilir yolu** | adet | Python iş yüküne dahil olan varsayılan Miniconda yüklemesine güvenmek yerine *Conda. exe* yürütülebilir dosyasının tam yolunu belirtir. Burada başka bir yol verilirse, bu, kayıt defterinde belirtilen varsayılan yüklemeden ve diğer tüm Conda. exe yürütülebilir dosyalarının önüne geçer. Anaconda veya Miniconda 'ın daha yeni bir sürümünü el ile yüklüyorsanız veya varsayılan 64-bit dışında bir 32-bit ayırıcı kullanmak istiyorsanız bu ayarı değiştirebilirsiniz. |
 
-![Python Seçenekleri iletişim kutusu, dil sunucu sekmesi](media/options-conda.png)
+![Python seçenekleri iletişim kutusu, dil sunucusu sekmesi](media/options-conda.png)
 
 ::: moniker-end
 
 ## <a name="debugging-options"></a>Hata ayıklama seçenekleri
 
-(**Araçları** > **seçenekleri** > **Python** > **hata ayıklama** sekmesini.)
+(**Araçlar** > **seçenekler** > **Python** > **hata ayıklama** sekmesi.)
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Hatalar bulunduğunda çalıştırmadan önce sor** | Açık | Ne zaman, ister hataları içeren kodu çalıştırmak istediğinizi onaylamak için ayarlayın. Uyarıyı devre dışı bırakmak için bu seçeneği temizleyin. |
-| **İşlem olağan dışı çıktığında giriş bekle**<br/><br/>**İşlem normal şekilde çıktığında giriş bekle** | Üzerinde (her ikisi için) | Visual Studio'dan başlatılan bir Python programını kendi konsol penceresinde çalışır. Varsayılan olarak, pencereyi nasıl programdan çıkılır bağımsız olarak kapatmadan önce bir tuşa basın bekler. Bu istem kaldırmak ve pencereyi otomatik olarak kapatmak için bu seçeneklerin ikisi de ya da temizleyin. |
-| **Hata ayıklama çıktı penceresine program çıktısı tee** | Açık | Hem bir ayrı konsol penceresi hem de Visual Studio program çıkışı görüntüler **çıkış** penceresi. Yalnızca ayrı konsol penceresinde çıkışının görüntülenmesi için bu seçeneği temizleyin. |
-| **SystemExit özel sıfır çıkış kodu ile Kes** | Kapalı | Ayarla, bu özel durum hata ayıklayıcıyı durdurur. Açık olduğunda, hata ayıklayıcı kesme olmadan çıkar. |
-| **Python standart kitaplık hata ayıklamayı etkinleştir** | Kapalı | Standart Kitaplığı kaynak kodunu içine Adımlama için hata ayıklama sırasında mümkün kılar, ancak başlatmak hata ayıklayıcının sürelerini artırır.|
-| **İşlev dönüş değeri göster** | Açık | *Yalnızca Visual Studio 2019.* İşlev dönüş değerleri görüntüler **Yereller** penceresi sonra bir işlevin Adımlama çağrısı hata ayıklayıcıda (F10) |
-| **Eski hata ayıklayıcıyı kullanın** | Kapalı | *Yalnızca Visual Studio 2019.* Eski hata ayıklayıcı varsayılan olarak kullanmak üzere Visual Studio bildirir. Daha fazla bilgi için [hata ayıklama - kullanım eski hata ayıklayıcı](debugging-python-in-visual-studio.md#use-the-legacy-debugger). |
+| **Hata olduğunda çalıştırmadan önce sor** | Açık | Ayarlandığında, hata içeren kodu çalıştırmak istediğinizi onaylamanızı ister. Uyarıyı devre dışı bırakmak için bu seçeneği temizleyin. |
+| **İşlem anormal bir şekilde çıkıldığında girişi bekle**<br/><br/>**İşlem normal şekilde çıkıldığında girişi bekle** | Açık (her ikisi için) | Visual Studio 'dan başlatılan bir Python programı kendi konsol penceresinde çalışır. Varsayılan olarak, pencere, programın nasıl çıkdığına bakmaksızın kapatmadan önce bir tuşa basmanız için bekler. Bu istemi kaldırmak ve pencereyi otomatik olarak kapatmak için bu seçeneklerden birini veya her ikisini temizleyin. |
+| **Hata ayıklama çıkışı penceresinde t program çıktısı** | Açık | Program çıkışını ayrı bir konsol penceresinde ve Visual Studio **çıktı** penceresinde görüntüler. Çıktıyı yalnızca ayrı konsol penceresinde göstermek için bu seçeneği temizleyin. |
+| **Sıfırın çıkış kodu ile SystemExit özel durumuyla kes** | Kapalı | Ayarlanırsa, bu özel durum üzerinde hata ayıklayıcıyı sonlandırır. Açık olduğunda, hata ayıklayıcı koparmadan çıkar. |
+| **Python Standart Kitaplığı 'nda hata ayıklamayı etkinleştir** | Kapalı | Hata ayıklama sırasında standart kitaplık kaynak koduna geçmek mümkün olsa da, hata ayıklayıcının başlaması için gereken süreyi artırır.|
+| **İşlev dönüş değerini göster** | Açık | *Yalnızca Visual Studio 2019.* **Locals** penceresinde işlev dönüş değerlerini görüntüler ve sonra hata ayıklayıcıdaki bir işlev çağrısının üzerine adımlanıyor (F10) |
+| **Eski hata ayıklayıcıyı kullan** | Kapalı | *Yalnızca Visual Studio 2019.* Visual Studio 'ya, varsayılan olarak eski hata ayıklayıcıyı kullanmasını söyler. Daha fazla bilgi için bkz. [hata ayıklama-eski hata ayıklayıcıyı kullanın](debugging-python-in-visual-studio.md#use-the-legacy-debugger). |
 
 ::: moniker range="vs-2017"
-![Python Seçenekleri iletişim kutusu, hata ayıklama sekmesi](media/options-debugging.png)
+![Python seçenekleri iletişim kutusu, hata ayıklama sekmesi](media/options-debugging.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Python Seçenekleri iletişim kutusu, hata ayıklama sekmesi](media/options-debugging-2019.png)
+![Python seçenekleri iletişim kutusu, hata ayıklama sekmesi](media/options-debugging-2019.png)
 ::: moniker-end
 
 ## <a name="diagnostics-options"></a>Tanılama seçenekleri
 
-(**Araçları** > **seçenekleri** > **Python** > **tanılama** sekmesini.)
+(**Araçlar** > **seçenekler** > **Python** > **Tanılama** sekmesi.)
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Protokoly analýzy içerir** | Açık | Tanılama bir dosyaya kaydedilirken yüklü Python ortamları analiziyle ilgili veya bunları düğmeleri kullanarak panoya kopyalanırken ayrıntılı günlükleri içerir. Bu seçenek, oluşturulan dosyanın boyutunu önemli ölçüde artırabilir, ancak genellikle IntelliSense sorunlarını tanılamak için gerekli değildir. |
-| **Tanılama dosyaya Kaydet** düğmesi | yok | Bir dosya adı için ister ve ardından bir metin dosyasına günlüğe kaydeder. |
-| **Tanılama Panoya Kopyala** düğmesi | yok | Günlüğün tamamen Pano'ya yerleştirir; Bu işlem günlüğü boyutuna bağlı olarak biraz zaman alabilir. |
+| **Analiz günlüklerini dahil et** | Açık | , Tanılamayı bir dosyaya kaydederken veya düğmeleri kullanarak panoya kopyalarken, yüklü Python ortamlarının analizine ilişkin ayrıntılı günlükleri içerir. Bu seçenek, oluşturulan dosyanın boyutunu önemli ölçüde artırabilir, ancak genellikle IntelliSense sorunlarını tanılamak için gereklidir. |
+| **Tanılamayı dosyaya kaydet** düğmesi | yok | Bir dosya adı ister ve günlüğü bir metin dosyasına kaydeder. |
+| **Tanılamayı panoya kopyala** düğmesi | yok | Günlüğün tamamını Pano 'ya yerleştirir; Bu işlem, günlüğün boyutuna bağlı olarak biraz zaman alabilir. |
 
-![Python Seçenekleri iletişim kutusu, Tanılama sekmesi](media/options-diagnostics.png)
+![Python seçenekleri iletişim kutusu, Tanılama sekmesi](media/options-diagnostics.png)
 
 ## <a name="interactive-windows-options"></a>Etkileşimli Windows seçenekleri
 
-(**Araçları** > **seçenekleri** > **Python** > **etkileşimli Windows** sekmesini.)
+(**Araçlar** > **Seçenekler** >  **etkileşimli Windows** sekmesi > .)
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Komut dosyaları** | yok | Uygulamak başlangıç betikleri için genel bir klasörü belirtiyor **etkileşimli** tüm ortamları için windows. Bkz: [başlatma komut dosyaları](python-environments-window-tab-reference.md#startup-scripts). Ancak, bu özellik şu anda çalışmıyor unutmayın. |
-| **Yukarı/aşağı okları geçmişi gidin** | Açık | Geçmişte gezinmek için ok tuşlarını kullanan **etkileşimli** penceresi. İçinde gezinmek için ok tuşlarını kullanmak için bu ayarı temizlemek **etkileşimli** penceresi bunun yerine çıkış. |
-| **Tamamlama modu** | **Yalnızca işlev çağrıları olmadan ifadeleri değerlendirme** | İçinde bir ifade üzerinde kullanılabilir üyeler belirleme işlemi **etkileşimli** penceresi, yan etkileri veya birden çok kez çağrılan işlevleri açabilecek geçerli tamamlanmamış ifade değerlendirme gerektirebilir. Varsayılan ayar **nevyhodnocovat işlev çağrıları olmadan yalnızca** bir işlevi çağırmak için görünür, ancak diğer ifadeleri değerlendirir ifadeler dışlar. Örneğin, değerlendirir `a.b` ama `a().b`.  **Nikdy nevyhodnocovat** tüm yan-önerileri yalnızca normal IntelliSense altyapısı kullanılarak etkileri engeller. **Tüm nevyhodnocovat** yan etkileri bağımsız olarak öneriler almak için tam ifadeyi değerlendirir. |
-| **Statik analiz önerileri Gizle** | Kapalı | Ayarlandığında, ifadenin değerlendirilmesi yoluyla elde edilen yalnızca önerileri görüntüler. İle birleştirildiğinde **tamamlama modunu** değer **Nikdy nevyhodnocovat**, hiçbir faydalı tamamlamalar görünür **etkileşimli** penceresi. |
+| **Betikleri** | yok | Tüm ortamlarda **etkileşimli** Windows için uygulanacak başlangıç betikleri için genel bir klasör belirtir. Bkz. [Başlangıç betikleri](python-environments-window-tab-reference.md#startup-scripts). Ancak, bu özelliğin şu anda çalışmadığına not edin. |
+| **Yukarı/aşağı okları geçmişe gider** | Açık | **Etkileşimli** penceredeki geçmiş arasında gezinmek için ok tuşlarını kullanır. Bunun yerine **etkileşimli** pencerenin çıktısı içinde gezinmek için ok tuşlarını kullanmak üzere bu ayarı temizleyin. |
+| **Tamamlama modu** | **Yalnızca işlev çağrıları olmayan ifadeleri değerlendir** | **Etkileşimli** penceredeki bir ifadede kullanılabilir üyeleri belirleme işlemi, geçerli tamamlanmamış ifadenin değerlendirilmesi gerektirebilir, bu da yan etkiler veya işlevlerin birden çok kez çağrılmasına neden olabilir. Varsayılan ayar, **yalnızca işlev çağrıları olmadan ifadeleri değerlendir** işlevi çağıran ifadeleri hariç tutar, ancak diğer ifadeleri değerlendirir. Örneğin, `a.b` değerlendirir ancak `a().b`vermez.  **Ifadeleri hiçbir şekilde değerlendirme** , öneriler için yalnızca normal IntelliSense altyapısı kullanılarak tüm yan etkileri engeller. **Tüm Ifadeleri değerlendir** , yan etkilerden bağımsız olarak öneriler almak için tüm ifadeyi değerlendirir. |
+| **Statik analiz önerilerini gizle** | Kapalı | Ayarlandığında, yalnızca ifade hesaplanarak elde edilen önerileri görüntüler. **Tamamlama modu** değeri ile birleştirildiğinde **ifadeleri hiçbir şekilde değerlendirirse** **etkileşimli** pencerede hiçbir yararlı tamamlama görünmez. |
 
-![Python Seçenekleri iletişim kutusu, etkileşimli Windows sekmesi](media/options-interactive-windows.png)
+![Python seçenekleri iletişim kutusu, etkileşimli pencereler sekmesi](media/options-interactive-windows.png)
 
 ::: moniker range=">=vs-2019"
 ## <a name="language-server-options"></a>Dil sunucusu seçenekleri
 
-(**Araçları** > **seçenekleri** > **Python** > **dil sunucu** sekmesini.)
+(**Araçlar** > **seçenekler** > **Python** > **dil sunucusu** sekmesi.)
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Tamamlamalar Typeshed gelen devre dışı bırak** | Kapalı | Visual Studio IntelliSense normalde Typeshed paketlenmiş bir sürümü kullanır (bir dizi *.pyi* dosyaları) tür ipuçlarını standart kitaplığı ve üçüncü taraf kitaplıklar için Python 2 ve Python 3 için bulunamadı. Bu ayar ile birlikte gelen TypeShed davranışı devre dışı bırakır. |
-| **Özel Typeshed yol** | (boş) | Ayarlanırsa, Visual Studio ile birlikte gelen sürümü yerine bu yolda Typeshed dosyaları kullanıyorsa. Yoksayın **Typeshed gelen tamamlama devre dışı bırak** ayarlanır. |
+| **Türden tamamlanmış işlemleri devre dışı bırak** | Kapalı | Visual Studio IntelliSense normalde, her ikisi de Python 2 ve Python 3 için standart kitaplık ve üçüncü taraf kitaplıklar için tür ipuçları bulmak üzere yazı tipinde (bir *. Pyi* dosyaları kümesi) paketlenmiş bir sürümünü kullanır. Bu seçeneğin ayarlanması, paketlenmiş yazı davranışını devre dışı bırakır. |
+| **Özel Türleştirilmiş yol** | adet | Ayarlanırsa, Visual Studio paketlenmiş sürümü yerine bu yoldaki yazı dosyalarını kullanır. **Türden tamamlanmayı devre dışı bırak** ayarlandıysa yoksay. |
 
-![Python Seçenekleri iletişim kutusu, dil sunucu sekmesi](media/options-language-server.png)
+![Python seçenekleri iletişim kutusu, dil sunucusu sekmesi](media/options-language-server.png)
 
 ::: moniker-end
 
-## <a name="advanced-python-editor-options"></a>Gelişmiş Python Düzenleyici Seçenekleri
+## <a name="advanced-python-editor-options"></a>Gelişmiş Python Düzenleyicisi seçenekleri
 
-(**Araçları** > **seçenekleri** > **metin düzenleyici** > **Python**  >   **Gelişmiş** sekmesini.)
+(**Araçlar** > **Seçenekler** > **metin düzenleyici** > **Python** > **Gelişmiş** sekmesi.)
 
-### <a name="completion-results"></a>Tamamlama sonuçları
-
-| Seçenek | Varsayılan | Açıklama |
-| --- | --- | --- |
-| **Üye tamamlama üyelerini kesişimi görüntüler.** | Kapalı | Ayarlandığında, tüm olası türleri tarafından desteklenen tek tamamlamaları gösterir. |
-| **Arama dizesini temel alan filtre listesi** | Açık | Yazdığınız sırada tamamlama önerileri ve filtreleme uygular (varsayılan denetlenir). |
-| **Tamamlamalar tüm tanımlayıcıları için otomatik olarak göster** | Açık | Her iki Düzenleyicisi'nde tamamlamaları devre dışı bırakmak için bu seçeneği temizleyin ve **etkileşimli** windows. |
-
-### <a name="selection-in-completion-list"></a>Tamamlama listesindeki seçim
+### <a name="completion-results"></a>Tamamlanma sonuçları
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Aşağıdaki karakterleri yazarak işlendi** | **{}\[\]().,:;+-*/%&&#124;^~=<>#@\\** | Bu karakterler bir karakter yazarak tamamlama kaydetmeye uygun olacak şekilde bir tamamlama listeden seçebilirsiniz. tanımlayıcı genellikle izleyin. Kaldırın veya belirli karakter istenen listesine ekleyin.  |
-| **İşlemeler geçerli tamamlama girin** | Açık | Ayarlandığında, **Enter** anahtar seçer ve şu anda seçilmiş tamamlanma karakterler olarak yukarıdaki uygular (ancak Elbette, karakter için hiç **Enter** bu listesine doğrudan Git uygulanamadı şekilde!). |
-| **Yeni bir satır eklemek, tam yazılmış kelimenin sonuna enter** | Kapalı | Varsayılan olarak görünen tüm sözcük tamamlama açılır ve ENTER tuşuna yazarsanız **Enter**, o tamamlama işleyin. Tanımlayıcı yazmayı bitirdikten sonra bu seçeneği ayarlayarak, etkili bir şekilde tamamlamaları işleme gibi **Enter** yeni bir satır ekler. |
+| **Üye tamamlama üyelerin kesişimini görüntüler** | Kapalı | Ayarlandığında, yalnızca tüm olası türler tarafından desteklenen bitirmaları gösterir. |
+| **Arama dizesine göre filtre listesi** | Açık | Yazarken tamamlama önerilerinin filtrelenmesini uygular (varsayılan olarak işaretlidir). |
+| **Tüm tanımlayıcılar için bitirmaları otomatik olarak göster** | Açık | Hem düzenleyicide hem de **etkileşimli** pencerede bitirmaları devre dışı bırakmak için bu seçeneği temizleyin. |
 
-### <a name="miscellaneous-options"></a>Çeşitli seçenekleri
+### <a name="selection-in-completion-list"></a>Tamamlanma listesinde seçim
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Dosyalar açıldığında anahat moduna gir** | Açık | Otomatik olarak Visual Studio düzenleyicisinde anahat oluşturma özelliğini bir Python kodu dosyası açılırken açın. |
-| **Yapıştırma REPL istemleri kaldırıldı** | Açık | Kaldırır **>>>** ve **...**  koddan kolayca aktarılmasına izin vererek yapıştırılan metin **etkileşimli** Düzenleyici penceresine. Bu karakterleri diğer kaynaklardan yapıştırırken korumak istiyorsanız bu seçeneği temizleyin. |
-| **Türlerine göre renk adı** | Açık | Sözdizimi renklendirme Python kodunda sağlar. |
+| **Aşağıdaki karakterler yazılarak işlendi** | **{}\[\]().,:; +-*/% &&#124;^ ~ = < > # @\\** | Bu karakterler tipik olarak bir tamamlanma listesinden seçim yaptığı bir tanımlayıcıyı izler, bu nedenle tamamlama işleminin yalnızca bir karakter yazarak yürütülmesi uygun olabilir. İstediğiniz gibi listeye belirli karakterleri kaldırabilir veya ekleyebilirsiniz.  |
+| **İşlemeleri geçerli tamamlamayı girin** | Açık | Ayarlandığında, **ENTER** tuşu yukarıdaki karakterlerle birlikte seçili olan tamamlamayı seçer ve uygular (ancak elbette, bu listeye doğrudan gidememesi **için bir** karakter yok). |
+| **Tam yazılmış kelimenin sonunda ENTER 'a yeni satır ekle** | Kapalı | Varsayılan olarak, tamamlama açılır penceresinde görüntülenen tüm sözcüğü yazarsanız ve **ENTER**tuşuna basarsanız, bu tamamlamayı işleyin. Bu seçeneği ayarlayarak, tanımlayıcıyı yazmayı tamamladığınızda, yeni bir **satır ekler gibi** tamamlama işlemleri etkili bir şekilde tamamlanır. |
 
-![Gelişmiş sekmesi, Python Düzenleyici Seçenekleri iletişim](media/options-editor-advanced.png)
+### <a name="miscellaneous-options"></a>Çeşitli seçenekler
+
+| Seçenek | Varsayılan | Açıklama |
+| --- | --- | --- |
+| **Dosyalar açıkken anahat oluşturma moduna gir** | Açık | Python kod dosyası açılırken otomatik olarak düzenleyicide Visual Studio 'nun ana hat özelliğini etkinleştirin. |
+| **Kaldırılan REPL istemlerini Yapıştır** | Açık | Yapıştırılan metinden **>>>** ve **...** ' ı kaldırarak kodun **etkileşimli** pencereden düzenleyiciye kolayca aktarılmasını sağlar. Diğer kaynaklardan yapıştırırken bu karakterleri saklamanız gerekiyorsa bu seçeneği temizleyin. |
+| **Türlere göre renk adları** | Açık | Python kodunda sözdizimi renklendirmesini sunar. |
+
+![Python düzenleyici seçenekleri iletişim kutusu, Gelişmiş sekmesi](media/options-editor-advanced.png)
 
 ## <a name="fonts-and-colors-options"></a>Yazı tipleri ve renkler seçenekleri
 
-(**Ortam** > **yazı tipleri ve renkler** sekmesindeki **metin düzenleyici** grup.)
+(**Ortam** > **yazı tipi ve renkler** sekmesi **metin Düzenleyicisi** grubu içinde.)
 
-Python seçenekleri adlarını tüm ön eki **Python** ve kendinden açıklamalıdır. Tüm Visual Studio renk temaları varsayılan yazı tipini 10nk Consolas normal olan (kalın değil). Varsayılan renkler tema göre değişir. Varsayılan ayarlarla metin okunması zor bulursanız, genellikle, bir yazı tipi veya rengini değiştirin.
+Python seçeneklerinin adları **Python** ile önek olarak eklenir ve kendine açıklayıcı bir şekilde yapılır. Tüm Visual Studio renk temaları için varsayılan yazı tipi 10pt Consolas Regular (kalın değildir). Varsayılan renkler temaya göre farklılık gösterir. Genellikle, varsayılan ayarlarla metin okumayı zorlaştırdıysanız bir yazı tipi veya rengi değiştirirsiniz.
 
-![Python yazı tipi ve renk seçeneklerini](media/options-fonts-and-colors.png)
+![Python yazı tipi ve renk seçenekleri](media/options-fonts-and-colors.png)

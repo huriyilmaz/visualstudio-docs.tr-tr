@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 825e985820ac7a4d72bf321133491e312adb0a0e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 762fce80ad1e97f700af0768cdb68251a3ee8017
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981947"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661867"
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>SharePoint projesi ve proje öğesi şablonları
   Aşağıdaki bölümlerde, kullanılabilir SharePoint projesi ve proje öğesi şablonları ve bunların nasıl kullanıldığı açıklanır.
@@ -132,7 +132,7 @@ ms.locfileid: "72981947"
  Bir *durum makinesi iş akışı* , iş mantığı durumları, geçişler ve eylemler kümesidir. Bir durum makinesi iş akışındaki adımlar sırayla gerçekleştirilmez; Bunun yerine, Eylemler ve durumlar tarafından tetiklenir. Sıralı bir iş akışı gibi, durum makine iş akışları listeler ve belgeler gibi SharePoint öğeleriyle ilişkilendirilir. Bir kez daha, site düzeyi (genel) iş akışları veya liste düzeyi (yerel) iş akışları oluşturabilirsiniz. Ayrıca, bir iş akışının otomatik olarak mı yoksa el ile mi başlayacağını seçebilirsiniz. Bu proje öğesi yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesini yalnızca Grup çözümlerine ekleyebilirsiniz. Daha fazla bilgi için bkz. [SharePoint iş akışı çözümleri oluşturma](../sharepoint/creating-sharepoint-workflow-solutions.md), [SharePoint Server 2010 iş akışları](/previous-versions/office/developer/sharepoint-2010/ms549489(v=office.14))ve yenilikler [: iş akışı geliştirmeleri](/previous-versions/office/developer/sharepoint-2010/ee537015(v=office.14)).
 
 ### <a name="user-control-farm-solution-only"></a>Kullanıcı denetimi (yalnızca Grup çözümü)
- *Kullanıcı denetimi* , diğer ASP.net denetimlerini ve SharePoint denetimlerini ekleyebileceğiniz özel, yeniden kullanılabilir bir denetimdir. Kullanıcı denetimi, SharePoint 'te çalışan uygulama sayfalarına ve Web bölümlerine eklenebilir. Bu proje öğesi yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesini yalnızca Grup çözümlerine ekleyebilirsiniz. Daha fazla bilgi için bkz. [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](/visualstudio/sharepoint/creating-reusable-controls-for-web-parts-or-application-pages&view=vs-2019).
+ *Kullanıcı denetimi* , diğer ASP.net denetimlerini ve SharePoint denetimlerini ekleyebileceğiniz özel, yeniden kullanılabilir bir denetimdir. Kullanıcı denetimi, SharePoint 'te çalışan uygulama sayfalarına ve Web bölümlerine eklenebilir. Bu proje öğesi yalnızca Grup çözümlerinde kullanılabilir. Bu proje öğesini yalnızca Grup çözümlerine ekleyebilirsiniz. Daha fazla bilgi için bkz. [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](/visualstudio/sharepoint/creating-reusable-controls-for-web-parts-or-application-pages).
 
 ### <a name="visual-web-part"></a>Görsel web bölümü
  *Visual Web Bölümü* proje öğesi, bir *Elements. xml* tanım dosyası, bir **Web Bölümü** öğesi ve bir **Kullanıcı denetim** öğesi içerir. Görsel web bölümünün görünümünü, Visual Studio araç kutusu ' ndan Kullanıcı denetimi yüzeyine sürükleyip bırakarak veya kopyalayarak tasarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: tasarımcı ve yapı bloğu kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) [: Web bölümleri](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).

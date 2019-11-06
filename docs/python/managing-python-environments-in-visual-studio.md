@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a709c4b76f23529e0ffee7027bd1b6257ba00d84
-ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
+ms.openlocfilehash: 5e269e19a09aec157e38eaf8938b5995c2647803
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024708"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661936"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio 'da Python ortamları oluşturma ve yönetme
 
@@ -124,7 +124,7 @@ Bu nedenle, geliştiriciler genellikle proje için bir *sanal ortam* oluşturur.
 
 Visual Studio, bir proje için sanal ortam oluşturmaya yönelik doğrudan destek sağlar. Örneğin, *requirements. txt*içeren bir projeyi açar veya bu dosyayı içeren bir şablondan proje oluşturursanız, Visual Studio otomatik olarak bir sanal ortam oluşturmanızı ve bu bağımlılıkları yüklemenizi ister.
 
-Açık bir proje içinde dilediğiniz zaman yeni bir sanal ortam oluşturabilirsiniz. **Çözüm Gezgini**, proje düğümünü genişletin, **Python ortamları**' na sağ tıklayın ve "sanal ortam ekle" seçeneğini belirleyin. Daha fazla bilgi için bkz. [sanal ortam oluşturma](selecting-a-python-environment-for-a-project.md#create-a-virtual-environment-1).
+Açık bir proje içinde dilediğiniz zaman yeni bir sanal ortam oluşturabilirsiniz. **Çözüm Gezgini**, proje düğümünü genişletin, **Python ortamları**' na sağ tıklayın ve "sanal ortam ekle" seçeneğini belirleyin. Daha fazla bilgi için bkz. [sanal ortam oluşturma](/visualstudio/python/selecting-a-python-environment-for-a-project?view=vs-2019#create-a-virtual-environment-1).
 
 Visual Studio aynı zamanda bir sanal ortamdan *requirements. txt* dosyası oluşturmak için bir komut sağlar, bu da ortamı diğer bilgisayarlarda yeniden oluşturmayı kolaylaştırır. Daha fazla bilgi için bkz. [sanal ortamları kullanma](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
 

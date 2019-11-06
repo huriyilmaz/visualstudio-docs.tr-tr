@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fbdacb265d39c9aff96fed37c69c684aa3f8503b
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: f585a4ee58408e5f48c875602ba5531419dfd2ff
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189469"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661823"
 ---
 # <a name="troubleshoot-network-related-errors-when-you-install-or-use-visual-studio"></a>Visual Studio 'Yu yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme
 
@@ -137,7 +137,7 @@ Aşağıdaki URL 'Ler için bağlantıları etkinleştirin:
 
 Bir ağ sürücüsünde Visual Studio önyükleyici ve Response. JSON dosyası kullandığınızda bu hata iletisiyle karşılaşabilirsiniz. Hatanın kaynağı Windows 'daki Kullanıcı hesabı denetimidir (UAC).
 
-Bu hata şu anda oluşabilir: eşlenen bir ağ sürücüsü veya [UNC](/dotnet/standard/io/file-patch-formats#unc-paths) paylaşımının bir kullanıcının erişim belirtecine bağlı olması. UAC etkinleştirildiğinde, iki Kullanıcı [erişim belirteci](/windows/win32/secauthz/access-tokens) oluşturulur: biri yönetici erişimine *sahip* diğeri yönetici erişimi *olmayan* bir. Ağ sürücüsü veya paylaşma oluşturulduğunda, kullanıcının geçerli erişim belirteci buna bağlanır. Önyükleyicinin yönetici olarak çalıştırılması gerektiğinden, sürücü veya paylaşımın yönetici erişimi olan bir Kullanıcı erişim belirtecine bağlı olmaması durumunda ağ sürücüsüne veya paylaşıma erişemez.
+Bu hata şu anda oluşabilir: eşlenen bir ağ sürücüsü veya [UNC](/dotnet/standard/io/file-path-formats#unc-paths) paylaşımının bir kullanıcının erişim belirtecine bağlı olması. UAC etkinleştirildiğinde, iki Kullanıcı [erişim belirteci](/windows/win32/secauthz/access-tokens) oluşturulur: biri yönetici erişimine *sahip* diğeri yönetici erişimi *olmayan* bir. Ağ sürücüsü veya paylaşma oluşturulduğunda, kullanıcının geçerli erişim belirteci buna bağlanır. Önyükleyicinin yönetici olarak çalıştırılması gerektiğinden, sürücü veya paylaşımın yönetici erişimi olan bir Kullanıcı erişim belirtecine bağlı olmaması durumunda ağ sürücüsüne veya paylaşıma erişemez.
 
 ### <a name="to-fix-this-error"></a>Bu hatayı düzeltmek için
 

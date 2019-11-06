@@ -11,12 +11,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 91f80d648450447a6ba0e80f10e5c39764445cef
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 8b8b656aaefe4440e811378da2b84d1b944d4fb1
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189312"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661925"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Visual Studio IDE 'ye hoş geldiniz | Python
 
@@ -94,7 +94,7 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
     Visual Studio 2019 ' den başlayarak, kod için bir Visual Studio projesi oluşturmak zorunda kalmadan IntelliSense ve hata ayıklama gibi özelliklerden yararlanabilmek için Python kodu içeren bir klasörü açabilirsiniz.
 ::: moniker-end
 
-- [Visual Studio’yu kullanarak işbirliği yapma](/visualstudio/liveshare/use/vs)
+- [Visual Studio’yu kullanarak işbirliği yapma](/visualstudio/liveshare/)
   
     Visual Studio Live Share, kullandığınız programlama diline veya oluşturmakta olduğunuz uygulama türlerine bakılmaksızın diğer kişilerle gerçek zamanlı olarak birlikte düzenleme ve hata ayıklama yapmanızı sağlar. 
 

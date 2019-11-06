@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b204d6824f06037341420d27083c120e6e4b2a95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9013d7be60a8091f7ce4fc4fe92fa4acaef43720
+ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649298"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73636530"
 ---
 # <a name="install-net-compiler-platform-code-analyzers"></a>.NET Compiler Platform kodu Çözümleyicileri yüklemesi
 
@@ -26,7 +26,7 @@ Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kü
 
 1. Www.nuget.org üzerine yüklemek istediğiniz çözümleyici paketini bulun.
 
-   Örneğin, kodunuzu güvenlik ve performans sorunlarıyla ilgili olarak denetlemek için [Microsoft FxCop çözümleyicileri 'ni yüklemek](install-fxcop-analyzers.md#nuget-package) isteyebilirsiniz. Veya kod tabanınızdaki stil sorunlarını aramak için [Stylecopçözümleyicileri](https://www.nuget.org/packages/stylecop.analyzers/) ' ni de yükleyemezsiniz.
+   Örneğin, kodunuzu güvenlik ve performans sorunlarıyla ilgili olarak denetlemek için [Microsoft FxCop çözümleyicileri 'ni yüklemek](install-fxcop-analyzers.md#nuget-package) isteyebilirsiniz. Ya da, kod tabanınızdaki stil sorunlarını aramak için [StyleCop. çözümleyiciler](https://www.nuget.org/packages/stylecop.analyzers/) ' i de yüklemelisiniz.
 
 2. Paketi, paket [Yöneticisi konsolunu](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) veya [Paket Yöneticisi Kullanıcı arabirimini](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)kullanarak Visual Studio 'ya yükler.
 

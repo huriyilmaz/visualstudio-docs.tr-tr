@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 263759cc463bf21afa20877db320b4c83f1dc761
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: b7d68a23ffba12e9654ac047629bd64ecfae4bb6
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187529"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661898"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>Simülatörde UWP uygulamaları çalıştırma
 
@@ -88,7 +88,7 @@ Etkileşim modunu iki parmağınızla bir Pinç ve yakınlaştırma hareketlerin
  Simülatör 90 derece bir yöne döndürerek dikey ve yatay arasındaki cihaz yönünü değiştirebilirsiniz.
 
 > [!NOTE]
-> Simülatör bir projenin [DisplayProperties. oto Rotationpreferences](/uwp/api/Windows.Graphics.Display.DisplayProperties#Windows_Graphics_Display_DisplayProperties_AutoRotationPreferences) özelliğini dikkate almaz. Örneğin, projeniz yönü `Landscape`olarak ayarlarsa ve simülatörü dikey yönlendirmeye döndürdüğünüzde simülatör görüntü görüntüsü de döndürülür ve yeniden boyutlandırılır. Bu ayarları gerçek bir cihazda test edin.
+> Simülatör bir projenin [DisplayProperties. oto Rotationpreferences](/uwp/api/windows.graphics.display.displayproperties.autorotationpreferences) özelliğini dikkate almaz. Örneğin, projeniz yönü `Landscape`olarak ayarlarsa ve simülatörü dikey yönlendirmeye döndürdüğünüzde simülatör görüntü görüntüsü de döndürülür ve yeniden boyutlandırılır. Bu ayarları gerçek bir cihazda test edin.
 
 > [!NOTE]
 > Simülatör 'in bir kenarının, üzerinde görüntülenen ekrandan daha büyük olması için simülatörü döndürdüğünüzde, simülatör ekran içine sığacak şekilde otomatik olarak yeniden boyutlandırılır. Yeniden döndürürseniz simülatör özgün boyutuna yeniden boyutlandırılmaz.

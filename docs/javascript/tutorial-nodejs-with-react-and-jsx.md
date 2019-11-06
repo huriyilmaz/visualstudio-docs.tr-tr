@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: c5f3c4a0a2acdf73aae96c5cb5629252e712da64
-ms.sourcegitcommit: ee9c55616a22addc89cf1cf1942bf371d73e2e11
+ms.openlocfilehash: 2f14a5f2255f7ba1b077ead60147a6df407970fc
+ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73618116"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73636564"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Öğretici: Visual Studio 'da Node. js ve tepki verme uygulaması oluşturma
 
@@ -386,6 +386,8 @@ Visual Studio 2019 ' den başlayarak bir derleme betiği gereklidir. Transpiling
 
 Önceki bölümde, hata ayıklayıcıyı sunucu tarafı Node. js koduna eklemiş olursunuz. Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı tepki kodunda isabet kesme noktaları eklemek için, hata ayıklayıcının doğru süreci belirlemesine yardımcı olması gerekir. Bunu etkinleştirmenin bir yolu aşağıda verilmiştir.
 
+### <a name="prepare-the-browser-for-debugging"></a>Tarayıcıyı hata ayıklama için hazırlama
+
 ::: moniker range=">=vs-2019"
 Bu senaryo için, IDE veya Chrome 'da **Microsoft Edge Beta** adlı Microsoft Edge (Kmıum) kullanın.
 ::: moniker-end
@@ -398,30 +400,38 @@ Bu senaryo için Chrome ' ı kullanın.
    Diğer tarayıcı örnekleri tarayıcının hata ayıklama etkinken açılmasını önleyebilir. (Tarayıcı uzantıları çalışıyor olabilir ve tam hata ayıklama modunu engelleyebilir, bu nedenle beklenmedik Chrome örneklerini bulmak için Görev Yöneticisi 'Ni açmanız gerekebilir.)
 
    ::: moniker range=">=vs-2019"
-   Microsoft Edge (Kmıum) için tüm Chrome örneklerini de kapatın. Her iki tarayıcı de kmıum Code tabanını paylaştığından, bu en iyi sonuçları verir.
+   Microsoft Edge (Kmıum) için tüm Chrome örneklerini de kapatın. Her iki tarayıcı de kmıum Code tabanını kullandığından, bu en iyi sonuçları verir.
    ::: moniker-end
 
-2. Windows **Başlat** düğmesinden **Çalıştır** komutunu açın (sağ tıklayıp **Çalıştır**' ı seçin) ve şu komutu girin:
+2. Hata ayıklama etkinken tarayıcınızı başlatın.
+
+    ::: moniker range=">=vs-2019"
+    Visual Studio 2019 ' den başlayarak, tarayıcı > başlatma sırasında `--remote-debugging-port=9222` bayrağını **hata ayıklama** araç çubuğundan ve sonra **Ekle** **' yi seçip** , sonra da **bağımsız değişkenler** alanında bayrağını ayarlayarak ayarlayabilirsiniz. Hata **ayıklamayla**hata ayıklama veya Chrome **ile kenar** gibi farklı bir kolay ad kullanın. Ayrıntılar için bkz. [sürüm notları](/visualstudio/releases/2019/release-notes-v16.2).
+
+    ![Tarayıcınızı hata ayıklama etkinken açılacak şekilde ayarlama](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
+
+    Alternatif olarak, Windows **Başlat** düğmesinden **Çalıştır** komutunu açın (sağ tıklayıp **Çalıştır**' ı seçin) ve şu komutu girin:
+
+    `msedge --remote-debugging-port=9222`
+
+    Veya
 
     `chrome.exe --remote-debugging-port=9222`
-    ::: moniker range=">=vs-2019"
-    veya, `msedge --remote-debugging-port=9222`
+    ::: moniker-end
+
+    ::: moniker range="vs-2017"
+    Windows **Başlat** düğmesinden **Çalıştır** komutunu açın (sağ tıklayıp **Çalıştır**' ı seçin) ve şu komutu girin:
+
+    `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
 
     Bu, tarayıcınızı hata ayıklama etkin olarak başlatır.
 
-    ::: moniker range=">=vs-2019"
-
-    > [!TIP]
-    > Visual Studio 2019 ' den başlayarak, tarayıcı > başlatma sırasında `--remote-debugging-port` bayrağını **hata ayıklama** araç çubuğundan ve sonra **Ekle** **' yi seçip** , sonra da **bağımsız değişkenler** alanında bayrağını ayarlayarak ayarlayabilirsiniz. Hata **ayıklamayla**hata ayıklama veya Chrome **ile kenar** gibi farklı bir kolay ad kullanın. Ayrıntılar için bkz. [sürüm notları](/visualstudio/releases/2019/release-notes-v16.2).
-
-    ![Tarayıcınızı hata ayıklama etkinken açılacak şekilde ayarlama](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
-
-    ::: moniker-end
-
     Uygulama henüz çalışmıyor, bu nedenle boş bir tarayıcı sayfası alırsınız.
 
-3. Visual Studio 'ya geçin ve kaynak kodunuzda *App-Bundle. js* ya da *app. TSX*olarak bir kesme noktası ayarlayın.
+### <a name="attach-the-debugger-to-client-side-script"></a>Hata ayıklayıcıyı istemci tarafı betiğe iliştirme
+
+1. Visual Studio 'ya geçin ve kaynak kodunuzda *App-Bundle. js* ya da *app. TSX*olarak bir kesme noktası ayarlayın.
 
     *App-Bundle. js*için, aşağıdaki çizimde gösterildiği gibi `render()` işlevindeki kesme noktasını ayarlayın:
 
@@ -433,7 +443,7 @@ Bu senaryo için Chrome ' ı kullanın.
 
     ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
 
-4. Kesme noktasını *. TSX* dosyasında ( *App-Bundle. js*yerine) ayarlıyorsanız, *WebPack-config. js*' yi güncelleştirmeniz gerekir. Aşağıdaki kodu değiştirin:
+2. Kesme noktasını *. TSX* dosyasında ( *App-Bundle. js*yerine) ayarlıyorsanız, *WebPack-config. js*' yi güncelleştirmeniz gerekir. Aşağıdaki kodu değiştirin:
 
     ```javascript
     output: {
@@ -450,24 +460,31 @@ Bu senaryo için Chrome ' ı kullanın.
     },
     ```
 
-    Bu, Visual Studio 'da hata ayıklamayı etkinleştirmek için yalnızca geliştirme bir ayardır. Bu ayar, uygulamayı oluştururken *App-Bundle. js. Map*olan kaynak eşlemesi dosyasında oluşturulan başvuruları geçersiz kılmanıza olanak tanır. Varsayılan olarak, kaynak eşlemesi dosyasındaki WebPack başvuruları, Visual Studio 'nun *app. TSX*kaynak dosyasını bulmasını önleyen *WebPack:///* önekini içerir. Özellikle, bu değişikliği yaptığınızda, *app. TSX*kaynak dosyasına yönelik başvuru, hata ayıklamayı sağlayan *WebPack:///./app.TSX* olarak *./app. TSX*olarak değiştirilir.
+    Bu, Visual Studio 'da hata ayıklamayı etkinleştirmek için yalnızca geliştirme bir ayardır. Bu ayar, uygulamayı oluştururken *App-Bundle. js. Map*kaynak eşleme dosyasındaki oluşturulan başvuruları geçersiz kılmanızı sağlar. Varsayılan olarak, kaynak eşleme dosyasındaki WebPack başvuruları, Visual Studio 'Nun *app. TSX*kaynak dosyasını bulmasını önleyen *WebPack:///* önekini içerir. Özellikle, bu değişikliği yaptığınızda, *app. TSX*kaynak dosyasına yönelik başvuru, hata ayıklamayı sağlayan *WebPack:///./app.TSX* olarak *./app. TSX*olarak değiştirilir.
 
-5. Visual Studio 'da hata ayıklama hedefi olarak hedef tarayıcınızı seçin, ardından uygulamayı tarayıcıda çalıştırmak için **Ctrl**+**F5** tuşuna**basın (hata ayıklama > ** **başlatın**).
+3. Visual Studio 'da hata ayıklama hedefi olarak hedef tarayıcınızı seçin, ardından uygulamayı tarayıcıda çalıştırmak için **Ctrl**+**F5** tuşuna**basın (hata ayıklama > ** **başlatın**).
+
+    ::: moniker range=">=vs-2019"
+    Kolay ada sahip bir tarayıcı yapılandırması oluşturduysanız, hata ayıklama hedefi olarak bunu seçin.
+    ::: moniker-end
 
     Uygulama yeni bir tarayıcı sekmesinde açılır.
 
-6. **Işleme eklemek** >  **Hata Ayıkla** ' yı seçin.
+4. **Işleme eklemek** >  **Hata Ayıkla** ' yı seçin.
 
-7. **Işleme İliştir** iletişim kutusunda, ekleyebileceğiniz tarayıcı örneklerinin filtrelenmiş bir listesini alın.
+    > [!TIP]
+    > Visual Studio 2017 ' den başlayarak, bu adımları izleyerek işleme ilk kez iliştirdikten sonra, **işlem için yeniden iliştir** > **Hata Ayıkla** ' yı seçerek aynı işleme hızlıca tekrar iliştirebilirsiniz.
+
+5. **Işleme İliştir** iletişim kutusunda, ekleyebileceğiniz tarayıcı örneklerinin filtrelenmiş bir listesini alın.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' de, **Ekle** alanında doğru hedef tarayıcı, **JavaScript (Chrome)** veya **JavaScript (Microsoft Edge-kmıum)** seçeneğini belirleyin, arama sonuçlarını filtrelemek için filtre kutusuna **Chrome** veya **Edge** yazın. Kolay ada sahip bir tarayıcı yapılandırması oluşturduysanız bunun yerine bunu seçin.
+    Visual Studio 2019 ' de, **Ekle** alanına hedef tarayıcınız, **JavaScript (Chrome)** veya **JavaScript (Microsoft Edge-ucmıum)** için doğru hata ayıklayıcıyı seçin, filtre kutusuna **grafik** Arama sonuçları.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Visual Studio 2017 ' de, **Ekle** alanına **WebKit Code** ' u seçin, arama sonuçlarını filtrelemek için filtre kutusuna **Chrome** yazın.
     ::: moniker-end
 
-8. Doğru ana bilgisayar bağlantı noktasıyla (Bu örnekte localhost) tarayıcı işlemini seçin ve **Ekle**' yi seçin.
+6. Doğru ana bilgisayar bağlantı noktasıyla (Bu örnekte localhost) tarayıcı işlemini seçin ve **Ekle**' yi seçin.
 
     Doğru tarayıcı örneğini seçmenize yardımcı olması için, **başlık** alanında bağlantı noktası (1337) de görünebilir.
 
@@ -485,9 +502,9 @@ Bu senaryo için Chrome ' ı kullanın.
     > [!TIP]
     > Hata ayıklayıcı iliştirilemez ve "işleme iliştirilemiyor" iletisini görürsünüz. İşlem geçerli durumda geçerli değil. ", tarayıcı hata ayıklama modunda başlatılmadan önce hedef tarayıcının tüm örneklerini kapatmak için Görev Yöneticisi 'Ni kullanın. Tarayıcı uzantıları çalışıyor ve tam hata ayıklama modu engelleniyor olabilir.
 
-9. Kesme noktası olan kod zaten yürütüldüğünden, kesme noktasına isabet etmek için tarayıcı sayfanızı yenileyin.
+7. Kesme noktası olan kod zaten yürütüldüğünden, kesme noktasına isabet etmek için tarayıcı sayfanızı yenileyin.
 
-    Hata ayıklayıcıda duraklalarken, değişkenlerin üzerine giderek ve hata ayıklayıcı pencerelerini kullanarak uygulamanızın durumunu inceleyebilirsiniz. Kod aracılığıyla (**F5**, **F10**ve **F11**) hata ayıklayıcıyı ilerleyebilirsiniz.
+    Hata ayıklayıcıda duraklalarken, değişkenlerin üzerine giderek ve hata ayıklayıcı pencerelerini kullanarak uygulamanızın durumunu inceleyebilirsiniz. Kod aracılığıyla (**F5**, **F10**ve **F11**) hata ayıklayıcıyı ilerleyebilirsiniz. Temel hata ayıklama özellikleri hakkında daha fazla bilgi için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
 
     Daha önce, ortamınız ve tarayıcı durumlarınızla birlikte, daha önce izlediğiniz adımlara bağlı olarak, *App-Bundle. js* ya da *app. TSX*içindeki eşleştirilmiş konumunda kesme noktasına ulaşırsınız. Her iki durumda da kodun içinde ilerleyebileceğiniz değişkenleri inceleyebilirsiniz.
 
@@ -495,14 +512,11 @@ Bu senaryo için Chrome ' ı kullanın.
 
       * Tarayıcıyı hata ayıklama modunda çalıştırabilmeniz için Chrome uzantıları da dahil olmak üzere tüm tarayıcı örneklerini kapattınız (Görev Yöneticisi kullanılarak). Tarayıcıyı hata ayıklama modunda başlattığınızdan emin olun.
 
-      * Kaynak eşlemesi dosyanızın, Visual Studio hata ayıklayıcısının *app. TSX*' i bulmasını önleyen *./app.exe* ( *WebPack:///./app.TSX*değil) öğesine bir başvuru içerdiğinden emin olun.
+      * Kaynak eşleme dosyanızın, Visual Studio hata ayıklayıcısının *app. TSX*' i bulmasını önleyen *./app.exe* ( *WebPack:///./app.TSX*değil) öğesine yönelik bir başvuru içerdiğinden emin olun.
 
        Alternatif olarak, *app. TSX* içindeki koda kesmeniz ve bunu yapamazsanız, *app. tsx*'teki `debugger;` Ifadesini kullanmayı deneyin veya Chrome Geliştirici Araçları (veya Microsoft Edge için F12 araçları) kesme noktaları ayarlayın.
 
-   * *App-Bundle. js* ' deki kodu kesmeniz gerekiyorsa ve bunu yapamadığından, *App-Bundle. js. map*kaynak eşlemesi dosyasını kaldırın.
-
-     > [!TIP]
-     > Bu adımları izleyerek işleme ilk kez iliştirdikten sonra, **hata ayıkla**  > **işleme yeniden iliştir**' i seçerek Visual Studio 2017 ' de aynı işleme hızlıca yeniden iliştirebilirsiniz.
+   * *App-Bundle. js* ' deki kodu kesmeniz gerekiyorsa ve bunu yapamadığından, *App-Bundle. js. map*kaynak eşleme dosyasını kaldırın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

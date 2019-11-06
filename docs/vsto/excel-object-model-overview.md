@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29ede9dd29952e87e7f1dd76875905973bada6a6
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: cf81dea230c2cfc33eb19ca001d8c9ed06b0489c
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986088"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661854"
 ---
 # <a name="excel-object-model-overview"></a>Excel nesne modeline genel bakış
   Excel Microsoft Office kullanan çözümler geliştirmek için Excel nesne modeli tarafından sunulan nesnelerle etkileşim kurabilirsiniz. Bu konu, en önemli nesneleri tanıtır:
@@ -103,7 +103,7 @@ ms.locfileid: "72986088"
  Excel nesne modeli hakkında tüm bilgiler için Excel birincil birlikte çalışma derlemesi (PIA) başvurusuna ve VBA nesne modeli başvurusuna başvurabilirsiniz.
 
 ### <a name="primary-interop-assembly-reference"></a>Birincil birlikte çalışma derleme başvurusu
- Excel PIA başvuru belgeleri, Excel için birincil birlikte çalışma derlemesindeki türleri açıklar. Bu belge şu konumdan edinilebilir: [Excel 2010 birincil birlikte çalışma derleme başvurusu](/visualstudio/vsto/office-primary-interop-assemblies&view=vs-2019).
+ Excel PIA başvuru belgeleri, Excel için birincil birlikte çalışma derlemesindeki türleri açıklar. Bu belge şu konumdan edinilebilir: [Excel 2010 birincil birlikte çalışma derleme başvurusu](/visualstudio/vsto/office-primary-interop-assemblies).
 
  PIA içindeki sınıflar ve arabirimler arasındaki farklar ve PIA 'teki olayların nasıl uygulandığı gibi, Excel PIA 'in tasarımı hakkında daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](/previous-versions/office/office-12/ms247299(v=office.12)).
 
