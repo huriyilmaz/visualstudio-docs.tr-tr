@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 046f3bbca7b66d14e9b6a3eae96b613492292be0
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: fcb30056021a865d0b0e605de462ff72ced5a383
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189194"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661895"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>SharePoint Çözümlerinde Sorun giderme
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklayıcısını kullanarak SharePoint Çözümlerinde hata ayıkladığınızda aşağıdaki sorunlar veya uyarılar oluşabilir. Daha fazla bilgi için bkz. [SharePoint 2007 Iş akışı çözümlerinde hata ayıklama](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247).
@@ -172,16 +172,16 @@ ms.locfileid: "73189194"
 ### <a name="resolution"></a>Çözüm
  Bu sorunu çözmek için modeli el ile silin ve ardından çözümü yeniden dağıtın.  Modeli aşağıdaki araçlardan birini kullanarak silebilirsiniz:
 
-- SharePoint 2010 merkezi yönetimi. Daha fazla bilgi için bkz. Microsoft TechNet Web sitesindeki [BDC model yönetimi](/previous-versions/office/sharepoint-server-2010/ee524073(v=office.14)#deleteamodel) .
+- SharePoint 2010 merkezi yönetimi. Daha fazla bilgi için bkz. Microsoft TechNet Web sitesindeki [BDC model yönetimi](/previous-versions/office/sharepoint-server-2010/ee524073(v=office.14)#delete-a-bdc-model) .
 
-- Windows PowerShell. Bu komutu komut istemine yazarak modeli silebilirsiniz: **Remove-SPBusinessDataCatalogModel**. Daha fazla bilgi için bkz. Microsoft TechNet Web sitesindeki [genel cmdlet 'ler (SharePoint Server 2010)](/powershell/module/sharepoint-server/&view=sharepoint-ps) .
+- Windows PowerShell. Bu komutu komut istemine yazarak modeli silebilirsiniz: **Remove-SPBusinessDataCatalogModel**. Daha fazla bilgi için bkz. Microsoft TechNet Web sitesindeki [genel cmdlet 'ler (SharePoint Server 2010)](/powershell/module/sharepoint-server) .
 
 ## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>SharePoint 'te bir görsel web bölümünü görüntülemeye çalıştığınızda bir hata görüntüleniyor
  Bu sorun, Kullanıcı denetiminin **Path** ÖZELLIĞI "controltemplates\\" dizesiyle başlamamasından oluşur.
 
 ### <a name="error-messages"></a>Hata iletileri
 
-- '/_CONTROLTEMPLATES/ *\<proje adı >* / *\<Web bölümü adı* >/\<*Kullanıcı denetimi adı >* . ascx ' yok.
+- '/_CONTROLTEMPLATES/*\<proje adı >*/*\<Web bölümü adı* >/\<*Kullanıcı denetimi adı >*. ascx ' yok.
 
 - '/' Uygulamasında Sunucu Hatası.
 
