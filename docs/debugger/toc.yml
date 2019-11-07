@@ -654,18 +654,8 @@
               href: javascript-console-commands.md
             - name: Klavye kısayolları (HTML ve JavaScript)
               href: keyboard-shortcuts-html-and-javascript.md
-            - name: İstemci tarafı betikleri
-              items:
-                - name: İstemci tarafı betikte hata ayıklama
-                  href: client-side-script-debugging.md
-                - name: Betik hata ayıklama sınırlamaları
-                  href: limitations-on-script-debugging.md
-                - name: Ekleme (betik)
-                  items:
-                    - name: Betiğe ekleme
-                      href: how-to-attach-to-script.md
-                    - name: 'Uyarı: Betik hata ayıklama devre dışı'
-                      href: warning-script-debugging-disabled.md
+            - name: 'Uyarı: Betik hata ayıklama devre dışı'
+              href: warning-script-debugging-disabled.md
         - name: WCF hizmetleri
           items:
             - name: WCF hizmetlerinde hata ayıklama
