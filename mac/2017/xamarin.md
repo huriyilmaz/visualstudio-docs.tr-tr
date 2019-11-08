@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/12/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
-ms.openlocfilehash: c9b150c55e54b851e96e3bfb22e5e9a77646f7d7
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 7d9cfbcafc90340d15172dd0d862ef9904fd6715
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872252"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716116"
 ---
 # <a name="xamarin-mobile-app-development"></a>Xamarin mobil uygulama geliştirme
 
@@ -20,7 +20,7 @@ ms.locfileid: "68872252"
 
 Mac için Visual Studio kendi tümleşik Android SDK yöneticisi 'ne sahiptir ve uygulamanızın hedeflemesini istediğiniz SDK 'lara erişmenizi sağlar.
 
-Android uygulamaları için Mac için Visual Studio, kendi tasarımcısını içerir ve bu, kullanıcı arabirimlerini görsel `.axml` olarak oluşturmak için Android dosyalarıyla birlikte kullanılır. Mac için Visual Studio, aşağıdaki görüntüde gösterildiği gibi bu dosyaları Android Designer açacak:
+Android uygulamaları için Mac için Visual Studio, kendi tasarımcısını içerir ve bu, kullanıcı arabirimlerini görsel olarak oluşturmak için Android `.axml` dosyaları ile birlikte kullanılabilir. Mac için Visual Studio, aşağıdaki görüntüde gösterildiği gibi bu dosyaları Android Designer açacak:
 
 ![Android kullanıcı arabirimi Tasarımcısı](media/intro-image31.png)
 
@@ -32,7 +32,7 @@ Android Designer hakkında daha fazla bilgi için bkz. [Xamarin. Android Designe
 
 ![iOS görsel taslak Tasarımcısı](media/intro-image30.png)
 
-İOS tasarımcısını kullanma hakkında daha fazla bilgi için [Tasarımcı](https://docs.microsoft.com/xamarin/ios/user-interface/designer/?tabs=macos) kılavuzlarını inceleyin.
+İOS tasarımcısını kullanma hakkında daha fazla bilgi için [Tasarımcı](/xamarin/ios/user-interface/designer/?tabs=macos) kılavuzlarını inceleyin.
 
 ### <a name="mac"></a>Mac
 

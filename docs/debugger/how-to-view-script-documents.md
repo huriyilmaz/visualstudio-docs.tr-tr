@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: betik belgelerini görüntüleme | Microsoft Docs'
-ms.date: 01/08/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -15,19 +15,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7696122cc9f0d431f310b8d6efb10819af995823
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5e362e0504c4ed2584bbbbea687fe3c58fc79edb
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731860"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714433"
 ---
 # <a name="how-to-view-script-documents-javascript"></a>Nasıl yapılır: betik belgelerini görüntüleme (JavaScript)
 
 Sunucu tarafı betik dosyaları Çözüm Gezgini görünür. İstemci tarafı betik dosyaları yalnızca hata ayıklama modundayken veya kesme modundayken görülebilir. İstemci tarafı betik dosyaları, **betik belgeleri** düğümünde görünür.
 
+Dinamik olarak sayfa üreten bazı uygulama türleri için, tarayıcıya yüklenen bir betik belgesinden bir kesme noktası ayarladığınızda kesme modu ve hata ayıklama girmek daha kolay olur. Benzer şekilde, bir komut dosyası belgesinden kesme moduna girmek için `debugger` ifadesini de ekleyebilirsiniz. Bu makalede, bu belgelerin nasıl görüntüleneceği gösterilmektedir.
+
 > [!NOTE]
-> @No__t_0 ' den önceki, sunucu tarafı komut dosyasından oluşturulan istemci tarafı betik dosyaları komut dosyası Gezgini penceresinde göründü.
+> [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]' den önceki, sunucu tarafı komut dosyasından oluşturulan istemci tarafı betik dosyaları komut dosyası Gezgini penceresinde göründü.
 
 ### <a name="to-view-a-server-side-script-document"></a>Sunucu tarafı betik belgesini görüntülemek için
 

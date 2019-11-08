@@ -1,42 +1,42 @@
 ---
 title: Mac için Visual Studio’yu Genişletme
-description: Mac özellikleri ve işlevleri için Visual Studio uzantı paketleri adlı modülleriyle genişletilebilir. Bu kılavuzun ilk bölümü, bir basit bir belgeye tarih ve saat için Visual Studio'yu Mac uzantı paketi oluşturur. İkinci bölümü, bu kılavuzun uzantı paketi sistemi temelleri ve bazı çekirdek temelini Mac için Visual Studio'nun API'leri sunar.
+description: Mac için Visual Studio özellikleri ve işlevleri, uzantı paketleri olarak adlandırılan modüllerle genişletilebilir. Bu kılavuzun ilk bölümü, bir belgeye tarih ve saat eklemek için basit bir Mac için Visual Studio uzantısı paketi oluşturur. Bu kılavuzun ikinci bölümünde, Uzantı paketi sisteminin temelleri ve Mac için Visual Studio temelini oluşturan bazı çekirdek API 'Leri tanıtılmıştır.
 author: conceptdev
 ms.author: crdun
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 26290a5e70a9f4b0f6eeb8df5727ef4f04662136
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 87a4fae1bd5430037b34297f803a6d955a052f68
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67890631"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716945"
 ---
 # <a name="extending-visual-studio-for-mac"></a>Mac için Visual Studio’yu Genişletme
 
-Mac için Visual Studio modülleri adlı bir dizi oluşur *uzantı paketleri*. Uzantı paketleri gibi ek bir dil veya yeni bir proje şablonu için destek, Mac için Visual Studio için yeni işlevleri tanıtmak için kullanabilirsiniz.
+Mac için Visual Studio, *uzantı paketleri*olarak adlandırılan bir modül kümesinden oluşur. Uzantı paketlerini, ek bir dil veya yeni bir proje şablonu için destek gibi Mac için Visual Studio yeni işlevler tanıtmak için kullanabilirsiniz.
 
-Uzantı paketleri yapı gelen *uzantısı* diğer uzantı paketleri noktaları. Uzantı, bağlı bir menü veya IDE komutların listesini gibi Genişletilebilir alanlarını yer tutucular noktalarıdır. Uzantı paketi, bir düğüm olarak adlandırılan yeni bir menü öğesi ya da yeni bir komut gibi bir uzantı yapılandırılmış verilerin kaydederek bir uzantı noktası oluşturabilirsiniz. Her uzantı noktası uzantıları, belirli bir türdeki gibi kabul bir *komut*, *paneli*, veya *FileTemplate*. Uzantı noktaları içeren bir modül olarak adlandırılan bir *eklentisi konak*gibi diğer uzantı paketleri tarafından genişletilebilir.
+Uzantı paketleri diğer uzantı paketlerinin *uzantı* noktalarından oluşturur. Uzantı noktaları, bir menü veya IDE komutları listesi gibi, üzerine genişletilebilen alanlara yönelik yer tutuculardır. Uzantı paketi, yeni bir menü öğesi veya yeni bir komut gibi bir uzantı olarak adlandırılan yapılandırılmış verilerin bir düğümünü kaydederek bir uzantı noktasından derleyebilir. Her uzantı noktası, *komut*, *panel*veya *dosya şablonu*gibi belirli tür uzantıları kabul eder. Uzantı noktaları içeren bir modüle, diğer uzantı paketleri tarafından genişletila, *eklenti Konağı*denir.
 
-Mac için Visual Studio özelleştirmek için yapıları bir uzantı paketi, Mac için Visual Studio'da önceden mevcut olan kitaplıkları içindeki eklenti ana bulunan uzantı noktaları tarafından Aşağıdaki diyagramda gösterildiği gibi oluşturabilirsiniz:
+Mac için Visual Studio özelleştirmek için, aşağıdaki diyagramda gösterildiği gibi, Mac için Visual Studio önceden var olan kitaplıkların içindeki eklenti konaklarından bulunan uzantı noktalarından bulunan uzantı paketleri oluşturabilirsiniz:
 
 ![Eklenti mimarisi](media/extending-visual-studio-mac-addin1.png)
 
-Mac için Visual Studio'dan oluşturmak bir uzantı paketi için sırada Visual Studio'da genişletme noktaları Mac IDE için önceden varolan yapı uzantıları olması gerekir. Uzantı paketinin bir eklenti konak tanımlanmış bir uzantı noktası kullanır, olması bildirilir bir _bağımlılık_ üzerinde bu uzantı paketi.
+Bir uzantı paketinin Mac için Visual Studio derlemesi için, Mac için Visual Studio IDE içindeki önceden var olan uzantı noktalarından oluşturan uzantılara sahip olması gerekir. Bir uzantı paketi, eklenti konağında tanımlı bir uzantı noktasını temel aldığında, bu uzantı paketinde bir _bağımlılık_ sahip olduğu söylenir.
 
-Bu modüler bir tasarım avantajdır Mac için Visual Studio Genişletilebilir--bağlı özel uzantı paketleri ile oluşturulabilir birçok uzantı noktaları vardır. Geçerli uzantı paketleri örnekler için destek C# ve F#, hata ayıklayıcı, Araçlar ve proje şablonları.
+Bu modüler tasarımın avantajı Mac için Visual Studio Genişletilebilir olduğundan, özel uzantı paketleriyle birlikte derleyebilen birçok uzantı noktası vardır. Geçerli uzantı paketlerine örnek olarak, ve C# F#hata ayıklayıcı araçları ve proje şablonları için destek verilebilir.
 
 > [!NOTE]
-> Eklenti Oluşturucu önce 1.2 oluşturulmuş bir oluşturucu eklenti projesine sahip olmak, projenizi adımlarda belirtildiği gibi geçiş geçmeniz [burada](https://mhut.ch/addinmaker/1.2).
+> Eklenti Oluşturucu 1,2 ' den önce oluşturulmuş bir eklenti Oluşturucu projeniz varsa, [Aşağıdaki adımlarda açıklandığı](https://mhut.ch/addinmaker/1.2)gibi projenizi geçirmeniz gerekir.
 
 <!---The [Walkthrough](~/extending-visual-studio-mac-walkthrough.md) topic explains how to build an extension package that uses a *Command* to insert the date and time into an open text document.--->
 
-Bu bölümde, eklenti Oluşturucu tarafından üretilen farklı dosyalar bakar ve komut uzantısı verileri gerektirir.
+Bu bölüm, eklenti Oluşturucu tarafından oluşturulan farklı dosyalara ve bir komut uzantısının gerektirdiği verilere bakar.
 
 ## <a name="attribute-files"></a>Öznitelik dosyaları
 
-Uzantı paketleri C# özniteliklerinde kullanıcının adını, sürüm, bağımlılıklar ve diğer bilgileri hakkındaki meta verileri depolar. Eklenti Oluşturucu iki dosya oluşturur `AddinInfo.cs` ve `AssemblyInfo.cs` depolamak ve bu bilgileri düzenlemek için. Uzantı paketleri benzersiz bir kimliği olması gerekir ve içinde belirtilen namespace kendi *eklentisi özniteliği*:
+Uzantı paketleri ad, sürüm, bağımlılıklar ve diğer bilgilerle ilgili meta verileri C# özniteliklerde depolar. Eklenti Oluşturucu, bu bilgileri depolamak ve düzenlemek için `AddinInfo.cs` ve `AssemblyInfo.cs` iki dosya oluşturur. Uzantı paketleri, *eklenti özniteliğinde*belirtilen benzersiz bir kimliğe ve ad alanına sahip olmalıdır:
 
 ```csharp
 [assembly:Addin (
@@ -46,19 +46,19 @@ Uzantı paketleri C# özniteliklerinde kullanıcının adını, sürüm, bağım
 )]
 ```
 
-Uzantı paketleri ayrıca bunlar takın uzantı noktaları kendi uzantı paketleri bağımlılıklarını bildirmeniz gerekir. Bunlar, oluşturma zamanında otomatik olarak başvurulur.
+Uzantı paketleri, içinde çalıştıkları uzantı noktalarına sahip olan uzantı paketlerinde bağımlılıklar da bildirmelidir. Bunlar derleme zamanında otomatik olarak başvurulur.
 
-Ayrıca, ek başvurular proje çözüm panelinde eklenti referans düğümün aracılığıyla tarafından aşağıdaki görüntüde gösterildiği şekilde eklenebilir:
+Ayrıca, aşağıdaki görüntüde gösterildiği gibi, projenin çözüm panelindeki eklenti başvurusu düğümü aracılığıyla ek başvurular eklenebilir:
 
-![Tarih ekran görüntüsü Ekle](media/extending-visual-studio-mac-addin13.png)
+![Tarih Ekle ekran görüntüsü](media/extending-visual-studio-mac-addin13.png)
 
-Bunlara karşılık gelen aynı zamanda sahiptirler `assembly:AddinDependency` başında eklenen öznitelikleri derleme zamanı. Meta veriler ve bağımlılık bildirimlerini yerinde olduktan sonra uzantı paketinin temel yapı taşlarını üzerinde odaklanabilirsiniz.
+Ayrıca, bunlara karşılık gelen `assembly:AddinDependency` öznitelikleri derleme zamanında eklenir. Meta veriler ve bağımlılık bildirimleri olduktan sonra, uzantı paketinin temel yapı taşlarına odaklanırsınız.
 
 ## <a name="extensions-and-extension-points"></a>Uzantılar ve uzantı noktaları
 
-(Bir tür), bir veri yapısını tanımlayan yer tutucu bir uzantı noktasıdır istediğiniz uzantıyı noktasınca belirtilen bir yapıya uyan veriler uzantı tanımlar. Ne tür uzantısı kendi bildiriminde kabul edebilir, uzantı noktaları belirtin. Uzantılar, tür adları veya uzantı yolları kullanarak bildirilir. Bkz: [uzantı noktası başvuru](https://github.com/mono/mono-addins/wiki/Extension-Points) ihtiyacınız uzantı noktası oluşturma hakkında daha ayrıntılı bir açıklama için.
+Uzantı noktası, bir veri yapısını (bir tür) tanımlayan bir yer tutucudur, ancak uzantı belirli bir uzantı noktası tarafından belirtilen yapıya uygun olan verileri tanımlar. Uzantı noktaları, bildiriminde kabul edebilecekleri uzantı türünü belirtir. Uzantılar, tür adları veya uzantı yolları kullanılarak bildirilmiştir. İhtiyaç duyduğunuz uzantı noktasının nasıl oluşturulacağı hakkında daha ayrıntılı bir açıklama için [uzantı noktası başvurusuna](https://github.com/mono/mono-addins/wiki/Extension-Points) bakın.
 
-Uzantı/uzantı noktası mimarisi, hızlı ve modüler bir Mac için Visual Studio geliştirme tutar.
+Uzantı/uzantı noktası mimarisi Mac için Visual Studio hızlı ve modüler geliştirmeyi korur.
 
 <!--Since there are a large number of extension types, this article focuses on the ones used in the extension package that was built in the [Walkthrough](~/extending-visual-studio-mac-walkthrough.md).-->
 
@@ -66,9 +66,9 @@ Uzantı/uzantı noktası mimarisi, hızlı ve modüler bir Mac için Visual Stud
 
 <!--[Walkthrough](~/extending-visual-studio-mac-walkthrough.md) uses a Command Extension - an extension that points to methods that are called every time it is executed. -->
 
-Komut uzantıları her zaman yürütülür çağrılan yöntemlere işaret eden uzantılarıdır.
+Komut uzantıları, her yürütüldüğünde çağrılan yöntemlere işaret eden uzantılardır.
 
-Komut uzantıları girdileri ekleme tarafından tanımlanan `/MonoDevelop/Ide/Commands` uzantı noktası. Bizim uzantısında tanımladığımız `Manifest.addin.xml` aşağıdaki kod ile:
+Komut uzantıları, `/MonoDevelop/Ide/Commands` uzantı noktasına girdi eklenerek tanımlanır. Aşağıdaki kodla `Manifest.addin.xml` uzantımızı tanımlıyoruz:
 
  ```xml
 <Extension path="/MonoDevelop/Ide/Commands/Edit">
@@ -79,16 +79,16 @@ Komut uzantıları girdileri ekleme tarafından tanımlanan `/MonoDevelop/Ide/Co
 </Extension>
 ```
 
-Uzantı düğüm, bu durumda takarak genişletme noktası belirtir bir path özniteliği içeren `/MonoDevelop/Ide/Commands/Edit`. Ayrıca, komutu bir üst düğüme görür. Komut düğümü aşağıdaki özniteliklere sahiptir:
+Uzantı düğümü, içinde bulunduğu uzantı noktasını belirten bir yol özniteliği içerir, bu durumda `/MonoDevelop/Ide/Commands/Edit`. Ayrıca, komutuna bir üst düğüm işlevi görür. Komut düğümü aşağıdaki özniteliklere sahiptir:
 
-* **Kimliği** -bu komut için bir tanımlayıcı belirtir. Komut tanımlayıcıları numaralandırma üyeleri bildirilmesi gerekir ve komutları için Commandıtems'lara bağlanmak için kullanılır.
-* **_etiketi** -menülerde gösterilecek metin.
-* **açı_klama** -araç çubuğu düğmeleri araç ipucu olarak gösterilecek metin.
-* **defaultHandler** -belirtir `CommandHandler` komutu güç katan sınıfı
+* **ID** -bu komut için tanımlayıcıyı belirtir. Komut tanımlayıcıları, numaralandırma üyeleri olarak bildirilmelidir ve komutları Commandıtems 'lara 'e bağlamak için kullanılır.
+* **_label** -menülerde gösterilecek metin.
+* **_description** -araç çubuğu düğmeleri için araç ipucu olarak gösterilecek metin.
+* **Defaulthandler** -komutu destekleyen `CommandHandler` sınıfını belirtir
 
 <!--To invoke the command from the Edit Menu, the walkthrough creates a CommandItem extension that plugs into the `/MonoDevelop/Ide/MainMenu/Edit` extension point:-->
 
-İçine takılan CommandItem uzantısı `/MonoDevelop/Ide/MainMenu/Edit` uzantı noktası, aşağıdaki kod parçacığında gösterilmiştir:
+`/MonoDevelop/Ide/MainMenu/Edit` uzantı noktasına takılan bir CommandItem uzantısı aşağıdaki kod parçacığında gösterilmiştir:
 
 ```xml
 <Extension path="/MonoDevelop/Ide/MainMenu/Edit">
@@ -96,11 +96,11 @@ Uzantı düğüm, bu durumda takarak genişletme noktası belirtir bir path özn
 </Extension>
 ```
 
-Bir menüye alt kimliği özniteliğinde belirtilen bir komutu bir CommandItem yerleştirir. Bu CommandItem genişletme `/MonoDevelop/Ide/MainMenu/Edit` komut etiket görünür kılan uzantı noktası **Düzen menüsünün**. Unutmayın **kimliği** CommandItem içinde komut düğümünün kimliğine karşılık gelen `InsertDate`. CommandItem kaldırmak için olsaydı **tarih Ekle** seçeneği Düzenle Menüsü'nden kaybolması.
+CommandItem, ID özniteliğinde belirtilen bir komutu bir menüye koyar. Bu CommandItem, komut etiketinin **düzenleme menüsünde**görünmesini sağlayan `/MonoDevelop/Ide/MainMenu/Edit` uzantı noktasını genişlettidir. CommandItem içindeki **kimliğin** , `InsertDate`komut düğümünün kimliğine karşılık geldiğini unutmayın. CommandItem öğesini kaldırdıysanız, **Ekle tarihi** seçeneği, düzenleme menüsünden kaybolur.
 
-### <a name="command-handlers"></a>Komut işleyicileri
+### <a name="command-handlers"></a>Komut Işleyicileri
 
-`InsertDateHandler` Uzantısıdır `CommandHandler` sınıfı. İki yöntem, onu geçersiz kılar `Update` ve `Run`. `Update` Yöntemi sorgulanan her bir komut bir menüde görüntülenen veya tuş bağlamaları yürütülür. Bilgisi nesnesi değiştirerek, komutunu devre dışı bırakmak veya görünmez yapma, dizi komutları ve daha fazlasını doldurun. Bu `Update` yöntemi devre dışı bırakır komut etkin bir bulamazsanız *belge* ile bir *TextEditor* metnine eklemek için:
+`InsertDateHandler`, `CommandHandler` sınıfının bir uzantısıdır. `Update` ve `Run`iki yöntemi geçersiz kılar. `Update` yöntemi, bir komut bir menüde gösterildiğinde veya anahtar bağlamaları aracılığıyla yürütüldüğünde sorgulanır. Bilgi nesnesini değiştirerek, komutu devre dışı bırakabilir veya görünmez yapabilir, dizi komutlarını doldurabilir ve daha fazlasını yapabilirsiniz. Bu `Update` yöntemi, içine metin eklemek için bir *TextEditor* ile etkin bir *belge* bulamazsa komutu devre dışı bırakır:
 
 ```csharp
 protected override void Update (CommandInfo info)
@@ -109,7 +109,7 @@ protected override void Update (CommandInfo info)
 }
 ```
 
-Geçersiz kılmak yeterlidir `Update` etkinleştirme veya komut gizleme için özel bir mantık varsa yöntemi. `Run` Yöntemini yürütür her bir kullanıcı Düzenle Menüsü'nden bir kullanıcı komutu seçtiğinde oluşan bu durumda bir komutu yürütür. Bu yöntem, metin düzenleyici giriş işaretini tarihi ve saati ekler:
+Yalnızca komutu etkinleştirmek veya gizlemek için özel mantığın olması durumunda `Update` yöntemini geçersiz kılmanız gerekir. `Run` yöntemi, bir Kullanıcı bir komutu her çalıştırdığında yürütülür ve bu durumda Kullanıcı düzenleme menüsünden komutu seçtiğinde oluşur. Bu yöntem, metin düzenleyicisinde giriş işaretine tarih ve saat ekler:
 
 ```csharp
 protected override void Run ()
@@ -120,7 +120,7 @@ protected override void Run ()
 }
 ```
 
-Komut türü içinde bir sabit listesi üye olarak bildirmek `DateInserterCommands`:
+Komut türünü `DateInserterCommands`bir numaralandırma üyesi olarak bildirin:
 
 ```csharp
 public enum DateInserterCommands
@@ -129,32 +129,32 @@ public enum DateInserterCommands
 }
 ```
 
-Bu komut ve CommandItem bağdaştırabilir - CommandItem seçildiğinde CommandItem komutu çağıran **Düzen menüsünün**.
+Bu, komutu ve CommandItem komutunu birleştirerek, **Düzenle menüsünden**CommandItem seçildiğinde komutları çağırır.
 
-## <a name="ide-apis"></a>IDE API'leri
+## <a name="ide-apis"></a>IDE API 'Leri
 
 <!--The extension package detailed in the [Walkthrough](~/extending-visual-studio-mac-walkthrough.md) deals with the Text Editor in Visual Studio for Mac, but this is only one of many possible areas for customization. -->
 
-Geliştirme için kullanılabilir alanları kapsamı hakkında daha fazla bilgi için bkz: [uzantı ağaç başvurusu](http://monodevelop.com/Developers/Articles/Extension_Tree_Reference) ve [API'sine genel bakış](http://monodevelop.com/Developers/Articles/API_Overview). Ayrıca başvurmak Gelişmiş uzantı paketleri oluştururken [Geliştirici makaleleri](http://monodevelop.com/Developers/Articles). Özelleştirme için alanları kısmi bir listesi aşağıdadır:
+Geliştirme için kullanılabilen alanların kapsamı hakkında bilgi için bkz. [uzantı ağacı başvurusu](https://www.monodevelop.com/developers/articles/extension-tree-reference/) ve [API 'ye genel bakış](https://www.monodevelop.com/developers/articles/api-overview/). Gelişmiş uzantı paketleri oluştururken de [Geliştirici makalelerine](https://www.monodevelop.com/developers/articles/)bakın. Özelleştirme için alanların kısmi bir listesi aşağıda verilmiştir:
 
-* Bölmeleri
-* Tuş bağlama şemalarını
+* La
+* Anahtar bağlama şemaları
 * İlkeler
-* Kod biçimlendiricileri
-* Proje dosya biçimleri
-* Tercihler panelleri
-* Seçenekleri panelleri
+* Kod biçimleri
+* Proje dosyası biçimleri
+* Tercihler bölmeleri
+* Seçenek bölmeleri
 * Hata ayıklayıcı protokolleri
-* Hata ayıklama görselleştiricileri
-* Çalışma alanı düzeni
+* Hata ayıklayıcı Görselleştiriciler
+* Çalışma alanı düzenleri
 * Çözüm paneli ağaç düğümleri
 * Kaynak Düzenleyicisi kenar boşlukları
-* Birim test altyapıları
+* Birim testi altyapıları
 * Kod oluşturucuları
 * Kod parçacıkları
 * Hedef çerçeveler
 * Hedef çalışma zamanı
-* VC arka uçları
+* VCS arka uçlar
 * Yeniden Düzenle
 * Yürütme işleyicileri
 * Söz dizimi vurgulama
@@ -162,8 +162,8 @@ Geliştirme için kullanılabilir alanları kapsamı hakkında daha fazla bilgi 
 ## <a name="additional-information"></a>Ek Bilgiler
 
 > [!NOTE]
-> Şu anda Mac için Visual Studio genişletilebilirlik senaryoları geliştirmeye çalışıyoruz Uzantıları oluşturma ve Ek Yardım veya bilgi gereksinim veya geri bildirim sağlamak isterseniz, lütfen doldurun [Mac uzantısı geliştirme için Visual Studio](https://aka.ms/vsmac-extensions-survey) formu.
+> Şu anda Mac için Visual Studio için genişletilebilirlik senaryolarını geliştirmeye çalışıyoruz. Uzantılar oluşturuyorsanız ve ek yardım veya bilgilere ihtiyacınız varsa veya geri bildirim sağlamak istiyorsanız, lütfen [Mac için Visual Studio uzantısı yazma](https://aka.ms/vsmac-extensions-survey) formunu girin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(Windows üzerinde) Visual Studio uzantıları geliştirme](/visualstudio/extensibility/starting-to-develop-visual-studio-extensions)
+- [Visual Studio uzantıları geliştirme (Windows üzerinde)](/visualstudio/extensibility/starting-to-develop-visual-studio-extensions)

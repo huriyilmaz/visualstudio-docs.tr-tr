@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 386a489faf859038cd0f529da74a0fbac07b7250
-ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
+ms.openlocfilehash: 7bd03ead39d0b2b5013075de017954f0c0c30e8c
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73636551"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714493"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Visual Studio 'da JavaScript veya TypeScript uygulamasında hata ayıklama
 
@@ -86,7 +86,7 @@ Bu senaryo için Chrome ' ı kullanın.
 
     `msedge --remote-debugging-port=9222`
 
-    Veya
+    veya
 
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
@@ -157,7 +157,7 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
 
     Hata ayıklayıcıda duraklalarken, değişkenlerin üzerine giderek ve hata ayıklayıcı pencerelerini kullanarak uygulamanızın durumunu inceleyebilirsiniz. Kod aracılığıyla (**F5**, **F10**ve **F11**) hata ayıklayıcıyı ilerleyebilirsiniz. Temel hata ayıklama özellikleri hakkında daha fazla bilgi için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
 
-    Daha önce izlediğiniz adımlara, ortamınız ve tarayıcı durumunuza bağlı olarak, transpiled *. js* dosyasında ya da kaynak dosyada kesme noktasına ulaşırsınız. Her iki durumda da kodun içinde ilerleyebileceğiniz değişkenleri inceleyebilirsiniz.
+    Uygulama türüne, daha önce izlediğiniz adımlara ve tarayıcı durumunuza benzer diğer faktörlere bağlı olarak bir transpiled *. js* dosyası ya da kaynak dosyasında kesme noktasına ulaşırsınız. Her iki durumda da kodun içinde ilerleyebileceğiniz değişkenleri inceleyebilirsiniz.
 
    * TypeScript, JSX veya *. Vue* kaynak dosyasındaki kodu kesmeniz gerekiyorsa ve bunu yapamadığından, [sorun giderme](#troubleshooting_source_maps) bölümünde açıklandığı gibi ortamınızın doğru şekilde ayarlandığından emin olun.
 
@@ -171,7 +171,7 @@ TypeScript, JSX veya *. Vue* kaynak dosyasındaki kodu kesmeniz gerekirse ve bun
       
 * [Tarayıcıyı hata ayıklama modunda başlattığınızdan](#prepare_the_browser_for_debugging)emin olun.
 
-* Kaynak eşleme dosyanızın kaynak dosyanıza doğru başvuruyu içerdiğinden ve Visual Studio hata ayıklayıcının kaynak dosyayı bulmasını önleyen *WebPack:///* gibi desteklenmeyen ön ekler içermediğinden emin olun. Örneğin, *WebPack:///.app.TSX* gibi bir başvuru, *./app5tsx*olarak düzeltilemeyebilir. Bunu kaynak eşleme dosyasında el ile veya özel bir yapı yapılandırması aracılığıyla yapabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklama için kaynak haritaları oluşturma](#generate_source_maps).
+* Kaynak eşleme dosyanızın kaynak dosyanıza doğru göreli yolu içerdiğinden ve Visual Studio hata ayıklayıcının kaynak dosyayı bulmasını önleyen *WebPack:///* gibi desteklenmeyen ön ekler içermediğinden emin olun. Örneğin, *WebPack:///.app.TSX* gibi bir başvuru, *./app5tsx*olarak düzeltilemeyebilir. Bunu kaynak eşleme dosyasında (test için yararlı olan) veya özel bir yapı yapılandırması aracılığıyla el ile yapabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklama için kaynak haritaları oluşturma](#generate_source_maps).
 
 Alternatif olarak, bir kaynak dosyada (örneğin, *app. TSX*) kodu kesmeniz gerekiyorsa ve bunu yapamazsanız, kaynak dosyadaki `debugger;` ifadesini kullanmayı deneyin veya bunun yerine Chrome Geliştirici Araçları (veya Microsoft Edge Için F12 araçları) kesme noktaları ayarlayın.
 

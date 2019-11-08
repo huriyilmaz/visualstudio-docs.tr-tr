@@ -1,34 +1,34 @@
 ---
 title: Derleme Eylemleri
-description: Bu makalede, C# projeleri için kullanılabilecek çeşitli yapı eylemleri açıklanır.
+description: Bu makalede, projeler için C# kullanılabilecek çeşitli derleme eylemleri açıklanmaktadır
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
-ms.openlocfilehash: 16617f8de15fbef40941c4f9409497da142c9e8a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 97cabcacf276c6972a717e968656430ad32e37e3
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62932788"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73715844"
 ---
 # <a name="build-actions"></a>Derleme eylemleri
 
-Visual Studio'da tüm dosyaları Mac projesi için derleme eylemine sahip. Bu dosya için bir yapı sırasında ne denetler. Bu davranış, herhangi bir dosyaya sağ tıklayıp göz ayarlanabilir **derleme eylemi**, aşağıda gösterildiği gibi:
+Bir Mac için Visual Studio projesindeki tüm dosyaların bir yapı eylemi vardır. Derleme sırasında dosyaya ne olacağını denetler. Bu davranış, aşağıda gösterildiği gibi herhangi bir dosyaya sağ tıklayıp **derleme eylemine**göz atarak ayarlanabilir:
 
-![Çözüm Gezgini'nden derleme yapı eylemi seçme](media/projects-and-solutions-image1.png)
+![Çözüm Gezgini 'nden derlemeyi derle eylemini seçme](media/projects-and-solutions-image1.png)
 
-C# projeleri için bazı ortak eylemler oluşturun:
+Projeler için C# ortak derleme eylemlerinden bazıları şunlardır:
 
-* **Hiçbiri** -dosyası herhangi bir şekilde oluşturma işleminin bir parçası değil - proje IDE'den kolay erişim için dahildir.
-* **Derleme** -dosya, kaynak dosyası olarak C# Derleyici geçirilecek.
-* **EmbeddedResource** -C# derleyicisi dosyanın derleme içine gömülü olması için bir kaynak olarak geçirilir. [Assembly.GetManifestResourceStream](https://docs.microsoft.com/dotnet/api/system.reflection.assembly.getmanifestresourcestream), gelen `System.Reflection` ad alanı, ardından derlemeden dosyayı okumak için kullanılabilir.
-* **İçerik** -için ASP.NET projeleri, bu dosyaları olacaktır sitenin bir parçası olarak dahil dağıtıldığında. Xamarin.iOS ve Xamarin.Mac projelerinde, bunlar uygulama paketine dahil.
+* **Hiçbiri** -dosya, derlemeyi herhangi bir şekilde DEĞIL, IDE 'den kolay erişim için projeye dahil edilmiştir.
+* **Derle** -dosya C# derleyiciye kaynak dosya olarak geçirilir.
+* **EmbeddedResource** -dosya, derlemeye gömülebilen bir kaynak C# olarak derleyiciye geçirilir. `System.Reflection` ad alanından [Assembly. GetManifestResourceStream](/dotnet/api/system.reflection.assembly.getmanifestresourcestream), derlemeden dosyayı okumak için kullanılabilir.
+* **İçerik** -ASP.NET projeleri için, bu dosyalar dağıtıldığında sitenin bir parçası olarak dahil edilir. Xamarin. iOS ve Xamarin. Mac projeleri için uygulama paketi 'ne dahil edilecek.
 
-Birden fazla dosya seçin Çözüm Gezgini'nde, tek seferde çok sayıda dosyaya derleme eylemi ayarlamanızı izin verme mümkündür.
+Çözüm Gezgini 'nde birden fazla dosya seçmek mümkündür ve derleme eylemini bir kerede birçok dosya olarak ayarlamanıza olanak tanır.
 
-Ayrıca, belirli projeleri için derleme eylemler vardır. Xamarin.iOS projeleri **BundleResource** uygulama paket grubunu bir parçası olarak dosya ekleyecektir eylem oluşturun. Xamarin.Android belirli yapı eylemler hakkında bilgi bulunabilir [derleme işlemi](/xamarin/android/deploy-test/building-apps/build-process#Build_Actions) Kılavuzu.
+Ayrıca, belirli projeler için derleme eylemleri vardır. Xamarin. iOS projeleri, dosyayı uygulama paketinin bir parçası olarak ekleyecek olan **Paketleresource** derleme eylemine sahiptir. Xamarin. Android 'e özgü derleme eylemleri hakkında bilgi, [Yapı işlemi](/xamarin/android/deploy-test/building-apps/build-process#Build_Actions) kılavuzunda bulunabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme eylemleri (Windows için Visual Studio)](/visualstudio/ide/build-actions)
+- [Derleme eylemleri (Windows üzerinde Visual Studio)](/visualstudio/ide/build-actions)

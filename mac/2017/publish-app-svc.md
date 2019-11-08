@@ -11,22 +11,22 @@ ms.prod: visual-studio-mac
 ms.custom: video
 ms.workload:
 - azure
-ms.openlocfilehash: 335f94ddbf0b06eb1a8de093baee98b0b3105369
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.openlocfilehash: 97964589b832b05f4d528a801a1899eeb8385883
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222781"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714466"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak Azure App Service bir Web uygulaması yayımlama
 
 Azure App Service için ASP.NET Core uygulamaları yayımlamak üzere Yayımla aracını kullanabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - ASP.NET Core etkinken [Mac Için Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) yüklendi.
 - Bir Azure aboneliği. Henüz bir aboneliğiniz yoksa [ücretsiz kaydolun](https://azure.microsoft.com/free/dotnet/)ve 30 gün boyunca kredi olarak $200, popüler ücretsiz hizmet için 12 ay.
-- Bir ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](https://docs.microsoft.com/visualstudio/mac/create-new-projects?view=vsmac-2017).
+- Bir ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](/visualstudio/mac/create-new-projects?view=vsmac-2017).
 
 ## <a name="publish-to-azure-app-service"></a>Azure App Service’e yayımlama
 
@@ -54,9 +54,9 @@ Azure App Service için ASP.NET Core uygulamaları yayımlamak üzere Yayımla a
 
     Burada özelleştirmeyi göz önünde bulundurmanız gereken birkaç seçenek vardır. App Service adı, varsayılan olarak proje adı olacaktır. Ad yoksa, giriş alanının sağ tarafında bir uyarı işareti görüntülenir. App Service adı, Web sitenizin URL 'sinde kullanılır, bu nedenle ad bir URL 'de kullanılmak üzere geçerli olmalıdır.
 
-    App Service abonelik açılan listesini kullanarak ilişkilendirilecektir.
+    App Service **abonelik açılan listesini** kullanarak ilişkilendirilecektir.
 
-    Açılır menüyü kullanarak var olan bir **kaynak grubunu** seçebilirsiniz veya **+** düğmeyle yeni bir tane oluşturabilirsiniz.
+    Açılır menüyü kullanarak var olan bir **kaynak grubunu** seçebilirsiniz veya **+** düğmesiyle yeni bir tane oluşturabilirsiniz.
 
     App Service planı için, var olan bir seçim seçin veya **özel** radyo düğmesini seçerek yeni bir tane oluşturun.
 

@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: cca0ec0491d7a2c513f8bc52acaadf7c80d7fd22
-ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
+ms.openlocfilehash: 4842a5a08de96cd40a45d0765d427cc74cbf5432
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72789833"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714380"
 ---
 # <a name="build-events-page-project-designer-c"></a>Derleme Olayları Sayfası, Proje Tasarımcısı (C#)
 
@@ -77,11 +77,19 @@ ardından proje dosyası ayarı:
 </PropertyGroup>
 ```
 
-Visual Studio 2019 (ve daha yeni güncelleştirmelerde Visual Studio 2017) **PreBuildEvent** ve **PostBuildEvent** ayarları için `PreBuild` veya `PostBuild` adlı bir MSBuild hedefi ekler. Örneğin, önceki örnekte, Visual Studio artık aşağıdaki kodu oluşturuyor:
+.NET Core projeleri için, Visual Studio 2019 (ve daha yeni güncelleştirmelerde Visual Studio 2017) **PreBuildEvent** ve **PostBuildEvent** ayarları için `PreBuild` veya `PostBuild` adlı bir MSBuild hedefi ekler. Bu hedefler, MSBuild 'in tanıdığı **BeforeTargets** ve **AfterTargets** özniteliklerini kullanır. Örneğin, önceki örnekte, Visual Studio artık aşağıdaki kodu oluşturuyor:
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+```
+
+Oluşturma sonrası bir olay için `PostBuild` adını kullanın ve öznitelik `AfterTargets` `PostBuildEvent`olarak ayarlayın.
+
+```xml
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
 </Target>
 ```
 

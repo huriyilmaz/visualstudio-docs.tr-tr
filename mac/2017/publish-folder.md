@@ -8,21 +8,21 @@ author: sayedihashimi
 ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
-ms.openlocfilehash: ff8635db2b472ee3dd79e9082de9d9cc6bd555cb
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.openlocfilehash: 02175180e5217a14a4464e46c75d519adab2a332
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222683"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714499"
 ---
 # <a name="publish-a-web-app-to-a-folder-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak bir Web uygulamasını bir klasöre yayımlama
 
 Yayımla aracını bir klasöre ASP.NET Core uygulamalar yayımlamak için kullanabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - ASP.NET Core etkinken [Mac Için Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) yüklendi.
-- Bir ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](https://docs.microsoft.com/visualstudio/mac/create-new-projects?view=vsmac-2017).
+- Bir ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](/visualstudio/mac/create-new-projects?view=vsmac-2017).
 
 ## <a name="publish-to-folder"></a>Klasöre Yayımlama
 
@@ -40,7 +40,7 @@ Mac için Visual Studio kullanarak ASP.NET Core projelerinizi Yayımla aracını
 
  4. **Klasöre Yayımla** iletişim kutusu görüntülenir. Bu iletişim kutusunda projenin yayımlanacağı klasörü özelleştirebilirsiniz. Bunu yapmak için, **Araştır** düğmesini veya bir yolu yapıştırmak için kullanabilirsiniz.
 
- 5. **Yayımla** ' ya tıkladıktan sonra birkaç şey meydana gelir. İlk olarak bir yayımlama profili oluşturulur. Yayımlama profili, yayımlama işlemi sırasında projeye içeri aktarılan bir MSBuild dosyasıdır. Yayımlama işlemi sırasında kullanılan özellikleri içerir. Bu dosyalar içinde `Properties/PublishProfiles` depolanır ve uzantısına `.pubxml`sahiptir. Sonra yayımlama işlemi başlatılır. Mac için Visual Studio ' de durum çubuğunu izleyerek ilerlemeyi izleyebilirsiniz.
+ 5. **Yayımla** ' ya tıkladıktan sonra birkaç şey meydana gelir. İlk olarak bir yayımlama profili oluşturulur. Yayımlama profili, yayımlama işlemi sırasında projeye içeri aktarılan bir MSBuild dosyasıdır. Yayımlama işlemi sırasında kullanılan özellikleri içerir. Bu dosyalar `Properties/PublishProfiles` depolanır ve uzantının `.pubxml`vardır. Sonra yayımlama işlemi başlatılır. Mac için Visual Studio ' de durum çubuğunu izleyerek ilerlemeyi izleyebilirsiniz.
 
     ![Yayımlama durumuyla IDE durum çubuğu](media/publish-to-folder-status-bar.png)
 
@@ -52,8 +52,8 @@ Mac için Visual Studio kullanarak ASP.NET Core projelerinizi Yayımla aracını
 
 ## <a name="customize-publish-options"></a>Yayımlama seçeneklerini özelleştirin
 
-Yayımlama profilinin adını değiştirmek için (Yayımla bağlam menüsünde görüntülenir), yayımlama profili dosyasını yeniden adlandırın. Dosyanın (`.puxbml`) uzantısını değiştirmediğinden emin olun.
+Yayımlama profilinin adını değiştirmek için (Yayımla bağlam menüsünde görüntülenir), yayımlama profili dosyasını yeniden adlandırın. Dosyanın uzantısını (`.puxbml`) değiştirmediğinden emin olun.
 
-Yayımlama klasörü yolunu değiştirmek için yayımlama profilini açın ve `publishUrl` değeri düzenleyin.
+Yayımlama klasörü yolunu değiştirmek için yayımlama profilini açın ve `publishUrl` değerini düzenleyin.
 
-Kullanılan yapı yapılandırmasını değiştirmek için yayımlama profilindeki `LastUsedBuildConfiguration` özelliği değiştirin.
+Kullanılan yapı yapılandırmasını değiştirmek için, yayımlama profilindeki `LastUsedBuildConfiguration` özelliğini değiştirin.

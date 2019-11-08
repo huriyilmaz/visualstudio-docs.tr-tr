@@ -5,12 +5,12 @@ author: therealjohn
 ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
-ms.openlocfilehash: c8b6bddac92a9ec6b40ba08ebcdc3fe3577b0bc8
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 31fb7fa4c2a87820285809d24b98fe8e59a6be01
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211480"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714474"
 ---
 # <a name="xamarin-mobile-app-development"></a>Xamarin mobil uygulama geliştirme
 
@@ -22,13 +22,13 @@ Xamarin. Forms için XAML Hot reload, sürüm 8,3 ve sonraki sürümlerde Mac i�
 
 XAML Hot reload, Visual Studio 'da **Xamarin Hot Reload 'ı etkinleştir** onay kutusunu işaretleyerek etkinleştirilebilir **> tercihleri > projeler > Xamarin Hot Reload**.
 
-Dinamik yeniden yükleme hakkında daha fazla bilgi için, belgeler içindeki [Xamarin. Forms Için xaml Hot Reload Kılavuzu kılavuzuna](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/hot-reload) bakın.
+Dinamik yeniden yükleme hakkında daha fazla bilgi için, belgeler içindeki [Xamarin. Forms Için xaml Hot Reload Kılavuzu kılavuzuna](/xamarin/xamarin-forms/xaml/hot-reload) bakın.
 
 ## <a name="android"></a>Android
 
 Mac için Visual Studio kendi tümleşik Android SDK yöneticisi 'ne sahiptir ve uygulamanızın hedeflemesini istediğiniz SDK 'lara erişmenizi sağlar.
 
-Android uygulamaları için Mac için Visual Studio, kendi tasarımcısını içerir ve bu, kullanıcı arabirimlerini görsel `.axml` olarak oluşturmak için Android dosyalarıyla birlikte kullanılır. Mac için Visual Studio, aşağıdaki görüntüde gösterildiği gibi bu dosyaları Android Designer açacak:
+Android uygulamaları için Mac için Visual Studio, kendi tasarımcısını içerir ve bu, kullanıcı arabirimlerini görsel olarak oluşturmak için Android `.axml` dosyaları ile birlikte kullanılabilir. Mac için Visual Studio, aşağıdaki görüntüde gösterildiği gibi bu dosyaları Android Designer açacak:
 
 ![Android kullanıcı arabirimi Tasarımcısı](media/intro-image31.png)
 
@@ -40,7 +40,7 @@ Android Designer hakkında daha fazla bilgi için bkz. [Xamarin. Android Designe
 
 ![iOS görsel taslak Tasarımcısı](media/intro-image30.png)
 
-İOS tasarımcısını kullanma hakkında daha fazla bilgi için [Tasarımcı](https://docs.microsoft.com/xamarin/ios/user-interface/designer/?tabs=macos) kılavuzlarını inceleyin.
+İOS tasarımcısını kullanma hakkında daha fazla bilgi için [Tasarımcı](/xamarin/ios/user-interface/designer/?tabs=macos) kılavuzlarını inceleyin.
 
 ### <a name="mac"></a>Mac
 

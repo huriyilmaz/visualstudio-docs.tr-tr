@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
-ms.openlocfilehash: 5a0d7c6646fac83ef70fbe2aa7384dcee992d726
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: d089f38bd91eda2565f215e8d15a74cc119b8767
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128443"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714394"
 ---
 # <a name="build-actions"></a>Derleme eylemleri
 
@@ -33,10 +33,10 @@ Mac için Visual Studio oluşturabileceğiniz projeler için bazı yaygın derle
 
 |Derleme eylemi | Proje türleri | Açıklama |
 |--|--|--|
-| **Se** | Kaydedilmemiş | Dosya C# derleyiciye kaynak dosya olarak geçirilir.|
-| **İçeriği** | .NET, Xamarin | ASP.NET projelerinde, bu dosyalar, dağıtıldığı sırada sitenin bir parçası olarak dahil edilir. Xamarin. iOS ve Xamarin. Mac projeleri için uygulama paketi 'ne dahil edilecek.|
-| **Gömülü kaynak** | .NET | Dosya, derlemeye gömülebilen bir C# kaynak olarak derleyiciye geçirilir. `System.Reflection` Ad alanından [Assembly. GetManifestResourceStream](https://docs.microsoft.com/dotnet/api/system.reflection.assembly.getmanifestresourcestream), derlemeden dosyayı okumak için kullanılabilir.|
-| **Yok.** | Kaydedilmemiş | Dosya, herhangi bir şekilde derleme kapsamında değildir ve IDE 'den kolay erişim için projeye dahil edilmiştir. Bu değer, örneğin "Benioku" dosyaları gibi belge dosyaları için kullanılabilir.|
+| **Se** | kaydedilmemiş | Dosya C# derleyiciye kaynak dosya olarak geçirilir.|
+| **İçeriði** | .NET, Xamarin | ASP.NET projelerinde, bu dosyalar, dağıtıldığı sırada sitenin bir parçası olarak dahil edilir. Xamarin. iOS ve Xamarin. Mac projeleri için uygulama paketi 'ne dahil edilecek.|
+| **Gömülü kaynak** | .NET | Dosya, derlemeye gömülebilen bir C# kaynak olarak derleyiciye geçirilir. `System.Reflection` ad alanından [Assembly. GetManifestResourceStream](/dotnet/api/system.reflection.assembly.getmanifestresourcestream), derlemeden dosyayı okumak için kullanılabilir.|
+| **Seçim** | kaydedilmemiş | Dosya, herhangi bir şekilde derleme kapsamında değildir ve IDE 'den kolay erişim için projeye dahil edilmiştir. Bu değer, örneğin "Benioku" dosyaları gibi belge dosyaları için kullanılabilir.|
 
 > [!NOTE]
 > Ek derleme eylemleri belirli proje türleri için tarafından tanımlanabilir, bu nedenle derleme eylemlerinin listesi proje türüne bağlıdır ve değerler bu listede yer alan görünebilir.  

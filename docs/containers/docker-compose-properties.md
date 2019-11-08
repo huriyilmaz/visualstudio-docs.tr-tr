@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 2178881c6ea0e597aef5e25074e3648162d3f6e9
-ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
+ms.openlocfilehash: 4ea1a936de215340cc13971e7a70a8d795d36cbb
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71950645"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713935"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -27,18 +27,20 @@ Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Docker 
 </PropertyGroup>
 ```
 
-Özellik ayarını mevcut bir `PropertyGroup` öğesine ekleyebilir veya bir tane yoksa, yeni bir `PropertyGroup` öğesi oluşturun.
+Özellik ayarını mevcut bir `PropertyGroup` öğesine ekleyebilir veya bir tane yoksa, yeni bir `PropertyGroup` öğesi oluşturabilirsiniz.
 
 ## <a name="docker-compose-msbuild-properties"></a>MSBuild özelliklerini Docker Compose
 
 Aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild özellikleri gösterilmektedir.
 
-| Özellik adı | Location | Açıklama | Varsayılan değer  |
+| Özellik adı | Konum | Açıklama | Varsayılan değer  |
 |---------------|----------|-------------|----------------|
-|DockerComposeBuildArguments|dcproj|@No__t-0 komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--parallel --pull` |
-|DockerComposeDownArguments|dcproj|@No__t-0 komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--timeout 500`|-|  
+|AdditionalComposeFiles|dcproj|Tüm komutlar için Docker-Compose. exe ' ye gönderilmek üzere noktalı virgülle ayrılmış bir listede ek oluşturma dosyaları belirtir. Docker-Compose proje dosyasından (dcproj) göreli yollara izin verilir.|-|
+|DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örneğin: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose*taban dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose. yml* ve *mydockercompose. override. yml* olarak adlandırılacak<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: dosyalar bir düzey yukarı kalacak. |Docker-Compose|
+|DockerComposeBuildArguments|dcproj|`docker-compose build` komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--parallel --pull` |
+|DockerComposeDownArguments|dcproj|`docker-compose down` komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--timeout 500`|-|  
 |DockerComposeProjectPath|csproj veya vbproj|Docker-Compose projesi (dcproj) dosyasının göreli yolu. Docker-Compose. yıml dosyasında depolanan ilişkili görüntü derleme ayarlarını bulmak için hizmet projesini yayımlarken bu özelliği ayarlayın.|-|
-|DockerComposeUpArguments|dcproj|@No__t-0 komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--timeout 500`|-|
+|DockerComposeUpArguments|dcproj|`docker-compose up` komutuna geçirilecek ek parametreleri belirtir. Örneğin, `--timeout 500`|-|
 |DockerLaunchAction| dcproj | F5 veya CTRL + F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir.  İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur|Yok.|
 |DockerLaunchBrowser| dcproj | Tarayıcının başlatılıp başlatılmayacağını belirtir. DockerLaunchAction belirtilmişse yoksayıldı. | False |
 |DockerServiceName| dcproj|DockerLaunchAction veya DockerLaunchBrowser belirtilmişse DockerServiceName, başlatılacak hizmetin adıdır.  Bu özelliği kullanarak, bir Docker-Compose dosyasının başvurmasına yönelik olabilecek çok sayıda projeden hangisini başlatılacağı belirlenir.|-|

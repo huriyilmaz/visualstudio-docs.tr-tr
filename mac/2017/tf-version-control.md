@@ -6,12 +6,12 @@ ms.author: crdun
 ms.date: 06/25/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: fa269285cf11df848f842524e0d3d496a67b7469
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: e45f80ab1a5aab4969b01a2fddcfd88d9dc4eff7
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108226"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716125"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>Team Foundation Sürüm Denetimi bağlanılıyor
 
@@ -20,7 +20,7 @@ ms.locfileid: "70108226"
 >
 > Mac için Visual Studio için TFVC uzantısının önizleme sürümünü daha önce kullandıysanız, Mac için Visual Studio 2019 ' e yükseltirken artık bu desteklenmez.
 
-Azure Repos sürüm denetimi için iki model sağlar: Bir merkezi sürüm denetim sistemi olan [Git](/azure/devops/repos/git/?view=azure-devops), dağıtılmış sürüm denetim sistemi ve [Team Foundation sürüm denetimi](/azure/devops/repos/tfvc/index?view=azure-devops) (TFVC).
+Azure Repos, bir merkezi sürüm denetim sistemi olan [Git](/azure/devops/repos/git/?view=azure-devops), dağıtılmış sürüm denetim sistemi ve [Team Foundation sürüm denetimi](/azure/devops/repos/tfvc/index?view=azure-devops) (TFVC) olmak üzere iki model sürümü sağlar.
 
 Mac için Visual Studio, git depoları için tam destek sağlar, ancak TFVC ile çalışmak için bazı geçici çözümler gerektirir. Sürüm denetimi için TFVC 'yi bugün kullanıyorsanız, TFVC 'de barındırılan kaynak kodunuza erişmek için kullanabileceğiniz bazı çözümler aşağıda verilmiştir:
 
@@ -57,31 +57,31 @@ En kolay çözüm, macOS için bir paket yöneticisi olan **HomeBrew**' ı kulla
 
 1. MacOS Terminal uygulamasını başlatın.
 1. Terminal ve [homebrew giriş sayfasındaki](https://brew.sh/)yönergeleri kullanarak Homebrew 'ı yükler.
-1. Homebrew yüklendikten sonra Terminalinizden aşağıdaki komutu çalıştırın:`brew install tee-clc`
+1. Homebrew yüklendikten sonra Terminalinizden şu komutu çalıştırın: `brew install tee-clc`
 
 **T-CLC ' i el ile ayarlamak**için:
 
 1. Team Explorer Everywhere GitHub deposunun yayınlar sayfasından [t-CLC ' nin en son sürümünü indirin](https://github.com/Microsoft/team-explorer-everywhere/releases) (örneğin, tee-CLC-14.134.0. zip bu yazma sırasında).
 1. . Zip içeriğini diskteki bir klasöre ayıklayın.
-1. MacOS Terminal uygulamasını açın ve önceki adımda kullandığınız `cd` klasöre geçmek için komutunu kullanın.
-1. Klasörü içinden komut satırı istemcisinin çalıştıracağınızı sınamak `./tf` için komutunu çalıştırın, Java veya başka bağımlılıklar yüklemek isteyip istemediğiniz sorulur.
+1. MacOS Terminal uygulamasını açın ve önceki adımda kullandığınız klasöre geçmek için `cd` komutunu kullanın.
+1. Komut satırı istemcisinin çalıştıracağınızı sınamak için klasörü içinden komut `./tf` çalıştırın, Java veya başka bağımlılıklar yüklemek isteyip istemediğiniz sorulabilir.
 
-T-CLC yüklendikten sonra, istemcinin lisans sözleşmesini görüntülemek ve kabul etmek `tf eula` için komutunu çalıştırabilirsiniz.
+T-CLC yüklendikten sonra, istemcinin lisans sözleşmesini görüntülemek ve kabul etmek için `tf eula` komutunu çalıştırabilirsiniz.
 
-Son olarak, TFS/Azure DevOps ortamınızdan kimlik doğrulamak için sunucuda bir kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleriyle kimlik doğrulama](https://docs.microsoft.com/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)hakkında daha fazla bilgi edinin. TFVC ile kullanmak için bir kişisel erişim belirteci oluştururken, belirteci yapılandırırken tam erişim sağladığınızdan emin olun.
+Son olarak, TFS/Azure DevOps ortamınızdan kimlik doğrulamak için sunucuda bir kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleriyle kimlik doğrulama](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)hakkında daha fazla bilgi edinin. TFVC ile kullanmak için bir kişisel erişim belirteci oluştururken, belirteci yapılandırırken tam erişim sağladığınızdan emin olun.
 
 ### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>Depoya bağlanmak için t-CLC kullanma
 
-Kaynak kodunuza bağlanmak için, önce `tf workspace` komutunu kullanarak bir çalışma alanı oluşturmanız gerekir. Örneğin, aşağıdaki komutlar "Myorganleştirme" adlı Azure DevOps Services bir kuruluşa bağlanır: 
+Kaynak kodunuza bağlanmak için öncelikle `tf workspace` komutunu kullanarak bir çalışma alanı oluşturmanız gerekir. Örneğin, aşağıdaki komutlar "Myorganleştirme" adlı Azure DevOps Services bir kuruluşa bağlanır: 
 
 ```bash
 export TF_AUTO_SAVE_CREDENTIALS=1
 tf workspace -new MyWorkspace -collection:https://dev.azure.com/MyOrganization
 ```
 
-`TF_AUTO_SAVE_CREDENTIALS` Ortam ayarı, kimlik bilgilerinizi birden çok kez girmeniz istenmeyecek şekilde kaydetmek için kullanılır. Bir Kullanıcı adı sorulduğunda, önceki bölümde oluşturduğunuz kişisel erişim belirtecini kullanın ve boş bir parola kullanın.
+`TF_AUTO_SAVE_CREDENTIALS` ortamı ayarı, kimlik bilgilerinizi birden çok kez girmeniz istenmeyecek şekilde kaydetmek için kullanılır. Bir Kullanıcı adı sorulduğunda, önceki bölümde oluşturduğunuz kişisel erişim belirtecini kullanın ve boş bir parola kullanın.
 
-Kaynak dosyalarınızın bir yerel klasöre eşlenmesini oluşturmak için `tf workfold` komutunu kullanırsınız. Aşağıdaki örnekte "WebApp. Services" adlı bir klasör "MyRepository" TFVC projesinden eşlenir ve yerel ~/Projects/klasörüne (yani geçerli kullanıcıların giriş klasöründeki "projeler" klasörü) kopyalanmak üzere ayarlanır.
+Kaynak dosyalarınızın bir yerel klasöre eşlenmesinin oluşturulması için `tf workfold` komutunu kullanırsınız. Aşağıdaki örnekte "WebApp. Services" adlı bir klasör "MyRepository" TFVC projesinden eşlenir ve yerel ~/Projects/klasörüne (yani geçerli kullanıcıların giriş klasöründeki "projeler" klasörü) kopyalanmak üzere ayarlanır.
 
 ```bash
 tf workfold -map $/MyRepository/WebApp.Services -workspace:MyWorkspace ~/Projects/
@@ -95,7 +95,7 @@ tf get
 
 ### <a name="committing-changes-using-the-tee-clc"></a>T-CLC kullanarak değişiklikler yürütülüyor
 
-Mac için Visual Studio dosyalarınızda değişiklikler yaptıktan sonra, düzenlemelerinizi denetlemek için terminale geri dönebilirsiniz. Komut, iade edilecek bekleyen değişiklikler listesine dosya eklemek için kullanılır `tf checkin` ve komut sunucuda gerçek iade işlemini gerçekleştirir. `tf add` Komut `checkin` , bir yorum eklemek veya ilgili bir iş öğesini ilişkilendirmek için parametreler içerir. Aşağıdaki kod parçacığında, bir `WebApp.Services` klasördeki tüm dosyalar, iade etme için yinelemeli olarak eklenir. Ardından, kod bir yorum ile iade edilir ve "42" KIMLIĞINE sahip bir iş öğesiyle ilişkilendirilir.
+Mac için Visual Studio dosyalarınızda değişiklikler yaptıktan sonra, düzenlemelerinizi denetlemek için terminale geri dönebilirsiniz. `tf add` komutu, iade edilecek bekleyen değişiklikler listesine dosya eklemek için kullanılır ve `tf checkin` komutu sunucuda gerçek iade işlemini gerçekleştirir. `checkin` komutu, bir yorum eklemek veya ilgili bir iş öğesini ilişkilendirmek için parametreler içerir. Aşağıdaki kod parçacığında, bir `WebApp.Services` klasöründeki tüm dosyalar, iade etme için yinelemeli olarak eklenir. Ardından, kod bir yorum ile iade edilir ve "42" KIMLIĞINE sahip bir iş öğesiyle ilişkilendirilir.
 
 ```bash
 cd WebApp.Services
@@ -116,7 +116,7 @@ Burada bahsedilen komutlar veya diğerleri hakkında daha fazla bilgi edinmek i�
 
 Mac için Visual Studio uzantısı galerisinde, TFVC 'ye bağlanmak için sınırlı destek sunan bir Team Foundation sürüm denetimi uzantısı vardır. Uzantı desteklenmez ve bilinen birkaç soruna sahiptir, bu nedenle deneyiminiz kullanılırken farklılık gösterebilir.
 
-Uzantıyı yüklemek için Mac için Visual Studio başlatın ve **Visual Studio > uzantıları** menüsünü seçin. İçinde **galeri** sekmesinde **sürüm denetimi > Team Foundation sürüm denetimi, TFS ve Azure DevOps için** tıklatıp **yükle...** :
+Uzantıyı yüklemek için Mac için Visual Studio başlatın ve **Visual Studio > uzantıları** menüsünü seçin. **Galeri** SEKMESINDE, **TFS ve Azure DevOps için sürüm denetimi > Team Foundation sürüm denetimi** seçin ve ardından **Install...** ' a tıklayın:
 
 ![Uzantı Yöneticisi](media/tfvc-install.png)
 
@@ -124,13 +124,13 @@ Uzantıyı yüklemek için istemleri izleyin. Yüklendikten sonra IDE 'yi yenide
 
 ### <a name="updating-the-extension"></a>Uzantı güncelleştiriliyor
 
-TFVC uzantılı güncelleştirmeler düzenli aralıklarla yapılır. Güncelleştirmeleri erişmek, seçin **Visual Studio > uzantılar...** seçin ve menüden **güncelleştirmeleri** sekmesi. Listeden uzantıyı seçin ve **Güncelleştir** düğmesine basın:
+TFVC uzantılı güncelleştirmeler düzenli aralıklarla yapılır. Güncelleştirmelere erişmek için, menüden **Visual Studio > uzantıları...** öğesini seçin ve **güncelleştirmeler** sekmesini seçin. listede uzantıyı seçin ve **Güncelleştir** düğmesine basın:
 
 Sonraki iletişim kutusunda **yükleme** ' ye basarak eski paketi kaldırın ve yenisini yükleme işlemini yapın.
 
 ### <a name="using-the-extension"></a>Uzantıyı kullanma
 
-Uzantıyı yükledikten sonra seçin **sürüm denetimi > TFS/Azure DevOps > Uzak depodan Aç...** menü öğesi.
+Uzantı yüklendikten sonra, **TFS/Azure DevOps > uzak depodan aç... menü öğesinden > sürüm denetimini** seçin.
 
 ![Uzantıyı açmak için menü öğesi](media/tfvc-source-control-explorer-devops.png)
 
@@ -242,7 +242,7 @@ Bir sunucu ile kimlik doğrulamak için aşağıdaki seçenekler kullanılabilir
 
 Temel kimlik doğrulamasını kullanmak için aşağıdaki adımları izleyerek Azure DevOps Services **alternatif kimlik doğrulama kimlik bilgilerini** etkinleştirmek gerekir:
 
-1. Azure DevOps kuruluşunuzda sahip (https:\//dev.Azure.com/{Organization}/{Project}) olarak oturum açın.
+1. Azure DevOps kuruluşunuzda sahip olarak oturum açın (https:\//dev.Azure.com/{Organization}/{Project}).
 
 2. Kuruluş araç çubuğunuzda dişli simgesini seçin ve **ilke**' yi seçin:
 

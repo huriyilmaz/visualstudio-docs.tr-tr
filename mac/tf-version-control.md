@@ -6,12 +6,12 @@ ms.author: jomatthi
 ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: fc300ccd37ade6418ef093306441afe4d10080e2
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.openlocfilehash: e56aec03aabe818731c65acb30eafcc18f170ac3
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222758"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714518"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Mac için Visual Studio Team Foundation Sürüm Denetimi destekliyor mu?
 
@@ -56,31 +56,31 @@ En kolay çözüm, macOS için bir paket yöneticisi olan **HomeBrew**' ı kulla
 
 1. MacOS Terminal uygulamasını başlatın.
 1. Terminal ve [homebrew giriş sayfasındaki](https://brew.sh/)yönergeleri kullanarak Homebrew 'ı yükler.
-1. Homebrew yüklendikten sonra Terminalinizden aşağıdaki komutu çalıştırın:`brew install tee-clc`
+1. Homebrew yüklendikten sonra Terminalinizden şu komutu çalıştırın: `brew install tee-clc`
 
 **T-CLC ' i el ile ayarlamak**için:
 
 1. Team Explorer Everywhere GitHub deposunun yayınlar sayfasından [t-CLC ' nin en son sürümünü indirin](https://github.com/Microsoft/team-explorer-everywhere/releases) (örneğin, tee-CLC-14.134.0. zip bu yazma sırasında).
 1. . Zip içeriğini diskteki bir klasöre ayıklayın.
-1. MacOS Terminal uygulamasını açın ve önceki adımda kullandığınız `cd` klasöre geçmek için komutunu kullanın.
-1. Klasörü içinden komut satırı istemcisinin çalıştıracağınızı sınamak `./tf` için komutunu çalıştırın, Java veya başka bağımlılıklar yüklemek isteyip istemediğiniz sorulur.
+1. MacOS Terminal uygulamasını açın ve önceki adımda kullandığınız klasöre geçmek için `cd` komutunu kullanın.
+1. Komut satırı istemcisinin çalıştıracağınızı sınamak için klasörü içinden komut `./tf` çalıştırın, Java veya başka bağımlılıklar yüklemek isteyip istemediğiniz sorulabilir.
 
-T-CLC yüklendikten sonra, istemcinin lisans sözleşmesini görüntülemek ve kabul etmek `tf eula` için komutunu çalıştırabilirsiniz.
+T-CLC yüklendikten sonra, istemcinin lisans sözleşmesini görüntülemek ve kabul etmek için `tf eula` komutunu çalıştırabilirsiniz.
 
-Son olarak, TFS/Azure DevOps ortamınızdan kimlik doğrulamak için sunucuda bir kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleriyle kimlik doğrulama](https://docs.microsoft.com/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)hakkında daha fazla bilgi edinin. TFVC ile kullanmak için bir kişisel erişim belirteci oluştururken, belirteci yapılandırırken tam erişim sağladığınızdan emin olun.
+Son olarak, TFS/Azure DevOps ortamınızdan kimlik doğrulamak için sunucuda bir kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleriyle kimlik doğrulama](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)hakkında daha fazla bilgi edinin. TFVC ile kullanmak için bir kişisel erişim belirteci oluştururken, belirteci yapılandırırken tam erişim sağladığınızdan emin olun.
 
 #### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>Depoya bağlanmak için t-CLC kullanma
 
-Kaynak kodunuza bağlanmak için, önce `tf workspace` komutunu kullanarak bir çalışma alanı oluşturmanız gerekir. Örneğin, aşağıdaki komutlar "Myorganleştirme" adlı Azure DevOps Services bir kuruluşa bağlanır: 
+Kaynak kodunuza bağlanmak için öncelikle `tf workspace` komutunu kullanarak bir çalışma alanı oluşturmanız gerekir. Örneğin, aşağıdaki komutlar "Myorganleştirme" adlı Azure DevOps Services bir kuruluşa bağlanır: 
 
 ```bash
 export TF_AUTO_SAVE_CREDENTIALS=1
 tf workspace -new MyWorkspace -collection:https://dev.azure.com/MyOrganization
 ```
 
-`TF_AUTO_SAVE_CREDENTIALS` Ortam ayarı, kimlik bilgilerinizi birden çok kez girmeniz istenmeyecek şekilde kaydetmek için kullanılır. Bir Kullanıcı adı sorulduğunda, önceki bölümde oluşturduğunuz kişisel erişim belirtecini kullanın ve boş bir parola kullanın.
+`TF_AUTO_SAVE_CREDENTIALS` ortamı ayarı, kimlik bilgilerinizi birden çok kez girmeniz istenmeyecek şekilde kaydetmek için kullanılır. Bir Kullanıcı adı sorulduğunda, önceki bölümde oluşturduğunuz kişisel erişim belirtecini kullanın ve boş bir parola kullanın.
 
-Kaynak dosyalarınızın bir yerel klasöre eşlenmesini oluşturmak için `tf workfold` komutunu kullanırsınız. Aşağıdaki örnekte "WebApp. Services" adlı bir klasör "MyRepository" TFVC projesinden eşlenir ve yerel ~/Projects/klasörüne (yani geçerli kullanıcıların giriş klasöründeki "projeler" klasörü) kopyalanmak üzere ayarlanır.
+Kaynak dosyalarınızın bir yerel klasöre eşlenmesinin oluşturulması için `tf workfold` komutunu kullanırsınız. Aşağıdaki örnekte "WebApp. Services" adlı bir klasör "MyRepository" TFVC projesinden eşlenir ve yerel ~/Projects/klasörüne (yani geçerli kullanıcıların giriş klasöründeki "projeler" klasörü) kopyalanmak üzere ayarlanır.
 
 ```bash
 tf workfold -map $/MyRepository/WebApp.Services -workspace:MyWorkspace ~/Projects/
@@ -94,7 +94,7 @@ tf get
 
 #### <a name="committing-changes-using-the-tee-clc"></a>T-CLC kullanarak değişiklikler yürütülüyor
 
-Mac için Visual Studio dosyalarınızda değişiklikler yaptıktan sonra, düzenlemelerinizi denetlemek için terminale geri dönebilirsiniz. Komut, iade edilecek bekleyen değişiklikler listesine dosya eklemek için kullanılır `tf checkin` ve komut sunucuda gerçek iade işlemini gerçekleştirir. `tf add` Komut `checkin` , bir yorum eklemek veya ilgili bir iş öğesini ilişkilendirmek için parametreler içerir. Aşağıdaki kod parçacığında, bir `WebApp.Services` klasördeki tüm dosyalar, iade etme için yinelemeli olarak eklenir. Ardından, kod bir yorum ile iade edilir ve "42" KIMLIĞINE sahip bir iş öğesiyle ilişkilendirilir.
+Mac için Visual Studio dosyalarınızda değişiklikler yaptıktan sonra, düzenlemelerinizi denetlemek için terminale geri dönebilirsiniz. `tf add` komutu, iade edilecek bekleyen değişiklikler listesine dosya eklemek için kullanılır ve `tf checkin` komutu sunucuda gerçek iade işlemini gerçekleştirir. `checkin` komutu, bir yorum eklemek veya ilgili bir iş öğesini ilişkilendirmek için parametreler içerir. Aşağıdaki kod parçacığında, bir `WebApp.Services` klasöründeki tüm dosyalar, iade etme için yinelemeli olarak eklenir. Ardından, kod bir yorum ile iade edilir ve "42" KIMLIĞINE sahip bir iş öğesiyle ilişkilendirilir.
 
 ```bash
 cd WebApp.Services

@@ -5,12 +5,12 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/30/2019
 ms.assetid: 771C2F8E-46BC-4280-AFE8-ED9D5C7790CE
-ms.openlocfilehash: 345111144e0e209d91d34e53fefcd7d1207d9a8a
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 5aa0b02c87335305f29d098b51c89310cc0a9e5d
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872897"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73717273"
 ---
 # <a name="building-aspnet-core-applications-in-visual-studio-for-mac"></a>Mac için Visual Studio ASP.NET Core uygulamalar oluşturma
 
@@ -25,7 +25,7 @@ Bu laboratuvarda, Mac için Visual Studio bir ASP.NET Core uygulaması oluştura
 > * Barındırma, yapılandırma ve ara yazılım modelini ASP.NET Core keşfet
 > * ASP.NET Core Web uygulamasında hata ayıklama
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - [Mac için Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac)
 
@@ -33,13 +33,13 @@ Bu laboratuvarda, Mac için Visual Studio bir ASP.NET Core uygulaması oluştura
 
 Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak derin deneyim gerekli değildir.
 
-## <a name="task-1-creating-a-new-aspnet-core-application"></a>Görev 1: Yeni bir ASP.NET Core uygulaması oluşturma
+## <a name="task-1-creating-a-new-aspnet-core-application"></a>Görev 1: yeni bir ASP.NET Core uygulaması oluşturma
 
 1. **Mac için Visual Studio**başlatın.
 
 2. **Yeni çözüm > dosya**' yı seçin.
 
-3. **.NET Core > uygulama** kategorisini ve **ASP.NET Core Web uygulaması (C#)** şablonunu seçin.           **İleri**'ye tıklayın.
+3. **.NET Core > uygulama** kategorisini ve **ASP.NET Core Web uygulaması (C#)** şablonunu seçin. **İleri**'ye tıklayın.
 
     ![](media/netcore-image1.png)
 
@@ -47,7 +47,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image2.png)
 
-## <a name="task-2-touring-the-solution"></a>Görev 2: Çözümü gezi edin
+## <a name="task-2-touring-the-solution"></a>Görev 2: çözümü gezi
 
 1. Varsayılan şablon, **CoreLab**adlı tek bir ASP.NET Core projesi ile bir çözüm oluşturacaktır. İçeriğini göstermek için proje düğümünü genişletin.
 
@@ -57,7 +57,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image4.png)
 
-3. **HomeController** sınıfı-kural- **/Home**ile başlayan tüm gelen istekleri işler. **Dizin** yöntemi, istekleri dizinin köküne (gibi `http://site.com/Home`) işler ve diğer yöntemler, isteklerini `http://site.com/Home/About`() ile işleme istekleri gibi kurala göre adlandırılmış yollarına göre işler. Kuşkusuz, bu tüm yapılandırılabilir. Tek bir önemli, **HomeController** 'ın yeni bir projede varsayılan denetleyici olması, bu nedenle sitenin köküne yönelik isteklerin (`http://site.com`), `http://site.com/Home` `http://site.com/Home/Index`.
+3. **HomeController** sınıfı-kural- **/Home**ile başlayan tüm gelen istekleri işler. **Dizin** yöntemi, istekleri dizinin köküne (`http://site.com/Home`gibi) işler ve diğer yöntemler, `http://site.com/Home/About`için istekleri işleyen **()** gibi kurala göre adlandırılmış yollarına istekleri işler. Kuşkusuz, bu tüm yapılandırılabilir. Tek bir önemli, **HomeController** 'ın yeni bir projede varsayılan denetleyici olması, bu nedenle sitenin köküne yönelik isteklerin (`http://site.com`) `http://site.com/Home` veya `http://site.com/Home/Index`isteklerini de içeren **HomeController** **dizininden ()** gitmesini sağlar.
 
     ![](media/netcore-image5.png)
 
@@ -65,7 +65,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image6.png)
 
-5. Bu CSHTML dosyası, standart etiketlerin ve satır içi C#bir BIRLEŞIMINE göre HTML işlemek için Razor söz dizimi kullanır. [Çevrimiçi belgelerde](https://docs.microsoft.com/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)bunun hakkında daha fazla bilgi edinebilirsiniz.
+5. Bu CSHTML dosyası, standart etiketlerin ve satır içi C#bir BIRLEŞIMINE göre HTML işlemek için Razor söz dizimi kullanır. [Çevrimiçi belgelerde](/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)bunun hakkında daha fazla bilgi edinebilirsiniz.
 
     ![](media/netcore-image7.png)
 
@@ -73,11 +73,11 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image8.png)
 
-7. Ayrıca, çalışma zamanında projeyi, paketleri ve uygulamayı yönetmeye yönelik bir dizi yapılandırma dosyası da vardır. Örneğin, varsayılan uygulama [yapılandırması](https://docs.microsoft.com/aspnet/core/fundamentals/configuration) **appSettings. JSON**' da depolanır. Bununla birlikte, bu ayarların bir kısmını/tümünü, bir appSettings sağlayarak gibi ortam başına temelinde geçersiz kılabilirsiniz **.**  **Geliştirme** ortamı için Development. JSON dosyası.
+7. Ayrıca, çalışma zamanında projeyi, paketleri ve uygulamayı yönetmeye yönelik bir dizi yapılandırma dosyası da vardır. Örneğin, varsayılan uygulama [yapılandırması](/aspnet/core/fundamentals/configuration) **appSettings. JSON**' da depolanır. Bununla birlikte, bu ayarların bir kısmını/tümünü, bir appSettings sağlayarak gibi ortam başına temelinde geçersiz kılabilirsiniz **.**  **Geliştirme** ortamı için Development. JSON dosyası.
 
     ![](media/netcore-image9.png)
 
-## <a name="task-3-understanding-how-the-application-is-hosted"></a>Görev 3: Uygulamanın nasıl barındırıldığını anlama
+## <a name="task-3-understanding-how-the-application-is-hosted"></a>3\. görev: uygulamanın nasıl barındırıldığını anlama
 
 1. **Çözüm Gezgini**, **program.cs**açın. Bu, uygulamanızı çalıştıracak olan önyükleyici.
 
@@ -87,7 +87,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image11.png)
 
-3. **Webhostbuilder** , uygulama için sunucuyu önyükleyen Konağı oluşturmaktan sorumludur. Bu, **Iver**'i uygulayan bir sunucu sağlamanızı gerektirir. Bu, varsayılan olarak, **[](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)** platformlar arası zaman uyumsuz g/ç kitaplığı olan **libuv**tabanlı ASP.NET Core yönelik platformlar arası Web sunucusudur.
+3. **Webhostbuilder** , uygulama için sunucuyu önyükleyen Konağı oluşturmaktan sorumludur. Bu, **Iver**'i uygulayan bir sunucu sağlamanızı gerektirir. Bu, varsayılan **[olarak, platformlar](/aspnet/core/fundamentals/servers/kestrel)** arası zaman uyumsuz g/ç kitaplığı olan **libuv**tabanlı ASP.NET Core yönelik platformlar arası Web sunucusudur.
 
     ![](media/netcore-image12.png)
 
@@ -107,11 +107,11 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image16.png)
 
-8. **Iwebhost** sınıfları, engelleyici olmayan **Başlangıç**uygulamasını uygulamak için gerekli olsa da, ASP.NET Core projelerin, engelleme kodu ile **başlayan** bir genişletme yöntemi vardır; bu nedenle, yöntemi el ile engellemeniz gerekmez hemen çıkılıyor.
+8. **Iwebhost** sınıfları, engelleyici olmayan **Başlangıç**uygulamasını uygulamak için gerekli olsa da, ASP.NET Core projelerin, engelleme kodu ile **başlayan** bir genişletme yöntemi vardır **; Bu nedenle** , yöntemi el ile engellemeniz gerekmez hemen çıkılıyor.
 
     ![](media/netcore-image17.png)
 
-## <a name="task-4-running-and-debugging-the-application"></a>Görev 4: Uygulamayı çalıştırma ve hata ayıklama
+## <a name="task-4-running-and-debugging-the-application"></a>4\. görev: uygulamayı çalıştırma ve hata ayıklama
 
 1. **Çözüm Gezgini**, **CoreLab** proje düğümüne sağ tıklayın ve **Seçenekler**' i seçin.
 
@@ -121,7 +121,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
 3. **Dış konsolda Çalıştır** ' ı işaretleyin ve **konsol çıkışını Duraklat**' işaretini kaldırın. Genellikle şirket içinde barındırılan uygulamanın Konsolu görünür olmaz, bunun yerine sonuçları **Çıkış** paneline kaydeder. Bu laboratuvarın amaçları doğrultusunda, normal geliştirme sırasında bunu yapmanıza gerek olmasa da, bunu ayrı bir pencerede de göstereceğiz.
 
-4.           **Tamam**'ı tıklatın.
+4. **Tamam**'a tıklayın.
 
     ![](media/netcore-image19.png)
 
@@ -171,7 +171,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
 18. Test tarayıcısı penceresini ve uygulama konsolu 'nu kapatın. Bu, hata ayıklamayı da durdurur.
 
-## <a name="task-5-application-startup-configuration"></a>5\. görev: Uygulama başlangıç yapılandırması
+## <a name="task-5-application-startup-configuration"></a>5\. görev: uygulama başlangıç yapılandırması
 
 1. **Çözüm Gezgini**, **Startup.cs**açın. NuGet paketleri arka planda geri yüklendiği ve Roslyn derleyicisi proje bağımlılıklarının tamamen bir resmini oluşturmakta olduğu için başlangıçta bazı Red dalgalı çizgiler fark edebilirsiniz.
 
@@ -189,7 +189,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image32.png)
 
-5. Bundan sonra, var olan ayarları geçersiz kılacak ortama özgü bir **appSettings. JSON** dosyası yüklemeye çalışır. Örneğin, bu bir belirtilen appSettings 'dir **.** Bu belirli ortam için kullanılan Development. JSON dosyası. ASP.NET Core yapılandırma hakkında daha fazla bilgi edinmek için [belgelere](https://docs.microsoft.com/aspnet/core/fundamentals/configuration)bakın.
+5. Bundan sonra, var olan ayarları geçersiz kılacak ortama özgü bir **appSettings. JSON** dosyası yüklemeye çalışır. Örneğin, bu bir belirtilen appSettings 'dir **.** Bu belirli ortam için kullanılan Development. JSON dosyası. ASP.NET Core yapılandırma hakkında daha fazla bilgi edinmek için [belgelere](/aspnet/core/fundamentals/configuration)bakın.
 
     ![](media/netcore-image34.png)
 
@@ -197,7 +197,7 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
     ![](media/netcore-image35.png)
 
-## <a name="task-6-inserting-application-middleware"></a>Görev 6: Uygulama ara yazılımı ekleniyor
+## <a name="task-6-inserting-application-middleware"></a>Görev 6: uygulama ara yazılımını ekleme
 
 1. **Başlangıç** sınıfında **Configure** metodunu bulun. Bunun nedeni, HTTP işlem hattına eklenebilmesi ve sunucuya her isteği işlemek için kullanılması için tüm ara yazılımlar yapılandırılır. Bu yöntem yalnızca bir kez çağrıldığında, yöntemlerin içerikleri ( **Usestaticfiles**gibi) her istekte yürütülebilir.
 
@@ -243,4 +243,4 @@ Bu laboratuvar C#, konusunda bilgili olan geliştiricilere yöneliktir, ancak de
 
 ## <a name="summary"></a>Özet
 
-Bu laboratuvarda, Mac için Visual Studio ASP.NET Core uygulamaları geliştirmeye nasıl başladığınızı öğrendiniz. Daha kapsamlı bir film veritabanı uygulaması geliştirmeyi araştırmak isterseniz, [ASP.NET Core MVC ile çalışmaya başlama](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/start-mvc) öğreticisine bakın.
+Bu laboratuvarda, Mac için Visual Studio ASP.NET Core uygulamaları geliştirmeye nasıl başladığınızı öğrendiniz. Daha kapsamlı bir film veritabanı uygulaması geliştirmeyi araştırmak isterseniz, [ASP.NET Core MVC ile çalışmaya başlama](/aspnet/core/tutorials/first-mvc-app/start-mvc) öğreticisine bakın.
