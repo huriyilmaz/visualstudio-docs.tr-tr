@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 7bd03ead39d0b2b5013075de017954f0c0c30e8c
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 0405488f6f456f22711498e81789881ffc5a0a8a
+ms.sourcegitcommit: 308a2bdbea81df78bffc3a01afce4ab13131fabc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73714493"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73913005"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Visual Studio 'da JavaScript veya TypeScript uygulamasında hata ayıklama
 
@@ -105,13 +105,13 @@ Bu senaryo için Chrome ' ı kullanın.
 
 Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda isabet kesme noktaları eklemek için, hata ayıklayıcının doğru süreci belirlemesine yardımcı olması gerekir. Bunu etkinleştirmenin bir yolu aşağıda verilmiştir.
 
-1. Visual Studio 'ya geçin ve kaynak kodunuzda bir JavaScript dosyası, TypeScript dosyası, *. Vue* dosyası veya JSX dosyası olabilecek bir kesme noktası ayarlayın. (Dönüş bildirimi veya var bildirimi gibi kesme noktalarına izin veren bir kod satırında kesme noktası ayarlayın.)
+1. Visual Studio 'ya geçin ve kaynak kodunuzda bir JavaScript dosyası, TypeScript dosyası veya JSX dosyası olabilecek bir kesme noktası ayarlayın. (Dönüş bildirimi veya var bildirimi gibi kesme noktalarına izin veren bir kod satırında kesme noktası ayarlayın.)
 
     ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     Belirli kodu bir transpiled dosyasında bulmak için **Ctrl**+**F** (**düzenle** > **Bul ve Değiştir** > **hızlı bul**) kullanın.
 
-    İstemci tarafı kod için, bir TypeScript dosyasında bir kesme noktasına isabet etmek üzere *. Vue*veya JSX dosyası genellikle [kaynak eşlemelerinin](#generate_source_maps)kullanılmasını gerektirir. Visual Studio 'da hata ayıklamayı desteklemek için bir kaynak eşlemesinin doğru şekilde yapılandırılması gerekir.
+    İstemci tarafı kod için, TypeScript dosyasındaki veya JSX dosyasındaki bir kesme noktasına isabet etmek için genellikle [kaynak haritaları](#generate_source_maps)kullanılması gerekir. Visual Studio 'da hata ayıklamayı desteklemek için bir kaynak eşlemesinin doğru şekilde yapılandırılması gerekir.
 
 2. Visual Studio 'da hata ayıklama hedefi olarak hedef tarayıcınızı seçin, ardından uygulamayı tarayıcıda çalıştırmak için **Ctrl**+**F5** tuşuna**basın (hata ayıklama > ** **başlatın**).
 
@@ -165,7 +165,7 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
 
 ### <a name="troubleshooting_source_maps"></a>Kesme noktaları ve kaynak haritaları sorunlarını giderme
 
-TypeScript, JSX veya *. Vue* kaynak dosyasındaki kodu kesmeniz gerekirse ve bunu yapamaması gerekiyorsa, hata ayıklayıcıyı iliştirmek için önceki adımlarda açıklandığı gibi **işlemek için İliştir** ' i kullanın. Ortamınızın doğru ayarlandığından emin olun:
+Bir TypeScript veya JSX kaynak dosyasındaki kodu kesmeniz gerekirse ve bunu yapamaması gerekiyorsa, hata ayıklayıcıyı iliştirmek için önceki adımlarda açıklandığı gibi **işlemek Için İliştir** ' i kullanın. Ortamınızın doğru ayarlandığından emin olun:
 
 * Tarayıcıyı hata ayıklama modunda çalıştırabilmeniz için Chrome uzantıları da dahil olmak üzere tüm tarayıcı örneklerini kapattınız (Görev Yöneticisi kullanılarak).
       
