@@ -202,8 +202,6 @@
               href: how-to-open-standard-editors.md
             - name: Açık Belgeler için Düzenleyicileri Açma
               href: how-to-open-editors-for-open-documents.md
-        - name: XAML Tasarımcısı Genişletilebilirlik Geçiş Kılavuzu
-          href: xaml-designer-extensibility-migration.md
 - name: Projeleri genişletme
   items:
     - name: Projeleri genişletme
