@@ -1,5 +1,5 @@
 ---
-title: XAML Tasarımcısı genel bakış
+title: XAML Tasarımcısı’na genel bakış
 ms.date: 07/31/2019
 ms.topic: conceptual
 f1_keywords:
@@ -12,24 +12,24 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0f43222e593b836f44a84e5f64642403f0263ca5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0facc87df720af8376561ae7599fe20afeab1a12
+ms.sourcegitcommit: c6af923c1f485959d751b23ab3f03541013fc4a7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649707"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73925972"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>XAML Tasarımcısı’nı kullanarak bir kullanıcı arabirimi oluşturma
 
 Visual Studio ve Visual Studio için Blend XAML Tasarımcısı, WPF, UWP ve Xamarin. Forms uygulamaları gibi XAML tabanlı uygulamalar tasarlamanıza yardımcı olacak görsel bir arabirim sağlar. Araç kutusu penceresinden (Visual Studio için Blend varlıklar penceresi) denetimleri sürükleyerek ve Özellikler penceresi özellikleri ayarlayarak uygulamalarınız için Kullanıcı arabirimleri oluşturabilirsiniz. XAML 'yi doğrudan XAML görünümünde de düzenleyebilirsiniz.
 
-İleri düzey kullanıcılar için, XAML Tasarımcısı bile [özelleştirebilirsiniz](../extensibility/xaml-designer-extensibility-migration.md).
+İleri düzey kullanıcılar için, XAML Tasarımcısı bile [özelleştirebilirsiniz](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md).
 
 ## <a name="xaml-designer-workspace"></a>XAML Tasarımcısı çalışma alanı
 
 XAML Tasarımcısı çalışma alanı çeşitli görsel arabirim öğelerinden oluşur. Bunlar, *çalışma yüzeyini* (görsel tasarım yüzeyi), XAML Düzenleyicisi, belge ana hattı penceresi (Visual Studio için Blend nesneler ve zaman çizelgesi pencere) ve Özellikler penceresi içerir. XAML Tasarımcısı açmak için **Çözüm Gezgini** bir xaml dosyasına sağ tıklayın ve **Görünüm Tasarımcısı**' nı seçin.
 
-XAML Tasarımcısı, uygulamanızın işlenmiş XAML işaretlemesini bir XAML görünümü ve eşitlenmiş Tasarım görünümü sağlar. Visual Studio 'da veya Visual Studio için Blend bir XAML dosyası açıkken, **Tasarım** ve **xaml** SEKMELERINI kullanarak tasarım görünümü ve XAML görünümü arasında geçiş yapabilirsiniz. En üstteki pencere (çalışma yüzeyi veya XAML Düzenleyicisi) üzerinde görünmesini sağlamak için XAML Tasarımcısı ](media/swap-panes.PNG) bölmeleri **takas et** düğmesi ![Swap bölmeler düğmesini kullanabilirsiniz.
+XAML Tasarımcısı, uygulamanızın işlenmiş XAML işaretlemesini bir XAML görünümü ve eşitlenmiş Tasarım görünümü sağlar. Visual Studio 'da veya Visual Studio için Blend bir XAML dosyası açıkken, **Tasarım** ve **xaml** SEKMELERINI kullanarak tasarım görünümü ve XAML görünümü arasında geçiş yapabilirsiniz. En üstte yer alan çalışma yüzeyi ya da XAML Düzenleyicisi olarak değiştirmek için, XAML Tasarımcısı](media/swap-panes.PNG) **bölmeleri takas et düğmesini ![** .
 
 ### <a name="design-view"></a>Tasarım görünümü
 

@@ -1,5 +1,5 @@
 ---
-title: Kod çözümleme ipuçları için _Analysis_varsay kullan
+title: Kod Analizi ipuçları için _Analysis_assume kullanma
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,25 +12,25 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 186ea6ac58736098720d60c644c30801073b7453
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 9933a013ed4f2df0978fb66e3aff87b4cdc024f9
+ms.sourcegitcommit: c6af923c1f485959d751b23ab3f03541013fc4a7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018724"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73925957"
 ---
-# <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Nasıl Yapılır: __Analysis_assume Kullanarak Ek Kod Bilgileri Belirtme
+# <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Nasıl yapılır: _Analysis_assume kullanarak ek kod bilgileri belirtme
 
 Analiz işleminin ve uyarıların azaltılmasına yardımcı olacak C/C++ kod için kod analizi aracına yönelik ipuçları sağlayabilirsiniz. Ek bilgi sağlamak için aşağıdaki işlevi kullanın:
 
 `_Analysis_assume(`  `expr`  `)`
 
-`expr`-true olarak değerlendirilme kabul edilen herhangi bir ifade.
+`expr`-doğru olarak değerlendirilmesi için kabul edilen herhangi bir ifade.
 
 Kod Analizi Aracı, ifade tarafından temsil edilen koşulun işlevin göründüğü noktada doğru olduğunu varsayar ve örneğin bir değişkene atama yaparak ifade değiştirilene kadar doğru kalır.
 
 > [!NOTE]
-> `_Analysis_assume`, kod iyileştirmeyi etkilemez. Kod Analizi aracının dışında, `_Analysis_assume`, işlem dışı olarak tanımlanır.
+> `_Analysis_assume` kod iyileştirmeyi etkilemez. Kod Analizi Aracı dışında `_Analysis_assume`, işlem olmadan tanımlanır.
 
 ## <a name="example"></a>Örnek
 
@@ -52,7 +52,7 @@ void test()
 {
     char pc = (char)malloc(5);
     FreeAndNull(&pc);
-    __analysis_assume(pc == NULL);
+    _Analysis_assume(pc == NULL);
     f(pc);
 }
 ```
