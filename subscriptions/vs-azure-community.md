@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerine dahil edilen Azure Community destek avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 128147833baf450c0d161f39628a0928e9118412
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 32a1c962e238bfc5ab8083ff643a99a77b699925
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816546"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983760"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Azure Community destek forumu
 Azure Community aracılığıyla destek forumları seçme içindeki Azure ekibinden doğrudan yardım alın.  Azure Community avantajı, Azure ile ilgili konularda odaklanan bir forum koleksiyonuna erişmenizi sağlar.
@@ -50,7 +50,9 @@ Azure Community avantajının kullanılabilirliği, aşağıda gösterildiği gi
 |                                          Abonelik düzeyi                                           |     Kanallar      |    Faydası    | Yenilenebilir? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
 |                           Visual Studio Enterprise (Standart)                           | VL, Azure, perakende |   Bir yıl    |    Evet     |
+|                           GitHub Enterprise ile Visual Studio Enterprise                           | VL, Azure, perakende |   Bir yıl    |    Evet     |
 |                          Visual Studio Professional (Standart)                          | VL, Azure, perakende |   Bir yıl    |    Evet     |
+|                          GitHub Enterprise ile Visual Studio Professional                          | VL, Azure, perakende |   Bir yıl    |    Evet     |
 |                              Visual Studio Test Professional (Standart)                               |    VL, perakende     |   Bir yıl    |    Evet     |
 |                                       MSDN Platformları (Standart)                                       |    VL, perakende     |   Bir yıl    |    Evet     |
 | Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut), NFR<sup>1</sup> |        Tümü        | Yok |     Hayır     |

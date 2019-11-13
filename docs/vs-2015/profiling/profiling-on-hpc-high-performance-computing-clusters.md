@@ -1,5 +1,5 @@
 ---
-title: Profil oluşturma HPC (yüksek performanslı hesaplama) kümelerinde | Microsoft Docs
+title: HPC üzerinde profil oluşturma (yüksek performanslı bilgi Işlem) kümeleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,132 +21,132 @@ caps.latest.revision: 27
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e14ce5ac1e0596947e69d20e14a3dc1e7ff4f1e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eeb5375d636ef16fde658b88dbf662cdd9f1e27d
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62421114"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983802"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>HPC (Yüksek Performanslı Hesaplama) Kümelerinde Profil Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Örnekleme yöntemini kullanarak, Microsoft Windows HPC kümeleri işlem düğümlerinde profilini oluşturabilirsiniz [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] veya [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] profil oluşturma araçları. HPC hakkında daha fazla bilgi için bkz: [Big Compute: HPC ve toplu işlem](https://azure.microsoft.com/solutions/big-compute/) Microsoft Web sitesinde.  
+[!INCLUDE[vsPreExt](../includes/vspreext-md.md)] veya [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] Profil Oluşturma Araçları örnekleme yöntemini kullanarak Microsoft Windows HPC kümelerinin işlem düğümlerinde profil oluşturabilirsiniz. HPC hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [büyük işlem: HPC & Batch](https://azure.microsoft.com/solutions/big-compute/) .  
   
-## <a name="prerequisites"></a>Önkoşullar  
- Bir HPC işlem düğümünde profili oluşturmak için aşağıdakileri yapmanız gerekir:  
+## <a name="prerequisites"></a>Prerequisites  
+ Bir HPC işlem düğümünde profil yapmak için aşağıdakileri yapmanız gerekir:  
   
-- Microsoft HPC Paketi 2008 aynı bilgisayara yükleme [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]. HPC kümesinin parçası olacak bir bilgisayar yok. HPC paketini yükleyebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=177414).  
+- Microsoft HPC Pack 2008 ' i [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]ile aynı bilgisayara yükler. Bilgisayar HPC kümesinin bir parçası olmak zorunda değildir. HPC Pack 'i [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=2800)' nde yükleyebilirsiniz.  
   
-- Yükleme [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] ve tek başına bir HPC profil oluşturma araçları sürümünü işlem düğümü. Program için yükleme [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] ve profil oluşturucuyu tek başına kullanılabilir [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] yükleme medyası. **Not** yükledikten sonra işlem yeniden [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] ve profil oluşturma araçları yüklemeden önce.  
+- HPC işlem düğümüne Profil Oluşturma Araçları [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] ve tek başına sürümünü yükler. Hem [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] hem de tek başına profil Oluşturucu için yükleme programları [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] yükleme medyasında bulunabilir. **Göz önünde** [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] yükledikten ve Profil Oluşturma Araçları yüklemeden önce işlemi yeniden başlatmanız gerekir.  
   
-  Yüklenecek [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] ve tek başına profil oluşturma araçları etkin bir HPC bilgi işlem düğümü ve etkin küme makinede profil oluşturma, şu adımları izleyin:  
+  [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] ve tek başına Profil Oluşturma Araçları etkin bir HPC işlem düğümüne yüklemek ve küme makinesinde profil oluşturmayı etkinleştirmek için şu adımları izleyin:  
   
-1. HPC pack ile yüklü bir komut istemi penceresi açın.  
+1. HPC Pack ile yüklenen komut istemi penceresini açın.  
   
-2. Ayrı bir komut istemlerinde aşağıdaki komutları yazın:  
+2. Aşağıdaki komutları ayrı komut istemlerine yazın:  
   
-    1. `clusrun /all /scheduler:` *%HeadNode% %FxPath%* `/q /norestart`  
+    1. `clusrun /all /scheduler:` *% Headnode%% FxPath%* `/q /norestart`  
   
-    2. `clusrun /all /scheduler:` *%HeadNode%* `shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"`  
+    2. `clusrun /all /scheduler:` *% Headnode%* `shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"`  
   
-    3. `clusrun /all /scheduler:` *% Baş ayıklaması ProfilerPath %* `/q /norestart`  
+    3. %% *ProfilerPath% `/q /norestart` `clusrun /all /scheduler:`% Headnode*  
   
 |||  
 |-|-|  
-|*%HeadNode%*|Küme baş düğümü adı.|  
-|*%FxPath%*|Yolu [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] yükleyici. Üzerinde [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] yükleme medyasında yolu: WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe|  
-|*%ProfilerPath%*|Tek başına sürümü Profil Araçları Yükleyicisi'nin yolu. Üzerinde [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] yükleme medyasında yolu: Standalone Profiler\x64\vs_profiler.exe|  
+|*Baş düğümüne*|Kümenin baş düğümünün adı.|  
+|*% FxPath%*|[!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] yükleyicisinin yolu. [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] yükleme medyasında yol: WCU\dotNetFramework\ dotNetFx40_Full_x86_x64. exe|  
+|*% ProfilerPath%*|Profil Oluşturma Araçları yükleyicisinin bağımsız sürümünün yolu. [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] yükleme medyasında yol: tek başına Profiler\x64\ vs_profiler. exe|  
   
-## <a name="profiling-on-an-hpc-compute-node"></a>Bir HPC işlem düğümünde profil oluşturma  
- Profil oluşturma oturumunu, HPC Kümesi ve hedef bilgileri belirtmek için HPC performans Sihirbazı'nı kullanarak yapılandırın. Performans oturumu özellik sayfaları'nda ek seçenekler ayarlayabilirsiniz. Profil oluşturma araçları, otomatik olarak gerekli hedef ikili dosyaları dağıttıktan ve profil oluşturucu ve HPC uygulaması başlatın.  
+## <a name="profiling-on-an-hpc-compute-node"></a>HPC Işlem düğümünde profil oluşturma  
+ HPC kümesi ve hedef bilgilerini belirtmek için HPC performans sihirbazını kullanarak bir profil oluşturma oturumu yapılandırırsınız. Performans oturumu özellik sayfalarında ek seçenekler belirleyebilirsiniz. Profil Oluşturma Araçları, gerekli hedef ikilileri otomatik olarak dağıtır ve profil oluşturucu ve HPC uygulamasını başlatır.  
   
-#### <a name="to-profile-on-an-hpc-compute-node"></a>Bir HPC işlem düğümünde profilini çıkarmak için  
+#### <a name="to-profile-on-an-hpc-compute-node"></a>Bir HPC işlem düğümünde profil oluşturma  
   
-1. Üzerinde **Çözümle** menüsünü tıklatın **HPC performans Sihirbazını Başlat**. Komut kullanılabilir durumda değilse, yukarıda listelenen önkoşullara sahip olduğunuzdan emin olun.  
+1. **Çözümle** menüsünde **HPC Performans Sihirbazını Başlat**' ı tıklatın. Komut kullanılamıyorsa, yukarıda listelenen önkoşullara sahip olduğunuzdan emin olun.  
   
-2. Tıklayın **sonraki** sihirbazının ilk sayfasında.  
+2. Sihirbazın ilk sayfasında **İleri** ' ye tıklayın.  
   
-3. Sihirbazın ikinci sayfasında, profil oluşturmak istediğiniz uygulamayı seçin.  
+3. Sihirbazın ikinci sayfasında, profil atamak istediğiniz uygulamayı seçin.  
   
-    - Şu anda açık olan proje profilini [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]seçin **bir veya daha fazla kullanılabilir projeler** seçeneğini ve ardından listeden proje adını seçin.  
+    - [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]Şu anda açık olan bir projenin profilini almak için, **bir veya daha fazla kullanılabilir proje** seçeneğini belirleyin ve ardından listeden proje adını seçin.  
   
-    - Kullanımda olmayan bir ikili profilini çıkarmak için açık bir proje seçin **bir yürütülebilir dosya (. EXE dosyası)** seçeneği.  
+    - Açık bir projede olmayan bir ikilinin profilini eklemek için **çalıştırılabilir (. EXE dosyası)** seçeneğini.  
   
 4. **İleri**'ye tıklayın.  
   
 5. Sihirbazın üçüncü sayfasında:  
   
-    - Açık bir projedeymiş değil bir yürütülebilir dosya profili oluşturuyorsanız, ikili dosyanın yolunu belirtin **yürütülebilir dosyanın tam yolunu nedir**.  
+    - Açık bir projede olmayan bir yürütülebilirin profilini oluşturuyorsanız, **yürütülebilir dosyanın tam yolu olan**ikili dosyanın yolunu belirtin.  
   
-    - Açık bir projedeymiş değil bir yürütülebilir dosya profili oluşturuyorsanız, işlem geçirilecek komut satırı bağımsız değişkenlerini belirtebilirsiniz **komut satırı bağımsız değişkenleri**.  
+    - Açık bir projede olmayan bir yürütülebilir dosya profili oluşturuyorsanız, **komut satırı bağımsız değişkenlerinde**işleme geçirilecek komut satırı bağımsız değişkenlerini belirtebilirsiniz.  
   
-    - İçinde **uzak çalışma dizini**, işlem düğümleri ayrı ayrı işlem örneklerinde tarafından kullanılan bir klasörün yolunu belirtin.  
+    - **Uzak çalışma dizini**' nde, bireysel işlem düğümlerinde işlem örnekleri tarafından kullanılan klasörün yolunu belirtin.  
   
-    - İçinde **dağıtım konumu**, HPC server görüntüleri aşama dağıtımı için kullanacağı dizinin yolunu belirtin.  
+    - **Dağıtım konumu**' nda HPC sunucusunun dağıtım için görüntüleri hazırlamak üzere kullandığı dizinin yolunu belirtin.  
   
 6. **İleri**'ye tıklayın.  
   
-7. Sihirbazının dördüncü sayfasında:  
+7. Sihirbazın dördüncü sayfasında:  
   
-    - İçinde **baş düğüm** listesinde, profil oluşturma çalışması içinde HPC baş düğümü görevi gören bilgisayarı tıklatın. Baş düğüm, profili bir küme gerek kalmadan yerel makinede olanak "localhost" olabilir.  
+    - **Baş düğüm** listesinde, profil oluşturma çalıştırmasında HPC head düğümü olarak davranan bilgisayara tıklayın. Baş düğüm "localhost" olabilir ve bu, yerel makinede bir kümeye gerek duymadan profil gerçekleştirmenizi sağlar.  
   
-    - İçinde **işlemlerin sayısı** listesinde, uygulamayı çalıştırmak için örnek sayısını tıklayın.  
+    - **Işlem sayısı** listesinde, çalıştırılacak uygulamanın örnek sayısına tıklayın.  
   
-    - Gelen **seçenekleri profil oluşturma** listesinde, profil oluşturma hedefi seçin.  
+    - **Profil oluşturma seçenekleri** listesinden profil oluşturma hedefini seçin.  
   
-         Küme içindeki belirli bir işlem profili oluşturmak için Seç **profilindeki boyut** seçeneğini ve ardından işlem sırasını aşağı açılan listeden seçin.  
+         Kümede belirli bir işlemi profili eklemek için, **derece üzerinde profil** seçeneğini belirleyin ve ardından açılır listeden işlemin sırasını seçin.  
   
-         HPC küme içindeki belirli bir düğümde çalışan işlemler ve işlem profili oluşturmak için Seç **düğümde profili** seçeneğini ve ardından düğümü aşağı açılan listeden seçin.  
+         HPC kümesindeki belirli bir düğümde çalışan işlem veya işlemlerin profilini belirlemek için **düğüm üzerinde profil** seçeneğini belirleyin ve ardından açılan listeden düğümü seçin.  
   
 8. **İleri**'ye tıklayın.  
   
-9. Beşinci sihirbaz sayfasında, profil oluşturucu ve profil oluşturma işlemi hemen başlatmak için ya da daha sonra performans Gezgini kullanarak profil oluşturmayı başlatmak için seçebilirsiniz.  
+9. Sihirbazın beşinci sayfasında, profil oluşturucuyu ve profil oluşturma işlemini hemen başlatmayı veya Performans Gezgini kullanarak daha sonra profil oluşturmayı başlatmayı seçebilirsiniz.  
   
-    - Seçin **Sihirbaz sonlandıktan sonra profil oluşturmayı Başlat** hemen profilini oluşturmaya başla veya el ile profil oluşturmayı başlatmak için onay kutusunu temizleyin.  
+    - Profil oluşturmayı hemen başlatmak için **sihirbaz bittikten sonra profil oluşturmayı Başlat** ' ı seçin veya profil oluşturmayı el ile başlatmak için onay kutusunun işaretini kaldırın.  
   
 10. **Son**'a tıklayın.  
   
-## <a name="setting-hpc-profiling-properties-by-using-performance-session-property-pages"></a>Performans oturumu özellik sayfaları kullanarak HPC profil oluşturma özelliklerini ayarlama  
- HPC profili oluşturma Sihirbazı HPC başlatma özellikleri sayfasında performans oturumu özellikleri sayfasında, belirlediğiniz performans oturumu özellikleri değiştirebilirsiniz. HPC Gelişmiş Özellikler sayfasında ek seçeneklerini ayarlayın.  
+## <a name="setting-hpc-profiling-properties-by-using-performance-session-property-pages"></a>Performans oturumu özellik sayfalarını kullanarak HPC profil oluşturma özelliklerini ayarlama  
+ Performans oturumu özellikleri sayfasının HPC Başlatma Özellikleri sayfasında HPC profil oluşturma Sihirbazı 'nda ayarladığınız performans oturumu özelliklerini değiştirebilirsiniz. HPC gelişmiş özellikler sayfasında ek seçenekleri ayarlarsınız.  
   
 #### <a name="to-open-the-performance-session-property-pages"></a>Performans oturumu özellik sayfalarını açmak için  
   
-1. Gerekirse, performans Gezgini içinde performans oturumu (.psess) dosyası açın. Üzerinde **dosya** menüsünde tıklatın **açık** ve dosyayı bulun.  
+1. Gerekirse, Performans Gezgini ' de performans oturumu (. psess) dosyasını açın. **Dosya** menüsünde **Aç** ' a tıklayın ve dosyayı bulun.  
   
-2. Performans Gezgini, performans oturumu adına sağ tıklayın ve ardından **özellikleri**.  
+2. Performans Gezgini, performans oturumu adına sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
 3. Özellik sayfaları iletişim kutusunda, aşağıdaki yöntemlerden birini kullanın:  
   
-    - Tıklayın **genel** seçip **HPC kümesinde toplamak** profil oluşturma HPC etkinleştirmek ya da HPC profili oluşturma devre dışı bırakmak için onay kutusunu temizleyin.  
+    - **Genel** ' e tıklayın ve HPC profil oluşturmayı açmak Için HPC **kümesinde topla** ' yı seçin veya HPC profil oluşturmayı devre dışı bırakmak için onay kutusunun işaretini kaldırın.  
   
-    - Tıklayın **HPC başlatma özellikleri** HPC uygulaması başlangıç özelliklerini değiştirmek için.  
+    - HPC uygulamasını Başlatan özellikleri değiştirmek için **HPC Başlatma Özellikleri** ' ne tıklayın.  
   
-    - Tıklayın **HPC Gelişmiş Özellikler** ek seçeneklerini ayarlamak için  
+    - Ek seçenekleri ayarlamak için **HPC gelişmiş özellikler** ' e tıklayın  
   
-### <a name="hpc-launch-properties"></a>HPC başlatma özellikleri  
+### <a name="hpc-launch-properties"></a>HPC Başlatma Özellikleri  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|**Baş düğüm**|Profil oluşturma çalıştırmasını HPC baş düğümü görevi gören bilgisayarı belirtir.|  
-|**İşlem sayısı**|Profili oluşturulan uygulamada çalıştırmak için uygulamanın örnek sayısını belirtir.|  
-|**Üzerinde boyut profili**|Küme içindeki belirli bir işlem profili oluşturmak için Seç **profilindeki boyut** seçeneğini ve ardından işlem sırasını aşağı açılan listeden seçin.|  
-|**Düğümde profil**|HPC küme içindeki belirli bir düğümde çalışan işlemler ve işlem profili oluşturmak için Seç **düğümde profili** seçeneğini ve ardından düğümü aşağı açılan listeden seçin.|  
-|**Uzak çalışma dizini**|İşlem düğümleri ayrı ayrı işlem örneklerinde tarafından kullanılan bir klasörün yolunu belirtir.|  
-|**Dağıtım konumu**|HPC server görüntüleri aşama dağıtımı için kullanacağı dizinin yolunu belirtir.|  
+|**Baş düğüm**|Profil oluşturma çalıştırmasında HPC head düğümü olarak davranan bilgisayarı belirtir.|  
+|**İşlem sayısı**|Profili oluşturulan uygulamada çalıştırılacak uygulamanın örnek sayısını belirtir.|  
+|**Sırasıyla profil**|Kümede belirli bir işlemi profili eklemek için, **derece üzerinde profil** seçeneğini belirleyin ve ardından açılır listeden işlemin sırasını seçin.|  
+|**Düğüm üzerindeki profil**|HPC kümesindeki belirli bir düğümde çalışan işlem veya işlemlerin profilini belirlemek için **düğüm üzerinde profil** seçeneğini belirleyin ve ardından açılan listeden düğümü seçin.|  
+|**Uzak çalışma dizini**|Bireysel işlem düğümlerinde işlem örnekleri tarafından kullanılan klasörün yolunu belirtir.|  
+|**Dağıtım konumu**|HPC sunucusunun dağıtım için görüntüleri hazırlamak üzere kullandığı dizinin yolunu belirtir.|  
   
 ### <a name="advanced-properties"></a>Gelişmiş Özellikler  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|**Proje adı**|Geçerli adını [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] proje veya çözüm.|  
-|**Profil Oluşturucu durdurulduğunda temizleme**|TRUE olduğunda, yürütme dizine dağıtılan ikili dosyaları kaldırır. Bu adımda, dosya ve program kullanıcı tarafından oluşturulan dizinleri kaldırılmaz. Dağıtım dizini ve yürütme directory IDE tarafından oluşturulmuşsa, IDE bunları kaldırmak çalışır, ancak bunlar IDE tarafından dağıtılan dosyalar varsa bunu.|  
-|**Dağıtılacak ek dosyalar**|İşlem düğümü üzerinde dağıtılacak ek dosyaların noktalı virgülle ayrılmış listesini belirtir. Üç nokta düğmesine tıklayabilirsiniz (**...** ) iletişim kutusunu kullanarak birden çok dosya seçin.|  
-|**Mpiexec komutu**|MPI uygulama başladığında uygulamayı belirtir. Varsayılan değer **mpiexec.exe**|  
-|**Mpiexec bağımsız değişkenleri**|Mpiexec.exe komutu geçirilecek bağımsız değişkenleri belirtir.|  
-|**İstenen küme düğümlerinde**|Uygulamanın çalıştırılacağı kümedeki düğüm sayısını belirtir.|  
-|**CRT dosyaları dağıtma**|TRUE olduğunda, C/C++ çalışma zamanı kümede dağıtır.|  
-|**Önceden betik profili**|Profil oluşturma oturumu başlamadan önce yerel geliştirme bilgisayarınızda çalıştırılacak bir komut dosyası yolu ve dosya adını belirtir.|  
-|**Profil öncesi betik bağımsız değişkenleri**|Ön profili betiğe geçirilecek bağımsız değişkenleri belirtir.|  
-|**Sonrası komut dosyası profil**|Profil oluşturma oturumu sona erdikten sonra yerel geliştirme bilgisayarınızda çalıştırılacak bir komut dosyası yolu ve dosya adını belirtir.|  
-|**Profil sonrası betik bağımsız değişkenleri**|Sonrası profili betiğe geçirilecek bağımsız değişkenleri belirtir.|
+|**Proje adı**|Geçerli [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] projesinin veya çözümün adı.|  
+|**Profil Oluşturucu durdurulduğunda temizle**|Doğru olduğunda, yürütme dizinine dağıtılan ikilileri kaldırır. Kullanıcı programı tarafından oluşturulan dosyalar ve dizinler bu adımda kaldırılmaz. Yürütme dizini ve dağıtım dizini IDE tarafından oluşturulduysa, IDE bunları kaldırmaya çalışır, ancak IDE tarafından dağıtılmayan dosyalar varsa bunu yapmaz.|  
+|**Dağıtılacak ek dosyalar**|İşlem düğümünde dağıtılacak ek dosyaların noktalı virgülle ayrılmış bir listesini belirtir. Bir iletişim kutusunu kullanarak birden çok dosya seçmek için üç nokta düğmesini ( **...** ) tıklayabilirsiniz.|  
+|**Mpiexec komutu**|MPı uygulamasını Başlatan uygulamayı belirtir. Varsayılan değer **Mpiexec. exe** ' dir|  
+|**Mpiexec bağımsız değişkenleri**|Mpiexec. exe komutuna geçirilecek bağımsız değişkenleri belirtir.|  
+|**Kümede istenen düğümler**|Uygulamanın çalıştırılacağı kümedeki düğüm sayısını belirtir.|  
+|**CRT dosyaları dağıtma**|Doğru olduğunda, küme üzerinde C/C++ çalışma süresini dağıtır.|  
+|**Ön profil betiği**|Profil oluşturma oturumu başlamadan önce yerel geliştirme bilgisayarında çalıştırılacak betiğin yolunu ve dosya adını belirtir.|  
+|**Profil öncesi betik bağımsız değişkenleri**|Profil öncesi betiğe geçirilecek bağımsız değişkenleri belirtir.|  
+|**Profil sonrası betiği**|Profil oluşturma oturumu bittikten sonra yerel geliştirme bilgisayarında çalıştırılacak betiğin yolunu ve dosya adını belirtir.|  
+|**Profil sonrası betik bağımsız değişkenleri**|Profil sonrası betiğe geçirilecek bağımsız değişkenleri belirtir.|

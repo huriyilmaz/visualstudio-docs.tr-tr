@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: Azure DevOps 'u bir Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
-ms.openlocfilehash: 227ba1652c592a6fdf3f20bdb5052d9330f142a1
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 9b4c616c870f0834b6974d59540035687b32fc12
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314162"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983686"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneleri için Azure DevOps avantajları
 Etkin bir Visual Studio abonesi olarak, Azure DevOps 'da, aboneliğinize bir avantaj olarak dahil olan bir dizi özelliği kullanabilirsiniz. Bu aynı özellikleri, bir üye olduğunuz her bir Azure DevOps kuruluşunda, organizasyonu oluşturduğunuz veya başka bir kişi tarafından eklenmeksizin kullanabilirsiniz.
@@ -25,7 +25,9 @@ Azure DevOps 'da, Visual Studio aboneliğinizi veya [Alternatif kimliğinizi](vs
 | Abonelik düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup>  | Azure Boards & depoları (temel), Azure Test Plans, Azure Pipelines (Şirket içinde barındırılan)       |  Evet          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende,                                        | Azure Boards & depoları (temel)                                                            |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise   | VL| Azure Boards & depoları (temel), Azure Test Plans, Azure Pipelines (Şirket içinde barındırılan)       |  Evet          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                        | Azure Boards & depoları (temel)                                                            |  Evet          |
+| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel)                                                            |  Evet          |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Azure Boards & depoları (temel), Azure Test Plans                                              |  Evet          |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Azure Boards & depoları (temel), Azure Test Plans                                              |  Evet          |
 ||
@@ -49,3 +51,5 @@ Azure DevOps özellikleri hakkında daha fazla bilgi edinin:
 - [Azure Boards & depoları (temel)](https://azure.microsoft.com/services/devops/compare-features/)
 - [Azure Test Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
 - [Azure Artifacts](https://marketplace.visualstudio.com/items?itemName=ms.feed)
+
+[Azure DevTest bireysel kredinizi](vs-azure.md)nasıl etkinleştireceğinizi öğrenin.

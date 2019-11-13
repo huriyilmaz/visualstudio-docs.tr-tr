@@ -15,18 +15,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 16fb3e4a0e1aed14e4a3f1b3178dc753f5dc10b4
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 6dc1449a40528670274ea5b275cca3f0a8d2f277
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984182"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983784"
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint çözümleri için güvenlik
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], SharePoint uygulamalarının güvenliğinin artırılmasına yardımcı olmak için aşağıdaki özellikleri içerir.
 
 ## <a name="safe-control-entries"></a>Güvenli denetim girdileri
- [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] ' de oluşturulan her SharePoint proje öğesinde, güvenli bir denetim koleksiyonu temsil eden **güvenli bir denetim girişleri** özelliği bulunur. **Güvenli** alt özelliği, güvenli hale getirmek istediğiniz denetimleri belirtmenize olanak sağlar. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [Güvenli Web bölümleri belirtme](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#sharepoint_northwindwebparts_topic19).
+ [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] ' de oluşturulan her SharePoint proje öğesinde, güvenli bir denetim koleksiyonu temsil eden **güvenli bir denetim girişleri** özelliği bulunur. **Güvenli** alt özelliği, güvenli hale getirmek istediğiniz denetimleri belirtmenize olanak sağlar. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [Güvenli Web bölümleri belirtme](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#specifying-safe-web-parts).
 
 ## <a name="allowpartiallytrustedcallers-attribute"></a>Allowpartiallytrustedçağıranlar özniteliği
  Varsayılan olarak, yalnızca çalışma zamanı kodu erişim güvenliği (CAS) sistemi tarafından tam olarak güvenilen uygulamalar paylaşılan bir yönetilen kod derlemesine erişebilir. Tam güvenilir bir derlemeyi Allowpartiallytrustedçağıranlar özniteliğiyle işaretlemek, kısmen güvenilen derlemelerin buna erişmesini sağlar.

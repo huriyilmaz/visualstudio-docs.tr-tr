@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b5405afbcea1f80d19e3985da3d0781cd459e43
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 292ba29e1902053b04f70052989e4eb0efff5b19
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985107"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983672"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Yönlendirilmiş Grafik Biçimlendirme Dili (DGML) başvurusu
 
@@ -21,7 +21,7 @@ Yönlendirilmiş grafik biçimlendirme dili (DGML) görselleştirme için kullan
 Visual Studio 'nun bazı sürümlerinin yalnızca DGML özellikleri alt kümesini desteklediğine, bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Bir .dgml dosyasını düzenlerken, IntelliSense her öğe için kullanılabilen öznitelikleri ve değerlerini belirlemenize yardımcı olur. Bir öznitelikte renk belirlemek için "Mavi" gibi genel renklerin adlarını veya "#ffa0b1c3" gibi ARGB onaltılık değerlerini kullanın. DGML Windows Presentation Foundation (WPF) renk tanımı biçimlerinin küçük bir alt kümesini kullanır. Daha fazla bilgi için bkz. [renkler sınıfı](/dotnet/api/system.windows.media.colors&view=netframework-4.8).
+> Bir .dgml dosyasını düzenlerken, IntelliSense her öğe için kullanılabilen öznitelikleri ve değerlerini belirlemenize yardımcı olur. Bir öznitelikte renk belirlemek için "Mavi" gibi genel renklerin adlarını veya "#ffa0b1c3" gibi ARGB onaltılık değerlerini kullanın. DGML Windows Presentation Foundation (WPF) renk tanımı biçimlerinin küçük bir alt kümesini kullanır. Daha fazla bilgi için bkz. [renkler sınıfı](/dotnet/api/system.windows.media.colors?view=netframework-4.8).
 
 ## <a name="DGML"></a>DGML sözdizimi
 

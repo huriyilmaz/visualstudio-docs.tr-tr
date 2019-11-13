@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerinde bulunan atama vurgusu avantajı hakkında bilgi edinin
-ms.openlocfilehash: c55891b9aacb81c5169a9082f7e1fd1d922eda92
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: c985a4ae4c1cdcf5c034293d2848a764d6be3d24
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816441"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983745"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde atama vurgulaması avantajı
 Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörüler olması gerekir. Visual Studio Enterprise aboneler, atama vurgulaması sayesinde uygulama kaynak kodlarını hızla tarayarak Azure 'a geçiş için uygulamalarının bulut hazırlığını tanımlayabilir ve bir geçiş sırasında ve sonrasında uygulamasının ilerlemesini izleyebilir.
@@ -76,7 +76,9 @@ Visual Studio Enterprise aboneler, her abone için en fazla beş uygulama için 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | 30 gün boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| GitHub Enterprise ile Visual Studio Enterprise  | VL | 30 gün boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Yok                                                             |  Yok          |
+| GitHub Enterprise ile Visual Studio Professional | VL                                       | Yok                                                             |  Yok          |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                             |  Yok           |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  Yok          |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Yok  | Yok |
@@ -98,6 +100,6 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresi
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Aboneliğiniz ile birlikte gelen Azure avantajını henüz etkinleştirmediyseniz, Azure aboneliğinizi kurmak ve Azure DevTest bireysel kredilerinizi kullanmak için [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ziyaret edin ve araçlar kategorisindeki Azure kutucuğuna tıklayın.
+Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirmediyseniz, Azure aboneliğinizi ayarlamak ve Azure DevTest bireysel kredilerinizi kullanmak için [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ziyaret edin ve araçlar kategorisindeki Azure kutucuğuna tıklayın.
 
 Ve Greg 'in e-postasında bahsedilen tanıtım, Kullanıcı Kılavuzu ve öğretici videolarını kullanıma almayı unutmayın.
