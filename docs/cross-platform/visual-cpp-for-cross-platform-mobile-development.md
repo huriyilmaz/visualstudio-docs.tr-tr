@@ -1,7 +1,7 @@
 ---
 title: İle C++ platformlar arası mobil geliştirme | Microsoft Docs
 ms.custom: ''
-ms.date: 10/17/2019
+ms.date: 11/14/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 61bb3e17b104759995852959a7396d5a76927cfb
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: bc4164ec405aed2941e807934ee8d66b7ae72504
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589037"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098983"
 ---
-# <a name="cross-platform-mobile-development-with-c"></a>İle platformlar arası mobil geliştirmeC++
+# <a name="cross-platform-mobile-development-with-c"></a>C++ ile platformlar arası mobil geliştirme
 
 Visual Studio 'da bulunan C++ platformlar arası araçları kullanarak IOS, Android ve Windows cihazları için yerel uygulamalar oluşturabilirsiniz. **İle C++ mobil geliştirme** , Visual Studio yükleyicisinde sunulan bir iş yüküdür. Paylaşılan kitaplıkların ve yerel uygulamaların platformlar arası geliştirmesi için ihtiyacınız olan SDK 'Ları ve araçları yüklenir. Yüklendiğinde, iOS ve Android cihazlar ve platformlar C++ , Windows, Windows Mağazası ve Xbox üzerinde çalışan kod oluşturmak için kullanabilirsiniz.
 
@@ -42,10 +42,6 @@ Platformlar arası C++ mobil geliştirme için kullanılan geliştirme birçok a
 Android veya iOS Geliştirme işleminden geliyorsa, kullanmaya başlama hakkında harika bir malzememiz vardır. Visual Studio, ifade ve uyumlu bir geliştirme ortamıdır. Nasıl kullanacağınızı öğrenmek için [Android Geliştiricileri için kullanmaya](/previous-versions/windows/apps/dn275875\(v=win.10\)) başlayın veya [iOS geliştiricileri için kullanmaya](/previous-versions/windows/apps/jj657966\(v=win.10\))başlayın. Bu makaleler, sizi Visual Studio 'ya ve Windows ve Windows Mağazası için platformlar arası uygulamalar geliştirmeniz için gereken kavramlara tanıtmaktadır. İOS ve Android için ilk platformlar arası uygulamanızı yazmaya başlamak için bkz. [Android ve iOS üzerinde OpenGL ES uygulaması oluşturma](../cross-platform/build-an-opengl-es-application-on-android-and-ios.md).
 
 C++ İş yüküyle mobil geliştirme, uygulamalarınıza başlamanıza yardımcı olacak çeşitli şablonlar içerir:
-
-- OpenGLES 2 uygulaması (Android, iOS, Windows Evrensel)
-
-  Bir Android yerel etkinlik uygulaması, bir iOS uygulaması ve Evrensel Windows uygulaması oluşturmak için paylaşılan C++ bir kod kitaplığıyla birlikte bir proje kümesi içeren bir çözüm oluşturur. Bu uygulamalar, her uygulamada aynı dönen kübü çizmek için ortak C++ OpenGL ES kodu kullanılarak oluşturulan platforma özgü kitaplıkları kullanır. Bu şablonu kullanmak için, Visual Studio 'Yu yüklerken **Evrensel Windows platformu geliştirme** iş yükünü dahil edin.
 
 - Native-Activity uygulaması (Android)
 
@@ -101,7 +97,7 @@ Windows, Android ve iOS uygulamalarında kullanabileceğiniz paylaşılan kod ki
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-@No__t_2 [platformlar arası mobil geliştirme C++ ](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)
+\ [platformlar arası mobil geliştirme C++ ](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)
 [İOS \ kullanarak derlemek için Araçlar yükleyip yapılandırın](../cross-platform/install-and-configure-tools-to-build-using-ios.md)
 [Android yerel etkinlik uygulaması oluşturma](../cross-platform/create-an-android-native-activity-app.md) \
 [Android ve iOS \ bir OpenGL ES uygulaması oluşturma](../cross-platform/build-an-opengl-es-application-on-android-and-ios.md)

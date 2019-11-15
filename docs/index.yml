@@ -1,210 +1,75 @@
 ### YamlMime:Hub
-title: Visual Studio belgeleri
-summary: Platformlarınızın ve cihazlarınızın tercih ettiğiniz dilde uygulamaları, hizmetleri ve araçları geliştirmek için Visual Studio 'Yu nasıl kullanacağınızı öğrenin.
+title: Visual Studio ürün ailesi belgeleri
+summary: Visual Studio ürün ailesi için belgeleri inceleyin.
 brand: visual-studio
 metadata:
-  title: Visual Studio belgeleri | Microsoft Docs
-  titleSuffix: ''
-  description: Herhangi bir platform veya cihaz için seçtiğiniz dilde uygulama, hizmet ve araç geliştirmek için Visual Studio 'Yu nasıl kullanacağınızı öğrenin.
+  title: Visual Studio ürün ailesi belgeleri
+  description: Visual Studio ürün ailesi için belgeleri inceleyin.
   ms.topic: hub-page
+  ms.date: 11/13/2019
+  searchScope: []
+  titleSuffix: ''
+  ms.author: ghogen
+  author: ghogen
+  ms.manager: jillfra
   monikerRange: '>=vs-2017'
-  f1_keywords:
-  - MSDNSTART
-  ms.openlocfilehash: 16566f855e2e7504616da3d4196440facf145e6b
-  ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+  hide_bc: true
+  ms.openlocfilehash: b36b1835f38a4ce6fe46d72935dc8cfc144561c3
+  ms.sourcegitcommit: 890ae10c8ea3bff8306ed25b06256578dee08397
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/16/2019
-  ms.locfileid: "72380962"
-highlightedContent:
+  ms.lasthandoff: 11/15/2019
+  ms.locfileid: "74118958"
+productDirectory:
   items:
-  - title: Kurulum ve yükleme
-    itemType: download
-    url: /visualstudio/install/install-visual-studio
-  - title: Visual Studio IDE 'ye hoş geldiniz
-    itemType: overview
-    url: /visualstudio/ide/visual-studio-ide
-  - title: Visual Studio 2019’daki yenilikler
-    itemType: get-started
-    url: /visualstudio/ide/whats-new-visual-studio-2019
-  - title: Geliştirme becerilerinizi geliştirin
-    itemType: learn
-    url: /learn/
-conceptualContent:
-  title: Kullanmaya başlayın
-  items:
-  - title: Visual Studio 'Yu nasıl kullanacağınızı öğrenin
+  - title: Visual Studio
+    imageSrc: ./media/vs-ide-2019.svg
     links:
-    - text: Kılavuzlu tura başla
-      url: ide/visual-studio-ide.md
-      itemType: overview
-    - text: Depodan kod açma
-      url: get-started/tutorial-open-project-from-repo.md
-      itemType: tutorial
-    - text: Kodu yazma ve düzenleme
-      url: ide/index-writing-code.yml
-      itemType: tutorial
-    - text: Kodunuzu oluşturma
-      url: ide/compiling-and-building-in-visual-studio.md
-      itemType: tutorial
-    - text: Kodunuzda hata ayıklama
-      itemType: tutorial
-      url: debugger/debugger-feature-tour.md
-    - text: Kodunuzu test etme
-      itemType: tutorial
-      url: test/getting-started-with-unit-testing.md
-    - text: Verilere yerel olarak veya bulutta erişin
-      itemType: tutorial
-      url: data-tools/create-a-sql-database-by-using-a-designer.md
-  - title: Öğreticiyi izleyin
+    - url: /visualstudio/windows?view=vs-2019
+      text: Visual Studio 2019 (geçerli)
+    - url: /visualstudio/windows?view=vs-2017
+      text: Visual Studio 2017
+    - url: https://docs.microsoft.com/previous-versions/visualstudio/
+      text: Önceki sürümler
+    - url: https://docs.microsoft.com/visualstudio/releases/2019/release-notes
+      text: Sürüm notları
+    - url: https://visualstudio.microsoft.com/
+      text: Ürün sayfası
+  - title: Mac için Visual Studio
+    imageSrc: ./media/vs-mac-2019.svg
     links:
-    - text: C#
-      url: /visualstudio/get-started/csharp
-      itemType: get-started
-    - text: F#
-      url: /visualstudio/ide/quickstart-fsharp
-      itemType: get-started
-    - text: Visual Basic
-      url: /visualstudio/get-started/visual-basic/
-      itemType: get-started
-    - text: C++
-      url: /cpp/get-started/tutorial-console-cpp
-      itemType: get-started
-    - text: Python
-      url: /visualstudio/python
-      itemType: get-started
-    - text: JavaScript
-      url: /visualstudio/javascript
-      itemType: get-started
-  - title: Uygulama oluşturun
+    - url: https://docs.microsoft.com/visualstudio/mac
+      text: Mac için Visual Studio 2019 (geçerli)
+    - url: https://docs.microsoft.com/visualstudio/mac/?view=vsmac-2017
+      text: Mac için Visual Studio 2017
+    - url: https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes
+      text: Sürüm notları
+    - url: https://visualstudio.microsoft.com/vs/mac/
+      text: Ürün sayfası
+  - title: Visual Studio Code
+    imageSrc: ./media/vs-code-logo.svg
     links:
-    - text: Windows masaüstü uygulaması
-      itemType: tutorial
-      url: /visualstudio/ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic
-    - text: Evrensel Windows uygulaması
-      itemType: tutorial
-      url: /visualstudio/get-started/csharp/tutorial-uwp
-    - text: Mobil uygulama
-      itemType: overview
-      url: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
-    - text: Unity oyunu
-      itemType: tutorial
-      url: /visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity
-    - text: ASP.NET Core Web uygulaması
-      itemType: quickstart
-      url: /aspnet/core/tutorials/razor-pages/razor-pages-start
-tools:
-  title: Diller
-  items:
-  - title: C++
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
-    url: /cpp/
-  - title: C#
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
-    url: /dotnet/csharp
-  - title: F#
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
-    url: /dotnet/fsharp
-  - title: Visual Basic
-    imageSrc: https://docs.microsoft.com/media/logos/logo_VB.svg
-    url: /dotnet/visual-basic
-  - title: Python
-    imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
-    url: /visualstudio/python
-  - title: JavaScript
-    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
-    url: /visualstudio/javascript
-  - title: TypeScript
-    imageSrc: https://docs.microsoft.com/media/logos/logo_TS.svg
-    url: http://www.typescriptlang.org/docs/tutorial.html
-  - title: R
-    imageSrc: https://docs.microsoft.com/media/logos/logo_R.svg
-    url: /visualstudio/rtvs/?view=vs-2017
-additionalContent:
-  sections:
-  - title: Görevler
-    items:
-    - title: Geliştirme
-      summary: Kod düzenleyicisini kullanarak kodunuzu yazın ve yönetin.
-      url: ide/index-writing-code.yml
-    - title: Yapı
-      summary: Kaynak kodunuzu derleyin ve oluşturun.
-      url: ide/compiling-and-building-in-visual-studio.md
-    - title: Hata ayıklama
-      summary: Kodunuzda hataları araştırın ve onarın.
-      url: debugger/index.yml
-    - title: Test
-      summary: Projeleriniz üzerinde testler çalıştırın.
-      url: test/improve-code-quality.md
-    - title: Dağıt
-      summary: Web Dağıtımı, InstallShield, NuGet, sürekli tümleştirme ve daha fazlasını kullanarak uygulamalarınızı ve kodunuzu paylaşabilirsiniz.
-      url: deployment/index.yml
-    - title: Sürüm Denetimi
-      summary: Git ve TFVC gibi sürüm denetimi teknolojilerini kullanarak kod paylaşın.
-      url: /azure/devops/repos/index
-    - title: DevOps
-      summary: Uygulamalarınızı bulutta sürekli olarak derleyin ve serbest bırakın ve Azure DevOps Services çevik uygulamalar uygulayın.
-      url: /azure/devops
-    - title: Ölçüm performansı
-      summary: Tanılama araçlarını kullanarak performans sorunlarını belirleyin ve kod performansını iyileştirin.
-      url: profiling/index.yml
-    - title: Genişletmeyi
-      summary: Geliştirme deneyiminizi geliştirmek için Visual Studio IDE 'ye kendi işlevselliklerinizi ekleyin.
-      url: extensibility/index.md
-    - title: Veri
-      summary: Herhangi bir veritabanına veya hizmete ve herhangi bir yere (yerel veya bulut) bağlanan veri uygulamaları oluşturun.
-      url: data-tools/accessing-data-in-visual-studio.md
-    - title: İşbirliği
-      summary: Ortak ve gerçek zamanlı bir ortamda paylaşma, düzenleme ve hata ayıklama kodu.
-      url: /visualstudio/liveshare/
-    - title: Kapsayıcılarla geliştirme
-      summary: Modüler bileşenleri yalıtmak ve ölçeklenebilirliği geliştirmek için kapsayıcıları kullanın.
-      url: containers/index.yml
-  - title: İş yükleri
-    items:
-    - title: Web ve bulut
-      links:
-      - text: Web geliştirme
-        url: /aspnet/
-      - text: Azure geliştirme ve yönetimi
-        url: /visualstudio/azure
-      - text: Python
-        url: /visualstudio/python
-      - text: Node.js
-        url: /visualstudio/javascript
-      - text: Veri depolama ve işleme
-        url: data-tools/index.md
-      - text: Veri bilimi
-        url: python/data-science-and-analytical-applications-workload.md
-      - text: Office/SharePoint geliştirme
-        url: https://developer.microsoft.com/office/docs
-    - title: Windows
-      links:
-      - text: .NET masaüstü geliştirme
-        url: /dotnet/framework/develop-client-apps
-      - text: Evrensel Windows platformu geliştirme
-        url: cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md
-      - text: İle Windows geliştirmeC++
-        url: /cpp/windows/desktop-applications-visual-cpp
-    - title: Mobil ve oyun
-      links:
-      - text: .NET ile mobil geliştirme (Xamarin)
-        url: /xamarin/
-      - text: Unity ile oyun geliştirme
-        url: cross-platform/visual-studio-tools-for-unity.md
-      - text: JavaScript ile mobil geliştirme
-        url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
-        note: (Yalnızca Visual Studio 2017 ve 2015)
-      - text: İle mobil geliştirmeC++
-        url: /visualstudio/cross-platform/
-      - text: İle oyun geliştirmeC++
-        url: /windows/uwp/gaming/e2e
-    - title: Diğer araç kümeleri
-      links:
-      - text: Visual Studio uzantısı geliştirme
-        url: extensibility/index.md
-      - text: İle Linux geliştirmeC++
-        url: /cpp/linux/
-      - text: .NET Core platformlar arası geliştirme
-        url: /dotnet/core/
-  footer: '[Bloglar](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [sorun raporlama](ide/talk-to-us.md) - [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html)'
+    - url: https://code.visualstudio.com/docs
+      text: Belgeler
+    - url: https://code.visualstudio.com/updates
+      text: Sürüm notları
+    - url: https://code.visualstudio.com
+      text: Ürün sayfası
+  - title: Visual Studio App Center
+    imageSrc: ./media/vs-mobile-center.svg
+    links:
+    - url: https://docs.microsoft.com/appcenter
+      text: Belgeler
+    - url: https://visualstudio.microsoft.com/app-center/
+      text: Portal
+  - title: Visual Studio Abonelikleri
+    imageSrc: ./media/vs-subscription-temp.svg
+    links:
+    - url: https://docs.microsoft.com/visualstudio/subscriptions
+      text: Belgeler
+    - url: https://visualstudio.microsoft.com/subscriptions
+      text: Visualstudio.com hakkında bilgi
+    - url: https://my.visualstudio.com
+      text: Portal
+    - url: https://manage.visualstudio.com
+      text: Yönetim

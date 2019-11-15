@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: Bazı Visual Studio aboneliklerine dahil edilen Office 365 avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 58bfed3de99e3a3fa0a46e084ea566ae0451c47f
-ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
+ms.openlocfilehash: 2dde8489f15d8bd2e6a5d04045b99aea2245f73d
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144709"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099604"
 ---
 # <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Office 365 ProPlus
 
@@ -51,8 +51,10 @@ Office 365 ProPlus 'ı indirmek ve etkinleştirmek için şu adımları izleyin:
 | Abonelik düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Evet          |
 | Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Yok       |  Yok          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Yok                                                            |  Yok          |
+| GitHub Enterprise ile Visual Studio Professional | VL | Yok         |  Yok          |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                             |  Yok          |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  Yok          |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Yok | Yok |

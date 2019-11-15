@@ -3,15 +3,15 @@ title: Visual Studio aboneliklerinde CloudPilot avantajı | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/30/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerinde bulunan CloudPilot avantajı hakkında bilgi edinin
-ms.openlocfilehash: 5f8592b15f61dff454b6fe29d4d207dd609ab461
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 253a1b1c3b6996a200a236661d621c43975cb1ed
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816498"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099624"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde CloudPilot avantajı
 Uygulamalarınızı birkaç kolay adımda Microsoft Azure taşıyın. Dakikalar içinde, başarılı geçiş için kod satırına tüm gerekli kod değişikliklerini belirlemek için: kapsayıcılar, VM 'Ler, App Services, SQL Azure ve/veya SQL MI. Ardından, ASR, DMA ve DMS kullanan sihirbazları kullanarak uygulamaları Azure 'a geçirin.
@@ -59,7 +59,9 @@ UniFi bulutu tarafından sağlanan CloudPilot, geliştiricilerin uygulamaları h
 | Abonelik düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| GitHub Enterprise ile Visual Studio Enterprise   | VL | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
+| GitHub Enterprise ile Visual Studio Professional | VL | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                             |  Yok           |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                              |  Yok          |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Yok  | Yok |
@@ -83,4 +85,4 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  E-posta adresi
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Aboneliğiniz ile birlikte gelen Azure avantajını henüz etkinleştirmediyseniz, Azure aboneliğinizi kurmak ve Azure DevTest bireysel kredilerinizi kullanmak için [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ziyaret edin ve araçlar kategorisindeki Azure kutucuğuna tıklayın.
+Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirmediyseniz, Azure aboneliğinizi ayarlamak ve Azure DevTest bireysel kredilerinizi kullanmak için [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ziyaret edin ve araçlar kategorisindeki Azure kutucuğuna tıklayın.
