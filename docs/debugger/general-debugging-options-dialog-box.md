@@ -1,6 +1,6 @@
 ---
 title: Genel, hata ayıklama, Seçenekler Iletişim kutusu | Microsoft Docs
-ms.date: 11/09/2018
+ms.date: 11/12/2019
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.General
@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbd99d260ba61d9e3ae9e877ecc1cefb1a22892e
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 528fa04b081937af69e647b01911ed00c1ec40c9
+ms.sourcegitcommit: 9801fc66a14c0f855b9ff601fb981a9e5321819e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72569071"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74072710"
 ---
 # <a name="general-debugging-options"></a>Genel hata ayıklama seçenekleri
 
@@ -109,7 +109,7 @@ Aşağıdaki **genel** seçenekleri belirleyebilirsiniz:
 
 **DLL dışarı aktarmaları yükle (yalnızca yerel)** : dll dışa aktarma tablolarını yükler. DLL dışarı aktarma tablolarından sembol bilgileri, Windows iletileri, Windows yordamları (WindowProcs), COM nesneleri veya sıralama ya da sembolleri olmayan herhangi bir dll ile çalışıyorsanız yararlı olabilir. Dll dışa aktarma bilgilerini okuma bazı ek yük içerir. Bu nedenle, bu özellik varsayılan olarak kapalıdır.
 
-Dll 'nin dışarı aktarma tablosunda hangi simgelerin kullanılabildiğini görmek için `dumpbin /exports` kullanın. Semboller, 32 bit sistem dll 'si için kullanılabilir. @No__t_0 çıktısını okuyarak, alfasayısal olmayan karakterler de dahil olmak üzere tam işlev adını görebilirsiniz. Bu, bir işlev bir kesme noktası ayarlamak için yararlıdır. DLL dışarı aktarma tablolarındaki işlev adları, hata ayıklayıcının başka bir yerinde kesilmiş görünebilir. Aramalar geçerli işlev en üstte (en yoğun şekilde iç içe geçmiş) olacak şekilde arama sırasıyla listelenir. Daha fazla bilgi için bkz. [dumpbin/dışarı aktarmalar](/cpp/build/reference/dash-exports).
+Dll 'nin dışarı aktarma tablosunda hangi simgelerin kullanılabildiğini görmek için `dumpbin /exports` kullanın. Semboller, 32 bit sistem dll 'si için kullanılabilir. `dumpbin /exports` çıktısını okuyarak, alfasayısal olmayan karakterler de dahil olmak üzere tam işlev adını görebilirsiniz. Bu, bir işlev bir kesme noktası ayarlamak için yararlıdır. DLL dışarı aktarma tablolarındaki işlev adları, hata ayıklayıcının başka bir yerinde kesilmiş görünebilir. Aramalar geçerli işlev en üstte (en yoğun şekilde iç içe geçmiş) olacak şekilde arama sırasıyla listelenir. Daha fazla bilgi için bkz. [dumpbin/dışarı aktarmalar](/cpp/build/reference/dash-exports).
 
 **Paralel Yığınlar diyagramını aşağıdan yukarı göster**: yığınların **Paralel Yığınlar** penceresinde gösterileceği yönü denetler.
 
@@ -137,6 +137,12 @@ Dll 'nin dışarı aktarma tablosunda hangi simgelerin kullanılabildiğini gör
 - **Uygulamada çalışma zamanı araçlarını göster**: **canlı görsel ağaç** komutlarını, hata ayıklamakta olan xaml uygulamasının ana penceresindeki bir araç çubuğunda gösterir. Bu seçenek, Visual Studio 2015 güncelleştirme 2 ' de sunulmuştur.
 
 - **Xaml Hot Reload 'ı etkinleştir**: uygulamanız çalışıyorsa XAML kodu Ile xaml etkin yeniden yükleme özelliğini kullanmanıza olanak sağlar. (Bu özellik daha önce "XAML Düzenle ve devam et" olarak adlandırılmıştı)
+
+::: moniker range=">= vs-2019" 
+- **Yalnızca XAML mi etkinleştirin**: Visual Studio 2019 sürüm 16,4 ' den başlayarak, varsayılan olarak **canlı görsel ağaç** yalnızca Kullanıcı kodu olarak sınıflandırılan xaml 'yi gösterir. Bu seçeneği devre dışı bırakırsanız, tüm oluşturulan XAML kodu araç içinde gösterilir.
+
+- **Bir öğe seçildiğinde seçim modunu** kapat Visual Studio 2019 sürüm 16,4 ' den başlayarak, bir öğe seçildiğinde uygulama içi araç çubuğu öğe seçicisi düğmesine (**Seçimi Etkinleştir**) geçiş yapın. Bu seçeneği devre dışı bırakırsanız, uygulama içi araç çubuğu düğmesine yeniden tıklayana kadar öğe seçimi açık kalır.
+::: moniker-end
 
 **Hata ayıklarken tanılama araçları etkinleştir**: hata ayıklarken **Tanılama araçları** pencere görüntülenir.
 
