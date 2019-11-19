@@ -3,15 +3,15 @@ title: Parasoft Virtualınitialize/SOAtest Professional Desktop avantajı | Micr
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/31/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: Visual Studio aboneliğinize dahil edilen parasoft Virtualınitialize/SOA Test Professional aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: a1bd6525df65ee8cc0c9f3dd9dfd60673dbb6df1
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 036b265f9ca1accc7027477abfc27ce4e66c4033
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816488"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161934"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde parasoft Virtualınitialize/SOAtest Professional Desktop
 
@@ -40,7 +40,7 @@ Daha önce ve daha sık test edin.  Kullanılamayan gelişen uygulamalar ve sist
    > [!div class="mx-imgBorder"]
    > ![parasoft avantajı hoş geldiniz e-postası](_img/vs-parasoft/vs-parasoft-email.png)
 
-7. Kullandığınız tarayıcıya bağlı olarak, yükleyiciyi çalıştırma fırsatını sağlayan farklı iletişim kutuları görebilirsiniz.  Örneğin, Internet Explorer 'da, en üstte bulunan parasoft_soavirt_ 9.10.2 _win32_x86_64. exe ile son karşıdan yüklemelerin bir listesini görürsünüz. Yükleyiciyi başlatmak için **Çalıştır** ' a tıklayın.
+7. Kullandığınız tarayıcıya bağlı olarak, yükleyiciyi çalıştırma fırsatını sağlayan farklı iletişim kutuları görebilirsiniz.  Örneğin, Internet Explorer 'da, en üstte listelenen parasoft_soavirt_9 .10.2_win32_x86_64. exe ile son karşıdan yüklemelerin bir listesini görürsünüz. Yükleyiciyi başlatmak için **Çalıştır** ' a tıklayın.
 
 8. Kullanıcı hesabı denetimi iletişim kutusu açıldığında **Evet**' e tıklayın.
 
@@ -73,7 +73,9 @@ Daha önce ve daha sık test edin.  Kullanılamayan gelişen uygulamalar ve sist
 | Abonelik düzeyi                                                 |     Kanallar                                            | Faydası                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Evet       |
+| GitHub Enterprise ile Visual Studio Enterprise | VL | 6 ay       |  Evet       |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Yok                                                           |Yok         |
+| GitHub Enterprise ile Visual Studio Professional | VL                                      | Yok                                                           |Yok         |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Yok                                                           |Yok         |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Yok                                                           |Yok         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Yok                                                           |Yok|
