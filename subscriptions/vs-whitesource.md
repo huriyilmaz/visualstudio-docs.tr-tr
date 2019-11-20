@@ -1,49 +1,52 @@
 ---
-title: Beyaz kaynak sürgüsü avantajı | Microsoft Docs
+title: WhiteSource Bolt Benefit | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/01/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
-description: Visual Studio aboneliğinize dahil edilen beyaz kaynak sürgüsü aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 54248c0291fe54c2cb7db9155233d08e96991581
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+description: Learn how to activate the WhiteSource Bolt subscription included with your Visual Studio subscription.
+ms.openlocfilehash: fb403053d101cf2edf8677c7bcce494ae4e2d21e
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816415"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74174124"
 ---
-# <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde beyaz kaynak sürgüsü
+# <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>WhiteSource Bolt in Visual Studio subscriptions
 
-Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açık kaynaklı bileşenlerin kapsamlı envanterini ve lisans raporlarını oluşturun. 
+Find and fix open source vulnerabilities and generate comprehensive inventory and license reports of all open source components in your build. 
 
-## <a name="activation-steps"></a>Etkinleştirme adımları
+## <a name="activation-steps"></a>Activation steps
 
-1. Beyaz kaynak rulosu avantajınızı etkinleştirmek için [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) oturum açın.
+1. To activate your WhiteSource Bolt benefit, sign in to [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
 
-2. Araçlar bölümünde beyaz kaynak sürgüsü kutucuğunu bulun ve avantajın altındaki **kodu al** bağlantısına tıklayın.
+2. Locate the WhiteSource Bolt tile in the Tools section, and click on the **Get Code** link at the bottom of the benefit tile.
    > [!div class="mx-imgBorder"]
-   > ![beyaz kaynak avantajı kutucuğu](_img/vs-whitesource/vs-whitesource-tile.png)
+   > ![WhiteSource Benefit Tile](_img/vs-whitesource/vs-whitesource-tile.png)
 
-3. Etkinleştirme kodunuzu görüntüleyen bir bildirim alırsınız.  **Kodu panonuza kopyalayın**ve ardından **Etkinleştir**' e tıklayın.
+3. You’ll receive a notification displaying your activation code.  **Copy the code to your clipboard**, then click **Activate**.
    > [!div class="mx-imgBorder"]
-   > ![beyaz kaynak avantajı kodu ](_img/vs-whitesource/vs-whitesource-code.png)
+   > ![WhiteSource Benefit Code ](_img/vs-whitesource/vs-whitesource-code.png)
 
-4. **Hesabınızı etkinleştirin** sayfasında, 1. adımdaki **Install** bağlantısına tıklayın.
-5. Visual Studio Market **ücretsiz alın** ' a tıklayın.
-6. Ardından, kullanmak istediğiniz Azure DevOps organizasyonunu seçin ve ardından **Install**' a tıklayın.  (Azure DevOps Services henüz ayarlanmamışsa, [avantajlar](https://my.visualstudio.com/benefits) sayfasını ziyaret edin ve Azure DevOps Services avantajınızı etkinleştirin.)
+4. On the **Activate your account** page, click the **install** link in step 1.
+5. Click **Get it free** in the Visual Studio Marketplace.
+6. Next, select the Azure DevOps organization you want to use and click **Install**.  (If you have not yet set up Azure DevOps Services, visit the [Benefits](https://my.visualstudio.com/benefits) page and activate your Azure DevOps Services benefit.)
 
-7. **Kuruluşa ilerle**' ye tıklayın.
-8. Beyaz kaynak sürgüsü başarıyla yükledikten sonra [etkinleştir sayfasına](https://bolt.whitesourcesoftware.com/whitesource-bolt-azure-devops#activate)dönün ve nasıl yapılandırılacağını görmek için videoyu görüntüleyin. 
-9. Daha fazla bilgi için, beyaz kaynak sürgüsü [SSS sayfasını](https://bolt.whitesourcesoftware.com/azure/faq/)ziyaret edin. 
+7. Click **Proceed to organization**.
+8. Once you've successfully installed WhiteSource Bolt, return to the [activate page](https://bolt.whitesourcesoftware.com/whitesource-bolt-azure-devops#activate), and view the video to see how to configure it. 
+9. For more information, visit the WhiteSource Bolt [FAQ page](https://bolt.whitesourcesoftware.com/azure/faq/). 
 
-## <a name="eligibility"></a>Önceliği
-Beyaz kaynak sürgüsü artık Visual Studio Market ücretsiz olarak kullanılabilir. 
+## <a name="eligibility"></a>Eligibility
+[WhiteSource Bolt](https://marketplace.visualstudio.com/search?term=whitesource&target=AzureDevOps&category=All%20categories&sortBy=Relevance) is now available free in the [Visual Studio Marketplace. 
 
-## <a name="support-resources"></a>Destek kaynakları
-- Beyaz kaynak sürgüsü ile ilgili yardım mı gerekiyor?  https://www.whitesourcesoftware.com/vse_whitesource_bolt/ bir beyaz kaynak rulosu temsilcisiyle sohbet edin
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
-- Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
+## <a name="support-resources"></a>Support resources
+- Need help with WhiteSource Bolt?  Chat with a WhiteSource Bolt representative live at https://www.whitesourcesoftware.com/vse_whitesource_bolt/
+- For assistance with sales, subscriptions, accounts and billing for Visual Studio Subscriptions, contact Visual Studio [Subscriptions Support](https://visualstudio.microsoft.com/subscriptions/support/).
+- Have a question about Visual Studio IDE, Azure DevOps Services or other Visual Studio products or services?  Visit [Visual Studio Support](https://visualstudio.microsoft.com/support/).
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Bir Visual Studio abonesi olarak, ek ücret ödemeden Microsoft Azure kullanabilirsiniz.  [Aylık Azure DevTest krediniz](vs-azure.md)sayesinde Azure, geliştirme ve test için kişisel korumalı alanınız.  Sanal makineleri, bulut hizmetlerini ve diğer Azure kaynaklarını sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre farklılık gösterir.
+Be sure to activate these great benefits to make the most of your Visual Studio subscription:
+- [Visual Studio](vs-ide-benefit.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Azure DevTest bireysel kredisi](vs-azure.md)

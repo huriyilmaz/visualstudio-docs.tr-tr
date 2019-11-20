@@ -1,12 +1,12 @@
 ### YamlMime:Landing
-title: Visual Studio öğreticileri |C#
-summary: Visual C# Studio ile uygulamalar oluşturun.
+title: Visual Studio tutorials | C#
+summary: Create C# apps with Visual Studio.
 metadata:
-  title: C#Visual Studio ile geliştirme
-  description: Visual C# Studio 'yu kullanarak uygulamalar oluşturun.
+  title: C# development with Visual Studio
+  description: Create C# apps by using Visual Studio.
   ms.custom: seodec18
   ms.topic: landing-page
-  ms.date: 09/27/2019
+  ms.date: 11/19/2019
   author: ghogen
   ms.author: ghogen
   manager: jillfra
@@ -14,48 +14,54 @@ metadata:
   ms.technology: vs-acquisition
   dev_langs:
   - CSharp
-  ms.openlocfilehash: 0e61a2b9d54fc4e40a84e7107ab653a2e90f52de
-  ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+  ms.openlocfilehash: b364716f87999272030e48a88af5a06cbff012e4
+  ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/04/2019
-  ms.locfileid: "71962856"
+  ms.lasthandoff: 11/19/2019
+  ms.locfileid: "74188645"
 landingContent:
-- title: başlarken
+- title: Kullanmaya başlayın
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Visual Studio yükleme
+    - text: Visual Studio'yu yükleme
       url: ../../install/install-visual-studio.md
   - linkListType: get-started
     links:
-    - text: Kılavuzlu tura başla
+    - text: Start a guided tour
       url: visual-studio-ide.md
-- title: Uygulama C# oluşturma
+  - linkListType: quickstart
+    links:
+    - text: Create a "Hello World" console app
+      url: ../../ide/quickstart-csharp-console.md
+    - text: Create a "Hello World" web app
+      url: ../../ide/quickstart-aspnet-core.md
+- title: Create C# apps
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Bir konsol uygulaması oluşturma
+    - text: Konsol uygulaması oluşturma
       url: tutorial-console.md
     - text: Web uygulaması oluşturma
       url: tutorial-aspnet-core.md
-    - text: Evrensel Windows Platformu uygulaması oluşturma
+    - text: Create a Universal Windows Platform app
       url: tutorial-uwp.md
-    - text: Windows masaüstü uygulaması oluşturma
+    - text: Create a Windows Desktop app
       url: tutorial-wpf.md
     - text: Windows Forms uygulaması oluşturma
       url: ../../ide/create-csharp-winform-visual-studio.md
-    - text: C# Dil hakkında bilgi edinin
+    - text: Learn about the C# language
       url: /dotnet/csharp/tutorials/intro-to-csharp/
   - linkListType: video
     links:
-    - text: ASP.NET Core uygulaması oluşturma
+    - text: Create an ASP.NET Core app
       url: tutorial-aspnet-core-ef-step-01.md
 - title: Visual Studio'yu öğrenin
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Depodan kod açma
+    - text: Open code from a repo
       url: ../tutorial-open-project-from-repo.md
     - text: Kodu yazma ve düzenleme
       url: tutorial-editor.md
@@ -63,7 +69,7 @@ landingContent:
       url: ../../ide/compiling-and-building-in-visual-studio.md
     - text: Kodunuzda hata ayıklama
       url: ../csharp/tutorial-debugger.md
-    - text: Kodunuzu test etme
+    - text: Test your code
       url: ../../test/getting-started-with-unit-testing.md
   - linkListType: how-to-guide
     links:

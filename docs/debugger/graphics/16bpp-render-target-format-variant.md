@@ -1,5 +1,5 @@
 ---
-title: 16bpp işleme hedef biçim çeşidi | Microsoft Docs
+title: 16bpp Render Target Format Variant | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 24b22ad9-5ad0-4161-809a-9b518eb924bf
@@ -8,57 +8,57 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94775b717a3095d54d3fa52e3d2a5325dc3d21c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8a63261a4ef8a6304bec8c2bdde1d9ec9113405e
+ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62896429"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188586"
 ---
-# <a name="16-bpp-render-target-format-variant"></a>16 bpp hedef biçimi değişken işleme
-Piksel biçimlendirmek için DXGI_FORMAT_B5G6R5_UNORM tüm ayarlar, işleme hedefleri ve arabellek yedekleyin.
+# <a name="16-bpp-render-target-format-variant"></a>16 bpp Render Target Format Variant
+Sets the pixel format to DXGI_FORMAT_B5G6R5_UNORM for all render targets and back buffers.
 
-## <a name="interpretation"></a>Yorumu
- İşleme hedefi veya geri arabelleği genellikle B8G8R8A8_UNORM gibi bir 32 bpp (32 bit / piksel) biçimi kullanır. 32-bpp biçimleri büyük miktarda bellek bant genişliği tüketebilir. B5G6R5_UNORM biçimi 32 bpp biçimlerinin boyutunda bir 16 bpp biçimde olduğundan, bunu kullanan baskısı bellek bant genişliği, ancak daha az renk uygunluk, hafifletmek.
+## <a name="interpretation"></a>Interpretation
+ A render target or back buffer typically uses a 32 bpp (32 bits per pixel) format such as B8G8R8A8_UNORM. 32-bpp formats can consume a large amount of memory bandwidth. Because the B5G6R5_UNORM format is a 16-bpp format that's half the size of 32-bpp formats, using it can relieve pressure on memory bandwidth, but at the cost of reduced color fidelity.
 
- Bu değişken, bir büyük bir performans kazancı gösteriyorsa, bu büyük olasılıkla uygulamanızı çok fazla bellek bant genişliği tüketir gösterir. Özellikle, profili oluşturulan çerçeve overdraw veya alfa karıştırma önemli miktarda varken önemli bir performans geliştirmesi elde edebilirsiniz.
+ If this variant shows a large performance gain, it likely indicates that your app consumes too much memory bandwidth. You can gain significant performance improvement, especially when the profiled frame had a significant amount of overdraw or alpha-blending.
 
-Uygulamanız aşağıdaki koşullara sahip olduğunda 16 bpp işleme hedef biçim bellek bant kullanımına sahip azaltabilirsiniz:
-- Yüksek kaliteli renk çoğaltılması gerekmez.
-- Alfa kanalını gerektirmez.
-- (Bu daha az renk uygunluk altında Şerit yapılara açıktır) kesintisiz gradyanlar ofent sahip değil.
+A 16-bpp render target format can reduce memory band with usage when your application has the following conditions:
+- Doesn't require high-fidelity color reproduction.
+- Doesn't require an alpha channel.
+- Doesn't often have smooth gradients (which are susceptible to banding artifacts under reduced color fidelity).
 
-Bellek bant genişliğini azaltmak üzere diğer stratejiler şunlardır:
-- Overdraw veya alfa karıştırma miktarını azaltın.
-- Çerçeve arabelleği boyutunu azaltın.
-- Doku kaynakları boyutunu azaltın.
-- Doku kaynakları sıkıştırmaları azaltın.
+Other strategies to reduce memory bandwidth include:
+- Reduce the amount of overdraw or alpha-blending.
+- Reduce the dimensions of the frame buffer.
+- Reduce dimensions of texture resources.
+- Reduce compressions of texture resources.
 
-Her zamanki şekilde resmi kalite herhangi birini bu iyileştirmeler ile gelen dengelemeler düşünmek zorunda.
+As usual, you have to consider the image quality trade-offs that come with any of these optimizations.
 
-Takas zinciri bir parçası olan uygulamaları 16 bpp desteklemeyen bir arka arabellek biçimi (DXGI_FORMAT_B5G6R5_UNORM) sahiptir. Bu takas zincirleri kullanılarak oluşturulan `D3D11CreateDeviceAndSwapChain` veya `IDXGIFactory::CreateSwapChain`. Bu sınırlara yakın çalışmak için aşağıdaki adımları uygulayın:
-1. Kullanarak B5G6R5_UNORM biçimi işleme hedefi oluşturma `CreateTexture2D` ve o hedefinde işleyin.
-2. Takas zinciri arka arabelleği üzerine işleme hedefi bir tam ekran dört işleme hedefi olarak, kaynak doku ile çizerek kopyalayın.
-3. Yoksa, takas zinciri üzerinde çağırın.
+Applications that are a part of a swap chain have a back buffer format (DXGI_FORMAT_B5G6R5_UNORM) that doesn't support 16 bpp. These swap chains are created by using `D3D11CreateDeviceAndSwapChain` or `IDXGIFactory::CreateSwapChain`. To work around this limitation, do the following steps:
+1. Create a B5G6R5_UNORM format render target by using `CreateTexture2D` and render to that target.
+2. Copy the render target onto the swap-chain backbuffer by drawing a full-screen quad with the render target as your source texture.
+3. Call Present on your swap chain.
 
-   Ardından bu strateji işleme hedefi için takas zinciri arka arabelleği kopyalayarak tüketilen daha fazla bant genişliği kaydederse, işleme performansı geliştirildi.
+   If this strategy saves more bandwidth than is consumed by copying the render target to the swap-chain backbuffer, then rendering performance is improved.
 
-   Döşenmiş işleme tekniklerini GPU mimarileri, 16 bpp çerçeve arabellek biçimini kullanarak önemli performans avantajlarını görebiliyorum. Bu geliştirme, çerçeve arabelleği daha büyük bir kısmını her kutucuğun yerel çerçeve arabelleği önbellekte sığabilen olmasıdır. Döşenmiş işleme mimarisi, bazen ahizeleri mobil ve tablet bilgisayarlar Gpu'lar bulunur; Bu özel dışında nadiren görünürler.
+   GPU architectures that use tiled rendering techniques can see significant performance benefits by using a 16 bpp frame buffer format. This improvement is because a larger portion of the frame buffer can fit in each tile's local frame buffer cache. Tiled rendering architectures are sometimes found in GPUs in mobile handsets and tablet computers; they rarely appear outside of this niche.
 
 ## <a name="remarks"></a>Açıklamalar
- İşleme hedef biçim üzerinde yapılan her çağrı için DXGI_FORMAT_B5G6R5_UNORM sıfırlanır `ID3D11Device::CreateTexture2D` işleme hedefi oluşturur. Özellikle, pDesc içinde geçirilen D3D11_TEXTURE2D_DESC nesnesi bir işleme hedefi açıkladığında biçimi geçersiz; Yani:
+ The render target format is reset to DXGI_FORMAT_B5G6R5_UNORM on every call to `ID3D11Device::CreateTexture2D` that creates a render target. Specifically, the format is overridden when the D3D11_TEXTURE2D_DESC object passed in pDesc describes a render target; that is:
 
-- BindFlags üyesi, ayarlayın D3D11_BIND_REDNER_TARGET bayrağı vardır.
+- The BindFlags member has the D3D11_BIND_REDNER_TARGET flag set.
 
-- BindFlags üye temizlenmiş D3D11_BIND_DEPTH_STENCIL bayrağı vardır.
+- The BindFlags member has the D3D11_BIND_DEPTH_STENCIL flag cleared.
 
-- Kullanım üye D3D11_USAGE_DEFAULT için ayarlanır.
+- The Usage member is set to D3D11_USAGE_DEFAULT.
 
-## <a name="restrictions-and-limitations"></a>Kısıtlamalar ve sınırlamalar
- Alfa kanalını B5G6R5 biçim olmadığından, alfa içerik bu değişken tarafından korunmaz. Uygulamanızın işleme, işleme hedefi bir alfa kanalına gerektiriyorsa, yalnızca B5G6R5 biçimine geçiş yapamazsınız.
+## <a name="restrictions-and-limitations"></a>Restrictions and limitations
+ Because the B5G6R5 format doesn't have an alpha channel, alpha content is not preserved by this variant. If your app's rendering requires an alpha channel in your render target, you can't just switch to the B5G6R5 format.
 
 ## <a name="example"></a>Örnek
- **16 bpp işleme hedef biçim** değişken çoğaltılamaz kullanılarak oluşturulan işleme hedefleri için `CreateTexture2D` aşağıdakine benzer bir kod kullanarak:
+ The **16 bpp Render Target Format** variant can be reproduced for render targets created by using `CreateTexture2D` by using code like this:
 
 ```cpp
 D3D11_TEXTURE2D_DESC target_description;
