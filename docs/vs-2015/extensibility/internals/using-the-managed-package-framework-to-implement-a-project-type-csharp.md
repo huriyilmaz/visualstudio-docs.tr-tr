@@ -1,5 +1,5 @@
 ---
-title: Bir proje türü (C#) uygulamak için yönetilen paket çerçevesini kullanarak | Microsoft Docs
+title: Bir proje türü (C#) uygulamak Için yönetilen paket çerçevesini kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,26 +12,26 @@ ms.assetid: 926de536-eead-415b-9451-f1ddc8c44630
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 86e250c5a5922df52acea7445c97862a00cdc826
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 066695c6d94603d0a0474243ed05dece4cc0bd1f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68143727"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300371"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>Yönetilen Paket Çerçevesini Kullanarak Proje Türü Uygulama (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yönetilen paket Framework (MPF) kullanabilir veya kendi proje türleri uygulamak için devralınan C# sınıfları sağlar. MPF Visual Studio sağlamak için bir proje türü bekliyor arabirimlerin çoğu proje türünüz Bununla uygulamaya odaklanmasına olanak boş bırakarak uygular.  
+Yönetilen paket çerçevesi (MPF), kendi C# proje türlerinizi uygulamak için kullanabileceğiniz veya buradan devralma sınıfları sağlar. MPF, Visual Studio 'nun sağlaması için bir proje türünün sağlamasını beklediği ve proje türünün bununla uygulama üzerinde yoğunlaşmaya odaklanmanızı sağlayan birçok arabirimi uygular.  
   
-## <a name="using-the-mpf-project-source-code"></a>MPF proje kaynak kodunu kullanarak  
- Projeleri (MPFProj) için yönetilen paket çerçevesini oluşturmak ve yeni proje sistemi yönetmek için yardımcı sınıflar sağlar. MPF diğer sınıflardan farklı olarak, proje sınıfları Visual Studio ile birlikte gelen derlemeleri dahil değildir. Bunun yerine, kaynak kodu olarak proje sınıfları sağlanan [projeleri 2013'ün MPF](http://mpfproj12.codeplex.com).  
+## <a name="using-the-mpf-project-source-code"></a>MPF proje kaynak kodunu kullanma  
+ Projeler için yönetilen paket çerçevesi (MPFProj), yeni proje sistemi oluşturmak ve yönetmek için yardımcı sınıflar sağlar. MPF içindeki diğer sınıfların aksine proje sınıfları, Visual Studio ile gönderilen derlemelere dahil edilmez. Bunun yerine, proje sınıfları [2013 projeleri Için MPF](https://archive.codeplex.com/?p=mpfproj12)'de kaynak kodu olarak sağlanır.  
   
- Bu proje VSPackage çözümünüze eklemek için aşağıdakileri yapın:  
+ Bu projeyi VSPackage çözümünüze eklemek için aşağıdakileri yapın:  
   
-1. MPFProj indirmek *MPFProjectDir*.  
+1. MPFProj dosyalarını *MPFProjectDir*öğesine indirin.  
   
-2. İçinde *MPFProjectDir*\Dev10\Src\CSharp\ProjectBase.file, aşağıdaki bloğu değiştirin:  
+2. *MPFProjectDir*\Dev10\src\csharp\projectbase.exe dosyasında aşağıdaki bloğu değiştirin:  
   
 ```  
 <!-- Provide a default value for $(ProjectBasePath) -->  
@@ -42,9 +42,9 @@ Yönetilen paket Framework (MPF) kullanabilir veya kendi proje türleri uygulama
   
 1. VSPackage projesi oluşturun.  
   
-2. VSPackage projeyi.  
+2. VSPackage projesini kaldırın.  
   
-3. Diğer önce aşağıdaki blok ekleyerek VSPackage .csproj dosyasını düzenlemek `<Import>` blokları:  
+3. Diğer `<Import>` bloğundan önce aşağıdaki bloğu ekleyerek VSPackage. csproj dosyasını düzenleyin:  
   
 ```  
 <Import Project="MPFProjectDir\Dev10\Src\CSharp\ProjectBase.files" />  
@@ -58,18 +58,18 @@ Yönetilen paket Framework (MPF) kullanabilir veya kendi proje türleri uygulama
   
 1. Projeyi kaydedin.  
   
-2. VSPackage çözümü kapatıp yeniden açın.  
+2. VSPackage çözümünü kapatıp yeniden açın.  
   
-3. VSPackage projeyi yeniden açın. ProjectBase adlı yeni bir dizin görmeniz gerekir.  
+3. VSPackage projesini yeniden açın. ProjectBase adlı yeni bir dizin görmeniz gerekir.  
   
-4. VSPackage projesi şu başvuruyu ekleyin:  
+4. VSPackage projesine aşağıdaki başvuruyu ekleyin:  
   
-     Microsoft.Build.Tasks.4.0  
+     Microsoft. Build. Tasks. 4.0  
   
 5. Projeyi oluşturun.  
   
 ## <a name="hierarchy-classes"></a>Hiyerarşi sınıfları  
- Proje hiyerarşi desteği MPFProj sınıflarda aşağıdaki tabloda özetlenmiştir. Daha fazla bilgi için [hiyerarşiler ve seçim](../../extensibility/internals/hierarchies-and-selection.md).  
+ Aşağıdaki tabloda, MPFProj içindeki proje hiyerarşilerini destekleyen sınıflar özetlenmektedir. Daha fazla bilgi için bkz. [hiyerarşiler ve seçim](../../extensibility/internals/hierarchies-and-selection.md).  
   
 |Sınıf adı|  
 |----------------|  
@@ -85,16 +85,16 @@ Yönetilen paket Framework (MPF) kullanabilir veya kendi proje türleri uygulama
 |`Microsoft.VisualStudio.Package.AssemblyReferenceNode`|  
 |`Microsoft.VisualStudio.Package.BuildDependency`|  
   
-## <a name="document-handling-classes"></a>Belge işleme sınıfları  
- Belge işleme desteği MPF sınıflarda aşağıdaki tabloda listelenmektedir. Daha fazla bilgi için [açma ve kaydetme proje öğeleri](../../extensibility/internals/opening-and-saving-project-items.md).  
+## <a name="document-handling-classes"></a>Belge Işleme sınıfları  
+ Aşağıdaki tabloda, MPF 'de belge işlemeyi destekleyen sınıflar listelenmektedir. Daha fazla bilgi için bkz. [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).  
   
 |Sınıf adı|  
 |----------------|  
 |`Microsoft.VisualStudio.Package.DocumentManager`|  
 |`Microsoft.VisualStudio.Package.FileDocumentManager`|  
   
-## <a name="configuration-and-output-classes"></a>Yapılandırma ve çıktı sınıfları  
- Proje türleri hata ayıklama ve yayın proje çıkışı koleksiyonları gibi birden çok yapılandırmada desteği sağlayan MPF sınıfları aşağıdaki tabloda listelenmektedir. Daha fazla bilgi için [yapılandırma seçeneklerini yönetme](../../extensibility/internals/managing-configuration-options.md).  
+## <a name="configuration-and-output-classes"></a>Yapılandırma ve çıkış sınıfları  
+ Aşağıdaki tabloda, MPF içindeki sınıflar, proje türlerinin hata ayıklama ve yayın gibi birden çok yapılandırmayı ve proje çıkışı koleksiyonlarını desteklemesini sağlar. Daha fazla bilgi için bkz. [yapılandırma seçeneklerini yönetme](../../extensibility/internals/managing-configuration-options.md).  
   
 |Sınıf adı|  
 |----------------|  
@@ -104,8 +104,8 @@ Yönetilen paket Framework (MPF) kullanabilir veya kendi proje türleri uygulama
 |`Microsoft.VisualStudio.Package.OutputGroup`|  
 |`Microsoft.VisualStudio.Package.ProjectElement`|  
   
-## <a name="automation-support-classes"></a>Otomasyon desteği sınıfları  
- Otomasyon destekler ve böylece kullanıcılar proje türünüz eklentileri yazabilirsiniz MPF sınıflarda aşağıdaki tabloda listelenmektedir.  
+## <a name="automation-support-classes"></a>Otomasyon-destek sınıfları  
+ Aşağıdaki tabloda, proje türü kullanıcıların eklentiler yazabilmesi için otomasyonu destekleyen MPF içindeki sınıflar listelenmektedir.  
   
 |Sınıf adı|  
 |----------------|  
@@ -116,7 +116,7 @@ Yönetilen paket Framework (MPF) kullanabilir veya kendi proje türleri uygulama
 |`Microsoft.VisualStudio.Package.Automation.OANestedProjectItem`|  
   
 ## <a name="properties-classes"></a>Özellikler sınıfları  
- Aşağıdaki tabloda, proje türleri izin MPF sınıflarda kullanıcılar göz atın ve bir özellik tarayıcısında değiştirmek özellikleri ekleyin.  
+ Aşağıdaki tabloda, MPF içindeki sınıflar listelenir. Bu, proje türlerine kullanıcıların bir özellik tarayıcısına gözatabilmesine ve değiştiremeyeceğiniz özellikler eklemesine olanak tanır.  
   
 |Sınıf adı|  
 |----------------|  

@@ -1,5 +1,5 @@
 ---
-title: Kilitlenme davranışını yorumlama | Microsoft Docs
+title: Kilitleme davranışına açıklama ekleme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -33,88 +33,88 @@ caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: 66c4aafb380d50ec0faafce931b8ce73e5138e6f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a5b34253485da233ba6e25841b6592068de6fb69
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157119"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295824"
 ---
 # <a name="annotating-locking-behavior"></a>Kilitlenme Davranışını Yorumlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Çoklu iş parçacığı kullanan programınızda eşzamanlılık hataları önlemek için her zaman uygun kilitleme uzmanlık alanı izleyin ve SAL ek açıklamalarını kullanma.  
+Çok iş parçacıklı programınızda eşzamanlılık hatalarından kaçınmak için, her zaman uygun bir tane disiplin ve SAL ek açıklamalarını kullanın.  
   
- Eşzamanlılık yeniden, tanılama ve belirleyici olmadığından hata ayıklama öğesinin zor hatalardır. İş parçacığı Interleaving hakkında mantık en iyi zordur ve fazla sayıda iş parçacığı olan kod gövdesinin tasarlarken pratik hale gelir. Bu nedenle, bir kilitleme disiplini, çok iş parçacıklı programlarda izleyin iyi bir uygulamadır. Örneğin, birden çok kilit alınırken kilitlenmeleri önlemek yardımcı olurken bir kilit sırası obeying ve paylaşılan bir kaynağa erişmeden önce doğru guarding kilit alınırken yarış durumlarını engellemeye yardımcı olur.  
+ Eşzamanlılık hataları, belirleyici olmayan bir şekilde yeniden oluşturmak, tanılamak ve hata ayıklamak için çok zor. İş parçacığı araya ekleme hakkında bilgi, en iyi şekilde zordur ve birkaç iş parçacığına sahip bir kod gövdesi tasarlarken pratik hale gelir. Bu nedenle, çok iş parçacıklı programlarınızda bir kilitleme disiplini izlemek iyi bir uygulamadır. Örneğin, birden çok kilit edinirken bir kilit sırasını uygulamaya getirmek, kilitlenmeleri önlemeye yardımcı olur ve paylaşılan bir kaynağa erişmeden önce doğru koruma kilitlenmesinin, yarış koşullarından kaçınmanıza yardımcı olur.  
   
- Ne yazık ki görünüşte basit kilitleme kuralları uygulamada izleyin yayımladım zor olabilir. Bir temel günümüzün programlama dilleri ve derleyiciler bunlar doğrudan belirtimi ve eşzamanlılık gereksinimleri analizini desteklemiyor sınırlamasıdır. Kilitleri nasıl kullandıkları hakkında kendi amaçları ifade etmek için resmi olmayan kod açıklamaları kullanan programcılar gerekir.  
+ Ne yazık ki, ortaya çıkacak basit kilitleme kurallarının uygulamada izlenmesi çok zor olabilir. Bugünün programlama dillerinde ve derleyicilerinin temel sınırlaması, eşzamanlılık gereksinimlerinin belirtimini ve analizini doğrudan desteklemeleridir. Programcıların kilitleri nasıl kullandıkları hakkında bilgi almak için resmi olmayan kod açıklamalarına güvenmeleri gerekir.  
   
- Eşzamanlılık SAL ek açıklamaları, sorumluluk, veri guardianship, kilit sırası hiyerarşi ve diğer beklenen kilitlenme davranışını kilitleme Kilitleme yan etkileri belirlemenize yardımcı olmak için tasarlanmıştır. Örtük kuralları açık hale getirerek SAL eşzamanlılık ek açıklamaları, kodunuzu kilitleme kuralları nasıl kullandığını belge tutarlı bir yol sağlar. Eşzamanlılık ek açıklamaları da yarış durumlarını, kilitlenmeleri, eşleşmeyen eşitleme işlemleri ve diğer hafif eşzamanlılık hataları bulmak için kod çözümleme araçları yeteneğini geliştirin.  
+ Eşzamanlılık SAL ek açıklamaları, kilitleme yan etkileri, kilitleme sorumluluğu, veri koruyucuları, kilit sırası hiyerarşisi ve diğer beklenen kilitleme davranışını belirtmenize yardımcı olacak şekilde tasarlanmıştır. Örtülü kuralları açık hale getirerek SAL eşzamanlılık ek açıklamaları, kodunuzun kilitleme kurallarını nasıl kullandığını belgelemeniz için tutarlı bir yol sağlar. Eşzamanlılık ek açıklamaları Ayrıca, kod analizi araçlarının yarış koşullarını, kilitlenmeleri, eşleşmeyen eşitleme işlemlerini ve diğer hafif eşzamanlılık hatalarını bulma yeteneğini geliştirir.  
   
 ## <a name="general-guidelines"></a>Genel Yönergeler  
- Ek açıklamalar kullanarak uygulamaları (çağrılanlar) ve istemciler (arayanlar) arasındaki işlev tanımları tarafından kapsanan sözleşmeleri durum ve analiz express okuduğunuzda ve daha ileri düzeyde programın diğer özelliklerini geliştirmek.  
+ Ek açıklamaları kullanarak, uygulamalar (Callet 'ler) ve istemcileri (çağıranlar) arasında işlev tanımları tarafından kapsanan sözleşmeleri ve daha fazla analizi daha da iyileştirebilecek programın diğer özelliklerini belirtebilir.  
   
- SAL kilitleme temelleri birçok farklı türde destekler; Örneğin, kritik bölüm, mutex'leri, döndürme kilit ve diğer kaynak nesneleri. Birçok eşzamanlılık ek açıklamaları, parametre olarak bir kilit ifadesi alır. Kural gereği, kilit temel kilit nesnenin yol ifadesi tarafından belirtilir.  
+ SAL, birçok farklı kilit temel türünü destekler; Örneğin, kritik bölümler, zaman uyumu sağlayıcılar, döndürme kilitleri ve diğer kaynak nesneleri. Birçok eşzamanlılık ek açıklaması, bir kilit ifadesini parametre olarak alır. Kurala göre, bir kilit, temeldeki kilit nesnesinin yol ifadesiyle gösterilir.  
   
- Aklınızda tutmanız gereken bazı iş parçacığı sahipliği kuralları:  
+ Göz önünde bulundurmanız gereken bazı iş parçacığı sahiplik kuralları:  
   
-- Döndürme kilitlerini Temizle iş parçacığı sahipliğine uncounted kilitleri.  
+- Döndürme kilitleri, açık iş parçacığı sahipliğini içeren sayılmayan kilitlerdir.  
   
-- NET iş parçacığı sahipliğine kilitleri Mutex'leri ve kritik bölüm sayılır.  
+- Birbirini kapsamalı ve kritik bölümler, açık iş parçacığı sahipliğini içeren kilitler olarak sayılır.  
   
-- Semafor ve olayları Temizle iş parçacığı sahipliği olmayan kilitleri sayılır.  
+- Semaforlar ve olaylar, açık iş parçacığı sahipliğini olmayan kilitler olarak sayılır.  
   
-## <a name="locking-annotations"></a>Kilitleme ek açıklamaları  
- Aşağıdaki tabloda, kilitleme ek açıklamalar listelenmektedir.  
-  
-|Ek Açıklama|Açıklama|  
-|----------------|-----------------|  
-|`_Acquires_exclusive_lock_(expr)`|Bir işlev açıklama ekler ve gönderisinde durumu işlev bir özel bir kilit tarafından adlandırılan kilit nesnesi sayısı artırır olduğunu gösteren `expr`.|  
-|`_Acquires_lock_(expr)`|Bir işlev açıklama ekler ve gönderisinde durumu işlevi bir kilit nesnenin tarafından adlandırılan kilit sayacını artırır olduğunu gösteren `expr`.|  
-|`_Acquires_nonreentrant_lock_(expr)`|Tarafından adlandırılan kilit `expr` alınır.  Kilidi açık tutulduğu zaten varsa, bir hata bildirilir.|  
-|`_Acquires_shared_lock_(expr)`|Bir işlev açıklama ekler ve gönderisinde durumu işlevi bir tarafından adlandırılan kilit nesnesinin paylaşılan kilit sayacını artırır olduğunu gösteren `expr`.|  
-|`_Create_lock_level_(name)`|Simgenin bildiren bir deyim `name` ek açıklamalarda kullanılabilir kilit düzeyi olmasını `_Has_Lock_level_` ve `_Lock_level_order_`.|  
-|`_Has_lock_kind_(kind)`|Bir kaynak nesnesinin türü bilgileri geliştirmek için herhangi bir nesne açıklama ekler. Bazen, ortak tür farklı türde kaynakların için kullanılır ve aşırı yüklenmiş türü anlam gereksinimleri çeşitli kaynaklar arasında ayrım yapmak yeterli değil. İşte bir listesi, önceden tanımlanmış `kind` parametreleri:<br /><br /> `_Lock_kind_mutex_`<br /> Kilit mutex'leri için tür kimliği.<br /><br /> `_Lock_kind_event_`<br /> Kilit olaylar için tür kimliği.<br /><br /> `_Lock_kind_semaphore_`<br /> Kilit semaforları için tür kimliği.<br /><br /> `_Lock_kind_spin_lock_`<br /> Kilit döndürme kilide tür kimliği.<br /><br /> `_Lock_kind_critical_section_`<br /> Kritik bölümler için kilit tür kimliği.|  
-|`_Has_lock_level_(name)`|Nesnesi kilitlenemedi açıklama ekler ve kilit düzeyi sunar `name`.|  
-|`_Lock_level_order_(name1, name2)`|Arasında sıralama kilit sağlayan bir ifade `name1` ve `name2`.|  
-|`_Post_same_lock_(expr1, expr2)`|Bir işlev açıklama ekler ve gönderisinde iki kilitler durumunu gösteren `expr1` ve `expr2`, aynı nesnesi kilitlenemedi oldukları gibi değerlendirilir.|  
-|`_Releases_exclusive_lock_(expr)`|Bir işlev açıklama ekler ve postasında tek tarafından adlandırılan kilit nesnenin özel bir kilit sayısı işlevi azaltır durumunu gösteren `expr`.|  
-|`_Releases_lock_(expr)`|Bir işlev açıklama ekler ve postasında tek kilit sayacını tarafından adlandırılan kilit nesnenin işlevi azaltır durumunu gösteren `expr`.|  
-|`_Releases_nonreentrant_lock_(expr)`|Tarafından adlandırılan kilit `expr` serbest bırakılır. Kilit şu anda tutulmadı varsa bir hata bildirilir.|  
-|`_Releases_shared_lock_(expr)`|Bir işlev açıklama ekler ve postasında tek tarafından adlandırılan kilit nesnesinin paylaşılan kilit sayacını işlevi azaltır durumunu gösteren `expr`.|  
-|`_Requires_lock_held_(expr)`|Bir işlev açıklama ekler ve öncesi içinde kilit sayacını tarafından adlandırılan nesnenin durumunu gösteren `expr` en az biri.|  
-|`_Requires_lock_not_held_(expr)`|Bir işlev açıklama ekler ve öncesi içinde kilit sayacını tarafından adlandırılan nesnenin durumunu gösteren `expr` sıfırdır.|  
-|`_Requires_no_locks_held_`|Bir işlev açıklama ekler ve denetleyicisi için bilinen tüm kilitleri kilit sayısı sıfır olduğunu gösterir.|  
-|`_Requires_shared_lock_held_(expr)`|Bir işlev açıklama ekler ve öncesi içinde paylaşılan kilit sayacını tarafından adlandırılan nesnenin durumunu gösteren `expr` en az biri.|  
-|`_Requires_exclusive_lock_held_(expr)`|Bir işlev açıklama ekler ve öncesi içinde özel bir kilit sayısı tarafından adlandırılan nesnenin durumunu gösteren `expr` en az biri.|  
-  
-## <a name="sal-intrinsics-for-unexposed-locking-objects"></a>Gösterilmeyen kilitleme nesneler için SAL iç bilgileri  
- Belirli nesneleri Kilitle ilişkili kilitleme işlevleri uygulaması tarafından sunulmaz.  Aşağıdaki tabloda bu gösterilmeyen kilit nesneler üzerinde çalışan işlevler ek açıklamalar sağlayan SAL iç değişkenleri listeler.  
+## <a name="locking-annotations"></a>Ek açıklamaları kilitleme  
+ Aşağıdaki tabloda kilitleme ek açıklamaları listelenmektedir.  
   
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
-|`_Global_cancel_spin_lock_`|İptal döndürme kilit açıklar.|  
-|`_Global_critical_region_`|Kritik bölge açıklar.|  
-|`_Global_interlock_`|Birbirine kenetlenmiş işlemler açıklanmaktadır.|  
-|`_Global_priority_region_`|Öncelik bölge açıklar.|  
+|`_Acquires_exclusive_lock_(expr)`|Bir işlevi inceleyin ve işlevin, `expr`tarafından adlandırılan kilit nesnesinin dışlamalı kilit sayısına göre artırdığını gösterir.|  
+|`_Acquires_lock_(expr)`|Bir işlevi daha fazla açıklama olarak gösterir ve bu işlevin, `expr`tarafından adlandırılan kilit nesnesinin kilit sayısıyla bir sonraki artışla geçtiğini belirtir.|  
+|`_Acquires_nonreentrant_lock_(expr)`|`expr` tarafından adlandırılan kilit elde edilir.  Kilit zaten tutuluyorsa bir hata bildirilir.|  
+|`_Acquires_shared_lock_(expr)`|Bir işlevi inceleyin ve işlevin, `expr`tarafından adlandırılan kilit nesnesinin paylaşılan kilit sayısıyla aynı şekilde geçtiğini gösterir.|  
+|`_Create_lock_level_(name)`|Ek açıklamaların `_Has_Lock_level_` ve `_Lock_level_order_`kullanılabilmesi için simgeyi `name` bir kilit düzeyi olarak bildiren bir ifade.|  
+|`_Has_lock_kind_(kind)`|Bir kaynak nesnesinin tür bilgilerini iyileştirmek için herhangi bir nesneye Açıklama Ekle. Bazen, farklı türlerde kaynaklar için ortak bir tür kullanılır ve aşırı yüklenmiş tür çeşitli kaynaklar arasındaki anlam gereksinimlerini ayırt etmek için yeterli değildir. Önceden tanımlanmış `kind` parametrelerinin listesi aşağıda verilmiştir:<br /><br /> `_Lock_kind_mutex_`<br /> Zaman uyumu sağlayıcılar için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_event_`<br /> Olaylar için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_semaphore_`<br /> Semaforlar için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_spin_lock_`<br /> Döndürme kilitleri için kilit türü KIMLIĞI.<br /><br /> `_Lock_kind_critical_section_`<br /> Kritik bölümler için kilit türü KIMLIĞI.|  
+|`_Has_lock_level_(name)`|Bir kilit nesnesine açıklama koyun ve `name`kilit düzeyini verir.|  
+|`_Lock_level_order_(name1, name2)`|`name1` ve `name2`arasında kilit sıralaması sağlayan bir ifade.|  
+|`_Post_same_lock_(expr1, expr2)`|Bir işlevi bir işleve açıklama olarak, `expr1` ve `expr2`olmak üzere iki kilit, aynı kilit nesnesi gibi değerlendirildiğini gösterir.|  
+|`_Releases_exclusive_lock_(expr)`|Bir işlevi bir işleve açıklama ve bu işlevin, `expr`tarafından adlandırılan kilit nesnesinin dışlamalı kilit sayısına göre ne kadar azaltır olduğunu gösterir.|  
+|`_Releases_lock_(expr)`|Bir işlevi daha fazla açıklama olarak gösterir ve işlevin, `expr`tarafından adlandırılan kilit nesnesinin kilit sayısına göre ne kadar azaltır.|  
+|`_Releases_nonreentrant_lock_(expr)`|`expr` tarafından adlandırılan kilit serbest bırakılır. Kilit Şu anda tutulmadığında bir hata bildirilir.|  
+|`_Releases_shared_lock_(expr)`|Bir işlevi daha fazla açıklama olarak gösterir ve işlevin, `expr`tarafından adlandırılan kilit nesnesinin paylaşılan kilit sayısına göre ne kadar azaltır.|  
+|`_Requires_lock_held_(expr)`|Bir işlevi inceleyin ve ön durum ' a `expr` tarafından adlandırılan nesnenin kilit sayısının en az bir tane olduğunu gösterir.|  
+|`_Requires_lock_not_held_(expr)`|Bir işlevi bir işleve açıklama ve ön durum ' a `expr` tarafından adlandırılan nesnenin kilit sayısının sıfır olduğunu gösterir.|  
+|`_Requires_no_locks_held_`|Bir işlevi inceleyin ve denetleyici tarafından bilinen tüm kilitlerin kilit sayısının sıfır olduğunu gösterir.|  
+|`_Requires_shared_lock_held_(expr)`|Bir işlevi inceleyin ve ön durumunda `expr` tarafından adlandırılan nesnenin paylaşılan kilit sayısının en az bir tane olduğunu gösterir.|  
+|`_Requires_exclusive_lock_held_(expr)`|Bir işlevi inceleyin ve ön durumunda `expr` tarafından adlandırılan nesnenin dışlamalı kilit sayısının en az bir tane olduğunu gösterir.|  
   
-## <a name="shared-data-access-annotations"></a>Paylaşılan veri erişim ek açıklamaları  
+## <a name="sal-intrinsics-for-unexposed-locking-objects"></a>Açığa çıkarmayan kilitleme nesneleri Için SAL Iç öğeler  
+ Belirli kilit nesneleri ilişkili kilitleme işlevlerinin uygulanmasıyla gösterilmez.  Aşağıdaki tabloda, bu görünmeyen kilit nesnelerinde çalışan işlevlerde ek açıklamaları etkinleştiren açık iç değişkenler listelenmektedir.  
+  
+|Ek Açıklama|Açıklama|  
+|----------------|-----------------|  
+|`_Global_cancel_spin_lock_`|İptal döndürme kilidini açıklar.|  
+|`_Global_critical_region_`|Kritik bölgeyi açıklar.|  
+|`_Global_interlock_`|Birbirine kenetlenmiş işlemleri açıklar.|  
+|`_Global_priority_region_`|Öncelik bölgesini açıklar.|  
+  
+## <a name="shared-data-access-annotations"></a>Paylaşılan veri erişimi ek açıklamaları  
  Aşağıdaki tabloda, paylaşılan veri erişimi için ek açıklamalar listelenmektedir.  
   
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
-|`_Guarded_by_(expr)`|Bir değişken açıklama ekler ve her değişkenin eriştiğinden, gösterir tarafından adlandırılan kilit nesnenin kilit sayacını `expr` en az biri.|  
-|`_Interlocked_`|Bir değişken açıklama ekler ve eşdeğerdir `_Guarded_by_(_Global_interlock_)`.|  
-|`_Interlocked_operand_`|Çeşitli birbirine kenetlenmiş işlevlerden biri hedef işleneni ek açıklamalı işlevi parametredir.  Bu işlenenlerin özgü ek özellikleri olmalıdır.|  
-|`_Write_guarded_by_(expr)`|Bir değişken açıklama ekler ve her değişkenin değiştirilmişse, tarafından adlandırılan kilit nesnenin kilit sayacını gösterir `expr` en az biri.|  
+|`_Guarded_by_(expr)`|Bir değişkene açıklama koyun ve değişkene erişildiğinde, `expr` tarafından adlandırılan kilit nesnesinin kilit sayısının en az bir tane olduğunu gösterir.|  
+|`_Interlocked_`|Bir değişkene açıklama koyun ve `_Guarded_by_(_Global_interlock_)`eşdeğerdir.|  
+|`_Interlocked_operand_`|Açıklamalı işlev parametresi, çeşitli birbirine kilitli işlevlerden birinin hedef işlenendir.  Bu işlenenler özel ek özelliklere sahip olmalıdır.|  
+|`_Write_guarded_by_(expr)`|Bir değişken için bir açıklama ve değişken değiştirildiğinde, `expr` tarafından adlandırılan kilit nesnesinin kilit sayısı en az bir tane olur.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C/C++ kod hatalarını azaltmak için SAL ek açıklamalarını kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
- [SAL'yi anlama](../code-quality/understanding-sal.md)   
- [İşlev parametrelerini ve dönüş değerlerini açıklama](../code-quality/annotating-function-parameters-and-return-values.md)   
- [İşlev davranışını yorumlama](../code-quality/annotating-function-behavior.md)   
- [Yapıları ve sınıfları yorumlama](../code-quality/annotating-structs-and-classes.md)   
- [Açıklamanın ne zaman ve nereye uygulanacağını belirtme](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
- [İç işlevleri](../code-quality/intrinsic-functions.md)   
- [En iyi yöntemler ve örnekler](../code-quality/best-practices-and-examples-sal.md)   
- [Kod Analizi ekip blogu](http://go.microsoft.com/fwlink/p/?LinkId=251197)
+ [CC++ /kod HATALARıNı azaltmak Için sal ek açıklamalarını kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [SAL  anlama](../code-quality/understanding-sal.md)  
+ [Işlev parametrelerine ve dönüş değerlerine açıklama ekleme](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [Işlev davranışına açıklama ekleme](../code-quality/annotating-function-behavior.md)   
+ [Yapı ve sınıflara açıklama ekleme](../code-quality/annotating-structs-and-classes.md)   
+ [Ek açıklamanın ne zaman ve nereye uygulanacağını belirtme](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
+ [Iç işlevler](../code-quality/intrinsic-functions.md)   
+ [En Iyi uygulamalar ve örnekler](../code-quality/best-practices-and-examples-sal.md)   
+ [Kod Analizi ekip blogu](https://go.microsoft.com/fwlink/p/?LinkId=251197)

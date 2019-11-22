@@ -12,17 +12,17 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 66a9cdab1284d015e2ea76162d240b6a1232d90f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9c0fa4e92c62ffb5b9c41cf5e297ed11ca63c38e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669912"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298719"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>Modelleme uzantısı tanımlama ve yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsiniz. Bu şekilde, diyagramları ve modelleri kendi gereksinimlerinize uyarlayabilirsiniz. Örneğin, menü komutlarını, UML profillerini, doğrulama kısıtlamalarını ve araç kutusu öğelerini tanımlayabilirsiniz. Tek bir uzantıda birkaç bileşen tanımlayabilirsiniz. Ayrıca, bu uzantıları [Visual Studio Tümleştirme Uzantısı (VSIX)](http://go.microsoft.com/fwlink/?LinkId=160780)biçimindeki diğer Visual Studio kullanıcılarına dağıtabilirsiniz. Visual Studio 'da VSıX projesi kullanarak bir VSıX oluşturabilirsiniz.
+Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsiniz. Bu şekilde, diyagramları ve modelleri kendi gereksinimlerinize uyarlayabilirsiniz. Örneğin, menü komutlarını, UML profillerini, doğrulama kısıtlamalarını ve araç kutusu öğelerini tanımlayabilirsiniz. Tek bir uzantıda birkaç bileşen tanımlayabilirsiniz. Ayrıca, bu uzantıları [Visual Studio Tümleştirme Uzantısı (VSIX)](https://go.microsoft.com/fwlink/?LinkId=160780)biçimindeki diğer Visual Studio kullanıcılarına dağıtabilirsiniz. Visual Studio 'da VSıX projesi kullanarak bir VSıX oluşturabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
  [Gereksinimlere](../modeling/extend-uml-models-and-diagrams.md#Requirements)bakın.
@@ -32,7 +32,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 ## <a name="creating-a-modeling-extension-solution"></a>Modelleme uzantısı çözümü oluşturma
  Bir modelleme uzantısı tanımlamak için şu projeleri içeren bir çözüm oluşturmanız gerekir:
 
-- @No__t_0 Tümleştirme Uzantısı (VSıX) projesi. Bu, uzantınızın bileşenleri için yükleyici olarak davranan bir dosya oluşturur.
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tümleştirme Uzantısı (VSıX) projesi. Bu, uzantınızın bileşenleri için yükleyici olarak davranan bir dosya oluşturur.
 
 - Program kodu içeren bileşenler için gereken bir sınıf kitaplığı projesi.
 
@@ -50,7 +50,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 1. Kod içeren bir bileşen oluşturuyorsanız, önce sınıf kitaplığı projesinin oluşturulması en kolay yoldur. Kodunuzu bu projeye ekleyeceksiniz.
 
-2. VSıX projesi oluşturun.
+2. Bir VSIX projesi oluşturun.
 
     1. **Çözüm Gezgini**, çözümün kısayol menüsünde, **Ekle**, **Yeni proje**' yi seçin.
 
@@ -74,10 +74,10 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
         |||
         |-|-|
-        |**Tür**  =|**Microsoft. VisualStudio. MefComponent**|
-        |**Kaynak**  =|**Geçerli çözümdeki bir proje**|
-        |**Proje**  =|*Sınıf kitaplığı projeniz*|
-        |**Bu klasöre ekle**  =|*olmamalıdır*|
+        |**Tür** =|**Microsoft. VisualStudio. MefComponent**|
+        |**Kaynak** =|**Geçerli çözümdeki bir proje**|
+        |**Proje** =|*Sınıf kitaplığı projeniz*|
+        |**Bu klasöre ekle** =|*olmamalıdır*|
 
          Diğer bileşen türleri için, sonraki bölümde bulunan bağlantılara bakın.
 
@@ -97,7 +97,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 #### <a name="to-run-an-extension-during-its-development"></a>Geliştirme sırasında bir uzantıyı çalıştırmak için
 
-1. @No__t_0 **hata ayıklama** menüsünde, **hata ayıklamayı Başlat**' ı seçin.
+1. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **hata ayıklama** menüsünde, **hata ayıklamayı Başlat**' ı seçin.
 
      Proje oluşturulur ve yeni bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] örneği deneysel modda başlatılır.
 
@@ -116,7 +116,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
     1. **Çözüm Gezgini**' de, projenizin kısayol menüsünde **klasörü Windows Gezgini 'nde aç**' ı seçin.
 
-    2. Dosya **bin \\ \* bulun \\** _yourproject_ **. vsix**
+    2. Dosya **bin\\\*bulun \\** _yourproject_ **. vsix**
 
 2. **. Vsix** dosyasını, uzantıyı yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
 
@@ -130,15 +130,15 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 #### <a name="to-uninstall-an-extension"></a>Bir uzantıyı kaldırmak için
 
-1. **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
+1. Üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
 
 2. **Yüklü uzantıları**genişletin.
 
 3. Uzantıyı seçin ve ardından **Kaldır**' a tıklayın.
 
-   Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı şu konumda silerek uzantıyı kaldırabilirsiniz: *% LocalAppData%* genellikle *DriveName*: \Users \\*UserName*\AppData\Local:
+   Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı şu konumda silerek uzantıyı kaldırabilirsiniz: *% LocalAppData%* genellikle *DriveName*: \Users\\*UserName*\AppData\Local:
 
-   *% LocalAppData%* **\microsoft\visualstudio \\ [sürüm] \Extensions**
+   *% LocalAppData%* **\microsoft\visualstudio\\[sürüm] \Extensions**
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UML genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md) [Özel Modelleme Araç kutusu öğesi](../modeling/define-a-custom-modeling-toolbox-item.md) [UML modelleriyle ilgili doğrulama kısıtlamalarını tanımlama](../modeling/define-validation-constraints-for-uml-models.md) [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

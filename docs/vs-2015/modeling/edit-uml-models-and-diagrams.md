@@ -21,12 +21,12 @@ caps.latest.revision: 86
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6585fbfa7c16e710633e81841b4c8eb380f9f564
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 00ac30cc7e9ee3aff0dd64f015a4b4954972c09a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669720"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295526"
 ---
 # <a name="edit-uml-models-and-diagrams"></a>UML modellerini ve diyagramları düzenleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -140,7 +140,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
    - **CTRL** tuşuna basın ve bitişi taşıyın.
 
-     \- veya-
+     \- veya -
 
    - Bağlayıcıya sağ tıklayın ve ardından **yeniden bağlan**' a tıklayın.
 
@@ -158,11 +158,11 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 - Fare tekerleğini döndürürken **CTRL** tuşuna basın ve basılı tutun.
 
-     \- veya-
+     \- veya -
 
 - **CTRL + SHIFT**tuşlarına basın ve basılı tutun, ardından sol veya sağ fare düğmesine tıklayın.
 
-     \- veya-
+     \- veya -
 
 - **Mimari tasarımcıları** araç çubuğunda artı işaretine ( **+** ) veya eksi işaretine ( **-** ) tıklayın veya bir yakınlaştırma düzeyi seçin.
 
@@ -173,7 +173,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 1. **CTRL + F**tuşlarına basın.
 
-     \- veya-
+     \- veya -
 
      **Düzenle** menüsünde **Bul ve Değiştir**' ın üzerine gelin ve **hızlı bul**' a tıklayın.
 
@@ -282,7 +282,7 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 - Diyagramdaki öğesine sağ tıklayın ve ardından **diyagramdan kaldır**' a tıklayın.
 
-  \- veya-
+  \- veya -
 
 - Diyagramdaki öğesine tıklayın ve ardından **Delete** tuşuna basın.
 
@@ -320,23 +320,11 @@ Birçok farklı diyagram türü tarafından sunulan görünümler aracılığıy
 
 - Model öğelerine Not ve açıklama eklemek için, yorum oluşturabilir ve bunları öğelerine bağlayabilirsiniz.
 
-- Diyagramda bir sütun veya satır şekillerini düzgünce hizalamak için şekilleri Hizala komutunu yükleyebilirsiniz. Bu örnek UML uzantısı olarak kullanılabilir: [UML: şekilleri hizalamak Için komut](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)
-
 ### <a name="to-export-a-diagram-as-an-image"></a>Bir diyagramı görüntü olarak dışarı aktarmak için
  Daha fazla bilgi için bkz. [diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md).
 
 ## <a name="extensions"></a>UML tasarımcılarını genişletme
  UML araçlarına yeni işlevler ekleyebilir ve diyagram gösterimini kendi gereksinimlerinize uyarlayabilirsiniz. Daha fazla bilgi için bkz. [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md).
-
- Kullanılabilir birkaç örnek uzantı vardır. Yalnızca yükleyebilir ve kullanabilir ya da kendi uzantılarınızın temeli olarak kaynak kodlarını kullanabilirsiniz. Örnekler şunlardır:
-
-|||
-|-|-|
-|[Şekilleri Hizala](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)|Bir diyagramı Kady etmenize yardımcı olan menü komutu.|
-|[Docs bağlantısı](http://code.msdn.microsoft.com/Link-UML-elements-to-0adbf5a8)|Herhangi bir UML öğesini Word başlıklarına, PowerPoint slaytlara, herhangi bir türdeki dosyaya, UML diyagramlarına veya diğer UML öğelerine bağlayın. Bağlantı yalnızca sürüklenerek yapılabilir. Daha sonra, bağlantılı öğeyi görmek için öğesine çift tıklayabilirsiniz. Örneğin, kullanım durumlarını Word belirtimlerine veya ayrıntılı etkinlik diyagramlarına ve görsel taslak slaytlara yönelik eylemlere bağlayabilirsiniz.|
-|[Hızlı giriş](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)|Metin girişi kullanarak model hızlı bir şekilde oluşturun. Toplantılarda fikir yakalamak için faydalıdır.|
-|[Stereotipe göre Renklendir](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Stereotipe göre renkler sınıfları. Kendi Stereotipleriniz için çalışacak kodu kolayca genişletebilirsiniz.|
-|[Etki alanı modelleme](http://code.msdn.microsoft.com/UML-Domain-Modeling-6df6f7f4)|İş modelleriyle ilgili uygun varsayılanlar. İlişkilendirmeler varsayılan olarak oklar olmadan gösterilir ve işlemler sınıflarda görünmez.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md) [ve modelleme mimarisi](../modeling/analyze-and-model-your-architecture.md) [uygulamanız için model oluşturma](../modeling/create-models-for-your-app.md)

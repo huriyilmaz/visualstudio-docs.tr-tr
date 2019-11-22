@@ -15,17 +15,17 @@ caps.latest.revision: 37
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7abc869ebebf4ca2ae8aa1776eaae75f1543176b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 99f2b67d264edcaab5272d0224d4450ee2e8a6f6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652258"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297155"
 ---
 # <a name="uml-component-diagrams-guidelines"></a>UML Bileşen Diyagramları: Yönergeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bileşen diyagramı* çizebilirsiniz. Video gösterimi için bkz. [bileşen diyagramlarını kullanarak fiziksel yapıyı tasarlama](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-6-Designing-a-Projects-Physical-Structure/).
+Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bileşen diyagramı* çizebilirsiniz. Video gösterimi için bkz. [bileşen diyagramlarını kullanarak fiziksel yapıyı tasarlama](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-6-designing-a-projects-physical-structure).
 
  Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -82,7 +82,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
 1. Araç kutusunda **bileşen** ' e tıklayın ve ardından diyagramın boş bir kısmına tıklayın.
 
-     \- veya-
+     \- veya -
 
      Varolan bileşeni kopyalayıp yapıştırın.
 
@@ -188,13 +188,13 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
          **UML Model Gezgini**'nde yeni bir bileşen oluşturulur. Bu, yeni parçanın türüdür.
 
-         \- veya-
+         \- veya -
 
          Varolan bileşeni UML Model Gezgini'nden ana bileşen üzerine sürükleyin.
 
          Yeni parça (3) ana bileşenin içinde görünür. Türü UML Model Gezgini'nden sürüklediğiniz bileşendir.
 
-         \- veya-
+         \- veya -
 
          Diyagramda veya UML Model Gezgini ' nde bir bileşene sağ tıklayın ve ardından **Kopyala**' ya tıklayın.
 
@@ -206,7 +206,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 
     3. Yeni parçaya sağlanan ve gerekli arabirimleri (4, 5) ekleyebilirsiniz. **Belirtilen arabirime** veya **gerekli arabirim** aracına tıklayın ve ardından bölümüne tıklayın.
 
-         \- veya-
+         \- veya -
 
          **UML Model Gezgini** ' nden varolan bir arabirimi bölümüne sürükleyin.
 
@@ -225,7 +225,7 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
 ### <a name="showing-the-parts-of-a-part"></a>Bir Parçanın Parçalarını Gösterme
  Bir bileşeni parçalara ayırdıktan sonra, parça türlerinin her birini kendi iç parçalarına ayırabilirsiniz.
 
- Ayrışımın her katmanının, ayrı bileşen diyagramında tutulması en kolay yoldur. İlk önce parçanın türünü bulmanız gerekir. Örneğin, çizimde bölümlerden biri `DNCustomerServer` olarak adlandırılır ve türü `CustomerServer` adlı bir bileşendir. Bu türü UML Model Gezgini'nde bulabilir ve onu başka bir diyagrama yerleştirebilirsiniz. Daha sonra onun kendi iç parçalarını oluşturabilirsiniz.
+ Ayrışımın her katmanının, ayrı bileşen diyagramında tutulması en kolay yoldur. İlk önce parçanın türünü bulmanız gerekir. Örneğin, çizimde bölümlerden biri `DNCustomerServer`olarak adlandırılır ve türü `CustomerServer`adlı bir bileşendir. Bu türü UML Model Gezgini'nde bulabilir ve onu başka bir diyagrama yerleştirebilirsiniz. Daha sonra onun kendi iç parçalarını oluşturabilirsiniz.
 
 ##### <a name="to-place-a-parts-type-on-a-diagram"></a>Diyagrama parçanın türünü yerleştirmek için
 
@@ -333,4 +333,4 @@ Visual Studio 'da, bir yazılım sistemi yapısını göstermek için bir *bile�
   Kullanımın belirli bir türünü göstermek için bağımlılık okunun adını kullanabilirsiniz. Adı ayarlamak için oka sağ tıklayın, ardından **Özellikler**' e tıklayın ve Özellikler penceresinde **ad** alanını ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML Bileşen diyagramları:](../modeling/uml-component-diagrams-reference.md) [başvuru UML](../modeling/uml-sequence-diagrams-reference.md) [kullanım örneği diyagramları](../modeling/uml-use-case-diagrams-reference.md) : başvuru UML [sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru UML [bileşen](../modeling/uml-component-diagrams-reference.md) [diyagramları: başvuru Video: bileşen diyagramlarını kullanarak fiziksel yapıyı tasarlama](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-6-Designing-a-Projects-Physical-Structure/)
+ [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML Bileşen diyagramları:](../modeling/uml-component-diagrams-reference.md) [başvuru UML](../modeling/uml-sequence-diagrams-reference.md) [kullanım örneği diyagramları](../modeling/uml-use-case-diagrams-reference.md) : başvuru UML [sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru [video: fiziksel yapıyı Bileşen diyagramları kullanarak tasarlama](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-6-designing-a-projects-physical-structure)

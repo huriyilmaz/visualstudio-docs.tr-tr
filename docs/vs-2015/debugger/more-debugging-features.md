@@ -14,40 +14,40 @@ caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f2e6140b10b9f0c9a540144ca70bb081ac2d3e7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0f20d9679bb0eb726c594ab75fd7a04bc821b97d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157449"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300531"
 ---
 # <a name="more-debugging-features"></a>Daha Fazla Hata Ayıklama Özelliği
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu bölüm, Visual Studio hata ayıklayıcısı ile kullanabileceğiniz ek özellikler içerir.  
   
- İpuçları ve püf noktaları, daha hızlı ve kolay bir şekilde hata ayıklama yapmak için bir listesi için bkz. [hata ayıklama ipuçları ve püf noktaları](http://blogs.msdn.com/b/visualstudio/archive/2015/05/22/debugging-tips-and-tricks.aspx).  
+ Hata ayıklamayı daha hızlı ve kolay hale getirmek için ipuçları ve püf noktaları listesi için bkz. [hata ayıklama ipuçları ve püf noktaları](https://devblogs.microsoft.com/visualstudio/debugging-tips-and-tricks/).  
   
-## <a name="additional-features"></a>Ek Özellikler  
+## <a name="additional-features"></a>Ek özellikler  
  [Hata ayıklama sırasında XAML özelliklerini denetleme](../debugger/inspect-xaml-properties-while-debugging.md)  
- Kullanımını açıklar **Live Visual Tree** ve **Live Property Explorer** araçları.  
+ **Canlı görsel ağaç** ve **canlı Özellik Gezgini** araçlarının kullanımını açıklar.  
   
  [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)  
- Hata ayıklayıcı farklı bağlamlardaki kullanacak şekilde gerekebilir farklı ayarlar açıklanır.  
+ Hata ayıklayıcıyı farklı bağlamlarda kullanmak için ayarlamanız gerekebilecek farklı ayarları açıklar.  
   
  [Hata Ayıklayıcıda Verileri Görüntüleme](../debugger/viewing-data-in-the-debugger.md)  
- Farklı hata ayıklama pencerelerinde açıklar ve  
+ Farklı hata ayıklama pencerelerini açıklar ve  
   
  [Tam Zamanında Hata Ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)  
- Just-ın-hata ayıklama, bir program Visual Studio dışında çalışırken çöktüğünde hata ayıklayıcıyı otomatik olarak başlayacak Time açıklanır.  
+ Visual Studio dışında çalışırken bir program çöktüğünde hata ayıklayıcıyı otomatik olarak başlabilen tam zamanında hata ayıklamayı açıklar.  
   
- [İzlenecek yol: Tasarım Zamanında Düzenleme](../debugger/walkthrough-debugging-at-design-time.md)  
- Uygulamanız çalışmıyorken bir işlevi veya alt yordamı yürütmek için Visual Studio komut penceresi kullanmayı gösterir. 
+ [İzlenecek Yol: Tasarım Zamanında Hata Ayıklama](../debugger/walkthrough-debugging-at-design-time.md)  
+ Uygulamanız çalışmadığı sırada bir işlevi veya alt yordamı yürütmek için Visual Studio komut penceresini nasıl kullanacağınızı gösterir. 
   
  [Düzenle ve Devam Et](../debugger/edit-and-continue.md)  
- Düzenle ve devam et, programınız kesme modundayken, kaynak kodunuzu değiştirmenize ve hata ayıklama oturumunu sona erdirmek ve programınızı yeniden oluşturmanıza gerek kalmadan bu değişiklikleri uygulamak sağlayan bir araç açıklar ve bunu devre dışı bırakma veya etkinleştirme yönergeleri sağlar özelliği.  
+ Programınız kesme modundayken kaynak kodunuzu değiştirmenize ve hata ayıklama oturumunu sonlandırmanıza gerek kalmadan bu değişiklikleri uygulayıp programınızı yeniden oluşturmanıza olanak sağlayan bir araç olan Düzenle ve devam et ' i açıklar ve bu işlemi etkinleştirme veya devre dışı bırakma hakkında yönergeler sağlar. Özellik.  
   
- [Döküm dosyalarını kullanarak](../debugger/using-dump-files.md) Describes döküm dosyalarını kaydetme ve açma yönergeleri de dahil olmak üzere. Döküm dosyaları, genellikle bir çökmeden sonra zaman içinde belirli bir noktada, programınızın durumunun bir anlık görüntüsünü içerir. Bir kilitlenme oluşur ve döküm dosyasını kaynak dosyaların ve Pdb'lerin olan yapı makinesinde kilitlenme hatalarını ayıklamak için kaynak dosyalarına sahip bir makinede programınızı test etmek veya yüklü PBS'nin, döküm dosyasını kaydedebilirsiniz. 
+ [Döküm dosyalarını kullanma](../debugger/using-dump-files.md) Kaydetme ve açma yönergeleri dahil olmak üzere döküm dosyalarını açıklar. Döküm dosyaları, genellikle kilitlenmeden sonra zaman içinde programın durumunun bir anlık görüntüsünü içerir. Programınızı kaynak dosyaları veya pdb 'leri yüklü olmayan bir makinede test ederseniz, kilitlenme oluştuğunda bir döküm dosyası kaydedebilir ve kaynak dosyaları ve PDB 'leri olan derleme makinesindeki kilitlenmenin hatalarını ayıklamak için döküm dosyasını kullanabilirsiniz. 
   
- [Nasıl yapılır: Gizli Hata Ayıklayıcısı Komutlarını Geri Yükleme](../debugger/how-to-restore-hidden-debugger-commands.md)  
- Hata ayıklayıcı komutları IDE varsayılan ayarları tarafından gizlenen görünür hale getirmek açıklar.
+ [Nasıl Yapılır: Gizli Hata Ayıklayıcısı Komutlarını Geri Yükleme](../debugger/how-to-restore-hidden-debugger-commands.md)  
+ Hata ayıklayıcı komutlarının, IDE varsayılan ayarları tarafından gizlenen görünür hale getirme işlemini açıklar.

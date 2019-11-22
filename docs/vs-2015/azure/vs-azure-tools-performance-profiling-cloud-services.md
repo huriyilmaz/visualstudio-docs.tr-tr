@@ -11,19 +11,19 @@ ms.date: 11/11/2016
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 68e5ce85d9184b0e1e8b055f9d81d76b775fdef1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 35593f4164ed024db19b5fa3503b2d7589a7ac2b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62421596"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74289757"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>Bulut hizmetinin performansını test etme
-## <a name="overview"></a>Genel Bakış
+## <a name="overview"></a>Genel bakış
 Aşağıdaki yollarla bir bulut hizmetinin performansını test edebilirsiniz:
 
-* Azure Tanılama, istekler ve bağlantılar hakkında bilgi toplamak ve hizmeti bir müşteri açısından nasıl çalıştığını gösteren site istatistiklerini gözden geçirmek için kullanın. Kullanmaya başlamak için bkz. [Azure bulut Hizmetleri ve sanal makineler için tanılamayı yapılandırma](http://go.microsoft.com/fwlink/p/?LinkId=623009).
-* Visual Studio profil oluşturucu hizmeti nasıl çalışır hesaplama yönlerini derinlemesine analizini almak için kullanın. Bu konuda açıklandığı gibi bir hizmet, Azure'da çalışan performansını ölçmek için profil oluşturucu kullanabilirsiniz. Bir hizmet yerel olarak bir işlem öykünücüsünde çalışır gibi performansını ölçmek için profil oluşturucu kullanma hakkında daha fazla bilgi için bkz: [Visual Studio ProfilerişlemöykünücüsükullanarakbirAzurebuluthizmetiyerelolarakperformansınıtest](http://go.microsoft.com/fwlink/p/?LinkId=262845).
+* Azure Tanılama, istekler ve bağlantılar hakkında bilgi toplamak ve hizmeti bir müşteri açısından nasıl çalıştığını gösteren site istatistiklerini gözden geçirmek için kullanın. Kullanmaya başlamak için bkz. [Azure bulut Hizmetleri ve sanal makineler için tanılamayı yapılandırma](https://go.microsoft.com/fwlink/p/?LinkId=623009).
+* Visual Studio profil oluşturucu hizmeti nasıl çalışır hesaplama yönlerini derinlemesine analizini almak için kullanın. Bu konuda açıklandığı gibi bir hizmet, Azure'da çalışan performansını ölçmek için profil oluşturucu kullanabilirsiniz. Bir hizmet yerel olarak bir işlem öykünücüsünde çalışır gibi performansını ölçmek için profil oluşturucu kullanma hakkında daha fazla bilgi için bkz: [Visual Studio ProfilerişlemöykünücüsükullanarakbirAzurebuluthizmetiyerelolarakperformansınıtest](https://go.microsoft.com/fwlink/p/?LinkId=262845).
 
 ## <a name="choosing-a-performance-testing-method"></a>Performans sınama yöntemi seçme
 ### <a name="use-azure-diagnostics-to-collect"></a>Azure Tanılama verileri toplamak için kullanın:
@@ -84,7 +84,7 @@ Aşağıdaki resimde, Azure uygulamasını Yayımla iletişim kutusu, profil olu
 > 
 
 ### <a name="to-configure-profiling-settings"></a>Profil oluşturma ayarlarını yapılandırmak için
-1. Çözüm Gezgini'nde, Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**. Bir bulut hizmeti yayımlama hakkında ayrıntılı adımlar için bkz: [Azure araçlarını kullanarak bir bulut hizmeti yayımlama](http://go.microsoft.com/fwlink/p?LinkId=623012).
+1. Çözüm Gezgini'nde, Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**. Bir bulut hizmeti yayımlama hakkında ayrıntılı adımlar için bkz: [Azure araçlarını kullanarak bir bulut hizmeti yayımlama](https://go.microsoft.com/fwlink/p?LinkId=623012).
 2. İçinde **Azure uygulamasını Yayımla** iletişim kutusunda, seçtiğiniz **Gelişmiş ayarlar** sekmesi.
 3. Oluşturmayı etkinleştirmek için işaretleyin **profil oluşturmayı etkinleştir** onay kutusu.
 4. Profil oluşturma ayarlarınızı yapılandırmak için **ayarları** köprü. Profil ayarları iletişim kutusu görüntülenir.
@@ -104,7 +104,7 @@ Bulut hizmetinizde bir rolünün her örneği için profil oluşturma oturumunu 
 2. Azure bilgi işlem düğümünü seçin ve ardından Visual Studio'dan yayımlandığında, profil için seçili bulut hizmetini Azure dağıtım düğümünü seçin.
 3. Bir örneği için profil oluşturma raporları görüntülemek için rol hizmeti seçin, belirli bir örneği için kısayol menüsünü açın ve ardından **profili oluşturma raporu görüntüle**.
    
-    Rapor, bir .vsp dosya artık Azure'dan indirilir ve yükleme durumu, Azure etkinlik günlüğü'nde görünür. Yükleme tamamlandığında, profil oluşturma raporunun bir düzenleyici adlı Visual Studio için sekmesinde görünür. < rol adı\>*< örnek numarasını\>*< tanımlayıcısı\>.vsp. Rapor için Özet veriler görüntülenir.
+    Rapor, bir .vsp dosya artık Azure'dan indirilir ve yükleme durumu, Azure etkinlik günlüğü'nde görünür. İndirme işlemi tamamlandığında, profil oluşturma raporu, Visual Studio Düzenleyicisi 'ndeki < rol adı\> *< örnek numarası\>* < tanımlayıcı\>. vsp adlı bir sekmede görüntülenir. Rapor için Özet veriler görüntülenir.
 4. Geçerli Görünüm listesinde, raporun farklı görünümleri görüntülemek için istediğiniz görünümü türünü seçin. Daha fazla bilgi için [profil oluşturma araçları rapor görünümlerini](https://msdn.microsoft.com/library/azure/bb385755.aspx).
 
 ## <a name="next-steps"></a>Sonraki adımlar

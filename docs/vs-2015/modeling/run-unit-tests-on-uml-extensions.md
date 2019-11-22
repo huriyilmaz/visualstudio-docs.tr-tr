@@ -9,21 +9,21 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3fdedf3fd9463b25e2c825a0a2d43b069049a2cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f634f028dafea3260a69537893513f13cc0ebe83
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671231"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292542"
 ---
 # <a name="run-unit-tests-on-uml-extensions"></a>UML genişletmelerinde birim testleri çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı olmak için birim testleri yazmanızı ve bunları düzenli bir yapı sürecinin bir parçası olarak gerçekleştirmenizi öneririz. Daha fazla bilgi için bkz. [birim testi kodunuz](../test/unit-test-your-code.md). Visual Studio modelleme uzantıları için testleri ayarlamak üzere bazı önemli bilgi parçalarına ihtiyacınız vardır. Özet:
+Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı olmak için birim testleri yazmanızı ve bunları düzenli bir yapı sürecinin bir parçası olarak gerçekleştirmenizi öneririz. Daha fazla bilgi için [Birim Test kodunuzu](../test/unit-test-your-code.md). Visual Studio modelleme uzantıları için testleri ayarlamak üzere bazı önemli bilgi parçalarına ihtiyacınız vardır. Özet:
 
 - [VSıX uzantıları için birim testi ayarlama](#Host)
 
-   VS IDE ana bilgisayar bağdaştırıcısıyla testleri çalıştırın. Her test yönteminin `[HostType("VS IDE")]` ön eki. Bu konak bağdaştırıcısı, testleriniz çalıştırıldığında [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlar.
+   VS IDE ana bilgisayar bağdaştırıcısıyla testleri çalıştırın. Her test yönteminin `[HostType("VS IDE")]`ön eki. Bu konak bağdaştırıcısı, testleriniz çalıştırıldığında [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlar.
 
 - [DTE ve ModelStore 'a erişme](#DTE)
 
@@ -31,7 +31,7 @@ Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı
 
 - [Model diyagramı açma](#Opening)
 
-   @No__t_1 `EnvDTE.ProjectItem` veya buradan çevirebilirsiniz.
+   `IDiagramContext``EnvDTE.ProjectItem` veya buradan çevirebilirsiniz.
 
 - [UI Iş parçacığında değişiklikler gerçekleştiriliyor](#UiThread)
 
@@ -43,8 +43,6 @@ Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı
 
   Bu noktalara aşağıdaki bölümlerde ayrıntılı.
 
-  Bir birim test edilen UML uzantısının örneği, [metin kullanarak UML – hızlı girişinde](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)kod örnekleri galerisinde bulunabilir.
-
 ## <a name="requirements"></a>Gereksinimler
  [Gereksinimlere](../modeling/extend-uml-models-and-diagrams.md#Requirements)bakın.
 
@@ -53,17 +51,17 @@ Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı
 ## <a name="Host"></a>VSıX uzantıları için birim testi ayarlama
  Modelleme uzantılarındaki yöntemler genellikle zaten açık olan bir diyagram ile çalışır. Yöntemler **IDiagramContext** ve **ılınkedundocontext**gibi MEF içeri aktarmaları kullanır. Testleri çalıştırmadan önce test ortamınızın bu bağlamı ayarlaması gerekir.
 
-#### <a name="to-set-up-a-unit-test-that-executes-in-includevsprvsincludesvsprvs-mdmd"></a>@No__t_0 içinde yürütülen bir birim testi ayarlamak için
+#### <a name="to-set-up-a-unit-test-that-executes-in-includevsprvsincludesvsprvs-mdmd"></a>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] içinde yürütülen bir birim testi ayarlamak için
 
 1. UML uzantı projesi ve birim testi projesi oluşturun.
 
     1. **UML uzantı projesi.** Genellikle bunu komutu, hareketi veya doğrulama projesi şablonlarını kullanarak oluşturursunuz. Örneğin, bkz. [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
-    2. **Bir birim test projesi.** Daha fazla bilgi için bkz. [birim testi kodunuz](../test/unit-test-your-code.md).
+    2. **Bir birim test projesi.** Daha fazla bilgi için [Birim Test kodunuzu](../test/unit-test-your-code.md).
 
 2. UML modelleme projesi içeren bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü oluşturun. Bu çözümü testlerinizin ilk durumu olarak kullanacaksınız. UML uzantısını ve birim testlerini yazdığınız çözümden ayrı olmalıdır. Daha fazla bilgi için bkz. [UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
-3. **UML Uzantı projesinde**,. csproj dosyasını metin olarak düzenleyin ve aşağıdaki satırlarda `true` görüntülendiğinden emin olun:
+3. **UML Uzantı projesinde**,. csproj dosyasını metin olarak düzenleyin ve aşağıdaki satırlarda `true`görüntülendiğinden emin olun:
 
     ```
     <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
@@ -86,20 +84,20 @@ Ardışık değişiklikler aracılığıyla kodunuzu kararlı tutmaya yardımcı
 
     - **Microsoft. VisualStudio. mimari Turetools. Extensibility. dll**
 
-    - **Microsoft. VisualStudio. ComponentModelHost. dll**
+    - **Microsoft.VisualStudio.ComponentModelHost.dll**
 
     - **Microsoft. VisualStudio. QualityTools. UnitTestFramework. dll**
 
     - **Microsoft. VisualStudio. Uml. Interfaces. dll**
 
-    - **Microsoft. VSSDK. TestHostFramework. dll**
+    - **Microsoft.VSSDK.TestHostFramework.dll**
 
 6. Başlangıç yöntemleri de dahil olmak üzere her test yöntemine `[HostType("VS IDE")]` özniteliği öneki.
 
      Bu, testin bir Visual Studio 'nun deneysel örneğinde çalışacağını güvence altına alacak.
 
 ## <a name="DTE"></a>DTE ve ModelStore 'a erişme
- @No__t_0 bir modelleme projesi açmak için bir yöntem yazın. Genellikle, her test çalıştırmasında bir çözümü yalnızca bir kez açmak istersiniz. Yöntemi yalnızca bir kez çalıştırmak için, metodu `[AssemblyInitialize]` özniteliğiyle önek yapın. Her test yönteminde [HostType ("VS IDE")] özniteliğine de ihtiyacınız olduğunu unutmayın.  Örneğin:
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]bir modelleme projesi açmak için bir yöntem yazın. Genellikle, her test çalıştırmasında bir çözümü yalnızca bir kez açmak istersiniz. Yöntemi yalnızca bir kez çalıştırmak için, metodu `[AssemblyInitialize]` özniteliğiyle önek yapın. Her test yönteminde [HostType ("VS IDE")] özniteliğine de ihtiyacınız olduğunu unutmayın.  Örneğin:
 
 ```csharp
 using EnvDTE;
@@ -212,7 +210,7 @@ public class MyTestClass
 ```
 
 ## <a name="UiThread"></a>Kullanıcı arabirimi Iş parçacığında model değişikliklerini gerçekleştirme
- Testleriniz veya test edilen Yöntemler, model deposunda değişiklik yaparsanız, bunları Kullanıcı arabirimi iş parçacığında yürütmeniz gerekir. Bunu yapmazsanız, bir `AccessViolationException` görebilirsiniz. Çağırmak için bir çağrıda test yönteminin kodunu Çevrele:
+ Testleriniz veya test edilen Yöntemler, model deposunda değişiklik yaparsanız, bunları Kullanıcı arabirimi iş parçacığında yürütmeniz gerekir. Bunu yapmazsanız, bir `AccessViolationException`görebilirsiniz. Çağırmak için bir çağrıda test yönteminin kodunu Çevrele:
 
 ```
 using System.Windows.Forms;
@@ -376,7 +374,7 @@ testInstance.PublicMethod1();
 Assert.AreEqual("hello", testInstance.privateField1_Accessor);
 ```
 
- Yansımayı kullanarak erişimcileri tanımlayın Bu, en az önerdiğimiz yoldur. @No__t_0 eski sürümleri, her özel yöntem için otomatik olarak bir erişimci yöntemi oluşturan bir yardımcı program sağladı. Bu kullanışlı olsa da, deneyimimiz, test ettikleri uygulamanın dahili yapısına çok sıkı bir şekilde bağlanmış birim testlerin oluşmasına neden olduğunu eğilimlidir. Bu, testlerin uygulamayla birlikte değiştirilmesi gerektiğinden, gereksinimler veya mimari değiştiğinde ek çalışmalarla sonuçlanır. Ayrıca, uygulamanın tasarımındaki hatalı varsayımlar, testlerin hata bulmaması için testler içinde de yerleşiktir.
+ Yansımayı kullanarak erişimcileri tanımlayın Bu, en az önerdiğimiz yoldur. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] eski sürümleri, her özel yöntem için otomatik olarak bir erişimci yöntemi oluşturan bir yardımcı program sağladı. Bu kullanışlı olsa da, deneyimimiz, test ettikleri uygulamanın dahili yapısına çok sıkı bir şekilde bağlanmış birim testlerin oluşmasına neden olduğunu eğilimlidir. Bu, testlerin uygulamayla birlikte değiştirilmesi gerektiğinden, gereksinimler veya mimari değiştiğinde ek çalışmalarla sonuçlanır. Ayrıca, uygulamanın tasarımındaki hatalı varsayımlar, testlerin hata bulmaması için testler içinde de yerleşiktir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Bir birim testinin anatomi](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144) [Modelleme diyagramında bir menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [UML – hızlı giriş metin kullanarak](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)
+ [Birim testinin Anatomumu](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144) [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

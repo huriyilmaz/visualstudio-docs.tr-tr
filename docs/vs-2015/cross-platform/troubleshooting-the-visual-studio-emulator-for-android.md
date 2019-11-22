@@ -8,12 +8,12 @@ ms.assetid: f3fb5df4-3aae-40e4-9450-bbe15b0c5af5
 caps.latest.revision: 25
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 4e9aa77848c3784b1df7a2c1f32651b8d00e5998
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 380de9206b2dc4e78c3719919dfd78720de28129
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263379"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297652"
 ---
 # <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Android için Visual Studio Öykünücüsü’nde Sorun Giderme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -67,7 +67,7 @@ Bu konuda, Android için Visual Studio öykünücüsü'nü kullanırken karşıl
 ## <a name="NoInstall"></a> Öykünücüsü yüklenemez
  Hyper-V yüklü yoksa öykünücü yüklemeye çalıştığınızda şu iletiyi görürsünüz. HyperV destekleyen bir makine olmalıdır ve etkinleştirilmesi gerekir.
 
- ![Android&#95;AB&#95;yükleme&#95;sorunu](../cross-platform/media/android-emu-install-issue.png "Android_Emu_Install_Issue")
+ ![Android&#95;EMU&#95;yüklemesi&#95;sorunu](../cross-platform/media/android-emu-install-issue.png "Android_Emu_Install_Issue")
 
 > [!NOTE]
 > Bu ileti, hem Visual Studio öykünücüsü Android ve Windows Phone öykünücüsü için geçerlidir. Öykünücü, Windows 8.1 ve Windows 10'u destekler.
@@ -132,9 +132,9 @@ Bu konuda, Android için Visual Studio öykünücüsü'nü kullanırken karşıl
 
 - Sanal Anahtar Yöneticisi ve denetim, iki ağ anahtarları olduğunu görmek için Hyper-V Yöneticisi'nde açın; ilk iç anahtar ve ikinci dış olduğundan emin olun.
 
-     ![Android&#95;AB&#95;V&#95;anahtar&#95;Man](../cross-platform/media/android-emu-v-switch-man.png "Android_Emu_V_Switch_Man")
+     ![Android&#95;EMU&#95;V&#95;anahtar&#95;Man](../cross-platform/media/android-emu-v-switch-man.png "Android_Emu_V_Switch_Man")
 
-     Kuruluma yanlış ise ve Windows 10 kullanıyorsanız, deneyebilir [netcfg – d komutu kullanarak ağ aygıtlarını yeniden](http://windows.microsoft.com/windows-10/fix-network-connection-issues) (Bölüm 6).
+     Kuruluma yanlış ise ve Windows 10 kullanıyorsanız, deneyebilir [netcfg – d komutu kullanarak ağ aygıtlarını yeniden](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) (Bölüm 6).
 
 - Bu adımlar sorunu çözmezse bkz [öykünücü başarısız (ilk kullanımda) başlatmak](#NoStart) öykünücü ile engellemesini 3 taraf yazılım hakkında bilgi için.
 
@@ -173,7 +173,7 @@ Bu konuda, Android için Visual Studio öykünücüsü'nü kullanırken karşıl
 
      - Güvenilir yürütme devre dışı bırak
 
-       Daha fazla bilgi için bu makaleye bakın: TechNet: Hyper-V: Hyper-V'yi etkinleştirme BIOS hataların nasıl düzeltileceğini
+       Bu makalede daha fazla bilgi için bkz: Technet: Hyper-V: nasıl düzeltme BIOS hataları etkinleştirme Hyper-V'ye
 
   5. En az 4 GB sistem belleği ve bunu diğer yoğun kaynak programlar ve süreçler tarafından Tüketilmekte olan değil, sahip olduğunuzdan emin olun.
 
@@ -191,7 +191,7 @@ Bu konuda, Android için Visual Studio öykünücüsü'nü kullanırken karşıl
 
    Genel olarak, geliştiricilerin bu ürün Windows 8 ve Hyper-V ile uyumlu olacak şekilde, yazılım güncelleştirme kadar olacaktır.
 
-   Aşağıdaki ürünler için Windows 8 Uyumluluk yükseltme gerektirebilir: VirtualBox, sanal bilgisayar 7, VMWare, bazı VPN istemcileri, yazılım güvenlik duvarları, Cisco VPN istemcileri ve diğer sanallaştırma sistemlerinin bazı sürümlerinde. Windows 8 ve Hyper-V ile uyumlu hale getirmek için yazılım yükseltmelerini teşvik etmek için sorgulanabilir sanallaştırma yazılımı geliştiricisi çalışın.
+   Aşağıdaki ürünler için Windows 8 Uyumluluk yükseltme gerektirebilir: VirtualBox, sanal bilgisayar 7, VMWare, bazı VPN istemcileri yazılım güvenlik duvarları, Cisco VPN istemcileri ve diğer sanallaştırma sistemlerinin bazı sürümlerinde. Windows 8 ve Hyper-V ile uyumlu hale getirmek için yazılım yükseltmelerini teşvik etmek için sorgulanabilir sanallaştırma yazılımı geliştiricisi çalışın.
 
    Olarak bir **geçici çözüm**, tüm üçüncü taraf sürücüler ve Visual Studio ile iletişim kurmak için öykünücüsü tarafından kullanılan sanal ağ ile engelliyor uygulamalar devre dışı bırakabilirsiniz. Bu uygulamalar şunları içerebilir:
 
@@ -209,7 +209,7 @@ Bu konuda, Android için Visual Studio öykünücüsü'nü kullanırken karşıl
 
   2. VEthernet (dahili Ethernet bağlantı noktası Windows Phone öykünücüsü iç anahtar) bağdaştırıcısı için seçim yapın **özellikleri** bağlam menüsünden.
 
-      ![Sanal bağdaştırıcı Hyper tarafından kullanılan&#45;V](../cross-platform/media/android-emu-virtual-adapter.png "Android_Emu_Virtual_Adapter")
+      ![Hyper&#45;V tarafından kullanılan sanal bağdaştırıcı](../cross-platform/media/android-emu-virtual-adapter.png "Android_Emu_Virtual_Adapter")
 
       Bağdaştırıcı özellikleri burada gösterilir.
 
@@ -254,7 +254,7 @@ Bu konuda, Android için Visual Studio öykünücüsü'nü kullanırken karşıl
 
   Bu sorunu çözmek için USB3 anakart BIOS ayarları devre dışı bırakın ve bilgisayarı yeniden başlatın. Daha sonra gigabayt, anakart ait BIOS için bir güncelleştirme yayımladı olup olmadığını denetleyin.
 
-  Daha fazla bilgi için aşağıdaki Bilgi Bankası makalesine bakın: [Önyükleme hatası sonra gigabayt sistemlerinde Hyper-V rolünün yüklenmesi](https://support.microsoft.com/kb/2693144).
+  Daha fazla bilgi için aşağıdaki Bilgi Bankası makalesine bakın: [önyükleme hatası sonra gigabayt sistemlerinde Hyper-V rolünün yüklenmesi](https://support.microsoft.com/kb/2693144).
 
 ## <a name="ADB"></a> Visual Studio öykünücüsü için uygulama dağıtılmaya çalışılırken takılı veya öykünücü diğer IDE içinde hata ayıklama hedefi olarak görünmüyor
  Öykünücünün çalıştığından, ancak ADB (Android hata ayıklama köprüsü) bağlanması görünmez ya da (örneğin, Android Studio veya Eclipse) ADB kullanan Android araçları görünmüyor öykünücü için ADB nerede arar ayarlamak gerekebilir. Öykünücü, Android SDK'nızı temel konumunu tanımlamak için bir kayıt defteri anahtarını kullanır ve bu dizin altında \platform-tools\adb.exe dosyasını arar. Öykünücüsü tarafından kullanılan Android SDK yolu değiştirmek için:
@@ -311,6 +311,6 @@ Bu konuda, Android için Visual Studio öykünücüsü'nü kullanırken karşıl
 ## <a name="Support"></a> Destek kaynakları
  Ana bilgisayarınızın sistem gereksinimlerini karşıladığından ve bu sorun giderme Kılavuzu'nda ele alınmayan bir sorunla karşılaşırsanız varsa:
 
-- StackOverflow kullanma hakkında bir soru sorun [android öykünücüsü](http://stackoverflow.com/questions/tagged/android-emulator) ve visual studio etiketler.
+- StackOverflow kullanma hakkında bir soru sorun [android öykünücüsü](https://stackoverflow.com/questions/tagged/android-emulator) ve visual studio etiketler.
 
 - Visual Studio'da veya öykünücü Yöneticisi'nde gönderme gülümseme aracını kullanarak bir sorun bildirin.

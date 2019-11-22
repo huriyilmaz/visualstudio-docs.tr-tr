@@ -1,5 +1,5 @@
 ---
-title: SetEnv görevi | Microsoft Docs
+title: SetEnv Görevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,28 +20,28 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 49d25d49554c587bcaaba8ef09bac967d4b5599a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7dc9b15efb8fca12382fae94912d22c39b96bd4c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157370"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295966"
 ---
 # <a name="setenv-task"></a>SetEnv Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirtilen ortam değişkeninin değerini siler veya ayarlar.  
+Belirtilen ortam değişkeninin değerini ayarlar veya siler.  
   
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır **SetEnv** görev.  
+ Aşağıdaki tabloda **SetEnv** görevinin parametreleri açıklanmaktadır.  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|**Ad**|Gerekli **dize** parametresi.<br /><br /> Bir ortam değişkeninin adı.|  
-|**OutputEnvironmentVariable**|İsteğe bağlı **dize** çıkış parametresi.<br /><br /> Tarafından belirtilen ortam değişkenine atanan değeri içeren **adı** parametresi.|  
-|**Ön eki**|Zorunlu `Boolean` parametresi.<br /><br /> Varsa `true`, değerini art arda ekler **değer** parametresi tarafından belirtilen ortam değişkeninin değerini önce **adı** parametresi ve ardından sonucu ortama atar değişken. Varsa `false`, yalnızca değerini atar **değer** ortam değişkenine parametresi.|  
-|**Hedef**|İsteğe bağlı **dize** parametresi.<br /><br /> Bir ortam değişkeni depolandığı konumu belirtir. Belirtin "`User`"veya"`Machine`".<br /><br /> Daha fazla bilgi için "EnvironmentVariableTarget Enumeration" bakın [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.|  
-|**Değer**|İsteğe bağlı **dize** parametresi.<br /><br /> Tarafından belirtilen ortam değişkenine atanan değeri **adı** parametresi. Varsa **değer** boştur ve değişken var, değişken silindi. Değişkeni mevcut değilse işlemin gerçekleştirilmesinden olsa bile hata oluşmaz.<br /><br /> Daha fazla bilgi için "Environment::SetEnvironmentVariable yöntemi" bakın [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.|  
+|**Ad**|Gerekli **dize** parametresi.<br /><br /> Ortam değişkeninin adı.|  
+|**OutputEnvironmentVariable**|İsteğe bağlı **dize** çıkış parametresi.<br /><br /> **Ad** parametresiyle belirtilen ortam değişkenine atanan değeri içerir.|  
+|**Koy**|Zorunlu `Boolean` parametresi.<br /><br /> `true`, **değer** parametresinin değerini, **ad** parametresiyle belirtilen ortam değişkeni değerinden önce birleştirir ve sonra sonucu ortam değişkenine atar. `false`, ortam değişkenine yalnızca **Value** parametresinin değerini atar.|  
+|**Hedef**|İsteğe bağlı **dize** parametresi.<br /><br /> Bir ortam değişkeninin depolandığı konumu belirtir. "`User`" veya "`Machine`" belirtin.<br /><br /> Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "EnvironmentVariableTarget numaralandırması" konusuna bakın.|  
+|**Değer**|İsteğe bağlı **dize** parametresi.<br /><br /> **Name** parametresiyle belirtilen ortam değişkenine atanan değer. **Değer** boşsa ve değişken varsa, değişken silinir. Değişken yoksa, işlem gerçekleştirilemediği halde bir hata oluşmaz.<br /><br /> Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "Environment:: SetEnvironmentVariable yöntemi" başlığına bakın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   

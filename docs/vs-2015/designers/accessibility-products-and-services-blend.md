@@ -9,12 +9,12 @@ caps.latest.revision: 11
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cfb2274fc300bdce815f08c8121156bf281b91f4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 329040a1d572741fc6971c312ce9364659644b59
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658039"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300569"
 ---
 # <a name="accessibility-products-and-services-blend"></a>Erişilebilirlik ürünleri ve Hizmetleri (Blend)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,23 +30,23 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
 - "Daha fazla bilgi için"
 
 > [!NOTE]
-> Bu bölümdeki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için de geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgi kartını kullanabilir veya Microsoft Destek Hizmetleri telefon numaralarının ve adreslerinin bir listesi için [Microsoft Erişilebilirlik sitesini](http://go.microsoft.com/fwlink/?LinkID=75069) ziyaret edebilirsiniz. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca dahil diğer dillerde sunulmaktadır.
+> Bu bölümdeki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için de geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgi kartını kullanabilir veya Microsoft Destek Hizmetleri telefon numaralarının ve adreslerinin bir listesi için [Microsoft Erişilebilirlik sitesini](https://go.microsoft.com/fwlink/?LinkID=75069) ziyaret edebilirsiniz. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca dahil olmak üzere diğer dillerde mevcuttur.
 
 ## <a name="accessibility-features-of-windows"></a>Windows'un erişilebilirlik Özellikleri
- Windows işletim sistemi, klavyede yazma veya fare kullanma güçlüğü olan, görme engelli veya görme kapasitesi düşük, işitme engelli ya da işitme zorluğu olan bireyler için faydalı çok sayıda yerleşik erişilebilirlik özelliği içerir. Özellikler kurulum sırasında yüklenir. Bu özellikler hakkında daha fazla bilgi için bkz. Windows ve [Microsoft Erişilebilirlik sitesindeki](http://go.microsoft.com/fwlink/?LinkID=75069)yardım.
+ Windows işletim sistemi, klavyede yazma veya fare kullanma güçlüğü olan, görme engelli veya görme kapasitesi düşük, işitme engelli ya da işitme zorluğu olan bireyler için faydalı çok sayıda yerleşik erişilebilirlik özelliği içerir. Özellikler kurulum sırasında yüklenir. Bu özellikler hakkında daha fazla bilgi için bkz. Windows ve [Microsoft Erişilebilirlik sitesindeki](https://go.microsoft.com/fwlink/?LinkID=75069)yardım.
 
 ### <a name="free-step-by-step-tutorials"></a>Ücretsiz adım adım öğreticiler
  Microsoft, bilgisayarınızda erişilebilirlik seçeneklerini ve ayarlarını ayarlamaya yönelik ayrıntılı yordamlar sağlayan bir dizi adım adım öğreticilik sunmaktadır. Bu bilgiler, fareyi, klavyeyi veya her ikisinin birleşimini nasıl kullanacağınızı öğrenmek için yan yana bir biçimde sunulmaktadır.
 
- Microsoft ürünlerine yönelik adım adım öğreticiler bulmak için bkz. [Microsoft erişilebilirlik sitesi](http://go.microsoft.com/fwlink/?LinkID=75069).
+ Microsoft ürünlerine yönelik adım adım öğreticiler bulmak için bkz. [Microsoft erişilebilirlik sitesi](https://go.microsoft.com/fwlink/?LinkID=75069).
 
 ### <a name="assistive-technology-products-for-windows"></a>Windows için yardımcı teknoloji ürünleri
- Bilgisayarların engelliler için kullanımı daha kolay hale getirmek için çok çeşitli yardımcı teknoloji ürünleri mevcuttur. Windows üzerinde çalışan yardımcı teknoloji ürünlerinin kataloğunu [Microsoft Erişilebilirlik sitesinde](http://go.microsoft.com/fwlink/?LinkID=75069)arayabilirsiniz.
+ Bilgisayarların engelliler için kullanımı daha kolay hale getirmek için çok çeşitli yardımcı teknoloji ürünleri mevcuttur. Windows üzerinde çalışan yardımcı teknoloji ürünlerinin kataloğunu [Microsoft Erişilebilirlik sitesinde](https://go.microsoft.com/fwlink/?LinkID=75069)arayabilirsiniz.
 
  Yardımcı teknoloji kullanıyorsanız, olası uyumluluk sorunlarını denetlemek için yazılımınızı veya donanımınızı yükseltmeden önce yardımcı teknoloji satıcınızla iletişime geçerek emin olun.
 
 ## <a name="documentation-in-alternative-formats"></a>Alternatif biçimlerdeki belgeler
- Yazdırılmış malzemeleri okurken veya işlerken güçlük çekiyorsanız, birçok Microsoft ürününe yönelik belgeleri daha erişilebilir biçimlerde elde edebilirsiniz. [Microsoft Erişilebilirlik sitesinde](http://go.microsoft.com/fwlink/?LinkID=75069)erişilebilir ürün belgelerinin dizinini görüntüleyebilirsiniz.
+ Yazdırılmış malzemeleri okurken veya işlerken güçlük çekiyorsanız, birçok Microsoft ürününe yönelik belgeleri daha erişilebilir biçimlerde elde edebilirsiniz. [Microsoft Erişilebilirlik sitesinde](https://go.microsoft.com/fwlink/?LinkID=75069)erişilebilir ürün belgelerinin dizinini görüntüleyebilirsiniz.
 
  Ayrıca, Recording for the Blind & Dyslexic, Inc (RFB & D) için daha fazla Microsoft yayını elde edebilirsiniz. RFB & D bu belgeleri dağıtım hizmetinin kayıtlı ve uygun üyelerine dağıtır. Microsoft ürün belgelerinin ve Microsoft Press kitaplarının kullanılabilirliği hakkında daha fazla bilgi için, şu kişiye başvurun:
 
@@ -62,7 +62,7 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
 
  Faks: (609) 987-8116
 
- [Önemli ölçüde site](http://go.microsoft.com/fwlink/?LinkId=111110)
+ [Önemli ölçüde site](https://go.microsoft.com/fwlink/?LinkId=111110)
 
  Web adresleri değişebilir, bu nedenle burada bahsedilen siteye bağlanamayabilirsiniz.
 
@@ -76,4 +76,4 @@ Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay 
  Microsoft Desteği hizmetler, hizmetin kullanıldığı sırada fiyatlara, koşullara ve koşullara tabidir.
 
 ## <a name="for-more-information"></a>Daha fazla bilgi için
- Bilgisayarlar için erişilebilir teknolojinin Engelli kişilerin yaşamlarını iyileştirmeye nasıl yardımcı olduğu hakkında daha fazla bilgi için bkz. [Microsoft erişilebilirlik sitesi](http://go.microsoft.com/fwlink/?LinkID=75069).
+ Bilgisayarlar için erişilebilir teknolojinin Engelli kişilerin yaşamlarını iyileştirmeye nasıl yardımcı olduğu hakkında daha fazla bilgi için bkz. [Microsoft erişilebilirlik sitesi](https://go.microsoft.com/fwlink/?LinkID=75069).

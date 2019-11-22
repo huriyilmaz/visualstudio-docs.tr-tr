@@ -9,19 +9,19 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b683e2d266e065ce9fcf7caa1943cd44d1bd9be6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8eb2d4f5b025be6f68860c18d1c14da017aaf3fe
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664734"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74294318"
 ---
 # <a name="draw-shapes-and-paths"></a>Şekiller ve yollar çizin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 XAML Tasarımcısı, bir *Şekil* tam olarak beklediğiniz şeydir. Örneğin: dikdörtgen, daire veya elips. *Yol* , bir şeklin daha esnek bir sürümüdür. Bunları yeniden şekillendirme veya yeni şekiller oluşturmak için birlikte birleştirme gibi işlemler yapabilirsiniz.
 
- Şekiller ve yollar, vektör grafiklerini kullanarak yüksek çözünürlüklü ekranların ölçeğini de ölçeklendirirler. Vektör grafikleri hakkında daha fazla bilgi edinmek istiyorsanız bkz. [vektör grafikleri](https://www.youtube.com/watch?v=MoCSwF0n-io) veya [vektör grafikleri](http://www.webopedia.com/TERM/V/vector_graphics.html).
+ Şekiller ve yollar, vektör grafiklerini kullanarak yüksek çözünürlüklü ekranların ölçeğini de ölçeklendirirler. Vektör grafikleri hakkında daha fazla bilgi edinmek istiyorsanız bkz. [vektör grafikleri](https://www.youtube.com/watch?v=MoCSwF0n-io) veya [vektör grafikleri](https://www.webopedia.com/TERM/V/vector_graphics.html).
 
  **Bu konuda:**
 

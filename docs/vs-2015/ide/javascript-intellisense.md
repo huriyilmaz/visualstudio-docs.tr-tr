@@ -26,12 +26,12 @@ caps.latest.revision: 67
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 39c90a8550736c945f04467e9366a73039cfa2b1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e367ff6d6abbf40cdf7efebed04aee6fc74a384c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670472"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300749"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -60,7 +60,7 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
 
 - [JavaScript doğrulaması](#Validation)
 
-  @No__t_0 IntelliSense işlevselliği hakkında daha fazla bilgi için bkz. [IntelliSense kullanma](../ide/using-intellisense.md).
+  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]IntelliSense işlevselliği hakkında daha fazla bilgi için bkz. [IntelliSense kullanma](../ide/using-intellisense.md).
 
 ## <a name="DeterminingIntelliSenseContext"></a>IntelliSense bağlamını belirleme
  JavaScript IntelliSense, geçerli komut dosyası bağlamınızla alakalı tüm komut dosyalarını temel alarak kodlama seçenekleri sağlar. Geçerli dosyadaki betik oluşturma öğeleri de buna dahildir. Ayrıca, komut dosyası başvuruları, derleme komut dosyası başvuruları, hizmet başvuruları ve sayfayla ilişkili başvurular gibi, komut dosyanızın doğrudan ya da dolaylı olarak başvurduğu her kodu içerir.
@@ -71,15 +71,15 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
 
 - başka bir betik dosyasına işaret eden `src` öznitelikleri olan öğeleri `script`. Hedef komut dosyasının dosya adı uzantısı .js olmalıdır.
 
-- @No__t_0 yönergesini kullanarak diğer JavaScript dosyalarına başvuran JavaScript dosyaları.
+- `reference` yönergesini kullanarak diğer JavaScript dosyalarına başvuran JavaScript dosyaları.
 
 - Genel nesneler, IntelliSense uzantıları veya gecikmeli yüklenen komut dosyaları için başvuru grupları.
 
 - XML Web hizmetlerine yapılan başvurular.
 
-- @No__t_0 ve <xref:System.Web.UI.ScriptManagerProxy> denetimleri, Web uygulaması AJAX özellikli bir ASP.NET uygulamasıdır.
+- <xref:System.Web.UI.ScriptManager> ve <xref:System.Web.UI.ScriptManagerProxy> denetimleri, Web uygulaması AJAX özellikli bir ASP.NET uygulamasıdır.
 
-- @No__t_0, AJAX etkinleştirilmiş bir ASP.NET Web uygulamasında çalışıyorsanız.
+- [!INCLUDE[atlaslib_current_ext](../includes/atlaslib-current-ext-md.md)], AJAX etkinleştirilmiş bir ASP.NET Web uygulamasında çalışıyorsanız.
 
     > [!NOTE]
     > IntelliSense, HTML öğelerinde olay işleyicisi özniteliklerinde olan veya `href` özniteliklerde tanımlanmış komut dosyası için desteklenmez.
@@ -119,15 +119,15 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
   IntelliSense bir nesnenin türünü belirleyemediğinde, etkin belgedeki tanımlayıcıları kullanarak deyim tamamlama seçenekleri sunar. Daha fazla bilgi için bkz. [tanımlayıcılar Için deyimin tamamlanması](../ide/statement-completion-for-identifiers.md).
 
 ### <a name="HTMLDom"></a>HTML DOM öğeleri
- JavaScript IntelliSense, `body`, `form` ve `div` gibi dinamik HTML (DHTML) DOM öğeleri için programlama başvuruları sağlar. IntelliSense yalnızca, geçerli belgede ve ana sayfada yer alan öğeleri görüntüler. JavaScript IntelliSense Ayrıca `window` ve `document` nesnelerini ve üyelerini destekler.
+ JavaScript IntelliSense, `body`, `form`ve `div`gibi dinamik HTML (DHTML) DOM öğeleri için programlama başvuruları sağlar. IntelliSense yalnızca, geçerli belgede ve ana sayfada yer alan öğeleri görüntüler. JavaScript IntelliSense Ayrıca `window` ve `document` nesnelerini ve üyelerini destekler.
 
 ### <a name="IntrinsicObjects"></a>İç nesneler
- JavaScript IntelliSense, `Array`, `String`, `Math`, `Date` ve `Number` gibi iç nesneler için programlama başvuruları sağlar. İç nesneler hakkında daha fazla bilgi için bkz. [Standart yerleşik nesneler](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects).
+ JavaScript IntelliSense, `Array`, `String`, `Math`, `Date`ve `Number`gibi iç nesneler için programlama başvuruları sağlar. İç nesneler hakkında daha fazla bilgi için bkz. [Standart yerleşik nesneler](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects).
 
 ### <a name="UserDefined"></a>Kullanıcı tanımlı değişkenler, Işlevler ve nesneler
  Bir JavaScript dosyasını değiştirdiğinizde, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] tüm kullanılabilir kod kaynaklarını belirleyebilmek için, açılan ve başvurulan belgeleri tarar. Bu, oluşturduğunuz değişkenleri, işlevleri ve nesneleri içerir. Bu kaynaklar daha sonra JavaScript IntelliSense kullanımına sunulur.
 
- Kullanıcı tanımlı değişkenler, işlevler ve nesneler hakkında daha fazla bilgi için MSDN Web sitesinde [kendi nesnelerinizi oluşturma](http://go.microsoft.com/fwlink/?LinkId=108671) konusuna bakın.
+ Kullanıcı tanımlı değişkenler, işlevler ve nesneler hakkında daha fazla bilgi için MSDN Web sitesinde [kendi nesnelerinizi oluşturma](https://go.microsoft.com/fwlink/?LinkId=108671) konusuna bakın.
 
 ### <a name="External"></a>Dış dosya başvuruları
  Kodunuzda IntelliSense desteği elde etmek için çeşitli türlerde harici dosya başvuruları ekleyebilirsiniz. Harici dosya başvuruları; komut dosyası başvuruları ve başvuru yönergeleri olabileceği gibi, başvuru grupları kullanılarak da belirtilebilir.
@@ -135,9 +135,9 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
 #### <a name="Script"></a>Betik başvuruları
  Tüm istemci komut dosyasını bir sayfaya yazmak yerine, komut dosyası kodu içeren harici dosyalara başvuruda bulunabilirsiniz. Böylece, kodu sayfalar arasında yeniden kullanmanız daha kolay olur ve istemci komut dosyasının tarayıcı tarafından önbelleğe alınmasına olanak sağlanır.
 
- ASP.NET AJAX özellikli bir Web sayfasıyla çalışmıyorsanız, bir `script` öğesinin açılış etiketindeki `src` özniteliğini kullanarak bir dış betik dosyasına başvurabilirsiniz. @No__t_0 özniteliği, kaynak kodu veya verileri içeren bir dış dosyanın URL 'sini belirtir.
+ ASP.NET AJAX özellikli bir Web sayfasıyla çalışmıyorsanız, bir `script` öğesinin açılış etiketindeki `src` özniteliğini kullanarak bir dış betik dosyasına başvurabilirsiniz. `src` özniteliği, kaynak kodu veya verileri içeren bir dış dosyanın URL 'sini belirtir.
 
- Aşağıdaki örnekte, bir komut dosyasına başvurmak için bir < `script` > etiketinde `src` özniteliğini kullanan biçimlendirme gösterilmektedir.
+ Aşağıdaki örnekte, bir komut dosyasına başvurmak için bir <`script`> etiketinde `src` özniteliğini kullanan biçimlendirme gösterilmektedir.
 
 ```html
 <script type="text/javascript" src="~/Scripts/JavaScript.js">
@@ -160,9 +160,9 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
  IntelliSense, ASP.NET AJAX Web uygulamalarında bir derlemeye kaynak olarak eklenen komut dosyalarını da destekler. Katıştırılmış betik kaynakları hakkında daha fazla bilgi için bkz. [Izlenecek yol: bir JavaScript dosyasını bir derlemede kaynak olarak katıştırma](https://msdn.microsoft.com/library/d8cb78cd-95a9-4dc6-92df-391866817e89).
 
 #### <a name="ReferenceDirectives"></a>Başvuru yönergeleri
- @No__t_0 yönergesi [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], düzenlemekte olduğunuz betiği ve diğer betikleri arasında bir ilişki kurmasını sağlar. @No__t_0 yönergesi, geçerli betik dosyasının komut dosyası bağlamına bir betik dosyası eklemenizi sağlar. Böylece, kodunuzu yazarken IntelliSense'in harici olarak tanımlı işlevlere, türlere ve alanlara başvuruda bulunabilmesi sağlanır.
+ `reference` yönergesi [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], düzenlemekte olduğunuz betiği ve diğer betikleri arasında bir ilişki kurmasını sağlar. `reference` yönergesi, geçerli betik dosyasının komut dosyası bağlamına bir betik dosyası eklemenizi sağlar. Böylece, kodunuzu yazarken IntelliSense'in harici olarak tanımlı işlevlere, türlere ve alanlara başvuruda bulunabilmesi sağlanır.
 
- Bir `reference` yönergesini bir XML yorumu biçiminde oluşturursunuz. Bu yönerge, dosya içinde tüm diğer komut dosyalarından önce bildirilmelidir. @No__t_0 yönergesi, disk tabanlı betik başvurusu, derleme tabanlı betik başvurusu, hizmet tabanlı betik başvurusu veya sayfa tabanlı betik başvurusu içerebilir.
+ Bir `reference` yönergesini bir XML yorumu biçiminde oluşturursunuz. Bu yönerge, dosya içinde tüm diğer komut dosyalarından önce bildirilmelidir. `reference` yönergesi, disk tabanlı betik başvurusu, derleme tabanlı betik başvurusu, hizmet tabanlı betik başvurusu veya sayfa tabanlı betik başvurusu içerebilir.
 
  Aşağıdaki örnekte, disk tabanlı başvuru yönergelerinin kullanımına dair örnekler gösterilmektedir. İlk örnekte, dil servisi, proje dosyasını (örneğin, .jsproj) içeren aynı klasörde ilgili dosyayı da arar.
 
@@ -203,7 +203,7 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
 
  Aşağıdaki kurallar `reference` yönergesi için geçerlidir.
 
-- @No__t_0 XML yorumu herhangi bir komut dosyasından önce bildirilmelidir.
+- `reference` XML yorumu herhangi bir komut dosyasından önce bildirilmelidir.
 
 - XML açıklamaları sözdizimini üç eğik çizgi ile kullanmalısınız. Standart açıklamalar sözdizimi (iki eğik çizgi) kullanılarak yapılan başvurular yoksayılır.
 
@@ -260,7 +260,7 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
   Bir .aspx dosyası başka bir .aspx dosyasına başvurduğunda IntelliSense kullanılamaz.
 
 ### <a name="ASPNet"></a>ASP.NET AJAX nesneleri
- ASP.NET AJAX da JavaScript IntelliSense'i destekler. ASP.NET AJAX, ECMAScript (JavaScript) içinde kullanılabilen standart türlerin kapsamını genişleten bir istemci çerçevesi içerir. JavaScript IntelliSense 'i ASP.NET AJAX nesneleriyle ilgili ayrıntıları sağlamak üzere etkinleştirmek için, [!INCLUDE[atlaslib_current_ext](../includes/atlaslib-current-ext-md.md)] tamamında XML belge açıklamaları eklenmiştir. ASP.NET AJAX Kitaplığı'nda yer alan türleri ve üyeleri kullandığınızda bu XML belgeleri yorumları görüntülenir.
+ ASP.NET AJAX da JavaScript IntelliSense'i destekler. ASP.NET AJAX, ECMAScript (JavaScript) içinde kullanılabilen standart türlerin kapsamını genişleten bir istemci çerçevesi içerir. JavaScript IntelliSense 'i ASP.NET AJAX nesneleriyle ilgili ayrıntıları sağlamak üzere etkinleştirmek için, [!INCLUDE[atlaslib_current_ext](../includes/atlaslib-current-ext-md.md)]tamamında XML belge açıklamaları eklenmiştir. ASP.NET AJAX Kitaplığı'nda yer alan türleri ve üyeleri kullandığınızda bu XML belgeleri yorumları görüntülenir.
 
 > [!NOTE]
 > Özel üyeler JavaScript IntelliSense tarafından görüntülenmez. Özel üyeler, ASP.NET AJAX içinde, bir alt çizgi (_) ile başlayan üyeler olarak belirtilir.
@@ -269,7 +269,7 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
  JavaScript dil servisi, üçüncü taraf kitaplıkları kullanan geliştiriciler için IntelliSense deneyimini değiştirmenize olanak sağlayan nesneleri ve işlevleri sunar. Özellikle de varsayılan dil servisinin müşterilere vermek istediğiniz tüm bilgileri sağlayamadığı durumlarda bu özellikler yararlı olur. Daha fazla bilgi için bkz. [JavaScript IntelliSense 'ı genişletme](../ide/extending-javascript-intellisense.md).
 
 ## <a name="Validation"></a>JavaScript doğrulaması
- JavaScript komut dosyası doğrulaması arka planda sürekli gerçekleşir. @No__t_0 JavaScript kodunda sözdizimi hataları algıladığında, aşağıdaki yollarla geri bildirim sağlanır:
+ JavaScript komut dosyası doğrulaması arka planda sürekli gerçekleşir. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] JavaScript kodunda sözdizimi hataları algıladığında, aşağıdaki yollarla geri bildirim sağlanır:
 
 - Düzenleyicide altı çizili öğeler. Dalgalı kırmızı alt çizgiler hataları gösterir. Fare işaretçisini hatanın üzerinde tutarsanız, bir araç ipucu hata açıklamasını görüntüler.
 
@@ -283,6 +283,6 @@ IntelliSense, kodu oluşturduğunuz sırada size bilgi sağlayarak daha hızlı 
 - [JavaScript IntelliSense Genişletme](../ide/extending-javascript-intellisense.md)
 - [Tanımlayıcılar İçin İfade Tamamlama](../ide/statement-completion-for-identifiers.md)
 - [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)
-- [DHTML nesne modeli hakkında](http://go.microsoft.com/fwlink/?LinkID=92344)
+- [DHTML nesne modeli hakkında](https://go.microsoft.com/fwlink/?LinkID=92344)
 - [Üyeleri Listele](https://msdn.microsoft.com/1b9cc469-9cd4-4d42-9999-1f9479635ff8)
-- [SRC özniteliği &#124; src özelliği](http://go.microsoft.com/fwlink/?LinkId=92345)
+- [SRC özniteliği &#124; src özelliği](https://go.microsoft.com/fwlink/?LinkId=92345)

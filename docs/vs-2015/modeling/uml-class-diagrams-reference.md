@@ -24,12 +24,12 @@ caps.latest.revision: 43
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6d2368c19292f9e4205cec9f1b42b1553ce3188f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: da4e0e3bab904b660f3d843e105b7d256a63a1b5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658434"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297221"
 ---
 # <a name="uml-class-diagrams-reference"></a>UML Sınıf Diyagramları: Başvuru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "72658434"
 UML sınıf diyagramı, uygulamanız tarafından hem dahili olarak hem de kullanıcılarıyla iletişim halinde kullanılan nesne ve bilgi yapılarını açıklar. Belirli bir uygulamaya başvuru olmadan bilgileri açıklar. Sınıfları ve ilişkileri, veritabanı tabloları, XML düğümleri veya yazılım nesnelerinin kompozisyonları gibi birçok şekilde uygulanabilir.
 
 > [!NOTE]
-> Bu konu UML sınıf diyagramları hakkındadır. Program kodunu görselleştirmek için kullanılan, .NET sınıf diyagramı olan başka bir tür sınıf diyagramı vardır. Daha fazla bilgi için bkz. [sınıfları ve türleri tasarlama ve görüntüleme](http://go.microsoft.com/fwlink/?LinkId=142231).
+> Bu konu UML sınıf diyagramları hakkındadır. Program kodunu görselleştirmek için kullanılan, .NET sınıf diyagramı olan başka bir tür sınıf diyagramı vardır. Daha fazla bilgi için bkz. [sınıfları ve türleri tasarlama ve görüntüleme](https://go.microsoft.com/fwlink/?LinkId=142231).
 
  Bir UML sınıf diyagramı oluşturmak için **mimari** menüsünde **Yeni UML veya katman diyagramı**' nı seçin. UML sınıf diyagramlarının nasıl çizildiği hakkında daha fazla bilgi için bkz. [UML sınıf diyagramları: yönergeler](../modeling/uml-class-diagrams-guidelines.md). Modelleme diyagramları oluşturma ve çizme hakkında daha fazla bilgi için bkz. [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md).
 
@@ -62,12 +62,12 @@ UML sınıf diyagramı, uygulamanız tarafından hem dahili olarak hem de kullan
 |     1\.     |        Sınıflandırıcı        |                                                                                                             Bir sınıf, arabirim veya sabit listesinin genel adı. Bileşenler, kullanım örnekleri ve aktörler de sınıflandırıcılardır.                                                                                                             |
 |     2     | Daraltma/genişletme denetimi |                                                                                         Sınıflandırıcının ayrıntılarını göremiyorsanız sınıflandırıcının sol üst kısmındaki genişleticiye tıklayın. Ayrıca, her kesimde [+] düğmesine tıklamanız gerekebilir.                                                                                         |
 |     3     |      **Öznitelik**       |   Bir sınıflandırıcının her örneğine eklenen bir türü belirtilmiş değer.<br /><br /> Bir öznitelik eklemek için, **öznitelikler** bölümüne tıklayın ve ardından **ENTER**tuşuna basın. Özniteliğin imzasını yazın. Daha fazla bilgi için bkz. [UML sınıf diyagramlarındaki özniteliklerin özellikleri](../modeling/properties-of-attributes-on-uml-class-diagrams.md).   |
-|     4     |      **Çalışmasını**       | Sınıflandırıcının örnekleri tarafından gerçekleştirilebilecek bir yöntem veya işlev. Bir işlem eklemek için, **işlemler** bölümüne tıklayın ve ardından **ENTER**tuşuna basın. İşlemin imzasını yazın. Daha fazla bilgi için bkz. [UML sınıf diyagramlarındaki Işlemlerin özellikleri](../modeling/properties-of-operations-on-uml-class-diagrams.md). |
-|     5     |     **Kaldırma**      |                                                                  İki sınıflandırıcıın üyeleri arasındaki ilişki. Daha fazla bilgi için bkz. [UML sınıf diyagramlarındaki Ilişkilerin özellikleri](../modeling/properties-of-associations-on-uml-class-diagrams.md).                                                                   |
+|     4     |      **İşlem**       | Sınıflandırıcının örnekleri tarafından gerçekleştirilebilecek bir yöntem veya işlev. Bir işlem eklemek için, **işlemler** bölümüne tıklayın ve ardından **ENTER**tuşuna basın. İşlemin imzasını yazın. Daha fazla bilgi için bkz. [UML sınıf diyagramlarındaki Işlemlerin özellikleri](../modeling/properties-of-operations-on-uml-class-diagrams.md). |
+|     5     |     **İlişkilendirme**      |                                                                  İki sınıflandırıcıın üyeleri arasındaki ilişki. Daha fazla bilgi için bkz. [UML sınıf diyagramlarındaki Ilişkilerin özellikleri](../modeling/properties-of-associations-on-uml-class-diagrams.md).                                                                   |
 |    5A     |     **Toplama**      |                                                                                                    Paylaşılan bir sahiplik ilişkisini temsil eden bir ilişki. Sahip rolünün **toplama** özelliği **paylaşılan**olarak ayarlanmıştır.                                                                                                     |
 |    5B     |     **Birleştirme**      |                                                                                                      Bir tam bölüm ilişkisini temsil eden bir Ilişki. Sahip rolünün **toplama** özelliği **bileşik**olarak ayarlanır.                                                                                                      |
 |     6     |   **İlişkilendirme adı**   |                                                                                                                                         Bir ilişkilendirmenin adı. Ad boş bırakılabilir.                                                                                                                                          |
-|     7     |      **Rol adı**       |                       Bir rolün adı, yani bir ilişkinin sonu. , İlişkili nesneye başvurmak için kullanılabilir. Önceki çizimde, herhangi bir sıra `O` için, `O.ChosenMenu` ilişkili menü olur.<br /><br /> Her rolün, ilişkilendirmenin özellikleri altında listelenen kendi özellikleri vardır.                       |
+|     7     |      **Rol adı**       |                       Bir rolün adı, yani bir ilişkinin sonu. , İlişkili nesneye başvurmak için kullanılabilir. Önceki çizimde, herhangi bir sıra `O`için, `O.ChosenMenu` ilişkili menü olur.<br /><br /> Her rolün, ilişkilendirmenin özellikleri altında listelenen kendi özellikleri vardır.                       |
 |     8     |     **Ğunun**     |                                         Bu uçtaki nesnelerden kaç tane nesnenin diğer bir nesneye bağlanıp bağlanamayacağını gösterir. Örnekte, her bir siparişin tam olarak bir menü ile bağlantılı olması gerekir.<br /><br /> **\\** \*, yapılabilecek bağlantı sayısı üst sınırı olmadığı anlamına gelir.                                         |
 |     9     |    **İnin**    |  *Belirli* sınıflandırıcı, tanımının bir parçasını *genel* sınıflandırıcıdan devralır. Genel sınıflandırıcı, bağlayıcının ok ucunda. Öznitelikler, ilişkilendirmeler ve işlemler belirli sınıflandırıcının devralmıştır.<br /><br /> İki sınıflandırıcı arasında genelleştirme oluşturmak için **Devralma** aracını kullanın.   |
 
@@ -75,7 +75,7 @@ UML sınıf diyagramı, uygulamanız tarafından hem dahili olarak hem de kullan
 
 |Şekil|Öğe|Açıklama|
 |-----------|-------------|-----------------|
-|10|**Arayüz**|Bir nesnenin dışarıdan görünür davranışının bir bölümü tanımı. Daha fazla bilgi için bkz. [UML sınıf diyagramlarındaki türlerin özellikleri](../modeling/properties-of-types-on-uml-class-diagrams.md).|
+|10|**Arabirimi**|Bir nesnenin dışarıdan görünür davranışının bir bölümü tanımı. Daha fazla bilgi için bkz. [UML sınıf diyagramlarındaki türlerin özellikleri](../modeling/properties-of-types-on-uml-class-diagrams.md).|
 |11|**Listelenen**|Değişmez değerler kümesinden oluşan bir sınıflandırıcı.|
 |12|**Paket**|Sınıflandırıcılar, ilişkilendirmeler, Eylemler, yaşam çizgileri, bileşenler ve paketler grubu. Mantıksal sınıf diyagramı, üye Sınıflandırıcıların ve paketlerin paket içinde içerildiğini gösterir.<br /><br /> Adların, **package1** içindeki **Class1** 'In bu paketin dışındaki **Class1** 'den farklı olması için paketler içinde kapsamı vardır. Paketin adı, içeriğinin **tam ad** özelliklerinin bir parçası olarak görüntülenir.<br /><br /> Herhangi bir UML diyagramının **bağlı paket** özelliğini bir pakete başvuracak şekilde ayarlayabilirsiniz. Bu diyagramda oluşturduğunuz tüm öğeler, daha sonra paketin bir parçası olur. **UML Model Gezgini**'nde paketin altında görüntülenir.|
 |13|**İçeri Aktar**|Tek bir paketin diğerinin tüm tanımlarını içerdiğine işaret eden paketler arasındaki ilişki.|
@@ -89,4 +89,4 @@ UML sınıf diyagramı, uygulamanız tarafından hem dahili olarak hem de kullan
 |16|**Gerçekleştirme**|Aynı ilişkinin alternatif bir sunumu. Lolipop sembolünün etiketi, arabirimini tanımlar.<br /><br /> Bu sunuyu oluşturmak için var olan bir gerçekleştirme ilişkisi seçin. İlişkinin yakınında bir eylem etiketi görünür. Eylem etiketine tıklayın ve ardından **Lolipop olarak göster**' e tıklayın.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML modellerini ve diyagramlarını düzenleme UML](../modeling/edit-uml-models-and-diagrams.md) [sınıf diyagramları:](../modeling/uml-class-diagrams-guidelines.md) [](../modeling/properties-of-types-on-uml-class-diagrams.md) UML sınıf [diyagramları özelliklerindeki](../modeling/properties-of-operations-on-uml-class-diagrams.md) [nesnelerin UML sınıf](../modeling/properties-of-attributes-on-uml-class-diagrams.md) diyagramları özelliklerindeki yönergelerin özellikleri [ UML sınıf diyagramlarındaki ilişkilerin](../modeling/properties-of-associations-on-uml-class-diagrams.md)
+ [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML sınıf diyagramları:](../modeling/uml-class-diagrams-guidelines.md) UML sınıf diyagramları üzerindeki [nesnelerin](../modeling/properties-of-operations-on-uml-class-diagrams.md) [UML sınıf](../modeling/properties-of-attributes-on-uml-class-diagrams.md) diyagramları özelliklerindeki yönergeler [özellikleri UML](../modeling/properties-of-types-on-uml-class-diagrams.md) sınıf diyagramlarında [ilişkilerin](../modeling/properties-of-associations-on-uml-class-diagrams.md) UML sınıf diyagramları özellikleri

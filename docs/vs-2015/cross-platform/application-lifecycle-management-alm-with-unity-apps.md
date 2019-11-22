@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: conceptdev
 ms.author: crdun
 manager: jillfra
-ms.openlocfilehash: 65b87c0c03e51e5b14fae7c59a8ac7f9eb8ec0e7
-ms.sourcegitcommit: b56dc6fadc6c924beed36bb4c2ccc16cf6bcfa1c
+ms.openlocfilehash: 364f98fd991494ae83f6175289f34832e271159b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68740189"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300042"
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>Unity Uygulamaları ile Uygulama Yaşam Döngüsü Yönetimi (ALM)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ Modern platformlar için uygulama geliştirme, yalnızca koddan çok daha fazla 
  Aşağıdaki tablolar, Unity ile çalışırken Visual Studio ALM özelliklerinin nasıl uygulanacağını veya uygulanacağını tanımlar. Özelliklerin kendileri hakkındaki ayrıntılar için bağlantılı belgelere başvurun.  
   
 ## <a name="agile-tools"></a>Çevik Araçlar  
- Başvuru bağlantısı: **[İş](https://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)** (Team Explorer Everywhere dahil Visual Studio Team Services veya TFS kullanarak)  
+ Başvuru bağlantısı: **[iş](https://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)** (Team Explorer Everywhere dahil VISUAL STUDIO Team SERVICES veya TFS kullanarak)  
   
  Genel Açıklama: tüm planlama ve izleme özellikleri proje türü ve kodlama dillerinden bağımsızdır.  
   
@@ -39,7 +39,7 @@ Modern platformlar için uygulama geliştirme, yalnızca koddan çok daha fazla 
 |İlerlemeyi raporla ve görselleştirin|Evet||  
   
 ## <a name="modeling"></a>Modelleme  
- Başvuru bağlantısı: **[Mimari çözümleme ve modelleme](../modeling/analyze-and-model-your-architecture.md)**  
+ Başvuru bağlantısı:  **[mimari çözümleme ve modelleme](../modeling/analyze-and-model-your-architecture.md)**  
   
  Genel Açıklama: Bu tasarım özellikleri kodlama dilinden bağımsız olsa da, gibi C#.NET dilleri ile birlikte çalışarak, nesne hiyerarşileri ve sınıf ilişkileri ile geleneksel bir uygulama paradigması üzerinde çalışır. Unity içinde bir oyun tasarlamak, grafik nesnelerin, seslerin, gölgelendiricilerin, betiklerin vb. ilişkilerini tamamen farklı bir paradigma içerir. Bu nedenle, Visual Studio modelleme diyagramı araçları özellikle bir Unity projesinin tamamına uygun değildir. Bunlar, C# betiklerdeki ilişkileri yönetmek için kullanılabilir, ancak bu yalnızca tek bir parçasıdır.  
   
@@ -66,25 +66,25 @@ Modern platformlar için uygulama geliştirme, yalnızca koddan çok daha fazla 
   
  Unity ile sürüm denetimi için özel hususlar:  
   
-1. Unity, oyun varlıkları hakkındaki meta verileri, varsayılan olarak gizlenen tek ve donuk bir kitaplıkta izler. Dosyaları ve meta verileri eşitlenmiş halde tutmak için meta verilerin görünür olması ve daha yönetilebilir parçalara depolanması gerekir. Ayrıntılar için [Unity Ile dış sürüm denetim sistemleri](http://docs.unity3d.com/Manual/ExternalVersionControlSystemSupport.html) (Unity belgeleri) kullanma konusuna bakın.  
+1. Unity, oyun varlıkları hakkındaki meta verileri, varsayılan olarak gizlenen tek ve donuk bir kitaplıkta izler. Dosyaları ve meta verileri eşitlenmiş halde tutmak için meta verilerin görünür olması ve daha yönetilebilir parçalara depolanması gerekir. Ayrıntılar için [Unity Ile dış sürüm denetim sistemleri](https://docs.unity3d.com/Manual/ExternalVersionControlSystemSupport.html) (Unity belgeleri) kullanma konusuna bakın.  
   
-2. Bir Unity projesindeki tüm dosyalar ve klasörler, yukarıdaki bağlantıda da açıklandığı gibi, kaynak denetimi için uygun değildir. Varlıklar ve ProjectSettings klasörleri eklenmelidir, ancak kitaplık ve geçici klasörlerin olmaması gerekir. Kaynak denetimine gitmeyecek oluşturulan dosyaların ek bir listesi için, StackOverflow 'de [unity3d kaynak denetimi Için git kullanma](http://stackoverflow.com/questions/18225126/how-to-use-git-for-unity3d-source-control) konusuna bakın. Birçok geliştirici bu konuya bağımsız olarak da BDE oturum açtı.  
+2. Bir Unity projesindeki tüm dosyalar ve klasörler, yukarıdaki bağlantıda da açıklandığı gibi, kaynak denetimi için uygun değildir. Varlıklar ve ProjectSettings klasörleri eklenmelidir, ancak kitaplık ve geçici klasörlerin olmaması gerekir. Kaynak denetimine gitmeyecek oluşturulan dosyaların ek bir listesi için, StackOverflow 'de [unity3d kaynak denetimi Için git kullanma](https://stackoverflow.com/questions/18225126/how-to-use-git-for-unity3d-source-control) konusuna bakın. Birçok geliştirici bu konuya bağımsız olarak da BDE oturum açtı.  
   
-3. Unity projesindeki (dokular veya ses dosyaları gibi) ikili varlıklar, büyük miktarda depolama alanı alabilir. Git deposu gibi çeşitli kaynak denetim sistemleri, değişiklik yalnızca dosyanın küçük bir kısmını etkilese bile, yapılan her değişiklik için dosyanın benzersiz bir kopyasını saklar. Bu, git deposunun blok haline gelmesine neden olabilir. Unity geliştiricileri bu şekilde ele almak için genellikle depolarına yalnızca son varlıkları eklemeyi ve OneDrive, DropBox veya git-ek gibi varlıklarının çalışma geçmişini tutmanın farklı bir araçlarını kullanır. Bu yaklaşım, bu tür varlıkların genellikle kaynak kodu değişiklikleriyle birlikte sürüm oluşturulması gerekmediği için geçerlidir. Geliştiriciler ayrıca, genellikle proje düzenleyicisinin varlık serileştirme modunu, metni, sahne dosyalarını, kaynak denetiminde birleştirme yapılmasına izin veren ikili biçim yerine metin halinde depolamaya zorlamak üzere ayarlar. Ayrıntılar için bkz. [Düzenleyici ayarları](http://docs.unity3d.com/Manual/class-EditorManager.html) (Unity belgeleri).  
+3. Unity projesindeki (dokular veya ses dosyaları gibi) ikili varlıklar, büyük miktarda depolama alanı alabilir. Git deposu gibi çeşitli kaynak denetim sistemleri, değişiklik yalnızca dosyanın küçük bir kısmını etkilese bile, yapılan her değişiklik için dosyanın benzersiz bir kopyasını saklar. Bu, git deposunun blok haline gelmesine neden olabilir. Unity geliştiricileri bu şekilde ele almak için genellikle depolarına yalnızca son varlıkları eklemeyi ve OneDrive, DropBox veya git-ek gibi varlıklarının çalışma geçmişini tutmanın farklı bir araçlarını kullanır. Bu yaklaşım, bu tür varlıkların genellikle kaynak kodu değişiklikleriyle birlikte sürüm oluşturulması gerekmediği için geçerlidir. Geliştiriciler ayrıca, genellikle proje düzenleyicisinin varlık serileştirme modunu, metni, sahne dosyalarını, kaynak denetiminde birleştirme yapılmasına izin veren ikili biçim yerine metin halinde depolamaya zorlamak üzere ayarlar. Ayrıntılar için bkz. [Düzenleyici ayarları](https://docs.unity3d.com/Manual/class-EditorManager.html) (Unity belgeleri).  
   
-## <a name="build"></a>Yapı  
- Başvuru bağlantısı: **[Derlemeyi](/azure/devops/pipelines/index)**  
+## <a name="build"></a>Derleme  
+ Başvuru bağlantısı:  **[derleme](/azure/devops/pipelines/index)**  
   
 |Özellik|Unity ile desteklenir|Ek açıklamalar|  
 |-------------|--------------------------|-------------------------|  
-|Şirket içi TFS sunucusu|Üç|Unity projeleri, Visual Studio derleme sistemi aracılığıyla değil Unity ortamı aracılığıyla oluşturulur (Unity için Visual Studio Araçları içinde derleme betikleri derler ancak yürütülebilir bir işlem oluşturmaz). Unity [projelerini komut satırından](http://docs.unity3d.com/Manual/CommandLineArguments.html) (Unity belgeleri) derlemek mümkündür. bu nedenle, Unity 'nin kendisi bu bilgisayarda yüklü olması şartıyla uygun Unity komutlarını yürütmek IÇIN bir TFS sunucusunda MSBuild işlemini yapılandırmak mümkündür.<br /><br /> Unity Ayrıca, bir git veya SVN deposunu izleyen ve düzenli derlemeler çalıştıran [Unity bulut derlemesini](https://build.cloud.unity3d.com/landing/)de sunmaktadır. Mevcut olduğunda, Team Foundation Sürüm Denetimi veya Visual Studio Team Services birlikte çalışmaz.|  
+|Şirket içi TFS sunucusu|Üç|Unity projeleri, Visual Studio derleme sistemi aracılığıyla değil Unity ortamı aracılığıyla oluşturulur (Unity için Visual Studio Araçları içinde derleme betikleri derler ancak yürütülebilir bir işlem oluşturmaz). Unity [projelerini komut satırından](https://docs.unity3d.com/Manual/CommandLineArguments.html) (Unity belgeleri) derlemek mümkündür. bu nedenle, Unity 'nin kendisi bu bilgisayarda yüklü olması şartıyla uygun Unity komutlarını yürütmek IÇIN bir TFS sunucusunda MSBuild işlemini yapılandırmak mümkündür.<br /><br /> Unity Ayrıca, bir git veya SVN deposunu izleyen ve düzenli derlemeler çalıştıran [Unity bulut derlemesini](https://build.cloud.unity3d.com/landing/)de sunmaktadır. Mevcut olduğunda, Team Foundation Sürüm Denetimi veya Visual Studio Team Services birlikte çalışmaz.|  
 |Visual Studio Team Services bağlı şirket içi derleme sunucusu|Üç|Yukarıdaki koşulların aynısını göz önüne alarak, Visual Studio Team Services aracılığıyla tetiklenen derlemelerin şirket içi TFS bilgisayarı kullanması daha da olasıdır.  Yönergeler için bkz. [yapı sunucusu](https://msdn.microsoft.com/library/2d258a0a-f178-4e93-9da1-eba61151af3c) .|  
 |Visual Studio Team Services barındırılan denetleyici hizmeti|Hayır|Unity derlemeleri Şu anda desteklenmiyor.|  
 |Ön ve son betiklerle derleme tanımları|Evet|Bir derlemeyi çalıştırmak için Unity komut satırını kullanan özel bir derleme tanımı, ön ve derleme sonrası betikler için de yapılandırılabilir.|  
 |Geçitli iadeler dahil sürekli tümleştirme|Evet|TFVC için geçitli iadeler, yalnızca git, iadeler yerine bir çekme isteği modelinde çalışmaktadır.|  
   
 ## <a name="testing"></a>Sınama  
- Başvuru bağlantısı: **[Uygulamayı test etme](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)**  
+ Başvuru bağlantısı:  **[uygulamayı test etme](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)**  
   
 |Özellik|Unity ile desteklenir|Ek açıklamalar|  
 |-------------|--------------------------|-------------------------|  
@@ -96,18 +96,18 @@ Modern platformlar için uygulama geliştirme, yalnızca koddan çok daha fazla 
 |[Kodunuzu Test Etmek için UI Otomasyonunu Kullanma](../test/use-ui-automation-to-test-your-code.md)|Hayır|Kodlanmış UI testleri, uygulamanın kullanıcı arabirimindeki okunabilir denetimlere dayanır; Unity uygulamaları doğası halinde grafik olduğundan, içerik kodlanmış UI test araçları tarafından okunamaz.|  
   
 ## <a name="improve-code-quality"></a>Kod kalitesini geliştirme  
- Başvuru bağlantısı: **[Kod kalitesini geliştirme](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
+ Başvuru bağlantısı:  **[kod kalitesini geliştirme](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
   
 |Özellik|Unity ile desteklenir|Ek açıklamalar|  
 |-------------|--------------------------|-------------------------|  
 |[Yönetilen Kod Kalitesini Analiz Etme](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|Evet|, C# Visual Studio içinde betik kodunu çözümleyebilir.|  
 |[Kod kopyası algılamayı kullanarak yinelenen kodu bulma](https://msdn.microsoft.com/library/a97cd5a6-5ffa-4104-9627-8e59e513654d)|Evet|, C# Visual Studio içinde betik kodunu çözümleyebilir.|  
 |[Yönetilen Kodun Ölçüm Karmaşıklığı ve Bakımı](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|Evet|, C# Visual Studio içinde betik kodunu çözümleyebilir.|  
-|[Performans Gezgini](../profiling/performance-explorer.md)|Hayır|[Unity profil oluşturucuyu](http://docs.unity3d.com/Manual/Profiler.html) (Unity Web sitesi) kullanın.|  
-|[.NET Framework bellek sorunlarını analiz etme](../misc/analyze-dotnet-framework-memory-issues.md)|Hayır|Visual Studio Araçları, profil oluşturma için mono Framework 'te (Unity tarafından kullanılan) kancalar içermez. [Unity profil oluşturucuyu](http://docs.unity3d.com/Manual/Profiler.html) (Unity belgeleri) kullanın.|  
+|[Performans Gezgini](../profiling/performance-explorer.md)|Hayır|[Unity profil oluşturucuyu](https://docs.unity3d.com/Manual/Profiler.html) (Unity Web sitesi) kullanın.|  
+|[.NET Framework bellek sorunlarını analiz etme](../misc/analyze-dotnet-framework-memory-issues.md)|Hayır|Visual Studio Araçları, profil oluşturma için mono Framework 'te (Unity tarafından kullanılan) kancalar içermez. [Unity profil oluşturucuyu](https://docs.unity3d.com/Manual/Profiler.html) (Unity belgeleri) kullanın.|  
   
 ## <a name="release-management"></a>Yayın yönetimi  
- Başvuru bağlantısı: **[Release Management ile dağıtımları otomatikleştirme](https://msdn.microsoft.com/library/vs/alm/release/overview)**  
+ Başvuru bağlantısı:  **[Release Management Ile dağıtımları otomatikleştirin](https://msdn.microsoft.com/library/vs/alm/release/overview)**  
   
 |Özellik|Unity ile desteklenir|Ek açıklamalar|  
 |-------------|--------------------------|-------------------------|  
@@ -116,7 +116,7 @@ Modern platformlar için uygulama geliştirme, yalnızca koddan çok daha fazla 
 |App Store 'a yükle|Kısmi|Bazı uygulama mağazalarında bu işlemi otomatik hale getirebilen uzantılar vardır.  [Visual Studio Team Services Için uzantılara](https://marketplace.visualstudio.com/VSTS)bakın; Örneğin, [Google Play için uzantı](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play).|  
   
 ## <a name="monitor-with-hockeyapp"></a>HockeyApp ile izleme  
- Başvuru bağlantısı: **[HockeyApp ile izleme](https://www.hockeyapp.net/features/)**  
+ Başvuru bağlantısı:  **[HockeyApp ile izleme](https://www.hockeyapp.net/features/)**  
   
 |Özellik|Unity ile desteklenir|Ek açıklamalar|  
 |-------------|--------------------------|-------------------------|  

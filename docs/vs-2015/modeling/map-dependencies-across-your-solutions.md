@@ -29,12 +29,12 @@ caps.latest.revision: 245
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1352da002b16c736ce20a9fbaf7cdc26b258b718
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b25d23b7c65742ffddadbe178d7550dc1794414a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657622"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296324"
 ---
 # <a name="map-dependencies-across-your-solutions"></a>Çözümlerinizdeki bağımlılıkları eşleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,11 +45,11 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
  **Bazı videolar aşağıda verilmiştir**:
 
-- [Görselleştirme aracılığıyla kod bağımlılıklarınızı anlayın](http://go.microsoft.com/fwlink/?LinkID=252065)
+- [Görselleştirme aracılığıyla kod bağımlılıklarınızı anlayın](https://go.microsoft.com/fwlink/?LinkID=252065)
 
-- [Değişikliğin etkisini görselleştirin](http://go.microsoft.com/fwlink/?LinkID=252068)
+- [Değişikliğin etkisini görselleştirin](https://go.microsoft.com/fwlink/?LinkID=252068)
 
-- [Kod eşlemeleriyle karmaşık kodu anlama](http://go.microsoft.com/fwlink/?LinkID=259869)
+- [Kod eşlemeleriyle karmaşık kodu anlama](https://go.microsoft.com/fwlink/?LinkID=259869)
 
 ## <a name="GetStarted"></a>Kod eşlemeleriyle çalışmaya başlama
  **Kod eşlemelerini kullanmak için aşağıdakilerden birini yapmanız gerekir**:
@@ -105,7 +105,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 1. **Mimari** menüsünü açın ve **Yeni kod Haritası**' nı seçin.
 
-     \- veya-
+     \- veya -
 
 2. **Dosya** menüsünü açın ve **Yeni** ' yi seçip **Dosya**' yı seçin.
 
@@ -286,7 +286,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 ## <a name="SeeSourceHeader"></a>Bkz. C ve C++ kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıklar
  Projeler için C++ daha fazla kapsamlı haritalar oluşturmak istiyorsanız, bu projelerde tarama bilgileri derleyici seçeneğini ( **/fr**) ayarlayın. Bkz [./fr,/fr (oluştur. Sbr dosyası)](https://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896). Aksi durumda, bir ileti görüntülenir ve bu seçeneği ayarlamanızı ister. **Tamam**' ı seçerseniz, bu seçeneği yalnızca geçerli harita için ayarlar. İletiyi sonraki tüm haritalar için gizlemeyi seçebilirsiniz. Bu iletiyi gizlerseniz, yeniden görünmesini sağlayabilirsiniz. Anahtarı `0` veya silmek için aşağıdaki kayıt defteri anahtarını ayarlayın:
 
- **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider: oto Enablesbr**
+ **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0\NativeProvider: oto Enablesbr**
 
  Visual C++ projeleri içeren bir çözümü açtığınızda, IntelliSense veritabanını güncelleştirmek biraz zaman alabilir. Bu süre boyunca, IntelliSense veritabanı güncelleştirmeyi bitirene kadar üstbilgi (. h veya `#include`) dosyaları için kod haritaları oluşturmeyebilirsiniz. Visual Studio durum çubuğunda güncelleştirme ilerleme durumunu izleyebilirsiniz. Bazı IntelliSense ayarları devre dışı bırakıldığı için görünen sorunları veya iletileri çözümlemek için bkz. [C ve C++ Code Maps Ile ilgili sorun giderme](#Troubleshooting).
 
@@ -307,16 +307,16 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
   Bu sorunlar, C ve C++ Code için kod haritaları oluşturduğunuzda oluşabilir:
 
-|**Konuda**|**Olası neden**|**Çözünürlüğüne**|
+|**Konuda**|**Olası nedeni**|**Çözümleme**|
 |---------------|------------------------|--------------------|
 |Kod eşlemesi oluşturulamadı.|Çözümdeki hiçbir proje başarıyla oluşturulmadı.|Oluşan yapı hatalarını giderip eşlemeyi yeniden oluşturun.|
 |**mimari** menüsünden bir kod Haritası oluşturmaya çalıştığınızda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yanıt vermemeye başladı.|Program veritabanı (.pdb) dosyası bozulmuş olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Çözümü yeniden oluşturun ve tekrar deneyin.|
-|IntelliSense göz atma veritabanı için belirli ayarlar devre dışı bırakılır.|@No__t_0**seçenekleri** iletişim kutusunda belirli IntelliSense ayarları devre dışı bırakılabilir.|Bunları etkinleştirmek için ayarları etkinleştirin.<br /><br /> Bkz. [Seçenekler, metin düzenleyici, CC++/, gelişmiş](../ide/reference/options-text-editor-c-cpp-advanced.md).|
+|IntelliSense göz atma veritabanı için belirli ayarlar devre dışı bırakılır.|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**seçenekleri** iletişim kutusunda belirli IntelliSense ayarları devre dışı bırakılabilir.|Bunları etkinleştirmek için ayarları etkinleştirin.<br /><br /> Bkz. [Seçenekler, metin düzenleyici, CC++/, gelişmiş](../ide/reference/options-text-editor-c-cpp-advanced.md).|
 |**Bilinmeyen Yöntemler** bir yöntem düğümünde görünür.<br /><br /> Yöntemin adı çözümlenemediği için bu sorun oluşur.|İkili dosya temel konum değişikliği tablosuna sahip olmayabilir.|Bağlayıcının **/fixed: No** seçeneğini açın.<br /><br /> Bkz. [/Fixed (sabit temel adres)](https://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5).|
 ||Program veritabanı (.pdb) dosyası oluşturulmamış olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Bağlayıcının **/Debug** seçeneğini açın.<br /><br /> Bkz. [/Debug (hata ayıklama bilgisi oluştur)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103).|
 ||.pdb dosyasını beklenen konumda açamıyor veya bulamıyor.|.pdb dosyasının beklenen konumlarda var olduğundan emin olun.|
 ||Hata ayıklama bilgileri, .pdb dosyasından çıkarıldı.|Bağlayıcı içinde **/Pdbçıkarıldı** seçeneği kullanıldıysa, bunun yerine tüm. pdb dosyasını dahil edin.<br /><br /> Bkz. [/Pdbçıkarıldı (özel sembolleri Strip)](https://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55).|
-||Arayan bir işlev değildir ve ikili dosyada bir dönüştürücü ya da veri bölümünde bir işaretçidir.|Çağıran bir dönüştürücü olduğunda, dönüştürücü kullanmaktan kaçınmak için `_declspec(dllimport)` kullanmayı deneyin.<br /><br /> Bkz.<br /><br /> -   [genel kurallar ve sınırlamalar](https://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />[__declspec (dllimport) kullanarak Işlev çağrılarını Içeri aktarma](https://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3) -   <br />-   [dllexport, dllimport](https://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|
+||Arayan bir işlev değildir ve ikili dosyada bir dönüştürücü ya da veri bölümünde bir işaretçidir.|Çağıran bir dönüştürücü olduğunda, dönüştürücü kullanmaktan kaçınmak için `_declspec(dllimport)` kullanmayı deneyin.<br /><br /> Bkz.<br /><br /> -   [genel kurallar ve sınırlamalar](https://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />[__declspec (dllimport) kullanarak Işlev çağrılarını Içeri aktarmaya](https://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3) -   <br />-   [dllexport, dllimport](https://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|
 
 ## <a name="RenderMoreQuickly"></a>Kod eşlemelerinin daha hızlı işlemesini sağlama
  İlk kez bir eşleme oluşturduğunuzda, Visual Studio bulduğu tüm bağımlılıkların dizinini oluşturur. Özellikle büyük çözümler için bu işlem biraz zaman alabilir, ancak performansı daha sonra iyileştirir. Kodunuz değişirse, Visual Studio yalnızca güncelleştirilmiş kodu yeniden dizinler. Haritanın işlemeyi tamamlaması için geçen süreyi en aza indirmek için aşağıdakileri göz önünde bulundurun:
@@ -329,13 +329,13 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 - Kod Haritası araç çubuğundaki üst öğeleri **dahil et** düğmesine sahip otomatik ekleme özelliğini devre dışı bırakın.
 
-- İhtiyacınız olmayan düğümleri ve bağlantıları kaldırmak için doğrudan kod eşleme dosyasını düzenleyin. Haritanın değiştirilmesi temeldeki kodu etkilemez. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+- İhtiyacınız olmayan düğümleri ve bağlantıları kaldırmak için doğrudan kod eşleme dosyasını düzenleyin. Haritanın değiştirilmesi temeldeki kodu etkilemez. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
   ![Derleme ve ekleme üst öğeleri düğmelerini atla](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")
 
   Visual Studio, 1 GB bellekle çalışabilse de, Visual Studio kod dizinini oluştururken ve Haritayı oluştururken uzun gecikmeleri önlemek için bilgisayarınızın en az 2 GB belleğe sahip olmasını öneririz.
 
-  Bir proje öğesinin **Çıkış Dizinine Kopyala** özelliği **her zaman Kopyala**olarak ayarlandığında, haritalar oluşturmak veya Çözüm Gezgini haritaya öğe eklemek daha fazla zaman alabilir. Bu, artımlı yapılarla ve Visual Studio'nun projeyi her seferinde yeniden oluşturmasıyla ilgili sorunlara neden olabilir. Performansı artırmak için bu özelliği, **daha yeniyse** veya `PreserveNewest` kopyalamak üzere değiştirin. Bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md).
+  Bir proje öğesinin **Çıkış Dizinine Kopyala** özelliği **her zaman Kopyala**olarak ayarlandığında, haritalar oluşturmak veya Çözüm Gezgini haritaya öğe eklemek daha fazla zaman alabilir. Bu, artımlı yapılarla ve Visual Studio'nun projeyi her seferinde yeniden oluşturmasıyla ilgili sorunlara neden olabilir. Performansı artırmak için bu özelliği, **daha yeniyse** veya `PreserveNewest`kopyalamak üzere değiştirin. Bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md).
 
   Tamamlanan eşleme yalnızca başarıyla oluşturulmuş kod için bağımlılıkları gösterir. Belirli bileşenler için yapı hataları oluşursa, bu hatalar haritada görüntülenir. Harita üzerinde mimari kararlar vermeden önce bir bileşenin gerçekten oluşturup bu bağımlılıkları kullandığından emin olun.
 
@@ -346,7 +346,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
  veya
 
- Haritayı belirli projenin bir parçası olarak kaydetmek için harita araç çubuğunda, **paylaşma**, \<*codemapname* > **. dgml** **' i** seçin ve ardından Haritayı kaydetmek istediğiniz projeyi seçin.
+ Haritayı belirli projenin bir parçası olarak kaydetmek için harita araç çubuğunda, **paylaşma**, \<*codemapname*> **. dgml** **' i** seçin ve ardından Haritayı kaydetmek istediğiniz projeyi seçin.
 
  ![Haritayı başka bir projeye taşıma](../modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")
 
@@ -373,7 +373,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 2. Dosyayı kaydetmek istediğiniz yere gidin.
 
-3. Kod eşlemesini adlandırın. **Farklı kaydet türü** kutusunun **XPS dosyaları (\*. XPS)** olarak ayarlandığından emin olun. **Kaydet**' i seçin.
+3. Kod eşlemesini adlandırın. **Farklı kaydet türü** kutusunun **XPS dosyaları (\*. XPS)** olarak ayarlandığından emin olun. **Kaydet**’i seçin.
 
 ## <a name="what-else-can-i-do"></a>Başka ne yapabilirim?
 

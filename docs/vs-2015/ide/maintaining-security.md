@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 008199331778a1e7d780a6aac7591ca2285d683e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dfff199d49bcb801b85452b37c4282ff53d01fe4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651405"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74294250"
 ---
 # <a name="maintaining-security"></a>Güvenliğini Sağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ Güvenliğin bedelinin sürekli tetikte bulunmak olduğu söylenir. Uygulamanız
 
  Ayrıca, yalnızca kendi uygulamanız hakkında dikkatli olmanız yeterli olmadığı gibi, uygulamanızın çalıştığı platforma ve uygulamanızın bağımlı olduğu diğer ürünlere yönelik güvenlik tehditlerini ve açıklarını da takip etmeniz gerekir.
 
- [Güvenlik, gizlilik ve hesaplar](http://go.microsoft.com/fwlink/?LinkId=72881) Virüsler, parolalar, ebeveyn denetimleri, güvenlik duvarları ve sürücü şifreleme hakkında bilgiler de dahil olmak üzere güvenlik, gizlilik ve Kullanıcı hesaplarıyla ilgili yardım alın.
+ [Güvenlik, gizlilik ve hesaplar](https://go.microsoft.com/fwlink/?LinkId=72881) Virüsler, parolalar, ebeveyn denetimleri, güvenlik duvarları ve sürücü şifreleme hakkında bilgiler de dahil olmak üzere güvenlik, gizlilik ve Kullanıcı hesaplarıyla ilgili yardım alın.
 
  [Microsoft Güvenlik Bülteni araması](/security-updates/) Bu sayfa, daha önce yayınlanmış bültenleri bulmayı kolaylaştırır. BT uzmanları için tasarlanmış olan güvenlik bültenleri, güvenlik güncelleştirmeleri ile ilgili ayrıntılı bilgi sağlar.
 

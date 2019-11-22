@@ -11,12 +11,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e9d1464481b33bc5fbf5e73bc09a6da4eb082c7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5979363f16f2e9d78a2f50ffbb6511d03146caaa
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662344"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297855"
 ---
 # <a name="options-text-editor-cc-experimental"></a>Seçenekler, Metin Düzenleyici, C/C++, Deneysel
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Bu seçenekleri değiştirerek, C veya C++' de programlarken IntelliSense ve gö
  Bu özellikler, Visual Studio 2015 güncelleştirme 1 RC yüklemesinde bulunabilir.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="browsingnavigation"></a>Göz atma/gezinme
  **Yeni veritabanı altyapısını etkinleştir** Bu, **Tanıma Git** ve **tüm başvuruları bul**gibi işlemler için veritabanı popülasyonu otomatik olarak hızlandırmalı ve tüm veritabanı işlemlerini daha hızlı (doğrulukta hiçbir kayıp olmadan) hale getirir. (Değişiklikleri uygulamak için çözümünüzü kapatıp yeniden açmanız yeterlidir; Visual Studio 'Yu yeniden başlatmanız gerekmez.)
@@ -46,7 +46,7 @@ Bu seçenekleri değiştirerek, C veya C++' de programlarken IntelliSense ve gö
 
  **Önceliği genişletmeyi etkinleştir** Etkinleştirilirse, metin düzenleyicisine ' (' yazarak seçili metni parantezlerle çevrelemeyi seçebilirsiniz.
 
- Visual Studio galerisindeki ek metin Düzenleyicisi özellikleri için [buradaki](http://go.microsoft.com/fwlink/?LinkId=692016)listeye bakın. Bir örnek, aşağıdakileri destekleyen [ C++ hızlı düzeltmelerde](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)verilmiştir:
+ Visual Studio galerisindeki ek metin Düzenleyicisi özellikleri için [buradaki](https://go.microsoft.com/fwlink/?LinkId=692016)listeye bakın. Bir örnek, aşağıdakileri destekleyen [ C++ hızlı düzeltmelerde](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)verilmiştir:
 
 - **Eksik #include Ekle** -kodunuzda bilinmeyen semboller için ilgili #include önerilir
 
@@ -59,4 +59,4 @@ Bu seçenekleri değiştirerek, C veya C++' de programlarken IntelliSense ve gö
   Ampul almak için bir dalgalı çizgi üzerine geldiğinizde ya da varsayılan klavye kısayolunu CTRL + nokta (CTRL +.) kullanabilirsiniz. Klavye kısayolu için, giriş işaretinin belirli bir hata veya belirtece yerleştirilme gereksinimi olmadığına unutmayın; yalnızca bu satırdaki herhangi bir şeyin önerilerini çağırmak için hata ile aynı satırda olabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Dile özgü düzenleyici seçeneklerini ayarlama](../../ide/reference/setting-language-specific-editor-options.md) [içinde C++ yeniden düzenleme (VC blogu)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
+ [Dile özgü düzenleyici seçeneklerini ayarlama](../../ide/reference/setting-language-specific-editor-options.md) [içinde C++ yeniden düzenleme (VC blogu)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)

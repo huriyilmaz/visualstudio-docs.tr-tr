@@ -9,12 +9,12 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f96909d3051e18fe3992e68b44b2948d1e23ebd6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f2d9b958dacfb35877abc9ad1e83a349e43a7af0
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670129"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296867"
 ---
 # <a name="walkthrough-building-an-application"></a>İzlenecek yol: Uygulama Oluşturma
 
@@ -24,7 +24,7 @@ Bu yönergeyi tamamlayarak, Visual Studio ile uygulama oluştururken yapılandı
 
 Bu konu aşağıdaki bölümleri içermektedir:
 
-[Örnek uygulamayı yükler](../ide/walkthrough-building-an-application.md#BKMK_installapp)
+[Örnek uygulamayı yükler](../ide/walkthrough-building-an-application.md)
 
 [Özel derleme yapılandırması oluşturma](../ide/walkthrough-building-an-application.md#BKMK_CreateBuildConfig)
 
@@ -34,11 +34,7 @@ Bu konu aşağıdaki bölümleri içermektedir:
 
 [Çıkış Penceresi ek derleme ayrıntılarını görüntüleme](../ide/walkthrough-building-an-application.md#BKMK_outputdetails)
 
-[Yayın derlemesi oluşturma](../ide/walkthrough-building-an-application.md#BKMK_releasebuild)
-
-## <a name="BKMK_installapp"></a>Örnek uygulamayı yükler
-
-**Uzantılar ve güncelleştirmeler** iletişim kutusunu, Microsoft Web sitesindeki örnekler galerisinden [WPF uygulamalarını oluşturmaya giriş](http://code.msdn.microsoft.com/Introduction-to-Building-b8d16419?SRC=VSIDE) ' i bulmak ve yüklemek için kullanacaksınız. Örnekler Galerisi, uygulamalarınızı planlarken ve geliştirirken, indirebileceğiniz ve gözden geçirebileceğiniz çeşitli örnek projeler ve kodlar sağlar.
+[Yayın derlemesi oluşturma](../ide/walkthrough-building-an-application.md)
 
 #### <a name="to-install-the-sample-application"></a>Örnek uygulamayı yüklemek için
 
@@ -68,13 +64,13 @@ Bu konu aşağıdaki bölümleri içermektedir:
 
      ![Yeni proje iletişim kutusu, yüklü örnekler](../ide/media/buildwalk-newprojectdlgintrotowpfsample.png "BuildWalk_NewProjectdlgIntrotoWPFsample")
 
-     VEYA
+     OR
 
-     @No__t_0 Visual Basic için çözümü adlandırın.
+     `IntroWPFvb` Visual Basic için çözümü adlandırın.
 
      ![Yeni proje iletişim kutusu, Visual Basic örneği](../ide/media/buildwalk-newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")
 
-4. **Tamam** düğmesini seçin.
+4. Seçin **Tamam** düğmesi.
 
 ## <a name="BKMK_CreateBuildConfig"></a>Özel derleme yapılandırması oluşturma
 
@@ -90,7 +86,7 @@ Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapıla
 
 2. **Etkin çözüm yapılandırması** listesinde **Yeni**' yi seçin.
 
-3. **Yeni çözüm yapılandırması** iletişim kutusunda yeni yapılandırma `Test` adlandırın, mevcut hata ayıklama yapılandırmasından ayarları kopyalayın ve **Tamam** düğmesini seçin.
+3. **Yeni çözüm yapılandırması** iletişim kutusunda yeni yapılandırma `Test`adlandırın, mevcut hata ayıklama yapılandırmasından ayarları kopyalayın ve **Tamam** düğmesini seçin.
 
     ![Yeni çözüm yapılandırması Iletişim kutusu](../ide/media/buildwalk-newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")
 
@@ -100,7 +96,7 @@ Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapıla
 
     ![Yeni çözüm platformu Iletişim kutusu](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")
 
-6. **Tamam** düğmesini seçin.
+6. Seçin **Tamam** düğmesi.
 
    Etkin çözüm yapılandırması, etkin çözüm platformunun x64 olarak ayarlandığı test olacak şekilde değiştirilmiştir.
 
@@ -114,7 +110,7 @@ Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapıla
 
 Ardından, özel yapı yapılandırmasıyla çözümü oluşturacaksınız.
 
-#### <a name="to-build-the-solution"></a>Çözümü oluşturmak için
+#### <a name="to-build-the-solution"></a>Çözümü derlemek için
 
 - Menü çubuğunda **Oluştur**, **çözüm oluştur**' u seçin.
 
@@ -140,7 +136,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
      **Proje Tasarımcısı** açılır.
 
-3. **Yapı** sayfasını seçin ve ardından **uyarıları bastır** kutusunda `1762` uyarı numarasını belirtin.
+3. **Yapı** sayfasını seçin ve ardından **uyarıları bastır** kutusunda `1762`uyarı numarasını belirtin.
 
      ![Derleme sayfası, proje Tasarımcısı](../ide/media/buildwalk-csharpsuppresswarnings.png "BuildWalk_CsharpSuppressWarnings")
 
@@ -206,7 +202,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
    Daha fazla bilgi için bkz. [nasıl yapılır: yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-## <a name="BKMK_releasebuild"></a>Yayın derlemesi oluşturma
+## <a name="create-a-release-build"></a>Yayın derlemesi oluşturma
 
 Örnek uygulamanın, gönderim için en iyi duruma getirilmiş bir sürümünü oluşturabilirsiniz. Yayın derlemesi için, yürütülebilir dosyanın derleme dışına çıkmadan önce bir ağ paylaşımında kopyalanacağını belirtirsiniz.
 
@@ -226,7 +222,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 5. **Yapı çıkış yolu** kutusunda bir ağ yolu belirtin.
 
-     Örneğin, \ myserver\builds\\ belirtebilirsiniz.
+     Örneğin, \ myserver\builds\\belirtebilirsiniz.
 
     > [!IMPORTANT]
     > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
@@ -235,13 +231,13 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
      ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-#### <a name="to-specify-a-release-build-for-visual-c"></a>Visual C \# için bir yayın derlemesi belirtmek için
+#### <a name="to-specify-a-release-build-for-visual-c"></a>Visual C\# için bir yayın derlemesi belirtmek için
 
 1. **Proje tasarımcısını**açın.
 
     ![Görünüm menüsü, özellik sayfaları komutu](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")
 
-2. **Yapı** sayfasını seçin.
+2. Seçin **derleme** sayfası.
 
 3. **Yapılandırma** listesinde **yayın**' ı seçin.
 
@@ -249,7 +245,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 5. **Çıkış yolu** kutusunda bir ağ yolu belirtin.
 
-    Örneğin, \ myserver\builds\\ belirtebilirsiniz.
+    Örneğin, \ myserver\builds\\belirtebilirsiniz.
 
    > [!IMPORTANT]
    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
@@ -258,7 +254,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
     ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-   Yürütülebilir dosya, belirttiğiniz ağ yoluna kopyalanır. Yolu, \myserver\derlemeler \\*filename*. exe \\.
+   Yürütülebilir dosya, belirttiğiniz ağ yoluna kopyalanır. Yolu, \myserver\derlemeler\\*filename*. exe \\.
 
    Tebrikler: Bu yönergeyi başarıyla tamamladınız.
 

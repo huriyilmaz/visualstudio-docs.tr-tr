@@ -11,12 +11,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4c8365f045618b92b4b34935bf5024c2ff781650
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67eb1a6ce55292415da4a5c4e363941a4285d8b7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669749"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296011"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>Diyagramlar üzerinde model görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,9 +39,9 @@ Bu konuda:
 ## <a name="Display"></a>Diyagramda bir öğeyi göstermek için
  Kullanım örneği veya eylem gibi bir öğe oluşturduğunuzda, Kullanıcı onu UML Model Gezgini 'nde görebilir, ancak her zaman otomatik olarak diyagramda görünmez. Bazı durumlarda, görüntülenecek kodu yazmanız gerekir. Aşağıdaki tabloda alternatifler özetlenmektedir.
 
-|Öğe türü|Örneğin|Bunu göstermek için, kodunuzun|
+|Öğe türü|Örneğin:|Bunu göstermek için, kodunuzun|
 |---------------------|-----------------|-------------------------------------|
-|Sınıflandırıcı|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|Belirtilen diyagramlarda ilişkili şekiller oluştur. Her sınıflandırıcı için istediğiniz sayıda şekil oluşturabilirsiniz.<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> Diyagramın en üst düzeyindeki bir şekil için `parentShape` `null` olarak ayarlayın.<br /><br /> Bir şekli diğerinin içinde göstermek için:<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);` **Note:** bir **ılınkedundo** işlemi içinde Display yaparsanız, yöntem bazen hiçbir `IShape` döndürmez. Ancak şekil doğru şekilde oluşturulur ve `IElement.Shapes().` kullanılarak erişilebilir|
+|Sınıflandırıcı|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|Belirtilen diyagramlarda ilişkili şekiller oluştur. Her sınıflandırıcı için istediğiniz sayıda şekil oluşturabilirsiniz.<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> Diyagramın en üst düzeyindeki bir şekil için `parentShape` `null` olarak ayarlayın.<br /><br /> Bir şekli diğerinin içinde göstermek için:<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);` **Note:** bir **ılınkedundo** işlemi içinde Display yaparsanız, yöntem bazen hiçbir `IShape`döndürmez. Ancak şekil doğru şekilde oluşturulur ve `IElement.Shapes().` kullanılarak erişilebilir|
 |Sınıflandırıcı alt öğesi|Öznitelik, Işlem,<br /><br /> Bölüm, bağlantı noktası|Otomatik-kod gerekmez.<br /><br /> Üst öğenin bir parçası olarak görüntülenir.|
 |Davranış|Etkileşim (sıra),<br /><br /> Etkinlik|Davranışı uygun bir diyagrama bağlayın.<br /><br /> Her bir davranış, tek seferde en çok bir diyagram ile bağlanabilir.<br /><br /> Örneğin:<br /><br /> `sequenceDiagram.Bind(interaction);`<br /><br /> `activityDiagram.Bind(activity);`|
 |Davranışın alt öğesi|Yaşam çizgileri, iletiler, Eylemler, nesne düğümleri|Otomatik-kod gerekmez.<br /><br /> Üst öğe bir diyagrama bağlıysa görüntülenir.|
@@ -54,7 +54,7 @@ Bu konuda:
 
  `IShape<` *ElementType* `>`
 
- Burada *ElementType* , `IClass` veya `IUseCase` gibi model öğesinin bir türüdür.
+ Burada *ElementType* , `IClass` veya `IUseCase`gibi model öğesinin bir türüdür.
 
 |||
 |-|-|
@@ -62,10 +62,10 @@ Bu konuda:
 |`anElement.Shapes(aDiagram)`|Belirli bir diyagramda bu öğeyi temsil eden tüm `IShapes`.|
 |`anIShape.GetElement()`|Şeklin temsil ettiği `IElement`. Normalde bunu IElement 'in bir alt sınıfına atamalısınız.|
 |`anIShape.Diagram`|Şekli içeren `IDiagram`.|
-|`anIShape.ParentShape`|@No__t_0 içeren şekil. Örneğin, bir bağlantı noktası şekli bir bileşen şeklinin içinde yer alır.|
-|`anIShape.ChildShapes`|Bir `IShape` veya `IDiagram` içinde bulunan şekiller.|
-|`anIShape.GetChildShapes<IUseCase>()`|@No__t_2 gibi belirtilen türdeki öğeleri temsil eden bir `IShape` veya `IDiagram` içinde yer alan şekiller.|
-|`IShape iShape = ...;`<br /><br /> `IShape<IClass> classShape = iShape.ToIShape<IClass>();`<br /><br /> `IClass aClass = classShape.Element;`|Genel `IShape` türü kesin belirlenmiş `IShape<IElement>` atayın.|
+|`anIShape.ParentShape`|`anIShape`içeren şekil. Örneğin, bir bağlantı noktası şekli bir bileşen şeklinin içinde yer alır.|
+|`anIShape.ChildShapes`|Bir `IShape` veya `IDiagram`içinde bulunan şekiller.|
+|`anIShape.GetChildShapes<IUseCase>()`|`IUseCase`gibi belirtilen türdeki öğeleri temsil eden bir `IShape` veya `IDiagram` içinde yer alan şekiller.|
+|`IShape iShape = ...;`<br /><br /> `IShape<IClass> classShape = iShape.ToIShape<IClass>();`<br /><br /> `IClass aClass = classShape.Element;`|Genel `IShape` türü kesin belirlenmiş `IShape<IElement>`atayın.|
 |`IShape<IClassifier> classifierShape;`<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `classifierShape.ToIShape<IUseCase>();`|Parametreli bir şekil türünden diğerine bir şekil atayın.|
 
 ## <a name="Moving"></a>Şekilleri taşıma ve yeniden boyutlandırma
@@ -73,7 +73,7 @@ Bu konuda:
 |||
 |-|-|
 |`anIShape.Move(x, y, [width], [height])`|Bir şekli taşıyın veya yeniden boyutlandırın.|
-|`IDiagram.EnsureVisible( IEnumerable<IShape> shapes, bool zoomToFit = false)`|Pencereyi etkinleştirin ve tüm verilen şekillerin görünür olması için diyagramı kaydırın. Şekillerin hepsi diyagramda olmalıdır. @No__t_0 true ise, tüm şekillerin görünmesi için gerekirse diyagram ölçeklendirilir.|
+|`IDiagram.EnsureVisible( IEnumerable<IShape> shapes, bool zoomToFit = false)`|Pencereyi etkinleştirin ve tüm verilen şekillerin görünür olması için diyagramı kaydırın. Şekillerin hepsi diyagramda olmalıdır. `zoomToFit` true ise, tüm şekillerin görünmesi için gerekirse diyagram ölçeklendirilir.|
 
  Bir örnek için bkz. [Hizalama komutu tanımlama](#AlignCommand).
 
@@ -102,7 +102,7 @@ Bu konuda:
  `Context.CurrentDiagram as IClassDiagram;`
 
 > [!NOTE]
-> @No__t_0 bir örneği (ve `IClassDiagram` gibi alt türleri) yalnızca işlemekte olduğunuz komut içinde geçerlidir. Denetim kullanıcıya döndürülerken devam eden bir değişkende `IDiagram` bir nesne tutmanız önerilmez.
+> `IDiagram` bir örneği (ve `IClassDiagram`gibi alt türleri) yalnızca işlemekte olduğunuz komut içinde geçerlidir. Denetim kullanıcıya döndürülerken devam eden bir değişkende `IDiagram` bir nesne tutmanız önerilmez.
 
  Daha fazla bilgi için bkz. [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
@@ -114,9 +114,9 @@ Context.CurrentDiagram.ModelStore.Diagrams()
 ```
 
 ## <a name="to-access-the-diagrams-in-a-project"></a>Bir projedeki diyagramlara erişmek için
- @No__t_0 API 'SI, modelleme projeleri ve diyagramları açmak ve oluşturmak için kullanılabilir.
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API 'SI, modelleme projeleri ve diyagramları açmak ve oluşturmak için kullanılabilir.
 
- @No__t_0 'den `IDiagramContext` 'ye dönüştürme olduğunu fark edin.
+ `EnvDTE.ProjectItem` 'den `IDiagramContext`'ye dönüştürme olduğunu fark edin.
 
 ```
 
@@ -152,7 +152,7 @@ foreach (ProjectItem item in project.ProjectItems)
   { ... } } }
 ```
 
- Denetim [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] geri döndürbaşladıktan sonra `IDiagram` ve alt türleri örnekleri geçerli değildir.
+ Denetim [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]geri döndürbaşladıktan sonra `IDiagram` ve alt türleri örnekleri geçerli değildir.
 
  Ayrıca, model deposunu bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projesinden elde edebilirsiniz:
 
@@ -379,4 +379,4 @@ namespace AlignCommand
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML modellerini ve diyagramları GENIŞLETME](../modeling/extend-uml-models-and-diagrams.md) [UML modeline git](../modeling/navigate-the-uml-model.md) [örnek: diyagram üzerinde şekilleri hizalama menü komut](http://go.microsoft.com/fwlink/?LinkId=213809) [örneği: öğeler, şekiller ve Stereotipler oluşturma](http://go.microsoft.com/fwlink/?LinkId=213811)
+ [UML modellerini ve diyagramları GENIŞLETME](../modeling/extend-uml-models-and-diagrams.md) [UML modeline git](../modeling/navigate-the-uml-model.md) [örnek: diyagram üzerinde şekilleri hizalama menü komut](https://go.microsoft.com/fwlink/?LinkId=213809) [örneği: öğeler, şekiller ve Stereotipler oluşturma](https://go.microsoft.com/fwlink/?LinkId=213811)

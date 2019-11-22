@@ -17,12 +17,12 @@ caps.latest.revision: 56
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 804678985ae30d833b57fe7589f0903cf1edb291
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c170827825d772f4d97cd22f0b5754232e8d2257
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652272"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297288"
 ---
 # <a name="uml-class-diagrams-guidelines"></a>UML Sınıf Diyagramları: Yönergeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ Visual Studio 'da, veri türlerini ve bunların ilişkilerini ayrı olarak betim
  Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Bu konu UML sınıf diyagramları hakkındadır. Program kodunu görselleştirmek için oluşturabileceğiniz ve kullanabileceğiniz başka tür bir sınıf diyagramı vardır. Bkz. [sınıfları ve türleri tasarlama ve görüntüleme](http://go.microsoft.com/fwlink/?LinkId=142231).
+> Bu konu UML sınıf diyagramları hakkındadır. Program kodunu görselleştirmek için oluşturabileceğiniz ve kullanabileceğiniz başka tür bir sınıf diyagramı vardır. Bkz. [sınıfları ve türleri tasarlama ve görüntüleme](https://go.microsoft.com/fwlink/?LinkId=142231).
 
 ## <a name="Using"></a>UML sınıf diyagramlarını kullanma
  Bir UML sınıf diyagramını çeşitli amaçlarla kullanabilirsiniz:
@@ -102,7 +102,7 @@ Visual Studio 'da, veri türlerini ve bunların ilişkilerini ayrı olarak betim
 
 2. Türlere öznitelikler veya işlemler eklemek için, tür içindeki **öznitelikleri**, **işlemleri** veya **DEĞIŞMEZ** değer başlığını seçin ve ENTER tuşuna basın.
 
-     @No__t_0 gibi bir imza yazabilirsiniz. Bkz. [öznitelikler ve işlemler](#AttributesAndOperations).
+     `f(x:Boolean):Integer`gibi bir imza yazabilirsiniz. Bkz. [öznitelikler ve işlemler](#AttributesAndOperations).
 
      Çeşitli öğeleri hızlıca eklemek için her öğenin sonunda ENTER tuşuna iki kez basın. Listeyi yukarı veya aşağı taşımak için ok tuşlarını kullanabilirsiniz.
 
@@ -123,7 +123,7 @@ Visual Studio 'da, veri türlerini ve bunların ilişkilerini ayrı olarak betim
 
 - Saf arabirimler ve iç uygulamalar içeren somut sınıflar arasında ayrım yapmanız gereken bir bağlamda **arabirimler** (2) kullanın. Bu fark, diyagramın amacının bir yazılım uygulamasını açıklamak olduğunda yararlıdır. Bu, edilgen veri tanımladığınız zaman veya kullanıcı gereksinimlerini tanımlamak için kavramlar tanımladığınız yerde daha az yararlıdır.
 
-- @No__t_1 ve `Go` gibi sınırlı sayıda sabit değerli değeri olan bir türü göstermek için bir **sabit listesi** (3) kullanın.
+- `Stop` ve `Go`gibi sınırlı sayıda sabit değerli değeri olan bir türü göstermek için bir **sabit listesi** (3) kullanın.
 
   - Sabit listesine değişmez değerleri ekleyin. Her birine ayrı bir ad verin.
 
@@ -180,7 +180,7 @@ Visual Studio 'da, veri türlerini ve bunların ilişkilerini ayrı olarak betim
 
 - Modelinizde tanımlı bir tür.
 
-- Şablon türünün parametreli değeri, yazılı şablon > \<Parameter. Bkz. [şablon türleri](#Templates).
+- Şablon türünün parametreli bir değeri, yazılan şablon\<parametresi >. Bkz. [şablon türleri](#Templates).
 
   Henüz modelinizde tanımlamadığınız bir türün adını da yazabilirsiniz. Ad, UML Model Gezgini 'nde **belirtilmeyen türler** altında listelenecektir.
 
@@ -256,7 +256,7 @@ Visual Studio 'da, veri türlerini ve bunların ilişkilerini ayrı olarak betim
 visibility attribute-name : Type
 ```
 
- \- veya-
+ \- veya -
 
 ```
 visibility operation-name (parameter1 : Type1, ...) : Type
@@ -346,12 +346,12 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - **Toplama**. Bu, bağlayıcının bir ucunda elmas şeklinde görünür. Bunu, toplama rolündeki örneklerin diğerlerinin örneklerini içerdiğini veya onlara sahip olduğunu göstermek için kullanabilirsiniz.
 
-- **Gezinilebilir**. Yalnızca tek bir rol için true ise, gezinebilir yönde bir ok görünür. Bunu, yazılımda bağlantıların ve veritabanı ilişkilerinin gezinebilirliğini göstermek için kullanabilirsiniz.
+- {1&gt;Gezinebilir&lt;1}. Yalnızca tek bir rol için true ise, gezinebilir yönde bir ok görünür. Bunu, yazılımda bağlantıların ve veritabanı ilişkilerinin gezinebilirliğini göstermek için kullanabilirsiniz.
 
   Bu ve diğer özelliklerin tam ayrıntıları için bkz. [UML sınıf diyagramlarındaki Ilişkilerin özellikleri](../modeling/properties-of-associations-on-uml-class-diagrams.md).
 
 ### <a name="navigability"></a>Gezinebilirlik
- Bir ilişkilendirme çizdiğinizde, ilişkilendirmenin bir ucunda, ilişkilendirmenin o yönde gezilebilir olduğunu gösteren bir ok olur. Bu, sınıf diyagramınız yazılım sınıflarını ve ilişkilendirmeler işaretçileri veya başvuruları temsil ediyorsa yararlıdır. Ancak varlıkları ve ilişkileri ya da iş kavramlarını göstermek için bir sınıf diyagramı kullandığınızda, gezinebilirliği göstermek pek uygun olmayacaktır. Bu durumda, oklar olmadan ilişkilendirmeler çizmeyi tercih edebilirsiniz. Bu işlemi, ilişkilendirmenin her iki ucunda da **gezinebilir** özelliğini true olarak ayarlayarak yapabilirsiniz. Bunu kolaylaştırmak için, kod örneği [UML etki alanı modelleme](http://code.msdn.microsoft.com/UML-Domain-Modeling-6df6f7f4)'yi indirebilirsiniz.
+ Bir ilişkilendirme çizdiğinizde, ilişkilendirmenin bir ucunda, ilişkilendirmenin o yönde gezilebilir olduğunu gösteren bir ok olur. Bu, sınıf diyagramınız yazılım sınıflarını ve ilişkilendirmeler işaretçileri veya başvuruları temsil ediyorsa yararlıdır. Ancak varlıkları ve ilişkileri ya da iş kavramlarını göstermek için bir sınıf diyagramı kullandığınızda, gezinebilirliği göstermek pek uygun olmayacaktır. Bu durumda, oklar olmadan ilişkilendirmeler çizmeyi tercih edebilirsiniz. Bu işlemi, ilişkilendirmenin her iki ucunda da **gezinebilir** özelliğini true olarak ayarlayarak yapabilirsiniz.
 
 ### <a name="attributes-and-associations"></a>Öznitelikler ve İlişkilendirmeler
  Bir ilişkilendirme, bir özniteliği göstermenin resimsel bir yoludur. Örneğin, Menü türünde bir öznitelik ile Restoran sınıfı oluşturmak yerine, Restoran'dan Menü'ye bir ilişkilendirme çizebilirsiniz.
@@ -367,7 +367,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 - Özel bir tür ve genel bir tür arasındaki *Genelleştirme* ilişkisi
 
-   \- veya-
+   \- veya -
 
 - Bir sınıf ve uyguladığı bir arabirim arasındaki *gerçekleştirme* ilişkisi.
 
@@ -422,7 +422,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
     **Şablon parametresi koleksiyon Düzenleyicisi** iletişim kutusu görüntülenir.
 
-4. **Ekle**' yi seçin.
+4. Seçin **ekleme**.
 
 5. Şablon türü için Name özelliğini bir parametre adı olarak ayarlayın, örneğin, `Key`.
 
@@ -434,11 +434,11 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 9. Diğer sınıflar için yaptığınız gibi öznitelikleri ve işlemleri şablon türüne ekleyin.
 
-     Özniteliği ve işlemlerinin tanımında, türü **Class**, **Interface** veya **Enumeration** olan parametreleri kullanabilirsiniz. Örneğin, `Key` ve `Value` parametre sınıflarını kullanarak bu işlemi `Dictionary` tanımlayabilirsiniz:
+     Özniteliği ve işlemlerinin tanımında, türü **Class**, **Interface** veya **Enumeration** olan parametreleri kullanabilirsiniz. Örneğin, `Key` ve `Value`parametre sınıflarını kullanarak bu işlemi `Dictionary`tanımlayabilirsiniz:
 
      `Get(k : Key) : Value`
 
-     Çeşitliliğini bir çoğulluk içinde bir öğe olarak **tamsayı** olan bir parametre kullanabilirsiniz. Örneğin, bir özniteliğin en büyük tamsayı değeri `[0..max]` olarak bir özniteliğin çoğulluğu tanımlanması için kullanılabilir.
+     Çeşitliliğini bir çoğulluk içinde bir öğe olarak **tamsayı** olan bir parametre kullanabilirsiniz. Örneğin, bir özniteliğin en büyük tamsayı değeri `[0..max]`olarak bir özniteliğin çoğulluğu tanımlanması için kullanılabilir.
 
    Şablon türlerini oluşturduğunuz zaman, onları şablon bağlarını tanımlamak için kullanabilirsiniz:
 
@@ -456,7 +456,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
      Şablon türünün her parametresi için bir satır görünür.
 
-5. Her parametreyi uygun bir değere ayarlayın. Örneğin, `Key` parametresini `Name` adlı bir sınıfa ayarlayın.
+5. Her parametreyi uygun bir değere ayarlayın. Örneğin, `Key` parametresini `Name`adlı bir sınıfa ayarlayın.
 
 ## <a name="Packages"></a>Paketlerle
  Bir UML sınıf diyagramında paketleri görüntüleyebilirsiniz. Bir paket diğer model öğeleri için bir kapsayıcıdır. Bir paket içinde herhangi bir öğe oluşturabilirsiniz. Diyagramda, paketi taşıdığınız zaman paket içindeki öğeler de taşınacaktır.
@@ -473,4 +473,4 @@ visibility operation-name (parameter1 : Type1, ...) : Type
      Bu özellikleri ayarlama ve belirtilen şablonları özelleştirme hakkında daha fazla bilgi için bkz. [UML Sınıf Diyagramlarından Kod oluşturma](../modeling/generate-code-from-uml-class-diagrams.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML sınıf diyagramları: başvuru](../modeling/uml-class-diagrams-reference.md) [modeli kullanıcı gereksinimleri](../modeling/model-user-requirements.md) [UML Bileşen diyagramları: başvuru](../modeling/uml-component-diagrams-reference.md) [UML sıra diyagramları:](../modeling/uml-sequence-diagrams-reference.md) başvuru UML [kullanım örneği diyagramları](../modeling/uml-use-case-diagrams-reference.md) : [başvuru UML Bileşen diyagramları: başvuru](../modeling/uml-component-diagrams-reference.md)
+ [UML modellerini ve diyagramlarını Düzenle](../modeling/edit-uml-models-and-diagrams.md) [UML sınıf diyagramları: başvuru](../modeling/uml-class-diagrams-reference.md) [modeli kullanıcı gereksinimleri](../modeling/model-user-requirements.md) [UML Bileşen diyagramları: başvuru](../modeling/uml-component-diagrams-reference.md) [UML sıra diyagramları:](../modeling/uml-sequence-diagrams-reference.md) başvuru UML [kullanım örneği diyagramları](../modeling/uml-use-case-diagrams-reference.md) : başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru

@@ -9,19 +9,19 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8c261d903868df887d99c10182ed134c79c552b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 89ca4c02a1cbb1171619060b9478b5f2d3ccaa36
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671763"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295729"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>5\. Adım: Formunuza Denetimler Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu adımda, formunuza `PictureBox` denetimi ve `CheckBox` denetimi gibi denetimler eklersiniz. Ardından Formunuza düğmeler eklersiniz.
 
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 2](http://go.microsoft.com/fwlink/?LinkId=205211) veya [öğretici 1: video 2 ' de C# bir resim görüntüleyici oluşturma](http://go.microsoft.com/fwlink/?LinkId=205200). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 2](https://go.microsoft.com/fwlink/?LinkId=205211) veya [öğretici 1: video 2 ' de C# bir resim görüntüleyici oluşturma](https://go.microsoft.com/fwlink/?LinkId=205200). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
 
 ### <a name="to-add-controls-to-your-form"></a>Formunuza denetim eklemek için
 
@@ -49,7 +49,7 @@ Bu adımda, formunuza `PictureBox` denetimi ve `CheckBox` denetimi gibi denetiml
 
      ![Esnetme özelliği Ile TextBox denetimi](../ide/media/express-pictureviewercheckbox.png "Express_PictureViewerCheckbox") Esnetme özelliği ile TextBox denetimi
 
-8. Formda TableLayoutPanel öğesini seçin ve ardından araç kutusunda **kapsayıcılar** grubuna gidin (TableLayoutPanel denetiminizi aldığınız yerdir) ve FlowField 'daki son hücreye yeni bir denetim eklemek Için **FlowLayoutPanel** öğesine çift tıklayın (alt sağ). Ardından, FlowLayoutPanel 'i TableLayoutPanel 'e yerleştirin (FlowLayoutPanel 'in siyah üçgen görev listesinde **Ana kapsayıcıda yerleştir** ' i seçerek ya da FlowLayoutPanel 'in **Dock** özelliğini **Fill**olarak ayarlayarak).
+8. Formda TableLayoutPanel öğesini seçin ve ardından araç kutusundaki **kapsayıcılar** grubuna gidin (TableLayoutPanel denetiminizi aldığınız yerdir) ve yeni bir denetimi PictureBox 'daki son hücreye (sağ alt) eklemek Için **FlowLayoutPanel** öğesine çift tıklayın. Ardından, FlowLayoutPanel 'i TableLayoutPanel 'e yerleştirin (FlowLayoutPanel 'in siyah üçgen görev listesinde **Ana kapsayıcıda yerleştir** ' i seçerek ya da FlowLayoutPanel 'in **Dock** özelliğini **Fill**olarak ayarlayarak).
 
     > [!NOTE]
     > FlowLayoutPanel, düzenlidir satırlarındaki diğer denetimleri sırasıyla gösteren bir kapsayıcıdır. Bir FlowLayoutPanel 'i yeniden boyutlandırdığınızda, tüm denetimlerini tek bir satırda düzenlemek için yer varsa, bunu yapar. Aksi takdirde, bunları diğer satırlarda, biri diğerinin üstüne yerleştirir. Dört düğme tutmak için bir FlowLayoutPanel kullanacaksınız. Ekler eklendiğinde, bir tane üzerine bir tane düzenlensin, düğmeleri eklemeden önce FlowLayoutPanel 'in seçildiğinden emin olun. Daha önce her hücrenin yalnızca bir denetim tutabilmesine rağmen, TableLayoutPanel 'in sağ alt hücresinde dört düğme denetimi vardır. Bunun nedeni, diğer denetimleri tutan bir hücreye bir denetim koyabilmeniz. Bu tür bir denetime kapsayıcı denir ve FlowLayoutPanel bir kapsayıcıdır.

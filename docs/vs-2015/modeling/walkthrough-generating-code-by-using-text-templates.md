@@ -12,12 +12,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 29a455194e64ee30186941cb67b014170426cce0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2a86689fd41b7c0233db0df544082ef22c4931a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659261"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295502"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>İzlenecek Yol: Metin Şablonları Kullanarak Kod Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ Kod üretimi, kesin olarak yazılmış program kodu oluşturmanıza ve kaynak mo
  Bu örnek projede, bir şablon örnek bir XML dosyası okur ve her bir düğüm türüne karşılık gelen sınıflar oluşturur. El ile yazılmış kodda, XML dosyasında gezinmek için bu sınıfları kullanabilirsiniz. Uygulamanızı aynı düğüm türlerini kullanan başka herhangi bir dosya üzerinde de çalıştırabilirsiniz. Örnek XML dosyasının amacı, uygulamanızın ilgilenmesi için istediğiniz tüm düğüm türlerine örnekler sağlamaktır.
 
 > [!NOTE]
-> @No__t_1 ile birlikte gelen [XSD. exe](http://go.microsoft.com/fwlink/?LinkId=178765)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
+> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ile birlikte gelen [XSD. exe](https://go.microsoft.com/fwlink/?LinkId=178765)UYGULAMASı, XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
 
  Örnek dosya aşağıda verilmiştir:
 
@@ -103,7 +103,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 3. Örnek içeriğinizi dosyaya ekleyin.
 
-4. Bu izlenecek yol için `exampleXml.xml` dosyayı adlandırın. Dosyanın içeriğini önceki bölümde gösterilen XML olacak şekilde ayarlayın.
+4. Bu izlenecek yol için `exampleXml.xml`dosyayı adlandırın. Dosyanın içeriğini önceki bölümde gösterilen XML olacak şekilde ayarlayın.
 
    .
 
@@ -144,7 +144,7 @@ namespace MyProject
    > [!NOTE]
    > Önceden Işlenmiş bir metin şablonu değil, bir metin şablonu eklediğinizden emin olun.
 
-3. Dosyasında, şablon yönergesinde `hostspecific` özniteliğini `true` olarak değiştirin.
+3. Dosyasında, şablon yönergesinde `hostspecific` özniteliğini `true`olarak değiştirin.
 
     Bu değişiklik, şablon kodunun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hizmetlerine erişim sağlamasına olanak sağlar.
 
@@ -157,7 +157,7 @@ namespace MyProject
    <#@ output extension=".cs" #>
    ```
 
-   biçimindeki telefon numarasıdır.
+   .
 
    Bir. cs dosyasının şablon dosyasının yan kuruluşu olarak Çözüm Gezgini göründüğünü unutmayın. Şablon dosyasının adının yanındaki [+] simgesini tıklatarak görebilirsiniz. Bu dosya, Şablon dosyasından odağı her kaydedişinizde veya taşıdığınızda şablon dosyasından oluşturulur. Oluşturulan dosya, projenizin bir parçası olarak derlenir.
 
@@ -202,18 +202,18 @@ class Song {}
 
  Dosya yolunu, projeniz için doğru yol ile değiştirin.
 
- Kod bloğu sınırlayıcılarının `<#...#>` dikkat edin. Bu sınırlayıcılar, metni oluşturan program kodunun bir parçasını ayraç içine koyun. İfade blok sınırlayıcıları `<#=...#>` bir dizeye değerlendirilebilen bir ifadenin ayracı.
+ Kod bloğu sınırlayıcılarının `<#...#>`dikkat edin. Bu sınırlayıcılar, metni oluşturan program kodunun bir parçasını ayraç içine koyun. İfade blok sınırlayıcıları `<#=...#>` bir dizeye değerlendirilebilen bir ifadenin ayracı.
 
  Uygulamanız için kaynak kodu üreten bir şablon yazarken, iki ayrı program metni ile ilgilenolursunuz. Kod bloğu sınırlayıcılarının içindeki program, şablonu her kaydettiğinizde veya odağı başka bir pencereye taşıdığınızda çalışır. Oluşturduğu metin, sınırlayıcılar dışında görünen metin oluşturulan dosyaya kopyalanır ve uygulama kodunuzun bir parçası haline gelir.
 
- @No__t_0 yönergesi bir başvuru gibi davranır ve derlemeyi şablon kodu için kullanılabilir hale getirir. Şablon tarafından görülen derlemelerin listesi, uygulama projesindeki başvuruların listesinden ayrıdır.
+ `<#@assembly#>` yönergesi bir başvuru gibi davranır ve derlemeyi şablon kodu için kullanılabilir hale getirir. Şablon tarafından görülen derlemelerin listesi, uygulama projesindeki başvuruların listesinden ayrıdır.
 
- @No__t_0 yönergesi `using` bir ifade gibi davranır ve içeri aktarılan ad alanındaki sınıfların kısa adlarını kullanmanıza olanak sağlar.
+ `<#@import#>` yönergesi `using` bir ifade gibi davranır ve içeri aktarılan ad alanındaki sınıfların kısa adlarını kullanmanıza olanak sağlar.
 
  Ne yazık ki bu şablon kod üretse de, örnek XML dosyasındaki her düğüm için bir sınıf bildirimi oluşturur, böylece `<song>` düğümünün birkaç örneği varsa, sınıf şarkının çeşitli bildirimleri görünür.
 
 ### <a name="read-the-model-file-then-generate-the-code"></a>Model dosyasını okuyun, sonra kodu oluşturun
- Birçok metin şablonu, şablonun ilk bölümünün kaynak dosyayı okuduğunu ve ikinci bölüm şablonu oluşturduğu bir kalıbı izler. İçerdiği düğüm türlerini özetlemek için örnek dosyanın tümünü okudum ve sonra sınıf bildirimleri oluşturacaktır. @No__t_1 kullanabilmemiz için başka bir `<#@import#>` gerekir
+ Birçok metin şablonu, şablonun ilk bölümünün kaynak dosyayı okuduğunu ve ikinci bölüm şablonu oluşturduğu bir kalıbı izler. İçerdiği düğüm türlerini özetlemek için örnek dosyanın tümünü okudum ve sonra sınıf bildirimleri oluşturacaktır. `Dictionary<>:` kullanabilmemiz için başka bir `<#@import#>` gerekir
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -272,7 +272,7 @@ public partial class Song {}
  Alt düğümlerin, özniteliklerin ve iç metnin özellikleri gibi ayrıntılar aynı yaklaşım kullanılarak eklenebilir.
 
 ### <a name="accessing-the-visual-studio-api"></a>Visual Studio API 'sine erişme
- @No__t_1 yönergesinin `hostspecific` özniteliği ayarlandığında, şablonun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API 'sine erişimi elde etmesine izin verir. Şablon, Şablon kodunda mutlak bir dosya yolu kullanmaktan kaçınmak için bunu proje dosyalarının konumunu almak için kullanabilir.
+ `<#@template#>` yönergesinin `hostspecific` özniteliği ayarlandığında, şablonun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API 'sine erişimi elde etmesine izin verir. Şablon, Şablon kodunda mutlak bir dosya yolu kullanmaktan kaçınmak için bunu proje dosyalarının konumunu almak için kullanabilir.
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -418,7 +418,7 @@ namespace MyProject
   Bu kılavuzda, program kodu aslında modelin bir örneğinden oluşturulur ve uygulamanın işlem kullanacağı XML dosyalarının temsili bir örneğidir. Daha resmi bir yaklaşımda XML şeması, bir. xsd dosyası veya etki alanına özgü dil tanımı biçiminde şablon girişi olacaktır. Bu yaklaşım, şablonun bir ilişkinin çoğulluğu gibi özellikleri belirlemesine daha kolay hale getirir.
 
 ## <a name="troubleshooting-the-text-template"></a>Metin şablonunda sorun giderme
- **Hata listesi**şablon dönüştürme veya derleme hatalarıyla karşılaşdıysanız veya çıkış dosyası doğru şekilde oluşturulmediyse, metin şablonunda, [TextTransform ile dosya oluşturma bölümünde açıklanan tekniklerle ilgili sorunları giderebilirsiniz Yardımcı programı](../modeling/generating-files-with-the-texttransform-utility.md).
+ **Hata listesi**şablon dönüştürme veya derleme hatalarıyla karşılaşdıysanız veya çıkış dosyası doğru şekilde oluşturulmediyse, metin şablonunda, [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md)bölümünde açıklanan tekniklerle sorun giderebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  T4 metin [şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md) , [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md)

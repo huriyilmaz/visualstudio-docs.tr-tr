@@ -9,31 +9,29 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a5112ac6b0fc14d7a5bfc5066ae6fbabbc3c0bc3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b91e5f864bc15f1fbcab9400d0cd3a4a2e8224a9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654742"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299869"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Eğitmen 2: Zamanlı Matematik Testi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu öğreticide, bir sınavın belirli bir süre içinde dört rastgele aritmetik sorunu yanıtlaması gereken bir test oluşturacaksınız. Aşağıdakilerin nasıl yapıldığını öğreneceksiniz:
 
-- @No__t_0 sınıfını kullanarak rastgele sayılar üretin.
+- `Random` sınıfını kullanarak rastgele sayılar üretin.
 
 - Bir **Zamanlayıcı** denetimi kullanarak olayları belirli bir zamanda gerçekleşecek şekilde tetikleyin.
 
-- @No__t_0 deyimlerini kullanarak program akışını denetleme.
+- `if else` deyimlerini kullanarak program akışını denetleme.
 
 - Kodda temel aritmetik işlemler gerçekleştirin.
 
   Bitirdiğinizde, test, farklı sayılar dışında aşağıdaki resme benzer şekilde görünür.
 
   ![Dört problemle matematik sınavından](../ide/media/express-finishedquiz.png "Express_FinishedQuiz") Bu öğreticide oluşturduğunuz test
-
-  Sınavın tamamlanmış bir sürümünü indirmek için bkz. [tüm matematik testi öğreticisi örneği](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 > [!NOTE]
 > Bu öğreticide hem görsel C# hem de Visual Basic ele alınmaktadır, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanırsınız.

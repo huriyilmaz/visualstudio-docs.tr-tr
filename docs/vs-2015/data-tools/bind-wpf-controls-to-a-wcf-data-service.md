@@ -18,17 +18,17 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 421bd778b86aa223e1e7b3a96aa3943a86588174
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a3d1aab68e3dc9f33e0b3e9f9a5665d59f6f2ddc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662522"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299404"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Bir WCF veri hizmetine WPF denetimleri bağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması oluşturacaksınız. Denetimler, bir [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] kapsüllenmiş müşteri kayıtlarına bağlanır. Ayrıca, müşterilerin kayıtları görüntülemek ve güncelleştirmek için kullanabileceği düğmeler de ekleyeceksiniz.
+Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması oluşturacaksınız. Denetimler, bir [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]kapsüllenmiş müşteri kayıtlarına bağlanır. Ayrıca, müşterilerin kayıtları görüntülemek ve güncelleştirmek için kullanabileceği düğmeler de ekleyeceksiniz.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
@@ -44,18 +44,18 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](http://go.microsoft.com/fwlink/?linkid=87843)indirebilirsiniz.
+- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://go.microsoft.com/fwlink/?linkid=87843)indirebilirsiniz.
 
   Aşağıdaki kavramların önceki bilgileri de yararlı olmakla kalmaz, izlenecek yolu tamamlamak için gerekli değildir:
 
 - WCF Veri Hizmetleri. Daha fazla bilgi için bkz. [genel bakış](https://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb).
 
-- @No__t_0 veri modelleri.
+- [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)]veri modelleri.
 
 - Varlık veri modelleri ve ADO.NET Entity Framework. Daha fazla bilgi için bkz. [Entity Framework genel bakış](https://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0).
 
@@ -64,11 +64,11 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 - WPF veri bağlama. Daha fazla bilgi için bkz. [veri bağlamaya genel bakış](https://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211).
 
 ## <a name="create-the-service-project"></a>Hizmet projesi oluşturma
- @No__t_0 için bir proje oluşturarak bu yönergeyi başlatın.
+ [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]için bir proje oluşturarak bu yönergeyi başlatın.
 
 #### <a name="to-create-the-service-project"></a>Hizmet projesini oluşturmak için
 
-1. Visual Studio 'Yu başlatın.
+1. Visual Studio’yu çalıştırın.
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
@@ -83,7 +83,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 6. **Çözüm Gezgini**, **default. aspx** öğesine sağ tıklayın ve **Sil**' i seçin. Bu dosya bu kılavuzda gerekli değildir.
 
 ## <a name="create-an-entity-data-model-for-the-service"></a>Hizmet için Varlık Veri Modeli oluşturma
- @No__t_0 kullanarak verileri bir uygulamaya göstermek için, hizmet için bir veri modeli tanımlamanız gerekir. @No__t_0 iki tür veri modelini destekler: varlık veri modelleri ve <xref:System.Linq.IQueryable%601> arabirimini uygulayan ortak dil çalışma zamanı (CLR) nesneleri kullanılarak tanımlanan özel veri modelleri. Bu izlenecek yolda, veri modeli için bir Varlık Veri Modeli oluşturursunuz.
+ [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]kullanarak verileri bir uygulamaya göstermek için, hizmet için bir veri modeli tanımlamanız gerekir. [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] iki tür veri modelini destekler: varlık veri modelleri ve <xref:System.Linq.IQueryable%601> arabirimini uygulayan ortak dil çalışma zamanı (CLR) nesneleri kullanılarak tanımlanan özel veri modelleri. Bu izlenecek yolda, veri modeli için bir Varlık Veri Modeli oluşturursunuz.
 
 #### <a name="to-create-an-entity-data-model"></a>Varlık Veri Modeli oluşturmak için
 
@@ -91,7 +91,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 2. Yüklü şablonlar listesinde, **veriler**' e tıklayın ve ardından **ADO.net varlık veri modeli** Proje öğesini seçin.
 
-3. Adı `AdventureWorksModel.edmx` olarak değiştirin ve **Ekle**' ye tıklayın.
+3. Adı `AdventureWorksModel.edmx`olarak değiştirin ve **Ekle**' ye tıklayın.
 
      **Varlık veri modeli** Sihirbazı açılır.
 
@@ -118,7 +118,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 2. Yüklü şablonlar listesinde, **Web**' e tıklayın ve ardından **WCF veri hizmeti** Proje öğesini seçin.
 
-3. **Ad** kutusuna `AdventureWorksService.svc` yazın ve **Ekle**' ye tıklayın.
+3. **Ad** kutusuna `AdventureWorksService.svc`yazın ve **Ekle**' ye tıklayın.
 
      Visual Studio `AdventureWorksService.svc` projeye ekler.
 
@@ -127,7 +127,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 #### <a name="to-configure-the-service"></a>Hizmeti yapılandırmak için
 
-1. @No__t_0 kod dosyasında, `AdventureWorksService` sınıfı bildirimini aşağıdaki kodla değiştirin.
+1. `AdventureWorks.svc` kod dosyasında, `AdventureWorksService` sınıfı bildirimini aşağıdaki kodla değiştirin.
 
      [!code-csharp[Data_WPFWCF#1](../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworksservice.svc.cs#1)]
      [!code-vb[Data_WPFWCF#1](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworksservice.svc.vb#1)]
@@ -137,7 +137,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 2. Projeyi derleyin ve hata olmadan derleme olduğunu doğrulayın.
 
 ## <a name="create-the-wpf-client-application"></a>WPF istemci uygulaması oluşturma
- @No__t_0 verileri göstermek için, hizmeti temel alan bir veri kaynağıyla yeni bir WPF uygulaması oluşturun. Bu izlenecek yolda daha sonra uygulamaya veri bağlantılı denetimler ekleyeceksiniz.
+ [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]verileri göstermek için, hizmeti temel alan bir veri kaynağıyla yeni bir WPF uygulaması oluşturun. Bu izlenecek yolda daha sonra uygulamaya veri bağlantılı denetimler ekleyeceksiniz.
 
 #### <a name="to-create-the-wpf-client-application"></a>WPF istemci uygulaması oluşturmak için
 
@@ -147,11 +147,11 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 3. **WPF uygulaması** proje şablonunu seçin.
 
-4. **Ad** kutusuna `AdventureWorksSalesEditor` yazın ve **Tamam**' ı tıklatın.
+4. **Ad** kutusuna `AdventureWorksSalesEditor`yazın ve **Tamam**' ı tıklatın.
 
      Visual Studio `AdventureWorksSalesEditor` projesini çözüme ekler.
 
-5. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
+5. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
 
      **Veri kaynakları** penceresi açılır.
 
@@ -161,11 +161,11 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 7. Sihirbazın **veri kaynağı türünü seçin** sayfasında **hizmet**' i seçin ve ardından **İleri**' ye tıklayın.
 
-8. **Hizmet başvurusu Ekle** Iletişim kutusunda **bul**' a tıklayın.
+8. {1&gt;Hizmet Başvurusu Ekle&lt;1} iletişim kutusunda {2&gt;Keşfedin&lt;2}'e tıklayın.
 
      Visual Studio kullanılabilir hizmetler için geçerli çözümü arar ve **Hizmetler** kutusundaki kullanılabilir hizmetler listesine `AdventureWorksService.svc` ekler.
 
-9. **Ad alanı** kutusuna `AdventureWorksService` yazın.
+9. **Ad alanı** kutusuna `AdventureWorksService`yazın.
 
 10. **Hizmetler** kutusunda **AdventureWorksService. svc**' ye tıklayın ve ardından **Tamam**' a tıklayın.
 
@@ -199,7 +199,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 3. Projeyi oluşturun.
 
 ## <a name="create-the-data-bound-controls"></a>Veri bağlantılı denetimleri oluşturma
- @No__t_0 düğümünü **veri kaynakları** penceresinden tasarımcıya sürükleyerek müşteri kayıtlarını görüntüleyen denetimler oluşturun.
+ `SalesOrderHeaders` düğümünü **veri kaynakları** penceresinden tasarımcıya sürükleyerek müşteri kayıtlarını görüntüleyen denetimler oluşturun.
 
 #### <a name="to-create-the-data-bound-controls"></a>Veri bağlantılı denetimleri oluşturmak için
 
@@ -281,7 +281,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
      Visual Studio, arka plan kod dosyasını açar ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı için yeni bir `saveButton_Click` olay işleyicisi oluşturur.
 
-2. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin.
+2. `saveButton_Click` olay işleyicisine aşağıdaki kodu ekleyin.
 
      [!code-csharp[Data_WPFWCF#5](../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworkssaleseditor/mainwindow.xaml.cs#5)]
      [!code-vb[Data_WPFWCF#5](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb#5)]
@@ -323,4 +323,4 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 - Visual Studio 'daki **veri kaynakları** PENCERESINI kullanarak WPF denetimlerinde ilgili verileri (yani bir üst-alt ilişkisi içindeki verileri) görüntüleme hakkında bilgi edinin. Daha fazla bilgi için bkz. [Izlenecek yol: BIR WPF uygulamasında Ilgili verileri görüntüleme](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Visual Studio 'daki verilere](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) WPF denetimleri bağlama WPF denetimlerini [Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio2.md) 'ya bağlama WPF [denetimleri veri kümesine](../data-tools/bind-wpf-controls-to-a-dataset.md) [genel](https://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb) bakış [Entity Framework](https://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0) genel bakış [WPF ve Silverlight tasarımcısına](https://msdn.microsoft.com/570b7a5c-0c86-4326-a371-c9b63378fc62) genel bakış [verileri Bağlamaya genel bakış](https://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)
+ [Visual Studio 'daki verilere](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) WPF denetimleri bağlama WPF denetimlerini [Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio2.md) 'ya bağlama WPF [denetimlerini veri kümesine](../data-tools/bind-wpf-controls-to-a-dataset.md) [genel](https://msdn.microsoft.com/library/7924cf94-c9a6-4015-afc9-f5d22b1743bb) bakış [Entity Framework genel bakış](https://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0) [WPF ve Silverlight tasarımcısına](https://msdn.microsoft.com/570b7a5c-0c86-4326-a371-c9b63378fc62) genel bakış [veri bağlamaya genel](https://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211) bakış

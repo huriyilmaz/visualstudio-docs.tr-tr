@@ -37,19 +37,19 @@ caps.latest.revision: 60
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: da86a6cf2e561fdc7e642a76b84b4e604bec12d6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a9f20629c39bc37ca20550c3b88d8ecb2aca470f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651239"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300248"
 ---
 # <a name="create-models-for-your-app"></a>Uygulamanız için model oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken kullanıcı gereksinimleri hakkındaki fikirleri anlamanıza, açıklığa kavuşturmanıza ve iletmeye yardımcı olur. Örneğin, Kullanıcı gereksinimlerini anlatmak ve iletmek için Birleşik Modelleme Dili (UML) kullanım örneği, etkinlik, sınıf ve sıra diyagramlarını kullanabilirsiniz. Sisteminizin işlevselliğini anlatmak ve iletmek için UML bileşeni, sınıf, etkinlik ve sıra diyagramlarını kullanabilirsiniz.
 
- Bkz. [Channel 9 videosu: modelleme aracılığıyla mimariyi geliştirme](http://go.microsoft.com/fwlink/?LinkID=252078).
+ Bkz. [Channel 9 videosu: modelleme aracılığıyla mimariyi geliştirme](https://go.microsoft.com/fwlink/?LinkID=252078).
 
  Bu sürümde aşağıdaki UML diyagramlarını oluşturabilirsiniz:
 
@@ -73,7 +73,7 @@ Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken 
 
 ## <a name="common-tasks"></a>Ortak Görevler
 
-|**İlerde**|**Görevinin**|
+|**Konu**|**Görev**|
 |---------------|--------------|
 |[UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Modeller oluşturun** ve diyagramlar ekleyin.|
 |[UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md)|Modeli düzenlemek için **diyagramlar çizin** .|
@@ -81,11 +81,11 @@ Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken 
 |[UML sınıf diyagramları aracılığıyla kod oluşturma](../modeling/generate-code-from-uml-class-diagrams.md)|Uygulamanızı başlatmak için **Sınıf Diyagramlarından Kod oluşturun C#**  .|
 |[Modelinizi profiller ve stereotipler aracılığıyla özelleştirme](../modeling/customize-your-model-with-profiles-and-stereotypes.md)|Standart UML model öğelerini belirli amaçlarla genişletmek için stereotipler kullanarak **model öğelerini özelleştirin** .|
 |[Model öğelerini ve iş öğelerini bağlama](../modeling/link-model-elements-and-work-items.md)|Görevleri, test çalışmalarını, hataları, gereksinimleri, sorunları veya modelinizin belirli bölümleriyle ilişkili diğer iş türlerini izlemenize yardımcı olması için **model öğeleri ve iş öğeleri arasında bağlantılar oluşturun** .|
-|[Diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md)|**Modelinizi ve diyagramlarınızı** , [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] kullanmayan kullanıcılar da dahil diğer kullanıcılarla paylaşmanız için kaydedin.|
+|[Diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md)|**Modelinizi ve diyagramlarınızı** , [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)]kullanmayan kullanıcılar da dahil diğer kullanıcılarla paylaşmanız için kaydedin.|
 
 ## <a name="related-tasks"></a>İlgili görevler
 
-|**İlerde**|**Görevinin**|
+|**Konu**|**Görev**|
 |---------------|--------------|
 |[Kodu görselleştirme](../modeling/visualize-code.md)|Bilmediğiniz kodu daha iyi anlamak için kod haritaları ve katman diyagramları oluşturun.|
 |[Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md)|Kullanıcıların ihtiyaçlarını netleştirmek ve iletmek için modeller kullanın.|
@@ -96,6 +96,6 @@ Modelleme diyagramları, kodunuz ve yazılım sisteminizin desteklemesi gereken 
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Köprü**|
 |------------------|---------------|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](http://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|

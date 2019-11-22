@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: conceptdev
 ms.author: crdun
 manager: jillfra
-ms.openlocfilehash: 6e1b34cbc2497bd70f65021c83db4f59480519f1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad085cc6c41714a551fbb344274e6d0f164ab67e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62573212"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297662"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Sorun Giderme ve Bilinen Sorunlar (Unity için Visual Studio Araçları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -22,27 +22,27 @@ ms.locfileid: "62573212"
 Bu bölümde, bilinen sorunların açıklamalarını Unity için Visual Studio Araçları ile sık karşılaşılan sorunlara çözümler bulmak ve Unity için Visual Studio Araçları hata bildirimi tarafından geliştirilmesine nasıl yardımcı olabileceğini öğrenin.  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
- Unity için Visual Studio Araçları ile ilgili bazı yaygın sorunları çözmek için aşağıdaki bölümlere bakın.  
+ Unity için Visual Studio Araçları bazı yaygın sorunları çözümlemek için aşağıdaki bölümlere bakın.  
   
-### <a name="migrating-from-unityvs-to-visual-studio-tools-for-unity"></a>UnityVS, Unity için Visual Studio Araçları geçirme  
- Unity için Visual Studio Araçları için UnityVS geçiriyorsanız, Unity projelerinize ait yeni Visual Studio çözümleri oluşturmak gerekir.  
+### <a name="migrating-from-unityvs-to-visual-studio-tools-for-unity"></a>UnityVS Unity için Visual Studio Araçları 'e geçiş  
+ UnityVS 'yi Unity için Visual Studio Araçları 'e geçiriyorsanız Unity projeleriniz için yeni Visual Studio çözümleri oluşturmanız gerekir.  
   
-##### <a name="to-migrate-your-unity-project-from-unityvs-18-to-visual-studio-tools-for-unity-19"></a>Unity projeniz UnityVS 1.8 ' Visual Studio Araçları için Unity 1.9 geçirmek için  
+##### <a name="to-migrate-your-unity-project-from-unityvs-18-to-visual-studio-tools-for-unity-19"></a>Unity projenizi UnityVS 1,8 ' den Unity için Visual Studio Araçları 1,9 ' ye geçirmek için  
   
-1. Unity projenizden eski çözüm ve proje dosyaları silin. Visual Studio .sln Unity proje kök dizininde bulun ve. * proj dosyaları ve tüm bunları silin.  
+1. Unity projenizden eski çözüm ve proje dosyalarını silin. Unity projenizin kök dizininde, Visual Studio. sln ve. * proj dosyalarını bulun ve tümünü silin.  
   
-2. Unity paketini için Visual Studio Araçları, Unity projesine içeri aktarmalısınız. VSTU paketini içeri aktarma hakkında daha fazla bilgi için Unity için Visual Studio Araçları yapılandırma bakın [Başlarken](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) sayfası.  
+2. Unity için Visual Studio Araçları paketini Unity projenize aktarın. VSTU paketini içeri aktarma hakkında daha fazla bilgi için [Başlarken](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) sayfasında Unity için Visual Studio Araçları yapılandırma konusuna bakın.  
   
-3. Yeni çözüm ve proje dosyalarını oluşturur. Bunları şimdi Unity Editor'ana menüsündeki oluşturmak istiyorsanız seçin **Visual Studio Araçları**, **proje dosyaları oluştur**. Aksi takdirde, istiyorsanız bu adımı atlayabilirsiniz; Unity için Visual Studio Araçları oluşturacağını yeni dosyalar otomatik olarak seçtiğiniz zaman **Visual Studio Araçları**, **Visual Studio'da Aç**.  
+3. Yeni çözüm ve proje dosyaları oluşturun. Bunları şimdi oluşturmak istiyorsanız, Unity düzenleyicisinde, ana menüdeki **Visual Studio Araçları**, **proje dosyaları oluştur**' u seçin. Aksi takdirde, isterseniz bu adımı atlayabilirsiniz; Unity için Visual Studio Araçları, **Visual Studio Araçları**seçtiğinizde **Visual Studio 'da açık olan**yeni dosyaları otomatik olarak oluşturacaktır.  
   
-### <a name="visual-studio-wont-load-the-solution-that-visual-studio-tools-for-unity-created"></a>Visual Studio Unity için Visual Studio Araçları oluşturulan çözüm yüklenmiyor  
- Daha fazla bilgi için [bu stackoverflow sorusunun yanıtını](http://stackoverflow.com/a/24035907/36702).  
+### <a name="visual-studio-wont-load-the-solution-that-visual-studio-tools-for-unity-created"></a>Visual Studio Unity için Visual Studio Araçları oluşturulan çözümü yüklemez  
+ Daha fazla bilgi için [Bu StackOverflow sorusunun yanıtını](https://stackoverflow.com/questions/20086755/unityvs-visual-studio-can-not-open/24035907#24035907)inceleyin.  
   
-### <a name="on-windows-8-visual-studio-asks-to-download-the-unity-target-framework"></a>Windows 8'de Visual Studio Unity hedef Framework'ü indirmek sorar.  
- UnityVS, Windows 8'de varsayılan olarak yüklü değilse .net framework 3.5 gerektirir. Bu sorunu gidermek için indirmek ve .net framework 3.5 yüklemek için yönergeleri izleyin.  
+### <a name="on-windows-8-visual-studio-asks-to-download-the-unity-target-framework"></a>Windows 8 ' de, Visual Studio 'Nun Unity hedef çerçevesini indirmesini ister  
+ UnityVS, Windows 8 ' de varsayılan olarak yüklü olmayan .NET Framework 3,5 gerektirir. Bu sorunu gidermek için, .NET Framework 3,5 'yi indirme ve yükleme yönergelerini izleyin.  
   
 ## <a name="known-issues"></a>Bilinen Sorunlar  
- Bilinen sorunlar vardır, hata ayıklayıcı Unity'nın daha eski C# Derleyici sürümü ile nasıl etkileştiğini gelen neden Visual Studio Araçları Unity için. Bu sorunları çözmek için çalışıyoruz ancak bu sırada aşağıdaki sorunlarla karşılaşabilirsiniz.  
+ Bilinen sorunlar vardır, hata ayıklayıcı Unity'nın daha eski C# Derleyici sürümü ile nasıl etkileştiğini gelen neden Visual Studio Araçları Unity için. Bu sorunları gidermeye yardımcı olmak için çalışıyoruz, ancak bu sırada aşağıdaki sorunlarla karşılaşabilirsiniz.  
   
 - Hata ayıklama sırasında Unity bazen kilitleniyor.  
   
@@ -50,7 +50,7 @@ Bu bölümde, bilinen sorunların açıklamalarını Unity için Visual Studio A
   
 - İçine ve dışına yöntemleri bazen Adımlama özellikle yineleyiciler veya switch deyimleri içinde yanlış bir şekilde davranır.  
   
-## <a name="reporting-errors"></a>Hata Raporlama  
+## <a name="reporting-errors"></a>Raporlama hataları  
  Lütfen kilitlenen, donuyor veya diğer hatalarla karşılaşırsanız, hata raporları göndermek kalite Unity için Visual Studio Araçları'nın geliştirmemize yardımcı olun. Bu, bize araştırmak ve Unity için Visual Studio Araçları'ndaki sorunları gidermeye yardımcı olur. Teşekkür ederiz!  
   
 ### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Visual Studio donuyor olduğunda bir hata bildirme  
@@ -64,9 +64,9 @@ Bu bölümde, bilinen sorunların açıklamalarını Unity için Visual Studio A
   
 3. Hata ayıklayıcı, Visual Studio dondurulmuş örneğine ekleyin. İçinde **iliştirme** iletişim kutusunda, Visual Studio'dan dondurulmuş örneğini seçin **kullanılabilir işlemler** tablosuna ve sonra seçin **iliştirme** düğmesi.  
   
-4. Hata ayıklayıcı duraklatın. Yeni Visual Studio örneğinde ana menüsündeki seçin **hata ayıklama**, **tümünü Kes** veya tuşuna basarak **Ctrl + Alt + Break**.  
+4. Hata ayıklayıcı duraklatın. Visual Studio 'nun yeni örneğinde, ana menüdeki **Hata Ayıkla**, **Tümünü kes** ' i seçin veya **Ctrl + Alt + Break**tuşlarına basın.  
   
-5. Bir iş parçacığı dökümü oluşturun. Komut penceresinde komut enter tuşuna basarak aşağıdaki **Enter**.  
+5. Bir iş parçacığı dökümü oluşturun. Komut penceresi, aşağıdaki komutu girin ve **ENTER**tuşuna basın.  
   
    ```powershell  
    Debug.ListCallStack /AllThreads /ShowExternalCode  

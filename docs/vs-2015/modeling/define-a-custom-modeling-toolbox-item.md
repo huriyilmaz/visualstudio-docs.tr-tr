@@ -11,12 +11,12 @@ caps.latest.revision: 33
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 27692c31c2c0f1c52ab026fb2d55e5d240839ff3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ac299f18e544ef4f3215707abbdc3d9e8d266de6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654897"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299295"
 ---
 # <a name="define-a-custom-modeling-toolbox-item"></a>Özel bir modelleme araç kutusu öğesi tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -113,7 +113,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 - Örnekte gösterildiği gibi, araç kutusu simgesi için `<bmp fileName="…"/>` ve diğer öğeler için `<value>string</value>`.
 
-  \- veya-
+  \- veya -
 
 - `<resource fileName="Resources.dll"`
 
@@ -127,11 +127,11 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 |Düğüm adı|tanımlar|
 |---------------|-------------|
-|DisplayName|Araç kutusu öğesinin adı.|
+|displayName|Araç kutusu öğesinin adı.|
 |tabName|Öğenin görünmesi gereken araç kutusu sekmesi. Bu tür diyagram için normal sekmenin adını ya da ayrı bir adı belirtebilirsiniz.|
 |görüntü|Yüksekliği 16 ve 16 bit renk derinliğine sahip olması gereken bit eşlem ( **. bmp**) dosyasının konumu.|
 |f1Keyword|Yardım konusunu bulan anahtar sözcük.|
-|İpucuna|Bu araç için araç ipucu.|
+|ipucuna|Bu araç için araç ipucu.|
 
  Bit eşlem dosyasını Visual Studio 'da düzenleyebilir ve Özellikler penceresi yüksekliğini ve genişliğini 16 olarak ayarlayabilirsiniz.
 
@@ -139,9 +139,9 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 > Diyagram dosyalarını kendi üzerinde kullanmaya çalıştıktan sonra bir. tbxinfo dosyası kullanmaya başladıysanız araç kutusu öğesinin hem eski hem de yeni sürümlerini içerdiğini görebilirsiniz. Bu durum, Diyagram dosyasının adı. tbxinfo dosyasında yanlış olursa da oluşabilir. Bu durumda, araç kutusunun kısayol menüsünde, **araç kutusunu Sıfırla**' yı seçin. Özel araç kutusu öğeleri kaybolur. Visual Studio 'Yu yeniden başlatın ve doğru özel öğeler görüntülenir.
 
 ## <a name="Extension"></a>Visual Studio uzantısında araç kutusu öğelerini dağıtma
- Araç kutusu öğelerini, bir Visual Studio uzantısı 'na (VSıX) paketleyerek diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanıcılara dağıtabilirsiniz. Komutları, profilleri ve diğer uzantıları aynı VSıX dosyasında paketleyebilir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını dağıtma](http://go.microsoft.com/fwlink/?LinkId=160780).
+ Araç kutusu öğelerini, bir Visual Studio uzantısı 'na (VSıX) paketleyerek diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanıcılara dağıtabilirsiniz. Komutları, profilleri ve diğer uzantıları aynı VSıX dosyasında paketleyebilir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını dağıtma](https://go.microsoft.com/fwlink/?LinkId=160780).
 
- Visual Studio uzantısı oluşturmanın her zamanki yolu VSıX proje şablonunu kullanmaktır. Bunu yapmak için [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] yüklemiş olmanız gerekir.
+ Visual Studio uzantısı oluşturmanın her zamanki yolu VSıX proje şablonunu kullanmaktır. Bunu yapmak için [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]yüklemiş olmanız gerekir.
 
 #### <a name="to-add-a-toolbox-item-to-a-visual-studio-extension"></a>Visual Studio uzantısına bir araç kutusu öğesi eklemek için
 
@@ -151,7 +151,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 3. Mevcut bir Visual Studio uzantısı projesi açın.
 
-     \- veya-
+     \- veya -
 
      Yeni bir Visual Studio uzantısı projesi tanımlayın.
 
@@ -168,11 +168,11 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 5. Az önce eklediğiniz tüm dosyaların aşağıdaki özelliklerini ayarlayın. Özelliklerini, Çözüm Gezgini ' de tümünü seçerek aynı anda ayarlayabilirsiniz. Projedeki diğer dosyaların özelliklerini değiştirmemeye dikkat edin.
 
-     **Her zaman kopyala**  =  **Çıkış Dizinine Kopyala**
+     **Her zaman kopyala** = **Çıkış Dizinine Kopyala**
 
-     **Derleme eylemi**  = **içeriği**
+     **Derleme eylemi** = **içeriği**
 
-     VSıX  = **true** **olarak ekle**
+     VSıX = **true** **olarak ekle**
 
 6. Açık **kaynak. Extension. valtmanifest**. Uzantı bildirim düzenleyicisinde açılır.
 
@@ -180,14 +180,14 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
      **Varlıklar**' ın altında, **Yeni** ' yi seçin ve iletişim kutusundaki alanları aşağıdaki gibi ayarlayın:
 
-    - @No__t_1**özel uzantı türü** **yazın**
+    -  = **özel uzantı türü** **yazın**
 
     - Tür = `Microsoft.VisualStudio.ArchitectureTools.CustomToolboxItems`
 
         > [!NOTE]
         > Bu, açılan listedeki seçeneklerden biri değildir. Klavyeyi kullanarak girmeniz gerekir.
 
-    - **Dosya sisteminde** **kaynak**  =  dosyası.
+    - **Dosya sisteminde** **kaynak** = dosyası.
 
     - **Path** = **. tbxinfo** dosyanız, örneğin **MyTools. tbxinfo**
 
@@ -201,7 +201,7 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 #### <a name="to-install-custom-tools-from-a-visual-studio-extension"></a>Visual Studio uzantısı 'ndan özel araçlar yüklemek için
 
-1. @No__t_0 dosyasını Windows Gezgini 'nde veya Visual Studio 'da açın.
+1. `.vsix` dosyasını Windows Gezgini 'nde veya Visual Studio 'da açın.
 
 2. Görüntülenen iletişim kutusunda, **Kur** ' ı seçin.
 
@@ -214,13 +214,13 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
 
 1. Bir veya daha fazla özel araç içeren bir Visual Studio uzantısı projesi oluşturun.
 
-    **. Tbxinfo** dosyasında, aracın `displayName`, araç kutusu `tabName` ve araç ipucunu tanımlamak için kaynak dosyası yöntemini kullanın. Bu dizelerin tanımlandığı bir kaynak dosyası oluşturun, bir derlemeye derleyin ve tbxinfo dosyasından başvurun.
+    **. Tbxinfo** dosyasında, aracın `displayName`, araç kutusu `tabName`ve araç ipucunu tanımlamak için kaynak dosyası yöntemini kullanın. Bu dizelerin tanımlandığı bir kaynak dosyası oluşturun, bir derlemeye derleyin ve tbxinfo dosyasından başvurun.
 
 2. Diğer dillerdeki dizeler ile kaynak dosyalarını içeren ek derlemeler oluşturun.
 
 3. Her ek derlemeyi, adı dilin kültür kodu olan bir klasöre yerleştirin. Örneğin, derlemenin bir Fransızca sürümünü **fr**adlı bir klasörün içine yerleştirin.
 
-4. @No__t_0 gibi belirli bir kültürün değil, genellikle iki harf olan bağımsız bir kültür kodu kullanmanız gerekir. Kültür kodları hakkında daha fazla bilgi için, kültür kodlarının tamamen bir listesini sağlayan [CultureInfo. Getkültürleri yöntemine](http://go.microsoft.com/fwlink/?LinkId=160782)bakın.
+4. `fr-CA`gibi belirli bir kültürün değil, genellikle iki harf olan bağımsız bir kültür kodu kullanmanız gerekir. Kültür kodları hakkında daha fazla bilgi için, kültür kodlarının tamamen bir listesini sağlayan [CultureInfo. Getkültürleri yöntemine](https://go.microsoft.com/fwlink/?LinkId=160782)bakın.
 
 5. Visual Studio uzantısı oluşturun ve dağıtın.
 
@@ -229,9 +229,9 @@ Sık kullandığınız bir modele göre öğe veya öğe grubu oluşturmayı kol
    Prototip diyagramının farklı sürümlerini yüklemek için bu yöntemi kullanamazsınız. Öğelerin ve bağlayıcıların adları her yüklemede aynı olacaktır.
 
 ## <a name="other-toolbox-operations"></a>Diğer araç kutusu Işlemleri
- Genellikle, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] araç kutusunu, araçları yeniden adlandırarak, farklı araç kutusu sekmelerine taşıyarak ve bunları silerek kişiselleştirebilirsiniz. Ancak bu değişiklikler, bu konuda açıklanan yordamlarla oluşturulan özel modelleme araçları için kalıcı olmaz. @No__t_0 yeniden başlattığınızda özel araçlar, tanımlı adları ve araç kutusu konumları ile yeniden görüntülenir.
+ Genellikle, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]araç kutusunu, araçları yeniden adlandırarak, farklı araç kutusu sekmelerine taşıyarak ve bunları silerek kişiselleştirebilirsiniz. Ancak bu değişiklikler, bu konuda açıklanan yordamlarla oluşturulan özel modelleme araçları için kalıcı olmaz. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]yeniden başlattığınızda özel araçlar, tanımlı adları ve araç kutusu konumları ile yeniden görüntülenir.
 
- Ayrıca, **sıfırlama araç kutusu** komutunu gerçekleştirirseniz özel araçlarınız kaybolur. Ancak, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] yeniden başlattığınızda yeniden görüntülenir.
+ Ayrıca, **sıfırlama araç kutusu** komutunu gerçekleştirirseniz özel araçlarınız kaybolur. Ancak, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]yeniden başlattığınızda yeniden görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UML modellerini ve diyagramları GENIŞLETME](../modeling/extend-uml-models-and-diagrams.md) [UML genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md) [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [UML modelleri için doğrulama kısıtlamalarını tanımlama](../modeling/define-validation-constraints-for-uml-models.md)

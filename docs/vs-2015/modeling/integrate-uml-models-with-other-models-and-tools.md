@@ -11,12 +11,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2f511a96f94ab98a93144938529a05d07bb6ed26
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: caecb85392170559a860a7dc334570880d6e76f1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669580"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301477"
 ---
 # <a name="integrate-uml-models-with-other-models-and-tools"></a>UML modellerini diğer modeller ve araçlarla tümleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,17 +40,17 @@ UML öğesinde, diğer UML öğelerine, dosyalara veya diğer nesnelere yönelik
 
    Daha fazla bilgi için bkz. [UML genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md).
 
-   Bir profilin bir menü komutları ve hareket işleyicileri ile birlikte dağıtıldığı örnek bir proje için bkz. [örnek: UML profilleri](http://go.microsoft.com/fwlink/?LinkID=213811).
+   Bir profilin bir menü komutları ve hareket işleyicileri ile birlikte dağıtıldığı örnek bir proje için bkz. [örnek: UML profilleri](https://go.microsoft.com/fwlink/?LinkID=213811).
 
 - **Başvur.** Bir dizi dizeyi herhangi bir UML öğesine ekleyebilirsiniz. Dosya adı veya başka bir öğenin GUID 'SI gibi bilgileri depolayan bir kod yazabilirsiniz. Bu, ek tanımlar sağlanmadan yapılabilir. Başvurular Kullanıcı tarafından doğrudan görülemez.
 
-   Daha fazla bilgi için bkz. [UML model öğelerine başvuru dizeleri iliştirme](../modeling/attach-reference-strings-to-uml-model-elements.md). Bir örnek için bkz. [UML öğelerini diyagramlarda veya diğer dosyalara bağlama](http://go.microsoft.com/fwlink/?LinkId=213813).
+   Daha fazla bilgi için bkz. [UML model öğelerine başvuru dizeleri iliştirme](../modeling/attach-reference-strings-to-uml-model-elements.md). Bir örnek için bkz. [UML öğelerini diyagramlarda veya diğer dosyalara bağlama](https://go.microsoft.com/fwlink/?LinkId=213813).
 
   Model öğelerine başvuruları kodlamak için iki yol vardır:
 
 - Hedef model öğesinin **GUID ve dosya adı** ve onu içeren model veya onu görüntüleyen belirli bir diyagram.
 
-   Bir örnek için bkz. [UML öğelerini diyagramlara veya diğer dosyalara bağlama](http://go.microsoft.com/fwlink/?LinkId=213813).
+   Bir örnek için bkz. [UML öğelerini diyagramlara veya diğer dosyalara bağlama](https://go.microsoft.com/fwlink/?LinkId=213813).
 
 - **ModelBus başvuruları.** ModelBus, modeller arasındaki başvuruları oluşturmak ve çözmek için bir çerçevedir. Kullanıcının modelde bir öğe seçmesini sağlayan ModelBus seçiciyi içerir. Ayrıca, hedef modeldeki değişiklikler nedeniyle kullanıcının kaybolan başvuruları çözümlemesine yardımcı olur.
 
@@ -61,7 +61,7 @@ UML öğesinde, diğer UML öğelerine, dosyalara veya diğer nesnelere yönelik
 
 1. Aynı modelin içindeki değişiklikleri yaymak için **VMSDK kuralları** kullanılabilir.
 
-    Bir örnek için bkz. [UML öğelerini diyagramlara veya diğer dosyalara bağlama](http://go.microsoft.com/fwlink/?LinkId=213813).
+    Bir örnek için bkz. [UML öğelerini diyagramlara veya diğer dosyalara bağlama](https://go.microsoft.com/fwlink/?LinkId=213813).
 
 2. **VMSDK Olayları** model dışındaki değişiklikleri yaymak için kullanılabilir; Örneğin, bağlantılı bir belgenin dosya adını değiştirmek veya başka bir modeldeki bir öğeyi değiştirmek için.
 
@@ -72,7 +72,7 @@ UML öğesinde, diğer UML öğelerine, dosyalara veya diğer nesnelere yönelik
    Daha fazla bilgi için bkz. [Modelleme diyagramında hareket Işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) ve [nasıl yapılır: sürükle ve bırak işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md).
 
 ## <a name="samples"></a>Örnekler
- Lütfen bkz. kod örneği [UML öğelerini diyagramlar veya diğer dosyalara bağlama](http://go.microsoft.com/fwlink/?LinkId=213813). Örnek, kullanıcıların bir dosyayı herhangi bir UML öğesine sürükleyebilmenizi sağlar ve sonra öğeyi çift tıklayarak dosyayı açar. Örneğin, bir etkinlik diyagramını kullanım örneği öğesine bağlayabilirsiniz. Bir simge hangi öğelerin bağlantılara sahip olduğunu gösterir.
+ Lütfen bkz. kod örneği [UML öğelerini diyagramlar veya diğer dosyalara bağlama](https://go.microsoft.com/fwlink/?LinkId=213813). Örnek, kullanıcıların bir dosyayı herhangi bir UML öğesine sürükleyebilmenizi sağlar ve sonra öğeyi çift tıklayarak dosyayı açar. Örneğin, bir etkinlik diyagramını kullanım örneği öğesine bağlayabilirsiniz. Bir simge hangi öğelerin bağlantılara sahip olduğunu gösterir.
 
  Bu kod örneği aşağıdaki teknikleri gösterir:
 
@@ -97,4 +97,4 @@ UML öğesinde, diğer UML öğelerine, dosyalara veya diğer nesnelere yönelik
   Bir UML modelinin DSL tarafından okunarak bir örnek için bkz. [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [modelleme diyagramı üzerinde bir hareket işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [nasıl yapılır: bir sürükle ve bırak IŞLEYICISI ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) nasıl [yapılır: UML modelindeki DEĞIŞIKLIKLERE yanıt verme](../misc/how-to-respond-to-changes-in-a-uml-model.md) [örnek: UML profiller](http://go.microsoft.com/fwlink/?LinkID=213811) [UML öğelerini öğesine bağlama Diyagramlar veya diğer dosyalar](http://go.microsoft.com/fwlink/?LinkId=213813)
+ [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [modelleme diyagramı üzerinde bir hareket işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [nasıl yapılır: bir sürükle ve bırak IŞLEYICISI ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) [nasıl yapılır: UML modelindeki DEĞIŞIKLIKLERE yanıt verme](../misc/how-to-respond-to-changes-in-a-uml-model.md) [örnek: UML profiller](https://go.microsoft.com/fwlink/?LinkID=213811) [UML öğelerini diyagramlara veya diğer dosyalara bağlama](https://go.microsoft.com/fwlink/?LinkId=213813)

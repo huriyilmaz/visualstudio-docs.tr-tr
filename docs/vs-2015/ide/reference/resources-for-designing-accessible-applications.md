@@ -14,17 +14,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5cc95418f392e3c771350428e26e1447dae3bcf5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: af300bca2b1e679eae58a92962067fcd50fea78f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665556"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297790"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>Erişilebilir Uygulamalar Tasarlama için Kaynaklar
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Erişilebilir tasarımı ve erişilebilir Windows Uygulamaları ve Web siteleri geliştirmeye yönelik ipuçları ve örnekleri destekleyen teknolojiler hakkında bilgi edinmek için aşağıdaki bağlantıları kullanın. Erişilebilirlik hakkındaki genel bilgiler [http://www.microsoft.com/enable/](http://www.microsoft.com/enable/)adresinden çevrimiçi olarak bulunabilir.
+Erişilebilir tasarımı ve erişilebilir Windows Uygulamaları ve Web siteleri geliştirmeye yönelik ipuçları ve örnekleri destekleyen teknolojiler hakkında bilgi edinmek için aşağıdaki bağlantıları kullanın. Erişilebilirlik hakkındaki genel bilgiler [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/)adresinden çevrimiçi olarak bulunabilir.
 
 ## <a name="technologies"></a>Teknolojilerinin
 
@@ -42,7 +42,7 @@ Erişilebilir tasarımı ve erişilebilir Windows Uygulamaları ve Web siteleri 
 
 - [Konsol erişilebilirliği](/previous-versions/windows/desktop/dnacc/console-accessibility) Bu teknik makalede, erişilebilirlik yardımlarına yönelik Windows XP 'de konsolu açığa çıkarmak için kullanılan API 'Ler ve olaylar açıklanmaktadır.
 
-## <a name="web-sites"></a>Web siteleri
+## <a name="web-sites"></a>Web Siteleri
 
 - [Izlenecek yol: görüntü denetimleri, menü denetimleri ve AutoPostBack kullanımı Için erişilebilirlik yönergeleri](https://msdn.microsoft.com/library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) Bu konu, Web için bazı erişilebilirlik tasarımı ipuçlarına ek bir Web sayfasına erişilebilir denetimler dahil etmek için adım adım yönergeler sağlar.
 
@@ -54,7 +54,7 @@ Erişilebilir tasarımı ve erişilebilir Windows Uygulamaları ve Web siteleri 
 
 ### <a name="third-party-resources"></a>Üçüncü taraf kaynakları
 
-- **World Wide Web Konsorsiyumu Web erişilebilirliği girişimi (W3C)** Bu web sitesi, erişilebilir Web sitesi geliştirmesi için yönergeler ve teknikler sağlar. Daha fazla bilgi için bkz. [http://www.w3.org/WAI/GL/](http://www.w3.org/WAI/GL/).
+- **World Wide Web Konsorsiyumu Web erişilebilirliği girişimi (W3C)** Bu web sitesi, erişilebilir Web sitesi geliştirmesi için yönergeler ve teknikler sağlar. Daha fazla bilgi için bkz. [http://www.w3.org/WAI/GL/](https://www.w3.org/WAI/GL/).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio'nun Erişilebilirlik Özellikleri](../../ide/reference/accessibility-features-of-visual-studio.md)

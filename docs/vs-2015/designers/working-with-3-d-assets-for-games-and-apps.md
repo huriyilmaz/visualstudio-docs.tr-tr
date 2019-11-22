@@ -11,12 +11,12 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6976d7c0e32739348ec0d78603e6b6d47d01477b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9cc4f8038906de89afd86fd666fbb011e974362d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661581"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298094"
 ---
 # <a name="working-with-3-d-assets-for-games-and-apps"></a>Oyunlar ve Uygulamalar için 3B Varlıklarla Çalışma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "72661581"
 Bu belgede, DirectX tabanlı oyunlar ve uygulamalar için 3-b modeller, dokular ve gölgelendiriciler oluşturmak veya değiştirmek üzere kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] araçları açıklanmaktadır.
 
 ## <a name="directx-app-development-in-visual-studio"></a>Visual Studio 'da DirectX uygulama geliştirme
- DirectX uygulaması genellikle programlama mantığını, DirectX API 'sini ve yüksek düzeyde gölgeleme dili (HLSL) programlarını, zengin ve etkileşimli bir multimedya deneyimi sunmak için ses ve 3-D görsel varlıklarla birlikte birleştirir. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , IDE 'yi başka bir araç kullanmak için uygulamadan çıkmadan görüntüler ve dokular, 3-b modelleri ve gölgelendiriciler ile çalışmak için kullanabileceğiniz araçlar içerir. Visual Studio Araçları, üretime uygun varlıkları komisyondan önce kodu test etmek için kullanabileceğiniz ve üretim için kullanıma uygun varlıkları incelemek ve değiştirmek için kullanabileceğiniz *yer tutucu* varlıklar oluşturmaya uygundur. uygulamanızda hata ayıklama.
+ DirectX uygulaması genellikle programlama mantığını, DirectX API 'sini ve yüksek düzeyde gölgeleme dili (HLSL) programlarını, zengin ve etkileşimli bir multimedya deneyimi sunmak için ses ve 3-D görsel varlıklarla birlikte birleştirir.[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , IDE 'yi başka bir araç kullanmak için uygulamadan çıkmadan görüntüler ve dokular, 3-b modelleri ve gölgelendiriciler ile çalışmak için kullanabileceğiniz araçlar içerir. Visual Studio Araçları özellikle, üretime uygun varlıkları komisyondan önce kodu test etmek için kullanabileceğiniz ve uygulamanızda hata ayıklarken üretime uygun varlıkları İnceleme ve değiştirme amacıyla kullanabileceğiniz *yer tutucu* varlıklar oluşturmaya uygundur.
 
- İşte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ' de kullanabileceğiniz varlıkların türleri hakkında daha fazla bilgi.
+ İşte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]' de kullanabileceğiniz varlıkların türleri hakkında daha fazla bilgi.
 
 ### <a name="images-and-textures"></a>Görüntüler ve dokular
  Görüntüler ve dokular, Oyunlar ve uygulamalar için renk ve görsel ayrıntı sağlar. 3-b grafiklerde, dokular farklı kullanımları desteklemek için çeşitli biçimlerde, türlerde ve geometrileri gelir. Örneğin, normal haritalar, 3-b modellerin daha ayrıntılı ışıklandırma için piksel başına yüzey normaller sağlar ve küp haritaları, çatkutulama, yansıma ve küresel doku eşleme gibi kullanımlar için tüm yönlerde doku sağlar. Dokular, farklı ayrıntı düzeylerinde verimli işlemeyi desteklemek için MIP haritaları sağlayabilir ve farklı renk kanallarını ve renk sırasını destekleyebilir. Dokular, daha az ayrılmış grafik belleği kaplayan ve GPU erişim dokularının daha verimli bir şekilde yardım eden çeşitli sıkıştırılmış biçimlerde depolanabilir.
@@ -44,10 +44,10 @@ Bu belgede, DirectX tabanlı oyunlar ve uygulamalar için 3-b modeller, dokular 
  HLSL programlamayı bilmeden özel görsel etkiler oluşturmak için grafik tabanlı gölgelendirici tasarım aracı olan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gölgelendirici tasarımcısını kullanabilirsiniz.
 
 > [!NOTE]
-> DirectX programlama ile başlama hakkında daha fazla bilgi için bkz. [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633). DirectX tabanlı bir uygulamada hata ayıklama hakkında daha fazla bilgi için bkz. [Grafik Tanılama (DirectX grafik hatalarını ayıklama)](../debugger/visual-studio-graphics-diagnostics.md).
+> DirectX programlama ile başlama hakkında daha fazla bilgi için bkz. [DirectX](https://go.microsoft.com/fwlink/p/?LinkId=224633). DirectX tabanlı bir uygulamada hata ayıklama hakkında daha fazla bilgi için bkz. [Grafik Tanılama (DirectX grafik hatalarını ayıklama)](../debugger/visual-studio-graphics-diagnostics.md).
 
 ## <a name="directx-version-compatibility"></a>DirectX sürümü uyumluluğu
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 2-b ve 3-b varlıklarını işlemek için DirectX kullanır. DirectX 11 oluşturucuyu ya da Windows Gelişmiş Tarama Platformu (WARP) yazılım oluşturucuyu seçebilirsiniz. DirectX 11 Oluşturucu, DirectX 11 ve DirectX 10 GPU 'Larda yüksek performanslı, donanım hızlandırmalı işleme sağlar. WARP işleyicisi, varlıklarınızın çok çeşitli bilgisayarlarla çalıştığından emin olmanıza yardımcı olur. Bu, modern grafik donanımı ve tümleşik grafik donanımına sahip olmayan bilgisayarlar dahil olmak üzere, bu bilgisayarlara sahip olmayan bilgisayarları içerir. WARP hakkında daha fazla bilgi için bkz. [Windows Gelişmiş Tarama Platformu (warp) Kılavuzu](http://go.microsoft.com/fwlink/p/?LinkId=224634).
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], 2-b ve 3-b varlıklarını işlemek için DirectX kullanır. DirectX 11 oluşturucuyu ya da Windows Gelişmiş Tarama Platformu (WARP) yazılım oluşturucuyu seçebilirsiniz. DirectX 11 Oluşturucu, DirectX 11 ve DirectX 10 GPU 'Larda yüksek performanslı, donanım hızlandırmalı işleme sağlar. WARP işleyicisi, varlıklarınızın çok çeşitli bilgisayarlarla çalıştığından emin olmanıza yardımcı olur. Bu, modern grafik donanımı ve tümleşik grafik donanımına sahip olmayan bilgisayarlar dahil olmak üzere, bu bilgisayarlara sahip olmayan bilgisayarları içerir. WARP hakkında daha fazla bilgi için bkz. [Windows Gelişmiş Tarama Platformu (warp) Kılavuzu](https://go.microsoft.com/fwlink/p/?LinkId=224634).
 
 ## <a name="related-topics"></a>İlgili konular
 

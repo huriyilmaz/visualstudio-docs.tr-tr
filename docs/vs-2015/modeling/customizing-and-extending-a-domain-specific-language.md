@@ -11,12 +11,12 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b02b1e5bac7f39bcabb9cdc9b5c3acabe169827b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8de964bebb59507da06bb4444ffd6067ffc43b63
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655082"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299345"
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>Etki Alanına Özgü Dili Özelleştirme ve Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,11 +42,11 @@ Visual Studio modelleme ve görselleştirme SDK 'Sı (VMSDK), modelleme araçlar
 |Farklı model öğesi sınıfları diyagram üzerinde benzerdir, ilk yükseklik ve genişlik, renk ve araç ipuçları gibi özellikleri paylaşıyor.|Şekiller veya bağlayıcı sınıfları arasında devralmayı kullanın. Türetilmiş şekiller ve türetilmiş etki alanı sınıfları arasındaki eşlemeler üst öğelerinin eşleme ayrıntılarını alırlar.<br /><br /> Ya da, farklı etki alanı sınıflarını aynı şekil sınıfına eşleyin.|
 |Model öğesi sınıfı farklı şekil bağlamları tarafından görüntülenir.|Birden fazla şekil sınıfını aynı etki alanı sınıfına eşleyin. Çözümü oluştururken, hata raporunu izleyin ve hangi şekle kullanılacağına karar vermek için istenen kodu sağlayın.|
 |Şekil rengi veya yazı tipi gibi diğer özellikler geçerli durumu gösterir.|Bkz. [modeli yansıtmak Için şekilleri ve bağlayıcıları güncelleştirme](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Gösterilen özellikleri güncelleştiren bir kural oluşturun. Bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).<br /><br /> Ya da bağlantı okları veya yazı tipi gibi görünmeyen özellikleri güncelleştirmek için Onilişkilendirilmemiş PropertyChanged () kullanın.|
-|Durumu göstermek için şekildeki simge değişiklikleri.|DSL ayrıntıları penceresinde dekoratör eşlemesinin görünürlüğünü ayarlayın. Birçok görüntü dekoratlarını aynı konumda bulun. Bkz. [modeli yansıtmak Için şekilleri ve bağlayıcıları güncelleştirme](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Veya `ImageField.GetDisplayImage()` geçersiz kılın. @No__t_0 örneğe bakın.|
+|Durumu göstermek için şekildeki simge değişiklikleri.|DSL ayrıntıları penceresinde dekoratör eşlemesinin görünürlüğünü ayarlayın. Birçok görüntü dekoratlarını aynı konumda bulun. Bkz. [modeli yansıtmak Için şekilleri ve bağlayıcıları güncelleştirme](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md).<br /><br /> Veya `ImageField.GetDisplayImage()`geçersiz kılın. <xref:Microsoft.VisualStudio.Modeling.Diagrams.ImageField>örneğe bakın.|
 |Herhangi bir şekil üzerinde arka plan resmi ayarlama|Sabitlenmiş bir ImageField eklemek için ınitializeınstancereso, () öğesini geçersiz kılın. Bkz. [diyagramda sunuyu özelleştirme](../modeling/customizing-presentation-on-the-diagram.md).|
 |Şekilleri herhangi bir derinliğe iç içe geçme|Özyinelemeli bir ekleme ağacı ayarlayın. Şekilleri içerecek BoundsRules tanımlayın. Bkz. [diyagramda sunuyu özelleştirme](../modeling/customizing-presentation-on-the-diagram.md).|
-|Bir öğenin sınırında sabit noktalara bağlayıcılar ekleyin.|Diyagramda küçük bağlantı noktalarıyla temsil edilen gömülü Terminal öğelerini tanımlayın. Bağlantı noktalarını yerinde onarmak için BoundsRules kullanın. [Görselleştirme ve modelleme SDK](http://go.microsoft.com/fwlink/?LinkID=186128)'Sindeki devre diyagramı örneğine bakın.|
-|Metin alanı diğer değerlerden türetilmiş bir değeri görüntüler.|Metin dekoratörü hesaplanan veya özel bir depolama alanı özelliği ile eşleyin. Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|
+|Bir öğenin sınırında sabit noktalara bağlayıcılar ekleyin.|Diyagramda küçük bağlantı noktalarıyla temsil edilen gömülü Terminal öğelerini tanımlayın. Bağlantı noktalarını yerinde onarmak için BoundsRules kullanın. [Görselleştirme ve modelleme SDK](https://go.microsoft.com/fwlink/?LinkID=186128)'Sindeki devre diyagramı örneğine bakın.|
+|Metin alanı diğer değerlerden türetilmiş bir değeri görüntüler.|Metin dekoratörü hesaplanan veya özel bir depolama alanı özelliği ile eşleyin. Daha fazla bilgi için [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|
 |Değişiklikleri model öğeleri veya şekiller arasında yayma|Bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).|
 |Değişiklikleri mağaza dışındaki diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantıları gibi kaynaklara yayın.|Bkz. [olay Işleyicileriyle değişiklikleri model dışına yayın](../modeling/event-handlers-propagate-changes-outside-the-model.md).|
 |Özellik penceresi, ilgili bir öğenin özelliklerini görüntüler.|Özellik Iletmeyi ayarlayın. Bkz. [Özellikler penceresini özelleştirme](../modeling/customizing-the-properties-window.md).|
@@ -56,9 +56,9 @@ Visual Studio modelleme ve görselleştirme SDK 'Sı (VMSDK), modelleme araçlar
 |Kopyalama, kesme ve yapıştırmayı etkinleştir|DSL Gezgini 'ndeki **Düzenleyici** düğümünün **kopyalama Yapıştır özelliğini etkinleştir** ' i ayarlayın.|
 |Her öğe kopyalanırken başvuru bağlantılarını ve bunların hedeflerini kopyalayın. Örneğin, bir öğeye ekli açıklamaları kopyalayın.|Kaynak rolün **yayar kopyalama** özelliğini AYARLAYıN (DSL tanım diyagramında etki alanı ilişkisinin bir tarafındaki satırla temsil edilir).<br /><br /> Daha karmaşık etkileri elde etmek için ProcessOnCopy 'i geçersiz kılmak üzere kod yazın.<br /><br /> Bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
 |Bir öğe silindiğinde, ilgili öğeleri silin, yeniden üst üste veya yeniden bağlayın.|Bir ilişki rolünün **yayar silme** değerini ayarlayın. Daha karmaşık efektler için, **DomainModel.cs** içinde tanımlanan `MyDslDeleteClosure` sınıfında `ShouldVisitRelationship` ve `ShouldVisitRolePlayer` yöntemleri geçersiz kılın<br /><br /> Bkz. [silme davranışını özelleştirme](../modeling/customizing-deletion-behavior.md)|
-|Kopyalama ve sürükleme bırakma üzerinde şekil mizanpajını ve görünümünü koruyun.|Şekilleri ve bağlayıcıları kopyalanmış `ElementGroupPrototype` ekleyin. Geçersiz kılınacak en kullanışlı Yöntem `ElementOperations.CreateElementGroupPrototype()`<br /><br /> Bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
-|Şekilleri seçili bir konuma (örneğin, geçerli imleç konumu) yapıştırın.|@No__t_1 konuma özgü sürümü kullanmak için `ClipboardCommandSet.ProcessOnCopy()` geçersiz kılın bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
-|Yapıştırma sırasında ek bağlantılar oluştur|ClipboardCommandSet. ProcessOnPasteCommand () öğesini geçersiz kıl|
+|Kopyalama ve sürükleme bırakma üzerinde şekil mizanpajını ve görünümünü koruyun.|Şekilleri ve bağlayıcıları kopyalanmış `ElementGroupPrototype`ekleyin. Geçersiz kılınacak en kullanışlı Yöntem `ElementOperations.CreateElementGroupPrototype()`<br /><br /> Bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
+|Şekilleri seçili bir konuma (örneğin, geçerli imleç konumu) yapıştırın.|`ElementOperations.Merge().` konuma özgü sürümü kullanmak için `ClipboardCommandSet.ProcessOnCopy()` geçersiz kılın bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
+|Yapıştırma sırasında ek bağlantılar oluştur|Override ClipboardCommandSet.ProcessOnPasteCommand()|
 |Bu diyagram, diğer DSLs veya UML diyagramları ve Windows öğeleri için sürükle ve bırak özelliğini etkinleştir|Bkz [. nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md)|
 |Bir şeklin veya aracın, üst öğeye sürüklenmiş gibi bir alt şekle (bağlantı noktası gibi) sürüklenmesi için izin verin.|Bırakılan nesneyi üst öğeye iletmek için, hedef nesne sınıfında bir öğe birleştirme yönergesi tanımlayın. Bkz. [öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md).|
 |Şekil veya aracın bir şekle sürüklenmesi ve ek bağlantılara ya da nesnelerin oluşturulmasını sağlar. Örneğin, bir yorumun bağlanacağı bir öğeye bırakılmasına izin vermek için.|Hedef etki alanı sınıfında bir öğe birleştirme yönergesi tanımlayın ve oluşturulacak bağlantıları tanımlayın. Karmaşık durumlarda özel kod ekleyebilirsiniz. Bkz. [öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md).|

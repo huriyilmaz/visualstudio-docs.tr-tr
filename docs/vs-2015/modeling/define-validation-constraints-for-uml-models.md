@@ -11,17 +11,17 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2f279216d06972578f5173e57375c89542c71e3f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3dd76deb3b72d3b12d3b5892c2e5664273425c4c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669894"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295838"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>UML modelleri için doğrulama kısıtlamaları tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Modelin belirttiğiniz bir koşulu karşılayıp karşılamadığını test eden doğrulama kısıtlamalarını tanımlayabilirsiniz. Örneğin, bir kullanıcının devralma ilişkilerinin döngüsünü oluşturmadığından emin olmak için bir kısıtlama tanımlayabilirsiniz. Kullanıcı modeli açmaya veya kaydetmeye çalıştığında kısıtlama çağrılır ve ayrıca el ile çağrılabilir. Kısıtlama başarısız olursa, tanımladığınız bir hata iletisi hata penceresine eklenir. Bu kısıtlamaları bir Visual Studio Tümleştirme Uzantısı 'na ([VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
+Modelin belirttiğiniz bir koşulu karşılayıp karşılamadığını test eden doğrulama kısıtlamalarını tanımlayabilirsiniz. Örneğin, bir kullanıcının devralma ilişkilerinin döngüsünü oluşturmadığından emin olmak için bir kısıtlama tanımlayabilirsiniz. Kullanıcı modeli açmaya veya kaydetmeye çalıştığında kısıtlama çağrılır ve ayrıca el ile çağrılabilir. Kısıtlama başarısız olursa, tanımladığınız bir hata iletisi hata penceresine eklenir. Bu kısıtlamaları bir Visual Studio Tümleştirme Uzantısı 'na ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
 
  Ayrıca, modeli veritabanları gibi dış kaynaklara karşı doğrulayan kısıtlamalar tanımlayabilirsiniz. Program kodunu bir katman diyagramına karşı doğrulamak istiyorsanız, bkz. [Katman diyagramlarına özel mimari doğrulaması ekleme](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
 
@@ -63,7 +63,7 @@ Modelin belirttiğiniz bir koşulu karşılayıp karşılamadığını test eden
 
 4. F5 'e basarak kısıtlamalarınızı test edin. Daha fazla bilgi için bkz. [doğrulama kısıtlaması yürütme](#Executing).
 
-5. Projeniz tarafından oluşturulan dosya **sepeti \\ \* \\ \*. vsix** dosyasını kopyalayarak başka bir bilgisayara menü komutunu yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
+5. Projeniz tarafından oluşturulan dosya **sepeti\\\*\\\*. vsix** dosyasını kopyalayarak başka bir bilgisayara menü komutunu yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
 
    Diğer **. cs** dosyalarını eklediğinizde, genellikle aşağıdaki `using` deyimlerini yapmanız gerekir:
 
@@ -105,11 +105,11 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     3. **Varlıklar** sekmesinde **Yeni**' yi seçin ve iletişim kutusunda, şunu ayarlayın:
 
-         @No__t_1**MEF bileşeni** **yazın**
+          = **MEF bileşeni** **yazın**
 
-         **Kaynak**  = **geçerli çözümdeki bir proje**
+         **Kaynak** = **geçerli çözümdeki bir proje**
 
-         *Sınıf kitaplığı projenizden* **Proje**  = 
+         *Sınıf kitaplığı projenizden* **Proje** = 
 
 #### <a name="to-define-the-validation-class"></a>Doğrulama sınıfını tanımlamak için
 
@@ -191,7 +191,7 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - Birden çok projeniz varsa, VSıX projesinin çözümün başlangıç projesi olarak ayarlandığından emin olun.
 
-    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tam yol adı olduğundan emin olun:
+    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]tam yol adı olduğundan emin olun:
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -265,7 +265,7 @@ public void ValidateSomething
  İkinci parametrede farklı türlerle istediğiniz kadar çok doğrulama yöntemi tanımlayabilirsiniz. Doğrulama çağrıldığında her bir doğrulama yöntemi parametre türüne uyan her model öğesinde çağrılır.
 
 ### <a name="reporting-validation-errors"></a>Doğrulama hatalarını bildirme
- Bir hata raporu oluşturmak için, `ValidationContext` tarafından sunulan yöntemleri kullanın:
+ Bir hata raporu oluşturmak için, `ValidationContext`tarafından sunulan yöntemleri kullanın:
 
  `context.LogError("error string", errorCode, elementsWithError);`
 
@@ -280,11 +280,11 @@ public void ValidateSomething
 ## <a name="how-validation-methods-are-applied"></a>Doğrulama yöntemlerinin uygulanma şekli
  , Bir sınıfın öznitelikleri ve bir işlemin parametreleri gibi ilişkiler ve daha büyük öğelerin parçaları dahil olmak üzere modeldeki her öğeye uygulanır.
 
- Her doğrulama yöntemi, ikinci parametresindeki türe uyan her öğeye uygulanır. Diğer bir deyişle, örneğin, ikinci bir parametresi `IUseCase` bir doğrulama yöntemi ve onun üst türü `IElement` ile başka bir şekilde tanımlarsanız, bu yöntemlerin her ikisi de modeldeki her kullanım örneğine uygulanır.
+ Her doğrulama yöntemi, ikinci parametresindeki türe uyan her öğeye uygulanır. Diğer bir deyişle, örneğin, ikinci bir parametresi `IUseCase` bir doğrulama yöntemi ve onun üst türü `IElement`ile başka bir şekilde tanımlarsanız, bu yöntemlerin her ikisi de modeldeki her kullanım örneğine uygulanır.
 
  Türlerin hiyerarşisi [UML model öğe türlerinde](../modeling/uml-model-element-types.md)özetlenir.
 
- Ayrıca, öğelere aşağıdaki ilişkileri uygulayarak erişebilirsiniz. Örneğin, `IClass` bir doğrulama yöntemi tanımlamanız durumunda, kendi özelliklerine sahip olabilirsiniz:
+ Ayrıca, öğelere aşağıdaki ilişkileri uygulayarak erişebilirsiniz. Örneğin, `IClass`bir doğrulama yöntemi tanımlamanız durumunda, kendi özelliklerine sahip olabilirsiniz:
 
 ```
 public void ValidateTypeName(ValidationContext context, IClass c)
@@ -304,7 +304,7 @@ public void ValidateTypeName(ValidationContext context, IClass c)
 ```
 
 ### <a name="creating-a-validation-method-on-the-model"></a>Modelde doğrulama yöntemi oluşturma
- Her doğrulama çalışması sırasında bir doğrulama yönteminin tam olarak bir kez çağrıldığından emin olmak istiyorsanız, `IModel` doğrulayabilirsiniz:
+ Her doğrulama çalışması sırasında bir doğrulama yönteminin tam olarak bir kez çağrıldığından emin olmak istiyorsanız, `IModel`doğrulayabilirsiniz:
 
 ```
 using Microsoft.VisualStudio.Uml.AuxiliaryConstructs; ...
@@ -342,7 +342,7 @@ public void ValidateModel(ValidationContext context, IModel model)
     { ...
 ```
 
- Bir hatayı günlüğe kaydetmek için şeklin gösterdiği model öğesini edinmeniz gerekir, çünkü `LogError` bir şekil geçiremezsiniz:
+ Bir hatayı günlüğe kaydetmek için şeklin gösterdiği model öğesini edinmeniz gerekir, çünkü `LogError`bir şekil geçiremezsiniz:
 
 ```
 IUseCase useCase = useCaseShape.Element;
@@ -372,7 +372,7 @@ context.LogError(... , usecase);
 
     1. **Çözüm Gezgini**, VSIX projesinin kısayol menüsünde **klasörü Windows Gezgini 'nde aç**' ı seçin.
 
-    2. Dosya **bin \\ \* bulun \\** _yourproject_ **. vsix**
+    2. Dosya **bin\\\*bulun \\** _yourproject_ **. vsix**
 
 2. **. Vsix** dosyasını, uzantıyı yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
 
@@ -382,7 +382,7 @@ context.LogError(... , usecase);
 
      **Visual Studio Uzantı Yükleyicisi** açılır ve uzantıyı yüklüyor.
 
-4. @No__t_0 başlatın veya yeniden başlatın.
+4. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]başlatın veya yeniden başlatın.
 
 #### <a name="to-uninstall-an-extension"></a>Bir uzantıyı kaldırmak için
 
@@ -392,9 +392,9 @@ context.LogError(... , usecase);
 
 3. Uzantıyı seçin ve ardından **Kaldır**' ı seçin.
 
-   Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı şu konumda silerek uzantıyı kaldırabilirsiniz: *% LocalAppData%* genellikle *DriveName*: \Users \\*UserName*\AppData\Local:
+   Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı şu konumda silerek uzantıyı kaldırabilirsiniz: *% LocalAppData%* genellikle *DriveName*: \Users\\*UserName*\AppData\Local:
 
-   *% LocalAppData%* **\microsoft\visualstudio \\ [sürüm] \Extensions**
+   *% LocalAppData%* **\microsoft\visualstudio\\[sürüm] \Extensions**
 
 ## <a name="Example"></a>Örneğinde
  Bu örnek, öğeler arasındaki bağımlılık ilişkisindeki döngüleri bulur.

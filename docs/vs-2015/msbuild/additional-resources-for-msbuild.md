@@ -16,29 +16,29 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4ea89855a83cdf01255cacc7c8c639c6fcfe1cc4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1d82531bcde6e0a03485ac6bf77965b5c5744f23
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68187072"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300444"
 ---
 # <a name="additional-resources-for-msbuild"></a>MSBuild için Ek Kaynaklar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Aşağıdaki Web siteleri ve forumlar ile çalışırken sık sorulan soruların yanıtlarını bulmanıza yardımcı olabilir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
+Aşağıdaki Web siteleri ve forumları, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]çalışırken sık sorulan soruların yanıtlarını bulmanıza yardımcı olabilir.  
   
 ## <a name="microsoft-resources"></a>Microsoft Kaynakları  
   
 ### <a name="on-the-web"></a>Web'de  
- [MSBuild Channel 9 Web sitesi](http://go.microsoft.com/fwlink/?LinkId=243092)  
- Hakkında bilgi içeren [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ve diğer bağlantılar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Web siteleri.  
+ [MSBuild Channel 9 Web sitesi](https://go.microsoft.com/fwlink/?LinkId=243092)  
+ Web üzerinde [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ve diğer [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] sitelerin bağlantılarıyla ilgili bilgiler içerir.  
   
- [MSBuild ekip blogu](http://go.microsoft.com/fwlink/?LinkId=65846)  
- Bilgi ve bağlantılar tarafından yazılan güncellemelerin içeren [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ürün takımı.  
+ [MSBuild ekip blogu](https://go.microsoft.com/fwlink/?LinkId=65846)  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ürün ekibi tarafından yazılan bilgileri, bağlantıları ve güncelleştirmeleri içerir.  
   
- [Visual Studio MSBuild forumuna](http://go.microsoft.com/fwlink/?LinkId=48931)  
- Topluluk Forumu adanmış [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
+ [Visual Studio MSBuild Forumu](https://go.microsoft.com/fwlink/?LinkId=48931)  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]için ayrılmış bir topluluk Forumu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MSBuild](msbuild.md)   

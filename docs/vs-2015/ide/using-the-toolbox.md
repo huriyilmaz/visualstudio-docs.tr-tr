@@ -27,17 +27,17 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 49f5d1d0cef7ec4d5a6f8ab61c785ea01f77d24b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba8a37ac9e049455ffe19314dee0e228c3c14c97
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652664"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295602"
 ---
 # <a name="using-the-toolbox"></a>Araç Kutusunu Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Projenize denetim ve diğer öğeleri eklemek için araç kutusunu kullanabilirsiniz. Kullandığınız tasarımcı yüzeyine farklı denetimleri sürükleyip bırakabilir ve denetimleri yeniden boyutlandırabilir ve yerleştirebilirsiniz.
+Projenize denetim ve diğer öğeleri eklemek için araç kutusunu kullanabilirsiniz. Kullanmakta olduğunuz ve yeniden boyutlandırma ve yerleştirmenize Tasarımcı yüzeyine başka denetimler sürükleyip bırakabilirsiniz.
 
  Araç kutusu, bir XAML dosyasının Tasarımcı görünümü gibi tasarımcı görünümleriyle birlikte görüntülenir. Araç kutusu yalnızca geçerli tasarımcıda kullanılabilecek denetimleri görüntüler.
 
@@ -50,11 +50,11 @@ Projenize denetim ve diğer öğeleri eklemek için araç kutusunu kullanabilirs
 
 - **Öğeyi yeniden adlandır** -seçili öğeyi yeniden adlandırır.
 
-- **Tümünü göster** -tüm olası denetimleri gösterir (yalnızca geçerli Tasarımcı için geçerli olanları değil).
+- **Tümünü Göster** -tüm olası denetimleri (geçerli Tasarımcı için geçerli olanları değil) gösterir.
 
-- **Liste görünümü** -denetimleri dikey bir listede gösterir. İşaretlenmezse, denetimler yatay olarak görüntülenir.
+- **Liste görünümü** -denetimleri dikey listesini gösterir. Denetimleri yatay olarak işaretlenmemişse, görünür.
 
-- **Öğeleri seç** - **araç**kutusunda görünen öğeleri belirleyebilmeniz Için **araç kutusu öğelerini Seç** iletişim kutusunu açar. Onay kutusunu seçerek veya temizleyerek bir öğeyi gösterebilir veya gizleyebilirsiniz.
+- **Seç öğeleri** -açılır **araç kutusu öğelerini Seç** iletişim kutusunda görünen öğeler belirtebilirsiniz böylece **araç kutusu**. Göstermek veya seçerek ya da onay kutusunu temizleyerek bir öğeyi gizler.
 
 - **Öğeleri alfabetik olarak Sırala** -öğeleri ada göre sıralar.
 
@@ -62,9 +62,9 @@ Projenize denetim ve diğer öğeleri eklemek için araç kutusunu kullanabilirs
 
 - **Sekme Ekle** -yeni bir araç kutusu sekmesi ekler.
 
-- **Yukarı taşı** -seçili öğeyi yukarı taşır.
+- **Yukarı Taşı** -seçili öğeyi yukarı taşır.
 
-- **Aşağı taşı** -seçili öğeyi aşağı taşır.
+- **Aşağı Taşı** -seçili öğeyi aşağı taşır.
 
 ## <a name="creating-and-distributing-custom-toolbox-controls"></a>Özel araç kutusu denetimleri oluşturma ve dağıtma
- Visual Basic veya görselde C#özel bir araç kutusu denetimi oluşturabilirsiniz ve [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) ya da [Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md)dayalı bir proje şablonuyla başlayabilirsiniz. Daha sonra denetiminizi, [araç kutusu denetimleri yükleyicisi](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx)' ni kullanarak takım mateklarına dağıtabilir veya Web 'de yayımlayabilirsiniz.
+ Visual Basic veya görselde C#özel bir araç kutusu denetimi oluşturabilirsiniz ve [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) ya da [Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md)dayalı bir proje şablonuyla başlayabilirsiniz. Daha sonra denetiminizi, [araç kutusu denetimleri yükleyicisi](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)' ni kullanarak takım mateklarına dağıtabilir veya Web 'de yayımlayabilirsiniz.

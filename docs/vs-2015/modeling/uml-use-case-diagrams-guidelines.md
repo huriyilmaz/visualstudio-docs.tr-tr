@@ -15,19 +15,19 @@ caps.latest.revision: 38
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2d3434236908771cbc2149e766b841e7bcf4cb4e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7c9ccd5285f9a2744704c0ee13094a1dac31c53b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667838"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302840"
 ---
 # <a name="uml-use-case-diagrams-guidelines"></a>UML Kullanım Durumu Diyagramları: Yönergeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onunla neler yapabileceğini özetlemek için bir *kullanım durumu diyagramı* çizebilirsiniz. UML Kullanım örneği diyagramı oluşturmak için **mimari** menüsünde **Yeni UML veya katman diyagramı**' na tıklayın.
 
- Video gösterimi için bkz. [özellikleri kullanım örneklerine düzenleme](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases/).
+ Video gösterimi için bkz. [özellikleri kullanım örneklerine düzenleme](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-2-organizing-features-into-use-cases).
 
  Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -170,7 +170,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
  ![Birçok çokluğa çok çokluğu gösteren kullanım örneği](../modeling/media/uml-ucguidemulti2.png "UML_UCGuideMulti2")
 
-- Aynı sınıfın kaç aktörlerin tek bir kullanım durumunun tek bir yerinde bir parçasını ele geçirmesine olanak sağlamak için, ilişkilendirmenin aktör sonundaki çokluğu **1.. \*** olarak ayarlayın.
+- Aynı sınıfın kaç aktörlerin tek bir kullanım durumunun tek bir yerinde bir parçasını ele geçirmesine olanak sağlamak için, ilişkilendirmenin aktör sonundaki çokluğu **1..\*** olarak ayarlayın.
 
    Çizimde, bir veya daha fazla restoran aynı yemek siparişini yerine getirmek için bir parçası alabilir.
 
@@ -190,7 +190,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
    - **1** bu rolün tam olarak bir örneğinin her bir bağlantıya katıldığı durum.
 
-   - **1..** bu rolün bir veya daha fazla örneğinin her bir bağlantıya katılmasını sağlamak için \*.
+   - **1..** bu rolün bir veya daha fazla örneğinin her bir bağlantıya katılmasını sağlamak için\*.
 
    - **0.. 1** katılımın isteğe bağlı olması durumunda.
 
@@ -270,7 +270,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 #### <a name="to-link-to-a-shared-document-onenote-element-or-web-page"></a>Paylaşılan bir belgeye, OneNote öğesine veya Web sayfasına bağlamak için
 
-1. Paylaşılan öğenin URL 'sini alın. Bu, örneğin, ' \\ \\ ' veya bir Web sayfası veya SharePoint URL 'SI ' http://' ile başlayan bir ağ dosyası yolu ya da ' OneNote: ' başlangıcında bir OneNote bölümü, sayfası veya paragrafı bağlantısı olabilir.
+1. Paylaşılan öğenin URL 'sini alın. Bu, örneğin, '\\\\' veya bir Web sayfası veya SharePoint URL 'SI ' http://' ile başlayan bir ağ dosyası yolu ya da ' OneNote: ' başlangıcında bir OneNote bölümü, sayfası veya paragrafı bağlantısı olabilir.
 
 2. Araç kutusunda **yapıt** ' ye ve ardından kullanım durumu diyagramında ' a tıklayın.
 
@@ -280,7 +280,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 > Bir yapıya çift tıklayarak, bağlandığı diyagramı veya belgeyi açabilirsiniz.
 
 ### <a name="linking-use-cases-to-work-items"></a>Kullanım örneklerini iş öğelerine bağlama
- Projeniz [!INCLUDE[vstsTfsRosarioLong](../includes/vststfsrosariolong-md.md)] kullanıyorsa ve [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] sahipseniz, her kullanım örneğini [!INCLUDE[esprfound](../includes/esprfound-md.md)] bir iş öğesine bağlayabilirsiniz. Bu bağlantıları nasıl yapacağınızı öğrenmek için bkz. [bağlantı modeli öğeleri ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).
+ Projeniz [!INCLUDE[vstsTfsRosarioLong](../includes/vststfsrosariolong-md.md)] kullanıyorsa ve [!INCLUDE[esprtfc](../includes/esprtfc-md.md)]sahipseniz, her kullanım örneğini [!INCLUDE[esprfound](../includes/esprfound-md.md)]bir iş öğesine bağlayabilirsiniz. Bu bağlantıları nasıl yapacağınızı öğrenmek için bkz. [bağlantı modeli öğeleri ve iş öğeleri](../modeling/link-model-elements-and-work-items.md).
 
  Bu şunları yapmanızı sağlar:
 
@@ -420,7 +420,7 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
 
 3. İçeriğini ayarlamak için mevcut kullanım çalışmalarını alt sistem içine veya dışına sürükleyin.
 
-   \- veya-
+   \- veya -
 
    Doğrudan bir alt sistemde yeni bir kullanım durumu oluşturmak için, araç kutusunda **kullanım örneği** ' ne tıklayın ve ardından alt sistem içine tıklayın.
 
@@ -441,4 +441,4 @@ Visual Studio 'da, uygulamanızı veya sisteminizi kimin kullanacağını ve onu
  ![Alt sistemler bir sistemin farklı sürümlerini gösterir](../modeling/media/uml-ucguidesystem.png "UML_UCGuideSystem")
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md) [UML sıralı DIYAGRAMLARı: yönergeler](../modeling/uml-sequence-diagrams-guidelines.md) [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) UML [kullanım örneği diyagramları: başvuru](../modeling/uml-use-case-diagrams-reference.md) [UML sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : [başvuru UML Etkinlik diyagramları: yönergeler](../modeling/uml-activity-diagrams-guidelines.md) [videosu: özellikleri kullanım örneklerine düzenleme](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases/)
+ [Kullanıcı gereksinimlerini modelleme](../modeling/model-user-requirements.md) [UML sıralı DIYAGRAMLARı: yönergeler](../modeling/uml-sequence-diagrams-guidelines.md) [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML Kullanım örneği diyagramları: başvuru](../modeling/uml-use-case-diagrams-reference.md) [UML sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru UML [etkinlik diyagramları: yönergeler](../modeling/uml-activity-diagrams-guidelines.md) [video: özellikleri kullanım örneklerine düzenleme](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-2-organizing-features-into-use-cases)

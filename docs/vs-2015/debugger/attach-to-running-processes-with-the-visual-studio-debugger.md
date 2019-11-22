@@ -29,12 +29,12 @@ caps.latest.revision: 62
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 15b9921514f76d788430c1eda66603e9fc446361
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 03cd890802e5563ce2daeb78438c56f4452d74f0
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67891021"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299510"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio Hata Ayıklayıcısı ile Çalıştırma İşlemleri İliştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -65,7 +65,7 @@ Bu özellik, bir yerel veya uzak bilgisayarda çalışan uygulamaların hata ay�
 
     2. İçinde **kod türünü seç** iletişim kutusu, tıklayın **bu tür kodlarda hata ayıklama** ve ayıklanacak türleri seçin.
 
-    3. **Tamam**'ı tıklatın.
+    3. {1&gt;Tamam&lt;1} düğmesini tıklatın.
 
 4. Tıklayın **ekleme**.
 
@@ -87,7 +87,7 @@ Bu özellik, bir yerel veya uzak bilgisayarda çalışan uygulamaların hata ay�
    1. Adı yazın **niteleyicisi** liste kutusu.
 
       > [!NOTE]
-      > Sonraki adımlarda, uzak bilgisayar adını kullanarak bağlanamazsa, IP adresini kullanın. (Bağlantı noktası numarasını otomatik olarak işlem seçtikten sonra görünebilir. Da onu el ile girebilirsiniz. Aşağıdaki çizimde, 4020 uzaktan hata ayıklayıcı için varsayılan bağlantı noktası var.)
+      > Daha sonraki adımlarda, uzak bilgisayar adını kullanarak bağlanamıyorsanız IP adresini kullanın. (Bağlantı noktası numarasını otomatik olarak işlem seçtikten sonra görünebilir. Da onu el ile girebilirsiniz. Aşağıdaki çizimde, 4020 uzaktan hata ayıklayıcı için varsayılan bağlantı noktası var.)
 
    2. Eklenmiş açılan oku tıklatın **niteleyicisi** liste kutusu ve aşağı açılan listeden bilgisayar adını seçin.
 
@@ -107,11 +107,11 @@ Bu özellik, bir yerel veya uzak bilgisayarda çalışan uygulamaların hata ay�
 
 ## <a name="additional-info"></a>Ek bilgi
 
-Birden çok programları için hata ayıklama, ancak herhangi bir anda yalnızca bir programı hata ayıklayıcıda etkin eklenebilir. Etkin programı ayarlayabilirsiniz **hata ayıklama konumu** araç veya **işlemleri** penceresi. Daha fazla bilgi için [nasıl yapılır: Geçerli programı ayarlama](https://msdn.microsoft.com/7e1d7fa5-0e40-44cf-8c41-d3dba31c969e).
+Birden çok programları için hata ayıklama, ancak herhangi bir anda yalnızca bir programı hata ayıklayıcıda etkin eklenebilir. Etkin programı ayarlayabilirsiniz **hata ayıklama konumu** araç veya **işlemleri** penceresi. Daha fazla bilgi için [nasıl yapılır: geçerli programı ayarlama](https://msdn.microsoft.com/7e1d7fa5-0e40-44cf-8c41-d3dba31c969e).
 
-Güvenilmeyen bir kullanıcı tarafından sahip olunan bir işlem eklemeye çalışırsanız, bir güvenlik uyarısı iletişim kutusu onayı görünecektir. Daha fazla bilgi için [güvenlik uyarısı: Güvenilmeyen bir kullanıcının sahip olduğu işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler kuşkulu görünüyorsa ya da emin değilseniz, bu işleme eklemeyin](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015).
+Güvenilmeyen bir kullanıcı tarafından sahip olunan bir işlem eklemeye çalışırsanız, bir güvenlik uyarısı iletişim kutusu onayı görünecektir. Daha fazla bilgi için bkz [. güvenlik uyarısı: güvenilmeyen bir kullanıcının sahip olduğu bir Işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015)eklemeyin.
 
-Bazı durumlarda, bir Uzak Masaüstü (Terminal Hizmetleri) oturumunda hata ayıkladığınızda **kullanılabilir işlemler** listesi kullanılabilir tüm işlemleri görüntülemez. Visual Studio sınırlı bir kullanıcı hesabı olan bir kullanıcı çalıştırıyorsanız, **kullanılabilir işlemler** Hizmetleri ve w3wp.exe dahil olmak üzere diğer sunucu işlemleri için kullanılan oturum 0'da çalışan işlemler listesi gösterilmez. Çalıştırarak sorunu çözebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir yönetici hesabı altında ya da çalıştırarak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Terminal Hizmetleri oturumu yerine sunucu konsolundan. Bu geçici çözümlerden biri Mümkünse, üçüncü seçenek olmasına çalıştırarak işleme iliştirmek `vsjitdebugger.exe -p` *ProcessId* Windows komut satırından. Tlist.exe kullanarak işlem kimliğini belirleyebilirsiniz. Tlist.exe'yi edinmek için indirme ve hata ayıklama araçları için Windows, kullanılabilir yükleme [WDK ve WinDbg yüklemeleri](http://go.microsoft.com/fwlink/?LinkId=168279).
+Bazı durumlarda, bir Uzak Masaüstü (Terminal Hizmetleri) oturumunda hata ayıkladığınızda **kullanılabilir işlemler** listesi kullanılabilir tüm işlemleri görüntülemez. Visual Studio sınırlı bir kullanıcı hesabı olan bir kullanıcı çalıştırıyorsanız, **kullanılabilir işlemler** Hizmetleri ve w3wp.exe dahil olmak üzere diğer sunucu işlemleri için kullanılan oturum 0'da çalışan işlemler listesi gösterilmez. Çalıştırarak sorunu çözebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir yönetici hesabı altında ya da çalıştırarak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Terminal Hizmetleri oturumu yerine sunucu konsolundan. Bu geçici çözümlerden biri Mümkünse, üçüncü seçenek olmasına çalıştırarak işleme iliştirmek `vsjitdebugger.exe -p` *ProcessId* Windows komut satırından. Tlist.exe kullanarak işlem kimliğini belirleyebilirsiniz. Tlist.exe'yi edinmek için indirme ve hata ayıklama araçları için Windows, kullanılabilir yükleme [WDK ve WinDbg yüklemeleri](https://go.microsoft.com/fwlink/?LinkId=168279).
 
 ## <a name="BKMK_Scenarios"></a> Hata ayıklama senaryoları
 
@@ -170,7 +170,7 @@ Uygulamayı doğru sembol dosyaları varsa bazı yerel hata ayıklama senaryolar
 
    3. İçinde **kod türünü seç** Seç iletişim kutusunda **bu tür kodlarda hata ayıklama** ve eklenemeye kod türü. Diğer kodları temizleyin.
 
-   4. **Tamam**'ı tıklatın. **Kod türünü seç** iletişim kutusu kapanır.
+   4. {1&gt;Tamam&lt;1} düğmesini tıklatın. **Kod türünü seç** iletişim kutusu kapanır.
 
    5. İçinde **iliştirme** iletişim kutusu, tıklayın **iliştirme**.
 

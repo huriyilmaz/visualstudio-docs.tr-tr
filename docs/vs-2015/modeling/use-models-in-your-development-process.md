@@ -11,17 +11,17 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3bc95e74c9e80596ea46efa42abce5c4ed48fa8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5d5284bb163f474d67324c395a4342ccef6f8561
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659432"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298256"
 ---
 # <a name="use-models-in-your-development-process"></a>Geliştirme sürecinizde modelleri kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirmenize yardımcı olması için bir model kullanabilirsiniz. Bir model sisteminizin çalıştığı dünyayı görselleştirmenize, kullanıcıların ihtiyaçlarını açıklığa kavuşturmanıza, sisteminizin mimarisini tanımlamanıza, kodu analiz etmenize ve kodunuzun gereksinimleri karşıladığından emin olmanıza yardımcı olabilir. Bkz. [Channel 9 videosu: modelleme aracılığıyla mimariyi geliştirme](http://go.microsoft.com/fwlink/?LinkID=252078).
+Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirmenize yardımcı olması için bir model kullanabilirsiniz. Bir model sisteminizin çalıştığı dünyayı görselleştirmenize, kullanıcıların ihtiyaçlarını açıklığa kavuşturmanıza, sisteminizin mimarisini tanımlamanıza, kodu analiz etmenize ve kodunuzun gereksinimleri karşıladığından emin olmanıza yardımcı olabilir. Bkz. [Channel 9 videosu: modelleme aracılığıyla mimariyi geliştirme](https://go.microsoft.com/fwlink/?LinkID=252078).
 
  Hangi Visual Studio sürümlerinin her model türünü desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -48,7 +48,7 @@ Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirm
  Her iki durumda da bir model oluşturmak, tutarsızlıklar ve belirsizlikleri açısından önemli bir azalmaya neden olur. Farklı hissedarlar genellikle sistemin çalıştığı iş dünyasının farklı yönlerini kullanır ve farklı geliştiriciler sistemin nasıl çalıştığına ilişkin farklı anlara sahiptir. Bir tartışmanın odağı olarak bir modelin kullanılması genellikle bu farklılıkları açığa çıkarır. Tutarsızlıkları azaltmak için model kullanma hakkında daha fazla bilgi için bkz. [model Kullanıcı gereksinimleri](../modeling/model-user-requirements.md).
 
 ### <a name="use-models-with-other-artifacts"></a>Diğer yapıtlarla modeller kullanma
- Bir model, bir gereksinim belirtimi veya mimari tarafından değil. Bu nesnelerin bazı yönlerini daha net bir şekilde ifade etmek için bir araçtır, ancak yazılım tasarımı sırasında gereken kavramların hepsi ifade edilemez. Bu nedenle, modeller, OneNote sayfaları veya paragrafları, Microsoft Office belgeler, [!INCLUDE[esprfound](../includes/esprfound-md.md)] iş öğeleri veya proje odası duvarındaki yapışkan notlar gibi diğer iletişim araçları ile birlikte kullanılmalıdır. Son öğeden ayrı olarak, tüm bu nesne türleri modelin öğeler bölümlerine bağlanabilir.
+ Bir model, bir gereksinim belirtimi veya mimari tarafından değil. Bu nesnelerin bazı yönlerini daha net bir şekilde ifade etmek için bir araçtır, ancak yazılım tasarımı sırasında gereken kavramların hepsi ifade edilemez. Bu nedenle, modeller, OneNote sayfaları veya paragrafları, Microsoft Office belgeler, [!INCLUDE[esprfound](../includes/esprfound-md.md)]iş öğeleri veya proje odası duvarındaki yapışkan notlar gibi diğer iletişim araçları ile birlikte kullanılmalıdır. Son öğeden ayrı olarak, tüm bu nesne türleri modelin öğeler bölümlerine bağlanabilir.
 
  Genellikle modeller ile birlikte kullanılan belirtim diğer yönleri şunlardır. Projenizin ölçek ve tarzına bağlı olarak, bu yönlerden birkaçını kullanabilir veya hiç hiçbirini kullanamazsınız:
 
@@ -86,7 +86,7 @@ Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirm
 
 - Her yinelemenin sonunda, bir sonraki yinelemede geliştirilecek gereksinimleri veya kullanıcı hikayelerini ayrıntılı olarak tanımlamak için bir Requirements Workshop ' i tutun. Geliştiricilere ve sistem sınayıcılarına ve önceliklere karar veren kullanıcıları ve iş paydaşlarını davet edebilirsiniz. 2 Haftalık yineleme için gereksinimlerin tanımlanması üç saate izin verir.
 
-- Atölyenin hedefi, herkesin bir sonraki yinelemenin sonuna kadar neler yapılacağını kabul etmesi içindir. Gereksinimleri açıklığa kavuşturmanıza yardımcı olmak için, araçlardan biri olarak modeller kullanın. Atölyenin çıktısı bir yineleme biriktirme listesidir: diğer bir deyişle, [!INCLUDE[TCMext](../includes/tcmext-md.md)] [!INCLUDE[esprfound](../includes/esprfound-md.md)] ve test paketlerindeki geliştirme görevlerinin bir listesidir.
+- Atölyenin hedefi, herkesin bir sonraki yinelemenin sonuna kadar neler yapılacağını kabul etmesi içindir. Gereksinimleri açıklığa kavuşturmanıza yardımcı olmak için, araçlardan biri olarak modeller kullanın. Atölyenin çıktısı bir yineleme biriktirme listesidir: diğer bir deyişle, [!INCLUDE[TCMext](../includes/tcmext-md.md)][!INCLUDE[esprfound](../includes/esprfound-md.md)] ve test paketlerindeki geliştirme görevlerinin bir listesidir.
 
 - Gereksinimler atölyesininde, geliştirme görevlerinin tahminlerini belirlemeniz için ihtiyaç duyduğunuz tasarımı yalnızca bir şekilde tartışın. Aksi takdirde, kullanıcıların doğrudan yaşayabilecek sistem davranışına ilişkin tartışmayı saklayın. Gereksinimler modelini mimari modelden ayrı tutun.
 
@@ -130,12 +130,12 @@ Visual Studio 'da bir sistem, uygulama veya bileşeni anlamanıza ve değiştirm
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Köprü**|
 |------------------|---------------|
-|**Videolar**|![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo") [: nasıl yapılır videoları: UML modellerini ve diyagramlarını oluşturma ve kullanma (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: Visual STUDIO 2010 ile UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![video MSDN bağlantısı](../data-tools/media/playvideo.gif "PlayVideo ") [nasıl yapılır: UML araçları ve genişletilebilirliği (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](http://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](http://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio Mimari Araç Kullanımı Kılavuzu](../modeling/visual-studio-architecture-tooling-guidance.md)|
+|**Videolar**|![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo") [: nasıl yapılır videoları: UML modellerini ve diyagramlarını oluşturma ve kullanma (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: Visual STUDIO 2010 ile UML](https://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![video MSDN bağlantısı](../data-tools/media/playvideo.gif "PlayVideo ") [nasıl yapılır: UML araçları ve genişletilebilirliği (Visual Studio 2010 Ultimate)](https://go.microsoft.com/fwlink/?LinkID=214467)|
+|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://go.microsoft.com/fwlink/?LinkID=201340)|
+|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](https://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio Mimari Araç Kullanımı Kılavuzu](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Çevik geliştirme içinde modelleri kullanma](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f) [uygulama](../modeling/create-models-for-your-app.md) [modelleriniz için model oluşturma kullanıcı gereksinimleri](../modeling/model-user-requirements.md) [modeli uygulamanızın mimarisi](../modeling/model-your-app-s-architecture.md) , [modelleme çözümünüz model yapısından](../modeling/structure-your-modeling-solution.md) [Test geliştirme](../modeling/develop-tests-from-a-model.md)

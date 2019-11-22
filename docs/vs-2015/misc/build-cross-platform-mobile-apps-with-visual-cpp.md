@@ -9,17 +9,17 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: jillfra
-ms.openlocfilehash: 860ca971d8c3e42ef6d690c7f55b3ce2716b1c4e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 60dbeacbbb4b4e169dd84d0018a0c078ccca7def
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946823"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299364"
 ---
-# <a name="build-cross-platform-mobile-apps-with-visual-c"></a>Visual C++ ile platformlar arası mobil uygulamalar oluşturun
-Platformlar arası Mobil Geliştirme için Visual C++ kullanarak Android, iOS ve Windows cihazları için platformlar arası kod oluşturabilirsiniz. Bu isteğe bağlı kod iOS, Android ve Visual C++ kullanarak Windows için platformlar arası geliştirmeyi sağlayan Visual Studio 2015'te kullanılabilen bir özelliktir.  
+# <a name="build-cross-platform-mobile-apps-with-visual-c"></a>Visual ile platformlar arası mobil uygulamalar oluşturunC++
+Platformlar arası mobil geliştirme için Visual C++ kullanarak Android, IOS ve Windows cihazları için platformlar arası kod oluşturabilirsiniz. Bu, Visual Studio 2015 ' de sunulan ve Visual C++Studio kullanarak IOS, Android ve Windows için kodun platformlar arası geliştirilmesini sağlayan isteğe bağlı bir özelliktir.  
   
- Yükleme yönergeleri ve kod örnekleri için bkz. [platformlar arası Mobil Geliştirme için Visual C++](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md).  
+ Yükleme yönergeleri ve kod örnekleri için bkz. [platformlar C++ arası mobil geliştirme için görsel](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio 2015'i indirin](http://go.microsoft.com/fwlink/?linkid=517106)
+ [Visual Studio 2015 'yi indirin](https://go.microsoft.com/fwlink/?linkid=517106)

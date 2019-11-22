@@ -11,30 +11,30 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c09c4588bb1fcd0aa7487a6896d2fc286253e198
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2fa11cd0b29f3b8ee6008b8c0b3369b16812f0e5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606781"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302790"
 ---
 # <a name="using-the-legacy-workflow-designer"></a>Eski İş Akışı Tasarımcısını Kullanma
-@No__t_1 tarafından sunulan eski [!INCLUDE[wfd2](../includes/wfd2-md.md)], [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek için kullanılabilir.
+[!INCLUDE[vs2010](../includes/vs2010-md.md)] tarafından sunulan eski [!INCLUDE[wfd2](../includes/wfd2-md.md)], [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflemek için kullanılabilir.
 
- **Yeni proje** penceresinin en üstündeki açılan listede **.NET Framework 3,0** seçeneği veya **.NET Framework 3,5** seçeneği belirlenerek erişilir. @No__t_0 varsayılan seçeneği, [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] hedefleyen [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar oluşturmak için kullanılan **.NET Framework 4** ' tir.
+ **Yeni proje** penceresinin en üstündeki açılan listede **.NET Framework 3,0** seçeneği veya **.NET Framework 3,5** seçeneği belirlenerek erişilir. [!INCLUDE[vs2010](../includes/vs2010-md.md)] varsayılan seçeneği, [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)]hedefleyen [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar oluşturmak için kullanılan **.NET Framework 4** ' tir.
 
- @No__t_0 tanıdık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Kullanıcı arabirimini kullanarak [!INCLUDE[wf](../includes/wf-md.md)] uygulamaları grafiksel olarak oluşturmak için bir yol sağlar. [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar, etkinlik olarak adlandırılan iş akışı işlemi adımlarından oluşur. Bir iş akışı oluşturmak için, ilgili etkinlik tasarımcılarını **araç kutusu** 'ndan tasarım yüzeyine sürükleyerek tasarım yüzeyine etkinlik oluşturun.
+ [!INCLUDE[wfd2](../includes/wfd2-md.md)] tanıdık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Kullanıcı arabirimini kullanarak [!INCLUDE[wf](../includes/wf-md.md)] uygulamaları grafiksel olarak oluşturmak için bir yol sağlar. [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar, etkinlik olarak adlandırılan iş akışı işlemi adımlarından oluşur. Bir iş akışı oluşturmak için, ilgili etkinlik tasarımcılarını **araç kutusu** 'ndan tasarım yüzeyine sürükleyerek tasarım yüzeyine etkinlik oluşturun.
 
  Aşağıdaki tabloda Windows Workflow Foundation için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] temel özellikleri listelenmektedir.
 
 |Özellik|Açıklama|
 |-------------|-----------------|
 |Etkinlik sürükle ve bırak|Bir iş akışı oluşturmak için **araç kutusundaki** etkinlikleri tasarım yüzeyine sürükleyin.|
-|Özellik Tarayıcısı|@No__t_1 içindeki standart **Özellikler** penceresi, bir etkinliğin özelliklerini yapılandırmak için kullanılır.|
+|Özellik Tarayıcısı|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] içindeki standart **Özellikler** penceresi, bir etkinliğin özelliklerini yapılandırmak için kullanılır.|
 |Yakınlaştır|Binocuklar **yakınlaştırma düzeyi** simgesi tasarım yüzeyinin sağ tarafındaki dikey kaydırma çubuğunun altında bulunur. Bir iş akışı grafiğinin yakınlaştırmasını veya ölçeğini yakınlaştırmak için, binocuklar ' a tıklayın ve bir yakınlaştırma yüzdesi seçin. Ayrıca, yakınlaştırmak ve uzaklaştırmak için **kaydırma** simgesi Büyüteç imlecini göster seçeneğini de kullanabilirsiniz.|
 |Kaydır|Dört yönü işaret eden dört çapraz geçiş içeren bir daire olan **kaydırma** simgesi, tasarım yüzeyinin sağ tarafındaki dikey kaydırma çubuğunun altında, yalnızca Binocular yakınlaştırma simgesinin altında bulunur. Kaydırma simgesine tıklarsanız, bir açılır menü aşağıdaki imleç seçeneklerini sunar:<br /><br /> -Büyüteç imlecini **Yakınlaştırma** , tasarım yüzeyine tıklayarak yakınlaştırmanızı sağlar.<br />-Büyütme **büyütme camı imleci, tasarım** yüzeyine tıklayarak uzaklaştırmanıza olanak sağlar.<br />- **Gezinti Aracı** el imleci, Tasarım yüzeyinde bir iş akışının görünümünü "almanıza" ve kaydırabilmenizi sağlar.<br />- **Varsayılan** ok imleci diğer imleçlerden varsayılan ok imlecine geçiş yapmanızı sağlar.|
 |Otomatik kaydırma|Büyük bir iş akışınız varsa, tasarım yüzeyi alanının görünür görüntülenmesini aşan bir etkinlik yerleştirmek isteyebilirsiniz. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], aktiviteyi yerleştirmek istediğiniz yere en yakın tasarım yüzeyi kenarına doğru bir etkinlik sürüklemenizi sağlar. Tasarım yüzeyi görünümü otomatik olarak bu yönde kayar.|
-|Akıllı Etiketler|Tamamen yapılandırılmamış veya geçerli yapılandırılmamış etkinlikler bir ünlem işareti simgesiyle işaretlenir. Simgeye tıklayabilir ve etkinlik üzerinde var olan yapılandırma gereksinimlerinin bir açılır listesini görebilirsiniz. Daha sonra etkinliği uygun şekilde yapılandırmak için **Özellikler** penceresini kullanabilirsiniz. Etkinlik için tüm özellikler geçerliyse, ünlem işareti simgesi kaybolur.|
+|Akıllı etiketler|Tamamen yapılandırılmamış veya geçerli yapılandırılmamış etkinlikler bir ünlem işareti simgesiyle işaretlenir. Simgeye tıklayabilir ve etkinlik üzerinde var olan yapılandırma gereksinimlerinin bir açılır listesini görebilirsiniz. Daha sonra etkinliği uygun şekilde yapılandırmak için **Özellikler** penceresini kullanabilirsiniz. Etkinlik için tüm özellikler geçerliyse, ünlem işareti simgesi kaybolur.|
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Visual Studio İş Akışı Pencereleri (Eski)](../workflow-designer/visual-studio-workflow-windows-legacy.md)
@@ -54,4 +54,4 @@ ms.locfileid: "72606781"
  [Windows Workflow Foundation Kullanıcı Arabirimi Yardımı için Eski Tasarımcı](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Iş akışları geliştirme](http://go.microsoft.com/fwlink?LinkID=65010)
+ [Iş akışları geliştirme](https://go.microsoft.com/fwlink?LinkID=65010)

@@ -1,5 +1,5 @@
 ---
-title: Düzenle ve devam et hataları ve Uyarıları (C#) | Microsoft Docs
+title: Düzenle ve devam et hataları ve uyarılarıC#() | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -61,29 +61,29 @@ ms.assetid: c0e12b0a-8009-4a4a-979f-c804a91a5d9b
 caps.latest.revision: 11
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f83f421203b25edbbccf767c0661ece709dd63c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d0865e06c5abb5faccce51a2bc38bb223f7fa3eb
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822971"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299280"
 ---
 # <a name="edit-and-continue-errors-and-warnings-c"></a>Düzenle ve Devam Et Hataları ve Uyarıları (C#)
-Visual C# Düzenle ve devam et'te izin verilmiyor kodun bir bölümünü bir düzenleme yaptığınız.  
+Visual C# Edit ve Continue içinde izin verilmeyen bir kod bölümüne düzenleme yaptınız.  
   
- [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)] Düzenle ve devam et, kesme modunda programın yürütülmesini durdurur, yürütülen kodu değişiklikleri yapın ve sonra yeni eklenen değişikliklerle program yürütme devam olanak sağlar.  
+ [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)] Düzenle ve devam et, program yürütmeyi kesme modunda durdurmanızı, yürütülen kodda değişiklikler yapmanızı ve ardından yeni eklenen değişikliklerle program yürütmeyi sürdürmenizi sağlar.  
   
- Genel bir sınıf yapısını etkileyen düzenlemeler bildirim temelli kod genellikle yasaktır ve bir yöntem, özellik gövdesi veya özel bir sınıf bildirimlerinde yapabileceğiniz bazı düzenlemeler izin verilmez. Mümkün olduğunda, Düzenle ve devam et açık gri düzenlenemez kodu işaretler ve bir hata iletisi görüntüler.  
+ Bir sınıfın ortak yapısını etkileyen bildirime dayalı kod düzenlemeleri genellikle yasaktır ve bir yöntem, Özellik gövdesi veya bir sınıf içindeki özel bildirimlere yaptığınız bazı düzenlemelere izin verilmez. Mümkün olduğunda, Düzenle ve devam et açık gri olarak düzenlenemeyen kodu işaretler ve bir hata iletisi görüntüler.  
   
- Düzenle ve devam et için desteklenen düzenlemeleri hakkında daha fazla bilgi için [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)], bkz: [desteklenen kod değişiklikleri (C#)](../debugger/supported-code-changes-csharp.md). Belirli bir hata veya uyarı hakkında daha fazla bilgiye ihtiyacınız varsa, arama veya sonrası MSDN'de [Visual C# IDE Forumu](http://go.microsoft.com/fwlink/?LinkId=214693).  
+ [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]Düzenle ve devam et 'de desteklenen düzenlemeler hakkında daha fazla bilgi için bkz. [desteklenen kod değişiklikleriC#()](../debugger/supported-code-changes-csharp.md). Belirli bir hata veya uyarı hakkında daha fazla bilgiye ihtiyacınız varsa, MSDN [Visual C# IDE forumundan](https://go.microsoft.com/fwlink/?LinkId=214693)arama veya gönderi gönderebilirsiniz.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Üzerinde **hata ayıklama** menüsünde seçin **geri** değişikliği geri almak için.  
+1. **Hata Ayıkla** menüsünde, değişikliği geri almak Için **geri al** ' ı seçin.  
   
-     -veya-  
+     veya  
   
-2. Hata ayıklama oturumunu durdurmak, düzenlemelerinizi yapın ve yeni bir hata ayıklama oturumu başlatın.  
+2. Hata ayıklama oturumunu durdurun, düzenlemelerinizi yapın ve yeni bir hata ayıklama oturumu başlatın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Düzenle ve Devam Et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)

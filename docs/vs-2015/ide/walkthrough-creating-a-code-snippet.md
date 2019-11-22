@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f3cf8d0cfd3119113247dedf7723e02fca9634a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 278858eb28e0db7edd2694397cc7b24f1cfec301
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662643"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296833"
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>İzlenecek Yol: Kod Parçacığı Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "72662643"
 Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Yapmanız gereken tek şey bir XML dosyası oluşturur, uygun öğeleri doldurur ve kodunuzu buna ekler. Ayrıca, kodunuza başvurular ve değiştirme parametreleri de ekleyebilirsiniz. Kod parçacıkları yöneticisinde (**Araçlar/kod parçacıkları Yöneticisi**) içeri aktar düğmesini kullanarak kod parçacığını Visual Studio yüklemenize ekleyebilirsiniz.
 
 > [!TIP]
-> Kod parçacıklarını daha kolay yazma hakkında daha fazla bilgi için, CodePlex Web sitesinde [kod parçacığı Düzenleyicisi](http://go.microsoft.com/fwlink/?LinkId=251033)gibi topluluk araçları arayın.
+> Kod parçacıklarını daha kolay yazma hakkında daha fazla bilgi için, CodePlex Web sitesinde [kod parçacığı Düzenleyicisi](https://go.microsoft.com/fwlink/?LinkId=251033)gibi topluluk araçları arayın.
 
 ## <a name="snippet-template"></a>Kod parçacığı şablonu
  Temel kod parçacığı şablonu aşağıda verilmiştir:
@@ -85,13 +85,13 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
 
      `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippets`
 
-6. Bir Visual Basic projesi açıp bir kod dosyası açarak kod parçacığınızı test edin. Dosyada bağlam menüsünde kod **parçacığı Ekle** ' ye, sonra da **kod**parçacıklarında tıklayın. **Visual Basic kod parçacığı My**adlı bir kod parçacığı görmeniz gerekir. Çift tıklayın.
+6. Bir Visual Basic projesi açıp bir kod dosyası açarak kod parçacığınızı test edin. Dosyada bağlam menüsünde kod **parçacığı Ekle** ' ye, sonra da **kod**parçacıklarında tıklayın. **Visual Basic kod parçacığı My**adlı bir kod parçacığı görmeniz gerekir. Çift tıklatın.
 
 7. Koda `Console.WriteLine("Hello, World!")` eklendiğini görmeniz gerekir.
 
 ### <a name="adding-description-and-shortcut-fields"></a>Açıklama ve kısayol alanları ekleme
 
-1. Açıklama alanları, kod parçacıkları yöneticisinde görüntülenirken kod parçacığınızı hakkında daha fazla bilgi verir. Kısayol, kod parçacığınızı eklemek için kullanıcıların yazsaykullandığı bir etikettir. @No__t_0 dosyasını açarak eklemiş olduğunuz kod parçacığını düzenleyin.
+1. Açıklama alanları, kod parçacıkları yöneticisinde görüntülenirken kod parçacığınızı hakkında daha fazla bilgi verir. Kısayol, kod parçacığınızı eklemek için kullanıcıların yazsaykullandığı bir etikettir. `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet`dosyasını açarak eklemiş olduğunuz kod parçacığını düzenleyin.
 
 2. Üstbilgi öğesine yazar ve açıklama öğeleri ekleyin ve bunları içine girin.
 
@@ -126,7 +126,7 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
 
 ### <a name="to-add-references-and-imports"></a>Başvurular ve Içeri aktarmalar eklemek için
 
-1. Visual Basic parçacıkları ile, Başvurular öğesini kullanarak bir projeye başvuru ekleyebilir ve Içeri aktarmalar öğesini kullanarak bir Içeri aktarmalar bildirimi ekleyebilirsiniz. (Diğer dillerdeki kod parçacıkları bu özelliğe sahip değildir.) Örneğin, kod örnekteki `Console.WriteLine` `MessageBox.Show` olarak değiştirirseniz, System. Windows. Forms. dll derlemesini projeye eklemeniz gerekebilir.
+1. Visual Basic parçacıkları ile, Başvurular öğesini kullanarak bir projeye başvuru ekleyebilir ve Içeri aktarmalar öğesini kullanarak bir Içeri aktarmalar bildirimi ekleyebilirsiniz. (Diğer dillerdeki kod parçacıkları bu özelliğe sahip değildir.) Örneğin, kod örnekteki `Console.WriteLine` `MessageBox.Show`olarak değiştirirseniz, System. Windows. Forms. dll derlemesini projeye eklemeniz gerekebilir.
 
 2. Kod parçacığınızı açın.
 

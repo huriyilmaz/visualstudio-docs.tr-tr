@@ -11,12 +11,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e38e89ee5572f5ba552f3b6807a3edab5012a727
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 14911cda4cfc2be5fece6005a879427c10529bbc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669598"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298916"
 ---
 # <a name="install-a-uml-profile"></a>UML profili yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,15 +25,15 @@ Visual Studio 'Yu bir UML profiliyle genişletebilirsiniz. Profil, UML modelleri
 
  Profiller kullanılarak oluşturulmuş bir UML modeli alırsanız, aynı profilleri yüklemiyorsanız bazı özellikler görüntülenmez.
 
- Bir profil, Visual Studio uzantısı içinde dağıtılır. Uzantı, menü komutları gibi diğer özellikleri de içerebilir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını yönetme](http://go.microsoft.com/fwlink/?LinkId=160728).
+ Bir profil, Visual Studio uzantısı içinde dağıtılır. Uzantı, menü komutları gibi diğer özellikleri de içerebilir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını yönetme](https://go.microsoft.com/fwlink/?LinkId=160728).
 
 ### <a name="to-install-a-uml-profile-on-your-computer"></a>Bilgisayarınıza bir UML profili yüklemek için
 
 1. Profil, Visual Studio uzantısı (`.vsix`) dosyası biçiminde size verilmiş olmalıdır. Aynı dosyadaki diğer özellikler olabilir.
 
-     @No__t_0 dosyasını bilgisayarınızda uygun bir konuma taşıyın.
+     `.vsix` dosyasını bilgisayarınızda uygun bir konuma taşıyın.
 
-2. Windows Gezgini 'nde (veya dosya Gezgini) `.vsix` dosyasına çift tıklayın veya dosyayı [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] içinde açın.
+2. Windows Gezgini 'nde (veya dosya Gezgini) `.vsix` dosyasına çift tıklayın veya dosyayı [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]içinde açın.
 
 3. Görüntülenen iletişim kutusunda, **yüklensin** ' e tıklayın.
 

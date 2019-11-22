@@ -1,6 +1,6 @@
 ---
-title: Sunucu Gezgini'nden Azure sanal makinelere erişen | Microsoft Docs
-description: Görüntülemek nasıl bir genel bakış oluşturun ve Azure sanal makinelerini (VM) Visual Studio sunucu Gezgini'ndeki alın.
+title: Sunucu Gezgini 'den Azure sanal makinelerine erişme | Microsoft Docs
+description: Visual Studio 'da Sunucu Gezgini Azure sanal makinelerini (VM 'Ler) oluşturma ve yönetme hakkında genel bakış alın.
 author: ghogen
 manager: jillfra
 assetId: eb3afde6-ba90-4308-9ac1-3cc29da4ede0
@@ -11,35 +11,35 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: 6d6b35218355db686a4154928e5529d213e733d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9a95cd84ede6befded37f9d875535f39846de50a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968034"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291049"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Sunucu Gezgini'nden Azure Sanal Makineler'e erişme
 
-Azure tarafından barındırılan sanal makineler varsa, sunucu Gezgini'nde erişebilirsiniz. İlk Azure aboneliğinize, mobil hizmetlerinizi görüntülemek için oturum açmanız gerekir. Oturum açmak için sunucu Gezgini'nde Azure düğümü için kısayol menüsünü açın ve seçin **Microsoft Azure'a bağlanma**.
+Azure tarafından barındırılan sanal makineleriniz varsa bunlara Sunucu Gezgini erişebilirsiniz. Mobil hizmetlerinizi görüntülemek için önce Azure aboneliğinizde oturum açmanız gerekir. Oturum açmak için Sunucu Gezgini Azure düğümünün kısayol menüsünü açın ve **Microsoft Azure Bağlan**' ı seçin.
 
-1. Bulut Gezgini'nde bir sanal makine seçin ve ardından, Özellikler penceresini görüntülemek için F4 tuşuna basın.
+1. Cloud Explorer 'da bir sanal makine seçin ve ardından Özellikler penceresini göstermek için F4 tuşunu seçin.
 
-    Aşağıdaki tablo, hangi özelliklerin kullanılabilir gösterir, ancak tüm salt okunurdur. Bunları değiştirmek için kullanın [Azure portalında](http://go.microsoft.com/fwlink/p/?LinkID=525040).
-
-   | Özellik | Açıklama |
-   | --- | --- |
-   | DNS adı |Sanal makinenin Internet adresi URL'si. |
-   | Ortam |Bir sanal makine için bu özellik her zaman üretim değeridir. |
-   | Ad |Sanal makinenin adı. |
-   | Boyut |Kullanılabilir bellek ve disk alanı miktarını yansıtır sanal makine boyutu. Daha fazla bilgi için [sanal makine boyutları](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs). |
-   | Durum |Değerleri başlatma, Başlarken, durdurma, durduruldu ve durumu alınırken içerir. Durum alınıyor görünürse, geçerli durumu bilinmiyor. Bu özellik için değerleri üzerinde kullanılan değerleri farklı [Azure portalında](http://go.microsoft.com/fwlink/p/?LinkID=525040). |
-   | Subscriptionıd |Azure hesabınızda abonelik kimliği. Şirket bu bilgiyi gösterebilirsiniz [Azure portalında](http://go.microsoft.com/fwlink/p/?LinkID=525040) abonelik özelliklerini görüntüleyerek. |
-2. Bir uç nokta düğümünü seçin ve ardından görüntülemek **özellikleri** penceresi.
-3. Uç nokta kullanılabilir özellikler aşağıdaki tabloda açıklanmaktadır, ancak salt okunurdur. Ekleme veya düzenleme uç noktaları bir sanal makine için kullanmak [Azure portalında](http://go.microsoft.com/fwlink/p/?LinkID=525040). 
+    Aşağıdaki tabloda kullanılabilen özellikler gösterilmektedir, ancak bunların hepsi salt okunurdur. Bunları değiştirmek için [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)kullanın.
 
    | Özellik | Açıklama |
    | --- | --- |
-   | Ad |Uç nokta için bir tanımlayıcı. |
-   | Özel bağlantı noktası |Uygulamanız için iç ağ erişimi için bağlantı noktası. |
-   | Protokol |Aktarım katmanı Bu uç nokta için kullandığı protokol TCP veya UDP. |
-   | Genel bağlantı noktası |Uygulamanızı genel erişim için kullanılan bağlantı noktası. |
+   | DNS adı |Sanal makinenin Internet adresine sahip URL. |
+   | Ortam |Bir sanal makine için, bu özelliğin değeri her zaman üretime yöneliktir. |
+   | Name |Sanal makinenin adı. |
+   | Boyut |Kullanılabilir bellek ve disk alanı miktarını yansıtan sanal makinenin boyutu. Daha fazla bilgi için bkz. [sanal makine boyutları](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs). |
+   | Durum |Değerler, başlatma, başlatma, durdurma, durdurma ve durum alma içerir. Durum alma görünürse, geçerli durum bilinmiyor olur. Bu özelliğin değerleri, [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)kullanılan değerlerden farklıdır. |
+   | SubscriptionID |Azure hesabınızın abonelik KIMLIĞI. Bir aboneliğin özelliklerini görüntüleyerek [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040) bu bilgileri gösterebilirsiniz. |
+2. Bir uç nokta düğümü seçin ve ardından **Özellikler** penceresini görüntüleyin.
+3. Aşağıdaki tabloda, uç noktaların kullanılabilir özellikleri açıklanmıştır, ancak bunlar salt okunurdur. Bir sanal makineye yönelik uç noktaları eklemek veya düzenlemek için [Azure Portal](https://go.microsoft.com/fwlink/p/?LinkID=525040)kullanın. 
+
+   | Özellik | Açıklama |
+   | --- | --- |
+   | Name |Uç nokta için bir tanımlayıcı. |
+   | Özel bağlantı noktası |Uygulamanıza iç ağ erişimi için bağlantı noktası. |
+   | Protokol |Bu uç noktanın aktarım katmanının, TCP veya UDP kullandığı protokol. |
+   | Genel bağlantı noktası |Uygulamanıza genel erişim için kullanılan bağlantı noktası. |

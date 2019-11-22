@@ -12,30 +12,30 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fbf7c539c8bf1290aff92edf876ac4c437fd1c68
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ff7d0e7a26c9e8fa6abe984353d3368ca1f6a36a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670291"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296098"
 ---
 # <a name="accessibility-features-of-visual-studio"></a>Visual Studio'nun Erişilebilirlik Özellikleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Windows 'daki erişilebilirlik özelliklerine ve yardımcı programlarına ek olarak, aşağıdaki özellikler Visual Studio 2013 Engelli kişiler için daha erişilebilir hale getirir:
+Erişilebilirlik özelliklerine ve yardımcı programları Windows ek olarak aşağıdaki özellikler Visual Studio 2013'ün daha erişilebilir engelli kişiler için hale getirir:
 
-- Araç çubuğu düğmesi ve metin büyütme
+- Araç çubuğu düğme ve metin büyütme
 
-- Düzenleyicilerde metin boyutu seçenekleri
+- Metin düzenleyicilerde boyut seçenekleri
 
-- Düzenleyicilerde renk özelleştirmesi
+- Düzenleyicilerde özelleştirme rengi
 
-- Klavye kısayolu özelleştirmesi
+- Klavye kısayolunu özelleştirme
 
-- Yöntemler ve parametreler için otomatik tamamlama
+- Yöntem ve parametreler için otomatik tamamlama
 
 > [!IMPORTANT]
-> Bu bölümdeki bilgiler yalnızca Birleşik Devletler Microsoft ürünlerini lisanslayan kullanıcılar için geçerlidir. Bu ürünü Birleşik Devletler dışında aldıysanız, yazılım paketinizle birlikte gelen yan kuruluş bilgileri kartını kullanabilir veya [Microsoft desteği Için bize Iletişim kurun sayfasını](http://support.microsoft.com/ContactUs) ziyaret edebilir ve **dünyanın her yerindeki Microsoft ofislerini bulabilirsiniz** bağlantı (sayfanın alt kısmına yakın). Bu sayfa, Microsoft Destek Hizmetleri için telefon numaralarının ve adreslerinin bir listesini sağlar. Bu bölümde açıklanan ürün ve hizmet türlerinin bölgenizde kullanılabilir olup olmadığını öğrenmek için yan kuruluşuna başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca dahil diğer dillerde sunulmaktadır.
+> Bu bölümdeki bilgiler, yalnızca Microsoft ürünlerini ABD'de lisans kullanıcılar için geçerlidir. Bu ürünü birleşik Devletler'in dışında alınan yazılım paketinizle birlikte gelen yan kuruluşu olan bilgi kartını kullanabilirsiniz ya da ziyaret edebilirsiniz [bize sayfa for Microsoft Support](https://support.microsoft.com/contactus/) tıklatıp  **Microsoft ofisleri dünya çapındaki bulmak** bağlantısını (sayfanın altına). Bu sayfa telefon numaralarının listesini sağlar ve adresleri Microsoft Destek Hizmetleri. Olup, bu bölümde açıklanan ürün ve hizmetlerin türlerini Bölgenizde kullanılabilir olduğunu öğrenmek için temsilcinize başvurabilirsiniz. Erişilebilirlik hakkında bilgiler Japonca ve Fransızca dahil olmak üzere diğer dillerde mevcuttur.
 
  Daha fazla bilgi için aşağıdaki konulara bakın:
 

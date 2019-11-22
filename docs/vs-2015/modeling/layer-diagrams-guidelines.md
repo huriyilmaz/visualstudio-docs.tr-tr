@@ -14,22 +14,22 @@ caps.latest.revision: 57
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: aee4ddc6062e465384921fa2632636c480736a77
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 51cb71d4bc2f66377b677d5be292c4eafa1dbd18
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646132"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299456"
 ---
 # <a name="layer-diagrams-guidelines"></a>Katman Diyagramları: Yönergeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini yüksek düzeyde tanıtın. Kodunuzu bir katman diyagramı ile doğrulayarak kodunuzun bu tasarımla tutarlı kalmasını sağlayın. Yapı sürecinizdeki katman doğrulamasını da dahil edebilirsiniz. Bkz. [Channel 9 video: Katman diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](http://go.microsoft.com/fwlink/?LinkID=252073).
+Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini yüksek düzeyde tanıtın. Kodunuzu bir katman diyagramı ile doğrulayarak kodunuzun bu tasarımla tutarlı kalmasını sağlayın. Yapı sürecinizdeki katman doğrulamasını da dahil edebilirsiniz. Bkz. [Channel 9 video: Katman diyagramlarını kullanarak mimarinizi tasarlama ve doğrulama](https://go.microsoft.com/fwlink/?LinkID=252073).
 
  Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="what-is-a-layer-diagram"></a>Katman diyagramı nedir?
- Geleneksel mimari diyagramı gibi bir katman diyagramı, tasarımın ana bileşenlerini veya işlevsel birimlerini ve bunların bağımlılıklarını tanımlar. Diyagramdaki *Katman*olarak adlandırılan her düğüm, bir dizi ad alanı, proje veya diğer yapıtları temsil eder. Tasarımınızda bulunması gereken bağımlılıkları çizebilirsiniz. Geleneksel mimari diyagramlarından farklı olarak, kaynak kodundaki gerçek bağımlılıkların belirttiğiniz hedeflenen bağımlılıklara uygun olduğunu doğrulayabilirsiniz. @No__t_0 düzenli bir yapılandırmanın doğrulama parçasını yaparak, program kodunun sonraki değişikliklerle sistem mimarisine uymaya devam ettiğinden emin olabilirsiniz. Bkz. [Katman diyagramları: başvuru](../modeling/layer-diagrams-reference.md).
+ Geleneksel mimari diyagramı gibi bir katman diyagramı, tasarımın ana bileşenlerini veya işlevsel birimlerini ve bunların bağımlılıklarını tanımlar. Diyagramdaki *Katman*olarak adlandırılan her düğüm, bir dizi ad alanı, proje veya diğer yapıtları temsil eder. Tasarımınızda bulunması gereken bağımlılıkları çizebilirsiniz. Geleneksel mimari diyagramlarından farklı olarak, kaynak kodundaki gerçek bağımlılıkların belirttiğiniz hedeflenen bağımlılıklara uygun olduğunu doğrulayabilirsiniz. [!INCLUDE[esprtfs](../includes/esprtfs-md.md)]düzenli bir yapılandırmanın doğrulama parçasını yaparak, program kodunun sonraki değişikliklerle sistem mimarisine uymaya devam ettiğinden emin olabilirsiniz. Bkz. [Katman diyagramları: başvuru](../modeling/layer-diagrams-reference.md).
 
 ## <a name="Update"></a>Uygulamanızı katman diyagramlarıyla tasarlama veya güncelleştirme
  Aşağıdaki adımlarda, geliştirme sürecinde katman diyagramlarının nasıl kullanılacağına ilişkin bir genel bakış sağlanmaktadır. Bu konunun sonraki bölümlerinde, her adımla ilgili daha fazla ayrıntı açıklanmıştır. Yeni bir tasarım geliştiriyorsanız, varolan koda başvuran adımları atlayın.
@@ -39,7 +39,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
 
 1. Tüm uygulama için veya içindeki bir katman için [bir katman diyagramı oluşturun](#Create) .
 
-2. [Birincil işlevsel alanların veya uygulamanızın bileşenlerinin temsil edilebilmesi için katmanları tanımlayın](#CreateLayers) . Bu katmanları işlevine göre adlandırın, örneğin, "sunum" veya "Hizmetler". @No__t_0 çözümünüz varsa, her katmanı projeler, ad alanları, dosyalar vb. gibi *yapıtlar*koleksiyonuyla ilişkilendirebilirsiniz.
+2. [Birincil işlevsel alanların veya uygulamanızın bileşenlerinin temsil edilebilmesi için katmanları tanımlayın](#CreateLayers) . Bu katmanları işlevine göre adlandırın, örneğin, "sunum" veya "Hizmetler". [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümünüz varsa, her katmanı projeler, ad alanları, dosyalar vb. gibi *yapıtlar*koleksiyonuyla ilişkilendirebilirsiniz.
 
 3. Katmanlar arasında [var olan bağımlılıkları bulur](#Generate) .
 
@@ -66,7 +66,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
 ## <a name="CreateLayers"></a>İşlevsel alan veya bileşenleri temsil etmek için katmanları tanımlama
  Katmanlar, projeler, kod dosyaları, ad alanları, sınıflar ve yöntemler gibi mantıksal *yapıt*gruplarını temsil eder. Visual C# .net ve Visual Basic .net projelerinin yapılarından katmanlar oluşturabilir veya Word dosyaları ya da PowerPoint sunuları gibi belgeleri bağlayarak bir katmana özellikler veya planlar ekleyebilirsiniz. Her katman diyagramda dikdörtgen olarak görünür ve onunla bağlantılı yapıların sayısını gösterir. Katman, daha belirli görevleri tanımlayan iç içe katmanlar içerebilir.
 
- Genel bir kılavuz olarak, "sunum" veya "Hizmetler" gibi işlevleri işlevine göre adlandırın. Yapıtlar yakından bağımlıysa, bunları aynı katmana yerleştirin. Yapıtlar ayrı ayrı güncelleştirilebiliyorsanız veya ayrı uygulamalarda kullanılıyorsa, bunları farklı katmanlara yerleştirin. Katman desenleri hakkında bilgi edinmek için [http://go.microsoft.com/fwlink/?LinkId=145794](http://go.microsoft.com/fwlink/?LinkId=145794)konumundaki desenler & Uygulamalar sitesini ziyaret edin.
+ Genel bir kılavuz olarak, "sunum" veya "Hizmetler" gibi işlevleri işlevine göre adlandırın. Yapıtlar yakından bağımlıysa, bunları aynı katmana yerleştirin. Yapıtlar ayrı ayrı güncelleştirilebiliyorsanız veya ayrı uygulamalarda kullanılıyorsa, bunları farklı katmanlara yerleştirin. Katman desenleri hakkında bilgi edinmek için [http://go.microsoft.com/fwlink/?LinkId=145794](https://go.microsoft.com/fwlink/?LinkId=145794)konumundaki desenler & Uygulamalar sitesini ziyaret edin.
 
 > [!TIP]
 > Katmanlara bağlayabileceğiniz ancak katman diyagramına karşı doğrulamayı desteklemeyen belirli türde yapıtlar vardır. Yapının doğrulamayı destekleyip desteklemediğini görmek için, yapıt bağlantısının **doğrulamayı destekler** özelliğini Incelemek üzere **Katman Gezgini** ' ni açın. Bkz. [katmanlar arasında var olan bağımlılıkları bulma](#Generate).
@@ -96,7 +96,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
 ## <a name="EditArchitecture"></a>Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
  Sisteminizde veya amaçlanan mimaride yapmayı planladığınız değişiklikleri anlatmak için, katman diyagramını düzenlemek üzere aşağıdaki adımları kullanın. Ayrıca, kod yapısını genişletmeden önce geliştirmek için bazı yeniden düzenleme değişiklikleri yapmayı düşünebilirsiniz. Bkz. [kodun yapısını geliştirme](#Improving).
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**To**|**Bu adımları gerçekleştirin**|
 |------------|-----------------------------|
 |Olmaması gereken bir bağımlılığı silme|Bağımlılığa tıklayın ve ardından **Delete**tuşuna basın.|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
@@ -115,7 +115,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
 ## <a name="NewAreas"></a>Uygulamanızın yeni bölgelerini tasarlama
  Yeni bir proje veya yeni bir projedeki yeni bir alan geliştirmeyi başlattığınızda, kodu geliştirmeye başlamadan önce ana bileşenleri belirlemenize yardımcı olmak için Katmanlar ve bağımlılıklar çizebilirsiniz.
 
-- Mümkünse, katman diyagramlarınızda **tanımlanabilir mimari desenleri gösterin** . Örneğin, bir masaüstü uygulamasını açıklayan bir katman diyagramı, sunum, etki alanı mantığı ve veri deposu gibi katmanları içerebilir. Bir uygulamadaki tek bir özelliği kaplayan katman diyagramı, model, görünüm ve denetleyici gibi katmanlara sahip olabilir. Bu tür desenler hakkında daha fazla bilgi için bkz. [desenler & uygulamalar: uygulama mimarisi](http://go.microsoft.com/fwlink/?LinkId=145794).
+- Mümkünse, katman diyagramlarınızda **tanımlanabilir mimari desenleri gösterin** . Örneğin, bir masaüstü uygulamasını açıklayan bir katman diyagramı, sunum, etki alanı mantığı ve veri deposu gibi katmanları içerebilir. Bir uygulamadaki tek bir özelliği kaplayan katman diyagramı, model, görünüm ve denetleyici gibi katmanlara sahip olabilir. Bu tür desenler hakkında daha fazla bilgi için bkz. [desenler & uygulamalar: uygulama mimarisi](https://go.microsoft.com/fwlink/?LinkId=145794).
 
      Genellikle benzer desenler oluşturuyorsanız özel bir araç oluşturun. Bkz. [Özel Modelleme Araç kutusu öğesi tanımlama](../modeling/define-a-custom-modeling-toolbox-item.md).
 
@@ -137,7 +137,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
   - Bir veya daha fazla katmanı veya bağımlılığı seçin, sağ tıklayın ve ardından **Özellikler**' e tıklayın. **Özellikler** penceresinde, **Color** özelliğini düzenleyin.
 
 ## <a name="Validate"></a>Kodu diyagrama karşı doğrulama
- Diyagramı düzenlediğinizde, her zaman ya da yerel bir derlemeyi veya [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] her çalıştırdığınızda otomatik olarak koda karşı el ile doğrulayabilirsiniz.
+ Diyagramı düzenlediğinizde, her zaman ya da yerel bir derlemeyi veya [!INCLUDE[esprbuild](../includes/esprbuild-md.md)]her çalıştırdığınızda otomatik olarak koda karşı el ile doğrulayabilirsiniz.
 
  Bkz.
 
@@ -157,7 +157,7 @@ Visual Studio 'da *Katman diyagramları* oluşturarak uygulamanızın mimarisini
 > [!NOTE]
 > Kodu geliştirirken veya yeniden düzenleme yaparken, katman diyagramına bağlamak için yeni yapıtlara sahip olabilirsiniz. Ancak, bu gerekli olmayabilir, örneğin, varolan ad alanlarını temsil eden katmanlarınız varsa ve yeni kod yalnızca bu ad alanlarına daha fazla malzeme ekler.
 
- Geliştirme işlemi sırasında, doğrulama esnasında bildirilen çakışmaların bazılarını gizlemek isteyebilirsiniz. Örneğin, zaten çözdüğünüz veya özel senaryonuzla ilgili olmayan hataları gizlemek isteyebilirsiniz. Bir hatayı bastırdığınızda, [!INCLUDE[esprfound](../includes/esprfound-md.md)] bir iş öğesini günlüğe kaydetmek iyi bir uygulamadır. Bu görevi gerçekleştirmek için bkz. [Katman diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md).
+ Geliştirme işlemi sırasında, doğrulama esnasında bildirilen çakışmaların bazılarını gizlemek isteyebilirsiniz. Örneğin, zaten çözdüğünüz veya özel senaryonuzla ilgili olmayan hataları gizlemek isteyebilirsiniz. Bir hatayı bastırdığınızda, [!INCLUDE[esprfound](../includes/esprfound-md.md)]bir iş öğesini günlüğe kaydetmek iyi bir uygulamadır. Bu görevi gerçekleştirmek için bkz. [Katman diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md).
 
 ## <a name="BuildValidation"></a>Yapı işlemine katman doğrulamasını dahil et
  Koddaki gelecekteki değişikliklerin katman diyagramlarına uyduğundan emin olmak için, çözümünüzün standart yapı işlemine katman doğrulaması dahil edin. Diğer takım üyeleri çözümü oluştururken, koddaki bağımlılıklar ve katman diyagramı arasındaki herhangi bir farklılık derleme hatası olarak bildirilir. Yapı sürecinde katman doğrulaması ekleme hakkında daha fazla bilgi için bkz. [Katman diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md).

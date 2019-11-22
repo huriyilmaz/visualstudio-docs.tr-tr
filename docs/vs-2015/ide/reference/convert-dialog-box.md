@@ -15,17 +15,17 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 62f81e6a697089d7a352f652ad9f77d279faac0c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bc65e58aa5bdea786aba05236b6fa684780ccae2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660815"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296085"
 ---
 # <a name="convert-dialog-box"></a>Dönüştür İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Dönüştür** iletişim kutusu, bir Visual Basic 6 projesinden [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] projesi oluşturma gibi eski bir projeden yeni bir proje oluşturmak için bir dönüştürme aracı seçmenize olanak sağlar. Visual Studio 'nun önceki sürümlerinde oluşturulan projeleri yükseltmek için CodePlex Web sitesinde bulunan [Visual Studio proje dönüştürücüsünü](http://go.microsoft.com/fwlink/?LinkID=246465)de kullanabilirsiniz.
+**Dönüştür** iletişim kutusu, bir Visual Basic 6 projesinden [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] projesi oluşturma gibi eski bir projeden yeni bir proje oluşturmak için bir dönüştürme aracı seçmenize olanak sağlar. Visual Studio 'nun önceki sürümlerinde oluşturulan projeleri yükseltmek için CodePlex Web sitesinde bulunan [Visual Studio proje dönüştürücüsünü](https://go.microsoft.com/fwlink/?LinkID=246465)de kullanabilirsiniz.
 
  [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]
 

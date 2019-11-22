@@ -13,31 +13,31 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3a15aad987e46edb58da3560828c70571df2227
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2dc63fc58b22792e566df91bd86cac40e3fd2e65
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663410"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297484"
 ---
 # <a name="how-to-create-a-declarative-rule-condition-legacy"></a>Nasıl yapılır: bildirime dayalı bir kural koşulu oluşturma (eski)
-Bu konuda, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanarak bir kural koşulunun nasıl bildirildiği açıklanmaktadır.
+Bu konuda, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedefleyen eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanarak bir kural koşulunun nasıl bildirildiği açıklanmaktadır.
 
  Condition deyiminin **değeri true** veya **false**olarak değerlendirilir. Bildirim temelli bir kural koşulu, [kural koşulu Düzenleyicisi Iletişim kutusu (eski)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) kullanılarak oluşturulan ve iş akışı ile XML olarak depolanan bir koşul deyimidir. Bu, birden çok koşul birleştiren iş akışı durumunu ve Boole ALKU 'ı karşılaştıran koşullar içerebilir.
 
  Bildirim temelli kural koşulları aşağıdaki Windows Workflow Foundation hazır etkinliklerinde kullanılır:
 
-- [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)
+- [ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
 
-- [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)
+- [IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65034)
 
-- [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)
+- [ReplicatorActivity](https://go.microsoft.com/fwlink?LinkID=65039)
 
-- [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)
+- [WhileActivity](https://go.microsoft.com/fwlink?LinkID=65049)
 
-- [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040)
+- [SequentialWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65040)
 
-- [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)
+- [StateMachineWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65045)
 
 ### <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>Kural koşulu düzenleyicisini kullanarak bildirim temelli bir kural koşulu oluşturmak için
 
@@ -64,4 +64,4 @@ Bu konuda, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLU
      **Koşul Seç** iletişim kutusunu kullanma hakkında daha fazla bilgi için bkz. [Koşul Seç Iletişim kutusu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [While etkinlik](http://go.microsoft.com/fwlink?LinkID=65091) kuralı koşulu Düzenleyicisi iletişim kutusu (eski) kullanılarak [Replicator etkinliğini kullanan](http://go.microsoft.com/fwlink?LinkID=65080) [IfElseBranchActivity etkinliğini](http://go.microsoft.com/fwlink?LinkID=65075) kullanan [eski iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md) [](http://go.microsoft.com/fwlink?LinkID=65066) [ ](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [Iş akışlarında koşulları kullanarak](http://go.microsoft.com/fwlink?LinkID=65009) [Koşul Seç iletişim kutusu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md)
+ [While etkinlik](https://go.microsoft.com/fwlink?LinkID=65091) [kuralı koşulu Düzenleyicisi Iletişim kutusu (eski)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [iş akışlarındaki koşulları kullanarak](https://go.microsoft.com/fwlink?LinkID=65009) bir süre sonra [Koşul Seç Iletişim kutusunu (eski)](../workflow-designer/select-condition-dialog-box-legacy.md) kullanan [IfElseBranchActivity etkinliğini](https://go.microsoft.com/fwlink?LinkID=65075) [](https://go.microsoft.com/fwlink?LinkID=65080) kullanan [eski iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md) [](https://go.microsoft.com/fwlink?LinkID=65066)

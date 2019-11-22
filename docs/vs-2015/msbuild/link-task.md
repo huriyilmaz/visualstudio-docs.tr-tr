@@ -31,318 +31,318 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: efcdbb4f72d47a5044b287f1b40424f5611d6401
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 181c32017a84328037ea46d49698821fa3cb41ea
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703427"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295880"
 ---
 # <a name="link-task"></a>Bağlantı Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual C++ bağlayıcı aracı sarmalar link.exe. Bağlayıcı aracı ortak nesne dosyası biçimi (COFF) nesne dosyaları ve kitaplıkları bir yürütülebilir (.exe) dosyası oluşturmak için veya bir dinamik bağlantı kitaplığı (DLL) bağlar. Daha fazla bilgi için [bağlayıcı seçenekleri](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129).  
+Visual C++ bağlayıcı aracı LINK. exe ' yi kaydırır. Bağlayıcı aracı ortak nesne dosyası biçimi (COFF) nesne dosyalarını ve kitaplıklarını, yürütülebilir (. exe) dosya veya dinamik bağlantı kitaplığı (DLL) oluşturmak için bağlar. Daha fazla bilgi için bkz. [bağlayıcı seçenekleri](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129).  
   
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır **bağlantı** görev. Çoğu görev parametreleri ve parametrelerin birkaç kümeleri bir komut satırı seçeneğine karşılık gelir.  
+ Aşağıdaki tabloda **bağlantı** görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.  
   
 - **AdditionalDependencies**  
   
-   İsteğe bağlı **String []** parametresi.  
+   İsteğe bağlı **dize []** parametresi.  
   
-   Giriş dosyaları için bir komut eklemek için bir listesini belirtir.  
+   Komuta eklenecek giriş dosyalarının bir listesini belirtir.  
   
-   Daha fazla bilgi için [LINK giriş dosyaları](https://msdn.microsoft.com/library/bb26fcc5-509a-4620-bc3e-b6c6e603a412).  
+   Daha fazla bilgi için bkz. [giriş dosyalarını bağlama](https://msdn.microsoft.com/library/bb26fcc5-509a-4620-bc3e-b6c6e603a412).  
   
-- **AdditionalLibraryDirectories**  
+- **Additionallibrarydizinler**  
   
-   İsteğe bağlı **String []** parametresi.  
+   İsteğe bağlı **dize []** parametresi.  
   
-   Kullanıcının ortam kitaplık yolunu geçersiz kılar. Bir dizin adı belirtin.  
+   Ortam kitaplığı yolunu geçersiz kılar. Bir dizin adı belirtin.  
   
-   Daha fazla bilgi için [/Libpath (ek Libpath)](https://msdn.microsoft.com/library/7240af0b-9a3d-4d53-8169-2a92cd6958ba).  
+   Daha fazla bilgi için bkz. [/LIBPATH (ek libpath)](https://msdn.microsoft.com/library/7240af0b-9a3d-4d53-8169-2a92cd6958ba).  
   
 - **AdditionalManifestDependencies**  
   
-   İsteğe bağlı **String []** parametresi.  
+   İsteğe bağlı **dize []** parametresi.  
   
-   Yerleştirilecek öznitelikleri belirtir `dependency` bildirim dosyasının.  
+   Bildirim dosyasının `dependency` bölümüne yerleştirilecek öznitelikleri belirtir.  
   
-   Daha fazla bilgi için [/MANIFESTDEPENDENCY (bildirim bağımlılıklarını belirtin)](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73). Ayrıca, üzerinde "Yayımcı yapılandırma dosyaları" bkz [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+   Daha fazla bilgi için bkz. [/Manifestdependency (Bildirim Bağımlılıklarını Belirt)](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73). Ayrıca, [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "Yayımcı yapılandırma dosyaları" bölümüne bakın.  
   
 - **AdditionalOptions**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Belirtilen komut satırında bağlayıcı seçenekleri listesi. Örneğin, **"**_/option1 /option2 /option#_". Diğer tarafından temsil edilmez bağlayıcı seçenekleri belirtmek için bu parametreyi kullanın **bağlantı** görev parametresi.  
+   Komut satırında belirtilen bağlayıcı seçeneklerinin bir listesi. Örneğin, **"** _/option1/option2/option #_ ". Başka bir **bağlantı** görevi parametresi tarafından temsil edilmeyen bağlayıcı seçeneklerini belirtmek için bu parametreyi kullanın.  
   
-   Daha fazla bilgi için [bağlayıcı seçenekleri](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129).  
+   Daha fazla bilgi için bkz. [bağlayıcı seçenekleri](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129).  
   
 - **AddModuleNamesToAssembly**  
   
-   İsteğe bağlı **String []** parametresi.  
+   İsteğe bağlı **dize []** parametresi.  
   
-   Bir derlemeye bir modül başvurusu ekler.  
+   Bir derlemeye modül başvurusu ekler.  
   
-   Daha fazla bilgi için [assemblymodule (derlemeye MSIL Modülü Ekle)](https://msdn.microsoft.com/library/67357da8-e4b6-49fd-932c-329a5777f143).  
+   Daha fazla bilgi için bkz. [/ASSEMBLYMODULE (DERLEMEYE MSIL Modülü ekleme)](https://msdn.microsoft.com/library/67357da8-e4b6-49fd-932c-329a5777f143).  
   
-- **Allowısolatıon**  
+- **ALLOWISOLATION**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, işletim sisteminin aramaları bildirim neden olur ve yükler. Varsa `false`, DLL'leri, hiçbir bildirim olduysa gibi yüklendiğini gösterir.  
+   `true`, işletim sisteminin bildirim aramalarını ve yüklemelerini yapmasına neden olur. `false`, bir bildirim olmadığı gibi dll 'Lerin yüklendiğini belirtir.  
   
-   Daha fazla bilgi için [/ALLOWISOLATION (bildirim arama)](https://msdn.microsoft.com/library/6d41851e-b3c1-4bdf-beaa-031773089d6f).  
+   Daha fazla bilgi için bkz. [/ALLOWISOLATION (bildirim arama)](https://msdn.microsoft.com/library/6d41851e-b3c1-4bdf-beaa-031773089d6f).  
   
 - **AssemblyDebug**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, yayan **DebuggableAttribute** hata ayıklama bilgisi izleme ve devre dışı bırakır JIT iyileştirmelerini birlikte öznitelik. Varsa `false`, yayan **DebuggableAttribute** özniteliği ancak hata ayıklama bilgisi izlemeyi devre dışı bırakır ve JIT iyileştirmelerini sağlar.  
+   `true`, hata ayıklama bilgisi izleme ile birlikte, hata ayıklayıcı olan bir **öznitelik özniteliğini yayar** ve JIT iyileştirmelerini devre dışı bırakır. `false`, hata **ayıklayıcı, hata** ayıklama bilgileri izlemeyi devre dışı bırakır ve JIT iyileştirmelerini sunar.  
   
-   Daha fazla bilgi için [assemblydebug (DebuggableAttribute ekleme)](https://msdn.microsoft.com/library/94443af3-470c-41d7-83a0-7434563d7982).  
+   Daha fazla bilgi için bkz. [/ASSEMBLYDEBUG (hata ayıklama Ggableattribute Ekle)](https://msdn.microsoft.com/library/94443af3-470c-41d7-83a0-7434563d7982).  
   
-- **Assemblylınkresource**  
+- **ASSEMBLYLINKRESOURCE**  
   
-   İsteğe bağlı **String []** parametresi.  
+   İsteğe bağlı **dize []** parametresi.  
   
-   Çıkış dosyasında .NET Framework kaynağına bağlantı oluşturur. kaynak dosyası çıkış dosyasına yerleştirilmez. Kaynağın adını belirtin.  
+   Çıkış dosyasında bir .NET Framework kaynağına bağlantı oluşturur; kaynak dosyası çıkış dosyasına yerleştirilmez. Kaynağın adını belirtin.  
   
-   Daha fazla bilgi için [/assemblylınkresource (.NET Framework kaynağına bağlantı)](https://msdn.microsoft.com/library/8b6ad184-1b33-47a4-8513-4803cf915b64).  
+   Daha fazla bilgi için bkz. [/Assemblylinkresource (.NET Framework kaynağına bağlantı)](https://msdn.microsoft.com/library/8b6ad184-1b33-47a4-8513-4803cf915b64).  
   
 - **AttributeFileTracking**  
   
-   Örtük **Boole** parametresi.  
+   Örtük **Boolean** parametresi.  
   
-   Daha ayrıntılı dosya bağlantı artımlı bir kullanıcının davranışını yakalamak için izleme sağlar. Her zaman döndürür `true`.  
+   Daha derin dosya izlemenin bağlantı artımlı davranışını yakalamasını sağlar. Her zaman `true`döndürür.  
   
 - **BaseAddress**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Program veya oluşturulmakta DLL temel adres ayarlar. Belirtin `{address[,size] | @filename,key}`.  
+   Oluşturulan program veya DLL için bir temel adres ayarlar. `{address[,size] | @filename,key}`belirtin.  
   
-   Daha fazla bilgi için [/Base (Temel adres)](https://msdn.microsoft.com/library/00b9f6fe-0bd2-4772-a69c-7365eb199069).  
+   Daha fazla bilgi için bkz. [/Base (temel adres)](https://msdn.microsoft.com/library/00b9f6fe-0bd2-4772-a69c-7365eb199069).  
   
-- **BuildingInIDE**  
+- **Buildingınıde**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   TRUE ise, MSBuild IDE'den çağrılan gösterir. Aksi takdirde, MSBuild komut satırından çağrılır gösterir.  
+   True ise, MSBuild 'in IDE 'den çağrıldığı anlamına gelir. Aksi takdirde, MSBuild 'in komut satırından çağrıldığını gösterir.  
   
-   Bu parametre, denk bağlayıcı seçeneği vardır.  
+   Bu parametrenin denk bağlayıcı seçeneği yok.  
   
 - **CLRImageType**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Bir ortak dil çalışma zamanı (CLR) görüntü türünü ayarlar.  
+   Ortak dil çalışma zamanı (CLR) görüntüsünün türünü ayarlar.  
   
-   Her biri için bir bağlayıcı seçeneği karşılık gelen şu değerlerden birini belirtin.  
+   Her biri bir bağlayıcı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **Varsayılan** - *\<yok >*  
+  - **Varsayılan** -  *\<yok >*  
   
-  - **ForceIJWImage** - **/CLRIMAGETYPE:IJW**  
+  - **ForceIJWImage** -  **/CLRIMAGETYPE:IJW**  
   
-  - **ForcePureILImage** - **/CLRIMAGETYPE:PURE**  
+  - **ForcePureILImage** -  **/CLRIMAGETYPE:PURE**  
   
-  - **ForceSafeILImage** - **kullanılır**  
+  - **Forcesafeilımage** -  **/Clrimagetype: Safe**  
   
-    Daha fazla bilgi için [/CLRIMAGETYPE (CLR, türü görüntü belirtin)](https://msdn.microsoft.com/library/04c60ee6-9dd7-4391-bc03-6926ad0fa116).  
+    Daha fazla bilgi için bkz. [/Clrimagetype (clr görüntü türünü belirt)](https://msdn.microsoft.com/library/04c60ee6-9dd7-4391-bc03-6926ad0fa116).  
   
-- **Clrsupportlasterror'ü**  
+- **CLRSUPPORTLASTERROR 'ü**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   P/Invoke mekanizmasıyla çağrılan işlevlerin son hata kodunu korur.  
+   P/Invoke mekanizması aracılığıyla çağrılan işlevlerin son hata kodunu korur.  
   
-   Her biri için bir bağlayıcı seçeneği karşılık gelen şu değerlerden birini belirtin.  
+   Her biri bir bağlayıcı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **Etkin** - **/CLRSupportLastError**  
+  - **Etkin** -  **/CLRSupportLastError**  
   
-  - **Devre dışı bırakılmış** - **/CLRSupportLastError:NO**  
+  - **Devre dışı** -  **/CLRSupportLastError: Hayır**  
   
-  - **SystemDlls** - **/CLRSupportLastError:SYSTEMDLL**  
+  - **Systemdlls** -  **/CLRSupportLastError: systemdll**  
   
-    Daha fazla bilgi için [/CLRSUPPORTLASTERROR (korumak için son hata kodunu PInvoke çağrıları)](https://msdn.microsoft.com/library/b7057990-4154-4b1d-9fc9-6236f7be7575).  
+    Daha fazla bilgi için bkz. [/CLRSUPPORTLASTERROR (PInvoke çağrıları Için son hata kodunu koru)](https://msdn.microsoft.com/library/b7057990-4154-4b1d-9fc9-6236f7be7575).  
   
-- **Clrthreadattrıbute**  
+- **CLRTHREADATTRIBUTE**  
   
    İsteğe bağlı **dize** parametresi.  
   
    CLR programınızın giriş noktası için iş parçacığı oluşturma özniteliğini açıkça belirtir.  
   
-   Her biri için bir bağlayıcı seçeneği karşılık gelen şu değerlerden birini belirtin.  
+   Her biri bir bağlayıcı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **DefaultThreadingAttribute** - **/CLRTHREADATTRIBUTE: yok**  
+  - **Defaultthreadingattribute** -  **/CLRTHREADATTRIBUTE: None**  
   
-  - **MTAThreadingAttribute** - **MTA**  
+  - **Mtathreadingattribute** -  **/CLRTHREADATTRIBUTE: MTA**  
   
-  - **STAThreadingAttribute** - **/CLRTHREADATTRIBUTE:STA**  
+  - **Stathreadingattribute** -  **/CLRTHREADATTRIBUTE: STA**  
   
-    Daha fazla bilgi için [/CLRTHREADATTRIBUTE (CLR iş parçacığı özniteliğini Ayarla)](https://msdn.microsoft.com/library/4907e9ef-5031-446c-aecf-0a0b32fae1e8).  
+    Daha fazla bilgi için bkz. [/CLRTHREADATTRIBUTE (clr Iş parçacığı özniteliğini ayarlama)](https://msdn.microsoft.com/library/4907e9ef-5031-446c-aecf-0a0b32fae1e8).  
   
 - **CLRUnmanagedCodeCheck**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Bağlayıcı uygulayıp uygulamayacağını belirtir **SuppressUnmanagedCodeSecurityAttribute** bağlayıcı tarafından oluşturulan P/Invoke çağırıyor yönetilen koddan yerel DLL'lere için.  
+   Bağlayıcının **SuppressUnmanagedCodeSecurityAttribute** ' i yönetilen koddan yerel dll 'lere bağlayıcı tarafından oluşturulan P/Invoke çağrılarına uygulayıp uygulayamayacağını belirtir.  
   
-   Daha fazla bilgi için [/clrunmanagedcodecheck (SuppressUnmanagedCodeSecurityAttribute Ekle)](https://msdn.microsoft.com/library/73abc426-dab0-45e2-be85-0f9a14206cc2).  
+   Daha fazla bilgi için bkz. [/CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute ekleyin)](https://msdn.microsoft.com/library/73abc426-dab0-45e2-be85-0f9a14206cc2).  
   
 - **CreateHotPatchableImage**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Görüntüyü Yeniden başlatmasız düzeltme için hazırlar.  
+   Sık yama için bir görüntü hazırlar.  
   
-   Bir bağlayıcı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+   Bir bağlayıcı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **Etkin** - **/FUNCTIONPADMIN**  
+  - **Etkin** -  **/functionpadmin**  
   
-  - **X86Image** - **/FUNCTIONPADMIN:5**  
+  - **X86Image** -  **/functionpadmin: 5**  
   
-  - **X64Image** - **/FUNCTIONPADMIN:6**  
+  - **X64Image** -  **/functionpadmin: 6**  
   
-  - **ItaniumImage** - **/FUNCTIONPADMIN:16**  
+  - **Itaniumımage** -  **/functionpadmin: 16**  
   
-    Daha fazla bilgi için [/FUNCTIONPADMIN (düzeltme eki eklenebilen görüntü oluşturma)](https://msdn.microsoft.com/library/25b02c13-1add-4fbd-add9-fcb30eb2cae7).  
+    Daha fazla bilgi için bkz. [/functionpadmin (düzeltme eki eklenebilir görüntü oluşturma)](https://msdn.microsoft.com/library/25b02c13-1add-4fbd-add9-fcb30eb2cae7).  
   
 - **DataExecutionPrevention**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, yürütülebilir bir dosya Windows Veri Yürütme Engellemesi özelliği ile uyumlu olduğunun saptandığını gösterir.  
+   `true`, Windows Veri Yürütme Engellemesi özelliği ile uyumlu olmak için bir yürütülebilir dosyanın test edildiğini gösterir.  
   
-   Daha fazla bilgi için [/NXCOMPAT (veri yürütme önlemesi ile uyumlu)](https://msdn.microsoft.com/library/5858e7ff-24d3-4ac3-9046-af2c9e220d9b).  
+   Daha fazla bilgi için bkz. [/NXCOMPAT (veri yürütme engellemesi Ile uyumlu)](https://msdn.microsoft.com/library/5858e7ff-24d3-4ac3-9046-af2c9e220d9b).  
   
 - **DelayLoadDLLs**  
   
-   İsteğe bağlı **String []** parametresi.  
+   İsteğe bağlı **dize []** parametresi.  
   
-   Bu parametre neden *Gecikmeli yükleme* dll. Bir DLL gecikme yükü adını belirtin.  
+   Bu parametre, dll 'lerin *gecikmeli yüklenmesine* neden olur. Yük gecikmesi için DLL 'nin adını belirtin.  
   
-   Daha fazla bilgi için [/delayload (gecikme yükü içe)](https://msdn.microsoft.com/library/39ea0f1e-5c01-450f-9c75-2d9761ff9b28).  
+   Daha fazla bilgi için bkz. [/delayload (Gecikmeli yük Içeri aktarma)](https://msdn.microsoft.com/library/39ea0f1e-5c01-450f-9c75-2d9761ff9b28).  
   
 - **DelaySign**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, bir derlemeyi kısmen imzalar. Varsayılan değer olan `false`.  
+   `true`, bir derlemeyi kısmen imzalar. Varsayılan olarak, değer `false`.  
   
-   Daha fazla bilgi için [/delaysign (bir derlemeyi kısmen imzalayın)](https://msdn.microsoft.com/library/15244d30-3ecb-492f-a408-ffe81f38de20).  
+   Daha fazla bilgi için bkz. [/delaysign (derlemeyi kısmen imzala)](https://msdn.microsoft.com/library/15244d30-3ecb-492f-a408-ffe81f38de20).  
   
 - **Sürücü**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Bir Windows NT Çekirdek modu sürücüsü oluşturmak için bu parametreyi belirtin.  
+   Windows NT Çekirdek modu sürücüsü oluşturmak için bu parametreyi belirtin.  
   
-   Her biri için bir bağlayıcı seçeneği karşılık gelen şu değerlerden birini belirtin.  
+   Her biri bir bağlayıcı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **NotSet** - *\<yok >*  
+  - **NotSet** -  *\<yok >*  
   
-  - **Sürücü** - **Driver/Driver**  
+  - **Sürücü** -  **/Driver**  
   
-  - **UpOnly** - **/DRIVER:UPONLY**  
+  - **Yalnızca up - ** **/DRIVER: uponly**  
   
-  - **WDM** -   **/DRIVER: WDM**  
+  - **Wdm** -  **/DRIVER: WDM**  
   
-    Daha fazla bilgi için [(Windows NT Çekirdek modu sürücüsü) Driver/Driver](https://msdn.microsoft.com/library/aeee8e28-5d97-40f5-ba16-9f370fe8a1b8).  
+    Daha fazla bilgi için bkz. [/Driver (WINDOWS NT Çekirdek modu sürücüsü)](https://msdn.microsoft.com/library/aeee8e28-5d97-40f5-ba16-9f370fe8a1b8).  
   
 - **EmbedManagedResourceFile**  
   
-   İsteğe bağlı **String []** parametresi.  
+   İsteğe bağlı **dize []** parametresi.  
   
-   Bir derlemeye kaynak dosyası gömer. Gerekli kaynak dosya adı belirtin. İsteğe bağlı olarak kaynak yüklemek için kullanılan mantıksal adı belirtin ve **özel** seçeneği, bütünleştirilmiş kod bildirimi kaynak dosyası özel olduğunu belirtir.  
+   Bir derlemeye kaynak dosyası katıştırır. Gerekli kaynak dosya adını belirtin. İsteğe bağlı olarak, kaynağı yüklemek için kullanılan mantıksal adı ve kaynak dosyasının özel olduğunu derleme bildiriminde belirten **özel** seçeneğini belirtin.  
   
-   Daha fazla bilgi için [koduna konmaz (yönetilen kaynağı katıştır)](https://msdn.microsoft.com/library/0ce6e1fb-921b-4b1b-a59c-d35388d789f2).  
+   Daha fazla bilgi için bkz. [/ASSEMBLYRESOURCE (yönetilen kaynağı katıştır)](https://msdn.microsoft.com/library/0ce6e1fb-921b-4b1b-a59c-d35388d789f2).  
   
 - **EnableCOMDATFolding**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, eşdeğer COMDAT katlaması sağlar.  
+   `true`, aynı COMDAT katlamayı mümkün bir şekilde sunar.  
   
-   Daha fazla bilgi için `ICF[= iterations]` bağımsız değişkeni [OPT (iyileştirmeler)](https://msdn.microsoft.com/library/8f229863-5f53-48a8-9478-243a647093ac).  
+   Daha fazla bilgi için bkz. [/opt (iyileştirmeler)](https://msdn.microsoft.com/library/8f229863-5f53-48a8-9478-243a647093ac)`ICF[= iterations]` bağımsız değişkeni.  
   
 - **EnableUAC**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, kullanıcı hesabı denetimi (UAC) bilgisinin program bildiriminde gömülü olup olmadığını belirtir.  
+   `true`, Kullanıcı hesabı denetimi (UAC) bilgisinin program bildirimine gömülü olduğunu belirtir.  
   
-   Daha fazla bilgi için [/MANIFESTUAC (bildirimdeki UAC bilgilerini katıştırır)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
+   Daha fazla bilgi için bkz. [/bildirimini estuac (BILDIRIMDEKI UAC bilgilerini katıştırır)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
   
 - **EntryPointSymbol**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Bir .exe dosyası veya DLL için başlangıç adresi olarak giriş noktası işlevini belirtir. Bir işlev adı parametre değeri olarak belirtin.  
+   Bir. exe dosyası veya DLL için başlangıç adresi olarak bir giriş noktası işlevi belirtir. Parametre değeri olarak bir işlev adı belirtin.  
   
-   Daha fazla bilgi için [/Entry (giriş noktası simgesi)](https://msdn.microsoft.com/library/26c62ba2-4f52-4882-a7bd-7046a0abf445).  
+   Daha fazla bilgi için bkz. [/Entry (giriş noktası simgesi)](https://msdn.microsoft.com/library/26c62ba2-4f52-4882-a7bd-7046a0abf445).  
   
 - **FixedBaseAddress**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, yalnızca tercih edilen temel adresini bir program veya yüklenmesi gereken DLL oluşturur.  
+   `true`, yalnızca tercih edilen temel adresinde yüklenebilen bir program veya DLL oluşturur.  
   
-   Daha fazla bilgi için [/FIXED (sabit temel adres)](https://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5).  
+   Daha fazla bilgi için bkz. [/Fixed (sabit temel adres)](https://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5).  
   
 - **ForceFileOutput**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Geçerli bir .exe dosyası oluşturmak için söyler veya DLL sembole başvurulduğunda ancak bile tanımlanan, veya tanımlı çarpın.  
+   Bağlayıcıya bir sembol başvuruluyorsa ancak tanımlanmasa bile geçerli bir. exe dosyası veya DLL oluşturmasını söyler veya çarpma tanımlanmış olarak tanımlanır.  
   
-   Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **Etkin** -   **/FORCE**  
+  - **Etkin** -  **/Force**  
   
-  - **MultiplyDefinedSymbolOnly** -   **/Force: multıple**  
+  - **Multiplydefinedsymbolyalnızca** -  **/Force: MULTIPLE**  
   
-  - **UndefinedSymbolOnly** -   **/FORCE: KARARSIZ**  
+  - **Yalnızca Undefinedsymbolonly** -  **/Force: çözümlenmemiş**  
   
-    Daha fazla bilgi için [/Force (dosya çıktısını zorla)](https://msdn.microsoft.com/library/b1e9a218-a5eb-4e60-a4a4-65b4be15e5da).  
+    Daha fazla bilgi için bkz. [/Force (Dosya çıktısını zorla)](https://msdn.microsoft.com/library/b1e9a218-a5eb-4e60-a4a4-65b4be15e5da).  
   
-- **ForceSymbolReferences**  
+- **Forcesyımbolreferences**  
   
-   İsteğe bağlı **String []** parametresi.  
+   İsteğe bağlı **dize []** parametresi.  
   
-   Bu parametre, belirtilen sembolü sembol tablosuna eklemek için söyler.  
+   Bu parametre, bağlayıcının sembol tablosuna belirtilen bir sembol eklemesini söyler.  
   
-   Daha fazla bilgi için [/Include (simge başvurularını zorla)](https://msdn.microsoft.com/library/4a039677-360a-480f-bd0b-448e239b449c).  
+   Daha fazla bilgi için bkz. [/Include (simge başvurularını zorla)](https://msdn.microsoft.com/library/4a039677-360a-480f-bd0b-448e239b449c).  
   
 - **FunctionOrder**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Bu parametre imajın içine önceden belirlenmiş bir sırada belirtilen paketlenmiş işlevler (Comdat'lar) koyarak programınızı iyileştirir.  
+   Bu parametre, belirtilen paketlenmiş işlevleri (Comtts) görüntüye önceden belirlenmiş bir sırada yerleştirerek programınızı iyileştirir.  
   
-   Daha fazla bilgi için [/order (Put işlevleri Sırala)](https://msdn.microsoft.com/library/ecf5eb3e-e404-4e86-9a91-4e5ec157261a).  
+   Daha fazla bilgi için bkz. [/Order (Işlevleri sırayla yerleştirme)](https://msdn.microsoft.com/library/ecf5eb3e-e404-4e86-9a91-4e5ec157261a).  
   
 - **GenerateDebugInformation**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, .exe dosyası veya DLL için hata ayıklama bilgileri oluşturur.  
+   `true`,. exe dosyası veya DLL için hata ayıklama bilgileri oluşturur.  
   
-   Daha fazla bilgi için [/Debug (hata ayıklama bilgisi Oluştur)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103).  
+   Daha fazla bilgi için bkz. [/Debug (hata ayıklama bilgisi oluştur)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103).  
   
 - **GenerateManifest**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, yan yana bildirim dosyası oluşturur.  
+   `true`, yan yana bildirim dosyası oluşturur.  
   
-   Daha fazla bilgi için [/MANIFEST (oluşturma yan yana derleme bildirimi)](https://msdn.microsoft.com/library/98c52e1e-712c-4f49-b149-4d0a3501b600).  
+   Daha fazla bilgi için bkz. [/manifest (yan yana derleme bildirimi oluşturma)](https://msdn.microsoft.com/library/98c52e1e-712c-4f49-b149-4d0a3501b600).  
   
 - **GenerateMapFile**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, oluşturur bir *Haritası*. Dosya adı uzantısı, eşleme dosyası .map ' dir.  
+   `true`, bir *eşleme dosyası*oluşturur. Eşleme dosyasının dosya adı uzantısı. map ' dir.  
   
    Daha fazla bilgi için [Map (eşlem dosyası oluştur)](https://msdn.microsoft.com/library/9ccce53d-4e36-43da-87b0-7603ddfdea63).  
   
@@ -350,63 +350,63 @@ Visual C++ bağlayıcı aracı sarmalar link.exe. Bağlayıcı aracı ortak nesn
   
    İsteğe bağlı **dize** parametresi.  
   
-   Aynı anda ayrılacak yığında fiziksel bellek miktarını belirtir.  
+   Yığın üzerinde aynı anda ayrılacak fiziksel bellek miktarını belirtir.  
   
-   Daha fazla bilgi için `commit` değişkeninde [/HEAP (öbek boyutunu Ayarla)](https://msdn.microsoft.com/library/a3f71927-7f1d-492c-9fdb-dfccb1a043da). Ayrıca bkz **HeapReserveSize** parametresi.  
+   Daha fazla bilgi için bkz./Heap içindeki `commit` bağımsız değişkeni [(yığın boyutunu ayarla)](https://msdn.microsoft.com/library/a3f71927-7f1d-492c-9fdb-dfccb1a043da). Ayrıca bkz. **Heaprezervesize** parametresi.  
   
-- **HeapReserveSize**  
+- **Heaprezervesize**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Sanal bellekte toplam yığın ayırma belirtir.  
+   Sanal bellekteki toplam yığın ayırmayı belirtir.  
   
-   Daha fazla bilgi için `reserve` değişkeninde [/HEAP (öbek boyutunu Ayarla)](https://msdn.microsoft.com/library/a3f71927-7f1d-492c-9fdb-dfccb1a043da). Ayrıca bkz **HeapCommitSize** bu tablodaki parametresi.  
+   Daha fazla bilgi için bkz./Heap içindeki `reserve` bağımsız değişkeni [(yığın boyutunu ayarla)](https://msdn.microsoft.com/library/a3f71927-7f1d-492c-9fdb-dfccb1a043da). Ayrıca bkz. bu tablodaki **HeapCommitSize** parametresi.  
   
 - **IgnoreAllDefaultLibraries**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, söyler kaldırın ya da daha fazla varsayılan kitaplık kitaplıkları listesinden bunu ne zaman arar dış başvuruları çözümleniyor.  
+   `true`, bağlayıcının bir veya daha fazla varsayılan kitaplığı dış başvuruları çözdüğünde aradığı kitaplık listesinden kaldırmasını söyler.  
   
-   Daha fazla bilgi için [/nodefaultlıb (kitaplıkları yoksay)](https://msdn.microsoft.com/library/7270b673-6711-468e-97a7-c2925ac2be6e).  
+   Daha fazla bilgi için bkz. [/nodefaultlib (kitaplıkları Yoksay)](https://msdn.microsoft.com/library/7270b673-6711-468e-97a7-c2925ac2be6e).  
   
 - **IgnoreEmbeddedIDL**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, IDL öznitelikleri kaynak kodundaki .idl dosyasına işlenmemesi gerektiğini belirtir.  
+   `true`, kaynak kodundaki tüm IDL özniteliklerinin bir. IDL dosyasına işlenmediğini belirtir.  
   
-   Daha fazla bilgi için [/ıgnoreıdl (yoksa işlem öznitelikler MIDL)](https://msdn.microsoft.com/library/29514098-6a1c-4317-af2f-1dc268972780).  
+   Daha fazla bilgi için bkz. [/IGNOREIDL (öznitelikleri MIDL 'ye işleme)](https://msdn.microsoft.com/library/29514098-6a1c-4317-af2f-1dc268972780).  
   
 - **IgnoreImportLibrary**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, bu yapılandırmanın oluşturduğu içeri aktarma kitaplığının bağımlı projelere aktarılmaması gerektiğini belirtir.  
+   `true`, bu yapılandırma tarafından oluşturulan içeri aktarma kitaplığının bağımlı projelere aktarılmaması gerektiğini belirtir.  
   
-   Bu parametre için bir bağlayıcı seçeneği karşılık gelmiyor.  
+   Bu parametre bir bağlayıcı seçeneğine karşılık gelmiyor.  
   
 - **IgnoreSpecificDefaultLibraries**  
   
-   İsteğe bağlı **String []** parametresi.  
+   İsteğe bağlı **dize []** parametresi.  
   
-   Bir veya daha fazla varsayılan kitaplık adlarını belirtir. Birden çok kitaplık noktalı virgül kullanarak ayırın.  
+   Yoksayılacak bir veya daha fazla varsayılan kitaplık adını belirtir. Noktalı virgülle ayırarak birden çok kitaplığı ayırın.  
   
-   Daha fazla bilgi için [/nodefaultlıb (kitaplıkları yoksay)](https://msdn.microsoft.com/library/7270b673-6711-468e-97a7-c2925ac2be6e).  
+   Daha fazla bilgi için bkz. [/nodefaultlib (kitaplıkları Yoksay)](https://msdn.microsoft.com/library/7270b673-6711-468e-97a7-c2925ac2be6e).  
   
-- **ImageHasSafeExceptionHandlers**  
+- **Imagehassafeexceptionhandlers**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, yalnızca görüntünün güvenli özel durum işleyicileri tablosu da üretebileceği, bağlayıcı bir görüntü üretiyor.  
+   `true`, bağlayıcı yalnızca görüntünün güvenli özel durum işleyicilerinin bir tablosunu oluşturmak için bir görüntü oluşturur.  
   
-   Daha fazla bilgi için [SAFESEH (görüntüde güvenli özel durum işleyicileri var)](https://msdn.microsoft.com/library/7722ff99-b833-4c65-a855-aaca902ffcb7).  
+   Daha fazla bilgi için bkz. [/SafeSEH (görüntü güvenli özel durum işleyicilerine sahiptir)](https://msdn.microsoft.com/library/7722ff99-b833-4c65-a855-aaca902ffcb7).  
   
 - **ImportLibrary**  
   
-   Varsayılan kitaplık adını değiştirir bir kullanıcı tarafından belirtilen içeri aktarma kitaplığı adı.  
+   Varsayılan kitaplık adının yerini alan, Kullanıcı tarafından belirtilen bir içeri aktarma kitaplığı adı.  
   
-   Daha fazla bilgi için [/IMPLIB (içeri aktarma kitaplığını Adlandır)](https://msdn.microsoft.com/library/fe8f71ab-7055-41b5-8ef8-2b97cfa4a432).  
+   Daha fazla bilgi için bkz. [/ımplib (ad Içeri aktarma kitaplığı)](https://msdn.microsoft.com/library/fe8f71ab-7055-41b5-8ef8-2b97cfa4a432).  
   
 - **KeyContainer**  
   
@@ -414,229 +414,229 @@ Visual C++ bağlayıcı aracı sarmalar link.exe. Bağlayıcı aracı ortak nesn
   
    İmzalı bir derleme için anahtarı içeren kapsayıcı.  
   
-   Daha fazla bilgi için [/keycontainer (derlemeyi imzalamak için bir anahtar kapsayıcısı belirtin)](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e). Ayrıca bkz **KeyFile** bu tablodaki parametresi.  
+   Daha fazla bilgi için bkz. [/keycontainer (bir derlemeyi imzalamak için bir anahtar kapsayıcısı belirtin)](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e). Ayrıca bkz. bu tablodaki **keyfile** parametresi.  
   
 - **KeyFile**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   İmzalı bir derleme için anahtarı içeren dosyayı belirtir.  
+   İmzalı bir derleme için anahtarı içeren bir dosyayı belirtir.  
   
-   Daha fazla bilgi için [/keyfile (derlemeyi imzalamak için anahtar belirtin veya anahtar çiftini)](https://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06). Ayrıca bkz **KeyContainer** parametresi.  
+   Daha fazla bilgi için bkz. [/keyfile (bir derlemeyi imzalamak Için anahtar veya anahtar çiftini belirtin)](https://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06). Ayrıca, bkz. **keycontainer** parametresi.  
   
 - **LargeAddressAware**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, uygulama 2 gigabayt'tan daha büyük adresleri işleyebilir.  
+   `true`, uygulama 2 gigabayt 'tan daha büyük adresleri işleyebilir.  
   
-   Daha fazla bilgi için [/largeaddressaware (büyük adresleri işlemek)](https://msdn.microsoft.com/library/a29756c8-e893-47a9-9750-1f0d25359385).  
+   Daha fazla bilgi için bkz. [/LARGEADDRESSAWARE (büyük adresleri işleme)](https://msdn.microsoft.com/library/a29756c8-e893-47a9-9750-1f0d25359385).  
   
 - **LinkDLL**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, DLL olarak ana çıkış dosyası oluşturur.  
+   `true`, ana çıkış dosyası olarak bir DLL oluşturur.  
   
-   Daha fazla bilgi için [/dll (DLL derleme)](https://msdn.microsoft.com/library/c7685aec-31d0-490f-9503-fb5171a23609).  
+   Daha fazla bilgi için bkz. [/dll (dll derleme)](https://msdn.microsoft.com/library/c7685aec-31d0-490f-9503-fb5171a23609).  
   
 - **LinkErrorReporting**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Derleyici iç hatası (ICE) bilgilerini doğrudan Microsoft'a sağlamanıza olanak tanır.  
+   İç derleyici hatası (ıCE) bilgilerini doğrudan Microsoft 'a sağlamanıza olanak tanır.  
   
-   Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **NoErrorReport** -   **/errorreport: yok**  
+  - **Noerrorreport** -  **/errorreport: None**  
   
-  - **PromptImmediately** - **/ERRORREPORT:PROMPT**  
+  - **Hemen sor** -  **/errorreport: Prompt**  
   
-  - **QueueForNextLogin** - **/ERRORREPORT:QUEUE**  
+  - **QueueForNextLogin** -  **/ERRORREPORT:QUEUE**  
   
-  - **SendErrorReport** - **okunmalı**  
+  - **Senderrorreport** -  **/errorreport: Send**  
   
-    Daha fazla bilgi için [/errorreport (dahili bağlayıcı hatalarını raporla)](https://msdn.microsoft.com/library/f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28).  
+    Daha fazla bilgi için bkz. [/errorreport (Iç bağlayıcı hatalarını raporla)](https://msdn.microsoft.com/library/f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28).  
   
-- **LinkIncremental**  
+- **Linkıncreıncre**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, artımlı bağlamayı etkinleştirir.  
+   `true`, artımlı bağlamayı etkinleştirilir.  
   
-   Daha fazla bilgi için [/Incremental (artımlı bağlantı)](https://msdn.microsoft.com/library/135656ff-94fa-4ad4-a613-22e1a2a5d16b).  
+   Daha fazla bilgi için bkz. [/ıncreıncre(artımlı bağlantı)](https://msdn.microsoft.com/library/135656ff-94fa-4ad4-a613-22e1a2a5d16b).  
   
 - **LinkLibraryDependencies**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, proje bağımlılıklarının kitaplık çıkışları içinde otomatik olarak bağlandığını belirtir.  
+   `true`, proje bağımlılıklarındaki kitaplık çıktılarının otomatik olarak bağlandığını belirtir.  
   
-   Bu parametre için bir bağlayıcı seçeneği karşılık gelmiyor.  
+   Bu parametre bir bağlayıcı seçeneğine karşılık gelmiyor.  
   
-- **LinkStatus**  
+- **Bağlantı durumu**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, bağlayıcı bağlantıyı yüzde tamamlandıktan gösteren bir İlerleme göstergesi görüntülemesi gerektiğini belirtir.  
+   `true`, bağlayıcının bağlantının yüzde oranını gösteren bir ilerleme göstergesi görüntüleneceğini belirtir.  
   
-   Daha fazla bilgi için `STATUS` bağımsız değişkeni [/LTCG (bağlama zamanı kodu oluşturma)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
+   Daha fazla bilgi için/LTCG 'nin `STATUS` bağımsız değişkenine bakın [(bağlantı zamanı kodu oluşturma)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
   
 - **LinkTimeCodeGeneration**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Profil temelli İyileştirme seçeneklerini belirtir.  
+   Profil temelli iyileştirme seçeneklerini belirtir.  
   
-   Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **Varsayılan** - *\<yok >*  
+  - **Varsayılan** -  *\<yok >*  
   
-  - **UseLinkTimeCodeGeneration** - **/LTCG**  
+  - **UseLinkTimeCodeGeneration** -  **/LTCG**  
   
-  - **PGInstrument** - **/LTCG:PGInstrument**  
+  - **PGInstrument** -  **/LTCG:PGInstrument**  
   
-  - **PGOptimization** - **/LTCG:PGOptimize**  
+  - **PGOptimization** -  **/LTCG:PGOptimize**  
   
   - **PGUpdate**  
   
      \- **/LTCG:PGUpdate**  
   
-    Daha fazla bilgi için [/LTCG (bağlama zamanı kodu oluşturma)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
+    Daha fazla bilgi için bkz. [/LTCG (bağlama zamanı kodu oluşturma)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2).  
   
-- **Manıfestfıle**  
+- **MANIFESTFILE**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Varsayılan bildirim dosyası adı için belirtilen dosya adını değiştirir.  
+   Varsayılan bildirim dosyası adını belirtilen dosya adı olarak değiştirir.  
   
-   Daha fazla bilgi için [/MANIFESTFILE (bildirim dosyasını Adlandır)](https://msdn.microsoft.com/library/befa5ab2-a9cf-4c9b-969a-e7b4a930f08d).  
+   Daha fazla bilgi için bkz. [/ManifestFile (ad bildirim dosyası)](https://msdn.microsoft.com/library/befa5ab2-a9cf-4c9b-969a-e7b4a930f08d).  
   
-- **MapExports**  
+- **Mapdışarı aktarmalar**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, eşleme dosyasında dışarı aktarılan işlevleri dahil etmesini bağlayıcıya bildirir.  
+   `true`, bağlayıcıya bir eşleme dosyasına aktarılmış işlevleri dahil etmek için söyler.  
   
-   Daha fazla bilgi için `EXPORTS` bağımsız değişkeni [mapınfo (eşlem dosyası bilgileri dahil)](https://msdn.microsoft.com/library/533d2bce-f9b7-4fea-ae1c-0b4864c9d10b).  
+   Daha fazla bilgi için bkz. [/MapInfo `EXPORTS` bağımsız değişkeni (mapfile Içinde bilgi ekleme)](https://msdn.microsoft.com/library/533d2bce-f9b7-4fea-ae1c-0b4864c9d10b).  
   
 - **MapFileName**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Belirtilen dosya adı için varsayılan eşleme dosyası adını değiştirir.  
+   Varsayılan eşleme dosyası adını belirtilen dosya adıyla değiştirir.  
   
 - **MergedIDLBaseFileName**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   .İdl dosyasının dosya adı uzantısı ve dosya adını belirtir.  
+   . IDL dosyasının dosya adı ve dosya adı uzantısını belirtir.  
   
-   Daha fazla bilgi için [/ıdlout (MIDL çıktı dosyalarının adını)](https://msdn.microsoft.com/library/10d00a6a-85b4-4de1-8732-e422c6931509).  
+   Daha fazla bilgi için bkz. [/IDLOUT (MıDL çıktı dosyalarını Adlandır)](https://msdn.microsoft.com/library/10d00a6a-85b4-4de1-8732-e422c6931509).  
   
 - **MergeSections**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Bir görüntü olarak bölümlerde birleştirir. Belirtin `from-section=to-section`.  
+   Bir görüntüdeki bölümleri birleştirir. `from-section=to-section`belirtin.  
   
-   Daha fazla bilgi için [/Merge (bölümleri Birleştir)](https://msdn.microsoft.com/library/10fb20c2-0b3f-4c8d-98a8-f69aedf03d52).  
+   Daha fazla bilgi için bkz. [/merge (bölümleri birleştirme)](https://msdn.microsoft.com/library/10fb20c2-0b3f-4c8d-98a8-f69aedf03d52).  
   
 - **MidlCommandFile**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   MIDL komut satırı seçeneklerini içeren dosyanın adını belirtin.  
+   MıDL komut satırı seçeneklerini içeren bir dosyanın adını belirtin.  
   
-   Daha fazla bilgi için [/MIDL (MIDL komut satırı seçeneklerini belirtin)](https://msdn.microsoft.com/library/22dc259e-b34c-4ed3-a380-4beb734482c1).  
+   Daha fazla bilgi için bkz. [/MIDL (MIDL komut satırı seçeneklerini belirtin)](https://msdn.microsoft.com/library/22dc259e-b34c-4ed3-a380-4beb734482c1).  
   
 - **MinimumRequiredVersion**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Alt sistemin gerekli en düşük sürümü belirtir. Bağımsız değişkenler, 0 ila 65.535 aralığındaki ondalık sayılardır.  
+   Alt sistemin gerekli en düşük sürümünü belirtir. Bağımsız değişkenler 0 ile 65535 aralığındaki ondalık sayılardır.  
   
 - **ModuleDefinitionFile**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Adını belirten bir [modül tanım dosyası](https://msdn.microsoft.com/library/08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8).  
+   [Modül tanım dosyasının](https://msdn.microsoft.com/library/08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8)adını belirtir.  
   
-   Daha fazla bilgi için [/def (modül tanım dosyası belirtin)](https://msdn.microsoft.com/library/6497fa68-65f0-48ca-8f66-b87166fc631a).  
+   Daha fazla bilgi için bkz. [/def (modül tanım dosyasını belirt)](https://msdn.microsoft.com/library/6497fa68-65f0-48ca-8f66-b87166fc631a).  
   
 - **MSDOSStubFileName**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Belirtilen MS-DOS saplama programını Win32 programına iliştirir.  
+   Belirtilen MS-DOS saplama programını bir Win32 programına iliştirir.  
   
-   Daha fazla bilgi için [/stub (MS-DOS saplama dosyası adı)](https://msdn.microsoft.com/library/65221ffe-4f9a-4a14-ac69-3cfb79b40b5f).  
+   Daha fazla bilgi için bkz. [/stub (MS-DOS saplama dosyası adı)](https://msdn.microsoft.com/library/65221ffe-4f9a-4a14-ac69-3cfb79b40b5f).  
   
 - **NoEntryPoint**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, yalnızca kaynak DLL yüklemesini belirtir.  
+   `true`, yalnızca kaynak DLL 'sini belirtir.  
   
-   Daha fazla bilgi için [/NOENTRY (giriş noktası yok)](https://msdn.microsoft.com/library/0214dd41-35ad-43ab-b892-e636e038621a).  
+   Daha fazla bilgi için bkz. [/NOENTRY (giriş noktası yok)](https://msdn.microsoft.com/library/0214dd41-35ad-43ab-b892-e636e038621a).  
   
 - **ObjectFiles**  
   
-   Örtük **String []** parametresi.  
+   Örtük **dize []** parametresi.  
   
-   Bağlantılı nesne dosyaları belirtir.  
+   Bağlı nesne dosyalarını belirtir.  
   
 - **OptimizeReferences**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, işlevleri ve/veya hiçbir zaman başvurulmayan verileri ortadan kaldırır.  
+   `true`, hiçbir şekilde başvurulmayan işlevleri ve/veya verileri ortadan kaldırır.  
   
-   Daha fazla bilgi için `REF` değişkeninde [OPT (iyileştirmeler)](https://msdn.microsoft.com/library/8f229863-5f53-48a8-9478-243a647093ac).  
+   Daha fazla bilgi için, [/opt (iyileştirmeler)](https://msdn.microsoft.com/library/8f229863-5f53-48a8-9478-243a647093ac)içindeki `REF` bağımsız değişkenine bakın.  
   
 - **OutputFile**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Varsayılan adı ve bağlayıcının oluşturduğu program konumunu geçersiz kılar.  
+   Bağlayıcının oluşturduğu programın varsayılan adını ve konumunu geçersiz kılar.  
   
-   Daha fazla bilgi için [/OUT (çıktı dosyası adı)](https://msdn.microsoft.com/library/976210a4-e51f-4cfb-af5e-c16344455834).  
+   Daha fazla bilgi için bkz. [/Out (çıktı dosyası adı)](https://msdn.microsoft.com/library/976210a4-e51f-4cfb-af5e-c16344455834).  
   
 - **PerUserRedirection**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true` ve çıkışı kayda etkin zorlar kayıt için Yazar **HKEY_CLASSES_ROOT** için yönlendirilmesi **HKEY_CURRENT_USER**.  
+   `true` ve kayıt çıktısı etkinse, kayıt defteri yazmaları **HKEY_CLASSES_ROOT** **HKEY_CURRENT_USER**yeniden yönlendirilmeye zorlar.  
   
 - **PreprocessOutput**  
   
    İsteğe bağlı `ITaskItem[]` parametresi.  
   
-   Tüketilen ve görevler tarafından yayılan önişlemci çıktısını öğeleri bir dizisi tanımlanmaktadır.  
+   Görevler tarafından tüketilen ve yayılan bir Önişlemci çıkış öğeleri dizisi tanımlar.  
   
 - **PreventDllBinding**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, Bind.exe'yi bağlantılı görüntü bağlı gösterir.  
+   `true`, bind. exe ' nin bağlı görüntünün bağlı olmaması gerektiğini gösterir.  
   
-   Daha fazla bilgi için [/ALLOWBIND (DLL bağlamayı önleme)](https://msdn.microsoft.com/library/30e37e24-12e4-407e-988a-39d357403598).  
+   Daha fazla bilgi için bkz. [/Allowbind (dll bağlamasını engelle)](https://msdn.microsoft.com/library/30e37e24-12e4-407e-988a-39d357403598).  
   
-- **Profili**  
+- **Profilinizi**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, kullanılabilir bir çıktı dosyası üretir **performans araçları** profil oluşturucu.  
+   `true`, **performans araçları** Profilcisi ile kullanılabilecek bir çıkış dosyası üretir.  
   
-   Daha fazla bilgi için [PROFILE (performans araçları Profiler)](https://msdn.microsoft.com/library/e676baa1-5063-47a3-a357-ba0d1f0d1699).  
+   Daha fazla bilgi için bkz. [/profile (performans araçları profil Oluşturucu)](https://msdn.microsoft.com/library/e676baa1-5063-47a3-a357-ba0d1f0d1699).  
   
 - **ProfileGuidedDatabase**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Çalışan programa hakkındaki bilgileri tutmak için kullanılan bir .pgd dosyası adını belirtir  
+   Çalışan programla ilgili bilgileri tutmak için kullanılacak. pgd dosyasının adını belirtir  
   
-   Daha fazla bilgi için [/PGD (permutasyonları iyileştirmeler için veritabanını belirtin)](https://msdn.microsoft.com/library/9f312498-493b-461f-886f-92652257e443).  
+   Daha fazla bilgi için bkz. [/PGD (Profil temelli iyileştirmeler Için veritabanını belirt)](https://msdn.microsoft.com/library/9f312498-493b-461f-886f-92652257e443).  
   
 - **ProgramDatabaseFile**  
   
@@ -644,169 +644,169 @@ Visual C++ bağlayıcı aracı sarmalar link.exe. Bağlayıcı aracı ortak nesn
   
    Bağlayıcının oluşturduğu program veritabanı (PDB) için bir ad belirtir.  
   
-   Daha fazla bilgi için [/pdb (Program veritabanını kullan)](https://msdn.microsoft.com/library/d23db0ce-10cb-427a-bc60-d6b2a852723d).  
+   Daha fazla bilgi için bkz. [/pdb (program veritabanını kullan)](https://msdn.microsoft.com/library/d23db0ce-10cb-427a-bc60-d6b2a852723d).  
   
 - **RandomizedBaseAddress**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, rastgele yükleme zamanında temellendirilebilen bir yürütülebilir görüntü oluşturur *adres boşluğu düzeni rastgele seçimini* Windows (ASLR) özelliği.  
+   `true`, Windows 'un *Adres alanı düzeni rastgele seçme* (ASLR) özelliğini kullanarak yükleme zamanında rastgele bir şekilde yeniden temel alan yürütülebilir bir görüntü oluşturur.  
   
-   Daha fazla bilgi için [dynamıcbase (adres boşluğu düzeni rastgele'seçimini kullan)](https://msdn.microsoft.com/library/6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2).  
+   Daha fazla bilgi için bkz. [/DynamicBase (adres boşluğu düzeni rastgele seçimini kullan)](https://msdn.microsoft.com/library/6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2).  
   
 - **RegisterOutput**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, bu derlemenin birincil çıkışının kaydeder.  
+   `true`, bu derleme için birincil çıktıyı kaydeder.  
   
-- **SectionAlignment**  
+- **Sectionhizalaması**  
   
    İsteğe bağlı **tamsayı** parametresi.  
   
-   Programın doğrusal adres alanındaki her bölümün hizalamasını belirtir. Parametre değeri bayt birim sayısı ve ikinin üssü.  
+   Programın doğrusal adres alanındaki her bölümün hizalamasını belirtir. Parametre değeri bir birim bayt sayısıdır ve ikinin gücünden oluşur.  
   
-   Daha fazla bilgi için [/ALIGN (bölüm hizalama)](https://msdn.microsoft.com/library/f2f8ac24-e90e-4bea-8205-f2960a3b1740).  
+   Daha fazla bilgi için bkz. [/align (Bölüm hizalaması)](https://msdn.microsoft.com/library/f2f8ac24-e90e-4bea-8205-f2960a3b1740).  
   
 - **SetChecksum**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, bir .exe dosyası üst bilgisinde sağlama toplamını ayarlar.  
+   `true`,. exe dosyasının üst bilgisindeki sağlama toplamını ayarlar.  
   
-   Daha fazla bilgi için [/Release (sağlama toplamını Ayarla)](https://msdn.microsoft.com/library/93bcadf4-29ac-4824-914b-6997e3751d22).  
+   Daha fazla bilgi için bkz. [/Release (sağlama toplamını ayarla)](https://msdn.microsoft.com/library/93bcadf4-29ac-4824-914b-6997e3751d22).  
   
 - **ShowProgress**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Bağlama işlemi için ilerleme raporları, ayrıntı düzeyini belirtir.  
+   Bağlama işlemi için ilerleme raporlarının ayrıntı düzeyini belirtir.  
   
-   Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **NotSet** - *\<yok >*  
+  - **NotSet** -  *\<yok >*  
   
-  - **LinkVerbose** - **/VERBOSE**  
+  - **LinkVerbose** -  **/VERBOSE**  
   
-  - **LinkVerboseLib** - **/VERBOSE:Lib**  
+  - **LinkVerboseLib** -  **/VERBOSE:Lib**  
   
-  - **LinkVerboseICF** - **/VERBOSE:ICF**  
+  - **LinkVerboseICF** -  **/VERBOSE:ICF**  
   
-  - **LinkVerboseREF** - **/VERBOSE:REF**  
+  - **LinkVerboseREF** -  **/VERBOSE:REF**  
   
-  - **LinkVerboseSAFESEH** - **/VERBOSE:SAFESEH**  
+  - **LinkVerboseSAFESEH** -  **/VERBOSE:SAFESEH**  
   
-  - **LinkVerboseCLR** - **/VERBOSE:CLR**  
+  - **LinkVerboseCLR** -  **/VERBOSE:CLR**  
   
-    Daha fazla bilgi için [/verbose (ilerleme iletilerini Yazdır)](https://msdn.microsoft.com/library/9c347d98-4c37-4724-a39e-0983934693ab).  
+    Daha fazla bilgi için bkz. [/verbose (Ilerleme Iletilerini Yazdır)](https://msdn.microsoft.com/library/9c347d98-4c37-4724-a39e-0983934693ab).  
   
-- **Kaynakları**  
+- **Ğına**  
   
    Gerekli `ITaskItem[]` parametresi.  
   
-   Tüketilen ve görevler tarafından yayılan MSBuild kaynak dosya öğeleri bir dizisi tanımlanmaktadır.  
+   Görevler tarafından tüketilen ve yayılmakta olabilecek bir MSBuild kaynak dosya öğeleri dizisini tanımlar.  
   
-- **SpecifySectionAttributes**  
+- **Belirtilen Yılözniteliklerini**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Bir bölümün özniteliklerini belirtir. Bu bölüm için .obj dosyası derlendiğinde ayarlanan öznitelikleri geçersiz kılar.  
+   Bir bölümün özniteliklerini belirtir. Bu, bölüm için. obj dosyası derlendiğinde ayarlanan öznitelikleri geçersiz kılar.  
   
-   Daha fazla bilgi için [/SECTION (bölüm özniteliklerini belirtin)](https://msdn.microsoft.com/library/92b69d81-e421-462e-b46f-7d0dff9b9d16).  
+   Daha fazla bilgi için bkz. [/section (bölüm özniteliklerini belirt)](https://msdn.microsoft.com/library/92b69d81-e421-462e-b46f-7d0dff9b9d16).  
   
 - **StackCommitSize**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Ek bellek tahsis edildiğinde her ayırma fiziksel bellek miktarını belirtir.  
+   Ek bellek tahsis edildiğinde her bir ayırdaki fiziksel bellek miktarını belirtir.  
   
-   Daha fazla bilgi için `commit` bağımsız değişkeni [/STACK (yığın ayırmaları)](https://msdn.microsoft.com/library/73283660-e4bd-47cc-b5ca-04c5d739034c).  
+   Daha fazla bilgi için bkz./Stack 'in `commit` bağımsız değişkeni [(yığın ayırmaları)](https://msdn.microsoft.com/library/73283660-e4bd-47cc-b5ca-04c5d739034c).  
   
 - **StackReserveSize**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Sanal bellekte toplam yığın ayırma boyutunu belirtir.  
+   Sanal bellekteki toplam yığın ayırma boyutunu belirtir.  
   
-   Daha fazla bilgi için `reserve` bağımsız değişkeni [/STACK (yığın ayırmaları)](https://msdn.microsoft.com/library/73283660-e4bd-47cc-b5ca-04c5d739034c).  
+   Daha fazla bilgi için bkz./Stack 'in `reserve` bağımsız değişkeni [(yığın ayırmaları)](https://msdn.microsoft.com/library/73283660-e4bd-47cc-b5ca-04c5d739034c).  
   
 - **StripPrivateSymbols**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Dağıtmak için müşterilerinize istemediğiniz sembolleri atar ikinci bir program veritabanı (PDB) dosyası oluşturur. İkinci PDB dosyasının adını belirtin.  
+   Müşterilerinize dağıtmak istemediğiniz sembolleri atlatabilecek ikinci program veritabanı (PDB) dosyası oluşturur. İkinci PDB dosyasının adını belirtin.  
   
-   Daha fazla bilgi için [/pdbstrıpped (özel simgeleri)](https://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55).  
+   Daha fazla bilgi için bkz. [/Pdbçıkarıldı (özel sembolleri Strip)](https://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55).  
   
-- **Alt sistem**  
+- **Sistemin**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Yürütülebilir dosya için ortamı belirtir.  
+   Yürütülebilir dosyanın ortamını belirtir.  
   
-   Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **NotSet** - *\<yok >*  
+  - **NotSet** -  *\<yok >*  
   
-  - **Konsol** -   **/Subsystem: Console**  
+  - **Konsol** -  **/Subsystem: Console**  
   
-  - **Windows** - **/SUBSYSTEM:WINDOWS**  
+  - **Windows** -  **/Subsystem: Windows**  
   
-  - **Yerel** - **natıve**  
+  - **Yerel** -  **/Subsystem: Native**  
   
-  - **EFI uygulaması** - **/SUBSYSTEM:EFI_APPLICATION**  
+  - **EFI uygulaması** -  **/subsystem: EFI_APPLICATION**  
   
-  - **EFI Boot Service Driver** - **/SUBSYSTEM:EFI_BOOT_SERVICE_DRIVER**  
+  - **EFI Önyükleme hizmeti sürücüsü** -  **/subsystem: EFI_BOOT_SERVICE_DRIVER**  
   
-  - **EFI ROM** - **/SUBSYSTEM:EFI_ROM**  
+  - **EFı ROM** -  **/subsystem: EFI_ROM**  
   
-  - **EFI Runtime** - **/SUBSYSTEM:EFI_RUNTIME_DRIVER**  
+  - **EFI çalışma zamanı** -  **/subsystem: EFI_RUNTIME_DRIVER**  
   
-  - **Wındowsce** - **/SUBSYSTEM:WINDOWSCE**  
+  - **Windowsce** -  **/Subsystem: WindowsCE**  
   
-  - **POSIX** - **/SUBSYSTEM:POSIX**  
+  - **Posix** -  **/Subsystem: POSIX**  
   
-    Daha fazla bilgi için [/Subsystem (alt sistemi belirtin)](https://msdn.microsoft.com/library/d7b133cf-cf22-4da8-ab46-6552702c0b9b).  
+    Daha fazla bilgi için bkz. [/Subsystem (alt sistemi belirt)](https://msdn.microsoft.com/library/d7b133cf-cf22-4da8-ab46-6552702c0b9b).  
   
 - **SupportNobindOfDelayLoadedDLL**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, bağlanabilir bir içeri aktarma adres tablosu (IAT) son görüntüde eklememesini söyler.  
+   `true`, bağlayıcıya son görüntüde bağlanabilir bir Içeri aktarma adres tablosu (ıAT) dahil olmadığını söyler.  
   
-   Daha fazla bilgi için `NOBIND` bağımsız değişkeni [/delay (gecikme yükü içe aktarma ayarları)](https://msdn.microsoft.com/library/9334b332-cc58-4dae-b10f-a4c75972d50c).  
+   Daha fazla bilgi için bkz./Delay 'in `NOBIND` bağımsız değişkeni [(Gecikmeli yük Içeri aktarma ayarları)](https://msdn.microsoft.com/library/9334b332-cc58-4dae-b10f-a4c75972d50c).  
   
 - **SupportUnloadOfDelayLoadedDLL**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, açık DLL'i kaldırma desteklemek için gecikme yük yardımcı işlevinizi söyler.  
+   `true`, gecikme Yükleme Yardımcısı işlevine DLL 'nin açıkça kaldırılmasını desteklememesini söyler.  
   
-   Daha fazla bilgi için `UNLOAD` bağımsız değişkeni [/delay (gecikme yükü içe aktarma ayarları)](https://msdn.microsoft.com/library/9334b332-cc58-4dae-b10f-a4c75972d50c).  
+   Daha fazla bilgi için bkz./Delay 'in `UNLOAD` bağımsız değişkeni [(Gecikmeli yük Içeri aktarma ayarları)](https://msdn.microsoft.com/library/9334b332-cc58-4dae-b10f-a4c75972d50c).  
   
 - **SuppressStartupBanner**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini engeller.  
+   `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.  
   
-   Daha fazla bilgi için [/nologo (Başlangıç başlığını gösterme) (Bağlayıcı)](https://msdn.microsoft.com/library/3b20dddd-eca6-4545-a331-9f70bf720197).  
+   Daha fazla bilgi için bkz. [/nologo (başlangıç başlığını gösterme) (bağlayıcı)](https://msdn.microsoft.com/library/3b20dddd-eca6-4545-a331-9f70bf720197).  
   
 - **SwapRunFromCD**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, işletim sisteminin önce bağlayıcı çıktısını takas dosyasına kopyalama bildirir ve ardından görüntüyü oradan çalıştırın.  
+   `true`, işletim sisteminin önce bağlayıcı çıkışını bir takas dosyasına kopyalamasını söyler ve sonra görüntüyü oradan çalıştırır.  
   
-   Daha fazla bilgi için `CD` bağımsız değişkeni [swaprun (Bağlayıcı çıktısını takas dosyası yükle)](https://msdn.microsoft.com/library/4a1e7f46-4399-4161-8dfc-d6a71beaf683). Ayrıca bkz **SwapRunFromNET** parametresi.  
+   Daha fazla bilgi için bkz. [/SWAPRUN (bağlayıcı çıktısını takas dosyasına yükle)](https://msdn.microsoft.com/library/4a1e7f46-4399-4161-8dfc-d6a71beaf683)`CD` bağımsız değişkeni. Ayrıca bkz. **SwapRunFromNet** parametresi.  
   
 - **SwapRunFromNET**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, işletim sisteminin önce bağlayıcı çıktısını takas dosyasına kopyalama bildirir ve ardından görüntüyü oradan çalıştırın.  
+   `true`, işletim sisteminin önce bağlayıcı çıkışını bir takas dosyasına kopyalamasını söyler ve sonra görüntüyü oradan çalıştırır.  
   
-   Daha fazla bilgi için `NET` bağımsız değişkeni [swaprun (Bağlayıcı çıktısını takas dosyası yükle)](https://msdn.microsoft.com/library/4a1e7f46-4399-4161-8dfc-d6a71beaf683). Ayrıca bkz **SwapRunFromCD** bu tablodaki parametresi.  
+   Daha fazla bilgi için bkz. [/SWAPRUN (bağlayıcı çıktısını takas dosyasına yükle)](https://msdn.microsoft.com/library/4a1e7f46-4399-4161-8dfc-d6a71beaf683)`NET` bağımsız değişkeni. Ayrıca bkz. bu tablodaki **SwapRunFromCD** parametresi.  
   
 - **TargetMachine**  
   
@@ -814,117 +814,117 @@ Visual C++ bağlayıcı aracı sarmalar link.exe. Bağlayıcı aracı ortak nesn
   
    Program veya DLL için hedef platformu belirtir.  
   
-   Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-  - **NotSet** - *\<yok >*  
+  - **NotSet** -  *\<yok >*  
   
-  - **MachineARM** - **/MACHINE:ARM**  
+  - **Machineard** -  **/MACHINE: ARM**  
   
-  - **MachineEBC** - **/MACHINE:EBC**  
+  - **Machineebc** -  **/MACHINE: EBC**  
   
-  - **MachineIA64** - **/MACHINE:IA64**  
+  - **MachineIA64** -  **/MACHINE: IA64**  
   
-  - **MachineMIPS** - **/MACHINE:MIPS**  
+  - **Machinemıps** -  **/MACHINE: MIPS**  
   
-  - **MachineMIPS16** - **/MACHINE:MIPS16**  
+  - **MachineMIPS16** -  **/MACHINE: kayıtlardan biri mıps16**  
   
-  - **MachineMIPSFPU** - **/MACHINE:MIPSFPU**  
+  - **MachineMIPSFPU** -  **/MACHINE:MIPSFPU**  
   
-  - **MachineMIPSFPU16** - **/MACHINE:MIPSFPU16**  
+  - **MachineMIPSFPU16** -  **/MACHINE:MIPSFPU16**  
   
-  - **MachineSH4** - **/MACHINE:SH4**  
+  - **MachineSH4** -  **/MACHINE:SH4**  
   
-  - **MachineTHUMB** - **/MACHINE:THUMB**  
+  - **Machinethumb** -  **/MACHıNE: Thumb**  
   
-  - **MachineX64** - **/MACHINE:X 64**  
+  - **MachineX64** -  **/Machine: x64**  
   
-  - **MachineX86** - **/MACHINE:X 86**  
+  - **MachineX86** -  **/Machine: x86**  
   
-    Daha fazla bilgi için [/Machine (hedef Platform belirtin)](https://msdn.microsoft.com/library/8d41bf4b-7e53-4ab9-9085-d852b08d31c2).  
+    Daha fazla bilgi için bkz. [/Machine (hedef platformu belirt)](https://msdn.microsoft.com/library/8d41bf4b-7e53-4ab9-9085-d852b08d31c2).  
   
 - **TerminalServerAware**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, program görüntüsünün isteğe bağlı üst bilgisindeki ımage_optıonal_header DllCharacteristics alanında bir bayrak ayarlar. Bu bayrak ayarlandığında Terminal sunucusu uygulamada bazı değişiklikler yapmaz.  
+   `true`, program görüntüsünün isteğe bağlı üstbilgisindeki IMAGE_OPTIONAL_HEADER Dllözellikler alanında bir bayrak ayarlar. Bu bayrak ayarlandığında, Terminal sunucusu uygulamada belirli değişiklikler yapmayacak.  
   
-   Daha fazla bilgi için [/TSAWARE (Terminal sunucusu kullanan uygulama oluştur)](https://msdn.microsoft.com/library/fe1c1846-de5b-4839-b562-93fbfe36cd29).  
+   Daha fazla bilgi için bkz. [/T saware (Terminal Server 'ı algılayan uygulama oluşturma)](https://msdn.microsoft.com/library/fe1c1846-de5b-4839-b562-93fbfe36cd29).  
   
 - **TrackerLogDirectory**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   İzleyici günlüğü dizini belirtir.  
+   İzleyici günlüğünün dizinini belirtir.  
   
 - **TreatLinkerWarningAsErrors**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, bağlayıcı bir uyarı oluşturduğunda çıkış dosyası oluşturulmamasını sağlar.  
+   `true`, bağlayıcı bir uyarı oluşturursa çıkış dosyası oluşturulmasına neden olur.  
   
-   Daha fazla bilgi için [/WX (Bağlayıcı uyarıları hata olarak değerlendir)](https://msdn.microsoft.com/library/e4ba97c7-93f7-43ae-a4bb-d866790926c9).  
+   Daha fazla bilgi için bkz. [/WX (bağlayıcı uyarılarını hata olarak işle)](https://msdn.microsoft.com/library/e4ba97c7-93f7-43ae-a4bb-d866790926c9).  
   
 - **TurnOffAssemblyGeneration**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, bir .NET Framework derlemesinin olmadan geçerli çıkış dosyası için bir görüntü oluşturur.  
+   `true`, .NET Framework bütünleştirilmiş kodu olmadan geçerli çıkış dosyası için bir görüntü oluşturur.  
   
-   Daha fazla bilgi için [noassembly (MSIL modülü Oluştur)](https://msdn.microsoft.com/library/3cea4e70-f451-4395-a626-1930b1b127fe).  
+   Daha fazla bilgi için bkz. [/NOASSEMBLY (MSIL Modülü oluşturma)](https://msdn.microsoft.com/library/3cea4e70-f451-4395-a626-1930b1b127fe).  
   
 - **TypeLibraryFile**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   .Tlb dosyasının dosya adı uzantısı ve dosya adını belirtir. Bir dosya adı veya yolu ve dosya adı belirtin.  
+   . Tlb dosyasının dosya adı ve dosya adı uzantısını belirtir. Bir dosya adı veya yol ve dosya adı belirtin.  
   
-   Daha fazla bilgi için  [ /tlbout (adı. TLB dosyası)](https://msdn.microsoft.com/library/0df6d078-2e48-46c9-a1a5-02674d85dce8).  
+   Daha fazla bilgi için bkz [./Tlhakkında (ad. TLB dosyası)](https://msdn.microsoft.com/library/0df6d078-2e48-46c9-a1a5-02674d85dce8).  
   
 - **TypeLibraryResourceID**  
   
    İsteğe bağlı **tamsayı** parametresi.  
   
-   Bağlayıcı tarafından oluşturulan tür kitaplığı için bir kullanıcı tarafından belirtilen değeri atar. 1 ile 65535 arasında bir değer belirtin.  
+   Bağlayıcı tarafından oluşturulan tür kitaplığı için Kullanıcı tarafından belirtilen bir değer belirtir. 1 ile 65535 arasında bir değer belirtin.  
   
-   Daha fazla bilgi için [/TLBID (kaynak kimliği belirt TypeLib için)](https://msdn.microsoft.com/library/434b28a2-4656-4d52-ac82-8b18bf486fb2).  
+   Daha fazla bilgi için bkz. [/Tldeklarasyon (TypeLib Için kaynak Kimliğini Belirt)](https://msdn.microsoft.com/library/434b28a2-4656-4d52-ac82-8b18bf486fb2).  
   
 - **UACExecutionLevel**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Altında kullanıcı hesabı denetimi ile çalışırken, uygulama için istenen yürütme düzeyini belirtir.  
+   Kullanıcı hesabı denetimiyle birlikte çalıştırıldığında, uygulama için istenen yürütme düzeyini belirtir.  
   
-   Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
   - **AsInvoker** - `level='asInvoker'`  
   
   - **HighestAvailable** - `level='highestAvailable'`  
   
-  - **RequireAdministrator'a** - `level='requireAdministrator'`  
+  - **RequireAdministrator** - `level='requireAdministrator'`  
   
-    Daha fazla bilgi için `level` bağımsız değişkeni [/MANIFESTUAC (bildirimdeki UAC bilgilerini katıştırır)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
+    Daha fazla bilgi için bkz. [/manifest estuac `level` bağımsız değişkeni (BILDIRIMDEKI UAC bilgilerini katıştırır)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
   
-- **UACUIAccess**  
+- **Uıacuıaccess**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`, uygulama kullanıcı arabirimi koruma düzeylerinin atlar ve sürücüleri giriş izni yüksek windows masaüstü için; Aksi takdirde `false`.  
+   `true`, uygulama kullanıcı arabirimi koruma düzeylerini ve sürücü girişini, masaüstündeki daha yüksek izinli pencereler için atlar; Aksi takdirde, `false`.  
   
-   Daha fazla bilgi için `uiAccess` bağımsız değişkeni [/MANIFESTUAC (bildirimdeki UAC bilgilerini katıştırır)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
+   Daha fazla bilgi için bkz. [/manifest estuac `uiAccess` bağımsız değişkeni (BILDIRIMDEKI UAC bilgilerini katıştırır)](https://msdn.microsoft.com/library/2d243c39-fa13-493c-b56f-d0d972a1603a).  
   
-- **UseLibraryDependencyInputs**  
+- **Uselibrarydependencygirdileri**  
   
-   İsteğe bağlı **Boole** parametresi.  
+   İsteğe bağlı **Boolean** parametresi.  
   
-   Varsa `true`kitaplıkçı aracının kullanılan yerine, kitaplık dosyasının kendisi proje bağımlılıklarının kitaplık çıkışları olduğunda bağlanır.  
+   `true`, proje bağımlılıklarının kitaplık çıkışları bağlantılı olduğunda kitaplık dosyasının kendisi yerine kütüphaneian aracının girişleri kullanılır.  
   
 - **Sürüm**  
   
    İsteğe bağlı **dize** parametresi.  
   
-   Bir sürüm numarası, .exe veya .dll dosyasının başlığına yerleştirin. Belirtin "`major[.minor]`". `major` Ve `minor` bağımsız değişkenler 0 ile 65535 arasında ondalık sayı.  
+   . Exe veya. dll dosyasının üstbilgisine bir sürüm numarası koyun. "`major[.minor]`" öğesini belirtin. `major` ve `minor` bağımsız değişkenleri 0 ile 65535 arasında ondalık sayılardır.  
   
-   Daha fazla bilgi için [/VERSION (sürüm bilgileri)](https://msdn.microsoft.com/library/b86d0e86-dca6-4316-aee2-d863ccb9f223).  
+   Daha fazla bilgi için bkz. [/Version (sürüm bilgileri)](https://msdn.microsoft.com/library/b86d0e86-dca6-4316-aee2-d863ccb9f223).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Görev Başvurusu](../msbuild/msbuild-task-reference.md)

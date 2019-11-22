@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 70dfaa5671f589c02560a554a6d50611c5364c82
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f0ad4ea108cb0ec3b874c7f360be2e1f0e25ef45
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651195"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299422"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Bir veri kümesine WPF denetimleri bağlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,12 +42,12 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](http://go.microsoft.com/fwlink/?linkid=87843)indirebilirsiniz.
+- AdventureWorksLT örnek veritabanının eklendiği SQL Server veya SQL Server Express çalışan bir örneğine erişim. AdventureWorksLT veritabanını [CodePlex Web sitesinden](https://go.microsoft.com/fwlink/?linkid=87843)indirebilirsiniz.
 
   Aşağıdaki kavramların önceki bilgileri de yararlı olmakla kalmaz, izlenecek yolu tamamlamak için gerekli değildir:
 
@@ -62,7 +62,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 #### <a name="to-create-the-project"></a>Proje oluşturmak için
 
-1. Visual Studio 'Yu başlatın.
+1. Visual Studio’yu çalıştırın.
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
@@ -79,7 +79,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 #### <a name="to-create-a-dataset"></a>Bir veri kümesi oluşturmak için
 
-1. **Veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
+1. Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.
 
      **Veri kaynakları** penceresi açılır.
 
@@ -103,12 +103,12 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
 8. **Son**'a tıklayın.
 
-     Visual Studio, projeye yeni bir AdventureWorksLTDataSet. xsd dosyası ekler ve **veri kaynakları** penceresine karşılık gelen bir **AdventureWorksLTDataSet** öğesi ekler. The AdventureWorksLTDataSet. xsd dosyası, `AdventureWorksLTDataSet` adlı ve `ProductTableAdapter` adlı TableAdapter adlı bir tür kümesini tanımlar. Bu izlenecek yolda daha sonra, veri kümesini verilerle birlikte doldurmanız ve değişiklikleri veritabanına geri kaydetmek için `ProductTableAdapter` kullanacaksınız.
+     Visual Studio, projeye yeni bir AdventureWorksLTDataSet. xsd dosyası ekler ve **veri kaynakları** penceresine karşılık gelen bir **AdventureWorksLTDataSet** öğesi ekler. The AdventureWorksLTDataSet. xsd dosyası, `AdventureWorksLTDataSet` adlı ve `ProductTableAdapter`adlı TableAdapter adlı bir tür kümesini tanımlar. Bu izlenecek yolda daha sonra, veri kümesini verilerle birlikte doldurmanız ve değişiklikleri veritabanına geri kaydetmek için `ProductTableAdapter` kullanacaksınız.
 
 9. Projeyi oluşturun.
 
 ## <a name="edit-the-default-fill-method-of-the-tableadapter"></a>TableAdapter 'ın varsayılan Fill metodunu düzenleme
- Veri kümesini verilerle birlikte doldurmanız için `ProductTableAdapter` `Fill` yöntemini kullanın. @No__t_0 yöntemi, varsayılan olarak, ürün tablosundaki tüm veri satırlarıyla `AdventureWorksLTDataSet` `ProductDataTable` doldurur. Bu yöntemi, yalnızca satırların bir alt kümesini döndürecek şekilde değiştirebilirsiniz. Bu izlenecek yol için `Fill` yöntemini yalnızca fotoğrafların bulunduğu ürünlerin satırlarını döndürecek şekilde değiştirin.
+ Veri kümesini verilerle birlikte doldurmanız için `ProductTableAdapter``Fill` yöntemini kullanın. `Fill` yöntemi, varsayılan olarak, ürün tablosundaki tüm veri satırlarıyla `AdventureWorksLTDataSet` `ProductDataTable` doldurur. Bu yöntemi, yalnızca satırların bir alt kümesini döndürecek şekilde değiştirebilirsiniz. Bu izlenecek yol için `Fill` yöntemini yalnızca fotoğrafların bulunduğu ürünlerin satırlarını döndürecek şekilde değiştirin.
 
 #### <a name="to-load-product-rows-that-have-photos"></a>Fotoğraflara sahip ürün satırlarını yüklemek için
 
@@ -152,7 +152,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 3. Projeyi oluşturun.
 
 ## <a name="createdata-bound-controls"></a>Createdata bağlantılı denetimler
- @No__t_0 tablosunu **veri kaynakları** penceresinden WPF tasarımcısına sürükleyerek müşteri kayıtlarını görüntüleyen denetimler oluşturun.
+ `Product` tablosunu **veri kaynakları** penceresinden WPF tasarımcısına sürükleyerek müşteri kayıtlarını görüntüleyen denetimler oluşturun.
 
 #### <a name="to-create-data-bound-controls"></a>Veri bağlantılı denetimler oluşturmak için
 
@@ -168,9 +168,9 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
     - ThumbnailPhotoFileName
 
-    - rowguid
+    - ROWGUID
 
-    - ModifiedDate & lt
+    - ModifiedDate
 
 4. **ThumbnailPhoto** düğümünün yanındaki açılan menüye tıklayın ve **görüntü**' ı seçin.
 
@@ -194,19 +194,19 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
      Visual Studio, arka plan kod dosyasını açar ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı için yeni bir `backButton_Click` olay işleyicisi oluşturur.
 
-2. @No__t_0 olay işleyicisini değiştirin, böylece `ProductViewSource`, `AdventureWorksLTDataSet` ve `AdventureWorksLTDataSetProductTableAdapter` yönteminin dışında ve formun tamamına erişilebilir. Yalnızca form için genel olacak şekilde bildirme ve bunları şuna benzer `Window_Loaded` olay işleyicisi içinde atama:
+2. `Window_Loaded` olay işleyicisini değiştirin, böylece `ProductViewSource`, `AdventureWorksLTDataSet`ve `AdventureWorksLTDataSetProductTableAdapter` yönteminin dışında ve formun tamamına erişilebilir. Yalnızca form için genel olacak şekilde bildirme ve bunları şuna benzer `Window_Loaded` olay işleyicisi içinde atama:
 
      [!code-csharp[Data_WPFDATASET#1](../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs#1)]
      [!code-vb[Data_WPFDATASET#1](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb#1)]
 
-3. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin:
+3. `backButton_Click` olay işleyicisine aşağıdaki kodu ekleyin:
 
      [!code-csharp[Data_WPFDATASET#2](../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs#2)]
      [!code-vb[Data_WPFDATASET#2](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb#2)]
 
 4. Tasarımcıya dönün ve **>** düğmesine çift tıklayın.
 
-5. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin:
+5. `nextButton_Click` olay işleyicisine aşağıdaki kodu ekleyin:
 
      [!code-csharp[Data_WPFDATASET#3](../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs#3)]
      [!code-vb[Data_WPFDATASET#3](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb#3)]
@@ -220,7 +220,7 @@ Bu izlenecek yolda, veri bağlantılı denetimler içeren bir WPF uygulaması ol
 
      Visual Studio, arka plan kod dosyasını açar ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı için yeni bir `saveButton_Click` olay işleyicisi oluşturur.
 
-2. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin:
+2. `saveButton_Click` olay işleyicisine aşağıdaki kodu ekleyin:
 
      [!code-csharp[Data_WPFDATASET#4](../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs#4)]
      [!code-vb[Data_WPFDATASET#4](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb#4)]

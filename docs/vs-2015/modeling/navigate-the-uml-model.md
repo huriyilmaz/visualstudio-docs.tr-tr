@@ -11,12 +11,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7b90d8b532b004a7cbdaeed762300a0daf9ab45c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23f87c81e43b2dfafb1c9c78c3135faff809bb9f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668540"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74289847"
 ---
 # <a name="navigate-the-uml-model"></a>UML modelinde gezinme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "72668540"
 Bu konu UML modelinin ana türlerini tanıtır.
 
 ## <a name="the-model-elements-model-and-model-store"></a>Model öğeleri, modeli ve model deposu
- **Microsoft. VisualStudio. Uml. Interfaces. dll** derlemesinde tanımlanan türler [UML belirtiminde, sürüm 2.1.2 'yi](http://www.omg.org/spec/UML/2.1.2/Superstructure/PDF/)tanımlı türlere karşılık gelir.
+ **Microsoft. VisualStudio. Uml. Interfaces. dll** derlemesinde tanımlanan türler [UML belirtiminde, sürüm 2.1.2 'yi](https://www.omg.org/spec/UML/2.1.2/Superstructure/PDF/)tanımlı türlere karşılık gelir.
 
  UML Belirtimindeki türler, Visual Studio 'da arabirimler olarak gerçekleştirilir. ' I ' harfi her türün adı ile sona erer. Örneğin: [IElement](/previous-versions/dd516035(v=vs.140)), [IClass](/previous-versions/dd523539%28v%3dvs.140%29), [ioperation](/previous-versions/dd481186(v=vs.140)).
 
@@ -45,16 +45,16 @@ Bu konu UML modelinin ana türlerini tanıtır.
 
  Modelden bir öğe silerseniz, Bölüm aldığı herhangi bir ilişki otomatik olarak silinir ve diğer uçtaki özelliği güncellenir.
 
- UML belirtimi bir özelliğe 0.. 1 çeşitliliği atarsa, bu değer `null` olabilir. En büyük 1 ' den büyük bir çoğulluk, .NET özelliğinin*tür `>` türü* `IEnumerable<` olduğu anlamına gelir.
+ UML belirtimi bir özelliğe 0.. 1 çeşitliliği atarsa, bu değer `null`olabilir. En büyük 1 ' den büyük bir çoğulluk, .NET özelliğinin *tür`>`türü* `IEnumerable<`olduğu anlamına gelir.
 
  Çapraz geçiş hakkında daha fazla bilgi için bkz. [UML API ile Ilişkilere gitme](../modeling/navigate-relationships-with-the-uml-api.md).
 
 ### <a name="the-ownership-tree"></a>Sahiplik ağacı
- Bir model [IElement](/previous-versions/dd516035(v=vs.140)) nesnelerinin ağacını içerir. Her öğe `OwnedElements` ve `Owner` özelliklere sahiptir.
+ Bir model [IElement](/previous-versions/dd516035(v=vs.140)) nesnelerinin ağacını içerir. Her öğe `OwnedElements` ve `Owner`özelliklere sahiptir.
 
  Çoğu durumda, `Owner` ve `OwnedElements` özelliklerinin hedefleri, daha belirli adlara sahip diğer özellikler tarafından da başvurulur. Örneğin, her UML işlemi bir UML sınıfına aittir. Bu nedenle [IOperation](/previous-versions/dd481186(v=vs.140)) , [IOperation. Class](/previous-versions/dd473473%28v%3dvs.140%29)adlı bir özelliğe sahiptir ve her [IOperation](/previous-versions/dd481186(v=vs.140)) nesnesinde `Class == Owner`.
 
- Ağacın, sahibi olmayan en üstteki öğesi bir `AuxiliaryConstructs.IModel`. IModel `IModelStore` içinde bulunur, burada [IModelStore. root](/previous-versions/ee789368(v=vs.140))olur.
+ Ağacın, sahibi olmayan en üstteki öğesi bir `AuxiliaryConstructs.IModel`. IModel `IModelStore`içinde bulunur, burada [IModelStore. root](/previous-versions/ee789368(v=vs.140))olur.
 
  Her model öğesi bir sahibe göre oluşturulur. Daha fazla bilgi için bkz. [UML modellerinde öğe ve Ilişki oluşturma](../modeling/create-elements-and-relationships-in-uml-models.md).
 
@@ -126,7 +126,7 @@ foreach (IShape<IInterface> in
 
 - Modelleme projesi ve diyagramlarını, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Kullanıcı arabiriminde görünür yapmadan salt okunurdur modda yükleyin. Daha fazla bilgi için bkz. [program kodunda BIR UML modeli okuma](../modeling/read-a-uml-model-in-program-code.md).
 
-- @No__t_0 bir modelleme projesi ve diyagramlarını açın ve ardından içeriğe erişin. Daha fazla bilgi için bkz. [Visual STUDIO API kullanarak BIR UML modeli açma](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md).
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]bir modelleme projesi ve diyagramlarını açın ve ardından içeriğe erişin. Daha fazla bilgi için bkz. [Visual STUDIO API kullanarak BIR UML modeli açma](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

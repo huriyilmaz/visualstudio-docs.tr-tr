@@ -1,5 +1,5 @@
 ---
-title: Bir Azure bulut hizmeti Visual Studio ve IntelliTrace ile yayımlanan bir hata ayıklama | Microsoft Docs
+title: Visual Studio ve IntelliTrace ile yayımlanmış bir Azure bulut hizmetinde hata ayıklama | Microsoft Docs
 description: Bir bulut hizmetinde Visual Studio ve IntelliTrace ile hata ayıklama hakkında bilgi edinin
 author: mikejo5000
 manager: jillfra
@@ -11,26 +11,26 @@ ms.date: 03/21/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 8cec66f4746656e1bc1f5c2aba54a442883e4fa9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00e13c6f217c54b99dfe103b86f1e775e36fd62a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62421698"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74293540"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>Visual Studio ve IntelliTrace ile yayımlanan bir Azure bulut hizmetinin hatalarını ayıklama
 IntelliTrace ile Azure içinde çalıştığında bir rol örneği için kapsamlı hata ayıklama bilgileri günlüğe kaydedebilirsiniz. Bir sorunun nedenini bulmak gerekiyorsa, IntelliTrace günlüklerini, Visual Studio'dan, Azure'da çalışıyormuş gibi kodunuzda adım adım ilerleyin için de kullanabilirsiniz. Aslında Azure uygulamanızın Azure'daki bir bulut hizmeti olarak çalışan ve Visual Studio'dan kaydedilen verileri yeniden yürütme olanak tanır, Intellitrace'in kaydettiği kod yürütme ve ortam verilerini anahtarı. 
 
 Visual Studio Enterprise yüklüyse IntelliTrace ve Azure uygulama hedeflerinizi .NET Framework 4 veya sonraki bir sürümünü kullanabilirsiniz. IntelliTrace rollerinizi Azure için bilgi toplar. Bu roller için sanal makinelerin her zaman 64-bit işletim sistemlerinde çalışır.
 
-Alternatif olarak, kullandığınız [uzaktan hata ayıklama](http://go.microsoft.com/fwlink/p/?LinkId=623041) doğrudan Azure'da çalışan bir bulut hizmetine eklemek için.
+Alternatif olarak, kullandığınız [uzaktan hata ayıklama](https://go.microsoft.com/fwlink/p/?LinkId=623041) doğrudan Azure'da çalışan bir bulut hizmetine eklemek için.
 
 > [!IMPORTANT]
 > IntelliTrace yalnızca hata ayıklama senaryoları içindir ve Üretim dağıtımı için kullanılmamalıdır.
 > 
 
 ## <a name="configure-an-azure-application-for-intellitrace"></a>Azure uygulaması için IntelliTrace'i yapılandırın
-Azure uygulaması için IntelliTrace etkinleştirmek için oluşturma ve bir Visual Studio Azure project uygulamayı yayımlayın. Azure'da yayımlamadan önce Azure uygulamanız için IntelliTrace yapılandırmanız gerekir. IntelliTrace yapılandırmadan uygulamanızı yayımlayın, projeyi yeniden yayımlamanız gerekir. Daha fazla bilgi için [yayımlama bir Azure bulut hizmeti projeleri Visual Studio kullanarak](http://go.microsoft.com/fwlink/p/?LinkId=623012).
+Azure uygulaması için IntelliTrace etkinleştirmek için oluşturma ve bir Visual Studio Azure project uygulamayı yayımlayın. Azure'da yayımlamadan önce Azure uygulamanız için IntelliTrace yapılandırmanız gerekir. IntelliTrace yapılandırmadan uygulamanızı yayımlayın, projeyi yeniden yayımlamanız gerekir. Daha fazla bilgi için [yayımlama bir Azure bulut hizmeti projeleri Visual Studio kullanarak](https://go.microsoft.com/fwlink/p/?LinkId=623012).
 
 1. Azure uygulamanızı dağıtmaya hazır olduğunuzda, Proje yapı hedefleri ayarlandığından doğrulayın **hata ayıklama**.
 
@@ -46,7 +46,7 @@ Azure uygulaması için IntelliTrace etkinleştirmek için oluşturma ve bir Vis
 
     ![IntelliTrace ayarları bağlantısı](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/intellitrace-settings-link.png)
    
-1. İçinde **IntelliTrace ayarları** iletişim kutusunda, hangi olayların günlük, çağrı bilgilerini toplamak etkinleştirilip etkinleştirilmeyeceğini, hangi modüllerin ve toplamak için işlemleri günlüğe kaydeder ve kayıt için ayırmak üzere ne kadar alan belirtebilirsiniz. IntelliTrace hakkında daha fazla bilgi için bkz: [IntelliTrace ile hata ayıklama](http://go.microsoft.com/fwlink/?LinkId=214468).
+1. İçinde **IntelliTrace ayarları** iletişim kutusunda, hangi olayların günlük, çağrı bilgilerini toplamak etkinleştirilip etkinleştirilmeyeceğini, hangi modüllerin ve toplamak için işlemleri günlüğe kaydeder ve kayıt için ayırmak üzere ne kadar alan belirtebilirsiniz. IntelliTrace hakkında daha fazla bilgi için bkz: [IntelliTrace ile hata ayıklama](https://go.microsoft.com/fwlink/?LinkId=214468).
    
     ![IntelliTrace ayarları](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC519063.png)
 

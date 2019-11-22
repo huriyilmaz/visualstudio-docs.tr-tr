@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7cfdf356d21558f2024cb83e00bdfc930284b1d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ce5b21f92eecf2e8929c142bc1ee32e20d386335
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68164112"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299253"
 ---
 # <a name="how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger"></a>Kendi Programımı Hata Ayıklayıcı Dışında Çalıştırırken Erişim İhlallerinde Nasıl Hata Ayıklayabilirim?
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Sorun açıklaması
 ## <a name="solution"></a>Çözüm  
  Ayarlama [Just-ın-time hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md) seçenek ve erişim ihlali gerçekleşene kadar tek başına programınızı çalıştırın. Ardından **erişim ihlali** iletişim kutusu, tıklayabilirsiniz **iptal** hata ayıklayıcıyı başlatmak için.  
   
- Bilgi Bankası makalesi Q133174, ayrıca bkz: "Konusunda bir genel koruma (GP) hata oluştuğu bulun." MSDN Kitaplığı CD'sindeki veya arama tabanı makalelerini bulabilirsiniz [ http://support.microsoft.com/ ](http://support.microsoft.com/).  
+ Ayrıca, "genel koruma (GP) hatasının nerede oluştuğunu bulma" başlıklı Bilgi Bankası makalesine bakın. Bilgi Bankası makalelerini MSDN Kitaplığı CD 'sinde veya [http://support.microsoft.com/](https://support.microsoft.com/)arayarak bulabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yerel kod hata ayıklaması SSS](../debugger/debugging-native-code-faqs.md)   

@@ -12,12 +12,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e4c234d7b13b5c2211c833ee843ea80649c231a4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 13f943baef21560132f2f9b9ba98c0325540fbf2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667651"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301076"
 ---
 # <a name="enhancing-code-quality-with-team-project-check-in-policies"></a>Takım Projesi İade İlkeleriyle Kod Kalitesini Arttırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,13 +35,13 @@ Team Foundation Sürüm Denetimi (TFVC) kullandığınızda, takım projeleriniz
 - **Iş öğeleri**: bir veya daha fazla iş öğesinin iadele ilişkilendirilmesini gerektirir.
 
 > [!IMPORTANT]
-> İade ilkelerini kullanmak için [!INCLUDE[vststfsLong](../includes/vststfslong-md.md)] bağlı olmanız gerekir.
+> İade ilkelerini kullanmak için [!INCLUDE[vststfsLong](../includes/vststfslong-md.md)]bağlı olmanız gerekir.
 
 ## <a name="common-tasks"></a>Ortak Görevler
 
 |Görev|Destekleyici İçerik|
 |----------|------------------------|
-|**İade Ilkeleri oluşturma ve kullanma:** @No__t_1 takım projesi ayarlarını kullanarak iade ilkeleri oluşturursunuz.|[Kalite kapıları ayarlama ve zorlama](https://msdn.microsoft.com/library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|
+|**İade Ilkeleri oluşturma ve kullanma:** [!INCLUDE[esprscc](../includes/esprscc-md.md)]takım projesi ayarlarını kullanarak iade ilkeleri oluşturursunuz.|[Kalite kapıları ayarlama ve zorlama](https://msdn.microsoft.com/library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|
 |**Kod Analizi iade Ilkeleri oluşturma ve kullanma:** Standart bir kod analizi kuralları kümesinden seçim yapabilir veya özel bir küme oluşturabilirsiniz.|[Kod Çözümleme İade İlkeleri Oluşturma ve Kullanma](../code-quality/creating-and-using-code-analysis-check-in-policies.md)|
 
 ## <a name="related-tasks"></a>İlgili görevler
@@ -55,5 +55,5 @@ Team Foundation Sürüm Denetimi (TFVC) kullandığınızda, takım projeleriniz
 
 ## <a name="external-resources"></a>Dış kaynaklar
 
-### <a name="guidance"></a>Kılavuz
- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](http://go.microsoft.com/fwlink/?LinkID=255188)
+### <a name="guidance"></a>Rehber
+ [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://go.microsoft.com/fwlink/?LinkID=255188)

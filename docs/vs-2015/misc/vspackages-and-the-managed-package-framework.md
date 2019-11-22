@@ -1,5 +1,5 @@
 ---
-title: VSPackages ve yönetilen paket çerçevesini | Microsoft Docs
+title: VSPackages ve yönetilen paket çerçevesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -11,33 +11,33 @@ helpviewer_keywords:
 ms.assetid: e8d80e0f-6b5b-4baf-a7df-59fd808c60cd
 caps.latest.revision: 16
 manager: jillfra
-ms.openlocfilehash: 5b72b2c3bd6b03d1d3f3e50135c2ddf4758a4bd9
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 84fb41bfc80415535ca41d6b1a8c9dcf47124c7a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65683054"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298226"
 ---
-# <a name="vspackages-and-the-managed-package-framework"></a>VSPackages ve yönetilen paket çerçevesini
-VSPackage ile yönetilen paket framework (MPF) sınıfları yerine COM birlikte çalışma sınıflarını kullanarak oluşturarak geliştirme süresini azaltabilirsiniz.  
+# <a name="vspackages-and-the-managed-package-framework"></a>VSPackages ve yönetilen paket çerçevesi
+COM birlikte çalışma sınıflarını kullanmak yerine, yönetilen paket çerçevesi (MPF) sınıflarıyla bir VSPackage oluşturarak geliştirme süresini azaltabilirsiniz.  
   
- Yönetilen bir VSPackage oluşturmanın iki yolu vardır:  
+ Yönetilen VSPackage oluşturmanın iki yolu vardır:  
   
-- Kullanım [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] paket proje şablonu  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] paketi proje şablonunu kullanın  
   
-     Daha fazla bilgi için [izlenecek yol: Visual Studio Paket şablonu kullanarak bir menü komutu oluşturmak](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de).  
+     Daha fazla bilgi için bkz. [Izlenecek yol: Visual Studio paket şablonunu kullanarak bir menü komutu oluşturma](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de).  
   
-- VSPackage olmadan derleme [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] paket proje şablonu  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] paketi proje şablonu olmadan VSPackage oluşturun  
   
-     Örneğin, bir örnek VSPackage'ı kopyalayın ve GUID'leri ve adlarını değiştirebilirsiniz. VSX bölümünde örnekleri bulabilirsiniz [kod Galerisi](http://code.msdn.microsoft.com/vsx/).  
+     Örneğin, örnek bir VSPackage kopyalayabilir ve GUID 'Leri ve adları değiştirebilirsiniz. 
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yönetilen paket Framework sınıfları](../misc/managed-package-framework-classes.md)  
- Açıklar ve DLL dosyaları ve MPF sınıf ad alanları listeler.  
+ [Yönetilen paket çerçevesi sınıfları](../misc/managed-package-framework-classes.md)  
+ MPF sınıfı ad alanlarını ve DLL dosyalarını açıklar ve listeler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [İzlenecek yol: Visual Studio Paket şablonu kullanarak bir menü komutu oluşturma](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)  
- Yönetilen bir VSPackage'ı nasıl oluşturulacağını açıklar.  
+ [İzlenecek yol: Visual Studio paket şablonunu kullanarak bir menü komutu oluşturma](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)  
+ Yönetilen bir VSPackage oluşturmayı açıklar.  
   
- [Yönetilen VSPackage'ları](../misc/managed-vspackages.md)  
- Yönetilen kod için geçerli olan VSPackages yönlerini ortaya çıkarır.
+ [Yönetilen VSPackages](../misc/managed-vspackages.md)  
+ Yönetilen kod için uygulanan VSPackages yönlerini tanıtır.

@@ -11,17 +11,17 @@ caps.latest.revision: 8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7d5049a24b7457adb5ae126a75816814e1295b73
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a80aef71271df0a1353dfd73898dbe8fcd7007c4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656810"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300928"
 ---
 # <a name="developing-workflow-applications-targeting-the-net-30-or-net-35-framework"></a>.NET 3.0 veya .NET 3.5 Framework’ü Hedefleyen İş Akışı Uygulamaları Geliştirme
-[!INCLUDE[vs2010](../includes/vs2010-md.md)], [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)] hedefleyen [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar oluşturmak için [!INCLUDE[wfd1](../includes/wfd1-md.md)] sağlar. Tasarımcı, iş akışı uygulamalarında grafik oluşturma ve hata ayıklama için tanıdık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Kullanıcı arabirimini kullanır.
+[!INCLUDE[vs2010](../includes/vs2010-md.md)], [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)]hedefleyen [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar oluşturmak için [!INCLUDE[wfd1](../includes/wfd1-md.md)] sağlar. Tasarımcı, iş akışı uygulamalarında grafik oluşturma ve hata ayıklama için tanıdık [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Kullanıcı arabirimini kullanır.
 
- [!INCLUDE[vs2010](../includes/vs2010-md.md)] Ayrıca, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek için kullanılabilecek eski bir iş akışı tasarımcısına erişim sağlar. Bu bölüm, bu eski tasarımcıyı kullanma hakkında rehberlik içerir.
+ [!INCLUDE[vs2010](../includes/vs2010-md.md)] Ayrıca, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflemek için kullanılabilecek eski bir iş akışı tasarımcısına erişim sağlar. Bu bölüm, bu eski tasarımcıyı kullanma hakkında rehberlik içerir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Eski İş Akışı Tasarımcısını Kullanma](../workflow-designer/using-the-legacy-workflow-designer.md)
@@ -29,4 +29,4 @@ ms.locfileid: "72656810"
  [Eski İş Akışlarında Hata Ayıklama](../workflow-designer/debugging-legacy-workflows.md)
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Windows Workflow Foundation Programlama Kılavuzu](http://go.microsoft.com/fwlink?LinkID=65012)
+ [Windows Workflow Foundation Programlama Kılavuzu](https://go.microsoft.com/fwlink?LinkID=65012)

@@ -1,135 +1,135 @@
 ---
-title: Kurulum, yükleme ve Doğrulamalar Mac kullanıcıları için | Microsoft Docs
+title: Mac kullanıcıları için kurulum, yükleme ve doğrulama | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: 22725520-59ba-4f6f-80e4-097b1287a34b
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 543401b0e3fcebee22c1c9581f22ec96a76000af
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 14da8fab1b3190d77951298ac7d1a130c85f6135
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433881"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297710"
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Mac kullanıcıları için kurulum, yükleme ve doğrulamalar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konuda, Mac'te bir Windows sanal makine içinde Visual Studio isteğe bağlı olarak kullanacak, öncelikle bir Mac üzerinde çalışan geliştiriciler için tasarlanmıştır Öncelikle bir Windows bilgisayarda çalışan bir geliştirici olan ve ikincil Mac iOS hedeflemek için ayarlanacak ihtiyacınız varsa, ana bkz [Kurulum ve yükleme](../cross-platform/setup-and-install.md) konu.  
+Bu konu, birincil olarak Visual Studio 'Yu Mac üzerinde bir Windows sanal makinesi içinde kullanacak bir Mac üzerinde çalışan geliştiriciler için tasarlanmıştır. Birincil olarak bir Windows bilgisayarında çalışan bir geliştirici iseniz ve iOS hedeflemek için ikincil Mac ayarlamanız gerekiyorsa, ana [Kurulum ve yükleme](../cross-platform/setup-and-install.md) konusuna bakın.  
   
- Mac'te Xamarin ile çalışmak için şunlar gerekir:  
+ Mac 'te Xamarin ile çalışmak için şunlar gerekir:  
   
-- Bir Xamarin hesabı. Git [ https://www.xamarin.com/ ](https://www.xamarin.com/) tıklayın **oturum** sağ üst kısmındaki sayfası üzerinde ardından **yeni bir hesap oluşturun** sayfasında görünür. Bir e-posta adresi ve parola Xamarin hesabınız için seçin.  
+- Bir Xamarin hesabı. [https://www.xamarin.com/](https://www.xamarin.com/) gidin ve sayfanın sağ üst köşesinde bulunan **oturum aç** ' a tıklayın, ardından görüntülenen sayfada **Yeni hesap oluştur ' a** tıklayın. Xamarin hesabınız için bir e-posta adresi ve parola seçin.  
   
-- Mac OSX Yosemite (10.10) veya üstünde, Xcode 7 ve Xamarin 4'ün yüklü.  
+- Xcode 7 ve Xamarin 4 yüklü olarak OSX Yosemite (10,10) veya üzeri bir Mac.  
   
 - Aşağıdaki yapılandırmalardan biri:  
   
-  - **Doğrudan Mac üzerinde çalışan Xamarin Studio için:** Xamarin Studio, yapı destekleyen Xamarin'in geliştirme ortamı kullanarak Android, iOS ve Windows uygulamaları C#.  Xamarin Studio hızlı bir genel bakış için bkz [Xamarin Studio genel bakış](https://xamarin.com/studio) (xamarin.com).  
+  - **Doğrudan Mac üzerinde Xamarin Studio çalıştırmak için:** Xamarin Studio, kullanarak C#Android, IOS ve Windows uygulamaları oluşturmayı destekleyen Xamarin 'in geliştirme ortamıdır.  Xamarin Studio hızlı bir genel bakış almak için, [Xamarin Studio genel bakış](https://xamarin.com/studio) (Xamarin.com) bölümüne bakın.  
   
-  - **Zaten sahip olduğunuz Parallels ya da VMWare Mac'inizde yapılandırılmış:** Visual Studio 2015 ve Xamarin 4 Parallels veya VMWare içinde Windows çalıştırın.  Bu yapılandırma ile Xamarin, C# kullanarak Android, iOS ve WinPhone uygulamalarını oluşturmak için Visual Studio geliştirme ortamı olarak kullanma olanağı sağlayan Visual Studio ile yüklenen bir uzantısıdır.  Visual Studio Geliştirici temel bileşenleri programı kapsamında ücretsiz 3 aylık Parallels abonelik edinebilirsiniz unutmayın. Bkz: [Microsoft Visual Studio Dev Essentials olacak dahil Parallels Desktop Pro ve Parallels erişim](http://blog.parallels.com/blog/2015/11/18/visual-studio-dev-essentials/) (Parallels blog).  
+  - **Mac 'inizde zaten Parallels veya VMware 'niz varsa:** Windows 'U Visual Studio 2015 ve Xamarin 4 Içinde Parallels veya VMware içinde çalıştırın.  Bu yapılandırmayla, Xamarin, Visual Studio ile yüklenen ve kullanarak C#Android, IOS ve WinPhone uygulamaları oluşturmaya yönelik geliştirme ortamınız olarak Visual Studio 'yu kullanma olanağı sağlayan bir uzantıdır.  Visual Studio Geliştirici Essentials programının bir parçası olarak ücretsiz 3 aylık Parallels aboneliği edinebileceğinizi unutmayın. Bkz. [Microsoft Visual Studio Dev Essentials, Parallels Desktop Pro ve Parallels erişimi](https://www.parallels.com/blogs/) (Parallels blogu) içerir.  
   
-  Bu konuda, bu gereksinimleri için yönergeler sağlar.  Yükleme işlemi devam ederken, konuyu gözden geçirebilirsiniz [Xamarin ile mobil geliştirme hakkında bilgi edinin](../cross-platform/learn-about-mobile-development-with-xamarin.md) okuyup gerekli arka plan bilgilerini izleyin.  
+  Bu konu, bu gereksinimlere ilişkin yönergeler sağlar.  Yükleme işlemi çalışırken, gereken arka plan malzemesini okumak ve izlemek için [Xamarin ile mobil geliştirme hakkında bilgi edinin](../cross-platform/learn-about-mobile-development-with-xamarin.md) konusunu gözden geçirebilirsiniz.  
   
   **Bu konuda:**  
   
-- [Mac kurulumu (Apple kimliği, Xcode ve Xamarin)](#mac)  
+- [Mac Kurulumu (Apple KIMLIĞI, Xcode ve Xamarin)](#mac)  
   
-- [Windows Kurulum içinde Parallels (Visual Studio ve Xamarin)](#windows)  
+- [Paralells içinde Windows kurulumu (Visual Studio ve Xamarin)](#windows)  
   
 - [Ortamınızı doğrulayın](#verify)  
   
-## <a name="mac"></a> Mac kurulumu (Apple kimliği, Xcode ve Xamarin)  
+## <a name="mac"></a>Mac Kurulumu (Apple KIMLIĞI, Xcode ve Xamarin)  
   
-1. Ücretsiz bir Apple kimliği Oluştur [My Apple kimliği](https://appleid.apple.com/) zaten yoksa. Bu, yükleme ve Xcode ile imzalama gereklidir.  
+1. Henüz bir tane yoksa [Apple Kimliğinizle](https://appleid.apple.com/) ücretsiz BIR Apple Kimliği oluşturun. Bu, Xcode 'a yükleme ve oturum açmada gereklidir.  
   
-2. Xcode'dan yükleyip [ https://developer.apple.com/xcode/ ](https://developer.apple.com/xcode/).  
+2. [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)'Den Xcode indirin ve yükleyin.  
   
-3. İndirme ve yönergeleri izleyerek Xamarin yükleme [yükleme ve yapılandırma Xamarin.iOS](http://developer.xamarin.com/guides/ios/getting_started/installation/mac/) (xamarin.com).  
+3. [Xamarin. iOS (Xamarin.com) yükleme ve yapılandırma](https://docs.microsoft.com/xamarin/ios/get-started/installation/mac) yönergelerini izleyerek Xamarin 'i indirin ve yükleyin.  
   
-4. Xamarin hem Windows hem de Mac bilgisayarlara yükleme işlemini tamamladıktan sonra yönergeleri takip edin [XMA kullanarak Mac bilgisayara bağlayarak](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac_Using_XMA) (xamarin.com), iOS ve Mac Visual Studio'dan Windows üzerinde çalışabilmeniz için bilgisayar.  
+4. Xamarin 'i hem Windows hem de Mac bilgisayarlara yüklemeyi tamamladıktan sonra, Windows bilgisayarında Visual Studio 'dan iOS ve Mac ile çalışabilmek [için XMA kullanarak Mac 'e bağlanma](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (Xamarin.com) yönergelerini izleyin.  
   
-## <a name="windows"></a> Windows Kurulum içinde Parallels (Visual Studio ve Xamarin)  
+## <a name="windows"></a>Paralells içinde Windows kurulumu (Visual Studio ve Xamarin)  
   
-1. / VMWare, Parallels içinde yapılandırdığınız Windows Masaüstü'nü kullanarak [indirin ve herhangi bir sürümünü Visual Studio 2015 için yükleyiciyi başlatın](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) (Community, Professional veya Enterprise). Visual Studio 2015 Community ücretsiz bir sürümüdür; Professional ve Enterprise sürümleri deneme olarak 30 gün boyunca kullanılabilir.  
+1. Parallels/VMWare içinde yapılandırdığınız Windows Masaüstü 'nü kullanarak, herhangi bir Visual Studio 2015 (Community, Professional veya Enterprise) [sürümüne ait yükleyiciyi indirin ve başlatın](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) . Visual Studio 2015 Community, ücretsiz sürümdür; Profesyonel ve kurumsal sürümler 30 gün boyunca deneme süresi boyunca kullanılabilir.  
   
-2. Yükleyici içinde seçin bir **özel** yükleyin:  
+2. Yükleyici içinde **özel** yükleme ' yi seçin:  
   
-     ![Visual Studio Kurulumu içinde özel seçeneğini seçerken](../cross-platform/media/cross-plat-xamarin-setup-1.png "çapraz-Plat Xamarin Kurulum 1")  
+     ![Visual Studio yüklemesinde özel seçeneği seçme](../cross-platform/media/cross-plat-xamarin-setup-1.png "Çapraz Plat Xamarin Kurulum 1")  
   
-3. Aşağıdaki kutuları onay/Temizle:  
+3. Aşağıdaki kutuları işaretleyin/temizleyin:  
   
-    1. Denetleme **platformlar arası mobil geliştirme > C# / .NET (Xamarin)**. Bu, yaygın kullanılan araçlar ve yazılım geliştirme setleri altında çeşitli Android araçları da otomatik olarak seçer.  
+    1. **Platformlar arası mobil geliştirme > C#/.net (Xamarin) seçeneğini**işaretleyin. Ayrıca, ortak araçlar ve yazılım geliştirme setleri altında çeşitli Android araçları da otomatik olarak seçilecek.  
   
-         ![Xamarin seçeneğini altında çapraz&#45;Platform mobil geliştirme](../cross-platform/media/cross-plat-xamarin-setup-2.png "çapraz-Plat Xamarin Kurulum 2")  
+         ![Platformlar arası&#45;mobil geliştirme altında Xamarin seçeneğini belirleyin](../cross-platform/media/cross-plat-xamarin-setup-2.png "Çapraz Plat Xamarin Kurulum 2")  
   
-    2. NET **platformlar arası mobil geliştirme > Android için Microsoft Visual Studio öykünücüsü**.  
+    2. **Platformlar arası mobil geliştirme > Android için Microsoft Visual Studio öykünücüsü**temizleyin.  
   
-4. Yükle düğmesine tıklayın ve çalıştırma işlemi sağlar. Yeniden, bu süre içerisinde Bu konu ile devam edin ve Git tamamlanması biraz zaman alabilir [Xamarin ile mobil geliştirme hakkında bilgi edinin](../cross-platform/learn-about-mobile-development-with-xamarin.md).  
+4. Install düğmesine tıklayın ve işlemin çalışmasına izin verin. Bu konunun tamamlanması biraz zaman alır, bu konuyla devam edebilirsiniz ve [Xamarin ile mobil geliştirme hakkında bilgi edinebilirsiniz](../cross-platform/learn-about-mobile-development-with-xamarin.md).  
   
-5. Yükleme tamamlandıktan sonra Visual Studio ve Microsoft hesabınızla oturum istenirse başlatın (Windows ile kullandığınız hesapla aynıdır). Xamarin aracılığıyla güncelleştirmeleri daha sonra denetleyin **araçları > Seçenekler > Xamarin** veya **araçları > Seçenekler > Xamarin > diğer**, burada bulabilirsiniz bir **şimdi denetle** bağlantı:  
+5. Yükleme tamamlandıktan sonra Visual Studio 'Yu başlatın ve istenirse Microsoft hesabı ile oturum açın (Bu, Windows ile kullandığınız hesaptır). Daha sonra, **> > Xamarin** veya **tools > > > Seçenekler**aracılığıyla **Xamarin güncelleştirmelerini kontrol** edin.  
   
-     ![Xamarin güncelleştirmeleri Visual Studio seçenekleri](../cross-platform/media/cross-plat-xamarin-setup-3.png "çapraz-Plat Xamarin Kurulum 3")  
+     ![Visual Studio seçeneklerinde Xamarin güncelleştirmelerini denetleme](../cross-platform/media/cross-plat-xamarin-setup-3.png "Çapraz Plat Xamarin kurulumu 3")  
   
     > [!NOTE]
-    > Önceki Xamarin lisans sorunları önlemek için daha yüksek veya Xamarin 4.0.3.214 sürümüne güncelleştirmek emin olun.  Güncelleştirmeleri denetlemek ve derleme araçları bir hatayı Microsoft hakkında çalışırsanız, iş parçacığı bakın [Xamarin'in forumları](http://forums.xamarin.com/discussion/69015/xamarin-update-on-vs-2013-says-i-need-the-build-tools-for-vs-2015).
+    > Daha önceki Xamarin lisanslarıyla ilgili sorunlardan kaçınmak için Xamarin 'i 4.0.3.214 veya üzeri bir sürüme güncelleştirdiğinizden emin olun.  Güncelleştirmeleri denetlemeye çalışırsanız ve Microsoft derleme araçları hakkında bir hata görürseniz, [Xamarin 'in forumlarındaki](https://forums.xamarin.com/discussion/69015/xamarin-update-on-vs-2013-says-i-need-the-build-tools-for-vs-2015)iş parçacığına bakın.
   
-6. Xamarin hem Windows hem de Mac bilgisayarlara yükleme işlemini tamamladıktan sonra yönergeleri takip edin [XMA kullanarak Mac bilgisayara bağlayarak](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac_Using_XMA) (xamarin.com) Visual Studio'dan iOS ile çalışabilirsiniz.  
+6. Xamarin 'i hem Windows hem de Mac bilgisayarlara yüklemeyi tamamladıktan sonra, Visual Studio 'dan iOS ile çalışabilmek [için XMA (Xamarin.com) kullanarak Mac 'e bağlanma](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) yönergelerini izleyin.  
   
-## <a name="verify"></a> Ortamınızı doğrulayın  
- Yükleyicileri tamamladıktan sonra her şeyi Xamarin geliştirme deneyimi hazır olduğunu doğrulamak için birkaç dakikanızı ayırın.  
+## <a name="verify"></a>Ortamınızı doğrulayın  
+ Yükleyiciler tamamlandığında, her şeyin Xamarin geliştirmeyi deneymeye hazırlandığını doğrulamak için birkaç dakikanızı ayırın.  
   
 ### <a name="xamarin-studio"></a>Xamarin Studio  
- Sağlanan bağlantılar gittiğinizde ilk olarak, sahip olduğunuzdan emin olun **Xamarin Studio** Xamarin belgeleri doğru sürümünü görmek için sağ üst köşede seçili:  
+ İlk olarak, belirtilen bağlantılara gittiğinizde, Xamarin belgelerinin doğru sürümünü görebilmeniz için sağ üst köşede **Xamarin Studio** seçtiğinizden emin olun:  
   
- ![Üzerinde Xamarin.com doğru belgeleri görmek için Xamarin Studio'yu seçerek](../cross-platform/media/crossplat-xamarin-mac-1.png "CrossPlat Xamarin Mac 1")  
+ ![Xamarin.com üzerinde doğru belgeleri görmek için Xamarin Studio seçme](../cross-platform/media/crossplat-xamarin-mac-1.png "Çapraz Splat Xamarin Mac 1")  
   
- **Android**  
+ **Outlook Web Access (OWA)**  
   
-1. Yönergeleri izleyerek bir Android projesi oluşturma doğrulama [bir Android projesi oluşturma](http://developer.xamarin.com/recipes/android/general/projects/create_an_android_project/) (xamarin.com).  
+1. [Android projesi oluşturma](https://github.com/xamarin/docs-archive/tree/master/Recipes/android/general/projects/create_an_android_project) (Xamarin.com) yönergelerini Izleyerek bir Android projesi oluşturmayı doğrulayın.  
   
-2. Hata ayıklama Android Player'ı doğrulama [Android Player > Xamarin Studio belgeleri ile tümleştirme](https://developer.xamarin.com/guides/android/getting_started/installation/android-player/#Integration_with_Xamarin_Studio) (xamarin.com).  
+2. Android Player ile Android Player 'da hata ayıklamayı doğrulamak [> Xamarin Studio belgeleriyle tümleştirme](https://developer.xamarin.com/guides/android/getting_started/installation/android-player/#Integration_with_Xamarin_Studio) (Xamarin.com).  
   
    **iOS**  
   
-3. Yönergeleri izleyerek bir iOS projesi oluşturma doğrulama [iOS oluşturma](http://developer.xamarin.com/recipes/ios/general/projects/create_an_ios_project/) (xamarin.com).  
+3. [IOS oluşturma](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/general/projects/create_an_ios_project) (Xamarin.com) yönergelerini Izleyerek bir iOS projesi oluşturmayı doğrulayın.  
   
-4. İOS simülatöründe hata ayıklama doğrulama [simülatör belgelerinde hata ayıklama](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) (xamarin.com).  
+4. [Simülatör belgelerindeki hata ayıklama](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) yoluyla iOS benzeticisinde hata ayıklamayı doğrulayın (Xamarin.com).  
   
 ### <a name="visual-studio"></a>Visual Studio  
- Sağlanan bağlantılar gittiğinizde ilk olarak, sahip olduğunuzdan emin olun **Visual Studio** Xamarin belgeleri doğru sürümünü görmek için sağ üst köşede seçili:  
+ İlk olarak, Xamarin belgelerinin doğru sürümünü görmeniz için sağ üst köşede **Visual Studio** 'nun seçili olduğundan emin olun, ancak  
   
- ![Üzerinde Xamarin.com doğru belgeleri görmek için Visual Studio seçerek](../cross-platform/media/crossplat-xamarin-mac-2.png "CrossPlat Xamarin Mac 2")  
+ ![Xamarin.com üzerinde doğru belgeleri görmek için Visual Studio 'Yu seçme](../cross-platform/media/crossplat-xamarin-mac-2.png "Çapraz Splat Xamarin Mac 2")  
   
- Xamarin hesabınız üzerinden ayrıca oturum **Araçlar > Xamarin hesabı...** .  
+ Xamarin hesabındaki **araçlar > Xamarin**hesabı aracılığıyla da oturum açın...  
   
- **Android**  
+ **Outlook Web Access (OWA)**  
   
-1. Yönergeleri izleyerek bir Android projesi oluşturma doğrulama [bir Android projesi oluşturma](http://developer.xamarin.com/recipes/android/general/projects/create_an_android_project/) (xamarin.com).  
+1. [Android projesi oluşturma](https://github.com/xamarin/docs-archive/tree/master/Recipes/android/general/projects/create_an_android_project) (Xamarin.com) yönergelerini Izleyerek bir Android projesi oluşturmayı doğrulayın.  
   
-2. Android designer doğrula: Çözüm Gezgini'nde Android projeyi **Kaynakları > Düzen > Main.axml** dosya.  
+2. Android tasarımcısını doğrulama: Çözüm Gezgini Android projesinde, **ana. axml dosyasını > kaynaklar > düzeni** ' ni açın.  
   
-   - "Android SDK yüklü olduğu çok eski" belirten bir hata alırsanız, tıklayın **açık Android SDK** , ileti ve en yeni SDK sürümü seçin. Visual Studio SDK'yı güncelleştirmek için yönetici olarak çalıştırıyor olması gerektiğini unutmayın.  
+   - "Yüklü Android SDK çok eski olduğunu" belirten bir hata alırsanız, bu iletideki **Android SDK aç** ' a tıklayın ve kullanılabilir en yeni SDK sürümünü seçin. SDK 'Yı güncelleştirmek için Visual Studio 'Yu yönetici olarak çalıştırıyor olmanız gerektiğini unutmayın.  
   
-3. Mac'inizde yüklü öykünücüsü'nü Visual Studio'dan bağlanabildiğinizi doğrulayın  Bunun sonucu olarak, Visual Studio'da hata ayıklama için seçebileceğiniz öykünücüleri listesinde Xamarin Player görecek olmasıdır.  Bunu yapmak için yönergeleri takip edin [bağlanma Visual Studio için Xamarin Android Player](http://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/android-player-with-visual-studio-in-vm/) (xamarin.com).  
+3. Visual Studio 'dan Mac 'inizde yüklü olan öykünücüsüne bağlanabildiğini doğrulayın.  Bunun sonucunda, Xamarin Player 'ı Visual Studio içinden hata ayıklama için seçebileceğiniz Öykünücüler listesinde görecaksınız.  Bunu yapmak için, [Visual Studio 'yu Xamarin Android Player bağlama](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) yönergelerini izleyin (Xamarin.com).  
   
    **iOS**  
   
-4. Ağ üzerinde kullanılabilir ve üzerinde açıklandığı gibi Visual Studio ile eşleştirilmiş Mac'inizde olduğundan emin olun [XMA kullanarak Mac bilgisayara bağlayarak](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac_Using_XMA) (xamarin.com).  
+4. Mac 'nizin ağda kullanılabilir olduğundan ve Visual Studio ile eşlenmiş olduğundan, [XMA kullanarak Mac 'e bağlanma](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (Xamarin.com) bölümünde açıklandığı gibi.  
   
-5. Yönergeleri izleyerek bir iOS projesi oluşturma doğrulama [iOS oluşturma](http://developer.xamarin.com/recipes/ios/general/projects/create_an_ios_project/) (xamarin.com).  
+5. [IOS oluşturma](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/general/projects/create_an_ios_project) (Xamarin.com) yönergelerini Izleyerek bir iOS projesi oluşturmayı doğrulayın.  
   
-6. Görsel taslak Tasarımcı doğrula: iOS Çözüm Gezgini'nde projeyi **MainStoryboard.storyboard** dosya. Visual Studio Mac üzerinde çalışan uzaktan Tasarımcı burada barındırma  
+6. Görsel taslak tasarımcısını doğrulayın: Çözüm Gezgini iOS projesinde, **MainStoryboard. Storyboard** dosyasını açın. Burada, Visual Studio, Mac üzerinde uzaktan çalışan tasarımcıyı barındırıyor.  
   
-7. Derleme ve hata ayıklama doğrulama:  
+7. Derleme ve hata ayıklamayı doğrula:  
   
-   1. Çözüm Gezgini'nde iOS projesine sağ tıklayıp **başlangıç projesi olarak ayarla**.  
+   1. Çözüm Gezgini ' de iOS projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.  
   
-   2. Seçin **iPhoneSimulator** aşağıda gösterildiği gibi Visual Studio'nun derleme açılan listeden hedefleyin. Mac bilgisayarınızda, select Xcode hiçbir simülatörleri listede yoksa, başlatma **Xcode -> Tercihler**, tıklatıp **indirin**. Altında **bileşenleri** indirilebilir simülatör sürümleri görmeniz gerekir. Hata ayıklama için ek yönergeler için Xamarin'in üzerinde [hata ayıklama](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) sayfa (xamarin.com).  
+   2. Aşağıda gösterildiği gibi, Visual Studio 'nun Build açılır listesinden **iPhoneSimulator** hedefini seçin. Bir simülatörleri listelenmiyorsa, Mac 'inizde Xcode 'u başlatın, **Xcode-> tercihleri**' ni seçin ve **İndir**' e tıklayın. **Bileşenler** altında, indirileceği simülatör sürümlerini görmeniz gerekir. Hata ayıklama için ek yönergeler Xamarin 'in [hata ayıklama](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) sayfasında (Xamarin.com) bulunabilir.  
   
-        ![Hedef derleme iPhoneSimulator seçerek](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin 5 doğrulayın")  
+        ![İPhoneSimulator Build hedefini seçme](../cross-platform/media/crossplat-xamarin-verify-5.png "Çapraz Splat Xamarin Verify 5")  
   
-   3. Aşağıda gösterildiği gibi Visual Studio'nun hata ayıklama açılır listeden bir iPhone hedefini seçin ve F5 tuşuna basarak hata ayıklayıcıyı başlatın. Bu, simülatör burada Visual Studio'da hata ayıklama işlem sırasında uygulamayla etkileşim kuracağınızı Mac üzerinde çalıştırır.  
+   3. Aşağıda gösterildiği gibi, Visual Studio 'nun hata ayıklama açılan listesinden bir iPhone hedefi seçin ve F5 'e basarak hata ayıklayıcıyı başlatın. Bu, Visual Studio 'da hata ayıklama gerçekleştiğinde, uygulama ile etkileşim kuracak olan Mac üzerinde simülatörünü başlatır.  
   
-        ![Bir iPhone hata ayıklama hedefi seçme](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin 6 doğrulayın")
+        ![İPhone hata ayıklama hedefini seçme](../cross-platform/media/crossplat-xamarin-verify-6.png "Çapraz Splat Xamarin doğrulama 6")

@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 700417e0cf6bb93c96c0826a7d49d4d0deb7395f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 175cb6f6a8a3f240c244e139406841b0546209cc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65705781"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295903"
 ---
 # <a name="javascript-in-visual-studio"></a>Visual Studio’da JavaScript
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,13 +25,13 @@ JavaScript, Visual Studio'da birinci sınıf bir dildir. Visual Studio IDE'de Ja
 
  Belirli uygulama türlerini ve HTML ve JavaScript kullanarak hizmetleri geliştirmek için Visual Studio ya da belirli Visual Studio uzantıları belirli sürümlerini gerekebilir. Aşağıdaki listede, daha fazla bilgi için bağlantılar içerir.
 
-- Apache Cordova kullanarak platformlar arası uygulamalar oluşturmak için [Apache Cordova için Visual Studio Araçları edinin](http://go.microsoft.com/fwlink/p/?LinkId=397606).
+- Apache Cordova kullanarak platformlar arası uygulamalar oluşturmak için [Apache Cordova için Visual Studio Araçları edinin](https://go.microsoft.com/fwlink/p/?LinkId=397606).
 
-- Oluşturulacak [Windows Store](http://dev.windows.com/develop), [Windows Phone](http://dev.windows.com/develop)hem de Evrensel uygulamalar (her iki platform destekleyen) [araçları edinin](https://developer.microsoft.com/windows/downloads).
+- Oluşturulacak [Windows Store](https://developer.microsoft.com/), [Windows Phone](https://developer.microsoft.com/)hem de Evrensel uygulamalar (her iki platform destekleyen) [araçları edinin](https://developer.microsoft.com/windows/downloads).
 
 - Bulut tabanlı hizmetler oluşturmak için bkz [Microsoft Azure sitesine](https://azure.microsoft.com/documentation/).
 
-- Web siteleri ve web uygulamaları oluşturmak için [ASP.NET sitesine](http://www.asp.net/get-started/websites).
+- Web siteleri ve web uygulamaları oluşturmak için [ASP.NET sitesine](https://dotnet.microsoft.com/apps/aspnet/web-apps).
 
   > [!NOTE]
   > Boş bir ASP.Net Web sitesi oluşturabileceğinizi ve HTML, CSS ve JavaScript programlama için kullanın. Visual Studio'da hata ayıklama ASP.NET tarafından sağlanan Webconfig dosyası etkinleştirir (veya uygulamayı çalıştırdığınızda F12 araçları da kullanabilirsiniz).
@@ -45,7 +45,7 @@ JavaScript, Visual Studio'da birinci sınıf bir dildir. Visual Studio IDE'de Ja
 |-------------|-----------------|
 |Sınıflar|Yeni sözdizimi bildirimini destekler [sınıfları](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/class).|
 |Gösterir|[Öneriler](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) daha kolay ve Temizleyicisi zaman uyumsuz kodlama izin verin. Promise oluşturucular desteklenir, bunların ile `all` ve `race` yardımcı program yöntemleri.|
-|Yineleyiciler|Artık her ayrı bir özellik değeri için çalıştırılacak deyimleri ile bir özel yineleme kancası çağırma (diziler, dizi benzeri nesneleri ve yineleyiciler dahil) iterable nesneler üzerinde yineleyebilirsiniz. Daha fazla bilgi için [yineleyiciler ve oluşturucular](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators). **Not:**  Oluşturucuları henüz desteklenmemektedir.|
+|Yineleyiciler|Artık her ayrı bir özellik değeri için çalıştırılacak deyimleri ile bir özel yineleme kancası çağırma (diziler, dizi benzeri nesneleri ve yineleyiciler dahil) iterable nesneler üzerinde yineleyebilirsiniz. Daha fazla bilgi için [yineleyiciler ve oluşturucular](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators). **Not:** oluşturucuları henüz desteklenmiyor.|
 |Ok işlevleri|Ok işlevinde (= >) için toplu değer sözdizimi sağlar `function` bir sözcük özellikleri anahtar sözcüğünü `this` bağlama.|
 |Yerleşik nesneler için yeni yöntemler|[Dizi nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array), [matematik nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math), [sayı nesne](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), [nesne nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object), ve [dize nesnesi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) yerleşik nesneler, birçok yeni yardımcı işlevleri ve verileri inceleme ve düzenleme için özellikleri içerir.|
 |Nesne sabit değeri geliştirmeleri|Nesneler artık hesaplanan özellikler, kısa yöntemi tanımları ve toplu değer sözdizimi değeri için aynı adlı bir değişken başlatılır özellikleri destekler. Daha fazla bilgi için [nesneleri oluşturma](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object).|

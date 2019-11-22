@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: e68f7503ecc75c03e9f4beda2003415d3175ee7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d7bf7901ab33dc6dba50013ebdfa05c3188cd6c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963902"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300174"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Visual Studio bağlı Hizmetler'i kullanarak Azure depolama ekleme
 Visual Studio ile aşağıdakilerden herhangi birini Azure Depolama'ya kullanarak bağlanabilirsiniz **bağlı hizmet Ekle** iletişim:
@@ -63,12 +63,12 @@ Tamamlandıktan sonra **bağlı hizmet Ekle** iletişim kutusu otomatik olarak a
 ## <a name="how-your-project-is-modified"></a>Projenizi nasıl değiştirilir
 İletişim bitirdikten sonra Visual Studio başvuruları ekler ve belirli yapılandırma dosyalarını değiştirir. Belirli değişiklikleri proje türüne bağlıdır:
 
-- ASP.NET projesi - [ne olduğunu – ASP.NET projeleri](http://go.microsoft.com/fwlink/p/?LinkId=513126)
-- ASP.NET Core projesi - [ne olduğunu – ASP.NET 5 projeleri](http://go.microsoft.com/fwlink/p/?LinkId=513124)
-- Bulut hizmeti projesi (web rolleri ve çalışan rolleri) - [ne olduğunu – bulut hizmeti projeleri](http://go.microsoft.com/fwlink/p/?LinkId=516965)
+- ASP.NET projesi - [ne olduğunu – ASP.NET projeleri](https://go.microsoft.com/fwlink/p/?LinkId=513126)
+- ASP.NET Core projesi - [ne olduğunu – ASP.NET 5 projeleri](https://go.microsoft.com/fwlink/p/?LinkId=513124)
+- Bulut hizmeti projesi (web rolleri ve çalışan rolleri) - [ne olduğunu – bulut hizmeti projeleri](https://go.microsoft.com/fwlink/p/?LinkId=516965)
 - Web işi projesi - [ne olduğunu - WebJob projeleri](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - [MSDN forumu: Azure depolama](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
-- [Microsoft Azure depolama ekibi blogu](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Azure depolama belgeleri](https://docs.microsoft.com/azure/storage/)
+- [Microsoft Azure depolama ekibi blogu](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Azure Depolama belgeleri](https://docs.microsoft.com/azure/storage/)

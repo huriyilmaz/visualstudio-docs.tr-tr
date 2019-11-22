@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4b49ea9c293128efd400a1aa22d78ae4ee945092
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 439c6b5fc30be2e76eb6c0b6a44b1ec5226633b1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663595"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295950"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Beklenmedik konumlarda özel durumlar harekete geçirmeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "72663595"
 |-|-|
 |TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
 |CheckId|CA1065|
-|Kategori|Microsoft. Design|
+|Kategori|Microsoft.Design|
 |Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Sebep
@@ -65,7 +65,7 @@ ms.locfileid: "72663595"
 
  Aşağıdaki özel durumların bir özellik Get yönteminden yapılmasına izin verilir:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> ve tüm türetler (<xref:System.ObjectDisposedException?displayProperty=fullName> dahil)
+- <xref:System.InvalidOperationException?displayProperty=fullName> ve tüm türetme (<xref:System.ObjectDisposedException?displayProperty=fullName>dahil)
 
 - <xref:System.NotSupportedException?displayProperty=fullName> ve tüm türetme işlemleri
 
@@ -78,31 +78,31 @@ ms.locfileid: "72663595"
 
  Aşağıdaki özel durumların bir olay accesveya bir olay aracılığıyla yapılmasına izin verilir:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> ve tüm türetler (<xref:System.ObjectDisposedException?displayProperty=fullName> dahil)
+- <xref:System.InvalidOperationException?displayProperty=fullName> ve tüm türetme (<xref:System.ObjectDisposedException?displayProperty=fullName>dahil)
 
 - <xref:System.NotSupportedException?displayProperty=fullName> ve tüm türetme işlemleri
 
-- <xref:System.ArgumentException> ve türetme işlemleri
+- <xref:System.ArgumentException> ve türetme
 
 ### <a name="equals-methods"></a>Eşittir yöntemleri
  Aşağıdaki **eşittir** yöntemleri özel durum oluşturmaz:
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 
-- [M:IEquatable.Equals](http://go.microsoft.com/fwlink/?LinkId=113472)
+- [M:IEquatable.Equals](https://go.microsoft.com/fwlink/?LinkId=113472)
 
-  Bir **Equals** yöntemi, özel durum oluşturmak yerine `true` veya `false` döndürmelidir. Örneğin, eşittir iki eşleşmeyen tür geçirtiyse, <xref:System.ArgumentException> oluşturmak yerine yalnızca `false` döndürmelidir.
+  Bir **Equals** yöntemi, özel durum oluşturmak yerine `true` veya `false` döndürmelidir. Örneğin, eşittir iki eşleşmeyen tür geçirtiyse, bir <xref:System.ArgumentException>oluşturmak yerine yalnızca `false` döndürmelidir.
 
 ### <a name="gethashcode-methods"></a>GetHashCode yöntemleri
  Aşağıdaki **GetHashCode** yöntemleri genellikle özel durum oluşturmaz:
 
 - <xref:System.Object.GetHashCode%2A>
 
-- [M:iequalitycomparer.asp GetHashCode (T)](http://go.microsoft.com/fwlink/?LinkId=113477)
+- [M:iequalitycomparer.asp GetHashCode (T)](https://go.microsoft.com/fwlink/?LinkId=113477)
 
   **GetHashCode** her zaman bir değer döndürmelidir. Aksi takdirde, karma tablodaki öğeleri kaybedebilirsiniz.
 
-  Bir bağımsız değişken alan **GetHashCode** sürümleri, <xref:System.ArgumentException> oluşturabilir. Ancak **Object. GetHashCode** asla bir özel durum oluşturmaz.
+  Bağımsız değişken alan **GetHashCode** sürümleri bir <xref:System.ArgumentException>oluşturabilir. Ancak **Object. GetHashCode** asla bir özel durum oluşturmaz.
 
 ### <a name="tostring-methods"></a>ToString yöntemleri
  Hata ayıklayıcı, dize biçimindeki nesneler hakkında bilgi görüntülemeye yardımcı olması için <xref:System.Object.ToString%2A?displayProperty=fullName> kullanır. Bu nedenle, **ToString** bir nesnenin durumunu değiştirmemelidir ve özel durum oluşturmaz.
@@ -114,7 +114,7 @@ ms.locfileid: "72663595"
  Sonlandırıcının bir özel durum oluşturmak, CLR 'nin hızlı bir şekilde başarısız olmasına neden olur ve bu da işlemi kapatır. Bu nedenle, bir sonlandırıcının özel durumların oluşturulması her zaman kaçınılmalıdır.
 
 ### <a name="dispose-methods"></a>Dispose yöntemleri
- @No__t_0 yöntemi özel durum oluşturmaz. Dispose, genellikle bir `finally` yan tümcesindeki Temizleme mantığının bir parçası olarak çağırılır. Bu nedenle, Dispose 'ten özel bir durum açıkça oluşturmak, kullanıcıyı `finally` yan tümcesinin içinde özel durum işleme eklemeye zorlar.
+ <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> yöntemi özel durum oluşturmaz. Dispose, genellikle bir `finally` yan tümcesindeki Temizleme mantığının bir parçası olarak çağırılır. Bu nedenle, Dispose 'ten özel bir durum açıkça oluşturmak, kullanıcıyı `finally` yan tümcesinin içinde özel durum işleme eklemeye zorlar.
 
  **Dispose (false)** kod yolu hiçbir zaman özel durum oluşturmaz, çünkü bu neredeyse her zaman bir sonlandırıcının çağrısıdır.
 

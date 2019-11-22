@@ -11,17 +11,17 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6157646526a2d634ff5034d98eb497c00585c067
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7d40cefc3dd47f7f4ad7e8255d8bdc06bc5f1651
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659097"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300937"
 ---
 # <a name="how-to-use-the-expression-editor"></a>Nasıl yapılır: Ifade düzenleyicisini kullanma
 Ifade Düzenleyicisi, bu ifadeleri girme ve değerlendirme yöntemi olarak birçok iş akışı aktivitelerinde kullanılan bir [!INCLUDE[wfd1](../includes/wfd1-md.md)] denetimidir. Ifade Düzenleyicisi, diğer özelliklerin yanı sıra IntelliSense, renklendirme, ParamInfo, Error dalgalı çizgiler dahil olmak üzere tam kapsamlı bir IDE düzenleme deneyimi sağlar. Derleyici, ifadeyi girdikten sonra doğrular. İfade geçersizse, bir hata simgesi görüntülenir. Düzenleyici Ayrıca bir **Ifade Düzenleyicisi** iletişim kutusu olarak açılabilir.
 
- İfadeler değişmez değerlerdir veya bağımsız değişkenlere veya özelliklere göre [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] kodudur. Yeni bir değer sağlamak için işlemlerle birleştirilmiş değer öğeleri (örn. değişkenler, sabitler, sabit değerler, Özellikler) içerirler. Uygulamalar, kullanan C#bir programda olsa bile vb.NET sözdizimi kullanılarak yazılır. Bu, büyük/küçük harf kullanımının ("= =") yerine tek bir eşittir ("=") işareti kullanılarak gerçekleştirildiğinden, Boole işleçleri "& &" ve "&#124;&#124;" sembolleri yerine "and" ve "veya" kelimeleridir ve **hiçbir şey** kullanılmaz **null**yerine. @No__t_0 ifade ve işleçler hakkında daha fazla bilgi için ve bazı örnekler için bkz. [Visual Basic işleçler ve ifadeler](http://go.microsoft.com/fwlink/?LinkId=186818).
+ İfadeler değişmez değerlerdir veya bağımsız değişkenlere veya özelliklere göre [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] kodudur. Yeni bir değer sağlamak için işlemlerle birleştirilmiş değer öğeleri (örn. değişkenler, sabitler, sabit değerler, Özellikler) içerirler. Uygulamalar, kullanan C#bir programda olsa bile vb.NET sözdizimi kullanılarak yazılır. Bu, büyük/küçük harf kullanımının ("= =") yerine tek bir eşittir ("=") işareti kullanılarak gerçekleştirildiğinden, Boole işleçleri "& &" ve "&#124;&#124;" sembolleri yerine "and" ve "or" kelimeleridir ve **null**yerine **hiçbir şey** kullanılmaz. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ifade ve işleçler hakkında daha fazla bilgi için ve bazı örnekler için bkz. [Visual Basic işleçler ve ifadeler](https://go.microsoft.com/fwlink/?LinkId=186818).
 
  **Ifade Düzenleyicisi** aşağıdaki gibi davranır:
 
@@ -32,20 +32,20 @@ Ifade Düzenleyicisi, bu ifadeleri girme ve değerlendirme yöntemi olarak birç
 - Yeniden barındırılan bir iş akışı tasarımcısında Ifade düzenleyicisine odaklanıyorsanız, bir metin kutusu gibi davranır. Yeniden barındırılan iş akışı tasarımcısında odak kaybedildiği zaman, Ifade Düzenleyicisi normal bir TextBlock gibi görünür.
 
 > [!NOTE]
-> Ifade Düzenleyicisi için IntelliSense yalnızca [!INCLUDE[vs2010](../includes/vs2010-md.md)] içinde kullanılabilir. Hem [!INCLUDE[vs2010](../includes/vs2010-md.md)] hem de yeniden barındırılan senaryolarda, derleyici girildikten sonra ifadeyi doğrular ve ifade geçersizse ifade Düzenleyicisi bir hata simgesi görüntüler.
+> Ifade Düzenleyicisi için IntelliSense yalnızca [!INCLUDE[vs2010](../includes/vs2010-md.md)]içinde kullanılabilir. Hem [!INCLUDE[vs2010](../includes/vs2010-md.md)] hem de yeniden barındırılan senaryolarda, derleyici girildikten sonra ifadeyi doğrular ve ifade geçersizse ifade Düzenleyicisi bir hata simgesi görüntüler.
 
 ### <a name="using-the-expression-editor"></a>Ifade düzenleyicisini kullanma
 
-1. @No__t_0 ' de, yeni veya mevcut bir iş akışı projesi açın.
+1. [!INCLUDE[vs2010](../includes/vs2010-md.md)]' de, yeni veya mevcut bir iş akışı projesi açın.
 
 2. İş akışınıza <xref:System.Activities.Statements.Assign> etkinliği ekleyin.
 
     > [!NOTE]
-    > Birden çok iş akışı etkinliği ifade düzenleyicilerine sahiptir. İfade TextBlocks, değişken tasarımcısında, bağımsız değişken tasarımcısında ve dinamik bağımsız değişken tasarımcısında de görünür. @No__t_0 etkinliği örnek olarak kullanılır.
+    > Birden çok iş akışı etkinliği ifade düzenleyicilerine sahiptir. İfade TextBlocks, değişken tasarımcısında, bağımsız değişken tasarımcısında ve dinamik bağımsız değişken tasarımcısında de görünür. <xref:System.Activities.Statements.Assign> etkinliği örnek olarak kullanılır.
 
-3. @No__t_0 etkinliği için Etkinlik tasarımcısında sol ifade düzenleyicisine tıklayın.
+3. <xref:System.Activities.Statements.Assign> etkinliği için Etkinlik tasarımcısında sol ifade düzenleyicisine tıklayın.
 
-     Gri filigran dizeleri **\<To >** ve **bir VB ifadesi \<Enter >** , <xref:System.Activities.Statements.Assign> etkinliğinde ifade düzenleyicilerinin varsayılan metin dizeleridir.
+     Gri eşik dizeleri **>\<** ve **\<bir VB ifadesi girer >** <xref:System.Activities.Statements.Assign> etkinliğinde ifade düzenleyicilerinin varsayılan metin dizeleridir.
 
 4. Deyiminizi girin. Bir dize girerseniz, dizenin etrafına tırnak işareti yerleştirdiğinizden emin olun. İfade bağımsız değişkenini bir değişkene bağlamayı seçerseniz, tırnak işaretlerini kapalı bırakın.
 

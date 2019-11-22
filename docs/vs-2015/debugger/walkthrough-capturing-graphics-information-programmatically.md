@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Grafik bilgilerini programla yakalama | Microsoft Docs'
+title: 'İzlenecek yol: grafik bilgilerini programlama yoluyla yakalama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -9,46 +9,46 @@ caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1eaa3547733432715c5362b20030fe3d4a886900
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 54097420fd212ec9057f4a968e2c6d5de199e56e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444337"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296891"
 ---
-# <a name="walkthrough-capturing-graphics-information-programmatically"></a>İzlenecek yol: Grafik Bilgilerini Program Aracılığıyla Yakalama
+# <a name="walkthrough-capturing-graphics-information-programmatically"></a>İzlenecek Yol: Grafik Bilgilerini Programla Yakalama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] grafik tanılama Direct3D uygulamadan grafik bilgilerini programla yakalama.  
+Direct3D uygulamasındaki grafik bilgilerini programlı bir şekilde yakalamak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Grafik Tanılama kullanabilirsiniz.  
   
- Programlı yakalama gibi senaryolarda kullanışlıdır:  
+ Programlı yakalama, gibi senaryolarda faydalıdır:  
   
-- Grafik uygulamanızı swapchain doku için ne zaman işleyen gibi mevcut kullandığınızda değil yakalama programlı bir şekilde başlayın.  
+- Grafik uygulamanız, bir dokusunu oluştururken olduğu gibi swapzincirini kullanmazsa programlı olarak yakalamayı başlatın.  
   
-- Uygulamanızı, ne zaman DirectCompute hesaplamalar gerçekleştirmek için kullandığı gibi işlemesi yapmıyor açıldığında yakalama programlı olarak başlatılır.  
+- Uygulamanız, hesaplamalar gerçekleştirmek için DirectCompute kullandığında olduğu gibi, uygulama hiç işlenmezse, programlı olarak yakalamayı başlatın.  
   
-- Çağrı `CaptureCurrentFrame`ne zaman bir işleme sorunuyla umuyor ve el ile testte yakalamak zor olduğunda ancak programlı olarak çalışma zamanında uygulamanın durumu hakkındaki bilgileri kullanarak tahmin.  
+- Bir işleme sorunu, el ile test sırasında tahmin etmek ve yakalamak zor olduğunda ancak çalışma zamanında uygulamanın durumu hakkında bilgiler kullanılarak programlı bir şekilde tahmin edilebileceği zaman `CaptureCurrentFrame`çağırın.  
   
-## <a name="CaptureDX11_2"></a> Windows 8.1 programlı yakalama  
- Kılavuzun bu bölümü sağlam yakalama yöntemini kullanan Windows 8.1 üzerinde DirectX 11.2 API kullanan uygulamaları programlı yakalama gösterir. Programlı yakalama DirectX önceki sürümlerinde Windows 8.0 üzerinde kullanan uygulamalar kullanma hakkında daha fazla bilgi için bkz. [Windows 8.0 ve daha önce programlı yakalama](#CaptureDX11_1) bu kılavuzda daha sonra.  
+## <a name="CaptureDX11_2"></a>Windows 8.1 'de Programlı yakalama  
+ İzlenecek yolun bu bölümü, güçlü yakalama yöntemini kullanan Windows 8.1 üzerinde DirectX 11,2 API kullanan uygulamalarda Programlı yakalamayı gösterir. Windows 8,0 ' de DirectX 'in önceki sürümlerini kullanan uygulamalarda Programlı yakalama 'yı kullanma hakkında daha fazla bilgi için bu izlenecek yolda [windows 8,0 ve daha önceki sürümlerde Programlı yakalama](#CaptureDX11_1) bölümüne bakın.  
   
- Bu bölümde bu görevlerin nasıl yapılacağını gösterir:  
+ Bu bölümde bu görevlerin nasıl yapılacağı gösterilmektedir:  
   
-- Programlı yakalama kullanmak için uygulamanızı hazırlama  
+- Uygulamanızı programlı yakalama kullanacak şekilde hazırlama  
   
-- IDXGraphicsAnalysis arabirimi alma  
+- IDXGraphicsAnalysis arabirimini alma  
   
 - Graf bilgilerini yakalama  
   
 > [!NOTE]
-> Programlı yakalama önceki uygulamaları yararlandı için Uzak Araçlar üzerinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Yakalama işlevselliği sağlamak için Windows 8.1 Direct3D 11.2 aracılığıyla doğrudan yakalamayı destekler. Sonuç olarak, artık Windows 8.1 üzerinde programlı yakalama için Uzak Araçlar'ı yüklemek gerekmez.  
+> Programlı yakalama 'nın önceki uygulamaları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Yakalama işlevselliği sağlamak için uzak araçlara güvendi Windows 8.1, doğrudan Direct3D 11,2 aracılığıyla yakalamayı destekler. Sonuç olarak, Windows 8.1 üzerinde Programlı yakalama için Uzak Araçları yüklemeye artık ihtiyacınız yoktur.  
   
-### <a name="preparing-your-app-to-use-programmatic-capture"></a>Programlı yakalama kullanmak için uygulamanızı hazırlama  
- Programlı yakalama uygulamanızda kullanmak için gereken üst bilgileri içermelidir. Bu üst bilgiler Windows 8.1 SDK'ın bir parçasıdır.  
+### <a name="preparing-your-app-to-use-programmatic-capture"></a>Uygulamanızı programlı yakalama kullanacak şekilde hazırlama  
+ Uygulamanızda Programlı yakalama 'yı kullanmak için gereken üst bilgileri içermesi gerekir. Bu üstbilgiler Windows 8.1 SDK 'nın bir parçasıdır.  
   
-##### <a name="to-include-programmatic-capture-headers"></a>Programlı yakalama üst bilgilerini eklemek için  
+##### <a name="to-include-programmatic-capture-headers"></a>Programlı yakalama üstbilgilerini dahil etmek için  
   
-- Bu üst kaynak dosyanın IDXGraphicsAnalysis arabirimi burada tanımlayacaksınız şunlardır:  
+- Bu üst bilgileri IDXGraphicsAnalysis arabirimini tanımlayabileceğiniz kaynak dosyasına ekleyin:  
   
     ```  
     #include <DXGItype.h>  
@@ -58,17 +58,17 @@ Kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] grafik tanılam
     ```  
   
     > [!IMPORTANT]
-    > Üst bilgi dosyası vsgcapture.h—which destekler programlı yakalama Windows 8.0 ve önceki sürümleri dahil değildir — Windows 8.1 uygulamalarınızda programlı yakalama gerçekleştirilecek. Bu üstbilginin DirectX 11.2 ile uyumlu değil. D3d11_2.h üst bilgisi dahil olduktan sonra bu dosyayı dahil ise, derleyici bir uyarı verir. Vsgcapture.h d3d11_2.h önce eklediyseniz, uygulamayı başlatılmaz.  
+    > Windows 8.1 uygulamalarınızda Programlı yakalama gerçekleştirmek için Windows 8,0 ve önceki sürümlerde Programlı yakalamayı destekleyen vsgcapture. h başlık dosyasını eklemeyin. Bu üstbilgi DirectX 11,2 ile uyumsuzdur. D3d11_2. h üst bilgisi eklendikten sonra bu dosya varsa, derleyici bir uyarı verir. Vsgcapture. h, d3d11_2. h öncesinde varsa, uygulama başlatılmaz.  
   
     > [!NOTE]
-    > Haziran 2010 DirectX SDK'sı, makinenizde yüklü olduğundan ve projenizin yoluna içeren `%DXSDK_DIR%includex86`, yoluna sonuna taşıyın. Bir kitaplık yolu için de aynısını yapın.  
+    > Makinenizde Haziran 2010 DirectX SDK 'Sı yüklüyse ve projenizin içerme yolu `%DXSDK_DIR%includex86`içeriyorsa, bunu ekleme yolunun sonuna taşıyın. Kitaplık yolunuzda aynısını yapın.  
   
 #### <a name="windows-phone-81"></a>Windows Phone 8.1  
- Windows Phone 8.1 SDK'sı DXProgrammableCapture.h üst bilgi içermediği için tanımlamanız gerekir `IDXGraphicsAnalysis` kullanabilirsiniz, böylece kendiniz arabirim `BeginCapture()` ve `EndCapture()` yöntemleri. Önceki bölümde açıklandığı gibi diğer üst bilgilerini içerir.  
+ Windows Phone 8,1 SDK 'Sı DXProgrammableCapture. h üst bilgisini içermediğinden, `BeginCapture()` ve `EndCapture()` yöntemlerini kullanabilmeniz için `IDXGraphicsAnalysis` arabirimini kendiniz tanımlamanız gerekir. Önceki bölümde açıklandığı gibi diğer üstbilgileri ekleyin.  
   
-###### <a name="to-define-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimi tanımlamak için  
+###### <a name="to-define-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimini tanımlamak için  
   
-- Aynı dosyada, üstbilgi dosyaları dahil IDXGraphicsAnalysis arabirimi tanımlayın.  
+- Üst bilgi dosyalarını dahil ettiğiniz dosyada IDXGraphicsAnalysis arabirimini tanımlayın.  
   
   ```  
   interface DECLSPEC_UUID("9f251514-9d4d-4902-9d60-18988ab7d4b5") DECLSPEC_NOVTABLE  
@@ -79,24 +79,24 @@ Kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] grafik tanılam
   };  
   ```  
   
-  Kolaylık olması için bu adımları izleyerek yeni bir üstbilgi dosyasında ve onu duyulduğu uygulamanıza dahil edin.  
+  Kolaylık olması için, bu adımları yeni bir başlık dosyasında gerçekleştirebilir ve ardından uygulamanıza gereken yere dahil edebilirsiniz.  
   
-### <a name="getting-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimi alma  
- DirectX 11.2 grafik bilgilerini yakalamak için önce DXGI hata ayıklama arabirimi almak sahip.  
+### <a name="getting-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimini alma  
+ DirectX 11,2 ' den grafik bilgilerini yakalamadan önce DXGI hata ayıklama arabirimini almanız gerekir.  
   
 > [!IMPORTANT]
-> Programlı yakalama kullanırken, yine de uygulamanızı grafik tanılama altında çalıştırmanız gerekir (Alt + F5 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]) veya altında [komut satırı Yakalama aracı](../debugger/command-line-capture-tool.md).  
+> Programlı yakalama kullanırken, yine de Uygulamanızı grafik tanılama altında (alt + F5 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]) veya [komut satırı yakalama aracı](../debugger/command-line-capture-tool.md)altında çalıştırmanız gerekir.  
   
-##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimi almak için  
+##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimini almak için  
   
-- DXGI hata ayıklama arabirimine IDXGraphicsAnalysis arabirimi bağlama için aşağıdaki kodu kullanın.  
+- DXGI hata ayıklama arabirimine IDXGraphicsAnalysis arabirimini bağlamak için aşağıdaki kodu kullanın.  
   
     ```  
     IDXGraphicsAnalysis* pGraphicsAnalysis;  
     HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));  
     ```  
   
-     Kontrol ettiğinizden emin olun `HRESULT` tarafından döndürülen `DXGIGetDebugInterface1` kullanmadan önce geçerli bir arabirim başlamanızı sağlamak için:  
+     Kullanmadan önce geçerli bir arabirim aldığınızdan emin olmak için `DXGIGetDebugInterface1` tarafından döndürülen `HRESULT` kontrol ettiğinizden emin olun:  
   
     ```  
     if (FAILED(getAnalysis))  
@@ -106,14 +106,14 @@ Kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] grafik tanılam
     ```  
   
     > [!NOTE]
-    > Varsa `DXGIGetDebugInterface1` döndürür `E_NOINTERFACE` (`error: E_NOINTERFACE No such interface supported`), uygulamayı grafik tanılama altında çalıştığından emin olun (Alt + F5 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]).  
+    > `DXGIGetDebugInterface1` `E_NOINTERFACE` (`error: E_NOINTERFACE No such interface supported`) döndürürse, uygulamanın grafik tanılama altında (alt + F5 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]) çalıştığından emin olun.  
   
 ### <a name="capturing-graphics-information"></a>Graf bilgilerini yakalama  
- Geçerli bir sahip olduğunuza göre `IDXGraphicsAnalysis` kullanabileceğiniz arabirimi `BeginCapture` ve `EndCapture` grafik bilgilerini yakalamak için.  
+ Artık geçerli bir `IDXGraphicsAnalysis` arabiriminiz olduğuna göre, grafik bilgilerini yakalamak için `BeginCapture` ve `EndCapture` kullanabilirsiniz.  
   
 ##### <a name="to-capture-graphics-information"></a>Grafik bilgilerini yakalamak için  
   
-- Grafik bilgilerini yakalama başlatmak için kullanın `BeginCapture`:  
+- Grafik bilgilerini yakalamaya başlamak için `BeginCapture`kullanın:  
   
     ```  
     ...  
@@ -121,7 +121,7 @@ Kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] grafik tanılam
     ...  
     ```  
   
-     Yakalamaya başlar hemen olduğunda `BeginCapture` çağrılır; sonraki kare başlamak beklemez. Geçerli kare sunulduğunda veya çağırdığınızda durakları yakalama `EndCapture`:  
+     Yakalama `BeginCapture` çağrıldığında hemen başlar; sonraki çerçevenin başlamasını beklemez. Yakalama, geçerli çerçeve sunulduktan sonra veya `EndCapture`çağırdığınızda duraklar:  
   
     ```  
     ...  
@@ -129,76 +129,76 @@ Kullanabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] grafik tanılam
     ...  
     ```  
   
-## <a name="CaptureDX11_1"></a> Windows 8.0 ve daha önce programlı yakalama  
- Kılavuzun bu bölümü eski yakalama yöntemini kullanan DirectX 11.1 API kullanan uygulamalar ve önceki sürümler için Windows 8.0 programlı yakalama gösterir. Windows 8.1 üzerinde DirectX 11.2 kullanan uygulamaları programlı yakalama kullanma hakkında daha fazla bilgi için bkz. [programlama yakalama Windows 8.1](#CaptureDX11_2) bu kılavuzda önceki.  
+## <a name="CaptureDX11_1"></a>Windows 8,0 ve önceki sürümlerde Programlı yakalama  
+ Bu izlenecek yolda, Windows 8,0 ve önceki sürümlerde, eski yakalama yöntemini kullanan DirectX 11,1 API kullanan uygulamalarda Programlı yakalama gösterilmektedir. Windows 8.1 DirectX 11,2 kullanan uygulamalarda Programlı yakalama 'yı kullanma hakkında bilgi için, bu kılavuzda daha önce Windows 8.1 bkz. [Programlı yakalama](#CaptureDX11_2) .  
   
- Bu bölüm, bu görevleri gösterir:  
+ Bu bölümde şu görevler gösterilir:  
   
-- Bilgisayarınızı programlı yakalama kullanmak üzere hazırlama  
+- Bilgisayarınızı Programlı yakalamayı kullanacak şekilde hazırlama  
   
-- Programlı yakalama kullanmak için uygulamanızı hazırlama  
+- Uygulamanızı programlı yakalama kullanacak şekilde hazırlama  
   
-- Grafik günlük dosyasının konumunu ve adını yapılandırma  
+- Grafik günlük dosyasının adını ve konumunu yapılandırma  
   
-- Kullanarak `CaptureCurrentFrame` API  
+- `CaptureCurrentFrame` API 'sini kullanma  
   
-### <a name="preparing-your-computer-to-use-programmatic-capture"></a>Bilgisayarınızı programlı yakalama kullanmak üzere hazırlama  
- Programlı yakalama bir API için Uzak Araçlar kullanan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Yakalama işlevselliği sağlamak için. Uygulamanın çalışacağı bilgisayarda Uzak araçları bile yerel bilgisayarınızda programlı yakalama kullanırken, yüklü olması gerekir. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] programlı yakalama yerel bir bilgisayara gerçekleştirdiğinizde çalıştırılması gerekmez.  
+### <a name="preparing-your-computer-to-use-programmatic-capture"></a>Bilgisayarınızı Programlı yakalamayı kullanacak şekilde hazırlama  
+ Programlı yakalama API 'SI, Yakalama işlevselliği sağlamak üzere [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] için uzak araçları kullanır. Yerel bilgisayarınızda Programlı yakalama kullanırken Uygulamanın çalıştırılacağı bilgisayarın uzak araçların yüklü olması gerekir. Yerel bir bilgisayarda Programlı yakalama gerçekleştirirken [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çalışıyor olması gerekmez.  
   
- Bir bilgisayar üzerinde çalışan bir uygulamada uzaktan yakalama API'leri kullanmak için öncelikle için Uzak Araçlar'ı yüklemek olması [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bu bilgisayarda. Uzak Araçlar'ın farklı sürümleri, farklı donanım platformları destekler. Uzak araçların nasıl yükleneceği hakkında daha fazla bilgi için bkz. [uzak araçları indirme sayfasına](http://go.microsoft.com/fwlink/p/?LinkId=246691) Microsoft Web sitesi indirir.  
+ Bir bilgisayarda çalışan bir uygulamada uzaktan yakalama API 'Lerini kullanmak için, önce bu bilgisayara [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] için uzak araçları yüklemeniz gerekir. Uzak araçların farklı sürümleri farklı donanım platformlarını destekler. Uzak araçların nasıl yükleneceği hakkında bilgi için Microsoft İndirmeleri web sitesindeki [Uzak Araçlar indirme sayfasına](https://go.microsoft.com/fwlink/p/?LinkId=246691) bakın.  
   
- Alternatif olarak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 32-bit uygulamalar için uzaktan yakalama gerçekleştirmek için gerekli bileşenleri yükler.  
+ Alternatif olarak, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 32 bitlik uygulamalar için uzaktan yakalama gerçekleştirmek üzere gerekli bileşenleri de yüklüyor.  
   
 > [!NOTE]
-> Çünkü çoğu Windows Masaüstü uygulamaları — dahil olmak üzere [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]— desteklenmez [!INCLUDE[win8](../includes/win8-md.md)] cihazlarda ARM için Uzak araçlar kullanarak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] programlı yakalama ile birlikte tek yolu ARM cihazlarda grafik tanılama yakalama API'dir.  
+> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]dahil olmak üzere çoğu Windows masaüstü uygulaması ARM cihazları için [!INCLUDE[win8](../includes/win8-md.md)] desteklenmediğinden, ARM cihazlarda grafik tanılamayı yakalamanın tek yolu, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] için uzak Araçlar 'ı programsal yakalama API 'SI ile birlikte kullanmanın tek yoludur.  
   
-### <a name="preparing-your-app-to-use-programmatic-capture"></a>Programlı yakalama kullanmak için uygulamanızı hazırlama  
- Grafik tanılama araçlarını kullanmak için öncelikle kullanır grafik bilgilerini yakalama olması. Program aracılığıyla kullanarak bilgileri yakalayabilirsiniz `CaptureCurrentFrame` API.  
+### <a name="preparing-your-app-to-use-programmatic-capture"></a>Uygulamanızı programlı yakalama kullanacak şekilde hazırlama  
+ Grafik Tanılama araçlarını kullanmak için önce temel aldığı grafik bilgilerini yakalamanız gerekir. `CaptureCurrentFrame` API 'sini kullanarak programlı bir şekilde bilgi yakalayabilirsiniz.  
   
-##### <a name="to-prepare-your-app-to-capture-graphics-information-programmatically"></a>Grafik bilgilerini programla yakalama için uygulamanızı hazırlamak için  
+##### <a name="to-prepare-your-app-to-capture-graphics-information-programmatically"></a>Uygulamanızı ekran aracılığıyla grafik bilgilerini yakalamaya hazırlamak için  
   
-1. Emin olun `vsgcapture.h` üstbilgi uygulama kaynak kodunu dahil edilir. Yalnızca tek bir yerde bulunan — Örneğin, API kaynak kodu dosyasında çağırdığınız programlı yakalama — veya kod dosyaları birden çok kaynaktan API'sini çağırmak için önceden derlenmiş üst bilgi dosyası.  
+1. `vsgcapture.h` üstbilgisinin, uygulamanın kaynak koduna eklendiğinden emin olun. Tek bir konuma dahil edilebilir — örneğin, Programlı yakalama API 'sini çağırabileceğiniz kaynak kodu dosyasında veya birden çok kaynak kodu dosyasından API 'yi çağırmak için önceden derlenmiş bir üstbilgi dosyasında.  
   
-2. Geçerli çerçevenin geri kalanında yakalamak istediğiniz her uygulama için kaynak kodu çağırın `g_pVsgDbg->CaptureCurrentFrame()`. Bu yöntem parametre almaz ve bir değer döndürmüyor.  
+2. Uygulamanın kaynak kodunda, geçerli karenin geri kalanını her yakalamak istediğinizde `g_pVsgDbg->CaptureCurrentFrame()`çağırın. Bu yöntem hiçbir parametre almaz ve bir değer döndürmez.  
   
-### <a name="configuring-the-name-and-location-of-the-graphics-log-file"></a>Grafik günlük dosyasının konumunu ve adını yapılandırma  
- Grafik günlüğü tarafından tanımlanan konumda oluşturulur `DONT_SAVE_VSGLOG_TO_TEMP` ve `VSG_DEFAULT_RUN_FILENAME` makroları.  
+### <a name="configuring-the-name-and-location-of-the-graphics-log-file"></a>Grafik günlük dosyasının adını ve konumunu yapılandırma  
+ Grafik günlüğü, `DONT_SAVE_VSGLOG_TO_TEMP` ve `VSG_DEFAULT_RUN_FILENAME` makroları tarafından tanımlanan konumda oluşturulur.  
   
-##### <a name="to-configure-the-name-and-location-of-the-graphics-log-file"></a>Grafik günlük dosyasının konumunu ve adını yapılandırmak için  
+##### <a name="to-configure-the-name-and-location-of-the-graphics-log-file"></a>Grafik günlük dosyasının adını ve konumunu yapılandırmak için  
   
-- Grafik günlüğü temp dizinine yazılır önce önlemek için `#include <vsgcapture.h>` satır, bunu ekleyin:  
+- Grafik günlüğünün geçici dizine yazılmasını engellemek için `#include <vsgcapture.h>` satırından önce şunu ekleyin:  
   
   ```  
   #define DONT_SAVE_VSGLOG_TO_TEMP  
   ```  
   
-   Çalışma dizinine göreli bir konum veya mutlak bir yol için grafik günlüğüne yazmak için bu değeri tanımlayabilirsiniz, tanımını `VSG_DEFAULT_RUN_FILENAME` mutlak yoldur.  
+   Bu değeri, grafik günlüğünü çalışma diziniyle ilişkili bir konuma veya `VSG_DEFAULT_RUN_FILENAME` tanımı mutlak bir yol ise mutlak bir yola yazmak için belirleyebilirsiniz.  
   
-- Grafik günlüğü farklı bir konuma kaydedin veya farklı bir dosya adı, önce vermek için `#include <vsgcapture.h>` satır, bunu ekleyin:  
+- Grafik günlüğünü farklı bir konuma kaydetmek veya `#include <vsgcapture.h>` satırından önce farklı bir dosya adı vermek için şunu ekleyin:  
   
   ```  
   #define VSG_DEFAULT_RUN_FILENAME <filename>  
   ```  
   
-   Bu adım gerçekleştirme, dosya default.vsglog adıdır. Siz tanımlarsanız `DONT_SAVE_VSGLOG_TO_TEMP`, ardından dosyasının konumunu geçici dizine göre; mutlak dosya adı belirtilmişse Aksi takdirde, çalışma dizinine göre veya başka bir konumda.  
+   Bu adımı gerçekleştirmezseniz dosya adı default. vsglog olur. `DONT_SAVE_VSGLOG_TO_TEMP`tanımlamadıysanız, dosyanın konumu geçici dizine görelidir; Aksi halde, mutlak bir dosya adı belirttiyseniz, çalışma dizini veya başka bir konuma göre değişir.  
   
-  İçin [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamaları, geçici dizin konumunu her kullanıcı ve uygulamanın özgüdür ve genellikle C:\users gibi bir konumda bulunan\\*kullanıcıadı*\AppData\Local\Packages\\ *paket ailesi adı*\TempState\\. Masaüstü uygulamaları için geçici dizin konumunu her kullanıcı için özeldir ve genellikle C:\Users gibi bir konumda bulunan\\*kullanıcıadı*\AppData\Local\Temp\\.  
+  [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamalar için, Temp dizininin konumu her bir Kullanıcı ve uygulamaya özeldir ve genellikle C:\Users\\*Kullanıcı*adı \Appdata\local\packages\\*paket aile adı*\tempstate\\gibi bir konumda bulunur. Masaüstü uygulamaları için, Temp dizininin konumu her kullanıcıya özeldir ve genellikle C:\Users\\*UserName*\Appdata\local\temp\\gibi bir konumda bulunur.  
   
 > [!NOTE]
-> Belirli bir konuma yazmak için bu konuma yazma izniniz olması gerekir; Aksi takdirde hata oluşur. Aklınızda [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamaları, Masaüstü uygulamaları, veri yazabilirsiniz ve burada belirli konumlara yazma için ek yapılandırma gerektirebilir hakkında daha fazla kısıtlanmış.  
+> Belirli bir konuma yazmak için bu konuma yazma izinlerinizin olması gerekir; Aksi takdirde bir hata oluşur. [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamaların, veri yazabilecedikleri konum hakkında Masaüstü uygulamalarından daha kısıtlı olduğunu ve belirli konumlara yazmak için ek yapılandırma gerektirebileceğini aklınızda bulundurun.  
   
 ### <a name="capturing-the-graphics-information"></a>Grafik bilgilerini yakalama  
- Sonra uygulamayı programlı yakalama için hazırlanmış ve isteğe bağlı olarak yapılandırılmış grafik adını ve konumunu günlük dosyası, uygulama derleme ve ardından çalıştırın veya bu verileri yakalamak için hata ayıklama; Grafik Tanılama'ya başlatmayın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] programlı yakalama API kullandığınızda. Grafik günlüğü, belirttiğiniz konuma yazılır. Bu günlük sürümünü kullanmaya devam etmek istiyorsanız, başka bir konuma taşıyın; Aksi takdirde, uygulamayı yeniden çalıştırdığınızda yazılır.  
+ Programlı yakalama için uygulamayı hazırladıktan ve isteğe bağlı olarak grafik günlük dosyasının konumunu ve adını yapılandırdıktan sonra, uygulamayı derleyin ve verileri yakalamak için çalıştırın veya hata ayıklayın; Programlı yakalama API 'sini kullandığınızda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] grafik tanılamayı başlatmayın. Grafik günlüğü, belirttiğiniz konuma yazılır. Bu günlüğün bu sürümünü korumak istiyorsanız, başka bir konuma taşıyın; Aksi takdirde, uygulamayı yeniden çalıştırdığınızda üzerine yazılır.  
   
 > [!TIP]
-> Programlı yakalama kullanırken, yine de grafik bilgilerini elle yakalayabilir — odak uygulamayla tuşuna basarak **Print Screen**. Programlı yakalama API tarafından yakalanmaz ek grafik bilgilerini yakalamak için bu tekniği kullanabilirsiniz.  
+> Programlı yakalama kullanırken grafik bilgilerini hala el ile yakalayabilirsiniz, ancak **yazdırma ekranına**basmanız yeterlidir. Programlı yakalama API 'SI tarafından yakalanmayan ek grafik bilgilerini yakalamak için bu tekniği kullanabilirsiniz.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Bu izlenecek yol, grafik bilgilerini programla yakalama gösterilmiştir. Sonraki adım olarak, bu seçenek göz önünde bulundurun:  
+ Bu kılavuzda grafik bilgilerinin programlı bir şekilde nasıl yakalanacağı gösterilmiştir. Sonraki adım olarak bu seçeneği göz önünde bulundurun:  
   
-- Grafik tanılama araçlarını kullanarak, yakalanan grafik bilgileri analiz etmeyi öğrenin. Bkz: [genel bakış](../debugger/overview-of-visual-studio-graphics-diagnostics.md).  
+- Grafik Tanılama araçlarını kullanarak yakalanan grafik bilgilerini çözümlemeyi öğrenin. Bkz. [genel bakış](../debugger/overview-of-visual-studio-graphics-diagnostics.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Grafik bilgilerini yakalama](../debugger/walkthrough-capturing-graphics-information.md)   
+ [Izlenecek yol: grafik bilgilerini yakalama](../debugger/walkthrough-capturing-graphics-information.md)   
  [Grafik bilgilerini yakalama](../debugger/capturing-graphics-information.md)   
  [Komut satırı Yakalama Aracı](../debugger/command-line-capture-tool.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2015 'deki yenilikler | Microsoft Docs
+title: Visual Studio 2015'teki yenilikler | Microsoft Docs
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -14,263 +14,263 @@ caps.latest.revision: 364
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 469405515b7cc0ebe615dc821ebfa5ddb7258468
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 036ad2171c3b117049635247a980cd0f8411d887
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672092"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297559"
 ---
-# <a name="what39s-new-in-visual-studio-2015"></a>&#39;Visual Studio 2015 ' deki yenilikler
+# <a name="what39s-new-in-visual-studio-2015"></a>Hangi&#39;Visual Studio 2015'te yeni s
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
 
-Visual Studio 2015 ' e hoş geldiniz, tümleşik bir geliştirici üretkenlik araçları, bulut hizmetleri ve uzantıları, Web için harika uygulamalar ve Oyunlar oluşturma, Windows Mağazası, Android için ve iOS için harika uygulamalar ve oyunlar oluşturmalarına olanak tanır.
+Visual Studio 2015, tümleşik bir geliştirici üretkenliği araçları, bulut Hizmetleri ve size ve ekibinize harika uygulamalar ve web için Windows Store, masaüstü, Android ve iOS için oyunlar oluşturmaya olanak tanıyan uzantılar paketidir Hoş Geldiniz.
 
-Bu sayfada, ilk olarak Visual Studio 2013 güncelleştirmelerden birinde sunulan özellikler dahil olmak üzere Visual Studio 2013 RTM 'den beri yeni olan en önemli özelliklerden bazıları vurgulanmıştır. Visual Studio 2015 ' deki yeniliklerin tüm listesi için bkz. [sürüm notları](https://www.visualstudio.com/news/vs2015-vs).
+Bu sayfada Visual Studio 2013'ün ilk olarak sunulan özelliklerini Visual Studio 2013 güncelleştirmelerden biri dahil olmak üzere RTM,'den beri yenidir en önemli özelliklerinden bazıları vurgular. Visual Studio 2015'te Yenilikler tam listesi için bkz. [sürüm notları](https://www.visualstudio.com/news/vs2015-vs).
 
-Visual Studio ALM 'deki pek çok geliştirme ve yeni özellik hakkında daha fazla bilgi edinmek için bkz. [TFS 2015](/tfs/server/whats-new?view=vsts#tfs-2015-rtm)yenilikleri.
+Birçok geliştirme ve Visual Studio ALM yeni özellikler hakkında daha fazla bilgi için bkz: [TFS 2015 için Yenilikler](/tfs/server/whats-new?view=vsts#tfs-2015-rtm).
 
 ## <a name="a-new-setup-experience"></a>Yeni bir kurulum deneyimi
  [!INCLUDE[downloadvs](./includes/downloadvs-md.md)]
 
- Visual Studio 2015 kurulum deneyimi, yalnızca ihtiyaç duyduğunuz bölümleri yüklemeniz için gereklidir. Bu, .NET veya Web geliştirme ile ilgili birçok yaygın senaryo için yüklemeyi daha hızlı hale getirir. Platformlar arası mobil geliştirme gibi başka tür geliştirme yaparsanız veya ya C++ F#da içinde çalışıyorsanız, **özel** yükleme ' yi seçin ve ardından ihtiyacınız olan bileşenleri ve isteğe bağlı üçüncü taraf SDK 'ları seçin. Ayrıca, daha sonra özel bileşenlerden herhangi birini yükleyebilirsiniz. Örneğin, temel yükleme ' yi seçip yeni C++ bir proje oluşturmayı denerseniz, C++ geliştirme araçlarını indirmeniz istenir.
+ Yalnızca gereksinim duyduğunuz bölümleri'ni yüklemeniz gerekir, böylece Visual Studio 2015 kurulum deneyimini bileşenlerden. Bu yükleme .NET ya da Web geliştirme ile ilgili birçok yaygın senaryo için daha hızlı hale getirir. Geliştirme, platformlar arası mobil geliştirme gibi diğer tür yapın veya C++'da iş veya F#, seçin **özel** Yükleme bileşenleri ve ihtiyacınız olan isteğe bağlı üçüncü taraf SDK'yı seçin. Ayrıca özel bileşenleri daha sonra yükleyebilirsiniz. Örneğin, temel Yükleme'yi seçin ve ardından yeni bir C++ projesi oluşturma girişimi, C++ geliştirme araçlarını indirin istenir.
 
  ![Visual Studio 2015 Kurulum Iletişim kutusu](./ide/media/vs2015-setup-screen.png "VS2015_Setup_screen")
 
-## <a name="sign-in-across-multiple-accounts"></a>Birden çok hesap arasında oturum açın
- Visual Studio 2015 ile, yeni bir çoklu oturum açma deneyimi, birden çok Visual Studio hesabınız olduğunda bile çevrimiçi kaynaklara erişiminizi büyük ölçüde basitleştirmek üzere tasarlanmıştır. Visual Studio 'da oturum açtıktan sonra, tüm Visual Studio 2015 örnekleri ve makinenizde Blend 'yi otomatik olarak açtınız. Oturum açma, ayarlarınızı sizin için otomatik olarak başlatır. Visual Studio 2015 ' de hesabınız özellikler arasında paylaşıldığından, iyi bir belirteç olduğu sürece, sunucu içindeki Microsoft Azure aboneliğinizdeki **Takım Gezgini**ve kaynak ve web sitelerinden Visual Studio Team Services hesabınıza erişebilirsiniz. Gezgini. Ayrıca, Azure kaynaklarınızı Application Insights projeler için yeni proje Iletişim kutusunda görürsünüz ve yeni bir bağlı hizmet eklemek için Azure Mobile, Azure Storage, [Microsoft Office 365](https://msdn.microsoft.com/office/aa905340.aspx) ve [Saleforce.com geliştirici](https://developer.salesforce.com/) hesaplarınızı görürsünüziletişim kutusu.
+## <a name="sign-in-across-multiple-accounts"></a>Birden fazla hesabında oturum açın
+ Visual Studio 2015 ile yeni kolaylaştırılmış oturum açma deneyimi, birden fazla Visual Studio hesabı olsa bile, çevrimiçi kaynaklara erişiminizi önemli ölçüde kolaylaştırmak için tasarlanmıştır. Visual Studio'ya oturum sonra otomatik olarak Visual Studio 2015 ve Blend tüm örnekleri için makinenizde oturum açtınız. Otomatik olarak oturum açarken ayarlarınızı, dolaşım başlatır. Visual Studio 2015'te hesabınızı özellikleri arasında paylaşılan iyi bir belirteç olduğu sürece, bu nedenle, Visual Studio Team Services hesaplarınızı erişebilirsiniz **Takım Gezgini**, Microsoft Azure Web sitelerinden ve kaynakların Sunucu Gezgini'nde abonelik. Azure kaynaklarınızı yeni proje iletişim kutusunda Application Insights projeleri için de görürsünüz ve Azure depolama, Azure mobil görürsünüz [Microsoft Office 365](https://msdn.microsoft.com/office/aa905340.aspx) ve [Saleforce.com Geliştirici](https://developer.salesforce.com/) Yeni hesapları **bir bağlı hizmet eklemek** iletişim.
 
- Visual Studio 'da, siz veya yeni hesap Yöneticisi aracılığıyla birden çok kullanıcı hesabıyla çalışabilirsiniz. Ardından, hizmetlere bağlanırken veya çevrimiçi kaynaklara erişirken anında bu hesaplar arasında geçiş yapabilirsiniz. Visual Studio, eklediğiniz hesapları anımsar, böylece bunları herhangi bir Visual Studio veya Blend örneğinden kullanabilirsiniz. Ayrıca, aynı zamanda diğer bir cihazdaki bu hesaplardan biriyle çalışmaya başlayabilmeniz için, Visual Studio hesap listesini de (değerli kimlik bilgilerinizi dolaşıyoruz) kişiselleştirme hesabınızla birleştirirsiniz. Kuşkusuz hesap ayarları iletişim kutusundan hesapları dilediğiniz zaman kaldırabilirsiniz. Başlamak için bkz. [birden çok kullanıcı hesabıyla çalışma](./ide/work-with-multiple-user-accounts.md).
+ Kullandıkça ekleyerek bunları veya yeni hesap Yöneticisi aracılığıyla Visual Studio'da birden fazla kullanıcı hesaplarıyla çalışabilir. Ardından, bağlanma Hizmetleri çalıştırıldığında anında veya çevrimiçi kaynaklara erişen hesaplar arasında geçiş yapabilirsiniz. Visual Studio, Visual Studio veya Blend herhangi bir örneğinden kullanabilmesi için eklediğiniz hesaplara hatırlar. (Biz değerli kimlik bilgilerinizi götürülmeyeceğini rağmen) hızlı bir şekilde başka bir cihazda bu hesapların biriyle çalışmaya başlayabilir için visual Studio da hesaplarının listesi, kişiselleştirme hesabınızla dolaşır. Elbette, hesap ayarları iletişim kutusundan hesapları dilediğiniz zaman kaldırabilirsiniz. Başlamak için bkz: [birden çok kullanıcı hesabıyla çalışma](./ide/work-with-multiple-user-accounts.md).
 
  ![Hesap Yöneticisi](./ide/media/vs2015-accountmanager.gif "VS2015_AccountManager")
 
-## <a name="choose-your-target-platforms"></a>Hedef Platformlarınızı seçin
- Visual Studio 2015, platformlar arası mobil cihaz geliştirmeyi destekler. İOS, Android ve Windows 'u hedefleyen uygulamalar ve Oyunlar yazabilir ve tüm Visual Studio IDE içinden ortak bir kod tabanı paylaşabilirsiniz. Dosya, yeni proje iletişim kutusunda tüm bu yeni proje türlerini görürsünüz.
+## <a name="choose-your-target-platforms"></a>Hedef platformları seçin
+ Visual Studio 2015, platformlar arası mobil cihaz için geliştirmeyi destekler. Uygulamalar ve iOS, Android ve Windows platformlarını ve bir ortak kod Visual Studio IDE içinden temeli, tüm gelen paylaşan oyunlar yazabilirsiniz. Tüm bu yeni proje türleri dosyasında, yeni proje iletişim kutusu görürsünüz.
 
- Kuşkusuz, klasik masaüstü uygulamaları için destek; diller, kitaplıklar ve araçlar için çok sayıda geliştirmelerle her zamankinden daha iyidir.
+ Ve — Elbette — geliştirmeleri dilleri, kitaplıklar ve araçlar için çok sayıda ile hiç olmadığı kadar daha iyi Klasik Masaüstü uygulamaları için destek.
 
-### <a name="cross-platform-mobile-apps-in-c-with-xamarin-for-visual-studio"></a>Visual Studio için Xamarin C# ile platformlar arası mobil uygulamalar
- Xamarin, yerel olarak C# IOS ve Android API 'lerine bağlandığında kod yazmanıza olanak tanıyan bir mobil çerçevedir. Microsoft, Android, iOS ve Windows Phone için, paylaşılan kodla tek bir çözümde geliştirme yapmanızı sağlayan bir uzantıdır ve Visual Studio için Xamarin 'in kendi sürümünde Xamarin ile yakından işbirliği yaptı. Xamarin ile, platformlar arasında en az değişimleri ile bir dil ve bir kod tabanı kullanırsınız.  Visual Studio için Xamarin, Visual Studio 2010 ve üzeri sürümlerde desteklenir. Xamarin 'in Starter sürümü Visual Studio 2015 ' ye dahildir. Başlamak için bkz. [Visual Studio 'Da Xamarin kullanarak yerel kullanıcı arabirimi ile uygulama oluşturma](./cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md).
+### <a name="cross-platform-mobile-apps-in-c-with-xamarin-for-visual-studio"></a>C# ile Visual Studio için Xamarin platformlar arası mobil uygulamalar
+ Xamarin iOS için yerel olarak bağlayan #c ve Android API'leri kod yazmanızı sağlayan Mobil bir çerçevedir. Microsoft, kendi paylaşılan kod ile tek bir çözümde, Android, iOS ve Windows Phone için geliştirin olanak tanıyan uzantı Visual Studio için Xamarin sürümü üzerinde Xamarin ile yakından kurdu. Xamarin ile bir dil ve bir kod tabanı ile platformlar arasında çok az deltaları kullanacaksınız.  Visual Studio için Xamarin, Visual Studio 2010 ve sonraki sürümlerde desteklenir. Xamarin başlangıç sürümü Visual Studio 2015'te eklenmiştir. Başlamak için bkz: [Visual Studio'daki Xamarin yerel UI ile uygulamalar oluşturun](./cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md).
 
-### <a name="cross-platform-mobile-apps-in-htmljavascript-with-apache-cordova"></a>Apache Cordova ile HTML/JavaScript 'te platformlar arası mobil uygulamalar
- Apache Cordova için Visual Studio Araçları, Microsoft ile açık kaynak Apache Cordova topluluk arasındaki yakın işbirliğinin sonucudur. Araçlar, HTML, CSS ve JavaScript (veya Typescript) kullanarak platformlar arası mobil geliştirmeyi olanaklı hale sunmaktadır. Android, iOS ve Windows 'u tek bir kod tabanı ile hedefleyebilir ve JavaScript IntelliSense, DOM Gezgini, JavaScript Konsolu, kesme noktaları, izler, Yereller, Yalnızca kendi kodum ve daha fazlasını içeren Visual Studio IDE 'nin zenginliğini yaşayın.  Apache Cordova için Visual Studio Araçları, uygulamalarınızın ortak bir JavaScript API 'SI sağlayan eklentiler aracılığıyla tüm platformlarda yerel cihaz özelliklerine erişimi vardır. Başlamak için bkz. [Apache Cordova için Visual Studio araçları kullanmaya başlama](https://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42).
+### <a name="cross-platform-mobile-apps-in-htmljavascript-with-apache-cordova"></a>Apache Cordova ile HTML/JavaScript içinde platformlar arası mobil uygulamalar
+ Apache Cordova için Visual Studio Araçları Microsoft ve açık kaynaklı Apache Cordova topluluk arasında Kapat işbirliği sonucudur. HTML, CSS ve JavaScript (veya Typescript) kullanarak platformlar arası Mobil Geliştirme Araçları'nı etkinleştirin. Android, iOS ve Windows ile tek bir kod tabanının hedef ve JavaScript IntelliSense, DOM Gezgini, JavaScript konsolu, kesme noktaları, Gözcü, yerel öğeler, yalnızca kendi kodum ve daha da dahil olmak üzere Visual Studio IDE zenginliğine keyfini çıkarın.  Apache Cordova için Visual Studio Araçları ile uygulamalarınızı tüm platformlarda ortak bir JavaScript API'si eklentileri üzerinden yerel cihaz özelliklerine erişimine olanak sahip. Başlamak için bkz: [Apache Cordova için Visual Studio Araçları ile çalışmaya başlama](https://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42).
 
-### <a name="cross-platform-mobile-games-in-c-with-unity"></a>Unity C# ile platformlar arası mobil oyunlar
- Unity, çok platformlu 2B ve 3B oyun geliştirme için yaygın olarak kullanılan bir platformdur. Oyununuzu yazabilir C# ve Android, iOS, Windows Phone ve diğer birçok platformda yerel olarak çalıştırabilirsiniz. Unity için Visual Studio Araçları, Unity 'yi Visual Studio IDE ile tümleştiren bir uzantıdır. Bu uzantıyla birlikte, Unity geliştiricileri için tasarlanan üretkenlik özelliklerinin yanı sıra, Visual Studio IDE ve hata ayıklayıcının tüm özelliklerini edinirsiniz. Unity için Visual Studio Araçları 2,0 Preview 2, Yereller ve Izleme pencerelerinde nesneler için daha iyi görselleştirme gibi birçok yeni özelliğe ek olarak Visual Studio 2015 için destek ekler. Microsoft, Unity için Visual Studio Araçları oluşturucuları olan SyntaxTree son zamanlarda elde etti. Unity için Visual Studio Araçları 2,0 Preview 2 ' yi indirmek için ve Unity için Visual Studio Araçları hakkında daha fazla bilgi için bkz. [Unity için Visual Studio Araçları 2,0](https://aka.ms/vstu).
+### <a name="cross-platform-mobile-games-in-c-with-unity"></a>Unity ile C# platformlar arası mobil oyunlar
+ Unity çok platformlu 2B ve 3B Oyun Geliştirme için yaygın olarak kullanılan bir platformdur. Oyununuzu C# dilinde yazabilir ve BT yerel Android, iOS, Windows Phone ve diğer birçok platformda. Unity için Visual Studio Araçları Unity Visual Studio IDE ile tümleşen bir uzantısıdır. Bu uzantı, Visual Studio IDE ve hata ayıklayıcı, Unity geliştiricileri için tasarlanmış üretkenliği özelliklerine ek olarak tüm özelliklerini alın. Unity 2.0 Preview 2 ekler visual Studio Araçları Visual Studio 2015 için ek olarak yeni özellikler, Yereller ve izleme nesneleri için daha iyi görselleştirme gibi çeşitli windows desteği. Microsoft, Unity için Visual Studio Araçları'nın en son geliştiren SyntaxTree şirketini aldı. Unity 2.0 Preview 2 ve Unity için Visual Studio Araçları hakkında daha fazla bilgi için Visual Studio Araçları indirmek için bkz [Unity 2.0 için Visual Studio Araçları](https://aka.ms/vstu).
 
-### <a name="cross-platform-apps-and-libraries-for-native-c"></a>Yerel için platformlar arası uygulamalar ve kitaplıklarC++
- C++, çoğu mobil cihaz genelinde yerel olarak kullanılabilen bir dildir. Birden çok mobil platform hedefi için derlenebilir platformlar arası paylaşılan kod kitaplıklarını yazmak için bunu kullanabilirsiniz. Hatta, içinde C++tüm mobil uygulamaları da oluşturabilirsiniz. Görsel C++ , platformlar arası kodunuzu düzenleme, derleme, dağıtma ve hata ayıklama araçları sağlar. Windows uygulamalarının şablonlarının yanı sıra, Xamarin karma uygulamaları içeren birden çok platform için Android yerel etkinlik uygulamaları, iOS uygulamaları veya paylaşılan kod kitaplığı projeleri şablonlarından projeler oluşturabilirsiniz. Platforma özgü IntelliSense, API 'Leri keşfetmenize ve Android, iOS veya Windows hedefleri için doğru kod oluşturmanıza olanak sağlar. Derlemenizi x86 veya ARM yerel platformları için yapılandırabilir, kodunuzu bir iOS simülatörünü veya ağa bağlı bir Mac üzerinde iOS cihazlarına, doğrudan bağlı Android cihazlara dağıtabilir veya test için performanslı Android için Microsoft Visual Studio Öykünücüsü kullanabilirsiniz. Visual Studio hata ayıklayıcısında kesme noktaları ayarlayabilir, değişkenleri izleyebilir, yığını görüntüleyebilir C++ ve kodu adım adım izleyebilirsiniz. Birden çok uygulama platformunda en platforma özgü kod hariç tümünü paylaşabilir ve bunları Visual Studio 'da tek bir çözümle oluşturabilirsiniz.
+### <a name="cross-platform-apps-and-libraries-for-native-c"></a>Platformlar arası uygulamalar ve yerel C++ kitaplıkları
+ C++ kullanılabilir yerel olarak çoğu mobil cihazlarda dildir. Birden çok mobil platform hedefleri için yapılandırılabilecek platformlar arası paylaşılan kod kitaplıkları yazmak için kullanabilirsiniz. C++'ta bile tüm mobil uygulamalar oluşturabilirsiniz. Visual C++ düzenlemek, oluşturmak, dağıtmak ve platformlar arası kod hata ayıklama için Araçlar verir. Windows uygulamaları için şablonlara ek olarak, Android yerel etkinlik uygulamaları, iOS uygulamalarını veya Xamarin karma uygulamaları içeren birden çok platform için paylaşılan kod kitaplık projeleri için şablonlardan projeler oluşturabilirsiniz. Platforma özel IntelliSense'i API'leri keşfetmek ve Android, iOS veya Windows hedefleri için doğru kodu oluşturmasını sağlar. Yapınızı x86 veya ARM yerel platformları için yapılandırın ve kodunuzu iOS simülatörü veya doğrudan bağlı Android cihazlarında, ağa bağlı bir Mac üzerinde iOS cihazlarına dağıtmak veya test etmek için Microsoft Visual Studio öykünücü yüksek performanslı Android için kullanın. Kesme noktaları ayarlayın, değişkenleri izleyin, yığını görüntüleyin ve Visual Studio hata ayıklayıcının C++ kodunda adım adım. Birden fazla uygulama platformunda tüm platforma özgü kod paylaşın ve bunlar için tüm bir çözümü Visual Studio ile derleme.
 
- Platformlar arası C++uygulamaları kullanmaya başlamak için bkz. [Visual C++ Ile platformlar arası mobil uygulamalar oluşturma](./misc/build-cross-platform-mobile-apps-with-visual-cpp.md)
+ Platformlar arası C++ kullanmaya başlamak için bkz: [Visual C++ ile platformlar arası mobil uygulamalar oluşturun](./misc/build-cross-platform-mobile-apps-with-visual-cpp.md)
 
-### <a name="universal-windows-apps-for-any-windows-10-device"></a>Herhangi bir Windows 10 aygıtı için Evrensel Windows uygulamaları
- Evrensel Windows Platformu ve tek bir Windows çekirdeğiyle aynı uygulamayı telefonlardan masaüstü bilgisayarlardan herhangi bir Windows 10 cihazında çalıştırabilirsiniz. Bu Evrensel Windows uygulamalarını Visual Studio 2015 ve Evrensel Windows uygulama geliştirme araçları ile oluşturun.
+### <a name="universal-windows-apps-for-any-windows-10-device"></a>Tüm Windows 10 cihazlar için evrensel Windows uygulamaları
+ Evrensel Windows platformu ve bizim bir Windows çekirdek ile aynı uygulama tüm Windows 10 cihazlarda phone'lardan masaüstlerine çalıştırabilirsiniz. Visual Studio 2015 ile Evrensel Windows uygulaması geliştirme araçları bu evrensel Windows uygulamaları oluşturun.
 
  ![Evrensel Windows Platformu](./cross-platform/media/uwp-coreextensions.png "UWP_CoreExtensions")
 
- Uygulamanızı bir Windows 10 Phone, Windows 10 Masaüstü veya Xbox üzerinde çalıştırın. Aynı uygulama paketidir! Windows 10 tek ve birleştirilmiş çekirdeği kullanıma sunulmasıyla birlikte, tek bir uygulama paketi tüm platformlarda çalıştırılabilir. Birkaç platformda, platforma özgü davranışlardan yararlanmak üzere uygulamanıza ekleyebileceğiniz Uzantı SDK 'Ları vardır. Örneğin, mobil için bir uzantı SDK 'Sı, bir Windows Phone 'a basıldığında geri düğmesini işler. Projenizde bir uzantı SDK 'sına başvurdıysanız, bu SDK 'nın o platformda kullanılabilir olup olmadığını test etmek için yalnızca çalışma zamanı denetimleri ekleyin. Her platform için aynı uygulama paketine sahip olabilirsiniz!
+ Uygulamanızı Windows 10 telefonda, Windows 10 Masaüstü veya Xbox üzerinde çalıştırın. Bu, aynı uygulama paketi kullanılır! Windows 10 tek, birleştirilmiş çekirdek sunulmasıyla birlikte, tüm platformlardaki bir uygulama paketini çalıştırabilecek. Çeşitli platformları platform belirli davranışlardan faydalanmak için uygulamanızı ekleyebileceğiniz olan uzantı Sdk'lerine vardır. Örneğin, mobil cihazlar için bir uzantı SDK'sı, Windows phone'da basıldığında geri düğmesini işler. Projenizde bir uzantı SDK'sına başvuran, yalnızca, SDK bu platform üzerinde kullanılabilir olup olmadığını test etmek için çalışma zamanı denetimleri ekleyin. Her platform için aynı uygulama paketi nasıl sahip olmasıdır!
 
- Bu C# C++ [Evrensel Windows uygulamalarını](https://msdn.microsoft.com/library/dn975273.aspx)oluşturmak için, Visual Basic veya JavaScript kullanın.
+ Bunlar oluşturmak için C#, Visual Basic, C++ veya JavaScript kullanın [Evrensel Windows uygulamaları](https://msdn.microsoft.com/library/dn975273.aspx).
 
 ### <a name="web"></a>Web
- ASP.NET 5, MVC, WebAPI ve SignalR için önemli bir güncelleştirmedir ve Windows, Mac ve Linux üzerinde çalışır.  ASP.NET 5, modern bulut tabanlı uygulamalar oluşturmaya yönelik yalın ve birleştirilebilir bir .NET yığını sunmak için baştan sona tasarlanmıştır. Visual Studio 2015 araçları, Bower ve Grönlama gibi popüler web geliştirme araçlarıyla daha yakından tümleşiktir. Başlamak için [net Web geliştirme ve araçlar bloguna](http://blogs.msdn.com/b/webdev/)ait çok sayıda blog gönderisine bakın.
+ ASP.NET 5 önemli bir güncelleştirme için MVC, Webapı ve SignalR ve Windows, Mac ve Linux üzerinde çalıştırır.  ASP.NET 5 baştan ayarlama, yalın ve birleştirilebilir bir .NET ile modern bulut tabanlı uygulamalar oluşturmak için yığın sağlamak için tasarlanmıştır. Visual Studio 2015 araçları daha yakından Bower ve Grunt gibi popüler web geliştirme araçları ile tümleşiktir. Başlamak için üzerinde çok sayıda blog gönderilerini görün [NET Web geliştirme ve Araçlar Blogumuza](https://devblogs.microsoft.com/aspnet/).
 
-### <a name="classic-desktop-and-windows-store"></a>Klasik Masaüstü ve Windows Mağazası
- Visual Studio 2015, klasik masaüstü ve Windows Mağazası geliştirmeyi desteklemeye devam etmektedir. Windows geliştikçe, Visual Studio onunla birlikte gelişir.  Visual Studio 2015 ' de, .NET C++ için kitaplıklar ve diller ve tüm Windows sürümleri için geçerli olan önemli geliştirmeleri yaptı.
+### <a name="classic-desktop-and-windows-store"></a>Klasik Masaüstü ve Windows Store
+ Visual Studio 2015, Klasik Masaüstü ve Windows Store geliştirme desteklemeye devam eder. Windows geliştikçe ile birlikte Visual Studio evrilir.  Visual Studio 2015'te kitaplıkları ve diller C++ yanı sıra .NET için tüm Windows sürümleri için geçerli olan önemli geliştirmeleri yapıldı.
 
 #### <a name="the-net-framework"></a>.NET Framework
- Microsoft [!INCLUDE[net_v46](./includes/net-v46-md.md)], daha fazla senaryoyu etkinleştirmek için 150 yeni API ve 50 güncelleştirilmiş API 'Ler sunar. Örneğin, daha fazla koleksiyon artık daha kolay kullanılmasını sağlamak <xref:System.Collections.Generic.IReadOnlyCollection%601> uygular. Ayrıca, daha önce bahsedilen ASP.NET 5, modern bulut tabanlı uygulamalar oluşturmak için yalın bir .NET platformu sunar.
+ Microsoft [!INCLUDE[net_v46](./includes/net-v46-md.md)] hakkında yeni 150 API'ler ve 50 güncelleştirilmiş daha fazla senaryoları etkinleştirmek için API'ler sunar. Örneğin, koleksiyonlar hemen uygulayın <xref:System.Collections.Generic.IReadOnlyCollection%601> bunları kullanmayı daha kolay hale getirir. Ayrıca, ASP.NET 5, daha önce bahsedilen modern bulut tabanlı uygulamaları derlemeye yönelik yalın bir .NET platformu sunar.
 
- C# Bu hedefte yazılan Windows mağazası uygulamaları .NET Framework artık, uygulamayı Il yerine yerel koda derleyen .NET Native yararlanabilir ve [!INCLUDE[net_v46](./includes/net-v46-md.md)] Ayrıca, bir 64 bit tam ZAMANıNDA (JIT) derleyicisi de ekler.
+ .NET Framework'ü hedefleyen C# dilinde yazılmış Windows Store apps artık yararlanabilir .NET hangi uygulamaları IL yerine yerel kod derlenir, yerel ve [!INCLUDE[net_v46](./includes/net-v46-md.md)] Ryujıt, 64 bit tam zamanında (JIT) derleyici de ekler.
 
- New C# ve vb derleyicileri ("Roslyn") derleme sürelerini önemli ölçüde hızlandırır ve kapsamlı kod analizi API 'leri sağlar. Visual Studio 2015, satır içi yeniden adlandırma, çözümleyiciler ve hızlı düzeltmeler dahil daha fazla yeniden düzenlemeler sağlamak için Roslyn avantajlarından yararlanır.
+ Yeni C# ve VB derleyicileri ("Roslyn"), önemli ölçüde derleme sürelerini hızlandırmak ve kapsamlı bir kod analizi API'leri sağlar. Visual Studio 2015 satır içi dahil olmak üzere daha fazla yeniden düzenlemeleri yeniden adlandır sağlamak için Roslyn Çözümleyicileri ve hızlı düzeltmeler yararlanır.
 
- C# Ve Visual Basic dillerin her ikisi de çekirdek DILDE ve IDE desteği 'nde birçok smalı geliştirmesi içerir. Bu geliştirmelerin hepsi, .NET kodlama deneyiminizi daha sezgisel, kullanışlı ve üretken hale getirmek için eklenir.
+ C# ve Visual Basic dil, çok sayıda smallish geliştirmeler çekirdek dil ve IDE desteği içerir. Tüm bu geliştirmeler, .NET kodlama deneyimi daha sezgisel, kolay ve üretken olmak için ortaya koyuyor.
 
- Daha fazla bilgi için bkz. [Yenilikler ve](https://msdn.microsoft.com/library/1d971dd7-10fc-4692-8dac-30ca308fc0fa) [.net blogu](http://blogs.msdn.com/b/dotnet/).
+ Daha fazla bilgi için [yenilikler](https://msdn.microsoft.com/library/1d971dd7-10fc-4692-8dac-30ca308fc0fa) ve [.NET Blog](https://devblogs.microsoft.com/dotnet/).
 
 #### <a name="c"></a>C++
- Visual C++ c++ 11/14 dil uyumluluğu, platformlar arası mobil cihaz geliştirmesi için destek, sürdürülebilir işlevleri ve await için destek (Şu anda c++ 17 ' de standartlaştırma için planlanmış), iyileştirmeler ve hata düzeltmeleri sağlar C çalışma zamanı kitaplığı (CRT) ve C++ standart KITAPLıK (STL) UYGULAMALARı, MFC 'deki yeniden iletişim kutuları, yeni derleyici iyileştirmeleri, daha iyi derleme performansı, yeni tanılama özellikleri ve kod düzenleyicisinde yeni üretkenlik araçları.
+ Visual C++, C ++ 11/14 dil uyumluluğu, platformlar arası mobil cihaz geliştirme desteği için önemli gelişmeler await (C ++ 17'de Standartlaştırma için planlanan şu anda) ve sürdürülebilir işlevleri destekler ve geliştirmeleri ve hata düzeltmeleri C sağlar Çalışma zamanı kitaplığı (CRT) ve C++ Standart Kitaplığı (STL) uygulamaları resizeable iletişim kutularında MFC, yeni derleyici iyileştirmeleri, daha iyi performans ve tanılama özellikleri yeni kod düzenleyicisinde yeni üretkenlik araçlarını oluşturun.
 
- Daha fazla bilgi için bkz. [Visual C++ ](https://msdn.microsoft.com/library/1cc09fad-85a2-43c2-b022-bb99f5fe0ad7) ve [görsel C++ blogdaki](http://blogs.msdn.com/b/vcblog/)yenilikler.
+ Daha fazla bilgi için [Visual C++ için Yenilikler](https://msdn.microsoft.com/library/1cc09fad-85a2-43c2-b022-bb99f5fe0ad7) ve [Visual C++ blogu](https://devblogs.microsoft.com/cppblog/).
 
 ## <a name="device-preview-menu-bar"></a>Cihaz Önizleme menü çubuğu
- Evrensel Windows Platformu projelerinde, cihaz önizleme menü çubuğu, XAML tabanlı Kullanıcı arabirimlerinizin çeşitli ekran boyutlarında nasıl işleneceğini görmenizi sağlar.
+ Evrensel Windows platformu projelerinde, cihaz Önizleme menü çubuğunda, XAML tabanlı UI çeşitli ekran boyutlarını nasıl işlenir görmenizi sağlar.
 
  ![Cihaz Önizleme menüsü](./ide/media/vs2015-device-preview.png "vs2015_device_preview")
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama
- Visual Studio 2013, Visual Studio Grafik Tanılama Çerçeve Analizi, Windows Phone desteği, gölgelendirici düzenleme & Uygula ve komut satırı yakalama araçları gibi birçok yeni özellik eklemiştir. Ayrıca, DirectX12 uygulamalarında hata ayıklama desteği de eklenmiştir. Daha fazla bilgi için bkz. [Visual Studio grafik tanılama](./debugger/visual-studio-graphics-diagnostics.md).
+ Visual Studio 2013'ten beri Visual Studio grafik tanılama çerçeve analizi, Windows Phone desteği, gölgelendirici düzenleme dahil olmak üzere birçok yeni özellik eklemiştir ve Uygula ve komut satırı araçları yakalar. Ayrıca, DirectX12 uygulamalarında hata ayıklamaya yönelik destek de eklemiştir. Daha fazla bilgi için [Visual Studio grafik tanılama](./debugger/visual-studio-graphics-diagnostics.md).
 
 ## <a name="connect-to-services"></a>Hizmetlere bağlanma
- Visual Studio 2015, uygulamanızı hizmetlere bağlamayı her zamankinden daha kolay hale getirir.  Yeni bağlı hizmet ekleme Sihirbazı projenizi yapılandırır, gerekli kimlik doğrulama desteğini ekler ve hizmetinize göre hızla ve sorunsuz bir şekilde kodlamaya başlamanıza olanak sağlamak için gerekli NuGet paketlerini indirir. Bağlı hizmet ekleme Sihirbazı, birden çok kullanıcı hesabı ve abonelikle çalışmayı kolaylaştırmak için yeni hesap yöneticisiyle de tümleşir. Visual Studio 2015 ' de, aşağıdaki hizmetler için destek kullanıma sunulmuştur (bir hesabınız olduğunu varsayarak):
+ Visual Studio 2015, uygulamanızla hizmetler için hiç bağlantı için daha kolay getirir.  Yeni bağlı hizmet Ekle Sihirbazı projenizi yapılandırır, gerekli kimlik doğrulama desteği ekler ve hizmetinizi karşı hızla ve kolayca kodlamaya başlamanıza yardımcı olmak için gerekli NuGet paketlerini indirir. Bağlı hizmet Ekle Sihirbazı'nı, ayrıca yeni hesabı birden çok kullanıcı hesaplarını ve abonelikleri ile çalışmak kolay hale getirmek için Yöneticisi ile tümleştirilir. Şu hizmetler sağlanır (hesabınız olduğunu varsayarak) kullanıma hazır Visual Studio 2015'te desteği:
 
-1. Azure Mobile Services
+1. Azure mobil hizmetler
 
 2. Azure Depolama
 
-3. Office 365 (posta, kişiler, takvimler, dosyalar, kullanıcılar & grupları)
+3. Office 365 (posta, kişiler, takvimler, dosyalar, kullanıcılar ve gruplar)
 
-4. Satış
+4. Salesforce
 
-   Yeni hizmetler sürekli olarak eklenir ve sihirbazda "yeni hizmetleri bul bağlantısına" tıklayarak bunları bulabilirsiniz.
+   Sürekli olarak yeni hizmet eklenir ve bu "Bul yeni hizmetler bağlantıyı tıklatarak" Sihirbazı'nda bulabilir.
 
    ![Bağlı hizmetler Ekle Iletişim kutusu](./ide/media/vs2015-addconnectedservicedialog.png "VS2015_AddConnectedServiceDialog")
 
-## <a name="design-your-ui"></a>Kullanıcı arabiriminizi tasarlama
- XAML kullanıcı arabirimlerini tasarlamak için Blend deneyimi önemli ölçüde geliştirilmiştir. Blend, IntelliSense dahil daha sezgisel bir kullanıcı arabirimi, daha güçlü XAML düzenlemesi özellikleri ve Visual Studio ile daha iyi tümleştirme sağlamak için tamamen yeniden tasarlanmıştır. Daha fazla bilgi için bkz. [Visual Studio 'DA xaml tasarlama ve Visual Studio için Blend](./designers/designing-xaml-in-visual-studio.md).
+## <a name="design-your-ui"></a>Kullanıcı Arabirimi tasarlama
+ XAML kullanıcı arabirimleri tasarlama için Blend deneyimini önemli ölçüde geliştirilmiştir. Blend tamamen daha sezgisel bir kullanıcı Arabirimi, IntelliSense ve Visual Studio ile daha iyi tümleştirme dahil olmak üzere, daha güçlü XAML düzenleme özellikleri sağlamak üzere tasarlanmıştır. Daha fazla bilgi için [Visual Studio ve Visual Studio için Blend, XAML tasarlama](./designers/designing-xaml-in-visual-studio.md).
 
 ## <a name="cross-platform-debugging-support"></a>Platformlar arası hata ayıklama desteği
- Windows, iOS ve Android cihazlarda çalışan yerel mobil uygulamaları oluşturmak ve hatalarını ayıklamak için Visual Studio 'Yu kullanabilirsiniz. [Android Için Visual Studio öykünücüsü](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)'nü kullanın veya bir cihazı bağlayın ve doğrudan Visual Studio 'da kodunuzda hata ayıklayın.
+ Visual Studio, oluşturmak ve Windows, iOS ve Android cihazlarda çalışan yerel mobil uygulamalar hata ayıklamak için kullanabilirsiniz. Kullanım [Android için Visual Studio öykünücü](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/), veya bir cihazı bağlayın ve kodunuzu doğrudan Visual Studio'da hata ayıklama.
 
-- **JavaScript/Cordova**. JavaScript ile Windows, iOS ve Android için yerel uygulamalar oluşturmak üzere [Apache Cordova için Visual Studio Araçları](https://msdn.microsoft.com/library/dn879821\(v=vs.140\).aspx) kullanın.
+- **JavaScript / Cordova**. Kullanım [Apache Cordova için Visual Studio Araçları](https://msdn.microsoft.com/library/dn879821\(v=vs.140\).aspx) Windows, iOS ve Android JavaScript ile yerel uygulamalar oluşturun.
 
-     MSDN kitaplığındaki uygulamanızda [hata ayıklama](https://msdn.microsoft.com/library/c2a4a1d4-a4e8-47ec-811f-ad207c54f4d1) , Cordova Için Visual Studio hata ayıklama desteğiyle ilgili ayrıntılı bir bakış.
+     [Uygulamanızı hata ayıklama](https://msdn.microsoft.com/library/c2a4a1d4-a4e8-47ec-811f-ad207c54f4d1) hata ayıklama desteği Cordova için Visual Studio ayrıntılı bilgi MSDN Kitaplığı'nda olduğu.
 
-- **C# /Xamarin**. Visual [](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) Studio 'Da ile C#Windows, iOS ve Android için yerel uygulamalar derlemek için Xamarin kullanın.
+- **C# / Xamarin**. Kullanım [Xamarin](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) Windows, iOS ve Android Visual Studio'da C# ile yerel uygulamalar oluşturun.
 
-     [Xamarin geliştirici kılavuzlarındaki](http://developer.xamarin.com/guides) cihazda [hata ayıklama (IOS](http://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/) ) ve [hata](http://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debugging_with_xamarin_android/) ayıklama hata ayıklama deneyimini anlatmaktadır.
+     [Hata ayıklama](https://docs.microsoft.com/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) (iOS) ve [cihazda hata ayıklama](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) içinde [Xamarin Geliştirici kılavuzlarındaki](https://docs.microsoft.com/xamarin/) hata ayıklama deneyimini açıklar.
 
-- **C++ /Android**. Windows ve Android için yerel uygulamalar oluşturmak için [ANDROID NDK](https://developer.android.com/tools/sdk/ndk/index.html) gibi üçüncü taraf araçlarla birlikte, [platformlar arası mobil geliştirme şablonları için görseli C++ ](cross-platform/visual-cpp-for-cross-platform-mobile-development.md) kullanın.
+- **C++ / Android**. Kullanım [platformlar arası Mobil Geliştirme için Visual C++](cross-platform/visual-cpp-for-cross-platform-mobile-development.md) üçüncü taraf araçlarla birlikte şablonları ister [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) Windows ve Android için yerel uygulamalar oluşturmak için.
 
 ## <a name="debugging-and-diagnostics"></a>Hata Ayıklama ve Tanılama
 
-Tanılamadaki yenilikler hakkında daha fazla bilgi için bkz. [profil oluşturma araçları](./profiling/what-s-new-in-profiling-tools.md)yenilikleri.
+Tanılama'da yenilikler hakkında daha fazla bilgi için bkz: [profil oluşturma araçlarındaki yenilikler](./profiling/what-s-new-in-profiling-tools.md).
 
-Aşağıda, kodunuzda farklı tanılama ve analiz türleri gerçekleştiren yeni veya geliştirilmiş araçlar verilmiştir:
+Aşağıdaki yeni veya geliştirilmiş kodunuz üzerinde farklı türde tanılama ve analiz gerçekleştiren araçlar:
 
 ### <a name="perftips"></a>PerfTips
- PerfTips, hata ayıklama sırasında yöntemlerin yürütme süresini görüntüler ve bu sayede profil oluşturucuyu çağırmak zorunda kalmadan performans sorunlarını hızla belirleyebilmenizi sağlar. Başlamak için bkz [. PerfTips: Visual Studio Ile hata ayıklarken bir bakışta performans bilgileri](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx)
+ PerfTips yöntemleri yürütme süresini hata ayıklama sırasında hızlı bir şekilde profil oluşturucu çağırmak zorunda kalmadan performans sorunlarını saptayın olanak tanıyarak görüntüler. Başlamak için bkz: [PerfTips: performans bilgilerini bir bakışta Visual Studio ile hata ayıklama sırasında](https://devblogs.microsoft.com/devops/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio/)
 
 ### <a name="error-list"></a>Hata Listesi
- Hata listesi artık herhangi bir sütunda filtrelemeyi destekler. Ayrıca, bir kod değişikliği binlerce uyarı üretse bile, yazdığınız tüm C# veya Visual Basic çözümünüzde hata, uyarı ve kod analizinin canlı bir görünümünü gösterir. Yeni Hata Listesi, mevcut kullanımla birlikte yeniden uyumludur. Daha fazla bilgi için bkz. [hata listesi pencere](./ide/reference/error-list-window.md).
+ Hata listesi, artık herhangi bir sütunu filtrelemeyi destekler. Yazdığınız sırada bir kod değişikliği binlerce uyarılar üretir zaman bile tüm C# veya Visual Basic çözümünüz arasında ayrıca hatalar, uyarılar ve Kod Analizi canlı bir görünümünü gösterir. Yeni hata listesi geriye dönük olarak uyumludur mevcut kullanım ile. Daha fazla bilgi için [Hata Listesi penceresi](./ide/reference/error-list-window.md).
 
 ### <a name="gpu-usage-tool"></a>GPU kullanımı aracı
- GPU kullanımı aracı, DirectX uygulamalarında ve oyunlarda GPU kullanım verilerini toplayıp analiz etmenize ve performans sorunlarının CPU veya GPU 'da olup olmadığına ilişkin sorunları gidermenize yardımcı olur. Aracı kullanmaya başlamak için bkz. [görsel C++ ekip blog gönderisi](http://blogs.msdn.com/b/vcblog/archive/2014/09/05/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1.aspx).
+ GPU kullanımı aracı, toplamak ve DirectX uygulamaları ve oyunları GPU kullanım verilerini çözümleme ve CPU veya GPU'nun performans sorunlarını kaynaklanan olup olmadığını sorun giderme yardımcı olur. Aracı ile çalışmaya başlamak için bkz. [Visual C++ team blog gönderisi](https://devblogs.microsoft.com/cppblog/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1/).
 
-## <a name="live-code-analysis-light-bulbs"></a>Canlı Kod Analizi (hafif bulbs)
- Ve Visual Basic için C# yeni Roslyn derleyicisi yalnızca daha hızlı derleme süreleri sağlar. Ayrıca, canlı kod analizi gibi tamamen yeni senaryolar da sağlar; bu da doğrudan kod Düzenleyicisi içinde zengin ve özelleştirilebilir geri bildirim ve öneriler sağlar türüyle. Visual Studio 2015 ' de, hafif bulbs, sol kenar boşluğunda (klavye kullanılırken) veya bir araç ipucunda (fareyle bir hata üzerine gelindiğinde) görüntülenir. Ampul, derleyicinin (muhtemelen özel bir kural kümesi kullanan) kodunuzda bir sorun algıladığını ve ayrıca sorunun nasıl çözüleceğini gösteren bir önerisine sahip olduğunu bildirir. Ampul gördüğünüzde, eyleme dönüştürülebilir öneriler için üzerine tıklayın.
+## <a name="live-code-analysis-light-bulbs"></a>Canlı kod analizi (ampuller)
+ C# ve Visual Basic yeni Roslyn derleyici, yalnızca daha hızlı derleme sürelerini sağlar; ayrıca Canlı kod analizi gibi siz yazarken sağlayan zengin ve özelleştirilebilir bir geri bildirim ve öneriler doğrudan kod düzenleyicisi içinde tamamen yeni senaryolara olanak tanır. Visual Studio 2015'te ampuller sol kenar boşluğu (klavye kullanırken) veya bir araç ipucu (hata fare ile üzerine gelindiğinde) görüntüler. Ampul (büyük olasılıkla bir özel kural kümesi kullanarak) derleyici, kodunuzda bir sorun algıladı ve sorunun nasıl çözüleceğini yönelik bir öneri de sahip gerçek zamanlı olarak bildirir. Bir ampul gördüğünüzde, eyleme dönüştürülebilir öneriler için tıklayın.
 
  ![Visual Studio Code düzenleyicisinde hafif bulbs](./ide/media/vs2015-lightbulbs.png "VS2015_LightBulbs")
 
-## <a name="enjoy-these-additional-ide-improvements"></a>Bu ek IDE geliştirmelerinden yararlanın
+## <a name="enjoy-these-additional-ide-improvements"></a>Bu ek IDE geliştirmeleri keyfini çıkarın
 
-### <a name="synchronized-settings-roaming-settings"></a>Eşitlenmiş Ayarlar (dolaşım ayarları)
- Visual Studio 2013 metin Düzenleyicisi, keybindings, tema & yazı tipleri & renkler, başlangıç ve ortam diğer adları gibi en yaygın olarak yapılandırılmış ayarlardan bazıları için eşitlenmiş ayarları sunmuştur.  Visual Studio 2015, profesyonel, kurumsal, hızlı SKU 'Lar ve Blend gibi Visual Studio uygulamaları genelinde ayarlarınızı ve eşitleme ayarlarını eşitleyerek bu deneyimde gelişir. Visual Studio 2013 ' de kullandığınız hesapla Visual Studio 2015 ' de ilk kez oturum açtığınızda, eşitlenmiş ayarların Visual Studio 2013 uygulandığını görürsünüz. **Hızlı başlatma**bölümünde "Eşitle" yazarak ayarlarınıza erişebilir veya **araçlar > seçenekler > ortam Eşitlenmiş Ayarlar >** ' ne gidin.
+### <a name="synchronized-settings-roaming-settings"></a>Eşitlenmiş ayarlar (Dolaşım ayarları)
+ Visual Studio 2013'ün, metin düzenleyici, tuş bağlamaları, tema & yazı tipi & renkler, başlangıç ve ortam diğer adları gibi en sık yapılandırılan ayarlardan bazıları için eşitlenmiş ayarlar kullanıma sunuldu.  Visual Studio 2015, ayarlarınızı daha fazla eşitleme ve Visual Studio Professional, Enterprise, Express SKU'ları ve Blend gibi uygulamaları ailesi üzerinden ayarları eşitleme bu deneyimini geliştirir. Visual Studio 2013'te kullanılan, Visual Studio 2015 aynı hesapla ilk kez oturum açtığınızda Visual Studio 2013'ten uygulanan eşitlenen ayarlarınız görürsünüz. Ayarlarınızı "eşitleme" yazarak erişebilirsiniz **hızlı başlatma**, veya gezinme **Araçlar > Seçenekler > ortam > eşitlenmiş ayarlar**.
 
 ### <a name="automatic-extension-updates"></a>Otomatik uzantı güncelleştirmeleri
- Visual Studio Galerisi 'nde yeni bir sürüm kullanılabilir olduğunda, yüklü Visual Studio uzantıları artık otomatik olarak güncelleştirilecektir. Otomatik uzantı güncelleştirmelerini nasıl özelleştirebileceğinizi öğrenmek için bkz. [Visual Studio uzantılarını bulma ve kullanma](./ide/finding-and-using-visual-studio-extensions.md) .
+ Artık Visual Studio Galerisi üzerinde yeni bir sürümü kullanılabilir olduğunda bu, yüklü Visual Studio uzantıları otomatik olarak güncelleştirilir. Bkz: [bulma ve Visual Studio uzantılarını kullanarak](./ide/finding-and-using-visual-studio-extensions.md) otomatik uzantı güncelleştirmeleri nasıl özelleştirebileceğiniz hakkında bilgi.
 
-### <a name="title-case-menus"></a>Başlık durumu Menüleri
- Konuştuğuz, dinliyoruz. Visual Studio menüleri bir kez daha, varsayılan olarak bir başlıktır. Ancak, tüm CAPS stilini beğeniyorsa, bu seçeneği başlangıç olarak veya **araçlar > seçenekler > genel** Özellik sayfasında ayarlayabilirsiniz:
+### <a name="title-case-menus"></a>Başlık büyük/küçük harf menüleri
+ Uç yaptık. Visual Studio menülerinin yine başlık varsayılan örneği. TÜMÜ büyük harf stili ister seçerseniz, Başlat menüsünde ayarlayabilirsiniz ancak ya da **Araçlar > Seçenekler > Genel** özellik sayfası:
 
  ![Visual Studio 2015 title Case ana menü komutları](./ide/media/vs2015-mainmenu.png "VS2015_MainMenu")
 
-### <a name="high-resolution-images-and-touch-support"></a>Yüksek çözünürlüklü görüntüler ve dokunma desteği
- Visual Studio IDE artık, daha fazla görüntü (menüler, bağlam menüleri, araç penceresi komut çubukları ve Çözüm Gezgini içindeki bazı projelerde) için gerçek yüksek çözünürlüklü görüntülere sahiptir. Visual Studio Code Editor penceresinde bir dokunmatik ekranda artık dokunmatik ve basılı tutma, Pinç, dokunma ve bu gibi hareketleri kullanarak yakınlaştırma, kaydırma, metin seçme ve bağlam menülerini çağırma gibi hareketler de kullanabilirsiniz.
+### <a name="high-resolution-images-and-touch-support"></a>Yüksek çözünürlüklü görüntüleri ve dokunma desteği
+ Visual Studio IDE true yüksek çözünürlüklü görüntülerden (menüler, bağlam menüleri, araç penceresini komut çubukları gibi alanlarda ve bazı projeler Çözüm Gezgini'nde) daha yoğun ekranlarda artık sahiptir. Ve dokunma ve tutun, sıkıştırma, vb. dokunun yakınlaştırma, kaydırma, metni seçin ve bağlam menüleri çağırır gibi bir touch-ekranında Visual Studio kod düzenleyicisi penceresi, şimdi hareketleri kullan.
 
  ![Düzenleyicide dokunma desteği](./ide/media/vs2015-touchsupport.png "VS2015_TouchSupport")
 
 ### <a name="custom-layouts"></a>Özel düzenler
- Mağaza ve dolaşım özel pencere düzenleri oluşturabilirsiniz. Örneğin, masaüstü makinenizde kullanılmak üzere bir tercih edilen düzen ve dizüstü veya küçük ekran cihazında kullanılmak üzere farklı düzen tanımlayabilirsiniz. Ya da bir Kullanıcı Arabirimi projesi için bir düzen ve bir veritabanı projesi için bir düzen tercih edebilirsiniz. Anahtar bağlamaları, düzenler arasında hızlıca geçiş yapma olanağı sağlar. Bu düzenler, oturum açtığınızda herhangi bir Visual Studio örneğinde kullanılabilir. Daha fazla bilgi için bkz. [özel pencere düzenleri oluşturma](./misc/create-custom-window-layouts.md).
+ Depo oluşturabilir ve özel pencere düzenlerini dolaşıma girer. Örneğin, bir dizüstü bilgisayar veya küçük ekran cihazda kullanım için farklı bir düzene yanı sıra Masaüstü makinenizde kullanmak için tercih edilen bir düzen tanımlayabilirsiniz. Veya, bir kullanıcı Arabirimi proje için bir düzen ve başka bir veritabanı projesi için tercih edebilirsiniz. Tuş bağlamaları düzenleri arasında hızla geçiş yapmanızı sağlar. Oturumunuz zaman herhangi bir Visual Studio örneğinde bu düzenleri kullanılabilir. Daha fazla bilgi için [özel pencere düzenlerini oluşturma](./misc/create-custom-window-layouts.md).
 
  ![Visual Studio özel düzen menü öğesi](./ide/media/vs2015-customlayout.png "VS2015_CustomLayout")
 
-### <a name="notification-hub"></a>Bildirim Hub 'ı
- Bildirim Hub 'ı için Kullanıcı arabirimi hızlı bir şekilde taramayı kolaylaştırmak için kolaylaştırılmıştır. Performans sorunları, işleme sorunları ve kilitlenmeler dahil ek bildirim türleri eklenmiştir ve artık Visual Studio 'Nun bir bildirimi göstermeyi durdurmasını söyleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio bildirimleri](./ide/visual-studio-notifications.md).
+### <a name="notification-hub"></a>Bildirim hub'ı
+ Bildirim hub'ı için kullanıcı Arabirimi hızlı tarama kolaylaştırmak üzere basitleştirilmiştir. Performans sorunlarını, işleme sorunlarını ve kilitlenmeleri de dahil olmak üzere ek bildirim türlerini eklenmiştir ve gösteren bir bildirimini durdurmak için Visual Studio artık söyleyebilirsiniz. Daha fazla bilgi için [Visual Studio bildirimleri](./ide/visual-studio-notifications.md).
 
-### <a name="codelens-find-what-happened-to-your-code-enterprise-and-professional-editions-only"></a>CodeLens: kodunuza ne olduğunu bulun (yalnızca Enterprise ve Professional sürümleri)
- Kodunuzla ilgili bilgileri, Düzenleyiciden çıkmadan, kendi işinize odaklanmaya devam edin. Visual Studio Team Services (VSTS) veya Team Foundation Server (TFS) içinde depolanan kod için iş öğeleri, hatalar, kod incelemeleri gibi değişiklikleri ve diğer geçmişi gözden geçirebilirsiniz.
+### <a name="codelens-find-what-happened-to-your-code-enterprise-and-professional-editions-only"></a>CodeLens: kodunuzu (yalnızca Enterprise ve Professional sürümleri) ne olduğunu Bul
+ Düzenleyiciden çıkmadan kodunuz hakkında - bilgi bulma sırasında çalışmasına odaklı kalmak. Değişiklikleri ve diğer geçmişi iş öğelerini, hataları, vb. Visual Studio Team Services (VSTS), ya da Team Foundation Server (TFS) içinde depolanan kod için kod gözden geçirmeleri, gözden geçirebilirsiniz.
 
  Visual Studio Enterprise ve Visual Studio Professional, artık şunları yapabilirsiniz:
 
-- Visual Studio düzenleyicisinde bir kod dosyasının tamamına yönelik geçmişi alın.
+- Visual Studio düzenleyicisinde bir bütün kod dosyanın geçmişini Al.
 
    ![CodeLens: kod dosyası ayrıntılarını al](./ide/media/codelensfilelevel.png "CodeLensFileLevel")
 
-- Kodunuzu değiştiren kişileri gösteren bir grafiğe bakın. Bu, takımınızın değişikliklerinde desenleri bulmanıza ve etkilerini değerlendirmenize yardımcı olabilir.
+- Kodunuzu değiştiren kişi gösteren bir grafik görürsünüz. Bu, takımınızın değişiklikleri kalıpları bulmasına ve etkilerini değerlendirmenize yardımcı olabilir.
 
    ![CodeLens: grafik olarak kod değişikliği geçmişine bakın](./ide/media/codelens.png "CodeLens")
 
-- Kodunuzun en son ne zaman değiştirildiğini kolayca görün.
+- Kodunuzu son değiştirildiği bir kolayca görebilir.
 
-- Kodunuzu etkileyen diğer dallardaki değişiklikleri bulun.
+- Değişiklikleri kodunuzu etkileyen diğer dalları bulun.
 
-  Bkz. [CodeLens](./ide/find-code-changes-and-other-history-with-codelens.md).
+  Bkz: [CodeLens](./ide/find-code-changes-and-other-history-with-codelens.md).
 
-### <a name="design-and-modeling-tools-enterprise-edition-only"></a>Tasarım ve modelleme araçları (yalnızca Enterprise Edition)
+### <a name="design-and-modeling-tools-enterprise-edition-only"></a>Tasarım ve modelleme araçlarını (yalnızca Enterprise edition)
  **Kod haritaları ve bağımlılık grafikleri**
 
- Visual Studio Enterprise, kodunuzda belirli bağımlılıkları anlamak istediğinizde kod haritaları oluşturarak bunları görselleştirin. Daha sonra, kodunuzun yanında görüntülenen Haritayı kullanarak bu ilişkilere gidebilirsiniz. Kod haritaları, kod çalışırken veya hata ayıkladığınızda koddaki yerinizi izlemenize yardımcı olabilir, bu nedenle kodunuzun tasarımı hakkında daha fazla bilgi edinirken daha az kod okuyacaksınız.
+ Kodunuzdaki belirli bağımlılıkları anlamak istediğinizde, Visual Studio Enterprise kod haritaları oluşturarak bunları görselleştirin. Ardından, kodunuzun yanında görüntülenen haritayı kullanarak bu ilişkilere gidebilirsiniz. Kod haritaları de yardımcı olabilir, kod içindeki yerinizi çalışmak veya kodunuzun tasarımı hakkında daha fazla bilgi edinirken daha az kod okumanız için kodu, hata ayıklama sırasında izler.
 
- Bu sürümde, komutları seçme, düzenleme, yönetme ve grup içeriklerinin yerleşimini değiştirme ile ilgili bölümlere gruplandırarak, kod öğeleri ve bağlantılarının kısayol menülerini kullanımı çok daha kolay hale aldık. Ayrıca, test projelerinin diğer projelerden farklı bir stilde görüntülendiğine ve haritadaki öğelerin simgelerini daha uygun sürümlere güncelleştirdiğine dikkat edin.
+ Bu sürümde, kod öğeleri ve bağlantılarına yönelik kısayol menülerini çok daha kolay seçme, düzenleme, grupları yönetme ve Grup içeriklerinin düzenini değiştirmek için ilgili bölümlere komutları gruplandırma tarafından kullanılacak yaptık. Ayrıca test projelerinin diğer projelerden farklı bir stilde görüntülendiğini ve haritadaki öğelere yönelik simgeleri daha uygun sürümlere güncelleştirdik, dikkat edin.
 
  ![Seçili öğeleri yeni kod haritasında göster](./ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")
 
- Diğer geliştirmeler şunları içerir:
+ Diğer iyileştirmeler şunlardır:
 
-- **İyileştirilmiş yukarıdan aşağı diyagramlar**. Orta ila büyük Visual Studio çözümleri için artık çözümünüze yönelik daha kullanışlı bir kod Haritası almak için basitleştirilmiş bir mimari menüsü kullanabilirsiniz. Çözümünüzün derlemeleri, çözüm klasörlerine göre gruplandırılır, böylece bunları bağlamda görebilir ve çözümü yapılandırırken yerleştirdiğiniz çabadan yararlanabilirsiniz. Proje ve derleme başvurularını hemen görürsünüz, daha sonra bağlantı türleri görüntülenir. Ayrıca, çözümünüzün dışındaki derlemeler daha kompakt bir şekilde gruplandırılır.
+- **Gelişmiş yukarıdan aşağıya diyagramlar**. Orta ve büyük ölçekli Visual Studio çözümleri, daha kullanışlı bir kod eşlemeleri, çözümünüz için almak için artık basitleştirilmiş bir mimari menüsü kullanabilirsiniz. Böylece bunları bağlam içinde görebilir ve, çözümü yapılandırırken yaptığınız çalışmadan yararlanarak çözümünüzün derlemeleri çözüm klasörleri tarafından gruplanır. Proje ve bütünleştirilmiş kod başvuruları ve bağlantı türleri görüntülenir hemen görürsünüz. Ayrıca, çözümünüze dışında bulunan derlemeler daha kompakt şekilde gruplanır.
 
-- **Test projeleri farklı stillenmiştir ve filtrelenebilir**. Artık farklı stillendirilmiş olduklarından, haritadaki test projelerini daha kolay ve hızlı bir şekilde tanımlayabilirsiniz. Ayrıca, uygulamanın çalışma koduna odaklanabilmeniz için filtrelenebilir.
+- **Test projeleri farklı stillere sahip olabilir ve filtrelenebilir**. Farklı stillere çünkü haritasında test projelerini daha kolay ve hızlı bir şekilde artık tanımlayabilirsiniz. Uygulamanın çalışma koduna odaklanabilmeniz için bunlar da filtrelenebilen.
 
-- **Basitleştirilmiş dış bağımlılık bağlantıları**. Bağımlılık bağlantıları artık System. Object, System. ValueType, System. Enum ve System. Delegate öğesinden devralmayı temsil etmez ve bu da kod haritanızda dış bağımlılıkları görmeyi kolaylaştırır.
+- **Basitleştirilmiş dış bağımlılık bağlantıları**. Bağımlılık bağlantıları artık System.Object, System.ValueType, System.Enum ve kod haritanızda dış bağımlılıkların görmeyi kolaylaştırır ve System.Delegate öğesinden devralmayı temsil eder.
 
-- **' Bağımlılık bağlantılarında detaya gitme ', filtreleri hesaba götürür**. Bir bağımlılık bağlantısına katkılarını anlamak için, bu kullanışlı bir diyagramı genişleterek yararlı bir diyagram alırsınız. Diyagram daha az dağınık ve seçtiğiniz bağlantı filtreleme seçeneklerini dikkate alır.
+- **' Ayrıntıya-bağımlılık bağlantılarının ' işleminde filtreler dikkate**. Bağımlılık bağlantısına yapılan katkıları anlamak için genişletirken, kullanışlı bir NET diyagram alırsınız. Diyagram daha az dağınıktır ve bağlantı filtreleme seçeneklerini seçmiş olduğunuz hesaba katar ' dir.
 
-- **Kod öğeleri bağlamlarıyla birlikte bir kod haritasına eklenir**. Diyagramlar artık bağlamlarıyla göründüğünden (gerekirse filtreleyebileceğiniz derleme ve çözüm klasörüne kadar), Çözüm Gezgini, Sınıf Görünümü Nesne Tarayıcısı; öğesinden kod öğelerini Sürükleyip bırakırken daha kullanışlı diyagramlar alırsınız. Çözüm Gezgini öğeleri seçerken veya kod eşlemesinde göster ' i seçerken.
+- **Kod öğeleri, bağlamları ile birlikte bir kod haritasına eklenir**. Diyagramları artık bağlamları (gerektiğinde filtreleyebileceğiniz, derleme ve çözüm klasörüne kadar) ile birlikte sürükleyip kod öğelerini Çözüm Gezgini, sınıf görünümü, Nesne Tarayıcısı daha kullanışlı diyagramlar elde filtreleyebileceğiniz; veya, Çözüm Gezgini'nde öğeleri ve seçerek kod haritasında göster.
 
-- **Reaktif kod haritalarını daha hızlı alın**. Sürükle ve bırak işlemleri anında sonuç verir ve düğümler arasındaki bağlantılar, düğümü genişletme veya daha fazla düğüm isteme gibi sonraki Kullanıcı tarafından başlatılan işlemleri etkilemeden çok daha hızlı bir şekilde oluşturulur. Çözüm oluşturmadan kod eşlemeleri oluşturduğunuzda, tüm köşe durumları (derlemeler derlenmediği gibi) artık işlenir.
+- **Reaktif kod haritalarını daha hızlı alma**. Sürükleyip bırakma işlemleri anında sonuç verir ve düğümler arasındaki bağlantılar, düğümü genişletme veya daha fazla düğüm isteme gibi sonraki kullanıcı tarafından başlatılan işlemleri etkilemeden çok daha hızlı bir şekilde oluşturulur. Tüm olağandışı durumlar çözümü oluşturmadan kod haritaları oluşturduğunuzda — zaman derlemeleri oluşturulmadı gibi — şimdi işlenir.
 
-- **Çözümünüzü yeniden oluşturmayı atlayın.** Diyagramlar oluştururken ve düzenlenirken daha iyi performans sağlar.
+- **Çözümünüzü yeniden oluşturmayı atlama.** Diyagram oluştururken veya düzenlerken daha iyi performans sağlar.
 
-- **Kod öğesi düğümlerini ve gruplarını filtreleyin**. Kendi kategorilerine göre kod öğelerini göstererek veya gizleyerek ve kod öğelerini çözüm klasörlerine, derlemelere, ad alanlarına, proje klasörlerine ve türlerine göre gruplandırarak haritalarınızı hızlıca kolayca kaldırabilirsiniz.
+- **Kod öğesi düğümlerini ve gruplarını filtreleme**. Hızlı bir şekilde, gösterme veya gizleme kod öğelerini kategorilerine veya kod öğelerini çözüm klasörleri, derlemeler, ad alanları, proje klasörleri ve türleri tarafından gruplandırma etsek düzelten.
 
-- **Diyagramları daha kolay okunabilir hale getirmek için Ilişkileri filtreleyin**. Artık bağlantı filtrelemesi, çapraz grup bağlantıları için de geçerlidir. Bu, filtre penceresiyle birlikte çalışarak önceki sürümlerden daha az zorlanmaya neden olur.
+- **Diyagramların okunmasını kolaylaştırmak için ilişkileri filtreleme**. Bağlantı filtrelemesi artık filtre penceresiyle çalışılmasını daha az sezgisel önceki sürümlere kıyasla getiren, çapraz grup bağlantıları için de geçerlidir.
 
-- **Sınıf görünümü ve nesne tarayıcısı diyagram oluşturun**. Dosyaları ve derlemeleri Sınıf Görünümü ve Nesne Tarayıcısı Windows ' a yeni veya var olan bir haritaya sürükleyip bırakın.
+- **Sınıf Görünümü ve Nesne Tarayıcısı'ndan diyagramlar oluşturma**. Sürükleyip dosyaları ve yeni veya mevcut bir haritayı derlemeleri sınıf görünümü ve Nesne Tarayıcısı windows.
 
-  Bkz. [çözümlerinizde harita bağımlılıkları](./modeling/map-dependencies-across-your-solutions.md).
+  Bkz: [Çözümlerinizdeki bağımlılıkları eşleme](./modeling/map-dependencies-across-your-solutions.md).
 
   **Bu sürümdeki diğer tasarım ve modelleme değişiklikleri:**
 
-- **Katman diyagramları**. Sınıf Görünümü ve Nesne Tarayıcısı kullanarak bu diyagramları güncelleştirin. Yazılım tasarımı gereksinimlerini karşılamak için, yazılım için istenen bağımlılıkları anlatmak üzere katman diyagramlarını kullanın. Bu kısıtlamalara uymayan kodu bularak ve sonraki kodu bu taban çizgisiyle doğrulayarak kodu bu tasarımla tutarlı tutun.
+- **Katman diyagramları**. Sınıf Görünümü ve Nesne Tarayıcısı'nı kullanarak bu diyagramları güncelleştirin. Yazılım tasarımı gerekliliklerini yerine getirmek için yazılımınız için istenen bağımlılıkları açıklamak için katman diyagramları kullanın. Kodun bu tasarım ile tutarlı bu sınırlamaları karşılamayan kodu bularak ve sonraki kodu bu temele göre doğrulayarak tutun.
 
-- **UML diyagramları**. Artık Koddan UML sınıf diyagramları ve sıra diyagramları oluşturamazsınız. Ancak, yeni UML öğelerini kullanarak bu diyagramları yine de oluşturabilirsiniz.
+- **UML diyagramları**. Artık koddan UML sınıf diyagramları ve sıra diyagramları oluşturamazsınız. Ancak yine de yeni UML öğelerini kullanarak bu diyagramları oluşturur.
 
-- **Mimari Gezgini**. Artık diyagramlar oluşturmak için Mimari Gezgini 'ni kullanamazsınız. Ancak Çözüm Gezgini kullanmaya devam edebilirsiniz.
+- **Mimari Gezgini**. Mimari Gezgini artık diyagramları oluşturmak için de kullanabilirsiniz. Ancak Çözüm Gezgini'ni kullanmaya devam edebilirsiniz.
 
-## <a name="visual-studio-extensibility-tools"></a>Visual Studio Genişletilebilirlik Araçları
- Artık, kurulum sırasında isteğe bağlı bir bileşen olarak dahil olduklarından Visual Studio Genişletilebilirlik Araçları (VS SDK ve şablonları) yüklemek hiç daha kolay değildir.  Genişletilebilirlik Araçları, geliştiricilerin özelleştirmek ve Visual Studio 'ya özellik eklemek için uzantı yazmasına izin verir. Visual Studio genişletilebilirliği hakkında daha fazla bilgi için bkz. [Visual STUDIO SDK](./extensibility/visual-studio-sdk.md)
+## <a name="visual-studio-extensibility-tools"></a>Visual Studio genişletilebilirlik araçları
+ Artık oldukları gibi Visual Studio genişletilebilirlik Araçları (VS SDK ve şablonlar) yüklemek daha kolay olmamıştı Kurulum sırasında isteğe bağlı bir bileşen dahil.  Genişletilebilirlik araçları, özelleştirmek ve özellikler eklemek için Visual Studio için uzantıları yazmak geliştiricilerinin imkan tanır. Visual Studio genişletilebilirlik hakkında daha fazla bilgi için bkz: [Visual Studio SDK'sı](./extensibility/visual-studio-sdk.md)
 
- Özel yüklemenize yönelik genişletilebilirlik araçlarını eklemek istiyorsanız, bunları **Özellikler/ortak Araçlar/Visual Studio genişletilebilirlik Araçları**altında bulabilirsiniz.  Ayrıca, **Yeni proje** iletişim kutusunu açıp **görsel C# /genişletilebilirlik**altında **Visual Studio genişletilebilirlik Araçları** öğesini seçerek de genişletilebilirlik Araçları 'nı daha sonra yükleyebilirsiniz.
+ Genişletilebilirlik araçları, özel yükleme işleminize dahil etmek isterseniz, bunları altında bulabilirsiniz **özellikleri / ortak araçlar / Visual Studio genişletilebilirlik Araçları**.  Açarak daha sonraki bir zamanda genişletilebilirlik araçları yükleyebilirsiniz **yeni proje** iletişim ve seçerek **yükleme Visual Studio genişletilebilirlik Araçları** altında madde **Visual C# / Genişletilebilirlik**.
 
 ## <a name="please-give-feedback"></a>Lütfen geri bildirimde bulunun
- Visual Studio ekibine neden geri bildirim gönderilsin? Müşteri geri bildirimlerine önem veriyoruz. Aslında, geri bildirim sistemimize gelen her bir geri bildirim parçasını gözden geçiririz. Geri bildiriminiz yaptığımız çok fazla.
+ Neden Visual Studio ekibine geri bildirim gönderilsin mi? Size müşteri geri bildirimi ciddiye olduğundan. Aslında, her parça geri bildirim sistemimiz gelen geri bildirimler inceleyin. Geri bildiriminiz bizim çok fazla beraberinde getirir.
 
 ### <a name="send-a-smile"></a>Gülümseme Gönder
- Beklentilerinizi karşıladığımız veya aşdığımızda bize beğendiklerinizi söylememize yardımcı olun. Yeni özellikleri tasarlarken ve uygularken, tasarım kararlarımızla yardım almak istediğiniz özelliklerle ilgili verileri kullanırız. Bu nedenle, Visual Studio 'da bir özelliği beğenmeniz halinde bize bildirin. Bu kolay bir işlemdir ve doğrudan IDE içinden yapabilirsiniz.
+ Bize söyleyerek ne gibi bize yardımcı olur, biz karşıladığında veya beklentilerinizi anlama. Biz tasarlama ve uygulama yeni özellikler, müşterilerimize tasarım kararlarına yardımcı olmak için istediğiniz özellikler hakkında daha fazla veri kullanırız. Visual Studio özelliği istiyorsanız, bu nedenle, iyileştirebileceğimize ilişkin. Kolay bir işlemdir ve doğrudan IDE içinde yapabilirsiniz.
 
- Başlık çubuğundaki sarı gülen yüz düğmesine tıkladıktan sonra neleri beğendiklerinizi söyleyin, sonra **gülümseme Gönder** düğmesine tıklayın.
+ Yalnızca başlık çubuğunda sarı gülen yüz tıklayın, ardından beğenmediğinizi bize **gülümseme Gönder** düğmesi.
 
- İşte bu kadar! Geri bildiriminizi doğru ekibe yönlendirirler ve daha da çok daha fazla bilgi almak için daha hızlı bir şekilde çalışmaya başlayın.
+ Bu kadar! Biz burada bunlar kendilerini arkasında pat sonra hızlıca bile daha memnun edecek şekilde düşünmeye başlamak doğru ekibe geri bildirim rota.
 
 ### <a name="send-a-frown"></a>Kaş çatma Gönder
- Üründe geliştirmeler yapmamız gereken yerde, öncelikle müşterilerimiz için en önemli olan şeylere odaklanarak kapsamımızın yönetilmesine yardımcı olur. Sizi söyleyerek, doğrudan IDE 'nin içinden **kaş çatma Gönder** özelliğini kullanarak bize bunu anlatın. Bu süper basit bir süreç da yaptık:
+ Burada üründe geliştirmeler yapmak için ihtiyacımız duymak bizim biriktirme ilk müşterilerimize en önemli olan şeyleri odaklanarak yönetmek için yardımcı olur. Varsa, bugging bir şey kullanarak iyileştirebileceğimize ilişkin **kaş çatma Gönder** doğrudan IDE içinde özellik öğesinden. Bu son derece basit bir işlem çok yaptık:
 
- Başlık çubuğundaki sarı gülen yüz düğmesine tıklayın ve ardından **kaş çatma Gönder**' e tıklayın. Beğenmediğiniz şeyleri bize söyleyin ve sonra kaş çatma Gönder düğmesine tıklayın. Daha fazla bilgi için bkz. [bizimle Iletişim kurun](./ide/talk-to-us.md).
+ Başlık çubuğunda sarı gülen yüz'ı tıklatın **kaş çatma Gönder**. Bize ne kaş çatma düğme Gönder'i hoşunuza giden değil. Daha fazla bilgi için [konuşmak bize](./ide/talk-to-us.md).
 
-### <a name="report-crashes-hangs-and-performance-issues"></a>Rapor kilitlenmeleri, askıda kalma ve performans sorunları
- Bazen, bir kasaydaki hızlı Not, beğenmediğiniz bir şeyin tam etkisini iletmek için yeterli değildir. Bir askıda kalma, kilitlenme veya performans sorunu olduğunda, bir kaş çatma gönderdikten sonra görüntülenen iletişim kutusunu kullanarak yeniden üretme adımlarını, kilitlenme dökümlerini ve izleme dosyalarını kolayca paylaşabilirsiniz.
+### <a name="report-crashes-hangs-and-performance-issues"></a>Rapor kilitlenmeler, askıda kalır ve performans konuları
+ Bazı durumlarda, hızlı Not kaş çatma içinde yalnızca tam etkisi yok gibi bir şey iletmek için yeterli değildir. Bir yanıt vermemesine, kilitlenme veya performans sorunu olduğunda saatlere, kolayca yineleme adımları ve kilitlenme bilgi dökümleri izleme dosyaları kaş çatma Gönder sonra görüntülenen iletişim kutusunu kullanarak paylaşabilirsiniz.
 
- İlk olarak, yukarıda açıklandığı gibi bir kaş çatma gönderin. Açılan iletişim kutusunda, geri bildirimlerinizi varsayılan etiketlerden biriyle etiketleyebilir ya da kendi etiketinizi oluşturabilirsiniz. Etiketler, görüşlerinizi uygun özellik ekibine yönlendirmemize yardımcı olur. **Kategori Seç** açılan listesinde, raporladığınız sorunu temsil eden seçeneği belirleyin ve ardından sorunu yeniden oluşturmak için adımları izleyin. Visual Studio 'Yu kullanarak geri bildirim bildirme hakkında ayrıntılı adımlar da mevcuttur. Daha fazla bilgi için bkz. [Visual Studio gülümseme Gönder yönergeleri](https://msdn.microsoft.com/library/5cc9b67a-54d0-41b0-aa8f-80dff4475a6b).
+ İlk olarak, yukarıda açıklanan şekilde kaş çatma Gönder. Açılan iletişim kutusunda, geri bildirim etiketi varsayılan etiket birini veya kendi etiket oluştur. Etiketler bize geri bildirim yönlendirmek için uygun özellik takımı yardımcı olur. İçinde **bir kategori seçin** açılan listesinde, raporlama olduğunuz sonra sorunu yeniden oluşturmak için adımları sorunu temsil eden seçeneğini belirleyin. Visual Studio geri bildirim raporu kullanma hakkında ayrıntılı adımlar de mevcuttur. Daha fazla bilgi için [Visual Studio bir Gülümseyin yönergeleri gönderin](https://msdn.microsoft.com/library/5cc9b67a-54d0-41b0-aa8f-80dff4475a6b).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-* [Apache Cordova platformlar arası uygulamalar oluşturun](https://msdn.microsoft.com/library/34d3c1be-22b3-4812-97fb-10b4e8ad2134)
+* [Apache Cordova ile platformlar arası uygulamalar oluşturma](https://msdn.microsoft.com/library/34d3c1be-22b3-4812-97fb-10b4e8ad2134)
 * [Visual Studio’da Xamarin kullanarak yerel kullanıcı arabirimi ile uygulama oluşturma](./cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md)
-* [Visual ile platformlar arası mobil uygulamalar oluşturunC++](./misc/build-cross-platform-mobile-apps-with-visual-cpp.md)
+* [Visual C++ ile platformlar arası mobil uygulamalar oluşturun](./misc/build-cross-platform-mobile-apps-with-visual-cpp.md)
 * [Intellitest ile kodunuz için birim testleri oluşturma](./test/generate-unit-tests-for-your-code-with-intellitest.md)
 * [Birden çok kullanıcı hesabıyla çalışma](./ide/work-with-multiple-user-accounts.md)
-* [Özel pencere düzenleri oluşturma](./misc/create-custom-window-layouts.md)
+* [Özel pencere düzenlerini oluşturma](./misc/create-custom-window-layouts.md)
 * [Ampullerle hızlı eylemler gerçekleştirme](./ide/perform-quick-actions-with-light-bulbs.md)
-* [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
+* [Visual Studio 2017'deki yenilikler](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)

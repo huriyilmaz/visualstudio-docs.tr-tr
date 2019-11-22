@@ -23,19 +23,19 @@ caps.latest.revision: 55
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 88c72ecaf44855badfd42456d9818f2ba9168a49
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8c5906084fc7db96ddf304e8362bf7692dac62d5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661722"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297151"
 ---
 # <a name="uml-sequence-diagrams-guidelines"></a>UML Sıralı Diyagramlar: Yönergeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizebilirsiniz. Etkileşim, sınıfların, bileşenlerin, alt sistemlerin veya aktörlerin tipik örnekleri arasındaki bir ileti dizisidir.
 
- UML sıralı diyagramları bir UML modelinin parçasıdır ve yalnızca UML modelleme projeleri içinde mevcuttur. UML sıralı diyagramı oluşturmak için **mimari** menüsünde **Yeni UML veya katman diyagramı**' na tıklayın. [UML sıralı diyagram öğeleri](../modeling/uml-sequence-diagrams-reference.md) veya genel olarak [UML modelleme diyagramları](../modeling/edit-uml-models-and-diagrams.md) hakkında daha fazla bilgi edinin. Video gösterimi için bkz. [sıralı diyagramlar (2010) kullanarak](http://channel9.msdn.com/Blogs/clinted/UML-with-VS-2010-Part-7-Sketching-Interactions-with-Sequence-Diagrams)taslağı oluşturma etkileşimleri.
+ UML sıralı diyagramları bir UML modelinin parçasıdır ve yalnızca UML modelleme projeleri içinde mevcuttur. UML sıralı diyagramı oluşturmak için **mimari** menüsünde **Yeni UML veya katman diyagramı**' na tıklayın. [UML sıralı diyagram öğeleri](../modeling/uml-sequence-diagrams-reference.md) veya genel olarak [UML modelleme diyagramları](../modeling/edit-uml-models-and-diagrams.md) hakkında daha fazla bilgi edinin. Video gösterimi için bkz. [sıralı diyagramlar (2010) kullanarak](https://channel9.msdn.com/Blogs/clinted/UML-with-VS-2010-Part-7-Sketching-Interactions-with-Sequence-Diagrams)taslağı oluşturma etkileşimleri.
 
  Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -115,7 +115,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 3. Bilinmeyen bir olay kaynağından (9) veya bilinmeyen alıcılara yayınlar (10) gelen bir iletiyi göstermek için, diyagramda veya boş alana bir zaman uyumsuz ileti çizin. Bu iletiler *bulunan iletiler* (9) ve *kayıp iletiler* (10) olarak adlandırılır.
 
     > [!NOTE]
-    > Kayıp veya bulunan iletileri olan bir yaşam çizgisi grubunu taşımak için, bunları taşımadan önce yaşam çizgilerini seçmek üzere aşağıdaki adımları izleyin: Bu yaşam çizgilerinin çevresine bir dikdörtgen çizin veya her bir yaşam çizgisine tıkladığınızda **CTRL** tuşunu basılı tutun. Tüm yaşam çizgilerini**seçmek Için** **Tümünü seç** veya **CTRL** + ' i kullanırsanız ve sonra bunları taşırsanız, bu yaşam çizgilerine eklenen kayıp veya bulunan iletiler hareket etmez. Bu senaryo ortaya çıkarsa, bu iletileri ayrı olarak taşıyabilirsiniz.
+    > Kayıp veya bulunan iletileri olan bir yaşam çizgisi grubunu taşımak için, bunları taşımadan önce yaşam çizgilerini seçmek üzere aşağıdaki adımları izleyin: Bu yaşam çizgilerinin çevresine bir dikdörtgen çizin veya her bir yaşam çizgisine tıkladığınızda **CTRL** tuşunu basılı tutun. Tüm yaşam çizgilerini **seçmek Için** **Tümünü seç** veya **CTRL**+' i kullanırsanız ve sonra bunları taşırsanız, bu yaşam çizgilerine eklenen kayıp veya bulunan iletiler hareket etmez. Bu senaryo ortaya çıkarsa, bu iletileri ayrı olarak taşıyabilirsiniz.
 
 4. Aynı bileşene veya sisteme her bir ana ileti için sıralı diyagramlar çizin.
 
@@ -123,7 +123,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Bir iletiyi yaşam çizgisinde yukarı veya aşağı sürükleyin. Başka iletilerin üzerine veya bir yürütme bloğunun içine veya dışına sürükleyebilirsiniz.
 
-     \- veya-
+     \- veya -
 
 - İleti konumlarını ayarlamak için iletiye tıklayın ve **yukarı ok** ve **aşağı ok** tuşlarını kullanın. İletilerin sırasını değiştirmek için **SHIFT + yukarı ok** ve **SHIFT + aşağı ok** tuşlarını kullanın.
 
@@ -165,7 +165,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 2. Etkileşimi pakete sürükleyin.
 
-     \- veya-
+     \- veya -
 
      Etkileşime sağ tıklayın ve ardından **Kes**' e tıklayın. Pakete sağ tıklayın ve ardından **Yapıştır**' a tıklayın.
 
@@ -179,7 +179,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Gönderenin alıcının bir yanıt döndürmesini (3) beklediği bir etkileşimi anlatmak için **zaman uyumlu** aracını kullanın.
 
-     **@No__t_1 \<return > >** ok, yürütme oluşumunun sonunda gösterilir. Bu, denetimin göndericiye dönmesini gösterir.
+     **<\<> >** ok, yürütme oluşumunun sonunda gösterilir. Bu, denetimin göndericiye dönmesini gösterir.
 
 - Gönderenin alıcıyı beklemeden hemen devam edebildiği bir etkileşimi anlatmak için **zaman uyumsuz** aracı kullanın (4).
 
@@ -274,7 +274,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - UML Model Gezgini 'nden bir sınıf, bileşen veya arabirimi sıralı diyagram üzerine sürükleyin.
 
-   \- veya-
+   \- veya -
 
   1. İlgili diyagramda sınıf, bileşen veya arabirime sağ tıklayın ve ardından **yaşam çizgisi oluştur**' a tıklayın.
 
@@ -323,7 +323,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
          Sınıf veya arabirim sınıf diyagramında görüntülenir.
 
-         \- veya-
+         \- veya -
 
     3. Yeni arabirimi **UML Model Gezgini** ' nden bileşen diyagramında bir bileşene veya bağlantı noktasına sürükleyin.
 
@@ -349,7 +349,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 3. Etkileşim kullanımıyla ilgili ada çift tıklayın ve bu diyagramda yeniden kullanılabilir sıranın etkisini tanımlayacak şekilde yeniden adlandırın.
 
-     \- veya-
+     \- veya -
 
      Parametresi ile bir işlev çağrısı gibi bir ad yazın.
 
@@ -357,7 +357,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
      Yeni sıralı diyagram oluşturmak için **yeni dizi oluştur** 'a tıklayın
 
-     \- veya-
+     \- veya -
 
      Var olan bir diyagrama bağlamak için **sıralama bağlantısı** ' na tıklayın.
 
@@ -384,7 +384,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Etkileşim kullanımına çift tıklayın.
 
-     \- veya-
+     \- veya -
 
      Etkileşim kullanımına sağ tıklayın ve ardından **Diziye Git ' e**tıklayın.
 
@@ -443,4 +443,4 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 5. Bir parçaya yeni iletiler eklemek için ileti araçlarını kullanın veya kopyalayıp yapıştırın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML sıralı diyagramlar: başvuru](../modeling/uml-sequence-diagrams-reference.md) [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML Kullanım örneği diyagramları: başvuru](../modeling/uml-use-case-diagrams-reference.md) UML [sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru UML [bileşen](../modeling/uml-component-diagrams-reference.md) diyagramları: başvuru UML [bileşen](../modeling/uml-component-diagrams-reference.md) [diyagramları: başvuru Video: sıralı diyagramlar kullanarak etkileşimleri taslağı](http://go.microsoft.com/fwlink/?LinkId=201113)
+ [UML sıralı diyagramlar: başvuru](../modeling/uml-sequence-diagrams-reference.md) [UML modellerini ve diyagramları düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML Kullanım örneği diyagramları: başvuru](../modeling/uml-use-case-diagrams-reference.md) [UML sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru [UML Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru [video: sıralı diyagramlar kullanılarak taslak etkileşimleri](https://go.microsoft.com/fwlink/?LinkId=201113)

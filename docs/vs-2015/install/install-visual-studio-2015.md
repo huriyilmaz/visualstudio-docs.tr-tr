@@ -19,18 +19,18 @@ caps.latest.revision: 183
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 677a72f0378c62f2ca65515ec563069f22b9ff09
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a31bc328c20aada21b05edeef61886d57e914165
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433017"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298054"
 ---
 # <a name="install-visual-studio-2015"></a>Visual Studio 2015'i yükleyin
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu sayfa yükleme ile yardımcı olacak ayrıntılı bilgiler içerir **Visual Studio 2015**, geliştiriciler için üretkenlik aracından oluşan tümleşik paketimiz. Ayrıca, hızlı bir şekilde için hakkında bilgi almak için bağlantıları ekledik [özellikleri](https://www.visualstudio.com/news/vs2015-vs.aspx), [sürümleri](http://go.microsoft.com/fwlink/?LinkID=242142), [sistem gereksinimleri](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs), [indirir](http://go.microsoft.com/fwlink/?LinkId=517106), ve daha fazlası.
+Bu sayfa yükleme ile yardımcı olacak ayrıntılı bilgiler içerir **Visual Studio 2015**, geliştiriciler için üretkenlik aracından oluşan tümleşik paketimiz. Ayrıca, hızlı bir şekilde için hakkında bilgi almak için bağlantıları ekledik [özellikleri](https://www.visualstudio.com/news/vs2015-vs.aspx), [sürümleri](https://go.microsoft.com/fwlink/?LinkID=242142), [sistem gereksinimleri](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs), [indirir](https://go.microsoft.com/fwlink/?LinkId=517106), ve daha fazlası.
 
 ## <a name="quick-links"></a>Hızlı bağlantılar
 
@@ -38,17 +38,17 @@ Biz ayrıntılara inmek önce en sık istenen bizim bağlantıların bir listesi
 
 |||
 |------------------|----------------|
-|![Visual Studio'yu indirin](../install/media/downloads.png "indirir") |**İndirmeler**: Visual Studio 2015'i yüklemek için bir ürün yürütülebilir dosyanın indirebilirsiniz [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) sayfa (abonelik gereklidir) veya paketlenmiş ürün yükleme medyasından kullanın. [Visual Studio, geçerli veya önceki sürümlerini indirme hakkında daha fazla bilgi edinin](https://www.visualstudio.com/vs/older-downloads/).|
-|![Özellikler hakkında daha fazla bilgi](../install/media/features.png "özellikleri") |**Özellikler**: Visual Studio 2015 özellikleri hakkında daha fazla bilgi için yayın notlarına bakın [RTM](https://www.visualstudio.com/news/vs2015-vs), [güncelleştirme 1](https://www.visualstudio.com/news/vs2015-update1-vs), [güncelleştirme 2](https://www.visualstudio.com/news/vs2015-update2-vs), ve [güncelleştirme 3'ü](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs).|
-|![Her bir SKU'da ne olduğunu öğrenmek](../install/media/sku.png "SKU'ları") |**SKU'ları**: Visual Studio 2015'in her iki sürümünde kullanılabilir olduğunu bulmak için bkz. bizim [Visual Studio tekliflerini karşılaştırın](http://go.microsoft.com/fwlink/?LinkID=242142) sayfası.|
-|![Sistem gereksinimlerini görüntüleyin](../install/media/system-requirements.png "sistem gereksinimleri") |**Sistem gereksinimleri**: Her iki Visual Studio 2015 sistem gereksinimlerini görmek için bkz: [Visual Studio 2015 uyumluluğu](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs) sayfası.|
-|![Ürün anahtarınızı bulmak](../install/media/product-keys.png "ürün anahtarları") |**Ürün anahtarları**: Ürün anahtarınızı bulmak için bkz: [nasıl yapılır: Visual Studio ürün anahtarını bulmak](../install/how-to-locate-the-visual-studio-product-key.md) konu.|
-|![Lisanslama hakkında bilgi edinin](../install/media/licensing.png "lisanslama") |**Lisanslama**: Hem kişiler hem de kurumsal müşteriler için lisanslama hakkında bilgi almak için bkz: [Visual Studio ve MSDN Lisanslama](https://www.microsoft.com/download/details.aspx?id=13350) teknik incelemesi.|
+|![Visual Studio 'Yu indirin](../install/media/downloads.png "İndirmeler") |**İndirmeler**: Visual Studio 2015'i yüklemek için bir ürün yürütülebilir dosyanın indirebilirsiniz [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) sayfa (abonelik gereklidir) veya paketlenmiş ürün yükleme medyasından kullanın. [Visual Studio, geçerli veya önceki sürümlerini indirme hakkında daha fazla bilgi edinin](https://www.visualstudio.com/vs/older-downloads/).|
+|![Özellikler hakkında daha fazla bilgi edinin](../install/media/features.png "Özellikler") |**Özellikleri**: Visual Studio 2015 özellikleri hakkında daha fazla bilgi için yayın notlarına bakın [RTM](https://www.visualstudio.com/news/vs2015-vs), [güncelleştirme 1](https://www.visualstudio.com/news/vs2015-update1-vs), [güncelleştirme 2](https://www.visualstudio.com/news/vs2015-update2-vs), ve [ Güncelleştirme 3](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs).|
+|![Her SKU 'da neler olduğunu öğrenin](../install/media/sku.png "SKU") |**SKU'ları**: her iki Visual Studio 2015 sürümünde kullanılabilir olduğunu bulmak için bkz. bizim [Visual Studio tekliflerini karşılaştırın](https://go.microsoft.com/fwlink/?LinkID=242142) sayfası.|
+|![Sistem gereksinimlerini görüntüleme](../install/media/system-requirements.png "Sistem Gereksinimleri") |**Sistem gereksinimleri**: her iki Visual Studio 2015 sistem gereksinimlerini görmek için bkz: [Visual Studio 2015 uyumluluğu](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs) sayfası.|
+|![Ürün anahtarınızı bulun](../install/media/product-keys.png "Ürün anahtarları") |**Ürün anahtarları**: Ürün anahtarınızı bulmak için bkz: [nasıl yapılır: Visual Studio ürün anahtarını bulmak](../install/how-to-locate-the-visual-studio-product-key.md) konu.|
+|![Lisanslama hakkında bilgi edinin](../install/media/licensing.png "Lisans") |**Lisanslama**: hem kişiler hem de kurumsal müşteriler için lisanslama hakkında bilgi almak için bkz: [Visual Studio ve MSDN Lisanslama](https://www.microsoft.com/download/details.aspx?id=13350) teknik incelemesi.|
 
-## <a name="custom"></a> Varsayılan vs. Özel Kurulum
+## <a name="custom"></a>Varsayılan ve özel kurulum karşılaştırması
  Visual Studio 2015'i yüklediğinizde dahil edebilir veya hariç, günlük olarak kullanacağınız bileşenleri. Bu varsayılan yükleme genellikle daha küçük bir özel yükleme daha hızlı yükleme anlamına gelir. Ayrıca, bu sürümde açıkça seçmelisiniz özel bileşenlerin önceki sürümlerinde varsayılan olarak artık yüklenmiş olan birçok bileşen olarak kabul edilir anlamına gelir.
 
- ![Visual Studio 2015 Kurulum iletişim](../ide/media/vs2015-setup-screen.png "VS2015_Setup_screen")
+ ![Visual Studio 2015 Kurulum Iletişim kutusu](../ide/media/vs2015-setup-screen.png "VS2015_Setup_screen")
 
  Özel bileşenler dahil Visual C++, Visual F#, SQL Server veri araçları, platformlar arası mobil araçları ve SDK'ları ve üçüncü taraf SDK'ları ve uzantıları. İlk kurulum sırasında seçmezseniz, özel bileşenleri daha sonra yükleyebilirsiniz.
 
@@ -67,7 +67,7 @@ Biz ayrıntılara inmek önce en sık istenen bizim bağlantıların bir listesi
 |**Ortak Araçlar**|Windows için Git (3. taraf)<br />Visual Studio için GitHub uzantısı (3. taraf)<br /> Visual Studio genişletilebilirlik araçları|
 
 ## <a name="installing"></a> Visual Studio'yu yükleme
- Visual Studio yükleme medyasını (DVD'ler) kullanarak Visual Studio aboneliği hizmetinizden kullanarak yükleyebileceğiniz [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) web yükleyicisinden yükleyerek Web sitesi, [Visual Studio İndirmeler](http://go.microsoft.com/fwlink/?LinkId=517106) Web sitesi veya bir çevrimdışı yükleme düzenini oluşturarak (bkz [bir çevrimdışı Visual Studio yüklemesi oluşturma](../install/create-an-offline-installation-of-visual-studio.md) daha fazla ayrıntı için).
+ Visual Studio yükleme medyasını (DVD'ler) kullanarak Visual Studio aboneliği hizmetinizden kullanarak yükleyebileceğiniz [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) web yükleyicisinden yükleyerek Web sitesi, [Visual Studio İndirmeler](https://go.microsoft.com/fwlink/?LinkId=517106) Web sitesi veya bir çevrimdışı yükleme düzenini oluşturarak (bkz [bir çevrimdışı Visual Studio yüklemesi oluşturma](../install/create-an-offline-installation-of-visual-studio.md) daha fazla ayrıntı için).
 
 > [!IMPORTANT]
 > Yüklemek için yönetici kimlik bilgilerine ihtiyacınız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Ancak, kullanılacak ihtiyacınız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yükledikten sonra.
@@ -92,7 +92,7 @@ Biz ayrıntılara inmek önce en sık istenen bizim bağlantıların bir listesi
 |Visual Studio Community|vs_community.exe|
 
 ### <a name="BKMK_Website"></a> Ürünün Web sitesinden indirme
- Ziyaret [Visual Studio indirmeleri](http://go.microsoft.com/fwlink/?LinkId=517106) sayfasında ve istediğiniz Visual Studio sürümünü seçin.
+ Ziyaret [Visual Studio indirmeleri](https://go.microsoft.com/fwlink/?LinkId=517106) sayfasında ve istediğiniz Visual Studio sürümünü seçin.
 
 ### <a name="downloading-from-your-subscription-service"></a>Abonelik hizmetinizden indiriliyor
  Ziyaret [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) sayfasında ve istediğiniz Visual Studio sürümünü seçin.
@@ -108,7 +108,7 @@ Biz ayrıntılara inmek önce en sık istenen bizim bağlantıların bir listesi
 
  Hyper-V ve hızlandırılmış grafik bağdaştırıcısının etkin olduğu Windows Server 2008 R2 çalıştırıyorsanız, sistemde yavaşlamalarla karşılaşabilirsiniz.
 
- Daha fazla bilgi için Microsoft Web sitesindeki şu sayfaya bakın: [Bir Windows Server 2008, video performans küçültebilir veya Windows Server 2008 R2 tabanlı bir bilgisayarda Hyper-V rolü etkinleştirilmişse ve hızlandırılmış görüntü bağdaştırıcısı yüklenmişse](http://go.microsoft.com/fwlink/?LinkID=231084).
+ Daha fazla bilgi için Microsoft Web sitesindeki şu sayfaya bakın: [Video performansı, Windows Server 2008, küçültebilir veya Windows Server 2008 R2 tabanlı bir bilgisayarda Hyper-V rolü etkinleştirilmişse ve hızlandırılmış görüntü bağdaştırıcısı yüklenmişse](https://go.microsoft.com/fwlink/?LinkID=231084).
 
  **Cihazlar ile Hyper-V öykünmesini yapma**
 
@@ -143,7 +143,7 @@ Biz ayrıntılara inmek önce en sık istenen bizim bağlantıların bir listesi
    Yükleme veya çevrimdışı Yardım dağıtma hakkında daha fazla bilgi için bkz. [Yardım Görüntüleyicisi Yönetici Kılavuzu'na](../ide/help-viewer-administrator-guide.md).
 
 ## <a name="serviceReleases"></a> Hizmet sürümlerini ve ürün güncelleştirmelerini denetleme
- Tüm uzantıları uyumlu olduğu için önceki sürümlerinden yükselttiğinizde, Visual Studio uzantıları otomatik olarak yükseltmez. Uzantılar'dan yeniden yüklemeniz gerekir [Visual Studio Market](https://marketplace.visualstudio.com/) veya yazılım yayımcısı.
+ Tüm uzantıları uyumlu olduğu için önceki sürümlerinden yükselttiğinizde, Visual Studio uzantıları otomatik olarak yükseltmez. Uzantıları [Visual Studio Market](https://marketplace.visualstudio.com/) veya yazılım yayımcısından yeniden yüklemeniz gerekir.
 
 #### <a name="to-automatically-check-for-service-releases"></a>Hizmet sürümlerini otomatik olarak denetlemek için
 
@@ -178,9 +178,9 @@ Biz ayrıntılara inmek önce en sık istenen bizim bağlantıların bir listesi
 ## <a name="troubleshooting"></a> Bir yükleme sorunlarını giderme
  Kurulum ve yükleme sorunları için Yardım almak için bu kaynakları kullanın:
 
-- [Visual Studio Kurulum ve yükleme](http://go.microsoft.com/fwlink/?LinkID=151190) Forumu. Visual Studio topluluğundaki diğer kişilerden gelen soruları ve yanıtları gözden geçirin. Aradığınızı bulamazsanız, kendi sorularınızı sorun.
+- [Visual Studio Kurulum ve yükleme](https://go.microsoft.com/fwlink/?LinkID=151190) Forumu. Visual Studio topluluğundaki diğer kişilerden gelen soruları ve yanıtları gözden geçirin. Aradığınızı bulamazsanız, kendi sorularınızı sorun.
 
-- [Visual Studio için Microsoft Support](http://go.microsoft.com/fwlink/?LinkID=251019) Web sitesi. Bilgi Bankası (BB) makalelerini okuyun ve Visual Studio yüklemesiyle ilgili sorunlar hakkında bilgi için Microsoft Destek birimi ile nasıl iletişim kurabileceğinizi öğrenin.
+- [Visual Studio için Microsoft Support](https://go.microsoft.com/fwlink/?LinkID=251019) Web sitesi. Bilgi Bankası (BB) makalelerini okuyun ve Visual Studio yüklemesiyle ilgili sorunlar hakkında bilgi için Microsoft Destek birimi ile nasıl iletişim kurabileceğinizi öğrenin.
 
 ## <a name="relatedTopics"></a> İlgili Konular
 

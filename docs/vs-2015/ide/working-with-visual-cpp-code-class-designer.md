@@ -19,12 +19,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5a543e7a1e2aca4590df320261aef2c653a55132
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cb2b5a55f778b8025ea9da25713eca903f9cbf74
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662613"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296213"
 ---
 # <a name="working-with-visual-c-code-class-designer"></a>Visual C++ Kodu ile Çalışma (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -65,13 +65,13 @@ Sınıf Tasarımcısı, projenizdeki kod öğelerinin görsel gösterimini sağl
 
 - Tür, sınıf diyagramını içeren projeden başvurulmayan bir projede veya derlemede yer alır. Bu hatayı düzeltmek için, türü içeren proje veya derlemeye bir başvuru ekleyin. Daha fazla bilgi için bkz. [nib nasıl yapılır: Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
 
-- Tür doğru kapsamda olmadığından Sınıf Tasarımcısı bulamıyor. Kodda `using`, `imports` veya `#include` deyimlerinin eksik olmadığından emin olun. Ayrıca, türü (veya ilgili bir tür), başlangıçta bulunduğu ad alanından taşıdığınızdan emin olun.
+- Tür doğru kapsamda olmadığından Sınıf Tasarımcısı bulamıyor. Kodda `using`, `imports`veya `#include` deyimlerinin eksik olmadığından emin olun. Ayrıca, türü (veya ilgili bir tür), başlangıçta bulunduğu ad alanından taşıdığınızdan emin olun.
 
 - Tür yok (veya açıklama alındı). Bu hatayı düzeltmek için, türü açıklama veya silme yaptığınızdan emin olun.
 
 - Tür, bir #import yönergesi tarafından başvurulan bir kitaplıkta bulunur. Olası bir geçici çözüm, oluşturulan kodu (. tlh dosyası) üst bilgi dosyasına bir #include yönergesine el ile eklemektir.
 
-  **' @No__t_1element > ' sınıf diyagramında bir veya daha fazla şekil için**bir tür çözümleme sorunu için görmem muhtemel hata kodu bulunamıyor. Bu hata iletisi, kodunuzun hatalı olduğunu göstermez. Yalnızca bu sınıf tasarımcısının kodunuzun görüntülenemiyor olduğunu gösterir. Aşağıdaki ölçüleri deneyin.
+  **'\<element > ' sınıf diyagramında bir veya daha fazla şekil için**bir tür çözümleme sorunu için görmem muhtemel hata kodu bulunamadı. Bu hata iletisi, kodunuzun hatalı olduğunu göstermez. Yalnızca bu sınıf tasarımcısının kodunuzun görüntülenemiyor olduğunu gösterir. Aşağıdaki ölçüleri deneyin.
 
 - Türün var olduğundan emin olun. Kaynak kodu istemeyerek dışarı veya silmediğinden emin olun.
 
@@ -79,10 +79,10 @@ Sınıf Tasarımcısı, projenizdeki kod öğelerinin görsel gösterimini sağl
 
 - Türü çözmeyi deneyin. Tür, sınıf diyagramını içeren projeden başvurulmayan bir projede veya derlemede olabilir. Bu hatayı düzeltmek için, türü içeren proje veya derlemeye bir başvuru ekleyin. Daha fazla bilgi için bkz. [nib nasıl yapılır: Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
 
-- Sınıf Tasarımcısı bulmak için türün doğru kapsamda olduğundan emin olun. Kodda `using`, `imports` veya `#include` deyimlerinin eksik olmadığından emin olun. Ayrıca, türü (veya ilgili bir tür), başlangıçta bulunduğu ad alanından taşıdığınızdan emin olun.
+- Sınıf Tasarımcısı bulmak için türün doğru kapsamda olduğundan emin olun. Kodda `using`, `imports`veya `#include` deyimlerinin eksik olmadığından emin olun. Ayrıca, türü (veya ilgili bir tür), başlangıçta bulunduğu ad alanından taşıdığınızdan emin olun.
 
 ### <a name="troubleshooting-other-error-messages"></a>Diğer hata Iletileri sorunlarını giderme
- Microsoft Developer Network (MSDN) ortak forumlarında sorun giderme hatalarıyla ve uyarılarla ilgili yardım bulabilirsiniz. Bkz. [Visual Studio Sınıf Tasarımcısı Forumu](http://go.microsoft.com/fwlink/?linkid=160754).
+ Microsoft Developer Network (MSDN) ortak forumlarında sorun giderme hatalarıyla ve uyarılarla ilgili yardım bulabilirsiniz. Bkz. [Visual Studio Sınıf Tasarımcısı Forumu](https://go.microsoft.com/fwlink/?linkid=160754).
 
 ## <a name="limitations"></a>Kod öğeleri C++ için sınırlamalar
 
@@ -98,7 +98,7 @@ Sınıf Tasarımcısı, projenizdeki kod öğelerinin görsel gösterimini sağl
 
 - Sınıf Tasarımcısı birleşimler desteklemez. Bu, ayrılan belleğin yalnızca birleşimin en büyük veri üyesi için gereken miktarı olduğu özel bir sınıf türüdür.
 
-- Sınıf Tasarımcısı, `int` ve `char` gibi temel veri türlerini görüntülemez.
+- Sınıf Tasarımcısı, `int` ve `char`gibi temel veri türlerini görüntülemez.
 
 - Sınıf Tasarımcısı, projenin bu türlere doğru başvuruları yoksa, geçerli projenin dışında tanımlanan türleri görüntülemez.
 
@@ -107,4 +107,4 @@ Sınıf Tasarımcısı, projenizdeki kod öğelerinin görsel gösterimini sağl
 - Sınıf Tasarımcısı void olan veya void bir türden türetilen türleri görüntüleyemez.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- Sınıfları ve [türleri tasarlama ve görüntüleme](../ide/designing-and-viewing-classes-and-types.md) [(sınıf Tasarımcısı)](../ide/working-with-classes-and-other-types-class-designer.md) [sınıf diyagramları Ile çalışma (sınıf Tasarımcısı) sınıf](../ide/working-with-class-diagrams-class-designer.md) [ve türleri tasarlama (sınıf Tasarımcısı)](../ide/designing-classes-and-types-class-designer.md) [hakkında ek bilgi ](../ide/additional-information-about-class-designer-errors.md) [Sınıf Tasarımcısı C++ içindeki sınıf Tasarımcısı görsel](../ide/visual-cpp-typedefs-in-class-designer.md) numaralandırmalar içindeki sınıf Tasarımcısı [ C++ görsel numaralandırmalara](../ide/visual-cpp-enumerations-in-class-designer.md) Sınıf Tasarımcısı görsel [ C++ yapılarda](../ide/visual-cpp-structures-in-class-designer.md) Sınıf Tasarımcısı hataları [Visual C++ sınıfları](../ide/visual-cpp-classes-in-class-designer.md)
+ Sınıfları ve türleri [tasarlama ve görüntüleme](../ide/designing-and-viewing-classes-and-types.md) [(sınıf Tasarımcısı)](../ide/working-with-classes-and-other-types-class-designer.md) [sınıf diyagramları ile çalışma (sınıf Tasarımcısı)](../ide/working-with-class-diagrams-class-designer.md) sınıflar ve [türler (sınıf Tasarımcısı)](../ide/designing-classes-and-types-class-designer.md) , sınıf Tasarımcısı görsel [ C++ numaralandırmalar](../ide/visual-cpp-enumerations-in-class-designer.md) [içindeki sınıf Tasarımcısı C++ ](../ide/visual-cpp-structures-in-class-designer.md) görsel numaralandırmalar [içindeki sınıf Tasarımcısı görsel C++ ](../ide/visual-cpp-classes-in-class-designer.md) Numaralandırmalarla [ C++ ](../ide/visual-cpp-typedefs-in-class-designer.md) [ilgili ek bilgileri sınıf Tasarımcısı](../ide/additional-information-about-class-designer-errors.md)

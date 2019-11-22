@@ -1,6 +1,6 @@
 ---
-title: Yayımlama WebApplicationWebSite (Windows PowerShell Betiği) | Microsoft Docs
-description: Bir Azure Web sitesine bir web projesi yayımlamayı öğrenin. Bu betik, mevcut olmaması durumunda Azure aboneliğinizde gerekli kaynakları oluşturur.
+title: Publish-Webapplicationweb sitesi (Windows PowerShell betiği) | Microsoft Docs
+description: Bir Web projesini Azure Web sitesinde yayımlamayı öğrenin. Bu betik, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
 author: ghogen
 manager: jillfra
 assetId: 63cfaa2d-f04d-40dc-8677-345385c278d5
@@ -11,16 +11,16 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: dba4e9143c02a76763372a12153b2e22f612959c
-ms.sourcegitcommit: 3cc73e74921a9ceb622542e0e263abeebc455c00
+ms.openlocfilehash: 6c9c2e281ace3b483d1f37552fba0cc6f490978a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624435"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298134"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite (Windows PowerShell betiği)
 ## <a name="syntax"></a>Sözdizimi
-Bir Azure Web sitesine bir web projesi yayımlar. Mevcut olmaması durumunda betik, Azure aboneliğinizde gerekli kaynakları oluşturur.
+Bir Web projesini bir Azure Web sitesinde yayımlar. Komut dosyası, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
 
 ```
 Publish-WebApplicationWebSite
@@ -33,7 +33,7 @@ Publish-WebApplicationWebSite
 ```
 
 ## <a name="configuration"></a>Yapılandırma
-Dağıtım ayrıntılarını açıklayan JSON yapılandırma dosyası yolu.
+Dağıtımın ayrıntılarını açıklayan JSON yapılandırma dosyasının yolu.
 
 | Parametre | Varsayılan değer |
 | --- | --- |
@@ -41,11 +41,11 @@ Dağıtım ayrıntılarını açıklayan JSON yapılandırma dosyası yolu.
 | Gerekli mi? |true |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| Ardışık giriş yapılabilir mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |false |
 | Joker karakterler kabul edilsin mi? |false |
 
-## <a name="subscriptionname"></a>subscriptionName
-Web sitesi oluşturmak istediğiniz Azure aboneliğini adı.
+## <a name="subscriptionname"></a>SubscriptionName
+Web sitesini oluşturmak istediğiniz Azure aboneliğinin adı.
 
 | Parametre | Varsayılan değer |
 | --- | --- |
@@ -53,11 +53,11 @@ Web sitesi oluşturmak istediğiniz Azure aboneliğini adı.
 | Gerekli mi? |false |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| Ardışık giriş yapılabilir mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |false |
 | Joker karakterler kabul edilsin mi? |false |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
-Web sitesine yayımlamak için web dağıtım paketi yolu. Bu paket, Visual Studio'da Web'i Yayımla Sihirbazı'nı kullanarak oluşturabilirsiniz. Daha fazla bilgi için [Azure Cloud Services ve ASP.NET kullanmaya başlama](http://go.microsoft.com/fwlink/p/?LinkID=623089).
+Web sitesinde yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Studio 'daki Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [Azure Cloud Services ve ASP.NET ile çalışmaya başlama](https://go.microsoft.com/fwlink/p/?LinkID=623089).
 
 | Parametre | Varsayılan değer |
 | --- | --- |
@@ -65,11 +65,11 @@ Web sitesine yayımlamak için web dağıtım paketi yolu. Bu paket, Visual Stud
 | Gerekli mi? |false |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| Ardışık giriş yapılabilir mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |false |
 | Joker karakterler kabul edilsin mi? |false |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
-Kullanıcı adı ve Azure SQL veritabanı için parola.
+Azure 'da SQL veritabanı için Kullanıcı adı ve parola.
 
 | Parametre | Varsayılan değer |
 | --- | --- |
@@ -77,11 +77,11 @@ Kullanıcı adı ve Azure SQL veritabanı için parola.
 | Gerekli mi? |false |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| Ardışık giriş yapılabilir mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |false |
 | Joker karakterler kabul edilsin mi? |false |
 
-## <a name="sendhostmessagestooutput"></a>SendHostMessagesToOutput
-TRUE ise, yazdırma komut dosyasından çıkış akışına iletileri.
+## <a name="sendhostmessagestooutput"></a>Sendhostiletitooutput
+Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
 
 | Parametre | Varsayılan değer |
 | --- | --- |
@@ -89,13 +89,13 @@ TRUE ise, yazdırma komut dosyasından çıkış akışına iletileri.
 | Gerekli mi? |false |
 | Konum |adlandırılmış |
 | Varsayılan değer |false |
-| Ardışık giriş yapılabilir mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |false |
 | Joker karakterler kabul edilsin mi? |false |
 
 ## <a name="remarks"></a>Açıklamalar
-Geliştirme ve Test ortamları oluşturmak için komut dosyası kullanmayı tam bir açıklaması için bkz [yayımlamak için geliştirme ve Test ortamları için Windows PowerShell betiklerini kullanarak](vs-azure-tools-publishing-using-powershell-scripts.md).
+Geliştirme ve test ortamları oluşturmak için betiğin nasıl kullanılacağına ilişkin ayrıntılı bir açıklama için, bkz. [geliştirme ve test ortamlarında yayımlamak Için Windows PowerShell betiklerini kullanma](vs-azure-tools-publishing-using-powershell-scripts.md).
 
-JSON yapılandırma dosyası, dağıtılacak nedir ayrıntılarını belirtir. Bu Web sitesi için kullanıcı adı ve adı gibi bir proje oluştururken belirttiğiniz bilgileri içerir. Ayrıca veritabanını sağlama, varsa içerir. Aşağıdaki kod, örnek bir JSON yapılandırma dosyası gösterir:
+JSON yapılandırma dosyası, dağıtılması gereken ayrıntıları belirtir. Projeyi oluştururken belirttiğiniz bilgileri (örneğin, Web sitesinin adı ve Kullanıcı adı) içerir. Ayrıca, sağlaması yapılacak veritabanını da içerir. Aşağıdaki kod örnek bir JSON yapılandırma dosyasını göstermektedir:
 
 ```json
 {
@@ -121,7 +121,7 @@ JSON yapılandırma dosyası, dağıtılacak nedir ayrıntılarını belirtir. B
 }
 ```
 
-Ne dağıtılır değiştirmek için JSON yapılandırma dosyasını düzenleyebilirsiniz. Bir Web Bölümü gereklidir, ancak veritabanı bölümü isteğe bağlıdır.
+Dağıtılan öğeleri değiştirmek için JSON yapılandırma dosyasını düzenleyebilirsiniz. Bir Web sitesi bölümü gereklidir, ancak veritabanı bölümü isteğe bağlıdır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Daha fazla bilgi için [Yayımla-WebApplicationVM (Windows PowerShell komut dosyası)](vs-azure-tools-publish-webapplicationvm.md)
+Daha fazla bilgi için bkz. [Publish-WebApplicationVM (Windows PowerShell betiği)](vs-azure-tools-publish-webapplicationvm.md)

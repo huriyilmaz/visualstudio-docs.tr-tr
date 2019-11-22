@@ -12,12 +12,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5b22e120161a3fefb5688a71c8e4d7540b8bc66e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a23a8d28f336728789fe9cbbe38f965cc56763d7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669681"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295519"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>Değişiklikleri Modelin Dışına Yayan Olay İşleyicileri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Görselleştirme ve modelleme SDK 'sında mağaza dışı değişkenler, dosyala
 
 ### <a name="to-define-a-store-event"></a>Bir mağaza olayını tanımlamak için
 
-1. İzlemek istediğiniz olay türünü seçin. Tam liste için <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> özelliklerine bakın. Her özellik bir olay türüne karşılık gelir. En sık kullanılan olay türleri şunlardır:
+1. İzlemek istediğiniz olay türünü seçin. Tam liste için <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>özelliklerine bakın. Her özellik bir olay türüne karşılık gelir. En sık kullanılan olay türleri şunlardır:
 
    - `ElementAdded` – bir model öğesi, ilişki bağlantısı, şekil veya bağlayıcı oluşturulduğunda tetiklenir.
 
@@ -40,7 +40,7 @@ Görselleştirme ve modelleme SDK 'sında mağaza dışı değişkenler, dosyala
 
 2. **DslPackage** projesindeki ayrı bir kod dosyasında, _yourdsl_**DocData** için kısmi bir sınıf tanımı ekleyin.
 
-3. Aşağıdaki örnekte olduğu gibi olayın kodunu Yöntem olarak yazın. @No__t_1 erişmek istemediğiniz müddetçe `static` olabilir.
+3. Aşağıdaki örnekte olduğu gibi olayın kodunu Yöntem olarak yazın. `DocData`erişmek istemediğiniz müddetçe `static`olabilir.
 
 4. İşleyiciyi kaydetmek için `OnDocumentLoaded()` geçersiz kılın. Birden fazla işleyiciniz varsa, bunları aynı yerde kaydedebilirsiniz.
 
@@ -94,7 +94,7 @@ namespace Company.MusicLib
 ```
 
 ## <a name="using-events-to-make-undoable-adjustments-in-the-store"></a>Depoda geri alınamaz ayarlamalar yapmak için olayları kullanma
- Olay işleyicisi işlem tamamlandıktan sonra yürütüldüğü için mağaza olayları normalde mağaza içindeki değişiklikleri yayılırken kullanılmaz. Bunun yerine, bir mağaza kuralı kullanırsınız. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
+ Olay işleyicisi işlem tamamlandıktan sonra yürütüldüğü için mağaza olayları normalde mağaza içindeki değişiklikleri yayılırken kullanılmaz. Bunun yerine, bir mağaza kuralı kullanırsınız. Daha fazla bilgi için [kuralları yaymak değişiklikleri içinde modeli](../modeling/rules-propagate-changes-within-the-model.md).
 
  Ancak, kullanıcının ek güncelleştirmeleri özgün olaydan ayrı olarak geri almak istiyorsanız, depoya ek güncelleştirmeler yapmak için bir olay işleyicisi kullanabilirsiniz. Örneğin, küçük harf karakterlerinin albüm başlıkları için normal kural olduğunu varsayalım. Kullanıcı büyük harfe yazıldıktan sonra başlığı küçük harfe düzelten bir mağaza olay işleyicisi yazabilirsiniz. Ancak Kullanıcı, geri al komutunu kullanarak, büyük harf karakterlerini geri yükleyerek düzeltmeyi iptal edebilir. İkinci bir geri alma kullanıcının değişikliğini kaldırır.
 
@@ -190,4 +190,4 @@ private static void AlbumTitleAdjuster(object sender,
 |TransactionRolledBack||
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Değişiklikleri yanıtlama ve yayma](../modeling/responding-to-and-propagating-changes.md) [örnek kodu: devre şemaları](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+ [Değişikliklere Yanıt Verme ve Değişiklikleri Yayma](../modeling/responding-to-and-propagating-changes.md)

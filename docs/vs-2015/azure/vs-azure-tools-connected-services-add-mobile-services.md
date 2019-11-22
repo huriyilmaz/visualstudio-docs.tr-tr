@@ -12,12 +12,12 @@ ms.technology: vs-azure
 ms.custom: vs-azure
 ms.date: 12/16/2015
 ms.author: mlearned
-ms.openlocfilehash: 4bfda342952820b4472a1f826273a7b9075faa9a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4f84970daea03904d4642317cf6097beb07be7f1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62964007"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300179"
 ---
 # <a name="adding-mobile-services-by-using-visual-studio-connected-services"></a>Visual Studio bağlı Hizmetler'i kullanarak mobil hizmet ekleme
 Visual Studio 2015 ile Azure mobil Hizmetleri'ni kullanarak bağlanabilirsiniz **bağlı hizmet Ekle** iletişim. Tüm C# istemci uygulamalarından, tüm JavaScript uygulaması veya platformlar arası Cordova uygulaması bağlanabilirsiniz. Bağlandıktan sonra oluşturma ve verilere erişmek, özel API'ler ve zamanlanan işler oluşturabilir veya anında iletme bildirimleri için destek eklendi.  Bağlı hizmetler işlemi, tüm uygun başvuruları ve bağlantı kodunu ekler. Çeşitli Azure AD gibi popüler kimlik şemaları ile kimlik doğrulaması için yerleşik destek avantajından da sürebilir Facebook, Twitter ve Microsoft Accounts.
@@ -35,7 +35,7 @@ Aşağıdaki proje türlerini Azure mobil Hizmetler'e bağlanmak için bağlı h
 * Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan projeler
 
 ## <a name="connect-to-azure-mobile-services-using-the-add-connected-services-dialog"></a>Bağlı hizmet Ekle iletişim kutusunu kullanarak Azure mobil Hizmetleri'ne için Bağlan
-1. Bir Azure hesabı olduğundan emin olun. Azure hesabınız yoksa, oturum açabileceğiniz bir [ücretsiz deneme sürümü](http://go.microsoft.com/fwlink/?LinkId=518146).
+1. Bir Azure hesabı olduğundan emin olun. Azure hesabınız yoksa, oturum açabileceğiniz bir [ücretsiz deneme sürümü](https://go.microsoft.com/fwlink/?LinkId=518146).
 2. Açık **bağlı hizmet Ekle** iletişim kutusu.
 
    * .NET uygulamaları için projenizi Visual Studio'da açın, bağlam menüsünü **başvuruları** Çözüm Gezgininde düğümünü ve ardından **bağlı hizmet Ekle**
@@ -49,7 +49,7 @@ Aşağıdaki proje türlerini Azure mobil Hizmetler'e bağlanmak için bağlı h
 
     Yeni bir mobil hizmet hesabı oluşturmak için:
 
-   1. Seçin **hizmet Oluştur** iletişim kutusunun altındaki bağlantıyı.
+   1. İletişim kutusunun alt kısmındaki **hizmet oluştur** bağlantısını seçin.
        ![Yeni mobil bağlı hizmet Ekle](./media/vs-azure-tools-connected-services-add-mobile-services/IC797637.png)
    2. Üzerinde **mobil hizmet Oluştur** iletişim kutusu, bir JavaScript arka uç mobil hizmet veya .NET arka uç mobil hizmetinden seçebilirsiniz **çalışma zamanı** aşağı açılan listesi.
 
@@ -65,7 +65,7 @@ Aşağıdaki proje türlerini Azure mobil Hizmetler'e bağlanmak için bağlı h
 6. Kod örneklerini kılavuz olarak kullanarak, mobil hizmetinize erişmek için kod yazmaya başlayın!
 
 ## <a name="how-your-project-is-modified"></a>Projenizi nasıl değiştirilir
-Visual Studio'nun projenizi nasıl değiştirdiğini, proje türüne göre değişir. C# için istemci uygulamalar, [ne olduğunu – C# projeleri](http://go.microsoft.com/fwlink/p/?LinkId=513119). JavaScript istemci uygulamalar için [ne olduğunu – JavaScript projeleri](http://go.microsoft.com/fwlink/p/?LinkId=513120). Cordova uygulamaları için bkz: [ne olduğunu – Cordova projeleri](http://go.microsoft.com/fwlink/p/?LinkId=513116).
+Visual Studio'nun projenizi nasıl değiştirdiğini, proje türüne göre değişir. C# için istemci uygulamalar, [ne olduğunu – C# projeleri](https://go.microsoft.com/fwlink/p/?LinkId=513119). JavaScript istemci uygulamalar için [ne olduğunu – JavaScript projeleri](https://go.microsoft.com/fwlink/p/?LinkId=513120). Cordova uygulamaları için bkz: [ne olduğunu – Cordova projeleri](https://go.microsoft.com/fwlink/p/?LinkId=513116).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Soru sorun ve Yardım alın:

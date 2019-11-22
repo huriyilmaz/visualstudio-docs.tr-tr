@@ -9,12 +9,12 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7456e60b42b18ad706b951ee58ca5c33f05cabc1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 848817691d7fae32f2240e3d6cac4451c4ce58c4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665710"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297812"
 ---
 # <a name="proxy-authorization-required"></a>Proxy Yetkilendirmesi Gerekiyor
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "72665710"
 
 Bu hatayı düzeltmek için aşağıdaki adımlardan birini veya daha fazlasını deneyin:
 
-- Visual Studio'yu yeniden başlatın. Proxy kimlik doğrulaması iletişim kutusu görünmelidir. İletişim kutusunda kimlik bilgilerinizi girin.
+- Visual Studio'yu yeniden başlatın. Bir ara sunucu kimlik doğrulaması iletişim kutusu görünür. İletişim kutusunda kimlik bilgilerinizi girin.
 
-- Yukarıdaki adım sorunu çözmezse, bu durum proxy sunucunuzun http://go.microsoft.com adresler için kimlik bilgilerini istemez ancak *. visualStudio.com adresleri için bunu yapar. Bu sunucular için, Visual Studio 'daki tüm oturum açma senaryolarının engellemesini kaldırmak için izin verilenler listesine aşağıdaki URL 'Leri eklemeniz gerekir:
+- Yukarıdaki adım sorunu çözmezse, bu durum proxy sunucunuzun https://go.microsoft.com adresler için kimlik bilgilerini istemez ancak *. visualStudio.com adresleri için bunu yapar. Bu sunucular için, Visual Studio 'daki tüm oturum açma senaryolarının engellemesini kaldırmak için izin verilenler listesine aşağıdaki URL 'Leri eklemeniz gerekir:
 
   - *.windows.net
 
@@ -37,7 +37,7 @@ Bu hatayı düzeltmek için aşağıdaki adımlardan birini veya daha fazlasın�
 
   - *.live.com
 
-- @No__t_0 adresini izin verilenler listesinden kaldırabilirsiniz. böylece, Visual Studio yeniden başlatıldığında hem http://go.microsoft.com adresi hem de sunucu uç noktaları için proxy kimlik doğrulama iletişim kutusu görünür.
+- https://go.microsoft.com adresini izin verilenler listesinden kaldırabilirsiniz. böylece, Visual Studio yeniden başlatıldığında hem https://go.microsoft.com adresi hem de sunucu uç noktaları için proxy kimlik doğrulama iletişim kutusu görünür.
 
 - Proxy 'niz ile varsayılan kimlik bilgilerinizi kullanmak istiyorsanız, aşağıdakileri yapın:
 
@@ -51,6 +51,6 @@ Bu hatayı düzeltmek için aşağıdaki adımlardan birini veya daha fazlasın�
       </defaultProxy>
       ```
 
-      @No__t_0 ağ için doğru proxy adresini ekleyin.
+      `proxyaddress="<http://<yourproxy:port#>`ağ için doğru proxy adresini ekleyin.
 
-- Proxy 'yi kullanmanıza izin veren kodu eklemek için [Bu blog gönderisine](http://blogs.msdn.com/b/rido/archive/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy.aspx) ilişkin yönergeleri izleyin.
+- Proxy 'yi kullanmanıza izin veren kodu eklemek için [Bu blog gönderisine](https://blogs.msdn.microsoft.com/rido/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy/) ilişkin yönergeleri izleyin.

@@ -14,12 +14,12 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f26d81c3ac80b889f90e2a729545f0db0e52fa1a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5abbb647f93c991d2de626a84e82f47e03f6f71e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660227"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299617"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>İzlenecek yol: WPF ve Entity Framework bir WCF veri hizmeti oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,27 +28,27 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
  Bu izlenecek yolda yapacaklarınız:
 
-- @No__t_0 barındırmak için bir Web uygulaması oluşturun.
+- [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]barındırmak için bir Web uygulaması oluşturun.
 
 - Northwind veritabanındaki Customers tablosunu temsil eden bir [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] oluşturun.
 
-- @No__t_0 oluşturun.
+- Oluşturma bir [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)].
 
-- Bir istemci uygulaması oluşturun ve [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] bir başvuru ekleyin.
+- Bir istemci uygulaması oluşturun ve [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]bir başvuru ekleyin.
 
 - Hizmete veri bağlamayı etkinleştirin ve kullanıcı arabirimini oluşturun.
 
 - İsteğe bağlı olarak, uygulamaya filtreleme yetenekleri ekleyin.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Northwind örnek veritabanı.
 
-     Geliştirme bilgisayarınızda bu veritabanı yoksa, [Microsoft Indirme merkezi](http://go.microsoft.com/fwlink/?LinkID=98088)' nden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5).
+     Geliştirme bilgisayarınızda bu veritabanı yoksa, [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkID=98088)' nden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5).
 
 ## <a name="creating-the-service"></a>Hizmeti Oluşturma
- @No__t_0 oluşturmak için bir Web projesi ekleyin, bir [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)] oluşturun ve sonra modelden hizmeti oluşturun.
+ [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]oluşturmak için bir Web projesi ekleyin, bir [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]oluşturun ve sonra modelden hizmeti oluşturun.
 
  İlk adımda hizmeti barındırmak için bir Web projesi ekleyeceksiniz.
 
@@ -72,7 +72,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **veri** düğümünü seçin ve ardından **ADO.net varlık veri modeli** öğesini seçin.
 
-3. **Ad** metin kutusuna `NorthwindModel` girin ve sonra **Ekle** düğmesini seçin.
+3. **Ad** metin kutusuna `NorthwindModel`girin ve sonra **Ekle** düğmesini seçin.
 
     Varlık Veri Modeli Sihirbazı görüntülenir.
 
@@ -94,7 +94,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 7. **Sürümünüzü seçin** sayfasında **Entity Framework 5,0** seçenek düğmesini ve ardından **İleri** düğmesini seçin.
 
    > [!NOTE]
-   > Entity Framework 6 ' nın en son sürümünü WCF hizmetleriyle kullanabilmek için, WCF Veri Hizmetleri Entity Framework sağlayıcısı NuGet paketini yüklemeniz gerekir. Bkz. [Entity Framework 6 + ile WCF veri Hizmetleri 5.6.0 kullanma](http://blogs.msdn.com/b/odatateam/archive/2013/10/02/using-wcf-data-services-5-6-0-with-entity-framework-6.aspx).
+   > Entity Framework 6 ' nın en son sürümünü WCF hizmetleriyle kullanabilmek için, WCF Veri Hizmetleri Entity Framework sağlayıcısı NuGet paketini yüklemeniz gerekir. Bkz. [Entity Framework 6 + ile WCF veri Hizmetleri 5.6.0 kullanma](https://devblogs.microsoft.com/odata/using-wcf-data-services-5-6-0-with-entity-framework-6/).
 
 8. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin, **müşteriler** onay kutusunu seçin ve ardından **son** düğmesini seçin.
 
@@ -108,7 +108,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Web** düğümünü seçin ve ardından **WCF veri hizmeti 5,6** öğesini seçin.
 
-3. **Ad** metin kutusuna `NorthwindCustomers` girin ve sonra **Ekle** düğmesini seçin.
+3. **Ad** metin kutusuna `NorthwindCustomers`girin ve sonra **Ekle** düğmesini seçin.
 
     NorthwindCustomers. svc dosyası **kod düzenleyicisinde**görüntülenir.
 
@@ -117,7 +117,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
     [!code-csharp[WCFDataServiceWalkthrough#1](../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs#1)]
     [!code-vb[WCFDataServiceWalkthrough#1](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb#1)]
 
-5. @No__t_0 olay işleyicisindeki açıklamaları aşağıdaki kodla değiştirin:
+5. `InitializeService` olay işleyicisindeki açıklamaları aşağıdaki kodla değiştirin:
 
     [!code-csharp[WCFDataServiceWalkthrough#2](../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs#2)]
     [!code-vb[WCFDataServiceWalkthrough#2](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb#2)]
@@ -146,7 +146,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **görsel C#**  düğümünü genişletin ve **Windows** düğümünü seçin ve sonra **Windows Forms uygulama**' yı seçin.
 
-3. **Ad** metin kutusuna `NorthwindClient` girin ve sonra **Tamam** düğmesini seçin.
+3. **Ad** metin kutusuna `NorthwindClient`girin ve sonra **Tamam** düğmesini seçin.
 
 4. **Çözüm Gezgini**, **NorthwindClient** proje düğümünü seçin.
 
@@ -186,7 +186,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 2. **Form1. vb** veya **Form1.cs** form tasarımcısında, kısayol menüsünü açın ve **Yapıştır**' ı seçin.
 
-    @No__t_0 denetim, bir <xref:System.Windows.Forms.BindingSource> bileşeni ve bir <xref:System.Windows.Forms.BindingNavigator> bileşeni forma eklenir.
+    <xref:System.Windows.Forms.DataGridView> denetim, bir <xref:System.Windows.Forms.BindingSource> bileşeni ve bir <xref:System.Windows.Forms.BindingNavigator> bileşeni forma eklenir.
 
 3. **CustomersDataGridView** denetimini seçin ve ardından **Özellikler** penceresinde **Dock** özelliğini **Fill**olarak ayarlayın.
 
@@ -200,7 +200,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
    using NorthwindClient.ServiceReference1;
    ```
 
-5. @No__t_0 olay işleyicisine aşağıdaki kodu ekleyin:
+5. `Form1_Load` olay işleyicisine aşağıdaki kodu ekleyin:
 
    ```vb
    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -240,7 +240,7 @@ Bu kılavuzda, bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulama
 
 2. **Araç kutusundan** forma bir <xref:System.Windows.Forms.TextBox> denetimi ve bir <xref:System.Windows.Forms.Button> denetimi ekleyin.
 
-3. @No__t_0 denetiminin kısayol menüsünü açın ve **kodu görüntüle**' yi seçin ve ardından aşağıdaki kodu `Button1_Click` olay işleyicisine ekleyin:
+3. <xref:System.Windows.Forms.Button> denetiminin kısayol menüsünü açın ve **kodu görüntüle**' yi seçin ve ardından aşağıdaki kodu `Button1_Click` olay işleyicisine ekleyin:
 
     ```vb
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

@@ -8,12 +8,12 @@ ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
 caps.latest.revision: 24
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 920dea4e81ca2ce0c562bb6d77582fd5e3753663
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 331dabfe8e219383fdc04187482b17b9048886a9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660578"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302590"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>Denetimlerinizin Kodlanmış UI Testlerini Etkinleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,11 +42,11 @@ Kodlanmış UI test çerçevesi için destek uygularsanız, denetiminiz daha kol
  ![CUIT&#95;kaydı](../test/media/cuit-record.png "CUIT_Record")
 
 ### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>Windows Forms denetimi için kayıt ve kayıttan yürütmeyi, özellik doğrulamayı ve gezintiyi desteklemek için
- Aşağıdaki yordamda gösterildiği gibi denetiminiz için erişilebilirlik uygulayın ve <xref:System.Windows.Forms.AccessibleObject> ayrıntılı olarak açıklanmıştır.
+ Aşağıdaki yordamda gösterildiği gibi denetiminiz için erişilebilirlik uygulayın ve <xref:System.Windows.Forms.AccessibleObject>ayrıntılı olarak açıklanmıştır.
 
  ![Erişilebilir CUıT&#95;](../test/media/cuit-accessible.png "CUIT_Accessible")
 
-1. @No__t_0 türeten bir sınıf uygulayın ve sınıfınızın bir nesnesini döndürmek için <xref:System.Windows.Forms.Control.AccessibilityObject%2A> özelliğini geçersiz kılın.
+1. <xref:System.Windows.Forms.Control.ControlAccessibleObject>türeten bir sınıf uygulayın ve sınıfınızın bir nesnesini döndürmek için <xref:System.Windows.Forms.Control.AccessibilityObject%2A> özelliğini geçersiz kılın.
 
     ```csharp
     public partial class ChartControl : UserControl
@@ -75,7 +75,7 @@ Kodlanmış UI test çerçevesi için destek uygularsanız, denetiminiz daha kol
 
 3. Alt denetim için başka bir erişilebilirlik nesnesi uygulayın ve bu erişilebilirlik nesnesini döndürecek şekilde alt denetimin <xref:System.Windows.Forms.Control.AccessibilityObject%2A> özelliğini geçersiz kılın.
 
-4. Alt denetimin erişilebilirlik nesnesi için <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>, <xref:System.Windows.Forms.AccessibleObject.Name%2A>, <xref:System.Windows.Forms.AccessibleObject.Parent%2A>, <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.Navigate%2A> ve <xref:System.Windows.Forms.AccessibleObject.Select%2A> özelliklerini ve yöntemlerini geçersiz kılın.
+4. Alt denetimin erişilebilirlik nesnesi için <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>, <xref:System.Windows.Forms.AccessibleObject.Name%2A>, <xref:System.Windows.Forms.AccessibleObject.Parent%2A>, <xref:System.Windows.Forms.AccessibleObject.Role%2A>, <xref:System.Windows.Forms.AccessibleObject.State%2A>, <xref:System.Windows.Forms.AccessibleObject.Navigate%2A>ve <xref:System.Windows.Forms.AccessibleObject.Select%2A> özelliklerini ve yöntemlerini geçersiz kılın.
 
 > [!NOTE]
 > Bu konu, bu yordamdaki <xref:System.Windows.Forms.AccessibleObject> erişilebilirlik örneğiyle birlikte başlar ve sonra geri kalan yordamlarda bunun üzerinde oluşturulur. Erişilebilirlik örneğinin çalışan bir sürümünü oluşturmak istiyorsanız, bir konsol uygulaması oluşturun ve Program.cs içindeki kodu örnek kodla değiştirin. Erişilebilirlik, System. Drawing ve System. Windows. Forms 'a başvuru eklemeniz gerekir. Bir yapı uyarısını ortadan kaldırmak için erişilebilirlik için **birlikte ekleme türlerini** **false** olarak değiştirmeniz gerekir. Uygulamayı çalıştırdığınızda bir konsol penceresi görünmemesi için, projenin çıkış türünü **konsol** uygulamasından **Windows uygulaması** olarak değiştirebilirsiniz.
@@ -108,7 +108,7 @@ Kodlanmış UI test çerçevesi için destek uygularsanız, denetiminiz daha kol
 
 2. Bir sınıf kitaplığı projesi oluşturup erişilebilirlik, Microsoft. VisualStudio. TestTools. Uıitedıya, Microsoft. VisualStudio. TestTools. UITest. Common ve Microsoft. VisualStudio. TestTools. Extension. Erişilebilirlik için **Embed Interop türlerini** **false**olarak değiştirin.
 
-3. @No__t_0 türetilmiş bir özellik sağlayıcısı sınıfı ekleyin.
+3. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>türetilmiş bir özellik sağlayıcısı sınıfı ekleyin.
 
     ```csharp
     using System;
@@ -127,7 +127,7 @@ Kodlanmış UI test çerçevesi için destek uygularsanız, denetiminiz daha kol
     }
     ```
 
-4. Özellik adlarını ve özellik tanımlayıcılarını bir <xref:System.Collections.Generic.Dictionary%602> yerleştirerek Özellik sağlayıcısını uygulayın.
+4. Özellik adlarını ve özellik tanımlayıcılarını bir <xref:System.Collections.Generic.Dictionary%602>yerleştirerek Özellik sağlayıcısını uygulayın.
 
     ```csharp
     // Define a map of property descriptors for CurveLegend
@@ -205,7 +205,7 @@ Kodlanmış UI test çerçevesi için destek uygularsanız, denetiminiz daha kol
     }
     ```
 
-6. @No__t_0 kalan soyut yöntemlerini geçersiz kılın.
+6. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider?displayProperty=fullName>kalan soyut yöntemlerini geçersiz kılın.
 
     ```csharp
     public override string[] GetPredefinedSearchProperties(Type specializedClass)
@@ -240,7 +240,7 @@ Kodlanmış UI test çerçevesi için destek uygularsanız, denetiminiz daha kol
 
     ```
 
-7. @No__t_0 türetilmiş bir uzantı paketi sınıfı ekleyin.
+7. <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>türetilmiş bir uzantı paketi sınıfı ekleyin.
 
     ```csharp
     using System;
@@ -289,7 +289,7 @@ Kodlanmış UI test çerçevesi için destek uygularsanız, denetiminiz daha kol
     }
     ```
 
-10. @No__t_0 kalan soyut yöntemleri ve özellikleri geçersiz kılın.
+10. <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>kalan soyut yöntemleri ve özellikleri geçersiz kılın.
 
     ```csharp
 
@@ -346,7 +346,7 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
 ### <a name="to-add-a-specialized-class-to-access-your-control"></a>Denetime erişmek için özel bir sınıf eklemek için
  ![CUıT&#95;CodeGen](../test/media/cuit-codegen.png "CUIT_CodeGen")
 
-1. @No__t_0 türetilen bir sınıf uygulayın ve denetimin türünü oluşturucuda arama özellikleri koleksiyonuna ekleyin.
+1. <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinControl> türetilen bir sınıf uygulayın ve denetimin türünü oluşturucuda arama özellikleri koleksiyonuna ekleyin.
 
     ```csharp
     public class CurveLegend:WinControl
@@ -457,7 +457,7 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
        }
     ```
 
-2. @No__t_0 geçersiz kıl. Buradaki örnek, tek bir tıklama eylemiyle birlikte çift tıklama eylemini değiştirir.
+2. `UITestActionFilter.ProcessRule`geçersiz kıl. Buradaki örnek, tek bir tıklama eylemiyle birlikte çift tıklama eylemini değiştirir.
 
     ```csharp
     public override bool ProcessRule(IUITestActionStack actionStack)
@@ -535,8 +535,8 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
 
 ## <a name="external-resources"></a>Dış kaynaklar
 
-### <a name="guidance"></a>Kılavuz
- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](http://go.microsoft.com/fwlink/?LinkID=255188)
+### <a name="guidance"></a>Rehber
+ [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

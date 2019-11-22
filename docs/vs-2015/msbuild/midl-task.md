@@ -1,5 +1,5 @@
 ---
-title: MIDL görevi | Microsoft Docs
+title: MıDL görevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -27,186 +27,186 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c1404ae5fce31eb59d2bb484ce1d97956f4cfefc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7e007830a91f0450f6c26c6c175196db308e3a43
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68191567"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300207"
 ---
 # <a name="midl-task"></a>MIDL Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sarmalar Microsoft arabirim tanımı dili (MIDL) derleyici aracı midl.exe'yi. Daha fazla bilgi için "MIDL komut satırı başvurusu" bakın [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi kaydırır. Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "MIDL komut satırı başvurusu" başlığına bakın.  
   
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır **MIDL** görev. Çoğu görev parametreleri ve parametrelerin birkaç kümeleri bir komut satırı seçeneğine karşılık gelir.  
+ Aşağıdaki tabloda, **MIDL** görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.  
   
 - **AdditionalIncludeDirectories**  
   
-     İsteğe bağlı **String []** parametresi.  
+     İsteğe bağlı **dize []** parametresi.  
   
-     Bir dizin, içeri aktarılan IDL dosyaları, dahil edilen üst bilgi dosyaları ve uygulama yapılandırma dosyaları (ACF) için Aranan dizinleri listesine ekler.  
+     İçeri aktarılan IDL dosyaları, eklenen üst bilgi dosyaları ve uygulama yapılandırma dosyaları (ACF) için aranan dizin listesine bir dizin ekler.  
   
-     Daha fazla bilgi için **/I** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/i** seçeneğine bakın.  
   
 - **AdditionalOptions**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Komut satırı seçeneklerinin listesi. Örneğin, **"** _/option1 /option2 /option#_ ". Herhangi diğer MIDL görev parametresi tarafından temsil edilmez komut satırı seçeneklerini belirtmek için bu parametreyi kullanın.  
+     Komut satırı seçeneklerinin listesi. Örneğin, **"** _/option1/option2/option #_ ". Diğer bir MıDL görev parametresi tarafından temsil edilmeyen komut satırı seçeneklerini belirtmek için bu parametreyi kullanın.  
   
-     Daha fazla bilgi için "MIDL komut satırı başvurusu" bakın [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "MIDL komut satırı başvurusu" başlığına bakın.  
   
 - **ApplicationConfigurationMode**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, bazı ACF anahtar sözcükleri IDL dosyasında kullanmanıza olanak sağlar.  
+     `true`, IDL dosyasında bazı ACF anahtar sözcüklerini kullanmanıza izin verir.  
   
-     Daha fazla bilgi için **/app_config** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/app_config** seçeneğine bakın.  
   
 - **ClientStubFile**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     RPC arabirimi için istemci saplama dosyası adını belirtir.  
+     RPC arabirimi için istemci saplama dosyasının adını belirtir.  
   
-     Daha fazla bilgi için **/cstub** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi. Ayrıca bkz: **ServerStubFile** bu tablodaki parametresi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/cstub** seçeneğine bakın. Ayrıca bkz. bu tablodaki **ServerStubFile** parametresi.  
   
 - **CPreprocessOptions**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     C/C++ önişlemci geçirilecek seçeneklerini belirtir. Önişlemci seçenekleri boşlukla ayrılmış bir listesini belirtin.  
+     C/C++ Önişlemci 'ye geçirilecek seçenekleri belirtir. Önişlemci seçeneklerinin boşlukla ayrılmış bir listesini belirtin.  
   
-     Daha fazla bilgi için **/cpp_opt** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/cpp_opt** seçeneğine bakın.  
   
 - **DefaultCharType**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     C derleyicisinin oluşturulmuş kodu derlemek için kullanacağı varsayılan karakter türünü belirtir.  
+     C derleyicisinin üretilen kodu derlemek için kullanacağı varsayılan karakter türünü belirtir.  
   
-     Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+     Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
     |Değer|Komut satırı seçeneği|  
     |-----------|--------------------------|  
-    |**İmzalı**|**/char imzalı**|  
-    |**İşaretsiz**|**/char işaretsiz**|  
-    |**Ascii**|**/char ascii7**|  
+    |**İmza**|**/Char imzalandı**|  
+    |**İşaretlenmemiş**|**/Char işaretsiz**|  
+    |**Ascii**|**/Char ascii7**|  
   
-     Daha fazla bilgi için **/char** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/char** seçeneğine bakın.  
   
 - **DllDataFileName**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Oluşturulan dosya adını belirtir *dlldata* bir ara sunucu DLL dosyası.  
+     Bir proxy DLL 'si için oluşturulan *dlldata* dosyasının dosya adını belirtir.  
   
-     Daha fazla bilgi için **/dlldata** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/dlldata** seçeneğine bakın.  
   
-- **EnableErrorChecks**  
+- **Enableerrordenetimleri**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Çalışma zamanında oluşturulan saptamalar gerçekleştireceğini denetlemede hata türünü belirtir.  
+     Oluşturulan saplamalarının çalışma zamanında gerçekleştireceği hata denetimini belirtir.  
   
-     Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+     Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
     |Değer|Komut satırı seçeneği|  
     |-----------|--------------------------|  
-    |**Yok.**|**/ Error none**|  
-    |**EnableCustom**|**/ Error**|  
-    |**Tümü**|**/ Error tüm**|  
+    |**Yok.**|**/hata yok**|  
+    |**EnableCustom**|**/Error**|  
+    |**Tümü**|**/Error tümü**|  
   
-     Daha fazla bilgi için **/Error** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error** seçeneğine bakın.  
   
 - **ErrorCheckAllocations**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, bellek yetersiz hataları kontrol edin.  
+     `true`, yetersiz bellek hatalarını kontrol edin.  
   
-     Daha fazla bilgi için **/Error ayırma** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error Allocation** seçeneğine bakın.  
   
-- **ErrorCheckBounds**  
+- **Errorchecksınır**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`uyumluluğunu değişen boyutunu denetler ve iletim uzunluğu belirtimlerinin karşı diziler Çeşitleme uygulanıyor.  
+     `true`, uyumlu ve değişen dizilerin boyutunu iletim uzunluğu belirtimine göre denetler.  
   
-     Daha fazla bilgi için **/Error bounds_check** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error bounds_check** seçeneğine bakın.  
   
 - **ErrorCheckEnumRange**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, sabit listesi değerlerinin bir izin verilen aralıkta olup olmadığını kontrol eder.  
+     `true`, numaralandırma değerlerinin izin verilen aralıkta olup olmadığını denetler.  
   
-     Daha fazla bilgi için **/Error enum** komut satırı Yardımı seçeneğinde ( **/?** ) midl.exe'yi için.  
+     Daha fazla bilgi için, MIDL. exe için komut satırı yardımı 'nda ( **/?** ) **/Error numaralandırma** seçeneğine bakın.  
   
 - **ErrorCheckRefPointers**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, hiçbir null başvuru işaretçilerini istemci saptamalar için geçirilen olup olmadığını kontrol edin.  
+     `true`, istemci saplamasına hiçbir null başvuru işaretçisi geçirildiğinden emin olun.  
   
-     Daha fazla bilgi için **/Error ref** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error ref** seçeneğine bakın.  
   
 - **ErrorCheckStubData**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, sunucu tarafında unmarshaling özel durumlarını yakalayan ve bunları istemciye yayan bir saplama oluşturur.  
+     `true`, sunucu tarafında özel durumları hazırlamayı ve istemciye geri yayan bir saplama oluşturur.  
   
-     Daha fazla bilgi için **/Error stub_data** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error stub_data** seçeneğine bakın.  
   
 - **GenerateClientFiles**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Derleyici bir RPC arabirimi için istemci tarafı C kaynak dosyaları oluşturup oluşturmayacağını belirtir.  
+     Derleyicinin bir RPC arabirimi için istemci tarafı C kaynak dosyaları oluşturup oluşturmayacağını belirtir.  
   
-     Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+     Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
     |Değer|Komut satırı seçeneği|  
     |-----------|--------------------------|  
-    |**Yok.**|**/ Client yok**|  
-    |**Stub**|**/ Client saptama**|  
+    |**Yok.**|**/Client yok**|  
+    |**Stub**|**/Client saplama**|  
   
-     Daha fazla bilgi için **/Client** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Client** seçeneğine bakın.  
   
 - **GenerateServerFiles**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Derleyici bir RPC arabirimi için sunucu tarafı C kaynak dosyaları oluşturup oluşturmayacağını belirtir.  
+     Derleyicinin bir RPC arabirimi için sunucu tarafı C kaynak dosyaları oluşturup oluşturmayacağını belirtir.  
   
-     Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+     Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
     |Değer|Komut satırı seçeneği|  
     |-----------|--------------------------|  
-    |**Yok.**|**/ Server yok**|  
-    |**Stub**|**/ Server saptama**|  
+    |**Yok.**|**/Server hiçbiri**|  
+    |**Stub**|**/Server saplama**|  
   
-     Daha fazla bilgi için **/Server** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/Server** seçeneğine bakın.  
   
 - **GenerateStublessProxies**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, tam olarak yorumlanan saplamalar birlikte nesne arabirimleri için saplamasız proxy'ler oluşturur.  
+     `true`, nesne arabirimleri için saplamasız proxy 'leriyle birlikte tamamen yorumlanan saplamalar üretir.  
   
-     Daha fazla bilgi için **/oicf** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/oıcf** seçeneğine bakın.  
   
 - **GenerateTypeLibrary**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, bir tür kitaplığı (.tlb) dosyası oluşturulmuyor.  
+     `true`, bir tür kitaplığı (. tlb) dosyası oluşturulmaz.  
   
-     Daha fazla bilgi için **/notlb** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/notlb** seçeneğine bakın.  
   
 - **HeaderFileName**  
   
@@ -214,93 +214,93 @@ Sarmalar Microsoft arabirim tanımı dili (MIDL) derleyici aracı midl.exe'yi. D
   
      Oluşturulan üst bilgi dosyasının adını belirtir.  
   
-     Daha fazla bilgi için **/h** veya **/header** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/h** veya **/Header** seçeneğine bakın.  
   
 - **IgnoreStandardIncludePath**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, MIDL görevi kullanılarak belirtilen dizinleri arar **Additionalıncludedirectories** geçin ve geçerli dizinde ve INCLUDE ortam değişkeni tarafından belirtilen dizinlerini yoksayar.  
+     `true`, MıDL görevi yalnızca **Additionalıncludedizinler** anahtarını kullanarak belirtilen dizinleri arar ve geçerli DIZINI ve INCLUDE ortam değişkeni tarafından belirtilen dizinleri yoksayar.  
   
-     Daha fazla bilgi için **/no_def_idir** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/no_def_idir** seçeneğine bakın.  
   
 - **InterfaceIdentifierFileName**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Adını belirtir *arabirim tanımlayıcı dosyasının* bir COM arabirimi. Bu işlem için IDL dosyası adı "_i.c" ekleyerek alınan varsayılan adını geçersiz kılar.  
+     Bir COM arabirimi için *arabirim tanımlayıcı dosyasının* adını belirtir. Bu, IDL dosya adına "_i. c" eklenerek elde edilen varsayılan adı geçersiz kılar.  
   
-     Daha fazla bilgi için **/iid** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/IID** seçeneğine bakın.  
   
 - **LocaleID**  
   
      İsteğe bağlı **int** parametresi.  
   
-     Belirtir *yerel ayar tanımlayıcısı* , giriş dosyaları, dosya adları ve dizin yolları uluslararası karakterlerin kullanılmasına olanak tanır. Bir ondalık yerel ayar kimliği belirtin.  
+     Giriş dosyalarında, dosya adlarında ve Dizin yollarında Uluslararası karakterlerin kullanımını sağlayan *yerel ayar tanımlayıcısını* belirtir. Ondalık yerel ayar tanımlayıcısı belirtin.  
   
-     Daha fazla bilgi için **/lcid** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi. Ayrıca, "Yerel ayar kimlikleri atanan tarafından Microsoft'ta" MSDN bakın.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/LCID** seçeneğine bakın. Ayrıca, MSDN 'de "Microsoft tarafından atanan yerel kimlikler" konusuna bakın.  
   
 - **MkTypLibCompatible**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, mktyplib.exe 2.03 sürümüyle uyumlu olması için giriş dosyasının biçimi gerektirir.  
+     `true`, giriş dosyasının biçiminin MkTypLib. exe sürüm 2,03 ile uyumlu olmasını gerektirir.  
   
-     Daha fazla bilgi için **/mktyplib203** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi. Ayrıca MSDN Web sitesindeki "ODL FILE söz Dizimiyle" bakın.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/mktyplib203** seçeneğine bakın. Ayrıca MSDN Web sitesinde "ODL dosya sözdizimi" başlığına bakın.  
   
 - **OutputDirectory**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     MIDL görevi Çıkış dosyalarını nereye yazdığını varsayılan dizini belirtir.  
+     MıDL görevinin çıktı dosyalarını yazdığı varsayılan dizini belirtir.  
   
-     Daha fazla bilgi için **/out** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/Out** seçeneğine bakın.  
   
 - **PreprocessorDefinitions**  
   
-     İsteğe bağlı **String []** parametresi.  
+     İsteğe bağlı **dize []** parametresi.  
   
-     Bir veya daha fazla belirtir *tanımlar*; diğer bir deyişle, bir ad ve isteğe bağlı bir değer C önişlemcisi geçirilecek IF bir `#define` yönergesi. Her tanımla biçimindedir, *[= değer] adı*.  
+     Bir veya daha fazla *tanımlar*belirtir; diğer bir deyişle, bir ad ve isteğe bağlı bir değer bir `#define` yönergesi tarafından olduğu gibi C Önişlemci 'ye geçirilir. Her tanımlamanın formu, *adı [= değer]* .  
   
-     Daha fazla bilgi için **/D** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi. Ayrıca bkz **UndefinePreprocessorDefinitions** bu tablodaki parametresi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/d** seçeneğine bakın. Ayrıca bkz. bu tablodaki **UndefinePreprocessorDefinitions** parametresi.  
   
 - **ProxyFileName**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Bir COM arabirimi arabirimi proxy dosyasının adını belirtir.  
+     Bir COM arabirimi için arabirim proxy dosyasının adını belirtir.  
   
-     Daha fazla bilgi için **/proxy** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/proxy** seçeneğine bakın.  
   
 - **RedirectOutputAndErrors**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Çıkış, hata iletileri ve uyarılar, belirtilen dosyaya standart çıktısından gibi yeniden yönlendirir.  
+     Hata iletileri ve uyarılar gibi çıktıyı standart çıktısından belirtilen dosyaya yeniden yönlendirir.  
   
-     Daha fazla bilgi için **/o** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/o** seçeneğine bakın.  
   
 - **ServerStubFile**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     RPC arabirimi için sunucu saplama dosyası adını belirtir.  
+     RPC arabirimi için sunucu saplama dosyasının adını belirtir.  
   
-     Daha fazla bilgi için **/sstub** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi. Ayrıca bkz **ClientStubFile** bu tablodaki parametresi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/sstub** seçeneğine bakın. Ayrıca bkz. bu tablodaki **ClientStubFile** parametresi.  
   
 - **Kaynak**  
   
      Gerekli `ITaskItem[]` parametresi.  
   
-     Kaynak dosyaları boşluklarla ayrılmış bir listesini belirtir.  
+     Boşluklarla ayrılmış kaynak dosyalarının bir listesini belirtir.  
   
-- **StructMemberAlignment**  
+- **Structmemberhizalaması**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Hizalamayı belirtir (*düzeyi paketleme*) yapılarının hedef sistemde.  
+     Hedef sistemdeki yapıların hizalamasını (*paketleme düzeyi*) belirtir.  
   
-     Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+     Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
     |Değer|Komut satırı seçeneği|  
     |-----------|--------------------------|  
@@ -310,23 +310,23 @@ Sarmalar Microsoft arabirim tanımı dili (MIDL) derleyici aracı midl.exe'yi. D
     |**4**|**/Zp4**|  
     |**8**|**/Zp8**|  
   
-     Daha fazla bilgi için **/ZP** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi. **/ZP** seçenektir eşdeğer **/paketi** seçeneği ve eski **/ hizalama** seçeneği.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/ZP** seçeneğine bakın. **/ZP** seçeneği, **/Pack** seçeneğine ve eski **/ALIGN** seçeneğine eşdeğerdir.  
   
-- **SuppressCompilerWarnings**  
+- **Suppresscompileruyarılar**  
   
-     İsteğe bağlı **Boole** parametresi.  
+     İsteğe bağlı **Boolean** parametresi.  
   
-     Varsa `true`, MIDL görevi uyarı ilerileri bastırır.  
+     `true`, MıDL görevinin uyarı iletilerini bastırır.  
   
-     Daha fazla bilgi için **/no_warn** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/no_warn** seçeneğine bakın.  
   
 - **SuppressStartupBanner**  
   
      İsteğe bağlı `Boolean` parametresi.  
   
-     Varsa `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini engeller.  
+     `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.  
   
-     Daha fazla bilgi için **/nologo** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/nologo** seçeneğine bakın.  
   
 - **TargetEnvironment**  
   
@@ -334,37 +334,37 @@ Sarmalar Microsoft arabirim tanımı dili (MIDL) derleyici aracı midl.exe'yi. D
   
      Uygulamanın çalıştığı ortamı belirtir.  
   
-     Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+     Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
     |Değer|Komut satırı seçeneği|  
     |-----------|--------------------------|  
     |**NotSet**|*\<yok >*|  
-    |**Win32**|**/ env win32**|  
-    |**Itanium**|**/ env ia64**|  
+    |**Win32**|**/env Win32**|  
+    |**Itanium**|**/env IA64**|  
     |**X64**|**/env x64**|  
   
-     Daha fazla bilgi için **/env** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/env** seçeneğine bakın.  
   
 - **TrackerLogDirectory**  
   
      İsteğe bağlı `String` parametresi.  
   
-     Bu görev için izleme günlüklerinin depolandığı Ara dizini belirtir.  
+     Bu görev için İzleme günlüklerinin depolandığı ara dizini belirtir.  
   
 - **TypeLibFormat**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Tür kitaplığı dosyası biçimini belirtir.  
+     Tür kitaplığı dosyasının biçimini belirtir.  
   
-     Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+     Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
     |Değer|Komut satırı seçeneği|  
     |-----------|--------------------------|  
     |**NewFormat**|**/newtlb**|  
     |**OldFormat**|**/oldtlb**|  
   
-     Daha fazla bilgi için **/newtlb** ve **/oldtlb** Seçenekleri "İçinde MIDL komut satırı başvurusu" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/newtlb** ve **/oldtlb** seçeneklerine bakın.  
   
 - **TypeLibraryName**  
   
@@ -372,51 +372,51 @@ Sarmalar Microsoft arabirim tanımı dili (MIDL) derleyici aracı midl.exe'yi. D
   
      Tür kitaplığı dosyasının adını belirtir.  
   
-     Daha fazla bilgi için **/TLB** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/tlb** seçeneğine bakın.  
   
 - **UndefinePreprocessorDefinitions**  
   
-     İsteğe bağlı **String []** parametresi.  
+     İsteğe bağlı **dize []** parametresi.  
   
-     Önceki herhangi bir ad tanımı adı C önişlemcisi iletilmesiyle kaldırır. Eğer tarafından bir `#undefine` yönergesi. Bir veya daha fazla önceden tanımlanmış adlarını belirtin.  
+     Adı bir `#undefine` yönergesi olarak C Önişlemci 'ya geçirerek bir adın önceki tanımını kaldırır. Önceden tanımlanmış bir veya daha fazla ad belirtin.  
   
-     Daha fazla bilgi için **/U** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi. Ayrıca bkz **PreprocessorDefinitions** bu tablodaki parametresi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/u** seçeneğine bakın. Ayrıca bkz. bu tablodaki **PreprocessorDefinitions** parametresi.  
   
 - **ValidateAllParameters**  
   
      İsteğe bağlı `Boolean` parametresi.  
   
-     Varsa `true`, çalışma zamanında bütünlük denetimi gerçekleştirmek için kullanılan ek hata denetimi bilgileri oluşturur. Varsa `false`, hata denetimi bilgilerin oluşturulmuyor.  
+     `true`, çalışma zamanında bütünlük denetimleri gerçekleştirmek için kullanılan ek hata denetleme bilgileri oluşturur. `false`, hata denetimi bilgileri oluşturulmaz.  
   
-     Daha fazla bilgi için **/ robust** ve **/no_robust** Seçenekleri "İçinde MIDL komut satırı başvurusu" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/dayanıklı** ve **/no_robust** seçeneklerine bakın.  
   
 - **WarnAsError**  
   
      İsteğe bağlı `Boolean` parametresi.  
   
-     Varsa `true`, tüm uyarıları hata olarak değerlendirir.  
+     `true`, tüm uyarıları hata olarak değerlendirir.  
   
-     Varsa **WarningLevel** MIDL görev parametresi belirtilmezse, varsayılan düzeyinde düzey 1 uyarı hata olarak kabul edilir.  
+     **WarningLevel** MIDL görev parametresi belirtilmemişse, varsayılan düzey 1 olan uyarılar hata olarak kabul edilir.  
   
-     Daha fazla bilgi için **wx** Seçenekleri "İçinde MIDL komut satırı başvurusu" [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi. Ayrıca bkz **WarningLevel** bu tablodaki parametresi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/WX** seçeneklerine bakın. Ayrıca bkz. bu tablodaki **WarningLevel** parametresi.  
   
-- **WarningLevel**  
+- **Uyarı düzeyi**  
   
      İsteğe bağlı **dize** parametresi.  
   
-     Önem derecesini belirtir (*uyarı düzeyi*) yaymak için uyarıları. Herhangi bir uyarı için 0 değerini yayılır. Uyarı düzeyiyle sayısal ise bir uyarı Aksi takdirde, yayılan belirtilen değere eşit veya ondan daha az.  
+     Görüntülenecek uyarıların önem derecesini (*Uyarı düzeyi*) belirtir. 0 değeri için hiçbir uyarı yayınlanmadı. Aksi takdirde, uyarı düzeyi belirtilen değere eşit veya ondan daha küçükse bir uyarı yayınlanır.  
   
-     Her biri bir komut satırı seçeneğine karşılık gelir aşağıdaki değerlerden birini belirtin.  
+     Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
     |Değer|Komut satırı seçeneği|  
     |-----------|--------------------------|  
-    |**0**|**/ W0**|  
-    |**1**|**/ W1**|  
-    |**2**|**/ W2**|  
-    |**3**|**/ W3**|  
-    |**4**|**/ W4**|  
+    |**0**|**/W0**|  
+    |**1**|**/W1**|  
+    |**2**|**/W2**|  
+    |**3**|**/W3**|  
+    |**4**|**/W4**|  
   
-     Daha fazla bilgi için **/W** "İçinde MIDL komut satırı başvuru" seçeneğini [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web sitesi. Ayrıca bkz **WarnAsError** bu tablodaki parametresi.  
+     Daha fazla bilgi için [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/w** seçeneğine bakın. Ayrıca bkz. bu tablodaki **warnaserror** parametresi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   

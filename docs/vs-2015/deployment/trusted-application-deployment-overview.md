@@ -1,5 +1,5 @@
 ---
-title: Güvenilir Uygulama dağıtımına genel bakış | Microsoft Docs
+title: Güvenilen uygulama dağıtımına genel bakış | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -17,93 +17,93 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a09f32f90ffca081fb8bf405f5d661160e8d4adf
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a95392525826fcfb2595e1bac7d45ebea20317fc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65686360"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74294697"
 ---
 # <a name="trusted-application-deployment-overview"></a>Güvenilir Uygulama Dağıtımına Genel Bakış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konu nasıl dağıtılacağı hakkında genel bakış sağlar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] güvenilir uygulama dağıtımı teknolojisini kullanarak yükseltilmiş izinlere sahip uygulamalar.  
+Bu konu, güvenilen uygulama dağıtım teknolojisini kullanarak yükseltilmiş izinlere sahip [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalarının nasıl dağıtılacağı konusunda genel bir bakış sağlar.  
   
- Güvenilir uygulama dağıtımı, parçası [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtım teknolojisi, kuruluşların kullanıcıya sormadan daha güvenli bir şekilde yönetilen bir uygulama için ek izinler vermek için her boyuttaki kolaylaştırır. Güvenilir uygulama dağıtımı ile bir kuruluş yalnızca Authenticode sertifikaları kullanarak tanımlanan güvenilir yayımcılar, bir listesi için bir istemci bilgisayarı yapılandırabilirsiniz. Bundan sonra tüm [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bunlardan biri tarafından imzalanmış bir uygulamaya güvenilen yayımcılar, daha yüksek bir güven düzeyi alır.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtım teknolojisinin bir parçası olan güvenilir uygulama dağıtımı, her boyuttaki kuruluşların daha güvenli ve Kullanıcı istenmeden daha güvenli bir şekilde bir yönetilen uygulamaya ek izinler vermesini kolaylaştırır. Güvenilen uygulama dağıtımı sayesinde bir kuruluş, bir istemci bilgisayarı, Authenticode sertifikaları kullanılarak tanımlanan, güvenilen yayımcılar listesine sahip olacak şekilde yapılandırabilir. Bundan sonra, bu güvenilir yayımcıların biri tarafından imzalanan tüm [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalar daha yüksek bir güven düzeyi alır.  
   
 > [!NOTE]
-> Güvenilir uygulama dağıtımı tek seferlik bir kullanıcının bilgisayarına yapılandırılmasını gerektirir. Yönetilen Masaüstü ortamlarında, bu yapılandırma genel ilke kullanılarak gerçekleştirilebilir. İzin yükseltilmesi, bu uygulama için istediğinize değil ise, bunun yerine kullanın. Daha fazla bilgi için [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
+> Güvenilen uygulama dağıtımı, bir kullanıcının bilgisayarında bir kerelik yapılandırma gerektirir. Yönetilen masaüstü ortamlarında, bu yapılandırma genel ilke kullanılarak gerçekleştirilebilir. Uygulamanız için istediğiniz bu değilse, bunun yerine izin yükseltme kullanın. Daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
   
-## <a name="trusted-application-deployment-basics"></a>Güvenilir Uygulama dağıtımıyla ilgili temel bilgiler  
- Aşağıdaki tabloda nesneleri ve söz konusu olan rolleri güvenilir uygulama dağıtımı'gösterilmektedir.  
+## <a name="trusted-application-deployment-basics"></a>Güvenilen uygulama dağıtımı temelleri  
+ Aşağıdaki tabloda, güvenilir uygulama dağıtımında yer alan nesneler ve roller gösterilmektedir.  
   
 |Nesne veya rol|Açıklama|  
 |--------------------|-----------------|  
-|Yönetici|Güncelleştirme ve istemci bilgisayarları korumak için sorumlu kurumsal varlığı|  
-|Güven Yöneticisi|Ortak dil çalışma zamanı (CLR) istemci uygulama güvenliği uygulamaktan sorumlu alt sistem.|  
-|Yayımcı|Yazar ve uygulamayı tutar varlık.|  
-|Dağıtıcı|Paketler ve uygulamayı kullanıcıya dağıtır varlık.|  
-|sertifika|Genel ve özel anahtarı içeren bir şifreleme imzası; genellikle orijinalliği bir sertifika yetkilisi (CA) tarafından verilmiş.|  
-|Authenticode sertifikası|Bir sertifika ile katıştırılmış meta verileri tanımlayan, diğerlerinin yanı sıra sertifika çalıştırılacağı kullanır.|  
-|Sertifika yetkilisi|Yayımcılar kimliğini doğrular ve bunları sertifika veren bir kuruluş yayımcının meta verileriyle katıştırılmış.|  
-|kök yetkilisi|Diğer sertifika yetkilileri sertifika vermek için yetki veren sertifika yetkilisi.|  
-|anahtar kapsayıcısı|Sertifikaları depolamak için bir mantıksal depolama alanında Microsoft Windows.|  
-|Güvenilir yayımcı|Bir yayımcı Authenticode sertifikası istemci bilgisayarda bir sertifika güven listesi (CTL) eklendi.|  
+|danışın|İstemci bilgisayarlarını güncelleştirmeden ve korumadan sorumlu kuruluş varlığı|  
+|güven Yöneticisi|Ortak dil çalışma zamanı (CLR) içindeki, istemci uygulama güvenliğini zormaktan sorumlu alt sistem.|  
+|publisher|Uygulamayı yazan ve tutan varlık.|  
+|Dağıtıcı|Uygulamayı paketleyen ve kullanıcılara dağıtan varlık.|  
+|sertifika|Ortak ve özel anahtardan oluşan bir şifreleme imzası; Genel olarak, bir sertifika yetkilisi (CA) tarafından, kendi orijinalliğini yoklanarak verilir.|  
+|Authenticode sertifikası|Diğer şeyler arasında, sertifikanın hangi kullanımlar için kullanıldığını açıklayan gömülü meta veriler içeren bir sertifika.|  
+|sertifika yetkilisi|Yayımcıların kimliğini doğrulayan ve yayımcının meta verileriyle gömülü sertifikaları veren bir kuruluş.|  
+|kök yetkili|Sertifika vermek için diğer sertifika yetkililerine yetki veren bir sertifika yetkilisi.|  
+|anahtar kapsayıcısı|Sertifikaları depolamak için Microsoft Windows 'da mantıksal depolama alanı.|  
+|Güvenilen Yayımcı|Bir istemci bilgisayarda bir sertifika güven listesine (CTL) eklenen Authenticode sertifikası olan yayımcı.|  
   
- Daha büyük kuruluşlarda yayımcı ve dağıtıcı sık iki ayrı varlık şunlardır:  
+ Daha büyük kuruluşlarda, yayımcı ve dağıtıcı genellikle iki ayrı varlıklardır:  
   
-- Yayımcı oluşturan grubudur [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama.  
+- Yayımcı, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamasını oluşturan gruptur.  
   
-- Dağıtıcı dağıtan genellikle bilgi teknolojisi (BT) departmanı, grubudur [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] kurumsal masaüstü bilgisayarlar için uygulama.  
+- Dağıtıcı, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamayı kurumsal kurumsal masaüstü bilgisayarlara dağıtan, genellikle bilgi teknolojisi (BT) departmanı olan gruptur.  
   
-  Güvenilir uygulama dağıtımı yararlanmak için şu adımları izlemelisiniz:  
+  Güvenilen uygulama dağıtımının avantajlarından yararlanmak için aşağıdaki adımları izlemeniz gerekir:  
   
 1. Yayımcı için bir sertifika edinin.  
   
-2. Yayımcı tüm istemcilerde Güvenilen Yayımcılar deposuna ekleyin.  
+2. Yayımcıyı tüm istemcilerde Güvenilen Yayımcılar deposuna ekleyin.  
   
-3. Oluşturma, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama.  
+3. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanızı oluşturun.  
   
-4. Dağıtım bildirimi yayımcının sertifika ile oturum açın.  
+4. Dağıtım bildirimini yayımcının sertifikasıyla imzalayın.  
   
-5. Uygulama dağıtımı, istemci bilgisayarlar için yayımlayın.  
+5. Uygulama dağıtımını istemci bilgisayarlara yayımlayın.  
   
-### <a name="obtain-a-certificate-for-the-publisher"></a>Yayımcı için bir sertifika alın  
- Dijital sertifikalar Microsoft Authenticode kimlik doğrulama ve güvenlik sistemi temel bileşenidir. Authenticode, Windows işletim sistemi, standart bir parçasıdır. Tüm [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamaları güvenilir uygulama dağıtımı'na katılıp katılmadığına bağımsız olarak bir dijital sertifika ile imzalanmalıdır. Authenticode'ile nasıl çalıştığına ilişkin tam açıklama için [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], bkz: [ClickOnce ve Authenticode](../deployment/clickonce-and-authenticode.md).  
+### <a name="obtain-a-certificate-for-the-publisher"></a>Yayımcı için bir sertifika edinme  
+ Dijital sertifikalar, Microsoft Authenticode kimlik doğrulaması ve güvenlik sisteminin temel bir bileşenidir. Authenticode, Windows işletim sisteminin standart bir parçasıdır. Tüm [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalar, güvenilir uygulama dağıtımına katılıp katılmadığına bakılmaksızın dijital sertifikayla imzalanmalıdır. Authenticode 'un [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]nasıl çalıştığı hakkında tam bir açıklama için bkz. [ClickOnce and Authenticode](../deployment/clickonce-and-authenticode.md).  
   
-### <a name="add-the-publisher-to-the-trusted-publishers-store"></a>Güvenilen Yayımcılar Store için yayımcı ekleme  
- İçin [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] daha yüksek bir güven düzeyi almak üzere uygulama sertifikanızı güvenilen bir yayımcı uygulamanın çalışacağı her istemci bilgisayara eklemeniz gerekir. Bu görevi gerçekleştirme tek seferlik bir yapılandırmadır. Bu tamamlandıktan sonra kadar dağıtabilirsiniz [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamaları ve tüm yüksek güven ile çalışır, yayımcının sertifika ile imzalanmış.  
+### <a name="add-the-publisher-to-the-trusted-publishers-store"></a>Yayımcıyı Güvenilen Yayımcılar deposuna ekleme  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanızın daha yüksek bir güven düzeyi alabilmesi için, sertifikanızı Uygulamanın çalıştırılacağı her istemci bilgisayara güvenilir bir yayımcı olarak eklemeniz gerekir. Bu görevi gerçekleştirmek tek seferlik bir yapılandırmadır. İşlem tamamlandıktan sonra yayımcının sertifikasıyla imzalanmış birçok [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamayı istediğiniz gibi dağıtabilir ve bunların tümü yüksek güvenle çalışır.  
   
- Uygulamanızı Masaüstü yönetilen bir ortamda dağıtıyorsanız; Windows işletim sistemi çalıştıran Örneğin, bir Kurumsal intranet; Grup İlkesi ile yeni bir sertifika güven listesi (CTL) oluşturarak, bir istemcinin depoya Güvenilen Yayımcılar ekleyebilirsiniz. Daha fazla bilgi için [bir sertifika güven listesi için bir Grup İlkesi nesnesi oluşturmak](http://go.microsoft.com/fwlink/?LinkId=102576).  
+ Uygulamanızı yönetilen masaüstü ortamında dağıtıyorsanız; Örneğin, Windows işletim sistemini çalıştıran bir kurumsal intranet; grup ilkesi ile yeni bir sertifika güven listesi (CTL) oluşturarak, bir istemcinin deposuna güvenilen yayımcılar ekleyebilirsiniz. Daha fazla bilgi için, bkz. [Grup İlkesi bir nesne için sertifika güven listesi oluşturma](https://go.microsoft.com/fwlink/?LinkId=102576).  
   
- Uygulamanızı Masaüstü yönetilen bir ortamda dağıtıyorsanız değil, bir sertifika güvenilen bir yayımcı deposuna eklemek için aşağıdaki seçenekleri vardır:  
+ Uygulamanızı yönetilen bir masaüstü ortamında dağıtmaktan, güvenilen yayımcı deposuna bir sertifika eklemek için aşağıdaki seçeneklere sahip olursunuz:  
   
-- <xref:System.Security.Cryptography?displayProperty=fullName> Ad alanı.  
+- <xref:System.Security.Cryptography?displayProperty=fullName> ad alanı.  
   
-- Internet Explorer'ın bir bileşeni olan ve bu nedenle, Windows 98 ve sonraki tüm sürümler var CertMgr.exe. Daha fazla bilgi için [Certmgr.exe (Sertifika Yöneticisi Aracı)](https://msdn.microsoft.com/library/7e953b43-1374-4bbc-814f-53ca1b6b52bb).  
+- Internet Explorer 'ın bir bileşeni olan CertMgr. exe ve bu nedenle Windows 98 ve sonraki sürümlerde bulunur. Daha fazla bilgi için bkz. [certmgr. exe (Sertifika Yöneticisi aracı)](https://msdn.microsoft.com/library/7e953b43-1374-4bbc-814f-53ca1b6b52bb).  
   
 ### <a name="create-a-clickonce-application"></a>ClickOnce uygulaması oluşturma  
- A [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama bir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] istemci uygulaması uygulamayı tanımlayan ve yükleme parametrelerini sağlayan bildirim dosyaları ile birlikte. Programınıza kapatabilirsiniz bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] kullanarak uygulama **Yayımla** komutunu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Alternatif olarak, gerekli tüm dosyaları oluşturabilirsiniz [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bulunan araçları kullanarak dağıtım [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]. Ayrıntılı adımlar için [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtım bkz [izlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama, uygulamayı tanımlayan ve yükleme parametrelerini sağlayan bildirim dosyalarıyla birleştirilmiş bir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] istemci uygulamasıdır. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]içindeki **Yayımla** komutunu kullanarak programınızı bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamasına dönüştürebilirsiniz. Alternatif olarak, [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]dahil olan araçları kullanarak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtımı için gerekli tüm dosyaları oluşturabilirsiniz. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtımı hakkında ayrıntılı adımlar için bkz. [Izlenecek yol: ClickOnce uygulamasını El Ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).  
   
- Güvenilir uygulama dağıtımı için belirli [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]ve yalnızca birlikte kullanılan [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalar.  
+ Güvenilen uygulama dağıtımı [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]özeldir ve yalnızca [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalarla birlikte kullanılabilir.  
   
-### <a name="sign-the-deployment"></a>Dağıtım oturum  
- Sertifikanızı aldıktan sonra dağıtımınız imzalamak için kullanmanız gerekir. Uygulamanızı kullanarak dağıtıyorsanız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Yayımlama Sihirbazı, bir sertifikayı kendiniz değil belirttiyseniz Sihirbazı otomatik olarak bir test sertifikası sizin için oluşturur. Ayrıca [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Proje Tasarımcısı penceresinde, ancak bir CA tarafından sağlanan bir sertifika sağlamak için.  Ayrıca bkz: [nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](https://msdn.microsoft.com/library/31kztyey\(v=vs.110\)) veya [nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](https://msdn.microsoft.com/library/31kztyey\(v=vs.110\)).  
+### <a name="sign-the-deployment"></a>Dağıtımı imzala  
+ Sertifikanızı aldıktan sonra dağıtımınızı imzalamak için onu kullanmanız gerekir. Uygulamanızı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Yayımlama Sihirbazı 'nı kullanarak dağıtıyorsanız, kendiniz bir sertifika belirtmediğinizde sihirbaz sizin için otomatik olarak bir test sertifikası oluşturacaktır. Ayrıca, CA tarafından sağlanmış bir sertifika sağlamak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje Tasarımcısı penceresini de kullanabilirsiniz.  Ayrıca bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](https://msdn.microsoft.com/library/31kztyey\(v=vs.110\)) veya [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](https://msdn.microsoft.com/library/31kztyey\(v=vs.110\)).  
   
 > [!CAUTION]
-> Uygulama bir test sertifikası ile dağıtılması önermiyoruz.  
+> Uygulamanın bir test sertifikası ile dağıtılmasını önermiyoruz.  
   
- Ayrıca, uygulama Mage.exe veya MageUI.exe SDK araçlarını kullanarak da oturum açabilirsiniz. Daha fazla bilgi için [izlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Dağıtım imzalama ile ilgili komut satırı seçeneklerinin tam listesi için bkz. [Mage.exe (bildirim üretme ve düzenleme aracı)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1).  
+ Mage. exe veya MageUI. exe SDK araçlarını kullanarak da uygulamayı imzalayabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: ClickOnce uygulamasını El Ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Dağıtım imzalama ile ilgili komut satırı seçeneklerinin tam listesi için, bkz. [Mage. exe (bildirim oluşturma ve düzenleme aracı)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1).  
   
-### <a name="publish-the-application"></a>Uygulama yayımlama  
- Oturum açmış olan hemen sonra [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bildirimleri, uygulama, yükleme konumunuz için yayımlamaya hazır. Yükleme konumu, bir Web sunucusu, bir dosya paylaşımına veya yerel disk olabilir. Bir istemci, dağıtım bildirimini ilk kez eriştiğinde, güven yöneticisi seçmelisiniz olmadığını [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama authorities veya daha yüksek bir güven düzeyinde bir yüklü çalışmak için güvenilir yayımcı. Güven Yöneticisi depolamak karşılaştırarak dağıtım istemcinin güvenilir yayımcı olarak depolanan sertifikaları imzalamak için kullanılan sertifikanın bu seçenek bulunur. Güven Yöneticisi bir eşleşme bulduğunda, uygulamanın yüksek güven ile çalışır.  
+### <a name="publish-the-application"></a>Uygulamayı yayımlama  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bildirimlerinizi imzaladıktan hemen sonra, uygulama, yüklemenin konumuna yayımlamaya hazırız. Yükleme konumu bir Web sunucusu, bir dosya paylaşma veya yerel disk olabilir. İstemci dağıtım bildirimine ilk kez eriştiğinde, güven Yöneticisi [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamasına, yüklü bir güvenilen yayımcı tarafından daha yüksek bir güven düzeyinde çalışıp çalışmadığını seçmelidir. Güven Yöneticisi, dağıtımı imzalamak için kullanılan sertifikayı istemcinin güvenilen yayımcı deposunda depolanan sertifikalarla karşılaştırarak bu seçeneği tercih yapar. Güven Yöneticisi bir eşleşme bulursa, uygulama yüksek güvenle çalışır.  
   
-## <a name="trusted-application-deployment-and-permission-elevation"></a>Güvenilir uygulama dağıtımı ve izin yükseltme  
- Geçerli yayımcı güvenilen bir yayımcı değilse, güven yöneticisi izin yükseltilmesi uygulamanızı yükseltilmiş izinleri vermek izinli olup olmadığını istediği hakkında kullanıcıyı sorgulamak için kullanır. Ancak, izin yükseltilmesi yönetici tarafından devre dışı bırakılırsa, uygulamayı çalıştırma izni alınamıyor. Uygulama çalışmaz ve kullanıcıya bildirim görüntülenir. İzin yükseltilmesi hakkında daha fazla bilgi için bkz: [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
+## <a name="trusted-application-deployment-and-permission-elevation"></a>Güvenilen uygulama dağıtımı ve Izin yükseltme  
+ Geçerli yayımcı güvenilen bir yayımcı değilse, güven Yöneticisi, uygulamanın yükseltilmiş izinlere izin verip vermediği hakkında kullanıcıyı sorgulamak için Izin yükseltmeyi kullanır. İzin yükseltme, yönetici tarafından devre dışı bırakılmışsa, uygulama çalıştırmak için izin alamaz. Uygulama çalıştırılmaz ve kullanıcıya hiçbir bildirim gösterilmez. Izin yükseltme hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
   
-## <a name="limitations-of-trusted-application-deployment"></a>Güvenilir uygulama dağıtımı sınırlamaları  
- Güvenilir uygulama dağıtımı için yükseltilmiş güven kazandırmak için kullanabileceğiniz [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Web üzerinden veya bir kurumsal dosya paylaşımını aracılığıyla dağıtılan uygulamalar. Güvenilir uygulama dağıtımı için kullanmak zorunda değilsiniz [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] CD üzerinde varsayılan olarak, bu uygulamaların tam güven verildiğinden, dağıtılmış uygulamalar.  
+## <a name="limitations-of-trusted-application-deployment"></a>Güvenilen uygulama dağıtımının sınırlamaları  
+ Güvenilen uygulama dağıtımını, Web üzerinde dağıtılan [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalara veya bir kurumsal dosya paylaşımından yükseltilmiş güven sağlamak için kullanabilirsiniz. Bir CD üzerinde dağıtılan [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalar için güvenilir uygulama dağıtımı kullanmanız gerekmez, çünkü varsayılan olarak bu uygulamalara tam güven verilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Mage.exe (bildirim üretme ve düzenleme aracı)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)   
+ [Mage. exe (bildirim oluşturma ve düzenleme aracı)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)   
  [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)

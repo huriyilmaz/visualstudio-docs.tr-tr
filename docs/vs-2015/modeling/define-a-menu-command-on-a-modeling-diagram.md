@@ -11,17 +11,17 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 87acbb53fd8fe5eae744aa4ef72c808da8eb6642
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23ba1a6900559d7ee13639bb1da696127e47e536
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663477"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299263"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>Modelleme diyagramında menü komutu tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri tanımlayabilirsiniz. Menü komutunun, Diyagram üzerindeki herhangi bir öğenin kısayol menüsünde görüntülenip görüntülenmeyeceğini ve etkin olduğunu denetleyebilir ve Kullanıcı menü öğesini seçtiğinde çalışan bir kod yazabilirsiniz. Bu uzantıları bir Visual Studio Tümleştirme Uzantısı 'na ([VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
+Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri tanımlayabilirsiniz. Menü komutunun, Diyagram üzerindeki herhangi bir öğenin kısayol menüsünde görüntülenip görüntülenmeyeceğini ve etkin olduğunu denetleyebilir ve Kullanıcı menü öğesini seçtiğinde çalışan bir kod yazabilirsiniz. Bu uzantıları bir Visual Studio Tümleştirme Uzantısı 'na ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
  [Gereksinimlere](../modeling/extend-uml-models-and-diagrams.md#Requirements)bakın.
@@ -47,7 +47,7 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
 4. F5 tuşuna basarak menü komutunu test edin. Daha fazla bilgi için, bkz. [menü komutunu yürütme](#Executing).
 
-5. Projeniz tarafından oluşturulan dosya **sepeti \\ \* \\ \*. vsix** dosyasını kopyalayarak başka bir bilgisayara menü komutunu yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
+5. Projeniz tarafından oluşturulan dosya **sepeti\\\*\\\*. vsix** dosyasını kopyalayarak başka bir bilgisayara menü komutunu yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
 
    Alternatif yordam aşağıda verilmiştir:
 
@@ -67,10 +67,10 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
    |                                                                                                    Başvuru                                                                                                    |                                                                                                  Bunu yapmanıza izin verir                                                                                                  |
    |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                                                                                        System. ComponentModel. Composition                                                                                        |                                         [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)kullanarak bileşenleri tanımlayın.                                          |
-   |                                                                                      Microsoft. VisualStudio. Uml. Interfaces                                                                                      |                                                                                        Model öğelerinin özelliklerini okuyun ve değiştirin.                                                                                         |
+   |                                                                                        System.ComponentModel.Composition                                                                                        |                                         [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)kullanarak bileşenleri tanımlayın.                                          |
+   |                                                                                      Microsoft.VisualStudio.Uml.Interfaces                                                                                      |                                                                                        Model öğelerinin özelliklerini okuyun ve değiştirin.                                                                                         |
    |                                                                             Microsoft. VisualStudio. mimari Turetools. Extensibility                                                                              |                                                                                      Model öğeleri oluşturun, diyagramlarda şekilleri değiştirin.                                                                                       |
-   |                                                                                  Microsoft. VisualStudio. model. SDK. sürümünüze                                                                                  | Model olay işleyicilerini tanımlayın.<br /><br /> Modelinizdeki değişiklikler serisini yalıtır. Daha fazla bilgi için bkz. [işlemleri kullanarak UML model güncelleştirmelerini bağlama](../modeling/link-uml-model-updates-by-using-transactions.md). |
+   |                                                                                  Microsoft.VisualStudio.Modeling.Sdk.[version]                                                                                  | Model olay işleyicilerini tanımlayın.<br /><br /> Modelinizdeki değişiklikler serisini yalıtır. Daha fazla bilgi için bkz. [işlemleri kullanarak UML model güncelleştirmelerini bağlama](../modeling/link-uml-model-updates-by-using-transactions.md). |
    |                                                            Microsoft. VisualStudio. model. SDK. diyagramlar. sürümünüze<br /><br /> (her zaman gerekli değil)                                                             |                                                                                   Hareket işleyicileri için ek Diyagram öğelerine erişin.                                                                                   |
    | Microsoft. VisualStudio. mimari Turetools. Extensibility. Layer<br /><br /> Yalnızca Katman diyagramlarındaki komutlar için gereklidir. Daha fazla bilgi için bkz. [Katman diyagramlarını genişletme](../modeling/extend-layer-diagrams.md). |                                                                                             Bir katman diyagramında komutları tanımlayın.                                                                                              |
 
@@ -160,19 +160,19 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
     3. **Varlıklar** sekmesinde **Yeni**' yi seçin ve iletişim kutusunda, şunu ayarlayın:
 
-         @No__t_1**MEF bileşeni** **yazın**
+          = **MEF bileşeni** **yazın**
 
-         **Kaynak**  = **geçerli çözümdeki bir proje**
+         **Kaynak** = **geçerli çözümdeki bir proje**
 
-         *Sınıf kitaplığı projenizden* **Proje**  = 
+         *Sınıf kitaplığı projenizden* **Proje** = 
 
 ## <a name="Implementing"></a>Menü komutunu uygulama
- Menü komut sınıfı <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> için gerekli yöntemleri uygular.
+ Menü komut sınıfı <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension>için gerekli yöntemleri uygular.
 
 |||
 |-|-|
 |`string Text { get; }`|Menü öğesinin etiketini döndürün.|
-|`void QueryStatus(IMenuCommand command);`|Kullanıcı diyagramda sağ tıkladığında çağırılır.<br /><br /> Bu yöntem modeli değiştirmemelidir.<br /><br /> Komutun görünmesini ve etkinleştirilmesini isteyip istemediğinizi öğrenmek için `DiagramContext.CurrentDiagram.SelectedShapes` kullanın.<br /><br /> Kurmak<br /><br /> Kullanıcı diyagramda sağ tıkladığında komutun menüde görünmesi gerekiyorsa `true` -    `command.Visible`<br />kullanıcının menüdeki komuta tıkla, `true` `command.Enabled` -   <br />Menü etiketini dinamik olarak ayarlamak için `command.Text` -   |
+|`void QueryStatus(IMenuCommand command);`|Kullanıcı diyagramda sağ tıkladığında çağırılır.<br /><br /> Bu yöntem modeli değiştirmemelidir.<br /><br /> Komutun görünmesini ve etkinleştirilmesini isteyip istemediğinizi öğrenmek için `DiagramContext.CurrentDiagram.SelectedShapes` kullanın.<br /><br /> Kurmak<br /><br /> Kullanıcı diyagramda sağ tıkladığında komutun menüde görünmesi gerekiyorsa `true` -   `command.Visible`<br />kullanıcının menüdeki komuta tıkla, `true` `command.Enabled` -   <br />Menü etiketini dinamik olarak ayarlamak için `command.Text` -   |
 |`void Execute (IMenuCommand command);`|Görünür ve etkinse Kullanıcı menü öğesine tıkladığında çağırılır.|
 
 ### <a name="accessing-the-model-in-code"></a>Koddaki modele erişme
@@ -184,7 +184,7 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
  ...
 
- @No__t_0 bildirimi, metotlarda diyagrama, geçerli seçime ve modele erişen kod yazmanıza olanak tanır:
+ `IDiagramContext` bildirimi, metotlarda diyagrama, geçerli seçime ve modele erişen kod yazmanıza olanak tanır:
 
 ```
 IDiagram diagram = this.DiagramContext.CurrentDiagram;
@@ -222,7 +222,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - Birden çok projeniz varsa, VSıX projesinin çözümün başlangıç projesi olarak ayarlandığından emin olun.
 
-    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tam yol adı olduğundan emin olun:
+    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]tam yol adı olduğundan emin olun:
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -234,9 +234,9 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - Menü komut projesi, VSıX projesindeki **kaynak. Extensions. manifest** içindeki **VARLıKLAR** sekmesinde bir MEF bileşeni olarak listelenir.
 
-    - @No__t_0 ve `Export` özniteliklerinin parametreleri geçerlidir.
+    - `Import` ve `Export` özniteliklerinin parametreleri geçerlidir.
 
-    - @No__t_0 yöntemi `command` ayarlamadır. `Enabled` veya `false` alanları `Visible`.
+    - `QueryStatus` yöntemi `command`ayarlamadır.`Enabled` veya `false`alanları `Visible`.
 
     - Kullandığınız model diyagramın türü (UML sınıfı, sırası, vb.) menü komut sınıfı özniteliklerinden biri olarak `[ClassDesignerExtension]`, `[SequenceDesignerExtension]` ve bu şekilde listelenir.
 
@@ -249,7 +249,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     1. **Çözüm Gezgini**, VSIX projesinin kısayol menüsünde **klasörü Windows Gezgini 'nde aç**' ı seçin.
 
-    2. Dosya **bin \\ \* bulun \\** _yourproject_ **. vsix**
+    2. Dosya **bin\\\*bulun \\** _yourproject_ **. vsix**
 
 2. **. Vsix** dosyasını, uzantıyı yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
 
@@ -259,7 +259,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
      **Visual Studio Uzantı Yükleyicisi** açılır ve uzantıyı yüklüyor.
 
-4. @No__t_0 başlatın veya yeniden başlatın.
+4. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]başlatın veya yeniden başlatın.
 
 #### <a name="to-uninstall-an-extension"></a>Bir uzantıyı kaldırmak için
 
@@ -271,7 +271,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
    Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı öğesinden silerek uzantıyı kaldırabilirsiniz:
 
-   *% LocalAppData%* **\Local\microsoft\visualstudio \\ [sürüm] \Extensions**
+   *% LocalAppData%* **\Local\microsoft\visualstudio\\[sürüm] \Extensions**
 
 ## <a name="MenuExample"></a>Örneğinde
  Aşağıdaki örnek, bir sınıf diyagramında iki öğenin adlarını değiş tokuş edecek bir menü komutu için kodu gösterir. Bu kodun bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı projesinde oluşturulması ve önceki bölümlerde açıklandığı gibi yüklenmesi gerekir.
@@ -363,4 +363,4 @@ namespace SwapClassNames
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Modelleme uzantısı tanımlama ve YÜKLEMEYI](../modeling/define-and-install-a-modeling-extension.md) [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) [Modelleme diyagramında hareket işleyicisi tanımlama bir modelleme diyagramı](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [](../modeling/define-a-custom-modeling-toolbox-item.md) [](../modeling/define-validation-constraints-for-uml-models.md) [ ](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)UML API 'si [programlama ile](../modeling/programming-with-the-uml-api.md) UML API programlamayı kullanarak UML sıralı diyagramlar [örnek: bir UML diyagramında şekilleri hizalamak için komutu](http://go.microsoft.com/fwlink/?LinkID=213809)
+ [Modelleme uzantısı tanımlama ve](../modeling/define-and-install-a-modeling-extension.md) oluşturma [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) [modelleme diyagramı üzerinde bir hareket işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Özel Modelleme Araç kutusu öğesi](../modeling/define-a-custom-modeling-toolbox-item.md) tanımlama UML [modelleri için doğrulama kısıtlamaları](../modeling/define-validation-constraints-for-uml-models.md) tanımlama: UML API 'Si programlama ' i UML [API 'si ile](../modeling/programming-with-the-uml-api.md) kullanarak UML [şeması](https://go.microsoft.com/fwlink/?LinkID=213809) [düzenleme](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)

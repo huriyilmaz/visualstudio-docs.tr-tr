@@ -13,17 +13,17 @@ caps.latest.revision: 48
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: d040353aadbc448b6608cd11fc78a134872fdafa
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a146872561c4be5fe48016c17eb64ad6f854106a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65693572"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298028"
 ---
-# <a name="install-visual-studio-versions-side-by-side"></a>Visual Studio sürümlerini yan yana yükleme
+# <a name="install-visual-studio-versions-side-by-side"></a>Visual Studio Sürümlerini Yan Yana Yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio'nun bu sürümü zaten daha önceki bir sürümün yüklü olduğu bir bilgisayara yükleyebilirsiniz. Bir yükleme hatasıyla karşılaşırsanız, kullanabileceğiniz [günlük toplama aracı](http://go.microsoft.com/fwlink/?LinkId=262077) , sorunları kendiniz çözmek üzere hatalar hakkında bilgi toplamak için.
+Visual Studio'nun bu sürümü zaten daha önceki bir sürümün yüklü olduğu bir bilgisayara yükleyebilirsiniz. Bir yükleme hatasıyla karşılaşırsanız, kullanabileceğiniz [günlük toplama aracı](https://go.microsoft.com/fwlink/?LinkId=262077) , sorunları kendiniz çözmek üzere hatalar hakkında bilgi toplamak için.
 
 > [!NOTE]
 > Yüklemenizi öneririz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bunlar yayımlanan sırada sürümleri. Örneğin, Visual Studio 2015'i yüklemeden önce Visual Studio 2013 yükleyin.
@@ -36,7 +36,7 @@ Visual Studio'nun bu sürümü zaten daha önceki bir sürümün yüklü olduğu
 
 - Bir sürümünü kaldırırsanız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] birden fazla sürümü yüklü olan bir bilgisayarda dosya ilişkilendirmeleri [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tüm sürümler için kaldırılır. Kullanarak bu dosya ilişkilerini yeniden eşleyebilirsiniz **dosya ilişkilerini geri yükle** düğmesini **ortam**, **genel** sayfasının [seçenekleri](../ide/reference/general-environment-options-dialog-box.md) iletişim kutusu.
 
-- Tüm uzantıları uyumlu olmadığından visual Studio uzantıları otomatik olarak yükseltmez. Uzantılar'dan yeniden yüklemeniz gerekir [Visual Studio Market](http://go.microsoft.com/fwlink/?LinkId=178891) veya yazılım yayımcısından.
+- Tüm uzantıları uyumlu olmadığından visual Studio uzantıları otomatik olarak yükseltmez. Uzantılar'dan yeniden yüklemeniz gerekir [Visual Studio Market](https://go.microsoft.com/fwlink/?LinkId=178891) veya yazılım yayımcısından.
 
 ## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET framework sürümleri ve yan yana yüklemeler
 
@@ -51,7 +51,7 @@ Visual Studio'nun bu sürümü zaten daha önceki bir sürümün yüklü olduğu
     |[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]|[Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)|
     |Visual C#|[Uygulama Sayfası, Proje Tasarımcısı (C#)](../ide/reference/application-page-project-designer-csharp.md)|
     |Visual F#|[Projeleri Yapılandırma](https://msdn.microsoft.com/library/a1489abb-6294-4f8f-b71f-2cb126393526)|
-    |C++|[Nasıl yapılır: Hedef Çerçeve ve Platform Araç Kümesini Değiştirme](https://msdn.microsoft.com/library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe)|
+    |C++|[Nasıl Yapılır: Hedef Framework ve Platform Araç Kümesini Değiştirme](https://msdn.microsoft.com/library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe)|
     |[!INCLUDE[jsprjscript](../includes/jsprjscript-md.md)]|[Ortak dil çalışma zamanının önceki bir sürümünde JScript uygulaması çalıştırma](https://msdn.microsoft.com/bbea51b5-ac03-4e6c-b9a6-f487ef63eda5)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.

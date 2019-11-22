@@ -9,12 +9,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d090e5c570eb2700e3493ffd80f256c76d0d52ec
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c1316602d900fb122567b5ad50edf8e7b90c79bd
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669316"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300955"
 ---
 # <a name="xslt-profiler"></a>XSLT Profil Oluşturucusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ XSLT Profiler, XSLT belgelerini geliştirmenize ve hata ayıklamanıza yardımc�
 
  ![XSLT Profil Oluşturucusu](../xml-tools/media/xsltprofilermenu.gif "XSLTProfilerMenu")
 
- XSLT Profiler, ilk olarak Visual Studio 2008 için bir eklenti olarak sunulmuştur. Daha fazla bilgi için [XSLT Profiler for Visual Studio Şubat 08 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkId=142987) sayfasında ilgili kaynaklar bölümüne bakın.
+ XSLT Profiler, ilk olarak Visual Studio 2008 için bir eklenti olarak sunulmuştur. Daha fazla bilgi için [XSLT Profiler for Visual Studio Şubat 08 Community Technology Preview](https://go.microsoft.com/fwlink/?LinkId=142987) sayfasında ilgili kaynaklar bölümüne bakın.
 
 > [!NOTE]
 > Visual Studio 2008 ' den beri bazı görsel öğeler değiştiğinden, bazı ekranlar Visual Studio 2010 ' de bu belgelerde bulunandan farklı görünebilir.

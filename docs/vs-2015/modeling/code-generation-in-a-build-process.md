@@ -12,12 +12,12 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 81c4160ca6d03d55d631cd4dad8c3bce01fa9722
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ae28c59f9c5f19e87b833c90e7dbc6bf3b7497ea
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667872"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297934"
 ---
 # <a name="code-generation-in-a-build-process"></a>Derleme Sürecinde Kod Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ Geliştirme bilgisayarınızda derleme görevlerini etkinleştirmek için, [Visu
 
 - $ (ProgramFiles) \MSBuild\Microsoft\VisualStudio\v *. 0 \ Textşablon oluşturma
 
-  - Microsoft. VisualStudio. Textşablon. SDK. Host. *. 0. dll
+  - Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
 
   - Microsoft.TextTemplating.Build.Tasks.dll
 
@@ -43,15 +43,15 @@ Geliştirme bilgisayarınızda derleme görevlerini etkinleştirmek için, [Visu
 
 - $ (ProgramFiles) \Microsoft Visual Studio *. 0 \ VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
 
-  - Microsoft. VisualStudio. Textşablon. *. 0. dll
+  - Microsoft.VisualStudio.TextTemplating.*.0.dll
 
-  - Microsoft. VisualStudio. Textşablon. Interfaces. *. 0. dll (çeşitli dosyalar)
+  - Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll (several files)
 
-  - Microsoft. VisualStudio. Textşablon. VSHost. *. 0. dll
+  - Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
 
 - $ (ProgramFiles) \Microsoft Visual Studio *. 0 \ Common7\IDE\PublicAssemblies\
 
-  - Microsoft. VisualStudio. Textşablon. model. *. 0. dll
+  - Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
 
 ## <a name="to-edit-the-project-file"></a>Projeyi dosyasını düzenlemek için
 
@@ -67,7 +67,7 @@ Düzenlemeden sonra **yeniden yükle**' yi seçin.
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- veya-
+\- veya -
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -140,7 +140,7 @@ Son işleme adımını özelleştirmediğiniz sürece, herhangi bir dosyanın ü
 
 ## <a name="customizing-the-build-process"></a>Oluşturma işlemini özelleştirme
 
-Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleşir. Dönüşümden önce ve sonra çağrılan görevleri, `$(BeforeTransform)` özellikleri ve `$(AfterTransform)` ayarlayarak tanımlayabilirsiniz:
+Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleşir. Dönüşümden önce ve sonra çağrılan görevleri, `$(BeforeTransform)` özellikleri ve `$(AfterTransform)`ayarlayarak tanımlayabilirsiniz:
 
 ```xml
 <PropertyGroup>
@@ -155,7 +155,7 @@ Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleş
   </Target>
 ```
 
-@No__t_0, dosya listelerine başvurabilirsiniz:
+`AfterTransform`, dosya listelerine başvurabilirsiniz:
 
 - GeneratedFiles - işlem tarafından yazılan dosyaların listesi. Varolan salt okunur dosyaların üzerine yazan bu dosyalar için, %(GeneratedFiles.ReadOnlyFileOverwritten) doğru olacaktır. Bu dosyalar kaynak denetiminden denetlenebilir.
 
@@ -238,7 +238,7 @@ The project folder is: <#= ProjectFolder #>
 
 $(SolutionDir) gibi Visual Studio makroları MSBuild içinde çalışmaz. Bunun yerine, proje özelliklerini kullanabilirsiniz.
 
-Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek, `myLibFolder` adlı bir özelliği tanımlar:
+Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek, `myLibFolder`adlı bir özelliği tanımlar:
 
 ```xml
 <!-- Define a project property, myLibFolder: -->
@@ -263,7 +263,7 @@ Artık derlemede ve ekleme yönergelerinde proje özelliklerini kullanabilirsini
 
  Bu yönergeler, hem MSBuild içinde hem de Visual Studio ana bilgisayarlarında T4parameterValues değerlerini alır.
 
-## <a name="q--a"></a>soru-cevap &
+## <a name="q--a"></a>Soru - Yanıt
 
 **Neden yapı sunucusundaki şablonları dönüştürmek istiyorum? Kodumu iade etmeden önce Visual Studio 'daki şablonları zaten dönüştürtim.**
 
@@ -284,5 +284,5 @@ Artık derlemede ve ekleme yönergelerinde proje özelliklerini kullanabilirsini
 T4 MSbuild şablonundaki rehber oldukça kullanışlıdır: $(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets
 
 - [T4 Metin Şablonu Yazma](../modeling/writing-a-t4-text-template.md)
-- [Visual Studio görselleştirme ve modelleme SDK](http://go.microsoft.com/fwlink/?LinkID=185579)
+- [Visual Studio görselleştirme ve modelleme SDK](https://go.microsoft.com/fwlink/?LinkID=185579)
 - [Oleg Sych: T4 'Yi anlama: MSBuild tümleştirmesi](https://github.com/olegsych/T4Toolbox)

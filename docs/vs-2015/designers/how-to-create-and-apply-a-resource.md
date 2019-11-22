@@ -12,19 +12,19 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0570dcc4b3cc79f2c882d5ddd4f10dc79a21332b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ab048fe69ca89086e9811e5277dccb86aeee6194
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664539"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300866"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Kaynak oluşturma ve uygulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XAML Tasarımcısı öğeler için stiller ve şablonlar, kaynaklar adlı yeniden kullanılabilir varlıklarda depolanır. Stiller, öğe özelliklerini ayarlamanıza ve bu ayarları birden çok öğe arasında tutarlı bir görünüm için yeniden kullanmanıza olanak sağlar. Bir [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) , bir denetimin görünümünü tanımlar ve kaynak olarak da uygulanabilir. Daha fazla bilgi için bkz. [hızlı başlangıç: stil denetimleri](http://go.microsoft.com/fwlink/?LinkID=248239) ve [hızlı başlangıç: denetim şablonları](http://go.microsoft.com/fwlink/?LinkID=247982).
+XAML Tasarımcısı öğeler için stiller ve şablonlar, kaynaklar adlı yeniden kullanılabilir varlıklarda depolanır. Stiller, öğe özelliklerini ayarlamanıza ve bu ayarları birden çok öğe arasında tutarlı bir görünüm için yeniden kullanmanıza olanak sağlar. Bir [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) , bir denetimin görünümünü tanımlar ve kaynak olarak da uygulanabilir. Daha fazla bilgi için bkz. [hızlı başlangıç: stil denetimleri](https://go.microsoft.com/fwlink/?LinkID=248239) ve [hızlı başlangıç: denetim şablonları](https://go.microsoft.com/fwlink/?LinkID=247982).
 
- Mevcut bir özellikten, [stille](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx)veya `ControlTemplate` yeni bir kaynak oluşturduğunuzda **kaynak oluştur** iletişim kutusu, kaynağı uygulama düzeyinde, belge düzeyinde veya öğe düzeyinde tanımlamanızı sağlar. Bu düzeyler, kaynağı nerede kullanacağınızı tespit edebilir. Örneğin, kaynağı öğe düzeyinde tanımlarsanız, kaynak yalnızca sizin oluşturduğunuz öğe için uygulanabilir. Ayrıca, yeniden başka bir projede kullanabileceğiniz ayrı bir dosya olan bir kaynak sözlüğünde kaynağı saklamayı da seçebilirsiniz.
+ Mevcut bir özellikten, [stille](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx)veya `ControlTemplate`yeni bir kaynak oluşturduğunuzda **kaynak oluştur** iletişim kutusu, kaynağı uygulama düzeyinde, belge düzeyinde veya öğe düzeyinde tanımlamanızı sağlar. Bu düzeyler, kaynağı nerede kullanacağınızı tespit edebilir. Örneğin, kaynağı öğe düzeyinde tanımlarsanız, kaynak yalnızca sizin oluşturduğunuz öğe için uygulanabilir. Ayrıca, yeniden başka bir projede kullanabileceğiniz ayrı bir dosya olan bir kaynak sözlüğünde kaynağı saklamayı da seçebilirsiniz.
 
 ### <a name="to-create-a-new-resource"></a>Yeni bir kaynak oluşturmak için
 

@@ -1,5 +1,5 @@
 ---
-title: MSBuild kullanarak | Microsoft Docs
+title: MSBuild 'i kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,35 +12,35 @@ ms.assetid: 9d38c388-1f64-430e-8f6c-e88bc99a4260
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 887afab85738e33bccd56543772b576e3843fe92
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a1ad59e6d8f4cb88004629b0dfd2cdf0631a7824
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65675221"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297674"
 ---
 # <a name="using-msbuild"></a>MSBuild Kullanma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-MSBuild proje öğeleri oluşturulması, derleme görevleri ve derleme yapılandırmaları için tam olarak açıklayan proje dosyaları oluşturmak için bir iyi tanımlanmış, Genişletilebilir XML biçiminde sağlar.  
+MSBuild, oluşturulacak proje öğelerini tam olarak tanımlayan proje dosyaları oluşturmak, görevleri derlemek ve derleme yapılandırması için iyi tanımlanmış, genişletilebilir XML biçimi sağlar.  
   
- Bir dil proje sistemi Msbuild'i temel alan bir uçtan uca örnek için bkz: IronPython örnek ayrıntılı Bakışında[VSSDK örnekleri](../../misc/vssdk-samples.md).  
+ MSBuild 'e dayalı bir dil projesi sisteminin uçtan uca bir örneği için bkz.[VSSDK örneklerindeki](../../misc/vssdk-samples.md)IronPython örnek derin açıklaması.  
   
 ## <a name="general-msbuild-considerations"></a>Genel MSBuild konuları  
- MSBuild proje dosyaları, örneğin, [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .csproj ve [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .vbproj dosyalarının, oluşturma zamanında kullanılan, ancak tasarım zamanında kullanılan verileri de içerebilir veri içerir. Derleme zamanı verilerin depolanacağı MSBuild temelleri dahil olmak üzere, kullanarak [öğe unsuru (MSBuild)](../../msbuild/item-element-msbuild.md) ve [özellik öğesi (MSBuild)](../../msbuild/property-element-msbuild.md). Proje türü ve tüm ilgili proje alt türleri için belirli veri olan tasarım zamanı veri için rezerve serbest biçimli XML depolanır.  
+ MSBuild proje dosyaları, örneğin, [!INCLUDE[csprcs](../../includes/csprcs-md.md)]. csproj ve [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. vbproj dosyaları, derleme zamanında kullanılan verileri içerir, ancak tasarım zamanında kullanılan verileri de içerebilir. Derleme zamanı verileri, [öğe öğesi (MSBuild)](../../msbuild/item-element-msbuild.md) ve [özellik öğesi (MSBuild)](../../msbuild/property-element-msbuild.md)dahil olmak üzere MSBuild temel öğeleri kullanılarak depolanır. Proje türüne ve ilgili proje alt türlerine özgü veriler olan tasarım zamanı verileri, için ayrılmış serbest biçimli XML 'de depolanır.  
   
- MSBuild, yapılandırma nesneleri için yerel destek yok ancak yapılandırmaya özgü verileri belirtmek için koşullu öznitelikler sağlar. Örneğin:  
+ MSBuild, yapılandırma nesneleri için yerel destek içermez, ancak yapılandırmaya özgü verileri belirtmek için koşullu öznitelikler sağlar. Örneğin:  
   
 ```  
 <OutputDir Condition="'$(Configuration)'=="release'">Bin\MyReleaseConfig</OutputDir>  
 ```  
   
- Koşullu öznitelikleri hakkında daha fazla bilgi için bkz. [koşullu yapıları](../../msbuild/msbuild-conditional-constructs.md).  
+ Koşullu öznitelikler hakkında daha fazla bilgi için bkz. [koşullu yapılar](../../msbuild/msbuild-conditional-constructs.md).  
   
-### <a name="extending-msbuild-for-your-project-type"></a>MSBuild proje türünüz için genişletme  
- MSBuild arabirimleri ve API'leri olan gelecek sürümlerinde değişebilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Bu nedenle, değişikliklere karşı koruma sağladığından, yönetilen paket framework (MPF) sınıflarını kullanacak şekilde akıllıca olur.  
+### <a name="extending-msbuild-for-your-project-type"></a>Proje türü için MSBuild 'i genişletme  
+ MSBuild arabirimleri ve API 'Ler [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]sonraki sürümlerinde değişebilir. Bu nedenle, değişikliklerden koruma sağladığından yönetilen paket çerçevesi (mpf) sınıflarının kullanılması akıllıca olur.  
   
- Projeleri (MPFProj) için yönetilen paket çerçevesini oluşturmak ve yeni proje sistemi yönetmek için yardımcı sınıflar sağlar. Kaynak kod ve derleme yönergelerini bulabilirsiniz [projeler - Visual Studio 2013 için MPF](http://mpfproj12.codeplex.com/).  
+ Projeler için yönetilen paket çerçevesi (MPFProj), yeni proje sistemi oluşturmak ve yönetmek için yardımcı sınıflar sağlar. Kaynak kodunu ve derleme talimatlarını [Projeler Için MPF](https://archive.codeplex.com/?p=mpfproj12)' de bulabilirsiniz-Visual Studio 2013.  
   
  Projeye özgü MPF sınıfları aşağıdaki gibidir:  
   
@@ -52,10 +52,10 @@ MSBuild proje öğeleri oluşturulması, derleme görevleri ve derleme yapıland
 |`Microsoft.VisualStudio.Package.ProjectConfig`|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>|  
 |`Microsoft.VisualStudio.Package.SettingsPage`|<xref:Microsoft.VisualStudio.OLE.Interop.IPropertyPageSite>|  
   
- `Microsoft.VisualStudio.Package.ProjectElement` MSBuild öğeleri için bir sarmalayıcı sınıftır.  
+ `Microsoft.VisualStudio.Package.ProjectElement` sınıfı, MSBuild öğeleri için bir sarmalayıcıdır.  
   
-#### <a name="single-file-generators-vs-msbuild-tasks"></a>Tek dosya oluşturucuları vs. MSBuild Görevleri  
- Tek dosya oluşturucuları-sadece tasarım zamanına kullanılabilip erişilebilir, ancak MSBuild görevleri tasarım zamanı ve derleme zamanı sırasında kullanılabilir. Maksimum esneklik için bu nedenle, dönüştürme ve kod oluşturmak için MSBuild görevleri kullanın. Daha fazla bilgi için [özel Araçlar](../../extensibility/internals/custom-tools.md).  
+#### <a name="single-file-generators-vs-msbuild-tasks"></a>Tek dosya üreteçleri ve MSBuild görevleri karşılaştırması  
+ Tek dosya oluşturucularından yalnızca tasarım zamanında erişilebilir, ancak MSBuild görevleri tasarım zamanında ve derleme zamanında kullanılabilir. Bu nedenle, en yüksek esneklik için, kodu dönüştürmek ve oluşturmak için MSBuild görevlerini kullanın. Daha fazla bilgi için bkz. [özel araçlar](../../extensibility/internals/custom-tools.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MSBuild başvurusu](../../msbuild/msbuild-reference.md)   

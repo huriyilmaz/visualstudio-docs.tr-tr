@@ -13,12 +13,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 51b546e953cae80b7a1871b72a1f0b0613c77342
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 955103b6d28e90321fb45c23825f0c2a25362208
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659329"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301312"
 ---
 # <a name="visualize-code"></a>Kodu görselleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,15 +44,15 @@ Visual Studio 'da görselleştirme ve modelleme araçlarını kullanarak mevcut 
 |**Kodu ve ilişkilerini anlayın:**<br /><br /> Belirli kod parçaları arasındaki ilişkileri eşleyin.<br /><br /> Tüm çözüm için kodunuzdaki ilişkilere genel bakış bölümüne bakın.<br /><br /> **Note**: Bu Visual Studio sürümünde, *bağımlılık grafiğinin*yerine *kod eşleme* terimi kullanılır.|[çözümlerinizin genelinde harita bağımlılıklarını](../modeling/map-dependencies-across-your-solutions.md) -   <br />[uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanın](../modeling/use-code-maps-to-debug-your-applications.md) -   <br />-   [kod Haritası Çözümleyicileri kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)<br />[hata ayıklarken çağrı yığınında eşleme yöntemleri](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md) -   |
 |**Sınıf yapılarını anlayın:**<br /><br /> Koddan sınıf diyagramları oluşturarak bir projedeki sınıfların yapısını görselleştirin.|[Nasıl Yapılır: Projelere Sınıf Diyagramları Ekleme (Sınıf Tasarımcısı)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)|
 |**Üst düzey sistem tasarımını açıkla ve kodu bu tasarıma göre doğrula:**<br /><br /> Katman diyagramları oluşturarak üst düzey sistem tasarımını ve amaçlanan bağımlılıklarını tanıtın. Koddaki bağımlılıkların tasarımla tutarlı kalmasını sağlamak için kodu bu tasarıma karşı doğrulayın.|-   [kodunuzda katman diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [Katman diyagramları: başvuru](../modeling/layer-diagrams-reference.md)<br />-   [Katman diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md)<br />[Katman diyagramları ile kod doğrulama](../modeling/validate-code-with-layer-diagrams.md) -   |
-|**Kullanıcı gereksinimlerini ve mimarisini iletişim kurun:**<br /><br /> Aşağıdaki UML diyagramlarını çizerek yazılım sisteminizin Kullanıcı gereksinimlerini ve mimarisini modelleyin: etkinlik, bileşen, sınıf, sıra ve kullanım örneği.|[uygulamanız için modeller oluşturma](../modeling/create-models-for-your-app.md) -   <br />-   [modeli kullanıcı gereksinimleri](../modeling/model-user-requirements.md)<br />[uygulamanızın mimarisine -    modeli](../modeling/model-your-app-s-architecture.md)|
+|**Kullanıcı gereksinimlerini ve mimarisini iletişim kurun:**<br /><br /> Aşağıdaki UML diyagramlarını çizerek yazılım sisteminizin Kullanıcı gereksinimlerini ve mimarisini modelleyin: etkinlik, bileşen, sınıf, sıra ve kullanım örneği.|[uygulamanız için modeller oluşturma](../modeling/create-models-for-your-app.md) -   <br />-   [modeli kullanıcı gereksinimleri](../modeling/model-user-requirements.md)<br />[uygulamanızın mimarisine -   modeli](../modeling/model-your-app-s-architecture.md)|
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Köprü**|
 |------------------|---------------|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](http://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](http://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Teknik makaleler ve Günlükler**|[MSDN mimarisi Forumu](http://go.microsoft.com/fwlink/?LinkId=201343)|
+|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://go.microsoft.com/fwlink/?LinkID=201340)|
+|**Teknik makaleler ve Günlükler**|[MSDN mimarisi Forumu](https://go.microsoft.com/fwlink/?LinkId=201343)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Senaryo: görselleştirme ve modelleme](../modeling/scenario-change-your-design-using-visualization-and-modeling.md) [çözümleme ve modelleme mimarisini](../modeling/analyze-and-model-your-architecture.md) kullanarak tasarımınızı değiştirme [uygulama modelinize yönelik modeller oluşturma](../modeling/create-models-for-your-app.md) [Kullanıcı gereksinimleri](../modeling/model-user-requirements.md) [modeli uygulamanızın mimarisi](../modeling/model-your-app-s-architecture.md) [kullanım modellerini geliştirme süreci](../modeling/use-models-in-your-development-process.md)
+ [Senaryo: görselleştirme ve modelleme](../modeling/scenario-change-your-design-using-visualization-and-modeling.md) [çözümleme ve modelleme mimarisini](../modeling/analyze-and-model-your-architecture.md) kullanarak tasarımınızı değiştirme [uygulama modelinize yönelik modeller oluşturma](../modeling/create-models-for-your-app.md) [Kullanıcı gereksinimleri](../modeling/model-user-requirements.md) [modeli](../modeling/model-your-app-s-architecture.md) [geliştirme sürecinizdeki uygulamanızın mimarisi kullanım modelleri](../modeling/use-models-in-your-development-process.md)

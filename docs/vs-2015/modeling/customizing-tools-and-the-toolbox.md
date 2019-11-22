@@ -15,12 +15,12 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 757297123bff107c28ced53a14dcdbb94ae56a87
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2a5e2a46a2326c123d6b7b4e85fa29908ede9fc9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654909"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299327"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Araçları ve Araç Kutusunu Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -84,15 +84,15 @@ Editor
 
 3. **Araç kutusu simgesi** özelliğini 16x16 bit eşlem 'e başvuracak şekilde ayarlayın.
 
-     Yeni bir simge tanımlamak istiyorsanız, **Dsl\resources** klasöründe Çözüm Gezgini bir bit eşlem dosyası oluşturun. Dosya aşağıdaki özellik değerlerine sahip olmalıdır: **derleme eylemi** **içerik** = ; **Çıkış dizinine kopyala**  = **kopyalamayın**.
+     Yeni bir simge tanımlamak istiyorsanız, **Dsl\resources** klasöründe Çözüm Gezgini bir bit eşlem dosyası oluşturun. Dosya aşağıdaki özellik değerlerine sahip olmalıdır: **derleme eylemi** **içerik** = ; **Çıkış dizinine kopyala** = **kopyalamayın**.
 
 4. **Bir öğe aracı için:** Bir şekle eşlenen somut bir etki alanı sınıfına başvuracak şekilde aracın **sınıf** özelliğini ayarlayın.
 
      **Bağlayıcı aracı için:** Aracının **bağlantı Oluşturucu** özelliğini, açılan listede sunulan öğelerden birine ayarlayın. Bağlantı oluşturucular, bir bağlayıcıyı bir etki alanı ilişkisiyle eşleştirdiğinizde otomatik olarak oluşturulur. Yakın zamanda bir bağlayıcı oluşturduysanız, normalde ilişkili bağlantı oluşturucuyu seçersiniz.
 
-5. DSL 'yi test etmek için F5 veya CTRL + F5 tuşlarına basın ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] deneysel örneğinde örnek bir model dosyası açın. Yeni araç araç kutusunda görünmelidir. Yeni bir öğe oluşturduğunu doğrulamak için onu diyagrama sürükleyin.
+5. DSL 'yi test etmek için F5 veya CTRL + F5 tuşlarına basın ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde örnek bir model dosyası açın. Yeni araç araç kutusunda görünmelidir. Yeni bir öğe oluşturduğunu doğrulamak için onu diyagrama sürükleyin.
 
-     Araç görünmezse, deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] durdurun. Windows **Başlat** menüsünde **Microsoft Visual Studio 2010 Deneysel örneğini Sıfırla**' yı çalıştırın. @No__t_0**Yapı** menüsünde **çözümü yeniden derle**' ye tıklayın. Ardından DSL 'yi yeniden test edin.
+     Araç görünmezse, deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]durdurun. Windows **Başlat** menüsünde **Microsoft Visual Studio 2010 Deneysel örneğini Sıfırla**' yı çalıştırın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**Yapı** menüsünde **çözümü yeniden derle**' ye tıklayın. Ardından DSL 'yi yeniden test edin.
 
 ## <a name="customizing"></a>Öğe araçlarını özelleştirme
  Varsayılan olarak, araç belirtilen sınıfın tek bir örneğini oluşturur, ancak bunu iki şekilde değiştirebilirsiniz:
@@ -170,12 +170,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
  Bağlantı oluşturucular, etki alanı ilişkisini ve kaynak ve hedef öğeleri belirten bir veya daha fazla bağlantı bağlama yönergesi içerir. Örneğin, görev akışı çözüm şablonunda, **DSL Gezgini**'Nde **CommentReferencesSubjectsBuilder** ' ı görebilirsiniz. Bu bağlantı Oluşturucusu, **commentreferencesilgilileri**adlı bir bağlantı bağlama yönergesi içerir ve bu ad alanı Ilişkisi **commentreferenceskonularıyla**eşlenir. Bu bağlantı bağlama yönergesi, `Comment` etki alanı sınıfına işaret eden bir kaynak rol yönergesi ve `FlowElement` etki alanı sınıfına işaret eden bir hedef rol yönergesi içerir.
 
 ### <a name="using-connection-builders-to-restrict-source-and-target-roles"></a>Kaynak ve hedef rolleri kısıtlamak için bağlantı oluşturucuları kullanma
- Kaynak roldeki veya belirli bir etki alanı ilişkisinin hedef rolündeki belirli sınıfların oluşumunu kısıtlamak için bağlantı oluşturucularını kullanabilirsiniz. Örneğin, başka bir etki alanı sınıfıyla bir etki alanı ilişkisine sahip olan bir temel etki alanı sınıfınız olabilir, ancak taban sınıfın tüm türetilmiş sınıflarının bu ilişkide aynı rollere sahip olmasını istemeyebilirsiniz. Görev akışı **çözümünde, soyut etki alanı sınıfından doğrudan**ve iki somut etki alanı sınıfı (**StartPoint**, **Endpoint**, **MergeBranch**ve **Synchronization**) vardır. dolaylı olarak ondan alınan etki alanı sınıfları (**görev** ve **ObjectInState**). Ayrıca, hem kaynak rolünde hem de hedef rolde **aynı etki alanı** sınıflarını alan bir **akış** başvurusu ilişkisi vardır. Ancak, bir **uç nokta** etki alanı sınıfının bir örneği bir **akış** ilişkisi örneğinin kaynağı olmamalıdır, ya da bir **StartPoint** sınıfının örneği bir **akış** ilişkisi örneğinin hedefi olmalıdır. **FlowBuilder** bağlantı oluşturucusunun, kaynak rolünü (**görev**, **MergeBranch**, **StartPoint**ve **Synchronization**) hangi etki alanı sınıflarının çalabildiğini belirten **Flow** adlı bir bağlantı bağlama yönergesi vardır ve bu hedef rolü (**MergeBranch**, **Endpoint**ve **Synchronization**) oynayabilir.
+ Kaynak roldeki veya belirli bir etki alanı ilişkisinin hedef rolündeki belirli sınıfların oluşumunu kısıtlamak için bağlantı oluşturucularını kullanabilirsiniz. Örneğin, başka bir etki alanı sınıfıyla bir etki alanı ilişkisine sahip olan bir temel etki alanı sınıfınız olabilir, ancak taban sınıfın tüm türetilmiş sınıflarının bu ilişkide aynı rollere sahip olmasını istemeyebilirsiniz. Görev akışı çözümünde, doğrudan soyut etki alanı sınıfından (StartPoint, **uç nokta**, MergeBranch ve eşitleme **), bundan**dolaylı olarak miras alan iki somut etki alanı sınıfı**vardır (** **StartPoint**, Endpoint, **MergeBranch**ve **Synchronization**) **.** Ayrıca, hem kaynak rolünde hem de hedef rolde **aynı etki alanı** sınıflarını alan bir **akış** başvurusu ilişkisi vardır. Ancak, bir **uç nokta** etki alanı sınıfının bir örneği bir **akış** ilişkisi örneğinin kaynağı olmamalıdır, ya da bir **StartPoint** sınıfının örneği bir **akış** ilişkisi örneğinin hedefi olmalıdır. **FlowBuilder** bağlantı oluşturucusunun, kaynak rolünü (**görev**, **MergeBranch**, **StartPoint**ve **Synchronization**) çalabildiğini ve hedef rolünü (**MergeBranch**, **uç nokta**ve **eşitleme**) çalabildiğini belirten **Flow** adlı bir bağlantı bağlama yönergesi vardır.
 
 ### <a name="connection-builders-with-multiple-link-connect-directives"></a>Birden çok bağlantı bağlama yönergesi olan bağlantı oluşturucular
  Bir bağlantı oluşturucusuna birden fazla bağlantı bağlama yönergesi ekleyebilirsiniz. Bu, etki alanı modelinin bazı karmaşıklıklarını gizlemenize ve **araç kutusunun** çok karışık olmasını sağlamanıza yardımcı olabilir. Tek bir bağlantı oluşturucusuna birkaç farklı etki alanı ilişkisi için bağlantı bağlama yönergeleri ekleyebilirsiniz. Ancak, etki alanı ilişkilerini yaklaşık olarak aynı işlevi gerçekleştirirken birleştirmeniz gerekir.
 
- Görev akışı çözümünde **akış** bağlantısı aracı hem **Flow** hem de **objectflow** etki alanı ilişkilerinin örneklerini çizmek için kullanılır. **FlowBuilder** bağlantı Oluşturucu, daha önce açıklanan **Flow** bağlantı bağlama yönergesinin yanı sıra **objectflow**adlı iki bağlantı bağlama yönergesi içerir. Bu yönergeler, **objectinstate** etki alanı sınıfının örnekleri arasında veya bir **ObjectInState** örneğinden bir **görevin**örneğine değil, bir dizi örneğine çizilemeyen bir **objectflow** ilişkisinin bir örneğidir bir **görevin**örnekleri veya bir **görevin** örneğinden **ObjectInState**örneğine. Ancak, bir **akış** ilişkisinin bir örneği bir **görevin**iki örneği arasında çizilebilir. Görev akışı çözümünü derleyip çalıştırırsanız, bir **Objectinstate** örneğinden bir **görevin** örneğine **akış** çizimi için bir **objectflow**örneği oluşturur, ancak iki örnek arasında **akış** çiziyor bir **görev** bir **akış**örneği oluşturur.
+ Görev akışı çözümünde **akış** bağlantısı aracı hem **Flow** hem de **objectflow** etki alanı ilişkilerinin örneklerini çizmek için kullanılır. **FlowBuilder** bağlantı Oluşturucu, daha önce açıklanan **Flow** bağlantı bağlama yönergesinin yanı sıra **objectflow**adlı iki bağlantı bağlama yönergesi içerir. Bu yönergeler, **objectinstate** etki alanı sınıfının örnekleri arasında ya **da bir** **ObjectInState** örneğinden bir görevin örneğine veya **bir görevin bir** örneğinden bir **Objectinstate**örneğine **değil, bir** **objectflow** ilişkisinin bir örneğinin çizildiğini belirtir. Ancak, bir **akış** ilişkisinin bir örneği bir **görevin**iki örneği arasında çizilebilir. Görev akışı çözümünü derleyip çalıştırırsanız, bir **Objectinstate** örneğinden bir **görevin** örneğine **akış** çizimi için bir **objectflow**örneği oluşturur, ancak bir **görevin** iki örneği arasında bir **akış** çizmek bir **akış**örneği oluşturur.
 
 ### <a name="custom-code-for-connection-builders"></a>Bağlantı oluşturucuları için özel kod
  Kullanıcı arabiriminde, bağlantı oluşturucuların farklı tür özelleştirmesini tanımlayan dört onay kutusu vardır:
@@ -249,4 +249,4 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
  ' Hard ' kısıtlamalarını uygulamak için özel kod kullanın, ancak kullanıcıların geçici olarak geçersiz bağlantılar yapıp yapamayacağını göz önünde bulundurmanız gerekir. Olmaları gerekiyorsa, kullanıcılar değişiklikleri kaydetmeye çalıştıklarında bağlantıların doğrulanması için kısıtlamaları değiştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md) [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md) [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) program kodu [devre şemaları örnek DSL](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8) ['de bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md)
+ [Öğe oluşturma ve taşımayı özelleştirme](../modeling/customizing-element-creation-and-movement.md) [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md) [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md) [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md)

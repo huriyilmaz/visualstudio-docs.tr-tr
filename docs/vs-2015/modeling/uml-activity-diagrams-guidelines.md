@@ -15,17 +15,17 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: abcc83a301553ee0c6141502c25903ef2153258b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 692859008891439e4af3d751306bfd3ee6d351e8
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658482"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298990"
 ---
 # <a name="uml-activity-diagrams-guidelines"></a>UML Etkinlik Diyagramları: Yönergeler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da, bir dizi eylem aracılığıyla iş akışı olarak bir iş süreci veya yazılım algoritması betimleyen bir etkinlik diyagramı çizebilirsiniz. Kişiler, yazılım bileşenleri veya cihazlar bu eylemleri gerçekleştirebilir. Video gösterimi için bkz.: [etkinlik diyagramlarını kullanarak Iş Iş akışlarını yakalama](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-4-Capture-Business-Workflows/).
+Visual Studio 'da, bir dizi eylem aracılığıyla iş akışı olarak bir iş süreci veya yazılım algoritması betimleyen bir etkinlik diyagramı çizebilirsiniz. Kişiler, yazılım bileşenleri veya cihazlar bu eylemleri gerçekleştirebilir. Video gösterimi için bkz.: [etkinlik diyagramlarını kullanarak Iş Iş akışlarını yakalama](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-4-capture-business-workflows).
 
  Visual Studio 'nun hangi sürümlerinin bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -93,7 +93,7 @@ Visual Studio 'da, bir dizi eylem aracılığıyla iş akışı olarak bir iş s
 
 - **UML Model Gezgini**' nde aktiviteyi bir pakete sürükleyin.
 
-     \- veya-
+     \- veya -
 
 - **UML Model Gezgini**'nde etkinliğe sağ tıklayın ve **Kes**' e tıklayın. Sonra pakete sağ tıklayıp **Yapıştır**' a tıklayın.
 
@@ -398,7 +398,7 @@ Visual Studio 'da, bir dizi eylem aracılığıyla iş akışı olarak bir iş s
 
 - Giriş veya çıkış sabitlemesine bir açıklama ekleyin.
 
-  - Bu açıklamayı genel bir açıklamadan ayırt etmek için, < \<**dönüştürme**> > veya < \<**seçim**> > ile açıklamayı başlatabilirsiniz.
+  - Bu açıklamayı genel bir açıklamadan ayırt etmek için, <\<**dönüştürme**> > veya <\<**seçim**> > ile açıklamayı başlatabilirsiniz.
 
 - Dönüştürmeyi veya seçimi ayrı bir etkinlik diyagramında ayrıntılı olarak belirtin.
 
@@ -408,7 +408,7 @@ Visual Studio 'da, bir dizi eylem aracılığıyla iş akışı olarak bir iş s
 
 1. Dönüşüm veya seçim akışının açıkladığı yeni bir etkinlik diyagramı oluşturun.
 
-   - **Çözüm Gezgini**, projenize sağ tıklayın, **Ekle**' nin üzerine gelin, **Yeni öğe**' ye tıklayın ve ardından **etkinlik diyagramı**' na tıklayın. Diyagrama dönüşüm veya seçim akışı için uygun bir ad verin. **Ekle**'yi tıklatın.
+   - **Çözüm Gezgini**, projenize sağ tıklayın, **Ekle**' nin üzerine gelin, **Yeni öğe**' ye tıklayın ve ardından **etkinlik diyagramı**' na tıklayın. Diyagrama dönüşüm veya seçim akışı için uygun bir ad verin. **Ekle**'ye tıklayın.
 
 2. Yeni diyagramda:
 
@@ -427,4 +427,4 @@ Visual Studio 'da, bir dizi eylem aracılığıyla iş akışı olarak bir iş s
    Ayrıca bir nesne düğümü için ve tek tek giriş ve çıkış sabitleyicileri için bir seçim tanımlayabilirsiniz. Bir seçim etkinliğini önceki yordamda olarak tanımlayın ve ardından nesne düğümünün veya giriş ya da çıkış PIN 'inin **seçim** özelliğini ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML sıralı diyagramları: başvuru](../modeling/uml-sequence-diagrams-reference.md) [UML Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru UML [kullanım örneği diyagramları:](../modeling/uml-use-case-diagrams-reference.md) başvuru UML [sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) [: başvuru Video: etkinlik diyagramlarını kullanarak Iş akışlarını yakalayın](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-4-Capture-Business-Workflows/)
+ [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML sıralı diyagramları:](../modeling/uml-sequence-diagrams-reference.md) başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru UML [kullanım örneği diyagramları:](../modeling/uml-use-case-diagrams-reference.md) başvuru [UML sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru UML [Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru [video: etkinlik diyagramlarını kullanarak iş iş akışlarını yakalama](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-4-capture-business-workflows)

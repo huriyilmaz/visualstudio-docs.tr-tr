@@ -18,23 +18,23 @@ caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 643be465aab889b1f31e8fa75dba68261444bc31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2f5df9fb04849fce94d1a82748f2fc88f9577667
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68203199"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297431"
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>Hata: Web sunucusu doğru yapılandırılmamış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu hatanın olası nedenleri şunlardır:  
   
-- Farklı bir makineye kopyaladığınız, el ile yeniden adlandırılmış veya taşınmış bir .NET Web uygulamasında hata ayıklamak çalışıyor.  
+- Farklı bir makineye kopyalanmış, el ile yeniden adlandırılan veya taşınan bir .NET Web uygulaması hata ayıklaması yapılmaya çalışılıyor.  
   
-- Yeterli IIS bağlantılarına sahip değil. IIS web sitesi dağıtma hakkında daha fazla bilgi için bkz. [bir Web sitesi oluşturma](http://www.iis.net/learn/get-started/getting-started-with-iis/create-a-web-site).  
+- Yeterli sayıda IIS bağlantısı yok. Web sitesini IIS 'ye dağıtma hakkında daha fazla bilgi için bkz. [Web sitesi oluşturma](https://docs.microsoft.com/iis/get-started/getting-started-with-iis/create-a-web-site).  
   
-- Bir ASP.NET uygulamasında hata ayıklamak çalışıyorsanız, bkz. Lütfen [IIS yayımlama](https://docs.asp.net/en/latest/publishing/iis.html) IIS 8 veya sonraki bir sürümünü çalıştıran bir uzak bilgisayara dağıtma hakkında yönergeler için veya [Uzak IIS 7.5bilgisayardauzaktanhataayıklamaASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) IIS 7.5 çalıştıran bir uzak bilgisayara dağıtma hakkında yönergeler için.  
+- Bir ASP.NET uygulamasında hata ayıklamaya çalışıyorsanız, IIS 7,5 çalıştıran uzak bir bilgisayara dağıtmaya ilişkin yönergeler için IIS 8 veya üzeri çalıştıran uzak bir bilgisayara dağıtma veya [uzak bır ııs 7,5 bilgisayarında uzaktan hata ayıklama ASP.net](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) ile ilgili yönergeler için bkz. [IIS 'de yayımlama](https://docs.asp.net/en/latest/publishing/iis.html) .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 534af8da414cb3b9cc0dd786f7b79abe00e2ed66
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a13aeeb3394ee6b8896376c0e7d520b90fb56fa6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606883"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302827"
 ---
 # <a name="using-the-legacy-activity-designer"></a>Eski Etkinlik Tasarımcısını Kullanma
-Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] etkinlik tasarımcısının nasıl kullanılacağı açıklanmaktadır. @No__t_0 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflerken eski tasarımcıyı kullanın.
+Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]etkinlik tasarımcısının nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflerken eski tasarımcıyı kullanın.
 
  Etkinlik Tasarımcısı kendi özel etkinliklerinizi oluşturmanıza olanak sağlar.
 
@@ -49,12 +49,12 @@ Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] etkinlik tasarımcısı
 |Özellik|Açıklamalar|
 |--------------|--------------|
 |**Ad**|Etkinliğin adı.|
-|**Temel sınıf**|Etkinliğin türetildiği temel sınıf. Varsayılan temel sınıf [SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020)'dir. **Özellikler** penceresinde, farklı bir temel sınıf **üç nokta** ( **...]** simgesini tıklayarak bir [.NET türü seçin iletişim kutusunda (eski)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md)bir temel sınıf seçin.|
+|**Temel sınıf**|Etkinliğin türetildiği temel sınıf. Varsayılan temel sınıf [SequenceActivity](https://go.microsoft.com/fwlink?LinkID=65020)'dir. **Özellikler** penceresinde, farklı bir temel sınıf **üç nokta** ( **...]** simgesini tıklayarak bir [.NET türü seçin iletişim kutusunda (eski)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md)bir temel sınıf seçin.|
 |**Açıklama**|Etkinliğin Kullanıcı tanımlı açıklaması.|
-|**Etkinletir**|Etkinlik yürütmeyi ve doğrulamayı etkinleştirmek için varsayılan olarak **true** olarak ayarlayın. Etkinlik yürütmeyi ve doğrulamayı devre dışı bırakmak için **false** olarak ayarlayın. Etkinlik yürütme ve doğrulama hakkında daha fazla bilgi için bkz. [Iş akışı etkinliklerini geliştirme](http://go.microsoft.com/fwlink?LinkID=65024).|
+|**Etkinletir**|Etkinlik yürütmeyi ve doğrulamayı etkinleştirmek için varsayılan olarak **true** olarak ayarlayın. Etkinlik yürütmeyi ve doğrulamayı devre dışı bırakmak için **false** olarak ayarlayın. Etkinlik yürütme ve doğrulama hakkında daha fazla bilgi için bkz. [Iş akışı etkinliklerini geliştirme](https://go.microsoft.com/fwlink?LinkID=65024).|
 
 ## <a name="adding-child-activities"></a>Alt etkinlikler ekleme
  Araç kutusundan alt etkinlikleri tasarlamakta olduğunuz etkinliğe sürükleyebilirsiniz. Ardından, her bir alt etkinliği Özellik tarayıcısını kullanarak yapılandırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Özel etkinlikler oluşturma](http://go.microsoft.com/fwlink?LinkID=65021) [Iş akışı etkinliklerini geliştirme](http://go.microsoft.com/fwlink?LinkID=65024) [eski Iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md) [özel etkinlikler örnek](http://go.microsoft.com/fwlink?LinkID=65022) [nasıl yapılır: eski iş akışı Tasarımcısı kullanarak iş akışı etkinlik kitaplığı (eski) oluşturma](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md) [ ](../workflow-designer/using-the-legacy-workflow-designer.md)
+ [Özel etkinlikler oluşturma](https://go.microsoft.com/fwlink?LinkID=65021) [Iş akışı etkinliklerini geliştirme](https://go.microsoft.com/fwlink?LinkID=65024) [eski Iş akışı etkinlikleri](../workflow-designer/legacy-workflow-activities.md) [özel etkinlikler örnek](https://go.microsoft.com/fwlink?LinkID=65022) nasıl yapılır: [eski iş akışı Tasarımcısı kullanarak](../workflow-designer/using-the-legacy-workflow-designer.md) [iş akışı etkinlik kitaplığı (eski) oluşturma](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)

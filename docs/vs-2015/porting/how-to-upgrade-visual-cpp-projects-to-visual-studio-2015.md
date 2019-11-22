@@ -12,14 +12,14 @@ caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: c998433ca96c46f6a24b75aec5d3a2a95912b786
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b33b1b47ad4c32aabe09aae5a66fe3f02aeb1487
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823286"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300380"
 ---
-# <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>Nasıl yapılır: Visual C++ Projelerini Visual Studio 2015'e Yükseltme
+# <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>Nasıl Yapılır: Visual C++ Projelerini Visual Studio 2015'e Yükseltme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 2017 için kullanılabileceği en son belgeler için bkz [Visual C++ taşıma ve yükseltme Kılavuzu](https://docs.microsoft.com/cpp/porting/visual-cpp-porting-and-upgrading-guide).
@@ -51,7 +51,7 @@ Visual Studio'nun önceki bir sürümde oluşturulmuş bir Visual C++ projesini 
 - İçin [!INCLUDE[cppcli](../includes/cppcli-md.md)] projeler, .NET Framework 4.5.2 TargetFrameworkVersion değiştirir.
 
 ## <a name="continuing-to-work-with-a-custom-platformtoolset"></a>Özel PlatformToolset ile çalışmaya devam etmesini
- Özel PlatformToolset ile çalışmaya devam etmek isteyip istemediğinizi [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)], araç takımı x x86 %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ altında bulunmalıdır makine, veya % ProgramFiles (x86)%\MSBuild\ altında X x64 Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ makine. Özel PlatformToolset oluşturma hakkında daha fazla bilgi için bkz: [yerel C++ çoklu sürüm desteğinin](http://go.microsoft.com/fwlink/?LinkId=248587) Visual C++ Team blogunda.
+ Özel PlatformToolset ile çalışmaya devam etmek isteyip istemediğinizi [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)], araç takımı x x86 %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ altında bulunmalıdır makine, veya % ProgramFiles (x86)%\MSBuild\ altında X x64 Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ makine. Özel PlatformToolset oluşturma hakkında daha fazla bilgi için bkz: [yerel C++ çoklu sürüm desteğinin](https://go.microsoft.com/fwlink/?LinkId=248587) Visual C++ Team blogunda.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual C++ taşıma ve yükseltme Kılavuzu](https://msdn.microsoft.com/library/f5fbcc3d-aa72-41a6-ad9a-a706af2166fb) [taşıma, geçirme ve Visual Studio projelerini yükseltme](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)

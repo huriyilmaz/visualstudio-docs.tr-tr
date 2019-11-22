@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: edf9eaee512eda7439d1beea7303cd0e74b27178
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 83606b56e6509f1db77b590ec44d991ef97cf82e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661032"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298162"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
@@ -24,7 +24,7 @@ Bir geliştirme projesinde modelleri etkin bir şekilde kullanmak için, takım 
 
 Bir projede veya alt projede hızlı bir şekilde başlamak için, seçtiğiniz proje yapısını izleyen bir proje şablonu olması yararlı olur. Bu konu, böyle bir şablonun nasıl oluşturulacağını ve kullanılacağını açıklar.
 
-Bu konu, birkaç takım üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığınızı ve belki de birçok takıma sahip olduğunu varsayar. Projenin kodu ve modelleri [!INCLUDE[esprtfs](../includes/esprtfs-md.md)] gibi bir kaynak denetimi sisteminde depolanır. En az bazı takım üyeleri, model geliştirmek için Visual Studio kullanır ve diğer takım üyeleri diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilir.
+Bu konu, birkaç takım üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığınızı ve belki de birçok takıma sahip olduğunu varsayar. Projenin kodu ve modelleri [!INCLUDE[esprtfs](../includes/esprtfs-md.md)]gibi bir kaynak denetimi sisteminde depolanır. En az bazı takım üyeleri, model geliştirmek için Visual Studio kullanır ve diğer takım üyeleri diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilir.
 
 Hangi Visual Studio sürümlerinin her bir aracı ve modelleme özelliğini desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -34,7 +34,7 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
 #### <a name="to-divide-an-application-into-layers"></a>Bir uygulamayı katmanlara bölmek için
 
-1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](http://go.microsoft.com/fwlink/?LinkId=196681)bölümünde açıklanmaktadır.
+1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](https://go.microsoft.com/fwlink/?LinkId=196681)bölümünde açıklanmaktadır.
 
 2. Mimari çözümünü çağıracağız bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü oluşturun. Bu çözüm, sistemin genel tasarımını oluşturmak için kullanılacaktır. Modeller içerir, ancak kod içermez.
 
@@ -100,7 +100,7 @@ Uygulamada, tüm Visual Studio çözümlerinizi aynı anda oluşturmayacak, anca
 
 #### <a name="to-create-a-solution-template"></a>Bir çözüm şablonu oluşturmak için
 
-1. Bunu yapmadıysanız, [şablonu dışarı aktarma Sihirbazı 'Nı indirin ve yükleyin](http://go.microsoft.com/fwlink/?LinkId=196686).
+1. Bunu yapmadıysanız, [şablonu dışarı aktarma Sihirbazı 'Nı indirin ve yükleyin](https://go.microsoft.com/fwlink/?LinkId=196686).
 
 2. Gelecekteki projeler için başlangıç noktası olarak kullanmak istediğiniz çözüm yapısını oluşturun.
 
@@ -109,15 +109,15 @@ Uygulamada, tüm Visual Studio çözümlerinizi aynı anda oluşturmayacak, anca
 4. Sihirbazdaki yönergeleri izleyerek, şablona dahil etmek istediğiniz projeleri seçin, şablon için bir ad ve açıklama girin ve bir çıkış konumu belirtin.
 
 > [!NOTE]
-> Bu konudaki malzeme, en değerli uzmanlar (MVP), Microsoft Hizmetleri ve Visual Studio arasında işbirliği olan Visual Studio ALM derecelendirmeleri tarafından yazılmış, Visual Studio mimari araç kılavuzlarından ve paraphrased soyutlanmaktadır. ürün ekibi ve yazıcılar. [Tüm rehberlik paketini indirmek için buraya tıklayın.](http://go.microsoft.com/fwlink/?LinkID=191984)
+> Bu konudaki malzeme, en değerli uzmanlar (MVP), Microsoft Hizmetleri ve Visual Studio arasında işbirliği olan Visual Studio ALM derecelendirmeleri tarafından yazılmış, Visual Studio mimari araç kılavuzlarından ve paraphrased soyutlanmaktadır. ürün ekibi ve yazıcılar. [Tüm rehberlik paketini indirmek için buraya tıklayın.](https://go.microsoft.com/fwlink/?LinkID=191984)
 
 ## <a name="related-materials"></a>İlgili malzemeler
 
-[Modellerinizi organize etme ve yönetme](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-9-Organizing-and-Managing-Your-Models/) -Clint Edmondson 'a göre video.
+[Modellerinizi organize etme ve yönetme](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models) -Clint Edmondson 'a göre video.
 
 [Visual Studio mimarisi araç Kılavuzu](../modeling/visual-studio-architecture-tooling-guidance.md) – bir takımda modelleri yönetme hakkında daha fazla rehberlik
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-[Sürüm denetimi altındaki modelleri ve diyagramları yönetin](../modeling/manage-models-and-diagrams-under-version-control.md) 
+[Sürüm denetimi altındaki modelleri ve diyagramları yönetin](../modeling/manage-models-and-diagrams-under-version-control.md)
 [geliştirme sürecinizdeki modelleri kullanın](../modeling/use-models-in-your-development-process.md)

@@ -11,12 +11,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 838f2d4d01372cf99d898c4e0d6584bb838c4f9b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67d489b1446e7205d72b53e160a8c7ca87f216d7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655272"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292329"
 ---
 # <a name="add-stereotypes-to-uml-model-elements"></a>UML model öğelerine stereotipler ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -63,15 +63,15 @@ UML model öğesine açıklama eklemek ve özelleştirilmiş özellikler sağlam
 
     - Bir UML sınıf diyagramında, bir öğe için araca tıklayın ve sonra diyagramdaki paketin içine tıklayın.
 
-         \- veya-
+         \- veya -
 
     - UML Model Gezgini ' nde pakete sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından bir öğe türüne tıklayın.
 
-         \- veya-
+         \- veya -
 
     - UML Model Gezgini ' nde, varolan bir öğeyi pakete sürükleyin.
 
-         \- veya-
+         \- veya -
 
     - Bir diyagramı pakete bağlayın ve sonra diyagram içinde öğeleri oluşturun.
 
@@ -82,4 +82,5 @@ UML model öğesine açıklama eklemek ve özelleştirilmiş özellikler sağlam
          Bunu yalnızca bazı diyagram türleriyle yapabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [UML genişletmek için bir profil tanımlama](../modeling/define-a-profile-to-extend-uml.md) [profiller ve Stereotipler modelleme ve Stereotipler](../modeling/customize-your-model-with-profiles-and-stereotypes.md) , [paketleri ve ad alanlarını](../modeling/define-packages-and-namespaces.md) [stereotiplere göre Renklendir](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)
+ [UML genişletmek için bir profil tanımlama](../modeling/define-a-profile-to-extend-uml.md) [profilleri ve stereotiplerle modelinizi özelleştirme](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [paketleri ve ad alanlarını tanımlama](../modeling/define-packages-and-namespaces.md)
+

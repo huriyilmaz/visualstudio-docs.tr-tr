@@ -9,12 +9,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9aa08d68da53f54491439da8e35c28db90f4c508
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2f68328fb243c00c43c8ef454f10ad94c7d004a4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662667"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296788"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Birden çok kullanıcı hesabıyla çalışma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,7 +23,7 @@ Birden çok Microsoft hesabınız ve/veya iş veya okul hesabınız varsa, bu ka
 
  Bir makineye birden çok hesap ekledikten sonra, başka bir makinede Visual Studio 'da oturum açarsanız, bu hesap kümesi sizinle dolaşımda olur. Hesap adları dolaşımda değil, kimlik bilgilerinin olmasa da emin olmak önemlidir. Bu nedenle, yeni makinede kaynaklarını ilk kez kullanmaya çalıştığınızda diğer hesapların kimlik bilgilerini girmeniz istenir.
 
- Bu izlenecek yol, Visual Studio 'ya birden çok hesap eklemeyi ve bu hesaplardan erişilebilen kaynakların **bağlı hizmet ekle** iletişim kutusu, **Sunucu Gezgini**ve **Takım Gezgini** gibi yerlerde nasıl yansıtıldığını gösterir. .
+ Bu izlenecek yol, Visual Studio 'ya birden çok hesap eklemeyi ve bu hesaplardan erişilebilen kaynakların **bağlı hizmet ekle** iletişim kutusu, **Sunucu Gezgini**ve **Takım Gezgini**gibi yerlerde yansıtıldığını gösterir.
 
 #### <a name="sign-in-to-visual-studio"></a>Visual Studio’da oturum açma
 
@@ -56,7 +56,7 @@ Birden çok Microsoft hesabınız ve/veya iş veya okul hesabınız varsa, bu ka
 
  ![ASP.NET için kimlik doğrulama iletişim kutusunu değiştirme](../ide/media/vs2015-change-authentication.png "VS2015_change_authentication")
 
- ASP.NET ' de farklı kimlik doğrulama türleri hakkında daha fazla bilgi için, bkz. [Visual Studio 2013 Web projeleri oluşturma](http://www.asp.net/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) (kimlik doğrulama hakkındaki bilgiler hala Visual Studio 2015 için geçerlidir).
+ ASP.NET ' de farklı kimlik doğrulama türleri hakkında daha fazla bilgi için, bkz. [Visual Studio 2013 Web projeleri oluşturma](https://docs.microsoft.com/aspnet/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) (kimlik doğrulama hakkındaki bilgiler hala Visual Studio 2015 için geçerlidir).
 
 ### <a name="access-your-visual-studio-team-services-account"></a>Visual Studio Team Services hesabınıza erişin
  Ana menüden **takım > Team Foundation Server Connect** ' i seçerek **Takım Gezgini** penceresini açın. **Takım projelerini Seç**' e tıklayın ve ardından **Team Foundation Server seçin**' in altındaki liste kutusunda, Visual Studio Team Services hesabınızın URL 'sini görmeniz gerekir. URL 'YI seçtiğinizde, kimlik bilgilerinizi yeniden girmeniz gerekmeden oturumunuz açılır.

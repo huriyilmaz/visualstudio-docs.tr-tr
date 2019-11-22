@@ -12,58 +12,58 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3ae3d35f98b54038b590c2fbaf75d0f1597fd0b3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0312846431f670ae136fdadfc8647c4096348941
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645450"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300132"
 ---
 # <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>Nasıl Yapılır: Visual Studio'da Yazı Tiplerini ve Renkleri Değiştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 'da IDE çerçevesinin ve araç pencerelerinin rengini çeşitli yollarla özelleştirebilirsiniz.
+IDE çerçevesinin ve araç pencerelerinin Visual Studio'da çeşitli şekillerde rengini özelleştirebilirsiniz.
 
 > [!TIP]
-> Kod düzenleyicisinin renklerinin nasıl değiştirileceği hakkında bilgi için bkz. [nasıl yapılır: düzenleyicideki yazı tiplerini ve renkleri değiştirme](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).
+> Kod düzenleyicinin renklerini değiştirme konusunda daha fazla bilgi için bkz: [nasıl yapılır: değişiklik yazı tipleri ve renkler Düzenleyicisi'nde](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).
 
-### <a name="change-the-color-theme-of-the-ide"></a>IDE 'nin renk temasını değiştirme
+### <a name="change-the-color-theme-of-the-ide"></a>IDE'nin renk temasını değiştirme
 
-1. Menü çubuğunda **Araçlar**, **Seçenekler**' i seçin.
+1. Menü çubuğunda, **Araçları**, **seçenekleri**.
 
-2. Seçenekler listesinde **ortam**, **genel**' i seçin.
+2. Seçenekler listesinde seçin **ortam**, **genel**.
 
-3. **Renk teması** listesinde, varsayılan **mavi** tema, **koyu** veya **hafif**seçeneklerinden birini belirleyin.
+3. İçinde **renk teması** ya da varsayılan liste öğesini **mavi** tema **koyu** veya **ışık**.
 
     > [!IMPORTANT]
-    > Bir renk temasını değiştirdiğinizde, IDE 'deki metin varsayılan veya daha önce özelleştirilmiş yazı tiplerine ve boyutlarına geri döner.
+    > Renk teması değiştirdiğinizde, IDE içindeki metin varsayılana veya daha önce yazı tiplerine ve boyutlarına özelleştirilmiş.
     >
-    >  Visual Studio Professional, Visual Studio Premium veya Visual Studio Ultimate sahipseniz, daha önceden tanımlanmış renk temalarını yükleyebilir ve [Visual Studio 2013 renk teması düzenleyicisini](http://visualstudiogallery.msdn.microsoft.com/9e08e5d3-6eb4-4e73-a045-6ea2a5cbdabe)indirip yükleyerek kendinizinkini oluşturabilirsiniz.
+    >  Visual Studio Professional, Visual Studio Premium veya Visual Studio Ultimate varsa, ek öntanımlı Renk temalarını yükleyebilir ve kendi tarafından indirerek ve yükleyerek [Visual Studio 2013 renk teması Düzenleyicisi](https://marketplace.visualstudio.com/items?itemName=MatthewJohnsonMSFT.VisualStudio2013ColorThemeEditor).
 
-### <a name="use-windows-high-contrast-colors"></a>Windows Yüksek Karşıtlık renklerini kullan
+### <a name="use-windows-high-contrast-colors"></a>Windows yüksek karşıtlık renklerini kullan
 
-- Sol alt + sol SHIFT + PRINT Screen tuşlarını seçin.
+- Seçin Sol Alt + Sol Shift + Print Screen tuşlarına.
 
     > [!WARNING]
-    > Bu seçenek, geçerli bilgisayardaki tüm uygulamalar ve Kullanıcı arabirimi için yüksek karşıtlığı ayarlar.
+    > Bu seçenek geçerli bilgisayarda tüm uygulamalar ve UI için yüksek karşıtlık ayarını belirler.
 
 ## <a name="change-ide-fonts"></a>IDE yazı tiplerini değiştirme
- IDE 'deki tüm pencereler ve iletişim kutuları için yazı tipi ve metin boyutunu değiştirebilirsiniz. Yalnızca belirli pencereleri ve diğer metin öğelerini özelleştirmeyi seçebilirsiniz.
+ Tüm pencereler ve iletişim kutuları IDE içindeki yazı tipini ve metin boyutunu değiştirebilirsiniz. Yalnızca belirli pencereleri ve diğer metin öğelerini özelleştirmeyi seçebilirsiniz.
 
-#### <a name="to-change-the-font-and-size-of-all-text-in-the-ide"></a>IDE 'deki tüm metinlerin yazı tipini ve boyutunu değiştirmek için
+#### <a name="to-change-the-font-and-size-of-all-text-in-the-ide"></a>IDE içindeki tüm metin boyutunu ve yazı tipini değiştirmek için
 
-1. Menü çubuğunda **Araçlar**, **Seçenekler**' i seçin.
+1. Menü çubuğunda, **Araçları**, **seçenekleri**.
 
-2. Seçenekler listesinde **ortam**, **yazı tipleri ve renkler**' i seçin.
+2. Seçenekler listesinde seçin **ortam**, **yazı tipleri ve renkler**.
 
-3. **Ayarları göster** listesinde **ortam yazı tipi**' ni seçin.
+3. İçinde **ayarlarını göster** listesinde **ortam yazı tipi**.
 
     > [!TIP]
-    > Yalnızca araç pencerelerinin yazı tipini değiştirmek istiyorsanız, **ayarları göster** listesinde **[tüm metin araç pencereleri]** öğesini seçin.
+    > Yalnızca, araç pencerelerinin yazı tipini değiştirmek isterseniz, **ayarlarını göster** listesinde **[tüm metin aracı Windows]** .
 
-4. **Yazı tipi** listesinde bir yazı tipi seçin.
+4. İçinde **yazı tipi** listesinde, bir yazı tipi seçin.
 
-5. **Boyut** listesinde bir metin boyutu seçin ve sonra **Tamam** düğmesini seçin.
+5. İçinde **boyutu** listesinde, bir metin boyutu seçin ve ardından **Tamam** düğmesi.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Visual Studio 'Nun erişilebilirlik özellikleri](../ide/reference/accessibility-features-of-visual-studio.md) [nasıl yapılır: düzenleyicideki yazı tiplerini ve renkleri değiştirme](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+ [Visual Studio'nun erişilebilirlik özellikleri](../ide/reference/accessibility-features-of-visual-studio.md) [nasıl yapılır: yazı tiplerini ve renkleri Düzenleyicisi'nde değiştirme](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)

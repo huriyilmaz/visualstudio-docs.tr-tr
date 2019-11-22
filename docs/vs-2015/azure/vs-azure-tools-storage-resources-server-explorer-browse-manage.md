@@ -11,18 +11,18 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: 1f2199907ab6a59e329624046079436ca7cd08dd
-ms.sourcegitcommit: 3cc73e74921a9ceb622542e0e263abeebc455c00
+ms.openlocfilehash: 36b2691525eb66bf946317c1bb5254796d5cd639
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624151"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291230"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Sunucu Gezgini'ni kullanarak depolama kaynaklarına göz atma ve bu kaynakları yönetme
 
 [!INCLUDE [storage-try-azure-tools](./includes/storage-try-azure-tools.md)]
 
-## <a name="overview"></a>Genel Bakış
+## <a name="overview"></a>Genel bakış
 
 Microsoft Visual Studio için Azure Araçları'nı yüklediyseniz, depolama hesaplarınızı blob, kuyruk ve tablo verilerini Azure'a görüntüleyebilirsiniz. Azure **depolama** Sunucu Gezgininde yerel depolama öykünücüsü hesabınız ve diğer Azure depolama hesaplarınızı verileri gösterir.
 
@@ -122,7 +122,7 @@ Varsayılan olarak, bir blob geçici bir dizine yüklenir. Blobları belirli bir
 
 Blobları karşıya yüklemek için seçin **Blob karşıya** kapsayıcıya blob kapsayıcı görünümünde görüntülemek için açık olduğunda düğme.
 
-Karşıya yüklenecek bir veya daha fazla dosyaları seçebilirsiniz ve tüm dosya türlerini karşıya yükleyebilirsiniz. **Azure etkinlik günlüğü** penceresi karşıya yükleme ilerlemesini gösterir. Blob veri ile çalışma hakkında daha fazla bilgi için bkz. [. NET'te Azure Blob Depolama kullanma](http://go.microsoft.com/fwlink/p/?LinkId=267911).
+Karşıya yüklenecek bir veya daha fazla dosyaları seçebilirsiniz ve tüm dosya türlerini karşıya yükleyebilirsiniz. **Azure etkinlik günlüğü** penceresi karşıya yükleme ilerlemesini gösterir. Blob veri ile çalışma hakkında daha fazla bilgi için bkz. [. NET'te Azure Blob Depolama kullanma](https://go.microsoft.com/fwlink/p/?LinkId=267911).
 
 ### <a name="to-view-logs-transferred-to-blobs"></a>Blob'lara aktarılan günlükleri görüntülemek için
 
@@ -157,7 +157,7 @@ Aşağıdaki görüntüde, iki ileti içeren bir kuyruk gösterilmektedir:
 
 ![Bir kuyruğu görüntüleme](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC651470.png)
 
-Hizmetleri kuyruk depolama hakkında daha fazla bilgi için bkz: [.NET kullanarak Azure kuyruk depolama ile çalışmaya başlama](http://go.microsoft.com/fwlink/?LinkID=264702). Kuyruk depolama hizmetleri için web hizmeti hakkında bilgi için bkz [kuyruk hizmeti kavramları](http://go.microsoft.com/fwlink/?LinkId=264788). Visual Studio kullanarak bir depolama hizmetleri kuyruğa ileti göndermek nasıl hakkında daha fazla bilgi için bkz. [depolama hizmetleri kuyruğuna iletiler gönderme](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues).
+Hizmetleri kuyruk depolama hakkında daha fazla bilgi için bkz: [.NET kullanarak Azure kuyruk depolama ile çalışmaya başlama](https://go.microsoft.com/fwlink/?LinkID=264702). Kuyruk depolama hizmetleri için web hizmeti hakkında bilgi için bkz [kuyruk hizmeti kavramları](https://go.microsoft.com/fwlink/?LinkId=264788). Visual Studio kullanarak bir depolama hizmetleri kuyruğa ileti göndermek nasıl hakkında daha fazla bilgi için bkz. [depolama hizmetleri kuyruğuna iletiler gönderme](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues).
 
 > [!NOTE]
 > Depolama Hizmetleri kuyruklarına, Azure Service Bus sıralarından farklıdır. Service Bus kuyrukları hakkında daha fazla bilgi için bkz: [Service Bus kuyrukları, konular ve abonelikler](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions).
@@ -185,7 +185,7 @@ Tablo, varlıkları (satırlarda gösterilen) ve özellikleri (sütunları göst
 
 Tablo Tasarımcısı'nda bir varlık (tek satır) ya da bir özellik (tek bir hücre) için kısayol menüsünü açın ve ardından **Düzenle**.
 
-![Tablo varlığı Ekle veya Düzenle](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
+![Tablo varlığı ekleme veya düzenleme](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
 
 Varlıkları tek bir tabloda aynı özellikleri (sütunları) olan gerekli değildir. Görüntüleme ve düzenleme tablo verilerini aşağıdaki kısıtlamaları göz önünde bulundurun:
 
@@ -227,7 +227,7 @@ Geçerli filtre dizesinin aşağıda gösterilmiştir:
 
 ## <a name="refresh-storage-data"></a>Depolama veri yenileme
 
-Sunucu Gezgini bağlanır veya bir depolama hesabından verileri alır, işlem bir dakika kadar son kadar sürebilir. Sunucu Gezgini bağlanamıyorsanız, işlemi zaman aşımına uğrayabilir. Veriler alınır, ancak Visual Studio'nun diğer bölümlerinde çalışmaya devam edebilirsiniz. Çok uzun sürüyorsa işlemi iptal etmek için işaretleyin **Yenilemeyi Durdur** Sunucu Gezgini araç çubuğundan.
+Sunucu Gezgini bağlanır veya bir depolama hesabından verileri alır, işlem bir dakika kadar son kadar sürebilir. Sunucu Gezgini bağlanamıyorsa, işlem zaman aşımına uğrar. Veriler alınırken, Visual Studio 'nun diğer bölümlerinde çalışmaya devam edebilirsiniz. Çok uzun sürüyorsa işlemi iptal etmek için işaretleyin **Yenilemeyi Durdur** Sunucu Gezgini araç çubuğundan.
 
 ### <a name="to-refresh-blob-container-data"></a>BLOB kapsayıcı verileri yenilemek için
 
@@ -264,7 +264,7 @@ Sunucu Gezgini kullanarak depolama hesapları eklemek için iki yolu vardır. Az
 
    ![Bir Azure depolama hesabı oluşturma](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
 
-1. Seçin **oluşturma**.
+1. **Oluştur**’u seçin.
 
 Yeni depolama hesabı görünür **depolama** Çözüm Gezgini'nde listesi.
 
@@ -295,4 +295,4 @@ Sunucu Gezgini'nden bir depolama hesabı silerseniz, depolama hesabınıza veya 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Azure Depolama hizmetlerinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz: [Azure Storage'a giriş](/azure/storage/common/storage-introduction).
+Azure depolama hizmetleri 'ni kullanma hakkında daha fazla bilgi için bkz. [Azure depolama 'Ya giriş](/azure/storage/common/storage-introduction).
