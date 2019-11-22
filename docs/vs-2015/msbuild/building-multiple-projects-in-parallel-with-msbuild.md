@@ -13,42 +13,42 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4de5eebdf9c1f4f66d26b29d194b57172e9af3be
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 2d9efcd218b887187709b38b5f8bcae12c53de59
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426990"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300410"
 ---
 # <a name="building-multiple-projects-in-parallel-with-msbuild"></a>MSBuild ile Paralel Olarak Birden Çok Proje Derleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Paralel çalıştırarak daha hızlı olan birden çok projeleri derlemek için MSBuild'ı kullanabilirsiniz. Derlemeleri paralel olarak çalıştırmak için çok çekirdekli veya birden çok işlemci bilgisayarda aşağıdaki ayarları kullanın:  
+MSBuild 'i paralel olarak çalıştırarak birden çok projeyi daha hızlı derlemek için kullanabilirsiniz. Yapıları paralel olarak çalıştırmak için, birden çok çekirdekli veya birden çok işlemci bilgisayarında aşağıdaki ayarları kullanın:  
   
-- `/maxcpucount` Geçiş komut isteminde.  
+- Bir komut isteminde `/maxcpucount` anahtarı.  
   
-- <xref:Microsoft.Build.Tasks.MSBuild.BuildInParallel%2A> Bir MSBuild görevi görev parametresi.  
+- MSBuild görevinde <xref:Microsoft.Build.Tasks.MSBuild.BuildInParallel%2A> Task parametresi.  
   
 > [!NOTE]
-> **/Verbosity** (**/v**) bir komut satırı anahtarı da yapı performansını etkiler. Derleme günlüğü bilgilerinizin ayrıntı ayrıntılı kümesi veya sorun giderme için kullanılan tanılama ise, derleme performansı düşebilir. Daha fazla bilgi için [derleme günlükleri alma](../msbuild/obtaining-build-logs-with-msbuild.md) ve [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).  
+> Bir komut satırındaki **/ayrıntı** ( **/v**) anahtarı derleme performansını da etkileyebilir. Derleme günlüğü bilgilerinizin ayrıntı düzeyi ayrıntılı veya tanılama olarak ayarlandıysa, sorun giderme için kullanılan derleme performanslarınız azalabilir. Daha fazla bilgi için bkz. [derleme günlükleri](../msbuild/obtaining-build-logs-with-msbuild.md) ve [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md)alma.  
   
 ## <a name="maxcpucount-switch"></a>/maxcpucount Anahtarı  
- Kullanırsanız `/maxcpucount` geçiş, veya `/m` kısa için paralel olarak çalıştırılabilecek MSBuild.exe sayısı belirtilen MSBuild oluşturabilirsiniz. Bu işlemler "çalışan işlemleri" olarak da bilinen olan Diğer kullanılabilir işlemci diğer projeler oluşturmak olarak aynı anda bir proje oluşturmak kullanılabilir olduğunda her çalışan işlemi ayrı bir çekirdek veya işlemci kullanır. Örneğin, "4" değeri için bu anahtarı ayarı, projeyi derlemek için dört çalışan işlemler oluşturmak MSBuild neden olur.  
+ `/maxcpucount` anahtarını kullanırsanız veya Short için `/m`, MSBuild, paralel olarak çalıştırılabilecek belirtilen sayıda MSBuild. exe işlemi oluşturabilir. Bu süreçler "çalışan süreçler" olarak da bilinir. Her çalışan işlemi varsa ayrı bir çekirdek veya işlemciyi, varsa diğer kullanılabilir işlemcilerle aynı anda bir proje oluşturmak için kullanır. Örneğin, bu anahtarın "4" değerine ayarlanması, MSBuild 'in projeyi derlemek için dört çalışan işlem oluşturmasına neden olur.  
   
- Eklerseniz `/maxcpucount` MSBuild bir değer belirtmeden anahtar için kullanacağı bilgisayarın işlemci sayısı.  
+ `/maxcpucount` anahtarını bir değer belirtmeden eklerseniz, MSBuild bilgisayardaki işlemci sayısına kadar kullanır.  
   
- MSBuild 3. 5'kullanıma sunulan bu anahtar hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).  
+ MSBuild 3,5 ' de tanıtılan bu anahtar hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).  
   
- Aşağıdaki örnek, üç alt işlemlerin kullanılacak MSBuild bildirir. Bu yapılandırmayı kullanıyorsanız, MSBuild aynı anda üç projeleri oluşturabilirsiniz.  
+ Aşağıdaki örnek, MSBuild 'in üç çalışan işlemi kullanmasını söyler. Bu yapılandırmayı kullanırsanız, MSBuild aynı anda üç proje oluşturabilir.  
   
 ```  
 msbuild.exe myproj.proj /maxcpucount:3  
 ```  
   
 ## <a name="buildinparallel-task-parameter"></a>BuildInParallel Görev Parametresi  
- `BuildInParallel` İsteğe bağlı bir boolean parametre açıktır bir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] görev. Zaman `BuildInParallel` ayarlanır `true` (varsayılan değeri) aynı anda mümkün olduğunca çok projeleri derlemek için birden çok çalışan işlemi oluşturulur. Bunun düzgün çalışması `/maxcpucount` anahtar ayarlanmalıdır bir değer 1'den büyük ve sistemin en az çift çekirdekli veya iki veya daha fazla işlemciye sahip olmanız gerekir.  
+ `BuildInParallel`, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] görevinde isteğe bağlı bir Boolean parametredir. `BuildInParallel` `true` (varsayılan değeri) olarak ayarlandığında, mümkün olduğunca fazla proje oluşturmak için birden çok çalışan işlemi oluşturulur. Bunun düzgün çalışması için `/maxcpucount` anahtarı 1 ' den büyük bir değere ayarlanmalıdır ve sistem en az çift çekirdekli ya da iki veya daha fazla işlemciye sahip olmalıdır.  
   
- Aşağıdaki örnek, Microsoft.common.targets'ı, nasıl ayarlanacağı konusunda alınan olan `BuildInParallel` parametresi.  
+ Aşağıda, `BuildInParallel` parametresinin nasıl ayarlanacağı hakkında Microsoft. Common. targets 'tan alınan bir örnek verilmiştir.  
   
 ```  
 <PropertyGroup>  
@@ -73,6 +73,6 @@ msbuild.exe myproj.proj /maxcpucount:3
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Projeleri derlemek için birden çok işlemci kullanma](../msbuild/using-multiple-processors-to-build-projects.md)   
- [Birden çok işlemciye duyarlı Günlükçüler yazılıyor](../msbuild/writing-multi-processor-aware-loggers.md)   
- [C++ yapı paralellik blog ayarlama](http://go.microsoft.com/fwlink/?LinkId=251457)
+ [Projeleri derlemek Için birden çok Işlemci kullanma](../msbuild/using-multiple-processors-to-build-projects.md)   
+ [Çok işlemcili, oturum defterleri yazma](../msbuild/writing-multi-processor-aware-loggers.md)   
+ [Derleme C++ paralelliği blogu ayarlama](https://go.microsoft.com/fwlink/?LinkId=251457)

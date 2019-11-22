@@ -9,19 +9,19 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 12bce61c7d860f56142c25dd15dea3ac8ad21f9c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef28781252181dbf765db52dbe6fed1b286516b2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671867"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295771"
 ---
 # <a name="step-2-run-your-program"></a>2\. Adım: Programınızı Çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Yeni bir çözüm oluşturduğunuzda, aslında çalıştıran bir programı oluşturmuş olursunuz. Henüz bir şey yapmaz; başlık çubuğunda **Form1** ' i gösteren boş bir pencere görüntüler. Ancak, bunu öğrenmek üzere olduğu gibi çalışır.
 
- ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 1](http://go.microsoft.com/fwlink/?LinkId=205209) veya [öğretici 1: video 1 ' de C# bir resim görüntüleyici oluşturma](http://go.microsoft.com/fwlink/?LinkId=205199). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+ ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 1](https://go.microsoft.com/fwlink/?LinkId=205209) veya [öğretici 1: video 1 ' de C# bir resim görüntüleyici oluşturma](https://go.microsoft.com/fwlink/?LinkId=205199). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
 
 ### <a name="to-run-your-program"></a>Programınızı çalıştırmak için
 
