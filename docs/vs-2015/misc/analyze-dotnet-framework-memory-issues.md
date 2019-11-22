@@ -1,5 +1,5 @@
 ---
-title: .NET Framework bellek sorunlarını çözümleme | Microsoft Docs
+title: .NET Framework bellek sorunlarını analiz etme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -10,146 +10,146 @@ ms.assetid: 43341928-9930-48cf-a57f-ddcc3984b787
 caps.latest.revision: 9
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 885f96a4e1e43fe422c6fd9cfaa414fe5871bce1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: e94edbeac381ac634171507766126ab954153eb1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65688568"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295888"
 ---
 # <a name="analyze-net-framework-memory-issues"></a>.NET Framework bellek sorunlarını çözümleme
-Visual Studio tarafından yönetilen bellek çözümleyicisini kullanarak .NET Framework kodu içindeki bellek sızıntılarını ve verimsiz bellek kullanımını bulun. En düşük .NET Framework sürümü hedef kodun .NET Framework 4. 5 ' dir.  
+Visual Studio tarafından yönetilen bellek çözümleyicisini kullanarak .NET Framework kodu içindeki bellek sızıntılarını ve verimsiz bellek kullanımını bulun. Hedef kodun en düşük .NET Framework sürümü .NET Framework 4,5 ' dir.  
   
- Bellek analizi aracı bilgileri analiz eder *düküm dosyalarında yığın verisine sahip* , bir uygulamanın belleğindeki nesnelerin bir kopyasını. Döküm (.dmp) dosyalarını Visual Studio IDE'den veya diğer sistem araçlarını kullanarak toplayabilirsiniz.  
+ Bellek çözümleme aracı, bir uygulamanın belleğindeki nesnelerin bir kopyasını içeren *yığın verisine sahip döküm dosyaları* içindeki bilgileri analiz eder. Döküm (.dmp) dosyalarını Visual Studio IDE'den veya diğer sistem araçlarını kullanarak toplayabilirsiniz.  
   
 - Nesne türlerinin bellek kullanımı üzerindeki göreli etkisini anlamak ve uygulamanızda belleği verimsiz kullanan kodu bulmak için tek bir anlık görüntüyü anailz edebilirsiniz.  
   
-- Ayrıca karşılaştırabilirsiniz (*fark*) zaman içinde bellek neden iki anlık görüntü alanlar kodunuzda bulmak için bir uygulamanın kullanın.  
+- Ayrıca bir uygulamanın iki anlık görüntüsünü (*fark*) karşılaştırarak kodunuzda, zamanla bellek kullanımının artmasına yol açan bölümleri bulabilirsiniz.  
   
-  Yönetilen bellek çözümleyicisinin bir kılavuz için bkz. [üretimde .NET bellek sorunlarını tanılamak için Visual Studio 2013 kullanarak](http://blogs.msdn.com/b/visualstudioalm/archive/2013/06/20/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production.aspx) Visual Studio ALM + Team Foundation Server blog'daki.  
+  Yönetilen bellek Çözümleyicisi hakkında yönergeler için bkz. Using Visual Studio 2013 kullanarak Visual Studio ALM + Team Foundation Server blogu üzerinde [üretimde .net bellek sorunlarını tanılayın](https://devblogs.microsoft.com/devops/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production/) .  
   
-## <a name="BKMK_Contents"></a> İçeriği  
- [.NET Framework uygulamalarında bellek kullanımı](#BKMK_Memory_use_in__NET_Framework_apps)  
+## <a name="BKMK_Contents"></a>Dekiler  
+ [.NET Framework uygulamalarda bellek kullanımı](#BKMK_Memory_use_in__NET_Framework_apps)  
   
- [Bir uygulamada bir bellek sorunu tanımlama](#BKMK_Identify_a_memory_issue_in_an_app)  
+ [Bir uygulamadaki bellek sorununu tanımla](#BKMK_Identify_a_memory_issue_in_an_app)  
   
- [Bellek anlık görüntüleri toplama](#BKMK_Collect_memory_snapshots)  
+ [Bellek anlık görüntülerini topla](#BKMK_Collect_memory_snapshots)  
   
  [Bellek kullanımını analiz etme](#BKMK_Analyze_memory_use)  
   
-## <a name="BKMK_Memory_use_in__NET_Framework_apps"></a> .NET Framework uygulamalarında bellek kullanımı  
+## <a name="BKMK_Memory_use_in__NET_Framework_apps"></a>.NET Framework uygulamalarda bellek kullanımı  
  .NET Framework, atık toplama yapılan bir çalışma zamanıdır, böylelikle çoğu uygulamada bellek kullanımı bir sorun değildir. Ancak web servisleri ve uygulamaları gibi uzun süre çalışan uygulamalarda ve sınırlı miktarda belleğe sahip aygıtlarda, bellekte nesnelerin birikmesi, uygulamanın ve üzerinde çalıştığı aygıtın performansını etkileyebilir. Atık toplayıcı çok sık çalışıyorsa veya işletim sistemi, RAM ve disk arasında bellek taşımak zorunda kalıyorsa, aşırı bellek kullanımı, uygulamaya veya makineye yeterli kaynak kalmamasına neden olabilir. En kötü durumda, bir uygulama bir "Yetersiz bellek" özel durumuyla çökebilir.  
   
- .NET *Yönetilen yığın* bir uygulama tarafından oluşturulan başvuru nesnelerinin depolandığı bir sanal bellek bölgesidir. Nesnelerin kullanım ömrü atık toplayıcı (GC) tarafından yönetilir. Atık toplayıcı, bellek bloklarını kaplayan nesneleri izlemek için başvurular kullanır. Bir başvuru, bir nesne oluşturulduğunda ve bir değişkene atandığında oluşturulur. Tek bir nesne birden çok başvuruya sahip olabilir. Örneğin, nesneyi bir sınıfa, koleksiyona ve başka veri yapısına ekleyerek veya nesneyi ikinci bir değişkene atayarak ek başvurular oluşturulabilir. Bir başvuru oluşturmanın daha az belirgin bir yolu, bir nesnenin, başka bir nesnenin olayına bir işleyici eklemesidir. Bu durumda, işleyici açıkça kaldırılana veya ikinci nesne yok edilene kadar ikinci nesne ilk nesnenin başvurusunu tutar.  
+ .NET *yönetilen yığını*, bir uygulama tarafından oluşturulan başvuru nesnelerinin depolandığı bir sanal bellek bölgesidir. Nesnelerin kullanım ömrü atık toplayıcı (GC) tarafından yönetilir. Atık toplayıcı, bellek bloklarını kaplayan nesneleri izlemek için başvurular kullanır. Bir başvuru, bir nesne oluşturulduğunda ve bir değişkene atandığında oluşturulur. Tek bir nesne birden çok başvuruya sahip olabilir. Örneğin, nesneyi bir sınıfa, koleksiyona ve başka veri yapısına ekleyerek veya nesneyi ikinci bir değişkene atayarak ek başvurular oluşturulabilir. Bir başvuru oluşturmanın daha az belirgin bir yolu, bir nesnenin, başka bir nesnenin olayına bir işleyici eklemesidir. Bu durumda, işleyici açıkça kaldırılana veya ikinci nesne yok edilene kadar ikinci nesne ilk nesnenin başvurusunu tutar.  
   
- Her uygulama için, atık toplayıcı, uygulama tarafından başvurulan nesneleri izleyen bir başvuru ağacı tutar. *Başvuru ağacı* genel ve statik nesneler, ilgili iş parçacığı yığınlarını yanı sıra ve dinamik olarak içeren bir kök kümesine örneklenen nesneleri. Ona başvurusu olan en az bir üst nesneye sahipse bir nesnenin kökü belirtilir. Atık toplayıcı, yalnızca uygulamada başka hiçbir nesnenin veya değişkenin başvurmadığı bir nesnenin belleğini geri kazanabilir.  
+ Her uygulama için, atık toplayıcı, uygulama tarafından başvurulan nesneleri izleyen bir başvuru ağacı tutar. {1&gt;Başvuru ağacı&lt;1}, global ve statik nesnelere ek olarak ilgili iş parçacığı yığınlarını ve dinamik olarak örneklenen nesneleri içeren bir kök kümesine sahiptir. Ona başvurusu olan en az bir üst nesneye sahipse bir nesnenin kökü belirtilir. Atık toplayıcı, yalnızca uygulamada başka hiçbir nesnenin veya değişkenin başvurmadığı bir nesnenin belleğini geri kazanabilir.  
   
- ![Başa dön](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriği](#BKMK_Contents)  
+ ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-## <a name="BKMK_Identify_a_memory_issue_in_an_app"></a> Bir uygulamada bir bellek sorunu tanımlama  
- Bellek sorunlarının en çok görünen belirtisi uygulamanızın performansıdır, özellikle performans zamanla düşüyorsa. Uygulamanız çalışırken diğer uygulamaların performansının düşmesi de bir bellek sorunu olduğunu belirtebilir. Bir bellek sorunu olduğundan şüpheleniyorsanız, Görev Yöneticisi'gibi bir araç kullanın veya [Windows Performans İzleyicisi'ni](https://technet.microsoft.com/library/cc749249.aspx) daha fazla araştırmak için. Örneğin, toplam bellek büyüklüğünde, olası bellek sızıntılarının kaynağı olarak açıklayamadığınız bir artış olup olmadığına bakın:  
+## <a name="BKMK_Identify_a_memory_issue_in_an_app"></a>Bir uygulamadaki bellek sorununu tanımla  
+ Bellek sorunlarının en çok görünen belirtisi uygulamanızın performansıdır, özellikle performans zamanla düşüyorsa. Uygulamanız çalışırken diğer uygulamaların performansının düşmesi de bir bellek sorunu olduğunu belirtebilir. Bellek sorunuyla kuşkulanıyorsanız, daha fazla araştırma yapmak için Görev Yöneticisi veya [Windows Performans İzleyicisi](https://technet.microsoft.com/library/cc749249.aspx) gibi bir araç kullanın. Örneğin, toplam bellek büyüklüğünde, olası bellek sızıntılarının kaynağı olarak açıklayamadığınız bir artış olup olmadığına bakın:  
   
- ![Kaynak İzleyicisi tutarlı bellek büyüme](../misc/media/mngdmem-resourcemanagerconsistentgrowth.png "MNGDMEM_ResourceManagerConsistentGrowth")  
+ ![Kaynak İzleyicisi tutarlı bellek büyümesi](../misc/media/mngdmem-resourcemanagerconsistentgrowth.png "MNGDMEM_ResourceManagerConsistentGrowth")  
   
  Ayrıca, bir yordamda verimsiz bellek kullanımına işaret edecek şekilde, kodun önereceğini beklediğiniz miktarı aşan anlık bellek artışlarına bakın:  
   
- ![Kaynak Yöneticisi'nde bellekte ani](../misc/media/mngdmem-resourcemanagerspikes.png "MNGDMEM_ResourceManagerSpikes")  
+ ![Kaynak Yöneticisi bellek artışları](../misc/media/mngdmem-resourcemanagerspikes.png "MNGDMEM_ResourceManagerSpikes")  
   
-## <a name="BKMK_Collect_memory_snapshots"></a> Bellek anlık görüntüleri toplama  
- Bellek analizi aracı bilgileri analiz eder *düküm dosyalarında* yığın bilgileri içerir. Visual Studio'da döküm dosyaları oluşturabilir veya gibi bir araç kullanabilirsiniz [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) gelen [Windows SysInternals](https://technet.microsoft.com/sysinternals). Bkz: [döküm nedir ve biri nasıl oluşturabilirim?](http://blogs.msdn.com/b/debugger/archive/2009/12/30/what-is-a-dump-and-how-do-i-create-one.aspx) Visual Studio Debugger Team blogunda.  
+## <a name="BKMK_Collect_memory_snapshots"></a>Bellek anlık görüntülerini topla  
+ Bellek analizi aracı, yığın bilgisi içeren *döküm dosyalarındaki* bilgileri analiz eder. Visual Studio 'da döküm dosyaları oluşturabilir veya [Windows Sysinternals](https://technet.microsoft.com/sysinternals)'Dan [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) gibi bir araç kullanabilirsiniz. Bkz. döküm nedir ve Visual Studio hata ayıklayıcı ekip blogundan [nasıl bir tane oluşturabilirim?](https://blogs.msdn.microsoft.com/debugger/2009/12/30/what-is-a-dump-and-how-do-i-create-one/) .  
   
 > [!NOTE]
 > Çoğu araç, döküm bilgisini, tam yığın belleği verilerini içerecek veya içermeyecek şekilde toplayabilir. Visual Studio bellek çözümleyicisi tam yığın bilgisi gerektirir.  
   
- **Visual Studio'dan bir döküm toplamak için**  
+ **Visual Studio 'dan bir döküm toplamak için**  
   
-1. Visual Studio projesinden başlatılan bir işlem için bir döküm dosyası oluşturabilirsiniz, veya hata ayıklayıcıyı çalışan bir işleme ekleyebilirsiniz. Bkz: [çalıştırma işlemleri iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
+1. Visual Studio projesinden başlatılan bir işlem için bir döküm dosyası oluşturabilirsiniz, veya hata ayıklayıcıyı çalışan bir işleme ekleyebilirsiniz. Bkz. [çalışan Işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
-2. Yürütmeyi durdurun. Hata ayıklayıcıyı durdurur seçtiğinizde **tümünü Kes** üzerinde **hata ayıklama** menüsünden veya bir özel durumda veya bir kesme noktası  
+2. Yürütmeyi durdurun. Hata ayıklayıcı, **Hata Ayıklama** menüsünde **Tümünü Kes** seçeneğini belirlediğinizde, bir özel durumda veya bir kesme noktasında durur.  
   
-3. Üzerinde **hata ayıklama** menüsünde seçin **dökümü Farklı Kaydet**. İçinde **dökümü Farklı Kaydet** iletişim kutusunda bir konum belirtin ve emin **yığınlı** (varsayılan) seçili olduğundan **farklı kaydetme türü** listesi.  
+3. {1&gt;Hata Ayıklama&lt;1} menüsünde, {2&gt;Dökümü Farklı Kaydet&lt;2} seçin. {1&gt;Dökümü Farklı Kaydet&lt;1} iletişim kutusunda, bir konum belirtin ve {2&gt;Farklı kaydetme türü&lt;2} listesinde {3&gt;Yığın ile mini döküm&lt;3} (varsayılan) seçili olduğundan emin olun.  
   
    **İki bellek anlık görüntüsünü karşılaştırmak için**  
   
    Bir uygulamanın bellek kullanımındaki artışı analiz etmek için, uygulamanın tek bir örneğinden iki döküm dosyası toplayın.  
   
-   ![Başa dön](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriği](#BKMK_Contents)  
+   ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-## <a name="BKMK_Analyze_memory_use"></a> Bellek kullanımını analiz etme  
- [Nesne listesini filtreleme](#BKMK_Filter_the_list_of_objects) **&#124;** [tek bir anlık görüntüden bellek verileri analiz etme](#BKMK_Analyze_memory_data_in_from_a_single_snapshot) **&#124;** [iki bellek karşılaştırın anlık görüntüleri](#BKMK_Compare_two_memory_snapshots)  
+## <a name="BKMK_Analyze_memory_use"></a>Bellek kullanımını analiz etme  
+ [Nesnelerin](#BKMK_Filter_the_list_of_objects) **&#124;** listesini filtreleme **&#124;** [tek bir anlık görüntüdeki bellek verilerini analiz etme](#BKMK_Analyze_memory_data_in_from_a_single_snapshot) [iki bellek anlık görüntüsünü karşılaştırın](#BKMK_Compare_two_memory_snapshots)  
   
  Bellek kullanımı sorunları için bir döküm dosyasını analiz etmek amacıyla:  
   
-1. Visual Studio'da **dosya**, **açık** ve döküm dosyasını belirtin.  
+1. Visual Studio'da, **Dosya**, **Aç** seçeneğini belirleyin ve döküm dosyasını belirtin.  
   
-2. Üzerinde **mini döküm dosya özeti** sayfasında **yönetilen bellekte Hata Ayıkla**.  
+2. {1&gt;Mini Döküm Dosya Özeti&lt;1} sayfasında, {2&gt;Yönetilen Bellekte Hata Ayıkla&lt;2} seçin.  
   
-    ![Bilgi döküm Özet sayfası dosya](../misc/media/mngdmem-dumpfilesummary.png "MNGDMEM_DumpFileSummary")  
+    ![Döküm dosyası Özet sayfası](../misc/media/mngdmem-dumpfilesummary.png "MNGDMEM_DumpFileSummary")  
   
    Bellek çözümleyicisi, dosyayı analiz etmek için bir hata ayıklama oturumu başlatır ve sonuçları Yığın Görünümü sayfasında görüntüler:  
   
-   ![Başa dön](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriği](#BKMK_Contents)  
+   ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-### <a name="BKMK_Filter_the_list_of_objects"></a> Nesne listesini filtreleme  
- Varsayılan olarak, bellek çözümleyicisi, bir bellek anlık görüntüsündeki nesne listesini yalnızca kullanıcı kodundaki türleri ve örnekleri gösterecek şekilde ve yalnızca toplam kapsamalı boyutu toplam yığın boyutunun bir eşik yüzdesini geçen türleri gösterecek şekilde filtreler. Bu seçenekleri değiştirebilirsiniz **görünüm ayarlarını** listesi:  
+### <a name="BKMK_Filter_the_list_of_objects"></a>Nesne listesini filtrele  
+ Varsayılan olarak, bellek çözümleyicisi, bir bellek anlık görüntüsündeki nesne listesini yalnızca kullanıcı kodundaki türleri ve örnekleri gösterecek şekilde ve yalnızca toplam kapsamalı boyutu toplam yığın boyutunun bir eşik yüzdesini geçen türleri gösterecek şekilde filtreler. Bu seçenekleri **Görünüm Ayarları** listesinde değiştirebilirsiniz:  
   
 |||  
 |-|-|  
-|**Yalnızca kendi kodumu etkinleştir**|Yalnızca Kendi Kodum, en genel sistem nesnelerini gizler, böylelikle listede yalnızca sizin oluşturduğunuz türler görüntülenir.<br /><br /> Visual Studio'da yalnızca kendi kodum seçeneğini de ayarlayabilirsiniz **seçenekleri** iletişim kutusu. Üzerinde **hata ayıklama** menüsünde seçin **seçenekler ve ayarlar**. İçinde **hata ayıklama**/**genel** sekmesinde seçin veya temizleyin **yalnızca kendi kodum**.|  
-|**Küçük nesneleri Daralt**|**Küçük nesneleri Daralt** toplam kapsamalı boyutu toplam yığın boyutunun yüzde 0,5'den az olan tüm türleri gizler.|  
+|**Yalnızca kendi kodum etkinleştir**|Yalnızca Kendi Kodum, en genel sistem nesnelerini gizler, böylelikle listede yalnızca sizin oluşturduğunuz türler görüntülenir.<br /><br /> Yalnızca Kendi Kodum seçeneğini, Visual Studio **Seçenekler** iletişim kutusunda da ayarlayabilirsiniz. **Hata Ayıkla** menüsünde, **Seçenekler ve ayarlar**' ı seçin. **Hata ayıklama**/**genel** sekmesinde **yalnızca kendi kodum**seçin veya temizleyin.|  
+|**Küçük nesneleri Daralt**|**Küçük nesneleri Daralt** , Toplam kapsamlı boyutu toplam yığın boyutunun yüzde 0,5 ' inden az olan tüm türleri gizler.|  
   
- Tür listesini bir dize girerek de filtreleyebilirsiniz **arama** kutusu. Listede yalnızca, adları dizeyi içeren türler görüntülenir.  
+ Tür listesini ayrıca, **Arama** kutusuna bir dize girerek de filtreleyebilirsiniz. Listede yalnızca, adları dizeyi içeren türler görüntülenir.  
   
- ![Başa dön](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriği](#BKMK_Contents)  
+ ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-### <a name="BKMK_Analyze_memory_data_in_from_a_single_snapshot"></a> Tek bir anlık görüntüden bellek verileri analiz etme  
- Visual Studio dosyayı analiz etmek için yeni bir hata ayıklama oturumu başlatır ve bellek verileri bir yığın Görünümü penceresinde görüntüler.  
+### <a name="BKMK_Analyze_memory_data_in_from_a_single_snapshot"></a>Tek bir anlık görüntüden gelen bellek verilerini analiz etme  
+ Visual Studio, dosyayı analiz etmek için yeni bir hata ayıklama oturumu başlatır ve bellek verilerini bir yığın görünümü penceresinde görüntüler.  
   
- ![Nesne türü listesinde](../misc/media/dbg-mma-objecttypelist.png "DBG_MMA_ObjectTypeList")  
+ ![Nesne türü listesi](../misc/media/dbg-mma-objecttypelist.png "DBG_MMA_ObjectTypeList")  
   
- ![Başa dön](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriği](#BKMK_Contents)  
+ ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
 #### <a name="object-type-table"></a>Nesne türü tablosu  
  Üstteki tabloda, bellekte tutulan nesne türleri listelenir.  
   
-- **Sayısı** anlık görüntüde türün örneklerinin sayısını gösterir.  
+- **Count** , anlık görüntüdeki tür örneklerinin sayısını gösterir.  
   
-- **Boyut (bayt)** başvurularını tuttuğu nesnelerin boyutunu hariç, türünün tüm örneklerini boyutudur. Bu  
+- **Boyut (bayt)** , başvuru taşıdığı nesnelerin boyutu hariç olmak üzere türün tüm örneklerinin boyutudur. Bu  
   
-- **Kapsamlı boyut (bayt)** başvurulan nesnelerin boyutunu içerir.  
+- **Kapsamlı boyut (bayt)** , başvurulan nesnelerin boyutlarını içerir.  
   
-  Örnekler simgesi seçebilirsiniz (![nesne türü sütun örneği simgeye](../misc/media/dbg-mma-instancesicon.png "DBG_MMA_InstancesIcon")) içinde **nesne türü** örneklerinin listesini görüntülemek için sütun yazın.  
+  Tür örneklerinin bir listesini görüntülemek için **nesne türü** sütunundaki örnekler simgesini (![nesne türü sütunundaki örnek simgesi](../misc/media/dbg-mma-instancesicon.png "DBG_MMA_InstancesIcon")) seçebilirsiniz.  
   
-#### <a name="instance-table"></a>Örneği tablosu  
- ![Örnek tablo](../misc/media/dbg-mma-instancestable.png "DBG_MMA_InstancesTable")  
+#### <a name="instance-table"></a>Örnek tablosu  
+ ![Örnekler tablosu](../misc/media/dbg-mma-instancestable.png "DBG_MMA_InstancesTable")  
   
-- **Örnek** nesnesinin nesne tanımlayıcısı görev yapan nesnenin bellek konumu  
+- **Örnek** , nesnenin nesne tanımlayıcısı olarak hizmet veren nesnenin bellek konumudur  
   
-- **Değer** değer türlerinin gerçek değeri gösterir. Veri değerlerini bir veri ipucunda görüntülemek için bir başvuru türü adının üzerine gelebilirsiniz.  
+- **Değer** , değer türlerinin gerçek değerini gösterir. Bir veri ipucunda veri değerlerini görüntülemek için bir başvuru türü adının üzerine gelebilmeniz gerekir.  
   
-   ![Örnek bir veri ipucunda değerleri](../misc/media/dbg-mma-instancevaluesindatatip.png "DBG_MMA_InstanceValuesInDataTip")  
+   ![Veri ipucunda örnek değerleri](../misc/media/dbg-mma-instancevaluesindatatip.png "DBG_MMA_InstanceValuesInDataTip")  
   
-- **Boyut (bayt)** başvurularını tuttuğu nesnelerin boyutunu hariç nesnenin boyutu. Bu  
+- **Boyut (bayt)** , başvuru taşıdığı nesnelerin boyutu hariç nesnenin boyutudur. Bu  
   
-- **Kapsamlı boyut (bayt)** başvurulan nesnelerin boyutunu içerir.  
+- **Kapsamlı boyut (bayt)** , başvurulan nesnelerin boyutlarını içerir.  
   
-  Varsayılan olarak, göre sıralanır türlerinin ve örneklerinin **kapsamlı boyut (bayt)**. Sıralama düzenini değiştirmek için listede bir sütun başlığı seçin.  
+  Varsayılan olarak, türler ve örnekler **Kapsamlı Boyut (Bayt)** değerine göre sıralanır. Sıralama düzenini değiştirmek için listede bir sütun başlığı seçin.  
   
-#### <a name="paths-to-root"></a>Kök yolları  
+#### <a name="paths-to-root"></a>Köke yönelik yollar  
   
-- Bir tür seçildiği için **nesne türü** tablo **kök yolları** tablo dönüşen başvuru sayısını türdeki tüm nesneler için kök nesnelere giden benzersiz tür hiyerarşileri gösterir hiyerarşide olduğu türü.  
+- **Nesne türü** tablosundan seçilen bir tür Için, kök tabloya olan **yollar** , türün tüm nesneleri için kök nesnelere ve hiyerarşide üzerinde yer alan türdeki başvuruların sayısına yol açabilecek benzersiz tür hiyerarşileri gösterir.  
   
-- Bir nesne türünün örneğinden seçili için **kök yolları** örneğe bir başvuru tutan gerçek nesnelerin bir grafiğini gösterir. Veri değerlerini bir veri ipucunda görüntülemek için nesne adının üzerine gelebilirsiniz.  
+- Bir türün örneğinden seçilen bir nesne için, **köke olan yollar** örneğe bir başvuru tutan gerçek nesnelerin bir grafiğini gösterir. Bir veri ipucunda veri değerlerini görüntülemek için nesnenin adının üzerine gelebilmeniz gerekir.  
   
-#### <a name="referenced-types--referenced-objects"></a>Başvurulan türleri / başvurulan nesneler  
+#### <a name="referenced-types--referenced-objects"></a>Başvurulan türler/başvurulan nesneler  
   
-- Bir tür seçildiği için **nesne türü** tablo **başvurulan türleri** sekmesi seçili türdeki tüm nesneler tarafından tutulan başvurulan türlerin sayısı ve boyutu gösterir.  
+- **Nesne türü** tablosundan seçilen bir tür Için, **başvurulan türler** sekmesi, seçilen türdeki tüm nesneler tarafından tutulan başvurulan türlerin boyutunu ve sayısını gösterir.  
   
-- Bir türün seçili bir örneği için **başvurulan nesneleri** seçilen örnek tarafından tutulan nesneleri gösterir. Veri değerlerini bir veri ipucunda görüntülemek için ada üzerine getirin.  
+- Bir türün seçili örneği için, **başvurulan nesneler** seçili örnek tarafından tutulan nesneleri gösterir. Bir veri ipucunda veri değerlerini görüntülemek için adın üzerine gelin.  
   
   **Döngüsel başvurular**  
   
-  Bir nesne, ilk nesneye doğrudan veya dolaylı olarak bir başvuru tutan ikinci bir nesneye başvurabilir. Bellek Çözümleyicisi bu durumla karşılaştığında başvuru yolunu genişletmeyi durdurur ve ekler bir **[döngü algılandı]** döküm ek açıklama ilk nesne ve durur.  
+  Bir nesne, ilk nesneye doğrudan veya dolaylı olarak bir başvuru tutan ikinci bir nesneye başvurabilir. Bellek çözümleyicisi bu durumla karşılaştığında, başvuru yolunu genişletmeyi durdurur ve ilk nesnenin listesine bir **[Döngü Algılandı]** ek açıklaması ekler ve durur.  
   
   **Kök türleri**  
   
@@ -157,33 +157,33 @@ Visual Studio tarafından yönetilen bellek çözümleyicisini kullanarak .NET F
   
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
-|**Statik değişken** `VariableName`|Bir statik değişken. `VariableName`, değişkenin adıdır.|  
-|**Sonlandırma işleyicisi**|Sonlandırma sırasından bir başvuru.|  
+|**Statik değişken** `VariableName`|Bir statik değişken. `VariableName` değişkenin adıdır.|  
+|**Sonlandırma tutamacı**|Sonlandırma sırasından bir başvuru.|  
 |**Yerel değişken**|Yerel bir değişken.|  
-|**Güçlü işleyici**|Nesne işleyicisi tablosundan bir güçlü başvuruya işleyici.|  
-|**Zaman uyumsuz. Sabitlenmiş işleyici**|Nesne işleyicisi tablosundan bir zaman uyumsuz sabitlenmiş nesne.|  
-|**Bağımlı işleyici**|Nesne işleyicisi tablosundan bir bağımlı nesne.|  
-|**Sabitlenmiş işleyici**|Nesne işleyicisi tablosundan bir sabitlenmiş güçlü başvuru.|  
-|**RefCount işleyicisi**|Nesne işleyicisi tablosundan bir başvurusu sayılan nesne.|  
-|**SizedRef işleyicisi**|Atık toplama zamanında tüm nesnelerin ve nesne köklerinin toplu kapanışının yaklaşık boyutunu tutan bir güçlü işleyici.|  
+|**Güçlü tanıtıcı**|Nesne işleyicisi tablosundan bir güçlü başvuruya işleyici.|  
+|**Eş. Sabitlenmiş tanıtıcı**|Nesne işleyicisi tablosundan bir zaman uyumsuz sabitlenmiş nesne.|  
+|**Bağımlı tanıtıcı**|Nesne işleyicisi tablosundan bir bağımlı nesne.|  
+|**Sabitlenmiş tanıtıcı**|Nesne işleyicisi tablosundan bir sabitlenmiş güçlü başvuru.|  
+|**RefCount tanıtıcısı**|Nesne işleyicisi tablosundan bir başvurusu sayılan nesne.|  
+|**SizedRef tanıtıcısı**|Atık toplama zamanında tüm nesnelerin ve nesne köklerinin toplu kapanışının yaklaşık boyutunu tutan bir güçlü işleyici.|  
 |**Sabitlenmiş yerel değişken**|Sabitlenmiş bir yerel değişken.|  
   
-### <a name="BKMK_Compare_two_memory_snapshots"></a> İki bellek anlık görüntüsünü karşılaştırma  
+### <a name="BKMK_Compare_two_memory_snapshots"></a>İki bellek anlık görüntüsünü karşılaştırın  
  Bellek sızıntılarının kaynağı olabilecek nesneler bulmak üzere bir işlemin iki döküm dosyasını karşılaştırabilirsiniz. İlk (önceki) ve ikinci (sonraki) dosyanın toplanması arasındaki aralık, sızan nesne sayısı artışı kolayca görülebilecek kadar büyük olmalıdır. İki dosyayı karşılaştırmak için:  
   
-1. İkinci döküm dosyasını açın ve ardından **yönetilen bellekte Hata Ayıkla** üzerinde **mini döküm dosya özeti** sayfası.  
+1. İkinci döküm dosyasını açın ve ardından**Mini Döküm Dosya Özeti** sayfasında **Yönetilen Bellekte Hata Ayıkla** seçin.  
   
-2. Bellek analizi raporu sayfasında açın **Select temel** listeleyin ve ardından **Gözat** ilk döküm dosyasını belirtin.  
+2. Bellek analizi raporu sayfasında, **Taban çizgisi seçin** listesini açın ve ardından **Gözat** seçerek ilk döküm dosyasını belirtin.  
   
-   Çözümleyici sütunları arasındaki farkı görüntüler raporun üst bölmesine ekler **sayısı**, **boyutu**, ve **kapsamlı boyut** bu değerlere türleri Önceki anlık görüntü.  
+   Çözümleyici, raporun üst bölmesine, türlerin **Sayı**, **Boyut** ve **Kapsamlı Boyut** değerleriyle önceki anlık görüntüdeki değerler arasındaki farkları gösteren sütunlar ekler.  
   
-   ![Fark sütun türü listesinde](../misc/media/mngdmem-diffcolumns.png "MNGDMEM_DiffColumns")  
+   ![Tür listesindeki fark sütunları](../misc/media/mngdmem-diffcolumns.png "MNGDMEM_DiffColumns")  
   
-   A **başvuru sayısı farkı** sütunu da eklenir **kök yolları** tablo.  
+   {1&gt;Kök Yolları&lt;1} tablosuna bir {2&gt;Başvuru Sayısı Farkı&lt;2} sütunu da eklenir.  
   
-   ![Başa dön](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriği](#BKMK_Contents)  
+   ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [VS ALM TFS Web günlüğü: Üretimde .NET bellek sorunlarını tanılamak için Visual Studio 2013 kullanarak](http://blogs.msdn.com/b/visualstudioalm/archive/2013/06/20/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production.aspx)   
- [Channel 9 &#124; Visual Studio TV &#124; yönetilen bellek analizi](http://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Managed-Memory-Analysis)   
- [Channel 9 &#124; Visual Studio araç kutusu &#124; yönetilen bellek analizi Visual Studio 2013](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Managed-Memory-Analysis-in-Visual-Studio-2013)
+ [Vs ALM TFS blogu: üretim  .net bellek sorunlarını tanılamak için Visual Studio 2013 kullanma](https://devblogs.microsoft.com/devops/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production/)  
+ [Channel 9 &#124; Visual Studio TV &#124; yönetilen bellek analizi](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Managed-Memory-Analysis)   
+ [Visual Studio 2013 'de &#124; Channel 9 Visual &#124; Studio araç kutusu yönetilen bellek Analizi](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Managed-Memory-Analysis-in-Visual-Studio-2013)

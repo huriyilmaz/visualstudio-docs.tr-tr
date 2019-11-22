@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8a0654936ac102891981ecbee43430172487628
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dd2b2d19e55cbaf9af63ddeafdbdf9f6d677c5bc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646115"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301613"
 ---
 # <a name="layer-diagrams-reference"></a>Katman Diyagramları: Başvuru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,7 +48,7 @@ Visual Studio 'da, sisteminizin üst düzey, mantıksal mimarisini görselleşti
 
 - İade etme ve oluşturma işlemlerinizin doğrulanmasını ekleyerek kodunuzun geliştirilmesi ve bakımı sırasında amaçlanan mimariyi güçle zorlayın.
 
-  Bu konu başlığı altında, bir katman diyagramında kullanabileceğiniz öğeler açıklanmaktadır. Katman diyagramları oluşturma ve çizme hakkında daha ayrıntılı bilgi için bkz. [Katman diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md). Katman desenleri hakkında daha fazla bilgi için, [desenler & uygulamalar sitesini](http://go.microsoft.com/fwlink/?LinkId=145794)ziyaret edin.
+  Bu konu başlığı altında, bir katman diyagramında kullanabileceğiniz öğeler açıklanmaktadır. Katman diyagramları oluşturma ve çizme hakkında daha ayrıntılı bilgi için bkz. [Katman diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md). Katman desenleri hakkında daha fazla bilgi için, [desenler & uygulamalar sitesini](https://go.microsoft.com/fwlink/?LinkId=145794)ziyaret edin.
 
 ## <a name="reading-layer-diagrams"></a>Katman diyagramlarını okuma
  ![Katman diyagramlarındaki öğeler](../modeling/media/uml-layerrefreading.png "UML_LayerRefReading")

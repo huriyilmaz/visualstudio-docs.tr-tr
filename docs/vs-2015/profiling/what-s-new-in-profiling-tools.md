@@ -1,5 +1,5 @@
 ---
-title: Hangi&#39;yeni profil oluşturma araçları, s | Microsoft Docs
+title: Profil Oluşturma Araçları&#39;yenilikleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,36 +12,36 @@ caps.latest.revision: 47
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 46eb6585bffb96397d73a03f142bd7b6b4779f15
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: f9611170c7b23a9db72c27b9c3f69a39e21a4bdc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66261630"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300627"
 ---
-# <a name="what39s-new-in-profiling-tools"></a>Hangi&#39;yeni profil oluşturma araçları, s
+# <a name="what39s-new-in-profiling-tools"></a>Profil Oluşturma Araçları&#39;yenilikleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 2015 güncelleştirme 1'hata ayıklama ve tanılama konusunda yeni olan her şey hakkında bilgi için [Visual Studio 2015 güncelleştirme 1 sürüm notları](https://www.visualstudio.com/news/vs2015-update1-vs#debug).  
   
- Visual Studio 2015 hata ayıklama ve tanılama konusunda yeni olan her şey hakkında bilgi için [Visual Studio 2015 sürüm notları](https://www.visualstudio.com/news/vs2015-vs#Debug).  
+ Visual Studio 2015 hata ayıklama ve tanılama 'daki yenilikler hakkında daha fazla bilgi için bkz. [Visual studio 2015 Sürüm notları](https://www.visualstudio.com/news/vs2015-vs#Debug).  
   
-## <a name="whats-new-in-update-1"></a>Güncelleştirme 1'deki yenilikler  
- Visual Studio 2015 güncelleştirme 1'de başlayarak, hata ayıklayıcı çıkmadan bir işlev başına kırılımını CPU kullanımının görebilirsiniz. Daha fazla bilgi için [Visual Studio 2015'te Hata Ayıklayıcısı'nda CPU profilinizi](http://blogs.msdn.com/b/visualstudioalm/archive/2015/10/29/profile-your-cpu-in-the-debugger-in-visual-studio-2015.aspx).  
+## <a name="whats-new-in-update-1"></a>Güncelleştirme 1 ' deki yenilikler  
+ Visual Studio 2015 güncelleştirme 1 ' den başlayarak, hata ayıklayıcıdan çıkmadan CPU kullanımının işlev başına dökümünü görebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 2015 ' de hata ayıklayıcıda CPU 'Yu profil](https://devblogs.microsoft.com/devops/profile-your-cpu-in-the-debugger-in-visual-studio-2015/).  
   
- **Tanılama araçları** pencere, arama ve filtreleme seçenekleri ekledi **olayları** sekmesi. Daha fazla bilgi için [hata ayıklayıcısıyla tümleştirilmiş profil oluşturma](/visualstudio/profiling/running-profiling-tools-with-or-without-the-debugger) ve [arama ve filtreleme tanılama araçları penceresinin olaylar sekmesinde](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/12/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window.aspx).  
+ **Tanılama araçları** pencere, **Olaylar** sekmesine arama ve filtreleme seçeneklerini ekledi. Daha fazla bilgi için bkz. [hata ayıklayıcı ile tümleşik profil oluşturma](/visualstudio/profiling/running-profiling-tools-with-or-without-the-debugger) ve [Tanılama Araçları penceresinin Olaylar sekmesinde arama ve filtreleme](https://devblogs.microsoft.com/devops/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window/).  
   
-## <a name="diagnostics-with-debugging-ui-and-hotkey-changes"></a>Kullanıcı Arabirimi ve kısayol tuşu değişiklikleri hata ayıklama tanılama  
- Artık, yeni hata ayıklama sırasında tanılama araçları çalıştırabilirsiniz **tanılama araçları** penceresi. Pencere otomatik olarak görünür, ancak bunu ayrıca yeni menü öğesiyle açabilirsiniz **tanılama araçlarını Göster** (klavye kısayolu **Ctrl + Alt + F2**).  
+## <a name="diagnostics-with-debugging-ui-and-hotkey-changes"></a>Hata ayıklama Kullanıcı arabirimi ve kısayol değişikliklerinde tanılama  
+ Artık yeni **Tanılama araçları** penceresiyle hata ayıklarken tanılama araçlarını çalıştırabilirsiniz. Pencere otomatik olarak görünür, ancak yeni menü öğesi **Tanılama araçları göster** (klavye kısayolu **CTRL + ALT + F2**) ile de açabilirsiniz.  
   
-## <a name="diagnostics-without-debugging-ui-and-hotkey-changes"></a>Kullanıcı Arabirimi ve kısayol tuşu değişiklikleri hata ayıklama olmadan tanılama  
- Hata ayıklama olmadan tanılama çalıştırmak için Git **hata ayıklama / Başlat tanılama araçlarını hata ayıklama olmadan** veya **hata ayıklama / Profiler / performans Profiler...** . Visual Studio 2013'te bu bulundu **Analyze / performans ve tanılama** veya **hata ayıklama / performans ve tanılama**.  
+## <a name="diagnostics-without-debugging-ui-and-hotkey-changes"></a>Hata ayıklama Kullanıcı arabirimi ve kısayol değişiklikleri olmadan tanılama  
+ Tanılamayı hata ayıklamadan çalıştırmak için hata ayıklama **/Tanılama araçları hata** ayıklama veya **hata ayıklama/performans profil oluşturucu**olmadan Başlat... seçeneğine gidin. Visual Studio 2013, bu, **Çözümleme/performans ve tanılama** veya **hata ayıklama/performans ve tanılama**bölümünde bulunur.  
   
- **Performans Gezgini** artık bulunabilir **hata ayıklama / Profiler / performans Gezgini**. Visual Studio 2013'te içinde bulundu **Analyze / Profiler**.  
+ **Performans Gezgini** artık **hata ayıklama/profil oluşturucu/performans Gezgini**bulunabilir. Visual Studio 2013, **Çözümle/profil oluşturucu**'da bulundu.  
   
- Klavye kısayolunu **hata ayıklama / Stop koleksiyonu** komut (çalıştırırken uygulandığı **tanılama araçlarını hata ayıklama olmadan**) değiştirilmiştir **CTRL + ALT + F2** Visual Studio 2013 için **CTRL + SHIFT + F2** Visual Studio 2015'te.  
+ **Hata Ayıkla/durdur koleksiyon** komutunun klavye kısayolu ( **hata ayıklama olmadan tanılama araçları**çalıştırıldığında geçerlidir), Visual Studio 2015 ' de **CTRL + SHIFT + F2** 'ye Visual Studio 2013, **CTRL + ALT + F2** olarak değiştirilmiştir.  
   
- Windows Phone Uygulama analizi araçları web'da **hata ayıklama / Profiler / Windows Phone Uygulama analizi Araçları** (veya **ALT + F1**).  
+ Windows Phone uygulama çözümleme araçları, **hata ayıklama/profil Oluşturucu/Windows Phone uygulama çözümleme araçları** 'ndan (veya **alt + F1**) kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Profil Araçları](../profiling/profiling-tools.md)

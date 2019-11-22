@@ -12,12 +12,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 69315b8a81c321d8a33583b02e9579f392d1dc65
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8b154ccd18472d0b0bca502c78a6612aeccdda6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669605"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301039"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>UML modellerini ve diyagramları genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,13 +30,13 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
 
  Fabrikam 'ın araçlar ekibi, geliştirme ekiplerine yardımcı olmak için bir dizi geliştirme yapar. Aşağıdaki bölümlerde, tanımlayabilmeniz gereken farklı uzantı türleri açıklanır. Bu tekniklerin birçoğunu tek bir Visual Studio uzantısı içinde birleştirebilirsiniz.
 
- Daha fazla bilgi için bkz. Bu video: ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo")[MSDN nasıl yapılır serisi: UML araçları ve genişletilebilirliği](http://go.microsoft.com/fwlink/?LinkId=214467).
+ Daha fazla bilgi için bkz. Bu video: ![video MSDN 'ye bağlantı](../data-tools/media/playvideo.gif "PlayVideo")[MSDN nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://go.microsoft.com/fwlink/?LinkId=214467).
 
-## <a name="Requirements"></a>Gereklilik
+## <a name="Requirements"></a> Gereksinimleri
 
 - [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
-- [Visual Studio 2015 Için modelleme SDK](http://www.microsoft.com/download/details.aspx?id=48148).
+- [Visual Studio 2015 Için modelleme SDK](https://www.microsoft.com/download/details.aspx?id=48148).
 
 ## <a name="profiles"></a>Profiller
  Profiller UML öğelerinde stereotipler ve ek özellikler tanımlamanızı sağlar.
@@ -58,7 +58,7 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
  Daha fazla bilgi için bkz. [UML modelleri için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md).
 
 ## <a name="menu-commands"></a>Menü Komutları
- Kullanıcıların bir UML diyagramında öğelere sağ tıklayıp çağırabileceği komutları tanımlayabilirsiniz. Komutlar modeli ve diyagramları güncelleştirebilir veya [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] başka işlemler gerçekleştirebilir.
+ Kullanıcıların bir UML diyagramında öğelere sağ tıklayıp çağırabileceği komutları tanımlayabilirsiniz. Komutlar modeli ve diyagramları güncelleştirebilir veya [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]başka işlemler gerçekleştirebilir.
 
  Fabrikam, bir iade masası oluşturma ve onu seçili bir taşıyıcı bandına bağlama veya bir diyagramı şirketin düzen kurallarına göre yeniden düzenleme gibi sık gerçekleştirilen işlemleri otomatikleştirmek için menü komutlarını tanımlar.
 
@@ -111,12 +111,12 @@ Bu konu başlığı altında, Visual Studio 'Ya dahil edilen UML modelleme araç
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
-|**Alan**|**Köprü**|
+|**Kategori**|**Köprü**|
 |------------------|---------------|
-|**Videolar**|![video MSDN bağlantısı-](../data-tools/media/playvideo.gif "PlayVideo") [nasıl yapılır serisi: UML araçları ve genişletilebilirliği](http://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: VISUAL Studio ile UML](http://go.microsoft.com/fwlink/?LinkId=199957)|
-|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](http://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](http://go.microsoft.com/fwlink/?LinkID=201340)|
-|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](http://go.microsoft.com/fwlink/?LinkId=201343)|
+|**Videolar**|![video MSDN bağlantısı-](../data-tools/media/playvideo.gif "PlayVideo") [nasıl yapılır serisi: UML araçları ve genişletilebilirliği](https://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![video](../data-tools/media/playvideo.gif "PlayVideo ") [kanalı 9 ' a bağlantı: VISUAL Studio ile UML](https://go.microsoft.com/fwlink/?LinkId=199957)|
+|**Forumları**|-   [Visual Studio görselleştirme & modelleme araçları](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio görselleştirme & modelleme SDK (dsl araçları)](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**Bloglar**|[Visual Studio ALM + Team Foundation Server blogu](https://go.microsoft.com/fwlink/?LinkID=201340)|
+|**Teknik makaleler ve Günlükler**|[MSDN mimari Merkezi](https://go.microsoft.com/fwlink/?LinkId=201343)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UML modelleme genişletilebilirliği için uygulama API başvurunuz](../modeling/api-reference-for-uml-modeling-extensibility.md) [için modeller oluşturma](../modeling/create-models-for-your-app.md)

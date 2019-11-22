@@ -11,83 +11,83 @@ helpviewer_keywords:
 ms.assetid: abbd3c3c-3a6e-4539-bd6c-a5891dead234
 caps.latest.revision: 12
 manager: jillfra
-ms.openlocfilehash: 33b4d8f1932429838f701df1f6ffaaceef321c4e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8436b8eee0193715e4ae886db18f91f7148dcb3b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442916"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300421"
 ---
 # <a name="how-to-create-a-toolbox-control-that-uses-windows-forms"></a>Nasıl yapılır: Windows Forms kullanan bir araç kutusu denetimi oluşturma
-Windows Forms araç kutusu denetimi şablonun yer aldığı [!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] otomatik olarak eklenen Windows Forms denetimleri oluşturmanıza olanak tanır **araç kutusu** uzantısı yüklü olduğunda. Bu konuda şablonu oluşturmak için nasıl kullanılacağını gösterir. bir **araç kutusu** diğer kullanıcılara dağıtabilirsiniz denetimi...  
+[!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] eklenen Windows Forms araç kutusu denetim şablonu, uzantı yüklendiğinde **araç kutusuna** otomatik olarak eklenen Windows Forms denetimleri oluşturmanıza imkan tanır. Bu konu başlığı altında, diğer kullanıcılara dağıtabileceğiniz bir **araç kutusu** denetimi oluşturmak için şablonunun nasıl kullanılacağı gösterilmektedir.  
   
 > [!NOTE]
-> Visual Studio SDK'nin nasıl öğrenmek için bkz: [Visual Studio genişletilebilirlik Geliştirici Merkezi](http://go.microsoft.com/fwlink/?linkid=121964) MSDN Web sitesinde.  
+> Visual Studio SDK 'sını nasıl indirecek hakkında bilgi edinmek için MSDN Web sitesinde [Visual Studio genişletilebilirlik Geliştirici Merkezi](https://go.microsoft.com/fwlink/?linkid=121964) ' ne bakın.  
   
 ## <a name="creating-a-toolbox-control"></a>Araç kutusu denetimi oluşturma  
- Projeyi oluşturmak için Windows Forms araç kutusu denetim şablonu kullanın ve ardından bir kullanıcı arabirimi (UI) Tasarımcısı'nda oluşturun.  
+ Projeyi oluşturmak için Windows Forms araç kutusu denetim şablonunu kullanın ve ardından Tasarımcıda bir kullanıcı arabirimi (UI) oluşturun.  
   
-#### <a name="to-create-a-windows-forms-toolbox-control-project"></a>Bir Windows Forms araç kutusu denetimi projesi oluşturmak için  
+#### <a name="to-create-a-windows-forms-toolbox-control-project"></a>Windows Forms araç kutusu denetimi projesi oluşturmak için  
   
-1. Üzerinde **dosya** menüsünde tıklatın **yeni**ve ardından **proje**.  
+1. **Dosya** menüsünde **Yeni**' ye ve ardından **Proje**' ye tıklayın.  
   
-2. İçinde **yeni proje** iletişim kutusunun **yüklü şablonlar**, tercih ettiğiniz programlama dilini düğümüne tıklayın ve ardından **genişletilebilirlik**. Proje türleri listesinde seçin **Windows Forms araç kutusu denetimi**.  
+2. **Yeni proje** iletişim kutusunda, **yüklü şablonlar**' ın altında, tercih ettiğiniz programlama dilinin düğümüne tıklayın ve ardından **genişletilebilirlik**' e tıklayın. Proje türleri listesinde **Windows Forms araç kutusu denetimi**' ni seçin.  
   
-3. İçinde **adı** proje için kullanmak istediğiniz adı yazın. **Tamam**'ı tıklatın.  
+3. **Ad** kutusuna proje için kullanmak istediğiniz adı yazın. {1&gt;Tamam&lt;1} düğmesini tıklatın.  
   
-     Visual Studio denetim yerleştirmek için bir öznitelik bir kullanıcı denetimi içeren bir çözüm oluşturur **araç kutusu**, bir VSIX dağıtımı için bildirim.  
+     Visual Studio, bir kullanıcı denetimi, denetimin **araç kutusuna**yerleştirilecek bir öznitelik ve dağıtım IÇIN bir VSIX bildirimi içeren bir çözüm oluşturur.  
   
-#### <a name="to-build-the-control-ui"></a>UI denetimi oluşturmak için  
+#### <a name="to-build-the-control-ui"></a>Denetim Kullanıcı arabirimini oluşturmak için  
   
-1. İçinde **Çözüm Gezgini**, ToolboxControl.cs tasarımcıda açmak için çift tıklayın.  
+1. **Çözüm Gezgini**, tasarımcıda açmak için ToolboxControl.cs öğesine çift tıklayın.  
   
-2. Gelen **araç kutusu**, istediğiniz tüm denetimleri tasarım yüzeyine sürükleyin ve bunları tasarımınıza uygun düzenleyin.  
+2. **Araç kutusundan**istediğiniz denetimleri tasarım yüzeyine sürükleyin ve tasarımınıza göre düzenleyin.  
   
-3. İçinde **özellikleri** penceresinde genel özelliklerini ayarlama kullanıcı denetimi ve alt denetimler.  
+3. **Özellikler** penceresinde, Kullanıcı denetimindeki ve alt denetimlerde ortak özellikleri ayarlayın.  
   
-## <a name="coding-the-control"></a>Denetim kodlama  
- Varsayılan olarak, denetiminizin içinde görünür **araç kutusu** olarak **ToolboxControl1** içinde bir **araç kutusu** çözümünüzü aynı ada sahip öğe grubu. ToolboxControl.cs dosyasında bu adları değiştirebilirsiniz.  
+## <a name="coding-the-control"></a>Denetimi kodlama  
+ Varsayılan olarak, denetiminiz, çözümünüzde aynı ada sahip bir **araç kutusu** öğe grubunda **ToolboxControl1** olarak **araç kutusunda** görünür. ToolboxControl.cs dosyasında bu adları değiştirebilirsiniz.  
   
-#### <a name="to-code-the-control"></a>Code denetimi için  
+#### <a name="to-code-the-control"></a>Denetimi kodlayın  
   
-1. İçinde **Çözüm Gezgini**ToolboxControl.cs sağ tıklayın ve ardından **kodu görüntüle** kod Görünümü'nde dosyayı açmak için.  
+1. **Çözüm Gezgini**' de, ToolboxControl.cs ' a sağ tıklayın ve ardından kodu **görüntüle** ' ye tıklayarak dosyayı kod görünümünde açın.  
   
-2. Denetim uygulayan kısmi bir sınıf tanımı sınıf adına sağ tıklayın, **yeniden düzenleme**ve ardından **Yeniden Adlandır**. Sınıfın adı, görüntülenmesini istediğiniz adla değiştirin **araç kutusu** denetimi yüklü olduğunda.  
+2. Denetimi uygulayan kısmi sınıfın tanımında sınıf adına sağ tıklayın, yeniden **Düzenle**' ye ve ardından **Yeniden Adlandır**' a tıklayın. Sınıf adını, denetim yüklendiğinde **araç kutusunda** görüntülenmesini istediğiniz adla değiştirin.  
   
-3. Hemen üzerinde sınıf tanımının içinde `ProvideToolboxControl` özniteliği bildirimi, ilk parametresinin değeri denetiminde barındıracak öğesi grubunun adını değiştirin **araç kutusu**.  
+3. Sınıf tanımının hemen üstünde, `ProvideToolboxControl` Attribute bildiriminde, ilk parametrenin değerini **araç kutusunda**denetimi barındıracak olan öğe grubunun adıyla değiştirin.  
   
-     Aşağıdaki örnekte gösterildiği `ProvideToolboxControl` özniteliği ve adlı bir denetim için ayarlanmış bir sınıf tanımının `Counter` içinde `General` öğesi grubu.  
+     Aşağıdaki örnek, `General` öğesi grubunda `Counter` adlı bir denetim için `ProvideToolboxControl` özniteliğini ve ayarlanmış sınıf tanımını gösterir.  
   
      [!code-csharp[ToolboxControlWinForms#07](../snippets/csharp/VS_Snippets_VSSDK/toolboxcontrolwinforms/cs/toolboxcontrol.cs#07)]  
   
-4. Özellikleri, yöntemleri ve olayları denetimi uygulayın.  
+4. Denetim için özellikleri, yöntemleri ve olayları uygulayın.  
   
-## <a name="building-testing-and-deployment"></a>Yapı, test ve dağıtım  
- F5 tuşuna basarak bir .vsix dağıtım dosyası içerir ve denetimin yüklü olan Visual Studio ikinci bir örneğini açar Proje yapıları **araç kutusu**.  
+## <a name="building-testing-and-deployment"></a>Oluşturma, test etme ve dağıtma  
+ F5 tuşuna basıldığında. vsix dağıtım dosyası içeren proje oluşturulur ve **araç kutusu**'nda yüklü olan Ikinci bir Visual Studio örneği açılır.  
   
-#### <a name="to-build-and-test-the-control"></a>Yapı ve denetim test etmek için  
+#### <a name="to-build-and-test-the-control"></a>Denetimi derlemek ve test etmek için  
   
 1. F5 tuşuna basın.  
   
-2. Yeni Visual Studio örneğinde, bir Windows Forms uygulaması projesi oluşturun.  
+2. Visual Studio 'nun yeni örneğinde bir Windows Forms uygulama projesi oluşturun.  
   
-3. Denetiminizi Bul **araç kutusu** ve tasarım yüzeyine sürükleyin.  
+3. **Araç kutusu** 'nda denetiminizi bulun ve tasarım yüzeyine sürükleyin.  
   
-4. İçinde **özellikleri** penceresinde özelliklerinizi beklendiği gibi göründüğünü doğrulayın.  
+4. **Özellikler** penceresinde, özelliklerinizi beklenen şekilde göründüğünü doğrulayın.  
   
-5. Herhangi bir kod veya yöntemleri ve olayları test etmek için gerekli ek denetimler ekleyin.  
+5. Yöntemlerinizi ve olaylarınızı test etmek için gereken tüm kod veya ek denetimleri ekleyin.  
   
-6. Windows Forms uygulaması'nı açmak için F5 tuşuna basın.  
+6. Windows Forms uygulamasını açmak için F5 tuşuna basın.  
   
-7. Özellikleri, yöntemleri ve olayları denetiminizin beklendiği gibi davrandığından emin olun.  
+7. Denetiminizin özelliklerinin, yöntemlerinin ve olaylarının beklendiği gibi davrandığını doğrulayın.  
   
-#### <a name="to-deploy-the-control"></a>Denetim dağıtmak için  
+#### <a name="to-deploy-the-control"></a>Denetimi dağıtmak için  
   
-1. Test edilen projenin derledikten sonra projenin \bin\debug\ klasörü dosya Gezgini'nde açın ve .vsix dosyasını bulun.  
+1. Test edilmiş projeyi oluşturduktan sonra, dosya Gezgini 'nde projenin \bin\debug\ klasörünü açın ve. vsix dosyasını bulun.  
   
-2. .Vsix dosyasını bir ağa veya bir Web sitesine yükleyin.  
+2. . Vsix dosyasını bir ağa veya bir Web sitesine yükleyin.  
   
-     Dosyayı karşıya yükleme durumunda [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesinin diğer kullanıcıların kullanabileceği **Uzantı Yöneticisi** denetimi bulmak ve yüklemek için Visual Studio'da.  
+     Dosyayı [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesine yüklerseniz, diğer kullanıcılar denetimi bulmak ve yüklemek Için Visual Studio 'Daki **Uzantı Yöneticisi 'ni** kullanabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WPF Araç Kutusu Denetimi Oluşturma](../extensibility/creating-a-wpf-toolbox-control.md)

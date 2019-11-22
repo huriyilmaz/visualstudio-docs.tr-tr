@@ -9,25 +9,25 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3991d3b741162b4b1993e5359ad427c17f00321a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3915351bff74f35ceb5fc462cb29dfd2f322fb6a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651521"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299634"
 ---
 # <a name="install-sql-server-sample-databases"></a>SQL Server örnek veritabanlarını yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Örnek veritabanları SQL ve LINQ sorguları, veri bağlama, Entity Framework modelleme vb. ile denemeler yapmak için yararlıdır.  Her veritabanı ürününün kendi örnek veritabanları vardır. Northwind ve AdventureWorks, örnek veritabanlarından oluşan iki popüler SQL Server.
 
- **AdventureWorks** , SQL Server ürünleri için sunulan geçerli örnek veritabanıdır. [CodePlex 'Teki AdventureWorks sayfasından](http://msftdbprodsamples.codeplex.com/)bir. mdf dosyası olarak indirebilirsiniz. Burada, veritabanının normal ve hafif (LT) sürümleri mevcuttur. Çoğu senaryoda, LT sürümü daha az karmaşık olduğu için tercih edilir.
+ **AdventureWorks** , SQL Server ürünleri için sunulan geçerli örnek veritabanıdır. [CodePlex 'Teki AdventureWorks sayfasından](https://archive.codeplex.com/?p=msftdbprodsamples)bir. mdf dosyası olarak indirebilirsiniz. Burada, veritabanının normal ve hafif (LT) sürümleri mevcuttur. Çoğu senaryoda, LT sürümü daha az karmaşık olduğu için tercih edilir.
 
  **Northwind** , birçok yıl boyunca kullanılan görece basit bir SQL Server veritabanıdır. [CodePlex 'Teki Northwind veritabanı sayfasından](https://northwinddatabase.codeplex.com/)bir. bak dosyası olarak indirebilirsiniz. İzin sorunlarından kaçınmak için, dosyayı Kullanıcı klasörünüzün altında olmayan yeni bir klasöre ayıklayın.
 
 #### <a name="to-restore-a-database-from-a-bak-file-in-visual-studio"></a>Visual Studio 'da bir. bak dosyasından bir veritabanını geri yüklemek için
 
-1. Microsoft SQL Server bir veritabanını yedeklerken sonuç bir. bak dosyasıdır. . Bak dosyasını bir veritabanı dosyası olarak yeniden kullanılabilir hale getirmek için *geri yüklenmesi*gerekir. Ana menüde,  > **SQL Server Nesne Gezgini** **görüntüle** ' yi seçin. Bunu görmüyorsanız, yüklemeniz gerekebilir. **Denetim masası**  > **Programlar ve Özellikler**' e gidin, Microsoft Visual Studio 2015 ' i bulun ve **Değiştir** düğmesine tıklayın. Yüklü bileşenlerin listesi Yükleyici penceresinde göründüğünde, **SQL Server Nesne Gezgini** onay kutusunu seçin ve yükleme işlemine devam edin.
+1. Microsoft SQL Server bir veritabanını yedeklerken sonuç bir. bak dosyasıdır. . Bak dosyasını bir veritabanı dosyası olarak yeniden kullanılabilir hale getirmek için *geri yüklenmesi*gerekir. Ana menüde, > **SQL Server Nesne Gezgini** **görüntüle** ' yi seçin. Bunu görmüyorsanız, yüklemeniz gerekebilir. **Denetim masası** > **Programlar ve Özellikler**' e gidin, Microsoft Visual Studio 2015 ' i bulun ve **Değiştir** düğmesine tıklayın. Yüklü bileşenlerin listesi Yükleyici penceresinde göründüğünde, **SQL Server Nesne Gezgini** onay kutusunu seçin ve yükleme işlemine devam edin.
 
 2. SQL Server Nesne Gezgini, herhangi bir SQL Server veritabanı altyapısına (örneğin, LocalDB) sağ tıklayın ve**Yeni sorgu**' yı seçin.
 

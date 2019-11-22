@@ -10,12 +10,12 @@ ms.assetid: 800fc739-acd2-4242-84cb-1d83b4d82cf9
 caps.latest.revision: 38
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ee281e2cabcbce4f950188465163769caae7b2bc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8c7ec729c81f11096a55e87cea528764e500b535
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657238"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297976"
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>Ne Kadar Kodun Test Edildiğini Belirlemek için Kod Kapsamını Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Proje kodunuzun ne oranda aslında birim testleri gibi kodlanmış testler taraf
 
  ![Renklendirme ile kod kapsamı sonuçları](../test/media/codecoverage1.png "CodeCoverage1")
 
- **Requirements**
+ **Gereksinimler**
 
 - Visual Studio Enterprise
 
@@ -50,7 +50,7 @@ Proje kodunuzun ne oranda aslında birim testleri gibi kodlanmış testler taraf
 >   Yönetilmeyen (yerel) kod ile çalışıyorsanız, bir hata ayıklama yapısı kullanın.
 >   - Her derleme için .pdb (simge) dosyaları oluşturduğunuzdan emin olun.
 >
->   Tahmin ettiğiniz sonuçları alamazsanız bkz. [sorun giderme kodu kapsamı](../test/troubleshooting-code-coverage.md). biçimindeki telefon numarasıdır. Kod kapsamını kod güncelleştirdikten sonra çalıştırmayı unutmayın. Kodunuzu değiştirdikten sonra veya testleri çalıştırdığınızda kapsam sonuçları ve kod renklendirme otomatik olarak güncelleştirilmez.
+>   Tahmin ettiğiniz sonuçları alamazsanız bkz. [sorun giderme kodu kapsamı](../test/troubleshooting-code-coverage.md). . Kod kapsamını kod güncelleştirdikten sonra çalıştırmayı unutmayın. Kodunuzu değiştirdikten sonra veya testleri çalıştırdığınızda kapsam sonuçları ve kod renklendirme otomatik olarak güncelleştirilmez.
 
 ## <a name="reporting-in-blocks-or-lines"></a>Bloklarda veya satırlarda raporlama
  Kod kapsamı *bloklar*halinde sayılır. Bir blok, tek bir giriş ve çıkış noktası kodu parçasıdır.  Programın denetim akışı bir test çalışması sırasında bir blok geçerse, o blok anlatıldığı gibi sayılır. Blok kullanılma sayısının sonuç üzerinde etkisi yoktur.
@@ -237,7 +237,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 - Dışlamaları birim test kod dosyasına veya uygulama kod dosyasına yerleştirebilirsiniz.
 
-- Dışlamaları, derleyici seçeneği ayarlanarak veya `#pragma managed(off)` kullanılarak yönetilmeyen (yerel) kod olarak derlenmelidir.
+- Dışlamaları, derleyici seçeneği ayarlanarak veya `#pragma managed(off)`kullanılarak yönetilmeyen (yerel) kod olarak derlenmelidir.
 
 > [!NOTE]
 > C++/CLI kodundaki işlevleri dışlamak için, `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` özniteliği işleve uygulayın. Bu C# ile aynıdır.
@@ -280,8 +280,8 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 ## <a name="external-resources"></a>Dış kaynaklar
 
-### <a name="guidance"></a>Kılavuz
- [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](http://go.microsoft.com/fwlink/?LinkID=255188)
+### <a name="guidance"></a>Rehber
+ [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Kod kapsamı Analizi](../test/customizing-code-coverage-analysis.md) [sorunlarını giderme kodu kapsam](../test/troubleshooting-code-coverage.md) [birimi test](../test/unit-test-your-code.md) kodunuzu özelleştirme

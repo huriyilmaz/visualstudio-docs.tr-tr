@@ -18,28 +18,28 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bf25f5e0239eafd5594c38f7f3701114558b55cc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b4bcd1f1f023c9e439fb870c9e31f07aa5be215d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671680"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299548"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözüm oluşturursunuz. Çözümün anahtar bölümü DslDefinition. dsl ' de depolanan DSL tanımı diyagramıdır. DSL tanımı, DSL 'nin sınıflarını ve şekillerini tanımlar. Bu öğelere değiştirdikten ve ekledikten sonra, DSL 'yi daha ayrıntılı şekilde özelleştirmek için program kodu ekleyebilirsiniz.
 
- DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [Visualizaton ve modelleme SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
+ DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [Visualizaton ve modelleme SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
 
 ## <a name="templates"></a>Şablon çözümü seçme
- Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
+ Bir DSL tanımlamak için aşağıdaki bileşenler yüklemiş olmanız gerekir:
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio görselleştirme ve modelleme SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](http://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
+|Visual Studio Görselleştirme ve modelleme SDK'sı|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
 
  Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil proje şablonunu kullanarak yeni bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü oluşturursunuz.
 
@@ -95,9 +95,9 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 ### <a name="test-the-solution"></a>Çözümü test etme
  Şablon çözümü, farklı şekilde değiştirebileceğiniz veya kullanabileceğiniz bir çalışan DSL sağlar.
 
- Çözümü test etmek için F5 veya CTRL + F5 tuşlarına basın. @No__t_0 yeni bir örneği deneysel modda açılır.
+ Çözümü test etmek için F5 veya CTRL + F5 tuşlarına basın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yeni bir örneği deneysel modda açılır.
 
- Yeni [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneğinde, Çözüm Gezgini ' de örnek dosyayı açın. Bir araç kutusu ile diyagram olarak açılır.
+ Yeni [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]örneğinde, Çözüm Gezgini ' de örnek dosyayı açın. Bir araç kutusu ile diyagram olarak açılır.
 
  **En az dil** şablonundan oluşturduğunuz bir çözümü çalıştırırsanız, deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aşağıdaki örneğe benzeyecektir:
 
@@ -105,7 +105,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 
  Araçlarla denemeler yapın. Öğeler oluşturun ve bunları bağlayın.
 
- @No__t_0 Deneysel örneğini kapatın.
+ Deneysel örneği kapatın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
 > [!NOTE]
 > DSL 'yi değiştirdiğinizde, örnek test dosyasında artık şekilleri göremezsiniz. Bununla birlikte, yeni öğeler de oluşturabilirsiniz.
@@ -192,7 +192,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 
  Sınıfında **etki alanı özellikleri** ' ne tıklayın, ENTER tuşuna basın ve ardından bir özelliğin adını yazın. Bir etki alanı özelliğinin varsayılan türü dizedir. Türü değiştirmek istiyorsanız, etki alanı özelliğini seçin ve **Özellikler** penceresinde **türü** ayarlayın. İstediğiniz tür açılan listede değilse, bkz. [özellik türleri ekleme](#addTypes).
 
- **Öğe adı özelliği ayarlayın.** Dil Gezgini 'nde öğeleri tanımlamak için kullanılabilecek bir etki alanı özelliği seçin. Örneğin, Song etki alanı sınıfında başlık alanı özelliğini seçebilirsiniz. **Özellikler** penceresinde, **öğe adı** ' nı `true` olarak ayarlayın.
+ **Öğe adı özelliği ayarlayın.** Dil Gezgini 'nde öğeleri tanımlamak için kullanılabilecek bir etki alanı özelliği seçin. Örneğin, Song etki alanı sınıfında başlık alanı özelliğini seçebilirsiniz. **Özellikler** penceresinde, **öğe adı** ' nı `true`olarak ayarlayın.
 
 ### <a name="create-derived-domain-classes"></a>Türetilmiş etki alanı sınıfları oluşturma
  Bir etki alanı sınıfının özelliklerini ve ilişkilerini devralan çeşitleri olmasını istiyorsanız, bundan türetilmiş sınıflar oluşturun. Örneğin, albüm, WMA ve MP3 türetilmiş sınıflarına sahip olabilir.
@@ -216,7 +216,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 
 1. DSL Tasarımcısı kodu oluşturmak için Çözüm Gezgini araç çubuğundaki **Tüm Şablonları Dönüştür ' e tıklayın** . Bu adımı otomatik hale getirebilirsiniz. Daha fazla bilgi için bkz. [tüm şablonları dönüştürmeyi otomatikleştirme](https://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a).
 
-2. **DSL derleyin ve çalıştırın.** @No__t_0 yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. @No__t_0 deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
+2. **DSL derleyin ve çalıştırın.** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
 
 3. **Gezginini açın.** Diyagramın yanında, genellikle *dil* Gezgini olarak adlandırılan dil Gezgini penceresi bulunur. Bu pencereyi görmüyorsanız, Çözüm Gezgini altındaki bir sekmede olabilir. Bunu bulamıyorsanız, **Görünüm** menüsünde **diğer pencereler**' in üzerine gelin ve ardından _dil_**Gezgini**' ne tıklayın.
 
@@ -314,7 +314,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 
 1. DSL Tasarımcısı kodu oluşturmak için Çözüm Gezgini araç çubuğundaki **Tüm Şablonları Dönüştür ' e tıklayın** .
 
-2. **DSL derleyin ve çalıştırın.** @No__t_0 yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. @No__t_0 deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
+2. **DSL derleyin ve çalıştırın.** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
 
 3. **Araç kutusunda öğe araçlarının göründüğünü doğrulayın.**
 
@@ -390,7 +390,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 
 1. DSL Tasarımcısı kodu oluşturmak için Çözüm Gezgini araç çubuğundaki **Tüm Şablonları Dönüştür ' e tıklayın** .
 
-2. **DSL derleyin ve çalıştırın.** @No__t_0 yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. @No__t_0 deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
+2. **DSL derleyin ve çalıştırın.** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
 
 3. **Bağlantı aracının araç kutusunda göründüğünü doğrulayın.**
 
@@ -491,7 +491,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 
 1. DSL Tasarımcısı kodu oluşturmak için Çözüm Gezgini araç çubuğundaki **Tüm Şablonları Dönüştür ' e tıklayın** .
 
-2. **DSL derleyin ve çalıştırın.** @No__t_0 yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. @No__t_0 deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
+2. **DSL derleyin ve çalıştırın.** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
 
 3. **Aracın araç kutusunda göründüğünü doğrulayın.**
 
@@ -545,13 +545,13 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 
  Bağlantı noktalarını kullanan bir örneği görmek için yeni bir DSL çözümü oluştururken **bileşen diyagramı** şablonunu seçin. Bu örnek, bağlantı noktalarını tanımlarken göz önünde bulundurmanız gereken ana noktaları gösterir:
 
-- @No__t_0 bağlantı noktaları kapsayıcısını temsil eden bir etki alanı sınıfı vardır.
+- `Component`bağlantı noktaları kapsayıcısını temsil eden bir etki alanı sınıfı vardır.
 
 - Bağlantı noktalarını temsil eden bir etki alanı sınıfı vardır. Örnekte bu `ComponentPort`.
 
 - Kapsayıcı etki alanı sınıfından bağlantı noktası etki alanı sınıfına bir katıştırma ilişkisi vardır. Daha fazla bilgi için bkz. [etki alanı sınıfları tanımlama](#classes).
 
-- Farklı bağlantı noktası türlerinin aynı kapsayıcıda karışık olmasını istiyorsanız, bağlantı noktası etki alanı sınıfının alt sınıflarını oluşturabilirsiniz. Örnekte, `InPort` ve `OutPort` `ComponentPort` devralma.
+- Farklı bağlantı noktası türlerinin aynı kapsayıcıda karışık olmasını istiyorsanız, bağlantı noktası etki alanı sınıfının alt sınıflarını oluşturabilirsiniz. Örnekte, `InPort` ve `OutPort` `ComponentPort`devralma.
 
 - Kapsayıcı etki alanı sınıfı herhangi bir şekil türüne eşlenebilir. Örnekte, `ComponentShape`. Daha fazla bilgi için bkz. [şekilleri tanımlama](#shapes).
 
@@ -609,7 +609,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
  Ayrıca bkz. [nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).
 
 ## <a name="trouble"></a>Sorunu
- Aşağıdaki tabloda, bir DSL tasarlarken karşılaşılan en yaygın sorunların bazıları, çözümüne yönelik önerilerle birlikte listelenmiştir. [Görselleştirme araçları Extensibililty forumundan](http://go.microsoft.com/fwlink/?LinkId=186074)daha fazla öneri bulabilirsiniz.
+ Aşağıdaki tabloda, bir DSL tasarlarken karşılaşılan en yaygın sorunların bazıları, çözümüne yönelik önerilerle birlikte listelenmiştir. [Görselleştirme araçları Extensibililty forumundan](https://go.microsoft.com/fwlink/?LinkId=186074)daha fazla öneri bulabilirsiniz.
 
 |Gidermek|Öneri|
 |-------------|----------------|
@@ -620,7 +620,7 @@ Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan [!INCLUDE[v
 |DSL için Gezgininde öğeler yalnızca tür adlarıyla gösterilir.|DSL tanımında, sınıfının bir etki alanı özelliğini seçin ve Özellikler penceresi, **öğe adı** ' nı true ' olarak ayarlayın.|
 |DSL her zaman XML düzenleyicisinde açılır.|Dosya okunurken bir hata nedeniyle bu durum oluşabilir. Ancak, bu hatayı düzelttikten sonra bile düzenleyiciyi DSL tasarımcısı olarak açıkça sıfırlamanız gerekir.<br /><br /> Proje öğesine sağ tıklayın, **birlikte Aç** ' a tıklayın ve ardından _dil_Tasarımcısı ' nı seçin **(varsayılan)** .|
 |Derleme adlarını değiştirdikten sonra DSL 'nin araç kutusu görünmüyor.|İnceleme ve güncelleştirme **DslPackage\GeneratedCode\Package.tt** daha fazla bilgi için bkz. [nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).|
-|DSL araç kutusu görünmüyor, ancak derleme adını değiştirdim.<br /><br /> Ya da bir uzantı yükleme başarısızlığını bildiren bir ileti kutusu görüntülenir.|Deneysel örneği sıfırlayın ve çözümünüzü yeniden derleyin.<br /><br /> 1. Windows Başlat menüsünde, **tüm programlar**altında [!INCLUDE[vssdk_current_long](../includes/vssdk-current-long-md.md)] ve ardından **Araçlar**' ı genişletin ve **Microsoft Visual Studio deneysel örneği Sıfırla**' ya tıklayın.<br />2. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**derleme** menüsünde **çözümü yeniden derle**' ye tıklayın.|
+|DSL araç kutusu görünmüyor, ancak derleme adını değiştirdim.<br /><br /> Ya da bir uzantı yükleme başarısızlığını bildiren bir ileti kutusu görüntülenir.|Deneysel örneği sıfırlayın ve çözümünüzü yeniden derleyin.<br /><br /> 1. Windows Başlat menüsünde, **tüm programlar**altında [!INCLUDE[vssdk_current_long](../includes/vssdk-current-long-md.md)]ve ardından **Araçlar**' ı genişletin ve **Microsoft Visual Studio deneysel örneği Sıfırla**' ya tıklayın.<br />2. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**derleme** menüsünde **çözümü yeniden derle**' ye tıklayın.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Windows Forms tabanlı](../modeling/creating-a-windows-forms-based-domain-specific-language.md) bir etki alanına özgü dil oluşturma, etki alanına özgü [Diller Ile çalışmaya](../modeling/getting-started-with-domain-specific-languages.md) başlama [WPF tabanlı etki alanına](../modeling/creating-a-wpf-based-domain-specific-language.md) özgü dil oluşturma

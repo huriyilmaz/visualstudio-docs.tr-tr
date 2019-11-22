@@ -9,12 +9,12 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ad57a05e45b7e9acd3db455f0a8849166dc3c735
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9c56eb091e6d4efbe33dc8f05d5040272307c274
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654756"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299908"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Eğitmen 1: Resim Görüntüleyici Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,9 +39,7 @@ Bu öğreticide, bir dosyadan resim yükleyen ve onu bir pencerede görüntüley
 
   ![Bu öğreticide oluşturduğunuz resim](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone") Bu öğreticide oluşturduğunuz resim
 
-  Örneğin tamamlanmış bir sürümünü indirmek için bkz. [tüm resim Görüntüleyici öğreticisi örneği](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8).
-
-  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz. [nasıl yapılır: Visual Basic bir resim görüntüleyici oluşturma?](http://go.microsoft.com/fwlink/?LinkId=205207) veya [' C#de nasıl yapılır: bir resim görüntüleyici oluşturma?](http://go.microsoft.com/fwlink/?LinkId=205198).
+  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz. [nasıl yapılır: Visual Basic bir resim görüntüleyici oluşturma?](https://go.microsoft.com/fwlink/?LinkId=205207) veya [' C#de nasıl yapılır: bir resim görüntüleyici oluşturma?](https://go.microsoft.com/fwlink/?LinkId=205198).
 
 > [!NOTE]
 > Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır. Görsel C# ve Visual Basic her ikisi de bu öğreticide ele alınmıştır, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanın.

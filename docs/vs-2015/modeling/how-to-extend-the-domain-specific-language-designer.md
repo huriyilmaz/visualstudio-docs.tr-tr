@@ -9,19 +9,19 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c2c131032a97231dce0394065d78505e936e3e91
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 33a7f5a0f183030f9de021df328f8c5e50f5fd5a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656014"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300904"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantılar yapabilirsiniz. Yapabileceğiniz uzantı türleri arasında menü komutları ekleme, sürükle ve çift tıklama hareketleri için işleyiciler ekleme ve belirli değer veya ilişki türleri değiştiğinde tetiklenen kurallar sayılabilir. Uzantılar, Visual Studio Tümleştirme Uzantısı (VSıX) olarak paketlenebilir ve diğer kullanıcılara dağıtılabilir.
 
- Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. Visual Studio [görselleştirme ve modelleme SDK (VMSDK) Web sitesi](http://go.microsoft.com/fwlink/?LinkID=186128).
+ Örnek kod ve bu özellik hakkında daha fazla bilgi için bkz. Visual Studio [görselleştirme ve modelleme SDK (VMSDK) Web sitesi](https://go.microsoft.com/fwlink/?LinkID=186128).
 
 ## <a name="setting-up-the-solution"></a>Çözümü kurma
  Uzantınızın kodunu içeren bir proje ve projeyi dışarı aktaran bir VSıX projesi ayarlayın. Çözümünüz aynı VSıX 'e dahil edilen diğer projeleri içerebilir.
@@ -48,30 +48,30 @@ Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantı
 
 7. Sınıf kitaplığı projesinde, aşağıdaki derlemelere başvurular ekleyin:
 
-     Microsoft. VisualStudio. CoreUtility
+     Microsoft.VisualStudio.CoreUtility
 
-     Microsoft. VisualStudio. model. SDK. 11.0
+     Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-     Microsoft. VisualStudio. modellemesi. SDK. diyagramlar. 11.0
+     Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-     Microsoft. VisualStudio. modellemesi. SDK. DslDefinition. 11.0
+     Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0
 
-     Microsoft. VisualStudio. model. SDK. Integration. 11.0
+     Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
 
-     System. ComponentModel. Composition
+     System.ComponentModel.Composition
 
-     System. Drawing
+     System.Drawing
 
-     System. Drawing. Design
+     System.Drawing.Design
 
-     System. Windows. Forms
+     System.Windows.Forms
 
 ## <a name="testing-and-deployment"></a>Test ve dağıtım
  Bu konudaki herhangi bir uzantıyı test etmek için çözümü derleyin ve çalıştırın. Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği açılır. Bu örnekte, bir DSL çözümü açın. DslDefinition diyagramını düzenleyin. Uzantı davranışı görülebilir.
 
- Uzantıları ana [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve diğer bilgisayarlara dağıtmak için aşağıdaki adımları izleyin:
+ Uzantıları ana [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ve diğer bilgisayarlara dağıtmak için aşağıdaki adımları izleyin:
 
-1. VSIX projenizde VSIX yükleme dosyasını, bin \\ * \\ \*. VSIX ' de bulun.
+1. VSIX projenizde depo VSIX yükleme dosyasını bulmak\\*\*\\\*.vsix
 
 2. Bu dosyayı hedef bilgisayara kopyalayın ve ardından Windows Gezgini 'nde (veya dosya Gezgini) çift tıklayın.
 
@@ -86,7 +86,7 @@ Bir tasarımcıda DSL tanımlarını düzenlemek için kullandığınız uzantı
 ## <a name="adding-a-shortcut-menu-command"></a>Kısayol menü komutu ekleme
  DSL Tasarımcısı yüzeyinde veya DSL Gezgini penceresinde kısayol menü komutu görünmesini sağlamak için, aşağıdaki gibi bir sınıf yazın.
 
- Sınıf `ICommandExtension` uygulamalıdır ve özniteliği `DslDefinitionModelCommandExtension` sahip olmalıdır.
+ Sınıf `ICommandExtension` uygulamalıdır ve özniteliği `DslDefinitionModelCommandExtension`sahip olmalıdır.
 
 ```
 using System.Collections.Generic;

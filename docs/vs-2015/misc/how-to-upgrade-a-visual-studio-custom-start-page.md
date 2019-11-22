@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Özel başlangıç sayfası yükseltme | Microsoft Docs'
+title: 'Nasıl yapılır: özel başlangıç sayfası yükseltme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.assetid: 78342ce6-36c8-485b-a5f6-760e7a420a26
 caps.latest.revision: 8
 manager: jillfra
-ms.openlocfilehash: abe1013d37db43114f3970f12b1a0d1f08b07a4e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a7854de705a961463b1e8435e7340548cfc23bf3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446455"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74293370"
 ---
 # <a name="how-to-upgrade-a-visual-studio-custom-start-page"></a>Nasıl yapılır: Visual Studio özel başlangıç sayfası yükseltme
 Visual Studio 2010 yükseltebilir veya Visual Studio 2012 özel başlangıç sayfasına Visual Studio 2015 için aşağıda listelenen adımları izleyin.
 
 > [!WARNING]
-> Bu yordamda yükseltilmiş özel başlangıç sayfası ile oluşturulan hesaptır [özel başlangıç sayfası](http://visualstudiogallery.msdn.microsoft.com/f655a5dc-1a2d-4eca-b774-76c352c03b87) şablonunda Visual Studio Galerisi. Başlangıç sayfanızı yükseltilmesi gereken diğer özelliklerini olabilir.
+> Bu yordamda yükseltilmiş özel başlangıç sayfası ile oluşturulan hesaptır [özel başlangıç sayfası](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CustomStartPageProjectTemplate) şablonunda Visual Studio Galerisi. Başlangıç sayfanızı yükseltilmesi gereken diğer özelliklerini olabilir.
 
 ### <a name="to-upgrade-a-custom-start-page-to-visual-studio-2015"></a>Özel başlangıç sayfası, Visual Studio 2015'e yükseltmek için
 

@@ -8,19 +8,19 @@ ms.assetid: 6b0f72a4-70ca-4e55-b236-2ea1034fd8a7
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a48c01203d2e951e917482de3c0d9c2bec29ae01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4e8e167f42a2f00553f1462db058e1b4e6d81b0f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660567"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302569"
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>Kodlanmış Kullanıcı Arabirimi Testlerini ve Eylem Kayıtlarını Microsoft Excel'i Desteklemek için Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her kullanıcı arabirimini desteklemez. Test etmek istediğiniz belirli kullanıcı arabirimini desteklemiyor olabilir. Örneğin, [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] bir elektronik tablo için hemen kodlanmış UI testi veya eylem kaydı oluşturamazsınız. Ancak, kodlanmış UI test çerçevesinin genişletilebilirliğine katılarak, kodlanmış UI test çerçevesi için kendi uzantınızı oluşturabilirsiniz. Aşağıdaki konu, [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] için kodlanmış UI testleri ve eylem kayıtları oluşturmayı desteklemek üzere Framework 'ü genişletmeye yönelik bir örnek vermektedir. Desteklenen platformlar hakkında daha fazla bilgi için bkz. [KODLANMıŞ UI testleri ve eylem kayıtları Için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).
+Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her kullanıcı arabirimini desteklemez. Test etmek istediğiniz belirli kullanıcı arabirimini desteklemiyor olabilir. Örneğin, [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] bir elektronik tablo için hemen kodlanmış UI testi veya eylem kaydı oluşturamazsınız. Ancak, kodlanmış UI test çerçevesinin genişletilebilirliğine katılarak, kodlanmış UI test çerçevesi için kendi uzantınızı oluşturabilirsiniz. Aşağıdaki konu, [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]için kodlanmış UI testleri ve eylem kayıtları oluşturmayı desteklemek üzere Framework 'ü genişletmeye yönelik bir örnek vermektedir. Desteklenen platformlar hakkında daha fazla bilgi için bkz. [KODLANMıŞ UI testleri ve eylem kayıtları Için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).
 
- **Requirements**
+ **Gereksinimler**
 
 - Visual Studio Enterprise
 
@@ -28,7 +28,7 @@ Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her 
 
   ![UI test mimarisi](../test/media/ui-testarch.png "UI_TestArch") Mimariye genel bakış
 
-## <a name="download-the-sample"></a>Örneği indirin
+## <a name="download-the-sample"></a>Örneği indirme
  Örnek, `CodedUIExtensibilitySample.sln` çözümünde dört projeden oluşur:
 
 - CodedUIextensibilitySample
@@ -39,7 +39,7 @@ Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her 
 
 - SampleTestProject
 
-  Bu [blog gönderisine](http://go.microsoft.com/fwlink/?LinkID=185592)örnek alın.
+  Bu [blog gönderisine](https://go.microsoft.com/fwlink/?LinkID=185592)örnek alın.
 
 > [!NOTE]
 > Örnek, Microsoft Excel 2010 ile kullanılmak üzere tasarlanmıştır. Örnek, Microsoft Excel 'in diğer sürümleriyle çalışabilir, ancak şu anda desteklenmemektedir.
@@ -63,7 +63,7 @@ Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her 
 
  "`%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*`"; burada sürüm numarası, Visual Studio sürümünüze bağlı olarak 11,0, 12,0 olabilir.
 
- @No__t_0 DLL ve PDB dosyaları `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”` kopyalanır.
+ `ExcelUICommunicationHelper` DLL ve PDB dosyaları `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”`kopyalanır.
 
  Tam kopyalama yollarını ayarlamanız gerekebilir, ancak ek yükleme gerekmez. 64 bit makinede, `CopyDrop.bat` dosyasını çalıştırmak için 32-bit Visual Studio Enterprise komut istemi ' ni kullanın.
 

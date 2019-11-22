@@ -8,12 +8,12 @@ ms.assetid: 7b866776-f2d5-4823-8d15-919f889db26f
 caps.latest.revision: 31
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8e314b63490387b94c068e178f0d02db4822921f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1f2ac13b62dcc522626fde92b1b29cac9873edec
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672165"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301839"
 ---
 # <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle Windows UWP ve 8.1 Phone Uygulamalarını Test Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -312,7 +312,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 
 ```
 
-## <a name="q--a"></a>soru-cevap &
+## <a name="q--a"></a>Soru - Yanıt
 
 ### <a name="q-do-i-have-to-deploy-the-windows-phone-app-in-the-emulator-in-order-to-map-ui-controls"></a>S: UI denetimlerini eşlemek için Windows Phone uygulamasını Öykünücüde dağıtmalıyım?
  Y: Evet, kodlanmış UI test **Oluşturucusu bir öykünücü**çalışıyor ve uygulamanın buna dağıtılması gerekir. Aksi takdirde, çalışan öykünücü bulunamadığını belirten bir hata mesajı oluşturur.
@@ -372,7 +372,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ### <a name="q-what-are-the-differences-between-coded-ui-tests-for-xaml-based-windows-store-apps-and-windows-phone-apps"></a>S: XAML tabanlı Windows Mağazası uygulamaları ve Windows Phone uygulamaları için kodlanmış UI testleri arasındaki farklar nelerdir?
  Y **: Bunlar**bazı önemli farklılıklardır:
 
-|Özellik|Windows Mağazası uygulamaları|Windows Phone Uygulamalar|
+|Özellik|Windows Mağazası uygulamaları|Windows Phone uygulamaları|
 |-------------|------------------------|------------------------|
 |Testleri çalıştırmak için hedef|Yerel veya uzak bilgisayar. Testleri çalıştırmak için otomatikleştirilmiş bir test çalışması kullandığınızda, uzak bilgisayarlar belirtilebilir. Bkz. [Microsoft Test Yöneticisi bir test çalışmasını otomatikleştirme](https://msdn.microsoft.com/library/4e02568b-9cde-47cc-b41c-82726c177e42).|Öykünücü veya cihaz. Bkz. [soru-cevap yalnızca öykünücü üzerinde yürütülebilir mi veya bir fiziksel cihaz de kullanabilir miyim?](#TestingPhoneAppsCodedUI_EmulatorDevice) bu konuda.|
 |Komut satırından Yürüt|Hedef belirtmek için ayarlar dosyası gerekli değil.|Hedef belirtmek için runsettings dosyası gereklidir.|
@@ -382,7 +382,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 |Veri odaklı testler|Dış veri kaynaklarını kullanma ve bir test yönteminde DataSource özniteliğini kullanma hakkında bilgi için bkz. [veri odaklı testler](../test/creating-a-data-driven-coded-ui-test.md) .|Veriler, bir test yönteminde DataRow özniteliği kullanılarak satır içi olarak belirtilir. Bu konudaki [Windows Phone uygulamalarda veri odaklı KODLANMıŞ UI testlerini kullanma](#TestingPhoneAppsCodedUI_DataDriven) konusuna bakın.|
 
 ## <a name="external-resources"></a>Dış kaynaklar
- Microsoft Visual Studio uygulama yaşam döngüsü yönetimi blogu: [XAML tabanlı Windows Phone uygulamalarını test etmek Için kodlanmış Kullanıcı arabirimini kullanma](http://blogs.msdn.com/b/visualstudioalm/archive/2014/04/05/using-coded-ui-to-test-xaml-based-windows-phone-apps.aspx?PageIndex=2#comments)
+ Microsoft Visual Studio uygulama yaşam döngüsü yönetimi blogu: [XAML tabanlı Windows Phone uygulamalarını test etmek Için kodlanmış Kullanıcı arabirimini kullanma](https://devblogs.microsoft.com/devops/using-coded-ui-to-test-xaml-based-windows-phone-apps/#comments)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Kodunuzu Test Etmek için UI Otomasyonunu Kullanma](../test/use-ui-automation-to-test-your-code.md)

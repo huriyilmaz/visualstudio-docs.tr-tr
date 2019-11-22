@@ -1,5 +1,5 @@
 ---
-title: Shell (yalıtılmış veya tümleşik) | Microsoft Docs
+title: Kabuk (yalıtılmış veya tümleşik) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,48 +14,48 @@ ms.assetid: c64a9bf0-9bf8-45c3-8fa2-306fa6cab66a
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: d570c181125a1f94108624e6f9b1ce23bdcca25a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 0db0ab2c2a97f7cedde5b9b3a5ab925467a25146
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63447228"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300486"
 ---
-# <a name="shell-isolated-or-integrated"></a>Shell (yalıtılmış veya tümleşik)
+# <a name="shell-isolated-or-integrated"></a>Kabuk (Yalıtılmış veya Tümleşik)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tümleşik veya yalıtılmış modda, kendi Visual Studio tabanlı bir uygulama oluşturabilirsiniz. Tümleşik modda, uygulamanıza ek olarak birçok Visual Studio özelliği kullanılabilir. Yalıtılmış modda, dağıtmak için kendi uzantınızla birlikte Visual Studio özelliklerinin bir alt kümesi seçin.  
+Kendi Visual Studio tabanlı uygulamanızı tümleşik ya da yalıtılmış modda oluşturabilirsiniz. Tümleşik modda, uygulamanıza ek olarak birçok Visual Studio özelliği de mevcuttur. Yalıtılmış modda, kendi uzantınızla birlikte dağıtmak istediğiniz Visual Studio özelliklerinin bir alt kümesini seçersiniz.  
   
-## <a name="integrated-mode"></a>Tümleşik modu  
- Tümleşik modu, kullanıcılarınızın özel araçlarınız ile birlikte standart bir Visual Studio özelliklerini kullanmayı sağlar. Yazılım geliştirme araçları ve programlama dilleri öncelikle barındırma tümleştirilmiş Kabuk yöneliktir.  
+## <a name="integrated-mode"></a>Tümleşik mod  
+ Tümleşik mod, kullanıcılarınızın özel araçlarınızla birlikte standart Visual Studio özelliklerini kullanmasına olanak sağlar. Tümleşik Kabuk öncelikle programlama dillerini ve yazılım geliştirme araçlarını barındırmak için tasarlanmıştır.  
   
- Herhangi bir sürümünü aynı bilgisayara yüklü Visual Studio ile tümleştirilmiş Kabuk otomatik olarak oluşturulan özel araçlar birleştirin. Visual Studio zaten yüklü değilse, Visual Studio tümleşik Kabuk yeniden dağıtılabilir sürümü sağlayabilirsiniz.  
+ Tümleşik kabukta oluşturulan özel araçlar, Visual Studio 'nun aynı bilgisayarda yüklü olan diğer herhangi bir sürümüyle otomatik olarak birleştirilir. Visual Studio 'nun zaten yüklü olmadığı durumlarda Visual Studio tümleşik kabuğu 'nun yeniden dağıtılabilir bir sürümünü sağlayabilirsiniz.  
   
- Visual Studio tümleşik Kabuk yeniden dağıtılabilir sürümünü programlama dilleri ve ilgili proje sistemlerini destekleyen özellikleri içermez.  
+ Visual Studio tümleşik kabuğun yeniden dağıtılabilir sürümü, programlama dillerini ve ilgili proje sistemlerini destekleyen özellikleri içermez.  
   
 > [!NOTE]
-> Visual Studio shell tümleşik modu, Visual Studio Express sürümleri hariç tüm sürümleri ile birlikte yüklenebilir.  
+> Visual Studio Kabuğu tümleşik modu, Visual Studio 'nun tüm sürümleriyle birlikte, Express sürümleri dışında yüklenebilir.  
   
- Daha fazla bilgi için [Visual Studio Kabuğu (tümleşik)](../extensibility/visual-studio-shell-integrated.md).  
+ Daha fazla bilgi için bkz. [Visual Studio Kabuğu (tümleşik)](../extensibility/visual-studio-shell-integrated.md).  
   
-## <a name="isolated-mode"></a>Yalıtılmış modu  
- Yalıtılmış modda, yan yana çalıştırma özel araçlar oluşturmanıza olanak tanır, Visual Studio'nun diğer sürümleriyle birlikte. Öncelikle standart tüm Visual Studio özelliklere bağlı olarak Visual Studio hizmetler olmadan erişebileceği araçları için tasarlanmıştır. Visual Studio yalıtılmış Kabuğu oluşturulan uygulamalar görünümünü özelleştirebilirsiniz. Kolayca, görüntülenecek birlikte uygulamanızı istemediğiniz menü komut gruplarını ve özellikleri devre dışı bırakabilirsiniz.  
+## <a name="isolated-mode"></a>Yalıtılmış mod  
+ Yalıtılmış mod, Visual Studio 'nun diğer sürümleriyle yan yana çalışan özel araçlar oluşturmanızı sağlar. Öncelikle, tüm standart Visual Studio özelliklerine bağlı kalmadan Visual Studio hizmetlerine erişebilen araçlara yöneliktir. Visual Studio yalıtılmış Kabuğu 'nda oluşturulan uygulamaların görünümünü özelleştirebilirsiniz. Uygulamanızla birlikte görüntülenmesini istemediğiniz özellikleri ve menü komut gruplarını kolayca kapatabilirsiniz.  
   
- Daha fazla bilgi için [Visual Studio yalıtılmış Kabuğu](../extensibility/visual-studio-isolated-shell.md).  
+ Daha fazla bilgi için bkz. [Visual Studio yalıtılmış Kabuğu](../extensibility/visual-studio-isolated-shell.md).  
   
-## <a name="distributing-your-integrated-or-isolated-shell-application"></a>Tümleşik veya yalıtılmış Kabuk uygulaması dağıtma  
- Tümleşik veya yalıtılmış Kabuk uygulamanızı dağıtmak için uygulamanız, bir özel tümleşik veya yalıtılmış Kabuk yeniden dağıtılabilir ve bir yükleme programı eklemeniz gerekir. Dağıtım ve yükleme hakkında daha fazla bilgi için bkz: [yalıtılmış kabuk uygulamaları dağıtma](../extensibility/distributing-isolated-shell-applications.md).  
+## <a name="distributing-your-integrated-or-isolated-shell-application"></a>Tümleşik veya yalıtılmış Kabuk uygulamanızı dağıtma  
+ Tümleşik veya yalıtılmış Kabuk uygulamanızı dağıtmak için uygulamanızı, özel bir tümleşik veya yalıtılmış bir kabuk yeniden dağıtılabilir ve bir yükleme programını dahil etmeniz gerekir. Dağıtım ve yükleme hakkında daha fazla bilgi için bkz. [yalıtılmış Kabuk uygulamalarını dağıtma](../extensibility/distributing-isolated-shell-applications.md).  
   
 > [!IMPORTANT]
-> [Son kullanıcı lisans sözleşmesi (EULA)](https://www.visualstudio.com/support/legal/mt171552) Kabukları Visual Studio tümleşik ve yalıtılmış bir bölüm veri toplamayı içerir (**bölüm 3. Veri**).  Bu, kullanıcıların uygulamanıza yapı tümleşik veya yalıtılmış Kabuk yazılım ya da Microsoft tarafından toplanabilir müşteri kullanım verilerini açıklar. Daha fazla bilgi için [Microsoft Visual Studio ürün ailesi gizlilik bildirimi](https://www.visualstudio.com/dn948229).  
+> Visual Studio tümleşik ve yalıtılmış kabukların [Son Kullanıcı Lisans Sözleşmesi (EULA)](https://www.visualstudio.com/support/legal/mt171552) , veri toplama (Bölüm 3) üzerinde bir bölüm içerir **. Veri**).  Uygulamanızda oluşturduğunuz tümleşik ya da yalıtılmış Kabuk yazılımlarının kullanıcılarından Microsoft tarafından toplanabilecek müşteri kullanım verilerini açıklar. Daha fazla bilgi için bkz. [Microsoft Visual Studio ürün ailesi gizlilik bildirimi](https://www.visualstudio.com/dn948229).  
 > 
-> Uygulamanızı müşterilerinizin ayrı kullanım verilerini toplamak, uygun dikkat edin, Topla, uygulamanızın kullanıcılara sağlamanız gerekir.  Visual Studio Yazılım Geliştirme Seti lisans göre uygulamanızın bir parçası olarak yalıtılmış veya tümleşik Kabuk yazılım dağıttığınızda aşağıdakilerden birini içermelidir:  
+> Uygulamanız aracılığıyla müşterilerinizden ayrı kullanım verileri topluyorsanız, topladıklarınızın uygulamanız kullanıcılarına uygun bildirimi sağlamanız gerekir.  Visual Studio yazılım geliştirme seti lisansına göre yalıtılmış veya tümleşik kabuk yazılımını uygulamanızın bir parçası olarak dağıttığınızda, aşağıdakilerden birini eklemeniz gerekir:  
 > 
-> - Uygulama lisansı bir parçası olarak son kullanıcı lisans sözleşmesi  
-> - Visual Studio koruyan koşulları kabul etmeniz müşterilerinizin gerektiren kendi EULA'yı tümleşik veya kabuk yazılım için Microsoft son kullanıcı lisans koşullarını olarak yalıtılmış Kabuk en azından  
+> - Uygulama lisansınızın bir parçası olarak Son Kullanıcı Lisans Sözleşmesi  
+> - Müşterilerinizin, Visual Studio ile tümleşik veya yalıtılmış Kabuğu en azından kabuk yazılımının Microsoft son kullanıcı lisans koşullarına kadar koruduğu koşulları kabul etmesi için kendi EULA 'Sı gerekir  
   
 ## <a name="additional-resources"></a>Ek Kaynaklar  
- Yeniden dağıtılabilir paketleri hakkında daha fazla bilgi için bkz: [Visual Studio genişletilebilirlik indirmeleri](http://go.microsoft.com/fwlink/?LinkID=119298) Web sitesi.  
+ Yeniden dağıtılabilir paketler hakkında daha fazla bilgi için bkz. [Visual Studio genişletilebilirlik indirmeleri](https://go.microsoft.com/fwlink/?LinkID=119298) Web sitesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Uzantıları Gönderme](../extensibility/shipping-visual-studio-extensions.md)

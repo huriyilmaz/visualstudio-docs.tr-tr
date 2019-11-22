@@ -11,62 +11,62 @@ ms.assetid: 0b40d495-f17f-4bb9-ace8-b365a7172784
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 664363740737eb72213b4818b104aa14c3667a14
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 78ccba3ab8c2dda531614fa791eac3100813840a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65690923"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299694"
 ---
-# <a name="visual-studio-shell-integrated"></a>Visual Studio Kabuğu (tümleşik)
+# <a name="visual-studio-shell-integrated"></a>Visual Studio Kabuğu (Tümleşik)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio tümleşik kabuğu, tümleşik geliştirme ortamı (IDE), hata ayıklayıcı ve kaynak denetimi tümleştirmesini içerir. Herhangi bir programlama dili dahil edilir. Ancak, tümleşik kabuk programlama dilleri eklemenize olanak tanıyan bir altyapı sağlar.  
+Visual Studio tümleşik kabuğu, tümleşik geliştirme ortamı (IDE), hata ayıklayıcı ve kaynak denetimi tümleştirmesini içerir. Programlama dili dahil değildir. Ancak Tümleşik Kabuk, programlama dilleri eklemenize olanak sağlayan bir çerçeve sağlar.  
   
- Visual Studio tümleşik kabuğu, Visual Studio yalıtılmış Kabuğu yanı sıra tümleşik Kabuk belirli bileşenler içeren bir ek yükleme aslında bir birleşiminden oluşur.  Tümleşik Kabuk uygulamanızı hem yalıtılmış Kabuk yeniden dağıtılabilir paketi içermelidir [Microsoft Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paket](http://go.microsoft.com/fwlink/?LinkId=616022) tümleşik Kabuk yeniden dağıtılabilir paketi yanı sıra gelen [Microsoft Visual Studio Kabuğu (tümleşik) yeniden dağıtılabilir paket](http://go.microsoft.com/fwlink/?LinkId=616021).  
+ Visual Studio tümleşik kabuğu aslında Visual Studio yalıtılmış Kabuğu ve tümleşik kabuğa özgü bileşenleri içeren ek bir yüklemenin bir birleşimidir.  Tümleşik Kabuk uygulamanız hem [Microsoft Visual Studio Kabuğu (yalıtılmış) yeniden dağıtılabilir paketten](https://go.microsoft.com/fwlink/?LinkId=616022) yalıtılmış Kabuk yeniden dağıtılabilir paketini hem de [Microsoft Visual Studio Kabuğu (tümleşik) yeniden dağıtılabilir paketten](https://go.microsoft.com/fwlink/?LinkId=616021)Tümleşik Kabuk yeniden dağıtılabilir paketini içermelidir.  
   
 > [!NOTE]
-> Yalıtılmış ve tümleşik Kabuk yeniden dağıtılabilir paketlerine erişebilmeniz için önce bir kısa bir müşteri anketini doldurmanız istenir.  Anketi doldurduktan sonra yeniden dağıtılabilir paket indirme bağlantılarının ile Visual Studio Connect sayfasına yönlendirilirsiniz.  Visual Studio Connect sitesi altında daha sonra gerçekleştirdiğiniz ziyaretlerde indirme bağlantıları bulabilirsiniz **programlar &#124; VISUAL STUDIO 2015 TÜMLEŞİK ve YALITILMIŞ KABUK** sekmesi.  
+> Yalıtılmış ve Tümleşik Kabuk yeniden dağıtılabilir paketlerine erişebilmek için önce kısa bir Müşteri anketi doldurmanız istenir.  Anketi doldurduktan sonra, yeniden dağıtılabilir paket indirme bağlantıları içeren bir Visual Studio Connect sayfasına yönlendirilirsiniz.  Sonraki ziyaretlerde bulunan **Programlar &#124; VISUAL STUDIO 2015 TÜMLEŞIK ve yalıtılmış Kabuk** sekmesinin altındaki Visual Studio Connect sitesine indirme bağlantılarını bulabilirsiniz.  
   
- Tümleşik Kabuk uygulamanızı Visual Studio'nun tam sürümünü aynı bilgisayara yüklerseniz, uygulamanızın bileşenleri doğrudan Visual Studio'ya tümleştirilecektir.  
+ Tümleşik Kabuk uygulamanızı Visual Studio 'nun tam sürümüyle aynı bilgisayara yüklerseniz, uygulamanızın bileşenleri doğrudan Visual Studio 'ya tümleştirilir.  
   
-## <a name="features-in-the-integrated-shell"></a>Tümleşik Kabuk özellikleri  
+## <a name="features-in-the-integrated-shell"></a>Tümleşik kabukta Özellikler  
   
 |||  
 |-|-|  
 |Özellik alanı|Özellik|  
-|Dil Desteği|-Yok|  
-|IDE|<ul><li>Ayarlar<br /><br /> <ul><li>Ayarları oluşturma</li><li>İçeri ve dışarı aktarma ayarları</li><li>Ayarları sıfırlama</li></ul></li><li>**Araç kutusu** tümleştirme</li><li>**Görev listesi** tümleştirme</li><li>Yardım tümleştirmesi</li><li>**Seçenekleri** iletişim kutusu</li><li>Yazı tipleri ve renkler Yönetimi</li><li>**Çıkış** penceresi</li><li>**Komut** penceresi</li><li>Pencere Yönetimi</li><li>Komutlar, menüler ve tuş bağlamaları</li><li>Etki alanına özgü dil (DSL) çalışma zamanı</li></ul>|  
-|Proje sistemi ve proje türleri|-Çözüm ve çözüm klasörleri<br />-Çözüm Yapılandırma Yöneticisi<br />-Öğesi yönetimi<br />-Tek proje ve birden çok proje çözümleri<br />-Uygulama Tasarımcısı'nı (Basitleştirilmiş Proje Özellikleri)<br />-Web Başvurusu Ekle<br />-Hizmet Başvurusu Ekle<br />Tek proje<br />-Web sitesi proje türleri<br />-Web uygulama projeleri|  
-|Yapı|-IDE'de özel derleme adımları<br />-Önceden derleme fikri mülkiyet (IP) koruma<br />-Kod imzalama<br />     MSBuild|  
-|Düzenleyici|-Koda göz atma (birleştirilmiş arama, kaynak tanımı, devralma) araçları<br />-Kod Gezintisi<br />-   IntelliSense<br />-Akıllı etiketler<br />-Yeniden düzenleme<br />-Düzgün listeleme<br />-IntelliSense filtreleme<br />-   **Kod tanımı** penceresi|  
-|Tasarımcı|-Windows Presentation Foundation Tasarımcısı<br />-Windows Forms Tasarımcısı<br />-Web Tasarımcısı ve HTML düzenleyicisi|  
-|Veri|-   **Sunucu Gezgini** (Basitleştirilmiş: yalnızca verileri). Bkz. Not 1.<br />-   **Veri kaynakları** penceresi<br />-Tam kümesini veri denetimleri<br />-XML Düzenleyicisi<br />-Veri bağlama için yerel veri kaynağı (. MDF veya. MDB)<br />-Veri nesnesine bağlama<br />-Veri Web hizmetine bağlama<br />-Yerel veritabanı sunucusuna veri bağlama<br />-Uzak veritabanı sunucusu veri bağlama<br />-DDL uzak veri için Araçlar<br />-   **Sunucu Gezgini** genişletilebilirlik ([!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] örnekleri)|  
-|Hata Ayıklayıcısı|-Yerel hata ayıklama. Bkz. Not 2.<br />-Yönetilen hata ayıklama<br />-Yerel hata ayıklama<br />-Yerel işleme<br />-Uzaktan işleme<br />-Anonim temsilci<br />-Uygulama etki alanları<br />-ASPX hata ayıklama<br />-Attributes<br />-Func-değerlendirmesi sırasında kesme<br />-Kesme noktaları<br />-Kesme noktası kısıtlamaları<br />-Çağrı yığını<br />-   **Komut** penceresi<br />-İş parçacıkları arası hata ayıklama<br />-Veri ipuçları<br />-Veri Görselleştirici<br />-Yönetilen hata ayıklama Yardımcıları (Mda'lar) hata ayıklayıcı desteği<br />-Tür ileticisi hata ayıklayıcı desteği<br />-Dteeevents OTB desteği<br />-JMC adımlayıcıdaki<br />-Hata ayıklayıcı AppID test (DBGCLR)<br />-Hata ayıklayıcı profili<br />-Hata ayıklayıcı Araçlar ve Seçenekler<br />-Hata ayıklama yineleyici<br />-Tasarım zamanı ifade değerlendirmesi<br />-C# ifade değerlendiricisi<br />-Ayrıştırma<br />-Düzenle ve devam et<br />-İfade değerlendirici windows (izleme, Yereller, Otolar)<br />-Özel durum Yardımcısı<br />-Özel durumları<br />-Yürütme<br />-Genel türler<br />-Doğru kaynağı alma<br />-HPC/küme hata ayıklama<br />-Tümleşik çoklu dil hata ayıklama<br />-Birlikte çalışma hata ayıklama<br />-Just-ın-time hata ayıklama<br />-Yerel hata ayıklama<br />-Yönetilen hata ayıklama<br />-El ile denetim (işlemler penceresi)<br />-Bellek<br />-Mini döküm desteği<br />-Modüller<br />-Çok işlemli hata ayıklama<br />-Yerel hata ayıklama<br />-Yeni hata ayıklama altyapısı desteği<br />-Optimize edilmiş kodda hata ayıklama<br />-Çıkış windows filtreleme<br />-Barındırma yönetilen hata ayıklama için işleme<br />-İşlemler<br />-Quickwatch<br />-   Registers<br />-Stack kayıtlara<br />-Uzaktan hata ayıklama<br />-Dönüş değerleri<br />-Komut dosyası hata ayıklama<br />-Kaynak hizmet desteği<br />-Güvenlik<br />-Yan<br />-   SQL<br />-Sembol sunucusu<br />-İzleme noktaları<br />-İş parçacığı<br />-Görsel öğeler<br />-Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) hata ayıklayıcı|  
-|64-bit desteği|-64-bit hem yönetilen hem de yerel kod için tüm dillerde hata ayıklama<br />-x64 yerel destek|  
-|Kaynak kodu denetimi (SCC)|-Temel SCC tümleştirmesi. Bkz. Not 3.<br />-Araçlar ve Seçenekler doğrulama|  
-|Genişletilebilirlik|-VSPackages ve MEF Bileşenleri kullanma|  
+|Dil Desteği|-Hiçbiri|  
+|IDE|<ul><li>Ayarlar<br /><br /> <ul><li>Ayarları oluştur</li><li>Ayarları içeri ve dışarı aktarma</li><li>Ayarları Sıfırla</li></ul></li><li>**Araç kutusu** tümleştirmesi</li><li>**Görev listesi** tümleştirme</li><li>Yardım tümleştirmesi</li><li>**Seçenekler** iletişim kutusu</li><li>Yazı tipleri ve renkler Yönetimi</li><li>**Çıkış** penceresi</li><li>**Komut** penceresi</li><li>Pencere Yönetimi</li><li>Komutlar, menüler ve tuş bağlamaları</li><li>Etki alanına özgü dil (DSL) çalışma zamanı</li></ul>|  
+|Proje sistemi ve proje türleri|-Çözümler ve çözüm klasörleri<br />-Çözüm Yapılandırma Yöneticisi<br />-Öğe yönetimi<br />-Tek projeli ve çoklu proje çözümleri<br />-Uygulama Tasarımcısı (Basitleştirilmiş proje özellikleri)<br />-Web başvurusu Ekle<br />-Hizmet Başvurusu Ekle<br />-Tek projem<br />-Web sitesi proje türleri<br />-Web uygulaması projeleri|  
+|Derleme|-IDE 'de özel derleme adımları<br />-Fikri mülkiyet (IP) koruması için ön derleme<br />-Kod imzalama<br />     MSBuild|  
+|Düzenleyici|-Kod gözatma araçları (Birleşik bul, kaynak tanımı, devralma)<br />-Kod gezintisi<br />-IntelliSense<br />-SmartTags<br />-Yeniden düzenleme<br />-Düzgün listeleme<br />-IntelliSense filtreleme<br />-   **kod tanımı** penceresi|  
+|Tasarımcı|-Windows Presentation Foundation Tasarımcısı<br />-Windows Form Tasarımcısı<br />-Web Tasarımcısı ve HTML Düzenleyicisi|  
+|Veri|-   **Sunucu Gezgini** (Basitleştirilmiş: yalnızca veri). Bkz. Note 1.<br />-   **veri kaynakları** penceresi<br />-Tam veri denetimleri kümesi<br />-XML Düzenleyicisi<br />-Yerel veri kaynağına veri bağlama (. MDF veya. TATIL<br />-Nesneye veri bağlama<br />-Web hizmetine veri bağlama<br />-Yerel veritabanı sunucusuna veri bağlama<br />-Uzak veritabanı sunucusuna veri bağlama<br />-Uzak veriler için DDL araçları<br />-   **Sunucu Gezgini** genişletilebilirlik ([!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] örnekleri)|  
+|Hata Ayıklayıcısı|-Yerel hata ayıklama. Bkz. Note 2.<br />-Yönetilen hata ayıklama<br />-Yerel hata ayıklama<br />-Yerel İşleme İliştir<br />-Uzak işleme iliştir<br />-Anonim temsilci<br />-Uygulama etki alanları<br />-ASPX hata ayıklaması<br />-Öznitelikler<br />-Func-eval sırasında kes<br />-Kesme noktaları<br />-Kesme noktası kısıtlamaları<br />-Callstack<br />-   **komut** penceresi<br />-Çapraz iş parçacığı hata ayıklaması<br />-Veri Ipuçları<br />-Veri görselleştiricisi<br />-Yönetilen hata ayıklama yardımcıları (MDAs) için hata ayıklayıcı desteği<br />-Tür ileticisi için hata ayıklayıcı desteği<br />-OTB için DTEEvents desteği<br />-JMC Stepper<br />-Debugger AppID testi (DBGCLR)<br />-Hata ayıklayıcı profili<br />-Hata ayıklayıcı araçları ve seçenekleri<br />-Hata ayıklama Yineleyici<br />-Tasarım zamanı ifade değerlendirmesi<br />- C# İfade değerlendirici<br />-Ayrıştırılmış derleme<br />-Düzenle ve devam et<br />-Expression değerlendirici pencereleri (Izleme, Yereller, oto)<br />-Özel durum Yardımcısı<br />-Özel durumlar<br />-Yürütme<br />-Genel türler<br />-Doğru kaynak alınıyor<br />-HPC/küme hata ayıklaması<br />-Tümleşik çok dilli hata ayıklama<br />-Birlikte çalışma hata ayıklaması<br />-Tam zamanında hata ayıklama<br />-Yerel hata ayıklama<br />-Yönetilen hata ayıklama<br />-El ile denetim (Işler penceresi)<br />-Bellek<br />-Mini döküm desteği<br />-Modüller<br />-Çok işlem hata ayıklaması<br />-Yerel hata ayıklama<br />-Yeni hata ayıklama altyapısı desteği<br />-İyileştirilmiş kod hata ayıklaması<br />-Çıktıyı Windows filtrelemesini<br />-Yönetilen hata ayıklama için işlem barındırma<br />-Süreçler<br />-Hızlı Bakış<br />-Yazmaçları<br />-Yığına kayıt yapar<br />-Uzaktan hata ayıklama<br />-Dönüş değerleri<br />-Betik hata ayıklaması<br />-Kaynak hizmeti desteği<br />-Güvenlik<br />Yan yana<br />-SQL<br />-Sembol sunucusu<br />-İzleme noktaları<br />-İş parçacığı<br />-Görselleştirmeler<br />-Genişletilebilir Stil sayfası dil dönüşümleri (XSLT) hata ayıklayıcı|  
+|64 bit desteği|-64-hem yönetilen hem de yerel kod için bit hata ayıklama, tüm diller<br />-x64 yerel desteği|  
+|Kaynak kodu denetimi (SCC)|-Temel SCC tümleştirmesi. Bkz. Note 3.<br />-Araçlar ve seçenekler doğrulaması|  
+|Genişletilebilirlik|-VSPackages ve MEF bileşenlerini tüketme|  
   
 ## <a name="notes"></a>Notlar  
   
-#### <a name="1-data-tools"></a>1. Veri Araçları  
- Veritabanı geliştirme araçları ve Basitleştirilmiş veri genişletilebilirlik desteği gibi tümleşik Kabuk içerir **Çözüm Gezgini**. Ancak, SQL Server Express, SQL Raporlama ve Crystal Reports tümleşik Kabuğu dahil edilmez.  
+#### <a name="1-data-tools"></a>1. veri araçları  
+ Tümleşik Kabuk, veri genişletilebilirlik desteği ve Basitleştirilmiş **Çözüm Gezgini**gibi veritabanı geliştirme araçları içerir. Ancak, SQL Server Express, SQL Raporlama ve Crystal Reports tümleşik kabuğa dahil edilmez.  
   
-#### <a name="2-debugging-support"></a>2. Hata Ayıklama Desteği  
- Tümleşik Kabuk, Visual Studio Community sürümü dahil aynı hata ayıklama altyapısını içerir. Hata ayıklama altyapısı gibi Ekle, kesme noktası ayarlayın, Düzenle ve devam et ve diğer yaygın hata ayıklayıcı için yönetilen kod ve ilgili özellikleri içerir. Ancak, hata ayıklama Altyapısı SQL Server veritabanı hata ayıklamayı desteklemiyor.  
+#### <a name="2-debugging-support"></a>2. hata ayıklama desteği  
+ Tümleşik Kabuk, Visual Studio 'nun topluluk sürümüne dahil olan aynı hata ayıklama altyapısını içerir. Hata ayıklama altyapısı, yönetilen kod için ortak hata ayıklayıcıyı ve ayrıca çalıştırma, ekleme, kesme noktası ayarlama, düzenleme ve devam etme gibi ilgili özellikleri içerir. Ancak, hata ayıklama altyapısı SQL Server veritabanı hata ayıklamasını desteklemez.  
   
- Ancak destek yerel hata ayıklama, temel hata ayıklayıcı paket içerisine dâhil için ek dilleri desteklemek için genişletilemez.  
+ Yerel hata ayıklama desteği temel hata ayıklayıcı paketine dahil edilse de, ek dilleri destekleyecek şekilde genişletemezsiniz.  
   
-#### <a name="3-source-code-control-integration"></a>3. Kaynak kodu denetimi tümleştirmesinin  
- Tümleşik kabuğu, kaynak kodu denetimi (SCC) uygulamak için ve tümleştirme bileşenlerini MSSCCI tabanlı ortak kaynak denetimi sağlamak için API'ler sağlar.  
+#### <a name="3-source-code-control-integration"></a>3. kaynak kodu denetimi tümleştirmesi  
+ Tümleşik Kabuk, kaynak kodu denetimi (SCC) uygulamak ve MSSCCı tabanlı ortak kaynak denetimi tümleştirme bileşenleri sağlamak için API 'Ler sağlar.  
   
- SCC tümleştirmesi Pro sürümü Visual Studio'nun normal bir özellik olmamasına karşın, SCC tümleştirmesi tümleşik Kabuğu'nda sağlanır.  
+ SCC tümleştirmesi, Visual Studio 'nun Pro Edition 'ın düzenli bir özelliği olmasa da, Tümleşik kabukta SCC tümleştirmesi sunulmaktadır.  
   
-#### <a name="4-build-support"></a>4. Derleme desteği  
- Tümleşik Kabuk derleme desteği sağlar. Derlemelerde hakkında bilgi bulabilirsiniz [MSBuild başvurusu](../msbuild/msbuild-reference.md).  
+#### <a name="4-build-support"></a>4. derleme desteği  
+ Tümleşik Kabuk, derleme desteği sağlar. [MSBuild başvurusunda](../msbuild/msbuild-reference.md)derlemeler hakkında bilgi bulabilirsiniz.  
   
-## <a name="features-not-included-in-the-integrated-shell"></a>Tümleşik Kabuğu'nda bulunmayan özellikler  
- Tümleşik Kabuğu'nda bulunmayan özelliklerin bir listesi verilmiştir:  
+## <a name="features-not-included-in-the-integrated-shell"></a>Tümleşik kabuğa dahil edilen özellikler  
+ Aşağıda, Tümleşik kabukta bulunmayan özelliklerin bir listesi verilmiştir:  
   
 - Sınıf Tasarımcısı  
   
@@ -76,7 +76,7 @@ Visual Studio tümleşik kabuğu, tümleşik geliştirme ortamı (IDE), hata ay�
   
 - VSHost  
   
-- Hiçbir Visual Studio dilleri veya ilişkili proje şablonları veya proje öğesi şablonları, tümleşik Kabuğu dahil edilir. Hiçbir dil özgü diğer özellikleri, örneğin Visual Basic kod parçacıkları için dahil edilir.  
+- Tümleşik kabuğa Visual Studio dilleri veya ilişkili proje şablonları ya da proje öğesi şablonları dahil değildir. Diğer özelliklerin dile özgü uygulamaları dahil değildir, örneğin Visual Basic kod parçacıkları.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio genel bakışı genişletme](https://msdn.microsoft.com/library/3e9078d7-2763-4cc4-8e20-fac69d747f59)
+ [Visual Studio 'Ya genel bakış 'ı genişletme](https://msdn.microsoft.com/library/3e9078d7-2763-4cc4-8e20-fac69d747f59)

@@ -9,12 +9,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7fc6f29246f90c47a4c59a5ae6bb1999ceac72bf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 744b5f3c62ac2c5636ed2499653986d3b669fce3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646913"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299963"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>9\. Adım: Kodunuzu Gözden Geçirme, Açıklama ve Test Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biç
 
    Deyimler, programlarınızın şeyleri yapabilecekleri şeydir. Görsel C#içinde, bir ifade her zaman noktalı virgül ile biter. Visual Basic, satırın sonu deyimin sonu olur. (Visual Basic noktalı virgül gerekmez.) Yukarıdaki ifade, `PictureBox` denetimine kullanıcının seçtiği dosyayı **OpenFileDialog** bileşeniyle yüklemesini söyler.
 
-  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 5](http://go.microsoft.com/fwlink/?LinkId=205216) veya [öğretici 1: video üzerinde C# bir resim görüntüleyici oluşturma 5](http://go.microsoft.com/fwlink/?LinkId=205206). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
+  ![video bağlantısı](../data-tools/media/playvideo.gif "PlayVideo") Bu konunun video sürümü için bkz [. öğretici 1: Visual Basic resim görüntüleyici oluşturma-video 5](https://go.microsoft.com/fwlink/?LinkId=205216) veya [öğretici 1: video üzerinde C# bir resim görüntüleyici oluşturma 5](https://go.microsoft.com/fwlink/?LinkId=205206). Bu videolar, Visual Studio 'nun önceki bir sürümünü kullanır, bu nedenle bazı menü komutlarında ve diğer kullanıcı arabirimi öğelerinde küçük farklılıklar vardır. Ancak, kavramlar ve yordamlar Visual Studio 'nun geçerli sürümünde benzer şekilde çalışır.
 
 ### <a name="to-add-comments"></a>Açıklama eklemek için
 
@@ -55,7 +55,7 @@ Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biç
      [!code-vb[VbExpressTutorial1Step9_10#1](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step9_10/vb/form1.vb#1)]
 
     > [!NOTE]
-    > **ShowButton** düğinizin Click olay işleyicisi artık tamamlandı ve çalışıyor. Bir `if` ifadesiyle başlayarak kod yazmaya başladıysanız. @No__t_0 bir ifade, programınıza "Bu şeyi denetleme ve doğru ise, bu eylemleri yapma" şeklinde nasıl söylüyorsunuz. Bu durumda, programınıza **Dosya Aç** iletişim kutusunu açmasını söylersiniz ve Kullanıcı bir dosya seçip **Tamam** düğmesini seçerse, bu dosyayı PictureBox 'a yükleyin.
+    > **ShowButton** düğinizin Click olay işleyicisi artık tamamlandı ve çalışıyor. Bir `if` ifadesiyle başlayarak kod yazmaya başladıysanız. `if` bir ifade, programınıza "Bu şeyi denetleme ve doğru ise, bu eylemleri yapma" şeklinde nasıl söylüyorsunuz. Bu durumda, programınıza **Dosya Aç** iletişim kutusunu açmasını söylersiniz ve Kullanıcı bir dosya seçip **Tamam** düğmesini seçerse, bu dosyayı PictureBox 'a yükleyin.
 
     > [!TIP]
     > IDE, kod yazmanızı kolaylaştıracak şekilde oluşturulmuştur ve *kod parçacıkları* bunu yapmanın bir yoludur. Kod parçacığı, küçük bir kod bloğuna genişletilmiş bir kısayoldur.
@@ -81,7 +81,7 @@ Daha sonra kodunuza bir açıklama eklersiniz. Yorum, programın davranış biç
 2. Yeni yazdığınız kodu çalıştırmak için **bir resim göster** düğmesini seçin. İlk olarak, program açık bir **Dosya** iletişim kutusu açar. Filtrelerinizin, iletişim kutusunun alt kısmındaki **dosya türü** açılan listesinde göründüğünü doğrulayın. Ardından bir resme gidin ve açın. Genellikle **Belgelerim klasörünüzdeki Windows** işletim sistemiyle birlikte gelen örnek resimleri, **Resimlerim \ örnek resimler** klasörü içinde bulabilirsiniz.
 
     > [!NOTE]
-    > **Resim dosyası seç** iletişim kutusunda herhangi bir görüntü görmüyorsanız, "tüm dosyalar (*. \*) "iletişim kutusunun sağ alt tarafındaki aşağı açılan listede filtre seçilidir.
+    > **Resim dosyası seç** iletişim kutusunda herhangi bir görüntü görmüyorsanız, "tüm dosyalar (*.\*) "iletişim kutusunun sağ alt tarafındaki aşağı açılan listede filtre seçilidir.
 
 3. Bir resim yükleyin ve PictureBox 'da görünür. Ardından, kenarlıklarını sürükleyerek formunuzu yeniden boyutlandırmayı deneyin. PictureBox 'ın, kendisini formun içine yerleştirilmiş bir TableLayoutPanel içinde yerleştiğinden, resim alanı kendini form kadar geniş olacak şekilde yeniden boyutlandırır ve formun en üstteki %90 ' unu dolduracaktır. TableLayoutPanel ve FlowLayoutPanel kapsayıcılarını şu nedenle kullandınız: Kullanıcı yeniden boyutlandırdığında formunuzu doğru boyutlandırırlar.
 

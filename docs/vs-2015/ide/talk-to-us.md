@@ -11,12 +11,12 @@ caps.latest.revision: 34
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ef686c001fe04dfd23d16685f8cee88df542c52d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 89f43167a12bce77ef260fcf3d72764072f80143
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647200"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299932"
 ---
 # <a name="talk-to-us"></a>Bizimle İletişime Geçin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ Belgelerimizi iyileştirmek için fikirlerinizi ilgileniyoruz. Kişisel olarak y
  Sayfanın altındaki geri bildirim düğümüzü (**Bu sayfa yardımcı oldu mu?** ) kullanın. Bu düğmeyi tüm MSDN sayfalarında bulabilirsiniz. Bir Yanıt arıyorsanız ve bulamıyorsanız, lütfen bize aradığınız bilgileri söyleyin.
 
 ## <a name="i-would-like-to-report-a-problem-with-visual-studio"></a>Visual Studio ile ilgili bir sorun bildirmek istiyorum
- Kilitlenmeler, yavaş performans, beklenmeyen davranış vb. gibi Visual Studio 'Yu kullanarak sorunlar yaşıyorsanız, lütfen **Hızlı Başlat**' ın yanındaki geri bildirim simgesine sağ tıklayıp veya **Yardım &#124; Gönder ' i seçerek sorunu bize bildirin. Geri &#124; bildirimde, ana menüden bir sorun rapor** edin. Daha fazla bilgi için bkz. [Visual Studio Ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio-2015.md).
+ Kilitlenmeler, yavaş performans, beklenmeyen davranış vb. gibi Visual Studio 'Yu kullanarak sorunlarla karşılaşırsanız, lütfen **Hızlı Başlat**' ın yanındaki geri bildirim simgesine sağ tıklayıp veya ana menüden **bir sorun bildir hakkında geri &#124; bildirim &#124; gönder** ' i seçerek sorunu bize bildirin. Daha fazla bilgi için bkz. [Visual Studio Ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio-2015.md).
 
 ## <a name="i-want-to-make-a-suggestion-about-visual-studio-features"></a>Visual Studio özellikleri hakkında öneride bulunmak istiyorum
  Daha iyi bir şey yapabilmemiz için lütfen bize bildirin! Visual Studio ekibine bir özellik veya değişiklik önermek için **öneri sağla** ' yı seçin.
@@ -38,20 +38,17 @@ Belgelerimizi iyileştirmek için fikirlerinizi ilgileniyoruz. Kişisel olarak y
  Visual Studio 'nun yayın öncesi sürümleri, çalıştırmakta olduğunuz yapı kalitesi hakkında geri bildirim göndermenizi sağlayan **Bu ürün** menüsü öğesini derecelendirin. Bu ürünün yayınlanmış sürümlerinde bu sürümü görmezsiniz.
 
 ## <a name="i-need-help"></a>Yardım almam gerekiyor!
- Çevrimiçi yardım için [Microsoft desteği](http://go.microsoft.com/fwlink/?LinkID=99019) bakın.
+ Çevrimiçi yardım için [Microsoft desteği](https://go.microsoft.com/fwlink/?LinkID=99019) bakın.
 
- Amerika Birleşik Devletleri ve Kanada dışında destek seçenekleri değişebilir. Bölgesel kişilerin listesi için bkz. [Microsoft Dünya çapında siteler](http://www.microsoft.com/worldwide/).
+ Amerika Birleşik Devletleri ve Kanada dışında destek seçenekleri değişebilir. Bölgesel kişilerin listesi için bkz. [Microsoft Dünya çapında siteler](https://www.microsoft.com/worldwide/).
 
- Daha fazla seçenek için bkz. [desteğe genel bakış](http://www.visualstudio.com/support/support-overview-vs).
+ Daha fazla seçenek için bkz. [desteğe genel bakış](https://visualstudio.microsoft.com/support/).
 
- Doğrudan Microsoft'tan yönetilen destek almayı gerektiren büyük kuruluşlarda, çeşitli Premier Destek olanaklarının sunulduğu sözleşmelerden yararlanılabilir. Daha fazla bilgi için bkz. [Microsoft hizmetleri Premier destek](http://go.microsoft.com/fwlink/?LinkId=258223).
+ Doğrudan Microsoft'tan yönetilen destek almayı gerektiren büyük kuruluşlarda, çeşitli Premier Destek olanaklarının sunulduğu sözleşmelerden yararlanılabilir. Daha fazla bilgi için bkz. [Microsoft hizmetleri Premier destek](https://go.microsoft.com/fwlink/?LinkId=258223).
 
  Ürün yeni bir bilgisayar ya da cihaz ile yüklenmiş gelirse, bu yazılım için teknik destek ve yardımı donanım üreticisi sağlar. Destek için doğrudan üreticiye başvurun.
 
  Microsoft destek hizmetleri, o anda geçerli olan fiyatlara, şartlara ve koşullara tabidir. Fiyatlar, şartlar ve koşullar bildirimde bulunulmaksızın değiştirilebilir.
-
-## <a name="i-want-to-get-involved-in-the-developer-community"></a>Geliştirici topluluğuna dahil etmek istiyorum
- Sorularınızı ve yanıtlarınızı diğer geliştiricilerle paylaşmak istiyorsanız, [MSDN forumları](http://social.msdn.microsoft.com/Forums/home) veya [StackOverflow](http://stackoverflow.com/)kullanabilirsiniz. Diğer geliştiricilerden kodu görüntüleyebilir ve [Geliştirici kodu örnekleri](http://code.msdn.microsoft.com/) ve [CodePlex](http://www.codeplex.com/) web sitelerinde kendi örneklerinizi paylaşabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio 2015 ile İlgili Sorun Bildirme](../ide/how-to-report-a-problem-with-visual-studio-2015.md)

@@ -8,12 +8,12 @@ ms.assetid: c64aac80-a411-463f-b7bd-8b7607a52ece
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 1d51474f2e242f764a84edaa9f2712418c859460
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 6735f929f52387f4cb40406d6918894e72bb40d3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408704"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299684"
 ---
 # <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>Hangi&#39;'teki Visual Studio 2015 SDK'sı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,7 +56,7 @@ Visual Studio 2017'den itibaren özel Proje ve öğe şablonları için tarama a
  C++ için VSPackage Sihirbazı'nı menü komutları, araç pencereleri ve özel düzenleyicileri destekler. İçinde arayın **yeni proje** iletişim kutusunda **Visual C++ / genişletilebilirlik**.
 
 ## <a name="vs-sdk-reference-assemblies-via-nuget"></a>VS SDK başvurusu Derlemeleri'nin NuGet aracılığıyla
- Taşınabilirliği artırmak ve genişletilebilirlik projeleri paylaşımı için VS SDK başvurusu derlemeleri'nin NuGet sürümlerini kullanabilirsiniz.  Bunlar üzerinde kullanılabilir [nuget.org](http://www.nuget.org) tarafından yayımlanan [VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility) ve proje veya çözümü Visual Studio ile kolayca eklenebilir **başvuran / yönetme NuGet Paketleri** iletişim. Tek tek özgü genişletilebilirlik derlemelere başvurular ekleyin veya tüm VS SDK'yi başvuran tek seferde VS SDK'sını kullanarak derlemeleri eklemek [Meta paket](http://www.nuget.org/packages/VSSDK_Reference_Assemblies). NuGet hakkında daha fazla bilgi için bkz: [NuGet genel bakış](http://docs.nuget.org/) ve [yönetme NuGet paketlerini kullanarak iletişim](http://docs.nuget.org/Consume/Package-Manager-Dialog).
+ Taşınabilirliği artırmak ve genişletilebilirlik projeleri paylaşımı için VS SDK başvurusu derlemeleri'nin NuGet sürümlerini kullanabilirsiniz.  Bunlar üzerinde kullanılabilir [nuget.org](https://www.nuget.org/) tarafından yayımlanan [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility) ve proje veya çözümü Visual Studio ile kolayca eklenebilir **başvuran / yönetme NuGet Paketleri** iletişim. Tek tek özgü genişletilebilirlik derlemelere başvurular ekleyin veya tüm VS SDK'yi başvuran tek seferde VS SDK'sını kullanarak derlemeleri eklemek [Meta paket](https://www.nuget.org/packages/VSSDK_Reference_Assemblies). NuGet hakkında daha fazla bilgi için bkz: [NuGet genel bakış](https://docs.microsoft.com/nuget/) ve [yönetme NuGet paketlerini kullanarak iletişim](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio).
 
  VS SDK başvurusu derlemeleri'nin NuGet sürümlerini kullandığınızda, başka bir kullanıcı açın ve derleme için VS SDK'sını yükleme gerekmez.  VS SDK derleme araçları ve NuGet başvuru bütünleştirilmiş kodları bilgisayarlarında bu proje için otomatik olarak yüklenir.
 
@@ -65,12 +65,12 @@ Visual Studio 2017'den itibaren özel Proje ve öğe şablonları için tarama a
 > [!NOTE]
 > Projelerinizi VS SDK'sı başvuru derlemelerini kullanmaya devam edebilirsiniz (altında bulunan \<Visual Studio yükleme konumu > \ VSSDK\VisualStudioIntegration\Common\Assemblies) ve mevcut genişletilebilirlik projeleri olması gerekmez NuGet paketlerini kullanacak şekilde yükseltildi.  Proje **başvuran / başvuru ekleme** VS SDK'sı başvuru bütünleştirilmiş kodlarını kullanan iletişim devam etmektedir.
 >
-> Mevcut projelerinize NuGet kullanmak üzere değiştirmek istiyorsanız, [nasıl yapılır: VSPackage'ı Visual Studio 2015'e geçirme](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md) genişletilebilirlik projeleri için NuGet paketlerini güncelleştirme bir bölümü vardır.
+> Mevcut projelerinizi NuGet kullanmak üzere değiştirmek istiyorsanız, [nasıl yapılır: Visual Studio 2015 Vspackages'a geçirme](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md) genişletilebilirlik projeleri için NuGet paketlerini güncelleştirme bir bölümü vardır.
 
 ## <a name="light-bulbs"></a>Ampuller
  Uzantı kod yazmayı en heyecan verici yeni yollardan biriyle Roslyn proje tarafından sağlanır. Daha fazla bilgi için [Roslyn](https://github.com/dotnet/Roslyn).
 
- Ampuller VSSDK ile birlikte gelen yeni bir özelliktir. Visual Studio Düzenleyicisi'nde kullanılan simgeler, kod yeniden düzenleme işlemleri veya yerleşik kod çözümleyicileri tarafından tanımlanan sorunlar için düzeltmeler gösterecek şekilde genişletmek değildirler. Daha fazla bilgi için [izlenecek yol: Ampul önerilerini görüntüleme](../extensibility/walkthrough-displaying-light-bulb-suggestions.md).
+ Ampuller VSSDK ile birlikte gelen yeni bir özelliktir. Visual Studio Düzenleyicisi'nde kullanılan simgeler, kod yeniden düzenleme işlemleri veya yerleşik kod çözümleyicileri tarafından tanımlanan sorunlar için düzeltmeler gösterecek şekilde genişletmek değildirler. Daha fazla bilgi için [izlenecek yol: ampul önerilerini görüntüleme](../extensibility/walkthrough-displaying-light-bulb-suggestions.md).
 
 ## <a name="updated-user-experience-guidelines"></a>Güncelleştirilmiş kullanıcı deneyimi yönergeleri
  Visual Studio için yeni uzantıları veya özellikler tasarlama? Güncelleştirilmiş genişletilmiş kullanıma alıp [Visual Studio kullanıcı deneyimi yönergeleri](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  Bölümünde bulabilirsiniz [renk belirteçleri](../extensibility/ux-guidelines/shared-colors-for-visual-studio.md), [yazı tipi boyutlarını](../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md), [iletişim düzeni belirtimleri](../extensibility/ux-guidelines/layout-for-visual-studio.md)ve yeni kullanıcı Arabirimi Visual Studio ile sorunsuz bir şekilde tümleştirmek için ihtiyacınız olan diğer Kılavuzlar.

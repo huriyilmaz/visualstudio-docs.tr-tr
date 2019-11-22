@@ -27,12 +27,12 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 23c570e9d29c2288da32469b524c5e4d9125b097
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: d4d4b02d512480d96c501758f4cf0f1313158942
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65694922"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300547"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>Visual Studio Hata Ayıklayıcısında Simge (.pdb) ve Kaynak Dosyaları Belirtme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -63,9 +63,9 @@ Sembol dosyası olarak da bilinen program veritabanı (.pdb) dosyası sınıflar
 
 1. Visual Studio'da açın **Araçlar / Seçenekler / hata ayıklama / semboller** sayfası.
 
-    ![Araçlar &#45; seçenekleri &#45; hata ayıklama &#45; semboller sayfasını](../debugger/media/dbg-tools-options-symbols.png "DBG_Tools_Options_Symbols")
+    ![Araç &#45; seçenekleri &#45; hata &#45; ayıklama sembolleri sayfası](../debugger/media/dbg-tools-options-symbols.png "DBG_Tools_Options_Symbols")
 
-2. Klasör Seç ![Araçları&#47; seçenekleri&#47; hata ayıklama&#47;sembolleri klasör simgesini](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") simgesi. Düzenlenebilir metin görünür **sembol dosyası (.pdb) konumlar** kutusu.
+2. Klasör ![araçları&#47; seçenekleri&#47; hata ayıklama&#47;sembolleri klasör simgesi](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") simge simgesini seçin. Düzenlenebilir metin görünür **sembol dosyası (.pdb) konumlar** kutusu.
 
 3. URL'yi ya da sembol sunucusunun veya sembol konumunun dizin yolunu yazın. Deyimi tamamlama doğru biçimi bulmanıza yardımcı olur.
 
@@ -135,7 +135,7 @@ Sembol dosyası olarak da bilinen program veritabanı (.pdb) dosyası sınıflar
 
    Bu olaylardan biri oluştuğunda, hata ayıklayıcı görüntüler **yüklü sembol yok** gerekli sembolleri bilip yardımcı olması için sayfa.
 
-   ![Yüklü sembol yok sayfası](../debugger/media/dbg-nosymbolsloaded.png "DBG_NoSymbolsLoaded")
+   ![Simge yüklenmedi sayfası yok](../debugger/media/dbg-nosymbolsloaded.png "DBG_NoSymbolsLoaded")
 
 - Arama yollarını değiştirmek için seçilmeyen bir yolu seçin veya **yeni** ve yeni bir yol girin. Seçin **yük** yolları tekrar aramak ve bulunursa sembol dosyasını yüklemek için.
 
@@ -147,7 +147,7 @@ Sembol dosyası olarak da bilinen program veritabanı (.pdb) dosyası sınıflar
 
 - Kaynak veya sembol dosyaları bulunamadığında ayrıştırılmış kodu her zaman göstermek için seçin **Seçenekleri iletişim kutusu** bağlantısını ve her ikisini de seçin **adres seviyesinde hata ayıklamayı etkinleştir** ve **ayrıştırılmış Kodu Göster, Kaynak kullanılamıyor**.
 
-   ![Seçenekleri &#47; hata ayıklama &#47; genel ayrıştırma seçenekleri](../debugger/media/dbg-options-general-disassembly-checkbox.png "DBG_Options_General_disassembly_checkbox")
+   ![Seçenekler &#47; hata &#47; ayıklama genel ayrıştırma seçenekleri](../debugger/media/dbg-options-general-disassembly-checkbox.png "DBG_Options_General_disassembly_checkbox")
 
   **Sembol seçeneklerini kısayol menüsünden değiştirme**
 
@@ -214,7 +214,7 @@ Sembol dosyası olarak da bilinen program veritabanı (.pdb) dosyası sınıflar
 
 2. Altında **ortak özellikler** düğümünü seçin **kaynak dosyalarında Hata Ayıkla**.
 
-3. Klasörü tıklatın ![Araçları&#47; seçenekleri&#47; hata ayıklama&#47;sembolleri klasör simgesini](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") simgesi. Düzenlenebilir metin görünür **kaynak kodu içeren dizinler** listesi.
+3. Klasör ![araçları&#47; seçenekleri&#47; hata ayıklama&#47;sembolleri klasörü simgesi](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") simgesine tıklayın. Düzenlenebilir metin görünür **kaynak kodu içeren dizinler** listesi.
 
 4. Aramak istediğiniz yolu ekleyin.
 
@@ -224,7 +224,7 @@ Sembol dosyası olarak da bilinen program veritabanı (.pdb) dosyası sınıflar
  Yerel makinede kaynak kod olmadığında veya .pdb dosyası kaynak kodla eşleşmediğinde, uygulamada hata ayıklamaya yardımcı olması için Kaynak Sunucuyu kullanabilirsiniz. Kaynak Sunucu, dosya isteklerini alır ve gerçek dosyaları döndürür. Kaynak Sunucu, srcsrv.dll adlı bir DLL dosyası ile çalışır. Kaynak Sunucu, kaynak kodu depodan almak için kullanılan komutların yanı sıra kaynak kodu deposuna işaretçiler içeren uygulamanın .pdb dosyasını okur. devenv.exe ve srcsrv.dll ile aynı dizine konması gereken srcsrv.ini adlı dosyadaki izin verilen komutları listeleyerek hangi komutlara uygulamanın .pdb dosyasından yürütülmesini izin verileceğini sınırlayabilirsiniz.
 
 > [!IMPORTANT]
-> Rastgele komutlar uygulamanın .pdb dosyasına katıştırılabildiğinden yalnızca yürütmek istediğiniz komutları srcsrv.ini dosyasına koyduğunuzdan emin olun. srcsvr.ini dosyasında olmayan bir komutu yürütme girişimi, bir onay iletişim kutusunun görüntülenmesine neden olur. Daha fazla bilgi için [güvenlik uyarısı: Hata ayıklayıcı güvenilmeyen komut yürütme gerekir](../debugger/security-warning-debugger-must-execute-untrusted-command.md). Komut parametrelerinde bir doğrulama yapılmadı, bu nedenle güvenilir komutlara dikkat edin. Örneğin, cmd.exe'ye güvendiyseniz, kötü niyetli bir kullanıcı, komutu tehlikeli duruma getirecek parametreler belirtebilir.
+> Rastgele komutlar uygulamanın .pdb dosyasına katıştırılabildiğinden yalnızca yürütmek istediğiniz komutları srcsrv.ini dosyasına koyduğunuzdan emin olun. srcsvr.ini dosyasında olmayan bir komutu yürütme girişimi, bir onay iletişim kutusunun görüntülenmesine neden olur. Daha fazla bilgi için [güvenlik uyarısı: hata ayıklayıcı gerekir yürütme güvenilmeyen komut](../debugger/security-warning-debugger-must-execute-untrusted-command.md). Komut parametrelerinde bir doğrulama yapılmadı, bu nedenle güvenilir komutlara dikkat edin. Örneğin, cmd.exe'ye güvendiyseniz, kötü niyetli bir kullanıcı, komutu tehlikeli duruma getirecek parametreler belirtebilir.
 
  **Bir kaynak sunucusunun kullanımını etkinleştirmek için**
 
@@ -238,11 +238,11 @@ Sembol dosyası olarak da bilinen program veritabanı (.pdb) dosyası sınıflar
 
 4. Seçin **kaynak sunucusu desteğini etkinleştir** onay kutusu.
 
-     ![Kaynak sunucu seçenekleri etkinleştirme](../debugger/media/dbg-options-general-enablesrcsrvr-checkbox.png "DBG_Options_General_EnableSrcSrvr_checkbox")
+     ![Kaynak sunucu seçeneklerini etkinleştir](../debugger/media/dbg-options-general-enablesrcsrvr-checkbox.png "DBG_Options_General_EnableSrcSrvr_checkbox")
 
 5. (İsteğe bağlı) İstediğiniz alt seçeneği belirleyin.
 
      Unutmayın hem **kısmi güven derlemeleri (sadece yönetilen) için kaynak sunucuya izin ver** ve **her zaman sormadan güvenilmeyen kaynak sunucu komutlarını Çalıştır** yukarıda açıklanan güvenlik risklerini artırabilir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Visual Studio 2012 ve 2013 değişiklikleri yükleme .NET uzaktan sembolü](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)
+ [Visual Studio 2012 ve 2013 değişiklikleri yükleme .NET uzaktan sembolü](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)

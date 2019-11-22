@@ -29,12 +29,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7500782a1d935c08ae95e26764c9476c63f36660
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 10eb94783abbd63ca152fbf73a544665199ba137
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72620385"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300295"
 ---
 # <a name="additional-information-about-class-designer-errors"></a>Sınıf Tasarımcısı Hataları Hakkında Ek Bilgiler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Sınıf Tasarımcısı, kaynak dosyalarınızın konumunu izlememez, bu nedenle 
 
  [Görsel C++ kodla çalışma (sınıf Tasarımcısı)](../ide/working-with-visual-cpp-code-class-designer.md) bir sınıf diyagramında görüntüleme C++ ile ilgili sorun giderme bilgilerini içerir.
 
- [Visual Studio Sınıf Tasarımcısı Forumu](http://go.microsoft.com/fwlink/?LinkId=160754) Sınıf Tasarımcısı hakkında sorularınız için bir forum sağlar.
+ [Visual Studio Sınıf Tasarımcısı Forumu](https://go.microsoft.com/fwlink/?LinkId=160754) Sınıf Tasarımcısı hakkında sorularınız için bir forum sağlar.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Sınıfları ve Türleri Tasarlama ve Görüntüleme (Sınıf Tasarımcısı)](../ide/designing-and-viewing-classes-and-types.md)

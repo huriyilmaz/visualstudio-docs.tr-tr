@@ -13,12 +13,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4f83fcf3ea500e0640a226b80d3d3c0e2c7ed869
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b634b11418ef2d4220dc4eb07c825b514ab5494c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655100"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301199"
 ---
 # <a name="customize-your-model-with-profiles-and-stereotypes"></a>Modelinizi profiller ve stereotipler aracılığıyla özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,4 +45,3 @@ Visual Studio 'da sınıflar ve bileşenler gibi standart UML model öğelerini 
 |[UML’yi genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md)|Kendi uygulama alanınızı uyarlanan kendi stereotiplerinizi ve araçlarınızı tanımlayabilirsiniz.<br /><br /> Örneğin, bankacılık yazılımı geliştirirseniz, sınıflara uygulanabilen bir «Account» stereotipi tanımlayabilirsiniz. Daha sonra farklı hesap türlerini ve bunların ilişkilerini betimleyen sınıf diyagramlarını kullanabilirsiniz.|
 |[UML profili yükleme](../modeling/install-a-uml-profile.md)|Size bir UML profili verildiyse, bunu bilgisayarınıza yükleyebilirsiniz.|
 |[Özel bir modelleme araç kutusu öğesi tanımlama](../modeling/define-a-custom-modeling-toolbox-item.md)|Özel bir araç kutusu öğesi, yeni öğelerde bir stereotipin sürekli olarak ayarlanmasını sağlar.|
-|[Stereotipe göre renk UML sınıfları](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|Bu örnek kod UML diyagramlarını genişletir. Bir UML şeklinin rengini, öğenin stereotipine göre otomatik olarak ayarlar.|

@@ -9,18 +9,18 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b7c34e9cae335af12f59e6c25d5fb3c24e5c1749
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6fae0bb2cca6f6f8a4ffb4e5af58473d041a12eb
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659351"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301329"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Visual Studio Mimari Araç Kullanımı Kılavuzu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu mimari araç araçları, Visual Studio 2010 ' de modelleme araçlarının kullanımı ile ilgili pratik yönergelerin indirilebileceğine dair bir pakettir. Tüm modelleme araçlarının tümleşik bir şekilde nasıl kullanılacağına ilişkin üst düzey bir görünüm sunar ve araçların kullanıldığı en yaygın senaryoları açıklar.
+Bu mimari araç kullanımı yönergesi, Visual Studio 2010 modelleme araçlarının kullanımıyla ilgili faydalı yönergeler içeren indirilebilir bir pakettir. Tüm modelleme araçlarının tümleşik bir şekilde kullanma üst düzey bir görünümünü sunar ve araçları kullanılan en yaygın senaryoları açıklar.
 
  İçerik, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ürün ekibinin, Microsoft hizmetlerinin, Microsoft en değerli profesyonellerin (MVP) ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] topluluk liderlerinden üyelere sahip olan özel bir grup olan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ALM Ranger tarafından oluşturulmuştur.
 
- [Mimari araç kılavuzunu indirmek için buraya tıklayın.](http://go.microsoft.com/fwlink/?LinkID=191984)
+ [Mimari araç kılavuzunu indirmek için buraya tıklayın.](https://go.microsoft.com/fwlink/?LinkID=191984)

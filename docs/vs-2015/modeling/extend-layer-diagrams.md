@@ -12,12 +12,12 @@ caps.latest.revision: 41
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 48fdddd8711086ff185e64df6981cd6848ad1f51
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bfcec64f9401fdbf79e67bee5fe8430452632fbc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669627"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301031"
 ---
 # <a name="extend-layer-diagrams"></a>Katman diyagramlarını genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,14 +34,14 @@ Katman diyagramları oluşturup güncelleştirmek ve Visual Studio 'daki katman 
 
 - [Katman diyagramları ile kod doğrulama](../modeling/validate-code-with-layer-diagrams.md)
 
-## <a name="prereqs"></a>Gereklilik
+## <a name="prereqs"></a> Gereksinimleri
  Katman uzantılarınızı geliştirmek istediğiniz bilgisayarda aşağıdakilerin yüklü olması gerekir:
 
 - Visual Studio
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)
 
-- [Visual Studio 2015 için modelleme SDK](http://www.microsoft.com/download/details.aspx?id=48148)
+- [Visual Studio 2015 için modelleme SDK](https://www.microsoft.com/download/details.aspx?id=48148)
 
   Katman uzantılarınızı çalıştırmak istediğiniz bilgisayarda, Visual Studio 'nun uygun bir sürümünün yüklü olması gerekir. Daha fazla bilgi için bkz. [Katman modeli uzantısı dağıtma](../modeling/deploy-a-layer-model-extension.md).
 
@@ -61,4 +61,4 @@ Katman diyagramları oluşturup güncelleştirmek ve Visual Studio 'daki katman 
  [Katman diyagramları için uzantı sorunlarını giderme](../modeling/troubleshoot-extensions-for-layer-diagrams.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Modelleme uzantısı katman diyagramları tanımlama ve yüklemeyi](../modeling/define-and-install-a-modeling-extension.md) oluşturma [: başvuru](../modeling/layer-diagrams-reference.md) [Katman diyagramları: kılavuzlar](../modeling/layer-diagrams-guidelines.md) [kod](../modeling/create-layer-diagrams-from-your-code.md) [doğrulama kod doğrulama kodu](../modeling/validate-code-with-layer-diagrams.md) [bir UML modelden](../modeling/generate-files-from-a-uml-model.md) [dosya oluşturma Visual Studio API kullanarak bir UML modeli açma](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)
+ [Modelleme uzantısı katman diyagramları tanımlama ve yüklemeyi](../modeling/define-and-install-a-modeling-extension.md) oluşturma [: başvuru](../modeling/layer-diagrams-reference.md) [Katman diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md) [](../modeling/create-layer-diagrams-from-your-code.md) katman diyagramları [ile kod doğrulama kod doğrulama](../modeling/validate-code-with-layer-diagrams.md) [BIR UML modelden dosya oluşturma bir UML modeli](../modeling/generate-files-from-a-uml-model.md) [, Visual Studio API kullanarak bir UML modeli açma](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)
