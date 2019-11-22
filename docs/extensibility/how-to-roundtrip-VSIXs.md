@@ -1,5 +1,5 @@
 ---
-title: Nasıl yapılır gidiş geliş uzantıları
+title: How to Roundtrip Extensions
 ms.date: 06/25/2017
 ms.topic: conceptual
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
@@ -8,100 +8,100 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: 392a0157522f5baa8e8736d52c940b31c0a44cde
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 44b5c5c58c46017730f06142548505c628894a11
+ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826036"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74316496"
 ---
-# <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>Nasıl yapılır: Uzantılar Visual Studio 2017 ve Visual Studio 2015 ile uyumlu hale getirmek
+# <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>How to: Make extensions compatible with Visual Studio 2017 and Visual Studio 2015
 
-Bu belgede, genişletilebilirlik projeleri Visual Studio 2015 ve Visual Studio 2017 gidiş dönüş yapmak açıklanmaktadır. Bu yükseltme işlemini tamamladıktan sonra bir proje açın, derleme, yükleme ve Visual Studio 2015 ve Visual Studio 2017 ' çalıştırmak mümkün olacaktır. Bir başvuru, Visual Studio 2015 ve Visual Studio 2017 arasındaki gidiş dönüş yapabilen bazı uzantılar bulunabilir [VS SDK'sı genişletilebilirlik örnekleri](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
+This document explains how to make extensibility projects round-trip between Visual Studio 2015 and Visual Studio 2017. After completing this upgrade, a project will be able to open, build, install, and run in both Visual Studio 2015 and Visual Studio 2017. As a reference, some extensions that can round-trip between Visual Studio 2015 and Visual Studio 2017 can be found in the [VS SDK extensibility samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
-Daha sonra başvurmak yalnızca Visual Studio 2017'de derleme, ancak Visual Studio 2015 ve Visual Studio 2017 ' çalıştırmak için VSIX çıktısının yer almasını istiyorsanız [uzantısı dokumentu migrace](how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
-
-> [!NOTE]
-> Sürümleri arasında Visual Studio'da değişiklikleri nedeniyle, başka bir sürümünde çalışan bazı şeyleri çalışmaz. Erişmeye çalıştığınız özellikler her iki sürümde de kullanılabilir uzantısına sahip olacaktır olduğundan emin olun veya beklenmeyen sonuçlar.
-
-Anahat bir VSIX gidiş dönüşlü hale getirmek için bu belgedeki tamamlayacağınız gelişmiş adımlar aşağıda verilmiştir:
-
-1. Doğru NuGet paketlerini içeri aktarın.
-2. Uzantı bildirimi güncelleştirin:
-    * Yükleme hedefi
-    * Önkoşullar
-3. CSProj güncelleştirin:
-    * Güncelleştirme `<MinimumVisualStudioVersion>`.
-    * Ekleme `<VsixType>` özelliği.
-    * Hata ayıklama özelliği Ekle `($DevEnvDir)` 3 kez.
-    * Derleme araçları ve hedefleri içeri aktarmaya yönelik koşullar ekleyin.
-
-4. Derleme ve Test
-
-## <a name="environment-setup"></a>Ortam kurulumu
-
-Bu belge, makinenizde yüklü olduğunu varsayar:
-
-* VS yüklü SDK'sı ile Visual Studio 2015
-* Genişletilebilirlik iş yükü yüklenmiş olan Visual Studio 2017
-
-## <a name="recommended-approach"></a>Önerilen yaklaşım
-
-Visual Studio 2015, Visual Studio 2017 yerine bu yükseltmeyi başlatmak için önerilir. Visual Studio 2015'te geliştirmenin ana avantajı, Visual Studio 2015'te kullanılabilir olmayan derlemelere başvurma sağlamaktır. Visual Studio 2017'deki geliştirme bunu yaparsanız, yalnızca Visual Studio 2017'de var olan bir derleme bağımlılığı yapabilecek riski yoktur.
-
-## <a name="ensure-there-is-no-reference-to-projectjson"></a>Project.json başvuru olduğundan emin olun
-
-Bu belgede daha sonra biz de koşullu içeri aktarma deyimlerini ekler, * *.csproj* dosya. NuGet başvurularınızı depolanıyorsa çalışmaz *project.json*. Bu nedenle, tüm NuGet başvurularını taşımanız önerilir *packages.config* dosya.
-Projeniz varsa bir *project.json* dosyası:
-
-* Başvuruları Not *project.json*.
-* Gelen **Çözüm Gezgini**, silme *project.json* proje dosyası. Bu siler *project.json* dosya ve projeden kaldırır.
-* NuGet başvuruları projeye geri ekleyin:
-  * Sağ **çözüm** ve **çözüm için NuGet paketlerini Yönet**.
-  * Visual Studio otomatik olarak oluşturur *packages.config* dosyayı.
+If you only intend to build in Visual Studio 2017, but want the output VSIX to run in both Visual Studio 2015 and Visual Studio 2017, then refer to the [Extension migration document](how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
 
 > [!NOTE]
-> Projenizi EnvDTE paketler içeriyorsa, bunlar sağ tıklanarak eklenmesi gerekebilir **başvuruları** seçerek **Başvurusu Ekle** ve uygun başvurusu ekleniyor. NuGet paketlerini kullanarak projenizi çalışılırken hatalar oluşturabilir.
+> Due to changes in Visual Studio between versions, some things that worked in one version don't work in another. Ensure that the features you are trying to access are available in both versions or the extension will have unexpected results.
 
-## <a name="add-appropriate-build-tools"></a>Uygun derleme araçları ekleme
+Here is an outline of the steps you'll complete in this document to round-trip a VSIX:
 
-Biz emin olmak için bize oluşturmak ve uygun şekilde hata ayıklama izin derleme araçları eklemeniz gerekir. Microsoft, bir derleme için bu çağrılan Microsoft.VisualStudio.Sdk.BuildTasks oluşturdu.
+1. Import correct NuGet packages.
+2. Update Extension Manifest:
+    * Installation target
+    * Prerequisites
+3. Update CSProj:
+    * Update `<MinimumVisualStudioVersion>`.
+    * Add the `<VsixType>` property.
+    * Add the debugging property `($DevEnvDir)` 3 times.
+    * Add conditions for importing build tools and targets.
 
-Yapı ve Visual Studio 2015 ve 2017 bir Vsıxv3 dağıtmak için aşağıdaki NuGet paketlerini gerektirir:
+4. Build and Test
 
-Sürüm | Yerleşik araçlar
+## <a name="environment-setup"></a>Environment setup
+
+This document assumes that you have the following installed on your machine:
+
+* Visual Studio 2015 with the VS SDK installed
+* Visual Studio 2017 with the Extensibility workload installed
+
+## <a name="recommended-approach"></a>Recommended approach
+
+It is highly recommended to start this upgrade with Visual Studio 2015, instead of Visual Studio 2017. The main benefit of developing in Visual Studio 2015 is to ensure that you do not reference assemblies that are not available in Visual Studio 2015. If you do development in Visual Studio 2017, there is a risk that you might introduce a dependency on an assembly that only exists in Visual Studio 2017.
+
+## <a name="ensure-there-is-no-reference-to-projectjson"></a>Ensure there is no reference to project.json
+
+Later in this document, we will insert conditional import statements in to your * *.csproj* file. This won't work if your NuGet references are stored in *project.json*. As such, it is advised to move all NuGet references to the *packages.config* file.
+If your project contains a *project.json* file:
+
+* Take a note of the references in *project.json*.
+* From the **Solution Explorer**, delete the *project.json* file from the project. This deletes the *project.json* file and removes it from the project.
+* Add the NuGet references back in to the project:
+  * Right-click on the **Solution** and choose **Manage NuGet Packages for Solution**.
+  * Visual Studio automatically creates the *packages.config* file for you.
+
+> [!NOTE]
+> If your project contained EnvDTE packages, they may need to be added by right clicking on **References** selecting **Add reference** and adding the appropriate reference. Using NuGet packages may create errors while trying to build your project.
+
+## <a name="add-appropriate-build-tools"></a>Add appropriate build tools
+
+We need to be sure to add build tools that will allow us to build and debug appropriately. Microsoft has created an assembly for this called Microsoft.VisualStudio.Sdk.BuildTasks.
+
+To build and deploy a VSIXv3 in both Visual Studio 2015 and 2017, you will require the following NuGet packages:
+
+Version | Built Tools
 --- | ---
 Visual Studio 2015 | Microsoft.VisualStudio.Sdk.BuildTasks.14.0
 Visual Studio 2017 | Microsoft.VSSDK.BuildTool
 
-Bunu yapmak için:
+To do so:
 
-* Microsoft.VisualStudio.Sdk.BuildTasks.14.0 NuGet paketini projenize ekleyin.
-* Projenizi Microsoft.VSSDK.BuildTools içermiyorsa, bunu ekleyin.
-* Microsoft.VSSDK.BuildTools sürüm 15.x olduğundan emin olun veya büyük.
+* Add the NuGet package Microsoft.VisualStudio.Sdk.BuildTasks.14.0 to your project.
+* If your project does not contain Microsoft.VSSDK.BuildTools, add it.
+* Ensure the Microsoft.VSSDK.BuildTools version is 15.x or greater.
 
-## <a name="update-extension-manifest"></a>Güncelleştirme uzantı bildirimi
+## <a name="update-extension-manifest"></a>Update extension manifest
 
-### <a name="1-installation-targets"></a>1. Yükleme hedefleri
+### <a name="1-installation-targets"></a>1. Installation targets
 
-Hangi sürümleri hedefleyen bir VSIX oluşturmak için Visual Studio söylemeniz gerekir. Genellikle, bu başvuruları sürüm 14.0 (Visual Studio 2015), sürüm 15.0 (Visual Studio 2017) veya sürüm 16,0 (Visual Studio 2019) ' dir. Bu örnekte, iki sürümünü hedefleyecek şekilde yüzden, bir uzantı her ikisi için de yükleyecek bir VSIX oluşturmak istiyoruz. VSIX oluşturup 14.0'dan önceki sürümlerinde yüklemek istiyorsanız, bu önceki sürüm numarasını ayarlayarak gerçekleştirilebilir; Bununla birlikte, sürüm 10.0 ve önceki sürümleri artık desteklenmemektedir.
+We need to tell Visual Studio what versions to target for building a VSIX. Typically, these references are either to version 14.0 (Visual Studio 2015), version 15.0 (Visual Studio 2017), or version 16.0 (Visual Studio 2019). In our case, we want to build a VSIX that will install an extension for both, so we need to target both versions. If you want your VSIX to build and install on versions earlier than 14.0, this can be done by setting the earlier version number; however, version 10.0 and earlier are no longer supported.
 
-* Açık *source.extension.vsixmanifest* dosyasını Visual Studio'da.
-* Açık **hedefleri Yükle** sekmesi.
-* Değişiklik **sürüm aralığı** için [14.0, 17,0). ' [', Geçmiş 14.0 ve tüm sürümleri dahil etmek için Visual Studio söyler. ')', Tüm sürümler dahil etmek için Visual Studio ancak değil de dahil olmak üzere, sürüm 17,0 söyler.
-* Tüm değişiklikleri kaydedin ve Visual Studio'nun tüm örneklerini kapatın.
+* Open the *source.extension.vsixmanifest* file in Visual Studio.
+* Open the **Install Targets** tab.
+* Change the **Version Range** to [14.0, 17.0). The '[' tells Visual Studio to include 14.0 and all versions past it. The  ')' tells Visual Studio to include all versions up to, but not including, version 17.0.
+* Save all changes and close all instances of Visual Studio.
 
-![Yükleme hedefleri görüntüsü](media/visual-studio-installation-targets-example.png)
+![Installation Targets Image](media/visual-studio-installation-targets-example.png)
 
-### <a name="2-adding-prerequisites-to-the-extensionvsixmanifest-file"></a>2. Önkoşullar ekleme *extension.vsixmanifest* dosyası
+### <a name="2-adding-prerequisites-to-the-extensionvsixmanifest-file"></a>2. Adding Prerequisites to the *extension.vsixmanifest* file
 
-Bir önkoşul olarak Visual Studio çekirdek Düzenleyicisi ihtiyacımız var. Visual Studio'yu açın ve önkoşulları eklemek için güncelleştirilmiş bildirim Tasarımcısı'nı kullanın.
+We need the Visual Studio Core Editor as a prerequisite. Open Visual Studio and use the updated manifest designer to insert the prerequisites.
 
-Bunu el ile yapmak için:
+To do this manually:
 
-* Dosya Gezgini'nde proje dizinine gidin.
-* Açık *extension.vsixmanifest* dosyasını bir metin düzenleyici.
-* Aşağıdaki etiketi ekleyin:
+* Navigate to the project directory in File Explorer.
+* Open the *extension.vsixmanifest* file with a text editor.
+* Add the following tag:
 
 ```xml
 <Prerequisites>
@@ -112,58 +112,58 @@ Bunu el ile yapmak için:
 * Dosyayı kaydedin ve kapatın.
 
 > [!NOTE]
-> Visual Studio 2017'in tüm sürümleri ile uyumlu olduğundan emin olmak için önkoşul sürümü el ile düzenlemeniz gerekebilir. Tasarımcı en düşük sürüm (örneğin, 15.0.26208.0) Visual Studio'nun geçerli sürümünüzü ekleyecek olmasıdır. Ancak, diğer kullanıcıların daha önceki bir sürümü olabileceği el ile düzenlemeniz isteyeceksiniz 15.0 için.
+> You may need to manually edit the Prerequisite version to ensure it is compatible with all versions of Visual Studio 2017. This is because the designer will insert the minimum version as your current version of Visual Studio (for example, 15.0.26208.0). However, since other users may have an earlier version, you will want to manually edit this to 15.0.
 
-Bu noktada, bildirim dosyanız aşağıdakine benzer görünmelidir:
+At this point, your manifest file should look something like this:
 
-![Önkoşullar örneği](media/visual-studio-prerequisites-example.png)
+![Prerequisites Example](media/visual-studio-prerequisites-example.png)
 
-## <a name="modify-the-project-file-myprojectcsproj"></a>Proje dosyası (myproject.csproj) değiştirme
+## <a name="modify-the-project-file-myprojectcsproj"></a>Modify the project file (myproject.csproj)
 
-Bu adımı yaparken açık olan bir değiştirilmiş .csproj başvuru olması önerilir. Bazı örnekler bulabilirsiniz [burada](https://github.com/Microsoft/VSSDK-Extensibility-Samples). Herhangi bir genişletilebilirlik örnek seçin, Bul *.csproj* dosya başvurusu için ve aşağıdaki adımları uygulayın:
+It is highly recommended to have a reference to a modified .csproj open while doing this step. You can find several examples [here](https://github.com/Microsoft/VSSDK-Extensibility-Samples). Select any extensibility sample, find the *.csproj* file for reference and execute the following steps:
 
-* Proje dizininde gidin **dosya Gezgini**.
-* Açık *myproject.csproj* dosyasını bir metin düzenleyici.
+* Navigate to the project directory in **File Explorer**.
+* Open the *myproject.csproj* file with a text editor.
 
-### <a name="1-update-the-minimumvisualstudioversion"></a>1. Güncelleştirme MinimumVisualStudioVersion
+### <a name="1-update-the-minimumvisualstudioversion"></a>1. Update the MinimumVisualStudioVersion
 
-* En düşük visual studio sürümü kümesine `$(VisualStudioVersion)` ve bunun için bir koşullu ifade ekleyin. Bunlar yoksa, bu etiketler ekleyin. Etiketler aşağıdaki gibi ayarlandığından emin olun:
+* Set the minimum visual studio version to `$(VisualStudioVersion)` and add a conditional statement for it. Add these tags if they do not exist. Ensure the tags are set as below:
 
 ```xml
 <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
 <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
 ```
 
-### <a name="2-add-the-vsixtype-property"></a>2. VsixType özelliği ekleyin.
+### <a name="2-add-the-vsixtype-property"></a>2. Add the VsixType property.
 
-* Aşağıdaki etiketi Ekle `<VsixType>v3</VsixType>` özellik grubuna.
+* Add the following tag `<VsixType>v3</VsixType>` to a property group.
 
 > [!NOTE]
-> Bu eklemek için önerilen aşağıda `<OutputType></OutputType>` etiketi.
+> It is recommended to add this below the `<OutputType></OutputType>` tag.
 
-### <a name="3-add-the-debugging-properties"></a>3. Hata ayıklama özellikleri ekleyin
+### <a name="3-add-the-debugging-properties"></a>3. Add the debugging properties
 
-* Aşağıdaki özellik grubu ekleyin:
+* Add the following property group:
 
 ```xml
 <PropertyGroup>
     <StartAction>Program</StartAction>
-    <StartPrograms>$(DevEnvDir)devenv.exe</StartPrograms>
+    <StartProgram>$(DevEnvDir)devenv.exe</StartProgram>
     <StartArguments>/rootsuffix Exp</StartArguments>
 </PropertyGroup>
 ```
 
-* Aşağıdaki kod örneği tüm örneklerini silmek *.csproj* dosya ve *. csproj.user* dosyaları:
+* Delete all instances of the following code example from the *.csproj* file and any *.csproj.user* files:
 
 ```xml
 <StartAction>Program</StartAction>
-<StartPrograms>$(ProgramFiles)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe</StartPrograms>
+<StartProgram>$(ProgramFiles)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe</StartProgram>
 <StartArguments>/rootsuffix Exp</StartArguments>
 ```
 
-### <a name="4-add-conditions-to-the-build-tools-imports"></a>4. Derleme araçları içeri aktarmalara koşulları ekleme
+### <a name="4-add-conditions-to-the-build-tools-imports"></a>4. Add conditions to the build tools imports
 
-* İçin ek koşul deyimlerini ekleyin `<import>` Microsoft.VSSDK.BuildTools başvurusuna sahip etiketler. INSERT `'$(VisualStudioVersion)' != '14.0' And` önündeki koşul deyimi. Bu deyimler, üstbilgi ve altbilgi csproj dosyasının görünür.
+* Add additional conditional statements to the `<import>` tags that have a Microsoft.VSSDK.BuildTools reference. Insert `'$(VisualStudioVersion)' != '14.0' And` at the front of the condition statement. These statements will appear in the header and footer of the csproj file.
 
 Örneğin:
 
@@ -171,7 +171,7 @@ Bu adımı yaparken açık olan bir değiştirilmiş .csproj başvuru olması ö
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
 ```
 
-* İçin ek koşul deyimlerini ekleyin `<import>` bir Microsoft.VisualStudio.Sdk.BuildTasks.14.0 sahip etiketler. INSERT `'$(VisualStudioVersion)' == '14.0' And` önündeki koşul deyimi. Bu deyimler, üstbilgi ve altbilgi csproj dosyasının görünür.
+* Add additional conditional statements to the `<import>` tags that have a Microsoft.VisualStudio.Sdk.BuildTasks.14.0. Insert `'$(VisualStudioVersion)' == '14.0' And` at the front of the condition statement. These statements will appear in the header and footer of the csproj file.
 
 Örneğin:
 
@@ -179,7 +179,7 @@ Bu adımı yaparken açık olan bir değiştirilmiş .csproj başvuru olması ö
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
 ```
 
-* İçin ek koşul deyimlerini ekleyin `<Error>` Microsoft.VSSDK.BuildTools başvurusuna sahip etiketler. Ekleyerek bunu `'$(VisualStudioVersion)' != '14.0' And` önündeki koşul deyimi. Bu deyimler csproj dosyasının alt bilgiden görünür.
+* Add additional conditional statements to the `<Error>` tags that have a Microsoft.VSSDK.BuildTools reference. Do this by inserting `'$(VisualStudioVersion)' != '14.0' And` at the front of the condition statement. These statements will appear in the footer of the csproj file.
 
 Örneğin:
 
@@ -187,7 +187,7 @@ Bu adımı yaparken açık olan bir değiştirilmiş .csproj başvuru olması ö
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
 ```
 
-* İçin ek koşul deyimlerini ekleyin `<Error>` bir Microsoft.VisualStudio.Sdk.BuildTasks.14.0 sahip etiketler. INSERT `'$(VisualStudioVersion)' == '14.0' And` önündeki koşul deyimi. Bu deyimler csproj dosyasının alt bilgiden görünür.
+* Add additional conditional statements to the `<Error>` tags that have a Microsoft.VisualStudio.Sdk.BuildTasks.14.0. Insert `'$(VisualStudioVersion)' == '14.0' And` at the front of the condition statement. These statements will appear in the footer of the csproj file.
 
 Örneğin:
 
@@ -195,21 +195,22 @@ Bu adımı yaparken açık olan bir değiştirilmiş .csproj başvuru olması ö
 <Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />
 ```
 
-* Csproj dosyasını kaydedin ve kapatın.
+* Save the csproj file and close it.
 
-## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015 ve Visual Studio 2017 uzantı yüklemeleri test
+## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2017"></a>Test the extension installs in Visual Studio 2015 and Visual Studio 2017
 
-Bu noktada, projenizi Visual Studio 2015 ve Visual Studio 2017'yi yükleyebilmek için bir Vsıxv3 derlemek için hazır olması gerekir.
+At this point, your project should be ready to build a VSIXv3 that can install on both Visual Studio 2015 and Visual Studio 2017.
 
-* Projenizi Visual Studio 2015'te açın.
-* Projenizi derleyin ve onaylayın çıktıda bir VSIX doğru şekilde oluşturur.
-* Proje dizininize gidin.
-* Açık *\bin\Debug* klasör.
-* VSIX dosyasına çift tıklayın ve uzantınızın Visual Studio 2015 ve Visual Studio 2017'yi yükleyin.
-* Uzantı görebildiğinizden emin olun **Araçları** > **Uzantılar ve güncelleştirmeler** içinde **yüklü** bölümü.
-* Çalıştır/çalışıp çalışmadığını denetlemek için uzantıyı kullanmak çalışır.
+* Open your project in Visual Studio 2015.
+* Build your project and confirm in the output that a VSIX builds correctly.
+* Navigate to your project directory.
+* Open the *\bin\Debug* folder.
+* Double-click on the VSIX file and install your extension on Visual Studio 2015 and Visual Studio 2017.
+* Make sure that you can see the extension in **Tools** > **Extensions and Updates** in the **Installed** section.
+* Attempt to run/use the extension to check that it works.
 
-![Bir VSIX Bul](media/finding-a-VSIX-example.png)
+![Find a VSIX](media/finding-a-VSIX-example.png)
 
 > [!NOTE]
-> Projenizi iletisiyle yanıt vermemeye başlıyor, **dosyayı açmayı**zorla Visual Studio'yu kapatın, proje dizinine gidin, gizli klasörlere Göster ve Sil *.vs* klasör.
+> If your project hangs with the message **opening the file**, force shut down Visual Studio, navigate to your project directory, show hidden folders, and delete the *.vs* folder.
+ 
