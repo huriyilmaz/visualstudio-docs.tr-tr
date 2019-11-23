@@ -1,5 +1,5 @@
 ---
-title: '2\. adım: Resim görüntüleyici uygulamanızı çalıştırma'
+title: '2\. Adım: resim görüntüleyici uygulamanızı çalıştırma'
 ms.date: 09/06/2019
 ms.assetid: 9a8fe90e-c97b-4e98-b6c8-0c6b3962c49d
 ms.topic: tutorial
@@ -17,9 +17,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71950725"
 ---
-# <a name="step-2-run-your-picture-viewer-app"></a>2\. adım: Resim görüntüleyici uygulamanızı çalıştırma
+# <a name="step-2-run-your-picture-viewer-app"></a>2\. Adım: resim görüntüleyici uygulamanızı çalıştırma
 
-Windows Forms bir uygulama projesi oluşturduğunuzda, aslında çalıştıran bir program oluşturursunuz. Bu öğreticide, resim görüntüleyici uygulamanız çok fazla değil @ no__t-0, ancak. Şimdilik, başlık çubuğunda **Form1** ' i gösteren boş bir pencere görüntüler.
+Windows Forms bir uygulama projesi oluşturduğunuzda, aslında çalıştıran bir program oluşturursunuz. Bu öğreticide, resim görüntüleyici uygulamanız çok fazla&mdash;değil. Şimdilik, başlık çubuğunda **Form1** ' i gösteren boş bir pencere görüntüler.
 
 Uygulamanızı çalıştırmak için aşağıdaki adımları uygulayın. 
 
@@ -27,30 +27,30 @@ Uygulamanızı çalıştırmak için aşağıdaki adımları uygulayın.
 
     - **F5** tuşunu seçin.
 
-    - Menü çubuğunda **hata ayıkla** > **hata ayıklamayı Başlat**' ı seçin.
+    - Menü çubuğunda **hata ayıkla** > hata **ayıklamayı Başlat**' ı seçin.
 
     - Araç çubuğunda, aşağıdaki gibi görünen **hata ayıklamayı Başlat** düğmesini seçin:
 
-      ![Start hata ayıklama araç çubuğu düğmesi @ no__t-1<br>
+      Hata ayıklamayı Başlat araç çubuğu düğmesi ![](../ide/media/express_icondebug.png)<br>
       ***Hata ayıklamayı Başlat*** *araç çubuğu düğmesi*
 
 1. Visual Studio, uygulamanızı çalıştırır ve **Form1** adlı bir pencere görünür. Aşağıdaki ekran görüntüsünde, yeni oluşturduğunuz uygulama gösterilmektedir. Uygulama çalışıyor ve yakında buna ekleyeceğiz.
 
-     @no__t-@ no__t-1 çalıştıran 0Windows Forms uygulaması<br>
+     ](../ide/media/express_firstrun.png) çalıştıran ![Windows Forms uygulama<br>
 ***Windows Forms uygulaması***, *çalışıyor*
 
 1. Visual Studio tümleşik geliştirme ortamına (IDE) dönün ve yeni araç çubuğuna bakın. Bir uygulamayı çalıştırdığınızda, araç çubuğunda ek düğmeler görüntülenir. Bu düğmeler, uygulamanızı durdurma ve başlatma gibi işlemleri yapmanızı sağlar ve sahip olabileceği hataları (hataları) izlemenize yardımcı olur. Bu örnekte, uygulamayı başlatmak ve durdurmak için kullanırız.
 
-     ![Hata ayıklama araç çubuğu @ no__t-1<br>
+     ![hata ayıklama araç çubuğu](../ide/media/express_debugtoolbar.png)<br>
 ***Hata ayıklama*** *araç çubuğu*
 
 1. Uygulamanızı durdurmak için aşağıdaki yöntemlerden birini kullanın:
 
     - Araç çubuğunda **hata ayıklamayı Durdur** düğmesini seçin.
 
-    - Menü çubuğunda **hata ayıkla** > **hata ayıklamayı Durdur**' u seçin.
+    - Menü çubuğunda Hata **ayıkla** > hata **ayıklamayı Durdur**' u seçin.
 
-    - Klavyenizi kullanın ve **shıft**+**F5**tuşlarına basın.
+    - Klavyenizi kullanın ve **shıft**+**F5**tuşuna basın.
 
     - **Form1** penceresinin üst köşesindeki **X** düğmesini seçin.
 
@@ -59,11 +59,11 @@ Uygulamanızı çalıştırmak için aşağıdaki adımları uygulayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* Sonraki öğretici adımına gitmek için bkz. ** @ no__t-1Step 3: Form özelliklerinizi @ no__t-0 @ no__t-1 olarak ayarlayın.
+* Sonraki öğretici adımına gitmek için bkz. 3. **[Adım: form özelliklerinizi ayarlama](../ide/step-3-set-your-form-properties.md)** .
 
-* Önceki öğretici adımına dönmek için bkz. [Step 1: Windows Forms uygulama projesi oluşturun @ no__t-0.
+* Önceki öğretici adımına dönmek için bkz. 1. [Adım: Windows Forms uygulama projesi oluşturma](../ide/step-1-create-a-windows-forms-application-project.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Öğretici 2: Zamanlanmış matematik testi oluşturma @ no__t-0
-* [Öğretici 3: Eşleşen bir oyun oluşturma @ no__t-0
+* [Öğretici 2: süreli bir matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
+* [Öğretici 3: eşleşen oyun oluşturma](tutorial-3-create-a-matching-game.md)
